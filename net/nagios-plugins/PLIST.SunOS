@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2017/07/05 10:05:15 jperkin Exp $
+libexec/nagios/pst3
