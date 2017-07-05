@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2725 2017/07/05 11:18:19 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2726 2017/07/05 13:40:02 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3759,3 +3759,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/lua-copas to 2.0.2 [alnsn 2017-07-04]
 	Updated sysutils/salt to 2016.11.6 [sborrill 2017-07-05]
 	Updated devel/gperftools to 2.6 [adam 2017-07-05]
+	Updated print/hplip to 3.17.6 [schnoebe 2017-07-05]
