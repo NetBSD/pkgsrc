@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2017/05/20 11:30:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2017/07/05 11:02:16 sborrill Exp $
 bin/salt
 bin/salt-api
 bin/salt-call
@@ -902,6 +902,12 @@ ${PYSITELIB}/salt/modules/dracr.pyo
 ${PYSITELIB}/salt/modules/drbd.py
 ${PYSITELIB}/salt/modules/drbd.pyc
 ${PYSITELIB}/salt/modules/drbd.pyo
+${PYSITELIB}/salt/modules/dummyproxy_package.py
+${PYSITELIB}/salt/modules/dummyproxy_package.pyc
+${PYSITELIB}/salt/modules/dummyproxy_package.pyo
+${PYSITELIB}/salt/modules/dummyproxy_service.py
+${PYSITELIB}/salt/modules/dummyproxy_service.pyc
+${PYSITELIB}/salt/modules/dummyproxy_service.pyo
 ${PYSITELIB}/salt/modules/ebuild.py
 ${PYSITELIB}/salt/modules/ebuild.pyc
 ${PYSITELIB}/salt/modules/ebuild.pyo
@@ -2117,6 +2123,9 @@ ${PYSITELIB}/salt/proxy/chronos.pyo
 ${PYSITELIB}/salt/proxy/cisconso.py
 ${PYSITELIB}/salt/proxy/cisconso.pyc
 ${PYSITELIB}/salt/proxy/cisconso.pyo
+${PYSITELIB}/salt/proxy/dummy.py
+${PYSITELIB}/salt/proxy/dummy.pyc
+${PYSITELIB}/salt/proxy/dummy.pyo
 ${PYSITELIB}/salt/proxy/esxi.py
 ${PYSITELIB}/salt/proxy/esxi.pyc
 ${PYSITELIB}/salt/proxy/esxi.pyo
