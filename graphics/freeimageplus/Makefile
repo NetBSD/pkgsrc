@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/27 22:06:11 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/05 08:46:26 nros Exp $
 
 DISTNAME=	FreeImage3170
 PKGNAME=	freeimageplus-3.17.0
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://freeimage.sf.net/
 COMMENT=	Library for supporting PNG, BMP, JPEG, and TIFF - C++ Wrapper
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 OR mpl-1.0
 
 USE_LANGUAGES+= c c++
 USE_TOOLS+=	gmake
