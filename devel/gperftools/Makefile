@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/05/18 18:12:30 adam Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/05 11:17:17 adam Exp $
 
-DISTNAME=	gperftools-2.5
+DISTNAME=	gperftools-2.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gperftools/}
 
@@ -14,10 +14,18 @@ GITHUB_RELEASE=	${DISTNAME}
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
 # on some platforms heap checker is not build by default
 CONFIGURE_ARGS+=	--enable-heap-checker
+# enable deprecated ucontext
+CFLAGS.Darwin+=		-D_XOPEN_SOURCE=1
+
+# for backtrace()
+.include "../../mk/bsd.prefs.mk"
+.if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && exists(/usr/include/execinfo.h)
+LIBS+=			-lexecinfo
+.endif
 
 PKGCONFIG_OVERRIDE=	libprofiler.pc
 PKGCONFIG_OVERRIDE+=	libtcmalloc.pc
