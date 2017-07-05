@@ -1,4 +1,4 @@
-$NetBSD: patch-libgcc_config_i386_cpuinfo.h,v 1.2 2017/05/14 02:38:03 maya Exp $
+$NetBSD: patch-libgcc_config_i386_cpuinfo.h,v 1.3 2017/07/05 10:17:01 adam Exp $
 
 ifdef out extern for GCC bug #80600, with the same condition as
 cpuinfo.c. removing triggers GCC bug #65612
@@ -10,7 +10,7 @@ cpuinfo.c. removing triggers GCC bug #65612
  };
  
 -extern struct __processor_model
-+#if defined SHARED && defined USE_ELF_SYMVER
++#if defined(__APPLE__) || (defined SHARED && defined USE_ELF_SYMVER)
 +extern
 +#endif
 +struct __processor_model
