@@ -1,4 +1,4 @@
-# $NetBSD: check-relro-elf.awk,v 1.1 2017/07/04 18:29:24 khorben Exp $
+# $NetBSD: check-relro-elf.awk,v 1.2 2017/07/05 15:24:22 khorben Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # Copyright (c) 2017 Pierre Pronchery <khorben@NetBSD.org>.
@@ -69,15 +69,16 @@ function shquote(IN, out) {
 	return out;
 }
 
-function checkrelro(ELF, got_relro) {
+function checkrelro(ELF, got_relro, found) {
 	cmd = readelf " -Wl " shquote(ELF) " 2> /dev/null"
 	while ((cmd | getline) > 0) {
+		found = 1
 		if ($1 == "GNU_RELRO") {
 			got_relro = 1
 		}
 	}
 	close(cmd)
-	if (got_relro != 1) {
+	if (found == 1 && got_relro != 1) {
 		print ELF ": missing RELRO"
 	}
 }
