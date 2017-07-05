@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.9 2017/06/07 20:46:34 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2017/07/05 23:55:00 khorben Exp $
 #
 # used by security/yara/Makefile
 # used by security/py-yara/Makefile
 
-VERSION=	3.6.1
+VERSION=	3.6.3
 GITHUB_TAG=	v${VERSION}
 
 MAINTAINER=	khorben@defora.org
