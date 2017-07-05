@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.340 2017/07/05 19:18:23 minskim Exp $
+# $NetBSD: Makefile,v 1.341 2017/07/05 21:44:49 minskim Exp $
 
 COMMENT=	Mathematics
 
@@ -267,6 +267,7 @@ SUBDIR+=	py-patsy
 SUBDIR+=	py-pytables
 SUBDIR+=	py-roman
 SUBDIR+=	py-rpy
+SUBDIR+=	py-scikit-learn
 SUBDIR+=	py-scipy
 SUBDIR+=	py-simpleeval
 SUBDIR+=	py-statsmodels
