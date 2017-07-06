@@ -1,0 +1,6 @@
+The pgfkeys package (part of the pgf distribution) is a well-designed
+way of defining and using large numbers of keys for key-value
+syntaxes. However, pgfkeys itself does not offer means of handling
+LaTeX class and package options. This package adds such option
+handling to pgfkeys, in the same way that kvoptions adds the same
+facility to the LaTeX standard keyval package.
