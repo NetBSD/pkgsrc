@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/06 19:07:37 minskim Exp $
+share/texmf-dist/doc/latex/pgfopts/LICENSE
+share/texmf-dist/doc/latex/pgfopts/README
+share/texmf-dist/doc/latex/pgfopts/pgfopts.pdf
