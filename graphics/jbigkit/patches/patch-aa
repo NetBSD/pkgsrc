@@ -1,10 +1,11 @@
-$NetBSD: patch-aa,v 1.4 2014/04/10 12:04:16 obache Exp $
+$NetBSD: patch-aa,v 1.5 2017/07/06 13:13:30 wiz Exp $
 
 * prevent to overwrite our CC/CFLAGS settings
 * libtoolize
+* honor LDFLAGS
 
 --- libjbig/Makefile.orig	2014-03-27 18:47:15.000000000 +0000
-+++ libjbig/Makefile
++++ libjbig/Makefile	2017-07-06 13:12:02.765268063 +0000
 @@ -1,34 +1,34 @@
  # Unix makefile for the JBIG-KIT library
  
@@ -44,16 +45,16 @@ $NetBSD: patch-aa,v 1.4 2014/04/10 12:04:16 obache Exp $
 -tstcodec.o: tstcodec.c jbig.h
 -tstcodec85.o: tstcodec85.c jbig85.h
 +tstcodec: tstcodec.lo jbig.lo jbig_ar.lo
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o tstcodec tstcodec.lo jbig.lo jbig_ar.lo
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o tstcodec tstcodec.lo jbig.lo jbig_ar.lo
 +
 +tstcodec85: tstcodec85.lo jbig85.lo jbig_ar.lo
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o tstcodec85 tstcodec85.lo jbig85.lo jbig_ar.lo
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o tstcodec85 tstcodec85.lo jbig85.lo jbig_ar.lo
 +
 +libjbig.la: jbig.lo jbig_ar.lo
-+	$(LIBTOOL) --mode=link $(CC) -o libjbig.la jbig.lo jbig_ar.lo -rpath ${PREFIX}/lib -version-info 2:1
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o libjbig.la jbig.lo jbig_ar.lo -rpath ${PREFIX}/lib -version-info 2:1
 +
 +libjbig85.la: jbig85.lo jbig_ar.lo
-+	$(LIBTOOL) --mode=link $(CC) -o libjbig85.la jbig85.lo jbig_ar.lo -rpath ${PREFIX}/lib -version-info 2:1
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o libjbig85.la jbig85.lo jbig_ar.lo -rpath ${PREFIX}/lib -version-info 2:1
 +
 +jbig.lo: jbig.c jbig.h jbig_ar.h
 +jbig85.lo: jbig85.c jbig85.h jbig_ar.h
@@ -63,7 +64,7 @@ $NetBSD: patch-aa,v 1.4 2014/04/10 12:04:16 obache Exp $
  
  update-po: jbig.c jbig85.c Makefile
  	xgettext -ojbig.pot -k_ \
-@@ -43,11 +43,11 @@ analyze:
+@@ -43,11 +43,11 @@
  	clang --analyze *.c
  
  test: tstcodec tstcodec85
