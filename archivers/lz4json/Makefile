@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/09/19 08:02:11 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/06 14:11:29 wiz Exp $
 
 DISTNAME=	lz4json-0.0.20160401
 CATEGORIES=	archivers www
@@ -15,7 +15,7 @@ USE_TOOLS+=		pkg-config
 INSTALLATION_DIRS=	bin
 
 do-build:
-	cd ${WRKSRC} && ${CC} ${CFLAGS} lz4jsoncat.c -o lz4jsoncat `pkg-config --libs liblz4` `pkg-config --cflags liblz4`
+	cd ${WRKSRC} && ${CC} ${CFLAGS} ${LDFLAGS} lz4jsoncat.c -o lz4jsoncat `pkg-config --libs liblz4` `pkg-config --cflags liblz4`
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lz4jsoncat ${DESTDIR}${PREFIX}/bin
