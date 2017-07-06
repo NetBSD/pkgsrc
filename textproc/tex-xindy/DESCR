@@ -1,0 +1,6 @@
+Xindy was developed after an impasse had been encountered in
+the attempt to complete internationalisation of makeindex.
+Xindy can be used to process indexes for documents marked up
+using (La)TeX, Nroff family and SGML-based languages. Xindy is
+highly configurable, both in markup terms and in terms of the
+collating order of the text being processed.
