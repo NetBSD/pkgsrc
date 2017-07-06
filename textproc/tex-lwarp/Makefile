@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/06/23 23:23:56 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/06 02:41:46 markd Exp $
 
 DISTNAME=	lwarp
 PKGNAME=	tex-${DISTNAME}-0.32
+PKGREVISION=	1
 TEXLIVE_REV=	44552
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +10,10 @@ HOMEPAGE=	http://ctan.org/pkg/lwarp
 COMMENT=	Converts LaTeX to HTML
 LICENSE=	lppl-1.3c
 
+DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
 DEPENDS+=	tex-luatex-[0-9]*:../../print/tex-luatex
+DEPENDS+=	tex-pdfcrop-[0-9]*:../../graphics/tex-pdfcrop
+DEPENDS+=	tex-xindy-[0-9]*:../../textproc/tex-xindy
 
 REPLACE_TEXLUA=	bin/lwarpmk
 
