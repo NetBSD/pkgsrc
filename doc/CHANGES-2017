@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2740 2017/07/06 14:51:00 mrg Exp $
+$NetBSD: CHANGES-2017,v 1.2741 2017/07/06 15:43:55 scole Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3779,3 +3779,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/php-xdebug to 2.5.5 [taca 2017-07-06]
 	Updated lang/pear to 1.10.5 [taca 2017-07-06]
 	Updated chat/ircII to 20170704 [mrg 2017-07-06]
+	Updated fonts/thaixfonts to 1.2.7 [scole 2017-07-06]
