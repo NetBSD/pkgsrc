@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile,v 1.1 2017/07/06 13:04:28 wiz Exp $
+
+Use pkgsrc CFLAGS and LDFLAGS.
+
+--- Makefile.orig	2016-11-06 20:12:16.000000000 +0000
++++ Makefile	2017-07-06 13:01:57.925655166 +0000
+@@ -8,8 +8,8 @@
+ # using OPTFLAGS/OPTLDFLAGS for compatibilty with old scripts using this makefile
+ OPTFLAGS = -O2 -DNDEBUG -fomit-frame-pointer -ffunction-sections -fdata-sections
+ OPTLDFLAGS =
+-CFLAGS = $(OPTFLAGS)
+-LDFLAGS = $(OPTLDFLAGS)
++CFLAGS += $(OPTFLAGS)
++LDFLAGS += $(OPTLDFLAGS)
+ ADDCFLAGS =
+ ADDLDFLAGS =
+ ALLCFLAGS = -pipe $(CFLAGS) $(ADDCFLAGS) \
