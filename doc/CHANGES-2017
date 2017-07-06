@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2731 2017/07/05 23:55:54 khorben Exp $
+$NetBSD: CHANGES-2017,v 1.2732 2017/07/06 02:37:48 markd Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3766,3 +3766,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added math/py-scikit-learn version 0.18.1 [minskim 2017-07-05]
 	Updated security/yara to 3.6.3 [khorben 2017-07-05]
 	Updated security/py-yara to 3.6.3 [khorben 2017-07-05]
+	Added textproc/tex-xindy version 2.5.1 [markd 2017-07-06]
+	Added textproc/tex-xindy-doc version 2.5.1 [markd 2017-07-06]
