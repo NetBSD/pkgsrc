@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2738 2017/07/06 13:34:13 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2739 2017/07/06 13:35:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3777,3 +3777,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/poppler-utils to 0.55.0nb1 [wiz 2017-07-06]
 	Updated lang/php70 to 7.0.21 [taca 2017-07-06]
 	Updated devel/php-xdebug to 2.5.5 [taca 2017-07-06]
+	Updated lang/pear to 1.10.5 [taca 2017-07-06]
