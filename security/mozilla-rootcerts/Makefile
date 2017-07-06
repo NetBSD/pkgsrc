@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2017/06/22 00:30:10 gdt Exp $
+# $NetBSD: Makefile,v 1.31 2017/07/06 00:58:35 gdt Exp $
 
 DISTNAME=	mozilla-rootcerts-1.0.${CERTDATA_DATE}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	security
 MASTER_SITES=	-https://hg.mozilla.org/mozilla-central/raw-file/052b90b5414f/security/nss/lib/ckfw/builtins/certdata.txt
 DISTFILES=	${CERTDATA}
@@ -40,7 +40,7 @@ SUBST_CLASSES=		paths
 SUBST_MESSAGE.paths=	Replacing hard-coded paths.
 SUBST_STAGE.paths=	post-configure
 SUBST_FILES.paths=	${CERT_SCRIPT}
-SUBST_VARS.paths=	AWK ECHO EXPR LN LOCALBASE LS RM DATADIR MKDIR SSLDIR
+SUBST_VARS.paths=	AWK DATADIR ECHO EXPR LN LS MKDIR PREFIX SSLDIR RM
 SUBST_SED.paths=	-e 's,@OPENSSL@,${TOOLS_PATH.openssl},g'
 
 INSTALLATION_DIRS=	sbin ${DATADIR}
