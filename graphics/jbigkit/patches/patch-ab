@@ -1,10 +1,11 @@
-$NetBSD: patch-ab,v 1.5 2014/04/10 12:04:16 obache Exp $
+$NetBSD: patch-ab,v 1.6 2017/07/06 13:13:30 wiz Exp $
 
 * prevent to overwrite our CC/CFLAGS settings
 * libtoolize
+* honor LDFLAGS
 
 --- pbmtools/Makefile.orig	2014-03-27 18:47:15.000000000 +0000
-+++ pbmtools/Makefile
++++ pbmtools/Makefile	2017-07-06 13:10:32.065421108 +0000
 @@ -1,43 +1,46 @@
  # Unix makefile for the JBIG-KIT PBM tools
  
@@ -31,22 +32,22 @@ $NetBSD: patch-ab,v 1.5 2014/04/10 12:04:16 obache Exp $
 -pbmtojbg: pbmtojbg.o ../libjbig/libjbig.a
 -	$(CC) $(CFLAGS) -o pbmtojbg pbmtojbg.o -L../libjbig -ljbig
 +pbmtojbg: pbmtojbg.lo ../libjbig/libjbig.la
-+	${LIBTOOL} --mode=link $(CC) $(CFLAGS) -o pbmtojbg pbmtojbg.lo ../libjbig/libjbig.la -R ${PREFIX}/lib
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o pbmtojbg pbmtojbg.lo ../libjbig/libjbig.la -R ${PREFIX}/lib
  
 -jbgtopbm: jbgtopbm.o ../libjbig/libjbig.a
 -	$(CC) $(CFLAGS) -o jbgtopbm jbgtopbm.o -L../libjbig -ljbig
 +jbgtopbm: jbgtopbm.lo ../libjbig/libjbig.la
-+	${LIBTOOL} --mode=link $(CC) $(CFLAGS) -o jbgtopbm jbgtopbm.lo ../libjbig/libjbig.la -R ${PREFIX}/lib
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o jbgtopbm jbgtopbm.lo ../libjbig/libjbig.la -R ${PREFIX}/lib
  
 -pbmtojbg85: pbmtojbg85.o ../libjbig/libjbig85.a
 -	$(CC) $(CFLAGS) -o pbmtojbg85 pbmtojbg85.o -L../libjbig -ljbig85
 +pbmtojbg85: pbmtojbg85.lo ../libjbig/libjbig85.la
-+	${LIBTOOL} --mode=link $(CC) $(CFLAGS) -o pbmtojbg85 pbmtojbg85.lo ../libjbig/libjbig85.la -R ${PREFIX}/lib
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o pbmtojbg85 pbmtojbg85.lo ../libjbig/libjbig85.la -R ${PREFIX}/lib
  
 -jbgtopbm85: jbgtopbm85.o ../libjbig/libjbig85.a
 -	$(CC) $(CFLAGS) -o jbgtopbm85 jbgtopbm85.o -L../libjbig -ljbig85
 +jbgtopbm85: jbgtopbm85.lo ../libjbig/libjbig85.la
-+	${LIBTOOL} --mode=link $(CC) $(CFLAGS) -o jbgtopbm85 jbgtopbm85.lo ../libjbig/libjbig85.la -R ${PREFIX}/lib
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o jbgtopbm85 jbgtopbm85.lo ../libjbig/libjbig85.la -R ${PREFIX}/lib
  
 -jbgtopbm.o: jbgtopbm.c ../libjbig/jbig.h
 -pbmtojbg.o: pbmtojbg.c ../libjbig/jbig.h
@@ -71,7 +72,7 @@ $NetBSD: patch-ab,v 1.5 2014/04/10 12:04:16 obache Exp $
  
  analyze:
  	clang $(CPPFLAGS) --analyze *.c
-@@ -62,18 +65,18 @@ test82: pbmtojbg jbgtopbm
+@@ -62,18 +65,18 @@
  	make IMG=mx        "OPTIONSP=-q -Y -1"             dotest2b
  	make IMG=mx        "OPTIONSP=-Y -1"                dotest2b
  	rm -f test-*.jbg test-*.pbm test-*.pgm
@@ -96,7 +97,7 @@ $NetBSD: patch-ab,v 1.5 2014/04/10 12:04:16 obache Exp $
  	cmp ../examples/ccitt1.jbg test-ccitt1.jbg
  	rm -f test-*.jbg test-*.pbm test-*.pgm
  	@echo
-@@ -81,18 +84,18 @@ test82: pbmtojbg jbgtopbm
+@@ -81,18 +84,18 @@
  	@echo
  
  dotest1:
@@ -121,7 +122,7 @@ $NetBSD: patch-ab,v 1.5 2014/04/10 12:04:16 obache Exp $
  	cmp test-$(IMG).pgm ../examples/$(IMG).pgm
  
  test85: pbmtojbg jbgtopbm pbmtojbg85 jbgtopbm85 test-t82.pbm
-@@ -120,41 +123,41 @@ test85: pbmtojbg jbgtopbm pbmtojbg85 jbg
+@@ -120,41 +123,41 @@
  	@echo
  
  dotest85: test-$(IMG).pbm
