@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2012/07/04 20:26:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/07/06 11:29:59 wiz Exp $
 bin/pdfdetach
 bin/pdffonts
 bin/pdfimages
 bin/pdfinfo
 bin/pdfseparate
+bin/pdftocairo
 bin/pdftohtml
 bin/pdftoppm
 bin/pdftops
@@ -14,6 +15,7 @@ man/man1/pdffonts.1
 man/man1/pdfimages.1
 man/man1/pdfinfo.1
 man/man1/pdfseparate.1
+man/man1/pdftocairo.1
 man/man1/pdftohtml.1
 man/man1/pdftoppm.1
 man/man1/pdftops.1

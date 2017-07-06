@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.20 2016/05/22 18:17:17 wiz Exp $
+$NetBSD: patch-ab,v 1.21 2017/07/06 11:29:59 wiz Exp $
 
 Use installed poppler library so we can have a separate poppler-utils
 package.
 
 Always build pdftoppm.
 
---- utils/Makefile.in.orig	2016-05-21 16:59:39.000000000 +0000
+--- utils/Makefile.in.orig	2017-05-21 21:19:46.000000000 +0000
 +++ utils/Makefile.in
 @@ -96,10 +96,10 @@ host_triplet = @host@
  @BUILD_UTILS_TRUE@	pdfunite$(EXEEXT) $(am__EXEEXT_1) \
@@ -31,7 +31,7 @@ Always build pdftoppm.
  @BUILD_CAIRO_OUTPUT_TRUE@@BUILD_UTILS_TRUE@am__EXEEXT_3 = pdftocairo$(EXEEXT)
  am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)"
  PROGRAMS = $(bin_PROGRAMS)
-@@ -138,44 +138,44 @@ am_pdfdetach_OBJECTS = pdfdetach.$(OBJEX
+@@ -138,39 +138,39 @@ am_pdfdetach_OBJECTS = pdfdetach.$(OBJEX
  pdfdetach_OBJECTS = $(am_pdfdetach_OBJECTS)
  pdfdetach_LDADD = $(LDADD)
  pdfdetach_DEPENDENCIES = libparseargs.la \
@@ -78,12 +78,6 @@ Always build pdftoppm.
  am__DEPENDENCIES_2 =
  @BUILD_CAIRO_OUTPUT_TRUE@@USE_CMS_TRUE@am__DEPENDENCIES_3 =  \
  @BUILD_CAIRO_OUTPUT_TRUE@@USE_CMS_TRUE@	$(am__DEPENDENCIES_2)
- am__DEPENDENCIES_4 = $(am__DEPENDENCIES_3)
--pdftocairo_DEPENDENCIES = $(top_builddir)/poppler/libpoppler-cairo.la \
-+pdftocairo_DEPENDENCIES = $(prefix)/lib/libpoppler-cairo.la \
- 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_4) \
- 	$(am__DEPENDENCIES_2)
- am_pdftohtml_OBJECTS = pdftohtml-pdftohtml.$(OBJEXT) \
 @@ -184,7 +184,7 @@ am_pdftohtml_OBJECTS = pdftohtml-pdftoht
  pdftohtml_OBJECTS = $(am_pdftohtml_OBJECTS)
  pdftohtml_LDADD = $(LDADD)
@@ -132,12 +126,3 @@ Always build pdftoppm.
  
  @BUILD_UTILS_TRUE@dist_man1_MANS = pdfdetach.1 pdffonts.1 pdfimages.1 \
  @BUILD_UTILS_TRUE@	pdfinfo.1 pdftops.1 pdftotext.1 pdftohtml.1 \
-@@ -616,7 +617,7 @@ pdftocairo_SOURCES = \
- 	pdftocairo-win32.h
- 
- pdftocairo_LDADD = \
--	$(top_builddir)/poppler/libpoppler-cairo.la	\
-+	$(prefix)/lib/libpoppler-cairo.la	\
- 	$(LDADD)					\
- 	$(PDFTOCAIRO_LIBS)				\
- 	$(PTHREAD_LIBS)
