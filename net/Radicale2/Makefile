@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2017/07/01 05:57:07 darcy Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/06 03:12:48 darcy Exp $
 
 DISTNAME=	Radicale-2.1.1
+PKGREVISION=	1
 CATEGORIES=	net time www
 MASTER_SITES=	${MASTER_SITE_PYPI:=R/Radicale/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	http://radicale.org/
 COMMENT=	CalDAV (calendar) and CardDAV (contact) server
 LICENSE=	gnu-gpl-v3
@@ -15,7 +16,7 @@ RADICALE_USER?=		www
 RADICALE_GROUP?=	www
 PKG_GROUPS=		${RADICALE_GROUP}
 PKG_USERS=		${RADICALE_USER}:${RADICALE_GROUP}
-CONFLICTS+=		Radicale-1*
+CONFLICTS+=		Radicale-1.*
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 INSTALLATION_DIRS=	${EGDIR}
@@ -43,6 +44,9 @@ SUBST_MESSAGE.server=	Configure as a daemon by default.
 
 # for md5 htpasswd_encryption method
 DEPENDS+=		${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
+
+# to synchronize calendars
+DEPENDS+=		${PYPKGPREFIX}-vdirsyncer-[0-9]*:../../time/py-vdirsyncer
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/config ${DESTDIR}${PREFIX}/${EGDIR}/config
