@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2017/06/23 15:49:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.39 2017/07/06 15:46:31 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20170623
+DISTNAME=		qmail-run-20170706
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -71,7 +71,7 @@ post-extract:
 	done
 
 do-install:
-	for f in qmail-procmail qmail-qfilter-queue qmail-qread-client; do \
+	for f in qmail-procmail qmail-qread-client; do \
 	    ${INSTALL_SCRIPT} ${WRKDIR}/$$f ${DESTDIR}${PREFIX}/bin;	\
 	done
 	for f in qmail-qfilter-ofmipd-queue qmail-qfilter-smtpd-queue; do \
