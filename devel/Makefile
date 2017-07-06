@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2452 2017/07/06 11:11:19 adam Exp $
+# $NetBSD: Makefile,v 1.2453 2017/07/06 19:08:37 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -2345,6 +2345,8 @@ SUBDIR+=	tex-luatexbase
 SUBDIR+=	tex-luatexbase-doc
 SUBDIR+=	tex-multido
 SUBDIR+=	tex-multido-doc
+SUBDIR+=	tex-pgfopts
+SUBDIR+=	tex-pgfopts-doc
 SUBDIR+=	tex-pst-uml
 SUBDIR+=	tex-pst-uml-doc
 SUBDIR+=	tex-xifthen
