@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2017/04/07 08:53:28 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2017/07/07 10:13:57 jperkin Exp $
 
 DISTNAME=	libpciaccess-0.13.5
+PKGREVISION=	1
 CATEGORIES=	sysutils x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
