@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/02/22 13:25:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/07/07 08:14:41 adam Exp $
 
-DISTNAME=	PyJWT-1.4.2
+DISTNAME=	PyJWT-1.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyJWT/}
@@ -14,6 +14,9 @@ DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} pyjwt jwt-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
