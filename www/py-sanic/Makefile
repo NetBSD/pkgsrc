@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/07/07 07:27:15 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/07 08:48:27 adam Exp $
 
 DISTNAME=	sanic-0.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,11 +10,11 @@ HOMEPAGE=	https://github.com/channelcat/sanic
 COMMENT=	Microframework based on uvloop, httptools, and learnings of flask
 LICENSE=	mit AND apache-2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-aiofiles>=0.3.0:../../devel/py-aiofiles
-BUILD_DEPENDS+=	${PYPKGPREFIX}-httptools>=0.0.9:../../www/py-httptools
-BUILD_DEPENDS+=	${PYPKGPREFIX}-ujson>=1.35:../../textproc/py-ujson
-BUILD_DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.5.3:../../devel/py-uvloop
-BUILD_DEPENDS+=	${PYPKGPREFIX}-websockets>=3.2:../../www/py-websockets
+DEPENDS+=	${PYPKGPREFIX}-aiofiles>=0.3.0:../../devel/py-aiofiles
+DEPENDS+=	${PYPKGPREFIX}-httptools>=0.0.9:../../www/py-httptools
+DEPENDS+=	${PYPKGPREFIX}-ujson>=1.35:../../textproc/py-ujson
+DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.5.3:../../devel/py-uvloop
+DEPENDS+=	${PYPKGPREFIX}-websockets>=3.2:../../www/py-websockets
 
 PYTHON_VERSIONS_ACCEPTED=	36 35
 
