@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/03/30 14:35:30 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2017/07/07 09:56:58 fhajny Exp $
 
-DISTNAME=	esip-1.0.11
+DISTNAME=	esip-1.0.13
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -9,9 +9,9 @@ HOMEPAGE=	http://github.com/processone/esip/
 COMMENT=	ProcessOne SIP server component in Erlang
 LICENSE=	apache-2.0
 
-DEPENDS+=	erlang-stun>=1.0.10:../../net/erlang-stun
-DEPENDS+=	erlang-fast_tls>=1.0.11:../../security/erlang-fast_tls
-DEPENDS+=	erlang-p1_utils>=1.0.7:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-stun>=1.0.12:../../net/erlang-stun
+DEPENDS+=	erlang-fast_tls>=1.0.13:../../security/erlang-fast_tls
+DEPENDS+=	erlang-p1_utils>=1.0.9:../../misc/erlang-p1_utils
 
 GITHUB_PROJECT=	esip
 
@@ -22,8 +22,6 @@ SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	rebar.config
 SUBST_MESSAGE.path=	Fixing include path
 SUBST_VARS.path=	LOCALBASE
-
-MAKE_ENV+=	USE_GLOBAL_DEPS=true
 
 .include "../../lang/erlang/module.mk"
 .include "../../mk/bsd.pkg.mk"
