@@ -1,13 +1,14 @@
-$NetBSD: patch-Configure,v 1.3 2016/06/08 17:39:30 he Exp $
+$NetBSD: patch-Configure,v 1.4 2017/07/07 05:54:24 wiz Exp $
 
 * Use "uname -r" to get OS version for *BSD.
 * Move $loclibpth to the end of $dlist, instead of the beginning.
 * Detect systems which have <fenv.h> but where using it fails.
+* Honor more ldflags in shared objects.
 * Several other changes.
 
---- Configure.orig	2016-04-26 22:11:09.000000000 +0000
-+++ Configure
-@@ -3468,13 +3468,14 @@ EOM
+--- Configure.orig	2017-05-30 09:57:56.000000000 +0000
++++ Configure	2017-07-07 05:44:48.961150149 +0000
+@@ -3485,13 +3485,14 @@
  			osvers="$3"
  			;;
  		dragonfly) osname=dragonfly
@@ -24,7 +25,7 @@ $NetBSD: patch-Configure,v 1.3 2016/06/08 17:39:30 he Exp $
  		genix)	osname=genix ;;
  		gnu)	osname=gnu
  			osvers="$3" ;;
-@@ -3497,7 +3498,7 @@ EOM
+@@ -3514,7 +3515,7 @@
  		MiNT)	osname=mint
  			;;
  		netbsd*) osname=netbsd
@@ -33,7 +34,7 @@ $NetBSD: patch-Configure,v 1.3 2016/06/08 17:39:30 he Exp $
  			;;
  		news-os) osvers="$3"
  			case "$3" in
-@@ -3507,7 +3508,7 @@ EOM
+@@ -3524,7 +3525,7 @@
  			;;
  		nonstop-ux) osname=nonstopux ;;
  		openbsd) osname=openbsd
@@ -42,7 +43,7 @@ $NetBSD: patch-Configure,v 1.3 2016/06/08 17:39:30 he Exp $
                  	;;
  		os2)	osname=os2
  			osvers="$4"
-@@ -3522,6 +3523,9 @@ EOM
+@@ -3539,6 +3540,9 @@
  		qnx) osname=qnx
  			osvers="$4"
  			;;
@@ -52,7 +53,7 @@ $NetBSD: patch-Configure,v 1.3 2016/06/08 17:39:30 he Exp $
  		solaris) osname=solaris
  			case "$3" in
  			5*) osvers=`echo $3 | $sed 's/^5/2/g'` ;;
-@@ -4960,7 +4964,7 @@ esac
+@@ -4977,7 +4981,7 @@
  # If using gcc or clang, we can get better values for libpth, incpth
  # and usrinc directly from the compiler.
  # Note that ccname for clang is also gcc.
@@ -61,7 +62,7 @@ $NetBSD: patch-Configure,v 1.3 2016/06/08 17:39:30 he Exp $
      gcc)
  	$echo 'extern int foo;' > try.c
  	set X `$cppstdin -v try.c 2>&1 | $awk '/^#include </,/^End of search /'|$cppfilter $grep '/include'`
-@@ -5036,14 +5040,14 @@ case "$plibpth" in
+@@ -5053,14 +5057,14 @@
  esac
  case "$libpth" in
  ' ') dlist='';;
@@ -78,7 +79,7 @@ $NetBSD: patch-Configure,v 1.3 2016/06/08 17:39:30 he Exp $
  		case " $libpth " in
  		*" $xxx "*) ;;
  		*) libpth="$libpth $xxx";;
-@@ -5159,7 +5163,7 @@ lib_ext=$_a
+@@ -5176,7 +5180,7 @@
  obj_ext=$_o
  path_sep=$p_
  
@@ -87,7 +88,7 @@ $NetBSD: patch-Configure,v 1.3 2016/06/08 17:39:30 he Exp $
  
  : Which makefile gets called first.  This is used by make depend.
  case "$firstmakefile" in
-@@ -6461,6 +6465,15 @@ case "$nm_so_opt" in
+@@ -6492,6 +6496,15 @@
  	;;
  esac
  
@@ -103,7 +104,7 @@ $NetBSD: patch-Configure,v 1.3 2016/06/08 17:39:30 he Exp $
  : Figure out where the libc is located
  case "$runnm" in
  true)
-@@ -7564,7 +7577,9 @@ rp='Pathname for the site-specific libra
+@@ -7626,7 +7639,9 @@
  . ./getfile
  prefixvar=sitelib
  . ./setprefixvar
@@ -114,7 +115,7 @@ $NetBSD: patch-Configure,v 1.3 2016/06/08 17:39:30 he Exp $
  
  : Determine list of previous versions to include in @INC
  $cat > getverlist <<EOPL
-@@ -7976,7 +7991,9 @@ case "$vendorprefix" in
+@@ -8038,7 +8053,9 @@
  	vendorlibexp="$ansexp"
  	;;
  esac
@@ -125,7 +126,7 @@ $NetBSD: patch-Configure,v 1.3 2016/06/08 17:39:30 he Exp $
  prefixvar=vendorlib
  . ./installprefix
  
-@@ -8518,6 +8535,7 @@ EOM
+@@ -8580,6 +8597,7 @@
  			  esac
  			  ;;
  		    *linux*|irix*|gnu*)  dflt="-shared $optimize" ;;
@@ -133,7 +134,16 @@ $NetBSD: patch-Configure,v 1.3 2016/06/08 17:39:30 he Exp $
  		    solaris) # See [perl #66604].
  			    # On Solaris 11, gcc -m64 on amd64
  			    # appears not to understand -G.  gcc versions at
-@@ -8816,6 +8834,10 @@ if "$useshrplib"; then
+@@ -8619,7 +8637,7 @@
+ 	esac
+ 	for thisflag in $ldflags; do
+ 	    case "$thisflag" in
+-		-L*|-R*|-Wl,-R*)
++		-L*|-R*|-Wl,-R*|-Wl,-z*)
+ 		    case " $dflt " in
+ 			*" $thisflag "*) ;;
+ 			*) dflt="$dflt $thisflag" ;;
+@@ -8878,6 +8896,10 @@
  	bsdos|linux|irix*|dec_osf|gnu*|haiku)
  		xxx="-Wl,-rpath,$shrpdir"
  		;;
@@ -144,7 +154,7 @@ $NetBSD: patch-Configure,v 1.3 2016/06/08 17:39:30 he Exp $
  	hpux*)
  		# hpux doesn't like the default, either.
  		tmp_shrpenv="env LDOPTS=\"+s +b${shrpdir}\""
-@@ -8823,6 +8845,9 @@ if "$useshrplib"; then
+@@ -8885,6 +8907,9 @@
  	cygwin)
  		# cygwin needs only ldlibpth
  		;;
@@ -154,7 +164,7 @@ $NetBSD: patch-Configure,v 1.3 2016/06/08 17:39:30 he Exp $
  	*)
  		tmp_shrpenv="env LD_RUN_PATH=$shrpdir"
  		;;
-@@ -9901,6 +9926,13 @@ esac
+@@ -9966,6 +9991,13 @@
  : Check if we want perlio
  useperlio="$define"
  
@@ -168,7 +178,7 @@ $NetBSD: patch-Configure,v 1.3 2016/06/08 17:39:30 he Exp $
  : Set the vendorbin variables
  case "$vendorprefix" in
  '')	d_vendorbin="$undef"
-@@ -20262,7 +20294,15 @@ RCAT(Rei,ser)
+@@ -20424,7 +20456,15 @@
  ACAT(Cir,cus)
  EOCP
  $cppstdin $cppflags $cppminus <cpp_stuff.c >cpp_stuff.out 2>&1
@@ -185,7 +195,7 @@ $NetBSD: patch-Configure,v 1.3 2016/06/08 17:39:30 he Exp $
  	echo "Oh!  Smells like ANSI's been here." >&4
  	echo "We can catify or stringify, separately or together!"
  	cpp_stuff=42
-@@ -23049,6 +23089,21 @@ eval $inhdr
+@@ -23296,6 +23336,21 @@
  set fenv.h i_fenv
  eval $inhdr
  
@@ -207,7 +217,7 @@ $NetBSD: patch-Configure,v 1.3 2016/06/08 17:39:30 he Exp $
  : see if this is a fp.h system
  set fp.h i_fp
  eval $inhdr
-@@ -25402,4 +25457,3 @@ $rm -f kit*isdone ark*isdone
+@@ -25665,4 +25720,3 @@
  $rm -rf UU
  
  : End of Configure
