@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/07 08:51:16 adam Exp $
 
-DISTNAME=	isodate-0.5.1
+DISTNAME=	isodate-0.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python time
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/isodate/}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	# none
 
 do-test:
-	${RUN} cd ${WRKSRC}/src/isodate/tests; ${SETENV} ${TEST_ENV} ${PYTHONBIN} __init__.py
+	cd ${WRKSRC}/src/isodate/tests && ${SETENV} ${TEST_ENV} ${PYTHONBIN} __init__.py
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
