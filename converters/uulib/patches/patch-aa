@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2009/09/09 17:16:36 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2017/07/07 11:19:44 wiz Exp $
 
 --- uulib/Makefile.in.orig	2002-03-11 03:15:46.000000000 -0600
 +++ uulib/Makefile.in
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.6 2009/09/09 17:16:36 joerg Exp $
  	rm -f $@
 -	ar r $@ $(UULIB_OBJ)
 -	-$(RANLIB) $@
-+	$(LIBTOOL) --mode=link @CC@ -o libuu.la $(UULIB_OBJ:.o=.lo) -rpath $(PREFIX)/lib \
++	$(LIBTOOL) --mode=link @CC@ $(LDFLAGS) -o libuu.la $(UULIB_OBJ:.o=.lo) -rpath $(PREFIX)/lib \
 +		-version-info 2:0
  
  .c.o:
