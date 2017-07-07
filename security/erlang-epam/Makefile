@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/03/30 14:23:41 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/07 09:34:06 fhajny Exp $
 
-DISTNAME=	epam-1.0.2
+DISTNAME=	epam-1.0.3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -14,8 +14,6 @@ GITHUB_PROJECT=	epam
 SUPERSEDES=	erlang-p1_epam-[0-9]*
 
 GNU_CONFIGURE=	yes
-
-MAKE_ENV+=	USE_GLOBAL_DEPS=true
 
 LDFLAGS.SunOS+=	-lnsl
 
