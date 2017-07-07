@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2016/08/27 08:04:42 maya Exp $
+# $NetBSD: Makefile,v 1.58 2017/07/07 13:04:55 jperkin Exp $
 #
 
 DISTNAME=	awesome-3.5.9
@@ -16,6 +16,8 @@ CONFLICTS+=	awesome<3.0
 USE_TOOLS+=	bash gmake pkg-config
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+LUA_VERSIONS_ACCEPTED=	51
 
 PKG_SYSCONFSUBDIR=	xdg/awesome
 
