@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2016/04/25 14:28:42 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/07/07 09:36:50 fhajny Exp $
 lib/erlang/lib/fast_tls-${PKGVERSION}/ebin/fast_tls.app
 lib/erlang/lib/fast_tls-${PKGVERSION}/ebin/fast_tls.beam
 lib/erlang/lib/fast_tls-${PKGVERSION}/ebin/fast_tls_app.beam
 lib/erlang/lib/fast_tls-${PKGVERSION}/ebin/fast_tls_sup.beam
 lib/erlang/lib/fast_tls-${PKGVERSION}/ebin/p1_sha.beam
-lib/erlang/lib/fast_tls-${PKGVERSION}/priv/lib/fast_tls_drv.so
+lib/erlang/lib/fast_tls-${PKGVERSION}/priv/lib/fast_tls.so
 lib/erlang/lib/fast_tls-${PKGVERSION}/priv/lib/p1_sha.so
