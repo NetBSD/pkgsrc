@@ -1,39 +1,63 @@
-$NetBSD: patch-ae,v 1.15 2016/04/29 19:05:22 fhajny Exp $
+$NetBSD: patch-ae,v 1.16 2017/07/07 10:08:40 fhajny Exp $
 
 - Default locations.
 - Use 'su -' instead of just 'su'. Fixes priv delegation on SunOS
   and AIX where Erlang relies on $HOME set correctly.
+- At least SunOS has not wheel group.
+- Portable grep calls.
 
---- ejabberdctl.template.orig	2016-04-28 13:57:55.000000000 +0000
+--- ejabberdctl.template.orig	2017-06-30 12:24:35.000000000 +0000
 +++ ejabberdctl.template
-@@ -27,7 +27,7 @@ if [ "$INSTALLUSER" != "" ] ; then
-                 mkdir -p "$INSTALLUSER_HOME"
-                 chown "$INSTALLUSER" "$INSTALLUSER_HOME"
-             fi
--            EXEC_CMD="su $INSTALLUSER -c"
-+            EXEC_CMD="su - $INSTALLUSER -c"
-         fi
-     done
-     if [ `id -g` -eq `id -g $INSTALLUSER` ] ; then
-@@ -73,10 +73,10 @@ if [ "$EJABBERD_CONFIG_PATH" = "" ] ; th
-     EJABBERD_CONFIG_PATH=$ETC_DIR/ejabberd.yml
- fi
- if [ "$LOGS_DIR" = "" ] ; then
--    LOGS_DIR={{localstatedir}}/log/ejabberd
-+    LOGS_DIR=@EJABBERD_LOGDIR@
- fi
- if [ "$SPOOL_DIR" = "" ] ; then
--    SPOOL_DIR={{localstatedir}}/lib/ejabberd
-+    SPOOL_DIR=@EJABBERD_DB@
- fi
- if [ "$EJABBERD_DOC_PATH" = "" ] ; then
-     EJABBERD_DOC_PATH={{docdir}}
-@@ -85,7 +85,7 @@ if [ "$ERLANG_NODE_ARG" != "" ] ; then
-     ERLANG_NODE=$ERLANG_NODE_ARG
- fi
- if [ "{{release}}" != "true" -a "$EJABBERD_BIN_PATH" = "" ] ; then
--    EJABBERD_BIN_PATH={{libdir}}/ejabberd/priv/bin
-+    EJABBERD_BIN_PATH={{libdir}}/erlang/lib/ejabberd/priv/bin
- fi
- EJABBERD_LOG_PATH=$LOGS_DIR/ejabberd.log
- DATETIME=`date "+%Y%m%d-%H%M%S"`
+@@ -21,7 +21,7 @@ if [ -n "$INSTALLUSER" ] ; then
+     if [ $(id -g) -eq $(id -g $INSTALLUSER || echo -1) ] ; then
+         EXEC_CMD="as_current_user"
+     else
+-        id -Gn | grep -q wheel && EXEC_CMD="as_install_user"
++        id -Gn | grep 'wheel\|root' >/dev/null && EXEC_CMD="as_install_user"
+     fi
+ else
+     EXEC_CMD="as_current_user"
+@@ -49,8 +49,8 @@ done
+ 
+ # define ejabberd variables if not already defined from the command line
+ : ${ETC_DIR:={{sysconfdir}}/ejabberd}
+-: ${LOGS_DIR:={{localstatedir}}/log/ejabberd}
+-: ${SPOOL_DIR:={{localstatedir}}/lib/ejabberd}
++: ${LOGS_DIR:=@EJABBERD_LOGDIR@}
++: ${SPOOL_DIR:=@EJABBERD_DB@}
+ : ${EJABBERD_CONFIG_PATH:="$ETC_DIR"/ejabberd.yml}
+ : ${EJABBERDCTL_CONFIG_PATH:="$ETC_DIR"/ejabberdctl.cfg}
+ [ -f "$EJABBERDCTL_CONFIG_PATH" ] && . "$EJABBERDCTL_CONFIG_PATH"
+@@ -103,7 +103,7 @@ export ERL_LIBS
+ exec_cmd()
+ {
+     case $EXEC_CMD in
+-        as_install_user) su -c '"$0" $@"' "$INSTALLUSER" -- "$@" ;;
++        as_install_user) su - -c '"$0" $@"' "$INSTALLUSER" -- "$@" ;;
+         as_current_user) "$@" ;;
+     esac
+ }
+@@ -202,19 +202,19 @@ uid()
+ # stop epmd if there is no other running node
+ stop_epmd()
+ {
+-    "$EPMD" -names 2>/dev/null | grep -q name || "$EPMD" -kill >/dev/null
++    "$EPMD" -names 2>/dev/null | grep name >/dev/null || "$EPMD" -kill >/dev/null
+ }
+ 
+ # make sure node not already running and node name unregistered
+ # if all ok, ensure runtime directory exists and make it current directory
+ check_start()
+ {
+-    "$EPMD" -names 2>/dev/null | grep -q " ${ERLANG_NODE%@*} " && {
+-        ps ux | grep -v grep | grep -q " $ERLANG_NODE " && {
++    "$EPMD" -names 2>/dev/null | grep " ${ERLANG_NODE%@*} " >/dev/null && {
++        ps ux | grep -v grep | grep " $ERLANG_NODE " >/dev/null && {
+             echo "ERROR: The ejabberd node '$ERLANG_NODE' is already running."
+             exit 4
+         } || {
+-            ps ux | grep -v grep | grep -q beam && {
++            ps ux | grep -v grep | grep beam >/dev/null && {
+                 echo "ERROR: The ejabberd node '$ERLANG_NODE' is registered,"
+                 echo "       but no related beam process has been found."
+                 echo "Shutdown all other erlang nodes, and call 'epmd -kill'."
