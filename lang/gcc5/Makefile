@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/06/22 21:44:49 maya Exp $
+# $NetBSD: Makefile,v 1.20 2017/07/07 14:52:30 jperkin Exp $
 
 GCC_PKGNAME=		gcc5
 PKGREVISION=		3
@@ -104,6 +104,7 @@ MAKE_ENV.NetBSD+=	ac_cv_func_gethostbyname_r=no
 MAKE_ENV.NetBSD+=	ac_cv_func_freelocale=no
 MAKE_ENV.NetBSD+=	ac_cv_func_newlocale=no
 MAKE_ENV.NetBSD+=	ac_cv_func_uselocale=no
+MAKE_ENV.SunOS+=	ac_cv_func_mkostemp=no
 
 CONFIGURE_ARGS.DragonFly+=	--disable-bootstrap
 
