@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2017/04/22 21:03:30 adam Exp $
+# $NetBSD: Makefile,v 1.40 2017/07/07 04:51:47 adam Exp $
 
 PKGNAME=	java-subversion-${SVNVER}
-PKGREVISION=	2
 COMMENT=	Java bindings for Subversion
 
 MAKE_JOBS_SAFE=	no

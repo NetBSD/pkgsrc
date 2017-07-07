@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2017/04/22 21:03:33 adam Exp $
+# $NetBSD: Makefile,v 1.73 2017/07/07 04:51:47 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-subversion-${SVNVER}
-PKGREVISION=	2
 COMMENT=	Python bindings and tools for Subversion
 
 .include "../../devel/subversion/Makefile.common"
@@ -36,6 +35,8 @@ post-install:
 	${INSTALL_DATA} \
 		${WRKSRC}/tools/hook-scripts/mailer/mailer.conf.example \
 		${DESTDIR}${SVNEXAMPLES}/hook-scripts
+	${PY_COMPILE_O_ALL} ${DESTDIR}${PREFIX}/${PYSITELIB}/libsvn
+	${PY_COMPILE_O_ALL} ${DESTDIR}${PREFIX}/${PYSITELIB}/svn
 
 .include "../../devel/subversion-base/buildlink3.mk"
 .include "../../lang/python/application.mk"
