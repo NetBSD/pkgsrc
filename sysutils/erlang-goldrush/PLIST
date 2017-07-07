@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2016/01/16 17:33:51 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/07/07 09:45:39 fhajny Exp $
 lib/erlang/lib/goldrush-${PKGVERSION}/ebin/glc.beam
 lib/erlang/lib/goldrush-${PKGVERSION}/ebin/glc_code.beam
 lib/erlang/lib/goldrush-${PKGVERSION}/ebin/glc_lib.beam
 lib/erlang/lib/goldrush-${PKGVERSION}/ebin/glc_ops.beam
+lib/erlang/lib/goldrush-${PKGVERSION}/ebin/glc_run.beam
 lib/erlang/lib/goldrush-${PKGVERSION}/ebin/goldrush.app
 lib/erlang/lib/goldrush-${PKGVERSION}/ebin/gr_app.beam
 lib/erlang/lib/goldrush-${PKGVERSION}/ebin/gr_context.beam
