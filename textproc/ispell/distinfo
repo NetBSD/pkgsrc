@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:59:36 agc Exp $
+$NetBSD: distinfo,v 1.6 2017/07/07 11:28:36 wiz Exp $
 
 SHA1 (ispell-3.4.00.tar.gz) = 6138ab935f0261be8162e3cdc07c127d53555837
 RMD160 (ispell-3.4.00.tar.gz) = c6a2a6d6dd65782d7c3fdf90968e61a5091b616c
@@ -12,3 +12,4 @@ SHA1 (patch-ae) = adc803bd66f62236a2b879713f326b4c7ac7199f
 SHA1 (patch-ai) = 1fbf9385818e0a0fcd4049d0407212b1456d2744
 SHA1 (patch-al) = ea63fc7dbc2200794157d9be781210cd8a4e671f
 SHA1 (patch-ar) = c5082129f55fb232db34e0796423e60fcd4ed5c2
+SHA1 (patch-deformatters_Makefile) = a66a43f679491df718149c0b6db36ed0f9962535
