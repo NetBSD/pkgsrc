@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2016/04/25 14:17:53 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/07/07 09:31:45 fhajny Exp $
 lib/erlang/lib/cache_tab-${PKGVERSION}/ebin/cache_tab.app
 lib/erlang/lib/cache_tab-${PKGVERSION}/ebin/cache_tab.beam
 lib/erlang/lib/cache_tab-${PKGVERSION}/ebin/cache_tab_app.beam
 lib/erlang/lib/cache_tab-${PKGVERSION}/ebin/cache_tab_sup.beam
+lib/erlang/lib/cache_tab-${PKGVERSION}/ebin/ets_cache.beam
+lib/erlang/lib/cache_tab-${PKGVERSION}/ebin/ets_cache_options.beam
+lib/erlang/lib/cache_tab-${PKGVERSION}/include/ets_cache.hrl
+lib/erlang/lib/cache_tab-${PKGVERSION}/priv/lib/ets_cache.so
