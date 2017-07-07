@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2754 2017/07/07 10:14:06 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.2755 2017/07/07 12:12:49 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3818,3 +3818,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/erlang-esip to 1.0.13 [fhajny 2017-07-07]
 	Updated chat/ejabberd to 17.07 [fhajny 2017-07-07]
 	Updated sysutils/libpciaccess to 0.13.5nb1 [jperkin 2017-07-07]
+	Updated x11/modular-xorg-server to 1.19.3nb1 [jperkin 2017-07-07]
