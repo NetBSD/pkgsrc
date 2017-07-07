@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/05/24 11:28:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/07/07 15:41:18 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -114,9 +114,6 @@ ${PYSITELIB}/hypothesis/searchstrategy/datetime.pyo
 ${PYSITELIB}/hypothesis/searchstrategy/deferred.py
 ${PYSITELIB}/hypothesis/searchstrategy/deferred.pyc
 ${PYSITELIB}/hypothesis/searchstrategy/deferred.pyo
-${PYSITELIB}/hypothesis/searchstrategy/fixed.py
-${PYSITELIB}/hypothesis/searchstrategy/fixed.pyc
-${PYSITELIB}/hypothesis/searchstrategy/fixed.pyo
 ${PYSITELIB}/hypothesis/searchstrategy/flatmapped.py
 ${PYSITELIB}/hypothesis/searchstrategy/flatmapped.pyc
 ${PYSITELIB}/hypothesis/searchstrategy/flatmapped.pyo
