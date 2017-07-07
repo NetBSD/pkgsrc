@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/03 21:09:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/07/07 04:11:27 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -164,6 +164,7 @@ ${PYSITELIB}/botocore/data/dms/2016-01-01/examples-1.json
 ${PYSITELIB}/botocore/data/dms/2016-01-01/paginators-1.json
 ${PYSITELIB}/botocore/data/dms/2016-01-01/service-2.json
 ${PYSITELIB}/botocore/data/ds/2015-04-16/examples-1.json
+${PYSITELIB}/botocore/data/ds/2015-04-16/paginators-1.json
 ${PYSITELIB}/botocore/data/ds/2015-04-16/service-2.json
 ${PYSITELIB}/botocore/data/dynamodb/2012-08-10/examples-1.json
 ${PYSITELIB}/botocore/data/dynamodb/2012-08-10/paginators-1.json
