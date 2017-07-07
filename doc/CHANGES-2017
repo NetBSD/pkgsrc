@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2749 2017/07/07 08:16:43 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2750 2017/07/07 08:52:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3799,3 +3799,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-sanic version 0.5.4 [adam 2017-07-07]
 	Added finance/py-braintree version 3.37.2 [adam 2017-07-07]
 	Updated textproc/py-JWT to 1.5.2 [adam 2017-07-07]
+	Updated time/py-isodate to 0.5.4 [adam 2017-07-07]
