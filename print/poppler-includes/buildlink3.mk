@@ -1,11 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.23 2017/07/07 06:50:06 spz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2017/07/07 09:28:06 spz Exp $
 
 BUILDLINK_TREE+=	poppler-includes
 
 .if !defined(POPPLER_INCLUDES_BUILDLINK3_MK)
 POPPLER_INCLUDES_BUILDLINK3_MK:=
-
-GCC_REQD=	4.8
 
 BUILDLINK_DEPMETHOD.poppler-includes?=	build
 
