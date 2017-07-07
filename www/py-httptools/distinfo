@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/07/07 07:25:31 adam Exp $
+
+SHA1 (httptools-0.0.9.tar.gz) = f15afb428449f440c72f0b9c5244144ff11027cd
+RMD160 (httptools-0.0.9.tar.gz) = 95ed5402ba6089b6b3eb65cf5fb52215b0fa0aec
+SHA512 (httptools-0.0.9.tar.gz) = 3346a0b69165e26b323e653740b25b952b3f444862432c4e0364b0966e44513df6707dcfb57b1e095b84d15e63b167916ef6a6ad6dec91583f32f4b69188f251
+Size (httptools-0.0.9.tar.gz) = 86581 bytes
