@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.33 2017/04/07 08:53:28 wiz Exp $
+$NetBSD: distinfo,v 1.34 2017/07/07 10:13:57 jperkin Exp $
 
 SHA1 (libpciaccess-0.13.5.tar.bz2) = ea98c13623e218359ca6d9af9ab9aa4780201a5b
 RMD160 (libpciaccess-0.13.5.tar.bz2) = a691b7213132d4e50a49b650524937f2a7271d0b
 SHA512 (libpciaccess-0.13.5.tar.bz2) = 4b77aa66b3429fd5f9bff0408b0624305e766bf209f3fa2a0a9024df55bf87ca68f9a5aa34f97ffe131997e0669c65cf542210cf308c0de09842424968c5a159
 Size (libpciaccess-0.13.5.tar.bz2) = 381729 bytes
 SHA1 (patch-src_common__interface.c) = cac11689864531fa4721e09374ead730bd1691a6
+SHA1 (patch-src_solx__devfs.c) = 18bfd9899da30061199232ae2ebc5ead8d4d7a47
