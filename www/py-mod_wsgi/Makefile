@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2017/04/14 18:11:50 adam Exp $
+# $NetBSD: Makefile,v 1.10 2017/07/07 15:45:55 adam Exp $
 
-DISTNAME=	mod_wsgi-4.5.15
+DISTNAME=	mod_wsgi-4.5.17
 PKGNAME=	${PYPKGPREFIX}-${APACHE_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mod_wsgi/}
@@ -24,8 +24,8 @@ post-extract:
 	${RM} -f ${WRKSRC}/src/__init__.py
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/mod_wsgi-express \
-		${DESTDIR}${PREFIX}/bin/mod_wsgi-express${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin/ && \
+		${MV} mod_wsgi-express mod_wsgi-express${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
