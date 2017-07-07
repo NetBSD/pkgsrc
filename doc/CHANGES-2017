@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2745 2017/07/07 03:14:21 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2746 2017/07/07 04:52:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3785,3 +3785,11 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/tex-pgfopts-doc version 2.1a [minskim 2017-07-06]
 	Updated lang/php71 to 7.1.7 [taca 2017-07-07]
 	Updated lang/php56 to 5.6.31 [taca 2017-07-07]
+	Added net/inetutils version 1.9.4 [adam 2017-07-07]
+	Updated graphics/py-Pillow to 4.2.1 [adam 2017-07-07]
+	Updated devel/libuv to 1.13.1 [adam 2017-07-07]
+	Updated net/py-botocore to 1.5.80 [adam 2017-07-07]
+	Updated net/py-boto to 2.48.0 [adam 2017-07-07]
+	Updated net/py-awscli to 1.11.117 [adam 2017-07-07]
+	Updated math/py-numpy to 1.13.1 [adam 2017-07-07]
+	Updated devel/subversion to 1.9.6 [adam 2017-07-07]
