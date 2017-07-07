@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1252 2017/06/24 07:30:18 adam Exp $
+# $NetBSD: Makefile,v 1.1253 2017/07/07 07:27:15 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -691,6 +691,7 @@ SUBDIR+=	py-http-parser
 SUBDIR+=	py-httpbin
 SUBDIR+=	py-httpie
 SUBDIR+=	py-httplib2
+SUBDIR+=	py-httptools
 SUBDIR+=	py-hyperframe
 SUBDIR+=	py-hyperlink
 SUBDIR+=	py-idna
@@ -720,6 +721,7 @@ SUBDIR+=	py-pywebdav
 SUBDIR+=	py-recaptcha
 SUBDIR+=	py-robobrowser
 SUBDIR+=	py-rss2gen
+SUBDIR+=	py-sanic
 SUBDIR+=	py-scgi
 SUBDIR+=	py-scrapy
 SUBDIR+=	py-simpletal
