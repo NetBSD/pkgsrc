@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2017/07/07 11:30:45 wiz Exp $
+
+Honor LDFLAGS.
+
+--- Makefile.orig	2015-02-25 15:16:14.000000000 +0000
++++ Makefile	2017-07-07 11:29:39.858873095 +0000
+@@ -13,7 +13,7 @@
+ afl: afl/texi2mdoc
+ 
+ texi2mdoc: $(OBJS)
+-	$(CC) -o $@ $(OBJS)
++	$(CC) $(LDFLAGS) -o $@ $(OBJS)
+ 
+ install: all
+ 	mkdir -p $(DESTDIR)$(PREFIX)/bin
