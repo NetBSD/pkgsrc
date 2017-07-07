@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/07/07 04:03:06 adam Exp $
+
+SHA1 (inetutils-1.9.4.tar.xz) = 5e515cc9da142cb73bb1beda137b4c2dcf2b528c
+RMD160 (inetutils-1.9.4.tar.xz) = 0c144d9ac0b5c07beca1e634fc5b2c5bae15917d
+SHA512 (inetutils-1.9.4.tar.xz) = 020d1cab6659da63b26445b29820ad6769b8cf992496bece3dcbfba73804e29cc5c496d59f36046d432f9cc7fadefa3170f6d8faa855e59435aff4ecef724e66
+Size (inetutils-1.9.4.tar.xz) = 1364408 bytes

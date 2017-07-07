@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1165 2017/07/04 13:11:59 wiz Exp $
+# $NetBSD: Makefile,v 1.1166 2017/07/07 04:03:06 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -225,6 +225,7 @@ SUBDIR+=	icinga-base
 SUBDIR+=	icsi-finger
 SUBDIR+=	iftop
 SUBDIR+=	inadyn
+SUBDIR+=	inetutils
 SUBDIR+=	iodine
 SUBDIR+=	ipcalc
 SUBDIR+=	ipcheck
