@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/03/30 14:27:43 fhajny Exp $
+$NetBSD: distinfo,v 1.6 2017/07/07 09:38:46 fhajny Exp $
 
-SHA1 (fast_yaml-1.0.9.tar.gz) = 83cc91a09f54d18d3651d736a95ad558816efddc
-RMD160 (fast_yaml-1.0.9.tar.gz) = 6f4f4418cb92cf06afaa6f20eea0869c41af73c9
-SHA512 (fast_yaml-1.0.9.tar.gz) = dd826643d1c841218bae1ccb6ea3dc0c35c64c20720c47e90b3dfad3231c4944216729bf3d46f19b06cd2d54a9487336e39a9ef15201cc315ab10a7ee950bf6a
-Size (fast_yaml-1.0.9.tar.gz) = 49696 bytes
+SHA1 (fast_yaml-1.0.10.tar.gz) = b957dd1c7c833e8550c9ff99d1d020fb92b03888
+RMD160 (fast_yaml-1.0.10.tar.gz) = 619dd694024ad1c88a73e38fac95d1bec43dd82e
+SHA512 (fast_yaml-1.0.10.tar.gz) = 92d8ec655e2697fd104a50c1e45735ba55a76d3275b06b19186e5f549d71a1c60e750177fa22a5ab4807d49f8aa3c32aebfedba734f69f4f87ce2ec0a9e6ab6b
+Size (fast_yaml-1.0.10.tar.gz) = 49723 bytes
