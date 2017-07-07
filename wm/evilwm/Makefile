@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2017/07/02 12:45:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.36 2017/07/07 13:08:07 jperkin Exp $
 #
 
 DISTNAME=	evilwm-1.1.1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.6809.org.uk/evilwm/
 COMMENT=	Minimalist Window Manager for X
 
 USE_TOOLS+=	gmake
-MAKE_FLAGS+=	OPT_CPPFLAGS=-D_XOPEN_SOURCE
+MAKE_FLAGS+=	OPT_CPPFLAGS=-D_XOPEN_SOURCE=600
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/evilwm
 
