@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/03/30 14:32:47 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/07/07 09:54:41 fhajny Exp $
 lib/erlang/lib/xmpp
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/flex_offline.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/jid.beam
@@ -8,7 +8,6 @@ lib/erlang/lib/xmpp-${PKGVERSION}/ebin/muc_request.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/muc_roomconfig.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/muc_roominfo.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/p1_mucsub.beam
-lib/erlang/lib/xmpp-${PKGVERSION}/ebin/p1_stream.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/pubsub_get_pending.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/pubsub_node_config.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/pubsub_publish_options.beam
@@ -66,6 +65,7 @@ lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0334.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0352.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0355.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0356.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0357.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0359.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0363.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xep0369.beam
@@ -90,3 +90,4 @@ lib/erlang/lib/xmpp-${PKGVERSION}/include/pubsub_subscribe_authorization.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/pubsub_subscribe_options.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/xmpp.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/xmpp_codec.hrl
+lib/erlang/lib/xmpp-${PKGVERSION}/priv/lib/jid.so
