@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2453 2017/07/06 19:08:37 minskim Exp $
+# $NetBSD: Makefile,v 1.2454 2017/07/07 07:20:54 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -1756,6 +1756,7 @@ SUBDIR+=	py-ZopeEvent
 SUBDIR+=	py-ZopeI18NMessageid
 SUBDIR+=	py-ZopeInterface
 SUBDIR+=	py-ZopeSchema
+SUBDIR+=	py-aiofiles
 SUBDIR+=	py-apipkg
 SUBDIR+=	py-appdirs
 SUBDIR+=	py-argcomplete
