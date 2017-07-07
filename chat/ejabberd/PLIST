@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.46 2017/04/13 19:04:53 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.47 2017/07/07 10:08:39 fhajny Exp $
+lib/erlang/lib/${PKGNAME}/COPYING
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
@@ -31,6 +32,7 @@ lib/erlang/lib/${PKGNAME}/ebin/ejabberd_commands.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_commands_doc.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_config.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_ctl.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_db_modules.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_hooks.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_http.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_http_ws.beam
@@ -43,7 +45,9 @@ lib/erlang/lib/${PKGNAME}/ebin/ejabberd_oauth.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_oauth_mnesia.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_oauth_rest.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_oauth_sql.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_options.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_piefxis.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_pkix.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_rdbms.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_receiver.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_redis.beam
@@ -55,14 +59,17 @@ lib/erlang/lib/${PKGNAME}/ebin/ejabberd_router.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_router_mnesia.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_router_multicast.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_router_redis.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_router_riak.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_router_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_s2s.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_s2s_in.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_s2s_out.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_service.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sip.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sm.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sm_mnesia.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sm_redis.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sm_riak.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sm_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_socket.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sql.beam
@@ -101,12 +108,10 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_announce_riak.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_announce_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_block_strangers.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_blocking.beam
-lib/erlang/lib/${PKGNAME}/ebin/mod_blocking_mnesia.beam
-lib/erlang/lib/${PKGNAME}/ebin/mod_blocking_riak.beam
-lib/erlang/lib/${PKGNAME}/ebin/mod_blocking_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_bosh.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_bosh_mnesia.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_bosh_redis.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_bosh_riak.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_bosh_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_caps.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_caps_mnesia.beam
@@ -115,6 +120,7 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_caps_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_carboncopy.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_carboncopy_mnesia.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_carboncopy_redis.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_carboncopy_riak.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_carboncopy_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_client_state.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_configure.beam
@@ -168,6 +174,7 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_proxy65.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_proxy65_lib.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_proxy65_mnesia.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_proxy65_redis.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_proxy65_riak.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_proxy65_service.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_proxy65_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_proxy65_stream.beam
@@ -198,9 +205,6 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_vcard_mnesia.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_vcard_riak.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_vcard_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_vcard_xupdate.beam
-lib/erlang/lib/${PKGNAME}/ebin/mod_vcard_xupdate_mnesia.beam
-lib/erlang/lib/${PKGNAME}/ebin/mod_vcard_xupdate_riak.beam
-lib/erlang/lib/${PKGNAME}/ebin/mod_vcard_xupdate_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_version.beam
 lib/erlang/lib/${PKGNAME}/ebin/node_buddy.beam
 lib/erlang/lib/${PKGNAME}/ebin/node_club.beam
@@ -233,7 +237,6 @@ lib/erlang/lib/${PKGNAME}/ebin/randoms.beam
 lib/erlang/lib/${PKGNAME}/ebin/rest.beam
 lib/erlang/lib/${PKGNAME}/ebin/scram.beam
 lib/erlang/lib/${PKGNAME}/ebin/shaper.beam
-lib/erlang/lib/${PKGNAME}/ebin/sql_queries.beam
 lib/erlang/lib/${PKGNAME}/ebin/str.beam
 lib/erlang/lib/${PKGNAME}/ebin/translate.beam
 lib/erlang/lib/${PKGNAME}/ebin/win32_dns.beam
