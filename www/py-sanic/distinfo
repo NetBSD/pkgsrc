@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/07/07 07:27:15 adam Exp $
+
+SHA1 (sanic-0.5.4.tar.gz) = 4703ee202febb32cf8af68f6ad5488d42f7a1ce7
+RMD160 (sanic-0.5.4.tar.gz) = 4d8cdd82e0bcc4716a2360335e2373b27baa90e3
+SHA512 (sanic-0.5.4.tar.gz) = 7cc413d9f42bfbf15507d88bfb5c17186b8d9e57f976d9099463ef204359fc1a52f25785f687384d5a9cac6b4b871a0d047e382319243d36b39ab185881f9efc
+Size (sanic-0.5.4.tar.gz) = 35059 bytes
