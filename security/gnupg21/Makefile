@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2017/05/16 12:08:01 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2017/07/07 12:33:29 adam Exp $
 
 DISTNAME=	gnupg-2.1.21
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg21-/}
@@ -30,7 +30,7 @@ TEST_TARGET=		check
 # SunOS does have getaddrinfo() and the code knows how to use it
 CONFIGURE_ARGS.SunOS+=	ac_cv_func_getaddrinfo=yes
 
-LDFLAGS.Darwin+=	-lresolv
+LDFLAGS.Darwin+=	-lintl -lresolv
 LDFLAGS.SunOS+=		-lintl -lsocket
 
 .include "options.mk"
