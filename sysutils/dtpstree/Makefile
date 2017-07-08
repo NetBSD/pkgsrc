@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/01/19 18:52:25 agc Exp $
+# $NetBSD: Makefile,v 1.6 2017/07/08 12:06:56 kamil Exp $
 #
 
 DISTNAME=	dtpstree-1.0.3
@@ -17,10 +17,15 @@ ONLY_FOR_PLATFORM=	DragonFly-*-* FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake bash aclocal autoconf automake
 MAKE_FILE=	GNUmakefile
 
+REPLACE_BASH+=	autogen.sh
+
 .include "options.mk"
+
+pre-configure:
+	${RUN} cd ${WRKSRC} && ./autogen.sh
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
