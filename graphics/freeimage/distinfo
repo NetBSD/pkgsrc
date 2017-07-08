@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.4 2017/02/20 08:00:42 snj Exp $
+$NetBSD: distinfo,v 1.5 2017/07/08 08:08:25 nros Exp $
 
 SHA1 (FreeImage3170.zip) = 6752c83798c2f81dee71a2e8bb11657068672669
 RMD160 (FreeImage3170.zip) = c4e87846098327ee346c49ae81b6036f6d9ab36d
 SHA512 (FreeImage3170.zip) = 703c2626c0bcfe73eb40d720f45745208ca9650a7730759680a2b38ad3f6c719a43008477032bc70b76a95761f7d4b6f901b961359d36b54ace906dd78fb391b
 Size (FreeImage3170.zip) = 7020636 bytes
-SHA1 (patch-Makefile) = 719f3539d1e841761c8cf442634d71e792ea7231
-SHA1 (patch-Makefile.fip) = 3a8bdc29a2249b5cb9e30ccfcc25eb6be99755d9
+SHA1 (patch-Makefile) = 196331f954913d5b49ae1e2464fb356a26212168
+SHA1 (patch-Makefile.fip) = c12dd636f83f774a11c91c4e3373176fd27e562d
 SHA1 (patch-Source_FreeImage_PluginPCX.cpp) = 26853626d1dc6a52804f946fd0576269de380512
 SHA1 (patch-Source_FreeImage_PluginXPM.cpp) = eac7be24c3d64593feebdb548df8a404db66c113
 SHA1 (patch-Source_LibOpenJPEG_opj__malloc.h) = 4ba7924e5ce04b98c9c249bc31df600b7fbdcde3
