@@ -1,0 +1,25 @@
+$NetBSD: patch-configure,v 1.1 2017/07/08 22:27:36 adam Exp $
+
+On Darwin, properly detect system version.
+Do not try putting man-pages in better places.
+
+--- configure.orig	2016-12-04 18:54:11.000000000 +0000
++++ configure
+@@ -1232,7 +1232,7 @@ EOF
+ 	macos*|darwin|rhapsody)
+ 		OS="macosx"
+ 		SYS="macosx"
+-		os_v=`perl -e '{open(F, "< /System/Library/CoreServices/SystemVersion.plist") or exit(2); my ($doc) = ""; my ($line); while (defined($line = <F>)) { $doc .= $line; } close(F); $doc =~ s/\s+//gs; if ($doc =~ /<key>ProductVersion<\/key><string>([^<]+)<\/string>/) { print , "\n"; exit(0); } exit(1); }' 2>/dev/null`
++		os_v=`perl -e '{open(F, "< /System/Library/CoreServices/SystemVersion.plist") or exit(2); my ($doc) = ""; my ($line); while (defined($line = <F>)) { $doc .= $line; } close(F); $doc =~ s/\s+//gs; if ($doc =~ /<key>ProductVersion<\/key><string>([^<]+)<\/string>/) { print $1, "\n"; exit(0); } exit(1); }' 2>/dev/null`
+ 		if [ "$os_v" = "" ] && [ -x "$HOME/bin/macosver" ] ; then
+ 			os_v=`"$HOME/bin/macosver" 2>/dev/null`
+ 		fi
+@@ -12036,7 +12036,7 @@ fi
+ fi
+ 
+ 
+-if test "x$mandir" = 'x${prefix}/man' ; then
++if false; then
+ 	# Mandir is at default value -- try to see
+ 	# if $prefix/share/man would be better.
+ 	#
