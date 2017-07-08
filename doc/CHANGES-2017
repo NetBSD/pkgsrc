@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2764 2017/07/08 04:30:54 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2765 2017/07/08 06:56:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3829,3 +3829,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/mikutter to 3.5.9 [tsutsui 2017-07-08]
 	Updated net/bind910 to 9.10.5pl3 [taca 2017-07-08]
 	Updated net/bind99 to 9.9.10pl3 [taca 2017-07-08]
+	Updated textproc/p5-Text-CSV to 1.95 [wen 2017-07-08]
