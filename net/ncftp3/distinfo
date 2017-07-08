@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.12 2015/11/04 00:35:15 agc Exp $
+$NetBSD: distinfo,v 1.13 2017/07/08 22:27:36 adam Exp $
 
-SHA1 (ncftp-3.2.5-src.tar.gz) = b1aafd9291e29c336fcad07ae212fe1b5b2a1c58
-RMD160 (ncftp-3.2.5-src.tar.gz) = 8768d7c942d71330ccf6619bea112435c93f2437
-SHA512 (ncftp-3.2.5-src.tar.gz) = f9faa9ee86ce1d906f828c4248308fbe5e244be5b341b485c6ab7100b6bf266e4df81d8773f192b606b70b75e9707c2d80ffd61c33cad4a116b6e4847b794199
-Size (ncftp-3.2.5-src.tar.gz) = 588625 bytes
-SHA1 (patch-aa) = bc19e2b7752aca0d00f9e483e0aa547bb1186716
-SHA1 (patch-ab) = 40ad90f10cb639d26587ddaea0f5e4201ce4f15e
+SHA1 (ncftp-3.2.6-src.tar.xz) = b431eee7738a2441309ce11fc632e1b696ee1053
+RMD160 (ncftp-3.2.6-src.tar.xz) = 105f59747ea98d756e610368ad96fb8481fc80f9
+SHA512 (ncftp-3.2.6-src.tar.xz) = 8e6091ce2ea1eb463edea322d1b5dde813475fd22096d67f0bfd2f5101ae09747ff25d38816d0b9b1077e6a5a256078361691f816aa2eefa38638aa523b4b382
+Size (ncftp-3.2.6-src.tar.xz) = 420564 bytes
+SHA1 (patch-configure) = 2b5e18ecdc7ad2b6a7e056210c769ff5441cb04f
