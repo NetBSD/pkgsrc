@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2760 2017/07/08 03:12:28 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.2761 2017/07/08 03:14:50 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3825,3 +3825,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-mod_wsgi to 4.5.17 [adam 2017-07-07]
 	Updated fonts/ttf-tlwg to 0.6.3 [scole 2017-07-07]
 	Updated devel/ruby-memoist to 0.16.0 [tsutsui 2017-07-08]
+	Updated net/ruby-twitter-text to 1.14.7 [tsutsui 2017-07-08]
