@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/11/01 16:50:31 taca Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/08 03:11:05 tsutsui Exp $
 
-DISTNAME=	memoist-0.15.0
+DISTNAME=	memoist-0.16.0
 CATEGORIES=	devel
 
 MAINTAINER=	tsutsui@NetBSD.org
