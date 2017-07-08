@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2761 2017/07/08 03:14:50 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.2762 2017/07/08 03:39:08 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3826,3 +3826,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated fonts/ttf-tlwg to 0.6.3 [scole 2017-07-07]
 	Updated devel/ruby-memoist to 0.16.0 [tsutsui 2017-07-08]
 	Updated net/ruby-twitter-text to 1.14.7 [tsutsui 2017-07-08]
+	Updated net/mikutter to 3.5.9 [tsutsui 2017-07-08]
