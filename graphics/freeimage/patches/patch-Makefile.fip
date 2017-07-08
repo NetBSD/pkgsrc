@@ -1,6 +1,6 @@
-$NetBSD: patch-Makefile.fip,v 1.1 2015/05/27 21:59:26 markd Exp $
-
---- Makefile.fip.orig	2015-03-08 05:03:56.000000000 +0000
+$NetBSD: patch-Makefile.fip,v 1.2 2017/07/08 08:08:25 nros Exp $
+* use c++ for linking instead of linking with stdc++
+--- Makefile.fip.orig	2015-03-08 17:03:56.000000000 +0000
 +++ Makefile.fip
 @@ -5,8 +5,8 @@ include fipMakefile.srcs
  
@@ -26,8 +26,12 @@ $NetBSD: patch-Makefile.fip,v 1.1 2015/05/27 21:59:26 markd Exp $
  
  TARGET  = freeimageplus
  STATICLIB = lib$(TARGET).a
-@@ -71,11 +69,9 @@ $(SHAREDLIB): $(MODULES)
- 	$(CC) -s -shared -Wl,-soname,$(VERLIBNAME) $(LDFLAGS) -o $@ $(MODULES) $(LIBRARIES)
+@@ -68,14 +66,12 @@ $(STATICLIB): $(MODULES)
+ 	$(AR) r $@ $(MODULES)
+ 
+ $(SHAREDLIB): $(MODULES)
+-	$(CC) -s -shared -Wl,-soname,$(VERLIBNAME) $(LDFLAGS) -o $@ $(MODULES) $(LIBRARIES)
++	$(CXX) -s -shared -Wl,-soname,$(VERLIBNAME) $(LDFLAGS) -o $@ $(MODULES)
  
  install:
 -	install -d $(INCDIR) $(INSTALLDIR)
