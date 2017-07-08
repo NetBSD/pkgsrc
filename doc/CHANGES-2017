@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2762 2017/07/08 03:39:08 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.2763 2017/07/08 04:29:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3827,3 +3827,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-memoist to 0.16.0 [tsutsui 2017-07-08]
 	Updated net/ruby-twitter-text to 1.14.7 [tsutsui 2017-07-08]
 	Updated net/mikutter to 3.5.9 [tsutsui 2017-07-08]
+	Updated net/bind910 to 9.10.5pl3 [taca 2017-07-08]
