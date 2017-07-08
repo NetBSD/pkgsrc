@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.142 2017/06/10 09:45:33 tsutsui Exp $
+# $NetBSD: Makefile,v 1.143 2017/07/08 03:31:58 tsutsui Exp $
 #
 
-DISTNAME=	mikutter.3.5.8
+DISTNAME=	mikutter.3.5.9
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
@@ -18,7 +18,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=3.1.6:../../x11/ruby-gnome2-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=3.0.1:../../devel/ruby-gettext
 DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.5.1:../../security/ruby-oauth
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.3:../../net/ruby-addressable
-DEPENDS+=	${RUBY_PKGPREFIX}-memoist-[0-9]*:../../devel/ruby-memoist
+DEPENDS+=	${RUBY_PKGPREFIX}-memoist>=0.16.0:../../devel/ruby-memoist
 DEPENDS+=	${RUBY_PKGPREFIX}-hmac>=0.4:../../security/ruby-hmac
 DEPENDS+=	${RUBY_PKGPREFIX}-typed-array>=0.1:../../misc/ruby-typed-array
 DEPENDS+=	${RUBY_PKGPREFIX}-delayer-[0-9]*:../../devel/ruby-delayer
@@ -26,7 +26,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-delayer-deferred>=2.0.0:../../devel/ruby-delayer-def
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri-[0-9]*:../../textproc/ruby-nokogiri
 DEPENDS+=	${RUBY_PKGPREFIX}-httpclient-[0-9]*:../../www/ruby-httpclient
 DEPENDS+=	${RUBY_PKGPREFIX}-moneta>=0.7:../../databases/ruby-moneta
-DEPENDS+=	${RUBY_PKGPREFIX}-twitter-text-[0-9]*:../../net/ruby-twitter-text
+DEPENDS+=	${RUBY_PKGPREFIX}-twitter-text>=1.14.6:../../net/ruby-twitter-text
 
 WRKSRC=		${WRKDIR}/mikutter
 USE_LANGUAGES=	# none
