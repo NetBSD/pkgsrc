@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2013/05/18 20:23:03 adam Exp $
+# $NetBSD: options.mk,v 1.14 2017/07/08 21:45:42 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lftp
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
@@ -42,6 +42,6 @@ post-install-perl:
 
 # DNSSEC support
 .if !empty(PKG_OPTIONS:Mdnssec)
-. include "../../security/dnssec-tools/buildlink3.mk"
+.  include "../../security/dnssec-tools/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-dnssec-local-validation
 .endif
