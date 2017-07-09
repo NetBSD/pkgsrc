@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/07/09 10:32:29 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/09 10:35:56 adam Exp $
 
 DISTNAME=	clickclick-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-click>=4.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11:../../textproc/py-yaml
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=		# none
 
