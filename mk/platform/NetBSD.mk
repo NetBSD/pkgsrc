@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.51 2017/07/04 18:29:24 khorben Exp $
+# $NetBSD: NetBSD.mk,v 1.52 2017/07/09 14:30:07 khorben Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -152,6 +152,12 @@ _OPSYS_SUPPORTS_RELRO=	yes
     (${MACHINE_ARCH} != "ia64") && \
     (${MACHINE_ARCH} != "mips")
 _OPSYS_SUPPORTS_SSP=	yes
+.endif
+
+# Register support for stack check on supported architectures (with GCC)
+.if (${MACHINE_ARCH} == "i386") || \
+    (${MACHINE_ARCH} == "x86_64")
+_OPSYS_SUPPORTS_STACK_CHECK=	yes
 .endif
 
 _OPSYS_SUPPORTS_CWRAPPERS=	yes
