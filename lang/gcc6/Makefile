@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/07/08 21:03:16 maya Exp $
+# $NetBSD: Makefile,v 1.10 2017/07/09 05:30:41 maya Exp $
 
 GCC_PKGNAME=		gcc6
 .include		"version.mk"
@@ -84,7 +84,7 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
-# on NetBSD, use the native SSP code in libc
+# native SSP conflicts with gcc's libssp
 CONFIGURE_ARGS+=	--disable-libssp
 # Match base libstdc++ major
 SUBST_CLASSES+=		libstdc
