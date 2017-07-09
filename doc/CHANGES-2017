@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2769 2017/07/08 22:28:05 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2770 2017/07/09 00:43:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3834,3 +3834,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/gcc6 to 6.4.0nb1 [maya 2017-07-08]
 	Updated net/lftp to 4.7.7 [adam 2017-07-08]
 	Updated net/ncftp3 to 3.2.6 [adam 2017-07-08]
+	Updated textproc/p5-PDF-API2 to 2.033 [wen 2017-07-09]
