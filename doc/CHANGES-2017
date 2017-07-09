@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2774 2017/07/09 07:45:51 wen Exp $
+$NetBSD: CHANGES-2017,v 1.2775 2017/07/09 08:10:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3842,3 +3842,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added net/py-cares version 2.2.0 [adam 2017-07-09]
 	Updated graphics/p5-SVG to 2.78 [wen 2017-07-09]
 	Updated mail/p5-Mail-DKIM to 0.41 [wen 2017-07-09]
+	Updated net/unbound to 1.6.4 [adam 2017-07-09]
