@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2017/06/23 07:12:19 manu Exp $
+# $NetBSD: Makefile,v 1.156 2017/07/09 14:13:53 manu Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -125,6 +125,7 @@ SUBDIR+=	txt2html
 SUBDIR+=	txt2man
 SUBDIR+=	txt2pdbdoc
 SUBDIR+=	unix2dos
+SUBDIR+=	unoconv
 SUBDIR+=	uudeview
 SUBDIR+=	uulib
 SUBDIR+=	wkhtmltopdf
