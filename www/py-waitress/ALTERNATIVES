@@ -1,0 +1,1 @@
+bin/waitress-serve @PREFIX@/bin/waitress-serve@PYVERSSUFFIX@
