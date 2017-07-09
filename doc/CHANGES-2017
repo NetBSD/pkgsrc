@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2790 2017/07/09 21:24:58 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2791 2017/07/09 22:12:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3859,3 +3859,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/libimagequant to 2.10.1 [adam 2017-07-09]
 	Updated www/py-paste to 2.0.3 [adam 2017-07-09]
 	Updated www/py-waitress to 1.0.2 [adam 2017-07-09]
+	Updated mail/spamassassin to 3.4.1nb7 [schmonz 2017-07-09]
