@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.939 2017/07/06 02:34:50 markd Exp $
+# $NetBSD: Makefile,v 1.940 2017/07/09 10:33:19 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -733,6 +733,7 @@ SUBDIR+=	py-guessit
 SUBDIR+=	py-html2text
 SUBDIR+=	py-html5lib
 SUBDIR+=	py-humanize
+SUBDIR+=	py-inflection
 SUBDIR+=	py-iniparse
 SUBDIR+=	py-jellyfish
 SUBDIR+=	py-jinja2
