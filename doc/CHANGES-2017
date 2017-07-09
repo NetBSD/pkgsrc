@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2779 2017/07/09 14:48:23 wen Exp $
+$NetBSD: CHANGES-2017,v 1.2780 2017/07/09 14:51:15 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3848,3 +3848,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/corebird to 1.5.1 [ryoon 2017-07-09]
 	Added converters/unoconv 0.7 [manu 2017-07-09]
 	Updated devel/p5-String-Print to 0.92 [wen 2017-07-09]
+	Updated devel/p5-Ouch to 0.0500 [schmonz 2017-07-09]
