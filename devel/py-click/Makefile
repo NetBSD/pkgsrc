@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2017/05/17 11:20:55 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/07/09 10:10:44 adam Exp $
 
 DISTNAME=	click-6.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/click/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
