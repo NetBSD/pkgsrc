@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2017/04/08 12:04:27 adam Exp $
+# $NetBSD: Makefile,v 1.37 2017/07/09 10:44:19 adam Exp $
 
 DISTNAME=	uwsgi-2.0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	python www
+CATEGORIES=	www python
 MASTER_SITES=	http://projects.unbit.it/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -23,8 +23,7 @@ INSTALL_ENV+=		UWSGI_PROFILE_OVERRIDE="${UWSGI_DEBUG}${UWSGI_JSON}${UWSGI_PCRE}$
 INSTALLATION_DIRS+=	share/examples/${PYPKGPREFIX}-uwsgi
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/uwsgi \
-		${DESTDIR}${PREFIX}/bin/uwsgi-${PYVERSSUFFIX}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} uwsgi uwsgi-${PYVERSSUFFIX} || ${TRUE}
 	${INSTALL_DATA} ${WRKSRC}/examples/* \
 		${DESTDIR}${PREFIX}/share/examples/${PYPKGPREFIX}-uwsgi
 
