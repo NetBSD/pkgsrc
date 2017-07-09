@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:32:24 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/07/09 17:17:06 schmonz Exp $
 
 SHA1 (IO-KQueue-0.34.tar.gz) = 8a006a1f43412569a38912c177aff483f9719d59
 RMD160 (IO-KQueue-0.34.tar.gz) = c3110d99a29057e33d341b0c532c4331ee52ffe2
 SHA512 (IO-KQueue-0.34.tar.gz) = 55833358bed2398d598bbe21204704e51c37afe12f0f6019979137228b75065757c8c71bca957a21fdf6388c15058713437b2ccec1237013e00d368a5f20c132
 Size (IO-KQueue-0.34.tar.gz) = 8532 bytes
+SHA1 (patch-Makefile.PL) = c4c652acfe5f7ceca99aedb03053f5cd15729b3a
