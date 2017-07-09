@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/07/09 14:13:53 manu Exp $
+
+SHA1 (unoconv/0.7.tar.gz) = 04b101c4961d88da8721cbfe26b565b96b83d0d2
+RMD160 (unoconv/0.7.tar.gz) = 5d301b34ebed9aa8efe91021734f51f85d2d2b61
+SHA512 (unoconv/0.7.tar.gz) = 3b0837e11f22733e0fbef93dc6aeabd0e2d3d59b6c35a6f7b29b86506a5842bcbffb3e889864d6e14c1e53dd306354690a699257fe60f36ce1d4455ab52b5df7
+Size (unoconv/0.7.tar.gz) = 96151 bytes
