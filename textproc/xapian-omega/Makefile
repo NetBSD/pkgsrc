@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2017/05/08 12:02:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.35 2017/07/09 22:27:47 schmonz Exp $
 
 DISTNAME=		xapian-omega-${VERSION}
-VERSION=		1.4.2
+VERSION=		1.4.4
 CATEGORIES=		textproc
 MASTER_SITES=		http://oligarchy.co.uk/xapian/${VERSION}/
 EXTRACT_SUFX=		.tar.xz
