@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.179 2017/06/25 01:41:15 joerg Exp $
+# $NetBSD: gcc.mk,v 1.180 2017/07/09 14:30:07 khorben Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -370,6 +370,12 @@ _SSP_CFLAGS=		-fstack-protector-all
 _SSP_CFLAGS=		-fstack-protector-strong
 .else
 _SSP_CFLAGS=		-fstack-protector
+.endif
+
+_STACK_CHECK_CFLAGS=	-fstack-check
+
+.if ${_PKGSRC_USE_STACK_CHECK} == "yes"
+_GCC_CFLAGS+=		${_STACK_CHECK_CFLAGS}
 .endif
 
 # GCC has this annoying behaviour where it advocates in a multi-line
