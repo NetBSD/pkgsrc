@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/07/09 10:32:29 adam Exp $
+
+SHA1 (clickclick-1.2.1.tar.gz) = 78b11493e064877391576998bf1fd8fa510b2198
+RMD160 (clickclick-1.2.1.tar.gz) = 9fa2f61a6afe91570dac59e7d37f0270658f9bed
+SHA512 (clickclick-1.2.1.tar.gz) = 166f991ecd25d713dec4bfa71633d328a9c3c6878731ced1535db26de9ea61c35316f0f29eec72131c18968308adf9886dc6baf0a7d6e3122918815a0b0b291e
+Size (clickclick-1.2.1.tar.gz) = 8915 bytes
