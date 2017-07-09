@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2016/11/26 16:12:18 marino Exp $
+# $NetBSD: options.mk,v 1.5 2017/07/09 23:17:39 maya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc5-aux
 PKG_SUPPORTED_OPTIONS=  fortran objc testsuite static bootstrap allstages
@@ -103,7 +103,6 @@ EXTRA_CONFARGS+= --with-mpc=${BUILDLINK_PREFIX.mpcomplex}
 
 .if !empty(PKG_OPTIONS:Mbootstrap)
 EXTRA_CONFARGS+= --disable-shared --disable-lto
-EXTRA_CONFARGS+= --disable-libstdcxx-pch
 .  if ${OPSYS} != SunOS
 EXTRA_CONFARGS+= --with-stage1-ldflags=-static
 EXTRA_CONFARGS+= --with-boot-ldflags=-static
