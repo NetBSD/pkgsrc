@@ -7,5 +7,4 @@ LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${UNO_PATH}
 export UNO_PATH
 export LD_LIBRARY_PATH
 
-${PYTHONBIN} @PREFIX@/libexec/unoconv.py $*
-
+${PYTHONBIN} @PREFIX@/libexec/unoconv.py "$@"
