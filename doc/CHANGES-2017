@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2781 2017/07/09 15:01:46 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.2782 2017/07/09 15:02:17 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3849,3 +3849,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added converters/unoconv version 0.7 [manu 2017-07-09]
 	Updated devel/p5-String-Print to 0.92 [wen 2017-07-09]
 	Updated devel/p5-Ouch to 0.0500 [schmonz 2017-07-09]
+	Updated devel/p5-Test-BDD-Cucumber to 0.53 [schmonz 2017-07-09]
