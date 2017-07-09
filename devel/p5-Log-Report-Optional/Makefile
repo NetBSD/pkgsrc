@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/07/09 15:01:51 wen Exp $
+# $NetBSD: Makefile,v 1.10 2017/07/09 15:08:49 wen Exp $
 #
 
 DISTNAME=	Log-Report-Optional-1.03
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Log-Report-Optional/
 COMMENT=	Log::Report or ::Minimal
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-String-Print>=0.13:../../devel/p5-String-Print
+DEPENDS+=	p5-String-Print>=0.91:../../devel/p5-String-Print
 
 PERL5_PACKLIST=		auto/Log/Report/Optional/.packlist
 #PERL5_MODULE_TYPE=	Module::Install::Bundled
