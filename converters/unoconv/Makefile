@@ -1,18 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2017/07/09 14:13:53 manu Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/09 20:58:09 wiz Exp $
 
-GITHUB_PROJECT=	unoconv
-DISTNAME=	0.7
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+DISTNAME=	unoconv-0.7
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dagwieers/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/dagwieers/unoconv/
 COMMENT=	Convert any format supported by LibreOffice/OpenOffice
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/unoconv-0.7
 USE_TOOLS+=	gmake
 
 REPLACE_PYTHON+=unoconv
