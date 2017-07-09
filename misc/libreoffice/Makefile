@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.114 2017/07/03 12:35:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.115 2017/07/09 13:46:32 manu Exp $
 
 VERREL=		5.3.4
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -249,6 +250,11 @@ do-install:
 	cd ${DESTDIR}${PREFIX} && \
 		${MKDIR} ${d}
 .endfor
+
+UNO_PATH=${PREFIX}/${PKGNAME}/lib/libreoffice/program
+
+BUILD_DEFS+=   UNO_PATH
+BUILD_DEFS+=   PYTHONBIN
 
 #post-install:
 #.for f in ${LO_PROGRAMS}
