@@ -1,0 +1,5 @@
+unoconv converts any document format that OpenOffice can import,
+to any document format that OpenOffice can export.
+
+unoconv uses the OpenOffice's UNO bindings for non-interactive
+conversion of documents.
