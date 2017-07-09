@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/06/07 23:19:05 khorben Exp $
+# $NetBSD: Makefile,v 1.9 2017/07/09 23:17:39 maya Exp $
 #
 
 PKGNAME=	gcc5-aux-${SNAPSHOT}
@@ -186,7 +186,7 @@ MY_MAKE_ENV+=		lt_cv_path_SED=${TOOLS_SED}
 
 
 # The standard configuration options
-CONFIGURE_ARGS= 	--enable-languages=${LANGS:Q}
+CONFIGURE_ARGS=		--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--build=${BLD_TARGET}
 CONFIGURE_ARGS+=	--prefix=${PKG_PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-threads=posix
@@ -194,6 +194,7 @@ CONFIGURE_ARGS+=	--enable-checking=release
 CONFIGURE_ARGS+=	--disable-libmudflap
 CONFIGURE_ARGS+=	--disable-libgomp
 CONFIGURE_ARGS+=	--disable-libssp
+CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 CONFIGURE_ARGS+=	--disable-libcilkrts
 CONFIGURE_ARGS+=	--disable-libitm
 CONFIGURE_ARGS+=	${EXTRA_CONFARGS}
