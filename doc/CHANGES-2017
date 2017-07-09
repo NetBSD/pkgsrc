@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2776 2017/07/09 10:34:34 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2777 2017/07/09 11:52:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3845,3 +3845,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/unbound to 1.6.4 [adam 2017-07-09]
 	Added devel/py-clickclick version 1.2.1 [adam 2017-07-09]
 	Added textproc/py-inflection version 0.3.1 [adam 2017-07-09]
+	Updated net/corebird to 1.5.1 [ryoon 2017-07-09]
