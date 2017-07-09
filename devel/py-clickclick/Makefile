@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/07/09 10:35:56 adam Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/09 10:50:01 adam Exp $
 
 DISTNAME=	clickclick-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-click>=4.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11:../../textproc/py-yaml
 
 USE_LANGUAGES=		# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
