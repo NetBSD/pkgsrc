@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2016/11/07 13:02:45 schmonz Exp $
+$NetBSD: patch-aa,v 1.9 2017/07/09 22:27:47 schmonz Exp $
 
 Call it "xapian-omega" and follow hier(7).
 
---- Makefile.in.orig	2016-10-21 04:54:57.000000000 +0000
+--- Makefile.in.orig	2017-04-24 02:19:50.000000000 +0000
 +++ Makefile.in
 @@ -92,7 +92,7 @@ PRE_UNINSTALL = :
  POST_UNINSTALL = :
@@ -13,16 +13,16 @@ Call it "xapian-omega" and follow hier(7).
  bin_PROGRAMS = omindex$(EXEEXT) scriptindex$(EXEEXT) \
  	omindex-list$(EXEEXT)
  check_PROGRAMS = atomparsetest$(EXEEXT) csvesctest$(EXEEXT) \
-@@ -771,7 +771,7 @@ AM_CPPFLAGS = \
+@@ -791,7 +791,7 @@ AM_CPPFLAGS = \
  	-DCONFIGFILE_SYSTEM=\"$(sysconfdir)/omega.conf\" \
  	-DPKGLIBBINDIR=\"$(pkglibbindir)\"
  
 -pkglibbindir = $(pkglibdir)/bin
 +pkglibbindir = $(libexecdir)/cgi-bin
- dist_pkglibbin_SCRIPTS = mhtml2html outlookmsg2html rfc822tohtml
+ dist_pkglibbin_SCRIPTS = mhtml2html outlookmsg2html rfc822tohtml vcard2text
  dist_bin_SCRIPTS = dbi2omega htdig2omega mbox2omega
  dist_check_SCRIPTS = omegatest
-@@ -786,7 +786,7 @@ TESTS = atomparsetest$(EXEEXT)\
+@@ -804,7 +804,7 @@ TESTS = atomparsetest$(EXEEXT)\
  	urlenctest$(EXEEXT)\
  	utf8converttest$(EXEEXT)
  
@@ -31,7 +31,7 @@ Call it "xapian-omega" and follow hier(7).
  dist_omegadata_DATA = htdig2omega.script mbox2omega.script
  dist_sysconf_DATA = omega.conf
  
-@@ -1079,8 +1079,8 @@ md5test$(EXEEXT): $(md5test_OBJECTS) $(m
+@@ -1099,8 +1099,8 @@ md5test$(EXEEXT): $(md5test_OBJECTS) $(m
  common/str.$(OBJEXT): common/$(am__dirstamp) \
  	common/$(DEPDIR)/$(am__dirstamp)
  
