@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/11/07 13:02:45 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/07/09 22:27:47 schmonz Exp $
 bin/dbi2omega
 bin/htdig2omega
 bin/mbox2omega
@@ -8,6 +8,7 @@ bin/scriptindex
 libexec/cgi-bin/mhtml2html
 libexec/cgi-bin/outlookmsg2html
 libexec/cgi-bin/rfc822tohtml
+libexec/cgi-bin/vcard2text
 libexec/cgi-bin/xapian-omega
 man/man1/omindex-list.1
 man/man1/omindex.1
