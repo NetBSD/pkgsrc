@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2016/12/23 19:25:45 pettai Exp $
+# $NetBSD: Makefile,v 1.49 2017/07/09 08:09:41 adam Exp $
 
-DISTNAME=	unbound-1.6.0
+DISTNAME=	unbound-1.6.4
 CATEGORIES=	net
 MASTER_SITES=	http://www.unbound.net/downloads/
 
@@ -12,13 +12,15 @@ LICENSE=	modified-bsd
 BUILD_DEFS+=	VARBASE UNBOUND_USER UNBOUND_GROUP
 FILES_SUBST+=	UNBOUND_USER=${UNBOUND_USER} UNBOUND_GROUP=${UNBOUND_GROUP}
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-
+USE_LIBTOOL=		yes
+CONFIGURE_ARGS+=	--enable-allsymbols
 CONFIGURE_ARGS+=	--with-libexpat=${BUILDLINK_PREFIX.expat}
+CONFIGURE_ARGS+=	--with-libevent=${BUILDLINK_PREFIX.libevent}
+CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/unbound/unbound.pid
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
-CONFIGURE_ARGS+=	--enable-allsymbols
+GNU_CONFIGURE=		yes
+TEST_TARGET=		test
 
 # unbound uses some OpenBSD libc functions such as reallocarray(3).
 # The existing tests just look for the symbol in libc regardless
@@ -31,16 +33,16 @@ CHECK_BUILTIN.openssl=	yes
 CHECK_BUILTIN.openssl=	no
 .include "../../security/openssl/buildlink3.mk"
 
-PLIST_VARS+=            sha2 gost
+PLIST_VARS+=		sha2 gost
 .if defined(USE_BUILTIN.openssl) && !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
 PLIST_VARS.gost!=       \
-        if ${PKG_ADMIN} pmatch 'openssl>=1.0.0' ${BUILTIN_PKG.openssl:Q}; then \
+        if ${PKG_ADMIN} pmatch 'openssl>=1.0.0' ${BUILTIN_PKG.openssl}; then \
                 ${ECHO} "yes";                                          \
         else                                                            \
                 ${ECHO} "no";                                           \
         fi
 PLIST_VARS.sha2!=       \
-        if ${PKG_ADMIN} pmatch 'openssl>=0.9.8' ${BUILTIN_PKG.openssl:Q}; then \
+        if ${PKG_ADMIN} pmatch 'openssl>=0.9.8' ${BUILTIN_PKG.openssl}; then \
                 ${ECHO} "yes";                                          \
         else                                                            \
                 ${ECHO} "no";                                           \
@@ -60,14 +62,14 @@ PLIST_VARS.sha2!=       \
         fi
 .endif
 .if ${PLIST_VARS.gost} == "yes"
-CONFIGURE_ARGS+=        --enable-gost
+CONFIGURE_ARGS+=	--enable-gost
 .else
-CONFIGURE_ARGS+=        --disable-gost
+CONFIGURE_ARGS+=	--disable-gost
 .endif
 .if ${PLIST_VARS.sha2} == "yes"
-CONFIGURE_ARGS+=        --enable-sha2
+CONFIGURE_ARGS+=	--enable-sha2
 .else
-CONFIGURE_ARGS+=        --disable-sha2
+CONFIGURE_ARGS+=	--disable-sha2
 .endif
 
 SUBST_CLASSES+=		paths
@@ -94,7 +96,6 @@ UNBOUND_GROUP?=	unbound
 PKG_GROUPS=	${UNBOUND_GROUP}
 PKG_USERS=	${UNBOUND_USER}:${UNBOUND_GROUP}
 
-.include "options.mk"
-
+.include "../../devel/libevent/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
