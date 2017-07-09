@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/14 03:57:58 wen Exp $
+$NetBSD: distinfo,v 1.9 2017/07/09 07:37:44 wen Exp $
 
-SHA1 (SVG-2.64.tar.gz) = cc9258280e2e0794b4b55a4469d68de8bd4a3d9f
-RMD160 (SVG-2.64.tar.gz) = 3bc3c70cff0f9cd5cd13fe9b71f4989426de33ff
-SHA512 (SVG-2.64.tar.gz) = 81e5c7a10d07575b3bfa06c11aed8c47edfa0e65bb108feab13debb5155bfa3464f687ca142ee5fc9f3a0f01dea674c0c1daad69bff8aa2e263245e60891d914
-Size (SVG-2.64.tar.gz) = 52382 bytes
+SHA1 (SVG-2.78.tar.gz) = 3b9eb0f361823c6b6ab798a440fa7854acb329c5
+RMD160 (SVG-2.78.tar.gz) = 9fb253daa2504bd7bc97b2effb53ba5da48e0a77
+SHA512 (SVG-2.78.tar.gz) = fc1642df78a66b1e5f477ffb0cf873c36454d5296f974f2f88b6e1b7fb80b0f79b91dd377e54d9bbaf014ea1ffc11ceebe69750056c6d20a76f79b5fabc49643
+Size (SVG-2.78.tar.gz) = 53473 bytes
