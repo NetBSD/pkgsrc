@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2778 2017/07/09 14:13:53 manu Exp $
+$NetBSD: CHANGES-2017,v 1.2779 2017/07/09 14:48:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3847,3 +3847,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added textproc/py-inflection version 0.3.1 [adam 2017-07-09]
 	Updated net/corebird to 1.5.1 [ryoon 2017-07-09]
 	Added converters/unoconv 0.7 [manu 2017-07-09]
+	Updated devel/p5-String-Print to 0.92 [wen 2017-07-09]
