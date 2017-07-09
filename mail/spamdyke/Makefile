@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2016/03/05 11:28:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2017/07/09 16:16:32 schmonz Exp $
 #
 
 DISTNAME=		spamdyke-5.0.1
@@ -16,13 +16,15 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/${PKGBASE}
 
 GNU_CONFIGURE=		yes
 BUILD_TARGET=		${PKGBASE}
+MAKE_FLAGS+=		CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}
 
 # anonymous inner functions
 ONLY_FOR_COMPILER=	gcc
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	spamdyke.h
-SUBST_SED.paths=	-e 's,@LOCALBASE@,${LOCALBASE:Q},g'
+SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX:Q},g'
 SUBST_SED.paths+=	-e 's,@QMAILDIR@,${QMAILDIR:Q},g'
 SUBST_STAGE.paths=	do-configure
 
