@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/06/17 13:44:42 mef Exp $
+$NetBSD: distinfo,v 1.5 2017/07/09 14:47:12 wen Exp $
 
-SHA1 (String-Print-0.90.tar.gz) = fa1c1b05701b6f8ecf5e9155fe945ebcdfe52244
-RMD160 (String-Print-0.90.tar.gz) = 8dc43c91b7edc8b22386b2cfba94d85ade4943c7
-SHA512 (String-Print-0.90.tar.gz) = dae983036fe681bc11c128724cfcf88cb1ffb5d1c70276c534a6a8fb99ae8e6783484f99998ad1a53d02f01392ad9f8aa6cc6f8d6c03cc34bd9a44ff663d66bf
-Size (String-Print-0.90.tar.gz) = 16968 bytes
+SHA1 (String-Print-0.92.tar.gz) = a134923192a7f9c6f389cf4c9d943fee73b42ab2
+RMD160 (String-Print-0.92.tar.gz) = 27495cc80831a1aff180adcee8a03bcafc179458
+SHA512 (String-Print-0.92.tar.gz) = bc1eb3d7dd0110701e4c8e15a0572fb1d8f1e2c93bc43351c433d038aa5d86f7cfce91eb05dbab62b338ee2f7f2826f3b4df08b5d5e30f857cab01f31df42ad6
+Size (String-Print-0.92.tar.gz) = 21134 bytes
