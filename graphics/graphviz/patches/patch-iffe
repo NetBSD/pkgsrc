@@ -1,0 +1,26 @@
+$NetBSD: patch-iffe,v 1.1.2.2 2017/07/10 19:34:34 bsiegert Exp $
+
+It's not ksh just it has $RANDOM and no $BASH_VERSION.
+
+--- iffe.orig	2017-07-02 22:22:03.587308788 +0000
++++ iffe
+@@ -452,16 +452,11 @@ protoflags=
+ puthdr=
+ putlib=
+ pragma=
+-case $RANDOM in
+-$RANDOM)shell=bsh
++case $BASH_VERSION in
++?*)	shell=bash ;;
++*)	shell=bsh
+ 	($executable .) 2>/dev/null || executable='test -r'
+ 	($exists .) 2>/dev/null || exists='test -r'
+-	;;
+-*)	case $BASH_VERSION in
+-	?*)	shell=bash ;;
+-	*)	shell=ksh ;;
+-	esac
+-	;;
+ esac
+ reallystatic=
+ reallystatictest=
