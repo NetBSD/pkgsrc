@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2799 2017/07/10 07:58:33 leot Exp $
+$NetBSD: CHANGES-2017,v 1.2800 2017/07/10 11:47:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3867,3 +3867,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Future to 0.35 [wen 2017-07-10]
 	Added devel/p5-MooX-Locale-Passthrough version 0.001 [wen 2017-07-10]
 	Updated devel/p5-MooX-Options to 4.100 [wen 2017-07-10]
+	Updated www/moodle to 3.3.1 [wen 2017-07-10]
