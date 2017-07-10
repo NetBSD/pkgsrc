@@ -1,4 +1,4 @@
-$NetBSD: patch-src_configuration.c,v 1.1 2017/01/09 13:02:20 fhajny Exp $
+$NetBSD: patch-src_configuration.c,v 1.1.4.1 2017/07/10 19:39:19 bsiegert Exp $
 
 Sane default options.
 
@@ -13,3 +13,12 @@ Sane default options.
  	r->OCSP_VFY = 0;
  	r->OCSP_RESP_TMO = 10.0;
  	r->OCSP_CONN_TMO = 4.0;
+@@ -1116,7 +1116,7 @@ create_alpn_callback_data(hitch_config *
+ 
+ 	// first remove spaces while copying to cfg->ALPN_PROTOS_LV
+ 	for(j = 0; j < l; j++)
+-		if (!isspace(cfg->ALPN_PROTOS[j])) {
++		if (!isspace((unsigned char)cfg->ALPN_PROTOS[j])) {
+ 			cfg->ALPN_PROTOS_LV[i] = cfg->ALPN_PROTOS[j];
+ 			i++;
+ 		}
