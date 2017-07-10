@@ -1,11 +1,13 @@
-# $NetBSD: Makefile.common,v 1.1 2017/07/10 17:29:58 schmonz Exp $
-# used by textproc/xapian/module.mk
+# $NetBSD: Makefile.common,v 1.2 2017/07/10 17:43:43 schmonz Exp $
 # used by textproc/csharp-xapian/Makefile
 # used by textproc/lua-xapian/Makefile
 # used by textproc/p5-Xapian/Makefile
 # used by textproc/php-xapian/Makefile
 # used by textproc/py-xapian/Makefile
 # used by textproc/ruby-xapian/Makefile
+# used by textproc/xapian/module.mk
+# used by textproc/xapian/Makefile
+# used by textproc/xapian-omega/Makefile
 
 VERSION=		1.4.4
 CATEGORIES=		textproc
