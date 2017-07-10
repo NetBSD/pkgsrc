@@ -1,0 +1,21 @@
+# $NetBSD: Makefile.common,v 1.1 2017/07/10 17:29:58 schmonz Exp $
+# used by textproc/xapian/module.mk
+# used by textproc/csharp-xapian/Makefile
+# used by textproc/lua-xapian/Makefile
+# used by textproc/p5-Xapian/Makefile
+# used by textproc/php-xapian/Makefile
+# used by textproc/py-xapian/Makefile
+# used by textproc/ruby-xapian/Makefile
+
+VERSION=		1.4.4
+CATEGORIES=		textproc
+MASTER_SITES=		http://oligarchy.co.uk/xapian/${VERSION}/
+EXTRACT_SUFX=		.tar.xz
+MAINTAINER=		schmonz@NetBSD.org
+LICENSE=		gnu-gpl-v2
+
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++11
+
+.include "../../devel/zlib/buildlink3.mk"
