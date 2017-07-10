@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.64 2017/02/19 18:35:13 snj Exp $
+# $NetBSD: Makefile.common,v 1.65 2017/07/10 12:26:53 joerg Exp $
 #
 # used by www/w3m/Makefile
 # used by www/w3m-img/Makefile
@@ -73,8 +73,8 @@ INSTALL_TARGET=		install install-helpfile
 
 post-install:
 	# Use pax to discard uid/gid.  Exclude manuals (*.1).
-	set -e; cd ${WRKSRC}; pax -w -s ',.*\.1$$,,' doc doc-jp | \
-	    ( cd ${DESTDIR}${PREFIX}/${DOCDIR}; pax -r )
+	set -e; cd ${WRKSRC}; pax -r -w -s ',.*\.1$$,,' doc doc-jp \
+	    ${DESTDIR}${PREFIX}/${DOCDIR}
 
 BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=7.2
 .include "../../devel/boehm-gc/buildlink3.mk"
