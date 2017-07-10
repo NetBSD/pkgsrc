@@ -1,13 +1,18 @@
-# $NetBSD: Makefile,v 1.2 2017/06/06 09:12:59 adam Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2017/07/10 19:52:29 bsiegert Exp $
 
 .include "../../sysutils/zabbix/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-frontend-/}
+PKGREVISION=	1
 COMMENT=	Zabbix PHP frontend
 
 USE_TOOLS+=		pax
-NO_CONFIGURE=		yes
 NO_BUILD=		yes
+
+do-configure:
+	${DO_NADA}
+
+REPLACE_SH+=	${WRKSRC}/frontends/php/locale/*.sh
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,6 +34,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-sysvsem>=5.4.0:../../devel/php-sysvsem
 INSTALLATION_DIRS+=	share/zabbix/frontend
 
 do-install:
+	rm -f ${WRKSRC}/frontends/php/locale/*.orig
 	cd ${WRKSRC}/frontends; ${PAX} -rw php ${DESTDIR}${PREFIX}/share/zabbix/
 
 .include "../../lang/php/phpversion.mk"
