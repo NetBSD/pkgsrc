@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.2 2017/07/10 19:50:15 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.3 2017/07/10 19:53:38 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q2 branch:
 
@@ -10,4 +10,7 @@ security/hitch: build fix
 
 Pullup ticket #5500 - requested by joerg
 net/powerdns-recursor: build fix
+
+Pullup ticket #5502 - requested by joerg
+sysutils/zabbix-frontend: build fix
 
