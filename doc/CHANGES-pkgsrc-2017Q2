@@ -1,3 +1,13 @@
-$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.1 2017/07/03 09:37:23 jperkin Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.2 2017/07/10 19:50:15 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q2 branch:
+
+Pullup ticket #5499 - requested by joerg
+graphics/graphviz: build fix
+
+Pullup ticket #5501 - requested by joerg
+security/hitch: build fix
+
+Pullup ticket #5500 - requested by joerg
+net/powerdns-recursor: build fix
+
