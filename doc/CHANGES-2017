@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2807 2017/07/10 17:38:49 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.2808 2017/07/10 17:38:54 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3876,3 +3876,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added textproc/csharp-xapian version 1.4.4 [schmonz 2017-07-10]
 	Added textproc/lua-xapian version 1.4.4 [schmonz 2017-07-10]
 	Added textproc/p5-Xapian version 1.4.4 [schmonz 2017-07-10]
+	Added textproc/php-xapian version 1.4.4 [schmonz 2017-07-10]
