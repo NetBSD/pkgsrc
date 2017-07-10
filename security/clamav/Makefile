@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2017/01/05 11:27:21 roy Exp $
+# $NetBSD: Makefile,v 1.35 2017/07/10 00:22:15 gdt Exp $
 
 .include "Makefile.common"
 
@@ -25,6 +25,10 @@ CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 # pkgsrc enforces a "secure" version of zlib, so don't let this check
 # bomb the build
 CONFIGURE_ARGS+=	--disable-zlib-vcheck
+
+# clamav shadows gets with a macro, which confuses FORTIFY.  Disable
+# until resolved.
+PKGSRC_USE_FORTIFY=no
 
 CHECK_PORTABILITY_SKIP=	contrib/* unit_tests/* win32/*
 
