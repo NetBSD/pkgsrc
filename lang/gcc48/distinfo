@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2017/05/28 01:00:20 maya Exp $
+$NetBSD: distinfo,v 1.35 2017/07/10 15:55:40 maya Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
@@ -46,7 +46,7 @@ SHA1 (patch-gcc_config_openbsd.h) = 0090d48281c4973a18e8a70b2be9d2e999cca0a6
 SHA1 (patch-gcc_config_openbsd.opt) = 08b01bc4d7e171c3ee2ce5638a5859cff50c8ff8
 SHA1 (patch-gcc_config_sol2.h) = de6455ee88f281737501287759b7a83b8db05398
 SHA1 (patch-gcc_config_x-netbsd) = 6dc3d78e26df62054ea29f98ca51592858e671e3
-SHA1 (patch-gcc_configure) = dcb136061bf36428d75b834ca53f0840a67ef186
+SHA1 (patch-gcc_configure) = 58f2688999a81a9cf1ef7c70f052f329e6b4fe7c
 SHA1 (patch-gcc_doc_gcc.texi) = 0b6ea28f887efc78ebd2f450c3f59ee7eaa15117
 SHA1 (patch-gcc_fortran_f95-lang.c) = 8dc0a1728fd0521caf71a4f5c2eb938340f20efa
 SHA1 (patch-gcc_ggc-common.c) = fa577bc25260d7e6304f166686ba51c0b677d7f6
