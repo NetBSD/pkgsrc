@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2017/04/22 21:03:47 adam Exp $
+# $NetBSD: Makefile,v 1.70 2017/07/10 21:33:15 seb Exp $
 
-DISTNAME=	aria2-1.31.0
-PKGREVISION=	1
+DISTNAME=	aria2-1.32.0
+#PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aria2/}
 EXTRACT_SUFX=	.tar.xz
@@ -14,8 +14,8 @@ LICENSE=	gnu-gpl-v2
 GITHUB_PROJECT=	aria2
 GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
 
-# Minimum requirement is 4.6.4
-GCC_REQD+=	4.6
+# Minimum requirement is 4.8.3
+GCC_REQD+=	4.8
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
@@ -29,7 +29,6 @@ CONFIGURE_ARGS+=	--with-libexpat
 CONFIGURE_ARGS+=	--without-libxml2
 CONFIGURE_ARGS.SunOS+=	--disable-epoll
 
-GCC_REQD+=		3.4
 TEST_TARGET=		check
 USE_FEATURES=		getopt_long snprintf
 
