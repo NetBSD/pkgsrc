@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2796 2017/07/10 00:14:38 wen Exp $
+$NetBSD: CHANGES-2017,v 1.2797 2017/07/10 03:09:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3865,3 +3865,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated editors/vim-share to 8.0.0702 [wen 2017-07-09]
 	Updated databases/p5-DBD-mysq to 4.043 [wen 2017-07-10]
 	Updated devel/p5-Future to 0.35 [wen 2017-07-10]
+	Added devel/p5-MooX-Locale-Passthrough version 0.001 [wen 2017-07-10]
