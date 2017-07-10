@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2802 2017/07/10 12:18:35 wen Exp $
+$NetBSD: CHANGES-2017,v 1.2803 2017/07/10 14:02:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3870,3 +3870,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/moodle to 3.3.1 [wen 2017-07-10]
 	Updated devel/p5-PPI to 1.236 [wen 2017-07-10]
 	Updated geography/p5-Geo-ShapeFile to 2.64 [wen 2017-07-10]
+	Updated textproc/p5-String-CRC32 to 1.6 [wen 2017-07-10]
