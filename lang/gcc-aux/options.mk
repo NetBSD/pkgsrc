@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2015/06/14 19:46:51 marino Exp $
+# $NetBSD: options.mk,v 1.6 2017/07/10 00:21:31 maya Exp $
 
 # NLS is failing, might be linking with wrong iconv lib.
 # Disable option until further notice
@@ -114,7 +114,6 @@ EXTRA_CONFARGS+= --with-mpc=${BUILDLINK_PREFIX.mpcomplex}
 
 .if !empty(PKG_OPTIONS:Mbootstrap)
 EXTRA_CONFARGS+= --disable-shared --disable-lto
-EXTRA_CONFARGS+= --disable-libstdcxx-pch
 .  if ${OPSYS} != SunOS
 EXTRA_CONFARGS+= --with-stage1-ldflags=-static
 EXTRA_CONFARGS+= --with-boot-ldflags=-static
