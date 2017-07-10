@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/10 17:34:04 schmonz Exp $
+lib/tcl/xapian${PKGVERSION}/pkgIndex.tcl
+lib/tcl/xapian${PKGVERSION}/xapian.a
+lib/tcl/xapian${PKGVERSION}/xapian.so
+share/doc/xapian-bindings/tcl8/examples/simpleexpand.tcl
+share/doc/xapian-bindings/tcl8/examples/simpleindex.tcl
+share/doc/xapian-bindings/tcl8/examples/simplesearch.tcl
+share/doc/xapian-bindings/tcl8/index.html
