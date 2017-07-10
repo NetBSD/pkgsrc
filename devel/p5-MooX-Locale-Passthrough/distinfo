@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/07/10 03:06:45 wen Exp $
+
+SHA1 (MooX-Locale-Passthrough-0.001.tar.gz) = 6917d72a9be220c6781693560175ae8650a38252
+RMD160 (MooX-Locale-Passthrough-0.001.tar.gz) = 9172ed5bc7a3fa4605979b9119ca1158b233c1be
+SHA512 (MooX-Locale-Passthrough-0.001.tar.gz) = 1b1c1e89e6c467e7408da9be086edb32270db38af5698e9e52860a3b8c4f8e130ce8e910f71d432f267004d67e81555d0bec2f52bd25444928b1ff251c91bfae
+Size (MooX-Locale-Passthrough-0.001.tar.gz) = 4585 bytes
