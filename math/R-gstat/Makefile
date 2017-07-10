@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/02/25 01:59:08 wen Exp $
+# $NetBSD: Makefile,v 1.9 2017/07/10 12:27:19 joerg Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -17,5 +17,4 @@ DEPENDS+=	R-FNN>=0:../../math/R-FNN
 
 .include "../../math/R/Makefile.extension"
 .include "../../math/blas/buildlink3.mk"
-.include "../../lang/g95/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
