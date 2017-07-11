@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2016/02/17 17:00:38 jaapb Exp $
+# $NetBSD: options.mk,v 1.3 2017/07/11 11:06:54 jaapb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocaml-lwt
 PKG_SUPPORTED_OPTIONS=	ssl ppx camlp4
@@ -14,6 +14,7 @@ PLIST_VARS+=	ppx camlp4
 ###
 .if !empty(PKG_OPTIONS:Mssl)
 .include "../../security/ocaml-ssl/buildlink3.mk"
+BUILDLINK_API_DEPENDS.ocaml-ssl+=	ocaml-ssl>=0.5.0
 CONFIGURE_ARGS+=	--enable-ssl
 .else
 CONFIGURE_ARGS+=	--disable-ssl
