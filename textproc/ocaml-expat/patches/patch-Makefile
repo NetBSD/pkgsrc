@@ -1,8 +1,9 @@
-$NetBSD: patch-Makefile,v 1.3 2013/06/16 09:45:19 jaapb Exp $
+$NetBSD: patch-Makefile,v 1.4 2017/07/11 12:38:24 jaapb Exp $
 
 Correct location for expat, add DESTDIR support, and correct depend for clang
 Also, make possible compilation of shared library
---- Makefile.orig	2005-03-13 14:00:29.000000000 +0000
+
+--- Makefile.orig	2016-12-30 13:33:39.000000000 +0000
 +++ Makefile
 @@ -3,8 +3,8 @@
  
@@ -15,39 +16,40 @@ Also, make possible compilation of shared library
  
  NAME=expat
  OBJECTS=expat.cmo
-@@ -13,6 +13,7 @@ C_OBJECTS=expat_stubs.o
+@@ -13,6 +13,7 @@ C_OBJECTS=expat_stubs$(EXT_OBJ)
  
  ARCHIVE=$(NAME).cma
  XARCHIVE=$(ARCHIVE:.cma=.cmxa)
 +XSARCHIVE=$(ARCHIVE:.cma=.cmxs)
  CARCHIVE_NAME=mlexpat
- CARCHIVE=lib$(CARCHIVE_NAME).a
+ CARCHIVE=lib$(CARCHIVE_NAME)$(EXT_LIB)
  
-@@ -32,7 +33,7 @@ all: $(ARCHIVE)
- allopt:  $(XARCHIVE)
+@@ -32,10 +33,10 @@ include $(OCAMLDIR)/Makefile.config
+ .PHONY: all
+ all: $(ARCHIVE)
+ .PHONY: allopt
+-allopt:  $(XARCHIVE)
++allopt:  $(XARCHIVE) $(XSARCHIVE)
  
  depend: *.c *.ml *.mli
--	gcc -MM *.c > depend	
-+	$(CC) -MM -I$(PREFIX)/lib/ocaml *.c > depend	
+-	gcc -I $(OCAMLDIR) -MM *.c > depend
++	$(CC) -I $(OCAMLDIR) -MM *.c > depend
  	$(OCAMLDEP) *.mli *.ml >> depend
  
  ## Library creation
-@@ -45,12 +46,16 @@ $(ARCHIVE): $(CARCHIVE) $(OBJECTS)
+@@ -48,11 +49,14 @@ $(ARCHIVE): $(CARCHIVE) $(OBJECTS)
  $(XARCHIVE): $(CARCHIVE) $(XOBJECTS)
  	$(OCAMLMKLIB) -o $(NAME) $(XOBJECTS) -oc $(CARCHIVE_NAME) \
  	-L$(EXPAT_LIBDIR) $(EXPAT_LIB)
-+$(XSARCHIVE): $(XOBJECTS) $(CARCHIVE)
++$(XSARCHIVE): $(XARCHIVE)
 +	$(OCAMLOPT) -linkall -shared -o $(XSARCHIVE) $(XOBJECTS) $(CARCHIVE) \
 +	-ccopt -L$(EXPAT_LIBDIR) -cclib $(EXPAT_LIB)
  
  ## Installation
  .PHONY: install
  install: all
--	{ test ! -f $(XARCHIVE) || extra="$(XARCHIVE) $(NAME).a"; }; \
--	$(OCAMLFIND) install $(NAME) META $(NAME).cmi $(NAME).mli $(ARCHIVE) \
-+	{ test ! -f $(XARCHIVE) || extra="$(XARCHIVE) $(XSARCHIVE) $(NAME).a"; }; \
-+	$(OCAMLFIND) install -destdir ${DESTDIR}${PREFIX}/lib/ocaml/site-lib \
-+	-ldconf ignore $(NAME) META $(NAME).cmi $(NAME).mli $(ARCHIVE) \
- 	dll$(CARCHIVE_NAME).so lib$(CARCHIVE_NAME).a $$extra
- 
- .PHONY: uninstall
+-	{ test ! -f $(XARCHIVE) || extra="$(XARCHIVE) $(NAME)$(EXT_LIB)"; }; \
++	{ test ! -f $(XARCHIVE) || extra="$(XARCHIVE) $(XSARCHIVE) $(NAME)$(EXT_LIB)"; }; \
+ 	$(OCAMLFIND) install $(NAME) META $(NAME).cmi $(NAME).mli $(ARCHIVE) \
+ 	lib$(CARCHIVE_NAME)$(EXT_LIB) $$extra \
+ 	-optional dll$(CARCHIVE_NAME)$(EXT_DLL)
