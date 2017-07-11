@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2820 2017/07/11 10:01:04 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.2821 2017/07/11 10:05:41 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3893,3 +3893,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ocaml-findlib to 1.7.3 [jaapb 2017-07-11]
 	Added misc/ocaml-topkg version 0.9.0 [jaapb 2017-07-11]
 	Updated archivers/ocaml-zip to 1.07 [jaapb 2017-07-11]
+	Updated devel/ocamlbuild to 0.11.0 [jaapb 2017-07-11]
