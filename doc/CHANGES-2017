@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2828 2017/07/11 10:30:09 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.2829 2017/07/11 10:32:42 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3901,3 +3901,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ocaml-cppo to 1.5.0 [jaapb 2017-07-11]
 	Updated devel/ocaml-extlib to 1.7.2 [jaapb 2017-07-11]
 	Updated misc/ocaml-cudf to 0.9 [jaapb 2017-07-11]
+	Updated misc/dose3 to 5.0.1 [jaapb 2017-07-11]
