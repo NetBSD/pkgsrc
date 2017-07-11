@@ -1,13 +1,17 @@
-# $NetBSD: Makefile,v 1.6 2016/12/30 11:17:00 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2017/07/11 14:16:23 jaapb Exp $
 #
 
-DISTNAME=	ocaml-zarith-1.4.1
-PKGREVISION=	5
+VERSION=	1.4.1
+GITHUB_PROJECT=	Zarith
+GITHUB_TAG=	release-${VERSION}
+DISTNAME=	${GITHUB_PROJECT}-${VERSION}
+PKGNAME=	ocaml-${DISTNAME:tl}
+PKGREVISION=	6
 CATEGORIES=	math
-MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1574/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://forge.ocamlcore.org/projects/zarith
+HOMEPAGE=	http://github.com/ocaml/Zarith
 COMMENT=	OCaml arithmetic library for arbitrary precision integers
 LICENSE=	gnu-lgpl-v2
 
@@ -17,10 +21,9 @@ MAKE_JOBS_SAFE=	no
 HAS_CONFIGURE=	yes
 CONFIGURE_ENV+=	DESTDIR=${DESTDIR}
 USE_TOOLS+=	gmake perl
+INSTALLATION_DIRS+=	${OCAML_SITELIBDIR}/zarith
 
 OCAML_USE_FINDLIB=	yes
-
-WRKSRC=		${WRKDIR}/${DISTNAME:S/ocaml-//}
 
 REPLACE_PERL+=	z_pp.pl
 
