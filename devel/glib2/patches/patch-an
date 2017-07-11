@@ -1,11 +1,109 @@
-$NetBSD: patch-an,v 1.14 2017/07/03 17:42:45 prlw1 Exp $
+$NetBSD: patch-an,v 1.15 2017/07/11 11:52:42 jperkin Exp $
 
 - Leave gdbus-2.0/codegen sudirectory to devel/gdbus-codegen package.
 - Don't compile tests as they include gdbus-codegen tests.
 - Don't install completion data.
+- Re-enable gdesktopappinfo on Darwin.
 
 --- gio/Makefile.in.orig	2017-06-22 13:16:23.000000000 +0000
 +++ gio/Makefile.in
+@@ -160,7 +160,7 @@ TESTS = $(am__EXEEXT_2)
+ @ENABLE_INSTALLED_TESTS_TRUE@	$(dist_installed_test_data)
+ @ENABLE_INSTALLED_TESTS_TRUE@am__append_13 = $(test_ltlibraries) $(installed_test_ltlibraries)
+ @ENABLE_INSTALLED_TESTS_TRUE@am__append_14 = $(installed_test_meta_DATA)
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__append_15 = xdgmime
++@OS_UNIX_TRUE@am__append_15 = xdgmime
+ @MS_LIB_AVAILABLE_TRUE@@OS_WIN32_AND_DLL_COMPILATION_TRUE@am__append_16 = gio-2.0.lib
+ @OS_WIN32_TRUE@am__append_17 = $(win32_settings_sources)
+ @OS_COCOA_TRUE@am__append_18 = $(cocoa_settings_sources)
+@@ -174,9 +174,9 @@ TESTS = $(am__EXEEXT_2)
+ @OS_WIN32_TRUE@am__append_26 = win32/libgiowin32.la
+ @OS_WIN32_TRUE@am__append_27 = win32/libgiowin32.la
+ @HAVE_FAM_TRUE@am__append_28 = fam
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__append_29 = xdgmime/libxdgmime.la
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__append_30 = xdgmime/libxdgmime.la
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__append_31 = gdesktopappinfo.h
++@OS_UNIX_TRUE@am__append_29 = xdgmime/libxdgmime.la
++@OS_UNIX_TRUE@am__append_30 = xdgmime/libxdgmime.la
++@OS_UNIX_TRUE@am__append_31 = gdesktopappinfo.h
+ @MAC_OS_X_9_TRUE@@OS_COCOA_TRUE@@OS_UNIX_TRUE@am__append_32 = gcocoanotificationbackend.c
+ @HAVE_NETLINK_TRUE@@OS_UNIX_TRUE@am__append_33 = \
+ @HAVE_NETLINK_TRUE@@OS_UNIX_TRUE@	gnetworkmonitornetlink.c \
+@@ -188,10 +188,10 @@ TESTS = $(am__EXEEXT_2)
+ @OS_WIN32_TRUE@am__append_34 = gwin32appinfo.c gwin32appinfo.h
+ @OS_WIN32_TRUE@am__append_35 = gcontenttype-win32.c
+ @OS_WIN32_TRUE@am__append_36 = -lshlwapi -lws2_32 -ldnsapi -liphlpapi
+-@OS_COCOA_TRUE@am__append_37 = gosxcontenttype.c
+-@OS_COCOA_TRUE@am__append_38 = gosxappinfo.c gosxappinfo.h
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__append_39 = gcontenttype.c
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__append_40 = gdesktopappinfo.c
++#@OS_COCOA_TRUE@am__append_37 = gosxcontenttype.c
++#@OS_COCOA_TRUE@am__append_38 = gosxappinfo.c gosxappinfo.h
++@OS_UNIX_TRUE@am__append_39 = gcontenttype.c
++@OS_UNIX_TRUE@am__append_40 = gdesktopappinfo.c
+ 
+ # This is dumb.  The ObjC source file should be properly named .m
+ @OS_COCOA_TRUE@am__append_41 = -xobjective-c
+@@ -208,7 +208,7 @@ bin_PROGRAMS = gio-querymodules$(EXEEXT)
+ 
+ # ------------------------------------------------------------------------
+ # gapplication(1) tool
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__append_49 = gapplication
++@OS_UNIX_TRUE@am__append_49 = gapplication
+ subdir = gio
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ am__aclocal_m4_deps = $(top_srcdir)/m4macros/attributes.m4 \
+@@ -525,13 +525,13 @@ am__objects_5 = libgio_2_0_la-gappinfo.l
+ 	libgio_2_0_la-gliststore.lo $(am__objects_2) $(am__objects_3) \
+ 	$(am__objects_4) $(am__objects_1)
+ @OS_WIN32_TRUE@am__objects_6 = libgio_2_0_la-gwin32appinfo.lo
+-@OS_COCOA_TRUE@am__objects_7 = libgio_2_0_la-gosxappinfo.lo
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__objects_8 = libgio_2_0_la-gdesktopappinfo.lo
++#@OS_COCOA_TRUE@am__objects_7 = libgio_2_0_la-gosxappinfo.lo
++@OS_UNIX_TRUE@am__objects_8 = libgio_2_0_la-gdesktopappinfo.lo
+ am__objects_9 = $(am__objects_6) $(am__objects_7) $(am__objects_8)
+ @OS_WIN32_TRUE@am__objects_10 = libgio_2_0_la-gcontenttype-win32.lo
+-@OS_COCOA_TRUE@am__objects_11 = libgio_2_0_la-gosxcontenttype.lo
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__objects_12 =  \
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@	libgio_2_0_la-gcontenttype.lo
++#@OS_COCOA_TRUE@am__objects_11 = libgio_2_0_la-gosxcontenttype.lo
++@OS_UNIX_TRUE@am__objects_12 =  \
++@OS_UNIX_TRUE@	libgio_2_0_la-gcontenttype.lo
+ am__objects_13 = $(am__objects_10) $(am__objects_11) $(am__objects_12)
+ am__objects_14 = libgio_2_0_la-xdp-dbus.lo
+ am__objects_15 = libgio_2_0_la-gnetworkmonitorportal.lo \
+@@ -595,22 +595,22 @@ am__v_lt_1 = 
+ libgio_2_0_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(libgio_2_0_la_CFLAGS) \
+ 	$(CFLAGS) $(libgio_2_0_la_LDFLAGS) $(LDFLAGS) -o $@
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__EXEEXT_1 = gapplication$(EXEEXT)
++@OS_UNIX_TRUE@am__EXEEXT_1 = gapplication$(EXEEXT)
+ am__EXEEXT_2 =
+ @ENABLE_ALWAYS_BUILD_TESTS_FALSE@am__EXEEXT_3 = $(am__EXEEXT_2)
+ @ENABLE_ALWAYS_BUILD_TESTS_TRUE@am__EXEEXT_4 = $(am__EXEEXT_2)
+ PROGRAMS = $(bin_PROGRAMS) $(installed_test_PROGRAMS) \
+ 	$(noinst_PROGRAMS)
+ am__gapplication_SOURCES_DIST = gapplication-tool.c
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@am_gapplication_OBJECTS =  \
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@	gapplication-tool.$(OBJEXT)
++@OS_UNIX_TRUE@am_gapplication_OBJECTS =  \
++@OS_UNIX_TRUE@	gapplication-tool.$(OBJEXT)
+ gapplication_OBJECTS = $(am_gapplication_OBJECTS)
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@gapplication_DEPENDENCIES =  \
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@	libgio-2.0.la \
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@	$(top_builddir)/gobject/libgobject-2.0.la \
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@	$(top_builddir)/gmodule/libgmodule-2.0.la \
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@	$(top_builddir)/glib/libglib-2.0.la \
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@	$(am__DEPENDENCIES_1)
++@OS_UNIX_TRUE@gapplication_DEPENDENCIES =  \
++@OS_UNIX_TRUE@	libgio-2.0.la \
++@OS_UNIX_TRUE@	$(top_builddir)/gobject/libgobject-2.0.la \
++@OS_UNIX_TRUE@	$(top_builddir)/gmodule/libgmodule-2.0.la \
++@OS_UNIX_TRUE@	$(top_builddir)/glib/libglib-2.0.la \
++@OS_UNIX_TRUE@	$(am__DEPENDENCIES_1)
+ am_gdbus_OBJECTS = gdbus-tool.$(OBJEXT)
+ gdbus_OBJECTS = $(am_gdbus_OBJECTS)
+ gdbus_DEPENDENCIES = libgio-2.0.la \
 @@ -931,8 +931,7 @@ am__set_b = \
      *) \
        b='$*';; \
@@ -27,6 +125,25 @@ $NetBSD: patch-an,v 1.14 2017/07/03 17:42:45 prlw1 Exp $
  @MS_LIB_AVAILABLE_TRUE@@OS_WIN32_AND_DLL_COMPILATION_TRUE@install_ms_lib_cmd = $(INSTALL) gio-2.0.lib $(DESTDIR)$(libdir)
  @MS_LIB_AVAILABLE_TRUE@@OS_WIN32_AND_DLL_COMPILATION_TRUE@uninstall_ms_lib_cmd = -rm $(DESTDIR)$(libdir)/gio-2.0.lib
  AM_CPPFLAGS = \
+@@ -1927,12 +1926,12 @@ gdbus_LDADD = libgio-2.0.la 				\
+ 	$(top_builddir)/glib/libglib-2.0.la		\
+ 	$(NULL)
+ 
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@gapplication_SOURCES = gapplication-tool.c
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@gapplication_LDADD = libgio-2.0.la 			\
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@	$(top_builddir)/gobject/libgobject-2.0.la	\
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@	$(top_builddir)/gmodule/libgmodule-2.0.la 	\
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@	$(top_builddir)/glib/libglib-2.0.la		\
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@	$(NULL)
++@OS_UNIX_TRUE@gapplication_SOURCES = gapplication-tool.c
++@OS_UNIX_TRUE@gapplication_LDADD = libgio-2.0.la 			\
++@OS_UNIX_TRUE@	$(top_builddir)/gobject/libgobject-2.0.la	\
++@OS_UNIX_TRUE@	$(top_builddir)/gmodule/libgmodule-2.0.la 	\
++@OS_UNIX_TRUE@	$(top_builddir)/glib/libglib-2.0.la		\
++@OS_UNIX_TRUE@	$(NULL)
+ 
+ completiondir = $(datadir)/bash-completion/completions
+ completion_DATA = \
 @@ -4800,7 +4799,7 @@ info: info-recursive
  
  info-am:

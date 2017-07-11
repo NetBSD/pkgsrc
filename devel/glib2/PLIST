@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.92 2017/07/03 18:47:29 adam Exp $
-${PLIST.unix}bin/gapplication
+@comment $NetBSD: PLIST,v 1.93 2017/07/11 11:52:42 jperkin Exp $
+bin/gapplication
 bin/gdbus
 bin/gio
 bin/gio-querymodules
@@ -13,7 +13,7 @@ bin/gresource
 bin/gsettings
 bin/gtester
 bin/gtester-report
-${PLIST.unix}include/glib/gio-unix-2.0/gio/gdesktopappinfo.h
+include/glib/gio-unix-2.0/gio/gdesktopappinfo.h
 include/glib/gio-unix-2.0/gio/gfiledescriptorbased.h
 include/glib/gio-unix-2.0/gio/gunixconnection.h
 include/glib/gio-unix-2.0/gio/gunixcredentialsmessage.h

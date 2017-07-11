@@ -1,0 +1,48 @@
+$NetBSD: patch-gio_tests_Makefile.in,v 1.1 2017/07/11 11:52:42 jperkin Exp $
+
+Re-enable gdesktopappinfo on Darwin.
+
+--- gio/tests/Makefile.in.orig	2017-06-22 13:16:24.000000000 +0000
++++ gio/tests/Makefile.in
+@@ -163,8 +163,8 @@ check_PROGRAMS = $(am__EXEEXT_22)
+ @OS_UNIX_TRUE@	gdbus-example-objectmanager-client \
+ @OS_UNIX_TRUE@	gdbus-example-objectmanager-server \
+ @OS_UNIX_TRUE@	gdbus-test-fixture
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__append_19 = apps
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__append_20 = mimeapps
++@OS_UNIX_TRUE@am__append_19 = apps
++@OS_UNIX_TRUE@am__append_20 = mimeapps
+ @OS_UNIX_TRUE@am__append_21 = gsettings gschema-compile
+ @OS_UNIX_FALSE@gsettings_DEPENDENCIES =  \
+ @OS_UNIX_FALSE@	$(top_builddir)/gio/libgio-2.0.la \
+@@ -332,7 +332,7 @@ am__EXEEXT_1 =
+ @OS_UNIX_TRUE@	live-g-file$(EXEEXT) socket-address$(EXEEXT) \
+ @OS_UNIX_TRUE@	stream-rw_all$(EXEEXT) unix-fd$(EXEEXT) \
+ @OS_UNIX_TRUE@	unix-streams$(EXEEXT) $(am__EXEEXT_1)
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__EXEEXT_3 = mimeapps$(EXEEXT)
++@OS_UNIX_TRUE@am__EXEEXT_3 = mimeapps$(EXEEXT)
+ @OS_UNIX_TRUE@am__EXEEXT_4 = gdbus-connection-flush$(EXEEXT) \
+ @OS_UNIX_TRUE@	gdbus-non-socket$(EXEEXT)
+ @HAVE_DBUS_DAEMON_TRUE@@OS_UNIX_TRUE@am__EXEEXT_5 = actions$(EXEEXT) \
+@@ -398,7 +398,7 @@ am__EXEEXT_14 = $(am__EXEEXT_1) $(am__EX
+ @OS_UNIX_TRUE@am__EXEEXT_15 = basic-application$(EXEEXT) \
+ @OS_UNIX_TRUE@	dbus-launch$(EXEEXT) $(am__EXEEXT_1) \
+ @OS_UNIX_TRUE@	appinfo-test$(EXEEXT) $(am__EXEEXT_1)
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@am__EXEEXT_16 = apps$(EXEEXT)
++@OS_UNIX_TRUE@am__EXEEXT_16 = apps$(EXEEXT)
+ @OS_UNIX_TRUE@am__EXEEXT_17 = gsubprocess-testprog$(EXEEXT) \
+ @OS_UNIX_TRUE@	gdbus-overflow$(EXEEXT)
+ am__EXEEXT_18 = gdbus-connection-flush-helper$(EXEEXT) \
+@@ -4662,9 +4662,9 @@ uninstall-am: uninstall-installed_testLT
+ @ENABLE_INSTALLED_TESTS_TRUE@	echo 'Exec=$(installed_testdir)/$(notdir $<) --tap' >> $@.tmp; \
+ @ENABLE_INSTALLED_TESTS_TRUE@	echo 'Output=TAP' >> $@.tmp; \
+ @ENABLE_INSTALLED_TESTS_TRUE@	mv $@.tmp $@)
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@clean-local: clean-mimeapps
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@clean-mimeapps:
+-@OS_COCOA_FALSE@@OS_UNIX_TRUE@	rm -rf xdgdatadir xdgdatahome xdgconfighome
++@OS_UNIX_TRUE@clean-local: clean-mimeapps
++@OS_UNIX_TRUE@clean-mimeapps:
++@OS_UNIX_TRUE@	rm -rf xdgdatadir xdgdatahome xdgconfighome
+ @OS_UNIX_TRUE@test.mo: de.po
+ @OS_UNIX_TRUE@	$(AM_V_GEN) $(MSGFMT) -o test.mo $(srcdir)/de.po; \
+ @OS_UNIX_TRUE@	$(MKDIR_P) de/LC_MESSAGES; \
