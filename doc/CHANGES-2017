@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2855 2017/07/11 12:43:35 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.2856 2017/07/11 13:56:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3928,3 +3928,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/ocaml-cryptokit to 1.11 [jaapb 2017-07-11]
 	Updated textproc/ocaml-csv to 1.7 [jaapb 2017-07-11]
 	Updated textproc/ocaml-expat to 1.0.0 [jaapb 2017-07-11]
+	Updated net/lft to 3.79 [adam 2017-07-11]
