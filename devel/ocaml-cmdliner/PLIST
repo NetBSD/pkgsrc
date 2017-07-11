@@ -1,9 +1,30 @@
-@comment $NetBSD: PLIST,v 1.2 2016/06/17 15:33:24 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/07/11 10:18:38 jaapb Exp $
 ${OCAML_SITELIB}/cmdliner/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner.a
 ${OCAML_SITELIB}/cmdliner/cmdliner.cma
 ${OCAML_SITELIB}/cmdliner/cmdliner.cmi
+${OCAML_SITELIB}/cmdliner/cmdliner.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner.cmxs
 ${OCAML_SITELIB}/cmdliner/cmdliner.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_arg.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_base.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_cline.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_docgen.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_info.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_manpage.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_msg.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_suggest.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_term.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_trie.cmx
+${OCAML_SITELIB}/cmdliner/opam
+share/doc/cmdliner/CHANGES.md
+share/doc/cmdliner/LICENSE.md
+share/doc/cmdliner/README.md
+share/doc/cmdliner/chorus.ml
+share/doc/cmdliner/cp_ex.ml
+share/doc/cmdliner/darcs_ex.ml
+share/doc/cmdliner/revolt.ml
+share/doc/cmdliner/rm_ex.ml
+share/doc/cmdliner/tail_ex.ml
