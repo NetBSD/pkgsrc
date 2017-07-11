@@ -1,13 +1,18 @@
-@comment $NetBSD: PLIST,v 1.5 2016/06/25 14:01:34 jaapb Exp $
-lib/ocaml/site-lib/zip/META
-lib/ocaml/site-lib/zip/dllcamlzip.so
-lib/ocaml/site-lib/zip/gzip.cmi
-lib/ocaml/site-lib/zip/gzip.mli
-lib/ocaml/site-lib/zip/libcamlzip.a
-${PLIST.ocaml-opt}lib/ocaml/site-lib/zip/zip.a
-lib/ocaml/site-lib/zip/zip.cma
-lib/ocaml/site-lib/zip/zip.cmi
-${PLIST.ocaml-opt}lib/ocaml/site-lib/zip/zip.cmxa
-lib/ocaml/site-lib/zip/zip.mli
-lib/ocaml/site-lib/zip/zlib.cmi
-lib/ocaml/site-lib/zip/zlib.mli
+@comment $NetBSD: PLIST,v 1.6 2017/07/11 10:00:51 jaapb Exp $
+${OCAML_SITELIB}/camlzip/META
+${OCAML_SITELIB}/zip/META
+${OCAML_SITELIB}/zip/dllcamlzip.so
+${OCAML_SITELIB}/zip/gzip.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/zip/gzip.cmx
+${OCAML_SITELIB}/zip/gzip.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/zip/libcamlzip.a
+${PLIST.ocaml-opt}${OCAML_SITELIB}/zip/zip.a
+${OCAML_SITELIB}/zip/zip.cma
+${OCAML_SITELIB}/zip/zip.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/zip/zip.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/zip/zip.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/zip/zip.cmxs
+${OCAML_SITELIB}/zip/zip.mli
+${OCAML_SITELIB}/zip/zlib.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/zip/zlib.cmx
+${OCAML_SITELIB}/zip/zlib.mli
