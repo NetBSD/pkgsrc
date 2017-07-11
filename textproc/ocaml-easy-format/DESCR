@@ -1,0 +1,5 @@
+This module offers a high-level and functional interface to the Format module
+of the OCaml standard library. It is a pretty-printing facility, i.e. it takes
+as input some code represented as a tree and formats this code into the most
+visually satisfying result, breaking and indenting lines of code where
+appropriate.
