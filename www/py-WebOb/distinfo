@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 02:47:24 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/07/11 07:24:04 adam Exp $
 
-SHA1 (WebOb-1.4.tar.gz) = 252fdb646d78871c61c0bcf77d5ea921edae91d0
-RMD160 (WebOb-1.4.tar.gz) = fcbc4baa8b06ab4c61cc39cfb7eecf506a997745
-SHA512 (WebOb-1.4.tar.gz) = 0cf1a21b7d863c355e445f0e9f898ffb1c4c39099532a86d830c1be5d84efc0c6f3e8151a283cfd1cb5bebcb1fe78a2b6b269cbc130863679a017565a2539a37
-Size (WebOb-1.4.tar.gz) = 633302 bytes
+SHA1 (WebOb-1.7.3.tar.gz) = 676d42990fcc85777bf8a91c7d3da2fc2e31108a
+RMD160 (WebOb-1.7.3.tar.gz) = bc0c888338e991f614cbcffb57afbd0df53a2f99
+SHA512 (WebOb-1.7.3.tar.gz) = 23a51f184754c525dc293b8b71855d40f52445c0df5434af7ec091219e0ea81be162623157b6ec67214cd151b25014bf86991246785816ebcb5a0d1eec9479a1
+Size (WebOb-1.7.3.tar.gz) = 216028 bytes
