@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2848 2017/07/11 11:52:54 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.2849 2017/07/11 12:14:39 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3921,3 +3921,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ocaml-ppx_type_conv to 114.01.04nb2 [jaapb 2017-07-11]
 	Updated devel/ocaml-ppx_sexp_conv to 114.01.04 [jaapb 2017-07-11]
 	Updated devel/glib2 to 2.52.3nb1 [jperkin 2017-07-11]
+	Updated devel/ocaml-sexplib to 0.9.1 [jaapb 2017-07-11]
