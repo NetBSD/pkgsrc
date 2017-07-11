@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2017/05/06 02:00:22 kamil Exp $
+# $NetBSD: Makefile,v 1.11 2017/07/11 19:47:37 adam Exp $
 
-DISTNAME=	lldb-4.0.0.src
+DISTNAME=	lldb-4.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
