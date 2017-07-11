@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/11 09:15:49 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/wsgiproxy/__init__.py
+${PYSITELIB}/wsgiproxy/__init__.pyc
+${PYSITELIB}/wsgiproxy/__init__.pyo
+${PYSITELIB}/wsgiproxy/proxies.py
+${PYSITELIB}/wsgiproxy/proxies.pyc
+${PYSITELIB}/wsgiproxy/proxies.pyo
+${PYSITELIB}/wsgiproxy/requests_client.py
+${PYSITELIB}/wsgiproxy/requests_client.pyc
+${PYSITELIB}/wsgiproxy/requests_client.pyo
+${PYSITELIB}/wsgiproxy/test_wsgiproxy.py
+${PYSITELIB}/wsgiproxy/test_wsgiproxy.pyc
+${PYSITELIB}/wsgiproxy/test_wsgiproxy.pyo
+${PYSITELIB}/wsgiproxy/urllib3_client.py
+${PYSITELIB}/wsgiproxy/urllib3_client.pyc
+${PYSITELIB}/wsgiproxy/urllib3_client.pyo
