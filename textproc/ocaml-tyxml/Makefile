@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2016/12/30 11:52:28 jaapb Exp $
+# $NetBSD: Makefile,v 1.16 2017/07/11 11:12:22 jaapb Exp $
 #
 
-VERSION=	4.0.1
+VERSION=	4.1.0
 GITHUB_PROJECT=	tyxml
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${DISTNAME}
