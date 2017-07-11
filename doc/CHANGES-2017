@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2840 2017/07/11 11:18:32 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.2841 2017/07/11 11:20:27 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3913,3 +3913,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/ocaml-jbuilder version 1.0_beta10 [jaapb 2017-07-11]
 	Updated devel/ocaml-base64 to 2.2.0 [jaapb 2017-07-11]
 	Updated devel/ocaml-ppx_deriving to 4.1 [jaapb 2017-07-11]
+	Added textproc/ocaml-easy-format version 1.2.0 [jaapb 2017-07-11]
