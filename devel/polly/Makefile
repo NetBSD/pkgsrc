@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/05/06 01:38:43 kamil Exp $
+# $NetBSD: Makefile,v 1.6 2017/07/11 19:47:37 adam Exp $
 
-DISTNAME=	polly-4.0.0.src
+DISTNAME=	polly-4.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
