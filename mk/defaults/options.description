@@ -90,6 +90,7 @@ clang-static-analyzer	Install the clang static analyzer.
 claws-mail-jpilot	Add jpilot support.
 clisp			Common/C Lisp.
 clutter			Use Clutter for graphics support.
+cmxs			Produce CMXS files.
 compface		Enable compface support.
 coqide			Enable ide support for coq.
 coreaudio		Enable Core Audio library support.
