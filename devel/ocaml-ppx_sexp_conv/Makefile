@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2016/12/30 11:16:59 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2017/07/11 11:40:09 jaapb Exp $
 
-VERSION=	113.33.01
+VERSION=	114.01.04
 GITHUB_PROJECT=	ppx_sexp_conv
-GITHUB_TAG=	${VERSION}+4.03
+GITHUB_TAG=	ad2cef9
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 
@@ -14,7 +13,7 @@ HOMEPAGE=	https://github.com/janestreet/ppx_sexp_conv/
 COMMENT=	Generation of S-expression conversion functions from type definitions
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/${DISTNAME}-4.03
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-ad2cef90649f86e607d03ab60787bdadc1a2ade4
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	# none
 OCAML_USE_FINDLIB=	yes
