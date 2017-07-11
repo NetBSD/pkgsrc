@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/05/05 16:06:51 jaapb Exp $
+$NetBSD: distinfo,v 1.4 2017/07/11 10:07:54 jaapb Exp $
 
-SHA1 (oasis-0.4.6.tar.gz) = a71a690323b07d2c9f397dab834b67db585c33b1
-RMD160 (oasis-0.4.6.tar.gz) = e5ef6d1e33307adfd75b8cb1de71d84e451ba570
-SHA512 (oasis-0.4.6.tar.gz) = c85432c75de1814024b11f9aea89fc740016fc13f2fd16ad1a4819de406d26a698f33a43e64649cbc17fe194c5da336e83ad85af91d6b97d0b3f70db44f33d88
-Size (oasis-0.4.6.tar.gz) = 337490 bytes
+SHA1 (oasis-0.4.10.tar.gz) = 23eb81fd18632d92cad61a5adda8ef6fe0f5b391
+RMD160 (oasis-0.4.10.tar.gz) = e02cc1eb3943f98ff9da7add9ac60dc597982206
+SHA512 (oasis-0.4.10.tar.gz) = c173a3a774d13a7cb21ddb44f89dadef210d331ab5f3a1e7ff1705e815572f70e22815736cc3f3788b6d8f784c21a309b45c5bf5e984e583b31931847bf107fd
+Size (oasis-0.4.10.tar.gz) = 394732 bytes
