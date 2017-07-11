@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.234 2017/07/03 18:47:29 adam Exp $
+# $NetBSD: Makefile,v 1.235 2017/07/11 11:52:42 jperkin Exp $
 
 .include "Makefile.common"
 
+PKGREVISION=		1
 CATEGORIES=		devel gnome
 
 COMMENT=		Some useful routines for C programming (glib2)
@@ -52,12 +53,6 @@ CONFIGURE_ENV+=		LIBELF_LIBS='-lelf'
 .  else
 .  include "../../devel/libelf/buildlink3.mk"
 .  endif
-.endif
-
-PLIST_VARS+=	unix
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} != "Darwin"
-PLIST.unix=	yes
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
