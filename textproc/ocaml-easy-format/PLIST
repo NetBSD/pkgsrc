@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/11 11:20:12 jaapb Exp $
+${OCAML_SITELIB}/easy-format/META
+${OCAML_SITELIB}/easy-format/easy_format.cmi
+${OCAML_SITELIB}/easy-format/easy_format.cmo
+${PLIST.ocaml-opt}${OCAML_SITELIB}/easy-format/easy_format.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/easy-format/easy_format.cmxs
+${OCAML_SITELIB}/easy-format/easy_format.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/easy-format/easy_format.o

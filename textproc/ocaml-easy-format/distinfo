@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/07/11 11:20:12 jaapb Exp $
+
+SHA1 (easy-format-1.2.0.tar.gz) = 7cb9e7213aa11bf8482fbb3f10047be22c62a498
+RMD160 (easy-format-1.2.0.tar.gz) = 7ce399d920d7c4714fdfda08124edf1d14124e1a
+SHA512 (easy-format-1.2.0.tar.gz) = 375849b1ecd2e37f4b32d1ee12197a95856b17a47e3eb06a7e7320a82234c241156c3c8bfb18ce17bbe73b93d31d755675478860505470aa7ab866277a99603f
+Size (easy-format-1.2.0.tar.gz) = 15632 bytes
