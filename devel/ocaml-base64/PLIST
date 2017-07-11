@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/06 13:28:07 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/07/11 11:17:04 jaapb Exp $
 ${OCAML_SITELIB}/base64/META
-${OCAML_SITELIB}/base64/b64.annot
 ${OCAML_SITELIB}/base64/b64.cmi
 ${OCAML_SITELIB}/base64/b64.cmt
 ${OCAML_SITELIB}/base64/b64.cmti
@@ -10,3 +9,7 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/base64/base64.a
 ${OCAML_SITELIB}/base64/base64.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base64/base64.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base64/base64.cmxs
+${OCAML_SITELIB}/base64/opam
+share/doc/base64/CHANGES.md
+share/doc/base64/LICENSE.md
+share/doc/base64/README.md
