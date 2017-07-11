@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2016/09/11 16:06:53 taca Exp $
+# $NetBSD: Makefile,v 1.61 2017/07/11 19:41:20 joerg Exp $
 #
 
 DISTNAME=	groonga-6.0.8
@@ -24,8 +24,6 @@ EXTRACT_USING=	bsdtar
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-ruby=${RUBY}
-
-CFLAGS+=	${CLANG_NO_VALUE_PROPAGATION_PASS}
 
 PKGCONFIG_OVERRIDE+=	groonga.pc.in
 
