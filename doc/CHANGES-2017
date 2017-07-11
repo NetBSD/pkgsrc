@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2851 2017/07/11 12:29:08 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.2852 2017/07/11 12:31:49 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3924,3 +3924,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ocaml-sexplib to 0.9.1 [jaapb 2017-07-11]
 	Updated lang/camlp5 to 7.01 [jaapb 2017-07-11]
 	Updated net/ocaml-ipaddr to 2.7.2 [jaapb 2017-07-11]
+	Updated devel/pcre-ocaml to 7.2.3 [jaapb 2017-07-11]
