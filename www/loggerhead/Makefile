@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/01/01 14:44:03 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2017/07/11 06:16:30 wiz Exp $
 
 DISTNAME=	loggerhead-${VER}
 PKGREVISION=	1
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2 # or later
 DEPENDS+=	bzr>=1.17:../../devel/bzr
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.0:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-DEPENDS+=	${PYPKGPREFIX}-Paste>=1.2:../../www/py-paste
+DEPENDS+=	${PYPKGPREFIX}-paste>=1.2:../../www/py-paste
 DEPENDS+=	${PYPKGPREFIX}-PasteDeploy>=1.3:../../www/py-PasteDeploy
 DEPENDS+=	${PYPKGPREFIX}-SimpleTAL>=4.1:../../www/py-simpletal
 
