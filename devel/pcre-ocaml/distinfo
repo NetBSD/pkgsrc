@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2016/02/03 13:02:50 jaapb Exp $
+$NetBSD: distinfo,v 1.12 2017/07/11 12:31:37 jaapb Exp $
 
-SHA1 (pcre-ocaml-7.1.6.tar.gz) = 19d779efc52f690ba2eb1ab0a78983a013bb1921
-RMD160 (pcre-ocaml-7.1.6.tar.gz) = ed620b34d69c7dbe8a5bc7604baf68b0a6348f05
-SHA512 (pcre-ocaml-7.1.6.tar.gz) = 604bf27324eab3548c8320bee91cd8c8d0c6459aa7c02b576149b6a2beb43ddd9733e7e344c20c100241cabc84be61ef8c4a5515cdd994a7c3105dd3da74782d
-Size (pcre-ocaml-7.1.6.tar.gz) = 88104 bytes
+SHA1 (pcre-ocaml-7.2.3.tar.gz) = 5d52637e87def713190f213375bd3cc66504ff91
+RMD160 (pcre-ocaml-7.2.3.tar.gz) = c19a9b646f21a6f41728e0b2930fa1b658b49e71
+SHA512 (pcre-ocaml-7.2.3.tar.gz) = 3df4bdbbed5e1ecf4bdf15fc461f2ea65e1556af9c1683e194c8824e21da5274dd80c22c1f6676fca203305ec4244d47e09f0ef8c601bfa95f7237bb07c1ee65
+Size (pcre-ocaml-7.2.3.tar.gz) = 88307 bytes
 SHA1 (patch-myocamlbuild.ml) = ede5646b1a69ad0a60c706dee82d8aa52923cb57
