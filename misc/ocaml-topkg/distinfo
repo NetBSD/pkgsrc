@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/07/11 09:58:59 jaapb Exp $
+
+SHA1 (topkg-0.9.0.tbz) = e9a8af20c3f25813dc7069d98ff9a26373381ad6
+RMD160 (topkg-0.9.0.tbz) = cdd65d30ca006a594fd8d38ffc477f94cd8ebe4c
+SHA512 (topkg-0.9.0.tbz) = 3acbb9896a407fe26e1279eb4c4cbb0c29986c7202d6b8df994d8c7c9e5dfc1a9756f11d4af92739479881cadf3a953aa250ac4b8daaa0466cce4b5eb88a4f95
+Size (topkg-0.9.0.tbz) = 93871 bytes
