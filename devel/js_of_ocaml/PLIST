@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2016/08/18 14:49:07 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/07/11 11:32:38 jaapb Exp $
 bin/js_of_ocaml
+bin/jsoo_link
+bin/jsoo_listunits
 bin/jsoo_minify
 bin/jsoo_mkcmis
 bin/jsoo_mktop
@@ -58,6 +60,7 @@ ${OCAML_SITELIB}/js_of_ocaml/io.js
 ${OCAML_SITELIB}/js_of_ocaml/js.cmi
 ${OCAML_SITELIB}/js_of_ocaml/js.mli
 ${OCAML_SITELIB}/js_of_ocaml/js_of_ocaml.cma
+${OCAML_SITELIB}/js_of_ocaml/js_of_ocaml.cmi
 ${OCAML_SITELIB}/js_of_ocaml/jslib.js
 ${OCAML_SITELIB}/js_of_ocaml/jslib_js_of_ocaml.js
 ${OCAML_SITELIB}/js_of_ocaml/json.cmi
