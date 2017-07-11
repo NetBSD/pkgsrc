@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2017/07/11 11:14:58 jaapb Exp $
+
+SHA1 (jbuilder-1.0+beta10.tar.gz) = b16c8f743223bf24383c6eb1e8c518721456ed15
+RMD160 (jbuilder-1.0+beta10.tar.gz) = 13db40140a09503bfdd66a45f400930410507e8f
+SHA512 (jbuilder-1.0+beta10.tar.gz) = 83945d9cf3c6d61c33b83c4645b6c6b980b13f716a0541cd1833ce98543ca132a7c0efe4a46b5145e61159e7f8223fe4d1d6009b663bafb5fc79a2115fd5f521
+Size (jbuilder-1.0+beta10.tar.gz) = 251576 bytes
+SHA1 (patch-Makefile) = f2744c0f710d165746b81ae000471d6d28716a5e
