@@ -1,9 +1,9 @@
-$NetBSD: patch-Makefile,v 1.4 2017/07/05 20:12:42 wiedi Exp $
+$NetBSD: patch-Makefile,v 1.5 2017/07/11 10:10:40 jaapb Exp $
 
 Use correct install locations and BSD_INSTALL_*
---- Makefile.orig	2016-03-03 10:30:08.000000000 +0000
-+++ Makefile
-@@ -45,10 +45,10 @@ endif
+--- Makefile.orig	2017-06-07 09:59:06.000000000 +0100
++++ Makefile	2017-06-30 15:02:07.000000000 +0100
+@@ -45,10 +45,10 @@
  # These may be overridden from outside; e.g., our opam package description
  # provides its own values of docdir, libdir, and mandir.
  
@@ -18,33 +18,35 @@ Use correct install locations and BSD_INSTALL_*
  MANS            := menhir.1
  DOCS            := manual.pdf demos
  MLYLIB          := src/standard.mly
-@@ -164,22 +164,22 @@ endif
+@@ -178,11 +178,11 @@
  
  install:
  # Install the executable.
 -	mkdir -p $(bindir)
 -	install $(BUILDDIR)/menhir.$(TARGET) $(bindir)/$(MENHIREXE)
-+	$(BSD_INSTALL_PROGRAM_DIR) $(bindir)
++	$(BSD_INSTALL_PROGRAM_DIR) -p $(bindir)
 +	$(BSD_INSTALL_PROGRAM) $(BUILDDIR)/menhir.$(TARGET) $(bindir)/$(MENHIREXE)
- # Install the library.
+ # Install Menhir's standard library.
 -	mkdir -p $(libdir)
 -	install -m 644 $(MLYLIB) $(libdir)
-+	$(BSD_INSTALL_LIB_DIR) $(libdir)
++	$(BSD_INSTALL_LIB_DIR) -p $(libdir)
 +	$(BSD_INSTALL_DATA) -m 644 $(MLYLIB) $(libdir)
- 	@if `$(BUILDDIR)/menhir.$(TARGET) --suggest-ocamlfind` ; then \
- 	  echo Installing MenhirLib via ocamlfind. ; \
- 	  ocamlfind install menhirLib src/META $(patsubst %,$(BUILDDIR)/%,$(MENHIRLIB)) ; \
+ # Install MenhirLib and MenhirSdk.
+ 	@if `$(BUILDDIR)/menhir.$(TARGET) --suggest-ocamlfind | tr -d '\r'` ; then \
+ 	  echo 'Installing MenhirLib and MenhirSdk via ocamlfind.' ; \
+@@ -193,12 +193,12 @@
+ 	  rm -f META ; \
  	else \
- 	  echo Installing MenhirLib manually. ; \
+ 	  echo 'Installing MenhirLib and MenhirSdk manually.' ; \
 -	  install -m 644 $(patsubst %,$(BUILDDIR)/%,$(MENHIRLIB)) $(libdir) ; \
+-	  install -m 644 $(patsubst %,$(SDKDIR)/%,$(MENHIRSDK)) $(libdir) ; \
 +	  $(BSD_INSTALL_DATA) -m 644 $(patsubst %,$(BUILDDIR)/%,$(MENHIRLIB)) $(libdir) ; \
++	  $(BSD_INSTALL_DATA) -m 644 $(patsubst %,$(SDKDIR)/%,$(MENHIRSDK)) $(libdir) ; \
  	fi
  # Install the documentation, if it has been built.
  	if [ -f manual.pdf ] ; then \
--	  mkdir -p $(docdir) ; \
--	  mkdir -p $(mandir) ; \
-+	  $(BSD_INSTALL_DATA_DIR) $(docdir) ; \
-+	  $(BSD_INSTALL_MAN_DIR) $(mandir) ; \
- 	  cp -r $(DOCS) $(docdir) ; \
+-	  mkdir -p $(docdir) $(mandir) && \
++	  $(BSD_INSTALL_DATA_DIR) -p $(docdir) $(mandir) && \
+ 	  cp -r $(DOCS) $(docdir) && \
  	  cp -r $(MANS) $(mandir) ; \
  	fi
