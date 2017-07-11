@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2017/05/19 13:29:04 prlw1 Exp $
+# $NetBSD: Makefile,v 1.46 2017/07/11 19:41:20 joerg Exp $
 
 DISTNAME=		scribus-1.4.3
 PKGREVISION=		9
@@ -23,11 +23,6 @@ CMAKE_ARGS+=	-DPNG_LIBRARY_RELEASE=${LOCALBASE}/lib
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.4.3
 
 INSTALLATION_DIRS+=	share/pixmaps
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-CMAKE_ARGS+=	-DCLANG_NO_OPT=${CLANG_NO_VALUE_PROPAGATION_PASS:Q}
-.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/resources/icons/scribus.png \
