@@ -1,13 +1,20 @@
-@comment $NetBSD: PLIST,v 1.4 2016/06/25 14:29:01 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/07/11 11:02:44 jaapb Exp $
 ${OCAML_SITELIB}/react/META
+${OCAML_SITELIB}/react/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/react/react.a
 ${OCAML_SITELIB}/react/react.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/react/react.cma
+${OCAML_SITELIB}/react/react.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/react/react.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/react/react.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/react/react.cmxs
 ${OCAML_SITELIB}/react/react.mli
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/react/react_top.a
 ${OCAML_SITELIB}/react/react_top.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/react/react_top.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/react/react_top.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/react/react_top.cmxs
+${OCAML_SITELIB}/react/react_top_init.ml
+share/doc/react/CHANGES.md
+share/doc/react/LICENSE.md
+share/doc/react/README.md
