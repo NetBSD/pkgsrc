@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2016/12/30 11:17:02 jaapb Exp $
+# $NetBSD: Makefile,v 1.12 2017/07/11 12:35:54 jaapb Exp $
 
-VERSION=	1.5
+VERSION=	1.7
 GITHUB_PROJECT=	ocaml-csv
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Chris00/}
 
@@ -15,21 +14,21 @@ LICENSE=	gnu-lgpl-v2.1
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c
 
-CONFIGURE_ARGS+=	--destdir "${DESTDIR}" --prefix "${PREFIX}"
+CONFIGURE_ARGS+=	--destdir "${DESTDIR}" --prefix "${PREFIX}" --bindir "${DESTDIR}${PREFIX}/bin"
 
 OCAML_USE_OASIS=	yes
-
-#SUBST_CLASSES+=	destdir
-#SUBST_STAGE.destdir=    post-configure
-#SUBST_MESSAGE.destdir=  Changing install location to DESTDIR
-#SUBST_FILES.destdir=    setup.ml
-#SUBST_SED.destdir=      -e 's,"install" :: findlib_name,"install" :: "-destdir ${DESTDIR}${PREFIX}/lib/ocaml/site-lib" :: "-ldconf /dev/null" :: findlib_name,'
-
-pre-configure:
-	cd ${WRKSRC} && ${MAKE} setup.ml
-
-.include "../../mk/bsd.prefs.mk"
+INSTALLATION_DIRS+=	bin
 
 .include "../../mk/ocaml.mk"
-.include "../../devel/ocaml-oasis/buildlink3.mk"
+
+post-wrapper:
+	${RUN} cd ${WRKSRC} && ${MAKE} setup.ml
+
+post-install:
+.if ${OCAML_USE_OPT_COMPILER} == yes
+	${INSTALL_PROGRAM} ${WRKSRC}/_build/examples/csvtool.native ${DESTDIR}${PREFIX}/bin/csvtool
+.else
+	${INSTALL_SCRIPT} ${WRKSRC}/_build/examples/csvtool.byte ${DESTDIR}${PREFIX}/bin/csvtool
+.endif
+
 .include "../../mk/bsd.pkg.mk"
