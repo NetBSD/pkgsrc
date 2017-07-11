@@ -1,0 +1,3 @@
+The Yojson library provides runtime functions for reading and writing JSON
+data from OCaml. It addresses a few shortcomings of its predecessor json-wheel
+and is about twice as fast (2.7x reading, 1.3x writing; results may vary).
