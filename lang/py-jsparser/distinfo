@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2017/02/07 23:48:57 joerg Exp $
+$NetBSD: distinfo,v 1.2 2017/07/11 19:24:31 adam Exp $
 
-SHA1 (pyjsparser-2.4.5.tar.gz) = 14ae78908511f06124f3f1744dc219361e5cb004
-RMD160 (pyjsparser-2.4.5.tar.gz) = 5659643be312b9b0fc5f88168e7de1eb86fbe315
-SHA512 (pyjsparser-2.4.5.tar.gz) = cec6633ffa938d4db1ef9164bf4eca7459fca3635f1ef090b00668b4e5fb170e466bb5d6b3b063388cd3de156d770eb4c08e21bb3a99b0e9761553a00701913c
-Size (pyjsparser-2.4.5.tar.gz) = 24061 bytes
-SHA1 (patch-setup.py) = e265fba1f7a19fbf7f72b6c8321adefc4c26179b
+SHA1 (pyjsparser-2.5.2.tar.gz) = 5a03ca6042b2f5bb2226158c8e7f15210f4eb38e
+RMD160 (pyjsparser-2.5.2.tar.gz) = 06025e3441e7609b06028122ce983f634bf639b2
+SHA512 (pyjsparser-2.5.2.tar.gz) = 53784a0a78431f286dfb781111372a68e3812227c2a25464c8dd2f68a47d864684448731bcf0c6cb95e0f1e73c75bf3f6f573aa455376034b882447df2852f57
+Size (pyjsparser-2.5.2.tar.gz) = 24039 bytes
+SHA1 (patch-setup.py) = 55041743d35dd3352c973ff6cd557ba244069d7d
