@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2016/12/30 11:16:59 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2017/07/11 10:05:25 jaapb Exp $
 
-DISTNAME=	ocamlbuild-0.9.2
-PKGREVISION=	1
+DISTNAME=	ocamlbuild-0.11.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
@@ -18,7 +17,8 @@ USE_TOOLS+=	gmake
 OCAML_USE_FINDLIB=	yes
 INSTALL_TARGET=	findlib-install
 
-MAKE_ENV=	CHECK_IF_PREINSTALLED=false
+MAKE_ENV=	CHECK_IF_PREINSTALLED=false OCAMLBUILD_BINDIR=${PREFIX}/bin \
+		OCAMLBUILD_LIBDIR=${PREFIX}/${OCAML_SITELIBDIR}
 
 .include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
