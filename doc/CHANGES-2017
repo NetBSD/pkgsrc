@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2817 2017/07/11 09:52:26 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.2818 2017/07/11 09:57:23 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3890,3 +3890,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-WSGIProxy2 version 0.4.4 [adam 2017-07-11]
 	Updated www/py-Routes to 2.4.1 [adam 2017-07-11]
 	Updated lang/ocaml to 4.04.2 [jaapb 2017-07-11]
+	Updated devel/ocaml-findlib to 1.7.3 [jaapb 2017-07-11]
