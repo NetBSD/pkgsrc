@@ -1,11 +1,20 @@
-@comment $NetBSD: PLIST,v 1.4 2016/06/25 14:31:35 jaapb Exp $
-lib/ocaml/site-lib/cryptokit/META
-lib/ocaml/site-lib/cryptokit/dllcryptokit_stubs.so
-lib/ocaml/site-lib/cryptokit/libcryptokit_stubs.a
-${PLIST.ocaml-opt}lib/ocaml/site-lib/cryptokit/cryptokit.a
-lib/ocaml/site-lib/cryptokit/cryptokit.cma
-lib/ocaml/site-lib/cryptokit/cryptokit.cmi
-${PLIST.ocaml-opt}lib/ocaml/site-lib/cryptokit/cryptokit.cmx
-${PLIST.ocaml-opt}lib/ocaml/site-lib/cryptokit/cryptokit.cmxa
-${PLIST.ocaml-opt}lib/ocaml/site-lib/cryptokit/cryptokit.cmxs
-lib/ocaml/site-lib/cryptokit/cryptokit.mli
+@comment $NetBSD: PLIST,v 1.5 2017/07/11 12:34:22 jaapb Exp $
+${OCAML_SITELIB}/cryptokit/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cryptokit/cryptokit.a
+${OCAML_SITELIB}/cryptokit/cryptokit.annot
+${OCAML_SITELIB}/cryptokit/cryptokit.cma
+${OCAML_SITELIB}/cryptokit/cryptokit.cmi
+${OCAML_SITELIB}/cryptokit/cryptokit.cmt
+${OCAML_SITELIB}/cryptokit/cryptokit.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cryptokit/cryptokit.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cryptokit/cryptokit.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cryptokit/cryptokit.cmxs
+${OCAML_SITELIB}/cryptokit/cryptokit.mli
+${OCAML_SITELIB}/cryptokit/cryptokitBignum.annot
+${OCAML_SITELIB}/cryptokit/cryptokitBignum.cmi
+${OCAML_SITELIB}/cryptokit/cryptokitBignum.cmt
+${OCAML_SITELIB}/cryptokit/cryptokitBignum.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cryptokit/cryptokitBignum.cmx
+${OCAML_SITELIB}/cryptokit/cryptokitBignum.mli
+${OCAML_SITELIB}/cryptokit/dllcryptokit_stubs.so
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cryptokit/libcryptokit_stubs.a
