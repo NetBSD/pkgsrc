@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/06/17 15:33:24 jaapb Exp $
+$NetBSD: distinfo,v 1.4 2017/07/11 10:18:38 jaapb Exp $
 
-SHA1 (cmdliner-0.9.8.tbz) = 2f8af80a8d172222daf8a35ea0861ebf88e9d6d6
-RMD160 (cmdliner-0.9.8.tbz) = de19b38209faac7d39dd230a3cdec325bb09f596
-SHA512 (cmdliner-0.9.8.tbz) = 6c71c360eaba7f7127e422a71a00a830a086f1d6750897bea0ebc1cc10f8fdaf9e9532d354abd84dbc6c5fcc1878f19d3f424fd9335e7226b625b63b51c89cab
-Size (cmdliner-0.9.8.tbz) = 53249 bytes
+SHA1 (cmdliner-1.0.0.tbz) = 1d6039346e6beffe3d32dc7e2f03e3ab333113a8
+RMD160 (cmdliner-1.0.0.tbz) = a4f180a908cd8ce82c9454b597771d7b1fa59310
+SHA512 (cmdliner-1.0.0.tbz) = 3fc87e49504167864ba4d81fde7bbaa01b7d58b06e2b68b36647857590f41fdc8b3bbd547418f8159b0e76628236b5c30301404b3d8d57e2ff3f082228eee73c
+Size (cmdliner-1.0.0.tbz) = 46542 bytes
