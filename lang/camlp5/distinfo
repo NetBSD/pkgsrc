@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2016/12/30 12:37:44 jaapb Exp $
+$NetBSD: distinfo,v 1.16 2017/07/11 12:17:13 jaapb Exp $
 
-SHA1 (camlp5-6.17.tar.gz) = cfe65be4bb6334ffad742a3060a6fee7bb0b5bf3
-RMD160 (camlp5-6.17.tar.gz) = a2875ab3f908d015452382e301093b8c4310381a
-SHA512 (camlp5-6.17.tar.gz) = c4bf32eb79202d6127375b940fe77fc57c7dc5f8c6763b50ba23ab52ae9f3edb0ba15148109af2f6f4808619348d78e927cfdf29901bf1141b17de0d3fd8ff30
-Size (camlp5-6.17.tar.gz) = 718935 bytes
+SHA1 (camlp5-7.01.tar.gz) = eff833fe21fc0e4d5c70b22635437b3785799d4b
+RMD160 (camlp5-7.01.tar.gz) = 6450dc1e9f13b11247bd63e30eaac989cca31660
+SHA512 (camlp5-7.01.tar.gz) = 9930957f707d9d2c8903f87f5f3444f71bad3d84c944436c7abc6de19209595c974098cd60a6a391f8ae87c4fb53b5122cba8e42e34fcf46d798dbdc28840008
+Size (camlp5-7.01.tar.gz) = 757118 bytes
