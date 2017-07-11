@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1254 2017/07/11 09:18:01 adam Exp $
+# $NetBSD: Makefile,v 1.1255 2017/07/11 20:26:41 bsiegert Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -74,6 +74,7 @@ SUBDIR+=	browser-bookmarks-menu
 SUBDIR+=	c-icap
 SUBDIR+=	c-icap-modules
 SUBDIR+=	cadaver
+SUBDIR+=	caddy
 SUBDIR+=	calamaris
 SUBDIR+=	camping
 SUBDIR+=	cgic
