@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2016/12/30 11:17:02 jaapb Exp $
+# $NetBSD: Makefile,v 1.20 2017/07/11 14:19:21 jaapb Exp $
 #
 
 DISTNAME=	harmony-stable-${VERSION}
 PKGNAME=	harmony-${VERSION}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	misc
 MASTER_SITES=	http://alliance.seas.upenn.edu/~harmony/download/
 
