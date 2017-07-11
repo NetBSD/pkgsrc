@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/11 06:16:29 wiz Exp $
 
 DISTNAME=	PasteScript-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-PasteDeploy-[0-9]*:../../www/py-PasteDeploy
-DEPENDS+=	${PYPKGPREFIX}-Paste-[0-9]*:../../www/py-paste
+DEPENDS+=	${PYPKGPREFIX}-paste-[0-9]*:../../www/py-paste
 
 USE_LANGUAGES=	# none
 
