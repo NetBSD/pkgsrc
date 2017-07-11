@@ -1,15 +1,73 @@
-$NetBSD: patch-Makefile.rules,v 1.1 2012/07/06 09:29:14 wiz Exp $
+$NetBSD: patch-Makefile.rules,v 1.2 2017/07/11 14:11:57 jaapb Exp $
 
-make package work with DESTDIR support
---- Makefile.rules.orig	2012-02-29 18:02:51.000000000 +0000
+--- Makefile.rules.orig	2016-06-19 14:49:12.000000000 +0000
 +++ Makefile.rules
-@@ -148,7 +148,8 @@ realuninstall: $(UNINSTOTHER) uninstall-
+@@ -48,15 +48,20 @@ ARCHIVE  ?= $(PKGNAME)
+ 
+ ARCHIVE_CMA ?= $(ARCHIVE).cma 
+ ARCHIVE_CMXA ?= $(ARCHIVE).cmxa 
++ARCHIVE_CMXS ?= $(ARCHIVE).cmxs 
+ ARCHIVE_P ?= $(ARCHIVE).p
+ ARCHIVE_P_CMXA ?= $(ARCHIVE_P).cmxa
++ARCHIVE_P_CMXS ?= $(ARCHIVE_P).cmxs
+ 
+ MT_TYPE ?= posix
+ HAVE_GPROF ?= 0
++HAVE_SHARED ?= 0
+ ALL ?= $(ARCHIVE_CMA) $(ALL_EXTRA) \
+        all-mt-$(MT_TYPE)
+ OPT ?= $(ARCHIVE_CMXA) $(OPT_EXTRA) \
+-       opt-mt-$(MT_TYPE) opt-p-$(HAVE_GPROF) opt-mt-$(MT_TYPE)-p-$(HAVE_GPROF)
++       opt-mt-$(MT_TYPE) opt-p-$(HAVE_GPROF) opt-mt-$(MT_TYPE)-p-$(HAVE_GPROF) \
++			 opt-shared-$(HAVE_SHARED) opt-p-$(HAVE_GPROF)-shared-$(HAVE_SHARED)
++
+ 
+ all: $(ALL)
+ 
+@@ -72,7 +77,12 @@ opt-mt-vm-p-0:
+ opt-mt-posix-p-0:
+ opt-mt-vm-p-1:
+ opt-mt-posix-p-1: $(OPTMTP_EXTRA)
+-
++opt-shared-0:
++opt-shared-1: $(ARCHIVE_CMXS)
++opt-p-0-shared-0:
++opt-p-0-shared-1:
++opt-p-1-shared-0:
++opt-p-1-shared-1: $(ARCHIVE_P_CMXS)
+ 
+ 
+ $(ARCHIVE_CMA): $(OBJECTS) $(COBJECTS)
+@@ -89,6 +99,9 @@ $(ARCHIVE_CMXA): $(XOBJECTS) $(COBJECTS)
+ 		$(OCAMLMKLIB) -o $(ARCHIVE) $(XOBJECTS) $(COBJECTS) $(LINK_OPTIONS); \
+ 	fi
+ 
++$(ARCHIVE_CMXS): $(ARCHIVE_CMXA)
++		$(OCAMLOPT) -linkall -shared -I . -o $(ARCHIVE_CMXS) $(ARCHIVE_CMXA);
++
+ $(ARCHIVE_P_CMXA): $(XOBJECTS) $(COBJECTS)
+ 	if [ "X$(COBJECTS)" = "X" ]; then \
+ 		$(OCAMLOPT) -a -o $(ARCHIVE_P_CMXA) $(POBJECTS); \
+@@ -96,9 +109,12 @@ $(ARCHIVE_P_CMXA): $(XOBJECTS) $(COBJECT
+ 		$(OCAMLMKLIB) -o $(ARCHIVE_P) $(POBJECTS) $(COBJECTS) $(LINK_OPTIONS); \
+ 	fi
+ 
++$(ARCHIVE_P_CMXS): $(ARCHIVE_P_CMXA)
++		$(OCAMLOPT) -linkall -shared -I . -o $(ARCHIVE_P_CMXS) $(ARCHIVE_P_CMXA);
++
+ # Files to remove everywhere by "make clean":
+ 
+-CLEAN_LIST = *.cmi *.cmo *.cma *.cmx *.o *.a *.cmxa dll* packlist-* \
++CLEAN_LIST = *.cmi *.cmo *.cma *.cmx *.o *.a *.cmxa *.cmxs dll* packlist-* \
+ 	     ocamldoc.dump META depend $(PACKLIST) $(GENERATE)
+ 
+ # Generic build rules:
+@@ -158,7 +174,7 @@ realuninstall: $(UNINSTOTHER) uninstall-
+ 
  .PHONY: install-findlib
  install-findlib: META
- 	files=`$(COLLECT_FILES) *.mli *.cmi *.cma *.cmxa *.a dll* META $(INSTALL_EXTRA)` && \
--	$(OCAMLFIND) install $(PKGNAME) $$files
-+	$(OCAMLFIND) install -destdir $(DESTDIR)/$(PREFIX)/lib/ocaml/site-lib \
-+	-ldconf /dev/null $(PKGNAME) $$files
+-	files=`$(COLLECT_FILES) *.mli *.cmi *.cma *.cmxa *.a dll* META $(INSTALL_EXTRA)` && \
++	files=`$(COLLECT_FILES) *.mli *.cmi *.cma *.cmxa *.cmxs *.a dll* META $(INSTALL_EXTRA)` && \
+ 	$(OCAMLFIND) install $(PKGNAME) $$files
  
  .PHONY: uninstall-findlib
- uninstall-findlib:
