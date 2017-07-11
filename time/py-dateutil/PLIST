@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/05/04 19:45:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/07/11 06:10:37 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,6 +11,9 @@ ${PYSITELIB}/dateutil/__init__.pyo
 ${PYSITELIB}/dateutil/_common.py
 ${PYSITELIB}/dateutil/_common.pyc
 ${PYSITELIB}/dateutil/_common.pyo
+${PYSITELIB}/dateutil/_version.py
+${PYSITELIB}/dateutil/_version.pyc
+${PYSITELIB}/dateutil/_version.pyo
 ${PYSITELIB}/dateutil/easter.py
 ${PYSITELIB}/dateutil/easter.pyc
 ${PYSITELIB}/dateutil/easter.pyo
