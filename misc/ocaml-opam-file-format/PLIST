@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/11 10:34:30 jaapb Exp $
+${OCAML_SITELIB}/opam-file-format/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/opam-file-format/opam-file-format.a
+${OCAML_SITELIB}/opam-file-format/opam-file-format.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/opam-file-format/opam-file-format.cmxa
+${OCAML_SITELIB}/opam-file-format/opamBaseParser.cmi
+${OCAML_SITELIB}/opam-file-format/opamBaseParser.cmo
+${PLIST.ocaml-opt}${OCAML_SITELIB}/opam-file-format/opamBaseParser.cmx
+${OCAML_SITELIB}/opam-file-format/opamLexer.cmi
+${OCAML_SITELIB}/opam-file-format/opamLexer.cmo
+${PLIST.ocaml-opt}${OCAML_SITELIB}/opam-file-format/opamLexer.cmx
+${OCAML_SITELIB}/opam-file-format/opamParser.cmi
+${OCAML_SITELIB}/opam-file-format/opamParser.cmo
+${PLIST.ocaml-opt}${OCAML_SITELIB}/opam-file-format/opamParser.cmx
+${OCAML_SITELIB}/opam-file-format/opamParserTypes.cmi
+${OCAML_SITELIB}/opam-file-format/opamPrinter.cmi
+${OCAML_SITELIB}/opam-file-format/opamPrinter.cmo
+${PLIST.ocaml-opt}${OCAML_SITELIB}/opam-file-format/opamPrinter.cmx
