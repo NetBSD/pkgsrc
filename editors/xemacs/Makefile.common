@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2017/06/12 09:34:12 hauke Exp $
+# $NetBSD: Makefile.common,v 1.25 2017/07/11 11:29:44 hauke Exp $
 #
 # used by editors/xemacs-nox11/Makefile
 # used by editors/xemacs/Makefile
@@ -43,6 +43,7 @@ CONFIGURE_ARGS+=	--with-clash-detection
 CONFIGURE_ARGS+=	--with-mule=yes
 CONFIGURE_ARGS+=	--with-msw=no
 CONFIGURE_ARGS+=	--pdump
+CONFIGURE_ARGS+=	--with-system-malloc
 CFLAGS+=		-Dunix
 
 # Use terminfo on NetBSD-6 and newer.
