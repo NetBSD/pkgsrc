@@ -1,9 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/06 11:29:15 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/07/11 10:39:47 jaapb Exp $
+bin/utftrip
 ${OCAML_SITELIB}/uutf/META
+${OCAML_SITELIB}/uutf/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/uutf/uutf.a
 ${OCAML_SITELIB}/uutf/uutf.cma
 ${OCAML_SITELIB}/uutf/uutf.cmi
+${OCAML_SITELIB}/uutf/uutf.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/uutf/uutf.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/uutf/uutf.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/uutf/uutf.cmxs
 ${OCAML_SITELIB}/uutf/uutf.mli
+share/doc/uutf/CHANGES.md
+share/doc/uutf/LICENSE.md
+share/doc/uutf/README.md

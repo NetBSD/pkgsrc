@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/02/06 12:45:35 jaapb Exp $
+$NetBSD: distinfo,v 1.4 2017/07/11 10:39:47 jaapb Exp $
 
-SHA1 (uutf-0.9.4.tbz) = 327196afd135030173ba354f142bee71834a0f53
-RMD160 (uutf-0.9.4.tbz) = e7d79b110cd812b7cc312e37a85b88cdf0849b65
-SHA512 (uutf-0.9.4.tbz) = 95203b06e7506f33822f10607315920b849efde3ed2e032bf8dd805f99ce4851b375bc92a1f95403673c97c6176c5a6974af2be611f530db0a7f36296948edf4
-Size (uutf-0.9.4.tbz) = 36987 bytes
+SHA1 (uutf-1.0.1.tbz) = 63b7afcba68085fa8d096f9d2827938121a0d936
+RMD160 (uutf-1.0.1.tbz) = 3f4ff0d61592578102ecadbaf9efb1529a60fb8e
+SHA512 (uutf-1.0.1.tbz) = 35cbee8c82a566f2fe4fcd549936d4c4dc67f5b71bfd3ea97ff25d7cf21cfb77cb5ee313c95ad26a2a61bb84aa48c300bbb79a1a7128c6161e9abe9c390a7d18
+Size (uutf-1.0.1.tbz) = 22215 bytes
