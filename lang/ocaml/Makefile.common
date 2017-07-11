@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.49 2016/12/30 11:15:00 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.50 2017/07/11 09:52:11 jaapb Exp $
 
 # used by x11/labltk/Makefile
 # used by x11/ocaml-graphics/Makefile
-DISTNAME=	ocaml-4.04.0
+DISTNAME=	ocaml-4.04.2
 CATEGORIES=	lang
 MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-4.04/
 #EXTRACT_SUFX=	.tar.bz2
