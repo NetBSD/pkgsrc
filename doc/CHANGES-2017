@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2832 2017/07/11 10:44:05 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.2833 2017/07/11 10:48:35 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3905,3 +3905,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added misc/ocaml-opam-file-format version 2.0.0_beta3 [jaapb 2017-07-11]
 	Updated textproc/ocaml-uutf to 1.0.1 [jaapb 2017-07-11]
 	Updated textproc/ocaml-jsonm to 1.0.1 [jaapb 2017-07-11]
+	Updated misc/ocaml-opam to 2.0.0_beta3 [jaapb 2017-07-11]
