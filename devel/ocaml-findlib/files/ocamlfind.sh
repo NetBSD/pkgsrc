@@ -1,6 +1,6 @@
 #!@SH@
 
-# $NetBSD: ocamlfind.sh,v 1.5 2014/10/31 01:00:30 hiramatsu Exp $
+# $NetBSD: ocamlfind.sh,v 1.6 2017/07/11 09:57:11 jaapb Exp $
 
 if [ "$1" = install ]; then
 	need_destdir=yes
@@ -21,5 +21,15 @@ if [ "$1" = install ]; then
 	if [ "$need_ldconf" = "yes" ]; then
 		set -- "$@" -ldconf "@BUILDLINK_DIR@/lib/ocaml/ld.conf"
 	fi
+	exec "@OCAML_FINDLIB_PREFIX@/bin/`basename $0`" "$@"
+elif [ "$1" = printconf ]; then
+	if [ "$2" = destdir ]; then
+		ocamlfind="@OCAML_FINDLIB_PREFIX@/bin/`basename $0`"
+		dir=`"$ocamlfind" printconf destdir`
+		echo "@DESTDIR@$dir"
+	else
+		exec "@OCAML_FINDLIB_PREFIX@/bin/`basename $0`" "$@"
+	fi
+else
+	exec "@OCAML_FINDLIB_PREFIX@/bin/`basename $0`" "$@"
 fi
-exec "@OCAML_FINDLIB_PREFIX@/bin/`basename $0`" "$@"
