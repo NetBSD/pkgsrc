@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/11 11:14:58 jaapb Exp $
+bin/jbuilder
+${OCAML_SITELIB}/jbuilder/META
+${OCAML_SITELIB}/jbuilder/opam
+man/man1/jbuilder-build.1
+man/man1/jbuilder-clean.1
+man/man1/jbuilder-exec.1
+man/man1/jbuilder-external-lib-deps.1
+man/man1/jbuilder-install.1
+man/man1/jbuilder-installed-libraries.1
+man/man1/jbuilder-rules.1
+man/man1/jbuilder-runtest.1
+man/man1/jbuilder-subst.1
+man/man1/jbuilder-uninstall.1
+man/man1/jbuilder.1
+share/doc/jbuilder/CHANGES.md
+share/doc/jbuilder/LICENSE.md
+share/doc/jbuilder/README.md
