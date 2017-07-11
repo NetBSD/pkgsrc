@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/05/06 15:54:40 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/07/11 10:07:54 jaapb Exp $
 bin/oasis
 ${OCAML_SITELIB}/oasis/BaseArgExt.annot
 ${OCAML_SITELIB}/oasis/BaseArgExt.cmi
@@ -18,6 +18,11 @@ ${OCAML_SITELIB}/oasis/BaseCheck.cmt
 ${OCAML_SITELIB}/oasis/BaseCheck.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/BaseCheck.cmx
 ${OCAML_SITELIB}/oasis/BaseCheck.mli
+${OCAML_SITELIB}/oasis/BaseCompat.annot
+${OCAML_SITELIB}/oasis/BaseCompat.cmi
+${OCAML_SITELIB}/oasis/BaseCompat.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/BaseCompat.cmx
+${OCAML_SITELIB}/oasis/BaseCompat.ml
 ${OCAML_SITELIB}/oasis/BaseContext.annot
 ${OCAML_SITELIB}/oasis/BaseContext.cmi
 ${OCAML_SITELIB}/oasis/BaseContext.cmt
@@ -34,6 +39,7 @@ ${OCAML_SITELIB}/oasis/BaseData.annot
 ${OCAML_SITELIB}/oasis/BaseData.cmi
 ${OCAML_SITELIB}/oasis/BaseData.cmt
 ${OCAML_SITELIB}/oasis/BaseData.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/BaseData.cmx
 ${OCAML_SITELIB}/oasis/BaseData.mli
 ${OCAML_SITELIB}/oasis/BaseDoc.annot
 ${OCAML_SITELIB}/oasis/BaseDoc.cmi
@@ -171,6 +177,9 @@ ${OCAML_SITELIB}/oasis/NonePlugin.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/NonePlugin.cmx
 ${OCAML_SITELIB}/oasis/NonePlugin.ml
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OASISAst.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OASISAst_lexer.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OASISAst_parser.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OASISAst_types.cmx
 ${OCAML_SITELIB}/oasis/OASISBuildSection.annot
 ${OCAML_SITELIB}/oasis/OASISBuildSection.cmi
 ${OCAML_SITELIB}/oasis/OASISBuildSection.cmt
@@ -196,6 +205,11 @@ ${OCAML_SITELIB}/oasis/OASISData.annot
 ${OCAML_SITELIB}/oasis/OASISData.cmi
 ${OCAML_SITELIB}/oasis/OASISData.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OASISData.cmx
+${OCAML_SITELIB}/oasis/OASISDataNotation.annot
+${OCAML_SITELIB}/oasis/OASISDataNotation.cmi
+${OCAML_SITELIB}/oasis/OASISDataNotation.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OASISDataNotation.cmx
+${OCAML_SITELIB}/oasis/OASISDataNotation.ml
 ${OCAML_SITELIB}/oasis/OASISDocument.annot
 ${OCAML_SITELIB}/oasis/OASISDocument.cmi
 ${OCAML_SITELIB}/oasis/OASISDocument.cmt
@@ -232,6 +246,12 @@ ${OCAML_SITELIB}/oasis/OASISFeatures.cmi
 ${OCAML_SITELIB}/oasis/OASISFeatures.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OASISFeatures.cmx
 ${OCAML_SITELIB}/oasis/OASISFeatures.ml
+${OCAML_SITELIB}/oasis/OASISFileSystem.annot
+${OCAML_SITELIB}/oasis/OASISFileSystem.cmi
+${OCAML_SITELIB}/oasis/OASISFileSystem.cmt
+${OCAML_SITELIB}/oasis/OASISFileSystem.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OASISFileSystem.cmx
+${OCAML_SITELIB}/oasis/OASISFileSystem.mli
 ${OCAML_SITELIB}/oasis/OASISFileTemplate.annot
 ${OCAML_SITELIB}/oasis/OASISFileTemplate.cmi
 ${OCAML_SITELIB}/oasis/OASISFileTemplate.cmt
@@ -298,6 +318,7 @@ ${OCAML_SITELIB}/oasis/OASISMessage.cmt
 ${OCAML_SITELIB}/oasis/OASISMessage.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OASISMessage.cmx
 ${OCAML_SITELIB}/oasis/OASISMessage.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OASISMutex.cmx
 ${OCAML_SITELIB}/oasis/OASISObject.annot
 ${OCAML_SITELIB}/oasis/OASISObject.cmi
 ${OCAML_SITELIB}/oasis/OASISObject.cmt
@@ -326,7 +347,6 @@ ${OCAML_SITELIB}/oasis/OASISPlugin.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OASISPlugin.cmx
 ${OCAML_SITELIB}/oasis/OASISPlugin.mli
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OASISQuickstart.cmx
-${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OASISRecDescParser.cmx
 ${OCAML_SITELIB}/oasis/OASISSchema.annot
 ${OCAML_SITELIB}/oasis/OASISSchema.cmi
 ${OCAML_SITELIB}/oasis/OASISSchema.cmt
@@ -346,6 +366,12 @@ ${OCAML_SITELIB}/oasis/OASISSetupUpdate.cmi
 ${OCAML_SITELIB}/oasis/OASISSetupUpdate.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OASISSetupUpdate.cmx
 ${OCAML_SITELIB}/oasis/OASISSetupUpdate.ml
+${OCAML_SITELIB}/oasis/OASISSourcePatterns.annot
+${OCAML_SITELIB}/oasis/OASISSourcePatterns.cmi
+${OCAML_SITELIB}/oasis/OASISSourcePatterns.cmt
+${OCAML_SITELIB}/oasis/OASISSourcePatterns.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OASISSourcePatterns.cmx
+${OCAML_SITELIB}/oasis/OASISSourcePatterns.mli
 ${OCAML_SITELIB}/oasis/OASISSourceRepository.annot
 ${OCAML_SITELIB}/oasis/OASISSourceRepository.cmi
 ${OCAML_SITELIB}/oasis/OASISSourceRepository.cmt
@@ -421,12 +447,15 @@ ${OCAML_SITELIB}/oasis/OCamlbuildPlugin.cmi
 ${OCAML_SITELIB}/oasis/OCamlbuildPlugin.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OCamlbuildPlugin.cmx
 ${OCAML_SITELIB}/oasis/OCamlbuildPlugin.ml
-${OCAML_SITELIB}/oasis/ODNFunc.annot
-${OCAML_SITELIB}/oasis/ODNFunc.cmi
-${OCAML_SITELIB}/oasis/ODNFunc.cmt
-${OCAML_SITELIB}/oasis/ODNFunc.cmti
-${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/ODNFunc.cmx
-${OCAML_SITELIB}/oasis/ODNFunc.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OMakeData.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OMakeEquip.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OMakeFields.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OMakeFormat.cmx
+${OCAML_SITELIB}/oasis/OMakePlugin.annot
+${OCAML_SITELIB}/oasis/OMakePlugin.cmi
+${OCAML_SITELIB}/oasis/OMakePlugin.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/oasis/OMakePlugin.cmx
+${OCAML_SITELIB}/oasis/OMakePlugin.ml
 ${OCAML_SITELIB}/oasis/PropList.annot
 ${OCAML_SITELIB}/oasis/PropList.cmi
 ${OCAML_SITELIB}/oasis/PropList.cmt
@@ -466,13 +495,3 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/plugin-loader/plugin-loader.a
 ${OCAML_SITELIB}/plugin-loader/plugin-loader.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/plugin-loader/plugin-loader.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/plugin-loader/plugin-loader.cmxs
-${OCAML_SITELIB}/userconf/META
-${OCAML_SITELIB}/userconf/UserConf.annot
-${OCAML_SITELIB}/userconf/UserConf.cmi
-${OCAML_SITELIB}/userconf/UserConf.cmt
-${PLIST.ocaml-opt}${OCAML_SITELIB}/userconf/UserConf.cmx
-${OCAML_SITELIB}/userconf/UserConf.ml
-${PLIST.ocaml-opt}${OCAML_SITELIB}/userconf/userconf.a
-${OCAML_SITELIB}/userconf/userconf.cma
-${PLIST.ocaml-opt}${OCAML_SITELIB}/userconf/userconf.cmxa
-${PLIST.ocaml-opt}${OCAML_SITELIB}/userconf/userconf.cmxs

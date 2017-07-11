@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2016/12/30 11:16:57 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2017/07/11 10:07:54 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-oasis
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-oasis
 OCAML_OASIS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-oasis+=	ocaml-oasis>=0.4.4
-BUILDLINK_ABI_DEPENDS.ocaml-oasis?=	ocaml-oasis>=0.4.6nb2
+BUILDLINK_ABI_DEPENDS.ocaml-oasis?=	ocaml-oasis>=0.4.10
 BUILDLINK_PKGSRCDIR.ocaml-oasis?=	../../devel/ocaml-oasis
 
 .include "../../lang/ocaml/buildlink3.mk"
