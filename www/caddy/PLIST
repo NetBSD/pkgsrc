@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/11 20:26:41 bsiegert Exp $
+bin/caddy
