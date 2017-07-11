@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2821 2017/07/11 10:05:41 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.2822 2017/07/11 10:09:05 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3894,3 +3894,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added misc/ocaml-topkg version 0.9.0 [jaapb 2017-07-11]
 	Updated archivers/ocaml-zip to 1.07 [jaapb 2017-07-11]
 	Updated devel/ocamlbuild to 0.11.0 [jaapb 2017-07-11]
+	Updated devel/ocaml-oasis to 0.4.10 [jaapb 2017-07-11]
