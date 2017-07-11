@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2016/11/25 13:00:13 prlw1 Exp $
+# $NetBSD: Makefile,v 1.50 2017/07/11 12:00:56 maya Exp $
 
 DISTNAME=	gobject-introspection-1.50.0
 CATEGORIES=	devel gnome
@@ -18,7 +18,6 @@ USE_TOOLS+=	pkg-config flex bison gmake
 GMAKE_REQD=	3.81
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--disable-doctool
-CONFIGURE_ARGS+=	--disable-tests
 
 PKGCONFIG_OVERRIDE+=	gobject-introspection-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	gobject-introspection-no-export-1.0.pc.in
