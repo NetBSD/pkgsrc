@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2861 2017/07/11 17:31:49 he Exp $
+$NetBSD: CHANGES-2017,v 1.2862 2017/07/11 19:01:13 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3934,3 +3934,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/poppler to 0.56.0 [adam 2017-07-11]
 	Updated lang/ocaml to 4.04.2nb1 [he 2017-07-11]
 	Updated devel/py-greenlet to 0.4.12nb1 [he 2017-07-11]
+	Updated lang/nodejs to 8.1.4 [fhajny 2017-07-11]
