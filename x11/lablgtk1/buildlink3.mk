@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2016/12/30 11:16:57 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2017/07/11 14:19:19 jaapb Exp $
 
 BUILDLINK_TREE+=	lablgtk1
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	lablgtk1
 LABLGTK1_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.lablgtk1+=	lablgtk1>=1.2.5nb3
-BUILDLINK_ABI_DEPENDS.lablgtk1+=	lablgtk1>=1.2.7nb14
+BUILDLINK_ABI_DEPENDS.lablgtk1+=	lablgtk1>=1.2.7nb15
 BUILDLINK_PKGSRCDIR.lablgtk1?=		../../x11/lablgtk1
 
 .include "../../x11/gtk/buildlink3.mk"
