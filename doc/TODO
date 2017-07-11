@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17521 2017/07/11 11:09:53 wiz Exp $
+$NetBSD: TODO,v 1.17522 2017/07/11 19:51:01 adam Exp $
 
 Suggested new packages
 ======================
@@ -1252,7 +1252,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o policyd-weight-0.1.15.2
 	o polsms-2.1.0
 	o poppass-4.0.14
-	o poppler-0.56.0
 	o posh-0.12.6
 	o postal-0.72
 	o postfix-3.2.2
