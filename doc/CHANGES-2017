@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2813 2017/07/11 04:10:47 msaitoh Exp $
+$NetBSD: CHANGES-2017,v 1.2814 2017/07/11 06:53:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3882,3 +3882,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added textproc/tcl-xapian version 1.4.4 [schmonz 2017-07-10]
 	Updated net/aria2 to 1.32.0 [seb 2017-07-10]
 	Updated sysutils/intel-microcode-netbsd to 20170707 [msaitoh 2017-07-11]
+	Updated time/py-dateutil to 2.6.1 [adam 2017-07-11]
+	Updated devel/gperftools to 2.6.1 [adam 2017-07-11]
