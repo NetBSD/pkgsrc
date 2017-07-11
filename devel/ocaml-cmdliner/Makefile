@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/07/11 10:18:38 jaapb Exp $
+# $NetBSD: Makefile,v 1.13 2017/07/11 10:41:48 jaapb Exp $
 
 PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	cmdliner-1.0.0
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tbz
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://erratique.ch/software/cmdliner/
 COMMENT=	Module for the declarative definition of command line interfaces
-LICENSE=	modified-bsd
+LICENSE=	isc
 
 USE_LANGUAGES=	c
 
