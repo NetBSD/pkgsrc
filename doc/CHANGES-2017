@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2864 2017/07/11 19:16:56 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.2865 2017/07/11 19:51:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3937,3 +3937,11 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/nodejs to 8.1.4 [fhajny 2017-07-11]
 	Updated lang/nodejs6 to 6.11.1 [fhajny 2017-07-11]
 	Updated lang/nodejs4 to 4.8.4 [fhajny 2017-07-11]
+	Updated lang/py-jsparser to 2.5.2 [adam 2017-07-11]
+	Updated lang/py-js2py to 0.44 [adam 2017-07-11]
+	Updated lang/llvm to 4.0.1 [adam 2017-07-11]
+	Updated lang/clang to 4.0.1 [adam 2017-07-11]
+	Updated lang/clang-static-analyzer to 4.0.1 [adam 2017-07-11]
+	Updated lang/libunwind to 4.0.1 [adam 2017-07-11]
+	Updated devel/polly to 4.0.1 [adam 2017-07-11]
+	Updated devel/lldb to 4.0.1 [adam 2017-07-11]
