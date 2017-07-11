@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2016/08/18 10:48:06 jaapb Exp $
+$NetBSD: distinfo,v 1.4 2017/07/11 14:15:10 jaapb Exp $
 
-SHA1 (ppx_core-114.01+04-e5577ab.tar.gz) = a3744f1351ac25587ac14419894ece499aee558d
-RMD160 (ppx_core-114.01+04-e5577ab.tar.gz) = 99ad2b219a86509b2ec4dc6115df82b9ee8a5ffc
-SHA512 (ppx_core-114.01+04-e5577ab.tar.gz) = 33047a8e2a48d88716fe343905048824fbd6ee7d038526b97e27a976447d90d0b260e4197126f83ab549fadbba04e26e196f5c8e9c00a4733d3e9e835dc36acc
-Size (ppx_core-114.01+04-e5577ab.tar.gz) = 42770 bytes
+SHA1 (ppx_core-114.01.04-e5577ab.tar.gz) = a3744f1351ac25587ac14419894ece499aee558d
+RMD160 (ppx_core-114.01.04-e5577ab.tar.gz) = 99ad2b219a86509b2ec4dc6115df82b9ee8a5ffc
+SHA512 (ppx_core-114.01.04-e5577ab.tar.gz) = 33047a8e2a48d88716fe343905048824fbd6ee7d038526b97e27a976447d90d0b260e4197126f83ab549fadbba04e26e196f5c8e9c00a4733d3e9e835dc36acc
+Size (ppx_core-114.01.04-e5577ab.tar.gz) = 42770 bytes
 SHA1 (patch-_oasis) = 6e892e36c7a7329c6f26dc3cc29e37e29cb169c3
