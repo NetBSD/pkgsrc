@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.108 2017/03/27 12:54:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.109 2017/07/11 17:15:01 he Exp $
 
 .include "Makefile.common"
 
-#PKGREVISION=		2
+PKGREVISION=		1
 
 CONFIGURE_ENV+=		disable_x11=yes
 
@@ -34,7 +34,6 @@ BUILD_TARGET+=	opt opt.opt
 PLIST_SRC+=	${PKGDIR}/PLIST.opt
 .  if empty(MACHINE_PLATFORM:MDarwin-*-powerpc) && \
       empty(MACHINE_PLATFORM:MSunOS-*-i386) && \
-      empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) && \
       empty(MACHINE_PLATFORM:MNetBSD-*-arm) && \
       empty(MACHINE_PLATFORM:MNetBSD-*-sparc)
 PLIST_SRC+=	${PKGDIR}/PLIST.prof
@@ -47,7 +46,7 @@ PLIST_SRC+=	${PKGDIR}/PLIST.prof
 .  if !empty(MACHINE_PLATFORM:MLinux-*-*) || \
       !empty(MACHINE_PLATFORM:MFreeBSD-*-*) || \
       !empty(MACHINE_PLATFORM:MDragonFly-*-*) || \
-      !empty(MACHINE_PLATFORM:MNetBSD-*-*) || \
+      (!empty(MACHINE_PLATFORM:MNetBSD-*-*) && empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)) || \
       !empty(MACHINE_PLATFORM:MDarwin-*-*) || \
       !empty(MACHINE_PLATFORM:MSunOS-*-*)
 PLIST_SRC+=	${PKGDIR}/PLIST.natdynlink
