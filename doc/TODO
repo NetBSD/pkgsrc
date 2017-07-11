@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17520 2017/07/11 10:20:23 jaapb Exp $
+$NetBSD: TODO,v 1.17521 2017/07/11 11:09:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -409,6 +409,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o angband-3.2
 	o anjuta-3.16.0
 	o anope-1.8.7
+	o ansifilter-2.5
 	o ant-contrib-1.0b3
 	o antiright-8.6
 	o ap-Embperl-1.3.6
@@ -486,7 +487,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-3.2.1
+	o calibre-3.3
 	o calligra-2.9.9 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -522,7 +523,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cone-0.92
 	o convmv-2.03
 	o cook-2.31
-	o courier-0.76.4
+	o courier-0.77.0
 	o courier-authlib-0.66.2
 	o courier-imap-4.16.1
 	o courier-mta-0.74.2
@@ -561,13 +562,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o desklaunch-1.1.7
 	o deskmenu-1.4.5
 	o dhcpcd-dbus-0.6.1
-	o di-4.42
+	o di-4.44
 	o digikam-5.5.0
 	o dinotrace-9.4d
 	o discount-2.2.0
 	o dnssec-tools-2.2
 	o doclifter-2.16
 	o dolphin-5.0
+	o dos2unix-7.3.5
 	o drivel-3.0.5
 	o drupal-8.2.3
 	o dtach-0.9
@@ -730,7 +732,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnome-chemistry-utils-0.14.11
 	o gnome-chess-3.12.3
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
-	o gnome-commander-1.4.6
+	o gnome-commander-1.6.4
 	o gnome-control-center-3.8.3
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
@@ -1040,7 +1042,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o manedit-1.2.1
 	o mapserver-7.0.1
 	o matchbox-panel-0.9.3
-	o maxima-5.39.0
+	o maxima-5.40.0
 	o mbuf-20141227
 	o mbuffer-20160228
 	o mcabber-1.0.2
@@ -1275,6 +1277,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pspp-0.10.1
 	o ptlib-2.16.2
 	o pure-ftpd-1.0.40
+	o putty-0.70
 	o pvs-5.0
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
@@ -1454,7 +1457,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stellarium-0.13.3
 	o stlport-4.6.2
 	o stow-2.2.2
-	o strace-4.16
+	o strace-4.18
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
 	o subtitleeditor-0.52.1
