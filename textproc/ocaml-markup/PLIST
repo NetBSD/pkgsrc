@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/06/20 11:08:31 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/07/11 11:11:00 jaapb Exp $
 ${OCAML_SITELIB}/markup/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup.a
 ${OCAML_SITELIB}/markup/markup.cma
@@ -8,6 +8,17 @@ ${OCAML_SITELIB}/markup/markup.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup.cmxa
 ${OCAML_SITELIB}/markup/markup.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup__xml_parser.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_common.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_detect.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_encoding.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_entities.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_error.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_html_parser.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_html_tokenizer.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_html_writer.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_input.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_kstream.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_lwt.a
 ${OCAML_SITELIB}/markup/markup_lwt.cma
 ${OCAML_SITELIB}/markup/markup_lwt.cmi
@@ -24,3 +35,10 @@ ${OCAML_SITELIB}/markup/markup_lwt_unix.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_lwt_unix.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_lwt_unix.cmxa
 ${OCAML_SITELIB}/markup/markup_lwt_unix.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_namespace.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_stream_io.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_text.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_trie.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_utility.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_xml_tokenizer.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_xml_writer.cmx
