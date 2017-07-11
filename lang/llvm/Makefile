@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/06/01 13:30:25 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2017/07/11 19:47:37 adam Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -11,11 +11,9 @@
 #
 # Always update all */buildlink3.mk to require the latest stable release
 # version in BUILDLINK_API_DEPENDS, as there is no backwards compatibility
-#
 
-DISTNAME=	llvm-4.0.0.src
+DISTNAME=	llvm-4.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	1
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
