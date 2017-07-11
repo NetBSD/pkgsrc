@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2016/12/30 11:16:57 jaapb Exp $
+# $NetBSD: Makefile,v 1.9 2017/07/11 12:28:51 jaapb Exp $
 
-VERSION=	2.7.0
+VERSION=	2.7.2
 GITHUB_PROJECT=	ocaml-ipaddr
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
-PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 
@@ -14,9 +13,10 @@ LICENSE=	isc
 
 WRKSRC=		${WRKDIR}/ocaml-ipaddr-${VERSION}
 
-OCAML_USE_FINDLIB=	yes
-OCAML_USE_OASIS=	yes
+OCAML_USE_TOPKG=	yes
+OCAML_USE_OPAM=	yes
 
+.include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../devel/ocaml-sexplib/buildlink3.mk"
 .include "../../devel/ocaml-ppx_sexp_conv/buildlink3.mk"
 .include "../../mk/ocaml.mk"
