@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2017/04/24 12:27:58 maya Exp $
+$NetBSD: distinfo,v 1.33 2017/07/11 10:52:41 wiz Exp $
 
 SHA1 (qtbase-opensource-src-5.5.1.tar.xz) = 0b651543fa013ae151b7a11f0d0dee092050aa3f
 RMD160 (qtbase-opensource-src-5.5.1.tar.xz) = ce4bccd0703aaf8d904fbecd1f334ef13d698a44
@@ -10,7 +10,7 @@ SHA1 (patch-mkspecs_features_create__cmake.prf) = 3f6b3a592e29f5529e5c87dbac036c
 SHA1 (patch-mkspecs_features_mac_objective__c.prf) = 20838861017d969fbcf171960dfc07db1bd5a177
 SHA1 (patch-mkspecs_features_qt__module__pris.prf) = edaab0b9e407cc52f4682ce1cf8441832c57fe39
 SHA1 (patch-mkspecs_features_simd.prf) = 7dbe61df6252adebeac374e3541bc5ff4c93909b
-SHA1 (patch-qmake_Makefile.unix) = 0b33fc32f493e23da25bfb38ad59a6ae550581e5
+SHA1 (patch-qmake_Makefile.unix) = c14d72bb76d469df3b730a105473b47f3a05850b
 SHA1 (patch-qmake_generators_makefile.cpp) = 08bdf7b58fb7e5bd2a1c31f0a0344c733b65acb3
 SHA1 (patch-qmake_generators_unix_unixmake.cpp) = f8d2b60473b19cfab76cca1b886f71030674099d
 SHA1 (patch-qmake_generators_unix_unixmake2.cpp) = 528d7ea009dd9dd698009d7797d0b23dd469d995
