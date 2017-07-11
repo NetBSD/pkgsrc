@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2823 2017/07/11 10:10:52 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.2824 2017/07/11 10:14:07 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3896,3 +3896,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ocamlbuild to 0.11.0 [jaapb 2017-07-11]
 	Updated devel/ocaml-oasis to 0.4.10 [jaapb 2017-07-11]
 	Updated devel/menhir to 20170607 [jaapb 2017-07-11]
+	Updated devel/ocaml-re to 1.7.1 [jaapb 2017-07-11]
