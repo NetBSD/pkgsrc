@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:52 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/07/11 11:02:44 jaapb Exp $
 
-SHA1 (react-1.2.0.tbz) = 00804b409432fbb5ecbfb78d3802d494f4c666d7
-RMD160 (react-1.2.0.tbz) = 07a2621d5bef6c6509b80d7385393fbcded5139c
-SHA512 (react-1.2.0.tbz) = 3f2037ca68ea9d61eebaf7dcd7a768c59d3ce5bdd33c3adec9eee9df875a1b958cb450398eb7d72ac1a4144dc7b6dab344156ba920aaea2e3d39cc0f515839be
-Size (react-1.2.0.tbz) = 64665 bytes
+SHA1 (react-1.2.1.tbz) = 7502bcf6f98bc2eed2c2f43641a8b0d4ce9e481e
+RMD160 (react-1.2.1.tbz) = 5fcfab9a8bf2cae19422ccd9ccf40882fcc5efa8
+SHA512 (react-1.2.1.tbz) = 60f8788cc820e2be5303caedc80a377c8e5deab170d0eb9df71ff99d6fc57f31357824522f973c6e0d6b3979b58272e7f90b829474a494b94565279c53e8fbb1
+Size (react-1.2.1.tbz) = 39184 bytes
