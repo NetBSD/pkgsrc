@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2859 2017/07/11 16:36:43 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2860 2017/07/11 17:15:32 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3932,3 +3932,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ocaml-js-build-tools to 113.33.06 [jaapb 2017-07-11]
 	Updated devel/ocamlmod to 0.0.8 [jaapb 2017-07-11]
 	Updated print/poppler to 0.56.0 [adam 2017-07-11]
+	Updated lang/ocaml to 4.04.2nb1 [he 2017-07-11]
