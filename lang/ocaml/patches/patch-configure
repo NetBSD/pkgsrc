@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.22 2017/03/27 12:54:59 jperkin Exp $
+$NetBSD: patch-configure,v 1.23 2017/07/11 17:15:02 he Exp $
 
 All kinds of OS-specific changes to configure
+
 --- configure.orig	2016-11-04 16:08:24.000000000 +0000
 +++ configure
 @@ -726,7 +726,10 @@ if test $with_sharedlibs = "yes"; then
