@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2837 2017/07/11 11:12:37 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.2838 2017/07/11 11:15:14 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3910,3 +3910,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ocaml-lwt to 2.7.1 [jaapb 2017-07-11]
 	Updated textproc/ocaml-markup to 0.7.5 [jaapb 2017-07-11]
 	Updated textproc/ocaml-tyxml to 4.1.0 [jaapb 2017-07-11]
+	Added devel/ocaml-jbuilder version 1.0_beta10 [jaapb 2017-07-11]
