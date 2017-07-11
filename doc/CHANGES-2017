@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2863 2017/07/11 19:10:42 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.2864 2017/07/11 19:16:56 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3936,3 +3936,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-greenlet to 0.4.12nb1 [he 2017-07-11]
 	Updated lang/nodejs to 8.1.4 [fhajny 2017-07-11]
 	Updated lang/nodejs6 to 6.11.1 [fhajny 2017-07-11]
+	Updated lang/nodejs4 to 4.8.4 [fhajny 2017-07-11]
