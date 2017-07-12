@@ -1,0 +1,75 @@
+$NetBSD: patch-src_GNUmakefile,v 1.1 2017/07/12 01:54:16 ryoon Exp $
+
+* Fix build under NetBSD
+
+--- src/GNUmakefile.orig	2017-06-13 16:58:54.000000000 +0000
++++ src/GNUmakefile
+@@ -41,6 +41,8 @@ else
+           OS = Darwin
+   else ifeq ($(shell uname -o), Cygwin)
+           OS = Cygwin
++  else ifeq ($(shell uname -s), NetBSD)
++          OS = NetBSD
+   else
+           $(error "Could not recognize your platform")
+   endif
+@@ -50,6 +52,9 @@ endif
+ ifndef WITHOUT_LABLGTK
+   ifeq ($(OS), Cygwin)
+     LABLGTK_FLAGS += -I +site-lib/lablgtk2 lablgtk.cmxa
++  else ifeq ($(OS), NetBSD)
++    LABLGTK_FLAGS_ += -I +site-lib/lablgtk2
++    LABLGTK_FLAGS += ${LABLGTK_FLAGS_} lablgtk.cmxa
+   else
+     LABLGTK_FLAGS_ += -I +../lablgtk2 -I +lablgtk2
+     LABLGTK_FLAGS  += ${LABLGTK_FLAGS_} lablgtk.cmxa
+@@ -137,11 +142,7 @@ OCAML        = ${OCAMLBIN}/ocaml
+ OCAMLC       = $(firstword $(wildcard ${OCAMLBIN}/ocamlc.opt ${OCAMLBIN}/ocamlc))
+ OCAMLOPT     = $(firstword $(wildcard ${OCAMLBIN}/ocamlopt.opt ${OCAMLBIN}/ocamlopt))
+ OCAMLDEP     = $(firstword $(wildcard ${OCAMLBIN}/ocamldep.opt ${OCAMLBIN}/ocamldep))
+-ifeq ($(OS), Cygwin)
+-  CAMLP4O    = camlp4o.opt
+-else
+-  CAMLP4O      = $(firstword $(wildcard ${OCAMLBIN}/camlp4o.opt ${OCAMLBIN}/camlp4o))
+-endif
++CAMLP4O    = camlp4o.opt
+ 
+ # Do we build with "-I ./linux" or "-I ./win":
+ ifeq ($(OS), Cygwin)
+@@ -198,6 +199,9 @@ endif
+ ifeq ($(OS), Cygwin)
+   include win/GNUmakefile
+ endif
++ifeq ($(OS), NetBSD)
++  include linux/GNUmakefile
++endif
+ 
+ include java_frontend/GNUmakefile
+ 
+@@ -378,7 +382,7 @@ clean::
+ ifndef WITHOUT_LABLGTK
+ 
+ clean::
+-	cd linemarks; make clean
++	cd linemarks; ${MAKE} clean
+ 
+ branchleft_png.ml: branch-left.png
+ 	gdk_pixbuf_mlsource branch-left.png > branchleft_png.ml
+@@ -396,7 +400,7 @@ branchright_png.cmx: branchright_png.ml
+ vfide.cmx: branchleft_png.cmx branchright_png.cmx Fonts.cmx vfide.ml $(GTKSOURCEVIEW_DEPS)
+ 	@echo "  OCAMLOPT " $@
+ ifndef WITHOUT_GTKSOURCEVIEW
+-	make -C linemarks OCAMLOPT=${OCAMLOPT} OCAMLCFLAGS="${OCAMLCFLAGS}" LABLGTK_FLAGS="$(LABLGTK_FLAGS_)" linemarks.cmxa
++	${MAKE} -C linemarks OCAMLOPT=${OCAMLOPT} OCAMLCFLAGS="${OCAMLCFLAGS}" LABLGTK_FLAGS="$(LABLGTK_FLAGS_)" linemarks.cmxa
+ endif
+ 	$(SET_LDD); $(OCAMLOPT) $(OCAMLCFLAGS) -thread -c -w p -warn-error FSU -c $(INCLUDES) \
+ 	-pp ${CAMLP4O} nums.cmxa $(LABLGTK_FLAGS) $(GTKSOURCEVIEW_LFLAGS) vfide.ml
+@@ -404,7 +408,7 @@ endif
+ ../bin/vfide$(DOTEXE): vfide.cmx redux.cmx $(Z3DEPS) plugins2.cmx $(GTKSOURCEVIEW_DEPS)
+ 	@echo "  OCAMLOPT " $@
+ ifndef WITHOUT_GTKSOURCEVIEW
+-	cd linemarks; make linemarks.cmxa
++	cd linemarks; ${MAKE} linemarks.cmxa
+ endif
+ 	$(SET_LDD); ${OCAMLOPT} $(OCAMLCFLAGS) -warn-error F -pp ${CAMLP4O} -o ../bin/vfide$(DOTEXE)	\
+ 	  $(LABLGTK_FLAGS) $(GTKSOURCEVIEW_LFLAGS) unix.cmxa \
