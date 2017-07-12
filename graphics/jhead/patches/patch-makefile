@@ -1,0 +1,15 @@
+$NetBSD: patch-makefile,v 1.1 2017/07/12 12:21:56 wiz Exp $
+
+Honor LDFLAGS for RELRO builds.
+
+--- makefile.orig	2015-02-02 22:24:06.000000000 +0000
++++ makefile
+@@ -14,7 +14,7 @@ $(OBJ)/%.o:$(SRC)/%.c
+ 	${CC} $(CFLAGS) -c $< -o $@
+ 
+ jhead: $(objs) jhead.h
+-	${CC} -o jhead $(objs) -lm
++	${CC} ${LDFLAGS} -o jhead $(objs) -lm
+ 
+ clean:
+ 	rm -f $(objs) jhead
