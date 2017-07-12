@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 12:55:09 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2017/07/12 12:17:02 wiz Exp $
 
 DISTNAME=	applyppf3_src
 PKGNAME=	applyppf-3.0
@@ -15,7 +14,7 @@ WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS=	bin
 
 do-build:
-	cd ${BUILD_DIRS} && ${CC} ${CPPFLAGS} ${CFLAGS} \
+	cd ${BUILD_DIRS} && ${CC} ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} \
 		-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 \
 		-D_LARGEFILE64_SOURCE -o applyppf applyppf3_linux.c
 
