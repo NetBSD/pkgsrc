@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.121 2017/07/09 11:21:26 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2017/07/12 08:58:18 adam Exp $
 
-DISTNAME=	lftp-4.7.7
+DISTNAME=	lftp-4.8.0
 CATEGORIES=	net
 MASTER_SITES=	http://lftp.yar.ru/ftp/
 MASTER_SITES+=	ftp://ftp.st.ryukoku.ac.jp/pub/network/ftp/lftp/
@@ -32,8 +32,6 @@ SHLIBTOOL_OVERRIDE=	# empty
 
 .include "options.mk"
 
-LDFLAGS.Darwin+=	-flat_namespace
-
 EGDIR=			${PREFIX}/share/examples/lftp
 CONF_FILES=		${EGDIR}/lftp.conf.default ${PKG_SYSCONFDIR}/lftp.conf
 
@@ -48,5 +46,6 @@ post-install: post-install-perl
 # uses _rl_mark_modified_lines and GNU history(3) functions
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
