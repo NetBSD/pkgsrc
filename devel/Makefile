@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2460 2017/07/11 11:31:18 jaapb Exp $
+# $NetBSD: Makefile,v 1.2461 2017/07/12 01:55:17 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -2389,6 +2389,7 @@ SUBDIR+=	vanessa_adt
 SUBDIR+=	vanessa_logger
 SUBDIR+=	vanessa_socket
 SUBDIR+=	vera++
+SUBDIR+=	verifast
 SUBDIR+=	visualvm
 SUBDIR+=	vtcl
 SUBDIR+=	waf
