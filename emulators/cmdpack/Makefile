@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/03/04 05:53:52 snj Exp $
-#
+# $NetBSD: Makefile,v 1.6 2017/07/12 12:20:28 wiz Exp $
 
 DISTNAME=	cmdpack-1.03-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -18,7 +17,7 @@ INSTALLATION_DIRS=	bin share/doc/cmdpack
 do-build:
 	cd ${WRKSRC}/src && \
 	for file in bin2iso bincomp brrrip byteshuf byteswap cdpatch ecm fakecrc hax65816 id3point pecompat rels screamf subfile uips usfv vb2rip wordadd zerofill; do \
-		${CC} -o $$file $$file.c; \
+		${CC} ${CFLAGS} ${LDFLAGS} -o $$file $$file.c; \
 	done
 	${LN} ${WRKSRC}/src/ecm ${WRKSRC}/src/unecm
 
