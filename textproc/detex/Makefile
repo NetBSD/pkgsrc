@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/25 06:55:45 asau Exp $
-#
+# $NetBSD: Makefile,v 1.15 2017/07/12 10:56:51 wiz Exp $
 
 DISTNAME=	detex-2.8
 CATEGORIES=	textproc
@@ -9,6 +8,7 @@ EXTRACT_SUFX=	.tar
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cs.purdue.edu/homes/trinkle/detex/
 COMMENT=	Remove LaTeX commands
+LICENSE=	modified-bsd # nearly
 
 USE_TOOLS+=	lex
 
