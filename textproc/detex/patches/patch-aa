@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.4 2008/11/20 02:19:26 chuck Exp $
+$NetBSD: patch-aa,v 1.5 2017/07/12 10:56:51 wiz Exp $
 
---- Makefile.orig	2008-11-19 20:18:35.000000000 -0500
-+++ Makefile	2008-11-19 20:19:26.000000000 -0500
-@@ -69,7 +69,7 @@
+Chunks 1 & 2: ?
+Chunk 3: honor LDFLAGS.
+
+--- Makefile.orig	2008-02-01 19:55:51.000000000 +0000
++++ Makefile
+@@ -69,7 +69,7 @@ DEFS	=
  #
  #DEFS	+= ${DEFS} -DNO_MALLOC_DECL
  #
@@ -11,7 +14,7 @@ $NetBSD: patch-aa,v 1.4 2008/11/20 02:19:26 chuck Exp $
  
  # Use your favorite lexical scanner
  #
-@@ -80,7 +80,7 @@
+@@ -80,7 +80,7 @@ LEX	= lex
  
  # scanner library
  #
@@ -20,3 +23,12 @@ $NetBSD: patch-aa,v 1.4 2008/11/20 02:19:26 chuck Exp $
  #LEXLIB	= -lfl
  
  LPR	= lpr -p
+@@ -104,7 +104,7 @@ D_OBJ	= detex.o
+ all:	${PROGS}
+ 
+ detex: ${D_OBJ}
+-	${CC} ${CFLAGS} -o $@ ${D_OBJ} ${LEXLIB}
++	${CC} ${CFLAGS} ${LDFLAGS} -o $@ ${D_OBJ} ${LEXLIB}
+ 
+ detex.c:
+ 	sed -f states.sed detex.l > xxx.l
