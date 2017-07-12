@@ -1,0 +1,2 @@
+Grafana is a web-based dashboard that allows you to query, visualize and
+alert on metrics data stored in Graphite, InfluxFB, OpenTSDB or Prometheus.
