@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2017/01/24 08:18:48 alnsn Exp $
+$NetBSD: distinfo,v 1.8 2017/07/12 11:07:36 wiz Exp $
 
 SHA1 (lpeg-1.0.1.tar.gz) = b2f81624e0ce9c99c0731287c3475fac1f1c0f50
 RMD160 (lpeg-1.0.1.tar.gz) = ce31666f7d55ad6957c2b274983d7d201fa797dd
 SHA512 (lpeg-1.0.1.tar.gz) = 7b43fbee7eff443000986684bc56bba6d2796a31cf860740746c70e155bdea1b62a46b93f97e2747e3ef0f63e965148778ac2985d0f2d83e1e37ec4ebbabf4aa
 Size (lpeg-1.0.1.tar.gz) = 71527 bytes
+SHA1 (patch-makefile) = b68221029ee287aa72605f69d679eae45dfa34a3
