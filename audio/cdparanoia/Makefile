@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/02/21 00:09:08 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.37 2017/07/12 10:53:23 wiz Exp $
 
 DISTNAME=	cdparanoia-III-10.2
 PKGNAME=	cdparanoia-3.0.10.2
