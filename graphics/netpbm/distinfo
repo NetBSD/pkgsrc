@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.105 2017/03/08 14:48:30 jperkin Exp $
+$NetBSD: distinfo,v 1.106 2017/07/12 09:00:33 wiz Exp $
 
 SHA1 (netpbm-10.77.02.tar.gz) = 73b6815ea922394050c7c596b3f7d502cde22866
 RMD160 (netpbm-10.77.02.tar.gz) = 99afb99fcce4f20aee35ecc67ff1522b17e8aa7b
@@ -9,6 +9,6 @@ RMD160 (netpbm-docs-r2897.tar.gz) = 77a3b59080ca264214f18aee054a5e8ea33d69c6
 SHA512 (netpbm-docs-r2897.tar.gz) = 7625c1ae6c8689b896e762d368605f74060751bd4948951b788cff07a29d9f74aabf63ea57e172187e56a4dd7bff379d1672d224bc29fd7fdf5b4eb310ccbccd
 Size (netpbm-docs-r2897.tar.gz) = 469000 bytes
 SHA1 (patch-common.mk) = f590cc66e0fe6a07e848b9b46662bca350557bea
-SHA1 (patch-lib_Makefile) = 3f93bd24c53aa1f22aa43545d7ca5422af8e78ca
+SHA1 (patch-lib_Makefile) = ff67c418c9d16bdc9d9c95ba658686aa36f213a0
 SHA1 (patch-lib_util_nstring.h) = 394e258902f3d8fceea8840bca11cffd030060c6
 SHA1 (patch-pm__config.in.h) = dfe51691507a2c7be2946013b1f1b6bdd9b39f49

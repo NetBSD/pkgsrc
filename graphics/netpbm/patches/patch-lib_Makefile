@@ -1,9 +1,20 @@
-$NetBSD: patch-lib_Makefile,v 1.1 2014/10/23 23:41:32 fhajny Exp $
+$NetBSD: patch-lib_Makefile,v 1.2 2017/07/12 09:00:33 wiz Exp $
 
-Simple install target.
---- lib/Makefile.orig	2014-09-01 21:22:27.000000000 +0000
+Honor LDFLAGS.
+Simplify install target.
+
+--- lib/Makefile.orig	2017-02-04 18:09:33.000000000 +0000
 +++ lib/Makefile
-@@ -213,7 +213,7 @@ libpm.o: compile.h
+@@ -130,7 +130,7 @@ $(SONAME): libnetpbm.$(NETPBMLIBSUFFIX).
+ 	$(SYMLINK) $< $@
+ libnetpbm.$(NETPBMLIBSUFFIX).$(MAJ).$(MIN): $(LIBOBJECTS) $(LIBOBJECTS_X)
+ 	$(LD) $(LDSHLIB) -o $@ $(LIBOBJECTS) $(LIBOBJECTS_X) \
+-          $(SHLIB_CLIB) -lm $(LADD)
++          $(SHLIB_CLIB) -lm $(LDFLAGS) $(LADD)
+ endif
+ 
+ ifeq ($(NETPBMLIBTYPE),dll)
+@@ -217,7 +217,7 @@ libpm.o: compile.h
  .PHONY: install.lib
  ifeq ($(NETPBMLIBTYPE),unixshared)
  # install a Unix-style shared library
@@ -12,7 +23,7 @@ Simple install target.
  	cd $(PKGDIR)/lib ; rm -f libnetpbm.$(NETPBMLIBSUFFIX).$(MAJ).*
  	$(INSTALL) -c -m $(INSTALL_PERM_LIBD) \
  	  libnetpbm.$(NETPBMLIBSUFFIX).$(MAJ).$(MIN)  $(PKGDIR)/lib/
-@@ -255,28 +255,28 @@ $(INTERFACE_HEADERS:%=%_installhdr): $(P
+@@ -259,28 +259,28 @@ $(INTERFACE_HEADERS:%=%_installhdr): $(P
  	  $(SRCDIR)/lib/$(@:%_installhdr=%) $(PKGDIR)/include/netpbm/
  
  .PHONY: install.staticlib
