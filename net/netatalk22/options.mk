@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2017/04/13 14:35:53 hauke Exp $
+# $NetBSD: options.mk,v 1.4 2017/07/12 13:56:00 hauke Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.netatalk
 PKG_SUPPORTED_OPTIONS=	cups debug dnssd kerberos ldap pam slp
@@ -40,9 +40,12 @@ PLIST.gssapi=		yes
 CONFIGURE_ARGS+=	--without-gssapi
 .endif
 
+PLIST_VARS+=		ldap
 .if !empty(PKG_OPTIONS:Mldap)
 .include "../../databases/openldap-client/buildlink3.mk"
 CONFIGURE_ARGS+=       --with-ldap=yes
+PLIST.ldap=		yes
+CONF_FILES+=		${EGDIR}/afp_ldap.conf ${PKG_SYSCONFDIR}/afp_ldap.conf
 .else
 CONFIGURE_ARGS+=       --with-ldap=no
 .endif
@@ -54,7 +57,7 @@ CONFIGURE_ARGS+=	--with-pam
 PLIST.pam=		yes
 MESSAGE_SRC+=		MESSAGE MESSAGE.pam
 .else
-CONFIGURE_ARGS+=	--without-pam
+CONFIGURE_ARGS+=	--with-pam=no
 .endif
 
 .if !empty(PKG_OPTIONS:Mslp)
