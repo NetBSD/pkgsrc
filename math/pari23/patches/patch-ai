@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.2 2017/06/07 14:45:31 ryoon Exp $
+$NetBSD: patch-ai,v 1.3 2017/07/12 09:38:12 wiz Exp $
 
 * PERL5LIB part: Fix build with Perl 5.26.0
 
@@ -51,7 +51,7 @@ $NetBSD: patch-ai,v 1.2 2017/06/07 14:45:31 ryoon Exp $
  DLCFLAGS   = $DLCFLAGS
  LD_FLAVOR  = \$(CC_FLAVOR)
 -LD         = $LD \$(LD_FLAVOR)
-+LD         = \$(LIBTOOL) --mode=link $LD \$(LD_FLAVOR)
++LD         = \$(LIBTOOL) --mode=link $LD \$(LDFLAGS) \$(LD_FLAVOR)
  LDFLAGS    = $LDFLAGS
  DLLD_FLAVOR  = \$(LD_FLAVOR)
 -DLLD       = $DLLD \$(DLLD_FLAVOR)
@@ -128,7 +128,7 @@ $NetBSD: patch-ai,v 1.2 2017/06/07 14:45:31 ryoon Exp $
  
 -all: $exec lib-sta
 +\$(LIBPARI): \$(OBJS)
-+	\$(LD) -o \$@ \$(OBJS) -rpath \$(LIBDIR) --version-info 0:0
++	\$(LD) $(LDFLAGS) -o \$@ \$(OBJS) -rpath \$(LIBDIR) --version-info 0:0
  
 -lib-sta: \$(LIBPARI_STA)
 -lib-dyn: \$(LIBPARI_DYN)
