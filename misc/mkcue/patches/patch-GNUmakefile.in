@@ -1,0 +1,15 @@
+$NetBSD: patch-GNUmakefile.in,v 1.1 2017/07/12 12:16:11 wiz Exp $
+
+Honor LDFLAGS for RELRO builds.
+
+--- GNUmakefile.in.orig	2004-10-27 06:38:57.000000000 +0000
++++ GNUmakefile.in
+@@ -54,7 +54,7 @@ INSTALL_SCRIPT=		${INSTALL_PROGRAM}
+ all: mkcue
+ 
+ mkcue: mkcue.o mb.o
+-	${CXX} -o $@ mkcue.o mb.o
++	${CXX} ${LDFLAGS} -o $@ mkcue.o mb.o
+ 
+ clean:
+ 	rm -f mkcue *.o
