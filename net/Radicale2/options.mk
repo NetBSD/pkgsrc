@@ -1,7 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2017/07/01 05:57:07 darcy Exp $
+# $NetBSD: options.mk,v 1.2 2017/07/12 07:30:46 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.Radicale
-PKG_SUPPORTED_OPTIONS=	ldap
+
+# Cannot be supported while it results in no valid python versions.
+#PKG_SUPPORTED_OPTIONS=	ldap
 
 .include "../../mk/bsd.options.mk"
 
