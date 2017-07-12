@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2868 2017/07/12 07:02:27 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2869 2017/07/12 08:59:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3949,3 +3949,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/verifast version 17.06 [ryoon 2017-07-12]
 	Updated www/apache22 to 2.2.34 [adam 2017-07-12]
 	Updated www/apache24 to 2.4.27 [adam 2017-07-12]
+	Updated net/lftp to 4.8.0 [adam 2017-07-12]
