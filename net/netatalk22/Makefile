@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2017/04/14 09:15:57 hauke Exp $
+# $NetBSD: Makefile,v 1.9 2017/07/12 13:56:00 hauke Exp $
 
-DISTNAME=	netatalk-2.2.5
+DISTNAME=	netatalk-2.2.6
 PKGNAME=        ${DISTNAME:C/-/22-/}
-PKGREVISION=	5
+#PKGREVISION=	1
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +18,7 @@ LICENSE=	gnu-gpl-v2
 BDB_ACCEPTED=		db4 db5
 USE_LIBTOOL=		yes
 USE_OLD_DES_API=	yes
-USE_TOOLS+=		gmake perl:run
+USE_TOOLS+=		gmake pkg-config perl:run
 GNU_CONFIGURE=		yes
 
 BUILDLINK_TRANSFORM+=	l:db48:${BDB_TYPE}
@@ -74,19 +74,15 @@ PLIST_VARS+=		ea
 PLIST.ea=		yes
 .endif
 
-PLIST_VARS+=		acl
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "HPUX" || ${OPSYS} == "IRIX" || \
-	${OPSYS} == "AIX" || ${OPSYS} == "OSF1" || ${OPSYS} == "FreeBSD"
-PLIST.acl=		yes
-CONF_FILES+=	${EGDIR}/afp_ldap.conf ${PKG_SYSCONFDIR}/afp_ldap.conf
-.endif
-
 .include "options.mk"
 
 INSTALLATION_DIRS=	libexec/psffilters
 
-.if !empty(PKG_OPTIONS:Mpam)
 post-install:
+.if !empty(PKG_OPTIONS:Mldap)
+	${INSTALL_DATA} ${WRKSRC}/config/afp_ldap.conf ${DESTDIR}${EGDIR}
+.endif
+.if !empty(PKG_OPTIONS:Mpam)
 	${INSTALL_DATA} ${WRKSRC}/config/pam/netatalk.pam ${DESTDIR}${EGDIR}
 .endif
 
