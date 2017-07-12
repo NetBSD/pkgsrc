@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/01/30 21:16:34 alnsn Exp $
-#
+# $NetBSD: Makefile,v 1.14 2017/07/12 11:07:36 wiz Exp $
 
 DISTNAME=	lpeg-1.0.1
 PKGNAME=	${DISTNAME:S/lpeg/${LUA_PKGPREFIX}-lpeg/}
