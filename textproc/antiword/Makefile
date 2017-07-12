@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/12/02 23:50:23 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2017/07/12 12:54:28 wiz Exp $
 
 DISTNAME=	antiword-0.37
 PKGREVISION=	2
@@ -15,6 +15,7 @@ CONFLICTS=	siag<3.6.1
 USE_TOOLS+=	mktemp:run
 
 CFLAGS.SunOS+=	-D__STDC_ISO_10646__
+MAKEFLAGS+=	LDFLAGS=${LDFLAGS:Q}
 
 REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	/bin/bash
