@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/07/09 06:38:22 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/07/12 09:02:04 wiz Exp $
 
 DISTNAME=	ps2eps-1.68
 PKGREVISION=	5
@@ -9,16 +9,17 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tm.uka.de/~bless/ps2eps
 COMMENT=	Tool for generating EPS Format files from one-page PS documents
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	perl:run
 WRKSRC=		${WRKDIR}/ps2eps
 
 REPLACE_PERL+=	bin/ps2eps
 
-INSTALLATION_DIRS+=	bin man/man1
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 do-build:
-	cd ${WRKSRC:Q}/src/C && ${CC} ${CFLAGS} -o bbox bbox.c
+	cd ${WRKSRC:Q}/src/C && ${CC} ${CFLAGS} ${LDFLAGS} -o bbox bbox.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/src/C/bbox ${DESTDIR:Q}${PREFIX:Q}/bin
