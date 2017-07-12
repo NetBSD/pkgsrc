@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/07/06 05:25:15 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/07/12 14:33:39 prlw1 Exp $
 
 DISTNAME=	Radicale-2.1.1
 PKGREVISION=	1
@@ -39,7 +39,8 @@ SUBST_FILES.server+=	config
 SUBST_STAGE.server=	pre-configure
 SUBST_MESSAGE.server=	Configure as a daemon by default.
 
-.include "options.mk"
+# no options currently available
+# .include "options.mk"
 
 # for md5 htpasswd_encryption method
 DEPENDS+=		${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
