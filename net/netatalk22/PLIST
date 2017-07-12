@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/11 11:03:56 hauke Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/07/12 13:56:00 hauke Exp $
 ${PLIST.ea}bin/ad
 bin/add_netatalk_printer
 bin/adv1tov2
@@ -162,7 +162,7 @@ man/man8/timelord.8
 share/aclocal/netatalk.m4
 share/examples/netatalk/AppleVolumes.default
 share/examples/netatalk/AppleVolumes.system
-${PLIST.acl}share/examples/netatalk/afp_ldap.conf
+${PLIST.ldap}share/examples/netatalk/afp_ldap.conf
 share/examples/netatalk/afpd.conf
 share/examples/netatalk/atalkd.conf
 share/examples/netatalk/netatalk.conf

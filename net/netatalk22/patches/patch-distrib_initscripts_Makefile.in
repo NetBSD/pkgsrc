@@ -1,4 +1,7 @@
-$NetBSD: patch-distrib_initscripts_Makefile.in,v 1.1 2014/06/11 11:03:56 hauke Exp $
+$NetBSD: patch-distrib_initscripts_Makefile.in,v 1.2 2017/07/12 13:56:00 hauke Exp $
+
+NetBSD specific adaptation to install process (christos committed
+them, ask him ;)
 
 --- distrib/initscripts/Makefile.in.orig	2012-09-28 07:49:25.000000000 +0000
 +++ distrib/initscripts/Makefile.in
