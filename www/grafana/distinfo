@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2017/07/12 10:03:22 tnn Exp $
+
+SHA1 (grafana-4.4.1.linux-x64.tar.gz) = 0acc15a09295ce1e7d09c97a096a031c76accdff
+RMD160 (grafana-4.4.1.linux-x64.tar.gz) = d7987f7146d2da06c29e9b2be894b0ed4717530c
+SHA512 (grafana-4.4.1.linux-x64.tar.gz) = 062d9a7586a1d376855129ef9aee914aaae42f1e60ce6d1851f8fdceca61a45a29396274b772fe1c06adb8a55dae631be9a00cbce4e75787562048e36d65056d
+Size (grafana-4.4.1.linux-x64.tar.gz) = 47275422 bytes
+SHA1 (grafana-4.4.1.tar.gz) = 907d4a36041e7719f16470babbbd958a5b041f0c
+RMD160 (grafana-4.4.1.tar.gz) = 4ab153ddf1490c2fcb33341ba813f1eb896a4876
+SHA512 (grafana-4.4.1.tar.gz) = 8cb5c73ba3c0cfb4f76c5c58d2438d9ef6fc6a94333b91e883ec3c87bfaa8841aaa5aa80e4ba586f0561fa69537dfdf878ce219b62ace47ed17cf6e63cfde42e
+Size (grafana-4.4.1.tar.gz) = 9075027 bytes
