@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2016/10/09 13:58:57 taca Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/13 15:21:47 taca Exp $
 
-DISTNAME=	ffi-yajl-2.3.0
+DISTNAME=	ffi-yajl-2.3.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
