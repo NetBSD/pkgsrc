@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/07/11 10:46:23 jaapb Exp $
+# $NetBSD: Makefile,v 1.14 2017/07/13 10:27:27 jaapb Exp $
 
 VERSION=	2.0.0_beta3
 GITHUB_PROJECT=	opam
@@ -15,7 +15,7 @@ LICENSE=	gnu-lgpl-v3
 MAKE_JOBS_SAFE=	no
 
 HAS_CONFIGURE=	yes
-USE_TOOLS+=	gawk gmake
+USE_TOOLS+=	bash gawk gmake
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --mandir=${PREFIX}/${PKGMANDIR}
 
