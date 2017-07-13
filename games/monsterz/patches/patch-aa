@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2009/02/15 21:53:40 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2017/07/13 12:29:09 wiz Exp $
 
 --- Makefile.orig	2007-12-17 22:05:00.000000000 +0000
 +++ Makefile
@@ -15,6 +15,15 @@ $NetBSD: patch-aa,v 1.2 2009/02/15 21:53:40 wiz Exp $
  scorefile = $(scoredir)/monsterz
  
  VERSION = 0.7.1
+@@ -22,7 +22,7 @@ INKSCAPE = inkscape -z
+ all: monsterz
+ 
+ monsterz: monsterz.c
+-	$(CC) -Wall monsterz.c -DDATADIR=\"$(pkgdatadir)\" -DSCOREFILE=\"$(scorefile)\" -o monsterz
++	$(CC) $(LDFLAGS) $(CFLAGS) -Wall monsterz.c -DDATADIR=\"$(pkgdatadir)\" -DSCOREFILE=\"$(scorefile)\" -o monsterz
+ 
+ bitmap: $(BITMAP)
+ 
 @@ -40,18 +40,17 @@ graphics/logo.png: graphics/graphics.svg
  	$(INKSCAPE) graphics/graphics.svg -a 810:858:1220:1075 -w380 -h180 -e graphics/logo.png
  
