@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2461 2017/07/12 01:55:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.2462 2017/07/13 14:13:55 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -1788,6 +1788,7 @@ SUBDIR+=	py-buildbot-slave
 SUBDIR+=	py-cached-property
 SUBDIR+=	py-cachetools
 SUBDIR+=	py-capstone
+SUBDIR+=	py-case
 SUBDIR+=	py-cffi
 SUBDIR+=	py-characteristic
 SUBDIR+=	py-checker
