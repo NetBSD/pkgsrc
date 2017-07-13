@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2009/02/15 21:53:40 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2017/07/13 12:29:09 wiz Exp $
 
 Fix 64-bit alignment issue with Python 2.5.
 http://sam.zoy.org/cgi-bin/viewcvs.cgi/monsterz.py?root=monsterz&rev=137&r1=135&r2=137
@@ -8,12 +8,6 @@ http://cvs.fedoraproject.org/viewvc/devel/monsterz/monsterz-0.7.1-blit-crash.pat
 
 --- monsterz.py.orig	2007-12-17 22:05:00.000000000 +0000
 +++ monsterz.py
-@@ -1,4 +1,4 @@
--#!/usr/bin/env python
-+#!/usr/pkg/bin/python2.5
- # -*- coding: utf-8 -*-
- 
- """
 @@ -108,7 +108,9 @@ def semi_grayscale(surf):
                  M = int(max(r, g, b))
                  m = int(min(r, g, b))
