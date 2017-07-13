@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2015/04/25 14:23:11 tnn Exp $
+# $NetBSD: Makefile,v 1.58 2017/07/13 12:37:03 wiz Exp $
 
 DISTNAME=	MesaGLUT-7.9.2
 # we have the autoconf patches from git, so call it 8.0.1.
@@ -21,7 +21,7 @@ GNU_CONFIGURE=	YES
 
 PKGCONFIG_OVERRIDE+=	src/glut/glx/glut.pc.in
 
-CONFIGURE_ENV+=	"EXTRA_LIB_PATH=${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib"
+CONFIGURE_ENV+=	"EXTRA_LIB_PATH=${LDFLAGS} ${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib"
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vif
