@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2016/04/12 06:33:42 wiz Exp $
+$NetBSD: distinfo,v 1.9 2017/07/13 12:04:37 wiz Exp $
 
 SHA1 (ocp-0.1.21.tar.bz2) = aaa16cf1979c572b09c73e7cc61350bfc4477380
 RMD160 (ocp-0.1.21.tar.bz2) = 6b42e93e9fe5879e844b2d336825a2db156b7e6f
@@ -6,7 +6,7 @@ SHA512 (ocp-0.1.21.tar.bz2) = fec0123b61163780d8133939df2a0219c98b533a7a6eb477ee
 Size (ocp-0.1.21.tar.bz2) = 781805 bytes
 SHA1 (patch-ab) = d33aad7cfa41330c5cb026a7d3e92545f741f429
 SHA1 (patch-ac) = f28f3ebc5e3d61858f2f5bed79094fff57130da6
-SHA1 (patch-ad) = 1a3e3aa02eeae905faebac7fc7fc27eb93fa0e46
+SHA1 (patch-ad) = 5252050662343fa2575d84e883f8d157b4a2de0e
 SHA1 (patch-ae) = 00f5b6edaf0dcb2200f8e9f14ab6a8e1a9711f65
 SHA1 (patch-af) = dbb7b2d1b7a5f35c14477725ad18e31b2af787b9
 SHA1 (patch-configure) = 521884c80ef507149afa75841a62c35a42739377
