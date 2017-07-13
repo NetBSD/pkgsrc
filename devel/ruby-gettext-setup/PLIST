@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2017/06/10 16:02:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/07/13 15:28:06 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/generate_metadata_pot.rb
 ${GEM_LIBDIR}/lib/gettext-setup.rb
 ${GEM_LIBDIR}/lib/gettext-setup/gettext_setup.rb
 ${GEM_LIBDIR}/lib/gettext-setup/metadata_pot.rb
@@ -23,9 +24,6 @@ ${GEM_LIBDIR}/spec/fixtures/string_changes/change.pot
 ${GEM_LIBDIR}/spec/fixtures/string_changes/non_string_changes.pot
 ${GEM_LIBDIR}/spec/fixtures/string_changes/old.pot
 ${GEM_LIBDIR}/spec/fixtures/string_changes/remove.pot
-${GEM_LIBDIR}/spec/fixtures/tmp_locales/config.yaml
-${GEM_LIBDIR}/spec/fixtures/tmp_locales/de/sinatra-i18n.po
-${GEM_LIBDIR}/spec/fixtures/tmp_locales/sinatra-i18n.pot
 ${GEM_LIBDIR}/spec/lib/gettext-setup/gettext_setup_spec.rb
 ${GEM_LIBDIR}/spec/lib/gettext-setup/metadata_pot_spec.rb
 ${GEM_LIBDIR}/spec/lib/gettext-setup/pot_spec.rb
