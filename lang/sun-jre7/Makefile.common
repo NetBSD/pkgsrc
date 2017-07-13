@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2016/08/10 22:26:46 abs Exp $
+# $NetBSD: Makefile.common,v 1.13 2017/07/13 12:39:08 wiz Exp $
 # used by lang/sun-jre7/Makefile
 # used by lang/sun-jdk7/Makefile
 
@@ -17,6 +17,9 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
 EMUL_PLATFORMS=		linux-i386 linux-x86_64 solaris-i386 solaris-x86_64
+
+# pre-built binaries without RELRO
+CHECK_RELRO_SUPPORTED=	no
 
 USE_TOOLS+=	pax
 
