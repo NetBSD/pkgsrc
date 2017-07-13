@@ -1,18 +1,17 @@
-$NetBSD: patch-src_Makefile,v 1.1 2014/10/10 08:37:49 jaapb Exp $
+$NetBSD: patch-src_Makefile,v 1.2 2017/07/13 11:53:16 jaapb Exp $
 
 Do not create an ld.conf, this is done afterwards through the PLIST
---- src/Makefile.orig	2013-10-01 08:31:50.000000000 +0000
+--- src/Makefile.orig	2016-08-10 03:33:56.000000000 +0000
 +++ src/Makefile
-@@ -395,10 +395,10 @@ findlib-install:
+@@ -402,10 +402,7 @@ findlib-install:
  	  exit 2; fi
  	mkdir -p "$(BINDIR)"
  	mkdir -p "$(DESTDIR)$(FINDLIBDIR)"
 -	@if test -f "$(DESTDIR)$(OCAMLLDCONF)"; then :; else \
-+#	@if test -f "$(DESTDIR)$(OCAMLLDCONF)"; then :; else \
- 	  touch "$(DESTDIR)$(OCAMLLDCONF)"; fi
- 	$(OCAMLFIND) install -destdir "$(DESTDIR)$(FINDLIBDIR)" \
+-	  touch "$(DESTDIR)$(OCAMLLDCONF)"; fi
+-	$(OCAMLFIND) install -destdir "$(DESTDIR)$(FINDLIBDIR)" \
 -	  -ldconf "$(DESTDIR)$(OCAMLLDCONF)" \
-+	  -ldconf ignore \
++	$(OCAMLFIND) install \
      lablgtk2 ../META \
      build.ml \
      $(CLIBS) \
