@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2017/07/13 11:53:16 jaapb Exp $
+
+The ocamlfind wrapper now includes DESTDIR, so do not use it
+--- configure.orig	2016-08-10 03:33:56.000000000 +0000
++++ configure
+@@ -2679,7 +2679,7 @@ if test "$OCAMLFIND" = no; then
+ FINDLIBDIR=""
+ OCAMLLDCONF=""
+ else
+-FINDLIBDIR="`ocamlfind printconf destdir | tr -d '\\r'`"
++FINDLIBDIR="${PREFIX}/${OCAML_SITELIBDIR}"
+ echo "$OCAMLFIND library path is $FINDLIBDIR"
+ OCAMLLDCONF="`ocamlfind printconf ldconf | tr -d '\\r'`"
+ echo "$OCAMLFIND ldconf path is $OCAMLLDCONF"
