@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2880 2017/07/13 14:30:22 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2881 2017/07/13 14:37:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3964,3 +3964,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-amqp to 2.2.0 [adam 2017-07-13]
 	Updated databases/ruby-mysql2 to 0.4.8 [taca 2017-07-13]
 	Updated databases/ruby-sequel to 4.48.0 [taca 2017-07-13]
+	Added devel/ruby-byebug version 9.0.6 [taca 2017-07-13]
