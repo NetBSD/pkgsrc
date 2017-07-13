@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2017/06/04 15:03:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.51 2017/07/13 14:29:54 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -138,6 +138,7 @@ ${GEM_LIBDIR}/doc/release_notes/4.44.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.45.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.46.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.47.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.48.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.7.0.txt
@@ -314,6 +315,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/schema_caching.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/schema_dumper.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/select_remove.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/sequel_3_dataset_methods.rb
+${GEM_LIBDIR}/lib/sequel/extensions/sequel_4_dataset_methods.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/server_block.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/server_logging.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/set_overrides.rb
@@ -427,8 +429,6 @@ ${GEM_LIBDIR}/lib/sequel/timezones.rb
 ${GEM_LIBDIR}/lib/sequel/version.rb
 ${GEM_LIBDIR}/spec/adapter_spec.rb
 ${GEM_LIBDIR}/spec/adapters/db2_spec.rb
-${GEM_LIBDIR}/spec/adapters/firebird_spec.rb
-${GEM_LIBDIR}/spec/adapters/informix_spec.rb
 ${GEM_LIBDIR}/spec/adapters/mssql_spec.rb
 ${GEM_LIBDIR}/spec/adapters/mysql_spec.rb
 ${GEM_LIBDIR}/spec/adapters/oracle_spec.rb
@@ -563,6 +563,7 @@ ${GEM_LIBDIR}/spec/extensions/schema_spec.rb
 ${GEM_LIBDIR}/spec/extensions/scissors_spec.rb
 ${GEM_LIBDIR}/spec/extensions/select_remove_spec.rb
 ${GEM_LIBDIR}/spec/extensions/sequel_3_dataset_methods_spec.rb
+${GEM_LIBDIR}/spec/extensions/sequel_4_dataset_methods_spec.rb
 ${GEM_LIBDIR}/spec/extensions/serialization_modification_detection_spec.rb
 ${GEM_LIBDIR}/spec/extensions/serialization_spec.rb
 ${GEM_LIBDIR}/spec/extensions/server_block_spec.rb
