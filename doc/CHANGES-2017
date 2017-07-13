@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2877 2017/07/13 10:45:57 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.2878 2017/07/13 14:16:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3960,3 +3960,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-botocore to 1.5.81 [adam 2017-07-13]
 	Updated net/py-awscli to 1.11.118 [adam 2017-07-13]
 	Updated devel/ocaml-biniou to 1.0.13nb1 [jaapb 2017-07-13]
+	Added devel/py-case version 1.5.3 [adam 2017-07-13]
+	Updated net/py-amqp to 2.2.0 [adam 2017-07-13]
