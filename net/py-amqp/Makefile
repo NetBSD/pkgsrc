@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2017/04/09 17:07:09 adam Exp $
+# $NetBSD: Makefile,v 1.13 2017/07/13 14:15:20 adam Exp $
 
-DISTNAME=	amqp-2.1.4
+DISTNAME=	amqp-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	net
+CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/amqp/}
 
 MAINTAINER=	rodent@NetBSD.org
@@ -10,9 +10,11 @@ HOMEPAGE=	http://amqp.readthedocs.io/
 COMMENT=	Low-level AMQP client for Python
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=	# none
+DEPENDS+=	${PYPKGPREFIX}-vine>=1.1.3:../../devel/py-vine
+BUILD_DEPENDS+=	${PYPKGPREFIX}-case>=1.3.1:../../devel/py-case
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=3.0:../../devel/py-test
 
-DEPENDS+=	${PYPKGPREFIX}-vine-[0-9]*:../../devel/py-vine
+USE_LANGUAGES=		# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
