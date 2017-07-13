@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2883 2017/07/13 15:22:20 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2884 2017/07/13 15:23:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3967,3 +3967,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/ruby-byebug version 9.0.6 [taca 2017-07-13]
 	Updated devel/ruby-curses to 1.2.3 [taca 2017-07-13]
 	Updated devel/ruby-ffi-yajl to 2.3.1 [taca 2017-07-13]
+	Updated devel/ruby-gettext to 3.2.3 [taca 2017-07-13]
