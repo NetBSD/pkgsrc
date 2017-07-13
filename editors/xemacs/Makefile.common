@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.25 2017/07/11 11:29:44 hauke Exp $
+# $NetBSD: Makefile.common,v 1.26 2017/07/13 17:55:30 hauke Exp $
 #
 # used by editors/xemacs-nox11/Makefile
 # used by editors/xemacs/Makefile
 
 DISTNAME=	xemacs-21.4.24
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=${DISTNAME:C/[.][^.]*$//}/}
 
