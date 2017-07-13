@@ -9,7 +9,7 @@ CPLUSPLUS_FLAGS =	${COMPILE_OPTS} -Wall
 OBJ =			lo
 LINK =			${LIBTOOL} --tag=CXX --mode=link c++ -o
 LINK+=			# this is needed to add a space!
-LINK_OPTS =		-Wl,-R${PREFIX}/lib -lm
+LINK_OPTS =		-Wl,-R${PREFIX}/lib -lm ${LDFLAGS}
 CONSOLE_LINK_OPTS =	${LINK_OPTS}
 LIBRARY_LINK =		${LIBTOOL} --tag=CXX --mode=link c++ -rpath ${PREFIX}/lib -version-info 0:0 -o
 LIBRARY_LINK+=		# this is needed to add a space!
