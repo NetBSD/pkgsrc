@@ -1,0 +1,15 @@
+Byebug is a simple to use, feature rich debugger for Ruby 2. It uses the new
+TracePoint API for execution control and the new Debug Inspector API for call
+stack navigation, so it doesn't depend on internal core sources. It's developed
+as a C extension, so it's fast. And it has a full test suite so it's reliable.
+
+It allows you to see what is going on _inside_ a Ruby program while it executes
+and offers many of the traditional debugging features such as:
+
+* Stepping: Running your program one line at a time.
+* Breaking: Pausing the program at some event or specified instruction, to
+  examine the current state.
+* Evaluating: Basic REPL functionality, although [pry] does a better job at
+  that.
+* Tracking: Keeping track of the different values of your variables or the
+  different lines executed by your program.
