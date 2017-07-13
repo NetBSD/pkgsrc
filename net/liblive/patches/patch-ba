@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.4 2014/12/13 09:20:02 wiz Exp $
+$NetBSD: patch-ba,v 1.5 2017/07/13 13:15:25 wiz Exp $
 
 --- config.solaris-32bit.orig	2014-12-11 10:33:47.000000000 +0000
 +++ config.solaris-32bit
@@ -26,7 +26,7 @@ $NetBSD: patch-ba,v 1.4 2014/12/13 09:20:02 wiz Exp $
 +OBJ =			lo
 +LINK =			${LIBTOOL} --tag=CXX --mode=link c++ -o
 +LINK+=			# this is needed to add a space!
-+LINK_OPTS =		-Wl,-R${PREFIX}/lib -lm
++LINK_OPTS =		-Wl,-R${PREFIX}/lib -lm ${LDFLAGS}
 +CONSOLE_LINK_OPTS =	${LINK_OPTS}
 +LIBRARY_LINK =		${LIBTOOL} --tag=CXX --mode=link c++ -rpath ${PREFIX}/lib -version-info 0:0 -o
 +LIBRARY_LINK+=		# this is needed to add a space!
