@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2017/07/03 20:51:19 adam Exp $
+# $NetBSD: Makefile,v 1.75 2017/07/13 07:00:37 adam Exp $
 
-DISTNAME=	python-ldap-2.4.40
+DISTNAME=	python-ldap-2.4.41
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-ldap/}
@@ -15,7 +15,7 @@ USE_TOOLS+=		pax
 PY_LDAP_LIBRARY_DIRS=		${BUILDLINK_PREFIX.openldap-client}/lib
 PY_LDAP_INCLUDE_DIRS=		${BUILDLINK_PREFIX.openldap-client}/include
 PY_LDAP_LIBS=			ldap_r lber ssl crypto
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2.4.38
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2.4.41
 
 .include "options.mk"
 
