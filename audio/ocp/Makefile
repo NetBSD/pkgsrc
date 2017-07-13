@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/03/03 19:35:13 shattered Exp $
+# $NetBSD: Makefile,v 1.21 2017/07/13 12:04:37 wiz Exp $
 
 DISTNAME=		ocp-0.1.21
 PKGREVISION=		7
@@ -32,6 +32,12 @@ CFLAGS.SunOS+=		-DSOUND_PCM_WRITE_BITS=SNDCTL_DSP_SETFMT
 CFLAGS.SunOS+=		-DSOUND_PCM_WRITE_RATE=SNDCTL_DSP_SPEED
 
 PLIST_VARS+=		sdl x11 desktop
+
+SUBST_CLASSES+=		ldflags
+SUBST_SED.ldflags+=	-e 's/$$(SHARED_FLAGS)/$$(LDFLAGS) $$(SHARED_FLAGS)/g'
+SUBST_FILES.ldflags+=	*/Makefile
+SUBST_MESSAGE.ldflags=	Honoring LDFLAGS.
+SUBST_STAGE.ldflags=	pre-build
 
 .include "options.mk"
 
