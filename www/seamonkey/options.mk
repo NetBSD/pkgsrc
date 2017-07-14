@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.37 2017/07/11 14:44:28 ryoon Exp $
+# $NetBSD: options.mk,v 1.38 2017/07/14 13:22:07 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
 
 PKG_OPTIONS_REQUIRED_GROUPS=	gtk
 PKG_OPTIONS_GROUP.gtk=		gtk2 gtk3
 PKG_SUPPORTED_OPTIONS=	alsa dbus debug mozilla-jemalloc
-PKG_SUPPORTED_OPTIONS+=	mozilla-lightning webrtc mozilla-chatzilla pulseaudio
+PKG_SUPPORTED_OPTIONS+=	mozilla-lightning webrtc pulseaudio
 
 PLIST_VARS+=	debug gnome jemalloc
 
@@ -52,13 +52,6 @@ CONFIGURE_ARGS+=	--disable-alsa
 CONFIGURE_ARGS+=        --enable-dbus
 .else
 CONFIGURE_ARGS+=        --disable-dbus
-.endif
-
-.if !empty(PKG_OPTIONS:Mmozilla-chatzilla)
-PLIST_SRC+=		PLIST.chatzilla
-CONFIGURE_ARGS+=	--enable-extensions=default,irc
-XPI_FILES+=		${WRKSRC}/${OBJDIR}/dist/xpi-stage/chatzilla*.xpi
-XPI_FILES+=		${WRKSRC}/${OBJDIR}/dist/xpi-stage/quitter*.xpi
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
