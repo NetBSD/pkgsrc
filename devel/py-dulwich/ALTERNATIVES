@@ -1,0 +1,3 @@
+bin/dul-receive-pack @PREFIX@/bin/dul-receive-pack@PYVERSSUFFIX@
+bin/dul-upload-pack @PREFIX@/bin/dul-upload-pack@PYVERSSUFFIX@
+bin/dulwich @PREFIX@/bin/dulwich@PYVERSSUFFIX@
