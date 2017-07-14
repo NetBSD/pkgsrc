@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2017/06/24 18:57:28 agc Exp $
+# $NetBSD: Makefile,v 1.10 2017/07/14 17:27:40 adam Exp $
 
-DISTNAME=	snappy-1.1.4
+DISTNAME=	snappy-1.1.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 
@@ -9,13 +9,12 @@ HOMEPAGE=	http://google.github.io/snappy/
 COMMENT=	General purpose data compression library
 LICENSE=	apache-2.0
 
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
+USE_CMAKE=		yes
 USE_LANGUAGES+=		c c++
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
-PKGCONFIG_OVERRIDE+=	snappy.pc.in
 
+.include "../../archivers/lzo/buildlink3.mk"
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
