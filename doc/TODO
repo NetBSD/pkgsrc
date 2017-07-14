@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17524 2017/07/14 08:45:17 adam Exp $
+$NetBSD: TODO,v 1.17525 2017/07/14 10:03:12 hauke Exp $
 
 Suggested new packages
 ======================
@@ -550,7 +550,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dap-3.10
 	o dar-2.4.14
 	o darcs-2.12.0
-	o darktable-2.2.5
 	o dasher-4.11
 	o dateutils-0.4.1
 	o dd_rescue-1.46
