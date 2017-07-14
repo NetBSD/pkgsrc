@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/07/14 15:00:01 adam Exp $
+
+SHA1 (seaborn-0.8.tar.gz) = db50e9c5171270650f7c302356d5b6c5c120e1df
+RMD160 (seaborn-0.8.tar.gz) = ba255e32a65441710edb6cd6c1223d36ed499e1b
+SHA512 (seaborn-0.8.tar.gz) = 2bc1f20a9fe1bdba946351580a238c7376623d921884f5bdc522f844727413020d22614670e6c9588baac1c554f4242b1f34a0da3347135bc23791066fdc47d1
+Size (seaborn-0.8.tar.gz) = 178077 bytes

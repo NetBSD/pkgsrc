@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.765 2017/06/24 00:11:25 markd Exp $
+# $NetBSD: Makefile,v 1.766 2017/07/14 15:00:01 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -462,6 +462,7 @@ SUBDIR+=	py-piddle
 SUBDIR+=	py-pycha
 SUBDIR+=	py-pygal
 SUBDIR+=	py-qrcode
+SUBDIR+=	py-seaborn
 SUBDIR+=	py-seqdiag
 SUBDIR+=	py-sk1libs
 SUBDIR+=	py-uniconvertor
