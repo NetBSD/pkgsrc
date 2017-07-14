@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/01/22 15:19:25 kamil Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/14 17:03:40 adam Exp $
 
-DISTNAME=	pygal-2.3.1
+DISTNAME=	pygal-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygal/}
@@ -10,17 +10,18 @@ HOMEPAGE=	http://pygal.org/
 COMMENT=	Python SVG graph plotting library
 LICENSE=	gnu-lgpl-v3
 
+DEPENDS+=	${PYPKGPREFIX}-cairosvg-[0-9]*:../../converters/py-cairosvg
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
+BUILD_DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
+BUILD_DEPENDS+=	${PYPKGPREFIX}-pyquery-[0-9]*:../../textproc/py-pyquery
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+# more BUILD_DEPENDS needed
 
 USE_LANGUAGES=	# none
 
-PY_PATCHPLIST=	yes
-
-.include "options.mk"
-
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/pygal_gen.py \
-		${DESTDIR}${PREFIX}/bin/pygal_gen${PYVERSSUFFIX}.py || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} pygal_gen.py pygal_gen${PYVERSSUFFIX}.py || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
