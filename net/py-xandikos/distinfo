@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/07/04 13:11:43 wiz Exp $
+$NetBSD: distinfo,v 1.2 2017/07/14 11:01:08 adam Exp $
 
-SHA1 (xandikos-0.0.5.tar.gz) = 669d5f6fcfb322b26ea88f6d722e0b3b2359050d
-RMD160 (xandikos-0.0.5.tar.gz) = 72225940563b0dfca2b9bccef4078f23e295132f
-SHA512 (xandikos-0.0.5.tar.gz) = 5ed16ccef50fe1be3fd30d9411e47fe361a75a44ee35632f7cbf3ffa4211ca231c55cd4299ed487aa119de5a660bee696ae4d1f1cf114ed58b1dbb68bc9df64a
-Size (xandikos-0.0.5.tar.gz) = 68955 bytes
+SHA1 (xandikos-0.0.6.tar.gz) = 54c94f8d1514dd817f71ebf4375ca5e62588a4b8
+RMD160 (xandikos-0.0.6.tar.gz) = a6a02188a4a8c909f11dca557756d1c985d09fe2
+SHA512 (xandikos-0.0.6.tar.gz) = b0eca599ca724ba8567e3db9833ed589228c413f2bba22fd98cf5217a3eb1942f4c4a3c7d43a9adfa11cb527ed9d526d8fc418aa000b35b443c8842cc416fa97
+Size (xandikos-0.0.6.tar.gz) = 70089 bytes
