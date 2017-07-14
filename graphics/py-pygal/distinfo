@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/01/22 15:19:25 kamil Exp $
+$NetBSD: distinfo,v 1.6 2017/07/14 17:03:40 adam Exp $
 
-SHA1 (pygal-2.3.1.tar.gz) = ebc99e9f0b3b747e47387a36a2fc78af5bf60a4c
-RMD160 (pygal-2.3.1.tar.gz) = d52617377fe51fc79e93e64c4ca1a28df15a7548
-SHA512 (pygal-2.3.1.tar.gz) = b8dfa0f2840f373e095626d489914efa49f8f22a1c3eff75ffce9deb78a5088b3933c91f3dd69733d8db821b195547c6fea3c3b5250a01532014750a3a3a4a73
-Size (pygal-2.3.1.tar.gz) = 74061 bytes
+SHA1 (pygal-2.4.0.tar.gz) = ba01677142332f60cd2548e5dd94f1dd48297a6e
+RMD160 (pygal-2.4.0.tar.gz) = d26d5263a70333f363faeb0f28cbe7a9c4a1d9da
+SHA512 (pygal-2.4.0.tar.gz) = 5cb95ca5c0cf74ae476953f3503154a305a0b5e42c69191b0b46f6e6cfea8c806713fe175329a69b393654d055997b2063cf3b641e91009a2b7bef219bb49ddb
+Size (pygal-2.4.0.tar.gz) = 74686 bytes
