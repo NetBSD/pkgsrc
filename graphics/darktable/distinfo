@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.27 2017/02/18 23:17:02 joerg Exp $
+$NetBSD: distinfo,v 1.28 2017/07/14 10:02:28 hauke Exp $
 
-SHA1 (darktable-2.0.7.tar.xz) = c9392af5df0045b36b89c6548b9ff552f34b7e15
-RMD160 (darktable-2.0.7.tar.xz) = 6d9e7bf1507e2e25a3359bc0b853fb62e4078b26
-SHA512 (darktable-2.0.7.tar.xz) = 568db128bdf1d639d387f32a65ea40e0a706f16b6ec0915c9580255c0385033e3d80c3ddf5c15c3f8adccd1f23530f430c9eb28f9d2771f61ae5a5c479726928
-Size (darktable-2.0.7.tar.xz) = 2960436 bytes
-SHA1 (patch-src_develop_blend.c) = d8b5d72fac9544b37e856c57d511423483c14a9b
+SHA1 (darktable-2.2.5.tar.xz) = f60ab3f9118e96c311f286a87102ad0d647cb111
+RMD160 (darktable-2.2.5.tar.xz) = 1a66797ca24dc7ef06fc5bb2fbed98724d50c0f8
+SHA512 (darktable-2.2.5.tar.xz) = fbc79398660b51e580d22dbdfc9a74d213f69335d6058e2844ef397951a1e840264b6d03d1b52b424319fb647a274ac14ff23ee9a9c60071f71497988bdf989b
+Size (darktable-2.2.5.tar.xz) = 3092540 bytes
 SHA1 (patch-src_external_rawspeed_RawSpeed_AriDecoder.cpp) = c1c7f8b03f63295361138ec1d6dbd1d323fa69ba
 SHA1 (patch-src_external_rawspeed_RawSpeed_ArwDecoder.cpp) = 435e99db5d512f6568048a8e6382f6def6e7430f
 SHA1 (patch-src_external_rawspeed_RawSpeed_ColorFilterArray.cpp) = 3abfbca5078d1ed068199e96e16b8eaea4eb662d
@@ -16,3 +15,4 @@ SHA1 (patch-src_external_rawspeed_RawSpeed_OrfDecoder.cpp) = a2e9162e6242633690a
 SHA1 (patch-src_external_rawspeed_RawSpeed_PefDecoder.cpp) = 3f4b15e56c2e6e77ed18f8479f6e4f3cf5effa23
 SHA1 (patch-src_external_rawspeed_RawSpeed_Rw2Decoder.cpp) = 26870733cb6399095f56ca6caa820990a8572c0a
 SHA1 (patch-src_external_rawspeed_RawSpeed_ThreefrDecoder.cpp) = 6d81b0e758a1a7b84b8f510ff670dfb948881f78
+SHA1 (patch-tools_noise_benchmark.sh) = 1e26ebbbc73e44ec41c092297d681f33fb55155d
