@@ -1,4 +1,4 @@
-# $NetBSD: bjam.mk,v 1.18 2017/05/03 08:38:40 jperkin Exp $
+# $NetBSD: bjam.mk,v 1.19 2017/07/14 18:18:57 wiz Exp $
 
 .include "../../devel/boost-jam/buildlink3.mk"
 .include "../../devel/boost-build/toolset.mk"
@@ -41,6 +41,7 @@ BJAM_ARGS+=		cxxflags=-stdlib=libc++ linkflags=-stdlib=libc++
 BJAM_BUILD+=		variant=release
 BJAM_BUILD+=		threading=multi
 BJAM_BUILD+=		link=shared,static
+BJAM_BUILD+=		linkflags=${LDFLAGS:Q}
 
 BJAM_CMD=		${SETENV} ${MAKE_ENV} ${BJAM} ${BJAM_ARGS}
 
