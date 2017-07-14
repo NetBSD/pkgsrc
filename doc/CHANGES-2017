@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2890 2017/07/14 05:49:44 maya Exp $
+$NetBSD: CHANGES-2017,v 1.2891 2017/07/14 08:45:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3974,3 +3974,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-test-unit to 3.2.5 [taca 2017-07-13]
 	Updated print/evince3 to 3.22.1nb6 [maya 2017-07-14]
 	Updated audio/mpg123 to 1.25.2 [maya 2017-07-14]
+	Updated net/py-amqp to 2.2.1 [adam 2017-07-14]
+	Updated multimedia/x265 to 2.5 [adam 2017-07-14]
+	Updated net/py-botocore to 1.5.82 [adam 2017-07-14]
+	Updated net/py-awscli to 1.11.119 [adam 2017-07-14]
+	Updated multimedia/x264-devel to 20170712 [adam 2017-07-14]
