@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/10 17:34:04 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/07/14 12:55:45 joerg Exp $
 ${PERL5_SUB_INSTALLVENDORLIB}/Xapian.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Xapian/AssertionError.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Xapian/BM25Weight.pm
@@ -47,7 +47,7 @@ ${PERL5_SUB_INSTALLVENDORLIB}/Xapian/ValueIterator.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Xapian/Weight.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Xapian/WritableDatabase.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/auto/Xapian/Xapian.a
-${PERL5_SUB_INSTALLVENDORARCH}/auto/Xapian/Xapian.bundle
+${PERL5_SUB_INSTALLVENDORARCH}/auto/Xapian/Xapian.so
 share/doc/xapian-bindings/perl/examples/full-indexer.pl
 share/doc/xapian-bindings/perl/examples/full-searcher.pl
 share/doc/xapian-bindings/perl/examples/simpleexpand.pl
