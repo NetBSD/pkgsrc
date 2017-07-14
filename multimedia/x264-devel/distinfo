@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.46 2017/06/16 05:39:23 adam Exp $
+$NetBSD: distinfo,v 1.47 2017/07/14 08:12:33 adam Exp $
 
-SHA1 (x264-snapshot-20170615-2245.tar.bz2) = b2988d6b54208f8ce35993463750a1b6a191480c
-RMD160 (x264-snapshot-20170615-2245.tar.bz2) = eeac6a746658b36a96ddd32efff8c0bf4fded600
-SHA512 (x264-snapshot-20170615-2245.tar.bz2) = 54b2066747cdad0804ab27e730fe1218589b979567af1c930280f83eea5aed140f09b847c48ec1bd928ab106a6eec5fb8f8c3c40fb7c9e33df513594e7bc4e23
-Size (x264-snapshot-20170615-2245.tar.bz2) = 746854 bytes
+SHA1 (x264-snapshot-20170712-2245.tar.bz2) = 1f247cfd5d122f670231dd8db84e5abadf040439
+RMD160 (x264-snapshot-20170712-2245.tar.bz2) = fd4f02d485d64b9748131baa723c8d17374dff90
+SHA512 (x264-snapshot-20170712-2245.tar.bz2) = 4d692b3dd435c51217cbe86b8f43ef82a512a18fea5fb0a5bdc8dc49a398d0c85d41fd8ea68cde24edb660e0b27a63197c35bf5b36bee5ec4378996ba79b0b0c
+Size (x264-snapshot-20170712-2245.tar.bz2) = 750522 bytes
 SHA1 (patch-Makefile) = 8637cc22e142081ad309b462fb30c654d3688cce
 SHA1 (patch-configure) = 0a69da50452159e0b12fb7ac294d1f15cd42bdca
-SHA1 (patch-encoder_analyse.c) = 1ef090172fd8a48d4e031525ac82433865d549e2
+SHA1 (patch-encoder_analyse.c) = 2057583899e029a4c2173c511293e6a35cf80f78
