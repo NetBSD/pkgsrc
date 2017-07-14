@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2896 2017/07/14 15:34:06 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2897 2017/07/14 17:04:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3992,3 +3992,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/py-redis to 2.10.5 [adam 2017-07-14]
 	Added graphics/py-seaborn version 0.8 [adam 2017-07-14]
 	Updated graphics/py-dot to 1.2.3 [adam 2017-07-14]
+	Updated devel/py-isort to 4.2.15 [adam 2017-07-14]
+	Updated converters/py-cairosvg to 2.0.3 [adam 2017-07-14]
+	Updated graphics/py-pygal to 2.4.0 [adam 2017-07-14]
