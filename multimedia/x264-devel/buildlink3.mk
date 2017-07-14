@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2017/06/16 05:39:23 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2017/07/14 08:12:33 adam Exp $
 
 BUILDLINK_TREE+=	x264-devel
 
@@ -19,7 +19,7 @@ X264_DEVEL_BUILDLINK3_MK:=
 ###	  Prior specification: x264-devel>=20130703 # X264_BUILD 133
 ###	  Prior specification: x264-devel>=20131015 # X264_BUILD 138
 ###
-BUILDLINK_API_DEPENDS.x264-devel?=	x264-devel>=20140303 # X264 BUILD 142
+BUILDLINK_API_DEPENDS.x264-devel+=	x264-devel>=20140303 # X264 BUILD 142
 BUILDLINK_PKGSRCDIR.x264-devel?=	../../multimedia/x264-devel
 pkgbase:= x264-devel
 .include "../../mk/pkg-build-options.mk"

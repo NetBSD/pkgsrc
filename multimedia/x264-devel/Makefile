@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2017/06/16 05:39:23 adam Exp $
+# $NetBSD: Makefile,v 1.63 2017/07/14 08:12:33 adam Exp $
 
-SNAPSHOT_DATE=	20170615
-
-DISTNAME=	x264-snapshot-${SNAPSHOT_DATE}-2245
-PKGNAME=	x264-devel-${SNAPSHOT_DATE}
+DISTNAME=	x264-snapshot-20170712-2245
+PKGNAME=	${DISTNAME:S/-snapshot-/-devel-/:S/-2245$//}
 CATEGORIES=	multimedia
 MASTER_SITES=	ftp://ftp.videolan.org/pub/videolan/x264/snapshots/
 EXTRACT_SUFX=	.tar.bz2
