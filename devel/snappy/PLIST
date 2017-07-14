@@ -1,14 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2017/02/26 08:41:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2017/07/14 17:27:40 adam Exp $
 include/snappy-c.h
 include/snappy-sinksource.h
 include/snappy-stubs-public.h
 include/snappy.h
-lib/libsnappy.la
-lib/pkgconfig/snappy.pc
-share/doc/snappy/COPYING
-share/doc/snappy/ChangeLog
-share/doc/snappy/INSTALL
-share/doc/snappy/NEWS
-share/doc/snappy/README
-share/doc/snappy/format_description.txt
-share/doc/snappy/framing_format.txt
+lib/cmake/Snappy/SnappyTargets-noconfig.cmake
+lib/cmake/Snappy/SnappyTargets.cmake
+lib/cmake/SnappyConfig.cmake
+lib/cmake/SnappyConfigVersion.cmake
+lib/libsnappy.so
+lib/libsnappy.so.1
+lib/libsnappy.so.1.1.6
