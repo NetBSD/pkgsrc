@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2016/08/17 12:37:34 richard Exp $
-${PYSITELIB}/dot_parser.py
-${PYSITELIB}/dot_parser.pyc
-${PYSITELIB}/dot_parser.pyo
+@comment $NetBSD: PLIST,v 1.3 2017/07/14 15:33:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/dot_parser.py
+${PYSITELIB}/dot_parser.pyc
+${PYSITELIB}/dot_parser.pyo
 ${PYSITELIB}/pydot.py
 ${PYSITELIB}/pydot.pyc
 ${PYSITELIB}/pydot.pyo
