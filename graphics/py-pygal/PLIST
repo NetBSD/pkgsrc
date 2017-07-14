@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2017/01/22 15:19:25 kamil Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/07/14 17:03:40 adam Exp $
 bin/pygal_gen${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pygal/__about__.py
+${PYSITELIB}/pygal/__about__.pyc
+${PYSITELIB}/pygal/__about__.pyo
 ${PYSITELIB}/pygal/__init__.py
 ${PYSITELIB}/pygal/__init__.pyc
 ${PYSITELIB}/pygal/__init__.pyo
@@ -170,6 +173,9 @@ ${PYSITELIB}/pygal/test/test_interpolate.pyo
 ${PYSITELIB}/pygal/test/test_line.py
 ${PYSITELIB}/pygal/test/test_line.pyc
 ${PYSITELIB}/pygal/test/test_line.pyo
+${PYSITELIB}/pygal/test/test_line_log_none_max_solved.py
+${PYSITELIB}/pygal/test/test_line_log_none_max_solved.pyc
+${PYSITELIB}/pygal/test/test_line_log_none_max_solved.pyo
 ${PYSITELIB}/pygal/test/test_maps.py
 ${PYSITELIB}/pygal/test/test_maps.pyc
 ${PYSITELIB}/pygal/test/test_maps.pyo
