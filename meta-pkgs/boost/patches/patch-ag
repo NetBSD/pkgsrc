@@ -1,10 +1,10 @@
-$NetBSD: patch-ag,v 1.8 2014/08/13 10:56:36 adam Exp $
+$NetBSD: patch-ag,v 1.9 2017/07/14 17:35:07 wiz Exp $
 
 Pass CFLAGS to the compiler.
 
---- tools/build/src/engine/build.jam.orig	2011-02-24 08:50:34.000000000 +0000
+--- tools/build/src/engine/build.jam.orig	2017-07-14 17:28:45.790581884 +0000
 +++ tools/build/src/engine/build.jam
-@@ -192,7 +192,7 @@ toolset como como : "-o " : -D
+@@ -199,7 +199,7 @@ toolset como como : "-o " : -D
      : -L$(--python-lib[1]) -l$(--python-lib[2]) ;
  ## Clang Linux 2.8+
  toolset clang clang :  "-o " : -D
@@ -13,3 +13,18 @@ Pass CFLAGS to the compiler.
      [ opt --release : -Os ]
      [ opt --debug : -g -O0 -fno-inline ]
      [ opt --profile : -finline-functions -g ]
+@@ -215,12 +215,12 @@ toolset darwin cc :  "-o " : -D
+     : -L$(--python-lib[1]) -l$(--python-lib[2]) ;
+ ## GCC 2.x, 3.x, 4.x
+ toolset gcc gcc : "-o " : -D
+-    : -pedantic -fno-strict-aliasing
++    : $(CFLAGS) -pedantic -fno-strict-aliasing
+     [ opt --release : [ opt --symbols : -g : -s ] -O3 ]
+     [ opt --debug : -g -O0 -fno-inline ]
+     [ opt --profile : -O3 -g -pg ]
+     -I$(--python-include) -I$(--extra-include) -Wno-long-long
+-    : -L$(--python-lib[1]) -l$(--python-lib[2]) ;
++    : $(LDFLAGS) -L$(--python-lib[1]) -l$(--python-lib[2]) ;
+ ## GCC 2.x, 3.x on CYGWIN but without cygwin1.dll
+ toolset gcc-nocygwin gcc : "-o " : -D
+     : -s -O3 -mno-cygwin
