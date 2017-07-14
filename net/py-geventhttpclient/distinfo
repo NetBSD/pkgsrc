@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/07/14 10:44:59 adam Exp $
+
+SHA1 (geventhttpclient-1.3.1.tar.gz) = 53dc3c1b4aa7067d7ca25af22ea2cbb3149ac9fe
+RMD160 (geventhttpclient-1.3.1.tar.gz) = 85995648524cbc5ba855d2d34ed13e2999481e69
+SHA512 (geventhttpclient-1.3.1.tar.gz) = a50486e1485c449a821176f0aa139cb05a3c7675fb045086e086cc7bb71d6e1d75191fae6972b381e7e69dba89d23c387464503845badd29fa361e03aa866079
+Size (geventhttpclient-1.3.1.tar.gz) = 82598 bytes
