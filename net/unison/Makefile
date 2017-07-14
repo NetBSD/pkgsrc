@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2017/07/11 14:19:20 jaapb Exp $
+# $NetBSD: Makefile,v 1.109 2017/07/14 12:58:52 joerg Exp $
 
 DISTNAME=	unison-2.48.4
 PKGREVISION=	7
@@ -9,6 +9,10 @@ MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/unison/
 COMMENT=	File-synchronization tool
 LICENSE=	gnu-gpl-v3
+
+# File "/data/scratch/net/unison/work/src/fswatch.mli", line 18, characters 17-29:
+# Error: Unbound module Prefs
+MAKE_JOBS_SAFE=	no
 
 .if (${MACHINE_ARCH} == "arm")
 BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=3.12.0nb2
