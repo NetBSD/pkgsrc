@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2016/05/01 19:30:58 dholland Exp $
+$NetBSD: distinfo,v 1.22 2017/07/14 12:52:49 joerg Exp $
 
 SHA1 (AfterStep-2.2.11.tar.bz2) = ecfd815b659046281530441af0bc4fc42900d0da
 RMD160 (AfterStep-2.2.11.tar.bz2) = a82a4b3fddcbcd97862212669c11d14629e51a4d
@@ -13,12 +13,14 @@ SHA1 (patch-libAfterBase_asvector.h) = f1c775e576dcdbbd8fa73a4fd362dc6e17d84b58
 SHA1 (patch-libAfterBase_output.c) = fe0d9b4cbe3c2d1eac50e4c4c0d6fbd3b8b7487f
 SHA1 (patch-libAfterBase_parse.c) = aba8ed0b11821ed09ded8833140c250abf6ea6da
 SHA1 (patch-libAfterBase_parse.h) = 5e2e0a1b3351f7d3b7d84076879e3827d47e3f24
+SHA1 (patch-libAfterBase_selfdiag.c) = 72fa80bb37f8c73bcf27eb9c0a7b65af561d2e96
 SHA1 (patch-libAfterConf_Color.c) = 346f16a2ea539cb0ff352b73ba1f60d522efea00
 SHA1 (patch-libAfterConf_DesktopEntry.c) = 57b8ff21093434434711d05ad2054c1415de0ca3
 SHA1 (patch-libAfterImage_asfont.c) = 4fd6498495855c2909530ac5e34accb715b48497
 SHA1 (patch-libAfterImage_export.c) = 0b450561673cb3351c2f8685ba7357cc6a1de366
 SHA1 (patch-libAfterImage_import.c) = 57fdfec498ba05aa6d52470c545d1c9958095435
 SHA1 (patch-libAfterStep_asapp.c) = 3d23d40b862aca272aac3e35574f6bf99cbc8e0a
+SHA1 (patch-libAfterStep_colorscheme.c) = cb5c06e36016d198c3508dfbec1d0743231cc7eb
 SHA1 (patch-libAfterStep_font.c) = e47477b5d0a0b54af19d603eb37937dbfa24dd19
 SHA1 (patch-libAfterStep_freestor.c) = e66249ff9edc2f7441e406aa34db923420b201d6
 SHA1 (patch-libAfterStep_functions.c) = a01482b2eff7d659afc98aa028191cca65465d0b
