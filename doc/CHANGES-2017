@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2892 2017/07/14 10:03:11 hauke Exp $
+$NetBSD: CHANGES-2017,v 1.2893 2017/07/14 10:30:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3980,3 +3980,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-awscli to 1.11.119 [adam 2017-07-14]
 	Updated multimedia/x264-devel to 20170712 [adam 2017-07-14]
 	Updated graphics/darktable to 2.2.5 [hauke 2017-07-14]
+	Updated devel/libev to 4.24 [adam 2017-07-14]
+	Updated math/py-pandas to 0.20.3 [adam 2017-07-14]
+	Updated devel/py-fastimport to 0.9.6 [adam 2017-07-14]
+	Updated net/py-gevent to 1.2.2 [adam 2017-07-14]
