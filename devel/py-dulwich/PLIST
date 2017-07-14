@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2016/12/30 00:55:33 wiz Exp $
-bin/dul-receive-pack
-bin/dul-upload-pack
-bin/dulwich
+@comment $NetBSD: PLIST,v 1.10 2017/07/14 10:53:35 adam Exp $
+bin/dul-receive-pack${PYVERSSUFFIX}
+bin/dul-upload-pack${PYVERSSUFFIX}
+bin/dulwich${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
