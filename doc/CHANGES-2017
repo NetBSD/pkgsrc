@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2889 2017/07/14 05:32:03 maya Exp $
+$NetBSD: CHANGES-2017,v 1.2890 2017/07/14 05:49:44 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3973,3 +3973,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-iniparse to 1.4.4 [taca 2017-07-13]
 	Updated devel/ruby-test-unit to 3.2.5 [taca 2017-07-13]
 	Updated print/evince3 to 3.22.1nb6 [maya 2017-07-14]
+	Updated audio/mpg123 to 1.25.2 [maya 2017-07-14]
