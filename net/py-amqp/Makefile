@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2017/07/13 14:15:20 adam Exp $
+# $NetBSD: Makefile,v 1.14 2017/07/14 07:52:39 adam Exp $
 
-DISTNAME=	amqp-2.2.0
+DISTNAME=	amqp-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/amqp/}
