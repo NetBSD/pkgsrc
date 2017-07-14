@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2017/01/01 14:43:51 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/07/14 10:19:36 adam Exp $
 
-DISTNAME=	gevent-1.0.2
+DISTNAME=	gevent-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gevent/}
 
@@ -11,17 +10,17 @@ HOMEPAGE=	http://www.gevent.org/
 COMMENT=	Python-gevent a coroutine-based Python networking library
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-greenlet>=0.4.1:../../devel/py-greenlet
+DEPENDS+=	${PYPKGPREFIX}-greenlet>=0.4.10:../../devel/py-greenlet
+MAKE_ENV+=	CARES_EMBED=0 LIBEV_EMBED=0
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
-
 do-test:
-	${RUN} cd ${WRKSRC}/greentest; ${SETENV} ${TEST_ENV} ${PYTHONBIN} testrunner.py
+	cd ${WRKSRC}/src/greentest && \
+		${SETENV} ${TEST_ENV} ${PYTHONBIN} testrunner.py --config known_failures.py
 
 .include "../../devel/py-cython/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libevent+=	libevent>=0.6
-.include "../../devel/libevent/buildlink3.mk"
+.include "../../devel/libev/buildlink3.mk"
 .include "../../lang/python/egg.mk"
+.include "../../net/libcares/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
