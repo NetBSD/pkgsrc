@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2897 2017/07/14 17:04:29 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2898 2017/07/14 17:28:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3995,3 +3995,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-isort to 4.2.15 [adam 2017-07-14]
 	Updated converters/py-cairosvg to 2.0.3 [adam 2017-07-14]
 	Updated graphics/py-pygal to 2.4.0 [adam 2017-07-14]
+	Updated devel/snappy to 1.1.6 [adam 2017-07-14]
