@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2016/12/23 03:53:16 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/07/14 10:02:28 hauke Exp $
 bin/darktable
+bin/darktable-chart
 bin/darktable-cli
 bin/darktable-cmstest
 bin/darktable-generate-cache
-bin/darktable-viewer
+bin/darktable-rs-identify
 lib/darktable/libdarktable.so
 lib/darktable/plugins/imageio/format/libcopy.so
 lib/darktable/plugins/imageio/format/libexr.so
@@ -20,6 +21,7 @@ lib/darktable/plugins/imageio/storage/libflickr.so
 lib/darktable/plugins/imageio/storage/libgallery.so
 lib/darktable/plugins/imageio/storage/liblatex.so
 lib/darktable/plugins/imageio/storage/libpicasa.so
+lib/darktable/plugins/libashift.so
 lib/darktable/plugins/libatrous.so
 lib/darktable/plugins/libbasecurve.so
 lib/darktable/plugins/libbilat.so
@@ -32,6 +34,7 @@ lib/darktable/plugins/libclahe.so
 lib/darktable/plugins/libclipping.so
 lib/darktable/plugins/libcolisa.so
 lib/darktable/plugins/libcolorbalance.so
+lib/darktable/plugins/libcolorchecker.so
 lib/darktable/plugins/libcolorcontrast.so
 lib/darktable/plugins/libcolorcorrection.so
 lib/darktable/plugins/libcolorin.so
@@ -59,6 +62,7 @@ lib/darktable/plugins/libhotpixels.so
 lib/darktable/plugins/libinvert.so
 lib/darktable/plugins/liblens.so
 lib/darktable/plugins/liblevels.so
+lib/darktable/plugins/libliquify.so
 lib/darktable/plugins/liblowlight.so
 lib/darktable/plugins/liblowpass.so
 lib/darktable/plugins/libmonochrome.so
@@ -66,6 +70,7 @@ lib/darktable/plugins/libnlmeans.so
 lib/darktable/plugins/liboverexposed.so
 lib/darktable/plugins/libprofile_gamma.so
 lib/darktable/plugins/librawdenoise.so
+lib/darktable/plugins/librawoverexposed.so
 lib/darktable/plugins/librawprepare.so
 lib/darktable/plugins/librelight.so
 lib/darktable/plugins/librotatepixels.so
@@ -93,6 +98,7 @@ lib/darktable/plugins/lighttable/libdarktable_label.so
 lib/darktable/plugins/lighttable/libexport.so
 lib/darktable/plugins/lighttable/libfilmstrip.so
 lib/darktable/plugins/lighttable/libfilter.so
+lib/darktable/plugins/lighttable/libgeotagging.so
 lib/darktable/plugins/lighttable/libglobal_toolbox.so
 lib/darktable/plugins/lighttable/libhinter.so
 lib/darktable/plugins/lighttable/libhistogram.so
@@ -128,19 +134,12 @@ man/man1/darktable-cli.1
 man/man1/darktable-cltest.1
 man/man1/darktable-cmstest.1
 man/man1/darktable-generate-cache.1
-man/man1/darktable-viewer.1
 man/man1/darktable.1
 share/appdata/darktable.appdata.xml
 share/applications/darktable.desktop
 share/darktable/darktable.css
 share/darktable/darktablerc
 share/darktable/gdb_commands
-share/darktable/js/builder.js
-share/darktable/js/effects.js
-share/darktable/js/lightbox-web.js
-share/darktable/js/lightbox.js
-share/darktable/js/prototype.js
-share/darktable/js/scriptaculous.js
 share/darktable/latex/photobook.cls
 share/darktable/lua/darktable/debug.lua
 share/darktable/lua/darktable/external/pygy_require/.gitignore
@@ -169,6 +168,8 @@ share/darktable/pixmaps/idbutton-3.png
 share/darktable/pixmaps/idbutton-3.svg
 share/darktable/pixmaps/idbutton.png
 share/darktable/pixmaps/idbutton.svg
+share/darktable/pixmaps/plugins/darkroom/ashift.png
+share/darktable/pixmaps/plugins/darkroom/ashift.svg
 share/darktable/pixmaps/plugins/darkroom/atrous.png
 share/darktable/pixmaps/plugins/darkroom/atrous.svg
 share/darktable/pixmaps/plugins/darkroom/basecurve.png
@@ -227,6 +228,8 @@ share/darktable/pixmaps/plugins/darkroom/lens.png
 share/darktable/pixmaps/plugins/darkroom/lens.svg
 share/darktable/pixmaps/plugins/darkroom/levels.png
 share/darktable/pixmaps/plugins/darkroom/levels.svg
+share/darktable/pixmaps/plugins/darkroom/liquify.png
+share/darktable/pixmaps/plugins/darkroom/liquify.svg
 share/darktable/pixmaps/plugins/darkroom/lowlight.png
 share/darktable/pixmaps/plugins/darkroom/lowlight.svg
 share/darktable/pixmaps/plugins/darkroom/lowpass.png
@@ -273,6 +276,16 @@ share/darktable/pixmaps/plugins/darkroom/watermark.png
 share/darktable/pixmaps/plugins/darkroom/watermark.svg
 share/darktable/pixmaps/plugins/darkroom/zonesystem.png
 share/darktable/pixmaps/plugins/darkroom/zonesystem.svg
+share/darktable/pswp/LICENSE
+share/darktable/pswp/default-skin/default-skin.css
+share/darktable/pswp/default-skin/default-skin.png
+share/darktable/pswp/default-skin/default-skin.svg
+share/darktable/pswp/default-skin/preloader.gif
+share/darktable/pswp/photoswipe-ui-default.js
+share/darktable/pswp/photoswipe-ui-default.min.js
+share/darktable/pswp/photoswipe.css
+share/darktable/pswp/photoswipe.js
+share/darktable/pswp/photoswipe.min.js
 share/darktable/rawspeed/cameras.xml
 share/darktable/rawspeed/showcameras.xsl
 share/darktable/style/bullet.gif
@@ -312,7 +325,6 @@ share/locale/ca/LC_MESSAGES/darktable.mo
 share/locale/cs/LC_MESSAGES/darktable.mo
 share/locale/da/LC_MESSAGES/darktable.mo
 share/locale/de/LC_MESSAGES/darktable.mo
-share/locale/el/LC_MESSAGES/darktable.mo
 share/locale/es/LC_MESSAGES/darktable.mo
 share/locale/fr/LC_MESSAGES/darktable.mo
 share/locale/he/LC_MESSAGES/darktable.mo
@@ -321,11 +333,8 @@ share/locale/it/LC_MESSAGES/darktable.mo
 share/locale/ja/LC_MESSAGES/darktable.mo
 share/locale/nl/LC_MESSAGES/darktable.mo
 share/locale/pl/LC_MESSAGES/darktable.mo
-share/locale/pt_BR/LC_MESSAGES/darktable.mo
-share/locale/pt_PT/LC_MESSAGES/darktable.mo
 share/locale/ru/LC_MESSAGES/darktable.mo
 share/locale/sk/LC_MESSAGES/darktable.mo
 share/locale/sl/LC_MESSAGES/darktable.mo
-share/locale/sq/LC_MESSAGES/darktable.mo
 share/locale/sv/LC_MESSAGES/darktable.mo
 share/locale/uk/LC_MESSAGES/darktable.mo
