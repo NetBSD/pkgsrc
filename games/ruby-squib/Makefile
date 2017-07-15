@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2017/06/18 13:48:53 taca Exp $
+# $NetBSD: Makefile,v 1.7 2017/07/15 06:48:35 wiz Exp $
 
-DISTNAME=	squib-0.13.2
+DISTNAME=	squib-0.13.3
 #MASTER_SITES=	${MASTER_SITE_GITHUB:=andymeneely/}
 CATEGORIES=	games
 #GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +13,7 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_PKGPREFIX}-mercenary>=0.3.4:../../devel/ruby-mercenary
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.7.0:../../textproc/ruby-nokogiri
 #DEPENDS+=	${RUBY_PKGPREFIX}-pkg-config-[0-9]*:../../devel/ruby-pkg-config
-DEPENDS+=	${RUBY_PKGPREFIX}-cairo>=1.15.5:../../graphics/ruby-cairo
+DEPENDS+=	${RUBY_PKGPREFIX}-cairo>=1.15.9:../../graphics/ruby-cairo
 DEPENDS+=	${RUBY_PKGPREFIX}-progressbar>=1.8:../../misc/ruby-progressbar
 DEPENDS+=	${RUBY_PKGPREFIX}-roo>=2.7.0:../../math/ruby-roo
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-pango>=3.1.1:../../devel/ruby-gnome2-pango
