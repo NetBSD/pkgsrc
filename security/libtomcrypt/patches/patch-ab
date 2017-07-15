@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2014/01/16 13:32:10 drochner Exp $
+$NetBSD: patch-ab,v 1.3 2017/07/15 17:23:04 wiz Exp $
 
 --- makefile.shared.orig	2007-05-12 14:46:25.000000000 +0000
 +++ makefile.shared
@@ -73,7 +73,7 @@ $NetBSD: patch-ab,v 1.2 2014/01/16 13:32:10 drochner Exp $
 -$(LIBNAME): $(OBJECTS) testprof/$(LIBTEST)
 -	libtool --silent --mode=link gcc $(CFLAGS) `find . -type f | grep "[.]lo" | grep "src/" | xargs` $(EXTRALIBS) -o $(LIBNAME) -rpath $(LIBPATH) -version-info $(VERSION)
 +$(LIBNAME): $(OBJECTS:.o=.lo) testprof/$(LIBTEST)
-+	libtool --silent --mode=link ${CC} $(CFLAGS) `find . -type f | grep "[.]lo" | grep "src/" | xargs` $(EXTRALIBS) -o $(LIBNAME) -rpath $(LIBPATH) -version-info $(VERSION)
++	libtool --silent --mode=link ${CC} $(CFLAGS) $(LDFLAGS) `find . -type f | grep "[.]lo" | grep "src/" | xargs` $(EXTRALIBS) -o $(LIBNAME) -rpath $(LIBPATH) -version-info $(VERSION)
  
  install: $(LIBNAME)
 -	install -d -g $(GROUP) -o $(USER) $(DESTDIR)$(LIBPATH)
