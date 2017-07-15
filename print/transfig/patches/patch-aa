@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2008/08/20 10:25:12 is Exp $
+$NetBSD: patch-aa,v 1.12 2017/07/15 14:09:23 wiz Exp $
 
---- fig2dev/Imakefile.orig	Fri Oct 28 01:56:02 2005
-+++ fig2dev/Imakefile	Wed Nov  9 22:49:57 2005
-@@ -34,7 +34,7 @@
+--- fig2dev/Imakefile.orig	2010-06-02 19:18:16.000000000 +0000
++++ fig2dev/Imakefile
+@@ -34,7 +34,7 @@ XCOMM ******
  XCOMM You should point XFIGLIBDIR to the same directory you did when you compiled
  XCOMM and installed xfig.
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.11 2008/08/20 10:25:12 is Exp $
  
  XCOMM ******
  XCOMM If your system doesn't have the strerror() function (has sys_errlist) then
-@@ -53,7 +53,7 @@
+@@ -53,7 +53,7 @@ XCOMM Uncomment the following line if yo
  XCOMM inline functions. With the "INLINE" keyword, you should notice that
  XCOMM the display will be a bit faster in complex figures
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.11 2008/08/20 10:25:12 is Exp $
  
  XCOMM ****************
  XCOMM Change RGB if necessary, to point to your rgb.txt color database
-@@ -76,7 +76,7 @@
+@@ -76,7 +76,7 @@ XCOMM file are in different places
  #ifdef USEPNG
  PNGLIBDIR = $(USRLIBDIR)
  ZLIBDIR = $(USRLIBDIR)
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.11 2008/08/20 10:25:12 is Exp $
  #endif
  
  XCOMM ****************
-@@ -92,7 +92,19 @@
+@@ -92,7 +92,19 @@ XCOMM
  
  #ifdef USEXPM
  XPMLIBDIR = $(USRLIBDIR)
@@ -50,7 +50,7 @@ $NetBSD: patch-aa,v 1.11 2008/08/20 10:25:12 is Exp $
  #endif
  
  XCOMM ****************
-@@ -141,8 +153,8 @@
+@@ -141,8 +153,8 @@ XCOMM Comment out the next line if you h
  
  #ifdef I18N
  I18N_DEFS = -DI18N 
@@ -61,7 +61,7 @@ $NetBSD: patch-aa,v 1.11 2008/08/20 10:25:12 is Exp $
  
  #endif /* I18N */
  
-@@ -150,30 +162,37 @@
+@@ -150,30 +162,37 @@ XCOMM **********************************
  XCOMM *** You shouldn't have to change anything below this point ***
  XCOMM **************************************************************
  
@@ -105,7 +105,7 @@ $NetBSD: patch-aa,v 1.11 2008/08/20 10:25:12 is Exp $
  		$(DDLATEX2E_GRAPHICS) $(DDEPSFIG) $(DDIBMGEC) $(DDDVIPS) $(I18N_DEV_DEFS)
  
  #define IHaveSubdirs
-@@ -189,9 +208,9 @@
+@@ -189,9 +208,9 @@ INCLUDES = -I..
  
  LOCAL_LIBRARIES = $(LIBTRANSFIG)
  #if defined(NetBSDArchitecture) || defined(FreeBSDArchitecture)
@@ -117,3 +117,8 @@ $NetBSD: patch-aa,v 1.11 2008/08/20 10:25:12 is Exp $
  #endif
  DEPLIBS = $(LIBTRANSFIG)
  
+@@ -255,3 +274,4 @@ pic2tpic.man:: ../doc/pic2tpic.1
+ 	$(RM) pic2tpic.man
+ 	-$(LN) ../doc/pic2tpic.1 pic2tpic.man
+ 
++LOCAL_LDFLAGS=	${LDFLAGS}

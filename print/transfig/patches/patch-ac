@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2005/11/10 14:29:01 itohy Exp $
+$NetBSD: patch-ac,v 1.5 2017/07/15 14:09:23 wiz Exp $
 
---- transfig/Imakefile.orig	Wed Mar 26 05:52:37 2003
-+++ transfig/Imakefile	Wed Nov  9 21:44:38 2005
-@@ -32,7 +32,7 @@
+--- transfig/Imakefile.orig	2003-03-25 20:52:38.000000000 +0000
++++ transfig/Imakefile
+@@ -32,7 +32,7 @@ XCOMM Uncomment the USELATEX2E flag to u
  XCOMM \\usepackage{} command for LaTeX2e. 
  XCOMM The default is to use \\documentstyle{} for LaTeX209.
  
@@ -11,3 +11,9 @@ $NetBSD: patch-ac,v 1.4 2005/11/10 14:29:01 itohy Exp $
  
  XCOMM ******* DON'T CHANGE ANYTHING BELOW THIS POINT *******
  
+@@ -68,3 +68,5 @@ pic2tpic.man:: ../doc/pic2tpic.1
+ 
+ clean::
+ 	rm -f *.man
++
++LOCAL_LDFLAGS=	${LDFLAGS}
