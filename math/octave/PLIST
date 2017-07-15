@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2016/11/19 21:53:12 maya Exp $
+@comment $NetBSD: PLIST,v 1.29.6.1 2017/07/15 18:43:57 bsiegert Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -746,7 +746,6 @@ include/${PKGNAME}/octave/xpow.h
 include/${PKGNAME}/octave/zfstream.h
 info/liboctave.info
 info/octave.info
-lib/charset.alias
 lib/octave/${PKGVERSION}/__delaunayn__.a
 lib/octave/${PKGVERSION}/__eigs__.a
 lib/octave/${PKGVERSION}/__fltk_uigetfile__.a
