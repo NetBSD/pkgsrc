@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2016/08/28 15:48:37 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2017/07/15 13:20:50 wiz Exp $
 
 DISTNAME=	sip-4.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.riverbankcomputing.com/software/sip/
 COMMENT=	Tool to create Python bindings for C++ libraries
-
-CONFLICTS+=	${PYPKGPREFIX}-qt2-sip-* ${PYPKGPREFIX}-qt3-sip-*
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
@@ -44,6 +42,7 @@ CONFIGURE_ARGS+=	LFLAGS_SHLIB="-shared -mimpure-text"
 CONFIGURE_ARGS+=	LFLAGS_SHLIB="-shared"
 .  endif
 .endif
+CONFIGURE_ARGS+=	LFLAGS=${LDFLAGS:Q}
 
 # Hack: gcc on sparc64 miscompiles sipgen/parser.c at -O2
 .if ${MACHINE_ARCH} == "sparc64" && !empty(CC_VERSION:Mgcc*)
