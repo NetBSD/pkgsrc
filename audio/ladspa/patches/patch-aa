@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2009/08/16 14:17:44 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2017/07/15 18:12:51 wiz Exp $
 
 --- makefile.orig	2007-11-06 10:42:45.000000000 +0000
 +++ makefile
@@ -37,14 +37,20 @@ $NetBSD: patch-aa,v 1.4 2009/08/16 14:17:44 wiz Exp $
  
  ###############################################################################
  #
-@@ -38,8 +38,8 @@ CPP		=	c++
- 	$(LD) -o ../plugins/$*.so plugins/$*.o -shared
+@@ -34,12 +34,12 @@ CPP		=	c++
+ #
+ 
+ ../plugins/%.so:	plugins/%.c ladspa.h
+-	$(CC) $(CFLAGS) -o plugins/$*.o -c plugins/$*.c
+-	$(LD) -o ../plugins/$*.so plugins/$*.o -shared
++	$(CC) $(CFLAGS) $(LDFLAGS) -o plugins/$*.o -c plugins/$*.c
++	$(LD) $(REAL_LDFLAGS) -o ../plugins/$*.so plugins/$*.o -shared
  
  ../plugins/%.so:	plugins/%.cpp ladspa.h
 -	$(CPP) $(CXXFLAGS) -o plugins/$*.o -c plugins/$*.cpp
 -	$(CPP) -o ../plugins/$*.so plugins/$*.o -shared
 +	$(CXX) $(CXXFLAGS) -o plugins/$*.o -c plugins/$*.cpp
-+	$(CXX) -o ../plugins/$*.so plugins/$*.o -shared
++	$(CXX) $(LDFLAGS) -o ../plugins/$*.so plugins/$*.o -shared
  
  ###############################################################################
  #
@@ -78,3 +84,24 @@ $NetBSD: patch-aa,v 1.4 2009/08/16 14:17:44 wiz Exp $
  
  ###############################################################################
  #
+@@ -90,17 +90,17 @@ targets:	$(PLUGINS) $(PROGRAMS)
+ #
+ 
+ ../bin/applyplugin:	applyplugin.o load.o default.o
+-	$(CC) $(CFLAGS) $(LIBRARIES)					\
++	$(CC) $(CFLAGS) $(LDFLAGS) $(LIBRARIES)					\
+ 		-o ../bin/applyplugin					\
+ 		applyplugin.o load.o default.o
+ 
+ ../bin/analyseplugin:	analyseplugin.o load.o default.o
+-	$(CC) $(CFLAGS) $(LIBRARIES)					\
++	$(CC) $(CFLAGS) $(LDFLAGS) $(LIBRARIES)					\
+ 		-o ../bin/analyseplugin 				\
+ 		analyseplugin.o load.o default.o
+ 
+ ../bin/listplugins:	listplugins.o search.o
+-	$(CC) $(CFLAGS) $(LIBRARIES)					\
++	$(CC) $(CFLAGS) $(LDFLAGS) $(LIBRARIES)					\
+ 		-o ../bin/listplugins	 				\
+ 		listplugins.o search.o
+ 
