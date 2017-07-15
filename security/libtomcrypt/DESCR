@@ -1,29 +1,10 @@
-LibTomCrypt is a fairly comprehensive, modular and portable cryptographic
-toolkit that provides developers with a vast array of well known published block
-ciphers, one-way hash functions, chaining modes, pseudo-random number
-generators, public key cryptography and a plethora of other routines.
-LibTomCrypt has been designed from the ground up to be very simple to use. It
-has a modular and standard API that allows new ciphers, hashes and PRNGs to be
-added or removed without change to the overall end application. It features easy
-to use functions and a complete user manual which has many source snippet
-examples.
-
-* Block Ciphers
-    * Blowfish
-    * XTEA
-    * RC5
-    * RC6
-    * SAFER+
-    * Rijndael (aka AES)
-    * Twofish
-    * SAFER (K64, SK64, K128, SK128)
-    * RC2
-    * DES, 3DES
-    * CAST5
-    * Noekeon
-    * Skipjack
-    * Anubis (with optional tweak as proposed by the developers)
-    * Khazad
-    * KASUMI
-    * SEED
-...and more!
+LibTomCrypt is a fairly comprehensive, modular and portable
+cryptographic toolkit that provides developers with a vast array
+of well known published block ciphers, one-way hash functions,
+chaining modes, pseudo-random number generators, public key
+cryptography and a plethora of other routines.  LibTomCrypt has
+been designed from the ground up to be very simple to use. It has
+a modular and standard API that allows new ciphers, hashes and PRNGs
+to be added or removed without change to the overall end application.
+It features easy to use functions and a complete user manual which
+has many source snippet examples.
