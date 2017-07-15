@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/07/11 12:35:54 jaapb Exp $
+# $NetBSD: Makefile,v 1.13 2017/07/15 10:18:33 jaapb Exp $
 
 VERSION=	1.7
 GITHUB_PROJECT=	ocaml-csv
@@ -31,4 +31,5 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/_build/examples/csvtool.byte ${DESTDIR}${PREFIX}/bin/csvtool
 .endif
 
+.include "../../devel/ocaml-oasis/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
