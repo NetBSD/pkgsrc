@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2017/06/20 14:10:16 he Exp $
+# $NetBSD: Makefile,v 1.20.2.1 2017/07/15 18:53:11 bsiegert Exp $
 
 VERSION=	3.4.19
 DISTNAME=	${VERSION}
+PKGREVISION=	1
 PKGNAME=	exabgp-${VERSION}
 EGG_NAME=	exabgp-${VERSION}
 CATEGORIES=	net
@@ -23,16 +24,15 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 REPLACE_PERL+=		etc/exabgp/processes/dynamic-1.pl
 REPLACE_PERL+=		etc/exabgp/processes/watchdog-1.pl
 
-REPLACE_PYTHON+=	etc/exabgp/processes/healthcheck.py
 REPLACE_PYTHON+=	etc/exabgp/processes/read-write.py
 REPLACE_PYTHON+=	etc/exabgp/processes/stderr-1.py
 REPLACE_PYTHON+=	etc/exabgp/processes/syslog-1.py
 REPLACE_PYTHON+=	etc/exabgp/processes/tcp-server
 REPLACE_PYTHON+=	lib/exabgp/application/bmp.py
 REPLACE_PYTHON+=	lib/exabgp/application/cli.py
+REPLACE_PYTHON+=	lib/exabgp/application/healthcheck.py
 REPLACE_PYTHON+=	lib/exabgp/application/netlink.py
 REPLACE_PYTHON+=	lib/exabgp/netlink/old.py
-REPLACE_PYTHON+=	lib/exabgp/netlink/route.py
 REPLACE_PYTHON+=	lib/exabgp/reactor/api/encoding.py
 REPLACE_PYTHON+=	qa/conf/api-add-remove.run
 REPLACE_PYTHON+=	qa/conf/api-announcement.run

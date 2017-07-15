@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2017/06/20 14:10:16 he Exp $
+$NetBSD: distinfo,v 1.12.2.1 2017/07/15 18:53:11 bsiegert Exp $
 
 SHA1 (exabgp/3.4.19.tar.gz) = 8199eb40f3b533a7db1ee43e4a97213f550a4261
 RMD160 (exabgp/3.4.19.tar.gz) = 4596ea5663169e09d8be5a0b5833c2f9426a7ff2
 SHA512 (exabgp/3.4.19.tar.gz) = 92fb0aea9b2594433acacdc196cfda217867f59ea6524b409b69dff506fdc9a9a815b93807ff06d4c81404b1f6568a1a41e64178122eaf9ce7732416474f3455
 Size (exabgp/3.4.19.tar.gz) = 543475 bytes
+SHA1 (patch-lib_exabgp_application_healthcheck.py) = d3b3c511e8d4fae60bcc21b7ee23585ee83ae9d8
