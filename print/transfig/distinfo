@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.22 2015/11/04 01:03:01 agc Exp $
+$NetBSD: distinfo,v 1.23 2017/07/15 14:09:22 wiz Exp $
 
 SHA1 (transfig.3.2.5e.tar.gz) = 27aa9691bf84f8775db9be39c453a8132148bad1
 RMD160 (transfig.3.2.5e.tar.gz) = cc919f081483c3f570abeca6a8cadd4796d25015
 SHA512 (transfig.3.2.5e.tar.gz) = ed1379f1112514d90a4b3eecd3222baad311d804b5090e8e66867ec299e4f9a5f8d83ef8939aa6ecaa85a18143b8fb9b97f78e078ac5eeb934a158c55de6bb1e
 Size (transfig.3.2.5e.tar.gz) = 531256 bytes
-SHA1 (patch-aa) = bd898082a8c34825efe04d0102ddb33b2f4cffbd
+SHA1 (patch-aa) = 1c831b806eca90142348aab8e565d020466e6a96
 SHA1 (patch-ab) = b056ff88914bccfc172f15adb663eda0f254e125
-SHA1 (patch-ac) = 0258794cf6f6d22d3355ed01c2cc89c7ee0088d4
+SHA1 (patch-ac) = 6508bac36a86a69b910f5e3b4f08e09a25055dfe
 SHA1 (patch-ae) = d38a07c99e27606a238b3dc89cd938ed9635291d
 SHA1 (patch-fig2dev_dev_genibmgl.c) = 86d75d687066e77f90f5e35914a5edc409708e3e
