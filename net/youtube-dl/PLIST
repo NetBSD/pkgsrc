@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2017/06/23 11:59:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.45 2017/07/15 16:11:44 adam Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -332,6 +332,9 @@ ${PYSITELIB}/youtube_dl/extractor/chirbit.pyo
 ${PYSITELIB}/youtube_dl/extractor/cinchcast.py
 ${PYSITELIB}/youtube_dl/extractor/cinchcast.pyc
 ${PYSITELIB}/youtube_dl/extractor/cinchcast.pyo
+${PYSITELIB}/youtube_dl/extractor/cjsw.py
+${PYSITELIB}/youtube_dl/extractor/cjsw.pyc
+${PYSITELIB}/youtube_dl/extractor/cjsw.pyo
 ${PYSITELIB}/youtube_dl/extractor/clipfish.py
 ${PYSITELIB}/youtube_dl/extractor/clipfish.pyc
 ${PYSITELIB}/youtube_dl/extractor/clipfish.pyo
@@ -872,6 +875,9 @@ ${PYSITELIB}/youtube_dl/extractor/jamendo.pyo
 ${PYSITELIB}/youtube_dl/extractor/jeuxvideo.py
 ${PYSITELIB}/youtube_dl/extractor/jeuxvideo.pyc
 ${PYSITELIB}/youtube_dl/extractor/jeuxvideo.pyo
+${PYSITELIB}/youtube_dl/extractor/joj.py
+${PYSITELIB}/youtube_dl/extractor/joj.pyc
+${PYSITELIB}/youtube_dl/extractor/joj.pyo
 ${PYSITELIB}/youtube_dl/extractor/jove.py
 ${PYSITELIB}/youtube_dl/extractor/jove.pyc
 ${PYSITELIB}/youtube_dl/extractor/jove.pyo
@@ -1181,6 +1187,9 @@ ${PYSITELIB}/youtube_dl/extractor/newstube.pyo
 ${PYSITELIB}/youtube_dl/extractor/nextmedia.py
 ${PYSITELIB}/youtube_dl/extractor/nextmedia.pyc
 ${PYSITELIB}/youtube_dl/extractor/nextmedia.pyo
+${PYSITELIB}/youtube_dl/extractor/nexx.py
+${PYSITELIB}/youtube_dl/extractor/nexx.pyc
+${PYSITELIB}/youtube_dl/extractor/nexx.pyo
 ${PYSITELIB}/youtube_dl/extractor/nfb.py
 ${PYSITELIB}/youtube_dl/extractor/nfb.pyc
 ${PYSITELIB}/youtube_dl/extractor/nfb.pyo
@@ -1715,6 +1724,9 @@ ${PYSITELIB}/youtube_dl/extractor/tagesschau.pyo
 ${PYSITELIB}/youtube_dl/extractor/tass.py
 ${PYSITELIB}/youtube_dl/extractor/tass.pyc
 ${PYSITELIB}/youtube_dl/extractor/tass.pyo
+${PYSITELIB}/youtube_dl/extractor/tastytrade.py
+${PYSITELIB}/youtube_dl/extractor/tastytrade.pyc
+${PYSITELIB}/youtube_dl/extractor/tastytrade.pyo
 ${PYSITELIB}/youtube_dl/extractor/tbs.py
 ${PYSITELIB}/youtube_dl/extractor/tbs.pyc
 ${PYSITELIB}/youtube_dl/extractor/tbs.pyo
@@ -2192,9 +2204,6 @@ ${PYSITELIB}/youtube_dl/extractor/xxxymovies.pyo
 ${PYSITELIB}/youtube_dl/extractor/yahoo.py
 ${PYSITELIB}/youtube_dl/extractor/yahoo.pyc
 ${PYSITELIB}/youtube_dl/extractor/yahoo.pyo
-${PYSITELIB}/youtube_dl/extractor/yam.py
-${PYSITELIB}/youtube_dl/extractor/yam.pyc
-${PYSITELIB}/youtube_dl/extractor/yam.pyo
 ${PYSITELIB}/youtube_dl/extractor/yandexmusic.py
 ${PYSITELIB}/youtube_dl/extractor/yandexmusic.pyc
 ${PYSITELIB}/youtube_dl/extractor/yandexmusic.pyo
