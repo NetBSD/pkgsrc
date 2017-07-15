@@ -1,0 +1,19 @@
+$NetBSD: patch-configure,v 1.3.2.2 2017/07/15 18:51:00 bsiegert Exp $
+
+$(( starts arithmetic expressions, not command evaluation.
+
+--- configure.orig	2017-07-02 23:03:45.185136445 +0000
++++ configure
+@@ -2431,9 +2431,9 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ BSON_CURRENT_FILE=${srcdir}/VERSION_CURRENT
+ BSON_VERSION=$(cat $BSON_CURRENT_FILE)
+ # Ensure newline for "cut" implementations that need it, e.g. HP-UX.
+-BSON_MAJOR_VERSION=$((cat $BSON_CURRENT_FILE; echo) | cut -d- -f1 | cut -d. -f1)
+-BSON_MINOR_VERSION=$((cat $BSON_CURRENT_FILE; echo) | cut -d- -f1 | cut -d. -f2)
+-BSON_MICRO_VERSION=$((cat $BSON_CURRENT_FILE; echo) | cut -d- -f1 | cut -d. -f3)
++BSON_MAJOR_VERSION=$( (cat $BSON_CURRENT_FILE; echo) | cut -d- -f1 | cut -d. -f1)
++BSON_MINOR_VERSION=$( (cat $BSON_CURRENT_FILE; echo) | cut -d- -f1 | cut -d. -f2)
++BSON_MICRO_VERSION=$( (cat $BSON_CURRENT_FILE; echo) | cut -d- -f1 | cut -d. -f3)
+ BSON_PRERELEASE_VERSION=$(cut -s -d- -f2 $BSON_CURRENT_FILE)
+ 
+ 
