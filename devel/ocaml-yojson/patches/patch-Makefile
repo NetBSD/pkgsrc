@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile,v 1.1 2017/07/15 10:13:59 jaapb Exp $
+
+Install ydump properly
+--- Makefile.orig	2016-10-26 23:44:34.000000000 +0000
++++ Makefile
+@@ -30,7 +30,7 @@ META: META.in Makefile
+ 	sed -e 's:@@VERSION@@:$(VERSION):' META.in > META
+ 
+ install: META install-lib
+-	test ! -f ydump$(EXE) || cp ydump $(BINDIR)/
++	test ! -f ydump$(EXE) || $(BSD_INSTALL_PROGRAM) ydump $(DESTDIR)$(BINDIR)/
+ 
+ install-lib:
+ 	ocamlfind install yojson META \
