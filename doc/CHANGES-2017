@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2905 2017/07/16 00:16:49 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.2906 2017/07/16 03:50:52 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4003,3 +4003,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/youtube-dl to 20170715 [adam 2017-07-15]
 	Updated math/amath to 1.8.2 [bsiegert 2017-07-15]
 	Updated mail/getmail to 5.0 [schmonz 2017-07-16]
+	Updated mail/getmail to 5.1 [schmonz 2017-07-16]
