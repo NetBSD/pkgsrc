@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.16 2017/04/12 13:03:08 leot Exp $
+$NetBSD: patch-ac,v 1.17 2017/07/16 08:29:53 leot Exp $
 
 o libtool support 
 o Install target cleanup
@@ -9,7 +9,7 @@ o Get rid of unused VERSION variable and `version:' target (otherwise `git' can
 o Install only one "mupdf" binary, prefer the featureful one and always
   install it as "mupdf"
 
---- Makefile.orig	2017-03-31 14:23:45.000000000 +0000
+--- Makefile.orig	2017-04-05 11:02:21.000000000 +0000
 +++ Makefile
 @@ -57,65 +57,51 @@ ALL_DIR += $(OUT)/platform/gl
  
@@ -37,7 +37,7 @@ o Install only one "mupdf" binary, prefer the featureful one and always
 -WINDRES_CMD = $(QUIET_WINDRES) $(WINDRES) $< $@
 +CC_CMD = ${LIBTOOL} --mode=compile $(CC) $(CFLAGS) -o $@ -c $<
 +CXX_CMD = ${LIBTOOL} --mode=compile $(CXX) $(CFLAGS) -o $@ -c $<
-+AR_CMD = ${LIBTOOL} --mode=link $(CC) -o $@ -version-info 0:0:0 -rpath ${PREFIX}/lib $^
++AR_CMD = ${LIBTOOL} --mode=link $(CC) $(LDFLAGS) -o $@ -version-info 0:0:0 -rpath ${PREFIX}/lib $^
 +LINK_CMD = ${LIBTOOL} --mode=link $(CC) -o $@ $^ $(LDFLAGS) $(LIBS)
 +MKDIR_CMD = mkdir -p $@
 +RM_CMD = rm -f $@
