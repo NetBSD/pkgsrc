@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2017/04/22 08:23:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.85 2017/07/16 19:06:12 maya Exp $
 
 DISTNAME=	gmp-6.1.2
 CATEGORIES=	devel math
@@ -39,11 +39,6 @@ PLIST.cxx=		yes
 
 .if !empty(MACHINE_PLATFORM:MIRIX-5*) && !empty(ABI)
 ABI=			o32
-.endif
-
-.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-# The configure script thinks gcc 2.95 for ARM is too buggy to use.
-GCC_REQD+=		3.0
 .endif
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
