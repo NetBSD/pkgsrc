@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.181 2017/05/16 13:37:24 wiz Exp $
+# $NetBSD: Makefile,v 1.182 2017/07/16 15:30:50 wiz Exp $
 
 DISTNAME=	calibre-2.85.1
 CATEGORIES=	misc
@@ -88,6 +88,7 @@ MAKE_ENV+=		FC_LIB_DIR=${BUILDLINK_PREFIX.fontconfig}/lib
 MAKE_ENV+=		PODOFO_INC_DIR=${BUILDLINK_PREFIX.podofo}/include/podofo
 MAKE_ENV+=		PODOFO_LIB_DIR=${BUILDLINK_PREFIX.podofo}/lib
 MAKE_ENV+=		SIP_BIN=${BUILDLINK_PREFIX.py-sip}/bin/sip${PYVERSSUFFIX}
+MAKE_ENV+=		LFLAGS=${LDFLAGS:Q}
 #MAKE_ENV+=		WITH_USB=no
 
 # Let's depend on the ones we have in pkgsrc instead of the bundled ones.
