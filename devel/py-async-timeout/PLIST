@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/16 20:27:57 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/async_timeout/__init__.py
+${PYSITELIB}/async_timeout/__init__.pyc
+${PYSITELIB}/async_timeout/__init__.pyo
