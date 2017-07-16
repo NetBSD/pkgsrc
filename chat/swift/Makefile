@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/05/03 08:38:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2017/07/16 14:22:58 wiz Exp $
 
 DISTNAME=	swift-3.0
 PKGREVISION=	12
@@ -29,7 +29,7 @@ do-configure:
 	cd ${WRKSRC} ; \
 	${ECHO} "qt=\"${QTDIR}\"" > config.py ;\
 	${ECHO} "qt5=1" >> config.py ;\
-	${ECHO} "linkflags=\"-L${PREFIX}/lib -Wl,-R${QTDIR}/lib -Wl,-R${X11BASE}/lib -Wl,-R${BUILDLINK_DIR}/lib\"" >> config.py ; \
+	${ECHO} "linkflags=\"-L${PREFIX}/lib -Wl,-R${QTDIR}/lib -Wl,-R${X11BASE}/lib -Wl,-R${BUILDLINK_DIR}/lib ${LDFLAGS}\"" >> config.py ; \
 	${ECHO} "ccflags=\"${CXXFLAGS}\"" >> config.py ; \
 	${ECHO} "allow_warnings=\"true\"" >> config.py ;
 
