@@ -1,30 +1,20 @@
-# $NetBSD: Makefile,v 1.8 2015/03/15 16:47:19 hiramatsu Exp $
-#
+# $NetBSD: Makefile,v 1.9 2017/07/16 21:01:06 adam Exp $
 
-DISTNAME=	msgpack-0.5.9
+DISTNAME=	msgpack-2.1.3
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/msgpack/msgpack-c/releases/download/cpp-${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=msgpack/}
+GITHUB_RELEASE=	cpp-${PKGVERSION_NOREV}
+GITHUB_PROJECT=	msgpack-c
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://msgpack.org/
 COMMENT=	Binary-based efficient object serialization library
-LICENSE=	apache-2.0
+LICENSE=	boost-license
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
-
+USE_CMAKE=		yes
+USE_LANGUAGES=		c c++
 PKGCONFIG_OVERRIDE=	msgpack.pc.in
+TEST_TARGET=		test
 
-GCC_REQD+=	4.1
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == "i386"
-CFLAGS+=	-march=i686
-CXXFLAGS+=	-march=i686
-.endif
-
-.include "options.mk"
-
+.include "../../devel/googletest/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
