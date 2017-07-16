@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2910 2017/07/16 12:06:46 leot Exp $
+$NetBSD: CHANGES-2017,v 1.2911 2017/07/16 19:05:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4011,3 +4011,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-yarl version 0.12.0 [adam 2017-07-16]
 	Updated multimedia/libass to 0.13.7 [adam 2017-07-16]
 	Updated multimedia/mpv to 0.25.0nb1 [leot 2017-07-16]
+	Added www/py-aiohttp version 2.2.3 [adam 2017-07-16]
