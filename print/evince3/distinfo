@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.12 2016/11/26 12:44:05 prlw1 Exp $
+$NetBSD: distinfo,v 1.12.6.1 2017/07/16 08:36:06 bsiegert Exp $
 
 SHA1 (evince-3.22.1.tar.xz) = 7b24678035c50c4ccaf76bdd64e228b1c1912d4b
 RMD160 (evince-3.22.1.tar.xz) = e2c5b03a59ec7a7d50b6c34d1aafed4d419fc8a5
 SHA512 (evince-3.22.1.tar.xz) = c36a90bf98f25b4f9f05536f1a09c38be30b814529e17a4ab159ba7c1e952402a211f335d4cdf1928ace8a5b46d6d019fbbd457ce11c2ffa264d8bb7c32d5a18
 Size (evince-3.22.1.tar.xz) = 3365004 bytes
+SHA1 (patch-backend_comics_comics-document.c) = e02d70eb1923aeddf5e372609530707fc335bfb1
+SHA1 (patch-configure) = 23027902cc959891ad4befb49d9fec46ebe0803e
+SHA1 (patch-configure.ac) = 7805a17177a5253f779b7160d8abd4f5d1dbab97
