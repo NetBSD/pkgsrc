@@ -1,0 +1,4 @@
+The Gearman PHP Extension provides a wrapper to libgearman. This
+gives the user the ability to write fully featured Gearman clients
+and workers in PHP, allowing them to quickly develop distributed
+applications.
