@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/07/11 19:47:37 adam Exp $
+# $NetBSD: Makefile,v 1.12 2017/07/16 16:10:05 adam Exp $
 
 DISTNAME=	lldb-4.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -20,6 +20,9 @@ USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
 GCC_REQD+=		4.8
 PY_PATCHPLIST=		yes
+
+# XXX: some old compilers need this; remove for lldb-5.x
+CFLAGS+=	-Wno-non-pod-varargs
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # compilation failure in 3.8.1 (3.8.0 worked)
 
