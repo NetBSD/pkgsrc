@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2017/07/03 16:26:59 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2017/07/16 10:48:17 jmcneill Exp $
 
 SHA1 (firefox-52.2.1esr.source.tar.xz) = 38396fbc760669533f0a4facaa6ec489ae99f320
 RMD160 (firefox-52.2.1esr.source.tar.xz) = 1904238678469340f519416e87b0de6971996f85
@@ -44,6 +44,7 @@ SHA1 (patch-image_decoders_nsJPEGDecoder.cpp) = ed86c3fbb3aef753eec6f6a97940594a
 SHA1 (patch-intl_hyphenation_glue_hnjalloc.h) = abe01bea5872a57f3d00bbbf89f958621f08a655
 SHA1 (patch-intl_unicharutil_util_moz.build) = 2e604c8695b490657ee14cae01ca84d7bd51236c
 SHA1 (patch-ipc_chromium_src_base_atomicops.h) = 24b63a6e51d9ab27f2788ee02f2ffa7e1c36f29a
+SHA1 (patch-ipc_chromium_src_base_atomicops__internals__arm__gcc.h) = cceefce420cfcfc67f74375e3fe5d17a75a562e4
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 99b9f3f9dd88f1c8008d2fb6058450695394f5cf
 SHA1 (patch-ipc_chromium_src_base_platform__thread.h) = c81930280bd76a00fbad37aad02fb8451d80b1ee
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 45409f2152d5ffc376c18c0c9bc696e08e3910ce
@@ -88,6 +89,7 @@ SHA1 (patch-rc) = 9628b038f036f3fc0e37bdf84fa0abf99dbc8d2a
 SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__back.jsm) = 27e90fdfd5587f670958d832cd56107740b226ee
 SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__front.jsm) = 4e5dc7cf11ea3d48cca86b5d21158d676ebd8957
 SHA1 (patch-toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) = 5ffb0782bbbff2fd17ad71e98b349b4ec3dc6c8c
+SHA1 (patch-toolkit_components_protobuf_src_google_protobuf_stubs_atomicops__internals__arm__gcc.h) = bc2bc37518fe76cb2aa8550c52d2c3968e08b9a6
 SHA1 (patch-toolkit_components_protobuf_src_google_protobuf_stubs_platform__macros.h) = bd4388323851fcb7b10392d6a27f9bc56633a52e
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 5b6d2e5c9f685d32894898d3ef3aec09a1a1e5ce
 SHA1 (patch-toolkit_library_moz.build) = d4136a5d3c42f2a44155f029a3201959273c5e94
