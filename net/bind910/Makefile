@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2017/07/01 17:39:44 taca Exp $
+# $NetBSD: Makefile,v 1.35.2.1 2017/07/16 08:09:48 bsiegert Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -13,7 +13,7 @@ CONFLICTS+=	host-[0-9]*
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.10.5-P2
+BIND_VERSION=	9.10.5-P3
 
 .include "../../mk/bsd.prefs.mk"
 
