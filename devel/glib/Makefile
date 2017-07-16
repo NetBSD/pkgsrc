@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2016/04/24 10:48:06 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2017/07/16 19:05:11 maya Exp $
 
 DISTNAME=		glib-1.2.10
 PKGREVISION=		11
@@ -36,10 +36,6 @@ CONFIGURE_ENV.NetBSD+=	glib_cv_rtldglobal_broken=no
 CONFIGURE_ENV+=		glib_cv_has__inline=yes
 CONFIGURE_ENV+=		glib_cv_has__inline__=yes
 CONFIGURE_ENV+=		glib_cv_hasinline=yes
-.endif
-
-.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD+=		3.0
 .endif
 
 GLIB_VERSION=		${DISTNAME:S/glib-//}
