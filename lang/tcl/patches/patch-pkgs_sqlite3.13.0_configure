@@ -1,6 +1,7 @@
-$NetBSD: patch-pkgs_sqlite3.13.0_configure,v 1.1 2016/09/03 11:58:01 adam Exp $
+$NetBSD: patch-pkgs_sqlite3.13.0_configure,v 1.2 2017/07/16 08:50:18 wiz Exp $
 
 Add support for DragonFly.
+Honor LDFLAGS on NetBSD.
 
 --- pkgs/sqlite3.13.0/configure.orig	2016-05-31 15:48:11.000000000 +0000
 +++ pkgs/sqlite3.13.0/configure
@@ -13,7 +14,7 @@ Add support for DragonFly.
  		;;
  	    esac
  	    case "$arch" in
-@@ -7310,8 +7310,6 @@ fi
+@@ -7310,13 +7310,11 @@ fi
  
  fi
  	    # OpenBSD doesn't do version numbers with dots.
@@ -22,6 +23,12 @@ Add support for DragonFly.
  	    ;;
  	NetBSD-*)
  	    # NetBSD has ELF and can use 'cc -shared' to build shared libs
+ 	    SHLIB_CFLAGS="-fPIC"
+-	    SHLIB_LD='${CC} -shared ${SHLIB_CFLAGS}'
++	    SHLIB_LD='${CC} -shared ${SHLIB_CFLAGS} ${LDFLAGS_DEFAULT}'
+ 	    SHLIB_SUFFIX=".so"
+ 	    LDFLAGS="$LDFLAGS -export-dynamic"
+ 	    if test $doRpath = yes; then :
 @@ -7333,7 +7331,7 @@ fi
  
  fi
