@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17527 2017/07/16 09:56:10 wiz Exp $
+$NetBSD: TODO,v 1.17528 2017/07/16 10:05:21 leot Exp $
 
 Suggested new packages
 ======================
@@ -1582,7 +1582,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wcalc-2.4
 	o webalizer-2.23.05
 	o webkit-gtk-2.16.5 [wip; please see TODO though]
-	o webkit24-gtk-2.16.5
 	o websvn-2.3.3
 	o weewm-0.01
 	o wgetpaste-2.26
