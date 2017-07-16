@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.34 2017/04/24 15:18:01 maya Exp $
+$NetBSD: distinfo,v 1.35 2017/07/16 12:06:25 leot Exp $
 
 SHA1 (mpv-0.25.0.tar.gz) = fe98e9afe0a5ed04ef957cb2d0bf014b5c6c6665
 RMD160 (mpv-0.25.0.tar.gz) = fd9c2ebe95ae121de8f2f17aa4e36711457ed758
 SHA512 (mpv-0.25.0.tar.gz) = eefc574e2995ddf6bd15c9b62986a5ca277c30949b036d57a11bbfb796c11c1e6dd7c313abd91a909dd98ca0f2b0be29ec6b980d0287a5891b42b0ffba926cbf
 Size (mpv-0.25.0.tar.gz) = 2874584 bytes
+SHA1 (patch-audio_out_ao__oss.c) = 518f87f39e56d764046a198a9f9429e3c051d67a
 SHA1 (patch-player_main.c) = 842432e448526a9d170e7efd2b01276e36072e16
