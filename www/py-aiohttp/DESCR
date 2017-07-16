@@ -1,0 +1,6 @@
+HTTP client/server for asyncio (PEP 3156).
+
+Features:
+* Supports both Client and HTTP Server.
+* Supports both Server WebSockets and Client WebSockets out-of-the-box.
+* Web-server has Middlewares, Signals and pluggable routing.
