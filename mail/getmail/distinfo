@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.131 2017/07/16 00:16:43 schmonz Exp $
+$NetBSD: distinfo,v 1.132 2017/07/16 03:50:46 schmonz Exp $
 
-SHA1 (getmail-5.0.tar.gz) = 08f31fe07bd51d6a94bf6f4d485ba3299dffe59a
-RMD160 (getmail-5.0.tar.gz) = 5309873b49088e312fa9b710d41867638431f9bf
-SHA512 (getmail-5.0.tar.gz) = 50950746600a5707e4a8cbe0dc3045f9b88f76ca79f5d3c43290d0bdf288a3b17d21a6a891ef8f7a1aaa6d4dda45e552d1644da684ba41a72b42241ab3247dcb
-Size (getmail-5.0.tar.gz) = 194062 bytes
+SHA1 (getmail-5.1.tar.gz) = 9b94f73f1403154a2fb385ddf74ea02dfa13e37b
+RMD160 (getmail-5.1.tar.gz) = 6f32173bf8765c6afd9a152bace22123ea2c8b34
+SHA512 (getmail-5.1.tar.gz) = af826ddc0f3252716868c4e22804e84a0bbf58179830d739794d7e7ba7ab67805e1ab64fbece3a429b662323b42337deeecd4350154a9029f2161f87d50e442e
+Size (getmail-5.1.tar.gz) = 194291 bytes
 SHA1 (patch-setup.py) = ea623975b21dee995eeb3d6dd83c69ee339338f2
