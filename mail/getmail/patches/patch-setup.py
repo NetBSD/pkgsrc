@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2016/04/01 14:00:38 jperkin Exp $
+$NetBSD: patch-setup.py,v 1.1 2017/07/16 00:16:43 schmonz Exp $
 
 Use standard pkgsrc paths, and don't install RPM spec file.
 
---- setup.py.orig	2009-01-08 21:55:25.000000000 +0000
+--- setup.py.orig	2007-11-23 16:26:55.000000000 +0000
 +++ setup.py
 @@ -39,13 +39,12 @@ GETMAILDOCDIR = os.path.join(
      datadir or prefix,
