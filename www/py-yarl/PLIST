@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/16 09:41:18 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/yarl/__init__.py
+${PYSITELIB}/yarl/__init__.pyc
+${PYSITELIB}/yarl/__init__.pyi
+${PYSITELIB}/yarl/__init__.pyo
+${PYSITELIB}/yarl/_quoting.c
+${PYSITELIB}/yarl/_quoting.pyi
+${PYSITELIB}/yarl/_quoting.pyx
+${PYSITELIB}/yarl/_quoting.so
+${PYSITELIB}/yarl/quoting.py
+${PYSITELIB}/yarl/quoting.pyc
+${PYSITELIB}/yarl/quoting.pyo
