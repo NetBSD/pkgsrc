@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.70 2017/07/16 08:50:18 wiz Exp $
+$NetBSD: distinfo,v 1.71 2017/07/16 08:51:46 wiz Exp $
 
 SHA1 (tcl8.6.6-src.tar.gz) = 169dd1589cad62c9fac4257c113db245da502cd0
 RMD160 (tcl8.6.6-src.tar.gz) = 2386a69eb841f8af51c1b124f68e0b812a225cca
@@ -7,7 +7,7 @@ Size (tcl8.6.6-src.tar.gz) = 9553805 bytes
 SHA1 (patch-generic_tclInt.h) = fde6a5458a138b6d61fdbab1269b1c5111a28b22
 SHA1 (patch-generic_tclPort.h) = 36ff05b22591d588952e55d0f13c2ef52e371d1e
 SHA1 (patch-generic_tclPosixStr.c) = 68da211865282fe7124cad71381658f8dfb986d6
-SHA1 (patch-pkgs_itcl4.0.5_configure) = 55c1a3e14247957a1eb26a06cd7327b8ee7e4a87
+SHA1 (patch-pkgs_itcl4.0.5_configure) = d2435269cde29cb2b73126b41df9d14fa4b3098d
 SHA1 (patch-pkgs_sqlite3.13.0_Makefile.in) = 1205936335cda5d413c24da33608a9bbec6a65a9
 SHA1 (patch-pkgs_sqlite3.13.0_configure) = 46cf2337e3b2af95b67537b127445c71d6c973cd
 SHA1 (patch-pkgs_tdbc1.0.4_configure) = 2413c9b1709a0a56e540850f3a6aaa694bf93a74
