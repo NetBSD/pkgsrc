@@ -1,6 +1,7 @@
-$NetBSD: patch-pkgs_tdbcodbc1.0.4_configure,v 1.1 2016/03/06 11:47:49 adam Exp $
+$NetBSD: patch-pkgs_tdbcodbc1.0.4_configure,v 1.2 2017/07/16 08:50:18 wiz Exp $
 
 Add support for DragonFly.
+Honor LDFLAGS on NetBSD.
 
 --- pkgs/tdbcodbc1.0.4/configure.orig	2016-01-28 18:06:52.000000000 +0000
 +++ pkgs/tdbcodbc1.0.4/configure
@@ -14,7 +15,7 @@ Add support for DragonFly.
  		;;
  	    esac
  	    case "$arch" in
-@@ -7885,8 +7884,6 @@ fi
+@@ -7885,13 +7884,11 @@ fi
  
  fi
  	    # OpenBSD doesn't do version numbers with dots.
@@ -23,6 +24,12 @@ Add support for DragonFly.
  	    ;;
  	NetBSD-*)
  	    # NetBSD has ELF and can use 'cc -shared' to build shared libs
+ 	    SHLIB_CFLAGS="-fPIC"
+-	    SHLIB_LD='${CC} -shared ${SHLIB_CFLAGS}'
++	    SHLIB_LD='${CC} -shared ${SHLIB_CFLAGS} ${LDFLAGS_DEFAULT}'
+ 	    SHLIB_SUFFIX=".so"
+ 	    LDFLAGS="$LDFLAGS -export-dynamic"
+ 	    if test $doRpath = yes; then :
 @@ -7908,7 +7905,7 @@ fi
  
  fi
