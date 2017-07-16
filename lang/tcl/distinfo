@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.71 2017/07/16 08:51:46 wiz Exp $
+$NetBSD: distinfo,v 1.72 2017/07/16 09:06:44 wiz Exp $
 
 SHA1 (tcl8.6.6-src.tar.gz) = 169dd1589cad62c9fac4257c113db245da502cd0
 RMD160 (tcl8.6.6-src.tar.gz) = 2386a69eb841f8af51c1b124f68e0b812a225cca
@@ -7,14 +7,14 @@ Size (tcl8.6.6-src.tar.gz) = 9553805 bytes
 SHA1 (patch-generic_tclInt.h) = fde6a5458a138b6d61fdbab1269b1c5111a28b22
 SHA1 (patch-generic_tclPort.h) = 36ff05b22591d588952e55d0f13c2ef52e371d1e
 SHA1 (patch-generic_tclPosixStr.c) = 68da211865282fe7124cad71381658f8dfb986d6
-SHA1 (patch-pkgs_itcl4.0.5_configure) = d2435269cde29cb2b73126b41df9d14fa4b3098d
+SHA1 (patch-pkgs_itcl4.0.5_configure) = 659d90c050ae3f3792d0a809f2af7c13d2a5a333
 SHA1 (patch-pkgs_sqlite3.13.0_Makefile.in) = 1205936335cda5d413c24da33608a9bbec6a65a9
-SHA1 (patch-pkgs_sqlite3.13.0_configure) = 46cf2337e3b2af95b67537b127445c71d6c973cd
-SHA1 (patch-pkgs_tdbc1.0.4_configure) = 2413c9b1709a0a56e540850f3a6aaa694bf93a74
-SHA1 (patch-pkgs_tdbcmysql1.0.4_configure) = 6140196762a898467f5d83950159bf333a1f3f35
-SHA1 (patch-pkgs_tdbcodbc1.0.4_configure) = 28d8d39386244dda3e93b92ad604cd6990b1a256
-SHA1 (patch-pkgs_tdbcpostgres1.0.4_configure) = 247929d01d2b1daba893da4c4eba1a78ea93d69e
-SHA1 (patch-pkgs_thread2.8.0_configure) = c259fa206ea89463833f18aa262ed71b01807071
+SHA1 (patch-pkgs_sqlite3.13.0_configure) = 7f7ca86055256eea1a6d3211653f18667f72a21b
+SHA1 (patch-pkgs_tdbc1.0.4_configure) = 9796693e8ec08ad226db635d94127fd6a6d9af17
+SHA1 (patch-pkgs_tdbcmysql1.0.4_configure) = 2a1304b0d7a9659796883209742f353b2d4d26c8
+SHA1 (patch-pkgs_tdbcodbc1.0.4_configure) = 29aa1914b757cfd4b5e87ba38d23e3cbe40ba2fe
+SHA1 (patch-pkgs_tdbcpostgres1.0.4_configure) = 498cd28bdb53b4e9f1a25d8227bb47576ce4ccfe
+SHA1 (patch-pkgs_thread2.8.0_configure) = 2d130ac4a5cbebeb3a3aae41b8e9827d9bd57f45
 SHA1 (patch-tests_load.test) = 438695ab76e01646e49aadc01c44344a5495eabb
 SHA1 (patch-tests_pkgMkIndex.test) = 70d1042c1f4743052c5fa191fa7c4732a08e28a2
 SHA1 (patch-unix_Makefile.in) = 6fa60e07f21842e987bc20d23d4be82cba5bc905
