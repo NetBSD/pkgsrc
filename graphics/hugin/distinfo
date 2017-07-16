@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.18 2017/07/03 20:48:03 adam Exp $
+$NetBSD: distinfo,v 1.19 2017/07/16 11:37:52 wiz Exp $
 
-SHA1 (hugin-2017.0.tar.bz2) = 4ba7f5bf5afdadbea9cf10d15aa14e644ef94ed3
-RMD160 (hugin-2017.0.tar.bz2) = 2a0cf1af75d384abca0a62d80480fc815f63e0bf
-SHA512 (hugin-2017.0.tar.bz2) = bfd39135119fddb559ecec220da36a4c15d96bda7f93e738d8815aafca94685ba879239202e2cc81c87787188ee3b1b6dc5cbe8014aa12e2f95d654591dc1969
-Size (hugin-2017.0.tar.bz2) = 9803272 bytes
+SHA1 (hugin-2017.0.0.tar.bz2) = 4ba7f5bf5afdadbea9cf10d15aa14e644ef94ed3
+RMD160 (hugin-2017.0.0.tar.bz2) = 2a0cf1af75d384abca0a62d80480fc815f63e0bf
+SHA512 (hugin-2017.0.0.tar.bz2) = bfd39135119fddb559ecec220da36a4c15d96bda7f93e738d8815aafca94685ba879239202e2cc81c87787188ee3b1b6dc5cbe8014aa12e2f95d654591dc1969
+Size (hugin-2017.0.0.tar.bz2) = 9803272 bytes
 SHA1 (patch-CMakeLists.txt) = 9c7f017d8446e61b2cfffe7969f900c63cb229a1
 SHA1 (patch-CMakeModules_FindPNG.cmake) = 811fd3cf6f819b31129e1560cd8acd1f7ee6defc
 SHA1 (patch-doc_deghosting_mask.pod) = fe5462b10966420b0cf3fab004854d9dab3bfb4f
