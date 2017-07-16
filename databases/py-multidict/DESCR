@@ -1,0 +1,6 @@
+Multidict is dict-like collection of key-value pairs where key might be
+occurred more than once in the container.
+
+HTTP Headers and URL query string require specific data structure: multidict.
+It behaves mostly like a regular dict but it may have several values for the
+same key and preserves insertion ordering.

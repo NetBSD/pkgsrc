@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.528 2017/07/14 11:36:27 adam Exp $
+# $NetBSD: Makefile,v 1.529 2017/07/16 09:37:09 adam Exp $
 
 COMMENT=	Databases
 
@@ -345,6 +345,7 @@ SUBDIR+=	py-ldap3
 SUBDIR+=	py-metakit
 SUBDIR+=	py-mongo
 SUBDIR+=	py-mssql
+SUBDIR+=	py-multidict
 SUBDIR+=	py-mysql-connector
 SUBDIR+=	py-mysqldb
 SUBDIR+=	py-orderedmultidict
