@@ -1,4 +1,4 @@
-$NetBSD: patch-pkgs_itcl4.0.5_configure,v 1.2 2017/07/16 08:50:18 wiz Exp $
+$NetBSD: patch-pkgs_itcl4.0.5_configure,v 1.3 2017/07/16 08:51:46 wiz Exp $
 
 Add support for DragonFly.
 Honor LDFLAGS on NetBSD.
@@ -26,7 +26,7 @@ Honor LDFLAGS on NetBSD.
  	    # NetBSD has ELF and can use 'cc -shared' to build shared libs
  	    SHLIB_CFLAGS="-fPIC"
 -	    SHLIB_LD='${CC} -shared ${SHLIB_CFLAGS}'
-+	    SHLIB_LD='${CC} -shared ${SHLIB_CFLAGS} ${LDFLAGS}'
++	    SHLIB_LD='${CC} -shared ${SHLIB_CFLAGS} ${LDFLAGS_DEFAULT}'
  	    SHLIB_SUFFIX=".so"
  	    LDFLAGS="$LDFLAGS -export-dynamic"
  	    if test $doRpath = yes; then :
