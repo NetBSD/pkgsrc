@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2017/01/01 14:43:28 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/07/16 20:42:05 adam Exp $
 
-DISTNAME=	sqlalchemy-migrate-0.9.6
+DISTNAME=	sqlalchemy-migrate-0.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlalchemy-migrate/}
@@ -10,13 +10,14 @@ HOMEPAGE=	https://github.com/stackforge/sqlalchemy-migrate
 COMMENT=	Schema migration tool for SQLAlchemy
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
-
-DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 DEPENDS+=	${PYPKGPREFIX}-Tempita>=0.4:../../textproc/py-Tempita
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.7.8:../../databases/py-sqlalchemy
-DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-sqlparse-[0-9]*:../../databases/py-sqlparse
+DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
+DEPENDS+=	${PYPKGPREFIX}-six>=1.7.0:../../lang/py-six
+
+USE_LANGUAGES=		# none
 
 REPLACE_PYTHON+=	migrate/tests/changeset/databases/test_ibmdb2.py
 REPLACE_PYTHON+=	migrate/tests/changeset/test_changeset.py
@@ -45,6 +46,10 @@ REPLACE_PYTHON+=	migrate/versioning/templates/manage/*.py_tmpl
 REPLACE_PYTHON+=	migrate/versioning/util/__init__.py
 REPLACE_PYTHON+=	migrate/versioning/util/keyedinstance.py
 REPLACE_PYTHON+=	migrate/versioning/version.py
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} migrate migrate${PYVERSSUFFIX} && \
+		${MV} migrate-repository migrate-repository${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
