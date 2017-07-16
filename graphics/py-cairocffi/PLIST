@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/10/05 20:24:57 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/07/16 09:29:58 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,12 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/cairocffi/__init__.py
 ${PYSITELIB}/cairocffi/__init__.pyc
 ${PYSITELIB}/cairocffi/__init__.pyo
+${PYSITELIB}/cairocffi/_ffi.py
+${PYSITELIB}/cairocffi/_ffi.pyc
+${PYSITELIB}/cairocffi/_ffi.pyo
+${PYSITELIB}/cairocffi/_ffi_pixbuf.py
+${PYSITELIB}/cairocffi/_ffi_pixbuf.pyc
+${PYSITELIB}/cairocffi/_ffi_pixbuf.pyo
 ${PYSITELIB}/cairocffi/compat.py
 ${PYSITELIB}/cairocffi/compat.pyc
 ${PYSITELIB}/cairocffi/compat.pyo
@@ -16,6 +22,9 @@ ${PYSITELIB}/cairocffi/constants.pyo
 ${PYSITELIB}/cairocffi/context.py
 ${PYSITELIB}/cairocffi/context.pyc
 ${PYSITELIB}/cairocffi/context.pyo
+${PYSITELIB}/cairocffi/ffi_build.py
+${PYSITELIB}/cairocffi/ffi_build.pyc
+${PYSITELIB}/cairocffi/ffi_build.pyo
 ${PYSITELIB}/cairocffi/fonts.py
 ${PYSITELIB}/cairocffi/fonts.pyc
 ${PYSITELIB}/cairocffi/fonts.pyo
