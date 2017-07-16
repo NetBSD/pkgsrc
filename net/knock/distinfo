@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 00:35:07 agc Exp $
+$NetBSD: distinfo,v 1.4 2017/07/16 21:25:06 adam Exp $
 
-SHA1 (knock-0.5.tar.gz) = 26f3b2f2d698bc6978390ef6e93c628361605059
-RMD160 (knock-0.5.tar.gz) = 089ea289a51478a89945c46469b378c3b33fff6d
-SHA512 (knock-0.5.tar.gz) = c5f7f3320d4d9a41847dba0cda4d66852f983db419b23d3bf9c83d44a41ba437379bf6cee47a096c600841e321740849dac26d5c3afff9b3ae0178a2fcb6c35e
-Size (knock-0.5.tar.gz) = 83990 bytes
-SHA1 (patch-Makefile.in) = c42b1ec9ef1eb91402a078fd6a93938d197eebce
+SHA1 (knock-0.7.tar.gz) = 186a687c9db11733cf23a7423884a863873ebb27
+RMD160 (knock-0.7.tar.gz) = 09a85c7cc7e4eacf1b144a3cfe06737a0308759c
+SHA512 (knock-0.7.tar.gz) = eab5d855f7111d9411e84a56a15e8ea74f41c5bd9dee27ab49f0d8d509eeeb96a60c508928c92916dc0ec9b737c447ca8ca5ed4db6479b389549d60e76a85aa7
+Size (knock-0.7.tar.gz) = 110791 bytes
 SHA1 (patch-doc_knockd.1.in) = 88a7f4a1fd632c4928820858da71f7e39d3b1f43
-SHA1 (patch-src_knockd.c) = b8602ac54f6e05dabe6054907712a4269f87ee12
