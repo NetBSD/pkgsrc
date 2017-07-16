@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1257 2017/07/16 09:41:18 adam Exp $
+# $NetBSD: Makefile,v 1.1258 2017/07/16 19:04:16 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -602,6 +602,7 @@ SUBDIR+=	py-URLObject
 SUBDIR+=	py-WSGIProxy2
 SUBDIR+=	py-WebOb
 SUBDIR+=	py-WebTest
+SUBDIR+=	py-aiohttp
 SUBDIR+=	py-asgiref
 SUBDIR+=	py-autobahn
 SUBDIR+=	py-beautifulsoup
