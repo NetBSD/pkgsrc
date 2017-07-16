@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2017/07/09 09:04:00 maya Exp $
+# $NetBSD: Makefile,v 1.5 2017/07/16 10:48:17 jmcneill Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-PKGREVISION=		1
+PKGREVISION=		2
 MOZ_BRANCH=		52.2
 MOZ_BRANCH_MINOR=	.1esr
 
