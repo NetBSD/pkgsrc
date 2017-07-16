@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2013/02/06 19:30:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/16 21:25:06 adam Exp $
 
-DISTNAME=	knock-0.5
-PKGREVISION=	2
+DISTNAME=	knock-0.7
 CATEGORIES=	net
 MASTER_SITES=	http://www.zeroflux.org/proj/knock/files/
 
@@ -13,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=		c
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${EGDIR}
 
 BUILD_DEFS+=	VARBASE
 
@@ -28,6 +27,9 @@ SUBST_MESSAGE.paths=	Fixing absolute paths.
 SUBST_FILES.paths=	src/knockd.c
 SUBST_SED.paths=	-e 's,"/etc,"${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,"/var,"${VARBASE},g'
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/${PKGMANDIR} && ${MV} man1/knockd.1 man8/knockd.8 || ${TRUE}
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
