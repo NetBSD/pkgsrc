@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2464 2017/07/16 20:27:57 adam Exp $
+# $NetBSD: Makefile,v 1.2465 2017/07/17 03:26:33 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -538,6 +538,7 @@ SUBDIR+=	libhfs
 SUBDIR+=	libhid
 SUBDIR+=	libiberty
 SUBDIR+=	libidn
+SUBDIR+=	libidn2
 SUBDIR+=	libindicator
 SUBDIR+=	libindicator-tools
 SUBDIR+=	libindicator3
