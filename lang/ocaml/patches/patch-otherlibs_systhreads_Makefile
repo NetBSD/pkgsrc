@@ -1,10 +1,36 @@
-$NetBSD: patch-otherlibs_systhreads_Makefile,v 1.5 2016/05/05 08:12:01 jaapb Exp $
+$NetBSD: patch-otherlibs_systhreads_Makefile,v 1.6 2017/07/17 23:26:23 wiz Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp
 
---- otherlibs/systhreads/Makefile.orig	2016-04-01 12:53:41.000000000 +0000
+--- otherlibs/systhreads/Makefile.orig	2017-06-23 15:13:40.000000000 +0000
 +++ otherlibs/systhreads/Makefile
-@@ -86,21 +86,21 @@ INSTALL_STUBLIBDIR=$(DESTDIR)$(STUBLIBDI
+@@ -29,6 +29,7 @@ OPTCOMPFLAGS=-O3
+ else
+ OPTCOMPFLAGS=
+ endif
++LDOPTS=-ldopt "$(LDFLAGS)"
+ 
+ BYTECODE_C_OBJS=st_stubs_b.o
+ NATIVECODE_C_OBJS=st_stubs_n.o
+@@ -40,7 +41,7 @@ all: libthreads.a threads.cma
+ allopt: libthreadsnat.a threads.cmxa
+ 
+ libthreads.a: $(BYTECODE_C_OBJS)
+-	$(MKLIB) -o threads $(BYTECODE_C_OBJS) $(PTHREAD_LINK)
++	$(MKLIB) -o threads $(BYTECODE_C_OBJS) $(PTHREAD_LINK) $(LDOPTS)
+ 
+ st_stubs_b.o: st_stubs.c st_posix.h
+ 	$(BYTECC) -I../../byterun $(BYTECCCOMPOPTS) $(SHAREDCCCOMPOPTS) \
+@@ -60,7 +61,7 @@ st_stubs_n.o: st_stubs.c st_posix.h
+ 
+ threads.cma: $(THREAD_OBJS)
+ 	$(MKLIB) -ocamlc '$(CAMLC)' -o threads $(THREAD_OBJS) \
+-	  -cclib -lunix $(PTHREAD_CAML_LINK)
++	  -cclib -lunix $(PTHREAD_CAML_LINK) $(LDOPTS)
+ 
+ # See remark above: force static linking of libthreadsnat.a
+ threads.cmxa: $(THREAD_OBJS:.cmo=.cmx)
+@@ -86,21 +87,21 @@ INSTALL_STUBLIBDIR=$(DESTDIR)$(STUBLIBDI
  
  install:
  	if test -f dllthreads.so; then \
