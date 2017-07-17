@@ -1,0 +1,15 @@
+$NetBSD: patch-yacc_Makefile,v 1.1 2017/07/17 23:26:23 wiz Exp $
+
+Honor LDFLAGS when building ocamlyacc.
+
+--- yacc/Makefile.orig	2017-06-23 15:13:40.000000000 +0000
++++ yacc/Makefile
+@@ -27,7 +27,7 @@ OBJS= closure.$(O) error.$(O) lalr.$(O) 
+ all: ocamlyacc$(EXE)
+ 
+ ocamlyacc$(EXE): $(OBJS)
+-	$(MKEXE) -o ocamlyacc$(EXE) $(OBJS) $(EXTRALIBS)
++	$(MKEXE) $(BYTECCLINKOPTS) -o ocamlyacc$(EXE) $(OBJS) $(EXTRALIBS)
+ 
+ version.h : ../VERSION
+ 	echo "#define OCAML_VERSION \"`sed -e 1q $^ | tr -d '\r'`\"" > $@
