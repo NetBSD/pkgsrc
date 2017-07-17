@@ -1,0 +1,52 @@
+$NetBSD: patch-src_netsys_Makefile,v 1.1 2017/07/17 12:30:55 jaapb Exp $
+
+Add rules to produce .cmxs files
+--- src/netsys/Makefile.orig	2016-06-19 14:49:12.000000000 +0000
++++ src/netsys/Makefile
+@@ -41,6 +41,12 @@ OPT_EXTRA = netsys_oothr.cmxa netsys_c_g
+ OPTP_EXTRA = netsys_oothr.p.cmxa netsys_gprof_init.cmx
+ OPTMT_EXTRA = netsys_oothr_mt.cmxa netsys_oothr_mt_init.cmx
+ OPTMTP_EXTRA = netsys_oothr_mt.p.cmxa netsys_oothr_mt_init.cmx
++ifeq ($(HAVE_SHARED),1)
++OPT_EXTRA += netsys_oothr.cmxs
++OPTP_EXTRA += netsys_oothr.p.cmxs
++OPTMT_EXTRA += netsys_oothr_mt.cmxs
++OPTMTP_EXTRA += netsys_oothr_mt.p.cmxs
++endif
+ # Note: we cannot refer here to *.p.cmx because there is no direct
+ # rule to build these files from .ml. They are implicitly built
+ # when the corresponding *.cmx (without .p) is created.
+@@ -81,9 +87,15 @@ netsys_oothr.cma: netsys_oothr.cmo
+ netsys_oothr.cmxa: netsys_oothr.cmx
+ 	$(OCAMLOPT) -o netsys_oothr.cmxa -a netsys_oothr.cmx
+ 
++netsys_oothr.cmxs: netsys_oothr.cmxa
++	$(OCAMLOPT) -linkall -shared -o netsys_oothr.cmxs netsys_oothr.cmxa
++
+ netsys_oothr.p.cmxa: netsys_oothr.cmx
+ 	$(OCAMLOPT) -o netsys_oothr.p.cmxa -a netsys_oothr.p.cmx
+ 
++netsys_oothr.p.cmxs: netsys_oothr.p.cmxa
++	$(OCAMLOPT) -linkall -shared -o netsys_oothr.p.cmxs netsys_oothr.p.cmxa
++
+ netsys_oothr_mt.cma: netsys_oothr.cmo netsys_oothr_mt.cmo
+ 	$(OCAMLC) -o netsys_oothr_mt.cma -a \
+ 		netsys_oothr.cmo netsys_oothr_mt.cmo
+@@ -92,10 +104,17 @@ netsys_oothr_mt.cmxa: netsys_oothr.cmx n
+ 	$(OCAMLOPT) -o netsys_oothr_mt.cmxa -a \
+ 		netsys_oothr.cmx netsys_oothr_mt.cmx
+ 
++netsys_oothr_mt.cmxs: netsys_oothr_mt.cmxa
++	$(OCAMLOPT) -linkall -shared -o netsys_oothr_mt.cmxs netsys_oothr_mt.cmxa
++
+ netsys_oothr_mt.p.cmxa: netsys_oothr.cmx netsys_oothr-$(MT_TYPE)
+ 	$(OCAMLOPT) -o netsys_oothr_mt.p.cmxa -a \
+ 		netsys_oothr.p.cmx netsys_oothr_mt.p.cmx
+ 
++netsys_oothr_mt.p.cmxs: netsys_oothr_mt.p.cmxa
++	$(OCAMLOPT) -linkall -shared -o netsys_oothr_mt.p.cmxs \
++		netsys_oothr_mt.p.cmxa
++
+ .PHONY: netsys_oothr-vm netsys_oothr-posix
+ netsys_oothr-vm:
+ 
