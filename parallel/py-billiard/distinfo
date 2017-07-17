@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2017/04/09 16:43:03 adam Exp $
+$NetBSD: distinfo,v 1.10 2017/07/17 08:03:50 adam Exp $
 
-SHA1 (billiard-3.5.0.2.tar.gz) = 19c7f8aab3402b15fc17760b1eb9e9695522154e
-RMD160 (billiard-3.5.0.2.tar.gz) = 5fd2f87ad024218e8e7b0f0ea12155f3640a4481
-SHA512 (billiard-3.5.0.2.tar.gz) = 581e1ac361324b36d79e280072952e490ef3470709b094f001c579feda54578c8e7b3e5afc93a5f878a6118c56afff7e59e13b3d3f2ccb2564b9b27cc810dae7
-Size (billiard-3.5.0.2.tar.gz) = 157299 bytes
+SHA1 (billiard-3.5.0.3.tar.gz) = 82091e800282ff0b118edfc8709d50fbe9483199
+RMD160 (billiard-3.5.0.3.tar.gz) = ec32d742102221cd090f939f761a7363d4ed7096
+SHA512 (billiard-3.5.0.3.tar.gz) = f3a98e9b7af8c0b5741bcea915c0ff8d6e32e26d79637d14fc09ea85dd80693ea8205e13ac2d86e5035c377fdd6d769a2647b005dc10af8b106c75464458a808
+Size (billiard-3.5.0.3.tar.gz) = 149339 bytes
