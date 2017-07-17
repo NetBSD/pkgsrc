@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2918 2017/07/17 12:31:16 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.2919 2017/07/17 16:09:49 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4026,3 +4026,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-hypothesis to 3.13.0 [adam 2017-07-17]
 	Updated parallel/py-billiard to 3.5.0.3 [adam 2017-07-17]
 	Updated net/ocamlnet to 4.1.2nb5 [jaapb 2017-07-17]
+	Added mail/mailsend version 1.19 [jperkin 2017-07-17]
