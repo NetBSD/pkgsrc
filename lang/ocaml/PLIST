@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2017/03/27 12:51:58 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.40 2017/07/17 09:45:36 jaapb Exp $
 bin/ocaml
 bin/ocamlc
 bin/ocamlc.byte
@@ -1248,12 +1248,6 @@ lib/ocaml/stringLabels.cmt
 lib/ocaml/stringLabels.cmti
 lib/ocaml/stringLabels.ml
 lib/ocaml/stringLabels.mli
-lib/ocaml/stublibs/dllbigarray.so
-lib/ocaml/stublibs/dllcamlstr.so
-lib/ocaml/stublibs/dllnums.so
-lib/ocaml/stublibs/dllthreads.so
-lib/ocaml/stublibs/dllunix.so
-lib/ocaml/stublibs/dllvmthreads.so
 lib/ocaml/sys.cmi
 lib/ocaml/sys.cmt
 lib/ocaml/sys.cmti
