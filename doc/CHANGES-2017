@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2916 2017/07/17 07:06:52 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2917 2017/07/17 08:04:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4024,3 +4024,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/libidn2 version 2.0.0 [schmonz 2017-07-17]
 	Updated devel/py-vine to 1.1.4 [adam 2017-07-17]
 	Updated devel/py-hypothesis to 3.13.0 [adam 2017-07-17]
+	Updated parallel/py-billiard to 3.5.0.3 [adam 2017-07-17]
