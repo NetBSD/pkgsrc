@@ -1,0 +1,7 @@
+Libidn2 is a free software implementation of IDNA2008, Punycode and TR46
+in the form of a library. It contains functionality to convert
+internationalized domain names to and from ASCII Compatible Encoding
+(ACE), following the IDNA2008 and TR46 standards.
+
+The library is a rewrite of the popular but legacy libidn library, and
+is backwards (API) compatible with it.
