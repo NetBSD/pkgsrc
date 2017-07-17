@@ -1,0 +1,4 @@
+mailsend is a simple command line program to send mail via SMTP protocol.
+
+The program does not use any config file and everything needed to compose
+mails (and attachments) is driven via command line parameters.
