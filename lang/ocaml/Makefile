@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2017/07/12 07:52:28 he Exp $
+# $NetBSD: Makefile,v 1.111 2017/07/17 23:26:23 wiz Exp $
 
 .include "Makefile.common"
 
@@ -72,6 +72,8 @@ PLIST_SRC+=	${PKGDIR}/PLIST
 INSTALL_MAKE_FLAGS+=	SHELL=${SH:Q}
 .endif
 
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
+
 OPSYSVARS+=		EXTRA_RT_LIBS
 EXTRA_RT_LIBS.NetBSD=	-lcurses
 EXTRA_RT_LIBS.*=
@@ -81,11 +83,17 @@ SUBST_FILES.extra-rt-libs=	bytecomp/bytelink.ml
 SUBST_SED.extra-rt-libs+=	-e 's,@EXTRA_RT_LIBS@,${EXTRA_RT_LIBS},g'
 SUBST_STAGE.extra-rt-libs=	pre-configure
 
+SUBST_CLASSES+=		linkopts
+SUBST_FILES.linkopts=	configure
+SUBST_SED.linkopts+=	-e '\|bytecclinkopts=|s|""|"${LDFLAGS}"|'
+SUBST_SED.linkopts+=	-e "\|nativecclinkopts=|s|''|\"${LDFLAGS:C/-Wl,//}\"|"
+SUBST_STAGE.linkopts=	pre-configure
+SUBST_MESSAGE.linkopts=	Honor LDFLAGS.
+
 do-test:
 	cd ${WRKSRC}/testsuite && ${MAKE_PROGRAM} all
 
 post-install:
-	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	set -e ; cd ${DESTDIR}${PREFIX}/lib/ocaml/${PKGMANDIR}/man1;	\
 	for m in *; do							\
 	  ln -s ${PREFIX}/lib/ocaml/${PKGMANDIR}/man1/$$m		\
