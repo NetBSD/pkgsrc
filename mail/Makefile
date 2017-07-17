@@ -147,6 +147,7 @@ SUBDIR+=	mailfront
 SUBDIR+=	mailgraph
 SUBDIR+=	mailhops
 SUBDIR+=	mailman
+SUBDIR+=	mailsend
 SUBDIR+=	mailserv
 SUBDIR+=	mailsort
 SUBDIR+=	mailsync
