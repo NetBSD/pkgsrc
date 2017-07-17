@@ -1,10 +1,39 @@
-$NetBSD: patch-otherlibs_threads_Makefile,v 1.7 2016/05/05 08:12:01 jaapb Exp $
+$NetBSD: patch-otherlibs_threads_Makefile,v 1.8 2017/07/17 23:26:23 wiz Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp
 
---- otherlibs/threads/Makefile.orig	2016-04-01 12:53:41.000000000 +0000
+--- otherlibs/threads/Makefile.orig	2017-06-23 15:13:40.000000000 +0000
 +++ otherlibs/threads/Makefile
-@@ -109,14 +109,14 @@ INSTALL_STUBLIBDIR=$(DESTDIR)$(STUBLIBDI
+@@ -31,6 +31,8 @@ C_OBJS=scheduler.o
+ 
+ CAML_OBJS=thread.cmo mutex.cmo condition.cmo event.cmo threadUnix.cmo
+ 
++LDOPTS=-ldopt "$(LDFLAGS)"
++
+ LIB=../../stdlib
+ 
+ LIB_OBJS=$(LIB)/camlinternalFormatBasics.cmo pervasives.cmo		\
+@@ -59,16 +61,16 @@ all: libvmthreads.a threads.cma stdlib.c
+ allopt:
+ 
+ libvmthreads.a: $(C_OBJS)
+-	$(MKLIB) -o threads -oc vmthreads $(C_OBJS)
++	$(MKLIB) -o threads -oc vmthreads $(C_OBJS) $(LDOPTS)
+ 
+ threads.cma: $(CAML_OBJS)
+-	$(MKLIB) -ocamlc '$(CAMLC)' -o threads -oc vmthreads $(CAML_OBJS)
++	$(MKLIB) -ocamlc '$(CAMLC)' -o threads -oc vmthreads $(CAML_OBJS) $(LDOPTS)
+ 
+ stdlib.cma: $(LIB_OBJS)
+ 	$(CAMLC) -a -o stdlib.cma $(LIB_OBJS)
+ 
+ unix.cma: $(UNIXLIB_OBJS)
+-	$(MKLIB) -ocamlc '$(CAMLC)' -o unix -linkall $(UNIXLIB_OBJS)
++	$(MKLIB) -ocamlc '$(CAMLC)' -o unix -linkall $(UNIXLIB_OBJS) $(LDOPTS)
+ 
+ pervasives.cmo: pervasives.mli pervasives.cmi pervasives.ml
+ 	$(CAMLC) ${COMPFLAGS} -nopervasives -c pervasives.ml
+@@ -109,14 +111,14 @@ INSTALL_STUBLIBDIR=$(DESTDIR)$(STUBLIBDI
  
  install:
  	if test -f dllvmthreads.so; then \

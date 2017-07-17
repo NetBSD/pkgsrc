@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.106 2017/07/12 07:52:28 he Exp $
+$NetBSD: distinfo,v 1.107 2017/07/17 23:26:23 wiz Exp $
 
 SHA1 (ocaml-4.04.2.tar.gz) = 24281675ea90c9234e323d556f1d4cd7bdab8ec1
 RMD160 (ocaml-4.04.2.tar.gz) = 3d8f78cd544815233f814a0e24eba8d3c948b190
@@ -19,10 +19,11 @@ SHA1 (patch-driver_optmain.ml) = 5ce77f1f906ce59cb533b4d25e4d57f7a70ab1b3
 SHA1 (patch-man_Makefile) = f4fcde662061e7e7e664ec42617f1e37f1fcf214
 SHA1 (patch-ocamldoc_Makefile) = ba4e2c76e1f2832988dd6933cd9d68a7ba3fb870
 SHA1 (patch-ocamldoc_odoc__messages.ml) = 77f650a5f34f40b9648a8d5091e9aa31efb5734b
+SHA1 (patch-otherlibs_Makefile) = e7b777dd1c5723eb5950db38525fd9565258801f
 SHA1 (patch-otherlibs_bigarray_mmap__unix.c) = 39979990e3463c944598ac0d0bf8a2c4a3f0d558
 SHA1 (patch-otherlibs_dynlink_Makefile) = f892254a5e5a01462ecbf68e45f9bfe5783158d3
-SHA1 (patch-otherlibs_systhreads_Makefile) = d731864c613383b36846cae4961b7a221bd6160e
-SHA1 (patch-otherlibs_threads_Makefile) = 47331a06a93eac68403fa2114495782430087f1e
+SHA1 (patch-otherlibs_systhreads_Makefile) = cc579ea90c738b6ae8a377d15695b907b630e660
+SHA1 (patch-otherlibs_threads_Makefile) = 3d01ed6de00d8d1991e7cd3ec4fa004f542792e9
 SHA1 (patch-stdlib_Makefile) = 67591b1809dd72aac446238491e371d135466734
 SHA1 (patch-stdlib_Makefile.shared) = dac87da3b0461a2c816b862af3a0c0bdf740b749
 SHA1 (patch-testsuite_tests_tool-ocamldoc-man_Makefile) = 41c7d6ffa98ed4f4fe261d6ed890be045c55adaf
@@ -32,3 +33,4 @@ SHA1 (patch-tools_ocamlmklib) = 49ea077e3f77527336548ae6515d135461b83080
 SHA1 (patch-tools_ocamloptp.ml) = bb6ba38e9bb260117d67491566474fda750d708b
 SHA1 (patch-utils_clflags.ml) = d16832fedb5db08d035f1661eaf9c3b48411bc69
 SHA1 (patch-utils_clflags.mli) = 381951d9583e032d3a520b68a8fe9f867ec49995
+SHA1 (patch-yacc_Makefile) = e7e77becbc1872fedd37bdeb4614739eb67977c8
