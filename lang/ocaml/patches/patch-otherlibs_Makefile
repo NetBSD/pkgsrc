@@ -1,0 +1,23 @@
+$NetBSD: patch-otherlibs_Makefile,v 1.6 2017/07/17 23:26:23 wiz Exp $
+
+Honor LDFLAGS.
+
+--- otherlibs/Makefile.orig	2017-06-23 15:13:40.000000000 +0000
++++ otherlibs/Makefile
+@@ -32,7 +32,7 @@ CAMLOPT=$(CAMLRUN) $(ROOTDIR)/ocamlopt -
+ CFLAGS=-I$(ROOTDIR)/byterun $(SHAREDCCCOMPOPTS) $(EXTRACFLAGS)
+ 
+ # Compilation options
+-CC=$(BYTECC)
++CC=$(BYTECC) $(BYTECCLINKOPTS)
+ COMPFLAGS=-absname -w +a-4-9-41-42-44-45-48 -warn-error A -bin-annot -g \
+           -safe-string -strict-sequence -strict-formats $(EXTRACAMLFLAGS)
+ ifeq "$(FLAMBDA)" "true"
+@@ -53,6 +53,7 @@ MKLIB=$(CAMLRUN) $(ROOTDIR)/tools/ocamlm
+ #LINKOPTS=
+ #LDOPTS=
+ #HEADERS=
++LDOPTS=-ldopt "$(LDFLAGS)"
+ 
+ CMIFILES ?= $(CAMLOBJS:.cmo=.cmi)
+ CAMLOBJS_NAT ?= $(CAMLOBJS:.cmo=.cmx)
