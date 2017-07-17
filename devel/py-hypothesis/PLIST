@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/07/07 15:41:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/07/17 07:05:34 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -81,9 +81,6 @@ ${PYSITELIB}/hypothesis/internal/conjecture/minimizer.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/utils.py
 ${PYSITELIB}/hypothesis/internal/conjecture/utils.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/utils.pyo
-${PYSITELIB}/hypothesis/internal/deferredformat.py
-${PYSITELIB}/hypothesis/internal/deferredformat.pyc
-${PYSITELIB}/hypothesis/internal/deferredformat.pyo
 ${PYSITELIB}/hypothesis/internal/detection.py
 ${PYSITELIB}/hypothesis/internal/detection.pyc
 ${PYSITELIB}/hypothesis/internal/detection.pyo
@@ -96,6 +93,9 @@ ${PYSITELIB}/hypothesis/internal/floats.pyo
 ${PYSITELIB}/hypothesis/internal/intervalsets.py
 ${PYSITELIB}/hypothesis/internal/intervalsets.pyc
 ${PYSITELIB}/hypothesis/internal/intervalsets.pyo
+${PYSITELIB}/hypothesis/internal/lazyformat.py
+${PYSITELIB}/hypothesis/internal/lazyformat.pyc
+${PYSITELIB}/hypothesis/internal/lazyformat.pyo
 ${PYSITELIB}/hypothesis/internal/reflection.py
 ${PYSITELIB}/hypothesis/internal/reflection.pyc
 ${PYSITELIB}/hypothesis/internal/reflection.pyo
@@ -117,6 +117,9 @@ ${PYSITELIB}/hypothesis/searchstrategy/deferred.pyo
 ${PYSITELIB}/hypothesis/searchstrategy/flatmapped.py
 ${PYSITELIB}/hypothesis/searchstrategy/flatmapped.pyc
 ${PYSITELIB}/hypothesis/searchstrategy/flatmapped.pyo
+${PYSITELIB}/hypothesis/searchstrategy/lazy.py
+${PYSITELIB}/hypothesis/searchstrategy/lazy.pyc
+${PYSITELIB}/hypothesis/searchstrategy/lazy.pyo
 ${PYSITELIB}/hypothesis/searchstrategy/misc.py
 ${PYSITELIB}/hypothesis/searchstrategy/misc.pyc
 ${PYSITELIB}/hypothesis/searchstrategy/misc.pyo
