@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/04/25 22:06:34 brook Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/18 17:24:31 brook Exp $
 #
 
-VERS=		0.2
+VERS=		0.3
 PKGNAME=	R2pkg-${VERS}
 CATEGORIES=	pkgtools
 
@@ -14,6 +14,8 @@ WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
 USE_LANGUAGES=		# none
 AUTO_MKDIRS=		yes
+
+DEPENDS+=		curl>=7.52.1:../../www/curl
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure
