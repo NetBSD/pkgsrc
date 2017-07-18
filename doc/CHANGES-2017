@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2921 2017/07/18 05:12:50 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2922 2017/07/18 10:19:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4030,3 +4030,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/php-gearman version 2.0.3 [jperkin 2017-07-17]
 	Updated devel/py-test-mock to 1.6.2 [adam 2017-07-18]
 	Updated net/py-apache-libcloud to 2.1.0 [adam 2017-07-18]
+	Updated devel/jenkins-lts to 2.60.1 [ryoon 2017-07-18]
