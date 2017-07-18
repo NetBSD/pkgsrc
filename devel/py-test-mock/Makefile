@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2017/04/14 07:13:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/07/18 05:02:03 adam Exp $
 
-DISTNAME=	pytest-mock-1.6.0
+DISTNAME=	pytest-mock-1.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-mock/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://pypi.python.org/pypi/pytest-mock
 COMMENT=	Thin-wrapper around the mock package for easier use with py.test
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-test>=2.7:../../devel/py-test
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 .include "../../lang/python/pyversion.mk"
