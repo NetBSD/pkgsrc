@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/05/31 08:50:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2017/07/18 13:52:13 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -60,6 +60,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhpub.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhpub.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhpub_rfc5114_2.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhpub_rfc5114_2.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/DH/rfc3526.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/vec.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/DSA/FIPS_186-2/KeyPair.rsp
 ${PYSITELIB}/cryptography_vectors/asymmetric/DSA/FIPS_186-2/PQGGen.rsp
@@ -182,6 +183,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/Traditional_OpenSSL_Serialization/k
 ${PYSITELIB}/cryptography_vectors/asymmetric/Traditional_OpenSSL_Serialization/key2.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/Traditional_OpenSSL_Serialization/testrsa-encrypted.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/Traditional_OpenSSL_Serialization/testrsa.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/X25519/rfc7748.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/public/PKCS1/dsa.pub.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/public/PKCS1/rsa.pub.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/public/PKCS1/rsa.pub.pem
@@ -288,6 +290,25 @@ ${PYSITELIB}/cryptography_vectors/ciphers/AES/CBC/CBCVarKey256.rsp
 ${PYSITELIB}/cryptography_vectors/ciphers/AES/CBC/CBCVarTxt128.rsp
 ${PYSITELIB}/cryptography_vectors/ciphers/AES/CBC/CBCVarTxt192.rsp
 ${PYSITELIB}/cryptography_vectors/ciphers/AES/CBC/CBCVarTxt256.rsp
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/DVPT128.rsp
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/DVPT128.txt
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/DVPT192.rsp
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/DVPT192.txt
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/DVPT256.rsp
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/DVPT256.txt
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/Readme.txt
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/VADT128.rsp
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/VADT192.rsp
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/VADT256.rsp
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/VNT128.rsp
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/VNT192.rsp
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/VNT256.rsp
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/VPT128.rsp
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/VPT192.rsp
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/VPT256.rsp
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/VTT128.rsp
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/VTT192.rsp
+${PYSITELIB}/cryptography_vectors/ciphers/AES/CCM/VTT256.rsp
 ${PYSITELIB}/cryptography_vectors/ciphers/AES/CFB/CFB128GFSbox128.rsp
 ${PYSITELIB}/cryptography_vectors/ciphers/AES/CFB/CFB128GFSbox192.rsp
 ${PYSITELIB}/cryptography_vectors/ciphers/AES/CFB/CFB128GFSbox256.rsp
@@ -399,6 +420,8 @@ ${PYSITELIB}/cryptography_vectors/ciphers/Camellia/camellia-256-ecb.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/Camellia/camellia-cbc.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/Camellia/camellia-cfb.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/Camellia/camellia-ofb.txt
+${PYSITELIB}/cryptography_vectors/ciphers/ChaCha20Poly1305/boringssl.txt
+${PYSITELIB}/cryptography_vectors/ciphers/ChaCha20Poly1305/openssl.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/IDEA/idea-cbc.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/IDEA/idea-cfb.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/IDEA/idea-ecb.txt
