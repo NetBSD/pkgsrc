@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17533 2017/07/18 14:25:55 jaapb Exp $
+$NetBSD: TODO,v 1.17534 2017/07/18 23:05:14 kim Exp $
 
 Suggested new packages
 ======================
@@ -1395,7 +1395,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scew-1.1.7
 	o scilab-5.5.2
 	o scm-5f2
-	o screen-4.6.1
 	o scribus-1.5.2
 	o scripts-1.0.1
 	o scrollz-2.3
