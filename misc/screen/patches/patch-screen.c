@@ -1,10 +1,10 @@
-$NetBSD: patch-screen.c,v 1.4 2017/04/15 22:31:49 kim Exp $
+$NetBSD: patch-screen.c,v 1.5 2017/07/18 23:02:18 kim Exp $
 
 Use standard headers.
 
---- screen.c.orig	2017-01-17 19:28:29.000000000 +0000
-+++ screen.c
-@@ -88,6 +88,8 @@
+--- screen.c.orig	2017-07-10 19:26:25.000000000 +0000
++++ screen.c	2017-07-18 22:40:56.000000000 +0000
+@@ -95,6 +95,8 @@
  # include <langinfo.h>
  #endif
  
