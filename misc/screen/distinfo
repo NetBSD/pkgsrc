@@ -1,21 +1,20 @@
-$NetBSD: distinfo,v 1.46 2017/04/15 22:31:49 kim Exp $
+$NetBSD: distinfo,v 1.47 2017/07/18 23:02:18 kim Exp $
 
-SHA1 (screen-4.5.1.tar.gz) = d096ea40c7a349ec46f3bd4fcc02fd6a873318e6
-RMD160 (screen-4.5.1.tar.gz) = 2e8aa5ec158fc7d240df176dff0b9ddfcbfc9056
-SHA512 (screen-4.5.1.tar.gz) = ca53477ad38264be38efb1d10a1337b647dd061127162c77533b17a30d046cd0caabe38e4a9e5389aac30d5dc62eb53e7877411e69adae36d0ca869bd0a82804
-Size (screen-4.5.1.tar.gz) = 963153 bytes
+SHA1 (screen-4.6.1.tar.gz) = 444dae1c6d2ff0b7dfd774b4e53e49c69de811ee
+RMD160 (screen-4.6.1.tar.gz) = a1177ec2938c06d9d660cc7c05d002c9a702b014
+SHA512 (screen-4.6.1.tar.gz) = e5d029400ed5b509ebddc1f55812c33536d6f5ce91119537c7d06e1fa7dee84939c43337df4638f61c818ce0412f4d08fe212202162a4483a9e84bbc4b3e4336
+Size (screen-4.6.1.tar.gz) = 848979 bytes
 SHA1 (patch-aa) = 39c6fa5bda62b2891cecf4a5e9598b179ea8b4dc
 SHA1 (patch-ab) = 40911979a540645db2a17861328292add22898d3
-SHA1 (patch-ae) = 8792f7877c0a29701d7d0643e93360813ed7db0f
-SHA1 (patch-ai) = d93147f4e8a2026a1892c3cbd14a929d81e0e635
-SHA1 (patch-aj) = e9996135629085c44867b9264648b2b507e91f98
-SHA1 (patch-ak) = 31982e692cabf25be31bd1758fe1aeb1a4787629
+SHA1 (patch-ae) = 2a9b19c52cafe238c923977c9952af0ec0b0d9f6
+SHA1 (patch-ai) = edefc44e47066dc89bda22a94d417511f46f0190
+SHA1 (patch-aj) = 446b07f7f418dd0c83fb5bc6246a01cc4417b03b
+SHA1 (patch-ak) = 1aaf82f7fe666d86a9f4ab7d6f7222e895a17bba
 SHA1 (patch-al) = caabc33ee51922d97edac19346ad9d80fabb164b
 SHA1 (patch-am) = a721e311e7dde7938de0e9546a7892bfd104ebd1
 SHA1 (patch-an) = bda6c65148410a6c9a13afd8ad34f93e33731552
 SHA1 (patch-ao) = 91eecb62351aff720447eb48ea85aae70b62f9b6
-SHA1 (patch-ap) = 4176e95502754206d6840ce228c61371df947650
-SHA1 (patch-doc_screen.texinfo) = ddce313668c7f9d27973e62042dcdc11f23307b5
-SHA1 (patch-screen.c) = fa54bfdbefcf74944a677ab4b6636d0072e57267
-SHA1 (patch-socket.c) = 09683cee3685a5c6d625e86aa97f6a09f4280b56
-SHA1 (patch-tty.sh) = 93b1fe856cf16640295cb822d60118dbd3734602
+SHA1 (patch-ap) = 1f11b50826b3e4d61540351911d21214d3ab83cc
+SHA1 (patch-screen.c) = de5d8468100ab88cbdb842e21b04b00221e798b8
+SHA1 (patch-socket.c) = ef7d3cb14f0199383c0e750af48f19537eb0b36d
+SHA1 (patch-tty.sh) = 6d0d8f60740a3f7167d3d064a8979858a9b01bb0

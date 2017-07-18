@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.7 2016/06/20 16:04:44 ryoon Exp $
+$NetBSD: patch-ai,v 1.8 2017/07/18 23:02:18 kim Exp $
 
-This glues in the code from patch-am (see also path-al and patch-an).
+This glues in the code from patch-am (see also patch-al and patch-an).
 
 --- os.h.orig	2016-06-19 19:41:03.000000000 +0000
 +++ os.h
