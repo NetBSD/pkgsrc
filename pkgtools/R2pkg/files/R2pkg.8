@@ -1,6 +1,6 @@
-.\"	$NetBSD: R2pkg.8,v 1.1 2015/04/25 22:06:34 brook Exp $
+.\"	$NetBSD: R2pkg.8,v 1.2 2017/07/18 17:24:32 brook Exp $
 .\"
-.\" Copyright (c) 2014,2015
+.\" Copyright (c) 2014,2015,2016,2017
 .\"	Brook Milligan.  All rights reserved.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
@@ -28,7 +28,7 @@
 .\" SUCH DAMAGE.
 .\"
 .\"
-.Dd April 25, 2015
+.Dd February 23, 2017
 .Dt R2pkg 8
 .Os
 .Sh NAME
@@ -36,8 +36,9 @@
 .Nd create a pkgsrc package for an R package
 .Sh SYNOPSIS
 .Nm
-.Op Fl DVehqv
+.Op Fl DVehqruv
 .Op Fl E Ar editor
+.Op Fl R Ar dependency_file
 .Op Ar package
 .Sh DESCRIPTION
 .Nm
@@ -47,9 +48,11 @@ that should be turned into a
 .Xr pkgsrc 7
 package in the current directory.  The generated package includes a
 .Pa Makefile
-and a mostly complete set of files to get the package going.  However, the files should be reviewed and perhaps adjusted manually after 
+and a mostly complete set of files to get the package going.  However,
+the files should be reviewed and perhaps adjusted manually after
 .Nm
-has finished its job.  To help with this, the original versions of files created by
+has finished its job.  To help with this, the original versions of
+files created by
 .Nm
 are preserved for reference.
 .Pp
@@ -59,7 +62,8 @@ intended to fly on autopilot.
 .Pp
 The
 .Pa Makefile
-contains all of the variables required for an R package, with information being taken from the package's
+contains all of the variables required for an R package, with
+information being taken from the package's
 .Pa DESCRIPTION
 file on CRAN, which is automatically fetched by
 .Nm .
@@ -73,8 +77,6 @@ are completed,
 .Nm
 fetches the package and computes its checksum via the
 .Ic makesum
-target.  Then the package is extracted via the
-.Ic extract
 target.
 .Pp
 If the user does not supply the
@@ -88,13 +90,22 @@ The following options are available:
 .It Fl D
 Write the package's description into
 .Pa DESCRIPTION .
-This may be useful for verifying the information obtained from CRAN.  However, this file must be removed as it is not part of a
+This may be useful for verifying the information obtained from CRAN.
+However, this file must be removed as it is not part of a
 .Xr pkgsrc 7
 package.
 .It Fl E Ar editor
 Use
 .Ar editor 
 instead of the user's default editor.
+.It Fl R Ar dependency_file
+Process dependency packages recursively using
+.Pa dependency_file
+to record dependency information.  This option is intended for
+internal use only to implement recursion over dependencies.  Instead,
+the
+.Fl r
+option should be used to select recursion.
 .It Fl V
 Print the version.
 .It Fl e
@@ -103,8 +114,39 @@ Do not edit Makefile and DESCR.
 Produce a short help message.
 .It Fl q
 Do not produce status messages along the way.
+.It Fl r
+Process dependency packages recursively.  A
+.Pa depends
+file is created that lists the dependencies in
+.Xr tsort 1
+order.  This is likely the best order for testing the resulting
+dependency packages.  In particular, a useful strategy for creating
+packages recursively is to (i) run
+.Nm
+with the
+.Fl r
+option, (ii) fix all the leaf packages, (iii) rerun
+.Nm
+with the
+.Fl r
+option, and (iv) continue until all packages are created.  Repeating
+runs of
+.Nm
+once the leaf dependencies are moved into the correct categories will
+allow the program to capture the correct dependencies in each
+.Pa Makefile .
+.It Fl u
+Update the
+.Xr pkgsrc 7
+package.
+.Nm
+must be run in an R package directory, which is assumed to be named as
+.Pa R-package .
+The name of the package to be updated will be taken from the directory
+name and need not be given on the command line.
 .It Fl v
-Generate verbose output.  This may be repeated to increase the verbosity.
+Generate verbose output.  This may be repeated to increase the
+verbosity.
 .El
 .Sh ENVIRONMENT
 The following environment variables affect the execution of
@@ -129,7 +171,8 @@ package for the R package
 .Dl mkdir R-foo
 .Dl cd R-foo
 .Dl R2pkg foo
-Remember to test the resulting package and remove any extra files created by
+Remember to test the resulting package and remove any extra files
+created by
 .Nm .
 .Sh BUGS
 .Nm
@@ -137,10 +180,14 @@ does not create a finished package; instead, it facilitates the task.
 However, the resulting files must be reviewed and possibly edited by
 hand.  Although dependencies are included in the generated
 .Pa Makefile ,
-they are only comments; no attempt is made to find corresponding
-packages within 
-.Xr pkgsrc 7 .
-As a consequence, the category of dependencies is also not determined.
+they are not fully analyzed and likely have incorrect category
+information.  Packages created recursively for dependencies are placed
+in a newly created, nonstandard
+.Pa pkgsrc/R
+category directory and must be moved to appropriate category
+directories within
+.Xr pkgsrc 7
+and checked for correctness.
 .Sh SEE ALSO
 .Xr pkgsrc 7
 .Sh AUTHORS
