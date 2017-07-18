@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/05/20 23:54:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/18 10:18:58 ryoon Exp $
 #
 
-J_VERSION=	2.46.2
+J_VERSION=	2.60.1
 
 MASTER_SITES=	http://mirrors.jenkins-ci.org/war-stable/${J_VERSION}/
 
