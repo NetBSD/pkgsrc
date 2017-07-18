@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2017/06/24 21:17:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2017/07/18 18:39:37 wiz Exp $
 bin/mutt
 bin/pgpewrap
 bin/pgpring
@@ -10,14 +10,18 @@ man/man1/smime_keys.1
 man/man5/mbox.5
 man/man5/mmdf.5
 man/man5/muttrc.5
+share/doc/mutt/CODE_OF_CONDUCT.md
 share/doc/mutt/COPYRIGHT
-share/doc/mutt/ChangeLog
-share/doc/mutt/ChangeLog.neomutt
+share/doc/mutt/ChangeLog.md
 share/doc/mutt/INSTALL
 share/doc/mutt/LICENSE.md
 share/doc/mutt/PGP-Notes.txt
 share/doc/mutt/README.SSL
 share/doc/mutt/README.md
+share/doc/mutt/colorschemes/neonwolf-256.muttrc
+share/doc/mutt/colorschemes/solarized-dark-256.muttrc
+share/doc/mutt/colorschemes/vombatidae.mutt
+share/doc/mutt/colorschemes/zenburn.muttrc
 share/doc/mutt/hcache-bench/README.md
 share/doc/mutt/hcache-bench/muttrc
 share/doc/mutt/hcache-bench/neomutt-hcache-bench.sh
@@ -32,6 +36,11 @@ share/doc/mutt/keybase/pagerMode.png
 share/doc/mutt/keybase/pgpdecrypt.sh
 share/doc/mutt/keybase/pgpverify.sh
 share/doc/mutt/keybase/verify.sh
+share/doc/mutt/logo/mutt-128.png
+share/doc/mutt/logo/mutt-256.png
+share/doc/mutt/logo/mutt-32.png
+share/doc/mutt/logo/mutt-64.png
+share/doc/mutt/logo/mutt.svg
 share/doc/mutt/lua/test_lua-api_runner.muttrc
 share/doc/mutt/lua/test_lua-api_spec.lua
 share/doc/mutt/manual.txt
