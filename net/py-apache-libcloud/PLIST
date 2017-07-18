@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/05/10 17:58:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/07/18 05:12:27 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -359,6 +359,9 @@ ${PYSITELIB}/libcloud/container/drivers/dummy.pyo
 ${PYSITELIB}/libcloud/container/drivers/ecs.py
 ${PYSITELIB}/libcloud/container/drivers/ecs.pyc
 ${PYSITELIB}/libcloud/container/drivers/ecs.pyo
+${PYSITELIB}/libcloud/container/drivers/gke.py
+${PYSITELIB}/libcloud/container/drivers/gke.pyc
+${PYSITELIB}/libcloud/container/drivers/gke.pyo
 ${PYSITELIB}/libcloud/container/drivers/joyent.py
 ${PYSITELIB}/libcloud/container/drivers/joyent.pyc
 ${PYSITELIB}/libcloud/container/drivers/joyent.pyo
@@ -618,9 +621,6 @@ ${PYSITELIB}/libcloud/test/backup/fixtures/dimensiondata/server_server.xml
 ${PYSITELIB}/libcloud/test/backup/fixtures/dimensiondata/server_server_NOBACKUP.xml
 ${PYSITELIB}/libcloud/test/backup/fixtures/dimensiondata/server_server_e75ead52_692f_4314_8725_c8a4f4d13a87.xml
 ${PYSITELIB}/libcloud/test/backup/fixtures/dimensiondata/server_server_e75ead52_692f_4314_8725_c8a4f4d13a87_DEFAULT.xml
-${PYSITELIB}/libcloud/test/backup/test_base.py
-${PYSITELIB}/libcloud/test/backup/test_base.pyc
-${PYSITELIB}/libcloud/test/backup/test_base.pyo
 ${PYSITELIB}/libcloud/test/backup/test_dimensiondata_v2_3.py
 ${PYSITELIB}/libcloud/test/backup/test_dimensiondata_v2_3.pyc
 ${PYSITELIB}/libcloud/test/backup/test_dimensiondata_v2_3.pyo
@@ -1962,6 +1962,7 @@ ${PYSITELIB}/libcloud/test/compute/fixtures/voxel/unauthorized.xml
 ${PYSITELIB}/libcloud/test/compute/fixtures/vpsnet/_available_clouds_api10json_templates.json
 ${PYSITELIB}/libcloud/test/compute/fixtures/vultr/create_key_pair.json
 ${PYSITELIB}/libcloud/test/compute/fixtures/vultr/create_node.json
+${PYSITELIB}/libcloud/test/compute/fixtures/vultr/error_rate_limit.txt
 ${PYSITELIB}/libcloud/test/compute/fixtures/vultr/list_images.json
 ${PYSITELIB}/libcloud/test/compute/fixtures/vultr/list_key_pairs.json
 ${PYSITELIB}/libcloud/test/compute/fixtures/vultr/list_locations.json
@@ -1988,6 +1989,9 @@ ${PYSITELIB}/libcloud/test/compute/test_bluebox.pyo
 ${PYSITELIB}/libcloud/test/compute/test_brightbox.py
 ${PYSITELIB}/libcloud/test/compute/test_brightbox.pyc
 ${PYSITELIB}/libcloud/test/compute/test_brightbox.pyo
+${PYSITELIB}/libcloud/test/compute/test_bsnl.py
+${PYSITELIB}/libcloud/test/compute/test_bsnl.pyc
+${PYSITELIB}/libcloud/test/compute/test_bsnl.pyo
 ${PYSITELIB}/libcloud/test/compute/test_cloudscale.py
 ${PYSITELIB}/libcloud/test/compute/test_cloudscale.pyc
 ${PYSITELIB}/libcloud/test/compute/test_cloudscale.pyo
@@ -2000,6 +2004,9 @@ ${PYSITELIB}/libcloud/test/compute/test_cloudsigma_v2_0.pyo
 ${PYSITELIB}/libcloud/test/compute/test_cloudstack.py
 ${PYSITELIB}/libcloud/test/compute/test_cloudstack.pyc
 ${PYSITELIB}/libcloud/test/compute/test_cloudstack.pyo
+${PYSITELIB}/libcloud/test/compute/test_cloudwatt.py
+${PYSITELIB}/libcloud/test/compute/test_cloudwatt.pyc
+${PYSITELIB}/libcloud/test/compute/test_cloudwatt.pyo
 ${PYSITELIB}/libcloud/test/compute/test_deployment.py
 ${PYSITELIB}/libcloud/test/compute/test_deployment.pyc
 ${PYSITELIB}/libcloud/test/compute/test_deployment.pyo
@@ -2045,9 +2052,18 @@ ${PYSITELIB}/libcloud/test/compute/test_hostvirtual.pyo
 ${PYSITELIB}/libcloud/test/compute/test_ikoula.py
 ${PYSITELIB}/libcloud/test/compute/test_ikoula.pyc
 ${PYSITELIB}/libcloud/test/compute/test_ikoula.pyo
+${PYSITELIB}/libcloud/test/compute/test_indosat.py
+${PYSITELIB}/libcloud/test/compute/test_indosat.pyc
+${PYSITELIB}/libcloud/test/compute/test_indosat.pyo
+${PYSITELIB}/libcloud/test/compute/test_internetsolutions.py
+${PYSITELIB}/libcloud/test/compute/test_internetsolutions.pyc
+${PYSITELIB}/libcloud/test/compute/test_internetsolutions.pyo
 ${PYSITELIB}/libcloud/test/compute/test_joyent.py
 ${PYSITELIB}/libcloud/test/compute/test_joyent.pyc
 ${PYSITELIB}/libcloud/test/compute/test_joyent.pyo
+${PYSITELIB}/libcloud/test/compute/test_kili.py
+${PYSITELIB}/libcloud/test/compute/test_kili.pyc
+${PYSITELIB}/libcloud/test/compute/test_kili.pyo
 ${PYSITELIB}/libcloud/test/compute/test_ktucloud.py
 ${PYSITELIB}/libcloud/test/compute/test_ktucloud.pyc
 ${PYSITELIB}/libcloud/test/compute/test_ktucloud.pyo
@@ -2057,9 +2073,15 @@ ${PYSITELIB}/libcloud/test/compute/test_libvirt_driver.pyo
 ${PYSITELIB}/libcloud/test/compute/test_linode.py
 ${PYSITELIB}/libcloud/test/compute/test_linode.pyc
 ${PYSITELIB}/libcloud/test/compute/test_linode.pyo
+${PYSITELIB}/libcloud/test/compute/test_medone.py
+${PYSITELIB}/libcloud/test/compute/test_medone.pyc
+${PYSITELIB}/libcloud/test/compute/test_medone.pyo
 ${PYSITELIB}/libcloud/test/compute/test_nephoscale.py
 ${PYSITELIB}/libcloud/test/compute/test_nephoscale.pyc
 ${PYSITELIB}/libcloud/test/compute/test_nephoscale.pyo
+${PYSITELIB}/libcloud/test/compute/test_ntta.py
+${PYSITELIB}/libcloud/test/compute/test_ntta.pyc
+${PYSITELIB}/libcloud/test/compute/test_ntta.pyo
 ${PYSITELIB}/libcloud/test/compute/test_onapp.py
 ${PYSITELIB}/libcloud/test/compute/test_onapp.pyc
 ${PYSITELIB}/libcloud/test/compute/test_onapp.pyo
@@ -2146,6 +2168,8 @@ ${PYSITELIB}/libcloud/test/container/fixtures/ecs/listtasks.json
 ${PYSITELIB}/libcloud/test/container/fixtures/ecs/registertaskdefinition.json
 ${PYSITELIB}/libcloud/test/container/fixtures/ecs/runtask.json
 ${PYSITELIB}/libcloud/test/container/fixtures/ecs/stoptask.json
+${PYSITELIB}/libcloud/test/container/fixtures/gke/zones_us-central1-a_instance_serverconfig.json
+${PYSITELIB}/libcloud/test/container/fixtures/gke/zones_us-central1-a_list.json
 ${PYSITELIB}/libcloud/test/container/fixtures/kubernetes/_api_v1_namespaces.json
 ${PYSITELIB}/libcloud/test/container/fixtures/kubernetes/_api_v1_namespaces_default.json
 ${PYSITELIB}/libcloud/test/container/fixtures/kubernetes/_api_v1_namespaces_default_DELETE.json
@@ -2168,9 +2192,6 @@ ${PYSITELIB}/libcloud/test/container/fixtures/rancher/ex_search_services.json
 ${PYSITELIB}/libcloud/test/container/fixtures/rancher/list_containers.json
 ${PYSITELIB}/libcloud/test/container/fixtures/rancher/start_container.json
 ${PYSITELIB}/libcloud/test/container/fixtures/rancher/stop_container.json
-${PYSITELIB}/libcloud/test/container/test_base.py
-${PYSITELIB}/libcloud/test/container/test_base.pyc
-${PYSITELIB}/libcloud/test/container/test_base.pyo
 ${PYSITELIB}/libcloud/test/container/test_docker.py
 ${PYSITELIB}/libcloud/test/container/test_docker.pyc
 ${PYSITELIB}/libcloud/test/container/test_docker.pyo
@@ -2180,6 +2201,12 @@ ${PYSITELIB}/libcloud/test/container/test_docker_utils.pyo
 ${PYSITELIB}/libcloud/test/container/test_ecs.py
 ${PYSITELIB}/libcloud/test/container/test_ecs.pyc
 ${PYSITELIB}/libcloud/test/container/test_ecs.pyo
+${PYSITELIB}/libcloud/test/container/test_gke.py
+${PYSITELIB}/libcloud/test/container/test_gke.pyc
+${PYSITELIB}/libcloud/test/container/test_gke.pyo
+${PYSITELIB}/libcloud/test/container/test_joyent.py
+${PYSITELIB}/libcloud/test/container/test_joyent.pyc
+${PYSITELIB}/libcloud/test/container/test_joyent.pyo
 ${PYSITELIB}/libcloud/test/container/test_kubernetes.py
 ${PYSITELIB}/libcloud/test/container/test_kubernetes.pyc
 ${PYSITELIB}/libcloud/test/container/test_kubernetes.pyo
@@ -2727,10 +2754,7 @@ ${PYSITELIB}/libcloud/test/loadbalancer/test_softlayer.py
 ${PYSITELIB}/libcloud/test/loadbalancer/test_softlayer.pyc
 ${PYSITELIB}/libcloud/test/loadbalancer/test_softlayer.pyo
 ${PYSITELIB}/libcloud/test/pricing_test.json
-${PYSITELIB}/libcloud/test/secrets.py
 ${PYSITELIB}/libcloud/test/secrets.py-dist
-${PYSITELIB}/libcloud/test/secrets.pyc
-${PYSITELIB}/libcloud/test/secrets.pyo
 ${PYSITELIB}/libcloud/test/storage/__init__.py
 ${PYSITELIB}/libcloud/test/storage/__init__.pyc
 ${PYSITELIB}/libcloud/test/storage/__init__.pyo
@@ -2795,6 +2819,9 @@ ${PYSITELIB}/libcloud/test/storage/fixtures/s3/list_multipart_2.xml
 ${PYSITELIB}/libcloud/test/storage/test_atmos.py
 ${PYSITELIB}/libcloud/test/storage/test_atmos.pyc
 ${PYSITELIB}/libcloud/test/storage/test_atmos.pyo
+${PYSITELIB}/libcloud/test/storage/test_aurora.py
+${PYSITELIB}/libcloud/test/storage/test_aurora.pyc
+${PYSITELIB}/libcloud/test/storage/test_aurora.pyo
 ${PYSITELIB}/libcloud/test/storage/test_azure_blobs.py
 ${PYSITELIB}/libcloud/test/storage/test_azure_blobs.pyc
 ${PYSITELIB}/libcloud/test/storage/test_azure_blobs.pyo
@@ -2813,6 +2840,9 @@ ${PYSITELIB}/libcloud/test/storage/test_google_storage.pyo
 ${PYSITELIB}/libcloud/test/storage/test_local.py
 ${PYSITELIB}/libcloud/test/storage/test_local.pyc
 ${PYSITELIB}/libcloud/test/storage/test_local.pyo
+${PYSITELIB}/libcloud/test/storage/test_ninefold.py
+${PYSITELIB}/libcloud/test/storage/test_ninefold.pyc
+${PYSITELIB}/libcloud/test/storage/test_ninefold.pyo
 ${PYSITELIB}/libcloud/test/storage/test_oss.py
 ${PYSITELIB}/libcloud/test/storage/test_oss.pyc
 ${PYSITELIB}/libcloud/test/storage/test_oss.pyo

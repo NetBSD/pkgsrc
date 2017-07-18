@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/05/10 17:58:32 adam Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/18 05:12:27 adam Exp $
 
-DISTNAME=	apache-libcloud-2.0.0
+DISTNAME=	apache-libcloud-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/apache-libcloud/}
@@ -13,8 +13,12 @@ LICENSE=	apache-2.0
 USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-
 BUILD_DEPENDS+=	${PYPKGPREFIX}-requests-mock-[0-9]*:../../devel/py-requests-mock
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
+post-extract:
+	find ${WRKSRC}/libcloud -type f -name .DS_Store -delete
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
