@@ -1,7 +1,7 @@
 #!/bin/sh
 # R2pkg
 #
-# Copyright (c) 2014,2015
+# Copyright (c) 2014,2015,2016,2017
 #	Brook Milligan.  All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -34,34 +34,43 @@
 NAME="R2pkg"
 VERS="@VERS@"
 
-USAGE="${NAME} [-DVehqv] [-E editor] [package] -- create an R package for pkgsrc"
+USAGE="${NAME} [-DVehqrv] [-E editor] [-R dependency_file] [package] -- create an R package for pkgsrc"
 
 : ${CRAN_URL:=ftp://cran.r-project.org}
 : ${PKGEDITOR:=${EDITOR:=vi}}
 
 # Substituted by pkgsrc at pre-configure time.
 MAKE=@MAKE@
-ECHO=echo
 EDIT=1
 QUIET=0
+RECURSIVE=0
+TOP_LEVEL=1
+UPDATE=0
 VERBOSE=0
 
-while getopts DE:Vehqv f
+DESCRIPTION_CONNECTION=connection
+
+while getopts DE:R:Vehqruv f
 do
     case $f in
-	D) DESCRIPTION=yes;;
-	E) PKGEDITOR=${OPTARG};;
+	D) DESCRIPTION=yes; DESCRIPTION_CONNECTION="'DESCRIPTION'"; ARGS="${ARGS} -D";;
+	E) PKGEDITOR=${OPTARG}; ARGS="${ARGS} -E ${PKGEDITOR}";;
+	R) DEPENDENCY_LIST=${OPTARG}; RECURSIVE=1; TOP_LEVEL=0; ARGS="${ARGS} -R ${DEPENDENCY_LIST}";;
 	V) echo "${NAME} v${VERS}"; exit 0;;
-	e) EDIT=0;;
+	e) EDIT=0; ARGS="${ARGS} -e";;
 	h) echo ${USAGE}; exit 0;;
-	q) ECHO=":"; QUIET=1;;
-	v) VERBOSE=$((${VERBOSE}+1));;
+	q) QUIET=1; ARGS="${ARGS} -q";;
+	r) RECURSIVE=1; RECURSIVE_MESSAGE=1; ARGS="${ARGS} -r";;
+	u) UPDATE=1;;
+	v) VERBOSE=$((${VERBOSE}+1)); ARGS="${ARGS} -v";;
         \?) echo ${USAGE}; exit 1;;
     esac
 done
 shift `expr ${OPTIND} - 1`
 
-if [ ${#} -eq 0 ]; then
+if [ ${UPDATE} -eq 1 ]; then
+    RPKG=$(echo $(basename $(pwd)) | sed -e 's/^R-//');
+elif [ ${#} -eq 0 ]; then
     read -p "package: " RPKG TAIL
     if [ "X${TAIL}" != "X" ]; then
 	echo "Error: multiple package names given."
@@ -75,15 +84,52 @@ else
     exit 1
 fi
 
-if [ ${VERBOSE} -eq 0 ]; then
-    STDOUT=">/dev/null 2>&1"
-    STDOUT2=">/dev/null 2>&1"
-elif [ ${VERBOSE} -eq 1 ]; then
-    STDOUT=""
-    STDOUT2=">/dev/null 2>&1"
+R_FILE=${TMPDIR}/R2pkg.$$.R
+
+if [ ${TOP_LEVEL} -eq 1 ]; then
+    BANNER_MSG="===> Creating R package: R-${RPKG}"
 else
-    STDOUT=""
-    STDOUT2=""
+    BANNER_MSG="===> Creating dependency package: R-${RPKG}"
+fi
+if [ "X${DEPENDENCY_LIST}" = "X" ]; then
+    DEPENDENCY_LIST=${TMPDIR}/R2pkg.depends.$$
+    ARGS="${ARGS} -R ${DEPENDENCY_LIST}"
+fi
+if [ ${QUIET} -eq 1 ]; then
+    STDOUT_MAKESUM=">/dev/null"
+    STDOUT_EXTRACT=">/dev/null"
+    QUIET_CURL="TRUE"
+    ECHO_BANNER=":"
+    ECHO_DONE=":"
+    ECHO_FETCH=":"
+    ECHO_EXTRACT=":"
+    if [ ${TOP_LEVEL} -eq 0 ]; then
+	ECHO=":"
+    fi
+elif [ ${VERBOSE} -eq 0 ]; then
+    STDOUT_MAKESUM=">/dev/null"
+    STDOUT_EXTRACT=">/dev/null"
+    QUIET_CURL="TRUE"
+    ECHO_BANNER="echo"
+    ECHO_DONE=":"
+    ECHO_FETCH=":"
+    ECHO_EXTRACT="echo"
+elif [ ${VERBOSE} -eq 1 ]; then
+    STDOUT_MAKESUM=">/dev/null"
+    STDOUT_EXTRACT=">/dev/null"
+    QUIET_CURL="TRUE"
+    ECHO_BANNER="echo"
+    ECHO_DONE="echo"
+    ECHO_FETCH="echo"
+    ECHO_EXTRACT="echo"
+else
+    STDOUT_MAKESUM=""
+    STDOUT_EXTRACT=""
+    QUIET_CURL="FALSE"
+    ECHO_BANNER="echo"
+    ECHO_DONE="echo"
+    ECHO_FETCH="echo"
+    ECHO_EXTRACT="echo"
 fi
 
 CRAN_PACKAGES=pub/R/web/packages
@@ -91,8 +137,8 @@ RPKG_DESCRIPTION_URL=${CRAN_URL}/${CRAN_PACKAGES}/${RPKG}/DESCRIPTION
 
 check_for_R ()
 {
-    R_CMD="R --no-save ${STDOUT2}"
-    echo "q()" | eval ${R_CMD}
+    R_CMD="Rscript --no-save /dev/null"
+    eval ${R_CMD}
     if [ ${?} -ne 0 ]; then
 	echo "ERROR: math/R package is not installed."
 	exit 1
@@ -108,10 +154,12 @@ preserve_original_files ()
 
 make_package ()
 {
-    R_CMD="R --no-save ${STDOUT2}"
-    [ "X${DESCRIPTION}" != "X" ] && DESCRIPTION_CMD="copy.description(connection)"
-    cat << EOF | eval ${R_CMD}
-one.line <- function(s) gsub(' *\n *',' ',s)
+    R_CMD="Rscript --no-save ${R_FILE}"
+    cat << EOF > ${R_FILE}
+trim.space <- function(s) gsub('[[:space:]]','',s)
+trim.blank <- function(s) gsub('[[:blank:]]','',s)
+one.space <- function(s) gsub('[[:blank:]]+',' ',s)
+one.line <- function(s) gsub('\n',' ',s)
 pkg.vers <- function(s) gsub('_','.',s)
 field <- function(key,value) paste(key,'=\t',value,sep='')
 
@@ -164,26 +212,107 @@ license <- function(s) field(todo.license(s),pkgsrc.license(s))
 categories <- function() paste('CATEGORIES=',paste(basename(dirname(getwd())),'R'),sep='	')
 description <- function(s) strwrap(s,width=71)
 
-depends <- function(s1,s2)
+filter.imports <- function(s)
+{
+  base.packages <- c('R','MASS','Matrix','Rcpp','cluster','grDevices','graphics','grid','foreign','lattice','nlme','methods','nnet','parallel','rpart','stats','survival','tools','utils')
+  for (pkg in base.packages)
+    {
+      re.pkg <- paste('^',pkg,sep='')
+      s <- s[!grepl(re.pkg,s)]
+    }
+  s
+}
+
+make.imports <- function(s1,s2)
 {
   s <- paste2(s1,s2)
-  imports <- na.omit(strsplit(one.line(s),', *')[[1]])
-  DEPENDS <- ''
+  s <- gsub('([[:alnum:]]+)[[:blank:]]+(\\\([^\\\)]*\\\))?[[:blank:]]*,?','\\\\1 \\\\2,',s)
+  imports <- na.omit(unlist(strsplit(s,',[[:blank:]]*')))
+  imports <- trim.space(imports)
+  imports <- filter.imports(imports)
+  imports
+}
+
+make.dependency <- function(s)
+{
+  s <- gsub('\\\\)','',s)
+  s <- unlist(strsplit(s,'\\\\('))
+  s
+}
+
+depends <- function(s1,s2)
+{
+  imports <- make.imports(s1,s2)
+  DEPENDS <- list()
   if (length(imports) > 0)
     {
       for (i in 1:length(imports))
         {
-          dependency <- strsplit(imports[i],' *\\\\( *')[[1]]
+          dependency <- make.dependency(imports[i])
           depends <- dependency[1]
-          depends.vers <- ifelse(length(dependency) == 2, dependency[2], '>=???')
-          depends.vers <- gsub(' ','',depends.vers)
-          depends.vers <- pkg.vers(gsub('\\\\)','',depends.vers))
-          depends.line <- paste('# DEPENDS+=\tR-',depends,depends.vers,':../../CATEGORY/R-',depends,sep='')
-          DEPENDS <- paste(DEPENDS,depends.line,sep='\n')
+          depends.pkg <- Sys.glob(paste('../../*/R-',depends,sep=''))
+          if (length(depends.pkg) != 1) # a unique dependency cannot be found
+            {
+              if (${RECURSIVE})
+                {
+                  dependency.dir <- paste('../../R/R-',depends,sep='')
+                  dir.create(path=dependency.dir,recursive=TRUE)
+                  error <- system(paste('(cd',dependency.dir,'&& R2pkg.sh ${ARGS}',depends,')'))
+                  if (error != 0)
+                    file.remove(dependency.dir)
+                }
+            }
+          depends.pkg <- Sys.glob(paste('../../*/R-',depends,sep=''))
+          if (length(depends.pkg) == 1) # a unique dependency found
+            {
+              depends.pkg.fullname <- system(paste('cd',depends.pkg,'&& bmake show-var VARNAME=PKGNAME'),intern=TRUE)
+              depends.pkg.name <- sub('^(.*)-([^-]*)$','\\\\1',depends.pkg.fullname)
+              depends.pkg.vers <- sub('^(.*)-([^-]*)$','\\\\2',depends.pkg.fullname)
+              if (length(dependency) == 2)
+                depends.vers <- dependency[2]
+              else
+                depends.vers <- paste('>=',depends.pkg.vers,sep='')
+              depends.line <- paste('DEPENDS+=\tR-',depends,depends.vers,':',depends.pkg,sep='')
+              if (length(dependency) == 2)
+                depends.line <- paste(depends.line,'	# XXX - found ',depends.pkg.fullname,' (',depends.pkg,')',sep='')
+            }
+          else
+            {
+              depends.vers <- ifelse(length(dependency) == 2, dependency[2], '>=???')
+              depends.vers <- trim.space(depends.vers)
+              depends.line <- paste('DEPENDS+=\tR-',depends,depends.vers,':../../R/R-',depends,sep='')
+            }
+          DEPENDS <- list(DEPENDS,depends.line)
+          new.depends.pkg <- Sys.glob(paste('../../R/R-',depends,sep=''))
+          if (length(new.depends.pkg) > 0)
+            system(paste('echo',depends,'${RPKG} >> ${DEPENDENCY_LIST}'))
         }
-      DEPENDS <- paste(DEPENDS,'',sep='\n')
     }
+  if (length(DEPENDS) > 0)
+    DEPENDS <- append(DEPENDS,'')
   DEPENDS
+}
+
+use.languages <- function(s1,s2)
+{
+  USE_LANGUAGES <- list()
+  s <- paste(s1,s2)
+  Rcpp <- grepl('Rcpp',s)
+  if (Rcpp)
+    USE_LANGUAGES <- append(USE_LANGUAGES,list('USE_LANGUAGES+=	c++'))
+  if (length(USE_LANGUAGES) > 0)
+    USE_LANGUAGES <- append(USE_LANGUAGES,'')
+  USE_LANGUAGES
+}
+
+buildlink <- function(s1,s2)
+{
+  BUILDLINK <- list()
+  s <- paste(s1,s2)
+  Rcpp <- grepl('Rcpp',s)
+  if (Rcpp)
+    BUILDLINK <- append(BUILDLINK,'.include "../../devel/R-Rcpp/buildlink3.mk"')
+  BUILDLINK
 }
 
 copy.description <- function(connection)
@@ -192,77 +321,93 @@ copy.description <- function(connection)
   writeLines(description,con='DESCRIPTION')
 }
 
-connection <- url('${RPKG_DESCRIPTION_URL}')
-${DESCRIPTION_CMD}
-metadata <- read.dcf(connection, fields=c('Package','Version','Title','Description','License','Imports','Depends'))
+error <- download.file(url='${RPKG_DESCRIPTION_URL}',destfile='DESCRIPTION',quiet=${QUIET_CURL},method='curl')
+if (error)
+  quit(status=error)
 
-CVS          <- '# \$NetBSD\$'
-CATEGORIES   <- categories()
-MASTER.SITES <- 'MASTER_SITES=	\${MASTER_SITE_R_CRAN:=contrib/}'
-MAINTAINER   <- 'MAINTAINER=	pkgsrc-users@NetBSD.org'
-HOMEPAGE     <- 'HOMEPAGE=	\${R_HOMEPAGE_BASE}/${RPKG}/'
-COMMENT      <- comment(metadata[3])
-LICENSE      <- license(metadata[5])
-R_PKGNAME    <- package(metadata[1])
-R_PKGVER     <- version(metadata[2])
-DEPENDS      <- depends(metadata[6],metadata[7])
-INCLUDE.R    <- '.include "../../math/R/Makefile.extension"'
-INCLUDE.PKG  <- '.include "../../mk/bsd.pkg.mk"'
+metadata <- read.dcf(file='DESCRIPTION', fields=c('Package','Version','Title','Description','License','Imports','Depends'))
+ 
+CVS               <- '# \$NetBSD\$'
+CATEGORIES        <- categories()
+MASTER.SITES      <- 'MASTER_SITES=	\${MASTER_SITE_R_CRAN:=contrib/}'
+MAINTAINER        <- 'MAINTAINER=	pkgsrc-users@NetBSD.org'
+HOMEPAGE          <- 'HOMEPAGE=	\${R_HOMEPAGE_BASE}/${RPKG}/'
+COMMENT           <- comment(metadata[3])
+LICENSE           <- license(metadata[5])
+R_PKGNAME         <- package(metadata[1])
+R_PKGVER          <- version(metadata[2])
+USE_LANGUAGES     <- use.languages(metadata[6],metadata[7])
+DEPENDS           <- depends(metadata[6],metadata[7])
+INCLUDE.R         <- '.include "../../math/R/Makefile.extension"'
+INCLUDE.BUILDLINK <- buildlink(metadata[6],metadata[7])
+INCLUDE.PKG       <- '.include "../../mk/bsd.pkg.mk"'
 
 DESCR        <- description(metadata[4])
 
-Makefile <- paste(CVS,
-                  '',
-                  CATEGORIES,
-                  MASTER.SITES,
-                  '',
-                  MAINTAINER,
-                  HOMEPAGE,
-                  COMMENT,
-                  LICENSE,
-                  '',
-                  R_PKGNAME,
-                  R_PKGVER,
-                  DEPENDS,
-                  INCLUDE.R,
-                  INCLUDE.PKG,
-                  sep='\n')
+Makefile <- list()
+Makefile <- append(Makefile,CVS)
+Makefile <- append(Makefile,'')
+Makefile <- append(Makefile,CATEGORIES)
+Makefile <- append(Makefile,MASTER.SITES)
+Makefile <- append(Makefile,'')
+Makefile <- append(Makefile,MAINTAINER)
+Makefile <- append(Makefile,HOMEPAGE)
+Makefile <- append(Makefile,COMMENT)
+Makefile <- append(Makefile,LICENSE)
+Makefile <- append(Makefile,'')
+Makefile <- append(Makefile,R_PKGNAME)
+Makefile <- append(Makefile,R_PKGVER)
+Makefile <- append(Makefile,'')
+Makefile <- append(Makefile,USE_LANGUAGES)
+Makefile <- append(Makefile,DEPENDS)
+Makefile <- append(Makefile,INCLUDE.R)
+Makefile <- append(Makefile,INCLUDE.BUILDLINK)
+Makefile <- append(Makefile,INCLUDE.PKG)
+Makefile <- paste(unlist(Makefile),collapse='\n')
 
 write(Makefile,'Makefile')
 write(DESCR,'DESCR')
 EOF
-    if [ ${?} -ne 0 ]; then
-	echo "ERROR: parsing metadata failed."
-	exit 1
+    eval ${R_CMD}
+    retval=${?}
+    if [ ${retval} -ne 0 ]; then
+	echo "ERROR: making ${RPKG} package failed."
     fi
+    return ${retval}
 }
 
 edit_Makefile ()
 {
-    [ ${EDIT} -eq 0 ] || ${PKGEDITOR} Makefile
+    if [ ${EDIT} -ne 0 -a -s Makefile ]; then
+	${PKGEDITOR} Makefile
+    fi
 }
 
 edit_DESCR ()
 {
-    [ ${EDIT} -eq 0 ] || ${PKGEDITOR} DESCR
+    if [ ${EDIT} -ne 0 -a -s DESCR ]; then
+	${PKGEDITOR} DESCR
+    fi
 }
 
 create_distinfo ()
 {
-    ${ECHO} "Fetching package ... "
-    MAKE_CMD="${MAKE} makesum ${STDOUT}"
+    ${ECHO_FETCH} "==> Fetching R-${RPKG} ..."
+    MAKE_CMD="${MAKE} makesum ${STDOUT_MAKESUM}"
     eval ${MAKE_CMD}
+    return ${?}
 }
 
 extract ()
 {
-    ${ECHO} "Extracting package ... "
-    MAKE_CMD="${MAKE} extract ${STDOUT}"
+    ${ECHO_EXTRACT} "==> Extracting R-${RPKG} ..."
+    MAKE_CMD="${MAKE} extract ${STDOUT_EXTRACT}"
     eval ${MAKE_CMD}
 }
 
 cleanup ()
 {
+    [ "X${DESCRIPTION}" != "X" ] || rm -f DESCRIPTION
     if [ -f DESCR.orig ] && cmp -s DESCR.orig DESCR; then
 	mv DESCR.orig DESCR
     fi
@@ -272,12 +417,14 @@ cleanup ()
     if [ -f distinfo.orig ] && cmp -s distinfo.orig distinfo; then
 	mv distinfo.orig distinfo
     fi
+    rm -f ${R_FILE}
 }
 
 messages ()
 {
-    if [ ${QUIET} -eq 0 ]; then
+    if [ ${QUIET} -eq 0 -a ${TOP_LEVEL} -ne 0 ]; then
 	cat << EOF
+
 Please do not forget the following:
 - check DESCR and edit as necessary.
 - check Makefile:
@@ -286,16 +433,39 @@ Please do not forget the following:
   o verify the DEPENDS, especially the categories.
 EOF
 	[ "X${DESCRIPTION}" != "X" ] && echo "- remove DESCRIPTION."
+	if [ ${RECURSIVE} -ne 0 ]; then
+	    cat << EOF
+
+Recursive packages may have been created in ../../R; please do the following:
+- edit each Makefile as follows (in addition to following the notes above):
+  o move recursively created packages to the appropriate category.
+  o fix the category in Makefile.
+  o fix the category of any dependencies.
+  o remove any extraneous dependencies.
+EOF
+	    if [ -s ${DEPENDENCY_LIST} ]; then
+		tsort ${DEPENDENCY_LIST} > depends
+		echo "- It may be useful to test these packages in the following order:"
+		awk 'BEGIN{printf(" ")} {printf(" R-%s",$0)}' depends && echo
+		[ ${TOP_LEVEL} -eq 0 ] || rm -f ${DEPENDENCY_LIST}
+	    fi
+	fi
     fi
 }
 
-${ECHO} "Creating R package: ${RPKG} ... "
+${ECHO_BANNER} "${BANNER_MSG} ..."
 check_for_R
 preserve_original_files
 make_package
-edit_Makefile
-edit_DESCR
-create_distinfo
-extract
+error=${?}
+if [ ${error} -eq 0 ]; then
+    edit_Makefile
+    edit_DESCR
+    create_distinfo
+    error=${?}; [ ${error} -eq 0 ] || exit ${error}
+    # extract
+fi
 cleanup
 messages
+${ECHO_DONE} "${BANNER_MSG}: done"
+exit ${error}
