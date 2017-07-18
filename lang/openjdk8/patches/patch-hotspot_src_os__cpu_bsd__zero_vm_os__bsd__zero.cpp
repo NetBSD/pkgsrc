@@ -1,10 +1,22 @@
-$NetBSD: patch-hotspot_src_os__cpu_bsd__zero_vm_os__bsd__zero.cpp,v 1.1 2015/03/24 14:24:38 joerg Exp $
+$NetBSD: patch-hotspot_src_os__cpu_bsd__zero_vm_os__bsd__zero.cpp,v 1.2 2017/07/18 19:53:11 jmcneill Exp $
+
+Fix -Werror=return-local-addr with gcc.
 
 clang objects to redefining builtins.
 
---- hotspot/src/os_cpu/bsd_zero/vm/os_bsd_zero.cpp.orig	2015-03-22 20:58:57.000000000 +0000
+--- hotspot/src/os_cpu/bsd_zero/vm/os_bsd_zero.cpp.orig	2017-04-27 09:45:07.000000000 +0000
 +++ hotspot/src/os_cpu/bsd_zero/vm/os_bsd_zero.cpp
-@@ -446,21 +446,6 @@ extern "C" {
+@@ -60,8 +60,7 @@
+ #include "utilities/vmError.hpp"
+ 
+ address os::current_stack_pointer() {
+-  address dummy = (address) &dummy;
+-  return dummy;
++  return (address) __builtin_frame_address(0);
+ }
+ 
+ frame os::get_sender_for_C_frame(frame* fr) {
+@@ -446,21 +445,6 @@ extern "C" {
    }
  };
  
