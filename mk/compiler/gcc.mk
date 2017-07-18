@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.180 2017/07/09 14:30:07 khorben Exp $
+# $NetBSD: gcc.mk,v 1.181 2017/07/18 18:27:31 brook Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -109,7 +109,7 @@ GCC_REQD+=	20120614
 
 # _GCC_DIST_VERSION is the highest version of GCC installed by the pkgsrc
 # without the PKGREVISIONs.
-_GCC_DIST_NAME:=	gcc6
+_GCC_DIST_NAME:=	gcc7
 .include "../../lang/${_GCC_DIST_NAME}/version.mk"
 _GCC_DIST_VERSION:=	${${_GCC_DIST_NAME:tu}_DIST_VERSION}
 
@@ -138,6 +138,9 @@ _GCC5_PATTERNS= 5.*
 
 # _GCC6_PATTERNS matches N s.t. 6.0 <= N < 7.
 _GCC6_PATTERNS= 6.*
+
+# _GCC7_PATTERNS matches N s.t. 7.0 <= N < 8.
+_GCC7_PATTERNS= 7.*
 
 # _GCC_AUX_PATTERNS matches 8-digit date YYYYMMDD*
 _GCC_AUX_PATTERNS= 20[1-2][0-9][0-1][0-9][0-3][0-9]*
@@ -273,6 +276,12 @@ _NEED_GCC6?=	no
 _NEED_GCC6=	yes
 .  endif
 .endfor
+_NEED_GCC7?=	no
+.for _pattern_ in ${_GCC7_PATTERNS}
+.  if !empty(_GCC_REQD:M${_pattern_})
+_NEED_GCC7=	yes
+.  endif
+.endfor
 _NEED_GCC_AUX?=	no
 .for _pattern_ in ${_GCC_AUX_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
@@ -284,8 +293,9 @@ _NEED_NEWER_GCC=NO
     !empty(_NEED_GCC34:M[nN][oO]) && !empty(_NEED_GCC44:M[nN][oO]) && \
     !empty(_NEED_GCC48:M[nN][oO]) && !empty(_NEED_GCC49:M[nN][oO]) && \
     !empty(_NEED_GCC5:M[nN][oO]) && !empty(_NEED_GCC6:M[nN][oO]) && \
+    !empty(_NEED_GCC7:M[nN][oO]) && \
     !empty(_NEED_GCC_AUX:M[nN][oO])
-_NEED_GCC6=	yes
+_NEED_GCC7=	yes
 .endif
 
 # Assume by default that GCC will only provide a C compiler.
@@ -305,6 +315,8 @@ LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 .elif !empty(_NEED_GCC5:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 .elif !empty(_NEED_GCC6:M[yY][eE][sS])
+LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
+.elif !empty(_NEED_GCC7:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 .elif !empty(_NEED_GCC_AUX:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 objc ada
@@ -533,6 +545,27 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc6
 _GCC_DEPENDENCY=	gcc6>=${_GCC_REQD}:../../lang/gcc6
+.    if !empty(_LANGUAGES.gcc:Mc++) || \
+        !empty(_LANGUAGES.gcc:Mfortran) || \
+        !empty(_LANGUAGES.gcc:Mfortran77) || \
+        !empty(_LANGUAGES.gcc:Mgo) || \
+        !empty(_LANGUAGES.gcc:Mobjc) || \
+        !empty(_LANGUAGES.gcc:Mobj-c++)
+_USE_GCC_SHLIB?=	yes
+.    endif
+.  endif
+.elif !empty(_NEED_GCC7:M[yY][eE][sS])
+#
+# We require gcc-7.x in the lang/gcc7-* directory.
+#
+_GCC_PKGBASE=		gcc7
+.  if !empty(PKGPATH:Mlang/gcc7)
+_IGNORE_GCC=		yes
+MAKEFLAGS+=		_IGNORE_GCC=yes
+.  endif
+.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
+_GCC_PKGSRCDIR=		../../lang/gcc7
+_GCC_DEPENDENCY=	gcc7>=${_GCC_REQD}:../../lang/gcc7
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mfortran77) || \
