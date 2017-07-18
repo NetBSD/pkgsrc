@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/05/23 10:53:56 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/07/18 13:43:39 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -2473,7 +2473,6 @@ lib/python${PY_VER_SUFFIX}/telnetlib.pyo
 lib/python${PY_VER_SUFFIX}/tempfile.py
 lib/python${PY_VER_SUFFIX}/tempfile.pyc
 lib/python${PY_VER_SUFFIX}/tempfile.pyo
-lib/python${PY_VER_SUFFIX}/test/185test.db
 lib/python${PY_VER_SUFFIX}/test/Sine-1000Hz-300ms.aif
 lib/python${PY_VER_SUFFIX}/test/__init__.py
 lib/python${PY_VER_SUFFIX}/test/__init__.pyc
