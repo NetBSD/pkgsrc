@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/18 14:41:27 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/sprockets/rails.rb
+${GEM_LIBDIR}/lib/sprockets/rails/context.rb
+${GEM_LIBDIR}/lib/sprockets/rails/helper.rb
+${GEM_LIBDIR}/lib/sprockets/rails/quiet_assets.rb
+${GEM_LIBDIR}/lib/sprockets/rails/route_wrapper.rb
+${GEM_LIBDIR}/lib/sprockets/rails/task.rb
+${GEM_LIBDIR}/lib/sprockets/rails/utils.rb
+${GEM_LIBDIR}/lib/sprockets/rails/version.rb
+${GEM_LIBDIR}/lib/sprockets/railtie.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
