@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2932 2017/07/18 14:52:50 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2933 2017/07/18 15:06:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4051,3 +4051,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added misc/ruby-sprockets-rails version 3.2.0 [taca 2017-07-18]
 	Updated www/ruby-rails42 to 4.2.8nb1 [taca 2017-07-18]
 	Updated devel/SOPE to 2.3.21 [taca 2017-07-18]
+	Updated www/SOGo to 2.3.21 [taca 2017-07-18]
