@@ -1,2 +1,2 @@
-# $NetBSD: version.mk,v 1.1 2017/05/03 00:21:03 maya Exp $
-GCC7S_DIST_VERSION:=7.1.0
+# $NetBSD: version.mk,v 1.2 2017/07/18 18:19:35 brook Exp $
+GCC7_DIST_VERSION:=7.1.0
