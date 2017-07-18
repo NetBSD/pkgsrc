@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.18 2017/06/19 21:03:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2017/07/18 13:58:25 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
@@ -30,6 +29,9 @@ ${PYSITELIB}/cryptography/hazmat/backends/interfaces.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/__init__.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/__init__.pyo
+${PYSITELIB}/cryptography/hazmat/backends/openssl/aead.py
+${PYSITELIB}/cryptography/hazmat/backends/openssl/aead.pyc
+${PYSITELIB}/cryptography/hazmat/backends/openssl/aead.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/backend.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/backend.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/backend.pyo
@@ -66,6 +68,9 @@ ${PYSITELIB}/cryptography/hazmat/backends/openssl/rsa.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/utils.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/utils.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/utils.pyo
+${PYSITELIB}/cryptography/hazmat/backends/openssl/x25519.py
+${PYSITELIB}/cryptography/hazmat/backends/openssl/x25519.pyc
+${PYSITELIB}/cryptography/hazmat/backends/openssl/x25519.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/x509.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/x509.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/x509.pyo
@@ -111,9 +116,15 @@ ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/rsa.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/utils.py
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/utils.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/utils.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/x25519.py
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/x25519.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/asymmetric/x25519.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/ciphers/__init__.py
 ${PYSITELIB}/cryptography/hazmat/primitives/ciphers/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/ciphers/__init__.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/ciphers/aead.py
+${PYSITELIB}/cryptography/hazmat/primitives/ciphers/aead.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/ciphers/aead.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/ciphers/algorithms.py
 ${PYSITELIB}/cryptography/hazmat/primitives/ciphers/algorithms.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/ciphers/algorithms.pyo
