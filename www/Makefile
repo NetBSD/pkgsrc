@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1258 2017/07/16 19:04:16 adam Exp $
+# $NetBSD: Makefile,v 1.1259 2017/07/18 14:29:51 hauke Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -571,6 +571,7 @@ SUBDIR+=	php-basercms
 SUBDIR+=	php-concrete5
 SUBDIR+=	php-curl
 SUBDIR+=	php-fpm
+SUBDIR+=	php-glpi
 SUBDIR+=	php-http
 SUBDIR+=	php-http3
 SUBDIR+=	php-ja-wordpress

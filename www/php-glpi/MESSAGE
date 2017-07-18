@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2017/07/18 14:29:51 hauke Exp $
+
+To set up or upgrade GLPI, activate the setup page:
+
+cd ${PREFIX}/share/glpi/install && mv install.php.disabled install.php
+
+Then, open <http://localhost/glpi>.
+
+Rename install.php when you are done.
+
+===========================================================================

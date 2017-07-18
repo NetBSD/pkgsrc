@@ -1,0 +1,9 @@
+# $NetBSD: crontab.sample,v 1.1 2017/07/18 14:29:51 hauke Exp $
+#
+# GLPI core
+#
+# Run as webserver user @APACHE_USER@, to execute tasks even 
+# without connected users
+#
+*/4	*	*	*	* apache @PREFIX@/bin/php @PREFIX@/glpi/front/cron.php
+#
