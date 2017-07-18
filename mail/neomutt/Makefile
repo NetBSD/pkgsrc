@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2017/06/21 07:10:56 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2017/07/18 18:39:37 wiz Exp $
 
-DISTNAME=		neomutt-20170609
+DISTNAME=		neomutt-20170714
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=neomutt/}
 GITHUB_TAG=		${DISTNAME}
@@ -15,6 +15,7 @@ USE_TOOLS+=		autoconf automake autoreconf msgfmt gmake
 BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 
 GNU_CONFIGURE=		yes
+EXTRACT_USING=		bsdtar
 CONFIGURE_ARGS+=	--enable-notmuch
 #CONFIGURE_ARGS+=	CFLAGS="-g -O0"
 
