@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2934 2017/07/18 15:16:28 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2935 2017/07/18 17:24:47 brook Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4053,3 +4053,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/SOPE to 2.3.21 [taca 2017-07-18]
 	Updated www/SOGo to 2.3.21 [taca 2017-07-18]
 	Updated devel/hoe to 3.16.1 [taca 2017-07-18]
+	Updated pkgtools/R2pkg to 0.3 [brook 2017-07-18]
+	Updated pkgtools/R2pkg to 0.3 [brook 2017-07-18]
