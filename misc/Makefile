@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.484 2017/07/11 10:35:09 jaapb Exp $
+# $NetBSD: Makefile,v 1.485 2017/07/18 14:41:57 taca Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -328,6 +328,7 @@ SUBDIR+=	ruby-pry
 SUBDIR+=	ruby-rainbow
 SUBDIR+=	ruby-slop
 SUBDIR+=	ruby-sprockets
+SUBDIR+=	ruby-sprockets-rails
 SUBDIR+=	ruby-sprockets22
 SUBDIR+=	ruby-systemu
 SUBDIR+=	ruby-thread_safe
