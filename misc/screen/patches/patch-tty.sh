@@ -1,13 +1,13 @@
-$NetBSD: patch-tty.sh,v 1.3 2016/06/20 16:04:44 ryoon Exp $
+$NetBSD: patch-tty.sh,v 1.4 2017/07/18 23:02:18 kim Exp $
 
 Change condition for using TIOCSCTTY.
 
 NetBSD on the netbsd-5 branch insists on a non-NULL second argument
 to the realpath() function.  Make it so.
 
---- tty.sh.orig	2016-06-19 19:41:03.000000000 +0000
-+++ tty.sh
-@@ -813,7 +813,8 @@ int fd;
+--- tty.sh.orig	2017-07-10 19:26:25.000000000 +0000
++++ tty.sh	2017-07-18 22:40:56.000000000 +0000
+@@ -813,7 +813,8 @@
    /*
     * Under BSD we have to set the controlling terminal again explicitly.
     */
@@ -17,7 +17,7 @@ to the realpath() function.  Make it so.
    ioctl(fd, TIOCSCTTY, (char *)0);
  # endif
  
-@@ -1510,8 +1511,10 @@ char *tty;
+@@ -1521,8 +1522,10 @@
    char realbuf[PATH_MAX];
    const char *real;
    int rc;

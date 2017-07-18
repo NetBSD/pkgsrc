@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.8 2015/09/01 13:34:47 kim Exp $
+$NetBSD: patch-ak,v 1.9 2017/07/18 23:02:18 kim Exp $
 
 Patch configure after configure.ac (see patch-aj).
 
@@ -7,9 +7,9 @@ crash on 64-bit architectures.
 
 Detect getutent correctly on NetBSD with utmpx.
 
---- configure.orig	2015-06-28 21:42:40.000000000 +0000
-+++ configure	2015-09-01 13:12:22.000000000 +0000
-@@ -5018,6 +5018,8 @@
+--- configure.orig	2017-07-10 19:26:25.000000000 +0000
++++ configure	2017-07-18 22:50:46.000000000 +0000
+@@ -4985,6 +4985,8 @@
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
@@ -18,7 +18,7 @@ Detect getutent correctly on NetBSD with utmpx.
  main()
  {
   exit(strcmp(tgoto("%p1%d", 0, 1), "1") ? 0 : 1);
-@@ -5414,9 +5416,16 @@
+@@ -5381,9 +5383,16 @@
  
  #include <time.h> /* to get time_t on SCO */
  #include <sys/types.h>
