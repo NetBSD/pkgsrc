@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2928 2017/07/18 14:36:18 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2929 2017/07/18 14:39:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4047,3 +4047,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added databases/ruby-arel60 version 6.0.4 [taca 2017-07-18]
 	Added www/php-glpi version 9.1.5 [hauke 2017-07-18]
 	Updated databases/ruby-activerecord42 to 4.2.8nb1 [taca 2017-07-18]
+	Updated www/ruby-actionpack42 to 4.2.8nb1 [taca 2017-07-18]
