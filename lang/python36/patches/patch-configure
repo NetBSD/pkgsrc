@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.9 2017/05/30 13:57:16 wiz Exp $
+$NetBSD: patch-configure,v 1.10 2017/07/18 13:43:40 adam Exp $
 
 Simplify _sysconfigdata to include only platform name.
 
@@ -13,18 +13,18 @@ Use gnu99 instead of c99 to avoid "alloca() undefined" problems on macppc.
 
 detect netcan/can.h on NetBSD
 
---- configure.orig	2017-03-21 07:32:38.000000000 +0100
-+++ configure	2017-05-30 12:34:22.173986489 +0200
-@@ -2928,7 +2928,7 @@
+--- configure.orig	2017-07-08 03:33:27.000000000 +0000
++++ configure
+@@ -2925,7 +2925,7 @@ $as_echo_n "checking for python interpre
  	fi
          { $as_echo "$as_me:${as_lineno-$LINENO}: result: $interp" >&5
  $as_echo "$interp" >&6; }
 -	PYTHON_FOR_BUILD='_PYTHON_PROJECT_BASE=$(abs_builddir) _PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) PYTHONPATH=$(shell test -f pybuilddir.txt && echo $(abs_builddir)/`cat pybuilddir.txt`:)$(srcdir)/Lib _PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_$(ABIFLAGS)_$(MACHDEP)_$(MULTIARCH) '$interp
 +	PYTHON_FOR_BUILD='_PYTHON_PROJECT_BASE=$(abs_builddir) _PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) PYTHONPATH=$(shell test -f pybuilddir.txt && echo $(abs_builddir)/`cat pybuilddir.txt`:)$(srcdir)/Lib _PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_$(MACHDEP) '$interp
      fi
-     # Used to comment out stuff for rebuilding generated files
-     GENERATED_COMMENT='#'
-@@ -3324,7 +3324,7 @@
+ elif test "$cross_compiling" = maybe; then
+     as_fn_error $? "Cross compiling required --host=HOST-TUPLE and --build=ARCH" "$LINENO" 5
+@@ -3317,7 +3317,7 @@ case $ac_sys_system/$ac_sys_release in
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
    # In addition, Stefan Krah confirms that issue #1244610 exists through
    # OpenBSD 4.6, but is fixed in 4.7.
@@ -33,7 +33,7 @@ detect netcan/can.h on NetBSD
      define_xopen_source=no
      # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
      # also defined. This can be overridden by defining _BSD_SOURCE
-@@ -5969,7 +5969,7 @@
+@@ -5962,7 +5962,7 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
  	      PY3LIBRARY=libpython3.so
  	  fi
            ;;
@@ -42,7 +42,7 @@ detect netcan/can.h on NetBSD
  	  LDLIBRARY='libpython$(LDVERSION).so'
  	  BLDLIBRARY='-L. -lpython$(LDVERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-@@ -6897,7 +6897,7 @@
+@@ -6937,7 +6937,7 @@ UNIVERSAL_ARCH_FLAGS=
  # tweak BASECFLAGS based on compiler and platform
  case $GCC in
  yes)
@@ -51,7 +51,7 @@ detect netcan/can.h on NetBSD
  
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for -Wextra" >&5
  $as_echo_n "checking for -Wextra... " >&6; }
-@@ -8072,7 +8072,7 @@
+@@ -8112,7 +8112,7 @@ done
  
  
  # On Linux, can.h and can/raw.h require sys/socket.h
@@ -60,7 +60,7 @@ detect netcan/can.h on NetBSD
  do :
    as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
  ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "
-@@ -9188,8 +9188,8 @@
+@@ -9228,8 +9228,8 @@ then
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -71,7 +71,7 @@ detect netcan/can.h on NetBSD
  			LDCXXSHARED="$LDCXXSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
  		fi ;;
  	Darwin/*)
-@@ -9213,9 +9213,9 @@
+@@ -9253,9 +9253,9 @@ then
  				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -84,7 +84,7 @@ detect netcan/can.h on NetBSD
  			fi
  		else
  			# building for OS X 10.3 and later
-@@ -9254,6 +9254,9 @@
+@@ -9294,6 +9294,9 @@ then
  				   ;;
  				esac
  		fi;;
@@ -94,7 +94,7 @@ detect netcan/can.h on NetBSD
  	NetBSD*|DragonFly*)
  		LDSHARED='$(CC) -shared'
  		LDCXXSHARED='$(CXX) -shared';;
-@@ -9298,7 +9301,7 @@
+@@ -9338,7 +9341,7 @@ then
  	Linux-android*) ;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
@@ -103,7 +103,7 @@ detect netcan/can.h on NetBSD
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -9348,7 +9351,7 @@
+@@ -9388,7 +9391,7 @@ then
  	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
  	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
  	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
@@ -112,7 +112,7 @@ detect netcan/can.h on NetBSD
  		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
-@@ -11122,7 +11125,7 @@
+@@ -11165,7 +11168,7 @@ if ${ac_cv_dtrace_link+:} false; then :
    $as_echo_n "(cached) " >&6
  else
                ac_cv_dtrace_link=no
@@ -121,7 +121,7 @@ detect netcan/can.h on NetBSD
              "$DTRACE" -G -s conftest.d -o conftest.o > /dev/null 2>&1 && \
                  ac_cv_dtrace_link=yes
  
-@@ -14949,8 +14952,6 @@
+@@ -14992,8 +14995,6 @@ $as_echo "$SOABI" >&6; }
  
  
  case $ac_sys_system in
@@ -130,7 +130,7 @@ detect netcan/can.h on NetBSD
      *)
  	EXT_SUFFIX=${SHLIB_SUFFIX};;
  esac
-@@ -14962,11 +14963,7 @@
+@@ -15005,11 +15006,7 @@ LDVERSION='$(VERSION)$(ABIFLAGS)'
  $as_echo "$LDVERSION" >&6; }
  
  
