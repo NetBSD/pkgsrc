@@ -1,5 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2017/07/18 14:29:51 hauke Exp $
+$NetBSD: MESSAGE,v 1.2 2017/07/18 15:19:05 hauke Exp $
+
+To run GLPI, you need a web server set up to run PHP scripts;
+${PREFIX}/share/examples/glpi/http-glpi.conf is a sample 
+configuration for Apache. In addition, you need access to a MySQL server.
 
 To set up or upgrade GLPI, activate the setup page:
 
