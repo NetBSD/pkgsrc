@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/07/14 11:39:32 adam Exp $
+# $NetBSD: Makefile,v 1.14 2017/07/18 18:38:48 leot Exp $
 
 DISTNAME=	eventlib-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v3
 DEPENDS+=	${PYPKGPREFIX}-ejson>=0.1.3:../../textproc/py-ejson
 DEPENDS+=	${PYPKGPREFIX}-logan>=0.5.0:../../devel/py-logan
 DEPENDS+=	${PYPKGPREFIX}-celery>=3.0.9:../../net/py-celery
-DEPENDS+=	${PYPKGPREFIX}-redis>=2.7.1:../../databases/py-redis-py
+DEPENDS+=	${PYPKGPREFIX}-redis>=2.7.1:../../databases/py-redis
 DEPENDS+=	${PYPKGPREFIX}-django>=1.4.1:../../www/py-django
 
 USE_LANGUAGES=	# none
