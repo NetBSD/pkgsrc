@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2017/03/12 13:49:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2017/07/18 15:06:15 taca Exp $
 include/GDLContentStore/EOAdaptorChannel+GCS.h
 include/GDLContentStore/GCSAlarmsFolder.h
 include/GDLContentStore/GCSChannelManager.h
@@ -585,6 +585,7 @@ lib/GNUstep/SOGo/AdministrationUI.SOGo/Resources/Hungarian.lproj/Localizable.str
 lib/GNUstep/SOGo/AdministrationUI.SOGo/Resources/Icelandic.lproj/Localizable.strings
 lib/GNUstep/SOGo/AdministrationUI.SOGo/Resources/Info-gnustep.plist
 lib/GNUstep/SOGo/AdministrationUI.SOGo/Resources/Italian.lproj/Localizable.strings
+lib/GNUstep/SOGo/AdministrationUI.SOGo/Resources/Latvian.lproj/Localizable.strings
 lib/GNUstep/SOGo/AdministrationUI.SOGo/Resources/Lithuanian.lproj/Localizable.strings
 lib/GNUstep/SOGo/AdministrationUI.SOGo/Resources/Macedonian.lproj/Localizable.strings
 lib/GNUstep/SOGo/AdministrationUI.SOGo/Resources/NorwegianBokmal.lproj/Localizable.strings
@@ -623,6 +624,7 @@ lib/GNUstep/SOGo/Appointments.SOGo/Resources/Hungarian.lproj/Localizable.strings
 lib/GNUstep/SOGo/Appointments.SOGo/Resources/Icelandic.lproj/Localizable.strings
 lib/GNUstep/SOGo/Appointments.SOGo/Resources/Info-gnustep.plist
 lib/GNUstep/SOGo/Appointments.SOGo/Resources/Italian.lproj/Localizable.strings
+lib/GNUstep/SOGo/Appointments.SOGo/Resources/Latvian.lproj/Localizable.strings
 lib/GNUstep/SOGo/Appointments.SOGo/Resources/Lithuanian.lproj/Localizable.strings
 lib/GNUstep/SOGo/Appointments.SOGo/Resources/MSExchangeFreeBusySOAPRequest.wo/MSExchangeFreeBusySOAPRequest.html
 lib/GNUstep/SOGo/Appointments.SOGo/Resources/MSExchangeFreeBusySOAPRequest.wo/MSExchangeFreeBusySOAPRequest.wod
@@ -663,6 +665,7 @@ lib/GNUstep/SOGo/CommonUI.SOGo/Resources/Hungarian.lproj/Localizable.strings
 lib/GNUstep/SOGo/CommonUI.SOGo/Resources/Icelandic.lproj/Localizable.strings
 lib/GNUstep/SOGo/CommonUI.SOGo/Resources/Info-gnustep.plist
 lib/GNUstep/SOGo/CommonUI.SOGo/Resources/Italian.lproj/Localizable.strings
+lib/GNUstep/SOGo/CommonUI.SOGo/Resources/Latvian.lproj/Localizable.strings
 lib/GNUstep/SOGo/CommonUI.SOGo/Resources/Lithuanian.lproj/Localizable.strings
 lib/GNUstep/SOGo/CommonUI.SOGo/Resources/Macedonian.lproj/Localizable.strings
 lib/GNUstep/SOGo/CommonUI.SOGo/Resources/NorwegianBokmal.lproj/Localizable.strings
@@ -701,6 +704,7 @@ lib/GNUstep/SOGo/Contacts.SOGo/Resources/Hungarian.lproj/Localizable.strings
 lib/GNUstep/SOGo/Contacts.SOGo/Resources/Icelandic.lproj/Localizable.strings
 lib/GNUstep/SOGo/Contacts.SOGo/Resources/Info-gnustep.plist
 lib/GNUstep/SOGo/Contacts.SOGo/Resources/Italian.lproj/Localizable.strings
+lib/GNUstep/SOGo/Contacts.SOGo/Resources/Latvian.lproj/Localizable.strings
 lib/GNUstep/SOGo/Contacts.SOGo/Resources/Lithuanian.lproj/Localizable.strings
 lib/GNUstep/SOGo/Contacts.SOGo/Resources/Macedonian.lproj/Localizable.strings
 lib/GNUstep/SOGo/Contacts.SOGo/Resources/NorwegianBokmal.lproj/Localizable.strings
@@ -738,6 +742,7 @@ lib/GNUstep/SOGo/ContactsUI.SOGo/Resources/Hungarian.lproj/Localizable.strings
 lib/GNUstep/SOGo/ContactsUI.SOGo/Resources/Icelandic.lproj/Localizable.strings
 lib/GNUstep/SOGo/ContactsUI.SOGo/Resources/Info-gnustep.plist
 lib/GNUstep/SOGo/ContactsUI.SOGo/Resources/Italian.lproj/Localizable.strings
+lib/GNUstep/SOGo/ContactsUI.SOGo/Resources/Latvian.lproj/Localizable.strings
 lib/GNUstep/SOGo/ContactsUI.SOGo/Resources/Lithuanian.lproj/Localizable.strings
 lib/GNUstep/SOGo/ContactsUI.SOGo/Resources/Macedonian.lproj/Localizable.strings
 lib/GNUstep/SOGo/ContactsUI.SOGo/Resources/NorwegianBokmal.lproj/Localizable.strings
@@ -777,6 +782,7 @@ lib/GNUstep/SOGo/MailPartViewers.SOGo/Resources/Hungarian.lproj/Localizable.stri
 lib/GNUstep/SOGo/MailPartViewers.SOGo/Resources/Icelandic.lproj/Localizable.strings
 lib/GNUstep/SOGo/MailPartViewers.SOGo/Resources/Info-gnustep.plist
 lib/GNUstep/SOGo/MailPartViewers.SOGo/Resources/Italian.lproj/Localizable.strings
+lib/GNUstep/SOGo/MailPartViewers.SOGo/Resources/Latvian.lproj/Localizable.strings
 lib/GNUstep/SOGo/MailPartViewers.SOGo/Resources/Lithuanian.lproj/Localizable.strings
 lib/GNUstep/SOGo/MailPartViewers.SOGo/Resources/Macedonian.lproj/Localizable.strings
 lib/GNUstep/SOGo/MailPartViewers.SOGo/Resources/NorwegianBokmal.lproj/Localizable.strings
@@ -814,6 +820,7 @@ lib/GNUstep/SOGo/Mailer.SOGo/Resources/Hungarian.lproj/Localizable.strings
 lib/GNUstep/SOGo/Mailer.SOGo/Resources/Icelandic.lproj/Localizable.strings
 lib/GNUstep/SOGo/Mailer.SOGo/Resources/Info-gnustep.plist
 lib/GNUstep/SOGo/Mailer.SOGo/Resources/Italian.lproj/Localizable.strings
+lib/GNUstep/SOGo/Mailer.SOGo/Resources/Latvian.lproj/Localizable.strings
 lib/GNUstep/SOGo/Mailer.SOGo/Resources/Lithuanian.lproj/Localizable.strings
 lib/GNUstep/SOGo/Mailer.SOGo/Resources/Macedonian.lproj/Localizable.strings
 lib/GNUstep/SOGo/Mailer.SOGo/Resources/NorwegianBokmal.lproj/Localizable.strings
@@ -885,6 +892,10 @@ lib/GNUstep/SOGo/Mailer.SOGo/Resources/SOGoMailItalianForward.wo/SOGoMailItalian
 lib/GNUstep/SOGo/Mailer.SOGo/Resources/SOGoMailItalianForward.wo/SOGoMailItalianForward.wod
 lib/GNUstep/SOGo/Mailer.SOGo/Resources/SOGoMailItalianReply.wo/SOGoMailItalianReply.html
 lib/GNUstep/SOGo/Mailer.SOGo/Resources/SOGoMailItalianReply.wo/SOGoMailItalianReply.wod
+lib/GNUstep/SOGo/Mailer.SOGo/Resources/SOGoMailLatvianForward.wo/SOGoMailLatvianForward.html
+lib/GNUstep/SOGo/Mailer.SOGo/Resources/SOGoMailLatvianForward.wo/SOGoMailLatvianForward.wod
+lib/GNUstep/SOGo/Mailer.SOGo/Resources/SOGoMailLatvianReply.wo/SOGoMailLatvianReply.html
+lib/GNUstep/SOGo/Mailer.SOGo/Resources/SOGoMailLatvianReply.wo/SOGoMailLatvianReply.wod
 lib/GNUstep/SOGo/Mailer.SOGo/Resources/SOGoMailLithuanianForward.wo/SOGoMailLithuanianForward.html
 lib/GNUstep/SOGo/Mailer.SOGo/Resources/SOGoMailLithuanianForward.wo/SOGoMailLithuanianForward.wod
 lib/GNUstep/SOGo/Mailer.SOGo/Resources/SOGoMailLithuanianReply.wo/SOGoMailLithuanianReply.html
@@ -979,6 +990,7 @@ lib/GNUstep/SOGo/MailerUI.SOGo/Resources/Hungarian.lproj/Localizable.strings
 lib/GNUstep/SOGo/MailerUI.SOGo/Resources/Icelandic.lproj/Localizable.strings
 lib/GNUstep/SOGo/MailerUI.SOGo/Resources/Info-gnustep.plist
 lib/GNUstep/SOGo/MailerUI.SOGo/Resources/Italian.lproj/Localizable.strings
+lib/GNUstep/SOGo/MailerUI.SOGo/Resources/Latvian.lproj/Localizable.strings
 lib/GNUstep/SOGo/MailerUI.SOGo/Resources/Lithuanian.lproj/Localizable.strings
 lib/GNUstep/SOGo/MailerUI.SOGo/Resources/Macedonian.lproj/Localizable.strings
 lib/GNUstep/SOGo/MailerUI.SOGo/Resources/NorwegianBokmal.lproj/Localizable.strings
@@ -1037,6 +1049,8 @@ lib/GNUstep/SOGo/MainUI.SOGo/Resources/Icelandic.lproj/Localizable.strings
 lib/GNUstep/SOGo/MainUI.SOGo/Resources/Info-gnustep.plist
 lib/GNUstep/SOGo/MainUI.SOGo/Resources/Italian.lproj/Locale
 lib/GNUstep/SOGo/MainUI.SOGo/Resources/Italian.lproj/Localizable.strings
+lib/GNUstep/SOGo/MainUI.SOGo/Resources/Latvian.lproj/Locale
+lib/GNUstep/SOGo/MainUI.SOGo/Resources/Latvian.lproj/Localizable.strings
 lib/GNUstep/SOGo/MainUI.SOGo/Resources/Lithuanian.lproj/Locale
 lib/GNUstep/SOGo/MainUI.SOGo/Resources/Lithuanian.lproj/Localizable.strings
 lib/GNUstep/SOGo/MainUI.SOGo/Resources/Macedonian.lproj/Locale
@@ -1094,6 +1108,7 @@ lib/GNUstep/SOGo/PreferencesUI.SOGo/Resources/Hungarian.lproj/Localizable.string
 lib/GNUstep/SOGo/PreferencesUI.SOGo/Resources/Icelandic.lproj/Localizable.strings
 lib/GNUstep/SOGo/PreferencesUI.SOGo/Resources/Info-gnustep.plist
 lib/GNUstep/SOGo/PreferencesUI.SOGo/Resources/Italian.lproj/Localizable.strings
+lib/GNUstep/SOGo/PreferencesUI.SOGo/Resources/Latvian.lproj/Localizable.strings
 lib/GNUstep/SOGo/PreferencesUI.SOGo/Resources/Lithuanian.lproj/Localizable.strings
 lib/GNUstep/SOGo/PreferencesUI.SOGo/Resources/Macedonian.lproj/Localizable.strings
 lib/GNUstep/SOGo/PreferencesUI.SOGo/Resources/NorwegianBokmal.lproj/Localizable.strings
@@ -1131,6 +1146,7 @@ lib/GNUstep/SOGo/SchedulerUI.SOGo/Resources/Hungarian.lproj/Localizable.strings
 lib/GNUstep/SOGo/SchedulerUI.SOGo/Resources/Icelandic.lproj/Localizable.strings
 lib/GNUstep/SOGo/SchedulerUI.SOGo/Resources/Info-gnustep.plist
 lib/GNUstep/SOGo/SchedulerUI.SOGo/Resources/Italian.lproj/Localizable.strings
+lib/GNUstep/SOGo/SchedulerUI.SOGo/Resources/Latvian.lproj/Localizable.strings
 lib/GNUstep/SOGo/SchedulerUI.SOGo/Resources/Lithuanian.lproj/Localizable.strings
 lib/GNUstep/SOGo/SchedulerUI.SOGo/Resources/Macedonian.lproj/Localizable.strings
 lib/GNUstep/SOGo/SchedulerUI.SOGo/Resources/NorwegianBokmal.lproj/Localizable.strings
@@ -1527,11 +1543,13 @@ lib/GNUstep/SOGo/WebServerResources/ckeditor/lang/es.js
 lib/GNUstep/SOGo/WebServerResources/ckeditor/lang/eu.js
 lib/GNUstep/SOGo/WebServerResources/ckeditor/lang/fi.js
 lib/GNUstep/SOGo/WebServerResources/ckeditor/lang/fr.js
+lib/GNUstep/SOGo/WebServerResources/ckeditor/lang/he.js
 lib/GNUstep/SOGo/WebServerResources/ckeditor/lang/hr.js
 lib/GNUstep/SOGo/WebServerResources/ckeditor/lang/hu.js
 lib/GNUstep/SOGo/WebServerResources/ckeditor/lang/is.js
 lib/GNUstep/SOGo/WebServerResources/ckeditor/lang/it.js
 lib/GNUstep/SOGo/WebServerResources/ckeditor/lang/lt.js
+lib/GNUstep/SOGo/WebServerResources/ckeditor/lang/lv.js
 lib/GNUstep/SOGo/WebServerResources/ckeditor/lang/mk.js
 lib/GNUstep/SOGo/WebServerResources/ckeditor/lang/nb.js
 lib/GNUstep/SOGo/WebServerResources/ckeditor/lang/nl.js
@@ -1554,7 +1572,6 @@ lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/about/dialogs/logo_ckeditor
 lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/base64image/LICENSE.md
 lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/base64image/README.md
 lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/base64image/dialogs/base64image.js
-lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/clipboard/dialogs/paste.js
 lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/colordialog/dialogs/colordialog.css
 lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/colordialog/dialogs/colordialog.js
 lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/dialog/dialogDefinition.js
@@ -1569,10 +1586,12 @@ lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/link/images/anchor.png
 lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/link/images/hidpi/anchor.png
 lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/pastefromword/filter/default.js
 lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/scayt/LICENSE.md
+lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/scayt/dialogs/dialog.css
 lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/scayt/dialogs/options.js
 lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/scayt/dialogs/toolbar.css
 lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/table/dialogs/table.js
 lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/tabletools/dialogs/tableCell.js
+lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/widget/images/handle.png
 lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/wsc/LICENSE.md
 lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/wsc/dialogs/ciframe.html
 lib/GNUstep/SOGo/WebServerResources/ckeditor/plugins/wsc/dialogs/tmpFrameset.html
