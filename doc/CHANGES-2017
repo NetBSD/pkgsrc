@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2935 2017/07/18 17:24:47 brook Exp $
+$NetBSD: CHANGES-2017,v 1.2936 2017/07/18 17:41:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4055,3 +4055,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/hoe to 3.16.1 [taca 2017-07-18]
 	Updated pkgtools/R2pkg to 0.3 [brook 2017-07-18]
 	Updated pkgtools/R2pkg to 0.3 [brook 2017-07-18]
+	Updated lang/ocaml to 4.04.2nb3 [wiz 2017-07-18]
