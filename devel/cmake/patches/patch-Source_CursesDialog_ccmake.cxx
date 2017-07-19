@@ -1,14 +1,14 @@
-$NetBSD: patch-Source_CursesDialog_ccmake.cxx,v 1.4 2017/04/24 22:48:48 maya Exp $
+$NetBSD: patch-Source_CursesDialog_ccmake.cxx,v 1.5 2017/07/19 17:44:34 adam Exp $
 
 initscr() error path
 include cstdlib for exit
 
---- Source/CursesDialog/ccmake.cxx.orig	2017-04-10 15:23:06.000000000 +0000
+--- Source/CursesDialog/ccmake.cxx.orig	2017-07-18 15:22:54.000000000 +0000
 +++ Source/CursesDialog/ccmake.cxx
 @@ -11,6 +11,7 @@
  #include "cmake.h"
  
- #include <cmsys/Encoding.hxx>
+ #include "cmsys/Encoding.hxx"
 +#include <cstdlib>
  #include <iostream>
  #include <signal.h>

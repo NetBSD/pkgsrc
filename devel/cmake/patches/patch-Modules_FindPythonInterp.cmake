@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.15 2015/01/17 13:29:55 adam Exp $
+$NetBSD: patch-Modules_FindPythonInterp.cmake,v 1.1 2017/07/19 17:44:34 adam Exp $
 
 Insist on select python version for pkgsrc.
 
