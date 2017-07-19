@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/02/15 23:21:07 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/19 17:23:09 adam Exp $
 
-DISTNAME=	portend-1.8
+DISTNAME=	portend-2.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/portend/}
@@ -10,10 +10,14 @@ HOMEPAGE=	https://github.com/jaraco/portend
 COMMENT=	TCP port monitoring utilities
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-tempora>=1.8:../../time/py-tempora
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=2.8:../../devel/py-test
+
 USE_LANGUAGES=		# none
 
-DEPENDS+=	${PYPKGPREFIX}-tempora-[0-9]*:../../time/py-tempora
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} py.test-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
