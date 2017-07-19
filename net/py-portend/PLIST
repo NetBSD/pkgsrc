@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2017/02/13 17:20:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/07/19 17:23:09 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/portend.py
