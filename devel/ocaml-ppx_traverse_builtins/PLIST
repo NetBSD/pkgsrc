@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/19 12:30:02 jaapb Exp $
+${OCAML_SITELIB}/ppx_traverse_builtins/META
+${OCAML_SITELIB}/ppx_traverse_builtins/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_traverse_builtins/ppx_traverse_builtins.a
+${OCAML_SITELIB}/ppx_traverse_builtins/ppx_traverse_builtins.cma
+${OCAML_SITELIB}/ppx_traverse_builtins/ppx_traverse_builtins.cmi
+${OCAML_SITELIB}/ppx_traverse_builtins/ppx_traverse_builtins.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_traverse_builtins/ppx_traverse_builtins.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_traverse_builtins/ppx_traverse_builtins.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_traverse_builtins/ppx_traverse_builtins.cmxs
+${OCAML_SITELIB}/ppx_traverse_builtins/ppx_traverse_builtins.ml
+share/doc/ppx_traverse_builtins/LICENSE.txt
+share/doc/ppx_traverse_builtins/README.org
