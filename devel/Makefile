@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2466 2017/07/17 16:29:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.2467 2017/07/19 12:06:43 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -701,6 +701,7 @@ SUBDIR+=	nsis
 SUBDIR+=	nspr
 SUBDIR+=	nspr-reference
 SUBDIR+=	nss
+SUBDIR+=	ocaml-base
 SUBDIR+=	ocaml-base64
 SUBDIR+=	ocaml-batteries
 SUBDIR+=	ocaml-biniou
