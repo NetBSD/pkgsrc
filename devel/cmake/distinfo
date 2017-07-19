@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.101 2017/06/01 20:47:25 adam Exp $
+$NetBSD: distinfo,v 1.102 2017/07/19 17:44:34 adam Exp $
 
-SHA1 (cmake-3.8.2.tar.gz) = c38aad7406d6cbd99a6c71922c6c3406f745c583
-RMD160 (cmake-3.8.2.tar.gz) = 369ed02b2a69a47d0792b7ee964907afedbd669d
-SHA512 (cmake-3.8.2.tar.gz) = 49ea6f74a81dfa8ed8336c94ed50e0a483b796132c260f4bef159f9c389d99cc7b26ecfcccdd8b0a8f5b52fddd277c17c547d2a2e8848da9912c464ada1cbe3f
-Size (cmake-3.8.2.tar.gz) = 7504706 bytes
+SHA1 (cmake-3.9.0.tar.gz) = a74479a41e389e61a1eea3b408a1d8ce66b2ef3c
+RMD160 (cmake-3.9.0.tar.gz) = 5ac047b24806642d999fd1a460935274a3238f95
+SHA512 (cmake-3.9.0.tar.gz) = 151c5531dec2c9d3170d95c06b9cc92d22285555cb9c074837ff2d0d0bee2ea285726323fa11c59d2290b1a9586492571d34e49709e35481478c403bf1ca9c48
+Size (cmake-3.9.0.tar.gz) = 7691313 bytes
 SHA1 (patch-CMakeLists.txt) = a0b03f2fad5ea174095c4fe52cea67d94cf46e2d
 SHA1 (patch-Modules_FindCurses.cmake) = 09fcd7adfbc2dfc2cd8af4e047d870a5243d77dc
+SHA1 (patch-Modules_FindPythonInterp.cmake) = d1b39bdcd654f2a4fc63463cd20de656cce3cf8f
+SHA1 (patch-Modules_FindPythonLibs.cmake) = b5cedc6a2354beaf08e06d416c150154a7dc1f05
 SHA1 (patch-Modules_FindX11.cmake) = 124a2d51155cb4455e8b829dc74598cbd50a4e1c
-SHA1 (patch-Source_CursesDialog_ccmake.cxx) = 1685973706bd2041422e5f8da12634c6c0695714
-SHA1 (patch-Source_cmELF.cxx) = 180212c2f4225fd1163fe00639f70f55cac2cad6
+SHA1 (patch-Modules_Platform_UnixPaths.cmake) = 38720e11b7b62cb702e80da19e044f070298f2db
+SHA1 (patch-Source_CursesDialog_ccmake.cxx) = d7baafe6612b6ac9b0542ed10ffcf90cd8d1df87
 SHA1 (patch-Utilities_KWIML_CMakeLists.txt) = e4bdf9fc58757e87bf7e3e3e195839eededbc796
-SHA1 (patch-aa) = bab24334e025b7c1bf7caa2e69d6a439cc421ea9
-SHA1 (patch-ab) = d1b39bdcd654f2a4fc63463cd20de656cce3cf8f
-SHA1 (patch-ac) = b5cedc6a2354beaf08e06d416c150154a7dc1f05
