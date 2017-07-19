@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/02/15 02:21:53 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2017/07/19 17:06:49 adam Exp $
 
-DISTNAME=	tempora-1.6.1
+DISTNAME=	tempora-1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tempora/}
@@ -10,9 +10,18 @@ HOMEPAGE=	https://github.com/jaraco/tempora
 COMMENT=	Objects and routines pertaining to date and time
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=2.8:../../devel/py-test
+
 USE_LANGUAGES=		# none
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} calc-prorate calc-prorate${PYVERSSUFFIX} || ${TRUE}
+
+do-test:
+	cd ${WRKSRC}/tests && ${SETENV} ${TEST_ENV} py.test-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
