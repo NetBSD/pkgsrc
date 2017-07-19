@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/07/18 14:29:51 hauke Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/19 03:06:00 taca Exp $
 
 DISTNAME=	glpi-${GLPI_VERSION}
 GLPI_VERSION=	9.1.5
@@ -21,7 +21,6 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-imap>=5.4:../../mail/php-imap
 DEPENDS+=	${PHP_PKG_PREFIX}-xmlrpc>=5.4:../../net/php-xmlrpc
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.4:../../textproc/php-json
-DEPENDS+=	${PHP_PKG_PREFIX}-apcu_bc>=1.0:../../www/php-apcu_bc
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.4:../../www/php-curl
 DEPENDS+=	freefont-ttf-[0-9]*:../../fonts/freefont-ttf
 
@@ -77,6 +76,14 @@ REPLACE_FILES.php+=      vendor/sabre/vobject/bin/${ddd}
 .endfor
 
 INSTALLATION_DIRS+=	${GLPI_DIR} ${EGDIR}
+
+.include "../../lang/php/phpversion.mk"
+
+.if ${PKG_PHP_VERSION} == 56
+DEPENDS+=	${PHP_PKG_PREFIX}-apcu>=4.0:../../www/php-apcu4
+.else
+DEPENDS+=	${PHP_PKG_PREFIX}-apcu_bc>=1.0:../../www/php-apcu_bc
+.endif
 
 post-extract:
 	for ddd in config_path.php crontab.sample httpd-glpi.conf ; do \
