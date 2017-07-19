@@ -1,4 +1,4 @@
-$NetBSD: patch-ext_standard_uniqid.c,v 1.1 2017/07/17 14:10:08 manu Exp $
+$NetBSD: patch-ext_standard_uniqid.c,v 1.2 2017/07/19 02:44:45 manu Exp $
 
 PHP uniqid() relies on microsecond-precise system clock to produce an
 unique identifier. In order to avoid  using the same value, it first
@@ -24,7 +24,7 @@ Submitted upstream as https://bugs.php.net/bug.php?id=74851
  	int sec, usec;
  	size_t prefix_len = 0;
  	struct timeval tv;
-+	static struct timeval prev_tv = { 0, 0 };
++	ZEND_TLS struct timeval prev_tv = { 0, 0 };
  
  	if (zend_parse_parameters(ZEND_NUM_ARGS(), "|sb", &prefix, &prefix_len,
  							  &more_entropy)) {
