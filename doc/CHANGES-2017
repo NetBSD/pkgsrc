@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2941 2017/07/19 06:41:36 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2942 2017/07/19 12:05:50 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4062,3 +4062,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/screen to 4.6.1 [kim 2017-07-18]
 	Updated fonts/urw-fonts to 2.0nb1 [ryoon 2017-07-19]
 	Updated www/py-cheroot to 5.7.0 [wiz 2017-07-19]
+	Added devel/ocaml-base version 0.9.3 [jaapb 2017-07-19]
