@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17534 2017/07/18 23:05:14 kim Exp $
+$NetBSD: TODO,v 1.17535 2017/07/19 07:12:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1386,6 +1386,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ruby-redmine-3.3.3
 	o ruby-review-1.4.0 [wip]
 	o ruby-selenium-webdriver-3.0.5
+	o ruby-squib-0.13.4
 	o rump-20131213
 	o rust-1.18
 	o sabayon-2.30.1 [GNOME 2.30]
