@@ -1,0 +1,1 @@
+bin/calc-prorate @PREFIX@/bin/calc-prorate@PYVERSSUFFIX@
