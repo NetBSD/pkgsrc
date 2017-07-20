@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/08/15 00:45:50 schmonz Exp $
+$NetBSD: patch-syncdir.c,v 1.1 2017/07/20 02:07:27 schmonz Exp $
 
---- syncdir.c.orig	1998-07-13 15:29:57.000000000 -0400
+Avoid a Linuxism.
+
+--- syncdir.c.orig	1998-07-13 19:29:57.000000000 +0000
 +++ syncdir.c
 @@ -25,7 +25,7 @@
  #undef open
