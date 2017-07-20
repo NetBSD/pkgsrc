@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/07/20 17:23:16 adam Exp $
 
-DISTNAME=	rednose-0.4.3
+DISTNAME=	rednose-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rednose/}
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	http://gfxmonk.net/dist/0install/rednose.xml
+HOMEPAGE=	https://github.com/JBKahn/rednose
 COMMENT=	Coloured output for nosetests
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-python-termstyle>=0.1.7:../../comms/py-python-termstyle
+DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
+DEPENDS+=	${PYPKGPREFIX}-termstyle>=0.1.7:../../comms/py-termstyle
 
 USE_LANGUAGES=	# none
 
