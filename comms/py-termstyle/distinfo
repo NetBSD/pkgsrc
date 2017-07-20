@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/07/20 17:20:57 adam Exp $
+
+SHA1 (termstyle-0.1.11.tar.gz) = 1986f63f4a01b7c80fde3fd985643cfac7b2ee33
+RMD160 (termstyle-0.1.11.tar.gz) = 6525c56a3c3b57bf3fd7af4220c0de416948fc08
+SHA512 (termstyle-0.1.11.tar.gz) = 20fa4f3c2402d539ac0586c10f42a7cd9361ce42b90b839189ad4e24a6dffb1effb435bde976707e9b852bcbab106a4fac77158766fca043e3b179964ad3e546
+Size (termstyle-0.1.11.tar.gz) = 4580 bytes
