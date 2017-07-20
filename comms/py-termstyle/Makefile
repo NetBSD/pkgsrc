@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:21 wiz Exp $
+# $NetBSD: Makefile,v 1.1 2017/07/20 17:20:57 adam Exp $
 
-DISTNAME=	python-termstyle-0.1.10
+DISTNAME=	termstyle-0.1.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	comms
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-termstyle/}
+CATEGORIES=	comms python
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/termstyle/}
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	http://gfxmonk.net/dist/0install/python-termstyle.xml
+HOMEPAGE=	http://github.com/gfxmonk/termstyle
 COMMENT=	Console colouring for python
 LICENSE=	modified-bsd
 
