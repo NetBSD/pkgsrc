@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/06/21 18:32:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/07/20 10:28:33 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,6 +13,15 @@ ${PYSITELIB}/hyperlink/_url.pyo
 ${PYSITELIB}/hyperlink/test/__init__.py
 ${PYSITELIB}/hyperlink/test/__init__.pyc
 ${PYSITELIB}/hyperlink/test/__init__.pyo
+${PYSITELIB}/hyperlink/test/common.py
+${PYSITELIB}/hyperlink/test/common.pyc
+${PYSITELIB}/hyperlink/test/common.pyo
+${PYSITELIB}/hyperlink/test/test_common.py
+${PYSITELIB}/hyperlink/test/test_common.pyc
+${PYSITELIB}/hyperlink/test/test_common.pyo
+${PYSITELIB}/hyperlink/test/test_scheme_registration.py
+${PYSITELIB}/hyperlink/test/test_scheme_registration.pyc
+${PYSITELIB}/hyperlink/test/test_scheme_registration.pyo
 ${PYSITELIB}/hyperlink/test/test_url.py
 ${PYSITELIB}/hyperlink/test/test_url.pyc
 ${PYSITELIB}/hyperlink/test/test_url.pyo
