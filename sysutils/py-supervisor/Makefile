@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/04/28 14:52:29 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/20 17:43:02 adam Exp $
 
-DISTNAME=	supervisor-3.3.1
+DISTNAME=	supervisor-3.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/supervisor/}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://supervisord.org/
 COMMENT=	System for controlling process state under UNIX
 LICENSE=	original-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-meld3-[0-9]*:../../www/py-meld3
+DEPENDS+=	${PYPKGPREFIX}-meld3>=0.6.5:../../www/py-meld3
 # TEST_DEPENDS
 BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
