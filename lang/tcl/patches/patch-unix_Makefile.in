@@ -1,4 +1,4 @@
-$NetBSD: patch-unix_Makefile.in,v 1.11 2016/09/03 11:58:01 adam Exp $
+$NetBSD: patch-unix_Makefile.in,v 1.12 2017/07/20 10:23:35 jperkin Exp $
 
 Honour LDFLAGS.
 
@@ -30,6 +30,15 @@ Honour LDFLAGS.
  
  # Flags to pass to the linker
  LDFLAGS_DEBUG		= @LDFLAGS_DEBUG@
+@@ -144,7 +147,7 @@ NO_DEPRECATED_FLAGS	=
+ 
+ # Some versions of make, like SGI's, use the following variable to determine
+ # which shell to use for executing commands:
+-SHELL			= @MAKEFILE_SHELL@
++#SHELL			= @MAKEFILE_SHELL@
+ 
+ # Tcl used to let the configure script choose which program to use for
+ # installing, but there are just too many different versions of "install"
 @@ -189,7 +192,7 @@ DLTEST_TARGETS		= dltest.marker
  # run-time. The first symbol is for use when creating a binary with cc, and
  # the second is for use when running ld directly.
@@ -159,3 +168,12 @@ Honour LDFLAGS.
  	    done;
  
  # Optional target to install private headers
+@@ -1725,7 +1755,7 @@ configure-packages:
+ 	      mkdir -p $(PKG_DIR)/$$pkg; \
+ 	      if [ ! -f $(PKG_DIR)/$$pkg/Makefile ]; then \
+ 		( cd $(PKG_DIR)/$$pkg; \
+-		  $$i/configure --with-tcl=../.. \
++		  $(SHELL) $$i/configure --with-tcl=../.. \
+ 		      --with-tclinclude=$(GENERIC_DIR) \
+ 		      $(PKG_CFG_ARGS) --libdir=$(PACKAGE_DIR) \
+ 		      --enable-shared --enable-threads; ) || exit $$?; \
