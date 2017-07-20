@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2017/07/03 21:37:29 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2017/07/20 16:52:16 adam Exp $
 
-DISTNAME=	pyOpenSSL-17.1.0
+DISTNAME=	pyOpenSSL-17.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyOpenSSL/}
@@ -13,8 +13,9 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=0.3:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
 # TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+BUILD_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 BUILD_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=3.0.1:../../devel/py-test
 
 # https://github.com/pyca/pyopenssl/issues/656
 do-test:
