@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2017/05/02 10:51:32 wiz Exp $
+$NetBSD: distinfo,v 1.10 2017/07/20 07:25:00 wiz Exp $
 
 SHA1 (protobuf-python-3.3.0.tar.gz) = 01ccddc003234d11626422b8a8bc82723a5485b1
 RMD160 (protobuf-python-3.3.0.tar.gz) = fe3ab218c8a580c50b057a36e5ab1e18d3087e0c
@@ -8,6 +8,7 @@ SHA1 (patch-configure) = ec7003c29d2d3e9aeb9ea90921313e9eb68d3127
 SHA1 (patch-configure.ac) = 208a5ce72905aa95ad73ee0f751d4a58f0c37f5f
 SHA1 (patch-gmock_configure) = a39355c602366450e3cdb6bc7dbc0523fc194319
 SHA1 (patch-gmock_configure.ac) = cfd7b7c87eff4b06ce6ecb34dec046561bbdc113
+SHA1 (patch-m4_acx__check__suncc.m4) = faf96ee5d305c08d30e7c7d3578896971983e1dd
 SHA1 (patch-src_google_protobuf_message__lite.cc) = 8f2ffe07b2710de5365148153978ad6d9939f522
 SHA1 (patch-src_google_protobuf_stubs_atomicops.h) = 9ec851134da674980a49302e9582a432a47f7974
 SHA1 (patch-src_google_protobuf_stubs_atomicops__internals__arm__gcc.h) = d60c554be8ff7fc9370bb036eef9101f9a6433e3
