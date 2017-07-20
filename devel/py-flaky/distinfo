@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/07/20 16:44:13 adam Exp $
+
+SHA1 (flaky-3.4.0.tar.gz) = 4cb273a13ebe827c7902b0ce316a6df34f954ba7
+RMD160 (flaky-3.4.0.tar.gz) = 585be2734c20e9a69797c83acd6d480b5278f35e
+SHA512 (flaky-3.4.0.tar.gz) = 14fda6312e4eb8260a8190204622a7dd274d0c946dda07ec8aa65e8c341f7f4a701c704c807f50eacf77589231b37c3bb06eec18d60a718f24e9b0182f7e8cb5
+Size (flaky-3.4.0.tar.gz) = 29197 bytes
