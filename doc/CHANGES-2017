@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2949 2017/07/20 16:54:48 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2950 2017/07/20 17:45:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4083,3 +4083,9 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-flaky version 3.4.0 [adam 2017-07-20]
 	Updated security/py-OpenSSL to 17.2.0 [adam 2017-07-20]
 	Updated www/py-urllib3 to 1.22 [adam 2017-07-20]
+	Updated textproc/py-m2r to 0.1.7 [adam 2017-07-20]
+	Updated comms/py-colorama to 0.3.9 [adam 2017-07-20]
+	Renamed comms/py-python-termstyle to comms/py-termstyle [adam 2017-07-20]
+	Updated comms/py-termstyle to 0.1.11 [adam 2017-07-20]
+	Updated devel/py-rednose to 1.2.2 [adam 2017-07-20]
+	Updated sysutils/py-supervisor to 3.3.2 [adam 2017-07-20]
