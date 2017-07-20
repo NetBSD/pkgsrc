@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/12/06 03:12:25 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/07/20 17:23:16 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,3 +8,24 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/rednose.py
 ${PYSITELIB}/rednose.pyc
 ${PYSITELIB}/rednose.pyo
+${PYSITELIB}/test_files/__init__.py
+${PYSITELIB}/test_files/__init__.pyc
+${PYSITELIB}/test_files/__init__.pyo
+${PYSITELIB}/test_files/basic_test_suite.py
+${PYSITELIB}/test_files/basic_test_suite.pyc
+${PYSITELIB}/test_files/basic_test_suite.pyo
+${PYSITELIB}/test_files/class_test_failure.py
+${PYSITELIB}/test_files/class_test_failure.pyc
+${PYSITELIB}/test_files/class_test_failure.pyo
+${PYSITELIB}/test_files/encoding_test.py
+${PYSITELIB}/test_files/encoding_test.pyc
+${PYSITELIB}/test_files/encoding_test.pyo
+${PYSITELIB}/test_files/encoding_test_with_literals.py
+${PYSITELIB}/test_files/encoding_test_with_literals.pyc
+${PYSITELIB}/test_files/encoding_test_with_literals.pyo
+${PYSITELIB}/test_files/new_tests.py
+${PYSITELIB}/test_files/new_tests.pyc
+${PYSITELIB}/test_files/new_tests.pyo
+${PYSITELIB}/test_files/sample_test.py
+${PYSITELIB}/test_files/sample_test.pyc
+${PYSITELIB}/test_files/sample_test.pyo
