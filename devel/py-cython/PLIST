@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2017/01/25 16:09:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2017/07/20 08:37:09 adam Exp $
 bin/cygdb${PYVERSSUFFIX}
 bin/cython${PYVERSSUFFIX}
 bin/cythonize${PYVERSSUFFIX}
@@ -136,6 +136,9 @@ ${PYSITELIB}/Cython/Compiler/Pipeline.pyo
 ${PYSITELIB}/Cython/Compiler/PyrexTypes.py
 ${PYSITELIB}/Cython/Compiler/PyrexTypes.pyc
 ${PYSITELIB}/Cython/Compiler/PyrexTypes.pyo
+${PYSITELIB}/Cython/Compiler/Pythran.py
+${PYSITELIB}/Cython/Compiler/Pythran.pyc
+${PYSITELIB}/Cython/Compiler/Pythran.pyo
 ${PYSITELIB}/Cython/Compiler/Scanning.pxd
 ${PYSITELIB}/Cython/Compiler/Scanning.py
 ${PYSITELIB}/Cython/Compiler/Scanning.pyc
@@ -354,6 +357,7 @@ ${PYSITELIB}/Cython/Includes/libcpp/algorithm.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/cast.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/complex.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/deque.pxd
+${PYSITELIB}/Cython/Includes/libcpp/functional.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/iterator.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/limits.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/list.pxd
@@ -473,7 +477,7 @@ ${PYSITELIB}/Cython/Utility/Builtins.c
 ${PYSITELIB}/Cython/Utility/CConvert.pyx
 ${PYSITELIB}/Cython/Utility/CMath.c
 ${PYSITELIB}/Cython/Utility/Capsule.c
-${PYSITELIB}/Cython/Utility/CommonTypes.c
+${PYSITELIB}/Cython/Utility/CommonStructures.c
 ${PYSITELIB}/Cython/Utility/Complex.c
 ${PYSITELIB}/Cython/Utility/Coroutine.c
 ${PYSITELIB}/Cython/Utility/CpdefEnums.pyx
