@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2952 2017/07/21 04:08:29 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.2953 2017/07/21 08:41:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4091,3 +4091,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/py-supervisor to 3.3.2 [adam 2017-07-20]
 	Updated mail/qmail to 1.03nb29 [schmonz 2017-07-21]
 	Updated mail/qmail-run to 20170721 [schmonz 2017-07-21]
+	Updated multimedia/py-m3u8 to 0.3.2 [adam 2017-07-21]
+	Updated devel/py-hypothesis to 3.13.1 [adam 2017-07-21]
