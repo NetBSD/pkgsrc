@@ -17,8 +17,7 @@ Therefore, if you need to ask for help on the qmail list, please
 mention:
 
 * that you installed @PKGNAME@ from pkgsrc,
-* the output of "@PKG_INFO@ -B @PKGNAME@ | @GREP@ ^QMAIL",
-* the output of "@PKG_INFO@ -Q PKG_OPTIONS @PKGNAME@", and
+* the output of "@PKG_INFO@ -B @PKGNAME@ | @GREP@ ^QMAIL", and
 * how you're running (or trying to run) the qmail daemons.
 
 If you can first reproduce your problem on a manual LWQ-style
