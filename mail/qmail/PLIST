@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2017/03/31 13:52:00 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.18 2017/07/21 04:07:01 schmonz Exp $
 bin/bouncesaying
 bin/condredirect
 bin/datemail
@@ -24,12 +24,19 @@ bin/qmail-newu
 bin/qmail-pop3d
 bin/qmail-popup
 bin/qmail-pw2u
+${PLIST.rejectutils}bin/qmail-qfilter-viruscan
 bin/qmail-qmqpc
 bin/qmail-qmqpd
 bin/qmail-qmtpd
 bin/qmail-qread
 bin/qmail-qstat
 bin/qmail-queue
+${PLIST.rejectutils}bin/qmail-qfilter-ofmipd-queue
+${PLIST.rejectutils}bin/qmail-qfilter-smtpd-queue
+${PLIST.rejectutils}bin/qmail-rcptcheck
+${PLIST.rejectutils}bin/qmail-rcptcheck-badrcptto
+${PLIST.rejectutils}bin/qmail-rcptcheck-qregex
+${PLIST.rejectutils}bin/qmail-rcptcheck-realrcptto
 bin/qmail-remote
 bin/qmail-rspawn
 bin/qmail-send
@@ -96,7 +103,7 @@ man/man8/qmail-tcpok.8
 man/man8/qmail-tcpto.8
 man/man8/splogger.8
 share/doc/qmail/FAQ
-share/doc/qmail/INSTALL${DARWINSUFX}
+share/doc/qmail/INSTALL
 share/doc/qmail/INSTALL.alias
 share/doc/qmail/INSTALL.ctl
 share/doc/qmail/INSTALL.ids
@@ -114,10 +121,9 @@ share/doc/qmail/PIC.relaygood
 share/doc/qmail/PIC.rem2local
 share/doc/qmail/README.pkgsrc
 ${PLIST.srs}share/doc/qmail/README.srs
-${PLIST.qregex}share/doc/qmail/README.qregex
 share/doc/qmail/REMOVE.binmail
 share/doc/qmail/REMOVE.sendmail
-share/doc/qmail/SENDMAIL${DARWINSUFX}
+share/doc/qmail/SENDMAIL
 share/doc/qmail/TEST.deliver
 share/doc/qmail/TEST.receive
 share/doc/qmail/UPGRADE
@@ -131,12 +137,12 @@ share/examples/qmail/boot/home
 share/examples/qmail/boot/home+df
 share/examples/qmail/boot/proc
 share/examples/qmail/boot/proc+df
-${PLIST.viruscan}share/examples/qmail/control/signatures
 share/qmail/setup/config
 share/qmail/setup/config-fast
 share/qmail/setup/dnsfq
 share/qmail/setup/dnsip
 share/qmail/setup/dnsptr
 share/qmail/setup/hostname
-share/qmail/setup/install
+share/qmail/setup/install-destdir
+share/qmail/setup/instcheck
 share/qmail/setup/ipmeprint
