@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/07/21 14:04:17 jaapb Exp $
+
+SHA1 (ppx_metaquot-0.9.0.tar.gz) = b5788539fa93d87774e2bfa005d2a39e66c3756f
+RMD160 (ppx_metaquot-0.9.0.tar.gz) = 7b5e71396c7bcbc42d7f1b93e8070a389cbebbff
+SHA512 (ppx_metaquot-0.9.0.tar.gz) = 7645f02f964f2a33836f947a725384f95c7724dcd88c031aa3dd2d255127a21d473e19ff77cb917f845930ab44541a4698becf56721cc1a0a0eee5912947cd22
+Size (ppx_metaquot-0.9.0.tar.gz) = 6801 bytes
