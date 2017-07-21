@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 11:43:47 asau Exp $
+# $NetBSD: Makefile,v 1.21 2017/07/21 20:50:57 nros Exp $
 #
 
-DISTNAME=	wily-0.13.41
-PKGREVISION=	1
+DISTNAME=	wily-0.13.42
 CATEGORIES=	editors plan9
-MASTER_SITES=	ftp://ftp.cse.yorku.ca/pub/wily/src/old/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wily/} \
+		ftp://ftp.cse.yorku.ca/pub/wily/src/old/
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://www.cse.yorku.ca/~oz/wily/
 COMMENT=	Unix/X11 clone of the Plan9 acme editor/environment
+LICENSE=	artistic
 
 GNU_CONFIGURE=	yes
 CONFIGURE_HAS_MANDIR=	no
