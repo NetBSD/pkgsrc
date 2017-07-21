@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2964 2017/07/21 14:13:17 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.2965 2017/07/21 14:21:38 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4104,3 +4104,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/ocaml-ppx_metaquot version 0.9.0 [jaapb 2017-07-21]
 	Updated devel/ocaml-ppx_type_conv to 0.9.0 [jaapb 2017-07-21]
 	Updated devel/ocaml-ppx_sexp_conv to 0.9.0 [jaapb 2017-07-21]
+	Updated net/ocaml-ipaddr to 2.8.0 [jaapb 2017-07-21]
