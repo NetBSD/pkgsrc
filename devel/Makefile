@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2473 2017/07/21 10:37:19 jaapb Exp $
+# $NetBSD: Makefile,v 1.2474 2017/07/21 14:04:58 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -722,6 +722,7 @@ SUBDIR+=	ocaml-ppx_ast
 SUBDIR+=	ocaml-ppx_core
 SUBDIR+=	ocaml-ppx_deriving
 SUBDIR+=	ocaml-ppx_driver
+SUBDIR+=	ocaml-ppx_metaquot
 SUBDIR+=	ocaml-ppx_optcomp
 SUBDIR+=	ocaml-ppx_sexp_conv
 SUBDIR+=	ocaml-ppx_tools
