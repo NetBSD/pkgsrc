@@ -1,0 +1,2 @@
+Stdio provides input/output functions for OCaml. It re-exports the buffered
+channels of the stdlib distributed with OCaml but with some improvements.
