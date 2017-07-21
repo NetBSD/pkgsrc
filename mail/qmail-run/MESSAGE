@@ -1,43 +1,41 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2017/07/06 15:46:31 schmonz Exp $
+$NetBSD: MESSAGE,v 1.7 2017/07/21 04:08:15 schmonz Exp $
 
 Please read ${PREFIX}/share/doc/qmail-run/README.pkgsrc.
 
 To enable qmail for...
 
 Local and outgoing deliveries:
-- Check the configuration files in ${PKG_SYSCONFDIR}.
-- Modify /etc/mailer.conf (see share/examples/qmail-run/mailer.conf).
-- Set qmailsend=YES in /etc/rc.conf.
-
-Incoming SMTP deliveries:
-- Set qmailsmtpd=YES in /etc/rc.conf.
-
-Outgoing submissions with SMTP AUTH over TLS:
-- Set qmailofmipd=YES in /etc/rc.conf, and also qmailofmipd_preofmipd to
-  ${PREFIX}/bin/spamdyke --config-file ${PKG_SYSCONFBASE}/spamdyke-ofmipd.conf
-- Copy share/examples/qmail-run/spamdyke-ofmipd.conf to ${PKG_SYSCONFBASE}.
-- Consider that your checkpassword binary may need to be setuid root.
-- Set stunnel=YES in /etc/rc.conf.
-- Incorporate share/examples/qmail-run/stunnel.conf into your stunnel.conf.
-
-POP3 (only for Maildirs):
-- Set qmailpop3d=YES in /etc/rc.conf.
+- Check the configuration files in ${PKG_SYSCONFDIR}
+- Replace /etc/mailer.conf with share/examples/qmail-run/mailer.conf
+- In /etc/rc.conf, set
+    qmailsend=YES
 
 Local non-root users to see the queue:
-- Set qmailqread=YES in /etc/rc.conf.
-- Change the mailq entry in /etc/mailer.conf to qmail-qread-client.
+- Change the mailq entry in /etc/mailer.conf to qmail-qread-client
+- In /etc/rc.conf, set
+    qmailqread=YES
 
-Filtering incoming messages arriving via SMTP:
-- Set QMAILQUEUE="${PREFIX}/bin/qmail-qfilter-smtpd-queue" in tcp.smtp.
-- Reload the cdb: /etc/rc.d/qmailsmtpd cdb
-- Consult qmail-qfilter(1) and see share/examples/qmail-qfilter.
-- Place executable filters named 'smtpd-*' in ${PKG_SYSCONFDIR}/filters.
+Incoming SMTP deliveries:
+- In /etc/rc.conf, set
+    qmailsmtpd=YES
+    qmailsmtpd_postenv="QMAILQUEUE=${PREFIX}/bin/qmail-qfilter-smtpd-queue RCPTCHECK=${PREFIX}/bin/qmail-rcptcheck"
 
-Filtering outgoing messages submitted via OFMIP:
-- Set QMAILQUEUE="${PREFIX}/bin/qmail-qfilter-ofmipd-queue" in tcp.ofmip.
-- Reload the cdb: /etc/rc.d/qmailofmipd cdb
-- Consult qmail-qfilter(1) and see share/examples/qmail-qfilter.
-- Place executable filters named 'ofmipd-*' in ${PKG_SYSCONFDIR}/filters.
+Filtering incoming SMTP:
+- List qmail-qfilter programs in ${PKG_SYSCONFDIR}/control/smtpfilters
+- List qmail-rcptcheck programs in ${PKG_SYSCONFDIR}/control/rcptchecks
+
+Outgoing submissions with SMTP AUTH over TLS:
+- Incorporate share/examples/qmail-run/stunnel.conf into your stunnel.conf
+- Consider that your checkpassword binary may need to be setuid root
+- Copy share/examples/qmail-run/spamdyke-ofmipd.conf to ${PKG_SYSCONFBASE}
+- In /etc/rc.conf, set
+    qmailofmipd=YES
+    qmailofmipd_preofmipd="${PREFIX}/bin/spamdyke --config-file ${PKG_SYSCONFBASE}/spamdyke-ofmipd.conf"
+    stunnel=YES
+
+Fetching Maildirs via POP3:
+- In /etc/rc.conf, set
+    qmailpop3d=YES
 
 ===========================================================================
