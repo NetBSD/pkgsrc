@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.6 2017/06/23 15:49:03 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.7 2017/07/21 04:08:15 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -11,7 +11,7 @@
 name="qmailofmipd"
 
 # User-settable rc.conf variables and their default values:
-: ${qmailofmipd_postenv:=""}
+: ${qmailofmipd_postenv:="QMAILQUEUE=@PREFIX@/bin/qmail-queue"}
 : ${qmailofmipd_tcpflags:="-vRl0"}
 : ${qmailofmipd_tcphost:="127.0.0.1"}
 : ${qmailofmipd_tcpport:="26"}
