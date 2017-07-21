@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2469 2017/07/20 16:44:13 adam Exp $
+# $NetBSD: Makefile,v 1.2470 2017/07/21 10:28:09 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -706,6 +706,7 @@ SUBDIR+=	ocaml-base64
 SUBDIR+=	ocaml-batteries
 SUBDIR+=	ocaml-biniou
 SUBDIR+=	ocaml-cmdliner
+SUBDIR+=	ocaml-compiler-libs
 SUBDIR+=	ocaml-cppo
 SUBDIR+=	ocaml-deriving-ocsigen
 SUBDIR+=	ocaml-extlib
