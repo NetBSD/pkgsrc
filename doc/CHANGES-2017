@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2955 2017/07/21 10:20:24 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.2956 2017/07/21 10:29:22 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4095,3 +4095,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-hypothesis to 3.13.1 [adam 2017-07-21]
 	Updated www/php-glpi to 9.1.6 [hauke 2017-07-21]
 	Added devel/ocaml-compiler-libs version 0.9.0 [jaapb 2017-07-21]
+	Added devel/ocaml-migrate-parsetree version 1.0.1 [jaapb 2017-07-21]
