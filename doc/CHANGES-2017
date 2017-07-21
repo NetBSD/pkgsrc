@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2950 2017/07/20 17:45:39 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2951 2017/07/21 04:07:17 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4089,3 +4089,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated comms/py-termstyle to 0.1.11 [adam 2017-07-20]
 	Updated devel/py-rednose to 1.2.2 [adam 2017-07-20]
 	Updated sysutils/py-supervisor to 3.3.2 [adam 2017-07-20]
+	Updated mail/qmail to 1.03nb29 [schmonz 2017-07-21]
