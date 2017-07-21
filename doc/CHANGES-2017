@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2957 2017/07/21 10:32:42 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.2958 2017/07/21 10:36:25 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4097,3 +4097,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/ocaml-compiler-libs version 0.9.0 [jaapb 2017-07-21]
 	Added devel/ocaml-migrate-parsetree version 1.0.1 [jaapb 2017-07-21]
 	Added devel/ocaml-ppx_ast version 0.9.1 [jaapb 2017-07-21]
+	Added devel/ocaml-stdio version 0.9.0 [jaapb 2017-07-21]
