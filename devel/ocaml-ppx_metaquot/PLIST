@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/21 14:04:17 jaapb Exp $
+${OCAML_SITELIB}/ppx_metaquot/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_metaquot/lifters/ppx_metaquot_lifters.a
+${OCAML_SITELIB}/ppx_metaquot/lifters/ppx_metaquot_lifters.cma
+${OCAML_SITELIB}/ppx_metaquot/lifters/ppx_metaquot_lifters.cmi
+${OCAML_SITELIB}/ppx_metaquot/lifters/ppx_metaquot_lifters.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_metaquot/lifters/ppx_metaquot_lifters.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_metaquot/lifters/ppx_metaquot_lifters.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_metaquot/lifters/ppx_metaquot_lifters.cmxs
+${OCAML_SITELIB}/ppx_metaquot/lifters/ppx_metaquot_lifters.ml
+${OCAML_SITELIB}/ppx_metaquot/opam
+${OCAML_SITELIB}/ppx_metaquot/ppx.exe
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_metaquot/ppx_metaquot.a
+${OCAML_SITELIB}/ppx_metaquot/ppx_metaquot.cma
+${OCAML_SITELIB}/ppx_metaquot/ppx_metaquot.cmi
+${OCAML_SITELIB}/ppx_metaquot/ppx_metaquot.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_metaquot/ppx_metaquot.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_metaquot/ppx_metaquot.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_metaquot/ppx_metaquot.cmxs
+${OCAML_SITELIB}/ppx_metaquot/ppx_metaquot.ml
+share/doc/ppx_metaquot/LICENSE.txt
+share/doc/ppx_metaquot/README.org
