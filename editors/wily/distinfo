@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2016/04/01 21:44:02 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2017/07/21 20:50:57 nros Exp $
 
-SHA1 (wily-0.13.41.tgz) = 2d6c6dfbda2c7b7b37181aaac20b02f8954c69ee
-RMD160 (wily-0.13.41.tgz) = 970e6b90b1093ce1c8bad535aff9db90200763e6
-SHA512 (wily-0.13.41.tgz) = e828fc528f4b8ba45d4c475fef9fe558d9293ab4ae2a7121c06e2a0e8442ef7d48d5862f9d5f0399b5ef6bb60d1c2585e4f87677b19665e8800124eb5a671207
-Size (wily-0.13.41.tgz) = 483429 bytes
+SHA1 (wily-0.13.42.tar.gz) = d01544d10e68cf4d24956537bfec72aab275a14b
+RMD160 (wily-0.13.42.tar.gz) = 2cc03acd7a1474e9d1f6003fe3606b94874a9fe7
+SHA512 (wily-0.13.42.tar.gz) = 5e5460cf4e086fb4ee63da074b23ad6831226e57bff3a781f4bd8f76768e8bc370c380e66ceac88ea103fd12d538db65120b22ba14ce88f38973a4f5084c273f
+Size (wily-0.13.42.tar.gz) = 487783 bytes
 SHA1 (patch-aa) = 7f0236f2270b4216abb92c1116f4139c39505460
 SHA1 (patch-ab) = a8076717ebafc3dbc66a838b9b9c9d4a62feaad2
