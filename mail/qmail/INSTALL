@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.8 2017/04/27 20:35:10 schmonz Exp $
+# $NetBSD: INSTALL,v 1.9 2017/07/21 04:07:01 schmonz Exp $
 
 DOCDIR=@DOCDIR@
 EGDIR=@EGDIR@
@@ -56,9 +56,37 @@ EOF
 	;;
 
 POST-INSTALL)
-	if ! [ -d ${QMAIL_QUEUE_DIR} ] || ! [ -d ${QMAIL_QUEUE_DIR}/info ]; then
-		${PREFIX}/bin/queue-fix ${QMAIL_QUEUE_DIR}
+	${PREFIX}/share/qmail/setup/install-destdir
+	QMAIL_SETUP_EXITCODE=$?
+	if [ ${QMAIL_SETUP_EXITCODE} -ne 0 ]; then
+		${CAT} <<EOF
+===========================================================================
+
+ERROR: install-destdir exited nonzero (${QMAIL_SETUP_EXITCODE}).
+
+Permissions are likely wrong, and/or the queue may be uninitialized.
+
+===========================================================================
+EOF
+		exit 1
 	fi
+
+	QMAIL_CHECK_OUTPUT=$(${PREFIX}/share/qmail/setup/instcheck 2>&1)
+	if [ -n "${QMAIL_CHECK_OUTPUT}" ]; then
+		${CAT} <<EOF
+===========================================================================
+
+ERROR: instcheck issued warnings:
+
+${QMAIL_CHECK_OUTPUT}
+
+Permissions are likely wrong, and/or the queue may be uninitialized.
+
+===========================================================================
+EOF
+		exit 1
+	fi
+
 	if ! [ -z ${QMAIL_QUEUE_EXTRA} ]; then
 		${CAT} <<EOF
 ===========================================================================
@@ -83,6 +111,10 @@ NOTE: If you don't already have an SSL certificate for qmail:
 # chown ${QMAIL_DAEMON_USER}:${QMAIL_QMAIL_GROUP} ${SERVERCERT}
 # ln -s ${SERVERCERT} ${PKG_SYSCONFDIR}/control/clientcert.pem
 # update_tmprsadh
+
+Once you have a certificate, regularly regenerate DH params from cron(8):
+
+    01 01 * * * ${PREFIX}/bin/update_tmprsadh > /dev/null 2>&1
 
 ===========================================================================
 EOF
