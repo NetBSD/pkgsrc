@@ -1,39 +1,26 @@
-$NetBSD: patch-Makefile,v 1.4 2017/03/20 16:23:20 schmonz Exp $
+$NetBSD: patch-Makefile,v 1.5 2017/07/21 04:07:01 schmonz Exp $
 
-DESTDIR support, and don't hardcode numeric IDs into binaries.
+Don't build catpages we won't install.
 
---- Makefile.orig	1998-06-15 10:53:16.000000000 +0000
+--- Makefile.orig	2017-07-19 02:44:58.000000000 +0000
 +++ Makefile
-@@ -4,6 +4,14 @@ SHELL=/bin/sh
+@@ -987,17 +987,8 @@ make-makelib warn-auto.sh systype
+ 	chmod 755 makelib
  
- default: it
+ man: \
+-qmail-local.0 qmail-lspawn.0 qmail-getpw.0 qmail-remote.0 \
+-qmail-rspawn.0 qmail-clean.0 qmail-send.0 qmail-start.0 splogger.0 \
+-qmail-queue.0 qmail-inject.0 mailsubj.0 qmail-showctl.0 qmail-newu.0 \
+-qmail-pw2u.0 qmail-qread.0 qmail-qstat.0 qmail-tcpto.0 qmail-tcpok.0 \
+-qmail-pop3d.0 qmail-popup.0 qmail-qmqpc.0 qmail-qmqpd.0 qmail-qmtpd.0 \
+-qmail-smtpd.0 tcp-env.0 qmail-newmrh.0 qreceipt.0 qbiff.0 forward.0 \
+-preline.0 condredirect.0 bouncesaying.0 except.0 maildirmake.0 \
+-maildir2mbox.0 maildirwatch.0 qmail.0 qmail-limits.0 qmail-log.0 \
+-qmail-control.0 qmail-header.0 qmail-users.0 dot-qmail.0 \
+-qmail-command.0 tcp-environ.0 maildir.0 mbox.0 addresses.0 \
+-envelopes.0 forgeries.0
++dot-qmail.5 qmail-control.5 qmail-getpw.8 qmail-limits.7 qmail-newmrh.8 \
++qmail-newu.8 qmail-pw2u.8 qmail-send.8 qmail-start.8 qmail-users.5
  
-+auto_destdir.c: \
-+auto-str conf-destdir
-+	./auto-str auto_qmail `head -1 conf-destdir` > auto_destdir.c
-+
-+auto_destdir.o: \
-+compile auto_destdir.c
-+	./compile auto_destdir.c
-+
- addresses.0: \
- addresses.5
- 	nroff -man addresses.5 > addresses.0
-@@ -110,7 +118,7 @@ auto_split.o: \
- compile auto_split.c
- 	./compile auto_split.c
- 
--auto_uids.c: \
-+auto_uids_orig.c: \
- auto-uid auto-gid conf-users conf-groups
- 	( ./auto-uid auto_uida `head -1 conf-users` \
- 	&&./auto-uid auto_uidd `head -2 conf-users | tail -1` \
-@@ -122,7 +130,7 @@ auto-uid auto-gid conf-users conf-groups
- 	&&./auto-uid auto_uids `head -8 conf-users | tail -1` \
- 	&&./auto-gid auto_gidq `head -1 conf-groups` \
- 	&&./auto-gid auto_gidn `head -2 conf-groups | tail -1` \
--	) > auto_uids.c.tmp && mv auto_uids.c.tmp auto_uids.c
-+	) > auto_uids_orig.c.tmp && mv auto_uids_orig.c.tmp auto_uids_orig.c
- 
- auto_uids.o: \
- compile auto_uids.c
+ mbox.0: \
+ mbox.5
