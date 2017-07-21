@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2017/07/06 15:46:31 schmonz Exp $
+# $NetBSD: Makefile,v 1.40 2017/07/21 04:08:15 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20170706
+DISTNAME=		qmail-run-20170721
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -11,7 +11,7 @@ COMMENT=		Configures qmail to receive and deliver mail
 LICENSE=		2-clause-bsd
 
 DEPENDS+=		mess822-[0-9]*:../../mail/mess822
-DEPENDS_QMAIL=		qmail>=1.03nb8:../../mail/qmail
+DEPENDS_QMAIL=		qmail>=1.03nb29:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
 DEPENDS+=		qmail-qfilter>1.5nb1:../../mail/qmail-qfilter
 
@@ -47,7 +47,7 @@ MAKEVARS+=	PKG_SYSCONFDIR.qmail-run
 .endif
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	mailer.conf qmail-procmail qmail-qfilter-queue
+SUBST_FILES.paths=	mailer.conf qmail-procmail
 SUBST_FILES.paths+=	qmail-qread-client spamdyke-ofmipd.conf
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
@@ -66,16 +66,13 @@ post-extract:
 	for f in README.pkgsrc mailer.conf spamdyke-ofmipd.conf stunnel.conf; do \
 	    ${CP} ${FILESDIR}/$$f ${WRKDIR}/$$f;			\
 	done
-	for f in qmail-procmail qmail-qfilter-queue qmail-qread-client; do \
+	for f in qmail-procmail qmail-qread-client; do \
 	    ${CP} ${FILESDIR}/$$f.sh ${WRKDIR}/$$f;			\
 	done
 
 do-install:
 	for f in qmail-procmail qmail-qread-client; do \
 	    ${INSTALL_SCRIPT} ${WRKDIR}/$$f ${DESTDIR}${PREFIX}/bin;	\
-	done
-	for f in qmail-qfilter-ofmipd-queue qmail-qfilter-smtpd-queue; do \
-	    ${INSTALL_SCRIPT} ${WRKDIR}/qmail-qfilter-queue ${DESTDIR}${PREFIX}/bin/$$f;	\
 	done
 	${INSTALL_DATA} ${WRKDIR}/README.pkgsrc \
 		${DESTDIR}${PREFIX}/share/doc/qmail-run
