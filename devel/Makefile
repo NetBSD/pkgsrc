@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2471 2017/07/21 10:29:54 jaapb Exp $
+# $NetBSD: Makefile,v 1.2472 2017/07/21 10:36:51 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -718,6 +718,7 @@ SUBDIR+=	ocaml-migrate-parsetree
 SUBDIR+=	ocaml-oasis
 SUBDIR+=	ocaml-odn
 SUBDIR+=	ocaml-optcomp
+SUBDIR+=	ocaml-ppx_ast
 SUBDIR+=	ocaml-ppx_core
 SUBDIR+=	ocaml-ppx_deriving
 SUBDIR+=	ocaml-ppx_driver
