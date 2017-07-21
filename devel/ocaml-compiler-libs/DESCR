@@ -1,0 +1,2 @@
+This package simply repackages the OCaml compiler libraries so they don't
+expose everything at toplevel.
