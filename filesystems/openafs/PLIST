@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/11 14:05:01 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/07/21 01:39:33 sevan Exp $
 bin/afs_compile_et
 bin/afsio
 bin/afsmonitor
@@ -38,6 +38,7 @@ include/afs/afs_consts.h
 include/afs/afs_lhash.h
 include/afs/afs_stats.h
 include/afs/afs_sysnames.h
+include/afs/afs_trace.h
 include/afs/afscbint.h
 include/afs/afscp.h
 include/afs/afsint.h
@@ -260,6 +261,7 @@ sbin/vldb_check
 sbin/vldb_convert
 sbin/voldump
 sbin/volinfo
+sbin/volscan
 sbin/vos
 sbin/vsys
 share/openafs/C/afszcm.cat
