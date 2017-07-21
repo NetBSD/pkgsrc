@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/07/11 11:40:09 jaapb Exp $
+$NetBSD: distinfo,v 1.4 2017/07/21 14:12:22 jaapb Exp $
 
-SHA1 (ppx_sexp_conv-114.01.04-ad2cef9.tar.gz) = ff9a46f8f1916e73e4fc616d11c21d381d0e3545
-RMD160 (ppx_sexp_conv-114.01.04-ad2cef9.tar.gz) = 4e4b45729bd2cd74b9c5709c403b981c99b27475
-SHA512 (ppx_sexp_conv-114.01.04-ad2cef9.tar.gz) = b9e842cd77ccd61a56b20ce786378c041cecc69363322200a9b73bcfa0a4e7710f6d7ab67fa6e298f2b84573e68227f6c44c9b11e690e47b1613892bf2f0a099
-Size (ppx_sexp_conv-114.01.04-ad2cef9.tar.gz) = 36801 bytes
-SHA1 (patch-Makefile) = 2293f1c7573f6a42be659f2f09eca5960fe8c6ba
+SHA1 (ppx_sexp_conv-0.9.0.tar.gz) = 338e947fe71c0f405289ccc7f46efac1bfd67669
+RMD160 (ppx_sexp_conv-0.9.0.tar.gz) = 8bb44712ea54210f60a2f44d8ef070989a3452db
+SHA512 (ppx_sexp_conv-0.9.0.tar.gz) = af3d28a3cdb7c796549a2598c218f69a69d58da715ef2d16077c3adeb22823fa7bec6bc0d8cb6caaf2a0adb56dfcb39d667975959251fb310b69d6abe8302845
+Size (ppx_sexp_conv-0.9.0.tar.gz) = 28000 bytes
