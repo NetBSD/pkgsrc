@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/07/11 12:28:51 jaapb Exp $
+$NetBSD: distinfo,v 1.6 2017/07/21 14:21:26 jaapb Exp $
 
-SHA1 (ocaml-ipaddr-2.7.2.tar.gz) = 0002ca7085f0ab7f1008c1c4b122c20497e22853
-RMD160 (ocaml-ipaddr-2.7.2.tar.gz) = d490df1087b325899e11ae6a68b734b5675e7ab2
-SHA512 (ocaml-ipaddr-2.7.2.tar.gz) = fe477bcdae82f6a259d99cb4191f942ba7a38d11c575fcaa92c2973c9cd0b3b2b008a1efdca73e11d94f892be2f84547c386bbfca95cfa78d2fefd83d77ca876
-Size (ocaml-ipaddr-2.7.2.tar.gz) = 23698 bytes
+SHA1 (ocaml-ipaddr-2.8.0.tar.gz) = afc9c209fbe6078af45da77bb81d8f4c1d84eed3
+RMD160 (ocaml-ipaddr-2.8.0.tar.gz) = 329a772880b863d7b7f8537b4040b484c5e85bc3
+SHA512 (ocaml-ipaddr-2.8.0.tar.gz) = 1714ee4d6b2afa17b987844f37a9896f01d7b674770fa6804b03222dba656130f9ee0d2d1409b67e770e21f973682c7d1d5c550abb0a5d94bc0c04a1a97e8e3c
+Size (ocaml-ipaddr-2.8.0.tar.gz) = 22134 bytes
