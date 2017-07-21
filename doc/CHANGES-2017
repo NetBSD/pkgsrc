@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2953 2017/07/21 08:41:11 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2954 2017/07/21 10:12:15 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4093,3 +4093,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/qmail-run to 20170721 [schmonz 2017-07-21]
 	Updated multimedia/py-m3u8 to 0.3.2 [adam 2017-07-21]
 	Updated devel/py-hypothesis to 3.13.1 [adam 2017-07-21]
+	Updated www/php-glpi to 9.1.6 [hauke 2017-07-21]
