@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2015/11/04 17:41:19 agc Exp $
+$NetBSD: distinfo,v 1.16 2017/07/22 17:44:40 maya Exp $
 
 SHA1 (Canna37p3.tar.bz2) = e39eece7c70c669dd46dd74b26121a60a2496fde
 RMD160 (Canna37p3.tar.bz2) = 33e5eb9e2dc144835db838612897e652acbc60ed
@@ -22,3 +22,4 @@ SHA1 (patch-lib_RKC_convert.c) = f196cfa3db3ef163c1869ca6bfd3f22170997aef
 SHA1 (patch-lib_RK_dd.c) = 8055a2a3902e7d4d0cc1d782295c2879311750ec
 SHA1 (patch-lib_RK_ncache.c) = e792592500e7db85a6b2370c4ea9eb533d97bda0
 SHA1 (patch-lib_canna_keydef.c) = af14140f58bf8a6214a7fb9d5d73347c1b3cdd85
+SHA1 (patch-lib_canna_lisp.c) = 0ed74a04406ab21fb88ef94b182cff2ff3c793ef
