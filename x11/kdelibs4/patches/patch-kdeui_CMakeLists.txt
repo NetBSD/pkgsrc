@@ -1,0 +1,16 @@
+$NetBSD: patch-kdeui_CMakeLists.txt,v 1.1 2017/07/22 13:40:54 maya Exp $
+
+fix copy paste error, duplicate else case
+fails with cmake 3.9.0
+
+--- kdeui/CMakeLists.txt.orig	2016-12-08 18:44:10.000000000 +0000
++++ kdeui/CMakeLists.txt
+@@ -313,8 +313,6 @@ if (Q_WS_MAC AND MAC_USE_OSXKEYCHAIN)
+     add_definitions(-DMAC_USE_OSXKEYCHAIN)
+ else(Q_WS_MAC AND MAC_USE_OSXKEYCHAIN)
+      set(kdeui_LIB_SRCS ${kdeui_LIB_SRCS} util/kwallet.cpp)
+-else(Q_WS_MAC AND MAC_USE_OSXKEYCHAIN)
+-  set(kdeui_LIB_SRCS ${kdeui_LIB_SRCS} util/kwallet.cpp)
+ endif(Q_WS_MAC AND MAC_USE_OSXKEYCHAIN)
+ 
+ if(NOT WINCE)
