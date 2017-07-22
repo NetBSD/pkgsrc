@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/03/16 18:55:09 tron Exp $
+# $NetBSD: Makefile,v 1.11 2017/07/22 10:00:21 wiz Exp $
 
 .include "../../lang/go/version.mk"
 
@@ -39,8 +39,6 @@ REPLACE_BASH+=	misc/cgo/errors/test.bash
 REPLACE_BASH+=	misc/cgo/testcdefs/test.bash
 REPLACE_BASH+=	misc/cgo/testgodefs/test.bash
 REPLACE_BASH+=	misc/cgo/testso/test.bash
-REPLACE_BASH+=	misc/makerelease/darwin/scripts/postinstall
-REPLACE_BASH+=	misc/makerelease/darwin/scripts/preinstall
 REPLACE_BASH+=	misc/nacl/go_nacl_386_exec
 REPLACE_BASH+=	misc/nacl/go_nacl_amd64p32_exec
 REPLACE_BASH+=	misc/nacl/go_nacl_arm_exec
