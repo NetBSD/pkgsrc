@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2969 2017/07/22 07:11:01 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2970 2017/07/22 08:52:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4111,3 +4111,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-cares to 2.3.0 [adam 2017-07-22]
 	Updated net/py-kombu to 4.1.0 [adam 2017-07-22]
 	Updated databases/py-datapkg to 0.9 [adam 2017-07-22]
+	Updated devel/p5-Moose to 2.2006 [wen 2017-07-22]
