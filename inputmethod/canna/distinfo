@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2017/07/22 17:44:40 maya Exp $
+$NetBSD: distinfo,v 1.17 2017/07/22 17:53:16 maya Exp $
 
 SHA1 (Canna37p3.tar.bz2) = e39eece7c70c669dd46dd74b26121a60a2496fde
 RMD160 (Canna37p3.tar.bz2) = 33e5eb9e2dc144835db838612897e652acbc60ed
@@ -6,7 +6,7 @@ SHA512 (Canna37p3.tar.bz2) = 82846f2393aa2654dd2c97a93178098b8bd11e5409b584447f1
 Size (Canna37p3.tar.bz2) = 1263065 bytes
 SHA1 (patch-Canna.conf) = 81b46285a2b91c07b8497dc6669eb26552391a6c
 SHA1 (patch-Imakefile) = a70dee63ce9ce392b29b76df70479fee45e1a2b9
-SHA1 (patch-canna_widedef.h) = c52cbbe5b55fc4fca6a501eef50fbf5bb878e514
+SHA1 (patch-canna_widedef.h) = 711bc129ca58265fb7555b99f9fe7fa72bebd7fc
 SHA1 (patch-canuum_Imakefile) = 5f4e7970a92d514ec538e4591eaa4f46843654a3
 SHA1 (patch-canuum_canna.c) = a543a720fba9e2f770d6397d6b05352cfa58f300
 SHA1 (patch-canuum_config.h.in) = 98547954e459bd85e5b03fc86f34fb5d1e3eed4b
