@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.45 2017/07/06 14:51:00 mrg Exp $
+$NetBSD: distinfo,v 1.46 2017/07/22 15:13:41 maya Exp $
 
 SHA1 (ircii-20170704.tar.bz2) = 88f55a59af48d7ed131895d68354fe7f566e3180
 RMD160 (ircii-20170704.tar.bz2) = b857a49c6d843748b0bcbccf9e3aec16d7be974b
 SHA512 (ircii-20170704.tar.bz2) = a0cdc5603fab040fa2f7d2b3d7a564e9eeac4b402329cba5c6f1a97aa6e587a53ffc4141420dde97dc2cadf22581e74058a0357c6b4b0d0b03f5dea7fa8cbc3a
 Size (ircii-20170704.tar.bz2) = 596535 bytes
 SHA1 (patch-ac) = 9f6f3b27670b63ff00b55c5431ec1da5219369ff
+SHA1 (patch-include_irc.h) = 257e7879461d88d9e8e05205e96cdec702e9e458
