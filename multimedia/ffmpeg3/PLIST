@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/04/15 09:26:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/07/22 12:29:00 adam Exp $
 bin/ffmpeg3
 bin/ffprobe3
 bin/ffserver3
@@ -29,6 +29,8 @@ include/ffmpeg3/libavfilter/version.h
 include/ffmpeg3/libavformat/avformat.h
 include/ffmpeg3/libavformat/avio.h
 include/ffmpeg3/libavformat/version.h
+include/ffmpeg3/libavresample/avresample.h
+include/ffmpeg3/libavresample/version.h
 include/ffmpeg3/libavutil/adler32.h
 include/ffmpeg3/libavutil/aes.h
 include/ffmpeg3/libavutil/aes_ctr.h
@@ -127,6 +129,10 @@ lib/ffmpeg3/libavformat.a
 lib/ffmpeg3/libavformat.so
 lib/ffmpeg3/libavformat.so.57
 lib/ffmpeg3/libavformat.so.57.71.100
+lib/ffmpeg3/libavresample.a
+lib/ffmpeg3/libavresample.so
+lib/ffmpeg3/libavresample.so.3
+lib/ffmpeg3/libavresample.so.3.5.0
 lib/ffmpeg3/libavutil.a
 lib/ffmpeg3/libavutil.so
 lib/ffmpeg3/libavutil.so.55
@@ -147,6 +153,7 @@ lib/ffmpeg3/pkgconfig/libavcodec.pc
 lib/ffmpeg3/pkgconfig/libavdevice.pc
 lib/ffmpeg3/pkgconfig/libavfilter.pc
 lib/ffmpeg3/pkgconfig/libavformat.pc
+lib/ffmpeg3/pkgconfig/libavresample.pc
 lib/ffmpeg3/pkgconfig/libavutil.pc
 lib/ffmpeg3/pkgconfig/libpostproc.pc
 lib/ffmpeg3/pkgconfig/libswresample.pc
