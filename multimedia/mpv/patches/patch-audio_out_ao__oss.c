@@ -1,14 +1,16 @@
-$NetBSD: patch-audio_out_ao__oss.c,v 1.4 2017/07/16 12:06:25 leot Exp $
+$NetBSD: patch-audio_out_ao__oss.c,v 1.5 2017/07/22 17:28:38 leot Exp $
 
-ioctl(..., SNDCTL_DSP_CHANNELS, &nchannels) for not supported nchannels does not
-return an error and instead set nchannels to the default value. Instead of
-failing with no audio, fallback to stereo or mono.
+- ioctl(..., SNDCTL_DSP_CHANNELS, &nchannels) for not supported nchannels does not
+  return an error and instead set nchannels to the default value. Instead of
+  failing with no audio, fallback to stereo or mono.
+  Fallback logic inspired by `OSS v3 Programmer's guide', p. 34.
+- Backport fix for issue #4642: `ao_oss: fix a dumb calculation', period_size
+  used the wrong unit, and even if the unit had been correct, was assigned the
+  wrong value.
 
-Fallback logic inspired by `OSS v3 Programmer's guide', p. 34.
-
---- audio/out/ao_oss.c.orig	2017-02-12 01:31:16.000000000 +0000
+--- audio/out/ao_oss.c.orig	2017-07-22 17:01:42.955374723 +0000
 +++ audio/out/ao_oss.c
-@@ -345,13 +345,26 @@ static int reopen_device(struct ao *ao, 
+@@ -332,13 +332,26 @@ static int reopen_device(struct ao *ao, 
          // We only use SNDCTL_DSP_CHANNELS for >2 channels, in case some drivers don't have it
          if (reqchannels > 2) {
              int nchannels = reqchannels;
@@ -38,3 +40,15 @@ Fallback logic inspired by `OSS v3 Programmer's guide', p. 34.
          } else {
              int c = reqchannels - 1;
              if (ioctl(p->audio_fd, SNDCTL_DSP_STEREO, &c) == -1) {
+@@ -387,8 +400,9 @@ static int reopen_device(struct ao *ao, 
+         }
+     }
+ 
+-    ao->period_size = channels.num * af_fmt_to_bytes(format);
+-    p->outburst -= p->outburst % ao->period_size; // round down
++    int sstride = channels.num * af_fmt_to_bytes(format);
++    p->outburst -= p->outburst % sstride; // round down
++    ao->period_size = p->outburst / sstride;
+ 
+     return 0;
+ 

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2017/07/16 12:06:25 leot Exp $
+# $NetBSD: Makefile,v 1.57 2017/07/22 17:28:38 leot Exp $
 
-DISTNAME=	mpv-0.25.0
-PKGREVISION=	1
+DISTNAME=	mpv-0.26.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mpv-player/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -30,7 +29,7 @@ CONF_FILES+=		share/examples/mpv/encoding-profiles.conf ${PKG_SYSCONFDIR}/mpv/en
 
 SUBST_CLASSES+=		audio
 SUBST_SED.audio+=	-e "s,/dev/dsp,${DEVOSSAUDIO},"
-SUBST_FILES.audio+=	stream/audio_in.c waftools/checks/custom.py wscript
+SUBST_FILES.audio+=	audio/out/ao_oss.c stream/ai_oss.c
 SUBST_STAGE.audio=	pre-configure
 SUBST_MESSAGE.audio=	Fixing path to audio device.
 
