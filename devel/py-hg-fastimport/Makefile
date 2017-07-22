@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2017/01/01 14:43:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/07/22 16:16:25 joerg Exp $
 
-DISTNAME=	v20150518
-PKGNAME=	${PYPKGPREFIX}-hg-fastimport-${DISTNAME:S/v//}
+DISTNAME=	danielj7-hg-fastimport-d41a42894dfa
+PKGNAME=	${PYPKGPREFIX}-hg-fastimport-20170211
 CATEGORIES=	devel
-MASTER_SITES=	https://bitbucket.org/danielj7/hg-fastimport/get/
+MASTER_SITES=	-https://bitbucket.org/danielj7/hg-fastimport/get/v20170211.tar.bz2
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-fastimport-[0-9]*:../../devel/py-fastimport
 DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
 
-WRKSRC=		${WRKDIR}/danielj7-hg-fastimport-b947b2283dc8
 USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS+=	${PYSITELIB}/hgfastimport share/doc/py-hg-fastimport
@@ -25,8 +24,9 @@ PY_PATCHPLIST=			yes
 do-build:
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/hgfastimport/* ${DESTDIR}${PREFIX}/${PYSITELIB}/hgfastimport
+	${INSTALL_SCRIPT} ${WRKSRC}/hgfastimport/*.py ${DESTDIR}${PREFIX}/${PYSITELIB}/hgfastimport
 	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${PREFIX}/share/doc/py-hg-fastimport
+	${PY_COMPILE_ALL} ${DESTDIR}${PREFIX}/${PYSITELIB}/hgfastimport
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
