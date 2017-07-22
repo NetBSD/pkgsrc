@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/07/09 06:53:06 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/22 06:44:50 adam Exp $
 
-DISTNAME=	pycares-2.2.0
+DISTNAME=	pycares-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycares/}
