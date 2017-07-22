@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2017/05/25 09:06:43 bsiegert Exp $
+# $NetBSD: Makefile,v 1.53 2017/07/22 19:32:41 wiz Exp $
 
 .include "version.mk"
 
@@ -32,7 +32,6 @@ REPLACE_BASH+=	misc/arm/a
 REPLACE_BASH+=	misc/benchcmp
 REPLACE_BASH+=	misc/cgo/errors/test.bash
 REPLACE_BASH+=	misc/cgo/fortran/test.bash
-REPLACE_BASH+=	misc/cgo/testcarchive/test.bash
 REPLACE_BASH+=	misc/cgo/testcshared/test.bash
 REPLACE_BASH+=	misc/cgo/testgodefs/test.bash
 REPLACE_BASH+=	misc/cgo/testplugin/test.bash
@@ -45,7 +44,6 @@ REPLACE_BASH+=	src/androidtest.bash
 REPLACE_BASH+=	src/bootstrap.bash
 REPLACE_BASH+=	src/buildall.bash
 REPLACE_BASH+=	src/clean.bash
-REPLACE_BASH+=	src/cmd/compile/internal/big/vendor.bash
 REPLACE_BASH+=	src/cmd/dist/mkdeps.bash
 REPLACE_BASH+=	src/cmd/go/mkalldocs.sh
 REPLACE_BASH+=	src/internal/trace/mkcanned.bash
@@ -64,6 +62,13 @@ REPLACE_PERL+=	src/net/http/cgi/testdata/test.cgi
 REPLACE_PERL+=	src/regexp/syntax/make_perl_groups.pl
 REPLACE_PERL+=	src/syscall/*.pl
 REPLACE_PERL+=	test/errchk
+
+# uses own linker, which does not support relro on NetBSD
+CHECK_RELRO_SKIP+=		go/bin/go
+CHECK_RELRO_SKIP+=		go/bin/gofmt
+CHECK_RELRO_SKIP+=		go/pkg/bootstrap/bin/asm
+CHECK_RELRO_SKIP+=		go/pkg/bootstrap/bin/compile
+CHECK_RELRO_SKIP+=		go/pkg/bootstrap/bin/link
 
 # uses /bin/rc (for Plan 9)
 CHECK_INTERPRETER_SKIP+=	go/include/plan9/mklibc.rc
@@ -85,6 +90,8 @@ PLIST.route=	yes
 
 do-build:
 	cd ${WRKSRC}/src && env GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} GOROOT_FINAL=${GOROOT_FINAL:Q} ${BASH} ./make.bash
+# for RELRO build:
+#	cd ${WRKSRC}/src && env GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} GOROOT_FINAL=${GOROOT_FINAL:Q} GO_LDFLAGS="-buildmode=pie" ${BASH} ./make.bash
 
 do-install:
 	cd ${WRKSRC} && rm -rf .hgignore .hgtags pkg/obj
