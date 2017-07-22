@@ -1,4 +1,4 @@
-$NetBSD: patch-gcc_config_freebsd-spec.h,v 1.3 2016/09/27 20:51:11 maya Exp $
+$NetBSD: patch-gcc_config_freebsd-spec.h,v 1.4 2017/07/22 18:05:43 maya Exp $
 
 Do not create duplicate definitions.
 Add support for FreeBSD 9 to 12
@@ -13,7 +13,7 @@ From FreeBSD ports.
 -	if (FBSD_MAJOR == 9)						\
 +	if (FBSD_MAJOR == 12)						\
 +	  builtin_define ("__FreeBSD__=12");				\
-+	if (FBSD_MAJOR == 11)						\
++	else if (FBSD_MAJOR == 11)					\
 +	  builtin_define ("__FreeBSD__=11");				\
 +	else if (FBSD_MAJOR == 10)					\
 +	  builtin_define ("__FreeBSD__=10");			       	\
