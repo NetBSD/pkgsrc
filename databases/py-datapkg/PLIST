@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/04 12:02:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/07/22 07:08:50 adam Exp $
 bin/datapkg
+bin/dpm
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -40,9 +41,6 @@ ${PYSITELIB}/datapkg/distribution/base.pyo
 ${PYSITELIB}/datapkg/distribution/jsondist.py
 ${PYSITELIB}/datapkg/distribution/jsondist.pyc
 ${PYSITELIB}/datapkg/distribution/jsondist.pyo
-${PYSITELIB}/datapkg/distribution/python.py
-${PYSITELIB}/datapkg/distribution/python.pyc
-${PYSITELIB}/datapkg/distribution/python.pyo
 ${PYSITELIB}/datapkg/download.py
 ${PYSITELIB}/datapkg/download.pyc
 ${PYSITELIB}/datapkg/download.pyo
@@ -58,18 +56,12 @@ ${PYSITELIB}/datapkg/index/ckan.pyo
 ${PYSITELIB}/datapkg/index/db.py
 ${PYSITELIB}/datapkg/index/db.pyc
 ${PYSITELIB}/datapkg/index/db.pyo
-${PYSITELIB}/datapkg/index/egg.py
-${PYSITELIB}/datapkg/index/egg.pyc
-${PYSITELIB}/datapkg/index/egg.pyo
 ${PYSITELIB}/datapkg/metadata.py
 ${PYSITELIB}/datapkg/metadata.pyc
 ${PYSITELIB}/datapkg/metadata.pyo
 ${PYSITELIB}/datapkg/package.py
 ${PYSITELIB}/datapkg/package.pyc
 ${PYSITELIB}/datapkg/package.pyo
-${PYSITELIB}/datapkg/pypkgtools.py
-${PYSITELIB}/datapkg/pypkgtools.pyc
-${PYSITELIB}/datapkg/pypkgtools.pyo
 ${PYSITELIB}/datapkg/repository.py
 ${PYSITELIB}/datapkg/repository.pyc
 ${PYSITELIB}/datapkg/repository.pyo
@@ -115,9 +107,6 @@ ${PYSITELIB}/datapkg/tests/test_misc.pyo
 ${PYSITELIB}/datapkg/tests/test_package.py
 ${PYSITELIB}/datapkg/tests/test_package.pyc
 ${PYSITELIB}/datapkg/tests/test_package.pyo
-${PYSITELIB}/datapkg/tests/test_pypkgtools.py
-${PYSITELIB}/datapkg/tests/test_pypkgtools.pyc
-${PYSITELIB}/datapkg/tests/test_pypkgtools.pyo
 ${PYSITELIB}/datapkg/tests/test_repository.py
 ${PYSITELIB}/datapkg/tests/test_repository.pyc
 ${PYSITELIB}/datapkg/tests/test_repository.pyo
