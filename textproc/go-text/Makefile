@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/04/13 15:12:06 bsiegert Exp $
-#
+# $NetBSD: Makefile,v 1.13 2017/07/22 19:32:41 wiz Exp $
 
 DISTNAME=		go-text-20151217
 PKGREVISION=		7
@@ -16,6 +15,7 @@ LICENSE=		modified-bsd
 GO_SRCPATH=		golang.org/x/text
 GO_DIST_BASE=		${GITHUB_PROJECT}-${GITHUB_TAG}*
 
+CHECK_RELRO_SKIP+=	bin/colcmp
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
