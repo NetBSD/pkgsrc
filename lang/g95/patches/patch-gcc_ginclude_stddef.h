@@ -1,9 +1,19 @@
-$NetBSD: patch-gcc_ginclude_stddef.h,v 1.1 2013/05/20 05:47:34 adam Exp $
+$NetBSD: patch-gcc_ginclude_stddef.h,v 1.2 2017/07/22 18:05:43 maya Exp $
 
 DragonFly BSD support (_PTRDIFF_T_DECLARED is also needed on dfly).
+Don't ever include machine/ansi.h on freebsd (removed in freebsd 5)
 
 --- ../gcc-4.1.2/gcc/ginclude/stddef.h.orig	2005-06-25 01:11:52.000000000 +0000
 +++ ../gcc-4.1.2/gcc/ginclude/stddef.h
+@@ -54,7 +54,7 @@ Boston, MA 02110-1301, USA.  */
+ 
+ /* On 4.3bsd-net2, make sure ansi.h is included, so we have
+    one less case to deal with in the following.  */
+-#if defined (__BSD_NET2__) || defined (____386BSD____) || (defined (__FreeBSD__) && (__FreeBSD__ < 5)) || defined(__NetBSD__)
++#if defined (__BSD_NET2__) || defined (____386BSD____) || defined(__NetBSD__)
+ #include <machine/ansi.h>
+ #endif
+ /* On FreeBSD 5, machine/ansi.h does not exist anymore... */
 @@ -62,6 +62,10 @@ Boston, MA 02110-1301, USA.  */
  #include <sys/_types.h>
  #endif
