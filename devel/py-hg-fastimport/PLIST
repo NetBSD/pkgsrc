@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2015/06/07 08:19:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/07/22 16:16:25 joerg Exp $
 ${PYSITELIB}/hgfastimport/__init__.py
+${PYSITELIB}/hgfastimport/__init__.pyc
 ${PYSITELIB}/hgfastimport/hgechoprocessor.py
+${PYSITELIB}/hgfastimport/hgechoprocessor.pyc
 ${PYSITELIB}/hgfastimport/hgimport.py
+${PYSITELIB}/hgfastimport/hgimport.pyc
 share/doc/py-hg-fastimport/README.txt
