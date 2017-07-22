@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/04/13 15:12:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.17 2017/07/22 19:32:41 wiz Exp $
 
 DISTNAME=		go-net-20170308
 PKGREVISION=		1
@@ -14,6 +14,8 @@ LICENSE=		modified-bsd
 
 GO_SRCPATH=		golang.org/x/net
 GO_DIST_BASE=		${GITHUB_PROJECT}-${GITHUB_TAG}*
+
+CHECK_RELRO_SKIP+=	bin/h2i
 
 .include "../../mk/bsd.prefs.mk"
 
