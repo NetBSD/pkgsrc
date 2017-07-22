@@ -1,4 +1,4 @@
-# $NetBSD: tools.FreeBSD.mk,v 1.43 2015/02/01 08:48:56 obache Exp $
+# $NetBSD: tools.FreeBSD.mk,v 1.44 2017/07/22 18:10:25 maya Exp $
 #
 # System-supplied tools for the FreeBSD operating system.
 
@@ -80,7 +80,9 @@ TOOLS_PLATFORM.sort?=		/usr/bin/sort
 TOOLS_PLATFORM.strip?=		/usr/bin/strip
 TOOLS_PLATFORM.tail?=		/usr/bin/tail
 TOOLS_PLATFORM.tar?=		/usr/bin/tar
+.if exists(/usr/bin/tbl)
 TOOLS_PLATFORM.tbl?=		/usr/bin/tbl
+.endif
 TOOLS_PLATFORM.tee?=		/usr/bin/tee
 TOOLS_PLATFORM.test?=		test			# shell builtin
 TOOLS_PLATFORM.touch?=		/usr/bin/touch
