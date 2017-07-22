@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/04/09 17:14:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/07/22 06:49:43 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -152,6 +152,12 @@ ${PYSITELIB}/kombu/transport/qpid.pyo
 ${PYSITELIB}/kombu/transport/redis.py
 ${PYSITELIB}/kombu/transport/redis.pyc
 ${PYSITELIB}/kombu/transport/redis.pyo
+${PYSITELIB}/kombu/transport/sqlalchemy/__init__.py
+${PYSITELIB}/kombu/transport/sqlalchemy/__init__.pyc
+${PYSITELIB}/kombu/transport/sqlalchemy/__init__.pyo
+${PYSITELIB}/kombu/transport/sqlalchemy/models.py
+${PYSITELIB}/kombu/transport/sqlalchemy/models.pyc
+${PYSITELIB}/kombu/transport/sqlalchemy/models.pyo
 ${PYSITELIB}/kombu/transport/virtual/__init__.py
 ${PYSITELIB}/kombu/transport/virtual/__init__.pyc
 ${PYSITELIB}/kombu/transport/virtual/__init__.pyo
