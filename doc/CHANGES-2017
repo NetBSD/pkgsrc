@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2974 2017/07/22 13:09:57 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2975 2017/07/22 17:28:56 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4119,3 +4119,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-flexmock to 0.10.2 [adam 2017-07-22]
 	Updated audio/py-last to 1.9.0 [adam 2017-07-22]
 	Updated multimedia/gpac to 0.7.1 [adam 2017-07-22]
+	Updated multimedia/mpv to 0.26.0 [leot 2017-07-22]
