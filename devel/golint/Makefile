@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/04/13 15:12:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2017/07/22 19:32:41 wiz Exp $
 
 DISTNAME=		golint-20170228
 PKGREVISION=		1
@@ -14,6 +14,8 @@ LICENSE=		modified-bsd
 
 GO_SRCPATH=		github.com/golang/lint
 GO_DIST_BASE=		${GITHUB_PROJECT}-${GITHUB_TAG}*
+
+CHECK_RELRO_SKIP+=	bin/golint
 
 .include "../../lang/go/go-package.mk"
 .include "../../devel/go-tools/buildlink3.mk"

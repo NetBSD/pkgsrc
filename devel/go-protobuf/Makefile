@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/04/13 15:12:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2017/07/22 19:32:40 wiz Exp $
 
 DISTNAME=		go-protobuf-20160829
 PKGREVISION=		4
@@ -15,6 +15,8 @@ GO_SRCPATH=		github.com/golang/protobuf
 GO_DIST_BASE=		${GITHUB_PROJECT}-${GITHUB_TAG}*
 
 REPLACE_SH+=		ptypes/regen.sh
+
+CHECK_RELRO_SKIP+=	bin/protoc-gen-go
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"

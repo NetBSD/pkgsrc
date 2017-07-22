@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/07/11 20:26:41 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/22 19:32:41 wiz Exp $
 
 DISTNAME=	caddy-${GITHUB_TAG:S/v//}
 CATEGORIES=	www
@@ -13,6 +13,8 @@ LICENSE=	apache-2.0
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/mholt/caddy
 GO_BUILD_PATTERN= ${GO_SRCPATH}/caddy
+
+CHECK_RELRO_SKIP+=	bin/caddy
 
 EXTRACT_USING=		bsdtar
 
