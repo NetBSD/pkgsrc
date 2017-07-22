@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2017/07/22 02:33:00 schmonz Exp $
+
+Don't install "idn2_noinstall".
+
+--- src/Makefile.in.orig	2017-03-29 15:27:01.000000000 +0000
++++ src/Makefile.in
+@@ -104,7 +104,7 @@ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+ @HAVE_LIBUNISTRING_FALSE@am__append_1 = -I$(top_srcdir)/unistring/ -I$(top_builddir)/unistring/
+-bin_PROGRAMS = idn2$(EXEEXT) idn2_noinstall$(EXEEXT)
++bin_PROGRAMS = idn2$(EXEEXT) # idn2_noinstall$(EXEEXT)
+ @HAVE_LIBUNISTRING_FALSE@am__append_2 = ../unistring/libunistring.la
+ subdir = src
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
