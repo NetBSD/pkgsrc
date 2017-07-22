@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.3 2017/07/22 13:07:04 adam Exp $
+
+On Darwin, use system libtool.
+
+--- configure.orig	2017-07-22 06:56:04.000000000 +0000
++++ configure
+@@ -2927,7 +2927,7 @@ echo "STRIP=@$strip" >> config.mak
+ echo "WINDRES=$windres" >> config.mak
+ fi
+ echo "INSTALL=$install" >> config.mak
+-echo "LIBTOOL=libtool" >> config.mak
++echo "LIBTOOL=/usr/bin/libtool" >> config.mak
+ 
+ echo "INSTFLAGS=$instflags" >> config.mak
+ echo "OPTFLAGS=$CFLAGS" >> config.mak
