@@ -1,19 +1,44 @@
-$NetBSD: patch-Makefile,v 1.1 2016/10/11 00:31:28 tnn Exp $
+$NetBSD: patch-Makefile,v 1.2 2017/07/22 13:07:04 adam Exp $
 
-Remove non-standard cp(1) option
+Fix DashCast installation.
+Remove non-standard cp(1) option.
+Use VERSION_MAJOR also on Darwin (without git, VERSION is defined as UNKNOWN).
 
---- Makefile.orig	2016-03-04 16:03:40.000000000 +0000
+--- Makefile.orig	2017-04-26 11:33:17.000000000 +0000
 +++ Makefile
-@@ -125,9 +125,9 @@ ifeq ($(CONFIG_DARWIN),yes)
+@@ -112,7 +112,7 @@ ifneq ($(CONFIG_WIN32), yes)
+ ifneq ($(CONFIG_FFMPEG), no)
+ ifneq ($(DISABLE_CORE_TOOLS), yes)
+ ifneq ($(DISABLE_AV_PARSERS), yes)
+-	if [ -f bin/gcc/DashCast$(EXE_SUFFIX)g ] ; then \
++	if [ -f bin/gcc/DashCast$(EXE_SUFFIX) ] ; then \
+ 	$(INSTALL) $(INSTFLAGS) -m 755 bin/gcc/DashCast$(EXE_SUFFIX) "$(DESTDIR)$(prefix)/bin" ; \
+ 	fi
+ endif
+@@ -154,15 +154,9 @@ endif
+ 	$(INSTALL) -d "$(DESTDIR)$(prefix)/share/gpac/gui/icons"
+ 	$(INSTALL) -d "$(DESTDIR)$(prefix)/share/gpac/gui/extensions"
+ 	$(INSTALL) -d "$(DESTDIR)$(prefix)/share/gpac/shaders/"
+-ifeq ($(CONFIG_DARWIN),yes)
+ 	cp $(SRC_PATH)/gui/icons/* "$(DESTDIR)$(prefix)/share/gpac/gui/icons/" 
  	cp -R $(SRC_PATH)/gui/extensions/* "$(DESTDIR)$(prefix)/share/gpac/gui/extensions/" 
  	cp $(SRC_PATH)/shaders/* "$(DESTDIR)$(prefix)/share/gpac/shaders/" 
- else
--	cp --no-preserve=mode,ownership,timestamp $(SRC_PATH)/gui/icons/* "$(DESTDIR)$(prefix)/share/gpac/gui/icons/" 
--	cp -R --no-preserve=mode,ownership,timestamp $(SRC_PATH)/gui/extensions/* "$(DESTDIR)$(prefix)/share/gpac/gui/extensions/" 
--	cp --no-preserve=mode,ownership,timestamp $(SRC_PATH)/shaders/* "$(DESTDIR)$(prefix)/share/gpac/shaders/" 
-+	cp $(SRC_PATH)/gui/icons/* "$(DESTDIR)$(prefix)/share/gpac/gui/icons/" 
-+	cp -R $(SRC_PATH)/gui/extensions/* "$(DESTDIR)$(prefix)/share/gpac/gui/extensions/" 
-+	cp $(SRC_PATH)/shaders/* "$(DESTDIR)$(prefix)/share/gpac/shaders/" 
- endif
+-else
+-	cp --no-preserve=mode,ownership,timestamp $(SRC_PATH)/gui/icons/* $(DESTDIR)$(prefix)/share/gpac/gui/icons/
+-	cp -R --no-preserve=mode,ownership,timestamp $(SRC_PATH)/gui/extensions/* $(DESTDIR)$(prefix)/share/gpac/gui/extensions/
+-	cp --no-preserve=mode,ownership,timestamp $(SRC_PATH)/shaders/* $(DESTDIR)$(prefix)/share/gpac/shaders/
+-endif
  
  lninstall:
+ 	$(INSTALL) -d "$(DESTDIR)$(prefix)"
+@@ -226,8 +220,8 @@ ifeq ($(DEBUGBUILD),no)
+ 	$(STRIP) bin/gcc/libgpac$(DYN_LIB_SUFFIX)
+ endif
+ ifeq ($(CONFIG_DARWIN),yes)
+-	$(INSTALL) -m 755 bin/gcc/libgpac$(DYN_LIB_SUFFIX) $(DESTDIR)$(prefix)/$(libdir)/libgpac.$(VERSION)$(DYN_LIB_SUFFIX)
+-	ln -sf libgpac.$(VERSION)$(DYN_LIB_SUFFIX) $(DESTDIR)$(prefix)/$(libdir)/libgpac$(DYN_LIB_SUFFIX)
++	$(INSTALL) -m 755 bin/gcc/libgpac$(DYN_LIB_SUFFIX) $(DESTDIR)$(prefix)/$(libdir)/libgpac.$(VERSION_MAJOR)$(DYN_LIB_SUFFIX)
++	ln -sf libgpac.$(VERSION_MAJOR)$(DYN_LIB_SUFFIX) $(DESTDIR)$(prefix)/$(libdir)/libgpac$(DYN_LIB_SUFFIX)
+ else
+ 	$(INSTALL) $(INSTFLAGS) -m 755 bin/gcc/libgpac$(DYN_LIB_SUFFIX).$(VERSION_SONAME) $(DESTDIR)$(prefix)/$(libdir)/libgpac$(DYN_LIB_SUFFIX).$(VERSION_SONAME)
+ 	ln -sf libgpac$(DYN_LIB_SUFFIX).$(VERSION_SONAME) $(DESTDIR)$(prefix)/$(libdir)/libgpac.so.$(VERSION_MAJOR)
