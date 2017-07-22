@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2017/07/17 03:25:32 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/22 02:33:00 schmonz Exp $
 
 DISTNAME=	libidn2-2.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://alpha.gnu.org/gnu/libidn/
 EXTRACT_SUFX=	.tar.xz
