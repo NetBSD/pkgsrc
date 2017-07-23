@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2017/07/03 11:07:25 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2017/07/23 07:20:42 wiz Exp $
 
 # Upstream regularly breaks protocol compatibility.  While users of
 # pkgsrc syncthing on multiple systems can update synchronously, an
@@ -57,6 +57,8 @@ WRKPLACEP=		${GOPATH}/src/github.com/syncthing
 WRKPLACE=		${WRKPLACEP}/syncthing
 
 MAKE_ENV+=		GOPATH=${GOPATH}
+
+CHECK_RELRO_SKIP+=	bin/syncthing
 
 # This used to be set; there seems to be no reason any longer.  To be
 # pruned on 2016-11-04.
