@@ -1,8 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/30 11:03:50 wiz Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.2 2017/07/23 18:52:03 adam Exp $
+bin/unidecode${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/unidecode/__init__.py
 ${PYSITELIB}/unidecode/__init__.pyc
 ${PYSITELIB}/unidecode/__init__.pyo
+${PYSITELIB}/unidecode/util.py
+${PYSITELIB}/unidecode/util.pyc
+${PYSITELIB}/unidecode/util.pyo
 ${PYSITELIB}/unidecode/x000.py
 ${PYSITELIB}/unidecode/x000.pyc
 ${PYSITELIB}/unidecode/x000.pyo
@@ -111,6 +119,12 @@ ${PYSITELIB}/unidecode/x027.pyo
 ${PYSITELIB}/unidecode/x028.py
 ${PYSITELIB}/unidecode/x028.pyc
 ${PYSITELIB}/unidecode/x028.pyo
+${PYSITELIB}/unidecode/x029.py
+${PYSITELIB}/unidecode/x029.pyc
+${PYSITELIB}/unidecode/x029.pyo
+${PYSITELIB}/unidecode/x02a.py
+${PYSITELIB}/unidecode/x02a.pyc
+${PYSITELIB}/unidecode/x02a.pyo
 ${PYSITELIB}/unidecode/x02c.py
 ${PYSITELIB}/unidecode/x02c.pyc
 ${PYSITELIB}/unidecode/x02c.pyo
@@ -561,3 +575,6 @@ ${PYSITELIB}/unidecode/x1d6.pyo
 ${PYSITELIB}/unidecode/x1d7.py
 ${PYSITELIB}/unidecode/x1d7.pyc
 ${PYSITELIB}/unidecode/x1d7.pyo
+${PYSITELIB}/unidecode/x1f1.py
+${PYSITELIB}/unidecode/x1f1.pyc
+${PYSITELIB}/unidecode/x1f1.pyo
