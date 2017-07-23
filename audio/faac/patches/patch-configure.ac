@@ -1,0 +1,14 @@
+$NetBSD: patch-configure.ac,v 1.1 2017/07/23 16:01:14 adam Exp $
+
+Detect sys/endian.h.
+
+--- configure.ac.orig	2017-07-23 15:42:05.000000000 +0000
++++ configure.ac
+@@ -51,6 +51,7 @@ AC_CHECK_HEADERS(float.h)
+ AC_CHECK_DECL(strchr, MY_DEFINE(HAVE_STRCHR))
+ AC_CHECK_DECL(memcpy, MY_DEFINE(HAVE_MEMCPY))
+ AC_CHECK_DECL(strsep, MY_DEFINE(HAVE_STRSEP))
++AC_CHECK_HEADERS(sys/endian.h)
+ AC_CHECK_HEADERS(sys/time.h)
+ AC_HEADER_TIME
+ AC_TYPE_OFF_T
