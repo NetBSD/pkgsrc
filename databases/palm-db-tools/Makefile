@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/02 21:25:37 asau Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/23 01:29:35 dsainty Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV:S/./_/g}
@@ -25,6 +25,10 @@ CONFIGURE_ARGS=	--disable-warnings --enable-libtool
 
 INSTALLATION_DIRS=	share/doc/palm-db-tools
 INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX}
+
+# Case-insensitive filesystems confuse make install without this.
+post-extract:
+	cd ${WRKSRC} && mv INSTALL INSTALL.txt
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/manual.* ${DESTDIR}${PREFIX}/share/doc/palm-db-tools
