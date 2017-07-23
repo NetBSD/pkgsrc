@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2980 2017/07/23 16:12:05 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2981 2017/07/23 17:28:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4127,3 +4127,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/faac to 1.29.3 [adam 2017-07-23]
 	Updated audio/faad2 to 2.8.1 [adam 2017-07-23]
 	Updated audio/libmikmod to 3.3.11.1 [adam 2017-07-23]
+	Updated www/py-autobahn to 17.7.1 [adam 2017-07-23]
+	Updated security/libgcrypt to 1.8.0 [adam 2017-07-23]
