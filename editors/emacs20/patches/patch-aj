@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.2 2006/01/04 17:00:32 joerg Exp $
+$NetBSD: patch-aj,v 1.3 2017/07/23 05:22:38 dholland Exp $
 
 --- src/process.c.orig	2000-05-23 19:10:16.000000000 +0000
 +++ src/process.c
@@ -21,14 +21,6 @@ $NetBSD: patch-aj,v 1.2 2006/01/04 17:00:32 joerg Exp $
  This file is part of GNU Emacs.
  
  GNU Emacs is free software; you can redistribute it and/or modify
-@@ -147,7 +158,6 @@ Lisp_Object Qlast_nonmenu_event;
- 
- #include "syswait.h"
- 
--extern int errno;
- extern char *strerror ();
- #ifdef VMS
- extern char *sys_errlist[];
 @@ -1810,15 +1820,21 @@ Fourth arg SERVICE is name of the servic
  {
    Lisp_Object proc;
