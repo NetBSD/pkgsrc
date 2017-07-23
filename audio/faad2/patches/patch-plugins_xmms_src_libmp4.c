@@ -1,4 +1,6 @@
-$NetBSD: patch-as,v 1.2 2007/12/09 10:55:37 drochner Exp $
+$NetBSD: patch-plugins_xmms_src_libmp4.c,v 1.1 2017/07/23 16:09:17 adam Exp $
+
+Use external include, as this will be build from audio/xmms-faad.
 
 --- plugins/xmms/src/libmp4.c.orig	2007-06-05 21:00:18.000000000 +0200
 +++ plugins/xmms/src/libmp4.c
