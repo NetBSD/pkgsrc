@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2978 2017/07/23 15:56:07 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2979 2017/07/23 16:10:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4124,3 +4124,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/ocaml-ppx_tools_versioned version 5.0.1 [jaapb 2017-07-23]
 	Updated devel/py-clickclick to 1.2.2 [adam 2017-07-23]
 	Updated devel/talloc to 2.1.10 [adam 2017-07-23]
+	Updated audio/faac to 1.29.3 [adam 2017-07-23]
+	Updated audio/faad2 to 2.8.1 [adam 2017-07-23]
