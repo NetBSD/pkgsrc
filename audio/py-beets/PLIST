@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2017/05/09 13:29:21 leot Exp $
-bin/beet
+@comment $NetBSD: PLIST,v 1.11 2017/07/23 19:04:10 adam Exp $
+bin/beet${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,6 +10,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/beets/__init__.py
 ${PYSITELIB}/beets/__init__.pyc
 ${PYSITELIB}/beets/__init__.pyo
+${PYSITELIB}/beets/__main__.py
+${PYSITELIB}/beets/__main__.pyc
+${PYSITELIB}/beets/__main__.pyo
 ${PYSITELIB}/beets/art.py
 ${PYSITELIB}/beets/art.pyc
 ${PYSITELIB}/beets/art.pyo
@@ -165,6 +168,9 @@ ${PYSITELIB}/beetsplug/ftintitle.pyo
 ${PYSITELIB}/beetsplug/fuzzy.py
 ${PYSITELIB}/beetsplug/fuzzy.pyc
 ${PYSITELIB}/beetsplug/fuzzy.pyo
+${PYSITELIB}/beetsplug/gmusic.py
+${PYSITELIB}/beetsplug/gmusic.pyc
+${PYSITELIB}/beetsplug/gmusic.pyo
 ${PYSITELIB}/beetsplug/hook.py
 ${PYSITELIB}/beetsplug/hook.pyc
 ${PYSITELIB}/beetsplug/hook.pyo
@@ -189,6 +195,9 @@ ${PYSITELIB}/beetsplug/ipfs.pyo
 ${PYSITELIB}/beetsplug/keyfinder.py
 ${PYSITELIB}/beetsplug/keyfinder.pyc
 ${PYSITELIB}/beetsplug/keyfinder.pyo
+${PYSITELIB}/beetsplug/kodiupdate.py
+${PYSITELIB}/beetsplug/kodiupdate.pyc
+${PYSITELIB}/beetsplug/kodiupdate.pyo
 ${PYSITELIB}/beetsplug/lastgenre/__init__.py
 ${PYSITELIB}/beetsplug/lastgenre/__init__.pyc
 ${PYSITELIB}/beetsplug/lastgenre/__init__.pyo
