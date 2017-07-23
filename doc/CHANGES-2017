@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2977 2017/07/23 14:42:26 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.2978 2017/07/23 15:56:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4122,3 +4122,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/mpv to 0.26.0 [leot 2017-07-22]
 	Updated databases/p5-App-Sqitch to 0.9996 [schmonz 2017-07-23]
 	Added devel/ocaml-ppx_tools_versioned version 5.0.1 [jaapb 2017-07-23]
+	Updated devel/py-clickclick to 1.2.2 [adam 2017-07-23]
+	Updated devel/talloc to 2.1.10 [adam 2017-07-23]
