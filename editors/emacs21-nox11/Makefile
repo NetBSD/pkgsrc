@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2016/12/30 22:18:55 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/07/23 18:47:09 dholland Exp $
 
 PKGNAME=	emacs21-nox11-${EMACSVERSION}a
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	editors
 COMMENT_EXTRA=	: non-X11 version
 
