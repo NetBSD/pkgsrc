@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/07/04 14:22:48 fhajny Exp $
-#
+# $NetBSD: Makefile,v 1.14 2017/07/23 07:20:42 wiz Exp $
 
 DISTNAME=		beats-5.4.3
 CATEGORIES=		sysutils
@@ -20,6 +19,11 @@ GO_SRCPATH=		github.com/elastic/beats
 
 # Components to build/install
 BEATS=			filebeat heartbeat metricbeat packetbeat
+
+CHECK_RELRO_SKIP+=	bin/filebeat
+CHECK_RELRO_SKIP+=	bin/heartbeat
+CHECK_RELRO_SKIP+=	bin/metricbeat
+CHECK_RELRO_SKIP+=	bin/packetbeat
 
 .for beat in ${BEATS}
 CONF_FILES+=		share/examples/beats/${beat}.yml			\
