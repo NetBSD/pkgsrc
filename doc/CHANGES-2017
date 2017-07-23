@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2975 2017/07/22 17:28:56 leot Exp $
+$NetBSD: CHANGES-2017,v 1.2976 2017/07/23 00:28:49 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4120,3 +4120,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/py-last to 1.9.0 [adam 2017-07-22]
 	Updated multimedia/gpac to 0.7.1 [adam 2017-07-22]
 	Updated multimedia/mpv to 0.26.0 [leot 2017-07-22]
+	Updated databases/p5-App-Sqitch to 0.9996 [schmonz 2017-07-23]
