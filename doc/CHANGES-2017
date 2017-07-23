@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2985 2017/07/23 20:10:30 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2986 2017/07/23 21:07:15 markd Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4136,3 +4136,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/py-beets to 1.4.5 [adam 2017-07-23]
 	Updated devel/py-test-xdist to 1.18.1 [adam 2017-07-23]
 	Updated devel/epydoc to 3.0.1 [adam 2017-07-23]
+	Added graphics/kqtquickcharts4 version 4.14.3 [markd 2017-07-23]
