@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/07/23 18:28:41 nros Exp $
+# $NetBSD: Makefile,v 1.10 2017/07/23 19:02:25 nros Exp $
 
 DISTNAME=	zstd-1.3.0
 CATEGORIES=	archivers
@@ -19,7 +19,7 @@ MAKE_FLAGS+=		INSTALL=${INSTALL:Q}
 BUILD_TARGET=		allmost
 TEST_TARGET=		test
 
-RESTRICTED=		"LICENSE-examples does not permit redistribution of the examples"
+RESTRICTED=		LICENSE-examples does not permit redistribution of the examples
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
