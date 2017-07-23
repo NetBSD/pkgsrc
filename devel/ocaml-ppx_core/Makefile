@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2017/07/21 13:27:52 jaapb Exp $
+# $NetBSD: Makefile,v 1.9 2017/07/23 12:13:13 jaapb Exp $
 
 VERSION=	0.9.0
 GITHUB_PROJECT=	ppx_core
+GITHUB_TAG=	v${VERSION}
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
