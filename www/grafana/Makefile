@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/07/12 10:05:58 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/23 07:20:42 wiz Exp $
 
 GITHUB_PROJECT=	grafana
 DISTNAME=	grafana-4.4.1
@@ -29,6 +29,10 @@ EXTRACT_DIR.${FE_DISTNAME}=	${WRKDIR}/frontend_assets
 BUILD_DEPENDS+=			go-[0-9]*:../../lang/go
 
 CHECK_PORTABILITY_SKIP=		packaging/rpm/control/postinst
+
+CHECK_RELRO_SKIP+=		bin/grafana-cli
+CHECK_RELRO_SKIP+=		bin/grafana-server
+
 PKGSRC_MAKE_ENV+=		GOPATH=${WRKDIR}
 USE_TOOLS+=			pax
 
