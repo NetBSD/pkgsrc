@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/23 21:04:15 markd Exp $
+lib/kde4/imports/org/kde/charts/BarChart.qml
+lib/kde4/imports/org/kde/charts/Label.qml
+lib/kde4/imports/org/kde/charts/LegendItem.qml
+lib/kde4/imports/org/kde/charts/LineChart.qml
+lib/kde4/imports/org/kde/charts/LineLabel.qml
+lib/kde4/imports/org/kde/charts/libkqtquickcharts.so
+lib/kde4/imports/org/kde/charts/qmldir
