@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2016/09/07 06:29:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24.8.1 2017/07/23 19:52:42 spz Exp $
 bin/GraphicsMagick++-config
 bin/GraphicsMagick-config
 bin/GraphicsMagickWand-config
@@ -234,6 +234,7 @@ share/doc/GraphicsMagick/www/ChangeLog-2012.html
 share/doc/GraphicsMagick/www/ChangeLog-2013.html
 share/doc/GraphicsMagick/www/ChangeLog-2014.html
 share/doc/GraphicsMagick/www/ChangeLog-2015.html
+share/doc/GraphicsMagick/www/ChangeLog-2016.html
 share/doc/GraphicsMagick/www/Changelog.html
 share/doc/GraphicsMagick/www/Changes.html
 share/doc/GraphicsMagick/www/Copyright.html
@@ -369,6 +370,7 @@ share/doc/GraphicsMagick/www/quantize.html
 share/doc/GraphicsMagick/www/reference.html
 share/doc/GraphicsMagick/www/security.html
 share/doc/GraphicsMagick/www/smile.c
+share/doc/GraphicsMagick/www/thanks.html
 share/doc/GraphicsMagick/www/time.html
 share/doc/GraphicsMagick/www/tools.html
 share/doc/GraphicsMagick/www/utilities.html
