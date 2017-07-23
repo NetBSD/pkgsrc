@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:25 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/07/23 20:10:02 adam Exp $
 
-SHA1 (epydoc-2.1.tar.gz) = f2034c5e1b9cf0d2d16e0b9c8af0d3581af524e4
-RMD160 (epydoc-2.1.tar.gz) = 50b8a546cf22acd82e7ccbc3f5a8dc111534b5cf
-SHA512 (epydoc-2.1.tar.gz) = f486cf2dee8031ab71c64d9a7aec313ed8426dabc43735637ab578727eb16bd840ffabd9f11852fcdf8cd85772e23ccfc3dcb2f572c715086976c941e31e4e9b
-Size (epydoc-2.1.tar.gz) = 529943 bytes
+SHA1 (epydoc-3.0.1.tar.gz) = ccd5cb602cbf8df1a6c61670793d0122fc569523
+RMD160 (epydoc-3.0.1.tar.gz) = 7630a4f6e4ef5f1e2b033f38316ed992306cb951
+SHA512 (epydoc-3.0.1.tar.gz) = 5c4011f0018ab956c0e1fe5fe0c1608fa2416439a60b5836a9d2d95e359428086ba403bcb5ed53e64d9d4979441ca6d537d9e5b8d6224d2202e7df3332d9ea83
+Size (epydoc-3.0.1.tar.gz) = 1785792 bytes
