@@ -1,6 +1,9 @@
-$NetBSD: patch-ad,v 1.4 2009/08/10 00:01:56 tnn Exp $
+$NetBSD: patch-libfaad_common.h,v 1.1 2017/07/23 16:09:17 adam Exp $
 
---- libfaad/common.h.orig	2009-02-05 01:51:03.000000000 +0100
+Use correct inlines.
+lrintf() returns long.
+
+--- libfaad/common.h.orig	2017-07-06 19:16:40.000000000 +0000
 +++ libfaad/common.h
 @@ -41,7 +41,7 @@ extern "C" {
  
@@ -11,7 +14,7 @@ $NetBSD: patch-ad,v 1.4 2009/08/10 00:01:56 tnn Exp $
  #define INLINE __inline
  #else
  #define INLINE inline
-@@ -330,7 +330,7 @@ char *strchr(), *strrchr();
+@@ -332,7 +332,7 @@ char *strchr(), *strrchr();
      #ifndef HAVE_LRINTF
      #define HAS_LRINTF
      // from http://www.stereopsis.com/FPU.html
