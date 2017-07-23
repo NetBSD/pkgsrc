@@ -1,0 +1,20 @@
+$NetBSD: patch-frontend_Makefile.am,v 1.1 2017/07/23 16:09:17 adam Exp $
+
+Libtoolize and use correct man-page.
+
+--- frontend/Makefile.am.orig	2017-07-10 13:22:37.000000000 +0000
++++ frontend/Makefile.am
+@@ -1,9 +1,10 @@
+ bin_PROGRAMS = faad
+-man1_MANS = faad.man
++man1_MANS = faad.1
+ 
+ AM_CPPFLAGS = -I$(top_srcdir)/include -I$(top_srcdir)/common/mp4ff
+ 
+ faad_LDADD = $(top_builddir)/libfaad/libfaad.la \
+-	     $(top_builddir)/common/mp4ff/libmp4ff.a
++	     $(top_builddir)/common/mp4ff/libmp4ff.la
+ 
+-faad_SOURCES = main.c audio.c audio.h
++faad_SOURCES = main.c audio.c
++faad_INCLUDES = audio.h
