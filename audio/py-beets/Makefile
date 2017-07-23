@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2017/05/09 13:29:21 leot Exp $
+# $NetBSD: Makefile,v 1.20 2017/07/23 19:04:10 adam Exp $
 
-DISTNAME=	beets-1.4.3
+DISTNAME=	beets-1.4.5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beets/}
 
@@ -26,6 +26,9 @@ DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 .endif
 
 USE_LANGUAGES=	# none
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} beet beet${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
