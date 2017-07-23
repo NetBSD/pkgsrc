@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2017/06/29 12:20:05 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.11 2017/07/23 21:08:18 adam Exp $
 # used by www/nginx/Makefile
 # used by www/nginx-devel/Makefile
 
@@ -59,9 +59,9 @@ EGFILES+=		fastcgi.conf fastcgi_params koi-utf koi-win \
 
 .for file in ${EGFILES}
 CONF_FILES+=	${EGDIR}/conf/${file} ${PKG_SYSCONFDIR}/${file}
-.	if !empty(PKG_OPTIONS:Mnaxsi)
+.  if !empty(PKG_OPTIONS:Mnaxsi)
 CONF_FILES+=	${EGDIR}/conf/naxsi_core.rules ${PKG_SYSCONFDIR}/naxsi_core.rules
-.	endif
+.  endif
 .endfor
 
 RCD_SCRIPTS=		nginx
@@ -75,9 +75,9 @@ OWN_DIRS_PERMS+=	${NGINX_DATADIR} ${NGINX_USER} ${NGINX_GROUP} 0700
 BUILD_TARGET=		build
 
 SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix+=	pre-configure
-SUBST_FILES.prefix+=	auto/lib/pcre/conf
-SUBST_SED.prefix+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix=	auto/lib/pcre/conf
+SUBST_SED.prefix=	-e 's,@PREFIX@,${PREFIX},g'
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
@@ -118,7 +118,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/objs/src/http/modules/perl/blib/lib/nginx.pm \
 		${DESTDIR}${PERL5_INSTALLVENDORARCH}
 .endif
-
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
