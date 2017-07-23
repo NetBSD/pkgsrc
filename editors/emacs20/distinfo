@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.36 2017/07/23 05:11:42 dholland Exp $
+$NetBSD: distinfo,v 1.37 2017/07/23 05:22:38 dholland Exp $
 
 SHA1 (emacs-20.7-mule-4.1b-elc.tar.gz) = 3894fb2b81bb326545f6ccc3bf0a8405c23004ff
 RMD160 (emacs-20.7-mule-4.1b-elc.tar.gz) = c675b31dafaa4321a453af9d87eddf051ee71b1f
@@ -12,10 +12,10 @@ SHA1 (emacs-20.7.tar.gz) = ef0168b927fb633bc9b14e2249431f26ff8b8452
 RMD160 (emacs-20.7.tar.gz) = f3b8ea8d6f6ad52ccdd7ca74c84e87a7409fc270
 SHA512 (emacs-20.7.tar.gz) = d782acdaa496ba5f606efa29976a00434a6e571c632f5511bc0b67cb7db7fd77aa5aedb12dac31abdced55f48170f9201cc35d6d533e2bc0a67f78bbdaa7da2a
 Size (emacs-20.7.tar.gz) = 15043428 bytes
-SHA1 (emacs20-jumbo-patch-20121210.gz) = 8a403fafe381178e7a982f68e9878f9d4746203f
-RMD160 (emacs20-jumbo-patch-20121210.gz) = d5e74b66bcbb517477a720ce3b4ba393d06fb3bb
-SHA512 (emacs20-jumbo-patch-20121210.gz) = 68de907f12bd5bca6f95fc484af830a48c311e200ec4f9fd4a496841b82250be94e95157cb4622caccb05d3fbcf5b7e3a92b3741a574071b069530da5f386a7d
-Size (emacs20-jumbo-patch-20121210.gz) = 2252 bytes
+SHA1 (emacs20-jumbo-patch-20170723.gz) = 3121c48d3b60b16fa7f27e8d39394f78eb9c58a3
+RMD160 (emacs20-jumbo-patch-20170723.gz) = 0600bdc0fa3a21351a7d12af3835bf3ed0096a48
+SHA512 (emacs20-jumbo-patch-20170723.gz) = b54b8a88c8c938cddcc4011a548f739458b143581a0e32f813d2b69ceeba95b068613ccea9495924d3207e43707184249726e13f7699cf6f0bb3f9345af29749
+Size (emacs20-jumbo-patch-20170723.gz) = 2463 bytes
 SHA1 (emacs20-xim-20000713.diff) = 5bed39e7b8a52941f77088529566aaa3bcf06670
 RMD160 (emacs20-xim-20000713.diff) = 5887a4d43ee92e8cad65d6412c9ecbce08e781da
 SHA512 (emacs20-xim-20000713.diff) = d6d3fb483db830ddcf07f6325901fb7faca1e112129f27036328eb4a6a53851a53318a31830a751525b9e0898256c6c9bfe5c3c333401d44a6dcbad44ba3c7a8
@@ -29,7 +29,7 @@ SHA1 (patch-af) = 4f252a923a8164ee7523a338f1d1b5d87006ea72
 SHA1 (patch-ag) = 14469c8907ea09395031594e7e0d0fe967b915d9
 SHA1 (patch-ah) = 669ce7d4d2d9d15f423b94a996c0aa92b8a0d455
 SHA1 (patch-ai) = e75ca87ba6bad1eab37cfbc99753d368fb95565d
-SHA1 (patch-aj) = 6da7cd5925eafbfdcca14d29ae5d851e8099f256
+SHA1 (patch-aj) = d4962f6054c6fa9e8e7313b0cf670c6524370a56
 SHA1 (patch-ak) = 24da025fe031da0e8f2eace8c2dd10acf7f7c82c
 SHA1 (patch-al) = 0459e7a206bbb5f0e591111d2ed3cde97038a2ec
 SHA1 (patch-am) = 12667ef175d1108aa3d207d92eba0f20de9d6ae3

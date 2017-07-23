@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2017/07/23 05:11:42 dholland Exp $
+# $NetBSD: Makefile,v 1.59 2017/07/23 05:22:38 dholland Exp $
 
 DISTNAME=	emacs-20.7
 PKGNAME=	${DISTNAME:S/emacs/emacs20/}
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	editors
 MASTER_SITES=	http://ftp.gnu.org/pub/old-gnu/emacs/
 MASTER_SITES+=	ftp://ftp.gnu.org/pub/old-gnu/emacs
@@ -20,8 +20,8 @@ SITES.emacs20-xim-20000713.diff=	\
 PATCHFILES+=		emacs20-xim-20000713.diff
 
 # dholland's jumbo patch
-PATCHFILES+=		emacs20-jumbo-patch-20121210.gz
-SITES.emacs20-jumbo-patch-20121210.gz=\
+PATCHFILES+=		emacs20-jumbo-patch-20170723.gz
+SITES.emacs20-jumbo-patch-20170723.gz=\
 			http://www.NetBSD.org/~dholland/patchkits/emacs20/
 
 PATCH_DIST_STRIP=	-p1
