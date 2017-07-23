@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2017/06/05 14:22:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2017/07/23 00:28:37 schmonz Exp $
 
-DISTNAME=		App-Sqitch-0.9995
+DISTNAME=		App-Sqitch-0.9996
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		databases perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=App/}
 
@@ -11,7 +10,6 @@ HOMEPAGE=		http://sqitch.org/
 COMMENT=		Sane database change management
 LICENSE=		mit
 
-DEPENDS+=		p5-Class-XSAccessor>=1.18:../../devel/p5-Class-XSAccessor
 DEPENDS+=		p5-Clone-[0-9]*:../../devel/p5-Clone
 DEPENDS+=		p5-Config-GitLike>=1.11:../../devel/p5-Config-GitLike
 DEPENDS+=		p5-DBI-[0-9]*:../../databases/p5-DBI
@@ -25,6 +23,7 @@ DEPENDS+=		p5-File-HomeDir-[0-9]*:../../devel/p5-File-HomeDir
 #DEPENDS+=		{perl>=5,p5-Getopt-Long-[0-9]*}:../../devel/p5-Getopt-Long
 DEPENDS+=		p5-Hash-Merge-[0-9]*:../../devel/p5-Hash-Merge
 DEPENDS+=		p5-IO-Pager-[0-9]*:../../devel/p5-IO-Pager
+DEPENDS+=		p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
 DEPENDS+=		p5-IPC-System-Simple>=1.17:../../devel/p5-IPC-System-Simple
 DEPENDS+=		p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=		p5-Locale-libintl-[0-9]*:../../misc/p5-Locale-libintl
