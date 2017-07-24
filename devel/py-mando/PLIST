@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/04 13:47:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/07/24 16:30:20 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,6 +10,18 @@ ${PYSITELIB}/mando/__init__.pyo
 ${PYSITELIB}/mando/core.py
 ${PYSITELIB}/mando/core.pyc
 ${PYSITELIB}/mando/core.pyo
+${PYSITELIB}/mando/napoleon/__init__.py
+${PYSITELIB}/mando/napoleon/__init__.pyc
+${PYSITELIB}/mando/napoleon/__init__.pyo
+${PYSITELIB}/mando/napoleon/docstring.py
+${PYSITELIB}/mando/napoleon/docstring.pyc
+${PYSITELIB}/mando/napoleon/docstring.pyo
+${PYSITELIB}/mando/napoleon/iterators.py
+${PYSITELIB}/mando/napoleon/iterators.pyc
+${PYSITELIB}/mando/napoleon/iterators.pyo
+${PYSITELIB}/mando/napoleon/pycompat.py
+${PYSITELIB}/mando/napoleon/pycompat.pyc
+${PYSITELIB}/mando/napoleon/pycompat.pyo
 ${PYSITELIB}/mando/rst_text_formatter.py
 ${PYSITELIB}/mando/rst_text_formatter.pyc
 ${PYSITELIB}/mando/rst_text_formatter.pyo
