@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.5 2017/07/23 20:38:24 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.6 2017/07/24 16:32:12 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q2 branch:
 
@@ -61,4 +61,7 @@ www/apache22: security update
 
 Pullup ticket #5521 - requested by taca
 www/apache24: security update
+
+Pullup ticket #5516 - requested by he
+lang/ocaml: build fix for powerpc
 
