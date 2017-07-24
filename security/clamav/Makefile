@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2017/07/10 00:22:15 gdt Exp $
+# $NetBSD: Makefile,v 1.36 2017/07/24 09:39:42 maya Exp $
 
 .include "Makefile.common"
 
@@ -22,23 +22,14 @@ CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ARGS+=	--with-xml=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+CONFIGURE_ARGS+=	--enable-readdir_r
 # pkgsrc enforces a "secure" version of zlib, so don't let this check
 # bomb the build
 CONFIGURE_ARGS+=	--disable-zlib-vcheck
 
-# clamav shadows gets with a macro, which confuses FORTIFY.  Disable
-# until resolved.
-PKGSRC_USE_FORTIFY=no
-
 CHECK_PORTABILITY_SKIP=	contrib/* unit_tests/* win32/*
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.*)
-CONFIGURE_ARGS+=	--disable-readdir-r
-.else
-CONFIGURE_ARGS+=	--enable-readdir_r
-.endif
 
 NOT_PAX_MPROTECT_SAFE+=	sbin/clamd
 NOT_PAX_MPROTECT_SAFE+=	bin/clamscan
