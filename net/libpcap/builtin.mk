@@ -1,12 +1,12 @@
-# $NetBSD: builtin.mk,v 1.17 2011/01/29 21:17:48 markd Exp $
+# $NetBSD: builtin.mk,v 1.18 2017/07/24 07:23:28 dbj Exp $
 
 BUILTIN_PKG:=	libpcap
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-BUILTIN_FIND_FILES_VAR:=	H_LIBPCAP
-BUILTIN_FIND_FILES.H_LIBPCAP=	/usr/include/pcap/pcap.h
-BUILTIN_FIND_FILES.H_LIBPCAP+=	/usr/include/pcap.h
+BUILTIN_FIND_HEADERS_VAR:=		H_LIBPCAP
+BUILTIN_FIND_HEADERS.H_LIBPCAP=		pcap/pcap.h
+BUILTIN_FIND_HEADERS.H_LIBPCAP+=	pcap.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
