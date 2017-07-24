@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opt,v 1.27 2017/03/27 11:51:30 jperkin Exp $
+@comment $NetBSD: PLIST.opt,v 1.27.4.1 2017/07/24 16:27:15 spz Exp $
 bin/ocamlc.opt
 bin/ocamlcp.opt
 bin/ocamldep.opt
@@ -19,7 +19,6 @@ lib/ocaml/big_int.cmx
 lib/ocaml/bigarray.a
 lib/ocaml/bigarray.cmx
 lib/ocaml/bigarray.cmxa
-lib/ocaml/bigarray.cmxs
 lib/ocaml/buffer.cmx
 lib/ocaml/bytes.cmx
 lib/ocaml/bytesLabels.cmx
@@ -185,9 +184,6 @@ lib/ocaml/compiler-libs/x86_masm.cmx
 lib/ocaml/compiler-libs/x86_proc.cmx
 lib/ocaml/complex.cmx
 lib/ocaml/digest.cmx
-lib/ocaml/dynlink.a
-lib/ocaml/dynlink.cmx
-lib/ocaml/dynlink.cmxa
 lib/ocaml/ephemeron.cmx
 lib/ocaml/filename.cmx
 lib/ocaml/format.cmx
@@ -220,7 +216,6 @@ lib/ocaml/nativeint.cmx
 lib/ocaml/num.cmx
 lib/ocaml/nums.a
 lib/ocaml/nums.cmxa
-lib/ocaml/nums.cmxs
 lib/ocaml/obj.cmx
 lib/ocaml/ocamldoc/odoc.cmx
 lib/ocaml/ocamldoc/odoc_analyse.cmx
@@ -292,7 +287,6 @@ lib/ocaml/stdlib.cmxa
 lib/ocaml/str.a
 lib/ocaml/str.cmx
 lib/ocaml/str.cmxa
-lib/ocaml/str.cmxs
 lib/ocaml/stream.cmx
 lib/ocaml/string.cmx
 lib/ocaml/stringLabels.cmx
@@ -308,7 +302,6 @@ lib/ocaml/uchar.cmx
 lib/ocaml/unix.a
 lib/ocaml/unix.cmx
 lib/ocaml/unix.cmxa
-lib/ocaml/unix.cmxs
 lib/ocaml/unixLabels.cmx
 lib/ocaml/vmthreads/libvmthreads.a
 lib/ocaml/weak.cmx
