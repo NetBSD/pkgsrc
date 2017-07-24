@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2017/05/29 11:08:23 wiz Exp $
+$NetBSD: distinfo,v 1.17 2017/07/24 16:35:46 adam Exp $
 
-SHA1 (pbr-3.0.1.tar.gz) = 0281587b971d66b80f173fa96c1b2cc97794fdff
-RMD160 (pbr-3.0.1.tar.gz) = 7a624c2e92158a4bc25cd08f166e8016f7213d1f
-SHA512 (pbr-3.0.1.tar.gz) = 30ffb8f0c0184c7613add7094ff065d709d9c83e829f7e65ea60f5d1e0fbd267c3067aed8eff0c7767110b079e118141743f4f63185f8617925566ff14a40412
-Size (pbr-3.0.1.tar.gz) = 100518 bytes
+SHA1 (pbr-3.1.1.tar.gz) = 30e236b4d5375e04b6f01a51870c80dbdae7d723
+RMD160 (pbr-3.1.1.tar.gz) = df04c5be3a5e069b865b74309adbd5fc2b616664
+SHA512 (pbr-3.1.1.tar.gz) = c01fb83678f8fc3acddc153dd341a17ed9d602b6770f0ff244b1c5b54c37d4ddcbd0c3d726f7d7020865819e02797c1c79a0c15e9ee2ae5c1510fce7112b2a3a
+Size (pbr-3.1.1.tar.gz) = 102665 bytes
