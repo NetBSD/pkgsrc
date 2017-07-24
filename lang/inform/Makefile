@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.17 2015/02/21 13:25:59 mef Exp $
+# $NetBSD: Makefile,v 1.18 2017/07/24 03:18:54 maya Exp $
 
-DISTNAME=	inform-6.31.1
-PKGREVISION=	1
+PKGNAME=	inform-6.33.20160609
+DISTNAME=	inform-6.33-6.12.1
 CATEGORIES=	lang
 MASTER_SITES=	http://mirror.ifarchive.org/if-archive/infocom/compilers/inform6/source/
 
-MAINTAINER=	nathanw@mit.edu
-HOMEPAGE=	http://inform7.com/
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://inform7.com/
 COMMENT=	Interactive fiction compiler (Z-Machine and Glulx)
-LICENSE=	inform-license
+LICENSE=	artistic-2.0
 
-GNU_CONFIGURE=	yes
+NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.pkg.mk"
