@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2017/04/30 01:21:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2017/07/24 07:30:07 dbj Exp $
 
 DISTNAME=		uhd-3.9.4
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		ham
 MASTER_SITES=           ${MASTER_SITE_GITHUB:=EttusResearch/}
 #                                                                     3.9.1 -> 003_009_001
@@ -15,7 +15,6 @@ LICENSE=		gnu-gpl-v2
 BUILD_DEPENDS+=		${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
 BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 BUILD_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
-BUILD_DEPENDS+=		doxygen>=1.8.12:../../devel/doxygen
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-cheetah
 
