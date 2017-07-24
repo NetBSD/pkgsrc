@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.52 2017/07/09 14:30:07 khorben Exp $
+# $NetBSD: NetBSD.mk,v 1.53 2017/07/24 08:19:08 maya Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -118,13 +118,10 @@ DEFAULT_SERIAL_DEVICE?=	/dev/null
 SERIAL_DEVICES?=	/dev/null
 .endif
 
-# Add -mieee to CFLAGS and FFLAGS for NetBSD->=1.5V-alpha
-.for __tmp__ in 1.5[V-Z] 1.5[A-Z][A-Z]* 1.[6-9]* [2-9].*
-.  if ${MACHINE_PLATFORM:MNetBSD-${__tmp__}-alpha} != ""
+.if (${MACHINE_ARCH} == alpha)
 CFLAGS+=	-mieee
 FFLAGS+=	-mieee
-.  endif	# MACHINE_PLATFORM
-.endfor		# __tmp__
+.endif
 
 # check for kqueue(2) support, added in NetBSD-1.6J
 .if exists(/usr/include/sys/event.h)
