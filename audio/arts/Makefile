@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2017/05/24 16:48:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.92 2017/07/24 08:31:44 maya Exp $
 
 DISTNAME=	arts-1.5.10
 PKGREVISION=	15
@@ -11,8 +11,6 @@ COMMENT=	Analog Real-Time Synthesizer
 REPLACE_SH+=	artsc/artsc-config.in artsc/artsdsp.in
 
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -std=c99
-
-CONFLICTS+=	kdelibs-2*
 
 USE_TOOLS+=	perl pkg-config
 
