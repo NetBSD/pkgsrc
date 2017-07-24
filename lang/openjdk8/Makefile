@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2017/05/10 14:01:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.50 2017/07/24 12:27:33 wiz Exp $
 
 DISTNAME=	openjdk-1.8.131-20170427
 PKGNAME=	openjdk8-1.8.131
@@ -59,6 +59,7 @@ CONFIGURE_ARGS+=	--disable-precompiled-headers
 CONFIGURE_ARGS+=	--disable-ccache
 CONFIGURE_ARGS+=	--with-user-release-suffix=pkgsrc_${PKGVERSION}
 CONFIGURE_ARGS+=	--with-update-version=${PKGVERSION_NOREV:S/1.8.//}
+CONFIGURE_ARGS+=	--with-extra-ldflags=${LDFLAGS:Q}
 
 CHECK_PORTABILITY_SKIP+=	hotspot/test/runtime/*/*.sh
 
@@ -80,6 +81,8 @@ BUILDDIR=	${WRKSRC}/build/${BUILD_OPSYS}-${BUILD_ARCH}-normal-${BUILD_VARIANT}-$
 LD_LIBRARY_PATH=	${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}:${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}/jli:${WRKDIR}/bootstrap/jre/lib/${LIBDIR_ARCH}/server
 CONFIGURE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
 MAKE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
+CONFIGURE_ENV+=	LFLAGS=${LDFLAGS:Q}
+MAKE_ENV+=	LFLAGS=${LDFLAGS:Q}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/openjdk8/jre/lib/${LIBDIR_ARCH}
 
 PLIST_SUBST+=	ARCH=${LIBDIR_ARCH}
