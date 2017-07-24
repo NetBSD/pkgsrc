@@ -1,3 +1,5 @@
+# $NetBSD: builtin.mk,v 1.2 2017/07/24 12:26:35 wiz Exp $
+
 BUILTIN_PKG:=	openjdk8
 
 BUILTIN_FIND_FILES_VAR:=	OJDK8
@@ -26,7 +28,7 @@ MAKEVARS+=	IS_BUILTIN.openjdk8
 .if !defined(BUILTIN_PKG.openjdk8) && \
     !empty(IS_BUILTIN.openjdk8:M[yY][eE][sS])
 BUILTIN_VERSION.openjdk8!=	${OJDK8} -version 2>&1 | ${SED} -Ee 's:^[^0-9]*([0-9._]+)$:\1:' -e 's/_/./g' -e 's/([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)/\1.\2.\4/'
-BUILTIN_PKG.openjdk8=	openjdk8-$(BUILTIN_VERSION.openjdk8)
+BUILTIN_PKG.openjdk8=	openjdk8-${BUILTIN_VERSION.openjdk8}
 .endif
 MAKEVARS+=	BUILTIN_PKG.openjdk8
 
