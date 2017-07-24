@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/04/04 13:47:09 wiz Exp $
+$NetBSD: distinfo,v 1.2 2017/07/24 16:30:20 adam Exp $
 
-SHA1 (mando-0.5.tar.gz) = 91d73c42b30b84d35c66e08659152ffc0be6dc3a
-RMD160 (mando-0.5.tar.gz) = f3ae5efddb7f3ee5905b2cd2c5581db6fdeae485
-SHA512 (mando-0.5.tar.gz) = 47b9afa18ef7027aecc21552ac0198083b53dd9b1703d3210065f95ff57328275123b3268e1272ea69a518d1a824fbaae2b79b61c7d136922c71d07d34301151
-Size (mando-0.5.tar.gz) = 23512 bytes
+SHA1 (mando-0.6.4.tar.gz) = 632f2f35f9815e7f5f9bc98ae9c878e0c462ed27
+RMD160 (mando-0.6.4.tar.gz) = eb35304a9cc1df0bf1ddbc2aa9d15bf2cb3f0c54
+SHA512 (mando-0.6.4.tar.gz) = 5feafc84584a093e04c4ad96cdd13921e769b50382afe3dfe48f567d4965b98c7f3c2162c8a1ae4a7d7680d20dcb3d5f1637f5ba62aaaf1ebe436315b7163b91
+Size (mando-0.6.4.tar.gz) = 214068 bytes
