@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.58 2017/07/11 14:19:21 jaapb Exp $
+# $NetBSD: Makefile,v 1.59 2017/07/24 11:37:49 maya Exp $
 
 VERSION=	4.2.5
 VERSION_IPXE=	1.0.0
 
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools42-${VERSION}
-PKGREVISION=		22
+PKGREVISION=		23
 CATEGORIES=		sysutils
 MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
 
@@ -33,9 +33,9 @@ PKG_SYSCONFSUBDIR=	xen
 ONLY_FOR_PLATFORM=	Linux-2.6*-i386 Linux-2.6*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64 NetBSD-[5-9].*-i386
 
+PKGSRC_USE_SSP=		no
+
 CONFLICTS+=		libxen-[0-9]*
-CONFLICTS+=		xentools20-[0-9]*
-CONFLICTS+=		xentools3-[0-9]*
 CONFLICTS+=		xenstoretools-[0-9]*
 
 XENTOP=			${WRKDIR}/xen-${VERSION}
