@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2999 2017/07/24 16:33:58 he Exp $
+$NetBSD: CHANGES-2017,v 1.3000 2017/07/24 16:45:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4151,3 +4151,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/libLLVM to 4.0.1 [maya 2017-07-24]
 	Updated devel/flex to 2.6.4 [jakllsch 2017-07-24]
 	Updated security/openssh to 7.5.1nb1 [he 2017-07-24]
+	Updated devel/py-mando to 0.6.4 [adam 2017-07-24]
+	Updated devel/py-pbr to 3.1.1 [adam 2017-07-24]
+	Updated devel/py-radon to 2.0.2 [adam 2017-07-24]
