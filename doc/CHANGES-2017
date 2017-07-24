@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2989 2017/07/23 22:30:17 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.2990 2017/07/24 03:19:44 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4140,3 +4140,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/nginx to 1.12.1 [adam 2017-07-23]
 	Updated www/nginx-devel to 1.13.3 [adam 2017-07-23]
 	Updated security/py-tlslite to 0.4.9 [schmonz 2017-07-23]
+	Updated lang/inform to 6.33.20160609 [maya 2017-07-24]
