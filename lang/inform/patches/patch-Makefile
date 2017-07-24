@@ -1,0 +1,47 @@
+$NetBSD: patch-Makefile,v 1.1 2017/07/24 03:18:54 maya Exp $
+
+Allow overriding PREFIX
+DESTDIR support
+
+--- Makefile.orig	2016-06-04 03:25:08.000000000 +0000
++++ Makefile
+@@ -2,7 +2,7 @@ CC = gcc
+ 
+ #OPTS = -g -Wall -Wextra
+ 
+-PREFIX = /usr/local
++PREFIX ?= /usr/local
+ MAN_PREFIX = $(PREFIX)
+ 
+ COMPVERSION = 6.33
+@@ -63,18 +63,18 @@ strip: $(BINNAME)
+ 	strip $(BINNAME)
+ 
+ install: $(BINNAME) lib
+-	install -d -m 755 $(BINDIR)
+-	install -c -m 755 $(BINNAME) $(BINDIR)
+-	install -d -m 755 $(LIBDIR)
+-	install -c -m 644 $(wildcard lib/*) $(LIBDIR)
+-	install -d -m 755 $(INCLUDEDIR)
+-	install -c -m 644 $(wildcard include/*) $(INCLUDEDIR)
+-	install -d -m 755 $(MANDIR)
+-	install -c -m 644 $(MANPAGE) $(MANDIR)
+-	install -d -m 755 $(DEMODIR)
+-	install -c -m 644 $(wildcard demos/*) $(DEMODIR)
+-	install -d -m 755 $(TUTORDIR)
+-	install -c -m 644 $(wildcard tutor/*) $(TUTORDIR)
++	install -d -m 755 $(DESTDIR)$(BINDIR)
++	install -c -m 755 $(BINNAME) $(DESTDIR)$(BINDIR)
++	install -d -m 755 $(DESTDIR)$(LIBDIR)
++	install -c -m 644 $(wildcard lib/*) $(DESTDIR)$(LIBDIR)
++	install -d -m 755 $(DESTDIR)$(INCLUDEDIR)
++	install -c -m 644 $(wildcard include/*) $(DESTDIR)$(INCLUDEDIR)
++	install -d -m 755 $(DESTDIR)$(MANDIR)
++	install -c -m 644 $(MANPAGE) $(DESTDIR)$(MANDIR)
++	install -d -m 755 $(DESTDIR)$(DEMODIR)
++	install -c -m 644 $(wildcard demos/*) $(DESTDIR)$(DEMODIR)
++	install -d -m 755 $(DESTDIR)$(TUTORDIR)
++	install -c -m 644 $(wildcard tutor/*) $(DESTDIR)$(TUTORDIR)
+ 
+ install-strip: strip install
+ 
