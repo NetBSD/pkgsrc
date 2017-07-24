@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2014/08/09 16:21:28 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/24 10:16:47 leot Exp $
 
 DISTNAME=	Symbola
-PKGNAME=	symbola-ttf-7.17
+PKGNAME=	symbola-ttf-9.17
 CATEGORIES=	fonts
 MASTER_SITES=	http://users.teilar.gr/~g1951d/
 EXTRACT_SUFX=	.zip
@@ -23,11 +23,9 @@ NO_BUILD=	yes
 
 FONTS_DIRS.ttf=	${PREFIX}/share/fonts/X11/TTF
 
-DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
-INSTALLATION_DIRS=	share/fonts/X11/TTF ${DOCDIR} ${FONTS_DIRS.ttf}
+INSTALLATION_DIRS=	share/fonts/X11/TTF ${FONTS_DIRS.ttf}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.ttf ${DESTDIR}${FONTS_DIRS.ttf}
-	${INSTALL_DATA} ${WRKSRC}/*.docx ${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
