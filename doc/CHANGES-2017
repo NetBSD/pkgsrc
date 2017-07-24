@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2997 2017/07/24 13:14:09 maya Exp $
+$NetBSD: CHANGES-2017,v 1.2998 2017/07/24 14:19:31 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4149,3 +4149,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/ruby-filesize version 0.1.1 [minskim 2017-07-24]
 	Updated sysutils/xentools42 to 4.2.5nb23 [maya 2017-07-24]
 	Updated lang/libLLVM to 4.0.1 [maya 2017-07-24]
+	Updated devel/flex to 2.6.4 [jakllsch 2017-07-24]
