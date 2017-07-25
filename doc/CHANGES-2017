@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3001 2017/07/25 08:25:38 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3002 2017/07/25 08:40:03 manu Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4159,3 +4159,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/py-supervisor to 3.3.3 [adam 2017-07-25]
 	Updated net/py-botocore to 1.5.87 [adam 2017-07-25]
 	Updated net/py-awscli to 1.11.124 [adam 2017-07-25]
+	Updated www/php-piwigo to 2.9.1 [manu 2017-07-25]
