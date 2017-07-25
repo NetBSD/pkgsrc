@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/07/18 18:19:35 brook Exp $
+# $NetBSD: Makefile,v 1.12 2017/07/25 13:19:00 wiz Exp $
 
 GCC_PKGNAME=		gcc7
 .include		"version.mk"
@@ -55,7 +55,7 @@ LANGS=			c
 LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
 
 ## The Library rpath to use in end programs.
-LDFLAGS_FOR_TARGET=	${LDFLAGS:M${COMPILER_RPATH_FLAG}*:N*/usr/lib*}
+LDFLAGS_FOR_TARGET=	${LDFLAGS:M${COMPILER_RPATH_FLAG}*:N*/usr/lib*} ${LDFLAGS:M-Wl,-z*}
 
 # The "-static-libstdc++ -static-libgcc" flags are normally added to the
 # boot-ldflags by configure but because we are supply the boot-ldflags
