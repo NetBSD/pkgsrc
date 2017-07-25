@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/07/15 19:22:42 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2017/07/25 12:26:05 leot Exp $
 
-DISTNAME=	amath-1.8.2
+DISTNAME=	amath-1.8.3
 CATEGORIES=	math
 MASTER_SITES=	http://dist1.innolan.net/
 MASTER_SITES+=	http://dist2.innolan.net/
