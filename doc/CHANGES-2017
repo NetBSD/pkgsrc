@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3000 2017/07/24 16:45:39 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3001 2017/07/25 08:25:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4154,3 +4154,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-mando to 0.6.4 [adam 2017-07-24]
 	Updated devel/py-pbr to 3.1.1 [adam 2017-07-24]
 	Updated devel/py-radon to 2.0.2 [adam 2017-07-24]
+	Updated net/py-celery to 4.1.0 [adam 2017-07-25]
+	Updated devel/py-setuptools to 36.2.2 [adam 2017-07-25]
+	Updated sysutils/py-supervisor to 3.3.3 [adam 2017-07-25]
+	Updated net/py-botocore to 1.5.87 [adam 2017-07-25]
+	Updated net/py-awscli to 1.11.124 [adam 2017-07-25]
