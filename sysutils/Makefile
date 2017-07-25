@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.704 2017/07/03 16:29:43 bsiegert Exp $
+# $NetBSD: Makefile,v 1.705 2017/07/25 10:29:12 alnsn Exp $
 #
 
 COMMENT=	System utilities
@@ -74,6 +74,7 @@ SUBDIR+=	collectd-amqp
 SUBDIR+=	collectd-curl
 SUBDIR+=	collectd-dbi
 SUBDIR+=	collectd-dns
+SUBDIR+=	collectd-lua
 SUBDIR+=	collectd-memcached
 SUBDIR+=	collectd-mysql
 SUBDIR+=	collectd-network
