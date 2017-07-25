@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3004 2017/07/25 10:29:19 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3005 2017/07/25 10:30:41 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4163,3 +4163,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-txaio to 2.8.1 [adam 2017-07-25]
 	Updated databases/py-psycopg2 to 2.7.3 [adam 2017-07-25]
 	Updated databases/py-sqlalchemy to 1.1.12 [adam 2017-07-25]
+	Added sysutils/collectd-lua version 5.7.2 [alnsn 2017-07-25]
