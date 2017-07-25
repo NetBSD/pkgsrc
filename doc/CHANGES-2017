@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3006 2017/07/25 11:07:10 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3007 2017/07/25 12:26:17 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4166,3 +4166,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/collectd-lua version 5.7.2 [alnsn 2017-07-25]
 	Updated databases/py-sqlalchemy-utils to 0.32.14 [adam 2017-07-25]
 	Updated databases/py-sqlalchemy-i18n to 1.0.3 [adam 2017-07-25]
+	Updated math/amath to 1.8.3 [leot 2017-07-25]
