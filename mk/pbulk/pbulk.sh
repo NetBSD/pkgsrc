@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: pbulk.sh,v 1.3 2015/12/14 21:12:01 asau Exp $
+# $Id: pbulk.sh,v 1.4 2017/07/25 22:45:21 sevan Exp $
 set -e
 
 usage="usage: ${0##*/} [-lun] [-c mk.conf.fragment] [-d nodes]"
@@ -194,7 +194,7 @@ fi
 # Keep "packages" in pbulk.conf and "PACKAGES" in mk.conf fragment in sync.
 
 # Final preparations:
-mkdir -p ${PACKAGES}
+mkdir -p ${PACKAGES}/All
 if [ ! -n "$unprivileged" ]; then
 chown pbulk:"$(id -gn pbulk)" ${PACKAGES}
 fi
