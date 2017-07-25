@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/07/20 17:43:02 adam Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/25 08:17:08 adam Exp $
 
-DISTNAME=	supervisor-3.3.2
+DISTNAME=	supervisor-3.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/supervisor/}
