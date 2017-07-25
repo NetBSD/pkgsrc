@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2017/04/09 17:37:18 adam Exp $
+# $NetBSD: Makefile,v 1.10 2017/07/25 07:52:32 adam Exp $
 
-DISTNAME=	celery-4.0.2
+DISTNAME=	celery-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/celery/}
@@ -11,7 +11,7 @@ COMMENT=	Asynchronous task/job queue based on distributed message passing
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-billiard>=3.5.0.2:../../parallel/py-billiard
-DEPENDS+=	${PYPKGPREFIX}-kombu>=4.0.2:../../net/py-kombu
+DEPENDS+=	${PYPKGPREFIX}-kombu>=4.1.0:../../net/py-kombu
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
 USE_LANGUAGES=	c
