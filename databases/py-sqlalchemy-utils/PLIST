@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2015/04/01 02:24:00 rodent Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/07/25 11:03:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/sqlalchemy_utils/__init__.py
@@ -14,18 +15,9 @@ ${PYSITELIB}/sqlalchemy_utils/aggregates.pyo
 ${PYSITELIB}/sqlalchemy_utils/asserts.py
 ${PYSITELIB}/sqlalchemy_utils/asserts.pyc
 ${PYSITELIB}/sqlalchemy_utils/asserts.pyo
-${PYSITELIB}/sqlalchemy_utils/batch.py
-${PYSITELIB}/sqlalchemy_utils/batch.pyc
-${PYSITELIB}/sqlalchemy_utils/batch.pyo
-${PYSITELIB}/sqlalchemy_utils/decorators.py
-${PYSITELIB}/sqlalchemy_utils/decorators.pyc
-${PYSITELIB}/sqlalchemy_utils/decorators.pyo
 ${PYSITELIB}/sqlalchemy_utils/exceptions.py
 ${PYSITELIB}/sqlalchemy_utils/exceptions.pyc
 ${PYSITELIB}/sqlalchemy_utils/exceptions.pyo
-${PYSITELIB}/sqlalchemy_utils/expression_parser.py
-${PYSITELIB}/sqlalchemy_utils/expression_parser.pyc
-${PYSITELIB}/sqlalchemy_utils/expression_parser.pyo
 ${PYSITELIB}/sqlalchemy_utils/expressions.py
 ${PYSITELIB}/sqlalchemy_utils/expressions.pyc
 ${PYSITELIB}/sqlalchemy_utils/expressions.pyo
@@ -74,6 +66,15 @@ ${PYSITELIB}/sqlalchemy_utils/path.pyo
 ${PYSITELIB}/sqlalchemy_utils/primitives/__init__.py
 ${PYSITELIB}/sqlalchemy_utils/primitives/__init__.pyc
 ${PYSITELIB}/sqlalchemy_utils/primitives/__init__.pyo
+${PYSITELIB}/sqlalchemy_utils/primitives/country.py
+${PYSITELIB}/sqlalchemy_utils/primitives/country.pyc
+${PYSITELIB}/sqlalchemy_utils/primitives/country.pyo
+${PYSITELIB}/sqlalchemy_utils/primitives/currency.py
+${PYSITELIB}/sqlalchemy_utils/primitives/currency.pyc
+${PYSITELIB}/sqlalchemy_utils/primitives/currency.pyo
+${PYSITELIB}/sqlalchemy_utils/primitives/ltree.py
+${PYSITELIB}/sqlalchemy_utils/primitives/ltree.pyc
+${PYSITELIB}/sqlalchemy_utils/primitives/ltree.pyo
 ${PYSITELIB}/sqlalchemy_utils/primitives/weekday.py
 ${PYSITELIB}/sqlalchemy_utils/primitives/weekday.pyc
 ${PYSITELIB}/sqlalchemy_utils/primitives/weekday.pyo
@@ -92,9 +93,6 @@ ${PYSITELIB}/sqlalchemy_utils/relationships/__init__.pyo
 ${PYSITELIB}/sqlalchemy_utils/relationships/chained_join.py
 ${PYSITELIB}/sqlalchemy_utils/relationships/chained_join.pyc
 ${PYSITELIB}/sqlalchemy_utils/relationships/chained_join.pyo
-${PYSITELIB}/sqlalchemy_utils/relationships/select_aggregate.py
-${PYSITELIB}/sqlalchemy_utils/relationships/select_aggregate.pyc
-${PYSITELIB}/sqlalchemy_utils/relationships/select_aggregate.pyo
 ${PYSITELIB}/sqlalchemy_utils/types/__init__.py
 ${PYSITELIB}/sqlalchemy_utils/types/__init__.pyc
 ${PYSITELIB}/sqlalchemy_utils/types/__init__.pyo
@@ -113,6 +111,9 @@ ${PYSITELIB}/sqlalchemy_utils/types/color.pyo
 ${PYSITELIB}/sqlalchemy_utils/types/country.py
 ${PYSITELIB}/sqlalchemy_utils/types/country.pyc
 ${PYSITELIB}/sqlalchemy_utils/types/country.pyo
+${PYSITELIB}/sqlalchemy_utils/types/currency.py
+${PYSITELIB}/sqlalchemy_utils/types/currency.pyc
+${PYSITELIB}/sqlalchemy_utils/types/currency.pyo
 ${PYSITELIB}/sqlalchemy_utils/types/email.py
 ${PYSITELIB}/sqlalchemy_utils/types/email.pyc
 ${PYSITELIB}/sqlalchemy_utils/types/email.pyo
@@ -128,9 +129,15 @@ ${PYSITELIB}/sqlalchemy_utils/types/json.pyo
 ${PYSITELIB}/sqlalchemy_utils/types/locale.py
 ${PYSITELIB}/sqlalchemy_utils/types/locale.pyc
 ${PYSITELIB}/sqlalchemy_utils/types/locale.pyo
+${PYSITELIB}/sqlalchemy_utils/types/ltree.py
+${PYSITELIB}/sqlalchemy_utils/types/ltree.pyc
+${PYSITELIB}/sqlalchemy_utils/types/ltree.pyo
 ${PYSITELIB}/sqlalchemy_utils/types/password.py
 ${PYSITELIB}/sqlalchemy_utils/types/password.pyc
 ${PYSITELIB}/sqlalchemy_utils/types/password.pyo
+${PYSITELIB}/sqlalchemy_utils/types/pg_composite.py
+${PYSITELIB}/sqlalchemy_utils/types/pg_composite.pyc
+${PYSITELIB}/sqlalchemy_utils/types/pg_composite.pyo
 ${PYSITELIB}/sqlalchemy_utils/types/phone_number.py
 ${PYSITELIB}/sqlalchemy_utils/types/phone_number.pyc
 ${PYSITELIB}/sqlalchemy_utils/types/phone_number.pyo
