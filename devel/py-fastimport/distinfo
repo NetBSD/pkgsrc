@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2017/07/14 10:26:50 adam Exp $
+$NetBSD: distinfo,v 1.4 2017/07/25 16:10:53 joerg Exp $
 
 SHA1 (fastimport-0.9.6.tar.gz) = b6d52ae8cc1d76c1db8d4f416fc4b334ad5fe568
 RMD160 (fastimport-0.9.6.tar.gz) = 1ca2b8486c5b6b7a76bbeca6b967c78dd4211aca
 SHA512 (fastimport-0.9.6.tar.gz) = cc38c1218d65ef4a9e3a68d8af3fadf98c7cc0dcd8075b338b8f492d25765bc2fe2247000868fd3c95e1f7f4c2b9a05964ef7b4f9196c2777f6a7941f127f416
 Size (fastimport-0.9.6.tar.gz) = 33333 bytes
+SHA1 (patch-fastimport_parser.py) = 830a12da3ef6939cfd37624eb7765f40a0d0ee8a
