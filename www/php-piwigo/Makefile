@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2016/09/11 17:03:29 taca Exp $
+# $NetBSD: Makefile,v 1.7 2017/07/25 08:37:20 manu Exp $
 #
 
-PWVER=		2.7.4
+PWVER=		2.9.1
 DISTNAME=	piwigo-${PWVER}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
@@ -15,9 +15,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.2.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-exif>=5.2.0:../../graphics/php-exif
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.2.0:../../databases/php-mysql
-
-PHP_VERSIONS_ACCEPTED=	56
+DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.2.0:../../databases/php-mysqli
 
 WRKSRC=		${WRKDIR}/piwigo
 USE_LANGUAGES=	# none
