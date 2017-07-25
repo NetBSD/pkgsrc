@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2017/07/22 16:16:25 joerg Exp $
+$NetBSD: distinfo,v 1.4 2017/07/25 16:12:56 joerg Exp $
 
 SHA1 (danielj7-hg-fastimport-d41a42894dfa.tar.bz2) = 8820358107c9de776d6250052a3f15ecccfbcd44
 RMD160 (danielj7-hg-fastimport-d41a42894dfa.tar.bz2) = c6d0f6654509632f3b8266f7a4da519ff6789542
 SHA512 (danielj7-hg-fastimport-d41a42894dfa.tar.bz2) = fc207c90721dc5f32d477bfbd5c4d7634f9a16c28d6e21254bbd942cd4ad7053dbcfd3f0fed91ee797759203f4196985d5bc3132618c58331c06a8fa764124b3
 Size (danielj7-hg-fastimport-d41a42894dfa.tar.bz2) = 30701 bytes
-SHA1 (patch-hgfastimport_hgimport.py) = 42eb4f8e637cf24e52f3cabf6f499ebab9803fa7
+SHA1 (patch-hgfastimport_____init____.py) = b5fd1d95411380e88cdc032f72ef4c67cbf0e3b4
+SHA1 (patch-hgfastimport_hgimport.py) = cb630c9a8e19ea37fcbf8bae0beae485bfa96b0b
