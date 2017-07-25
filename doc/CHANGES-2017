@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3002 2017/07/25 08:40:03 manu Exp $
+$NetBSD: CHANGES-2017,v 1.3003 2017/07/25 10:15:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4160,3 +4160,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-botocore to 1.5.87 [adam 2017-07-25]
 	Updated net/py-awscli to 1.11.124 [adam 2017-07-25]
 	Updated www/php-piwigo to 2.9.1 [manu 2017-07-25]
+	Updated devel/py-txaio to 2.8.1 [adam 2017-07-25]
+	Updated databases/py-psycopg2 to 2.7.3 [adam 2017-07-25]
