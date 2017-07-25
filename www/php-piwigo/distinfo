@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 02:47:22 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/07/25 08:37:20 manu Exp $
 
-SHA1 (piwigo-2.7.4.zip) = 9e5b3c85dbc994136e9b25eb7c274b226c9fbd72
-RMD160 (piwigo-2.7.4.zip) = f0792583bd21afddb7b51f9d9ee58c88f7ab8a90
-SHA512 (piwigo-2.7.4.zip) = f1d364187a1a5315f02beef526c4ff2da2c00743cd63f65368d05ebaa50824455d4a7e7d32dfd06c6fcd679bc7feed3206c0a190c75a635f05eeb39bddca5fe3
-Size (piwigo-2.7.4.zip) = 7233466 bytes
+SHA1 (piwigo-2.9.1.zip) = 21b468ffcbb135d86bd192bd1664a4f9a940e4af
+RMD160 (piwigo-2.9.1.zip) = 3cd7a62643d32b5dfdab179795d9ed8ce6330efb
+SHA512 (piwigo-2.9.1.zip) = 5fee3e96a5a9a4d70cc1528f40569b45c1898e71245ca7fcfdf529d39ee79ae0d419ef38b61c536dfb5150d1f9fe683ceabf8393455d51539253d0010ccc2fff
+Size (piwigo-2.9.1.zip) = 7777925 bytes
