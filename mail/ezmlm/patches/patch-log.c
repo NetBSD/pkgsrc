@@ -1,4 +1,7 @@
-$NetBSD: patch-log.c,v 1.1 2013/02/26 11:26:03 joerg Exp $
+$NetBSD: patch-log.c,v 1.2 2017/07/26 02:02:23 schmonz Exp $
+
+Add some prototypes, missing headers and redefine log() to not conflict
+with libm.
 
 --- log.c.orig	2013-02-25 16:47:16.000000000 +0000
 +++ log.c

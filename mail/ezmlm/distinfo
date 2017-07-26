@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 23:27:05 agc Exp $
+$NetBSD: distinfo,v 1.7 2017/07/26 02:02:23 schmonz Exp $
 
 SHA1 (ezmlm-0.53.tar.gz) = 3a7b618737fed8b774bec69c272d70f4142c1e30
 RMD160 (ezmlm-0.53.tar.gz) = 6d366de2d7028a984ba454f1bec9d2d9f495c88b
 SHA512 (ezmlm-0.53.tar.gz) = 0dc1c64168428c531dbf78ca99582de4d4193d10bb38e87d3ee8f33f78083dc696bfd0681e3f2f690d7aa78b55b1b91c4ea6900c109406063445104826ff6d94
 Size (ezmlm-0.53.tar.gz) = 62693 bytes
-SHA1 (patch-MAN) = 4becf683f615bacf236abedee3ab6574bdcc0e10
-SHA1 (patch-aa) = c10560c71a137b138af325c6382e498ec466ec06
-SHA1 (patch-ezmlm-manage.c) = 8345b8849d16884bfd0d87df7bbc4c14762bd41d
-SHA1 (patch-ezmlm-return.c) = 3fd771df609ab0d8de59df6b656ad5d98d7315c3
-SHA1 (patch-log.c) = a402c27d45f8b534e4dabbe9c65ad16db3c9dea2
-SHA1 (patch-log.h) = a6deca4e422d2b2ef2c0ebb9e7e0ffa2e43709ca
-SHA1 (patch-readwrite.h) = 7038c0cf68f928700bb657fb856817af2171627b
-SHA1 (patch-stralloc.h) = 25285f91f2c39d244e62fb76c588d4db12fdc4c7
+SHA1 (patch-MAN) = df107f569c8d67b0a379c108153ea91ba97283e4
+SHA1 (patch-Makefile) = 7ad560d4005e737fb97166e89114a72eb65bbb82
+SHA1 (patch-ezmlm-manage.c) = 727d313baa5c38e784096fb9fb3354e53d0338d9
+SHA1 (patch-ezmlm-return.c) = a3af924b10cc61b703abe2b10f572292505325c3
+SHA1 (patch-log.c) = 1b155a4d3a36d23c2bdbc0b9ecd755f68b7ae9ca
+SHA1 (patch-log.h) = ef7f4795b7a6d14a8038c06300c738c76a3cdf4f
+SHA1 (patch-readwrite.h) = 5b64a802b1d4491ed9e64cde42fe04703b410d6e
+SHA1 (patch-stralloc.h) = ef799fa6f17bb1543f8d51f0ccc1e843a20d645b
