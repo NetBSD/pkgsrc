@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/10/17 11:09:58 adam Exp $
+# $NetBSD: Makefile,v 1.5 2017/07/26 17:02:31 adam Exp $
 
-DISTNAME=	lockfile-0.11.0
+DISTNAME=	lockfile-0.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lockfile/}
@@ -11,7 +11,7 @@ COMMENT=	Platform-independent file locking module
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
-DEPENDS+=	${PYPKGPREFIX}-pbr>=0.6:../../devel/py-pbr
+BUILD_DEPENDS+=	${PYPKGPREFIX}-pbr>=1.8:../../devel/py-pbr
 
 USE_LANGUAGES=	# none
 
