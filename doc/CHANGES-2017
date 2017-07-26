@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3010 2017/07/26 08:34:58 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3011 2017/07/26 11:19:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4170,3 +4170,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/termtter to 2.2.8 [jmcneill 2017-07-25]
 	Updated sysutils/zabbix to 3.2.7 [adam 2017-07-26]
 	Added security/py-argon2_cffi version 16.3.0 [adam 2017-07-26]
+	Updated net/py-netifaces to 0.10.6 [adam 2017-07-26]
+	Updated textproc/py-webencodings to 0.5.1 [adam 2017-07-26]
+	Updated www/py-mechanize to 0.3.5 [adam 2017-07-26]
+	Updated databases/py-apsw to 3.19.3 [adam 2017-07-26]
