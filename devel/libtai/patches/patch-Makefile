@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2017/07/26 00:29:53 schmonz Exp $
+
+Don't build catpages (we won't be installing them).
+
+--- Makefile.orig	1998-10-13 16:52:20.000000000 +0000
++++ Makefile
+@@ -95,7 +95,7 @@ find-systype.sh auto-ccld.sh
+ 	chmod 755 find-systype
+ 
+ it: \
+-man libtai.a leapsecs check easter yearcal nowutc
++libtai.a leapsecs check easter yearcal nowutc
+ 
+ leapsecs: \
+ load leapsecs.o libtai.a

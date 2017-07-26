@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/06/26 01:06:07 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2017/07/26 00:29:53 schmonz Exp $
 #
 
 DISTNAME=		libtai-0.60
@@ -14,8 +14,6 @@ LICENSE=		public-domain
 CONFLICTS=		libowfat-[0-9]*
 
 DJB_RESTRICTED=		NO
-
-USE_TOOLS+=		nroff
 
 EGDIR=			share/examples/${PKGBASE}
 CONF_FILES+=		${EGDIR}/leapsecs.dat ${PKG_SYSCONFDIR}/leapsecs.dat
