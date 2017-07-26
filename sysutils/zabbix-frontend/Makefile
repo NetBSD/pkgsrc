@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/07/03 13:04:01 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2017/07/26 08:24:06 adam Exp $
 
 .include "../../sysutils/zabbix/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-frontend-/}
-PKGREVISION=	1
 COMMENT=	Zabbix PHP frontend
 
 USE_TOOLS+=		pax
