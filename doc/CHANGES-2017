@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3011 2017/07/26 11:19:36 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3012 2017/07/26 16:44:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4174,3 +4174,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-webencodings to 0.5.1 [adam 2017-07-26]
 	Updated www/py-mechanize to 0.3.5 [adam 2017-07-26]
 	Updated databases/py-apsw to 3.19.3 [adam 2017-07-26]
+	Updated devel/py-setuptools to 36.2.3 [adam 2017-07-26]
+	Updated devel/py-requests to 2.18.2 [adam 2017-07-26]
