@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.1 2008/02/16 15:21:40 heinz Exp $
+$NetBSD: patch-ab,v 1.2 2017/07/26 02:27:20 schmonz Exp $
 
   Allow installation to DESTDIR (taken from safecat-buildroot.patch in
   the archive).
 
---- Makefile.orig	2004-08-17 02:50:09.000000000 +0200
+--- Makefile.orig	2004-08-17 00:50:09.000000000 +0000
 +++ Makefile
 @@ -31,7 +31,7 @@ compile auto-str.c substdio.h readwrite.
  
@@ -14,3 +14,12 @@ $NetBSD: patch-ab,v 1.1 2008/02/16 15:21:40 heinz Exp $
  
  auto_home.o: \
  compile auto_home.c
+@@ -123,7 +123,7 @@ compile instcheck.c strerr.h error_no.h 
+ 	./compile instcheck.c
+ 
+ it: \
+-maildir safecat man
++maildir safecat
+ 
+ find-systype: \
+ find-systype.sh auto-ccld.sh
