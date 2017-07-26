@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2016/08/21 10:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/07/26 17:10:15 adam Exp $
 
-DISTNAME=	Mako-1.0.4
+DISTNAME=	Mako-1.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Mako/}
@@ -11,6 +11,9 @@ COMMENT=	Hyperfast and lightweight templating for the Python platform
 LICENSE=	mit
 
 USE_LANGUAGES=		# none
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} mako-render mako-render${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

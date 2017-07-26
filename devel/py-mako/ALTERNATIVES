@@ -1,0 +1,1 @@
+bin/mako-render @PREFIX@/bin/mako-render@PYVERSSUFFIX@
