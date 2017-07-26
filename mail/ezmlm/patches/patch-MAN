@@ -1,4 +1,6 @@
-$NetBSD: patch-MAN,v 1.1 2012/03/12 21:52:07 joerg Exp $
+$NetBSD: patch-MAN,v 1.2 2017/07/26 02:02:23 schmonz Exp $
+
+Don't install catpages.
 
 --- MAN.orig	1997-06-30 03:11:54.000000000 +0000
 +++ MAN
