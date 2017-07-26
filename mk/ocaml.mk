@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.13 2017/07/23 12:20:46 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.14 2017/07/26 09:41:31 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -59,7 +59,8 @@ _PKG_VARS.ocaml=	\
 	OCAML_USE_JBUILDER \
 	JBUILDER_BUILD_FLAGS \
 	JBUILDER_BUILD_TARGETS \
-	OCAML_BUILD_ARGS
+	OCAML_BUILD_ARGS \
+	OPAM_INSTALL_FILES
 _DEF_VARS.ocaml=	\
 	OCAML_USE_OPT_COMPILER
 _SYS_VARS.ocaml=	\
@@ -92,6 +93,7 @@ OCAML_TOPKG_TARGETS?=	# empty
 OCAML_TOPKG_OPTIONAL_TARGETS?=	# empty
 OCAML_TOPKG_NATIVE_TARGETS?=	# empty
 
+OPAM_INSTALL_FILES?=	${OCAML_TOPKG_NAME}
 JBUILDER_BUILD_FLAGS?=	# empty
 JBUILDER_BUILD_TARGETS?=	@install
 
@@ -226,10 +228,12 @@ do-build:
 .if ${OCAML_USE_OPAM} == "yes" 
 
 do-install:
-	${RUN} cd ${WRKSRC} && opam-installer -i --prefix ${DESTDIR}${PREFIX} \
+	${RUN} for i in ${OPAM_INSTALL_FILES}; do \
+		cd ${WRKSRC} && opam-installer -i --prefix ${DESTDIR}${PREFIX} \
 		--libdir ${OCAML_SITELIBDIR} \
 		--docdir ${DESTDIR}/${OCAML_TOPKG_DOCDIR} \
-		${OCAML_TOPKG_NAME}.install
+		$$i.install; \
+	done
 
 .endif # topkg-opam
 
