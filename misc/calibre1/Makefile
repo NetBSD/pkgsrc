@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/05/02 13:37:31 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2017/07/26 14:28:07 wiz Exp $
 
 DISTNAME=	calibre-1.48.0
 PKGREVISION=	26
@@ -43,7 +43,7 @@ EXTRACT_USING=  bsdtar
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config pax
 PYTHON_VERSIONS_ACCEPTED=	27
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-mechanize, py-beautifulsoup, py-imaging, py-netifaces
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-mechanize, py-beautifulsoup, py-imaging
 PYDISTUTILSPKG=	yes
 PYSETUPOPTARGS=	# empty
 PYSETUPINSTALLARGS=	--prefix=${PREFIX} --root=${DESTDIR:Q}${PREFIX}
