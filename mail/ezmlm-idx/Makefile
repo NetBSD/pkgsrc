@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.40 2017/05/27 14:15:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.41 2017/07/26 02:01:58 schmonz Exp $
 #
-
-.include "../../mail/ezmlm/Makefile.common"
 
 DISTNAME=		ezmlm-idx-${IDXVERSION}
 PKGREVISION=		1
+CATEGORIES=		mail
 IDXVERSION=		7.2.2
-SITES.${DISTNAME}.tar.gz=	http://untroubled.org/ezmlm/archive/${IDXVERSION}/
+MASTER_SITES=		http://untroubled.org/ezmlm/archive/${IDXVERSION}/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://untroubled.org/ezmlm/
@@ -15,8 +14,10 @@ LICENSE=		gnu-gpl-v2
 
 CONFLICTS=		ezmlm-[0-9]*
 
-DISTFILES+=		${EZMLM_VERS}.tar.gz
-PLIST_SRC+=		PLIST.idx ${WRKDIR}/PLIST.idx-cf-files
+DEPENDS+=		qmail>=1.03:../../mail/qmail
+
+PLIST_SRC=		${PKGDIR}/../../mail/ezmlm/PLIST ${PKGDIR}/PLIST
+PLIST_SRC+=		${WRKDIR}/PLIST.idxcf
 
 DJB_RESTRICTED=		no
 DJB_CONFIG_CMDS+=	${ECHO} ${DESTDIR:Q} > conf-destdir;		\
@@ -49,10 +50,7 @@ INSTALLATION_DIRS=	bin lib libexec/cgi-bin ${PKGMANDIR} ${PKGMANDIR}/man1 ${PKGM
 INSTALLATION_DIRS+=	share/doc/${PKGBASE} share/examples/${PKGBASE}
 
 post-extract:
-	${GREP} -v '^#' < cf-files.mk | ${CUT} -f2 | ${SED} -e 's|^|share/examples/ezmlm-idx/|g' > ${WRKDIR}/PLIST.idx-cf-files
-	${MV} ${WRKSRC}/* ${WRKDIR}/${EZMLM_VERS}
-	${RMDIR} ${WRKSRC}
-	${MV} ${WRKDIR}/${EZMLM_VERS} ${WRKSRC}
+	${GREP} -v '^#' < cf-files.mk | ${CUT} -f2 | ${SED} -e 's|^|share/examples/ezmlm-idx/|g' > ${WRKDIR}/PLIST.idxcf
 
 pre-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PKG_SYSCONFDIR}
