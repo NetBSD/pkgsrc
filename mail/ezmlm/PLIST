@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2012/03/12 21:52:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/07/26 02:02:23 schmonz Exp $
 bin/ezmlm-list
 bin/ezmlm-make
 bin/ezmlm-manage
