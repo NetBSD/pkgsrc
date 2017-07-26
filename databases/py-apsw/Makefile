@@ -1,20 +1,22 @@
-# $NetBSD: Makefile,v 1.8 2017/04/22 21:03:28 adam Exp $
+# $NetBSD: Makefile,v 1.9 2017/07/26 11:18:30 adam Exp $
 
-DISTNAME=	apsw-3.8.4.2-r1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-r/pl/}
-PKGREVISION=	6
-CATEGORIES=	databases
-MASTER_SITES=	https://github.com/rogerbinns/apsw/releases/download/${DISTNAME:C/^[^-]*-//1}/
+DISTNAME=	apsw-${GITHUB_RELEASE}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-r1//}
+CATEGORIES=	databases python
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rogerbinns/}
+GITHUB_PROJECT=	apsw
+GITHUB_RELEASE=	3.19.3-r1
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	rhialto@falu.nl
-HOMEPAGE=	http://rogerbinns.github.io/apsw/
+HOMEPAGE=	https://github.com/rogerbinns/apsw
 COMMENT=	Python wrapper for SQLite
 LICENSE=	zlib
 
 USE_LANGUAGES=	c
+EGG_NAME=	${DISTNAME:S/-r1/.post1/}
 
 BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.8.3
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
