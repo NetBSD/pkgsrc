@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/07/26 08:33:51 adam Exp $
+
+SHA1 (argon2_cffi-16.3.0.tar.gz) = 1e7f2f4b75ec52c377a89d0a29feeb124f761d04
+RMD160 (argon2_cffi-16.3.0.tar.gz) = 97c66792607aa43873ebc16f9ad17d23b24c5228
+SHA512 (argon2_cffi-16.3.0.tar.gz) = 3c35d65ebf3af8c610071bb50fa965653344921f29460808e886bbff47dcefcaf92bae98777e115ee1643f0e9535e2de73e2bbf4fa2355d5d9301c5c20777adb
+Size (argon2_cffi-16.3.0.tar.gz) = 1548720 bytes
