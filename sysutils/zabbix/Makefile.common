@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1 2017/05/21 17:30:03 adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2017/07/26 08:24:06 adam Exp $
 # used by sysutils/zabbix/Makefile
 # used by sysutils/zabbix-frontend/Makefile
 
-DISTNAME=	zabbix-3.2.6
+DISTNAME=	zabbix-3.2.7
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zabbix/}
 
