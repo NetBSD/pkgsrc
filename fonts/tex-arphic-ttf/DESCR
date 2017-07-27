@@ -1,0 +1,5 @@
+This package provides TrueType versions of the Chinese Arphic
+fonts for use with XeLaTeX and LuaLaTeX. Type1 versions of
+these fonts, for use with pdfLaTeX and the cjk package, are
+provided by the arphic package. Arphic is actually the name of
+the company which created these fonts.

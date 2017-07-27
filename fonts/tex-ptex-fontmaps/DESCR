@@ -1,0 +1,6 @@
+This package provides font maps and setup tools for Japanese,
+Korean, Traditional Chinese, and Simplified Chinese. It is the
+successor of the jfontmaps package. The files in this package
+contain font maps for dvipdfmx to make various
+Japanese/Chinese/Korean fonts available for (u)ptex and related
+programs and formats.
