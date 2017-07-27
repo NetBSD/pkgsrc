@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3019 2017/07/27 08:36:39 gson Exp $
+$NetBSD: CHANGES-2017,v 1.3020 2017/07/27 08:55:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4184,3 +4184,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/daemontools-run version 20170727 [schmonz 2017-07-27]
 	Removed devel/p5-Test-use-ok [wen 2017-07-27]
 	Updated misc/py-anita to 1.42 [gson 2017-07-27]
+	Updated print/cups to 2.2.3nb2 [wiz 2017-07-27]
