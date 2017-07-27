@@ -1,0 +1,11 @@
+ Getting help
+ ============
+
+You've installed an automated and customized daemontools-run package.
+If you're having trouble getting the daemontools daemons to run, ask
+the package's maintainer:
+
+<URL:mailto:schmonz-pkgsrc-daemontools@schmonz.com>
+
+If you need to ask for help on the log list, please mention that
+you're using the daemontools-run package from pkgsrc.
