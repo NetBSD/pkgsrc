@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/07/25 18:32:50 reinoud Exp $
+# $NetBSD: Makefile,v 1.18 2017/07/27 08:54:45 wiz Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -197,5 +197,4 @@ post-install:
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../print/libpaper/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../security/mit-krb5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
