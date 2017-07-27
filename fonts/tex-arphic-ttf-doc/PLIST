@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/27 11:00:38 markd Exp $
+share/texmf-dist/doc/fonts/arphic-ttf/ANNOUNCE.Big5
+share/texmf-dist/doc/fonts/arphic-ttf/ANNOUNCE.GB
+share/texmf-dist/doc/fonts/arphic-ttf/ARPHICPL.big5
+share/texmf-dist/doc/fonts/arphic-ttf/ARPHICPL.gb
+share/texmf-dist/doc/fonts/arphic-ttf/ARPHICPL.txt
+share/texmf-dist/doc/fonts/arphic-ttf/README.md
+share/texmf-dist/doc/fonts/arphic-ttf/changelog.Debian.bkai00mp
+share/texmf-dist/doc/fonts/arphic-ttf/changelog.Debian.bsmi00lp
+share/texmf-dist/doc/fonts/arphic-ttf/changelog.Debian.gbsn00lp
+share/texmf-dist/doc/fonts/arphic-ttf/changelog.Debian.gkai00mp
+share/texmf-dist/doc/fonts/arphic-ttf/copyright.Debian
+share/texmf-dist/doc/fonts/arphic-ttf/release.txt
