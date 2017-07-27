@@ -1,26 +1,17 @@
-# $NetBSD: Makefile,v 1.127 2017/02/12 06:24:37 ryoon Exp $
-#
-# Please, also update databases/ruby-rrdtool
+# $NetBSD: Makefile,v 1.128 2017/07/27 18:31:20 adam Exp $
 
-DISTNAME=	rrdtool-1.6.0
-PKGREVISION=	5
-CATEGORIES=	databases graphics net
-MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://oss.oetiker.ch/rrdtool/
-COMMENT=	Data analysis tool generating graphical representations
-LICENSE=	gnu-gpl-v2
+.include "Makefile.common"
 
 DEPENDS+=		dejavu-ttf>=2.26:../../fonts/dejavu-ttf
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config perl msgfmt intltool groff nroff
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-libdbi
+CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ARGS+=	--disable-ruby
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-perl-options=${MAKE_PARAMS:Q}
-CONFIGURE_ARGS+=	--disable-ruby
-CONFIGURE_ARGS+=	--disable-libdbi
 
 PTHREAD_OPTS+=		require
 PERL5_CONFIGURE=	no
@@ -36,7 +27,7 @@ SUBST_MESSAGE.prefix=	Fixing $${prefix} in scripts.
 SUBST_FILES.prefix=	examples/cgi-demo.cgi
 SUBST_SED.prefix=	-e '1s,^\#! \$${prefix},\#! ${PREFIX},'
 
-TEST_TARGET=		# *** No rule to make target 'test'.
+TEST_TARGET=		check
 
 RCD_SCRIPTS=		rrdcached
 
@@ -56,6 +47,11 @@ PKG_GROUPS=		${RRDCACHED_GROUP}
 PKG_USERS=		${RRDCACHED_USER}:${RRDCACHED_GROUP}
 PKG_GECOS.${RRDCACHED_USER}=	RRDCacheD daemon user
 
+OPSYSVARS+=		SOEXT
+SOEXT.Darwin=		dylib
+SOEXT.*=		so
+PLIST_SUBST+=		SOEXT=${SOEXT}
+
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
@@ -63,9 +59,8 @@ PKG_GECOS.${RRDCACHED_USER}=	RRDCacheD daemon user
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
-.include "../../lang/perl5/module.mk"
-
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

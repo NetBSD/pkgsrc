@@ -1,10 +1,10 @@
-$NetBSD: patch-src_rrd__cgi.c,v 1.1 2016/08/27 07:40:23 dholland Exp $
+$NetBSD: patch-src_rrd__cgi.c,v 1.2 2017/07/27 18:31:20 adam Exp $
 
 Use <ctype.h> correctly.
 
---- src/rrd_cgi.c~	2016-04-19 15:52:25.000000000 +0000
+--- src/rrd_cgi.c.orig	2017-05-16 12:26:46.000000000 +0000
 +++ src/rrd_cgi.c
-@@ -1223,7 +1223,7 @@ int parse(
+@@ -1209,7 +1209,7 @@ static int parse(
          return 0;
      }
      /* .. and match exactly (a whitespace following 'tag') */
@@ -13,7 +13,7 @@ Use <ctype.h> correctly.
          return 0;
      }
  #ifdef DEBUG_PARSER
-@@ -1334,10 +1334,10 @@ char     *rrdcgiDecodeString(
+@@ -1308,10 +1308,10 @@ static char *rrdcgiDecodeString(
          if (*cp == '%') {
              if (strchr("0123456789ABCDEFabcdef", *(cp + 1))
                  && strchr("0123456789ABCDEFabcdef", *(cp + 2))) {
