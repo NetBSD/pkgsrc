@@ -1,42 +1,15 @@
-# $NetBSD: options.mk,v 1.3 2016/09/04 16:54:13 dholland Exp $
+# $NetBSD: options.mk,v 1.4 2017/07/27 18:31:20 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rrdtool
-PKG_SUPPORTED_OPTIONS=	lua python tcl
-PKG_SUGGESTED_OPTIONS=	lua python tcl
+PKG_SUPPORTED_OPTIONS=	lua tcl
+PKG_SUGGESTED_OPTIONS=	lua tcl
 
 # Note that there's another (apparently different) python library
 # in databases/py-python-rrdtool.
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		python tcl lua
-
-
-#
-# XXX: this should include egg.mk, but that doesn't work: it includes
-# extension.mk, which sets do-build and do-install rules, in such a
-# way that we can't override it. Instead we need to cutpaste the
-# definition of EGG_INFODIR and its plist bits. Sigh. Probably the
-# right thing to do is make this a separate package.
-#
-.if !empty(PKG_OPTIONS:Mpython)
-CONFIGURE_ARGS+=	--enable-python
-
-REPLACE_PYTHON=		examples/stripes.py
-.include "../../lang/python/application.mk"
-
-PLIST.python=		yes
-EGG_NAME=		py_rrdtool-0.2.2
-EGG_INFODIR?=		${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
-PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
-PLIST_SUBST+=		EGG_INFODIR=${EGG_INFODIR}
-DEPENDS+=       ${PYPKGPREFIX}-setuptools>=0.8:../../devel/py-setuptools
-#.include "../../lang/python/egg.mk"
-
-.else # python
-CONFIGURE_ARGS+=	--disable-python
-.endif
-
+PLIST_VARS+=		lua tcl
 
 .if !empty(PKG_OPTIONS:Mtcl)
 USE_TOOLS+=		tclsh:run
