@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2017/06/08 12:57:15 ryoon Exp $
-
-SHA1 (Test-use-ok-0.11.tar.gz) = 5b6601a573771db31bfbdbcfe45162bb4f8e558b
-RMD160 (Test-use-ok-0.11.tar.gz) = ae9e2029f3bbcff2f0349761bcd570c9d1f57397
-SHA512 (Test-use-ok-0.11.tar.gz) = ff831546c7a34edfd1a9e574300f6b299fa280ea7d3be6b3285cf173f8695d2dc51a302954dae95d2b1bb5c3f1b945081a06dc703c465ac0d4e229ce81d45293
-Size (Test-use-ok-0.11.tar.gz) = 24815 bytes
-SHA1 (patch-Makefile.PL) = eb762ab6ff77c82c3d23b19816662fceb1e51190
