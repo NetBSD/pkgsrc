@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.192 2017/07/03 11:07:00 wiz Exp $
+# $NetBSD: Makefile,v 1.193 2017/07/27 22:07:07 wiz Exp $
 
-DISTNAME=	libpng-1.6.30
+DISTNAME=	libpng-1.6.31
 PKGNAME=	${DISTNAME:S/lib//}
 CATEGORIES=	graphics
 MASTER_SITES=	https://ftp-osl.osuosl.org/pub/libpng/src/archive/xz/libpng16/
