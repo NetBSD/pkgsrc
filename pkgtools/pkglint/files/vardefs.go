@@ -955,7 +955,7 @@ func (gd *GlobalData) InitVartypes() {
 	acl("USE_IMAKE", lkNone, BtYes, "Makefile: set")
 	pkg("USE_JAVA", lkNone, enum("run yes build"))
 	pkg("USE_JAVA2", lkNone, enum("YES yes no 1.4 1.5 6 7 8"))
-	acl("USE_LANGUAGES", lkShell, enum("ada c c99 c++ fortran fortran77 java objc"), "Makefile, Makefile.common, options.mk: set, append")
+	acl("USE_LANGUAGES", lkShell, enum("ada c c99 c++ c++11 fortran fortran77 java objc"), "Makefile, Makefile.common, options.mk: set, append")
 	pkg("USE_LIBTOOL", lkNone, BtYes)
 	pkg("USE_MAKEINFO", lkNone, BtYes)
 	pkg("USE_MSGFMT_PLURALS", lkNone, BtYes)
