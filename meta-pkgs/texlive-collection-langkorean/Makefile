@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2017/06/22 09:37:22 markd Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/27 11:18:49 markd Exp $
 
 DISTNAME=	collection-langkorean
-PKGNAME=	texlive-${DISTNAME}-2017pre1
+PKGNAME=	texlive-${DISTNAME}-2017pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	42106
@@ -12,7 +12,7 @@ COMMENT=	Korean TeX packages
 
 DEPENDS+=	texlive-collection-langcjk-[0-9]*:../../meta-pkgs/texlive-collection-langcjk
 
-# depend baekmuk
+DEPENDS+=	tex-baekmuk-[0-9]*:../../fonts/tex-baekmuk
 DEPENDS+=	tex-cjk-ko-[0-9]*:../../print/tex-cjk-ko
 DEPENDS+=	tex-kotex-oblivoir-[0-9]*:../../print/tex-kotex-oblivoir
 DEPENDS+=	tex-kotex-plain-[0-9]*:../../print/tex-kotex-plain
