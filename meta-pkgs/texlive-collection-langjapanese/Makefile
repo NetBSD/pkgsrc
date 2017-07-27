@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2017/06/24 01:02:05 markd Exp $
+# $NetBSD: Makefile,v 1.7 2017/07/27 11:13:59 markd Exp $
 
 DISTNAME=	collection-langjapanese
-PKGNAME=	texlive-${DISTNAME}-2017pre2
+PKGNAME=	texlive-${DISTNAME}-2017pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	44554
@@ -36,7 +36,7 @@ DEPENDS+=	tex-platex-[0-9]*:../../print/tex-platex
 DEPENDS+=	tex-ptex-[0-9]*:../../print/tex-ptex
 DEPENDS+=	tex-ptex-base-[0-9]*:../../print/tex-ptex-base
 DEPENDS+=	tex-ptex-fonts-[0-9]*:../../fonts/tex-ptex-fonts
-# depend ptex-fontmaps
+DEPENDS+=	tex-ptex-fontmaps-[0-9]*:../../fonts/tex-ptex-fontmaps
 # depend ptex2pdf
 # depend pxbase
 # depend pxchfon
