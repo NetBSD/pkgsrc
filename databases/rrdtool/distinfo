@@ -1,19 +1,18 @@
-$NetBSD: distinfo,v 1.53 2016/10/18 21:22:12 he Exp $
+$NetBSD: distinfo,v 1.54 2017/07/27 18:31:20 adam Exp $
 
-SHA1 (rrdtool-1.6.0.tar.gz) = 9866b41bda9416188f236d61d24f185b173fd571
-RMD160 (rrdtool-1.6.0.tar.gz) = 90bb6dc4a19c296fb67bb83094f6308396e591c0
-SHA512 (rrdtool-1.6.0.tar.gz) = 45a8f16a2bda9d497c5f39de80236adb7a5bd054a14755c4d130f21cd6430bd0a76caef9632994be56fd1ea2364eb218687ea8ebf945a71ca411221c248f3ebd
-Size (rrdtool-1.6.0.tar.gz) = 2186538 bytes
-SHA1 (patch-aa) = 317fc6e46e15333574d0e977d8ab34e916920f4a
-SHA1 (patch-ab) = 81131a74c8e9b81edfaa4b6746d4ab8508e82ac2
-SHA1 (patch-al) = 985e90539340c8bac9788e897c4b7b899fe9f6b1
-SHA1 (patch-am) = be06ac61b314e225d62f9f27da28c24fb6a1b84b
-SHA1 (patch-bindings_perl-shared_Makefile.PL) = f3b86e68a023ec9da5d600c8f803c93820195d53
+SHA1 (rrdtool-1.7.0.tar.gz) = 15a2009e2ee67eb41a2598d1a0f1f7cf1a651c78
+RMD160 (rrdtool-1.7.0.tar.gz) = 8816c971189a60e190d15a5b3827697c299ffce3
+SHA512 (rrdtool-1.7.0.tar.gz) = 36d979561601135d74622eaf183701de15cba5e25118f7a308926a695ba84ecb33c3d16511bf4bc80cff055853e2eb85065bc4ed8aef19fc0277c6430ecd319f
+Size (rrdtool-1.7.0.tar.gz) = 2849994 bytes
+SHA1 (patch-bindings_perl-shared_Makefile.PL) = 839b4474e89b59002d1629425c5839e4df3b8f5c
+SHA1 (patch-examples_Makefile.in) = 985e90539340c8bac9788e897c4b7b899fe9f6b1
+SHA1 (patch-examples_rrdcached_Makefile.in) = be06ac61b314e225d62f9f27da28c24fb6a1b84b
 SHA1 (patch-src_gettext.h) = 1254beedc267d901e154ea98599bdfddbe49ddc0
-SHA1 (patch-src_rrd__cgi.c) = 2ea93cf6cd084638e9ae720fcb9c503631d31413
-SHA1 (patch-src_rrd__dump.c) = b42add89a7c1e410c2a5ec8a714dba21a446d125
-SHA1 (patch-src_rrd__graph.c) = 799c5a666661054e4c32b8ed02cc09f2262dae03
-SHA1 (patch-src_rrd__restore.c) = e10312901fd6edfdcaf7cce932eb434cce8ef771
-SHA1 (patch-src_rrd__strtod.c) = 49ed57170777b8bcbd7c4e700c1f54d74e3a3a72
-SHA1 (patch-src_rrd__utils.c) = 58d10b1447c23268af119e525220a8d950a43dd4
-SHA1 (patch-src_rrd__xport.c) = 27671dc58affdcc0c8eab62b01f1edd65dc4a67f
+SHA1 (patch-src_rrd__cgi.c) = f2004681d9d430b6d347627e029ce3c7a717bcd6
+SHA1 (patch-src_rrd__graph.c) = e53a925c329e477b198cdeaf6b50891187ee17c5
+SHA1 (patch-src_rrd__lastupdate.c) = 317fc6e46e15333574d0e977d8ab34e916920f4a
+SHA1 (patch-src_rrd__restore.c) = 06cc3918fd685fc4dfbfdefcf39835a6b08f947c
+SHA1 (patch-src_rrd__strtod.c) = 6148276ba17eaaf1ef728db1d55bda18d67da83e
+SHA1 (patch-src_rrd__tool.c) = 81131a74c8e9b81edfaa4b6746d4ab8508e82ac2
+SHA1 (patch-src_rrd__utils.c) = c6eb0c0c1e4656984cbd72fa1d1952af776bad4c
+SHA1 (patch-src_rrd__xport.c) = d50bc5069ad672814f70fdb813cffa875f6514bf

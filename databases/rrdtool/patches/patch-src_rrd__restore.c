@@ -1,8 +1,8 @@
-$NetBSD: patch-src_rrd__restore.c,v 1.1 2016/08/27 07:40:23 dholland Exp $
+$NetBSD: patch-src_rrd__restore.c,v 1.2 2017/07/27 18:31:20 adam Exp $
 
 Use <ctype.h> correctly.
 
---- src/rrd_restore.c~	2016-04-19 15:52:26.000000000 +0000
+--- src/rrd_restore.c.orig	2017-05-16 12:26:46.000000000 +0000
 +++ src/rrd_restore.c
 @@ -104,7 +104,7 @@ static xmlChar* get_xml_element (
  		}

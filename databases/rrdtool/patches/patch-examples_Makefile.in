@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.18 2015/08/18 12:29:44 mef Exp $
+$NetBSD: patch-examples_Makefile.in,v 1.1 2017/07/27 18:31:20 adam Exp $
 
 Correct examples directory.
 
