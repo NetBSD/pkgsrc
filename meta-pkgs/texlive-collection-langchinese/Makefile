@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2017/06/24 01:02:30 markd Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/27 11:16:10 markd Exp $
 
 DISTNAME=	collection-langchinese
-PKGNAME=	texlive-${DISTNAME}-2017pre1
+PKGNAME=	texlive-${DISTNAME}-2017pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	42675
@@ -13,7 +13,7 @@ COMMENT=	Chinese TeX packages
 DEPENDS+=	texlive-collection-langcjk-[0-9]*:../../meta-pkgs/texlive-collection-langcjk
 
 DEPENDS+=	tex-arphic-[0-9]*:../../fonts/tex-arphic
-# depend arphic-ttf
+DEPENDS+=	tex-arphic-ttf-[0-9]*:../../fonts/tex-arphic-ttf
 # asymptote-by-example-zh-cn is documentation only
 # asymptote-faq-zh-cn is documentation only
 # asymptote-manual-zh-cn is documentation only
