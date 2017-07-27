@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/27 11:00:38 markd Exp $
+share/texmf-dist/fonts/truetype/public/baekmuk/batang.ttf
+share/texmf-dist/fonts/truetype/public/baekmuk/dotum.ttf
+share/texmf-dist/fonts/truetype/public/baekmuk/gulim.ttf
+share/texmf-dist/fonts/truetype/public/baekmuk/hline.ttf
