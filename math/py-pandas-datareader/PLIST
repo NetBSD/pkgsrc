@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/05 19:17:56 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/07/27 00:11:35 minskim Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -65,12 +65,12 @@ ${PYSITELIB}/pandas_datareader/io/util.pyo
 ${PYSITELIB}/pandas_datareader/nasdaq_trader.py
 ${PYSITELIB}/pandas_datareader/nasdaq_trader.pyc
 ${PYSITELIB}/pandas_datareader/nasdaq_trader.pyo
-${PYSITELIB}/pandas_datareader/oanda.py
-${PYSITELIB}/pandas_datareader/oanda.pyc
-${PYSITELIB}/pandas_datareader/oanda.pyo
 ${PYSITELIB}/pandas_datareader/oecd.py
 ${PYSITELIB}/pandas_datareader/oecd.pyc
 ${PYSITELIB}/pandas_datareader/oecd.pyo
+${PYSITELIB}/pandas_datareader/quandl.py
+${PYSITELIB}/pandas_datareader/quandl.pyc
+${PYSITELIB}/pandas_datareader/quandl.pyo
 ${PYSITELIB}/pandas_datareader/tests/__init__.py
 ${PYSITELIB}/pandas_datareader/tests/__init__.pyc
 ${PYSITELIB}/pandas_datareader/tests/__init__.pyo
@@ -116,12 +116,12 @@ ${PYSITELIB}/pandas_datareader/tests/test_fred.pyo
 ${PYSITELIB}/pandas_datareader/tests/test_nasdaq.py
 ${PYSITELIB}/pandas_datareader/tests/test_nasdaq.pyc
 ${PYSITELIB}/pandas_datareader/tests/test_nasdaq.pyo
-${PYSITELIB}/pandas_datareader/tests/test_oanda.py
-${PYSITELIB}/pandas_datareader/tests/test_oanda.pyc
-${PYSITELIB}/pandas_datareader/tests/test_oanda.pyo
 ${PYSITELIB}/pandas_datareader/tests/test_oecd.py
 ${PYSITELIB}/pandas_datareader/tests/test_oecd.pyc
 ${PYSITELIB}/pandas_datareader/tests/test_oecd.pyo
+${PYSITELIB}/pandas_datareader/tests/test_quandl.py
+${PYSITELIB}/pandas_datareader/tests/test_quandl.pyc
+${PYSITELIB}/pandas_datareader/tests/test_quandl.pyo
 ${PYSITELIB}/pandas_datareader/tests/test_tsp.py
 ${PYSITELIB}/pandas_datareader/tests/test_tsp.pyc
 ${PYSITELIB}/pandas_datareader/tests/test_tsp.pyo
