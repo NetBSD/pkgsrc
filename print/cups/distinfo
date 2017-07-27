@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.122 2017/05/25 12:11:55 jperkin Exp $
+$NetBSD: distinfo,v 1.123 2017/07/27 08:54:26 wiz Exp $
 
 SHA1 (cups-2.2.3-source.tar.gz) = 149e9ded0744b7545630c62b6a347e747928e0f7
 RMD160 (cups-2.2.3-source.tar.gz) = 3eb91fbd20bee081e08af64ddfa23a45f2bfa7b2
@@ -8,6 +8,7 @@ SHA1 (patch-ae) = 04f314bbbb05538b67a0f68adc241a09e836a4e2
 SHA1 (patch-af) = 6ae6ae6006387db69bf7c15f7c8500708c9e8f56
 SHA1 (patch-ai) = 2c1ca67ea6f6c1dedb4c8ff97736f328a2b9a7c6
 SHA1 (patch-at) = ef6303936daf0826dc4725f5369bfb1add832b1f
+SHA1 (patch-conf-cups-files.conf.in) = 327cc8b62e606389542870aa6619ade10377b044
 SHA1 (patch-conf_Makefile) = bb8313e493c02959edfe1e53f50b9f16ce6f42e0
 SHA1 (patch-config-scripts_cups-compiler.m4) = 6b825d05163a91ee3092a68a3b0abc173a378026
 SHA1 (patch-config-scripts_cups-directories.m4) = 1daa2b6237d3675665f273678271b7b522905c8d
@@ -16,7 +17,12 @@ SHA1 (patch-config-scripts_cups-manpages.m4) = cc920bf46555aab5610e91de4ca1f6991
 SHA1 (patch-config-scripts_cups-sharedlibs.m4) = 5b95da8f91de0aaab8b3f826ce0a2662cee3f63a
 SHA1 (patch-configure.ac) = 0e48669372badc477db7d6f26c8180062f4e78de
 SHA1 (patch-cups-tls.c) = f89c25f8089d9e11a983a270adbb2cbde3c22511
+SHA1 (patch-doc-help-man-cups-files.conf.html) = fcd3d06c00b0a85b6c0790235ccb68685252ea68
+SHA1 (patch-man-cups-files.conf.man.in) = 1563a7be3327a975ce8753a3287947f1594975a3
 SHA1 (patch-ppdc_Makefile) = 575ab7d75bebf086cde52956679164c9f01fd37e
+SHA1 (patch-scheduler-conf.c) = 179964f8d251be3c21f4cfc7b67f3196beda29dc
+SHA1 (patch-scheduler-conf.h) = d11f3b789af096dcaca13a38f6484727ff895bee
+SHA1 (patch-scheduler-main.c) = 11f97cf9db4319fcff614a1b01d47d8e84ace4d9
 SHA1 (patch-scheduler_auth.c) = ca675a6e903d4b41cd69a0cab27180653e11f501
 SHA1 (patch-scheduler_dirsvc.c) = aae5b924fb8fb39007cf04d8b83747e8724485cf
 SHA1 (patch-test_ippfind.c) = 6db56b9b1b9a26d5c40336af4dc6cde98abd9c19
