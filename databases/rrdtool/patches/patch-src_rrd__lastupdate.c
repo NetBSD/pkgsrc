@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.15 2012/02/03 15:43:44 drochner Exp $
+$NetBSD: patch-src_rrd__lastupdate.c,v 1.1 2017/07/27 18:31:20 adam Exp $
 
 --- src/rrd_lastupdate.c.orig	2012-01-24 10:08:48.000000000 +0000
 +++ src/rrd_lastupdate.c

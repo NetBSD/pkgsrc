@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.9 2016/02/01 09:41:59 adam Exp $
+$NetBSD: patch-examples_rrdcached_Makefile.in,v 1.1 2017/07/27 18:31:20 adam Exp $
 
 Correct examples directory.
 
