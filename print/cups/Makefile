@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.246 2017/07/25 18:30:39 reinoud Exp $
+# $NetBSD: Makefile,v 1.247 2017/07/27 08:54:26 wiz Exp $
 
 DISTNAME=	cups-2.2.3-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=apple/}
 
@@ -171,5 +171,4 @@ post-install:
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../security/mit-krb5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
