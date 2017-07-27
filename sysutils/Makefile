@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.705 2017/07/25 10:29:12 alnsn Exp $
+# $NetBSD: Makefile,v 1.706 2017/07/27 04:05:50 schmonz Exp $
 #
 
 COMMENT=	System utilities
@@ -96,6 +96,7 @@ SUBDIR+=	cuisine
 SUBDIR+=	cvsreport
 SUBDIR+=	daemond
 SUBDIR+=	daemontools
+SUBDIR+=	daemontools-run
 SUBDIR+=	dbus
 SUBDIR+=	dbus-glib
 SUBDIR+=	dbus-python-common
