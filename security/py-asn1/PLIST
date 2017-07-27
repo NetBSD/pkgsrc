@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/04/08 11:25:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/07/27 18:36:10 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -55,12 +55,21 @@ ${PYSITELIB}/pyasn1/compat/__init__.pyo
 ${PYSITELIB}/pyasn1/compat/binary.py
 ${PYSITELIB}/pyasn1/compat/binary.pyc
 ${PYSITELIB}/pyasn1/compat/binary.pyo
+${PYSITELIB}/pyasn1/compat/calling.py
+${PYSITELIB}/pyasn1/compat/calling.pyc
+${PYSITELIB}/pyasn1/compat/calling.pyo
+${PYSITELIB}/pyasn1/compat/dateandtime.py
+${PYSITELIB}/pyasn1/compat/dateandtime.pyc
+${PYSITELIB}/pyasn1/compat/dateandtime.pyo
 ${PYSITELIB}/pyasn1/compat/integer.py
 ${PYSITELIB}/pyasn1/compat/integer.pyc
 ${PYSITELIB}/pyasn1/compat/integer.pyo
 ${PYSITELIB}/pyasn1/compat/octets.py
 ${PYSITELIB}/pyasn1/compat/octets.pyc
 ${PYSITELIB}/pyasn1/compat/octets.pyo
+${PYSITELIB}/pyasn1/compat/string.py
+${PYSITELIB}/pyasn1/compat/string.pyc
+${PYSITELIB}/pyasn1/compat/string.pyo
 ${PYSITELIB}/pyasn1/debug.py
 ${PYSITELIB}/pyasn1/debug.pyc
 ${PYSITELIB}/pyasn1/debug.pyo
