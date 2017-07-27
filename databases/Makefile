@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.531 2017/07/20 04:11:58 jnemeth Exp $
+# $NetBSD: Makefile,v 1.532 2017/07/27 18:31:20 adam Exp $
 
 COMMENT=	Databases
 
@@ -358,6 +358,7 @@ SUBDIR+=	py-pymysql
 SUBDIR+=	py-python-rrdtool
 SUBDIR+=	py-python-sql
 SUBDIR+=	py-redis
+SUBDIR+=	py-rrdtool
 SUBDIR+=	py-sqlalchemy
 SUBDIR+=	py-sqlalchemy-i18n
 SUBDIR+=	py-sqlalchemy-migrate
