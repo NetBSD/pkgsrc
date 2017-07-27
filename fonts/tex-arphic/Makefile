@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/06 08:43:29 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/27 11:07:41 markd Exp $
 
 DISTNAME=	arphic
 PKGNAME=	tex-${DISTNAME}-2.11
@@ -7,6 +7,7 @@ TEXLIVE_REV=	15878
 
 MAINTAINER=	rxg@NetBSD.org
 COMMENT=	Arphic (Chinese) font packages
+LICENSE=	arphic-public
 
 TEX_MAP_FILES+=	bkaiu.map
 TEX_MAP_FILES+=	bsmiu.map
