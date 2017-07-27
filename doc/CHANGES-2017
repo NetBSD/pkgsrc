@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3013 2017/07/26 17:11:16 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3014 2017/07/27 00:12:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4178,3 +4178,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-requests to 2.18.2 [adam 2017-07-26]
 	Updated devel/py-lockfile to 0.12.2 [adam 2017-07-26]
 	Updated devel/py-mako to 1.0.7 [adam 2017-07-26]
+	Updated math/py-pandas-datareader to 0.5.0 [minskim 2017-07-27]
