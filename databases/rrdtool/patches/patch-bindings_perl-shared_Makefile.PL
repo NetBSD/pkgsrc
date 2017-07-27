@@ -1,5 +1,6 @@
-$NetBSD: patch-bindings_perl-shared_Makefile.PL,v 1.3 2016/08/27 06:57:58 dholland Exp $
+$NetBSD: patch-bindings_perl-shared_Makefile.PL,v 1.4 2017/07/27 18:31:20 adam Exp $
 
+Fix Perl bindings.
 
 --- bindings/perl-shared/Makefile.PL.orig	2015-04-20 23:12:18.000000000 +0900
 +++ bindings/perl-shared/Makefile.PL	2015-08-16 22:00:55.000000000 +0900
