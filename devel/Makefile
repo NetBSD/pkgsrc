@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2476 2017/07/24 10:42:52 minskim Exp $
+# $NetBSD: Makefile,v 1.2477 2017/07/27 08:19:53 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1615,7 +1615,6 @@ SUBDIR+=	p5-Test-Weaken
 SUBDIR+=	p5-Test-Without-Module
 SUBDIR+=	p5-Test-YAML-Meta
 SUBDIR+=	p5-Test-YAML-Valid
-SUBDIR+=	p5-Test-use-ok
 SUBDIR+=	p5-Test-utf8
 SUBDIR+=	p5-Test2-Plugin-NoWarnings
 SUBDIR+=	p5-Test2-Suite
