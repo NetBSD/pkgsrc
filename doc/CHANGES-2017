@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3023 2017/07/27 11:21:37 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3024 2017/07/27 18:33:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4193,3 +4193,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Added fonts/tex-ptex-fontmaps version 20170114.0 [markd 2017-07-27]
 	Added fonts/tex-ptex-fontmaps-doc version 20170114.0 [markd 2017-07-27]
 	Updated pkgtools/pkglint to 5.4.20nb3 [wiz 2017-07-27]
+	Updated databases/rrdtool to 1.7.0 [adam 2017-07-27]
+	Updated databases/ruby-rrdtool to 1.7.0 [adam 2017-07-27]
+	Added databases/py-rrdtool version 1.7.0 [adam 2017-07-27]
