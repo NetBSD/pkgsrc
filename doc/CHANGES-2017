@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3015 2017/07/27 00:18:23 wen Exp $
+$NetBSD: CHANGES-2017,v 1.3016 2017/07/27 00:22:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4180,3 +4180,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-mako to 1.0.7 [adam 2017-07-26]
 	Updated math/py-pandas-datareader to 0.5.0 [minskim 2017-07-27]
 	Updated www/p5-URI to 1.72 [wen 2017-07-27]
+	Updated mail/p5-Email-MIME to 1.945 [wen 2017-07-27]
