@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3017 2017/07/27 04:06:26 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.3018 2017/07/27 08:25:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4182,3 +4182,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-URI to 1.72 [wen 2017-07-27]
 	Updated mail/p5-Email-MIME to 1.945 [wen 2017-07-27]
 	Added sysutils/daemontools-run version 20170727 [schmonz 2017-07-27]
+	Removed devel/p5-Test-use-ok [wen 2017-07-27]
