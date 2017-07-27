@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/27 04:05:16 schmonz Exp $
+share/doc/daemontools-run/README.pkgsrc
