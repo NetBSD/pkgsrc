@@ -1,0 +1,19 @@
+$NetBSD: patch-man-cups-files.conf.man.in,v 1.1 2017/07/27 08:54:26 wiz Exp $
+
+Add a PidFile configuration directive to write a PID file.
+
+--- man/cups-files.conf.man.in.orig	2017-03-28 20:26:53.000000000 +0200
++++ man/cups-files.conf.man.in	2017-07-17 17:25:02.000000000 +0200
+@@ -159,6 +159,12 @@
+ 
+ .fi
+ The default is "/var/log/cups/page_log".
++.\"#PidFile
++.TP 5
++\fBPidFile \fIpath\fR
++Specifies the file the CUPS scheduler writes its PID to
++(set to an empty value to disable the PID file).
++The default is usually "/var/run/cups/cupsd.pid".
+ .\"#RemoteRoot
+ .TP 5
+ \fBRemoteRoot \fIusername\fR
