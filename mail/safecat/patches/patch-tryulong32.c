@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2016/04/01 11:20:58 jperkin Exp $
+$NetBSD: patch-tryulong32.c,v 1.1 2017/07/27 02:20:30 schmonz Exp $
 
 Support arm.
 
---- tryulong32.c.orig	2000-02-28 23:10:12.000000000 -0500
+--- tryulong32.c.orig	2000-02-29 04:10:12.000000000 +0000
 +++ tryulong32.c
 @@ -1,5 +1,8 @@
  void main()
