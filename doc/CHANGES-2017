@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3021 2017/07/27 09:02:50 wen Exp $
+$NetBSD: CHANGES-2017,v 1.3022 2017/07/27 11:05:04 markd Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4186,3 +4186,9 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/py-anita to 1.42 [gson 2017-07-27]
 	Updated print/cups to 2.2.3nb2 [wiz 2017-07-27]
 	Updated devel/p5-Devel-Cover to 1.26 [wen 2017-07-27]
+	Added fonts/tex-arphic-ttf version 2017 [markd 2017-07-27]
+	Added fonts/tex-arphic-ttf-doc version 2017 [markd 2017-07-27]
+	Added fonts/tex-baekmuk version 2.2 [markd 2017-07-27]
+	Added fonts/tex-baekmuk-doc version 2.2 [markd 2017-07-27]
+	Added fonts/tex-ptex-fontmaps version 20170114.0 [markd 2017-07-27]
+	Added fonts/tex-ptex-fontmaps-doc version 20170114.0 [markd 2017-07-27]
