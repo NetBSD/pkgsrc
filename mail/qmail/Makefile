@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2017/07/21 04:07:01 schmonz Exp $
+# $NetBSD: Makefile,v 1.88 2017/07/27 02:18:05 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.06
@@ -117,10 +117,7 @@ SUBST_SED.catpages+=	-e 's|.*"tcp-environ\.5".*||g'	# also in ucspi-tcp
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
 SUBST_FILES.paths=	README.*
-SUBST_SED.paths=	-e 's|@PKGNAME@|${PKGNAME:Q}|g'
-SUBST_SED.paths+=	-e 's|@PKG_INFO@|${PKG_INFO:Q}|g'
-SUBST_SED.paths+=	-e 's|@PREFIX@|${PREFIX:Q}|g'
-SUBST_SED.paths+=	-e 's|@GREP@|${GREP:Q}|g'
+SUBST_VARS.paths=	PKGNAME PKG_INFO PREFIX GREP
 
 SUBST_FILES.djbware+=	cdb_seek.c dns.c
 

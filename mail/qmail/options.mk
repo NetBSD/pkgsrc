@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.42 2017/07/21 04:07:01 schmonz Exp $
+# $NetBSD: options.mk,v 1.43 2017/07/27 02:18:05 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai qmail-rejectutils qmail-srs sasl syncdir tls
@@ -121,7 +121,7 @@ SUBST_SED.srsinclude=		-e 's|/usr/local/include/srs2.h|srs2.h|'
 SUBST_CLASSES+=			srsreadme
 SUBST_STAGE.srsreadme=		do-configure
 SUBST_FILES.srsreadme=		README.srs
-SUBST_SED.srsreadme=		-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR:Q}|g'
+SUBST_VARS.srsreadme=		PKG_SYSCONFDIR
 PLIST.srs=			yes
 MESSAGE_SRC+=			${PKGDIR}/MESSAGE.srs
 READMES+=			README.srs
