@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.304 2017/02/04 18:21:04 wiz Exp $
+# $NetBSD: Makefile,v 1.305 2017/07/27 11:03:54 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -250,6 +250,8 @@ SUBDIR+=	tex-arev
 SUBDIR+=	tex-arev-doc
 SUBDIR+=	tex-arphic
 SUBDIR+=	tex-arphic-doc
+SUBDIR+=	tex-arphic-ttf
+SUBDIR+=	tex-arphic-ttf-doc
 SUBDIR+=	tex-ascii-font
 SUBDIR+=	tex-ascii-font-doc
 SUBDIR+=	tex-aspectratio
@@ -265,6 +267,8 @@ SUBDIR+=	tex-aurical-doc
 SUBDIR+=	tex-avantgar
 SUBDIR+=	tex-b1encoding
 SUBDIR+=	tex-b1encoding-doc
+SUBDIR+=	tex-baekmuk
+SUBDIR+=	tex-baekmuk-doc
 SUBDIR+=	tex-barcodes
 SUBDIR+=	tex-barcodes-doc
 SUBDIR+=	tex-bartel-chess-fonts
@@ -694,6 +698,8 @@ SUBDIR+=	tex-prodint
 SUBDIR+=	tex-prodint-doc
 SUBDIR+=	tex-psnfss
 SUBDIR+=	tex-psnfss-doc
+SUBDIR+=	tex-ptex-fontmaps
+SUBDIR+=	tex-ptex-fontmaps-doc
 SUBDIR+=	tex-ptex-fonts
 SUBDIR+=	tex-ptex-fonts-doc
 SUBDIR+=	tex-punk
