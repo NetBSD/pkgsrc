@@ -1,0 +1,17 @@
+$NetBSD: patch-conf-cups-files.conf.in,v 1.1 2017/07/27 08:54:26 wiz Exp $
+
+Add a PidFile configuration directive to write a PID file.
+
+--- conf/cups-files.conf.in.orig	2017-03-28 20:26:53.000000000 +0200
++++ conf/cups-files.conf.in	2017-07-17 17:25:02.000000000 +0200
+@@ -40,6 +40,10 @@
+ # Location of data files used by the scheduler...
+ #DataDir @CUPS_DATADIR@
+ 
++# Location of PID file written by the scheduler (set empty for no PID file)...
++#PidFile @CUPS_STATEDIR@/cupsd.pid
++
++# Location of the static web content served by the scheduler...
+ # Location of the static web content served by the scheduler...
+ #DocumentRoot @CUPS_DOCROOT@
+ 
