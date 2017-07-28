@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3031 2017/07/28 15:41:25 leot Exp $
+$NetBSD: CHANGES-2017,v 1.3032 2017/07/28 19:33:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4211,3 +4211,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/tint2 to 0.14.6 [tnn 2017-07-28]
 	Updated comms/gammu to 1.38.4 [leot 2017-07-28]
 	Updated comms/py-gammu to 2.9 [leot 2017-07-28]
+	Updated security/gnupg21 to 2.1.22 [wiz 2017-07-28]
