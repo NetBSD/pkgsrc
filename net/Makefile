@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1168 2017/07/14 10:44:59 adam Exp $
+# $NetBSD: Makefile,v 1.1169 2017/07/28 21:15:33 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -543,6 +543,7 @@ SUBDIR+=	p5-Test-TCP
 SUBDIR+=	p5-Umph-Prompt
 SUBDIR+=	p5-WebService-Google-Reader
 SUBDIR+=	p5-WebService-MusicBrainz
+SUBDIR+=	p5-WebService-MusicBrainz0
 SUBDIR+=	p5-X500-DN
 SUBDIR+=	p5-XML-RPC
 SUBDIR+=	p5-XMLRPC-Lite
