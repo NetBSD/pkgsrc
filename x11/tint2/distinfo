@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 03:28:55 agc Exp $
+$NetBSD: distinfo,v 1.7 2017/07/28 08:42:17 tnn Exp $
 
-SHA1 (tint2-0.11.tar.bz2) = 9752255529673dabf13e7437afd1cd0b39d9c92b
-RMD160 (tint2-0.11.tar.bz2) = f094e81aec1fae98a88e8392c4c9e6b5fecb6120
-SHA512 (tint2-0.11.tar.bz2) = db88c17780d24b82badbedbce4518d736dfcb2a730ff500bcb36f2b32f65271c2424f0c2a34981f9d3af033b84252db0c8217e2dd7ca57f9a0eadbc98796115c
-Size (tint2-0.11.tar.bz2) = 91716 bytes
-SHA1 (patch-aa) = 2865cdb561d856615c607d589af9040bfc95e14b
-SHA1 (patch-ab) = 41d3059bc5d329a2f8ad55e05a43ef3e2e199fec
-SHA1 (patch-ac) = 3f95a80eabb16e6417fc843f9fef1a697487426d
-SHA1 (patch-src_panel.c) = 4eee14b11eb7b5c01b852ec13ee0ce216e20eefe
-SHA1 (patch-src_systray_systraybar.c) = 3bcd5e9749cc8943115eae9bb32cd5d6a9a7b1a0
+SHA1 (tint2-0.14.6.tar.gz) = 19627ec1948ccce6e30dba3f17e4481bbb232b52
+RMD160 (tint2-0.14.6.tar.gz) = 4733f93d22b7761045831d130ee7f6374e60dfad
+SHA512 (tint2-0.14.6.tar.gz) = c27f98d8236e62ae3f71b9cedfba5a4355a49425dcc6cb49c9da0fbca6447ed2ef6844e478f88d642c92e29551c1125bc65cd254e3ac63925c859ed55c351f81
+Size (tint2-0.14.6.tar.gz) = 465895 bytes
+SHA1 (patch-aa) = ed1232cd81cbdc7770c113192cea590e9c07531f
+SHA1 (patch-get_version.sh) = 70a7df800d7687102699eb37bcb61b90b13c725a
