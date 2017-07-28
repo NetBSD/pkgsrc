@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3030 2017/07/28 15:40:21 leot Exp $
+$NetBSD: CHANGES-2017,v 1.3031 2017/07/28 15:41:25 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4210,3 +4210,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/synergy to 1.8.8 [tnn 2017-07-28]
 	Updated x11/tint2 to 0.14.6 [tnn 2017-07-28]
 	Updated comms/gammu to 1.38.4 [leot 2017-07-28]
+	Updated comms/py-gammu to 2.9 [leot 2017-07-28]
