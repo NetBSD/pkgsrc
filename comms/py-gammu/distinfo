@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/12/09 14:57:06 leot Exp $
+$NetBSD: distinfo,v 1.5 2017/07/28 15:41:14 leot Exp $
 
-SHA1 (python-gammu-2.7.tar.gz) = 1ea4f4bfcc6ca2aa54d364bbf4dea9a3369e21f9
-RMD160 (python-gammu-2.7.tar.gz) = d7686ad62f3f38301a562d36ecd4419a8d5fb172
-SHA512 (python-gammu-2.7.tar.gz) = c484d8473e49505e97421cbd19c19b5959acfca76b649aa51192e880dcd2c39e2e5787e1b64c52c415620709fc486cfd0d50f4b989067d74dcc0a458c6787fd9
-Size (python-gammu-2.7.tar.gz) = 133311 bytes
+SHA1 (python-gammu-2.9.tar.gz) = 9739629fffc583f6a7da8e12e007a5c03cc41507
+RMD160 (python-gammu-2.9.tar.gz) = 028835cabb7cc4958b4112e38af4ceda45042373
+SHA512 (python-gammu-2.9.tar.gz) = 7e23282c765c8755555a3bf640fa21cb34f962612052c477dffed450b8c6ebb9cacd229fbf0cd13f2581d590c069da25b1dca10174acfa514b88f6807db329e0
+Size (python-gammu-2.9.tar.gz) = 135322 bytes
