@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3026 2017/07/27 22:07:17 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3027 2017/07/28 07:05:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4200,3 +4200,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-cryptography_vectors to 2.0.2 [adam 2017-07-27]
 	Updated security/py-cryptography to 2.0.2 [adam 2017-07-27]
 	Updated graphics/png to 1.6.31 [wiz 2017-07-27]
+	Added lang/py-execjs version 1.4.0 [adam 2017-07-28]
+	Updated www/py-cfscrape to 1.8.0 [adam 2017-07-28]
