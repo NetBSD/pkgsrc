@@ -1,0 +1,5 @@
+This perl module will search the MusicBrainz database through their
+web service and return objects with the found data.
+
+This package contains the old 0.x branch of the package, using v1
+of the MusicBrainz API.
