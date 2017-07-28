@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/07/10 15:55:40 maya Exp $
+# $NetBSD: Makefile,v 1.13 2017/07/28 23:42:24 maya Exp $
 
 GCC_PKGNAME=	gcc49
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -9,7 +9,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC49_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc49 package so that with the dependence pattern
 ## '{gcc49,gcc49-libs}>=4.9.*' pkg_add will choose gcc49-libs over gcc49.
-PKGREVISION=	4
+PKGREVISION=	5
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty
