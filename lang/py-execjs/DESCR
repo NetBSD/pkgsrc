@@ -1,0 +1,2 @@
+PyExecJS is a porting of ExecJS from Ruby. PyExecJS automatically picks the
+best runtime available to evaluate your JavaScript program.
