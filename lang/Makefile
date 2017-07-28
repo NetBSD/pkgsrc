@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.461 2017/06/20 13:37:18 taca Exp $
+# $NetBSD: Makefile,v 1.462 2017/07/28 07:01:31 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -176,6 +176,7 @@ SUBDIR+=	polyml
 SUBDIR+=	py-basicproperty
 SUBDIR+=	py-byterun
 SUBDIR+=	py-cxfreeze
+SUBDIR+=	py-execjs
 SUBDIR+=	py-hy
 SUBDIR+=	py-js2py
 SUBDIR+=	py-jsparser
