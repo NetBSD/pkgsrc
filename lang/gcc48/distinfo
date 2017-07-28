@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2017/07/10 15:55:40 maya Exp $
+$NetBSD: distinfo,v 1.36 2017/07/28 23:40:07 maya Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
@@ -37,6 +37,7 @@ SHA1 (patch-gcc_config_dragonfly.opt) = 92f615c73c2e94664bae5b5935ab8b09bca15f73
 SHA1 (patch-gcc_config_exec-stack.h) = 8135806e88c1b136038bb240958a4435b4e0bbe3
 SHA1 (patch-gcc_config_host-netbsd.c) = 765295f07edb8a68f1910e3a9b4dd2a7dcd491a5
 SHA1 (patch-gcc_config_i386_dragonfly.h) = 0d3f785434c02beb9c4561fe59842a970e8f7896
+SHA1 (patch-gcc_config_i386_i386.c) = 17dad8b3283521d23ca08690eb447a0e4e694e4c
 SHA1 (patch-gcc_config_i386_openbsd.h) = df5b85b5957392138f99085bd8ebeb923e37e9e7
 SHA1 (patch-gcc_config_i386_openbsdelf.h) = 74498a1bd7c339c90b847740d3c474ad3ca4a956
 SHA1 (patch-gcc_config_netbsd-stdint.h) = 025fc883101a187e84ed4c0772406720d645d550
