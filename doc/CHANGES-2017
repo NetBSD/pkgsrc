@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3029 2017/07/28 08:43:20 tnn Exp $
+$NetBSD: CHANGES-2017,v 1.3030 2017/07/28 15:40:21 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4209,3 +4209,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/py-iso8601 to 0.1.12 [adam 2017-07-28]
 	Updated net/synergy to 1.8.8 [tnn 2017-07-28]
 	Updated x11/tint2 to 0.14.6 [tnn 2017-07-28]
+	Updated comms/gammu to 1.38.4 [leot 2017-07-28]
