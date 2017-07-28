@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2017/05/16 12:08:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/07/28 19:33:24 wiz Exp $
 bin/dirmngr
 bin/dirmngr-client
 bin/g13
@@ -24,6 +24,8 @@ man/man1/dirmngr-client.1
 man/man1/gpg-agent.1
 man/man1/gpg-connect-agent.1
 man/man1/gpg-preset-passphrase.1
+man/man1/gpg-wks-client.1
+man/man1/gpg-wks-server.1
 man/man1/gpg2.1
 man/man1/gpgconf.1
 man/man1/gpgparsemail.1
