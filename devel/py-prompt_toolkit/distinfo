@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/05/04 19:30:51 adam Exp $
+$NetBSD: distinfo,v 1.3 2017/07/28 07:12:13 adam Exp $
 
-SHA1 (prompt_toolkit-1.0.14.tar.gz) = fa723a6f33927917cc4d98a4f82b0d82970a80e7
-RMD160 (prompt_toolkit-1.0.14.tar.gz) = c0c4aa0c917981767d45abf76fdff00c0fb9aa8d
-SHA512 (prompt_toolkit-1.0.14.tar.gz) = 909bf50bf0095a8cc37581fc7384f9035eb9d6fd0d16a914e8912693476262cfe0b0c78643ba1c629bd907c861981a9740155927148fcff554446ebb4fd80959
-Size (prompt_toolkit-1.0.14.tar.gz) = 241612 bytes
+SHA1 (prompt_toolkit-1.0.15.tar.gz) = 2c24a25b09d4a0481bf8080cd9701d2032497915
+RMD160 (prompt_toolkit-1.0.15.tar.gz) = 195e01e80e62e631f7c4b12d4f2cd5d4481a0752
+SHA512 (prompt_toolkit-1.0.15.tar.gz) = 10981be2ed8b71d0cd9f663c4de047cec9664d9276968c6eec40dc45b388d1acf8eba07d534369254f178931079bf39b04eb2ceac06aa63a2021ebf62387b2f5
+Size (prompt_toolkit-1.0.15.tar.gz) = 243734 bytes
