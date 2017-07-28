@@ -1,10 +1,13 @@
-$NetBSD: distinfo,v 1.82 2017/03/16 11:56:46 wiz Exp $
+$NetBSD: distinfo,v 1.83 2017/07/28 21:10:00 wiz Exp $
 
 SHA1 (xorg-server-1.19.3.tar.bz2) = 77f580ffa22a8bbcc3536e74e19114e446417a9c
 RMD160 (xorg-server-1.19.3.tar.bz2) = afa8708054016d4fa3632bf1db0bc462731717b4
 SHA512 (xorg-server-1.19.3.tar.bz2) = b988897418399e1361fdcca9465a781f55f8f6fbfdc5a59edfaee9046a0c6ad7a76f348d88b6004ce3d3fb3966b4c5af0b854f6549c32b2b8d7a43758809f669
 Size (xorg-server-1.19.3.tar.bz2) = 6050221 bytes
+SHA1 (patch-Xi_sendexev.c) = 46a165049d4b15c472736d3863aa4efad39418bc
 SHA1 (patch-configure) = 9e9f497f14d563ef66f25c637a14b0bea2243c3f
+SHA1 (patch-dix_events.c) = a7ede761198583f1d59c4def49db48725a46bd21
+SHA1 (patch-dix_swapreq.c) = 66643fbd396d0b4222ba4a3f09c4bbe3f0083a33
 SHA1 (patch-hw_xfree86_common_xf86pciBus.c) = 896825ba12646431cba603938d118acbdde305dd
 SHA1 (patch-hw_xfree86_common_xf86sbusBus.h) = f56f87336b2f669413ebb1005a2b64568a111f92
 SHA1 (patch-hw_xfree86_dri2_dri2.c) = 0bf58305059321e10f6f58186301dbb7cb858c2a
