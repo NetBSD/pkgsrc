@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2017/01/01 22:01:45 schmonz Exp $
+# $NetBSD: Makefile,v 1.14.4.1 2017/07/29 13:05:53 spz Exp $
 
-DISTNAME=		tlslite-0.4.8
+DISTNAME=		tlslite-0.4.9
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		security python
 MASTER_SITES=		${MASTER_SITE_GITHUB:=trevp/}
 
 GITHUB_PROJECT=		tlslite
-GITHUB_TAG=		v${PKGVERSION_NOREV}
+GITHUB_TAG=		cd82fadb6bb958522b7457c5ed95890283437a4f
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://trevp.net/tlslite/

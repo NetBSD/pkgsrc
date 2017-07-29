@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2017/01/01 21:50:30 schmonz Exp $
+$NetBSD: distinfo,v 1.3.4.1 2017/07/29 13:05:53 spz Exp $
 
-SHA1 (tlslite-0.4.8.tar.gz) = b20f2a35fe0510a8ee9d1fed2bc1ed6a03a8baba
-RMD160 (tlslite-0.4.8.tar.gz) = 8d470941fe4cabd714b12c76a681d19450c3be1d
-SHA512 (tlslite-0.4.8.tar.gz) = 03cf5d661f6eff3cd2810146387ce4cc80b45f244129afd0a2c69c4df3428d4a98ce31c4238621e74ca10d07eca3f992c2e5d73441f7a97aa2043f4ca51082a9
-Size (tlslite-0.4.8.tar.gz) = 93256 bytes
+SHA1 (tlslite-0.4.9-cd82fadb6bb958522b7457c5ed95890283437a4f.tar.gz) = 8a9fbc90114fbaa468ada9860fe37581c8687a18
+RMD160 (tlslite-0.4.9-cd82fadb6bb958522b7457c5ed95890283437a4f.tar.gz) = 0cd0a71f9c4a8acacc87b1afe39a8cb8e744e2d8
+SHA512 (tlslite-0.4.9-cd82fadb6bb958522b7457c5ed95890283437a4f.tar.gz) = c9cc45f75932b1127cd347fbfcef4ca314e8bcc5ca35bfceb20ec95c1ba5788931cf29eb1277875ef387826398fc7db16c21d340c5b05c4934ed7c48e9807d59
+Size (tlslite-0.4.9-cd82fadb6bb958522b7457c5ed95890283437a4f.tar.gz) = 125752 bytes
 SHA1 (patch-setup.py) = fdb3ce8d0ce0bbee4e10ef76e768d83d3a180189
-SHA1 (patch-tests_httpsserver.sh) = 65f583fa3bbac36cccd5239142219e9551d87549
+SHA1 (patch-tests_httpsserver.sh) = e2f20d886acad8366938b3214bafd270a4560745
 SHA1 (patch-tests_tlstest.py) = abd577315a1f690fb280b9ed58f0e73e6ebbdf4d
