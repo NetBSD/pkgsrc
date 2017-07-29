@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/05/17 10:46:02 gson Exp $
+$NetBSD: distinfo,v 1.2 2017/07/29 17:35:09 gson Exp $
 
-SHA1 (Spans-0.5.0.tar.gz) = ca4d7b1b6df3453012515c8b8456b37dc49b8659
-RMD160 (Spans-0.5.0.tar.gz) = f311334dbbaf0a0b11e84fc6caf77519751fc7df
-SHA512 (Spans-0.5.0.tar.gz) = c12fb8d870608811662e1e60b34360a6074633ba2ad4e3268eae22fb8b15642caf31dc3d0b66c3e4e93cdb2dca56134afa6e622de834319d4ad150f409be5c39
-Size (Spans-0.5.0.tar.gz) = 42861 bytes
+SHA1 (Spans-1.0.0.tar.gz) = 50c75b5e8a9541bc2368379dd4aba11d64aa83b7
+RMD160 (Spans-1.0.0.tar.gz) = 73c9db91bdccd07de9a3840c76848db848a95809
+SHA512 (Spans-1.0.0.tar.gz) = c8a7311731512430e166446f316e0145d475ff799863c1934e434bce5f51052341d41f49f6e47dd9de075d5f133b99d43347165e92a6963689e29ffa47e6b23a
+Size (Spans-1.0.0.tar.gz) = 44654 bytes
