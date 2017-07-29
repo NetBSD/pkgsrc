@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2017/06/19 12:07:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.28.2.1 2017/07/29 13:56:01 spz Exp $
 
 PKGNAME=	${DISTNAME:S/-/-client-/}
-PKGREVISION=	1
 COMMENT=	MySQL 5, a free SQL database (client)
 
 CONFLICTS=	mysql3-client-[0-9]*
@@ -14,15 +13,19 @@ UNWRAP_FILES+=		scripts/mysql_config
 INFO_FILES=		yes
 INSTALL_DIRS+=		client include libmysql man scripts tests
 
-REPLACE_PERL=	scripts/mysql_convert_table_format.sh
-REPLACE_PERL+=	scripts/mysql_find_rows.sh
-REPLACE_PERL+=	scripts/mysql_fix_extensions.sh
-REPLACE_PERL+=	scripts/mysql_setpermission.sh
-REPLACE_PERL+=	scripts/mysql_zap.sh
-REPLACE_PERL+=	scripts/mysqlaccess.sh
-REPLACE_PERL+=	scripts/mysqld_multi.sh
-REPLACE_PERL+=	scripts/mysqldumpslow.sh
-REPLACE_PERL+=	scripts/mysqlhotcopy.sh
+SUBST_CLASSES+=		perlpath
+SUBST_STAGE.perlpath=	pre-configure
+SUBST_MESSAGE.perlpath=	Fixing Perl paths.
+SUBST_FILES.perlpath=	scripts/mysql_convert_table_format.sh
+SUBST_FILES.perlpath+=	scripts/mysql_find_rows.sh
+SUBST_FILES.perlpath+=	scripts/mysql_fix_extensions.sh
+SUBST_FILES.perlpath+=	scripts/mysql_setpermission.sh
+SUBST_FILES.perlpath+=	scripts/mysql_zap.sh
+SUBST_FILES.perlpath+=	scripts/mysqlaccess.sh
+SUBST_FILES.perlpath+=	scripts/mysqld_multi.sh
+SUBST_FILES.perlpath+=	scripts/mysqldumpslow.sh
+SUBST_FILES.perlpath+=	scripts/mysqlhotcopy.sh
+SUBST_SED.perlpath=	-e 's,@PERL_PATH@,${PERL5},g'
 
 SUBST_CLASSES+=		fixwrap
 SUBST_STAGE.fixwrap=	post-build
