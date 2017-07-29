@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.40 2017/05/05 16:22:29 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.40.2.1 2017/07/29 20:10:58 spz Exp $
 #
 # used by databases/mysql56-client/Makefile
 # used by databases/mysql56-server/Makefile
 
-DISTNAME=	mysql-5.6.36
+DISTNAME=	mysql-5.6.37
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-5.6/}
 
@@ -103,11 +103,13 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 
 SUBST_CLASSES+=		scr
 SUBST_STAGE.scr=	pre-configure
-SUBST_FILES.scr=	scripts/mysql_install_db.sh scripts/mysqld_safe.sh \
-			scripts/mysql_secure_installation.sh \
-			support-files/mysql.server.sh
+SUBST_FILES.scr=	scripts/mysql_install_db.sh
+SUBST_FILES.scr+=	scripts/mysql_secure_installation.sh
+SUBST_FILES.scr+=	scripts/mysqld_safe.sh
+SUBST_FILES.scr+=	support-files/mysql.server.sh
 SUBST_SED.scr=		-e "s,chown,${CHOWN},g"
 SUBST_SED.scr+=		-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
+SUBST_SED.scr+=		-e "s,@SHELL_PATH@,${RCD_SCRIPTS_SHELL},g"
 SUBST_MESSAGE.scr=	Fixing scripts.
 
 SUBST_CLASSES+=		fixpaths
