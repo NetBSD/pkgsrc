@@ -1,0 +1,38 @@
+$NetBSD: patch-Jamrules,v 1.1 2017/07/29 06:25:39 wiz Exp $
+
+Turned on a static compile option (as no other apps use GARGLK at this time and made changes to the build file to support compiling on NetBSD. Also reported upstream in github. Issue #274
+
+--- Jamrules.orig	2011-10-19 20:34:39.000000000 +0000
++++ Jamrules
+@@ -6,6 +6,7 @@ BUILD ?= RELEASE ;
+ USESDL ?= yes ;
+ USEBABEL ?= yes ;
+ BUNDLEFONTS ?= yes ;
++STATIC = yes ;
+ 
+ # jam -sGUILIB=EFL
+ GUILIB ?= gtk+ ;
+@@ -100,6 +101,23 @@ switch $(OS)
+         if $(STATIC) { LINKLIBS += $(GARGLKLIBS) ; }
+         else      { SHRLINKLIBS += $(GARGLKLIBS) ; }
+ 
++    case NETBSD :
++        Echo "OS is NETBSD ($(GUILIB))" ;
++        PKGCONFIG = "pkg-config freetype2 gtk+-x11-2.0 gdk-x11-2.0 gobject-2.0 glib-2.0 fontconfig libpng16" ;
++
++        GARGLKCCFLAGS = "`$(PKGCONFIG) --cflags`" -fPIC ;
++        GARGLKLIBS = "`$(PKGCONFIG) --libs`" -ljpeg -lz ;
++        LINKLIBS = -lz -lm "`$(PKGCONFIG) --libs`" ;
++
++        if $(USESDL) = yes
++        {
++            GARGLKCCFLAGS += -I${DESTDIR}/include/SDL ;
++            GARGLKLIBS += -lSDL_mixer -lSDL_sound -lSDL -lsmpeg -lvorbisfile ;
++        }
++
++        if $(STATIC) { LINKLIBS += $(GARGLKLIBS) ; }
++        else      { SHRLINKLIBS += $(GARGLKLIBS) ; }
++
+ 
+     case IPLINUX :
+         Echo "OS is IPLINUX (EFL)" ;
