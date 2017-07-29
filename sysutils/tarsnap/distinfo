@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2017/07/15 06:11:56 wiz Exp $
+$NetBSD: distinfo,v 1.11 2017/07/29 06:19:28 wiz Exp $
 
-SHA1 (tarsnap-autoconf-1.0.38.tgz) = 956869c4940121c2a198438d896c7555ba39f810
-RMD160 (tarsnap-autoconf-1.0.38.tgz) = 440f88e78cc4098955128929e3aedc62730d8b26
-SHA512 (tarsnap-autoconf-1.0.38.tgz) = ca6a6333591e333516f2bbf3501093725d8df190cc144282b3a6b51dc197e48b1276ff97b94e287a5be1c78217dbeb93ed29fa4224d99bcca577b77a4414319e
-Size (tarsnap-autoconf-1.0.38.tgz) = 640781 bytes
+SHA1 (tarsnap-autoconf-1.0.39.tgz) = 27ab43bc4fd9e838769a62a5bde61ace12ddcfdb
+RMD160 (tarsnap-autoconf-1.0.39.tgz) = 482780f031e20a1b33f5b62ef93a730bd957c4d7
+SHA512 (tarsnap-autoconf-1.0.39.tgz) = dec8a72144a3a7fd42b006933c904b812894ca9fe2c57ecc4fbba817b9b49c8f15517530a00b0c3a9897e3182b4d9aee525334537806a9c4f7308086678fa2b4
+Size (tarsnap-autoconf-1.0.39.tgz) = 641089 bytes
