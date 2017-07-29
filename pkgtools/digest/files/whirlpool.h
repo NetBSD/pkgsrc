@@ -1,7 +1,9 @@
 #ifndef PORTABLE_C__
 #define PORTABLE_C__
 
+#ifdef HAVE_CONFIG_H
 #include "config.h"
+#endif
 
 /* Definition of minimum-width integer types
  * 
