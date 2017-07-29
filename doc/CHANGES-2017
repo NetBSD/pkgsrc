@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3040 2017/07/29 17:37:10 gson Exp $
+$NetBSD: CHANGES-2017,v 1.3041 2017/07/29 22:51:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4222,3 +4222,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added games/gargoyle version 2011.1 [wiz 2017-07-29]
 	Updated devel/boost-headers to 1.64.0nb3 [wiz 2017-07-29]
 	Updated devel/py-Spans to 1.0.0 [gson 2017-07-29]
+	Updated net/youtube-dl to 20170723 [wiz 2017-07-29]
