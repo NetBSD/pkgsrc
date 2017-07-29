@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2016/12/12 19:22:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.46.6.1 2017/07/29 13:56:01 spz Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -677,6 +677,7 @@ share/mysql/test/r/bench_count_distinct.result
 share/mysql/test/r/big_test.require
 share/mysql/test/r/bigint.result
 share/mysql/test/r/binary.result
+share/mysql/test/r/binary_to_hex.result
 share/mysql/test/r/binlog_tx_isolation.result
 share/mysql/test/r/blackhole.result
 share/mysql/test/r/blackhole_plugin.result
@@ -4051,6 +4052,7 @@ share/mysql/test/suite/rpl/r/rpl_replicate_do.result
 share/mysql/test/suite/rpl/r/rpl_replicate_ignore_db.result
 share/mysql/test/suite/rpl/r/rpl_report.result
 share/mysql/test/suite/rpl/r/rpl_report_port.result
+share/mysql/test/suite/rpl/r/rpl_reset_slave_fail.result
 share/mysql/test/suite/rpl/r/rpl_rewrt_db.result
 share/mysql/test/suite/rpl/r/rpl_rotate_logs.result
 share/mysql/test/suite/rpl/r/rpl_rotate_purge_deadlock.result
@@ -4430,6 +4432,7 @@ share/mysql/test/suite/rpl/t/rpl_report-slave.opt
 share/mysql/test/suite/rpl/t/rpl_report.test
 share/mysql/test/suite/rpl/t/rpl_report_port-master.opt
 share/mysql/test/suite/rpl/t/rpl_report_port.test
+share/mysql/test/suite/rpl/t/rpl_reset_slave_fail.test
 share/mysql/test/suite/rpl/t/rpl_rewrt_db-slave.opt
 share/mysql/test/suite/rpl/t/rpl_rewrt_db.test
 share/mysql/test/suite/rpl/t/rpl_rotate_logs.cnf
@@ -5670,6 +5673,7 @@ share/mysql/test/t/auto_increment.test
 share/mysql/test/t/bench_count_distinct.test
 share/mysql/test/t/bigint.test
 share/mysql/test/t/binary.test
+share/mysql/test/t/binary_to_hex.test
 share/mysql/test/t/blackhole.test
 share/mysql/test/t/blackhole_plugin-master.opt
 share/mysql/test/t/blackhole_plugin.test
