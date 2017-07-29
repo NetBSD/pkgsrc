@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3035 2017/07/28 21:16:47 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3036 2017/07/29 00:43:00 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4215,3 +4215,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/modular-xorg-server to 1.19.3nb2 [wiz 2017-07-28]
 	Added net/p5-WebService-MusicBrainz0 version 0.94 [wiz 2017-07-28]
 	Updated audio/abcde to 2.8.1nb1 [wiz 2017-07-28]
+	Updated lang/gcc48 to 4.8.5nb4 [maya 2017-07-28]
+	Updated lang/gcc49 to 4.9.4nb4 [maya 2017-07-28]
+	Updated lang/gcc5 to 5.4.0nb5 [maya 2017-07-29]
