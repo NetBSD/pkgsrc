@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3038 2017/07/29 06:26:02 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3039 2017/07/29 10:00:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4220,3 +4220,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/gcc5 to 5.4.0nb5 [maya 2017-07-29]
 	Updated sysutils/tarsnap to 1.0.39 [wiz 2017-07-29]
 	Added games/gargoyle version 2011.1 [wiz 2017-07-29]
+	Updated devel/boost-headers to 1.64.0nb3 [wiz 2017-07-29]
