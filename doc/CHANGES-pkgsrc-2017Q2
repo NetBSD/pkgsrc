@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.6 2017/07/24 16:32:12 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.7 2017/07/29 20:15:00 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q2 branch:
 
@@ -64,4 +64,18 @@ www/apache24: security update
 
 Pullup ticket #5516 - requested by he
 lang/ocaml: build fix for powerpc
+
+Pullup ticket #5517 - requested by he
+devel/py-greenlet: build fix for powerpc
+
+Pullup ticket #5523 - requested by schmonz
+security/py-tlslite: security update
+
+Pullup ticket #5524 - requested by taca
+databases/mysql55-client: security update
+databases/mysql55-server: security update
+
+Pullup ticket #5525 - requested by taca
+databases/mysql56-client: security update
+databases/mysql56-server: security update
 
