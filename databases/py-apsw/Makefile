@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/07/26 11:18:30 adam Exp $
+# $NetBSD: Makefile,v 1.10 2017/07/29 22:31:15 wiz Exp $
 
 DISTNAME=	apsw-${GITHUB_RELEASE}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-r1//}
@@ -16,7 +16,7 @@ LICENSE=	zlib
 USE_LANGUAGES=	c
 EGG_NAME=	${DISTNAME:S/-r1/.post1/}
 
-BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.8.3
+BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.18
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
