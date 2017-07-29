@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2017/07/29 06:25:39 wiz Exp $
+
+SHA1 (gargoyle-2011.1.tar.gz) = ce4716eb83118564dfe482f7f810a9f40d381015
+RMD160 (gargoyle-2011.1.tar.gz) = 6cdb66eb25f2e4b7351504835747b019bbe671e3
+SHA512 (gargoyle-2011.1.tar.gz) = 3d2eb71e34b9faaace63963b55dddb61f81cfb1f3d42918036d942ffa0e59ca7f8a9747b1059230c32cfd8d467e09aae88befac1dd77723c2edfcb5acf8d4fa8
+Size (gargoyle-2011.1.tar.gz) = 10598371 bytes
+SHA1 (patch-Jamrules) = 47c66be77d89dea8dc7a1d54c78b1734fa83be7b
+SHA1 (patch-terps_nitfol_nitfol.h) = 63e73928684260cd5ae9446604fbdd3d76f364c7

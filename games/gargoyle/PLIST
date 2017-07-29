@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/29 06:25:39 wiz Exp $
+bin/gargoyle
+libexec/gargoyle/advsys
+libexec/gargoyle/agility
+libexec/gargoyle/alan2
+libexec/gargoyle/alan3
+libexec/gargoyle/bocfel
+libexec/gargoyle/frotz
+libexec/gargoyle/gargoyle
+libexec/gargoyle/geas
+libexec/gargoyle/git
+libexec/gargoyle/glulxe
+libexec/gargoyle/hugo
+libexec/gargoyle/jacl
+libexec/gargoyle/level9
+libexec/gargoyle/magnetic
+libexec/gargoyle/nitfol
+libexec/gargoyle/scare
+libexec/gargoyle/scott
+libexec/gargoyle/tadsr
