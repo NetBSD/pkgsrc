@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.7 2017/07/29 20:15:00 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.8 2017/07/30 05:03:10 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q2 branch:
 
@@ -79,3 +79,6 @@ Pullup ticket #5525 - requested by taca
 databases/mysql56-client: security update
 databases/mysql56-server: security update
 
+Pullup ticket #5526 - requested by taca
+databases/mysql57-client: security update
+databases/mysql57-server: security update
