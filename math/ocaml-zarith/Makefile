@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/07/11 14:16:23 jaapb Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/30 22:32:19 wiz Exp $
 #
 
 VERSION=	1.4.1
@@ -11,7 +11,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://github.com/ocaml/Zarith
+HOMEPAGE=	https://github.com/ocaml/Zarith
 COMMENT=	OCaml arithmetic library for arbitrary precision integers
 LICENSE=	gnu-lgpl-v2
 

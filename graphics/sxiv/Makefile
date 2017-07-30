@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/02/04 13:49:06 leot Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:18 wiz Exp $
 #
 
 DISTNAME=	sxiv-1.3.2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=muennich/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://github.com/muennich/sxiv
+HOMEPAGE=	https://github.com/muennich/sxiv
 COMMENT=	Simple (or small or suckless) X Image Viewer
 LICENSE=	gnu-gpl-v2
 

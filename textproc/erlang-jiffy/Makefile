@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2016/04/22 14:50:04 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2017/07/30 22:32:22 wiz Exp $
 
 DISTNAME=	jiffy-0.14.8
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=davisp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/davisp/jiffy/
+HOMEPAGE=	https://github.com/davisp/jiffy/
 COMMENT=	JSON NIFs for Erlang
 LICENSE=	mit AND modified-bsd
 

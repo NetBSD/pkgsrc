@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2016/05/17 10:32:09 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2017/07/30 22:32:21 wiz Exp $
 #
 
 PKGNAME=	stud-0.3p53
 PKGREVISION=	7
 CATEGORIES=	security
 MAINTAINER=	jym@NetBSD.org
-HOMEPAGE=	http://github.com/bumptech/stud
+HOMEPAGE=	https://github.com/bumptech/stud
 COMMENT=	Scalable TLS Unwrapping Daemon
 LICENSE=	2-clause-bsd
 

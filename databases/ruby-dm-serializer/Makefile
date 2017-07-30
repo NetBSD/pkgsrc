@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2017/06/05 16:00:00 taca Exp $
+# $NetBSD: Makefile,v 1.10 2017/07/30 22:32:13 wiz Exp $
 
 DISTNAME=	dm-serializer-1.2.2
 PKGREVISION=	2
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/datamapper/dm-serializer
+HOMEPAGE=	https://github.com/datamapper/dm-serializer
 COMMENT=	DataMapper plugin for serializing Resources and Collections
 LICENSE=	mit
 
