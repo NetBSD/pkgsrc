@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2017/07/03 13:40:00 maya Exp $
+# $NetBSD: Makefile,v 1.153 2017/07/30 12:30:50 maya Exp $
 
 DISTNAME=	octave-4.2.0
 PKGREVISION=	10
@@ -50,6 +50,9 @@ CONFIGURE_ARGS.Darwin+=	--without-OSMesa
 
 # We use this to install .oct files so it doesn't strip them.
 CONFIGURE_ENV+=		INSTALL_LIB=${INSTALL_LIB:Q}
+
+# XXX Shared object "libgfortran.so.3" not found
+CONFIGURE_ENV+=		octave_cv_sizeof_fortran_integer=yes
 
 .include "options.mk"
 
