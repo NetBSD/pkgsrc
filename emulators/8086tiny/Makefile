@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2016/06/04 17:41:02 sevan Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/30 22:39:05 wiz Exp $
 
 DISTNAME=	8086tiny_125
 PKGNAME=	${DISTNAME:S/tiny_1/tiny-1./}
 CATEGORIES=	emulators
-MASTER_SITES=	http://www.megalith.co.uk/8086tiny/downloads/
+MASTER_SITES=	# http://www.megalith.co.uk/8086tiny/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.megalith.co.uk/8086tiny/
+HOMEPAGE=	https://github.com/adriancable/8086tiny
 COMMENT=	PC XT-compatible emulator/virtual machine written in C
 LICENSE=	mit
 
