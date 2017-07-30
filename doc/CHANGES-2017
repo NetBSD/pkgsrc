@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3043 2017/07/30 05:38:23 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3044 2017/07/30 05:51:22 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4228,3 +4228,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-setuptools to 36.2.4 [adam 2017-07-30]
 	Updated devel/py-flake8 to 3.4.1 [adam 2017-07-30]
 	Updated security/py-certifi to 2017.7.27.1 [adam 2017-07-30]
+	Updated sysutils/daemontools-run to 20170730 [schmonz 2017-07-30]
