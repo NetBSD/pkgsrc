@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/17 17:33:20 taca Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:14 wiz Exp $
 
 DISTNAME=	dm-tags-1.2.0
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/datamapper/dm-tags
+HOMEPAGE=	https://github.com/datamapper/dm-tags
 COMMENT=	This package brings tagging to DataMapper
 LICENSE=	mit
 

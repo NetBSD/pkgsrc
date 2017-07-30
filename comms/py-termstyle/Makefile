@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/07/20 17:20:57 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:10 wiz Exp $
 
 DISTNAME=	termstyle-0.1.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	comms python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/termstyle/}
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	http://github.com/gfxmonk/termstyle
+HOMEPAGE=	https://github.com/gfxmonk/termstyle
 COMMENT=	Console colouring for python
 LICENSE=	modified-bsd
 

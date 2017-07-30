@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2016/11/19 14:47:22 taca Exp $
+# $NetBSD: Makefile,v 1.5 2017/07/30 22:32:28 wiz Exp $
 
 DISTNAME=	journey-1.0.4
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/rails/journey
+HOMEPAGE=	https://github.com/rails/journey
 COMMENT=	Journey is a router
 LICENSE=	mit
 

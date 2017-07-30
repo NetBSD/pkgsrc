@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/06/19 20:28:49 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/07/30 22:32:23 wiz Exp $
 
 DISTNAME=	mlr-5.2.0
 PKGNAME=	${DISTNAME:S/mlr/miller/}
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	miller
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/johnkerl/miller/
+HOMEPAGE=	https://github.com/johnkerl/miller/
 COMMENT=	Command-line CSV processor
 LICENSE=	2-clause-bsd
 

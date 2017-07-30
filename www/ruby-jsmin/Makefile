@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2010/09/10 13:12:28 taca Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/30 22:32:28 wiz Exp $
 
 DISTNAME=	jsmin-1.0.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/rgrove/jsmin/
+HOMEPAGE=	https://github.com/rgrove/jsmin/
 COMMENT=	Ruby library for minifying JavaScript
 LICENSE=	mit
 

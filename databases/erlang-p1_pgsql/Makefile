@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2017/07/07 09:49:57 fhajny Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/30 22:32:10 wiz Exp $
 
 DISTNAME=	p1_pgsql-1.1.3
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/processone/p1_pgsql/
+HOMEPAGE=	https://github.com/processone/p1_pgsql/
 COMMENT=	Pure Erlang PostgreSQL driver
 LICENSE=	erlang-public-license
 
