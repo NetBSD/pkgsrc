@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2017/02/12 06:24:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.71 2017/07/30 22:47:53 wiz Exp $
 
 DISTNAME=		gnome-media-2.28.5
 PKGREVISION=		41
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.28/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
+HOMEPAGE=		https://www.gnome.org/
 COMMENT=		Set of audio/multimedia applications for GNOME2
 
 GNU_CONFIGURE=		yes

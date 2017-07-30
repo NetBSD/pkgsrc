@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2013/01/20 00:52:18 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.37 2017/07/30 22:47:54 wiz Exp $
 #
 # used by print/evince/Makefile
 # used by print/evince-nautilus/Makefile
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evince/2.32/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/projects/evince/
+HOMEPAGE=		https://www.gnome.org/projects/evince/
 LICENSE=		gnu-gpl-v2
 
 PATCHDIR=		${.CURDIR}/../evince/patches

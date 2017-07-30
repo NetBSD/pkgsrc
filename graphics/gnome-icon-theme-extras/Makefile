@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/06 14:10:56 asau Exp $
+# $NetBSD: Makefile,v 1.5 2017/07/30 22:47:51 wiz Exp $
 #
 
 DISTNAME=		gnome-icon-theme-extras-2.30.1
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme-extras/2.30/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
+HOMEPAGE=		https://www.gnome.org/
 COMMENT=		Extra icons for the GNOME icon sets
 #LICENSE=		Creative Commons Attribution-Share Alike 3.0 United States License
 

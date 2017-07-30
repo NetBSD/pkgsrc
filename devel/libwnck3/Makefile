@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/02/12 06:24:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2017/07/30 22:47:50 wiz Exp $
 
 DISTNAME=	libwnck-3.20.1
 PKGNAME=	${DISTNAME:S/libwnck/libwnck3/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libwnck/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Library to write pagers and tasklists
 LICENSE=	gnu-lgpl-v2
 

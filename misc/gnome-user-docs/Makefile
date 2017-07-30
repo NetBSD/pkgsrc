@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/08 09:57:23 asau Exp $
+# $NetBSD: Makefile,v 1.24 2017/07/30 22:47:53 wiz Exp $
 
 DISTNAME=	gnome-user-docs-2.32.0
 CATEGORIES=	misc
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-user-docs/2.32/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	The GNOME 2 users guide
 LICENSE=	gnu-fdl-v1.1
 

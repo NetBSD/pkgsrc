@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2017/05/25 12:58:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.135 2017/07/30 22:47:49 wiz Exp $
 #
 
 DISTNAME=	libgnomeui-2.24.5
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeui/2.24/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Core GNOME2 graphical libraries
 LICENSE=	gnu-lgpl-v2
 
