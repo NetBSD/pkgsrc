@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/17 17:18:55 taca Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:12 wiz Exp $
 
 DISTNAME=	dm-adjust-1.2.0
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/datamapper/dm-adjust
+HOMEPAGE=	https://github.com/datamapper/dm-adjust
 COMMENT=	DataMapper plugin to increment and decrement properties
 LICENSE=	mit
 

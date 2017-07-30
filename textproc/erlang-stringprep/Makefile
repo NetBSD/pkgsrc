@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2017/07/07 09:51:24 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2017/07/30 22:32:23 wiz Exp $
 
 DISTNAME=	stringprep-1.0.9
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/processone/stringprep/
+HOMEPAGE=	https://github.com/processone/stringprep/
 COMMENT=	Fast Stringprep implementation for Erlang / Elixir
 LICENSE=	apache-2.0
 

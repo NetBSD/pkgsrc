@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/07/11 14:19:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.14 2017/07/30 22:32:19 wiz Exp $
 
 GITHUB_PROJECT=	camlp4
 DISTNAME=	${GITHUB_PROJECT}-4.04+1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 DIST_SUBDIR=	ocaml-camlp4
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://github.com/ocaml/camlp4/
+HOMEPAGE=	https://github.com/ocaml/camlp4/
 COMMENT=	Preprocessor and pretty printer for OCaml
 LICENSE=	gnu-lgpl-v2
 
