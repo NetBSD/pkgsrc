@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2017/04/09 15:30:06 adam Exp $
+# $NetBSD: Makefile,v 1.16 2017/07/30 22:32:25 wiz Exp $
 
 DISTNAME=	h2o-2.2.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=h2o/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/h2o/h2o
+HOMEPAGE=	https://github.com/h2o/h2o
 COMMENT=	Optimized HTTP server with support for HTTP/1.x and HTTP/2
 LICENSE=	mit
 

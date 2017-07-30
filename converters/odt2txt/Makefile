@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/02/08 11:22:55 liamjfoy Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/30 22:32:10 wiz Exp $
 #
 
 DISTNAME=	odt2txt-0.5
@@ -6,7 +6,7 @@ CATEGORIES=	converters textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dstosberg/}
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	http://github.com/dstosberg/odt2txt
+HOMEPAGE=	https://github.com/dstosberg/odt2txt
 COMMENT=	Simple converter from OpenDocument Text to plain text
 LICENSE=	gnu-gpl-v2
 GITHUB_TAG=	v${PKGVERSION_NOREV}

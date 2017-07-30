@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/07/11 12:34:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.17 2017/07/30 22:32:21 wiz Exp $
 #
 
 VERSION=	1.11
@@ -10,7 +10,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xavierleroy/}
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://github.com/xavierleroy/cryptokit
+HOMEPAGE=	https://github.com/xavierleroy/cryptokit
 COMMENT=	Cryptographic primitives library for Objective Caml
 LICENSE=	gnu-lgpl-v2 # with static compilation exception
 

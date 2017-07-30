@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2014/03/14 16:08:18 taca Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/30 22:32:17 wiz Exp $
 
 DISTNAME=	metaclass-0.0.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/floehopper/metaclass
+HOMEPAGE=	https://github.com/floehopper/metaclass
 COMMENT=	Adds a metaclass method to all Ruby objects
 #LICENSE=
 

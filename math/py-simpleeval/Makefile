@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/01/01 14:43:46 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/07/30 22:32:19 wiz Exp $
 
 DISTNAME=	simpleeval-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/simpleeval/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/danthedeckie/simpleeval
+HOMEPAGE=	https://github.com/danthedeckie/simpleeval
 COMMENT=	Simple, safe single expression evaluator library
 LICENSE=	mit
 

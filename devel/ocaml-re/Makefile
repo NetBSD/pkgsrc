@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/07/11 10:13:14 jaapb Exp $
+# $NetBSD: Makefile,v 1.10 2017/07/30 22:32:15 wiz Exp $
 
 VERSION=	1.7.1
 GITHUB_PROJECT=	ocaml-re
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://github.com/ocaml/ocaml-re/
+HOMEPAGE=	https://github.com/ocaml/ocaml-re/
 COMMENT=	Pure OCaml regular expression library
 LICENSE=	gnu-lgpl-v2.1
 
