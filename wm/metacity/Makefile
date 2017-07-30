@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2017/02/12 06:24:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.119 2017/07/30 22:47:56 wiz Exp $
 
 DISTNAME=	metacity-2.34.13
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/metacity/2.34/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/softwaremap/projects/Metacity/
+HOMEPAGE=	https://www.gnome.org/softwaremap/projects/Metacity/
 COMMENT=	GNOME-compliant window manager
 LICENSE=	gnu-gpl-v2
 

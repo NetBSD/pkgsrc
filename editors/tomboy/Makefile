@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2017/04/22 21:03:35 adam Exp $
+# $NetBSD: Makefile,v 1.78 2017/07/30 22:47:50 wiz Exp $
 
 DISTNAME=		tomboy-1.2.1
 PKGREVISION=		51
@@ -6,7 +6,7 @@ CATEGORIES=		editors misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/tomboy/1.2/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/projects/tomboy
+HOMEPAGE=		https://www.gnome.org/projects/tomboy
 COMMENT=		Gnome desktop note application
 LICENSE=		gnu-lgpl-v2.1
 

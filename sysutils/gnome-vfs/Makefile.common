@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2013/10/09 12:47:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.29 2017/07/30 22:47:55 wiz Exp $
 #
 # used by audio/gnome-vfs-cdda/Makefile
 # used by net/gnome-vfs-smb/Makefile
@@ -13,7 +13,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.24/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
+HOMEPAGE=		https://www.gnome.org/
 COMMENT=		GNOME Virtual File System (v2)
 
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/gnome-vfs/distinfo

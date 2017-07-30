@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2016/07/09 06:39:01 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2017/07/30 22:47:56 wiz Exp $
 
 DISTNAME=		libgtop-2.28.4
 PKGREVISION=		10
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.28/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
+HOMEPAGE=		https://www.gnome.org/
 COMMENT=		Library to retrieve system information, used in GNOME2
 LICENSE=		gnu-gpl-v2
 

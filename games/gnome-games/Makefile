@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2017/02/12 06:25:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.156 2017/07/30 22:47:50 wiz Exp $
 
 DISTNAME=		gnome-games-2.32.1
 PKGREVISION=		33
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.32/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
+HOMEPAGE=		https://www.gnome.org/
 COMMENT=		GNOME2 games collection
 #LICENSE=		gnu-gpl-v2 AND gnu-fdl-v1.1
 

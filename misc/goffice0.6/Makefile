@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2017/02/12 06:24:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.44 2017/07/30 22:47:53 wiz Exp $
 #
 
 DISTNAME=		goffice-0.6.6
@@ -8,7 +8,7 @@ CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/goffice/0.6/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
+HOMEPAGE=		https://www.gnome.org/
 COMMENT=		Library of document-centric objects and utilities
 
 CONFLICTS+=		goffice<0.4.2nb1 goffice0.5<0.5.4
