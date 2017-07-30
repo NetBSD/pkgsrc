@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3048 2017/07/30 15:55:11 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3049 2017/07/30 18:03:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4234,3 +4234,9 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/open2300 to 1.10nb1 [martin 2017-07-30]
 	Added games/fortunes-it version 1.99 [leot 2017-07-30]
 	Updated devel/py-docstyle to 2.0.0 [adam 2017-07-30]
+	Updated devel/py-lama to 7.4.1 [adam 2017-07-30]
+	Removed databases/py-python-rrdtool successor py-rrdtool [adam 2017-07-30]
+	Updated devel/py-pathlib2 to 2.3.0 [adam 2017-07-30]
+	Updated graphics/py-altgraph to 0.14 [adam 2017-07-30]
+	Updated devel/py-macholib to 1.8 [adam 2017-07-30]
+	Updated devel/py-py to 1.4.34 [adam 2017-07-30]
