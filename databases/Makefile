@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.532 2017/07/27 18:31:20 adam Exp $
+# $NetBSD: Makefile,v 1.533 2017/07/30 17:35:39 adam Exp $
 
 COMMENT=	Databases
 
@@ -355,7 +355,6 @@ SUBDIR+=	py-pickleshare
 SUBDIR+=	py-postgresql
 SUBDIR+=	py-psycopg2
 SUBDIR+=	py-pymysql
-SUBDIR+=	py-python-rrdtool
 SUBDIR+=	py-python-sql
 SUBDIR+=	py-redis
 SUBDIR+=	py-rrdtool
