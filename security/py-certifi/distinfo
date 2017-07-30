@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/05/29 07:47:19 adam Exp $
+$NetBSD: distinfo,v 1.7 2017/07/30 05:37:54 adam Exp $
 
-SHA1 (certifi-2017.4.17.tar.gz) = d29f70056fb0eb69509658dc409c2eddaf59e573
-RMD160 (certifi-2017.4.17.tar.gz) = 48ce1d57aabdc85e36226851d13bfd56348d812f
-SHA512 (certifi-2017.4.17.tar.gz) = 0bd054bb2eaa8c196a94a0b7865d2488aea1fcb5e66ddc8c776c68cfa518a198a8c67bed5b485bf55db3f55d26c0ab2b4fc07839bb9175a50cb525e25d3869a5
-Size (certifi-2017.4.17.tar.gz) = 373512 bytes
+SHA1 (certifi-2017.7.27.1.tar.gz) = de9f9a06ef094850383c2b8b025ab66cb39eccb9
+RMD160 (certifi-2017.7.27.1.tar.gz) = 652c652c52df9ee211013d77d33c5c98c2b956df
+SHA512 (certifi-2017.7.27.1.tar.gz) = 2873c17144e09ba506c62743efa4fda05350d48fcb19a1b8eb895829df2fa276eed86b31c9f7f18636f62ea5acb4bc6b9dee8b69ed8e0ccd1286ebfaa27d02a1
+Size (certifi-2017.7.27.1.tar.gz) = 348217 bytes
