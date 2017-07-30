@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/09/14 16:38:15 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2017/07/30 22:47:50 wiz Exp $
 #
 
 # The "vera-ttf" package must always contain unmodified TTF files according
@@ -14,7 +14,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/ttf-bitstream-vera/1.10/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/fonts/
+HOMEPAGE=	https://www.gnome.org/fonts/
 COMMENT=	Bitstream Vera TrueType fonts
 LICENSE=	vera-ttf-license
 

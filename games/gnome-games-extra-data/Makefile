@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/06 11:54:41 asau Exp $
+# $NetBSD: Makefile,v 1.4 2017/07/30 22:47:50 wiz Exp $
 
 DISTNAME=	gnome-games-extra-data-2.26.0
 CATEGORIES=	games gnome
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-games-extra-data/2.26/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	GNOME2 games collection - extra data files
 
 USE_TOOLS+=	gmake

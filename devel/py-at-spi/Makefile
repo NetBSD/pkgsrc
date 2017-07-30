@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2017/01/01 14:43:31 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2017/07/30 22:47:50 wiz Exp $
 
 DISTNAME=		at-spi-1.32.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/at-spi/1.32/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
+HOMEPAGE=		https://www.gnome.org/
 COMMENT=		Assistive Technology Service Provider Interface
 LICENSE=		gnu-lgpl-v2 # or later
 

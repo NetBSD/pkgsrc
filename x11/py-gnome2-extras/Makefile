@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2017/02/12 06:24:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.82 2017/07/30 22:47:58 wiz Exp $
 
 DISTNAME=	gnome-python-extras-2.25.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-extras/2.25/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Python binding for GNOME2
 
 # need xsltproc to build docs
