@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmail.sh,v 1.5 2017/06/17 05:58:39 schmonz Exp $
+# $NetBSD: qmail.sh,v 1.6 2017/07/30 03:05:59 schmonz Exp $
 #
 # @PKGNAME@ master script for administrators to control qmail
 # services. Usage resembles the qmailctl script from "Life with qmail".
@@ -22,32 +22,31 @@ rcd_dir=`@DIRNAME@ $0`
 #
 forward_commands()
 {
-	# Backward compat with NetBSD <1.6:
-	[ -z "$rc_arg" ] && rc_arg=$_arg
-
-	for file in $COMMAND_LIST; do
-		$rcd_dir/$file $rc_arg
-	done
+	qmailrcd $COMMAND_LIST
 }
 
 reverse_commands()
 {
-	# Backward compat with NetBSD <1.6:
-	[ -z "$rc_arg" ] && rc_arg=$_arg
-
 	REVCOMMAND_LIST=
 	for file in $COMMAND_LIST; do
 		REVCOMMAND_LIST="$file $REVCOMMAND_LIST"
 	done
-	for file in $REVCOMMAND_LIST; do
-		$rcd_dir/$file $rc_arg
-	done
+
+	qmailrcd $REVCOMMAND_LIST
 }
 
 qmailrcd()
 {
-	for service in $@; do
-		$rcd_dir/qmail${service} $rc_arg
+	# Backward compat with NetBSD <1.6:
+	[ -z "$rc_arg" ] && rc_arg=$_arg
+
+	for service in "$@"; do
+		if [ -f /etc/rc.subr ]; then
+			load_rc_config $service
+			checkyesno $service && $rcd_dir/${service} $rc_arg
+		else
+			$rcd_dir/${service} $rc_arg
+		fi
 	done
 }
 
@@ -75,13 +74,13 @@ COMMAND_LIST="qmailsend qmailqread qmailsmtpd qmailofmipd qmailpop3d"
 name="qmail"
 start_cmd="forward_commands"
 stop_cmd="reverse_commands"
-doqueue_cmd="qmailrcd send"; alrm_cmd=${doqueue_cmd}; flush_cmd=${doqueue_cmd}
+doqueue_cmd="qmailrcd qmailsend"; alrm_cmd=${doqueue_cmd}; flush_cmd=${doqueue_cmd}
 reload_cmd="qmailrcd send"; hup_cmd=${reload_cmd}
 status_cmd="forward_commands"; stat_cmd=${status_cmd}
-pause_cmd="forward_commands"
+pause_cmd="reverse_commands"
 cont_cmd="forward_commands"
-cdb_cmd="qmailrcd smtpd ofmipd pop3d"
-queue_cmd="qmailrcd send"
+cdb_cmd="qmailrcd qmailsmtpd qmailofmipd qmailpop3d"
+queue_cmd="qmailrcd qmailsend"
 help_cmd="qmail_help"
 extra_commands="pause cont stat status cdb doqueue reload queue alrm flush hup help"
 
