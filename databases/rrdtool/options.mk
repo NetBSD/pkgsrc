@@ -1,11 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2017/07/27 18:31:20 adam Exp $
+# $NetBSD: options.mk,v 1.5 2017/07/30 17:35:39 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rrdtool
 PKG_SUPPORTED_OPTIONS=	lua tcl
 PKG_SUGGESTED_OPTIONS=	lua tcl
-
-# Note that there's another (apparently different) python library
-# in databases/py-python-rrdtool.
 
 .include "../../mk/bsd.options.mk"
 
