@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2017/07/11 19:41:20 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2017/07/30 19:27:08 nros Exp $
 
-DISTNAME=	qore-0.8.12.10
+DISTNAME=	qore-0.8.12.11
 CATEGORIES=	lang
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=   .tar.bz2
 
 GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
-GITHUB_TYPE=	release
 
 MAINTAINER=	nros@NetBSD.org
 COMMENT=	Qore programming language
