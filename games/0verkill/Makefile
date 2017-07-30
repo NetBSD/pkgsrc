@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/10/21 09:50:36 fhajny Exp $
+# $NetBSD: Makefile,v 1.11 2017/07/30 22:37:57 wiz Exp $
 
 DISTNAME=	0verkill-0.16
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://artax.karlin.mff.cuni.cz/~brain/0verkill/release/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://artax.karlin.mff.cuni.cz/~brain/0verkill/
+#HOMEPAGE=	http://artax.karlin.mff.cuni.cz/~brain/0verkill/
 COMMENT=	0verkill is bloody 2D action deathmatch-like game in ASCII-ART
 
 HAS_CONFIGURE=		yes
