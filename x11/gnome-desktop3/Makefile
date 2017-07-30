@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2017/02/12 06:24:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2017/07/30 22:47:57 wiz Exp $
 
 DISTNAME=	gnome-desktop-3.20.1
 PKGREVISION=	4
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-desktop/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	GNOME3 desktop-wide documents and libgnome-desktop library
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-fdl-v1.1
 

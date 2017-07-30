@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2014/10/09 14:06:35 wiz Exp $
+# $NetBSD: Makefile.common,v 1.50 2017/07/30 22:47:51 wiz Exp $
 #
 # used by graphics/gdk-pixbuf/Makefile
 
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gdk-pixbuf/${VER}/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
+HOMEPAGE=		https://www.gnome.org/
 
 VER=			0.22
 
