@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2016/04/20 12:10:26 nros Exp $
+# $NetBSD: Makefile.common,v 1.5 2017/07/30 22:47:48 wiz Exp $
 #
 # used by audio/gnome-speech/Makefile
 # used by audio/gnome-speech-espeak/Makefile
@@ -8,7 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-speech/0.4/}
 EXTRACT_SUFX=	.tar.bz2
 
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 LICENSE=	gnu-gpl-v2
 
 PATCHDIR=	${.CURDIR}/../gnome-speech/patches

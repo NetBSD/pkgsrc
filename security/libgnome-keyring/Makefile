@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/08/28 13:24:38 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/07/30 22:47:55 wiz Exp $
 
 DISTNAME=	libgnome-keyring-3.12.0
 CATEGORIES=	security gnome
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome-keyring/3.12/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	GNOME password and secret manager
 
 CONFLICTS+=	gnome-keyring<2.30
