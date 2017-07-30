@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.4 2012/10/08 13:45:34 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2017/07/30 22:45:42 wiz Exp $
 
 DISTNAME=	ABC2PS-${ABC2PSVER}
 PKGNAME=	abc2ps-${ABC2PSVER}
 CATEGORIES=	print
-MASTER_SITES=	http://www.ihp-ffo.de/~msm/abc_src/
+MASTER_SITES=	# http://www.ihp-ffo.de/~msm/abc_src/
 EXTRACT_SUFX=	.tar.Z
-WRKSRC=		${WRKDIR}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ihp-ffo.de/~msm/
+#HOMEPAGE=	http://www.ihp-ffo.de/~msm/
 COMMENT=	Music typesetting program for abc
 
 ABC2PSVER=	1.3.3
 
+WRKSRC=		${WRKDIR}
+
 INSTALLATION_DIRS=	bin share/doc/abc2ps share/examples/abc2ps
 
 do-build:
-	cd ${WRKSRC} && ${CC} -o abc2ps abc2ps.c
+	cd ${WRKSRC} && ${CC} ${CFLAGS} ${LDFLAGS} -o abc2ps abc2ps.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/abc2ps ${DESTDIR}${PREFIX}/bin
