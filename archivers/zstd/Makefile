@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/04/20 13:45:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2017/07/30 09:40:23 spz Exp $
 
 DISTNAME=	zstd-1.1.4
 CATEGORIES=	archivers
@@ -17,6 +17,10 @@ MAKE_FLAGS+=	INSTALL=${INSTALL:Q}
 MAKE_JOBS_SAFE=	no
 
 PKGCONFIG_OVERRIDE+=	lib/libzstd.pc.in
+
+RESTRICTED=		LICENSE-examples does not permit redistribution of the examples
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
