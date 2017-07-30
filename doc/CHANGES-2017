@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3041 2017/07/29 22:51:11 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3042 2017/07/30 03:06:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4223,3 +4223,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/boost-headers to 1.64.0nb3 [wiz 2017-07-29]
 	Updated devel/py-Spans to 1.0.0 [gson 2017-07-29]
 	Updated net/youtube-dl to 20170723 [wiz 2017-07-29]
+	Updated mail/qmail-run to 20170729 [schmonz 2017-07-28]
