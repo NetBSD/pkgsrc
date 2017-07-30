@@ -1,7 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2014/01/19 09:09:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/07/30 05:53:52 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/version_info.json
 ${PYSITELIB}/daemon/__init__.py
 ${PYSITELIB}/daemon/__init__.pyc
 ${PYSITELIB}/daemon/__init__.pyo
+${PYSITELIB}/daemon/_metadata.py
+${PYSITELIB}/daemon/_metadata.pyc
+${PYSITELIB}/daemon/_metadata.pyo
 ${PYSITELIB}/daemon/daemon.py
 ${PYSITELIB}/daemon/daemon.pyc
 ${PYSITELIB}/daemon/daemon.pyo
@@ -11,15 +21,3 @@ ${PYSITELIB}/daemon/pidfile.pyo
 ${PYSITELIB}/daemon/runner.py
 ${PYSITELIB}/daemon/runner.pyc
 ${PYSITELIB}/daemon/runner.pyo
-${PYSITELIB}/daemon/version/__init__.py
-${PYSITELIB}/daemon/version/__init__.pyc
-${PYSITELIB}/daemon/version/__init__.pyo
-${PYSITELIB}/daemon/version/version_info.py
-${PYSITELIB}/daemon/version/version_info.pyc
-${PYSITELIB}/daemon/version/version_info.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
