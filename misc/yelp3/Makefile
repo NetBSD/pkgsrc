@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2017/04/22 21:03:45 adam Exp $
+# $NetBSD: Makefile,v 1.50 2017/07/30 22:47:53 wiz Exp $
 
 DISTNAME=		yelp-3.22.0
 PKGREVISION=		5
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		prlw1@cam.ac.uk
-HOMEPAGE=		http://www.gnome.org/
+HOMEPAGE=		https://www.gnome.org/
 COMMENT=		Mallard capable help browser
 LICENSE=		gnu-gpl-v2 AND apache-2.0
 

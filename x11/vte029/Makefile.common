@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2012/08/10 13:46:01 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2017/07/30 22:47:58 wiz Exp $
 #
 # used by x11/py-vte/Makefile
 
@@ -7,7 +7,7 @@ PKGNAME=	${DISTNAME:S/vte/vte029/}
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.32/}
 EXTRACT_SUFX=	.tar.xz
 
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 LICENSE=	gnu-lgpl-v2
 
 DISTINFO_FILE=		${.CURDIR}/../../x11/vte029/distinfo
