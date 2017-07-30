@@ -1,13 +1,22 @@
-$NetBSD: patch-libmysql_CMakeLists.txt,v 1.1 2016/09/16 06:49:11 adam Exp $
+$NetBSD: patch-libmysql_CMakeLists.txt,v 1.1.8.1 2017/07/30 04:57:58 spz Exp $
 
 Do not install libmysqlclient with the server.
 Generate versioned lib symlinks on FreeBSD to supress PLIST divergence.
+authentication_ldap and libmysql_api_test require libmysqld.
 
---- libmysql/CMakeLists.txt.orig	2016-06-30 06:22:11.000000000 +0000
+--- libmysql/CMakeLists.txt.orig	2017-06-22 14:13:19.000000000 +0000
 +++ libmysql/CMakeLists.txt
-@@ -231,7 +231,11 @@ IF(WIN32)
+@@ -230,12 +230,18 @@ IF(WIN32)
+   LIST(APPEND LIBS auth_win_client)
  ENDIF()
  
++IF(NOT WITHOUT_SERVER)
+ # LDAP authentication SASL client plugin
+ MESSAGE(STATUS "Creating LDAP authentication SASL client library.")
+-ADD_SUBDIRECTORY(authentication_ldap)
++#ADD_SUBDIRECTORY(authentication_ldap)
++ENDIF()
+   
  # Merge several convenience libraries into one big mysqlclient
 +IF(WITHOUT_SERVER)
  MERGE_LIBRARIES(mysqlclient STATIC ${LIBS} COMPONENT Development)
@@ -17,7 +26,7 @@ Generate versioned lib symlinks on FreeBSD to supress PLIST divergence.
  
  # Visual Studio users need debug  static library for debug projects
  IF(MSVC)
-@@ -271,12 +275,18 @@ ENDIF()
+@@ -275,12 +281,18 @@ ENDIF()
  IF(NOT DISABLE_SHARED)
    # Merge several convenience libraries into one big mysqlclient
    # and link them together into shared library.
@@ -37,3 +46,17 @@ Generate versioned lib symlinks on FreeBSD to supress PLIST divergence.
        SET(OS_SHARED_LIB_VERSION "${SHARED_LIB_MAJOR_VERSION}")
      ELSE()
        SET(OS_SHARED_LIB_VERSION
+@@ -348,6 +360,7 @@ CONFIGURE_FILE(api_test.c.in ${CMAKE_CUR
+ # from @CLIENT_API_FUNCTIONS@ are declared by <mysql.h>. It will fail
+ # to run if not all of these symbols are exported by the library.
+ #
++IF(NOT WITHOUT_SERVER)
+ ADD_EXECUTABLE(libmysql_api_test ${CMAKE_CURRENT_BINARY_DIR}/api_test.c)
+ SET_TARGET_PROPERTIES(libmysql_api_test PROPERTIES LINKER_LANGUAGE CXX)
+ IF(LIBRT)
+@@ -359,4 +372,5 @@ IF(DISABLE_SHARED)
+ ELSE()
+   TARGET_LINK_LIBRARIES(libmysql_api_test libmysql)
+ ENDIF()
++ENDIF()
+ 

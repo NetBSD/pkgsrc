@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/06/24 15:18:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2017/07/30 04:57:58 spz Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
-PKGREVISION=	2
 COMMENT=	MySQL 5, a free SQL database (server)
 
 CONFLICTS=	mysql3-server-[0-9]*
@@ -58,8 +57,6 @@ REPLACE_PERL+=		mysql-test/suite/funcs_2/lib/gen_charset_utf8.pl
 REPLACE_PERL+=		mysql-test/suite/opt_trace/validate_json.pl
 REPLACE_PERL+=		mysql-test/suite/rpl/extension/bhs.pl
 REPLACE_PERL+=		mysql-test/suite/rpl/extension/checksum.pl
-REPLACE_PERL+=		scripts/mysqld_multi.sh
-REPLACE_PERL+=		scripts/mysqldumpslow.sh
 
 REPLACE_SH+=		mysql-test/suite/rpl/t/rpl_loaddata_symlink-master.sh
 REPLACE_SH+=		mysql-test/suite/rpl/t/rpl_loaddata_symlink-slave.sh
@@ -70,6 +67,14 @@ REPLACE_SH+=		mysql-test/t/lowercase_mixed_tmpdir_innodb-master.sh
 
 CHECK_INTERPRETER_SKIP+=share/mysql/test/std_data/dtrace.d \
 			share/mysql/test/suite/opt_trace/validate_json.py
+
+SUBST_CLASSES+=		perlpath
+SUBST_STAGE.perlpath=	pre-configure
+SUBST_MESSAGE.perlpath=	Fixing Perl paths.
+SUBST_FILES.perlpath=	scripts/mysql_config.pl.in
+SUBST_FILES.perlpath+=	scripts/mysqld_multi.sh
+SUBST_FILES.perlpath+=	scripts/mysqldumpslow.sh
+SUBST_SED.perlpath=	-e 's,@PERL_PATH@,${PERL5},g'
 
 # Replace interpreter without pulling in Python dependecy
 # Update when PYTHON_VERSION_DEFAULT changes!
