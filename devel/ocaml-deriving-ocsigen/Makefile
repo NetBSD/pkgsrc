@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/07/11 14:14:20 jaapb Exp $
+# $NetBSD: Makefile,v 1.14 2017/07/30 22:32:15 wiz Exp $
 #
 
 VERSION=	0.7.1
@@ -11,7 +11,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://github.com/ocsigen/deriving
+HOMEPAGE=	https://github.com/ocsigen/deriving
 LICENSE=	mit
 
 USE_TOOLS=	gmake

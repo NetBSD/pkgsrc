@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/06/24 20:46:36 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2017/07/30 22:32:16 wiz Exp $
 
 DISTNAME=	pyfasthash-0.6.2
 PKGNAME=	${DISTNAME:S/pyfast/${PYPKGPREFIX}-/}
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=flier/}
 
 MAINTAINER=	filip@joyent.com
-HOMEPAGE=	http://github.com/flier/pyfasthash/
+HOMEPAGE=	https://github.com/flier/pyfasthash/
 COMMENT=	Python Non-cryptographic Hash Library
 LICENSE=	apache-2.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:22 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/30 22:32:11 wiz Exp $
 
 DISTNAME=	pymongo-2.7.1
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/1}
@@ -6,7 +6,7 @@ CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pymongo/}
 
 MAINTAINER=	mishka@NetBSD.org
-HOMEPAGE=	http://github.com/mongodb/mongo-python-driver
+HOMEPAGE=	https://github.com/mongodb/mongo-python-driver
 COMMENT=	Python driver for MongoDB
 LICENSE=	apache-2.0
 

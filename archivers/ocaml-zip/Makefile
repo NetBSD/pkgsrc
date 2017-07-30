@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/07/11 10:00:51 jaapb Exp $
+# $NetBSD: Makefile,v 1.19 2017/07/30 22:32:10 wiz Exp $
 #
 
 VERSION=	1.07
@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=xavierleroy/}
 LICENSE=	gnu-lgpl-v2.1
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://github.com/xavierleroy/camlzip
+HOMEPAGE=	https://github.com/xavierleroy/camlzip
 COMMENT=	OCaml library to manipulate ZIP/GZIP/JAR archives
 
 BUILD_TARGET=	all

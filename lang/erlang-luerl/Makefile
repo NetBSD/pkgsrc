@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2016/04/22 14:54:58 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:19 wiz Exp $
 
 DISTNAME=	luerl-0.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rvirding/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/rvirding/luerl/
+HOMEPAGE=	https://github.com/rvirding/luerl/
 COMMENT=	Implementation of Lua in Erlang
 LICENSE=	apache-2.0
 

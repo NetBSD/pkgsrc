@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/09/19 13:04:20 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/07/30 22:32:14 wiz Exp $
 
 DISTNAME=	tiny_tds-0.7.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	databases ruby
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	http://github.com/rails-sqlserver/tiny_tds
+HOMEPAGE=	https://github.com/rails-sqlserver/tiny_tds
 COMMENT=	Modern, simple and fast FreeTDS library for Ruby using DB-Library
 LICENSE=	mit
 

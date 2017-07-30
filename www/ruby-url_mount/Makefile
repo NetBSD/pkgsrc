@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2017/06/18 13:48:54 taca Exp $
+# $NetBSD: Makefile,v 1.4 2017/07/30 22:32:28 wiz Exp $
 
 DISTNAME=	url_mount-0.2.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/hassox/url_mount/
+HOMEPAGE=	https://github.com/hassox/url_mount/
 COMMENT=	Universal mounting points for rack applications
 LICENSE=	mit
 

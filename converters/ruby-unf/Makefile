@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2015/02/01 12:51:37 taca Exp $
+# $NetBSD: Makefile,v 1.7 2017/07/30 22:32:10 wiz Exp $
 
 DISTNAME=	unf-0.1.4
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/knu/ruby-unf
+HOMEPAGE=	https://github.com/knu/ruby-unf
 COMMENT=	Wrapper library to bring Unicode Normalization Form support
 LICENSE=	mit
 

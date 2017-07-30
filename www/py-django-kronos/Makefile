@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/07/03 13:50:49 adam Exp $
+# $NetBSD: Makefile,v 1.4 2017/07/30 22:32:26 wiz Exp $
 
 DISTNAME=	django-kronos-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-kronos/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://github.com/jgorset/django-kronos
+HOMEPAGE=	https://github.com/jgorset/django-kronos
 COMMENT=	Django application to define and schedule tasks with cron
 LICENSE=	mit
 

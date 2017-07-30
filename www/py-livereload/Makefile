@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/01/21 20:26:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:27 wiz Exp $
 
 DISTNAME=	livereload-2.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl:S/py//}
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lepture/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/lepture/python-livereload/
+HOMEPAGE=	https://github.com/lepture/python-livereload/
 COMMENT=	Python web server for developers
 LICENSE=	2-clause-bsd
 

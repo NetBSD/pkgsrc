@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2017/03/19 15:30:00 taca Exp $
+# $NetBSD: Makefile,v 1.13 2017/07/30 22:32:24 wiz Exp $
 
 DISTNAME=	tilt-2.0.7
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/rtomayko/tilt/
+HOMEPAGE=	https://github.com/rtomayko/tilt/
 COMMENT=	Generic interface to multiple Ruby template engines
 LICENSE=	mit
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2017/07/07 09:37:54 fhajny Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/30 22:32:22 wiz Exp $
 
 DISTNAME=	fast_xml-1.1.23
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/processone/fast_xml/
+HOMEPAGE=	https://github.com/processone/fast_xml/
 COMMENT=	Fast Expat based Erlang XML parsing library
 LICENSE=	apache-2.0
 

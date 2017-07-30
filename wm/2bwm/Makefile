@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/06/04 19:26:55 youri Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:25 wiz Exp $
 
 DISTNAME=	2bwm-20150526
 CATEGORIES=	wm
@@ -7,7 +7,7 @@ GITHUB_PROJECT=	2bwm
 GITHUB_TAG=	dfb0cd1b77ce15e52e3fb9dd4eea653b0959e799
 
 MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	http://github.com/venam/2bwm
+HOMEPAGE=	https://github.com/venam/2bwm
 COMMENT=	Fast floating WM written over the XCB library and derived from mcwm
 LICENSE=	isc
 

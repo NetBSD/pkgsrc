@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/01/20 17:53:09 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:27 wiz Exp $
 
 DISTNAME=	flask-webpack-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl:S/py//}
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nickjj/}
 
 MAINTAINER=	kleink@NetBSD.org
-HOMEPAGE=	http://github.com/nickjj/flask-webpack
+HOMEPAGE=	https://github.com/nickjj/flask-webpack
 COMMENT=	Flask extension to manage assets with Webpack
 LICENSE=	gnu-gpl-v3
 

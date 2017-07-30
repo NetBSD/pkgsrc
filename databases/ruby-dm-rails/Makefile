@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2017/06/21 15:42:10 taca Exp $
+# $NetBSD: Makefile,v 1.7 2017/07/30 22:32:13 wiz Exp $
 
 DISTNAME=	dm-rails-1.2.1
 PKGREVISION=	3
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/datamapper/dm-rails
+HOMEPAGE=	https://github.com/datamapper/dm-rails
 COMMENT=	DataMapper for Rubu on Rails
 LICENSE=	mit
 

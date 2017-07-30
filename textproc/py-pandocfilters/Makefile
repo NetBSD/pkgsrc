@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/04/23 05:09:46 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:24 wiz Exp $
 
 DISTNAME=	pandocfilters-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandocfilters/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/jgm/pandocfilters
+HOMEPAGE=	https://github.com/jgm/pandocfilters
 COMMENT=	Utilities for writing pandoc filters in python
 LICENSE=	modified-bsd
 
