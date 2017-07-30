@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2017/06/28 15:19:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.138 2017/07/30 22:47:52 wiz Exp $
 
 DISTNAME=	gnome-2.26.2
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
 MAINTAINER=	drochner@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Meta-package for the GNOME desktop
 
 META_PACKAGE=	yes
