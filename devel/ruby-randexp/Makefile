@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/03/17 14:41:08 taca Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/30 22:32:17 wiz Exp $
 
 DISTNAME=	randexp-0.1.7
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/benburkert/randexp
+HOMEPAGE=	https://github.com/benburkert/randexp
 COMMENT=	Library for generating random strings
 LICENSE=	mit
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2017/06/21 15:42:10 taca Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/30 22:32:12 wiz Exp $
 
 DISTNAME=	dm-active_model-1.2.1
 PKGREVISION=	3
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/datamapper/dm-active_model
+HOMEPAGE=	https://github.com/datamapper/dm-active_model
 COMMENT=	Plugin to make datamapper active_model compliant
 LICENSE=	mit
 

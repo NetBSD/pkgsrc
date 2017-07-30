@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2016/03/05 11:27:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2017/07/30 22:32:10 wiz Exp $
 #
 
 DISTNAME=	mxcl-liblastfm-0.3.3-0-gf0b3239
@@ -8,7 +8,7 @@ CATEGORIES=	audio net
 MASTER_SITES=	http://download.github.com/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/mxcl/liblastfm
+HOMEPAGE=	https://github.com/mxcl/liblastfm
 COMMENT=	Library for accessing last.fm
 LICENSE=	gnu-gpl-v2
 

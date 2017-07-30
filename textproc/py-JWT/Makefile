@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/07/07 08:14:41 adam Exp $
+# $NetBSD: Makefile,v 1.5 2017/07/30 22:32:23 wiz Exp $
 
 DISTNAME=	PyJWT-1.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
@@ -6,7 +6,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyJWT/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/jpadilla/pyjwt
+HOMEPAGE=	https://github.com/jpadilla/pyjwt
 COMMENT=	JSON Web Token implementation in Python
 LICENSE=	mit
 

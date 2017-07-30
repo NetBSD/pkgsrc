@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2011/12/16 14:40:32 taca Exp $
+# $NetBSD: Makefile,v 1.4 2017/07/30 22:32:12 wiz Exp $
 
 DISTNAME=	dm-aggregates-1.2.0
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/datamapper/dm-aggregates
+HOMEPAGE=	https://github.com/datamapper/dm-aggregates
 COMMENT=	DataMapper plugin for aggregates on collections
 LICENSE=	mit
 

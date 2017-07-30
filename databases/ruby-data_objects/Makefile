@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2016/02/16 14:24:15 taca Exp $
+# $NetBSD: Makefile,v 1.13 2017/07/30 22:32:11 wiz Exp $
 
 DISTNAME=	data_objects-0.10.17
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/datamapper/do
+HOMEPAGE=	https://github.com/datamapper/do
 COMMENT=	DataObjects basic API and shared driver specifications
 LICENSE=	mit
 

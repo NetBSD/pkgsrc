@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/01 12:37:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/30 22:32:22 wiz Exp $
 
 DISTNAME=	pathtools-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pathtools/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/gorakhargosh/pathtools
+HOMEPAGE=	https://github.com/gorakhargosh/pathtools
 COMMENT=	File system general utilities
 LICENSE=	mit
 

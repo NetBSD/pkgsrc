@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2017/04/22 17:19:47 taca Exp $
+# $NetBSD: Makefile,v 1.13 2017/07/30 22:32:28 wiz Exp $
 
 DISTNAME=	pygments.rb-1.1.2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/tmm1/pygments.rb
+HOMEPAGE=	https://github.com/tmm1/pygments.rb
 COMMENT=	Pygments wrapper for ruby
 LICENSE=	mit
 

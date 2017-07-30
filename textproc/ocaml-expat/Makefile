@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/07/11 12:38:24 jaapb Exp $
+# $NetBSD: Makefile,v 1.13 2017/07/30 22:32:23 wiz Exp $
 #
 
 VERSION=	1.0.0
@@ -9,7 +9,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=whitequark/}
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://github.com/whitequark/ocaml-expat
+HOMEPAGE=	https://github.com/whitequark/ocaml-expat
 COMMENT=	OCaml bindings for the expat library
 LICENSE=	mit
 

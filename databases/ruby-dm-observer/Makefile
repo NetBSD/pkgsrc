@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/17 17:29:57 taca Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:13 wiz Exp $
 
 DISTNAME=	dm-observer-1.2.0
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/datamapper/dm-observer
+HOMEPAGE=	https://github.com/datamapper/dm-observer
 COMMENT=	DataMapper plugin for observing Resources
 LICENSE=	mit
 

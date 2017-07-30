@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2013/03/17 15:53:21 taca Exp $
+# $NetBSD: Makefile,v 1.5 2017/07/30 22:32:27 wiz Exp $
 
 DISTNAME=	cssmin-1.0.3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/rgrove/cssmin/
+HOMEPAGE=	https://github.com/rgrove/cssmin/
 COMMENT=	Ruby library for minifying CSS
 LICENSE=	modified-bsd
 

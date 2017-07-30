@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2013/03/02 20:33:24 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/07/30 22:32:13 wiz Exp $
 
 DISTNAME=	dm-mysql-adapter-1.2.0
 PKGREVISION=	2
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/datamapper/dm-mysql-adapter
+HOMEPAGE=	https://github.com/datamapper/dm-mysql-adapter
 COMMENT=	MySQL Adapter for DataMapper
 LICENSE=	mit
 

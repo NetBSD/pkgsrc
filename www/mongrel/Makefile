@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2014/03/13 11:08:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2017/07/30 22:32:25 wiz Exp $
 
 DISTNAME=	mongrel-1.1.5
 PKGREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://github.com/fauna/mongrel
+HOMEPAGE=	https://github.com/fauna/mongrel
 COMMENT=	Fast HTTP library and server for Ruby
 LICENSE=	gnu-gpl-v2 OR ruby-license
 

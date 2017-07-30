@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2017/04/22 16:43:35 taca Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/30 22:32:21 wiz Exp $
 
 DISTNAME=	sshkit-1.13.1
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/capistrano/sshkit/
+HOMEPAGE=	https://github.com/capistrano/sshkit/
 COMMENT=	Makes it easy to write structured, testable SSH commands
 LICENSE=	mit
 

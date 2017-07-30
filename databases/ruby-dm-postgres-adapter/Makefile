@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/17 17:30:36 taca Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:13 wiz Exp $
 
 DISTNAME=	dm-postgres-adapter-1.2.0
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/datamapper/dm-postgres-adapter
+HOMEPAGE=	https://github.com/datamapper/dm-postgres-adapter
 COMMENT=	PostgreSQL Adapter for DataMapper
 LICENSE=	mit
 

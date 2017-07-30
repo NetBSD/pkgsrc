@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2016/09/18 13:38:17 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2017/07/30 22:32:17 wiz Exp $
 
 DISTNAME=	rebar-2.6.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rebar/}
 
 MAINTAINER=	reinoud@NetBSD.org
-HOMEPAGE=	http://github.com/rebar/rebar/
+HOMEPAGE=	https://github.com/rebar/rebar/
 COMMENT=	Rebar is an Erlang build tool
 LICENSE=	apache-2.0
 
