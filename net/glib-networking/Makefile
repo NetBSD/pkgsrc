@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2016/09/19 13:04:25 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2017/07/30 22:47:53 wiz Exp $
 #
 
 DISTNAME=	glib-networking-2.48.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glib-networking/${PKGVERSION_NOREV:R}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Network-related giomodules for glib
 LICENSE=	gnu-lgpl-v2
 

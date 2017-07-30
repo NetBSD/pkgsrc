@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2017/01/01 14:43:59 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2017/07/30 22:47:56 wiz Exp $
 
 DISTNAME=	gnome-doc-utils-0.20.10
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-doc-utils/0.20/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Documentation utilities for the GNOME project
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2017/05/19 13:29:04 prlw1 Exp $
+# $NetBSD: Makefile,v 1.41 2017/07/30 22:47:54 wiz Exp $
 #
 
 DISTNAME=	libgnomecups-0.2.3
@@ -7,7 +7,7 @@ CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomecups/0.2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	GNOME interface to CUPS
 
 USE_TOOLS+=		intltool msgfmt pkg-config gmake

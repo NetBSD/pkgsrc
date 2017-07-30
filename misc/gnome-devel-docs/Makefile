@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/08 09:57:23 asau Exp $
+# $NetBSD: Makefile,v 1.9 2017/07/30 22:47:52 wiz Exp $
 #
 
 DISTNAME=	gnome-devel-docs-2.26.2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-devel-docs/2.26/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	The GNOME 2 developer's guide
 LICENSE=	gnu-fdl-v1.1
 

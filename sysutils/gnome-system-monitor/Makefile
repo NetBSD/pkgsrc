@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2017/05/10 12:47:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.52 2017/07/30 22:47:55 wiz Exp $
 #
 
 DISTNAME=	gnome-system-monitor-2.28.2
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-system-monitor/2.28/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	GNOME 2 system monitor program
 
 USE_LIBTOOL=		yes

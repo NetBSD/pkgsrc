@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2012/10/06 14:10:47 asau Exp $
+# $NetBSD: Makefile.common,v 1.9 2017/07/30 22:47:51 wiz Exp $
 #
 # used by graphics/eog-plugins/Makefile
 # used by graphics/eog-plugins-map/Makefile
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog-plugins/2.30/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 #LICENSE=	# TODO: (see mk/license.mk)
 
 DISTINFO_FILE=	${.CURDIR}/../../graphics/eog-plugins/distinfo

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2017/04/22 21:04:02 adam Exp $
+# $NetBSD: Makefile,v 1.80 2017/07/30 22:47:57 wiz Exp $
 #
 # PKGNAME derives from the supported API (still from
 # release 3.14). See also PLIST.
@@ -12,7 +12,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkhtml/3.32/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Lightweight HTML rendering/printing/editing engine
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 

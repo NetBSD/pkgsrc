@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2017/04/22 21:03:19 adam Exp $
+# $NetBSD: Makefile,v 1.89 2017/07/30 22:47:57 wiz Exp $
 #
 
 DISTNAME=	gnome-control-center-2.32.1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-control-center/2.32/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	GNOME2 configuration utility
 LICENSE=	gnu-gpl-v2
 

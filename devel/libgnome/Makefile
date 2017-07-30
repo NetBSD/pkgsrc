@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2017/02/12 06:24:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.113 2017/07/30 22:47:49 wiz Exp $
 #
 
 DISTNAME=	libgnome-2.32.1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.32/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Core GNOME2 library (non-graphical)
 LICENSE=	gnu-lgpl-v2
 

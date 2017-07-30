@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/04/22 23:11:01 prlw1 Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/30 22:47:56 wiz Exp $
 
 DISTNAME=	gsettings-desktop-schemas-3.20.0
 CATEGORIES=	sysutils gnome
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gsettings-desktop-schemas/${PKGVERSIO
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Collection of GSettings schemas for the GNOME desktop
 LICENSE=	gnu-lgpl-v2.1
 

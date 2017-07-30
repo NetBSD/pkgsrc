@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/04/22 21:03:48 adam Exp $
+# $NetBSD: Makefile,v 1.30 2017/07/30 22:47:54 wiz Exp $
 #
 
 DISTNAME=	grilo-0.2.7
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/grilo/0.2/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Media browser framework
 LICENSE=	gnu-lgpl-v2
 
