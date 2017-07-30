@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3046 2017/07/30 11:03:18 martin Exp $
+$NetBSD: CHANGES-2017,v 1.3047 2017/07/30 13:22:28 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4232,3 +4232,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-daemon to 2.1.2 [adam 2017-07-30]
 	Updated devel/py-test-xdist to 1.18.2 [adam 2017-07-30]
 	Updated misc/open2300 to 1.10nb1 [martin 2017-07-30]
+	Added games/fortunes-it version 1.99 [leot 2017-07-30]
