@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/10/20 12:13:33 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2017/07/30 22:32:18 wiz Exp $
 
 DISTNAME=	snappy-java-${SNAPPYVER}
 PKGNAME=	${DISTNAME:S/java/java10/}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xerial/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://github.com/xerial/snappy-java/
+HOMEPAGE=	https://github.com/xerial/snappy-java/
 COMMENT=	Snappy compressor/decompressor for Java
 LICENSE=	apache-2.0
 

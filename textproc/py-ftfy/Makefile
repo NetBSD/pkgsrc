@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/01/12 00:48:24 rodent Exp $
+# $NetBSD: Makefile,v 1.7 2017/07/30 22:32:23 wiz Exp $
 
 DISTNAME=	ftfy-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	python textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/ftfy/}
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	http://github.com/LuminosoInsight/python-ftfy
+HOMEPAGE=	https://github.com/LuminosoInsight/python-ftfy
 COMMENT=	Fixes some problems with Unicode text after the fact
 LICENSE=	mit
 

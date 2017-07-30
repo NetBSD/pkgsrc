@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/06/21 19:09:21 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:26 wiz Exp $
 
 DISTNAME=	daphne-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/daphne/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://github.com/django/daphne
+HOMEPAGE=	https://github.com/django/daphne
 COMMENT=	HTTP, HTTP2 and WebSocket protocol server for ASGI
 LICENSE=	modified-bsd
 

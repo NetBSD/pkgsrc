@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2014/03/14 17:26:06 taca Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/30 22:32:19 wiz Exp $
 
 DISTNAME=	configuration-1.3.4
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/ahoward/configuration
+HOMEPAGE=	https://github.com/ahoward/configuration
 COMMENT=	Library for loading Ruby configuration files
 
 pre-configure:

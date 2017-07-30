@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/11/25 12:50:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2017/07/30 22:32:18 wiz Exp $
 #
 
 DISTNAME=	dbskkd-cdb-2.00
@@ -7,7 +7,7 @@ CATEGORIES=	inputmethod japanese
 MASTER_SITES=	http://dbskkd-cdb.googlecode.com/files/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://github.com/jj1bdx/dbskkd-cdb
+HOMEPAGE=	https://github.com/jj1bdx/dbskkd-cdb
 COMMENT=	SKK dictionary server based on cdb
 LICENSE=	gnu-gpl-v3
 

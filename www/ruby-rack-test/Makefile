@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2015/03/13 17:32:49 taca Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/30 22:32:28 wiz Exp $
 
 DISTNAME=	rack-test-0.6.3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/brynary/rack-test
+HOMEPAGE=	https://github.com/brynary/rack-test
 COMMENT=	Simple testing API built on Rack
 LICENSE=	mit
 

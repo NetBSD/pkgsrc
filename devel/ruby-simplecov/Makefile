@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2017/03/20 12:32:45 taca Exp $
+# $NetBSD: Makefile,v 1.18 2017/07/30 22:32:17 wiz Exp $
 
 DISTNAME=	simplecov-0.14.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/colszowka/simplecov
+HOMEPAGE=	https://github.com/colszowka/simplecov
 COMMENT=	Code coverage for Ruby 1.9
 LICENSE=	mit
 

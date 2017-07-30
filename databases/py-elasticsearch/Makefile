@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/04/03 14:20:17 fhajny Exp $
+# $NetBSD: Makefile,v 1.13 2017/07/30 22:32:11 wiz Exp $
 
 DISTNAME=	elasticsearch-py-5.3.0
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elastic/}
 
 MAINTAINER=	imil@NetBSD.org
-HOMEPAGE=	http://github.com/elastic/elasticsearch-py/
+HOMEPAGE=	https://github.com/elastic/elasticsearch-py/
 COMMENT=	Official low-level python client for Elasticsearch
 LICENSE=	apache-2.0
 

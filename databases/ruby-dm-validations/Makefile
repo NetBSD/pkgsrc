@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2011/12/16 14:48:48 taca Exp $
+# $NetBSD: Makefile,v 1.4 2017/07/30 22:32:14 wiz Exp $
 
 DISTNAME=	dm-validations-1.2.0
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/datamapper/dm-validations
+HOMEPAGE=	https://github.com/datamapper/dm-validations
 COMMENT=	Library for validations on DM models and pure Ruby object
 LICENSE=	mit
 

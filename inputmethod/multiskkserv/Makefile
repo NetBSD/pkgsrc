@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/11/25 12:50:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2017/07/30 22:32:19 wiz Exp $
 #
 
 DISTNAME=	multiskkserv-20100128-ac
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://github.com/sina-ht/multiskkserv/
+HOMEPAGE=	https://github.com/sina-ht/multiskkserv/
 COMMENT=	Simple skk multi-dictionary server
 LICENSE=	gnu-gpl-v2
 

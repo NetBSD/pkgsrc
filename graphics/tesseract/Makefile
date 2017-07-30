@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2017/06/14 14:41:26 fhajny Exp $
+# $NetBSD: Makefile,v 1.29 2017/07/30 22:32:18 wiz Exp $
 
 DISTNAME=	tesseract-3.05.01
 CATEGORIES=	graphics
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=tesseract-ocr/}
 DISTFILES=	${DEFAULT_DISTFILES}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/tesseract-ocr/tesseract/
+HOMEPAGE=	https://github.com/tesseract-ocr/tesseract/
 COMMENT=	Tesseract Open Source OCR Engine
 LICENSE=	apache-2.0
 

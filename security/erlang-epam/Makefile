@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2017/07/07 09:34:06 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/30 22:32:21 wiz Exp $
 
 DISTNAME=	epam-1.0.3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/processone/epam/
+HOMEPAGE=	https://github.com/processone/epam/
 COMMENT=	epam helper for Erlang / Elixir PAM authentication support
 LICENSE=	gnu-gpl-v2
 

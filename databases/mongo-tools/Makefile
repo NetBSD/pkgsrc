@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2017/05/03 16:49:54 fhajny Exp $
+# $NetBSD: Makefile,v 1.12 2017/07/30 22:32:11 wiz Exp $
 
 DISTNAME=	mongo-tools-3.4.4
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 
 MAINTAINER=	filip@joyent.com
-HOMEPAGE=	http://github.com/mongodb/mongo-tools/
+HOMEPAGE=	https://github.com/mongodb/mongo-tools/
 COMMENT=	MongoDB CLI tools
 LICENSE=	apache-2.0
 

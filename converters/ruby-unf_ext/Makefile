@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2017/04/22 16:11:03 taca Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/30 22:32:10 wiz Exp $
 
 DISTNAME=	unf_ext-0.0.7.4
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/knu/ruby-unf_ext
+HOMEPAGE=	https://github.com/knu/ruby-unf_ext
 COMMENT=	Unicode Normalization Form support library for CRuby
 LICENSE=	mit
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2017/06/10 16:19:25 taca Exp $
+# $NetBSD: Makefile,v 1.7 2017/07/30 22:32:24 wiz Exp $
 
 DISTNAME=	xpath-2.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	ruby textproc
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	http://github.com/jnicklas/xpath
+HOMEPAGE=	https://github.com/jnicklas/xpath
 COMMENT=	Ruby DSL for generating XPath expressions
 LICENSE=	mit
 

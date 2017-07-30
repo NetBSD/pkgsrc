@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/01/16 19:19:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2017/07/30 22:32:10 wiz Exp $
 
 DISTNAME=	eredis-1.0.8
 PKGNAME=	erlang-${DISTNAME}.20150910
@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wooga/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/wooga/eredis/
+HOMEPAGE=	https://github.com/wooga/eredis/
 COMMENT=	Erlang Redis client
 LICENSE=	mit
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2017/06/18 13:48:54 taca Exp $
+# $NetBSD: Makefile,v 1.11 2017/07/30 22:32:28 wiz Exp $
 
 DISTNAME=	rack-protection-2.0.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/rkh/rack-protection
+HOMEPAGE=	https://github.com/rkh/rack-protection
 COMMENT=	Protection for against typical web attacks for Rack application
 LICENSE=	mit
 

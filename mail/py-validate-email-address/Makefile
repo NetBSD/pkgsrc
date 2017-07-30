@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:34 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/07/30 22:32:19 wiz Exp $
 
 DISTNAME=	validate-email-address-1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/validate-email-address/}
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	http://github.com/heropunch/validate-email-address
+HOMEPAGE=	https://github.com/heropunch/validate-email-address
 COMMENT=	Verify if an email address is valid and really exists
 LICENSE=	gnu-lgpl-v3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/07/17 08:03:50 adam Exp $
+# $NetBSD: Makefile,v 1.16 2017/07/30 22:32:20 wiz Exp $
 
 DISTNAME=	billiard-3.5.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/billiard/}
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	http://github.com/celery/billiard
+HOMEPAGE=	https://github.com/celery/billiard
 COMMENT=	Python multiprocessing fork with improvements and bugfixes
 LICENSE=	modified-bsd
 

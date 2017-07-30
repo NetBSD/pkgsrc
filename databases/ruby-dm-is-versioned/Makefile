@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/17 17:28:21 taca Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:13 wiz Exp $
 
 DISTNAME=	dm-is-versioned-1.2.0
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/datamapper/dm-is-versioned
+HOMEPAGE=	https://github.com/datamapper/dm-is-versioned
 COMMENT=	DataMapper plugin enabling simple versioning of models
 LICENSE=	mit
 

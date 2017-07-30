@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/07/05 17:20:59 stacktic Exp $
+# $NetBSD: Makefile,v 1.24 2017/07/30 22:32:20 wiz Exp $
 #
 
 VERSION=		20130705
@@ -9,7 +9,7 @@ CATEGORIES=		misc
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/stacktic/
 
 MAINTAINER=		stacktic@NetBSD.org
-HOMEPAGE=		http://github.com/anttikantee/buildrump.sh
+HOMEPAGE=		https://github.com/anttikantee/buildrump.sh
 COMMENT=		Virtualized NetBSD kernel components in userspace
 LICENSE=		2-clause-bsd
 USE_TOOLS+=		pax

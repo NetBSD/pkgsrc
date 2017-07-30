@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2015/10/04 12:30:56 taca Exp $
+# $NetBSD: Makefile,v 1.8 2017/07/30 22:32:18 wiz Exp $
 
 DISTNAME=	uglifier-2.7.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/lautis/uglifier
+HOMEPAGE=	https://github.com/lautis/uglifier
 COMMENT=	Ruby wrapper for UglifyJS JavaScript compressor
 LICENSE=	mit
 

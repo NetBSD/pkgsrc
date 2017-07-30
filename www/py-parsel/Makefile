@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/05/20 05:40:35 adam Exp $
+# $NetBSD: Makefile,v 1.4 2017/07/30 22:32:27 wiz Exp $
 
 DISTNAME=	parsel-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/parsel/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/scrapy/parsel
+HOMEPAGE=	https://github.com/scrapy/parsel
 COMMENT=	Library to extract data from HTML and XML using XPath and CSS
 LICENSE=	modified-bsd
 

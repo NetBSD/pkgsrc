@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/06/21 10:27:55 adam Exp $
+# $NetBSD: Makefile,v 1.7 2017/07/30 22:32:15 wiz Exp $
 
 DISTNAME=	argh-0.26.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/argh/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/neithere/argh/
+HOMEPAGE=	https://github.com/neithere/argh/
 COMMENT=	Unobtrusive argparse wrapper with natural syntax
 LICENSE=	gnu-lgpl-v3
 
