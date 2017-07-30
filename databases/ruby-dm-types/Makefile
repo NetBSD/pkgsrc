@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2017/06/21 13:34:27 taca Exp $
+# $NetBSD: Makefile,v 1.13 2017/07/30 22:32:14 wiz Exp $
 
 DISTNAME=	dm-types-1.2.2
 PKGREVISION=	2
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/datamapper/dm-types
+HOMEPAGE=	https://github.com/datamapper/dm-types
 COMMENT=	DataMapper plugin providing extra data types
 LICENSE=	mit
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2011/08/12 17:18:16 taca Exp $
+# $NetBSD: Makefile,v 1.5 2017/07/30 22:32:24 wiz Exp $
 
 DISTNAME=	feed-normalizer-1.5.2
 PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://github.com/aasmith/feed-normalizer
+HOMEPAGE=	https://github.com/aasmith/feed-normalizer
 COMMENT=	Extensible Ruby wrapper for Atom and RSS parsers
 LICENSE=	modified-bsd
 
