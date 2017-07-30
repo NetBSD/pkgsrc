@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/09/27 10:11:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/30 22:32:20 wiz Exp $
 
 DISTNAME=	HElib-20130501
 CATEGORIES=	security
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://github.com/shaih/HElib/
+HOMEPAGE=	https://github.com/shaih/HElib/
 COMMENT=	Homeomorphic Encryption library
 LICENSE=	gnu-gpl-v2
 

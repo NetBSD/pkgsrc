@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2016/02/16 14:21:45 taca Exp $
+# $NetBSD: Makefile,v 1.13 2017/07/30 22:32:11 wiz Exp $
 
 DISTNAME=	arel-7.0.0
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/rails/arel
+HOMEPAGE=	https://github.com/rails/arel
 COMMENT=	Arel is a SQL AST manager for Ruby
 LICENSE=	mit
 
