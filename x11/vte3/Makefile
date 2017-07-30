@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/06/26 14:29:31 youri Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/30 22:47:59 wiz Exp $
 #
 
 DISTNAME=	vte-0.38.4
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.38/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Terminal widget with improved accessibility and I18N support
 LICENSE=	gnu-lgpl-v2
 

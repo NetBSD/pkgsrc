@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2017/04/22 21:03:17 adam Exp $
+# $NetBSD: Makefile,v 1.172 2017/07/30 22:47:56 wiz Exp $
 
 DISTNAME=	epiphany-2.30.6
 PKGREVISION=	53
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/2.30/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/projects/epiphany/
+HOMEPAGE=	https://www.gnome.org/projects/epiphany/
 COMMENT=	The web browser for the GNOME Desktop
 
 GNU_CONFIGURE=		YES
