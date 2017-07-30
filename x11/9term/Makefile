@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/01/04 04:36:47 dholland Exp $
+# $NetBSD: Makefile,v 1.26 2017/07/30 22:41:36 wiz Exp $
 
 DISTNAME=		9term.1.6.3
 PKGNAME=		9term-1.6.3
@@ -7,7 +7,7 @@ CATEGORIES=		plan9 x11
 MASTER_SITES=		# ftp://ftp.ecf.toronto.edu/pub/plan9/matty/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.psrg.cs.usyd.edu.au/~matty/9term/index.html
+#HOMEPAGE=		http://www.psrg.cs.usyd.edu.au/~matty/9term/index.html
 COMMENT=		X11 program which emulates a plan9 window
 
 BUILDLINK_DEPMETHOD.sam=	full
