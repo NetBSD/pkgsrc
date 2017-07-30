@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/12/30 11:16:59 jaapb Exp $
+# $NetBSD: Makefile,v 1.10 2017/07/30 22:32:15 wiz Exp $
 
 VERSION=	1.6
 GITHUB_PROJECT=	optcomp
@@ -9,7 +9,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=diml/}
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://github.com/diml/optcomp/
+HOMEPAGE=	https://github.com/diml/optcomp/
 COMMENT=	OCaml syntax extension for optional compilation
 LICENSE=	modified-bsd
 

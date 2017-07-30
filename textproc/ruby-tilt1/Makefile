@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/03/19 16:02:43 taca Exp $
+# $NetBSD: Makefile,v 1.3 2017/07/30 22:32:24 wiz Exp $
 
 DISTNAME=	tilt-1.4.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/tilt/tilt1/}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/rtomayko/tilt/
+HOMEPAGE=	https://github.com/rtomayko/tilt/
 COMMENT=	Generic interface to multiple Ruby template engines
 LICENSE=	mit
 
