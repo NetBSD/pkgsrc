@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.11 2017/04/30 05:10:32 adam Exp $
+$NetBSD: distinfo,v 1.11.2.1 2017/07/30 04:57:58 spz Exp $
 
-SHA1 (mysql-5.7.18.tar.gz) = d53fdc5f392af138cd66e13ee6d4e865767181e7
-RMD160 (mysql-5.7.18.tar.gz) = 40264f1c4a9113d6c84356488d2a2a7bc80920ad
-SHA512 (mysql-5.7.18.tar.gz) = 88f8df96008d44328d184402dadf1dc54d5522fd4b0aebc8de8a6c11b4f38ae15d8b7f8112d8ff0015d6d46de11ef9275e1e2fd6b757afafce2a53503d3970dc
-Size (mysql-5.7.18.tar.gz) = 51567774 bytes
+SHA1 (mysql-5.7.19.tar.gz) = 2420bd5f12664c18313779668a8256aea53e52a0
+RMD160 (mysql-5.7.19.tar.gz) = 69f52cee63fe1344c487bd40e027a7dc57d067f7
+SHA512 (mysql-5.7.19.tar.gz) = 04296e480fc91381137a32d064f6d33d0a96b28ae64ca1202ef045a8e78434a61e81d83e36b8bfa7fccdcf37f1b65e955b4466c7d036bc014cecac83f0c4b1cf
+Size (mysql-5.7.19.tar.gz) = 51686763 bytes
 SHA1 (patch-CMakeLists.txt) = b47592cf8801538375da3df2990fde4d292fc365
 SHA1 (patch-client_CMakeLists.txt) = 304023577ab9c2152ca21fa9ff4895a22a321adf
 SHA1 (patch-client_completion_hash.cc) = b86ec80beac624b2aa21c7587e351ff126400ecb
@@ -18,10 +18,11 @@ SHA1 (patch-include_my__compare.h) = f45bac4b488332a668b0005751856279b67401f5
 SHA1 (patch-include_my__global.h) = 3870266cb1dd2cd0d58417dfe21bab19b62100e2
 SHA1 (patch-include_my__thread.h) = 0f095acf94f8d130516dc4d858de1c64dd2bc127
 SHA1 (patch-include_my__thread__os__id.h) = a51861b791086a0eeb9cb4d64892c5033da8c8eb
-SHA1 (patch-libmysql_CMakeLists.txt) = 0105627fb9a5be56eaf21cda927589e0ffd99758
+SHA1 (patch-libmysql_CMakeLists.txt) = 00ce9c7f0e2c4132b872ffde05ee74e81c280f68
 SHA1 (patch-mysql-test_CMakeLists.txt) = 4ba56ce255f5f89d9aece93181e54ddb572f301b
 SHA1 (patch-mysys__ssl_CMakeLists.txt) = 7ec44642cd13c5477175a94a007354c583ca9c3c
 SHA1 (patch-mysys_kqueue__timers.c) = 836803e9c7353b813bc22a5b69cc263dea384c9b
+SHA1 (patch-mysys_my__symlink.c) = 23b57cd5922357d0bc72f5c15100a9fe1f89cfb2
 SHA1 (patch-mysys_stacktrace.c) = 3e0794f544f0e35f44a694330885478247657842
 SHA1 (patch-rapid_plugin_group__replication_libmysqlgcs_src_bindings_xcom_xcom_sock__probe__ix.c) = 1a389fca13ada1be74d96276e11baee16bbc2363
 SHA1 (patch-rapid_plugin_group__replication_libmysqlgcs_src_bindings_xcom_xcom_xcom__memory.c) = 7077900830f904c74c79439b856d9d176fc27f15
