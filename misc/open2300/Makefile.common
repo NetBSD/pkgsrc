@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.8 2015/12/12 22:57:22 wiedi Exp $
+# $NetBSD: Makefile.common,v 1.9 2017/07/30 11:02:33 martin Exp $
 #
 # used by misc/open2300-mysql/Makefile
 
 DISTNAME=		open2300-1.10
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=open2300/}
+PKGREVISION=		1
 
 MAINTAINER=		martin@NetBSD.org
 HOMEPAGE=		http://www.lavrsen.dk/twiki/bin/view/Open2300/WebHome
