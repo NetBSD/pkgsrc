@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2016/06/08 17:43:20 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/07/31 13:11:27 adam Exp $
 
-DISTNAME=		pyserial-2.7
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
-CATEGORIES=		comms python
-MASTER_SITES=		${MASTER_SITE_PYPI:=p/pyserial/}
+DISTNAME=	pyserial-3.4
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
+CATEGORIES=	comms python
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyserial/}
 
-MAINTAINER=		tsarna@NetBSD.org
-HOMEPAGE=		http://pyserial.sourceforge.net/
-COMMENT=		Python Serial Port Extension
-LICENSE=		python-software-foundation
+MAINTAINER=	tsarna@NetBSD.org
+HOMEPAGE=	https://github.com/pyserial/pyserial
+COMMENT=	Python Serial Port Extension
+LICENSE=	modified-bsd
 
 CONFLICTS+=		${PYPKGPREFIX}-pyserial-[0-9]*
 
@@ -36,6 +36,9 @@ REPLACE_PYTHON+=	serial/urlhandler/protocol_rfc2217.py
 REPLACE_PYTHON+=	serial/urlhandler/protocol_socket.py
 REPLACE_PYTHON+=	serial/win32.py
 
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} miniterm.py miniterm${PYVERSSUFFIX} || ${TRUE}
+
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
