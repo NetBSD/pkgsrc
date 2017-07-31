@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/01/02 02:19:46 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/07/31 20:38:51 schmonz Exp $
 bin/imapfront-auth
 bin/mailfront
 bin/pop3front-auth
@@ -21,6 +21,7 @@ lib/mailfront/plugin-clamav.so
 lib/mailfront/plugin-counters.so
 lib/mailfront/plugin-cvm-authenticate.so
 lib/mailfront/plugin-cvm-validate.so
+${PLIST.lua}lib/mailfront/plugin-lua.so
 lib/mailfront/plugin-mailrules.so
 lib/mailfront/plugin-patterns.so
 lib/mailfront/plugin-qmail-validate.so
