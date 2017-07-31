@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/01/11 00:11:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/07/31 14:18:20 taca Exp $
 include/git2.h
 include/git2/annotated_commit.h
 include/git2/attr.h
@@ -78,7 +78,8 @@ include/git2/transport.h
 include/git2/tree.h
 include/git2/types.h
 include/git2/version.h
+include/git2/worktree.h
 lib/libgit2.so
-lib/libgit2.so.0.25.1
-lib/libgit2.so.25
+lib/libgit2.so.${PKGVERSION}
+lib/libgit2.so.26
 lib/pkgconfig/libgit2.pc
