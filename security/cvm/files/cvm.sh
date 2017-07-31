@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: cvm.sh,v 1.2 2017/04/27 20:21:51 schmonz Exp $
+# $NetBSD: cvm.sh,v 1.3 2017/07/31 20:34:17 schmonz Exp $
 #
 
 # PROVIDE: cvm
@@ -10,7 +10,7 @@ name="cvm"
 
 # User-settable rc.conf variables and their default values:
 : ${cvm_postenv:="CVM_LOOKUP_SECRET=''"}
-: ${cvm_datalimit:="9000000"}
+: ${cvm_datalimit:="180000000"}
 : ${cvm_module:="qmail"}
 : ${cvm_protocol:="local"}
 : ${cvm_log:="YES"}
@@ -31,11 +31,11 @@ cvm_precmd()
 		cvm_logcmd=${cvm_nologcmd}
 	fi
 	umask 0
-	command="@SETENV@ - ${cvm_postenv}
+	command="@PREFIX@/bin/pgrphack @SETENV@ - ${cvm_postenv}
 @PREFIX@/bin/softlimit -m ${cvm_datalimit} @PREFIX@/bin/cvm-${cvm_module}
 cvm-${cvm_protocol}:@VARBASE@/run/cvm-${cvm_module}
 2>&1 |
-@PREFIX@/bin/setuidgid cvmlog ${cvm_logcmd}"
+@PREFIX@/bin/pgrphack @PREFIX@/bin/setuidgid cvmlog ${cvm_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
