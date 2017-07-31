@@ -1,7 +1,0 @@
-`multiprocessing` is a back port of the Python 2.6/3.0
-`multiprocessing <http://docs.python.org/library/multiprocessing.html>`
-package. The multiprocessing package itself is a renamed and updated version
-of R Oudkerk's `pyprocessing <http://pypi.python.org/pypi/processing/>`
-package.
-This standalone variant is intended to be compatible with Python 2.4 and 2.5,
-and will draw it's fixes/improvements from python-trunk.

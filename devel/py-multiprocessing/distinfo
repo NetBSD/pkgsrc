@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:11 agc Exp $
-
-SHA1 (multiprocessing-2.6.2.1.tar.gz) = a8f78d818a3960e003c1f9f1ec6eaac704d3e6ac
-RMD160 (multiprocessing-2.6.2.1.tar.gz) = 87412f3054ae4e5c17a9aba73970d96fd192aec5
-SHA512 (multiprocessing-2.6.2.1.tar.gz) = c9d00c2cc1785f79562c397cb6f5b94ba19d06addb3e95600daa01719b383c880f6e727d80d6a0bde1677ccf40d75cc72f622f567af2ca995297cfc617174e52
-Size (multiprocessing-2.6.2.1.tar.gz) = 108003 bytes
-SHA1 (patch-aa) = 9baaf59c02777e19d7c74f540e474f174a6b222f
