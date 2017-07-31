@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/08/14 16:09:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/07/31 05:18:56 adam Exp $
 bin/modulegraph${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -13,9 +13,6 @@ ${PYSITELIB}/modulegraph/__init__.pyo
 ${PYSITELIB}/modulegraph/__main__.py
 ${PYSITELIB}/modulegraph/__main__.pyc
 ${PYSITELIB}/modulegraph/__main__.pyo
-${PYSITELIB}/modulegraph/_compat.py
-${PYSITELIB}/modulegraph/_compat.pyc
-${PYSITELIB}/modulegraph/_compat.pyo
 ${PYSITELIB}/modulegraph/find_modules.py
 ${PYSITELIB}/modulegraph/find_modules.pyc
 ${PYSITELIB}/modulegraph/find_modules.pyo
