@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2016/03/08 15:01:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/07/31 14:08:41 taca Exp $
 bin/r2r_show${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
-${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/History.rdoc
 ${GEM_LIBDIR}/Manifest.txt
-${GEM_LIBDIR}/README.txt
+${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/r2r_show
 ${GEM_LIBDIR}/lib/ruby2ruby.rb
