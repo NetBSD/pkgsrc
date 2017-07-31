@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2017/04/22 16:07:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2017/07/31 13:42:06 taca Exp $
 bin/arpaname
 bin/bind9-config
 bin/dig
@@ -375,7 +375,7 @@ sbin/nsec3hash
 sbin/rndc
 sbin/rndc-confgen
 share/doc/bind9/CHANGES
-share/doc/bind9/FAQ
+share/doc/bind9/FAQ.xml
 share/doc/bind9/README
 share/doc/bind9/arm/Bv9ARM.ch01.html
 share/doc/bind9/arm/Bv9ARM.ch02.html
