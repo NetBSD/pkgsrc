@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3050 2017/07/30 19:32:29 nros Exp $
+$NetBSD: CHANGES-2017,v 1.3051 2017/07/31 05:16:30 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4241,3 +4241,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-macholib to 1.8 [adam 2017-07-30]
 	Updated devel/py-py to 1.4.34 [adam 2017-07-30]
 	Updated lang/qore to 0.8.12.11 [nros 2017-07-30]
+	Updated mail/cyrus-imapd24 to 2.4.18nb2 [jnemeth 2017-07-31]
