@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3069 2017/07/31 14:29:57 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3070 2017/07/31 20:34:33 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4262,3 +4262,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added databases/liquibase version 3.5.3 [maya 2017-07-31]
 	Updated devel/ruby-rugged to 0.26.0 [taca 2017-07-31]
 	Updated devel/ruby-tins to 1.15.0 [taca 2017-07-31]
+	Updated security/cvm to 0.97nb1 [schmonz 2017-07-31]
