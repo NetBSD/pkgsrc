@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/liquibase
+share/liquibase/lib/snakeyaml-1.17.jar
+share/liquibase/liquibase.jar
