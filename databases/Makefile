@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.534 2017/07/31 12:12:59 adam Exp $
+# $NetBSD: Makefile,v 1.535 2017/07/31 14:24:22 maya Exp $
 
 COMMENT=	Databases
 
@@ -79,6 +79,7 @@ SUBDIR+=	libmongo-client
 SUBDIR+=	libpqxx
 SUBDIR+=	libpqxx-doc
 SUBDIR+=	libzdb
+SUBDIR+=	liquibase
 SUBDIR+=	lmdb
 SUBDIR+=	lua-sql-mysql
 SUBDIR+=	lua-sql-postgres
