@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/02/16 16:18:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/07/31 14:16:47 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/Manifest.txt
@@ -8,6 +8,7 @@ ${GEM_LIBDIR}/lib/composite_sexp_processor.rb
 ${GEM_LIBDIR}/lib/pt_testcase.rb
 ${GEM_LIBDIR}/lib/sexp.rb
 ${GEM_LIBDIR}/lib/sexp_processor.rb
+${GEM_LIBDIR}/lib/strict_sexp.rb
 ${GEM_LIBDIR}/lib/unique.rb
 ${GEM_LIBDIR}/test/test_composite_sexp_processor.rb
 ${GEM_LIBDIR}/test/test_environment.rb
