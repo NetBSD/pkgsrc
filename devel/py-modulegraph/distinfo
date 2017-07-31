@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:29:10 agc Exp $
+$NetBSD: distinfo,v 1.6 2017/07/31 05:18:56 adam Exp $
 
-SHA1 (modulegraph-0.12.1.tar.gz) = c7196047c5294888071b907439cb232cec5b9efa
-RMD160 (modulegraph-0.12.1.tar.gz) = a74cd318b635c2fc6498fda74cc24e35188e0059
-SHA512 (modulegraph-0.12.1.tar.gz) = 0cc99023f047ffc6519a6117f6eead99bfcbb05e36e4cb345bb215bb838f495fa77acb51addc681f54f34a617ed5bc42dd210b1060d757262dd11631c439a4f5
-Size (modulegraph-0.12.1.tar.gz) = 677132 bytes
+SHA1 (modulegraph-0.15.tar.gz) = e9e3570ff2cd06a19e93d0f9dc4c1386e1dfb3f3
+RMD160 (modulegraph-0.15.tar.gz) = e7d0d7457190891a02e3d05344fed594d24a5fbc
+SHA512 (modulegraph-0.15.tar.gz) = 5b07960da11ae77cd60930f034e6c56dbaeedea76010dfd71e0bf9d3e8a6c5834f69286750d7c477ccfe6dbc89b322136c961c4f0d603cc4b264279e6015d8dc
+Size (modulegraph-0.15.tar.gz) = 681930 bytes
