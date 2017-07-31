@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/31 14:23:05 maya Exp $
+bin/liquibase
+share/liquibase/lib/snakeyaml-1.17.jar
+share/liquibase/liquibase.jar
