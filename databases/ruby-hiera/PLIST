@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/06/12 15:21:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/07/31 14:05:23 taca Exp $
 bin/hiera${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
@@ -19,6 +19,7 @@ ${GEM_LIBDIR}/lib/hiera/noop_logger.rb
 ${GEM_LIBDIR}/lib/hiera/puppet_logger.rb
 ${GEM_LIBDIR}/lib/hiera/recursive_guard.rb
 ${GEM_LIBDIR}/lib/hiera/util.rb
+${GEM_LIBDIR}/lib/hiera/util/win32.rb
 ${GEM_LIBDIR}/lib/hiera/version.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/unit/backend/json_backend_spec.rb
