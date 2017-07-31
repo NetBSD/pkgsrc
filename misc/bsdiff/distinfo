@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2016/09/08 14:37:05 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2017/07/31 07:09:54 nros Exp $
 
 SHA1 (bsdiff-4.3.tar.gz) = 0c0a89d604fc55ef2b5e69cd18372b2972edd8b8
 RMD160 (bsdiff-4.3.tar.gz) = 27bb255b5dd5aa56d3a076dac9ca76d238a79a04
 SHA512 (bsdiff-4.3.tar.gz) = bde46b393b74bcc9f05532ea4d45b12c104c4f182fdd49d4176aad5f02a2b357f435819f13a5a7ddefe27df0ca82980f06fad764094014a6d068622263e319c3
 Size (bsdiff-4.3.tar.gz) = 5740 bytes
 SHA1 (patch-Makefile) = 203d6a8acfc001cc23abfba953b7f3d40b10b20e
+SHA1 (patch-bspatch.c) = e1b0f00a10fcb3b2b0eca5c86130be150c87e13f
