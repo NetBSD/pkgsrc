@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3055 2017/07/31 13:20:36 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3056 2017/07/31 13:38:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4248,3 +4248,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added databases/py-asyncpg version 0.12.0 [adam 2017-07-31]
 	Removed devel/py-multiprocessing successor lang/python27 [adam 2017-07-31]
 	Updated comms/py-serial to 3.4 [adam 2017-07-31]
+	Updated net/bind910 to 9.10.6 [taca 2017-07-31]
