@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3053 2017/07/31 07:17:47 nros Exp $
+$NetBSD: CHANGES-2017,v 1.3054 2017/07/31 12:13:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4245,3 +4245,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/py-audioread to 2.1.5 [adam 2017-07-31]
 	Updated devel/py-modulegraph to 0.15 [adam 2017-07-31]
 	Updated misc/bsdiff to 4.3nb1 [nros 2017-07-31]
+	Added databases/py-asyncpg version 0.12.0 [adam 2017-07-31]
