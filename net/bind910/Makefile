@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2017/07/08 04:29:00 taca Exp $
+# $NetBSD: Makefile,v 1.37 2017/07/31 13:37:53 taca Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -13,7 +13,7 @@ CONFLICTS+=	host-[0-9]*
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.10.5-P3
+BIND_VERSION=	9.10.6
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -49,7 +49,7 @@ PKG_USERS=		${BIND_USER}:${BIND_GROUP}
 PKG_GECOS.${BIND_USER}=	Named pseudo-user
 PKG_HOME.${BIND_USER}=	${BIND_DIR}
 
-DOCS=			CHANGES FAQ README
+DOCS=			CHANGES FAQ.xml README
 
 FILES_SUBST+=		BIND_GROUP=${BIND_GROUP} \
 			BIND_USER=${BIND_USER} PAX=${PAX:Q} \
