@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2017/07/30 23:19:23 nros Exp $
+# $NetBSD: Makefile,v 1.28 2017/07/31 08:36:27 nros Exp $
 
 DISTNAME=		uhd-3.9.4
 PKGREVISION=		6
@@ -61,7 +61,6 @@ PLIST_SRC=	${PKGDIR}/PLIST
 .include "../../lang/python/application.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
-.imclude "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/orc/buildlink3.mk"
-
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
