@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3064 2017/07/31 14:15:35 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3065 2017/07/31 14:17:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4257,3 +4257,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-minitest to 5.10.3 [taca 2017-07-31]
 	Updated devel/ruby-mixlib-shellout to 2.3.2 [taca 2017-07-31]
 	Updated devel/ruby-parser to 3.10.1 [taca 2017-07-31]
+	Updated devel/ruby-sexp-processor to 4.10.0 [taca 2017-07-31]
