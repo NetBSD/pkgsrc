@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.43 2017/07/27 02:18:05 schmonz Exp $
+# $NetBSD: options.mk,v 1.44 2017/08/01 02:53:59 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai qmail-rejectutils qmail-srs sasl syncdir tls
@@ -76,6 +76,8 @@ QMAILPATCHES+=			eai:${EAI_PATCH}
 EAI_PATCH=			qmail-smtputf8.patch
 PATCHFILES+=			${EAI_PATCH}
 SITES.${EAI_PATCH}=		http://arnt.gulbrandsen.priv.no/qmail/
+PATCH_DIST_CAT.${EAI_PATCH}=	${SED} \
+	-e 's|\(if (!stralloc_append(&firstpart,&ch)) temp_nomem();\)|if (ch == '"'\\\n'"' \&\& \!stralloc_append(\&firstpart,"\\r")) temp_nomem(); \1|' < ${EAI_PATCH}
 PATCH_DIST_STRIP.${EAI_PATCH}=	-p1
 .endif
 
