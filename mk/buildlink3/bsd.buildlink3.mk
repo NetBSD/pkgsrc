@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.238 2016/06/09 02:38:34 markd Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.239 2017/08/01 05:48:12 dbj Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -657,7 +657,8 @@ ${_BLNK_COOKIE.${_pkg_}}:
 	${X11BASE})     buildlink_dir="${BUILDLINK_X11_DIR}" ;;		\
 	*)              buildlink_dir="${BUILDLINK_DIR}" ;;		\
 	esac;								\
-	cd ${BUILDLINK_PREFIX.${_pkg_}};				\
+	[ -z "${BUILDLINK_PREFIX.${_pkg_}:Q}" ] ||			\
+	cd ${BUILDLINK_PREFIX.${_pkg_}} &&				\
 	${_BLNK_FILES_CMD.${_pkg_}} |					\
 	while read file; do						\
 		src="${_CROSS_DESTDIR}${BUILDLINK_PREFIX.${_pkg_}}/$$file";		\
