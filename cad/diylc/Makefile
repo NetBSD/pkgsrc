@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/05/21 12:25:32 dsainty Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/01 16:58:44 wiz Exp $
 
 DISTNAME=	diylc-3.28.0
 CATEGORIES=	cad java
@@ -6,7 +6,7 @@ MASTER_SITES=	http://diy-layout-creator.googlecode.com/files/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	dsainty@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/diy-layout-creator/
+HOMEPAGE=	https://code.google.com/archive/p/diy-layout-creator/
 COMMENT=	Simple electronic schematics CAD tool
 LICENSE=	gnu-gpl-v3
 

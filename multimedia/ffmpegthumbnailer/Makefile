@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/01/16 23:45:13 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2017/08/01 17:01:23 wiz Exp $
 
 DISTNAME=	ffmpegthumbnailer-2.0.8
 PKGREVISION=	7
@@ -6,7 +6,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	http://ffmpegthumbnailer.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/ffmpegthumbnailer/
+HOMEPAGE=	https://github.com/dirkvdb/ffmpegthumbnailer
 COMMENT=	Lightweight video thumbnailer that can be used by file managers
 LICENSE=	gnu-gpl-v2
 
