@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.12 2017/07/03 12:18:17 ryoon Exp $
+$NetBSD: patch-ac,v 1.13 2017/08/01 12:10:48 ryoon Exp $
 
 add runpath to Linux caught during check-shlibs-elf
 
---- nspr/configure.in.orig	2017-06-05 20:16:00.000000000 +0000
+--- nspr/configure.in.orig	2017-07-27 12:31:27.000000000 +0000
 +++ nspr/configure.in
 @@ -38,7 +38,7 @@ OBJDIR_NAME=.
  OBJDIR_SUFFIX=OBJ
@@ -13,15 +13,7 @@ add runpath to Linux caught during check-shlibs-elf
  LIBPLC='-L$(dist_libdir) -lplc$(MOD_MAJOR_VERSION)'
  CYGWIN_WRAPPER=
  MACOS_SDK_DIR=
-@@ -1389,6 +1389,7 @@ case "$target" in
-     changequote([,])
-     if test "$HOST_DARWIN_MAJOR" -ge 15 ; then
-         AC_DEFINE(HAS_CONNECTX)
-+    fi
-     AS='$(CC) -x assembler-with-cpp'
-     CFLAGS="$CFLAGS -Wall -fno-common"
-     case "${target_cpu}" in
-@@ -1571,6 +1572,33 @@ tools are selected during the Xcode/Deve
+@@ -1573,6 +1573,33 @@ tools are selected during the Xcode/Deve
      DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
      MDCPUCFG_H=_freebsd.cfg
      PR_MD_CSRCS=freebsd.c
@@ -55,7 +47,7 @@ add runpath to Linux caught during check-shlibs-elf
      ;;
  
  *-hpux*)
-@@ -1846,6 +1874,9 @@ tools are selected during the Xcode/Deve
+@@ -1848,6 +1875,9 @@ tools are selected during the Xcode/Deve
      MKSHLIB='$(CC) $(DSO_LDOPTS) -o $@'
      DSO_CFLAGS=-fPIC
      DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
@@ -65,8 +57,8 @@ add runpath to Linux caught during check-shlibs-elf
      _OPTIMIZE_FLAGS=-O2
      _DEBUG_FLAGS="-g -fno-inline"  # most people on linux use gcc/gdb, and that
                                     # combo is not yet good at debugging inlined
-@@ -2169,7 +2200,7 @@ tools are selected during the Xcode/Deve
-     AC_DEFINE(HAVE_SOCKLEN_T)
+@@ -2173,7 +2203,7 @@ tools are selected during the Xcode/Deve
+     AC_DEFINE(HAVE_POINTER_LOCALTIME_R)
      CFLAGS="$CFLAGS -ansi -Wall"
      CXXFLAGS="$CXXFLAGS -ansi -Wall"
 -    DLL_SUFFIX=so.1.0
@@ -74,7 +66,7 @@ add runpath to Linux caught during check-shlibs-elf
      DSO_CFLAGS=-fPIC
      MDCPUCFG_H=_openbsd.cfg
      PR_MD_CSRCS=openbsd.c
-@@ -2756,7 +2787,7 @@ if test -n "$USE_PTHREADS"; then
+@@ -2760,7 +2790,7 @@ if test -n "$USE_PTHREADS"; then
  	if test -z "`egrep -i '(unrecognize|unknown)' conftest.out | grep pthread`" && test -z "`egrep -i '(error|incorrect)' conftest.out`" ; then
  	    ac_cv_have_dash_pthread=yes
  		case "$target_os" in
@@ -83,7 +75,7 @@ add runpath to Linux caught during check-shlibs-elf
  # Freebsd doesn't use -pthread for compiles, it uses them for linking
              ;;
  	    *)
-@@ -2794,7 +2825,7 @@ if test -n "$USE_PTHREADS"; then
+@@ -2798,7 +2828,7 @@ if test -n "$USE_PTHREADS"; then
              _PTHREAD_LDFLAGS=
          fi
  	    ;;
@@ -92,7 +84,7 @@ add runpath to Linux caught during check-shlibs-elf
  	    AC_DEFINE(_REENTRANT)
  	    AC_DEFINE(_THREAD_SAFE)
  	    dnl -pthread links in -lc_r, so don't specify it explicitly.
-@@ -2875,7 +2906,7 @@ case "$target" in
+@@ -2879,7 +2909,7 @@ case "$target" in
          AC_DEFINE(_PR_NEED_PTHREAD_INIT)
      fi
      ;;
