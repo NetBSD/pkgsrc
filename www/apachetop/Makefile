@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/01/04 14:53:02 roy Exp $
+# $NetBSD: Makefile,v 1.20 2017/08/01 16:47:45 wiz Exp $
 #
 
 DISTNAME=	apachetop-0.12.5
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils www
 MASTER_SITES=	${MASTER_SITE_FREEBSD}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://spork.qfe3.net/apachetop/
+#HOMEPAGE=	http://spork.qfe3.net/apachetop/
 COMMENT=	Real time apache log display
 
 GNU_CONFIGURE=		YES

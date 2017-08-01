@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2013/04/04 16:01:55 dholland Exp $
+# $NetBSD: Makefile,v 1.19 2017/08/01 16:47:37 wiz Exp $
 #
 
 DISTNAME=	ee-1.4.6.src
 PKGNAME=	easyedit-1.4.6
 PKGREVISION=	2
 CATEGORIES=	editors
-MASTER_SITES=	http://mahon.cwx.net/sources/
+#MASTER_SITES=	http://mahon.cwx.net/sources/
 EXTRACT_SUFX=	.tgz
 
 PATCHFILES=	easyedit-jumbo-patch-20130404.gz
@@ -13,7 +13,7 @@ PATCH_SITES=	http://www.NetBSD.org/~dholland/patchkits/easyedit/
 PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mahon.cwx.net/
+#HOMEPAGE=	http://mahon.cwx.net/
 COMMENT=	Easy to use text editor with onscreen instructions
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}

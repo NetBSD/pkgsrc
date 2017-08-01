@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2012/10/23 19:50:59 asau Exp $
+# $NetBSD: Makefile,v 1.16 2017/08/01 16:47:44 wiz Exp $
 
 DISTNAME=	dog-1.7
 PKGREVISION=	1
 CATEGORIES=	misc
-MASTER_SITES=	http://jl.photodex.com/dog/
+#MASTER_SITES=	http://jl.photodex.com/dog/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jl.photodex.com/dog/
+#HOMEPAGE=	http://jl.photodex.com/dog/
 COMMENT=	Dog writes the contents of each given file, URL, or stdin
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

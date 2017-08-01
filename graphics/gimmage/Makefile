@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2017/05/03 08:38:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.39 2017/08/01 16:47:39 wiz Exp $
 #
 
 DISTNAME=	gimmage-0.2.3
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://download.berlios.de/gimmage/
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	http://gimmage.berlios.de/
+#HOMEPAGE=	http://gimmage.berlios.de/
 COMMENT=	GTKMM-based image viewing program
 
 GNU_CONFIGURE=		yes

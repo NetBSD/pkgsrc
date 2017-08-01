@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/09/11 19:46:52 asau Exp $
+# $NetBSD: Makefile,v 1.14 2017/08/01 16:47:35 wiz Exp $
 
 DISTNAME=	archangel-20050730
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	# http://www.alistaircrooks.co.uk/src/
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://www.alistaircrooks.co.uk/software.html
+#HOMEPAGE=	http://www.alistaircrooks.co.uk/software.html
 COMMENT=	Compressing archiver which can sign and encrypt entries
 
 DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
