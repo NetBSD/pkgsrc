@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2016/07/09 06:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2017/08/01 16:58:17 wiz Exp $
 
 DISTNAME=	dircproxy-1.2.0-beta2
 PKGNAME=	${DISTNAME:S/-beta/beta/}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://dircproxy.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/dircproxy/
+HOMEPAGE=	https://github.com/w8tvi/dircproxy
 COMMENT=	Detachable internet relay chat proxy server (devel version)
 
 GNU_CONFIGURE=		YES
