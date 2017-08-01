@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2017/05/19 13:29:03 prlw1 Exp $
+# $NetBSD: Makefile,v 1.71 2017/08/01 16:47:43 wiz Exp $
 #
 
 DISTNAME=	epdfview-0.1.8
@@ -8,7 +8,7 @@ MASTER_SITES=	http://anduin.linuxfromscratch.org/BLFS/epdfview/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	http://trac.emma-soft.com/epdfview/
+#HOMEPAGE=	http://trac.emma-soft.com/epdfview/
 COMMENT=	Lightweight PDF viewer using Poppler and GTK2
 
 GNU_CONFIGURE=		yes
