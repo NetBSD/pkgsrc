@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/11/10 06:36:28 apb Exp $
-#
+# $NetBSD: Makefile,v 1.4 2017/08/01 17:02:17 wiz Exp $
 
 DISTNAME=	bindfs-1.8.4
 PKGNAME=	fuse-${DISTNAME}
@@ -8,7 +7,7 @@ CATEGORIES=	filesystems
 MASTER_SITES=	http://bindfs.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/bindfs/
+HOMEPAGE=	http://bindfs.org/
 COMMENT=	Remounts file system subtrees in arbitrary locations
 LICENSE=	gnu-gpl-v2
 
