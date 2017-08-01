@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3073 2017/08/01 11:06:38 maya Exp $
+$NetBSD: CHANGES-2017,v 1.3074 2017/08/01 11:49:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4266,3 +4266,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/mailfront to 2.12nb1 [schmonz 2017-07-31]
 	Updated mail/qmail to 1.03nb30 [schmonz 2017-07-31]
 	Updated math/octave to 4.2.0nb11 [maya 2017-08-01]
+	Updated security/gpgme to 1.8.0nb1 [ryoon 2017-08-01]
