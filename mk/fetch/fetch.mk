@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.68 2016/01/06 07:38:25 dholland Exp $
+# $NetBSD: fetch.mk,v 1.69 2017/08/01 13:15:32 jperkin Exp $
 
 .if empty(INTERACTIVE_STAGE:Mfetch) && empty(FETCH_MESSAGE:U)
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -259,7 +259,8 @@ _FETCH_CMD=	${PKGSRC_SETENV} CHECKSUM=${_CHECKSUM_CMD:Q}	\
 		${SH} ${PKGSRCDIR}/mk/fetch/fetch
 
 _FETCH_ARGS+=	${PKG_VERBOSE:D-v}
-.if exists(${DISTINFO_FILE})
+.if exists(${DISTINFO_FILE}) && !make(distinfo) && !make(makesum) \
+    && !make(makedistinfo) && !make(mdi)
 _FETCH_ARGS+=	${FAILOVER_FETCH:D-c} -f ${DISTINFO_FILE:tA:Q}
 .endif
 .if !empty(PKG_RESUME_TRANSFERS:M[yY][eE][sS])
