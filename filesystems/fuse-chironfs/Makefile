@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 16:08:30 asau Exp $
-#
+# $NetBSD: Makefile,v 1.6 2017/08/01 17:02:55 wiz Exp $
 
 DISTNAME=	chironfs-1.1.1
 PKGNAME=	fuse-chironfs-1.1.1
@@ -8,8 +7,9 @@ CATEGORIES=	filesystems
 MASTER_SITES=	http://chironfs.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/chironfs/
+HOMEPAGE=	https://code.google.com/archive/p/chironfs/
 COMMENT=	Replicating file system
+LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
 
