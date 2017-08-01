@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3082 2017/08/01 15:12:22 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3083 2017/08/01 15:33:57 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4283,3 +4283,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added textproc/mandoc version 1.14.2 [wiz 2017-08-01]
 	Removed textproc/mdocml successor textproc/mandoc [wiz 2017-08-01]
 	Removed textproc/mdoclint successor textproc/mandoc [wiz 2017-08-01]
+	Added textproc/py-tinycss2 version 0.5 [kleink 2017-08-01]
