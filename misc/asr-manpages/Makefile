@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/04/06 03:45:17 rodent Exp $
+# $NetBSD: Makefile,v 1.14 2017/08/01 17:40:13 wiz Exp $
 #
 
 DISTNAME=	asr.pages
@@ -8,7 +8,7 @@ MASTER_SITES=	# on ftp.NetBSD.org
 EXTRACT_SUFX=	.tar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://web.archive.org/web/2/www.winternet.com/~eric/sysadmin/manpages.html
+#HOMEPAGE=	http://web.archive.org/web/2/www.winternet.com/~eric/sysadmin/manpages.html
 COMMENT=	Distribution of alt.sysadmin.recovery man page
 
 NO_CONFIGURE=	yes

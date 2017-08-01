@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/04/25 14:20:26 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2017/08/01 17:40:08 wiz Exp $
 #
 
 DISTNAME=		azara-2.7-src
@@ -8,7 +8,7 @@ CATEGORIES=		biology
 MASTER_SITES=		http://www.ccpn.ac.uk/download/azara/
 
 MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		http://www.ccpn.ac.uk/azara/
+#HOMEPAGE=		http://www.ccpn.ac.uk/azara/
 COMMENT=		Programs to process and view NMR data
 
 CONFLICTS=		connect-[0-9]*

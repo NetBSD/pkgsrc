@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2017/02/12 06:26:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.67 2017/08/01 17:40:17 wiz Exp $
 
 DISTNAME=		devilspie-0.22
 PKGREVISION=		26
@@ -6,7 +6,7 @@ CATEGORIES=		x11
 MASTER_SITES=		http://www.burtonini.com/computing/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.burtonini.com/blog/computers/devilspie/
+#HOMEPAGE=		http://www.burtonini.com/blog/computers/devilspie/
 COMMENT=		Window-matching utility to customize window behavior
 LICENSE=		gnu-gpl-v2
 

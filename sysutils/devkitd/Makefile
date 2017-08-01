@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2012/10/23 19:50:58 asau Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/01 17:40:15 wiz Exp $
 #
 
 DISTNAME=	devkitd-jmcneill-003
 PKGNAME=	${DISTNAME:S/-jmcneill//}
 PKGREVISION=	4
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.invisible.ca/~jmcneill/devkitd/
+#MASTER_SITES=	http://www.invisible.ca/~jmcneill/devkitd/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.invisible.ca/~jmcneill/devkitd/
+#HOMEPAGE=	http://www.invisible.ca/~jmcneill/devkitd/
 COMMENT=	NetBSD port of devkitd (for DeviceKit)
 LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 

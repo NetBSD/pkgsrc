@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.55 2016/07/09 06:38:41 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2017/08/01 17:40:14 wiz Exp $
 
 DISTNAME=	dctc-0.85.9
 PKGREVISION=	13
 CATEGORIES=	net
-MASTER_SITES=	http://ac2i.homelinux.com/dctc/
+#MASTER_SITES=	http://ac2i.homelinux.com/dctc/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ac2i.homelinux.com/dctc/
+#HOMEPAGE=	http://ac2i.homelinux.com/dctc/
 COMMENT=	Direct Connect clone (Direct Connect Text Client)
 LICENSE=	gnu-gpl-v2
 

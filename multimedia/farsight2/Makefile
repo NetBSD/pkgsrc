@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2017/04/22 21:03:45 adam Exp $
+# $NetBSD: Makefile,v 1.63 2017/08/01 17:40:14 wiz Exp $
 
 DISTNAME=	farsight2-0.0.31
 PKGREVISION=	24
@@ -6,7 +6,7 @@ CATEGORIES=	chat multimedia
 MASTER_SITES=	http://farsight.freedesktop.org/releases/farsight2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://farsight.freedesktop.org/wiki/
+#HOMEPAGE=	http://farsight.freedesktop.org/wiki/
 COMMENT=	Audio/video communications framework
 LICENSE=	gnu-lgpl-v2.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2017/02/12 06:25:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2017/08/01 17:40:08 wiz Exp $
 #
 
 DISTNAME=	albumplayer-0.3.1
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://rvb.mytanet.de/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rvb.mytanet.de/album-player.shtml
+#HOMEPAGE=	http://rvb.mytanet.de/album-player.shtml
 COMMENT=	FLAC album player
 LICENSE=	original-bsd
 

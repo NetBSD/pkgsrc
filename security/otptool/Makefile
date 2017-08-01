@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2016/03/05 11:29:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2017/08/01 17:40:15 wiz Exp $
 
 DISTNAME=	mod_authn_otp-${DISTVERS}
 PKGNAME=	otptool-${DISTVERS}
 PKGREVISION=	3
 CATEGORIES=	security
-MASTER_SITES=	http://mod-authn-otp.googlecode.com/files/
+#MASTER_SITES=	http://mod-authn-otp.googlecode.com/files/
 LICENSE=	apache-2.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mod-authn-otp.googlecode.com/
+#HOMEPAGE=	http://mod-authn-otp.googlecode.com/
 COMMENT=	One-Time Password command line utility
 
 PKG_APACHE_ACCEPTED=	apache22

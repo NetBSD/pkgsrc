@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/05/01 14:34:29 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2017/08/01 17:40:10 wiz Exp $
 #
 
 DISTNAME=	libmowgli-0.7.1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://mirror.billymays.us/libmowgli/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jfranz@bsdprojects.net
-HOMEPAGE=	http://www.atheme.org/projects/mowgli
+#HOMEPAGE=	http://www.atheme.org/projects/mowgli
 COMMENT=	Development framework for C (like GLib)
 
 PREV_PKGPATH=	devel/mowgli

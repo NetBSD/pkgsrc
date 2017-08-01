@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/10/09 13:44:49 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/08/01 17:40:13 wiz Exp $
 #
 
 DISTNAME=	autpgrp-1.1
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/share/
 EXTRACT_SUFX=	.zoo
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gap-system.org/Share/autpgrp.html
+#HOMEPAGE=	http://www.gap-system.org/Share/autpgrp.html
 COMMENT=	GAP package for finding automorphism groups of finite p-groups
 
 WRKSRC=		${WRKDIR}/autpgrp

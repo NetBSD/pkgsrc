@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2016/11/27 09:49:41 spz Exp $
+# $NetBSD: Makefile,v 1.30 2017/08/01 17:40:10 wiz Exp $
 
 DISTNAME=	libobjc2-1.6.1
 PKGNAME=	${DISTNAME:S/libobjc2/gnustep-objc/}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://download.gna.org/gnustep/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/gnustep/gnustep-libobjc2
+#HOMEPAGE=	https://github.com/gnustep/gnustep-libobjc2
 COMMENT=	Objective-C runtime
 LICENSE=	gnu-gpl-v3
 

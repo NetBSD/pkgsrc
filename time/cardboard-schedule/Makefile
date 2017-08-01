@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/07/04 16:18:40 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2017/08/01 17:40:17 wiz Exp $
 #
 
 DISTNAME=	cs113ins
@@ -9,7 +9,7 @@ MASTER_SITES=	http://cardboard.nu/downloads/
 EXTRACT_SUFX=	.exe
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cardboard.nu/docs/software.html
+#HOMEPAGE=	http://cardboard.nu/docs/software.html
 COMMENT=	Project and resource management software implemented in Java/Swing
 LICENSE=	cardboard-schedule-license
 

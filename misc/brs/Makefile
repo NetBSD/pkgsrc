@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/08 09:57:17 asau Exp $
+# $NetBSD: Makefile,v 1.12 2017/08/01 17:40:14 wiz Exp $
 #
 
 DISTNAME=	brs.4.00.l1
@@ -8,7 +8,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/religion/}
 
 MAINTAINER=	bcv@hub3.net
-HOMEPAGE=	http://bible.theverge.com/brs.html
+#HOMEPAGE=	http://bible.theverge.com/brs.html
 COMMENT=	Interactive King James Version Bible
 
 WRKSRC=		${WRKDIR}/bible
