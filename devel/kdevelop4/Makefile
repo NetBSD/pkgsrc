@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2017/04/30 01:21:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.67 2017/08/01 14:58:56 wiz Exp $
 #
 
 DISTNAME=	kdevelop-4.7.0
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=kdevelop/4.7.0/src/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	frank@fthieme.net
-HOMEPAGE=	http://www.kdevelop.org/
+HOMEPAGE=	https://www.kdevelop.org/
 COMMENT=	Integrated Development Environment for Unix/X11/KDE
 #LICENSE=	# TODO: (see mk/license.mk)
 

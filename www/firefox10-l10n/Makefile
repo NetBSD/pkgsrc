@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/12/30 00:24:07 dholland Exp $
+# $NetBSD: Makefile,v 1.13 2017/08/01 14:59:07 wiz Exp $
 #
 
 FIREFOX_VER=	10.0.12
@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ESR:=firefox/releases/${FIREFOX_VER}esr/linux-i686/xpi/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mozilla.org/en-US/firefox/organizations/
+HOMEPAGE=	https://www.mozilla.org/en-US/firefox/organizations/
 COMMENT=	Language packs for www/firefox10 (version 10.x)
 
 DIST_SUBDIR=	${PKGNAME_NOREV}

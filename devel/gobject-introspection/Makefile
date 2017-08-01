@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2017/07/11 12:00:56 maya Exp $
+# $NetBSD: Makefile,v 1.51 2017/08/01 14:58:56 wiz Exp $
 
 DISTNAME=	gobject-introspection-1.50.0
 CATEGORIES=	devel gnome
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NO
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wiki.gnome.org/Projects/GObjectIntrospection
+HOMEPAGE=	https://wiki.gnome.org/Projects/GObjectIntrospection
 COMMENT=	GObject Introspection
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 

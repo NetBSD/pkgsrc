@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2012/10/23 18:16:21 asau Exp $
+# $NetBSD: Makefile,v 1.17 2017/08/01 14:59:04 wiz Exp $
 #
 
 DISTNAME=	arirang-1.6
 PKGREVISION=	1
 CATEGORIES=	security www
-MASTER_SITES=	http://monkey.org/~pilot/arirang/
+MASTER_SITES=	https://monkey.org/~pilot/arirang/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://monkey.org/~pilot/arirang/
+HOMEPAGE=	https://monkey.org/~pilot/arirang/
 COMMENT=	Powerful webserver security scanner
 
 INSTALLATION_DIRS=	sbin share/arirang

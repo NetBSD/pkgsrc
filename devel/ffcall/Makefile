@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2017/01/19 18:52:05 agc Exp $
+# $NetBSD: Makefile,v 1.33 2017/08/01 14:58:56 wiz Exp $
 
 DISTNAME=	ffcall-1.10
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.haible.de/bruno/gnu/
 MASTER_SITES+=	${MASTER_SITE_GNUSTEP:=libs/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://www.haible.de/bruno/packages-ffcall.html
+HOMEPAGE=	https://www.haible.de/bruno/packages-ffcall.html
 COMMENT=	Foreign function call libraries
 LICENSE=	gnu-gpl-v2
 

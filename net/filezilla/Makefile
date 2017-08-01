@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2017/05/29 12:51:52 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2017/08/01 14:59:03 wiz Exp $
 
 VERSION=	3.25.2
 DISTNAME=	FileZilla_${VERSION}_src
@@ -8,7 +8,7 @@ MASTER_SITES=	https://download.filezilla-project.org/client/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://filezilla-project.org/
+HOMEPAGE=	https://filezilla-project.org/
 COMMENT=	FTP, FTPS, and SFTP client with intuitive GUI
 LICENSE=	gnu-gpl-v2
 

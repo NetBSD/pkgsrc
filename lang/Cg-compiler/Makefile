@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/12/30 02:59:07 dholland Exp $
+# $NetBSD: Makefile,v 1.19 2017/08/01 14:59:00 wiz Exp $
 #
 
 DISTNAME=	Cg-3.1_April2012_x86${DIST_ARCH}
@@ -9,7 +9,7 @@ MASTER_SITES=	http://developer.download.nvidia.com/cg/Cg_3.1/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://developer.nvidia.com/cg-toolkit
+HOMEPAGE=	https://developer.nvidia.com/cg-toolkit
 COMMENT=	Compiler for the Cg 3.1 language
 LICENSE=	nvidia-license
 

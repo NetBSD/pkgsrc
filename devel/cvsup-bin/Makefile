@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/04/06 03:45:09 rodent Exp $
+# $NetBSD: Makefile,v 1.17 2017/08/01 14:58:55 wiz Exp $
 
 DISTNAME=	cvsup-static-16.1.h
 PKGNAME=	${DISTNAME:C/static/bin/}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://motoyuki.bsdclub.org/data/NetBSD/CVSup/i386/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://people.freebsd.org/~jdp/
+HOMEPAGE=	https://people.freebsd.org/~jdp/
 COMMENT=	Daemon and client for cvsup
 
 CONFLICTS=	cvsup-[0-9]* cvsup-gui-[0-9]*

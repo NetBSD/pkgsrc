@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2016/07/09 06:38:19 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2017/08/01 14:58:59 wiz Exp $
 
 DISTNAME=	cdlabelgen-4.3.0
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.aczoom.com/pub/tools/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.aczoom.com/tools/cdinsert/
+HOMEPAGE=	https://www.aczoom.com/tools/cdinsert/
 COMMENT=	Generate frontcards and traycards for CDs
 
 USE_TOOLS+=	perl:run perldoc

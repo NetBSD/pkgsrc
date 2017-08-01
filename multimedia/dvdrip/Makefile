@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.60 2017/02/07 12:13:12 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2017/08/01 14:59:02 wiz Exp $
 
 DISTNAME=	dvdrip-0.98.11
 PKGREVISION=	7
 CATEGORIES=	multimedia x11 sysutils
-MASTER_SITES=	http://www.exit1.org/dvdrip/dist/
+MASTER_SITES=	https://www.exit1.org/dvdrip/dist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.exit1.org/dvdrip/
+HOMEPAGE=	https://www.exit1.org/dvdrip/
 COMMENT=	Graphical frontend for DVD ripping
 
 DEPENDS+=	lsdvd>=0.16nb3:../../multimedia/lsdvd

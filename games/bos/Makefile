@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2015/02/10 22:32:03 snj Exp $
+# $NetBSD: Makefile,v 1.13 2017/08/01 14:58:58 wiz Exp $
 
 DISTNAME=		bos_1_1
 PKGNAME=		bos-1.1
 PKGREVISION=		2
 CATEGORIES=		games
-MASTER_SITES=		http://www.boswars.org/dist/releases/
+MASTER_SITES=		https://www.boswars.org/dist/releases/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.boswars.org/
+HOMEPAGE=		https://www.boswars.org/
 COMMENT=		Invasion - Battle of Survival (real-time strategy game)
 
 DEPENDS+=		stratagus>=2.1:../../games/stratagus

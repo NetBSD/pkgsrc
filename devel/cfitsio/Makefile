@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2016/06/19 07:40:17 markd Exp $
+# $NetBSD: Makefile,v 1.32 2017/08/01 14:58:54 wiz Exp $
 
 DISTNAME=	cfitsio3390
 PKGNAME=	${DISTNAME:S/o3/o-3./}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://heasarc.gsfc.nasa.gov/docs/software/fitsio/fitsio.html
+HOMEPAGE=	https://heasarc.gsfc.nasa.gov/docs/software/fitsio/fitsio.html
 COMMENT=	FITS (flexible image transport system) file input and output
 # similar; no copyright claim.
 LICENSE=	isc

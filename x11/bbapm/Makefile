@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/05/05 06:45:57 mef Exp $
+# $NetBSD: Makefile,v 1.17 2017/08/01 14:59:07 wiz Exp $
 # based on
 #    FreeBSD port:
 #    ID: ports/x11-wm/bbapm/Makefile,v 1.5 2002/09/02 01:30:15 lioux Exp
@@ -11,7 +11,7 @@ CATEGORIES=	x11 wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbtools/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/bbtools/?source=directory
+HOMEPAGE=	https://sourceforge.net/projects/bbtools/?source=directory
 COMMENT=	APM monitor for Blackbox
 
 GNU_CONFIGURE=	yes

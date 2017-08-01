@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2016/02/20 01:50:05 khorben Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/01 14:58:55 wiz Exp $
 #
 
 DISTNAME=	configure-0.2.3
 PKGNAME=	deforaos-configure-0.2.3
 CATEGORIES=	devel
-MASTER_SITES=	http://www.defora.org/os/download/download/4395/
+MASTER_SITES=	https://www.defora.org/os/download/download/4395/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS automated Makefile generation tool
 
 LICENSE=	2-clause-bsd

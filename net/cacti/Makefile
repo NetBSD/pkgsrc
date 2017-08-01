@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.33 2017/03/12 07:20:51 maya Exp $
+# $NetBSD: Makefile,v 1.34 2017/08/01 14:59:03 wiz Exp $
 
 DISTNAME=	cacti-0.8.8h
 PKGREVISION=	3
 CATEGORIES=	net
-MASTER_SITES=	http://www.cacti.net/downloads/
+MASTER_SITES=	https://www.cacti.net/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cacti.net/
+HOMEPAGE=	https://www.cacti.net/
 COMMENT=	Frontend to rrdtool for monitoring systems and services
 LICENSE=	gnu-gpl-v2
 
