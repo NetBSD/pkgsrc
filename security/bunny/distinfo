@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2017/03/23 17:06:58 joerg Exp $
-
-SHA1 (bunny-0.93.tgz) = 29dae023e4d6221f064fffae0e4011322a42041a
-RMD160 (bunny-0.93.tgz) = daee7e9eb0fa71a5e25f9f7171d0598ddb03c134
-SHA512 (bunny-0.93.tgz) = 275eadd58e75b6bc626cc599447b723ff062281f93c7d98159abf6a65ae70d3588435c514ee809dd19e013d8299ec9f9cdfee776ff03ec6c0478b02752d45392
-Size (bunny-0.93.tgz) = 64575 bytes
-SHA1 (patch-Makefile) = 2934cb0f48787f90271464f0c305667d31deb082
