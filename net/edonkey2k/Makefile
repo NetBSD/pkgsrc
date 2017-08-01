@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.19 2012/10/23 17:18:19 asau Exp $
+# $NetBSD: Makefile,v 1.20 2017/08/01 16:47:42 wiz Exp $
 #
 
 DISTNAME=	donkey
 PKGNAME=	edonkey2k-16.16.59
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	# http://www.edonkey2000.com/files/
+#MASTER_SITES=	# http://www.edonkey2000.com/files/
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.edonkey2000.com/
+#HOMEPAGE=	http://www.edonkey2000.com/
 COMMENT=	Yet another P2P file sharing tool
 
 EMUL_PLATFORMS=		linux-i386

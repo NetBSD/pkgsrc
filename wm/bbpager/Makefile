@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.24 2015/07/17 04:53:28 bsiegert Exp $
+# $NetBSD: Makefile,v 1.25 2017/08/01 16:47:45 wiz Exp $
 #
 
 DISTNAME=	bbpager-0.3.1
 PKGREVISION=	3
 CATEGORIES=	wm x11
-MASTER_SITES=	http://bbtools.windsofstorm.net/sources/
+#MASTER_SITES=	http://bbtools.windsofstorm.net/sources/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bbtools.windsofstorm.net/available.phtml
+#HOMEPAGE=	http://bbtools.windsofstorm.net/available.phtml
 COMMENT=	Pager for the blackbox window manager
 
 CONFLICTS+=	bbpager04-[0-9]*
