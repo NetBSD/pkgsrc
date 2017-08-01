@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/07/30 13:21:31 leot Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/01 11:20:33 leot Exp $
 #
 
 DISTNAME=	fortune-it-1.99
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=	fortune-strfile-[0-9]*:../../games/fortune-strfile
 STRFILE=	${LOCALBASE}/bin/strfile
 
 do-build:
-	find ${WRKSRC}/testi/ -type f -exec ${STRFILE} {} \;
+	find ${WRKSRC}/testi/ -type f ! -name "*.dat" -exec ${STRFILE} {} \;
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/games/fortune/it
