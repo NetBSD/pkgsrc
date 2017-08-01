@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/01 13:13:17 markd Exp $
+
+SHA1 (Encode-HanExtra-0.23.tar.gz) = 52d64ecaf29f38d9b04957caeb5da3ef62590336
+RMD160 (Encode-HanExtra-0.23.tar.gz) = b5c753ca9f617048501e62535a3e16cfc8b8bd49
+SHA512 (Encode-HanExtra-0.23.tar.gz) = 218083b9b3b4517cfc714169479cba0689a3586d9abb24bcc79d3401d37dd9412cb4e878b6aad06676d5c4f0e03cc69dcaf2e5f48036e2da6f336508c381e462
+Size (Encode-HanExtra-0.23.tar.gz) = 1566682 bytes
