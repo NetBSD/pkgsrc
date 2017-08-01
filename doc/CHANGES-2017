@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3088 2017/08/01 17:13:02 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3089 2017/08/01 17:14:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4289,3 +4289,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/objfw version 0.90 [maya 2017-08-01]
 	Removed security/bunny successor devel/afl [wiz 2017-08-01]
 	Removed net/cftp [wiz 2017-08-01]
+	Removed news/cg [wiz 2017-08-01]
