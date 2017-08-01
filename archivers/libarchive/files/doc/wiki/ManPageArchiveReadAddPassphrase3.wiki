@@ -37,6 +37,6 @@ function failed.
 </dd></dl> 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveRead3]], 
-[[ManPageArchiveReadSetOptions3]] 
+[[ManPageibarchive3]], 
+[[ManPagerchiveead3]], 
+[[ManPagerchiveeadetptions3]] 
