@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 21:34:07 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/08/01 12:05:31 ryoon Exp $
 
-SHA1 (libgltf-0.0.2.tar.bz2) = 49860235c52b0be395b216d3f33955f935036f8e
-RMD160 (libgltf-0.0.2.tar.bz2) = c2618f7df60aaa89ea47c9347906c90c291d6ff4
-SHA512 (libgltf-0.0.2.tar.bz2) = 74ca5e5e0f38ee5a67e870b49f4adf6c9710dc696afb776149618c05d15e3527d605143230f7ceacd199b609bcbb683cfc72d8e4ef22ba5b9ca777c8a2b53dcf
-Size (libgltf-0.0.2.tar.bz2) = 538040 bytes
+SHA1 (libgltf-0.1.0.tar.gz) = 719ab0d7b711650c787fe9bfb51109321d21e07b
+RMD160 (libgltf-0.1.0.tar.gz) = c18fa5c7640642bd2c8ada79f7edc40c8997e753
+SHA512 (libgltf-0.1.0.tar.gz) = c4ef222d638a3f691bcce493776ef451830168ef0569c417f0acdd305e5f261500767943f92a3e65d6b00aecf6c02bdae56f52e0943b8d36490ef66474d9252a
+Size (libgltf-0.1.0.tar.gz) = 736163 bytes
