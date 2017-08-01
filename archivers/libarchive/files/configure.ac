@@ -4,8 +4,8 @@ dnl First, define all of the version numbers up front.
 dnl In particular, this allows the version macro to be used in AC_INIT
 
 dnl These first two version numbers are updated automatically on each release.
-m4_define([LIBARCHIVE_VERSION_S],[3.3.1])
-m4_define([LIBARCHIVE_VERSION_N],[3003001])
+m4_define([LIBARCHIVE_VERSION_S],[3.3.2])
+m4_define([LIBARCHIVE_VERSION_N],[3003002])
 
 dnl bsdtar and bsdcpio versioning tracks libarchive
 m4_define([BSDTAR_VERSION_S],LIBARCHIVE_VERSION_S())
@@ -253,6 +253,7 @@ esac
 # Checks for header files.
 AC_HEADER_DIRENT
 AC_HEADER_SYS_WAIT
+AC_CHECK_HEADERS([acl/libacl.h attr/xattr.h])
 AC_CHECK_HEADERS([copyfile.h ctype.h])
 AC_CHECK_HEADERS([errno.h ext2fs/ext2_fs.h fcntl.h grp.h])
 
@@ -283,16 +284,16 @@ AS_VAR_IF([ac_cv_have_decl_FS_IOC_GETFLAGS], [yes],
     [AC_DEFINE_UNQUOTED([HAVE_WORKING_FS_IOC_GETFLAGS], [1],
                     [Define to 1 if you have a working FS_IOC_GETFLAGS])])
 
-AC_CHECK_HEADERS([locale.h paths.h poll.h pthread.h pwd.h])
+AC_CHECK_HEADERS([locale.h membership.h paths.h poll.h pthread.h pwd.h])
 AC_CHECK_HEADERS([readpassphrase.h signal.h spawn.h])
 AC_CHECK_HEADERS([stdarg.h stdint.h stdlib.h string.h])
-AC_CHECK_HEADERS([sys/cdefs.h sys/extattr.h])
+AC_CHECK_HEADERS([sys/acl.h sys/cdefs.h sys/ea.h sys/extattr.h])
 AC_CHECK_HEADERS([sys/ioctl.h sys/mkdev.h sys/mount.h])
-AC_CHECK_HEADERS([sys/param.h sys/poll.h sys/select.h sys/statfs.h sys/statvfs.h])
-AC_CHECK_HEADERS([sys/time.h sys/utime.h sys/utsname.h sys/vfs.h])
+AC_CHECK_HEADERS([sys/param.h sys/poll.h sys/richacl.h])
+AC_CHECK_HEADERS([sys/select.h sys/statfs.h sys/statvfs.h])
+AC_CHECK_HEADERS([sys/time.h sys/utime.h sys/utsname.h sys/vfs.h sys/xattr.h])
 AC_CHECK_HEADERS([time.h unistd.h utime.h wchar.h wctype.h])
 AC_CHECK_HEADERS([windows.h])
-AC_CHECK_HEADERS([Bcrypt.h])
 # check windows.h first; the other headers require it.
 AC_CHECK_HEADERS([wincrypt.h winioctl.h],[],[],
 [[#ifdef HAVE_WINDOWS_H
@@ -398,6 +399,9 @@ if test "x$with_lzo2" = "xyes"; then
   AC_CHECK_HEADERS([lzo/lzoconf.h lzo/lzo1x.h])
   AC_CHECK_LIB(lzo2,lzo1x_decompress_safe)
 fi
+
+AC_ARG_WITH([cng],
+  AS_HELP_STRING([--without-cng], [Don't build support of CNG(Crypto Next Generation)]))
 
 AC_ARG_WITH([nettle],
   AS_HELP_STRING([--without-nettle], [Don't build with crypto support from Nettle]))
@@ -601,7 +605,7 @@ AC_FUNC_VPRINTF
 # To avoid necessity for including windows.h or special forward declaration
 # workarounds, we use 'void *' for 'struct SECURITY_ATTRIBUTES *'
 AC_CHECK_STDCALL_FUNC([CreateHardLinkA],[const char *, const char *, void *])
-AC_CHECK_FUNCS([arc4random_buf chflags chown chroot ctime_r dirfd])
+AC_CHECK_FUNCS([arc4random_buf chflags chown chroot ctime_r])
 AC_CHECK_FUNCS([fchdir fchflags fchmod fchown fcntl fdopendir fork])
 AC_CHECK_FUNCS([fstat fstatat fstatfs fstatvfs ftruncate])
 AC_CHECK_FUNCS([futimens futimes futimesat])
@@ -644,6 +648,13 @@ AC_COMPILE_IFELSE(
 		    return(readdir_r(dir, &e, &r));]])],
  [AC_DEFINE(HAVE_READDIR_R,1,[Define to 1 if you have a POSIX compatible readdir_r])]
 )
+# dirfd can be either a function or a macro.
+AC_COMPILE_IFELSE(
+ [AC_LANG_PROGRAM([[#include <dirent.h>
+                    DIR *dir;]],
+                  [[return(dirfd(dir));]])],
+ [AC_DEFINE(HAVE_DIRFD,1,[Define to 1 if you have a dirfd function or macro])]
+)
 
 # FreeBSD's nl_langinfo supports an option to specify whether the
 # current locale uses month/day or day/month ordering.  It makes the
@@ -671,18 +682,108 @@ AC_ARG_ENABLE([xattr],
 		[Disable Extended Attributes support (default: check)]))
 
 if test "x$enable_xattr" != "xno"; then
-	AC_CHECK_HEADERS([attr/xattr.h])
-	AC_CHECK_HEADERS([sys/xattr.h sys/ea.h])
-	AC_SEARCH_LIBS([setxattr], [attr])
-	AC_CHECK_FUNCS([extattr_get_file extattr_list_file])
-	AC_CHECK_FUNCS([extattr_set_fd extattr_set_file])
-	AC_CHECK_FUNCS([fgetxattr flistxattr fsetxattr getxattr])
-	AC_CHECK_FUNCS([lgetxattr listxattr llistxattr lsetxattr])
-	AC_CHECK_FUNCS([fgetea flistea fsetea getea])
-	AC_CHECK_FUNCS([lgetea listea llistea lsetea])
-	AC_CHECK_DECLS([EXTATTR_NAMESPACE_USER], [], [], [#include <sys/types.h>
+    AC_SEARCH_LIBS([setxattr], [attr])
+    AC_CHECK_DECLS([EXTATTR_NAMESPACE_USER], [], [], [#include <sys/types.h>
 #include <sys/extattr.h>
 ])
+    AC_CHECK_DECLS([XATTR_NOFOLLOW], [], [], [#include <sys/xattr.h>
+])
+    if test "x$ac_cv_header_sys_xattr_h" = "xyes" \
+	 -a "x$ac_cv_have_decl_XATTR_NOFOLLOW" = "xyes"; then
+	# Darwin extended attributes support
+	AC_CACHE_VAL([ac_cv_archive_xattr_darwin],
+	  [AC_CHECK_FUNCS(fgetxattr \
+			  flistxattr \
+			  fsetxattr \
+			  getxattr \
+			  listxattr \
+			  setxattr,
+	  [ac_cv_archive_xattr_darwin=yes],
+	  [ac_cv_archive_xattr_darwin=no],
+	  [#include <sys/xattr.h>
+])
+	]
+      )
+    elif test "x$ac_cv_header_sys_extattr_h" = "xyes" \
+           -a "x$ac_cv_have_decl_EXTATTR_NAMESPACE_USER" = "xyes"; then
+	# FreeBSD extended attributes support
+	AC_CACHE_VAL([ac_cv_archive_xattr_freebsd],
+	  [AC_CHECK_FUNCS(extattr_get_fd \
+			  extattr_get_file \
+			  extattr_get_link \
+			  extattr_list_fd \
+			  extattr_list_file \
+			  extattr_list_link \
+			  extattr_set_fd \
+			  extattr_set_link,
+	  [ac_cv_archive_xattr_freebsd=yes],
+	  [ac_cv_archive_xattr_freebsd=no],
+	  [#include <sys/types.h>
+#include <sys/extattr.h>
+])
+	  ]
+	)
+    elif test "x$ac_cv_header_sys_xattr_h" = "xyes" \
+	   -o "x$ac_cv_header_attr_xattr_h" = "xyes"; then
+	# Linux extended attributes support
+	AC_CACHE_VAL([ac_cv_archive_xattr_linux],
+	  [AC_CHECK_FUNCS(fgetxattr \
+			  flistxattr \
+			  fsetxattr \
+			  getxattr \
+			  lgetxattr \
+			  listxattr \
+			  llistxattr \
+			  lsetxattr,
+	  [ac_cv_archive_xattr_linux=yes],
+	  [ac_cv_archive_xattr_linux=no],
+	  [#if HAVE_SYS_TYPES_H
+#include <sys/types.h>
+#endif
+#if HAVE_SYS_XATTR_H
+#include <sys/xattr.h>
+#endif
+#if HAVE_ATTR_XATTR_H
+#include <attr/xatr.h>
+#endif
+])
+	]
+      )
+    elif test "x$ac_cv_header_sys_ea_h" = "xyes"; then
+	# AIX extended attributes support
+	AC_CACHE_VAL([ac_cv_archive_xattr_aix],
+	  [AC_CHECK_FUNCS(fgetea \
+			  flistea \
+			  fsetea \
+			  getea \
+			  lgetea \
+			  listea \
+			  llistea \
+			  lsetea,
+	  [ac_cv_archive_xattr_aix=yes],
+	  [ac_cv_archive_xattr_aix=no],
+	  [#include <sys/ea.h>
+])
+	  ]
+	)
+    fi
+
+    AC_MSG_CHECKING([for extended attributes support])
+    if test "x$ac_cv_archive_xattr_linux" = "xyes"; then
+	AC_DEFINE([ARCHIVE_XATTR_LINUX], [1], [Linux xattr support])
+	AC_MSG_RESULT([Linux])
+    elif test "x$ac_cv_archive_xattr_darwin" = "xyes"; then
+	AC_DEFINE([ARCHIVE_XATTR_DARWIN], [1], [Darwin xattr support])
+	AC_MSG_RESULT([Darwin])
+    elif test "x$ac_cv_archive_xattr_freebsd" = "xyes"; then
+	AC_DEFINE([ARCHIVE_XATTR_FREEBSD], [1], [FreeBSD xattr support])
+	AC_MSG_RESULT([FreeBSD])
+    elif test "x$ac_cv_archive_xattr_aix" = "xyes"; then
+	AC_DEFINE([ARCHIVE_XATTR_AIX], [1], [AIX xattr support])
+	AC_MSG_RESULT([AIX])
+    else
+	AC_MSG_RESULT([none])
+    fi
 fi
 
 # Check for ACL support
@@ -697,72 +798,211 @@ AC_ARG_ENABLE([acl],
 		[Disable ACL support (default: check)]))
 
 if test "x$enable_acl" != "xno"; then
-   AC_CHECK_HEADERS([acl/libacl.h])
-   AC_CHECK_HEADERS([sys/acl.h])
-   AC_CHECK_LIB([acl],[acl_get_file])
-   AC_CHECK_FUNCS([acl_create_entry acl_get_fd_np])
-   AC_CHECK_FUNCS([acl_init acl_set_fd acl_set_fd_np acl_set_file])
+    # Libacl
+    AC_CHECK_LIB([acl], [acl_get_file])
 
-   AC_CHECK_TYPES(acl_permset_t,,,
-	[#if HAVE_SYS_TYPES_H
-	#include <sys/types.h>
-	#endif
-	#if HAVE_SYS_ACL_H
-	#include <sys/acl.h>
-	#endif
-	])
+    AC_CHECK_TYPES([acl_t, acl_entry_t, acl_permset_t, acl_tag_t], [], [], [
+      #if HAVE_SYS_TYPES_H
+      #include <sys/types.h>
+      #endif
+      #if HAVE_SYS_ACL_H
+      #include <sys/acl.h>
+      #endif
+    ])
 
-    # The "acl_get_perm()" function was omitted from the POSIX draft.
-    # (It's a pretty obvious oversight; otherwise, there's no way to
-    # test for specific permissions in a permset.)  Linux uses the obvious
-    # name, FreeBSD adds _np to mark it as "non-Posix extension."
-    # Test for both as a double-check that we really have POSIX-style ACL
-    # support.
-    AC_CHECK_FUNCS(acl_get_perm_np acl_get_perm acl_get_link acl_get_link_np,,,
-	[#if HAVE_SYS_TYPES_H
-	#include <sys/types.h>
-	#endif
-	#if HAVE_SYS_ACL_H
-	#include <sys/acl.h>
-	#endif
-	])
+    AC_CHECK_LIB([richacl], [richacl_get_file])
 
-    # Check for acl_is_trivial_np on FreeBSD
-    AC_CHECK_FUNCS(acl_is_trivial_np,,,
-	[#if HAVE_SYS_TYPES_H
-	#include <sys/types.h>
-	#endif
-	#if HAVE_SYS_ACL_H
-	#include <sys/acl.h>
-	#endif
-	])
-
-    # Check for ACL_TYPE_NFS4
-    AC_CHECK_DECL([ACL_TYPE_NFS4],
-		[AC_DEFINE(HAVE_ACL_TYPE_NFS4, 1, [True for FreeBSD with NFSv4 ACL support])],
-		[],
-		[#include <sys/acl.h>])
-
-    # MacOS has an acl.h that isn't POSIX.  It can be detected by
-    # checking for ACL_USER
-    AC_CHECK_DECL([ACL_USER],
-		[AC_DEFINE(HAVE_ACL_USER, 1, [True for systems with POSIX ACL support])],
-		[],
-		[#include <sys/acl.h>])
-
-    # MacOS has ACL_TYPE_EXTENDED instead
-    AC_CHECK_DECL([ACL_TYPE_EXTENDED],
-		[AC_DEFINE(HAVE_ACL_TYPE_EXTENDED, 1, [True for MacOS ACL support])],
-		[],
-		[#include <sys/types.h>
-		#include <sys/acl.h>])
+    AC_CHECK_TYPES([[struct richace], [struct richacl]], [], [], [
+      #if HAVE_SYS_RICHACL_H
+      #include <sys/richacl.h>
+      #endif
+    ])
 
     # Solaris and derivates ACLs
-    AC_CHECK_LIB([sec], [acl_get])
-    AC_CHECK_TYPES([aclent_t], [], [], [[#include <sys/acl.h>]])
-    AC_CHECK_TYPES([ace_t], [], [], [[#include <sys/acl.h>]])
-    AC_CHECK_FUNCS(acl_get facl_get acl_set facl_set)
+    AC_CHECK_FUNCS(acl facl)
+
+    if test "x$ac_cv_lib_richacl_richacl_get_file" = "xyes" \
+	 -a "x$ac_cv_type_struct_richace" = "xyes" \
+	 -a "x$ac_cv_type_struct_richacl" = "xyes"; then
+	AC_CACHE_VAL([ac_cv_archive_acl_librichacl],
+	  [AC_CHECK_FUNCS(richacl_alloc \
+			  richacl_equiv_mode \
+			  richacl_free \
+			  richacl_get_fd \
+			  richacl_get_file \
+			  richacl_set_fd \
+			  richacl_set_file,
+	  [ac_cv_archive_acl_librichacl=yes], [ac_cv_archive_acl_librichacl=no],	  [#include <sys/richacl.h>])])
+    fi
+
+    if test "x$ac_cv_func_acl" = "xyes" \
+	 -a "x$ac_cv_func_facl" = "xyes"; then
+	AC_CHECK_TYPES([aclent_t], [], [], [[#include <sys/acl.h>]])
+	if test "x$ac_cv_type_aclent_t" = "xyes"; then
+	    AC_CACHE_VAL([ac_cv_archive_acl_sunos],
+	      [AC_CHECK_DECLS([GETACL, SETACL, GETACLCNT],
+	      [ac_cv_archive_acl_sunos=yes], [ac_cv_archive_acl_sunos=no],
+	      [#include <sys/acl.h>])])
+	    AC_CHECK_TYPES([ace_t], [], [], [[#include <sys/acl.h>]])
+	    if test "x$ac_cv_type_ace_t" = "xyes"; then
+		AC_CACHE_VAL([ac_cv_archive_acl_sunos_nfs4],
+		  [AC_CHECK_DECLS([ACE_GETACL, ACE_SETACL, ACE_GETACLCNT],
+		  [ac_cv_archive_acl_sunos_nfs4=yes],
+		  [ac_cv_archive_acl_sonos_nfs4=no],
+		  [#include <sys/acl.h>])])
+	    fi
+	fi
+    elif test "x$ac_cv_type_acl_t" = "xyes" \
+	 -a "x$ac_cv_type_acl_entry_t" = "xyes" \
+	 -a "x$ac_cv_type_acl_permset_t" = "xyes" \
+	 -a "x$ac_cv_type_acl_tag_t" = "xyes"; then
+	# POSIX.1e ACL functions
+	AC_CACHE_VAL([ac_cv_posix_acl_funcs],
+	  [AC_CHECK_FUNCS(acl_add_perm \
+			  acl_clear_perms \
+			  acl_create_entry \
+			  acl_delete_def_file \
+			  acl_free \
+			  acl_get_entry \
+			  acl_get_fd \
+			  acl_get_file \
+			  acl_get_permset \
+			  acl_get_qualifier \
+			  acl_get_tag_type \
+			  acl_init \
+			  acl_set_fd \
+			  acl_set_file \
+			  acl_set_qualifier \
+			  acl_set_tag_type,
+	  [ac_cv_posix_acl_funcs=yes], [ac_cv_posix_acl_funcs=no],
+	  [#if HAVE_SYS_TYPES_H
+	   #include <sys/types.h>
+	   #endif
+	   #if HAVE_SYS_ACL_H
+	   #include <sys/acl.h>
+	   #endif
+	  ])
+	])
+
+	AC_CHECK_FUNCS(acl_get_perm)
+
+	if test "x$ac_cv_posix_acl_funcs" = "xyes" \
+	     -a "x$ac_cv_header_acl_libacl_h" = "xyes" \
+	     -a "x$ac_cv_lib_acl_acl_get_file" = "xyes" \
+	     -a "x$ac_cv_func_acl_get_perm"; then
+	    AC_CACHE_VAL([ac_cv_archive_acl_libacl],
+	      [ac_cv_archive_acl_libacl=yes])
+	    AC_DEFINE([ARCHIVE_ACL_LIBACL], [1],
+	      [POSIX.1e ACL support via libacl])
+	else
+	     # FreeBSD/Darwin
+	     AC_CHECK_FUNCS(acl_add_flag_np \
+			    acl_clear_flags_np \
+			    acl_get_brand_np \
+			    acl_get_entry_type_np \
+			    acl_get_flag_np \
+			    acl_get_flagset_np \
+			    acl_get_fd_np \
+			    acl_get_link_np \
+			    acl_get_perm_np \
+			    acl_is_trivial_np \
+			    acl_set_entry_type_np \
+			    acl_set_fd_np \
+			    acl_set_link_np,,,
+	      [#include <sys/types.h>
+	       #include <sys/acl.h>])
+
+	    AC_CHECK_FUNCS(mbr_uid_to_uuid \
+			   mbr_uuid_to_id \
+			   mbr_gid_to_uuid,,,
+	      [#include <membership.h>])
+
+	    AC_CHECK_DECLS([ACL_TYPE_EXTENDED, ACL_TYPE_NFS4, ACL_USER,
+	      ACL_SYNCHRONIZE], [], [],
+	      [#include <sys/types.h>
+	       #include <sys/acl.h>])
+	    if test "x$ac_cv_posix_acl_funcs" = "xyes" \
+	         -a "x$ac_cv_func_acl_get_fd_np" = "xyes" \
+                 -a "x$ac_cv_func_acl_get_perm" != "xyes" \
+	         -a "x$ac_cv_func_acl_get_perm_np" = "xyes" \
+	         -a "x$ac_cv_func_acl_set_fd_np" = "xyes"; then
+		if test "x$ac_cv_have_decl_ACL_USER" = "xyes"; then
+		    AC_CACHE_VAL([ac_cv_archive_acl_freebsd],
+		      [ac_cv_archive_acl_freebsd=yes])
+		    if test "x$ac_cv_have_decl_ACL_TYPE_NFS4" = "xyes" \
+		         -a "x$ac_cv_func_acl_add_flag_np" = "xyes" \
+		         -a "x$ac_cv_func_acl_get_brand_np" = "xyes" \
+		         -a "x$ac_cv_func_acl_get_entry_type_np" = "xyes" \
+		         -a "x$ac_cv_func_acl_get_flagset_np" = "xyes" \
+		         -a "x$ac_cv_func_acl_set_entry_type_np" = "xyes"; then
+			AC_CACHE_VAL([ac_cv_archive_acl_freebsd_nfs4],
+			  [ac_cv_archive_acl_freebsd_nfs4=yes])
+		    fi
+	        elif test "x$ac_cv_have_decl_ACL_TYPE_EXTENDED" = "xyes" \
+		       -a "x$ac_cv_func_acl_add_flag_np" = "xyes" \
+		       -a "x$ac_cv_func_acl_get_flagset_np" = "xyes" \
+		       -a "x$ac_cv_func_acl_get_link_np" = "xyes" \
+		       -a "x$ac_cv_func_acl_set_link_np" = "xyes" \
+		       -a "x$ac_cv_func_mbr_uid_to_uuid" = "xyes" \
+		       -a "x$ac_cv_func_mbr_uuid_to_id" = "xyes" \
+		       -a "x$ac_cv_func_mbr_gid_to_uuid" = "xyes"; then
+		    AC_CACHE_VAL([ac_cv_archive_acl_darwin],
+		      [ac_cv_archive_acl_darwin=yes])
+	        fi
+	    fi
+	fi
+    fi
+    AC_MSG_CHECKING([for ACL support])
+    if test "x$ac_cv_archive_acl_libacl" = "xyes" \
+	 -a "x$ac_cv_archive_acl_librichacl" = "xyes"; then
+	AC_MSG_RESULT([libacl (POSIX.1e) + librichacl (NFSv4)])
+	AC_DEFINE([ARCHIVE_ACL_LIBACL], [1],
+	  [Linux POSIX.1e ACL support via libacl])
+	AC_DEFINE([ARCHIVE_ACL_LIBRICHACL], [1],
+	  [Linux NFSv4 ACL support via librichacl])
+    elif test "x$ac_cv_archive_acl_libacl" = "xyes"; then
+	AC_MSG_RESULT([libacl (POSIX.1e)])
+	AC_DEFINE([ARCHIVE_ACL_LIBACL], [1],
+	  [Linux POSIX.1e ACL support via libacl])
+    elif test "x$ac_cv_archive_acl_librichacl" = "xyes"; then
+	AC_MSG_RESULT([librichacl (NFSv4)])
+	AC_DEFINE([ARCHIVE_ACL_LIBRICHACL], [1],
+	  [Linux NFSv4 ACL support via librichacl])
+    elif test "x$ac_cv_archive_acl_darwin" = "xyes"; then
+	AC_DEFINE([ARCHIVE_ACL_DARWIN], [1], [Darwin ACL support])
+	AC_MSG_RESULT([Darwin (limited NFSv4)])
+    elif test "x$ac_cv_archive_acl_sunos" = "xyes"; then
+	AC_DEFINE([ARCHIVE_ACL_SUNOS], [1], [Solaris ACL support])
+	if test "x$ac_cv_archive_acl_sunos_nfs4" = "xyes"; then
+	    AC_DEFINE([ARCHIVE_ACL_SUNOS_NFS4], [1],
+	      [Solaris NFSv4 ACL support])
+	    AC_MSG_RESULT([Solaris (POSIX.1e and NFSv4)])
+	else
+	    AC_MSG_RESULT([Solaris (POSIX.1e)])
+	fi
+    elif test "x$ac_cv_archive_acl_freebsd" = "xyes"; then
+	AC_DEFINE([ARCHIVE_ACL_FREEBSD], [1], [FreeBSD ACL support])
+	if test "x$ac_cv_archive_acl_freebsd_nfs4" = "xyes"; then
+	    AC_DEFINE([ARCHIVE_ACL_FREEBSD_NFS4], [1],
+	      [FreeBSD NFSv4 ACL support])
+	    AC_MSG_RESULT([FreeBSD (POSIX.1e and NFSv4)])
+	else
+	    AC_MSG_RESULT([FreeBSD (POSIX.1e)])
+	fi
+    else
+	AC_MSG_RESULT([none])
+    fi
 fi
+
+
+AM_CONDITIONAL([INC_LINUX_ACL],
+  [test "x$ac_cv_archive_acl_libacl" = "xyes" \
+     -o "x$ac_cv_archive_acl_librichacl" = "xyes"])
+AM_CONDITIONAL([INC_SUNOS_ACL], [test "x$ac_cv_archive_acl_sunos" = "xyes"])
+AM_CONDITIONAL([INC_DARWIN_ACL],
+	  [test "x$ac_cv_archive_acl_darwin" = "xyes"])
+AM_CONDITIONAL([INC_FREEBSD_ACL],
+	  [test "x$ac_cv_archive_acl_freebsd" = "xyes"])
 
 # Additional requirements
 AC_SYS_LARGEFILE
@@ -851,6 +1091,16 @@ case "$host_os" in
 	CRYPTO_CHECK(SHA512, LIBSYSTEM, sha512)
 	;;
 esac
+
+if test "x$with_cng" != "xno"; then
+    AC_CHECK_HEADERS([bcrypt.h],[
+        LIBS="$LIBS -lbcrypt"
+    ],[],
+    [[#ifdef HAVE_WINDOWS_H
+    # include <windows.h>
+    #endif
+    ]])
+fi
 
 if test "x$with_nettle" != "xno"; then
     AC_CHECK_HEADERS([nettle/md5.h nettle/ripemd160.h nettle/sha.h])

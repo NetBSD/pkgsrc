@@ -5,7 +5,7 @@ ARCHIVE_ENTRY_ACL(3) manual page
 '''archive_entry_acl_clear''', 
 '''archive_entry_acl_count''', 
 '''archive_entry_acl_from_text''', 
-'''archive_entry_acl_from_text_w,''' 
+'''archive_entry_acl_from_text_w''', 
 '''archive_entry_acl_next''', 
 '''archive_entry_acl_next_w''', 
 '''archive_entry_acl_reset''', 
@@ -248,7 +248,7 @@ ARCHIVE_ENTRY_ACL_ENTRY_NO_PROPAGATE_INHERIT (.B n )
 Do not propagate inherit flags. Only first-level entries inherit ACLs. 
 </dd><dt></dt><dd> 
 ARCHIVE_ENTRY_ACL_ENTRY_SUCCESSFUL_ACCESS (.B S ) 
-Trigger alarm or audit on succesful access. 
+Trigger alarm or audit on successful access. 
 </dd><dt></dt><dd> 
 ARCHIVE_ENTRY_ACL_ENTRY_FAILED_ACCESS (.B F ) 
 Trigger alarm or audit on failed access. 
@@ -262,7 +262,7 @@ and
 '''archive_entry_acl_add_entry_w'''() 
 add a single ACL entry. 
 For the access ACL and non-extended principals, the classic Unix permissions 
-are updated. An archive enry cannot contain both POSIX.1e and NFSv4 ACL 
+are updated. An archive entry cannot contain both POSIX.1e and NFSv4 ACL 
 entries. 
 
 '''archive_entry_acl_clear'''() 
@@ -291,7 +291,7 @@ ARCHIVE_ENTRY_ACL_TYPE_ALARM
 for NFSv4 ACLs. For POSIX.1e ACLs if 
 ARCHIVE_ENTRY_ACL_TYPE_ACCESS 
 is included and at least one extended ACL entry is found, 
-the three non-extened ACLs are added. 
+the three non-extended ACLs are added. 
 
 '''archive_entry_acl_from_text'''() 
 and 
@@ -345,7 +345,7 @@ or
 '''archive_entry_acl_next_w'''(). 
 The function returns either 0, if no non-extended ACLs are found. 
 In this case, the access permissions should be obtained by 
-[[ManPageArchiveEntryMode3]] 
+[[ManPagerchiventryode3]] 
 or set using 
 [[chmod(2)|http://www.freebsd.org/cgi/man.cgi?query=chmod&sektion=2]]. 
 Otherwise, the function returns the same value as 
@@ -356,7 +356,7 @@ and
 '''archive_entry_acl_to_text_w'''() 
 convert the ACL entries for the given type into a 
 (wide) 
-string of ACL entries separated by newline. If the the pointer 
+string of ACL entries separated by newline. If the pointer 
 is not NULL, then the function shall return the length of the string 
 (not including the NULL terminator) 
 in the location pointed to by 
@@ -456,5 +456,5 @@ and flags on success or NULL on error.
 '''archive_entry_acl_types'''() 
 returns a bitmask of ACL entry types or 0 if archive entry has no ACL entries. 
 == SEE ALSO == 
-[[ManPageArchiveEntry3]], 
-[[ManPageLibarchive3]] 
+[[ManPagerchiventry3]], 
+[[ManPageibarchive3]] 

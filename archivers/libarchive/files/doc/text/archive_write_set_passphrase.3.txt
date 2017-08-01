@@ -1,35 +1,35 @@
 ARCHIVE_WRITE_SET_PAS... BSD Library Functions Manual ARCHIVE_WRITE_SET_PAS...
 
-1mNAME0m
-     1marchive_write_set_passphrase22m, 1marchive_write_set_passphrase_callback 22m—
+NAME
+     archive_write_set_passphrase, archive_write_set_passphrase_callback —
      functions for writing encrypted archives
 
-1mLIBRARY0m
+LIBRARY
      Streaming Archive Library (libarchive, -larchive)
 
-1mSYNOPSIS0m
-     1m#include <archive.h>0m
+SYNOPSIS
+     #include <archive.h>
 
-     4mint0m
-     1marchive_write_set_passphrase22m(4mstruct24m 4marchive24m 4m*24m, 4mconst24m 4mchar24m 4m*passphrase24m);
+     int
+     archive_write_set_passphrase(struct archive *, const char *passphrase);
 
-     4mint0m
-     1marchive_write_set_passphrase_callback22m(4mstruct24m 4marchive24m 4m*24m,
-	 4mvoid24m 4m*client_data24m, 4marchive_passphrase_callback24m 4m*24m);
+     int
+     archive_write_set_passphrase_callback(struct archive *,
+	 void *client_data, archive_passphrase_callback *);
 
-1mDESCRIPTION0m
-     1marchive_write_set_passphrase22m()
+DESCRIPTION
+     archive_write_set_passphrase()
 	     Set a passphrase for writing an encryption archive.  If
-	     4mpassphrase24m is NULL or empty, this function will do nothing and
-	     1mARCHIVE_FAILED 22mwill be returned.  Otherwise, 1mARCHIVE_OK 22mwill be
+	     passphrase is NULL or empty, this function will do nothing and
+	     ARCHIVE_FAILED will be returned.  Otherwise, ARCHIVE_OK will be
 	     returned.
 
-     1marchive_write_set_passphrase_callback22m()
+     archive_write_set_passphrase_callback()
 	     Register callback function that will be invoked to get a
 	     passphrase for encrption if the passphrase was not set by the
-	     1marchive_write_set_passphrase22m() function.
+	     archive_write_set_passphrase() function.
 
-1mSEE ALSO0m
+SEE ALSO
      tar(1), libarchive(3), archive_write(3), archive_write_set_options(3)
 
 BSD			      September 21, 2014			   BSD

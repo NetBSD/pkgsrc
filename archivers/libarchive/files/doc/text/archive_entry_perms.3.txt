@@ -1,131 +1,131 @@
 ARCHIVE_ENTRY_PERMS(3)	 BSD Library Functions Manual	ARCHIVE_ENTRY_PERMS(3)
 
-1mNAME0m
-     1marchive_entry_gid22m, 1marchive_entry_set_gid22m, 1marchive_entry_uid22m,
-     1marchive_entry_set_uid22m, 1marchive_entry_perm22m, 1marchive_entry_set_perm22m,
-     1marchive_entry_strmode22m, 1marchive_entry_uname archive_entry_uname_w0m
-     1marchive_entry_set_uname22m, 1marchive_entry_copy_uname22m,
-     1marchive_entry_copy_uname_w22m, 1marchive_entry_update_uname_utf822m,
-     1marchive_entry_gname22m, 1marchive_entry_gname_w22m, 1marchive_entry_set_gname22m,
-     1marchive_entry_copy_gname22m, 1marchive_entry_copy_gname_w22m,
-     1marchive_entry_update_gname_utf822m, 1marchive_entry_fflags22m,
-     1marchive_entry_fflags_text22m, 1marchive_entry_set_fflags22m,
-     1marchive_entry_copy_fflags_text22m, 1marchive_entry_copy_fflags_text_w 22m— func‐
+NAME
+     archive_entry_gid, archive_entry_set_gid, archive_entry_uid,
+     archive_entry_set_uid, archive_entry_perm, archive_entry_set_perm,
+     archive_entry_strmode, archive_entry_uname, archive_entry_uname_w,
+     archive_entry_set_uname, archive_entry_copy_uname,
+     archive_entry_copy_uname_w, archive_entry_update_uname_utf8,
+     archive_entry_gname, archive_entry_gname_w, archive_entry_set_gname,
+     archive_entry_copy_gname, archive_entry_copy_gname_w,
+     archive_entry_update_gname_utf8, archive_entry_fflags,
+     archive_entry_fflags_text, archive_entry_set_fflags,
+     archive_entry_copy_fflags_text, archive_entry_copy_fflags_text_w — func‐
      tions for manipulating ownership and permissions in archive entry
      descriptions
 
-1mLIBRARY0m
+LIBRARY
      Streaming Archive Library (libarchive, -larchive)
 
-1mSYNOPSIS0m
-     1m#include <archive_entry.h>0m
+SYNOPSIS
+     #include <archive_entry.h>
 
-     4mgid_t0m
-     1marchive_entry_gid22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     gid_t
+     archive_entry_gid(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_gid22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mgid_t24m 4mgid24m);
+     void
+     archive_entry_set_gid(struct archive_entry *a, gid_t gid);
 
-     4muid_t0m
-     1marchive_entry_uid22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     uid_t
+     archive_entry_uid(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_uid22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4muid_t24m 4muid24m);
+     void
+     archive_entry_set_uid(struct archive_entry *a, uid_t uid);
 
-     4mmode_t0m
-     1marchive_entry_perm22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     mode_t
+     archive_entry_perm(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_perm22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mmode_t24m 4mmode24m);
+     void
+     archive_entry_set_perm(struct archive_entry *a, mode_t mode);
 
-     4mconst24m 4mchar24m 4m*0m
-     1marchive_entry_strmode22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     const char *
+     archive_entry_strmode(struct archive_entry *a);
 
-     4mconst24m 4mchar24m 4m*0m
-     1marchive_entry_gname22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     const char *
+     archive_entry_gname(struct archive_entry *a);
 
-     4mconst24m 4mwchar_t24m 4m*0m
-     1marchive_entry_gname_w22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     const wchar_t *
+     archive_entry_gname_w(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_gname22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m 4mchar24m 4m*a24m);
+     void
+     archive_entry_set_gname(struct archive_entry *a, const char *a);
 
-     4mvoid0m
-     1marchive_entry_copy_gname22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m 4mchar24m 4m*name24m);
+     void
+     archive_entry_copy_gname(struct archive_entry *a, const char *name);
 
-     4mvoid0m
-     1marchive_entry_copy_gname_w22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m 4mwchar_t24m 4m*name24m);
+     void
+     archive_entry_copy_gname_w(struct archive_entry *a, const wchar_t *name);
 
-     4mint0m
-     1marchive_entry_update_gname_utf822m(4mstruct24m 4marchive_entry24m 4m*a24m,
-	 4mconst24m 4mchar24m 4m*name24m);
+     int
+     archive_entry_update_gname_utf8(struct archive_entry *a,
+	 const char *name);
 
-     4mconst24m 4mchar24m 4m*0m
-     1marchive_entry_uname22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     const char *
+     archive_entry_uname(struct archive_entry *a);
 
-     4mconst24m 4mwchar_t24m 4m*0m
-     1marchive_entry_uname_w22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     const wchar_t *
+     archive_entry_uname_w(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_uname22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m 4mchar24m 4m*name24m);
+     void
+     archive_entry_set_uname(struct archive_entry *a, const char *name);
 
-     4mvoid0m
-     1marchive_entry_copy_uname22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m 4mchar24m 4m*name24m);
+     void
+     archive_entry_copy_uname(struct archive_entry *a, const char *name);
 
-     4mvoid0m
-     1marchive_entry_copy_uname_w22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m 4mwchar_t24m 4m*name24m);
+     void
+     archive_entry_copy_uname_w(struct archive_entry *a, const wchar_t *name);
 
-     4mint0m
-     1marchive_entry_update_uname_utf822m(4mstruct24m 4marchive_entry24m 4m*a24m,
-	 4mconst24m 4mchar24m 4m*name24m);
+     int
+     archive_entry_update_uname_utf8(struct archive_entry *a,
+	 const char *name);
 
-     4mvoid0m
-     1marchive_entry_fflags22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4munsigned24m 4mlong24m 4m*set_bits24m,
-	 4munsigned24m 4mlong24m 4m*clear_bits24m);
+     void
+     archive_entry_fflags(struct archive_entry *a, unsigned long *set_bits,
+	 unsigned long *clear_bits);
 
-     4mconst24m 4mchar24m 4m*0m
-     1marchive_entry_fflags_text22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     const char *
+     archive_entry_fflags_text(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_fflags22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4munsigned24m 4mlong24m 4mset_bits24m,
-	 4munsigned24m 4mlong24m 4mclear_bits24m);
+     void
+     archive_entry_set_fflags(struct archive_entry *a, unsigned long set_bits,
+	 unsigned long clear_bits);
 
-     4mconst24m 4mchar24m 4m*0m
-     1marchive_entry_copy_fflags_text22m(4mstruct24m 4marchive_entry24m 4m*a24m,
-	 4mconst24m 4mchar24m 4m*text24m);
+     const char *
+     archive_entry_copy_fflags_text(struct archive_entry *a,
+	 const char *text);
 
-     4mconst24m 4mwchar_t24m 4m*0m
-     1marchive_entry_copy_fflags_text_w22m(4mstruct24m 4marchive_entry24m 4m*a24m,
-	 4mconst24m 4mwchar_t24m 4m*text24m);
+     const wchar_t *
+     archive_entry_copy_fflags_text_w(struct archive_entry *a,
+	 const wchar_t *text);
 
-1mDESCRIPTION0m
-   1mUser id, group id and mode0m
-     The functions 1marchive_entry_uid22m(), 1marchive_entry_gid22m(), and
-     1marchive_entry_perm22m() can be used to extract the user id, group id and
+DESCRIPTION
+   User id, group id and mode
+     The functions archive_entry_uid(), archive_entry_gid(), and
+     archive_entry_perm() can be used to extract the user id, group id and
      permission from the given entry.  The corresponding functions
-     1marchive_entry_set_uid22m(), 1marchive_entry_set_gid22m(), and
-     1marchive_entry_set_perm22m() store the given user id, group id and permission
+     archive_entry_set_uid(), archive_entry_set_gid(), and
+     archive_entry_set_perm() store the given user id, group id and permission
      in the entry.  The permission is also set as side effect of calling
-     1marchive_entry_set_mode22m().
+     archive_entry_set_mode().
 
-     1marchive_entry_strmode22m() returns a string representation of the permission
+     archive_entry_strmode() returns a string representation of the permission
      as used by the long mode of ls(1).
 
-   1mUser and group name0m
+   User and group name
      User and group names can be provided in one of three different ways:
 
      char *	Multibyte strings in the current locale.
 
      wchar_t *	Wide character strings in the current locale.  The accessor
-		functions are named 1mXXX_w22m().
+		functions are named XXX_w().
 
      UTF-8	Unicode strings encoded as UTF-8.  This are convience func‐
 		tions to update both the multibyte and wide character strings
 		at the same time.
 
-     1marchive_entry_set_XXX22m() is an alias for 1marchive_entry_copy_XXX22m().
+     archive_entry_set_XXX() is an alias for archive_entry_copy_XXX().
 
-   1mFile Flags0m
+   File Flags
      File flags are transparently converted between a bitmap representation
      and a textual format.  For example, if you set the bitmap and ask for
      text, the library will build a canonical text format.  However, if you
@@ -147,7 +147,7 @@ ARCHIVE_ENTRY_PERMS(3)	 BSD Library Functions Manual	ARCHIVE_ENTRY_PERMS(3)
      bits that are not meaningful on the current platform will be ignored.
 
      The canonical text format is a comma-separated list of flag names.  The
-     1marchive_entry_copy_fflags_text22m() and 1marchive_entry_copy_fflags_text_w22m()
+     archive_entry_copy_fflags_text() and archive_entry_copy_fflags_text_w()
      functions parse the provided text and sets the internal bitmap values.
      This is a platform-specific operation; names that are not meaningful on
      the current platform will be ignored.  The function returns a pointer to
@@ -157,12 +157,12 @@ ARCHIVE_ENTRY_PERMS(3)	 BSD Library Functions Manual	ARCHIVE_ENTRY_PERMS(3)
      reflect every name that is recognized.  (In particular, this differs from
      strtofflags(3), which stops parsing at the first unrecognized name.)
 
-1mSEE ALSO0m
+SEE ALSO
      archive_entry(3), archive_entry_acl(3), archive_read_disk(3),
      archive_write_disk(3) libarchive(3),
 
-1mBUGS0m
-     The platform types 4muid_t24m and 4mgid_t24m are often 16 or 32 bit wide.	In this
+BUGS
+     The platform types uid_t and gid_t are often 16 or 32 bit wide.  In this
      case it is possible that the ids can not be correctly restored from ar‐
      chives and get truncated.
 
