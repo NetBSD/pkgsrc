@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2017/07/01 22:12:13 joerg Exp $
+# $NetBSD: Makefile,v 1.134 2017/08/01 14:58:59 wiz Exp $
 
 DISTNAME=	blender-2.77a
 PKGREVISION=	6
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.blender.org/
+HOMEPAGE=	https://www.blender.org/
 COMMENT=	Fully integrated 3D graphics creation suite
 LICENSE=	gnu-gpl-v2
 

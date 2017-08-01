@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2017/02/12 06:25:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2017/08/01 14:58:57 wiz Exp $
 
 DISTNAME=	gedit-3.22.0
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gedit/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
-HOMEPAGE=	http://wiki.gnome.org/Apps/Gedit
+HOMEPAGE=	https://wiki.gnome.org/Apps/Gedit
 COMMENT=	Lightweight GNOME UTF-8 text editor
 LICENSE=	gnu-gpl-v2
 

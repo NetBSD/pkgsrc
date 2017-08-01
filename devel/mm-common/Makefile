@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/05/14 13:50:37 prlw1 Exp $
+# $NetBSD: Makefile,v 1.4 2017/08/01 14:58:57 wiz Exp $
 
 DISTNAME=	mm-common-0.9.10
 CATEGORIES=	devel gnome
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mm-common/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	http://www.gtkmm.org/
+HOMEPAGE=	https://www.gtkmm.org/
 COMMENT=	Provides build infrastructure utilities for GNOME C++ libraries
 LICENSE=	gnu-gpl-v2
 

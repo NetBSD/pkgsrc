@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2017/07/16 19:05:11 maya Exp $
+# $NetBSD: Makefile,v 1.94 2017/08/01 14:58:56 wiz Exp $
 
 DISTNAME=		glib-1.2.10
 PKGREVISION=		11
@@ -6,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/glib/1.2/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://developer.gnome.org/glib/
+HOMEPAGE=		https://developer.gnome.org/glib/
 COMMENT=		Some useful routines for C programming (glib1)
 LICENSE=		gnu-lgpl-v2.1
 

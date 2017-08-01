@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2017/02/12 06:25:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.88 2017/08/01 14:58:56 wiz Exp $
 
 DISTNAME=	glade-2.12.2
 PKGREVISION=	26
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glade/2.12/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://glade.gnome.org/
+HOMEPAGE=	https://glade.gnome.org/
 COMMENT=	User interface builder for the GTK2+ toolkit
 LICENSE=	gnu-gpl-v2
 
