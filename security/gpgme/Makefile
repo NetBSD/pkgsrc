@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2017/04/05 09:31:18 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2017/08/01 11:48:20 ryoon Exp $
 
 DISTNAME=	gpgme-1.8.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnupg.org/related_software/gpgme/
 COMMENT=	GnuPG Made Easy
 LICENSE=	gnu-gpl-v2
+
+USE_LANGUAGES+=		c c++
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
