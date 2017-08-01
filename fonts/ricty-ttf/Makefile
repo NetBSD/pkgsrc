@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2016/04/04 17:33:38 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2017/08/01 17:40:11 wiz Exp $
 
 DISTNAME=	Ricty-3.2.4
 PKGNAME=	${DISTNAME:S/Ricty/ricty-ttf/}
@@ -8,7 +8,7 @@ CATEGORIES=	fonts japanese
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yascentur/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://github.com/yascentur/Ricty
+#HOMEPAGE=	https://github.com/yascentur/Ricty
 COMMENT=	Migu 1M and Inconsolata based TrueType fonts for programming
 LICENSE=	ipafont AND ofl-v1.1 AND 2-clause-bsd
 

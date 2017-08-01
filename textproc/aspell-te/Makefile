@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/10 00:18:18 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/01 17:40:16 wiz Exp $
 #
 
 DISTNAME=	aspell6-te-0.01-2
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/te/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	prudhvi-krishna-bsd@surapaneni.in
-HOMEPAGE=	http://www.swecha.org/wiki/Wordlist_and_Dictionaries
+#HOMEPAGE=	http://www.swecha.org/wiki/Wordlist_and_Dictionaries
 COMMENT=	Telugu language support for aspell
 LICENSE=	gnu-gpl-v2
 

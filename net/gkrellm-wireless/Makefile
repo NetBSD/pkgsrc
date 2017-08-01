@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2017/02/12 06:25:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.54 2017/08/01 17:40:15 wiz Exp $
 
 DISTNAME=		gkrellmwireless-2.0.3
 PKGNAME=		${DISTNAME:S/gkrellm/gkrellm-/}
@@ -7,7 +7,7 @@ CATEGORIES=		net sysutils
 MASTER_SITES=		http://gkrellm.luon.net/files/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://gkrellm.luon.net/gkrellmwireless.phtml
+#HOMEPAGE=		http://gkrellm.luon.net/gkrellmwireless.phtml
 COMMENT=		Wavelan signal strength monitor for gkrellm
 
 WRKSRC=			${WRKDIR}/gkrellmwireless
