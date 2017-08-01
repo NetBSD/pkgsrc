@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/07/25 05:10:03 christos Exp $
+# $NetBSD: Makefile,v 1.28 2017/08/01 17:40:10 wiz Exp $
 #
 
 DISTNAME=	cvsps-2.1
@@ -7,7 +7,7 @@ CATEGORIES=	devel scm
 MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	http://www.cobite.com/cvsps/
+#HOMEPAGE=	http://www.cobite.com/cvsps/
 COMMENT=	Generates 'patchset' information from a CVS repository
 LICENSE=	gnu-gpl-v2
 

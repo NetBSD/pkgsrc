@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/08 12:42:20 asau Exp $
+# $NetBSD: Makefile,v 1.7 2017/08/01 17:40:17 wiz Exp $
 #
 
 DISTNAME=		fluxter-0.1.0
@@ -6,7 +6,7 @@ CATEGORIES=		wm x11
 MASTER_SITES=		http://benedict.isomedia.com/homes/stevencooper/files/
 
 MAINTAINER=		mj@turner.org.za
-HOMEPAGE=		http://benedict.isomedia.com/homes/stevencooper/projects/fluxter.html
+#HOMEPAGE=		http://benedict.isomedia.com/homes/stevencooper/projects/fluxter.html
 COMMENT=		Workspace pager dockapp, particularly useful with Fluxbox
 
 GNU_CONFIGURE=		yes

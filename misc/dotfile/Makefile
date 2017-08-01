@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.35 2012/10/08 09:57:19 asau Exp $
+# $NetBSD: Makefile,v 1.36 2017/08/01 17:40:14 wiz Exp $
 
 DISTNAME=	dotfile-2.4.1
 PKGREVISION=	2
 CATEGORIES=	misc tk
-MASTER_SITES=	http://www.blackie.dk/dotfile/download/
+#MASTER_SITES=	http://www.blackie.dk/dotfile/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.blackie.dk/dotfile/
+#HOMEPAGE=	http://www.blackie.dk/dotfile/
 COMMENT=	GUI dotfile generator program to create .config files
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
