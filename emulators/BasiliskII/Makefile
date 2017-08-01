@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.37 2017/02/17 17:01:19 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2017/08/01 16:47:37 wiz Exp $
 
 DISTNAME=	BasiliskII_src_01052006
 PKGNAME=	BasiliskII-1.0.20060501
 PKGREVISION=	5
 CATEGORIES=	emulators
-MASTER_SITES=	http://gwenole.beauchesne.info/projects/basilisk2/files/
+#MASTER_SITES=	http://gwenole.beauchesne.info/projects/basilisk2/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gwenole.beauchesne.info/projects/basilisk2/
+#HOMEPAGE=	http://gwenole.beauchesne.info/projects/basilisk2/
 COMMENT=	Open Source 68k Macintosh emulator
 
 WRKSRC=			${WRKDIR}/BasiliskII-1.0

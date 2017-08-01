@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/03/09 21:40:05 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2017/08/01 16:47:37 wiz Exp $
 #
 
 VERS=		0.51b3
@@ -10,7 +10,7 @@ MASTER_SITES=	http://elfsh.asgardlabs.org/files/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://elfsh.segfault.net/
+#HOMEPAGE=	http://elfsh.segfault.net/
 COMMENT=	ELF format exploration shell
 
 MAKE_JOBS_SAFE=		no

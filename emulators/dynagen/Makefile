@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/17 16:10:44 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/08/01 16:47:38 wiz Exp $
 
 DISTNAME=	dynagen-0.11.0
 PKGREVISION=	4
@@ -6,7 +6,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dyna-gen/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dynagen.org/
+#HOMEPAGE=	http://dynagen.org/
 COMMENT=	Network configuration generator for Dynamips
 LICENSE=	gnu-gpl-v2
 

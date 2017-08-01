@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/08 09:57:35 asau Exp $
+# $NetBSD: Makefile,v 1.15 2017/08/01 16:47:41 wiz Exp $
 #
 
 DISTNAME=	qterm-ac-1.0
@@ -8,7 +8,7 @@ CATEGORIES=	misc
 MASTER_SITES=	http://www.westley.demon.co.uk/src/
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://www.alistaircrooks.co.uk/software.html
+#HOMEPAGE=	http://www.alistaircrooks.co.uk/software.html
 COMMENT=	Utility to recognise terminal type automatically
 
 GNU_CONFIGURE=	yes

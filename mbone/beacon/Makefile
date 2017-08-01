@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2016/07/09 06:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2017/08/01 16:47:39 wiz Exp $
 #
 
 DISTNAME=	beacon-1.3
@@ -7,7 +7,7 @@ CATEGORIES=	mbone
 MASTER_SITES=	${MASTER_SITE_FREEBSD}
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://dast.nlanr.net/Projects/Beacon/
+#HOMEPAGE=	http://dast.nlanr.net/Projects/Beacon/
 COMMENT=	Multicast supervision tool
 LICENSE=	modified-bsd
 
