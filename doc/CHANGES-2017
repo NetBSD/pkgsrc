@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3091 2017/08/01 18:13:24 kleink Exp $
+$NetBSD: CHANGES-2017,v 1.3092 2017/08/01 18:30:52 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4292,3 +4292,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed news/cg [wiz 2017-08-01]
 	Updated geography/py-geojson to 1.3.5 [kleink 2017-08-01]
 	Updated textproc/py-vobject to 0.9.5 [kleink 2017-08-01]
+	Updated www/py-flask-frozen to 0.15 [kleink 2017-08-01]
