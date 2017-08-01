@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2017/02/12 06:24:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.46 2017/08/01 14:58:56 wiz Exp $
 #
 
 DISTNAME=		glade3-3.4.5
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/glade3/3.4/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://glade.gnome.org/
+HOMEPAGE=		https://glade.gnome.org/
 COMMENT=		User interface builder for the GTK2+ toolkit
 
 USE_PKGLOCALEDIR=	yes

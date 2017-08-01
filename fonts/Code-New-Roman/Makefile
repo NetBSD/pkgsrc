@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/01/20 11:40:37 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/01 14:58:57 wiz Exp $
 
 DISTNAME=	cnr_BETA
 PKGNAME=	Code-New-Roman-2.1beta1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=codenewroman/}
 EXTRACT_SUFX=	.otf
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/codenewroman/
+HOMEPAGE=	https://sourceforge.net/projects/codenewroman/
 COMMENT=	Programming font
 LICENSE=	ofl-v1.1
 

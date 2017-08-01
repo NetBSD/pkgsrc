@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2017/01/01 14:43:22 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2017/08/01 14:58:52 wiz Exp $
 
 DISTNAME=		Csound${CSOUND_VERSION}
 PKGNAME=		csound5-${CSOUND_VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=csound/csound5/csound5.19/}
 WRKSRC=			${WRKDIR}/Csound${CSOUND_VERSION}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://sourceforge.net/projects/csound/
+HOMEPAGE=		https://sourceforge.net/projects/csound/
 COMMENT=		Software synthesizer and sequencer
 LICENSE=		gnu-lgpl-v2.1 # or later
 

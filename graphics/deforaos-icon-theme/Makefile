@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2016/09/14 00:44:35 khorben Exp $
+# $NetBSD: Makefile,v 1.6 2017/08/01 14:58:59 wiz Exp $
 #
 
 DISTNAME=	DeforaOS-Artwork-0.1.3
 PKGNAME=	deforaos-icon-theme-0.1.3
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.defora.org/os/download/download/4451/
+MASTER_SITES=	https://www.defora.org/os/download/download/4451/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/os/project/4342/DeforaOS%20Artwork
+HOMEPAGE=	https://www.defora.org/os/project/4342/DeforaOS%20Artwork
 COMMENT=	Artwork for the DeforaOS desktop
 LICENSE=	cc-by-sa-v3.0
 

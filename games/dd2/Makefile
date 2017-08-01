@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.15 2015/04/25 14:22:53 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2017/08/01 14:58:59 wiz Exp $
 #
 
 DISTNAME=		dd2-0.2.2
 PKGREVISION=		2
 CATEGORIES=		games
-MASTER_SITES=		http://www.usebox.net/jjm/dd2/releases/
+MASTER_SITES=		https://www.usebox.net/jjm/dd2/releases/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.usebox.net/jjm/dd2/
+HOMEPAGE=		https://www.usebox.net/jjm/dd2/
 COMMENT=		Shoot'em up arcade game for one or two players
 
 GNU_CONFIGURE=		yes

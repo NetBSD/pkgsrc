@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2017/02/12 06:24:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/01 14:59:00 wiz Exp $
 #
 
 DISTNAME=	girara-0.2.7
 PKGREVISION=	2
 CATEGORIES=	x11
-MASTER_SITES=	http://pwmt.org/projects/girara/download/
+MASTER_SITES=	https://pwmt.org/projects/girara/download/
 
 MAINTAINER=	degroote@NetBSD.org
-HOMEPAGE=	http://pwmt.org/projects/girara/
+HOMEPAGE=	https://pwmt.org/projects/girara/
 COMMENT=	Library to develop simple and minimalist user interface
 LICENSE=	zlib
 
