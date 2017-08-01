@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/01 13:00:03 markd Exp $
+
+SHA1 (Sort-Key-1.33.tar.gz) = a41c662076d501f5afb236b0ed0726acb8c7c74c
+RMD160 (Sort-Key-1.33.tar.gz) = 39d77e62336319782654cea82f07ab894a257630
+SHA512 (Sort-Key-1.33.tar.gz) = cf87cd2f5c0eea662dbdaf7faed5646ebd63925c71a093a79a9980d6de290b1128443954675893f263961e68d1db0e9e4ca1412a2734ce8dcdd271bcf4f1be17
+Size (Sort-Key-1.33.tar.gz) = 58324 bytes
