@@ -36,7 +36,7 @@ it includes everything from
 '''struct stat''' 
 plus associated pathname, textual group and user names, etc. 
 These objects are used by 
-[[ManPageLibarchive3]] 
+[[ManPageibarchive3]] 
 to represent the metadata associated with a particular 
 entry in an archive. 
 === Create and Destroy=== 
@@ -64,16 +64,16 @@ object.
 Due to high number of functions, the accessor functions can be found in 
 man pages grouped by the purpose. 
 <dl> 
-<dt>[[ManPageArchiveEntryAcl3]]</dt><dd> 
+<dt>[[ManPagerchiventrycl3]]</dt><dd> 
 Access Control List manipulation 
-</dd><dt>[[ManPageArchiveEntryPaths3]]</dt><dd> 
+</dd><dt>[[ManPagerchiventryaths3]]</dt><dd> 
 Path name manipulation 
-</dd><dt>[[ManPageArchiveEntryPerms3]]</dt><dd> 
+</dd><dt>[[ManPagerchiventryerms3]]</dt><dd> 
 User, group and mode manipulation 
-</dd><dt>[[ManPageArchiveEntryStat3]]</dt><dd> 
+</dd><dt>[[ManPagerchiventrytat3]]</dt><dd> 
 Functions not in the other groups and copying to/from 
 ''struct'' stat. 
-</dd><dt>[[ManPageArchiveEntryTime3]]</dt><dd> 
+</dd><dt>[[ManPagerchiventryime3]]</dt><dd> 
 Time field manipulation 
 </dd></dl> 
 
@@ -107,11 +107,11 @@ narrow string for the same data, the previously-set wide string will
 be discarded in favor of the new data. 
 
 == SEE ALSO == 
-[[ManPageArchiveEntryAcl3]], 
-[[ManPageArchiveEntryPaths3]], 
-[[ManPageArchiveEntryPerms3]], 
-[[ManPageArchiveEntryTime3]] 
-[[ManPageLibarchive3]], 
+[[ManPagerchiventrycl3]], 
+[[ManPagerchiventryaths3]], 
+[[ManPagerchiventryerms3]], 
+[[ManPagerchiventryime3]] 
+[[ManPageibarchive3]], 
 == HISTORY == 
 The 
 '''libarchive''' 

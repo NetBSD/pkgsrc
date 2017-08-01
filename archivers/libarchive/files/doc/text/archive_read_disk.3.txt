@@ -1,93 +1,120 @@
 ARCHIVE_READ_DISK(3)	 BSD Library Functions Manual	  ARCHIVE_READ_DISK(3)
 
-1mNAME0m
-     1marchive_read_disk_new22m, 1marchive_read_disk_set_symlink_logical22m,
-     1marchive_read_disk_set_symlink_physical22m,
-     1marchive_read_disk_set_symlink_hybrid22m, 1marchive_read_disk_entry_from_file22m,
-     1marchive_read_disk_gname22m, 1marchive_read_disk_uname22m,
-     1marchive_read_disk_set_uname_lookup22m, 1marchive_read_disk_set_gname_lookup22m,
-     1marchive_read_disk_set_standard_lookup22m, 1marchive_read_close22m,
-     1marchive_read_finish22m, 1marchive_read_free 22m— functions for reading objects
+NAME
+     archive_read_disk_new, archive_read_disk_set_behavior,
+     archive_read_disk_set_symlink_logical,
+     archive_read_disk_set_symlink_physical,
+     archive_read_disk_set_symlink_hybrid, archive_read_disk_entry_from_file,
+     archive_read_disk_gname, archive_read_disk_uname,
+     archive_read_disk_set_uname_lookup, archive_read_disk_set_gname_lookup,
+     archive_read_disk_set_standard_lookup — functions for reading objects
      from disk
 
-1mLIBRARY0m
+LIBRARY
      Streaming Archive Library (libarchive, -larchive)
 
-1mSYNOPSIS0m
-     1m#include <archive.h>0m
+SYNOPSIS
+     #include <archive.h>
 
-     4mstruct24m 4marchive24m 4m*0m
-     1marchive_read_disk_new22m(4mvoid24m);
+     struct archive *
+     archive_read_disk_new(void);
 
-     4mint0m
-     1marchive_read_disk_set_symlink_logical22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_disk_set_behavior(struct archive *, int);
 
-     4mint0m
-     1marchive_read_disk_set_symlink_physical22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_disk_set_symlink_logical(struct archive *);
 
-     4mint0m
-     1marchive_read_disk_set_symlink_hybrid22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_disk_set_symlink_physical(struct archive *);
 
-     4mconst24m 4mchar24m 4m*0m
-     1marchive_read_disk_gname22m(4mstruct24m 4marchive24m 4m*24m, 4mgid_t24m);
+     int
+     archive_read_disk_set_symlink_hybrid(struct archive *);
 
-     4mconst24m 4mchar24m 4m*0m
-     1marchive_read_disk_uname22m(4mstruct24m 4marchive24m 4m*24m, 4muid_t24m);
+     const char *
+     archive_read_disk_gname(struct archive *, gid_t);
 
-     4mint0m
-     1marchive_read_disk_set_gname_lookup22m(4mstruct24m 4marchive24m 4m*24m, 4mvoid24m 4m*24m,
-	 4mconst24m 4mchar24m 4m*(*lookup)(void24m 4m*,24m 4mgid_t)24m, 4mvoid24m 4m(*cleanup)(void24m 4m*)24m);
+     const char *
+     archive_read_disk_uname(struct archive *, uid_t);
 
-     4mint0m
-     1marchive_read_disk_set_uname_lookup22m(4mstruct24m 4marchive24m 4m*24m, 4mvoid24m 4m*24m,
-	 4mconst24m 4mchar24m 4m*(*lookup)(void24m 4m*,24m 4muid_t)24m, 4mvoid24m 4m(*cleanup)(void24m 4m*)24m);
+     int
+     archive_read_disk_set_gname_lookup(struct archive *, void *,
+	 const char *(*lookup)(void *, gid_t), void (*cleanup)(void *));
 
-     4mint0m
-     1marchive_read_disk_set_standard_lookup22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_disk_set_uname_lookup(struct archive *, void *,
+	 const char *(*lookup)(void *, uid_t), void (*cleanup)(void *));
 
-     4mint0m
-     1marchive_read_disk_entry_from_file22m(4mstruct24m 4marchive24m 4m*24m,
-	 4mstruct24m 4marchive_entry24m 4m*24m, 4mint24m 4mfd24m, 4mconst24m 4mstruct24m 4mstat24m 4m*24m);
+     int
+     archive_read_disk_set_standard_lookup(struct archive *);
 
-     4mint0m
-     1marchive_read_close22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_disk_entry_from_file(struct archive *,
+	 struct archive_entry *, int fd, const struct stat *);
 
-     4mint0m
-     1marchive_read_finish22m(4mstruct24m 4marchive24m 4m*24m);
-
-     4mint0m
-     1marchive_read_free22m(4mstruct24m 4marchive24m 4m*24m);
-
-1mDESCRIPTION0m
+DESCRIPTION
      These functions provide an API for reading information about objects on
      disk.  In particular, they provide an interface for populating struct
      archive_entry objects.
 
-     1marchive_read_disk_new22m()
+     archive_read_disk_new()
 	     Allocates and initializes a struct archive object suitable for
 	     reading object information from disk.
 
-     1marchive_read_disk_set_symlink_logical22m(),
-	     1marchive_read_disk_set_symlink_physical22m(),
-	     1marchive_read_disk_set_symlink_hybrid22m()
+     archive_read_disk_set_behavior()
+	     Configures various behavior options when reading entries from
+	     disk.  The flags field consists of a bitwise OR of one or more of
+	     the following values:
+	     ARCHIVE_READDISK_HONOR_NODUMP
+		     Skip files and directories with the nodump file attribute
+		     (file flag) set.  By default, the nodump file atrribute
+		     is ignored.
+	     ARCHIVE_READDISK_MAC_COPYFILE
+		     Mac OS X specific. Read metadata (ACLs and extended
+		     attributes) with copyfile(3).  By default, metadata is
+		     read using copyfile(3).
+	     ARCHIVE_READDISK_NO_ACL
+		     Do not read Access Control Lists.	By default, ACLs are
+		     read from disk.
+	     ARCHIVE_READDISK_NO_FFLAGS
+		     Do not read file attributes (file flags).	By default,
+		     file attributes are read from disk.  See chattr(1)
+		     (Linux) or chflags(1) (FreeBSD, Mac OS X) for more infor‐
+		     mation on file attributes.
+	     ARCHIVE_READDISK_NO_TRAVERSE_MOUNTS
+		     Do not traverse mount points.  By defaut, moint points
+		     are traversed.
+	     ARCHIVE_READDISK_NO_XATTR
+		     Do not read extended file attributes (xattrs).  By
+		     default, extended file attributes are read from disk.
+		     See xattr(7) (Linux), xattr(2) (Mac OS X), or
+		     getextattr(8) (FreeBSD) for more information on extended
+		     file attributes.
+	     ARCHIVE_READDISK_RESTORE_ATIME
+		     Restore access time of traversed files.  By default,
+		     access time of traversed files is not restored.
+
+     archive_read_disk_set_symlink_logical(),
+	     archive_read_disk_set_symlink_physical(),
+	     archive_read_disk_set_symlink_hybrid()
 	     This sets the mode used for handling symbolic links.  The
 	     “logical” mode follows all symbolic links.  The “physical” mode
 	     does not follow any symbolic links.  The “hybrid” mode currently
 	     behaves identically to the “logical” mode.
 
-     1marchive_read_disk_gname22m(), 1marchive_read_disk_uname22m()
+     archive_read_disk_gname(), archive_read_disk_uname()
 	     Returns a user or group name given a gid or uid value.  By
 	     default, these always return a NULL string.
 
-     1marchive_read_disk_set_gname_lookup22m(),
-	     1marchive_read_disk_set_uname_lookup22m()
+     archive_read_disk_set_gname_lookup(),
+	     archive_read_disk_set_uname_lookup()
 	     These allow you to override the functions used for user and group
 	     name lookups.  You may also provide a void * pointer to a private
 	     data structure and a cleanup function for that data.  The cleanup
 	     function will be invoked when the struct archive object is
 	     destroyed or when new lookup functions are registered.
 
-     1marchive_read_disk_set_standard_lookup22m()
+     archive_read_disk_set_standard_lookup()
 	     This convenience function installs a standard set of user and
 	     group name lookup functions.  These functions use getpwuid(3) and
 	     getgrgid(3) to convert ids to names, defaulting to NULL if the
@@ -95,7 +122,7 @@ ARCHIVE_READ_DISK(3)	 BSD Library Functions Manual	  ARCHIVE_READ_DISK(3)
 	     ple memory cache to reduce the number of calls to getpwuid(3) and
 	     getgrgid(3).
 
-     1marchive_read_disk_entry_from_file22m()
+     archive_read_disk_entry_from_file()
 	     Populates a struct archive_entry object with information about a
 	     particular file.  The archive_entry object must have already been
 	     created with archive_entry_new(3) and at least one of the source
@@ -118,20 +145,10 @@ ARCHIVE_READ_DISK(3)	 BSD Library Functions Manual	  ARCHIVE_READ_DISK(3)
 	     group names using the currently registered lookup functions
 	     above.  This affects the file ownership fields and ACL values in
 	     the struct archive_entry object.
-
-     1marchive_read_close22m()
-	     Does nothing for archive_read_disk handles.
-
-     1marchive_read_finish22m()
-	     This is a deprecated synonym for 1marchive_read_free22m().
-
-     1marchive_read_free22m()
-	     Invokes 1marchive_read_close22m() if it was not invoked manually, then
-	     releases all resources.
-     More information about the 4mstruct24m 4marchive24m object and the overall design
+     More information about the struct archive object and the overall design
      of the library can be found in the libarchive(3) overview.
 
-1mEXAMPLE0m
+EXAMPLE
      The following illustrates basic usage of the library by showing how to
      use it to copy an item on disk into an archive.
 
@@ -160,50 +177,50 @@ ARCHIVE_READ_DISK(3)	 BSD Library Functions Manual	  ARCHIVE_READ_DISK(3)
 	     archive_entry_free(entry);
 	   }
 
-1mRETURN VALUES0m
-     Most functions return 1mARCHIVE_OK 22m(zero) on success, or one of several
+RETURN VALUES
+     Most functions return ARCHIVE_OK (zero) on success, or one of several
      negative error codes for errors.  Specific error codes include:
-     1mARCHIVE_RETRY 22mfor operations that might succeed if retried, 1mARCHIVE_WARN0m
+     ARCHIVE_RETRY for operations that might succeed if retried, ARCHIVE_WARN
      for unusual conditions that do not prevent further operations, and
-     1mARCHIVE_FATAL 22mfor serious errors that make remaining operations impossi‐
+     ARCHIVE_FATAL for serious errors that make remaining operations impossi‐
      ble.
 
-     1marchive_read_disk_new22m() returns a pointer to a newly-allocated struct
+     archive_read_disk_new() returns a pointer to a newly-allocated struct
      archive object or NULL if the allocation failed for any reason.
 
-     1marchive_read_disk_gname22m() and 1marchive_read_disk_uname22m() return const char
+     archive_read_disk_gname() and archive_read_disk_uname() return const char
      * pointers to the textual name or NULL if the lookup failed for any rea‐
      son.  The returned pointer points to internal storage that may be reused
      on the next call to either of these functions; callers should copy the
      string if they need to continue accessing it.
 
-1mERRORS0m
+ERRORS
      Detailed error codes and textual descriptions are available from the
-     1marchive_errno22m() and 1marchive_error_string22m() functions.
+     archive_errno() and archive_error_string() functions.
 
-1mSEE ALSO0m
+SEE ALSO
      archive_read(3), archive_util(3), archive_write(3),
      archive_write_disk(3), tar(1), libarchive(3)
 
-1mHISTORY0m
-     The 1mlibarchive 22mlibrary first appeared in FreeBSD 5.3.  The
-     1marchive_read_disk 22minterface was added to 1mlibarchive 2.6 22mand first
+HISTORY
+     The libarchive library first appeared in FreeBSD 5.3.  The
+     archive_read_disk interface was added to libarchive 2.6 and first
      appeared in FreeBSD 8.0.
 
-1mAUTHORS0m
-     The 1mlibarchive 22mlibrary was written by Tim Kientzle
+AUTHORS
+     The libarchive library was written by Tim Kientzle
      <kientzle@FreeBSD.org>.
 
-1mBUGS0m
+BUGS
      The “standard” user name and group name lookup functions are not the
      defaults because getgrgid(3) and getpwuid(3) are sometimes too large for
      particular applications.  The current design allows the application
      author to use a more compact implementation when appropriate.
 
      The full list of metadata read from disk by
-     1marchive_read_disk_entry_from_file22m() is necessarily system-dependent.
+     archive_read_disk_entry_from_file() is necessarily system-dependent.
 
-     The 1marchive_read_disk_entry_from_file22m() function reads as much informa‐
+     The archive_read_disk_entry_from_file() function reads as much informa‐
      tion as it can from disk.	Some method should be provided to limit this
      so that clients who do not need ACLs, for instance, can avoid the extra
      work needed to look up such information.
@@ -213,4 +230,4 @@ ARCHIVE_READ_DISK(3)	 BSD Library Functions Manual	  ARCHIVE_READ_DISK(3)
      such methods are implemented, the “hybrid” symbolic link mode will make
      sense.
 
-BSD			       December 30, 2016			   BSD
+BSD				 April 3, 2017				   BSD

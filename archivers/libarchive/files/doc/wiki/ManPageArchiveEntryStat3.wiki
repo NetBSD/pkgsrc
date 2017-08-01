@@ -258,7 +258,7 @@ The functions
 and 
 '''archive_entry_ino64'''() 
 are used by 
-[[ManPageArchiveEntryLinkify3]] 
+[[ManPagerchiventryinkify3]] 
 to find hardlinks. 
 The pair of device and inode is supposed to identify hardlinked files. 
 
@@ -301,8 +301,8 @@ platforms.
 Some archive formats use the combined form, while other formats use 
 the split form. 
 == SEE ALSO == 
-[[ManPageArchiveEntryAcl3]], 
-[[ManPageArchiveEntryPerms3]], 
-[[ManPageArchiveEntryTime3]], 
-[[ManPageLibarchive3]], 
+[[ManPagerchiventrycl3]], 
+[[ManPagerchiventryerms3]], 
+[[ManPagerchiventryime3]], 
+[[ManPageibarchive3]], 
 [[stat(2)|http://www.freebsd.org/cgi/man.cgi?query=stat&sektion=2]] 

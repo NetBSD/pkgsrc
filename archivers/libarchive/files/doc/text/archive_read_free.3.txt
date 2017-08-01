@@ -1,50 +1,50 @@
 ARCHIVE_READ_FREE(3)	 BSD Library Functions Manual	  ARCHIVE_READ_FREE(3)
 
-1mNAME0m
-     1marchive_read_close22m, 1marchive_read_finish22m, 1marchive_read_free 22m— functions
+NAME
+     archive_read_close, archive_read_finish, archive_read_free — functions
      for reading streaming archives
 
-1mLIBRARY0m
+LIBRARY
      Streaming Archive Library (libarchive, -larchive)
 
-1mSYNOPSIS0m
-     1m#include <archive.h>0m
+SYNOPSIS
+     #include <archive.h>
 
-     4mint0m
-     1marchive_read_close22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_close(struct archive *);
 
-     4mint0m
-     1marchive_read_finish22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_finish(struct archive *);
 
-     4mint0m
-     1marchive_read_free22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_free(struct archive *);
 
-1mDESCRIPTION0m
-     1marchive_read_close22m()
+DESCRIPTION
+     archive_read_close()
 	     Complete the archive and invoke the close callback.
-     1marchive_read_finish22m()
-	     This is a deprecated synonym for 1marchive_read_free22m().  The new
+     archive_read_finish()
+	     This is a deprecated synonym for archive_read_free().  The new
 	     name was introduced with libarchive 3.0.  Applications that need
 	     to compile with either libarchive 2 or libarchive 3 should con‐
-	     tinue to use the 1marchive_read_finish22m() name.	Both names will be
+	     tinue to use the archive_read_finish() name.  Both names will be
 	     supported until libarchive 4.0 is released, which is not expected
 	     to occur earlier than 2013.
-     1marchive_read_free22m()
-	     Invokes 1marchive_read_close22m() if it was not invoked manually, then
+     archive_read_free()
+	     Invokes archive_read_close() if it was not invoked manually, then
 	     release all resources.  Note: In libarchive 1.x, this function
-	     was declared to return 4mvoid24m, which made it impossible to detect
-	     certain errors when 1marchive_read_close22m() was invoked implicitly
+	     was declared to return void, which made it impossible to detect
+	     certain errors when archive_read_close() was invoked implicitly
 	     from this function.  The declaration is corrected beginning with
 	     libarchive 2.0.
 
-1mRETURN VALUES0m
-     These functions return 1mARCHIVE_OK 22mon success, or 1mARCHIVE_FATAL22m.
+RETURN VALUES
+     These functions return ARCHIVE_OK on success, or ARCHIVE_FATAL.
 
-1mERRORS0m
+ERRORS
      Detailed error codes and textual descriptions are available from the
-     1marchive_errno22m() and 1marchive_error_string22m() functions.
+     archive_errno() and archive_error_string() functions.
 
-1mSEE ALSO0m
+SEE ALSO
      libarchive(3), archive_read_new(3), archive_read_data(3),
      archive_read_filter(3), archive_read_format(3), archive_read_open(3),
      archive_read_set_options(3), archive_util(3)

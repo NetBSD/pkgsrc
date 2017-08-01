@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Sat Feb 25 11:22:05 2017 -->
+<!-- CreationDate: Mon Jul 10 02:32:56 2017 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -51,7 +51,9 @@ written. In particular, this writes out the final padding
 required by some formats. Ordinarily, clients never need to
 call this, as it is called automatically by
 <b>archive_write_header</b>() and
-<b>archive_write_close</b>() as needed.</p>
+<b>archive_write_close</b>() as needed. For
+archive_write_disk handles, this flushes pending file
+attribute changes like modification time.</p>
 
 <p style="margin-top: 1em"><b>RETURN VALUES</b></p>
 
@@ -77,7 +79,7 @@ archive_write_data(3), archive_write_set_options(3),
 cpio(5), mtree(5), tar(5)</p>
 
 <p style="margin-left:6%; margin-top: 1em">BSD
-February&nbsp;2, 2012 BSD</p>
+February&nbsp;28, 2017 BSD</p>
 <hr>
 </body>
 </html>

@@ -1,15 +1,15 @@
 LIBARCHIVE_INTERNALS(3)  BSD Library Functions Manual  LIBARCHIVE_INTERNALS(3)
 
-1mNAME0m
-     1mlibarchive_internals 22m— description of libarchive internal interfaces
+NAME
+     libarchive_internals — description of libarchive internal interfaces
 
-1mOVERVIEW0m
-     The 1mlibarchive 22mlibrary provides a flexible interface for reading and
+OVERVIEW
+     The libarchive library provides a flexible interface for reading and
      writing streaming archive files such as tar and cpio.  Internally, it
      follows a modular layered design that should make it easy to add new ar‐
      chive and compression formats.
 
-1mGENERAL ARCHITECTURE0m
+GENERAL ARCHITECTURE
      Externally, libarchive exposes most operations through an opaque, object-
      style interface.  The archive_entry(3) objects store information about a
      single filesystem object.	The rest of the library provides facilities to
@@ -27,17 +27,17 @@ LIBARCHIVE_INTERNALS(3)  BSD Library Functions Manual  LIBARCHIVE_INTERNALS(3)
      clients to open an archive or disk writer, and then use a single set of
      code to select and write entries, regardless of the target.
 
-1mREAD ARCHITECTURE0m
+READ ARCHITECTURE
      From the outside, clients use the archive_read(3) API to manipulate an
-     1marchive 22mobject to read entries and bodies from an archive stream.  Inter‐
-     nally, the 1marchive 22mobject is cast to an 1marchive_read 22mobject, which holds
+     archive object to read entries and bodies from an archive stream.	Inter‐
+     nally, the archive object is cast to an archive_read object, which holds
      all read-specific data.  The API has four layers: The lowest layer is the
      I/O layer.  This layer can be overridden by clients, but most clients use
      the packaged I/O callbacks provided, for example, by
      archive_read_open_memory(3), and archive_read_open_fd(3).	The compres‐
      sion layer calls the I/O layer to read bytes and decompresses them for
      the format layer.	The format layer unpacks a stream of uncompressed
-     bytes and creates 1marchive_entry 22mobjects from the incoming data.  The API
+     bytes and creates archive_entry objects from the incoming data.  The API
      layer tracks overall state (for example, it prevents clients from reading
      data before reading a header) and invokes the format and compression
      layer operations through registered function pointers.  In particular,
@@ -49,7 +49,7 @@ LIBARCHIVE_INTERNALS(3)  BSD Library Functions Manual  LIBARCHIVE_INTERNALS(3)
      ders were invoked for each entry, but this design hindered error recov‐
      ery.)
 
-   1mI/O Layer and Client Callbacks0m
+   I/O Layer and Client Callbacks
      The read API goes to some lengths to be nice to clients.  As a result,
      there are few restrictions on the behavior of the client callbacks.
 
@@ -71,7 +71,7 @@ LIBARCHIVE_INTERNALS(3)  BSD Library Functions Manual  LIBARCHIVE_INTERNALS(3)
      single block; other clients may begin asynchronous I/O operations for the
      next block on each request.
 
-   1mDecompresssion Layer0m
+   Decompresssion Layer
      The decompression layer not only handles decompression, it also buffers
      data so that the format handlers see a much nicer I/O model.  The decom‐
      pression API is a two stage peek/consume model.  A read_ahead request
@@ -81,10 +81,10 @@ LIBARCHIVE_INTERNALS(3)  BSD Library Functions Manual  LIBARCHIVE_INTERNALS(3)
      asking for a minimum of one byte and then copying as much data as is
      available.
 
-     A subsequent call to the 1mconsume22m() function advances the read pointer.
-     Note that data returned from a 1mread_ahead22m() call is guaranteed to remain
-     in place until the next call to 1mread_ahead22m().  Intervening calls to
-     1mconsume22m() should not cause the data to move.
+     A subsequent call to the consume() function advances the read pointer.
+     Note that data returned from a read_ahead() call is guaranteed to remain
+     in place until the next call to read_ahead().  Intervening calls to
+     consume() should not cause the data to move.
 
      Skip requests must always be handled exactly.  Decompression handlers
      that cannot seek forward should not register a skip handler; the API
@@ -94,14 +94,14 @@ LIBARCHIVE_INTERNALS(3)  BSD Library Functions Manual  LIBARCHIVE_INTERNALS(3)
      Registration/Configuration
 	     When the client invokes the public support function, the decom‐
 	     pression handler invokes the internal
-	     1m__archive_read_register_compression22m() function to provide bid and
-	     initialization functions.	This function returns 1mNULL 22mon error or
-	     else a pointer to a 1mstruct decompressor_t22m.  This structure con‐
-	     tains a 4mvoid24m 4m*24m 4mconfig24m slot that can be used for storing any cus‐
+	     __archive_read_register_compression() function to provide bid and
+	     initialization functions.	This function returns NULL on error or
+	     else a pointer to a struct decompressor_t.  This structure con‐
+	     tains a void * config slot that can be used for storing any cus‐
 	     tomization information.
      Bid     The bid function is invoked with a pointer and size of a block of
 	     data.  The decompressor can access its config data through the
-	     4mdecompressor24m element of the 1marchive_read 22mobject.  The bid func‐
+	     decompressor element of the archive_read object.  The bid func‐
 	     tion is otherwise stateless.  In particular, it must not perform
 	     any I/O operations.
 
@@ -116,28 +116,28 @@ LIBARCHIVE_INTERNALS(3)  BSD Library Functions Manual  LIBARCHIVE_INTERNALS(3)
 	     require two bytes for correct bidding.)
      Initialize
 	     The winning bidder will have its init function called.  This
-	     function should initialize the remaining slots of the 4mstruct0m
-	     4mdecompressor_t24m object pointed to by the 4mdecompressor24m element of
-	     the 4marchive_read24m object.  In particular, it should allocate any
-	     working data it needs in the 4mdata24m slot of that structure.  The
+	     function should initialize the remaining slots of the struct
+	     decompressor_t object pointed to by the decompressor element of
+	     the archive_read object.  In particular, it should allocate any
+	     working data it needs in the data slot of that structure.	The
 	     init function is called with the block of data that was used for
 	     tasting.  At this point, the decompressor is responsible for all
 	     I/O requests to the client callbacks.  The decompressor is free
 	     to read more data as and when necessary.
      Satisfy I/O requests
-	     The format handler will invoke the 4mread_ahead24m, 4mconsume24m, and 4mskip0m
+	     The format handler will invoke the read_ahead, consume, and skip
 	     functions as needed.
      Finish  The finish method is called only once when the archive is closed.
-	     It should release anything stored in the 4mdata24m and 4mconfig24m slots of
-	     the 4mdecompressor24m object.  It should not invoke the client close
+	     It should release anything stored in the data and config slots of
+	     the decompressor object.  It should not invoke the client close
 	     callback.
 
-   1mFormat Layer0m
+   Format Layer
      The read formats have a similar lifecycle to the decompression handlers:
      Registration
 	     Allocate your private data and initialize your pointers.
-     Bid     Formats bid by invoking the 1mread_ahead22m() decompression method but
-	     not calling the 1mconsume22m() method.  This allows each bidder to
+     Bid     Formats bid by invoking the read_ahead() decompression method but
+	     not calling the consume() method.	This allows each bidder to
 	     look ahead in the input stream.  Bidders should not look further
 	     ahead than necessary, as long look aheads put pressure on the
 	     decompression layer to buffer lots of data.  Most formats only
@@ -168,47 +168,47 @@ LIBARCHIVE_INTERNALS(3)  BSD Library Functions Manual  LIBARCHIVE_INTERNALS(3)
 	     The skip data call should skip over all file data and trailing
 	     padding.  This is called automatically by the API layer just
 	     before each header read.  It is also called in response to the
-	     client calling the public 1mdata_skip22m() function.
+	     client calling the public data_skip() function.
      Cleanup
 	     On cleanup, the format should release all of its allocated mem‐
 	     ory.
 
-   1mAPI Layer0m
+   API Layer
      XXX to do XXX
 
-1mWRITE ARCHITECTURE0m
+WRITE ARCHITECTURE
      The write API has a similar set of four layers: an API layer, a format
      layer, a compression layer, and an I/O layer.  The registration here is
      much simpler because only one format and one compression can be regis‐
      tered at a time.
 
-   1mI/O Layer and Client Callbacks0m
+   I/O Layer and Client Callbacks
      XXX To be written XXX
 
-   1mCompression Layer0m
+   Compression Layer
      XXX To be written XXX
 
-   1mFormat Layer0m
+   Format Layer
      XXX To be written XXX
 
-   1mAPI Layer0m
+   API Layer
      XXX To be written XXX
 
-1mWRITE_DISK ARCHITECTURE0m
+WRITE_DISK ARCHITECTURE
      The write_disk API is intended to look just like the write API to
      clients.  Since it does not handle multiple formats or compression, it is
      not layered internally.
 
-1mGENERAL SERVICES0m
-     The 1marchive_read22m, 1marchive_write22m, and 1marchive_write_disk 22mobjects all con‐
-     tain an initial 1marchive 22mobject which provides common support for a set of
+GENERAL SERVICES
+     The archive_read, archive_write, and archive_write_disk objects all con‐
+     tain an initial archive object which provides common support for a set of
      standard services.  (Recall that ANSI/ISO C90 guarantees that you can
      cast freely between a pointer to a structure and a pointer to the first
-     element of that structure.)  The 1marchive 22mobject has a magic value that
+     element of that structure.)  The archive object has a magic value that
      indicates which API this object is associated with, slots for storing
      error information, and function pointers for virtualized API functions.
 
-1mMISCELLANEOUS NOTES0m
+MISCELLANEOUS NOTES
      Connecting existing archiving libraries into libarchive is generally
      quite difficult.  In particular, many existing libraries strongly assume
      that you are reading from a file; they seek forwards and backwards as
@@ -234,14 +234,14 @@ LIBARCHIVE_INTERNALS(3)  BSD Library Functions Manual  LIBARCHIVE_INTERNALS(3)
      though it cannot always extract as much information as a dedicated ZIP
      program.
 
-1mSEE ALSO0m
+SEE ALSO
      archive_entry(3), archive_read(3), archive_write(3),
      archive_write_disk(3) libarchive(3),
 
-1mHISTORY0m
-     The 1mlibarchive 22mlibrary first appeared in FreeBSD 5.3.
+HISTORY
+     The libarchive library first appeared in FreeBSD 5.3.
 
-1mAUTHORS0m
-     The 1mlibarchive 22mlibrary was written by Tim Kientzle <kientzle@acm.org>.
+AUTHORS
+     The libarchive library was written by Tim Kientzle <kientzle@acm.org>.
 
 BSD			       January 26, 2011 			   BSD

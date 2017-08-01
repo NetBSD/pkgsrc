@@ -9,9 +9,9 @@ ARCHIVE_READ_FORMAT(3) manual page
 '''archive_read_support_format_empty''', 
 '''archive_read_support_format_iso9660''', 
 '''archive_read_support_format_lha''', 
-'''archive_read_support_format_mtree,''' 
-'''archive_read_support_format_rar,''' 
-'''archive_read_support_format_raw,''' 
+'''archive_read_support_format_mtree''', 
+'''archive_read_support_format_rar''', 
+'''archive_read_support_format_raw''', 
 '''archive_read_support_format_tar''', 
 '''archive_read_support_format_xar''', 
 '''archive_read_support_format_zip''' 
@@ -150,11 +150,11 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveReadData3]], 
-[[ManPageArchiveReadFilter3]], 
-[[ManPageArchiveReadSetOptions3]], 
-[[ManPageArchiveUtil3]], 
+[[ManPageibarchive3]], 
+[[ManPagerchiveeadata3]], 
+[[ManPagerchiveeadilter3]], 
+[[ManPagerchiveeadetptions3]], 
+[[ManPagerchivetil3]], 
 [[ManPageTar5]] 
 == BUGS == 
 Many traditional archiver programs treat 

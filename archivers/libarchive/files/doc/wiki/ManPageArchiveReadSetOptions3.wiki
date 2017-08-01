@@ -182,6 +182,6 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveWriteSetOptions3]], 
-[[ManPageArchiveRead3]] 
+[[ManPageibarchive3]], 
+[[ManPagerchiveriteetptions3]], 
+[[ManPagerchiveead3]] 
