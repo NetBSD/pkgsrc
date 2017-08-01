@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1169 2017/07/28 21:15:33 wiz Exp $
+# $NetBSD: Makefile,v 1.1170 2017/08/01 17:12:49 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -62,7 +62,6 @@ SUBDIR+=	calypso
 SUBDIR+=	cclive
 SUBDIR+=	ccrtp
 SUBDIR+=	cdpd
-SUBDIR+=	cftp
 SUBDIR+=	chimera
 SUBDIR+=	chksniff
 SUBDIR+=	choparp
