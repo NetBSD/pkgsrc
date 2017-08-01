@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2012/10/25 06:55:45 asau Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/01 14:59:06 wiz Exp $
 #
 
 DISTNAME=		dadadodo-1.04
 CATEGORIES=		textproc
-MASTER_SITES=		http://www.jwz.org/dadadodo/
+MASTER_SITES=		https://www.jwz.org/dadadodo/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.jwz.org/dadadodo/
+HOMEPAGE=		https://www.jwz.org/dadadodo/
 COMMENT=		Analyse texts for word probabilities and generate random sentences
 # near enough
 LICENSE=		mit

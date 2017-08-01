@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2016/10/09 03:11:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/01 14:58:51 wiz Exp $
 
 DISTNAME=	libmspack-0.5alpha
 CATEGORIES=	devel
-MASTER_SITES=	http://www.cabextract.org.uk/libmspack/
+MASTER_SITES=	https://www.cabextract.org.uk/libmspack/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cabextract.org.uk/libmspack/
+HOMEPAGE=	https://www.cabextract.org.uk/libmspack/
 COMMENT=	Archiver for Microsoft format CAB, CHM, WIM, LIT, HLP, KWAJ and SZDD
 LICENSE=	gnu-lgpl-v2.1
 

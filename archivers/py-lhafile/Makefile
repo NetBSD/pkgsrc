@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/11/04 17:25:19 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/01 14:58:51 wiz Exp $
 
 DISTNAME=	python-lhafile
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}-0.2.1
@@ -9,7 +9,7 @@ GITHUB_TAG=	a7341c16a2028bce547b6c06df8d455af29fcab6
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://fs-uae.net/
+HOMEPAGE=	https://fs-uae.net/
 COMMENT=	LHA(.lzh) file extract interface
 LICENSE=	modified-bsd
 

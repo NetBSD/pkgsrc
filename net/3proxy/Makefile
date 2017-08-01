@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2016/03/09 20:58:24 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2017/08/01 14:59:02 wiz Exp $
 #
 
 DISTNAME=	3proxy-0.7.1.2
 CATEGORIES=	net
-MASTER_SITES=	http://3proxy.ru/${DISTNAME:S/3proxy-//}/
+MASTER_SITES=	https://3proxy.ru/${DISTNAME:S/3proxy-//}/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://3proxy.ru/
+HOMEPAGE=	https://3proxy.ru/
 COMMENT=	Multi-protocol proxy
 # 3proxy-0.5.* is dual-licenced under GPL or custom terms.  It's not
 # clear exactly which version of the GPL is intended; ${WRKSRC}/License
