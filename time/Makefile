@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2017/06/05 15:30:47 taca Exp $
+# $NetBSD: Makefile,v 1.161 2017/08/01 12:57:21 markd Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -60,6 +60,7 @@ SUBDIR+=	p5-Date-ICal
 SUBDIR+=	p5-Date-Leapyear
 SUBDIR+=	p5-DateTime
 SUBDIR+=	p5-DateTime-Calendar-Discordian
+SUBDIR+=	p5-DateTime-Calendar-Julian
 SUBDIR+=	p5-DateTime-Calendar-Mayan
 SUBDIR+=	p5-DateTime-Event-Cron
 SUBDIR+=	p5-DateTime-Event-ICal
