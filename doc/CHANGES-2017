@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3080 2017/08/01 13:35:09 markd Exp $
+$NetBSD: CHANGES-2017,v 1.3081 2017/08/01 15:11:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4280,3 +4280,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added textproc/p5-Encode-JIS2K version 0.03 [markd 2017-08-01]
 	Added textproc/p5-Encode-EUCJPASCII version 0.03 [markd 2017-08-01]
 	Updated print/p5-biblatex-biber to 2.7 [markd 2017-08-01]
+	Added textproc/mandoc version 1.14.2 [wiz 2017-08-01]
+	Removed textproc/mdocml successor textproc/mandoc [wiz 2017-08-01]
