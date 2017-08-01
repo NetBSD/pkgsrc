@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.9 2015/11/04 00:34:55 agc Exp $
-
-SHA1 (cftp-0.12.tar.gz) = ba583541be4bce2125849a677054d290140d0880
-RMD160 (cftp-0.12.tar.gz) = 9dfd1d3a03efd5d724bc0ed4c0dafbe19c47670d
-SHA512 (cftp-0.12.tar.gz) = 452c96134bae002cdef73278e383b5d8bb8b29f83018572e1aff6b5b28b2c540965a14204d8ac41f46bdf9718f6302fa5a3d765743009f3aa7bf70f02c69e21f
-Size (cftp-0.12.tar.gz) = 182043 bytes
-SHA1 (patch-aa) = 7d691241fa45821a0e5aa56337ebccc6df21567a
-SHA1 (patch-ab) = 94841bf054059292552ed4c45e73b4c5a9624716
