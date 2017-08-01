@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.51 2017/03/15 11:33:03 maya Exp $
+$NetBSD: distinfo,v 1.52 2017/08/01 11:06:18 maya Exp $
 
 SHA1 (octave-4.2.0.tar.gz) = 9fac578c08a7efabd79ccc38bc196b9627e3212f
 RMD160 (octave-4.2.0.tar.gz) = 07ff9bae3a0128c93f9113ebf952dea129b58284
 SHA512 (octave-4.2.0.tar.gz) = 5d16665d4ef8f218320f471704f8702f3a2911cc4a083cae318c1df0f787d50dddbc511dc91e11379314d65cecac6d521abac026860feca19d11ffdb52d3e678
 Size (octave-4.2.0.tar.gz) = 25320153 bytes
-SHA1 (patch-configure) = 3d12daef0412a6d1c248ca85a0c3a1370fd6c921
-SHA1 (patch-configure.ac) = 23f6a0d617429aeb9f92038d475a817978904445
+SHA1 (patch-configure) = fe31eb2e1b0f15ff77838c2514d4a434f4e59360
+SHA1 (patch-configure.ac) = 0dba5f4b862e9862687021f985109451ea2672e7
 SHA1 (patch-fseeko-fpos_t.c) = b38e7a38be2e0b323cd7f168f1d22d3df998691c
 SHA1 (patch-libgnu_stdio.in.h) = 112a424655d46c75fb68531fe7a84d9a0e97a984
 SHA1 (patch-libinterp_build-env.in.cc) = 09431962403996d0f979c7dcd080b721dad55055
@@ -16,5 +16,6 @@ SHA1 (patch-liboctave_operators_mx-inlines.cc) = e74ea202f89c1a6a394f8fd3d86397d
 SHA1 (patch-liboctave_wrappers_strftime-wrapper.c) = 1b8645c00e6db0d6d7045fa0bbef13661cd2aa84
 SHA1 (patch-liboctave_wrappers_strftime-wrapper.h) = f1453aa44ea5b3600c5ed13acc2d10800f538959
 SHA1 (patch-m4_acinclude.m4) = 194b8c3cf6f5e45a0251b229af9b3a47c12aa608
+SHA1 (patch-scripts_miscellaneous_unpack.m) = 82c9ca170762e223c8e5a6f88a7dd9fe2a2a33d0
 SHA1 (patch-scripts_pkg_private_configure__make.m) = 7d4b620f889faa66c4c9c581ef8a7e7692b68c94
 SHA1 (patch-scripts_plot_util_____gnuplot__drawnow____.m) = 449b178aefd78c5c1b03ffd960f2e8be3874efc2
