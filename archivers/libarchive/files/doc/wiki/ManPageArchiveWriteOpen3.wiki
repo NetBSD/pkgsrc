@@ -101,13 +101,13 @@ have specifically set the block size.
 More information about the 
 ''struct'' archive 
 object and the overall design of the library can be found in the 
-[[ManPageLibarchive3]] 
+[[ManPageibarchive3]] 
 overview. 
 
 Note that the convenience forms above vary in how 
 they block the output. 
 See 
-[[ManPageArchiveWriteBlocksize3]] 
+[[ManPagerchiveritelocksize3]] 
 if you need to control the block size used for writes 
 or the end-of-file padding behavior. 
 == CLIENT CALLBACKS == 
@@ -196,13 +196,13 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveWrite3]], 
-[[ManPageArchiveWriteBlocksize3]], 
-[[ManPageArchiveWriteFilter3]], 
-[[ManPageArchiveWriteFormat3]], 
-[[ManPageArchiveWriteNew3]], 
-[[ManPageArchiveWriteSetOptions3]], 
+[[ManPageibarchive3]], 
+[[ManPagerchiverite3]], 
+[[ManPagerchiveritelocksize3]], 
+[[ManPagerchiveriteilter3]], 
+[[ManPagerchiveriteormat3]], 
+[[ManPagerchiveriteew3]], 
+[[ManPagerchiveriteetptions3]], 
 [[ManPageCpio5]], 
 [[ManPageMtree5]], 
 [[ManPageTar5]] 

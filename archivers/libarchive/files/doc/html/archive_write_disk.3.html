@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Sat Feb 25 11:22:05 2017 -->
+<!-- CreationDate: Mon Jul 10 02:32:56 2017 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -30,13 +30,8 @@ ARCHIVE_WRITE_DISK(3)</p>
 <b>archive_write_disk_set_skip_file</b>,
 <b>archive_write_disk_set_group_lookup</b>,
 <b>archive_write_disk_set_standard_lookup</b>,
-<b>archive_write_disk_set_user_lookup</b>,
-<b>archive_write_header</b>, <b>archive_write_data</b>,
-<b>archive_write_data_block</b>,
-<b>archive_write_finish_entry</b>,
-<b>archive_write_close</b>, <b>archive_write_finish
-archive_write_free</b> &mdash; functions for creating
-objects on disk</p>
+<b>archive_write_disk_set_user_lookup</b> &mdash; functions
+for creating objects on disk</p>
 
 <p style="margin-top: 1em"><b>LIBRARY</b></p>
 
@@ -87,47 +82,6 @@ archive *</i></p>
 <i>uid_t&nbsp;(*)(void&nbsp;*,&nbsp;const&nbsp;char&nbsp;*uname,&nbsp;uid_t&nbsp;uid)</i>,
 <i>void&nbsp;(*cleanup)(void&nbsp;*)</i>);</p>
 
-<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
-
-
-<p style="margin-left:12%;"><b>archive_write_header</b>(<i>struct&nbsp;archive&nbsp;*</i>,
-<i>struct&nbsp;archive_entry&nbsp;*</i>);</p>
-
-
-<p style="margin-left:6%; margin-top: 1em"><i>la_ssize_t</i></p>
-
-
-<p style="margin-left:12%;"><b>archive_write_data</b>(<i>struct&nbsp;archive&nbsp;*</i>,
-<i>const&nbsp;void&nbsp;*</i>, <i>size_t</i>);</p>
-
-
-<p style="margin-left:6%; margin-top: 1em"><i>la_ssize_t</i></p>
-
-
-<p style="margin-left:12%;"><b>archive_write_data_block</b>(<i>struct&nbsp;archive&nbsp;*</i>,
-<i>const&nbsp;void&nbsp;*</i>, <i>size_t&nbsp;size</i>,
-<i>int64_t&nbsp;offset</i>);</p>
-
-<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
-
-
-<p style="margin-left:12%;"><b>archive_write_finish_entry</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
-
-<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
-
-
-<p style="margin-left:12%;"><b>archive_write_close</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
-
-<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
-
-
-<p style="margin-left:12%;"><b>archive_write_finish</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
-
-<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
-
-
-<p style="margin-left:12%;"><b>archive_write_free</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
-
 <p style="margin-top: 1em"><b>DESCRIPTION</b></p>
 
 <p style="margin-left:6%;">These functions provide a
@@ -165,6 +119,38 @@ significant performance optimization in practice.</p>
 <p style="margin-left:17%;">The options field consists of a
 bitwise OR of one or more of the following values:</p>
 
+<p><b>ARCHIVE_EXTRACT_ACL</b></p>
+
+<p style="margin-left:27%;">Attempt to restore Access
+Control Lists. By default, extended ACLs are ignored.</p>
+
+<p><b>ARCHIVE_EXTRACT_CLEAR_NOCHANGE_FFLAGS</b></p>
+
+<p style="margin-left:27%;">Before removing a file system
+object prior to replacing it, clear platform-specific file
+flags which might prevent its removal.</p>
+
+<p><b>ARCHIVE_EXTRACT_FFLAGS</b></p>
+
+<p style="margin-left:27%;">Attempt to restore file
+attributes (file flags). By default, file attributes are
+ignored. See chattr(1) (Linux) or chflags(1) (FreeBSD, Mac
+OS X) for more information on file attributes.</p>
+
+<p><b>ARCHIVE_EXTRACT_MAC_METADATA</b></p>
+
+<p style="margin-left:27%;">Mac OS X specific. Restore
+metadata using copyfile(3). By default, copyfile(3) metadata
+is ignored.</p>
+
+<p><b>ARCHIVE_EXTRACT_NO_OVERWRITE</b></p>
+
+<p style="margin-left:27%;">Existing files on disk will not
+be overwritten. By default, existing regular files are
+truncated and overwritten; existing directories will have
+their permissions updated; other pre-existing objects are
+unlinked and recreated from scratch.</p>
+
 <p><b>ARCHIVE_EXTRACT_OWNER</b></p>
 
 <p style="margin-left:27%;">The user and group IDs should
@@ -184,19 +170,43 @@ group IDs of newly-created objects on disk happen to match
 those specified in the archive entry. By default, only basic
 permissions are restored, and umask is obeyed.</p>
 
+<p><b>ARCHIVE_EXTRACT_SECURE_NOABSOLUTEPATHS</b></p>
+
+<p style="margin-left:27%;">Refuse to extract an absolute
+path. The default is to not refuse such paths.</p>
+
+<p><b>ARCHIVE_EXTRACT_SECURE_NODOTDOT</b></p>
+
+<p style="margin-left:27%;">Refuse to extract a path that
+contains a <i>..</i> element anywhere within it. The default
+is to not refuse such paths. Note that paths ending in
+<i>..</i> always cause an error, regardless of this
+flag.</p>
+
+<p><b>ARCHIVE_EXTRACT_SECURE_SYMLINKS</b></p>
+
+<p style="margin-left:27%;">Refuse to extract any object
+whose final location would be altered by a symlink on disk.
+This is intended to help guard against a variety of mischief
+caused by archives that (deliberately or otherwise) extract
+files outside of the current directory. The default is not
+to perform this check. If</p>
+
+<p><b>ARCHIVE_EXTRACT_SPARSE</b></p>
+
+<p style="margin-left:27%;">Scan data for blocks of NUL
+bytes and try to recreate them with holes. This results in
+sparse files, independent of whether the archive format
+supports or uses them. <b>ARCHIVE_EXTRACT_UNLINK</b> is
+specified together with this option, the library will remove
+any intermediate symlinks it finds and return an error only
+if such symlink could not be removed.</p>
+
 <p><b>ARCHIVE_EXTRACT_TIME</b></p>
 
 <p style="margin-left:27%;">The timestamps (mtime, ctime,
 and atime) should be restored. By default, they are ignored.
 Note that restoring of atime is not currently supported.</p>
-
-<p><b>ARCHIVE_EXTRACT_NO_OVERWRITE</b></p>
-
-<p style="margin-left:27%;">Existing files on disk will not
-be overwritten. By default, existing regular files are
-truncated and overwritten; existing directories will have
-their permissions updated; other pre-existing objects are
-unlinked and recreated from scratch.</p>
 
 <p><b>ARCHIVE_EXTRACT_UNLINK</b></p>
 
@@ -207,58 +217,12 @@ By default, existing files are truncated and rewritten, but
 the file is not recreated. In particular, the default
 behavior does not break existing hard links.</p>
 
-<p><b>ARCHIVE_EXTRACT_ACL</b></p>
-
-<p style="margin-left:27%;">Attempt to restore ACLs. By
-default, extended ACLs are ignored.</p>
-
-<p><b>ARCHIVE_EXTRACT_FFLAGS</b></p>
-
-<p style="margin-left:27%;">Attempt to restore extended
-file flags. By default, file flags are ignored.</p>
-
 <p><b>ARCHIVE_EXTRACT_XATTR</b></p>
 
-<p style="margin-left:27%;">Attempt to restore POSIX.1e
-extended attributes. By default, they are ignored.</p>
-
-<p><b>ARCHIVE_EXTRACT_SECURE_SYMLINKS</b></p>
-
-<p style="margin-left:27%;">Refuse to extract any object
-whose final location would be altered by a symlink on disk.
-This is intended to help guard against a variety of mischief
-caused by archives that (deliberately or otherwise) extract
-files outside of the current directory. The default is not
-to perform this check. If <b>ARCHIVE_EXTRACT_UNLINK</b> is
-specified together with this option, the library will remove
-any intermediate symlinks it finds and return an error only
-if such symlink could not be removed.</p>
-
-<p><b>ARCHIVE_EXTRACT_SECURE_NODOTDOT</b></p>
-
-<p style="margin-left:27%;">Refuse to extract a path that
-contains a <i>..</i> element anywhere within it. The default
-is to not refuse such paths. Note that paths ending in
-<i>..</i> always cause an error, regardless of this
-flag.</p>
-
-<p><b>ARCHIVE_EXTRACT_SECURE_NOABSOLUTEPATHS</b></p>
-
-<p style="margin-left:27%;">Refuse to extract an absolute
-path. The default is to not refuse such paths.</p>
-
-<p><b>ARCHIVE_EXTRACT_SPARSE</b></p>
-
-<p style="margin-left:27%;">Scan data for blocks of NUL
-bytes and try to recreate them with holes. This results in
-sparse files, independent of whether the archive format
-supports or uses them.</p>
-
-<p><b>ARCHIVE_EXTRACT_CLEAR_NOCHANGE_FFLAGS</b></p>
-
-<p style="margin-left:27%;">Before removing a file system
-object prior to replacing it, clear platform-specific file
-flags which might prevent its removal.</p>
+<p style="margin-left:27%;">Attempt to restore extended
+file attributes. By default, they are ignored. See xattr(7)
+(Linux), xattr(2) (Mac OS X), or getextattr(8) (FreeBSD) for
+more information on extended file attributes.</p>
 
 
 <p style="margin-top: 1em"><b>archive_write_disk_set_group_lookup</b>(),
@@ -287,70 +251,6 @@ names to ids, defaulting to the ids if the names cannot be
 looked up. These functions also implement a simple memory
 cache to reduce the number of calls to getpwnam(3) and
 getgrnam(3).</p>
-
-
-<p style="margin-top: 1em"><b>archive_write_header</b>()</p>
-
-<p style="margin-left:17%;">Build and write a header using
-the data in the provided struct archive_entry structure. See
-archive_entry(3) for information on creating and populating
-struct archive_entry objects.</p>
-
-<p style="margin-top: 1em"><b>archive_write_data</b>()</p>
-
-<p style="margin-left:17%;">Write data corresponding to the
-header just written. Returns number of bytes written or -1
-on error.</p>
-
-
-<p style="margin-top: 1em"><b>archive_write_data_block</b>()</p>
-
-<p style="margin-left:17%;">Write data corresponding to the
-header just written. This is like
-<b>archive_write_data</b>() except that it performs a seek
-on the file being written to the specified offset before
-writing the data. This is useful when restoring sparse files
-from archive formats that support sparse files. Returns
-number of bytes written or -1 on error. (Note: This is
-currently not supported for archive_write handles, only for
-archive_write_disk handles.)</p>
-
-
-<p style="margin-top: 1em"><b>archive_write_finish_entry</b>()</p>
-
-<p style="margin-left:17%;">Close out the entry just
-written. Ordinarily, clients never need to call this, as it
-is called automatically by
-<b>archive_write_next_header</b>() and
-<b>archive_write_close</b>() as needed. However, some file
-attributes are written to disk only after the file is
-closed, so this can be necessary if you need to work with
-the file on disk right away.</p>
-
-
-<p style="margin-top: 1em"><b>archive_write_close</b>()</p>
-
-<p style="margin-left:17%;">Set any attributes that could
-not be set during the initial restore. For example,
-directory timestamps are not restored initially because
-restoring a subsequent file would alter that timestamp.
-Similarly, non-writable directories are initially created
-with write permissions (so that their contents can be
-restored). The <b>archive_write_disk_new</b> library
-maintains a list of all such deferred attributes and sets
-them when this function is invoked.</p>
-
-
-<p style="margin-top: 1em"><b>archive_write_finish</b>()</p>
-
-<p style="margin-left:17%;">This is a deprecated synonym
-for <b>archive_write_free</b>().</p>
-
-<p style="margin-top: 1em"><b>archive_write_free</b>()</p>
-
-<p style="margin-left:17%;">Invokes
-<b>archive_write_close</b>() if it was not invoked manually,
-then releases all resources.</p>
 
 <p style="margin-left:6%;">More information about the
 <i>struct archive</i> object and the overall design of the
@@ -450,7 +350,7 @@ of the final object happen to match those specified in the
 entry.</p>
 
 <p style="margin-left:6%; margin-top: 1em">The
-&lsquo;&lsquo;standard&rsquo;&rsquo; user-id and group-id
+&rsquo;&rsquo;standard&rsquo;&rsquo; user-id and group-id
 lookup functions are not the defaults because getgrnam(3)
 and getpwnam(3) are sometimes too large for particular
 applications. The current design allows the application
@@ -463,7 +363,7 @@ walks a directory hierarchy and returns archive entry
 objects.</p>
 
 <p style="margin-left:6%; margin-top: 1em">BSD
-February&nbsp;2, 2012 BSD</p>
+April&nbsp;3, 2017 BSD</p>
 <hr>
 </body>
 </html>

@@ -1,66 +1,66 @@
 ARCHIVE_WRITE(3)	 BSD Library Functions Manual	      ARCHIVE_WRITE(3)
 
-1mNAME0m
-     1marchive_write 22m— functions for creating archives
+NAME
+     archive_write — functions for creating archives
 
-1mLIBRARY0m
+LIBRARY
      Streaming Archive Library (libarchive, -larchive)
 
-1mSYNOPSIS0m
-     1m#include <archive.h>0m
+SYNOPSIS
+     #include <archive.h>
 
-1mDESCRIPTION0m
+DESCRIPTION
      These functions provide a complete API for creating streaming archive
      files.  The general process is to first create the struct archive object,
      set any desired options, initialize the archive, append entries, then
      close the archive and release all resources.
 
-   1mCreate archive object0m
+   Create archive object
      See archive_write_new(3).
 
      To write an archive, you must first obtain an initialized struct archive
-     object from 1marchive_write_new22m().
+     object from archive_write_new().
 
-   1mEnable filters and formats, configure block size and padding0m
+   Enable filters and formats, configure block size and padding
      See archive_write_filter(3), archive_write_format(3) and
      archive_write_blocksize(3).
 
      You can then modify this object for the desired operations with the vari‐
-     ous 1marchive_write_set_XXX22m() functions.  In particular, you will need to
-     invoke appropriate 1marchive_write_add_XXX22m() and 1marchive_write_set_XXX22m()
+     ous archive_write_set_XXX() functions.  In particular, you will need to
+     invoke appropriate archive_write_add_XXX() and archive_write_set_XXX()
      functions to enable the corresponding compression and format support.
 
-   1mSet options0m
+   Set options
      See archive_read_set_options(3).
 
-   1mOpen archive0m
+   Open archive
      See archive_write_open(3).
 
      Once you have prepared the struct archive object, you call
-     1marchive_write_open22m() to actually open the archive and prepare it for
+     archive_write_open() to actually open the archive and prepare it for
      writing.  There are several variants of this function; the most basic
      expects you to provide pointers to several functions that can provide
      blocks of bytes from the archive.	There are convenience forms that allow
-     you to specify a filename, file descriptor, 4mFILE24m 4m*24m object, or a block of
+     you to specify a filename, file descriptor, FILE * object, or a block of
      memory from which to write the archive data.
 
-   1mProduce archive0m
+   Produce archive
      See archive_write_header(3) and archive_write_data(3).
 
      Individual archive entries are written in a three-step process: You first
      initialize a struct archive_entry structure with information about the
      new entry.  At a minimum, you should set the pathname of the entry and
-     provide a 4mstruct24m 4mstat24m with a valid 4mst_mode24m field, which specifies the
-     type of object and 4mst_size24m field, which specifies the size of the data
+     provide a struct stat with a valid st_mode field, which specifies the
+     type of object and st_size field, which specifies the size of the data
      portion of the object.
 
-   1mRelease resources0m
+   Release resources
      See archive_write_free(3).
 
-     After all entries have been written, use the 1marchive_write_free22m() func‐
+     After all entries have been written, use the archive_write_free() func‐
      tion to release all resources.
 
-1mEXAMPLE0m
+EXAMPLE
      The following sketch illustrates basic usage of the library.  In this
      example, the callback functions are simply wrappers around the standard
      open(2), write(2), and close(2) system calls.
@@ -160,17 +160,17 @@ ARCHIVE_WRITE(3)	 BSD Library Functions Manual	      ARCHIVE_WRITE(3)
 	     return 0;
 	   }
 
-1mSEE ALSO0m
+SEE ALSO
      tar(1), libarchive(3), archive_write_set_options(3), cpio(5), mtree(5),
      tar(5)
 
-1mHISTORY0m
-     The 1mlibarchive 22mlibrary first appeared in FreeBSD 5.3.
+HISTORY
+     The libarchive library first appeared in FreeBSD 5.3.
 
-1mAUTHORS0m
-     The 1mlibarchive 22mlibrary was written by Tim Kientzle <kientzle@acm.org>.
+AUTHORS
+     The libarchive library was written by Tim Kientzle <kientzle@acm.org>.
 
-1mBUGS0m
+BUGS
      There are many peculiar bugs in historic tar implementations that may
      cause certain programs to reject archives written by this library.  For
      example, several historic implementations calculated header checksums
@@ -184,7 +184,7 @@ ARCHIVE_WRITE(3)	 BSD Library Functions Manual	      ARCHIVE_WRITE(3)
      a standard attribute for large device numbers.  This library uses
      “SCHILY.devminor” and “SCHILY.devmajor” for device numbers that exceed
      the range supported by the backwards-compatible ustar header.  These keys
-     are compatible with Joerg Schilling's 1mstar 22marchiver.	Other implementa‐
+     are compatible with Joerg Schilling's star archiver.  Other implementa‐
      tions may not recognize these keys and will thus be unable to correctly
      restore device nodes with large device numbers from archives created by
      this library.
