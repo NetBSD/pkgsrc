@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2017/05/03 08:38:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.67 2017/08/01 17:40:10 wiz Exp $
 
 DISTNAME=	gconfmm-2.28.3
 PKGREVISION=	18
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gconfmm/2.28/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://gtkmm.sourceforge.net/
+#HOMEPAGE=	http://gtkmm.sourceforge.net/
 COMMENT=	C++ bindings for gconf
 
 USE_LANGUAGES=		c c++11

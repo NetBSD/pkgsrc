@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2015/04/18 18:27:16 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2017/08/01 17:40:16 wiz Exp $
 
 DISTNAME=	0.9.0
 PKGREVISION=	1
 PKGNAME=	csvkit-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	https://github.com/onyxfish/csvkit/archive/
+#MASTER_SITES=	https://github.com/onyxfish/csvkit/archive/
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	https://github.com/onyxfish/csvkit/archive/
+#HOMEPAGE=	https://github.com/onyxfish/csvkit/archive/
 COMMENT=	Suite of utilities for converting to and working with CSV
 LICENSE=	mit
 

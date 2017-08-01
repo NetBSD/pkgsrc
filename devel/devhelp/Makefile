@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2017/04/22 21:03:30 adam Exp $
+# $NetBSD: Makefile,v 1.115 2017/08/01 17:40:10 wiz Exp $
 
 DISTNAME=		devhelp-2.32.0
 PKGREVISION=		48
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/devhelp/2.32/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://developer.imendio.com/projects/devhelp
+#HOMEPAGE=		http://developer.imendio.com/projects/devhelp
 COMMENT=		Documentation viewer based on GNOME2
 LICENSE=		gnu-gpl-v2
 

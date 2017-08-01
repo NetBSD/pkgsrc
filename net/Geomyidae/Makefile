@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2016/09/20 12:59:25 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/01 17:40:14 wiz Exp $
 
 DISTNAME=	geomyidae-0.26.3
 CATEGORIES=	net
-MASTER_SITES=	http://r-36.net/src/geomyidae/
+#MASTER_SITES=	http://r-36.net/src/geomyidae/
 
 MAINTAINER=	jgw@sdf.org
-HOMEPAGE=	http://r-36.net/src/geomyidae/
+#HOMEPAGE=	http://r-36.net/src/geomyidae/
 COMMENT=	Gopher daemon for Linux/BSD
 LICENSE=	mit AND x11
 

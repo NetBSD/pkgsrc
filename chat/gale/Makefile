@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2016/03/05 11:27:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.52 2017/08/01 17:40:09 wiz Exp $
 
 DISTNAME=	gale-0.99fruit
 PKGNAME=	gale-0.99f
@@ -8,7 +8,7 @@ MASTER_SITES=	http://download.ofb.net/gale/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gale.org/
+#HOMEPAGE=	http://gale.org/
 COMMENT=	Secure instant messaging system
 
 MAKE_JOBS_SAFE=	no
