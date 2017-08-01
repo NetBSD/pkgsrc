@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2017/08/01 11:06:18 maya Exp $
+# $NetBSD: Makefile,v 1.155 2017/08/01 11:09:14 maya Exp $
 
 DISTNAME=	octave-4.2.0
 PKGREVISION=	11
@@ -21,7 +21,7 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf gsed gmake:run perl pkg-config bison
+USE_TOOLS+=		autoconf gsed gmake:run perl pkg-config bison bsdtar:run
 GNU_CONFIGURE=		yes
 
 GCC_REQD+=		3.0
