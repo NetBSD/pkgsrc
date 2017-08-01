@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/10/09 14:06:42 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/08/01 16:47:40 wiz Exp $
 #
 
 DISTNAME=	cuetools-1.3.1
@@ -6,7 +6,7 @@ CATEGORIES=	misc
 MASTER_SITES=	http://download.berlios.de/cuetools/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cuetools.berlios.de/
+#HOMEPAGE=	http://cuetools.berlios.de/
 COMMENT=	Set of utilities to manipulate cue and toc files
 LICENSE=	gnu-gpl-v2
 

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2013/04/13 07:55:03 ghen Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/01 16:47:42 wiz Exp $
 
 DISTNAME=		ez-ipupdate-3.0.11b7
 PKGREVISION=		1
 CATEGORIES=		net
-MASTER_SITES=		http://www.ez-ipupdate.com/dist/
+#MASTER_SITES=		http://www.ez-ipupdate.com/dist/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ez-ipupdate.com/
+#HOMEPAGE=		http://www.ez-ipupdate.com/
 COMMENT=		Client to update dynamic DNS entries
 
 GNU_CONFIGURE=		yes

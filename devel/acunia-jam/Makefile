@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/10/09 14:06:07 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/08/01 16:47:37 wiz Exp $
 #
 
 DISTNAME=	acunia-jam-1.0
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wonka.acunia.com/
+#HOMEPAGE=	http://wonka.acunia.com/
 COMMENT=	Acunia version of the program construction tool, like make(1)
 
 CONFLICTS=	jam-[0-9]*

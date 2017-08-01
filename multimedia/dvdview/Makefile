@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2016/02/25 15:49:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2017/08/01 16:47:41 wiz Exp $
 
 DISTNAME=	dvdview-1.2.2
 PKGREVISION=	10
 CATEGORIES=	multimedia
-MASTER_SITES=	http://rachmaninoff.informatik.uni-mannheim.de/dvdview/data/
+#MASTER_SITES=	http://rachmaninoff.informatik.uni-mannheim.de/dvdview/data/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rachmaninoff.informatik.uni-mannheim.de/dvdview/
+#HOMEPAGE=	http://rachmaninoff.informatik.uni-mannheim.de/dvdview/
 COMMENT=	Software only MPEG-1/2 video decoder
 
 GNU_CONFIGURE=	YES
