@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/02/23 00:15:14 khorben Exp $
+# $NetBSD: Makefile,v 1.12 2017/08/01 14:59:01 wiz Exp $
 #
 
 DISTNAME=	deforaos-desktop-0.0.11
@@ -6,7 +6,7 @@ CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	# empty
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	Meta-package for the DeforaOS Desktop environment
 LICENSE=	gnu-gpl-v3
 

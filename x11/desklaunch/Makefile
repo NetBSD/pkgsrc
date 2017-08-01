@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/29 05:06:09 asau Exp $
+# $NetBSD: Makefile,v 1.7 2017/08/01 14:59:08 wiz Exp $
 #
 
 VERSION=	1.1.5
@@ -8,7 +8,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://www.oroborus.org/debian/dists/sid/main/source/x11/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.oroborus.org/?node=Download
+HOMEPAGE=	https://www.oroborus.org/?node=Download
 COMMENT=	X utility for binding commands to pixmap icons
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
