@@ -20,13 +20,13 @@ is returned on error.
 A complete description of the 
 '''struct archive''' 
 object can be found in the overview manual page for 
-[[ManPageLibarchive3]]. 
+[[ManPageibarchive3]]. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveReadData3]], 
-[[ManPageArchiveReadFilter3]], 
-[[ManPageArchiveReadFormat3]], 
-[[ManPageArchiveReadSetOptions3]], 
-[[ManPageArchiveUtil3]], 
+[[ManPageibarchive3]], 
+[[ManPagerchiveeadata3]], 
+[[ManPagerchiveeadilter3]], 
+[[ManPagerchiveeadormat3]], 
+[[ManPagerchiveeadetptions3]], 
+[[ManPagerchivetil3]], 
 [[ManPageTar5]] 

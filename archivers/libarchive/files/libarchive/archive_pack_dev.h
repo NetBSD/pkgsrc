@@ -1,4 +1,4 @@
-/*	$NetBSD: archive_pack_dev.h,v 1.3 2017/02/25 21:11:20 joerg Exp $	*/
+/*	$NetBSD: archive_pack_dev.h,v 1.4 2017/08/01 22:26:23 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.

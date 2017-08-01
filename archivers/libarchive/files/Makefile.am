@@ -127,6 +127,8 @@ libarchive_la_SOURCES= \
 	libarchive/archive_pathmatch.c \
 	libarchive/archive_pathmatch.h \
 	libarchive/archive_platform.h \
+	libarchive/archive_platform_acl.h \
+	libarchive/archive_platform_xattr.h \
 	libarchive/archive_ppmd_private.h \
 	libarchive/archive_ppmd7.c \
 	libarchive/archive_ppmd7_private.h \
@@ -186,9 +188,9 @@ libarchive_la_SOURCES= \
 	libarchive/archive_string_composition.h \
 	libarchive/archive_string_sprintf.c \
 	libarchive/archive_util.c \
+	libarchive/archive_version_details.c \
 	libarchive/archive_virtual.c \
 	libarchive/archive_write.c \
-	libarchive/archive_write_disk_acl.c \
 	libarchive/archive_write_disk_posix.c \
 	libarchive/archive_write_disk_private.h \
 	libarchive/archive_write_disk_set_standard_lookup.c \
@@ -245,6 +247,22 @@ libarchive_la_SOURCES+= \
 	libarchive/archive_windows.c \
 	libarchive/archive_write_disk_windows.c \
 	libarchive/filter_fork_windows.c
+endif
+
+if INC_LINUX_ACL
+libarchive_la_SOURCES+= libarchive/archive_disk_acl_linux.c
+else
+if INC_SUNOS_ACL
+libarchive_la_SOURCES+= libarchive/archive_disk_acl_sunos.c
+else
+if INC_DARWIN_ACL
+libarchive_la_SOURCES+= libarchive/archive_disk_acl_darwin.c
+else
+if INC_FREEBSD_ACL
+libarchive_la_SOURCES+= libarchive/archive_disk_acl_freebsd.c
+endif
+endif
+endif
 endif
 
 # -no-undefined marks that libarchive doesn't rely on symbols
@@ -497,6 +515,7 @@ libarchive_test_SOURCES= \
 	libarchive/test/test_read_format_zip_winzip_aes.c \
 	libarchive/test/test_read_format_zip_winzip_aes_large.c \
 	libarchive/test/test_read_format_zip_zip64.c \
+	libarchive/test/test_read_format_zip_with_invalid_traditional_eocd.c \
 	libarchive/test/test_read_large.c \
 	libarchive/test/test_read_pax_schily_xattr.c \
 	libarchive/test/test_read_pax_truncated.c \
@@ -585,6 +604,7 @@ libarchive_test_SOURCES= \
 	libarchive/test/test_write_format_zip_zip64.c \
 	libarchive/test/test_write_open_memory.c \
 	libarchive/test/test_write_read_format_zip.c \
+	libarchive/test/test_xattr_platform.c \
 	libarchive/test/test_zip_filename_encoding.c
 
 libarchive_test_CPPFLAGS= \
@@ -830,6 +850,7 @@ libarchive_test_EXTRA_DIST=\
 	libarchive/test/test_read_format_zip_winzip_aes256.zip.uu \
 	libarchive/test/test_read_format_zip_winzip_aes256_large.zip.uu \
 	libarchive/test/test_read_format_zip_winzip_aes256_stored.zip.uu \
+	libarchive/test/test_read_format_zip_with_invalid_traditional_eocd.zip.uu \
 	libarchive/test/test_read_format_zip_zip64a.zip.uu \
 	libarchive/test/test_read_format_zip_zip64b.zip.uu \
 	libarchive/test/test_read_large_splitted_rar_aa.uu \
@@ -951,10 +972,12 @@ bsdtar_test_SOURCES= \
 	tar/test/test_option_T_upper.c \
 	tar/test/test_option_U_upper.c \
 	tar/test/test_option_X_upper.c \
+	tar/test/test_option_acls.c \
 	tar/test/test_option_a.c \
 	tar/test/test_option_b.c \
 	tar/test/test_option_b64encode.c \
 	tar/test/test_option_exclude.c \
+	tar/test/test_option_fflags.c \
 	tar/test/test_option_gid_gname.c \
 	tar/test/test_option_grzip.c \
 	tar/test/test_option_j.c \
@@ -974,6 +997,7 @@ bsdtar_test_SOURCES= \
 	tar/test/test_option_s.c \
 	tar/test/test_option_uid_uname.c \
 	tar/test/test_option_uuencode.c \
+	tar/test/test_option_xattrs.c \
 	tar/test/test_option_xz.c \
 	tar/test/test_option_z.c \
 	tar/test/test_patterns.c \

@@ -1,95 +1,95 @@
 ARCHIVE_WRITE_FILTER(3)  BSD Library Functions Manual  ARCHIVE_WRITE_FILTER(3)
 
-1mNAME0m
-     1marchive_write_add_filter_b64encode22m, 1marchive_write_add_filter_by_name22m,
-     1marchive_write_add_filter_bzip222m, 1marchive_write_add_filter_compress22m,
-     1marchive_write_add_filter_grzip22m, 1marchive_write_add_filter_gzip22m,
-     1marchive_write_add_filter_lrzip22m, 1marchive_write_add_filter_lz422m,
-     1marchive_write_add_filter_lzip22m, 1marchive_write_add_filter_lzma22m,
-     1marchive_write_add_filter_lzop22m, 1marchive_write_add_filter_none22m,
-     1marchive_write_add_filter_program22m, 1marchive_write_add_filter_uuencode22m,
-     1marchive_write_add_filter_xz 22m— functions enabling output filters
+NAME
+     archive_write_add_filter_b64encode, archive_write_add_filter_by_name,
+     archive_write_add_filter_bzip2, archive_write_add_filter_compress,
+     archive_write_add_filter_grzip, archive_write_add_filter_gzip,
+     archive_write_add_filter_lrzip, archive_write_add_filter_lz4,
+     archive_write_add_filter_lzip, archive_write_add_filter_lzma,
+     archive_write_add_filter_lzop, archive_write_add_filter_none,
+     archive_write_add_filter_program, archive_write_add_filter_uuencode,
+     archive_write_add_filter_xz — functions enabling output filters
 
-1mLIBRARY0m
+LIBRARY
      Streaming Archive Library (libarchive, -larchive)
 
-1mSYNOPSIS0m
-     1m#include <archive.h>0m
+SYNOPSIS
+     #include <archive.h>
 
-     4mint0m
-     1marchive_write_add_filter_b64encode22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_write_add_filter_b64encode(struct archive *);
 
-     4mint0m
-     1marchive_write_add_filter_bzip222m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_write_add_filter_bzip2(struct archive *);
 
-     4mint0m
-     1marchive_write_add_filter_compress22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_write_add_filter_compress(struct archive *);
 
-     4mint0m
-     1marchive_write_add_filter_grzip22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_write_add_filter_grzip(struct archive *);
 
-     4mint0m
-     1marchive_write_add_filter_gzip22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_write_add_filter_gzip(struct archive *);
 
-     4mint0m
-     1marchive_write_add_filter_lrzip22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_write_add_filter_lrzip(struct archive *);
 
-     4mint0m
-     1marchive_write_add_filter_lz422m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_write_add_filter_lz4(struct archive *);
 
-     4mint0m
-     1marchive_write_add_filter_lzip22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_write_add_filter_lzip(struct archive *);
 
-     4mint0m
-     1marchive_write_add_filter_lzma22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_write_add_filter_lzma(struct archive *);
 
-     4mint0m
-     1marchive_write_add_filter_lzop22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_write_add_filter_lzop(struct archive *);
 
-     4mint0m
-     1marchive_write_add_filter_none22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_write_add_filter_none(struct archive *);
 
-     4mint0m
-     1marchive_write_add_filter_program22m(4mstruct24m 4marchive24m 4m*24m, 4mconst24m 4mchar24m 4m*24m 4mcmd24m);
+     int
+     archive_write_add_filter_program(struct archive *, const char * cmd);
 
-     4mint0m
-     1marchive_write_add_filter_uuencode22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_write_add_filter_uuencode(struct archive *);
 
-     4mint0m
-     1marchive_write_add_filter_xz22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_write_add_filter_xz(struct archive *);
 
-1mDESCRIPTION0m
-     1marchive_write_add_filter_bzip222m(), 1marchive_write_add_filter_compress22m(),
-	     1marchive_write_add_filter_grzip22m(),
-	     1marchive_write_add_filter_gzip22m(),
-	     1marchive_write_add_filter_lrzip22m(), 1marchive_write_add_filter_lz422m(),
-	     1marchive_write_add_filter_lzip22m(), 1marchive_write_add_filter_lzma22m(),
-	     1marchive_write_add_filter_lzop22m(), 1marchive_write_add_filter_xz22m(),
+DESCRIPTION
+     archive_write_add_filter_bzip2(), archive_write_add_filter_compress(),
+	     archive_write_add_filter_grzip(),
+	     archive_write_add_filter_gzip(),
+	     archive_write_add_filter_lrzip(), archive_write_add_filter_lz4(),
+	     archive_write_add_filter_lzip(), archive_write_add_filter_lzma(),
+	     archive_write_add_filter_lzop(), archive_write_add_filter_xz(),
 	     The resulting archive will be compressed as specified.  Note that
 	     the compressed output is always properly blocked.
 
-     1marchive_write_add_filter_b64encode22m(),
-	     1marchive_write_add_filter_uuencode22m(),
+     archive_write_add_filter_b64encode(),
+	     archive_write_add_filter_uuencode(),
 	     The output will be encoded as specified.  The encoded output is
 	     always properly blocked.
 
-     1marchive_write_add_filter_none22m()
+     archive_write_add_filter_none()
 	     This is never necessary.  It is provided only for backwards com‐
 	     patibility.
 
-     1marchive_write_add_filter_program22m()
+     archive_write_add_filter_program()
 	     The archive will be fed into the specified compression program.
 	     The output of that program is blocked and written to the client
 	     write callbacks.
 
-1mRETURN VALUES0m
-     These functions return 1mARCHIVE_OK 22mon success, or 1mARCHIVE_FATAL22m.
+RETURN VALUES
+     These functions return ARCHIVE_OK on success, or ARCHIVE_FATAL.
 
-1mERRORS0m
+ERRORS
      Detailed error codes and textual descriptions are available from the
-     1marchive_errno22m() and 1marchive_error_string22m() functions.
+     archive_errno() and archive_error_string() functions.
 
-1mSEE ALSO0m
+SEE ALSO
      tar(1), libarchive(3), archive_write(3), archive_write_format(3),
      archive_write_set_options(3), cpio(5), mtree(5), tar(5)
 
