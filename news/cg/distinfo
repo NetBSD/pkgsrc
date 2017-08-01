@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.6 2015/11/02 23:49:46 agc Exp $
-
-SHA1 (cg-0.4.tar.gz) = 8fdb3156e3ad11fd182d2adf1d87ff799beaac60
-RMD160 (cg-0.4.tar.gz) = 9a706b5b1dc5e4e2617dec7f9f6e37b19ed634aa
-SHA512 (cg-0.4.tar.gz) = 035227e42867b3630dbfbecb290d2a0118f4d5aea8b4a8866330bc4c406d9f69af8b13679379af65179e35f5560d91e7853a3eb7e68a6f93a53b11db6e7677a9
-Size (cg-0.4.tar.gz) = 203503 bytes
-SHA1 (patch-aa) = 112a34f172f71369dd09f5310d7e380ad01a07f0
-SHA1 (patch-ab) = 537cc5ab6d7f316f0a7802672e63104b2a476796
-SHA1 (patch-ac) = 3353ec656425732397926cdf1c09466b4640aed7
