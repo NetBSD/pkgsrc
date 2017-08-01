@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/04/06 09:02:07 manu Exp $
-#
+# $NetBSD: Makefile,v 1.2 2017/08/01 16:51:20 wiz Exp $
 
 DISTNAME=	mod_authnz_external-${DISTVERS}
 #PKGREVISION=	1
