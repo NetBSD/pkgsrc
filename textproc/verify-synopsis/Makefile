@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/02/12 18:56:54 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/01 15:09:52 wiz Exp $
 
 DISTNAME=	verify-synopsis-1.0
 CATEGORIES=	textproc
@@ -19,7 +19,7 @@ USE_LANGUAGES=	# none
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "NetBSD"
-DEPENDS+=	mdocml-[0-9]*:../../textproc/mdocml
+DEPENDS+=	mandoc-[0-9]*:../../textproc/mandoc
 .endif
 
 SUBST_CLASSES+=		prefix
