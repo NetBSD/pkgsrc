@@ -1,13 +1,13 @@
-$NetBSD: patch-Tarsnap.pro,v 1.1 2016/05/07 10:10:46 joerg Exp $
+$NetBSD: patch-Tarsnap.pro,v 1.2 2017/08/01 15:51:53 wiz Exp $
 
---- Tarsnap.pro.orig	2016-05-06 18:45:38.000000000 +0000
+--- Tarsnap.pro.orig	2017-07-10 08:43:23.000000000 +0000
 +++ Tarsnap.pro
-@@ -12,6 +12,8 @@ DEFINES += APP_VERSION=\\\"$$VERSION\\\"
+@@ -14,6 +14,8 @@ DEFINES += APP_VERSION=\\\"$$VERSION\\\"
  #QMAKE_TARGET_DESCRIPTION = GUI frontend for Tarsnap
  #QMAKE_TARGET_COPYRIGHT = copyright Tarsnap Backup Inc.
  
-+QMAKE_LFLAGS += ${COMPILER_RPATH_FLAG}${X11BASE}/lib
++QMAKE_LFLAGS += ${COMPILER_RPATH_FLAG}${X11BASE}/lib ${LDFLAGS}
 +
  SOURCES += \
-     src/coreapplication.cpp \
      src/main.cpp \
+     src/coreapplication.cpp \
