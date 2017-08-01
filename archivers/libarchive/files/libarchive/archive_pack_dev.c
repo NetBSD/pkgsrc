@@ -1,4 +1,4 @@
-/*	$NetBSD: archive_pack_dev.c,v 1.3 2017/02/25 21:11:20 joerg Exp $	*/
+/*	$NetBSD: archive_pack_dev.c,v 1.4 2017/08/01 22:26:23 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.
@@ -37,7 +37,7 @@
 #include <sys/cdefs.h>
 #endif
 #if !defined(lint)
-__RCSID("$NetBSD: archive_pack_dev.c,v 1.3 2017/02/25 21:11:20 joerg Exp $");
+__RCSID("$NetBSD: archive_pack_dev.c,v 1.4 2017/08/01 22:26:23 joerg Exp $");
 #endif /* not lint */
 
 #ifdef HAVE_LIMITS_H
@@ -280,7 +280,7 @@ pack_bsdos(int n, unsigned long numbers[], const char **error)
 
 		/* list of formats and pack functions */
 		/* this list must be sorted lexically */
-static struct format {
+static const struct format {
 	const char	*name;
 	pack_t		*pack;
 } formats[] = {

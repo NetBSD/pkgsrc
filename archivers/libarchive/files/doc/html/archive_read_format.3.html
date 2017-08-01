@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Sat Feb 25 11:22:03 2017 -->
+<!-- CreationDate: Mon Jul 10 02:32:55 2017 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -35,10 +35,10 @@ ARCHIVE_READ_FORMAT(3)</p>
 <b>archive_read_support_format_empty</b>,
 <b>archive_read_support_format_iso9660</b>,
 <b>archive_read_support_format_lha</b>,
-<b>archive_read_support_format_mtree,
-archive_read_support_format_rar,
-archive_read_support_format_raw,
-archive_read_support_format_tar</b>,
+<b>archive_read_support_format_mtree</b>,
+<b>archive_read_support_format_rar</b>,
+<b>archive_read_support_format_raw</b>,
+<b>archive_read_support_format_tar</b>,
 <b>archive_read_support_format_xar</b>,
 <b>archive_read_support_format_zip</b> &mdash; functions for
 reading streaming archives</p>
@@ -153,7 +153,7 @@ variants.</p>
 <p><b>archive_read_support_format_all</b>()</p>
 
 <p style="margin-left:17%;">Enables support for all
-available formats except the &lsquo;&lsquo;raw&rsquo;&rsquo;
+available formats except the &rsquo;&rsquo;raw&rsquo;&rsquo;
 format (see below).</p>
 
 <p><b>archive_read_support_format_by_code</b>()</p>
@@ -180,10 +180,10 @@ distinct format.</p>
 <p><b>archive_read_support_format_raw</b>()</p>
 
 <p style="margin-left:17%;">The
-&lsquo;&lsquo;raw&rsquo;&rsquo; format handler allows
+&rsquo;&rsquo;raw&rsquo;&rsquo; format handler allows
 libarchive to be used to read arbitrary data. It treats any
 data stream as an archive with a single entry. The pathname
-of this entry is &lsquo;&lsquo;data&rsquo;&rsquo;; all other
+of this entry is &rsquo;&rsquo;data&rsquo;&rsquo;; all other
 entry fields are unset. This is not enabled by
 <b>archive_read_support_format_all</b>() in order to avoid
 erroneous handling of damaged archives.</p>
@@ -213,10 +213,10 @@ example, many implementations of tar(1) allow you to append
 entries to an empty file. Of course, it is impossible to
 determine the format of an empty file by inspecting the
 contents, so this library treats empty files as having a
-special &lsquo;&lsquo;empty&rsquo;&rsquo; format.</p>
+special &rsquo;&rsquo;empty&rsquo;&rsquo; format.</p>
 
 <p style="margin-left:6%; margin-top: 1em">Using the
-&lsquo;&lsquo;raw&rsquo;&rsquo; handler together with any
+&rsquo;&rsquo;raw&rsquo;&rsquo; handler together with any
 other handler will often work but can produce surprising
 results.</p>
 
