@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/02/12 06:25:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2017/08/01 17:05:15 wiz Exp $
 
 DISTNAME=		gitso-0.6
 PKGREVISION=		16
@@ -7,7 +7,7 @@ MASTER_SITES=		http://gitso.googlecode.com/files/
 DISTFILES=		gitso_0.6_linux_all.tar.gz
 
 MAINTAINER=		darcy@NetBSD.org
-HOMEPAGE=		http://code.google.com/p/gitso/
+HOMEPAGE=		https://code.google.com/archive/p/gitso/
 COMMENT=		Gitso is to support others
 LICENSE=		gnu-gpl-v3
 
