@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/03/05 11:29:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2017/08/01 17:40:14 wiz Exp $
 
 VERSION=	1.6.17
 DISTNAME=	ldns-${VERSION}
@@ -8,7 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/ldns/
 
 MAINTAINER=	he@NetBSD.org
-HOMEPAGE=	http://www.nlnetlabs.nl/dnssec/drill.html
+#HOMEPAGE=	http://www.nlnetlabs.nl/dnssec/drill.html
 COMMENT=	DNSSEC debugging tool a'la dig
 LICENSE=	modified-bsd
 

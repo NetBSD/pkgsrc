@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/01/19 18:52:10 agc Exp $
+# $NetBSD: Makefile,v 1.16 2017/08/01 17:40:11 wiz Exp $
 
 DISTNAME=	fltk-1.1.7-source
 PKGNAME=	fltk-sudoku-1.1.7
@@ -15,7 +15,7 @@ MASTER_SITES+=	ftp://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/pub/fltk/${VE
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.easysw.com/~mike/sudoku/index.html
+#HOMEPAGE=	http://www.easysw.com/~mike/sudoku/index.html
 COMMENT=	FLTK example Sudoku game creator and solver
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
