@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2015/08/18 07:31:01 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2017/08/01 16:47:35 wiz Exp $
 #
 
 DISTNAME=	emixer-0.05.5
@@ -8,7 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	# http://emixer.linuxbox.com/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://toaster.muc-t-systems.com/~emixer/
+#HOMEPAGE=	http://toaster.muc-t-systems.com/~emixer/
 COMMENT=	Frontend for mpg123 that can mix two mp3 streams and fade between them
 
 DEPENDS+=	mpg123-1.*:../../audio/mpg123
