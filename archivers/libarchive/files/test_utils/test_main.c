@@ -56,6 +56,35 @@
 #include <stdarg.h>
 #include <time.h>
 
+#ifdef HAVE_SIGNAL_H
+#endif
+#ifdef HAVE_ACL_LIBACL_H
+#include <acl/libacl.h>
+#endif
+#ifdef HAVE_SYS_TYPES_H
+#include <sys/types.h>
+#endif
+#ifdef HAVE_SYS_ACL_H
+#include <sys/acl.h>
+#endif
+#ifdef HAVE_SYS_EA_H
+#include <sys/ea.h>
+#endif
+#ifdef HAVE_SYS_EXTATTR_H
+#include <sys/extattr.h>
+#endif
+#if HAVE_SYS_XATTR_H
+#include <sys/xattr.h>
+#elif HAVE_ATTR_XATTR_H
+#include <attr/xattr.h>
+#endif
+#ifdef HAVE_SYS_RICHACL_H
+#include <sys/richacl.h>
+#endif
+#if HAVE_MEMBERSHIP_H
+#include <membership.h>
+#endif
+
 /*
  *
  * Windows support routines
@@ -1073,6 +1102,7 @@ assertion_file_contains_lines_any_order(const char *file, int line,
 			failure_start(pathname, line, "Can't allocate memory");
 			failure_finish(NULL);
 			free(expected);
+			free(buff);
 			return (0);
 		}
 		for (i = 0; lines[i] != NULL; ++i) {
@@ -1095,6 +1125,7 @@ assertion_file_contains_lines_any_order(const char *file, int line,
 			failure_start(pathname, line, "Can't allocate memory");
 			failure_finish(NULL);
 			free(expected);
+			free(buff);
 			return (0);
 		}
 		for (j = 0, p = buff; p < buff + buff_size;
@@ -1883,9 +1914,103 @@ assertion_utimes(const char *file, int line,
 #endif /* defined(_WIN32) && !defined(__CYGWIN__) */
 }
 
+/* Compare file flags */
+int
+assertion_compare_fflags(const char *file, int line, const char *patha,
+    const char *pathb, int nomatch)
+{
+#if defined(HAVE_STRUCT_STAT_ST_FLAGS) && defined(UF_NODUMP)
+	struct stat sa, sb;
+
+	assertion_count(file, line);
+
+	if (stat(patha, &sa) < 0)
+		return (0);
+	if (stat(pathb, &sb) < 0)
+		return (0);
+	if (!nomatch && sa.st_flags != sb.st_flags) {
+		failure_start(file, line, "File flags should be identical: "
+		    "%s=%#010x %s=%#010x", patha, sa.st_flags, pathb,
+		    sb.st_flags);
+		failure_finish(NULL);
+		return (0);
+	}
+	if (nomatch && sa.st_flags == sb.st_flags) {
+		failure_start(file, line, "File flags should be different: "
+		    "%s=%#010x %s=%#010x", patha, sa.st_flags, pathb,
+		    sb.st_flags);
+		failure_finish(NULL);
+		return (0);
+	}
+#elif (defined(FS_IOC_GETFLAGS) && defined(HAVE_WORKING_FS_IOC_GETFLAGS) && \
+       defined(FS_NODUMP_FL)) || \
+      (defined(EXT2_IOC_GETFLAGS) && defined(HAVE_WORKING_EXT2_IOC_GETFLAGS) \
+         && defined(EXT2_NODUMP_FL))
+	int fd, r, flagsa, flagsb;
+
+	assertion_count(file, line);
+	fd = open(patha, O_RDONLY | O_NONBLOCK);
+	if (fd < 0) {
+		failure_start(file, line, "Can't open %s\n", patha);
+		failure_finish(NULL);
+		return (0);
+	}
+	r = ioctl(fd,
+#ifdef FS_IOC_GETFLAGS
+	    FS_IOC_GETFLAGS,
+#else
+	    EXT2_IOC_GETFLAGS,
+#endif
+	    &flagsa);
+	close(fd);
+	if (r < 0) {
+		failure_start(file, line, "Can't get flags %s\n", patha);
+		failure_finish(NULL);
+		return (0);
+	}
+	fd = open(pathb, O_RDONLY | O_NONBLOCK);
+	if (fd < 0) {
+		failure_start(file, line, "Can't open %s\n", pathb);
+		failure_finish(NULL);
+		return (0);
+	}
+	r = ioctl(fd,
+#ifdef FS_IOC_GETFLAGS
+	    FS_IOC_GETFLAGS,
+#else
+	    EXT2_IOC_GETFLAGS,
+#endif
+	    &flagsb);
+	close(fd);
+	if (r < 0) {
+		failure_start(file, line, "Can't get flags %s\n", pathb);
+		failure_finish(NULL);
+		return (0);
+	}
+	if (!nomatch && flagsa != flagsb) {
+		failure_start(file, line, "File flags should be identical: "
+		    "%s=%#010x %s=%#010x", patha, flagsa, pathb, flagsb);
+		failure_finish(NULL);
+		return (0);
+	}
+	if (nomatch && flagsa == flagsb) {
+		failure_start(file, line, "File flags should be different: "
+		    "%s=%#010x %s=%#010x", patha, flagsa, pathb, flagsb);
+		failure_finish(NULL);
+		return (0);
+	}
+#else
+	(void)patha; /* UNUSED */
+	(void)pathb; /* UNUSED */
+	(void)nomatch; /* UNUSED */
+	assertion_count(file, line);
+#endif
+	return (1);
+}
+
 /* Set nodump, report failures. */
 int
-assertion_nodump(const char *file, int line, const char *pathname)
+assertion_set_nodump(const char *file, int line, const char *pathname)
 {
 #if defined(HAVE_STRUCT_STAT_ST_FLAGS) && defined(UF_NODUMP)
 	int r;
@@ -2256,11 +2381,10 @@ canXz(void)
 /*
  * Can this filesystem handle nodump flags.
  */
-#if defined(HAVE_STRUCT_STAT_ST_FLAGS) && defined(UF_NODUMP)
-
 int
 canNodump(void)
 {
+#if defined(HAVE_STRUCT_STAT_ST_FLAGS) && defined(UF_NODUMP)
 	const char *path = "cannodumptest";
 	struct stat sb;
 
@@ -2271,16 +2395,10 @@ canNodump(void)
 		return (0);
 	if (sb.st_flags & UF_NODUMP)
 		return (1);
-	return (0);
-}
-
 #elif (defined(FS_IOC_GETFLAGS) && defined(HAVE_WORKING_FS_IOC_GETFLAGS) \
 	 && defined(FS_NODUMP_FL)) || \
       (defined(EXT2_IOC_GETFLAGS) && defined(HAVE_WORKING_EXT2_IOC_GETFLAGS) \
 	 && defined(EXT2_NODUMP_FL))
-int
-canNodump(void)
-{
 	const char *path = "cannodumptest";
 	int fd, r, flags;
 
@@ -2331,18 +2449,327 @@ canNodump(void)
 	if (flags & EXT2_NODUMP_FL)
 #endif
 		return (1);
-	return (0);
-}
-
-#else
-
-int
-canNodump()
-{
-	return (0);
-}
-
 #endif
+	return (0);
+}
+
+/* Get extended attribute value from a path */
+void *
+getXattr(const char *path, const char *name, size_t *sizep)
+{ 
+	void *value = NULL;
+#if ARCHIVE_XATTR_SUPPORT
+	ssize_t size;
+#if ARCHIVE_XATTR_LINUX
+	size = lgetxattr(path, name, NULL, 0);
+#elif ARCHIVE_XATTR_DARWIN
+	size = getxattr(path, name, NULL, 0, 0, XATTR_NOFOLLOW);
+#elif ARCHIVE_XATTR_AIX
+	size = lgetea(path, name, NULL, 0);
+#elif ARCHIVE_XATTR_FREEBSD
+	size = extattr_get_link(path, EXTATTR_NAMESPACE_USER, name + 5,
+	    NULL, 0);
+#endif
+
+	if (size >= 0) {
+		value = malloc(size);
+#if ARCHIVE_XATTR_LINUX
+		size = lgetxattr(path, name, value, size);
+#elif ARCHIVE_XATTR_DARWIN
+		size = getxattr(path, name, value, size, 0, XATTR_NOFOLLOW);
+#elif ARCHIVE_XATTR_AIX
+		size = lgetea(path, name, value, size);
+#elif ARCHIVE_XATTR_FREEBSD
+		size = extattr_get_link(path, EXTATTR_NAMESPACE_USER, name + 5,
+		    value, size);
+#endif
+		if (size < 0) {
+			free(value);
+			value = NULL;
+		}
+	}
+	if (size < 0)
+		*sizep = 0;
+	else
+		*sizep = (size_t)size;
+#else	/* !ARCHIVE_XATTR_SUPPORT */
+	(void)path;	/* UNUSED */
+	(void)name;	/* UNUSED */
+	*sizep = 0;
+#endif 	/* !ARCHIVE_XATTR_SUPPORT */
+	return (value);
+}
+
+/*
+ * Set extended attribute on a path
+ * Returns 0 on error, 1 on success
+ */
+int
+setXattr(const char *path, const char *name, const void *value, size_t size)
+{
+#if ARCHIVE_XATTR_SUPPORT
+#if ARCHIVE_XATTR_LINUX
+	if (lsetxattr(path, name, value, size, 0) == 0)
+#elif ARCHIVE_XATTR_DARWIN
+	if (setxattr(path, name, value, size, 0, XATTR_NOFOLLOW) == 0)
+#elif ARCHIVE_XATTR_AIX
+	if (lsetea(path, name, value, size, 0) == 0)
+#elif ARCHIVE_XATTR_FREEBSD
+	if (extattr_set_link(path, EXTATTR_NAMESPACE_USER, name + 5, value,
+	    size) > -1)
+#else
+	if (0)
+#endif
+		return (1);
+#else	/* !ARCHIVE_XATTR_SUPPORT */
+	(void)path;     /* UNUSED */
+	(void)name;	/* UNUSED */
+	(void)value;	/* UNUSED */
+	(void)size;	/* UNUSED */
+#endif	/* !ARCHIVE_XATTR_SUPPORT */
+	return (0);
+}
+
+#if ARCHIVE_ACL_SUNOS
+/* Fetch ACLs on Solaris using acl() or facl() */
+void *
+sunacl_get(int cmd, int *aclcnt, int fd, const char *path)
+{
+	int cnt, cntcmd;
+	size_t size;
+	void *aclp;
+
+	if (cmd == GETACL) {
+		cntcmd = GETACLCNT;
+		size = sizeof(aclent_t);
+	}
+#if ARCHIVE_ACL_SUNOS_NFS4
+	else if (cmd == ACE_GETACL) {
+		cntcmd = ACE_GETACLCNT;
+		size = sizeof(ace_t);
+	}
+#endif
+	else {
+		errno = EINVAL;
+		*aclcnt = -1;
+		return (NULL);
+	}
+
+	aclp = NULL;
+	cnt = -2;
+	while (cnt == -2 || (cnt == -1 && errno == ENOSPC)) {
+		if (path != NULL)
+			cnt = acl(path, cntcmd, 0, NULL);
+		else
+			cnt = facl(fd, cntcmd, 0, NULL);
+
+		if (cnt > 0) {
+			if (aclp == NULL)
+				aclp = malloc(cnt * size);
+			else
+				aclp = realloc(NULL, cnt * size);
+			if (aclp != NULL) {
+				if (path != NULL)
+					cnt = acl(path, cmd, cnt, aclp);
+				else
+					cnt = facl(fd, cmd, cnt, aclp);
+			}
+		} else {
+			if (aclp != NULL) {
+				free(aclp);
+				aclp = NULL;
+			}
+			break;
+		}
+	}
+
+	*aclcnt = cnt;
+	return (aclp);
+}
+#endif /* ARCHIVE_ACL_SUNOS */
+
+/*
+ * Set test ACLs on a path
+ * Return values:
+ * 0: error setting ACLs
+ * ARCHIVE_TEST_ACL_TYPE_POSIX1E: POSIX.1E ACLs have been set
+ * ARCHIVE_TEST_ACL_TYPE_NFS4: NFSv4 or extended ACLs have been set
+ */
+int
+setTestAcl(const char *path)
+{
+#if ARCHIVE_ACL_SUPPORT
+	int r = 1;
+#if ARCHIVE_ACL_LIBACL || ARCHIVE_ACL_FREEBSD || ARCHIVE_ACL_DARWIN
+	acl_t acl;
+#endif
+#if ARCHIVE_ACL_LIBRICHACL
+	struct richacl *richacl;
+#endif
+#if ARCHIVE_ACL_LIBACL || ARCHIVE_ACL_FREEBSD
+	const char *acltext_posix1e = "user:1:rw-,"
+	    "group:15:r-x,"
+	    "user::rwx,"
+	    "group::rwx,"
+	    "other::r-x,"
+	    "mask::rwx";
+#elif ARCHIVE_ACL_SUNOS /* Solaris POSIX.1e */
+	aclent_t aclp_posix1e[] = {
+	    { USER_OBJ, -1, 4 | 2 | 1 },
+	    { USER, 1, 4 | 2 },
+	    { GROUP_OBJ, -1, 4 | 2 | 1 },
+	    { GROUP, 15, 4 | 1 },
+	    { CLASS_OBJ, -1, 4 | 2 | 1 },
+	    { OTHER_OBJ, -1, 4 | 2 | 1 }
+	};
+#endif
+#if ARCHIVE_ACL_FREEBSD /* FreeBSD NFS4 */
+	const char *acltext_nfs4 = "user:1:rwpaRcs::allow:1,"
+	    "group:15:rxaRcs::allow:15,"
+	    "owner@:rwpxaARWcCos::allow,"
+	    "group@:rwpxaRcs::allow,"
+	    "everyone@:rxaRcs::allow";
+#elif ARCHIVE_ACL_LIBRICHACL
+	const char *acltext_nfs4 = "owner:rwpxaARWcCoS::mask,"
+	    "group:rwpxaRcS::mask,"
+	    "other:rxaRcS::mask,"
+	    "user:1:rwpaRcS::allow,"
+	    "group:15:rxaRcS::allow,"
+	    "owner@:rwpxaARWcCoS::allow,"
+	    "group@:rwpxaRcS::allow,"
+	    "everyone@:rxaRcS::allow";
+#elif ARCHIVE_ACL_SUNOS_NFS4 /* Solaris NFS4 */
+	ace_t aclp_nfs4[] = {
+	    { 1, ACE_READ_DATA | ACE_WRITE_DATA | ACE_APPEND_DATA |
+	      ACE_READ_ATTRIBUTES | ACE_READ_NAMED_ATTRS | ACE_READ_ACL |
+	      ACE_SYNCHRONIZE, 0, ACE_ACCESS_ALLOWED_ACE_TYPE },
+	    { 15, ACE_READ_DATA | ACE_EXECUTE | ACE_READ_ATTRIBUTES |
+	      ACE_READ_NAMED_ATTRS | ACE_READ_ACL | ACE_SYNCHRONIZE,
+	      ACE_IDENTIFIER_GROUP, ACE_ACCESS_ALLOWED_ACE_TYPE },
+	    { -1, ACE_READ_DATA | ACE_WRITE_DATA | ACE_APPEND_DATA |
+	      ACE_EXECUTE | ACE_READ_ATTRIBUTES | ACE_WRITE_ATTRIBUTES |
+	      ACE_READ_NAMED_ATTRS | ACE_WRITE_NAMED_ATTRS |
+	      ACE_READ_ACL | ACE_WRITE_ACL | ACE_WRITE_OWNER | ACE_SYNCHRONIZE,
+	      ACE_OWNER, ACE_ACCESS_ALLOWED_ACE_TYPE },
+	    { -1, ACE_READ_DATA | ACE_WRITE_DATA | ACE_APPEND_DATA |
+	      ACE_EXECUTE | ACE_READ_ATTRIBUTES | ACE_READ_NAMED_ATTRS |
+	      ACE_READ_ACL | ACE_SYNCHRONIZE, ACE_GROUP | ACE_IDENTIFIER_GROUP,
+	      ACE_ACCESS_ALLOWED_ACE_TYPE },
+	    { -1, ACE_READ_DATA | ACE_EXECUTE | ACE_READ_ATTRIBUTES |
+	      ACE_READ_NAMED_ATTRS | ACE_READ_ACL | ACE_SYNCHRONIZE,
+	      ACE_EVERYONE, ACE_ACCESS_ALLOWED_ACE_TYPE }
+	};
+#elif ARCHIVE_ACL_DARWIN /* Mac OS X */
+	acl_entry_t aclent;
+	acl_permset_t permset;
+	const uid_t uid = 1;
+	uuid_t uuid;
+	int i;
+	const acl_perm_t acl_perms[] = {
+		ACL_READ_DATA,
+		ACL_WRITE_DATA,
+		ACL_APPEND_DATA,
+		ACL_EXECUTE,
+		ACL_READ_ATTRIBUTES,
+		ACL_READ_EXTATTRIBUTES,
+		ACL_READ_SECURITY,
+#if HAVE_DECL_ACL_SYNCHRONIZE
+		ACL_SYNCHRONIZE
+#endif
+	};
+#endif /* ARCHIVE_ACL_DARWIN */
+
+#if ARCHIVE_ACL_FREEBSD
+	acl = acl_from_text(acltext_nfs4);
+	failure("acl_from_text() error: %s", strerror(errno));
+	if (assert(acl != NULL) == 0)
+		return (0);
+#elif ARCHIVE_ACL_LIBRICHACL
+	richacl = richacl_from_text(acltext_nfs4, NULL, NULL);
+	failure("richacl_from_text() error: %s", strerror(errno));
+	if (assert(richacl != NULL) == 0)
+		return (0);
+#elif ARCHIVE_ACL_DARWIN
+	acl = acl_init(1);
+	failure("acl_init() error: %s", strerror(errno));
+	if (assert(acl != NULL) == 0)
+		return (0);
+	r = acl_create_entry(&acl, &aclent);
+	failure("acl_create_entry() error: %s", strerror(errno));
+	if (assertEqualInt(r, 0) == 0)
+		goto testacl_free;
+	r = acl_set_tag_type(aclent, ACL_EXTENDED_ALLOW);
+	failure("acl_set_tag_type() error: %s", strerror(errno));
+	if (assertEqualInt(r, 0) == 0)
+		goto testacl_free;
+	r = acl_get_permset(aclent, &permset);
+	failure("acl_get_permset() error: %s", strerror(errno));
+	if (assertEqualInt(r, 0) == 0)
+		goto testacl_free;
+	for (i = 0; i < (int)(sizeof(acl_perms) / sizeof(acl_perms[0])); i++) {
+		r = acl_add_perm(permset, acl_perms[i]);
+		failure("acl_add_perm() error: %s", strerror(errno));
+		if (assertEqualInt(r, 0) == 0)
+			goto testacl_free;
+	}
+	r = acl_set_permset(aclent, permset);
+	failure("acl_set_permset() error: %s", strerror(errno));
+	if (assertEqualInt(r, 0) == 0)
+		goto testacl_free;
+	r = mbr_uid_to_uuid(uid, uuid);
+	failure("mbr_uid_to_uuid() error: %s", strerror(errno));
+	if (assertEqualInt(r, 0) == 0)
+		goto testacl_free;
+	r = acl_set_qualifier(aclent, uuid);
+	failure("acl_set_qualifier() error: %s", strerror(errno));
+	if (assertEqualInt(r, 0) == 0)
+		goto testacl_free;
+#endif /* ARCHIVE_ACL_DARWIN */
+
+#if ARCHIVE_ACL_NFS4
+#if ARCHIVE_ACL_FREEBSD
+	r = acl_set_file(path, ACL_TYPE_NFS4, acl);
+	acl_free(acl);
+#elif ARCHIVE_ACL_LIBRICHACL
+	r = richacl_set_file(path, richacl);
+	richacl_free(richacl);
+#elif ARCHIVE_ACL_SUNOS_NFS4
+	r = acl(path, ACE_SETACL,
+	    (int)(sizeof(aclp_nfs4)/sizeof(aclp_nfs4[0])), aclp_nfs4);
+#elif ARCHIVE_ACL_DARWIN
+	r = acl_set_file(path, ACL_TYPE_EXTENDED, acl);
+	acl_free(acl);
+#endif
+	if (r == 0)
+		return (ARCHIVE_TEST_ACL_TYPE_NFS4);
+#endif	/* ARCHIVE_ACL_NFS4 */
+
+#if ARCHIVE_ACL_POSIX1E
+#if ARCHIVE_ACL_FREEBSD || ARCHIVE_ACL_LIBACL
+	acl = acl_from_text(acltext_posix1e);
+	failure("acl_from_text() error: %s", strerror(errno));
+	if (assert(acl != NULL) == 0)
+		return (0);
+
+	r = acl_set_file(path, ACL_TYPE_ACCESS, acl);
+	acl_free(acl);
+#elif ARCHIVE_ACL_SUNOS
+	r = acl(path, SETACL,
+	    (int)(sizeof(aclp_posix1e)/sizeof(aclp_posix1e[0])), aclp_posix1e);
+#endif
+	if (r == 0)
+		return (ARCHIVE_TEST_ACL_TYPE_POSIX1E);
+	else
+		return (0);
+#endif /* ARCHIVE_ACL_POSIX1E */
+#if ARCHIVE_ACL_DARWIN
+testacl_free:
+	acl_free(acl);
+#endif
+#endif /* ARCHIVE_ACL_SUPPORT */
+	(void)path;	/* UNUSED */
+	return (0);
+}
 
 /*
  * Sleep as needed; useful for verifying disk timestamp changes by
