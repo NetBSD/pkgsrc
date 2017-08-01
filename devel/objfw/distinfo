@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/01 15:51:52 maya Exp $
+
+SHA1 (objfw-0.90.tar.gz) = 295f2efb40ba10bec955fd894f7ae8661cb8ae1f
+RMD160 (objfw-0.90.tar.gz) = 91270c57b6a32317c59cad2da1274341d2334bfc
+SHA512 (objfw-0.90.tar.gz) = a9661bc88cf3cad42b334fe1065c459a5b75fdffd764ffdf7340268422990644b467ee7a6e4731c715c31e49dae6788d94fc5e528c4dac9b5c7d0a7c9e2e8006
+Size (objfw-0.90.tar.gz) = 619601 bytes
