@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/01/01 14:43:39 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/08/01 17:40:11 wiz Exp $
 
 DISTNAME=	gmailfs-0.7.2
 PKGREVISION=	3
@@ -7,7 +7,7 @@ CATEGORIES=	filesystems
 MASTER_SITES=	http://richard.jones.name/google-hacks/gmail-filesystem/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://richard.jones.name/google-hacks/gmail-filesystem/gmail-filesystem.html
+#HOMEPAGE=	http://richard.jones.name/google-hacks/gmail-filesystem/gmail-filesystem.html
 COMMENT=	FUSE filesystem which uses Google mail for free space
 
 NO_BUILD=			yes

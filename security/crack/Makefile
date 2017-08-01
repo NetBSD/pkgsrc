@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2016/02/26 09:41:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2017/08/01 17:40:15 wiz Exp $
 
 DISTNAME=	crack5.0
 PKGNAME=	crack-5.0
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://dl.packetstormsecurity.net/Crackers/crack/
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://www.crypticide.com/dropsafe/info/home.html
+#HOMEPAGE=	http://www.crypticide.com/dropsafe/info/home.html
 COMMENT=	The "Sensible" Unix Password Cracker
 
 WRKSRC=		${WRKDIR}/c50a

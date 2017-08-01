@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/01/19 18:52:15 agc Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/01 17:40:13 wiz Exp $
 
 DISTNAME=		dovecot-antispam-plugin-20130429
 PKGREVISION=		4
@@ -8,7 +8,7 @@ MASTER_SITES+=		http://distcache.FreeBSD.org/local-distfiles/olgeni/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://hg.dovecot.org/dovecot-antispam-plugin/
+#HOMEPAGE=		http://hg.dovecot.org/dovecot-antispam-plugin/
 COMMENT=		Dovecot 2.x plugin for training antispam systems
 LICENSE=		gnu-gpl-v2
 

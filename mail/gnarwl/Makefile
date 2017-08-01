@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2016/03/05 11:28:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2017/08/01 17:40:13 wiz Exp $
 
 DISTNAME=	gnarwl-3.6
 PKGREVISION=	2
 CATEGORIES=	mail
-MASTER_SITES=	http://www.onyxbits.de/sites/default/files/upload_cck/node/526/
+#MASTER_SITES=	http://www.onyxbits.de/sites/default/files/upload_cck/node/526/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.onyxbits.de/sites/default/files/upload_cck/node/526/
+#HOMEPAGE=	http://www.onyxbits.de/sites/default/files/upload_cck/node/526/
 COMMENT=	LDAP based mail autoresponder
 LICENSE=	gnu-gpl-v2
 
