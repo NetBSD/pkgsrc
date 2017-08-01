@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.942 2017/07/11 11:21:45 jaapb Exp $
+# $NetBSD: Makefile,v 1.943 2017/08/01 13:19:42 markd Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -425,6 +425,9 @@ SUBDIR+=	p5-Data-HexDump
 SUBDIR+=	p5-Dist-Zilla-Plugin-PodWeaver
 SUBDIR+=	p5-Encode
 SUBDIR+=	p5-Encode-Detect
+SUBDIR+=	p5-Encode-EUCJPASCII
+SUBDIR+=	p5-Encode-HanExtra
+SUBDIR+=	p5-Encode-JIS2K
 SUBDIR+=	p5-Encode-Locale
 SUBDIR+=	p5-Feed-Find
 SUBDIR+=	p5-File-ReadBackwards
@@ -453,6 +456,7 @@ SUBDIR+=	p5-Lingua-Stem-It
 SUBDIR+=	p5-Lingua-Stem-Ru
 SUBDIR+=	p5-Lingua-Stem-Snowball
 SUBDIR+=	p5-Lingua-Stem-Snowball-Da
+SUBDIR+=	p5-Lingua-Translit
 SUBDIR+=	p5-List-Compare
 SUBDIR+=	p5-Locale-Maketext-Gettext
 SUBDIR+=	p5-Net-Dict
