@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Sat Feb 25 11:22:01 2017 -->
+<!-- CreationDate: Mon Jul 10 02:32:54 2017 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -31,8 +31,9 @@ ARCHIVE_ENTRY_ACL(3)</p>
 <b>archive_entry_acl_clear</b>,
 <b>archive_entry_acl_count</b>,
 <b>archive_entry_acl_from_text</b>,
-<b>archive_entry_acl_from_text_w,
-archive_entry_acl_next</b>, <b>archive_entry_acl_next_w</b>,
+<b>archive_entry_acl_from_text_w</b>,
+<b>archive_entry_acl_next</b>,
+<b>archive_entry_acl_next_w</b>,
 <b>archive_entry_acl_reset</b>,
 <b>archive_entry_acl_to_text</b>,
 <b>archive_entry_acl_to_text_w</b>,
@@ -136,7 +137,7 @@ descriptions</p>
 
 <p style="margin-top: 1em"><b>DESCRIPTION</b></p>
 
-<p style="margin-left:6%;">The &lsquo;&lsquo;Access Control
+<p style="margin-left:6%;">The &rsquo;&rsquo;Access Control
 Lists (ACLs)&rsquo;&rsquo; extend the standard Unix perssion
 model. The ACL interface of <b>libarchive</b> supports both
 POSIX.1e and NFSv4 style ACLs. Use of ACLs is restricted by
@@ -377,7 +378,7 @@ Only first-level entries inherit ACLs.</p>
 <p>ARCHIVE_ENTRY_ACL_ENTRY_SUCCESSFUL_ACCESS (<b>S</b>)</p>
 
 <p style="margin-left:24%;">Trigger alarm or audit on
-succesful access.</p>
+successful access.</p>
 
 <p>ARCHIVE_ENTRY_ACL_ENTRY_FAILED_ACCESS (<b>F</b>)</p>
 
@@ -394,8 +395,8 @@ inherited.</p>
 archive_entry_acl_add_entry</b>() and
 <b>archive_entry_acl_add_entry_w</b>() add a single ACL
 entry. For the access ACL and non-extended principals, the
-classic Unix permissions are updated. An archive enry cannot
-contain both POSIX.1e and NFSv4 ACL entries.</p>
+classic Unix permissions are updated. An archive entry
+cannot contain both POSIX.1e and NFSv4 ACL entries.</p>
 
 
 <p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_clear</b>()
@@ -421,7 +422,7 @@ ARCHIVE_ENTRY_ACL_TYPE_ALARM</p>
 <p style="margin-left:6%; margin-top: 1em">for NFSv4 ACLs.
 For POSIX.1e ACLs if ARCHIVE_ENTRY_ACL_TYPE_ACCESS is
 included and at least one extended ACL entry is found, the
-three non-extened ACLs are added.</p>
+three non-extended ACLs are added.</p>
 
 
 <p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_from_text</b>()
@@ -439,11 +440,11 @@ formats that can be created with
 <b>archive_entry_acl_to_text_w</b>(). Existing ACL entries
 are preserved. To get a clean new ACL from text
 <b>archive_entry_acl_clear</b>() must be called first.
-Entries prefixed with &lsquo;&lsquo;default:&rsquo;&rsquo;
+Entries prefixed with &rsquo;&rsquo;default:&rsquo;&rsquo;
 are treated as ARCHIVE_ENTRY_ACL_TYPE_DEFAULT unless
 <i>type</i> is ARCHIVE_ENTRY_ACL_TYPE_NFS4. Invalid entries,
 non-parseable ACL entries and entries beginning with the
-&lsquo;#&rsquo; character (comments) are skipped.</p>
+&rsquo;#&rsquo; character (comments) are skipped.</p>
 
 
 <p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_next</b>()
@@ -467,11 +468,11 @@ function returns the same value as
 <p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_to_text</b>()
 and <b>archive_entry_acl_to_text_w</b>() convert the ACL
 entries for the given type into a (wide) string of ACL
-entries separated by newline. If the the pointer
-<i>len_p</i> is not NULL, then the function shall return the
-length of the string (not including the NULL terminator) in
-the location pointed to by <i>len_p</i>. The <i>flag</i>
-argument is a bitwise-or.</p>
+entries separated by newline. If the pointer <i>len_p</i> is
+not NULL, then the function shall return the length of the
+string (not including the NULL terminator) in the location
+pointed to by <i>len_p</i>. The <i>flag</i> argument is a
+bitwise-or.</p>
 
 <p style="margin-left:6%; margin-top: 1em">The following
 flags are effective only on POSIX.1e ACL:</p>
@@ -488,7 +489,7 @@ ACLs.</p>
 <p>ARCHIVE_ENTRY_ACL_STYLE_MARK_DEFAULT</p>
 
 <p style="margin-left:24%;">Prefix each default ACL entry
-with the word &lsquo;&lsquo;default:&rsquo;&rsquo;.</p>
+with the word &rsquo;&rsquo;default:&rsquo;&rsquo;.</p>
 
 <p>ARCHIVE_ENTRY_ACL_STYLE_SOLARIS</p>
 
@@ -523,7 +524,7 @@ returned. It the entry contains POSIX.1e ACLs and none of
 the flags ARCHIVE_ENTRY_ACL_TYPE_ACCESS or
 ARCHIVE_ENTRY_ACL_TYPE_DEFAULT are specified, both access
 and default entries are returned and default entries are
-prefixed with &lsquo;&lsquo;default:&rsquo;&rsquo;.</p>
+prefixed with &rsquo;&rsquo;default:&rsquo;&rsquo;.</p>
 
 
 <p style="margin-left:6%; margin-top: 1em"><b>archive_entry_acl_types</b>()

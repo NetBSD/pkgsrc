@@ -1,4 +1,4 @@
-.TH ARCHIVE_WRITE_FINISH_ENTRY 3 "February 2, 2012" ""
+.TH ARCHIVE_WRITE_FINISH_ENTRY 3 "February 28, 2017" ""
 .SH NAME
 .ad l
 \fB\%archive_write_finish_entry\fP
@@ -23,6 +23,9 @@ is called automatically by
 and
 \fB\%archive_write_close\fP()
 as needed.
+For
+Tn archive_write_disk
+handles, this flushes pending file attribute changes like modification time.
 .SH RETURN VALUES
 .ad l
 This function returns

@@ -1,25 +1,25 @@
 ARCHIVE_WRITE_NEW(3)	 BSD Library Functions Manual	  ARCHIVE_WRITE_NEW(3)
 
-1mNAME0m
-     1marchive_write_new 22m— functions for creating archives
+NAME
+     archive_write_new — functions for creating archives
 
-1mLIBRARY0m
+LIBRARY
      Streaming Archive Library (libarchive, -larchive)
 
-1mSYNOPSIS0m
-     1m#include <archive.h>0m
+SYNOPSIS
+     #include <archive.h>
 
-     4mstruct24m 4marchive24m 4m*0m
-     1marchive_write_new22m(4mvoid24m);
+     struct archive *
+     archive_write_new(void);
 
-1mDESCRIPTION0m
+DESCRIPTION
      Allocates and initializes a struct archive object suitable for writing a
      tar archive.  NULL is returned on error.
 
      A complete description of the struct archive object can be found in the
      overview manual page for libarchive(3).
 
-1mSEE ALSO0m
+SEE ALSO
      tar(1), libarchive(3), archive_write(3), archive_write_set_options(3),
      cpio(5), mtree(5), tar(5)
 

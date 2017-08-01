@@ -1,106 +1,106 @@
 ARCHIVE_ENTRY_PATHS(3)	 BSD Library Functions Manual	ARCHIVE_ENTRY_PATHS(3)
 
-1mNAME0m
-     1marchive_entry_hardlink22m, 1marchive_entry_hardlink_w22m,
-     1marchive_entry_set_hardlink22m, 1marchive_entry_copy_hardlink22m,
-     1marchive_entry_copy_hardlink_w22m, 1marchve_entry_update_hardlink_utf822m,
-     1marchive_entry_set_link22m, 1marchive_entry_copy_link22m,
-     1marchive_entry_copy_link_w22m, 1marchve_entry_update_link_utf822m,
-     1marchive_entry_pathname22m, 1marchive_entry_pathname_w22m,
-     1marchive_entry_set_pathname22m, 1marchive_entry_copy_pathname22m,
-     1marchive_entry_copy_pathname_w22m, 1marchve_entry_update_pathname_utf822m,
-     1marchive_entry_sourcepath22m, 1marchive_entry_copy_sourcepath22m,
-     1marchive_entry_symlink, archive_entry_symlink_w,0m
-     1marchive_entry_set_symlink22m, 1marchive_entry_copy_symlink22m,
-     1marchive_entry_copy_symlink_w22m, 1marchve_entry_update_symlink_utf8 22m— func‐
+NAME
+     archive_entry_hardlink, archive_entry_hardlink_w,
+     archive_entry_set_hardlink, archive_entry_copy_hardlink,
+     archive_entry_copy_hardlink_w, archive_entry_update_hardlink_utf8,
+     archive_entry_set_link, archive_entry_copy_link,
+     archive_entry_copy_link_w, archive_entry_update_link_utf8,
+     archive_entry_pathname, archive_entry_pathname_w,
+     archive_entry_set_pathname, archive_entry_copy_pathname,
+     archive_entry_copy_pathname_w, archive_entry_update_pathname_utf8,
+     archive_entry_sourcepath, archive_entry_copy_sourcepath,
+     archive_entry_symlink, archive_entry_symlink_w,
+     archive_entry_set_symlink, archive_entry_copy_symlink,
+     archive_entry_copy_symlink_w, archive_entry_update_symlink_utf8 — func‐
      tions for manipulating path names in archive entry descriptions
 
-1mLIBRARY0m
+LIBRARY
      Streaming Archive Library (libarchive, -larchive)
 
-1mSYNOPSIS0m
-     1m#include <archive_entry.h>0m
+SYNOPSIS
+     #include <archive_entry.h>
 
-     4mconst24m 4mchar24m 4m*0m
-     1marchive_entry_hardlink22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     const char *
+     archive_entry_hardlink(struct archive_entry *a);
 
-     4mconst24m 4mwchar_t24m 4m*0m
-     1marchive_entry_hardlink_w22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     const wchar_t *
+     archive_entry_hardlink_w(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_hardlink22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m 4mchar24m 4m*path24m);
+     void
+     archive_entry_set_hardlink(struct archive_entry *a, const char *path);
 
-     4mvoid0m
-     1marchive_entry_copy_hardlink22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m 4mchar24m 4m*path24m);
+     void
+     archive_entry_copy_hardlink(struct archive_entry *a, const char *path);
 
-     4mvoid0m
-     1marchive_entry_copy_hardlink_w22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m, 4mwchar_t24m,
-	 4m*path"24m);
+     void
+     archive_entry_copy_hardlink_w(struct archive_entry *a, const, wchar_t,
+	 *path");
 
-     4mint0m
-     1marchive_entry_update_hardlink_utf822m(4mstruct24m 4marchive_entry24m 4m*a24m,
-	 4mconst24m 4mchar24m 4m*path24m);
+     int
+     archive_entry_update_hardlink_utf8(struct archive_entry *a,
+	 const char *path);
 
-     4mvoid0m
-     1marchive_entry_set_link22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m 4mchar24m 4m*path24m);
+     void
+     archive_entry_set_link(struct archive_entry *a, const char *path);
 
-     4mvoid0m
-     1marchive_entry_copy_link22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m 4mchar24m 4m*path24m);
+     void
+     archive_entry_copy_link(struct archive_entry *a, const char *path);
 
-     4mvoid0m
-     1marchive_entry_copy_link_w22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m 4mwchar_t24m 4m*path24m);
+     void
+     archive_entry_copy_link_w(struct archive_entry *a, const wchar_t *path);
 
-     4mint0m
-     1marchive_entry_update_link_utf822m(4mstruct24m 4marchive_entry24m 4m*a24m,
-	 4mconst24m 4mchar24m 4m*path24m);
+     int
+     archive_entry_update_link_utf8(struct archive_entry *a,
+	 const char *path);
 
-     4mconst24m 4mchar24m 4m*0m
-     1marchive_entry_pathname22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     const char *
+     archive_entry_pathname(struct archive_entry *a);
 
-     4mconst24m 4mwchar_t24m 4m*0m
-     1marchive_entry_pathname_w22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     const wchar_t *
+     archive_entry_pathname_w(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_pathname22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m 4mchar24m 4m*path24m);
+     void
+     archive_entry_set_pathname(struct archive_entry *a, const char *path);
 
-     4mvoid0m
-     1marchive_entry_copy_pathname22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m 4mchar24m 4m*path24m);
+     void
+     archive_entry_copy_pathname(struct archive_entry *a, const char *path);
 
-     4mvoid0m
-     1marchive_entry_copy_pathname_w22m(4mstruct24m 4marchive_entry24m 4m*a24m,
-	 4mconst24m 4mwchar_t24m 4m*path24m);
+     void
+     archive_entry_copy_pathname_w(struct archive_entry *a,
+	 const wchar_t *path);
 
-     4mint0m
-     1marchive_entry_update_pathname_utf822m(4mstruct24m 4marchive_entry24m 4m*a24m,
-	 4mconst24m 4mchar24m 4m*path24m);
+     int
+     archive_entry_update_pathname_utf8(struct archive_entry *a,
+	 const char *path);
 
-     4mconst24m 4mchar24m 4m*0m
-     1marchive_entry_sourcepath22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     const char *
+     archive_entry_sourcepath(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_copy_sourcepath22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m 4mchar24m 4m*path24m);
+     void
+     archive_entry_copy_sourcepath(struct archive_entry *a, const char *path);
 
-     4mconst24m 4mchar24m 4m*0m
-     1marchive_entry_symlink22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     const char *
+     archive_entry_symlink(struct archive_entry *a);
 
-     4mconst24m 4mwchar_t24m 4m*0m
-     1marchive_entry_symlink_w22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     const wchar_t *
+     archive_entry_symlink_w(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_symlink22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m 4mchar24m 4m*path24m);
+     void
+     archive_entry_set_symlink(struct archive_entry *a, const char *path);
 
-     4mvoid0m
-     1marchive_entry_copy_symlink22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m 4mchar24m 4m*path24m);
+     void
+     archive_entry_copy_symlink(struct archive_entry *a, const char *path);
 
-     4mvoid0m
-     1marchive_entry_copy_symlink_w22m(4mstruct24m 4marchive_entry24m 4m*a24m,
-	 4mconst24m 4mwchar_t24m 4m*path24m);
+     void
+     archive_entry_copy_symlink_w(struct archive_entry *a,
+	 const wchar_t *path);
 
-     4mint0m
-     1marchive_entry_update_symlink_utf822m(4mstruct24m 4marchive_entry24m 4m*a24m,
-	 4mconst24m 4mchar24m 4m*path24m);
+     int
+     archive_entry_update_symlink_utf8(struct archive_entry *a,
+	 const char *path);
 
-1mDESCRIPTION0m
+DESCRIPTION
      Path names supported by archive_entry(3):
      hardlink	 Destination of the hardlink.
      link	 Update only.  For a symlink, update the destination.  Other‐
@@ -115,7 +115,7 @@ ARCHIVE_ENTRY_PATHS(3)	 BSD Library Functions Manual	ARCHIVE_ENTRY_PATHS(3)
      char *	Multibyte strings in the current locale.
 
      wchar_t *	Wide character strings in the current locale.  The accessor
-		functions are named 1mXXX_w22m().
+		functions are named XXX_w().
 
      UTF-8	Unicode strings encoded as UTF-8.  This are convience func‐
 		tions to update both the multibyte and wide character strings
@@ -128,9 +128,9 @@ ARCHIVE_ENTRY_PATHS(3)	 BSD Library Functions Manual	ARCHIVE_ENTRY_PATHS(3)
      is a convience function for conditionally setting hardlink or symlink
      destination.  It doesn't have a corresponding get accessor function.
 
-     1marchive_entry_set_XXX22m() is an alias for 1marchive_entry_copy_XXX22m().
+     archive_entry_set_XXX() is an alias for archive_entry_copy_XXX().
 
-1mSEE ALSO0m
+SEE ALSO
      archive_entry(3) libarchive(3),
 
 BSD			       February 2, 2012 			   BSD
