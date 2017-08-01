@@ -1,50 +1,50 @@
 ARCHIVE_READ_EXTRACT(3)  BSD Library Functions Manual  ARCHIVE_READ_EXTRACT(3)
 
-1mNAME0m
-     1marchive_read_extract22m, 1marchive_read_extract222m,
-     1marchive_read_extract_set_progress_callback 22m— functions for reading
+NAME
+     archive_read_extract, archive_read_extract2,
+     archive_read_extract_set_progress_callback — functions for reading
      streaming archives
 
-1mLIBRARY0m
+LIBRARY
      Streaming Archive Library (libarchive, -larchive)
 
-1mSYNOPSIS0m
-     1m#include <archive.h>0m
+SYNOPSIS
+     #include <archive.h>
 
-     4mint0m
-     1marchive_read_extract22m(4mstruct24m 4marchive24m 4m*24m, 4mstruct24m 4marchive_entry24m 4m*24m,
-	 4mint24m 4mflags24m);
+     int
+     archive_read_extract(struct archive *, struct archive_entry *,
+	 int flags);
 
-     4mint0m
-     1marchive_read_extract222m(4mstruct24m 4marchive24m 4m*src24m, 4mstruct24m 4marchive_entry24m 4m*24m,
-	 4mstruct24m 4marchive24m 4m*dest24m);
+     int
+     archive_read_extract2(struct archive *src, struct archive_entry *,
+	 struct archive *dest);
 
-     4mvoid0m
-     1marchive_read_extract_set_progress_callback22m(4mstruct24m 4marchive24m 4m*24m,
-	 4mvoid24m 4m(*func)(void24m 4m*)24m, 4mvoid24m 4m*user_data24m);
+     void
+     archive_read_extract_set_progress_callback(struct archive *,
+	 void (*func)(void *), void *user_data);
 
-1mDESCRIPTION0m
-     1marchive_read_extract22m(), 1marchive_read_extract_set_skip_file22m()
+DESCRIPTION
+     archive_read_extract(), archive_read_extract_set_skip_file()
 	     A convenience function that wraps the corresponding
 	     archive_write_disk(3) interfaces.	The first call to
-	     1marchive_read_extract22m() creates a restore object using
+	     archive_read_extract() creates a restore object using
 	     archive_write_disk_new(3) and
 	     archive_write_disk_set_standard_lookup(3), then transparently
 	     invokes archive_write_disk_set_options(3),
 	     archive_write_header(3), archive_write_data(3), and
 	     archive_write_finish_entry(3) to create the entry on disk and
-	     copy data into it.  The 4mflags24m argument is passed unmodified to
+	     copy data into it.  The flags argument is passed unmodified to
 	     archive_write_disk_set_options(3).
-     1marchive_read_extract222m()
-	     This is another version of 1marchive_read_extract22m() that allows you
+     archive_read_extract2()
+	     This is another version of archive_read_extract() that allows you
 	     to provide your own restore object.  In particular, this allows
 	     you to override the standard lookup functions using
 	     archive_write_disk_set_group_lookup(3), and
 	     archive_write_disk_set_user_lookup(3).  Note that
-	     1marchive_read_extract222m() does not accept a 4mflags24m argument; you
-	     should use 1marchive_write_disk_set_options22m() to set the restore
+	     archive_read_extract2() does not accept a flags argument; you
+	     should use archive_write_disk_set_options() to set the restore
 	     options yourself.
-     1marchive_read_extract_set_progress_callback22m()
+     archive_read_extract_set_progress_callback()
 	     Sets a pointer to a user-defined callback that can be used for
 	     updating progress displays during extraction.  The progress func‐
 	     tion will be invoked during the extraction of large regular
@@ -54,19 +54,19 @@ ARCHIVE_READ_EXTRACT(3)  BSD Library Functions Manual  ARCHIVE_READ_EXTRACT(3)
 	     object so that various statistics can be retrieved for the
 	     progress display.
 
-1mRETURN VALUES0m
+RETURN VALUES
      Most functions return zero on success, non-zero on error.	The possible
-     return codes include: 1mARCHIVE_OK 22m(the operation succeeded), 1mARCHIVE_WARN0m
+     return codes include: ARCHIVE_OK (the operation succeeded), ARCHIVE_WARN
      (the operation succeeded but a non-critical error was encountered),
-     1mARCHIVE_EOF 22m(end-of-archive was encountered), 1mARCHIVE_RETRY 22m(the opera‐
-     tion failed but can be retried), and 1mARCHIVE_FATAL 22m(there was a fatal
+     ARCHIVE_EOF (end-of-archive was encountered), ARCHIVE_RETRY (the opera‐
+     tion failed but can be retried), and ARCHIVE_FATAL (there was a fatal
      error; the archive should be closed immediately).
 
-1mERRORS0m
+ERRORS
      Detailed error codes and textual descriptions are available from the
-     1marchive_errno22m() and 1marchive_error_string22m() functions.
+     archive_errno() and archive_error_string() functions.
 
-1mSEE ALSO0m
+SEE ALSO
      tar(1), libarchive(3), archive_read(3), archive_read_data(3),
      archive_read_filter(3), archive_read_format(3), archive_read_open(3),
      archive_read_set_options(3), archive_util(3), tar(5)

@@ -1,132 +1,132 @@
 ARCHIVE_ENTRY_STAT(3)	 BSD Library Functions Manual	 ARCHIVE_ENTRY_STAT(3)
 
-1mNAME0m
-     1marchive_entry_stat22m, 1marchive_entry_copy_stat22m, 1marchive_entry_filetype22m,
-     1marchive_entry_set_filetype22m, 1marchive_entry_mode22m, 1marchive_entry_set_mode22m,
-     1marchive_entry_size22m, 1marchive_entry_size_is_set22m, 1marchive_entry_set_size22m,
-     1marchive_entry_unset_size22m, 1marchive_entry_dev22m, 1marchive_entry_set_dev22m,
-     1marchive_entry_dev_is_set22m, 1marchive_entry_devmajor22m,
-     1marchive_entry_set_devmajor22m, 1marchive_entry_devminor22m,
-     1marchive_entry_set_devminor22m, 1marchive_entry_ino22m, 1marchive_entry_set_ino22m,
-     1marchive_entry_ino_is_set22m, 1marchive_entry_ino6422m, 1marchive_entry_set_ino6422m,
-     1marchive_entry_nlink22m, 1marchive_entry_rdev22m, 1marchive_entry_set_rdev22m,
-     1marchive_entry_rdevmajor22m, 1marchive_entry_set_rdevmajor22m,
-     1marchive_entry_rdevminor22m, 1marchive_entry_set_rdevminor22m, — accessor func‐
+NAME
+     archive_entry_stat, archive_entry_copy_stat, archive_entry_filetype,
+     archive_entry_set_filetype, archive_entry_mode, archive_entry_set_mode,
+     archive_entry_size, archive_entry_size_is_set, archive_entry_set_size,
+     archive_entry_unset_size, archive_entry_dev, archive_entry_set_dev,
+     archive_entry_dev_is_set, archive_entry_devmajor,
+     archive_entry_set_devmajor, archive_entry_devminor,
+     archive_entry_set_devminor, archive_entry_ino, archive_entry_set_ino,
+     archive_entry_ino_is_set, archive_entry_ino64, archive_entry_set_ino64,
+     archive_entry_nlink, archive_entry_rdev, archive_entry_set_rdev,
+     archive_entry_rdevmajor, archive_entry_set_rdevmajor,
+     archive_entry_rdevminor, archive_entry_set_rdevminor, — accessor func‐
      tions for manipulating archive entry descriptions
 
-1mLIBRARY0m
+LIBRARY
      Streaming Archive Library (libarchive, -larchive)
 
-1mSYNOPSIS0m
-     1m#include <archive_entry.h>0m
+SYNOPSIS
+     #include <archive_entry.h>
 
-     4mconst24m 4mstruct24m 4mstat24m 4m*0m
-     1marchive_entry_stat22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     const struct stat *
+     archive_entry_stat(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_copy_stat22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m 4mstruct24m 4mstat24m 4m*sb24m);
+     void
+     archive_entry_copy_stat(struct archive_entry *a, const struct stat *sb);
 
-     4mmode_t0m
-     1marchive_entry_filetype22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     mode_t
+     archive_entry_filetype(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_filetype22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4munsigned24m 4mint24m 4mtype24m);
+     void
+     archive_entry_set_filetype(struct archive_entry *a, unsigned int type);
 
-     4mmode_t0m
-     1marchive_entry_mode22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     mode_t
+     archive_entry_mode(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_mode22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mmode_t24m 4mmode24m);
+     void
+     archive_entry_set_mode(struct archive_entry *a, mode_t mode);
 
-     4mint64_t0m
-     1marchive_entry_size22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     int64_t
+     archive_entry_size(struct archive_entry *a);
 
-     4mint0m
-     1marchive_entry_size_is_set22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     int
+     archive_entry_size_is_set(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_size22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mint64_t24m 4msize24m);
+     void
+     archive_entry_set_size(struct archive_entry *a, int64_t size);
 
-     4mvoid0m
-     1marchive_entry_unset_size22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     void
+     archive_entry_unset_size(struct archive_entry *a);
 
-     4mdev_t0m
-     1marchive_entry_dev22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     dev_t
+     archive_entry_dev(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_dev22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mdev_t24m 4mdev24m);
+     void
+     archive_entry_set_dev(struct archive_entry *a, dev_t dev);
 
-     4mint0m
-     1marchive_entry_dev_is_set22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     int
+     archive_entry_dev_is_set(struct archive_entry *a);
 
-     4mdev_t0m
-     1marchive_entry_devmajor22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     dev_t
+     archive_entry_devmajor(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_devmajor22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mdev_t24m 4mmajor24m);
+     void
+     archive_entry_set_devmajor(struct archive_entry *a, dev_t major);
 
-     4mdev_t0m
-     1marchive_entry_devminor22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     dev_t
+     archive_entry_devminor(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_devminor22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mdev_t24m 4mminor24m);
+     void
+     archive_entry_set_devminor(struct archive_entry *a, dev_t minor);
 
-     4mino_t0m
-     1marchive_entry_ino22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     ino_t
+     archive_entry_ino(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_ino22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4munsigned24m 4mlong24m 4mino24m);
+     void
+     archive_entry_set_ino(struct archive_entry *a, unsigned long ino);
 
-     4mint0m
-     1marchive_entry_ino_is_set22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     int
+     archive_entry_ino_is_set(struct archive_entry *a);
 
-     4mint64_t0m
-     1marchive_entry_ino6422m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     int64_t
+     archive_entry_ino64(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_ino6422m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mint64_t24m 4mino24m);
+     void
+     archive_entry_set_ino64(struct archive_entry *a, int64_t ino);
 
-     4munsigned24m 4mint0m
-     1marchive_entry_nlink22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     unsigned int
+     archive_entry_nlink(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_nlink22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4munsigned24m 4mint24m 4mcount24m);
+     void
+     archive_entry_set_nlink(struct archive_entry *a, unsigned int count);
 
-     4mdev_t0m
-     1marchive_entry_rdev22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     dev_t
+     archive_entry_rdev(struct archive_entry *a);
 
-     4mdev_t0m
-     1marchive_entry_rdevmajor22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     dev_t
+     archive_entry_rdevmajor(struct archive_entry *a);
 
-     4mdev_t0m
-     1marchive_entry_rdevminor22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+     dev_t
+     archive_entry_rdevminor(struct archive_entry *a);
 
-     4mvoid0m
-     1marchive_entry_set_rdev22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mdev_t24m 4mdev24m);
+     void
+     archive_entry_set_rdev(struct archive_entry *a, dev_t dev);
 
-     4mvoid0m
-     1marchive_entry_set_rdevmajor22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mdev_t24m 4mmajor24m);
+     void
+     archive_entry_set_rdevmajor(struct archive_entry *a, dev_t major);
 
-     4mvoid0m
-     1marchive_entry_set_rdevminor22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mdev_t24m 4mminor24m);
+     void
+     archive_entry_set_rdevminor(struct archive_entry *a, dev_t minor);
 
-1mDESCRIPTION0m
-   1mCopying to and from 4m22mstruct24m 4mstat0m
-     The function 1marchive_entry_stat22m() converts the various fields stored in
+DESCRIPTION
+   Copying to and from struct stat
+     The function archive_entry_stat() converts the various fields stored in
      the archive entry to the format used by stat(2).  The return value
-     remains valid until either 1marchive_entry_clear22m() or 1marchive_entry_free22m()
+     remains valid until either archive_entry_clear() or archive_entry_free()
      is called.  It is not affected by calls to the set accessor functions.
-     It currently sets the following values in 4mstruct24m 4mstat24m: 4mst_atime24m,
-     4mst_ctime24m, 4mst_dev24m, 4mst_gid24m, 4mst_ino24m, 4mst_mode24m, 4mst_mtime24m, 4mst_nlink24m, 4mst_rdev24m,
-     4mst_size24m, 4mst_uid24m.  In addition, 4mst_birthtime24m and high-precision informa‐
+     It currently sets the following values in struct stat: st_atime,
+     st_ctime, st_dev, st_gid, st_ino, st_mode, st_mtime, st_nlink, st_rdev,
+     st_size, st_uid.  In addition, st_birthtime and high-precision informa‐
      tion for time-related fields will be included on platforms that support
      it.
 
-     The function 1marchive_entry_copy_stat22m() copies fields from the platform's
-     4mstruct24m 4mstat24m.  Fields not provided by 4mstruct24m 4mstat24m are unchanged.
+     The function archive_entry_copy_stat() copies fields from the platform's
+     struct stat.  Fields not provided by struct stat are unchanged.
 
-   1mGeneral accessor functions0m
-     The functions 1marchive_entry_filetype22m() and 1marchive_entry_set_filetype22m()
+   General accessor functions
+     The functions archive_entry_filetype() and archive_entry_set_filetype()
      get respectively set the filetype.  The file type is one of the following
      constants:
 	   AE_IFREG   Regular file
@@ -140,50 +140,50 @@ ARCHIVE_ENTRY_STAT(3)	 BSD Library Functions Manual	 ARCHIVE_ENTRY_STAT(3)
      stat(2) may have different numeric values from the corresponding con‐
      stants above.
 
-     The functions 1marchive_entry_mode22m() and 1marchive_entry_set_mode22m() get/set a
+     The functions archive_entry_mode() and archive_entry_set_mode() get/set a
      combination of file type and permissions and provide the equivalent of
-     4mst_mode24m.  Use of 1marchive_entry_filetype22m() and 1marchive_entry_perm22m() for
-     getting and 1marchive_entry_set_filetype22m() and 1marchive_entry_set_perm22m() for
+     st_mode.  Use of archive_entry_filetype() and archive_entry_perm() for
+     getting and archive_entry_set_filetype() and archive_entry_set_perm() for
      setting is recommended.
 
-     The function 1marchive_entry_size22m() returns the file size, if it has been
-     set, and 0 otherwise.  1marchive_entry_size22m() can be used to query that
-     status.  1marchive_entry_set_size22m() and 1marchive_entry_unset_size22m() set and
+     The function archive_entry_size() returns the file size, if it has been
+     set, and 0 otherwise.  archive_entry_size() can be used to query that
+     status.  archive_entry_set_size() and archive_entry_unset_size() set and
      unset the size, respectively.
 
      The number of references (hardlinks) can be obtained by calling
-     1marchive_entry_nlinks22m() and set with 1marchive_entry_set_nlinks22m().
+     archive_entry_nlinks() and set with archive_entry_set_nlinks().
 
-   1mIdentifying unique files0m
-     The functions 1marchive_entry_dev22m() and 1marchive_entry_ino6422m() are used by
+   Identifying unique files
+     The functions archive_entry_dev() and archive_entry_ino64() are used by
      archive_entry_linkify(3) to find hardlinks.  The pair of device and inode
      is supposed to identify hardlinked files.
 
      The device major and minor number can be obtained independently using
-     1marchive_entry_devmajor22m() and 1marchive_entry_devminor22m().  The device can be
-     set either via 1marchive_entry_set_dev22m() or by the combination of major and
-     minor number using 1marchive_entry_set_devmajor22m() and
-     1marchive_entry_set_devminor22m().
+     archive_entry_devmajor() and archive_entry_devminor().  The device can be
+     set either via archive_entry_set_dev() or by the combination of major and
+     minor number using archive_entry_set_devmajor() and
+     archive_entry_set_devminor().
 
-     The inode number can be obtained using 1marchive_entry_ino22m().  This is a
-     legacy interface that uses the platform 4mino_t24m, which may be very small.
-     To set the inode number, 1marchive_entry_set_ino6422m() is the preferred
+     The inode number can be obtained using archive_entry_ino().  This is a
+     legacy interface that uses the platform ino_t, which may be very small.
+     To set the inode number, archive_entry_set_ino64() is the preferred
      interface.
 
-   1mAccessor functions for block and character devices0m
+   Accessor functions for block and character devices
      Block and character devices are characterised either using a device num‐
      ber or a pair of major and minor number.  The combined device number can
-     be obtained with 1marchive_device_rdev22m() and set with
-     1marchive_device_set_rdev22m().  The major and minor numbers are accessed by
-     1marchive_device_rdevmajor22m(), 1marchive_device_rdevminor22m()
-     1marchive_device_set_rdevmajor22m() and 1marchive_device_set_rdevminor22m().
+     be obtained with archive_device_rdev() and set with
+     archive_device_set_rdev().  The major and minor numbers are accessed by
+     archive_device_rdevmajor(), archive_device_rdevminor()
+     archive_device_set_rdevmajor() and archive_device_set_rdevminor().
 
      The process of splitting the combined device number into major and minor
      number and the reverse process of combing them differs between platforms.
      Some archive formats use the combined form, while other formats use the
      split form.
 
-1mSEE ALSO0m
+SEE ALSO
      archive_entry_acl(3), archive_entry_perms(3), archive_entry_time(3),
      libarchive(3), stat(2)
 

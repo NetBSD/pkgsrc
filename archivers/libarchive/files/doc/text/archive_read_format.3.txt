@@ -1,122 +1,122 @@
 ARCHIVE_READ_FORMAT(3)	 BSD Library Functions Manual	ARCHIVE_READ_FORMAT(3)
 
-1mNAME0m
-     1marchive_read_support_format_7zip22m, 1marchive_read_support_format_all22m,
-     1marchive_read_support_format_ar22m, 1marchive_read_support_format_by_code22m,
-     1marchive_read_support_format_cab22m, 1marchive_read_support_format_cpio22m,
-     1marchive_read_support_format_empty22m, 1marchive_read_support_format_iso966022m,
-     1marchive_read_support_format_lha22m, 1marchive_read_support_format_mtree,0m
-     1marchive_read_support_format_rar, archive_read_support_format_raw,0m
-     1marchive_read_support_format_tar22m, 1marchive_read_support_format_xar22m,
-     1marchive_read_support_format_zip 22m— functions for reading streaming ar‐
+NAME
+     archive_read_support_format_7zip, archive_read_support_format_all,
+     archive_read_support_format_ar, archive_read_support_format_by_code,
+     archive_read_support_format_cab, archive_read_support_format_cpio,
+     archive_read_support_format_empty, archive_read_support_format_iso9660,
+     archive_read_support_format_lha, archive_read_support_format_mtree,
+     archive_read_support_format_rar, archive_read_support_format_raw,
+     archive_read_support_format_tar, archive_read_support_format_xar,
+     archive_read_support_format_zip — functions for reading streaming ar‐
      chives
 
-1mLIBRARY0m
+LIBRARY
      Streaming Archive Library (libarchive, -larchive)
 
-1mSYNOPSIS0m
-     1m#include <archive.h>0m
+SYNOPSIS
+     #include <archive.h>
 
-     4mint0m
-     1marchive_read_support_format_7zip22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_support_format_7zip(struct archive *);
 
-     4mint0m
-     1marchive_read_support_format_all22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_support_format_all(struct archive *);
 
-     4mint0m
-     1marchive_read_support_format_ar22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_support_format_ar(struct archive *);
 
-     4mint0m
-     1marchive_read_support_format_by_code22m(4mstruct24m 4marchive24m 4m*24m, 4mint24m);
+     int
+     archive_read_support_format_by_code(struct archive *, int);
 
-     4mint0m
-     1marchive_read_support_format_cab22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_support_format_cab(struct archive *);
 
-     4mint0m
-     1marchive_read_support_format_cpio22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_support_format_cpio(struct archive *);
 
-     4mint0m
-     1marchive_read_support_format_empty22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_support_format_empty(struct archive *);
 
-     4mint0m
-     1marchive_read_support_format_iso966022m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_support_format_iso9660(struct archive *);
 
-     4mint0m
-     1marchive_read_support_format_lha22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_support_format_lha(struct archive *);
 
-     4mint0m
-     1marchive_read_support_format_mtree22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_support_format_mtree(struct archive *);
 
-     4mint0m
-     1marchive_read_support_format_rar22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_support_format_rar(struct archive *);
 
-     4mint0m
-     1marchive_read_support_format_raw22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_support_format_raw(struct archive *);
 
-     4mint0m
-     1marchive_read_support_format_tar22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_support_format_tar(struct archive *);
 
-     4mint0m
-     1marchive_read_support_format_xar22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_support_format_xar(struct archive *);
 
-     4mint0m
-     1marchive_read_support_format_zip22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_support_format_zip(struct archive *);
 
-1mDESCRIPTION0m
-     1marchive_read_support_format_7zip22m(), 1marchive_read_support_format_ar22m(),
-	     1marchive_read_support_format_cab22m(),
-	     1marchive_read_support_format_cpio22m(),
-	     1marchive_read_support_format_iso966022m(),
-	     1marchive_read_support_format_lha22m(),
-	     1marchive_read_support_format_mtree22m(),
-	     1marchive_read_support_format_rar22m(),
-	     1marchive_read_support_format_raw22m(),
-	     1marchive_read_support_format_tar22m(),
-	     1marchive_read_support_format_xar22m(),
-	     1marchive_read_support_format_zip22m()
+DESCRIPTION
+     archive_read_support_format_7zip(), archive_read_support_format_ar(),
+	     archive_read_support_format_cab(),
+	     archive_read_support_format_cpio(),
+	     archive_read_support_format_iso9660(),
+	     archive_read_support_format_lha(),
+	     archive_read_support_format_mtree(),
+	     archive_read_support_format_rar(),
+	     archive_read_support_format_raw(),
+	     archive_read_support_format_tar(),
+	     archive_read_support_format_xar(),
+	     archive_read_support_format_zip()
 	     Enables support---including auto-detection code---for the speci‐
 	     fied archive format.  For example,
-	     1marchive_read_support_format_tar22m() enables support for a variety
+	     archive_read_support_format_tar() enables support for a variety
 	     of standard tar formats, old-style tar, ustar, pax interchange
 	     format, and many common variants.
-     1marchive_read_support_format_all22m()
+     archive_read_support_format_all()
 	     Enables support for all available formats except the “raw” format
 	     (see below).
-     1marchive_read_support_format_by_code22m()
+     archive_read_support_format_by_code()
 	     Enables a single format specified by the format code.  This can
 	     be useful when reading a single archive twice; use
-	     1marchive_format22m() after reading the first time and pass the
+	     archive_format() after reading the first time and pass the
 	     resulting code to this function to selectively enable only the
 	     necessary format support.	Note:  In statically-linked executa‐
 	     bles, this will cause your program to include support for every
 	     format.  If executable size is a concern, you may wish to avoid
 	     using this function.
-     1marchive_read_support_format_empty22m()
+     archive_read_support_format_empty()
 	     Enables support for treating empty files as empty archives.
 	     Because empty files are valid for several different formats, it
 	     is not possible to accurately determine a format for an empty
 	     file based purely on contents.  So empty files are treated by
 	     libarchive as a distinct format.
-     1marchive_read_support_format_raw22m()
+     archive_read_support_format_raw()
 	     The “raw” format handler allows libarchive to be used to read
 	     arbitrary data.  It treats any data stream as an archive with a
 	     single entry.  The pathname of this entry is “data”; all other
 	     entry fields are unset.  This is not enabled by
-	     1marchive_read_support_format_all22m() in order to avoid erroneous
+	     archive_read_support_format_all() in order to avoid erroneous
 	     handling of damaged archives.
 
-1mRETURN VALUES0m
-     These functions return 1mARCHIVE_OK 22mon success, or 1mARCHIVE_FATAL22m.
+RETURN VALUES
+     These functions return ARCHIVE_OK on success, or ARCHIVE_FATAL.
 
-1mERRORS0m
+ERRORS
      Detailed error codes and textual descriptions are available from the
-     1marchive_errno22m() and 1marchive_error_string22m() functions.
+     archive_errno() and archive_error_string() functions.
 
-1mSEE ALSO0m
+SEE ALSO
      tar(1), libarchive(3), archive_read_data(3), archive_read_filter(3),
      archive_read_set_options(3), archive_util(3), tar(5)
 
-1mBUGS0m
+BUGS
      Many traditional archiver programs treat empty files as valid empty ar‐
      chives.  For example, many implementations of tar(1) allow you to append
      entries to an empty file.	Of course, it is impossible to determine the

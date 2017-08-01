@@ -15,7 +15,7 @@ Build and write a header using the data in the provided
 '''struct archive_entry''' 
 structure. 
 See 
-[[ManPageArchiveEntry3]] 
+[[ManPagerchiventry3]] 
 for information on creating and populating 
 '''struct archive_entry''' 
 objects. 
@@ -37,8 +37,8 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveWriteSetOptions3]], 
+[[ManPageibarchive3]], 
+[[ManPagerchiveriteetptions3]], 
 [[ManPageCpio5]], 
 [[ManPageMtree5]], 
 [[ManPageTar5]] 

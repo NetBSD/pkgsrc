@@ -1,7 +1,8 @@
-.TH ARCHIVE_READ_DISK 3 "December 30, 2016" ""
+.TH ARCHIVE_READ_DISK 3 "April 3, 2017" ""
 .SH NAME
 .ad l
 \fB\%archive_read_disk_new\fP,
+\fB\%archive_read_disk_set_behavior\fP,
 \fB\%archive_read_disk_set_symlink_logical\fP,
 \fB\%archive_read_disk_set_symlink_physical\fP,
 \fB\%archive_read_disk_set_symlink_hybrid\fP,
@@ -10,10 +11,7 @@
 \fB\%archive_read_disk_uname\fP,
 \fB\%archive_read_disk_set_uname_lookup\fP,
 \fB\%archive_read_disk_set_gname_lookup\fP,
-\fB\%archive_read_disk_set_standard_lookup\fP,
-\fB\%archive_read_close\fP,
-\fB\%archive_read_finish\fP,
-\fB\%archive_read_free\fP
+\fB\%archive_read_disk_set_standard_lookup\fP
 \- functions for reading objects from disk
 .SH LIBRARY
 .ad l
@@ -25,6 +23,10 @@ Streaming Archive Library (libarchive, -larchive)
 \fIstruct archive *\fP
 .br
 \fB\%archive_read_disk_new\fP(\fI\%void\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_read_disk_set_behavior\fP(\fI\%struct\ archive\ *\fP, \fI\%int\fP);
 .br
 \fIint\fP
 .br
@@ -61,18 +63,6 @@ Streaming Archive Library (libarchive, -larchive)
 \fIint\fP
 .br
 \fB\%archive_read_disk_entry_from_file\fP(\fI\%struct\ archive\ *\fP, \fI\%struct\ archive_entry\ *\fP, \fI\%int\ fd\fP, \fI\%const\ struct\ stat\ *\fP);
-.br
-\fIint\fP
-.br
-\fB\%archive_read_close\fP(\fI\%struct\ archive\ *\fP);
-.br
-\fIint\fP
-.br
-\fB\%archive_read_finish\fP(\fI\%struct\ archive\ *\fP);
-.br
-\fIint\fP
-.br
-\fB\%archive_read_free\fP(\fI\%struct\ archive\ *\fP);
 .SH DESCRIPTION
 .ad l
 These functions provide an API for reading information about
@@ -86,6 +76,59 @@ objects.
 Allocates and initializes a
 Tn struct archive
 object suitable for reading object information from disk.
+.TP
+\fB\%archive_read_disk_set_behavior\fP()
+Configures various behavior options when reading entries from disk.
+The flags field consists of a bitwise OR of one or more of the
+following values:
+.RS 5
+.TP
+\fBARCHIVE_READDISK_HONOR_NODUMP\fP
+Skip files and directories with the nodump file attribute (file flag) set.
+By default, the nodump file atrribute is ignored.
+.TP
+\fBARCHIVE_READDISK_MAC_COPYFILE\fP
+Mac OS X specific. Read metadata (ACLs and extended attributes) with
+\fBcopyfile\fP(3).
+By default, metadata is read using
+\fBcopyfile\fP(3).
+.TP
+\fBARCHIVE_READDISK_NO_ACL\fP
+Do not read Access Control Lists.
+By default, ACLs are read from disk.
+.TP
+\fBARCHIVE_READDISK_NO_FFLAGS\fP
+Do not read file attributes (file flags).
+By default, file attributes are read from disk.
+See
+\fBchattr\fP(1)
+(Linux)
+or
+\fBchflags\fP(1)
+(FreeBSD, Mac OS X)
+for more information on file attributes.
+.TP
+\fBARCHIVE_READDISK_NO_TRAVERSE_MOUNTS\fP
+Do not traverse mount points.
+By defaut, moint points are traversed.
+.TP
+\fBARCHIVE_READDISK_NO_XATTR\fP
+Do not read extended file attributes (xattrs).
+By default, extended file attributes are read from disk.
+See
+\fBxattr\fP(7)
+(Linux,)
+\fBxattr\fP(2)
+(Mac OS X,)
+or
+\fBgetextattr\fP(8)
+(FreeBSD)
+for more information on extended file attributes.
+.TP
+\fBARCHIVE_READDISK_RESTORE_ATIME\fP
+Restore access time of traversed files.
+By default, access time of traversed files is not restored.
+.RE
 .TP
 \fB\%archive_read_disk_set_symlink_logical\fP(),
 \fB\%archive_read_disk_set_symlink_physical\fP(),
@@ -168,20 +211,6 @@ using the currently registered lookup functions above.
 This affects the file ownership fields and ACL values in the
 Tn struct archive_entry
 object.
-.TP
-\fB\%archive_read_close\fP()
-Does nothing for
-Tn archive_read_disk
-handles.
-.TP
-\fB\%archive_read_finish\fP()
-This is a deprecated synonym for
-\fB\%archive_read_free\fP().
-.TP
-\fB\%archive_read_free\fP()
-Invokes
-\fB\%archive_read_close\fP()
-if it was not invoked manually, then releases all resources.
 .RE
 More information about the
 \fIstruct\fP archive

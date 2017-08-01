@@ -6,7 +6,7 @@
 \fB\%archive_read_open_fd\fP,
 \fB\%archive_read_open_FILE\fP,
 \fB\%archive_read_open_filename\fP,
-\fB\%archive_read_open_memory\fP,
+\fB\%archive_read_open_memory\fP
 \- functions for reading streaming archives
 .SH LIBRARY
 .ad l
@@ -37,7 +37,7 @@ Streaming Archive Library (libarchive, -larchive)
 .br
 \fIint\fP
 .br
-\fB\%archive_read_open_memory\fP(\fI\%struct\ archive\ *\fP, \fI\%void\ *buff\fP, \fI\%size_t\ size\fP);
+\fB\%archive_read_open_memory\fP(\fI\%struct\ archive\ *\fP, \fI\%const\ void\ *buff\fP, \fI\%size_t\ size\fP);
 .SH DESCRIPTION
 .ad l
 .RS 5

@@ -1,16 +1,16 @@
 TAR(1)			  BSD General Commands Manual			TAR(1)
 
-1mNAME0m
-     1mtar 22m— manipulate tape archives
+NAME
+     tar — manipulate tape archives
 
-1mSYNOPSIS0m
-     1mtar 22m[4mbundled-flags24m ⟨args⟩] [⟨4mfile24m⟩ | ⟨4mpattern24m⟩ ...]
-     1mtar 22m{1m-c22m} [4moptions24m] [4mfiles24m | 4mdirectories24m]
-     1mtar 22m{1m-r 22m| 1m-u22m} 1m-f 4m22marchive-file24m [4moptions24m] [4mfiles24m | 4mdirectories24m]
-     1mtar 22m{1m-t 22m| 1m-x22m} [4moptions24m] [4mpatterns24m]
+SYNOPSIS
+     tar [bundled-flags ⟨args⟩] [⟨file⟩ | ⟨pattern⟩ ...]
+     tar {-c} [options] [files | directories]
+     tar {-r | -u} -f archive-file [options] [files | directories]
+     tar {-t | -x} [options] [patterns]
 
-1mDESCRIPTION0m
-     1mtar 22mcreates and manipulates streaming archive files.	This implementation
+DESCRIPTION
+     tar creates and manipulates streaming archive files.  This implementation
      can extract from tar, pax, cpio, zip, jar, ar, xar, rpm, 7-zip, and ISO
      9660 cdrom images and can create tar, pax, cpio, ar, zip, 7-zip, and shar
      archives.
@@ -20,24 +20,24 @@ TAR(1)			  BSD General Commands Manual			TAR(1)
      BILITY below for details.
 
      The other synopsis forms show the preferred usage.  The first option to
-     1mtar 22mis a mode indicator from the following list:
-     1m-c      22mCreate a new archive containing the specified items.	The long
-	     option form is 1m--create22m.
-     1m-r      22mLike 1m-c22m, but new entries are appended to the archive.  Note that
+     tar is a mode indicator from the following list:
+     -c      Create a new archive containing the specified items.  The long
+	     option form is --create.
+     -r      Like -c, but new entries are appended to the archive.  Note that
 	     this only works on uncompressed archives stored in regular files.
-	     The 1m-f 22moption is required.  The long option form is 1m--append22m.
-     1m-t      22mList archive contents to stdout.  The long option form is 1m--list22m.
-     1m-u      22mLike 1m-r22m, but new entries are added only if they have a modifica‐
+	     The -f option is required.  The long option form is --append.
+     -t      List archive contents to stdout.  The long option form is --list.
+     -u      Like -r, but new entries are added only if they have a modifica‐
 	     tion date newer than the corresponding entry in the archive.
 	     Note that this only works on uncompressed archives stored in reg‐
-	     ular files.  The 1m-f 22moption is required.  The long form is
-	     1m--update22m.
-     1m-x      22mExtract to disk from the archive.  If a file with the same name
+	     ular files.  The -f option is required.  The long form is
+	     --update.
+     -x      Extract to disk from the archive.	If a file with the same name
 	     appears more than once in the archive, each copy will be
 	     extracted, with later copies overwriting (replacing) earlier
-	     copies.  The long option form is 1m--extract22m.
+	     copies.  The long option form is --extract.
 
-     In 1m-c22m, 1m-r22m, or 1m-u 22mmode, each specified file or directory is added to the
+     In -c, -r, or -u mode, each specified file or directory is added to the
      archive in the order specified on the command line.  By default, the con‐
      tents of each directory are also archived.
 
@@ -46,84 +46,84 @@ TAR(1)			  BSD General Commands Manual			TAR(1)
      line indicate which items in the archive should be processed.  Patterns
      are shell-style globbing patterns as documented in tcsh(1).
 
-1mOPTIONS0m
+OPTIONS
      Unless specifically stated otherwise, options are applicable in all oper‐
      ating modes.
 
-     1m@4m22marchive0m
+     @archive
 	     (c and r modes only) The specified archive is opened and the
 	     entries in it will be appended to the current archive.  As a sim‐
 	     ple example,
-		   1mtar -c -f 4m22m-24m 4mnewfile24m 1m@4m22moriginal.tar0m
-	     writes a new archive to standard output containing a file 4mnewfile0m
-	     and all of the entries from 4moriginal.tar24m.  In contrast,
-		   1mtar -c -f 4m22m-24m 4mnewfile24m 4moriginal.tar0m
+		   tar -c -f - newfile @original.tar
+	     writes a new archive to standard output containing a file newfile
+	     and all of the entries from original.tar.	In contrast,
+		   tar -c -f - newfile original.tar
 	     creates a new archive with only two entries.  Similarly,
-		   1mtar -czf 4m22m-24m 1m--format pax @4m22m-0m
+		   tar -czf - --format pax @-
 	     reads an archive from standard input (whose format will be deter‐
 	     mined automatically) and converts it into a gzip-compressed pax-
-	     format archive on stdout.	In this way, 1mtar 22mcan be used to con‐
+	     format archive on stdout.	In this way, tar can be used to con‐
 	     vert archives from one format to another.
 
-     1m-a22m, 1m--auto-compress0m
+     -a, --auto-compress
 	     (c mode only) Use the archive suffix to decide a set of the for‐
 	     mat and the compressions.	As a simple example,
-		   1mtar -a -cf 4m22marchive.tgz24m 4msource.c24m 4msource.h0m
+		   tar -a -cf archive.tgz source.c source.h
 	     creates a new archive with restricted pax format and gzip com‐
 	     pression,
-		   1mtar -a -cf 4m22marchive.tar.bz2.uu24m 4msource.c24m 4msource.h0m
+		   tar -a -cf archive.tar.bz2.uu source.c source.h
 	     creates a new archive with restricted pax format and bzip2 com‐
 	     pression and uuencode compression,
-		   1mtar -a -cf 4m22marchive.zip24m 4msource.c24m 4msource.h0m
+		   tar -a -cf archive.zip source.c source.h
 	     creates a new archive with zip format,
-		   1mtar -a -jcf 4m22marchive.tgz24m 4msource.c24m 4msource.h0m
+		   tar -a -jcf archive.tgz source.c source.h
 	     ignores the “-j” option, and creates a new archive with
 	     restricted pax format and gzip compression,
-		   1mtar -a -jcf 4m22marchive.xxx24m 4msource.c24m 4msource.h0m
+		   tar -a -jcf archive.xxx source.c source.h
 	     if it is unknown suffix or no suffix, creates a new archive with
 	     restricted pax format and bzip2 compression.
 
-     1m--acls  22m(c, r, u, x modes only) Archive or extract POSIX.1e or NFSv4
-	     ACLs. This is the reverse of 1m--no-acls 22mand the default behavior
-	     in c, r, and u modes (except Mac OS X) or if 1mtar 22mis run in x mode
-	     as root. On Mac OS X this option translates extended ACLs to
-	     NFSv4 ACLs. To store extended ACLs the 1m--mac-metadata 22moption is
+     --acls  (c, r, u, x modes only) Archive or extract POSIX.1e or NFSv4
+	     ACLs. This is the reverse of --no-acls and the default behavior
+	     in c, r, and u modes (except on Mac OS X) or if tar is run in x
+	     mode as root. On Mac OS X this option translates extended ACLs to
+	     NFSv4 ACLs. To store extended ACLs the --mac-metadata option is
 	     preferred.
 
-     1m-B22m, 1m--read-full-blocks0m
+     -B, --read-full-blocks
 	     Ignored for compatibility with other tar(1) implementations.
 
-     1m-b 4m22mblocksize24m, 1m--block-size 4m22mblocksize0m
+     -b blocksize, --block-size blocksize
 	     Specify the block size, in 512-byte records, for tape drive I/O.
 	     As a rule, this argument is only needed when reading from or
 	     writing to tape drives, and usually not even then as the default
 	     block size of 20 records (10240 bytes) is very common.
 
-     1m-C 4m22mdirectory24m, 1m--cd 4m22mdirectory24m, 1m--directory 4m22mdirectory0m
+     -C directory, --cd directory, --directory directory
 	     In c and r mode, this changes the directory before adding the
 	     following files.  In x mode, change directories after opening the
 	     archive but before extracting entries from the archive.
 
-     1m--chroot0m
-	     (x mode only) 1mchroot22m() to the current directory after processing
-	     any 1m-C 22moptions and before extracting any files.
+     --chroot
+	     (x mode only) chroot() to the current directory after processing
+	     any -C options and before extracting any files.
 
-     1m--clear-nochange-fflags0m
+     --clear-nochange-fflags
 	     (x mode only) Before removing file system objects to replace
 	     them, clear platform-specific file flags that might prevent
 	     removal.
 
-     1m--exclude 4m22mpattern0m
+     --exclude pattern
 	     Do not process files or directories that match the specified pat‐
 	     tern.  Note that exclusions take precedence over patterns or
 	     filenames specified on the command line.
 
-     1m--fflags0m
+     --fflags
 	     (c, r, u, x modes only) Archive or extract file flags. This is
-	     the reverse of 1m--no-fflags 22mand the default behavior in c, r, and
-	     u modes or if 1mtar 22mis run in x mode as root.
+	     the reverse of --no-fflags and the default behavior in c, r, and
+	     u modes or if tar is run in x mode as root.
 
-     1m--format 4m22mformat0m
+     --format format
 	     (c, r, u mode only) Use the specified format for the created ar‐
 	     chive.  Supported formats include “cpio”, “pax”, “shar”, and
 	     “ustar”.  Other formats may also be supported; see
@@ -132,343 +132,342 @@ TAR(1)			  BSD General Commands Manual			TAR(1)
 	     chive, the format specified here must be compatible with the for‐
 	     mat of the existing archive on disk.
 
-     1m-f 4m22mfile24m, 1m--file 4m22mfile0m
+     -f file, --file file
 	     Read the archive from or write the archive to the specified file.
-	     The filename can be 4m-24m for standard input or standard output.	The
-	     default varies by system; on FreeBSD, the default is 4m/dev/sa024m; on
-	     Linux, the default is 4m/dev/st024m.
+	     The filename can be - for standard input or standard output.  The
+	     default varies by system; on FreeBSD, the default is /dev/sa0; on
+	     Linux, the default is /dev/st0.
 
-     1m--gid 4m22mid0m
+     --gid id
 	     Use the provided group id number.	On extract, this overrides the
 	     group id in the archive; the group name in the archive will be
 	     ignored.  On create, this overrides the group id read from disk;
-	     if 1m--gname 22mis not also specified, the group name will be set to
+	     if --gname is not also specified, the group name will be set to
 	     match the group id.
 
-     1m--gname 4m22mname0m
+     --gname name
 	     Use the provided group name.  On extract, this overrides the
 	     group name in the archive; if the provided group name does not
 	     exist on the system, the group id (from the archive or from the
-	     1m--gid 22moption) will be used instead.  On create, this sets the
+	     --gid option) will be used instead.  On create, this sets the
 	     group name that will be stored in the archive; the name will not
 	     be verified against the system group database.
 
-     1m-H      22m(c and r modes only) Symbolic links named on the command line
+     -H      (c and r modes only) Symbolic links named on the command line
 	     will be followed; the target of the link will be archived, not
 	     the link itself.
 
-     1m-h      22m(c and r modes only) Synonym for 1m-L22m.
+     -h      (c and r modes only) Synonym for -L.
 
-     1m-I      22mSynonym for 1m-T22m.
+     -I      Synonym for -T.
 
-     1m--help  22mShow usage.
+     --help  Show usage.
 
-     1m--hfsCompression0m
+     --hfsCompression
 	     (x mode only) Mac OS X specific (v10.6 or later). Compress
 	     extracted regular files with HFS+ compression.
 
-     1m--ignore-zeros0m
-	     An alias of 1m--options read_concatenated_archives 22mfor compatibil‐
+     --ignore-zeros
+	     An alias of --options read_concatenated_archives for compatibil‐
 	     ity with GNU tar.
 
-     1m--include 4m22mpattern0m
+     --include pattern
 	     Process only files or directories that match the specified pat‐
-	     tern.  Note that exclusions specified with 1m--exclude 22mtake prece‐
+	     tern.  Note that exclusions specified with --exclude take prece‐
 	     dence over inclusions.  If no inclusions are explicitly speci‐
-	     fied, all entries are processed by default.  The 1m--include 22moption
+	     fied, all entries are processed by default.  The --include option
 	     is especially useful when filtering archives.  For example, the
 	     command
-		   1mtar -c -f 4m22mnew.tar24m 1m--include='*foo*' @4m22mold.tgz0m
-	     creates a new archive 4mnew.tar24m containing only the entries from
-	     4mold.tgz24m containing the string ‘foo’.
+		   tar -c -f new.tar --include='*foo*' @old.tgz
+	     creates a new archive new.tar containing only the entries from
+	     old.tgz containing the string ‘foo’.
 
-     1m-J22m, 1m--xz0m
+     -J, --xz
 	     (c mode only) Compress the resulting archive with xz(1).  In
 	     extract or list modes, this option is ignored.  Note that, unlike
-	     other 1mtar 22mimplementations, this implementation recognizes XZ com‐
+	     other tar implementations, this implementation recognizes XZ com‐
 	     pression automatically when reading archives.
 
-     1m-j22m, 1m--bzip22m, 1m--bzip222m, 1m--bunzip20m
+     -j, --bzip, --bzip2, --bunzip2
 	     (c mode only) Compress the resulting archive with bzip2(1).  In
 	     extract or list modes, this option is ignored.  Note that, unlike
-	     other 1mtar 22mimplementations, this implementation recognizes bzip2
+	     other tar implementations, this implementation recognizes bzip2
 	     compression automatically when reading archives.
 
-     1m-k22m, 1m--keep-old-files0m
+     -k, --keep-old-files
 	     (x mode only) Do not overwrite existing files.  In particular, if
 	     a file appears more than once in an archive, later copies will
 	     not overwrite earlier copies.
 
-     1m--keep-newer-files0m
+     --keep-newer-files
 	     (x mode only) Do not overwrite existing files that are newer than
 	     the versions appearing in the archive being extracted.
 
-     1m-L22m, 1m--dereference0m
+     -L, --dereference
 	     (c and r modes only) All symbolic links will be followed.	Nor‐
 	     mally, symbolic links are archived as such.  With this option,
 	     the target of the link will be archived instead.
 
-     1m-l22m, 1m--check-links0m
+     -l, --check-links
 	     (c and r modes only) Issue a warning message unless all links to
 	     each file are archived.
 
-     1m--lrzip0m
+     --lrzip
 	     (c mode only) Compress the resulting archive with lrzip(1).  In
 	     extract or list modes, this option is ignored.
 
-     1m--lz4   22m(c mode only) Compress the archive with lz4-compatible compres‐
+     --lz4   (c mode only) Compress the archive with lz4-compatible compres‐
 	     sion before writing it.  In input mode, this option is ignored;
 	     lz4 compression is recognized automatically on input.
 
-     1m--lzma  22m(c mode only) Compress the resulting archive with the original
+     --lzma  (c mode only) Compress the resulting archive with the original
 	     LZMA algorithm.  Use of this option is discouraged and new ar‐
-	     chives should be created with 1m--xz 22minstead.  Note that, unlike
-	     other 1mtar 22mimplementations, this implementation recognizes LZMA
+	     chives should be created with --xz instead.  Note that, unlike
+	     other tar implementations, this implementation recognizes LZMA
 	     compression automatically when reading archives.
 
-     1m--lzop  22m(c mode only) Compress the resulting archive with lzop(1).  In
+     --lzop  (c mode only) Compress the resulting archive with lzop(1).  In
 	     extract or list modes, this option is ignored.
 
-     1m-m22m, 1m--modification-time0m
+     -m, --modification-time
 	     (x mode only) Do not extract modification time.  By default, the
 	     modification time is set to the time stored in the archive.
 
-     1m--mac-metadata0m
+     --mac-metadata
 	     (c, r, u and x mode only) Mac OS X specific. Archive or extract
 	     extended ACLs and extended attributes using copyfile(3) in Apple‐
-	     Double format. This is the reverse of 1m--no-mac-metadata22m.  and the
-	     default behavior in c, r, and u modes or if 1mtar 22mis run in x mode
+	     Double format. This is the reverse of --no-mac-metadata.  and the
+	     default behavior in c, r, and u modes or if tar is run in x mode
 	     as root.
 
-     1m-n22m, 1m--norecurse22m, 1m--no-recursion0m
+     -n, --norecurse, --no-recursion
 	     (c, r, u modes only) Do not recursively archive the contents of
 	     directories.
 
-     1m--newer 4m22mdate0m
+     --newer date
 	     (c, r, u modes only) Only include files and directories newer
 	     than the specified date.  This compares ctime entries.
 
-     1m--newer-mtime 4m22mdate0m
-	     (c, r, u modes only) Like 1m--newer22m, except it compares mtime
+     --newer-mtime date
+	     (c, r, u modes only) Like --newer, except it compares mtime
 	     entries instead of ctime entries.
 
-     1m--newer-than 4m22mfile0m
+     --newer-than file
 	     (c, r, u modes only) Only include files and directories newer
 	     than the specified file.  This compares ctime entries.
 
-     1m--newer-mtime-than 4m22mfile0m
-	     (c, r, u modes only) Like 1m--newer-than22m, except it compares mtime
+     --newer-mtime-than file
+	     (c, r, u modes only) Like --newer-than, except it compares mtime
 	     entries instead of ctime entries.
 
-     1m--nodump0m
+     --nodump
 	     (c and r modes only) Honor the nodump file flag by skipping this
 	     file.
 
-     1m--nopreserveHFSCompression0m
-	     (x mode only) Mac OS X specific(v10.6 or later). Do not compress
+     --nopreserveHFSCompression
+	     (x mode only) Mac OS X specific (v10.6 or later). Do not compress
 	     extracted regular files which were compressed with HFS+ compres‐
 	     sion before archived.  By default, compress the regular files
 	     again with HFS+ compression.
 
-     1m--null  22m(use with 1m-I 22mor 1m-T22m) Filenames or patterns are separated by null
+     --null  (use with -I or -T) Filenames or patterns are separated by null
 	     characters, not by newlines.  This is often used to read file‐
-	     names output by the 1m-print0 22moption to find(1).
+	     names output by the -print0 option to find(1).
 
-     1m--no-acls0m
+     --no-acls
 	     (c, r, u, x modes only) Do not archive or extract POSIX.1e or
-	     NFSv4 ACLs. This is the reverse of 1m--acls 22mand the default behav‐
-	     ior if 1mtar 22mis run as non-root in x mode (on Mac OS X also in c, r
-	     and u modes).
+	     NFSv4 ACLs. This is the reverse of --acls and the default behav‐
+	     ior if tar is run as non-root in x mode (on Mac OS X as any user
+	     in c, r, u and x modes).
 
-     1m--no-fflags0m
+     --no-fflags
 	     (c, r, u, x modes only) Do not archive or extract file flags.
-	     This is the reverse of 1m--fflags 22mand the default behavior if 1mtar0m
+	     This is the reverse of --fflags and the default behavior if tar
 	     is run as non-root in x mode.
 
-     1m--no-mac-metadata0m
+     --no-mac-metadata
 	     (x mode only) Mac OS X specific. Do not archive or extract ACLs
 	     and extended attributes using copyfile(3) in AppleDouble format.
-	     This is the reverse of 1m--mac-metadata22m.  and the default behavior
-	     if 1mtar 22mis run as non-root in x mode.
+	     This is the reverse of --mac-metadata.  and the default behavior
+	     if tar is run as non-root in x mode.
 
-     1m-n22m, 1m--norecurse22m, 1m--no-recursion0m
+     -n, --norecurse, --no-recursion
 
-     1m--no-same-owner0m
+     --no-same-owner
 	     (x mode only) Do not extract owner and group IDs.	This is the
-	     reverse of 1m--same-owner 22mand the default behavior if 1mtar 22mis run as
+	     reverse of --same-owner and the default behavior if tar is run as
 	     non-root.
 
-     1m--no-same-permissions0m
+     --no-same-permissions
 	     (x mode only) Do not extract full permissions (SGID, SUID, sticky
 	     bit, ACLs, extended attributes or extended file flags).  This is
-	     the reverse of 1m-p 22mand the default behavior if 1mtar 22mis run as non-
-	     root and can be overridden by also specifying 1m--acls22m, 1m--fflags22m,
-	     1m--mac-metadata, --same-owner22m, 1m--same-permissions 22mand 1m--xattrs22m.
+	     the reverse of -p and the default behavior if tar is run as non-
+	     root.
 
-     1m--no-xattrs0m
+     --no-xattrs
 	     (c, r, u, x modes only) Do not archive or extract extended
-	     attributes. This is the reverse of 1m--xattrs 22mand the default
-	     behavior if 1mtar 22mis run as non-root in x mode.
+	     attributes. This is the reverse of --xattrs and the default
+	     behavior if tar is run as non-root in x mode.
 
-     1m--numeric-owner0m
-	     This is equivalent to 1m--uname 22m"" 1m--gname 22m"".  On extract, it
+     --numeric-owner
+	     This is equivalent to --uname "" --gname "".  On extract, it
 	     causes user and group names in the archive to be ignored in favor
 	     of the numeric user and group ids.  On create, it causes user and
 	     group names to not be stored in the archive.
 
-     1m-O22m, 1m--to-stdout0m
+     -O, --to-stdout
 	     (x, t modes only) In extract (-x) mode, files will be written to
 	     standard out rather than being extracted to disk.	In list (-t)
 	     mode, the file listing will be written to stderr rather than the
 	     usual stdout.
 
-     1m-o      22m(x mode) Use the user and group of the user running the program
+     -o      (x mode) Use the user and group of the user running the program
 	     rather than those specified in the archive.  Note that this has
-	     no significance unless 1m-p 22mis specified, and the program is being
+	     no significance unless -p is specified, and the program is being
 	     run by the root user.  In this case, the file modes and flags
 	     from the archive will be restored, but ACLs or owner information
 	     in the archive will be discarded.
 
-     1m-o      22m(c, r, u mode) A synonym for 1m--format 4m22mustar0m
+     -o      (c, r, u mode) A synonym for --format ustar
 
-     1m--older 4m22mdate0m
+     --older date
 	     (c, r, u modes only) Only include files and directories older
 	     than the specified date.  This compares ctime entries.
 
-     1m--older-mtime 4m22mdate0m
-	     (c, r, u modes only) Like 1m--older22m, except it compares mtime
+     --older-mtime date
+	     (c, r, u modes only) Like --older, except it compares mtime
 	     entries instead of ctime entries.
 
-     1m--older-than 4m22mfile0m
+     --older-than file
 	     (c, r, u modes only) Only include files and directories older
 	     than the specified file.  This compares ctime entries.
 
-     1m--older-mtime-than 4m22mfile0m
-	     (c, r, u modes only) Like 1m--older-than22m, except it compares mtime
+     --older-mtime-than file
+	     (c, r, u modes only) Like --older-than, except it compares mtime
 	     entries instead of ctime entries.
 
-     1m--one-file-system0m
+     --one-file-system
 	     (c, r, and u modes) Do not cross mount points.
 
-     1m--options 4m22moptions0m
+     --options options
 	     Select optional behaviors for particular modules.	The argument
 	     is a text string containing comma-separated keywords and values.
 	     These are passed to the modules that handle particular formats to
 	     control how those formats will behave.  Each option has one of
 	     the following forms:
-	     4mkey=value0m
+	     key=value
 		     The key will be set to the specified value in every mod‐
 		     ule that supports it.  Modules that do not support this
 		     key will ignore it.
-	     4mkey24m	  The key will be enabled in every module that supports it.
-		     This is equivalent to 4mkey24m1m=122m.
-	     4m!key24m	  The key will be disabled in every module that supports
+	     key     The key will be enabled in every module that supports it.
+		     This is equivalent to key=1.
+	     !key    The key will be disabled in every module that supports
 		     it.
-	     4mmodule:key=value24m, 4mmodule:key24m, 4mmodule:!key0m
+	     module:key=value, module:key, module:!key
 		     As above, but the corresponding key and value will be
-		     provided only to modules whose name matches 4mmodule24m.
+		     provided only to modules whose name matches module.
 	     The currently supported modules and keys are:
-	     1miso9660:joliet0m
+	     iso9660:joliet
 		     Support Joliet extensions.  This is enabled by default,
-		     use 1m!joliet 22mor 1miso9660:!joliet 22mto disable.
-	     1miso9660:rockridge0m
+		     use !joliet or iso9660:!joliet to disable.
+	     iso9660:rockridge
 		     Support Rock Ridge extensions.  This is enabled by
-		     default, use 1m!rockridge 22mor 1miso9660:!rockridge 22mto disable.
-	     1mgzip:compression-level0m
+		     default, use !rockridge or iso9660:!rockridge to disable.
+	     gzip:compression-level
 		     A decimal integer from 1 to 9 specifying the gzip com‐
 		     pression level.
-	     1mgzip:timestamp0m
+	     gzip:timestamp
 		     Store timestamp. This is enabled by default, use
-		     1m!timestamp 22mor 1mgzip:!timestamp 22mto disable.
-	     1mlrzip:compression22m=4mtype0m
-		     Use 4mtype24m as compression method.  Supported values are
+		     !timestamp or gzip:!timestamp to disable.
+	     lrzip:compression=type
+		     Use type as compression method.  Supported values are
 		     bzip2, gzip, lzo (ultra fast), and zpaq (best, extremely
 		     slow).
-	     1mlrzip:compression-level0m
+	     lrzip:compression-level
 		     A decimal integer from 1 to 9 specifying the lrzip com‐
 		     pression level.
-	     1mlz4:compression-level0m
+	     lz4:compression-level
 		     A decimal integer from 1 to 9 specifying the lzop com‐
 		     pression level.
-	     1mlz4:stream-checksum0m
+	     lz4:stream-checksum
 		     Enable stream checksum. This is by default, use
-		     1mlz4:!stream-checksum 22mto disable.
-	     1mlz4:block-checksum0m
+		     lz4:!stream-checksum to disable.
+	     lz4:block-checksum
 		     Enable block checksum (Disabled by default).
-	     1mlz4:block-size0m
+	     lz4:block-size
 		     A decimal integer from 4 to 7 specifying the lz4 compres‐
 		     sion block size (7 is set by default).
-	     1mlz4:block-dependence0m
+	     lz4:block-dependence
 		     Use the previous block of the block being compressed for
 		     a compression dictionary to improve compression ratio.
-	     1mlzop:compression-level0m
+	     lzop:compression-level
 		     A decimal integer from 1 to 9 specifying the lzop com‐
 		     pression level.
-	     1mxz:compression-level0m
+	     xz:compression-level
 		     A decimal integer from 0 to 9 specifying the xz compres‐
 		     sion level.
-	     1mmtree:4m22mkeyword0m
+	     mtree:keyword
 		     The mtree writer module allows you to specify which mtree
 		     keywords will be included in the output.  Supported key‐
-		     words include: 1mcksum22m, 1mdevice22m, 1mflags22m, 1mgid22m, 1mgname22m, 1mindent22m,
-		     1mlink22m, 1mmd522m, 1mmode22m, 1mnlink22m, 1mrmd16022m, 1msha122m, 1msha25622m, 1msha38422m,
-		     1msha51222m, 1msize22m, 1mtime22m, 1muid22m, 1muname22m.  The default is equiva‐
+		     words include: cksum, device, flags, gid, gname, indent,
+		     link, md5, mode, nlink, rmd160, sha1, sha256, sha384,
+		     sha512, size, time, uid, uname.  The default is equiva‐
 		     lent to: “device, flags, gid, gname, link, mode, nlink,
 		     size, time, type, uid, uname”.
-	     1mmtree:all0m
+	     mtree:all
 		     Enables all of the above keywords.  You can also use
-		     1mmtree:!all 22mto disable all keywords.
-	     1mmtree:use-set0m
-		     Enable generation of 1m/set 22mlines in the output.
-	     1mmtree:indent0m
+		     mtree:!all to disable all keywords.
+	     mtree:use-set
+		     Enable generation of /set lines in the output.
+	     mtree:indent
 		     Produce human-readable output by indenting options and
 		     splitting lines to fit into 80 columns.
-	     1mzip:compression22m=4mtype0m
-		     Use 4mtype24m as compression method.  Supported values are
+	     zip:compression=type
+		     Use type as compression method.  Supported values are
 		     store (uncompressed) and deflate (gzip algorithm).
-	     1mzip:encryption0m
+	     zip:encryption
 		     Enable encryption using traditional zip encryption.
-	     1mzip:encryption22m=4mtype0m
-		     Use 4mtype24m as encryption type.	Supported values are
+	     zip:encryption=type
+		     Use type as encryption type.  Supported values are
 		     zipcrypt (traditional zip encryption), aes128 (WinZip
 		     AES-128 encryption) and aes256 (WinZip AES-256 encryp‐
 		     tion).
-	     1mread_concatenated_archives0m
+	     read_concatenated_archives
 		     Ignore zeroed blocks in the archive, which occurs when
 		     multiple tar archives have been concatenated together.
 		     Without this option, only the contents of the first con‐
 		     catenated archive would be read.  This option is compara‐
-		     ble to the 1m-i22m, 1m--ignore-zeros 22moption of GNU tar.
+		     ble to the -i, --ignore-zeros option of GNU tar.
 	     If a provided option is not supported by any module, that is a
 	     fatal error.
 
-     1m-P22m, 1m--absolute-paths0m
+     -P, --absolute-paths
 	     Preserve pathnames.  By default, absolute pathnames (those that
 	     begin with a / character) have the leading slash removed both
-	     when creating archives and extracting from them.  Also, 1mtar 22mwill
-	     refuse to extract archive entries whose pathnames contain 4m..24m or
+	     when creating archives and extracting from them.  Also, tar will
+	     refuse to extract archive entries whose pathnames contain .. or
 	     whose target directory would be altered by a symlink.  This
 	     option suppresses these behaviors.
 
-     1m-p22m, 1m--insecure22m, 1m--preserve-permissions0m
+     -p, --insecure, --preserve-permissions
 	     (x mode only) Preserve file permissions.  Attempt to restore the
 	     full permissions, including owner, file modes, ACLs, extended
-	     atributes and extended file flags, if available, for each item
-	     extracted from the archive. This is the default, if 1mtar 22mis being
-	     run by root and can be overridden by also specifying 1m--no-acls22m,
-	     1m--no-fflags22m, 1m--no-mac-metadata, --no-same-owner22m,
-	     1m--no-same-permissions 22mand 1m--no-xattrs22m.
+	     attributes and extended file flags, if available, for each item
+	     extracted from the archive. This is te reverse of
+	     --no-same-permissions and the default if tar is being run by root
+	     and can be partially overridden by also specifying --no-acls,
+	     --no-fflags, --no-mac-metadata or --no-xattrs.
 
-     1m--passphrase 4m22mpassphrase0m
-	     The 4mpassphrase24m is used to extract or create an encrypted archive.
+     --passphrase passphrase
+	     The passphrase is used to extract or create an encrypted archive.
 	     Currently, zip is the only supported format that supports encryp‐
 	     tion.  You shouldn't use this option unless you realize how inse‐
 	     cure use of this option is.
 
-     1m--posix0m
-	     (c, r, u mode only) Synonym for 1m--format 4m22mpax0m
+     --posix
+	     (c, r, u mode only) Synonym for --format pax
 
-     1m-q22m, 1m--fast-read0m
+     -q, --fast-read
 	     (x and t mode only) Extract or list only the first archive entry
 	     that matches each pattern or filename operand.  Exit as soon as
 	     each specified pattern or filename has been matched.  By default,
@@ -477,17 +476,17 @@ TAR(1)			  BSD General Commands Manual			TAR(1)
 	     entries overwrite earlier entries.  This option is provided as a
 	     performance optimization.
 
-     1m-S      22m(x mode only) Extract files as sparse files.	For every block on
+     -S      (x mode only) Extract files as sparse files.  For every block on
 	     disk, check first if it contains only NULL bytes and seek over it
 	     otherwise.  This works similar to the conv=sparse option of dd.
 
-     1m-s 4m22mpattern0m
-	     Modify file or archive member names according to 4mpattern24m.  The
-	     pattern has the format 4m/old/new/24m[ghHprRsS] where 4mold24m is a basic
-	     regular expression, 4mnew24m is the replacement string of the matched
+     -s pattern
+	     Modify file or archive member names according to pattern.	The
+	     pattern has the format /old/new/[ghHprRsS] where old is a basic
+	     regular expression, new is the replacement string of the matched
 	     part, and the optional trailing letters modify how the replace‐
-	     ment is handled.  If 4mold24m is not matched, the pattern is skipped.
-	     Within 4mnew24m, ~ is substituted with the match, \1 to \9 with the
+	     ment is handled.  If old is not matched, the pattern is skipped.
+	     Within new, ~ is substituted with the match, \1 to \9 with the
 	     content of the corresponding captured group.  The optional trail‐
 	     ing g specifies that matching should continue after the matched
 	     part and stop on the first unmatched pattern.  The optional
@@ -499,148 +498,148 @@ TAR(1)			  BSD General Commands Manual			TAR(1)
 	     regular filenames, or symlink targets, respectively.  Optional
 	     trailing h, r, or s characters enable substitutions for hardlink
 	     targets, regular filenames, or symlink targets, respectively.
-	     The default is 4mhrs24m which applies substitutions to all names.	In
+	     The default is hrs which applies substitutions to all names.  In
 	     particular, it is never necessary to specify h, r, or s.
 
-     1m--same-owner0m
+     --same-owner
 	     (x mode only) Extract owner and group IDs.  This is the reverse
-	     of 1m--no-same-owner 22mand the default behavior if 1mtar 22mis run as
+	     of --no-same-owner and the default behavior if tar is run as
 	     root.
 
-     1m--strip-components 4m22mcount0m
+     --strip-components count
 	     Remove the specified number of leading path elements.  Pathnames
 	     with fewer elements will be silently skipped.  Note that the
 	     pathname is edited after checking inclusion/exclusion patterns
 	     but before security checks.
 
-     1m-T 4m22mfilename24m, 1m--files-from 4m22mfilename0m
-	     In x or t mode, 1mtar 22mwill read the list of names to be extracted
-	     from 4mfilename24m.  In c mode, 1mtar 22mwill read names to be archived
-	     from 4mfilename24m.  The special name “-C” on a line by itself will
+     -T filename, --files-from filename
+	     In x or t mode, tar will read the list of names to be extracted
+	     from filename.  In c mode, tar will read names to be archived
+	     from filename.  The special name “-C” on a line by itself will
 	     cause the current directory to be changed to the directory speci‐
 	     fied on the following line.  Names are terminated by newlines
-	     unless 1m--null 22mis specified.  Note that 1m--null 22malso disables the
+	     unless --null is specified.  Note that --null also disables the
 	     special handling of lines containing “-C”.  Note:	If you are
 	     generating lists of files using find(1), you probably want to use
-	     1m-n 22mas well.
+	     -n as well.
 
-     1m--totals0m
+     --totals
 	     (c, r, u modes only) After archiving all files, print a summary
 	     to stderr.
 
-     1m-U22m, 1m--unlink22m, 1m--unlink-first0m
+     -U, --unlink, --unlink-first
 	     (x mode only) Unlink files before creating them.  This can be a
 	     minor performance optimization if most files already exist, but
 	     can make things slower if most files do not already exist.  This
-	     flag also causes 1mtar 22mto remove intervening directory symlinks
+	     flag also causes tar to remove intervening directory symlinks
 	     instead of reporting an error.  See the SECURITY section below
 	     for more details.
 
-     1m--uid 4m22mid0m
+     --uid id
 	     Use the provided user id number and ignore the user name from the
-	     archive.  On create, if 1m--uname 22mis not also specified, the user
+	     archive.  On create, if --uname is not also specified, the user
 	     name will be set to match the user id.
 
-     1m--uname 4m22mname0m
+     --uname name
 	     Use the provided user name.  On extract, this overrides the user
 	     name in the archive; if the provided user name does not exist on
 	     the system, it will be ignored and the user id (from the archive
-	     or from the 1m--uid 22moption) will be used instead.  On create, this
+	     or from the --uid option) will be used instead.  On create, this
 	     sets the user name that will be stored in the archive; the name
 	     is not verified against the system user database.
 
-     1m--use-compress-program 4m22mprogram0m
+     --use-compress-program program
 	     Pipe the input (in x or t mode) or the output (in c mode) through
-	     4mprogram24m instead of using the builtin compression support.
+	     program instead of using the builtin compression support.
 
-     1m-v22m, 1m--verbose0m
-	     Produce verbose output.  In create and extract modes, 1mtar 22mwill
+     -v, --verbose
+	     Produce verbose output.  In create and extract modes, tar will
 	     list each file name as it is read from or written to the archive.
-	     In list mode, 1mtar 22mwill produce output similar to that of ls(1).
-	     An additional 1m-v 22moption will also provide ls-like details in cre‐
+	     In list mode, tar will produce output similar to that of ls(1).
+	     An additional -v option will also provide ls-like details in cre‐
 	     ate and extract mode.
 
-     1m--version0m
-	     Print version of 1mtar 22mand 1mlibarchive22m, and exit.
+     --version
+	     Print version of tar and libarchive, and exit.
 
-     1m-w22m, 1m--confirmation22m, 1m--interactive0m
+     -w, --confirmation, --interactive
 	     Ask for confirmation for every action.
 
-     1m-X 4m22mfilename24m, 1m--exclude-from 4m22mfilename0m
+     -X filename, --exclude-from filename
 	     Read a list of exclusion patterns from the specified file.  See
-	     1m--exclude 22mfor more information about the handling of exclusions.
+	     --exclude for more information about the handling of exclusions.
 
-     1m--xattrs0m
+     --xattrs
 	     (c, r, u, x modes only) Archive or extract extended attributes.
-	     This is the reverse of 1m--no-xattrs 22mand the default behavior in c,
-	     r, and u modes or if 1mtar 22mis run in x mode as root.
+	     This is the reverse of --no-xattrs and the default behavior in c,
+	     r, and u modes or if tar is run in x mode as root.
 
-     1m-y      22m(c mode only) Compress the resulting archive with bzip2(1).  In
+     -y      (c mode only) Compress the resulting archive with bzip2(1).  In
 	     extract or list modes, this option is ignored.  Note that, unlike
-	     other 1mtar 22mimplementations, this implementation recognizes bzip2
+	     other tar implementations, this implementation recognizes bzip2
 	     compression automatically when reading archives.
 
-     1m-Z22m, 1m--compress22m, 1m--uncompress0m
+     -Z, --compress, --uncompress
 	     (c mode only) Compress the resulting archive with compress(1).
 	     In extract or list modes, this option is ignored.	Note that,
-	     unlike other 1mtar 22mimplementations, this implementation recognizes
+	     unlike other tar implementations, this implementation recognizes
 	     compress compression automatically when reading archives.
 
-     1m-z22m, 1m--gunzip22m, 1m--gzip0m
+     -z, --gunzip, --gzip
 	     (c mode only) Compress the resulting archive with gzip(1).  In
 	     extract or list modes, this option is ignored.  Note that, unlike
-	     other 1mtar 22mimplementations, this implementation recognizes gzip
+	     other tar implementations, this implementation recognizes gzip
 	     compression automatically when reading archives.
 
-1mENVIRONMENT0m
-     The following environment variables affect the execution of 1mtar22m:
+ENVIRONMENT
+     The following environment variables affect the execution of tar:
 
      TAR_READER_OPTIONS
 		The default options for format readers and compression read‐
-		ers.  The 1m--options 22moption overrides this.
+		ers.  The --options option overrides this.
 
      TAR_WRITER_OPTIONS
 		The default options for format writers and compression writ‐
-		ers.  The 1m--options 22moption overrides this.
+		ers.  The --options option overrides this.
 
      LANG	The locale to use.  See environ(7) for more information.
 
-     TAPE	The default device.  The 1m-f 22moption overrides this.  Please see
-		the description of the 1m-f 22moption above for more details.
+     TAPE	The default device.  The -f option overrides this.  Please see
+		the description of the -f option above for more details.
 
      TZ 	The timezone to use when displaying dates.  See environ(7) for
 		more information.
 
-1mEXIT STATUS0m
-     The 1mtar 22mutility exits 0 on success, and >0 if an error occurs.
+EXIT STATUS
+     The tar utility exits 0 on success, and >0 if an error occurs.
 
-1mEXAMPLES0m
-     The following creates a new archive called 4mfile.tar.gz24m that contains two
-     files 4msource.c24m and 4msource.h24m:
-	   1mtar -czf 4m22mfile.tar.gz24m 4msource.c24m 4msource.h0m
+EXAMPLES
+     The following creates a new archive called file.tar.gz that contains two
+     files source.c and source.h:
+	   tar -czf file.tar.gz source.c source.h
 
      To view a detailed table of contents for this archive:
-	   1mtar -tvf 4m22mfile.tar.gz0m
+	   tar -tvf file.tar.gz
 
      To extract all entries from the archive on the default tape drive:
-	   1mtar -x0m
+	   tar -x
 
      To examine the contents of an ISO 9660 cdrom image:
-	   1mtar -tf 4m22mimage.iso0m
+	   tar -tf image.iso
 
-     To move file hierarchies, invoke 1mtar 22mas
-	   1mtar -cf 4m22m-24m 1m-C 4m22msrcdir24m 4m.24m | 1mtar -xpf 4m22m-24m 1m-C 4m22mdestdir0m
+     To move file hierarchies, invoke tar as
+	   tar -cf - -C srcdir . | tar -xpf - -C destdir
      or more traditionally
-	   cd srcdir ; 1mtar -cf 4m22m-24m 4m.24m | (4mcd24m 4mdestdir24m 4m;24m 1mtar -xpf 4m22m-24m)
+	   cd srcdir ; tar -cf - . | (cd destdir ; tar -xpf -)
 
      In create mode, the list of files and directories to be archived can also
-     include directory change instructions of the form 1m-C4m22mfoo/baz24m and archive
-     inclusions of the form 1m@4m22marchive-file24m.  For example, the command line
-	   1mtar -c -f 4m22mnew.tar24m 4mfoo124m 1m@4m22mold.tgz24m 1m-C4m22m/tmp24m 4mfoo20m
-     will create a new archive 4mnew.tar24m.  1mtar 22mwill read the file 4mfoo124m from the
+     include directory change instructions of the form -Cfoo/baz and archive
+     inclusions of the form @archive-file.  For example, the command line
+	   tar -c -f new.tar foo1 @old.tgz -C/tmp foo2
+     will create a new archive new.tar.  tar will read the file foo1 from the
      current directory and add it to the output archive.  It will then read
-     each entry from 4mold.tgz24m and add those entries to the output archive.
-     Finally, it will switch to the 4m/tmp24m directory and add 4mfoo224m to the output
+     each entry from old.tgz and add those entries to the output archive.
+     Finally, it will switch to the /tmp directory and add foo2 to the output
      archive.
 
      An input file in mtree(5) format can be used to create an output archive
@@ -653,85 +652,85 @@ TAR(1)			  BSD General Commands Manual			TAR(1)
 	   usr/bin/ls uid=0 gid=0 mode=0755 type=file content=myls
 	   $ tar -cvf output.tar @input.mtree
 
-     The 1m--newer 22mand 1m--newer-mtime 22mswitches accept a variety of common date
+     The --newer and --newer-mtime switches accept a variety of common date
      and time specifications, including “12 Mar 2005 7:14:29pm”, “2005-03-12
      19:14”, “5 minutes ago”, and “19:14 PST May 1”.
 
-     The 1m--options 22margument can be used to control various details of archive
+     The --options argument can be used to control various details of archive
      generation or reading.  For example, you can generate mtree output which
-     only contains 1mtype22m, 1mtime22m, and 1muid 22mkeywords:
-	   1mtar -cf 4m22mfile.tar24m 1m--format=mtree --options='!all,type,time,uid' 4m22mdir0m
+     only contains type, time, and uid keywords:
+	   tar -cf file.tar --format=mtree --options='!all,type,time,uid' dir
      or you can set the compression level used by gzip or xz compression:
-	   1mtar -czf 4m22mfile.tar24m 1m--options='compression-level=9'22m.
-     For more details, see the explanation of the 1marchive_read_set_options22m()
-     and 1marchive_write_set_options22m() API calls that are described in
+	   tar -czf file.tar --options='compression-level=9'.
+     For more details, see the explanation of the archive_read_set_options()
+     and archive_write_set_options() API calls that are described in
      archive_read(3) and archive_write(3).
 
-1mCOMPATIBILITY0m
+COMPATIBILITY
      The bundled-arguments format is supported for compatibility with historic
      implementations.  It consists of an initial word (with no leading - char‐
      acter) in which each character indicates an option.  Arguments follow as
      separate words.  The order of the arguments must match the order of the
      corresponding characters in the bundled command word.  For example,
-	   1mtar tbf 32 4m22mfile.tar0m
-     specifies three flags 1mt22m, 1mb22m, and 1mf22m.	The 1mb 22mand 1mf 22mflags both require argu‐
-     ments, so there must be two additional items on the command line.	The 4m320m
-     is the argument to the 1mb 22mflag, and 4mfile.tar24m is the argument to the 1mf0m
+	   tar tbf 32 file.tar
+     specifies three flags t, b, and f.  The b and f flags both require argu‐
+     ments, so there must be two additional items on the command line.	The 32
+     is the argument to the b flag, and file.tar is the argument to the f
      flag.
 
      The mode options c, r, t, u, and x and the options b, f, l, m, o, v, and
      w comply with SUSv2.
 
-     For maximum portability, scripts that invoke 1mtar 22mshould use the bundled-
-     argument format above, should limit themselves to the 1mc22m, 1mt22m, and 1mx 22mmodes,
-     and the 1mb22m, 1mf22m, 1mm22m, 1mv22m, and 1mw 22moptions.
+     For maximum portability, scripts that invoke tar should use the bundled-
+     argument format above, should limit themselves to the c, t, and x modes,
+     and the b, f, m, v, and w options.
 
      Additional long options are provided to improve compatibility with other
      tar implementations.
 
-1mSECURITY0m
+SECURITY
      Certain security issues are common to many archiving programs, including
-     1mtar22m.	In particular, carefully-crafted archives can request that 1mtar0m
+     tar.  In particular, carefully-crafted archives can request that tar
      extract files to locations outside of the target directory.  This can
      potentially be used to cause unwitting users to overwrite files they did
      not intend to overwrite.  If the archive is being extracted by the supe‐
      ruser, any file on the system can potentially be overwritten.  There are
-     three ways this can happen.  Although 1mtar 22mhas mechanisms to protect
+     three ways this can happen.  Although tar has mechanisms to protect
      against each one, savvy users should be aware of the implications:
 
-     1m·       22mArchive entries can have absolute pathnames.	By default, 1mtar0m
-	     removes the leading 4m/24m character from filenames before restoring
+     ·	     Archive entries can have absolute pathnames.  By default, tar
+	     removes the leading / character from filenames before restoring
 	     them to guard against this problem.
 
-     1m·       22mArchive entries can have pathnames that include 4m..24m components.
-	     By default, 1mtar 22mwill not extract files containing 4m..24m components
+     ·	     Archive entries can have pathnames that include .. components.
+	     By default, tar will not extract files containing .. components
 	     in their pathname.
 
-     1m·       22mArchive entries can exploit symbolic links to restore files to
+     ·	     Archive entries can exploit symbolic links to restore files to
 	     other directories.  An archive can restore a symbolic link to
 	     another directory, then use that link to restore a file into that
-	     directory.  To guard against this, 1mtar 22mchecks each extracted path
+	     directory.  To guard against this, tar checks each extracted path
 	     for symlinks.  If the final path element is a symlink, it will be
-	     removed and replaced with the archive entry.  If 1m-U 22mis specified,
+	     removed and replaced with the archive entry.  If -U is specified,
 	     any intermediate symlink will also be unconditionally removed.
-	     If neither 1m-U 22mnor 1m-P 22mis specified, 1mtar 22mwill refuse to extract the
+	     If neither -U nor -P is specified, tar will refuse to extract the
 	     entry.
      To protect yourself, you should be wary of any archives that come from
      untrusted sources.  You should examine the contents of an archive with
-	   1mtar -tf 4m22mfilename0m
-     before extraction.  You should use the 1m-k 22moption to ensure that 1mtar 22mwill
-     not overwrite any existing files or the 1m-U 22moption to remove any pre-
+	   tar -tf filename
+     before extraction.  You should use the -k option to ensure that tar will
+     not overwrite any existing files or the -U option to remove any pre-
      existing files.  You should generally not extract archives while running
-     with super-user privileges.  Note that the 1m-P 22moption to 1mtar 22mdisables the
+     with super-user privileges.  Note that the -P option to tar disables the
      security checks above and allows you to extract an archive while preserv‐
-     ing any absolute pathnames, 4m..24m components, or symlinks to other directo‐
+     ing any absolute pathnames, .. components, or symlinks to other directo‐
      ries.
 
-1mSEE ALSO0m
+SEE ALSO
      bzip2(1), compress(1), cpio(1), gzip(1), mt(1), pax(1), shar(1), xz(1),
      libarchive(3), libarchive-formats(5), tar(5)
 
-1mSTANDARDS0m
+STANDARDS
      There is no current POSIX standard for the tar command; it appeared in
      ISO/IEC 9945-1:1996 (“POSIX.1”) but was dropped from IEEE Std 1003.1-2001
      (“POSIX.1”).  The options supported by this implementation were developed
@@ -741,10 +740,10 @@ TAR(1)			  BSD General Commands Manual			TAR(1)
      The ustar and pax interchange file formats are defined by IEEE Std
      1003.1-2001 (“POSIX.1”) for the pax command.
 
-1mHISTORY0m
-     A 1mtar 22mcommand appeared in Seventh Edition Unix, which was released in
+HISTORY
+     A tar command appeared in Seventh Edition Unix, which was released in
      January, 1979.  There have been numerous other implementations, many of
-     which extended the file format.  John Gilmore's 1mpdtar 22mpublic-domain
+     which extended the file format.  John Gilmore's pdtar public-domain
      implementation (circa November, 1987) was quite influential, and formed
      the basis of GNU tar.  GNU tar was included as the standard system tar in
      FreeBSD beginning with FreeBSD 1.0.
@@ -752,12 +751,12 @@ TAR(1)			  BSD General Commands Manual			TAR(1)
      This is a complete re-implementation based on the libarchive(3) library.
      It was first released with FreeBSD 5.4 in May, 2005.
 
-1mBUGS0m
+BUGS
      This program follows ISO/IEC 9945-1:1996 (“POSIX.1”) for the definition
-     of the 1m-l 22moption.  Note that GNU tar prior to version 1.15 treated 1m-l 22mas
-     a synonym for the 1m--one-file-system 22moption.
+     of the -l option.	Note that GNU tar prior to version 1.15 treated -l as
+     a synonym for the --one-file-system option.
 
-     The 1m-C 4m22mdir24m option may differ from historic implementations.
+     The -C dir option may differ from historic implementations.
 
      All archive output is written in correctly-sized blocks, even if the out‐
      put is being compressed.  Whether or not the last output block is padded
@@ -767,27 +766,27 @@ TAR(1)			  BSD General Commands Manual			TAR(1)
      a character or block device such as a tape drive.	If the output is being
      written to a regular file, the last block will not be padded.  Many com‐
      pressors, including gzip(1) and bzip2(1), complain about the null padding
-     when decompressing an archive created by 1mtar22m, although they still extract
+     when decompressing an archive created by tar, although they still extract
      it correctly.
 
      The compression and decompression is implemented internally, so there may
      be insignificant differences between the compressed output generated by
-	   1mtar -czf 4m22m-24m 4mfile0m
+	   tar -czf - file
      and that generated by
-	   1mtar -cf 4m22m-24m 4mfile24m | 1mgzip0m
+	   tar -cf - file | gzip
 
      The default should be to read and write archives to the standard I/O
      paths, but tradition (and POSIX) dictates otherwise.
 
-     The 1mr 22mand 1mu 22mmodes require that the archive be uncompressed and located in
-     a regular file on disk.  Other archives can be modified using 1mc 22mmode with
-     the 4m@archive-file24m extension.
+     The r and u modes require that the archive be uncompressed and located in
+     a regular file on disk.  Other archives can be modified using c mode with
+     the @archive-file extension.
 
-     To archive a file called 4m@foo24m or 4m-foo24m you must specify it as 4m./@foo24m or
-     4m./-foo24m, respectively.
+     To archive a file called @foo or -foo you must specify it as ./@foo or
+     ./-foo, respectively.
 
-     In create mode, a leading 4m./24m is always removed.  A leading 4m/24m is stripped
-     unless the 1m-P 22moption is specified.
+     In create mode, a leading ./ is always removed.  A leading / is stripped
+     unless the -P option is specified.
 
      There needs to be better support for file selection on both create and
      extract.
@@ -795,8 +794,8 @@ TAR(1)			  BSD General Commands Manual			TAR(1)
      There is not yet any support for multi-volume archives.
 
      Converting between dissimilar archive formats (such as tar and cpio)
-     using the 1m@4m22m-24m convention can cause hard link information to be lost.
+     using the @- convention can cause hard link information to be lost.
      (This is a consequence of the incompatible ways that different archive
      formats store hardlink information.)
 
-BSD			       February 24, 2017			   BSD
+BSD			       February 25, 2017			   BSD

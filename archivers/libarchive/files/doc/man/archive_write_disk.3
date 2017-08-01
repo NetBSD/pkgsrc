@@ -1,4 +1,4 @@
-.TH ARCHIVE_WRITE_DISK 3 "February 2, 2012" ""
+.TH ARCHIVE_WRITE_DISK 3 "April 3, 2017" ""
 .SH NAME
 .ad l
 \fB\%archive_write_disk_new\fP,
@@ -6,14 +6,7 @@
 \fB\%archive_write_disk_set_skip_file\fP,
 \fB\%archive_write_disk_set_group_lookup\fP,
 \fB\%archive_write_disk_set_standard_lookup\fP,
-\fB\%archive_write_disk_set_user_lookup\fP,
-\fB\%archive_write_header\fP,
-\fB\%archive_write_data\fP,
-\fB\%archive_write_data_block\fP,
-\fB\%archive_write_finish_entry\fP,
-\fB\%archive_write_close\fP,
-\fB\%archive_write_finish\fP
-\fB\%archive_write_free\fP
+\fB\%archive_write_disk_set_user_lookup\fP
 \- functions for creating objects on disk
 .SH LIBRARY
 .ad l
@@ -45,34 +38,6 @@ Streaming Archive Library (libarchive, -larchive)
 \fIint\fP
 .br
 \fB\%archive_write_disk_set_user_lookup\fP(\fI\%struct\ archive\ *\fP, \fI\%void\ *\fP, \fI\%uid_t\ (*)(void\ *,\ const\ char\ *uname,\ uid_t\ uid)\fP, \fI\%void\ (*cleanup)(void\ *)\fP);
-.br
-\fIint\fP
-.br
-\fB\%archive_write_header\fP(\fI\%struct\ archive\ *\fP, \fI\%struct\ archive_entry\ *\fP);
-.br
-\fIla_ssize_t\fP
-.br
-\fB\%archive_write_data\fP(\fI\%struct\ archive\ *\fP, \fI\%const\ void\ *\fP, \fI\%size_t\fP);
-.br
-\fIla_ssize_t\fP
-.br
-\fB\%archive_write_data_block\fP(\fI\%struct\ archive\ *\fP, \fI\%const\ void\ *\fP, \fI\%size_t\ size\fP, \fI\%int64_t\ offset\fP);
-.br
-\fIint\fP
-.br
-\fB\%archive_write_finish_entry\fP(\fI\%struct\ archive\ *\fP);
-.br
-\fIint\fP
-.br
-\fB\%archive_write_close\fP(\fI\%struct\ archive\ *\fP);
-.br
-\fIint\fP
-.br
-\fB\%archive_write_finish\fP(\fI\%struct\ archive\ *\fP);
-.br
-\fIint\fP
-.br
-\fB\%archive_write_free\fP(\fI\%struct\ archive\ *\fP);
 .SH DESCRIPTION
 .ad l
 These functions provide a complete API for creating objects on
@@ -113,6 +78,38 @@ The options field consists of a bitwise OR of one or more of the
 following values:
 .RS 5
 .TP
+\fBARCHIVE_EXTRACT_ACL\fP
+Attempt to restore Access Control Lists.
+By default, extended ACLs are ignored.
+.TP
+\fBARCHIVE_EXTRACT_CLEAR_NOCHANGE_FFLAGS\fP
+Before removing a file system object prior to replacing it, clear
+platform-specific file flags which might prevent its removal.
+.TP
+\fBARCHIVE_EXTRACT_FFLAGS\fP
+Attempt to restore file attributes (file flags).
+By default, file attributes are ignored.
+See
+\fBchattr\fP(1)
+(Linux)
+or
+\fBchflags\fP(1)
+(FreeBSD, Mac OS X)
+for more information on file attributes.
+.TP
+\fBARCHIVE_EXTRACT_MAC_METADATA\fP
+Mac OS X specific. Restore metadata using
+\fBcopyfile\fP(3).
+By default,
+\fBcopyfile\fP(3)
+metadata is ignored.
+.TP
+\fBARCHIVE_EXTRACT_NO_OVERWRITE\fP
+Existing files on disk will not be overwritten.
+By default, existing regular files are truncated and overwritten;
+existing directories will have their permissions updated;
+other pre-existing objects are unlinked and recreated from scratch.
+.TP
 \fBARCHIVE_EXTRACT_OWNER\fP
 The user and group IDs should be set on the restored file.
 By default, the user and group IDs are not restored.
@@ -130,49 +127,9 @@ if the default user and group IDs of newly-created objects on disk
 happen to match those specified in the archive entry.
 By default, only basic permissions are restored, and umask is obeyed.
 .TP
-\fBARCHIVE_EXTRACT_TIME\fP
-The timestamps (mtime, ctime, and atime) should be restored.
-By default, they are ignored.
-Note that restoring of atime is not currently supported.
-.TP
-\fBARCHIVE_EXTRACT_NO_OVERWRITE\fP
-Existing files on disk will not be overwritten.
-By default, existing regular files are truncated and overwritten;
-existing directories will have their permissions updated;
-other pre-existing objects are unlinked and recreated from scratch.
-.TP
-\fBARCHIVE_EXTRACT_UNLINK\fP
-Existing files on disk will be unlinked before any attempt to
-create them.
-In some cases, this can prove to be a significant performance improvement.
-By default, existing files are truncated and rewritten, but
-the file is not recreated.
-In particular, the default behavior does not break existing hard links.
-.TP
-\fBARCHIVE_EXTRACT_ACL\fP
-Attempt to restore ACLs.
-By default, extended ACLs are ignored.
-.TP
-\fBARCHIVE_EXTRACT_FFLAGS\fP
-Attempt to restore extended file flags.
-By default, file flags are ignored.
-.TP
-\fBARCHIVE_EXTRACT_XATTR\fP
-Attempt to restore POSIX.1e extended attributes.
-By default, they are ignored.
-.TP
-\fBARCHIVE_EXTRACT_SECURE_SYMLINKS\fP
-Refuse to extract any object whose final location would be altered
-by a symlink on disk.
-This is intended to help guard against a variety of mischief
-caused by archives that (deliberately or otherwise) extract
-files outside of the current directory.
-The default is not to perform this check.
-If
-\fBARCHIVE_EXTRACT_UNLINK\fP
-is specified together with this option, the library will
-remove any intermediate symlinks it finds and return an
-error only if such symlink could not be removed.
+\fBARCHIVE_EXTRACT_SECURE_NOABSOLUTEPATHS\fP
+Refuse to extract an absolute path.
+The default is to not refuse such paths.
 .TP
 \fBARCHIVE_EXTRACT_SECURE_NODOTDOT\fP
 Refuse to extract a path that contains a
@@ -183,18 +140,49 @@ Note that paths ending in
 \fI\& ..\fP
 always cause an error, regardless of this flag.
 .TP
-\fBARCHIVE_EXTRACT_SECURE_NOABSOLUTEPATHS\fP
-Refuse to extract an absolute path.
-The default is to not refuse such paths.
+\fBARCHIVE_EXTRACT_SECURE_SYMLINKS\fP
+Refuse to extract any object whose final location would be altered
+by a symlink on disk.
+This is intended to help guard against a variety of mischief
+caused by archives that (deliberately or otherwise) extract
+files outside of the current directory.
+The default is not to perform this check.
+If
 .TP
 \fBARCHIVE_EXTRACT_SPARSE\fP
 Scan data for blocks of NUL bytes and try to recreate them with holes.
 This results in sparse files, independent of whether the archive format
 supports or uses them.
+\fBARCHIVE_EXTRACT_UNLINK\fP
+is specified together with this option, the library will
+remove any intermediate symlinks it finds and return an
+error only if such symlink could not be removed.
 .TP
-\fBARCHIVE_EXTRACT_CLEAR_NOCHANGE_FFLAGS\fP
-Before removing a file system object prior to replacing it, clear
-platform-specific file flags which might prevent its removal.
+\fBARCHIVE_EXTRACT_TIME\fP
+The timestamps (mtime, ctime, and atime) should be restored.
+By default, they are ignored.
+Note that restoring of atime is not currently supported.
+.TP
+\fBARCHIVE_EXTRACT_UNLINK\fP
+Existing files on disk will be unlinked before any attempt to
+create them.
+In some cases, this can prove to be a significant performance improvement.
+By default, existing files are truncated and rewritten, but
+the file is not recreated.
+In particular, the default behavior does not break existing hard links.
+.TP
+\fBARCHIVE_EXTRACT_XATTR\fP
+Attempt to restore extended file attributes.
+By default, they are ignored.
+See
+\fBxattr\fP(7)
+(Linux,)
+\fBxattr\fP(2)
+(Mac OS X,)
+or
+\fBgetextattr\fP(8)
+(FreeBSD)
+for more information on extended file attributes.
 .RE
 .TP
 \fB\%archive_write_disk_set_group_lookup\fP(),
@@ -231,67 +219,6 @@ the number of calls to
 \fBgetpwnam\fP(3)
 and
 \fBgetgrnam\fP(3).
-.TP
-\fB\%archive_write_header\fP()
-Build and write a header using the data in the provided
-Tn struct archive_entry
-structure.
-See
-\fBarchive_entry\fP(3)
-for information on creating and populating
-Tn struct archive_entry
-objects.
-.TP
-\fB\%archive_write_data\fP()
-Write data corresponding to the header just written.
-Returns number of bytes written or -1 on error.
-.TP
-\fB\%archive_write_data_block\fP()
-Write data corresponding to the header just written.
-This is like
-\fB\%archive_write_data\fP()
-except that it performs a seek on the file being
-written to the specified offset before writing the data.
-This is useful when restoring sparse files from archive
-formats that support sparse files.
-Returns number of bytes written or -1 on error.
-(Note: This is currently not supported for
-Tn archive_write
-handles, only for
-Tn archive_write_disk
-handles.)
-.TP
-\fB\%archive_write_finish_entry\fP()
-Close out the entry just written.
-Ordinarily, clients never need to call this, as it
-is called automatically by
-\fB\%archive_write_next_header\fP()
-and
-\fB\%archive_write_close\fP()
-as needed.
-However, some file attributes are written to disk only
-after the file is closed, so this can be necessary
-if you need to work with the file on disk right away.
-.TP
-\fB\%archive_write_close\fP()
-Set any attributes that could not be set during the initial restore.
-For example, directory timestamps are not restored initially because
-restoring a subsequent file would alter that timestamp.
-Similarly, non-writable directories are initially created with
-write permissions (so that their contents can be restored).
-The
-\fB\%archive_write_disk_new\fP
-library maintains a list of all such deferred attributes and
-sets them when this function is invoked.
-.TP
-\fB\%archive_write_finish\fP()
-This is a deprecated synonym for
-\fB\%archive_write_free\fP().
-.TP
-\fB\%archive_write_free\fP()
-Invokes
-\fB\%archive_write_close\fP()
-if it was not invoked manually, then releases all resources.
 .RE
 More information about the
 \fIstruct\fP archive

@@ -160,7 +160,7 @@ restricted pax format and bzip2 compression.
 (c, r, u, x modes only) 
 Archive or extract POSIX.1e or NFSv4 ACLs. This is the reverse of 
 --no-acls 
-and the default behavior in c, r, and u modes (except Mac OS X) or if 
+and the default behavior in c, r, and u modes (except on Mac OS X) or if 
 '''tar''' 
 is run in x mode as root. On Mac OS X this option translates extended ACLs 
 to NFSv4 ACLs. To store extended ACLs the 
@@ -212,7 +212,7 @@ Supported formats include
 and 
 "ustar". 
 Other formats may also be supported; see 
-[[ManPageLibarchiveFormats5]] 
+[[ManPageibarchiveormats5]] 
 for more information about currently-supported formats. 
 In r and u modes, when extending an existing archive, the format specified 
 here must be compatible with the format of the existing archive on disk. 
@@ -389,7 +389,7 @@ except it compares mtime entries instead of ctime entries.
 Honor the nodump file flag by skipping this file. 
 </dd><dt>--nopreserveHFSCompression</dt><dd> 
 (x mode only) 
-Mac OS X specific(v10.6 or later). Do not compress extracted regular files 
+Mac OS X specific (v10.6 or later). Do not compress extracted regular files 
 which were compressed with HFS+ compression before archived. 
 By default, compress the regular files again with HFS+ compression. 
 </dd><dt>--null</dt><dd> 
@@ -409,7 +409,7 @@ Do not archive or extract POSIX.1e or NFSv4 ACLs. This is the reverse of
 --acls 
 and the default behavior if 
 '''tar''' 
-is run as non-root in x mode (on Mac OS X also in c, r and u modes). 
+is run as non-root in x mode (on Mac OS X as any user in c, r, u and x modes). 
 </dd><dt>--no-fflags</dt><dd> 
 (c, r, u, x modes only) 
 Do not archive or extract file flags. This is the reverse of 
@@ -443,14 +443,7 @@ This is the reverse of
 -p 
 and the default behavior if 
 '''tar''' 
-is run as non-root and can be overridden by also specifying 
---acls, 
---fflags, 
---mac-metadata, 
---same-owner, 
---same-permissions 
-and 
---xattrs. 
+is run as non-root. 
 </dd><dt>--no-xattrs</dt><dd> 
 (c, r, u, x modes only) 
 Do not archive or extract extended attributes. This is the reverse of 
@@ -640,16 +633,16 @@ This option suppresses these behaviors.
 (x mode only) 
 Preserve file permissions. 
 Attempt to restore the full permissions, including owner, file modes, ACLs, 
-extended atributes and extended file flags, if available, for each item 
-extracted from the archive. This is the default, if 
+extended attributes and extended file flags, if available, for each item 
+extracted from the archive. This is te reverse of 
+--no-same-permissions 
+and the default if 
 '''tar''' 
-is being run by root and can be overridden by also specifying 
+is being run by root and can be partially overridden by also specifying 
 --no-acls, 
 --no-fflags, 
---no-mac-metadata, 
---no-same-owner, 
---no-same-permissions 
-and 
+--no-mac-metadata 
+or 
 --no-xattrs. 
 </dd><dt>--passphrase ''passphrase''</dt><dd> 
 The 
@@ -993,9 +986,9 @@ For more details, see the explanation of the
 and 
 '''archive_write_set_options'''() 
 API calls that are described in 
-[[ManPageArchiveRead3]] 
+[[ManPagerchiveead3]] 
 and 
-[[ManPageArchiveWrite3]]. 
+[[ManPagerchiverite3]]. 
 == COMPATIBILITY == 
 The bundled-arguments format is supported for compatibility 
 with historic implementations. 
@@ -1138,8 +1131,8 @@ components, or symlinks to other directories.
 [[pax(1)|http://www.freebsd.org/cgi/man.cgi?query=pax&sektion=1]], 
 [[shar(1)|http://www.freebsd.org/cgi/man.cgi?query=shar&sektion=1]], 
 [[xz(1)|http://www.freebsd.org/cgi/man.cgi?query=xz&sektion=1]], 
-[[ManPageLibarchive3]], 
-[[ManPageLibarchiveFormats5]], 
+[[ManPageibarchive3]], 
+[[ManPageibarchiveormats5]], 
 [[ManPageTar5]] 
 == STANDARDS == 
 There is no current POSIX standard for the tar command; it appeared 
@@ -1171,7 +1164,7 @@ beginning with
 FreeBSD 1.0. 
 
 This is a complete re-implementation based on the 
-[[ManPageLibarchive3]] 
+[[ManPageibarchive3]] 
 library. 
 It was first released with 
 FreeBSD 5.4 

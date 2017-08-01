@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Sat Feb 25 11:22:07 2017 -->
+<!-- CreationDate: Mon Jul 10 02:32:57 2017 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -43,10 +43,10 @@ Leading whitespace is always ignored.</p>
 <p style="margin-left:6%; margin-top: 1em">When encoding
 file or pathnames, any backslash character or character
 outside of the 95 printable ASCII characters must be encoded
-as a a backslash followed by three octal digits. When
-reading mtree files, any appearance of a backslash followed
-by three octal digits should be converted into the
-corresponding character.</p>
+as a backslash followed by three octal digits. When reading
+mtree files, any appearance of a backslash followed by three
+octal digits should be converted into the corresponding
+character.</p>
 
 <p style="margin-left:6%; margin-top: 1em">Each line is
 interpreted independently as one of the following types:</p>
@@ -175,7 +175,7 @@ pathname of a file that holds the contents of this file.</p>
 <p style="margin-left:22%; margin-top: 1em">The file flags
 as a symbolic name. See chflags(1) for information on these
 names. If no flags are to be set the string
-&lsquo;&lsquo;none&rsquo;&rsquo; may be used to override the
+&rsquo;&rsquo;none&rsquo;&rsquo; may be used to override the
 current default.</p>
 
 <p style="margin-top: 1em"><b>gid</b></p>
@@ -239,7 +239,7 @@ file hierarchy.</p>
 <p style="margin-top: 1em"><b>resdevice</b></p>
 
 <p style="margin-left:22%; margin-top: 1em">The
-&lsquo;&lsquo;resident&rsquo;&rsquo; device number of the
+&rsquo;&rsquo;resident&rsquo;&rsquo; device number of the
 file, e.g. the ID of the device that contains the file. Its
 format is the same as the one for <b>device</b>.</p>
 
@@ -261,7 +261,7 @@ the file.</p>
 <p style="margin-top: 1em"><b>sha1</b></p>
 
 <p style="margin-left:22%; margin-top: 1em">The FIPS 160-1
-(&lsquo;&lsquo;SHA-1&rsquo;&rsquo;) message digest of the
+(&rsquo;&rsquo;SHA-1&rsquo;&rsquo;) message digest of the
 file.</p>
 
 <p style="margin-top: 1em"><b>sha1digest</b></p>
@@ -272,7 +272,7 @@ file.</p>
 <p style="margin-top: 1em"><b>sha256</b></p>
 
 <p style="margin-left:22%; margin-top: 1em">The FIPS 180-2
-(&lsquo;&lsquo;SHA-256&rsquo;&rsquo;) message digest of the
+(&rsquo;&rsquo;SHA-256&rsquo;&rsquo;) message digest of the
 file.</p>
 
 <p style="margin-top: 1em"><b>sha256digest</b></p>
@@ -283,7 +283,7 @@ file.</p>
 <p style="margin-top: 1em"><b>sha384</b></p>
 
 <p style="margin-left:22%; margin-top: 1em">The FIPS 180-2
-(&lsquo;&lsquo;SHA-384&rsquo;&rsquo;) message digest of the
+(&rsquo;&rsquo;SHA-384&rsquo;&rsquo;) message digest of the
 file.</p>
 
 <p style="margin-top: 1em"><b>sha384digest</b></p>
@@ -294,7 +294,7 @@ file.</p>
 <p style="margin-top: 1em"><b>sha512</b></p>
 
 <p style="margin-left:22%; margin-top: 1em">The FIPS 180-2
-(&lsquo;&lsquo;SHA-512&rsquo;&rsquo;) message digest of the
+(&rsquo;&rsquo;SHA-512&rsquo;&rsquo;) message digest of the
 file.</p>
 
 <p style="margin-top: 1em"><b>sha512digest</b></p>
@@ -367,15 +367,15 @@ as a symbolic name.</p>
 HISTORY</b></p>
 
 <p style="margin-left:6%;">The <b>mtree</b> utility
-appeared in 4.3BSD&minus;Reno. The MD5 digest capability was
-added in FreeBSD&nbsp;2.1, in response to the widespread use
-of programs which can spoof cksum(1). The SHA-1 and
-RIPEMD160 digests were added in FreeBSD&nbsp;4.0, as new
-attacks have demonstrated weaknesses in MD5. The SHA-256
-digest was added in FreeBSD&nbsp;6.0. Support for file flags
-was added in FreeBSD&nbsp;4.0, and mostly comes from NetBSD.
-The &lsquo;&lsquo;full&rsquo;&rsquo; entry format was added
-by NetBSD.</p>
+appeared in 4.3BSD-Reno. The MD5 digest capability was added
+in FreeBSD&nbsp;2.1, in response to the widespread use of
+programs which can spoof cksum(1). The SHA-1 and RIPEMD160
+digests were added in FreeBSD&nbsp;4.0, as new attacks have
+demonstrated weaknesses in MD5. The SHA-256 digest was added
+in FreeBSD&nbsp;6.0. Support for file flags was added in
+FreeBSD&nbsp;4.0, and mostly comes from NetBSD. The
+&rsquo;&rsquo;full&rsquo;&rsquo; entry format was added by
+NetBSD.</p>
 
 <p style="margin-left:6%; margin-top: 1em">BSD
 September&nbsp;4, 2013 BSD</p>

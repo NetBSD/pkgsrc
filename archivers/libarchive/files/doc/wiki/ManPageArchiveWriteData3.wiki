@@ -1,6 +1,7 @@
 ARCHIVE_WRITE_DATA(3) manual page 
 == NAME == 
-'''archive_write_data''' 
+'''archive_write_data''', 
+'''archive_write_data_block''' 
 - functions for creating archives 
 == LIBRARY == 
 Streaming Archive Library (libarchive, -larchive) 
@@ -10,8 +11,29 @@ Streaming Archive Library (libarchive, -larchive)
 ''la_ssize_t'' 
 <br> 
 '''archive_write_data'''(''struct archive *'', ''const void *'', ''size_t''); 
+<br> 
+''la_ssize_t'' 
+<br> 
+'''archive_write_data_block'''(''struct archive *'', ''const void *'', ''size_t size'', ''int64_t offset''); 
 == DESCRIPTION == 
+<dl> 
+<dt>'''archive_write_data'''()</dt><dd> 
 Write data corresponding to the header just written. 
+</dd><dt>'''archive_write_data_block'''()</dt><dd> 
+Write data corresponding to the header just written. 
+This is like 
+'''archive_write_data'''() 
+except that it performs a seek on the file being 
+written to the specified offset before writing the data. 
+This is useful when restoring sparse files from archive 
+formats that support sparse files. 
+Returns number of bytes written or -1 on error. 
+(Note: This is currently not supported for 
+'''archive_write''' 
+handles, only for 
+'''archive_write_disk''' 
+handles. 
+</dd></dl> 
 == RETURN VALUES == 
 This function returns the number of bytes actually written, or 
 a negative error code on error. 
@@ -31,9 +53,9 @@ Clients should treat any value less than zero as an error
 and consider any non-negative value as success. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveWriteFinishEntry3]], 
-[[ManPageArchiveWriteSetOptions3]], 
+[[ManPageibarchive3]], 
+[[ManPagerchiveriteinishntry3]], 
+[[ManPagerchiveriteetptions3]], 
 [[ManPageCpio5]], 
 [[ManPageMtree5]], 
 [[ManPageTar5]] 

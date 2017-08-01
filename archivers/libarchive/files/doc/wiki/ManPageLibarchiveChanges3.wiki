@@ -1,5 +1,6 @@
 LIBARCHIVE_CHANGES(3) manual page 
 == NAME == 
+'''libarchive_changes''' 
 - changes in libarchive interface 
 == CHANGES IN LIBARCHIVE 3 == 
 This page describes user-visible changes in libarchive3, and lists 
@@ -291,13 +292,13 @@ ARCHIVE_DEFAULT_BYTES_PER_BLOCK
 ```
 </dd></dl> 
 == SEE ALSO == 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveRead3]], 
-[[ManPageArchiveReadFilter3]], 
-[[ManPageArchiveReadFormat3]], 
-[[ManPageArchiveReadSetOptions3]], 
-[[ManPageArchiveWrite3]], 
-[[ManPageArchiveWriteFilter3]], 
-[[ManPageArchiveWriteFormat3]], 
-[[ManPageArchiveWriteSetOptions3]], 
-[[ManPageArchiveUtil3]] 
+[[ManPageibarchive3]], 
+[[ManPagerchiveead3]], 
+[[ManPagerchiveeadilter3]], 
+[[ManPagerchiveeadormat3]], 
+[[ManPagerchiveeadetptions3]], 
+[[ManPagerchiverite3]], 
+[[ManPagerchiveriteilter3]], 
+[[ManPagerchiveriteormat3]], 
+[[ManPagerchiveriteetptions3]], 
+[[ManPagerchivetil3]] 

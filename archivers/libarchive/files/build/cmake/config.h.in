@@ -179,6 +179,27 @@ typedef uint64_t uintmax_t;
 /* Define ZLIB_WINAPI if zlib was built on Visual Studio. */
 #cmakedefine ZLIB_WINAPI 1
 
+/* Darwin ACL support */
+#cmakedefine ARCHIVE_ACL_DARWIN 1
+
+/* FreeBSD ACL support */
+#cmakedefine ARCHIVE_ACL_FREEBSD 1
+
+/* FreeBSD NFSv4 ACL support */
+#cmakedefine ARCHIVE_ACL_FREEBSD_NFS4 1
+
+/* Linux POSIX.1e ACL support via libacl */
+#cmakedefine ARCHIVE_ACL_LIBACL 1
+
+/* Linux NFSv4 ACL support via librichacl */
+#cmakedefine ARCHIVE_ACL_LIBRICHACL 1
+
+/* Solaris ACL support */
+#cmakedefine ARCHIVE_ACL_SUNOS 1
+
+/* Solaris NFSv4 ACL support */
+#cmakedefine ARCHIVE_ACL_SUNOS_NFS4 1
+
 /* MD5 via ARCHIVE_CRYPTO_MD5_LIBC supported. */
 #cmakedefine ARCHIVE_CRYPTO_MD5_LIBC 1
 
@@ -280,6 +301,18 @@ typedef uint64_t uintmax_t;
 
 /* SHA512 via ARCHIVE_CRYPTO_SHA512_WIN supported. */
 #cmakedefine ARCHIVE_CRYPTO_SHA512_WIN 1
+
+/* AIX xattr support */
+#cmakedefine ARCHIVE_XATTR_AIX 1
+
+/* Darwin xattr support */
+#cmakedefine ARCHIVE_XATTR_DARWIN 1
+
+/* FreeBSD xattr support */
+#cmakedefine ARCHIVE_XATTR_FREEBSD 1
+
+/* Linux xattr support */
+#cmakedefine ARCHIVE_XATTR_LINUX 1
 
 /* Version number of bsdcpio */
 #cmakedefine BSDCPIO_VERSION_STRING "${BSDCPIO_VERSION_STRING}"
@@ -441,6 +474,10 @@ typedef uint64_t uintmax_t;
 /* Define to 1 if you have the declaration of `UINTMAX_MAX', and to 0 if you
    don't. */
 #cmakedefine HAVE_DECL_UINTMAX_MAX 1
+
+/* Define to 1 if you have the declaration of `XATTR_NOFOLLOW', and to 0 if
+   you don't. */
+#cmakedefine HAVE_DECL_XATTR_NOFOLLOW 1
 
 /* Define to 1 if you have the <direct.h> header file. */
 #cmakedefine HAVE_DIRECT_H 1
@@ -773,6 +810,9 @@ typedef uint64_t uintmax_t;
 /* Define to 1 if you have the `mbrtowc' function. */
 #cmakedefine HAVE_MBRTOWC 1
 
+/* Define to 1 if you have the <membership.h> header file. */
+#cmakedefine HAVE_MEMBERSHIP_H 1
+
 /* Define to 1 if you have the `memmove' function. */
 #cmakedefine HAVE_MEMMOVE 1
 
@@ -1009,6 +1049,9 @@ typedef uint64_t uintmax_t;
 
 /* Define to 1 if you have the <sys/poll.h> header file. */
 #cmakedefine HAVE_SYS_POLL_H 1
+
+/* Define to 1 if you have the <sys/richacl.h> header file. */
+#cmakedefine HAVE_SYS_RICHACL_H 1
 
 /* Define to 1 if you have the <sys/select.h> header file. */
 #cmakedefine HAVE_SYS_SELECT_H 1

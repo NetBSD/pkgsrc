@@ -5,25 +5,25 @@ ARCHIVE_ENTRY_PATHS(3) manual page
 '''archive_entry_set_hardlink''', 
 '''archive_entry_copy_hardlink''', 
 '''archive_entry_copy_hardlink_w''', 
-'''archve_entry_update_hardlink_utf8''', 
+'''archive_entry_update_hardlink_utf8''', 
 '''archive_entry_set_link''', 
 '''archive_entry_copy_link''', 
 '''archive_entry_copy_link_w''', 
-'''archve_entry_update_link_utf8''', 
+'''archive_entry_update_link_utf8''', 
 '''archive_entry_pathname''', 
 '''archive_entry_pathname_w''', 
 '''archive_entry_set_pathname''', 
 '''archive_entry_copy_pathname''', 
 '''archive_entry_copy_pathname_w''', 
-'''archve_entry_update_pathname_utf8''', 
+'''archive_entry_update_pathname_utf8''', 
 '''archive_entry_sourcepath''', 
 '''archive_entry_copy_sourcepath''', 
-'''archive_entry_symlink,''' 
-'''archive_entry_symlink_w,''' 
+'''archive_entry_symlink''', 
+'''archive_entry_symlink_w''', 
 '''archive_entry_set_symlink''', 
 '''archive_entry_copy_symlink''', 
 '''archive_entry_copy_symlink_w''', 
-'''archve_entry_update_symlink_utf8''' 
+'''archive_entry_update_symlink_utf8''' 
 - functions for manipulating path names in archive entry descriptions 
 == LIBRARY == 
 Streaming Archive Library (libarchive, -larchive) 
@@ -127,7 +127,7 @@ Streaming Archive Library (libarchive, -larchive)
 '''archive_entry_update_symlink_utf8'''(''struct archive_entry *a'', ''const char *path''); 
 == DESCRIPTION == 
 Path names supported by 
-[[ManPageArchiveEntry3]]: 
+[[ManPagerchiventry3]]: 
 <dl> 
 <dt>hardlink</dt><dd> 
 Destination of the hardlink. 
@@ -140,7 +140,7 @@ the destination for that.
 Path in the archive 
 </dd><dt>sourcepath</dt><dd> 
 Path on the disk for use by 
-[[ManPageArchiveReadDisk3]]. 
+[[ManPagerchiveeadisk3]]. 
 </dd><dt>symlink</dt><dd> 
 Destination of the symbolic link. 
 </dd></dl> 
@@ -171,5 +171,5 @@ It doesn't have a corresponding get accessor function.
 is an alias for  
 '''archive_entry_copy_XXX'''(). 
 == SEE ALSO == 
-[[ManPageArchiveEntry3]] 
-[[ManPageLibarchive3]], 
+[[ManPagerchiventry3]] 
+[[ManPageibarchive3]], 
