@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.115 2017/07/09 13:46:32 manu Exp $
+# $NetBSD: Makefile,v 1.116 2017/08/01 11:57:36 ryoon Exp $
 
-VERREL=		5.3.4
-VERRC=		2
+VERREL=		5.4.0
+VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -20,7 +19,9 @@ SUBST_CLASSES+=			use-bash
 SUBST_STAGE.use-bash=		pre-configure
 SUBST_MESSAGE.use-bash=		Using bash for configure script
 SUBST_FILES.use-bash+=		autogen.sh
+SUBST_FILES.use-bash+=		configure.ac
 SUBST_VARS.use-bash+=		BASH
+SUBST_VARS.use-bash+=		PREFIX
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -58,7 +59,7 @@ MORE_DISTFILES= \
 	134d8262145fc793c6af494dcace3e71-liberation-fonts-ttf-1.07.4.tar.gz \
 	5c781723a0d9ed6188960defba8e91cf-liberation-fonts-ttf-2.00.1.tar.gz \
 	907d6e99f241876695c19ff3db0b8923-source-code-pro-2.030R-ro-1.050R-it.tar.gz \
-	86b1daaa438f5a7bea9a52d7b9799ac0-xmlsec1-1.2.23.tar.gz \
+	xmlsec1-1.2.24.tar.gz \
 	8ab049135b2d15313da5d9f0656894a1-commons-lang3-3.3.1-src.tar.gz \
 	2c9b0f83ed5890af02c0df1c1776f39b-commons-httpclient-3.1-src.tar.gz \
 	3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip \
@@ -98,9 +99,10 @@ MORE_DISTFILES= \
 	c0b4799ea9850eae3ead14f0a60e9418-postgresql-9.2.1.tar.bz2 \
 	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
 	harfbuzz-1.3.2.tar.bz2 \
-	3069842a88b8f40c6b83ad2850cda293-graphite2-minimal-1.3.9.tgz \
+	graphite2-minimal-1.3.10.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
-	EmojiOneColor-SVGinOT-1.3.tar.gz
+	EmojiOneColor-SVGinOT-1.3.tar.gz \
+	libjpeg-turbo-1.5.1.tar.gz
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
@@ -164,15 +166,19 @@ CONFIGURE_ARGS+=	--disable-odk
 CONFIGURE_ARGS+=	--disable-systray
 # Enabling GIO causes error. losessioninstall.component not found.
 CONFIGURE_ARGS+=	--disable-gio
+CONFIGURE_ARGS+=	--disable-pdfium
 CONFIGURE_ARGS+=	--enable-gstreamer-1-0
 CONFIGURE_ARGS+=	--enable-python=system
 #CONFIGURE_ARGS+=	--enable-release-build
 CONFIGURE_ARGS+=	--enable-ext-wiki-publisher
 CONFIGURE_ARGS+=	--enable-ext-nlpsolver
 CONFIGURE_ARGS+=	--enable-ext-mariadb-connector
+CONFIGURE_ARGS+=	--with-system-gpgmepp
+CONFIGURE_ARGS+=	--without-system-jpeg
 CONFIGURE_ARGS+=	--without-system-mysql-cppconn
 CONFIGURE_ARGS+=	--without-system-postgresql
 CONFIGURE_ARGS+=	--without-system-mariadb
+CONFIGURE_ARGS+=	--without-system-xmlsec
 CONFIGURE_ARGS+=	--with-alloc=system
 CONFIGURE_ARGS+=	--with-compat-oowrappers
 CONFIGURE_ARGS+=	--with-external-tar=${DISTDIR}/${DIST_SUBDIR}
@@ -288,6 +294,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"
 .include "../../devel/apr-util/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cppunit/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
@@ -298,10 +305,11 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 # hardbuzz with graphite2 support is required.
-BUILDLINK_API_DEPENDS.harfbuzz+=	harfbuzz>=1.4.2
-.include "../../fonts/harfbuzz/buildlink3.mk"
+#BUILDLINK_API_DEPENDS.harfbuzz+=	harfbuzz>=1.4.2
+#.include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/graphite2/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+# Requires JCS_EXT_BGRA
+#.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
@@ -309,6 +317,7 @@ BUILDLINK_API_DEPENDS.harfbuzz+=	harfbuzz>=1.4.2
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/glm/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
+.include "../../graphics/libepoxy/buildlink3.mk"
 .include "../../graphics/libgltf/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
@@ -327,6 +336,7 @@ BUILDLINK_API_DEPENDS.harfbuzz+=	harfbuzz>=1.4.2
 .endif
 .include "../../print/poppler-cpp/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
+.include "../../security/gpgme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
