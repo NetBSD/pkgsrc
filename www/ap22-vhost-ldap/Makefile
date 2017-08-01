@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/03/05 11:29:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2017/08/01 14:59:06 wiz Exp $
 
 MVL_VERSION=		1.2.0
 DISTNAME=		mod-vhost-ldap_${MVL_VERSION}.orig
@@ -8,7 +8,7 @@ CATEGORIES=		www databases
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/m/mod-vhost-ldap/}
 
 MAINTAINER=		imil@gcu.info
-HOMEPAGE=		http://packages.qa.debian.org/m/mod-vhost-ldap.html
+HOMEPAGE=		https://packages.qa.debian.org/m/mod-vhost-ldap.html
 COMMENT=		Apache 2.2 module LDAP Virtual Hosts support
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/_/-/:S/.orig//}
