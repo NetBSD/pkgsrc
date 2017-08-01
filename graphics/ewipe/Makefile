@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/06 14:10:47 asau Exp $
+# $NetBSD: Makefile,v 1.4 2017/08/01 16:47:39 wiz Exp $
 #
 
 DISTNAME=	ewipe-1.2.0
@@ -6,7 +6,7 @@ CATEGORIES=	graphics japanese
 MASTER_SITES=	http://www.jnet-jp.to/~sekisita/ewipe/
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	http://www.jnet-jp.to/~sekisita/ewipe/index-e.html
+#HOMEPAGE=	http://www.jnet-jp.to/~sekisita/ewipe/index-e.html
 COMMENT=	Presentation editor and viewer based on Tcl/Tk
 
 NO_BUILD=	yes

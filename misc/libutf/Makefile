@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/05/11 05:29:07 agc Exp $
+# $NetBSD: Makefile,v 1.25 2017/08/01 16:47:41 wiz Exp $
 #
 
 DISTNAME=	libutf-3.0
@@ -6,7 +6,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://www.alistaircrooks.co.uk/software.html
+#HOMEPAGE=	http://www.alistaircrooks.co.uk/software.html
 COMMENT=	UTF-8 character set support library, including regular expressions
 
 GNU_CONFIGURE=	yes
