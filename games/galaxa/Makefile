@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/06 11:54:39 asau Exp $
+# $NetBSD: Makefile,v 1.22 2017/08/01 17:40:11 wiz Exp $
 #
 
 DISTNAME=	galaxa.0.1
@@ -8,7 +8,7 @@ CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.billsgames.com/unix/x/galaxa/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://web.archive.org/web/2/http://www.newbreedsoftware.com/galaxa/
+#HOMEPAGE=	http://web.archive.org/web/2/http://www.newbreedsoftware.com/galaxa/
 COMMENT=	Space game based loosely on "Galaga"
 
 WRKSRC=		${WRKDIR}/galaxa

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/09/10 14:23:05 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2017/08/01 17:40:13 wiz Exp $
 
 DISTNAME=	dcdflib.c-1.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	# ftp://odin.mdacc.tmc.edu/pub/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://odin.mdacc.tmc.edu/anonftp/
+#HOMEPAGE=	http://odin.mdacc.tmc.edu/anonftp/
 COMMENT=	Library of C Routines for Cumulative Distribution Functions
 
 WRKSRC=		${WRKDIR}/dcdflib.c

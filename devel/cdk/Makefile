@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2015/08/18 07:31:00 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2017/08/01 17:40:09 wiz Exp $
 #
 
 DISTNAME=		latestCDK
@@ -9,7 +9,7 @@ MASTER_SITES=		http://www.vexus.ca/release/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.vexus.ca/products/CDK/
+#HOMEPAGE=		http://www.vexus.ca/products/CDK/
 COMMENT=		Curses Development Kit
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
