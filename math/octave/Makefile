@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2017/08/01 11:09:14 maya Exp $
+# $NetBSD: Makefile,v 1.156 2017/08/01 11:10:37 maya Exp $
 
 DISTNAME=	octave-4.2.0
 PKGREVISION=	11
@@ -24,7 +24,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf gsed gmake:run perl pkg-config bison bsdtar:run
 GNU_CONFIGURE=		yes
 
-GCC_REQD+=		3.0
 USE_LANGUAGES=		c c++ fortran77
 
 # needed for loading of shared objects such as those in the
