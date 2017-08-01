@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.279 2017/04/23 14:18:09 taca Exp $
+# $NetBSD: replace.mk,v 1.280 2017/08/01 15:09:52 wiz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -990,18 +990,18 @@ TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/g${_t_}
 
 ######################################################################
 
-# These tools are supplied by textproc/mdocml as replacements for their
+# These tools are supplied by textproc/mandoc as replacements for their
 # groff counterparts.  As this package has fewer dependencies it should
 # be preferred over groff wherever possible.
 #
-_TOOLS.mdocml=	nroff
+_TOOLS.mandoc=	nroff
 
-.for _t_ in ${_TOOLS.mdocml}
+.for _t_ in ${_TOOLS.mandoc}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.    if !empty(PKGPATH:Mtextproc/mdocml)
+.    if !empty(PKGPATH:Mtextproc/mandoc)
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
-TOOLS_DEPENDS.${_t_}?=	mdocml>=1.12.0nb3:../../textproc/mdocml
+TOOLS_DEPENDS.${_t_}?=	mandoc>=1.12.0nb3:../../textproc/mandoc
 TOOLS_CREATE+=		${_t_}
 TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/mandoc
 .    endif

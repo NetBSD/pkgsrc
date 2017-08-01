@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2017/01/18 13:44:46 leot Exp $
+# $NetBSD: Makefile,v 1.86 2017/08/01 15:09:53 wiz Exp $
 
 DISTNAME=	groff-1.22.3
 PKGREVISION=	5
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/groff/groff.html
 COMMENT=	GNU roff text processing suite
 LICENSE=	gnu-gpl-v3
-
-CONFLICTS=		mdocml<1.12.0nb3 ja-groff-[0-9]*
 
 CHECK_PERMS=		NO
 MAKE_JOBS_SAFE=		NO
