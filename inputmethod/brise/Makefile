@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2015/03/15 20:13:23 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/01 16:52:55 wiz Exp $
 
 DISTNAME=	brise-0.30
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://rimeime.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/rimeime/
+HOMEPAGE=	http://rime.im/
 COMMENT=	Official Rime Schema repository
 LICENSE=	gnu-gpl-v3
 

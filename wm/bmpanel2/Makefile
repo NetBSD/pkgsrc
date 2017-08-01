@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2017/02/12 06:26:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2017/08/01 16:52:17 wiz Exp $
 
 DISTNAME=	bmpanel2-2.1pre1
 PKGREVISION=	19
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://bmpanel2.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/bmpanel2/
+HOMEPAGE=	https://code.google.com/archive/p/bmpanel2/
 COMMENT=	NETWM-compatible panel for X11
 LICENSE=	mit
 
