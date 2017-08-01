@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/01 13:17:16 markd Exp $
+
+SHA1 (Encode-EUCJPASCII-0.03.tar.gz) = f4bddf01c751f8ec77df9203ef1016cd3362c101
+RMD160 (Encode-EUCJPASCII-0.03.tar.gz) = 8b266e96e601098b8b3bfafbdd51792112ec31c9
+SHA512 (Encode-EUCJPASCII-0.03.tar.gz) = 0d7a06e1f5eaa20451ef360ef78372cb0ecf0c9a525efed5db0b55b0fc98b47c87eff4f9be069bdd7be50156f8edfc0cb9a257e9efd5a33130cc745dca12b7d8
+Size (Encode-EUCJPASCII-0.03.tar.gz) = 131775 bytes
