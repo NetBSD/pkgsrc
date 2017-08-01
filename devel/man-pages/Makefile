@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/10/03 20:37:53 kamil Exp $
-#
+# $NetBSD: Makefile,v 1.6 2017/08/01 15:09:53 wiz Exp $
 
 DISTNAME=	man-pages-4.05
 PKGREVISION=	1
@@ -16,24 +15,5 @@ NO_BUILD=	# This package only installs files.
 
 USE_LANGUAGES=	# none
 MAKE_FLAGS+=	prefix=${PREFIX} DESTDIR=${DESTDIR}
-
-# iconv.3, iconv_close.3, iconv_open.3
-CONFLICTS+=	libiconv-[0-9]*
-# dladdr.3, dlcose.3, dlerror.3, dlopen.3, dlsym.3
-CONFLICTS+=	dlcompat-[0-9]*
-# getopt_long.3
-CONFLICTS+=	libgetopt-[0-9]*
-# sem_destroy.3, sem_getvalue.3, sem_init.3, sem_post.3, sem_trywait.3,
-# sem_wait.3
-CONFLICTS+=	pthread-sem-[0-9]*
-# getaddrinfo.3, gethostbyname.3, getipnodebyname.3, getnameinfo.3,
-# getnetent.3, resolver.3, resolver.5, hostname.7
-CONFLICTS+=	libbind-[0-9]*
-# ftpusers.5
-CONFLICTS+=	tnftpd-[0-9]*
-# des_crypt.3 (when des option is enabled)
-CONFLICTS+=	kth-krb4-[0-9]*
-# man.7, mdoc.7
-CONFLICTS+=	mdocml-[0-9]*
 
 .include "../../mk/bsd.pkg.mk"
