@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/06/20 20:50:49 markd Exp $
+# $NetBSD: Makefile,v 1.7 2017/08/01 14:58:58 wiz Exp $
 
 DISTNAME=	texlive-20170524-source
 PKGNAME=	ttfdump-0.5.5
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2017/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.freetype.org/
+HOMEPAGE=	https://www.freetype.org/
 COMMENT=	TrueType font dumper
 LICENSE=	gnu-gpl-v2
 

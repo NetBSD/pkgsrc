@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2017/01/05 09:16:41 prlw1 Exp $
+# $NetBSD: Makefile,v 1.53 2017/08/01 14:58:52 wiz Exp $
 
 DISTNAME=	flac-1.3.2
 CATEGORIES=	audio archivers
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.xz
 DIST_SUBDIR=	flac
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xiph.org/flac/
+HOMEPAGE=	https://xiph.org/flac/
 COMMENT=	Free lossless audio codec
 LICENSE=	modified-bsd AND gnu-gpl-v2 AND gnu-lgpl-v2.1
 

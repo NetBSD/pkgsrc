@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2016/01/24 11:07:49 leot Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/01 14:59:05 wiz Exp $
 #
 
 DISTNAME=	di-4.40
 CATEGORIES=	sysutils
-MASTER_SITES=	http://gentoo.com/di/
+MASTER_SITES=	https://gentoo.com/di/
 
 MAINTAINER=	brad.lanam.di@gmail.com
-HOMEPAGE=	http://gentoo.com/di/
+HOMEPAGE=	https://gentoo.com/di/
 COMMENT=	Alternative df command
 LICENSE=	zlib
 

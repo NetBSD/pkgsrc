@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2017/02/23 14:47:57 fhajny Exp $
+# $NetBSD: Makefile,v 1.69 2017/08/01 14:58:52 wiz Exp $
 
 DISTNAME=		cmus-2.7.1
 PKGREVISION=		6
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=cmus/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		ahoka@NetBSD.org
-HOMEPAGE=		http://cmus.github.io/
+HOMEPAGE=		https://cmus.github.io/
 COMMENT=		Cmus is a small, fast and powerful text mode music player
 LICENSE=		gnu-gpl-v2
 

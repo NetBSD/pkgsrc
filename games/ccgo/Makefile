@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.60 2017/05/03 08:38:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.61 2017/08/01 14:58:58 wiz Exp $
 
 DISTNAME=	ccgo-0.3.6.5
 PKGREVISION=	2
 CATEGORIES=	games
-MASTER_SITES=	http://ccdw.org/~cjj/prog/ccgo/src/
+MASTER_SITES=	https://ccdw.org/~cjj/prog/ccgo/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ccdw.org/~cjj/prog/ccgo/
+HOMEPAGE=	https://ccdw.org/~cjj/prog/ccgo/
 COMMENT=	Go board with IGS and gnugo interface
 LICENSE=	gnu-gpl-v3
 

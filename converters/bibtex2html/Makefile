@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2017/07/11 14:19:19 jaapb Exp $
+# $NetBSD: Makefile,v 1.46 2017/08/01 14:58:53 wiz Exp $
 
 DISTNAME=	bibtex2html-1.98
 PKGREVISION=	7
@@ -6,7 +6,7 @@ CATEGORIES=	converters
 MASTER_SITES=	http://www.lri.fr/~filliatr/ftp/bibtex2html/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.lri.fr/~filliatr/bibtex2html/
+HOMEPAGE=	https://www.lri.fr/~filliatr/bibtex2html/
 COMMENT=	Collection of tools for translating from BibTeX to HTML
 LICENSE=	gnu-gpl-v2
 
