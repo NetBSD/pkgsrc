@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2017/04/22 21:03:47 adam Exp $
+# $NetBSD: Makefile,v 1.58 2017/08/01 16:56:46 wiz Exp $
 
 DISTNAME=	dcsharp-0.11.1
 PKGREVISION=	53
@@ -7,8 +7,9 @@ MASTER_SITES=	http://dcsharp.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/dcsharp/
+HOMEPAGE=	https://code.google.com/archive/p/dcsharp/
 COMMENT=	File sharing client for the Direct Connect protocol
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	pkg-config msgfmt
 USE_LANGUAGES=	c++
