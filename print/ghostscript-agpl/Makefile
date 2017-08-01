@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/05/19 13:29:04 prlw1 Exp $
+# $NetBSD: Makefile,v 1.26 2017/08/01 14:59:04 wiz Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
@@ -7,7 +7,7 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ArtifexSoftware/ghostpdl-downloads/releases/download/gs921/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ghostscript.com/
+HOMEPAGE=	https://ghostscript.com/
 COMMENT=	Postscript interpreter
 # Plus adobe verbatim for Resources/CMap.
 LICENSE=	gnu-agpl-v3

@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.72 2016/07/09 06:39:12 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2017/08/01 14:59:07 wiz Exp $
 
 DISTNAME=	dillo-3.0.5
 PKGREVISION=	2
 CATEGORIES=	www
-MASTER_SITES=	http://www.dillo.org/download/
+MASTER_SITES=	https://www.dillo.org/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.dillo.org/
+HOMEPAGE=	https://www.dillo.org/
 COMMENT=	Very small and fast graphical web-browser
 LICENSE=	gnu-gpl-v3
 

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2016/07/16 00:19:02 markd Exp $
+# $NetBSD: Makefile,v 1.5 2017/08/01 14:58:57 wiz Exp $
 
 DISTNAME=	fs-uae-2.6.2
 PKGREVISION=	1
 CATEGORIES=	emulators
-MASTER_SITES=	http://fs-uae.net/fs-uae/stable/${PKGVERSION_NOREV}/
+MASTER_SITES=	https://fs-uae.net/fs-uae/stable/${PKGVERSION_NOREV}/
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://fs-uae.net/
+HOMEPAGE=	https://fs-uae.net/
 COMMENT=	FS-UAE Amiga Emulator
 LICENSE=	gnu-gpl-v2
 

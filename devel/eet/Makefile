@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2016/03/05 11:27:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.29 2017/08/01 14:58:55 wiz Exp $
 #
 
 DISTNAME=	eet-1.7.7
@@ -8,7 +8,7 @@ MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://www.enlightenment.org/
+HOMEPAGE=	https://www.enlightenment.org/
 COMMENT=	Library for speedy storage, retrieval, and compression
 LICENSE=	2-clause-bsd
 

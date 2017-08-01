@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/04/20 12:10:25 nros Exp $
+# $NetBSD: Makefile,v 1.13 2017/08/01 14:58:51 wiz Exp $
 #
 
 DISTNAME=		amaroc-0.3
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amaroc/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://sourceforge.net/projects/amaroc/
+HOMEPAGE=		https://sourceforge.net/projects/amaroc/
 COMMENT=		Command line interface to Amarok
 LICENSE=		gnu-gpl-v2
 

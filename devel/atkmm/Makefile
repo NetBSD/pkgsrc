@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/05/03 08:38:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2017/08/01 14:58:54 wiz Exp $
 
 DISTNAME=	atkmm-2.24.2
 PKGREVISION=	4
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gtkmm.org/
+HOMEPAGE=	https://www.gtkmm.org/
 COMMENT=	C++ bindings for atk
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 

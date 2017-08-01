@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2015/04/25 14:23:11 tnn Exp $
+# $NetBSD: Makefile,v 1.63 2017/08/01 14:59:00 wiz Exp $
 
 DISTNAME=	glu-9.0.0
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/glu/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cgit.freedesktop.org/mesa/glu/
+HOMEPAGE=	https://cgit.freedesktop.org/mesa/glu/
 COMMENT=	GLU polygon tessellation facility for Mesa
 LICENSE=	sgi-free-software-b-v2.0
 

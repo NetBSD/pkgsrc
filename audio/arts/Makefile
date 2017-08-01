@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.93 2017/07/24 08:34:30 maya Exp $
+# $NetBSD: Makefile,v 1.94 2017/08/01 14:58:51 wiz Exp $
 
 DISTNAME=	arts-1.5.10
 PKGREVISION=	15
 CATEGORIES=	audio
-HOMEPAGE=	http://multimedia.kde.org/
+HOMEPAGE=	https://multimedia.kde.org/
 COMMENT=	Analog Real-Time Synthesizer
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2017/04/22 21:03:37 adam Exp $
+# $NetBSD: Makefile,v 1.55 2017/08/01 14:58:59 wiz Exp $
 
 DISTNAME=		digikam-0.9.6
 PKGREVISION=		48
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.digikam.org/
+HOMEPAGE=		https://www.digikam.org/
 COMMENT=		Advanced digital photo management application (KDE3)
 LICENSE=		gnu-gpl-v2
 

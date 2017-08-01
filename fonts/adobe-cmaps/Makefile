@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/03 18:28:16 asau Exp $
+# $NetBSD: Makefile,v 1.22 2017/08/01 14:58:58 wiz Exp $
 
 DISTNAME=	adobe-cmaps-20060615
 CATEGORIES=	fonts print
@@ -21,7 +21,7 @@ SITES.${f}+=	http://partners.adobe.com/public/developer/en/pdf/
 DISTFILES+=	${PDFCORE_DISTFILES}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://partners.adobe.com/public/developer/opentype/
+HOMEPAGE=	https://partners.adobe.com/public/developer/opentype/
 COMMENT=	Adobe CMap files for CJK
 
 DIST_SUBDIR=	${PKGNAME_NOREV}

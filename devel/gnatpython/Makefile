@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/01/01 14:43:30 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/08/01 14:58:56 wiz Exp $
 
 DISTNAME=	gnatpython-${SNAPSHOT}
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://downloads.dragonlace.net/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER= 	draco@marino.st
-HOMEPAGE=	http://forge.open-do.org/projects/gnatpython
+HOMEPAGE=	https://forge.open-do.org/projects/gnatpython
 COMMENT=	Python package used in Ada testsuites
 LICENSE= 	gnu-gpl-v3
 SNAPSHOT=	20110912

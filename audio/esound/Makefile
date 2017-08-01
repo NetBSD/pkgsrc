@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2015/01/09 16:33:15 rumko Exp $
+# $NetBSD: Makefile,v 1.84 2017/08/01 14:58:52 wiz Exp $
 
 DISTNAME=		esound-0.2.41
 PKGREVISION=		3
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/esound/0.2/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.tux.org/~ricdude/EsounD.html
+HOMEPAGE=		https://www.tux.org/~ricdude/EsounD.html
 COMMENT=		The Enlightened sound daemon
 LICENSE=		gnu-lgpl-v2
 

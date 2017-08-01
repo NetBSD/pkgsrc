@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 16:08:31 asau Exp $
+# $NetBSD: Makefile,v 1.9 2017/08/01 14:58:57 wiz Exp $
 #
 
 DISTNAME=	gstfs-0.1
 PKGNAME=	fuse-${DISTNAME}
 PKGREVISION=	5
 CATEGORIES=	filesystems
-MASTER_SITES=	http://bobcopeland.com/gstfs/releases/
+MASTER_SITES=	https://bobcopeland.com/gstfs/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bobcopeland.com/gstfs/
+HOMEPAGE=	https://bobcopeland.com/gstfs/
 COMMENT=	On-demand, transcoding filesystem (using GStreamer pipeline)
 
 USE_TOOLS+=		pkg-config gmake

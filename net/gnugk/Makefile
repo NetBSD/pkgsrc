@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/03/05 11:29:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2017/08/01 14:59:03 wiz Exp $
 
 DISTNAME=	gnugk-2.2.0
 PKGREVISION=	7
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openh323gk/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnugk.org/
+HOMEPAGE=	https://www.gnugk.org/
 COMMENT=	H.323 Gatekeeper
 
 PKG_DESTDIR_SUPPORT=	destdir

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.72 2017/05/14 11:39:32 leot Exp $
+# $NetBSD: Makefile,v 1.73 2017/08/01 14:58:53 wiz Exp $
 
 DISTNAME=		bitlbee-3.5.1
 CATEGORIES=		chat
 MASTER_SITES=		http://get.bitlbee.org/src/
 
 MAINTAINER=		tonio@NetBSD.org
-HOMEPAGE=		http://www.bitlbee.org/
+HOMEPAGE=		https://www.bitlbee.org/
 COMMENT=		IRC to other chat networks gateway
 LICENSE=		gnu-gpl-v2
 

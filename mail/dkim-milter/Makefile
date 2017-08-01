@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2016/03/05 11:27:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2017/08/01 14:59:01 wiz Exp $
 
 DISTNAME=	dkim-milter-2.8.3
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dkim-milter/}
 
 MAINTAINER=	imil@gcu.info
-HOMEPAGE=	http://sourceforge.net/projects/dkim-milter/
+HOMEPAGE=	https://sourceforge.net/projects/dkim-milter/
 COMMENT=	Open source DKIM filter software from Sendmail, Inc
 LICENSE=		sendmail-open-source-license
 

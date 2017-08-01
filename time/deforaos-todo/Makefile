@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2017/02/12 06:26:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2017/08/01 14:59:06 wiz Exp $
 
 DISTNAME=	Todo-0.2.1
 PKGNAME=	deforaos-todo-0.2.1
 PKGREVISION=	3
 CATEGORIES=	time
-MASTER_SITES=	http://www.defora.org/os/download/download/4429/
+MASTER_SITES=	https://www.defora.org/os/download/download/4429/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop todo list
 
 LICENSE=	2-clause-bsd
