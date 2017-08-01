@@ -37,6 +37,6 @@ function.
 </dd></dl> 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveWrite3]], 
-[[ManPageArchiveWriteSetOptions3]] 
+[[ManPageibarchive3]], 
+[[ManPagerchiverite3]], 
+[[ManPagerchiveriteetptions3]] 
