@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2017/08/01 15:06:24 wiz Exp $
+
+SHA1 (mandoc-1.14.2.tar.gz) = f0c0398398af88364f56334e93c1b307c5bea7df
+RMD160 (mandoc-1.14.2.tar.gz) = f572c277d8b2eccd7a8bc9f6e1b15ee11626a6ef
+SHA512 (mandoc-1.14.2.tar.gz) = 1691e4552b0417a30a3a546cff651665f8b4b3fbe2357c734546ca29c56eef9c971a6bd88daa170f4697fb50d14048138f4bc6f5ef55aa24a7ac03903d04c868
+Size (mandoc-1.14.2.tar.gz) = 616843 bytes
+SHA1 (patch-configure) = bd53ddf7d98de53bc04dafe6b2dbb1b79e35399e
+SHA1 (patch-roff.7) = a11e2377e034393f4d900d292b094a9e751a6c0a

@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2017/08/01 15:06:24 wiz Exp $
+
+Avoid broken CC detection.
+
+--- configure.orig	2017-02-21 00:25:20.000000000 +0000
++++ configure
+@@ -39,7 +39,7 @@ MANPATH_DEFAULT="/usr/share/man:/usr/X11
+ OSNAME=
+ UTF8_LOCALE=
+ 
+-CC=`printf "all:\\n\\t@echo \\\$(CC)\\n" | env -i make -sf -`
++#CC=`printf "all:\\n\\t@echo \\\$(CC)\\n" | env -i make -sf -`
+ CFLAGS="-g -W -Wall -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings"
+ CFLAGS="${CFLAGS} -Wno-unused-parameter"
+ LDADD=
