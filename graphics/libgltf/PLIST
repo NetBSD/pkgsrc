@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/13 21:50:10 ryoon Exp $
-include/libgltf-0.0/libgltf.h
-include/libgltf-0.0/types.h
-lib/libgltf-0.0.la
-lib/pkgconfig/libgltf-0.0.pc
+@comment $NetBSD: PLIST,v 1.2 2017/08/01 12:05:31 ryoon Exp $
+include/libgltf-0.1/libgltf.h
+include/libgltf-0.1/types.h
+lib/libgltf-0.1.la
+lib/pkgconfig/libgltf-0.1.pc
