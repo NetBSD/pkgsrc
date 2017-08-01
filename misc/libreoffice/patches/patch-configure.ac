@@ -1,11 +1,8 @@
-$NetBSD: patch-configure.ac,v 1.6 2017/02/04 01:48:00 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.7 2017/08/01 11:57:37 ryoon Exp $
 
-* Adapt ant path for pkgsrc.
-* Explicitly use internal static libraries with path
-
---- configure.ac.orig	2017-01-26 22:22:46.000000000 +0000
+--- configure.ac.orig	2017-07-25 20:26:39.000000000 +0000
 +++ configure.ac
-@@ -6025,14 +6025,14 @@ if test "$GCC" = "yes" -o "$COM_IS_CLANG
+@@ -6026,14 +6026,14 @@ if test "$GCC" = "yes" -o "$COM_IS_CLANG
          ], [AC_MSG_RESULT([no])])
      AC_LANG_POP([C++])
  
@@ -23,25 +20,39 @@ $NetBSD: patch-configure.ac,v 1.6 2017/02/04 01:48:00 ryoon Exp $
              AC_MSG_RESULT([yes])
          ], [AC_MSG_RESULT([no])])
      AC_LANG_POP([C++])
-@@ -9177,7 +9177,7 @@ AC_SUBST(ICU_LIBS)
+@@ -9175,11 +9175,11 @@ dnl HarfBuzz
  dnl ===================================================================
- dnl Graphite
- dnl ===================================================================
--libo_CHECK_SYSTEM_MODULE([graphite],[GRAPHITE],[graphite2 >= 0.9.3],["-I${WORKDIR}/UnpackedTarball/graphite/include -DGRAPHITE2_STATIC"],["-L${WORKDIR}/LinkTarget/StaticLibrary -lgraphite"])
-+libo_CHECK_SYSTEM_MODULE([graphite],[GRAPHITE],[graphite2 >= 0.9.3],["-I${WORKDIR}/UnpackedTarball/graphite/include -DGRAPHITE2_STATIC"],["${WORKDIR}/LinkTarget/StaticLibrary/libgraphite.a"])
- if test "$with_system_graphite" = "yes"; then
-     libo_MINGW_CHECK_DLL([libgraphite2])
- fi
-@@ -9272,7 +9272,7 @@ AC_SUBST(ENABLE_ORCUS)
- dnl ===================================================================
- dnl HarfBuzz
- dnl ===================================================================
--libo_CHECK_SYSTEM_MODULE([harfbuzz],[HARFBUZZ],[harfbuzz-icu >= 0.9.42],["-I${WORKDIR}/UnpackedTarball/harfbuzz/src"],["-L${WORKDIR}/UnpackedTarball/harfbuzz/src/.libs -lharfbuzz"])
-+libo_CHECK_SYSTEM_MODULE([harfbuzz],[HARFBUZZ],[harfbuzz-icu >= 0.9.42],["-I${WORKDIR}/UnpackedTarball/harfbuzz/src"],["${WORKDIR}/UnpackedTarball/harfbuzz/src/.libs/libharfbuzz.a"])
+ libo_CHECK_SYSTEM_MODULE([graphite],[GRAPHITE],[graphite2 >= 0.9.3],
+                          ["-I${WORKDIR}/UnpackedTarball/graphite/include -DGRAPHITE2_STATIC"],
+-                         ["-L${WORKDIR}/LinkTarget/StaticLibrary -lgraphite"])
++                         ["${WORKDIR}/LinkTarget/StaticLibrary/libgraphite.a"])
+ 
+ libo_CHECK_SYSTEM_MODULE([harfbuzz],[HARFBUZZ],[harfbuzz-icu >= 0.9.42],
+                          ["-I${WORKDIR}/UnpackedTarball/harfbuzz/src"],
+-                         ["-L${WORKDIR}/UnpackedTarball/harfbuzz/src/.libs -lharfbuzz"])
++                         ["${WORKDIR}/UnpackedTarball/harfbuzz/src/.libs/libharfbuzz.a"])
+ 
  if test "$COM" = "MSC"; then # override the above
-     HARFBUZZ_LIBS="${WORKDIR}/UnpackedTarball/harfbuzz/src/.libs/libharfbuzz.lib"
- fi
-@@ -11899,8 +11899,8 @@ EOF
+     GRAPHITE_LIBS="${WORKDIR}/LinkTarget/StaticLibrary/graphite.lib"
+@@ -10409,7 +10409,7 @@ fi
+ AC_SUBST(ENABLE_PDFIUM)
+ 
+ SYSTEM_GPGMEPP=
+-if test "$_os" = "Linux"; then
++if test "$_os" = "Linux" -o "$_os" = "NetBSD"; then
+     dnl ===================================================================
+     dnl Check for system gpgme
+     dnl ===================================================================
+@@ -10419,7 +10419,7 @@ if test "$_os" = "Linux"; then
+         SYSTEM_GPGMEPP=TRUE
+ 
+         # C++ library doesn't come with fancy gpgmepp-config, check for headers the old-fashioned way
+-        AC_CHECK_HEADER(gpgme++/gpgmepp_version.h, [ GPGMEPP_CFLAGS=-I/usr/include/gpgme++ ],
++        AC_CHECK_HEADER(gpgme++/gpgmepp_version.h, [ GPGMEPP_CFLAGS=-I@PREFIX@/include/gpgme++ ],
+             [AC_MSG_ERROR([gpgmepp headers not found, install gpgmepp development package])], [])
+         # progress_callback is the only func with plain C linkage
+         # checking for it also filters out older, KDE-dependent libgpgmepp versions
+@@ -11678,8 +11678,8 @@ EOF
      dnl Checking for ant.jar
      if test "$ANT_HOME" != "NO_ANT_HOME"; then
          AC_MSG_CHECKING([Ant lib directory])

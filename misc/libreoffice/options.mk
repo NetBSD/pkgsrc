@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2016/12/14 13:52:56 ryoon Exp $
+# $NetBSD: options.mk,v 1.5 2017/08/01 11:57:36 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice
 PKG_SUPPORTED_OPTIONS=	java debug kde4 gtk3 cups
@@ -30,11 +30,6 @@ CONFIGURE_ARGS+=	--enable-ext-wiki-publisher \
 			--with-system-hsqldb \
 			--without-system-jfreereport
 PLIST_SRC+=		${PLIST_SRC_DFLT:Q} ${PKGDIR}/PLIST.java
-.  if !empty(PKG_JVM:Mopenjdk7)
-CONFIGURE_ARGS+=	--disable-scripting-javascript
-.  else
-PLIST_SRC+=		${PKGDIR}/PLIST.javascript
-.  endif
 PLIST.java=		yes
 .else
 CONFIGURE_ARGS+=	--without-java
