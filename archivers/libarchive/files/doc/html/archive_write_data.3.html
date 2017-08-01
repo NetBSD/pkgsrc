@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Sat Feb 25 11:22:04 2017 -->
+<!-- CreationDate: Mon Jul 10 02:32:56 2017 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -25,8 +25,9 @@ ARCHIVE_WRITE_DATA(3)</p>
 
 <p style="margin-top: 1em"><b>NAME</b></p>
 
-<p style="margin-left:6%;"><b>archive_write_data</b>
-&mdash; functions for creating archives</p>
+<p style="margin-left:6%;"><b>archive_write_data</b>,
+<b>archive_write_data_block</b> &mdash; functions for
+creating archives</p>
 
 <p style="margin-top: 1em"><b>LIBRARY</b></p>
 
@@ -45,10 +46,32 @@ ARCHIVE_WRITE_DATA(3)</p>
 <p style="margin-left:12%;"><b>archive_write_data</b>(<i>struct&nbsp;archive&nbsp;*</i>,
 <i>const&nbsp;void&nbsp;*</i>, <i>size_t</i>);</p>
 
-<p style="margin-top: 1em"><b>DESCRIPTION</b></p>
 
-<p style="margin-left:6%;">Write data corresponding to the
+<p style="margin-left:6%; margin-top: 1em"><i>la_ssize_t</i></p>
+
+
+<p style="margin-left:12%;"><b>archive_write_data_block</b>(<i>struct&nbsp;archive&nbsp;*</i>,
+<i>const&nbsp;void&nbsp;*</i>, <i>size_t&nbsp;size</i>,
+<i>int64_t&nbsp;offset</i>);</p>
+
+<p style="margin-top: 1em"><b>DESCRIPTION <br>
+archive_write_data</b>()</p>
+
+<p style="margin-left:17%;">Write data corresponding to the
 header just written.</p>
+
+
+<p style="margin-top: 1em"><b>archive_write_data_block</b>()</p>
+
+<p style="margin-left:17%;">Write data corresponding to the
+header just written. This is like
+<b>archive_write_data</b>() except that it performs a seek
+on the file being written to the specified offset before
+writing the data. This is useful when restoring sparse files
+from archive formats that support sparse files. Returns
+number of bytes written or -1 on error. (Note: This is
+currently not supported for archive_write handles, only for
+archive_write_disk handles.</p>
 
 <p style="margin-top: 1em"><b>RETURN VALUES</b></p>
 
@@ -78,7 +101,7 @@ archive_write_finish_entry(3), archive_write_set_options(3),
 cpio(5), mtree(5), tar(5)</p>
 
 <p style="margin-left:6%; margin-top: 1em">BSD
-February&nbsp;2, 2012 BSD</p>
+February&nbsp;28, 2017 BSD</p>
 <hr>
 </body>
 </html>

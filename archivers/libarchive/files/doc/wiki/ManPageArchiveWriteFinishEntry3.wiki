@@ -19,6 +19,9 @@ is called automatically by
 and 
 '''archive_write_close'''() 
 as needed. 
+For 
+'''archive_write_disk''' 
+handles, this flushes pending file attribute changes like modification time. 
 == RETURN VALUES == 
 This function returns 
 '''ARCHIVE_OK''' 
@@ -39,9 +42,9 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveWriteData3]], 
-[[ManPageArchiveWriteSetOptions3]], 
+[[ManPageibarchive3]], 
+[[ManPagerchiveriteata3]], 
+[[ManPagerchiveriteetptions3]], 
 [[ManPageCpio5]], 
 [[ManPageMtree5]], 
 [[ManPageTar5]] 

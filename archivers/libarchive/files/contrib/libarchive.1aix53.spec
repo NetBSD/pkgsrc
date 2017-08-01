@@ -127,8 +127,8 @@ rm -fr %buildroot
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: libarchive.1aix53.spec,v $
-Revision 1.8  2017/02/25 21:11:19  joerg
-Merge libarchive-3.3.1.
+Revision 1.9  2017/08/01 22:26:22  joerg
+Merge for libarchive-3.3.2.
 
 Release 1aix53  2006/12/12 rm1023@dcx.com
 - tweak for aix-5.3

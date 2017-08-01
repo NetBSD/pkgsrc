@@ -1,144 +1,144 @@
 ARCHIVE_WRITE_OPTIONS(3) BSD Library Functions Manual ARCHIVE_WRITE_OPTIONS(3)
 
-1mNAME0m
-     1marchive_write_set_filter_option22m, 1marchive_write_set_format_option22m,
-     1marchive_write_set_option22m, 1marchive_write_set_options 22m— functions control‐
+NAME
+     archive_write_set_filter_option, archive_write_set_format_option,
+     archive_write_set_option, archive_write_set_options — functions control‐
      ling options for writing archives
 
-1mLIBRARY0m
+LIBRARY
      Streaming Archive Library (libarchive, -larchive)
 
-1mSYNOPSIS0m
-     4mint0m
-     1marchive_write_set_filter_option22m(4mstruct24m 4marchive24m 4m*24m, 4mconst24m 4mchar24m 4m*module24m,
-	 4mconst24m 4mchar24m 4m*option24m, 4mconst24m 4mchar24m 4m*value24m);
+SYNOPSIS
+     int
+     archive_write_set_filter_option(struct archive *, const char *module,
+	 const char *option, const char *value);
 
-     4mint0m
-     1marchive_write_set_format_option22m(4mstruct24m 4marchive24m 4m*24m, 4mconst24m 4mchar24m 4m*module24m,
-	 4mconst24m 4mchar24m 4m*option24m, 4mconst24m 4mchar24m 4m*value24m);
+     int
+     archive_write_set_format_option(struct archive *, const char *module,
+	 const char *option, const char *value);
 
-     4mint0m
-     1marchive_write_set_option22m(4mstruct24m 4marchive24m 4m*24m, 4mconst24m 4mchar24m 4m*module24m,
-	 4mconst24m 4mchar24m 4m*option24m, 4mconst24m 4mchar24m 4m*value24m);
+     int
+     archive_write_set_option(struct archive *, const char *module,
+	 const char *option, const char *value);
 
-     4mint0m
-     1marchive_write_set_options22m(4mstruct24m 4marchive24m 4m*24m, 4mconst24m 4mchar24m 4m*options24m);
+     int
+     archive_write_set_options(struct archive *, const char *options);
 
-1mDESCRIPTION0m
+DESCRIPTION
      These functions provide a way for libarchive clients to configure spe‐
      cific write modules.
 
-     1marchive_write_set_filter_option22m(), 1marchive_write_set_format_option22m()
+     archive_write_set_filter_option(), archive_write_set_format_option()
 	     Specifies an option that will be passed to currently-registered
 	     filters (including decompression filters) or format readers.
 
-	     If 4moption24m and 4mvalue24m are both NULL, these functions will do noth‐
-	     ing and 1mARCHIVE_OK 22mwill be returned.	If 4moption24m is NULL but 4mvalue0m
-	     is not, these functions will do nothing and 1mARCHIVE_FAILED 22mwill
+	     If option and value are both NULL, these functions will do noth‐
+	     ing and ARCHIVE_OK will be returned.  If option is NULL but value
+	     is not, these functions will do nothing and ARCHIVE_FAILED will
 	     be returned.
 
-	     If 4mmodule24m is not NULL, 4moption24m and 4mvalue24m will be provided to the
-	     filter or reader named 4mmodule24m.  The return value will be either
-	     1mARCHIVE_OK 22mif the option was successfully handled or 1mARCHIVE_WARN0m
+	     If module is not NULL, option and value will be provided to the
+	     filter or reader named module.  The return value will be either
+	     ARCHIVE_OK if the option was successfully handled or ARCHIVE_WARN
 	     if the option was unrecognized by the module or could otherwise
-	     not be handled.  If there is no such module, 1mARCHIVE_FAILED 22mwill
+	     not be handled.  If there is no such module, ARCHIVE_FAILED will
 	     be returned.
 
-	     If 4mmodule24m is NULL, 4moption24m and 4mvalue24m will be provided to every
-	     registered module.  If any module returns 1mARCHIVE_FATAL22m, this
-	     value will be returned immediately.  Otherwise, 1mARCHIVE_OK 22mwill
-	     be returned if any module accepts the option, and 1mARCHIVE_FAILED0m
+	     If module is NULL, option and value will be provided to every
+	     registered module.  If any module returns ARCHIVE_FATAL, this
+	     value will be returned immediately.  Otherwise, ARCHIVE_OK will
+	     be returned if any module accepts the option, and ARCHIVE_FAILED
 	     in all other cases.
 
-     1marchive_write_set_option22m()
-	     Calls 1marchive_write_set_format_option22m(), then
-	     1marchive_write_set_filter_option22m().  If either function returns
-	     1mARCHIVE_FATAL22m, 1mARCHIVE_FATAL 22mwill be returned immediately.  Oth‐
+     archive_write_set_option()
+	     Calls archive_write_set_format_option(), then
+	     archive_write_set_filter_option().  If either function returns
+	     ARCHIVE_FATAL, ARCHIVE_FATAL will be returned immediately.  Oth‐
 	     erwise, greater of the two values will be returned.
 
-     1marchive_write_set_options22m()
-	     4moptions24m is a comma-separated list of options.  If 4moptions24m is NULL
-	     or empty, 1mARCHIVE_OK 22mwill be returned immediately.
+     archive_write_set_options()
+	     options is a comma-separated list of options.  If options is NULL
+	     or empty, ARCHIVE_OK will be returned immediately.
 
 	     Individual options have one of the following forms:
-	     4moption=value0m
+	     option=value
 		     The option/value pair will be provided to every module.
 		     Modules that do not accept an option with this name will
 		     ignore it.
-	     4moption24m  The option will be provided to every module with a value
+	     option  The option will be provided to every module with a value
 		     of “1”.
-	     4m!option0m
+	     !option
 		     The option will be provided to every module with a NULL
 		     value.
-	     4mmodule:option=value24m, 4mmodule:option24m, 4mmodule:!option0m
+	     module:option=value, module:option, module:!option
 		     As above, but the corresponding option and value will be
-		     provided only to modules whose name matches 4mmodule24m.
+		     provided only to modules whose name matches module.
 
-1mOPTIONS0m
+OPTIONS
      Filter gzip
-	     1mcompression-level0m
+	     compression-level
 		     The value is interpreted as a decimal integer specifying
 		     the gzip compression level.
      Filter xz
-	     1mcompression-level0m
+	     compression-level
 		     The value is interpreted as a decimal integer specifying
 		     the compression level.
      Format mtree
-	     1mcksum22m, 1mdevice22m, 1mflags22m, 1mgid22m, 1mgname22m, 1mindent22m, 1mlink22m, 1mmd522m, 1mmode22m, 1mnlink22m,
-		     1mrmd16022m, 1msha122m, 1msha25622m, 1msha38422m, 1msha51222m, 1msize22m, 1mtime22m, 1muid22m,
-		     1muname0m
+	     cksum, device, flags, gid, gname, indent, link, md5, mode, nlink,
+		     rmd160, sha1, sha256, sha384, sha512, size, time, uid,
+		     uname
 		     Enable a particular keyword in the mtree output.  Prefix
 		     with an exclamation mark to disable the corresponding
 		     keyword.  The default is equivalent to “device, flags,
 		     gid, gname, link, mode, nlink, size, time, type, uid,
 		     uname”.
-	     1mall     22mEnables all of the above keywords.
-	     1muse-set0m
-		     Enables generation of 1m/set 22mlines that specify default
+	     all     Enables all of the above keywords.
+	     use-set
+		     Enables generation of /set lines that specify default
 		     values for the following files and/or directories.
-	     1mindent  22mXXX needs explanation XXX
+	     indent  XXX needs explanation XXX
      Format iso9660 - volume metadata
 	     These options are used to set standard ISO9660 metadata.
-	     1mabstract-file22m=4mfilename0m
+	     abstract-file=filename
 		     The file with the specified name will be identified in
 		     the ISO9660 metadata as holding the abstract for this
 		     volume.  Default: none.
-	     1mapplication-id22m=4mfilename0m
+	     application-id=filename
 		     The file with the specified name will be identified in
 		     the ISO9660 metadata as holding the application identi‐
 		     fier for this volume.  Default: none.
-	     1mbiblio-file22m=4mfilename0m
+	     biblio-file=filename
 		     The file with the specified name will be identified in
 		     the ISO9660 metadata as holding the bibliography for this
 		     volume.  Default: none.
-	     1mcopyright-file22m=4mfilename0m
+	     copyright-file=filename
 		     The file with the specified name will be identified in
 		     the ISO9660 metadata as holding the copyright for this
 		     volume.  Default: none.
-	     1mpublisher22m=4mfilename0m
+	     publisher=filename
 		     The file with the specified name will be identified in
 		     the ISO9660 metadata as holding the publisher information
 		     for this volume.  Default: none.
-	     1mvolume-id22m=4mstring0m
+	     volume-id=string
 		     The specified string will be used as the Volume Identi‐
 		     fier in the ISO9660 metadata.  It is limited to 32 bytes.
 		     Default: none.
      Format iso9660 - boot support
 	     These options are used to make an ISO9660 image that can be
 	     directly booted on various systems.
-	     1mboot22m=4mfilename0m
+	     boot=filename
 		     The file matching this name will be used as the El Torito
 		     boot image file.
-	     1mboot-catalog22m=4mname0m
+	     boot-catalog=name
 		     The name that will be used for the El Torito boot cata‐
-		     log.  Default: 4mboot.catalog0m
-	     1mboot-info-table0m
-		     The boot image file provided by the 1mboot22m=4mfilename24m option
+		     log.  Default: boot.catalog
+	     boot-info-table
+		     The boot image file provided by the boot=filename option
 		     will be edited with appropriate boot information in bytes
 		     8 through 64.  Default: disabled
-	     1mboot-load-seg22m=4mhexadecimal-number0m
+	     boot-load-seg=hexadecimal-number
 		     The load segment for a no-emulation boot image.
-	     1mboot-load-size22m=4mdecimal-number0m
+	     boot-load-size=decimal-number
 		     The number of "virtual" 512-byte sectors to be loaded
 		     from a no-emulation boot image.  Some very old BIOSes can
 		     only load very small images, setting this value to 4 will
@@ -147,105 +147,105 @@ ARCHIVE_WRITE_OPTIONS(3) BSD Library Functions Manual ARCHIVE_WRITE_OPTIONS(3)
 		     to load the rest of itself).  This should not be needed
 		     unless you are trying to support systems with very old
 		     BIOSes.  This defaults to the full size of the image.
-	     1mboot-type22m=4mvalue0m
+	     boot-type=value
 		     Specifies the boot semantics used by the El Torito boot
-		     image: If the 4mvalue24m is 1mfd22m, then the boot image is assumed
-		     to be a bootable floppy image.  If the 4mvalue24m is 1mhd22m, then
+		     image: If the value is fd, then the boot image is assumed
+		     to be a bootable floppy image.  If the value is hd, then
 		     the boot image is assumed to be a bootable hard disk
-		     image.  If the 4mvalue24m is 1mno-emulation22m, the boot image is
+		     image.  If the value is no-emulation, the boot image is
 		     used without floppy or hard disk emulation.  If the boot
 		     image is exactly 1.2MB, 1.44MB, or 2.88MB, then the
-		     default is 1mfd22m, otherwise the default is 1mno-emulation.0m
+		     default is fd, otherwise the default is no-emulation.
      Format iso9660 - filename and size extensions
 	     Various extensions to the base ISO9660 format.
-	     1mallow-ldots0m
+	     allow-ldots
 		     If enabled, allows filenames to begin with a leading
 		     period.  If disabled, filenames that begin with a leading
 		     period will have that period replaced by an underscore
 		     character in the standard ISO9660 namespace.  This does
 		     not impact names stored in the Rockridge or Joliet exten‐
 		     sion area.  Default: disabled.
-	     1mallow-lowercase0m
+	     allow-lowercase
 		     If enabled, allows filenames to contain lowercase charac‐
 		     ters.  If disabled, filenames will be forced to upper‐
 		     case.  This does not impact names stored in the Rockridge
 		     or Joliet extension area.	Default: disabled.
-	     1mallow-multidot0m
+	     allow-multidot
 		     If enabled, allows filenames to contain multiple period
 		     characters, in violation of the ISO9660 specification.
 		     If disabled, additional periods will be converted to
 		     underscore characters.  This does not impact names stored
 		     in the Rockridge or Joliet extension area.  Default: dis‐
 		     abled.
-	     1mallow-period0m
+	     allow-period
 		     If enabled, allows filenames to contain trailing period
 		     characters, in violation of the ISO9660 specification.
 		     If disabled,trailing periods will be converted to under‐
 		     score characters.	This does not impact names stored in
 		     the Rockridge or Joliet extension area.  Default: dis‐
 		     abled.
-	     1mallow-pvd-lowercase0m
+	     allow-pvd-lowercase
 		     If enabled, the Primary Volume Descriptor may contain
 		     lowercase ASCII characters, in violation of the ISO9660
 		     specification.  If disabled, characters will be converted
 		     to uppercase ASCII.  Default: disabled.
-	     1mallow-sharp-tilde0m
+	     allow-sharp-tilde
 		     If enabled, sharp and tilde characters will be permitted
 		     in filenames, in violation if the ISO9660 specification.
 		     If disabled, such characters will be converted to under‐
 		     score characters.	Default: disabled.
-	     1mallow-vernum0m
+	     allow-vernum
 		     If enabled, version numbers will be included with files.
 		     If disabled, version numbers will be suppressed, in vio‐
 		     lation of the ISO9660 standard.  This does not impact
 		     names stored in the Rockridge or Joliet extension area.
 		     Default: enabled.
-	     1miso-level0m
+	     iso-level
 		     This enables support for file size and file name exten‐
 		     sions in the core ISO9660 area.  The name extensions
 		     specified here do not affect the names stored in the
 		     Rockridge or Joliet extension areas.
-		     1miso-level=10m
+		     iso-level=1
 			     The most compliant form of ISO9660 image.	File‐
 			     names are limited to 8.3 uppercase format, direc‐
 			     tory names are limited to 8 uppercase characters,
 			     files are limited to 4 GiB, the complete ISO9660
 			     image cannot exceed 4 GiB.
-		     1miso-level=20m
+		     iso-level=2
 			     Filenames are limited to 30 uppercase characters
 			     with a 30-character extension, directory names
 			     are limited to 30 characters, files are limited
 			     to 4 GiB.
-		     1miso-level=30m
-			     As with 1miso-level=222m, except that files may exceed
+		     iso-level=3
+			     As with iso-level=2, except that files may exceed
 			     4 GiB.
-		     1miso-level=40m
-			     As with 1miso-level=322m, except that filenames may be
+		     iso-level=4
+			     As with iso-level=3, except that filenames may be
 			     up to 193 characters and may include arbitrary
 			     8-bit characters.
-	     1mjoliet  22mMicrosoft's Joliet extensions store a completely separate
+	     joliet  Microsoft's Joliet extensions store a completely separate
 		     set of directory information about each file.  In partic‐
 		     ular, this information includes Unicode filenames of up
 		     to 255 characters.  Default: enabled.
-	     1mlimit-depth0m
+	     limit-depth
 		     If enabled, libarchive will use directory relocation
 		     records to ensure that no pathname exceeds the ISO9660
 		     limit of 8 directory levels.  If disabled, no relocation
 		     will occur.  Default: enabled.
-	     1mlimit-dirs0m
+	     limit-dirs
 		     If enabled, libarchive will cause an error if there are
 		     more than 65536 directories.  If disabled, there is no
 		     limit on the number of directories.  Default: enabled
-	     1mpad     22mIf enabled, 300 kiB of zero bytes will be appended to the
+	     pad     If enabled, 300 kiB of zero bytes will be appended to the
 		     end of the archive.  Default: enabled
-	     1mrelaxed-filenames0m
+	     relaxed-filenames
 		     If enabled, all 7-bit ASCII characters are permitted in
 		     filenames (except lowercase characters unless
-		     1mallow-lowercase 22mis also specified).  This violates
+		     allow-lowercase is also specified).  This violates
 		     ISO9660 standards.  This does not impact names stored in
 		     the Rockridge or Joliet extension area.  Default: dis‐
 		     abled.
-	     1mrockridge0m
+	     rockridge
 		     The Rockridge extensions store an additional set of
 		     POSIX-style file information with each file, including
 		     mtime, atime, ctime, permissions, and long filenames with
@@ -258,46 +258,46 @@ ARCHIVE_WRITE_OPTIONS(3) BSD Library Functions Manual ARCHIVE_WRITE_OPTIONS(3)
 	     significant size savings, but requires the reading system to have
 	     support for these extensions.  These extensions are disabled by
 	     default.
-	     1mcompression-level22m=number
+	     compression-level=number
 		     The compression level used by the deflate compressor.
 		     Ranges from 0 (least effort) to 9 (most effort).
 		     Default: 6
-	     1mzisofs  22mSynonym for 1mzisofs=direct22m.
-	     1mzisofs=direct0m
+	     zisofs  Synonym for zisofs=direct.
+	     zisofs=direct
 		     Compress each file in the archive.  Unlike
-		     1mzisofs=indirect22m, this is handled entirely within
+		     zisofs=indirect, this is handled entirely within
 		     libarchive and does not require a separate utility.  For
 		     best results, libarchive tests each file and will store
 		     the file uncompressed if the compression does not actu‐
 		     ally save any space.  In particular, files under 2k will
 		     never be compressed.  Note that boot image files are
 		     never compressed.
-	     1mzisofs=indirect0m
+	     zisofs=indirect
 		     Recognizes files that have already been compressed with
-		     the 1mmkzftree 22mutility and sets up the necessary file meta‐
+		     the mkzftree utility and sets up the necessary file meta‐
 		     data so that readers will correctly identify these as
 		     zisofs-compressed files.
-	     1mzisofs-exclude22m=4mfilename0m
+	     zisofs-exclude=filename
 		     Specifies a filename that should not be compressed when
-		     using 1mzisofs=direct22m.	This option can be provided multi‐
+		     using zisofs=direct.  This option can be provided multi‐
 		     ple times to suppress compression on many files.
      Format zip
-	     1mcompression0m
+	     compression
 		     The value is either “store” or “deflate” to indicate how
 		     the following entries should be compressed.  Note that
 		     this setting is ignored for directories, symbolic links,
 		     and other special entries.
-	     1mexperimental0m
+	     experimental
 		     This boolean option enables or disables experimental Zip
 		     features that may not be compatible with other Zip imple‐
 		     mentations.
-	     1mfakecrc320m
+	     fakecrc32
 		     This boolean option disables CRC calculations.  All CRC
 		     fields are set to zero.  It should not be used except for
 		     testing purposes.
-	     1mhdrcharset0m
+	     hdrcharset
 		     This sets the character set used for filenames.
-	     1mzip64   22mZip64 extensions provide additional file size information
+	     zip64   Zip64 extensions provide additional file size information
 		     for entries larger than 4 GiB.  They also provide
 		     extended file offset and archive size information when
 		     archives exceed 4 GiB.  By default, the Zip writer selec‐
@@ -311,7 +311,7 @@ ARCHIVE_WRITE_OPTIONS(3) BSD Library Functions Manual ARCHIVE_WRITE_OPTIONS(3)
 		     erwise require them.  This is primarily useful for test‐
 		     ing.
 
-		     Disabling this option with 1m!zip64 22mwill force the Zip
+		     Disabling this option with !zip64 will force the Zip
 		     writer to avoid Zip64 extensions: It will reject files
 		     with size greater than 4 GiB, it will reject any new
 		     entries once the total archive size reaches 4 GiB, and it
@@ -320,10 +320,10 @@ ARCHIVE_WRITE_OPTIONS(3) BSD Library Functions Manual ARCHIVE_WRITE_OPTIONS(3)
 		     generating archives where the entry sizes are not known
 		     in advance.
 
-1mEXAMPLES0m
+EXAMPLES
      The following example creates an archive write handle to create a gzip-
      compressed ISO9660 format image.  The two options here specify that the
-     ISO9660 archive will use 4mkernel.img24m as the boot image for El Torito boot‐
+     ISO9660 archive will use kernel.img as the boot image for El Torito boot‐
      ing, and that the gzip compressor should use the maximum compression
      level.
 
@@ -333,19 +333,19 @@ ARCHIVE_WRITE_OPTIONS(3) BSD Library Functions Manual ARCHIVE_WRITE_OPTIONS(3)
 	   archive_write_set_options(a, "boot=kernel.img,compression=9");
 	   archive_write_open_filename(a, filename, blocksize);
 
-1mERRORS0m
+ERRORS
      More detailed error codes and textual descriptions are available from the
-     1marchive_errno22m() and 1marchive_error_string22m() functions.
+     archive_errno() and archive_error_string() functions.
 
-1mSEE ALSO0m
+SEE ALSO
      tar(1), libarchive(3), archive_read_set_options(3), archive_write(3)
 
-1mHISTORY0m
-     The 1mlibarchive 22mlibrary first appeared in FreeBSD 5.3.
+HISTORY
+     The libarchive library first appeared in FreeBSD 5.3.
 
-1mAUTHORS0m
+AUTHORS
      The options support for libarchive was originally implemented by
      Michihiro NAKAJIMA.
 
-1mBUGS0m
+BUGS
 BSD			       February 2, 2012 			   BSD

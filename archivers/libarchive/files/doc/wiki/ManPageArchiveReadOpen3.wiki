@@ -5,7 +5,7 @@ ARCHIVE_READ_OPEN(3) manual page
 '''archive_read_open_fd''', 
 '''archive_read_open_FILE''', 
 '''archive_read_open_filename''', 
-'''archive_read_open_memory''', 
+'''archive_read_open_memory''' 
 - functions for reading streaming archives 
 == LIBRARY == 
 Streaming Archive Library (libarchive, -larchive) 
@@ -34,7 +34,7 @@ Streaming Archive Library (libarchive, -larchive)
 <br> 
 ''int'' 
 <br> 
-'''archive_read_open_memory'''(''struct archive *'', ''void *buff'', ''size_t size''); 
+'''archive_read_open_memory'''(''struct archive *'', ''const void *buff'', ''size_t size''); 
 == DESCRIPTION == 
 <dl> 
 <dt>'''archive_read_open'''()</dt><dd> 
@@ -92,7 +92,7 @@ A complete description of the
 and 
 '''struct archive_entry''' 
 objects can be found in the overview manual page for 
-[[ManPageLibarchive3]]. 
+[[ManPageibarchive3]]. 
 == CLIENT CALLBACKS == 
 The callback functions must match the following prototypes: 
 <ul> 
@@ -180,11 +180,11 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveRead3]], 
-[[ManPageArchiveReadData3]], 
-[[ManPageArchiveReadFilter3]], 
-[[ManPageArchiveReadFormat3]], 
-[[ManPageArchiveReadSetOptions3]], 
-[[ManPageArchiveUtil3]], 
+[[ManPageibarchive3]], 
+[[ManPagerchiveead3]], 
+[[ManPagerchiveeadata3]], 
+[[ManPagerchiveeadilter3]], 
+[[ManPagerchiveeadormat3]], 
+[[ManPagerchiveeadetptions3]], 
+[[ManPagerchivetil3]], 
 [[ManPageTar5]] 

@@ -1,11 +1,11 @@
 LIBARCHIVE(3)		 BSD Library Functions Manual		 LIBARCHIVE(3)
 
-1mNAME0m
-     1mlibarchive 22m— functions for reading and writing streaming archives
+NAME
+     libarchive — functions for reading and writing streaming archives
 
-1mOVERVIEW0m
-     The 1mlibarchive 22mlibrary provides a flexible interface for reading and
-     writing archives in various formats such as tar and cpio.	1mlibarchive0m
+OVERVIEW
+     The libarchive library provides a flexible interface for reading and
+     writing archives in various formats such as tar and cpio.	libarchive
      also supports reading and writing archives compressed using various com‐
      pression filters such as gzip and bzip2.  The library is inherently
      stream-oriented; readers serially iterate through the archive, writers
@@ -15,19 +15,19 @@ LIBARCHIVE(3)		 BSD Library Functions Manual		 LIBARCHIVE(3)
 
      When reading an archive, the library automatically detects the format and
      the compression.  The library currently has read support for:
-     1m·   22mold-style tar archives,
-     1m·   22mmost variants of the POSIX “ustar” format,
-     1m·   22mthe POSIX “pax interchange” format,
-     1m·   22mGNU-format tar archives,
-     1m·   22mmost common cpio archive formats,
-     1m·   22mISO9660 CD images (including RockRidge and Joliet extensions),
-     1m·   22mZip archives,
-     1m·   22mar archives (including GNU/SysV and BSD extensions),
-     1m·   22mMicrosoft CAB archives,
-     1m·   22mLHA archives,
-     1m·   22mmtree file tree descriptions,
-     1m·   22mRAR archives,
-     1m·   22mXAR archives.
+     ·	 old-style tar archives,
+     ·	 most variants of the POSIX “ustar” format,
+     ·	 the POSIX “pax interchange” format,
+     ·	 GNU-format tar archives,
+     ·	 most common cpio archive formats,
+     ·	 ISO9660 CD images (including RockRidge and Joliet extensions),
+     ·	 Zip archives,
+     ·	 ar archives (including GNU/SysV and BSD extensions),
+     ·	 Microsoft CAB archives,
+     ·	 LHA archives,
+     ·	 mtree file tree descriptions,
+     ·	 RAR archives,
+     ·	 XAR archives.
      The library automatically detects archives compressed with gzip(1),
      bzip2(1), xz(1), lzip(1), or compress(1) and decompresses them transpar‐
      ently.  It can similarly detect and decode archives processed with
@@ -35,16 +35,16 @@ LIBARCHIVE(3)		 BSD Library Functions Manual		 LIBARCHIVE(3)
 
      When writing an archive, you can specify the compression to be used and
      the format to use.  The library can write
-     1m·   22mPOSIX-standard “ustar” archives,
-     1m·   22mPOSIX “pax interchange format” archives,
-     1m·   22mPOSIX octet-oriented cpio archives,
-     1m·   22mZip archive,
-     1m·   22mtwo different variants of shar archives,
-     1m·   22mISO9660 CD images,
-     1m·   22m7-Zip archives,
-     1m·   22mar archives,
-     1m·   22mmtree file tree descriptions,
-     1m·   22mXAR archives.
+     ·	 POSIX-standard “ustar” archives,
+     ·	 POSIX “pax interchange format” archives,
+     ·	 POSIX octet-oriented cpio archives,
+     ·	 Zip archive,
+     ·	 two different variants of shar archives,
+     ·	 ISO9660 CD images,
+     ·	 7-Zip archives,
+     ·	 ar archives,
+     ·	 mtree file tree descriptions,
+     ·	 XAR archives.
      Pax interchange format is an extension of the tar archive format that
      eliminates essentially all of the limitations of historic tar formats in
      a standard fashion that is supported by POSIX-compliant pax(1) implemen‐
@@ -53,29 +53,29 @@ LIBARCHIVE(3)		 BSD Library Functions Manual		 LIBARCHIVE(3)
      extended attributes for most entries; explicitly requesting pax format
      will enable those attributes for all entries.
 
-     The read and write APIs are accessed through the 1marchive_read_XXX22m() func‐
-     tions and the 1marchive_write_XXX22m() functions, respectively, and either can
+     The read and write APIs are accessed through the archive_read_XXX() func‐
+     tions and the archive_write_XXX() functions, respectively, and either can
      be used independently of the other.
 
      The rest of this manual page provides an overview of the library opera‐
      tion.  More detailed information can be found in the individual manual
      pages for each API or utility function.
 
-1mREADING AN ARCHIVE0m
+READING AN ARCHIVE
      See archive_read(3).
 
-1mWRITING AN ARCHIVE0m
+WRITING AN ARCHIVE
      See archive_write(3).
 
-1mWRITING ENTRIES TO DISK0m
+WRITING ENTRIES TO DISK
      The archive_write_disk(3) API allows you to write archive_entry(3)
      objects to disk using the same API used by archive_write(3).  The
-     archive_write_disk(3) API is used internally by 1marchive_read_extract22m();
+     archive_write_disk(3) API is used internally by archive_read_extract();
      using it directly can provide greater control over how entries get writ‐
      ten to disk.  This API also makes it possible to share code between ar‐
      chive-to-archive copy and archive-to-disk extraction operations.
 
-1mREADING ENTRIES FROM DISK0m
+READING ENTRIES FROM DISK
      The archive_read_disk(3) supports for populating archive_entry(3) objects
      from information in the filesystem.  This includes the information acces‐
      sible from the stat(2) system call as well as ACLs, extended attributes,
@@ -83,7 +83,7 @@ LIBARCHIVE(3)		 BSD Library Functions Manual		 LIBARCHIVE(3)
      over directory trees, which allows directories of files to be read using
      an API compatible with the archive_read(3) API.
 
-1mDESCRIPTION0m
+DESCRIPTION
      Detailed descriptions of each function are provided by the corresponding
      manual pages.
 
@@ -99,43 +99,43 @@ LIBARCHIVE(3)		 BSD Library Functions Manual		 LIBARCHIVE(3)
      Clients should not assume that filenames, link names, user names, or
      group names are limited in length.  In particular, pax interchange format
      can easily accommodate pathnames in arbitrary character sets that exceed
-     4mPATH_MAX24m.
+     PATH_MAX.
 
-1mRETURN VALUES0m
-     Most functions return 1mARCHIVE_OK 22m(zero) on success, non-zero on error.
+RETURN VALUES
+     Most functions return ARCHIVE_OK (zero) on success, non-zero on error.
      The return value indicates the general severity of the error, ranging
-     from 1mARCHIVE_WARN22m, which indicates a minor problem that should probably
-     be reported to the user, to 1mARCHIVE_FATAL22m, which indicates a serious
+     from ARCHIVE_WARN, which indicates a minor problem that should probably
+     be reported to the user, to ARCHIVE_FATAL, which indicates a serious
      problem that will prevent any further operations on this archive.	On
-     error, the 1marchive_errno22m() function can be used to retrieve a numeric
-     error code (see errno(2)).  The 1marchive_error_string22m() returns a textual
+     error, the archive_errno() function can be used to retrieve a numeric
+     error code (see errno(2)).  The archive_error_string() returns a textual
      error message suitable for display.
 
-     1marchive_read_new22m() and 1marchive_write_new22m() return pointers to an allo‐
+     archive_read_new() and archive_write_new() return pointers to an allo‐
      cated and initialized struct archive object.
 
-     1marchive_read_data22m() and 1marchive_write_data22m() return a count of the number
+     archive_read_data() and archive_write_data() return a count of the number
      of bytes actually read or written.  A value of zero indicates the end of
      the data for this entry.  A negative value indicates an error, in which
-     case the 1marchive_errno22m() and 1marchive_error_string22m() functions can be used
+     case the archive_errno() and archive_error_string() functions can be used
      to obtain more information.
 
-1mENVIRONMENT0m
+ENVIRONMENT
      There are character set conversions within the archive_entry(3) functions
      that are impacted by the currently-selected locale.
 
-1mSEE ALSO0m
+SEE ALSO
      tar(1), archive_entry(3), archive_read(3), archive_util(3),
      archive_write(3), tar(5)
 
-1mHISTORY0m
-     The 1mlibarchive 22mlibrary first appeared in FreeBSD 5.3.
+HISTORY
+     The libarchive library first appeared in FreeBSD 5.3.
 
-1mAUTHORS0m
-     The 1mlibarchive 22mlibrary was originally written by Tim Kientzle
+AUTHORS
+     The libarchive library was originally written by Tim Kientzle
      <kientzle@acm.org>.
 
-1mBUGS0m
+BUGS
      Some archive formats support information that is not supported by struct
      archive_entry.  Such information cannot be fully archived or restored
      using this library.  This includes, for example, comments, character

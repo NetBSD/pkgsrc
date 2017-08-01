@@ -51,13 +51,13 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveRead3]], 
-[[ManPageArchiveReadData3]], 
-[[ManPageArchiveReadExtract3]], 
-[[ManPageArchiveReadFilter3]], 
-[[ManPageArchiveReadFormat3]], 
-[[ManPageArchiveReadOpen3]], 
-[[ManPageArchiveReadSetOptions3]], 
-[[ManPageArchiveUtil3]], 
+[[ManPageibarchive3]], 
+[[ManPagerchiveead3]], 
+[[ManPagerchiveeadata3]], 
+[[ManPagerchiveeadxtract3]], 
+[[ManPagerchiveeadilter3]], 
+[[ManPagerchiveeadormat3]], 
+[[ManPagerchiveeadpen3]], 
+[[ManPagerchiveeadetptions3]], 
+[[ManPagerchivetil3]], 
 [[ManPageTar5]] 
