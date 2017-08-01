@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/06/20 20:50:49 markd Exp $
+# $NetBSD: Makefile,v 1.34 2017/08/01 14:58:58 wiz Exp $
 
 DISTNAME=	texlive-20170524-source
 PKGNAME=	ttf2pk-2.0
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2017/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	bernhard@SDG.de
-HOMEPAGE=	http://www.freetype.org/
+HOMEPAGE=	https://www.freetype.org/
 COMMENT=	TrueType to TeX PK font converter
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \

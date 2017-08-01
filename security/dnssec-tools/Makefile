@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.27 2016/07/09 06:38:54 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2017/08/01 14:59:04 wiz Exp $
 
 DISTNAME=	dnssec-tools-2.1
 PKGREVISION=	3
 CATEGORIES=	security
-MASTER_SITES=	http://www.dnssec-tools.org/download/
+MASTER_SITES=	https://www.dnssec-tools.org/download/
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://www.dnssec-tools.org/
+HOMEPAGE=	https://www.dnssec-tools.org/
 COMMENT=	Toolkit to ease the deployment of DNSSEC related technologies
 LICENSE=	modified-bsd
 

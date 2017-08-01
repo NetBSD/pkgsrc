@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/03/05 11:28:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2017/08/01 14:59:01 wiz Exp $
 
 DISTNAME=	dk-milter-1.0.2
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dk-milter/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/dk-milter/
+HOMEPAGE=	https://sourceforge.net/projects/dk-milter/
 COMMENT=	Open source DomainKeys filter software from Sendmail, Inc
 LICENSE=	sendmail-open-source-license
 

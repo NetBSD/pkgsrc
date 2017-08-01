@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/02/12 06:25:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2017/08/01 14:58:54 wiz Exp $
 
 PKGNAME=	bossa-20140109
 DISTNAME=	b-o-s-s-a-code-05bfcc39bc0453c3028b1161175b95a81af7a901
@@ -7,7 +7,7 @@ CATEGORIES=	comms
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	reinoud@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/b-o-s-s-a/
+HOMEPAGE=	https://sourceforge.net/projects/b-o-s-s-a/
 COMMENT=	Open source SAM-BA compatible Atmel ARM programmer
 LICENSE=	gnu-gpl-v3
 

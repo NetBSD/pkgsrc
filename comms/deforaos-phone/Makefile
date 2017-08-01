@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.29 2017/04/13 11:26:18 khorben Exp $
+# $NetBSD: Makefile,v 1.30 2017/08/01 14:58:53 wiz Exp $
 
 DISTNAME=	Phone-0.5.1
 PKGNAME=	deforaos-phone-0.5.1
 CATEGORIES=	comms net
-MASTER_SITES=	http://www.defora.org/os/download/download/4455/
+MASTER_SITES=	https://www.defora.org/os/download/download/4455/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop telephony
 
 LICENSE=	gnu-gpl-v3

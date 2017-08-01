@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/07/28 15:40:05 leot Exp $
+# $NetBSD: Makefile,v 1.24 2017/08/01 14:58:53 wiz Exp $
 #
 
 DISTNAME=	gammu-1.38.4
@@ -7,7 +7,7 @@ MASTER_SITES=	http://dl.cihar.com/gammu/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wammu.eu/gammu/
+HOMEPAGE=	https://wammu.eu/gammu/
 COMMENT=	Command line utility and library to work with mobile phones
 LICENSE=	gnu-gpl-v2
 

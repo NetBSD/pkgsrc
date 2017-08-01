@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2014/02/16 01:19:32 wiedi Exp $
+# $NetBSD: Makefile,v 1.10 2017/08/01 14:59:05 wiz Exp $
 #
 
 DISTNAME=	pacpidump
 PKGNAME=	acpidump-20020711
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://people.freebsd.org/~takawata/
+MASTER_SITES=	https://people.freebsd.org/~takawata/
 
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	${MASTER_SITES}	# Just a directory list. :-)

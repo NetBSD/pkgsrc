@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/04/25 14:22:52 tnn Exp $
+# $NetBSD: Makefile,v 1.36 2017/08/01 14:58:58 wiz Exp $
 
 DISTNAME=		bomberclone-0.11.9
 PKGREVISION=		1
@@ -6,7 +6,7 @@ CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bomberclone/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.bomberclone.de/
+HOMEPAGE=		https://www.bomberclone.de/
 COMMENT=		Multi-player Bomberman clone
 
 LICENSE=		gnu-gpl-v2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2017/04/22 21:03:57 adam Exp $
+# $NetBSD: Makefile,v 1.70 2017/08/01 14:59:06 wiz Exp $
 #
 
 DISTNAME=	gnome-power-manager-2.24.4
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-power-manager/2.24/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://projects.gnome.org/gnome-power-manager/
+HOMEPAGE=	https://projects.gnome.org/gnome-power-manager/
 COMMENT=	GNOME desktop session daemon for managing power management
 
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2017/05/24 15:19:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2017/08/01 14:59:04 wiz Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-gpl/}
 PKGREVISION=	13
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/}
-MASTER_SITES+=	http://ghostscript.com/releases/
+MASTER_SITES+=	https://ghostscript.com/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

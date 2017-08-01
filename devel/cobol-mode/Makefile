@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/05 12:38:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/01 14:58:54 wiz Exp $
 
 DISTNAME=	cobol-mode.el
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}-0.0.20150505
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.emacswiki.org/emacs/download/
 EXTRACT_SUFX=	# empty
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.emacswiki.org/emacs/CobolMode
+HOMEPAGE=	https://www.emacswiki.org/emacs/CobolMode
 COMMENT=	Emacs mode for editing COBOL source code
 LICENSE=	gnu-gpl-v2
 

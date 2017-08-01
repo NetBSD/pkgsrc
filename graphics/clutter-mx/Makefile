@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/02/12 06:24:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2017/08/01 14:58:59 wiz Exp $
 #
 
 DISTNAME=	mx-1.0.4
@@ -9,7 +9,7 @@ MASTER_SITES=	http://source.clutter-project.org/sources/mx/1.0/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://blogs.gnome.org/thos/2010/05/20/mx-toolkit-1-0/
+HOMEPAGE=	https://blogs.gnome.org/thos/2010/05/20/mx-toolkit-1-0/
 COMMENT=	Clutter-based widget set
 #LICENSE=	# TODO: (see mk/license.mk)
 

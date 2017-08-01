@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2017/02/12 06:24:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.96 2017/08/01 14:58:57 wiz Exp $
 #
 
 DISTNAME=		libglade-2.6.4
@@ -21,7 +21,7 @@ CONFLICTS+=		libglade2-[0-9]*
 
 CONFIGURE_ARGS+=	--without-xml-catalog
 
-XML_ENTRIES=	system http://glade.gnome.org/glade-2.0.dtd \
+XML_ENTRIES=	system https://glade.gnome.org/glade-2.0.dtd \
 		${PREFIX}/share/xml/libglade/glade-2.0.dtd
 
 BUILDLINK_API_DEPENDS.atk+=		atk>=1.9.0

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/31 11:16:44 asau Exp $
+# $NetBSD: Makefile,v 1.21 2017/08/01 14:58:54 wiz Exp $
 
 DISTNAME=	c_cpp_reference-2.0.2
 PKGNAME=	${DISTNAME:S/_/-/g}
@@ -7,7 +7,7 @@ CATEGORIES=	devel kde
 MASTER_SITES=	ftp://ftp.e-technik.fh-muenchen.de/pub/unix/ide/KDevelop/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.kdevelop.org/
+HOMEPAGE=	https://www.kdevelop.org/
 COMMENT=	C and C++ reference for the KDE IDE
 
 DEPENDS+=	kdevelop-base>=3.1.0:../../devel/kdevelop-base

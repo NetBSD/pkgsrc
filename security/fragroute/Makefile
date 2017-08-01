@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/03/05 11:29:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2017/08/01 14:59:04 wiz Exp $
 
 DISTNAME=	fragroute-1.2
 PKGREVISION=	17
@@ -6,7 +6,7 @@ CATEGORIES=	security net
 MASTER_SITES=	http://monkey.org/~dugsong/fragroute/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.monkey.org/~dugsong/fragroute/
+HOMEPAGE=	https://www.monkey.org/~dugsong/fragroute/
 COMMENT=	Tool for intercepting, modifying and rewriting egress traffic
 
 GNU_CONFIGURE=		YES

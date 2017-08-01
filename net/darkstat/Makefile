@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.17 2015/12/28 12:02:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.18 2017/08/01 14:59:03 wiz Exp $
 
 DISTNAME=		darkstat-3.0.719
 CATEGORIES=		net
-MASTER_SITES=		http://unix4lyfe.org/darkstat/
+MASTER_SITES=		https://unix4lyfe.org/darkstat/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		bartosz.kuzma@gmail.com
-HOMEPAGE=		http://unix4lyfe.org/darkstat/
+HOMEPAGE=		https://unix4lyfe.org/darkstat/
 COMMENT=		Network statistics gatherer
 LICENSE=		gnu-gpl-v2
 

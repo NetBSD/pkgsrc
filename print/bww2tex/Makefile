@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2012/10/08 13:45:36 asau Exp $
+# $NetBSD: Makefile,v 1.12 2017/08/01 14:59:04 wiz Exp $
 #
 
 DISTNAME=	bww2tex-2.00
 CATEGORIES=	print
-MASTER_SITES=	http://www.stanford.edu/~wrinnes/bagpipe.tex/bww2tex/
+MASTER_SITES=	https://www.stanford.edu/~wrinnes/bagpipe.tex/bww2tex/
 DISTFILES=	bww2tex200.tar.gz
 
 MAINTAINER=	dgriffi@cs.csubak.edu
-HOMEPAGE=	http://www.stanford.edu/~wrinnes/bagpipe.tex/bww2tex/
+HOMEPAGE=	https://www.stanford.edu/~wrinnes/bagpipe.tex/bww2tex/
 COMMENT=	Bagpipe Music Writer Gold to BagpipeTeX converter
 
 USE_TOOLS+=	bison

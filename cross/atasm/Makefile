@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/12/15 12:37:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2017/08/01 14:58:53 wiz Exp $
 #
 
 DISTNAME=	atasm106
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=atasm/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/atasm/
+HOMEPAGE=	https://sourceforge.net/projects/atasm/
 COMMENT=	Cross-assembler for 6502 optimized to code for Atari 8 bit computers
 LICENSE=	gnu-gpl-v2
 

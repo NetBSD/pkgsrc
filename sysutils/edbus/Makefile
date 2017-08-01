@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/04/30 01:21:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2017/08/01 14:59:05 wiz Exp $
 #
 
 DISTNAME=	e_dbus-1.7.7
@@ -9,7 +9,7 @@ MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://www.enlightenment.org/
+HOMEPAGE=	https://www.enlightenment.org/
 COMMENT=	Convenience wrappers around dbus to ease integrating dbus with E17
 LICENSE=	2-clause-bsd
 

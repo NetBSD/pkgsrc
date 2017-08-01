@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2017/03/10 15:47:58 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2017/08/01 14:59:02 wiz Exp $
 
 DISTNAME=	dpkg_1.18.23
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/dpkg/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wiki.debian.org/Teams/Dpkg
+HOMEPAGE=	https://wiki.debian.org/Teams/Dpkg
 COMMENT=	Package maintenance system for Debian
 LICENSE=	gnu-gpl-v2
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2016/07/09 06:38:57 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2017/08/01 14:59:05 wiz Exp $
 #
 
 DISTNAME=	SnortSnarf-050314.1
 PKGNAME=	${DISTNAME:S/SnortSnarf-/snortsnarf-20/}
 PKGREVISION=	5
 CATEGORIES=	security net
-MASTER_SITES=	http://www.snort.org/dl/contrib/data_analysis/snortsnarf/
+MASTER_SITES=	https://www.snort.org/dl/contrib/data_analysis/snortsnarf/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.silicondefense.com/software/snortsnarf/
