@@ -1,3 +1,0 @@
-mdoclint is a tool to verify that man pages follow the conventions
-for NetBSD (and most other BSDs) regarding structure and macro
-usage.
