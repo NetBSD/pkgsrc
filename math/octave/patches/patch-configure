@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.5 2016/11/19 21:53:12 maya Exp $
+$NetBSD: patch-configure,v 1.6 2017/08/01 11:06:18 maya Exp $
 
 install .oct loadable modules with INSTALL_LIB to avoid stripping them
 
@@ -7,6 +7,9 @@ use this value due to an error.
 the guess it had for linux (x86_64-unknown-linux-gnu), seems to trample
 over our own tools:
 https://mail-index.netbsd.org/pkgsrc-users/2014/03/26/msg019464.html
+
+Allow overriding MKOCTFILE_F77 so we can provide the full path to gfortran
+(for building octave-forge packages like control)
 
 --- configure.orig	2016-11-13 15:22:50.000000000 +0000
 +++ configure
@@ -52,3 +55,24 @@ https://mail-index.netbsd.org/pkgsrc-users/2014/03/26/msg019464.html
  	    ac_exists=false
    for ac_i in $ac_cv_f77_libs; do
      if test x"$ac_arg" = x"$ac_i"; then
+@@ -29516,13 +29523,13 @@ if test "$cross_compiling" = yes && test
+   MKOCTFILE_LD_CXX=`echo "$LD_CXX" | $SED "s,$CROSS_TOOL_PREFIX,,"`
+   MKOCTFILE_RANLIB=`echo "$RANLIB" | $SED "s,$CROSS_TOOL_PREFIX,,"`
+ else
+-  MKOCTFILE_AR="$AR"
+-  MKOCTFILE_CC="$CC"
+-  MKOCTFILE_CXX="$CXX"
+-  MKOCTFILE_DL_LD="$DL_LD"
+-  MKOCTFILE_F77="$F77"
+-  MKOCTFILE_LD_CXX="$LD_CXX"
+-  MKOCTFILE_RANLIB="$RANLIB"
++  MKOCTFILE_AR="${MKOCTFILE_AR-$AR}"
++  MKOCTFILE_CC="${MKOCTFILE_CC-$CC}"
++  MKOCTFILE_CXX="${MKOCTFILE_CXX-$CXX}"
++  MKOCTFILE_DL_LD="${MKOCTFILE_DL_LD-$DL_LD}"
++  MKOCTFILE_F77="${MKOCTFILE_F77-$F77}"
++  MKOCTFILE_LD_CXX="${MKOCTFILE_LD_CXX-$LD_CXX}"
++  MKOCTFILE_RANLIB="${MKOCTFILE_RANLIB-$RANLIB}"
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: defining CROSS_TOOL_PREFIX to be $CROSS_TOOL_PREFIX" >&5
+ $as_echo "$as_me: defining CROSS_TOOL_PREFIX to be $CROSS_TOOL_PREFIX" >&6;}
