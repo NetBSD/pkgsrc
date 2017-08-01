@@ -1,0 +1,3 @@
+This is a companion module to DateTime.pm. It implements the Julian
+calendar. It supports everything that DateTime.pm supports and more:
+about one day per century more, to be precise.
