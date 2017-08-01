@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2016/05/07 10:10:46 joerg Exp $
+$NetBSD: distinfo,v 1.3 2017/08/01 15:51:53 wiz Exp $
 
-SHA1 (tarsnap-gui-0.8.tar.gz) = 85c4bb94fcbb1821136bb26feea68c582c386d35
-RMD160 (tarsnap-gui-0.8.tar.gz) = 0179694f8feb182793f071e09c2682052c35b9a8
-SHA512 (tarsnap-gui-0.8.tar.gz) = 8fc8afdd8a53efc843c2c82cc4872a7156fff8964793e3a5a80430380598f752a1ae488012c54809e345bda34a2c6a0afaca5504223effe2e332825cbea2b359
-Size (tarsnap-gui-0.8.tar.gz) = 544066 bytes
-SHA1 (patch-Tarsnap.pro) = e31d2ab6a6ec7890dabb368582cd4e4cced0b29d
+SHA1 (tarsnap-gui-1.0.tar.gz) = 8b2d356c71144100a52990bd1e98892d4babe478
+RMD160 (tarsnap-gui-1.0.tar.gz) = 4b5c1c9f7fcd376c7224141e6c96abd95d7ae494
+SHA512 (tarsnap-gui-1.0.tar.gz) = 0f79360e52685099a5270d0da0b19015d05b75102b52d2ae5d99be4db49016595841a2067aa2d42bb787a45754e1d3e5ce32dcff1e62a6dab57ab06f9a5ab4fc
+Size (tarsnap-gui-1.0.tar.gz) = 582190 bytes
+SHA1 (patch-Tarsnap.pro) = c2d6d5edafa2256ec4f8d0bbb17e14f22d058ae7
