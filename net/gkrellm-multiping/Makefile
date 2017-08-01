@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.46 2017/02/12 06:25:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.47 2017/08/01 17:40:15 wiz Exp $
 #
 
 DISTNAME=	gkrellm-multiping-2.0.8
 PKGREVISION=	34
 CATEGORIES=	net
-MASTER_SITES=	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/
+#MASTER_SITES=	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/index.html
+#HOMEPAGE=	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/index.html
 COMMENT=	Pings several machines and prints out stats
 
 SPECIAL_PERMS+=	${PREFIX}/lib/gkrellm2/plugins/pinger ${SETUID_ROOT_PERMS}

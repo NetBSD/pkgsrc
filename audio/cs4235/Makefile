@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/09/11 23:59:29 asau Exp $
+# $NetBSD: Makefile,v 1.17 2017/08/01 17:40:08 wiz Exp $
 #
 
 DISTNAME=	cs4235-20001009
@@ -7,7 +7,7 @@ CATEGORIES=	audio sysutils
 MASTER_SITES=	http://distfiles.aydogan.net/audio/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.invisible.ca/~jmcneill/
+#HOMEPAGE=	http://www.invisible.ca/~jmcneill/
 COMMENT=	Modifies the 3D mode on Crystal CS4235 sound cards
 LICENSE=	public-domain
 

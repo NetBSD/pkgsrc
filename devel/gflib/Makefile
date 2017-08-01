@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:00 asau Exp $
+# $NetBSD: Makefile,v 1.5 2017/08/01 17:40:10 wiz Exp $
 #
 
 DISTNAME=	gflib
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.cs.utk.edu/~plank/plank/gflib/
 EXTRACT_SUFX=	.tar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cs.utk.edu/~plank/plank/gdlib/
+#HOMEPAGE=	http://www.cs.utk.edu/~plank/plank/gdlib/
 COMMENT=	Reed Solomon and Galois Field error correction library
 
 MAKE_FILE=	makefile

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2017/05/03 08:38:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.62 2017/08/01 17:40:10 wiz Exp $
 
 DISTNAME=	libgnomemm-2.30.0
 PKGREVISION=	27
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomemm/2.30/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://gtkmm.sourceforge.net/
+#HOMEPAGE=	http://gtkmm.sourceforge.net/
 COMMENT=	C++ bindings for libgnome
 
 USE_LANGUAGES=		c c++11

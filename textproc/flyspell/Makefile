@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/02/17 19:18:08 dholland Exp $
+# $NetBSD: Makefile,v 1.22 2017/08/01 17:40:17 wiz Exp $
 #
 
 DISTNAME=	flyspell-1.7m.el
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www-sop.inria.fr/mimosa/personnel/Manuel.Serrano/flyspell/
 EXTRACT_SUFX=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www-sop.inria.fr/mimosa/personnel/Manuel.Serrano/flyspell/flyspell.html
+#HOMEPAGE=	http://www-sop.inria.fr/mimosa/personnel/Manuel.Serrano/flyspell/flyspell.html
 COMMENT=	Emacs/Xemacs on-the-fly spell checker
 
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/flyspell
