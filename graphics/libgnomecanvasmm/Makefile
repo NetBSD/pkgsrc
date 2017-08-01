@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2017/05/03 08:38:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.44 2017/08/01 17:40:12 wiz Exp $
 
 DISTNAME=	libgnomecanvasmm-2.26.0
 PKGREVISION=	25
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomecanvasmm/2.26/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://gtkmm.sourceforge.net/
+#HOMEPAGE=	http://gtkmm.sourceforge.net/
 COMMENT=	C++ bindings for libgnomecanvas
 
 USE_LANGUAGES=		c c++11

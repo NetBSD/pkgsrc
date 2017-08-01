@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/31 11:16:55 asau Exp $
+# $NetBSD: Makefile,v 1.6 2017/08/01 17:40:10 wiz Exp $
 
 DISTNAME=		electric-fence_2.1.13-0.1
 PKGNAME=		electric-fence-2.1.13.0.1
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://perens.com/works/software/ElectricFence/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://perens.com/FreeSoftware/
+#HOMEPAGE=		http://perens.com/FreeSoftware/
 COMMENT=		Different kind of malloc() debugger
 
 CONFLICTS+=		ElectricFence-[0-9]*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/06/10 15:22:17 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2017/08/01 17:40:17 wiz Exp $
 #
 
 DISTNAME=		mod-cband-0.9.7.5
@@ -8,7 +8,7 @@ MASTER_SITES=		http://cband.linux.pl/download/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://codee.pl/cband.html
+#HOMEPAGE=		http://codee.pl/cband.html
 COMMENT=		Bandwidth and connection limiting module for Apache 2
 LICENSE=		gnu-gpl-v2
 

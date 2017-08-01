@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/07/09 06:38:06 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2017/08/01 17:40:10 wiz Exp $
 #
 
 DISTNAME=	cvs2html-1.82
@@ -7,7 +7,7 @@ CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cvs.sslug.dk/cvs2html/
+#HOMEPAGE=	http://cvs.sslug.dk/cvs2html/
 COMMENT=	Perl script to turn ``cvs log'' output into HTML
 
 NO_BUILD=	YES
