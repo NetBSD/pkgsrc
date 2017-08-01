@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.runtime,v 1.1 2017/08/01 15:51:52 maya Exp $
+include/ObjFW-RT/ObjFW-RT.h
+lib/libobjfw-rt.a
+lib/libobjfw-rt.so
+lib/libobjfw-rt.so.0
+lib/libobjfw-rt.so.0.0.0
