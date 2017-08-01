@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.17 2016/03/27 23:08:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2017/08/01 16:59:09 wiz Exp $
 
 DISTNAME=	dmake-4.12.2
 CATEGORIES=	devel
 MASTER_SITES=	http://dmake.apache-extras.org.codespot.com/files/
-EXTRACT_SUFX=.tar.bz2
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/a/apache-extras.org/p/dmake
+HOMEPAGE=	https://github.com/mohawk2/dmake
 COMMENT=	Portable make supported by many platforms
 LICENSE=	gnu-gpl-v1
 
