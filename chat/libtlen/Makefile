@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2014/10/09 14:06:02 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/08/01 10:41:45 nros Exp $
 
 DISTNAME=	libtlen-20041113
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libtlen/}
 
