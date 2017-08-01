@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/03/01 20:16:33 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2017/08/01 16:47:38 wiz Exp $
 #
 
 DISTNAME=	obexfs-0.8
@@ -8,7 +8,7 @@ CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openobex/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openobex.org/
+#HOMEPAGE=	http://www.openobex.org/
 COMMENT=	FUSE based filesystem using ObexFTP
 LICENSE=	gnu-gpl-v2
 

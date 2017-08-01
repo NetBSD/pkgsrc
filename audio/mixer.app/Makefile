@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/10/09 14:05:57 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2017/08/01 16:47:37 wiz Exp $
 #
 
 DISTNAME=	Mixer.app-1.8.0
@@ -6,10 +6,10 @@ PKGNAME=	mixer.app-1.8.0
 PKGREVISION=	1
 CATEGORIES=	audio
 CATEGORIES=	audio windowmaker
-MASTER_SITES=	# http://www.fukt.bth.se/~per/mixer/
+#MASTER_SITES=	# http://www.fukt.bth.se/~per/mixer/
 
 MAINTAINER=	ptiJo@noos.fr
-HOMEPAGE=	http://www.fukt.bth.se/~per/mixer/
+#HOMEPAGE=	http://www.fukt.bth.se/~per/mixer/
 COMMENT=	Another mixer intended for the windowmaker dockapp
 
 NOT_FOR_PLATFORM=	Interix-*-*

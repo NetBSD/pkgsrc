@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2012/10/31 11:16:57 asau Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/01 16:47:37 wiz Exp $
 #
 
 DISTNAME=	flexdock-0.5.1
 CATEGORIES=	devel
-MASTER_SITES=	https://flexdock.dev.java.net/files/documents/2037/52479
+#MASTER_SITES=	https://flexdock.dev.java.net/files/documents/2037/52479
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://flexdock.dev.java.net/
+#HOMEPAGE=	https://flexdock.dev.java.net/
 COMMENT=	Swing windowing and docking framework
 LICENSE=	apache-2.0
 

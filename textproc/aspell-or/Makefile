@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/12 10:50:37 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/01 16:47:45 wiz Exp $
 #
 
 DISTNAME=	aspell6-or-0.03-1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/or/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	http://oriya.sarovar.org/dictionary.html
+#HOMEPAGE=	http://oriya.sarovar.org/dictionary.html
 COMMENT=	Oriya language support for aspell
 LICENSE=	gnu-gpl-v2
 

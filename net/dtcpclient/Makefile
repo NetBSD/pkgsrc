@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/01/19 18:52:19 agc Exp $
+# $NetBSD: Makefile,v 1.26 2017/08/01 16:47:42 wiz Exp $
 #
 
 DISTNAME=	dtcpclient-20090812
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.imasy.or.jp/~ume/ipv6/
 MASTER_SITES+=	http://home.jp.FreeBSD.org/~ume/ipv6/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.imasy.or.jp/~ume/dtcp/
+#HOMEPAGE=	http://www.imasy.or.jp/~ume/dtcp/
 COMMENT=	Dynamic Tunnel Configuration Protocol client
 LICENSE=	2-clause-bsd
 
