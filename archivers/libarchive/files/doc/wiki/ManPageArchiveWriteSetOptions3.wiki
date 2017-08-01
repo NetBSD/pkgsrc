@@ -422,9 +422,9 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveReadSetOptions3]], 
-[[ManPageArchiveWrite3]] 
+[[ManPageibarchive3]], 
+[[ManPagerchiveeadetptions3]], 
+[[ManPagerchiverite3]] 
 == HISTORY == 
 The 
 '''libarchive''' 

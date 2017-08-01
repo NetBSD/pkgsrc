@@ -1,71 +1,71 @@
 ARCHIVE_READ_DATA(3)	 BSD Library Functions Manual	  ARCHIVE_READ_DATA(3)
 
-1mNAME0m
-     1marchive_read_data archive_read_data_block22m, 1marchive_read_data_skip22m,
-     1marchive_read_data_into_fd 22m— functions for reading streaming archives
+NAME
+     archive_read_data archive_read_data_block, archive_read_data_skip,
+     archive_read_data_into_fd — functions for reading streaming archives
 
-1mLIBRARY0m
+LIBRARY
      Streaming Archive Library (libarchive, -larchive)
 
-1mSYNOPSIS0m
-     1m#include <archive.h>0m
+SYNOPSIS
+     #include <archive.h>
 
-     4mla_ssize_t0m
-     1marchive_read_data22m(4mstruct24m 4marchive24m 4m*24m, 4mvoid24m 4m*buff24m, 4msize_t24m 4mlen24m);
+     la_ssize_t
+     archive_read_data(struct archive *, void *buff, size_t len);
 
-     4mint0m
-     1marchive_read_data_block22m(4mstruct24m 4marchive24m 4m*24m, 4mconst24m 4mvoid24m 4m**buff24m, 4msize_t24m 4m*len24m,
-	 4moff_t24m 4m*offset24m);
+     int
+     archive_read_data_block(struct archive *, const void **buff, size_t *len,
+	 off_t *offset);
 
-     4mint0m
-     1marchive_read_data_skip22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_read_data_skip(struct archive *);
 
-     4mint0m
-     1marchive_read_data_into_fd22m(4mstruct24m 4marchive24m 4m*24m, 4mint24m 4mfd24m);
+     int
+     archive_read_data_into_fd(struct archive *, int fd);
 
-1mDESCRIPTION0m
-     1marchive_read_data22m()
+DESCRIPTION
+     archive_read_data()
 	     Read data associated with the header just read.  Internally, this
-	     is a convenience function that calls 1marchive_read_data_block22m()
+	     is a convenience function that calls archive_read_data_block()
 	     and fills any gaps with nulls so that callers see a single con‐
 	     tinuous stream of data.
-     1marchive_read_data_block22m()
+     archive_read_data_block()
 	     Return the next available block of data for this entry.  Unlike
-	     1marchive_read_data22m(), the 1marchive_read_data_block22m() function
+	     archive_read_data(), the archive_read_data_block() function
 	     avoids copying data and allows you to correctly handle sparse
 	     files, as supported by some archive formats.  The library guaran‐
 	     tees that offsets will increase and that blocks will not overlap.
 	     Note that the blocks returned from this function can be much
 	     larger than the block size read from disk, due to compression and
 	     internal buffer optimizations.
-     1marchive_read_data_skip22m()
+     archive_read_data_skip()
 	     A convenience function that repeatedly calls
-	     1marchive_read_data_block22m() to skip all of the data for this ar‐
+	     archive_read_data_block() to skip all of the data for this ar‐
 	     chive entry.  Note that this function is invoked automatically by
-	     1marchive_read_next_header222m() if the previous entry was not com‐
+	     archive_read_next_header2() if the previous entry was not com‐
 	     pletely consumed.
-     1marchive_read_data_into_fd22m()
+     archive_read_data_into_fd()
 	     A convenience function that repeatedly calls
-	     1marchive_read_data_block22m() to copy the entire entry to the pro‐
+	     archive_read_data_block() to copy the entire entry to the pro‐
 	     vided file descriptor.
 
-1mRETURN VALUES0m
+RETURN VALUES
      Most functions return zero on success, non-zero on error.	The possible
-     return codes include: 1mARCHIVE_OK 22m(the operation succeeded), 1mARCHIVE_WARN0m
+     return codes include: ARCHIVE_OK (the operation succeeded), ARCHIVE_WARN
      (the operation succeeded but a non-critical error was encountered),
-     1mARCHIVE_EOF 22m(end-of-archive was encountered), 1mARCHIVE_RETRY 22m(the opera‐
-     tion failed but can be retried), and 1mARCHIVE_FATAL 22m(there was a fatal
+     ARCHIVE_EOF (end-of-archive was encountered), ARCHIVE_RETRY (the opera‐
+     tion failed but can be retried), and ARCHIVE_FATAL (there was a fatal
      error; the archive should be closed immediately).
 
-     1marchive_read_data22m() returns a count of bytes actually read or zero at the
-     end of the entry.	On error, a value of 1mARCHIVE_FATAL22m, 1mARCHIVE_WARN22m, or
-     1mARCHIVE_RETRY 22mis returned.
+     archive_read_data() returns a count of bytes actually read or zero at the
+     end of the entry.	On error, a value of ARCHIVE_FATAL, ARCHIVE_WARN, or
+     ARCHIVE_RETRY is returned.
 
-1mERRORS0m
+ERRORS
      Detailed error codes and textual descriptions are available from the
-     1marchive_errno22m() and 1marchive_error_string22m() functions.
+     archive_errno() and archive_error_string() functions.
 
-1mSEE ALSO0m
+SEE ALSO
      tar(1), libarchive(3), archive_read(3), archive_read_extract(3),
      archive_read_filter(3), archive_read_format(3), archive_read_header(3),
      archive_read_open(3), archive_read_set_options(3), archive_util(3),

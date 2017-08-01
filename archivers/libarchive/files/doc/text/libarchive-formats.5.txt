@@ -1,9 +1,9 @@
 LIBARCHIVE-FORMATS(5)	    BSD File Formats Manual	 LIBARCHIVE-FORMATS(5)
 
-1mNAME0m
-     1mlibarchive-formats 22m— archive formats supported by the libarchive library
+NAME
+     libarchive-formats — archive formats supported by the libarchive library
 
-1mDESCRIPTION0m
+DESCRIPTION
      The libarchive(3) library reads and writes a variety of streaming archive
      formats.  Generally speaking, all of these archive formats consist of a
      series of “entries”.  Each entry stores a single file system object, such
@@ -17,7 +17,7 @@ LIBARCHIVE-FORMATS(5)	    BSD File Formats Manual	 LIBARCHIVE-FORMATS(5)
      specify which formats they wish to support, though many programs do use
      libarchive convenience functions to enable all supported formats.
 
-   1mTar Formats0m
+   Tar Formats
      The libarchive(3) library can read most tar archives.  It can write
      POSIX-standard “ustar” and “pax interchange” formats as well as v7 tar
      format and a subset of the legacy GNU tar format.
@@ -30,7 +30,7 @@ LIBARCHIVE-FORMATS(5)	    BSD File Formats Manual	 LIBARCHIVE-FORMATS(5)
      storing special entries that modify the interpretation of subsequent
      entries.
 
-     1mgnutar  22mThe libarchive(3) library can read most GNU-format tar archives.
+     gnutar  The libarchive(3) library can read most GNU-format tar archives.
 	     It currently supports the most popular GNU extensions, including
 	     modern long filename and linkname support, as well as atime and
 	     ctime data.  The libarchive library does not support multi-volume
@@ -41,7 +41,7 @@ LIBARCHIVE-FORMATS(5)	    BSD File Formats Manual	 LIBARCHIVE-FORMATS(5)
 	     long filename and linkname support, as well as atime and ctime
 	     data.
 
-     1mpax     22mThe libarchive(3) library can read and write POSIX-compliant pax
+     pax     The libarchive(3) library can read and write POSIX-compliant pax
 	     interchange format archives.  Pax interchange format archives are
 	     an extension of the older ustar format that adds a separate entry
 	     with additional attributes stored as key/value pairs immediately
@@ -64,7 +64,7 @@ LIBARCHIVE-FORMATS(5)	    BSD File Formats Manual	 LIBARCHIVE-FORMATS(5)
 	     dle non-ASCII filenames on systems that did not satisfy this
 	     assumption.
 
-     1mrestricted pax0m
+     restricted pax
 	     The libarchive library can also write pax archives in which it
 	     attempts to suppress the extended attributes entry whenever pos‐
 	     sible.  The result will be identical to a ustar archive unless
@@ -76,38 +76,38 @@ LIBARCHIVE-FORMATS(5)	    BSD File Formats Manual	 LIBARCHIVE-FORMATS(5)
 	     pliant pax interchange format archives.  Programs that correctly
 	     read ustar format (see below) will also be able to read this for‐
 	     mat; any extended attributes will be extracted as separate files
-	     stored in 4mPaxHeader24m directories.
+	     stored in PaxHeader directories.
 
-     1mustar   22mThe libarchive library can both read and write this format.  This
+     ustar   The libarchive library can both read and write this format.  This
 	     format has the following limitations:
-	     1m·   22mDevice major and minor numbers are limited to 21 bits.  Nodes
+	     ·	 Device major and minor numbers are limited to 21 bits.  Nodes
 		 with larger numbers will not be added to the archive.
-	     1m·   22mPath names in the archive are limited to 255 bytes.  (Shorter
+	     ·	 Path names in the archive are limited to 255 bytes.  (Shorter
 		 if there is no / character in exactly the right place.)
-	     1m·   22mSymbolic links and hard links are stored in the archive with
+	     ·	 Symbolic links and hard links are stored in the archive with
 		 the name of the referenced file.  This name is limited to 100
 		 bytes.
-	     1m·   22mExtended attributes, file flags, and other extended security
+	     ·	 Extended attributes, file flags, and other extended security
 		 information cannot be stored.
-	     1m·   22mArchive entries are limited to 8 gigabytes in size.
+	     ·	 Archive entries are limited to 8 gigabytes in size.
 	     Note that the pax interchange format has none of these restric‐
 	     tions.  The ustar format is old and widely supported.  It is rec‐
 	     ommended when compatibility is the primary concern.
 
-     1mv7      22mThe libarchive library can read and write the legacy v7 tar for‐
+     v7      The libarchive library can read and write the legacy v7 tar for‐
 	     mat.  This format has the following limitations:
-	     1m·   22mOnly regular files, directories, and symbolic links can be
+	     ·	 Only regular files, directories, and symbolic links can be
 		 archived.  Block and character device nodes, FIFOs, and sock‐
 		 ets cannot be archived.
-	     1m·   22mPath names in the archive are limited to 100 bytes.
-	     1m·   22mSymbolic links and hard links are stored in the archive with
+	     ·	 Path names in the archive are limited to 100 bytes.
+	     ·	 Symbolic links and hard links are stored in the archive with
 		 the name of the referenced file.  This name is limited to 100
 		 bytes.
-	     1m·   22mUser and group information are stored as numeric IDs; there
+	     ·	 User and group information are stored as numeric IDs; there
 		 is no provision for storing user or group names.
-	     1m·   22mExtended attributes, file flags, and other extended security
+	     ·	 Extended attributes, file flags, and other extended security
 		 information cannot be stored.
-	     1m·   22mArchive entries are limited to 8 gigabytes in size.
+	     ·	 Archive entries are limited to 8 gigabytes in size.
 	     Generally, users should prefer the ustar format for portability
 	     as the v7 tar format is both less useful and less portable.
 
@@ -134,7 +134,7 @@ LIBARCHIVE-FORMATS(5)	    BSD File Formats Manual	 LIBARCHIVE-FORMATS(5)
      Standard Tar) format defined by POSIX in 1988.  POSIX.1-2001 extended the
      ustar format to create the “pax interchange” format.
 
-   1mCpio Formats0m
+   Cpio Formats
      The libarchive library can read a number of common cpio variants and can
      write “odc” and “newc” format archives.  A cpio archive stores each entry
      as a fixed-size header followed by a variable-length filename and vari‐
@@ -144,12 +144,12 @@ LIBARCHIVE-FORMATS(5)	    BSD File Formats Manual	 LIBARCHIVE-FORMATS(5)
      the values as octal or hexadecimal numbers in ASCII, others as binary
      values of varying byte order and length.
 
-     1mbinary  22mThe libarchive library transparently reads both big-endian and
+     binary  The libarchive library transparently reads both big-endian and
 	     little-endian variants of the original binary cpio format.  This
 	     format used 32-bit binary values for file size and mtime, and
 	     16-bit binary values for the other fields.
 
-     1modc     22mThe libarchive library can both read and write this POSIX-stan‐
+     odc     The libarchive library can both read and write this POSIX-stan‐
 	     dard format, which is officially known as the “cpio interchange
 	     format” or the “octet-oriented cpio archive format” and sometimes
 	     unofficially referred to as the “old character format”.  This
@@ -158,7 +158,7 @@ LIBARCHIVE-FORMATS(5)	    BSD File Formats Manual	 LIBARCHIVE-FORMATS(5)
 	     File sizes and mtime are limited to 33 bits (8GB file size),
 	     other fields are limited to 18 bits.
 
-     1mSVR4/newc0m
+     SVR4/newc
 	     The libarchive library can read both CRC and non-CRC variants of
 	     this format.  The SVR4 format uses eight-digit hexadecimal values
 	     for all header fields.  This limits file size to 4GB, and also
@@ -171,7 +171,7 @@ LIBARCHIVE-FORMATS(5)	    BSD File Formats Manual	 LIBARCHIVE-FORMATS(5)
      of AT&T in 1981.  This makes cpio older than tar, although cpio was not
      included in Version 7 AT&T Unix.  As a result, the tar command became
      much better known in universities and research groups that used Version
-     7.  The combination of the 1mfind 22mand 1mcpio 22mutilities provided very precise
+     7.  The combination of the find and cpio utilities provided very precise
      control over file selection.  Unfortunately, the format has many limita‐
      tions that make it unsuitable for widespread use.	Only the POSIX format
      permits files over 4GB, and its 18-bit limit for most other fields makes
@@ -180,19 +180,19 @@ LIBARCHIVE-FORMATS(5)	    BSD File Formats Manual	 LIBARCHIVE-FORMATS(5)
      very difficult to correctly transfer archives across systems with dissim‐
      ilar user numbering.
 
-   1mShar Formats0m
+   Shar Formats
      A “shell archive” is a shell script that, when executed on a POSIX-com‐
      pliant system, will recreate a collection of file system objects.	The
      libarchive library can write two different kinds of shar archives:
 
-     1mshar    22mThe traditional shar format uses a limited set of POSIX commands,
+     shar    The traditional shar format uses a limited set of POSIX commands,
 	     including echo(1), mkdir(1), and sed(1).  It is suitable for
 	     portably archiving small collections of plain text files.	How‐
 	     ever, it is not generally well-suited for large archives (many
 	     implementations of sh(1) have limits on the size of a script) nor
 	     should it be used with non-text files.
 
-     1mshardump0m
+     shardump
 	     This format is similar to shar but encodes files using
 	     uuencode(1) so that the result will be a plain text file regard‐
 	     less of the file contents.  It also includes additional shell
@@ -201,7 +201,7 @@ LIBARCHIVE-FORMATS(5)	    BSD File Formats Manual	 LIBARCHIVE-FORMATS(5)
 	     mands used to restore file attributes make shardump archives less
 	     portable than plain shar archives.
 
-   1mISO9660 format0m
+   ISO9660 format
      Libarchive can read and extract from files containing ISO9660-compliant
      CDROM images.  In many cases, this can remove the need to burn a physical
      CDROM just in order to read the files contained in an ISO9660 image.  It
@@ -230,7 +230,7 @@ LIBARCHIVE-FORMATS(5)	    BSD File Formats Manual	 LIBARCHIVE-FORMATS(5)
      tion used for the temporary file can be changed by the usual environment
      variables.
 
-   1mZip format0m
+   Zip format
      Libarchive can read and write zip format archives that have uncompressed
      entries and entries compressed with the “deflate” algorithm.  Other zip
      compression algorithms are not supported.	It can extract jar archives,
@@ -260,7 +260,7 @@ LIBARCHIVE-FORMATS(5)	    BSD File Formats Manual	 LIBARCHIVE-FORMATS(5)
      modified in-place can have deleted entries or other garbage data that can
      only be accurately detected by first reading the Central Directory.
 
-   1mArchive (library) file format0m
+   Archive (library) file format
      The Unix archive format (commonly created by the ar(1) archiver) is a
      general-purpose format which is used almost exclusively for object files
      to be read by the link editor ld(1).  The ar format has never been stan‐
@@ -271,13 +271,13 @@ LIBARCHIVE-FORMATS(5)	    BSD File Formats Manual	 LIBARCHIVE-FORMATS(5)
      the BSD format stores each long filename in an extension area adjacent to
      the entry.  Libarchive can read both extensions, including archives that
      may include both types of long filenames.	Programs using libarchive can
-     write GNU/SVR4 format if they provide an entry called 4m//24m containing a
+     write GNU/SVR4 format if they provide an entry called // containing a
      filename table to be written into the archive before any of the entries.
      Any entries whose names are not in the filename table will be written
      using BSD-style long filenames.  This can cause problems for programs
      such as GNU ld that do not support the BSD-style long filenames.
 
-   1mmtree0m
+   mtree
      Libarchive can read and write files in mtree(5) format.  This format is
      not a true archive format, but rather a textual description of a file
      hierarchy in which each line specifies the name of a file and provides
@@ -288,44 +288,44 @@ LIBARCHIVE-FORMATS(5)	    BSD File Formats Manual	 LIBARCHIVE-FORMATS(5)
      archive_write_set_options(3) interface to specify which keywords should
      be included in the output.  If libarchive was compiled with access to
      suitable cryptographic libraries (such as the OpenSSL libraries), it can
-     compute hash entries such as 1msha512 22mor 1mmd5 22mfrom file data being written
+     compute hash entries such as sha512 or md5 from file data being written
      to the mtree writer.
 
      When reading an mtree file, libarchive will locate the corresponding
-     files on disk using the 1mcontents 22mkeyword if present or the regular file‐
+     files on disk using the contents keyword if present or the regular file‐
      name.  If it can locate and open the file on disk, it will use that to
      fill in any metadata that is missing from the mtree file and will read
      the file contents and return those to the program using libarchive.  If
      it cannot locate and open the file on disk, libarchive will return an
      error for any attempt to read the entry body.
 
-   1m7-Zip0m
+   7-Zip
      Libarchive can read and write 7-Zip format archives.  TODO: Need more
      information
 
-   1mCAB0m
+   CAB
      Libarchive can read Microsoft Cabinet ( “CAB”) format archives.  TODO:
      Need more information.
 
-   1mLHA0m
+   LHA
      TODO: Information about libarchive's LHA support
 
-   1mRAR0m
+   RAR
      Libarchive has limited support for reading RAR format archives.  Cur‐
      rently, libarchive can read RARv3 format archives which have been either
      created uncompressed, or compressed using any of the compression methods
      supported by the RARv3 format.  Libarchive can also read self-extracting
      RAR archives.
 
-   1mWarc0m
+   Warc
      Libarchive can read and write “web archives”.  TODO: Need more informa‐
      tion
 
-   1mXAR0m
+   XAR
      Libarchive can read and write the XAR format used by many Apple tools.
      TODO: Need more information
 
-1mSEE ALSO0m
+SEE ALSO
      ar(1), cpio(1), mkisofs(1), shar(1), tar(1), zip(1), zlib(3), cpio(5),
      mtree(5), tar(5)
 

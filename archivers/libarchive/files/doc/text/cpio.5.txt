@@ -1,29 +1,29 @@
 CPIO(5) 		    BSD File Formats Manual		       CPIO(5)
 
-1mNAME0m
-     1mcpio 22m— format of cpio archive files
+NAME
+     cpio — format of cpio archive files
 
-1mDESCRIPTION0m
-     The 1mcpio 22marchive format collects any number of files, directories, and
+DESCRIPTION
+     The cpio archive format collects any number of files, directories, and
      other file system objects (symbolic links, device nodes, etc.) into a
      single stream of bytes.
 
-   1mGeneral Format0m
-     Each file system object in a 1mcpio 22marchive comprises a header record with
+   General Format
+     Each file system object in a cpio archive comprises a header record with
      basic numeric metadata followed by the full pathname of the entry and the
      file data.  The header record stores a series of integer values that gen‐
-     erally follow the fields in 4mstruct24m 4mstat24m.  (See stat(2) for details.)  The
+     erally follow the fields in struct stat.  (See stat(2) for details.)  The
      variants differ primarily in how they store those integers (binary,
      octal, or hexadecimal).  The header is followed by the pathname of the
      entry (the length of the pathname is stored in the header) and any file
      data.  The end of the archive is indicated by a special record with the
      pathname “TRAILER!!!”.
 
-   1mPWB format0m
+   PWB format
      XXX Any documentation of the original PWB/UNIX 1.0 format? XXX
 
-   1mOld Binary Format0m
-     The old binary 1mcpio 22mformat stores numbers as 2-byte and 4-byte binary
+   Old Binary Format
+     The old binary cpio format stores numbers as 2-byte and 4-byte binary
      values.  Each entry begins with a header in the following format:
 
 	   struct header_old_cpio {
@@ -40,20 +40,20 @@ CPIO(5) 		    BSD File Formats Manual		       CPIO(5)
 		   unsigned short   c_filesize[2];
 	   };
 
-     The 4munsigned24m 4mshort24m fields here are 16-bit integer values; the 4munsigned0m
-     4mint24m fields are 32-bit integer values.  The fields are as follows
+     The unsigned short fields here are 16-bit integer values; the unsigned
+     int fields are 32-bit integer values.  The fields are as follows
 
-     4mmagic24m   The integer value octal 070707.  This value can be used to deter‐
+     magic   The integer value octal 070707.  This value can be used to deter‐
 	     mine whether this archive is written with little-endian or big-
 	     endian integers.
 
-     4mdev24m, 4mino0m
+     dev, ino
 	     The device and inode numbers from the disk.  These are used by
-	     programs that read 1mcpio 22marchives to determine when two entries
-	     refer to the same file.  Programs that synthesize 1mcpio 22marchives
+	     programs that read cpio archives to determine when two entries
+	     refer to the same file.  Programs that synthesize cpio archives
 	     should be careful to set these to distinct values for each entry.
 
-     4mmode24m	  The mode specifies both the regular permissions and the file
+     mode    The mode specifies both the regular permissions and the file
 	     type.  It consists of several bit fields as follows:
 	     0170000  This masks the file type bits.
 	     0140000  File type value for sockets.
@@ -72,40 +72,40 @@ CPIO(5) 		    BSD File Formats Manual		       CPIO(5)
 		      for world, group, and user following standard POSIX con‐
 		      ventions.
 
-     4muid24m, 4mgid0m
+     uid, gid
 	     The numeric user id and group id of the owner.
 
-     4mnlink24m   The number of links to this file.  Directories always have a
+     nlink   The number of links to this file.	Directories always have a
 	     value of at least two here.  Note that hardlinked files include
 	     file data with every copy in the archive.
 
-     4mrdev24m	  For block special and character special entries, this field con‐
+     rdev    For block special and character special entries, this field con‐
 	     tains the associated device number.  For all other entry types,
 	     it should be set to zero by writers and ignored by readers.
 
-     4mmtime24m   Modification time of the file, indicated as the number of seconds
+     mtime   Modification time of the file, indicated as the number of seconds
 	     since the start of the epoch, 00:00:00 UTC January 1, 1970.  The
 	     four-byte integer is stored with the most-significant 16 bits
 	     first followed by the least-significant 16 bits.  Each of the two
 	     16 bit values are stored in machine-native byte order.
 
-     4mnamesize0m
+     namesize
 	     The number of bytes in the pathname that follows the header.
 	     This count includes the trailing NUL byte.
 
-     4mfilesize0m
+     filesize
 	     The size of the file.  Note that this archive format is limited
-	     to four gigabyte file sizes.  See 4mmtime24m above for a description
+	     to four gigabyte file sizes.  See mtime above for a description
 	     of the storage of four-byte integers.
 
-     The pathname immediately follows the fixed header.  If the 1mnamesize 22mis
+     The pathname immediately follows the fixed header.  If the namesize is
      odd, an additional NUL byte is added after the pathname.  The file data
      is then appended, padded with NUL bytes to an even length.
 
      Hardlinked files are not given special treatment; the full file contents
      are included with each copy of the file.
 
-   1mPortable ASCII Format0m
+   Portable ASCII Format
      Version 2 of the Single UNIX Specification (“SUSv2”) standardized an
      ASCII variant that is portable across all platforms.  It is commonly
      known as the “old character” format or as the “odc” format.  It stores
@@ -133,7 +133,7 @@ CPIO(5) 		    BSD File Formats Manual		       CPIO(5)
      archive will be entirely ASCII, except for the NUL byte that terminates
      the name field.
 
-   1mNew ASCII Format0m
+   New ASCII Format
      The "new" ASCII format uses 8-byte hexadecimal fields for all numbers and
      separates device numbers into separate fields for major and minor num‐
      bers.
@@ -158,9 +158,9 @@ CPIO(5) 		    BSD File Formats Manual		       CPIO(5)
      Except as specified below, the fields here match those specified for the
      old binary format above.
 
-     4mmagic24m   The string “070701”.
+     magic   The string “070701”.
 
-     4mcheck24m   This field is always set to zero by writers and ignored by read‐
+     check   This field is always set to zero by writers and ignored by read‐
 	     ers.  See the next section for more details.
 
      The pathname is followed by NUL bytes so that the total size of the fixed
@@ -172,35 +172,35 @@ CPIO(5) 		    BSD File Formats Manual		       CPIO(5)
      In this format, hardlinked files are handled by setting the filesize to
      zero for each entry except the last one that appears in the archive.
 
-   1mNew CRC Format0m
+   New CRC Format
      The CRC format is identical to the new ASCII format described in the pre‐
      vious section except that the magic field is set to “070702” and the
-     4mcheck24m field is set to the sum of all bytes in the file data.	This sum is
+     check field is set to the sum of all bytes in the file data.  This sum is
      computed treating all bytes as unsigned values and using unsigned arith‐
      metic.  Only the least-significant 32 bits of the sum are stored.
 
-   1mHP variants0m
-     The 1mcpio 22mimplementation distributed with HPUX used XXXX but stored device
+   HP variants
+     The cpio implementation distributed with HPUX used XXXX but stored device
      numbers differently XXX.
 
-   1mOther Extensions and Variants0m
+   Other Extensions and Variants
      Sun Solaris uses additional file types to store extended file data,
      including ACLs and extended attributes, as special entries in cpio ar‐
      chives.
 
      XXX Others? XXX
 
-1mSEE ALSO0m
+SEE ALSO
      cpio(1), tar(5)
 
-1mSTANDARDS0m
-     The 1mcpio 22mutility is no longer a part of POSIX or the Single Unix Stan‐
+STANDARDS
+     The cpio utility is no longer a part of POSIX or the Single Unix Stan‐
      dard.  It last appeared in Version 2 of the Single UNIX Specification
      (“SUSv2”).  It has been supplanted in subsequent standards by pax(1).
      The portable ASCII format is currently part of the specification for the
      pax(1) utility.
 
-1mHISTORY0m
+HISTORY
      The original cpio utility was written by Dick Haight while working in
      AT&T's Unix Support Group.  It appeared in 1977 as part of PWB/UNIX 1.0,
      the “Programmer's Work Bench” derived from Version 6 AT&T UNIX that was
@@ -211,7 +211,7 @@ CPIO(5) 		    BSD File Formats Manual		       CPIO(5)
      Who invented it?  When did HP come out with their variant?  When did Sun
      introduce ACLs and extended attributes? XXX
 
-1mBUGS0m
+BUGS
      The “CRC” format is mis-named, as it uses a simple checksum and not a
      cyclic redundancy check.
 

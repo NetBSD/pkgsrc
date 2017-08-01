@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Sat Feb 25 11:22:08 2017 -->
+<!-- CreationDate: Mon Jul 10 02:32:58 2017 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -36,14 +36,14 @@ tape archives</p>
 file</i> &rang; &nbsp;|&nbsp;&lang; <i><br>
 pattern</i> &rang; &nbsp;...]</p>
 
-<p style="margin-left:12%;"><b>tar</b> {<b>&minus;c</b>}
+<p style="margin-left:12%;"><b>tar</b> {<b>-c</b>}
 [<i>options</i>]
 [<i>files&nbsp;</i>|&nbsp;<i>directories</i>] <b><br>
-tar</b> {<b>&minus;r&nbsp;</b>|&nbsp;<b>&minus;u</b>}
-<b>&minus;f</b> <i>archive-file</i> [<i>options</i>]
+tar</b> {<b>-r&nbsp;</b>|&nbsp;<b>-u</b>} <b>-f</b>
+<i>archive-file</i> [<i>options</i>]
 [<i>files&nbsp;</i>|&nbsp;<i>directories</i>] <b><br>
-tar</b> {<b>&minus;t&nbsp;</b>|&nbsp;<b>&minus;x</b>}
-[<i>options</i>] [<i>patterns</i>]</p>
+tar</b> {<b>-t&nbsp;</b>|&nbsp;<b>-x</b>} [<i>options</i>]
+[<i>patterns</i>]</p>
 
 <p style="margin-top: 1em"><b>DESCRIPTION</b></p>
 
@@ -54,7 +54,7 @@ and ISO 9660 cdrom images and can create tar, pax, cpio, ar,
 zip, 7-zip, and shar archives.</p>
 
 <p style="margin-left:6%; margin-top: 1em">The first
-synopsis form shows a &lsquo;&lsquo;bundled&rsquo;&rsquo;
+synopsis form shows a &rsquo;&rsquo;bundled&rsquo;&rsquo;
 option word. This usage is provided for compatibility with
 historical implementations. See COMPATIBILITY below for
 details.</p>
@@ -63,50 +63,48 @@ details.</p>
 synopsis forms show the preferred usage. The first option to
 <b>tar</b> is a mode indicator from the following list:</p>
 
-<p><b>&minus;c</b></p>
+<p><b>-c</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">Create a new
 archive containing the specified items. The long option form
-is <b>&minus;&minus;create</b>.</p>
+is <b>--create</b>.</p>
 
-<p><b>&minus;r</b></p>
+<p><b>-r</b></p>
 
-<p style="margin-left:17%; margin-top: 1em">Like
-<b>&minus;c</b>, but new entries are appended to the
-archive. Note that this only works on uncompressed archives
-stored in regular files. The <b>&minus;f</b> option is
-required. The long option form is
-<b>&minus;&minus;append</b>.</p>
+<p style="margin-left:17%; margin-top: 1em">Like <b>-c</b>,
+but new entries are appended to the archive. Note that this
+only works on uncompressed archives stored in regular files.
+The <b>-f</b> option is required. The long option form is
+<b>--append</b>.</p>
 
-<p><b>&minus;t</b></p>
+<p><b>-t</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">List archive
 contents to stdout. The long option form is
-<b>&minus;&minus;list</b>.</p>
+<b>--list</b>.</p>
 
-<p><b>&minus;u</b></p>
+<p><b>-u</b></p>
 
-<p style="margin-left:17%; margin-top: 1em">Like
-<b>&minus;r</b>, but new entries are added only if they have
-a modification date newer than the corresponding entry in
-the archive. Note that this only works on uncompressed
-archives stored in regular files. The <b>&minus;f</b> option
-is required. The long form is
-<b>&minus;&minus;update</b>.</p>
+<p style="margin-left:17%; margin-top: 1em">Like <b>-r</b>,
+but new entries are added only if they have a modification
+date newer than the corresponding entry in the archive. Note
+that this only works on uncompressed archives stored in
+regular files. The <b>-f</b> option is required. The long
+form is <b>--update</b>.</p>
 
-<p><b>&minus;x</b></p>
+<p><b>-x</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">Extract to disk
 from the archive. If a file with the same name appears more
 than once in the archive, each copy will be extracted, with
 later copies overwriting (replacing) earlier copies. The
-long option form is <b>&minus;&minus;extract</b>.</p>
+long option form is <b>--extract</b>.</p>
 
-<p style="margin-left:6%; margin-top: 1em">In
-<b>&minus;c</b>, <b>&minus;r</b>, or <b>&minus;u</b> mode,
-each specified file or directory is added to the archive in
-the order specified on the command line. By default, the
-contents of each directory are also archived.</p>
+<p style="margin-left:6%; margin-top: 1em">In <b>-c</b>,
+<b>-r</b>, or <b>-u</b> mode, each specified file or
+directory is added to the archive in the order specified on
+the command line. By default, the contents of each directory
+are also archived.</p>
 
 <p style="margin-left:6%; margin-top: 1em">In extract or
 list mode, the entire command line is read and parsed before
@@ -127,21 +125,21 @@ modes.</p>
 specified archive is opened and the entries in it will be
 appended to the current archive. As a simple example,</p>
 
-<p style="margin-left:24%;"><b>tar &minus;c &minus;f</b>
-<i>- newfile</i> <b>@</b><i>original.tar</i></p>
+<p style="margin-left:24%;"><b>tar -c -f</b> <i>-
+newfile</i> <b>@</b><i>original.tar</i></p>
 
 <p style="margin-left:17%;">writes a new archive to
 standard output containing a file <i>newfile</i> and all of
 the entries from <i>original.tar</i>. In contrast,</p>
 
-<p style="margin-left:24%;"><b>tar &minus;c &minus;f</b>
-<i>- newfile original.tar</i></p>
+<p style="margin-left:24%;"><b>tar -c -f</b> <i>- newfile
+original.tar</i></p>
 
 <p style="margin-left:17%;">creates a new archive with only
 two entries. Similarly,</p>
 
-<p style="margin-left:24%;"><b>tar &minus;czf</b> <i>-</i>
-<b>&minus;&minus;format pax @</b><i>-</i></p>
+<p style="margin-left:24%;"><b>tar -czf</b> <i>-</i>
+<b>--format pax @</b><i>-</i></p>
 
 <p style="margin-left:17%;">reads an archive from standard
 input (whose format will be determined automatically) and
@@ -149,66 +147,64 @@ converts it into a gzip-compressed pax-format archive on
 stdout. In this way, <b>tar</b> can be used to convert
 archives from one format to another.</p>
 
-<p style="margin-top: 1em"><b>&minus;a</b>,
-<b>&minus;&minus;auto-compress</b></p>
+<p style="margin-top: 1em"><b>-a</b>,
+<b>--auto-compress</b></p>
 
 <p style="margin-left:17%;">(c mode only) Use the archive
 suffix to decide a set of the format and the compressions.
 As a simple example,</p>
 
-<p style="margin-left:24%;"><b>tar &minus;a &minus;cf</b>
+<p style="margin-left:24%;"><b>tar -a -cf</b>
 <i>archive.tgz source.c source.h</i></p>
 
 <p style="margin-left:17%;">creates a new archive with
 restricted pax format and gzip compression,</p>
 
-<p style="margin-left:24%;"><b>tar &minus;a &minus;cf</b>
+<p style="margin-left:24%;"><b>tar -a -cf</b>
 <i>archive.tar.bz2.uu source.c source.h</i></p>
 
 <p style="margin-left:17%;">creates a new archive with
 restricted pax format and bzip2 compression and uuencode
 compression,</p>
 
-<p style="margin-left:24%;"><b>tar &minus;a &minus;cf</b>
+<p style="margin-left:24%;"><b>tar -a -cf</b>
 <i>archive.zip source.c source.h</i></p>
 
 <p style="margin-left:17%;">creates a new archive with zip
 format,</p>
 
-<p style="margin-left:24%;"><b>tar &minus;a &minus;jcf</b>
+<p style="margin-left:24%;"><b>tar -a -jcf</b>
 <i>archive.tgz source.c source.h</i></p>
 
 <p style="margin-left:17%;">ignores the
-&lsquo;&lsquo;-j&rsquo;&rsquo; option, and creates a new
+&rsquo;&rsquo;-j&rsquo;&rsquo; option, and creates a new
 archive with restricted pax format and gzip compression,</p>
 
-<p style="margin-left:24%;"><b>tar &minus;a &minus;jcf</b>
+<p style="margin-left:24%;"><b>tar -a -jcf</b>
 <i>archive.xxx source.c source.h</i></p>
 
 <p style="margin-left:17%;">if it is unknown suffix or no
 suffix, creates a new archive with restricted pax format and
 bzip2 compression.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;acls</b></p>
+<p style="margin-top: 1em"><b>--acls</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">(c, r, u, x
 modes only) Archive or extract POSIX.1e or NFSv4 ACLs. This
-is the reverse of <b>&minus;&minus;no-acls</b> and the
-default behavior in c, r, and u modes (except Mac OS X) or
-if <b>tar</b> is run in x mode as root. On Mac OS X this
-option translates extended ACLs to NFSv4 ACLs. To store
-extended ACLs the <b>&minus;&minus;mac-metadata</b> option
-is preferred.</p>
+is the reverse of <b>--no-acls</b> and the default behavior
+in c, r, and u modes (except on Mac OS X) or if <b>tar</b>
+is run in x mode as root. On Mac OS X this option translates
+extended ACLs to NFSv4 ACLs. To store extended ACLs the
+<b>--mac-metadata</b> option is preferred.</p>
 
-<p style="margin-top: 1em"><b>&minus;B</b>,
-<b>&minus;&minus;read-full-blocks</b></p>
+<p style="margin-top: 1em"><b>-B</b>,
+<b>--read-full-blocks</b></p>
 
 <p style="margin-left:17%;">Ignored for compatibility with
 other tar(1) implementations.</p>
 
-<p style="margin-top: 1em"><b>&minus;b</b>
-<i>blocksize</i>, <b>&minus;&minus;block-size</b>
-<i>blocksize</i></p>
+<p style="margin-top: 1em"><b>-b</b> <i>blocksize</i>,
+<b>--block-size</b> <i>blocksize</i></p>
 
 <p style="margin-left:17%;">Specify the block size, in
 512-byte records, for tape drive I/O. As a rule, this
@@ -216,29 +212,29 @@ argument is only needed when reading from or writing to tape
 drives, and usually not even then as the default block size
 of 20 records (10240 bytes) is very common.</p>
 
-<p style="margin-top: 1em"><b>&minus;C</b>
-<i>directory</i>, <b>&minus;&minus;cd</b> <i>directory</i>,
-<b>&minus;&minus;directory</b> <i>directory</i></p>
+<p style="margin-top: 1em"><b>-C</b> <i>directory</i>,
+<b>--cd</b> <i>directory</i>, <b>--directory</b>
+<i>directory</i></p>
 
 <p style="margin-left:17%;">In c and r mode, this changes
 the directory before adding the following files. In x mode,
 change directories after opening the archive but before
 extracting entries from the archive.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;chroot</b></p>
+<p style="margin-top: 1em"><b>--chroot</b></p>
 
 <p style="margin-left:17%;">(x mode only) <b>chroot</b>()
-to the current directory after processing any
-<b>&minus;C</b> options and before extracting any files.</p>
+to the current directory after processing any <b>-C</b>
+options and before extracting any files.</p>
 
 
-<p style="margin-top: 1em"><b>&minus;&minus;clear-nochange-fflags</b></p>
+<p style="margin-top: 1em"><b>--clear-nochange-fflags</b></p>
 
 <p style="margin-left:17%;">(x mode only) Before removing
 file system objects to replace them, clear platform-specific
 file flags that might prevent removal.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;exclude</b>
+<p style="margin-top: 1em"><b>--exclude</b>
 <i>pattern</i></p>
 
 <p style="margin-left:17%;">Do not process files or
@@ -246,31 +242,30 @@ directories that match the specified pattern. Note that
 exclusions take precedence over patterns or filenames
 specified on the command line.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;fflags</b></p>
+<p style="margin-top: 1em"><b>--fflags</b></p>
 
 <p style="margin-left:17%;">(c, r, u, x modes only) Archive
 or extract file flags. This is the reverse of
-<b>&minus;&minus;no-fflags</b> and the default behavior in
-c, r, and u modes or if <b>tar</b> is run in x mode as
-root.</p>
+<b>--no-fflags</b> and the default behavior in c, r, and u
+modes or if <b>tar</b> is run in x mode as root.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;format</b>
+<p style="margin-top: 1em"><b>--format</b>
 <i>format</i></p>
 
 <p style="margin-left:17%;">(c, r, u mode only) Use the
 specified format for the created archive. Supported formats
-include &lsquo;&lsquo;cpio&rsquo;&rsquo;,
-&lsquo;&lsquo;pax&rsquo;&rsquo;,
-&lsquo;&lsquo;shar&rsquo;&rsquo;, and
-&lsquo;&lsquo;ustar&rsquo;&rsquo;. Other formats may also be
+include &rsquo;&rsquo;cpio&rsquo;&rsquo;,
+&rsquo;&rsquo;pax&rsquo;&rsquo;,
+&rsquo;&rsquo;shar&rsquo;&rsquo;, and
+&rsquo;&rsquo;ustar&rsquo;&rsquo;. Other formats may also be
 supported; see libarchive-formats(5) for more information
 about currently-supported formats. In r and u modes, when
 extending an existing archive, the format specified here
 must be compatible with the format of the existing archive
 on disk.</p>
 
-<p style="margin-top: 1em"><b>&minus;f</b> <i>file</i>,
-<b>&minus;&minus;file</b> <i>file</i></p>
+<p style="margin-top: 1em"><b>-f</b> <i>file</i>,
+<b>--file</b> <i>file</i></p>
 
 <p style="margin-left:17%;">Read the archive from or write
 the archive to the specified file. The filename can be
@@ -279,84 +274,77 @@ varies by system; on FreeBSD, the default is
 <i>/dev/sa0</i>; on Linux, the default is
 <i>/dev/st0</i>.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;gid</b>
-<i>id</i></p>
+<p style="margin-top: 1em"><b>--gid</b> <i>id</i></p>
 
 <p style="margin-left:17%;">Use the provided group id
 number. On extract, this overrides the group id in the
 archive; the group name in the archive will be ignored. On
 create, this overrides the group id read from disk; if
-<b>&minus;&minus;gname</b> is not also specified, the group
-name will be set to match the group id.</p>
+<b>--gname</b> is not also specified, the group name will be
+set to match the group id.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;gname</b>
-<i>name</i></p>
+<p style="margin-top: 1em"><b>--gname</b> <i>name</i></p>
 
 <p style="margin-left:17%;">Use the provided group name. On
 extract, this overrides the group name in the archive; if
 the provided group name does not exist on the system, the
-group id (from the archive or from the
-<b>&minus;&minus;gid</b> option) will be used instead. On
-create, this sets the group name that will be stored in the
-archive; the name will not be verified against the system
-group database.</p>
+group id (from the archive or from the <b>--gid</b> option)
+will be used instead. On create, this sets the group name
+that will be stored in the archive; the name will not be
+verified against the system group database.</p>
 
-<p style="margin-top: 1em"><b>&minus;H</b></p>
+<p style="margin-top: 1em"><b>-H</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">(c and r modes
 only) Symbolic links named on the command line will be
 followed; the target of the link will be archived, not the
 link itself.</p>
 
-<p style="margin-top: 1em"><b>&minus;h</b></p>
+<p style="margin-top: 1em"><b>-h</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">(c and r modes
-only) Synonym for <b>&minus;L</b>.</p>
+only) Synonym for <b>-L</b>.</p>
 
-<p style="margin-top: 1em"><b>&minus;I</b></p>
+<p style="margin-top: 1em"><b>-I</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">Synonym for
-<b>&minus;T</b>.</p>
+<b>-T</b>.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;help</b></p>
+<p style="margin-top: 1em"><b>--help</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">Show usage.</p>
 
-
-<p style="margin-top: 1em"><b>&minus;&minus;hfsCompression</b></p>
+<p style="margin-top: 1em"><b>--hfsCompression</b></p>
 
 <p style="margin-left:17%;">(x mode only) Mac OS X specific
 (v10.6 or later). Compress extracted regular files with HFS+
 compression.</p>
 
+<p style="margin-top: 1em"><b>--ignore-zeros</b></p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;ignore-zeros</b></p>
+<p style="margin-left:17%;">An alias of <b>--options
+read_concatenated_archives</b> for compatibility with GNU
+tar.</p>
 
-<p style="margin-left:17%;">An alias of
-<b>&minus;&minus;options read_concatenated_archives</b> for
-compatibility with GNU tar.</p>
-
-<p style="margin-top: 1em"><b>&minus;&minus;include</b>
+<p style="margin-top: 1em"><b>--include</b>
 <i>pattern</i></p>
 
 <p style="margin-left:17%;">Process only files or
 directories that match the specified pattern. Note that
-exclusions specified with <b>&minus;&minus;exclude</b> take
-precedence over inclusions. If no inclusions are explicitly
-specified, all entries are processed by default. The
-<b>&minus;&minus;include</b> option is especially useful
-when filtering archives. For example, the command</p>
+exclusions specified with <b>--exclude</b> take precedence
+over inclusions. If no inclusions are explicitly specified,
+all entries are processed by default. The <b>--include</b>
+option is especially useful when filtering archives. For
+example, the command</p>
 
-<p style="margin-left:24%;"><b>tar &minus;c &minus;f</b>
-<i>new.tar</i> <b>&minus;&minus;include=&rsquo;*foo*&rsquo;
-@</b><i>old.tgz</i></p>
+<p style="margin-left:24%;"><b>tar -c -f</b> <i>new.tar</i>
+<b>--include=&rsquo;*foo*&rsquo; @</b><i>old.tgz</i></p>
 
 <p style="margin-left:17%;">creates a new archive
 <i>new.tar</i> containing only the entries from
-<i>old.tgz</i> containing the string &lsquo;foo&rsquo;.</p>
+<i>old.tgz</i> containing the string &rsquo;foo&rsquo;.</p>
 
-<p style="margin-top: 1em"><b>&minus;J</b>,
-<b>&minus;&minus;xz</b></p>
+<p style="margin-top: 1em"><b>-J</b>, <b>--xz</b></p>
 
 <p style="margin-left:17%;">(c mode only) Compress the
 resulting archive with xz(1). In extract or list modes, this
@@ -364,9 +352,8 @@ option is ignored. Note that, unlike other <b>tar</b>
 implementations, this implementation recognizes XZ
 compression automatically when reading archives.</p>
 
-<p style="margin-top: 1em"><b>&minus;j</b>,
-<b>&minus;&minus;bzip</b>, <b>&minus;&minus;bzip2</b>,
-<b>&minus;&minus;bunzip2</b></p>
+<p style="margin-top: 1em"><b>-j</b>, <b>--bzip</b>,
+<b>--bzip2</b>, <b>--bunzip2</b></p>
 
 <p style="margin-left:17%;">(c mode only) Compress the
 resulting archive with bzip2(1). In extract or list modes,
@@ -374,273 +361,249 @@ this option is ignored. Note that, unlike other <b>tar</b>
 implementations, this implementation recognizes bzip2
 compression automatically when reading archives.</p>
 
-<p style="margin-top: 1em"><b>&minus;k</b>,
-<b>&minus;&minus;keep-old-files</b></p>
+<p style="margin-top: 1em"><b>-k</b>,
+<b>--keep-old-files</b></p>
 
 <p style="margin-left:17%;">(x mode only) Do not overwrite
 existing files. In particular, if a file appears more than
 once in an archive, later copies will not overwrite earlier
 copies.</p>
 
-
-<p style="margin-top: 1em"><b>&minus;&minus;keep-newer-files</b></p>
+<p style="margin-top: 1em"><b>--keep-newer-files</b></p>
 
 <p style="margin-left:17%;">(x mode only) Do not overwrite
 existing files that are newer than the versions appearing in
 the archive being extracted.</p>
 
-<p style="margin-top: 1em"><b>&minus;L</b>,
-<b>&minus;&minus;dereference</b></p>
+<p style="margin-top: 1em"><b>-L</b>,
+<b>--dereference</b></p>
 
 <p style="margin-left:17%;">(c and r modes only) All
 symbolic links will be followed. Normally, symbolic links
 are archived as such. With this option, the target of the
 link will be archived instead.</p>
 
-<p style="margin-top: 1em"><b>&minus;l</b>,
-<b>&minus;&minus;check-links</b></p>
+<p style="margin-top: 1em"><b>-l</b>,
+<b>--check-links</b></p>
 
 <p style="margin-left:17%;">(c and r modes only) Issue a
 warning message unless all links to each file are
 archived.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;lrzip</b></p>
+<p style="margin-top: 1em"><b>--lrzip</b></p>
 
 <p style="margin-left:17%;">(c mode only) Compress the
 resulting archive with lrzip(1). In extract or list modes,
 this option is ignored.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;lz4</b></p>
+<p style="margin-top: 1em"><b>--lz4</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">(c mode only)
 Compress the archive with lz4-compatible compression before
 writing it. In input mode, this option is ignored; lz4
 compression is recognized automatically on input.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;lzma</b></p>
+<p style="margin-top: 1em"><b>--lzma</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">(c mode only)
 Compress the resulting archive with the original LZMA
 algorithm. Use of this option is discouraged and new
-archives should be created with <b>&minus;&minus;xz</b>
-instead. Note that, unlike other <b>tar</b> implementations,
-this implementation recognizes LZMA compression
-automatically when reading archives.</p>
+archives should be created with <b>--xz</b> instead. Note
+that, unlike other <b>tar</b> implementations, this
+implementation recognizes LZMA compression automatically
+when reading archives.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;lzop</b></p>
+<p style="margin-top: 1em"><b>--lzop</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">(c mode only)
 Compress the resulting archive with lzop(1). In extract or
 list modes, this option is ignored.</p>
 
-<p style="margin-top: 1em"><b>&minus;m</b>,
-<b>&minus;&minus;modification-time</b></p>
+<p style="margin-top: 1em"><b>-m</b>,
+<b>--modification-time</b></p>
 
 <p style="margin-left:17%;">(x mode only) Do not extract
 modification time. By default, the modification time is set
 to the time stored in the archive.</p>
 
-
-<p style="margin-top: 1em"><b>&minus;&minus;mac-metadata</b></p>
+<p style="margin-top: 1em"><b>--mac-metadata</b></p>
 
 <p style="margin-left:17%;">(c, r, u and x mode only) Mac
 OS X specific. Archive or extract extended ACLs and extended
 attributes using copyfile(3) in AppleDouble format. This is
-the reverse of <b>&minus;&minus;no-mac-metadata</b>. and the
-default behavior in c, r, and u modes or if <b>tar</b> is
-run in x mode as root.</p>
+the reverse of <b>--no-mac-metadata</b>. and the default
+behavior in c, r, and u modes or if <b>tar</b> is run in x
+mode as root.</p>
 
-<p style="margin-top: 1em"><b>&minus;n</b>,
-<b>&minus;&minus;norecurse</b>,
-<b>&minus;&minus;no-recursion</b></p>
+<p style="margin-top: 1em"><b>-n</b>, <b>--norecurse</b>,
+<b>--no-recursion</b></p>
 
 <p style="margin-left:17%;">(c, r, u modes only) Do not
 recursively archive the contents of directories.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;newer</b>
-<i>date</i></p>
+<p style="margin-top: 1em"><b>--newer</b> <i>date</i></p>
 
 <p style="margin-left:17%;">(c, r, u modes only) Only
 include files and directories newer than the specified date.
 This compares ctime entries.</p>
 
-
-<p style="margin-top: 1em"><b>&minus;&minus;newer-mtime</b>
+<p style="margin-top: 1em"><b>--newer-mtime</b>
 <i>date</i></p>
 
 <p style="margin-left:17%;">(c, r, u modes only) Like
-<b>&minus;&minus;newer</b>, except it compares mtime entries
-instead of ctime entries.</p>
+<b>--newer</b>, except it compares mtime entries instead of
+ctime entries.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;newer-than</b>
+<p style="margin-top: 1em"><b>--newer-than</b>
 <i>file</i></p>
 
 <p style="margin-left:17%;">(c, r, u modes only) Only
 include files and directories newer than the specified file.
 This compares ctime entries.</p>
 
-
-<p style="margin-top: 1em"><b>&minus;&minus;newer-mtime-than</b>
+<p style="margin-top: 1em"><b>--newer-mtime-than</b>
 <i>file</i></p>
 
 <p style="margin-left:17%;">(c, r, u modes only) Like
-<b>&minus;&minus;newer-than</b>, except it compares mtime
-entries instead of ctime entries.</p>
+<b>--newer-than</b>, except it compares mtime entries
+instead of ctime entries.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;nodump</b></p>
+<p style="margin-top: 1em"><b>--nodump</b></p>
 
 <p style="margin-left:17%;">(c and r modes only) Honor the
 nodump file flag by skipping this file.</p>
 
 
-<p style="margin-top: 1em"><b>&minus;&minus;nopreserveHFSCompression</b></p>
+<p style="margin-top: 1em"><b>--nopreserveHFSCompression</b></p>
 
-<p style="margin-left:17%;">(x mode only) Mac OS X
-specific(v10.6 or later). Do not compress extracted regular
-files which were compressed with HFS+ compression before
-archived. By default, compress the regular files again with
-HFS+ compression.</p>
+<p style="margin-left:17%;">(x mode only) Mac OS X specific
+(v10.6 or later). Do not compress extracted regular files
+which were compressed with HFS+ compression before archived.
+By default, compress the regular files again with HFS+
+compression.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;null</b></p>
+<p style="margin-top: 1em"><b>--null</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">(use with
-<b>&minus;I</b> or <b>&minus;T</b>) Filenames or patterns
-are separated by null characters, not by newlines. This is
-often used to read filenames output by the
-<b>&minus;print0</b> option to find(1).</p>
+<b>-I</b> or <b>-T</b>) Filenames or patterns are separated
+by null characters, not by newlines. This is often used to
+read filenames output by the <b>-print0</b> option to
+find(1).</p>
 
-
-<p style="margin-top: 1em"><b>&minus;&minus;no-acls</b></p>
+<p style="margin-top: 1em"><b>--no-acls</b></p>
 
 <p style="margin-left:17%;">(c, r, u, x modes only) Do not
 archive or extract POSIX.1e or NFSv4 ACLs. This is the
-reverse of <b>&minus;&minus;acls</b> and the default
-behavior if <b>tar</b> is run as non-root in x mode (on Mac
-OS X also in c, r and u modes).</p>
+reverse of <b>--acls</b> and the default behavior if
+<b>tar</b> is run as non-root in x mode (on Mac OS X as any
+user in c, r, u and x modes).</p>
 
-
-<p style="margin-top: 1em"><b>&minus;&minus;no-fflags</b></p>
+<p style="margin-top: 1em"><b>--no-fflags</b></p>
 
 <p style="margin-left:17%;">(c, r, u, x modes only) Do not
 archive or extract file flags. This is the reverse of
-<b>&minus;&minus;fflags</b> and the default behavior if
-<b>tar</b> is run as non-root in x mode.</p>
+<b>--fflags</b> and the default behavior if <b>tar</b> is
+run as non-root in x mode.</p>
 
-
-<p style="margin-top: 1em"><b>&minus;&minus;no-mac-metadata</b></p>
+<p style="margin-top: 1em"><b>--no-mac-metadata</b></p>
 
 <p style="margin-left:17%;">(x mode only) Mac OS X
 specific. Do not archive or extract ACLs and extended
 attributes using copyfile(3) in AppleDouble format. This is
-the reverse of <b>&minus;&minus;mac-metadata</b>. and the
-default behavior if <b>tar</b> is run as non-root in x
-mode.</p>
+the reverse of <b>--mac-metadata</b>. and the default
+behavior if <b>tar</b> is run as non-root in x mode.</p>
 
-<p style="margin-top: 1em"><b>&minus;n</b>,
-<b>&minus;&minus;norecurse</b>,
-<b>&minus;&minus;no-recursion</b></p>
+<p style="margin-top: 1em"><b>-n</b>, <b>--norecurse</b>,
+<b>--no-recursion</b></p>
 
-
-<p style="margin-top: 1em"><b>&minus;&minus;no-same-owner</b></p>
+<p style="margin-top: 1em"><b>--no-same-owner</b></p>
 
 <p style="margin-left:17%;">(x mode only) Do not extract
 owner and group IDs. This is the reverse of
-<b>&minus;&minus;same-owner</b> and the default behavior if
-<b>tar</b> is run as non-root.</p>
+<b>--same-owner</b> and the default behavior if <b>tar</b>
+is run as non-root.</p>
 
 
-<p style="margin-top: 1em"><b>&minus;&minus;no-same-permissions</b></p>
+<p style="margin-top: 1em"><b>--no-same-permissions</b></p>
 
 <p style="margin-left:17%;">(x mode only) Do not extract
 full permissions (SGID, SUID, sticky bit, ACLs, extended
 attributes or extended file flags). This is the reverse of
-<b>&minus;p</b> and the default behavior if <b>tar</b> is
-run as non-root and can be overridden by also specifying
-<b>&minus;&minus;acls</b>, <b>&minus;&minus;fflags</b>,
-<b>&minus;&minus;mac-metadata, &minus;&minus;same-owner</b>,
-<b>&minus;&minus;same-permissions</b> and
-<b>&minus;&minus;xattrs</b>.</p>
+<b>-p</b> and the default behavior if <b>tar</b> is run as
+non-root.</p>
 
-
-<p style="margin-top: 1em"><b>&minus;&minus;no-xattrs</b></p>
+<p style="margin-top: 1em"><b>--no-xattrs</b></p>
 
 <p style="margin-left:17%;">(c, r, u, x modes only) Do not
 archive or extract extended attributes. This is the reverse
-of <b>&minus;&minus;xattrs</b> and the default behavior if
-<b>tar</b> is run as non-root in x mode.</p>
+of <b>--xattrs</b> and the default behavior if <b>tar</b> is
+run as non-root in x mode.</p>
 
-
-<p style="margin-top: 1em"><b>&minus;&minus;numeric-owner</b></p>
+<p style="margin-top: 1em"><b>--numeric-owner</b></p>
 
 <p style="margin-left:17%;">This is equivalent to
-<b>&minus;&minus;uname</b> &quot;&quot;
-<b>&minus;&minus;gname</b> &quot;&quot;. On extract, it
-causes user and group names in the archive to be ignored in
-favor of the numeric user and group ids. On create, it
-causes user and group names to not be stored in the
-archive.</p>
+<b>--uname</b> &quot;&quot; <b>--gname</b> &quot;&quot;. On
+extract, it causes user and group names in the archive to be
+ignored in favor of the numeric user and group ids. On
+create, it causes user and group names to not be stored in
+the archive.</p>
 
-<p style="margin-top: 1em"><b>&minus;O</b>,
-<b>&minus;&minus;to-stdout</b></p>
+<p style="margin-top: 1em"><b>-O</b>,
+<b>--to-stdout</b></p>
 
 <p style="margin-left:17%;">(x, t modes only) In extract
 (-x) mode, files will be written to standard out rather than
 being extracted to disk. In list (-t) mode, the file listing
 will be written to stderr rather than the usual stdout.</p>
 
-<p style="margin-top: 1em"><b>&minus;o</b></p>
+<p style="margin-top: 1em"><b>-o</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">(x mode) Use
 the user and group of the user running the program rather
 than those specified in the archive. Note that this has no
-significance unless <b>&minus;p</b> is specified, and the
-program is being run by the root user. In this case, the
-file modes and flags from the archive will be restored, but
-ACLs or owner information in the archive will be
-discarded.</p>
+significance unless <b>-p</b> is specified, and the program
+is being run by the root user. In this case, the file modes
+and flags from the archive will be restored, but ACLs or
+owner information in the archive will be discarded.</p>
 
-<p style="margin-top: 1em"><b>&minus;o</b></p>
+<p style="margin-top: 1em"><b>-o</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">(c, r, u mode)
-A synonym for <b>&minus;&minus;format</b> <i>ustar</i></p>
+A synonym for <b>--format</b> <i>ustar</i></p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;older</b>
-<i>date</i></p>
+<p style="margin-top: 1em"><b>--older</b> <i>date</i></p>
 
 <p style="margin-left:17%;">(c, r, u modes only) Only
 include files and directories older than the specified date.
 This compares ctime entries.</p>
 
-
-<p style="margin-top: 1em"><b>&minus;&minus;older-mtime</b>
+<p style="margin-top: 1em"><b>--older-mtime</b>
 <i>date</i></p>
 
 <p style="margin-left:17%;">(c, r, u modes only) Like
-<b>&minus;&minus;older</b>, except it compares mtime entries
-instead of ctime entries.</p>
+<b>--older</b>, except it compares mtime entries instead of
+ctime entries.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;older-than</b>
+<p style="margin-top: 1em"><b>--older-than</b>
 <i>file</i></p>
 
 <p style="margin-left:17%;">(c, r, u modes only) Only
 include files and directories older than the specified file.
 This compares ctime entries.</p>
 
-
-<p style="margin-top: 1em"><b>&minus;&minus;older-mtime-than</b>
+<p style="margin-top: 1em"><b>--older-mtime-than</b>
 <i>file</i></p>
 
 <p style="margin-left:17%;">(c, r, u modes only) Like
-<b>&minus;&minus;older-than</b>, except it compares mtime
-entries instead of ctime entries.</p>
+<b>--older-than</b>, except it compares mtime entries
+instead of ctime entries.</p>
 
-
-<p style="margin-top: 1em"><b>&minus;&minus;one-file-system</b></p>
+<p style="margin-top: 1em"><b>--one-file-system</b></p>
 
 <p style="margin-left:17%;">(c, r, and u modes) Do not
 cross mount points.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;options</b>
+<p style="margin-top: 1em"><b>--options</b>
 <i>options</i></p>
 
 <p style="margin-left:17%;">Select optional behaviors for
@@ -758,7 +721,7 @@ output. Supported keywords include: <b>cksum</b>,
 <b>nlink</b>, <b>rmd160</b>, <b>sha1</b>, <b>sha256</b>,
 <b>sha384</b>, <b>sha512</b>, <b>size</b>, <b>time</b>,
 <b>uid</b>, <b>uname</b>. The default is equivalent to:
-&lsquo;&lsquo;device, flags, gid, gname, link, mode, nlink,
+&rsquo;&rsquo;device, flags, gid, gname, link, mode, nlink,
 size, time, type, uid, uname&rsquo;&rsquo;.</p>
 
 <p><b>mtree:all</b></p>
@@ -802,14 +765,14 @@ encryption), aes128 (WinZip AES-128 encryption) and aes256
 archive, which occurs when multiple tar archives have been
 concatenated together. Without this option, only the
 contents of the first concatenated archive would be read.
-This option is comparable to the <b>&minus;i</b>,
-<b>&minus;&minus;ignore-zeros</b> option of GNU tar.</p>
+This option is comparable to the <b>-i</b>,
+<b>--ignore-zeros</b> option of GNU tar.</p>
 
 <p style="margin-left:17%;">If a provided option is not
 supported by any module, that is a fatal error.</p>
 
-<p style="margin-top: 1em"><b>&minus;P</b>,
-<b>&minus;&minus;absolute-paths</b></p>
+<p style="margin-top: 1em"><b>-P</b>,
+<b>--absolute-paths</b></p>
 
 <p style="margin-left:17%;">Preserve pathnames. By default,
 absolute pathnames (those that begin with a / character)
@@ -819,24 +782,20 @@ extract archive entries whose pathnames contain <i>..</i> or
 whose target directory would be altered by a symlink. This
 option suppresses these behaviors.</p>
 
-<p style="margin-top: 1em"><b>&minus;p</b>,
-<b>&minus;&minus;insecure</b>,
-<b>&minus;&minus;preserve-permissions</b></p>
+<p style="margin-top: 1em"><b>-p</b>, <b>--insecure</b>,
+<b>--preserve-permissions</b></p>
 
 <p style="margin-left:17%;">(x mode only) Preserve file
 permissions. Attempt to restore the full permissions,
-including owner, file modes, ACLs, extended atributes and
+including owner, file modes, ACLs, extended attributes and
 extended file flags, if available, for each item extracted
-from the archive. This is the default, if <b>tar</b> is
-being run by root and can be overridden by also specifying
-<b>&minus;&minus;no-acls</b>,
-<b>&minus;&minus;no-fflags</b>,
-<b>&minus;&minus;no-mac-metadata,
-&minus;&minus;no-same-owner</b>,
-<b>&minus;&minus;no-same-permissions</b> and
-<b>&minus;&minus;no-xattrs</b>.</p>
+from the archive. This is te reverse of
+<b>--no-same-permissions</b> and the default if <b>tar</b>
+is being run by root and can be partially overridden by also
+specifying <b>--no-acls</b>, <b>--no-fflags</b>,
+<b>--no-mac-metadata</b> or <b>--no-xattrs</b>.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;passphrase</b>
+<p style="margin-top: 1em"><b>--passphrase</b>
 <i>passphrase</i></p>
 
 <p style="margin-left:17%;">The <i>passphrase</i> is used
@@ -845,13 +804,13 @@ the only supported format that supports encryption. You
 shouldn&rsquo;t use this option unless you realize how
 insecure use of this option is.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;posix</b></p>
+<p style="margin-top: 1em"><b>--posix</b></p>
 
 <p style="margin-left:17%;">(c, r, u mode only) Synonym for
-<b>&minus;&minus;format</b> <i>pax</i></p>
+<b>--format</b> <i>pax</i></p>
 
-<p style="margin-top: 1em"><b>&minus;q</b>,
-<b>&minus;&minus;fast-read</b></p>
+<p style="margin-top: 1em"><b>-q</b>,
+<b>--fast-read</b></p>
 
 <p style="margin-left:17%;">(x and t mode only) Extract or
 list only the first archive entry that matches each pattern
@@ -862,7 +821,7 @@ entries with the same name and, by convention, later entries
 overwrite earlier entries. This option is provided as a
 performance optimization.</p>
 
-<p style="margin-top: 1em"><b>&minus;S</b></p>
+<p style="margin-top: 1em"><b>-S</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">(x mode only)
 Extract files as sparse files. For every block on disk,
@@ -870,8 +829,7 @@ check first if it contains only NULL bytes and seek over it
 otherwise. This works similar to the conv=sparse option of
 dd.</p>
 
-<p style="margin-top: 1em"><b>&minus;s</b>
-<i>pattern</i></p>
+<p style="margin-top: 1em"><b>-s</b> <i>pattern</i></p>
 
 <p style="margin-left:17%;">Modify file or archive member
 names according to <i>pattern</i>. The pattern has the
@@ -897,16 +855,13 @@ default is <i>hrs</i> which applies substitutions to all
 names. In particular, it is never necessary to specify h, r,
 or s.</p>
 
-
-<p style="margin-top: 1em"><b>&minus;&minus;same-owner</b></p>
+<p style="margin-top: 1em"><b>--same-owner</b></p>
 
 <p style="margin-left:17%;">(x mode only) Extract owner and
-group IDs. This is the reverse of
-<b>&minus;&minus;no-same-owner</b> and the default behavior
-if <b>tar</b> is run as root.</p>
+group IDs. This is the reverse of <b>--no-same-owner</b> and
+the default behavior if <b>tar</b> is run as root.</p>
 
-
-<p style="margin-top: 1em"><b>&minus;&minus;strip-components</b>
+<p style="margin-top: 1em"><b>--strip-components</b>
 <i>count</i></p>
 
 <p style="margin-left:17%;">Remove the specified number of
@@ -915,30 +870,29 @@ silently skipped. Note that the pathname is edited after
 checking inclusion/exclusion patterns but before security
 checks.</p>
 
-<p style="margin-top: 1em"><b>&minus;T</b> <i>filename</i>,
-<b>&minus;&minus;files-from</b> <i>filename</i></p>
+<p style="margin-top: 1em"><b>-T</b> <i>filename</i>,
+<b>--files-from</b> <i>filename</i></p>
 
 <p style="margin-left:17%;">In x or t mode, <b>tar</b> will
 read the list of names to be extracted from <i>filename</i>.
 In c mode, <b>tar</b> will read names to be archived from
 <i>filename</i>. The special name
-&lsquo;&lsquo;-C&rsquo;&rsquo; on a line by itself will
+&rsquo;&rsquo;-C&rsquo;&rsquo; on a line by itself will
 cause the current directory to be changed to the directory
 specified on the following line. Names are terminated by
-newlines unless <b>&minus;&minus;null</b> is specified. Note
-that <b>&minus;&minus;null</b> also disables the special
-handling of lines containing &lsquo;&lsquo;-C&rsquo;&rsquo;.
-Note: If you are generating lists of files using find(1),
-you probably want to use <b>&minus;n</b> as well.</p>
+newlines unless <b>--null</b> is specified. Note that
+<b>--null</b> also disables the special handling of lines
+containing &rsquo;&rsquo;-C&rsquo;&rsquo;. Note: If you are
+generating lists of files using find(1), you probably want
+to use <b>-n</b> as well.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;totals</b></p>
+<p style="margin-top: 1em"><b>--totals</b></p>
 
 <p style="margin-left:17%;">(c, r, u modes only) After
 archiving all files, print a summary to stderr.</p>
 
-<p style="margin-top: 1em"><b>&minus;U</b>,
-<b>&minus;&minus;unlink</b>,
-<b>&minus;&minus;unlink-first</b></p>
+<p style="margin-top: 1em"><b>-U</b>, <b>--unlink</b>,
+<b>--unlink-first</b></p>
 
 <p style="margin-left:17%;">(x mode only) Unlink files
 before creating them. This can be a minor performance
@@ -948,74 +902,65 @@ also causes <b>tar</b> to remove intervening directory
 symlinks instead of reporting an error. See the SECURITY
 section below for more details.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;uid</b>
-<i>id</i></p>
+<p style="margin-top: 1em"><b>--uid</b> <i>id</i></p>
 
 <p style="margin-left:17%;">Use the provided user id number
 and ignore the user name from the archive. On create, if
-<b>&minus;&minus;uname</b> is not also specified, the user
-name will be set to match the user id.</p>
+<b>--uname</b> is not also specified, the user name will be
+set to match the user id.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;uname</b>
-<i>name</i></p>
+<p style="margin-top: 1em"><b>--uname</b> <i>name</i></p>
 
 <p style="margin-left:17%;">Use the provided user name. On
 extract, this overrides the user name in the archive; if the
 provided user name does not exist on the system, it will be
 ignored and the user id (from the archive or from the
-<b>&minus;&minus;uid</b> option) will be used instead. On
-create, this sets the user name that will be stored in the
-archive; the name is not verified against the system user
-database.</p>
+<b>--uid</b> option) will be used instead. On create, this
+sets the user name that will be stored in the archive; the
+name is not verified against the system user database.</p>
 
-
-<p style="margin-top: 1em"><b>&minus;&minus;use-compress-program</b>
+<p style="margin-top: 1em"><b>--use-compress-program</b>
 <i>program</i></p>
 
 <p style="margin-left:17%;">Pipe the input (in x or t mode)
 or the output (in c mode) through <i>program</i> instead of
 using the builtin compression support.</p>
 
-<p style="margin-top: 1em"><b>&minus;v</b>,
-<b>&minus;&minus;verbose</b></p>
+<p style="margin-top: 1em"><b>-v</b>, <b>--verbose</b></p>
 
 <p style="margin-left:17%;">Produce verbose output. In
 create and extract modes, <b>tar</b> will list each file
 name as it is read from or written to the archive. In list
 mode, <b>tar</b> will produce output similar to that of
-ls(1). An additional <b>&minus;v</b> option will also
-provide ls-like details in create and extract mode.</p>
+ls(1). An additional <b>-v</b> option will also provide
+ls-like details in create and extract mode.</p>
 
-
-<p style="margin-top: 1em"><b>&minus;&minus;version</b></p>
+<p style="margin-top: 1em"><b>--version</b></p>
 
 <p style="margin-left:17%;">Print version of <b>tar</b> and
 <b>libarchive</b>, and exit.</p>
 
-<p style="margin-top: 1em"><b>&minus;w</b>,
-<b>&minus;&minus;confirmation</b>,
-<b>&minus;&minus;interactive</b></p>
+<p style="margin-top: 1em"><b>-w</b>,
+<b>--confirmation</b>, <b>--interactive</b></p>
 
 <p style="margin-left:17%;">Ask for confirmation for every
 action.</p>
 
-<p style="margin-top: 1em"><b>&minus;X</b> <i>filename</i>,
-<b>&minus;&minus;exclude-from</b> <i>filename</i></p>
+<p style="margin-top: 1em"><b>-X</b> <i>filename</i>,
+<b>--exclude-from</b> <i>filename</i></p>
 
 <p style="margin-left:17%;">Read a list of exclusion
-patterns from the specified file. See
-<b>&minus;&minus;exclude</b> for more information about the
-handling of exclusions.</p>
+patterns from the specified file. See <b>--exclude</b> for
+more information about the handling of exclusions.</p>
 
-<p style="margin-top: 1em"><b>&minus;&minus;xattrs</b></p>
+<p style="margin-top: 1em"><b>--xattrs</b></p>
 
 <p style="margin-left:17%;">(c, r, u, x modes only) Archive
 or extract extended attributes. This is the reverse of
-<b>&minus;&minus;no-xattrs</b> and the default behavior in
-c, r, and u modes or if <b>tar</b> is run in x mode as
-root.</p>
+<b>--no-xattrs</b> and the default behavior in c, r, and u
+modes or if <b>tar</b> is run in x mode as root.</p>
 
-<p style="margin-top: 1em"><b>&minus;y</b></p>
+<p style="margin-top: 1em"><b>-y</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">(c mode only)
 Compress the resulting archive with bzip2(1). In extract or
@@ -1023,9 +968,8 @@ list modes, this option is ignored. Note that, unlike other
 <b>tar</b> implementations, this implementation recognizes
 bzip2 compression automatically when reading archives.</p>
 
-<p style="margin-top: 1em"><b>&minus;Z</b>,
-<b>&minus;&minus;compress</b>,
-<b>&minus;&minus;uncompress</b></p>
+<p style="margin-top: 1em"><b>-Z</b>, <b>--compress</b>,
+<b>--uncompress</b></p>
 
 <p style="margin-left:17%;">(c mode only) Compress the
 resulting archive with compress(1). In extract or list
@@ -1034,8 +978,8 @@ modes, this option is ignored. Note that, unlike other
 compress compression automatically when reading
 archives.</p>
 
-<p style="margin-top: 1em"><b>&minus;z</b>,
-<b>&minus;&minus;gunzip</b>, <b>&minus;&minus;gzip</b></p>
+<p style="margin-top: 1em"><b>-z</b>, <b>--gunzip</b>,
+<b>--gzip</b></p>
 
 <p style="margin-left:17%;">(c mode only) Compress the
 resulting archive with gzip(1). In extract or list modes,
@@ -1051,14 +995,14 @@ variables affect the execution of <b>tar</b>:</p>
 <p style="margin-top: 1em">TAR_READER_OPTIONS</p>
 
 <p style="margin-left:21%;">The default options for format
-readers and compression readers. The
-<b>&minus;&minus;options</b> option overrides this.</p>
+readers and compression readers. The <b>--options</b> option
+overrides this.</p>
 
 <p style="margin-top: 1em">TAR_WRITER_OPTIONS</p>
 
 <p style="margin-left:21%;">The default options for format
-writers and compression writers. The
-<b>&minus;&minus;options</b> option overrides this.</p>
+writers and compression writers. The <b>--options</b> option
+overrides this.</p>
 
 <p style="margin-top: 1em">LANG</p>
 
@@ -1068,9 +1012,9 @@ use. See environ(7) for more information.</p>
 <p style="margin-top: 1em">TAPE</p>
 
 <p style="margin-left:21%; margin-top: 1em">The default
-device. The <b>&minus;f</b> option overrides this. Please
-see the description of the <b>&minus;f</b> option above for
-more details.</p>
+device. The <b>-f</b> option overrides this. Please see the
+description of the <b>-f</b> option above for more
+details.</p>
 
 <p style="margin-top: 1em">TZ</p>
 
@@ -1090,38 +1034,38 @@ occurs.</p>
 archive called <i>file.tar.gz</i> that contains two files
 <i>source.c</i> and <i>source.h</i>:</p>
 
-<p style="margin-left:14%;"><b>tar &minus;czf</b>
-<i>file.tar.gz source.c source.h</i></p>
+<p style="margin-left:14%;"><b>tar -czf</b> <i>file.tar.gz
+source.c source.h</i></p>
 
 <p style="margin-left:6%; margin-top: 1em">To view a
 detailed table of contents for this archive:</p>
 
-<p style="margin-left:14%;"><b>tar &minus;tvf</b>
+<p style="margin-left:14%;"><b>tar -tvf</b>
 <i>file.tar.gz</i></p>
 
 <p style="margin-left:6%; margin-top: 1em">To extract all
 entries from the archive on the default tape drive:</p>
 
-<p style="margin-left:14%;"><b>tar &minus;x</b></p>
+<p style="margin-left:14%;"><b>tar -x</b></p>
 
 <p style="margin-left:6%; margin-top: 1em">To examine the
 contents of an ISO 9660 cdrom image:</p>
 
-<p style="margin-left:14%;"><b>tar &minus;tf</b>
+<p style="margin-left:14%;"><b>tar -tf</b>
 <i>image.iso</i></p>
 
 <p style="margin-left:6%; margin-top: 1em">To move file
 hierarchies, invoke <b>tar</b> as</p>
 
-<p style="margin-left:14%;"><b>tar &minus;cf</b> <i>-</i>
-<b>&minus;C</b> <i>srcdir&nbsp;.</i> | <b>tar &minus;xpf</b>
-<i>-</i> <b>&minus;C</b> <i>destdir</i></p>
+<p style="margin-left:14%;"><b>tar -cf</b> <i>-</i>
+<b>-C</b> <i>srcdir&nbsp;.</i> | <b>tar -xpf</b> <i>-</i>
+<b>-C</b> <i>destdir</i></p>
 
 <p style="margin-left:6%;">or more traditionally</p>
 
-<p style="margin-left:14%;">cd srcdir ; <b>tar
-&minus;cf</b> <i>-&nbsp;.</i> | (<i>cd destdir ;</i> <b>tar
-&minus;xpf</b> <i>-</i>)</p>
+<p style="margin-left:14%;">cd srcdir ; <b>tar -cf</b>
+<i>-&nbsp;.</i> | (<i>cd destdir ;</i> <b>tar -xpf</b>
+<i>-</i>)</p>
 
 <p style="margin-left:6%; margin-top: 1em">In create mode,
 the list of files and directories to be archived can also
@@ -1130,8 +1074,8 @@ include directory change instructions of the form
 <b>@</b><i>archive-file</i>. For example, the command
 line</p>
 
-<p style="margin-left:14%;"><b>tar &minus;c &minus;f</b>
-<i>new.tar foo1</i> <b>@</b><i>old.tgz</i> <b>-C</b><i>/tmp
+<p style="margin-left:14%;"><b>tar -c -f</b> <i>new.tar
+foo1</i> <b>@</b><i>old.tgz</i> <b>-C</b><i>/tmp
 foo2</i></p>
 
 <p style="margin-left:6%;">will create a new archive
@@ -1155,31 +1099,29 @@ usr/bin/ls uid=0 gid=0 mode=0755 type=file content=myls <br>
 $ tar -cvf output.tar @input.mtree</p>
 
 <p style="margin-left:6%; margin-top: 1em">The
-<b>&minus;&minus;newer</b> and
-<b>&minus;&minus;newer-mtime</b> switches accept a variety
-of common date and time specifications, including
-&lsquo;&lsquo;12 Mar 2005 7:14:29pm&rsquo;&rsquo;,
-&lsquo;&lsquo;2005-03-12 19:14&rsquo;&rsquo;,
-&lsquo;&lsquo;5 minutes ago&rsquo;&rsquo;, and
-&lsquo;&lsquo;19:14 PST May 1&rsquo;&rsquo;.</p>
+<b>--newer</b> and <b>--newer-mtime</b> switches accept a
+variety of common date and time specifications, including
+&rsquo;&rsquo;12 Mar 2005 7:14:29pm&rsquo;&rsquo;,
+&rsquo;&rsquo;2005-03-12 19:14&rsquo;&rsquo;,
+&rsquo;&rsquo;5 minutes ago&rsquo;&rsquo;, and
+&rsquo;&rsquo;19:14 PST May 1&rsquo;&rsquo;.</p>
 
 <p style="margin-left:6%; margin-top: 1em">The
-<b>&minus;&minus;options</b> argument can be used to control
-various details of archive generation or reading. For
-example, you can generate mtree output which only contains
-<b>type</b>, <b>time</b>, and <b>uid</b> keywords:</p>
+<b>--options</b> argument can be used to control various
+details of archive generation or reading. For example, you
+can generate mtree output which only contains <b>type</b>,
+<b>time</b>, and <b>uid</b> keywords:</p>
 
-<p style="margin-left:14%;"><b>tar &minus;cf</b>
-<i>file.tar</i> <b>&minus;&minus;format=mtree
-&minus;&minus;options=&rsquo;!all,type,time,uid&rsquo;</b>
+<p style="margin-left:14%;"><b>tar -cf</b> <i>file.tar</i>
+<b>--format=mtree
+--options=&rsquo;!all,type,time,uid&rsquo;</b>
 <i>dir</i></p>
 
 <p style="margin-left:6%;">or you can set the compression
 level used by gzip or xz compression:</p>
 
-<p style="margin-left:14%;"><b>tar &minus;czf</b>
-<i>file.tar</i>
-<b>&minus;&minus;options=&rsquo;compression-level=9&rsquo;</b>.</p>
+<p style="margin-left:14%;"><b>tar -czf</b> <i>file.tar</i>
+<b>--options=&rsquo;compression-level=9&rsquo;</b>.</p>
 
 <p style="margin-left:6%;">For more details, see the
 explanation of the <b>archive_read_set_options</b>() and
@@ -1258,28 +1200,27 @@ then use that link to restore a file into that directory. To
 guard against this, <b>tar</b> checks each extracted path
 for symlinks. If the final path element is a symlink, it
 will be removed and replaced with the archive entry. If
-<b>&minus;U</b> is specified, any intermediate symlink will
-also be unconditionally removed. If neither <b>&minus;U</b>
-nor <b>&minus;P</b> is specified, <b>tar</b> will refuse to
-extract the entry.</p>
+<b>-U</b> is specified, any intermediate symlink will also
+be unconditionally removed. If neither <b>-U</b> nor
+<b>-P</b> is specified, <b>tar</b> will refuse to extract
+the entry.</p>
 
 <p style="margin-left:6%;">To protect yourself, you should
 be wary of any archives that come from untrusted sources.
 You should examine the contents of an archive with</p>
 
-<p style="margin-left:14%;"><b>tar &minus;tf</b>
+<p style="margin-left:14%;"><b>tar -tf</b>
 <i>filename</i></p>
 
 <p style="margin-left:6%;">before extraction. You should
-use the <b>&minus;k</b> option to ensure that <b>tar</b>
-will not overwrite any existing files or the <b>&minus;U</b>
-option to remove any pre-existing files. You should
-generally not extract archives while running with super-user
-privileges. Note that the <b>&minus;P</b> option to
-<b>tar</b> disables the security checks above and allows you
-to extract an archive while preserving any absolute
-pathnames, <i>..</i> components, or symlinks to other
-directories.</p>
+use the <b>-k</b> option to ensure that <b>tar</b> will not
+overwrite any existing files or the <b>-U</b> option to
+remove any pre-existing files. You should generally not
+extract archives while running with super-user privileges.
+Note that the <b>-P</b> option to <b>tar</b> disables the
+security checks above and allows you to extract an archive
+while preserving any absolute pathnames, <i>..</i>
+components, or symlinks to other directories.</p>
 
 <p style="margin-top: 1em"><b>SEE ALSO</b></p>
 
@@ -1291,9 +1232,9 @@ libarchive-formats(5), tar(5)</p>
 
 <p style="margin-left:6%;">There is no current POSIX
 standard for the tar command; it appeared in ISO/IEC
-9945-1:1996 (&lsquo;&lsquo;POSIX.1&rsquo;&rsquo;) but was
+9945-1:1996 (&rsquo;&rsquo;POSIX.1&rsquo;&rsquo;) but was
 dropped from IEEE Std 1003.1-2001
-(&lsquo;&lsquo;POSIX.1&rsquo;&rsquo;). The options supported
+(&rsquo;&rsquo;POSIX.1&rsquo;&rsquo;). The options supported
 by this implementation were developed by surveying a number
 of existing tar implementations as well as the old POSIX
 specification for tar and the current POSIX specification
@@ -1301,7 +1242,7 @@ for pax.</p>
 
 <p style="margin-left:6%; margin-top: 1em">The ustar and
 pax interchange file formats are defined by IEEE Std
-1003.1-2001 (&lsquo;&lsquo;POSIX.1&rsquo;&rsquo;) for the
+1003.1-2001 (&rsquo;&rsquo;POSIX.1&rsquo;&rsquo;) for the
 pax command.</p>
 
 <p style="margin-top: 1em"><b>HISTORY</b></p>
@@ -1323,13 +1264,13 @@ library. It was first released with FreeBSD&nbsp;5.4 in May,
 <p style="margin-top: 1em"><b>BUGS</b></p>
 
 <p style="margin-left:6%;">This program follows ISO/IEC
-9945-1:1996 (&lsquo;&lsquo;POSIX.1&rsquo;&rsquo;) for the
-definition of the <b>&minus;l</b> option. Note that GNU tar
-prior to version 1.15 treated <b>&minus;l</b> as a synonym
-for the <b>&minus;&minus;one-file-system</b> option.</p>
+9945-1:1996 (&rsquo;&rsquo;POSIX.1&rsquo;&rsquo;) for the
+definition of the <b>-l</b> option. Note that GNU tar prior
+to version 1.15 treated <b>-l</b> as a synonym for the
+<b>--one-file-system</b> option.</p>
 
-<p style="margin-left:6%; margin-top: 1em">The
-<b>&minus;C</b> <i>dir</i> option may differ from historic
+<p style="margin-left:6%; margin-top: 1em">The <b>-C</b>
+<i>dir</i> option may differ from historic
 implementations.</p>
 
 <p style="margin-left:6%; margin-top: 1em">All archive
@@ -1351,13 +1292,13 @@ and decompression is implemented internally, so there may be
 insignificant differences between the compressed output
 generated by</p>
 
-<p style="margin-left:14%;"><b>tar &minus;czf</b> <i>-
+<p style="margin-left:14%;"><b>tar -czf</b> <i>-
 file</i></p>
 
 <p style="margin-left:6%;">and that generated by</p>
 
-<p style="margin-left:14%;"><b>tar &minus;cf</b> <i>-
-file</i> | <b>gzip</b></p>
+<p style="margin-left:14%;"><b>tar -cf</b> <i>- file</i> |
+<b>gzip</b></p>
 
 <p style="margin-left:6%; margin-top: 1em">The default
 should be to read and write archives to the standard I/O
@@ -1375,7 +1316,7 @@ as <i>./@foo</i> or <i>./-foo</i>, respectively.</p>
 
 <p style="margin-left:6%; margin-top: 1em">In create mode,
 a leading <i>./</i> is always removed. A leading <i>/</i> is
-stripped unless the <b>&minus;P</b> option is specified.</p>
+stripped unless the <b>-P</b> option is specified.</p>
 
 <p style="margin-left:6%; margin-top: 1em">There needs to
 be better support for file selection on both create and
@@ -1392,7 +1333,7 @@ incompatible ways that different archive formats store
 hardlink information.)</p>
 
 <p style="margin-left:6%; margin-top: 1em">BSD
-February&nbsp;24, 2017 BSD</p>
+February&nbsp;25, 2017 BSD</p>
 <hr>
 </body>
 </html>
