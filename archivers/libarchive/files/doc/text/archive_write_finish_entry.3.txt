@@ -1,36 +1,37 @@
 ARCHIVE_WRITE_FINISH_... BSD Library Functions Manual ARCHIVE_WRITE_FINISH_...
 
-1mNAME0m
-     1marchive_write_finish_entry 22m— functions for creating archives
+NAME
+     archive_write_finish_entry — functions for creating archives
 
-1mLIBRARY0m
+LIBRARY
      Streaming Archive Library (libarchive, -larchive)
 
-1mSYNOPSIS0m
-     1m#include <archive.h>0m
+SYNOPSIS
+     #include <archive.h>
 
-     4mint0m
-     1marchive_write_finish_entry22m(4mstruct24m 4marchive24m 4m*24m);
+     int
+     archive_write_finish_entry(struct archive *);
 
-1mDESCRIPTION0m
+DESCRIPTION
      Close out the entry just written.	In particular, this writes out the
      final padding required by some formats.  Ordinarily, clients never need
-     to call this, as it is called automatically by 1marchive_write_header22m() and
-     1marchive_write_close22m() as needed.
+     to call this, as it is called automatically by archive_write_header() and
+     archive_write_close() as needed.  For archive_write_disk handles, this
+     flushes pending file attribute changes like modification time.
 
-1mRETURN VALUES0m
-     This function returns 1mARCHIVE_OK 22mon success, or one of several non-zero
-     error codes for errors.  Specific error codes include: 1mARCHIVE_RETRY 22mfor
-     operations that might succeed if retried, 1mARCHIVE_WARN 22mfor unusual condi‐
-     tions that do not prevent further operations, and 1mARCHIVE_FATAL 22mfor seri‐
+RETURN VALUES
+     This function returns ARCHIVE_OK on success, or one of several non-zero
+     error codes for errors.  Specific error codes include: ARCHIVE_RETRY for
+     operations that might succeed if retried, ARCHIVE_WARN for unusual condi‐
+     tions that do not prevent further operations, and ARCHIVE_FATAL for seri‐
      ous errors that make remaining operations impossible.
 
-1mERRORS0m
+ERRORS
      Detailed error codes and textual descriptions are available from the
-     1marchive_errno22m() and 1marchive_error_string22m() functions.
+     archive_errno() and archive_error_string() functions.
 
-1mSEE ALSO0m
+SEE ALSO
      tar(1), libarchive(3), archive_write_data(3),
      archive_write_set_options(3), cpio(5), mtree(5), tar(5)
 
-BSD			       February 2, 2012 			   BSD
+BSD			       February 28, 2017			   BSD
