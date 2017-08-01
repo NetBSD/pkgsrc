@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/02/12 06:25:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2017/08/01 17:40:12 wiz Exp $
 #
 
 DISTNAME=		gcin-1.1.7
@@ -9,7 +9,7 @@ MASTER_SITES=		http://cle.linux.org.tw/gcin/download/gcin-old/gcin-1.1.x/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rxg@NetBSD.org
-HOMEPAGE=		http://www.csie.nctu.edu.tw/~cp76/gcin/
+#HOMEPAGE=		http://www.csie.nctu.edu.tw/~cp76/gcin/
 COMMENT=		Gtk Chinese INput application in X
 
 MAKE_JOBS_SAFE=		no

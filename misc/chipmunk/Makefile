@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/01/04 09:06:17 dholland Exp $
+# $NetBSD: Makefile,v 1.28 2017/08/01 17:40:14 wiz Exp $
 #
 
 DISTNAME=	chipmunk-1.4
@@ -7,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	http://www.bitwizard.nl/chipmunk/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.bitwizard.nl/chipmunk/index.html
+#HOMEPAGE=	http://www.bitwizard.nl/chipmunk/index.html
 COMMENT=	Shell-like tool for hardware debugging
 
 BUILD_TARGET=	chipmunk

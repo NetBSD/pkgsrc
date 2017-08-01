@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/06 11:54:33 asau Exp $
+# $NetBSD: Makefile,v 1.17 2017/08/01 17:40:11 wiz Exp $
 
 DISTNAME=		colchess
 PKGNAME=		${DISTNAME}-7.0
@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.ast.cam.ac.uk/~cmf/chess/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ast.cam.ac.uk/~cmf/chess/colchess/
+#HOMEPAGE=		http://www.ast.cam.ac.uk/~cmf/chess/colchess/
 COMMENT=		Chess analysis engine
 
 DIST_SUBDIR=		${PKGNAME_NOREV}
