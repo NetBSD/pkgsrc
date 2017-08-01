@@ -1,86 +1,86 @@
 ARCHIVE_READ(3) 	 BSD Library Functions Manual	       ARCHIVE_READ(3)
 
-1mNAME0m
-     1marchive_read 22m— functions for reading streaming archives
+NAME
+     archive_read — functions for reading streaming archives
 
-1mLIBRARY0m
+LIBRARY
      Streaming Archive Library (libarchive, -larchive)
 
-1mSYNOPSIS0m
-     1m#include <archive.h>0m
+SYNOPSIS
+     #include <archive.h>
 
-1mDESCRIPTION0m
+DESCRIPTION
      These functions provide a complete API for reading streaming archives.
      The general process is to first create the struct archive object, set
      options, initialize the reader, iterate over the archive headers and
      associated data, then close the archive and release all resources.
 
-   1mCreate archive object0m
+   Create archive object
      See archive_read_new(3).
 
      To read an archive, you must first obtain an initialized struct archive
-     object from 1marchive_read_new22m().
+     object from archive_read_new().
 
-   1mEnable filters and formats0m
+   Enable filters and formats
      See archive_read_filter(3) and archive_read_format(3).
 
      You can then modify this object for the desired operations with the vari‐
-     ous 1marchive_read_set_XXX22m() and 1marchive_read_support_XXX22m() functions.  In
+     ous archive_read_set_XXX() and archive_read_support_XXX() functions.  In
      particular, you will need to invoke appropriate
-     1marchive_read_support_XXX22m() functions to enable the corresponding compres‐
+     archive_read_support_XXX() functions to enable the corresponding compres‐
      sion and format support.  Note that these latter functions perform two
      distinct operations: they cause the corresponding support code to be
      linked into your program, and they enable the corresponding auto-detect
      code.  Unless you have specific constraints, you will generally want to
-     invoke 1marchive_read_support_filter_all22m() and
-     1marchive_read_support_format_all22m() to enable auto-detect for all formats
+     invoke archive_read_support_filter_all() and
+     archive_read_support_format_all() to enable auto-detect for all formats
      and compression types currently supported by the library.
 
-   1mSet options0m
+   Set options
      See archive_read_set_options(3).
 
-   1mOpen archive0m
+   Open archive
      See archive_read_open(3).
 
      Once you have prepared the struct archive object, you call
-     1marchive_read_open22m() to actually open the archive and prepare it for read‐
+     archive_read_open() to actually open the archive and prepare it for read‐
      ing.  There are several variants of this function; the most basic expects
      you to provide pointers to several functions that can provide blocks of
      bytes from the archive.  There are convenience forms that allow you to
-     specify a filename, file descriptor, 4mFILE24m 4m*24m object, or a block of memory
+     specify a filename, file descriptor, FILE * object, or a block of memory
      from which to read the archive data.  Note that the core library makes no
      assumptions about the size of the blocks read; callback functions are
      free to read whatever block size is most appropriate for the medium.
 
-   1mConsume archive0m
+   Consume archive
      See archive_read_header(3), archive_read_data(3) and
      archive_read_extract(3).
 
      Each archive entry consists of a header followed by a certain amount of
-     data.  You can obtain the next header with 1marchive_read_next_header22m(),
+     data.  You can obtain the next header with archive_read_next_header(),
      which returns a pointer to an struct archive_entry structure with infor‐
      mation about the current archive element.	If the entry is a regular
      file, then the header will be followed by the file data.  You can use
-     1marchive_read_data22m() (which works much like the read(2) system call) to
-     read this data from the archive, or 1marchive_read_data_block22m() which pro‐
+     archive_read_data() (which works much like the read(2) system call) to
+     read this data from the archive, or archive_read_data_block() which pro‐
      vides a slightly more efficient interface.  You may prefer to use the
-     higher-level 1marchive_read_data_skip22m(), which reads and discards the data
-     for this entry, 1marchive_read_data_into_fd22m(), which copies the data to the
-     provided file descriptor, or 1marchive_read_extract22m(), which recreates the
+     higher-level archive_read_data_skip(), which reads and discards the data
+     for this entry, archive_read_data_into_fd(), which copies the data to the
+     provided file descriptor, or archive_read_extract(), which recreates the
      specified entry on disk and copies data from the archive.	In particular,
-     note that 1marchive_read_extract22m() uses the struct archive_entry structure
+     note that archive_read_extract() uses the struct archive_entry structure
      that you provide it, which may differ from the entry just read from the
      archive.  In particular, many applications will want to override the
      pathname, file permissions, or ownership.
 
-   1mRelease resources0m
+   Release resources
      See archive_read_free(3).
 
      Once you have finished reading data from the archive, you should call
-     1marchive_read_close22m() to close the archive, then call 1marchive_read_free22m()
+     archive_read_close() to close the archive, then call archive_read_free()
      to release all resources, including all memory allocated by the library.
 
-1mEXAMPLE0m
+EXAMPLE
      The following illustrates basic usage of the library.  In this example,
      the callback functions are simply wrappers around the standard open(2),
      read(2), and close(2) system calls.
@@ -134,19 +134,19 @@ ARCHIVE_READ(3) 	 BSD Library Functions Manual	       ARCHIVE_READ(3)
 	     return (ARCHIVE_OK);
 	   }
 
-1mSEE ALSO0m
+SEE ALSO
      tar(1), libarchive(3), archive_read_new(3), archive_read_data(3),
      archive_read_extract(3), archive_read_filter(3), archive_read_format(3),
      archive_read_header(3), archive_read_open(3),
      archive_read_set_options(3), archive_util(3), tar(5)
 
-1mHISTORY0m
-     The 1mlibarchive 22mlibrary first appeared in FreeBSD 5.3.
+HISTORY
+     The libarchive library first appeared in FreeBSD 5.3.
 
-1mAUTHORS0m
-     The 1mlibarchive 22mlibrary was written by Tim Kientzle <kientzle@acm.org>.
+AUTHORS
+     The libarchive library was written by Tim Kientzle <kientzle@acm.org>.
 
-1mBUGS0m
+BUGS
      Many traditional archiver programs treat empty files as valid empty ar‐
      chives.  For example, many implementations of tar(1) allow you to append
      entries to an empty file.	Of course, it is impossible to determine the

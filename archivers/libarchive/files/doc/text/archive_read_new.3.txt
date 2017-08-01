@@ -1,25 +1,25 @@
 ARCHIVE_READ_NEW(3)	 BSD Library Functions Manual	   ARCHIVE_READ_NEW(3)
 
-1mNAME0m
-     1marchive_read_new 22m— functions for reading streaming archives
+NAME
+     archive_read_new — functions for reading streaming archives
 
-1mLIBRARY0m
+LIBRARY
      Streaming Archive Library (libarchive, -larchive)
 
-1mSYNOPSIS0m
-     1m#include <archive.h>0m
+SYNOPSIS
+     #include <archive.h>
 
-     4mstruct24m 4marchive24m 4m*0m
-     1marchive_read_new22m(4mvoid24m);
+     struct archive *
+     archive_read_new(void);
 
-1mDESCRIPTION0m
+DESCRIPTION
      Allocates and initializes a struct archive object suitable for reading
      from an archive.  NULL is returned on error.
 
      A complete description of the struct archive object can be found in the
      overview manual page for libarchive(3).
 
-1mSEE ALSO0m
+SEE ALSO
      tar(1), libarchive(3), archive_read_data(3), archive_read_filter(3),
      archive_read_format(3), archive_read_set_options(3), archive_util(3),
      tar(5)

@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Sat Feb 25 11:22:06 2017 -->
+<!-- CreationDate: Mon Jul 10 02:32:57 2017 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -34,7 +34,7 @@ library</p>
 <p style="margin-left:6%;">The libarchive(3) library reads
 and writes a variety of streaming archive formats. Generally
 speaking, all of these archive formats consist of a series
-of &lsquo;&lsquo;entries&rsquo;&rsquo;. Each entry stores a
+of &rsquo;&rsquo;entries&rsquo;&rsquo;. Each entry stores a
 single file system object, such as a file, directory, or
 symbolic link.</p>
 
@@ -52,8 +52,8 @@ all supported formats.</p>
 <p style="margin-left:6%; margin-top: 1em"><b>Tar
 Formats</b> <br>
 The libarchive(3) library can read most tar archives. It can
-write POSIX-standard &lsquo;&lsquo;ustar&rsquo;&rsquo; and
-&lsquo;&lsquo;pax interchange&rsquo;&rsquo; formats as well
+write POSIX-standard &rsquo;&rsquo;ustar&rsquo;&rsquo; and
+&rsquo;&rsquo;pax interchange&rsquo;&rsquo; formats as well
 as v7 tar format and a subset of the legacy GNU tar
 format.</p>
 
@@ -99,7 +99,7 @@ standard are in all lowercase; vendors are allowed to define
 custom keys by preceding them with the vendor name in all
 uppercase. When writing pax archives, libarchive uses many
 of the SCHILY keys defined by Joerg Schilling&rsquo;s
-&lsquo;&lsquo;star&rsquo;&rsquo; archiver and a few
+&rsquo;&rsquo;star&rsquo;&rsquo; archiver and a few
 LIBARCHIVE keys. The libarchive library can read most of the
 SCHILY keys and most of the GNU keys introduced by GNU tar.
 It silently ignores any keywords that it does not
@@ -241,16 +241,16 @@ extended attribute records written by Solaris tar.</p>
 <p style="margin-left:6%; margin-top: 1em">The first tar
 program appeared in Seventh Edition Unix in 1979. The first
 official standard for the tar file format was the
-&lsquo;&lsquo;ustar&rsquo;&rsquo; (Unix Standard Tar) format
+&rsquo;&rsquo;ustar&rsquo;&rsquo; (Unix Standard Tar) format
 defined by POSIX in 1988. POSIX.1-2001 extended the ustar
-format to create the &lsquo;&lsquo;pax
+format to create the &rsquo;&rsquo;pax
 interchange&rsquo;&rsquo; format.</p>
 
 <p style="margin-left:6%; margin-top: 1em"><b>Cpio
 Formats</b> <br>
 The libarchive library can read a number of common cpio
-variants and can write &lsquo;&lsquo;odc&rsquo;&rsquo; and
-&lsquo;&lsquo;newc&rsquo;&rsquo; format archives. A cpio
+variants and can write &rsquo;&rsquo;odc&rsquo;&rsquo; and
+&rsquo;&rsquo;newc&rsquo;&rsquo; format archives. A cpio
 archive stores each entry as a fixed-size header followed by
 a variable-length filename and variable-length data. Unlike
 the tar format, the cpio format does only minimal padding of
@@ -272,11 +272,11 @@ mtime, and 16-bit binary values for the other fields.</p>
 
 <p style="margin-left:17%; margin-top: 1em">The libarchive
 library can both read and write this POSIX-standard format,
-which is officially known as the &lsquo;&lsquo;cpio
+which is officially known as the &rsquo;&rsquo;cpio
 interchange format&rsquo;&rsquo; or the
-&lsquo;&lsquo;octet-oriented cpio archive
+&rsquo;&rsquo;octet-oriented cpio archive
 format&rsquo;&rsquo; and sometimes unofficially referred to
-as the &lsquo;&lsquo;old character format&rsquo;&rsquo;.
+as the &rsquo;&rsquo;old character format&rsquo;&rsquo;.
 This format stores the header contents as octal values in
 ASCII. It is standard, portable, and immune from byte-order
 confusion. File sizes and mtime are limited to 33 bits (8GB
@@ -312,7 +312,7 @@ systems with dissimilar user numbering.</p>
 
 <p style="margin-left:6%; margin-top: 1em"><b>Shar
 Formats</b> <br>
-A &lsquo;&lsquo;shell archive&rsquo;&rsquo; is a shell
+A &rsquo;&rsquo;shell archive&rsquo;&rsquo; is a shell
 script that, when executed on a POSIX-compliant system, will
 recreate a collection of file system objects. The libarchive
 library can write two different kinds of shar archives:</p>
@@ -379,7 +379,7 @@ variables.</p>
 format</b> <br>
 Libarchive can read and write zip format archives that have
 uncompressed entries and entries compressed with the
-&lsquo;&lsquo;deflate&rsquo;&rsquo; algorithm. Other zip
+&rsquo;&rsquo;deflate&rsquo;&rsquo; algorithm. Other zip
 compression algorithms are not supported. It can extract jar
 archives, archives that use Zip64 extensions and
 self-extracting zip archives. Libarchive can use either of
@@ -469,7 +469,7 @@ Need more information</p>
 
 <p style="margin-left:6%; margin-top: 1em"><b>CAB</b> <br>
 Libarchive can read Microsoft Cabinet (
-&lsquo;&lsquo;CAB&rsquo;&rsquo;) format archives. TODO: Need
+&rsquo;&rsquo;CAB&rsquo;&rsquo;) format archives. TODO: Need
 more information.</p>
 
 <p style="margin-left:6%; margin-top: 1em"><b>LHA</b> <br>
@@ -484,7 +484,7 @@ the RARv3 format. Libarchive can also read self-extracting
 RAR archives.</p>
 
 <p style="margin-left:6%; margin-top: 1em"><b>Warc</b> <br>
-Libarchive can read and write &lsquo;&lsquo;web
+Libarchive can read and write &rsquo;&rsquo;web
 archives&rsquo;&rsquo;. TODO: Need more information</p>
 
 <p style="margin-left:6%; margin-top: 1em"><b>XAR</b> <br>

@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Sat Feb 25 11:22:06 2017 -->
+<!-- CreationDate: Mon Jul 10 02:32:57 2017 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -46,7 +46,7 @@ those integers (binary, octal, or hexadecimal). The header
 is followed by the pathname of the entry (the length of the
 pathname is stored in the header) and any file data. The end
 of the archive is indicated by a special record with the
-pathname &lsquo;&lsquo;TRAILER!!!&rsquo;&rsquo;.</p>
+pathname &rsquo;&rsquo;TRAILER!!!&rsquo;&rsquo;.</p>
 
 <p style="margin-left:6%; margin-top: 1em"><b>PWB
 format</b> <br>
@@ -239,11 +239,11 @@ included with each copy of the file.</p>
 <p style="margin-left:6%; margin-top: 1em"><b>Portable
 ASCII Format</b> <br>
 Version&nbsp;2 of the Single UNIX Specification
-(&lsquo;&lsquo;SUSv2&rsquo;&rsquo;) standardized an ASCII
+(&rsquo;&rsquo;SUSv2&rsquo;&rsquo;) standardized an ASCII
 variant that is portable across all platforms. It is
-commonly known as the &lsquo;&lsquo;old
+commonly known as the &rsquo;&rsquo;old
 character&rsquo;&rsquo; format or as the
-&lsquo;&lsquo;odc&rsquo;&rsquo; format. It stores the same
+&rsquo;&rsquo;odc&rsquo;&rsquo; format. It stores the same
 numeric fields as the old binary format, but represents them
 as 6-character or 11-character octal values.</p>
 
@@ -302,7 +302,7 @@ the old binary format above.</p>
 <p style="margin-top: 1em"><i>magic</i></p>
 
 <p style="margin-left:17%; margin-top: 1em">The string
-&lsquo;&lsquo;070701&rsquo;&rsquo;.</p>
+&rsquo;&rsquo;070701&rsquo;&rsquo;.</p>
 
 <p style="margin-top: 1em"><i>check</i></p>
 
@@ -326,7 +326,7 @@ archive.</p>
 Format</b> <br>
 The CRC format is identical to the new ASCII format
 described in the previous section except that the magic
-field is set to &lsquo;&lsquo;070702&rsquo;&rsquo; and the
+field is set to &rsquo;&rsquo;070702&rsquo;&rsquo; and the
 <i>check</i> field is set to the sum of all bytes in the
 file data. This sum is computed treating all bytes as
 unsigned values and using unsigned arithmetic. Only the
@@ -355,7 +355,7 @@ XXX</p>
 <p style="margin-left:6%;">The <b>cpio</b> utility is no
 longer a part of POSIX or the Single Unix Standard. It last
 appeared in Version&nbsp;2 of the Single UNIX Specification
-(&lsquo;&lsquo;SUSv2&rsquo;&rsquo;). It has been supplanted
+(&rsquo;&rsquo;SUSv2&rsquo;&rsquo;). It has been supplanted
 in subsequent standards by pax(1). The portable ASCII format
 is currently part of the specification for the pax(1)
 utility.</p>
@@ -365,14 +365,14 @@ utility.</p>
 <p style="margin-left:6%;">The original cpio utility was
 written by Dick Haight while working in AT&amp;T&rsquo;s
 Unix Support Group. It appeared in 1977 as part of PWB/UNIX
-1.0, the &lsquo;&lsquo;Programmer&rsquo;s Work
+1.0, the &rsquo;&rsquo;Programmer&rsquo;s Work
 Bench&rsquo;&rsquo; derived from Version&nbsp;6 AT&amp;T
 UNIX that was used internally at AT&amp;T. Both the old
 binary and old character formats were in use by 1980,
 according to the System III source released by SCO under
-their &lsquo;&lsquo;Ancient Unix&rsquo;&rsquo; license. The
+their &rsquo;&rsquo;Ancient Unix&rsquo;&rsquo; license. The
 character format was adopted as part of IEEE Std 1003.1-1988
-(&lsquo;&lsquo;POSIX.1&rsquo;&rsquo;). XXX when did
+(&rsquo;&rsquo;POSIX.1&rsquo;&rsquo;). XXX when did
 &quot;newc&quot; appear? Who invented it? When did HP come
 out with their variant? When did Sun introduce ACLs and
 extended attributes? XXX</p>
@@ -380,7 +380,7 @@ extended attributes? XXX</p>
 <p style="margin-top: 1em"><b>BUGS</b></p>
 
 <p style="margin-left:6%;">The
-&lsquo;&lsquo;CRC&rsquo;&rsquo; format is mis-named, as it
+&rsquo;&rsquo;CRC&rsquo;&rsquo; format is mis-named, as it
 uses a simple checksum and not a cyclic redundancy
 check.</p>
 

@@ -7,8 +7,8 @@ ARCHIVE_ENTRY_PERMS(3) manual page
 '''archive_entry_perm''', 
 '''archive_entry_set_perm''', 
 '''archive_entry_strmode''', 
-'''archive_entry_uname''' 
-'''archive_entry_uname_w''' 
+'''archive_entry_uname''', 
+'''archive_entry_uname_w''', 
 '''archive_entry_set_uname''', 
 '''archive_entry_copy_uname''', 
 '''archive_entry_copy_uname_w''', 
@@ -207,11 +207,11 @@ every name that is recognized.
 [[strtofflags(3)|http://www.freebsd.org/cgi/man.cgi?query=strtofflags&sektion=3]], 
 which stops parsing at the first unrecognized name.) 
 == SEE ALSO == 
-[[ManPageArchiveEntry3]], 
-[[ManPageArchiveEntryAcl3]], 
-[[ManPageArchiveReadDisk3]], 
-[[ManPageArchiveWriteDisk3]] 
-[[ManPageLibarchive3]], 
+[[ManPagerchiventry3]], 
+[[ManPagerchiventrycl3]], 
+[[ManPagerchiveeadisk3]], 
+[[ManPagerchiveriteisk3]] 
+[[ManPageibarchive3]], 
 == BUGS == 
 The platform types 
 ''uid_t'' 
