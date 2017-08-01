@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.153 2017/07/30 12:30:50 maya Exp $
+# $NetBSD: Makefile,v 1.154 2017/08/01 11:06:18 maya Exp $
 
 DISTNAME=	octave-4.2.0
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GNU:=octave/}
 
@@ -38,6 +38,9 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--disable-java
 # use this to bypass qt5 portability issues:
 #CONFIGURE_ARGS+=	CPPFLAGS=-DQT_DISABLE_DEPRECATED_BEFORE=0
+
+# Provide a full path gfortran in MKOCTFILE for octave-forge
+CONFIGURE_ENV+=		MKOCTFILE_F77=${FCPATH}
 
 .include "../../mk/bsd.prefs.mk"
 
