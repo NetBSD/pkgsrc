@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/07/09 06:39:04 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.7 2017/08/01 16:56:11 wiz Exp $
 
 DISTNAME=	crush-tools-2013-04
 PKGNAME=	${DISTNAME:C/-([0-9]+)$/.\1/}
@@ -8,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://crush-tools.googlecode.com/files/
 
 MAINTAINER=	filip@joyent.com
-HOMEPAGE=	http://code.google.com/p/crush-tools/
+HOMEPAGE=	https://github.com/google/crush-tools
 COMMENT=	Collection of tools for processing delimited-text data
 LICENSE=	apache-2.0
 
