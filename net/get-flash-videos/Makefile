@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/07/09 06:38:41 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/08/01 17:04:34 wiz Exp $
 
 DISTNAME=	get-flash-videos-0.0.20150331
 PKGREVISION=	2
@@ -8,7 +8,7 @@ GITHUB_TYPE=	tag
 GITHUB_TAG=	eae1ac23fcc4a31ead78bfdd99c6faae3bde4ab3
 
 MAINTAINER=	dsainty@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/get-flash-videos/
+HOMEPAGE=	https://github.com/monsieurvideo/get-flash-videos
 COMMENT=	Tool for using various Flash-based video hosting sites
 LICENSE=	apache-2.0
 
