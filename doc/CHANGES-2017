@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3081 2017/08/01 15:11:16 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3082 2017/08/01 15:12:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4282,3 +4282,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/p5-biblatex-biber to 2.7 [markd 2017-08-01]
 	Added textproc/mandoc version 1.14.2 [wiz 2017-08-01]
 	Removed textproc/mdocml successor textproc/mandoc [wiz 2017-08-01]
+	Removed textproc/mdoclint successor textproc/mandoc [wiz 2017-08-01]
