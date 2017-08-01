@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2017/07/31 05:13:49 jnemeth Exp $
+# $NetBSD: Makefile,v 1.52 2017/08/01 14:59:01 wiz Exp $
 
 DISTNAME=	cyrus-imapd-2.4.18
 PKGREVISION=	2
@@ -8,7 +8,7 @@ MASTER_SITES+=	ftp://ftp.cyrusimap.org/cyrus-imapd/
 MASTER_SITES+=	ftp://ftp.cyrusimap.org/cyrus-imapd/OLD-VERSIONS/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cyrusimap.org/
+HOMEPAGE=	https://www.cyrusimap.org/
 COMMENT=	Cyrus IMAP server
 #LICENSE=	original-bsd # like license
 

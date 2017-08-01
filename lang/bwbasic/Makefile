@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/01/19 06:48:46 wen Exp $
+# $NetBSD: Makefile,v 1.20 2017/08/01 14:59:00 wiz Exp $
 
 DISTNAME=	bwbasic-3.10
 CATEGORIES=	lang
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bwbasic/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jspath@bcpl.net
-HOMEPAGE=	http://sourceforge.net/projects/bwbasic/
+HOMEPAGE=	https://sourceforge.net/projects/bwbasic/
 COMMENT=	The Bywater Basic interpreter
 LICENSE=	gnu-gpl-v2
 

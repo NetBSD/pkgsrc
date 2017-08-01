@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2017/05/03 08:38:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.47 2017/08/01 14:58:57 wiz Exp $
 
 DISTNAME=	pangomm-2.40.1
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pangomm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://www.gtkmm.org/
+HOMEPAGE=	https://www.gtkmm.org/
 COMMENT=	C++ bindings for pango
 LICENSE=	gnu-lgpl-v2.1
 

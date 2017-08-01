@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2017/02/12 06:25:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2017/08/01 14:59:03 wiz Exp $
 #
 
 DISTNAME=	VNCViewer-0.0.0
 PKGNAME=	deforaos-vncviewer-0.0.0
 PKGREVISION=	5
 CATEGORIES=	net
-MASTER_SITES=	http://www.defora.org/os/download/download/4407/
+MASTER_SITES=	https://www.defora.org/os/download/download/4407/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.defora.org/
+HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop VNC viewer
 
 LICENSE=	gnu-gpl-v2

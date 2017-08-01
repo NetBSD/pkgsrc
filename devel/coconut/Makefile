@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2017/02/12 06:25:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.68 2017/08/01 14:58:54 wiz Exp $
 #
 
 DISTNAME=	coconut-0.3.0
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	# ${MASTER_SITE_SOURCEFORGE:=coconut-lib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/coconut-lib/
+HOMEPAGE=	https://sourceforge.net/projects/coconut-lib/
 COMMENT=	Objective-C library for Unix-like systems
 
 BUILD_DEPENDS+=	papaya>=0.1.7:../../devel/papaya

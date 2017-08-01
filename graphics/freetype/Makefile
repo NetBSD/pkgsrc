@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2011/04/26 11:52:51 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2017/08/01 14:59:00 wiz Exp $
 
 DISTNAME=		freetype-${FT_VERS}
 FT_VERS=		1.5
 CATEGORIES=		graphics meta-pkgs textproc
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.freetype.org/
+HOMEPAGE=		https://www.freetype.org/
 COMMENT=		FreeType libraries and utilities
 
 META_PACKAGE=		# empty

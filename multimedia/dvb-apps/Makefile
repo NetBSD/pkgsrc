@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/07/09 06:38:38 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/08/01 14:59:02 wiz Exp $
 #
 
 PKGNAME=	dvb-apps-20110713
@@ -6,10 +6,10 @@ PKGREVISION=	6
 DISTNAME=	148ede2a6809
 DIST_SUBDIR=	dvb-apps
 CATEGORIES=	multimedia
-MASTER_SITES=	http://linuxtv.org/hg/dvb-apps/archive/
+MASTER_SITES=	https://linuxtv.org/hg/dvb-apps/archive/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://linuxtv.org/
+HOMEPAGE=	https://linuxtv.org/
 COMMENT=	Digital Video Broadcasting (DVB) applications
 
 # netbsd-5 does not have dev/dtv/dtvio.h or its associated functionality.
