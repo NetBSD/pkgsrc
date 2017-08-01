@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3084 2017/08/01 15:37:15 kleink Exp $
+$NetBSD: CHANGES-2017,v 1.3085 2017/08/01 15:52:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4285,3 +4285,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed textproc/mdoclint successor textproc/mandoc [wiz 2017-08-01]
 	Added textproc/py-tinycss2 version 0.5 [kleink 2017-08-01]
 	Updated print/py-weasyprint to 0.39 [kleink 2017-08-01]
+	Updated sysutils/tarsnap-gui to 1.0 [wiz 2017-08-01]
