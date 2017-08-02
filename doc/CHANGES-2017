@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3101 2017/08/02 16:32:37 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3102 2017/08/02 17:31:55 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4304,3 +4304,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/nodejs6 to 6.11.2 [fhajny 2017-08-02]
 	Updated databases/sqlite3 to 3.20.0 [adam 2017-08-02]
 	Updated www/contao44 to 4.4.2nb1 [taca 2017-08-02]
+	Updated lang/nodejs to 8.2.1 [fhajny 2017-08-02]
