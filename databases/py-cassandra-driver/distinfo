@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.21 2017/06/14 14:19:02 fhajny Exp $
+$NetBSD: distinfo,v 1.22 2017/08/02 15:32:48 fhajny Exp $
 
-SHA1 (python-driver-3.10.0.tar.gz) = 1eb85a0979b6b480b53c7a725018cc0991599a60
-RMD160 (python-driver-3.10.0.tar.gz) = a91924b2b3e1d2671ef57c5470c43a3fcf3e91ac
-SHA512 (python-driver-3.10.0.tar.gz) = 0ecdb05b20456683c8fb5a1c6b0397d4cb9e85bcef2c259bc447bec34276c3b0cfd1ddea8935c9e3f0aca954cc9551b5bd5f76b7e81f89623b4594ecd4186433
-Size (python-driver-3.10.0.tar.gz) = 540531 bytes
-SHA1 (patch-cassandra_____init____.py) = c89c5dc31a1695b90d8d126c586c1e36b32d3566
+SHA1 (python-driver-3.11.0.tar.gz) = bab43a786b4caaa8cf5abfae1ce54dab5ffef8e3
+RMD160 (python-driver-3.11.0.tar.gz) = 234e8716b16c75f0b046bf828a423805b3e190d6
+SHA512 (python-driver-3.11.0.tar.gz) = d057c104fb7f491088db83241c2ac2e66e13de354fe930718cb3b03063f3543f3b2702ac634bf85bb29179fecf79dca09b9ae820a56118198bc5fe221bf479a5
+Size (python-driver-3.11.0.tar.gz) = 547715 bytes
