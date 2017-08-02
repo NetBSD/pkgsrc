@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.sys.mk,v 1.3 2015/06/04 17:11:33 ryoon Exp $
+#	$NetBSD: bsd.sys.mk,v 1.4 2017/08/02 09:38:06 maya Exp $
 #
 # Overrides used for NetBSD source tree builds.
 
@@ -21,9 +21,6 @@ CFLAGS+=-Wnetbsd-format-audit -Wno-format-extra-args
 .endif
 .endif
 
-.if !defined(NOGCCERROR)
-CFLAGS+= -Werror
-.endif
 CFLAGS+= ${CWARNFLAGS}
 
 .if defined(DESTDIR)
