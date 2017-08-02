@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3103 2017/08/02 17:57:11 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3104 2017/08/02 19:54:01 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4306,3 +4306,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/contao44 to 4.4.2nb1 [taca 2017-08-02]
 	Updated lang/nodejs to 8.2.1 [fhajny 2017-08-02]
 	Updated sysutils/consul to 0.9.0 [fhajny 2017-08-02]
+	Updated databases/redis to 4.0.1 [fhajny 2017-08-02]
