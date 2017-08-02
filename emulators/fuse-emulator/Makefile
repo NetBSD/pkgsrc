@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/07/04 09:38:51 adam Exp $
+# $NetBSD: Makefile,v 1.9 2017/08/02 10:24:26 adam Exp $
 
-DISTNAME=	fuse-1.3.7
+DISTNAME=	fuse-1.3.8
 PKGNAME=	${DISTNAME:S/fuse/fuse-emulator/}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fuse-emulator/}
@@ -18,7 +18,6 @@ LIBS+=			${LIBOSSAUDIO}
 
 .include "options.mk"
 
-BUILDLINK_API_DEPENDS.libspectrum+=	libspectrum>=1.1.1
 .include "../../emulators/libspectrum/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
