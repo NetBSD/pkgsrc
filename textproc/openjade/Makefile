@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2016/07/09 06:39:07 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2017/08/02 12:13:34 maya Exp $
 
 DISTNAME=	openjade-1.3.2
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openjade/}
 
@@ -30,6 +30,14 @@ OPENJADE_DOC_DIR=	${PREFIX}/share/doc/openjade
 INSTALLATION_DIRS=	${OPENJADE_DATA_DIR}/pubtext \
 			${OPENJADE_DOC_DIR}/doc \
 			${OPENJADE_DOC_DIR}/jadedoc/images
+
+.include "../../mk/compiler.mk"
+# Segfaults building postgresql95-docs. see:
+# https://bugzilla.redhat.com/show_bug.cgi?id=1306162
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=69534#c9
+.if ${PKGSRC_COMPILER} == "gcc"
+CFLAGS+=	-fno-tree-dse
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/dsssl/* ${DESTDIR}${OPENJADE_DATA_DIR}
