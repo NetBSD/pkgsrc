@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3098 2017/08/02 15:49:35 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3099 2017/08/02 16:05:30 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4301,3 +4301,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-lexicon to 2.1.10 [fhajny 2017-08-02]
 	Updated databases/py-cassandra-driver to 3.11.0 [fhajny 2017-08-02]
 	Updated devel/librdkafka to 0.11.0 [fhajny 2017-08-02]
+	Updated lang/nodejs6 to 6.11.2 [fhajny 2017-08-02]
