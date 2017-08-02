@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.54 2017/07/27 18:31:20 adam Exp $
+$NetBSD: distinfo,v 1.55 2017/08/02 03:13:54 maya Exp $
 
 SHA1 (rrdtool-1.7.0.tar.gz) = 15a2009e2ee67eb41a2598d1a0f1f7cf1a651c78
 RMD160 (rrdtool-1.7.0.tar.gz) = 8816c971189a60e190d15a5b3827697c299ffce3
@@ -11,6 +11,7 @@ SHA1 (patch-src_gettext.h) = 1254beedc267d901e154ea98599bdfddbe49ddc0
 SHA1 (patch-src_rrd__cgi.c) = f2004681d9d430b6d347627e029ce3c7a717bcd6
 SHA1 (patch-src_rrd__graph.c) = e53a925c329e477b198cdeaf6b50891187ee17c5
 SHA1 (patch-src_rrd__lastupdate.c) = 317fc6e46e15333574d0e977d8ab34e916920f4a
+SHA1 (patch-src_rrd__list.c) = 9a5e623e20aa2be4ad22f5358897a8a9ad418b38
 SHA1 (patch-src_rrd__restore.c) = 06cc3918fd685fc4dfbfdefcf39835a6b08f947c
 SHA1 (patch-src_rrd__strtod.c) = 6148276ba17eaaf1ef728db1d55bda18d67da83e
 SHA1 (patch-src_rrd__tool.c) = 81131a74c8e9b81edfaa4b6746d4ab8508e82ac2
