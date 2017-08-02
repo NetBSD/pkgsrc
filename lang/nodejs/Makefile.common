@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2017/05/12 20:55:40 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.15 2017/08/02 17:31:45 fhajny Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs4/Makefile
 # used by lang/nodejs6/Makefile
@@ -38,6 +38,11 @@ CONFIGURE_ENV+=		GYP_DEFINES="linux_use_gold_flags=0"
 REPLACE_PYTHON+=	configure
 REPLACE_PYTHON+=	tools/genv8constants.py
 REPLACE_PYTHON+=	tools/gyp/pylib/gyp/flock_tool.py
+
+REPLACE_INTERPRETER+=	node
+REPLACE.node.old=	.*node
+REPLACE.node.new=	${PREFIX}/bin/node
+REPLACE_FILES.node=	deps/npm/bin/npx-cli.js
 
 CHECK_INTERPRETER_SKIP+=	lib/node_modules/npm/*
 
