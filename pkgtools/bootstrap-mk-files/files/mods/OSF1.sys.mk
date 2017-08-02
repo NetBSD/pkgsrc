@@ -1,4 +1,4 @@
-#	$NetBSD: OSF1.sys.mk,v 1.2 2008/01/16 03:05:57 tnn Exp $
+#	$NetBSD: OSF1.sys.mk,v 1.3 2017/08/02 09:38:06 maya Exp $
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
 unix?=		We run Unix
@@ -21,7 +21,6 @@ COMPILE.S?=	${CC} ${AFLAGS} ${CPPFLAGS} -c -traditional-cpp
 LINK.S?=	${CC} ${AFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
 CC?=		cc
-NOGCCERROR?=	# defined
 DBG?=		-O2
 CFLAGS?=	${DBG}
 COMPILE.c?=	${CC} ${CFLAGS} ${CPPFLAGS} -c
