@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/07/10 17:34:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/02 03:56:42 schmonz Exp $
 
 PKGNAME=		${LUA_PKGPREFIX}-${PKGNAME_MODULE}
 COMMENT=		Lua bindings for Xapian search engine
@@ -14,5 +14,6 @@ post-install:
 
 .include "../../lang/lua/application.mk"
 .include "../../lang/lua/module.mk"
+.include "../../lang/lua/tool.mk"
 .include "../../textproc/xapian/module.mk"
 .include "../../mk/bsd.pkg.mk"
