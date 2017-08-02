@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.4 2016/11/14 14:30:17 fhajny Exp $
+$NetBSD: patch-ab,v 1.5 2017/08/02 19:53:37 fhajny Exp $
 
 Add DESTDIR support. Fix NetBSD support.
 
---- src/Makefile.orig	2016-10-26 07:17:45.000000000 +0000
+--- src/Makefile.orig	2017-07-24 13:58:34.000000000 +0000
 +++ src/Makefile
-@@ -23,8 +23,8 @@ WARN=-Wall -W
+@@ -25,8 +25,8 @@ WARN=-Wall -W -Wno-missing-field-initial
  OPT=$(OPTIMIZATION)
  
  PREFIX?=/usr/local
@@ -13,9 +13,9 @@ Add DESTDIR support. Fix NetBSD support.
 +INSTALL_BIN=$(DESTDIR)$(PREFIX)/bin
 +INSTALL=$(BSD_INSTALL_PROGRAM)
  
- # Default allocator
- ifeq ($(uname_S),Linux)
-@@ -77,6 +77,10 @@ ifeq ($(uname_S),OpenBSD)
+ # Default allocator defaults to Jemalloc if it's not an ARM
+ MALLOC=libc
+@@ -94,6 +94,10 @@ ifeq ($(uname_S),OpenBSD)
  	# OpenBSD
  	FINAL_LIBS+= -lpthread
  else
@@ -26,7 +26,7 @@ Add DESTDIR support. Fix NetBSD support.
  ifeq ($(uname_S),FreeBSD)
  	# FreeBSD
  	FINAL_LIBS+= -lpthread
-@@ -87,6 +91,7 @@ else
+@@ -104,6 +108,7 @@ else
  endif
  endif
  endif
