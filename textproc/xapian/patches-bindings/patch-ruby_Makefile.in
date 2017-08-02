@@ -1,0 +1,23 @@
+$NetBSD: patch-ruby_Makefile.in,v 1.1 2017/08/02 04:42:23 schmonz Exp $
+
+Allow installing multiple versions of Ruby bindings.
+
+--- ruby/Makefile.in.orig	2017-04-24 02:20:00.000000000 +0000
++++ ruby/Makefile.in
+@@ -663,14 +663,14 @@ MAINTAINERCLEANFILES = $(BUILT_SOURCES)
+ 
+ # Compatibility wrapper which configure creates when required.
+ DISTCLEANFILES = rubyio.h
+-exampledatadir = $(docdir)/ruby/examples
++exampledatadir = $(docdir)/${RUBY_PKGPREFIX}/examples
+ dist_exampledata_DATA = \
+ 	docs/examples/simpleexpand.rb \
+ 	docs/examples/simpleindex.rb \
+ 	docs/examples/simplematchdecider.rb \
+ 	docs/examples/simplesearch.rb
+ 
+-docdatadir = $(docdir)/ruby
++docdatadir = $(docdir)/${RUBY_PKGPREFIX}
+ dist_docdata_DATA = docs/index.html
+ all: $(BUILT_SOURCES)
+ 	$(MAKE) $(AM_MAKEFLAGS) all-am
