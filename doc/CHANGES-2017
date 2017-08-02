@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3105 2017/08/02 20:15:53 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3106 2017/08/02 20:31:39 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4308,3 +4308,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/consul to 0.9.0 [fhajny 2017-08-02]
 	Updated databases/redis to 4.0.1 [fhajny 2017-08-02]
 	Updated net/powerdns-recursor to 4.0.6 [fhajny 2017-08-02]
+	Updated security/py-certbot to 0.16.0 [fhajny 2017-08-02]
