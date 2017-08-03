@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/07 07:27:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/08/03 07:48:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -25,9 +25,6 @@ ${PYSITELIB}/sanic/constants.pyo
 ${PYSITELIB}/sanic/cookies.py
 ${PYSITELIB}/sanic/cookies.pyc
 ${PYSITELIB}/sanic/cookies.pyo
-${PYSITELIB}/sanic/defaultFilter.py
-${PYSITELIB}/sanic/defaultFilter.pyc
-${PYSITELIB}/sanic/defaultFilter.pyo
 ${PYSITELIB}/sanic/exceptions.py
 ${PYSITELIB}/sanic/exceptions.pyc
 ${PYSITELIB}/sanic/exceptions.pyo
