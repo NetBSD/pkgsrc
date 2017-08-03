@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3110 2017/08/03 11:31:34 he Exp $
+$NetBSD: CHANGES-2017,v 1.3111 2017/08/03 13:56:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4320,3 +4320,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-awscli to 1.11.129 [adam 2017-08-03]
 	Updated databases/py-ldap3 to 2.3 [adam 2017-08-03]
 	Updated net/radsecproxy to 1.6.9 [he 2017-08-03]
+	Updated net/nmap to 7.60 [adam 2017-08-03]
+	Updated devel/py-rply to 0.7.5 [adam 2017-08-03]
