@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3109 2017/08/03 10:43:04 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3110 2017/08/03 11:31:34 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4319,3 +4319,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-boto3 to 1.4.5 [adam 2017-08-03]
 	Updated net/py-awscli to 1.11.129 [adam 2017-08-03]
 	Updated databases/py-ldap3 to 2.3 [adam 2017-08-03]
+	Updated net/radsecproxy to 1.6.9 [he 2017-08-03]
