@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2016/09/18 23:13:13 wiedi Exp $
+# $NetBSD: Makefile,v 1.5 2017/08/03 11:30:45 he Exp $
 
-DISTNAME=	radsecproxy-1.6.6
-PKGREVISION=	1
+DISTNAME=	radsecproxy-1.6.9
 CATEGORIES=	net
-MASTER_SITES=	https://software.uninett.no/radsecproxy/
+MASTER_SITES=	https://software.nordu.net/radsecproxy/
 
 MAINTAINER=	he@NetBSD.org
 COMMENT=	Secure radius proxy
-HOMEPAGE=	https://software.uninett.no/radsecproxy/
+HOMEPAGE=	https://software.nordu.net/radsecproxy/download/
 EXTRACT_SUFX=	.tar.xz
 LICENSE=	gnu-gpl-v2 OR modified-bsd
 
