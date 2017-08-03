@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3107 2017/08/03 03:21:11 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.3108 2017/08/03 07:54:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4310,3 +4310,11 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/powerdns-recursor to 4.0.6 [fhajny 2017-08-02]
 	Updated security/py-certbot to 0.16.0 [fhajny 2017-08-02]
 	Updated mail/qmail to 1.03nb31 [schmonz 2017-08-03]
+	Updated devel/py-setuptools to 36.2.7 [adam 2017-08-03]
+	Updated devel/py-hypothesis to 3.14.1 [adam 2017-08-03]
+	Updated devel/py-test to 3.2.0 [adam 2017-08-03]
+	Updated devel/git to 2.13.4 [adam 2017-08-03]
+	Updated www/py-sanic to 0.6.0 [adam 2017-08-03]
+	Updated net/py-botocore to 1.5.92 [adam 2017-08-03]
+	Updated net/py-boto3 to 1.4.5 [adam 2017-08-03]
+	Updated net/py-awscli to 1.11.129 [adam 2017-08-03]
