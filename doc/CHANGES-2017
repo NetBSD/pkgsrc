@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3112 2017/08/03 18:22:58 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3113 2017/08/03 22:13:00 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4323,3 +4323,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/nmap to 7.60 [adam 2017-08-03]
 	Updated devel/py-rply to 0.7.5 [adam 2017-08-03]
 	Updated databases/py-sqlalchemy to 1.1.13 [adam 2017-08-03]
+	Updated security/py-acme to 0.17.0 [fhajny 2017-08-03]
+	Updated security/py-certbot to 0.17.0 [fhajny 2017-08-03]
