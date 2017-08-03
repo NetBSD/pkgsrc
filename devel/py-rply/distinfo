@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/01/11 23:59:00 rodent Exp $
+$NetBSD: distinfo,v 1.5 2017/08/03 13:54:38 adam Exp $
 
-SHA1 (rply-0.7.4.tar.gz) = a241add941a42ea356016e0aade6ab39a4dad7bd
-RMD160 (rply-0.7.4.tar.gz) = 51374220a891ad762f71d7efee859733575cda10
-SHA512 (rply-0.7.4.tar.gz) = d900d8d6a06da3b21a30f41d8d4e70f4b71e70ebf407e303df8bae062c782a129e8fc84b8e79c7c73a3603200507110332e58a1fc5aa28fb4bc1095a1ae108fe
-Size (rply-0.7.4.tar.gz) = 16339 bytes
+SHA1 (rply-0.7.5.tar.gz) = fe84a541cce6d8173f387c6eaa9d1ab76f85f880
+RMD160 (rply-0.7.5.tar.gz) = a27e3ece10234cff4995cc722b901eaea56d72c6
+SHA512 (rply-0.7.5.tar.gz) = e1f7c6a321ffd1bf5339b0e2d927bb764f1759f774e326d2446a85fbf24807dc7a8b91e8752bcbb40ae81dbc91e38ba6c65ab60193b4cf42fc9b2d01f0f96051
+Size (rply-0.7.5.tar.gz) = 16378 bytes
