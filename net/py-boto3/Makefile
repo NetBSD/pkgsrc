@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/07/03 21:15:50 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/03 07:51:04 adam Exp $
 
-DISTNAME=	boto3-1.4.4
+DISTNAME=	boto3-1.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/boto3/}
