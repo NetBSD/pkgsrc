@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/05/23 08:30:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/08/03 07:44:11 adam Exp $
 bin/py.test-${PYVERSSUFFIX}
 bin/pytest-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -92,6 +92,9 @@ ${PYSITELIB}/_pytest/monkeypatch.pyo
 ${PYSITELIB}/_pytest/nose.py
 ${PYSITELIB}/_pytest/nose.pyc
 ${PYSITELIB}/_pytest/nose.pyo
+${PYSITELIB}/_pytest/outcomes.py
+${PYSITELIB}/_pytest/outcomes.pyc
+${PYSITELIB}/_pytest/outcomes.pyo
 ${PYSITELIB}/_pytest/pastebin.py
 ${PYSITELIB}/_pytest/pastebin.pyc
 ${PYSITELIB}/_pytest/pastebin.pyo
@@ -101,6 +104,9 @@ ${PYSITELIB}/_pytest/pytester.pyo
 ${PYSITELIB}/_pytest/python.py
 ${PYSITELIB}/_pytest/python.pyc
 ${PYSITELIB}/_pytest/python.pyo
+${PYSITELIB}/_pytest/python_api.py
+${PYSITELIB}/_pytest/python_api.pyc
+${PYSITELIB}/_pytest/python_api.pyo
 ${PYSITELIB}/_pytest/recwarn.py
 ${PYSITELIB}/_pytest/recwarn.pyc
 ${PYSITELIB}/_pytest/recwarn.pyo
