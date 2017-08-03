@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.135 2017/06/14 09:26:29 adam Exp $
+# $NetBSD: Makefile,v 1.136 2017/08/03 13:52:00 adam Exp $
 
-DISTNAME=	nmap-7.50
+DISTNAME=	nmap-7.60
 CATEGORIES=	net security
 MASTER_SITES=	http://nmap.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--without-subversion
 
 BUILD_DEFS+=		IPV6_READY
 
-TEST_TARGET+=		check
+TEST_TARGET=		check
 
 .include "options.mk"
 
