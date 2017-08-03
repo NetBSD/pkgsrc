@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2017/06/14 09:26:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2017/08/03 13:52:00 adam Exp $
 bin/ncat
 ${PLIST.ndiff}bin/ndiff
 bin/nmap
@@ -298,6 +298,7 @@ ${PLIST.lua}share/nmap/nselib/data/oracle-sids
 ${PLIST.lua}share/nmap/nselib/data/packetdecoders.lua
 ${PLIST.lua}share/nmap/nselib/data/passwords.lst
 ${PLIST.lua}share/nmap/nselib/data/pixel.gif
+${PLIST.lua}share/nmap/nselib/data/publickeydb
 ${PLIST.lua}share/nmap/nselib/data/psexec/README
 ${PLIST.lua}share/nmap/nselib/data/psexec/backdoor.lua
 ${PLIST.lua}share/nmap/nselib/data/psexec/default.lua
@@ -342,12 +343,15 @@ ${PLIST.lua}share/nmap/nselib/informix.lua
 ${PLIST.lua}share/nmap/nselib/ipOps.lua
 ${PLIST.lua}share/nmap/nselib/ipmi.lua
 ${PLIST.lua}share/nmap/nselib/ipp.lua
+${PLIST.lua}share/nmap/nselib/irc.lua
 ${PLIST.lua}share/nmap/nselib/iscsi.lua
 ${PLIST.lua}share/nmap/nselib/isns.lua
 ${PLIST.lua}share/nmap/nselib/jdwp.lua
 ${PLIST.lua}share/nmap/nselib/json.lua
 ${PLIST.lua}share/nmap/nselib/ldap.lua
 ${PLIST.lua}share/nmap/nselib/lfs.luadoc
+${PLIST.lua}share/nmap/nselib/libssh2-utility.lua
+${PLIST.lua}share/nmap/nselib/libssh2.luadoc
 ${PLIST.lua}share/nmap/nselib/listop.lua
 ${PLIST.lua}share/nmap/nselib/lpeg-utility.lua
 ${PLIST.lua}share/nmap/nselib/lpeg.luadoc
@@ -392,6 +396,7 @@ ${PLIST.lua}share/nmap/nselib/shortport.lua
 ${PLIST.lua}share/nmap/nselib/sip.lua
 ${PLIST.lua}share/nmap/nselib/slaxml.lua
 ${PLIST.lua}share/nmap/nselib/smb.lua
+${PLIST.lua}share/nmap/nselib/smb2.lua
 ${PLIST.lua}share/nmap/nselib/smbauth.lua
 ${PLIST.lua}share/nmap/nselib/smtp.lua
 ${PLIST.lua}share/nmap/nselib/snmp.lua
@@ -552,6 +557,7 @@ ${PLIST.lua}share/nmap/scripts/ftp-bounce.nse
 ${PLIST.lua}share/nmap/scripts/ftp-brute.nse
 ${PLIST.lua}share/nmap/scripts/ftp-libopie.nse
 ${PLIST.lua}share/nmap/scripts/ftp-proftpd-backdoor.nse
+${PLIST.lua}share/nmap/scripts/ftp-syst.nse
 ${PLIST.lua}share/nmap/scripts/ftp-vsftpd-backdoor.nse
 ${PLIST.lua}share/nmap/scripts/ftp-vuln-cve2010-4221.nse
 ${PLIST.lua}share/nmap/scripts/ganglia-info.nse
@@ -690,6 +696,7 @@ ${PLIST.lua}share/nmap/scripts/http-vuln-cve2015-1635.nse
 ${PLIST.lua}share/nmap/scripts/http-vuln-cve2017-1001000.nse
 ${PLIST.lua}share/nmap/scripts/http-vuln-cve2017-5638.nse
 ${PLIST.lua}share/nmap/scripts/http-vuln-cve2017-5689.nse
+${PLIST.lua}share/nmap/scripts/http-vuln-cve2017-8917.nse
 ${PLIST.lua}share/nmap/scripts/http-vuln-misfortune-cookie.nse
 ${PLIST.lua}share/nmap/scripts/http-vuln-wnr1000-creds.nse
 ${PLIST.lua}share/nmap/scripts/http-waf-detect.nse
@@ -702,6 +709,7 @@ ${PLIST.lua}share/nmap/scripts/http-xssed.nse
 ${PLIST.lua}share/nmap/scripts/iax2-brute.nse
 ${PLIST.lua}share/nmap/scripts/iax2-version.nse
 ${PLIST.lua}share/nmap/scripts/icap-info.nse
+${PLIST.lua}share/nmap/scripts/iec-identify.nse
 ${PLIST.lua}share/nmap/scripts/ike-version.nse
 ${PLIST.lua}share/nmap/scripts/imap-brute.nse
 ${PLIST.lua}share/nmap/scripts/imap-capabilities.nse
@@ -818,6 +826,7 @@ ${PLIST.lua}share/nmap/scripts/omp2-enum-targets.nse
 ${PLIST.lua}share/nmap/scripts/omron-info.nse
 ${PLIST.lua}share/nmap/scripts/openlookup-info.nse
 ${PLIST.lua}share/nmap/scripts/openvas-otp-brute.nse
+${PLIST.lua}share/nmap/scripts/openwebnet-discovery.nse
 ${PLIST.lua}share/nmap/scripts/oracle-brute-stealth.nse
 ${PLIST.lua}share/nmap/scripts/oracle-brute.nse
 ${PLIST.lua}share/nmap/scripts/oracle-enum-users.nse
@@ -834,6 +843,7 @@ ${PLIST.lua}share/nmap/scripts/pop3-brute.nse
 ${PLIST.lua}share/nmap/scripts/pop3-capabilities.nse
 ${PLIST.lua}share/nmap/scripts/pop3-ntlm-info.nse
 ${PLIST.lua}share/nmap/scripts/pptp-version.nse
+${PLIST.lua}share/nmap/scripts/puppet-naivesigning.nse
 ${PLIST.lua}share/nmap/scripts/qconn-exec.nse
 ${PLIST.lua}share/nmap/scripts/qscan.nse
 ${PLIST.lua}share/nmap/scripts/quake1-info.nse
@@ -884,6 +894,7 @@ ${PLIST.lua}share/nmap/scripts/smb-ls.nse
 ${PLIST.lua}share/nmap/scripts/smb-mbenum.nse
 ${PLIST.lua}share/nmap/scripts/smb-os-discovery.nse
 ${PLIST.lua}share/nmap/scripts/smb-print-text.nse
+${PLIST.lua}share/nmap/scripts/smb-protocols.nse
 ${PLIST.lua}share/nmap/scripts/smb-psexec.nse
 ${PLIST.lua}share/nmap/scripts/smb-security-mode.nse
 ${PLIST.lua}share/nmap/scripts/smb-server-stats.nse
@@ -898,7 +909,10 @@ ${PLIST.lua}share/nmap/scripts/smb-vuln-ms10-054.nse
 ${PLIST.lua}share/nmap/scripts/smb-vuln-ms10-061.nse
 ${PLIST.lua}share/nmap/scripts/smb-vuln-ms17-010.nse
 ${PLIST.lua}share/nmap/scripts/smb-vuln-regsvc-dos.nse
-${PLIST.lua}share/nmap/scripts/smbv2-enabled.nse
+${PLIST.lua}share/nmap/scripts/smb2-capabilities.nse
+${PLIST.lua}share/nmap/scripts/smb2-security-mode.nse
+${PLIST.lua}share/nmap/scripts/smb2-time.nse
+${PLIST.lua}share/nmap/scripts/smb2-vuln-uptime.nse
 ${PLIST.lua}share/nmap/scripts/smtp-brute.nse
 ${PLIST.lua}share/nmap/scripts/smtp-commands.nse
 ${PLIST.lua}share/nmap/scripts/smtp-enum-users.nse
@@ -924,6 +938,10 @@ ${PLIST.lua}share/nmap/scripts/snmp-win32-users.nse
 ${PLIST.lua}share/nmap/scripts/socks-auth-info.nse
 ${PLIST.lua}share/nmap/scripts/socks-brute.nse
 ${PLIST.lua}share/nmap/scripts/socks-open-proxy.nse
+${PLIST.lua}share/nmap/scripts/ssh-auth-methods.nse
+${PLIST.lua}share/nmap/scripts/ssh-brute.nse
+${PLIST.lua}share/nmap/scripts/ssh-publickey-acceptance.nse
+${PLIST.lua}share/nmap/scripts/ssh-run.nse
 ${PLIST.lua}share/nmap/scripts/ssh-hostkey.nse
 ${PLIST.lua}share/nmap/scripts/ssh2-enum-algos.nse
 ${PLIST.lua}share/nmap/scripts/sshv1.nse
