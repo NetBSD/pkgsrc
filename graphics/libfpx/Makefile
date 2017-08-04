@@ -1,4 +1,5 @@
-# $NetBSD: Makefile,v 1.1 2017/08/04 08:24:24 nros Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/04 20:03:17 wiz Exp $
+
 libfpx_ver=	1.3.1
 DISTNAME=	libfpx-${libfpx_ver}-9
 PKGNAME=	libfpx-${libfpx_ver}
@@ -10,7 +11,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	nros@NetBSD.org
 HOMEPAGE=	http://www.imagemagick.org/
-COMMENT=	Library for reading nad writing FlashPix images
+COMMENT=	Library for reading and writing FlashPix images
 LICENSE=	flashpix-license
 
 GNU_CONFIGURE=	yes
