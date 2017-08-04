@@ -1,0 +1,5 @@
+Exif manipulation with pure python script.
+
+* Pure Python. So, it runs everywhere where Python runs.
+* Easy exif manipulations. Read, write, remove...
+* Documented.
