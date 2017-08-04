@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3120 2017/08/04 18:51:27 kleink Exp $
+$NetBSD: CHANGES-2017,v 1.3121 2017/08/04 23:09:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4338,3 +4338,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-XML-Atom to 0.42 [kleink 2017-08-04]
 	Updated sysutils/daemontools-run to 20170804 [schmonz 2017-08-04]
 	Added graphics/py-piexif version 1.0.12 [kleink 2017-08-04]
+	Updated lang/php70 to 7.0.22 [taca 2017-08-04]
+	Updated lang/php71 to 7.1.8 [taca 2017-08-04]
