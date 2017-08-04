@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2017/06/12 07:45:46 maya Exp $
+# $NetBSD: Makefile,v 1.30 2017/08/04 18:02:00 kleink Exp $
 
-DISTNAME=	XML-Atom-0.41
+DISTNAME=	XML-Atom-0.42
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
@@ -11,8 +10,9 @@ HOMEPAGE=	http://search.cpan.org/dist/XML-Atom/
 COMMENT=	Atom feed and API implementation
 LICENSE=	${PERL5_LICENSE}
 
+BUILD_DEPENDS+=	p5-Module-Build-Tiny>=0.034:../../devel/p5-Module-Build-Tiny
 DEPENDS+=	p5-Class-Data-Inheritable-[0-9]*:../../devel/p5-Class-Data-Inheritable
-DEPENDS+=	p5-XML-LibXML>=1.64:../../textproc/p5-XML-LibXML
+DEPENDS+=	p5-XML-LibXML>=1.69:../../textproc/p5-XML-LibXML
 #DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-XML-XPath-[0-9]*:../../textproc/p5-XML-XPath
 
@@ -25,7 +25,7 @@ DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 # Feed and API Auto-discovery
 DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 
-MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
+PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/XML/Atom/.packlist
 
 .include "../../lang/perl5/module.mk"
