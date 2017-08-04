@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: svscan.sh,v 1.3 2017/08/04 18:44:15 schmonz Exp $
+# $NetBSD: svscan.sh,v 1.4 2017/08/04 19:10:34 schmonz Exp $
 #
 # @PKGNAME@ script to control svscan (service supervisor).
 #
@@ -16,7 +16,7 @@ name="svscan"
 : ${svscan_datalimit:="3000000"}
 : ${svscan_servicedir:="@VARBASE@/service"}
 : ${svscan_log:="YES"}
-: ${svscan_logcmd:="logger -t nb${name} -p daemon.info"}
+: ${svscan_logcmd:="logger -t ${procname} -p daemon.info"}
 : ${svscan_nologcmd:="@PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
