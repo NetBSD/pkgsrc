@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsend.sh,v 1.10 2017/06/17 05:58:39 schmonz Exp $
+# $NetBSD: qmailsend.sh,v 1.11 2017/08/04 06:35:28 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-send (local and outgoing mail).
 #
@@ -26,7 +26,10 @@ rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/control/defaultdelivery"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/me"
 command="@PREFIX@/bin/qmail-send"
-start_precmd="qmailsend_precmd"
+start_precmd="qmailsend_prestart"
+start_postcmd="qmailsend_poststart"
+stop_postcmd="qmailsend_poststop"
+pidfile="@VARBASE@/run/${name}.pid"
 extra_commands="stat pause cont doqueue reload queue alrm flush hup"
 stat_cmd="qmailsend_stat"
 pause_cmd="qmailsend_pause"
@@ -37,7 +40,7 @@ alrm_cmd="qmailsend_doqueue"
 flush_cmd="qmailsend_doqueue"
 hup_cmd="qmailsend_hup"
 
-qmailsend_precmd()
+qmailsend_prestart()
 {
 	# qmail-start(8) starts the various qmail processes, then exits.
 	# qmail-send(8) is the process we want to signal later.
@@ -49,6 +52,16 @@ qmail-start '$qmailsend_defaultdelivery'
 ${qmailsend_logcmd}"
 	command_args="&"
 	rc_flags=""
+}
+
+qmailsend_poststart()
+{
+	echo $! > ${pidfile}
+}
+
+qmailsend_poststop()
+{
+	rm -f ${pidfile}
 }
 
 qmailsend_stat()
@@ -103,6 +116,7 @@ if [ -f /etc/rc.subr ]; then
 	run_rc_command "$1"
 else
 	@ECHO_N@ " ${name}"
-	qmailsend_precmd
+	qmailsend_prestart
 	eval ${command} ${qmailsend_flags} ${command_args}
+	qmailsend_poststart
 fi
