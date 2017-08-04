@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: svscan.sh,v 1.2 2017/07/30 05:45:22 schmonz Exp $
+# $NetBSD: svscan.sh,v 1.3 2017/08/04 18:44:15 schmonz Exp $
 #
 # @PKGNAME@ script to control svscan (service supervisor).
 #
@@ -26,6 +26,7 @@ fi
 rcvar=${name}
 required_dirs="${svscan_servicedir}"
 command="@PREFIX@/bin/${name}"
+procname=nb${name}
 start_precmd="svscan_precmd"
 
 svscan_precmd()
@@ -33,8 +34,13 @@ svscan_precmd()
 	if [ -f /etc/rc.subr ] && ! checkyesno svscan_log; then
 		svscan_logcmd=${svscan_nologcmd}
 	fi
+	# There might be more than one svscan(8) on a system: for instance,
+	# non-root users might run their own svscans. We want to signal only
+	# the svscan process responsible for this service. Use argv0(1) to
+	# set procname to "nbsvscan".
 	command="@PREFIX@/bin/pgrphack @SETENV@ - ${svscan_postenv}
-@PREFIX@/bin/${name} ${svscan_servicedir}
+@PREFIX@/bin/argv0 @PREFIX@/bin/${name} ${procname}
+${svscan_servicedir}
 2>&1 |
 @PREFIX@/bin/pgrphack @PREFIX@/bin/setuidgid @DAEMONTOOLS_LOG_USER@ ${svscan_logcmd}"
 	command_args="&"
