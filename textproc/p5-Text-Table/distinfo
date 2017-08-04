@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/12/17 07:18:46 wen Exp $
+$NetBSD: distinfo,v 1.5 2017/08/04 23:46:25 wen Exp $
 
-SHA1 (Text-Table-1.132.tar.gz) = 03e46e42964fbc8314535977dd2913f6ffefc759
-RMD160 (Text-Table-1.132.tar.gz) = cfb8607a2f94f26ec5fd1226fc461d197fe2479b
-SHA512 (Text-Table-1.132.tar.gz) = 456c531bb35e57ecee62952d7e1a0601d31595e2f674840cd964a66c89c5561e30e54f06bd301f3a5d136e5cf5f3aa50f66cbbf26aab61a6e14d2512999b5ce8
-Size (Text-Table-1.132.tar.gz) = 27238 bytes
+SHA1 (Text-Table-1.133.tar.gz) = 74fef57cdaa9f341b5e74b6127c5e9f27724d2d4
+RMD160 (Text-Table-1.133.tar.gz) = dab0e409148839ce9df6bebf1f130196ef26fb7e
+SHA512 (Text-Table-1.133.tar.gz) = fc9ebcb7accc07ec66bc8157a679d3905b06dfcf21560641b149c5930e527385ea2be45190190319c73f6d184e3d4f4ce5deaccf3da58b91f45a820e86fea2ac
+Size (Text-Table-1.133.tar.gz) = 27178 bytes
