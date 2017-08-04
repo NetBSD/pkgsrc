@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3113 2017/08/03 22:13:00 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3114 2017/08/04 05:33:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4325,3 +4325,10 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/py-sqlalchemy to 1.1.13 [adam 2017-08-03]
 	Updated security/py-acme to 0.17.0 [fhajny 2017-08-03]
 	Updated security/py-certbot to 0.17.0 [fhajny 2017-08-03]
+	Updated devel/py-hypothesis to 3.14.2 [adam 2017-08-04]
+	Updated devel/py-flakes to 1.6.0 [adam 2017-08-04]
+	Updated devel/py-requests to 2.18.3 [adam 2017-08-04]
+	Updated www/py-aiohttp to 2.2.5 [adam 2017-08-04]
+	Updated security/py-cryptography_vectors to 2.0.3 [adam 2017-08-04]
+	Updated security/py-cryptography to 2.0.3 [adam 2017-08-04]
+	Updated sysutils/py-crontab to 2.2.4 [adam 2017-08-04]
