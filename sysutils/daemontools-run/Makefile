@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2017/07/30 05:45:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2017/08/04 18:44:15 schmonz Exp $
 #
 
-DISTNAME=		daemontools-run-20170730
+DISTNAME=		daemontools-run-20170804
 CATEGORIES=		sysutils
 MASTER_SITES=		# empty
 DISTFILES=		# empty
