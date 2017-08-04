@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2017/07/04 13:31:16 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.30 2017/08/04 19:32:25 fhajny Exp $
 # used by sysutils/rsyslog/Makefile
 # used by sysutils/rsyslog-dbi/Makefile
 # used by sysutils/rsyslog-elasticsearch/Makefile
@@ -51,5 +51,5 @@ BUILDLINK_DEPMETHOD.libuuid+=		build
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../sysutils/liblogging/buildlink3.mk"
-BUILDLINK_API_DEPENDS.liblognorm+=	libfastjson>=0.99.3
+BUILDLINK_API_DEPENDS.libfastjson+=	libfastjson>=0.99.3
 .include "../../textproc/libfastjson/buildlink3.mk"
