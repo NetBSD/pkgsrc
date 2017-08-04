@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.181 2017/07/18 18:27:31 brook Exp $
+# $NetBSD: gcc.mk,v 1.182 2017/08/04 08:53:33 jperkin Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -337,10 +337,6 @@ _MKPIE_CFLAGS.gcc=	-fPIC
 #_MKPIE_CFLAGS.gcc=	-fPIE
 # XXX for libraries a sink wrapper around gcc is required and used instead
 #_MKPIE_LDFLAGS.gcc=	-pie
-.endif
-
-.if ${OPSYS} == "SunOS"
-_FORTIFY_CFLAGS.gcc=	-D_FORTIFY_SOURCE=2
 .endif
 
 .if ${_PKGSRC_MKPIE} == "yes"
