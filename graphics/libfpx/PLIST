@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/04 08:24:24 nros Exp $
+include/fpxlib.h
+lib/libfpx.la
+share/doc/libfpx/AUTHORS
+share/doc/libfpx/ChangeLog
+share/doc/libfpx/README
+share/doc/libfpx/copyright-notice
+share/doc/libfpx/readme.txt

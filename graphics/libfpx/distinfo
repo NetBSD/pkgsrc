@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/04 08:24:24 nros Exp $
+
+SHA1 (libfpx-1.3.1-9.tar.xz) = d3aba5f74134feb4c3be40c9a864ce28edf1a7f9
+RMD160 (libfpx-1.3.1-9.tar.xz) = 7ea9bff48fa15dc243e17c4f1a4a59c1b45c09dc
+SHA512 (libfpx-1.3.1-9.tar.xz) = 218e7e0cd0512a1620f219802bc694591c90d494940fc7492076dee56c3707e50f5af50eb3dff9d562a5c0431e05ec9e696e6bdd8735b5b26db0cd3f929ad5f8
+Size (libfpx-1.3.1-9.tar.xz) = 1906072 bytes
