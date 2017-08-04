@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/07/27 18:39:26 adam Exp $
+$NetBSD: distinfo,v 1.7 2017/08/04 05:31:11 adam Exp $
 
-SHA1 (cryptography_vectors-2.0.2.tar.gz) = a5b806db81f6f5467e85eb4520f4081bb562f3b0
-RMD160 (cryptography_vectors-2.0.2.tar.gz) = 27af16cefafe5b9c3771ed85be7a3b9bce4109eb
-SHA512 (cryptography_vectors-2.0.2.tar.gz) = ab14bdf664e6df08c8436eb24c4465d3080aacd4e6cb47a0113b0877f869cd91d4184ad9122a428b323e91316b686eeb167c4e932773cac1e7b2adbc9309ca36
-Size (cryptography_vectors-2.0.2.tar.gz) = 27011827 bytes
+SHA1 (cryptography_vectors-2.0.3.tar.gz) = 548839f125aa5baf88639658c1299ebc05d5cc52
+RMD160 (cryptography_vectors-2.0.3.tar.gz) = 435292467bfdc7827edf61f7adebfad5138d71e0
+SHA512 (cryptography_vectors-2.0.3.tar.gz) = a944ca7781d47e6e81d69c32a717a19c2f461412e38f4d2b93cb02309bacdf01d766f7227a20b520faae2db20cf3dca194ed3c34363dcc70866d9ef6200f65cc
+Size (cryptography_vectors-2.0.3.tar.gz) = 27011810 bytes
