@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3121 2017/08/04 23:09:54 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3122 2017/08/04 23:49:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4340,3 +4340,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added graphics/py-piexif version 1.0.12 [kleink 2017-08-04]
 	Updated lang/php70 to 7.0.22 [taca 2017-08-04]
 	Updated lang/php71 to 7.1.8 [taca 2017-08-04]
+	Updated textproc/p5-Text-Table to 1.133 [wen 2017-08-04]
