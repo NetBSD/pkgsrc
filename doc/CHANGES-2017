@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3114 2017/08/04 05:33:40 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3115 2017/08/04 06:35:39 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4332,3 +4332,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-cryptography_vectors to 2.0.3 [adam 2017-08-04]
 	Updated security/py-cryptography to 2.0.3 [adam 2017-08-04]
 	Updated sysutils/py-crontab to 2.2.4 [adam 2017-08-04]
+	Updated mail/qmail-run to 20170804 [schmonz 2017-08-04]
