@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.16 2017/08/05 03:03:17 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.17 2017/08/05 15:21:03 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -22,7 +22,7 @@ name="qmailpop3d"
 : ${qmailpop3d_checkpassword:="@PREFIX@/bin/checkpassword"}
 : ${qmailpop3d_maildirname:="Maildir"}
 : ${qmailpop3d_log:="YES"}
-: ${qmailpop3d_logcmd:="logger -t ${procname} -p mail.info"}
+: ${qmailpop3d_logcmd:="logger -t nb${name} -p mail.info"}
 : ${qmailpop3d_nologcmd:="@PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
