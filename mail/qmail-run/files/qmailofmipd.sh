@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.7 2017/07/21 04:08:15 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.8 2017/08/05 03:03:17 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -22,7 +22,7 @@ name="qmailofmipd"
 : ${qmailofmipd_ofmipdcmd:="@PREFIX@/bin/ofmipd"}
 : ${qmailofmipd_postofmipd:=""}
 : ${qmailofmipd_log:="YES"}
-: ${qmailofmipd_logcmd:="logger -t nb${name} -p mail.info"}
+: ${qmailofmipd_logcmd:="logger -t ${procname} -p mail.info"}
 : ${qmailofmipd_nologcmd:="@PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
@@ -34,7 +34,7 @@ required_files="@PKG_SYSCONFDIR@/control/concurrencyofmip"
 required_files="${required_files} @PKG_SYSCONFDIR@/tcp.ofmip.cdb"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/rcpthosts"
 command="${qmailofmipd_tcpserver}"
-procname=${name}
+procname=nb${name}
 start_precmd="qmailofmipd_precmd"
 extra_commands="stat pause cont cdb reload"
 stat_cmd="qmailofmipd_stat"
@@ -50,10 +50,10 @@ qmailofmipd_precmd()
 	fi
 	# tcpserver(1) is akin to inetd(8), but runs one service per process.
 	# We want to signal only the tcpserver process responsible for this
-	# service. Use argv0(1) to set procname to "qmailofmipd".
+	# service. Use argv0(1) to set procname to "nbqmailofmipd".
 	command="@PREFIX@/bin/pgrphack @SETENV@ - ${qmailofmipd_postenv}
 @PREFIX@/bin/softlimit -m ${qmailofmipd_datalimit} ${qmailofmipd_pretcpserver}
-@PREFIX@/bin/argv0 ${qmailofmipd_tcpserver} ${name}
+@PREFIX@/bin/argv0 ${qmailofmipd_tcpserver} ${procname}
 ${qmailofmipd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.ofmip.cdb
 -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencyofmip`
 -u `@ID@ -u @QMAIL_DAEMON_USER@` -g `@ID@ -g @QMAIL_DAEMON_USER@`

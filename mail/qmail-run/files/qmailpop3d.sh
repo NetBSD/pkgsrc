@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.15 2017/06/23 15:49:03 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.16 2017/08/05 03:03:17 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -22,7 +22,7 @@ name="qmailpop3d"
 : ${qmailpop3d_checkpassword:="@PREFIX@/bin/checkpassword"}
 : ${qmailpop3d_maildirname:="Maildir"}
 : ${qmailpop3d_log:="YES"}
-: ${qmailpop3d_logcmd:="logger -t nb${name} -p mail.info"}
+: ${qmailpop3d_logcmd:="logger -t ${procname} -p mail.info"}
 : ${qmailpop3d_nologcmd:="@PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
@@ -34,7 +34,7 @@ required_files="@PKG_SYSCONFDIR@/control/me"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/concurrencypop3"
 required_files="${required_files} @PKG_SYSCONFDIR@/tcp.pop3.cdb"
 command="${qmailpop3d_tcpserver}"
-procname=${name}
+procname=nb${name}
 start_precmd="qmailpop3d_precmd"
 extra_commands="stat pause cont cdb reload"
 stat_cmd="qmailpop3d_stat"
@@ -50,10 +50,10 @@ qmailpop3d_precmd()
 	fi
 	# tcpserver(1) is akin to inetd(8), but runs one service per process.
 	# We want to signal only the tcpserver process responsible for this
-	# service. Use argv0(1) to set procname to "qmailpop3d".
+	# service. Use argv0(1) to set procname to "nbqmailpop3d".
 	command="@PREFIX@/bin/pgrphack @SETENV@ - ${qmailpop3d_postenv}
 @PREFIX@/bin/softlimit -m ${qmailpop3d_datalimit} ${qmailpop3d_pretcpserver}
-@PREFIX@/bin/argv0 ${qmailpop3d_tcpserver} ${name}
+@PREFIX@/bin/argv0 ${qmailpop3d_tcpserver} ${procname}
 ${qmailpop3d_tcpflags} -x @PKG_SYSCONFDIR@/tcp.pop3.cdb
 -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencypop3`
 ${qmailpop3d_tcphost} ${qmailpop3d_tcpport} @PREFIX@/bin/qmail-popup
