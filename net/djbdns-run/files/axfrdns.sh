@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: axfrdns.sh,v 1.8 2017/06/23 15:39:44 schmonz Exp $
+# $NetBSD: axfrdns.sh,v 1.9 2017/08/05 15:16:05 schmonz Exp $
 #
 # @PKGNAME@ script to control axfrdns (DNS zone-transfer and TCP service).
 #
@@ -29,7 +29,7 @@ fi
 rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/${name}/tcp.cdb"
 command="${axfrdns_tcpserver}"
-procname=${name}
+procname=nb${name}
 start_precmd="axfrdns_precmd"
 extra_commands="cdb reload"
 cdb_cmd="axfrdns_cdb"
@@ -47,7 +47,7 @@ axfrdns_precmd()
 ROOT=@PKG_SYSCONFDIR@/tinydns IP=${tinydns_ip}
 @PREFIX@/bin/envuidgid @DJBDNS_AXFR_USER@
 @PREFIX@/bin/softlimit -d ${axfrdns_datalimit} ${axfrdns_pretcpserver}
-@PREFIX@/bin/argv0 ${axfrdns_tcpserver} ${name}
+@PREFIX@/bin/argv0 ${axfrdns_tcpserver} ${procname}
 ${axfrdns_tcpflags} -x @PKG_SYSCONFDIR@/${name}/tcp.cdb
 -- ${tinydns_ip} ${axfrdns_tcpport}
 @PREFIX@/bin/${name}

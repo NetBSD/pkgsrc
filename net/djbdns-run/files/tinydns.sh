@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: tinydns.sh,v 1.8 2017/06/23 15:39:44 schmonz Exp $
+# $NetBSD: tinydns.sh,v 1.9 2017/08/05 15:16:05 schmonz Exp $
 #
 # @PKGNAME@ script to control tinydns (authoritative DNS service).
 #
@@ -26,6 +26,7 @@ fi
 rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/${name}/data.cdb"
 command="@PREFIX@/bin/${name}"
+procname=nb${name}
 start_precmd="tinydns_precmd"
 extra_commands="cdb reload"
 cdb_cmd="tinydns_cdb"
@@ -40,7 +41,7 @@ tinydns_precmd()
 ROOT=@PKG_SYSCONFDIR@/${name} IP=${tinydns_ip}
 @PREFIX@/bin/envuidgid @DJBDNS_TINY_USER@
 @PREFIX@/bin/softlimit -d ${tinydns_datalimit}
-@PREFIX@/bin/${name}
+@PREFIX@/bin/argv0 @PREFIX@/bin/${name} ${procname}
 </dev/null 2>&1 |
 @PREFIX@/bin/pgrphack @PREFIX@/bin/setuidgid @DJBDNS_LOG_USER@ ${tinydns_logcmd}"
 	command_args="&"
