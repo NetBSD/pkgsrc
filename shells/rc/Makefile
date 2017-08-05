@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2014/03/01 03:26:12 dholland Exp $
+# $NetBSD: Makefile,v 1.31 2017/08/05 10:45:39 bsiegert Exp $
 
-DISTNAME=	rc-1.7
-PKGREVISION=	1
+DISTNAME=	rc-1.7.4
 CATEGORIES=	shells plan9
-MASTER_SITES=	http://www-ftp.lip6.fr/pub/unix/shells/rc/
+MASTER_SITES=	http://static.tobold.org/rc/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tobold.org/article/rc
