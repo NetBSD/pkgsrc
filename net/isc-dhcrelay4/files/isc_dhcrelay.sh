@@ -1,11 +1,10 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: isc_dhcrelay.sh,v 1.1 2009/01/04 01:00:09 adrianp Exp $
+# $NetBSD: isc_dhcrelay.sh,v 1.2 2017/08/05 20:09:27 bsiegert Exp $
 #
 
 # PROVIDE: dhcrelay
-# REQUIRE: DAEMON
-# BEFORE:  NETWORKING
+# REQUIRE: NETWORKING
 #
 #	Note that there no syslog logging of dhclient messages at boot because
 #	dhclient needs to start before services that syslog depends upon do.
