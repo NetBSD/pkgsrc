@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2017/01/26 16:31:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.231 2017/08/05 11:06:29 bsiegert Exp $
 
 DISTNAME=	openssl-1.0.2k
 CATEGORIES=	security
@@ -78,12 +78,16 @@ CONFIGURE_ARGS+=	tru64-alpha-cc
 .elif ${OPSYS} == "Darwin"
 CONFIGURE_SCRIPT=	./Configure
 .  if defined(ABI) && ${ABI} == "64"
-CONFIGURE_ARGS+=	darwin64-${MACHINE_ARCH}-cc
-.  elif ${MACHINE_ARCH} == "powerpc"
-CONFIGURE_ARGS+=	darwin-ppc-cc
+_OS=			darwin64
 .  else
-CONFIGURE_ARGS+=	darwin-${MACHINE_ARCH}-cc
+_OS=			darwin
 .  endif
+.  if ${MACHINE_ARCH:Mpowerpc*}
+_ARCH=			ppc
+.  else
+_ARCH=			${MACHINE_ARCH}
+.endif
+CONFIGURE_ARGS+=	${_OS}-${_ARCH}-cc
 
 SUBST_CLASSES+=		dl
 SUBST_MESSAGE.dl=	Adding dynamic link compatibility library.
