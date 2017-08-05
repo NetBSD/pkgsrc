@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3122 2017/08/04 23:49:19 wen Exp $
+$NetBSD: CHANGES-2017,v 1.3123 2017/08/05 01:37:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4341,3 +4341,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/php70 to 7.0.22 [taca 2017-08-04]
 	Updated lang/php71 to 7.1.8 [taca 2017-08-04]
 	Updated textproc/p5-Text-Table to 1.133 [wen 2017-08-04]
+	Updated editors/nano to 2.8.6 [wen 2017-08-04]
