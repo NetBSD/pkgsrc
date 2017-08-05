@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3127 2017/08/05 09:39:23 maya Exp $
+$NetBSD: CHANGES-2017,v 1.3128 2017/08/05 10:28:43 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4346,3 +4346,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated cad/gtkwave to 3.3.82 [mef 2017-08-05]
 	Updated ham/fldigi to 4.0.8 [mef 2017-08-05]
 	Updated devel/xulrunner192 to 1.9.2.28nb38 [maya 2017-08-05]
+	Updated sysutils/py-borgbackup to 1.0.11 [bsiegert 2017-08-05]
