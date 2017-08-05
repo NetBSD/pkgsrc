@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.15 2017/06/23 15:49:03 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.16 2017/08/05 03:03:17 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -22,7 +22,7 @@ name="qmailsmtpd"
 : ${qmailsmtpd_smtpdcmd:="@PREFIX@/bin/qmail-smtpd"}
 : ${qmailsmtpd_postsmtpd:=""}
 : ${qmailsmtpd_log:="YES"}
-: ${qmailsmtpd_logcmd:="logger -t nb${name} -p mail.info"}
+: ${qmailsmtpd_logcmd:="logger -t ${procname} -p mail.info"}
 : ${qmailsmtpd_nologcmd:="@PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
@@ -34,7 +34,7 @@ required_files="@PKG_SYSCONFDIR@/control/concurrencyincoming"
 required_files="${required_files} @PKG_SYSCONFDIR@/tcp.smtp.cdb"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/rcpthosts"
 command="${qmailsmtpd_tcpserver}"
-procname=${name}
+procname=nb${name}
 start_precmd="qmailsmtpd_precmd"
 extra_commands="stat pause cont cdb reload"
 stat_cmd="qmailsmtpd_stat"
@@ -50,10 +50,10 @@ qmailsmtpd_precmd()
 	fi
 	# tcpserver(1) is akin to inetd(8), but runs one service per process.
 	# We want to signal only the tcpserver process responsible for this
-	# service. Use argv0(1) to set procname to "qmailsmtpd".
+	# service. Use argv0(1) to set procname to "nbqmailsmtpd".
 	command="@PREFIX@/bin/pgrphack @SETENV@ - ${qmailsmtpd_postenv}
 @PREFIX@/bin/softlimit -m ${qmailsmtpd_datalimit} ${qmailsmtpd_pretcpserver}
-@PREFIX@/bin/argv0 ${qmailsmtpd_tcpserver} ${name}
+@PREFIX@/bin/argv0 ${qmailsmtpd_tcpserver} ${procname}
 ${qmailsmtpd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.smtp.cdb
 -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencyincoming`
 -u `@ID@ -u @QMAIL_DAEMON_USER@` -g `@ID@ -g @QMAIL_DAEMON_USER@`
