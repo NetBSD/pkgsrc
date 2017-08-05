@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3125 2017/08/05 07:18:41 mef Exp $
+$NetBSD: CHANGES-2017,v 1.3126 2017/08/05 09:09:53 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4344,3 +4344,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated editors/nano to 2.8.6 [wen 2017-08-04]
 	Updated mail/qmail-run to 20170805 [schmonz 2017-08-05]
 	Updated cad/gtkwave to 3.3.82 [mef 2017-08-05]
+	Updated ham/fldigi to 4.0.8 [mef 2017-08-05]
