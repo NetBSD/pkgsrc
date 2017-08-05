@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: rbldns.sh,v 1.6 2017/06/23 15:39:44 schmonz Exp $
+# $NetBSD: rbldns.sh,v 1.7 2017/08/05 15:16:05 schmonz Exp $
 #
 # @PKGNAME@ script to control rbldns (local RBL service).
 #
@@ -27,6 +27,7 @@ fi
 rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/${name}/data.cdb"
 command="@PREFIX@/bin/${name}"
+procname=nb${name}
 start_precmd="rbldns_precmd"
 extra_commands="cdb reload"
 cdb_cmd="rbldns_cdb"
@@ -41,7 +42,7 @@ rbldns_precmd()
 ROOT=@PKG_SYSCONFDIR@/${name} IP=${rbldns_ip} BASE=${rbldns_base}
 @PREFIX@/bin/envuidgid @DJBDNS_RBL_USER@
 @PREFIX@/bin/softlimit -d ${rbldns_datalimit}
-@PREFIX@/bin/${name}
+@PREFIX@/bin/argv0 @PREFIX@/bin/${name} ${procname}
 2>&1 |
 @PREFIX@/bin/pgrphack @PREFIX@/bin/setuidgid @DJBDNS_LOG_USER@ ${rbldns_logcmd}"
 	command_args="&"
