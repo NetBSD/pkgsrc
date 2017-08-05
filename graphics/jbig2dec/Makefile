@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2016/04/13 17:59:34 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/08/05 08:03:05 nros Exp $
 
 DISTNAME=	jbig2dec-0.13
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://downloads.ghostscript.com/public/jbig2dec/
 
