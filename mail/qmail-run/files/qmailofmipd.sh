@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.8 2017/08/05 03:03:17 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.9 2017/08/05 15:21:03 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -22,7 +22,7 @@ name="qmailofmipd"
 : ${qmailofmipd_ofmipdcmd:="@PREFIX@/bin/ofmipd"}
 : ${qmailofmipd_postofmipd:=""}
 : ${qmailofmipd_log:="YES"}
-: ${qmailofmipd_logcmd:="logger -t ${procname} -p mail.info"}
+: ${qmailofmipd_logcmd:="logger -t nb${name} -p mail.info"}
 : ${qmailofmipd_nologcmd:="@PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
