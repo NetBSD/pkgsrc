@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.16 2017/08/05 03:03:17 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.17 2017/08/05 15:21:03 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -22,7 +22,7 @@ name="qmailsmtpd"
 : ${qmailsmtpd_smtpdcmd:="@PREFIX@/bin/qmail-smtpd"}
 : ${qmailsmtpd_postsmtpd:=""}
 : ${qmailsmtpd_log:="YES"}
-: ${qmailsmtpd_logcmd:="logger -t ${procname} -p mail.info"}
+: ${qmailsmtpd_logcmd:="logger -t nb${name} -p mail.info"}
 : ${qmailsmtpd_nologcmd:="@PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
