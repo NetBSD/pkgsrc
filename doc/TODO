@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17556 2017/08/03 22:13:00 fhajny Exp $
+$NetBSD: TODO,v 1.17557 2017/08/05 19:33:23 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -1363,8 +1363,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ratmen-2.2.3
 	o razor-qt-0.5.2
 	o rbldnsd-0.998
-	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
-	o rc-1.7.4
 	o rdp-1.6
 	o regionset-0.2
 	o rep-gtk-0.90.8.1

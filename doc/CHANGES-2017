@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3129 2017/08/05 15:16:11 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.3130 2017/08/05 19:33:23 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4347,4 +4347,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated ham/fldigi to 4.0.8 [mef 2017-08-05]
 	Updated devel/xulrunner192 to 1.9.2.28nb38 [maya 2017-08-05]
 	Updated sysutils/py-borgbackup to 1.0.11 [bsiegert 2017-08-05]
+	Updated shells/rc to 1.7.4 [bsiegert 2017-08-05]
 	Updated net/djbdns-run to 20170805 [schmonz 2017-08-05]
