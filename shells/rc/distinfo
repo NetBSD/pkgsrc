@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2015/11/02 23:00:35 agc Exp $
+$NetBSD: distinfo,v 1.8 2017/08/05 10:45:39 bsiegert Exp $
 
-SHA1 (rc-1.7.tar.gz) = 7a7511f7ef54f1883aa73e572b0a66e476421829
-RMD160 (rc-1.7.tar.gz) = e8a657db93136dfd40062b45b4e4ea73cbfe8fc3
-SHA512 (rc-1.7.tar.gz) = 0f4ec3fabe9f93878218b14c122bb5e48636abcf9ad51d0b6a05cd1b1bfdfd5bca83c9a7c0b229850c0f4ef63113f57e63c76410d73abe7d331e5221950d22dd
-Size (rc-1.7.tar.gz) = 158449 bytes
+SHA1 (rc-1.7.4.tar.gz) = 366c1d7ba0c71e7a90ac0efe725970ee053689e6
+RMD160 (rc-1.7.4.tar.gz) = adf5bb79f4036b79c8359fd6afd40a11fa85ff6a
+SHA512 (rc-1.7.4.tar.gz) = 49e124207b5370b88b8fba0376dda33451451a58bfb85fabfc06ae59eb88fedf38d7aeaaf292e4f380e2c00efc8301ba68d12180923186d1c53ef94f78f7e435
+Size (rc-1.7.4.tar.gz) = 215206 bytes
 SHA1 (patch-aa) = 3d8f054748b8f411f48ef47383fde87402d45c08
 SHA1 (patch-ab) = d3e8974908f085c49e8b339a7e3bab7e9c1cba3f
