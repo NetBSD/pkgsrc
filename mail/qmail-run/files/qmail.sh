@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmail.sh,v 1.6 2017/07/30 03:05:59 schmonz Exp $
+# $NetBSD: qmail.sh,v 1.7 2017/08/05 03:03:17 schmonz Exp $
 #
 # @PKGNAME@ master script for administrators to control qmail
 # services. Usage resembles the qmailctl script from "Life with qmail".
@@ -75,7 +75,7 @@ name="qmail"
 start_cmd="forward_commands"
 stop_cmd="reverse_commands"
 doqueue_cmd="qmailrcd qmailsend"; alrm_cmd=${doqueue_cmd}; flush_cmd=${doqueue_cmd}
-reload_cmd="qmailrcd send"; hup_cmd=${reload_cmd}
+reload_cmd="qmailrcd qmailsend"; hup_cmd=${reload_cmd}
 status_cmd="forward_commands"; stat_cmd=${status_cmd}
 pause_cmd="reverse_commands"
 cont_cmd="forward_commands"
