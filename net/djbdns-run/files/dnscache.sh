@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dnscache.sh,v 1.9 2017/06/23 15:39:44 schmonz Exp $
+# $NetBSD: dnscache.sh,v 1.10 2017/08/05 15:16:05 schmonz Exp $
 #
 # @PKGNAME@ script to control dnscache (caching DNS resolver).
 #
@@ -29,6 +29,7 @@ rcvar=${name}
 required_dirs="@PKG_SYSCONFDIR@/${name}/ip @PKG_SYSCONFDIR@/${name}/servers"
 required_files="@PKG_SYSCONFDIR@/${name}/servers/@"
 command="@PREFIX@/bin/${name}"
+procname=nb${name}
 start_precmd="dnscache_precmd"
 
 dnscache_precmd()
@@ -41,7 +42,7 @@ ROOT=@PKG_SYSCONFDIR@/${name} IP=${dnscache_ip}
 IPSEND=${dnscache_ipsend} CACHESIZE=${dnscache_size}
 @PREFIX@/bin/envuidgid @DJBDNS_CACHE_USER@
 @PREFIX@/bin/softlimit -o250 -d ${dnscache_datalimit}
-@PREFIX@/bin/${name}
+@PREFIX@/bin/argv0 @PREFIX@/bin/${name} ${procname}
 </dev/urandom 2>&1 |
 @PREFIX@/bin/pgrphack @PREFIX@/bin/setuidgid @DJBDNS_LOG_USER@ ${dnscache_logcmd}"
 	command_args="&"
