@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailqread.sh,v 1.12 2017/07/30 03:05:59 schmonz Exp $
+# $NetBSD: qmailqread.sh,v 1.13 2017/08/05 03:03:17 schmonz Exp $
 #
 # @PKGNAME@ script to control a service providing local non-root
 # users access to see the queue. Adapted from a script by Steinar Haug.
@@ -18,7 +18,7 @@ name="qmailqread"
 : ${qmailqread_tcpport:="20025"}
 : ${qmailqread_tcpserver:="@PREFIX@/bin/tcpserver"}
 : ${qmailqread_log:="YES"}
-: ${qmailqread_logcmd:="logger -t nb${name} -p mail.info"}
+: ${qmailqread_logcmd:="logger -t ${procname} -p mail.info"}
 : ${qmailqread_nologcmd:="@PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
@@ -27,7 +27,7 @@ fi
 
 rcvar=${name}
 command="${qmailqread_tcpserver}"
-procname=${name}
+procname=nb${name}
 start_precmd="qmailqread_precmd"
 extra_commands="stat pause cont"
 stat_cmd="qmailqread_stat"
@@ -41,9 +41,9 @@ qmailqread_precmd()
 	fi
 	# tcpserver(1) is akin to inetd(8), but runs one service per process.
 	# We want to signal only the tcpserver process responsible for this
-	# service. Use argv0(1) to set procname to "qmailqread".
+	# service. Use argv0(1) to set procname to "nbqmailqread".
 	command="@PREFIX@/bin/pgrphack @SETENV@ - ${qmailqread_postenv}
-@PREFIX@/bin/argv0 ${qmailqread_tcpserver} ${name}
+@PREFIX@/bin/argv0 ${qmailqread_tcpserver} ${procname}
 ${qmailqread_tcpflags}
 -u `@ID@ -u @QMAIL_SEND_USER@` -g `@ID@ -g @QMAIL_SEND_USER@`
 ${qmailqread_tcphost} ${qmailqread_tcpport}
