@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2017/06/22 09:37:20 markd Exp $
+# $NetBSD: Makefile,v 1.10 2017/08/06 12:34:05 markd Exp $
 
 DISTNAME=	collection-fontsextra
 PKGNAME=	texlive-${DISTNAME}-2017pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	43356
+TEXLIVE_REV=	44784
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -19,6 +19,7 @@ DEPENDS+=	tex-adforn-[0-9]*:../../fonts/tex-adforn
 DEPENDS+=	tex-adfsymbols-[0-9]*:../../fonts/tex-adfsymbols
 DEPENDS+=	tex-aecc-[0-9]*:../../fonts/tex-aecc
 DEPENDS+=	tex-alegreya-[0-9]*:../../fonts/tex-alegreya
+# depend algolrevived
 DEPENDS+=	tex-allrunes-[0-9]*:../../fonts/tex-allrunes
 DEPENDS+=	tex-almfixed-[0-9]*:../../fonts/tex-almfixed
 DEPENDS+=	tex-anonymouspro-[0-9]*:../../fonts/tex-anonymouspro
@@ -195,6 +196,7 @@ DEPENDS+=	tex-newpx-[0-9]*:../../fonts/tex-newpx
 DEPENDS+=	tex-newtx-[0-9]*:../../fonts/tex-newtx
 DEPENDS+=	tex-newtxsf-[0-9]*:../../fonts/tex-newtxsf
 DEPENDS+=	tex-newtxtt-[0-9]*:../../fonts/tex-newtxtt
+# depend niceframe-type1
 # depend nimbus15
 DEPENDS+=	tex-nkarta-[0-9]*:../../fonts/tex-nkarta
 # depend noto
@@ -235,6 +237,7 @@ DEPENDS+=	tex-sauter-[0-9]*:../../fonts/tex-sauter
 DEPENDS+=	tex-sauterfonts-[0-9]*:../../fonts/tex-sauterfonts
 DEPENDS+=	tex-schulschriften-[0-9]*:../../print/tex-schulschriften
 DEPENDS+=	tex-semaphor-[0-9]*:../../fonts/tex-semaphor
+# depend shobhika
 DEPENDS+=	tex-skull-[0-9]*:../../fonts/tex-skull
 DEPENDS+=	tex-sourcecodepro-[0-9]*:../../fonts/tex-sourcecodepro
 DEPENDS+=	tex-sourcesanspro-[0-9]*:../../fonts/tex-sourcesanspro
