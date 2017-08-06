@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17558 2017/08/06 08:36:41 wiz Exp $
+$NetBSD: TODO,v 1.17559 2017/08/06 20:43:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -357,7 +357,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
-	o ImageMagick-7.0.6.4
+	o ImageMagick-7.0.6.5
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o Mesa-17.1.3
@@ -703,7 +703,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gbrainy-2.27
 	o gcal-4
 	o gcin-1.5.5
-	o gcloud-golang-metadata-0.10.0
+	o gcloud-golang-metadata-0.11.0
 	o gcombust-0.1.55
 	o gcompris-15.02
 	o gdb6-6.8a
@@ -795,6 +795,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gps-6.1.1
 	o gpsd-3.16
 	o gpsdrive-2.11
+	o grafana-4.4.2
 	o gramofile-1.6P
 	o gramps-4.1.0
 	o grantlee-5.0.0
@@ -899,6 +900,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ike-2.0.1 [pkg/37032]
 	o imapsync-1.678
 	o imp-6.2.12
+	o include-what-you-use-0.8
 	o ingo-3.2.8
 	o input-pad-1.4.2
 	o inspircd-2.0.23
@@ -1021,6 +1023,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libva-1.8.2
 	o libvirt-2.3
 	o libxdg-basedir-1.2.0
+	o libxkbcommon-0.7.2
 	o libykneomgr-0.1.8
 	o libyubikey-1.13
 	o licq-1.3.8
@@ -1149,7 +1152,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o oniguruma-5.9.6
 	o oo2c-2.1.7
 	o opal-3.16.2
-	o openal-soft-1.18.0
+	o openal-soft-1.18.1
 	o opencsg-1.4.0
 	o openh323-1.19.1
 	o openmortal-0.7.1
@@ -1284,6 +1287,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o policyd-weight-0.1.15.2
 	o polsms-2.1.0
 	o poppass-4.0.14
+	o poppler-0.57.0
 	o posh-0.12.6
 	o postal-0.72
 	o postfix-3.2.2
@@ -1313,6 +1317,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
+	o py-anki2-2.0.46
 	o py-buildbot-0.9.1
 	o py-buildbot-slave-0.9.1
 	o py-cassa-1.11.0
@@ -1581,8 +1586,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vice-3.0
 	o vicq-0.4.2
 	o vile-9.8q
-	o vim-8.0.0809
-	o vim-share-8.0.0809
+	o vim-8.0.0876
+	o vim-share-8.0.0876
 	o vinagre-3.16.1
 	o vino-3.16.0
 	o virt-manager-1.3.2
@@ -1594,6 +1599,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vnstat-1.15
 	o vtk-5.10.1
 	o wMosaic-3.8.22
+	o waf-1.9.13
 	o wap-utils-1.4.1
 	o warmux-11.04.1
 	o warzone2100-2.3.8
@@ -1617,7 +1623,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxGTK-3.1.0
 	o wxGTK30-3.0.3
 	o wxRemind-101
-	o x264-devel-20170729
+	o x264-devel-20170805
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xaric-0.13.7
