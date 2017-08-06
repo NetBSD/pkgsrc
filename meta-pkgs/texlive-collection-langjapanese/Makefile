@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2017/07/27 11:13:59 markd Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/06 12:27:09 markd Exp $
 
 DISTNAME=	collection-langjapanese
 PKGNAME=	texlive-${DISTNAME}-2017pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44554
+TEXLIVE_REV=	44725
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -43,6 +43,7 @@ DEPENDS+=	tex-ptex-fontmaps-[0-9]*:../../fonts/tex-ptex-fontmaps
 # depend pxcjkcat
 # depend pxjahyper
 # depend pxrubrica
+# depend pxufont
 # depend uplatex
 # uptex is documentation only
 # depend uptex-base
