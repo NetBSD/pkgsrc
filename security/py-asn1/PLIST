@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/07/27 18:36:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/08/06 19:25:45 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -91,6 +91,9 @@ ${PYSITELIB}/pyasn1/type/constraint.pyo
 ${PYSITELIB}/pyasn1/type/error.py
 ${PYSITELIB}/pyasn1/type/error.pyc
 ${PYSITELIB}/pyasn1/type/error.pyo
+${PYSITELIB}/pyasn1/type/forwardref.py
+${PYSITELIB}/pyasn1/type/forwardref.pyc
+${PYSITELIB}/pyasn1/type/forwardref.pyo
 ${PYSITELIB}/pyasn1/type/namedtype.py
 ${PYSITELIB}/pyasn1/type/namedtype.pyc
 ${PYSITELIB}/pyasn1/type/namedtype.pyo
