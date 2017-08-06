@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2017/06/22 09:37:21 markd Exp $
+# $NetBSD: Makefile,v 1.10 2017/08/06 12:53:34 markd Exp $
 
 DISTNAME=	collection-langgerman
 PKGNAME=	texlive-${DISTNAME}-2017pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	42045
+TEXLIVE_REV=	44952
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -46,6 +46,7 @@ DEPENDS+=	tex-milog-[0-9]*:../../print/tex-milog
 DEPENDS+=	tex-r_und_s-[0-9]*:../../print/tex-r_und_s
 # templates-fenn is documentation only
 # templates-sommer is documentation only
+# depend termcal-de
 # texlive-de is documentation only
 # tipa-de is documentation only
 # translation-arsclassica-de is documentation only
