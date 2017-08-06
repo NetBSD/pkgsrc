@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2017/06/22 11:10:55 markd Exp $
+# $NetBSD: Makefile,v 1.11 2017/08/06 12:15:21 markd Exp $
 
 DISTNAME=	collection-bibtexextra
-PKGNAME=	texlive-${DISTNAME}-2017pre2
+PKGNAME=	texlive-${DISTNAME}-2017pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44385
+TEXLIVE_REV=	44627
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -23,6 +23,7 @@ DEPENDS+=	tex-amsrefs-[0-9]*:../../print/tex-amsrefs
 # depend bestpapers
 # depend bibarts
 # depend biber
+DEPENDS+=	p5-biblatex-biber-[0-9]*:../../print/p5-biblatex-biber
 # depend bibexport
 # depend bibhtml
 DEPENDS+=	tex-biblatex-[0-9]*:../../print/tex-biblatex
@@ -39,6 +40,7 @@ DEPENDS+=	tex-biblatex-apa-[0-9]*:../../print/tex-biblatex-apa
 # depend biblatex-chicago
 # depend biblatex-claves
 # depend biblatex-dw
+# depend biblatex-enc
 # depend biblatex-fiwi
 # depend biblatex-gb7714-2015
 # depend biblatex-gost
