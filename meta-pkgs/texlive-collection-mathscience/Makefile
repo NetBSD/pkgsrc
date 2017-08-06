@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2017/06/22 09:37:23 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/06 12:42:06 markd Exp $
 
 DISTNAME=	collection-mathscience
 PKGNAME=	texlive-${DISTNAME}-2017pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44396
+TEXLIVE_REV=	44906
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
-COMMENT=	Mathematics and science packages
+COMMENT=	Mathematics, natural sciences, computer science packages
 
 DEPENDS+=	texlive-collection-fontsrecommended-[0-9]*:../../meta-pkgs/texlive-collection-fontsrecommended
 DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-latex
@@ -135,6 +135,7 @@ DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
 # depend sasnrdisplay
 # depend sciposter
 # depend sclang-prettifier
+# depend scratchx
 # depend sesamanuel
 # depend sfg
 # depend shuffle
