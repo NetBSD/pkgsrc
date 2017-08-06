@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2017/07/06 20:42:05 markd Exp $
+# $NetBSD: Makefile,v 1.15 2017/08/06 12:45:21 markd Exp $
 
 DISTNAME=	collection-pictures
 PKGNAME=	texlive-${DISTNAME}-2017pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44395
+TEXLIVE_REV=	44943
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -77,6 +77,7 @@ DEPENDS+=	tex-here-[0-9]*:../../print/tex-here
 # depend lpic
 # depend lroundrect
 # depend luamesh
+# depend maker
 # depend makeshape
 # depend mathspic
 # depend miniplot
@@ -121,6 +122,7 @@ DEPENDS+=	tex-pictex-[0-9]*:../../graphics/tex-pictex
 # depend signchart
 # depend smartdiagram
 # depend spath3
+# depend spectralsequences
 # depend swimgraf
 # depend table-fct
 DEPENDS+=	tex-texdraw-[0-9]*:../../graphics/tex-texdraw
@@ -140,6 +142,8 @@ DEPENDS+=	tex-tikz-cd-[0-9]*:../../graphics/tex-tikz-cd
 # depend tikz-palattice
 # depend tikz-qtree
 # depend tikz-timing
+# depend tikzcodeblocks
+# depend tikzducks
 DEPENDS+=	tex-tikzinclude-[0-9]*:../../graphics/tex-tikzinclude
 DEPENDS+=	tex-tikzmark-[0-9]*:../../graphics/tex-tikzmark
 DEPENDS+=	tex-tikzorbital-[0-9]*:../../graphics/tex-tikzorbital
