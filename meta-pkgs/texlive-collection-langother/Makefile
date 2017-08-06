@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2017/06/22 09:37:22 markd Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/06 12:09:56 markd Exp $
 
 DISTNAME=	collection-langother
 PKGNAME=	texlive-${DISTNAME}-2017pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44414
+TEXLIVE_REV=	44601
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -46,6 +46,7 @@ DEPENDS+=	tex-hyphen-interlingua-[0-9]*:../../print/tex-hyphen-interlingua
 DEPENDS+=	tex-hyphen-sanskrit-[0-9]*:../../print/tex-hyphen-sanskrit
 DEPENDS+=	tex-hyphen-thai-[0-9]*:../../print/tex-hyphen-thai
 DEPENDS+=	tex-hyphen-turkmen-[0-9]*:../../print/tex-hyphen-turkmen
+# depend latex-mr
 # depend latexbangla
 # lshort-thai is documentation only
 # lshort-vietnamese is documentation only
