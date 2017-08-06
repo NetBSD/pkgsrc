@@ -1,0 +1,15 @@
+$NetBSD: patch-gpgmexx_CMakeLists.txt,v 1.1 2017/08/06 06:35:35 markd Exp $
+
+Don't clash with gpgme>=1.8
+
+--- gpgme++/CMakeLists.txt.orig	2015-06-24 12:43:14.000000000 +0000
++++ gpgme++/CMakeLists.txt
+@@ -143,7 +143,7 @@ if ( GPGME_FOUND )
+         gpgagentgetinfoassuantransaction.h
+         configuration.h
+         ${CMAKE_CURRENT_BINARY_DIR}/gpgme++_export.h vfsmountresult.h
+-        DESTINATION ${INCLUDE_INSTALL_DIR}/gpgme++ COMPONENT Devel
++        DESTINATION ${INCLUDE_INSTALL_DIR}/KDE/gpgme++ COMPONENT Devel
+    )
+ 
+    install(
