@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2017/07/14 10:55:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2017/08/06 19:30:51 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -79,6 +79,7 @@ ${PYSITELIB}/icalendar/tests/test_unit_tools.py
 ${PYSITELIB}/icalendar/tests/test_unit_tools.pyc
 ${PYSITELIB}/icalendar/tests/test_unit_tools.pyo
 ${PYSITELIB}/icalendar/tests/time.ics
+${PYSITELIB}/icalendar/tests/timezone_rdate.ics
 ${PYSITELIB}/icalendar/tests/timezone_same_start.ics
 ${PYSITELIB}/icalendar/tests/timezone_same_start_and_offset.ics
 ${PYSITELIB}/icalendar/tests/timezoned.ics
