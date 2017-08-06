@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/08/06 12:15:21 markd Exp $
+# $NetBSD: Makefile,v 1.12 2017/08/06 12:16:12 markd Exp $
 
 DISTNAME=	collection-bibtexextra
 PKGNAME=	texlive-${DISTNAME}-2017pre3
@@ -22,7 +22,6 @@ DEPENDS+=	tex-amsrefs-[0-9]*:../../print/tex-amsrefs
 # depend besjournals
 # depend bestpapers
 # depend bibarts
-# depend biber
 DEPENDS+=	p5-biblatex-biber-[0-9]*:../../print/p5-biblatex-biber
 # depend bibexport
 # depend bibhtml
