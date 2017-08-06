@@ -1,0 +1,13 @@
+$NetBSD: patch-gpgmexx_interfaces_CMakeLists.txt,v 1.1 2017/08/06 06:35:35 markd Exp $
+
+Don't clash with gpgme>=1.8
+
+--- gpgme++/interfaces/CMakeLists.txt.orig	2015-06-24 12:43:14.000000000 +0000
++++ gpgme++/interfaces/CMakeLists.txt
+@@ -4,5 +4,5 @@ install( FILES 
+   passphraseprovider.h
+   progressprovider.h
+   assuantransaction.h
+-  DESTINATION ${INCLUDE_INSTALL_DIR}/gpgme++/interfaces COMPONENT Devel)
++  DESTINATION ${INCLUDE_INSTALL_DIR}/KDE/gpgme++/interfaces COMPONENT Devel)
+ 
