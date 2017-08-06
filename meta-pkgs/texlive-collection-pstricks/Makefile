@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2017/06/22 20:48:54 markd Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/06 12:30:27 markd Exp $
 
 DISTNAME=	collection-pstricks
 PKGNAME=	texlive-${DISTNAME}-2017pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44460
+TEXLIVE_REV=	44742
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -52,6 +52,7 @@ DEPENDS+=	tex-pst-fill-[0-9]*:../../graphics/tex-pst-fill
 # depend pst-func
 # depend pst-gantt
 DEPENDS+=	tex-pst-geo-[0-9]*:../../geography/tex-pst-geo
+# depend pst-geometrictools
 DEPENDS+=	tex-pst-ghsb-[0-9]*:../../graphics/tex-pst-ghsb
 DEPENDS+=	tex-pst-gr3d-[0-9]*:../../graphics/tex-pst-gr3d
 DEPENDS+=	tex-pst-grad-[0-9]*:../../graphics/tex-pst-grad
@@ -82,6 +83,7 @@ DEPENDS+=	tex-pst-plot-[0-9]*:../../graphics/tex-pst-plot
 DEPENDS+=	tex-pst-poly-[0-9]*:../../graphics/tex-pst-poly
 # depend pst-pulley
 # depend pst-qtree
+# depend pst-rputover
 # depend pst-rubans
 # depend pst-shell
 # depend pst-sigsys
@@ -109,7 +111,6 @@ DEPENDS+=	tex-pst-vue3d-[0-9]*:../../graphics/tex-pst-vue3d
 DEPENDS+=	tex-pstricks-[0-9]*:../../graphics/tex-pstricks
 DEPENDS+=	tex-pstricks-add-[0-9]*:../../graphics/tex-pstricks-add
 # depend pstricks_calcnotes
-# depend rputover
 # depend uml
 # depend vaucanson-g
 # depend vocaltract
