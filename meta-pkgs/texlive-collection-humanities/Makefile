@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2017/06/22 09:37:21 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/06 12:24:19 markd Exp $
 
 DISTNAME=	collection-humanities
 PKGNAME=	texlive-${DISTNAME}-2017pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	42268
+TEXLIVE_REV=	44655
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -35,7 +35,6 @@ DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-lat
 # depend juramisc
 # depend jurarsp
 # depend ledmac
-# depend leipzig
 # depend lexikon
 # depend lexref
 # depend ling-macros
@@ -48,6 +47,7 @@ DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-lat
 # depend plari
 # depend play
 # depend poemscol
+# depend poetry
 # depend poetrytex
 # depend qobitree
 DEPENDS+=	tex-qtree-[0-9]*:../../print/tex-qtree
