@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2017/06/22 11:12:26 markd Exp $
+# $NetBSD: Makefile,v 1.27 2017/08/06 13:01:46 markd Exp $
 
 DISTNAME=	collection-latexextra
 PKGNAME=	texlive-${DISTNAME}-2017pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44544
+TEXLIVE_REV=	44959
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -504,6 +504,7 @@ DEPENDS+=	tex-glossaries-[0-9]*:../../print/tex-glossaries
 # depend gridset
 # depend guitlogo
 # depend halloweenmath
+# depend hackthefootline
 # depend handout
 DEPENDS+=	tex-hang-[0-9]*:../../print/tex-hang
 DEPENDS+=	tex-hanging-[0-9]*:../../print/tex-hanging
@@ -546,6 +547,7 @@ DEPENDS+=	tex-incgraph-[0-9]*:../../graphics/tex-incgraph
 # depend interfaces
 # depend inversepath
 # depend invoice
+# depend invoice2
 # depend iso
 # depend iso10303
 # depend isodate
@@ -588,6 +590,7 @@ DEPENDS+=	tex-lazylist-[0-9]*:../../print/tex-lazylist
 DEPENDS+=	tex-leading-[0-9]*:../../print/tex-leading
 DEPENDS+=	tex-leaflet-[0-9]*:../../print/tex-leaflet
 DEPENDS+=	tex-leftidx-[0-9]*:../../print/tex-leftidx
+# depend leipzig
 # depend lengthconvert
 # depend lettre
 DEPENDS+=	tex-lettrine-[0-9]*:../../print/tex-lettrine
@@ -639,6 +642,7 @@ DEPENDS+=	tex-makecmds-[0-9]*:../../print/tex-makecmds
 # depend mandi
 DEPENDS+=	tex-manfnt-[0-9]*:../../fonts/tex-manfnt
 # depend manuscript
+# depend marginfit
 # depend marginfix
 DEPENDS+=	tex-marginnote-[0-9]*:../../print/tex-marginnote
 # depend markdown
@@ -1153,6 +1157,7 @@ DEPENDS+=	tex-xtab-[0-9]*:../../print/tex-xtab
 # depend ycbook
 DEPENDS+=	tex-ydoc-[0-9]*:../../print/tex-ydoc
 # depend yplan
+# depend zebra-goodies
 # depend zed-csp
 # depend ziffer
 # depend zwgetfdate
