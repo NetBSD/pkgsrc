@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2017/04/22 21:03:55 adam Exp $
+# $NetBSD: Makefile,v 1.65 2017/08/07 17:56:13 jlam Exp $
 #
 
 DISTNAME=	opendnssec-1.4.13
@@ -46,7 +46,7 @@ PKG_GROUPS_VARS+=	ODS_GROUP
 
 EGDIR=			${PREFIX}/share/examples/opendnssec
 DOCDIR=			${PREFIX}/share/doc/opendnssec
-ODS_SYSCONFDIR=		${PKG_SYSCONFDIR}/opendnssec
+PKG_SYSCONFSUBDIR=	opendnssec
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKSRC}/conf/Makefile.in
@@ -56,15 +56,15 @@ SUBST_SED.paths=	-e 's,@EGDIR@,${EGDIR},'
 CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 CONF_FILES+=	${EGDIR}/addns.xml.sample \
-			${ODS_SYSCONFDIR}/addns.xml
+			${PKG_SYSCONFDIR}/addns.xml
 CONF_FILES+=	${EGDIR}/conf.xml.sample \
-			${ODS_SYSCONFDIR}/conf.xml
+			${PKG_SYSCONFDIR}/conf.xml
 CONF_FILES+=	${EGDIR}/kasp.xml.sample \
-			${ODS_SYSCONFDIR}/kasp.xml
+			${PKG_SYSCONFDIR}/kasp.xml
 CONF_FILES+=	${EGDIR}/zonelist.xml.sample \
-			${ODS_SYSCONFDIR}/zonelist.xml
+			${PKG_SYSCONFDIR}/zonelist.xml
 
-INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${ODS_SYSCONFDIR}
+INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
 INSTALLATION_DIRS+=	share/opendnssec
 INSTALLATION_DIRS+=	lib/opendnssec
 INSTALLATION_DIRS+=	lib/opendnssec/signer
@@ -80,7 +80,7 @@ RCD_SCRIPTS=		opendnssec
 .include "options.mk"
 
 pre-install:
-	${MKDIR} ${DESTDIR}${PKG_SYSCONFDIR}/opendnssec
+	${MKDIR} ${DESTDIR}${PKG_SYSCONFDIR}
 
 post-install:
 	${INSTALL} ${WRKSRC}/KNOWN_ISSUES ${DESTDIR}${DOCDIR}

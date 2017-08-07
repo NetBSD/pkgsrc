@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2017/02/12 06:25:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/07 17:56:12 jlam Exp $
 
 DISTNAME=	lilv-0.20.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	http://download.drobilla.net/
 EXTRACT_SUFX=	.tar.bz2
@@ -20,7 +20,8 @@ PKGCONFIG_OVERRIDE+=	lilv.pc.in
 CONFIGURE_ENV+=		LV2_PATH=${BUILDLINK_PREFIX.lv2}/lib/lv2
 EGDIR=			share/examples/lilv
 CONF_FILES=		${EGDIR}/lilv ${PKG_SYSCONFDIR}/bash_completion.d/lilv
-INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/bash_completion.d ${EGDIR}
+MAKE_DIRS=		${PKG_SYSCONFDIR}/bash_completion.d
+INSTALLATION_DIRS=	${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 

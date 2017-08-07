@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_ansible_constants,v 1.2 2016/02/18 09:24:25 he Exp $
+$NetBSD: patch-lib_ansible_constants,v 1.3 2017/08/07 17:56:13 jlam Exp $
 
 Fix hardcoded paths to be replaced with SUBST framework.
 Move the ansible/roles tree out from under any etc/ directory to share/
@@ -10,7 +10,7 @@ Move the ansible/roles tree out from under any etc/ directory to share/
      path1 = os.getcwd() + "/ansible.cfg"
      path2 = os.path.expanduser("~/.ansible.cfg")
 -    path3 = "/etc/ansible/ansible.cfg"
-+    path3 = "@PKG_SYSCONFDIR@/ansible/ansible.cfg"
++    path3 = "@PKG_SYSCONFDIR@/ansible.cfg"
  
      for path in [path0, path1, path2, path3]:
          if path is not None and os.path.exists(path):
@@ -19,7 +19,7 @@ Move the ansible/roles tree out from under any etc/ directory to share/
  
  # configurable things
 -DEFAULT_HOST_LIST         = shell_expand_path(get_config(p, DEFAULTS, 'inventory', 'ANSIBLE_INVENTORY', get_config(p, DEFAULTS,'hostfile','ANSIBLE_HOSTS', '/etc/ansible/hosts')))
-+DEFAULT_HOST_LIST         = shell_expand_path(get_config(p, DEFAULTS, 'inventory', 'ANSIBLE_INVENTORY', get_config(p, DEFAULTS,'hostfile','ANSIBLE_HOSTS', '@PKG_SYSCONFDIR@/ansible/hosts')))
++DEFAULT_HOST_LIST         = shell_expand_path(get_config(p, DEFAULTS, 'inventory', 'ANSIBLE_INVENTORY', get_config(p, DEFAULTS,'hostfile','ANSIBLE_HOSTS', '@PKG_SYSCONFDIR@/hosts')))
  DEFAULT_MODULE_PATH       = get_config(p, DEFAULTS, 'library',          'ANSIBLE_LIBRARY',          None)
 -DEFAULT_ROLES_PATH        = shell_expand_path(get_config(p, DEFAULTS, 'roles_path',       'ANSIBLE_ROLES_PATH',       '/etc/ansible/roles'))
 +DEFAULT_ROLES_PATH        = shell_expand_path(get_config(p, DEFAULTS, 'roles_path',       'ANSIBLE_ROLES_PATH',       '@PREFIX@/share/ansible/roles'))
