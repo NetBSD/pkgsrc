@@ -1,0 +1,109 @@
+$NetBSD: patch-Makefile,v 1.1 2017/08/07 11:10:32 jperkin Exp $
+
+Use pkgsrc layout and flags.
+
+--- Makefile.orig	1997-08-28 19:36:15.000000000 +0000
++++ Makefile
+@@ -3,27 +3,27 @@
+ #
+ 
+ # Where does the fortune program go?
+-FORTDIR=/usr/local/games
++FORTDIR=${PREFIX}/bin
+ # Where do the data files (fortunes, or cookies) go?
+-COOKIEDIR=/usr/local/share/games/fortunes
++COOKIEDIR=${PREFIX}/share/games/fortune
+ # Offensive ones?
+ OCOOKIEDIR=$(COOKIEDIR)/off
+ # The ones with html tags?
+ WCOOKIEDIR=$(COOKIEDIR)/html
+ # Where do strfile and unstr go?
+-BINDIR=/usr/local/bin
++BINDIR=${PREFIX}/bin
+ # What is the proper mode for strfile and unstr? 755= everyone, 700= root only
+ BINMODE=0755
+ #BINMODE=0700
+ # Where do the man pages for strfile and unstr go?
+-BINMANDIR=/usr/local/man/man1
++BINMANDIR=${PREFIX}/${PKGMANDIR}/man1
+ # What is their proper extension?
+ BINMANEXT=1
+ # And the same for the fortune man page
+-FORTMANDIR=/usr/local/man/man6
++FORTMANDIR=${PREFIX}/${PKGMANDIR}/man6
+ FORTMANEXT=6
+ # Do we want to install the offensive files? (0 no, 1 yes)
+-OFFENSIVE=1
++#OFFENSIVE=1
+ # Do we want to install files with html tags? (0 no, 1 yes)
+ # (Note: These files are not yet available)
+ WEB=0
+@@ -46,7 +46,7 @@ WEB=0
+ # NB. Under Linux, the BSD regex functions are _MUCH_ faster
+ #     than the POSIX ones, but your mileage may vary.
+ #
+-REGEXDEFS=-DHAVE_REGEX_H -DBSD_REGEX
++REGEXDEFS=-DHAVE_REGEX_H -DPOSIX_REGEX
+ 
+ #
+ # If your system's regex functions are not in its standard C library,
+@@ -55,8 +55,8 @@ REGEXDEFS=-DHAVE_REGEX_H -DBSD_REGEX
+ REGEXLIBS=
+ 
+ DEFINES=-DFORTDIR="\"$(COOKIEDIR)\"" -DOFFDIR="\"$(OCOOKIEDIR)\""
+-CFLAGS=-O2 $(DEFINES) -Wall -fomit-frame-pointer -pipe
+-LDFLAGS=-s
++CFLAGS += $(DEFINES)
++#LDFLAGS=-s
+ 
+ # The above flags are used by default; the debug flags are used when make
+ # is called with a debug target, such as 'make debug'
+@@ -71,12 +71,12 @@ DEBUGCFLAGS=-g -DDEBUG $(DEFINES) -Wall
+ DEBUGLDFLAGS=
+ 
+ # Only ANSI-compatible C compilers are currently supported
+-CC=gcc
++#CC=gcc
+ 
+ # ----------------------------------------
+ # Nothing below this line should have to be changed
+ 
+-SUBDIRS=fortune util datfiles
++SUBDIRS=fortune datfiles
+ 
+ .PHONY: all debug fortune-bin fortune-debug util-bin randstr rot \
+ 	util-debug cookies cookies-z install install-fortune \
+@@ -118,18 +118,18 @@ cookies:
+ 	@echo "Sorry, just joking."
+ 	$(MAKE) cookies-z
+ 
+-cookies-z: util-bin
++cookies-z:
+ 	cd datfiles && $(MAKE) COOKIEDIR=$(COOKIEDIR) \
+ 		    OCOOKIEDIR=$(OCOOKIEDIR) WCOOKIEDIR=$(WCOOKIEDIR) \
+ 		    OFFENSIVE=$(OFFENSIVE) WEB=$(WEB)
+ 
+ # Install everything
+-install: install-fortune install-util install-man install-cookie
++install: install-fortune install-fman install-cookie
+ 
+ # Install just the fortune program
+ install-fortune: fortune-bin
+-	install -m 0755 -d $(FORTDIR)
+-	install -m 0755 fortune/fortune $(FORTDIR)
++	install -m 0755 -d $(DESTDIR)$(FORTDIR)
++	install -m 0755 fortune/fortune $(DESTDIR)$(FORTDIR)
+ 
+ # Install just the utilities strfile and unstr
+ install-util: util-bin
+@@ -155,8 +155,8 @@ fortune/fortune.man: fortune/fortune-man
+ 
+ # Install the fortune man pages
+ install-fman: fortune/fortune.man
+-	install -m 0755 -d $(FORTMANDIR)
+-	install -m 0644 fortune/fortune.man $(FORTMANDIR)/fortune.$(FORTMANEXT)
++	install -m 0755 -d $(DESTDIR)$(FORTMANDIR)
++	install -m 0644 fortune/fortune.man $(DESTDIR)$(FORTMANDIR)/fortune.$(FORTMANEXT)
+ 
+ # Install the utilities man pages
+ install-uman:

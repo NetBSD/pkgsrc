@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2017/08/07 11:10:32 jperkin Exp $
+
+SHA1 (fortune-mod-9708.tar.gz) = 9f96a00dbf5d2c6b0e7324af0eae988ce6adc5ad
+RMD160 (fortune-mod-9708.tar.gz) = bf40efcfde2e854166bccdbccf7cf23bfb443e61
+SHA512 (fortune-mod-9708.tar.gz) = 80c5b71d84eeb3092b2dfe483f0dad8ed42e2efeaa1f8791c26fb2ae80fbd7775777ac5252b1d8270e2e176ad14ce98940bee6d8e71fdbb9ac3323dc7188c4d0
+Size (fortune-mod-9708.tar.gz) = 1408517 bytes
+SHA1 (patch-Makefile) = b2429bba09ffdc7d571c5d98833a4ff5a6e2fb21
+SHA1 (patch-datfiles_Makefile) = fd0d1b87bd2532bada57517970cf7676ee678720
+SHA1 (patch-datfiles_html_Makefile) = aef5d7d6275943e94e4f79f2db64445605d329ce
+SHA1 (patch-datfiles_off_Makefile) = 31aa90703d86df0c1d50e5cadfb0ec92a5800199
+SHA1 (patch-fortune_fortune.c) = 734f7c2bd5ebfc3c8d28148e0674bccacdccfc1f
+SHA1 (patch-util_strfile.h) = dd58d46bf13f5a7eeb245a3b747a26fa1e946113
