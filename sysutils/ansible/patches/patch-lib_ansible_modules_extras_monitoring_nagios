@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_ansible_modules_extras_monitoring_nagios,v 1.1 2016/02/17 20:31:45 he Exp $
+$NetBSD: patch-lib_ansible_modules_extras_monitoring_nagios,v 1.2 2017/08/07 17:56:13 jlam Exp $
 
 Fix hardcoded paths to be replaced with SUBST framework.
 
@@ -9,7 +9,7 @@ Fix hardcoded paths to be replaced with SUBST framework.
  def which_cmdfile():
      locations = [
 +		# pkgsrc - any OS
-+		'@PKG_SYSCONFDIR@/nagios/nagios.cfg',
++		'@PKG_SYSCONFBASE@/nagios/nagios.cfg',
          # rhel
          '/etc/nagios/nagios.cfg',
          # debian
@@ -27,7 +27,7 @@ Fix hardcoded paths to be replaced with SUBST framework.
          '/opt/nagios/etc/nagios.cfg',
          '/opt/nagios/nagios.cfg',
 +		# icinga on pkgsrc - any OS
-+		'@PKG_SYSCONFDIR@/icinga/icinga.cfg',
++		'@PKG_SYSCONFBASE@/icinga/icinga.cfg',
          # icinga on debian/ubuntu
          '/etc/icinga/icinga.cfg',
          # icinga installed from source (default location)

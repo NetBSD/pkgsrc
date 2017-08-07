@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/23 17:18:09 asau Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/07 17:56:13 jlam Exp $
 #
 
 APOLLOVERS=	1.4
 DISTNAME=	apache-apollo-${APOLLOVERS}-unix-distro
 PKGNAME=	apollo-${APOLLOVERS}
+PKGREVISION=	1
 CATEGORIES=	net java
 MASTER_SITES=	${MASTER_SITE_APACHE:=activemq/activemq-apollo/1.4/}
 
@@ -18,12 +19,12 @@ USE_JAVA=	run
 NO_BUILD=	yes
 USE_TOOLS+=	pax
 
-EGDIR=		share/examples/apollo
+INSTALLATION_DIRS=	bin lib/apollo ${EGDIR}
 
-INSTALLATION_DIRS=	bin lib/apollo ${EGDIR} ${PKG_SYSCONFDIR}/apollo
-
+PKG_SYSCONFSUBDIR=	apollo
+EGDIR=			share/examples/apollo
 CONF_FILES=		${PREFIX}/${EGDIR}/jul.properties	\
-			${PKG_SYSCONFDIR}/apollo/jul.properties
+			${PKG_SYSCONFDIR}/jul.properties
 
 SUBST_CLASSES+=		home
 SUBST_FILES.home=	${WRKSRC}/bin/apollo

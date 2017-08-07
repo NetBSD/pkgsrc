@@ -1,4 +1,4 @@
-$NetBSD: patch-docs_man_man1_ansible-playbook-asciidoc,v 1.1 2016/02/17 20:31:45 he Exp $
+$NetBSD: patch-docs_man_man1_ansible-playbook-asciidoc,v 1.2 2017/08/07 17:56:13 jlam Exp $
 
 Fix hardcoded paths to be replaced with SUBST framework.
 
@@ -9,7 +9,7 @@ Fix hardcoded paths to be replaced with SUBST framework.
  
  The 'PATH' to the inventory hosts file, which defaults to
 -'/etc/ansible/hosts'.
-+'@PKG_SYSCONFDIR@/ansible/hosts'.
++'@PKG_SYSCONFDIR@/hosts'.
  
  
  *-M* 'DIRECTORY', *--module-path=*'DIRECTORY'::
@@ -25,13 +25,13 @@ Fix hardcoded paths to be replaced with SUBST framework.
  -----
  
 -/etc/ansible/hosts -- Default inventory file
-+@PKG_SYSCONFDIR@/ansible/hosts -- Default inventory file
++@PKG_SYSCONFDIR@/hosts -- Default inventory file
  
 -/usr/share/ansible/ -- Default module library
 +@PREFIX@/share/ansible/ -- Default module library
  
 -/etc/ansible/ansible.cfg -- Config file, used if present
-+@PKG_SYSCONFDIR@/ansible/ansible.cfg -- Config file, used if present
++@PKG_SYSCONFDIR@/ansible.cfg -- Config file, used if present
  
  ~/.ansible.cfg -- User config file, overrides the default config if present
  

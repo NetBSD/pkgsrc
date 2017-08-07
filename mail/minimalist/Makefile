@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/07/09 06:38:30 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/08/07 17:56:12 jlam Exp $
 #
 
 DISTNAME=	minimalist-2.5.4-1
@@ -30,7 +30,7 @@ SUBST_FILES.path+=	contrib/minimalist_request.pl
 SUBST_SED.path=		-e 's,/usr/local,${PREFIX},'
 
 NO_BUILD=		yes
-INSTALLATION_DIRS=	bin ${PKG_SYSCONFDIR} ${EGDIR} share/doc/minimalist/FAQ
+INSTALLATION_DIRS=	bin ${EGDIR} share/doc/minimalist/FAQ
 
 do-install:
 	cd ${WRKSRC}; \

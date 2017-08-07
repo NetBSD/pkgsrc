@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2017/03/10 08:30:51 nils Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/07 17:56:13 jlam Exp $
 
 DISTNAME=	dehydrated-0.4.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lukas2511/}
 
@@ -17,18 +18,18 @@ NO_BUILD=	yes
 USE_TOOLS+=	bash:run sed:run awk:run curl:run pax openssl
 REPLACE_BASH=	dehydrated test.sh docs/examples/hook.sh
 
+PKG_SYSCONFSUBDIR=	dehydrated
 EGDIR=			${PREFIX}/share/examples/dehydrated
-CONF_FILES=		${EGDIR}/config ${PKG_SYSCONFDIR}/dehydrated/config
-CONF_FILES+=		${EGDIR}/domains.txt ${PKG_SYSCONFDIR}/dehydrated/domains.txt
-OWN_DIRS=		${PKG_SYSCONFDIR}/dehydrated
+CONF_FILES=		${EGDIR}/config ${PKG_SYSCONFDIR}/config
+CONF_FILES+=		${EGDIR}/domains.txt ${PKG_SYSCONFDIR}/domains.txt
 DOCDIR=			share/doc/dehydrated
-INSTALLATION_DIRS+=	${EGDIR} ${PKG_SYSCONFDIR} ${OWN_DIRS} ${DOCDIR} bin
+INSTALLATION_DIRS+=	${EGDIR} ${DOCDIR} bin
 AUTO_MKDIRS=		yes
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-extract
 SUBST_FILES.paths=	${WRKSRC}/dehydrated
-SUBST_SED.paths=	-e 's|/usr/local/etc|${PKG_SYSCONFDIR}|g'
+SUBST_SED.paths=	-e 's|/usr/local/etc|${PKG_SYSCONFBASE}|g'
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/dehydrated ${DESTDIR}${PREFIX}/bin/dehydrated
