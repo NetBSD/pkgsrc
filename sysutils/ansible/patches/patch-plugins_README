@@ -1,4 +1,4 @@
-$NetBSD: patch-plugins_README,v 1.1 2016/02/17 20:31:45 he Exp $
+$NetBSD: patch-plugins_README,v 1.2 2017/08/07 17:56:13 jlam Exp $
 
 Fix hardcoded paths to be replaced with SUBST framework.
 
@@ -9,7 +9,7 @@ Fix hardcoded paths to be replaced with SUBST framework.
  Cobbler.  These could also be used to interface with LDAP or database.
  
 -chmod +x an inventory plugin and either name it /etc/ansible/hosts or use ansible
-+chmod +x an inventory plugin and either name it @PKG_SYSCONFDIR@/ansible/hosts or use ansible
++chmod +x an inventory plugin and either name it @PKG_SYSCONFDIR@/hosts or use ansible
  with -i to designate the path to the plugin.
  
  contributions welcome
