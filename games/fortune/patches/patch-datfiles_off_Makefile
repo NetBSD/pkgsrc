@@ -1,0 +1,35 @@
+$NetBSD: patch-datfiles_off_Makefile,v 1.1 2017/08/07 11:10:32 jperkin Exp $
+
+Use pkgsrc strfile.
+Support DESTDIR.
+
+--- datfiles/off/Makefile.orig	1997-08-28 16:40:42.000000000 +0000
++++ datfiles/off/Makefile
+@@ -7,7 +7,7 @@ OCOOKIES_ROTATED=
+ 
+ OCOOKIES=$(OCOOKIES_UNROTATED) $(OCOOKIES_ROTATED)
+ 
+-STRFILE=../../util/strfile
++#STRFILE=../../util/strfile
+ ROT=../../util/rot
+ 
+ 
+@@ -18,15 +18,15 @@ ocookies-stamp:	rotated-stamp
+ 	for i in $(OCOOKIES) ; do $(STRFILE) -x $$i || exit $$? ; done
+ 	touch ocookies-stamp
+ 
+-rotated-stamp:
++rotated-stamp: ${ROT}
+ 	for i in $(OCOOKIES_UNROTATED) ; \
+ 	    do $(ROT) < unrotated/$$i > $$i || exit $$? ; done
+ 	touch rotated-stamp
+ 
+ install:
+-	install -m 0755 -d $(OCOOKIEDIR)
++	install -m 0755 -d $(DESTDIR)$(OCOOKIEDIR)
+ 	for i in $(OCOOKIES) ; \
+-	    do install -m 0644 $$i $$i.dat $(OCOOKIEDIR) || exit $$? ; done
++	    do install -m 0644 $$i $$i.dat $(DESTDIR)$(OCOOKIEDIR) || exit $$? ; done
+ 
+ clean:
+ 	rm -f ocookies-stamp rotated-stamp *.dat $(OCOOKIES_UNROTATED)
