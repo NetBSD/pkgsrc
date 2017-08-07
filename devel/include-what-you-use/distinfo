@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.5 2017/03/17 22:39:30 adam Exp $
+$NetBSD: distinfo,v 1.6 2017/08/07 17:31:44 adam Exp $
 
-SHA1 (include-what-you-use-0.7.src.tar.gz) = 2c50ace20d108a097d2aa5433b0c50a7d1f8b59e
-RMD160 (include-what-you-use-0.7.src.tar.gz) = 3143e978989bbbdefc14e7d41b696980fcc6ebd9
-SHA512 (include-what-you-use-0.7.src.tar.gz) = dd7990fa4112ddb0434807efd9dcf0f77bbecaa61eab51be24428f8e45b9321c7647a979278f3f1266ba9be05c6f1de536fc084613d38638b795248001ce4b44
-Size (include-what-you-use-0.7.src.tar.gz) = 446773 bytes
-SHA1 (patch-CMakeLists.txt) = 7be956ee821692ddea128b0d2fef4d3404fd24e5
-SHA1 (patch-iwyu.cc) = 787d8ff0179dbc932d7eb72168eb5f345fc1ed4d
-SHA1 (patch-iwyu__driver.cc) = 003630ec42b5a22e83b914b19f88b348558720e0
-SHA1 (patch-iwyu__location__util.h) = 9fcd20b3618cf19ff41014110fd887c8b3eee011
+SHA1 (include-what-you-use-0.8.src.tar.gz) = 1cf48107ccf513f8862578921634fde53ab09f80
+RMD160 (include-what-you-use-0.8.src.tar.gz) = 8a156ec5c6235b37a829875ed2a069494c1ad919
+SHA512 (include-what-you-use-0.8.src.tar.gz) = f14e404e5d03f13022243db4707dbbeda43956b71018439b3d1d8fcf3f173c1706d1d8c2db413a85f979211b01edd59d2c34742ccb14d9e16e5b5ce51119d48b
+Size (include-what-you-use-0.8.src.tar.gz) = 441413 bytes
 SHA1 (patch-iwyu__output.cc) = 072236f94c44ebd7e0ca20ad828dd938c9683b4a
