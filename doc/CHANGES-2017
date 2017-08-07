@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3136 2017/08/07 18:01:46 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3137 2017/08/07 19:16:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4362,3 +4362,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/include-what-you-use to 0.8 [adam 2017-08-07]
 	Updated devel/git to 2.14.0 [adam 2017-08-07]
 	Updated devel/py-hypothesis to 3.16.1 [adam 2017-08-07]
+	Updated devel/pango to 1.40.8 [adam 2017-08-07]
+	Updated x11/gtk3 to 3.22.17 [adam 2017-08-07]
