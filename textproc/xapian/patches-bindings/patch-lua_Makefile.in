@@ -1,0 +1,23 @@
+$NetBSD: patch-lua_Makefile.in,v 1.1 2017/08/07 20:01:39 schmonz Exp $
+
+Allow installing multiple versions of Lua bindings.
+
+--- lua/Makefile.in.orig	2017-04-24 02:19:59.000000000 +0000
++++ lua/Makefile.in
+@@ -639,14 +639,14 @@ SWIG_GENERATED = xapian_wrap.cc
+ BUILT_SOURCES = $(SWIG_GENERATED) $(am__append_1) $(am__append_2)
+ @MAINTAINER_MODE_TRUE@RUN_SWIG = $(PERL) '$(top_srcdir)'/swig-depcomp $(SWIG)
+ MAINTAINERCLEANFILES = $(BUILT_SOURCES)
+-exampledatadir = $(docdir)/lua/examples
++exampledatadir = $(docdir)/${LUA_PKGPREFIX}/examples
+ dist_exampledata_DATA = \
+ 	docs/examples/simpleindex.lua \
+ 	docs/examples/simpleexpand.lua \
+ 	docs/examples/simplematchdecider.lua \
+ 	docs/examples/simplesearch.lua
+ 
+-docdatadir = $(docdir)/lua
++docdatadir = $(docdir)/${LUA_PKGPREFIX}
+ dist_docdata_DATA = docs/index.html
+ all: $(BUILT_SOURCES)
+ 	$(MAKE) $(AM_MAKEFLAGS) all-am
