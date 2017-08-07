@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2017/06/05 14:24:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2017/08/07 07:42:34 jlam Exp $
 
 DISTNAME=	DarwinStreamingSrvr5.5.5-Source
 PKGNAME=	DarwinStreamingServer-5.5.5
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	net multimedia
 MASTER_SITES=	http://static.macosforge.org/dss/downloads/
 
@@ -70,11 +70,11 @@ REPLACE_PERL+=	WebAdmin/WebAdminHtml/view_broadcast.cgi
 REPLACE_PERL+=	WebAdmin/src/streamingadminserver.pl
 REPLACE_PERL+=	WinNTSupport/WinPasswdAssistant.pl
 
-REQUIRE_DIRS+=	${PKG_SYSCONFDIR}/streaming
-CONF_FILES=	share/examples/streaming/qtgroups ${PKG_SYSCONFDIR}/streaming/qtgroups
-CONF_FILES+=	share/examples/streaming/qtusers ${PKG_SYSCONFDIR}/streaming/qtusers
-CONF_FILES+=	share/examples/streaming/relayconfig.xml-Sample ${PKG_SYSCONFDIR}/streaming/relayconfig.xml
-CONF_FILES+=	share/examples/streaming/streamingserver.xml-POSIX ${PKG_SYSCONFDIR}/streaming/streamingserver.xml
+PKG_SYSCONFSUBDIR=	streaming
+CONF_FILES=	share/examples/streaming/qtgroups ${PKG_SYSCONFDIR}/qtgroups
+CONF_FILES+=	share/examples/streaming/qtusers ${PKG_SYSCONFDIR}/qtusers
+CONF_FILES+=	share/examples/streaming/relayconfig.xml-Sample ${PKG_SYSCONFDIR}/relayconfig.xml
+CONF_FILES+=	share/examples/streaming/streamingserver.xml-POSIX ${PKG_SYSCONFDIR}/streamingserver.xml
 
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	post-patch
@@ -109,7 +109,7 @@ SUBST_MESSAGE.path=	Fixing paths
 SUBST_FILES.path+=	defaultPaths.h
 SUBST_FILES.path+=	WebAdmin/src/streamingadminserver.pl
 SUBST_FILES.path+=	streamingserver.xml-POSIX
-SUBST_SED.path+=	-e "s|/etc/streaming|${PKG_SYSCONFDIR}/streaming|"
+SUBST_SED.path+=	-e "s|/etc/streaming|${PKG_SYSCONFDIR}|"
 SUBST_SED.path+=	-e "s|/movies|/share/streaming/movies|"
 SUBST_SED.path+=	-e "s|/usr/local|${PREFIX}|"
 SUBST_SED.path+=	-e "s|/sbin/StreamingServer|/libexec/StreamingServer|"
