@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.5 2016/03/10 16:58:19 jperkin Exp $
+$NetBSD: README,v 1.6 2017/08/07 23:54:09 maya Exp $
 
 These files contain platform-specific definitions that are used by the
 pkgsrc infrastructure.
@@ -90,8 +90,6 @@ TODO: Document all these variables.
     _PATCH_BACKUP_ARG is switch to patch(1) for backup suffix.
 
     _USE_RPATH is "yes" to add rpath to LDFLAGS, otherwise "no"
-
-    LINK_ALL_LIBGCC_HACK
 
     _STRIPFLAG_CC is cc(1) option to strip.
 
