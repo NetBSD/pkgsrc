@@ -1,4 +1,4 @@
-# $NetBSD: bsd.build-vars.mk,v 1.11 2016/04/10 15:58:02 joerg Exp $
+# $NetBSD: bsd.build-vars.mk,v 1.12 2017/08/07 23:54:09 maya Exp $
 #
 # Package-settable variables:
 #
@@ -32,7 +32,6 @@ MAKE_FILE?=	Makefile
 
 MAKE_ENV+=	${ALL_ENV}
 MAKE_ENV+=	${NO_EXPORT_CPP:D:UCPP=${CPP:Q}}
-MAKE_ENV+=	LINK_ALL_LIBGCC_HACK=${LINK_ALL_LIBGCC_HACK:Q}
 MAKE_ENV+=	LOCALBASE=${LOCALBASE:Q}
 MAKE_ENV+=	X11BASE=${X11BASE:Q}
 MAKE_ENV+=	PKGMANDIR=${PKGMANDIR:Q}
