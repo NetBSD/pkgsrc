@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2017/06/23 18:25:12 kamil Exp $
+# $NetBSD: Makefile,v 1.73 2017/08/07 17:56:13 jlam Exp $
 
 DISTNAME=	open-vm-tools-10.1.5-5055683
 PKGNAME=	open-vm-tools-10.1.5
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=		--disable-vgauth
 CONFIGURE_ARGS+=		--disable-grabbitmqproxy
 CONFIGURE_ARGS+=		--disable-docs # Requires doxygen
 
-INSTALLATION_DIRS+=		${PKG_SYSCONFDIR} share/examples/vmware-tools
+INSTALLATION_DIRS+=		share/examples/vmware-tools
 
 PKG_SYSCONFSUBDIR=		vmware-tools
 EGDIR=				${PREFIX}/share/examples/vmware-tools

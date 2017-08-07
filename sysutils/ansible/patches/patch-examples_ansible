@@ -1,4 +1,4 @@
-$NetBSD: patch-examples_ansible,v 1.1 2016/02/17 20:31:45 he Exp $
+$NetBSD: patch-examples_ansible,v 1.2 2017/08/07 17:56:13 jlam Exp $
 
 Fix hardcoded paths to be replaced with SUBST framework.
 
@@ -9,7 +9,7 @@ Fix hardcoded paths to be replaced with SUBST framework.
  # or with command line flags. ansible will read ANSIBLE_CONFIG,
  # ansible.cfg in the current working directory, .ansible.cfg in
 -# the home directory or /etc/ansible/ansible.cfg, whichever it
-+# the home directory or @PKG_SYSCONFDIR@/ansible/ansible.cfg, whichever it
++# the home directory or @PKG_SYSCONFDIR@/ansible.cfg, whichever it
  # finds first
  
  [defaults]
@@ -18,7 +18,7 @@ Fix hardcoded paths to be replaced with SUBST framework.
  
 -inventory      = /etc/ansible/hosts
 -#library        = /usr/share/my_modules/
-+inventory      = @PKG_SYSCONFDIR@/ansible/hosts
++inventory      = @PKG_SYSCONFDIR@/hosts
 +#library        = @PREFIX@/share/my_modules/
  remote_tmp     = $HOME/.ansible/tmp
  pattern        = *
@@ -28,7 +28,7 @@ Fix hardcoded paths to be replaced with SUBST framework.
  
  # additional paths to search for roles in, colon separated
 -#roles_path    = /etc/ansible/roles
-+#roles_path    = @PKG_SYSCONFDIR@/ansible/roles
++#roles_path    = @PKG_SYSCONFDIR@/roles
  
  # uncomment this to disable SSH key host checking
  #host_key_checking = False
