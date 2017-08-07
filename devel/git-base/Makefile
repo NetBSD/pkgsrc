@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2017/06/25 03:09:45 mef Exp $
+# $NetBSD: Makefile,v 1.42 2017/08/07 17:56:14 adam Exp $
 
 .include "../../devel/git/Makefile.common"
 
@@ -29,6 +29,7 @@ CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 CONFIGURE_ARGS+=	--with-curl=${BUILDLINK_PREFIX.curl}
 CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
+CONFIGURE_ARGS+=	--with-libpcre2=${BUILDLINK_PREFIX.pcre2}
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--without-tcltk
@@ -107,6 +108,7 @@ post-install:
 .include "options.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../textproc/expat/buildlink3.mk"
