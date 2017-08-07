@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2017/08/07 07:54:38 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2017/08/07 07:56:58 jlam Exp $
 
 DISTNAME=	gale-0.99fruit
 PKGNAME=	gale-0.99f
@@ -23,7 +23,7 @@ CPPFLAGS+=		-I${BUILDLINK_PREFIX.rsaref}/include/rsaref
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.libwww}/include/w3c-libwww
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.tcl}/include/tcl
 
-PKG_SYSCONFSUBDIR?=	gale
+PKG_SYSCONFSUBDIR=	gale
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
 PKG_GROUPS=		gale
