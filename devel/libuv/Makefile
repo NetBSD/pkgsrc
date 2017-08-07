@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/08/07 07:13:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2017/08/07 10:31:41 jperkin Exp $
 
 DISTNAME=	libuv-1.13.1
 CATEGORIES=	devel
@@ -21,7 +21,8 @@ HEADERS=	uv-aix.h uv-bsd.h uv-darwin.h uv-linux.h uv-sunos.h	\
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS" && ${OS_VERSION} < 5.11
+.if !empty(MACHINE_PLATFORM:MSunOS-5.[0-9]-*) || \
+    !empty(MACHINE_PLATFORM:MSunOS-5.10-*)
 CFLAGS+=	-DSUNOS_NO_IFADDRS
 .endif
 
