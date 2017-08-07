@@ -1,0 +1,24 @@
+This version of fortune is a modification of the NetBSD fortune, as
+tweaked by Florian La Roche (see below, and many thanks to Florian for
+starting the update), and then massively hacked on by Amy Lewis.
+
+I (Amy) hacked on this because it was broken; the BSD source itself is
+broken (I looked at it).  Specifically, if you are using an old version
+of fortune, then it accesses *only* the two files "fortunes" and
+"fortunes-o", even though 'fortune -[ao]f' will tell you differently.
+That was my original reason to start working with the code.
+
+Bug fixes: fortune now reads the same file list that it reports with -f.
+strfile now really sorts and randomizes, instead of just setting the
+'sorted' and 'randomized' flags.  strfile does not lose the pointer to a
+fortune that follows a null fortune.
+
+Enhancements: fortune -f now prints percentages, whether specified on the
+command line or not.  fortune -m now prints filenames to stderr; the
+fortunes printed to stdout can be redirected into a file which is valid
+strfile format.  fortune -l|s can be modified with -n _number_ to specify
+the number of characters in a short fortune (default 160, as before).
+The means of distinguishing between offensive and inoffensive fortunes is
+changed: offensive fortunes are put in a separate subdirectory.  The
+contents of the fortunes databases have been extensively reviewed, and
+broken into smaller, more manageable [hopefully] files.
