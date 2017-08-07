@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.17 2016/07/16 04:05:53 markd Exp $
+$NetBSD: distinfo,v 1.18 2017/08/07 11:05:02 markd Exp $
 
 SHA1 (kdepim-runtime-4.14.10.tar.xz) = f5b1e44f1d10d29bad308b3fd90a48b34da7493c
 RMD160 (kdepim-runtime-4.14.10.tar.xz) = a03ab7a8bdb65741d35fde271e7634bc8570beea
 SHA512 (kdepim-runtime-4.14.10.tar.xz) = 599cf08ee7c4bfcc2dcde7d146c5c889663a463e59e4e4773e6b1cee909d02914fce414afe473a127d484b5daa2fa9332dcef8092c3b953cdbebc87663e70577
 Size (kdepim-runtime-4.14.10.tar.xz) = 1175432 bytes
+SHA1 (patch-plugins_CMakeLists.txt) = 36893bb898b986e42a903dc8a6d895b643b30337
 SHA1 (patch-plugins_tests_CMakeLists.txt) = 8e32ae46a539b79fddd40f9c02ab242fef9a66b0
