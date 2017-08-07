@@ -1,0 +1,15 @@
+$NetBSD: patch-plugins_CMakeLists.txt,v 1.1 2017/08/07 11:05:02 markd Exp $
+
+disable tests - getting problematic to build.
+
+--- plugins/CMakeLists.txt.orig	2017-08-06 03:40:13.000000000 +0000
++++ plugins/CMakeLists.txt
+@@ -1,7 +1,7 @@
+ add_definitions( -DQT_NO_CAST_FROM_ASCII )
+ add_definitions( -DQT_NO_CAST_TO_ASCII )
+ 
+-add_subdirectory( tests )
++#add_subdirectory( tests )
+ 
+ include_directories(
+         ${Boost_INCLUDE_DIR}
