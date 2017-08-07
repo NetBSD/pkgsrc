@@ -1,0 +1,30 @@
+$NetBSD: patch-datfiles_Makefile,v 1.1 2017/08/07 11:10:32 jperkin Exp $
+
+Use pkgsrc strfile.
+Support DESTDIR.
+
+--- datfiles/Makefile.orig	1997-08-28 16:38:25.000000000 +0000
++++ datfiles/Makefile
+@@ -5,7 +5,7 @@ COOKIES=art ascii-art computers cookie d
+ 	platitudes politics riddles science songs-poems sports \
+ 	startrek translate-me wisdom work zippy
+ 
+-STRFILE=../util/strfile
++#STRFILE=../util/strfile
+ 
+ .PHONY: all cookies o-cookies w-cookies install clean
+ 
+@@ -27,11 +27,11 @@ cookies-stamp:
+ 	touch cookies-stamp
+ 
+ install: cookies-stamp
+-	install -m 0755 -d $(COOKIEDIR)
++	install -m 0755 -d $(DESTDIR)$(COOKIEDIR)
+ 	if [ $(OFFENSIVE) = 1 ] ; then cd off && $(MAKE) install ; fi
+ 	if [ $(WEB) = 1 ] ; then cd html && $(MAKE) install ; fi
+ 	for i in $(COOKIES) ; do \
+-		install -m 0644 $$i $$i.dat $(COOKIEDIR) || exit $? ; done
++		install -m 0644 $$i $$i.dat $(DESTDIR)$(COOKIEDIR) || exit $? ; done
+ 
+ clean:
+ 	rm -f cookies-stamp *.dat
