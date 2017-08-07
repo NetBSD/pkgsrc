@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/10 17:34:04 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/08/07 20:01:40 schmonz Exp $
 ${LUA_CDIR}/xapian.a
 ${LUA_CDIR}/xapian.so
-share/doc/xapian-bindings/lua/examples/simpleexpand.lua
-share/doc/xapian-bindings/lua/examples/simpleindex.lua
-share/doc/xapian-bindings/lua/examples/simplematchdecider.lua
-share/doc/xapian-bindings/lua/examples/simplesearch.lua
-share/doc/xapian-bindings/lua/index.html
+share/doc/xapian-bindings/${LUA_PKGPREFIX}/examples/simpleexpand.lua
+share/doc/xapian-bindings/${LUA_PKGPREFIX}/examples/simpleindex.lua
+share/doc/xapian-bindings/${LUA_PKGPREFIX}/examples/simplematchdecider.lua
+share/doc/xapian-bindings/${LUA_PKGPREFIX}/examples/simplesearch.lua
+share/doc/xapian-bindings/${LUA_PKGPREFIX}/index.html
