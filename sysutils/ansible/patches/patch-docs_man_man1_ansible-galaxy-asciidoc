@@ -1,4 +1,4 @@
-$NetBSD: patch-docs_man_man1_ansible-galaxy-asciidoc,v 1.1 2016/02/17 20:31:45 he Exp $
+$NetBSD: patch-docs_man_man1_ansible-galaxy-asciidoc,v 1.2 2017/08/07 17:56:13 jlam Exp $
 
 Fix hardcoded paths to be replaced with SUBST framework.
 
@@ -9,7 +9,7 @@ Fix hardcoded paths to be replaced with SUBST framework.
  
  The path to the directory containing your roles. The default is the *roles_path* 
 -configured in your *ansible.cfg* file (/etc/ansible/roles if not configured)
-+configured in your *ansible.cfg* file (@PKG_SYSCONFDIR@/ansible/roles if not configured)
++configured in your *ansible.cfg* file (@PKG_SYSCONFDIR@/roles if not configured)
  
  *-r* 'ROLE_FILE', *--role-file=*'ROLE_FILE'::
  
@@ -18,7 +18,7 @@ Fix hardcoded paths to be replaced with SUBST framework.
  
  The path to the directory containing your roles. The default is the *roles_path* 
 -configured in your *ansible.cfg* file (/etc/ansible/roles if not configured)
-+configured in your *ansible.cfg* file (@PKG_SYSCONFDIR@/ansible/roles if not configured)
++configured in your *ansible.cfg* file (@PKG_SYSCONFDIR@/roles if not configured)
  
  INIT
  ----
@@ -27,7 +27,7 @@ Fix hardcoded paths to be replaced with SUBST framework.
  
  The path to the directory containing your roles. The default is the *roles_path*
 -configured in your *ansible.cfg* file (/etc/ansible/roles if not configured)
-+configured in your *ansible.cfg* file (@PKG_SYSCONFDIR@/ansible/roles if not configured)
++configured in your *ansible.cfg* file (@PKG_SYSCONFDIR@/roles if not configured)
  
  
  AUTHOR

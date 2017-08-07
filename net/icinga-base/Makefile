@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2017/06/05 14:24:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2017/08/07 17:56:13 jlam Exp $
 #
 
 DISTNAME=	icinga-1.9.4
 PKGNAME=	${DISTNAME:S/-/-base-/}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	net sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=icinga/}
 
@@ -59,9 +59,9 @@ EGFILES+=		objects/printer.cfg objects/switch.cfg
 EGFILES+=		objects/templates.cfg objects/timeperiods.cfg
 EGFILES+=		objects/windows.cfg resource.cfg
 
-INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/objects
-INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/modules
-INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/conf.d
+OWN_DIRS+=		${PKG_SYSCONFDIR}/objects
+OWN_DIRS+=		${PKG_SYSCONFDIR}/modules
+OWN_DIRS+=		${PKG_SYSCONFDIR}/conf.d
 
 .for files in ${EGFILES}
 CONF_FILES+=		${EGDIR}/${files} ${PKG_SYSCONFDIR}/${files}
