@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.53 2017/07/24 08:19:08 maya Exp $
+# $NetBSD: NetBSD.mk,v 1.54 2017/08/07 23:44:53 maya Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -129,7 +129,12 @@ PKG_HAVE_KQUEUE=	# defined
 .endif
 
 # Register support for FORTIFY (with GCC)
+.if !empty(OS_VERSION:M[2-6].*)
+# Disable on older versions, see:
+# http://mail-index.netbsd.org/pkgsrc-users/2017/08/07/msg025435.html
+.else
 _OPSYS_SUPPORTS_FORTIFY=yes
+.endif
 
 # Register support for PIE on supported architectures (with GCC)
 .if (${MACHINE_ARCH} == "i386") || \
