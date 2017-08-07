@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2015/06/13 20:40:30 tsutsui Exp $
+# $NetBSD: Makefile,v 1.12 2017/08/07 08:26:38 jlam Exp $
 
 .include "../../inputmethod/ja-freewnn-lib/Makefile.common"
 
 PKGNAME=	ja-FreeWnn-server-1.11alpha23
+PKGREVISION=	1
 
 COMMENT+=	(Japanese server)
 
@@ -28,10 +29,8 @@ FREEWNN_GROUP=	jserver
 PKG_GROUPS=	${FREEWNN_GROUP}
 PKG_USERS=	${FREEWNN_USER}:${FREEWNN_GROUP}
 
-SPECIAL_PERMS+=	bin/Wnn4/jserver ${FREEWNN_USER} ${FREEWNN_GROUP} 4511
-SPECIAL_PERMS+=	bin/Wnn4/cserver ${FREEWNN_USER} ${FREEWNN_GROUP} 4511
-SPECIAL_PERMS+=	bin/Wnn4/tserver ${FREEWNN_USER} ${FREEWNN_GROUP} 4511
-SPECIAL_PERMS+=	bin/Wnn4/kserver ${FREEWNN_USER} ${FREEWNN_GROUP} 4511
+# sbin/jserver needs to be setuid to ${FREEWNN_USER}.
+SPECIAL_PERMS+=	sbin/jserver ${FREEWNN_USER} ${FREEWNN_GROUP} 4511
 
 OWN_DIRS+=		${IMDICTDIR}/wnn/ja_JP
 OWN_DIRS_PERMS+=	${IMDICTDIR}/wnn/ja_JP/usr ${FREEWNN_USER} ${FREEWNN_GROUP} ${PKGDIRMODE}
