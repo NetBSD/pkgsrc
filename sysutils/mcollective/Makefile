@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/23 19:51:12 asau Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/07 09:42:32 jlam Exp $
 #
 
 DISTNAME=	mcollective-2.1.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://downloads.puppetlabs.com/mcollective/
 EXTRACT_SUFX=	.tgz
@@ -26,13 +27,15 @@ EGDIR=			${PREFIX}/share/examples/mcollective
 
 INSTALLATION_DIRS=	bin sbin share/doc/mcollective share/mcollective
 INSTALLATION_DIRS+=	${RUBY_VENDORLIB}/mcollective
-INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/mcollective
-INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/mcollective/ssl ${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR}
+
+PKG_SYSCONFSUBDIR=	mcollective
+OWN_DIRS=		${PKG_SYSCONFDIR}/ssl
 
 CONF_FILES+=		${EGDIR}/server.cfg.dist		\
-			${PKG_SYSCONFDIR}/mcollective/server.cfg
+			${PKG_SYSCONFDIR}/server.cfg
 CONF_FILES+=		${EGDIR}/client.cfg.dist		\
-			${PKG_SYSCONFDIR}/mcollective/client.cfg
+			${PKG_SYSCONFDIR}/client.cfg
 
 SUBST_CLASSES+=		confpath
 SUBST_FILES.confpath=	${WRKSRC}/bin/mcollectived		\
@@ -41,7 +44,7 @@ SUBST_FILES.confpath=	${WRKSRC}/bin/mcollectived		\
 			${WRKSRC}/lib/mcollective/config.rb	\
 			${WRKSRC}/lib/mcollective/util.rb	\
 			${WRKSRC}/lib/mcollective/rpc.rb
-SUBST_SED.confpath=	-e "s,/etc/mcollective,${PKG_SYSCONFDIR}/mcollective,"
+SUBST_SED.confpath=	-e "s,/etc/mcollective,${PKG_SYSCONFDIR},"
 SUBST_STAGE.confpath=	post-patch
 
 SUBST_CLASSES+=		sharepath
