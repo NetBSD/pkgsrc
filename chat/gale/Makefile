@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2017/08/01 17:40:09 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2017/08/07 07:54:38 jlam Exp $
 
 DISTNAME=	gale-0.99fruit
 PKGNAME=	gale-0.99f
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	chat
 MASTER_SITES=	http://download.ofb.net/gale/
 EXTRACT_SUFX=	.tar.bz2
@@ -29,10 +29,9 @@ EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 PKG_GROUPS=		gale
 PKG_USERS=		gale:gale
 
-CONF_FILES=		${EGDIR}/COPYING ${PKG_SYSCONFDIR}/gale/COPYING
-CONF_FILES+=		${EGDIR}/ROOT ${PKG_SYSCONFDIR}/gale/auth/trusted/ROOT
-OWN_DIRS=		${PKG_SYSCONFDIR}
-OWN_DIRS+=		${PKG_SYSCONFDIR}/auth
+CONF_FILES=		${EGDIR}/COPYING ${PKG_SYSCONFDIR}/COPYING
+CONF_FILES+=		${EGDIR}/ROOT ${PKG_SYSCONFDIR}/auth/trusted/ROOT
+OWN_DIRS=		${PKG_SYSCONFDIR}/auth
 OWN_DIRS+=		${PKG_SYSCONFDIR}/auth/private
 OWN_DIRS+=		${PKG_SYSCONFDIR}/auth/trusted
 OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/auth/cache			\
