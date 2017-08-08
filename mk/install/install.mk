@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.71 2017/08/07 15:49:44 jlam Exp $
+# $NetBSD: install.mk,v 1.72 2017/08/08 17:17:25 jlam Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -246,21 +246,25 @@ _INSTALL_ONE_DIR_CMD= { \
 #	2. Leading "gnu/" is transformed into "${PKGGNUDIR}".
 #	3. Leading "man/" is transformed into "${PKGMANDIR}/".
 #
-# ASSERT: Paths listed in ${_INSTALLATION_DIRS} must be relative paths.
+# Check that paths listed in ${_INSTALLATION_DIRS} are relative paths.
+# This can't be an assertion because some variables used when listing
+# directories in INSTALLATION_DIRS are not expanded until they are
+# used.
 #
 _INSTALLATION_DIRS=	${INSTALLATION_DIRS:C,^${PREFIX}/,,:C,^gnu/,${PKGGNUDIR},:C,^man/,${PKGMANDIR}/,}
-.if !empty(_INSTALLATION_DIRS:M/*)
-PKG_FAIL_REASON+=	"INSTALLATION_DIRS items must begin with "${PREFIX:Q}" or be relative paths."
-.endif
 
 .PHONY: install-makedirs
 install-makedirs:
 	${RUN} ${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}
 .if defined(INSTALLATION_DIRS) && !empty(INSTALLATION_DIRS)
 	@${STEP_MSG} "Creating installation directories"
-	${RUN}								\
-	for dir in ${_INSTALLATION_DIRS}; do				\
-		${_INSTALL_ONE_DIR_CMD};				\
+	${RUN} set -- args ${_INSTALLATION_DIRS}; shift;		\
+	while ${TEST} "$$#" -gt 0; do					\
+		dir="$$1"; shift;					\
+		case "$$dir" in						\
+		/*)	${FAIL_MSG} "INSTALLATION_DIRS: $$dir must be in "${PREFIX:Q}"." ;; \
+		*)	${_INSTALL_ONE_DIR_CMD}	;;			\
+		esac;							\
 	done
 .endif	# INSTALLATION_DIRS
 
