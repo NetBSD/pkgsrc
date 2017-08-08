@@ -1,13 +1,13 @@
-$NetBSD: patch-gdk-pixbuf_io-ico.c,v 1.1 2017/05/14 12:55:16 spz Exp $
+$NetBSD: patch-gdk-pixbuf_io-ico.c,v 1.2 2017/08/08 16:52:10 adam Exp $
 
 from https://bugzilla.gnome.org/attachment.cgi?id=347366&action=diff
 for CVE-2017-6312
 
---- gdk-pixbuf/io-ico.c.orig	2017-02-27 17:24:19.000000000 +0000
+--- gdk-pixbuf/io-ico.c.orig	2017-08-07 16:52:44.000000000 +0000
 +++ gdk-pixbuf/io-ico.c
-@@ -330,10 +330,8 @@ static void DecodeHeader(guchar *Data, g
- 			return;
- 		}
+@@ -333,10 +333,8 @@ static void DecodeHeader(guchar *Data, g
+ 	for (l = State->entries; l != NULL; l = g_list_next (l)) {
+ 		entry = l->data;
  
 -		/* We know how many bytes are in the "header" part. */
 -		State->HeaderSize = entry->DIBoffset + INFOHEADER_SIZE;
@@ -18,7 +18,7 @@ for CVE-2017-6312
  			g_set_error (error,
  			             GDK_PIXBUF_ERROR,
  			             GDK_PIXBUF_ERROR_CORRUPT_IMAGE,
-@@ -341,6 +339,9 @@ static void DecodeHeader(guchar *Data, g
+@@ -344,6 +342,9 @@ static void DecodeHeader(guchar *Data, g
  			return;
  		}
  
