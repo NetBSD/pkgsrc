@@ -1,0 +1,3 @@
+XCB util-xrm module provides the following libraries:
+
+  - xrm: utility functions for the X resource manager
