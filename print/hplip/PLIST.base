@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.base,v 1.27 2017/07/05 13:38:50 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.28 2017/08/08 18:15:17 schnoebe Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -590,12 +590,16 @@ share/hplip/ppd/HP/hp-deskjet_2050_j510_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_2050_j510_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_2130_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_2130_series.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_2200_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_2200_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_2510_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_2510_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_2520_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_2520_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_2540_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_2540_series.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_2600_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_2600_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_2640_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_2640_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3000_j310_series-hpijs.ppd.gz
