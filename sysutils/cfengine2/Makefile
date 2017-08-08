@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2017/08/01 16:47:43 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2017/08/08 16:39:11 jlam Exp $
 
 DISTNAME=	cfengine-2.2.10
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	sysutils net
 #MASTER_SITES=	http://www.cfengine.org/tarballs/
 MASTER_SITES+=	http://ftp.osuosl.org/pub/cfengine/
@@ -26,7 +26,10 @@ REPLACE_PERL=		contrib/cfdoc
 
 RCD_SCRIPTS=		cfexecd cfservd cfenvd
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man8 ${VARBASE}/cfengine/inputs
+OWN_DIRS=		${VARBASE}/cfengine
+OWN_DIRS+=		${VARBASE}/cfengine/inputs
+
+INSTALLATION_DIRS=	${PKGMANDIR}/man8
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/*.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8

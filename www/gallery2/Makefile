@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/09/11 17:03:28 taca Exp $
+# $NetBSD: Makefile,v 1.15 2017/08/08 16:39:12 jlam Exp $
 #
 
 DISTNAME=		gallery-2.3.2-full
@@ -64,7 +64,6 @@ OWN_DIRS_PERMS+=	${G2DATA} ${APACHE_USER} ${APACHE_GROUP} 755
 
 INSTALLATION_DIRS=	share/examples/gallery2
 INSTALLATION_DIRS+=	share/gallery2
-INSTALLATION_DIRS+=	${G2DATA}
 
 post-extract:
 	${CP} ${FILESDIR}/gallery2.conf ${WRKDIR}/

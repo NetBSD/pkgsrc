@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2017/05/09 15:07:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2017/08/08 16:39:11 jlam Exp $
 #
 
 DISTNAME=	squirrelmail-imap_proxy-1.2.7
 PKGNAME=	imapproxy-1.2.7
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
 
@@ -35,7 +35,9 @@ PKG_HOME.${IMAPPROXY_USER}=     ${IMAPPROXY_CHROOT}
 INSTALLATION_DIRS+=	sbin
 INSTALLATION_DIRS+=	${IMAPPROXY_DOC}
 INSTALLATION_DIRS+=	${IMAPPROXY_EXAMPLES}
-INSTALLATION_DIRS+=	${VARBASE}/chroot/imapproxy
+
+MAKE_DIRS=		${VARBASE}/chroot
+OWN_DIRS=		${VARBASE}/chroot/imapproxy
 
 post-install:
 .for doc in COPYING ChangeLog README README.known_issues README.ssl

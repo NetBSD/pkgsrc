@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/12/23 19:31:26 pettai Exp $
+# $NetBSD: Makefile,v 1.22 2017/08/08 16:39:11 jlam Exp $
 #
 
 DISTNAME=		rancid-3.6.1
@@ -60,7 +60,6 @@ OWN_DIRS_PERMS+=	${VARBASE}/rancid ${RC_USER} ${RC_GROUP} 0755
 
 INSTALLATION_DIRS=	share/examples/rancid
 INSTALLATION_DIRS+=	share/doc/rancid
-INSTALLATION_DIRS+=	${VARBASE}/rancid
 
 .include "../../mk/bsd.prefs.mk"
 
