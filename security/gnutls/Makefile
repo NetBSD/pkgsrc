@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2017/06/30 06:15:44 wiz Exp $
+# $NetBSD: Makefile,v 1.173 2017/08/08 16:38:41 jlam Exp $
 
 DISTNAME=	gnutls-3.5.13
 CATEGORIES=	security devel
@@ -56,7 +56,7 @@ MAKE_ENV+=		TZ=UTC
 
 EGDIR=		${PREFIX}/share/examples/gnutls
 
-INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} include/gnutls
+INSTALLATION_DIRS=	${EGDIR} include/gnutls
 
 post-install:
 	cd ${WRKSRC}/doc/examples && ${INSTALL_DATA} *.c ${DESTDIR}${EGDIR}
