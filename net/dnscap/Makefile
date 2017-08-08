@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/08/08 16:38:19 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2017/08/08 17:13:34 jlam Exp $
 
 DISTNAME=		dnscap-141
 CATEGORIES=		net
@@ -11,8 +11,5 @@ LICENSE=		isc
 
 GNU_CONFIGURE=		yes
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
 .include "../../net/libpcap/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
