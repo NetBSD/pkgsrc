@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2015/11/11 11:00:06 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2017/08/08 11:23:38 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mariadb55
 
@@ -16,22 +16,24 @@ CMAKE_ARGS+=		-DWITH_SSL=system
 CMAKE_ARGS+=		-DWITH_SSL=no
 .endif
 
+## This doesn't seem to build at all currently
 # Enable DTrace support
 PLIST_VARS+=		dtrace
-.if !empty(PKG_OPTIONS:Mdtrace)
-CMAKE_ARGS+=		-DENABLE_DTRACE=ON
-PLIST.dtrace=		yes
-.else
+## This doesn't seem to build at all currently
+## .if !empty(PKG_OPTIONS:Mdtrace)
+## CMAKE_ARGS+=		-DENABLE_DTRACE=ON
+## PLIST.dtrace=		yes
+## .else
 CMAKE_ARGS+=		-DENABLE_DTRACE=OFF
-.endif
+## .endif
 
 # Enable Sphinx SE support
 # http://sphinxsearch.com/docs/current.html#sphinxse-overview
 PLIST_VARS+=	sphinx
 .if !empty(PKG_OPTIONS:Msphinx) || make(distinfo) || make(makesum) || make(mdi)
-SPHINX_VER=	2.2.7
+SPHINX_VER=	2.2.11
 DISTFILES=	${DEFAULT_DISTFILES} sphinx-${SPHINX_VER}-release${EXTRACT_SUFX}
-SITES.sphinx-2.2.7-release.tar.gz=	http://sphinxsearch.com/files/
+SITES.sphinx-${SPHINX_VER}-release.tar.gz=	http://sphinxsearch.com/files/
 .if !empty(PKGPATH:Mdatabases/mariadb55-server)
 MESSAGE_SRC=	${PKGDIR}/MESSAGE ${PKGDIR}/MESSAGE.sphinx
 .endif
