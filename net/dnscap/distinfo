@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 00:34:58 agc Exp $
+$NetBSD: distinfo,v 1.4 2017/08/08 17:13:34 jlam Exp $
 
 SHA1 (dnscap-141.tar.gz) = b034dcb8aeb6ecbf5c3d12e3dc82dcee40a6e382
 RMD160 (dnscap-141.tar.gz) = 5bdb8851fda74904347106fcc0a9c9dfa719f63c
 SHA512 (dnscap-141.tar.gz) = 848f8b5a8ad890738b1bcd7bc1fbf399e912aaf201362c40e5e4191fb3c7e61b0c296129733e52b130f3c2c6ad34743ec57626f04bb0d6b9b5b313bc5e11a3a1
 Size (dnscap-141.tar.gz) = 92801 bytes
-SHA1 (patch-Makefile.in) = ddfc02984cf2f092b9356421300a48ee5c59e43b
+SHA1 (patch-Makefile.in) = 28bb12006e14967140e9c0a8088da6966aa2b971
