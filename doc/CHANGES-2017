@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3142 2017/08/08 14:22:33 nros Exp $
+$NetBSD: CHANGES-2017,v 1.3143 2017/08/08 16:54:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4370,3 +4370,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/mariadb55-client to 5.5.57 [fhajny 2017-08-08]
 	Updated databases/mariadb55-server to 5.5.57 [fhajny 2017-08-08]
 	Added x11/xcb-util-xrm version 1.2 [nros 2017-08-08]
+	Updated graphics/gdk-pixbuf2 to 2.36.8 [adam 2017-08-08]
