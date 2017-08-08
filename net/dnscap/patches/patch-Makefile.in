@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.1.1.1 2011/12/08 07:39:00 agc Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2017/08/08 17:13:34 jlam Exp $
 
 DESTDIR
 don't rename old binaries
@@ -17,7 +17,7 @@ install man page into correct directory
 -	cp ${prog}.cat1 /usr/local/man/cat1/${prog}.1
 +	mkdir -p ${DESTDIR}${bindir} ${DESTDIR}${mandir}/man1
 +	cp ${prog} ${DESTDIR}${bindir}
-+	cp ${prog}.1 ${DESTDIR}${prefix}/man/man1/${prog}.1
++	cp ${prog}.1 ${DESTDIR}${mandir}/man1/${prog}.1
  
  .c.o:
  	${CC} ${CFLAGS} -c $<
