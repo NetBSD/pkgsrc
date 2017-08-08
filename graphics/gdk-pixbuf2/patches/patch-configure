@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2017/08/08 16:52:10 adam Exp $
+
+Fix libtiff detection.
+
+--- configure.orig	2017-08-08 16:46:18.000000000 +0000
++++ configure
+@@ -18796,6 +18796,7 @@ $as_echo "yes" >&6; }
+ 
+ fi
+     libtiff_found=yes
++    LIBTIFF=-ltiff
+   fi
+ 
+   if test x$with_libtiff != xno && test x$libtiff_found = xno; then
