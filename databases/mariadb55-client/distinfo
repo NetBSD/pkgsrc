@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.7 2017/07/01 22:11:39 joerg Exp $
+$NetBSD: distinfo,v 1.8 2017/08/08 11:23:38 fhajny Exp $
 
-SHA1 (mariadb-5.5.52.tar.gz) = bbedcc0eba7580d1ef16f2dfe4868cf9f31a636d
-RMD160 (mariadb-5.5.52.tar.gz) = fcad9e40ecd29b341a8cdc42afc18aa83b85e60c
-SHA512 (mariadb-5.5.52.tar.gz) = 76d1c1209aa8b56d6562907cb224d0be4f6bccd46e30d16dfb57f19fee1c60dcba21d8388c70674cac0a09e11361e1c5296d1e79d2ba9edc16bc4f9c7a7733eb
-Size (mariadb-5.5.52.tar.gz) = 45745859 bytes
-SHA1 (sphinx-2.2.7-release.tar.gz) = dedae28c0deafda90109745230dacbe0dc441e1a
-RMD160 (sphinx-2.2.7-release.tar.gz) = d9f0150f6779b43457e30c77be50aa9bc658b03a
-SHA512 (sphinx-2.2.7-release.tar.gz) = 8920fac5730aedd0656fff51acf57a71b9b68d09cf9536959a99623518a126f40f5d8ddf1233a58fccf7801ab2402cebbbd17af4394ebc9fb4eca9b710cc9318
-Size (sphinx-2.2.7-release.tar.gz) = 2969037 bytes
+SHA1 (mariadb-5.5.57.tar.gz) = 2e2d48179b770940f053bb37c72c7ea42aea46ca
+RMD160 (mariadb-5.5.57.tar.gz) = 332179a8f94eb6d467021b2095d1c004cb7dc5b0
+SHA512 (mariadb-5.5.57.tar.gz) = 5d6350abd6f0ba98326633a36bb7ec67525e34e08cbe43f79c9b30bf0b872b0a8f9f0bfd5f3a4c2800a52d25b9c6f3a3a4a62e0f41574153bbf4b881f5347c71
+Size (mariadb-5.5.57.tar.gz) = 45783940 bytes
+SHA1 (sphinx-2.2.11-release.tar.gz) = 34e83f43de0e69e258bf749ea00348c60a51632a
+RMD160 (sphinx-2.2.11-release.tar.gz) = 5804b4cce64bc03fa20bac26c7391cd661cecc77
+SHA512 (sphinx-2.2.11-release.tar.gz) = cf1a262a5b0fbf0bd2827ec6ec629edeaf709ce855a6e7b509b65342baaeb26c02717ca63f1578d32c83d21e2fd6d1e92dceb34660e6351b93cd96fd4e623689
+Size (sphinx-2.2.11-release.tar.gz) = 3061998 bytes
 SHA1 (patch-BUILD_compile-pentium-gcov) = 02b414235a2cdfc1d5c95946010e0cdbada76c5d
 SHA1 (patch-CMakeLists.txt) = 9c56523626837ab83ecef26f1c0609e084976fa7
 SHA1 (patch-client_completion_hash.cc) = 810dab31e17a19804323059d38f5ec7f0d55c3ab

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/09/14 07:29:10 maya Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/08/08 11:23:38 fhajny Exp $
 bin/aria_chk
 bin/aria_dump_log
 bin/aria_ftdump
@@ -14,6 +14,7 @@ ${PLIST.embedded}bin/mysql_client_test_embedded
 ${PLIST.embedded}bin/mysql_embedded
 bin/mysql_tzinfo_to_sql
 bin/mysql_waitpid
+bin/mysqld_safe_helper
 ${PLIST.embedded}bin/mysqltest_embedded
 bin/perror
 bin/replace
@@ -222,12 +223,12 @@ lib/mysql/plugin/sql_errlog.so
 sbin/mysqld
 share/aclocal/mysql.m4
 share/doc/mariadb/COPYING
-share/doc/mariadb/COPYING.LESSER
 share/doc/mariadb/EXCEPTIONS-CLIENT
 share/doc/mariadb/INSTALL-BINARY
 share/doc/mariadb/README
-share/mariadb/SELinux/RHEL4/mysql.fc
-share/mariadb/SELinux/RHEL4/mysql.te
+share/mariadb/SELinux/mariadb.te
+share/mariadb/SELinux/rhel4-mysql.fc
+share/mariadb/SELinux/rhel4-mysql.te
 share/mariadb/binary-configure
 share/mariadb/charsets/Index.xml
 share/mariadb/charsets/README
@@ -935,6 +936,7 @@ share/mariadb/test/plugin/myisam/storage_engine/check_table.rdiff
 share/mariadb/test/plugin/myisam/storage_engine/define_engine.inc
 share/mariadb/test/plugin/myisam/storage_engine/foreign_keys.rdiff
 share/mariadb/test/plugin/myisam/storage_engine/index_type_hash.rdiff
+share/mariadb/test/plugin/myisam/storage_engine/parts/disabled.def
 share/mariadb/test/plugin/myisam/storage_engine/show_engine.rdiff
 share/mariadb/test/plugin/myisam/storage_engine/tbl_opt_insert_method.rdiff
 share/mariadb/test/plugin/myisam/storage_engine/tbl_opt_union.rdiff
@@ -1041,6 +1043,7 @@ share/mariadb/test/r/bench_count_distinct.result
 share/mariadb/test/r/big_test.require
 share/mariadb/test/r/bigint.result
 share/mariadb/test/r/binary.result
+share/mariadb/test/r/binary_to_hex.result
 share/mariadb/test/r/binlog_tx_isolation.result
 share/mariadb/test/r/blackhole.result
 share/mariadb/test/r/blackhole_plugin.result
@@ -1176,6 +1179,7 @@ share/mariadb/test/r/events_logs_tests.result
 share/mariadb/test/r/events_microsec.result
 share/mariadb/test/r/events_restart.result
 share/mariadb/test/r/events_scheduling.result
+share/mariadb/test/r/events_slowlog.result
 share/mariadb/test/r/events_stress.result
 share/mariadb/test/r/events_time_zone.result
 share/mariadb/test/r/events_trans.result
@@ -1203,6 +1207,7 @@ share/mariadb/test/r/fulltext.result
 share/mariadb/test/r/fulltext2.result
 share/mariadb/test/r/fulltext3.result
 share/mariadb/test/r/fulltext_cache.result
+share/mariadb/test/r/fulltext_charsets.result
 share/mariadb/test/r/fulltext_derived_4257.result
 share/mariadb/test/r/fulltext_derived_4316.result
 share/mariadb/test/r/fulltext_distinct.result
@@ -1451,6 +1456,7 @@ share/mariadb/test/r/mysqld--help.result
 share/mariadb/test/r/mysqld_option_err.result
 share/mariadb/test/r/mysqldump-compat.result
 share/mariadb/test/r/mysqldump-max.result
+share/mariadb/test/r/mysqldump-nl.result
 share/mariadb/test/r/mysqldump-no-binlog.result
 share/mariadb/test/r/mysqldump.result
 share/mariadb/test/r/mysqldump_restore.result
@@ -1714,6 +1720,8 @@ share/mariadb/test/r/subselect_sj_mat.result
 share/mariadb/test/r/subselect_sj_nonmerged.result
 share/mariadb/test/r/sum_distinct-big.result
 share/mariadb/test/r/sum_distinct.result
+share/mariadb/test/r/symlink-aria-11902.result
+share/mariadb/test/r/symlink-myisam-11902.result
 share/mariadb/test/r/symlink.result
 share/mariadb/test/r/synchronization.result
 share/mariadb/test/r/sysdate_is_now.result
@@ -1819,7 +1827,6 @@ share/mariadb/test/std_data/bug16266.000001
 share/mariadb/test/std_data/bug19371.MYD
 share/mariadb/test/std_data/bug19371.MYI
 share/mariadb/test/std_data/bug19371.frm
-share/mariadb/test/std_data/bug20683959loaddata.txt
 share/mariadb/test/std_data/bug30435_10k_items.txt
 share/mariadb/test/std_data/bug30435_5k.txt
 share/mariadb/test/std_data/bug33029-slave-relay-bin.000001
@@ -1884,6 +1891,8 @@ share/mariadb/test/std_data/host_old.frm
 share/mariadb/test/std_data/init_file.dat
 share/mariadb/test/std_data/intersect-bug50389.tsv
 share/mariadb/test/std_data/latin1.xml
+share/mariadb/test/std_data/loaddata/mdev-11079.txt
+share/mariadb/test/std_data/loaddata/mdev-11631.txt
 share/mariadb/test/std_data/loaddata1.dat
 share/mariadb/test/std_data/loaddata2.dat
 share/mariadb/test/std_data/loaddata3.dat
@@ -3723,7 +3732,6 @@ share/mariadb/test/suite/innodb/t/innodb_bug13635833.test
 share/mariadb/test/suite/innodb/t/innodb_bug14007649.test
 share/mariadb/test/suite/innodb/t/innodb_bug14147491-master.opt
 share/mariadb/test/suite/innodb/t/innodb_bug14147491.test
-share/mariadb/test/suite/innodb/t/innodb_bug14676111-master.opt
 share/mariadb/test/suite/innodb/t/innodb_bug14676111.test
 share/mariadb/test/suite/innodb/t/innodb_bug14704286.test
 share/mariadb/test/suite/innodb/t/innodb_bug21704.test
@@ -4344,6 +4352,7 @@ share/mariadb/test/suite/parts/inc/partition_varbinary.inc
 share/mariadb/test/suite/parts/inc/partition_varchar.inc
 share/mariadb/test/suite/parts/inc/partition_year.inc
 share/mariadb/test/suite/parts/r/insert_ignore-5421.result
+share/mariadb/test/suite/parts/r/longname.result
 share/mariadb/test/suite/parts/r/optimizer.result
 share/mariadb/test/suite/parts/r/part_blocked_sql_func_innodb.result
 share/mariadb/test/suite/parts/r/part_blocked_sql_func_myisam.result
@@ -4378,6 +4387,8 @@ share/mariadb/test/suite/parts/r/partition_basic_innodb.result
 share/mariadb/test/suite/parts/r/partition_basic_myisam.result
 share/mariadb/test/suite/parts/r/partition_basic_symlink_innodb.result
 share/mariadb/test/suite/parts/r/partition_basic_symlink_myisam.result
+share/mariadb/test/suite/parts/r/partition_bigint_innodb.result
+share/mariadb/test/suite/parts/r/partition_bigint_myisam.result
 share/mariadb/test/suite/parts/r/partition_bit_innodb.result
 share/mariadb/test/suite/parts/r/partition_bit_myisam.result
 share/mariadb/test/suite/parts/r/partition_char_innodb.result
@@ -4389,6 +4400,8 @@ share/mariadb/test/suite/parts/r/partition_debug_myisam.result
 share/mariadb/test/suite/parts/r/partition_debug_sync_innodb.result
 share/mariadb/test/suite/parts/r/partition_decimal_innodb.result
 share/mariadb/test/suite/parts/r/partition_decimal_myisam.result
+share/mariadb/test/suite/parts/r/partition_double_innodb.result
+share/mariadb/test/suite/parts/r/partition_double_myisam.result
 share/mariadb/test/suite/parts/r/partition_engine_innodb.result
 share/mariadb/test/suite/parts/r/partition_engine_myisam.result
 share/mariadb/test/suite/parts/r/partition_float_innodb.result
@@ -4397,6 +4410,8 @@ share/mariadb/test/suite/parts/r/partition_innodb_status_file.result
 share/mariadb/test/suite/parts/r/partition_int_innodb.result
 share/mariadb/test/suite/parts/r/partition_int_myisam.result
 share/mariadb/test/suite/parts/r/partition_mdev6067.result
+share/mariadb/test/suite/parts/r/partition_mediumint_innodb.result
+share/mariadb/test/suite/parts/r/partition_mediumint_myisam.result
 share/mariadb/test/suite/parts/r/partition_mgm_lc0_archive.result
 share/mariadb/test/suite/parts/r/partition_mgm_lc0_innodb.result
 share/mariadb/test/suite/parts/r/partition_mgm_lc0_memory.result
@@ -4411,15 +4426,21 @@ share/mariadb/test/suite/parts/r/partition_mgm_lc2_memory.result
 share/mariadb/test/suite/parts/r/partition_mgm_lc2_myisam.result
 share/mariadb/test/suite/parts/r/partition_recover_myisam.result
 share/mariadb/test/suite/parts/r/partition_repair_myisam.result
+share/mariadb/test/suite/parts/r/partition_smallint_innodb.result
+share/mariadb/test/suite/parts/r/partition_smallint_myisam.result
 share/mariadb/test/suite/parts/r/partition_special_innodb.result
 share/mariadb/test/suite/parts/r/partition_special_myisam.result
 share/mariadb/test/suite/parts/r/partition_syntax_innodb.result
 share/mariadb/test/suite/parts/r/partition_syntax_myisam.result
 share/mariadb/test/suite/parts/r/partition_t55.out
+share/mariadb/test/suite/parts/r/partition_tinyint_innodb.result
+share/mariadb/test/suite/parts/r/partition_tinyint_myisam.result
 share/mariadb/test/suite/parts/r/partition_value_innodb.result
 share/mariadb/test/suite/parts/r/partition_value_myisam.result
+share/mariadb/test/suite/parts/r/quoting.result
 share/mariadb/test/suite/parts/r/rpl_partition.result
 share/mariadb/test/suite/parts/t/insert_ignore-5421.test
+share/mariadb/test/suite/parts/t/longname.test
 share/mariadb/test/suite/parts/t/optimizer.test
 share/mariadb/test/suite/parts/t/part_blocked_sql_func_innodb.test
 share/mariadb/test/suite/parts/t/part_blocked_sql_func_myisam.test
@@ -4454,6 +4475,8 @@ share/mariadb/test/suite/parts/t/partition_basic_innodb.test
 share/mariadb/test/suite/parts/t/partition_basic_myisam.test
 share/mariadb/test/suite/parts/t/partition_basic_symlink_innodb.test
 share/mariadb/test/suite/parts/t/partition_basic_symlink_myisam.test
+share/mariadb/test/suite/parts/t/partition_bigint_innodb.test
+share/mariadb/test/suite/parts/t/partition_bigint_myisam.test
 share/mariadb/test/suite/parts/t/partition_bit_innodb.test
 share/mariadb/test/suite/parts/t/partition_bit_myisam.test
 share/mariadb/test/suite/parts/t/partition_char_innodb.test
@@ -4468,6 +4491,8 @@ share/mariadb/test/suite/parts/t/partition_debug_sync_innodb-master.opt
 share/mariadb/test/suite/parts/t/partition_debug_sync_innodb.test
 share/mariadb/test/suite/parts/t/partition_decimal_innodb.test
 share/mariadb/test/suite/parts/t/partition_decimal_myisam.test
+share/mariadb/test/suite/parts/t/partition_double_innodb.test
+share/mariadb/test/suite/parts/t/partition_double_myisam.test
 share/mariadb/test/suite/parts/t/partition_engine_innodb.test
 share/mariadb/test/suite/parts/t/partition_engine_myisam.test
 share/mariadb/test/suite/parts/t/partition_float_innodb.test
@@ -4477,6 +4502,8 @@ share/mariadb/test/suite/parts/t/partition_innodb_status_file.test
 share/mariadb/test/suite/parts/t/partition_int_innodb.test
 share/mariadb/test/suite/parts/t/partition_int_myisam.test
 share/mariadb/test/suite/parts/t/partition_mdev6067.test
+share/mariadb/test/suite/parts/t/partition_mediumint_innodb.test
+share/mariadb/test/suite/parts/t/partition_mediumint_myisam.test
 share/mariadb/test/suite/parts/t/partition_mgm_lc0_archive.test
 share/mariadb/test/suite/parts/t/partition_mgm_lc0_innodb.test
 share/mariadb/test/suite/parts/t/partition_mgm_lc0_memory.test
@@ -4501,13 +4528,18 @@ share/mariadb/test/suite/parts/t/partition_recover_myisam-master.opt
 share/mariadb/test/suite/parts/t/partition_recover_myisam.test
 share/mariadb/test/suite/parts/t/partition_repair_myisam-master.opt
 share/mariadb/test/suite/parts/t/partition_repair_myisam.test
+share/mariadb/test/suite/parts/t/partition_smallint_innodb.test
+share/mariadb/test/suite/parts/t/partition_smallint_myisam.test
 share/mariadb/test/suite/parts/t/partition_special_innodb-master.opt
 share/mariadb/test/suite/parts/t/partition_special_innodb.test
 share/mariadb/test/suite/parts/t/partition_special_myisam.test
 share/mariadb/test/suite/parts/t/partition_syntax_innodb.test
 share/mariadb/test/suite/parts/t/partition_syntax_myisam.test
+share/mariadb/test/suite/parts/t/partition_tinyint_innodb.test
+share/mariadb/test/suite/parts/t/partition_tinyint_myisam.test
 share/mariadb/test/suite/parts/t/partition_value_innodb.test
 share/mariadb/test/suite/parts/t/partition_value_myisam.test
+share/mariadb/test/suite/parts/t/quoting.test
 share/mariadb/test/suite/parts/t/rpl_partition.test
 share/mariadb/test/suite/percona/disabled.def
 share/mariadb/test/suite/percona/have_response_time_distribution.inc
@@ -4673,6 +4705,7 @@ share/mariadb/test/suite/percona/userstat_bug602047.test
 share/mariadb/test/suite/perfschema/disabled.def
 share/mariadb/test/suite/perfschema/include/binlog_common.inc
 share/mariadb/test/suite/perfschema/include/cleanup_helper.inc
+share/mariadb/test/suite/perfschema/include/have_timer_cycle.inc
 share/mariadb/test/suite/perfschema/include/privilege.inc
 share/mariadb/test/suite/perfschema/include/setup_helper.inc
 share/mariadb/test/suite/perfschema/include/start_server_common.inc
@@ -5064,6 +5097,7 @@ share/mariadb/test/suite/rpl/r/rpl_lost_events_on_rotate.result
 share/mariadb/test/suite/rpl/r/rpl_manual_change_index_file.result
 share/mariadb/test/suite/rpl/r/rpl_many_optimize.result
 share/mariadb/test/suite/rpl/r/rpl_master_pos_wait.result
+share/mariadb/test/suite/rpl/r/rpl_mdev-11092.result
 share/mariadb/test/suite/rpl/r/rpl_mdev359.result
 share/mariadb/test/suite/rpl/r/rpl_mdev382.result
 share/mariadb/test/suite/rpl/r/rpl_misc_functions.result
@@ -5108,6 +5142,7 @@ share/mariadb/test/suite/rpl/r/rpl_replicate_do.result
 share/mariadb/test/suite/rpl/r/rpl_replicate_ignore_db.result
 share/mariadb/test/suite/rpl/r/rpl_report.result
 share/mariadb/test/suite/rpl/r/rpl_report_port.result
+share/mariadb/test/suite/rpl/r/rpl_reset_slave_fail.result
 share/mariadb/test/suite/rpl/r/rpl_rewrt_db.result
 share/mariadb/test/suite/rpl/r/rpl_rotate_logs.result
 share/mariadb/test/suite/rpl/r/rpl_rotate_purge_deadlock.result
@@ -5456,6 +5491,8 @@ share/mariadb/test/suite/rpl/t/rpl_lost_events_on_rotate.test
 share/mariadb/test/suite/rpl/t/rpl_manual_change_index_file.test
 share/mariadb/test/suite/rpl/t/rpl_many_optimize.test
 share/mariadb/test/suite/rpl/t/rpl_master_pos_wait.test
+share/mariadb/test/suite/rpl/t/rpl_mdev-11092.opt
+share/mariadb/test/suite/rpl/t/rpl_mdev-11092.test
 share/mariadb/test/suite/rpl/t/rpl_mdev359.test
 share/mariadb/test/suite/rpl/t/rpl_mdev382.test
 share/mariadb/test/suite/rpl/t/rpl_misc_functions-slave.sh
@@ -5512,6 +5549,7 @@ share/mariadb/test/suite/rpl/t/rpl_replicate_ignore_db.test
 share/mariadb/test/suite/rpl/t/rpl_report-slave.opt
 share/mariadb/test/suite/rpl/t/rpl_report.test
 share/mariadb/test/suite/rpl/t/rpl_report_port.test
+share/mariadb/test/suite/rpl/t/rpl_reset_slave_fail.test
 share/mariadb/test/suite/rpl/t/rpl_rewrt_db-slave.opt
 share/mariadb/test/suite/rpl/t/rpl_rewrt_db.test
 share/mariadb/test/suite/rpl/t/rpl_rotate_logs.cnf
@@ -7239,6 +7277,7 @@ share/mariadb/test/suite/vcol/r/vcol_trigger_sp_innodb.result
 share/mariadb/test/suite/vcol/r/vcol_trigger_sp_myisam.result
 share/mariadb/test/suite/vcol/r/vcol_view_innodb.result
 share/mariadb/test/suite/vcol/r/vcol_view_myisam.result
+share/mariadb/test/suite/vcol/r/wrong_arena.result
 share/mariadb/test/suite/vcol/t/not_supported.test
 share/mariadb/test/suite/vcol/t/rpl_vcol.test
 share/mariadb/test/suite/vcol/t/vcol_archive.test
@@ -7271,6 +7310,7 @@ share/mariadb/test/suite/vcol/t/vcol_trigger_sp_innodb.test
 share/mariadb/test/suite/vcol/t/vcol_trigger_sp_myisam.test
 share/mariadb/test/suite/vcol/t/vcol_view_innodb.test
 share/mariadb/test/suite/vcol/t/vcol_view_myisam.test
+share/mariadb/test/suite/vcol/t/wrong_arena.test
 share/mariadb/test/t/1st.test
 share/mariadb/test/t/aborted_clients.test
 share/mariadb/test/t/adddate_454.test
@@ -7293,6 +7333,7 @@ share/mariadb/test/t/bad_frm_crash_5029.test
 share/mariadb/test/t/bench_count_distinct.test
 share/mariadb/test/t/bigint.test
 share/mariadb/test/t/binary.test
+share/mariadb/test/t/binary_to_hex.test
 share/mariadb/test/t/blackhole.test
 share/mariadb/test/t/blackhole_plugin.test
 share/mariadb/test/t/bool.test
@@ -7446,6 +7487,7 @@ share/mariadb/test/t/events_microsec.test
 share/mariadb/test/t/events_restart-master.opt
 share/mariadb/test/t/events_restart.test
 share/mariadb/test/t/events_scheduling.test
+share/mariadb/test/t/events_slowlog.test
 share/mariadb/test/t/events_stress.test
 share/mariadb/test/t/events_time_zone.test
 share/mariadb/test/t/events_trans.test
@@ -7474,6 +7516,7 @@ share/mariadb/test/t/fulltext.test
 share/mariadb/test/t/fulltext2.test
 share/mariadb/test/t/fulltext3.test
 share/mariadb/test/t/fulltext_cache.test
+share/mariadb/test/t/fulltext_charsets.test
 share/mariadb/test/t/fulltext_derived_4257.test
 share/mariadb/test/t/fulltext_derived_4316.test
 share/mariadb/test/t/fulltext_distinct.test
@@ -7741,6 +7784,7 @@ share/mariadb/test/t/mysqldump-compat.opt
 share/mariadb/test/t/mysqldump-compat.test
 share/mariadb/test/t/mysqldump-max-master.opt
 share/mariadb/test/t/mysqldump-max.test
+share/mariadb/test/t/mysqldump-nl.test
 share/mariadb/test/t/mysqldump-no-binlog-master.opt
 share/mariadb/test/t/mysqldump-no-binlog.test
 share/mariadb/test/t/mysqldump.test
@@ -8017,6 +8061,8 @@ share/mariadb/test/t/subselect_sj_mat.test
 share/mariadb/test/t/subselect_sj_nonmerged.test
 share/mariadb/test/t/sum_distinct-big.test
 share/mariadb/test/t/sum_distinct.test
+share/mariadb/test/t/symlink-aria-11902.test
+share/mariadb/test/t/symlink-myisam-11902.test
 share/mariadb/test/t/symlink.test
 share/mariadb/test/t/synchronization.test
 share/mariadb/test/t/sysdate_is_now-master.opt
