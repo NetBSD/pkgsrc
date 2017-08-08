@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2017/05/02 14:44:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.92 2017/08/08 16:39:11 jlam Exp $
 
 DISTNAME=	nsd-4.1.16
 CATEGORIES=	net
@@ -61,7 +61,6 @@ CONF_FILES+=	share/examples/nsd/nsd.conf ${PKG_SYSCONFDIR}/nsd.conf
 OWN_DIRS_PERMS+=        ${VARBASE}/nsd ${NSD_USER} ${NSD_GROUP} 755
 
 INSTALLATION_DIRS=	share/examples/nsd
-INSTALLATION_DIRS+=	${VARBASE}/nsd
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
