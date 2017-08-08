@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2017/07/18 18:39:37 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2017/08/08 16:38:41 jlam Exp $
 
 DISTNAME=		neomutt-20170714
 CATEGORIES=		mail
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--enable-notmuch
 EGDIR=			${PREFIX}/share/examples/mutt
 CONF_FILES=		${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 CONF_FILES+=		${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
-INSTALLATION_DIRS+=     ${DOCDIR} ${EGDIR}
+INSTALLATION_DIRS+=     ${EGDIR}
 INSTALL_MAKE_FLAGS=     ${MAKE_FLAGS} DOTLOCK_GROUP= sysconfdir=${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
