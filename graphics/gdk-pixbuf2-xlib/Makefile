@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/07/30 22:47:51 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2017/08/08 16:52:11 adam Exp $
 
 DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
 PKGNAME=	gdk-pixbuf2-xlib-${PIXBUF2_VERSION}
@@ -20,16 +20,18 @@ CONFLICTS+=	gtk2+<2.22
 
 .include "../../graphics/gdk-pixbuf2/Makefile.version"
 
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--without-libtiff --without-libjpeg --without-libpng
-CONFIGURE_ARGS+=	--with-x11
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
-
+USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-libjpeg
+CONFIGURE_ARGS+=	--without-libpng
+CONFIGURE_ARGS+=	--without-libtiff
+CONFIGURE_ARGS+=	--with-x11
 PKGCONFIG_OVERRIDE+=	contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gdk-pixbuf-2.0.pc.in
 
+.include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.26.0
 .include "../../devel/glib2/buildlink3.mk"
