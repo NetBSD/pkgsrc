@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/08 14:03:19 nros Exp $
+include/xcb/xcb_xrm.h
+lib/libxcb-xrm.la
+lib/pkgconfig/xcb-xrm.pc

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/08 14:03:19 nros Exp $
+
+SHA1 (xcb-util-xrm-1.2.tar.gz) = c1e5528c8e34b2b8188ba25b9ea5a55e661bb4d3
+RMD160 (xcb-util-xrm-1.2.tar.gz) = 02f1783d979e44fbb60008a047455e913b3ea021
+SHA512 (xcb-util-xrm-1.2.tar.gz) = 7f992eaca739b9518ffe8f39b921617e092f4a8534cab95f072071ea952e86269971bfc422945ae5f63eda661f61424c1315ece862e2689d1048e5c2b49ff673
+Size (xcb-util-xrm-1.2.tar.gz) = 404416 bytes
