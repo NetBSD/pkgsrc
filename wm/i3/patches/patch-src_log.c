@@ -1,3 +1,6 @@
+$NetBSD: patch-src_log.c,v 1.5 2017/08/09 11:13:30 nros Exp $
+* NetBSD versions below and 7 miss shm_open and shm_unlink
+* NetBSD versions below 8 miss pthread_condattr_pshared 
 --- src/log.c.orig	2016-03-06 15:17:18.000000000 +0000
 +++ src/log.c	2016-05-01 10:51:32.392955298 +0000
 @@ -116,6 +116,7 @@
