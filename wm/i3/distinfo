@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2016/05/01 09:39:58 degroote Exp $
+$NetBSD: distinfo,v 1.11 2017/08/09 11:13:30 nros Exp $
 
-SHA1 (i3-4.12.tar.bz2) = 264e682c7404ee8d5da76e3d652c546db1662a2b
-RMD160 (i3-4.12.tar.bz2) = 65d74a4ddc775d7e5888c72cf72fbb43873dd9e0
-SHA512 (i3-4.12.tar.bz2) = 966f62dbd82c6c70d1344cc61f14f154f3f649ce1b5a5b5168f00f50d598582ef26f5bd5496ea62e13213e45b1c7043f6209c94fcbefe2947fec63284445c1f5
-Size (i3-4.12.tar.bz2) = 988084 bytes
-SHA1 (patch-Makefile) = 919f0e87efa951bde531b9172b74589d3e1c474a
-SHA1 (patch-src_log.c) = 3d2a869a79e9ae851c6044752d1d0b3d2a4b0ee2
-SHA1 (patch-src_main.c) = 98428db66fed3352ee8f76ad43930b0418079b01
+SHA1 (i3-4.13.tar.bz2) = f4ca5c9023563f42be9c36b605c7a18d6f70114a
+RMD160 (i3-4.13.tar.bz2) = 7d085216b2e7d53fad9bbb0bb9782d8998702710
+SHA512 (i3-4.13.tar.bz2) = 1bb1044e8d86e78d3ccb79d49f0eb26665dcd05a348058a5e57138151d74f57d77830efc3025893170fe1b8ec612f739f75247a427410f96286b09afd2c5f14c
+Size (i3-4.13.tar.bz2) = 1121298 bytes
+SHA1 (patch-Makefile.in) = 9908543534c88946dd8a430cd208814cae0a03a1
+SHA1 (patch-src_log.c) = 4d703eea9609e9b7cc53d85895f0860d085b1f84
+SHA1 (patch-src_main.c) = 8d84ec8da864ffb041f22c53f587105acea00cf8
