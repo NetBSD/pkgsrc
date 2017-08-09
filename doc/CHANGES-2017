@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3146 2017/08/09 11:16:47 nros Exp $
+$NetBSD: CHANGES-2017,v 1.3147 2017/08/09 12:22:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4374,3 +4374,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/hplip to 3.17.7 [schnoebe 2017-08-08]
 	Updated www/curl to 7.55.0 [wiz 2017-08-09]
 	Updated wm/i3 to 4.13 [nros 2017-08-09]
+	Updated mail/qmail-run to 20170805nb1 [schmonz 2017-08-09]
