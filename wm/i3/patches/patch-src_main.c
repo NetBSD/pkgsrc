@@ -1,3 +1,6 @@
+$NetBSD: patch-src_main.c,v 1.3 2017/08/09 11:13:30 nros Exp $
+* NetBSD versions lower than 7 does not have shm_open and shm_unlink
+  see patch-src_log.c 
 --- src/main.c.orig	2016-05-01 10:53:25.236039259 +0000
 +++ src/main.c	2016-05-01 10:54:26.269651048 +0000
 @@ -166,11 +166,13 @@

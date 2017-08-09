@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2017/04/19 11:24:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2017/08/09 11:13:30 nros Exp $
 #
 
-DISTNAME=	i3-4.12
-PKGREVISION=	3
+DISTNAME=	i3-4.13
 CATEGORIES=	wm
 MASTER_SITES=	http://i3wm.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,34 +11,26 @@ HOMEPAGE=	http://i3wm.org/
 COMMENT=	Improved dynamic tiling window manager
 LICENSE=	modified-bsd
 
-USE_TOOLS+=	gmake bison lex yacc pkg-config perl
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	gmake bison lex yacc pkg-config perl:run
 USE_LANGUAGES=	c99
-MAKE_JOBS_SAFE=	no
+
+CONFIGURE_ARGS+=--disable-builddir
 
 PKG_SYSCONFSUBDIR=	i3
-INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/${PKGBASE}
 
 EGDIR=		${PREFIX}/share/examples/i3
 CONF_FILES=	${EGDIR}/config ${PKG_SYSCONFDIR}/config
 CONF_FILES+=	${EGDIR}/config.keycodes ${PKG_SYSCONFDIR}/config.keycodes
 
-MAKE_ENV+=	SYSCONFDIR=${PKG_SYSCONFDIR:C/\/i3//}
-MAKE_ENV+=	DEBUG=0
-MAKE_ENV+=	SHM_SUPPORT=0
-
 REPLACE_PERL+=	i3-dmenu-desktop
 REPLACE_PERL+=	i3-migrate-config-to-v4
 REPLACE_PERL+=	i3-save-tree
 
-SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	pre-install
-SUBST_MESSAGE.conf=	Change src/i3.mk to install conf files in share/examples
-SUBST_FILES.conf=	src/i3.mk
-SUBST_SED.conf=		-e s,$$\(SYSCONFDIR\),$$\(PREFIX\)/share/examples,g
-
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+
+BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
 
 .include "../../devel/libev/buildlink3.mk"
 .include "../../devel/yajl/buildlink3.mk"
@@ -51,6 +42,7 @@ post-install:
 .include "../../x11/xcb-util-cursor/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
 .include "../../x11/xcb-util-wm/buildlink3.mk"
+.include "../../x11/xcb-util-xrm/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
