@@ -1,0 +1,21 @@
+$NetBSD: patch-Makefile.am,v 1.1 2017/08/09 08:50:18 wiz Exp $
+
+Fix installation of docs.
+https://github.com/curl/curl/commit/f864bd8c880d5a916379aa4f26f1c45fe370b282
+
+--- Makefile.am.orig	2017-08-07 22:42:29.000000000 +0000
++++ Makefile.am
+@@ -276,11 +276,13 @@ cygwinbin:
+ install-data-hook:
+ 	cd include && $(MAKE) install
+ 	cd docs && $(MAKE) install
++	cd docs/libcurl && $(MAKE) install
+ 
+ # We extend the standard uninstall with a custom hook:
+ uninstall-hook:
+ 	cd include && $(MAKE) uninstall
+ 	cd docs && $(MAKE) uninstall
++	cd docs/libcurl && $(MAKE) uninstall
+ 
+ ca-bundle: lib/mk-ca-bundle.pl
+ 	@echo "generating a fresh ca-bundle.crt"
