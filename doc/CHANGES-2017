@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3144 2017/08/08 18:16:35 schnoebe Exp $
+$NetBSD: CHANGES-2017,v 1.3145 2017/08/09 08:50:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4372,3 +4372,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added x11/xcb-util-xrm version 1.2 [nros 2017-08-08]
 	Updated graphics/gdk-pixbuf2 to 2.36.8 [adam 2017-08-08]
 	Updated print/hplip to 3.17.7 [schnoebe 2017-08-08]
+	Updated www/curl to 7.55.0 [wiz 2017-08-09]
