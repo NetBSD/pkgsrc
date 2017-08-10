@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkgtasks.mk,v 1.4 2017/06/04 00:03:43 jlam Exp $
+# $NetBSD: bsd.pkgtasks.mk,v 1.5 2017/08/10 05:41:07 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -134,6 +134,7 @@ USE_PKGTASKS=		no
 .include "${PKGSRCDIR}/mk/pkgtasks/directories.mk"
 .include "${PKGSRCDIR}/mk/pkgtasks/files.mk"
 .include "${PKGSRCDIR}/mk/pkgtasks/fonts.mk"
+.include "${PKGSRCDIR}/mk/pkgtasks/icon_themes.mk"
 .include "${PKGSRCDIR}/mk/pkgtasks/info_files.mk"
 .include "${PKGSRCDIR}/mk/pkgtasks/ocaml_findlib.mk"
 .include "${PKGSRCDIR}/mk/pkgtasks/permissions.mk"
@@ -142,7 +143,7 @@ USE_PKGTASKS=		no
 .include "${PKGSRCDIR}/mk/pkgtasks/usergroup.mk"
 
 # Add a dependency on pkgtasks if package tasks are needed.
-_PKGTASKS_DEPENDS=	pkgtasks-1>=1.10:../../pkgtools/pkgtasks
+_PKGTASKS_DEPENDS=	pkgtasks-1>=1.12:../../pkgtools/pkgtasks
 DEPENDS+=		${"${USE_PKGTASKS:tl}" == "yes":?${_PKGTASKS_DEPENDS}:}
 TASK_MODULE_DIR?=	${LOCALBASE}/share/pkgtasks-1
 
