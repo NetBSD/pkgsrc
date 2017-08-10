@@ -1,0 +1,13 @@
+$NetBSD: patch-browser_base_content_baseMenuOverlay.xul,v 1.1 2017/08/10 14:46:15 ryoon Exp $
+
+--- browser/base/content/baseMenuOverlay.xul.orig	2017-07-31 16:20:46.000000000 +0000
++++ browser/base/content/baseMenuOverlay.xul
+@@ -61,7 +61,7 @@
+                   onclick="checkForMiddleClick(this, event);"
+                   label="&helpKeyboardShortcuts.label;"
+                   accesskey="&helpKeyboardShortcuts.accesskey;"/>
+-#ifdef MOZ_TELEMETRY_REPORTING
++#ifdef MOZ_SERVICES_HEALTHREPORT
+         <menuitem id="healthReport"
+                   label="&healthReport2.label;"
+                   accesskey="&healthReport2.accesskey;"

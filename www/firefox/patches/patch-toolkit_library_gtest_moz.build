@@ -1,0 +1,24 @@
+$NetBSD: patch-toolkit_library_gtest_moz.build,v 1.1 2017/08/10 14:46:15 ryoon Exp $
+
+--- toolkit/library/gtest/moz.build.orig	2017-07-31 16:20:52.000000000 +0000
++++ toolkit/library/gtest/moz.build
+@@ -7,7 +7,6 @@
+ FINAL_TARGET = 'dist/bin/gtest'
+ 
+ USE_LIBS += [
+-    'gkrust-gtest',
+     'static:xul',
+     # xul-gtest is an intermediate static library. It is used as FINAL_TARGET
+     # for gtest code.
+@@ -21,6 +20,11 @@ USE_LIBS += [
+ # before StaticXULComponentStart.
+ Libxul('xul-gtest-real')
+ 
++if CONFIG['MOZ_RUST']:
++    USE_LIBS += [
++        'gkrust-gtest',
++    ]
++
+ DIRS += [
+     'static',
+ ]

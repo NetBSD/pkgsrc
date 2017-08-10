@@ -1,11 +1,11 @@
-$NetBSD: patch-media_libcubeb_src_moz.build,v 1.11 2017/04/27 01:49:47 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_moz.build,v 1.12 2017/08/10 14:46:15 ryoon Exp $
 
 * Add OSS audio support
 * Support system library
 
---- media/libcubeb/src/moz.build.orig	2017-04-11 04:15:21.000000000 +0000
+--- media/libcubeb/src/moz.build.orig	2017-07-31 16:20:49.000000000 +0000
 +++ media/libcubeb/src/moz.build
-@@ -20,6 +20,12 @@ if CONFIG['MOZ_ALSA']:
+@@ -22,6 +22,12 @@ if CONFIG['MOZ_ALSA']:
      ]
      DEFINES['USE_ALSA'] = True
  
@@ -18,9 +18,19 @@ $NetBSD: patch-media_libcubeb_src_moz.build,v 1.11 2017/04/27 01:49:47 ryoon Exp
  if CONFIG['MOZ_PULSEAUDIO'] or CONFIG['MOZ_JACK']:
      SOURCES += [
          'cubeb_resampler.cpp',
-@@ -92,6 +98,7 @@ if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gonk
-             '%' + '%s/system/media/wilhelm/include' % CONFIG['ANDROID_SOURCE'],
-         ]
+@@ -32,7 +38,8 @@ if CONFIG['MOZ_PULSEAUDIO']:
+         'cubeb_pulse.c',
+     ]
+     DEFINES['USE_PULSE'] = True
+-    DEFINES['USE_PULSE_RUST'] = True
++    if CONFIG['MOZ_RUST']:
++        DEFINES['USE_PULSE_RUST'] = True
+ 
+ if CONFIG['MOZ_JACK']:
+     SOURCES += [
+@@ -85,6 +92,7 @@ if CONFIG['OS_TARGET'] == 'Android':
+ 
+ FINAL_LIBRARY = 'gkmedias'
  
 +CFLAGS += CONFIG['MOZ_OSS_CFLAGS']
  CFLAGS += CONFIG['MOZ_ALSA_CFLAGS']

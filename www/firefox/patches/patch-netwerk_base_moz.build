@@ -1,0 +1,13 @@
+$NetBSD: patch-netwerk_base_moz.build,v 1.1 2017/08/10 14:46:15 ryoon Exp $
+
+--- netwerk/base/moz.build.orig	2017-07-31 16:20:51.000000000 +0000
++++ netwerk/base/moz.build
+@@ -256,7 +256,7 @@ UNIFIED_SOURCES += [
+     'TLSServerSocket.cpp',
+ ]
+ 
+-if CONFIG['MOZ_RUST_URLPARSE']:
++if CONFIG['MOZ_RUST'] and CONFIG['MOZ_RUST_URLPARSE']:
+     EXPORTS.mozilla.net += [ 'RustURL.h' ]
+     UNIFIED_SOURCES += [ 'RustURL.cpp' ]
+ 

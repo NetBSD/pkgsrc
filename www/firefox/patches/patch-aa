@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.52 2017/06/14 11:28:44 ryoon Exp $
+$NetBSD: patch-aa,v 1.53 2017/08/10 14:46:15 ryoon Exp $
 
 * Disable libjpeg-turbo check
 * Add system libraries option
 * Add OSS audio support
 
---- old-configure.in.orig	2017-06-05 20:45:16.000000000 +0000
+--- old-configure.in.orig	2017-07-31 16:20:51.000000000 +0000
 +++ old-configure.in
-@@ -2049,11 +2049,7 @@ if test "$MOZ_SYSTEM_JPEG" = 1; then
+@@ -2061,11 +2061,7 @@ if test "$MOZ_SYSTEM_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -19,7 +19,35 @@ $NetBSD: patch-aa,v 1.52 2017/06/14 11:28:44 ryoon Exp $
                     MOZ_SYSTEM_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -2825,7 +2821,7 @@ dnl Use integers over floats for audio o
+@@ -2333,9 +2329,14 @@ if test -n "$MOZ_MULET"; then
+ fi
+ 
+ # Propagate feature switches for code written in rust from confvars.sh
+-if test -n "$MOZ_RUST_URLPARSE"; then
+-    AC_DEFINE(MOZ_RUST_URLPARSE)
+-    AC_SUBST(MOZ_RUST_URLPARSE)
++if test -n "$MOZ_RUST"; then
++    if test -n "$MOZ_RUST_MP4PARSE"; then
++        AC_DEFINE(MOZ_RUST_MP4PARSE)
++    fi
++    if test -n "$MOZ_RUST_URLPARSE"; then
++        AC_DEFINE(MOZ_RUST_URLPARSE)
++        AC_SUBST(MOZ_RUST_URLPARSE)
++    fi
+ fi
+ 
+ AC_SUBST(MOZ_PHOENIX)
+@@ -2712,6 +2713,9 @@ if test -n "$MOZ_WEBRTC"; then
+     AC_DEFINE(MOZ_WEBRTC_ASSERT_ALWAYS)
+     MOZ_RAW=1
+ 
++    dnl with libv4l2 we can support more cameras
++    PKG_CHECK_MODULES(MOZ_LIBV4L2, libv4l2)
++
+ dnl enable once Signaling lands
+     MOZ_WEBRTC_SIGNALING=1
+     AC_DEFINE(MOZ_WEBRTC_SIGNALING)
+@@ -2754,7 +2758,7 @@ dnl Use integers over floats for audio o
  dnl (regarless of the CPU architecture, because audio
  dnl backends for those platforms don't support floats. We also
  dnl use integers on ARM with other OS, because it's more efficient.
@@ -28,7 +56,7 @@ $NetBSD: patch-aa,v 1.52 2017/06/14 11:28:44 ryoon Exp $
      MOZ_SAMPLE_TYPE_S16=1
      AC_DEFINE(MOZ_SAMPLE_TYPE_S16)
      AC_SUBST(MOZ_SAMPLE_TYPE_S16)
-@@ -2933,6 +2929,111 @@ if test -n "$MOZ_OMX_PLUGIN"; then
+@@ -2845,6 +2849,111 @@ if test -n "$MOZ_OMX_PLUGIN"; then
      fi
  fi
  
@@ -140,7 +168,7 @@ $NetBSD: patch-aa,v 1.52 2017/06/14 11:28:44 ryoon Exp $
  dnl system libvpx Support
  dnl ========================================================
  MOZ_ARG_WITH_BOOL(system-libvpx,
-@@ -3093,6 +3194,67 @@ AC_DEFINE(MOZ_WEBM_ENCODER)
+@@ -3005,6 +3114,67 @@ AC_DEFINE(MOZ_WEBM_ENCODER)
  AC_SUBST(MOZ_WEBM_ENCODER)
  
  dnl ==================================
@@ -208,7 +236,7 @@ $NetBSD: patch-aa,v 1.52 2017/06/14 11:28:44 ryoon Exp $
  dnl = Check alsa availability on Linux
  dnl ==================================
  
-@@ -4818,6 +4980,27 @@ dnl ====================================
+@@ -4690,6 +4860,27 @@ dnl ====================================
  AC_SUBST(MOZ_LINUX_32_SSE2_STARTUP_ERROR)
  
  dnl ========================================================
