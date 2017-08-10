@@ -1,4 +1,4 @@
-# $NetBSD: permissions.mk,v 1.1 2017/06/01 02:06:04 jlam Exp $
+# $NetBSD: permissions.mk,v 1.2 2017/08/10 05:37:44 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -88,7 +88,7 @@ SETGID_GAMES_PERMS?=	${GAMES_USER} ${GAMES_GROUP} ${GAMEMODE}
 GAMEDATA_PERMS?=	${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
 GAMEDIR_PERMS?=		${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 
-# Assert that the variables have the right number of words.
+# ASSERT: The variables have the right number of words.
 .for _var_ in SPECIAL_PERMS
 .  if empty(${_var_}) || empty(${_var_}:C/.*/4/:M*:S/4 4 4 4//gW)
 # ${_var_} has a multiple of 4 words.
