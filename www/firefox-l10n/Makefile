@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2017/07/03 12:30:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.108 2017/08/10 14:49:20 ryoon Exp $
 #
 
-FIREFOX_VER=	54.0.1
+FIREFOX_VER=	55.0
 PKGNAME=	firefox-l10n-${FIREFOX_VER:S/esr//}
 DISTNAME=	# empty
 CATEGORIES=	www
@@ -17,7 +17,7 @@ DISTFILES=	${XPI_FILES}
 
 NO_BUILD=	yes
 
-FIREFOX_LOCALES=ach af an ar as ast az bg bn-BD bn-IN br bs ca cs	\
+FIREFOX_LOCALES=ach af an ar as ast az be bg bn-BD bn-IN br bs ca cs	\
 		cy da de dsb el en-GB en-ZA eo es-AR es-CL es-ES 	\
 		es-MX et eu fa ff fi fr fy-NL ga-IE gd gl gn gu-IN	\
 		he hi-IN hr hsb hu hy-AM id is it ja ka kab kk km kn ko	\
