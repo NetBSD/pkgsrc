@@ -1,4 +1,4 @@
-# $NetBSD: files.mk,v 1.6 2017/08/10 05:37:44 jlam Exp $
+# $NetBSD: files.mk,v 1.7 2017/08/10 05:41:23 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -222,42 +222,60 @@ _pkgtasks-files-postinstall-check: .PHONY
 	${RUN}set -- args ${_CONF_FILES}; shift;			\
 	while ${TEST} "$$#" -gt 0; do					\
 		${TEST} "$$#" -gt 2 || break;				\
-		egfile=${DESTDIR:Q}${PREFIX:Q}"/$$1"; shift 2;		\
+		case $$1 in						\
+		/*)	egfile=${DESTDIR:Q}"$$1" ;;			\
+		*)	egfile=${DESTDIR:Q}${PREFIX:Q}"/$$1" ;;		\
+		esac; shift 2;						\
 		${TEST} -f "$$egfile" || ${TEST} -c "$$egfile" ||	\
 		${FAIL_MSG} "CONF_FILES $$egfile does not exist.";	\
 	done
 	${RUN}set -- args ${_CONF_FILES_PERMS}; shift;			\
 	while ${TEST} "$$#" -gt 0; do					\
 		${TEST} "$$#" -gt 5 || break;				\
-		egfile=${DESTDIR:Q}${PREFIX:Q}"/$$1"; shift 5;		\
+		case $$1 in						\
+		/*)	egfile=${DESTDIR:Q}"$$1" ;;			\
+		*)	egfile=${DESTDIR:Q}${PREFIX:Q}"/$$1" ;;		\
+		esac; shift 5;						\
 		${TEST} -f "$$egfile" || ${TEST} -c "$$egfile" ||	\
 		${FAIL_MSG} "CONF_FILES_PERMS $$egfile does not exist.";\
 	done
 	${RUN}set -- args ${_REQD_FILES}; shift;			\
 	while ${TEST} "$$#" -gt 0; do					\
 		${TEST} "$$#" -gt 2 || break;				\
-		egfile=${DESTDIR:Q}${PREFIX:Q}"/$$1"; shift 2;		\
+		case $$1 in						\
+		/*)	egfile=${DESTDIR:Q}"$$1" ;;			\
+		*)	egfile=${DESTDIR:Q}${PREFIX:Q}"/$$1" ;;		\
+		esac; shift 2;						\
 		${TEST} -f "$$egfile" || ${TEST} -c "$$egfile" ||	\
 		${FAIL_MSG} "REQD_FILES $$egfile does not exist.";	\
 	done
 	${RUN}set -- args ${_REQD_FILES_PERMS}; shift;			\
 	while ${TEST} "$$#" -gt 0; do					\
 		${TEST} "$$#" -gt 5 || break;				\
-		egfile=${DESTDIR:Q}${PREFIX:Q}"/$$1"; shift 5;		\
+		case $$1 in						\
+		/*)	egfile=${DESTDIR:Q}"$$1" ;;			\
+		*)	egfile=${DESTDIR:Q}${PREFIX:Q}"/$$1" ;;		\
+		esac; shift 5;						\
 		${TEST} -f "$$egfile" || ${TEST} -c "$$egfile" ||	\
 		${FAIL_MSG} "REQD_FILES_PERMS $$egfile does not exist.";\
 	done
 	${RUN}set -- args ${__INIT_SCRIPTS}; shift;			\
 	while ${TEST} "$$#" -gt 0; do					\
 		${TEST} "$$#" -gt 2 || break;				\
-		egfile=${DESTDIR:Q}${PREFIX:Q}"/$$1"; shift 2;		\
+		case $$1 in						\
+		/*)	egfile=${DESTDIR:Q}"$$1" ;;			\
+		*)	egfile=${DESTDIR:Q}${PREFIX:Q}"/$$1" ;;		\
+		esac; shift 2;						\
 		${TEST} -f "$$egfile" || ${TEST} -c "$$egfile" ||	\
 		${FAIL_MSG} "REQD_FILES $$egfile does not exist.";	\
 	done
 	${RUN}set -- args ${__INIT_SCRIPTS_PERMS}; shift;		\
 	while ${TEST} "$$#" -gt 0; do					\
 		${TEST} "$$#" -gt 5 || break;				\
-		egfile=${DESTDIR:Q}${PREFIX:Q}"/$$1"; shift 5;		\
+		case $$1 in						\
+		/*)	egfile=${DESTDIR:Q}"$$1" ;;			\
+		*)	egfile=${DESTDIR:Q}${PREFIX:Q}"/$$1" ;;		\
+		esac; shift 5;						\
 		${TEST} -f "$$egfile" || ${TEST} -c "$$egfile" ||	\
 		${FAIL_MSG} "REQD_FILES_PERMS $$egfile does not exist.";\
 	done
