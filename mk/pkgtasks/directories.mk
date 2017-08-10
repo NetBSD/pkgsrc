@@ -1,4 +1,4 @@
-# $NetBSD: directories.mk,v 1.2 2017/08/10 05:37:32 jlam Exp $
+# $NetBSD: directories.mk,v 1.3 2017/08/10 05:37:44 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -95,8 +95,8 @@ _OWN_DIRS_PERMS=	${OWN_DIRS_PERMS:S|^${PREFIX}/||g}
 _REQD_DIRS=		${REQD_DIRS:S|^${PREFIX}/||g}
 _REQD_DIRS_PERMS=	${REQD_DIRS_PERMS:S|^${PREFIX}/||g}
 
-# Assert that the variables have the right number of words and
-# that no directory is listed in more than one variable.
+# ASSERT: The variables have the right number of words and that no
+#	directory is listed in more than one variable.
 #
 # _ALL_DIRS.directories
 #	List of directories named in MAKE_DIRS, OWN_DIRS, REQD_DIRS,
