@@ -1,4 +1,4 @@
-# $NetBSD: files.mk,v 1.4 2017/08/10 05:25:10 jlam Exp $
+# $NetBSD: files.mk,v 1.5 2017/08/10 05:37:32 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -151,10 +151,23 @@ PKG_FAIL_REASON+=       ${t:Q}" is listed more than once: "${_FILE_VARLIST.${t}:
 .if defined(PKG_SYSCONFSUBDIR) && !empty(PKG_SYSCONFSUBDIR)
 # Always create ${PKG_SYSCONFDIR} if ${PKG_SYSCONFSUBDIR} is non-empty.
 MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR_PERMS}
+_ALL_DIRS.directories+=	${PKG_SYSCONFDIR}
 .elif !empty(_ALL_TARGET_FILES.files:M${PKG_SYSCONFDIR}/*)
 # Create ${PKG_SYSCONFDIR} if any target files are in that directory.
 MAKE_DIRS+=		${PKG_SYSCONFDIR}
+_ALL_DIRS.directories+=	${PKG_SYSCONFDIR}
 .endif
+
+# Assert that the directories that contain target files are listed in
+# one of the directory variables.  This makes use of
+# ${_ALL_DIRS.directories}, which is defined in directories.mk.
+#
+.for t in ${_ALL_TARGET_FILES.files:O:u}
+_FILEMATCH.${t}=	${_ALL_DIRS.directories:@d@${t:M${d}/*}@}
+.  if empty(_FILEMATCH.${t})
+PKG_FAIL_REASON+=	"This package may need MAKE_DIRS+="${t:C|/[^/]*$||:Q}
+.  endif
+.endfor
 
 _PKGTASKS_DATA.files=	${_PKGTASKS_DIR}/files
 _PKGTASKS_DATAFILES+=	${_PKGTASKS_DATA.files}
