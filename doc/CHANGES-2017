@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3152 2017/08/10 13:47:02 wen Exp $
+$NetBSD: CHANGES-2017,v 1.3153 2017/08/10 14:01:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4380,3 +4380,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-XML-XPath to 1.42 [wen 2017-08-10]
 	Updated textproc/p5-XML-Tidy to 1.20 [wen 2017-08-10]
 	Updated textproc/p5-XML-SAX-Writer to 0.57 [wen 2017-08-10]
+	Updated print/p5-LaTeX-Encode to 0.092.0 [wen 2017-08-10]
