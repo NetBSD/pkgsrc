@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.151 2017/06/12 07:13:35 maya Exp $
+# $NetBSD: sites.mk,v 1.152 2017/08/10 12:21:18 hauke Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -117,10 +117,16 @@ MASTER_SITE_MOZILLA_ESR+=	\
 	http://ftp.mozilla.org/pub/mozilla.org/
 
 MASTER_SITE_XEMACS+=    \
+	ftp://ftp.xemacs.org/pub/xemacs/ \
+	http://ftp.xemacs.org/ \
+	http://ftp.de.xemacs.org/pub/ftp.xemacs.org/tux/xemacs/ \
+	ftp://ftp.heanet.ie/mirrors/ftp.xemacs.org/ \
+	http://ftp.heanet.ie/mirrors/ftp.xemacs.org/ \
+	http://ftp.pt.xemacs.org/ \
+	ftp://ftp.uk.xemacs.org/sites/ftp.xemacs.org/pub/xemacs/ \
+	http://ftp.uk.xemacs.org/sites/ftp.xemacs.org/pub/xemacs/ \
 	ftp://ftp.isr.tecnico.ulisboa.pt/pub/xemacs/ \
 	http://ftp.isr.tecnico.ulisboa.pt/pub/xemacs/ \
-	ftp://ftp.heanet.ie/mirrors/ftp.xemacs.org/pub/xemacs/ \
-	http://ftp.heanet.ie/mirrors/ftp.xemacs.org/pub/xemacs/ \
 	ftp://ftp.dnsbalance.ring.gr.jp/pub/text/xemacs/
 
 # http://www.ibiblio.org/pub/mirrors/apache/ returns 200 for missing
