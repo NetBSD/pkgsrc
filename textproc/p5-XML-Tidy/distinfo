@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/07/09 15:28:47 wen Exp $
+$NetBSD: distinfo,v 1.7 2017/08/10 13:38:37 wen Exp $
 
-SHA1 (XML-Tidy-1.18.tgz) = af2ba6f594bc252ae5f9498fd4d54187d0699d5f
-RMD160 (XML-Tidy-1.18.tgz) = 19e398754bb4d95c59f483014f5df4d116a662ca
-SHA512 (XML-Tidy-1.18.tgz) = 6e00df0e9b853bd04c6f2e08c892b16ca3deb7a512e0963232cb6daf656ab2bf3e38346a00609c8ba7278ad498fabfa24acf7e4bc719bbb3a6fba1db45aa4a6a
-Size (XML-Tidy-1.18.tgz) = 35987 bytes
+SHA1 (XML-Tidy-1.20.tgz) = edf7f7e5c41a910262f3037f35365fdf459b4bc5
+RMD160 (XML-Tidy-1.20.tgz) = 0a8b79a15a79f8cf4eefa571122c7b67a9a29e5f
+SHA512 (XML-Tidy-1.20.tgz) = 41f2578932d7452c67f2aacee9e3600ec702178d239b46ed44e71b7ecbe4ab231ee8ccff17c671ce2de3792adc565d78d64db25f0d1bb2c7f83d50b6be04d218
+Size (XML-Tidy-1.20.tgz) = 35837 bytes
