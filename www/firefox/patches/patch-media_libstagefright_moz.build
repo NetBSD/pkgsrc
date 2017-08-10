@@ -1,0 +1,18 @@
+$NetBSD: patch-media_libstagefright_moz.build,v 1.1 2017/08/10 14:46:15 ryoon Exp $
+
+--- media/libstagefright/moz.build.orig	2017-07-31 16:20:49.000000000 +0000
++++ media/libstagefright/moz.build
+@@ -83,9 +83,10 @@ SOURCES += [
+     'system/core/libutils/VectorImpl.cpp',
+ ]
+ 
+-EXPORTS += [
+-    'binding/include/mp4parse.h',
+-]
++if CONFIG['MOZ_RUST']:
++    EXPORTS += [
++        'binding/include/mp4parse.h',
++    ]
+ 
+ UNIFIED_SOURCES += [
+     'binding/Adts.cpp',

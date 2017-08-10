@@ -1,9 +1,9 @@
-$NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.1 2017/06/29 08:07:59 martin Exp $
+$NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.2 2017/08/10 14:46:15 ryoon Exp $
 
 - avoid use of sem_t on NetBSD
   http://mail-index.netbsd.org/pkgsrc-bugs/2017/06/23/msg062225.html
 
---- ipc/glue/CrossProcessSemaphore_posix.cpp.orig	2017-06-25 05:29:49.000000000 +0000
+--- ipc/glue/CrossProcessSemaphore_posix.cpp.orig	2017-07-31 16:20:47.000000000 +0000
 +++ ipc/glue/CrossProcessSemaphore_posix.cpp
 @@ -9,6 +9,11 @@
  #include "nsDebug.h"
@@ -50,8 +50,8 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.1 2017/06/29 08:07:
    CrossProcessSemaphore* sem = new CrossProcessSemaphore;
    sem->mSharedBuffer = sharedBuffer;
 +#if defined(__NetBSD__)
-+  sem->mMutex = &data->mMutex;  
-+  sem->mNotZero = &data->mNotZero;  
++  sem->mMutex = &data->mMutex;
++  sem->mNotZero = &data->mNotZero;
 +  sem->mValue = &data->mValue;
 +#else
    sem->mSemaphore = &data->mSemaphore;
@@ -82,8 +82,8 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.1 2017/06/29 08:07:
    CrossProcessSemaphore* sem = new CrossProcessSemaphore;
    sem->mSharedBuffer = sharedBuffer;
 +#if defined(__NetBSD__)
-+  sem->mMutex = &data->mMutex;  
-+  sem->mNotZero = &data->mNotZero;  
++  sem->mMutex = &data->mMutex;
++  sem->mNotZero = &data->mNotZero;
 +  sem->mValue = &data->mValue;
 +#else
    sem->mSemaphore = &data->mSemaphore;

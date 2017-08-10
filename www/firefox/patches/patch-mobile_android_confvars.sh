@@ -1,6 +1,6 @@
-$NetBSD: patch-mobile_android_confvars.sh,v 1.1 2017/06/14 11:28:44 ryoon Exp $
+$NetBSD: patch-mobile_android_confvars.sh,v 1.2 2017/08/10 14:46:15 ryoon Exp $
 
---- mobile/android/confvars.sh.orig	2017-06-05 20:45:15.000000000 +0000
+--- mobile/android/confvars.sh.orig	2017-07-31 16:20:50.000000000 +0000
 +++ mobile/android/confvars.sh
 @@ -30,6 +30,8 @@ MOZ_XULRUNNER=
  MOZ_CAPTURE=1

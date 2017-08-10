@@ -1,0 +1,22 @@
+$NetBSD: patch-dom_media_gtest_moz.build,v 1.1 2017/08/10 14:46:15 ryoon Exp $
+
+--- dom/media/gtest/moz.build.orig	2017-07-31 16:20:53.000000000 +0000
++++ dom/media/gtest/moz.build
+@@ -22,7 +22,6 @@ UNIFIED_SOURCES += [
+     'TestMozPromise.cpp',
+     'TestMP3Demuxer.cpp',
+     'TestMP4Demuxer.cpp',
+-    'TestRust.cpp',
+     'TestTrackEncoder.cpp',
+     'TestVideoSegment.cpp',
+     'TestVideoUtils.cpp',
+@@ -36,6 +35,9 @@ if CONFIG['MOZ_WEBM_ENCODER']:
+         'TestWebMWriter.cpp',
+     ]
+ 
++if CONFIG['MOZ_RUST']:
++    UNIFIED_SOURCES += ['TestRust.cpp',]
++
+ TEST_HARNESS_FILES.gtest += [
+     '../test/gizmo-frag.mp4',
+     '../test/gizmo.mp4',

@@ -1,11 +1,28 @@
-$NetBSD: patch-toolkit_library_moz.build,v 1.13 2017/06/14 11:28:44 ryoon Exp $
+$NetBSD: patch-toolkit_library_moz.build,v 1.14 2017/08/10 14:46:15 ryoon Exp $
 
 * Support system libraries
 * Restore OSS support
 
---- toolkit/library/moz.build.orig	2017-06-05 20:45:23.000000000 +0000
+--- toolkit/library/moz.build.orig	2017-07-31 16:20:52.000000000 +0000
 +++ toolkit/library/moz.build
-@@ -228,9 +228,30 @@ if CONFIG['MOZ_SYSTEM_JPEG']:
+@@ -63,7 +63,7 @@ def Libxul(name):
+ 
+     # This option should go away in bug 1290972, but we need to wait until
+     # Rust 1.12 has been released.
+-    if CONFIG['OS_ARCH'] == 'Darwin':
++    if CONFIG['MOZ_RUST'] and CONFIG['OS_ARCH'] == 'Darwin':
+         LDFLAGS += ['-Wl,-no_compact_unwind']
+ 
+ Libxul('xul')
+@@ -197,6 +197,7 @@ if CONFIG['OS_ARCH'] == 'Linux' and CONF
+     ]
+ 
+ OS_LIBS += CONFIG['MOZ_CAIRO_OSLIBS']
++OS_LIBS += CONFIG['MOZ_LIBV4L2_LIBS']
+ OS_LIBS += CONFIG['MOZ_WEBRTC_X11_LIBS']
+ 
+ if CONFIG['SERVO_TARGET_DIR']:
+@@ -211,9 +212,30 @@ if CONFIG['MOZ_SYSTEM_JPEG']:
  if CONFIG['MOZ_SYSTEM_PNG']:
      OS_LIBS += CONFIG['MOZ_PNG_LIBS']
  
@@ -36,7 +53,7 @@ $NetBSD: patch-toolkit_library_moz.build,v 1.13 2017/06/14 11:28:44 ryoon Exp $
  if CONFIG['MOZ_SYSTEM_LIBEVENT']:
      OS_LIBS += CONFIG['MOZ_LIBEVENT_LIBS']
  
-@@ -240,8 +261,8 @@ if CONFIG['MOZ_SYSTEM_LIBVPX']:
+@@ -223,8 +245,8 @@ if CONFIG['MOZ_SYSTEM_LIBVPX']:
  if not CONFIG['MOZ_TREE_PIXMAN']:
      OS_LIBS += CONFIG['MOZ_PIXMAN_LIBS']
  
@@ -47,3 +64,10 @@ $NetBSD: patch-toolkit_library_moz.build,v 1.13 2017/06/14 11:28:44 ryoon Exp $
  
  if CONFIG['HAVE_CLOCK_MONOTONIC']:
      OS_LIBS += CONFIG['REALTIME_LIBS']
+@@ -343,4 +365,5 @@ USE_LIBS += ['StaticXULComponentsEnd']
+ # The above library needs to be last for C++ purposes.  This library,
+ # however, is entirely composed of Rust code, and needs to come after
+ # all the C++ code so any possible C++ -> Rust calls can be resolved.
+-USE_LIBS += ['gkrust']
++if CONFIG['MOZ_RUST']:
++    USE_LIBS += ['gkrust']

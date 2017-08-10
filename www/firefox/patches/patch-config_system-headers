@@ -1,12 +1,12 @@
-$NetBSD: patch-config_system-headers,v 1.24 2017/06/14 11:28:44 ryoon Exp $
+$NetBSD: patch-config_system-headers,v 1.25 2017/08/10 14:46:15 ryoon Exp $
 
 * Try to support Video4Linux2
 * Resolve libm undefined error
 * Support system libraries
 
---- config/system-headers.orig	2017-06-05 20:45:15.000000000 +0000
+--- config/system-headers.orig	2017-07-31 16:20:50.000000000 +0000
 +++ config/system-headers
-@@ -625,6 +625,7 @@ libgnome/libgnome.h
+@@ -626,6 +626,7 @@ libgnome/libgnome.h
  libgnomeui/gnome-icon-lookup.h
  libgnomeui/gnome-icon-theme.h
  libgnomeui/gnome-ui-init.h
@@ -14,7 +14,7 @@ $NetBSD: patch-config_system-headers,v 1.24 2017/06/14 11:28:44 ryoon Exp $
  limits.h
  link.h
  #ifdef ANDROID
-@@ -1268,6 +1269,24 @@ libsn/sn-launcher.h
+@@ -1267,6 +1268,15 @@ libsn/sn-launcher.h
  libsn/sn-monitor.h
  libsn/sn-util.h
  #endif
@@ -27,36 +27,13 @@ $NetBSD: patch-config_system-headers,v 1.24 2017/06/14 11:28:44 ryoon Exp $
 +harfbuzz/hb-ot.h
 +harfbuzz/hb.h
 +#endif
-+#if MOZ_SYSTEM_GRAPHITE2==1
-+graphite2/Font.h
-+graphite2/Segment.h
-+#endif
-+#if MOZ_SYSTEM_HARFBUZZ==1
-+harfbuzz/hb-glib.h
-+harfbuzz/hb-ot.h
-+harfbuzz/hb.h
-+#endif
  #if MOZ_SYSTEM_HUNSPELL==1
  hunspell.hxx
  #endif
-@@ -1338,3 +1357,31 @@ unicode/utypes.h
+@@ -1335,3 +1345,17 @@ unicode/utypes.h
  libutil.h
  unwind.h
  fenv.h
-+#if MOZ_SYSTEM_OGG==1
-+ogg/ogg.h
-+ogg/os_types.h
-+#endif
-+#if MOZ_SYSTEM_THEORA==1
-+theora/theoradec.h
-+#endif
-+#if MOZ_SYSTEM_VORBIS==1
-+vorbis/codec.h
-+vorbis/vorbisenc.h
-+#endif
-+#if MOZ_SYSTEM_TREMOR==1
-+tremor/ivorbiscodec.h
-+#endif
 +#if MOZ_SYSTEM_OGG==1
 +ogg/ogg.h
 +ogg/os_types.h

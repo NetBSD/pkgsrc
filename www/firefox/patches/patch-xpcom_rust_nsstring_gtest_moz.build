@@ -1,0 +1,17 @@
+$NetBSD: patch-xpcom_rust_nsstring_gtest_moz.build,v 1.1 2017/08/10 14:46:15 ryoon Exp $
+
+--- xpcom/rust/nsstring/gtest/moz.build.orig	2017-07-31 16:20:53.000000000 +0000
++++ xpcom/rust/nsstring/gtest/moz.build
+@@ -4,8 +4,9 @@
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ 
+-UNIFIED_SOURCES += [
+-    'Test.cpp'
+-]
++if CONFIG['MOZ_RUST']:
++    UNIFIED_SOURCES += [
++        'Test.cpp'
++    ]
+ 
+ FINAL_LIBRARY = 'xul-gtest'

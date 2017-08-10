@@ -1,0 +1,32 @@
+$NetBSD: patch-toolkit_toolkit.mozbuild,v 1.6 2017/08/10 14:46:15 ryoon Exp $
+
+--- toolkit/toolkit.mozbuild.orig	2017-07-31 16:20:53.000000000 +0000
++++ toolkit/toolkit.mozbuild
+@@ -133,16 +133,23 @@ if CONFIG['MOZ_PREF_EXTENSIONS']:
+ 
+ DIRS += [
+     '/devtools',
+-    '/toolkit/library',
+-    '/toolkit/library/gtest/rust',
+-    '/toolkit/library/rust',
+-    '/toolkit/library/StaticXULComponentsEnd',
+     '/services',
+     '/startupcache',
+     '/js/ductwork/debugger',
+     '/other-licenses/snappy',
+ ]
+ 
++if CONFIG['MOZ_RUST']:
++    DIRS += [
++        '/toolkit/library/gtest/rust',
++        '/toolkit/library/rust',
++    ]
++
++DIRS += [
++    '/toolkit/library/StaticXULComponentsEnd',
++    '/toolkit/library',
++]
++
+ if 'gtk' in CONFIG['MOZ_WIDGET_TOOLKIT']:
+     DIRS += ['/toolkit/system/gnome']
+ 

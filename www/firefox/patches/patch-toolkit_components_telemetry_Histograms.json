@@ -1,18 +1,18 @@
-$NetBSD: patch-toolkit_components_telemetry_Histograms.json,v 1.1 2017/06/14 11:28:44 ryoon Exp $
+$NetBSD: patch-toolkit_components_telemetry_Histograms.json,v 1.2 2017/08/10 14:46:15 ryoon Exp $
 
---- toolkit/components/telemetry/Histograms.json.orig	2017-06-05 20:45:22.000000000 +0000
+--- toolkit/components/telemetry/Histograms.json.orig	2017-07-31 16:20:51.000000000 +0000
 +++ toolkit/components/telemetry/Histograms.json
-@@ -7022,7 +7022,8 @@
-     "expires_in_version": "55",
+@@ -8337,7 +8337,8 @@
+     "expires_in_version": "60",
      "kind": "boolean",
      "bug_numbers": [1220885],
--    "description": "(Bug 1220885) Whether the rust mp4 demuxer successfully parsed a stream segment."
-+    "description": "(Bug 1220885) Whether the rust mp4 demuxer successfully parsed a stream segment.",
+-    "description": "Whether the rust mp4 demuxer successfully parsed a stream segment."
++    "description": "Whether the rust mp4 demuxer successfully parsed a stream segment.",
 +    "cpp_guard": "MOZ_RUST_MP4PARSE"
    },
    "MEDIA_RUST_MP4PARSE_ERROR_CODE": {
-     "alert_emails": ["giles@mozilla.com", "kinetik@flim.org"],
-@@ -7030,21 +7031,24 @@
+     "record_in_processes": ["main", "content"],
+@@ -8346,7 +8347,8 @@
      "kind": "enumerated",
      "n_values": 32,
      "bug_numbers": [1238420],
@@ -21,8 +21,9 @@ $NetBSD: patch-toolkit_components_telemetry_Histograms.json,v 1.1 2017/06/14 11:
 +    "cpp_guard": "MOZ_RUST_MP4PARSE"
    },
    "MEDIA_RUST_MP4PARSE_TRACK_MATCH_AUDIO": {
-     "alert_emails": ["giles@mozilla.com", "kinetik@flim.org"],
-     "expires_in_version": "55",
+     "record_in_processes": ["main", "content"],
+@@ -8354,7 +8356,8 @@
+     "expires_in_version": "60",
      "kind": "boolean",
      "bug_numbers": [1231169],
 -    "description": "Whether rust and stagefight mp4 parser audio track results match."
@@ -30,8 +31,9 @@ $NetBSD: patch-toolkit_components_telemetry_Histograms.json,v 1.1 2017/06/14 11:
 +    "cpp_guard": "MOZ_RUST_MP4PARSE"
    },
    "MEDIA_RUST_MP4PARSE_TRACK_MATCH_VIDEO": {
-     "alert_emails": ["giles@mozilla.com", "kinetik@flim.org"],
-     "expires_in_version": "55",
+     "record_in_processes": ["main", "content"],
+@@ -8362,7 +8365,8 @@
+     "expires_in_version": "60",
      "kind": "boolean",
      "bug_numbers": [1231169],
 -    "description": "Whether rust and stagefight mp4 parser video track results match."
@@ -39,4 +41,4 @@ $NetBSD: patch-toolkit_components_telemetry_Histograms.json,v 1.1 2017/06/14 11:
 +    "cpp_guard": "MOZ_RUST_MP4PARSE"
    },
    "MEDIA_WMF_DECODE_ERROR": {
-     "expires_in_version": "55",
+     "record_in_processes": ["main", "content", "gpu"],
