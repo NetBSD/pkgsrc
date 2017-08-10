@@ -280,23 +280,26 @@ testsdir = @testsdir@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-doc_DATA = AUTHORS COPYING README.md
+doc_DATA = AUTHORS COPYING NEWS.md README.md
 noinst_DATA = README.md
 EXTRA_DIST = $(doc_DATA) version.subr.in t/build_test.sh \
 	t/run_tests.sh t/t_compare.sh t/t_createfile.sh \
 	t/t_directories.sh t/t_dirwalk.sh t/t_echo.sh t/t_files.sh \
-	t/t_fonts.sh t/t_groups.sh t/t_info_files.sh t/t_lock.sh \
-	t/t_makedir.sh t/t_maketemp.sh t/t_match.sh \
-	t/t_ocaml_findlib.sh t/t_permissions.sh t/t_platform.sh \
-	t/t_postinstall.sh t/t_postremove.sh t/t_preinstall.sh \
-	t/t_preremove.sh t/t_quote.sh t/t_random.sh t/t_refcount.sh \
-	t/t_shells.sh t/t_shlibs.sh t/t_sort.sh t/t_taskfunc.sh \
-	t/t_tee.sh t/t_truthy.sh t/t_usergroup.sh \
+	t/t_fonts.sh t/t_groups.sh t/t_icon_themes.sh \
+	t/t_info_files.sh t/t_lock.sh t/t_makedir.sh t/t_maketemp.sh \
+	t/t_match.sh t/t_ocaml_findlib.sh t/t_permissions.sh \
+	t/t_platform.sh t/t_postinstall.sh t/t_postremove.sh \
+	t/t_preinstall.sh t/t_preremove.sh t/t_quote.sh t/t_random.sh \
+	t/t_refcount.sh t/t_shells.sh t/t_shlibs.sh t/t_sort.sh \
+	t/t_taskfunc.sh t/t_tee.sh t/t_truthy.sh t/t_usergroup.sh \
 	t/t_usergroup_FreeBSD.sh t/t_usergroup_Linux.sh \
 	t/t_usergroup_MirBSD.sh t/t_usergroup_NetBSD.sh \
 	t/t_usergroup_exists.sh t/t_usergroup_mock.sh t/t_users.sh \
 	t/t_valid_options.sh t/t_version.sh t/t_which.sh
-PHONY_TARGETS = check-run-tets installcheck-run-tests $(am__append_1)
+MAINTAINERCLEANFILES = Makefile.in aclocal.m4 build-aux/install-sh \
+	build-aux/missing configure $(DIST_ARCHIVES)
+PHONY_TARGETS = check-run-tets installcheck-run-tests $(am__append_1) \
+	check-news-local
 CHMOD = chmod
 MV = mv
 
@@ -312,9 +315,10 @@ BUILD_FILE = \
 BUILD_SCRIPT = $(BUILD_FILE) && $(CHMOD) +x "$$target"
 dist_pkgdata_DATA = cleanup.subr compare.subr createfile.subr \
 	directories.subr dirwalk.subr echo.subr files.subr fonts.subr \
-	groups.subr info_files.subr load.subr lock.subr makedir.subr \
-	maketemp.subr match.subr ocaml_findlib.subr permissions.subr \
-	platform.subr postinstall.subr postremove.subr preinstall.subr \
+	groups.subr icon_themes.subr info_files.subr load.subr \
+	lock.subr makedir.subr maketemp.subr match.subr \
+	ocaml_findlib.subr permissions.subr platform.subr \
+	postinstall.subr postremove.subr preinstall.subr \
 	preremove.subr quote.subr random.subr refcount.subr \
 	refcount_file.subr say.subr shells.subr shlibs.subr sort.subr \
 	taskfunc.subr tee.subr truthy.subr unittest.subr \
@@ -325,11 +329,11 @@ dist_pkgdata_DATA = cleanup.subr compare.subr createfile.subr \
 pkgdata_DATA = version.subr
 CLEANFILES = version.subr t/build_test t/run_tests t/t_compare \
 	t/t_createfile t/t_directories t/t_dirwalk t/t_echo t/t_files \
-	t/t_fonts t/t_groups t/t_info_files t/t_lock t/t_makedir \
-	t/t_maketemp t/t_match t/t_ocaml_findlib t/t_permissions \
-	t/t_platform t/t_postinstall t/t_postremove t/t_preinstall \
-	t/t_preremove t/t_quote t/t_random t/t_refcount t/t_shells \
-	t/t_shlibs t/t_sort t/t_taskfunc t/t_tee t/t_truthy \
+	t/t_fonts t/t_groups t/t_icon_themes t/t_info_files t/t_lock \
+	t/t_makedir t/t_maketemp t/t_match t/t_ocaml_findlib \
+	t/t_permissions t/t_platform t/t_postinstall t/t_postremove \
+	t/t_preinstall t/t_preremove t/t_quote t/t_random t/t_refcount \
+	t/t_shells t/t_shlibs t/t_sort t/t_taskfunc t/t_tee t/t_truthy \
 	t/t_usergroup t/t_usergroup_FreeBSD t/t_usergroup_Linux \
 	t/t_usergroup_MirBSD t/t_usergroup_NetBSD t/t_usergroup_exists \
 	t/t_usergroup_mock t/t_users t/t_valid_options t/t_version \
@@ -344,14 +348,15 @@ dist_pkgtests_DATA = t/Kyuafile
 noinst_SCRIPTS = t/build_test
 pkgtests_SCRIPTS = t/run_tests t/t_compare t/t_createfile \
 	t/t_directories t/t_dirwalk t/t_echo t/t_files t/t_fonts \
-	t/t_groups t/t_info_files t/t_lock t/t_makedir t/t_maketemp \
-	t/t_match t/t_ocaml_findlib t/t_permissions t/t_platform \
-	t/t_postinstall t/t_postremove t/t_preinstall t/t_preremove \
-	t/t_quote t/t_random t/t_refcount t/t_shells t/t_shlibs \
-	t/t_sort t/t_taskfunc t/t_tee t/t_truthy t/t_usergroup \
-	t/t_usergroup_FreeBSD t/t_usergroup_Linux t/t_usergroup_MirBSD \
-	t/t_usergroup_NetBSD t/t_usergroup_exists t/t_usergroup_mock \
-	t/t_users t/t_valid_options t/t_version t/t_which
+	t/t_groups t/t_icon_themes t/t_info_files t/t_lock t/t_makedir \
+	t/t_maketemp t/t_match t/t_ocaml_findlib t/t_permissions \
+	t/t_platform t/t_postinstall t/t_postremove t/t_preinstall \
+	t/t_preremove t/t_quote t/t_random t/t_refcount t/t_shells \
+	t/t_shlibs t/t_sort t/t_taskfunc t/t_tee t/t_truthy \
+	t/t_usergroup t/t_usergroup_FreeBSD t/t_usergroup_Linux \
+	t/t_usergroup_MirBSD t/t_usergroup_NetBSD t/t_usergroup_exists \
+	t/t_usergroup_mock t/t_users t/t_valid_options t/t_version \
+	t/t_which
 
 # CHECK_ENVIRONMENT
 #	This is used to set variables before calling kyua on the tests in
@@ -558,6 +563,9 @@ distdir: $(DISTFILES)
 	    || exit 1; \
 	  fi; \
 	done
+	$(MAKE) $(AM_MAKEFLAGS) \
+	  top_distdir="$(top_distdir)" distdir="$(distdir)" \
+	  dist-hook
 	-test -n "$(am__skip_mode_fix)" \
 	|| find "$(distdir)" -type d ! -perm -755 \
 		-exec chmod u+rwx,go+rx {} \; -o \
@@ -728,6 +736,7 @@ distclean-generic:
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
 	@echo "it deletes files that may require special tools to rebuild."
+	-test -z "$(MAINTAINERCLEANFILES)" || rm -f $(MAINTAINERCLEANFILES)
 clean: clean-am
 
 clean-am: clean-generic mostlyclean-am
@@ -782,8 +791,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 	-rm -rf $(top_srcdir)/autom4te.cache
 	-rm -f Makefile
-maintainer-clean-am: distclean-am maintainer-clean-generic \
-	maintainer-clean-local
+maintainer-clean-am: distclean-am maintainer-clean-generic
 
 mostlyclean: mostlyclean-am
 
@@ -805,10 +813,10 @@ uninstall-am: uninstall-dist_pkgdataDATA uninstall-dist_pkgtestsDATA \
 
 .PHONY: all all-am am--refresh check check-am check-local clean \
 	clean-generic cscopelist-am ctags-am dist dist-all dist-bzip2 \
-	dist-gzip dist-lzip dist-shar dist-tarZ dist-xz dist-zip \
-	distcheck distclean distclean-generic distcleancheck distdir \
-	distuninstallcheck dvi dvi-am html html-am info info-am \
-	install install-am install-data install-data-am \
+	dist-gzip dist-hook dist-lzip dist-shar dist-tarZ dist-xz \
+	dist-zip distcheck distclean distclean-generic distcleancheck \
+	distdir distuninstallcheck dvi dvi-am html html-am info \
+	info-am install install-am install-data install-data-am \
 	install-dist_pkgdataDATA install-dist_pkgtestsDATA \
 	install-docDATA install-dvi install-dvi-am install-exec \
 	install-exec-am install-html install-html-am install-info \
@@ -816,11 +824,11 @@ uninstall-am: uninstall-dist_pkgdataDATA uninstall-dist_pkgtestsDATA \
 	install-pkgdataDATA install-pkgtestsSCRIPTS install-ps \
 	install-ps-am install-strip installcheck installcheck-am \
 	installcheck-local installdirs maintainer-clean \
-	maintainer-clean-generic maintainer-clean-local mostlyclean \
-	mostlyclean-generic pdf pdf-am ps ps-am tags-am uninstall \
-	uninstall-am uninstall-dist_pkgdataDATA \
-	uninstall-dist_pkgtestsDATA uninstall-docDATA \
-	uninstall-pkgdataDATA uninstall-pkgtestsSCRIPTS
+	maintainer-clean-generic mostlyclean mostlyclean-generic pdf \
+	pdf-am ps ps-am tags-am uninstall uninstall-am \
+	uninstall-dist_pkgdataDATA uninstall-dist_pkgtestsDATA \
+	uninstall-docDATA uninstall-pkgdataDATA \
+	uninstall-pkgtestsSCRIPTS
 
 .PRECIOUS: Makefile
 
@@ -867,6 +875,10 @@ t/t_fonts: t/t_fonts.sh t/build_test
 t/t_groups: t/t_groups.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_groups" source="$(srcdir)/t/t_groups.sh"; \
+	$(BUILD_TEST)
+t/t_icon_themes: t/t_icon_themes.sh t/build_test
+	-$(MKDIR_P) $(builddir)/t
+	$(AM_V_GEN)target="$(builddir)/t/t_icon_themes" source="$(srcdir)/t/t_icon_themes.sh"; \
 	$(BUILD_TEST)
 t/t_info_files: t/t_info_files.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
@@ -1024,10 +1036,16 @@ installcheck-run-tests:
 @HAVE_KYUA_FALSE@check-local: check-run-tests
 @HAVE_KYUA_FALSE@installcheck-local: installcheck-run-tests
 
-maintainer-clean-local:
-	-rm -f Makefile.in aclocal.m4 configure
-	-rm -f build-aux/install-sh build-aux/missing
-	-rm -f $(PACKAGE)-*.tar.*
+# Duplicate Automake's check-news target, but verify NEWS.md instead of NEWS.
+dist-hook: check-news-local
+check-news-local:
+	@newsfile="$(srcdir)/NEWS.md"; \
+	case `sed 15q "$$newsfile"` in \
+	*"$(VERSION)"*) : ;; \
+	*) \
+		echo "$$newsfile not updated; not releasing" 1>&2; \
+		exit 1;; \
+	esac
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

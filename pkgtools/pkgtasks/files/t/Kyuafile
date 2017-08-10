@@ -50,6 +50,7 @@ tap_test_program { name = "t_echo" }
 tap_test_program { name = "t_files" }
 tap_test_program { name = "t_fonts" }
 tap_test_program { name = "t_groups" }
+tap_test_program { name = "t_icon_themes" }
 tap_test_program { name = "t_info_files" }
 tap_test_program { name = "t_lock" }
 tap_test_program { name = "t_makedir" }

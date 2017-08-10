@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2017/06/01 01:58:34 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/08/10 05:38:30 jlam Exp $
 share/doc/${PKGBASE}/AUTHORS
-share/doc/${PKGBASE}/COPYING
 share/doc/${PKGBASE}/README.md
+share/doc/${PKGBASE}/NEWS.md
+share/doc/${PKGBASE}/COPYING
 share/${PKGBASE}/cleanup.subr
 share/${PKGBASE}/compare.subr
 share/${PKGBASE}/createfile.subr
@@ -11,6 +12,7 @@ share/${PKGBASE}/echo.subr
 share/${PKGBASE}/files.subr
 share/${PKGBASE}/fonts.subr
 share/${PKGBASE}/groups.subr
+share/${PKGBASE}/icon_themes.subr
 share/${PKGBASE}/info_files.subr
 share/${PKGBASE}/load.subr
 share/${PKGBASE}/lock.subr
@@ -57,6 +59,7 @@ tests/${PKGBASE}/t_echo
 tests/${PKGBASE}/t_files
 tests/${PKGBASE}/t_fonts
 tests/${PKGBASE}/t_groups
+tests/${PKGBASE}/t_icon_themes
 tests/${PKGBASE}/t_info_files
 tests/${PKGBASE}/t_lock
 tests/${PKGBASE}/t_makedir

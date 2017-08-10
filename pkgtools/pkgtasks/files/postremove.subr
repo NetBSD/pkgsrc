@@ -37,6 +37,7 @@
 #
 #	    o Unregister shells from the system shells database.
 #	    o Update fonts databases.
+#	    o Update caches within GTK+ icon theme directories.
 #	    o Rebuild the system run-time library search path database.
 #	    o Update OCaml module run-time library search path database.
 #	    o Remove empty directories.
@@ -59,6 +60,7 @@ task_load directories
 task_load files
 task_load fonts
 task_load groups
+task_load icon_themes
 task_load info_files
 task_load ocaml_findlib
 task_load shells
@@ -79,6 +81,8 @@ task_postremove()
 	post_actions="task_shells"
 	# Update font databases.
 	post_actions="$post_actions task_fonts"
+	# Update GTK+ icon theme caches
+	post_actions="$post_actions task_icon_themes"
 	# Rebuild the system run-time library search path database.
 	post_actions="$post_actions task_shlibs"
 	# Update OCaml module run-time library search path database.
@@ -96,9 +100,9 @@ task_postremove()
 	local post_checks="task_info_files task_files"
 
 	local result=0
-	local stage="preinstall"
+	local stage="postremove"
 
-	local post_fn silent
+	local post_fn silent action_result
 	for post_fn in $post_actions; do
 		case $post_fn in
 		task_directories|\
@@ -116,7 +120,15 @@ task_postremove()
 			task_sort -r < $datafile | $post_fn $silent remove $stage ;;
 		*)	$post_fn $silent remove $stage < $datafile ;;
 		esac
-		[ $? -eq 0 ] || result=1
+		action_result="$?"
+		case $post_fn in
+		task_icon_themes)
+			# Any errors in updating icon caches during postremove
+			# are non-fatal, so adjust the action result.
+			#
+			action_result=0 ;;
+		esac
+		[ $action_result -eq 0 ] || result=1
 		post_checks="$post_checks $post_fn"
 	done
 

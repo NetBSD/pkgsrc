@@ -39,6 +39,7 @@ test_setup()
 	TASK_FONTS_SUCCESS="yes"
 	TASK_FUNCTION_SUCCESS="yes"
 	TASK_GROUPS_SUCCESS="yes"
+	TASK_ICON_THEMES_SUCCESS="yes"
 	TASK_INFO_FILES_SUCCESS="yes"
 	TASK_OCAML_FINDLIB_SUCCESS="yes"
 	TASK_SHELLS_SUCCESS="yes"
@@ -70,6 +71,11 @@ task_function()
 task_groups()
 {
 	[ "${TASK_GROUPS_SUCCESS}" = "yes" ]
+}
+
+task_icon_themes()
+{
+	[ "${TASK_ICON_THEMES_SUCCESS}" = "yes" ]
 }
 
 task_info_files()
@@ -153,6 +159,18 @@ test5()
 
 test6()
 {
+	describe="icon_themes fail"
+	TASK_ICON_THEMES_SUCCESS="no"
+	if task_postremove "$datafile"; then
+		: "icon_themes result is ignored during postremove"
+	else
+		return 1
+	fi
+	return 0
+}
+
+test7()
+{
 	describe="info_files fail"
 	TASK_INFO_FILES_SUCCESS="no"
 	if task_postremove "$datafile"; then
@@ -163,7 +181,7 @@ test6()
 	return 0
 }
 
-test7()
+test8()
 {
 	describe="ocaml_findlib fail"
 	TASK_OCAML_FINDLIB_SUCCESS="no"
@@ -173,7 +191,7 @@ test7()
 	return 0
 }
 
-test8()
+test9()
 {
 	describe="shells fail"
 	TASK_SHELLS_SUCCESS="no"
@@ -183,7 +201,7 @@ test8()
 	return 0
 }
 
-test9()
+test10()
 {
 	describe="shlibs fail"
 	TASK_SHLIBS_SUCCESS="no"
@@ -193,7 +211,7 @@ test9()
 	return 0
 }
 
-test10()
+test11()
 {
 	describe="users fail"
 	TASK_USERS_SUCCESS="no"
@@ -203,7 +221,7 @@ test10()
 	return 0
 }
 
-test11()
+test12()
 {
 	describe="all succeed"
 	if task_postremove "$datafile"; then
