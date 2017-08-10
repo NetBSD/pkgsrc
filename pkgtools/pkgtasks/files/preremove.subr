@@ -36,6 +36,7 @@
 #	deleting the package files for the removal to be successful:
 #
 #	    o Unregister GNU info files.
+#	    o Remove GTK+ icon theme caches.
 #	    o Remove unmodified configuration files.
 #
 #	The datafile contains lines of the form:
@@ -51,6 +52,7 @@
 __task_preremove__="yes"
 
 task_load files
+task_load icon_themes
 task_load info_files
 task_load sort
 task_load taskfunc
@@ -62,7 +64,7 @@ task_preremove()
 
 	[ -f "$datafile" ] || return 1
 
-	local stage="preinstall"
+	local stage="preremove"
 
 	# Unregistering a GNU info files requires reading the file to find
 	# all nodes listed in the file, so it must be done before the file
@@ -70,6 +72,13 @@ task_preremove()
 	# non-fatal.
 	#
 	task_info_files -s remove $stage < $datafile
+
+	# GTK+ icon theme caches exist in the package installation
+	# directory, so they must be removed before their packages can be
+	# successfully removed.  Any errors in removing icon caches are
+	# non-fatal.
+	#
+	task_icon_themes -s remove $stage < $datafile
 
 	# Removing a configuration file requires comparing it to the
 	# example file from which it was copied, so it must be done before
