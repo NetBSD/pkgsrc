@@ -164,23 +164,25 @@ task_info_files()
 
 		line_result=0
 		case $action in
-		add)	# Remove any existing file entry from the "dir" file, even for
-			# the "add" action to guard against a duplicate entry when we
-			# add later.
+		add)	# Remove any existing file entry from the "dir" file
+			# to guard against a duplicate entry when we add later.
+			# Suppress the output since we don't care if the removal
+			# was successful or not.
 			#
-			if [ -f "$index" ]; then
-				${INSTALL_INFO} --delete "$file" "$index" >/dev/null 2>&1
-			fi
+			${INSTALL_INFO} --info-dir="$infodir" --delete "$file" >/dev/null 2>&1
 			# Add the file entry to the "dir" file.
-			[ -d "$infodir" ] || task_makedir "$infodir"
-			${INSTALL_INFO} "$file" "$index" || line_result=1
+			[ -d "$infodir" ] || task_makedir "$infodir" 2>/dev/null
+			[ -d "$infodir" ] || line_result=1
+			if [ $line_result -eq 0 ]; then
+				${INSTALL_INFO} --info-dir="$infodir" "$file" || line_result=1
+			fi
 			if [ $line_result -eq 0 ]; then
 				$echo "${TASK_MSG}> info file registered: $file"
 			else
 				$echo "${TASK_MSG}! info file not registered: $file"
 			fi ;;
 		remove)	if [ -f "$index" ]; then
-				${INSTALL_INFO} --delete "$file" "$index" || line_result=1
+				${INSTALL_INFO} --info-dir="$infodir" --delete "$file" || line_result=1
 				if [ $line_result -eq 0 ]; then
 					$echo "${TASK_MSG}> info file unregistered: $file"
 				else

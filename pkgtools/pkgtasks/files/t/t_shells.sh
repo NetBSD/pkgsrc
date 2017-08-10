@@ -26,6 +26,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 task_load createfile
+task_load makedir
 task_load shells
 task_load unittest
 
@@ -46,18 +47,14 @@ test_setup()
 # SHELL: bin/bash $shelldb
 # SHELL: ${PKG_PREFIX}/bin/pdksh $shelldb
 EOF
-
-	${MKDIR} -p etc
 }
 
 test_destdir_setup()
 {
-	: ${MKDIR:=mkdir}
 	: ${MV:=mv}
 
 	PKG_DESTDIR="${TEST_CURDIR}/destdir"
-	${MKDIR} -p "${PKG_DESTDIR}${PKG_PREFIX}"
-	${MV} etc "${PKG_DESTDIR}${PKG_PREFIX}"
+	task_makedir "${PKG_DESTDIR}${PKG_PREFIX}"
 }
 
 test1()
@@ -172,6 +169,7 @@ test7()
 test8()
 {
 	describe="check-remove shells with empty shell database"
+	task_makedir "${shelldb%/*}"
 	task_createfile "$shelldb"
 	if task_shells check-remove < $datafile; then
 		: "success"
@@ -319,6 +317,7 @@ test15()
 {
 	describe="check-remove shells with empty shell database"
 	test_destdir_setup
+	task_makedir "${PKG_DESTDIR}${PKG_PREFIX}/${shelldb%/*}"
 	task_createfile "${PKG_DESTDIR}${PKG_PREFIX}/$shelldb"
 	if task_shells check-remove < $datafile; then
 		: "success"

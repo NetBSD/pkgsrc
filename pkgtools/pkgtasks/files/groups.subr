@@ -157,7 +157,7 @@ task_groups()
 				task_group_exists "$group" "$gid"
 				case $? in
 				0)	# $group exists and has gid $gid
-					$echo "${TASK_MSG}! group already exists: $msg" ;;
+					$echo "${TASK_MSG}! group already exists: $group" ;;
 				1)	# neither $group nor $gid exist
 					if [ -z "$create" ]; then
 						$echo "${TASK_MSG}! group creation skipped: $msg"
@@ -178,7 +178,7 @@ task_groups()
 				esac
 			else
 				# add refcount failed; skip to next line
-				$echo "${TASK_MSG}! refcount add failure: groups $msg"
+				$echo "${TASK_MSG}! refcount add failure: groups $group"
 				result=1
 				continue
 			fi ;;
@@ -191,7 +191,7 @@ task_groups()
 				fi
 			else
 				# remove refcount failed
-				$echo "${TASK_MSG}! refcount remove failure: groups $msg"
+				$echo "${TASK_MSG}! refcount remove failure: groups $group"
 				line_result=1
 			fi ;;
 		check-add)

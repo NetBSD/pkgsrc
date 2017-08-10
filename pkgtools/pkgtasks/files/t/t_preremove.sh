@@ -36,6 +36,7 @@ test_setup()
 
 	TASK_FILES_SUCCESS="yes"
 	TASK_FUNCTION_SUCCESS="yes"
+	TASK_ICON_THEMES_SUCCESS="yes"
 	TASK_INFO_FILES_SUCCESS="yes"
 }
 
@@ -50,12 +51,17 @@ task_function()
 	[ "${TASK_FUNCTION_SUCCESS}" = "yes" ]
 }
 
+task_icon_themes()
+{
+	[ "${TASK_ICON_THEMES_SUCCESS}" = "yes" ]
+}
+
 task_info_files()
 {
 	[ "${TASK_INFO_FILES_SUCCESS}" = "yes" ]
 }
 
-# Always succeed.
+# Always succeed except if "function" task fails.
 
 test1()
 {
@@ -81,6 +87,18 @@ test2()
 
 test3()
 {
+	describe="icon_themes fail"
+	TASK_ICON_THEMES_SUCCESS="no"
+	if task_preremove "$datafile"; then
+		: "success"
+	else
+		return 1
+	fi
+	return 0
+}
+
+test4()
+{
 	describe="info_files fail"
 	TASK_INFO_FILES_SUCCESS="no"
 	if task_preremove "$datafile"; then
@@ -91,7 +109,7 @@ test3()
 	return 0
 }
 
-test4()
+test5()
 {
 	describe="all succeed"
 	if task_preremove "$datafile"; then

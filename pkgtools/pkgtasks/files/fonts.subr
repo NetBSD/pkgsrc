@@ -90,6 +90,9 @@
 #		String prepended to all normal message written to
 #		standard output.
 #
+#	TYPE1INST
+#		The name or path to the type1inst(1) utility.
+#
 #	TTMKFDIR
 #		The name or path to the ttmkfdir(1) utility.
 #

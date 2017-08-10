@@ -1,0 +1,221 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	icon_themes.subr -- icon theme cache management for packages
+#
+# SYNOPSIS
+#	task_icon_themes [-s] add | remove <stage>
+#
+# DESCRIPTION
+#	The task_icon_themes function supports two actions, "add" and
+#	"remove", that will add or remove the GTK+ icon caches from the
+#	theme directories.
+#
+#	The available options are as follows:
+#
+#	-s	Silent; don't write to standard output.
+#
+#	The task_icon_themes function reads standard input line by line
+#	and looks for lines of the form:
+#
+#	    # ICON_THEME: <themedir>
+#
+#	If the path to the theme directory is relative, then it is assumed
+#	to be relative to ${PKG_PREFIX}/share/icons.
+#
+# RETURN VALUES
+#	Returns 0 if the action is successful for all icon themes, and >0
+#	if an error occurs.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	GTK_UPDATE_ICON_CACHE
+#		The name or path to the GTK+ command to update the icon
+#		caches.  This is the fall-through default command if
+#		neither of the other two gtk-update-icon-cache(1)
+#		commands exist on the system.
+#
+#	GTK2_UPDATE_ICON_CACHE
+#		The name or path to the GTK+-2.x command to update the
+#		icon caches.
+#
+#	GTK3_UPDATE_ICON_CACHE
+#		The name or path to the GTK+-3.x command to update the
+#		icon caches.
+#
+#	PKGNAME
+#		The name of the package.
+#
+#	PKG_DESTDIR
+#		A "destdir" prefix that is prepended to all filesystem
+#		paths.  The default value is the empty string.
+#
+#	PKG_PREFIX
+#		The installation prefix of the package.  The default is
+#		"/usr/pkg".
+#
+#	RM	The name or path to the rm(1) utility.
+#
+#	TASK_MSG
+#		String prepended to all normal message written to
+#		standard output.
+#
+
+__task_icon_themes__="yes"
+
+task_load echo
+task_load which
+
+task_icon_themes()
+{
+	: ${RM:=rm}
+
+	: ${PKG_PREFIX:=/usr/pkg}
+	: ${PKGNAME:=${0##*/}}
+	: ${TASK_MSG:=""}
+
+	local arg
+	local echo="task_echo"
+	local OPTIND=1
+	while getopts ":s" arg "$@"; do
+		case $arg in
+		s)	echo=":" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+
+	local action="$1"; shift
+	local stage="$1"
+
+	case $action in
+	add|remove)
+		: "valid action" ;;
+	*)	return 0 ;;
+	esac
+
+	# Guard against ${PKG_PREFIX} == "/".
+	local prefix
+	case ${PKG_PREFIX}/ in
+	//)	prefix= ;;
+	*)	prefix=${PKG_PREFIX} ;;
+	esac
+
+	local result=0
+	local hash tag themedir
+	local theme cache update_cmd
+	while read hash tag themedir; do
+		# Filter for "# ICON_THEME:"
+		case $hash/$tag in
+		"#/ICON_THEME:")
+			: "use this line" ;;
+		*)	continue ;;
+		esac
+
+		# Canonicalize paths.
+		case $themedir in
+		"")	# skip lines without required args
+			continue ;;
+		[!/]*)	themedir="$prefix/share/icons/$themedir" ;;
+		esac
+		themedir="${PKG_DESTDIR}$themedir"
+		theme="$themedir/index.theme"
+		cache="$themedir/icon-theme.cache"
+
+		case "$action,$stage" in
+		remove,postremove)
+			: "avoid double removal of icon caches" ;;
+		remove,*)
+			if [ ! -f "$cache" ]; then
+				$echo "${TASK_MSG}> icon cache already removed: $themedir"
+			elif ${RM} -f "$cache"; then
+				$echo "${TASK_MSG}> icon cache removed: $themedir"
+			else
+				$echo "${TASK_MSG}! icon cache not removed: $themedir"
+				result=1
+			fi ;;
+		esac
+
+		# Update the icon caches during "add" action, but also during
+		# "remove" action at "postremove" stage if the theme directories
+		# still exist.
+		#
+		case "$action,$stage" in
+		add,*|remove,postremove)
+			# Set the command used to update the icon caches.
+			_task_icon_themes_cache_update_cmd
+			if [ "$__task_icon_themes_update_cmd__" != "missing" ]; then
+				update_cmd="$__task_icon_themes_update_cmd__"
+			fi
+			: ${update_cmd:=${GTK_UPDATE_ICON_CACHE:-true}}
+
+			if [ ! -f "$theme" ]; then
+				case $action in
+				add)	$echo "${TASK_MSG}! icon theme missing: $themedir"
+					result=1 ;;
+				remove)	: "silently skip updating" ;;
+				esac
+			elif [ -z "$update_cmd" ]; then
+				$echo "${TASK_MSG}! icon theme not cached - missing command: $themedir"
+				result=1
+			elif $update_cmd -f -q "$themedir"; then
+				$echo "${TASK_MSG}> icon theme cached: $themedir"
+			else
+				$echo "${TASK_MSG}! icon theme not cached: $themedir"
+				result=1
+			fi ;;
+		esac
+	done
+	return $result
+}
+
+_task_icon_themes_cache_update_cmd()
+{
+	: ${GTK2_UPDATE_ICON_CACHE:=gtk2-update-icon-cache}
+	: ${GTK3_UPDATE_ICON_CACHE:=gtk-update-icon-cache}
+
+	# Cache gtk-update-icon-cache(1) location.
+	if [ -z "$__task_icon_themes_update_cmd__" ]; then
+		local cmd
+		for cmd in \
+			"${GTK3_UPDATE_ICON_CACHE}" \
+			"${GTK2_UPDATE_ICON_CACHE}"
+		do
+			[ -n "$cmd" ] || continue
+			__task_icon_themes_update_cmd__=$( task_which "$cmd" )
+			[ -z "$__task_icon_themes_update_cmd__" ] || break
+		done
+		[ -n "$__task_icon_themes_update_cmd__" ] ||
+			__task_icon_themes_update_cmd__="missing"
+	fi
+}
+
+# Static variable for the path to the command that updates the icon cache.
+__task_icon_themes_update_cmd__=

@@ -101,6 +101,7 @@ __task_shells_init__="_task_shells_init"
 task_load cleanup
 task_load echo
 task_load lock
+task_load makedir
 task_load maketemp
 task_load match
 task_load quote
@@ -171,15 +172,21 @@ task_shells()
 		[!/]*)	shelldb="$prefix/$shelldb" ;;
 		esac
 		shelldb="${PKG_DESTDIR}$shelldb"
+		local shelldbdir=${shelldb%/*}
 
 		line_result=0
 		case $action in
 		add|remove)
-			lock="$shelldb.lock"
-			task_quote "$lock"
-			lock_quoted=$quoted
-			__task_shells_locks__="$lock_quoted $__task_shells_locks__"
-			task_lock "$lock" || line_result=1 ;;
+			# Ensure that the shelldb directory exists.
+			[ -d "$shelldbdir" ] || task_makedir "$shelldbdir" 2>/dev/null
+			[ -d "$shelldbdir" ] || line_result=1
+			if [ $line_result -eq 0 ]; then
+				lock="$shelldb.lock"
+				task_quote "$lock"
+				lock_quoted=$quoted
+				__task_shells_locks__="$lock_quoted $__task_shells_locks__"
+				task_lock "$lock" || line_result=1
+			fi ;;
 		esac
 		if [ $line_result -eq 0 ]; then
 			case $action in
