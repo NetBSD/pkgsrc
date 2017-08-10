@@ -29,7 +29,7 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 #
-# $NetBSD: header,v 1.5 2017/08/10 05:41:07 jlam Exp $
+# $NetBSD: header,v 1.6 2017/08/10 05:41:52 jlam Exp $
 
 # Package task loader.
 : ${TASK_MODULE_DIR:=@LOCALBASE@/share/pkgtasks-1}
@@ -163,5 +163,6 @@ CURDIR=$( ${PWD_CMD} )
 : ${PKG_INIT_SCRIPTS:=@PKG_INIT_SCRIPTS@}
 : ${PKG_REGISTER_SHELLS:=@PKG_REGISTER_SHELLS@}
 : ${PKG_UPDATE_FONTS_DB:=@PKG_UPDATE_FONTS_DB@}
+: ${PKG_FATAL_ERRORS:=@PKG_FATAL_ERRORS@}
 
 ### END: pkgsrc/mk/pkgformat/pkg/templates/header
