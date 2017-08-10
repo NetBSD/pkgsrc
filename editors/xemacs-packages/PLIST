@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2016/12/15 13:25:42 hauke Exp $
+@comment $NetBSD: PLIST,v 1.17 2017/08/10 12:02:08 hauke Exp $
 lib/xemacs/xemacs-packages/etc/BABYL
 lib/xemacs/xemacs-packages/etc/app-defaults/de/Emacs
 lib/xemacs/xemacs-packages/etc/app-defaults/fr/Emacs
@@ -4700,7 +4700,6 @@ lib/xemacs/xemacs-packages/lisp/leim/custom-load.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/leim/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/leim/cyrillic-tajik.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/leim/georgian.el${ELSUFX}
-lib/xemacs/xemacs-packages/lisp/leim/hebrew.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/leim/ipa-21.5.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/leim/latin-ltx.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/leim/leim-list.el${ELSUFX}
