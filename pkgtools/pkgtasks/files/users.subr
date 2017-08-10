@@ -128,7 +128,7 @@ task_users()
 	task_is_truthy "${PKG_CREATE_USERGROUP}" || create=
 
 	local result line_result
-	local save_IFS user group uid descr home shell msg
+	local save_IFS user group uid descr home shell msg submsg
 
 	result=0
 	local hash tag entry
@@ -147,14 +147,17 @@ task_users()
 		IFS=$save_IFS
 		[ -n "$user" -a -n "$group" ] || continue
 
-		if [ -n "$uid" ]; then
-			msg="$user (uid = $uid)"
-		else
+		submsg=
+		[ -z "$uid" ] || submsg="$submsg, uid = $uid"
+		[ -z "$group" ] || submsg="$submsg, group = $group"
+		[ -z "$home" ] || submsg="$submsg, home = $home"
+		[ -z "$shell" ] || submsg="$submsg, shell = $shell"
+		submsg="(${submsg#, })"
+		if [ "$submsg" = "()" ]; then
 			msg="$user"
+		else
+			msg="$user $submsg"
 		fi
-		msg="$msg: $group"
-		[ -z "$home" ] || msg="$msg, $home"
-		[ -z "$shell" ] || msg="$msg, $shell"
 
 		line_result=0
 		case $action in
@@ -162,7 +165,7 @@ task_users()
 				task_user_exists "$user" "$uid"
 				case $? in
 				0)	# $user exists and has uid $uid
-					$echo "${TASK_MSG}! user already exists: $msg" ;;
+					$echo "${TASK_MSG}! user already exists: $user" ;;
 				1)	# neither $user nor $uid exist
 					if [ -z "$create" ]; then
 						$echo "${TASK_MSG}! user creation skipped: $msg"
@@ -182,7 +185,7 @@ task_users()
 				esac
 			else
 				# add refcount failed; skip to next line
-				$echo "${TASK_MSG}! refcount add failure: users $msg"
+				$echo "${TASK_MSG}! refcount add failure: users $user"
 				result=1
 				continue
 			fi ;;
@@ -195,7 +198,7 @@ task_users()
 				fi
 			else
 				# remove refcount failed
-				$echo "${TASK_MSG}! refcount remove failure: users $msg"
+				$echo "${TASK_MSG}! refcount remove failure: users $user"
 				line_result=1
 			fi ;;
 		check-add)
