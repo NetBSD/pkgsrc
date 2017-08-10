@@ -27,7 +27,7 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 #
-# $NetBSD: deinstall,v 1.1 2017/06/01 02:09:43 jlam Exp $
+# $NetBSD: deinstall,v 1.2 2017/08/10 05:41:52 jlam Exp $
 
 case ${STAGE} in
 DEINSTALL)
@@ -36,19 +36,29 @@ DEINSTALL)
 	# Use the data in the shell comments appended at the end of
 	# the script.
 	#
+	# Failures during the "DEINSTALL" stage are fatal since the
+	# package files likely can't be removed properly if that
+	# happens.
+	#
 	task_preremove "${SELF}" || exit $?
 	;;
 
 POST-DEINSTALL)
 	task_load postremove
+	task_load truthy
 
 	# Use the data in the shell comments appended at the end of
 	# the script.
 	#
 	# Failures during the POST-DEINSTALL stage are non-fatal, so
-	# ignore the return value of the "postremove" task.
+	# ignore the return value of the "postremove" task unless
+	# ${PKG_FATAL_ERRORS} is truthy.
 	#
-	task_postremove "${SELF}"
+	if task_is_truthy "${PKG_FATAL_ERRORS}"; then
+		task_postremove "${SELF}" || exit $?
+	else
+		task_postremove "${SELF}"
+	fi
 	;;
 esac
 

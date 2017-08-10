@@ -27,7 +27,7 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 #
-# $NetBSD: install,v 1.1 2017/06/01 02:09:43 jlam Exp $
+# $NetBSD: install,v 1.2 2017/08/10 05:41:52 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -36,16 +36,29 @@ PRE-INSTALL)
 	# Use the data in the shell comments appended at the end of
 	# the script.
 	#
+	# Failures during the "PRE-INSTALL" stage are fatal since the
+	# package files likely can't be installed properly if that
+	# happens.
+	#
 	task_preinstall "${SELF}" || exit $?
 	;;
 
 POST-INSTALL)
 	task_load postinstall
+	task_load truthy
 
 	# Use the data in the shell comments appended at the end of
 	# the script.
 	#
-	task_postinstall "${SELF}" || exit $?
+	# Failures during the POST-INSTALL stage are non-fatal, so
+	# ignore the return value of the "postinstall" task unless
+	# ${PKG_FATAL_ERRORS} is truthy.
+	#
+	if task_is_truthy "${PKG_FATAL_ERRORS}"; then
+		task_postinstall "${SELF}" || exit $?
+	else
+		task_postinstall "${SELF}"
+	fi
 	;;
 esac
 
