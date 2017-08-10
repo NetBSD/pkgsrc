@@ -1,4 +1,4 @@
--- $NetBSD: Kyuafile,v 1.1 2017/06/01 02:06:05 jlam Exp $
+-- $NetBSD: Kyuafile,v 1.2 2017/08/10 05:41:07 jlam Exp $
 --[[-----------------------------------------------------------------------
 Copyright (c) 2017 The NetBSD Foundation, Inc.
 All rights reserved.
@@ -52,6 +52,7 @@ atf_test_program { name = "directories_test" }
 atf_test_program { name = "files_test" }
 atf_test_program { name = "fonts_test" }
 atf_test_program { name = "groups_test" }
+atf_test_program { name = "icon_themes_test" }
 atf_test_program { name = "info_files_test" }
 atf_test_program { name = "ocaml_findlib_test" }
 atf_test_program { name = "permissions_test" }
