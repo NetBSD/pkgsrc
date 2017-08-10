@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2017/06/05 14:24:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2017/08/10 14:00:11 wen Exp $
 #
 
-DISTNAME=	LaTeX-Encode-0.091.6
+DISTNAME=	LaTeX-Encode-0.092.0
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LaTeX/}
 
