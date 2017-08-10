@@ -1,0 +1,35 @@
+$NetBSD: patch-browser_components_preferences_in-content_advanced.xul,v 1.1 2017/08/10 14:46:15 ryoon Exp $
+
+--- browser/components/preferences/in-content/advanced.xul.orig	2017-07-31 16:20:48.000000000 +0000
++++ browser/components/preferences/in-content/advanced.xul
+@@ -37,12 +37,9 @@
+   <preference id="layout.spellcheckDefault"
+               name="layout.spellcheckDefault"
+               type="int"/>
+-
+-#ifdef MOZ_TELEMETRY_REPORTING
+   <preference id="toolkit.telemetry.enabled"
+               name="toolkit.telemetry.enabled"
+               type="bool"/>
+-#endif
+ 
+   <!-- Data Choices tab -->
+ #ifdef MOZ_CRASHREPORTER
+@@ -189,6 +186,9 @@
+     <!-- Data Choices -->
+     <tabpanel id="dataChoicesPanel" orient="vertical">
+ #ifdef MOZ_TELEMETRY_REPORTING
++      <description>&healthReportingDisabled.label;</description>
++      <separator class="thin"/>
++#endif
+       <groupbox>
+         <caption>
+           <checkbox id="submitHealthReportBox" label="&enableHealthReport.label;"
+@@ -216,7 +216,6 @@
+           </hbox>
+         </vbox>
+       </groupbox>
+-#endif
+ #ifdef MOZ_CRASHREPORTER
+       <groupbox>
+         <caption>

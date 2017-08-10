@@ -1,0 +1,25 @@
+$NetBSD: patch-media_libstagefright_gtest_moz.build,v 1.1 2017/08/10 14:46:15 ryoon Exp $
+
+--- media/libstagefright/gtest/moz.build.orig	2017-07-31 16:20:49.000000000 +0000
++++ media/libstagefright/gtest/moz.build
+@@ -38,12 +38,13 @@ TEST_HARNESS_FILES.gtest += [
+     'test_case_1351094.mp4',
+ ]
+ 
+-UNIFIED_SOURCES += ['TestMP4Rust.cpp',]
+-TEST_HARNESS_FILES.gtest += [
+-    '../../../dom/media/test/street.mp4',
+-]
+-LOCAL_INCLUDES += [
+-    '../binding/include',
+-]
++if CONFIG['MOZ_RUST']:
++    UNIFIED_SOURCES += ['TestMP4Rust.cpp',]
++    TEST_HARNESS_FILES.gtest += [
++        '../../../dom/media/test/street.mp4',
++    ]
++    LOCAL_INCLUDES += [
++        '../binding/include',
++    ]
+ 
+ FINAL_LIBRARY = 'xul-gtest'

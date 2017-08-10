@@ -1,0 +1,12 @@
+$NetBSD: patch-build_gyp.mozbuild,v 1.7 2017/08/10 14:46:15 ryoon Exp $
+
+--- build/gyp.mozbuild.orig	2017-07-31 16:20:49.000000000 +0000
++++ build/gyp.mozbuild
+@@ -16,6 +16,7 @@ gyp_vars.update({
+     'have_ethtool_cmd_speed_hi': 1 if CONFIG['MOZ_WEBRTC_HAVE_ETHTOOL_SPEED_HI'] else 0,
+     'include_alsa_audio': 1 if CONFIG['MOZ_ALSA'] else 0,
+     'include_pulse_audio': 1 if CONFIG['MOZ_PULSEAUDIO'] else 0,
++    'use_libv4l2': 1 if CONFIG['MOZ_LIBV4L2_LIBS'] else 0,
+     # basic stuff for everything
+     'include_internal_video_render': 0,
+     'clang': 1 if CONFIG['CLANG_CXX'] else 0,
