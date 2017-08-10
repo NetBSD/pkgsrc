@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkgtasks.mk,v 1.5 2017/08/10 05:41:07 jlam Exp $
+# $NetBSD: bsd.pkgtasks.mk,v 1.6 2017/08/10 05:41:53 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -52,6 +52,13 @@ _VARGROUPS+=	pkgtasks
 #	Possible: yes, no (case-insensitive)
 #	Default: yes
 #
+# PKG_FATAL_ERRORS
+#	User-settable variable for whether the return value of the
+#	{pre,post}{install,remove} meta-tasks is used or not.
+#
+#	Possible: yes, no (case-insensitive)
+#	Default: no
+#
 # PKG_INIT_SCRIPTS
 #	User-settable variable for whether to copy init scripts into
 #	the appropriate places for the init system to locate them,
@@ -81,12 +88,14 @@ _USER_VARS.pkgtasks+=	PKG_CONFIG PKG_CONFIG_PERMS PKG_INIT_SCRIPTS
 PKG_CONFIG?=		yes
 PKG_CONFIG_PERMS?=	no
 PKG_CREATE_USERGROUP?=	yes
+PKG_FATAL_ERRORS?=	no
 PKG_INIT_SCRIPTS?=	${PKG_RCD_SCRIPTS:Uno}	# deprecated
 PKG_REGISTER_SHELLS?=	yes
 PKG_UPDATE_FONTS_DB?=	yes
 FILES_SUBST+=		PKG_CONFIG=${PKG_CONFIG:tl:Q}
 FILES_SUBST+=		PKG_CONFIG_PERMS=${PKG_CONFIG_PERMS:tl:Q}
 FILES_SUBST+=		PKG_CREATE_USERGROUP=${PKG_CREATE_USERGROUP:tl:Q}
+FILES_SUBST+=		PKG_FATAL_ERRORS=${PKG_FATAL_ERRORS:tl:Q}
 FILES_SUBST+=		PKG_INIT_SCRIPTS=${PKG_INIT_SCRIPTS:tl:Q}
 FILES_SUBST+=		PKG_REGISTER_SHELLS=${PKG_REGISTER_SHELLS:tl:Q}
 FILES_SUBST+=		PKG_UPDATE_FONTS_DB=${PKG_UPDATE_FONTS_DB:tl:Q}
