@@ -26,6 +26,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 task_load createfile
+task_load makedir
 task_load ocaml_findlib
 task_load unittest
 
@@ -36,7 +37,7 @@ test_setup()
 	PKG_PREFIX=${TEST_CURDIR}
 	PKG_DESTDIR=
 
-	ldconf="ld.conf"
+	ldconf="lib/ocaml/ld.conf"
 	ldconf_lock="$ldconf.lock"
 
 	datafile="datafile"
@@ -50,11 +51,10 @@ EOF
 
 test_destdir_setup()
 {
-	: ${MKDIR:=mkdir}
 	: ${MV:=mv}
 
 	PKG_DESTDIR="${TEST_CURDIR}/destdir"
-	${MKDIR} -p "${PKG_DESTDIR}${PKG_PREFIX}"
+	task_makedir "${PKG_DESTDIR}${PKG_PREFIX}"
 }
 
 test1()
@@ -174,6 +174,7 @@ test7()
 test8()
 {
 	describe="check-remove findlib dirs with empty ld.conf"
+	task_makedir "${ldconf%/*}"
 	task_createfile "$ldconf"
 	if task_ocaml_findlib check-remove < $datafile; then
 		: "success"
@@ -326,6 +327,7 @@ test15()
 {
 	describe="check-remove findlib dirs with empty ld.conf with PKG_DESTDIR"
 	test_destdir_setup
+	task_makedir "${PKG_DESTDIR}${PKG_PREFIX}/${ldconf%/*}"
 	task_createfile "${PKG_DESTDIR}${PKG_PREFIX}/$ldconf"
 	if task_ocaml_findlib check-remove < $datafile; then
 		: "success"
