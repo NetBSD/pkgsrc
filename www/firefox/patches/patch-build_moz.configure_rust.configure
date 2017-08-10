@@ -1,6 +1,6 @@
-$NetBSD: patch-build_moz.configure_rust.configure,v 1.1 2017/06/14 11:28:44 ryoon Exp $
+$NetBSD: patch-build_moz.configure_rust.configure,v 1.2 2017/08/10 14:46:15 ryoon Exp $
 
---- build/moz.configure/rust.configure.orig	2017-06-05 20:45:15.000000000 +0000
+--- build/moz.configure/rust.configure.orig	2017-07-31 16:20:49.000000000 +0000
 +++ build/moz.configure/rust.configure
 @@ -4,10 +4,20 @@
  # License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -42,3 +42,30 @@ $NetBSD: patch-build_moz.configure_rust.configure,v 1.1 2017/06/14 11:28:44 ryoo
      if not rustc_info:
          die(dedent('''\
          Rust compiler not found.
+@@ -97,6 +110,9 @@ def rust_compiler(rustc_info, cargo_info
+ 
+     return True
+ 
++set_define('MOZ_RUST', rust_compiler)
++set_config('MOZ_RUST', rust_compiler)
++
+ @template
+ def rust_triple_alias(host_or_target):
+     """Template defining the alias used for rustc's --target flag.
+@@ -227,7 +243,8 @@ set_config('RUST_HOST_TARGET', rust_host
+ 
+ @depends(rust_target_triple)
+ def rust_target_env_name(triple):
+-    return triple.upper().replace('-','_')
++    if triple:
++        return triple.upper().replace('-','_')
+ 
+ # We need this to form various Cargo environment variables, as there is no
+ # uppercase function in make, and we don't want to shell out just for
+@@ -235,5 +252,6 @@ def rust_target_env_name(triple):
+ set_config('RUST_TARGET_ENV_NAME', rust_target_env_name)
+ 
+ # Until we remove all the other Rust checks in old-configure.
++add_old_configure_assignment('MOZ_RUST', rust_compiler)
+ add_old_configure_assignment('RUSTC', rustc)
+ add_old_configure_assignment('RUST_TARGET', rust_target_triple)
