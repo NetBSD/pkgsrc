@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/05/31 08:24:38 adam Exp $
+# $NetBSD: Makefile,v 1.13 2017/08/10 07:14:27 jperkin Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 
@@ -23,7 +23,7 @@ EGDIR=		share/examples/${PKGBASE}
 
 PLIST_SUBST+=	EGDIR=${EGDIR}
 
-INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR}
 
 post-install:
 .for i in console.png less.png more.png source.png
