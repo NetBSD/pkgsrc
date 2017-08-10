@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2016/12/15 13:25:42 hauke Exp $
+$NetBSD: distinfo,v 1.25 2017/08/10 12:02:08 hauke Exp $
 
 SHA1 (xemacs-packages/Sun-1.19-pkg.tar.gz) = de24d0bf78e753e733138c6a2bec0ecf414511e0
 RMD160 (xemacs-packages/Sun-1.19-pkg.tar.gz) = 5f6bec6276f8b5a59ea6532f12c06a474571a274
@@ -240,10 +240,10 @@ SHA1 (xemacs-packages/latin-unity-1.23-pkg.tar.gz) = 9bf28839fcedbc7011fb33595b7
 RMD160 (xemacs-packages/latin-unity-1.23-pkg.tar.gz) = 630410e0ca80de8bd57dce27259ef3b42b177371
 SHA512 (xemacs-packages/latin-unity-1.23-pkg.tar.gz) = fa31cb7c392edb0ae8d481f4a0ac47acb375f4d2da79e0d8eedddf37094b6a425d4ffda32abbc485e4c0711b71d4480378c6dcc17ebe1727df676d313d79f2ab
 Size (xemacs-packages/latin-unity-1.23-pkg.tar.gz) = 108216 bytes
-SHA1 (xemacs-packages/leim-1.38-pkg.tar.gz) = 836f27b488c9a66cdcd0f4ea7b3d0ada6cc68b22
-RMD160 (xemacs-packages/leim-1.38-pkg.tar.gz) = 8a3e072fb4738907655f41d6192e3465b460295f
-SHA512 (xemacs-packages/leim-1.38-pkg.tar.gz) = 308eba0e66d52bc2cc76a2a4b4acd3735537f3f792af7a1c8402f8b1cfbe0b0230a635597ff6465a0bb8f04d0e590ea612bd8b88f59129a29ffda4f50a159f3c
-Size (xemacs-packages/leim-1.38-pkg.tar.gz) = 1817494 bytes
+SHA1 (xemacs-packages/leim-1.31-pkg.tar.gz) = 392c46cf615a520bd2cea8f6822bbf5357b21125
+RMD160 (xemacs-packages/leim-1.31-pkg.tar.gz) = ccf5b8b6d0c8a6565080c82cf39a64541646a35b
+SHA512 (xemacs-packages/leim-1.31-pkg.tar.gz) = 1179480967e12a7a9701cba24e40f6bdeb51e57fe32e7f4ead4196e652029fa04e0470dfdbc5aecd4a0caf0b53893a815559c5c550d9dacf7e724c898ce6f26f
+Size (xemacs-packages/leim-1.31-pkg.tar.gz) = 1804784 bytes
 SHA1 (xemacs-packages/locale-1.30-pkg.tar.gz) = d26176705ec32d0a58fc81a48ca645acc28e0293
 RMD160 (xemacs-packages/locale-1.30-pkg.tar.gz) = 525175892b9dd119dde3755cdd85e25fa17adf34
 SHA512 (xemacs-packages/locale-1.30-pkg.tar.gz) = 81842412baf4bca27bac502e79d77bb9ef02ed12f1df6523fcd0c136a6c950afd8b2bf7fc0e4589e7c298141ab8a9a4cc8d125f727675f35c5b8d1bc008176d3
