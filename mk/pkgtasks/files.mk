@@ -1,4 +1,4 @@
-# $NetBSD: files.mk,v 1.5 2017/08/10 05:37:32 jlam Exp $
+# $NetBSD: files.mk,v 1.6 2017/08/10 05:37:44 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -107,8 +107,8 @@ _REQD_FILES_PERMS=	${REQD_FILES_PERMS:S|^${PREFIX}/||g}
 __INIT_SCRIPTS=		${_INIT_SCRIPTS:S|^${PREFIX}/||g}
 __INIT_SCRIPTS_PERMS=	${_INIT_SCRIPTS_PERMS:S|^${PREFIX}/||g}
 
-# Assert that the variables have the right number of words and
-# that no target file is listed in more than one variable.
+# ASSERT: The variables have the right number of words and that
+#	no target file is listed in more than one variable.
 #
 _ALL_TARGET_FILES.files=	# empty
 .for _var_ in CONF_FILES REQD_FILES _INIT_SCRIPTS
@@ -158,9 +158,9 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}
 _ALL_DIRS.directories+=	${PKG_SYSCONFDIR}
 .endif
 
-# Assert that the directories that contain target files are listed in
-# one of the directory variables.  This makes use of
-# ${_ALL_DIRS.directories}, which is defined in directories.mk.
+# ASSERT: The directories that contain target files are listed in
+#	one of the directory variables.  This makes use of
+#	${_ALL_DIRS.directories}, which is defined in directories.mk.
 #
 .for t in ${_ALL_TARGET_FILES.files:O:u}
 _FILEMATCH.${t}=	${_ALL_DIRS.directories:@d@${t:M${d}/*}@}
