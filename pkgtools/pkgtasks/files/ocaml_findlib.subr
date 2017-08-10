@@ -102,6 +102,7 @@ __task_ocaml_findlib_init__="_task_ocaml_findlib_init"
 task_load cleanup
 task_load echo
 task_load lock
+task_load makedir
 task_load maketemp
 task_load match
 task_load quote
@@ -173,15 +174,21 @@ task_ocaml_findlib()
 		[!/]*)	ldconf="$prefix/$ldconf" ;;
 		esac
 		ldconf="${PKG_DESTDIR}$ldconf"
+		local ldconfdir=${ldconf%/*}
 
 		line_result=0
 		case $action in
 		add|remove)
-			lock="$ldconf.lock"
-			task_quote "$lock"
-			lock_quoted=$quoted
-			__task_ocaml_findlib_locks__="$quoted $__task_ocaml_findlib_locks__"
-			task_lock "$lock" || line_result=1
+			# Ensure that the ld.conf directory exists.
+			[ -d "$ldconfdir" ] || task_makedir "$ldconfdir" 2>/dev/null
+			[ -d "$ldconfdir" ] || line_result=1
+			if [ $line_result -eq 0 ]; then
+				lock="$ldconf.lock"
+				task_quote "$lock"
+				lock_quoted=$quoted
+				__task_ocaml_findlib_locks__="$quoted $__task_ocaml_findlib_locks__"
+				task_lock "$lock" || line_result=1
+			fi ;;
 		esac
 		if [ $line_result -eq 0 ]; then
 			case $action in

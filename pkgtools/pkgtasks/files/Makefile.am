@@ -25,9 +25,12 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-doc_DATA = AUTHORS COPYING README.md
+doc_DATA = AUTHORS COPYING NEWS.md README.md
 noinst_DATA = README.md
 EXTRA_DIST = $(doc_DATA)
+MAINTAINERCLEANFILES = Makefile.in aclocal.m4
+MAINTAINERCLEANFILES += build-aux/install-sh build-aux/missing
+MAINTAINERCLEANFILES += configure $(DIST_ARCHIVES)
 
 PHONY_TARGETS = 
 
@@ -54,6 +57,7 @@ dist_pkgdata_DATA += echo.subr
 dist_pkgdata_DATA += files.subr
 dist_pkgdata_DATA += fonts.subr
 dist_pkgdata_DATA += groups.subr
+dist_pkgdata_DATA += icon_themes.subr
 dist_pkgdata_DATA += info_files.subr
 dist_pkgdata_DATA += load.subr
 dist_pkgdata_DATA += lock.subr
@@ -182,6 +186,14 @@ EXTRA_DIST += t/t_groups.sh
 t/t_groups: t/t_groups.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_groups" source="$(srcdir)/t/t_groups.sh"; \
+	$(BUILD_TEST)
+
+pkgtests_SCRIPTS += t/t_icon_themes
+CLEANFILES += t/t_icon_themes
+EXTRA_DIST += t/t_icon_themes.sh
+t/t_icon_themes: t/t_icon_themes.sh t/build_test
+	-$(MKDIR_P) $(builddir)/t
+	$(AM_V_GEN)target="$(builddir)/t/t_icon_themes" source="$(srcdir)/t/t_icon_themes.sh"; \
 	$(BUILD_TEST)
 
 pkgtests_SCRIPTS += t/t_info_files
@@ -490,7 +502,14 @@ check-local: check-run-tests
 installcheck-local: installcheck-run-tests
 endif # HAVE_KYUA
 
-maintainer-clean-local:
-	-rm -f Makefile.in aclocal.m4 configure
-	-rm -f build-aux/install-sh build-aux/missing
-	-rm -f $(PACKAGE)-*.tar.*
+# Duplicate Automake's check-news target, but verify NEWS.md instead of NEWS.
+dist-hook: check-news-local
+PHONY_TARGETS += check-news-local
+check-news-local:
+	@newsfile="$(srcdir)/NEWS.md"; \
+	case `sed 15q "$$newsfile"` in \
+	*"$(VERSION)"*) : ;; \
+	*) \
+		echo "$$newsfile not updated; not releasing" 1>&2; \
+		exit 1;; \
+	esac

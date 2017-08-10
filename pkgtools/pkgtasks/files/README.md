@@ -26,7 +26,7 @@ same entry more than once.
 Getting sources
 ---------------
 
-The latest version of *pkgtasks* is 1.10 and was released on June 3rd, 2017.
+The latest version of *pkgtasks* is 1.13 and was released on August 8th, 2017.
 
 See the [release notes](NEWS.md) for information about the changes in this
 and all previous releases.
@@ -52,6 +52,7 @@ The individual package tasks supported by *pkgtasks* are:
   * `files`: copy and remove configuration files
   * `fonts`: regenerate X11 font indices
   * `groups`: create groups and warn about groups that may be removed
+  * `icon_themes`: create caches in GTK+ icon theme directories
   * `info_files`: register and unregister GNU info files
   * `ocaml_findlib`: update OCaml findlib search paths
   * `permissions`: check and set modes and permissions on special files
