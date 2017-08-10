@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3148 2017/08/09 12:23:50 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.3149 2017/08/10 05:40:38 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4376,3 +4376,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated wm/i3 to 4.13 [nros 2017-08-09]
 	Updated mail/qmail-run to 20170805nb1 [schmonz 2017-08-09]
 	Updated sysutils/daemontools-run to 20170805 [schmonz 2017-08-09]
+	Updated pkgtools/pkgtasks to 1.13 [jlam 2017-08-10]
