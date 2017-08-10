@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2017/08/01 11:48:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.83 2017/08/10 18:49:17 tron Exp $
 
 DISTNAME=	gpgme-1.8.0
 PKGREVISION=	1
@@ -28,6 +28,7 @@ SUBST_SED.pthread+=	-e 's,@PTHREAD_LIBS@,${PTHREAD_LDFLAGS} ${PTHREAD_LIBS},g'
 SUBST_SED.pthread+=	-e 's,@PTHREAD_CFLAGS@,${PTHREAD_CFLAGS},g'
 SUBST_STAGE.pthread=	post-patch
 
+CPPFLAGS.Darwin=	-D_POSIX_C_SOURCE=200809L
 LIBS.SunOS+=		-lnsl -lsocket
 
 # getenv_r is not detected correctly. It will be found
