@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3153 2017/08/10 14:01:15 wen Exp $
+$NetBSD: CHANGES-2017,v 1.3154 2017/08/10 14:46:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4381,3 +4381,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-XML-Tidy to 1.20 [wen 2017-08-10]
 	Updated textproc/p5-XML-SAX-Writer to 0.57 [wen 2017-08-10]
 	Updated print/p5-LaTeX-Encode to 0.092.0 [wen 2017-08-10]
+	Updated www/firefox to 55.0 [ryoon 2017-08-10]
