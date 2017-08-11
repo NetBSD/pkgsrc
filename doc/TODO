@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17561 2017/08/11 01:17:59 ryoon Exp $
+$NetBSD: TODO,v 1.17562 2017/08/11 01:30:38 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1488,7 +1488,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o strace-4.18
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
-	o stunnel-5.42
 	o subtitleeditor-0.52.1
 	o superlu-5.1.1
 	o supertux-0.5
