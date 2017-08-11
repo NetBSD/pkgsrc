@@ -1,6 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/12 22:40:05 snj Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/08/11 15:26:20 nros Exp $
 include/FreeImage.h
 lib/libfreeimage-${PKGVERSION_NOREV}.so
 lib/libfreeimage.a
 lib/libfreeimage.so
 lib/libfreeimage.so.3
+share/doc/freeimage/LICENSE.LibJXR
+share/doc/freeimage/LICENSE.LibTIFF4
+share/doc/freeimage/LICENSE.LibWebP
+share/doc/freeimage/LICENSE.OpenEXR
+share/doc/freeimage/LICENSE.OpenJPEG
+share/doc/freeimage/LICENSE.dcb
+share/doc/freeimage/LICENSE.x3f
