@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/02/28 14:40:47 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/08/11 16:09:47 nros Exp $
 bin/cwebp
 bin/dwebp
 bin/gif2webp
@@ -22,3 +22,4 @@ man/man1/cwebp.1
 man/man1/dwebp.1
 man/man1/gif2webp.1
 man/man1/webpmux.1
+share/doc/libwebp/COPYING
