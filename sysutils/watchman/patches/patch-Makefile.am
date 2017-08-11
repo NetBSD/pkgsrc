@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.am,v 1.1 2017/08/11 16:37:04 nros Exp $
+* Install license to comply with apache-v2 license and redistribution
+--- Makefile.am.orig	2017-08-11 16:16:43.000000000 +0000
++++ Makefile.am
+@@ -2,7 +2,7 @@ bin_PROGRAMS = watchman
+ # ensure that we have a reasonable default for the python install
+ DESTDIR ?= /
+ 
+-doc_DATA = README.markdown
++doc_DATA = README.markdown LICENSE
+ docdir = ${prefix}/share/doc/watchman-$(VERSION)
+ 
+ THIRDPARTY_CPPFLAGS = -I$(top_srcdir)/thirdparty/jansson -I$(top_builddir)/thirdparty/jansson
