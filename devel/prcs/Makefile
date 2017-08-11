@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2016/07/09 06:38:12 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2017/08/11 22:17:34 maya Exp $
 
 DISTNAME=		prcs-1.3.3
 PKGREVISION=		12
@@ -22,8 +22,6 @@ CONFIGURE_ENV+=		SYS_GZIP_COMMAND_PATH=${TOOLS_GZIP_CMD:Q}
 CONFIGURE_ENV+=		SYS_TAR_COMMAND_PATH=${TOOLS_TAR:Q}
 CONFIGURE_ENV+=		SYS_LS_COMMAND_PATH=${TOOLS_LS:Q}
 USE_TOOLS+=		diff:run gzip:run ls:run tar:run perl:run
-
-GCC_REQD+=		3.0
 
 REPLACE_INTERPRETER+=	perl5
 REPLACE.perl5.old=	.*perl[^[:space:]]*
