@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2017/05/17 10:37:07 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2017/08/11 01:17:07 ryoon Exp $
 
-DISTNAME=		convmv-2.01
+DISTNAME=		convmv-2.03
 CATEGORIES=		converters
-MASTER_SITES=		http://www.j3e.de/linux/convmv/
+MASTER_SITES=		https://www.j3e.de/linux/convmv/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://j3e.de/linux/convmv/
