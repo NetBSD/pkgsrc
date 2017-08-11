@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2016/11/01 14:54:01 fhajny Exp $
+# $NetBSD: Makefile,v 1.10 2017/08/11 16:37:04 nros Exp $
 
 DISTNAME=	watchman-4.7.0
 CATEGORIES=	sysutils
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=facebook/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
