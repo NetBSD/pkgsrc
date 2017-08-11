@@ -1,4 +1,6 @@
-$NetBSD: patch-stunnel.conf-sample.in,v 1.1 2016/08/29 19:21:24 jym Exp $
+$NetBSD: patch-stunnel.conf-sample.in,v 1.2 2017/08/11 01:30:23 schmonz Exp $
+
+Set pkgsrc defaults: uid, gid, chroot, pidfile.
 
 --- tools/stunnel.conf-sample.in.orig	2016-07-05 21:27:57.000000000 +0000
 +++ tools/stunnel.conf-sample.in
