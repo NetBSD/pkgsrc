@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17560 2017/08/07 18:01:46 adam Exp $
+$NetBSD: TODO,v 1.17561 2017/08/11 01:17:59 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -526,7 +526,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o colortail-0.3.3
 	o compiz-0.8.10
 	o cone-0.92
-	o convmv-2.03
 	o cook-2.31
 	o courier-0.77.0
 	o courier-authlib-0.66.2
