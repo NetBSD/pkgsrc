@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2017/07/28 19:33:24 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2017/08/11 01:12:43 ryoon Exp $
 
-DISTNAME=	gnupg-2.1.22
+DISTNAME=	gnupg-2.1.23
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg21-/}
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/
@@ -22,6 +22,7 @@ USE_LIBTOOL=		yes
 INFO_FILES=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-g13
+CONFIGURE_ARGS+=	--enable-gpg-is-gpg2
 
 # one test failure in 2.1.20, fixed upstream; see
 # https://dev.gnupg.org/T3047
