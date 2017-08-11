@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/04/15 15:48:12 kim Exp $
+# $NetBSD: Makefile,v 1.23 2017/08/11 16:09:47 nros Exp $
 
 DISTNAME=	libwebp-0.6.0
 PKGREVISION=	1
@@ -29,6 +29,16 @@ CPPFLAGS += -D__pic__
 .endif
 
 PKGCONFIG_OVERRIDE+=	src/libwebp.pc.in
+PKGCONFIG_OVERRIDE+=    src/libwebpdecoder.pc.in
+PKGCONFIG_OVERRIDE+=    src/demux/libwebpdemux.pc.in
+PKGCONFIG_OVERRIDE+=    src/mux/libwebpmux.pc.in
+
+INSTALLATION_DIRS+=	share/doc/${PKGBASE}
+
+#Needed to comply with the BSD license and redistribution
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/COPYING \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
