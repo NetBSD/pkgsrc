@@ -1,4 +1,4 @@
-LuaRocks is  a deployment and management system for Lua modules.
+LuaRocks is a deployment and management system for Lua modules.
 
 It allows you to install Lua modules as self-contained packages
 called rocks, which also contain version dependency information.
