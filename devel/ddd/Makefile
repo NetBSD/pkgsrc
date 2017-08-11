@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2015/07/04 16:18:29 joerg Exp $
+# $NetBSD: Makefile,v 1.79 2017/08/11 22:17:34 maya Exp $
 #
 
 DISTNAME=	ddd-3.3.12
@@ -18,8 +18,6 @@ TEST_TARGET=		check
 BUILD_DEFS+=		PAPERSIZE
 USE_TOOLS+=		gmake gzip
 USE_LANGUAGES=		c c++
-
-GCC_REQD+=		3.0
 
 CONFIGURE_ARGS+=	--with-ncurses=no
 CONFIGURE_ENV+=		COMPFACE=${FALSE:Q}

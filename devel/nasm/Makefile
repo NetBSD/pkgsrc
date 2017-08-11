@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2017/05/18 21:44:42 adam Exp $
+# $NetBSD: Makefile,v 1.55 2017/08/11 22:17:34 maya Exp $
 
 DISTNAME=	nasm-2.13.01
 CATEGORIES=	devel lang
@@ -13,7 +13,6 @@ LICENSE=	2-clause-bsd
 #AUTO_MKDIRS=		yes
 
 USE_TOOLS+=		gmake makeinfo perl
-GCC_REQD+=		3.0
 GNU_CONFIGURE=		yes
 
 BUILD_TARGET=		everything

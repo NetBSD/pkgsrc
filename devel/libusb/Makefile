@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2016/12/03 04:19:05 marino Exp $
+# $NetBSD: Makefile,v 1.40 2017/08/11 22:17:34 maya Exp $
 
 DISTNAME=	libusb-0.1.12
 PKGREVISION=	4
@@ -11,7 +11,6 @@ COMMENT=	USB access library (version 0)
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c c++
-GCC_REQD+=		3.3
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-build-docs
