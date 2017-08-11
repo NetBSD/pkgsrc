@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: pbulk.sh,v 1.4 2017/07/25 22:45:21 sevan Exp $
+# $Id: pbulk.sh,v 1.5 2017/08/11 19:20:20 sevan Exp $
 set -e
 
 usage="usage: ${0##*/} [-lun] [-c mk.conf.fragment] [-d nodes]"
@@ -194,10 +194,7 @@ fi
 # Keep "packages" in pbulk.conf and "PACKAGES" in mk.conf fragment in sync.
 
 # Final preparations:
-mkdir -p ${PACKAGES}/All
-if [ ! -n "$unprivileged" ]; then
-chown pbulk:"$(id -gn pbulk)" ${PACKAGES}
-fi
+mkdir -p ${PACKAGES}
 
 # Let's start:
 #PACKAGES=${PACKAGES} WRKOBJDIR=${TMPDIR} ${PBULKPREFIX}/bin/bulkbuild
