@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3160 2017/08/11 01:30:38 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.3161 2017/08/11 02:55:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4388,3 +4388,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/gnupg21 to 2.1.23 [ryoon 2017-08-11]
 	Updated converters/convmv to 2.03 [ryoon 2017-08-11]
 	Updated security/stunnel to 5.42 [schmonz 2017-08-11]
+	Updated www/php-owncloud to 10.0.2 [ryoon 2017-08-11]
