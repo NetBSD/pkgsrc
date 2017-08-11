@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3156 2017/08/10 19:08:38 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.3157 2017/08/11 01:00:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4384,3 +4384,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/firefox to 55.0 [ryoon 2017-08-10]
 	Updated www/firefox-l10n to 55.0 [ryoon 2017-08-10]
 	Updated net/Radicale2 to 2.1.4 [prlw1 2017-08-10]
+	Updated textproc/pdfgrep to 2.0.1 [ryoon 2017-08-11]
