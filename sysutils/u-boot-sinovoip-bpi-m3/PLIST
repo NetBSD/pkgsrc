@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/12 14:24:17 jmcneill Exp $
+share/u-boot/sinovoip-bpi-m3/u-boot-sunxi-with-spl.bin
