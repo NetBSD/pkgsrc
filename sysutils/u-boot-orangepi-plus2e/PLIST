@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/12 14:29:11 jmcneill Exp $
+share/u-boot/orangepi-plus2e/u-boot-sunxi-with-spl.bin
