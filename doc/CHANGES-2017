@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3167 2017/08/12 14:15:25 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.3168 2017/08/12 14:33:11 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4395,3 +4395,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/jenkins to 2.73 [ryoon 2017-08-12]
 	Updated textproc/mandoc to 1.14.3 [wiz 2017-08-12]
 	Updated multimedia/adobe-flash-player to 26.0.0.151 [tsutsui 2017-08-12]
+	Added sysutils/u-boot-nanopi-neo version 2017.07 [jmcneill 2017-08-12]
+	Added sysutils/u-boot-orangepi-plus2e version 2017.07 [jmcneill 2017-08-12]
+	Added sysutils/u-boot-sinovoip-bpi-m3 version 2017.07 [jmcneill 2017-08-12]
