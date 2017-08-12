@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.287 2017/08/10 14:46:15 ryoon Exp $
+$NetBSD: distinfo,v 1.288 2017/08/12 04:58:45 ryoon Exp $
 
-SHA1 (firefox-55.0.source.tar.xz) = b22a4b66fc7af4706d0838ef2a1d0639bc184055
-RMD160 (firefox-55.0.source.tar.xz) = 2cf480a5b96e6fa983aa3f0789b2ad4bcb2e7eec
-SHA512 (firefox-55.0.source.tar.xz) = b3ca0a926faedfc12c859965629330489ac6c05730a0dc38748704a1a25e876decfba78a3d665e22a6773b0a3bfed3109cd624be77d130785b4097d6d9f9c94b
-Size (firefox-55.0.source.tar.xz) = 235014712 bytes
+SHA1 (firefox-55.0.1.source.tar.xz) = 8ec2a864e277b4acc31ea96806aae3b90f1a4038
+RMD160 (firefox-55.0.1.source.tar.xz) = 38156cc7207d0ac4c9df2d5f997912aef40c22b1
+SHA512 (firefox-55.0.1.source.tar.xz) = 2c15cb3e1a9f464f63ff7ac8ccf0625ed845a5cb9b186d7acf121c439cec38bcdeee93630e99dbfd336f1b7e60a7c09822a1eba59f308bba8866f155b2ed1c47
+Size (firefox-55.0.1.source.tar.xz) = 236278024 bytes
 SHA1 (patch-aa) = 373af8f1df58d20e015b231625e60914554fb779
 SHA1 (patch-browser_base_content_baseMenuOverlay.xul) = 1d8959e2df0b546e381cf0e5af71808e8e7bebd7
 SHA1 (patch-browser_components_nsBrowserGlue.js) = c27a9a57056ed3227e60f5663d9275ef4204ab39
