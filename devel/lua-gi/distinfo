@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:27:47 agc Exp $
+$NetBSD: distinfo,v 1.7 2017/08/12 15:46:56 triaxx Exp $
 
-SHA1 (lgi-0.9.0.tar.gz) = f06eb973e6d4a4460ac6a491758c844ced87c238
-RMD160 (lgi-0.9.0.tar.gz) = 6526d092d4ce6c664bdd2642f6c49e6d6d1d2c65
-SHA512 (lgi-0.9.0.tar.gz) = 1a486a40f504740224b1d277368df65e0a30708c02422390517c2fbf961b5fec264bdbc695d306e2f5fb2aa8ad4539212ef5314b18f45e3b488fd5f492a19f9e
-Size (lgi-0.9.0.tar.gz) = 285248 bytes
-SHA1 (patch-lgi_Makefile) = fb6adb9a4bd6257581a9d102646c6a4db755f59c
+SHA1 (lgi-0.9.1.tar.gz) = 6fd93e28988b2fea1fb527ec6fb40a8c20e06c85
+RMD160 (lgi-0.9.1.tar.gz) = 0bec20dc3a3ae9e51155f10bca507ee6683d2f1d
+SHA512 (lgi-0.9.1.tar.gz) = f8ebb18610262fa0019f5c301beb2388b45ec21756f734627ba1a8db4a923fbbaafee20e70a4d2bb9efb6163656a19511a85304fd9fce8ff982aeb8cc195e78a
+Size (lgi-0.9.1.tar.gz) = 287130 bytes
+SHA1 (patch-lgi_Makefile) = b74dd92555ab30aadf61cb2a5799ddce54339b8b
