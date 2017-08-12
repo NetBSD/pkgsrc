@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3170 2017/08/12 15:51:49 triaxx Exp $
+$NetBSD: CHANGES-2017,v 1.3171 2017/08/12 21:07:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4399,3 +4399,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/u-boot-orangepi-plus2e version 2017.07 [jmcneill 2017-08-12]
 	Added sysutils/u-boot-sinovoip-bpi-m3 version 2017.07 [jmcneill 2017-08-12]
 	Updated devel/lua-gi to 0.9.1 [triaxx 2017-08-12]
+	Updated devel/cmake to 3.9.1 [adam 2017-08-12]
