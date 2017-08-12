@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.706 2017/07/27 04:05:50 schmonz Exp $
+# $NetBSD: Makefile,v 1.707 2017/08/12 14:31:41 jmcneill Exp $
 #
 
 COMMENT=	System utilities
@@ -583,6 +583,9 @@ SUBDIR+=	tpb
 SUBDIR+=	tphdisk
 SUBDIR+=	tree
 SUBDIR+=	ts
+SUBDIR+=	u-boot-nanopi-neo
+SUBDIR+=	u-boot-orangepi-plus2e
+SUBDIR+=	u-boot-sinovoip-bpi-m3
 SUBDIR+=	upower
 SUBDIR+=	ups-nut
 SUBDIR+=	ups-nut-cgi
