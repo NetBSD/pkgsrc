@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2017/06/04 19:17:51 adam Exp $
+# $NetBSD: Makefile,v 1.46 2017/08/12 19:17:50 wiz Exp $
 
 DISTNAME=	lxml-3.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,10 +12,10 @@ LICENSE=	modified-bsd
 
 # as of 3.6.1, two test failures on NetBSD, see
 # https://bugs.launchpad.net/lxml/+bug/1522052
-# third error in 3.6.1
+# new error in 3.6.1
 # https://bugs.launchpad.net/lxml/+bug/1608479
-# two more errors since 3.7.2
-# https://bugs.launchpad.net/lxml/+bug/1655054
+# new error since 3.8.0
+# https://bugs.launchpad.net/lxml/+bug/1710409
 TEST_TARGET=	test_inplace
 
 .include "../../lang/python/egg.mk"
