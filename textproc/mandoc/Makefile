@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/08/01 15:06:24 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/12 11:23:52 wiz Exp $
 
-DISTNAME=	mandoc-1.14.2
+DISTNAME=	mandoc-1.14.3
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://mdocml.bsd.lv/snapshots/
 
