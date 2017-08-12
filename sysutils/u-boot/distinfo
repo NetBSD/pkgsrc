@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2017/08/12 14:23:43 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2017/08/12 16:44:33 jmcneill Exp $
 
 SHA1 (u-boot-2017.07.tar.bz2) = 517c33f41e2969f3b5b88e9ae3c042acfe1bde05
 RMD160 (u-boot-2017.07.tar.bz2) = b0d83a55b6daabdec28d85fdfb814a529c8d5eb9
 SHA512 (u-boot-2017.07.tar.bz2) = 821175dd414e1fd0e5b6d9293a5766cbc8ae63a2361e82309f67e92c02b881263a7832dba0bcfc820b036a582981ddc20a8f484f2995d110f3240907a3ff7a95
 Size (u-boot-2017.07.tar.bz2) = 11282262 bytes
+SHA1 (patch-lib_bch.c) = e346680a94696713f6d0e71e965283b9bdfbbdbf
