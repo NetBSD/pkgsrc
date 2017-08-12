@@ -1,10 +1,10 @@
-$NetBSD: patch-lgi_Makefile,v 1.1 2015/06/10 15:44:16 khorben Exp $
+$NetBSD: patch-lgi_Makefile,v 1.2 2017/08/12 15:46:56 triaxx Exp $
 
 Don't use mkdir and cp directly, use BSD_INSTALL_* abstraction instead
 
---- lgi/Makefile.orig	2015-03-23 22:48:44.000000000 +0000
+--- lgi/Makefile.orig	2016-05-27 19:56:36.000000000 +0000
 +++ lgi/Makefile
-@@ -74,11 +74,11 @@ OVERRIDES = $(wildcard override/*.lua)
+@@ -80,11 +80,11 @@ OVERRIDES = $(wildcard override/*.lua)
  CORESOURCES = $(wildcard *.lua)
  
  install : $(CORE) $(VERSION_FILE)
@@ -13,7 +13,7 @@ Don't use mkdir and cp directly, use BSD_INSTALL_* abstraction instead
 -	mkdir -p $(DESTDIR)$(LUA_SHAREDIR)
 -	cp ../lgi.lua $(DESTDIR)$(LUA_SHAREDIR)
 -	mkdir -p $(DESTDIR)$(LUA_SHAREDIR)/lgi
--	cp $(CORESOURCES) $(VERSION_FILE) $(DESTDIR)$(LUA_SHAREDIR)/lgi
+-	cp $(CORESOURCES) $(DESTDIR)$(LUA_SHAREDIR)/lgi
 -	mkdir -p $(DESTDIR)$(LUA_SHAREDIR)/lgi/override
 -	cp $(OVERRIDES) $(DESTDIR)$(LUA_SHAREDIR)/lgi/override
 +	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(LUA_LIBDIR)/lgi
@@ -21,6 +21,6 @@ Don't use mkdir and cp directly, use BSD_INSTALL_* abstraction instead
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(LUA_SHAREDIR)
 +	$(BSD_INSTALL_DATA) ../lgi.lua $(DESTDIR)$(LUA_SHAREDIR)
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(LUA_SHAREDIR)/lgi
-+	$(BSD_INSTALL_DATA) $(CORESOURCES) $(VERSION_FILE) $(DESTDIR)$(LUA_SHAREDIR)/lgi
++	$(BSD_INSTALL_DATA) $(CORESOURCES) $(DESTDIR)$(LUA_SHAREDIR)/lgi
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(LUA_SHAREDIR)/lgi/override
 +	$(BSD_INSTALL_DATA) $(OVERRIDES) $(DESTDIR)$(LUA_SHAREDIR)/lgi/override
