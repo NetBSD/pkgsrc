@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.2.1 2017/07/16 08:17:02 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.1.2.2 2017/08/13 18:53:46 bsiegert Exp $
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/README.md
 ${CT_WEBDIR}/assets/ace/composer.json
@@ -638,7 +638,7 @@ ${CT_WEBDIR}/vendor/contao/calendar-bundle/src/EventListener/GeneratePageListene
 ${CT_WEBDIR}/vendor/contao/calendar-bundle/src/EventListener/InsertTagsListener.php
 ${CT_WEBDIR}/vendor/contao/calendar-bundle/src/EventListener/PreviewUrlConvertListener.php
 ${CT_WEBDIR}/vendor/contao/calendar-bundle/src/EventListener/PreviewUrlCreateListener.php
-${CT_WEBDIR}/vendor/contao/calendar-bundle/src/Menu/EventPickerProvider.php
+${CT_WEBDIR}/vendor/contao/calendar-bundle/src/Picker/EventPickerProvider.php
 ${CT_WEBDIR}/vendor/contao/calendar-bundle/src/Resources/config/listener.yml
 ${CT_WEBDIR}/vendor/contao/calendar-bundle/src/Resources/config/services.yml
 ${CT_WEBDIR}/vendor/contao/calendar-bundle/src/Resources/contao/.editorconfig
@@ -1151,14 +1151,13 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Controller/InitializeController.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Controller/InsertTagsController.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Cors/WebsiteRootsConfigProvider.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/DataCollector/ContaoDataCollector.php
-${CT_WEBDIR}/vendor/contao/core-bundle/src/DataContainer/DcaFilterInterface.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/DataContainer/PaletteManipulator.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/DependencyInjection/Compiler/AddImagineClassPass.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/DependencyInjection/Compiler/AddPackagesPass.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/DependencyInjection/Compiler/AddResourcesPathsPass.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/DependencyInjection/Compiler/AddSessionBagsPass.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/DependencyInjection/Compiler/DoctrineMigrationsPass.php
-${CT_WEBDIR}/vendor/contao/core-bundle/src/DependencyInjection/Compiler/PickerMenuProviderPass.php
+${CT_WEBDIR}/vendor/contao/core-bundle/src/DependencyInjection/Compiler/PickerProviderPass.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/DependencyInjection/Configuration.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/DependencyInjection/ContaoCoreExtension.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Doctrine/DBAL/Types/BinaryStringType.php
@@ -1216,16 +1215,20 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Image/ImageSizes.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Image/LegacyResizer.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Image/PictureFactory.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Image/PictureFactoryInterface.php
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Menu/AbstractMenuProvider.php
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Menu/ArticlePickerProvider.php
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Menu/FilePickerProvider.php
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Menu/PagePickerProvider.php
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Menu/PickerMenuBuilder.php
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Menu/PickerMenuBuilderInterface.php
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Menu/PickerMenuProviderInterface.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Monolog/ContaoContext.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Monolog/ContaoTableHandler.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Monolog/ContaoTableProcessor.php
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Picker/AbstractPickerProvider.php
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Picker/ArticlePickerProvider.php
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Picker/DcaPickerProviderInterface.php
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Picker/FilePickerProvider.php
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Picker/PagePickerProvider.php
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Picker/Picker.php
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Picker/PickerBuilder.php
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Picker/PickerBuilderInterface.php
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Picker/PickerConfig.php
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Picker/PickerInterface.php
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Picker/PickerProviderInterface.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Referer/TokenGenerator.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/config/commands.yml
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/config/listener.yml
@@ -2012,6 +2015,7 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/templates/jquery/j_a
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/templates/jquery/j_colorbox.html5
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/templates/jquery/j_mediaelement.html5
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/templates/jquery/j_tablesort.html5
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/templates/js/js_autofocus.html5
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/templates/js/js_highlight.html5
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/templates/js/js_mediaelement.html5
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/templates/js/js_slider.html5
@@ -2463,7 +2467,6 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/widgets/Upload.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/functions/utf8_bootup.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/public/core.js
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/public/core.min.js
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/public/favicon.ico
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/public/mootao.js
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/public/mootao.min.js
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/views/Backend/be_page.html.twig
@@ -2505,7 +2508,7 @@ ${CT_WEBDIR}/vendor/contao/faq-bundle/src/ContaoFaqBundle.php
 ${CT_WEBDIR}/vendor/contao/faq-bundle/src/ContaoManager/Plugin.php
 ${CT_WEBDIR}/vendor/contao/faq-bundle/src/DependencyInjection/ContaoFaqExtension.php
 ${CT_WEBDIR}/vendor/contao/faq-bundle/src/EventListener/InsertTagsListener.php
-${CT_WEBDIR}/vendor/contao/faq-bundle/src/Menu/FaqPickerProvider.php
+${CT_WEBDIR}/vendor/contao/faq-bundle/src/Picker/FaqPickerProvider.php
 ${CT_WEBDIR}/vendor/contao/faq-bundle/src/Resources/config/listener.yml
 ${CT_WEBDIR}/vendor/contao/faq-bundle/src/Resources/config/services.yml
 ${CT_WEBDIR}/vendor/contao/faq-bundle/src/Resources/contao/.editorconfig
@@ -2999,7 +3002,7 @@ ${CT_WEBDIR}/vendor/contao/news-bundle/src/EventListener/GeneratePageListener.ph
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/EventListener/InsertTagsListener.php
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/EventListener/PreviewUrlConvertListener.php
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/EventListener/PreviewUrlCreateListener.php
-${CT_WEBDIR}/vendor/contao/news-bundle/src/Menu/NewsPickerProvider.php
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Picker/NewsPickerProvider.php
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/config/listener.yml
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/config/services.yml
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/.editorconfig
@@ -4223,8 +4226,6 @@ ${CT_WEBDIR}/vendor/knplabs/knp-menu/src/Knp/Menu/Resources/views/knp_menu_order
 ${CT_WEBDIR}/vendor/knplabs/knp-menu/src/Knp/Menu/Twig/Helper.php
 ${CT_WEBDIR}/vendor/knplabs/knp-menu/src/Knp/Menu/Twig/MenuExtension.php
 ${CT_WEBDIR}/vendor/knplabs/knp-menu/src/Knp/Menu/Util/MenuManipulator.php
-${CT_WEBDIR}/vendor/knplabs/knp-time-bundle/Knp/Bundle/TimeBundle/.gitignore
-${CT_WEBDIR}/vendor/knplabs/knp-time-bundle/Knp/Bundle/TimeBundle/.travis.yml
 ${CT_WEBDIR}/vendor/knplabs/knp-time-bundle/Knp/Bundle/TimeBundle/DateTimeFormatter.php
 ${CT_WEBDIR}/vendor/knplabs/knp-time-bundle/Knp/Bundle/TimeBundle/DependencyInjection/KnpTimeExtension.php
 ${CT_WEBDIR}/vendor/knplabs/knp-time-bundle/Knp/Bundle/TimeBundle/KnpTimeBundle.php
@@ -4258,6 +4259,7 @@ ${CT_WEBDIR}/vendor/knplabs/knp-time-bundle/Knp/Bundle/TimeBundle/Resources/tran
 ${CT_WEBDIR}/vendor/knplabs/knp-time-bundle/Knp/Bundle/TimeBundle/Resources/translations/time.pt_PT.xliff
 ${CT_WEBDIR}/vendor/knplabs/knp-time-bundle/Knp/Bundle/TimeBundle/Resources/translations/time.ro.xliff
 ${CT_WEBDIR}/vendor/knplabs/knp-time-bundle/Knp/Bundle/TimeBundle/Resources/translations/time.ru.xliff
+${CT_WEBDIR}/vendor/knplabs/knp-time-bundle/Knp/Bundle/TimeBundle/Resources/translations/time.sk.xliff
 ${CT_WEBDIR}/vendor/knplabs/knp-time-bundle/Knp/Bundle/TimeBundle/Resources/translations/time.sl.xliff
 ${CT_WEBDIR}/vendor/knplabs/knp-time-bundle/Knp/Bundle/TimeBundle/Resources/translations/time.sr_Latin.xliff
 ${CT_WEBDIR}/vendor/knplabs/knp-time-bundle/Knp/Bundle/TimeBundle/Resources/translations/time.sr_Latn.xliff
@@ -4272,7 +4274,6 @@ ${CT_WEBDIR}/vendor/knplabs/knp-time-bundle/Knp/Bundle/TimeBundle/Resources/tran
 ${CT_WEBDIR}/vendor/knplabs/knp-time-bundle/Knp/Bundle/TimeBundle/Templating/Helper/TimeHelper.php
 ${CT_WEBDIR}/vendor/knplabs/knp-time-bundle/Knp/Bundle/TimeBundle/Twig/Extension/TimeExtension.php
 ${CT_WEBDIR}/vendor/knplabs/knp-time-bundle/Knp/Bundle/TimeBundle/composer.json
-${CT_WEBDIR}/vendor/knplabs/knp-time-bundle/Knp/Bundle/TimeBundle/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/leafo/scssphp/LICENSE.md
 ${CT_WEBDIR}/vendor/leafo/scssphp/README.md
 ${CT_WEBDIR}/vendor/leafo/scssphp/bin/pscss
@@ -9075,7 +9076,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Yaml/composer.json
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Yaml/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/tecnickcom/tcpdf/CHANGELOG.TXT
 ${CT_WEBDIR}/vendor/tecnickcom/tcpdf/LICENSE.TXT
-${CT_WEBDIR}/vendor/tecnickcom/tcpdf/README.TXT
+${CT_WEBDIR}/vendor/tecnickcom/tcpdf/README.md
 ${CT_WEBDIR}/vendor/tecnickcom/tcpdf/composer.json
 ${CT_WEBDIR}/vendor/tecnickcom/tcpdf/config/tcpdf_config.php
 ${CT_WEBDIR}/vendor/tecnickcom/tcpdf/fonts/courier.php
