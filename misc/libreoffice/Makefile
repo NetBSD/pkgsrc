@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.116 2017/08/01 11:57:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.117 2017/08/13 12:31:06 ryoon Exp $
 
 VERREL=		5.4.0
 VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -39,7 +40,7 @@ CHECK_PORTABILITY_SKIP=configure
 
 NOT_PAX_MPROTECT_SAFE+=	${PKGNAME_NOREV}/lib/libreoffice/program/soffice.bin
 
-DIST_SUBDIR=	libreoffice
+DIST_SUBDIR=	libreoffice/${PKGNAME}
 
 LO_BOOTSTRAP=	${DISTNAME}
 LO_COMPONENTS=	dictionaries help translations
@@ -87,7 +88,6 @@ MORE_DISTFILES= \
 	b63e6340a02ff1cacfeadb2c42286161-JLanguageTool-1.7.0.tar.bz2 \
 	a233181e03d3c307668b4c722d881661-mariadb_client-2.0.0-src.tar.gz \
 	d62650a6f908e85643e557a236ea989c-vigra1.6.0.tar.gz \
-	185d60944ea767075d27247c3162b3bc-unowinreg.dll \
 	c74b7223abe75949b4af367942d96c7a-crosextrafonts-carlito-20130920.tar.gz \
 	OpenCOLLADA-master-6509aa13af.tar.bz2 \
 	798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip \
@@ -108,9 +108,6 @@ MORE_DISTFILES= \
 DISTFILES+=		${md}
 SITES.${md}=		http://dev-www.libreoffice.org/src/
 .endfor
-
-DISTFILES+=185d60944ea767075d27247c3162b3bc-unowinreg.dll
-SITES.185d60944ea767075d27247c3162b3bc-unowinreg.dll=http://download.go-oo.org/extern/
 
 .include "options.mk"
 
