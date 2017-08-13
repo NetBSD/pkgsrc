@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2011/04/08 14:09:23 taca Exp $
-@comment include/isc-dhcp/dst.h
+@comment $NetBSD: PLIST,v 1.5 2017/08/13 14:21:03 taca Exp $
+include/isc-dhcp/dst.h
 include/omapip/alloc.h
 include/omapip/buffer.h
 include/omapip/convert.h
@@ -9,7 +9,6 @@ include/omapip/omapip.h
 include/omapip/omapip_p.h
 include/omapip/result.h
 include/omapip/trace.h
-@comment lib/libdst.a
 man/man5/dhcp-eval.5
 man/man5/dhcp-options.5
 share/doc/isc-dhcp/README
