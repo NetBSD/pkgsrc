@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.34 2017/08/03 07:44:11 adam Exp $
+# $NetBSD: Makefile,v 1.35 2017/08/13 09:48:54 adam Exp $
 
-DISTNAME=	pytest-3.2.0
+DISTNAME=	pytest-3.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/pytest
+HOMEPAGE=	http://pytest.org/
 COMMENT=	Python testing tool
 LICENSE=	mit
 
