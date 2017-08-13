@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2017/07/21 04:07:01 schmonz Exp $
+$NetBSD: distinfo,v 1.36 2017/08/13 23:42:55 schmonz Exp $
 
 SHA1 (netqmail-1.05-tls-smtpauth-20070417.patch) = d24cb13cf1371044fc2dfe20471478f59b5524e5
 RMD160 (netqmail-1.05-tls-smtpauth-20070417.patch) = 81a00e06fa67a4073b1a5bf5195fbbac675cd46b
@@ -8,6 +8,10 @@ SHA1 (netqmail-1.06-destdir-20170716.patch) = 92b3fe539d7863792e951723e26f6cfb60
 RMD160 (netqmail-1.06-destdir-20170716.patch) = bad1976ba87e0af934a50d02bd38eebb3b22cf03
 SHA512 (netqmail-1.06-destdir-20170716.patch) = 00dc4d90f52332784900d5c8b1142d5517d639115e1da4e1cf4880635d10107816981892f22847f682a71b7a15c348789bce20701d9bec20a2315c0fd1f2bf73
 Size (netqmail-1.06-destdir-20170716.patch) = 12871 bytes
+SHA1 (netqmail-1.06-qbiffutmpx-20170813.patch) = c28a14fbb94632e8ec4d398d8cdad5a41d8e8f77
+RMD160 (netqmail-1.06-qbiffutmpx-20170813.patch) = 0be498b9b0a9e7b5f790759d83a35b71b1d3e089
+SHA512 (netqmail-1.06-qbiffutmpx-20170813.patch) = 7f8ee6d6e76a427210b3139c66f678de504dfa7f1a1e66303bdc0b851196ba788de5f4de1954b0730af94738d7b52089125853f8673c636d38123f28ee1659ac
+Size (netqmail-1.06-qbiffutmpx-20170813.patch) = 3128 bytes
 SHA1 (netqmail-1.06-qmailremote-20170716.patch) = cf7fa5aaf74a5b7d48b2cf0e5f46f7c124de83c7
 RMD160 (netqmail-1.06-qmailremote-20170716.patch) = c26d7f8510cab92bcf5d5fbb861ec62ff593196a
 SHA512 (netqmail-1.06-qmailremote-20170716.patch) = de77c1b01ab88199b3f096e64a733dd86867001dfbcea1cf0d6b20e99d448638e0294440ef48fabc309355440834a8747b4c476cf47b89e6ddb3b7250008dd8e
@@ -36,6 +40,10 @@ SHA1 (qmail-103.patch) = dfb9cdabe91449dad2117115177b0a6a356baa9f
 RMD160 (qmail-103.patch) = 437f8b3063438bbd82c59557333b3566214afa9c
 SHA512 (qmail-103.patch) = b81062bb0b0023f474c0b6af40601926e1c04ad395de480d114809e48a8060c06d99bdbdeb6f44d9e24ae1acedabb094b979193d305371aed958f18fc6eee354
 Size (qmail-103.patch) = 2104 bytes
+SHA1 (qmail-queue-custom-error-v2.netqmail-1.05.patch) = 639d052ca9e46b9a63daadde819467b5b4259dba
+RMD160 (qmail-queue-custom-error-v2.netqmail-1.05.patch) = e40fe48e048a41d92c052a12aafa1fccf8becba2
+SHA512 (qmail-queue-custom-error-v2.netqmail-1.05.patch) = c3710a87cee5458fee7708166afd0d591b58b071eeea8d551c38c2d59c739865478cb1a0fbb8b592933f9bb85b865da6cdb8973fa0d93259605d01347600176c
+Size (qmail-queue-custom-error-v2.netqmail-1.05.patch) = 3873 bytes
 SHA1 (qmail-smtputf8.patch) = 909cb9d5f77e9b85973ad5d9daf821287950bf56
 RMD160 (qmail-smtputf8.patch) = bbed2ca7167937f6a38caf375a7e1e9bc490bd96
 SHA512 (qmail-smtputf8.patch) = 8cafdf1a4f1fd41e6b11ee2abddac5c3da4a1d2ab17b5d3847433875a91f867a26eb358ae8c41791f1e77758e5a2c311134a286d888ccd23fbede6d9f0b475c4
