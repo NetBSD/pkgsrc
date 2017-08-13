@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17562 2017/08/11 01:30:38 schmonz Exp $
+$NetBSD: TODO,v 1.17563 2017/08/13 07:04:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -362,7 +362,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o LPRng-core-3.8.35
 	o Mesa-17.1.3
 	o MesaDemos-8.3.0
-	o MesaLib-17.1.5
+	o MesaLib-17.1.6
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PAM-0.99.7.1
@@ -1010,6 +1010,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libressl-2.6.0
+	o libsoup-2.58.2
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libtecla-1.6.3
@@ -1170,8 +1171,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-CDDB-2.00
 	o p5-Catalyst-Engine-PSGI-0.14
 	o p5-Chart-3.2
+	o p5-Class-Inspector-1.32
 	o p5-DBD-DB2-1.85
 	o p5-Data-Printer-0.40
+	o p5-Error-0.17025
 	o p5-Exception-Class-1.43
 	o p5-FormValidator-Simple-1.00
 	o p5-GStreamer-0.20
@@ -1501,7 +1504,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o swi-prolog-packages-7.1.37
 	o swt-4.5
 	o sympa-6.2.14
-	o syncthing-0.14.33
+	o syncthing-0.14.36
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1 [needs polkit|GNOME 2.30]
 	o systrace-1.6e
