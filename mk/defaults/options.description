@@ -610,6 +610,7 @@ qemu			Use qemu.
 qemu-0			Use qemu-0.x.
 qmail-badrcptto		Patch to SMTP-reject particular envelope recipients.
 qmail-bigdns		Patch to handle oversized responses to MX queries.
+qmail-customerror	Patch to return custom messages from queue filters.
 qmail-maildiruniq	Patch to avoid name collisions when PIDs recycle fast.
 qmail-netqmail		Patch collection prepared by respected list members.
 qmail-outgoingip	Patch to force a particular source IP address.
