@@ -1,12 +1,9 @@
-# $NetBSD: INSTALL,v 1.9 2017/07/21 04:07:01 schmonz Exp $
+# $NetBSD: INSTALL,v 1.10 2017/08/13 23:42:55 schmonz Exp $
 
 DOCDIR=@DOCDIR@
 EGDIR=@EGDIR@
-OPENSSL=@OPENSSL@
 PKGMANDIR=@PKGMANDIR@
 QMAILDIR=@QMAILDIR@
-QMAIL_DAEMON_USER=@QMAIL_DAEMON_USER@
-QMAIL_QMAIL_GROUP=@QMAIL_QMAIL_GROUP@
 QMAIL_QUEUE_DIR=@QMAIL_QUEUE_DIR@
 QMAIL_QUEUE_EXTRA=@QMAIL_QUEUE_EXTRA@
 
@@ -94,27 +91,6 @@ EOF
 NOTE: Before using qmail, create a .qmail file corresponding with the local
 user or alias "${QMAIL_QUEUE_EXTRA}" that meets the requirements for
 QUEUE_EXTRA.
-
-===========================================================================
-EOF
-	fi
-
-	SERVERCERT=${PKG_SYSCONFDIR}/control/servercert.pem
-	if ! [ -z ${OPENSSL} ] && ! [ -s ${SERVERCERT} ]; then
-		${CAT} <<EOF
-===========================================================================
-
-NOTE: If you don't already have an SSL certificate for qmail:
-
-# ${OPENSSL} req -new -x509 -nodes -days 366 -out ${SERVERCERT} -keyout ${SERVERCERT}
-# chmod 640 ${SERVERCERT}
-# chown ${QMAIL_DAEMON_USER}:${QMAIL_QMAIL_GROUP} ${SERVERCERT}
-# ln -s ${SERVERCERT} ${PKG_SYSCONFDIR}/control/clientcert.pem
-# update_tmprsadh
-
-Once you have a certificate, regularly regenerate DH params from cron(8):
-
-    01 01 * * * ${PREFIX}/bin/update_tmprsadh > /dev/null 2>&1
 
 ===========================================================================
 EOF
