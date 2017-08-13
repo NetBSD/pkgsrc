@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3174 2017/08/13 09:49:32 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3175 2017/08/13 12:32:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4405,3 +4405,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/mlterm to 3.8.2 [tsutsui 2017-08-12]
 	Updated devel/py-hypothesis to 3.17.0 [adam 2017-08-13]
 	Updated devel/py-test to 3.2.1 [adam 2017-08-13]
+	Updated misc/libreoffice to 5.4.0.3nb1 [ryoon 2017-08-13]
