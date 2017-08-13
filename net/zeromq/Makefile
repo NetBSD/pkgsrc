@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2017/05/03 08:38:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.26 2017/08/13 17:10:45 adam Exp $
 
-DISTNAME=	zeromq-4.2.1
+DISTNAME=	zeromq-4.2.2
 CATEGORIES=	net devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zeromq/}
 
@@ -15,7 +15,6 @@ GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 USE_LANGUAGES=		c gnu++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
-
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libsodium=${BUILDLINK_PREFIX.libsodium}
 
