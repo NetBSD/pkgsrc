@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.4 2017/06/20 07:24:08 manu Exp $
+# $NetBSD: Makefile.php,v 1.4.2.1 2017/08/13 19:01:25 bsiegert Exp $
 # used by lang/php70/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -46,7 +46,7 @@ CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PHP_PKG_PREFIX}
 PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline
-PKG_SUGGESTED_OPTIONS+=	inet6 ssl
+PKG_SUGGESTED_OPTIONS+=	inet6 ssl readline
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD"
 PKG_SUPPORTED_OPTIONS+=	dtrace
