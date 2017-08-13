@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.2.1 2017/07/16 08:17:02 bsiegert Exp $
+# $NetBSD: Makefile,v 1.1.2.2 2017/08/13 18:53:46 bsiegert Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
 PKGNAME=	${PHP_PKG_PREFIX}-contao${CT_VER}-${CT_VERSION}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=contao/}
 GITHUB_PROJECT=	managed-edition
@@ -13,16 +14,18 @@ HOMEPAGE=	https://contao.org/
 COMMENT=	Contao Open Source CMS ${CT_VERSION}
 LICENSE=	gnu-lgpl-v3
 
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.5.0:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.5.0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.5.0:../../databases/php-mysqli
-DEPENDS+=	${PHP_PKG_PREFIX}-soap>=5.5.0:../../net/php-soap
-DEPENDS+=	${PHP_PKG_PREFIX}-intl>=5.5.0:../../textproc/php-intl
-DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.5.0:../../www/php-curl
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.5.0:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.6:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.6:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.6:../../databases/php-mysqli
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=5.6:../../databases/php-pdo_mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-soap>=5.6:../../net/php-soap
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=5.6:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.6:../../textproc/php-json
+DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.6:../../www/php-curl
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.6:../../archivers/php-zlib
 DEPENDS+=	bash>=4.0:../../shells/bash
 
-CT_VERSION=	4.4.1
+CT_VERSION=	4.4.2
 USE_TOOLS=	bash pax
 NO_BUILD=	yes
 
@@ -84,7 +87,7 @@ PERMFIXFILES=	vendor/oyejorge/less.php/lib/Less/Less.php.combine \
 .include "../../lang/php/phpversion.mk"
 
 .if ${PKG_PHP_VERSION} < 71
-DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.5.0:../../security/php-mcrypt
+DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.6:../../security/php-mcrypt
 .else
 DEPENDS+=	${PHP_PKG_PREFIX}-pecl-mcrypt>=1.0.1:../../security/php-pecl-mcrypt
 .endif
