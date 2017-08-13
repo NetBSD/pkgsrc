@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE.tls,v 1.1 2017/08/13 23:42:55 schmonz Exp $
+
+If you don't already have an SSL certificate for qmail:
+
+# ${OPENSSL} req -new -x509 -nodes -days 366 -out ${SERVERCERT} -keyout ${SERVERCERT}
+# chmod 640 ${SERVERCERT}
+# chown ${QMAIL_DAEMON_USER}:${QMAIL_QMAIL_GROUP} ${SERVERCERT}
+# ln -s ${SERVERCERT} ${CLIENTCERT}
+# update_tmprsadh
+
+Once you have a certificate, regularly regenerate DH params from cron(8):
+
+    01 01 * * * update_tmprsadh > /dev/null 2>&1
+
+===========================================================================
