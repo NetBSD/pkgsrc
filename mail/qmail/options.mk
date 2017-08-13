@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.44 2017/08/01 02:53:59 schmonz Exp $
+# $NetBSD: options.mk,v 1.45 2017/08/13 23:42:55 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
-PKG_SUPPORTED_OPTIONS+=		eai qmail-rejectutils qmail-srs sasl syncdir tls
-PKG_SUGGESTED_OPTIONS+=		eai qmail-rejectutils sasl syncdir tls
+PKG_SUPPORTED_OPTIONS+=		eai sasl syncdir tls
+PKG_SUPPORTED_OPTIONS+=		qmail-customerror qmail-rejectutils qmail-srs
+PKG_SUGGESTED_OPTIONS+=		eai sasl syncdir tls
+PKG_SUGGESTED_OPTIONS+=		qmail-customerror qmail-rejectutils qmail-srs
 
 # For users migrating from 2017Q2; remove compatibility after 2017Q3 is branched
 QMAIL_PATCHES_ALWAYS_ON=	netqmail bigdns maildiruniq outgoingip rcptcheck remote
@@ -42,6 +44,11 @@ OUTGOINGIP_PATCH=		outgoingip.patch
 PATCHFILES+=			${OUTGOINGIP_PATCH}
 SITES.${OUTGOINGIP_PATCH}=	http://www.qmail.org/
 
+QMAILPATCHES+=			qbiffutmpx:${QBIFFUTMPX_PATCH}
+QBIFFUTMPX_PATCH=		netqmail-1.06-qbiffutmpx-20170813.patch
+PATCHFILES+=			${QBIFFUTMPX_PATCH}
+SITES.${QBIFFUTMPX_PATCH}=	https://schmonz.com/qmail/qbiffutmpx/
+
 QMAILPATCHES+=			rcptcheck:${RCPTCHECK_PATCH}
 RCPTCHECK_PATCH=		netqmail-1.06-tls-smtpauth-20070417-rcptcheck-20170716.patch
 PATCHFILES+=			${RCPTCHECK_PATCH}
@@ -79,6 +86,14 @@ SITES.${EAI_PATCH}=		http://arnt.gulbrandsen.priv.no/qmail/
 PATCH_DIST_CAT.${EAI_PATCH}=	${SED} \
 	-e 's|\(if (!stralloc_append(&firstpart,&ch)) temp_nomem();\)|if (ch == '"'\\\n'"' \&\& \!stralloc_append(\&firstpart,"\\r")) temp_nomem(); \1|' < ${EAI_PATCH}
 PATCH_DIST_STRIP.${EAI_PATCH}=	-p1
+.endif
+
+.if !empty(PKG_OPTIONS:Mqmail-customerror)
+QMAILPATCHES+=			customerror:${CUSTOMERROR_PATCH}
+CUSTOMERROR_PATCH=		qmail-queue-custom-error-v2.netqmail-1.05.patch
+PATCHFILES+=			${CUSTOMERROR_PATCH}
+SITES.${CUSTOMERROR_PATCH}=	https://notes.sagredo.eu/files/qmail/patches/
+PATCH_DIST_STRIP.${CUSTOMERROR_PATCH}=-p1
 .endif
 
 PLIST_VARS+=			rejectutils
@@ -158,6 +173,12 @@ SUBST_FILES.tmprsadh=		update_tmprsadh.sh
 SUBST_SED.tmprsadh=		-e 's|^export PATH=.*||'
 SUBST_SED.tmprsadh+=		-e 's|^openssl |${OPENSSL} |'
 PLIST.tls=			yes
+MESSAGE_SRC+=			${PKGDIR}/MESSAGE.tls
+MESSAGE_SUBST+=			OPENSSL=${OPENSSL:Q}
+MESSAGE_SUBST+=			SERVERCERT=${PKG_SYSCONFDIR:Q}/control/servercert.pem
+MESSAGE_SUBST+=			CLIENTCERT=${PKG_SYSCONFDIR:Q}/control/clientcert.pem
+MESSAGE_SUBST+=			QMAIL_DAEMON_USER=${QMAIL_DAEMON_USER:Q}
+MESSAGE_SUBST+=			QMAIL_QMAIL_GROUP=${QMAIL_QMAIL_GROUP:Q}
 .  endif
 .else
 BUILDLINK_TRANSFORM+=		rm:-lssl
