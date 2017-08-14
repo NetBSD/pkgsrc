@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3234 2017/08/14 21:23:05 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3235 2017/08/14 23:42:28 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4474,3 +4474,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/libfilezilla to 0.10.1 [wiz 2017-08-14]
 	Updated print/poppler to 0.57.0 [nros 2017-08-14]
 	Updated textproc/miller to 5.2.2 [wiz 2017-08-14]
+	Updated devel/cpputest to 3.8nb1 [schmonz 2017-08-14]
