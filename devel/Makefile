@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2482 2017/08/14 21:08:16 wiz Exp $
+# $NetBSD: Makefile,v 1.2483 2017/08/14 21:14:36 triaxx Exp $
 #
 
 COMMENT=	Development utilities
@@ -631,6 +631,7 @@ SUBDIR+=	ltsa
 SUBDIR+=	lua-BitOp
 SUBDIR+=	lua-alt-getopt
 SUBDIR+=	lua-coxpcall
+SUBDIR+=	lua-doc
 SUBDIR+=	lua-filesystem
 SUBDIR+=	lua-gi
 SUBDIR+=	lua-ljsyscall
