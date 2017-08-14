@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/12/06 13:10:59 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/08/14 19:26:04 nros Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -11,7 +11,7 @@ CONFLICTS+=		poppler<0.4.5nb1
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-glib.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-cpp.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 # Don't build the cairo graphics backend, required by glib.
