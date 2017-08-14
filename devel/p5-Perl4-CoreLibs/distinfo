@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:28:40 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/08/14 19:03:31 wiz Exp $
 
-SHA1 (Perl4-CoreLibs-0.003.tar.gz) = ad4c5a9fa8da4f461dc774e5c53136a55413ef2f
-RMD160 (Perl4-CoreLibs-0.003.tar.gz) = cfa1962b78157d1545e25e388c6d72b62a08925d
-SHA512 (Perl4-CoreLibs-0.003.tar.gz) = 213d5539ed79b73ab9613ac6ce384f04726df27379f4727a710d48fed2abbc88364ce90ec5819a8b6133ea66f223c68bd0b988ba2fdebcb9efdeee07ec5f4d17
-Size (Perl4-CoreLibs-0.003.tar.gz) = 53629 bytes
+SHA1 (Perl4-CoreLibs-0.004.tar.gz) = 2f510e41e5c216f1379e35d808de9d5151e49331
+RMD160 (Perl4-CoreLibs-0.004.tar.gz) = 7bbd6fe2384f464994625c0276a6f9f00a49ed57
+SHA512 (Perl4-CoreLibs-0.004.tar.gz) = 71083f1640e95559ee4bc5a7f1bbe6beacec048a073e211ab7f6ee4de26463f6ae3d87e99e00a41ea8f2f93a5e96367bafe907ef3367e400de35123c22eb7b88
+Size (Perl4-CoreLibs-0.004.tar.gz) = 53219 bytes
