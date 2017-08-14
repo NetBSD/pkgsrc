@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3199 2017/08/14 19:11:26 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3200 2017/08/14 19:16:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4439,3 +4439,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Specio to 0.40 [wiz 2017-08-14]
 	Updated textproc/p5-Text-BibTeX to 0.81 [wiz 2017-08-14]
 	Updated devel/p5-Tie-Cycle to 1.225 [wiz 2017-08-14]
+	Updated time/p5-Time-HiRes to 1.9744 [wiz 2017-08-14]
