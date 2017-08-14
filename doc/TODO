@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17598 2017/08/14 20:26:46 wiz Exp $
+$NetBSD: TODO,v 1.17599 2017/08/14 20:30:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -671,7 +671,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o flpsed-0.7.3
 	o fltk2-2.0pre8323
 	o fmsx-4.4
-	o fontconfig-2.12.4
 	o foomatic4-db-20160305
 	o fop-2.1
 	o fortunes-calvin-0.3
