@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/04/19 13:53:34 wiz Exp $
+$NetBSD: distinfo,v 1.6 2017/08/14 19:11:16 wiz Exp $
 
-SHA1 (Tie-Cycle-1.224.tar.gz) = 8646a1f1de36289d128ade47778d14209525be2a
-RMD160 (Tie-Cycle-1.224.tar.gz) = 4006bd37c62426532e59e4ac6416bc49361944be
-SHA512 (Tie-Cycle-1.224.tar.gz) = 291f012e85108809d75302bb6554beffdfbf3ec3153acef667d0dfa34a0309190f9211a19728620c1ff6bedfeff5fd9209d2d4589f13fba144d0c0fade53f9b6
-Size (Tie-Cycle-1.224.tar.gz) = 11085 bytes
+SHA1 (Tie-Cycle-1.225.tar.gz) = 68aa04dfe206c1d6e7e395efd9f8ad4ccbd8bf22
+RMD160 (Tie-Cycle-1.225.tar.gz) = 0e97d2ed8d7d74c8f423211acca6048d00bb5c42
+SHA512 (Tie-Cycle-1.225.tar.gz) = 68822821a6bb5475bef7bfdb6775a876aaac6afead5b79b0bd1365f99eb1bf4430a5ae97b8e124f66fd4cbef2b4095df526c85d2d9240b0750bfae6af3c9f75e
+Size (Tie-Cycle-1.225.tar.gz) = 11109 bytes
