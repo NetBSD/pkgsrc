@@ -1,0 +1,62 @@
+$NetBSD: patch-hotspot_make_bsd_Makefile,v 1.1 2017/08/14 00:02:16 ryoon Exp $
+
+* Disable run of test_gamma to fix invocation failure from PaX MPROTECT
+  Partially from http://hg.openjdk.java.net/hsx/hsx25/hotspot/rev/98f3af397705
+
+--- hotspot/make/bsd/Makefile.orig	2017-08-13 05:55:27.000000000 +0000
++++ hotspot/make/bsd/Makefile
+@@ -290,54 +290,36 @@ platform_zero: $(GAMMADIR)/make/$(OSNAME
+ 
+ $(TARGETS_C2):  $(SUBDIRS_C2)
+ 	cd $(OSNAME)_$(BUILDARCH)_compiler2/$@ && $(MAKE) $(MFLAGS)
+-ifeq ($(TEST_IN_BUILD),true)
+-	cd $(OSNAME)_$(BUILDARCH)_compiler2/$@ && ./test_gamma
+-endif
+ ifdef INSTALL
+ 	cd $(OSNAME)_$(BUILDARCH)_compiler2/$@ && $(MAKE) $(MFLAGS) install
+ endif
+ 
+ $(TARGETS_TIERED):  $(SUBDIRS_TIERED)
+ 	cd $(OSNAME)_$(BUILDARCH)_tiered/$(patsubst %tiered,%,$@) && $(MAKE) $(MFLAGS)
+-ifeq ($(TEST_IN_BUILD),true)
+-	cd $(OSNAME)_$(BUILDARCH)_tiered/$(patsubst %tiered,%,$@) && ./test_gamma
+-endif
+ ifdef INSTALL
+ 	cd $(OSNAME)_$(BUILDARCH)_tiered/$(patsubst %tiered,%,$@) && $(MAKE) $(MFLAGS) install
+ endif
+ 
+ $(TARGETS_C1):  $(SUBDIRS_C1)
+ 	cd $(OSNAME)_$(BUILDARCH)_compiler1/$(patsubst %1,%,$@) && $(MAKE) $(MFLAGS)
+-ifeq ($(TEST_IN_BUILD),true)
+-	cd $(OSNAME)_$(BUILDARCH)_compiler1/$(patsubst %1,%,$@) && ./test_gamma
+-endif
+ ifdef INSTALL
+ 	cd $(OSNAME)_$(BUILDARCH)_compiler1/$(patsubst %1,%,$@) && $(MAKE) $(MFLAGS) install
+ endif
+ 
+ $(TARGETS_CORE):  $(SUBDIRS_CORE)
+ 	cd $(OSNAME)_$(BUILDARCH)_core/$(patsubst %core,%,$@) && $(MAKE) $(MFLAGS)
+-ifeq ($(TEST_IN_BUILD),true)
+-	cd $(OSNAME)_$(BUILDARCH)_core/$(patsubst %core,%,$@) && ./test_gamma
+-endif
+ ifdef INSTALL
+ 	cd $(OSNAME)_$(BUILDARCH)_core/$(patsubst %core,%,$@) && $(MAKE) $(MFLAGS) install
+ endif
+ 
+ $(TARGETS_ZERO):  $(SUBDIRS_ZERO)
+ 	cd $(OSNAME)_$(VARIANTARCH)_zero/$(patsubst %zero,%,$@) && $(MAKE) $(MFLAGS)
+-ifeq ($(TEST_IN_BUILD),true)
+-	cd $(OSNAME)_$(VARIANTARCH)_zero/$(patsubst %zero,%,$@) && ./test_gamma
+-endif
+ ifdef INSTALL
+ 	cd $(OSNAME)_$(VARIANTARCH)_zero/$(patsubst %zero,%,$@) && $(MAKE) $(MFLAGS) install
+ endif
+ 
+ $(TARGETS_SHARK):  $(SUBDIRS_SHARK)
+ 	cd $(OSNAME)_$(VARIANTARCH)_shark/$(patsubst %shark,%,$@) && $(MAKE) $(MFLAGS)
+-ifeq ($(TEST_IN_BUILD),true)
+-	cd $(OSNAME)_$(VARIANTARCH)_shark/$(patsubst %shark,%,$@) && ./test_gamma
+-endif
+ ifdef INSTALL
+ 	cd $(OSNAME)_$(VARIANTARCH)_shark/$(patsubst %shark,%,$@) && $(MAKE) $(MFLAGS) install
+ endif
