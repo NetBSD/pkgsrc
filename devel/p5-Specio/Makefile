@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2017/07/04 09:00:10 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/08/14 19:08:31 wiz Exp $
 
-DISTNAME=	Specio-0.38
+DISTNAME=	Specio-0.40
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/
@@ -15,6 +15,7 @@ DEPENDS+=	p5-Role-Tiny>=1.003003:../../devel/p5-Role-Tiny
 DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
 DEPENDS+=	p5-Devel-StackTrace-[0-9]*:../../devel/p5-Devel-StackTrace
 DEPENDS+=	p5-Module-Runtime-[0-9]*:../../devel/p5-Module-Runtime
+DEPENDS+=	p5-Sub-Quote-[0-9]*:../../devel/p5-Sub-Quote
 # recommended
 DEPENDS+=	p5-Ref-Util-[0-9]*:../../devel/p5-Ref-Util
 
