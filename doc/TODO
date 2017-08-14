@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17587 2017/08/14 19:27:37 wiz Exp $
+$NetBSD: TODO,v 1.17588 2017/08/14 19:29:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1312,7 +1312,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
 	o py-hsm-1.1.1
-	o py-idna-2.6
 	o py-input-pad-1.4.2
 	o py-jaraco_util-11.0
 	o py-keybinder-0.3.1
