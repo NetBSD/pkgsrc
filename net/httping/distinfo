@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2015/11/04 00:35:04 agc Exp $
+$NetBSD: distinfo,v 1.15 2017/08/14 20:38:02 wiz Exp $
 
-SHA1 (httping-2.4.tgz) = 3e434b2f07842b802e4da14227d3c4fd1f7a0ef7
-RMD160 (httping-2.4.tgz) = cb40c53fa207bd3538b8843ce4a3e99980595a81
-SHA512 (httping-2.4.tgz) = 11d9e9e3b222548c9754cc0e7bf947f1a55ccc9f1a2401681f95d21b7b7a56c07665955b558a56d07a5c98497ea3644758e4f85006c42fda2134556be8d9e804
-Size (httping-2.4.tgz) = 54170 bytes
-SHA1 (patch-aa) = 0ebe9cdbb96d9807bd785cd475424a2e1e8e5726
+SHA1 (httping-2.5.tgz) = f53b0c8d4fe4020028f62dc43289beab78eebcfb
+RMD160 (httping-2.5.tgz) = f0154ece513637c3334dc2852a9435292996f00a
+SHA512 (httping-2.5.tgz) = 397ce2eac91c9aede0eb19823bfca4e7f98c263937f5954c8a48d5248a251d2030e31f18decb7f7f8b0118ec0e16ec0a84ea4c943ccde7056b80de162954c355
+Size (httping-2.5.tgz) = 71400 bytes
+SHA1 (patch-aa) = 23f49d85b41dc444bb64ae6180db80c979ff3024
 SHA1 (patch-main.c) = c28d784334295e3f0e8231d530fa912c11842d52
