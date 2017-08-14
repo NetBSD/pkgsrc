@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3190 2017/08/14 18:51:04 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3191 2017/08/14 18:52:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4430,3 +4430,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Data-Printer to 0.40 [wiz 2017-08-14]
 	Updated devel/p5-Error to 0.17025 [wiz 2017-08-14]
 	Updated devel/p5-Exception-Class to 1.43 [wiz 2017-08-14]
+	Updated www/p5-HTTP-Cookies to 6.04 [wiz 2017-08-14]
