@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3181 2017/08/13 23:43:13 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.3182 2017/08/14 00:03:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4420,3 +4420,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/postgresql95 to 9.5.8 [adam 2017-08-13]
 	Updated databases/postgresql96 to 9.6.4 [adam 2017-08-13]
 	Updated mail/qmail to 1.03nb32 [schmonz 2017-08-13]
+	Updated lang/openjdk7 to 1.7.141 [ryoon 2017-08-14]
