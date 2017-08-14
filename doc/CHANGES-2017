@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3224 2017/08/14 20:44:18 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3225 2017/08/14 20:48:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4464,3 +4464,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/dbus to 1.10.22 [wiz 2017-08-14]
 	Updated devel/meld to 3.17.3 [wiz 2017-08-14]
 	Updated games/ruby-squib to 0.13.4 [wiz 2017-08-14]
+	Updated security/caff to 2.6 [wiz 2017-08-14]
