@@ -1,6 +1,6 @@
-$NetBSD: patch-Makefile.pre.in,v 1.3 2017/01/19 13:55:53 wen Exp $
+$NetBSD: patch-Makefile.pre.in,v 1.4 2017/08/14 09:16:28 adam Exp $
 
---- Makefile.pre.in.orig	2017-01-19 11:35:21.000000000 +0000
+--- Makefile.pre.in.orig	2017-08-07 07:59:11.000000000 +0000
 +++ Makefile.pre.in
 @@ -92,7 +92,7 @@ PY_CFLAGS_NODIST=$(CONFIGURE_CFLAGS_NODI
  # be able to build extension modules using the directories specified in the
@@ -11,25 +11,16 @@ $NetBSD: patch-Makefile.pre.in,v 1.3 2017/01/19 13:55:53 wen Exp $
  NO_AS_NEEDED=	@NO_AS_NEEDED@
  LDLAST=		@LDLAST@
  SGI_ABI=	@SGI_ABI@
-@@ -723,7 +723,7 @@ Python/importlib_external.h: @GENERATED_
- 	./Programs/_freeze_importlib \
- 	    $(srcdir)/Lib/importlib/_bootstrap_external.py Python/importlib_external.h
+@@ -864,7 +864,7 @@ regen-opcode-targets:
+ 	$(PYTHON_FOR_REGEN) $(srcdir)/Python/makeopcodetargets.py \
+ 		$(srcdir)/Python/opcode_targets.h
  
--Python/importlib.h: @GENERATED_COMMENT@ $(srcdir)/Lib/importlib/_bootstrap.py Programs/_freeze_importlib
-+Python/importlib.h: @GENERATED_COMMENT@ $(srcdir)/Lib/importlib/_bootstrap.py Programs/_freeze_importlib $(LIBRARY_OBJS_OMIT_FROZEN)
- 	./Programs/_freeze_importlib \
- 	    $(srcdir)/Lib/importlib/_bootstrap.py Python/importlib.h
+-Python/ceval.o: $(srcdir)/Python/opcode_targets.h $(srcdir)/Python/ceval_gil.h
++#Python/ceval.o: $(srcdir)/Python/opcode_targets.h $(srcdir)/Python/ceval_gil.h
  
-@@ -868,7 +868,7 @@ Objects/setobject.o: $(srcdir)/Objects/s
- $(OPCODETARGETS_H): $(OPCODETARGETGEN_FILES)
- 	$(PYTHON_FOR_GEN) $(OPCODETARGETGEN) $(OPCODETARGETS_H)
+ Python/frozen.o: $(srcdir)/Python/importlib.h $(srcdir)/Python/importlib_external.h
  
--Python/ceval.o: $(OPCODETARGETS_H) $(srcdir)/Python/ceval_gil.h
-+#Python/ceval.o: $(OPCODETARGETS_H) $(srcdir)/Python/ceval_gil.h
- 
- Python/frozen.o: Python/importlib.h Python/importlib_external.h
- 
-@@ -1108,7 +1108,8 @@ altbininstall: $(BUILDPYTHON) @FRAMEWORK
+@@ -1110,7 +1110,8 @@ altbininstall: $(BUILDPYTHON) @FRAMEWORK
  		if test -n "$(PY3LIBRARY)"; then \
  			$(INSTALL_SHARED) $(PY3LIBRARY) $(DESTDIR)$(LIBDIR)/$(PY3LIBRARY); \
  		fi; \
@@ -39,7 +30,7 @@ $NetBSD: patch-Makefile.pre.in,v 1.3 2017/01/19 13:55:53 wen Exp $
  	fi
  	if test "x$(LIPO_32BIT_FLAGS)" != "x" ; then \
  		rm -f $(DESTDIR)$(BINDIR)python$(VERSION)-32$(EXE); \
-@@ -1299,11 +1300,6 @@ libinstall:	build_all $(srcdir)/Lib/$(PL
+@@ -1301,11 +1302,6 @@ libinstall:	build_all $(srcdir)/Lib/$(PL
  		-x 'bad_coding|badsyntax|site-packages|lib2to3/tests/data' \
  		$(DESTDIR)$(LIBDEST)
  	-PYTHONPATH=$(DESTDIR)$(LIBDEST) $(RUNSHARED) \
@@ -51,7 +42,7 @@ $NetBSD: patch-Makefile.pre.in,v 1.3 2017/01/19 13:55:53 wen Exp $
  		$(PYTHON_FOR_BUILD) -Wi $(DESTDIR)$(LIBDEST)/compileall.py \
  		-d $(LIBDEST)/site-packages -f \
  		-x badsyntax $(DESTDIR)$(LIBDEST)/site-packages
-@@ -1312,10 +1308,6 @@ libinstall:	build_all $(srcdir)/Lib/$(PL
+@@ -1314,10 +1310,6 @@ libinstall:	build_all $(srcdir)/Lib/$(PL
  		-d $(LIBDEST)/site-packages -f \
  		-x badsyntax $(DESTDIR)$(LIBDEST)/site-packages
  	-PYTHONPATH=$(DESTDIR)$(LIBDEST) $(RUNSHARED) \
