@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3207 2017/08/14 19:38:22 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3208 2017/08/14 19:40:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4447,3 +4447,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-flake8-import-order to 0.13 [wiz 2017-08-14]
 	Updated www/py-idna to 2.6 [wiz 2017-08-14]
 	Updated textproc/py-m2r to 0.1.9 [wiz 2017-08-14]
+	Updated devel/py-nose-exclude to 0.5.0 [wiz 2017-08-14]
