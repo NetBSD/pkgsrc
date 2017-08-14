@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3230 2017/08/14 21:15:52 triaxx Exp $
+$NetBSD: CHANGES-2017,v 1.3231 2017/08/14 21:17:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4470,3 +4470,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-meson version 0.41.2 [wiz 2017-08-14]
 	Updated audio/libmpdclient to 2.13 [wiz 2017-08-14]
 	Updated devel/lua-doc to 1.4.6 [triaxx 2017-08-14]
+	Updated x11/mcookie to 2.30.1 [wiz 2017-08-14]
