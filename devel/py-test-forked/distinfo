@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/14 19:46:10 wiz Exp $
+
+SHA1 (pytest-forked-0.2.tar.gz) = 8efa072747a73b0e101c82b2de46e51a57ab6a2f
+RMD160 (pytest-forked-0.2.tar.gz) = c7a549333c42544fddce2273d880812ad9e784b4
+SHA512 (pytest-forked-0.2.tar.gz) = 5e84fcaceed46ee9da8eec051e72acb46f09e2df3458511651604c35d68e3ad06fc41d52578127fd29f0c216dcb5fce1844c614f10501727cbf8fa8f2316f231
+Size (pytest-forked-0.2.tar.gz) = 9617 bytes
