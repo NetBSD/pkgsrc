@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/04 19:23:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/08/14 19:38:12 wiz Exp $
 bin/m2r${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -16,9 +16,6 @@ ${PYSITELIB}/tests/__init__.pyo
 ${PYSITELIB}/tests/test_cli.py
 ${PYSITELIB}/tests/test_cli.pyc
 ${PYSITELIB}/tests/test_cli.pyo
-${PYSITELIB}/tests/test_r s.py
-${PYSITELIB}/tests/test_r s.pyc
-${PYSITELIB}/tests/test_r s.pyo
 ${PYSITELIB}/tests/test_renderer.py
 ${PYSITELIB}/tests/test_renderer.pyc
 ${PYSITELIB}/tests/test_renderer.pyo
