@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2017/06/19 20:28:49 wiz Exp $
+$NetBSD: distinfo,v 1.14 2017/08/14 21:22:55 wiz Exp $
 
-SHA1 (mlr-5.2.0.tar.gz) = f33f07902578f1f4338a2b40ac52ceee9d25434d
-RMD160 (mlr-5.2.0.tar.gz) = 8c53517710ec3b3f68c80ef0e376cd7ce67e343f
-SHA512 (mlr-5.2.0.tar.gz) = b202ee5007c720336e0fddfbfe3629f51d0eee3d9a7b0e4bc54b157398182572549a40c869da2c2205770f49ee548eca7f8080d4e46e1c804275a2e76c1dbe7e
-Size (mlr-5.2.0.tar.gz) = 1188564 bytes
+SHA1 (mlr-5.2.2.tar.gz) = 1b130238401ae30096d984961af0e1f88d583a1a
+RMD160 (mlr-5.2.2.tar.gz) = 8147e4ff0a7125ece80246b35e0b54c1c8c50833
+SHA512 (mlr-5.2.2.tar.gz) = 1f6843fb08e3e3c59912e673636fc7d52246ab9a49a0df25c4b11a17ed7576e0c27e10c06f164a9df8e4b30d8f1715088161187b8126fecc84ef50774dcf7b93
+Size (mlr-5.2.2.tar.gz) = 1191162 bytes
