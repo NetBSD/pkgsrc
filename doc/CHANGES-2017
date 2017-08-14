@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3227 2017/08/14 20:51:51 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3228 2017/08/14 21:08:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4467,3 +4467,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/caff to 2.6 [wiz 2017-08-14]
 	Updated devel/afl to 2.49b [wiz 2017-08-14]
 	Updated print/abcm2ps to 8.13.12 [wiz 2017-08-14]
+	Added devel/py-meson version 0.41.2 [wiz 2017-08-14]
