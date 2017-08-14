@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/09/11 17:03:26 taca Exp $
+# $NetBSD: Makefile,v 1.6 2017/08/14 15:25:20 jlam Exp $
 
 MODNAME=	xcache
 PECL_VERSION=	3.2.0
@@ -21,11 +21,11 @@ USE_TOOLS+=		gawk gm4 gsed pax
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 USE_LIBTOOL=		yes
 
-EGDIR=		share/examples/${PHP_PKG_PREFIX}-xcache
-CONF_FILES=	${EGDIR}/xcache.ini ${PKG_SYSCONFDIR}/xcache.ini
+XCACHE_EGDIR=		share/examples/${PHP_PKG_PREFIX}-xcache
+CONF_FILES=		${XCACHE_EGDIR}/xcache.ini ${PKG_SYSCONFDIR}/xcache.ini
 
 XCACHE_DIR=		share/${PHP_PKG_PREFIX}-xcache
-INSTALLATION_DIRS+=	${EGDIR} ${XCACHE_DIR}/cacher/lang
+INSTALLATION_DIRS+=	${XCACHE_EGDIR} ${XCACHE_DIR}/cacher/lang
 INSTALLATION_DIRS+=	${XCACHE_DIR}/cacher/sub ${XCACHE_DIR}/common/lang
 INSTALLATION_DIRS+=	${XCACHE_DIR}/coverager/lang
 INSTALLATION_DIRS+=	${XCACHE_DIR}/diagnosis/lang
