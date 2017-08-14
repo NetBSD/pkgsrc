@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17568 2017/08/14 18:42:06 wiz Exp $
+$NetBSD: TODO,v 1.17569 2017/08/14 18:43:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1172,7 +1172,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-CDDB-2.00
 	o p5-Catalyst-Engine-PSGI-0.14
 	o p5-Chart-3.2
-	o p5-Class-Inspector-1.32
 	o p5-DBD-DB2-1.85
 	o p5-Data-Printer-0.40
 	o p5-Error-0.17025
