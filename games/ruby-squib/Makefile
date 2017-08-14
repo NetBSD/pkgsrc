@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/07/15 06:48:35 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/14 20:44:08 wiz Exp $
 
-DISTNAME=	squib-0.13.3
+DISTNAME=	squib-0.13.4
 #MASTER_SITES=	${MASTER_SITE_GITHUB:=andymeneely/}
 CATEGORIES=	games
 #GITHUB_TAG=	v${PKGVERSION_NOREV}
