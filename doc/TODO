@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17592 2017/08/14 19:55:05 wiz Exp $
+$NetBSD: TODO,v 1.17593 2017/08/14 20:00:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1336,7 +1336,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-spf-2.0.12t
 	o py-suds-0.4.1
 	o py-sybase-0.37
-	o py-vdirsyncer-0.16.1
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
 	o py-zconfig-3.0.3
