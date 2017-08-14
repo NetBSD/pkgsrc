@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17608 2017/08/14 21:14:59 wiz Exp $
+$NetBSD: TODO,v 1.17609 2017/08/14 21:17:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -357,7 +357,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
-	o ImageMagick-7.0.6.7
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o Mesa-17.1.3
@@ -1052,7 +1051,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mbuffer-20160228
 	o mcabber-1.0.2
 	o mcollective-2.3.2
-	o mcookie-2.30.1
 	o mcsim-5.6.5
 	o mecab-ipadic-2.7.0.20070801
 	o mednafen-0.9.45.1
