@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3197 2017/08/14 19:08:41 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3198 2017/08/14 19:10:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4437,3 +4437,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Module-Runtime to 0.015 [wiz 2017-08-14]
 	Updated devel/p5-Perl4-CoreLibs to 0.004 [wiz 2017-08-14]
 	Updated devel/p5-Specio to 0.40 [wiz 2017-08-14]
+	Updated textproc/p5-Text-BibTeX to 0.81 [wiz 2017-08-14]
