@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2017/03/31 07:55:35 abs Exp $
+@comment $NetBSD: PLIST,v 1.26 2017/08/14 00:02:16 ryoon Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -448,6 +448,7 @@ java/openjdk7/jre/lib/resources.jar
 java/openjdk7/jre/lib/rhino.jar
 java/openjdk7/jre/lib/rt.jar
 java/openjdk7/jre/lib/security/US_export_policy.jar
+java/openjdk7/jre/lib/security/blacklisted.certs
 java/openjdk7/jre/lib/security/cacerts
 java/openjdk7/jre/lib/security/java.policy
 java/openjdk7/jre/lib/security/java.security
@@ -473,7 +474,6 @@ java/openjdk7/jre/lib/zi/Africa/Tunis
 java/openjdk7/jre/lib/zi/Africa/Windhoek
 java/openjdk7/jre/lib/zi/America/Adak
 java/openjdk7/jre/lib/zi/America/Anchorage
-java/openjdk7/jre/lib/zi/America/Antigua
 java/openjdk7/jre/lib/zi/America/Araguaina
 java/openjdk7/jre/lib/zi/America/Argentina/Buenos_Aires
 java/openjdk7/jre/lib/zi/America/Argentina/Catamarca
@@ -503,7 +503,6 @@ java/openjdk7/jre/lib/zi/America/Campo_Grande
 java/openjdk7/jre/lib/zi/America/Cancun
 java/openjdk7/jre/lib/zi/America/Caracas
 java/openjdk7/jre/lib/zi/America/Cayenne
-java/openjdk7/jre/lib/zi/America/Cayman
 java/openjdk7/jre/lib/zi/America/Chicago
 java/openjdk7/jre/lib/zi/America/Chihuahua
 java/openjdk7/jre/lib/zi/America/Costa_Rica
@@ -519,6 +518,7 @@ java/openjdk7/jre/lib/zi/America/Edmonton
 java/openjdk7/jre/lib/zi/America/Eirunepe
 java/openjdk7/jre/lib/zi/America/El_Salvador
 java/openjdk7/jre/lib/zi/America/Fortaleza
+java/openjdk7/jre/lib/zi/America/Fort_Nelson
 java/openjdk7/jre/lib/zi/America/Glace_Bay
 java/openjdk7/jre/lib/zi/America/Godthab
 java/openjdk7/jre/lib/zi/America/Goose_Bay
@@ -560,7 +560,6 @@ java/openjdk7/jre/lib/zi/America/Miquelon
 java/openjdk7/jre/lib/zi/America/Moncton
 java/openjdk7/jre/lib/zi/America/Monterrey
 java/openjdk7/jre/lib/zi/America/Montevideo
-java/openjdk7/jre/lib/zi/America/Montreal
 java/openjdk7/jre/lib/zi/America/Nassau
 java/openjdk7/jre/lib/zi/America/New_York
 java/openjdk7/jre/lib/zi/America/Nipigon
@@ -578,13 +577,13 @@ java/openjdk7/jre/lib/zi/America/Port-au-Prince
 java/openjdk7/jre/lib/zi/America/Port_of_Spain
 java/openjdk7/jre/lib/zi/America/Porto_Velho
 java/openjdk7/jre/lib/zi/America/Puerto_Rico
+java/openjdk7/jre/lib/zi/America/Punta_Arenas
 java/openjdk7/jre/lib/zi/America/Rainy_River
 java/openjdk7/jre/lib/zi/America/Rankin_Inlet
 java/openjdk7/jre/lib/zi/America/Recife
 java/openjdk7/jre/lib/zi/America/Regina
 java/openjdk7/jre/lib/zi/America/Resolute
 java/openjdk7/jre/lib/zi/America/Rio_Branco
-java/openjdk7/jre/lib/zi/America/Santa_Isabel
 java/openjdk7/jre/lib/zi/America/Santarem
 java/openjdk7/jre/lib/zi/America/Santiago
 java/openjdk7/jre/lib/zi/America/Santo_Domingo
@@ -619,8 +618,10 @@ java/openjdk7/jre/lib/zi/Asia/Anadyr
 java/openjdk7/jre/lib/zi/Asia/Aqtau
 java/openjdk7/jre/lib/zi/Asia/Aqtobe
 java/openjdk7/jre/lib/zi/Asia/Ashgabat
+java/openjdk7/jre/lib/zi/Asia/Atyrau
 java/openjdk7/jre/lib/zi/Asia/Baghdad
 java/openjdk7/jre/lib/zi/Asia/Baku
+java/openjdk7/jre/lib/zi/Asia/Barnaul
 java/openjdk7/jre/lib/zi/Asia/Bangkok
 java/openjdk7/jre/lib/zi/Asia/Beirut
 java/openjdk7/jre/lib/zi/Asia/Bishkek
@@ -633,6 +634,7 @@ java/openjdk7/jre/lib/zi/Asia/Dhaka
 java/openjdk7/jre/lib/zi/Asia/Dili
 java/openjdk7/jre/lib/zi/Asia/Dubai
 java/openjdk7/jre/lib/zi/Asia/Dushanbe
+java/openjdk7/jre/lib/zi/Asia/Famagusta
 java/openjdk7/jre/lib/zi/Asia/Gaza
 java/openjdk7/jre/lib/zi/Asia/Hebron
 java/openjdk7/jre/lib/zi/Asia/Ho_Chi_Minh
@@ -664,7 +666,6 @@ java/openjdk7/jre/lib/zi/Asia/Pontianak
 java/openjdk7/jre/lib/zi/Asia/Pyongyang
 java/openjdk7/jre/lib/zi/Asia/Qatar
 java/openjdk7/jre/lib/zi/Asia/Qyzylorda
-java/openjdk7/jre/lib/zi/Asia/Rangoon
 java/openjdk7/jre/lib/zi/Asia/Riyadh
 java/openjdk7/jre/lib/zi/Asia/Riyadh87
 java/openjdk7/jre/lib/zi/Asia/Riyadh88
@@ -681,12 +682,14 @@ java/openjdk7/jre/lib/zi/Asia/Tbilisi
 java/openjdk7/jre/lib/zi/Asia/Tehran
 java/openjdk7/jre/lib/zi/Asia/Thimphu
 java/openjdk7/jre/lib/zi/Asia/Tokyo
+java/openjdk7/jre/lib/zi/Asia/Tomsk
 java/openjdk7/jre/lib/zi/Asia/Ulaanbaatar
 java/openjdk7/jre/lib/zi/Asia/Urumqi
 java/openjdk7/jre/lib/zi/Asia/Ust-Nera
 java/openjdk7/jre/lib/zi/Asia/Vladivostok
 java/openjdk7/jre/lib/zi/Asia/Yakutsk
 java/openjdk7/jre/lib/zi/Asia/Yekaterinburg
+java/openjdk7/jre/lib/zi/Asia/Yangon
 java/openjdk7/jre/lib/zi/Asia/Yerevan
 java/openjdk7/jre/lib/zi/Atlantic/Azores
 java/openjdk7/jre/lib/zi/Atlantic/Bermuda
@@ -745,6 +748,7 @@ java/openjdk7/jre/lib/zi/Etc/UCT
 java/openjdk7/jre/lib/zi/Etc/UTC
 java/openjdk7/jre/lib/zi/Europe/Amsterdam
 java/openjdk7/jre/lib/zi/Europe/Andorra
+java/openjdk7/jre/lib/zi/Europe/Astrakhan
 java/openjdk7/jre/lib/zi/Europe/Athens
 java/openjdk7/jre/lib/zi/Europe/Belgrade
 java/openjdk7/jre/lib/zi/Europe/Berlin
@@ -759,6 +763,7 @@ java/openjdk7/jre/lib/zi/Europe/Helsinki
 java/openjdk7/jre/lib/zi/Europe/Istanbul
 java/openjdk7/jre/lib/zi/Europe/Kaliningrad
 java/openjdk7/jre/lib/zi/Europe/Kiev
+java/openjdk7/jre/lib/zi/Europe/Kirov
 java/openjdk7/jre/lib/zi/Europe/Lisbon
 java/openjdk7/jre/lib/zi/Europe/London
 java/openjdk7/jre/lib/zi/Europe/Luxembourg
@@ -773,11 +778,13 @@ java/openjdk7/jre/lib/zi/Europe/Prague
 java/openjdk7/jre/lib/zi/Europe/Riga
 java/openjdk7/jre/lib/zi/Europe/Rome
 java/openjdk7/jre/lib/zi/Europe/Samara
+java/openjdk7/jre/lib/zi/Europe/Saratov
 java/openjdk7/jre/lib/zi/Europe/Simferopol
 java/openjdk7/jre/lib/zi/Europe/Sofia
 java/openjdk7/jre/lib/zi/Europe/Stockholm
 java/openjdk7/jre/lib/zi/Europe/Tallinn
 java/openjdk7/jre/lib/zi/Europe/Tirane
+java/openjdk7/jre/lib/zi/Europe/Ulyanovsk
 java/openjdk7/jre/lib/zi/Europe/Uzhgorod
 java/openjdk7/jre/lib/zi/Europe/Vienna
 java/openjdk7/jre/lib/zi/Europe/Vilnius
@@ -820,7 +827,6 @@ java/openjdk7/jre/lib/zi/Pacific/Kosrae
 java/openjdk7/jre/lib/zi/Pacific/Kwajalein
 java/openjdk7/jre/lib/zi/Pacific/Majuro
 java/openjdk7/jre/lib/zi/Pacific/Marquesas
-java/openjdk7/jre/lib/zi/Pacific/Midway
 java/openjdk7/jre/lib/zi/Pacific/Nauru
 java/openjdk7/jre/lib/zi/Pacific/Niue
 java/openjdk7/jre/lib/zi/Pacific/Norfolk
@@ -831,7 +837,6 @@ java/openjdk7/jre/lib/zi/Pacific/Pitcairn
 java/openjdk7/jre/lib/zi/Pacific/Pohnpei
 java/openjdk7/jre/lib/zi/Pacific/Port_Moresby
 java/openjdk7/jre/lib/zi/Pacific/Rarotonga
-java/openjdk7/jre/lib/zi/Pacific/Saipan
 java/openjdk7/jre/lib/zi/Pacific/Tahiti
 java/openjdk7/jre/lib/zi/Pacific/Tarawa
 java/openjdk7/jre/lib/zi/Pacific/Tongatapu

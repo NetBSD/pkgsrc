@@ -1,7 +1,9 @@
-$NetBSD: patch-jdk_src_solaris_classes_java_lang_UNIXProcess.java.bsd,v 1.2 2015/06/09 15:03:43 tnn Exp $
+$NetBSD: patch-jdk_src_solaris_classes_java_lang_UNIXProcess.java.bsd,v 1.3 2017/08/14 00:02:16 ryoon Exp $
 
 * Under NetBSD 5, use fork instead of posix_spawn. NetBSD 5 has no posix_spawn.
 
++++ jdk/src/solaris/classes/java/lang/UNIXProcess.java.bsd
+--- jdk/src/solaris/classes/java/lang/UNIXProcess.java.bsd.orig	2017-08-13 05:55:20.000000000 +0000
 +++ jdk/src/solaris/classes/java/lang/UNIXProcess.java.bsd
 @@ -103,14 +103,28 @@ final class UNIXProcess extends Process 
                      helperpath = toCString(javahome + "/lib/jspawnhelper");

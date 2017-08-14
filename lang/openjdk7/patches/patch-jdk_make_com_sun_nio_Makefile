@@ -1,19 +1,15 @@
-$NetBSD: patch-jdk_make_com_sun_nio_Makefile,v 1.1 2015/01/27 12:31:06 ryoon Exp $
+$NetBSD: patch-jdk_make_com_sun_nio_Makefile,v 1.2 2017/08/14 00:02:16 ryoon Exp $
 
 * NetBSD has no SCTP support.
 
---- jdk/make/com/sun/nio/Makefile.orig	2015-01-26 15:20:56.000000000 +0000
+--- jdk/make/com/sun/nio/Makefile.orig	2017-08-13 05:55:12.000000000 +0000
 +++ jdk/make/com/sun/nio/Makefile
-@@ -29,8 +29,12 @@
- 
- BUILDDIR = ../../..
+@@ -31,7 +31,7 @@ BUILDDIR = ../../..
  include $(BUILDDIR)/common/Defs.gmk
-+
-+# disable for NetBSD
-+ifneq ($(OS_VENDOR), NetBSD)
+ 
+ # MMM: disable for now
+-ifeq (, $(findstring $(PLATFORM), macosx aix))
++ifeq (, $(findstring $(PLATFORM), macosx aix netbsd))
  include $(BUILDDIR)/common/Subdirs.gmk
  SUBDIRS = sctp
-+endif
- 
- all build clean clobber::
- 	$(SUBDIRS-loop)
+ endif
