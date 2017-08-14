@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/14 19:40:14 wiz Exp $
 
-DISTNAME=	nose-exclude-0.4.1
+DISTNAME=	nose-exclude-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nose-exclude/}

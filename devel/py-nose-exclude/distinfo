@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/01/02 11:00:12 wiz Exp $
+$NetBSD: distinfo,v 1.2 2017/08/14 19:40:14 wiz Exp $
 
-SHA1 (nose-exclude-0.4.1.tar.gz) = 4413f5a7b3d26d30181298238f862865deb970fe
-RMD160 (nose-exclude-0.4.1.tar.gz) = 6b23c28d94d415376ae519f49811971c23c3bbd4
-SHA512 (nose-exclude-0.4.1.tar.gz) = 07dd869f948fb6e6f23dbecc316d08f23701f30ace3755e560f94deeb62cb2b5e1f5690477260d8d3a7f634e3e9959142a340f4fe0886e2ad12852444244ca3f
-Size (nose-exclude-0.4.1.tar.gz) = 5930 bytes
+SHA1 (nose-exclude-0.5.0.tar.gz) = 047562399abc23b0e321be221acecb6976894b7c
+RMD160 (nose-exclude-0.5.0.tar.gz) = 500c44724e2c350803d8502d891217e12eb6a17d
+SHA512 (nose-exclude-0.5.0.tar.gz) = 2795f2f42430f8622fdeb46accf4a75853f8202ce1849852ec4b1a6e26aeb20accb8c2ec4faf3dad0ea174570fccd67d51140587ee9f47c905eed5d8a2963356
+Size (nose-exclude-0.5.0.tar.gz) = 7359 bytes
