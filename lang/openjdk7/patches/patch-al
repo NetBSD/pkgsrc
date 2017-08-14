@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.5 2014/01/02 01:16:35 ryoon Exp $
+$NetBSD: patch-al,v 1.6 2017/08/14 00:02:16 ryoon Exp $
 
 DragonFly support.
 
---- jdk/src/solaris/classes/sun/nio/fs/DefaultFileSystemProvider.java.orig	2014-01-01 05:53:43.000000000 +0000
+--- jdk/src/solaris/classes/sun/nio/fs/DefaultFileSystemProvider.java.orig	2017-08-13 05:55:21.000000000 +0000
 +++ jdk/src/solaris/classes/sun/nio/fs/DefaultFileSystemProvider.java
 @@ -28,6 +28,8 @@ package sun.nio.fs;
  import java.nio.file.spi.FileSystemProvider;
@@ -45,5 +45,5 @@ DragonFly support.
 -        if (osname.endsWith("BSD"))
 +        if (osname.endsWith("BSD") || osname.equals("DragonFly"))
              return createProvider("sun.nio.fs.BsdFileSystemProvider");
-         throw new AssertionError("Platform not recognized");
-     }
+         if (osname.equals("AIX") || osname.equals("OS400"))
+             return createProvider("sun.nio.fs.AixFileSystemProvider");
