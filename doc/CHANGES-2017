@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3214 2017/08/14 20:10:21 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3215 2017/08/14 20:12:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4454,3 +4454,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/py-vdirsyncer to 0.16.1 [wiz 2017-08-14]
 	Updated net/libsoup to 2.58.2 [wiz 2017-08-14]
 	Updated devel/waf to 1.9.13 [wiz 2017-08-14]
+	Updated security/gnupg to 1.4.22 [wiz 2017-08-14]
