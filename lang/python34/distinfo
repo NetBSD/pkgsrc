@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.26 2017/05/30 14:04:53 bouyer Exp $
+$NetBSD: distinfo,v 1.27 2017/08/14 09:20:00 adam Exp $
 
-SHA1 (Python-3.4.6.tar.xz) = ef7dbec63d45760701534990511d686e3acbbe4f
-RMD160 (Python-3.4.6.tar.xz) = a669de69e6728141a6c960877c486c1f094b560d
-SHA512 (Python-3.4.6.tar.xz) = f6785cf6a99a8a27823baefe59cc20e34cbec01bb444c8600e7f49b5437159d5137f9d80fce26e219846d71bfe98f68bc6f0c87719a34db0050a4eaca95959ac
-Size (Python-3.4.6.tar.xz) = 14473592 bytes
+SHA1 (Python-3.4.7.tar.xz) = 7b05bf099f3f311ba568232d0d03d64e67da9908
+RMD160 (Python-3.4.7.tar.xz) = 8c4cde8603a15cd55b59b665a84efd0e8f9d7553
+SHA512 (Python-3.4.7.tar.xz) = 34d303f510210d7e695f65f69819049bdf71607b100cf4658af4620b14385f2e5acc3363f2e1b573509cca651e91c836ccd4fb00982f061a58e9b5c9504cd060
+Size (Python-3.4.7.tar.xz) = 14511368 bytes
 SHA1 (patch-Lib_distutils_unixccompiler.py) = 7d6df07921ad3357757d4681a964256b560b3f57
 SHA1 (patch-Modules_socketmodule.c) = 3b091755d7c104b5d1fc696a0d4a679ed3565ef4
 SHA1 (patch-Modules_socketmodule.h) = ed334a97c2a6662c5b44b4e50c1b8efcc220fa1f
