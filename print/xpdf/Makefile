@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2017/01/19 18:52:22 agc Exp $
+# $NetBSD: Makefile,v 1.84 2017/08/14 06:49:51 wiz Exp $
 
 DISTNAME=	xpdf-3.04
 CATEGORIES=	print
@@ -8,7 +8,7 @@ MASTER_SITES+=	http://gd.tuwien.ac.at/publishing/xpdf/
 PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.foolabs.com/xpdf/
+HOMEPAGE=	http://www.xpdfreader.com/
 COMMENT=	Display tool for PDF files
 LICENSE=	gnu-gpl-v2
 
