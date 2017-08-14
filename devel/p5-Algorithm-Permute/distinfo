@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:27:54 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/08/14 12:00:23 mef Exp $
 
-SHA1 (Algorithm-Permute-0.12.tar.gz) = 0e82a8cbca7d90fc09a3c8cd8bfe1213a3e9cf1e
-RMD160 (Algorithm-Permute-0.12.tar.gz) = 06e8949a8689aaccefae92727f954c010146202c
-SHA512 (Algorithm-Permute-0.12.tar.gz) = 95d4ef417bd7f781368e15ce35480c0c626c71e48c77912116f627986328cf5b4d15ebccdaf0e4bca2917c028f758374be35fe32f8c588206144cf134d53fb00
-Size (Algorithm-Permute-0.12.tar.gz) = 13187 bytes
+SHA1 (Algorithm-Permute-0.16.tar.gz) = e6609c0d3379bd4e0bcbde9fd90c1e6f9928b5b1
+RMD160 (Algorithm-Permute-0.16.tar.gz) = 9145184fdf7120db4302018215e81d0addf1a61d
+SHA512 (Algorithm-Permute-0.16.tar.gz) = 1d9748903593d065cc8bc7358a5984c0f6c7e8539a175a87e39f30831103f0be8eb00a1a2ce3a8c83660a19f2a082749d23072d79543cae44601898b263aff14
+Size (Algorithm-Permute-0.16.tar.gz) = 73830 bytes
