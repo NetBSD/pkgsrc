@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.70 2017/06/10 19:14:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.71 2017/08/14 15:25:09 jlam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -11,6 +11,7 @@ share/doc/sqlite3/asyncvfs.html
 share/doc/sqlite3/atomiccommit.html
 share/doc/sqlite3/autoinc.html
 share/doc/sqlite3/backup.html
+share/doc/sqlite3/bindptr.html
 share/doc/sqlite3/books.html
 share/doc/sqlite3/c3ref/aggregate_context.html
 share/doc/sqlite3/c3ref/aggregate_count.html
@@ -52,6 +53,7 @@ share/doc/sqlite3/c3ref/c_limit_attached.html
 share/doc/sqlite3/c3ref/c_lock_exclusive.html
 share/doc/sqlite3/c3ref/c_mutex_fast.html
 share/doc/sqlite3/c3ref/c_open_autoproxy.html
+share/doc/sqlite3/c3ref/c_prepare_persistent.html
 share/doc/sqlite3/c3ref/c_scanstat_est.html
 share/doc/sqlite3/c3ref/c_shm_exclusive.html
 share/doc/sqlite3/c3ref/c_shm_nlock.html
@@ -202,6 +204,7 @@ share/doc/sqlite3/chronology.html
 share/doc/sqlite3/cintro.html
 share/doc/sqlite3/cli.html
 share/doc/sqlite3/compile.html
+share/doc/sqlite3/completion.html
 share/doc/sqlite3/conflict.html
 share/doc/sqlite3/consortium.html
 share/doc/sqlite3/consortium_agreement-20071201.html
@@ -585,6 +588,8 @@ share/doc/sqlite3/releaselog/3_16_1.html
 share/doc/sqlite3/releaselog/3_16_2.html
 share/doc/sqlite3/releaselog/3_17_0.html
 share/doc/sqlite3/releaselog/3_18_0.html
+share/doc/sqlite3/releaselog/3_18_1.html
+share/doc/sqlite3/releaselog/3_18_2.html
 share/doc/sqlite3/releaselog/3_19_0.html
 share/doc/sqlite3/releaselog/3_19_1.html
 share/doc/sqlite3/releaselog/3_19_2.html
@@ -596,6 +601,7 @@ share/doc/sqlite3/releaselog/3_1_3.html
 share/doc/sqlite3/releaselog/3_1_4.html
 share/doc/sqlite3/releaselog/3_1_5.html
 share/doc/sqlite3/releaselog/3_1_6.html
+share/doc/sqlite3/releaselog/3_20_0.html
 share/doc/sqlite3/releaselog/3_2_0.html
 share/doc/sqlite3/releaselog/3_2_1.html
 share/doc/sqlite3/releaselog/3_2_2.html
@@ -784,6 +790,7 @@ share/doc/sqlite3/sqlanalyze.html
 share/doc/sqlite3/sqldiff.html
 share/doc/sqlite3/sqlite.css
 share/doc/sqlite3/sqlite.html
+share/doc/sqlite3/stmt.html
 share/doc/sqlite3/support.html
 share/doc/sqlite3/syntax.html
 share/doc/sqlite3/syntax/alter-table-stmt.html
@@ -855,6 +862,7 @@ share/doc/sqlite3/threadsafe.html
 share/doc/sqlite3/toc.db
 share/doc/sqlite3/transactional.html
 share/doc/sqlite3/undoredo.html
+share/doc/sqlite3/unionvtab.html
 share/doc/sqlite3/unlock_notify.html
 share/doc/sqlite3/uri.html
 share/doc/sqlite3/vdbe.html
