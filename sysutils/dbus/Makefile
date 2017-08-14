@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.108 2017/07/04 08:48:08 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2017/08/14 20:38:10 wiz Exp $
 
-DISTNAME=	dbus-1.10.20
+DISTNAME=	dbus-1.10.22
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
