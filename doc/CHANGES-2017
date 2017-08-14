@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3209 2017/08/14 19:46:37 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3210 2017/08/14 19:48:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4449,3 +4449,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-m2r to 0.1.9 [wiz 2017-08-14]
 	Updated devel/py-nose-exclude to 0.5.0 [wiz 2017-08-14]
 	Added devel/py-test-forked version 0.2 [wiz 2017-08-14]
+	Updated devel/py-test-xdist to 1.19.1 [wiz 2017-08-14]
