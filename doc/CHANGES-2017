@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3182 2017/08/14 00:03:50 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.3183 2017/08/14 01:52:41 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4421,3 +4421,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/postgresql96 to 9.6.4 [adam 2017-08-13]
 	Updated mail/qmail to 1.03nb32 [schmonz 2017-08-13]
 	Updated lang/openjdk7 to 1.7.141 [ryoon 2017-08-14]
+	Updated devel/py-mercurial to 4.3.1 [maya 2017-08-14]
