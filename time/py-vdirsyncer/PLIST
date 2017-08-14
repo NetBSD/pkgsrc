@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2017/07/04 09:16:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2017/08/14 20:00:19 wiz Exp $
 bin/vdirsyncer
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -66,9 +66,6 @@ ${PYSITELIB}/vdirsyncer/storage/http.pyo
 ${PYSITELIB}/vdirsyncer/storage/memory.py
 ${PYSITELIB}/vdirsyncer/storage/memory.pyc
 ${PYSITELIB}/vdirsyncer/storage/memory.pyo
-${PYSITELIB}/vdirsyncer/storage/remotestorage.py
-${PYSITELIB}/vdirsyncer/storage/remotestorage.pyc
-${PYSITELIB}/vdirsyncer/storage/remotestorage.pyo
 ${PYSITELIB}/vdirsyncer/storage/singlefile.py
 ${PYSITELIB}/vdirsyncer/storage/singlefile.pyc
 ${PYSITELIB}/vdirsyncer/storage/singlefile.pyo
