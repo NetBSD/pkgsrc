@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2016/06/11 18:55:01 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2017/08/14 23:42:08 schmonz Exp $
 
 DISTNAME=		cpputest-3.8
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=cpputest/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -24,7 +25,12 @@ USE_LANGUAGES=		c c++
 
 TEST_TARGET=		check tdd
 
+INSTALLATION_DIRS=	share/CppUTest
+
 pre-configure:
 	cd ${WRKSRC}/${CONFIGURE_DIRS} && autoreconf .. -fiv
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/build/MakefileWorker.mk ${DESTDIR}${PREFIX}/share/CppUTest/MakefileWorker.mk
 
 .include "../../mk/bsd.pkg.mk"
