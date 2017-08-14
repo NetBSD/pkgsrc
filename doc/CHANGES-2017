@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3187 2017/08/14 18:43:32 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3188 2017/08/14 18:44:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4427,3 +4427,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Algorithm-Permute to 0.16 [mef 2017-08-14]
 	Updated net/syncthing to 0.14.36 [wiz 2017-08-14]
 	Updated devel/p5-Class-Inspector to 1.32 [wiz 2017-08-14]
+	Updated devel/p5-Data-Printer to 0.40 [wiz 2017-08-14]
