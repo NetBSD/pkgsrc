@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2017/06/14 14:03:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2017/08/14 20:42:33 wiz Exp $
 bin/meld
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/meld/__init__.py
@@ -52,6 +52,10 @@ ${PYSITELIB}/meld/matchers/merge.pyo
 ${PYSITELIB}/meld/matchers/myers.py
 ${PYSITELIB}/meld/matchers/myers.pyc
 ${PYSITELIB}/meld/matchers/myers.pyo
+${PYSITELIB}/meld/matchers/myerspy.py
+${PYSITELIB}/meld/matchers/myerspy.pyc
+${PYSITELIB}/meld/matchers/myerspy.pyo
+${PYSITELIB}/meld/matchers/myerspycmp.py
 ${PYSITELIB}/meld/meldapp.py
 ${PYSITELIB}/meld/meldapp.pyc
 ${PYSITELIB}/meld/meldapp.pyo
