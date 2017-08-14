@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2016/08/19 11:39:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2017/08/14 20:49:42 wiz Exp $
 bin/afl-analyze
 bin/afl-clang
 bin/afl-clang++
@@ -18,6 +18,7 @@ share/afl/dictionaries/gif.dict
 share/afl/dictionaries/html_tags.dict
 share/afl/dictionaries/jpeg.dict
 share/afl/dictionaries/js.dict
+share/afl/dictionaries/json.dict
 share/afl/dictionaries/pdf.dict
 share/afl/dictionaries/png.dict
 share/afl/dictionaries/sql.dict
