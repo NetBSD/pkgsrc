@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2480 2017/08/01 15:55:25 maya Exp $
+# $NetBSD: Makefile,v 1.2481 2017/08/14 19:46:25 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2051,6 +2051,7 @@ SUBDIR+=	py-sysctl
 SUBDIR+=	py-tabular
 SUBDIR+=	py-test
 SUBDIR+=	py-test-cov
+SUBDIR+=	py-test-forked
 SUBDIR+=	py-test-mock
 SUBDIR+=	py-test-runner
 SUBDIR+=	py-test-xdist
