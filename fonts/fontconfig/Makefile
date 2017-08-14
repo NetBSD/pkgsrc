@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.99 2017/06/20 11:36:40 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2017/08/14 20:30:24 wiz Exp $
 
-DISTNAME=	fontconfig-2.12.3
+DISTNAME=	fontconfig-2.12.4
 CATEGORIES=	fonts
 MASTER_SITES=	https://www.fontconfig.org/release/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.fontconfig.org/
 COMMENT=	Library for configuring and customizing font access
 #LICENSE=	x11?
+
+# https://bugs.freedesktop.org/show_bug.cgi?id=101280
+BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
