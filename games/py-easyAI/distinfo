@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:57:02 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/08/14 19:25:01 wiz Exp $
 
-SHA1 (easyAI-0.0.0.4.tar.gz) = ece2bf64d5e0c2220d5ebed9c3522a50a4189142
-RMD160 (easyAI-0.0.0.4.tar.gz) = b2e7717a0a884923c1c71857b307a9cb2fcd421d
-SHA512 (easyAI-0.0.0.4.tar.gz) = 04bdd951d380b633a7326351af266a6866d756e994b825278f5d9b8e1fc1cf1063ed6c5f1f72bc79f7dcab6f87d5f6bf321d95f7819df9355fcca78e2c385ede
-Size (easyAI-0.0.0.4.tar.gz) = 26076 bytes
+SHA1 (easyAI-1.0.0.4.tar.gz) = d368e1fc3db6f775851801d83f38955b653459e2
+RMD160 (easyAI-1.0.0.4.tar.gz) = 5c71f31c157a9789f6f97c8f8a9ea7de13e35403
+SHA512 (easyAI-1.0.0.4.tar.gz) = 5bd600dc8aab0ab033d660a3ccb720b3870da693d062f5fd19e997ddae8087dd331ee081e614181a5366b0dbbd21c972994a9a173fd3ad96f0657c34dbc9814f
+Size (easyAI-1.0.0.4.tar.gz) = 27605 bytes
