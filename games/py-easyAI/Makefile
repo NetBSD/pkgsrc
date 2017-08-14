@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/01/01 14:43:40 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/08/14 19:25:01 wiz Exp $
 
-DISTNAME=	easyAI-0.0.0.4
+DISTNAME=	easyAI-1.0.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/easyAI/}
