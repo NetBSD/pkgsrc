@@ -1,0 +1,9 @@
+LDoc is a software documentation tool which automatically generates API
+documentation out of source code comments (doc comments). It is mainly targeted
+at Lua and documenting Lua APIs, but it can also parse C with according doc
+comments for documenting Lua modules implemented in C.
+
+It is mostly compatible with LuaDoc, except that certain workarounds are no
+longer needed. For instance, it is not so married to the idea that Lua modules
+should be defined using the module function; this is not only a matter of taste
+since this has been deprecated in Lua 5.2.

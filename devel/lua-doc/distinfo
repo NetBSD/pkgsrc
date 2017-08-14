@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2017/08/14 21:11:09 triaxx Exp $
+
+SHA1 (ldoc-1.4.6.tar.gz) = 587ea175311110144df0d9c2175a72e462378e04
+RMD160 (ldoc-1.4.6.tar.gz) = b1d1fa7967af7f5c9c598c0a4898940e4275b03e
+SHA512 (ldoc-1.4.6.tar.gz) = bcaddba4e462a4fb0aa0d8fcff390de3f195fa5cc569d8f05b84ad0fff900f5ac945be7a2eb15cf5ca60cc462f02c874579e4a19e33776178a04104ef9d944af
+Size (ldoc-1.4.6.tar.gz) = 126080 bytes
+SHA1 (patch-makefile) = 39f47724ee68a9be14fbff3977447f117eb4ae22
