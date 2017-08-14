@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2017/06/14 14:03:54 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2017/08/14 20:42:33 wiz Exp $
 
-DISTNAME=		meld-3.17.2
+DISTNAME=		meld-3.17.3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/meld/3.17/}
 EXTRACT_SUFX=		.tar.xz
