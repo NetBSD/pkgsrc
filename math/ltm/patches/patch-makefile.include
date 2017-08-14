@@ -1,0 +1,15 @@
+$NetBSD: patch-makefile.include,v 1.1 2017/08/14 15:24:11 jlam Exp $
+
+--- makefile.include.orig	2016-02-03 13:07:27.000000000 -0500
++++ makefile.include	2017-08-12 17:08:23.000000000 -0400
+@@ -10,9 +10,7 @@
+ default: ${LIBNAME}
+ 
+ # Compiler and Linker Names
+-ifndef PREFIX
+-  PREFIX=
+-endif
++PREFIX=
+ 
+ ifeq ($(CC),cc)
+   CC = $(PREFIX)gcc
