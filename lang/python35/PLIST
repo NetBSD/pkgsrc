@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/01/19 13:55:53 wen Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/08/14 09:16:28 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -2448,7 +2448,6 @@ lib/python${PY_VER_SUFFIX}/telnetlib.pyo
 lib/python${PY_VER_SUFFIX}/tempfile.py
 lib/python${PY_VER_SUFFIX}/tempfile.pyc
 lib/python${PY_VER_SUFFIX}/tempfile.pyo
-lib/python${PY_VER_SUFFIX}/test/185test.db
 lib/python${PY_VER_SUFFIX}/test/Sine-1000Hz-300ms.aif
 lib/python${PY_VER_SUFFIX}/test/__init__.py
 lib/python${PY_VER_SUFFIX}/test/__init__.pyc
@@ -2504,6 +2503,9 @@ lib/python${PY_VER_SUFFIX}/test/badsyntax_future7.py
 lib/python${PY_VER_SUFFIX}/test/badsyntax_future8.py
 lib/python${PY_VER_SUFFIX}/test/badsyntax_future9.py
 lib/python${PY_VER_SUFFIX}/test/badsyntax_pep3120.py
+lib/python${PY_VER_SUFFIX}/test/bisect.py
+lib/python${PY_VER_SUFFIX}/test/bisect.pyc
+lib/python${PY_VER_SUFFIX}/test/bisect.pyo
 lib/python${PY_VER_SUFFIX}/test/bytecode_helper.py
 lib/python${PY_VER_SUFFIX}/test/bytecode_helper.pyc
 lib/python${PY_VER_SUFFIX}/test/bytecode_helper.pyo
@@ -2793,6 +2795,9 @@ lib/python${PY_VER_SUFFIX}/test/mime.types
 lib/python${PY_VER_SUFFIX}/test/mock_socket.py
 lib/python${PY_VER_SUFFIX}/test/mock_socket.pyc
 lib/python${PY_VER_SUFFIX}/test/mock_socket.pyo
+lib/python${PY_VER_SUFFIX}/test/mod_generics_cache.py
+lib/python${PY_VER_SUFFIX}/test/mod_generics_cache.pyc
+lib/python${PY_VER_SUFFIX}/test/mod_generics_cache.pyo
 lib/python${PY_VER_SUFFIX}/test/mp_fork_bomb.py
 lib/python${PY_VER_SUFFIX}/test/mp_fork_bomb.pyc
 lib/python${PY_VER_SUFFIX}/test/mp_fork_bomb.pyo
@@ -4935,7 +4940,7 @@ lib/python${PY_VER_SUFFIX}/venv/__init__.pyo
 lib/python${PY_VER_SUFFIX}/venv/__main__.py
 lib/python${PY_VER_SUFFIX}/venv/__main__.pyc
 lib/python${PY_VER_SUFFIX}/venv/__main__.pyo
-lib/python${PY_VER_SUFFIX}/venv/scripts/posix/activate
+lib/python${PY_VER_SUFFIX}/venv/scripts/common/activate
 lib/python${PY_VER_SUFFIX}/venv/scripts/posix/activate.csh
 lib/python${PY_VER_SUFFIX}/venv/scripts/posix/activate.fish
 lib/python${PY_VER_SUFFIX}/warnings.py
