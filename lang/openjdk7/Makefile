@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.115 2017/05/09 14:26:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.116 2017/08/14 00:02:16 ryoon Exp $
 
-JDK_MICRO=	80
-DISTNAME=	openjdk-1.7.${JDK_MICRO}-20150609
+JDK_MICRO=	141
+DISTNAME=	openjdk-1.7.${JDK_MICRO}-20170813
 PKGNAME=	openjdk7-1.7.${JDK_MICRO}
-PKGREVISION=	7
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.xz
@@ -22,6 +21,26 @@ JAVA_NAME=	openjdk7
 JAVA_HOME=	${PREFIX}/java/${JAVA_NAME}
 JAVA_WRAPPERS=	jar java javac javadoc javah javap jcmd jps jstack keytool \
 		orbd policytool rmid rmiregistry servertool tnameserv
+
+NOT_PAX_MPROTECT_SAFE+=	java/openjdk7/bin/[a-ik-z]*
+NOT_PAX_MPROTECT_SAFE+=	java/openjdk7/bin/j[b-z]*
+NOT_PAX_MPROTECT_SAFE+=	java/openjdk7/bin/jar*
+NOT_PAX_MPROTECT_SAFE+=	java/openjdk7/bin/java
+NOT_PAX_MPROTECT_SAFE+=	java/openjdk7/bin/java[a-z]*
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && defined(TOOLS_PLATFORM.paxctl)
+SUBST_CLASSES+=			set-paxctl
+SUBST_STAGE.set-paxctl=		pre-build
+SUBST_MESSAGE.set-paxctl=	Setting NetBSD paxctl
+SUBST_FILES.set-paxctl=		make/Defs-internal.gmk
+SUBST_FILES.set-paxctl+=	jdk/make/com/sun/jmx/Makefile
+SUBST_SED.set-paxctl+=		-e 's,/usr/sbin/paxmark.sh,${PAXCTL},'
+SUBST_SED.set-paxctl+=		-e 's,-vmsp,+m,'
+SUBST_SED.set-paxctl+=		-e 's,-vm,+m,'
+SUBST_SED.set-paxctl+=		-e 's,\^PaX,.,'
+.endif
 
 MAKE_ENV+=		PKGSRC_ZIPEXE=${TOOLS_PATH.zip}
 MAKE_ENV+=		PKGSRC_UNZIP=${TOOLS_PATH.unzip}
@@ -190,6 +209,14 @@ post-extract:
 .if exists(/usr/lib/libstdc++.so.7)
 	${RM} -f ${ALT_BOOTDIR}/jre/lib/${LIBDIR_ARCH}/libstdc++.so*
 .endif
+.if defined(TOOLS_PLATFORM.paxctl)
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/[a-ik-z]*
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/j[b-z]*
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/jar*
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/java
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/java[a-z]*
+	${PAXCTL} +m ${WRKDIR}/bootstrap/jre/bin/*
+.endif
 
 do-build: ${WRKDIR}/stage3-done
 
@@ -201,8 +228,20 @@ ${WRKDIR}/stage1-done:
 	mv ${BUILDDIR} ${BUILDDIR}-stage1
 	touch ${.TARGET}
 
+# stage 1.5 reconfigures, since the bootstrap JDK major version might have changed now
+${WRKDIR}/stage1_5-done: ${WRKDIR}/stage1-done
+.if defined(TOOLS_PLATFORM.paxctl)
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/[a-ik-z]*
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/j[b-z]*
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/jar*
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/java
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/java[a-z]*
+	${PAXCTL} +m ${WRKDIR}/bootstrap/jre/bin/*
+.endif
+	touch ${.TARGET}
+
 # stage 2 rebuilds the JDK using native tools
-${WRKDIR}/stage2-done: ${WRKDIR}/stage1-done
+${WRKDIR}/stage2-done: ${WRKDIR}/stage1_5-done
 	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${JDK_MAKE_TARGET}
 	touch ${BUILDDIR}/j2sdk-image/jre/lib/applet/.keep
 	touch ${.TARGET}
@@ -212,6 +251,9 @@ ${WRKDIR}/stage3-done: ${WRKDIR}/stage2-done ${WRKDIR}/cacerts.out
 	touch ${.TARGET}
 
 ${WRKDIR}/cacerts.out:
+.if defined(TOOLS_PLATFORM.paxctl)
+	${PAXCTL} +m ${WRKSRC}/build/*/bin/keytool
+.endif
 	mkdir ${WRKDIR}/cacerts && cd ${WRKDIR}/cacerts && 		\
 		${PREFIX}/sbin/mozilla-rootcerts extract
 	for cert in ${WRKDIR}/cacerts/*.pem; do				\

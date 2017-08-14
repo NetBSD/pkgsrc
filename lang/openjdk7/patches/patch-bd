@@ -1,12 +1,12 @@
-$NetBSD: patch-bd,v 1.4 2013/06/15 09:31:05 jperkin Exp $
+$NetBSD: patch-bd,v 1.5 2017/08/14 00:02:16 ryoon Exp $
 
 Support __progname and environ.
 
---- jdk/make/com/sun/java/pack/mapfile-vers.orig	2012-08-10 17:21:30.000000000 +0000
+--- jdk/make/com/sun/java/pack/mapfile-vers.orig	2017-08-13 05:55:12.000000000 +0000
 +++ jdk/make/com/sun/java/pack/mapfile-vers
-@@ -28,6 +28,8 @@
+@@ -33,6 +33,8 @@
  
- SUNWprivate_1.1 {
+ {
  	global:
 +            __progname;
 +            environ;
