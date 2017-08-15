@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3253 2017/08/15 19:37:11 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3254 2017/08/15 21:00:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4496,3 +4496,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/thunderbird-enigmail to 1.9.8.1 [wiz 2017-08-15]
 	Updated net/tor to 0.3.0.10 [wiz 2017-08-15]
 	Updated net/wireshark to 2.2.8 [wiz 2017-08-15]
+	Updated editors/vim-share to 8.0.0921 [wiz 2017-08-15]
