@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3243 2017/08/15 10:00:35 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3244 2017/08/15 10:58:28 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4486,3 +4486,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-botocore to 1.6.1 [adam 2017-08-15]
 	Updated net/py-awscli to 1.11.134 [adam 2017-08-15]
 	Updated net/py-boto3 to 1.4.6 [adam 2017-08-15]
+	Updated wm/awesome to 4.2 [triaxx 2017-08-15]
