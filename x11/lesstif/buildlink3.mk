@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2013/06/04 22:17:27 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2017/08/15 17:24:03 wiz Exp $
 
 BUILDLINK_TREE+=	lesstif
 
@@ -11,11 +11,10 @@ BUILDLINK_PKGSRCDIR.lesstif?=	../../x11/lesstif
 
 _MOTIFBASE=	${BUILDLINK_PREFIX.lesstif}
 MOTIFLIB=	${COMPILER_RPATH_FLAG}${_MOTIFBASE}/lib \
-		-L${_MOTIFBASE}/lib -lXm -lXp
+		-L${_MOTIFBASE}/lib -lXm
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .endif # LESSTIF_BUILDLINK3_MK
