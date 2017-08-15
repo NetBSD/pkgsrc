@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17612 2017/08/14 21:23:05 wiz Exp $
+$NetBSD: TODO,v 1.17613 2017/08/15 10:58:28 triaxx Exp $
 
 Suggested new packages
 ======================
@@ -447,7 +447,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o avant-window-navigator-0.4.2
 	o avidemux-2.6.16
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
-	o awesome-4.0
 	o baci-20040415
 	o base-1.4.5
 	o bbcim-1.0
