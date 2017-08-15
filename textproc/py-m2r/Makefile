@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/08/14 19:38:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/08/15 16:56:50 wiz Exp $
 
-DISTNAME=	m2r-0.1.9
+DISTNAME=	m2r-0.1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/m2r/}
@@ -14,9 +14,8 @@ USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-mistune-[0-9]*:../../textproc/py-mistune
-
-# 13 test failures as of 0.1.9
-# https://github.com/miyakogi/m2r/issues/9
+# TEST_DEPENDS
+BUILD_DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} m2r m2r${PYVERSSUFFIX} || ${TRUE}
