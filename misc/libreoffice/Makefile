@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2017/08/15 11:19:56 nros Exp $
+# $NetBSD: Makefile,v 1.119 2017/08/15 11:42:26 ryoon Exp $
 
 VERREL=		5.4.0
 VERRC=		3
@@ -40,7 +40,7 @@ CHECK_PORTABILITY_SKIP=configure
 
 NOT_PAX_MPROTECT_SAFE+=	${PKGNAME_NOREV}/lib/libreoffice/program/soffice.bin
 
-DIST_SUBDIR=	libreoffice/${PKGNAME}
+DIST_SUBDIR=	libreoffice/libreoffice-5.4.0.3nb1
 
 LO_BOOTSTRAP=	${DISTNAME}
 LO_COMPONENTS=	dictionaries help translations
