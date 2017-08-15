@@ -1,9 +1,9 @@
-$NetBSD: patch-configure,v 1.1 2012/08/28 05:59:39 morr Exp $
+$NetBSD: patch-configure,v 1.2 2017/08/15 21:00:11 wiz Exp $
 
 use the right shell and avoid a non-portable construct
 Needed to configure on SunOS-5.9/sparc.
 
---- src/configure.orig	2010-08-15 13:02:25.000000000 +0000
+--- src/configure.orig	2017-08-12 20:55:58.000000000 +0000
 +++ src/configure
 @@ -1,7 +1,8 @@
  #! /bin/sh
