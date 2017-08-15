@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2016/08/07 13:19:24 nils Exp $
+# $NetBSD: Makefile,v 1.11 2017/08/15 14:23:50 jperkin Exp $
 
 DISTNAME=	sslh-1.18
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yrutschle/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
