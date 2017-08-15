@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/11/16 10:42:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/08/15 18:57:54 wiz Exp $
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome.manifest
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome/enigmail.jar
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/components/enigmail.js
@@ -24,6 +24,16 @@ lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/decryp
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/decryption.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/dialog.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/encryption.jsm
+lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_common.jsm
+lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_main.jsm
+lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_shared.js
+lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_shared_unix.js
+lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_shared_win.js
+lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_unix.jsm
+lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_win.jsm
+lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_worker_common.js
+lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_worker_unix.js
+lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_worker_win.js
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/errorHandling.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/events.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/execution.jsm
@@ -59,8 +69,6 @@ lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/protoc
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/rules.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/streams.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subprocess.jsm
-lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subprocess_worker_unix.js
-lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subprocess_worker_win.js
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/system.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/time.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/timer.jsm
