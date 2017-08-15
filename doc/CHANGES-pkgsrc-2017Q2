@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.9 2017/07/31 05:58:07 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.10 2017/08/15 19:07:44 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q2 branch:
 
@@ -88,4 +88,22 @@ archivers/zstd: license handling fix
 
 Pullup ticket #5522 - requested by dholland
 editors/emacs20: functionality fix
+
+Pullup ticket #5528 - requested by sevan
+mk/pbulk/pbulk.sh: bugfix
+
+Pullup ticket #5529 - requested by jnemeth
+mail/cyrus-imapd24: build fix
+
+Pullup ticket #5530 - requested by taca
+www/contao44: build fix
+
+Pullup ticket #5531 - requested by taca
+lang/php70: security fix
+
+Pullup ticket #5532 - requested by taca
+lang/php71: security fix
+
+Pullup ticket #5533 - requested by maya
+devel/py-mercurial: security fix
 
