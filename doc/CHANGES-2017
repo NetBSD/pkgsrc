@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3254 2017/08/15 21:00:22 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3255 2017/08/15 21:04:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4497,3 +4497,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/tor to 0.3.0.10 [wiz 2017-08-15]
 	Updated net/wireshark to 2.2.8 [wiz 2017-08-15]
 	Updated editors/vim-share to 8.0.0921 [wiz 2017-08-15]
+	Updated archivers/py-libarchive-c to 2.4nb3 [wiz 2017-08-15]
