@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2017/08/15 08:34:20 fhajny Exp $
+
+SHA1 (pg_repack-1.4.1.tar.gz) = 38440383e6e471c9a89888c98e21a21d6266a1e6
+RMD160 (pg_repack-1.4.1.tar.gz) = a26a14bd82e4145bc1b3b63a35be4d3f4ee16ab3
+SHA512 (pg_repack-1.4.1.tar.gz) = 937a4b181d81a77626feeb0696574d558bfcbed03217f900d20af9fb483cd7a74b3b776a55f1ccfcfc847dc0ec29dbae35ec8f5215af21726e4cf20d9dc3b4a6
+Size (pg_repack-1.4.1.tar.gz) = 91564 bytes
+SHA1 (patch-bin_Makefile) = 7e82083f0df7e9a1532be323196875bd8ba44520
