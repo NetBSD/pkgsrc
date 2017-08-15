@@ -1,5 +1,7 @@
 # things set by configure
 
+_MAKE_VERSION=@_MAKE_VERSION@
+
 prefix= @prefix@
 srcdir= @srcdir@
 CC?= @CC@
