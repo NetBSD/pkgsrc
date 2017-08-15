@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3236 2017/08/15 00:36:27 mef Exp $
+$NetBSD: CHANGES-2017,v 1.3237 2017/08/15 01:52:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4476,3 +4476,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/miller to 5.2.2 [wiz 2017-08-14]
 	Updated devel/cpputest to 3.8nb1 [schmonz 2017-08-14]
 	Updated devel/p5-App-perlbrew to 0.80 [mef 2017-08-15]
+	Updated www/apache-tomcat85 to 8.5.20 [ryoon 2017-08-15]
