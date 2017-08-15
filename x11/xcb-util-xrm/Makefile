@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/08 14:03:19 nros Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/15 12:13:15 jperkin Exp $
 
 DISTNAME=	xcb-util-xrm-1.2
 CATEGORIES=	x11
@@ -12,7 +12,7 @@ LICENSE=	x11
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	gm4 pkg-config
 
 PKGCONFIG_OVERRIDE=xcb-xrm.pc.in
 
