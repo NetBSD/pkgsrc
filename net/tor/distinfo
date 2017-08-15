@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.83 2017/07/03 22:20:37 wiz Exp $
+$NetBSD: distinfo,v 1.84 2017/08/15 19:22:44 wiz Exp $
 
-SHA1 (tor-0.3.0.9.tar.gz) = 48c6d037d030056256ba6dd8adcc1142613d05d0
-RMD160 (tor-0.3.0.9.tar.gz) = 3f1823f84caf4e738bbe9b6369d198c29a511e46
-SHA512 (tor-0.3.0.9.tar.gz) = 19b662840ee0c6aaba04c6db7f172def070d0773553f90bc3d1f210266bbcb572b3dd1f383359e36583103235a85a0a4052cf7299a534fde137bee41376ffa02
-Size (tor-0.3.0.9.tar.gz) = 5811303 bytes
+SHA1 (tor-0.3.0.10.tar.gz) = ae83357955226c635c6ad7de13f1dd5b71fac19a
+RMD160 (tor-0.3.0.10.tar.gz) = e25ce3b6fcc624aa6750a0426332799188373e3f
+SHA512 (tor-0.3.0.10.tar.gz) = e39d56afb6a10194303483552f28f07e5d7b7c5d470de554d92723c8d3c0d5d5a98fc44d23aa9d51bfda51e7d7cbb48fc4d1e3ac82150aeb4ce3e1616695225a
+Size (tor-0.3.0.10.tar.gz) = 5845205 bytes
