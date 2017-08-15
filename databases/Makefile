@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.535 2017/07/31 14:24:22 maya Exp $
+# $NetBSD: Makefile,v 1.536 2017/08/15 08:35:34 fhajny Exp $
 
 COMMENT=	Databases
 
@@ -246,6 +246,7 @@ SUBDIR+=	pear-MDB2_Driver_mysql
 SUBDIR+=	pear-MDB2_Driver_mysqli
 SUBDIR+=	pear-MDB2_Driver_pgsql
 SUBDIR+=	percona-toolkit
+SUBDIR+=	pg_repack
 SUBDIR+=	pgadmin3
 SUBDIR+=	pgbouncer
 SUBDIR+=	pgbuildfarm
