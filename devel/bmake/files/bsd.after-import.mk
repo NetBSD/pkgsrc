@@ -1,4 +1,4 @@
-# $Id: bsd.after-import.mk,v 1.2 2015/05/19 22:01:19 joerg Exp $
+# $Id: bsd.after-import.mk,v 1.3 2017/08/15 15:54:06 brook Exp $
 
 # This makefile is for use when integrating bmake into a BSD build
 # system.  Use this makefile after importing bmake.
@@ -56,6 +56,7 @@ bootstrap:	${BMAKE_SRC}/boot-strap ${MAKEFILE}
 
 # Makefiles need a little more tweaking than say config.h
 MAKEFILE_SED = 	sed -e '/^MACHINE/d' \
+	-e '/include.*VERSION/d' \
 	-e '/^PROG/ { s,=,?=,;s,bmake,$${.CURDIR:T},; }' \
 	-e 's,^.-include,.sinclude,' \
 	-e '/^\..*include  *</ { s,<,<bsd.,;/autoconf/d; }' \
