@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3244 2017/08/15 10:58:28 triaxx Exp $
+$NetBSD: CHANGES-2017,v 1.3245 2017/08/15 12:23:33 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4487,3 +4487,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-awscli to 1.11.134 [adam 2017-08-15]
 	Updated net/py-boto3 to 1.4.6 [adam 2017-08-15]
 	Updated wm/awesome to 4.2 [triaxx 2017-08-15]
+	Updated databases/py-postgresql to 5.0.4 [darcy 2017-08-15]
