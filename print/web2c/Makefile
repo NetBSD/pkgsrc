@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2017/06/20 20:50:50 markd Exp $
+# $NetBSD: Makefile,v 1.59 2017/08/15 07:45:51 wiz Exp $
 
 DISTNAME=	texlive-20170524-source
 PKGNAME=	web2c-2017
@@ -21,7 +21,7 @@ EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake lex yacc pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/web2c
