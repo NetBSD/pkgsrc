@@ -1,6 +1,6 @@
 dnl
 dnl RCSid:
-dnl	$Id: configure.in,v 1.13 2015/05/19 22:01:19 joerg Exp $
+dnl	$Id: configure.in,v 1.14 2017/08/15 15:54:06 brook Exp $
 dnl
 dnl Process this file with autoconf to produce a configure script
 dnl
@@ -13,6 +13,9 @@ case "$srcdir" in
 /*) ;;
 *) srcdir=`cd $srcdir && pwd`;;
 esac
+
+dnl get _MAKE_VERSION
+. $srcdir/VERSION
 
 dnl
 AC_ARG_WITH(defshell,
@@ -375,6 +378,7 @@ AC_SUBST(GCC)
 AC_SUBST(diff_u)
 AC_SUBST(use_meta)
 AC_SUBST(filemon_h)
+AC_SUBST(_MAKE_VERSION)
 AC_OUTPUT(makefile Makefile.config make-bootstrap.sh unit-tests/Makefile)
 
 cat <<EOF
