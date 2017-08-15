@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3240 2017/08/15 05:46:38 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3241 2017/08/15 08:34:43 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4481,3 +4481,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/apache-tomcat8 to 8.0.45 [ryoon 2017-08-15]
 	Updated www/curl to 7.55.1 [adam 2017-08-15]
 	Updated graphics/libimagequant to 2.10.2 [adam 2017-08-15]
+	Added databases/pg_repack version 1.4.1 [fhajny 2017-08-15]
