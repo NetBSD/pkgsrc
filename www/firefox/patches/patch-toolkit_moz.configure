@@ -1,6 +1,6 @@
-$NetBSD: patch-toolkit_moz.configure,v 1.4 2017/08/10 14:46:15 ryoon Exp $
+$NetBSD: patch-toolkit_moz.configure,v 1.5 2017/08/15 01:24:47 ryoon Exp $
 
-* Enable widevide CDM for NetBSD
+* skia part: support bigendian architectures
 
 --- toolkit/moz.configure.orig	2017-07-31 16:20:52.000000000 +0000
 +++ toolkit/moz.configure
@@ -76,3 +76,20 @@ $NetBSD: patch-toolkit_moz.configure,v 1.4 2017/08/10 14:46:15 ryoon Exp $
          # if nothing is specified, default to just building on Nightly
          build_webrender = milestone.is_nightly
      elif value == 'build':
+@@ -954,11 +975,11 @@ add_old_configure_assignment('NECKO_PROT
+ # ==============================================================
+ option('--disable-skia', help='Disable use of Skia')
+ 
+-@depends('--disable-skia')
+-def skia(value):
+-    if not value:
+-        die('--disable-skia is not supported anymore')
+-    else:
++@depends('--disable-skia', target)
++def skia(value, target):
++    if value.origin == 'default' and target.endianness == 'big':
++        return None
++    if value:
+         return True
+ 
+ set_config('MOZ_ENABLE_SKIA', skia)
