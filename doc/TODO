@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17613 2017/08/15 10:58:28 triaxx Exp $
+$NetBSD: TODO,v 1.17614 2017/08/15 18:41:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1466,7 +1466,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o system-tools-backends-2.10.1 [needs polkit|GNOME 2.30]
 	o systrace-1.6e
 	o t-prot-3.4
-	o t1utils-1.40
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-5.0.0a1
 	o tads-3.0.16
