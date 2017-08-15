@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3247 2017/08/15 13:55:48 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3248 2017/08/15 14:23:59 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4490,3 +4490,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/py-postgresql to 5.0.4 [darcy 2017-08-15]
 	Updated net/rancid to 3.6.2 [jperkin 2017-08-15]
 	Updated audio/faac to 1.29.4 [adam 2017-08-15]
+	Updated net/sslh to 1.18nb1 [jperkin 2017-08-15]
