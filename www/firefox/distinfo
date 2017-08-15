@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.288 2017/08/12 04:58:45 ryoon Exp $
+$NetBSD: distinfo,v 1.289 2017/08/15 01:24:47 ryoon Exp $
 
 SHA1 (firefox-55.0.1.source.tar.xz) = 8ec2a864e277b4acc31ea96806aae3b90f1a4038
 RMD160 (firefox-55.0.1.source.tar.xz) = 38156cc7207d0ac4c9df2d5f997912aef40c22b1
@@ -39,6 +39,7 @@ SHA1 (patch-dom_media_gtest_moz.build) = 6a58e050327ffcdcf2a4041946ddb79d6793d2d
 SHA1 (patch-dom_media_moz.build) = 844dbb94463b8aab11649a5aa11142de0179d86c
 SHA1 (patch-dom_media_platforms_ffmpeg_ffvpx_FFVPXRuntimeLinker.cpp) = f2965930c50961b42576a983e93a08d67da50a2a
 SHA1 (patch-extensions_spellcheck_hunspell_glue_mozHunspell.cpp) = 30abff0aaabff07e13939a1571cefc5216760109
+SHA1 (patch-gfx_2d_ScaledFontBase.cpp) = 9684d54aa70e3b9b968f121287611cdd9e277f94
 SHA1 (patch-gfx_cairo_libpixman_src_pixman-arm-neon-asm.S) = 6e91ca436b73affe42ed4e683b3400beb28c4bc6
 SHA1 (patch-gfx_gl_GLContextProviderGLX.cpp) = 2cc997cab71a84c1f50a791693519a0626564426
 SHA1 (patch-gfx_graphite2_moz-gr-update.sh) = 09eb2fa66109d38a3aedc940fcaaee5f91e216ae
@@ -61,7 +62,9 @@ SHA1 (patch-ipc_glue_CrossProcessSemaphore.h) = 778a569887d8ad082abc2fa2fe89a0a9
 SHA1 (patch-ipc_glue_CrossProcessSemaphore__posix.cpp) = d1afeb74af97cf30c520b42a8d444ff95ef592a9
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 260c29bacd8bf265951b7a412f850bf2b292c836
 SHA1 (patch-js_src_build_moz.build) = 4597a427262d0eb6ce8d14c0f557bfbe3f053e61
+SHA1 (patch-js_src_jit_ExecutableAllocator.h) = aaa7d4cf5b5464db6ed015e63d616adaa59a835d
 SHA1 (patch-js_src_jit_arm_Architecture-arm.cpp) = f0b554c169643b8447b4f29168d61ea257b18782
+SHA1 (patch-js_src_jit_none_MacroAssembler-none.h) = e443b009008e7aedbe1d3595021ecac3e27a99fd
 SHA1 (patch-js_xpconnect_src_XPCConvert.cpp) = 915777e9bb5366be41866cdb6ea0ad2b1c006dde
 SHA1 (patch-js_xpconnect_src_xpcprivate.h) = 97a221c76593be712f670aa409f2f1ad5dc20628
 SHA1 (patch-media_libcubeb_gtest_moz.build) = ebb4be6e6bca4a0ed6858516ec9fdb7828bbe2e1
@@ -99,7 +102,7 @@ SHA1 (patch-toolkit_components_telemetry_Histograms.json) = 5232d568a68b3396b8de
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 5b6d2e5c9f685d32894898d3ef3aec09a1a1e5ce
 SHA1 (patch-toolkit_library_gtest_moz.build) = a8ac2a2930ac00f891a695639acfadef2679a599
 SHA1 (patch-toolkit_library_moz.build) = f77301bd81d37e7a599dbff57fba47428e4a00e2
-SHA1 (patch-toolkit_moz.configure) = 78388529e8450d1db0c3f58848d7466a354ddf4b
+SHA1 (patch-toolkit_moz.configure) = 2647f5b2c278d5d710a0faade7b48ccc2fbfc11f
 SHA1 (patch-toolkit_toolkit.mozbuild) = e7c56631a061f80bfb5a6c8825ba42d5f2c1e76a
 SHA1 (patch-toolkit_xre_glxtest.cpp) = cf048491778610454b914400e53072afedd96e7b
 SHA1 (patch-toolkit_xre_nsAppRunner.cpp) = 40c3822ed227108fa6d90323dc19828d5e3ac996
