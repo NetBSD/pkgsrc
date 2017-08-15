@@ -591,6 +591,7 @@ ac_includes_default="\
 #endif"
 
 ac_subst_vars='LTLIBOBJS
+_MAKE_VERSION
 filemon_h
 use_meta
 diff_u
@@ -2262,6 +2263,8 @@ case "$srcdir" in
 /*) ;;
 *) srcdir=`cd $srcdir && pwd`;;
 esac
+
+. $srcdir/VERSION
 
 
 # Check whether --with-defshell was given.
