@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.58 2017/07/07 13:04:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.59 2017/08/15 10:57:35 triaxx Exp $
 #
 
-DISTNAME=	awesome-3.5.9
-CATEGORIES=	x11 wm
-MASTER_SITES=	https://awesomewm.org/download/
-EXTRACT_SUFX=	.tar.xz
+DISTNAME=	awesome-4.2
+CATEGORIES=	wm
+MASTER_SITES=	${MASTER_SITE_GITHUB:=awesomeWM/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pallegra@gmail.com
 HOMEPAGE=	https://awesomewm.org/
@@ -16,15 +16,18 @@ CONFLICTS+=	awesome<3.0
 USE_TOOLS+=	bash gmake pkg-config
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+REPLACE_BASH+=	utils/awesome-client
 
-LUA_VERSIONS_ACCEPTED=	51
+.include "../../wm/awesome/options.mk"
 
 PKG_SYSCONFSUBDIR=	xdg/awesome
 
-CMAKE_ARGS+=	-DWITH_DBUS=OFF
-CMAKE_ARGS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR:C/\/xdg\/awesome//}
+CONFIGURE_DIRS=	${WRKDIR}/build
+CMAKE_ARG_PATH=	${WRKSRC}
+
 CMAKE_ARGS+=	-DCOMPRESS_MANPAGES=${MANZ:Q}
-CMAKE_ARGS+=	-DAWESOME_MAN_PATH=${PREFIX}/${PKGMANDIR}
+CMAKE_ARGS+=	-DOVERRIDE_VERSION=${PKGVERSION_NOREV}
+CMAKE_ARGS+=	-DLUA_INCLUDE_DIR=${PREFIX}/${LUA_INCDIR}
 
 EGDIR=		${PREFIX}/share/examples/awesome
 CONF_FILES=	${EGDIR}/rc.lua ${PKG_SYSCONFDIR}/rc.lua
@@ -35,27 +38,25 @@ SUBST_STAGE.eg=		pre-configure
 SUBST_FILES.eg=		CMakeLists.txt
 SUBST_SED.eg=		-e "s,\$${AWESOME_SYSCONFDIR},${EGDIR},"
 
-SUBST_CLASSES+=		ev
-SUBST_MESSAGE.ev=	Fixing pathnames for libev
-SUBST_STAGE.ev=		pre-configure
-SUBST_FILES.ev=		awesomeConfig.cmake
-SUBST_SED.ev=		-e "s,@LIBEV_PREFIX@,${BUILDLINK_PREFIX.libev},"
+SUBST_CLASSES+=		lua
+SUBST_MESSAGE.lua=	Fixing lua prefix
+SUBST_STAGE.lua=	pre-configure
+SUBST_FILES.lua=	CMakeLists.txt awesomeConfig.cmake build-utils/lgi-check.sh \
+			tests/examples/CMakeLists.txt
+SUBST_SED.lua=		-e "s,@LUA_INTERPRETER@,${LUA_INTERPRETER},"
 
-BUILD_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
-BUILD_DEPENDS+=	asciidoc>=8.3.0:../../textproc/asciidoc
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
-BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
+BUILD_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
+BUILD_DEPENDS+=		asciidoc>=8.3.0:../../textproc/asciidoc
+BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
+BUILD_DEPENDS+=		docbook-xml-[0-9]*:../../textproc/docbook-xml
 
-DEPENDS+=		lua${_LUA_VERSION}-gi>=0.7.0:../../devel/lua-gi
-DEPENDS+=		pango>=1.29.4nb2:../../devel/pango
+DEPENDS+=		${LUA_PKGPREFIX}-gi>=0.7.0:../../devel/lua-gi
 
-LDFLAGS.Darwin+=	-liconv
-LDFLAGS.SunOS+=		-liconv
+pre-configure:
+	${RUN} mkdir -p ${WRKDIR}/build
 
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libev/buildlink3.mk"
-.include "../../devel/libexecinfo/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
@@ -63,10 +64,12 @@ LDFLAGS.SunOS+=		-liconv
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libxdg-basedir/buildlink3.mk"
+.include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
 .include "../../x11/xcb-util-cursor/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
 .include "../../x11/xcb-util-wm/buildlink3.mk"
+.include "../../x11/xcb-util-xrm/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 
