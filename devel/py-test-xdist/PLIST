@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/05/29 10:38:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/08/15 07:42:10 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,9 +12,6 @@ ${PYSITELIB}/xdist/__init__.pyo
 ${PYSITELIB}/xdist/_version.py
 ${PYSITELIB}/xdist/_version.pyc
 ${PYSITELIB}/xdist/_version.pyo
-${PYSITELIB}/xdist/boxed.py
-${PYSITELIB}/xdist/boxed.pyc
-${PYSITELIB}/xdist/boxed.pyo
 ${PYSITELIB}/xdist/dsession.py
 ${PYSITELIB}/xdist/dsession.pyc
 ${PYSITELIB}/xdist/dsession.pyo
@@ -30,6 +27,21 @@ ${PYSITELIB}/xdist/plugin.pyo
 ${PYSITELIB}/xdist/remote.py
 ${PYSITELIB}/xdist/remote.pyc
 ${PYSITELIB}/xdist/remote.pyo
+${PYSITELIB}/xdist/report.py
+${PYSITELIB}/xdist/report.pyc
+${PYSITELIB}/xdist/report.pyo
+${PYSITELIB}/xdist/scheduler/__init__.py
+${PYSITELIB}/xdist/scheduler/__init__.pyc
+${PYSITELIB}/xdist/scheduler/__init__.pyo
+${PYSITELIB}/xdist/scheduler/each.py
+${PYSITELIB}/xdist/scheduler/each.pyc
+${PYSITELIB}/xdist/scheduler/each.pyo
+${PYSITELIB}/xdist/scheduler/load.py
+${PYSITELIB}/xdist/scheduler/load.pyc
+${PYSITELIB}/xdist/scheduler/load.pyo
+${PYSITELIB}/xdist/scheduler/loadscope.py
+${PYSITELIB}/xdist/scheduler/loadscope.pyc
+${PYSITELIB}/xdist/scheduler/loadscope.pyo
 ${PYSITELIB}/xdist/slavemanage.py
 ${PYSITELIB}/xdist/slavemanage.pyc
 ${PYSITELIB}/xdist/slavemanage.pyo
