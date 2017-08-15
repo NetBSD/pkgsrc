@@ -1,0 +1,3 @@
+pg_repack is a PostgreSQL extension which lets you remove bloat from
+tables and indexes, and optionally restore the physical order of
+clustered indexes.

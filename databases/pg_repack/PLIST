@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/15 08:34:20 fhajny Exp $
+bin/pg_repack
+lib/postgresql/pg_repack.so
+share/postgresql/extension/pg_repack--${PKGVERSION}.sql
+share/postgresql/extension/pg_repack.control

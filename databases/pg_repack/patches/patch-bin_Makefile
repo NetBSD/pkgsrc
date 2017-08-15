@@ -1,0 +1,12 @@
+$NetBSD: patch-bin_Makefile,v 1.1 2017/08/15 08:34:20 fhajny Exp $
+
+editline might be readline in reality.
+
+--- bin/Makefile.orig	2017-04-25 06:25:42.000000000 +0000
++++ bin/Makefile
+@@ -32,4 +32,4 @@ include $(PGXS)
+ # remove dependency on libxml2, libxslt, and libpam.
+ # XXX: find a better way to make sure we are linking with libraries
+ # from pg_config which we actually need.
+-LIBS := $(filter-out -ledit -lgssapi_krb5 -lpam -lselinux -lxml2 -lxslt, $(LIBS))
++LIBS := $(filter-out -ledit -lreadline -lgssapi_krb5 -lpam -lselinux -lxml2 -lxslt, $(LIBS))
