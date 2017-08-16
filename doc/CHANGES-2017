@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3276 2017/08/16 21:04:23 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3277 2017/08/16 21:44:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4523,3 +4523,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed time/libgcal [wiz 2017-08-16]
 	Removed audio/mserv-irman [wiz 2017-08-16]
 	Removed sysutils/libirman [wiz 2017-08-16]
+	Updated x11/xscreensaver to 5.37nb1 [wiz 2017-08-16]
