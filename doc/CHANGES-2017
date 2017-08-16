@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3272 2017/08/16 15:18:38 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.3273 2017/08/16 16:30:03 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4515,3 +4515,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated cross/arm-none-eabi-binutils to 2.29 [ryoon 2017-08-16]
 	Updated cross/arm-none-eabi-gcc to 7.2.0 [ryoon 2017-08-16]
 	Added security/lastpass-cli version 1.2.1 [jperkin 2017-08-16]
+	Updated sysutils/rsyslog to 8.29.0 [fhajny 2017-08-16]
