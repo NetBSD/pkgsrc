@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3273 2017/08/16 16:30:03 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3274 2017/08/16 18:08:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4516,3 +4516,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated cross/arm-none-eabi-gcc to 7.2.0 [ryoon 2017-08-16]
 	Added security/lastpass-cli version 1.2.1 [jperkin 2017-08-16]
 	Updated sysutils/rsyslog to 8.29.0 [fhajny 2017-08-16]
+	Updated emulators/vice to 3.1 [adam 2017-08-16]
+	Updated lang/py-js2py to 0.50 [adam 2017-08-16]
+	Updated www/py-cfscrape to 1.8.1 [adam 2017-08-16]
+	Updated devel/py-wrapt to 1.10.11 [adam 2017-08-16]
