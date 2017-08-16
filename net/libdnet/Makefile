@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2016/02/25 16:20:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2017/08/16 21:22:13 wiz Exp $
 #
 
 DISTNAME=	libdnet-1.12
@@ -8,7 +8,7 @@ MASTER_SITES=	http://libdnet.googlecode.com/files/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/libdnet/
+HOMEPAGE=	https://github.com/dugsong/libdnet
 COMMENT=	C interface to several low-level networking routines
 LICENSE=	modified-bsd
 
