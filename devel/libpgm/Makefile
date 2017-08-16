@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/07/09 06:38:09 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/16 21:22:11 wiz Exp $
 #
 
 DISTNAME=	libpgm-5.1.118
@@ -8,7 +8,7 @@ MASTER_SITES=	http://openpgm.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/openpgm/
+HOMEPAGE=	https://code.google.com/archive/p/openpgm/
 COMMENT=	PGM reliable multicast library implementing RFC 3208
 LICENSE=	gnu-lgpl-v2
 
