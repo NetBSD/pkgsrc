@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2017/08/16 15:18:24 jperkin Exp $
+
+SHA1 (lastpass-cli-1.2.1.tar.gz) = 78f05426ac14417004735d85554f5641c567234e
+RMD160 (lastpass-cli-1.2.1.tar.gz) = 86752841a6df70856411bbb3b516669583500838
+SHA512 (lastpass-cli-1.2.1.tar.gz) = c7c9f20dbc083873b815834320828a30a1c488571efbfc5aea47c3bd2073819d713810c785855d4c0c208e1b95aa0e5fc550a0b6b5c0f787eca1f54589e18e62
+Size (lastpass-cli-1.2.1.tar.gz) = 108780 bytes
+SHA1 (patch-CMakeLists.txt) = d5498e06f9fed58186caf3b2ed60c2d30ec43caa
+SHA1 (patch-agent.c) = 2e04b136da6116f80d1a1bfa9b831ccba3e3f215
+SHA1 (patch-clipboard.c) = 1c0d7c7cf2f80f21e900257e82736f57b1a8fc0e
+SHA1 (patch-cmake__extras_install__doc.cmake) = a0d80f60501ac283d66402ef036d6934ea644f17
+SHA1 (patch-http.c) = 6027b06014d5f3c290f55a8086a493d30bdf9023
+SHA1 (patch-password.c) = 9d7daba95ebf62b243ccf8696add8afc24c8bb3e
+SHA1 (patch-process.c) = 565a9d8ea4d08194c15e0e7898b1dd273b1b6f2f
+SHA1 (patch-upload-queue.c) = 45279b48d53f6f9683d3e14c58c4f5ec4c5e89ba
