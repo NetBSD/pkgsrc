@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/01/01 14:44:03 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/08/16 20:45:47 wiz Exp $
 
 DISTNAME=	ies4linux-2.99.0.1
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.tatanka.com.br/ies4linux/downloads/
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://www.tatanka.com.br/ies4linux/page/Main_Page
+#HOMEPAGE=	http://www.tatanka.com.br/ies4linux/page/Main_Page
 COMMENT=	Microsoft Internet Explorer installer
 
 DEPENDS+=  wget-[0-9]*:../../net/wget

@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2012/10/08 09:21:01 asau Exp $
+# $NetBSD: Makefile,v 1.7 2017/08/16 20:45:41 wiz Exp $
 #
 
 DISTNAME=		${PKGNAME}-linux
 PKGNAME=		ggrab-0.22a
 CATEGORIES=		multimedia
-MASTER_SITES=		http://www.menzebach.de/ggrab/
+#MASTER_SITES=		http://www.menzebach.de/ggrab/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.menzebach.de/ggrab/
+#HOMEPAGE=		http://www.menzebach.de/ggrab/
 COMMENT=		Server for recording video streams from dream dvb-receivers
 
 USE_LANGUAGES=	c++

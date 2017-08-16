@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2016/03/13 07:45:12 dholland Exp $
+# $NetBSD: Makefile,v 1.33 2017/08/16 20:45:39 wiz Exp $
 
 DISTNAME=	ivtools-1.2.8
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ivtools/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ivtools.org/ivtools/
+#HOMEPAGE=	http://www.ivtools.org/ivtools/
 COMMENT=	Drawing editors for PostScript, TeX, and web graphics
 
 CONFLICTS+=	dclock-[0-9]*

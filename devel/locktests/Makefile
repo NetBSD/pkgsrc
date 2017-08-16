@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2012/10/31 11:17:25 asau Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/16 20:45:35 wiz Exp $
 #
 
 DISTNAME=	locktests
 PKGNAME=	${DISTNAME}-20110428
 CATEGORIES=	devel filesystems
-MASTER_SITES=	http://nfsv4.bullopensource.org/tools/tests_tools/
+#MASTER_SITES=	http://nfsv4.bullopensource.org/tools/tests_tools/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://nfsv4.bullopensource.org/tools/tests_tools/
+#HOMEPAGE=	http://nfsv4.bullopensource.org/tools/tests_tools/
 COMMENT=	POSIX locks stress-test
 LICENSE=	gnu-gpl-v3 # According to web site
 

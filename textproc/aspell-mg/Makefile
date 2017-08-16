@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/11 23:37:47 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/16 20:45:45 wiz Exp $
 #
 
 DISTNAME=	aspell5-mg-0.03-0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/mg/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	http://linuxmg.org/
+#HOMEPAGE=	http://linuxmg.org/
 COMMENT=	Malagasy language support for aspell
 LICENSE=	gnu-gpl-v2
 

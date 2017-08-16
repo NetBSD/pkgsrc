@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/04/06 20:27:28 rodent Exp $
+# $NetBSD: Makefile,v 1.16 2017/08/16 20:45:44 wiz Exp $
 #
 
 DISTNAME=		jessie-1.0.1
@@ -6,7 +6,7 @@ CATEGORIES=		security
 MASTER_SITES=		http://syzygy.metastatic.org/jessie/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.nongnu.org/jessie/
+#HOMEPAGE=		http://www.nongnu.org/jessie/
 COMMENT=		GPL implementation of the Java Secure Sockets Extension
 
 DEPENDS+=		gnu-crypto>=2.0:../../security/gnu-crypto

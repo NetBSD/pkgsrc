@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.38 2017/02/12 06:25:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.39 2017/08/16 20:45:38 wiz Exp $
 
 DISTNAME=	gtkimageview-1.6.4
 PKGREVISION=	24
 CATEGORIES=	graphics
-MASTER_SITES= 	http://trac.bjourne.webfactional.com/chrome/common/releases/
+#MASTER_SITES= 	http://trac.bjourne.webfactional.com/chrome/common/releases/
 
 # This package has no NEWS, and it is very difficult to find the
 # summary of changes.  See
-# http://trac.bjourne.webfactional.com/ticket/28 in which the author
+## http://trac.bjourne.webfactional.com/ticket/28 in which the author
 # points to the following URL for the content that would normally be
 # in NEWS:
-# http://trac.bjourne.webfactional.com/chrome/common/gtkimageview-docs/releasehistory.html
+## http://trac.bjourne.webfactional.com/chrome/common/gtkimageview-docs/releasehistory.html
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://trac.bjourne.webfactional.com/
+#HOMEPAGE=	http://trac.bjourne.webfactional.com/
 COMMENT=	Image viewer widget for GTK
 
 # not really HOMEPAGE, but

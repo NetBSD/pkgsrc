@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.27 2012/10/23 19:51:05 asau Exp $
+# $NetBSD: Makefile,v 1.28 2017/08/16 20:45:45 wiz Exp $
 #
 
 DISTNAME=	gtoaster1.0Beta5
 PKGNAME=	gnometoaster-1.0Beta5
 PKGREVISION=	6
 CATEGORIES=	sysutils
-MASTER_SITES=	# http://gnometoaster.rulez.org/archive/
+#MASTER_SITES=	# http://gnometoaster.rulez.org/archive/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gnometoaster.rulez.org/
+#HOMEPAGE=	http://gnometoaster.rulez.org/
 COMMENT=	CD recording frontend for X/GTK+
 
 WRKSRC=			${WRKDIR}/gtoaster

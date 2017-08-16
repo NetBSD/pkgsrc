@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2016/03/05 11:28:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.45 2017/08/16 20:45:39 wiz Exp $
 #
 
 DISTNAME=	kphotobook-0.0.6
@@ -7,7 +7,7 @@ CATEGORIES=	kde graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kphotobook/}
 
 MAINTAINER=	ianzag@mail.ru
-HOMEPAGE=	http://kphotobook.berlios.de/
+#HOMEPAGE=	http://kphotobook.berlios.de/
 COMMENT=	Powerful, intuitive KDE application to manage and organize your photos
 
 USE_TOOLS+=	gmake

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2014/01/27 18:41:11 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/08/16 20:45:34 wiz Exp $
 
 DISTNAME=	javacc-5.0
 CATEGORIES=	devel
 MASTER_SITES=	http://java.net/projects/javacc/downloads/download/
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://javacc.java.net/
+#HOMEPAGE=	https://javacc.java.net/
 COMMENT=	Java Compiler Compiler [tm]
 LICENSE=	modified-bsd
 

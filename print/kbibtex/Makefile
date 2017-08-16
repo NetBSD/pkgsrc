@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2017/08/15 11:40:24 nros Exp $
+# $NetBSD: Makefile,v 1.81 2017/08/16 20:45:43 wiz Exp $
 
 DISTNAME=		kbibtex-0.5.1
 PKGREVISION=		16
@@ -7,7 +7,7 @@ MASTER_SITES=		http://download.gna.org/kbibtex/0.5/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		markd@NetBSD.org
-HOMEPAGE=		http://home.gna.org/kbibtex/
+#HOMEPAGE=		http://home.gna.org/kbibtex/
 COMMENT=		BibTeX editor for KDE
 LICENSE=		gnu-gpl-v2
 

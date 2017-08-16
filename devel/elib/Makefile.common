@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.9 2013/04/06 20:27:18 rodent Exp $
+# $NetBSD: Makefile.common,v 1.10 2017/08/16 20:45:34 wiz Exp $
 #
 # used by devel/emacs20-elib/Makefile
 
 DISTNAME=	elib-1.0
 CATEGORIES=	devel
-MASTER_SITES=	http://jdee.sunsite.dk/
+#MASTER_SITES=	http://jdee.sunsite.dk/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Library of utility functions for Emacs

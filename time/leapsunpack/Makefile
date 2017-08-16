@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/02/15 21:16:47 wiedi Exp $
+# $NetBSD: Makefile,v 1.6 2017/08/16 20:45:46 wiz Exp $
 #
 
 DISTNAME=		leapsunpack-0.05
@@ -6,7 +6,7 @@ CATEGORIES=		time
 MASTER_SITES=		${MASTER_SITE_BACKUP}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://su.bze.ro/software/
+#HOMEPAGE=		http://su.bze.ro/software/
 COMMENT=		Creates libtai leapsecs.dat from compressed table
 
 DEPENDS+=		libtai-[0-9]*:../../devel/libtai

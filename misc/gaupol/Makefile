@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/02/12 06:25:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2017/08/16 20:45:41 wiz Exp $
 
 DISTNAME=	gaupol-0.28.2
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.gna.org/gaupol/0.28/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://home.gna.org/gaupol/index.html
+#HOMEPAGE=	http://home.gna.org/gaupol/index.html
 COMMENT=	Subtitle editor
 LICENSE=	gnu-gpl-v3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/12/23 18:43:47 dholland Exp $
+# $NetBSD: Makefile,v 1.12 2017/08/16 20:45:37 wiz Exp $
 
 DISTNAME=		mapit.v1-16
 PKGNAME=		dipmap-1.16
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.ugcs.caltech.edu/pub/diplomacy/Sources/
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		njohnston@globaltetrahedron.com
-HOMEPAGE=		http://www.diplom.org/Online/mapsoftware.html
+#HOMEPAGE=		http://www.diplom.org/Online/mapsoftware.html
 COMMENT=		Generate postscript maps from results of play-by-email Diplomacy games
 
 MAKE_FILE=		makefile

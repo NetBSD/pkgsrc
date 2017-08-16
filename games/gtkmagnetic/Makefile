@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2017/02/12 06:25:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.46 2017/08/16 20:45:37 wiz Exp $
 #
 
 DISTNAME=		Magnetic22Src
@@ -11,7 +11,7 @@ EXTRACT_SUFX=		.zip
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.if-legends.org/~msmemorial/magnetic.htm
+#HOMEPAGE=		http://www.if-legends.org/~msmemorial/magnetic.htm
 COMMENT=		Interpreter for text adventures from Magnetic Scrolls
 
 USE_TOOLS+=		gmake pkg-config

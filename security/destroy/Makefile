@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/23 18:16:24 asau Exp $
+# $NetBSD: Makefile,v 1.12 2017/08/16 20:45:44 wiz Exp $
 #
 
 DISTNAME=	destroy-20040415
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://www.impurity.org/mirrors/destroy/
 
 MAINTAINER=	shane@freebsdhackers.net
-HOMEPAGE=	http://www.freebsdhackers.net/destroy/
+#HOMEPAGE=	http://www.freebsdhackers.net/destroy/
 COMMENT=	Program to securely destroy files on the hard disk
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

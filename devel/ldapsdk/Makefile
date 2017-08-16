@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2016/07/09 06:38:09 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2017/08/16 20:45:35 wiz Exp $
 
 DISTNAME=	ldapsdk_12311998
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -7,7 +7,7 @@ CATEGORIES=	devel databases
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=directory/c-sdk/ancient/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mozilla.org/directory/
+#HOMEPAGE=	http://www.mozilla.org/directory/
 COMMENT=	LDAP C-SDK from the Mozilla project
 
 CONFLICTS+=	openldap-client-[0-9]*

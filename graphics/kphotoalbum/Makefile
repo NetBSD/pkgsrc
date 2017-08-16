@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.51 2016/03/05 11:28:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.52 2017/08/16 20:45:39 wiz Exp $
 #
 
 DISTNAME=		kphotoalbum-3.1.1
 PKGREVISION=		32
 CATEGORIES=		graphics
-MASTER_SITES=		http://ktown.kde.org/kphotoalbum/download/
+#MASTER_SITES=		http://ktown.kde.org/kphotoalbum/download/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ktown.kde.org/kphotoalbum/
+#HOMEPAGE=		http://ktown.kde.org/kphotoalbum/
 COMMENT=		Image organizer
 
 CONFLICTS+=		kimdaba-*

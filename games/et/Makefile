@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/04/06 12:04:00 rodent Exp $
+# $NetBSD: Makefile,v 1.18 2017/08/16 20:45:37 wiz Exp $
 #
 
 DISTNAME=	et-linux-2.56-2.x86
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/et/linux/
 EXTRACT_SUFX=	.run
 
 MAINTAINER=	dhowland@users.sourceforge.net
-HOMEPAGE=	http://games.activision.com/games/wolfenstein/
+#HOMEPAGE=	http://games.activision.com/games/wolfenstein/
 COMMENT=	Wolfenstein: Enemy Territory for Linux
 
 EMUL_PLATFORMS=		linux-i386

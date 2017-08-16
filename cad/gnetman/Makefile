@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.16 2017/01/07 16:03:18 zafer Exp $
+# $NetBSD: Makefile,v 1.17 2017/08/16 20:45:32 wiz Exp $
 #
 
 DISTNAME=		gnetman-11Feb05
 PKGNAME=		gnetman-20050211
 PKGREVISION=		6
 CATEGORIES=		cad
-MASTER_SITES=		#http://www.viasic.com/opensource/
+#MASTER_SITES=		#http://www.viasic.com/opensource/
 
 MAINTAINER=		dmcmahill@NetBSD.org
-HOMEPAGE=		http://www.viasic.com/opensource/
+#HOMEPAGE=		http://www.viasic.com/opensource/
 COMMENT=		Advanced Netlister and Netlist Manipulation Database for gEDA
 
 USE_PKGLOCALEDIR=	yes

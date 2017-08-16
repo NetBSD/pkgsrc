@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 11:24:41 asau Exp $
+# $NetBSD: Makefile,v 1.15 2017/08/16 20:45:32 wiz Exp $
 
 DISTNAME=		libmal-0.44
 PKGREVISION=		1
@@ -6,7 +6,7 @@ CATEGORIES=		comms
 MASTER_SITES=		http://www.jlogday.com/code/libmal/archive/
 
 MAINTAINER=		markd@NetBSD.org
-HOMEPAGE=		http://jasonday.home.att.net/code/libmal/
+#HOMEPAGE=		http://jasonday.home.att.net/code/libmal/
 COMMENT=		MAL convenience library
 
 CONFLICTS+=		malsync-[0-9]*

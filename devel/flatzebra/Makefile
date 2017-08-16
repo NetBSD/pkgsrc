@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2016/07/28 20:26:46 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/16 20:45:34 wiz Exp $
 
 DISTNAME=	flatzebra-0.1.6
 CATEGORIES=	devel
 MASTER_SITES=	http://perso.b2b2c.ca/~sarrazip/dev/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://perso.b2b2c.ca/~sarrazip/dev/afternoonstalker.html
+#HOMEPAGE=	http://perso.b2b2c.ca/~sarrazip/dev/afternoonstalker.html
 COMMENT=	Generic game engine for 2D double-buffering animation
 LICENSE=	gnu-gpl-v2
 

@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.34 2016/03/05 11:27:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2017/08/16 20:45:40 wiz Exp $
 
 DISTNAME=	libesmtp-1.0.6
 PKGREVISION=	3
 CATEGORIES=	mail devel
-MASTER_SITES=	http://www.stafford.uklinux.net/libesmtp/
+#MASTER_SITES=	http://www.stafford.uklinux.net/libesmtp/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	dolemite@wuli.nu
-HOMEPAGE=	http://www.stafford.uklinux.net/libesmtp/
+#HOMEPAGE=	http://www.stafford.uklinux.net/libesmtp/
 COMMENT=	Library to manage posting of electronic mail
 
 USE_TOOLS+=	gmake

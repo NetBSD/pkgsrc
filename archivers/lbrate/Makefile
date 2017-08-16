@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/10/09 14:05:52 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/08/16 20:45:30 wiz Exp $
 
 DISTNAME=	lbrate-1.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/utils/compress/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rus.members.beeb.net/lbrate.html
+#HOMEPAGE=	http://rus.members.beeb.net/lbrate.html
 COMMENT=	Extract/decompress CP/M LBR archives
 
 MAKE_FLAGS+=	PREFIX=${PREFIX:Q}

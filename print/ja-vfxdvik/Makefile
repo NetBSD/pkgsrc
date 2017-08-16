@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2016/03/05 11:29:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.42 2017/08/16 20:45:43 wiz Exp $
 
 DISTNAME=	xdvik-${XDVIK_ORIGINAL_VERS}
 PKGNAME=	ja-vfxdvik-${XDVIK_ORIGINAL_VERS}.${XDVIK_JP_PATCH_VERS}
@@ -11,7 +11,7 @@ PATCHFILES=	${DISTNAME}-${XDVIK_JP_PATCH_VERS}.patch.gz
 PATCH_DIST_ARGS=-d ${WRKSRC} --quiet -E -p1
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	http://www.nn.iij4u.or.jp/~tutimura/tex/xdvi.html
+#HOMEPAGE=	http://www.nn.iij4u.or.jp/~tutimura/tex/xdvi.html
 COMMENT=	Xdvik with vflib
 
 XDVIK_ORIGINAL_VERS=	22.40v

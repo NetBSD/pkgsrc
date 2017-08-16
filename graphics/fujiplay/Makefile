@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/06 14:10:50 asau Exp $
+# $NetBSD: Makefile,v 1.17 2017/08/16 20:45:38 wiz Exp $
 #
 
 DISTNAME=	fujiplay
@@ -9,7 +9,7 @@ MASTER_SITES=	http://topo.math.u-psud.fr/~bousch/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://topo.math.u-psud.fr/~bousch/fujiplay.html
+#HOMEPAGE=	http://topo.math.u-psud.fr/~bousch/fujiplay.html
 COMMENT=	Download pictures from some Fujifilm digital cameras
 
 DIST_SUBDIR=	fujiplay-1.33

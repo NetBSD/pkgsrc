@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2015/02/04 20:48:22 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2017/08/16 20:45:32 wiz Exp $
 #
 
 DISTNAME=	iroffer1.3.b11
 PKGNAME=	iroffer-1.3.11
 CATEGORIES=	chat net
-MASTER_SITES=	http://iroffer.org/archive/v1.3/
+#MASTER_SITES=	http://iroffer.org/archive/v1.3/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://iroffer.org/
+#HOMEPAGE=	http://iroffer.org/
 COMMENT=	IRC (Internet Relay Chat) DCC OfferBot
 
 INSTALLATION_DIRS=	bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/01/01 14:43:38 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/08/16 20:45:36 wiz Exp $
 
 DISTNAME=	GNS3-0.8.3.1-src
 PKGNAME=	gns3-0.8.3.1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gns-3/GNS3/0.8.3.1/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gns3.org/
+#HOMEPAGE=	http://gns3.org/
 COMMENT=	Graphical network simulator
 LICENSE=	gnu-gpl-v2
 

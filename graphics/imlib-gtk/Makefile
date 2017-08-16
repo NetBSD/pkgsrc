@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/07/04 16:18:36 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2017/08/16 20:45:39 wiz Exp $
 
 DISTNAME=	imlib-1.9.15
 PKGNAME=	imlib-gtk-1.9.15
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/imlib/1.9/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nl.rasterman.com/imlib.html
+#HOMEPAGE=	http://www.nl.rasterman.com/imlib.html
 COMMENT=	Image manipulation library for X11 (gtk bits)
 
 CONFLICTS=	imlib<=1.9.15nb8

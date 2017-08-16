@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/04/25 14:23:00 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2017/08/16 20:45:38 wiz Exp $
 #
 
 DISTNAME=	lincity-ng-2.0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://download.berlios.de/lincity-ng/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://lincity-ng.berlios.de/wiki/index.php/Main_Page
+#HOMEPAGE=	http://lincity-ng.berlios.de/wiki/index.php/Main_Page
 COMMENT=	Open source SimCity like game
 LICENSE=	gnu-gpl-v2 #AND cc-by-sa-v2.0 AND Bitstream Vera Fonts
 

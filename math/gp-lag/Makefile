@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/10/09 13:44:49 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/08/16 20:45:41 wiz Exp $
 #
 
 DISTNAME=	lag-2.1
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/share/
 EXTRACT_SUFX=	.zoo
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gap-system.org/Share/lag.html
+#HOMEPAGE=	http://www.gap-system.org/Share/lag.html
 COMMENT=	GAP Bracket Lie Algebra functions
 
 WRKSRC=		${WRKDIR}/lag
