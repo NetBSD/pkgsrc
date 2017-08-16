@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/16 07:00:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/16 07:02:04 wiz Exp $
 
 DISTNAME=	List-MoreUtils-XS-0.422
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/List-MoreUtils-XS/
 COMMENT=	Provide compiled List::MoreUtils functions
 LICENSE=	${PERL5_LICENSE}
-
-DEPENDS+=		p5-List-MoreUtils>=0.417:../../devel/p5-List-MoreUtils
 
 PERL5_PACKLIST=		auto/List/MoreUtils/XS/.packlist
 
