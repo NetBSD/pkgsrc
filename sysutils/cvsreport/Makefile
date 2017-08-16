@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2017/08/16 20:45:45 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.14 2017/08/16 21:22:14 wiz Exp $
 
 DISTNAME=		cvsreport-0.3.5
 PKGREVISION=		5
 CATEGORIES=		sysutils
-MASTER_SITES=		http://download.gna.org/cvsreport/cvsreport.pkg/0.3.5/
+#MASTER_SITES=		http://download.gna.org/cvsreport/cvsreport.pkg/0.3.5/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-#HOMEPAGE=		http://home.gna.org/cvsreport/
+HOMEPAGE=		https://savannah.nongnu.org/projects/cvsreport
 COMMENT=		Message reports from CVS activity
 LICENSE=		gnu-gpl-v2
 
