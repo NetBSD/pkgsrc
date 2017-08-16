@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.289 2017/08/15 01:24:47 ryoon Exp $
+$NetBSD: distinfo,v 1.290 2017/08/16 14:13:44 ryoon Exp $
 
 SHA1 (firefox-55.0.1.source.tar.xz) = 8ec2a864e277b4acc31ea96806aae3b90f1a4038
 RMD160 (firefox-55.0.1.source.tar.xz) = 38156cc7207d0ac4c9df2d5f997912aef40c22b1
@@ -38,6 +38,8 @@ SHA1 (patch-dom_media_MediaPrefs.h) = b5815efdfbf79a7ff92197bbd906f702565ea46f
 SHA1 (patch-dom_media_gtest_moz.build) = 6a58e050327ffcdcf2a4041946ddb79d6793d2d9
 SHA1 (patch-dom_media_moz.build) = 844dbb94463b8aab11649a5aa11142de0179d86c
 SHA1 (patch-dom_media_platforms_ffmpeg_ffvpx_FFVPXRuntimeLinker.cpp) = f2965930c50961b42576a983e93a08d67da50a2a
+SHA1 (patch-dom_messagechannel_MessagePort.cpp) = 1710b4da694aaeb8d929f1a143f24f8a615c2776
+SHA1 (patch-dom_messagechannel_MessagePortChild.h) = 73a2ac4702677ad68af0b1fa1247fd0a1d4e4d95
 SHA1 (patch-extensions_spellcheck_hunspell_glue_mozHunspell.cpp) = 30abff0aaabff07e13939a1571cefc5216760109
 SHA1 (patch-gfx_2d_ScaledFontBase.cpp) = 9684d54aa70e3b9b968f121287611cdd9e277f94
 SHA1 (patch-gfx_cairo_libpixman_src_pixman-arm-neon-asm.S) = 6e91ca436b73affe42ed4e683b3400beb28c4bc6
