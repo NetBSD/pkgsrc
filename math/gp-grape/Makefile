@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/10/09 13:44:49 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/08/16 20:45:40 wiz Exp $
 #
 
 DISTNAME=	grape4r1
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.maths.qmul.ac.uk/~leonard/grape4r1/
 EXTRACT_SUFX=	.zoo
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gap-system.org/Share/grape.html
+#HOMEPAGE=	http://www.gap-system.org/Share/grape.html
 COMMENT=	GRAPE (GRape Algorithms using PErmutation groups)
 
 BUILD_TARGET=	bsd-gcc

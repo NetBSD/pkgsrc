@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/08 12:19:12 asau Exp $
+# $NetBSD: Makefile,v 1.10 2017/08/16 20:45:40 wiz Exp $
 #
 
 DISTNAME=	greetdelay-0.03
@@ -7,7 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 
 MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	http://alkemio.org/software/greetdelay/
+#HOMEPAGE=	http://alkemio.org/software/greetdelay/
 COMMENT=	Introduces a small delay before an SMTP greeting
 
 BUILD_TARGET=	greetdelay
