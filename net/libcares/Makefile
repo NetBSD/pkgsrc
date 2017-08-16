@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.22 2017/07/15 17:15:16 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2017/08/16 20:21:13 wiz Exp $
 
 DISTNAME=	c-ares-1.13.0
 PKGNAME=	${DISTNAME:S/c-/libc/1}
 CATEGORIES=	net
-MASTER_SITES=	http://c-ares.haxx.se/download/
+MASTER_SITES=	https://c-ares.haxx.se/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://c-ares.haxx.se/
+HOMEPAGE=	https://c-ares.haxx.se/
 COMMENT=	Asynchronous resolver library, c-ares
 LICENSE=	mit
 

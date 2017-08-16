@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2016/07/09 06:39:05 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/08/16 20:21:15 wiz Exp $
 
 DISTNAME=	halibut-1.1
 PKGREVISION=	2
 CATEGORIES=	textproc
-MASTER_SITES=	http://www.chiark.greenend.org.uk/~sgtatham/halibut/
+MASTER_SITES=	https://www.chiark.greenend.org.uk/~sgtatham/halibut/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.chiark.greenend.org.uk/~sgtatham/halibut/
+HOMEPAGE=	https://www.chiark.greenend.org.uk/~sgtatham/halibut/
 COMMENT=	Documentation production system
 LICENSE=	mit
 

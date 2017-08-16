@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2017/05/29 12:20:23 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2017/08/16 20:21:05 wiz Exp $
 
 DISTNAME=	telepathy-glib-0.24.1
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-glib/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://telepathy.freedesktop.org/wiki/Telepathy%20GLib
+HOMEPAGE=	https://telepathy.freedesktop.org/wiki/Telepathy%20GLib
 COMMENT=	GObject-based C binding for the Telepathy D-Bus API
 LICENSE=	gnu-gpl-v2 AND modified-bsd
 
