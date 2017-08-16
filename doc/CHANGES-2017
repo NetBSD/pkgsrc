@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3265 2017/08/16 07:34:05 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3266 2017/08/16 11:35:29 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4508,3 +4508,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-requests to 2.18.4 [adam 2017-08-16]
 	Updated x11/xscreensaver to 5.37 [wiz 2017-08-16]
 	Updated x11/xscreensaver-demo to 5.37 [wiz 2017-08-16]
+	Updated textproc/dblatex to 0.3.10 [jperkin 2017-08-16]
