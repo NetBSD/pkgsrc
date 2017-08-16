@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/01/19 18:52:06 agc Exp $
+# $NetBSD: Makefile,v 1.16 2017/08/16 20:21:07 wiz Exp $
 #
 
 DISTNAME=	libdatrie-0.2.8
@@ -8,7 +8,7 @@ MASTER_SITES+=	ftp://linux.thai.net/pub/ThaiLinux/software/libthai/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://linux.thai.net/~thep/datrie/datrie.html
+HOMEPAGE=	https://linux.thai.net/~thep/datrie/datrie.html
 COMMENT=	Implementation of Double-Array Trie
 LICENSE=	gnu-lgpl-v2.1
 

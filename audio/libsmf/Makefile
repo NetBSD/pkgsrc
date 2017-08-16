@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/07/15 02:02:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/16 20:21:03 wiz Exp $
 #
 
 DISTNAME=	libsmf-1.3
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libsmf/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/libsmf/
+HOMEPAGE=	https://sourceforge.net/projects/libsmf/
 COMMENT=	Standard MIDI File format library
 LICENSE=	2-clause-bsd
 

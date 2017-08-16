@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.287 2017/06/14 16:25:17 prlw1 Exp $
+# $NetBSD: Makefile,v 1.288 2017/08/16 20:21:16 wiz Exp $
 
 DISTNAME=	gtk+-2.24.31
 PKGNAME=	${DISTNAME:S/gtk/gtk2/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk+/2.24/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gtk.org/
+HOMEPAGE=	https://www.gtk.org/
 COMMENT=	GIMP Toolkit v2 - libraries for building X11 user interfaces
 LICENSE=	gnu-lgpl-v2.1
 

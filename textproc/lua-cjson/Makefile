@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/10/19 22:27:47 alnsn Exp $
+# $NetBSD: Makefile,v 1.4 2017/08/16 20:21:16 wiz Exp $
 
 DISTNAME=	lua-cjson-2.1.0
 PKGNAME=	${LUA_PKGPREFIX}-cjson-2.1.0
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://www.kyne.com.au/~mark/software/download/
 
 MAINTAINER=	imil@NetBSD.org
-HOMEPAGE=	http://www.kyne.com.au/~mark/software/lua-cjson.php
+HOMEPAGE=	https://www.kyne.com.au/~mark/software/lua-cjson.php
 COMMENT=	Lua CJSON provides JSON support for Lua
 LICENSE=	mit
 

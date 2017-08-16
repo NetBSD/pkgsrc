@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2016/05/12 10:45:26 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/08/16 20:21:17 wiz Exp $
 
 DISTNAME=	xcb-util-cursor-0.1.3
 CATEGORIES=	x11
-MASTER_SITES=	http://xcb.freedesktop.org/dist/
+MASTER_SITES=	https://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xcb.freedesktop.org/
+HOMEPAGE=	https://xcb.freedesktop.org/
 COMMENT=	XCB port of Xlib's libXcursor
 LICENSE=	x11
 
