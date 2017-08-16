@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.110 2017/08/16 07:33:39 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2017/08/16 21:44:05 wiz Exp $
 
 COMMENT=	Screen saver and locker for the X window system
+PKGREVISION=	1
 
 CONFLICTS+=	xscreensaver-gnome<4.14
 
@@ -14,10 +15,6 @@ CONFIGURE_ARGS+=	--with-configdir=${PREFIX}/libexec/xscreensaver/config
 
 EGDIR=			${PREFIX}/share/examples/xscreensaver
 MESSAGE_SUBST+=		EGDIR=${EGDIR:Q}
-
-# use pipes from 5.17, the new version is too slow
-post-extract:
-	${CP} ${FILESDIR}/pipes.c ${WRKSRC}/hacks/glx
 
 INSTALLATION_DIRS=	${EGDIR}/pam.d
 
