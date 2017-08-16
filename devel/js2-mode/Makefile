@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/04/14 00:31:41 pho Exp $
+# $NetBSD: Makefile,v 1.9 2017/08/16 21:22:11 wiz Exp $
 #
 
 DISTNAME=	js2-20080406
@@ -8,7 +8,7 @@ MASTER_SITES=	http://js2-mode.googlecode.com/files/
 EXTRACT_SUFX=	.el
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/js2-mode/
+HOMEPAGE=	https://code.google.com/archive/p/js2-mode/
 COMMENT=	Improved JavaScript mode for GNU Emacs
 
 WRKSRC=		${WRKDIR}

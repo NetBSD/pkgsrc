@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2017/04/22 21:03:39 adam Exp $
+# $NetBSD: Makefile,v 1.51 2017/08/16 21:22:12 wiz Exp $
 #
 
 DISTNAME=	ibus-chewing-1.4.12-Source
@@ -8,7 +8,7 @@ CATEGORIES=	inputmethod chinese
 MASTER_SITES=	https://github.com/definite/ibus-chewing/releases/download/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/ibus/
+HOMEPAGE=	https://github.com/ibus/ibus/wiki
 COMMENT=	Chewing engine for IBus input platform
 LICENSE=	gnu-gpl-v2
 

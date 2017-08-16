@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/04/20 12:10:27 nros Exp $
+# $NetBSD: Makefile,v 1.7 2017/08/16 21:22:11 wiz Exp $
 #
 
 DISTNAME=	libmtag-0.3.2
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://libmtag.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/libmtag/
+HOMEPAGE=	https://code.google.com/archive/p/libmtag/
 COMMENT=	Music tagging library
 LICENSE=	gnu-lgpl-v2.1
 
