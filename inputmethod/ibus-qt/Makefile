@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2017/04/22 21:03:39 adam Exp $
+# $NetBSD: Makefile,v 1.45 2017/08/16 20:45:40 wiz Exp $
 #
 
 DISTNAME=	ibus-qt-1.3.3-Source
@@ -8,7 +8,7 @@ CATEGORIES=	inputmethod
 MASTER_SITES=	https://github.com/ibus/ibus-qt/releases/download/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.googlecode.com/p/ibus/
+#HOMEPAGE=	http://code.googlecode.com/p/ibus/
 COMMENT=	Qt IBus library and Qt input method plugin
 LICENSE=	gnu-gpl-v2
 

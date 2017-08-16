@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/03/26 23:05:10 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2017/08/16 20:45:47 wiz Exp $
 #
 
 DISTNAME=	lhs-0.1
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	ftp://dev.null.pl/pub/
 
 MAINTAINER=	dawszy@arhea.net
-HOMEPAGE=	http://dev.null.pl/
+#HOMEPAGE=	http://dev.null.pl/
 COMMENT=	Lightweight HTTP Server, IPv6-aware and SSL-enabled
 
 WRKSRC=		${WRKDIR}/lhs

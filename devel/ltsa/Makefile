@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.13 2012/10/31 11:17:25 asau Exp $
+# $NetBSD: Makefile,v 1.14 2017/08/16 20:45:35 wiz Exp $
 #
 
 DISTNAME=	ltsa2.2
 PKGNAME=	${DISTNAME:S/ltsa/ltsa-/}
 PKGREVISION=	3
 CATEGORIES=	devel
-MASTER_SITES=	http://www.doc.ic.ac.uk/~jnm/book/ltsa-v2/
+#MASTER_SITES=	http://www.doc.ic.ac.uk/~jnm/book/ltsa-v2/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.doc.ic.ac.uk/~jnm/book/ltsa-v2/
+#HOMEPAGE=	http://www.doc.ic.ac.uk/~jnm/book/ltsa-v2/
 # ~jnm exists, /book/ does not
 COMMENT=	Labelled Transition System Analyser
 

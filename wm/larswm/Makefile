@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.18 2012/10/23 10:24:14 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2017/08/16 20:45:46 wiz Exp $
 #
 
 DISTNAME=	larswm-7.5.3
 PKGREVISION=	1
 CATEGORIES=	wm x11
-MASTER_SITES=	http://home.earthlink.net/~lab1701/larswm/
+#MASTER_SITES=	http://home.earthlink.net/~lab1701/larswm/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DOCFILES}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://home.earthlink.net/~lab1701/larswm/
+#HOMEPAGE=	http://home.earthlink.net/~lab1701/larswm/
 COMMENT=	9wm-like window manager
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}

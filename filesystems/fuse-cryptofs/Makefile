@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.9 2014/01/01 11:52:15 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/08/16 20:45:36 wiz Exp $
 #
 
 DISTNAME=	cryptofs-0.6.0
 PKGNAME=	fuse-${DISTNAME}
 PKGREVISION=	5
 CATEGORIES=	filesystems
-MASTER_SITES=	http://reboot.animeirc.de/cryptofs/
+#MASTER_SITES=	http://reboot.animeirc.de/cryptofs/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://reboot.animeirc.de/cryptofs/
+#HOMEPAGE=	http://reboot.animeirc.de/cryptofs/
 COMMENT=	FUSE encrypted filesystem
 
 GNU_CONFIGURE=	yes

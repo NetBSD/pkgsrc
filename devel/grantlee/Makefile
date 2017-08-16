@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/05/08 11:13:09 markd Exp $
+# $NetBSD: Makefile,v 1.7 2017/08/16 20:45:34 wiz Exp $
 #
 
 DISTNAME=	grantlee-0.5.1
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://downloads.grantlee.org/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gitorious.org/grantlee/pages/Home
+#HOMEPAGE=	http://www.gitorious.org/grantlee/pages/Home
 COMMENT=	String template engine in QT based on Django template system
 LICENSE=	gnu-lgpl-v3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2017/05/03 08:38:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2017/08/16 20:45:35 wiz Exp $
 #
 
 DISTNAME=	libsexymm-0.1.9
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://releases.chipx86.com/libsexy/libsexymm/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.chipx86.com/wiki/Libsexy
+#HOMEPAGE=	http://www.chipx86.com/wiki/Libsexy
 COMMENT=	C++ bindings for libsexy
 
 GNU_CONFIGURE=	yes

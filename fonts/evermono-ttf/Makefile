@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2014/12/04 23:41:39 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/08/16 20:45:36 wiz Exp $
 
 DISTNAME=	evermono
 VERSION=	7.0.0
 PKGNAME=	evermono-ttf-${VERSION}
 CATEGORIES=	fonts
-MASTER_SITES=	http://www.evertype.com/emono/
+#MASTER_SITES=	http://www.evertype.com/emono/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.evertype.com/emono/
+#HOMEPAGE=	http://www.evertype.com/emono/
 COMMENT=	Simple, elegant, monowidth font with wide Unicode coverage
 LICENSE=	evermono-license
 

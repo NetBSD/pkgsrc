@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.15 2013/12/10 14:03:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2017/08/16 20:45:42 wiz Exp $
 #
 
 DISTNAME=		ft-0.2.25
 PKGNAME=		${DISTNAME:S/ft-/freenet-tools-/}
 WRKSRC=			${WRKDIR}/ft
 CATEGORIES=		net www
-MASTER_SITES=		http://entropy.stop1984.com/files/
+#MASTER_SITES=		http://entropy.stop1984.com/files/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://entropy.stop1984.com/
+#HOMEPAGE=		http://entropy.stop1984.com/
 COMMENT=		Freenet Tools, freesite manipulation tools for Freenet and Entropy
 
 USE_TOOLS+=		gmake

@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.56 2016/07/09 06:37:50 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2017/08/16 20:45:32 wiz Exp $
 
 DISTNAME=		hbench-OS-1.1
 PKGNAME=		hbench-1.1
 PKGREVISION=		6
 CATEGORIES=		benchmarks
-MASTER_SITES=		http://www.eecs.harvard.edu/vino/perf/hbench/
+#MASTER_SITES=		http://www.eecs.harvard.edu/vino/perf/hbench/
 
 PATCHFILES=		hbench-OS-1.1-provisional-patch1.diff
 PATCH_SITES=		http://www.eecs.harvard.edu/~dholland/netbsd/
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.eecs.harvard.edu/vino/perf/hbench/
+#HOMEPAGE=		http://www.eecs.harvard.edu/vino/perf/hbench/
 COMMENT=		Suite of portable benchmarks to measure the OS and the hardware
 
 DEPENDS+=		gnuplot>=3.7:../../graphics/gnuplot

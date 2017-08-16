@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/08 09:57:28 asau Exp $
+# $NetBSD: Makefile,v 1.11 2017/08/16 20:45:41 wiz Exp $
 #
 
 DISTNAME=		words-1.97-linux
@@ -8,7 +8,7 @@ CATEGORIES=		misc
 MASTER_SITES=		ftp://petrus.thomasaquinas.edu/pub/linux/words/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://users.erols.com/whitaker/wordslux.htm
+#HOMEPAGE=		http://users.erols.com/whitaker/wordslux.htm
 COMMENT=		Latin-to-English dictionary program (Linux binary)
 
 EMUL_PLATFORMS=		linux-i386

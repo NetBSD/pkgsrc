@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2015/04/25 14:23:39 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2017/08/16 20:45:41 wiz Exp $
 #
 
 DISTNAME=	hwdecode-demos-0.9.4
 PKGREVISION=	9
 CATEGORIES=	multimedia
-MASTER_SITES=	http://www.splitted-desktop.com/~gbeauchesne/hwdecode-demos/
+#MASTER_SITES=	http://www.splitted-desktop.com/~gbeauchesne/hwdecode-demos/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.splitted-desktop.com/~gbeauchesne/
+#HOMEPAGE=	http://www.splitted-desktop.com/~gbeauchesne/
 COMMENT=	Standalone programs showing off various HW acceleration APIs
 LICENSE=	gnu-gpl-v2
 

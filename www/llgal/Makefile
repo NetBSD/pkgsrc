@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/07/09 06:39:13 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/08/16 20:45:47 wiz Exp $
 #
 
 DISTNAME=	llgal-0.13.16
@@ -8,7 +8,7 @@ MASTER_SITES=	http://download.gna.org/llgal/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://home.gna.org/llgal/
+#HOMEPAGE=	http://home.gna.org/llgal/
 COMMENT=	The llgal is an easy and fast on-line static gallery generator
 
 LICENSE=	gnu-gpl-v2

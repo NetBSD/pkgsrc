@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/23 19:51:07 asau Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/16 20:45:45 wiz Exp $
 #
 
 DISTNAME=	iat-0.1.7
@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.berlios.de/iat/
 EXTRACT_SUFX=	.tar.lzma
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://iat.berlios.de/
+#HOMEPAGE=	http://iat.berlios.de/
 COMMENT=	ISO9660 analyzer tool
 LICENSE=	gnu-gpl-v3
 

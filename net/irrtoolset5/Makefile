@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/12/01 14:48:02 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/08/16 20:45:42 wiz Exp $
 
 VERSION=		5.0.1
 DISTNAME=		irrtoolset-${VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.isc.org/isc/IRRToolSet/IRRToolSet-${VERSION}/
 
 OWNER=			spz@NetBSD.org
-HOMEPAGE=		http://irrtoolset.isc.org/
+#HOMEPAGE=		http://irrtoolset.isc.org/
 COMMENT=		The Internet Routing Registry Toolset - client to IRRd
 LICENSE=		gnu-gpl-v2 AND mit AND modified-bsd
 

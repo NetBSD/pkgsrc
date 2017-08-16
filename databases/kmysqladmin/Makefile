@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2016/03/05 11:28:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.73 2017/08/16 20:45:34 wiz Exp $
 
 DISTNAME=	kmysqladmin-0.7.2
 PKGREVISION=	34
@@ -6,7 +6,7 @@ CATEGORIES=	databases kde
 MASTER_SITES=	http://www.alwins-world.de/programs/download/kmysqladmin/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.alwins-world.de/programs/kmysqladmin/
+#HOMEPAGE=	http://www.alwins-world.de/programs/kmysqladmin/
 COMMENT=	MySQL administration GUI
 
 USE_LANGUAGES=		c c++
