@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/03/15 20:03:24 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.16 2017/08/16 20:21:10 wiz Exp $
 #
 
 DISTNAME=	ibus-el-0.3.2
@@ -8,7 +8,7 @@ CATEGORIES=	inputmethod
 MASTER_SITES=	http://www11.atwiki.jp/s-irie/pub/emacs/ibus/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www11.atwiki.jp/s-irie/pages/21.html
+HOMEPAGE=	https://www11.atwiki.jp/s-irie/pages/21.html
 COMMENT=	IBus client for GNU Emacs
 LICENSE=	gnu-gpl-v3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/12/25 17:39:58 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2017/08/16 20:21:07 wiz Exp $
 #
 
 DISTNAME=	its4-1.1.1
@@ -7,7 +7,7 @@ MASTER_SITES=	# have to fetch for yourself, or from a NetBSD mirror
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cigital.com/its4/
+HOMEPAGE=	https://www.cigital.com/its4/
 COMMENT=	Static C/C++ code scanner for potential security problems
 LICENSE=	no-commercial-use
 

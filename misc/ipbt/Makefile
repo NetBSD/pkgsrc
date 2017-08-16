@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/07/09 06:38:35 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/08/16 20:21:11 wiz Exp $
 #
 
 DISTNAME=	ipbt-r8765
@@ -10,10 +10,10 @@ CATEGORIES=	misc
 # copy cached on ftp.NetBSD.org so the checksum works.
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 DIST_SUBDIR=	ipbt-20100101
-#MASTER_SITES=	http://www.chiark.greenend.org.uk/~sgtatham/ipbt/
+#MASTER_SITES=	https://www.chiark.greenend.org.uk/~sgtatham/ipbt/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.chiark.greenend.org.uk/~sgtatham/ipbt/
+HOMEPAGE=	https://www.chiark.greenend.org.uk/~sgtatham/ipbt/
 COMMENT=	High-tech ttyrec player
 
 USE_TOOLS+=		perl

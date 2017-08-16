@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2012/10/06 14:11:06 asau Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/16 20:21:10 wiz Exp $
 #
 
 DISTNAME=		LibRaw-0.13.8
 PKGNAME=		${DISTNAME:tl}
 CATEGORIES=		graphics
-MASTER_SITES=	http://www.libraw.org/data/
+MASTER_SITES=	https://www.libraw.org/data/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.libraw.org/
+HOMEPAGE=	https://www.libraw.org/
 COMMENT=	Raw decoding/processing library
 LICENSE=	gnu-lgpl-v2.1 OR cddl-1.0
 
