@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/10/09 21:42:03 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.19 2017/08/16 20:26:36 wiz Exp $
 
 DISTNAME=	cfengine-3.7.3
 PKGREVISION=	1
@@ -7,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://cfengine-package-repos.s3.amazonaws.com/tarballs/
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://cfengine.com/pages/community
+HOMEPAGE=	https://cfengine.com/product/community/
 COMMENT=	Tool for automating system administration
 LICENSE=	gnu-gpl-v3
 
