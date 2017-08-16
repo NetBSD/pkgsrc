@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/09/19 04:59:47 mef Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/08/16 11:35:20 jperkin Exp $
 bin/dblatex
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -153,6 +153,9 @@ ${PYSITELIB}/dbtexmf/xslt/saxon.pyo
 ${PYSITELIB}/dbtexmf/xslt/xslt.py
 ${PYSITELIB}/dbtexmf/xslt/xslt.pyc
 ${PYSITELIB}/dbtexmf/xslt/xslt.pyo
+${PYSITELIB}/dbtexmf/xslt/xsltconf.py
+${PYSITELIB}/dbtexmf/xslt/xsltconf.pyc
+${PYSITELIB}/dbtexmf/xslt/xsltconf.pyo
 ${PYSITELIB}/dbtexmf/xslt/xsltproc.py
 ${PYSITELIB}/dbtexmf/xslt/xsltproc.pyc
 ${PYSITELIB}/dbtexmf/xslt/xsltproc.pyo
@@ -186,11 +189,8 @@ share/dblatex/latex/misc/passivetex/unicode.sty
 share/dblatex/latex/misc/ragged2e.sty
 share/dblatex/latex/misc/xelatex/xecyr.sty
 share/dblatex/latex/scripts/doc.ist
-share/dblatex/latex/specs/db2latex.specs
 share/dblatex/latex/specs/db2latex.xml
-share/dblatex/latex/specs/native.specs
 share/dblatex/latex/specs/native.xml
-share/dblatex/latex/specs/simple.specs
 share/dblatex/latex/specs/simple.xml
 share/dblatex/latex/style/dbk_admonition.sty
 share/dblatex/latex/style/dbk_annot.sty
@@ -198,6 +198,7 @@ share/dblatex/latex/style/dbk_biblio.sty
 share/dblatex/latex/style/dbk_callout.sty
 share/dblatex/latex/style/dbk_changebar.sty
 share/dblatex/latex/style/dbk_core.sty
+share/dblatex/latex/style/dbk_cover.sty
 share/dblatex/latex/style/dbk_fonts.sty
 share/dblatex/latex/style/dbk_graphic.sty
 share/dblatex/latex/style/dbk_headfoot.sty
@@ -299,6 +300,7 @@ share/dblatex/xsl/common/xh.xml
 share/dblatex/xsl/common/zh_cn.xml
 share/dblatex/xsl/common/zh_tw.xml
 share/dblatex/xsl/component.xsl
+share/dblatex/xsl/cover.xsl
 share/dblatex/xsl/dingbat.xsl
 share/dblatex/xsl/docbook.xsl
 share/dblatex/xsl/docbookng.xsl
@@ -407,10 +409,11 @@ share/doc/dblatex/xhtml/manual/ch01s03.html
 share/doc/dblatex/xhtml/manual/ch01s05.html
 share/doc/dblatex/xhtml/manual/ch02s03.html
 share/doc/dblatex/xhtml/manual/ch03.html
-share/doc/dblatex/xhtml/manual/ch03s08.html
-share/doc/dblatex/xhtml/manual/ch03s12.html
-share/doc/dblatex/xhtml/manual/ch03s13.html
+share/doc/dblatex/xhtml/manual/ch03s09.html
+share/doc/dblatex/xhtml/manual/ch03s10.html
 share/doc/dblatex/xhtml/manual/ch03s14.html
+share/doc/dblatex/xhtml/manual/ch03s15.html
+share/doc/dblatex/xhtml/manual/ch03s16.html
 share/doc/dblatex/xhtml/manual/ch04s04.html
 share/doc/dblatex/xhtml/manual/ch04s08.html
 share/doc/dblatex/xhtml/manual/ch05.html
@@ -587,6 +590,7 @@ share/doc/dblatex/xhtml/manual/index.html
 share/doc/dblatex/xhtml/manual/index.numbered.html
 share/doc/dblatex/xhtml/manual/index.tocdepth.html
 share/doc/dblatex/xhtml/manual/insert.xref.page.number.html
+share/doc/dblatex/xhtml/manual/insert.xref.page.number.para.html
 share/doc/dblatex/xhtml/manual/keep.relative.image.uris.html
 share/doc/dblatex/xhtml/manual/korean.package.html
 share/doc/dblatex/xhtml/manual/latex.babel.language.html
@@ -661,6 +665,7 @@ share/doc/dblatex/xhtml/manual/refentry.tocdepth.html
 share/doc/dblatex/xhtml/manual/refentry.xref.manvolnum.html
 share/doc/dblatex/xhtml/manual/sans.font.family.html
 share/doc/dblatex/xhtml/manual/sec-changelog.html
+share/doc/dblatex/xhtml/manual/sec-covers.html
 share/doc/dblatex/xhtml/manual/sec-custom-latex.html
 share/doc/dblatex/xhtml/manual/sec-custom.html
 share/doc/dblatex/xhtml/manual/sec-figinclude.html
@@ -734,6 +739,7 @@ share/doc/dblatex/xhtml/release-notes/sec-changes-029.html
 share/doc/dblatex/xhtml/release-notes/sec-changes-02pre.html
 share/doc/dblatex/xhtml/release-notes/sec-changes-03.html
 share/doc/dblatex/xhtml/release-notes/sec-changes-031.html
+share/doc/dblatex/xhtml/release-notes/sec-changes-0310.html
 share/doc/dblatex/xhtml/release-notes/sec-changes-032.html
 share/doc/dblatex/xhtml/release-notes/sec-changes-033.html
 share/doc/dblatex/xhtml/release-notes/sec-changes-034.html
@@ -741,3 +747,4 @@ share/doc/dblatex/xhtml/release-notes/sec-changes-035.html
 share/doc/dblatex/xhtml/release-notes/sec-changes-036.html
 share/doc/dblatex/xhtml/release-notes/sec-changes-037.html
 share/doc/dblatex/xhtml/release-notes/sec-changes-038.html
+share/doc/dblatex/xhtml/release-notes/sec-changes-039.html
