@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/02/25 10:15:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2017/08/16 20:21:03 wiz Exp $
 #
 
 DISTNAME=	libfishsound-1.0.0
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/libfishsound/
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	http://www.xiph.org/fishsound/
+HOMEPAGE=	https://www.xiph.org/fishsound/
 COMMENT=	Provides a simple API for decoding and encoding audio data
 LICENSE=	modified-bsd
 

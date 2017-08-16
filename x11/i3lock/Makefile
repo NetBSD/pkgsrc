@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2016/09/19 17:23:10 wiedi Exp $
+# $NetBSD: Makefile,v 1.4 2017/08/16 20:21:17 wiz Exp $
 #
 
 DISTNAME=	i3lock-2.8
 CATEGORIES=	x11
-MASTER_SITES=	http://i3wm.org/i3lock/
+MASTER_SITES=	https://i3wm.org/i3lock/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://i3wm.org/i3lock/
+HOMEPAGE=	https://i3wm.org/i3lock/
 COMMENT=	Slightly improved screen locker based on slock
 LICENSE=	modified-bsd
 

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2015/04/27 09:23:06 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/16 20:21:17 wiz Exp $
 
 DISTNAME=	xcb-util-errors-1.0
 CATEGORIES=	x11
-MASTER_SITES=	http://xcb.freedesktop.org/dist/
+MASTER_SITES=	https://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xcb.freedesktop.org/
+HOMEPAGE=	https://xcb.freedesktop.org/
 COMMENT=	Library for helping debug xcb problems
 LICENSE=	x11
 

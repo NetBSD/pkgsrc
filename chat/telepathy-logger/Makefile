@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2017/04/22 21:03:08 adam Exp $
+# $NetBSD: Makefile,v 1.39 2017/08/16 20:21:06 wiz Exp $
 
 DISTNAME=	telepathy-logger-0.2.7
 PKGREVISION=	19
@@ -7,7 +7,7 @@ MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-logger/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://telepathy.freedesktop.org/wiki/Logger
+HOMEPAGE=	https://telepathy.freedesktop.org/wiki/Logger
 COMMENT=	Logger module for telepathy
 LICENSE=	gnu-lgpl-v2.1
 

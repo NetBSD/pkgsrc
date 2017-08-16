@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2017/08/07 19:08:51 adam Exp $
+# $NetBSD: Makefile,v 1.97 2017/08/16 20:21:17 wiz Exp $
 
 DISTNAME=	gtk+-3.22.17
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk+/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gtk.org/
+HOMEPAGE=	https://www.gtk.org/
 COMMENT=	GIMP Toolkit v3 - libraries for building X11 user interfaces
 LICENSE=	gnu-lgpl-v2.1
 

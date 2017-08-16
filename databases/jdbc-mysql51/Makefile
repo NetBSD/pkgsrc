@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/01/01 17:16:39 spz Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/16 20:21:06 wiz Exp $
 #
 
 DISTNAME=	mysql-connector-java-5.1.40
@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=Connector-J/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mysql.com/products/connector/j/
+HOMEPAGE=	https://www.mysql.com/products/connector/j/
 COMMENT=	MySQL 5.1 JDBC driver
 
 USE_JAVA=	run

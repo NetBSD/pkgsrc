@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2016/01/17 15:05:18 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.2 2017/08/16 20:21:11 wiz Exp $
 
 # used by chat/ktp-accounts-kcm/Makefile
 # used by chat/ktp-approver/Makefile
@@ -16,4 +16,4 @@
 KTP_VERSION=	0.9.0
 MASTER_SITES=	${MASTER_SITE_KDE:=kde-telepathy/${VERSION}/src/}
 EXTRACT_SUFX=	.tar.bz2
-HOMEPAGE=	http://community.kde.org/KTp
+HOMEPAGE=	https://community.kde.org/KTp

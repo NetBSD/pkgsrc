@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/03/05 11:29:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/16 20:21:14 wiz Exp $
 
 DISTNAME=	keepassx-0.4.4
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	https://www.keepassx.org/releases/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.keepassx.org/
+HOMEPAGE=	https://www.keepassx.org/
 COMMENT=	Password manager or safe v0.4 (kdb support)
 LICENSE=	gnu-gpl-v2
 

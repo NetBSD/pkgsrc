@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/01/17 15:05:18 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/16 20:21:11 wiz Exp $
 
 .include "Makefile.common"
 DISTNAME=	kde-telepathy-${KTP_VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://userbase.kde.org/Telepathy
+HOMEPAGE=	https://userbase.kde.org/Telepathy
 COMMENT=	"meta-package" for KDE Telepathy
 
 DEPENDS+=	ktp-accounts-kcm-${KTP_VERSION}{,nb[0-9]*}:../../chat/ktp-accounts-kcm

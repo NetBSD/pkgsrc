@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2017/01/21 20:06:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2017/08/16 20:21:14 wiz Exp $
 #
 
 DISTNAME=	i3status-2.10
 PKGREVISION=	2
 CATEGORIES=	sysutils
-MASTER_SITES=	http://i3wm.org/i3status/
+MASTER_SITES=	https://i3wm.org/i3status/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://i3wm.org/i3status/
+HOMEPAGE=	https://i3wm.org/i3status/
 COMMENT=	Small program for generating a status bar
 LICENSE=	modified-bsd
 

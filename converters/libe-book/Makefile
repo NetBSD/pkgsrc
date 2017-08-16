@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/04/30 01:21:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2017/08/16 20:21:06 wiz Exp $
 
 DISTNAME=	libe-book-0.1.2
 PKGREVISION=	10
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libebook/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/libebook/
+HOMEPAGE=	https://sourceforge.net/projects/libebook/
 COMMENT=	Library for importing non-HTML reflowable e-book formats
 LICENSE=	mpl-2.0 OR gnu-lgpl-v2.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2017/02/12 11:08:13 wiz Exp $
+# $NetBSD: Makefile,v 1.126 2017/08/16 20:21:14 wiz Exp $
 
 DISTNAME=		lsof_4.89
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -10,7 +10,7 @@ MASTER_SITES+=		ftp://ftp.fu-berlin.de/pub/unix/tools/lsof/OLD/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://people.freebsd.org/~abe/
+HOMEPAGE=		https://people.freebsd.org/~abe/
 COMMENT=		Lists information about open files
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/${SRCBALL_NAME}

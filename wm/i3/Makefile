@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2017/08/09 11:13:30 nros Exp $
+# $NetBSD: Makefile,v 1.20 2017/08/16 20:21:16 wiz Exp $
 #
 
 DISTNAME=	i3-4.13
 CATEGORIES=	wm
-MASTER_SITES=	http://i3wm.org/downloads/
+MASTER_SITES=	https://i3wm.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://i3wm.org/
+HOMEPAGE=	https://i3wm.org/
 COMMENT=	Improved dynamic tiling window manager
 LICENSE=	modified-bsd
 

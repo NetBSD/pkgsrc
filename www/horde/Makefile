@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2017/04/05 12:33:49 fhajny Exp $
+# $NetBSD: Makefile,v 1.82 2017/08/16 20:21:16 wiz Exp $
 
 DISTNAME=	horde-3.3.13
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	http://ftp.horde.org/pub/horde/
 MASTER_SITES+=	ftp://ftp.horde.org/pub/horde/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.horde.org/
+HOMEPAGE=	https://www.horde.org/
 COMMENT=	PHP application framework
 LICENSE=	gnu-lgpl-v2
 

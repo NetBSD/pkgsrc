@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2017/02/12 06:26:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2017/08/16 20:21:14 wiz Exp $
 
 DISTNAME=	libnotify-0.7.6
 PKGREVISION=	6
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libnotify/0.7/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://developer.gnome.org/libnotify/
+HOMEPAGE=	https://developer.gnome.org/libnotify/
 COMMENT=	Desktop notification framework
 LICENSE=	gnu-lgpl-v2.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2017/08/14 20:09:02 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2017/08/16 20:21:13 wiz Exp $
 
 DISTNAME=	libsoup-2.58.2
 CATEGORIES=	net gnome
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wiki.gnome.org/Projects/libsoup
+HOMEPAGE=	https://wiki.gnome.org/Projects/libsoup
 COMMENT=	HTTP library implementation in C
 LICENSE=	gnu-lgpl-v2
 

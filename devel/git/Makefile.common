@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2016/05/31 13:38:14 leot Exp $
+# $NetBSD: Makefile.common,v 1.6 2017/08/16 20:21:06 wiz Exp $
 #
 # used by devel/git-base/Makefile
 # used by devel/git-contrib/Makefile
@@ -14,7 +14,7 @@ MASTER_SITES?=	https://www.kernel.org/pub/software/scm/git/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
-HOMEPAGE?=	http://git-scm.com/
+HOMEPAGE?=	https://git-scm.com/
 LICENSE=	gnu-gpl-v2
 
 .include "../../mk/bsd.fast.prefs.mk"

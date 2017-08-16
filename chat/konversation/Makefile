@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2017/04/30 01:21:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.86 2017/08/16 20:21:04 wiz Exp $
 #
 
 DISTNAME=	konversation-1.5.1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=konversation/1.5.1/src/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://konversation.kde.org/
+HOMEPAGE=	https://konversation.kde.org/
 COMMENT=	KDE IRC Client
 LICENSE=	gnu-gpl-v2
 

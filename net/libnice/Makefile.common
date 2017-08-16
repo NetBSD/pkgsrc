@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2017/04/19 13:28:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2017/08/16 20:21:13 wiz Exp $
 #
 # used by net/libnice/Makefile
 # used by net/gst-plugins1-libnice/Makefile
@@ -8,7 +8,7 @@ CATEGORIES=	net devel
 MASTER_SITES=	http://nice.freedesktop.org/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://nice.freedesktop.org/wiki/
+HOMEPAGE=	https://nice.freedesktop.org/wiki/
 COMMENT=	IETF's Interactive Connectivity Establishment standard implementation
 LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1
 

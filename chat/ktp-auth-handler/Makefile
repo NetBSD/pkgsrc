@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/04/30 01:21:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/16 20:21:04 wiz Exp $
 
 PKGREVISION= 4
 .include "../../meta-pkgs/kde-telepathy/Makefile.common"
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=kde-telepathy/${KTP_VERSION}/src/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://community.kde.org/KTp
+HOMEPAGE=	https://community.kde.org/KTp
 COMMENT=	KDE Telepathy KWallet integration module
 LICENSE=	gnu-lgpl-v2.1
 

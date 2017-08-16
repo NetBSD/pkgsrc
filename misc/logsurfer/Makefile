@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.23 2017/01/19 18:52:18 agc Exp $
+# $NetBSD: Makefile,v 1.24 2017/08/16 20:21:11 wiz Exp $
 
 DISTNAME=	logsurfer-1.8
 PKGNAME=	logsurfer-1.8
 CATEGORIES=	misc
 MASTER_SITES=	http://kerryt.orcon.net.nz/
-MASTER_SITES+=	http://www.crypt.gen.nz/logsurfer/
+MASTER_SITES+=	https://www.crypt.gen.nz/logsurfer/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.crypt.gen.nz/logsurfer/
+HOMEPAGE=	https://www.crypt.gen.nz/logsurfer/
 COMMENT=	Processes logfiles and performs certain actions
 
 GNU_CONFIGURE=	YES
