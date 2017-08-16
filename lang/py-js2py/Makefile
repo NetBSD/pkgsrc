@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2017/07/11 19:36:40 adam Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/16 18:02:21 adam Exp $
 
-DISTNAME=	Js2Py-0.44
+DISTNAME=	Js2Py-0.50
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-CATEGORIES=	python lang
+CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=J/Js2Py/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pypi.python.org/pypi/Js2Py/
-COMMENT=	Python implementation of Javascript
+HOMEPAGE=	https://github.com/PiotrDabkowski/Js2Py
+COMMENT=	Pure Python JavaScript Translator/Interpreter
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-jsparser>=2.4.5:../../lang/py-jsparser
+DEPENDS+=	${PYPKGPREFIX}-jsparser>=2.5.1:../../lang/py-jsparser
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-tzlocal>=1.2:../../time/py-tzlocal
 
