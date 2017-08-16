@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2017/01/01 14:43:42 wiz Exp $
+# $NetBSD: Makefile.common,v 1.15 2017/08/16 20:21:09 wiz Exp $
 #
 # used by graphics/gimp-docs-de/Makefile
 # used by graphics/gimp-docs-en/Makefile
@@ -20,7 +20,7 @@ MASTER_SITES=	http://download.gimp.org/pub/gimp/help/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://docs.gimp.org/
+HOMEPAGE=	https://docs.gimp.org/
 LICENSE=	gnu-fdl-v1.2
 
 # warning: failed to load external entity "xml/de/gimp.xml"

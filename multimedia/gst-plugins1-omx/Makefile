@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2016/11/16 11:36:15 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/08/16 20:21:11 wiz Exp $
 
 DISTNAME=	gst-omx-1.2.0
 PKGNAME=	${DISTNAME:S/omx/plugins1-omx/}
 PKGREVISION=	2
 CATEGORIES=	multimedia
-MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-omx/
+MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-omx/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gstreamer.freedesktop.org/src/gst-omx/
+HOMEPAGE=	https://gstreamer.freedesktop.org/src/gst-omx/
 COMMENT=	GStreamer OpenMAX IL wrapper plugin
 
 USE_PKGLOCALEDIR=	yes

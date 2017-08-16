@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/01/20 19:20:08 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2017/08/16 20:21:14 wiz Exp $
 #
 
 DISTNAME=	hfsutils-3.2.6
@@ -8,7 +8,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.mars.org/pub/hfs/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mars.org/home/rob/proj/hfs/
+HOMEPAGE=	https://www.mars.org/home/rob/proj/hfs/
 COMMENT=	Tk GUI + Tcl Shell for accessing HFS volumes
 
 GNU_CONFIGURE=	yes

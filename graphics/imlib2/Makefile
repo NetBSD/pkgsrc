@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2016/05/01 20:58:41 leot Exp $
+# $NetBSD: Makefile,v 1.73 2017/08/16 20:21:09 wiz Exp $
 
 DISTNAME=	imlib2-1.4.9
 CATEGORIES=	graphics
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://docs.enlightenment.org/api/imlib2/html/
+HOMEPAGE=	https://docs.enlightenment.org/api/imlib2/html/
 COMMENT=	Image manipulation library
 LICENSE=	mit	# with some modifications
 

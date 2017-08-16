@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.55 2017/07/03 17:42:45 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.56 2017/08/16 20:21:06 wiz Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -13,7 +13,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glib/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
-HOMEPAGE=	http://developer.gnome.org/glib/
+HOMEPAGE=	https://developer.gnome.org/glib/
 COMMENT=	# empty; redefined in Makefile
 LICENSE=	gnu-lgpl-v2
 

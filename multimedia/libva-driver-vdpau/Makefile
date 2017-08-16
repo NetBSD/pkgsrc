@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2016/04/11 04:22:34 dbj Exp $
+# $NetBSD: Makefile,v 1.6 2017/08/16 20:21:12 wiz Exp $
 #
 
 DISTNAME=	vdpau-driver-${PKGNAME:C/^.*-//}
 PKGNAME=	libva-driver-vdpau-0.7.4
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_BACKUP}
-		#http://cgit.freedesktop.org/vaapi/vdpau-driver/snapshot/
+		#https://cgit.freedesktop.org/vaapi/vdpau-driver/snapshot/
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://cgit.freedesktop.org/vaapi/vdpau-driver
+HOMEPAGE=	https://cgit.freedesktop.org/vaapi/vdpau-driver
 COMMENT=	VDPAU-based backend for VAAPI
 LICENSE=	gnu-gpl-v2
 

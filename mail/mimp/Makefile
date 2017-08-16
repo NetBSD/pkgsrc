@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/01/19 18:52:16 agc Exp $
+# $NetBSD: Makefile,v 1.7 2017/08/16 20:21:10 wiz Exp $
 
 DISTNAME=	mimp-h3-${MIMPVER}
 PKGNAME=	mimp-${MIMPVER}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://ftp.horde.org/pub/mimp/
 MASTER_SITES+=	ftp://ftp.horde.org/pub/mimp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.horde.org/apps/mimp/
+HOMEPAGE=	https://www.horde.org/apps/mimp/
 COMMENT=	Internet Messaging Program for mobile devices
 LICENSE=	gnu-gpl-v2
 

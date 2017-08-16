@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/04/20 12:10:27 nros Exp $
+# $NetBSD: Makefile,v 1.21 2017/08/16 20:21:03 wiz Exp $
 #
 
 DISTNAME=	libmad-0.15.1b
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mad/}
 
 MAINTAINER=	simonb@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/mad/
+HOMEPAGE=	https://sourceforge.net/projects/mad/
 COMMENT=	High-quality MPEG audio decoder
 LICENSE=	gnu-gpl-v2
 

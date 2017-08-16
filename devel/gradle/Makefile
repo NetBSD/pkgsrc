@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/02/28 08:16:09 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2017/08/16 20:21:07 wiz Exp $
 
 DISTNAME=	gradle-3.4-bin
 PKGNAME=	${DISTNAME:S/-bin//}
@@ -7,7 +7,7 @@ MASTER_SITES=	http://services.gradle.org/distributions/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	asiekierka@gmail.com
-HOMEPAGE=	http://gradle.org/
+HOMEPAGE=	https://gradle.org/
 COMMENT=	Groovy-based Java build system
 LICENSE=	apache-2.0
 
