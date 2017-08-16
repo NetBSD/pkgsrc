@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.540 2017/06/20 12:40:15 adam Exp $
+# $NetBSD: Makefile,v 1.541 2017/08/16 21:04:23 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -333,7 +333,6 @@ SUBDIR+=	mpg321
 SUBDIR+=	mppenc
 SUBDIR+=	mserv
 SUBDIR+=	mserv-devel
-SUBDIR+=	mserv-irman
 SUBDIR+=	mstream
 SUBDIR+=	mt-daapd
 SUBDIR+=	muse
