@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2016/10/19 20:10:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.45 2017/08/16 07:33:39 wiz Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-getimage
@@ -251,6 +251,7 @@ libexec/xscreensaver/config/unicrud.xml
 libexec/xscreensaver/config/unknownpleasures.xml
 libexec/xscreensaver/config/vermiculate.xml
 libexec/xscreensaver/config/vidwhacker.xml
+libexec/xscreensaver/config/vigilance.xml
 libexec/xscreensaver/config/voronoi.xml
 libexec/xscreensaver/config/wander.xml
 libexec/xscreensaver/config/whirlwindwarp.xml
@@ -438,6 +439,7 @@ libexec/xscreensaver/unicrud
 libexec/xscreensaver/unknownpleasures
 libexec/xscreensaver/vermiculate
 libexec/xscreensaver/vidwhacker
+libexec/xscreensaver/vigilance
 libexec/xscreensaver/voronoi
 libexec/xscreensaver/wander
 libexec/xscreensaver/whirlwindwarp
@@ -664,6 +666,7 @@ man/man6/unicrud.6
 man/man6/unknownpleasures.6
 man/man6/vermiculate.6
 man/man6/vidwhacker.6
+man/man6/vigilance.6
 man/man6/voronoi.6
 man/man6/wander.6
 man/man6/whirlwindwarp.6
