@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2017/02/11 23:28:04 prlw1 Exp $
+# $NetBSD: Makefile,v 1.5 2017/08/16 20:21:12 wiz Exp $
 
 DISTNAME=	gst-rtsp-server-1.10.3
 CATEGORIES=	net multimedia
-MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-rtsp-server/
+MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-rtsp-server/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gstreamer.freedesktop.org/modules/gst-rtsp-server.html
+HOMEPAGE=	https://gstreamer.freedesktop.org/modules/gst-rtsp-server.html
 COMMENT=	GStreamer RTSP server
 LICENSE=	gnu-lgpl-v2
 

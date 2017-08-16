@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/04/24 11:15:45 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/16 20:21:15 wiz Exp $
 #
 
 DISTNAME=	ispell-sc-ca
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.softcatala.org/cgi-bin/gaudi/contadorb/load.cgi?/fitxer
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jmmv@NetBSD.org
-HOMEPAGE=	http://www.softcatala.org/projectes/myspell/
+HOMEPAGE=	https://www.softcatala.org/projectes/myspell/
 COMMENT=	Catalan dictionary for interactive spelling checker
 
 CONFLICTS+=	ispell-catalan-[0-9]*
