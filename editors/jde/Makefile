@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2013/02/17 19:18:02 dholland Exp $
+# $NetBSD: Makefile,v 1.29 2017/08/16 20:45:36 wiz Exp $
 #
 
 DISTNAME=	jde-2.3.2
@@ -7,10 +7,10 @@ PKGREVISION=	2
 CATEGORIES=	devel editors java
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 # The "real" site has silly naming conventions:
-#MASTER_SITES=	http://jdee.sunsite.dk/
+##MASTER_SITES=	http://jdee.sunsite.dk/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jdee.sunsite.dk/
+#HOMEPAGE=	http://jdee.sunsite.dk/
 COMMENT=	Full-featured Java editing mode for emacs
 
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}speedbar>=0.14rc2:../../editors/speedbar

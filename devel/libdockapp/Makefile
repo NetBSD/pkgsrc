@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.25 2012/10/31 11:17:12 asau Exp $
+# $NetBSD: Makefile,v 1.26 2017/08/16 20:45:35 wiz Exp $
 #
 
 DISTNAME=	libdockapp-0.6.2
 CATEGORIES=	devel wm
-MASTER_SITES=	http://solfertje.student.utwente.nl/~dalroi/libdockapp/files/
+#MASTER_SITES=	http://solfertje.student.utwente.nl/~dalroi/libdockapp/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://solfertje.student.utwente.nl/~dalroi/libdockapp/
+#HOMEPAGE=	http://solfertje.student.utwente.nl/~dalroi/libdockapp/
 COMMENT=	Simple library to create dockapps for WindowMaker
 
 GNU_CONFIGURE=		YES

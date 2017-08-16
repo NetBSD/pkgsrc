@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2016/10/03 08:15:50 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2017/08/16 20:45:44 wiz Exp $
 
 DISTNAME=	libidea-0.8.2b
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.funet.fi/pub/mirrors/ftp.psy.uq.oz.au/libeay/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.media-crypt.com/pages/fidea.html
+#HOMEPAGE=	http://www.media-crypt.com/pages/fidea.html
 COMMENT=	IDEA block cipher library
 #LICENSE=	ssleay-license
 

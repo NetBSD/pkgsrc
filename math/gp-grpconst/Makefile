@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/10/09 13:44:49 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/08/16 20:45:40 wiz Exp $
 #
 
 DISTNAME=	grpconst
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/share/
 EXTRACT_SUFX=	.zoo
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gap-system.org/Share/grpconst.html
+#HOMEPAGE=	http://www.gap-system.org/Share/grpconst.html
 COMMENT=	GAP package for finding isomorphism classes of finite groups
 
 WRKSRC=		${WRKDIR}/grpconst

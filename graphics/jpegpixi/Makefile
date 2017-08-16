@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/09/11 23:00:39 gdt Exp $
+# $NetBSD: Makefile,v 1.17 2017/08/16 20:45:39 wiz Exp $
 
 DISTNAME=		jpegpixi-1.1.1
 PKGREVISION=		3
@@ -7,7 +7,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_BACKUP}
 
 MAINTAINER=		gdt@NetBSD.org
-HOMEPAGE=		http://www.zero-based.org/software/jpegpixi/
+#HOMEPAGE=		http://www.zero-based.org/software/jpegpixi/
 COMMENT=		Low-loss JPEG interpolator to remove bad pixels
 
 GNU_CONFIGURE=		yes

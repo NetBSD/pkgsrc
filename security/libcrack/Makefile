@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/10/30 20:49:57 spz Exp $
+# $NetBSD: Makefile,v 1.20 2017/08/16 20:45:44 wiz Exp $
 #
 
 DISTNAME=	cracklib,2.7
@@ -8,7 +8,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://www.crypticide.com/alecm/security/cracklib/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE= http://www.crypticide.com/alecm/security/cracklib/cracklib,2.7.txt
+#HOMEPAGE= http://www.crypticide.com/alecm/security/cracklib/cracklib,2.7.txt
 COMMENT=	Password checking library
 
 USE_LIBTOOL=	YES

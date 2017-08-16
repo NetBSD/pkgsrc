@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2016/07/28 23:41:36 kamil Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/16 20:45:37 wiz Exp $
 
 DISTNAME=	cosmosmash-1.4.7
 CATEGORIES=	games
 MASTER_SITES=	http://perso.b2b2c.ca/~sarrazip/dev/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://perso.b2b2c.ca/~sarrazip/dev/cosmosmash.html
+#HOMEPAGE=	http://perso.b2b2c.ca/~sarrazip/dev/cosmosmash.html
 COMMENT=	Space rock shooting video game
 LICENSE=	gnu-gpl-v2
 

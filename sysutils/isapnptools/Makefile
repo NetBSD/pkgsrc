@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/23 19:51:08 asau Exp $
+# $NetBSD: Makefile,v 1.16 2017/08/16 20:45:45 wiz Exp $
 #
 
 DISTNAME=	isapnptools-1.27
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/hardware/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.roestock.demon.co.uk/isapnptools/index.html
+#HOMEPAGE=	http://www.roestock.demon.co.uk/isapnptools/index.html
 COMMENT=	Manually query and configure isapnp devices
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386

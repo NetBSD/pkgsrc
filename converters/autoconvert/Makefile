@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 00:20:09 asau Exp $
+# $NetBSD: Makefile,v 1.15 2017/08/16 20:45:33 wiz Exp $
 
 DISTNAME=	autoconvert-0.3.13
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	converters
 MASTER_SITES=	http://people.debian.org/~ygh/
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://banyan.dlut.edu.cn/~ygh/
+#HOMEPAGE=	http://banyan.dlut.edu.cn/~ygh/
 COMMENT=	Intelligent Chinese encoding converter
 
 USE_LIBTOOL=	yes
