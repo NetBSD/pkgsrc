@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2017/03/30 01:55:57 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/16 20:21:10 wiz Exp $
 
 DISTNAME=	libsrs2-1.0.18
 CATEGORIES=	mail
-MASTER_SITES=	http://www.libsrs2.org/srs/
+MASTER_SITES=	https://www.libsrs2.org/srs/
 
 MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	http://www.libsrs2.org/
+HOMEPAGE=	https://www.libsrs2.org/
 COMMENT=	Implementation of the Sender Rewriting Scheme for SMTP forwarding
 LICENSE=	gnu-gpl-v2 OR modified-bsd
 

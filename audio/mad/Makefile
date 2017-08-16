@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/04/08 22:49:01 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2017/08/16 20:21:03 wiz Exp $
 #
 
 DISTNAME=	mad-0.15.0b
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	audio meta-pkgs
 
 MAINTAINER=	simonb@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/mad/
+HOMEPAGE=	https://sourceforge.net/projects/mad/
 COMMENT=	Meta-package for MAD (MPEG Audio Decoder)
 
 META_PACKAGE=	# empty

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2014/12/12 22:05:04 agc Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/16 20:21:09 wiz Exp $
 
 DISTNAME=	libbpg-0.9.2
 CATEGORIES=	graphics
-MASTER_SITES=	http://bellard.org/bpg/
+MASTER_SITES=	https://bellard.org/bpg/
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://bellard.org/bpg/
+HOMEPAGE=	https://bellard.org/bpg/
 COMMENT=	Better Portable Graphics image format library
 LICENSE=	modified-bsd
 

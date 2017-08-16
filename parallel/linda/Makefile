@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/09/15 10:06:08 obache Exp $
+# $NetBSD: Makefile,v 1.25 2017/08/16 20:21:13 wiz Exp $
 #
 
 DISTNAME=	linda-0.1.1
@@ -7,7 +7,7 @@ CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linda/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/linda/
+HOMEPAGE=	https://sourceforge.net/projects/linda/
 COMMENT=	Parallel distributed database environment
 
 USE_TOOLS+=		pkg-config
