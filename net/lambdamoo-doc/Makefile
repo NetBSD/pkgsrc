@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/01/19 18:52:20 agc Exp $
+# $NetBSD: Makefile,v 1.15 2017/08/16 20:21:13 wiz Exp $
 
 DISTNAME=	lambdamoo-doc-1.8.0p6
 CATEGORIES=	net
@@ -8,7 +8,7 @@ EXTRACT_SUFX=
 DISTFILES=	ProgrammersManual.texinfo HelpSystem-02Jun93.txt
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/lambdamoo/
+HOMEPAGE=	https://sourceforge.net/projects/lambdamoo/
 COMMENT=	Documentation for lambdamoo
 
 EXTRACT_ONLY=	ProgrammersManual.texinfo

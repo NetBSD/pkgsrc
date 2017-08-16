@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2012/10/23 18:16:31 asau Exp $
+# $NetBSD: Makefile,v 1.4 2017/08/16 20:21:14 wiz Exp $
 
 DISTNAME=	kstart-4.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://archives.eyrie.org/software/kerberos/
 
 MAINTAINER=	jakllsch@NetBSD.org
-HOMEPAGE=	http://www.eyrie.org/~eagle/software/kstart/
+HOMEPAGE=	https://www.eyrie.org/~eagle/software/kstart/
 COMMENT=	Kerberos v5 kinit daemon that uses keytabs
 LICENSE=	mit
 

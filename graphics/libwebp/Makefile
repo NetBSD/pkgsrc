@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/08/11 16:41:23 nros Exp $
+# $NetBSD: Makefile,v 1.25 2017/08/16 20:21:10 wiz Exp $
 
 DISTNAME=	libwebp-0.6.0
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://downloads.webmproject.org/releases/webp/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://developers.google.com/speed/webp/
+HOMEPAGE=	https://developers.google.com/speed/webp/
 COMMENT=	WebP image format library and tools
 LICENSE=	modified-bsd
 

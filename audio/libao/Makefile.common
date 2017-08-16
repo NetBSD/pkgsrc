@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2016/04/20 12:10:27 nros Exp $
+# $NetBSD: Makefile.common,v 1.39 2017/08/16 20:21:03 wiz Exp $
 #
 # used by audio/libao-alsa/Makefile
 # used by audio/libao-arts/Makefile
@@ -14,7 +14,7 @@ CATEGORIES=	audio devel
 MASTER_SITES=	http://downloads.xiph.org/releases/ao/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.xiph.org/ao/
+HOMEPAGE=	https://www.xiph.org/ao/
 COMMENT=	Cross-platform audio library
 LICENSE=	gnu-gpl-v2
 

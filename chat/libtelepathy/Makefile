@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/01/01 14:43:25 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2017/08/16 20:21:05 wiz Exp $
 
 DISTNAME=	libtelepathy-0.3.3
 PKGREVISION=	9
@@ -6,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/libtelepathy/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://telepathy.freedesktop.org/wiki/
+HOMEPAGE=	https://telepathy.freedesktop.org/wiki/
 COMMENT=	Unified framework for many different kinds of real-time communications
 LICENSE=	gnu-lgpl-v2.1
 

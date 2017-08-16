@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/01/19 18:52:06 agc Exp $
+# $NetBSD: Makefile,v 1.18 2017/08/16 20:21:08 wiz Exp $
 
 DISTNAME=	libthai-0.1.21
 CATEGORIES=	devel
@@ -7,7 +7,7 @@ MASTER_SITES+=	ftp://linux.thai.net/pub/ThaiLinux/software/libthai/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://linux.thai.net/projects/libthai
+HOMEPAGE=	https://linux.thai.net/projects/libthai
 COMMENT=	Thai language support routines
 LICENSE=	gnu-lgpl-v2.1
 

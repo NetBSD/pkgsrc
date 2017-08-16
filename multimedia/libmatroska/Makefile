@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2017/03/13 09:14:34 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2017/08/16 20:21:12 wiz Exp $
 
 DISTNAME=	libmatroska-1.4.7
 CATEGORIES=	multimedia devel
@@ -6,7 +6,7 @@ MASTER_SITES=	http://dl.matroska.org/downloads/libmatroska/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	salo@NetBSD.org
-HOMEPAGE=	http://www.matroska.org/
+HOMEPAGE=	https://www.matroska.org/
 COMMENT=	Extensible open standard Audio/Video container format
 LICENSE=	gnu-lgpl-v2.1
 

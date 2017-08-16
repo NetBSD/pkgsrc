@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.29 2017/01/08 21:48:47 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2017/08/16 20:21:17 wiz Exp $
 
 DISTNAME=	libxcb-1.12
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	http://xcb.freedesktop.org/dist/
+MASTER_SITES=	https://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	http://xcb.freedesktop.org/
+HOMEPAGE=	https://xcb.freedesktop.org/
 COMMENT=	X protocol C-language Binding
 LICENSE=	mit # with no-advertising clause
 

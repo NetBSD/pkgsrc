@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2016/07/09 06:37:53 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2017/08/16 20:21:04 wiz Exp $
 #
 
 DISTNAME=	konversation-1.1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://download.berlios.de/konversation/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://konversation.kde.org/
+HOMEPAGE=	https://konversation.kde.org/
 COMMENT=	KDE IRC Client
 
 GNU_CONFIGURE=	YES

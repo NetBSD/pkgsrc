@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2016/07/09 06:38:09 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2017/08/16 20:21:07 wiz Exp $
 
 DISTNAME=		libbonobo-2.32.0
 PKGREVISION=		11
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libbonobo/2.32/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://developer.gnome.org/
+HOMEPAGE=		https://developer.gnome.org/
 COMMENT=		GNOME2 Object activation framework library
 
 CONFLICTS=		bonobo-activation-[0-9]*

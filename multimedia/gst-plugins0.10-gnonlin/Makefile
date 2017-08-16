@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.12 2012/10/08 09:21:02 asau Exp $
+# $NetBSD: Makefile,v 1.13 2017/08/16 20:21:11 wiz Exp $
 #
 
 DISTNAME=	gnonlin-0.10.17
 PKGNAME=	gst-gnonlin-0.10.17
 PKGREVISION=	5
 CATEGORIES=	multimedia
-MASTER_SITES=	http://gstreamer.freedesktop.org/src/gnonlin/
+MASTER_SITES=	https://gstreamer.freedesktop.org/src/gnonlin/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gstreamer.freedesktop.org/modules/gnonlin.html
+HOMEPAGE=	https://gstreamer.freedesktop.org/modules/gnonlin.html
 COMMENT=	Non-linear editing components for gstreamer
 
 GNU_CONFIGURE=	yes

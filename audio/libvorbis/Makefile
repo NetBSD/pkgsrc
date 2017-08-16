@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2015/03/09 08:14:23 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2017/08/16 20:21:03 wiz Exp $
 
 DISTNAME=	libvorbis-1.3.5
 CATEGORIES=	devel audio
@@ -6,7 +6,7 @@ MASTER_SITES=	http://downloads.xiph.org/releases/vorbis/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.xiph.org/vorbis/
+HOMEPAGE=	https://www.xiph.org/vorbis/
 COMMENT=	Library for the Ogg Vorbis audio encoding format
 LICENSE=	modified-bsd
 

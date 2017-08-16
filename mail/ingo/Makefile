@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/01/19 18:52:16 agc Exp $
+# $NetBSD: Makefile,v 1.26 2017/08/16 20:21:10 wiz Exp $
 
 DISTNAME=	ingo-h3-${INGOVER}
 PKGNAME=	ingo-${INGOVER}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://ftp.horde.org/pub/ingo/
 MASTER_SITES+=	ftp://ftp.horde.org/pub/ingo/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.horde.org/apps/ingo/
+HOMEPAGE=	https://www.horde.org/apps/ingo/
 COMMENT=	Horde based generic and complete mail filter rule frontend
 LICENSE=	apache-1.1
 
