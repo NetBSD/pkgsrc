@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3264 2017/08/16 07:33:49 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3265 2017/08/16 07:34:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4507,3 +4507,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/spice-protocol to 0.12.13 [wiz 2017-08-16]
 	Updated devel/py-requests to 2.18.4 [adam 2017-08-16]
 	Updated x11/xscreensaver to 5.37 [wiz 2017-08-16]
+	Updated x11/xscreensaver-demo to 5.37 [wiz 2017-08-16]
