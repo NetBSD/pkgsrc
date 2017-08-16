@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/07/09 06:37:59 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/08/16 21:22:11 wiz Exp $
 #
 
 DISTNAME=	innotop-1.9.1
@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	http://innotop.googlecode.com/files/
 
 MAINTAINER=	filip@joyent.com
-HOMEPAGE=	http://code.google.com/p/innotop/
+HOMEPAGE=	https://github.com/innotop/innotop
 COMMENT=	MySQL and InnoDB monitor program
 LICENSE=	gnu-gpl-v2
 

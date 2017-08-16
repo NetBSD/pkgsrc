@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2013/12/07 11:32:31 obache Exp $
+# $NetBSD: Makefile.common,v 1.7 2017/08/16 21:22:13 wiz Exp $
 #
 # used by inputmethod/input-pad/Makefile
 # used by inputmethod/py-input-pad/Makefile
@@ -7,7 +7,7 @@ DISTNAME=	input-pad-1.0.3
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://input-pad.googlecode.com/files/
 
-HOMEPAGE=	http://code.google.com/p/input-pad/
+HOMEPAGE=	https://github.com/fujiwarat/input-pad/wiki
 LICENSE=	gnu-lgpl-v2.1
 
 DISTINFO_FILE=	${.CURDIR}/../../inputmethod/input-pad/distinfo

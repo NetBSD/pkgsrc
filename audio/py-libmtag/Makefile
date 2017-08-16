@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/01/01 14:43:23 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/08/16 21:22:11 wiz Exp $
 
 DISTNAME=	libmtag-python-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://libmtag.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/libmtag/
+HOMEPAGE=	https://code.google.com/archive/p/libmtag/
 COMMENT=	Python binding for libmtag
 
 USE_TOOLS+=	pkg-config

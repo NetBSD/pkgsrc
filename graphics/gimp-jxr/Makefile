@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/04/04 13:08:13 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/16 21:22:11 wiz Exp $
 
 DISTNAME=	gimp-jxr-2.0
 CATEGORIES=	graphics
@@ -6,7 +6,7 @@ MASTER_SITES=	# javascript link
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gimpjpegxrplugin.codeplex.com/
+HOMEPAGE=	https://github.com/chausner/gimp-jxr
 COMMENT=	Gimp plugin for JPEG XR files
 LICENSE=	modified-bsd
 
