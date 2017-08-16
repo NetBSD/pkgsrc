@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.82 2017/04/30 01:21:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.83 2017/08/16 20:45:42 wiz Exp $
 
 DISTNAME=	ktorrent-${KTORRENT_VER}
 PKGREVISION=	9
 CATEGORIES=	net kde
-MASTER_SITES=	http://ktorrent.pwsp.net/downloads/${KTORRENT_VER}/
+#MASTER_SITES=	http://ktorrent.pwsp.net/downloads/${KTORRENT_VER}/
 EXTRACT_SUFX=	.tar.bz2
 
 BUILD_DEPENDS+= automoc4>=0.9.87:../../devel/automoc4
@@ -11,7 +11,7 @@ BUILD_DEPENDS+= automoc4>=0.9.87:../../devel/automoc4
 .include "../../net/libktorrent/Makefile.version"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ktorrent.pwsp.net/
+#HOMEPAGE=	http://ktorrent.pwsp.net/
 COMMENT=	Graphical BitTorrent client for KDE4
 LICENSE=	gnu-gpl-v2
 

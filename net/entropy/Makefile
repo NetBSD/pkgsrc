@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/03/02 20:33:30 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2017/08/16 20:45:42 wiz Exp $
 #
 
 DISTNAME=		entropy_rsa-${ENTROPY_VERSION}
@@ -6,11 +6,11 @@ PKGNAME=		entropy-${ENTROPY_VERSION:S/-/./}
 PKGREVISION=		4
 WRKSRC=			${WRKDIR}/entropy_rsa-${ENTROPY_VERSION:C/-.*$//}
 CATEGORIES=		net www
-MASTER_SITES=		http://entropy.stop1984.com/files/
+#MASTER_SITES=		http://entropy.stop1984.com/files/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://entropy.stop1984.com/
+#HOMEPAGE=		http://entropy.stop1984.com/
 COMMENT=		Anonymous peer-to-peer networking node (similar to Freenet)
 
 GNU_CONFIGURE=		yes

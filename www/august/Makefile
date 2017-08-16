@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2012/10/28 06:30:10 asau Exp $
+# $NetBSD: Makefile,v 1.5 2017/08/16 20:45:46 wiz Exp $
 #
 
 DISTNAME=	august0.63b.src
 PKGNAME=	august-0.63b
 CATEGORIES=	www editors
-MASTER_SITES=	http://www.bostream.nu/johanb/august/
+#MASTER_SITES=	http://www.bostream.nu/johanb/august/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.bostream.nu/johanb/august/
+#HOMEPAGE=	http://www.bostream.nu/johanb/august/
 COMMENT=	Simple Tk-based HTML editor
 
 NO_BUILD=	yes

@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2012/10/25 06:55:55 asau Exp $
+# $NetBSD: Makefile,v 1.5 2017/08/16 20:45:45 wiz Exp $
 #
 
 VERSION=	20061130
 DISTNAME=	en_GB
 PKGNAME=	hunspell-en_GB-${VERSION}
 CATEGORIES=	textproc
-MASTER_SITES=	http://en-gb.pyxidium.co.uk/dictionary/
+#MASTER_SITES=	http://en-gb.pyxidium.co.uk/dictionary/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://en-gb.pyxidium.co.uk/dictionary/
+#HOMEPAGE=	http://en-gb.pyxidium.co.uk/dictionary/
 COMMENT=	British English dictionary for hunspell
 
 DIST_SUBDIR=	hunspell-dictionaries/en_GB-${VERSION}

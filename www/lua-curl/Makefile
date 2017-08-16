@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/04/30 01:22:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2017/08/16 20:45:47 wiz Exp $
 
 DISTNAME=	lua-curl-0.2
 PKGNAME=	${LUA_PKGPREFIX}-curl-0.2
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://luaforge.net/frs/download.php/2634/
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://lua-curl.luaforge.net/
+#HOMEPAGE=	http://lua-curl.luaforge.net/
 COMMENT=	Full lua bindings for libcurl
 LICENSE=	mit
 

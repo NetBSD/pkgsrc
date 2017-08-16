@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.32 2014/02/10 11:13:03 obache Exp $
+# $NetBSD: Makefile,v 1.33 2017/08/16 20:45:43 wiz Exp $
 #
 
 DISTNAME=	apsfilter-7.2.8
 CATEGORIES=	print
-MASTER_SITES=	http://www.apsfilter.org/download/
+#MASTER_SITES=	http://www.apsfilter.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.apsfilter.org/
+#HOMEPAGE=	http://www.apsfilter.org/
 COMMENT=	Flexible magic filter for printing under Unix environment
 LICENSE=	gnu-gpl-v2
 

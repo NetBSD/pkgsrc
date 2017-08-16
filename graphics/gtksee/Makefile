@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/12/19 08:33:20 mef Exp $
+# $NetBSD: Makefile,v 1.30 2017/08/16 20:45:38 wiz Exp $
 #
 
 DISTNAME=		gtksee-0.5.6
@@ -7,7 +7,7 @@ CATEGORIES=		graphics x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gtksee.berlios/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://developer.berlios.de/projects/gtksee/
+#HOMEPAGE=		http://developer.berlios.de/projects/gtksee/
 COMMENT=		Gtk-based image viewing and cataloging program
 LICENSE=		gnu-gpl-v2
 
