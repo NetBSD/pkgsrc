@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/12/27 03:06:44 dholland Exp $
+# $NetBSD: Makefile,v 1.21 2017/08/16 20:21:14 wiz Exp $
 
 DISTNAME=	logcheck-1.1.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sentrytools/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/sentrytools/
+HOMEPAGE=	https://sourceforge.net/projects/sentrytools/
 COMMENT=	Auditing tool for system logs on Unix boxes
 LICENSE=	gnu-gpl-v2
 

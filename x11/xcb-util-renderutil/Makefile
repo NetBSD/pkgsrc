@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2014/06/13 07:41:15 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/08/16 20:21:18 wiz Exp $
 
 DISTNAME=	xcb-util-renderutil-0.3.9
 CATEGORIES=	x11
-MASTER_SITES=	http://xcb.freedesktop.org/dist/
+MASTER_SITES=	https://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xcb.freedesktop.org/
+HOMEPAGE=	https://xcb.freedesktop.org/
 COMMENT=	Convenience functions for the Render extension
 LICENSE=	mit
 

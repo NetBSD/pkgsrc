@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/23 18:16:51 asau Exp $
+# $NetBSD: Makefile,v 1.21 2017/08/16 20:21:14 wiz Exp $
 #
 
 DISTNAME=	portsentry-1.2
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sentrytools/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/sentrytools/
+HOMEPAGE=	https://sourceforge.net/projects/sentrytools/
 COMMENT=	Detects and respond to port scans against a target host in real-time
 
 WRKSRC=		${WRKDIR}/portsentry_beta
