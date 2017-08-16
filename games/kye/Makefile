@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2017/02/12 06:25:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.57 2017/08/16 20:45:38 wiz Exp $
 
 DISTNAME=		kye-1.0
 PKGREVISION=		23
@@ -6,7 +6,7 @@ CATEGORIES=		games
 MASTER_SITES=		http://games.moria.org.uk/kye/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://games.moria.org.uk/kye/pygtk
+#HOMEPAGE=		http://games.moria.org.uk/kye/pygtk
 COMMENT=		Puzzle game
 
 PYDISTUTILSPKG=	yes

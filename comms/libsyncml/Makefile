@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/03/15 08:25:15 plunky Exp $
+# $NetBSD: Makefile,v 1.12 2017/08/16 20:45:33 wiz Exp $
 #
 
 DISTNAME=	libsyncml-0.4.5
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libsyncml/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libsyncml.opensync.org/
+#HOMEPAGE=	http://libsyncml.opensync.org/
 COMMENT=	C library implementation of the SyncML protocol
 LICENSE=	gnu-lgpl-v2.1
 

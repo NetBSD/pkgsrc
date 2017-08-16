@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/04/01 11:45:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2017/08/16 20:45:42 wiz Exp $
 #
 
 DISTNAME=	httptunnel-3.3
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://www.nocrew.org/software/httptunnel/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nocrew.org/software/httptunnel.html
+#HOMEPAGE=	http://www.nocrew.org/software/httptunnel.html
 COMMENT=	Encapsulate TCP/IP connections in HTTP requests
 LICENSE=	gnu-gpl-v2
 
