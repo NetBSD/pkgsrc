@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.48 2017/01/19 18:52:03 agc Exp $
+# $NetBSD: Makefile,v 1.49 2017/08/16 20:45:32 wiz Exp $
 #
 
 DISTNAME=	ircservices-5.0.64
 PKGREVISION=	5
 CATEGORIES=	chat
-MASTER_SITES=	http://www.ircservices.za.net/download/old/
+#MASTER_SITES=	http://www.ircservices.za.net/download/old/
 MASTER_SITES+=	ftp://ftp.esper.net/ircservices/old/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ircservices.za.net/
+#HOMEPAGE=	http://www.ircservices.za.net/
 COMMENT=	Services for IRC networks
 LICENSE=	gnu-gpl-v2
 

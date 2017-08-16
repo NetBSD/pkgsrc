@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2016/08/30 13:57:31 he Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/16 20:45:35 wiz Exp $
 #
 
 DISTNAME=	libnet-1.0.2a
 PKGNAME=	${DISTNAME:S/libnet/libnet10/}
 PKGREVISION=	3
 CATEGORIES=	devel net
-MASTER_SITES=	http://www.packetfactory.net/libnet/dist/deprecated/
+#MASTER_SITES=	http://www.packetfactory.net/libnet/dist/deprecated/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.packetfactory.net/libnet/
+#HOMEPAGE=	http://www.packetfactory.net/libnet/
 COMMENT=	C library for portable packet creation and injection
 LICENSE=	2-clause-bsd
 

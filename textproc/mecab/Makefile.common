@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2015/03/15 17:00:29 hiramatsu Exp $
+# $NetBSD: Makefile.common,v 1.9 2017/08/16 20:45:46 wiz Exp $
 #
 # used by textproc/mecab-base/Makefile
 # used by textproc/java-mecab/Makefile
@@ -14,4 +14,4 @@ CATEGORIES=	japanese textproc
 MASTER_SITES=	http://mecab.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mecab.sourceforge.net/
+#HOMEPAGE=	http://mecab.sourceforge.net/
