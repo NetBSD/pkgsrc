@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3269 2017/08/16 14:16:06 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.3270 2017/08/16 14:39:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4512,3 +4512,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/nodejs to 8.4.0 [fhajny 2017-08-16]
 	Updated security/vault to 0.8.0 [fhajny 2017-08-16]
 	Updated www/firefox to 55.0.1nb1 [ryoon 2017-08-16]
+	Updated cross/arm-none-eabi-binutils to 2.29 [ryoon 2017-08-16]
