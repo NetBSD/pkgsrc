@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/02/26 14:03:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/16 20:45:47 wiz Exp $
 #
 
 JETTYVER=	7.6.8.v20121106
@@ -9,7 +9,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://download.eclipse.org/jetty/${JETTYVER}/dist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jetty.codehaus.org/jetty/
+#HOMEPAGE=	http://jetty.codehaus.org/jetty/
 COMMENT=	Jetty is a Java HTTP Server and Servlet Container
 LICENSE=	apache-2.0 OR epl-v1.0
 

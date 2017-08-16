@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2012/10/29 05:06:38 asau Exp $
+# $NetBSD: Makefile,v 1.5 2017/08/16 20:45:48 wiz Exp $
 #
 
 DISTNAME=	libxdg-basedir-1.1.1
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	http://n.ethz.ch/student/nevillm/download/libxdg-basedir/
+#MASTER_SITES=	http://n.ethz.ch/student/nevillm/download/libxdg-basedir/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://n.ethz.ch/student/nevillm/download/libxdg-basedir/
+#HOMEPAGE=	http://n.ethz.ch/student/nevillm/download/libxdg-basedir/
 COMMENT=	XDG Base Directory library
 LICENSE=	mit
 

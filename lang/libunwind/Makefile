@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/07/11 19:47:37 adam Exp $
+# $NetBSD: Makefile,v 1.9 2017/08/16 20:45:40 wiz Exp $
 
 DISTNAME=	libunwind-4.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -7,7 +7,7 @@ MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libunwind.llvm.org/
+#HOMEPAGE=	http://libunwind.llvm.org/
 COMMENT=	LLVM libunwind
 LICENSE=	modified-bsd
 

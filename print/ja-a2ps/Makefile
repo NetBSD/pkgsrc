@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/07/09 06:38:51 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2017/08/16 20:45:43 wiz Exp $
 
 DISTNAME=	a2ps.pl-1.45
 PKGNAME=	ja-a2ps-1.45
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	# None
 LICENSE=	mit
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	http://www.srekcah.org/~utashiro/perl/scripts/a2ps_pl/
+#HOMEPAGE=	http://www.srekcah.org/~utashiro/perl/scripts/a2ps_pl/
 COMMENT=	Text file to postscript converter (with Japanese support)
 
 WRKSRC=		${WRKDIR}
