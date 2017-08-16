@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/03/30 19:21:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2017/08/16 14:38:55 ryoon Exp $
 
-DISTNAME=	binutils-2.28
+DISTNAME=	binutils-2.29
 PKGNAME=	cross-arm-none-eabi-${DISTNAME}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
