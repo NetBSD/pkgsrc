@@ -1,11 +1,12 @@
-$NetBSD: patch-data_fonts_Makefile.in,v 1.1 2012/12/12 09:58:03 wiz Exp $
+$NetBSD: patch-data_fonts_Makefile.in,v 1.2 2017/08/16 17:54:09 adam Exp $
 
-- Don't try to mess in ${HOME}.
-- Don't erase vice-cbm.bdf or try mkfontdir (that is done at pkg_add time).
+Don't try to mess in ${HOME}.
+Don't try mkfontdir (that is done at pkg_add time).
+Don't use bdftopcf on Darwin.
 
---- data/fonts/Makefile.in.orig	2012-11-02 21:06:50.000000000 +0000
+--- data/fonts/Makefile.in.orig	2017-03-30 20:40:42.000000000 +0000
 +++ data/fonts/Makefile.in
-@@ -528,23 +528,9 @@ uninstall-am: uninstall-fontsDATA
+@@ -555,22 +555,9 @@ uninstall-am: uninstall-fontsDATA
  
  
  install: install-data-am
@@ -21,14 +22,13 @@ $NetBSD: patch-data_fonts_Makefile.in,v 1.1 2012/12/12 09:58:03 wiz Exp $
 -@HAVE_FC_CACHE_TRUE@@SDL_COMPILE_FALSE@	else \
 -@HAVE_FC_CACHE_TRUE@@SDL_COMPILE_FALSE@	  echo 'fc-cache not available... giving up.' ; \
 -@HAVE_FC_CACHE_TRUE@@SDL_COMPILE_FALSE@	fi
--@HAVE_FC_CACHE_FALSE@@SDL_COMPILE_FALSE@	@echo "Preparing fontdir..." ; \
--@HAVE_FC_CACHE_FALSE@@SDL_COMPILE_FALSE@	cd $(DESTDIR)$(fontsdir) ; \
--@HAVE_FC_CACHE_FALSE@@SDL_COMPILE_FALSE@	bdftopcf -o vice-cbm.pcf vice-cbm.bdf ; \
--@HAVE_FC_CACHE_FALSE@@SDL_COMPILE_FALSE@	rm vice-cbm.bdf ; \
--@HAVE_FC_CACHE_FALSE@@SDL_COMPILE_FALSE@	mkfontdir .
-+@SDL_COMPILE_FALSE@	@echo "Preparing fontdir..." ; \
-+@SDL_COMPILE_FALSE@	cd $(DESTDIR)$(fontsdir) ; \
-+@SDL_COMPILE_FALSE@	bdftopcf -o vice-cbm.pcf vice-cbm.bdf 
+-@SDL_COMPILE_FALSE@	@echo "Preparing fontdir..." ; \
+-@SDL_COMPILE_FALSE@	cd $(DESTDIR)$(fontsdir) ; \
+-@SDL_COMPILE_FALSE@	bdftopcf -o vice-cbm.pcf vice-cbm.bdf ; \
+-@SDL_COMPILE_FALSE@	${MKFONTDIR_BIN} .
++@MACOSX_COCOA_FALSE@@SDL_COMPILE_FALSE@	@echo "Preparing fontdir..." ; \
++@MACOSX_COCOA_FALSE@@SDL_COMPILE_FALSE@	cd $(DESTDIR)$(fontsdir) ; \
++@MACOSX_COCOA_FALSE@@SDL_COMPILE_FALSE@	bdftopcf -o vice-cbm.pcf vice-cbm.bdf
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
