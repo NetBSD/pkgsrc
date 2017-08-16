@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/02/25 16:20:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2017/08/16 20:45:41 wiz Exp $
 
 DISTNAME=	IglooFTP-0.6.1
 PKGREVISION=	6
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/network/file-transfer/}
 EXTRACT_SUFX=	.src.tar.gz
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://www.littleigloo.org/iglooftp.php3
+#HOMEPAGE=	http://www.littleigloo.org/iglooftp.php3
 COMMENT=	Easy to use FTP client for X Window System
 
 BUILD_DIRS=	src

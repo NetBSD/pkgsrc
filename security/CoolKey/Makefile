@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/02/01 22:21:09 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/08/16 20:45:44 wiz Exp $
 #
 
 DISTNAME=	coolkey-1.1.0
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://directory.fedora.redhat.com/download/coolkey/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://directory.fedora.redhat.com/wiki/CoolKey
+#HOMEPAGE=	http://directory.fedora.redhat.com/wiki/CoolKey
 COMMENT=	Driver support for the CoolKey and CAC products
 LICENSE=	gnu-lgpl-v2
 

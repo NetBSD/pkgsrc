@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/03/05 11:27:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2017/08/16 20:45:39 wiz Exp $
 
 DISTNAME=	libkipi-0.1.6
 PKGREVISION=	29
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.kipi-plugins.org/drupal/
+#HOMEPAGE=	http://www.kipi-plugins.org/drupal/
 COMMENT=	KDE Image Plugin Interface
 
 USE_TOOLS+=		gmake msgfmt

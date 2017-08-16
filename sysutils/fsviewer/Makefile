@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.47 2017/01/07 21:25:26 zafer Exp $
+# $NetBSD: Makefile,v 1.48 2017/08/16 20:45:45 wiz Exp $
 
 DISTNAME=	FSViewer.app-0.2.5
 PKGNAME=	FSViewer-0.2.5
 PKGREVISION=	18
 CATEGORIES=	sysutils x11 windowmaker
-MASTER_SITES=	#http://www.bayernline.de/~gscholz/linux/fsviewer/
+#MASTER_SITES=	#http://www.bayernline.de/~gscholz/linux/fsviewer/
 
-PATCH_SITES=	#http://www.bayernline.de/~gscholz/linux/fsviewer/
+#PATCH_SITES=	#http://www.bayernline.de/~gscholz/linux/fsviewer/
 PATCHFILES=	FSViewer.app-0.2.5-WM-0.81.0.patch.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	johnam@mail.kemper.org
-HOMEPAGE=	http://www.bayernline.de/~gscholz/linux/fsviewer/
+#HOMEPAGE=	http://www.bayernline.de/~gscholz/linux/fsviewer/
 COMMENT=	NextStep-like Filemanager for WindowMaker
 
 USE_TOOLS+=		gmake

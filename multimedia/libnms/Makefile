@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/10/24 09:45:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2017/08/16 20:45:41 wiz Exp $
 #
 
 DISTNAME=	libnms-0.6.0
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.paldo.org/paldo/sources/libnms/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jfranz@bsdprojects.net
-HOMEPAGE=	http://streaming.polito.it/client/library/
+#HOMEPAGE=	http://streaming.polito.it/client/library/
 COMMENT=	Open Media Streaming Client Library
 
 GNU_CONFIGURE=	yes
