@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2017/01/19 18:52:16 agc Exp $
+# $NetBSD: Makefile,v 1.65 2017/08/16 20:21:10 wiz Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://ftp.horde.org/pub/imp/
 MASTER_SITES+=	ftp://ftp.horde.org/pub/imp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.horde.org/imp/
+HOMEPAGE=	https://www.horde.org/imp/
 COMMENT=	Internet Messaging Program
 LICENSE=	gnu-gpl-v2
 

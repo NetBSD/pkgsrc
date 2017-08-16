@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2017/01/19 18:52:27 agc Exp $
+# $NetBSD: Makefile,v 1.67 2017/08/16 20:21:15 wiz Exp $
 
 DISTNAME=		intltool-0.51.0
 PKGREVISION=		2
@@ -7,7 +7,7 @@ MASTER_SITES=		https://launchpad.net/intltool/trunk/${PKGVERSION_NOREV}/+downloa
 MASTER_SITES+=		http://launchpadlibrarian.net/94524169/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://launchpad.net/intltool/
+HOMEPAGE=		https://launchpad.net/intltool/
 COMMENT=		Internationalization Tool Collection
 LICENSE=		gnu-gpl-v2
 

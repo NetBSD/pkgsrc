@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/10/13 18:29:54 snj Exp $
+# $NetBSD: Makefile,v 1.20 2017/08/16 20:21:12 wiz Exp $
 
 DISTNAME=	lsdvd-0.17
 CATEGORIES=	multimedia
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lsdvd/}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	snj@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/lsdvd/
+HOMEPAGE=	https://sourceforge.net/projects/lsdvd/
 COMMENT=	Application displaying the contents of DVDs
 LICENSE=	gnu-gpl-v2
 
