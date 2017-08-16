@@ -1,0 +1,6 @@
+LastPass is a password management service that stores encrypted passwords
+in private accounts.  LastPass is standard with a web interface, but also
+includes plugins for many web browsers and apps for many smartphones.
+
+This package provides the lpass command, a command line interface to the
+LastPass.com API.
