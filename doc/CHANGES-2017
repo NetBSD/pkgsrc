@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3268 2017/08/16 12:18:43 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3269 2017/08/16 14:16:06 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4511,3 +4511,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/dblatex to 0.3.10 [jperkin 2017-08-16]
 	Updated lang/nodejs to 8.4.0 [fhajny 2017-08-16]
 	Updated security/vault to 0.8.0 [fhajny 2017-08-16]
+	Updated www/firefox to 55.0.1nb1 [ryoon 2017-08-16]
