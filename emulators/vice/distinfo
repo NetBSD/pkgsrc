@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.43 2017/03/23 17:06:50 joerg Exp $
+$NetBSD: distinfo,v 1.44 2017/08/16 17:54:09 adam Exp $
 
-SHA1 (vice-2.4.tar.gz) = 719aa96cc72e7578983fadea1a31c21898362bc7
-RMD160 (vice-2.4.tar.gz) = 6ff3b4a410ef70aa135e2245e6855cfa63373e2c
-SHA512 (vice-2.4.tar.gz) = ad197fc35eb80c9738b7f4f551d350dbb4440c7c8103e5d472b7f7ea5106c1356e9d6e3f481552a028a313129ef233833d3147e03f6f00b9890229d5708e3ebb
-Size (vice-2.4.tar.gz) = 13656511 bytes
-SHA1 (patch-aa) = 7ecda5911a2dd0e7ef8676959d9dc021323d393f
-SHA1 (patch-ab) = ab982bb762bebf56eb54859a38fe47b58d31ac67
-SHA1 (patch-data_fonts_Makefile.in) = 89b2a57822f58242d8d325d467b54353cf230906
-SHA1 (patch-src_gfxoutputdrv_gifdrv.c) = 5c48a3c897ead6e28302ada42163cc35e63b6488
+SHA1 (vice-3.1.tar.gz) = ac9daeac550f26b6c66776448c0d34a00c913696
+RMD160 (vice-3.1.tar.gz) = 63ef44947f409702abe189d562d93e840eafc30f
+SHA512 (vice-3.1.tar.gz) = bc02a3597a17dadb37c487e6942192c0e9dc1a7d4e440fbf0dc8a165dbb2dee60ddf157697a020d2780ddef56a0a67802768d5c6d117b9cf5cdc124de45bc579
+Size (vice-3.1.tar.gz) = 30714226 bytes
+SHA1 (patch-configure) = f810d83265f5b8e7162c7ff6dbbca7d84e163de0
+SHA1 (patch-data_fonts_Makefile.in) = 614a433448ec422108e5125c71d2e83fa3ecc21c
+SHA1 (patch-po_Makefile.in.in) = 6e028dde8a74f6c5d511057a19580285e3d506c7
