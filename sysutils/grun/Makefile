@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2017/02/12 06:26:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.46 2017/08/16 21:22:14 wiz Exp $
 
 DISTNAME=	grun-0.9.3
 PKGREVISION=	24
@@ -6,7 +6,7 @@ CATEGORIES=	misc
 MASTER_SITES=	http://grun.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/grun/
+HOMEPAGE=	https://github.com/lrgc/grun
 COMMENT=	GTK+ based Run dialog
 
 GNU_CONFIGURE=		YES

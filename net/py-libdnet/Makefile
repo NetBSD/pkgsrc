@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/01/01 14:43:51 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/08/16 21:22:14 wiz Exp $
 
 DISTNAME=	libdnet-1.12
 PKGNAME=	${PYPKGPREFIX}-libdnet-1.12
@@ -8,7 +8,7 @@ MASTER_SITES=	http://libdnet.googlecode.com/files/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/libdnet/
+HOMEPAGE=	https://github.com/dugsong/libdnet
 COMMENT=	Python wrapper for libdnet
 LICENSE=	modified-bsd
 

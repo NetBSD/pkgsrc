@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2012/10/06 14:25:14 asau Exp $
+# $NetBSD: Makefile,v 1.12 2017/08/16 21:22:13 wiz Exp $
 
 DISTNAME=	libhangul-0.1.0
 CATEGORIES=	inputmethod korean
 MASTER_SITES=	http://libhangul.googlecode.com/files/
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/libhangul/
+HOMEPAGE=	https://code.google.com/archive/p/libhangul/
 COMMENT=	Library used by Korean input methods
 LICENSE=	gnu-lgpl-v2.1
 
