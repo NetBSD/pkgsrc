@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3256 2017/08/15 21:23:19 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3257 2017/08/16 06:46:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4499,3 +4499,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated editors/vim-share to 8.0.0921 [wiz 2017-08-15]
 	Updated archivers/py-libarchive-c to 2.4nb3 [wiz 2017-08-15]
 	Updated archivers/unrar to 5.5.7 [wiz 2017-08-15]
+	Updated print/cups-filters to 1.16.1 [wiz 2017-08-16]
