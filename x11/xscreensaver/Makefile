@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2016/10/19 20:10:20 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2017/08/16 07:33:39 wiz Exp $
 
 COMMENT=	Screen saver and locker for the X window system
 
@@ -15,10 +15,8 @@ CONFIGURE_ARGS+=	--with-configdir=${PREFIX}/libexec/xscreensaver/config
 EGDIR=			${PREFIX}/share/examples/xscreensaver
 MESSAGE_SUBST+=		EGDIR=${EGDIR:Q}
 
-# Remove useless locale files that have no translations in them.
 # use pipes from 5.17, the new version is too slow
 post-extract:
-	cd ${WRKSRC}/po && ${RM} -f ca.po
 	${CP} ${FILESDIR}/pipes.c ${WRKSRC}/hacks/glx
 
 INSTALLATION_DIRS=	${EGDIR}/pam.d
