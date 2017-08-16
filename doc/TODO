@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17622 2017/08/16 06:58:06 wiz Exp $
+$NetBSD: TODO,v 1.17623 2017/08/16 06:59:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1153,7 +1153,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Catalyst-Engine-PSGI-0.14
 	o p5-Chart-3.2
 	o p5-DBD-DB2-1.85
-	o p5-Encode-2.92
 	o p5-FormValidator-Simple-1.00
 	o p5-GStreamer-0.20
 	o p5-GraphViz2-2.37
