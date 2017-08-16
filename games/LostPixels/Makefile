@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/04/25 14:22:51 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2017/08/16 20:45:37 wiz Exp $
 #
 
 DISTNAME=	LostPixels-0.5.3-source
@@ -8,7 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blinkensisters/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.blinkensisters.org/wiki/index.php/Main_Page
+#HOMEPAGE=	http://www.blinkensisters.org/wiki/index.php/Main_Page
 COMMENT=	Blinken Sisters - Hunt for the Lost Pixels (80s-style Jump'n'Run)
 
 WRKSRC=		${WRKDIR}/blinkensisters/lostpixels/game/software

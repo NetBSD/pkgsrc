@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2014/12/30 08:18:52 plunky Exp $
+# $NetBSD: Makefile,v 1.16 2017/08/16 20:45:31 wiz Exp $
 #
 
 DISTNAME=		lcab-1.0b12
 CATEGORIES=		archivers
 MASTER_SITES=		${MASTER_SITE_FREEBSD}
 
-HOMEPAGE=		http://ohnopub.net/~ohnobinki/lcab
+#HOMEPAGE=		http://ohnopub.net/~ohnobinki/lcab
 COMMENT=		Microsoft cabinet (.CAB) file creator
 LICENSE=		gnu-gpl-v2
 
