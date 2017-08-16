@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.707 2017/08/12 14:31:41 jmcneill Exp $
+# $NetBSD: Makefile,v 1.708 2017/08/16 21:04:23 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -317,7 +317,6 @@ SUBDIR+=	libfm-extra
 SUBDIR+=	libgamin
 SUBDIR+=	libgksu
 SUBDIR+=	libgtop
-SUBDIR+=	libirman
 SUBDIR+=	libisoburn
 SUBDIR+=	libisofs
 SUBDIR+=	liblogging
