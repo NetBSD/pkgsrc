@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2017/08/15 11:40:24 nros Exp $
+# $NetBSD: Makefile,v 1.75 2017/08/16 06:45:58 wiz Exp $
 
-DISTNAME=	cups-filters-1.14.0
-PKGREVISION=	3
+DISTNAME=	cups-filters-1.16.1
 CATEGORIES=	print
 MASTER_SITES=	http://openprinting.org/download/cups-filters/
 EXTRACT_SUFX=	.tar.xz
@@ -14,7 +13,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND mit
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	bash:run pkg-config gmake
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 
 BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
