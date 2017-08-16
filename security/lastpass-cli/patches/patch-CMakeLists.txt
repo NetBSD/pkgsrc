@@ -1,0 +1,32 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2017/08/16 15:18:24 jperkin Exp $
+
+Link against libsocket on SunOS.
+Remove non-portable compiler warning flags.
+
+--- CMakeLists.txt.orig	2017-06-28 12:50:49.000000000 +0000
++++ CMakeLists.txt
+@@ -45,10 +45,13 @@ file(GLOB PROJECT_SOURCES *.c)
+ 
+ set(PROJECT_DEFINITIONS "_GNU_SOURCE")
+ 
+-set(PROJECT_FLAGS "-std=gnu99 -pedantic -Wall -Wextra -Wno-language-extension-token")
++set(PROJECT_FLAGS "-std=gnu99 -pedantic -Wall -Wextra")
+ if(APPLE)
+   set(PROJECT_FLAGS "${PROJECT_FLAGS} -Wno-deprecated-declarations")
+ endif()
++if (CMAKE_SYSTEM_NAME MATCHES "SunOS")
++  set(PROJECT_FLAGS "${PROJECT_FLAGS} -D_XOPEN_SOURCE=600 -D__EXTENSIONS__")
++endif (CMAKE_SYSTEM_NAME MATCHES "SunOS")
+ 
+ # Main lpass executable
+ add_executable(${PROJECT_NAME} ${PROJECT_HEADERS} ${PROJECT_SOURCES})
+@@ -62,6 +65,9 @@ target_link_libraries(${PROJECT_NAME} ${
+ if (CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
+   target_link_libraries(${PROJECT_NAME} "-lkvm")
+ endif (CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
++if (CMAKE_SYSTEM_NAME MATCHES "SunOS")
++  target_link_libraries(${PROJECT_NAME} "-lsocket")
++endif (CMAKE_SYSTEM_NAME MATCHES "SunOS")
+ 
+ add_custom_command(OUTPUT lpass.1 DEPENDS ${CMAKE_SOURCE_DIR}/lpass.1.txt
+         COMMAND a2x -D ./ --no-xmllint -f manpage ${CMAKE_SOURCE_DIR}/lpass.1.txt)
