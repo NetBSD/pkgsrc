@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3312 2017/08/17 02:22:06 gavan Exp $
+$NetBSD: CHANGES-2017,v 1.3313 2017/08/17 02:22:17 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4559,3 +4559,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/go-osext version 0.0.20151222 [gavan 2017-08-17]
 	Added devel/go-pflag version 1.0.0 [gavan 2017-08-17]
 	Added devel/go-properties version 1.7.0 [gavan 2017-08-17]
+	Added textproc/go-prose version 0.0.20170806 [gavan 2017-08-17]
