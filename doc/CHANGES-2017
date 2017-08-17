@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3281 2017/08/17 02:15:39 gavan Exp $
+$NetBSD: CHANGES-2017,v 1.3282 2017/08/17 02:15:55 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4528,3 +4528,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/go-afero version 0.0.20160605 [gavan 2017-08-17]
 	Added devel/go-amber version 0.0.20160421 [gavan 2017-08-17]
 	Added devel/go-blackfriday version 1.4 [gavan 2017-08-17]
+	Added devel/go-buffruneio version 0.2.0 [gavan 2017-08-17]
