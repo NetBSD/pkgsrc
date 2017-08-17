@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/17 01:36:54 gavan Exp $
+
+SHA1 (properties-1.7.0.tar.gz) = f674d08694b72d09b7624f1308927526de5173d6
+RMD160 (properties-1.7.0.tar.gz) = 1cb7fa33d714e4c26a41ca0b2e6c9a021894c4d5
+SHA512 (properties-1.7.0.tar.gz) = 9526310853e7e3fc23589479c75d1afdac75abf3641661b593b7c98d5da3b559130a8e275f186ca009b66b844371ebb074594b451651539dc6e6dbef7c573fb6
+Size (properties-1.7.0.tar.gz) = 53510 bytes
