@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3314 2017/08/17 02:22:27 gavan Exp $
+$NetBSD: CHANGES-2017,v 1.3315 2017/08/17 02:22:38 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4561,3 +4561,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/go-properties version 1.7.0 [gavan 2017-08-17]
 	Added textproc/go-prose version 0.0.20170806 [gavan 2017-08-17]
 	Added devel/go-purell version 0.1.0 [gavan 2017-08-17]
+	Added devel/go-sanitized_anchor_name version 0.0.20151028 [gavan 2017-08-17]
