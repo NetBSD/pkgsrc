@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:18:25 gavan Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/pelletier/go-buffruneio.a
+gopkg/src/github.com/pelletier/go-buffruneio/README.md
+gopkg/src/github.com/pelletier/go-buffruneio/buffruneio.go
+gopkg/src/github.com/pelletier/go-buffruneio/buffruneio_test.go
+@pkgdir bin
