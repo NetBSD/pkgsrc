@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:01:45 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/08/17 02:11:03 markd Exp $
 
-SHA1 (tex-arabi-25095/arabi.tar.xz) = bc5bcdbfe2cbfff1ac72995e364a605d0819e686
-RMD160 (tex-arabi-25095/arabi.tar.xz) = a066f6eb9fbc2983ef1befc88d47b4882e4e4bb9
-SHA512 (tex-arabi-25095/arabi.tar.xz) = 481a9520631706970341e58a3820ce86444bf5c04a37217cab0c10d19594a9f8e1734f855f73d28d065faf2a183ace7cd62a7cfba73ef759bb57a0e69fd3cd8d
-Size (tex-arabi-25095/arabi.tar.xz) = 1934464 bytes
+SHA1 (tex-arabi-44662/arabi.tar.xz) = d281178659bb0fda2cd1f9e8a7d8cff568db5d86
+RMD160 (tex-arabi-44662/arabi.tar.xz) = 81724880f4137bdff6c8e1ae0e6150f64005ac8a
+SHA512 (tex-arabi-44662/arabi.tar.xz) = 2a4bc6a9174425c02ad7ca396a048fe3781162b59b360fb30d74baebaf52a0df6ca83a93a57183266079d2aa7da9cd7516e92ef9e912ec34c7cc9ce161bd7e3e
+Size (tex-arabi-44662/arabi.tar.xz) = 1934364 bytes
