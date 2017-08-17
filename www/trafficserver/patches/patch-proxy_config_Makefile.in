@@ -1,0 +1,14 @@
+$NetBSD: patch-proxy_config_Makefile.in,v 1.1 2017/08/17 14:57:09 fhajny Exp $
+
+Do not create copies of config files.
+
+--- proxy/config/Makefile.in.orig	2015-06-30 04:11:56.000000000 +0000
++++ proxy/config/Makefile.in
+@@ -921,7 +921,6 @@ install-dvi-am:
+ 
+ install-exec-am: install-dist_sysconfDATA install-nodist_sysconfDATA
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-exec-hook
+ install-html: install-html-recursive
+ 
+ install-html-am:
