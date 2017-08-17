@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/06/21 06:13:15 markd Exp $
+$NetBSD: distinfo,v 1.8 2017/08/17 02:26:40 markd Exp $
 
-SHA1 (tex-fbb-43464/fbb.tar.xz) = eed7bd40b03276a67613c62348581b80dfb75764
-RMD160 (tex-fbb-43464/fbb.tar.xz) = 9e4a81801619c7c2f5fdcf84d9a4bfb7490f594d
-SHA512 (tex-fbb-43464/fbb.tar.xz) = 5b27bdddda08cf4a1ed2ddffb7a1cadac4bfd3c39f3ce940ceb6fa2e7b24b5ed073504c7df0dcdbb36c0ab83d9b55f9956fd1e91cf327cfcae6c820cccff3882
-Size (tex-fbb-43464/fbb.tar.xz) = 1165240 bytes
+SHA1 (tex-fbb-44694/fbb.tar.xz) = 81ea7a5c88cfe487dffabb64c89e5e85aab9fd7a
+RMD160 (tex-fbb-44694/fbb.tar.xz) = be0f8edc58ea5a7d1fd4ce597c4e6e067c7b61fc
+SHA512 (tex-fbb-44694/fbb.tar.xz) = 26712f259e725250f8b6ba2fb0620cc828ae910ec44c67b87f55cae90e71cb1e8f45806e56d0ee9b7db104874081d1e12d4e249d6fa14e100ba5cb809e4794bd
+Size (tex-fbb-44694/fbb.tar.xz) = 1150120 bytes
