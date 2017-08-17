@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2017/08/16 12:18:32 fhajny Exp $
+$NetBSD: distinfo,v 1.10 2017/08/17 07:58:53 fhajny Exp $
 
-SHA1 (vault-0.8.0.tar.gz) = 13dca1df577d156c584c47530a4f25929a64ab0c
-RMD160 (vault-0.8.0.tar.gz) = 6bedd05b97333e8101ba238fdfe37eda8c337823
-SHA512 (vault-0.8.0.tar.gz) = 2b30927290bb5db089297c857839e2ee3dfa88efb14037245be4965a9053dfaeb889d7c9d8b2c337b4d649842274c97eb10e4cf4e13f1e60bb3efadda50f26ee
-Size (vault-0.8.0.tar.gz) = 6958162 bytes
+SHA1 (vault-0.8.1.tar.gz) = 5c03b57bdae9148fbf15a7ab3b3a7aff6456a2ba
+RMD160 (vault-0.8.1.tar.gz) = 16c31bd2607d9eed9be54c8c40bc312cb960098f
+SHA512 (vault-0.8.1.tar.gz) = d1400a203dc61d76ffb710388913b45cd5287e1215f34d3fe8e85a36c24024b0eb882b8403f44c85c863658b035a9b7f2c19cb5599cdfd21e0a79788b8d1413a
+Size (vault-0.8.1.tar.gz) = 7263861 bytes
