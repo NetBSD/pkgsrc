@@ -1,0 +1,59 @@
+$NetBSD: patch-configure,v 1.1 2017/08/17 14:57:09 fhajny Exp $
+
+Portability.
+
+--- configure.orig	2017-07-18 06:25:04.000000000 +0000
++++ configure
+@@ -4742,14 +4742,14 @@ fi
+ done
+ test -n "$CURL_CONFIG" || CURL_CONFIG="no"
+ 
+-    if test "$CURL_CONFIG" == "no"; then :
++    if test "$CURL_CONFIG" = "no"; then :
+ 
+       :
+ 
+ 
+ else
+ 
+-            if test x"" == x; then :
++            if test x"" = x; then :
+ 
+ 	CURL_CFLAGS="`$CURL_CONFIG $curl_config_args --cflags`"
+ 
+@@ -4759,7 +4759,7 @@ else
+ 
+ fi
+ 
+-            if test x"" == x; then :
++            if test x"" = x; then :
+ 
+ 	CURL_LIBS="`$CURL_CONFIG $curl_config_args --libs`"
+ 
+@@ -22312,7 +22312,7 @@ cat >>confdefs.h <<_ACEOF
+ _ACEOF
+ 
+ 
+-if test "x$ac_cv_sizeof_voidp" == "x"; then
++if test "x$ac_cv_sizeof_voidp" = "x"; then
+   as_fn_error $? "Cannot determine size of void*" "$LINENO" 5
+ fi
+ 
+@@ -26018,7 +26018,7 @@ $as_echo "could not find ${TCL_BIN_DIR}/
+ 
+ 
+ # expect tclConfig.sh to populate TCL_LIB_FLAG and TCL_INCLUDE_SPEC
+-if test "$host_os_def" == "darwin"; then
++if test "$host_os_def" = "darwin"; then
+     TCL_LIB_SPEC="-ltcl" # OSX fails to populate this variable
+ fi
+ LIBTCL=$TCL_LIB_SPEC
+@@ -27003,7 +27003,7 @@ if test "x$ac_cv_lib_cap_cap_set_proc" =
+ 
+ else
+ 
+-     if test "x$enable_posix_cap" == "xyes"; then :
++     if test "x$enable_posix_cap" = "xyes"; then :
+ 
+       { { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+ $as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
