@@ -1,0 +1,15 @@
+$NetBSD: patch-rc_traffixserver.ml.in,v 1.1 2017/08/17 14:57:09 fhajny Exp $
+
+Use standard SMF prefix.
+
+--- rc/trafficserver.xml.in.orig	2015-06-30 04:11:56.000000000 +0000
++++ rc/trafficserver.xml.in
+@@ -25,7 +25,7 @@
+ <service_bundle type='manifest' name='apache:trafficserver'>
+ 
+ <service
+-	name='application/apache/trafficserver'
++	name='@SMF_PREFIX@/trafficserver'
+ 	type='service'
+ 	version='1'>
+ 
