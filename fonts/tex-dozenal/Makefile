@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/06/21 06:13:14 markd Exp $
+# $NetBSD: Makefile,v 1.4 2017/08/17 03:21:14 markd Exp $
 
 DISTNAME=	dozenal
-PKGNAME=	tex-${DISTNAME}-7.0
-TEXLIVE_REV=	42608
+PKGNAME=	tex-${DISTNAME}-7.1
+TEXLIVE_REV=	44740
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/dozenal
