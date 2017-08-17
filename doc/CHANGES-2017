@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3322 2017/08/17 02:23:58 gavan Exp $
+$NetBSD: CHANGES-2017,v 1.3323 2017/08/17 02:24:09 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4569,3 +4569,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/go-toml-burntsushi version 0.2.0 [gavan 2017-08-17]
 	Added www/go-toml-pelletier version 1.0.0 [gavan 2017-08-17]
 	Added devel/go-viper version 0.0.20170723 [gavan 2017-08-17]
+	Added net/go-websocket version 1.0.0 [gavan 2017-08-17]
