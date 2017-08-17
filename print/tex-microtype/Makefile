@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2016/06/16 04:06:12 markd Exp $
+# $NetBSD: Makefile,v 1.6 2017/08/17 03:50:19 markd Exp $
 
 DISTNAME=	microtype
-PKGNAME=	tex-${DISTNAME}-2.6a
-TEXLIVE_REV=	41127
+PKGNAME=	tex-${DISTNAME}-2.7
+TEXLIVE_REV=	44791
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/microtype
 COMMENT=	Interface to the micro-typographic features of pdfTeX
 LICENSE=	lppl-1.3c
 
