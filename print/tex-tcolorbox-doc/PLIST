@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2017/01/20 21:44:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/08/17 03:30:07 markd Exp $
 share/texmf-dist/doc/latex/tcolorbox/Basilica_5.png
 share/texmf-dist/doc/latex/tcolorbox/CHANGES
 share/texmf-dist/doc/latex/tcolorbox/README
 share/texmf-dist/doc/latex/tcolorbox/lichtspiel.jpg
+share/texmf-dist/doc/latex/tcolorbox/tcolorbox-example-poster.pdf
+share/texmf-dist/doc/latex/tcolorbox/tcolorbox-example-poster.tex
 share/texmf-dist/doc/latex/tcolorbox/tcolorbox-example.pdf
 share/texmf-dist/doc/latex/tcolorbox/tcolorbox-example.tex
+share/texmf-dist/doc/latex/tcolorbox/tcolorbox-tutorial-poster.pdf
+share/texmf-dist/doc/latex/tcolorbox/tcolorbox-tutorial-poster.tex
 share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.abstract.tex
 share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.bib
 share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.breakable.tex
@@ -22,6 +26,7 @@ share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.intro.tex
 share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.listings.tex
 share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.magazine.tex
 share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.picturecredits.tex
+share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.poster.tex
 share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.quickref.tex
 share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.raster.tex
 share/texmf-dist/doc/latex/tcolorbox/tcolorbox.doc.recording.tex
