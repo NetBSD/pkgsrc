@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:55:30 gavan Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/markbates/inflect.a
+gopkg/src/github.com/markbates/inflect/LICENCE
+gopkg/src/github.com/markbates/inflect/README
+gopkg/src/github.com/markbates/inflect/helpers.go
+gopkg/src/github.com/markbates/inflect/inflect.go
+gopkg/src/github.com/markbates/inflect/inflect_test.go
+@pkgdir bin
