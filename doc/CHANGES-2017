@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3343 2017/08/17 17:04:46 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3344 2017/08/17 19:58:15 nros Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4638,3 +4638,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/trafficserver version 7.1.0 [fhajny 2017-08-17]
 	Updated devel/libbson to 1.7.0 [fhajny 2017-08-17]
 	Updated databases/mongo-c-driver to 1.7.0 [fhajny 2017-08-17]
+	Updated devel/pcre2 to 10.30 [nros 2017-08-17]
