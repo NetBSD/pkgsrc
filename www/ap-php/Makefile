@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2016/04/02 10:28:06 taca Exp $
+# $NetBSD: Makefile,v 1.37 2017/08/17 15:05:42 hauke Exp $
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-${PHP_VERSION}
 COMMENT=		Apache (${PKG_APACHE}) module for ${PKG_PHP}
@@ -8,6 +8,9 @@ CONFLICTS=		ap-php-[0-9]*
 USE_TOOLS+=		lex pkg-config
 
 APACHE_MODULE=		YES
+
+PKGSRC_USE_FORTIFY=	no
+PKGSRC_USE_SSP=		no
 
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/Makefile.php"
