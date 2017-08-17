@@ -1,0 +1,17 @@
+$NetBSD: patch-proxy_Makefile.in,v 1.1 2017/08/17 14:57:09 fhajny Exp $
+
+Do not tinker with ownership for volatile data.
+
+--- proxy/Makefile.in.orig	2015-06-30 04:11:56.000000000 +0000
++++ proxy/Makefile.in
+@@ -1747,9 +1747,8 @@ info: info-recursive
+ 
+ info-am:
+ 
+-install-data-am: install-data-local
++install-data-am:
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ install-dvi: install-dvi-recursive
+ 
+ install-dvi-am:
