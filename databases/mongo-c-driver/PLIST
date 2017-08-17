@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2017/06/14 10:27:21 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/08/17 17:04:35 fhajny Exp $
 bin/mongoc-stat
 include/libmongoc-1.0/mongoc-apm.h
 include/libmongoc-1.0/mongoc-bulk-operation.h
@@ -22,6 +22,7 @@ include/libmongoc-1.0/mongoc-index.h
 include/libmongoc-1.0/mongoc-init.h
 include/libmongoc-1.0/mongoc-iovec.h
 include/libmongoc-1.0/mongoc-log.h
+include/libmongoc-1.0/mongoc-macros.h
 include/libmongoc-1.0/mongoc-matcher.h
 include/libmongoc-1.0/mongoc-opcode.h
 ${PLIST.ssl}include/libmongoc-1.0/mongoc-rand.h
@@ -34,18 +35,19 @@ include/libmongoc-1.0/mongoc-stream-buffered.h
 include/libmongoc-1.0/mongoc-stream-file.h
 include/libmongoc-1.0/mongoc-stream-gridfs.h
 include/libmongoc-1.0/mongoc-stream-socket.h
+include/libmongoc-1.0/mongoc-stream.h
 ${PLIST.ssl}include/libmongoc-1.0/mongoc-stream-tls-libressl.h
 ${PLIST.ssl}include/libmongoc-1.0/mongoc-stream-tls-openssl.h
 ${PLIST.ssl}include/libmongoc-1.0/mongoc-stream-tls-secure-channel.h
 ${PLIST.ssl}include/libmongoc-1.0/mongoc-stream-tls-secure-transport.h
 ${PLIST.ssl}include/libmongoc-1.0/mongoc-stream-tls.h
-include/libmongoc-1.0/mongoc-stream.h
 include/libmongoc-1.0/mongoc-topology-description.h
 include/libmongoc-1.0/mongoc-uri.h
 include/libmongoc-1.0/mongoc-version-functions.h
 include/libmongoc-1.0/mongoc-version.h
 include/libmongoc-1.0/mongoc-write-concern.h
 include/libmongoc-1.0/mongoc.h
+include/libmongoc-1.0/op-compressed.def
 include/libmongoc-1.0/op-delete.def
 include/libmongoc-1.0/op-get-more.def
 include/libmongoc-1.0/op-header.def
@@ -57,12 +59,13 @@ include/libmongoc-1.0/op-reply-header.def
 include/libmongoc-1.0/op-reply.def
 include/libmongoc-1.0/op-update.def
 include/libmongoc-1.0/utlist.h
+lib/cmake/libmongoc-1.0/libmongoc-1.0-config-version.cmake
+lib/cmake/libmongoc-1.0/libmongoc-1.0-config.cmake
 lib/libmongoc-1.0.la
 lib/pkgconfig/libmongoc-1.0.pc
 ${PLIST.ssl}lib/pkgconfig/libmongoc-ssl-1.0.pc
 man/man3/mongoc_advanced_connections.3
 man/man3/mongoc_aggregate.3
-man/man3/mongoc_api.3
 man/man3/mongoc_apm_callbacks_destroy.3
 man/man3/mongoc_apm_callbacks_new.3
 man/man3/mongoc_apm_callbacks_t.3
@@ -145,6 +148,7 @@ man/man3/mongoc_bulk_operation_execute.3
 man/man3/mongoc_bulk_operation_get_hint.3
 man/man3/mongoc_bulk_operation_get_write_concern.3
 man/man3/mongoc_bulk_operation_insert.3
+man/man3/mongoc_bulk_operation_insert_with_opts.3
 man/man3/mongoc_bulk_operation_remove.3
 man/man3/mongoc_bulk_operation_remove_many_with_opts.3
 man/man3/mongoc_bulk_operation_remove_one.3
@@ -249,10 +253,12 @@ man/man3/mongoc_collection_update.3
 man/man3/mongoc_collection_validate.3
 man/man3/mongoc_collection_write_command_with_opts.3
 man/man3/mongoc_common_task_examples.3
+man/man3/mongoc_connection_pooling.3
 man/man3/mongoc_cursor_clone.3
 man/man3/mongoc_cursor_current.3
 man/man3/mongoc_cursor_destroy.3
 man/man3/mongoc_cursor_error.3
+man/man3/mongoc_cursor_error_document.3
 man/man3/mongoc_cursor_get_batch_size.3
 man/man3/mongoc_cursor_get_hint.3
 man/man3/mongoc_cursor_get_host.3
@@ -361,7 +367,6 @@ man/man3/mongoc_gridfs_remove_by_filename.3
 man/man3/mongoc_gridfs_t.3
 man/man3/mongoc_guides.3
 man/man3/mongoc_host_list_t.3
-man/man3/mongoc_index.3
 man/man3/mongoc_index_opt_geo_get_default.3
 man/man3/mongoc_index_opt_geo_init.3
 man/man3/mongoc_index_opt_geo_t.3
@@ -391,6 +396,7 @@ man/man3/mongoc_read_concern_append.3
 man/man3/mongoc_read_concern_copy.3
 man/man3/mongoc_read_concern_destroy.3
 man/man3/mongoc_read_concern_get_level.3
+man/man3/mongoc_read_concern_is_default.3
 man/man3/mongoc_read_concern_new.3
 man/man3/mongoc_read_concern_set_level.3
 man/man3/mongoc_read_concern_t.3
@@ -492,6 +498,7 @@ man/man3/mongoc_uri_new_for_host_port.3
 man/man3/mongoc_uri_option_is_bool.3
 man/man3/mongoc_uri_option_is_int32.3
 man/man3/mongoc_uri_option_is_utf8.3
+man/man3/mongoc_uri_set_auth_mechanism.3
 man/man3/mongoc_uri_set_auth_source.3
 man/man3/mongoc_uri_set_database.3
 man/man3/mongoc_uri_set_mechanism_properties.3
@@ -516,6 +523,7 @@ man/man3/mongoc_write_concern_get_wmajority.3
 man/man3/mongoc_write_concern_get_wtag.3
 man/man3/mongoc_write_concern_get_wtimeout.3
 man/man3/mongoc_write_concern_is_acknowledged.3
+man/man3/mongoc_write_concern_is_default.3
 man/man3/mongoc_write_concern_is_valid.3
 man/man3/mongoc_write_concern_journal_is_set.3
 man/man3/mongoc_write_concern_new.3
