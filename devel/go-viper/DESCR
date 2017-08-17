@@ -1,0 +1,12 @@
+Go configuration with fangs!
+
+Many Go projects are built using Viper including:
+
+* Hugo
+* EMC RexRay
+* Imgur's Incus
+* Nanobox/Nanopack
+* Docker Notary
+* BloomApi
+
+* DOIt
