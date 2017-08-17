@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2017/06/12 12:22:38 maya Exp $
+# $NetBSD: Makefile,v 1.12 2017/08/17 13:04:53 mef Exp $
 
-DISTNAME=	B-Hooks-OP-Check-EntersubForCV-0.09
+DISTNAME=	B-Hooks-OP-Check-EntersubForCV-0.10
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=B/}
 
@@ -19,7 +18,6 @@ PERL5_REQD+=	5.10.1
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 USE_LANGUAGES=		c
-MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/B/Hooks/OP/Check/EntersubForCV/.packlist
 
 BUILDLINK_DEPMETHOD.p5-B-Hooks-OP-Check=	full
