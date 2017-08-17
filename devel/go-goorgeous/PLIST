@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:28:07 gavan Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/chaseadamsio/goorgeous.a
+gopkg/src/github.com/chaseadamsio/goorgeous/LICENSE
+gopkg/src/github.com/chaseadamsio/goorgeous/README.org
+gopkg/src/github.com/chaseadamsio/goorgeous/goorgeous.go
+gopkg/src/github.com/chaseadamsio/goorgeous/goorgeous_test.go
+gopkg/src/github.com/chaseadamsio/goorgeous/gopher.gif
+gopkg/src/github.com/chaseadamsio/goorgeous/gopher_small.gif
+gopkg/src/github.com/chaseadamsio/goorgeous/header.go
+gopkg/src/github.com/chaseadamsio/goorgeous/header_test.go
+gopkg/src/github.com/chaseadamsio/goorgeous/testdata/test.org
+gopkg/src/github.com/chaseadamsio/goorgeous/testdata/test.orgheaders.golden
+@pkgdir bin
