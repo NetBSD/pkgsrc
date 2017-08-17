@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2017/06/21 13:25:34 markd Exp $
+# $NetBSD: Makefile,v 1.7 2017/08/17 02:33:44 markd Exp $
 
 DISTNAME=	texinfo
-PKGNAME=	tex-${DISTNAME}-5.1.43137
-TEXLIVE_REV=	43137
+PKGNAME=	tex-${DISTNAME}-5.1.44706
+TEXLIVE_REV=	44706
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/texinfo
