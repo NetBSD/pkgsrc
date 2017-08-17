@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3305 2017/08/17 02:20:44 gavan Exp $
+$NetBSD: CHANGES-2017,v 1.3306 2017/08/17 02:20:57 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4552,3 +4552,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/go-immutable-radix version 0.0.20170725 [gavan 2017-08-17]
 	Added textproc/go-inflect version 0.0.20170411 [gavan 2017-08-17]
 	Added devel/go-jwalterweatherman version 20170523 [gavan 2017-08-17]
+	Added devel/go-mapstructure version 0.0.20160212 [gavan 2017-08-17]
