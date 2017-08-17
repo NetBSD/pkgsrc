@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/05/26 12:35:45 mef Exp $
+$NetBSD: distinfo,v 1.8 2017/08/17 13:02:34 mef Exp $
 
-SHA1 (B-Hooks-OP-Check-0.21.tar.gz) = fdcab71d11115cbde60422834d307c904a202cac
-RMD160 (B-Hooks-OP-Check-0.21.tar.gz) = 79a5fa1861efde94d05a2646087905e2adc94ff7
-SHA512 (B-Hooks-OP-Check-0.21.tar.gz) = fb816d9d591b501c660668c170e368bc6573851736196a8c533720f651b8df30bf38d93e697606e868e19aa9ec4a5d696a786b102bf2284b82cfb887a5a83c2b
-Size (B-Hooks-OP-Check-0.21.tar.gz) = 76100 bytes
+SHA1 (B-Hooks-OP-Check-0.22.tar.gz) = 23a07985405c871704052a6b58b3395fa92d9382
+RMD160 (B-Hooks-OP-Check-0.22.tar.gz) = d18990ad83efcd2c8212422547a78bc2a01bafcd
+SHA512 (B-Hooks-OP-Check-0.22.tar.gz) = e68b08a34244afc73d7d3b2b0acdf8fe791b0b1f087b6b0496da0a1e655a9e51552ec8fb0f743c8626a0414fb469a2133d113ff5b4ba9f96217cc87bef877542
+Size (B-Hooks-OP-Check-0.22.tar.gz) = 76535 bytes
