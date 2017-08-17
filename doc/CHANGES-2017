@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3341 2017/08/17 14:57:23 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3342 2017/08/17 17:00:57 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4636,3 +4636,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added math/p5-Math-Utils version 1.11 [wen 2017-08-17]
 	Updated math/p5-Math-Derivative to 1.01 [wen 2017-08-17]
 	Added www/trafficserver version 7.1.0 [fhajny 2017-08-17]
+	Updated devel/libbson to 1.7.0 [fhajny 2017-08-17]
