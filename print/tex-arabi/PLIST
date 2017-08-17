@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/11 06:55:18 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/08/17 02:11:03 markd Exp $
 share/texmf-dist/fonts/afm/arabi/arabeyes/ae_almohanad_boldItalitalic.afm
 share/texmf-dist/fonts/afm/arabi/arabeyes/ae_almohanad_thin.afm
 share/texmf-dist/fonts/afm/arabi/arabeyes/ae_almohanad_xxbold.afm
@@ -103,6 +103,7 @@ share/texmf-dist/tex/latex/arabi/arabic.ldf
 share/texmf-dist/tex/latex/arabi/arabicfnt.sty
 share/texmf-dist/tex/latex/arabi/arabicore.sty
 share/texmf-dist/tex/latex/arabi/arabiftoday.sty
+share/texmf-dist/tex/latex/arabi/arabipoetry.sty
 share/texmf-dist/tex/latex/arabi/arabnovowel.sty
 share/texmf-dist/tex/latex/arabi/arfonts.sty
 share/texmf-dist/tex/latex/arabi/calendrierfpar.sty
@@ -185,7 +186,6 @@ share/texmf-dist/tex/latex/arabi/lfeterafik.fd
 share/texmf-dist/tex/latex/arabi/lfetitr.fd
 share/texmf-dist/tex/latex/arabi/lfetitrout.fd
 share/texmf-dist/tex/latex/arabi/mosq.def
-share/texmf-dist/tex/latex/arabi/poetry.sty
 share/texmf-dist/tex/latex/arabi/puenc-ar.def
 share/texmf-dist/tex/latex/arabi/transcmr.fd
 share/texmf-dist/tex/latex/arabi/translit.sty
