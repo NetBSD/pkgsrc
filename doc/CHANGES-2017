@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3331 2017/08/17 10:06:43 nros Exp $
+$NetBSD: CHANGES-2017,v 1.3332 2017/08/17 10:11:51 nros Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4620,3 +4620,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/pgpool2 to 3.6.5 [fhajny 2017-08-17]
 	Updated security/vault to 0.8.1 [fhajny 2017-08-17]
 	Updated mail/libytnef to 1.9.2 [nros 2017-08-17]
+	Added mail/ytnef version 1.9.2 [nros 2017-08-17]
