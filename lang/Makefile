@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.462 2017/07/28 07:01:31 adam Exp $
+# $NetBSD: Makefile,v 1.463 2017/08/17 02:04:42 gavan Exp $
 #
 
 COMMENT=	Programming languages
@@ -82,6 +82,7 @@ SUBDIR+=	gnat_util
 SUBDIR+=	gnucobol
 SUBDIR+=	go
 SUBDIR+=	go14
+SUBDIR+=	go-hcl
 SUBDIR+=	gpc
 SUBDIR+=	gprolog
 SUBDIR+=	guile
