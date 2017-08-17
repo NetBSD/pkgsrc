@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:34:50 gavan Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/kardianos/osext.a
+gopkg/src/github.com/kardianos/osext/LICENSE
+gopkg/src/github.com/kardianos/osext/README.md
+gopkg/src/github.com/kardianos/osext/osext.go
+gopkg/src/github.com/kardianos/osext/osext_plan9.go
+gopkg/src/github.com/kardianos/osext/osext_procfs.go
+gopkg/src/github.com/kardianos/osext/osext_sysctl.go
+gopkg/src/github.com/kardianos/osext/osext_test.go
+gopkg/src/github.com/kardianos/osext/osext_windows.go
+@pkgdir bin
