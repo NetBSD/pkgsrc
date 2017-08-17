@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/01/20 21:44:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/08/17 03:30:07 markd Exp $
 share/texmf-dist/tex/latex/tcolorbox/blueshade.png
 share/texmf-dist/tex/latex/tcolorbox/crinklepaper.png
 share/texmf-dist/tex/latex/tcolorbox/goldshade.png
@@ -13,6 +13,7 @@ share/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
 share/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
 share/texmf-dist/tex/latex/tcolorbox/tcbmagazine.code.tex
 share/texmf-dist/tex/latex/tcolorbox/tcbminted.code.tex
+share/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
 share/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
 share/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
 share/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
