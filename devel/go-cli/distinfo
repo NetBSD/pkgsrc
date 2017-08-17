@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/17 01:19:56 gavan Exp $
+
+SHA1 (cli-1.20.0.tar.gz) = 53e9db9b8db0b8fd84eceec55fb7ec28a701a757
+RMD160 (cli-1.20.0.tar.gz) = 78824c6180518de3ab3e4fde5ccea8103403cf9f
+SHA512 (cli-1.20.0.tar.gz) = 0a47a47121e25bceb6ebdf10a55ab3bc7531214284b1669fe20237c3ac938c7cd154ebc408759202d936688350e27e47d14f6a6b0793271c10534f2e90bd1fb5
+Size (cli-1.20.0.tar.gz) = 58397 bytes
