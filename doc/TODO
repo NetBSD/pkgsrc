@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17628 2017/08/17 06:29:21 taca Exp $
+$NetBSD: TODO,v 1.17629 2017/08/17 07:17:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -309,10 +309,6 @@ Suggested new packages
 	diaspora
 	https://diasporafoundation.org/
 	Distributed social networking
-
-	hugo
-	https://gohugo.io/
-	Fast and Modern Static Website Engine
 
 	kexi
 	http://www.kexi-project.org/
