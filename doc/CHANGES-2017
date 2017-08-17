@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3300 2017/08/17 02:19:45 gavan Exp $
+$NetBSD: CHANGES-2017,v 1.3301 2017/08/17 02:19:57 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4547,3 +4547,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/go-goorgeous version 0.0.20170816 [gavan 2017-08-17]
 	Added lang/go-hcl version 0.0.20160616 [gavan 2017-08-17]
 	Added devel/go-homedir version 0.0.20161203 [gavan 2017-08-17]
+	Added devel/go-i18n version 1.8.1 [gavan 2017-08-17]
