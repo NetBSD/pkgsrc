@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/17 01:29:44 gavan Exp $
+
+SHA1 (go-i18n-1.8.1.tar.gz) = a98386e6f68713f12399e956a853fdfef35ab21b
+RMD160 (go-i18n-1.8.1.tar.gz) = 66fc62700c8de51aff6d4d037c11e4b4c96ca466
+SHA512 (go-i18n-1.8.1.tar.gz) = 0eaf5d0a1db3d13235491d188ed1326a31acd8dcaa89decb2435384f74e000aac3530182889256ca04b42e7f5c2db1dad3edf9a2f2966f83067d9fbdbf82c948
+Size (go-i18n-1.8.1.tar.gz) = 39655 bytes
