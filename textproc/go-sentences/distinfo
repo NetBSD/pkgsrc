@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/17 01:56:16 gavan Exp $
+
+SHA1 (sentences-1.0.6.tar.gz) = 2cc25758e3607691e418fcf400b5fc1480411d62
+RMD160 (sentences-1.0.6.tar.gz) = 238f84436c24f79391efc13fbad87228298e8a21
+SHA512 (sentences-1.0.6.tar.gz) = 4880618f08d097ca55e00f6c2504825524b9e9482ba5db394df8086a18c7e723a8628db5b717b12b4e34afd1405827e347759ddb47b059678876835526d0421e
+Size (sentences-1.0.6.tar.gz) = 5181913 bytes
