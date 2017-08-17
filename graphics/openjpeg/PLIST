@@ -1,16 +1,17 @@
-@comment $NetBSD: PLIST,v 1.5 2014/05/15 14:14:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/08/17 20:08:33 adam Exp $
 bin/opj_compress
 bin/opj_decompress
 bin/opj_dump
-include/openjpeg-2.1/openjpeg.h
-include/openjpeg-2.1/opj_config.h
-include/openjpeg-2.1/opj_stdint.h
+include/openjpeg-2.2/openjpeg.h
+include/openjpeg-2.2/opj_config.h
+include/openjpeg-2.2/opj_stdint.h
+lib/libopenjp2.a
 lib/libopenjp2.so
 lib/libopenjp2.so.${PKGVERSION}
 lib/libopenjp2.so.7
-lib/openjpeg-2.1/OpenJPEGConfig.cmake
-lib/openjpeg-2.1/OpenJPEGTargets-noconfig.cmake
-lib/openjpeg-2.1/OpenJPEGTargets.cmake
+lib/openjpeg-2.2/OpenJPEGConfig.cmake
+lib/openjpeg-2.2/OpenJPEGTargets-noconfig.cmake
+lib/openjpeg-2.2/OpenJPEGTargets.cmake
 lib/pkgconfig/libopenjp2.pc
 man/man1/opj_compress.1
 man/man1/opj_decompress.1
