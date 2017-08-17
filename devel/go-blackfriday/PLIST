@@ -1,0 +1,60 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:17:16 gavan Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/russross/blackfriday.a
+gopkg/src/github.com/russross/blackfriday/LICENSE.txt
+gopkg/src/github.com/russross/blackfriday/README.md
+gopkg/src/github.com/russross/blackfriday/block.go
+gopkg/src/github.com/russross/blackfriday/block_test.go
+gopkg/src/github.com/russross/blackfriday/html.go
+gopkg/src/github.com/russross/blackfriday/inline.go
+gopkg/src/github.com/russross/blackfriday/inline_test.go
+gopkg/src/github.com/russross/blackfriday/latex.go
+gopkg/src/github.com/russross/blackfriday/markdown.go
+gopkg/src/github.com/russross/blackfriday/ref_test.go
+gopkg/src/github.com/russross/blackfriday/smartypants.go
+gopkg/src/github.com/russross/blackfriday/testdata/Amps and angle encoding.html
+gopkg/src/github.com/russross/blackfriday/testdata/Amps and angle encoding.text
+gopkg/src/github.com/russross/blackfriday/testdata/Auto links.html
+gopkg/src/github.com/russross/blackfriday/testdata/Auto links.text
+gopkg/src/github.com/russross/blackfriday/testdata/Backslash escapes.html
+gopkg/src/github.com/russross/blackfriday/testdata/Backslash escapes.text
+gopkg/src/github.com/russross/blackfriday/testdata/Blockquotes with code blocks.html
+gopkg/src/github.com/russross/blackfriday/testdata/Blockquotes with code blocks.text
+gopkg/src/github.com/russross/blackfriday/testdata/Code Blocks.html
+gopkg/src/github.com/russross/blackfriday/testdata/Code Blocks.text
+gopkg/src/github.com/russross/blackfriday/testdata/Code Spans.html
+gopkg/src/github.com/russross/blackfriday/testdata/Code Spans.text
+gopkg/src/github.com/russross/blackfriday/testdata/Hard-wrapped paragraphs with list-like lines no empty line before block.html
+gopkg/src/github.com/russross/blackfriday/testdata/Hard-wrapped paragraphs with list-like lines no empty line before block.text
+gopkg/src/github.com/russross/blackfriday/testdata/Hard-wrapped paragraphs with list-like lines.html
+gopkg/src/github.com/russross/blackfriday/testdata/Hard-wrapped paragraphs with list-like lines.text
+gopkg/src/github.com/russross/blackfriday/testdata/Horizontal rules.html
+gopkg/src/github.com/russross/blackfriday/testdata/Horizontal rules.text
+gopkg/src/github.com/russross/blackfriday/testdata/Inline HTML (Advanced).html
+gopkg/src/github.com/russross/blackfriday/testdata/Inline HTML (Advanced).text
+gopkg/src/github.com/russross/blackfriday/testdata/Inline HTML (Simple).html
+gopkg/src/github.com/russross/blackfriday/testdata/Inline HTML (Simple).text
+gopkg/src/github.com/russross/blackfriday/testdata/Inline HTML comments.html
+gopkg/src/github.com/russross/blackfriday/testdata/Inline HTML comments.text
+gopkg/src/github.com/russross/blackfriday/testdata/Links, inline style.html
+gopkg/src/github.com/russross/blackfriday/testdata/Links, inline style.text
+gopkg/src/github.com/russross/blackfriday/testdata/Links, reference style.html
+gopkg/src/github.com/russross/blackfriday/testdata/Links, reference style.text
+gopkg/src/github.com/russross/blackfriday/testdata/Links, shortcut references.html
+gopkg/src/github.com/russross/blackfriday/testdata/Links, shortcut references.text
+gopkg/src/github.com/russross/blackfriday/testdata/Literal quotes in titles.html
+gopkg/src/github.com/russross/blackfriday/testdata/Literal quotes in titles.text
+gopkg/src/github.com/russross/blackfriday/testdata/Markdown Documentation - Basics.html
+gopkg/src/github.com/russross/blackfriday/testdata/Markdown Documentation - Basics.text
+gopkg/src/github.com/russross/blackfriday/testdata/Markdown Documentation - Syntax.html
+gopkg/src/github.com/russross/blackfriday/testdata/Markdown Documentation - Syntax.text
+gopkg/src/github.com/russross/blackfriday/testdata/Nested blockquotes.html
+gopkg/src/github.com/russross/blackfriday/testdata/Nested blockquotes.text
+gopkg/src/github.com/russross/blackfriday/testdata/Ordered and unordered lists.html
+gopkg/src/github.com/russross/blackfriday/testdata/Ordered and unordered lists.text
+gopkg/src/github.com/russross/blackfriday/testdata/Strong and em together.html
+gopkg/src/github.com/russross/blackfriday/testdata/Strong and em together.text
+gopkg/src/github.com/russross/blackfriday/testdata/Tabs.html
+gopkg/src/github.com/russross/blackfriday/testdata/Tabs.text
+gopkg/src/github.com/russross/blackfriday/testdata/Tidyness.html
+gopkg/src/github.com/russross/blackfriday/testdata/Tidyness.text
+@pkgdir bin
