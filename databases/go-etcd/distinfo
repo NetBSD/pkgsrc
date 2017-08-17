@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/17 02:02:27 gavan Exp $
+
+SHA1 (go-etcd-2.0.0.tar.gz) = 955459c0a7817c12d36c09d30e50490cc822a3a4
+RMD160 (go-etcd-2.0.0.tar.gz) = 28bf29613310487047db5b4d42d1ce4b764950cb
+SHA512 (go-etcd-2.0.0.tar.gz) = 6cbad346080d6c7100954ff40bae82ba796cff7f9a4883dc7d19544c2b3634727a92b3044a409d27f9ff54d27af397f7682dd2480e4ef3352175a2db861ce4cf
+Size (go-etcd-2.0.0.tar.gz) = 19503 bytes
