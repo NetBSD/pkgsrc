@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:19:10 gavan Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/spf13/cast.a
+gopkg/src/github.com/spf13/cast/LICENSE
+gopkg/src/github.com/spf13/cast/Makefile
+gopkg/src/github.com/spf13/cast/README.md
+gopkg/src/github.com/spf13/cast/cast.go
+gopkg/src/github.com/spf13/cast/cast_test.go
+gopkg/src/github.com/spf13/cast/caste.go
+@pkgdir bin
