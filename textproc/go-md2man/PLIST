@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:55:42 gavan Exp $
+bin/go-md2man
+gopkg/pkg/${GO_PLATFORM}/github.com/cpuguy83/go-md2man/md2man.a
+gopkg/src/github.com/cpuguy83/go-md2man/LICENSE.md
+gopkg/src/github.com/cpuguy83/go-md2man/README.md
+gopkg/src/github.com/cpuguy83/go-md2man/go-md2man.1.md
+gopkg/src/github.com/cpuguy83/go-md2man/md2man.go
+gopkg/src/github.com/cpuguy83/go-md2man/md2man/md2man.go
+gopkg/src/github.com/cpuguy83/go-md2man/md2man/roff.go
