@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:22:30 gavan Exp $
+bin/example
+gopkg/pkg/${GO_PLATFORM}/github.com/kyokomi/emoji.a
+gopkg/src/github.com/kyokomi/emoji/LICENSE
+gopkg/src/github.com/kyokomi/emoji/README.md
+gopkg/src/github.com/kyokomi/emoji/emoji.go
+gopkg/src/github.com/kyokomi/emoji/emoji_codemap.go
+gopkg/src/github.com/kyokomi/emoji/emoji_test.go
+gopkg/src/github.com/kyokomi/emoji/example/hello.go
+gopkg/src/github.com/kyokomi/emoji/screen/image.png
