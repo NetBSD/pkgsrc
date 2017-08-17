@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:38:21 gavan Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/spf13/viper.a
+gopkg/pkg/${GO_PLATFORM}/github.com/spf13/viper/remote.a
+gopkg/src/github.com/spf13/viper/LICENSE
+gopkg/src/github.com/spf13/viper/README.md
+gopkg/src/github.com/spf13/viper/flags.go
+gopkg/src/github.com/spf13/viper/flags_test.go
+gopkg/src/github.com/spf13/viper/nohup.out
+gopkg/src/github.com/spf13/viper/overrides_test.go
+gopkg/src/github.com/spf13/viper/remote/remote.go
+gopkg/src/github.com/spf13/viper/util.go
+gopkg/src/github.com/spf13/viper/util_test.go
+gopkg/src/github.com/spf13/viper/viper.go
+gopkg/src/github.com/spf13/viper/viper_test.go
+@pkgdir bin
