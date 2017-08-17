@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1260 2017/08/17 01:53:08 gavan Exp $
+# $NetBSD: Makefile,v 1.1261 2017/08/17 14:58:27 fhajny Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -902,6 +902,7 @@ SUBDIR+=	thttpd
 SUBDIR+=	tidy
 SUBDIR+=	tinyproxy
 SUBDIR+=	trac
+SUBDIR+=	trafficserver
 SUBDIR+=	typo3_62
 SUBDIR+=	uhttpmock
 SUBDIR+=	urlget
