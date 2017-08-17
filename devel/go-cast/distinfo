@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/17 01:19:10 gavan Exp $
+
+SHA1 (cast-1.1.0.tar.gz) = 28f2f9709309eacd4d1969ccb73904d7cba6b64c
+RMD160 (cast-1.1.0.tar.gz) = ce298ece9d877e6eb137c6923b05396ddb79c97d
+SHA512 (cast-1.1.0.tar.gz) = 21b9c1e72fef53a2100004f9aa1d027e7e9e1f5796753a8c22cf3fde5204d0a61fc667656eebcf3791ffa967221aa61d359a81d0e6976b5741115ef8f3f861be
+Size (cast-1.1.0.tar.gz) = 9592 bytes
