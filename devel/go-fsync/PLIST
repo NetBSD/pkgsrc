@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:25:46 gavan Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/spf13/fsync.a
+gopkg/src/github.com/spf13/fsync/LICENSE
+gopkg/src/github.com/spf13/fsync/README.md
+gopkg/src/github.com/spf13/fsync/fsync.go
+gopkg/src/github.com/spf13/fsync/fsync_test.go
+@pkgdir bin
