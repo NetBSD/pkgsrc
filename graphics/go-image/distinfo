@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/17 02:02:56 gavan Exp $
+
+SHA1 (go-image-20170405-10ed294.tar.gz) = ec12b38c73634be3b9b5d970c14fdb358b5b53e5
+RMD160 (go-image-20170405-10ed294.tar.gz) = 8f1147e5e85e8c1baae6690019f3a4bd8bda3a16
+SHA512 (go-image-20170405-10ed294.tar.gz) = 07bd721ada95cb9592527e19cd74ebeef4bf0621a5761c1b138d5ced955b6fd7a06bc7b6cc5038a8e35c0527ab8e4e0dbfa3f92eef43e021b8cbd72972b038fb
+Size (go-image-20170405-10ed294.tar.gz) = 4811047 bytes
