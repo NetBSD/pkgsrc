@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3297 2017/08/17 02:19:08 gavan Exp $
+$NetBSD: CHANGES-2017,v 1.3298 2017/08/17 02:19:19 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4544,3 +4544,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/go-gitmap version 0.0.20170613 [gavan 2017-08-17]
 	Added www/go-gohtml version 0.0.20150923 [gavan 2017-08-17]
 	Added devel/go-golang-lru version 0.0.20160813 [gavan 2017-08-17]
+	Added devel/go-goorgeous version 0.0.20170816 [gavan 2017-08-17]
