@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.494 2017/07/17 16:10:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.495 2017/08/17 10:03:42 nros Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -388,5 +388,6 @@ SUBDIR+=	xfce4-mailwatch-plugin
 SUBDIR+=	xfmail
 SUBDIR+=	xmailbox
 SUBDIR+=	xmailwatcher
+SUBDIR+=	ytnef
 
 .include "../mk/misc/category.mk"
