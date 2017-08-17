@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 23:27:08 agc Exp $
+$NetBSD: distinfo,v 1.4 2017/08/17 09:49:47 nros Exp $
 
-SHA1 (libytnef-1.5.tar.gz) = f04075187accaa82346ed873af8c61755de781cc
-RMD160 (libytnef-1.5.tar.gz) = c4754814124f4fbbf6d3385cded5e6f03ff09fcc
-SHA512 (libytnef-1.5.tar.gz) = 6a7f1953e734400c604d00dd639b1069147b005bb91ab43727fb9b3b6a57d6812d4e828e75f992074f86ca5e50ab7d4333bf2f288e9ffe4930de0a6abbfce91e
-Size (libytnef-1.5.tar.gz) = 212412 bytes
-SHA1 (patch-ytnef.c) = 82755fc0530ba43520de2a5b1fda3765648d1d70
+SHA1 (ytnef-1.9.2.tar.gz) = f1814a7838dc65ff076fc28379bc1d09cc57b257
+RMD160 (ytnef-1.9.2.tar.gz) = 5134cb2fb104bd180d18444dfd6639726b2a8c25
+SHA512 (ytnef-1.9.2.tar.gz) = 125727a8afac959ac9c60fa977913da743b1ace05ea6af6cd75fff3a786ecf7cb54b49006c8c5249eb48d9aefe0ffcdc24af2944a8611f54a03eb4c24a78506e
+Size (ytnef-1.9.2.tar.gz) = 300945 bytes
+SHA1 (patch-ytnef_Makefile.am) = 1a93de2ec27b3230f52e9bb7de279fd1584e0e6a
+SHA1 (patch-ytnefprint_Makefile.am) = f9e02624df257b07f1a095aeb65e5c24d8f0ee37
