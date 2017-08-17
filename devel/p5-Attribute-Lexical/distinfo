@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:56 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/08/17 13:00:21 mef Exp $
 
-SHA1 (Attribute-Lexical-0.004.tar.gz) = e277d8bf521ce0abbecff6a8dd984e1a710f6a33
-RMD160 (Attribute-Lexical-0.004.tar.gz) = 82559d6b2da4fcaba6829bdd4ac8e6c6f798f587
-SHA512 (Attribute-Lexical-0.004.tar.gz) = c49bd431c96d4732d358f09f9f5d316b06390789f03545365b180d9beca530e5ab200b0872aa90431055ad6885ea187f6c3230569c581069175f72d1e9d66a02
-Size (Attribute-Lexical-0.004.tar.gz) = 13967 bytes
+SHA1 (Attribute-Lexical-0.005.tar.gz) = 2dcdf4bfe64fd44fbb1eef94f522a092de332ff6
+RMD160 (Attribute-Lexical-0.005.tar.gz) = 8275c729ceae3e5dc2e721c65e2442f58a68272f
+SHA512 (Attribute-Lexical-0.005.tar.gz) = 764b7f71bf7f2679245497959e22460e442767ec9389c0c2f614094c42a82323d7e85500210437ebe4444a126230bf233b765f392562714c0700e992db0ecd07
+Size (Attribute-Lexical-0.005.tar.gz) = 14142 bytes
