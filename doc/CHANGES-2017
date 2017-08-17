@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3326 2017/08/17 04:32:47 markd Exp $
+$NetBSD: CHANGES-2017,v 1.3327 2017/08/17 06:28:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4615,3 +4615,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/tex-powerdot to 1.5b [markd 2017-08-17]
 	Updated print/tex-algorithm2e to 5.2 [markd 2017-08-17]
 	Updated print/tex-algorithm2e-doc to 5.2 [markd 2017-08-17]
+	Updated www/contao44 to 4.4.3 [taca 2017-08-17]
