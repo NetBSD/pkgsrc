@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3294 2017/08/17 02:18:37 gavan Exp $
+$NetBSD: CHANGES-2017,v 1.3295 2017/08/17 02:18:48 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4541,3 +4541,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/go-fs version 0.0.20131111 [gavan 2017-08-17]
 	Added devel/go-fsnotify version 1.3.0 [gavan 2017-08-17]
 	Added devel/go-fsync version 0.0.20170320 [gavan 2017-08-17]
+	Added devel/go-gitmap version 0.0.20170613 [gavan 2017-08-17]
