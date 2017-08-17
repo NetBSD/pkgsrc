@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 10:03:42 nros Exp $
+bin/ytnef
+bin/ytnefprint
+bin/ytnefprocess
