@@ -1,0 +1,16 @@
+$NetBSD: patch-ytnef_Makefile.am,v 1.1 2017/08/17 09:49:47 nros Exp $
+Use installed copy of ytnef library so we can have the programs in a 
+separate package.
+--- ytnef/Makefile.am.orig	2017-08-17 08:48:50.000000000 +0000
++++ ytnef/Makefile.am
+@@ -2,8 +2,8 @@ bin_PROGRAMS = ytnef
+ bin_SCRIPTS = ytnefprocess
+ 
+ ytnef_SOURCES = main.c
+-ytnef_CPPFLAGS = -I$(top_srcdir)/lib
+-ytnef_LDADD = $(top_builddir)/lib/libytnef.la
++ytnef_CPPFLAGS = -I$(prefix)/include
++ytnef_LDADD = $(prefix)/lib/libytnef.la
+ ytnef_CFLAGS = \
+         $(YTNEF_CFLAGS) \
+         $(AM_CFLAGS) \
