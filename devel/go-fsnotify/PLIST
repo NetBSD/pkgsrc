@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:24:45 gavan Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/fsnotify/fsnotify.a
+gopkg/src/github.com/fsnotify/fsnotify/AUTHORS
+gopkg/src/github.com/fsnotify/fsnotify/CHANGELOG.md
+gopkg/src/github.com/fsnotify/fsnotify/CONTRIBUTING.md
+gopkg/src/github.com/fsnotify/fsnotify/LICENSE
+gopkg/src/github.com/fsnotify/fsnotify/README.md
+gopkg/src/github.com/fsnotify/fsnotify/example_test.go
+gopkg/src/github.com/fsnotify/fsnotify/fen.go
+gopkg/src/github.com/fsnotify/fsnotify/fsnotify.go
+gopkg/src/github.com/fsnotify/fsnotify/inotify.go
+gopkg/src/github.com/fsnotify/fsnotify/inotify_poller.go
+gopkg/src/github.com/fsnotify/fsnotify/inotify_poller_test.go
+gopkg/src/github.com/fsnotify/fsnotify/inotify_test.go
+gopkg/src/github.com/fsnotify/fsnotify/integration_darwin_test.go
+gopkg/src/github.com/fsnotify/fsnotify/integration_test.go
+gopkg/src/github.com/fsnotify/fsnotify/kqueue.go
+gopkg/src/github.com/fsnotify/fsnotify/open_mode_bsd.go
+gopkg/src/github.com/fsnotify/fsnotify/open_mode_darwin.go
+gopkg/src/github.com/fsnotify/fsnotify/windows.go
+@pkgdir bin
