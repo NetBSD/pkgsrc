@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3337 2017/08/17 13:26:20 wen Exp $
+$NetBSD: CHANGES-2017,v 1.3338 2017/08/17 13:33:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4632,3 +4632,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Class-Unload to 0.11 [mef 2017-08-17]
 	Updated devel/p5-Carp-Assert-More to 1.16 [mef 2017-08-17]
 	Updated mail/p5-Email-MIME-ContentType to 1.021 [wen 2017-08-17]
+	Updated mail/p5-Email-MIME-RFC2047 to 0.97 [wen 2017-08-17]
