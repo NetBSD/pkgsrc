@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/17 01:18:25 gavan Exp $
+
+SHA1 (go-buffruneio-0.2.0.tar.gz) = 81f05bb3f6c13c8245ebb6afa12df61011ef0241
+RMD160 (go-buffruneio-0.2.0.tar.gz) = d2be3ca24ae12dedb2f722fd9b212b606e6a19f7
+SHA512 (go-buffruneio-0.2.0.tar.gz) = 2d1a4a81d376a1b0f5dd1302f917d106db7ac53e7d4c881ecaa1017edfa14928c975e15211ce157cd248a40eae8b70b737663c7454ff968a8ef797e9acd6ed17
+Size (go-buffruneio-0.2.0.tar.gz) = 3028 bytes
