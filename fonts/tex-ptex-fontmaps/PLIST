@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/27 11:00:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/08/17 02:41:48 markd Exp $
 share/texmf-dist/fonts/cmap/ptex-fontmaps/2004-H
 share/texmf-dist/fonts/cmap/ptex-fontmaps/2004-V
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/adobe/otf-ko-adobe.map
@@ -31,6 +31,8 @@ share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/dynacomware/otf-tc-dynacomware
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/dynacomware/uptex-tc-dynacomware.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/fandol/otf-sc-fandol.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/fandol/uptex-sc-fandol.map
+share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/founder/otf-sc-founder.map
+share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/founder/uptex-sc-founder.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-elcapitan-pron/otf-hiragino-elcapitan-pron.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-elcapitan-pron/otf-up-hiragino-elcapitan-pron.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-elcapitan-pron/ptex-hiragino-elcapitan-pron-04.map
