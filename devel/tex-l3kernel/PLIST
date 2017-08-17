@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/06/21 08:28:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/08/17 04:13:29 markd Exp $
 share/texmf-dist/tex/latex/l3kernel/expl3-code.tex
 share/texmf-dist/tex/latex/l3kernel/expl3-generic.tex
 share/texmf-dist/tex/latex/l3kernel/expl3.lua
@@ -32,6 +32,7 @@ share/texmf-dist/tex/latex/l3kernel/l3skip.sty
 share/texmf-dist/tex/latex/l3kernel/l3sort.sty
 share/texmf-dist/tex/latex/l3kernel/l3str.sty
 share/texmf-dist/tex/latex/l3kernel/l3tl-analysis.sty
+share/texmf-dist/tex/latex/l3kernel/l3tl-build.sty
 share/texmf-dist/tex/latex/l3kernel/l3tl.sty
 share/texmf-dist/tex/latex/l3kernel/l3token.sty
 share/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
