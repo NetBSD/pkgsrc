@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:15:39 gavan Exp $
+bin/amberc
+gopkg/pkg/${GO_PLATFORM}/github.com/eknkc/amber.a
+gopkg/pkg/${GO_PLATFORM}/github.com/eknkc/amber/parser.a
+gopkg/src/github.com/eknkc/amber/README.md
+gopkg/src/github.com/eknkc/amber/amber_test.go
+gopkg/src/github.com/eknkc/amber/amberc/cli.go
+gopkg/src/github.com/eknkc/amber/compiler.go
+gopkg/src/github.com/eknkc/amber/doc.go
+gopkg/src/github.com/eknkc/amber/parser/nodes.go
+gopkg/src/github.com/eknkc/amber/parser/parser.go
+gopkg/src/github.com/eknkc/amber/parser/scanner.go
+gopkg/src/github.com/eknkc/amber/runtime.go
+gopkg/src/github.com/eknkc/amber/samples/basic.amber
+gopkg/src/github.com/eknkc/amber/samples/basic.output.html
+gopkg/src/github.com/eknkc/amber/samples/compiledir_test/basic.amber
+gopkg/src/github.com/eknkc/amber/samples/compiledir_test/compiledir_test/basic.amber
+gopkg/src/github.com/eknkc/amber/samples/inherit.amber
+gopkg/src/github.com/eknkc/amber/samples/inherit.master.amber
+gopkg/src/github.com/eknkc/amber/samples/inherit.output.html
+gopkg/src/github.com/eknkc/amber/samples/input.amber
+gopkg/src/github.com/eknkc/amber/samples/input.html
+gopkg/src/github.com/eknkc/amber/samples/multilevel.inheritance.a.amber
+gopkg/src/github.com/eknkc/amber/samples/multilevel.inheritance.b.amber
+gopkg/src/github.com/eknkc/amber/samples/multilevel.inheritance.c.amber
