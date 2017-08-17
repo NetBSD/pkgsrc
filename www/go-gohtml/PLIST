@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:49:08 gavan Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/yosssi/gohtml.a
+gopkg/src/github.com/yosssi/gohtml/LICENSE
+gopkg/src/github.com/yosssi/gohtml/README.md
+gopkg/src/github.com/yosssi/gohtml/consts.go
+gopkg/src/github.com/yosssi/gohtml/doc.go
+gopkg/src/github.com/yosssi/gohtml/element.go
+gopkg/src/github.com/yosssi/gohtml/formatter.go
+gopkg/src/github.com/yosssi/gohtml/formatter_test.go
+gopkg/src/github.com/yosssi/gohtml/html_document.go
+gopkg/src/github.com/yosssi/gohtml/html_document_test.go
+gopkg/src/github.com/yosssi/gohtml/parser.go
+gopkg/src/github.com/yosssi/gohtml/parser_test.go
+gopkg/src/github.com/yosssi/gohtml/tag_element.go
+gopkg/src/github.com/yosssi/gohtml/tag_element_test.go
+gopkg/src/github.com/yosssi/gohtml/text_element.go
+gopkg/src/github.com/yosssi/gohtml/text_element_test.go
+gopkg/src/github.com/yosssi/gohtml/utils.go
+gopkg/src/github.com/yosssi/gohtml/utils_test.go
+gopkg/src/github.com/yosssi/gohtml/wercker.yml
+gopkg/src/github.com/yosssi/gohtml/writer.go
+gopkg/src/github.com/yosssi/gohtml/writer_test.go
+@pkgdir bin
