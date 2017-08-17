@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:59:34 gavan Exp $
+bin/crypt
+gopkg/pkg/${GO_PLATFORM}/github.com/xordataexchange/crypt/backend.a
+gopkg/pkg/${GO_PLATFORM}/github.com/xordataexchange/crypt/backend/consul.a
+gopkg/pkg/${GO_PLATFORM}/github.com/xordataexchange/crypt/backend/etcd.a
+gopkg/pkg/${GO_PLATFORM}/github.com/xordataexchange/crypt/backend/mock.a
+gopkg/pkg/${GO_PLATFORM}/github.com/xordataexchange/crypt/config.a
+gopkg/pkg/${GO_PLATFORM}/github.com/xordataexchange/crypt/encoding/secconf.a
+gopkg/src/github.com/xordataexchange/crypt/LICENSE
+gopkg/src/github.com/xordataexchange/crypt/README.md
+gopkg/src/github.com/xordataexchange/crypt/backend/backend.go
+gopkg/src/github.com/xordataexchange/crypt/backend/consul/consul.go
+gopkg/src/github.com/xordataexchange/crypt/backend/etcd/etcd.go
+gopkg/src/github.com/xordataexchange/crypt/backend/mock/mock.go
+gopkg/src/github.com/xordataexchange/crypt/bin/crypt/README.md
+gopkg/src/github.com/xordataexchange/crypt/bin/crypt/cmd.go
+gopkg/src/github.com/xordataexchange/crypt/bin/crypt/main.go
+gopkg/src/github.com/xordataexchange/crypt/config/README.md
+gopkg/src/github.com/xordataexchange/crypt/config/config.go
+gopkg/src/github.com/xordataexchange/crypt/config/config_test.go
+gopkg/src/github.com/xordataexchange/crypt/encoding/secconf/keyring_test.go
+gopkg/src/github.com/xordataexchange/crypt/encoding/secconf/secconf.go
+gopkg/src/github.com/xordataexchange/crypt/encoding/secconf/secconf_test.go
