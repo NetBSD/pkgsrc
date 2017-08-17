@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:37:59 gavan Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/shogo82148/go-shuffle.a
+gopkg/src/github.com/shogo82148/go-shuffle/LICENSE.md
+gopkg/src/github.com/shogo82148/go-shuffle/README.md
+gopkg/src/github.com/shogo82148/go-shuffle/shuffle.go
+gopkg/src/github.com/shogo82148/go-shuffle/shuffle_go17_test.go
+gopkg/src/github.com/shogo82148/go-shuffle/shuffle_slice.go
+gopkg/src/github.com/shogo82148/go-shuffle/shuffle_slice_test.go
+gopkg/src/github.com/shogo82148/go-shuffle/shuffle_test.go
+@pkgdir bin
