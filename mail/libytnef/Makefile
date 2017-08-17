@@ -1,15 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/10/08 12:19:15 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2017/08/17 09:49:47 nros Exp $
 
-DISTNAME=	libytnef-1.5
-CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ytnef/}
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tnef.sourceforge.net/
-COMMENT=	Yerase's TNEF Stream Reader
-
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
+.include "Makefile.common"
+PKGNAME=		lib${DISTNAME}
+COMMENT=        	Yerase's TNEF Stream Reader library
+BUILD_DIRS=		lib
+PKGCONFIG_OVERRIDE=	lib/libytnef.pc.in
 
 .include "../../mk/bsd.pkg.mk"

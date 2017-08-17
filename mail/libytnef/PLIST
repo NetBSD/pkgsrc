@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2008/01/09 03:53:10 smb Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/08/17 09:49:47 nros Exp $
 include/mapi.h
 include/mapidefs.h
 include/mapitags.h
@@ -6,3 +6,4 @@ include/tnef-errors.h
 include/tnef-types.h
 include/ytnef.h
 lib/libytnef.la
+lib/pkgconfig/libytnef.pc
