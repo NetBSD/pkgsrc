@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/17 01:23:10 gavan Exp $
+
+SHA1 (errors-0.6.0.tar.gz) = 1cdcb7955c31269164c1e23f697c72d149b761bc
+RMD160 (errors-0.6.0.tar.gz) = a46a88c12490c1295aff9a981756dccb908fa309
+SHA512 (errors-0.6.0.tar.gz) = bc60e598230c36bd3b81a311c31736ac59a0e88ae2952501422df46437bc35349119fd57df7f0e0d0e39300af7d6d794b3bf5298499729531946499f64643718
+Size (errors-0.6.0.tar.gz) = 7853 bytes
