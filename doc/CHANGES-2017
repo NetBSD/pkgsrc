@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3307 2017/08/17 02:21:08 gavan Exp $
+$NetBSD: CHANGES-2017,v 1.3308 2017/08/17 02:21:19 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4554,3 +4554,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/go-jwalterweatherman version 20170523 [gavan 2017-08-17]
 	Added devel/go-mapstructure version 0.0.20160212 [gavan 2017-08-17]
 	Added textproc/go-md2man version 1.0.6 [gavan 2017-08-17]
+	Added textproc/go-mmark version 1.3.6 [gavan 2017-08-17]
