@@ -1,0 +1,3 @@
+This package provides the consulapi package which attempts to provide programmatic access to the full Consul API.
+
+Currently, all of the Consul APIs included in version 0.4 are supported.
