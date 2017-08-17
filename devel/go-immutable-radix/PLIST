@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:30:27 gavan Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/go-immutable-radix.a
+gopkg/src/github.com/hashicorp/go-immutable-radix/LICENSE
+gopkg/src/github.com/hashicorp/go-immutable-radix/README.md
+gopkg/src/github.com/hashicorp/go-immutable-radix/edges.go
+gopkg/src/github.com/hashicorp/go-immutable-radix/iradix.go
+gopkg/src/github.com/hashicorp/go-immutable-radix/iradix_test.go
+gopkg/src/github.com/hashicorp/go-immutable-radix/iter.go
+gopkg/src/github.com/hashicorp/go-immutable-radix/node.go
+gopkg/src/github.com/hashicorp/go-immutable-radix/raw_iter.go
+@pkgdir bin
