@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3290 2017/08/17 02:17:52 gavan Exp $
+$NetBSD: CHANGES-2017,v 1.3291 2017/08/17 02:18:03 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4537,3 +4537,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/go-cssmin version 0.0.20151210 [gavan 2017-08-17]
 	Added devel/go-emoji version 1.4 [gavan 2017-08-17]
 	Added devel/go-errors version 0.6.0 [gavan 2017-08-17]
+	Added databases/go-etcd version 2.0.0 [gavan 2017-08-17]
