@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2017/08/17 20:12:16 nros Exp $
+# $NetBSD: Makefile,v 1.44 2017/08/17 21:18:31 adam Exp $
 
 PKGREVISION= 1
 .include "../../devel/git/Makefile.common"
@@ -109,6 +109,7 @@ post-install:
 .include "options.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
