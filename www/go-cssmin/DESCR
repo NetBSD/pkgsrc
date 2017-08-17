@@ -1,0 +1,4 @@
+Go port of Ryan Grove's cssmin.
+
+Docs: see http://godoc.org/github.com/dchest/cssmin.
+License: see cssmin.go (BSD).
