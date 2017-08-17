@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3302 2017/08/17 02:20:12 gavan Exp $
+$NetBSD: CHANGES-2017,v 1.3303 2017/08/17 02:20:23 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4549,3 +4549,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/go-homedir version 0.0.20161203 [gavan 2017-08-17]
 	Added devel/go-i18n version 1.8.1 [gavan 2017-08-17]
 	Added graphics/go-image version 20170405 [gavan 2017-08-17]
+	Added devel/go-immutable-radix version 0.0.20170725 [gavan 2017-08-17]
