@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/17 01:37:39 gavan Exp $
+
+SHA1 (sanitized_anchor_name-0.0.20151028-10ef21a441db47d8b13ebcc5fd2310f636973c77.tar.gz) = 6519db9dfef386d944b08f67fe3c0d88aa6b9044
+RMD160 (sanitized_anchor_name-0.0.20151028-10ef21a441db47d8b13ebcc5fd2310f636973c77.tar.gz) = 47498d79b29602f6c63a3c45989a154895c372b9
+SHA512 (sanitized_anchor_name-0.0.20151028-10ef21a441db47d8b13ebcc5fd2310f636973c77.tar.gz) = 06b8bf3f8d89a93c565de9b4219211ad08c91b2442ba31ef8bffa02c7ee823ae4f57ed8b39b4ac1eb326e5d12c65b56b16833c28fc97623c732bb6ea685a3c2a
+Size (sanitized_anchor_name-0.0.20151028-10ef21a441db47d8b13ebcc5fd2310f636973c77.tar.gz) = 1941 bytes

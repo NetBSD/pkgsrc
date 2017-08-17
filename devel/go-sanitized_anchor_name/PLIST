@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:37:39 gavan Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/shurcooL/sanitized_anchor_name.a
+gopkg/src/github.com/shurcooL/sanitized_anchor_name/LICENSE
+gopkg/src/github.com/shurcooL/sanitized_anchor_name/README.md
+gopkg/src/github.com/shurcooL/sanitized_anchor_name/main.go
+gopkg/src/github.com/shurcooL/sanitized_anchor_name/main_test.go
+@pkgdir bin
