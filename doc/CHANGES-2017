@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3339 2017/08/17 13:53:30 wen Exp $
+$NetBSD: CHANGES-2017,v 1.3340 2017/08/17 14:00:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4634,3 +4634,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/p5-Email-MIME-ContentType to 1.021 [wen 2017-08-17]
 	Updated mail/p5-Email-MIME-RFC2047 to 0.97 [wen 2017-08-17]
 	Added math/p5-Math-Utils version 1.11 [wen 2017-08-17]
+	Updated math/p5-Math-Derivative to 1.01 [wen 2017-08-17]
