@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/06/16 04:05:59 markd Exp $
+$NetBSD: distinfo,v 1.6 2017/08/17 04:30:59 markd Exp $
 
-SHA1 (tex-algorithm2e-38805/algorithm2e.tar.xz) = a1c15fb07f023fa8da9fcd8d19b7b35883f052ff
-RMD160 (tex-algorithm2e-38805/algorithm2e.tar.xz) = 12c5a04fa5f90073517e8cbd3d69bc54178ebe94
-SHA512 (tex-algorithm2e-38805/algorithm2e.tar.xz) = e0ad7d7839326bf916ec028d0c3181afd83e7e448ab0fa71de74047f0eacf7a5d60a0de5e4eb92256dff93fc10107a4bbd1994720e2d529800f03a3691a6f51d
-Size (tex-algorithm2e-38805/algorithm2e.tar.xz) = 32572 bytes
+SHA1 (tex-algorithm2e-44846/algorithm2e.tar.xz) = 23335d839b23cecc34cb3cf6de6afc986049c8c0
+RMD160 (tex-algorithm2e-44846/algorithm2e.tar.xz) = 5d57a9492fb923208227d23ad254481a1f6b4fb2
+SHA512 (tex-algorithm2e-44846/algorithm2e.tar.xz) = 1ca0fc68bf709013371c4ee11c802c9aa89808da7313ed0542d7f511705180f2d23cfb9f06a775745a280d929da65af67e5b4b8b712663753454fa5e3b70de2c
+Size (tex-algorithm2e-44846/algorithm2e.tar.xz) = 32876 bytes
