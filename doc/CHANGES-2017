@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3280 2017/08/17 02:15:21 gavan Exp $
+$NetBSD: CHANGES-2017,v 1.3281 2017/08/17 02:15:39 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4527,3 +4527,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/go-ace version 0.0.4b [gavan 2017-08-17]
 	Added devel/go-afero version 0.0.20160605 [gavan 2017-08-17]
 	Added devel/go-amber version 0.0.20160421 [gavan 2017-08-17]
+	Added devel/go-blackfriday version 1.4 [gavan 2017-08-17]
