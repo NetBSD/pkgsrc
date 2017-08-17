@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2017/08/02 16:32:03 taca Exp $
+# $NetBSD: Makefile,v 1.5 2017/08/17 06:28:10 taca Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
 PKGNAME=	${PHP_PKG_PREFIX}-contao${CT_VER}-${CT_VERSION}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=contao/}
 GITHUB_PROJECT=	managed-edition
@@ -16,7 +15,6 @@ LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.6:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.6:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.6:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=5.6:../../databases/php-pdo_mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-soap>=5.6:../../net/php-soap
 DEPENDS+=	${PHP_PKG_PREFIX}-intl>=5.6:../../textproc/php-intl
@@ -25,7 +23,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.6:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.6:../../archivers/php-zlib
 DEPENDS+=	bash>=4.0:../../shells/bash
 
-CT_VERSION=	4.4.2
+CT_VERSION=	4.4.3
 USE_TOOLS=	bash pax
 NO_BUILD=	yes
 
