@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3283 2017/08/17 02:16:10 gavan Exp $
+$NetBSD: CHANGES-2017,v 1.3284 2017/08/17 02:16:37 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4530,3 +4530,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/go-blackfriday version 1.4 [gavan 2017-08-17]
 	Added devel/go-buffruneio version 0.2.0 [gavan 2017-08-17]
 	Added devel/go-cast version 1.1.0 [gavan 2017-08-17]
+	Added devel/go-cli version 1.20.0 [gavan 2017-08-17]
