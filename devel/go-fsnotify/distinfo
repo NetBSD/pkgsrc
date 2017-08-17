@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/17 01:24:45 gavan Exp $
+
+SHA1 (fsnotify-1.3.0.tar.gz) = 3205a7820140c6af7b6a9c5f03c1a6f5f005f666
+RMD160 (fsnotify-1.3.0.tar.gz) = db315b48fb406e45c337453721397066f4bc491d
+SHA512 (fsnotify-1.3.0.tar.gz) = ae51da0dac0e7d4bfae86e758aac27049067743ed2d875bd5fb33275595d6dec49851da45580c4fe75241e3b1bb6c956c0e3a7a48f217f0cc2c33d33a74647ef
+Size (fsnotify-1.3.0.tar.gz) = 28389 bytes
