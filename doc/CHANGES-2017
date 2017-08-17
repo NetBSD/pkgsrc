@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3287 2017/08/17 02:17:18 gavan Exp $
+$NetBSD: CHANGES-2017,v 1.3288 2017/08/17 02:17:31 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4534,3 +4534,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/go-cobra version 0.0.20170815 [gavan 2017-08-17]
 	Added devel/go-consul-api version 0.0.20150107 [gavan 2017-08-17]
 	Added security/go-crypt version 0.0.2b [gavan 2017-08-17]
+	Added www/go-cssmin version 0.0.20151210 [gavan 2017-08-17]
