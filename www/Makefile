@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1259 2017/07/18 14:29:51 hauke Exp $
+# $NetBSD: Makefile,v 1.1260 2017/08/17 01:53:08 gavan Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -135,6 +135,11 @@ SUBDIR+=	gallery2
 SUBDIR+=	ganglia-webfrontend
 SUBDIR+=	geeklog
 SUBDIR+=	gitweb
+SUBDIR+=	go-ace
+SUBDIR+=	go-cssmin
+SUBDIR+=	go-gohtml
+SUBDIR+=	go-toml-burntsushi
+SUBDIR+=	go-toml-pelletier
 SUBDIR+=	goaccess
 SUBDIR+=	grafana
 SUBDIR+=	gtkasp2php
@@ -154,6 +159,7 @@ SUBDIR+=	htmlfix
 SUBDIR+=	htmllint
 SUBDIR+=	http-parser
 SUBDIR+=	http_load
+SUBDIR+=	hugo
 SUBDIR+=	icedtea-web
 SUBDIR+=	ies4linux
 SUBDIR+=	ijb
