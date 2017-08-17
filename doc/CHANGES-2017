@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3324 2017/08/17 02:24:21 gavan Exp $
+$NetBSD: CHANGES-2017,v 1.3325 2017/08/17 02:24:34 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4571,3 +4571,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/go-viper version 0.0.20170723 [gavan 2017-08-17]
 	Added net/go-websocket version 1.0.0 [gavan 2017-08-17]
 	Added devel/go-yaml version 0.0.20160301 [gavan 2017-08-17]
+	Added www/hugo version 0.26 [gavan 2017-08-17]
