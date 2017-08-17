@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2017/04/30 01:21:25 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2017/08/17 15:13:15 schmonz Exp $
 
 BUILDLINK_TREE+=	curl
 
@@ -23,8 +23,8 @@ pkgbase:= curl
 .if !empty(PKG_BUILD_OPTIONS.curl:Mrtmp)
 .  include "../../net/rtmpdump/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.curl:Mlibidn)
-.  include "../../devel/libidn/buildlink3.mk"
+.if !empty(PKG_BUILD_OPTIONS.curl:Midn)
+.  include "../../devel/libidn2/buildlink3.mk"
 .endif
 .if !empty(PKG_BUILD_OPTIONS.curl:Mhttp2)
 .  include "../../www/nghttp2/buildlink3.mk"
