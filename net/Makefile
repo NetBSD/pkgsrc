@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1170 2017/08/01 17:12:49 wiz Exp $
+# $NetBSD: Makefile,v 1.1171 2017/08/17 02:06:24 gavan Exp $
 #
 
 COMMENT=	Networking tools
@@ -180,6 +180,7 @@ SUBDIR+=	go-grpc
 SUBDIR+=	go-net
 SUBDIR+=	go-ovh
 SUBDIR+=	go-vultr
+SUBDIR+=	go-websocket
 SUBDIR+=	gofish
 SUBDIR+=	gopher
 SUBDIR+=	grilo
