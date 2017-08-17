@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/17 01:59:47 gavan Exp $
+
+SHA1 (sftp-1.0.0.tar.gz) = e3abad954193e8f7edbf1c8f22e5071fd63cd99f
+RMD160 (sftp-1.0.0.tar.gz) = 7787f74010e96caf11fe8a849419fba82238b25c
+SHA512 (sftp-1.0.0.tar.gz) = 9e3d7276bbb7f69b1fc50bf0fffa4ca8dea2fafe540bec40c0402f8631a7bfd2d1652743ba075e569218c3789fdb678ecac019b6b60654da61d8e43bf887135e
+Size (sftp-1.0.0.tar.gz) = 60874 bytes
