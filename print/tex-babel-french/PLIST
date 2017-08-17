@@ -1,3 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/04 12:29:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/08/17 03:35:37 markd Exp $
+share/texmf-dist/tex/generic/babel-french/acadian.ldf
+share/texmf-dist/tex/generic/babel-french/canadien.ldf
+share/texmf-dist/tex/generic/babel-french/francais.ldf
+share/texmf-dist/tex/generic/babel-french/french.ldf
 share/texmf-dist/tex/generic/babel-french/frenchb.ldf
 share/texmf-dist/tex/generic/babel-french/frenchb.lua
