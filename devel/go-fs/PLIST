@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:23:52 gavan Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/kr/fs.a
+gopkg/src/github.com/kr/fs/LICENSE
+gopkg/src/github.com/kr/fs/Readme
+gopkg/src/github.com/kr/fs/example_test.go
+gopkg/src/github.com/kr/fs/filesystem.go
+gopkg/src/github.com/kr/fs/walk.go
+gopkg/src/github.com/kr/fs/walk_test.go
+@pkgdir bin
