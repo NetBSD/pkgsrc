@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 02:02:27 gavan Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/coreos/go-etcd/etcd.a
+gopkg/src/github.com/coreos/go-etcd/LICENSE
+gopkg/src/github.com/coreos/go-etcd/README.md
+gopkg/src/github.com/coreos/go-etcd/etcd/add_child.go
+gopkg/src/github.com/coreos/go-etcd/etcd/add_child_test.go
+gopkg/src/github.com/coreos/go-etcd/etcd/client.go
+gopkg/src/github.com/coreos/go-etcd/etcd/client_test.go
+gopkg/src/github.com/coreos/go-etcd/etcd/cluster.go
+gopkg/src/github.com/coreos/go-etcd/etcd/compare_and_delete.go
+gopkg/src/github.com/coreos/go-etcd/etcd/compare_and_delete_test.go
+gopkg/src/github.com/coreos/go-etcd/etcd/compare_and_swap.go
+gopkg/src/github.com/coreos/go-etcd/etcd/compare_and_swap_test.go
+gopkg/src/github.com/coreos/go-etcd/etcd/debug.go
+gopkg/src/github.com/coreos/go-etcd/etcd/debug_test.go
+gopkg/src/github.com/coreos/go-etcd/etcd/delete.go
+gopkg/src/github.com/coreos/go-etcd/etcd/delete_test.go
+gopkg/src/github.com/coreos/go-etcd/etcd/error.go
+gopkg/src/github.com/coreos/go-etcd/etcd/get.go
+gopkg/src/github.com/coreos/go-etcd/etcd/get_test.go
+gopkg/src/github.com/coreos/go-etcd/etcd/member.go
+gopkg/src/github.com/coreos/go-etcd/etcd/member_test.go
+gopkg/src/github.com/coreos/go-etcd/etcd/options.go
+gopkg/src/github.com/coreos/go-etcd/etcd/requests.go
+gopkg/src/github.com/coreos/go-etcd/etcd/requests_test.go
+gopkg/src/github.com/coreos/go-etcd/etcd/response.go
+gopkg/src/github.com/coreos/go-etcd/etcd/set_curl_chan_test.go
+gopkg/src/github.com/coreos/go-etcd/etcd/set_update_create.go
+gopkg/src/github.com/coreos/go-etcd/etcd/set_update_create_test.go
+gopkg/src/github.com/coreos/go-etcd/etcd/version.go
+gopkg/src/github.com/coreos/go-etcd/etcd/watch.go
+gopkg/src/github.com/coreos/go-etcd/etcd/watch_test.go
+@pkgdir bin
