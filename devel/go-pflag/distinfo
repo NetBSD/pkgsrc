@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/17 01:36:26 gavan Exp $
+
+SHA1 (pflag-1.0.0.tar.gz) = bd8b8ba3a2a3f55be98a28b55d0e867ef74e50c8
+RMD160 (pflag-1.0.0.tar.gz) = 65c8e80a001a4e72190030b3eaaa3273fcc97e48
+SHA512 (pflag-1.0.0.tar.gz) = 44355d7cec724b947482d9dbbf84b387fc11b8a00bd42579bb99b3da5849fcb22a134a255e2f941d4594481cadd2b497c9c96b748d68c6f0dff29575eac6c616
+Size (pflag-1.0.0.tar.gz) = 38988 bytes
