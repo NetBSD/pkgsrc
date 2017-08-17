@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3344 2017/08/17 19:58:15 nros Exp $
+$NetBSD: CHANGES-2017,v 1.3345 2017/08/17 20:09:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4639,3 +4639,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/libbson to 1.7.0 [fhajny 2017-08-17]
 	Updated databases/mongo-c-driver to 1.7.0 [fhajny 2017-08-17]
 	Updated devel/pcre2 to 10.30 [nros 2017-08-17]
+	Updated devel/libuv to 1.14.0 [adam 2017-08-17]
+	Updated graphics/openjpeg to 2.2.0 [adam 2017-08-17]
