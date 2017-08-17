@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3318 2017/08/17 02:23:10 gavan Exp $
+$NetBSD: CHANGES-2017,v 1.3319 2017/08/17 02:23:22 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4565,3 +4565,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added textproc/go-sentences version 1.0.6 [gavan 2017-08-17]
 	Added security/go-sftp version 1.0.0 [gavan 2017-08-17]
 	Added devel/go-shuffle version 0.0.20170808 [gavan 2017-08-17]
+	Added math/go-stats version 0.2.0.20170729 [gavan 2017-08-17]
