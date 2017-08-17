@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2483 2017/08/14 21:14:36 triaxx Exp $
+# $NetBSD: Makefile,v 1.2484 2017/08/17 01:45:23 gavan Exp $
 #
 
 COMMENT=	Development utilities
@@ -301,20 +301,50 @@ SUBDIR+=	gnustep-examples
 SUBDIR+=	gnustep-make
 SUBDIR+=	gnustep-objc
 SUBDIR+=	gnustep-objc-lf2
+SUBDIR+=	go-afero
+SUBDIR+=	go-amber
+SUBDIR+=	go-blackfriday
+SUBDIR+=	go-buffruneio
+SUBDIR+=	go-cast
 SUBDIR+=	go-check
+SUBDIR+=	go-cli
+SUBDIR+=	go-cobra
+SUBDIR+=	go-consul-api
+SUBDIR+=	go-emoji
+SUBDIR+=	go-errors
 SUBDIR+=	go-flags-svent
+SUBDIR+=	go-fs
+SUBDIR+=	go-fsnotify
+SUBDIR+=	go-fsync
+SUBDIR+=	go-gitmap
 SUBDIR+=	go-glog
 SUBDIR+=	go-gls
+SUBDIR+=	go-golang-lru
+SUBDIR+=	go-goorgeous
+SUBDIR+=	go-homedir
+SUBDIR+=	go-i18n
+SUBDIR+=	go-immutable-radix
 SUBDIR+=	go-ini
+SUBDIR+=	go-jwalterweatherman
+SUBDIR+=	go-mapstructure
 SUBDIR+=	go-mow-cli
+SUBDIR+=	go-nitro
 SUBDIR+=	go-nbreader
+SUBDIR+=	go-osext
+SUBDIR+=	go-pflag
+SUBDIR+=	go-properties
 SUBDIR+=	go-protobuf
+SUBDIR+=	go-purell
 SUBDIR+=	go-ratelimit
 SUBDIR+=	go-review
+SUBDIR+=	go-sanitized_anchor_name
+SUBDIR+=	go-shuffle
 SUBDIR+=	go-sys
 SUBDIR+=	go-termbox
 SUBDIR+=	go-testify
 SUBDIR+=	go-tools
+SUBDIR+=	go-viper
+SUBDIR+=	go-yaml
 SUBDIR+=	gob2
 SUBDIR+=	gobject-introspection
 SUBDIR+=	golint
