@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:21:41 gavan Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/armon/consul-api.a
+gopkg/src/github.com/armon/consul-api/LICENSE
+gopkg/src/github.com/armon/consul-api/README.md
+gopkg/src/github.com/armon/consul-api/acl.go
+gopkg/src/github.com/armon/consul-api/acl_test.go
+gopkg/src/github.com/armon/consul-api/agent.go
+gopkg/src/github.com/armon/consul-api/agent_test.go
+gopkg/src/github.com/armon/consul-api/api.go
+gopkg/src/github.com/armon/consul-api/api_test.go
+gopkg/src/github.com/armon/consul-api/catalog.go
+gopkg/src/github.com/armon/consul-api/catalog_test.go
+gopkg/src/github.com/armon/consul-api/event.go
+gopkg/src/github.com/armon/consul-api/event_test.go
+gopkg/src/github.com/armon/consul-api/health.go
+gopkg/src/github.com/armon/consul-api/health_test.go
+gopkg/src/github.com/armon/consul-api/kv.go
+gopkg/src/github.com/armon/consul-api/kv_test.go
+gopkg/src/github.com/armon/consul-api/session.go
+gopkg/src/github.com/armon/consul-api/session_test.go
+gopkg/src/github.com/armon/consul-api/status.go
+gopkg/src/github.com/armon/consul-api/status_test.go
+@pkgdir bin
