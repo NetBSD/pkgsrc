@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3334 2017/08/17 12:49:55 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.3335 2017/08/17 13:17:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4623,3 +4623,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added mail/ytnef version 1.9.2 [nros 2017-08-17]
 	Updated www/firefox to 55.0.2 [ryoon 2017-08-17]
 	Updated www/firefox-l10n to 55.0.2 [ryoon 2017-08-17]
+	Updated databases/py-redis to 2.10.6 [adam 2017-08-17]
