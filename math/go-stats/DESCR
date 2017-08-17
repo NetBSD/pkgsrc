@@ -1,0 +1,4 @@
+A statistics package with many functions missing from the Golang standard library. See the CHANGELOG.md for API changes and tagged releases you can vendor into your projects.
+
+    Statistics are used much like a drunk uses a lamppost: for support, not illumination. - Vin Scully
+
