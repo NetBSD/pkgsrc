@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3342 2017/08/17 17:00:57 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3343 2017/08/17 17:04:46 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4637,3 +4637,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/p5-Math-Derivative to 1.01 [wen 2017-08-17]
 	Added www/trafficserver version 7.1.0 [fhajny 2017-08-17]
 	Updated devel/libbson to 1.7.0 [fhajny 2017-08-17]
+	Updated databases/mongo-c-driver to 1.7.0 [fhajny 2017-08-17]
