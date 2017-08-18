@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2016/10/09 14:10:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.23 2017/08/18 10:43:04 taca Exp $
 bin/rmsgcat${RUBY_SUFFIX}
 bin/rmsgfmt${RUBY_SUFFIX}
 bin/rmsginit${RUBY_SUFFIX}
@@ -1365,6 +1365,7 @@ ${GEM_LIBDIR}/samples/po/zh_TW/hello_tk.po
 ${GEM_LIBDIR}/samples/po/zh_TW/hello_tk.po.time_stamp
 ${GEM_LIBDIR}/src/po_parser.ry
 ${GEM_LIBDIR}/test/fixtures/_.rb
+${GEM_LIBDIR}/test/fixtures/_/block_parameter.rb
 ${GEM_LIBDIR}/test/fixtures/_/double_quote_in_double_quote.rb
 ${GEM_LIBDIR}/test/fixtures/_/double_quote_in_single_quote.rb
 ${GEM_LIBDIR}/test/fixtures/_/literal_concatenation_with_continuation_line.rb
