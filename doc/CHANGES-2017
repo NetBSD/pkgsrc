@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3362 2017/08/18 13:55:11 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.3363 2017/08/18 15:01:54 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4659,3 +4659,25 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/php-nextcloud to 12.0.2 [ryoon 2017-08-18]
 	Updated lang/oracle-jre8 to 8.0.144 [ryoon 2017-08-18]
 	Updated lang/oracle-jdk8 to 8.0.144 [ryoon 2017-08-18]
+	Updated devel/ruby-gnome2-atk to 3.1.8 [tsutsui 2017-08-18]
+	Updated devel/ruby-gnome2-gio to 3.1.8 [tsutsui 2017-08-18]
+	Updated devel/ruby-gnome2-glib to 3.1.8 [tsutsui 2017-08-18]
+	Updated devel/ruby-gnome2-gobject-introspection to 3.1.8 [tsutsui 2017-08-18]
+	Updated devel/ruby-gnome2-pango to 3.1.8 [tsutsui 2017-08-18]
+	Updated graphics/ruby-gnome2-cairo-gobject to 3.1.8 [tsutsui 2017-08-18]
+	Updated graphics/ruby-gnome2-clutter to 3.1.8 [tsutsui 2017-08-18]
+	Updated graphics/ruby-gnome2-clutter-gdk to 3.1.8 [tsutsui 2017-08-18]
+	Updated graphics/ruby-gnome2-clutter-gtk to 3.1.8 [tsutsui 2017-08-18]
+	Updated graphics/ruby-gnome2-gdk3 to 3.1.8 [tsutsui 2017-08-18]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 3.1.8 [tsutsui 2017-08-18]
+	Updated graphics/ruby-gnome2-rsvg to 3.1.8 [tsutsui 2017-08-18]
+	Updated multimedia/ruby-gnome2-clutter-gstreamer to 3.1.8 [tsutsui 2017-08-18]
+	Updated multimedia/ruby-gnome2-gstreamer to 3.1.8 [tsutsui 2017-08-18]
+	Updated print/ruby-gnome2-poppler to 3.1.8 [tsutsui 2017-08-18]
+	Updated www/ruby-gnome2-webkit-gtk to 3.1.8 [tsutsui 2017-08-18]
+	Updated www/ruby-gnome2-webkit-gtk2 to 3.1.8 [tsutsui 2017-08-18]
+	Updated x11/ruby-gnome2-gtk to 3.1.8 [tsutsui 2017-08-18]
+	Updated x11/ruby-gnome2-gtk3 to 3.1.8 [tsutsui 2017-08-18]
+	Updated x11/ruby-gnome2-gtksourceview2 to 3.1.8 [tsutsui 2017-08-18]
+	Updated x11/ruby-gnome2-gtksourceview3 to 3.1.8 [tsutsui 2017-08-18]
+	Updated x11/ruby-gnome2-vte to 3.1.8 [tsutsui 2017-08-18]
