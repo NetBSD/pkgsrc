@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3363 2017/08/18 15:01:54 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.3364 2017/08/18 21:05:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4681,3 +4681,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/ruby-gnome2-gtksourceview2 to 3.1.8 [tsutsui 2017-08-18]
 	Updated x11/ruby-gnome2-gtksourceview3 to 3.1.8 [tsutsui 2017-08-18]
 	Updated x11/ruby-gnome2-vte to 3.1.8 [tsutsui 2017-08-18]
+	Updated archivers/lzip to 1.19 [adam 2017-08-18]
+	Updated archivers/lziprecover to 1.19 [adam 2017-08-18]
+	Updated devel/libidn2 to 2.0.3 [adam 2017-08-18]
