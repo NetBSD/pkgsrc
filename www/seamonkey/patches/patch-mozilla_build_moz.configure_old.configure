@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_build_moz.configure_old.configure,v 1.1 2017/01/01 16:14:07 ryoon Exp $
+$NetBSD: patch-mozilla_build_moz.configure_old.configure,v 1.2 2017/08/18 23:55:07 ryoon Exp $
 
---- mozilla/build/moz.configure/old.configure.orig	2016-12-14 02:09:43.000000000 +0000
+--- mozilla/build/moz.configure/old.configure.orig	2017-07-07 05:35:47.000000000 +0000
 +++ mozilla/build/moz.configure/old.configure
 @@ -159,6 +159,7 @@ def old_configure_options(*options):
      '--enable-accessibility',
@@ -8,25 +8,23 @@ $NetBSD: patch-mozilla_build_moz.configure_old.configure,v 1.1 2017/01/01 16:14:
      '--enable-alsa',
 +    '--enable-alsa-dlopen',
      '--enable-android-omx',
-     '--enable-approximate-location',
      '--enable-b2g-bt',
-@@ -262,6 +263,7 @@ def old_configure_options(*options):
+     '--enable-b2g-camera',
+@@ -241,6 +242,7 @@ def old_configure_options(*options):
+     '--enable-url-classifier',
+     '--enable-valgrind',
      '--enable-verify-mar',
-     '--enable-warnings-as-errors',
-     '--enable-webapp-runtime',
 +    '--enable-webm',
      '--enable-webrtc',
-     '--enable-websms-backend',
-     '--enable-webspeech',
-@@ -310,6 +312,7 @@ def old_configure_options(*options):
+     '--enable-xul',
+     '--enable-zipwriter',
+@@ -279,18 +281,26 @@ def old_configure_options(*options):
      '--with-nspr-prefix',
      '--with-nss-exec-prefix',
      '--with-nss-prefix',
 +    '--with-oss',
      '--with-pthreads',
      '--with-qemu-exe',
-     '--with-qtdir',
-@@ -317,13 +320,20 @@ def old_configure_options(*options):
      '--with-sixgill',
      '--with-soft-float',
      '--with-system-bz2',
