@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2017/03/12 14:28:26 taca Exp $
+# $NetBSD: Makefile,v 1.4 2017/08/18 10:14:21 taca Exp $
 #
 
 MODNAME=	redis3
 PKGMODNAME=	redis
-PECL_VERSION=	3.1.1
+PECL_VERSION=	3.1.3
 PECL_LEGACY_VERSION_SCHEME=	yes
 PECL_DISTNAME=	${PECL_VERSION}
 CATEGORIES=	databases
