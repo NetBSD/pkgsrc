@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.7 2017/07/24 09:39:42 maya Exp $
+# $NetBSD: Makefile.common,v 1.8 2017/08/18 15:19:49 gdt Exp $
 #
-# used by clamav/Makefile
-# used by clamav-doc/Makefile
+# used by security/clamav/Makefile
+# used by security/clamav-doc/Makefile
 
 DISTNAME=	clamav-0.99.2
-PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://www.clamav.net/downloads/production/
 
@@ -13,3 +12,4 @@ HOMEPAGE=	http://www.clamav.net/
 LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../security/clamav/distinfo
+PATCHDIR=	${.CURDIR}/../../security/clamav/patches
