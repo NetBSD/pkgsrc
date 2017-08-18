@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2017/08/15 10:57:35 triaxx Exp $
+# $NetBSD: Makefile,v 1.60 2017/08/18 10:16:11 triaxx Exp $
 #
 
 DISTNAME=	awesome-4.2
@@ -26,6 +26,7 @@ CONFIGURE_DIRS=	${WRKDIR}/build
 CMAKE_ARG_PATH=	${WRKSRC}
 
 CMAKE_ARGS+=	-DCOMPRESS_MANPAGES=${MANZ:Q}
+CMAKE_ARGS+=	-DAWESOME_MAN_PATH=${PREFIX}/${PKGMANDIR}
 CMAKE_ARGS+=	-DOVERRIDE_VERSION=${PKGVERSION_NOREV}
 CMAKE_ARGS+=	-DLUA_INCLUDE_DIR=${PREFIX}/${LUA_INCDIR}
 
@@ -44,6 +45,12 @@ SUBST_STAGE.lua=	pre-configure
 SUBST_FILES.lua=	CMakeLists.txt awesomeConfig.cmake build-utils/lgi-check.sh \
 			tests/examples/CMakeLists.txt
 SUBST_SED.lua=		-e "s,@LUA_INTERPRETER@,${LUA_INTERPRETER},"
+
+SUBST_CLASSES+=		ldoc
+SUBST_MESSAGE.ldoc=	Fixing ldoc executable
+SUBST_STAGE.ldoc=	pre-configure
+SUBST_FILES.ldoc=	awesomeConfig.cmake
+SUBST_SED.ldoc=		-e "s,@LDOC_EXECUTABLE@,ldoc${_LUA_DOT_VERSION},"
 
 BUILD_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
 BUILD_DEPENDS+=		asciidoc>=8.3.0:../../textproc/asciidoc

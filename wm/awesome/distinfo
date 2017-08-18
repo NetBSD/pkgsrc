@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.19 2017/08/15 10:57:35 triaxx Exp $
+$NetBSD: distinfo,v 1.20 2017/08/18 10:16:11 triaxx Exp $
 
 SHA1 (awesome-4.2.tar.gz) = e9c6cfb55ffbd81fbf6a9842552215fa8d03fc93
 RMD160 (awesome-4.2.tar.gz) = 582a786bed138cf094948150975bf66b206bd2d1
 SHA512 (awesome-4.2.tar.gz) = 4cca2edd48f2299732e009a3aeaf6a2f5c2b95f4e4b93705c13102f70dbe4ea83306430b69264315d8686ca6746f870b6b9ac3edfdf63a82623508589179a772
 Size (awesome-4.2.tar.gz) = 1133897 bytes
 SHA1 (patch-CMakeLists.txt) = 8fbf701c730badb73c0e5cee270a8dd4188c7b6f
-SHA1 (patch-awesomeConfig.cmake) = f0ef2657fb8d87643e3e7605e20dfd74658a8bf4
+SHA1 (patch-awesomeConfig.cmake) = 363032da4186a79eee01d6ce91e404add590e99c
 SHA1 (patch-build-utils_lgi-check.sh) = 3a76c9f56871c4379b1af388bee2e137e5e5bd8d
 SHA1 (patch-tests_examples_CMakeLists.txt) = d9f4a3e3d2287fd6eaca7476088bac76f5445e12
