@@ -1,8 +1,8 @@
-$NetBSD: patch-src_Makefile.in,v 1.5 2017/01/25 10:02:16 adam Exp $
+$NetBSD: patch-src_Makefile.in,v 1.6 2017/08/18 21:47:51 adam Exp $
 
 Use external zlib.
 
---- src/Makefile.in.orig	2017-01-22 07:00:00.000000000 +0000
+--- src/Makefile.in.orig	2017-07-25 07:00:00.000000000 +0000
 +++ src/Makefile.in
 @@ -94,7 +94,7 @@ am__uninstall_files_from_dir = { \
    }
@@ -37,8 +37,8 @@ Use external zlib.
 +-I$(srcdir)/simplex
  
  libglpk_la_LDFLAGS = \
- -version-info 42:0:2 \
-@@ -504,22 +497,7 @@ simplex/spxprim.c \
+ -version-info 42:2:2 \
+@@ -505,22 +498,7 @@ simplex/spxprim.c \
  simplex/spxprob.c \
  simplex/spychuzc.c \
  simplex/spychuzr.c \
