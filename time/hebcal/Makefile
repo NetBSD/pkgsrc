@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2016/07/09 06:39:08 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/08/18 01:14:32 jlam Exp $
 #
 
 DISTNAME=	hebcal-3.11
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hebcal/}
 
@@ -18,5 +18,11 @@ USE_TOOLS+=	gmake
 USE_TOOLS+=	perl
 USE_TOOLS+=	m4
 USE_TOOLS+=	makeinfo
+
+# Remove an empty hebcal.info file to force it to be generated
+# properly during the build.
+#
+post-extract:
+	${RUN}${RM} -f ${WRKSRC}/doc/*.info
 
 .include "../../mk/bsd.pkg.mk"
