@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3355 2017/08/18 10:42:10 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3356 2017/08/18 10:43:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4651,3 +4651,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/ruby-sequel to 4.49.0 [taca 2017-08-18]
 	Removed devel/lua-doc successor converters/libwps [triaxx 2017-08-18]
 	Updated devel/ruby-fast_gettext to 1.5.1 [taca 2017-08-18]
+	Updated devel/ruby-gettext to 3.2.4 [taca 2017-08-18]
