@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.36 2017/08/17 15:13:15 schmonz Exp $
+# $NetBSD: buildlink3.mk,v 1.37 2017/08/18 21:08:03 adam Exp $
 
 BUILDLINK_TREE+=	curl
 
@@ -30,6 +30,7 @@ pkgbase:= curl
 .  include "../../www/nghttp2/buildlink3.mk"
 .endif
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .endif # CURL_BUILDLINK3_MK
