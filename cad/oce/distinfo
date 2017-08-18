@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2017/05/15 12:31:38 fhajny Exp $
+$NetBSD: distinfo,v 1.3 2017/08/18 10:08:40 fhajny Exp $
 
-SHA1 (OCE-0.18.1.tar.gz) = 0740c8e3d6751050ac87610fed5b5dd994155020
-RMD160 (OCE-0.18.1.tar.gz) = 0952a711a1050405571422b18e84c47ab1a5e95b
-SHA512 (OCE-0.18.1.tar.gz) = f5de2ded128d452a032083dd923a0b80b3909e7f26823e5d36018d0714be354aaf4b9bf07327251206cba0b3b7aabf5fd9e03cd5887a2dd2a2554f9df3740730
-Size (OCE-0.18.1.tar.gz) = 24634500 bytes
+SHA1 (OCE-0.18.2.tar.gz) = 2082486cc017e15adfee0f8d2a2c9a7d2a794d04
+RMD160 (OCE-0.18.2.tar.gz) = 4514c7837a1fd2952e63a19f92f47b55e139efe1
+SHA512 (OCE-0.18.2.tar.gz) = c091823e143e3d18253175d58733f023b6fb35afe1c1622a5c4d31825a131d2671b7dac811c10cfa7c58a04bab4a4dc34a67324b36483cff245da89302e06b5b
+Size (OCE-0.18.2.tar.gz) = 24634966 bytes
 SHA1 (patch-CMakeLists.txt) = 572853b493ce8551f1d910c897271827943b595a
 SHA1 (patch-adm_cmake_TKernel_CMakeLists.txt) = acb153e88ce92c7f651a2762de5a60a51d1af5dd
 SHA1 (patch-src_MeshVS_MeshVS__MeshPrsBuilder.cxx) = f4778ecd72e5f984f316e85e535a7418ca7ae806
