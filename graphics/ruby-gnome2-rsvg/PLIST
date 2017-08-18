@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/06/10 08:27:20 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/08/18 14:58:50 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_LIBDIR}/Rakefile
@@ -9,6 +9,8 @@ ${GEM_LIBDIR}/lib/rsvg2/dimension-data.rb
 ${GEM_LIBDIR}/lib/rsvg2/handle.rb
 ${GEM_LIBDIR}/lib/rsvg2/loader.rb
 ${GEM_LIBDIR}/lib/rsvg2/version.rb
+${GEM_LIBDIR}/sample/svg-viewer.rb
+${GEM_LIBDIR}/sample/svg2.rb
 ${GEM_LIBDIR}/test/rsvg2-test-utils.rb
 ${GEM_LIBDIR}/test/run-test.rb
 ${GEM_LIBDIR}/test/test-handle.rb
