@@ -1,9 +1,18 @@
-$NetBSD: patch-awesomeConfig.cmake,v 1.4 2017/08/15 10:57:35 triaxx Exp $
+$NetBSD: patch-awesomeConfig.cmake,v 1.5 2017/08/18 10:16:11 triaxx Exp $
 
 Use pkgsrc lua interpreter instead of builtin one.
 
 --- awesomeConfig.cmake.orig	2017-07-15 13:53:13.000000000 +0000
 +++ awesomeConfig.cmake
+@@ -40,7 +40,7 @@ a_find_program(XMLTO_EXECUTABLE xmlto FA
+ a_find_program(GZIP_EXECUTABLE gzip FALSE)
+ # Lua documentation
+ if(GENERATE_DOC)
+-    a_find_program(LDOC_EXECUTABLE ldoc FALSE)
++    a_find_program(LDOC_EXECUTABLE @LDOC_EXECUTABLE@ FALSE)
+     if(NOT LDOC_EXECUTABLE)
+         a_find_program(LDOC_EXECUTABLE ldoc.lua FALSE)
+     endif()
 @@ -361,7 +361,7 @@ file(MAKE_DIRECTORY ${BUILD_DIR}/script_
  
  add_custom_command(

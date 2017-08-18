@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/08/15 10:57:35 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/08/18 10:16:11 triaxx Exp $
 bin/awesome
 bin/awesome-client
 share/awesome/icons/awesome16.png
@@ -557,22 +557,22 @@ ${PLIST.doc}share/doc/awesome/doc/libraries/wibox.hierarchy.html
 ${PLIST.doc}share/doc/awesome/doc/sample files/rc.lua.html
 ${PLIST.doc}share/doc/awesome/doc/sample files/theme.lua.html
 share/examples/awesome/rc.lua
-share/man/de/man1/awesome-client.1
-share/man/de/man1/awesome.1
-share/man/de/man5/awesomerc.5
-share/man/es/man1/awesome-client.1
-share/man/es/man1/awesome.1
-share/man/es/man5/awesomerc.5
-share/man/fr/man1/awesome-client.1
-share/man/fr/man1/awesome.1
-share/man/fr/man5/awesomerc.5
-share/man/it/man1/awesome-client.1
-share/man/it/man1/awesome.1
-share/man/it/man5/awesomerc.5
-share/man/man1/awesome-client.1
-share/man/man1/awesome.1
-share/man/man5/awesomerc.5
-share/man/ru/man1/awesome-client.1
-share/man/ru/man1/awesome.1
-share/man/ru/man5/awesomerc.5
+man/de/man1/awesome-client.1
+man/de/man1/awesome.1
+man/de/man5/awesomerc.5
+man/es/man1/awesome-client.1
+man/es/man1/awesome.1
+man/es/man5/awesomerc.5
+man/fr/man1/awesome-client.1
+man/fr/man1/awesome.1
+man/fr/man5/awesomerc.5
+man/it/man1/awesome-client.1
+man/it/man1/awesome.1
+man/it/man5/awesomerc.5
+man/man1/awesome-client.1
+man/man1/awesome.1
+man/man5/awesomerc.5
+man/ru/man1/awesome-client.1
+man/ru/man1/awesome.1
+man/ru/man5/awesomerc.5
 share/xsessions/awesome.desktop
