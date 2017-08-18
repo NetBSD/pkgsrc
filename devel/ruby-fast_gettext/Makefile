@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2017/06/21 13:56:17 taca Exp $
+# $NetBSD: Makefile,v 1.17 2017/08/18 10:41:40 taca Exp $
 
-DISTNAME=	fast_gettext-1.4.1
+DISTNAME=	fast_gettext-1.5.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
