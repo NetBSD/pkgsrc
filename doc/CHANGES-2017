@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3365 2017/08/18 22:16:23 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3366 2017/08/18 23:56:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4689,3 +4689,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/libtasn1 to 4.12 [adam 2017-08-18]
 	Updated www/cgicc to 3.2.19 [adam 2017-08-18]
 	Updated games/gnuchess to 6.2.5 [adam 2017-08-18]
+	Updated www/seamonkey to 2.48 [ryoon 2017-08-18]
