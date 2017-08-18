@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2017/08/18 21:04:51 adam Exp $
+
+It is not necessary to have 'ronn'; the documentation is already generated.
+
+--- configure.orig	2017-08-18 20:55:34.000000000 +0000
++++ configure
+@@ -28323,9 +28323,6 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-  if test "$ac_cv_prog_RONN" = ":"; then
+-    as_fn_error $? "You need the 'ronn' tool to generate the idn2.1 man page" "$LINENO" 5
+-  fi
+   # Extract the first word of "makeinfo", so it can be a program name with args.
+ set dummy makeinfo; ac_word=$2
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
