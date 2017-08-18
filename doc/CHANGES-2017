@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3346 2017/08/17 23:31:23 szptvlfn Exp $
+$NetBSD: CHANGES-2017,v 1.3347 2017/08/18 09:03:16 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4642,3 +4642,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/libuv to 1.14.0 [adam 2017-08-17]
 	Updated graphics/openjpeg to 2.2.0 [adam 2017-08-17]
 	Updated graphics/feh to 2.19.2 [szptvlfn 2017-08-17]
+	Updated databases/elasticsearch to 5.5.2 [fhajny 2017-08-18]
