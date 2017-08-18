@@ -1,0 +1,13 @@
+$NetBSD: patch-libkdenetwork_gpgmepp_interfaces_Makefile.in,v 1.1 2017/08/18 12:19:23 ryoon Exp $
+
+--- libkdenetwork/gpgmepp/interfaces/Makefile.in.orig	2008-08-20 15:24:58.000000000 +0000
++++ libkdenetwork/gpgmepp/interfaces/Makefile.in
+@@ -353,7 +353,7 @@ x_libraries = @x_libraries@
+ xdg_appsdir = @xdg_appsdir@
+ xdg_directorydir = @xdg_directorydir@
+ xdg_menudir = @xdg_menudir@
+-gpgmeppinterfacesdir = $(includedir)/gpgme++/interfaces
++gpgmeppinterfacesdir = $(includedir)/KDE3/gpgme++/interfaces
+ gpgmeppinterfaces_HEADERS = editinteractor.h \
+ 			passphraseprovider.h progressprovider.h
+ 
