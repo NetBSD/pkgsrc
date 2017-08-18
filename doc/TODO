@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17630 2017/08/18 09:09:04 fhajny Exp $
+$NetBSD: TODO,v 1.17631 2017/08/18 12:27:18 triaxx Exp $
 
 Suggested new packages
 ======================
@@ -75,10 +75,6 @@ Suggested new packages
 	guipdftk
 	http://de.geocities.com/dpaehl2004/guipdftk/
 	GUI for Pdftk for PDF manipulation
-
-	grip
-	http://nostatic.org/grip/
-	cd-player and cd-ripper for the Gnome desktop
 
 	wired
 	http://bloodshed.net/wired/

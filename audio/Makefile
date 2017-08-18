@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.541 2017/08/16 21:04:23 wiz Exp $
+# $NetBSD: Makefile,v 1.542 2017/08/18 12:28:35 triaxx Exp $
 #
 
 COMMENT=	Audio tools
@@ -152,6 +152,7 @@ SUBDIR+=	goom
 SUBDIR+=	gqmpeg-devel
 SUBDIR+=	gqmpeg-skins
 SUBDIR+=	gramofile
+SUBDIR+=	grip
 SUBDIR+=	gsm
 SUBDIR+=	gst-buzztard
 SUBDIR+=	gst-plugins0.10-a52
