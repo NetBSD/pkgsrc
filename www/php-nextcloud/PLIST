@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/08/11 01:41:08 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/08/18 13:40:13 ryoon Exp $
 share/nextcloud/.htaccess
 share/nextcloud/.user.ini
 share/nextcloud/3rdparty/.drone.yml
@@ -9614,6 +9614,7 @@ share/nextcloud/core/doc/admin/_images/applicable.png
 share/nextcloud/core/doc/admin/_images/auth_mechanism.png
 share/nextcloud/core/doc/admin/_images/auth_rsa.png
 share/nextcloud/core/doc/admin/_images/authentication-types.png
+share/nextcloud/core/doc/admin/_images/automated_tagging_sample_rule.png
 share/nextcloud/core/doc/admin/_images/code-integrity-admin.png
 share/nextcloud/core/doc/admin/_images/code-integrity-notification.png
 share/nextcloud/core/doc/admin/_images/create_public_share-10.png
@@ -9687,6 +9688,7 @@ share/nextcloud/core/doc/admin/_images/openstack.png
 share/nextcloud/core/doc/admin/_images/phpinfo.png
 share/nextcloud/core/doc/admin/_images/preview_images.png
 share/nextcloud/core/doc/admin/_images/rackspace.png
+share/nextcloud/core/doc/admin/_images/retention_sample.png
 share/nextcloud/core/doc/admin/_images/saml_app_overview.png
 share/nextcloud/core/doc/admin/_images/scaling-1.png
 share/nextcloud/core/doc/admin/_images/scaling-2.png
@@ -9753,7 +9755,6 @@ share/nextcloud/core/doc/admin/_sources/configuration_files/external_storage_con
 share/nextcloud/core/doc/admin/_sources/configuration_files/federated_cloud_sharing_configuration.txt
 share/nextcloud/core/doc/admin/_sources/configuration_files/file_sharing_configuration.txt
 share/nextcloud/core/doc/admin/_sources/configuration_files/file_versioning.txt
-share/nextcloud/core/doc/admin/_sources/configuration_files/files_access_control.txt
 share/nextcloud/core/doc/admin/_sources/configuration_files/files_locking_transactional.txt
 share/nextcloud/core/doc/admin/_sources/configuration_files/index.txt
 share/nextcloud/core/doc/admin/_sources/configuration_files/previews_configuration.txt
@@ -9794,6 +9795,10 @@ share/nextcloud/core/doc/admin/_sources/configuration_user/user_configuration.tx
 share/nextcloud/core/doc/admin/_sources/configuration_user/user_password_policy.txt
 share/nextcloud/core/doc/admin/_sources/configuration_user/user_provisioning_api.txt
 share/nextcloud/core/doc/admin/_sources/contents.txt
+share/nextcloud/core/doc/admin/_sources/file_workflows/access_control.txt
+share/nextcloud/core/doc/admin/_sources/file_workflows/automated_tagging.txt
+share/nextcloud/core/doc/admin/_sources/file_workflows/index.txt
+share/nextcloud/core/doc/admin/_sources/file_workflows/retention.txt
 share/nextcloud/core/doc/admin/_sources/index.txt
 share/nextcloud/core/doc/admin/_sources/installation/apps_management_installation.txt
 share/nextcloud/core/doc/admin/_sources/installation/apps_supported.txt
@@ -9930,7 +9935,6 @@ share/nextcloud/core/doc/admin/configuration_files/external_storage_configuratio
 share/nextcloud/core/doc/admin/configuration_files/federated_cloud_sharing_configuration.html
 share/nextcloud/core/doc/admin/configuration_files/file_sharing_configuration.html
 share/nextcloud/core/doc/admin/configuration_files/file_versioning.html
-share/nextcloud/core/doc/admin/configuration_files/files_access_control.html
 share/nextcloud/core/doc/admin/configuration_files/files_locking_transactional.html
 share/nextcloud/core/doc/admin/configuration_files/index.html
 share/nextcloud/core/doc/admin/configuration_files/previews_configuration.html
@@ -9971,6 +9975,10 @@ share/nextcloud/core/doc/admin/configuration_user/user_configuration.html
 share/nextcloud/core/doc/admin/configuration_user/user_password_policy.html
 share/nextcloud/core/doc/admin/configuration_user/user_provisioning_api.html
 share/nextcloud/core/doc/admin/contents.html
+share/nextcloud/core/doc/admin/file_workflows/access_control.html
+share/nextcloud/core/doc/admin/file_workflows/automated_tagging.html
+share/nextcloud/core/doc/admin/file_workflows/index.html
+share/nextcloud/core/doc/admin/file_workflows/retention.html
 share/nextcloud/core/doc/admin/genindex.html
 share/nextcloud/core/doc/admin/index.html
 share/nextcloud/core/doc/admin/installation/apps_management_installation.html
@@ -10003,14 +10011,15 @@ share/nextcloud/core/doc/admin/search.html
 share/nextcloud/core/doc/admin/searchindex.js
 share/nextcloud/core/doc/user/_images/2fa_backupcode_1.png
 share/nextcloud/core/doc/user/_images/2fa_backupcode_2.png
+share/nextcloud/core/doc/user/_images/CalDAV_calendar.png
+share/nextcloud/core/doc/user/_images/addressbook_name.png
 share/nextcloud/core/doc/user/_images/anonym_click_sharing.png
 share/nextcloud/core/doc/user/_images/anonym_hide_file_listing.png
 share/nextcloud/core/doc/user/_images/anonym_upload.png
 share/nextcloud/core/doc/user/_images/anonym_uploaded_files.png
 share/nextcloud/core/doc/user/_images/apps_menu.png
-share/nextcloud/core/doc/user/_images/contact_thunderbird-Symbol_Gear.jpg
-share/nextcloud/core/doc/user/_images/contact_thunderbird-Symbol_Impeller.jpg
-share/nextcloud/core/doc/user/_images/contact_thunderbird-URL_config.jpg
+share/nextcloud/core/doc/user/_images/cardbook_icon.png
+share/nextcloud/core/doc/user/_images/contacts_link.png
 share/nextcloud/core/doc/user/_images/contacts_menu.png
 share/nextcloud/core/doc/user/_images/contacts_popup.png
 share/nextcloud/core/doc/user/_images/create_public_share-6.png
@@ -10037,6 +10046,8 @@ share/nextcloud/core/doc/user/_images/gallery-2.png
 share/nextcloud/core/doc/user/_images/hidden_files.png
 share/nextcloud/core/doc/user/_images/login_page.png
 share/nextcloud/core/doc/user/_images/multi_sharing.png
+share/nextcloud/core/doc/user/_images/new_addressbook.png
+share/nextcloud/core/doc/user/_images/new_calendar.png
 share/nextcloud/core/doc/user/_images/oc_personal_settings_dropdown.png
 share/nextcloud/core/doc/user/_images/osx_webdav1.png
 share/nextcloud/core/doc/user/_images/osx_webdav2.png
@@ -10045,6 +10056,7 @@ share/nextcloud/core/doc/user/_images/quota1.png
 share/nextcloud/core/doc/user/_images/settings_devices.png
 share/nextcloud/core/doc/user/_images/settings_devices_add.png
 share/nextcloud/core/doc/user/_images/settings_sessions.png
+share/nextcloud/core/doc/user/_images/synchronize_cardbook.png
 share/nextcloud/core/doc/user/_images/totp_enable.png
 share/nextcloud/core/doc/user/_images/totp_login_2.png
 share/nextcloud/core/doc/user/_images/users-files.png
