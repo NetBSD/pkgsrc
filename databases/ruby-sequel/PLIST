@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2017/07/13 14:29:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.52 2017/08/18 10:17:27 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -139,6 +139,7 @@ ${GEM_LIBDIR}/doc/release_notes/4.45.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.46.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.47.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.48.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.49.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.7.0.txt
@@ -242,6 +243,7 @@ ${GEM_LIBDIR}/lib/sequel/database/schema_methods.rb
 ${GEM_LIBDIR}/lib/sequel/database/transactions.rb
 ${GEM_LIBDIR}/lib/sequel/dataset.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/actions.rb
+${GEM_LIBDIR}/lib/sequel/dataset/dataset_module.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/features.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/graph.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/misc.rb
