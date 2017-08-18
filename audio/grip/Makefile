@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.1 2017/08/18 12:21:29 triaxx Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/18 13:26:37 triaxx Exp $
 
 DISTNAME=	grip-3.5.2
 CATEGORIES=	audio
-MASTER_SITES=	https://downloads.sourceforge.net/project/grip/3.5.2/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=grip/}	
 
 MAINTAINER=	triaxx@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/project/grip/
 COMMENT=	CD-player and CD-ripper for the Gnome desktop
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=		pkg-config
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
 
 .include "../../audio/grip/options.mk"
 
