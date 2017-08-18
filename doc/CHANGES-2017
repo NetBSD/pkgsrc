@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3364 2017/08/18 21:05:37 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3365 2017/08/18 22:16:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4684,3 +4684,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated archivers/lzip to 1.19 [adam 2017-08-18]
 	Updated archivers/lziprecover to 1.19 [adam 2017-08-18]
 	Updated devel/libidn2 to 2.0.3 [adam 2017-08-18]
+	Updated math/glpk to 4.63 [adam 2017-08-18]
+	Updated textproc/grep to 3.1 [adam 2017-08-18]
+	Updated security/libtasn1 to 4.12 [adam 2017-08-18]
+	Updated www/cgicc to 3.2.19 [adam 2017-08-18]
+	Updated games/gnuchess to 6.2.5 [adam 2017-08-18]
