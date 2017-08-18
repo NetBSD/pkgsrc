@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2017/07/25 13:38:34 taca Exp $
+$NetBSD: distinfo,v 1.8 2017/08/18 14:58:50 tsutsui Exp $
 
-SHA1 (gobject-introspection-3.1.6.gem) = 63090a752be740b4859c91180af64ae698b407c4
-RMD160 (gobject-introspection-3.1.6.gem) = 121dbce1be29f14f7d03b7db87a376ab39ec0e4a
-SHA512 (gobject-introspection-3.1.6.gem) = 74503d92f2d4a4d48b89bbe7bbb4f1da3789d1450a31e314b19ecb3f586fb538e7c83a22de599936813a931a31f236c7ab156a7bd4fbe2d6e862e76d4ac7f922
-Size (gobject-introspection-3.1.6.gem) = 52224 bytes
+SHA1 (gobject-introspection-3.1.8.gem) = bf38bc328f2c01d88d15ae37ac7183a3574f1371
+RMD160 (gobject-introspection-3.1.8.gem) = 32558185239419fddd49912175e295dcb9661f10
+SHA512 (gobject-introspection-3.1.8.gem) = 5805ebf600232b4cacfbebbe8e705eb69ce204b31809a9d33427f80ee1d6366a392bdde97fd59cf93fc93f2ac182b80f33a478a466ec8d9e15796b3aff9d6728
+Size (gobject-introspection-3.1.8.gem) = 53760 bytes
 SHA1 (patch-ext_gobject-introspection_rb-gi-function-info.c) = 44bb15af46dcf6aab30bca06095fd5c3979a3ee5

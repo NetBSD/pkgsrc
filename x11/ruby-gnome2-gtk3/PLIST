@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/06/10 08:27:21 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/08/18 14:58:51 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gtk3.${RUBY_DLEXT}
@@ -73,6 +73,7 @@ ${GEM_LIBDIR}/lib/gtk3/target-list.rb
 ${GEM_LIBDIR}/lib/gtk3/text-buffer.rb
 ${GEM_LIBDIR}/lib/gtk3/text-iter.rb
 ${GEM_LIBDIR}/lib/gtk3/text-tag-table.rb
+${GEM_LIBDIR}/lib/gtk3/text-tag.rb
 ${GEM_LIBDIR}/lib/gtk3/text-view.rb
 ${GEM_LIBDIR}/lib/gtk3/toggle-action.rb
 ${GEM_LIBDIR}/lib/gtk3/toggle-button.rb
@@ -513,6 +514,7 @@ ${GEM_LIBDIR}/test/test-gtk-switch.rb
 ${GEM_LIBDIR}/test/test-gtk-target-entry.rb
 ${GEM_LIBDIR}/test/test-gtk-text-buffer.rb
 ${GEM_LIBDIR}/test/test-gtk-text-tag-table.rb
+${GEM_LIBDIR}/test/test-gtk-text-tag.rb
 ${GEM_LIBDIR}/test/test-gtk-text-view.rb
 ${GEM_LIBDIR}/test/test-gtk-toggle-action.rb
 ${GEM_LIBDIR}/test/test-gtk-toggle-button.rb
