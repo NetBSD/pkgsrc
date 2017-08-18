@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3352 2017/08/18 10:16:02 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3353 2017/08/18 10:18:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4648,3 +4648,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated cad/oce to 0.18.2 [fhajny 2017-08-18]
 	Updated databases/php-redis3 to 3.1.3 [taca 2017-08-18]
 	Updated databases/ruby-mysql2 to 0.4.9 [taca 2017-08-18]
+	Updated databases/ruby-sequel to 4.49.0 [taca 2017-08-18]
