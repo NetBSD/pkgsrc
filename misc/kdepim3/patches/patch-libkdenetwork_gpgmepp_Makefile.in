@@ -1,0 +1,13 @@
+$NetBSD: patch-libkdenetwork_gpgmepp_Makefile.in,v 1.1 2017/08/18 12:19:23 ryoon Exp $
+
+--- libkdenetwork/gpgmepp/Makefile.in.orig	2008-08-20 15:24:58.000000000 +0000
++++ libkdenetwork/gpgmepp/Makefile.in
+@@ -394,7 +394,7 @@ SUBDIRS = interfaces .
+ INCLUDES = -I$(top_srcdir)/libkdenetwork -I$(top_srcdir)/libkdenetwork/gpgmepp \
+ 	$(GPGME_CFLAGS) $(all_includes)
+ 
+-gpgmeppdir = $(includedir)/gpgme++
++gpgmeppdir = $(includedir)/KDE3/gpgme++
+ gpgmepp_HEADERS = context.h \
+ 		key.h \
+ 		trustitem.h \
