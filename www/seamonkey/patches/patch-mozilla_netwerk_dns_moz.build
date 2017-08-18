@@ -1,0 +1,14 @@
+$NetBSD: patch-mozilla_netwerk_dns_moz.build,v 1.4 2017/08/18 23:55:07 ryoon Exp $
+
+--- mozilla/netwerk/dns/moz.build.orig	2017-07-07 05:37:31.000000000 +0000
++++ mozilla/netwerk/dns/moz.build
+@@ -66,6 +66,9 @@ LOCAL_INCLUDES += [
+     '/netwerk/base',
+ ]
+ 
++if CONFIG['MOZ_SYSTEM_HARFBUZZ']:
++    CXXFLAGS += CONFIG['MOZ_HARFBUZZ_CFLAGS']
++
+ if CONFIG['ENABLE_INTL_API']:
+     DEFINES['IDNA2008'] = True
+     USE_LIBS += ['icu']

@@ -1,13 +1,13 @@
-$NetBSD: patch-mozilla_xpcom_reflect_xptcall_md_unix_moz.build,v 1.5 2017/01/01 16:14:08 ryoon Exp $
+$NetBSD: patch-mozilla_xpcom_reflect_xptcall_md_unix_moz.build,v 1.6 2017/08/18 23:55:07 ryoon Exp $
 
---- mozilla/xpcom/reflect/xptcall/md/unix/moz.build.orig	2016-12-14 02:10:01.000000000 +0000
+--- mozilla/xpcom/reflect/xptcall/md/unix/moz.build.orig	2017-07-07 05:38:29.000000000 +0000
 +++ mozilla/xpcom/reflect/xptcall/md/unix/moz.build
-@@ -9,7 +9,7 @@ if CONFIG['OS_ARCH'] == 'Darwin':
-         'xptcinvoke_darwin.cpp',
-         'xptcstubs_darwin.cpp',
-     ]
--    if CONFIG['OS_TEST'] == 'powerpc':
-+    if CONFIG['OS_TEST'] == 'ppc':
+@@ -145,7 +145,7 @@ if CONFIG['OS_ARCH'] == 'NetBSD':
+             'xptcstubs_netbsd_m68k.cpp'
+         ]
+ 
+-if CONFIG['OS_ARCH'] == 'Linux':
++if CONFIG['OS_ARCH'] in ('Linux', 'FreeBSD', 'NetBSD', 'OpenBSD'):
+     if CONFIG['OS_TEST'] == 'aarch64':
          SOURCES += [
-             '!xptcstubs_asm_ppc_darwin.s',
-             'xptcinvoke_asm_ppc_rhapsody.s',
+             'xptcinvoke_aarch64.cpp',
