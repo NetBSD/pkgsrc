@@ -1,0 +1,35 @@
+$NetBSD: patch-mozilla_moz.configure,v 1.1 2017/08/18 23:55:07 ryoon Exp $
+
+--- mozilla/moz.configure.orig	2017-07-07 05:37:53.000000000 +0000
++++ mozilla/moz.configure
+@@ -278,6 +278,30 @@ check_prog('GENISOIMAGE', delayed_getatt
+ check_prog('RPMBUILD', delayed_getattr(extra_programs, 'RPMBUILD'),
+            allow_missing=True)
+ 
++option('--with-system-graphite2',
++       help="Use system graphite2 (located with pkgconfig)")
++
++@depends('--with-system-graphite2', compile_environment)
++def check_for_graphite2(value, compile_env):
++    return value and compile_env
++
++system_graphite2 = pkg_check_modules('MOZ_GRAPHITE2', 'graphite2',
++                                    check_for_graphite2)
++
++set_config('MOZ_SYSTEM_GRAPHITE2', system_graphite2)
++
++option('--with-system-harfbuzz',
++       help="Use system harfbuzz (located with pkgconfig)")
++
++@depends('--with-system-harfbuzz', compile_environment)
++def check_for_harfbuzz(value, compile_env):
++    return value and compile_env
++
++system_harfbuzz = pkg_check_modules('MOZ_HARFBUZZ', 'harfbuzz >= 1.2.6',
++                                    check_for_harfbuzz)
++
++set_config('MOZ_SYSTEM_HARFBUZZ', system_harfbuzz)
++
+ option('--enable-system-hunspell',
+        help="Use system hunspell (located with pkgconfig)")
+ 

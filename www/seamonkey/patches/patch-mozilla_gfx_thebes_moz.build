@@ -1,0 +1,19 @@
+$NetBSD: patch-mozilla_gfx_thebes_moz.build,v 1.5 2017/08/18 23:55:07 ryoon Exp $
+
+--- mozilla/gfx/thebes/moz.build.orig	2017-07-07 05:36:36.000000000 +0000
++++ mozilla/gfx/thebes/moz.build
+@@ -286,7 +286,13 @@ if CONFIG['MOZ_WIDGET_TOOLKIT'] in ('gtk
+ LOCAL_INCLUDES += CONFIG['SKIA_INCLUDES']
+ LOCAL_INCLUDES += ['/media/libyuv/include']
+ 
+-DEFINES['GRAPHITE2_STATIC'] = True
++if CONFIG['MOZ_SYSTEM_HARFBUZZ']:
++    CXXFLAGS += CONFIG['MOZ_HARFBUZZ_CFLAGS']
++
++if CONFIG['MOZ_SYSTEM_GRAPHITE2']:
++    CXXFLAGS += CONFIG['MOZ_GRAPHITE2_CFLAGS']
++else:
++    DEFINES['GRAPHITE2_STATIC'] = True
+ 
+ if CONFIG['CLANG_CXX']:
+     # Suppress warnings from Skia header files.

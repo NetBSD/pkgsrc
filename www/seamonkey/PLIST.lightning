@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.lightning,v 1.25 2017/08/18 23:55:07 ryoon Exp $
 lib/seamonkey/extensions/quitter@mozilla.org/chrome.manifest
 lib/seamonkey/extensions/quitter@mozilla.org/chrome/quitter/content/contentscript.js
 lib/seamonkey/extensions/quitter@mozilla.org/components/QuitterObserver.js
@@ -152,7 +153,6 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/content/calendar/calendar-event-dialog-timezone.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/content/calendar/calendar-event-dialog-timezone.xul
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/content/calendar/calendar-event-dialog.css
-lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/content/calendar/calendar-event-dialog.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/content/calendar/calendar-event-dialog.xul
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/content/calendar/calendar-extract.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/content/calendar/calendar-invitations-dialog.css
@@ -233,6 +233,8 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/icons/def
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning-en-US/locale/en-US/lightning/lightning-toolbar.dtd
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning-en-US/locale/en-US/lightning/lightning.dtd
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning-en-US/locale/en-US/lightning/lightning.properties
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/html-item-editing/lightning-item-iframe.html
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/html-item-editing/react-code.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/imip-bar-overlay.xul
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/imip-bar.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-calendar-creation.js
@@ -240,6 +242,11 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-calendar-properties.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-calendar-properties.xul
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-invitation.xhtml
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-item-iframe.js
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-item-iframe.xul
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-item-panel.js
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-item-panel.xul
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-item-toolbar.xul
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-menus.xul
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-migration.xul
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-toolbar.xul
@@ -264,6 +271,7 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/comm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/calendar-creation-wizard.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/calendar-daypicker.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/calendar-event-dialog.png
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/calendar-event-tab.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/calendar-itip-icons.svg
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/calendar-management.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/calendar-occurrence-prompt.css
@@ -273,9 +281,11 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/comm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/calendar-providerUninstall-dialog.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/calendar-status.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/calendar-subscriptions-dialog.css
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/calendar-task-tab.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/calendar-task-tree.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/calendar-task-view.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/calendar-timezone-highlighter.css
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/calendar-toolbar-osxlion.svg
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/calendar-toolbar.svg
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/calendar-unifinder.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/calendar-views.css
@@ -306,6 +316,7 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/comm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/common/widgets/view-navigation.svg
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/lightning-common/datetimepickers.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/lightning-common/dialogOverlay.css
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/lightning-common/html-item-editing.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/lightning-common/imip.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/lightning-common/lightning.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/lightning-common/mode-switch-icons.png
@@ -316,11 +327,13 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/linu
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/linux/calendar/calendar-daypicker.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/linux/calendar/calendar-event-dialog-attendees.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/linux/calendar/calendar-event-dialog.css
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/linux/calendar/calendar-event-dialog.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/linux/calendar/calendar-invitations-dialog-button-images.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/linux/calendar/calendar-invitations-dialog-list-images.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/linux/calendar/calendar-invitations-dialog.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/linux/calendar/calendar-management.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/linux/calendar/calendar-occurrence-prompt.png
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/linux/calendar/calendar-task-dialog.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/linux/calendar/calendar-task-tree.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/linux/calendar/calendar-task-view.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/linux/calendar/calendar-unifinder.css
@@ -359,6 +372,10 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/osx/
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/osx/calendar/today-pane.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/osx/calendar/widgets/calendar-widgets.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/osx/lightning/accountCentral.css
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/osx/lightning/collapse.png
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/osx/lightning/collapse@2x.png
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/osx/lightning/expand.png
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/osx/lightning/expand@2x.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/osx/lightning/imip.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/osx/lightning/imip.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/osx/lightning/lightning-toolbar.css
@@ -372,12 +389,14 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/wind
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-event-dialog-toolbar-small.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-event-dialog-toolbar.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-event-dialog.css
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-event-dialog.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-invitations-dialog-button-images.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-invitations-dialog-list-images.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-invitations-dialog.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-management.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-occurrence-prompt-aero.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-occurrence-prompt.png
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-task-dialog.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-task-tree.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-task-view.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/skin/windows/calendar/calendar-unifinder.css
