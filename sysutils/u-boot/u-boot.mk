@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.2 2017/08/12 16:44:33 jmcneill Exp $
+# $NetBSD: u-boot.mk,v 1.3 2017/08/18 13:26:28 ryoon Exp $
 
 UBOOT_VERSION?=	2017.07
 PKGNAME=	u-boot-${UBOOT_TARGET}-${UBOOT_VERSION}
@@ -32,10 +32,10 @@ REPLACE_FILES.python2=	scripts/fill_scrapyard.py \
 MAKE_ENV+=	${UBOOT_ENV}
 
 do-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} gmake ${UBOOT_CONFIG}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${UBOOT_CONFIG}
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} gmake
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/u-boot/${UBOOT_TARGET}
