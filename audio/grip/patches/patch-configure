@@ -1,0 +1,37 @@
+$NetBSD: patch-configure,v 1.1 2017/08/18 12:21:29 triaxx Exp $
+
+Add a test to find cdparanoia include directory.
+
+XXX: this patch could be useless if the cdparanoia package provided by pkgsrc
+did not override the default include directory.
+
+--- configure.orig	2017-07-31 21:24:47.000000000 +0000
++++ configure
+@@ -16529,6 +16529,27 @@ fi
+ done
+ 
+ 
++  for ac_header in cdparanoia/cdda_interface.h cdparanoia/cdda_paranoia.h
++do :
++  as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
++ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "#ifdef HAVE_CDPARANOIA_CDDA_INTERFACE_H
++    # include <cdparanoia/cdda_interface.h>
++    #endif
++    #ifdef HAVE_CDPARANOIA_CDDA_PARANOIA_H
++    # include <cdparanoia/cdda_paranoia.h>
++    #endif
++
++"
++if eval test \"x\$"$as_ac_Header"\" = x"yes"; then :
++  cat >>confdefs.h <<_ACEOF
++#define `$as_echo "HAVE_$ac_header" | $as_tr_cpp` 1
++_ACEOF
++
++fi
++
++done
++
++
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for main in -lcdda_interface" >&5
+ $as_echo_n "checking for main in -lcdda_interface... " >&6; }
+ if ${ac_cv_lib_cdda_interface_main+:} false; then :
