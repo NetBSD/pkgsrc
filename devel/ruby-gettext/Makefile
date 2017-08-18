@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2017/07/13 15:23:12 taca Exp $
+# $NetBSD: Makefile,v 1.33 2017/08/18 10:43:04 taca Exp $
 
-DISTNAME=	gettext-3.2.3
+DISTNAME=	gettext-3.2.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
