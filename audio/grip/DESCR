@@ -1,0 +1,4 @@
+Grip is a GTK-based CD-player and CD-ripper / MP3 encoder. It has the ripping
+capabilities of cdparanoia built in, but can also use external rippers (such as
+cdda2wav). Encoder presets are provided for lame, bladeenc, l3enc, xingmp3enc,
+mp3encode, gogo)
