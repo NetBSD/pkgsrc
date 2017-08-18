@@ -1,24 +1,25 @@
-$NetBSD: patch-mozilla_config_system-headers,v 1.22 2017/01/01 16:14:07 ryoon Exp $
+$NetBSD: patch-mozilla_config_system-headers,v 1.23 2017/08/18 23:55:07 ryoon Exp $
 
---- mozilla/config/system-headers.orig	2016-12-14 02:09:46.000000000 +0000
+--- mozilla/config/system-headers.orig	2017-07-07 05:35:48.000000000 +0000
 +++ mozilla/config/system-headers
-@@ -632,6 +632,7 @@ libgnome/libgnome.h
+@@ -624,6 +624,8 @@ libgnome/libgnome.h
  libgnomeui/gnome-icon-lookup.h
  libgnomeui/gnome-icon-theme.h
  libgnomeui/gnome-ui-init.h
 +libv4l2.h
- limits
++limits
  limits.h
  link.h
-@@ -725,6 +726,7 @@ mapiutil.h
+ #ifdef ANDROID
+@@ -714,6 +716,7 @@ mapiutil.h
  mapix.h
  Math64.h
  math.h
 +complex
  mbstring.h
  #ifdef ANDROID
- media/AudioEffect.h
-@@ -1317,6 +1319,25 @@ vpx/vp8cx.h
+ android/native_window.h
+@@ -1302,6 +1305,25 @@ vpx/vp8cx.h
  vpx/vp8dx.h
  vpx_mem/vpx_mem.h
  #endif
@@ -44,10 +45,19 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.22 2017/01/01 16:14:07 ryoon Ex
  gst/gst.h
  gst/app/gstappsink.h
  gst/app/gstappsrc.h
-@@ -1347,3 +1368,35 @@ unicode/utypes.h
+@@ -1332,3 +1354,26 @@ unicode/utypes.h
  #endif
  libutil.h
  unwind.h
++#if MOZ_SYSTEM_GRAPHITE2==1
++graphite2/Font.h
++graphite2/Segment.h
++#endif
++#if MOZ_SYSTEM_HARFBUZZ==1
++harfbuzz/hb-glib.h
++harfbuzz/hb-ot.h
++harfbuzz/hb.h
++#endif
 +#if MOZ_SYSTEM_OGG==1
 +ogg/ogg.h
 +ogg/os_types.h
@@ -61,22 +71,4 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.22 2017/01/01 16:14:07 ryoon Ex
 +#endif
 +#if MOZ_SYSTEM_TREMOR==1
 +tremor/ivorbiscodec.h
-+#endif
-+#if MOZ_SYSTEM_CELT==1
-+celt.h
-+celt_header.h
-+celt/celt.h
-+celt/celt_header.h
-+#endif
-+#if MOZ_SYSTEM_OPUS==1
-+opus.h
-+opus_multistream.h
-+opus/opus.h
-+opus/opus_multistream.h
-+#endif
-+#if MOZ_SYSTEM_SPEEX==1
-+speex/speex_resampler.h
-+#endif
-+#if MOZ_SYSTEM_SOUNDTOUCH==1
-+soundtouch/SoundTouch.h
 +#endif
