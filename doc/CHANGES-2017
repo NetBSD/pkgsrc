@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3348 2017/08/18 09:09:04 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3349 2017/08/18 09:29:37 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4644,3 +4644,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/feh to 2.19.2 [szptvlfn 2017-08-17]
 	Updated databases/elasticsearch to 5.5.2 [fhajny 2017-08-18]
 	Updated sysutils/beats to 5.5.2 [fhajny 2017-08-18]
+	Updated net/rabbitmq to 3.6.11 [fhajny 2017-08-18]
