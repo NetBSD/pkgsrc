@@ -1,23 +1,20 @@
-$NetBSD: patch-Makefile,v 1.6 2016/12/07 21:34:58 fhajny Exp $
+$NetBSD: patch-Makefile,v 1.7 2017/08/19 14:54:25 adam Exp $
 
 Unlock install target.
 
---- Makefile.orig	2016-11-22 20:34:17.000000000 +0000
+--- Makefile.orig	2017-08-17 17:55:30.000000000 +0000
 +++ Makefile
-@@ -81,10 +81,6 @@ clean:
- 	@echo Cleaning completed
- 
- 
--#------------------------------------------------------------------------
--#make install is validated only for Linux, OSX, kFreeBSD, Hurd and
--#FreeBSD targets
--ifneq (,$(filter $(shell uname),Linux Darwin GNU/kFreeBSD GNU FreeBSD))
+@@ -90,7 +90,6 @@ clean:
+ #-----------------------------------------------------------------------------
+ # make install is validated only for Linux, OSX, BSD, Hurd and Solaris targets
+ #-----------------------------------------------------------------------------
+-ifneq (,$(filter $(shell uname),Linux Darwin GNU/kFreeBSD GNU OpenBSD FreeBSD NetBSD DragonFly SunOS))
  HOST_OS = POSIX
  
- install:
-@@ -138,7 +134,6 @@ examples:
- 	$(MAKE) -C $(PRGDIR) lz4
- 	$(MAKE) -C examples test
+ .PHONY: install uninstall
+@@ -104,7 +103,6 @@ travis-install:
+ cmake:
+ 	@cd contrib/cmake_unofficial; cmake $(CMAKE_PARAMS) CMakeLists.txt; $(MAKE)
  
 -endif
  
