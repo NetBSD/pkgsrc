@@ -48,6 +48,16 @@
 # RETURN VALUES
 #	Returns 0 on success, and >0 if an error occurs.
 #
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	TASK_VERBOSE
+#		List of package tasks that should emit verbose output.
+#		If ${TASK_VERBOSE} is "all", then all tasks are verbose.
+#		If ${TASK_VERBOSE} is "none", then no tasks are verbose.
+#		Otherwise, if one of the tasks is "default", then the
+#		default list of tasks are verbose.
+#
 
 __task_preinstall__="yes"
 
@@ -59,6 +69,8 @@ task_load users
 
 task_preinstall()
 {
+	: ${TASK_VERBOSE:=default}
+
 	[ $# -gt 0 ] || return 127
 	local datafile="$1"; shift
 
@@ -66,10 +78,28 @@ task_preinstall()
 
 	local stage="preinstall"
 
+	# $verbose are the package tasks that give verbose output.
+	# Expand "all", "default" and "none" to a fixed list of tasks.
+	#
+	local verbose="${TASK_VERBOSE}"
+	case " $verbose " in
+	" all "|*" default "*)
+		verbose="directories function groups users" ;;
+	" none ")
+		verbose= ;;
+	esac
+
+	local silent
+
 	# Require necessary groups and users before actions that may
 	# set permissions.
 	#
-	task_groups add $stage < $datafile
+	case " $verbose " in
+	*" groups "*)
+		silent= ;;
+	*)	silent="-s" ;;
+	esac
+	task_groups $silent add $stage < $datafile
 	if task_groups check-add $stage < $datafile; then
 		: "groups exist"
 	else
@@ -77,7 +107,12 @@ task_preinstall()
 		return 1
 	fi
 
-	task_users add $stage < $datafile
+	case " $verbose " in
+	*" users "*)
+		silent= ;;
+	*)	silent="-s" ;;
+	esac
+	task_users $silent add $stage < $datafile
 	if task_users check-add $stage < $datafile; then
 		: "users exist"
 	else
@@ -90,10 +125,20 @@ task_preinstall()
 	# create path components in order.  Any errors in creating
 	# directories are non-fatal.
 	#
-	task_sort < $datafile | task_directories add $stage
+	case " $verbose " in
+	*" directories "*)
+		silent= ;;
+	*)	silent="-s" ;;
+	esac
+	task_sort < $datafile | task_directories $silent add $stage
 
 	# Run the generic package tasks.
-	if task_function add $stage < $datafile; then
+	case " $verbose " in
+	*" function "*)
+		silent= ;;
+	*)	silent="-s" ;;
+	esac
+	if task_function $silent add $stage < $datafile; then
 		: "success"
 	else
 		# Fatal error: failures in generic package tasks.
