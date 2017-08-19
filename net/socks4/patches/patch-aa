@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2009/02/08 00:16:00 joerg Exp $
+$NetBSD: patch-aa,v 1.10 2017/08/19 00:25:46 jlam Exp $
 
 --- Makefile.orig	1995-09-07 04:24:02.000000000 +0200
 +++ Makefile
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.9 2009/02/08 00:16:00 joerg Exp $
  
  # Directory into which to install the man pages
 -MAN_DEST_DIR = /usr/local/man
-+MAN_DEST_DIR = ${DESTDIR}${PREFIX}/man
++MAN_DEST_DIR = ${DESTDIR}${PREFIX}/${PKGMANDIR}
  
  # Directory into which the SOCKS server should be installed
 -SERVER_BIN_DIR = /usr/etc
