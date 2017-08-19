@@ -1,15 +1,24 @@
-$NetBSD: patch-aa,v 1.1 2009/10/22 18:34:30 adam Exp $
+$NetBSD: patch-aa,v 1.2 2017/08/19 00:19:37 jlam Exp $
 
---- CMakeLists.txt.orig	2009-10-22 20:10:38.000000000 +0200
-+++ CMakeLists.txt
-@@ -155,8 +155,8 @@ endif (WIN32)
+--- CMakeLists.txt.orig	2009-10-06 16:51:08.000000000 -0400
++++ CMakeLists.txt	2017-08-17 21:55:51.000000000 -0400
+@@ -20,6 +20,8 @@
+ #use local CMake modules
+ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/CMakeModules )
+
++include(GNUInstallDirs)
++
+ # Put source root on the include search list
+ INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR})
+
+@@ -155,8 +157,8 @@
  # documentation
  FILE(GLOB MAN_PAGES_1 doc/*.1)
  FILE(GLOB MAN_PAGES_7 doc/*.7)
 -install(FILES ${MAN_PAGES_1} DESTINATION share/man/man1) 
 -install(FILES ${MAN_PAGES_7} DESTINATION share/man/man7) 
-+install(FILES ${MAN_PAGES_1} DESTINATION man/man1) 
-+install(FILES ${MAN_PAGES_7} DESTINATION man/man7) 
++install(FILES ${MAN_PAGES_1} DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
++install(FILES ${MAN_PAGES_7} DESTINATION ${CMAKE_INSTALL_MANDIR}/man7)
  
  ## Test exectuables.
  
