@@ -1,12 +1,14 @@
-$NetBSD: patch-bo,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
+$NetBSD: patch-bo,v 1.2 2017/08/19 00:24:36 jlam Exp $
 
---- solaris/Makedefs.orig	2004-10-30 05:44:06.000000000 +0200
+--- solaris/Makedefs.orig	2004-10-30 03:44:06.000000000 +0000
 +++ solaris/Makedefs
-@@ -6,7 +6,7 @@ INSTALL= /usr/sbin/install
+@@ -5,8 +5,8 @@
+ INSTALL= /usr/sbin/install
  
  BINDIR = @DESTDIR@/bin
- MANDIR = @DESTDIR@/man
+-MANDIR = @DESTDIR@/man
 -ETCDIR = @SYSCONF@/ppp
++MANDIR = @DESTDIR@/$(PKGMANDIR)
 +ETCDIR = @SYSCONF@
  
  CC = /opt/SUNWspro/bin/cc

@@ -1,11 +1,11 @@
-$NetBSD: patch-be,v 1.2 2008/07/29 21:02:23 tnn Exp $
+$NetBSD: patch-be,v 1.3 2017/08/19 00:24:36 jlam Exp $
 
 --- pppdump/Makefile.netbsd.orig	2008-07-29 22:51:39.000000000 +0200
 +++ pppdump/Makefile.netbsd
 @@ -0,0 +1,21 @@
 +DESTDIR = @DESTDIR@
 +BINDIR = $(DESTDIR)/sbin
-+MANDIR = $(DESTDIR)/man/man8
++MANDIR = $(DESTDIR)/$(PKGMANDIR)/man8
 +
 +CFLAGS= -O -I../include/net
 +OBJS = pppdump.o bsd-comp.o deflate.o zlib.o
