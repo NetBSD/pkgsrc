@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/10/09 14:06:49 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2017/08/19 00:22:00 jlam Exp $
 
 PKGNAME=		libkver-${VERSION}
 CATEGORIES=		pkgtools
@@ -41,6 +41,8 @@ INSTALLATION_DIRS+=	lib ${PKGMANDIR}/man3 ${PKGMANDIR}/cat3
 .if empty(LDD_SYSCTL:M*libc*)
 INSTALLATION_DIRS+=	sbin
 .endif
+
+INSTALL_MAKE_FLAGS+=	MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}
 
 do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}
