@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.10 2015/12/29 23:34:55 dholland Exp $
+$NetBSD: distinfo,v 1.11 2017/08/19 00:25:34 jlam Exp $
 
 SHA1 (siod.tgz) = e49cbd59bbdf3af607335a300ace98c561ad5bdd
 RMD160 (siod.tgz) = 51aeb394d1391d289abd6375502b23cb9089ff31
 SHA512 (siod.tgz) = 585497489facfce8a3748bc965a83eb07b29b8215d53ff69e6a8c18f7078d72b260e95716c151c4bf590ec41d219876a606674bf0781d37b0a28ef7a06d19648
 Size (siod.tgz) = 214700 bytes
-SHA1 (patch-aa) = c8d05226615d0c6618c6ddaea9b4b9cf002f0f16
+SHA1 (patch-aa) = 4584a50874386f355ee9ad211a2f2408d9ee39f9
 SHA1 (patch-ab) = 840474628c3863261ea91f0c7fe730765ab72e4e
 SHA1 (patch-ac) = 4466fd94141f87b4d9a6dd8ea3a0f29bdd09998b
 SHA1 (patch-ad) = 66078a1f27b514940ce9e4cafb93e35476f20348
