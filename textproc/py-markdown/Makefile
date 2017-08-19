@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2017/02/13 21:42:50 adam Exp $
+# $NetBSD: Makefile,v 1.14 2017/08/19 14:25:14 adam Exp $
 
-DISTNAME=	Markdown-2.6.8
+DISTNAME=	Markdown-2.6.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Markdown/}
@@ -19,7 +19,7 @@ post-extract:
 	${MV} ${WRKSRC}/bin/markdown_py ${WRKSRC}/bin/markdown_py${PYVERSSUFFIX}
 
 do-test:
-	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} run-tests.py
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} run-tests.py
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
