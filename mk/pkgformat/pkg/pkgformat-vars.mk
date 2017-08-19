@@ -1,4 +1,4 @@
-# $NetBSD: pkgformat-vars.mk,v 1.6 2016/04/10 15:20:26 joerg Exp $
+# $NetBSD: pkgformat-vars.mk,v 1.7 2017/08/19 00:30:19 jlam Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -36,6 +36,11 @@ PKGTOOLS_REQD=		20100914
 
 # Latest version of pkg_install required to extract packages
 PKGTOOLS_VERSION_REQD=	20091115
+
+# Environment used when invoking package tools.  This is used to pass
+# environment variables to the package install and deinstall scripts.
+#
+PKGTOOLS_ENV?=		# empty
 
 .if !defined(PKGTOOLS_VERSION)
 PKGTOOLS_VERSION!=	${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302
