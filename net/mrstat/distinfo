@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2017/02/17 17:11:23 joerg Exp $
+$NetBSD: distinfo,v 1.11 2017/08/19 00:22:49 jlam Exp $
 
 SHA1 (mrstat-1.21.tar.gz) = 7e49f9b7cf90c01b5d1e2c7877205210b80ec685
 RMD160 (mrstat-1.21.tar.gz) = c96faec314df455ad226bfd6f6c6a52a619dfcf2
 SHA512 (mrstat-1.21.tar.gz) = 898c9261060625babef046481f3d826a465f6efe8bdb91fd0636da11693386129f79ea03f1a058afc79aa92fb06181033201c23bcf24810ba9a4699362c600ed
 Size (mrstat-1.21.tar.gz) = 5828 bytes
+SHA1 (patch-Makefile) = 6c0f9c469c245ee2b4f58f3bc6f465d4abf843f6
 SHA1 (patch-mrstat.c) = 3c1432f27e9221453ab2bba3bdc39ec869614124
