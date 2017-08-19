@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2017/08/19 00:22:50 jlam Exp $
+
+--- Makefile.orig	2017-01-04 21:17:42.000000000 +0000
++++ Makefile
+@@ -32,8 +32,8 @@ clean:	
+ install:
+ 	${INSTALL_DIR} ${DESTDIR}${PREFIX}/bin
+ 	${INSTALL_PROGRAM} ${PROG} ${DESTDIR}${PREFIX}/bin
+-	${INSTALL_DIR} ${DESTDIR}${PREFIX}/man/man${MANSECTION}
+-	${INSTALL_MAN} ${PROG}.${MANSECTION} ${DESTDIR}${PREFIX}/man/man${MANSECTION}
++	${INSTALL_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man${MANSECTION}
++	${INSTALL_MAN} ${PROG}.${MANSECTION} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man${MANSECTION}
+ 
+ tar:
+ 	mkdir -p ${PKGNAME}-${VERSION}
