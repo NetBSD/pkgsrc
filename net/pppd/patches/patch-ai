@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1.1.1 2005/01/02 02:51:42 cube Exp $
+$NetBSD: patch-ai,v 1.2 2017/08/19 00:24:36 jlam Exp $
 
 --- pppd/Makefile.linux.orig	2004-11-13 13:02:22.000000000 +0100
 +++ pppd/Makefile.linux
@@ -7,7 +7,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2005/01/02 02:51:42 cube Exp $
  DESTDIR = @DESTDIR@
  BINDIR = $(DESTDIR)/sbin
 -MANDIR = $(DESTDIR)/share/man/man8
-+MANDIR = $(DESTDIR)/man/man8
++MANDIR = $(DESTDIR)/$(PKGMANDIR)/man8
  INCDIR = $(DESTDIR)/include
  
  TARGETS = pppd
