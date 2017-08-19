@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2016/05/17 10:32:07 fhajny Exp $
+# $NetBSD: Makefile,v 1.52 2017/08/19 00:20:25 jlam Exp $
 
 DISTNAME=		elm2.5.8
 PKGNAME=		elm-2.5.8
@@ -32,12 +32,12 @@ LIBC.*=			/usr/lib/libc.so
 SPECIAL_PERMS+=		bin/elm ${REAL_ROOT_USER} mail 2755
 
 pre-configure:
-	${CP} ${FILESDIR}/config.sh ${WRKSRC}/config.sh.orig
 	${SED} -e 's:@PREFIX@:${PREFIX}:g' \
 	  -e 's:@DESTDIR@:${DESTDIR}:g' \
 	  -e 's:@LOCALBASE@:${LOCALBASE}:g' \
+	  -e 's:@PKGMANDIR@:${PKGMANDIR}:g' \
 	  -e 's:@LIBC@:${LIBC}:g' \
-	  ${WRKSRC}/config.sh.orig > ${WRKSRC}/config.sh
+	  ${FILESDIR}/config.sh > ${WRKSRC}/config.sh
 	${MV} ${WRKSRC}/nls/LANGS ${WRKSRC}/nls/LANGS.tmpl
 	${SED} -e 's:__PREFIX:'${PREFIX}':g' < ${WRKSRC}/nls/LANGS.tmpl > ${WRKSRC}/nls/LANGS
 
