@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2017/01/04 15:43:51 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/08/19 14:54:25 adam Exp $
 bin/lz4
 bin/lz4c
 bin/lz4cat
 bin/unlz4
 include/lz4.h
 include/lz4frame.h
+include/lz4frame_static.h
 include/lz4hc.h
 lib/liblz4.a
 lib/liblz4.so
