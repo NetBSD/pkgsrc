@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3375 2017/08/19 10:28:20 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.3376 2017/08/19 14:01:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4699,3 +4699,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated shells/fish to 2.6.0 [fhajny 2017-08-19]
 	Updated multimedia/ffmpeg2 to 2.8.12nb1 [ryoon 2017-08-19]
 	Updated emulators/PC6001VX to 2.31.0 [tsutsui 2017-08-19]
+	Updated devel/py-hypothesis to 3.18.5 [adam 2017-08-19]
+	Updated devel/py-typing to 3.6.2 [adam 2017-08-19]
