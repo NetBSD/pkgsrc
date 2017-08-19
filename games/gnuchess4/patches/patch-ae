@@ -1,17 +1,20 @@
-$NetBSD: patch-ae,v 1.4 2008/06/20 01:09:20 joerg Exp $
+$NetBSD: patch-ae,v 1.5 2017/08/19 00:21:01 jlam Exp $
 
---- src/Makefile.in.orig	Sun Sep 27 23:41:13 1998
-+++ src/Makefile.in	Sun Mar 26 16:15:23 2000
-@@ -127,7 +127,7 @@
+--- src/Makefile.in.orig	1998-09-28 06:41:13.000000000 +0000
++++ src/Makefile.in
+@@ -127,9 +127,9 @@ LIBS = @LIBS@ -lm
  
  prefix = @prefix@
  exec_prefix = @exec_prefix@
 -LIBDIR = $(prefix)/lib
 +LIBDIR = $(prefix)/share/gnuchess4
  BINDIR = $(exec_prefix)/bin
- MANDIR = $(prefix)/man/man6
+-MANDIR = $(prefix)/man/man6
++MANDIR = $(prefix)/$(PKGMANDIR)/man6
  MANEXT = .6
-@@ -148,29 +148,30 @@
+ 
+ DISTSOURCE = Makefile.ddj Makefile.dos Makefile.in Makefile.nt README ataks.c ataks.h \
+@@ -148,29 +148,30 @@ DISTDIR = $(PRODUCT)-$(VERSION).pl$(PATC
  all: gnuchess gnuchessr gnuchessn gnuchessx gnuchessc postprint gnuan game gnuchess.eco gnuchess.data
  
  install: 
@@ -63,7 +66,7 @@ $NetBSD: patch-ae,v 1.4 2008/06/20 01:09:20 joerg Exp $
  	rm -f $(BINDIR)/postprint
  	rm -f $(BINDIR)/gnuan
  	rm -f $(BINDIR)/game
-@@ -180,7 +181,7 @@
+@@ -180,7 +181,7 @@ uninstall:
  	rm -f $(LIBDIR)/gnuchess.eco
  	rm -f $(MANDIR)/game.6
  	rm -f $(MANDIR)/gnuan.6
