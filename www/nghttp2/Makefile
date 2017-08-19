@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.28 2017/07/03 12:11:38 adam Exp $
 
 DISTNAME=	nghttp2-1.24.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tatsuhiro-t/}
 EXTRACT_SUFX=	.tar.xz
@@ -25,6 +26,5 @@ REPLACE_PYTHON+=	script/fetch-ocsp-response
 
 .include "options.mk"
 
-.include "../../lang/python/application.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
