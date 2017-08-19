@@ -1,4 +1,4 @@
-# $NetBSD: files.mk,v 1.7 2017/08/10 05:41:23 jlam Exp $
+# $NetBSD: files.mk,v 1.8 2017/08/19 00:30:42 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -218,64 +218,70 @@ ${_PKGTASKS_DATA.files}:
 
 privileged-install-hook: _pkgtasks-files-postinstall-check
 
+# _PKGTASKS_CHECK_EGFILE
+#	Shell script macro to test for the existence of $$egfile in
+#	${DESTDIR} after normalizing it with respect to ${PREFIX}, and
+#	an error message is emitted if it is missing.
+#
+#	If $$egfile is an absolute path that is not rooted inside
+#	${PREFIX}, then it is checked to see if it is in the host system,
+#	and not under ${DESTDIR}, and only a warning message is emitted
+#	if it is missing.  This allows for specifying source files for a
+#	cross-build without requiring that the source file exists on the
+#	host system.
+#
+_PKGTASKS_CHECK_EGFILE=	\
+	${TEST} -n "$$varname" -a -n "$$egfile" ||			\
+	${FAIL_MSG} "_PKGTASKS_CHECK_EGFILES called with missing variables"; \
+	case $$egfile in						\
+	${PREFIX:Q}/*)	canon_egfile=${DESTDIR:Q}"$$egfile" ;;		\
+	/*)		canon_egfile= ;;				\
+	*)		canon_egfile=${DESTDIR:Q}${PREFIX:Q}"/$$egfile" ;; \
+	esac;								\
+	if ${TEST} -n "$$canon_egfile"; then				\
+		${TEST} -f "$$canon_egfile" ||				\
+		${TEST} -c "$$canon_egfile" ||				\
+		${FAIL_MSG} "$$varname - $$canon_egfile does not exist."; \
+	else								\
+		${TEST} -f "$$egfile" ||				\
+		${TEST} -c "$$egfile" ||				\
+		${WARNING_MSG} "$$varname - $$egfile does not exist.";	\
+	fi
+
 _pkgtasks-files-postinstall-check: .PHONY
 	${RUN}set -- args ${_CONF_FILES}; shift;			\
 	while ${TEST} "$$#" -gt 0; do					\
 		${TEST} "$$#" -gt 2 || break;				\
-		case $$1 in						\
-		/*)	egfile=${DESTDIR:Q}"$$1" ;;			\
-		*)	egfile=${DESTDIR:Q}${PREFIX:Q}"/$$1" ;;		\
-		esac; shift 2;						\
-		${TEST} -f "$$egfile" || ${TEST} -c "$$egfile" ||	\
-		${FAIL_MSG} "CONF_FILES $$egfile does not exist.";	\
+		egfile="$$1"; shift 2;					\
+		varname="CONF_FILES"; ${_PKGTASKS_CHECK_EGFILE};	\
 	done
 	${RUN}set -- args ${_CONF_FILES_PERMS}; shift;			\
 	while ${TEST} "$$#" -gt 0; do					\
 		${TEST} "$$#" -gt 5 || break;				\
-		case $$1 in						\
-		/*)	egfile=${DESTDIR:Q}"$$1" ;;			\
-		*)	egfile=${DESTDIR:Q}${PREFIX:Q}"/$$1" ;;		\
-		esac; shift 5;						\
-		${TEST} -f "$$egfile" || ${TEST} -c "$$egfile" ||	\
-		${FAIL_MSG} "CONF_FILES_PERMS $$egfile does not exist.";\
+		egfile="$$1"; shift 5;					\
+		varname="CONF_FILES_PERMS"; ${_PKGTASKS_CHECK_EGFILE};	\
 	done
 	${RUN}set -- args ${_REQD_FILES}; shift;			\
 	while ${TEST} "$$#" -gt 0; do					\
 		${TEST} "$$#" -gt 2 || break;				\
-		case $$1 in						\
-		/*)	egfile=${DESTDIR:Q}"$$1" ;;			\
-		*)	egfile=${DESTDIR:Q}${PREFIX:Q}"/$$1" ;;		\
-		esac; shift 2;						\
-		${TEST} -f "$$egfile" || ${TEST} -c "$$egfile" ||	\
-		${FAIL_MSG} "REQD_FILES $$egfile does not exist.";	\
+		egfile="$$1"; shift 2;					\
+		varname="REQD_FILES"; ${_PKGTASKS_CHECK_EGFILE};	\
 	done
 	${RUN}set -- args ${_REQD_FILES_PERMS}; shift;			\
 	while ${TEST} "$$#" -gt 0; do					\
 		${TEST} "$$#" -gt 5 || break;				\
-		case $$1 in						\
-		/*)	egfile=${DESTDIR:Q}"$$1" ;;			\
-		*)	egfile=${DESTDIR:Q}${PREFIX:Q}"/$$1" ;;		\
-		esac; shift 5;						\
-		${TEST} -f "$$egfile" || ${TEST} -c "$$egfile" ||	\
-		${FAIL_MSG} "REQD_FILES_PERMS $$egfile does not exist.";\
+		egfile="$$1"; shift 5;					\
+		varname="REQD_FILES_PERMS"; ${_PKGTASKS_CHECK_EGFILE};	\
 	done
 	${RUN}set -- args ${__INIT_SCRIPTS}; shift;			\
 	while ${TEST} "$$#" -gt 0; do					\
 		${TEST} "$$#" -gt 2 || break;				\
-		case $$1 in						\
-		/*)	egfile=${DESTDIR:Q}"$$1" ;;			\
-		*)	egfile=${DESTDIR:Q}${PREFIX:Q}"/$$1" ;;		\
-		esac; shift 2;						\
-		${TEST} -f "$$egfile" || ${TEST} -c "$$egfile" ||	\
-		${FAIL_MSG} "REQD_FILES $$egfile does not exist.";	\
+		egfile="$$1"; shift 2;					\
+		varname="INIT_SCRIPTS"; ${_PKGTASKS_CHECK_EGFILE};	\
 	done
 	${RUN}set -- args ${__INIT_SCRIPTS_PERMS}; shift;		\
 	while ${TEST} "$$#" -gt 0; do					\
 		${TEST} "$$#" -gt 5 || break;				\
-		case $$1 in						\
-		/*)	egfile=${DESTDIR:Q}"$$1" ;;			\
-		*)	egfile=${DESTDIR:Q}${PREFIX:Q}"/$$1" ;;		\
-		esac; shift 5;						\
-		${TEST} -f "$$egfile" || ${TEST} -c "$$egfile" ||	\
-		${FAIL_MSG} "REQD_FILES_PERMS $$egfile does not exist.";\
+		egfile="$$1"; shift 5;					\
+		varname="INIT_SCRIPTS_PERMS"; ${_PKGTASKS_CHECK_EGFILE}; \
 	done
