@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2017/01/19 18:52:18 agc Exp $
+# $NetBSD: Makefile,v 1.59 2017/08/19 00:26:37 jlam Exp $
 #
 
 DISTNAME=	vfu-3.04
@@ -24,7 +24,7 @@ CONF_FILES=	${EGDIR}/vfu.conf ${PKG_SYSCONFDIR}/vfu.conf
 
 MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SH} build.netbsd
