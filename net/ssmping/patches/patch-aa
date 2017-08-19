@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2010/01/27 17:41:43 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2017/08/19 00:26:12 jlam Exp $
 
 --- Makefile.orig	2006-06-04 10:16:04.000000000 +0200
 +++ Makefile
@@ -36,9 +36,9 @@ $NetBSD: patch-aa,v 1.2 2010/01/27 17:41:43 joerg Exp $
 +	${BSD_INSTALL_PROGRAM} asmping ${DESTDIR}$(PREFIX)/bin/asmping
 +	${BSD_INSTALL_PROGRAM} ssmpingd ${DESTDIR}$(PREFIX)/sbin/ssmpingd
 +	${BSD_INSTALL_PROGRAM} mcfirst ${DESTDIR}$(PREFIX)/bin/mcfirst
-+	${BSD_INSTALL_DATA} ssmping.1 ${DESTDIR}$(PREFIX)/man/man1/ssmping.1
-+	${BSD_INSTALL_DATA} asmping.1 ${DESTDIR}$(PREFIX)/man/man1/asmping.1
-+	${BSD_INSTALL_DATA} mcfirst.1 ${DESTDIR}$(PREFIX)/man/man1/mcfirst.1
++	${BSD_INSTALL_DATA} ssmping.1 ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1/ssmping.1
++	${BSD_INSTALL_DATA} asmping.1 ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1/asmping.1
++	${BSD_INSTALL_DATA} mcfirst.1 ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1/mcfirst.1
  
  clean:
 -	rm -f $(OBJ) joinch.o joingrp.o ssmping asmping ssmpingd mcfirst
