@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 2011/09/29 11:12:53 dholland Exp $
+$NetBSD: patch-ae,v 1.3 2017/08/19 00:27:01 jlam Exp $
 
 - Don't try to suppress building docs of the various subdirs by
 clearing the man installation directories; it croaks with recent Perl.
@@ -6,9 +6,17 @@ Do it in the individual subdirs instead.
 
 - Don't install File::PathConvert. (why?)
 
---- wml_common/Makefile.in.orig	2001-02-06 23:02:12.000000000 +0000
+- Substitute for @mandir@ to install manpages under ${PKGMANDIR}.
+
+--- wml_common/Makefile.in.orig	2005-12-01 17:50:13.000000000 +0000
 +++ wml_common/Makefile.in
-@@ -27,11 +27,7 @@ mandir          = $(prefix)/man
+@@ -22,16 +22,12 @@ exec_prefix     = $(prefix)
+ bindir          = $(prefix)/bin
+ libsubdir       = @libsubdir@
+ libdir          = $(prefix)/lib$(libsubdir)
+-mandir          = $(prefix)/man
++mandir          = @mandir@
+ 
  PATH_PERL       = @PATH_PERL@
  MM_INSTALL_OPTS = PREFIX=$(libdir)/perl \
                    INSTALLPRIVLIB=@INSTALLPRIVLIB@ \
