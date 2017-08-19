@@ -1,4 +1,4 @@
-$NetBSD: patch-unix-Makefile.in,v 1.3 2015/07/12 04:59:55 dholland Exp $
+$NetBSD: patch-unix-Makefile.in,v 1.4 2017/08/19 00:26:26 jlam Exp $
 
 Put installed files under lib/tcl, so that tcl more easily picks it
 up using e.g. "package require Tnm".
@@ -8,11 +8,14 @@ Don't initialize $(LD_SEARCH_FLAGS), fixes PR#30241.
 Support DESTDIR installs, but not yet for the "uninstall" target,
 since that's not used in pkgsrc.
 
+Allow configure script to substitute for @mandir@ to set the
+location of the installed manpages.
+
 Use SPECIAL_PERMS instead of installing setuid directly.
 
 --- unix/Makefile.in.orig	2001-06-15 10:06:35.000000000 +0000
 +++ unix/Makefile.in
-@@ -35,13 +35,13 @@ LIB_INSTALL_DIR =       $(exec_prefix)/l
+@@ -35,16 +35,16 @@ LIB_INSTALL_DIR =       $(exec_prefix)/l
  LIB_RUNTIME_DIR =       $(exec_prefix)/lib
  
  # Directory in which to install library files belonging to the extension.
@@ -27,7 +30,11 @@ Use SPECIAL_PERMS instead of installing setuid directly.
 +TKI_INSTALL_DIR =	$(prefix)/lib/tcl/tkined$(TKI_VERSION)
  
  # Top-level directory for manual entries:
- MAN_INSTALL_DIR =	$(prefix)/man
+-MAN_INSTALL_DIR =	$(prefix)/man
++MAN_INSTALL_DIR =	@mandir@
+ 
+ # Directory in which to install the manual entries:
+ MAN1_INSTALL_DIR =	$(MAN_INSTALL_DIR)/man1
 @@ -57,7 +57,7 @@ MANN_INSTALL_DIR =	$(MAN_INSTALL_DIR)/ma
  
  # To change the compiler switches, for example to change from -O
