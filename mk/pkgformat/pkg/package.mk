@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.15 2016/05/09 00:07:23 joerg Exp $
+# $NetBSD: package.mk,v 1.16 2017/08/19 00:30:19 jlam Exp $
 
 .if defined(PKG_SUFX)
 WARNINGS+=		"PKG_SUFX is deprecated, please use PKG_COMPRESSION"
@@ -144,13 +144,14 @@ su-real-package-install:
 	@${PHASE_MSG} "Installing binary package of "${PKGNAME:Q}
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 	@${MKDIR} ${_CROSS_DESTDIR}${PREFIX}
-	${PKG_ADD} -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${STAGE_PKGFILE}
+	${SETENV} ${PKGTOOLS_ENV} ${PKG_ADD} -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${STAGE_PKGFILE}
 	@${ECHO} "Fixing recorded cwd..."
 	@${SED} -e 's|@cwd ${_CROSS_DESTDIR}|@cwd |' ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS > ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp
 	@${MV} ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS
 .else
 	${RUN} case ${_AUTOMATIC:Q}"" in					\
-	[yY][eE][sS])	${PKG_ADD} -A ${STAGE_PKGFILE} ;;		\
-	*)		${PKG_ADD} ${STAGE_PKGFILE} ;;			\
+	[yY][eE][sS])								\
+		${SETENV} ${PKGTOOLS_ENV} ${PKG_ADD} -A ${STAGE_PKGFILE} ;;	\
+	*)	${SETENV} ${PKGTOOLS_ENV} ${PKG_ADD} ${STAGE_PKGFILE} ;;	\
 	esac
 .endif

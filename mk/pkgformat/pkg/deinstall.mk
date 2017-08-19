@@ -1,4 +1,4 @@
-# $NetBSD: deinstall.mk,v 1.2 2013/05/09 23:37:26 riastradh Exp $
+# $NetBSD: deinstall.mk,v 1.3 2017/08/19 00:30:19 jlam Exp $
 
 # Set the appropriate flags to pass to pkg_delete(1) based on the value
 # of DEINSTALLDEPENDS (see pkgsrc/mk/install/deinstall.mk).
@@ -43,7 +43,7 @@ _pkgformat-deinstall: .PHONY
 	esac;								\
 	if ${TEST} -n "$$found"; then					\
 		${ECHO} "Running ${PKG_DELETE} ${_PKG_ARGS_DEINSTALL} $$found"; \
-		${PKG_DELETE} ${_PKG_ARGS_DEINSTALL} "$$found" || ${TRUE} ; \
+		${SETENV} ${PKGTOOLS_ENV} ${PKG_DELETE} ${_PKG_ARGS_DEINSTALL} "$$found" || ${TRUE} ; \
 	fi
 .if defined(DEINSTALLDEPENDS) && !empty(DEINSTALLDEPENDS:M[yY][eE][sS])
 # XXX Need to handle BUILD_DEPENDS/TOOL_DEPENDS split.
@@ -52,7 +52,7 @@ _pkgformat-deinstall: .PHONY
 	found=`${_PKG_BEST_EXISTS} ${_pkg_:Q} || ${TRUE}`;		\
 	if ${TEST} -n "$$found"; then					\
 		${ECHO} "Running ${PKG_DELETE} ${_PKG_ARGS_DEINSTALL} $$found"; \
-		${PKG_DELETE} ${_PKG_ARGS_DEINSTALL} "$$found" || ${TRUE}; \
+		${SETENV} ${PKGTOOLS_ENV} ${PKG_DELETE} ${_PKG_ARGS_DEINSTALL} "$$found" || ${TRUE}; \
 	fi
 .  endfor
 .endif
