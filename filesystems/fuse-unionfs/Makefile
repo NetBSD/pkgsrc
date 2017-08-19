@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/02/01 02:41:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2017/08/19 00:20:50 jlam Exp $
 #
 
 DISTNAME=	v1.0
@@ -15,7 +15,7 @@ BUILD_TARGET=	build
 USE_TOOLS=	gmake pkg-config
 WRKSRC=		${WRKDIR}/unionfs-fuse-${DISTNAME:S/v//}
 
-INSTALLATION_DIRS=	bin man/man8
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/unionfs \
@@ -23,7 +23,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/unionfsctl \
 		${DESTDIR}${PREFIX}/bin/unionfsctl
 	${INSTALL_MAN} ${WRKSRC}/man/unionfs.8 \
-		${DESTDIR}${PREFIX}/man/man8
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
