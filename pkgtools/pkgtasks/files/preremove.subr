@@ -48,6 +48,16 @@
 # RETURN VALUES
 #	Returns 0 on success, and >0 if an error occurs.
 #
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	TASK_VERBOSE
+#		List of package tasks that should emit verbose output.
+#		If ${TASK_VERBOSE} is "all", then all tasks are verbose.
+#		If ${TASK_VERBOSE} is "none", then no tasks are verbose.
+#		Otherwise, if one of the tasks is "default", then the
+#		default list of tasks are verbose.
+#
 
 __task_preremove__="yes"
 
@@ -59,6 +69,8 @@ task_load taskfunc
 
 task_preremove()
 {
+	: ${TASK_VERBOSE:=default}
+
 	[ $# -gt 0 ] || return 127
 	local datafile="$1"; shift
 
@@ -66,29 +78,67 @@ task_preremove()
 
 	local stage="preremove"
 
+	# $verbose are the package tasks that give verbose output.
+	# Expand "all", "default" and "none" to a fixed list of tasks.
+	#
+	local verbose="${TASK_VERBOSE}"
+	case " $verbose " in
+	" all ")
+		verbose="files function icon_themes info_files" ;;
+	*" default "*)
+		# These tasks are verbose by default since they touch
+		# system files and directories.
+		#
+		verbose="files function" ;;
+	" none ")
+		verbose= ;;
+	esac
+
+	local silent
+
 	# Unregistering a GNU info files requires reading the file to find
 	# all nodes listed in the file, so it must be done before the file
 	# is removed.  Any errors in unregistering GNU info files are
 	# non-fatal.
 	#
-	task_info_files -s remove $stage < $datafile
+	case " $verbose " in
+	*" info_files "*)
+		silent= ;;
+	*)	silent="-s" ;;
+	esac
+	task_info_files $silent remove $stage < $datafile
 
 	# GTK+ icon theme caches exist in the package installation
 	# directory, so they must be removed before their packages can be
 	# successfully removed.  Any errors in removing icon caches are
 	# non-fatal.
 	#
-	task_icon_themes -s remove $stage < $datafile
+	case " $verbose " in
+	*" icon_themes "*)
+		silent= ;;
+	*)	silent="-s" ;;
+	esac
+	task_icon_themes $silent remove $stage < $datafile
 
 	# Removing a configuration file requires comparing it to the
 	# example file from which it was copied, so it must be done before
 	# the example file is removed.  Any errors in removing
 	# configuration files are non-fatal.
 	#
-	task_files remove $stage < $datafile
+	case " $verbose " in
+	*" files "*)
+		silent= ;;
+	*)	silent="-s" ;;
+	esac
+	task_files $silent remove $stage < $datafile
 
 	# Run the generic package tasks.
-	if task_sort -r < $datafile | task_function remove $stage; then
+	case " $verbose " in
+	*" function "*)
+		silent= ;;
+	*)	silent="-s" ;;
+	esac
+	if task_sort -r < $datafile | task_function $silent remove $stage; then
 		: "success"
 	else
 		# Errors from the generic package tasks are fatal.
