@@ -2,6 +2,14 @@ Package Tasks
 =============
 
 
+Changes in version 1.14
+-----------------------
+**Released on 2017-08-14.**
+
+* Use `TASK_VERBOSE` environment variable to select which tasks
+  should emit output when invoked.
+
+
 Changes in version 1.13
 -----------------------
 **Released on 2017-08-08.**
