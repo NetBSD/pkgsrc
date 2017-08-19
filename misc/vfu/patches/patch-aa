@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2003/07/14 10:07:11 jmmv Exp $
+$NetBSD: patch-aa,v 1.11 2017/08/19 00:26:37 jlam Exp $
 
 --- install.orig	2001-10-28 15:12:15.000000000 +0100
 +++ install
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.10 2003/07/14 10:07:11 jmmv Exp $
 -cp vfu.conf /usr/local/etc
 -cd /usr/local/bin
 +cp vfu/vfu ftparc/ftparc rx/rx_* ${PREFIX}/bin
-+cp vfu.1 ${PREFIX}/man/man1
++cp vfu.1 ${PREFIX}/${PKGMANDIR}/man1
 +cd ${PREFIX}/bin
  chmod 755 vfu ftparc rx_*
  
