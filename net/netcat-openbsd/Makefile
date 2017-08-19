@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/03/13 16:10:08 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2017/08/19 00:23:05 jlam Exp $
 
 DISTNAME=	netcat-openbsd-20131208
 CATEGORIES=	net
@@ -13,5 +13,4 @@ CONFLICTS=	netcat-[0-9]*
 
 NO_CONFIGURE=	yes
 
-.include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"
