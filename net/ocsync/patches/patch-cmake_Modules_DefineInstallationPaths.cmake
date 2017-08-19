@@ -1,4 +1,4 @@
-$NetBSD: patch-cmake_Modules_DefineInstallationPaths.cmake,v 1.1 2013/11/22 12:01:13 ryoon Exp $
+$NetBSD: patch-cmake_Modules_DefineInstallationPaths.cmake,v 1.2 2017/08/19 00:23:36 jlam Exp $
 
 * Fix man pages destination
 
@@ -9,7 +9,7 @@ $NetBSD: patch-cmake_Modules_DefineInstallationPaths.cmake,v 1.1 2013/11/22 12:0
    )
    SET(MAN_INSTALL_DIR
 -    "${SHARE_INSTALL_PREFIX}/man"
-+    "${CMAKE_INSTALL_PREFIX}/man"
++    "${CMAKE_INSTALL_MANDIR}"
      CACHE PATH "The ${APPLICATION_NAME} man install dir (default prefix/man)"
    )
    SET(INFO_INSTALL_DIR
