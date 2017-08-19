@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1.1.1 2005/01/02 02:51:42 cube Exp $
+$NetBSD: patch-ag,v 1.2 2017/08/19 00:24:36 jlam Exp $
 
 --- linux/Makefile.top.orig	2004-10-31 23:25:16.000000000 +0100
 +++ linux/Makefile.top
@@ -8,7 +8,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2005/01/02 02:51:42 cube Exp $
  INCDIR = $(DESTDIR)/include
 -MANDIR = $(DESTDIR)/share/man
 -ETCDIR = @SYSCONF@/ppp
-+MANDIR = $(DESTDIR)/man
++MANDIR = $(DESTDIR)/$(PKGMANDIR)
 +ETCDIR = @SYSCONF@
  
  # uid 0 = root
