@@ -54,6 +54,16 @@
 # RETURN VALUES
 #	Returns 0 on success, and >0 if an error occurs.
 #
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	TASK_VERBOSE
+#		List of package tasks that should emit verbose output.
+#		If ${TASK_VERBOSE} is "all", then all tasks are verbose.
+#		If ${TASK_VERBOSE} is "none", then no tasks are verbose.
+#		Otherwise, if one of the tasks is "default", then the
+#		default list of tasks are verbose.
+#
 
 __task_postinstall__="yes"
 
@@ -71,59 +81,76 @@ task_load taskfunc
 
 task_postinstall()
 {
+	: ${TASK_VERBOSE:=default}
+
 	[ $# -gt 0 ] || return 127
 	local datafile="$1"; shift
 
 	[ -f "$datafile" ] || return 1
 
-	local post_actions=
+	local post_tasks=
 	# Copy configuration/support files into place.
-	post_actions="task_files"
+	post_tasks="files"
 	# Set special permissions on files and directories that need them.
-	post_actions="$post_actions task_permissions"
+	post_tasks="$post_tasks permissions"
 	# Rebuild the system run-time library search path database.
-	post_actions="$post_actions task_shlibs"
+	post_tasks="$post_tasks shlibs"
 	# Update font databases.
-	post_actions="$post_actions task_fonts"
+	post_tasks="$post_tasks fonts"
 	# Update GTK+ icon theme caches.
-	post_actions="$post_actions task_icon_themes"
+	post_tasks="$post_tasks icon_themes"
 	# Register shells.
-	post_actions="$post_actions task_shells"
+	post_tasks="$post_tasks shells"
 	# Register GNU info files.
-	post_actions="$post_actions task_info_files"
+	post_tasks="$post_tasks info_files"
 	# Update OCaml module run-time library search path database.
-	post_actions="$post_actions task_ocaml_findlib"
+	post_tasks="$post_tasks ocaml_findlib"
 	# Run generic package tasks.
-	post_actions="$post_actions task_function"
+	post_tasks="$post_tasks function"
 
 	# Seed checks with actions from preinstall, in order.
-	local post_checks="task_directories"
+	local post_checks="directories"
 
 	local result=0
 	local stage="postinstall"
 
-	local post_fn silent
-	for post_fn in $post_actions; do
-		case $post_fn in
-		task_files|\
-		task_permissions|\
-		task_shells)
-			# These tasks should be verbose since they touch
-			# system files and directories.
+	# $verbose are the package tasks that give verbose output.
+	# Expand "all", "default" and "none" to a fixed list of tasks.
+	#
+	local verbose="${TASK_VERBOSE}"
+	case " $verbose " in
+	" all ")
+		verbose="files fonts function icon_themes info_files"
+		verbose="$verbose ocaml_findlib permissions shells shlibs" ;;
+	*" default "*)
+		# These tasks are verbose by default since they touch
+		# system files and directories.
+		#
+		verbose="$verbose files permissions shells" ;;
+	" none ")
+		verbose= ;;
+	esac
+
+	local task post_fn silent
+	for task in $post_tasks; do
+		post_fn="task_$task"
+		case " $verbose " in
+		*" $task "*)
 			silent= ;;
 		*)	silent="-s" ;;
 		esac
 		$post_fn $silent add $stage < $datafile || result=1
-		post_checks="$post_checks $post_fn"
+		post_checks="$post_checks $task"
 	done
 
 	# Run all checks after all post-installation actions have completed
 	# and write messages to standard output for any checks that don't
 	# pass.
 	#
-	for post_fn in $post_checks; do
-		case $post_fn in
-		task_directories)
+	for check in $post_checks; do
+		post_fn="task_$check"
+		case $check in
+		directories)
 			# Sort data lines for this task.
 			task_sort < $datafile | $post_fn check-add $stage ;;
 		*)	$post_fn check-add $stage < $datafile ;;

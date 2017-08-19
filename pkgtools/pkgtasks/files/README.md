@@ -26,7 +26,7 @@ same entry more than once.
 Getting sources
 ---------------
 
-The latest version of *pkgtasks* is 1.13 and was released on August 8th, 2017.
+The latest version of *pkgtasks* is 1.14 and was released on August 14th, 2017.
 
 See the [release notes](NEWS.md) for information about the changes in this
 and all previous releases.
