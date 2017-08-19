@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/10/09 14:07:00 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/08/19 00:25:19 jlam Exp $
 #
 
 DISTNAME=	sformat-3.5
@@ -20,7 +20,12 @@ MAKE_ENV+=	ARCH=""
 MAKE_ENV+=	MAKEPROG="gmake"
 MAKE_ENV+=	COPTX=${CFLAGS:M*:Q}
 MAKE_ENV+=	LDOPTX=${LDFLAGS:M*:Q}
-MAKE_FLAGS+=	INS_BASE=${DESTDIR}${LOCALBASE:Q} # won't work in MAKE_ENV!
+
+# Override settings in Makefiles by passing additional settings
+# on the command-line.
+#
+MAKE_FLAGS+=	INS_BASE=${DESTDIR}${LOCALBASE:Q}
+MAKE_FLAGS+=	MANDIR=${PKGMANDIR:Q}
 
 # if we're using a gcc which is named gcc, we need to set CCOM=gcc
 # in MAKE_ENV so the make infrastructure picks the right options.
