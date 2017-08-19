@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2017/07/03 17:43:36 adam Exp $
+# $NetBSD: Makefile,v 1.41 2017/08/19 13:58:00 adam Exp $
 
 DISTNAME=	Sphinx-1.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -22,7 +22,12 @@ DEPENDS+=	${PYPKGPREFIX}-snowballstemmer-[0-9]*:../../textproc/py-snowballstemme
 DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-websupport-[0-9]*:../../textproc/py-sphinxcontrib-websupport
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+
+.include "../../lang/python/pyversion.mk"
+.if "${PYPKGPREFIX}" == "py27" || "${PYPKGPREFIX}" == "py34" || "${PYPKGPREFIX}" == "py35"
 DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
+.endif
+
 # test dependency
 BUILD_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
