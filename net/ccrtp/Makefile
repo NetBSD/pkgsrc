@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/09/19 13:04:18 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/08/19 00:27:44 jlam Exp $
 #
 
 DISTNAME=	ccrtp-2.1.2
@@ -18,12 +18,6 @@ USE_TOOLS+=		pkg-config
 USE_CMAKE=		yes
 PKGCONFIG_OVERRIDE+=	libccrtp.pc.in
 INFO_FILES=		yes
-
-SUBST_CLASSES+=		info
-SUBST_FILES.info=	doc/cmake_install.cmake
-SUBST_MESSAGE.info=	Fixing infodir path.
-SUBST_SED.info=		-e 's|share/info|info|1'
-SUBST_STAGE.info=	post-configure
 
 .include "options.mk"
 
