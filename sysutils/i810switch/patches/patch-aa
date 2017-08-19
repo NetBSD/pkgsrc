@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2011/10/01 22:32:11 dholland Exp $
+$NetBSD: patch-aa,v 1.5 2017/08/19 00:21:13 jlam Exp $
 --- Makefile.orig	2003-12-31 09:51:40.000000000 -0500
 +++ Makefile	2006-12-03 23:40:16.000000000 -0500
 @@ -1,7 +1,5 @@
@@ -21,10 +21,10 @@ $NetBSD: patch-aa,v 1.4 2011/10/01 22:32:11 dholland Exp $
 -	install i810switch.1.gz i810rotate.1.gz $(DESTDIR)/usr/share/man/man1
 +	install -d ${DESTDIR}$(PREFIX)/bin
 +	install -d ${DESTDIR}$(PREFIX)/sbin
-+	install -d ${DESTDIR}$(PREFIX)/man/man1
++	install -d ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1
 +	install i810switch ${DESTDIR}$(PREFIX)/sbin
 +	ln -s i810switch ${DESTDIR}$(PREFIX)/sbin/i810rotate
-+	install -m $(MANMODE) i810switch.1.gz i810rotate.1.gz ${DESTDIR}$(PREFIX)/man/man1
++	install -m $(MANMODE) i810switch.1.gz i810rotate.1.gz ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1
 +	gunzip ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1/i810switch.1.gz
 +	gunzip ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1/i810rotate.1.gz
  
