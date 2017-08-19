@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2015/11/04 02:47:42 agc Exp $
+$NetBSD: distinfo,v 1.21 2017/08/19 00:27:01 jlam Exp $
 
 SHA1 (wml-2.0.11.tar.gz) = 14dd7c23461716171a66b65676bca6e19a593007
 RMD160 (wml-2.0.11.tar.gz) = fead82a35d116447b860d7b1c506c6de187355e8
@@ -8,10 +8,10 @@ SHA1 (patch-aa) = f05d0f06f94a0d26b987a820b924fb94fad3bfb6
 SHA1 (patch-ab) = dbd30a0a23189963aa60b06c319342fac4408a6b
 SHA1 (patch-ac) = 80863037faadf220ba1d01ef2133cdc42e08f0fa
 SHA1 (patch-ad) = 2955f349aa737f1758493897d1989a0b96220268
-SHA1 (patch-ae) = d52b117c67e9d521d4ffdd1a2ba03a512fcc315b
-SHA1 (patch-ag) = da74f75377e42bb15ccf213cde8fd0db43ea451e
-SHA1 (patch-ah) = 8195a53d0a514b9ed1bd8e9460c8c3e77a1d0d8d
-SHA1 (patch-ai) = c376fe6308bd9defb66719a53a0e0da3953e2016
+SHA1 (patch-ae) = cad0bf9d70ba0e2661327dbc6817324df7ad0cfa
+SHA1 (patch-ag) = 97dc7aac298709119b19cc52b65e4d49d2be459c
+SHA1 (patch-ah) = 9fae17c18d721365365f0b2e240927c3e42d7f80
+SHA1 (patch-ai) = d4d1898dbf47eb8799aae957736e49bbb50ca45e
 SHA1 (patch-aj) = eea40cf13d883656dc0db5d4de11df4a27bdc70f
 SHA1 (patch-ak) = 3b81025819f259d7ebb185de4d4890c9892aba87
 SHA1 (patch-al) = 9bdf732aad8520b89bc5925ae6eb0e2cce937f6b
