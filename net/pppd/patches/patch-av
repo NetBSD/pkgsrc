@@ -1,4 +1,4 @@
-$NetBSD: patch-av,v 1.1.1.1 2005/01/02 02:51:42 cube Exp $
+$NetBSD: patch-av,v 1.2 2017/08/19 00:24:36 jlam Exp $
 
 --- pppd/plugins/radius/Makefile.linux.orig	2004-11-14 08:02:31.000000000 +0100
 +++ pppd/plugins/radius/Makefile.linux
@@ -7,7 +7,7 @@ $NetBSD: patch-av,v 1.1.1.1 2005/01/02 02:51:42 cube Exp $
  
  DESTDIR = @DESTDIR@
 -MANDIR = $(DESTDIR)/share/man/man8
-+MANDIR = $(DESTDIR)/man/man8
++MANDIR = $(DESTDIR)/$(PKGMANDIR)/man8
  LIBDIR = $(DESTDIR)/lib/pppd/$(VERSION)
  
  VERSION = $(shell awk -F '"' '/VERSION/ { print $$2; }' ../../patchlevel.h)
