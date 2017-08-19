@@ -40,25 +40,63 @@ test_setup()
 	TASK_USERS_SUCCESS="yes"
 }
 
-# Mock actions that return the truthiness of environment variables.
+# Mock actions whose return values are ignored.
+mock_pkgtask()
+{
+	# required parameters
+	local name="$1"; shift
+	local varname="$1"; shift
+
+	# pkgtask parameters
+	local arg
+	local silent=
+	local OPTIND=1
+	while getopts ":s" arg "$@"; do
+		case $arg in
+		s)	silent="yes" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	local action="$1"; shift
+	local stage="$1"; shift
+
+	local value symbol result
+	eval value="\${$varname}"
+	if [ "$value" = "yes" ]; then
+		symbol=">"
+		result=0
+	else
+		symbol="!"
+		result=1
+	fi
+
+	case $action in
+	check-*)
+		: "do nothing" ;;
+	*)	[ -n "$silent" ] || echo "$symbol $name" ;;
+	esac
+	return $result
+}
+
 task_directories()
 {
-	[ "${TASK_DIRECTORIES_SUCCESS}" = "yes" ]
+	mock_pkgtask "directories" "TASK_DIRECTORIES_SUCCESS" "$@"
 }
 
 task_function()
 {
-	[ "${TASK_FUNCTION_SUCCESS}" = "yes" ]
+	mock_pkgtask "function" "TASK_FUNCTION_SUCCESS" "$@"
 }
 
 task_groups()
 {
-	[ "${TASK_GROUPS_SUCCESS}" = "yes" ]
+	mock_pkgtask "groups" "TASK_GROUPS_SUCCESS" "$@"
 }
 
 task_users()
 {
-	[ "${TASK_USERS_SUCCESS}" = "yes" ]
+	mock_pkgtask "users" "TASK_USERS_SUCCESS" "$@"
 }
 
 test1()
@@ -114,4 +152,38 @@ test5()
 	return 0
 }
 
+test6()
+{
+	: ${CAT:=cat}
+
+	describe="\${TASK_VERBOSE} = none"
+	TASK_VERBOSE=none
+	task_preinstall "$datafile" > output
+	${CAT} output
+	if [ -s "$output" ]; then
+		# no output expected
+		return 1
+	fi
+	return 0
+}
+
+test7()
+{
+	: ${CAT:=cat}
+	: ${GREP:=grep}
+
+	describe="\${TASK_VERBOSE} = all"
+	TASK_VERBOSE=all
+	task_preinstall "$datafile" > output
+	${CAT} output
+	for task in directories function groups users; do
+		if ${GREP} -q "$task" output; then
+			: "success"
+		else
+			describe="$describe: '$task' missing!"
+			return 1
+		fi
+	done
+	return 0
+}
 task_run_tests "$@"
