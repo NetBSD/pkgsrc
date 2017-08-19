@@ -1,4 +1,4 @@
-# $NetBSD: files.mk,v 1.8 2017/08/19 00:30:42 jlam Exp $
+# $NetBSD: files.mk,v 1.9 2017/08/19 00:30:55 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -251,37 +251,37 @@ _PKGTASKS_CHECK_EGFILE=	\
 _pkgtasks-files-postinstall-check: .PHONY
 	${RUN}set -- args ${_CONF_FILES}; shift;			\
 	while ${TEST} "$$#" -gt 0; do					\
-		${TEST} "$$#" -gt 2 || break;				\
+		${TEST} "$$#" -ge 2 || break;				\
 		egfile="$$1"; shift 2;					\
 		varname="CONF_FILES"; ${_PKGTASKS_CHECK_EGFILE};	\
 	done
 	${RUN}set -- args ${_CONF_FILES_PERMS}; shift;			\
 	while ${TEST} "$$#" -gt 0; do					\
-		${TEST} "$$#" -gt 5 || break;				\
+		${TEST} "$$#" -ge 5 || break;				\
 		egfile="$$1"; shift 5;					\
 		varname="CONF_FILES_PERMS"; ${_PKGTASKS_CHECK_EGFILE};	\
 	done
 	${RUN}set -- args ${_REQD_FILES}; shift;			\
 	while ${TEST} "$$#" -gt 0; do					\
-		${TEST} "$$#" -gt 2 || break;				\
+		${TEST} "$$#" -ge 2 || break;				\
 		egfile="$$1"; shift 2;					\
 		varname="REQD_FILES"; ${_PKGTASKS_CHECK_EGFILE};	\
 	done
 	${RUN}set -- args ${_REQD_FILES_PERMS}; shift;			\
 	while ${TEST} "$$#" -gt 0; do					\
-		${TEST} "$$#" -gt 5 || break;				\
+		${TEST} "$$#" -ge 5 || break;				\
 		egfile="$$1"; shift 5;					\
 		varname="REQD_FILES_PERMS"; ${_PKGTASKS_CHECK_EGFILE};	\
 	done
 	${RUN}set -- args ${__INIT_SCRIPTS}; shift;			\
 	while ${TEST} "$$#" -gt 0; do					\
-		${TEST} "$$#" -gt 2 || break;				\
+		${TEST} "$$#" -ge 2 || break;				\
 		egfile="$$1"; shift 2;					\
 		varname="INIT_SCRIPTS"; ${_PKGTASKS_CHECK_EGFILE};	\
 	done
 	${RUN}set -- args ${__INIT_SCRIPTS_PERMS}; shift;		\
 	while ${TEST} "$$#" -gt 0; do					\
-		${TEST} "$$#" -gt 5 || break;				\
+		${TEST} "$$#" -ge 5 || break;				\
 		egfile="$$1"; shift 5;					\
 		varname="INIT_SCRIPTS_PERMS"; ${_PKGTASKS_CHECK_EGFILE}; \
 	done
