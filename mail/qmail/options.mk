@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.45 2017/08/13 23:42:55 schmonz Exp $
+# $NetBSD: options.mk,v 1.46 2017/08/19 22:11:43 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai sasl syncdir tls
@@ -45,7 +45,7 @@ PATCHFILES+=			${OUTGOINGIP_PATCH}
 SITES.${OUTGOINGIP_PATCH}=	http://www.qmail.org/
 
 QMAILPATCHES+=			qbiffutmpx:${QBIFFUTMPX_PATCH}
-QBIFFUTMPX_PATCH=		netqmail-1.06-qbiffutmpx-20170813.patch
+QBIFFUTMPX_PATCH=		netqmail-1.06-qbiffutmpx-20170820.patch
 PATCHFILES+=			${QBIFFUTMPX_PATCH}
 SITES.${QBIFFUTMPX_PATCH}=	https://schmonz.com/qmail/qbiffutmpx/
 
