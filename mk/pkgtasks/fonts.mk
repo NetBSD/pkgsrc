@@ -1,4 +1,4 @@
-# $NetBSD: fonts.mk,v 1.2 2017/06/07 20:24:27 jlam Exp $
+# $NetBSD: fonts.mk,v 1.3 2017/08/19 00:29:55 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -64,35 +64,38 @@ _FONTS_DIRS.x11=	# empty
 .if !empty(FONTS_DIRS.ttf:M*)
 .  if ${X11_TYPE} == "modular"
 USE_TOOLS+=		mkfontscale:run
-FILES_SUBST+=		MKFONTSCALE=${TOOLS_PATH.mkfontscale:Q}
 .  else
 USE_TOOLS+=		ttmkfdir:run
-FILES_SUBST+=		TTMKFDIR=${TOOLS_PATH.ttmkfdir:Q}
 .  endif
 _FONTS_DIRS.x11+=	${FONTS_DIRS.ttf}
 .endif
 .if !empty(FONTS_DIRS.type1:M*)
 .  if ${X11_TYPE} == "modular"
 USE_TOOLS+=		mkfontscale:run
-FILES_SUBST+=		MKFONTSCALE=${TOOLS_PATH.mkfontscale:Q}
 .  else
 USE_TOOLS+=		type1inst:run
-FILES_SUBST+=		TYPE1INST=${TOOLS_PATH.type1inst:Q}
 .  endif
 _FONTS_DIRS.x11+=	${FONTS_DIRS.type1}
 .endif
 _FONTS_DIRS.x11+=	${FONTS_DIRS.x11}
 .if !empty(_FONTS_DIRS.x11:M*)
 USE_TOOLS+=		mkfontdir:run
-FILES_SUBST+=		MKFONTDIR=${TOOLS_PATH:mkfontdir:Q}
 .  if ${X11_TYPE} == "modular"
 DEPENDS+=		encodings-[0-9]*:../../fonts/encodings
 X11_ENCODINGSDIR?=	${X11BASE}/share/fonts/X11/encodings
 .  else
 X11_ENCODINGSDIR?=	${X11BASE}/lib/fonts/X11/encodings
 .  endif
-FILES_SUBST+=		X11_ENCODINGSDIR=${X11_ENCODINGSDIR:Q}
 .endif
+
+# Variables for programs used by "fonts" package task.
+FILES_SUBST+=		MKFONTDIR=${TOOLS_PATH:mkfontdir:Q}
+FILES_SUBST+=		MKFONTSCALE=${TOOLS_PATH.mkfontscale:Q}
+FILES_SUBST+=		TTMKFDIR=${TOOLS_PATH.ttmkfdir:Q}
+FILES_SUBST+=		TYPE1INST=${TOOLS_PATH.type1inst:Q}
+
+# Path variables used by "fonts" package task.
+FILES_SUBST+=		X11_ENCODINGSDIR=${X11_ENCODINGSDIR:Q}
 
 _PKGTASKS_DATA.fonts=	${_PKGTASKS_DIR}/fonts
 _PKGTASKS_DATAFILES+=	${_PKGTASKS_DATA.fonts}
