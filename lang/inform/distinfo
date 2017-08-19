@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2017/07/24 03:18:54 maya Exp $
+$NetBSD: distinfo,v 1.9 2017/08/19 00:21:25 jlam Exp $
 
 SHA1 (inform-6.33-6.12.1.tar.gz) = b6f944d0c7377b58fc0a7c8980846755d2c53be2
 RMD160 (inform-6.33-6.12.1.tar.gz) = 100eb4aba874df6f7a3a9d5e47781d5d11af5d7f
 SHA512 (inform-6.33-6.12.1.tar.gz) = 6eaff617fad8ebc63663113b75f81cc0209e32472435abc4773db0ddacef9117a6cbf2fe9525a8ef7028302bc297144b6ec38b2b4d6bf0406472d2490b15d345
 Size (inform-6.33-6.12.1.tar.gz) = 742439 bytes
-SHA1 (patch-Makefile) = aee3d31890f689438aa05d12666d265553e22c84
+SHA1 (patch-Makefile) = 498cc5ea03599a9d8f9848e13d543ecf530d0f6f
