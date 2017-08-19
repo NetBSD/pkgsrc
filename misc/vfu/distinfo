@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 23:49:54 agc Exp $
+$NetBSD: distinfo,v 1.14 2017/08/19 00:26:37 jlam Exp $
 
 SHA1 (vfu-3.04.src.tar.gz) = 75e87d102114dc08136420e7927e687f72a52dfd
 RMD160 (vfu-3.04.src.tar.gz) = a0d1ba84d9c66216b444226ceace190ada0e795a
 SHA512 (vfu-3.04.src.tar.gz) = b4cbae451c3fd0e4168e7bf61372c87f2f9969b088b7129f0c42e70cabe8dc6b0af934e28077c9411125644173eb6128afd800728f39ef6e6d44a474f3fd4f5a
 Size (vfu-3.04.src.tar.gz) = 187519 bytes
-SHA1 (patch-aa) = ce204485f8c781a6ffeb25e4de4de21cdf33b473
+SHA1 (patch-aa) = 6177822e3ab352b2aa3b051519237eda974f08e3
 SHA1 (patch-ab) = bb935cd9127479517daf36480e2637cd5447b978
 SHA1 (patch-ac) = 72c05012c39bb785b4eea5d41c51bd1787e463f8
 SHA1 (patch-ad) = 0777dcc38998562c9f8f70c64a6c2dce02c20c7c
