@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/03/08 15:05:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/19 00:22:23 jlam Exp $
 
 DISTNAME=	lowdown-0.1.9
 CATEGORIES=	textproc
@@ -14,7 +14,8 @@ WRKSRC=		${WRKDIR}/lowdown-${GITHUB_TAG}
 HAS_CONFIGURE=	yes
 
 SUBST_CLASSES+=		install
-SUBST_SED.install+=	-e 's,/usr/local,${PREFIX},'
+SUBST_SED.install+=	-e 's,/usr/local,${PREFIX},' \
+			-e 's,^MANDIR=.*,MANDIR=${PREFIX}/${PKGMANDIR},'
 SUBST_FILES.install+=	configure
 SUBST_STAGE.install=	pre-configure
 SUBST_MESSAGE.install=	Fixing installation path.
