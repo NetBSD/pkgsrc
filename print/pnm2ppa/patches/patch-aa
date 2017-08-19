@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2008/06/12 02:14:43 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2017/08/19 00:24:24 jlam Exp $
 
 --- Makefile.orig	2002-11-16 00:29:29.000000000 +0100
 +++ Makefile
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2008/06/12 02:14:43 joerg Exp $
 -MANDIR="/usr/local/man/man1"
 +BINDIR="${PREFIX}/bin"
 +CONFDIR="${PKG_SYSCONFDIR}"
-+MANDIR="${PREFIX}/man/man1"
++MANDIR="${PREFIX}/${PKGMANDIR}/man1"
  
  #compiler and linker options:
 -CC=gcc
