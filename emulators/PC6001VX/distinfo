@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/02/24 17:33:32 tsutsui Exp $
+$NetBSD: distinfo,v 1.3 2017/08/19 10:27:24 tsutsui Exp $
 
-SHA1 (PC6001VX_2.30.0_src.tar.gz) = e6be8c003b5247ea57502f55974a332bf2ab0588
-RMD160 (PC6001VX_2.30.0_src.tar.gz) = 14ef360a479de18c88e8f2cba30ff9dec88869ed
-SHA512 (PC6001VX_2.30.0_src.tar.gz) = 813a1c0d34263e91ace6c34ba5931e8cd8cc981385990eaece9c32ad8288ca1d4b94acbd62bad76add41f0941ad3410aaab5251977e010cf43403ab528f9d683
-Size (PC6001VX_2.30.0_src.tar.gz) = 1639761 bytes
-SHA1 (patch-PC6001VX.pro) = 9746ccdd8d5145829bd50159455c11ba2f187c01
-SHA1 (patch-src_Qt_audiooutputwrapper.h) = c753200af406cb135cca3b9afb507b989f169179
-SHA1 (patch-src_Qt_osdQt.cpp) = 831fd66b46aa661e324bfda96d0735a4ac2f8a73
+SHA1 (PC6001VX_2.31.0_src.tar.gz) = 526c1409aa78f182456ccd3b251babfef1b60645
+RMD160 (PC6001VX_2.31.0_src.tar.gz) = 05be6b710453160fecea5641b534a8c6371a4319
+SHA512 (PC6001VX_2.31.0_src.tar.gz) = cb4363b8091ac896774f8da1f0528f58a09a7cdf177fb45a50985b91e72255c557c5edc758ec5ce7c40f428a60b2ccdbaa29f28309ea4dcd5bedb1c15501f4b6
+Size (PC6001VX_2.31.0_src.tar.gz) = 2052744 bytes
