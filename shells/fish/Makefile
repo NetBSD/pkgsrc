@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2017/05/19 15:27:58 fhajny Exp $
+# $NetBSD: Makefile,v 1.11 2017/08/19 09:28:38 fhajny Exp $
 
-FISHVER=		2.5.0
-DISTNAME=		fish-${FISHVER}
+DISTNAME=		fish-2.6.0
 CATEGORIES=		shells
-MASTER_SITES=		http://fishshell.com/files/${FISHVER}/
+MASTER_SITES=		http://fishshell.com/files/${PKGVERSION_NOREV}/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.fishshell.com/
@@ -44,6 +43,7 @@ PLIST.open=	yes
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
