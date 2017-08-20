@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2017/06/05 14:25:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2017/08/20 00:49:42 wen Exp $
 #
 
-DISTNAME=	HTML-Scrubber-0.15
+DISTNAME=	HTML-Scrubber-0.17
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
-#PKGREVISION=	0
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 
@@ -19,8 +17,6 @@ BUILD_DEPENDS+=	p5-Test-NoTabs-[0-9]*:../../devel/p5-Test-NoTabs
 BUILD_DEPENDS+=	p5-Test-CPAN-Meta-[0-9]*:../../devel/p5-Test-CPAN-Meta
 BUILD_DEPENDS+=	p5-Test-EOL-[0-9]*:../../devel/p5-Test-EOL
 BUILD_DEPENDS+=	p5-Test-Memory-Cycle-[0-9]*:../../devel/p5-Test-Memory-Cycle
-
-PERL5_MODULE_TYPE=	Module::Build
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/HTML/Scrubber/.packlist
