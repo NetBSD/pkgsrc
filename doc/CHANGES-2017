@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3381 2017/08/20 12:26:44 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3382 2017/08/20 12:28:47 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4707,3 +4707,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-HTTP-Cache-Transparent to 1.4 [wen 2017-08-20]
 	Updated net/nagios-plugin-dnsrbl to 0.3 [manu 2017-08-20]
 	Updated security/erlang-fast_tls to 1.0.15 [fhajny 2017-08-20]
+	Updated net/erlang-xmpp to 1.1.14 [fhajny 2017-08-20]
