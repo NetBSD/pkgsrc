@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2017/07/07 10:08:39 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.48 2017/08/20 12:58:04 fhajny Exp $
 lib/erlang/lib/${PKGNAME}/COPYING
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
@@ -28,6 +28,7 @@ lib/erlang/lib/${PKGNAME}/ebin/ejabberd_c2s.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_c2s_config.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_captcha.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_cluster.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_cluster_mnesia.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_commands.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_commands_doc.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_config.beam
@@ -179,6 +180,9 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_proxy65_service.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_proxy65_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_proxy65_stream.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_pubsub.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_push.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_push_keepalive.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_push_mnesia.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_register.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_register_web.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_roster.beam
