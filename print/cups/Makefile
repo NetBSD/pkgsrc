@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.248 2017/08/01 14:59:04 wiz Exp $
+# $NetBSD: Makefile,v 1.249 2017/08/20 23:55:54 jlam Exp $
 
 DISTNAME=	cups-2.2.3-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -131,7 +131,7 @@ SUBST_SED.piefix=	-e 's|@PIEFLAGS@||g'
 SUBST_STAGE.piefix=	post-patch
 .endif
 
-INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${MIMEDIR} ${CUPS_CONFDIR}
+INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${MIMEDIR}
 INSTALL_ENV+=		DSTROOT=${DESTDIR}
 
 pre-configure:

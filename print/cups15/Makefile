@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/08/01 14:59:04 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2017/08/20 23:55:54 jlam Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -159,7 +159,7 @@ SUBST_SED.piefix=	-e 's|@PIEFLAGS@||g'
 SUBST_STAGE.piefix=	post-patch
 .endif
 
-INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${MIMEDIR} ${CUPS_CONFDIR}
+INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${MIMEDIR}
 INSTALL_ENV+=		DSTROOT=${DESTDIR}
 
 pre-configure:
