@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/04/25 14:30:45 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2017/08/20 12:30:34 fhajny Exp $
 
-SHA1 (p1_oauth2-0.6.1.tar.gz) = 1878104da449f8af6212dcfb238fe8ea0de4d3f9
-RMD160 (p1_oauth2-0.6.1.tar.gz) = 7680376e6a6a6d57d0efa4472b810f29ee91ecdf
-SHA512 (p1_oauth2-0.6.1.tar.gz) = 2509d48775579a26178fb5a082e628a8487c986b1b4d4abe974b653a1e0b7605bed934d59f6d62927582bdb95a53ba454816d326d99a77c5360928c4973ade4a
-Size (p1_oauth2-0.6.1.tar.gz) = 212804 bytes
+SHA1 (p1_oauth2-0.6.2.tar.gz) = 59aef3b5861dcd6f3bc81c0fb230548a5cd9db7b
+RMD160 (p1_oauth2-0.6.2.tar.gz) = cf8916f903ba5d7e32e152aeeda35f95986ee45f
+SHA512 (p1_oauth2-0.6.2.tar.gz) = 09e7c2bcc2038e315a94f1087cab2b7a42a0d0545df95ef0f3c1cd9f9bb717039fa84c05d59f04ea6110495da4a68c88ed052e9a721dfaa4b2dd2e114c905941
+Size (p1_oauth2-0.6.2.tar.gz) = 214231 bytes
