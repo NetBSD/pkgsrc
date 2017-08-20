@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/07/30 22:32:20 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/20 12:28:37 fhajny Exp $
 
-DISTNAME=	xmpp-1.1.13
+DISTNAME=	xmpp-1.1.14
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
