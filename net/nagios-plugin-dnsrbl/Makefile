@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/03/22 19:42:53 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/20 03:28:49 manu Exp $
 #
 
 PKGNAME=	nagios-plugin-dnsrbl-${DISTNAME:C/.*-//}
-DISTNAME=	check_dnsrbl-0.2
+DISTNAME=	check_dnsrbl-0.3
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.espci.fr/pub/nagios-local/
 EXTRACT_SUFX=	.tgz
