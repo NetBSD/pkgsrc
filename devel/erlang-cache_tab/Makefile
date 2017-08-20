@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/07/30 22:32:14 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/20 12:40:28 fhajny Exp $
 
-DISTNAME=	cache_tab-1.0.9
+DISTNAME=	cache_tab-1.0.10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
