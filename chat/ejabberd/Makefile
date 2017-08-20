@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2017/08/01 14:58:53 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2017/08/20 12:58:04 fhajny Exp $
 
-DISTNAME=	ejabberd-17.07
+DISTNAME=	ejabberd-17.08
 CATEGORIES=	chat
 MASTER_SITES=	https://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -10,12 +10,12 @@ HOMEPAGE=	https://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	erlang-cache_tab>=1.0.9:../../devel/erlang-cache_tab
+DEPENDS+=	erlang-cache_tab>=1.0.10:../../devel/erlang-cache_tab
 DEPENDS+=	erlang-epam>=1.0.3:../../security/erlang-epam
 DEPENDS+=	erlang-eredis>=1.0.8.20150910:../../databases/erlang-eredis
-DEPENDS+=	erlang-esip>=1.0.13:../../net/erlang-esip
+DEPENDS+=	erlang-esip>=1.0.15:../../net/erlang-esip
 DEPENDS+=	erlang-ezlib>=1.0.2:../../devel/erlang-ezlib
-DEPENDS+=	erlang-fast_tls>=1.0.13:../../security/erlang-fast_tls
+DEPENDS+=	erlang-fast_tls>=1.0.15:../../security/erlang-fast_tls
 DEPENDS+=	erlang-fast_xml>=1.1.23:../../textproc/erlang-fast_xml
 DEPENDS+=	erlang-fast_yaml>=1.0.10:../../textproc/erlang-fast_yaml
 DEPENDS+=	erlang-iconv>=1.0.5:../../converters/erlang-iconv
@@ -23,12 +23,12 @@ DEPENDS+=	erlang-jiffy>=0.14.8:../../textproc/erlang-jiffy
 DEPENDS+=	erlang-lager>=3.4.2.:../../sysutils/erlang-lager
 DEPENDS+=	erlang-luerl>=0.2:../../lang/erlang-luerl
 DEPENDS+=	erlang-p1_mysql>=1.0.3:../../databases/erlang-p1_mysql
-DEPENDS+=	erlang-p1_oauth2>=0.6.1:../../security/erlang-p1_oauth2
+DEPENDS+=	erlang-p1_oauth2>=0.6.2:../../security/erlang-p1_oauth2
 DEPENDS+=	erlang-p1_pgsql>=1.1.3:../../databases/erlang-p1_pgsql
 DEPENDS+=	erlang-p1_utils>=1.0.9:../../misc/erlang-p1_utils
 DEPENDS+=	erlang-stringprep>=1.0.9:../../textproc/erlang-stringprep
-DEPENDS+=	erlang-stun>=1.0.12:../../net/erlang-stun
-DEPENDS+=	erlang-xmpp>=1.1.13:../../net/erlang-xmpp
+DEPENDS+=	erlang-stun>=1.0.14:../../net/erlang-stun
+DEPENDS+=	erlang-xmpp>=1.1.14:../../net/erlang-xmpp
 CONFLICTS+=	jabberd-[0-9]*
 
 GNU_CONFIGURE=		yes

@@ -1,23 +1,15 @@
-$NetBSD: patch-ae,v 1.16 2017/07/07 10:08:40 fhajny Exp $
+$NetBSD: patch-ae,v 1.17 2017/08/20 12:58:04 fhajny Exp $
 
 - Default locations.
 - Use 'su -' instead of just 'su'. Fixes priv delegation on SunOS
-  and AIX where Erlang relies on $HOME set correctly.
+  and AIX where Erlang relies on $HOME set correctly. Use a portable
+  su arg order while at it.
 - At least SunOS has not wheel group.
 - Portable grep calls.
 
---- ejabberdctl.template.orig	2017-06-30 12:24:35.000000000 +0000
+--- ejabberdctl.template.orig	2017-08-14 07:43:02.000000000 +0000
 +++ ejabberdctl.template
-@@ -21,7 +21,7 @@ if [ -n "$INSTALLUSER" ] ; then
-     if [ $(id -g) -eq $(id -g $INSTALLUSER || echo -1) ] ; then
-         EXEC_CMD="as_current_user"
-     else
--        id -Gn | grep -q wheel && EXEC_CMD="as_install_user"
-+        id -Gn | grep 'wheel\|root' >/dev/null && EXEC_CMD="as_install_user"
-     fi
- else
-     EXEC_CMD="as_current_user"
-@@ -49,8 +49,8 @@ done
+@@ -56,8 +56,8 @@ done
  
  # define ejabberd variables if not already defined from the command line
  : ${ETC_DIR:={{sysconfdir}}/ejabberd}
@@ -28,16 +20,16 @@ $NetBSD: patch-ae,v 1.16 2017/07/07 10:08:40 fhajny Exp $
  : ${EJABBERD_CONFIG_PATH:="$ETC_DIR"/ejabberd.yml}
  : ${EJABBERDCTL_CONFIG_PATH:="$ETC_DIR"/ejabberdctl.cfg}
  [ -f "$EJABBERDCTL_CONFIG_PATH" ] && . "$EJABBERDCTL_CONFIG_PATH"
-@@ -103,7 +103,7 @@ export ERL_LIBS
+@@ -108,7 +108,7 @@ export ERL_LIBS
  exec_cmd()
  {
      case $EXEC_CMD in
--        as_install_user) su -c '"$0" $@"' "$INSTALLUSER" -- "$@" ;;
-+        as_install_user) su - -c '"$0" $@"' "$INSTALLUSER" -- "$@" ;;
+-        as_install_user) su -c '"$0" "$@"' "$INSTALLUSER" -- "$@" ;;
++        as_install_user) su - "$INSTALLUSER" -c '"$@"' -- "$@" ;;
          as_current_user) "$@" ;;
      esac
  }
-@@ -202,19 +202,19 @@ uid()
+@@ -207,19 +207,19 @@ uid()
  # stop epmd if there is no other running node
  stop_epmd()
  {
