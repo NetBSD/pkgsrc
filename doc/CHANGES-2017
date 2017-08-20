@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3385 2017/08/20 12:38:12 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3386 2017/08/20 12:40:40 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4711,3 +4711,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/erlang-p1_oauth2 to 0.6.2 [fhajny 2017-08-20]
 	Updated net/erlang-stun to 1.0.14 [fhajny 2017-08-20]
 	Updated net/erlang-esip to 1.0.15 [fhajny 2017-08-20]
+	Updated devel/erlang-cache_tab to 1.0.10 [fhajny 2017-08-20]
