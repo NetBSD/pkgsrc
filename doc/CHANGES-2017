@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3386 2017/08/20 12:40:40 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3387 2017/08/20 12:58:15 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4712,3 +4712,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/erlang-stun to 1.0.14 [fhajny 2017-08-20]
 	Updated net/erlang-esip to 1.0.15 [fhajny 2017-08-20]
 	Updated devel/erlang-cache_tab to 1.0.10 [fhajny 2017-08-20]
+	Updated chat/ejabberd to 17.08 [fhajny 2017-08-20]
