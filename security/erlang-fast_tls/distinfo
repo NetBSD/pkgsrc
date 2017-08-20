@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/07/07 09:36:50 fhajny Exp $
+$NetBSD: distinfo,v 1.8 2017/08/20 12:26:32 fhajny Exp $
 
-SHA1 (fast_tls-1.0.13.tar.gz) = 22dc1eec648de412b16397e2b0a77e81819e3d49
-RMD160 (fast_tls-1.0.13.tar.gz) = 24cd13582cd77d4b4e94398b10f5ea4931ab9859
-SHA512 (fast_tls-1.0.13.tar.gz) = 138d9de3ac0d32d83f8a29fbe96a68bddae8074a52c0ee7b4ccedfe1aab9fbc728774e341324ad279269dcbfbccf57d2b21bdd425b7da48547507b5e19771218
-Size (fast_tls-1.0.13.tar.gz) = 62921 bytes
+SHA1 (fast_tls-1.0.15.tar.gz) = b4fa60dd684a2f166780fefe85eb180064da013c
+RMD160 (fast_tls-1.0.15.tar.gz) = 3c32983c58d2b692b4145252440f5bb755ddb9f5
+SHA512 (fast_tls-1.0.15.tar.gz) = e42f58bcf5c015bfee24f5e8deeb0d8100db82153142bdc55e38913674b64da5d9a2b126dd313fac57823a866f175a5fffa37d8452fd885d2cf18608345df79f
+Size (fast_tls-1.0.15.tar.gz) = 63082 bytes
