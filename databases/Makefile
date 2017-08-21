@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.537 2017/08/17 02:04:07 gavan Exp $
+# $NetBSD: Makefile,v 1.538 2017/08/21 15:40:17 adam Exp $
 
 COMMENT=	Databases
 
@@ -376,6 +376,7 @@ SUBDIR+=	py-sybase
 SUBDIR+=	py-table
 SUBDIR+=	py-tokyocabinet
 SUBDIR+=	py-trytond-ldap-authentication
+SUBDIR+=	py-unicodecsv
 SUBDIR+=	py-whisper
 SUBDIR+=	qdbm
 SUBDIR+=	qdbm-cgi
