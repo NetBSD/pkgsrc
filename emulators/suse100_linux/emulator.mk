@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.9 2014/04/08 10:05:44 obache Exp $
+# $NetBSD: emulator.mk,v 1.10 2017/08/21 12:49:16 jlam Exp $
 #
 # This file is included by linux-suse.mk in the emulator framework.
 #
@@ -49,4 +49,13 @@ DEPENDS_suse-10.0.xml2?=	suse_libxml2${_SUSE_VERSION_REQD}:../../emulators/suse1
 DEPENDS_suse-10.0.${_mod_}:=	\
 	${DEPENDS_suse-10.0.${_mod_}:S/^suse_/suse32_/:S/suse100_/&32_/}
 .  endfor
+.endif
+
+# SuSE Linux's ld.so(8) uses a cache file of search paths for shared
+# libraries which is managed by ldconfig(8).
+#
+.if !defined(EMUL_IS_NATIVE)
+SUSE_LDCONFIG_CMD=	${EMULDIR}/sbin/ldconfig -r ${EMULDIR}
+LDCONFIG_ADD_CMD?=	${SUSE_LDCONFIG_CMD}
+LDCONFIG_REMOVE_CMD?=	${SUSE_LDCONFIG_CMD}
 .endif

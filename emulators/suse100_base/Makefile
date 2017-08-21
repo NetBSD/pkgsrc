@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2016/07/09 06:38:16 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2017/08/21 12:49:16 jlam Exp $
 
 PKGNAME=	suse_base-${SUSE_VERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	emulators
 
 MAINTAINER=	tonio@NetBSD.org
@@ -22,7 +22,7 @@ RPMIGNOREPATH=		./etc/bash.bashrc ./etc/bash_completion.d \
 			./etc/rc.d.README ./etc/rpc ./etc/shells ./etc/ttytype
 
 LINUX_LDD=		${EMULDIR}/usr/bin/ldd
-LINUX_LDCONFIG=		${EMULDIR}/usr/sbin/ldconfig
+LINUX_LDCONFIG=		${EMULDIR}/sbin/ldconfig
 
 INSTALLATION_DIRS+=	sbin emul/linux/etc
 OWN_DIRS+=		${EMULSUBDIR}
@@ -36,6 +36,11 @@ SUBST_VARS.suse=	EMULDIR LINUX_BASE SUSE_ARCH SUSE_VERSION
 # the correct type.
 #
 BRANDELF_CMD=	${BRANDELF:D${BRANDELF} -t Linux ${DESTDIR}${LINUX_LDCONFIG}:U${TRUE}}
+
+# This package provides the ldconfig(8) binary, so that binary can't
+# be used during postremove.
+#
+LDCONFIG_REMOVE_CMD=	${TRUE}
 
 post-extract:
 	${CP} ${FILESDIR}/SuSE-release ${WRKSRC}

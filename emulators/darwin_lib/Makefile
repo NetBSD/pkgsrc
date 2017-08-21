@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2016/07/09 06:38:15 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/08/21 12:49:16 jlam Exp $
 
 DISTNAME=	darwin_lib-6.6.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	emulators
 MASTER_SITES=	# http://www.opendarwin.org/downloads/6.6.2/RPMS/ \
 #		http://www.opendarwin.org/downloads/6.6.2/RPMS/${DARWIN_ARCH}/

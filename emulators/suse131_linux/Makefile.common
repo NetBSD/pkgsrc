@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2017/04/27 22:59:54 kamil Exp $
+# $NetBSD: Makefile.common,v 1.18 2017/08/21 12:49:16 jlam Exp $
 #
 # used by emulators/suse131_alsa/Makefile
 # used by emulators/suse131_aspell/Makefile
@@ -122,6 +122,9 @@ FILES_SUBST+=		LINUX_LIBSUBDIR=${LINUX_LIBSUBDIR:Q}
 # Makefile fragment if it exists.
 #
 .sinclude "${SUSE_PKGSRCDIR}/suse.${EMUL_ARCH}.mk"
+
+# By default, run ldconfig(8) after installing a SuSE package.
+RUN_LDCONFIG?=		yes
 
 .if make(distinfo) || make(makedistinfo) || make(mdi) || make(makesum)
 PKG_FAIL_REASON+=	"please use make emul-fetch or make emul-distinfo"
