@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/21 15:10:48 adam Exp $
+
+SHA1 (pytest-cache-1.0.tar.gz) = 94d0a6512b888a3f36b2ae5748ceb789ddee5681
+RMD160 (pytest-cache-1.0.tar.gz) = 1b3714383bd9725166a324680215c7cf89cb58b4
+SHA512 (pytest-cache-1.0.tar.gz) = 55eb66718a45fb0ad8931780d96fa4715cf0d9f2568be2a1b08b3399d391b818a7ae8b2afeb74b50aaf8ec8f7f0d8da8e7a7483845a50e884822ca6ddbca03ea
+Size (pytest-cache-1.0.tar.gz) = 16242 bytes
