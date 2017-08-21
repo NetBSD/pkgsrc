@@ -1,0 +1,4 @@
+pytest plugin to check FLAKE8 requirements.
+After installing it, when you run tests with the option:
+    py.test --flake8
+every file ending in .py will be discovered and checked with flake8.
