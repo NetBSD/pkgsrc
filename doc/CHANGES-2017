@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3393 2017/08/21 12:02:41 nils Exp $
+$NetBSD: CHANGES-2017,v 1.3394 2017/08/21 13:26:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4721,3 +4721,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-django-reversion to 2.0.10 [adam 2017-08-21]
 	Added devel/ruby-mustache version 1.0.5 [nils 2017-08-21]
 	Added textproc/ruby-rdiscount version 2.2.0.1 [nils 2017-08-21]
+	Updated devel/p5-Config-AutoConf to 0.315 [mef 2017-08-21]
