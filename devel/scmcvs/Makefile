@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2017/05/12 05:13:43 maya Exp $
+# $NetBSD: Makefile,v 1.18 2017/08/21 22:57:45 tez Exp $
 
 DISTNAME=	cvs-1.12.13
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel scm
 MASTER_SITES=	http://ftp.gnu.org/non-gnu/cvs/source/feature/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
