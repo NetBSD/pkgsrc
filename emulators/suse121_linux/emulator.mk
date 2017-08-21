@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.10 2015/09/26 01:05:31 kamil Exp $
+# $NetBSD: emulator.mk,v 1.11 2017/08/21 12:49:16 jlam Exp $
 #
 # This file is included by linux-suse.mk in the emulator framework.
 #
@@ -62,3 +62,12 @@ DEPENDS_suse-12.1.dbus=		${DEPENDS_suse-12.1.gtk2}
 DEPENDS_suse-12.1.dbus-glib=	${DEPENDS_suse-12.1.gtk2}
 DEPENDS_suse-12.1.libffi=	${DEPENDS_suse-12.1.gtk2}
 DEPENDS_suse-12.1.glib2=	${DEPENDS_suse-12.1.gtk2}
+
+# SuSE Linux's ld.so(8) uses a cache file of search paths for shared
+# libraries which is managed by ldconfig(8).
+#
+.if !defined(EMUL_IS_NATIVE)
+SUSE_LDCONFIG_CMD=	${EMULDIR}/sbin/ldconfig -r ${EMULDIR}
+LDCONFIG_ADD_CMD?=	${SUSE_LDCONFIG_CMD}
+LDCONFIG_REMOVE_CMD?=	${SUSE_LDCONFIG_CMD}
+.endif
