@@ -1,4 +1,4 @@
-$NetBSD: distinfo-bindings,v 1.4 2017/08/07 22:24:05 schmonz Exp $
+$NetBSD: distinfo-bindings,v 1.5 2017/08/21 18:49:39 schmonz Exp $
 
 SHA1 (xapian-bindings-1.4.4.tar.xz) = 1162e836f3caccee927997f0d262ef6dccd44d9f
 RMD160 (xapian-bindings-1.4.4.tar.xz) = 231d56d0989cf3a37a0b31d39680488fa1e80b39
@@ -6,4 +6,5 @@ SHA512 (xapian-bindings-1.4.4.tar.xz) = 006e771b3ea654130b4f76f1a1caee576fd5a3fa
 Size (xapian-bindings-1.4.4.tar.xz) = 1117140 bytes
 SHA1 (patch-configure) = d1c3edf1efcd105aef23bf9245650971f8df6ced
 SHA1 (patch-lua_Makefile.in) = 7f1c5077f0d46dfdf33c2b65f144bb08d5031330
+SHA1 (patch-perl_Makefile.in) = 993b137b319d7d28c2b3a70d2e46e1a38d380578
 SHA1 (patch-ruby_Makefile.in) = ddbf3ca92b11ff6955d80f6a5609e3ce36798b0b
