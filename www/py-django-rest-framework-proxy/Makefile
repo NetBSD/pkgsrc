@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/21 15:40:17 adam Exp $
 
-DISTNAME=	django-rest-framework-proxy-1.6.0
+DISTNAME=	unicodecsv-0.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	www python
-MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-rest-framework-proxy/}
+CATEGORIES=	databases python
+MASTER_SITES=	${MASTER_SITE_PYPI:=u/unicodecsv/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/eofs/django-rest-framework-proxy/
-COMMENT=	Easy proxying of incoming REST requests
+HOMEPAGE=	https://github.com/jdunck/python-unicodecsv
+COMMENT=	Drop-in replacement for Python's csv module with unicode support
 LICENSE=	modified-bsd
-
-DEPENDS+=	${PYPKGPREFIX}-djangorestframework-[0-9]*:../../www/py-django
 
 USE_LANGUAGES=		# empty
 
