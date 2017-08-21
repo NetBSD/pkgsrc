@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.114 2017/06/19 21:10:00 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2017/08/21 15:06:53 adam Exp $
 
-DISTNAME=	gnuplot-5.0.6
+DISTNAME=	gnuplot-5.0.7
 API_VERSION=	${PKGVERSION_NOREV:C/([0-9])\.([0-9])\.([0-9])/\1.\2/}
 CATEGORIES+=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnuplot/}
@@ -12,21 +12,14 @@ COMMENT=	Portable interactive, function plotting utility
 
 CONFLICTS+=		gnuplot-nox11-[0-9]*
 
-PATCHDIR=		${.CURDIR}/../../graphics/gnuplot/patches
-DISTINFO_FILE=		${.CURDIR}/../../graphics/gnuplot/distinfo
-
 USE_LANGUAGES=		c
 USE_TOOLS+=		makeinfo pkg-config gmake
 GNU_CONFIGURE=		yes
-#CONFIGURE_ARGS+=	--enable-history-file
+CONFIGURE_ARGS+=	--with-readline=bsd
 CONFIGURE_ARGS+=	--without-latex
 CONFIGURE_ARGS+=	--without-tutorial
 CONFIGURE_ARGS+=	ac_cv_prog_EMACS=
 INFO_FILES=		yes
-
-CONFIGURE_ARGS+=	--with-readline=bsd
-.include "../../mk/readline.buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
 
 PLIST_SUBST+=		API_VERSION=${API_VERSION}
 LDFLAGS.SunOS+=		-liconv
@@ -41,4 +34,6 @@ SUBST_SED.fontpath=	-e 's,@PKGSRC_PREFIX@,"${PREFIX}",'
 .include "options.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
