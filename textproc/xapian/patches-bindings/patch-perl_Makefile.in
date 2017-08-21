@@ -1,0 +1,15 @@
+$NetBSD: patch-perl_Makefile.in,v 1.1 2017/08/21 18:45:35 schmonz Exp $
+
+Avoid unportable "rm -v".
+
+--- perl/Makefile.in.orig	2017-04-24 02:20:00.000000000 +0000
++++ perl/Makefile.in
+@@ -1512,7 +1512,7 @@ uninstall-local:
+ docs/index.html: Xapian.pm
+ 	$(MKDIR_P) docs
+ 	$(PERL) -MPod::Html -e 'pod2html(qw(--podpath=. Xapian.pm --outfile=docs/index.html))'
+-	rm -f -v pod2htm?.tmp
++	rm -f pod2htm?.tmp
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
