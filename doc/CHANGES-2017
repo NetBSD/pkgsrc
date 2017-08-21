@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3397 2017/08/21 15:52:48 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3398 2017/08/21 22:21:11 tez Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4731,3 +4731,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-tinycss2 to 0.6.0 [adam 2017-08-21]
 	Added databases/py-unicodecsv version 0.14.1 [adam 2017-08-21]
 	Added www/py-django-sql-explorer version 1.1.1 [adam 2017-08-21]
+	Updated security/mit-krb5 to 1.14.5nb1 [tez 2017-08-21]
