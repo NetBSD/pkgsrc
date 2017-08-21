@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3399 2017/08/21 22:59:02 tez Exp $
+$NetBSD: CHANGES-2017,v 1.3400 2017/08/21 23:26:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4733,3 +4733,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-django-sql-explorer version 1.1.1 [adam 2017-08-21]
 	Updated security/mit-krb5 to 1.14.5nb1 [tez 2017-08-21]
 	Updated devel/scmcvs to 1.12.13nb6 [tez 2017-08-21]
+	Updated net/nsd to 4.1.17nb1 [ryoon 2017-08-21]
