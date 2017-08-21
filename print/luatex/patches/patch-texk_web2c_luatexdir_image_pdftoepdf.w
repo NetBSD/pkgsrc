@@ -1,6 +1,8 @@
-$NetBSD: patch-texk_web2c_luatexdir_image_pdftoepdf.w,v 1.1 2017/08/21 10:15:22 jperkin Exp $
+$NetBSD: patch-texk_web2c_luatexdir_image_pdftoepdf.w,v 1.2 2017/08/21 11:14:26 jperkin Exp $
 
-Avoid -Wreserved-user-defined-literal failures by using newlines.
+The ctangle tex-to-C generator strips whitespace, resulting in "C++11 requires
+a space between literal and identifier" failures.  Pull in hacky patch from
+Gentoo which avoids this problem by using newlines.
 
 --- texk/web2c/luatexdir/image/pdftoepdf.w.orig	2016-11-25 18:09:14.000000000 +0000
 +++ texk/web2c/luatexdir/image/pdftoepdf.w
