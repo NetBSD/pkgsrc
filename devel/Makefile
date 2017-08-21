@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2489 2017/08/21 15:30:27 adam Exp $
+# $NetBSD: Makefile,v 1.2490 2017/08/21 15:35:11 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2083,6 +2083,7 @@ SUBDIR+=	py-tabular
 SUBDIR+=	py-test
 SUBDIR+=	py-test-cache
 SUBDIR+=	py-test-cov
+SUBDIR+=	py-test-flake8
 SUBDIR+=	py-test-forked
 SUBDIR+=	py-test-isort
 SUBDIR+=	py-test-mock
