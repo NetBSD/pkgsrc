@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/09/19 13:04:28 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/08/21 14:39:05 jperkin Exp $
 #
 
 DISTNAME=	task-2.5.1
@@ -22,6 +22,9 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 CMAKE_ARGS+=	-DTASK_MAN1DIR=${PREFIX}/${PKGMANDIR}/man1
 CMAKE_ARGS+=	-DTASK_MAN5DIR=${PREFIX}/${PKGMANDIR}/man5
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=release
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "options.mk"
 
