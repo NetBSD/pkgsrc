@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.29 2015/04/12 12:21:29 wiz Exp $
+# $NetBSD: linux.mk,v 1.30 2017/08/21 12:49:17 jlam Exp $
 #
 # Linux binary emulation framework
 #
@@ -126,9 +126,4 @@ EMULSUBDIR=		# empty
 .  for _mod_ in ${_EMUL_MODULES}
 DEPENDS_${EMUL_DISTRO}.${_mod_}=	# empty
 .  endfor
-.endif
-
-.if !defined(EMUL_IS_NATIVE)
-LDCONFIG_ADD_CMD?=	${EMULDIR}/sbin/ldconfig -r ${EMULDIR}
-LDCONFIG_REMOVE_CMD?=	${EMULDIR}/sbin/ldconfig -r ${EMULDIR}
 .endif

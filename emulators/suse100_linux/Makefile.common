@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2015/02/16 10:15:44 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.29 2017/08/21 12:49:16 jlam Exp $
 #
 # used by emulators/suse100_alsa/Makefile
 # used by emulators/suse100_alsa/Makefile
@@ -122,6 +122,9 @@ FILES_SUBST+=		LINUX_LIBSUBDIR=${LINUX_LIBSUBDIR:Q}
 # Makefile fragment if it exists.
 #
 .sinclude "${SUSE_PKGSRCDIR}/suse.${EMUL_ARCH}.mk"
+
+# By default, run ldconfig(8) after installing a SuSE package.
+RUN_LDCONFIG?=		yes
 
 .if defined(DISTFILES) && !empty(DISTFILES)
 .  for fetchfile in ${DISTFILES}

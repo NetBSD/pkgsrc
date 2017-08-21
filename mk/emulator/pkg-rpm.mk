@@ -1,4 +1,4 @@
-# $NetBSD: pkg-rpm.mk,v 1.6 2015/11/25 13:05:47 jperkin Exp $
+# $NetBSD: pkg-rpm.mk,v 1.7 2017/08/21 12:49:17 jlam Exp $
 #
 # RPM package format
 #
@@ -94,9 +94,6 @@ PLIST_SRC_DFLT+=	${RPM2PKG_PLIST}
 
 # We handle the extraction of the RPMs in the extract-rpm target below.
 EXTRACT_ONLY?=		# empty
-
-# Usually, packages we install via RPMs also install shared libraries.
-_EMUL_RUN_LDCONFIG=	yes
 
 .PHONY: extract-rpm
 extract-rpm:
