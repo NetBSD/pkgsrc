@@ -1,0 +1,4 @@
+The plugin provides two options to rerun failures, namely --lf to only re-run
+the failures and --ff to run all tests but the failures from the last run
+first. For cleanup (usually not needed), a --clearcache option allows to
+remove all cross-session cache contents ahead of a test run.
