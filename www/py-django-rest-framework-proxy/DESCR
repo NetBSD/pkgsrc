@@ -1,8 +1,2 @@
-Provides views to redirect incoming request to another API server.
-
-Features:
-* Masquerade paths
-* HTTP Basic Auth (between your API and backend API)
-* Token Auth
-* Supported methods: GET/POST/PUT/PATCH
-* File uploads
+The unicodecsv is a drop-in replacement for Python 2.7's csv module which
+supports unicode strings without a hassle.
