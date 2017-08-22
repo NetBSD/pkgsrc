@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2016/07/09 06:38:46 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2017/08/22 09:05:33 jperkin Exp $
 
 DISTNAME=		tightvnc-1.3.10
 PKGREVISION=		15
@@ -53,6 +53,11 @@ SUBST_MESSAGE.hpath=	fixing hardcoded paths
 SUBST_FILES.hpath=	vncserver tightvncserver.conf
 SUBST_SED.hpath+=	-e 's|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g'
 SUBST_SED.hpath+=	-e 's|/etc/tightvncserver.conf|${PKG_SYSCONFDIR}/tightvncserver.conf|g'
+
+SUBST_CLASSES.SunOS+=	ccspath
+SUBST_STAGE.ccspath=	pre-configure
+SUBST_FILES.ccspath=	Xvnc/config/cf/svr4.cf
+SUBST_SED.ccspath=	-e 's,/usr/ccs/bin/make,${MAKE},g'
 
 REPLACE_PERL=		vncserver
 
