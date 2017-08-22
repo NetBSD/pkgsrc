@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2017/06/05 14:22:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2017/08/22 12:16:06 mef Exp $
 
-DISTNAME=	Data-Peek-0.46
+DISTNAME=	Data-Peek-0.47
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 EXTRACT_SUFX=	.tgz
