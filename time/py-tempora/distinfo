@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/07/19 17:06:49 adam Exp $
+$NetBSD: distinfo,v 1.3 2017/08/22 08:08:25 adam Exp $
 
-SHA1 (tempora-1.8.tar.gz) = fa6d4fbcf46d36a528d60811b2d86e0f5e5de966
-RMD160 (tempora-1.8.tar.gz) = 50c3cc64d1d3779737bdee070a3bb093b5068297
-SHA512 (tempora-1.8.tar.gz) = cd0a913990984f0cfe269c87cdcd80495a79df0479feed3c41c03830a19cb748b92ec71c6b586e18327a9e559d4d9540c073d38088dc95b3fb2b03e127052e3f
-Size (tempora-1.8.tar.gz) = 12212 bytes
+SHA1 (tempora-1.9.tar.gz) = db49565ea28808d1df058a303c31ced92f46ccd2
+RMD160 (tempora-1.9.tar.gz) = 94abf3e313c2f49c55f36344e25de0065e3738ae
+SHA512 (tempora-1.9.tar.gz) = cb049675d7196738debca3dc0ddd8c5e72d0468bd1a853f77378cc5564b100cd94d23c63d7b06c6bed2827365d904a1582cf9d497618493b795600b6d476b91f
+Size (tempora-1.9.tar.gz) = 12469 bytes
