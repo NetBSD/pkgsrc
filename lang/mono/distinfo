@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.108 2017/01/10 10:35:28 he Exp $
+$NetBSD: distinfo,v 1.109 2017/08/22 13:43:34 jperkin Exp $
 
 SHA1 (mono-4.0.4.1.tar.bz2) = 12f3dbdac92e937cafba1d4e5a168c4cf2620935
 RMD160 (mono-4.0.4.1.tar.bz2) = 27c2d2682786444ee52199134cb84cc59894b093
@@ -42,6 +42,7 @@ SHA1 (patch-dl) = dc63c1d3f6a1d78b2f5bb725cdff6824e2307dc5
 SHA1 (patch-do) = 0bda0d2e482be218fb502e0c4ea945a41d078d27
 SHA1 (patch-libgc_misc.c) = 52c68e7b6f1b58f480286bd135591f97a3e13125
 SHA1 (patch-man_mprof-report.1) = 0a80c164614cc9af5f01822005193d80f1d89946
+SHA1 (patch-mcs_class_System_System.Net.NetworkInformation_IPGlobalProperties.cs) = 2c312a28f24a45ca2802dcbe032fd7007ddd60a3
 SHA1 (patch-mono_dis_Makefile.in) = f000112e2712faf29104489e45feae8d6fc45169
 SHA1 (patch-mono_metadata_icall.c) = 191a7fccb174855026cb11dd0f6ac450bb920ec7
 SHA1 (patch-mono_metadata_mono-perfcounters.c) = 8cfbfa62fe4201a20bc07645ccf6b13487a64fc3
@@ -62,3 +63,4 @@ SHA1 (patch-mono_utils_mono-threads.c) = 1cf1bd2416fc36df0e456774281c7d4a1bfa50f
 SHA1 (patch-po_Makefile.in) = 53f967c75ae028d991f118fb3bbc5b90bb4ceea7
 SHA1 (patch-support_signal.c) = 33e0c19c21955b105d78a05b2b10d00f479a60c2
 SHA1 (patch-support_time.c) = 2031ab294d66594ff3645b03c48ffca143ab59b5
+SHA1 (patch-support_unistd.c) = 3cd39812b252c660b4cbb44d3da4353829f0ce7a
