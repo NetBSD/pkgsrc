@@ -1,24 +1,44 @@
-$NetBSD: patch-ab,v 1.4 2008/06/20 01:09:08 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2017/08/22 18:51:44 bsiegert Exp $
 
---- Makefile.in.orig	2002-10-13 20:26:36.000000000 +0000
+--- Makefile.in.orig	2008-12-30 21:04:25.000000000 +0000
 +++ Makefile.in
-@@ -27,20 +27,20 @@ ZCAVOBJS=$(ZCAVSRC:.cpp=.o)
- ALLOBJS=$(BONOBJS) $(ZCAVOBJS)
+@@ -12,7 +12,7 @@ WFLAGS=-Wall -W -Wshadow -Wpointer-arith
+ CFLAGS=-O2 @debug@ -DNDEBUG $(WFLAGS) $(MORECFLAGS)
+ CXX=@CXX@ $(CFLAGS)
+ LINK=@CXX@
+-THREAD_LFLAGS=@thread_ldflags@
++THREAD_LDFLAGS=@thread_ldflags@
  
- bonnie++: bonnie++.cpp $(BONOBJS)
--	$(CXX) bonnie++.cpp -o bonnie++ $(BONOBJS) $(LFLAGS)
-+	$(CXX) bonnie++.cpp -o bonnie++ $(BONOBJS) $(LDFLAGS)
+ INSTALL=@INSTALL@
+ INSTALL_PROGRAM=@INSTALL_PROGRAM@
+@@ -34,13 +34,13 @@ GETCHSRC=getc_putc_helper.cpp duration.c
+ GETCHOBJS=$(GETCHSRC:.cpp=.o)
  
- zcav: zcav.cpp $(ZCAVOBJS)
--	$(CXX) zcav.cpp -o zcav $(ZCAVOBJS) $(LFLAGS)
-+	$(CXX) zcav.cpp -o zcav $(ZCAVOBJS) $(LDFLAGS)
+ bonnie++: $(BONOBJS)
+-	$(LINK) -o bonnie++ $(BONOBJS) $(THREAD_LFLAGS)
++	$(LINK) -o bonnie++ $(BONOBJS) $(THREAD_LDFLAGS)
  
- install-bin: $(EXES)
+ zcav: $(ZCAVOBJS)
+-	$(LINK) -o zcav $(ZCAVOBJS) $(THREAD_LFLAGS)
++	$(LINK) -o zcav $(ZCAVOBJS) $(THREAD_LDFLAGS)
+ 
+ getc_putc: $(GETCOBJS) getc_putc_helper
+-	$(LINK) -o getc_putc $(GETCOBJS) $(THREAD_LFLAGS)
++	$(LINK) -o getc_putc $(GETCOBJS) $(THREAD_LDFLAGS)
+ 
+ getc_putc_helper: $(GETCHOBJS)
+ 	$(CXX) -o getc_putc_helper $(GETCHOBJS)
+@@ -52,15 +52,15 @@ generate_randfile: generate_randfile.o
+ 	$(LINK) generate_randfile.o -o generate_randfile
+ 
+ install-bin: $(EXE) $(EXES)
 -	mkdir -p $(eprefix)/bin $(eprefix)/sbin
 -	@INSTALL_PROGRAM@ @stripping@ $(EXES) $(eprefix)/sbin
+-	@INSTALL_PROGRAM@ @stripping@ $(EXE) $(eprefix)/bin
 -	@INSTALL_SCRIPT@ $(SCRIPTS) $(eprefix)/bin
 +	mkdir -p $(eprefix)/bin ${DESTDIR}$(eprefix)/sbin
 +	@INSTALL_PROGRAM@ @stripping@ $(EXES) ${DESTDIR}$(eprefix)/sbin
++	@INSTALL_PROGRAM@ @stripping@ $(EXE) ${DESTDIR}$(eprefix)/bin
 +	@INSTALL_SCRIPT@ $(SCRIPTS) ${DESTDIR}$(eprefix)/bin
  
  install: install-bin
@@ -29,5 +49,5 @@ $NetBSD: patch-ab,v 1.4 2008/06/20 01:09:08 joerg Exp $
 +	@INSTALL_DATA@ $(MAN1) ${DESTDIR}@mandir@/man1
 +	@INSTALL_DATA@ $(MAN8) ${DESTDIR}@mandir@/man8
  
- %.o: %.cpp %.h bonnie.h port.h
+ %.o: %.cpp
  	$(CXX) -c $<
