@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/07/01 22:13:55 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/08/22 08:47:50 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -37,9 +37,13 @@ ${PLIST.py35p}${PYSITELIB}/websockets/py35/client.pyo
 ${PLIST.py35p}${PYSITELIB}/websockets/py35/client_server.py
 ${PLIST.py35p}${PYSITELIB}/websockets/py35/client_server.pyc
 ${PLIST.py35p}${PYSITELIB}/websockets/py35/client_server.pyo
+${PLIST.py35p}${PYSITELIB}/websockets/py35/server.py
+${PLIST.py35p}${PYSITELIB}/websockets/py35/server.pyc
+${PLIST.py35p}${PYSITELIB}/websockets/py35/server.pyo
 ${PYSITELIB}/websockets/server.py
 ${PYSITELIB}/websockets/server.pyc
 ${PYSITELIB}/websockets/server.pyo
+${PYSITELIB}/websockets/speedups.so
 ${PYSITELIB}/websockets/test_client_server.py
 ${PYSITELIB}/websockets/test_client_server.pyc
 ${PYSITELIB}/websockets/test_client_server.pyo
@@ -55,12 +59,21 @@ ${PYSITELIB}/websockets/test_http.pyo
 ${PYSITELIB}/websockets/test_protocol.py
 ${PYSITELIB}/websockets/test_protocol.pyc
 ${PYSITELIB}/websockets/test_protocol.pyo
+${PYSITELIB}/websockets/test_speedups.py
+${PYSITELIB}/websockets/test_speedups.pyc
+${PYSITELIB}/websockets/test_speedups.pyo
 ${PYSITELIB}/websockets/test_uri.py
 ${PYSITELIB}/websockets/test_uri.pyc
 ${PYSITELIB}/websockets/test_uri.pyo
+${PYSITELIB}/websockets/test_utils.py
+${PYSITELIB}/websockets/test_utils.pyc
+${PYSITELIB}/websockets/test_utils.pyo
 ${PYSITELIB}/websockets/uri.py
 ${PYSITELIB}/websockets/uri.pyc
 ${PYSITELIB}/websockets/uri.pyo
+${PYSITELIB}/websockets/utils.py
+${PYSITELIB}/websockets/utils.pyc
+${PYSITELIB}/websockets/utils.pyo
 ${PYSITELIB}/websockets/version.py
 ${PYSITELIB}/websockets/version.pyc
 ${PYSITELIB}/websockets/version.pyo
