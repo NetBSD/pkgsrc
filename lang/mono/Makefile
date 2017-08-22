@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.173 2017/08/22 13:14:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.174 2017/08/22 13:43:34 jperkin Exp $
 
 DISTNAME=	mono-4.0.4.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
@@ -138,13 +138,20 @@ PLIST_VARS=	monodoc
 
 .include "../../mk/bsd.prefs.mk"
 
+SUBST_CLASSES+=			fix-domlib
+SUBST_STAGE.fix-domlib=		pre-configure
+SUBST_FILES.fix-domlib=		mcs/class/System/System.Net.NetworkInformation/IPGlobalProperties.cs
+.if ${OPSYS} == "SunOS"
+SUBST_SED.fix-domlib=		-e 's,@DOMAINLIB@,libnsl,g'
+.else
+SUBST_SED.fix-domlib=		-e 's,@DOMAINLIB@,libc,g'
+.endif
+
 .if ${OPSYS} == "SunOS"
 CFLAGS+=		-D_XOPEN_SOURCE=600
 CONFIGURE_ARGS+=	--with-mcs-docs=no
 CONFIGURE_ARGS+=	--with-sgen=no
 CONFIGURE_ARGS+=	--with-sigaltstack=no
-CONFIGURE_ENV+=		ac_cv_func_getdomainname=no
-CONFIGURE_ENV+=		ac_cv_func_setdomainname=no
 ULIMIT_CMD_datasize=	ulimit -d 524288
 ULIMIT_CMD_stacksize=	ulimit -s 10240
 .elif ${OPSYS} == "NetBSD" && ${MACHINE_ARCH:M*arm*}
