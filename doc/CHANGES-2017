@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3406 2017/08/22 17:00:44 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3407 2017/08/22 17:02:33 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4750,3 +4750,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Debug-Client to 0.31 [mef 2017-08-22]
 	Updated lang/mono to 4.0.4.1nb7 [jperkin 2017-08-22]
 	Updated net/dnsdist to 1.2.0 [fhajny 2017-08-22]
+	Updated sysutils/xentools48 to 4.8.0nb2 [maya 2017-08-22]
