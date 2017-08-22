@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3403 2017/08/22 08:53:47 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3404 2017/08/22 12:20:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4744,3 +4744,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-cheroot to 5.8.3 [adam 2017-08-22]
 	Updated www/py-websockets to 3.4 [adam 2017-08-22]
 	Updated www/py-autobahn to 17.8.1 [adam 2017-08-22]
+	Updated devel/p5-Data-Integer to 0.006 [mef 2017-08-22]
+	Updated devel/p5-Data-Peek to 0.47 [mef 2017-08-22]
+	Updated devel/p5-Data-Section to 0.200.007 [mef 2017-08-22]
+	Updated devel/p5-Debug-Client to 0.31 [mef 2017-08-22]
