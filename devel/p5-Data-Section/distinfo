@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 03:28:07 agc Exp $
+$NetBSD: distinfo,v 1.10 2017/08/22 12:17:29 mef Exp $
 
-SHA1 (Data-Section-0.200006.tar.gz) = b0ceb283a8ddc6ee9f99b654eafd89cb389a0865
-RMD160 (Data-Section-0.200006.tar.gz) = 397c7e168d3684a724710789b1293a4689c89f5e
-SHA512 (Data-Section-0.200006.tar.gz) = 8e5cc644bbee6bccde66fbd2e622fb33cb45e0950cc48abd052d0698965f6903b01a3deac251c27106165903219531e33083305233f21651f49541feefdec1b2
-Size (Data-Section-0.200006.tar.gz) = 19396 bytes
+SHA1 (Data-Section-0.200007.tar.gz) = 98b18e601ea9b80bbbc98ee48c616c86db2698be
+RMD160 (Data-Section-0.200007.tar.gz) = 299f45d38b8ac92f1b805b84b84385fe6d1518d7
+SHA512 (Data-Section-0.200007.tar.gz) = 0c23141ccc2041e8c1c222c95d6eab4b56e2d77a94c68507f67acbb62fa5132e9229e9680c9fff6ebbc6a47a42cf1943d6e5b50a5f0168c66193fb52aaa241f0
+Size (Data-Section-0.200007.tar.gz) = 22094 bytes
