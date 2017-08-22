@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/07/23 17:25:17 adam Exp $
+# $NetBSD: Makefile,v 1.6 2017/08/22 08:53:21 adam Exp $
 
-DISTNAME=	autobahn-17.7.1
+DISTNAME=	autobahn-17.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/autobahn/}
