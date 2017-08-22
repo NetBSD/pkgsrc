@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.173 2017/08/08 16:38:41 jlam Exp $
+# $NetBSD: Makefile,v 1.174 2017/08/22 12:05:45 jmcneill Exp $
 
 DISTNAME=	gnutls-3.5.13
+PKGREVISION=	1
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.5/
 EXTRACT_SUFX=	.tar.xz
@@ -22,6 +23,7 @@ CONFIGURE_ARGS+=	--disable-guile
 CONFIGURE_ARGS+=	--disable-libdane
 CONFIGURE_ARGS+=	--without-tpm
 CONFIGURE_ARGS+=	--disable-valgrind-tests
+CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 # Assembler support is broken for SunOS in 3.2.9.
 CONFIGURE_ARGS.SunOS+=	--disable-hardware-acceleration
 CONFIGURE_ARGS.FreeBSD+=ac_cv_type_max_align_t=yes
