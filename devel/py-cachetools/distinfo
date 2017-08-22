@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/03/20 19:56:55 minskim Exp $
+$NetBSD: distinfo,v 1.2 2017/08/22 08:18:20 adam Exp $
 
-SHA1 (cachetools-2.0.0.tar.gz) = 3efa164096089b0c88652788fada938775229129
-RMD160 (cachetools-2.0.0.tar.gz) = ea9161cb475c0400009a34691948001ba704ef0a
-SHA512 (cachetools-2.0.0.tar.gz) = b1e7a6ed87a82a981f6c9b27bc96f26fdae241a12db85ff890538935e957d7ea88688e20a000691466bdb7db053f8c2145385dfcec6f5f4d84dd812ca419752d
-Size (cachetools-2.0.0.tar.gz) = 18592 bytes
+SHA1 (cachetools-2.0.1.tar.gz) = f8f803494ccfb01a797ef2fe935727628c499b72
+RMD160 (cachetools-2.0.1.tar.gz) = eae51d94a46b9872e84cede4d5fe80236aadfea4
+SHA512 (cachetools-2.0.1.tar.gz) = 4caad0676dab2a2ab922138c8305c7e40ac671aaec59ce502428608217976045af7a714c51567ff020987d3bf90f0c9c51645a59bb4f68d377e1f8dbed24bade
+Size (cachetools-2.0.1.tar.gz) = 18790 bytes
