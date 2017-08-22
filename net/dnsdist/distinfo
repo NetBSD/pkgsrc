@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.2 2017/05/22 23:41:22 joerg Exp $
+$NetBSD: distinfo,v 1.3 2017/08/22 17:00:35 fhajny Exp $
 
-SHA1 (dnsdist-1.1.0.tar.bz2) = 9b6372fc5f606ee83dac465e1dc9c824242f5905
-RMD160 (dnsdist-1.1.0.tar.bz2) = 7724641b2be1c3611dd0b2c685cf6e8b7a365e67
-SHA512 (dnsdist-1.1.0.tar.bz2) = 91da716997c2440e153944f510a39dd86c9cf8ba8093a7f51a9a5d58ab0a1c230bd99ec57fe8ff0721279c8c4429ad576fe797c1fbe4cde2b9fb8f0405025320
-Size (dnsdist-1.1.0.tar.bz2) = 874837 bytes
+SHA1 (dnsdist-1.2.0.tar.bz2) = c1af8fbf8a4c5a5bbb1c5154974cf640ffa26acb
+RMD160 (dnsdist-1.2.0.tar.bz2) = b3c23decdf58cc2931a85f5631dc9184f3ff3a6c
+SHA512 (dnsdist-1.2.0.tar.bz2) = 93f8c5f18462d3291c973a690f6ac2b3c5791d9947bee83d9250b503b7526de365bdcb530f3b082e51ae168a9129e77d5558af7cc3b9d2e98a585af53783c237
+Size (dnsdist-1.2.0.tar.bz2) = 876104 bytes
 SHA1 (patch-dns.hh) = 13834e3d9f48b3095ce4912540c7d0d275c3a3a3
-SHA1 (patch-dnsdist-console.cc) = 51fee0e89b648e0f9c2e6c0d9a6859ef2991a1b7
+SHA1 (patch-dnsdist-console.cc) = ee5f40a2257128eb7fcc2b581ec9aa997c1b7358
 SHA1 (patch-dnsdist.cc) = 2b2bf569c134019dd8a5d4f3df104fdd16a47a31
 SHA1 (patch-ext_json11_json11.cpp) = 9fb12578d80103b8b92e984a483cbda98fd83db8
-SHA1 (patch-iputils.hh) = 666fe81cc651b2c7e85164b8246283e301bcce1a
+SHA1 (patch-iputils.hh) = 78ffc93b3062d18a02a9ea67e4c6d58d8df7bdbb
 SHA1 (patch-qtype.hh) = 4551be1e303a31d34030c363849398923f5ff987
