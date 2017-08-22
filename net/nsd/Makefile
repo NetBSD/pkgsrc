@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2017/08/21 23:25:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.95 2017/08/22 00:32:18 ryoon Exp $
 
 DISTNAME=	nsd-4.1.17
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/nsd/
 
@@ -50,9 +50,8 @@ CONFIGURE_ARGS+=--with-libevent=${BUILDLINK_PREFIX.libevent}
 CONFIGURE_ARGS+=--with-ssl=${BUILDLINK_PREFIX.openssl}
 
 .if ${OPSYS} == "NetBSD"
-# For NetBSD/amd64 8.99.1 and 8.0_BETA, reallocarray(3) in base causes
-# runtime error.
-CONFIGURE_ENV+=	ac_cv_func_reallocarray=no
+# For reallocarray(3)
+CPPFLAGS+=	-D_OPENBSD_SOURCE
 .endif
 
 RCD_SCRIPTS=	nsd
