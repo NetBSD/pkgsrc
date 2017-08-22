@@ -1,7 +1,5 @@
-$NetBSD: patch-tools_ocaml_common.make,v 1.1 2017/03/30 09:15:10 bouyer Exp $
-
---- tools/ocaml/common.make.orig	2015-01-12 17:53:24.000000000 +0100
-+++ tools/ocaml/common.make	2015-01-19 13:16:38.000000000 +0100
+--- tools/ocaml/common.make.orig	2016-12-05 12:03:27.000000000 +0000
++++ tools/ocaml/common.make	2017-08-18 16:00:39.195689939 +0100
 @@ -3,7 +3,7 @@
  CC ?= gcc
  OCAMLOPT ?= ocamlopt
@@ -11,3 +9,11 @@ $NetBSD: patch-tools_ocaml_common.make,v 1.1 2017/03/30 09:15:10 bouyer Exp $
  OCAMLDEP ?= ocamldep
  OCAMLLEX ?= ocamllex
  OCAMLYACC ?= ocamlyacc
+@@ -17,6 +17,6 @@
+ 
+ VERSION := 4.1
+ 
+-OCAMLDESTDIR ?= $(DESTDIR)$(shell $(OCAMLFIND) printconf destdir)
++OCAMLDESTDIR ?= $(shell $(OCAMLFIND) printconf destdir)
+ 
+ o= >$@.new && mv -f $@.new $@
