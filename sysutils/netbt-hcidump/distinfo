@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.15 2015/11/04 01:32:23 agc Exp $
+$NetBSD: distinfo,v 1.16 2017/08/23 17:53:44 jlam Exp $
 
 SHA1 (bluez-5.27.tar.xz) = c1707e8ae38b299c07e6c18ff3c26a4b928d03bf
 RMD160 (bluez-5.27.tar.xz) = 21cec0a67c70215cc6972a0bfd5679b1a5fa8fac
 SHA512 (bluez-5.27.tar.xz) = 5e5e3ec17b4552027559083effb076e9c7d45528765fb27ca1aa1f3d8bb6a4a79c9fda91392f7b5b6da7aabf2b2b6e5bb16b0546323901501a93c53f79a66324
 Size (bluez-5.27.tar.xz) = 1542348 bytes
 SHA1 (patch-Makefile) = 24c3f132b0c454c7f06915ca368b67e463c4e4f0
-SHA1 (patch-lib_Makefile) = da5f72d18fe46ce3c13543976b38b3d010da4b86
+SHA1 (patch-lib_Makefile) = d881586878b8ee58f642f993bfad6a614148fb7b
 SHA1 (patch-lib_bluetooth.c) = 997da8b1f00bf0093ca45cdd5c416d6155c591ea
 SHA1 (patch-lib_bluetooth.h) = cd200dfefdabe7a517928c62848faceb41fb302a
 SHA1 (patch-lib_hci.c) = 825b01082e2be2336c429e27ec78348fe4c39985
@@ -16,7 +16,7 @@ SHA1 (patch-src_shared_util.h) = 349f8869b54746d5799af5beadd390dffd5f260b
 SHA1 (patch-tools_Makefile) = 4c63cb92ce4fc8446fcb6b16a60f17d68b25078f
 SHA1 (patch-tools_hcidump.1) = 3981ca329e9837ea9719fea59277357a435cc265
 SHA1 (patch-tools_hcidump.c) = ca6871ca562bc218ce445edf8b364f528d260d4e
-SHA1 (patch-tools_parser_Makefile) = 5f3e3c3b73a88756e485318d4b00e64d42366fa3
+SHA1 (patch-tools_parser_Makefile) = 4d4410493393d521c89ba429b39b0a3bbbba135b
 SHA1 (patch-tools_parser_bnep.c) = efbbe5f4cd47dcb0bf72c16bd67d9d93ba7cd43a
 SHA1 (patch-tools_parser_lmp.c) = f410be55cf07f6d7f7d3b1466b7fbe708b1a6de5
 SHA1 (patch-tools_parser_parser.h) = 19ff1cdd8d7af71d9ae86497d3e1f49ae9db9a2a
