@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2017/06/21 10:14:20 markd Exp $
+# $NetBSD: Makefile,v 1.37 2017/08/23 22:49:14 markd Exp $
 
 DISTNAME=	musixtex
-PKGNAME=	tex-${DISTNAME}-1.24
-TEXLIVE_REV=	43375
+PKGNAME=	tex-${DISTNAME}-1.25
+TEXLIVE_REV=	44885
 
 MAINTAINER=	dgriffi@cs.csubak.edu
 HOMEPAGE=	http://ctan.org/pkg/musixtex
