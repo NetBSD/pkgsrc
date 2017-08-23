@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.14 2017/06/01 02:15:10 jlam Exp $
+# $NetBSD: metadata.mk,v 1.15 2017/08/23 17:52:30 jlam Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -357,7 +357,7 @@ _PKG_CREATE_ARGS+=				-f ${_DEPENDS_PLIST}
 _PKG_CREATE_ARGS+=	${PKG_PRESERVE:D	-n ${_PRESERVE_FILE}}
 _PKG_CREATE_ARGS+=				-S ${_SIZE_ALL_FILE}
 _PKG_CREATE_ARGS+=				-s ${_SIZE_PKG_FILE}
-_PKG_CREATE_ARGS+=	${CONFLICTS:D		-C ${CONFLICTS:Q}}
+_PKG_CREATE_ARGS+=	${"${CONFLICTS:M*}" != "":?-C ${CONFLICTS:Q}:}
 .if ${_USE_NEW_PKGINSTALL:Uno} != "no"
 _PKG_CREATE_ARGS+=	${_INSTALL_FILE:D	-i ${_INSTALL_FILE:Q}}
 _PKG_CREATE_ARGS+=	${_DEINSTALL_FILE:D	-k ${_DEINSTALL_FILE:Q}}
