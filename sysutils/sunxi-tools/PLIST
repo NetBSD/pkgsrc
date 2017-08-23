@@ -1,15 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2015/10/25 09:05:23 bouyer Exp $
-bin/fexc
-bin/bin2fex
-bin/fex2bin
-bin/fel
-bin/fel-gpio
-bin/pio
-bin/bootinfo
-bin/phoenix_info
-libdata/sunxi-tools/fel-pio.bin
-libdata/sunxi-tools/fel-sdboot.sunxi
-libdata/sunxi-tools/ramboot.scr
-libdata/sunxi-tools/fel-pio.nm
-libdata/sunxi-tools/jtag-loop.sunxi
-libdata/sunxi-tools/ramboot.uboot-sh
+@comment $NetBSD: PLIST,v 1.3 2017/08/23 13:57:30 jmcneill Exp $
+bin/sunxi-fexc
+bin/sunxi-bootinfo
+bin/sunxi-fel
+bin/sunxi-nand-part
+bin/sunxi-pio
