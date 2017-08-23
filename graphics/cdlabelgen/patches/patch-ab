@@ -1,53 +1,21 @@
-$NetBSD: patch-ab,v 1.12 2015/02/05 11:29:48 mef Exp $
+$NetBSD: patch-ab,v 1.13 2017/08/23 17:53:55 jlam Exp $
 
---- Makefile.orig	2013-04-01 04:37:51.000000000 +0900
-+++ Makefile	2015-02-05 18:58:24.000000000 +0900
-@@ -10,12 +10,12 @@ ZIPVERSION = 430
- # Change these to locations you need, also
- # remember to edit cdlabelgen and its @where_is_the_template as needed.
+--- Makefile.orig	2013-03-31 19:37:51.000000000 +0000
++++ Makefile
+@@ -25,6 +25,7 @@ DISTFILES = $(SOURCES) $(POSTSCRIPT)
+ INSTALL		:= install -m 0755
+ INSTALL_DIR	:= install -d -m 0755
+ INSTALL_FILE	:= install -m 0644
++INSTALL_MAN	:= install -m 0644
  
--BASE_DIR   = /usr
-+BASE_DIR   = ${PREFIX}
- # BASE_DIR   = /usr/local
- # BASE_DIR   = /opt
- BIN_DIR   = $(BASE_DIR)/bin
- LIB_DIR   = $(BASE_DIR)/share/cdlabelgen
--MAN_DIR   = $(BASE_DIR)/share/man
-+MAN_DIR   = $(BASE_DIR)/$(PKGMANDIR)
- WEBSOURCES= ../cdinsert.pl ../cdinsert-ps.pl ../cdlabelgen-form.html
- SOURCES    = cdlabelgen ChangeLog INSTALL README Makefile INSTALL.WEB cdlabelgen.pod cdlabelgen.1 cdlabelgen.html spec.template $(WEBSOURCES)
- POSTSCRIPT = template.ps *.eps
-@@ -38,6 +38,14 @@ RPM_TOPDIR	:= $(HOME)/rpmbuild
- # ---------------
- 
- all: cdlabelgen.html cdlabelgen.1
-+	${SED} s=@PREFIX@=${PREFIX}=g <cdlabelgen >cdlabelgen.new
-+	${MV} cdlabelgen.new cdlabelgen
-+	if [ `id -u` -eq 0 ]; then	\
-+		perldoc_flags="-U";	\
-+	else				\
-+		perldoc_flags="";	\
-+	fi;				\
-+	perldoc $$perldoc_flags cdlabelgen >cdlabelgen.0
- 
- cdlabelgen.html: cdlabelgen.pod
- 	pod2html --outfile=$@ --infile=$?
-@@ -50,13 +58,13 @@ cdlabelgen.1: cdlabelgen.pod
- install: all
- 	@echo "Installing cdlabelgen in $(BIN_DIR) and $(LIB_DIR)"
+ # Makefile macros....
+ #1.  $@ is the name of the file to be made.
+@@ -52,7 +53,7 @@ install: all
  	@echo ""
--	$(INSTALL_DIR) $(BIN_DIR)
--	$(INSTALL) cdlabelgen $(BIN_DIR)
+ 	$(INSTALL_DIR) $(BIN_DIR)
+ 	$(INSTALL) cdlabelgen $(BIN_DIR)
 -	$(INSTALL_FILE) cdlabelgen.1 $(MAN_DIR)/man1
--	$(INSTALL_DIR) $(LIB_DIR)
-+
-+	${BSD_INSTALL_SCRIPT} cdlabelgen ${DESTDIR}${BIN_DIR}
-+	${BSD_INSTALL_MAN} cdlabelgen.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-+	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${LIB_DIR}
++	$(INSTALL_MAN) cdlabelgen.1 $(MAN_DIR)/man1
+ 	$(INSTALL_DIR) $(LIB_DIR)
  	set -e; \
  	for file in $(POSTSCRIPT); do \
--		$(INSTALL_FILE) postscript/$$file $(LIB_DIR)/; \
-+		${BSD_INSTALL_DATA} postscript/$$file ${DESTDIR}${LIB_DIR}; \
- 	done
- 	@echo "** Done. Check $(BIN_DIR)/cdlabelgen and fix @where_is_the_template - if needed!"
- 
