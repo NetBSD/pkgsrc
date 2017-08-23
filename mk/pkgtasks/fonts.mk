@@ -1,4 +1,4 @@
-# $NetBSD: fonts.mk,v 1.3 2017/08/19 00:29:55 jlam Exp $
+# $NetBSD: fonts.mk,v 1.4 2017/08/23 17:52:19 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -89,7 +89,7 @@ X11_ENCODINGSDIR?=	${X11BASE}/lib/fonts/X11/encodings
 .endif
 
 # Variables for programs used by "fonts" package task.
-FILES_SUBST+=		MKFONTDIR=${TOOLS_PATH:mkfontdir:Q}
+FILES_SUBST+=		MKFONTDIR=${TOOLS_PATH.mkfontdir:Q}
 FILES_SUBST+=		MKFONTSCALE=${TOOLS_PATH.mkfontscale:Q}
 FILES_SUBST+=		TTMKFDIR=${TOOLS_PATH.ttmkfdir:Q}
 FILES_SUBST+=		TYPE1INST=${TOOLS_PATH.type1inst:Q}
