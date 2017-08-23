@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/06/05 14:23:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2017/08/23 17:54:52 jlam Exp $
 #
 
 DISTNAME=	PPI-PowerToys-0.14
@@ -24,6 +24,9 @@ BUILD_DEPENDS+=	p5-Test-Script>=1.03:../../devel/p5-Test-Script
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/PPI/PowerToys/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
+
+# XXX Kick can down the road and hope the developer fixes this issue.
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
