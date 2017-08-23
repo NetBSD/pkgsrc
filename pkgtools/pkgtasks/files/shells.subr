@@ -109,6 +109,7 @@ task_load truthy
 
 task_shells()
 {
+	: ${CP:=cp}
 	: ${MV:=mv}
 
 	: ${PKG_PREFIX:=/usr/pkg}
@@ -199,12 +200,14 @@ task_shells()
 							task_quote "$temp"
 							temp_quoted="$quoted"
 							__task_shells_temps__="$__task_shells_temps__ $temp_quoted"
-							if [ ! -f "$shelldb" ]; then
-								echo "$shell"
+							if [ -f "$shelldb" ]; then
+								# Preserve existing ownership and permissions onto tempfile.
+								${CP} -fp "$shelldb" "$temp"
+								# Overwrite contents of tempfile.
+								{ task_match -vw "$shell" < $shelldb; echo "$shell"; } > $temp
 							else
-								task_match -vw "$shell" < $shelldb
-								echo "$shell"
-							fi > $temp
+								echo "$shell" > $temp
+							fi
 							# rename(2) is atomic.
 							if ${MV} -f "$temp" "$shelldb"; then
 								$echo "${TASK_MSG}> shell added: $shell"
@@ -226,6 +229,9 @@ task_shells()
 							task_quote "$temp"
 							temp_quoted="$quoted"
 							__task_shells_temps__="$__task_shells_temps__ $temp_quoted"
+							# Preserve existing ownership and permissions onto tempfile.
+							${CP} -fp "$shelldb" "$temp"
+							# Overwrite contents of tempfile.
 							task_match -vw "$shell" < $shelldb > $temp
 							# rename(2) is atomic.
 							if ${MV} -f "$temp" "$shelldb"; then

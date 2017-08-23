@@ -109,6 +109,7 @@ task_load quote
 
 task_ocaml_findlib()
 {
+	: ${CP:=cp}
 	: ${MV:=mv}
 
 	: ${OCAML_SITELIB:=lib/ocaml/site-lib}
@@ -200,12 +201,15 @@ task_ocaml_findlib()
 						task_quote "$temp"
 						temp_quoted="$quoted"
 						__task_ocaml_findlib_temps__="$__task_ocaml_findlib_temps__ $temp_quoted"
-						if [ ! -f "$ldconf" ]; then
-							echo "$libdir"
+						if [ -f "$ldconf" ]; then
+							# Preserve existing ownership and permissions onto tempfile.
+							${CP} -fp "$ldconf" "$temp"
+							# Overwrite contents of tempfile.
+							{ task_match -vw "$libdir" < $ldconf; echo "$libdir"; } > $temp
 						else
-							task_match -vw "$libdir" < $ldconf
-							echo "$libdir"
-						fi > $temp
+							# Overwrite contents of tempfile.
+							echo "$libdir" > $temp
+						fi
 						# rename(2) is atomic.
 						if ${MV} -f "$temp" "$ldconf"; then
 							$echo "${TASK_MSG}> path added: $libdir"
@@ -225,6 +229,9 @@ task_ocaml_findlib()
 						task_quote "$temp"
 						temp_quoted="$quoted"
 						__task_ocaml_findlib_temps__="$__task_ocaml_findlib_temps__ $temp_quoted"
+						# Preserve existing ownership and permissions onto tempfile.
+						${CP} -fp "$ldconf" "$temp"
+						# Overwrite contents of tempfile.
 						task_match -vw "$libdir" < $ldconf > $temp
 						# rename(2) is atomic.
 						if ${MV} -f "$temp" "$ldconf"; then
