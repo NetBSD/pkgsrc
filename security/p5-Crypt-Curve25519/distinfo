@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/23 13:46:12 he Exp $
+
+SHA1 (Crypt-Curve25519-0.06.tar.gz) = 5c3e217f6260f83c1a5cce33c2b63ae4954a85e1
+RMD160 (Crypt-Curve25519-0.06.tar.gz) = 5c4ec052c338d798d41d1e12e76ca1c482896cf6
+SHA512 (Crypt-Curve25519-0.06.tar.gz) = e5d351c36c9f60e1b55f45bf9fa871fddf949bd5c0a20b4d065e1eb2d4e24ba43807289591eda854fca28b5909fd6af1b0fc9ede63efbeeaf6e011e7382a4e1d
+Size (Crypt-Curve25519-0.06.tar.gz) = 27835 bytes
