@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3417 2017/08/23 15:04:39 he Exp $
+$NetBSD: CHANGES-2017,v 1.3418 2017/08/23 17:58:57 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4761,3 +4761,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/sunxi-tools to 20170823 [jmcneill 2017-08-23]
 	Updated security/p5-Net-SSH to 2.09.01nb2 [he 2017-08-23]
 	Updated security/p5-Net-SSH to 2.12 [he 2017-08-23]
+	Updated pkgtools/pkgtasks to 1.15 [jlam 2017-08-23]
+	Updated shells/standalone-tcsh to 6.20.00nb3 [jlam 2017-08-23]
+	Updated shells/static-tcsh to 6.20.00nb3 [jlam 2017-08-23]
