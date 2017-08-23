@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/08/06 19:19:33 adam Exp $
+# $NetBSD: Makefile,v 1.11 2017/08/23 09:38:13 jperkin Exp $
 
 DISTNAME=	msgpack-2.1.5
 CATEGORIES=	devel
@@ -17,4 +17,5 @@ PKGCONFIG_OVERRIDE=	msgpack.pc.in
 TEST_TARGET=		test
 
 .include "../../devel/googletest/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
