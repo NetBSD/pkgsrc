@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/07/21 15:56:42 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2017/08/23 17:52:47 jlam Exp $
 #
 
 MAINTAINER=		agc@NetBSD.org
@@ -11,6 +11,7 @@ DESCR_SRC=		${.CURDIR}/../../shells/tcsh/DESCR ${.CURDIR}/DESCR
 CONFLICTS=		tcsh-[0-9]*
 
 PKGNAME=		static-${DISTNAME}
+PKGREVISION=		3	# ALWAYS needs to be set; 0 if none.
 
 .include "../../shells/tcsh/Makefile"
 
