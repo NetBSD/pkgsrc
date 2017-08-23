@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3414 2017/08/23 13:49:05 he Exp $
+$NetBSD: CHANGES-2017,v 1.3415 2017/08/23 13:59:11 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4758,3 +4758,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/xentools42 to 4.2.5nb24 [maya 2017-08-23]
 	Added sysutils/u-boot-chip version 2017.07 [jmcneill 2017-08-23]
 	Added security/p5-Crypt-Curve25519 version 0.06 [he 2017-08-23]
+	Updated sysutils/sunxi-tools to 20170823 [jmcneill 2017-08-23]
