@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2017/08/23 14:52:53 he Exp $
+# $NetBSD: Makefile,v 1.25 2017/08/23 15:03:50 he Exp $
 #
 
-DISTNAME=		Net-SSH-Perl-2.09.01
+DISTNAME=		Net-SSH-Perl-2.12
 PKGNAME=		p5-${DISTNAME:C/-Perl//}
-PKGREVISION=		2
 CATEGORIES=		security net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
 
@@ -25,7 +24,7 @@ PKG_SUPPORTED_OPTIONS=	idea
 #KG_SUGGESTED_OPTIONS=	idea
 
 # Omit the last micro version, for example 2.09.01 -> 2.09
-WRKSRC=			${WRKDIR}/${DISTNAME:C/([0-9]+)\.([0-9]+)[0-9.]+/\1.\2/}
+#WRKSRC=		${WRKDIR}/${DISTNAME:C/([0-9]+)\.([0-9]+)[0-9.]+/\1.\2/}
 
 .include "../../mk/bsd.options.mk"
 
