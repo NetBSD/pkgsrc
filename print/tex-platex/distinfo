@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/06/21 11:45:57 markd Exp $
+$NetBSD: distinfo,v 1.3 2017/08/23 23:15:46 markd Exp $
 
-SHA1 (tex-platex-44209/platex.tar.xz) = aa43555bc8f2db385aba4b79cce559b99ab1ae92
-RMD160 (tex-platex-44209/platex.tar.xz) = 348faff9fc476842ad37b704baac80ad096609f2
-SHA512 (tex-platex-44209/platex.tar.xz) = 801e579223e57e93695979423d907937b186e0639bc1d1ddc3502e57620359ddafa6924e5be07e0c0ebd8e2832c4701c6ac6e0419f6fef85ab6cb209d4cc0047
-Size (tex-platex-44209/platex.tar.xz) = 36512 bytes
+SHA1 (tex-platex-44913/platex.tar.xz) = fb813fc2ff1f4a7542a491463ca31bef73f0bddc
+RMD160 (tex-platex-44913/platex.tar.xz) = c29fc1fa503181de8f776d7d95e47b5fbbe486fb
+SHA512 (tex-platex-44913/platex.tar.xz) = 6821d4376576c78237b1cd7a3c9c5bbc34da695409d9b810799b6ddabb7d1c1fed17897afc2f3ec900634a5f98def95356b2d5b1103525d1575e495726631594
+Size (tex-platex-44913/platex.tar.xz) = 36940 bytes
