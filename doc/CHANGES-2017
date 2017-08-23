@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3409 2017/08/22 21:38:19 he Exp $
+$NetBSD: CHANGES-2017,v 1.3410 2017/08/23 02:38:58 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4753,3 +4753,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/xentools48 to 4.8.0nb2 [maya 2017-08-22]
 	Updated benchmarks/bonnie++ to 1.97.3 [bsiegert 2017-08-22]
 	Updated math/py-scipy to 0.19.1nb1 [he 2017-08-22]
+	Updated sysutils/xentools46 to 4.6.5nb4 [maya 2017-08-23]
