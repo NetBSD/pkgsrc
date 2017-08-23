@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3412 2017/08/23 02:57:33 maya Exp $
+$NetBSD: CHANGES-2017,v 1.3413 2017/08/23 12:00:15 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4756,3 +4756,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/xentools46 to 4.6.5nb4 [maya 2017-08-23]
 	Updated sysutils/xentools45 to 4.5.5nb6 [maya 2017-08-23]
 	Updated sysutils/xentools42 to 4.2.5nb24 [maya 2017-08-23]
+	Added sysutils/u-boot-chip version 2017.07 [jmcneill 2017-08-23]
