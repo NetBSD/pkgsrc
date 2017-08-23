@@ -214,6 +214,8 @@ _task_refcount_file_delete()
 
 _task_refcount_file_add()
 {
+	: ${CHMOD:=chmod}
+	: ${CP:=cp}
 	: ${MV:=mv}
 
 	local token=
@@ -252,11 +254,17 @@ _task_refcount_file_add()
 		task_quote "$temp"
 		temp_quoted=$quoted
 		__task_refcount_file_temps__="$__task_refcount_file_temps__ $temp_quoted"
-		{ if [ -f "$countfile" ]; then
-			task_match -sv "$token" < $countfile
-		  fi
-		  echo "$token"
-		} > $temp
+		if [ -f "$countfile" ]; then
+			# Preserve existing ownership and permissions onto tempfile.
+			${CP} -fp "$countfile" "$temp"
+			# Overwrite contents of tempfile.
+			{ task_match -sv "$token" < $countfile; echo "$token"; } > $temp
+		else
+			# Overwrite contents of tempfile.
+			echo "$token" > $temp
+			# Relax permissions of new file.
+			${CHMOD} go+r "$temp"
+		fi
 		# rename(2) is atomic
 		if ${MV} -f "$temp" "$countfile"; then
 			__task_refcount_file_temps__=${__task_refcount_file_temps__% $temp_quoted}
@@ -274,6 +282,7 @@ _task_refcount_file_add()
 
 _task_refcount_file_remove()
 {
+	: ${CP:=cp}
 	: ${MV:=mv}
 	: ${RM:=rm}
 	: ${RMDIR:=rmdir}
@@ -312,6 +321,9 @@ _task_refcount_file_remove()
 			task_quote "$temp"
 			temp_quoted=$quoted
 			__task_refcount_file_temps__="$__task_refcount_file_temps__ $temp_quoted"
+			# Preserve existing ownership and permissions onto tempfile.
+			${CP} -fp "$countfile" "$temp"
+			# Overwrite contents of tempfile.
 			task_match -sv "$token" < $countfile > $temp
 			local remaining=
 			if [ -f "$temp" ]; then
@@ -383,6 +395,8 @@ _task_refcount_file_prop_exists()
 
 _task_refcount_file_prop_put()
 {
+	: ${CHMOD:=chmod}
+	: ${CP:=cp}
 	: ${MV:=mv}
 
 	local db="$1"; shift
@@ -408,6 +422,14 @@ _task_refcount_file_prop_put()
 		task_quote "$temp"
 		temp_quoted=$quoted
 		__task_refcount_file_temps__="$__task_refcount_file_temps__ $temp_quoted"
+		if [ -f "$propfile" ]; then
+			# Preserve existing ownership and permissions onto tempfile.
+			${CP} -fp "$propfile" "$temp"
+		else
+			# Relax permissions of new file.
+			${CHMOD} go+r "$temp"
+		fi
+		# Overwrite contents of tempfile.
 		local value
 		if [ $# -gt 0 ]; then
 			value="$@"
