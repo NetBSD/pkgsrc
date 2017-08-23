@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2016/08/07 09:09:40 markd Exp $
+$NetBSD: distinfo,v 1.9 2017/08/23 22:49:14 markd Exp $
 
-SHA1 (tex-musixtex-41352/musixtex.doc.tar.xz) = fcd7b449148d197c456e5c29e0a897543af56e0f
-RMD160 (tex-musixtex-41352/musixtex.doc.tar.xz) = 6c6b2e33a437a0c1d0857e4e2570e949f98bb525
-SHA512 (tex-musixtex-41352/musixtex.doc.tar.xz) = 8e8ff2bef88de84591932804f00175bd620dce14e4a804d86a289d2e07acaa6a9d86f905437da9ba55bd1bdffa3d7747029c57553cb22ea6a24750f30fe5a388
-Size (tex-musixtex-41352/musixtex.doc.tar.xz) = 1922236 bytes
+SHA1 (tex-musixtex-44885/musixtex.doc.tar.xz) = 37470d58d26139960818c4d1fa1e8255a7e326ce
+RMD160 (tex-musixtex-44885/musixtex.doc.tar.xz) = fb7ea709e7b0d105db0a287473e84d5caff4904e
+SHA512 (tex-musixtex-44885/musixtex.doc.tar.xz) = 3507a75f0fae7fd7eed4d56190d089a3936178e6585fd3bb171fa032777ac4c06d5d634fd34340b1b5be748930674ace4506f8cef6d97efdb4f558e7be88219b
+Size (tex-musixtex-44885/musixtex.doc.tar.xz) = 1981324 bytes
