@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/06/21 11:45:58 markd Exp $
+# $NetBSD: Makefile,v 1.6 2017/08/23 22:37:59 markd Exp $
 
 DISTNAME=	preview
-PKGNAME=	tex-${DISTNAME}-11.90
-TEXLIVE_REV=	44227
+PKGNAME=	tex-${DISTNAME}-11.91
+TEXLIVE_REV=	44883
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/preview
