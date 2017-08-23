@@ -27,6 +27,7 @@
 
 task_load createfile
 task_load makedir
+task_load permissions
 task_load shells
 task_load unittest
 
@@ -106,6 +107,24 @@ test3()
 
 test4()
 {
+	: ${LS:=ls}
+
+	describe="verify permissions"
+	task_makedir "${shelldb%/*}"
+	task_createfile -m 666 "$shelldb"
+	task_shells add < $datafile
+	if task_check_permissions "$shelldb" 666; then
+		: "success"
+	else
+		describe="$describe: wrong permissions!"
+		${LS} -l "$shelldb"
+		return 1
+	fi
+	return 0
+}
+
+test5()
+{
 	describe="check-add shells with all shells added"
 	task_shells add < $datafile
 	if task_shells check-add < $datafile; then
@@ -120,7 +139,7 @@ test4()
 	return 0
 }
 
-test5()
+test6()
 {
 	describe="check-remove shells with no shells removed"
 	task_shells add < $datafile
@@ -134,7 +153,7 @@ test5()
 	return 0
 }
 
-test6()
+test7()
 {
 	describe="remove shells"
 	task_shells add < $datafile
@@ -150,7 +169,7 @@ test6()
 	return 0
 }
 
-test7()
+test8()
 {
 	describe="verify empty shell database"
 	task_shells add < $datafile
@@ -166,7 +185,7 @@ test7()
 	return 0
 }
 
-test8()
+test9()
 {
 	describe="check-remove shells with empty shell database"
 	task_makedir "${shelldb%/*}"
@@ -183,7 +202,7 @@ test8()
 	return 0
 }
 
-test9()
+test10()
 {
 	describe="add shells with PKG_DESTDIR"
 	test_destdir_setup
@@ -203,7 +222,7 @@ test9()
 	return 0
 }
 
-test10()
+test11()
 {
 	describe="verify uniqueness with PKG_DESTDIR"
 	test_destdir_setup
@@ -231,7 +250,25 @@ test10()
 	return 0
 }
 
-test11()
+test12()
+{
+	: ${LS:=ls}
+
+	describe="verify permissions with PKG_DESTDIR"
+	task_makedir "${PKG_DESTDIR}${PKG_PREFIX}/${shelldb%/*}"
+	task_createfile -m 666 "${PKG_DESTDIR}${PKG_PREFIX}/$shelldb"
+	task_shells add < $datafile
+	if task_check_permissions "${PKG_DESTDIR}${PKG_PREFIX}/$shelldb" 666; then
+		: "success"
+	else
+		describe="$describe: wrong permissions!"
+		${LS} -l "${PKG_DESTDIR}${PKG_PREFIX}/$shelldb"
+		return 1
+	fi
+	return 0
+}
+
+test13()
 {
 	describe="check-add shells with all shells added with PKG_DESTDIR"
 	test_destdir_setup
@@ -252,7 +289,7 @@ test11()
 	return 0
 }
 
-test12()
+test14()
 {
 	describe="check-remove shells with no shells removed with PKG_DESTDIR"
 	test_destdir_setup
@@ -271,7 +308,7 @@ test12()
 	return 0
 }
 
-test13()
+test15()
 {
 	describe="remove shells with PKG_DESTDIR"
 	test_destdir_setup
@@ -292,7 +329,7 @@ test13()
 	return 0
 }
 
-test14()
+test16()
 {
 	describe="verify empty shell database"
 	test_destdir_setup
@@ -313,7 +350,7 @@ test14()
 	return 0
 }
 
-test15()
+test17()
 {
 	describe="check-remove shells with empty shell database"
 	test_destdir_setup
