@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.485 2017/07/18 14:41:57 taca Exp $
+# $NetBSD: Makefile,v 1.486 2017/08/23 18:56:41 jperkin Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -355,6 +355,7 @@ SUBDIR+=	team
 SUBDIR+=	tellico
 SUBDIR+=	tellico-kde3
 SUBDIR+=	teseq
+SUBDIR+=	tmate
 SUBDIR+=	tmux
 SUBDIR+=	todoman
 SUBDIR+=	toilet
