@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2017/08/22 17:02:10 maya Exp $
+$NetBSD: distinfo,v 1.3 2017/08/23 03:02:14 maya Exp $
 
 SHA1 (xen48/gmp-4.3.2.tar.bz2) = c011e8feaf1bb89158bd55eaabd7ef8fdd101a2c
 RMD160 (xen48/gmp-4.3.2.tar.bz2) = a8f3f41501ece290c348aeb4444bbea40bc53e71
@@ -96,7 +96,7 @@ SHA1 (patch-tools_libxl_libxl_internal.h) = 613edc0fa055b23f5dc2a2448456d3d60053
 SHA1 (patch-tools_libxl_libxl_uuid.c) = 1eb8c027dbeb7e67df7475ee6e4d87220140c65b
 SHA1 (patch-tools_libxl_xl__cmdtable.c) = 073c08795af8ec828c60864a788c32e9cca31547
 SHA1 (patch-tools_libxl_xl_cmdimpl.c) = d43beffad3c6da70cb69b2b5d3cf0b48f614e2a6
-SHA1 (patch-tools_ocaml_common.make) = b73a72e64c42176a178bb8d9e37c6c9867055146
+SHA1 (patch-tools_ocaml_common.make) = 961b2e23777ef39dec3ecde0d281705f960f4020
 SHA1 (patch-tools_ocaml_xenstored_Makefile) = b267702cf4090c7b45bba530e60327fced24e3e5
 SHA1 (patch-tools_ocaml_xenstored_define.ml) = 1f12a8a853b847b80e2c3bb5919ed2410a70092f
 SHA1 (patch-tools_ocaml_xenstored_utils.ml) = 560b26b6d5030838721ddb4e3d819766c3db0349
