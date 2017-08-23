@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/11/06 16:12:08 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/23 17:54:05 jlam Exp $
 
 DISTNAME=	fsx-2009
 CATEGORIES=	filesystems
@@ -14,7 +14,7 @@ DIST_SUBDIR=	${DISTNAME}
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	gmake
 BUILD_TARGET=	fsx
-MAKE_FLAGS=	CFLAGS=${CFLAGS}
+MAKE_FLAGS=	CFLAGS=${CFLAGS:Q}
 
 INSTALLATION_DIRS=	bin share/doc/fsx
 
