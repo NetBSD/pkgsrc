@@ -28,6 +28,7 @@
 task_load createfile
 task_load makedir
 task_load ocaml_findlib
+task_load permissions
 task_load unittest
 
 test_setup()
@@ -110,6 +111,24 @@ test3()
 
 test4()
 {
+	: ${LS:=ls}
+
+	describe="verify permissions"
+	task_makedir "${ldconf%/*}"
+	task_createfile -m 666 "$ldconf"
+	task_ocaml_findlib add < $datafile
+	if task_check_permissions "$ldconf" 666; then
+		: "success"
+	else
+		describe="$describe: wrong mode!"
+		${LS} -l "$ldconf"
+		return 1
+	fi
+	return 0
+}
+
+test5()
+{
 	describe="check-add findlib dirs with all dirs added"
 	task_ocaml_findlib add < $datafile
 	if task_ocaml_findlib check-add < $datafile; then
@@ -124,7 +143,7 @@ test4()
 	return 0
 }
 
-test5()
+test6()
 {
 	describe="check-remove findlib dirs with no dirs removed"
 	task_ocaml_findlib add < $datafile
@@ -138,7 +157,7 @@ test5()
 	return 0
 }
 
-test6()
+test7()
 {
 	describe="remove findlib dirs"
 	task_ocaml_findlib add < $datafile
@@ -154,7 +173,7 @@ test6()
 	return 0
 }
 
-test7()
+test8()
 {
 	describe="verify empty ld.conf"
 	task_ocaml_findlib add < $datafile
@@ -171,7 +190,7 @@ test7()
 	return 0
 }
 
-test8()
+test9()
 {
 	describe="check-remove findlib dirs with empty ld.conf"
 	task_makedir "${ldconf%/*}"
@@ -188,7 +207,7 @@ test8()
 	return 0
 }
 
-test9()
+test10()
 {
 	describe="add findlib dirs with PKG_DESTDIR"
 	test_destdir_setup
@@ -212,7 +231,7 @@ test9()
 	return 0
 }
 
-test10()
+test11()
 {
 	describe="verify uniqueness with PKG_DESTDIR"
 	test_destdir_setup
@@ -240,7 +259,25 @@ test10()
 	return 0
 }
 
-test11()
+test12()
+{
+	: ${LS:=ls}
+
+	describe="verify permissions with PKG_DESTDIR"
+	task_makedir "${PKG_DESTDIR}${PKG_PREFIX}/${ldconf%/*}"
+	task_createfile -m 666 "${PKG_DESTDIR}${PKG_PREFIX}/$ldconf"
+	task_ocaml_findlib add < $datafile
+	if task_check_permissions "${PKG_DESTDIR}${PKG_PREFIX}/$ldconf" 666; then
+		: "success"
+	else
+		describe="$describe: wrong mode!"
+		${LS} -l "${PKG_DESTDIR}${PKG_PREFIX}/$ldconf"
+		return 1
+	fi
+	return 0
+}
+
+test13()
 {
 	describe="check-add findlib dirs with all dirs added with PKG_DESTDIR"
 	test_destdir_setup
@@ -261,7 +298,7 @@ test11()
 	return 0
 }
 
-test12()
+test14()
 {
 	describe="check-remove findlib dirs with no dirs removed with PKG_DESTDIR"
 	test_destdir_setup
@@ -280,7 +317,7 @@ test12()
 	return 0
 }
 
-test13()
+test15()
 {
 	describe="remove findlib dirs with PKG_DESTDIR"
 	test_destdir_setup
@@ -301,7 +338,7 @@ test13()
 	return 0
 }
 
-test14()
+test16()
 {
 	describe="verify empty ld.conf with PKG_DESTDIR"
 	test_destdir_setup
@@ -323,7 +360,7 @@ test14()
 	return 0
 }
 
-test15()
+test17()
 {
 	describe="check-remove findlib dirs with empty ld.conf with PKG_DESTDIR"
 	test_destdir_setup
