@@ -2,6 +2,19 @@ Package Tasks
 =============
 
 
+Changes in version 1.15
+-----------------------
+**Released on 2017-08-23.**
+
+* Fix bug where the `ocaml_findlib` and `shells` tasks were not
+  preserving the ownership and permissions of existing system files
+  when updating their contents.
+
+* Relax the permissions of the files created by the `refcount_file`
+  implementation of the `refcount` task so that they are readable
+  by anyone.
+
+
 Changes in version 1.14
 -----------------------
 **Released on 2017-08-14.**
@@ -15,7 +28,7 @@ Changes in version 1.13
 **Released on 2017-08-08.**
 
 * Make the output messages for the `groups` and `users` tasks easier
-  to understand by making them slightly more verobse and changing
+  to understand by making them slightly more verbose and changing
   the formatting.
 
 
