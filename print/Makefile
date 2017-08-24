@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.685 2017/06/23 23:15:00 markd Exp $
+# $NetBSD: Makefile,v 1.686 2017/08/24 02:10:14 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -366,6 +366,8 @@ SUBDIR+=	tex-chbibref
 SUBDIR+=	tex-chbibref-doc
 SUBDIR+=	tex-chemarrow
 SUBDIR+=	tex-chemarrow-doc
+SUBDIR+=	tex-chemgreek
+SUBDIR+=	tex-chemgreek-doc
 SUBDIR+=	tex-chess
 SUBDIR+=	tex-chess-doc
 SUBDIR+=	tex-chess-problem-diagrams
