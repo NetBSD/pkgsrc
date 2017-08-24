@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2017/05/29 17:17:13 maya Exp $
+$NetBSD: patch-boost_config_platform_bsd.hpp,v 1.1 2017/08/24 19:31:32 adam Exp $
 
 --- boost/config/platform/bsd.hpp.orig	2011-03-07 13:07:30.000000000 +0000
 +++ boost/config/platform/bsd.hpp
