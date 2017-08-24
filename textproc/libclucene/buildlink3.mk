@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2017/04/30 01:21:24 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2017/08/24 20:03:01 adam Exp $
 
 BUILDLINK_TREE+=	libclucene
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libclucene
 LIBCLUCENE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libclucene+=	libclucene>=2.2.0
-BUILDLINK_ABI_DEPENDS.libclucene?=	libclucene>=2.3.3.4nb8
+BUILDLINK_ABI_DEPENDS.libclucene?=	libclucene>=2.3.3.4nb9
 BUILDLINK_PKGSRCDIR.libclucene?=	../../textproc/libclucene
 .endif # LIBCLUCENE_BUILDLINK3_MK
 
