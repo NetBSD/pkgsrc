@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.8 2013/02/12 21:07:22 adam Exp $
+$NetBSD: patch-boost_config_detail_suffix.hpp,v 1.1 2017/08/24 19:31:32 adam Exp $
 
---- boost/config/suffix.hpp.orig	2010-10-01 09:19:44.000000000 +0000
-+++ boost/config/suffix.hpp
+--- boost/config/detail/suffix.hpp.orig	2010-10-01 09:19:44.000000000 +0000
++++ boost/config/detail/suffix.hpp
 @@ -248,7 +248,7 @@
  //
  #if (defined(__MT__) || defined(_MT) || defined(_REENTRANT) \
