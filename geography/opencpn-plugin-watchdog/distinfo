@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2017/07/07 13:04:36 bouyer Exp $
+$NetBSD: distinfo,v 1.6 2017/08/24 13:01:33 bouyer Exp $
 
 SHA1 (watchdog_pi-20170611-870a9231cd451b24d876097166e95ab4a55122ce.tar.gz) = d3dc5d109ca144eea81e367f2ec279fc9e44daae
 RMD160 (watchdog_pi-20170611-870a9231cd451b24d876097166e95ab4a55122ce.tar.gz) = c8bbccaa090bfff9670333f1e4459da015d3cfc0
 SHA512 (watchdog_pi-20170611-870a9231cd451b24d876097166e95ab4a55122ce.tar.gz) = a5f742e51272d92e3499ec0d86a65cf2ee5be4a82560ac5db4cf8d871b7aa1b80ba585899b57957a1f67b16ec8b40ce3db13354f96301b36ed2521a157ec3e0a
 Size (watchdog_pi-20170611-870a9231cd451b24d876097166e95ab4a55122ce.tar.gz) = 447611 bytes
-SHA1 (patch-cmake_PluginConfigure.cmake) = 72713695893417f0e56fa78c624295fc0ca39470
+SHA1 (patch-cmake_PluginConfigure.cmake) = bc2d6409f95cffee145173280c33f9e7fe439864
