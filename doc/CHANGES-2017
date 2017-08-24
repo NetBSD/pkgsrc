@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3425 2017/08/24 19:34:32 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3426 2017/08/24 20:03:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4821,3 +4821,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-boost to 1.65.0 [adam 2017-08-24]
 	Updated meta-pkgs/boost to 1.65.0 [adam 2017-08-24]
 	Added devel/boost-mpi version 1.65.0 [adam 2017-08-24]
+	Updated devel/py-click-log to 0.2.0 [adam 2017-08-24]
+	Updated time/py-vdirsyncer to 0.16.2 [adam 2017-08-24]
