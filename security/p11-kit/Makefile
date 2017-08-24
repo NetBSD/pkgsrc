@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	p11-kit-0.22.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://p11-glue.freedesktop.org/releases/
 
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://p11-glue.freedesktop.org/p11-kit.html
 COMMENT=	PKCS#11 module manager
 LICENSE=	modified-bsd
+
+USE_LANGUAGES=	c99
 
 DEPENDS=	mozilla-rootcerts>=1.0.20150804nb1:../../security/mozilla-rootcerts
 
@@ -20,6 +22,10 @@ USE_LANGUAGES=	c99
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
+# socketpair
+LDFLAGS.SunOS+=	-lsocket -lnsl
+# getpwuid_r
+CFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 # dirfd(3)
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
