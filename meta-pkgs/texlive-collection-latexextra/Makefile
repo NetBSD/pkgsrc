@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2017/08/06 13:01:46 markd Exp $
+# $NetBSD: Makefile,v 1.28 2017/08/24 02:40:56 markd Exp $
 
 DISTNAME=	collection-latexextra
 PKGNAME=	texlive-${DISTNAME}-2017pre2
@@ -231,7 +231,7 @@ DEPENDS+=	tex-dashbox-[0-9]*:../../print/tex-dashbox
 # depend dataref
 DEPENDS+=	tex-datatool-[0-9]*:../../print/tex-datatool
 # depend dateiliste
-# depend datenumber
+DEPENDS+=	tex-datenumber-[0-9]*:../../time/tex-datenumber
 DEPENDS+=	tex-datetime-[0-9]*:../../print/tex-datetime
 # depend datetime2
 # depend datetime2-bahasai
@@ -756,7 +756,7 @@ DEPENDS+=	tex-ntheorem-[0-9]*:../../print/tex-ntheorem
 # depend numspell
 # depend ocg-p
 # depend ocgx
-# depend ocgx2
+DEPENDS+=	tex-ocgx2-[0-9]*:../../print/tex-ocgx2
 # depend ocr-latex
 DEPENDS+=	tex-octavo-[0-9]*:../../print/tex-octavo
 # depend oldstyle
