@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2017/08/01 12:05:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2017/08/24 20:03:23 adam Exp $
 
 DISTNAME=	libgltf-0.1.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://dev-www.libreoffice.org/src/libgltf/
 

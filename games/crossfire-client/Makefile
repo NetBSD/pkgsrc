@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2017/04/30 01:21:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2017/08/24 20:03:14 adam Exp $
 
 .include "../../games/crossfire-client/Makefile.common"
-PKGREVISION=	21
+PKGREVISION=	22
 
 COMMENT=	Multi-player graphical arcade and adventure game; X11 client
 

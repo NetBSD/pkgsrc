@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2017/04/30 01:21:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.65 2017/08/24 20:03:23 adam Exp $
 #
 
 DISTNAME=	libkexiv2-15.08.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 COMMENT=	KDE wrapper around exiv2
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}

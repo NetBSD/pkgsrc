@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2017/07/17 16:28:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/24 20:03:12 adam Exp $
 
 GITHUB_PROJECT=	pecl-gearman
 MODNAME=	gearman
 PECL_VERSION=   2.0.3
 DISTNAME=	gearman-${PECL_VERSION}
 GITHUB_TAG=	gearman-${PKGVERSION_NOREV}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wcgallego/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
