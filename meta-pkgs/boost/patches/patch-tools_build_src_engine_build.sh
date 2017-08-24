@@ -1,10 +1,8 @@
-$NetBSD: patch-ae,v 1.9 2017/07/14 17:35:07 wiz Exp $
+$NetBSD: patch-tools_build_src_engine_build.sh,v 1.1 2017/08/24 19:31:32 adam Exp $
 
-Pass CFLAGS and LDFLAGS to the compiler.
-
---- tools/build/src/engine/build.sh.orig	2011-02-24 08:42:55.000000000 +0000
+--- tools/build/src/engine/build.sh.orig	2017-08-19 16:49:50.000000000 +0000
 +++ tools/build/src/engine/build.sh
-@@ -237,6 +237,7 @@ case $BOOST_JAM_TOOLSET in
+@@ -274,6 +274,7 @@ case $BOOST_JAM_TOOLSET in
      error_exit "Unknown toolset: $BOOST_JAM_TOOLSET"
      ;;
  esac

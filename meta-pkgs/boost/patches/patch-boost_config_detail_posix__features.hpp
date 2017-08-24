@@ -1,10 +1,10 @@
-$NetBSD: patch-boost_config_posix__features.hpp,v 1.1 2014/05/13 18:48:49 ryoon Exp $
+$NetBSD: patch-boost_config_detail_posix__features.hpp,v 1.1 2017/08/24 19:31:32 adam Exp $
 
-* Add OpenBSD conditionals, fix build under OpenBSD 5.5
-* OpenBSD has no _POSIX_TIMERS
+Add OpenBSD conditionals, fix build under OpenBSD 5.5
+OpenBSD has no _POSIX_TIMERS
 
---- boost/config/posix_features.hpp.orig	2005-10-14 14:16:26.000000000 +0000
-+++ boost/config/posix_features.hpp
+--- boost/config/detail/posix_features.hpp.orig	2005-10-14 14:16:26.000000000 +0000
++++ boost/config/detail/posix_features.hpp
 @@ -18,12 +18,12 @@
  #     include <unistd.h>
  
