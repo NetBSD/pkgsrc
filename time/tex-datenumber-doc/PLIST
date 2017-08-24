@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/24 02:29:57 markd Exp $
+share/texmf-dist/doc/latex/datenumber/README.txt
+share/texmf-dist/doc/latex/datenumber/doc.pdf
+share/texmf-dist/doc/latex/datenumber/doc.tex
+share/texmf-dist/doc/latex/datenumber/docgerman.pdf
+share/texmf-dist/doc/latex/datenumber/docgerman.tex
