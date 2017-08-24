@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2015/11/04 00:35:04 agc Exp $
+$NetBSD: distinfo,v 1.10 2017/08/24 11:04:00 jperkin Exp $
 
 SHA1 (hping2.0.0-rc3.tar.gz) = ec48293ca25e08155bf4b51ad6140b1be576a16f
 RMD160 (hping2.0.0-rc3.tar.gz) = 345c6b29e48c2f9aea6b8bafb68c258f9ff8b083
@@ -20,3 +20,4 @@ SHA1 (patch-an) = f660b165d5564149a5b57fa7b84e305af1fefc51
 SHA1 (patch-ao) = 52d30d71d91c33174de17dd1d0096c05e533504b
 SHA1 (patch-ap) = 369b03242eb513ba73d75e7102e7aa5491a13e2e
 SHA1 (patch-aq) = 548dd11def5085580ec118bb8ecff43df60a4140
+SHA1 (patch-gethostname.c) = 74bda475731e0750813f555af58908bada13ba7d
