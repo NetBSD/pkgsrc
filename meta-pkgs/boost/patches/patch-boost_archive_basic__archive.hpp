@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.12 2012/08/27 08:49:09 adam Exp $
+$NetBSD: patch-boost_archive_basic__archive.hpp,v 1.1 2017/08/24 19:31:32 adam Exp $
 
 --- boost/archive/basic_archive.hpp.orig	2012-08-27 07:38:03.000000000 +0000
 +++ boost/archive/basic_archive.hpp

@@ -1,8 +1,8 @@
-$NetBSD: patch-ar,v 1.3 2012/07/02 07:02:26 adam Exp $
+$NetBSD: patch-boost_property__tree_detail_xml__parser__read__rapidxml.hpp,v 1.1 2017/08/24 19:31:32 adam Exp $
 
---- boost/property_tree/detail/xml_parser_read_rapidxml.hpp.orig	2010-10-15 12:40:04.000000000 +0000
+--- boost/property_tree/detail/xml_parser_read_rapidxml.hpp.orig	2017-08-19 16:49:45.000000000 +0000
 +++ boost/property_tree/detail/xml_parser_read_rapidxml.hpp
-@@ -106,13 +106,13 @@ namespace boost { namespace property_tre
+@@ -103,13 +103,13 @@ namespace boost { namespace property_tre
  
          try {
              // Parse using appropriate flags

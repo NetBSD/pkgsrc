@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2017/01/01 15:32:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2017/08/24 19:31:31 adam Exp $
 share/boost-build/__init__.py
 share/boost-build/bootstrap.jam
 share/boost-build/build-system.jam
@@ -108,6 +108,7 @@ share/boost-build/tools/libjpeg.jam
 share/boost-build/tools/libpng.jam
 share/boost-build/tools/libtiff.jam
 share/boost-build/tools/link.jam
+share/boost-build/tools/lzma.jam
 share/boost-build/tools/make.jam
 share/boost-build/tools/make.py
 share/boost-build/tools/mc.jam
@@ -160,6 +161,8 @@ share/boost-build/tools/types/html.jam
 share/boost-build/tools/types/html.py
 share/boost-build/tools/types/lib.jam
 share/boost-build/tools/types/lib.py
+share/boost-build/tools/types/markdown.jam
+share/boost-build/tools/types/markdown.py
 share/boost-build/tools/types/obj.jam
 share/boost-build/tools/types/obj.py
 share/boost-build/tools/types/objc.jam

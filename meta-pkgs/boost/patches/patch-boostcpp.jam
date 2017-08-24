@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2012/08/27 08:49:09 adam Exp $
+$NetBSD: patch-boostcpp.jam,v 1.1 2017/08/24 19:31:32 adam Exp $
 
---- boostcpp.jam.orig	2012-07-27 18:15:55.000000000 +0000
+--- boostcpp.jam.orig	2017-08-19 16:49:36.000000000 +0000
 +++ boostcpp.jam
-@@ -249,6 +249,7 @@ rule declare_install_and_stage_proper_ta
+@@ -303,6 +303,7 @@ rule declare_install_and_stage_proper_ta
          : <location>$(stage-locate)/lib
            <install-dependencies>on <install-type>LIB
            <install-no-version-symlinks>on
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.10 2012/08/27 08:49:09 adam Exp $
          ;
      $(p).mark-target-as-explicit stage-proper ;
  
-@@ -509,6 +510,10 @@ rule libraries-to-install ( existing-lib
+@@ -564,6 +565,10 @@ rule libraries-to-install ( existing-lib
      {
          EXIT error: both --with-<library> and --without-<library> specified ;
      }

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/01/01 15:32:47 adam Exp $
+# $NetBSD: Makefile,v 1.17 2017/08/24 19:31:31 adam Exp $
 
 BOOST_PACKAGE=		docs
 BOOST_COMMENT=		(documentation)
@@ -8,10 +8,8 @@ USE_TOOLS+=	pax
 
 .include "../../meta-pkgs/boost/Makefile.common"
 
-DOCDIR=			${PREFIX}/share/doc/boost
-
-NO_BUILD=		yes
-
+DOCDIR=		${PREFIX}/share/doc/boost
+NO_BUILD=	yes
 PLIST_SRC=	PLIST ${WRKDIR}/PLIST.auto
 
 do-install:
