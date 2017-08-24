@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/24 16:11:21 minskim Exp $
+
+SHA1 (autopep8-1.3.2.tar.gz) = 1ff90f2a31d0aa3501fbedf8e8745e44f4e5496e
+RMD160 (autopep8-1.3.2.tar.gz) = b5bc69fc38bc6c1ec3507331f85c5c88a5cef573
+SHA512 (autopep8-1.3.2.tar.gz) = cb9a5e297ce705722d5e65472dbe749e57fa12fe8dee0d4c3dc20d9e885e0d885339627667110318c89c6bf7e337203a7831c0e2217e5a5d7951edcb98d3df4f
+Size (autopep8-1.3.2.tar.gz) = 107915 bytes
