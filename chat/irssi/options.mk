@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.17 2017/04/27 00:57:03 maya Exp $
+# $NetBSD: options.mk,v 1.18 2017/08/24 14:05:21 khorben Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.irssi
-PKG_SUPPORTED_OPTIONS=		ssl perl
-PKG_SUGGESTED_OPTIONS=		ssl perl
+PKG_SUPPORTED_OPTIONS=		ssl perl truecolor
+PKG_SUGGESTED_OPTIONS=		ssl perl truecolor
 
 .include "../../mk/bsd.options.mk"
 
@@ -26,4 +26,8 @@ CONFIGURE_ARGS+=	--with-perl=no
 .include "../../security/openssl/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-ssl
+.endif
+
+.if !empty(PKG_OPTIONS:Mtruecolor)
+CONFIGURE_ARGS+=	--enable-true-color
 .endif
