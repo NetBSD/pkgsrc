@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3420 2017/08/24 02:42:01 markd Exp $
+$NetBSD: CHANGES-2017,v 1.3421 2017/08/24 11:04:09 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4809,3 +4809,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added time/tex-datenumber-doc version 0.02 [markd 2017-08-24]
 	Added print/tex-ocgx2 version 0.29 [markd 2017-08-24]
 	Added print/tex-ocgx2-doc version 0.29 [markd 2017-08-24]
+	Updated net/hping to 2.0.0.3nb2 [jperkin 2017-08-24]
