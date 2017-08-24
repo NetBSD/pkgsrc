@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2017/04/30 01:21:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2017/08/24 20:03:38 adam Exp $
 #
 
 PKGNAME=	dirb-1.9
 DISTNAME=	dirb19
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dirb/}
 

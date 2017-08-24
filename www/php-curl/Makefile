@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2017/04/30 01:22:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2017/08/24 20:03:42 adam Exp $
 
 MODNAME=		curl
 CATEGORIES+=		www
 COMMENT=		PHP extension for curl functions
-PKGREVISION=		1
+PKGREVISION=		2
 
 CONFLICTS=	php-curl-[0-9]*
 

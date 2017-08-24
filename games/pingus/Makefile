@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2017/05/03 08:38:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2017/08/24 20:03:18 adam Exp $
 
 DISTNAME=	pingus-0.7.3
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	games
 MASTER_SITES=	http://pingus.seul.org/files/
 EXTRACT_SUFX=	.tar.bz2

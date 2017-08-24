@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2017/04/30 01:21:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2017/08/24 20:03:31 adam Exp $
 
 DISTNAME=	kiten-${_KDE_VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	misc
 COMMENT=	KDE Japanese reference/learning tool
 

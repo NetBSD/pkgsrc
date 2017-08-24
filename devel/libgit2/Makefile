@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2017/07/31 14:18:20 taca Exp $
+# $NetBSD: Makefile,v 1.20 2017/08/24 20:03:11 adam Exp $
 
 DISTNAME=	libgit2-0.26.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libgit2/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
