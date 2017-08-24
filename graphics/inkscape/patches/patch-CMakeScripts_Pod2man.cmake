@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeScripts_Pod2man.cmake,v 1.1 2017/02/10 05:51:43 adam Exp $
+$NetBSD: patch-CMakeScripts_Pod2man.cmake,v 1.2 2017/08/24 09:07:12 jperkin Exp $
 
 Fix man installation path.
 
@@ -9,7 +9,7 @@ Fix man installation path.
          install(
              FILES ${MANFILE_FULL}
 -            DESTINATION ${CMAKE_INSTALL_PREFIX}/${SHARE_INSTALL}/man/man${SECTION}
-+            DESTINATION ${CMAKE_INSTALL_PREFIX}/man/man${SECTION}
++            DESTINATION ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_MANDIR}/man${SECTION}
          )
      endif()
  endmacro(pod2man PODFILE NAME SECTION CENTER)
