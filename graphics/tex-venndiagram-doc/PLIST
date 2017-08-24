@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/24 02:21:17 markd Exp $
+share/texmf-dist/doc/latex/venndiagram/CHANGES
+share/texmf-dist/doc/latex/venndiagram/INSTALL
+share/texmf-dist/doc/latex/venndiagram/README
+share/texmf-dist/doc/latex/venndiagram/samples/venn-sample.pdf
+share/texmf-dist/doc/latex/venndiagram/samples/venn-sample.tex
+share/texmf-dist/doc/latex/venndiagram/venndiagram.pdf

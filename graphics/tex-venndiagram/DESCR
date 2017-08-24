@@ -1,0 +1,3 @@
+The package assists generation of simple two- and three-set
+Venn diagrams for lectures or assignment sheets. The package
+requires the TikZ package.
