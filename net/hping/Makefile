@@ -3,13 +3,14 @@
 
 DISTNAME=		hping2.0.0-rc3
 PKGNAME=		hping-2.0.0.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		http://www.hping.org/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.hping.org/
 COMMENT=		Command-line oriented TCP/IP packet assembler/analyzer
+LICENSE=		gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/hping2-rc3
 HAS_CONFIGURE=		YES
