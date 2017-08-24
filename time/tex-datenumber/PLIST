@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/24 02:29:57 markd Exp $
+share/texmf-dist/tex/latex/datenumber/datenumber.sty
+share/texmf-dist/tex/latex/datenumber/datenumberUSenglish.ldf
+share/texmf-dist/tex/latex/datenumber/datenumberdummy.ldf
+share/texmf-dist/tex/latex/datenumber/datenumberenglish.ldf
+share/texmf-dist/tex/latex/datenumber/datenumberfrench.ldf
+share/texmf-dist/tex/latex/datenumber/datenumbergerman.ldf
+share/texmf-dist/tex/latex/datenumber/datenumberspanish.ldf
