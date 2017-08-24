@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2017/04/30 01:21:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2017/08/24 20:03:11 adam Exp $
 
 DISTNAME=	libkgapi-2.2.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_KDE:=libkgapi/2.2.0/src/}
 EXTRACT_SUFX=	.tar.bz2
