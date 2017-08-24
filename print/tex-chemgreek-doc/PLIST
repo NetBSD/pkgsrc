@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/24 02:08:53 markd Exp $
+share/texmf-dist/doc/latex/chemgreek/README
+share/texmf-dist/doc/latex/chemgreek/chemgreek_en.pdf
+share/texmf-dist/doc/latex/chemgreek/chemgreek_en.tex
