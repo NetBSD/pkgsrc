@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2017/08/06 12:45:21 markd Exp $
+# $NetBSD: Makefile,v 1.16 2017/08/24 02:40:56 markd Exp $
 
 DISTNAME=	collection-pictures
-PKGNAME=	texlive-${DISTNAME}-2017pre2
+PKGNAME=	texlive-${DISTNAME}-2017pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	44943
@@ -167,7 +167,7 @@ DEPENDS+=	tex-tikzsymbols-[0-9]*:../../graphics/tex-tikzsymbols
 # depend tkz-tab
 # depend tsemlines
 DEPENDS+=	tex-tufte-latex-[0-9]*:../../print/tex-tufte-latex
-# depend venndiagram
+DEPENDS+=	tex-venndiagram-[0-9]*:../../graphics/tex-venndiagram
 # depend visualpstricks
 # depend xpicture
 DEPENDS+=	tex-xypic-[0-9]*:../../graphics/tex-xypic
