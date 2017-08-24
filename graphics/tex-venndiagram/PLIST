@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/24 02:21:17 markd Exp $
+share/texmf-dist/tex/latex/venndiagram/venndiagram.sty
