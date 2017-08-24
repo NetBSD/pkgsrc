@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/04/04 17:34:56 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2017/08/24 14:50:19 jperkin Exp $
 #
 
 DISTNAME=	p11-kit-0.22.1
@@ -16,11 +16,15 @@ DEPENDS=	mozilla-rootcerts>=1.0.20150804nb1:../../security/mozilla-rootcerts
 CONFIGURE_ARGS+=	--with-trust-paths=${PREFIX}/share/mozilla-rootcerts/cacert.pem
 
 GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c99
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 # dirfd(3)
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+
+CFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 PKGCONFIG_OVERRIDE+=	p11-kit/p11-kit-1.pc.in
 
