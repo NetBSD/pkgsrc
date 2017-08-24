@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2490 2017/08/21 15:35:11 adam Exp $
+# $NetBSD: Makefile,v 1.2491 2017/08/24 03:26:47 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -328,8 +328,8 @@ SUBDIR+=	go-ini
 SUBDIR+=	go-jwalterweatherman
 SUBDIR+=	go-mapstructure
 SUBDIR+=	go-mow-cli
-SUBDIR+=	go-nitro
 SUBDIR+=	go-nbreader
+SUBDIR+=	go-nitro
 SUBDIR+=	go-osext
 SUBDIR+=	go-pflag
 SUBDIR+=	go-properties
