@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.686 2017/08/24 02:10:14 markd Exp $
+# $NetBSD: Makefile,v 1.687 2017/08/24 02:39:14 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -975,6 +975,8 @@ SUBDIR+=	tex-ntheorem
 SUBDIR+=	tex-ntheorem-doc
 SUBDIR+=	tex-oberdiek
 SUBDIR+=	tex-oberdiek-doc
+SUBDIR+=	tex-ocgx2
+SUBDIR+=	tex-ocgx2-doc
 SUBDIR+=	tex-octavo
 SUBDIR+=	tex-octavo-doc
 SUBDIR+=	tex-oinuit
