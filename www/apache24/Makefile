@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2017/07/12 07:01:34 adam Exp $
+# $NetBSD: Makefile,v 1.60 2017/08/24 20:03:41 adam Exp $
 #
 # When updating this package, make sure that no strings like
 # "PR 12345" are in the commit message. Upstream likes
@@ -7,6 +7,7 @@
 
 DISTNAME=	httpd-2.4.27
 PKGNAME=	${DISTNAME:S/httpd/apache/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/}
 MASTER_SITES+=	http://archive.apache.org/dist/httpd/
