@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3422 2017/08/24 12:57:46 bouyer Exp $
+$NetBSD: CHANGES-2017,v 1.3423 2017/08/24 14:09:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4811,3 +4811,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added print/tex-ocgx2-doc version 0.29 [markd 2017-08-24]
 	Updated net/hping to 2.0.0.3nb2 [jperkin 2017-08-24]
 	Updated geography/opencpn to 4.8.0 [bouyer 2017-08-24]
+	Updated www/mediawiki to 1.29.1 [wen 2017-08-24]
