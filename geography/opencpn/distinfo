@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.12 2017/04/18 13:31:55 bouyer Exp $
+$NetBSD: distinfo,v 1.13 2017/08/24 12:56:57 bouyer Exp $
 
-SHA1 (OpenCPN-4.6.1-89f78e06c52683faac51c30baa1f25fee7ed6c97.zip) = e977ab8292c2ec5836eea2dce7257f60d0d4ad52
-RMD160 (OpenCPN-4.6.1-89f78e06c52683faac51c30baa1f25fee7ed6c97.zip) = eb840b5d694f17ae12caa7d08134986d6d143acf
-SHA512 (OpenCPN-4.6.1-89f78e06c52683faac51c30baa1f25fee7ed6c97.zip) = 8ef95ee173084d91d54651c13e155112df88ce87c32d5124695da0a4507a2650f3e0094cea3287a750c8f90fd9f6240d8ab4faf665d9b15cbbcebcc131ea8efa
-Size (OpenCPN-4.6.1-89f78e06c52683faac51c30baa1f25fee7ed6c97.zip) = 55864452 bytes
+SHA1 (OpenCPN-4.8.0-a13bc435462ae6c029660f1caa458dca79c927ec.zip) = 33ecc34915951c270fd758ec00a69574bc44ea25
+RMD160 (OpenCPN-4.8.0-a13bc435462ae6c029660f1caa458dca79c927ec.zip) = 084ad8ace3336954402a17b7610c3e2807a270a1
+SHA512 (OpenCPN-4.8.0-a13bc435462ae6c029660f1caa458dca79c927ec.zip) = eed40678a6ff8cae45da0e44cbf3fe1d65c2a76668ecc26bbbc15a845e1c937f54a424ab6c1776dd3d74348d67ac6e11f7381da3f5132cbf680528dcc7184fc0
+Size (OpenCPN-4.8.0-a13bc435462ae6c029660f1caa458dca79c927ec.zip) = 56307636 bytes
 SHA1 (patch-CMakeLists.txt) = c20b25c64790f5a595a5ef2940f430e588ffdf14
 SHA1 (patch-FindPortaudio.cmake) = e1bebe2203c6f3dc76f92ee5bdcb01eca66b6b9a
 SHA1 (patch-plugins_chartdldr_pi_CMakeLists.txt) = 52962f6feac45a766fc2dff08d2802e946ccfc85
@@ -17,6 +17,4 @@ SHA1 (patch-src_chart1.cpp) = ae7c1d8a59c9a275914a613205de71e2dca89dc6
 SHA1 (patch-src_crashprint.cpp) = a96e8aa980eb3b19c3dce3343582511d608e6625
 SHA1 (patch-src_glu_CMakeLists.txt) = d63494a41071097252ac9e2cb95db75041f30b62
 SHA1 (patch-src_mipmap_mipmap.c) = 3bdb2c37e7a6d89fc6a531af6e0396a1ff385aeb
-SHA1 (patch-src_printtable.cpp) = 940e7f42dd7e6a9776db2009027989ca79429cb1
-SHA1 (patch-src_routeprintout.cpp) = bbf135bd71e3fc87100b0c6d4e200f68754937c3
 SHA1 (patch-src_tcmgr.cpp) = 3fb4edf3368f3f3907f231ebcabd8e5061699040
