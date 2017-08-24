@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	john-1.8.0
+PKGREVISION=	1
 CATEGORIES=	security textproc
 MASTER_SITES=	http://www.openwall.com/john/j/
 EXTRACT_SUFX=	.tar.xz
@@ -26,7 +27,7 @@ BUILD_TARGET=	solaris-sparcv9-${${PKGSRC_COMPILER}==gcc:?gcc:cc}
 .  elif ${MACHINE_ARCH} == "i386"
 BUILD_TARGET=	solaris-x86-any-${${PKGSRC_COMPILER}==gcc:?gcc:cc}
 .  elif ${MACHINE_ARCH} == "x86_64"
-BUILD_TARGET=	solaris-x86_64-${${PKGSRC_COMPILER}==gcc:?gcc:cc}
+BUILD_TARGET=	solaris-x86-64-${PKGSRC_COMPILER}
 .  endif
 .elif ${OPSYS} == "NetBSD"
 .  if ${MACHINE_ARCH} == "i386"
