@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.9 2016/10/07 17:51:11 adam Exp $
+$NetBSD: patch-boost_test_impl_execution__monitor.ipp,v 1.1 2017/08/24 19:31:32 adam Exp $
 
---- boost/test/impl/execution_monitor.ipp.orig	2016-10-05 08:52:21.000000000 +0000
+--- boost/test/impl/execution_monitor.ipp.orig	2017-08-19 16:49:49.000000000 +0000
 +++ boost/test/impl/execution_monitor.ipp
-@@ -166,7 +166,8 @@ namespace { void _set_se_translator( voi
+@@ -163,7 +163,8 @@ namespace { void _set_se_translator( voi
  #  if defined(SIGPOLL) && !defined(__CYGWIN__)                              && \
        !(defined(macintosh) || defined(__APPLE__) || defined(__APPLE_CC__))  && \
        !defined(__NetBSD__)                                                  && \
@@ -12,7 +12,7 @@ $NetBSD: patch-aq,v 1.9 2016/10/07 17:51:11 adam Exp $
  #    define BOOST_TEST_CATCH_SIGPOLL
  #  endif
  
-@@ -365,6 +366,7 @@ system_signal_exception::report() const
+@@ -362,6 +363,7 @@ system_signal_exception::report() const
      if( !m_sig_info )
          return; // no error actually occur?
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aq,v 1.9 2016/10/07 17:51:11 adam Exp $
      switch( m_sig_info->si_code ) {
      case SI_USER:
          report_error( execution_exception::system_error,
-@@ -379,14 +381,18 @@ system_signal_exception::report() const
+@@ -376,14 +378,18 @@ system_signal_exception::report() const
          report_error( execution_exception::system_error,
                        "signal: the expiration of a timer set by timer_settimer()" );
          break;
@@ -39,7 +39,7 @@ $NetBSD: patch-aq,v 1.9 2016/10/07 17:51:11 adam Exp $
      default:
          break;
      }
-@@ -605,6 +611,7 @@ system_signal_exception::report() const
+@@ -602,6 +608,7 @@ system_signal_exception::report() const
          report_error( execution_exception::system_error,
                        "unrecognized signal %d", m_sig_info->si_signo );
      }
