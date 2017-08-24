@@ -1,0 +1,4 @@
+This package provides commands to convert a date into a number
+and vice versa. Additionally there are commands for
+incrementing and decrementing a date. Leap years and the
+Gregorian calendar reform are considered.
