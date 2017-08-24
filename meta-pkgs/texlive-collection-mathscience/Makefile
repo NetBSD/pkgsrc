@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/08/06 12:42:06 markd Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/24 02:40:56 markd Exp $
 
 DISTNAME=	collection-mathscience
-PKGNAME=	texlive-${DISTNAME}-2017pre1
+PKGNAME=	texlive-${DISTNAME}-2017pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	44906
@@ -42,7 +42,7 @@ DEPENDS+=	tex-chemarrow-[0-9]*:../../print/tex-chemarrow
 # depend chemcono
 # depend chemexec
 # depend chemformula
-# depend chemgreek
+DEPENDS+=	tex-chemgreek-[0-9]*:../../print/tex-chemgreek
 # depend chemmacros
 # depend chemnum
 # depend chemschemex
