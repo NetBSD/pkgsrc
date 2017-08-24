@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.162 2017/08/16 20:57:26 wiz Exp $
+# $NetBSD: Makefile,v 1.163 2017/08/24 02:31:08 markd Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -165,6 +165,8 @@ SUBDIR+=	sunclock
 SUBDIR+=	swisswatch
 SUBDIR+=	taskwarrior
 SUBDIR+=	tdl
+SUBDIR+=	tex-datenumber
+SUBDIR+=	tex-datenumber-doc
 SUBDIR+=	titrax
 SUBDIR+=	vixie-cron
 SUBDIR+=	wmCalClock
