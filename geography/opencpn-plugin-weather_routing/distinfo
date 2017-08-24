@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.8 2017/04/14 16:35:21 bouyer Exp $
+$NetBSD: distinfo,v 1.9 2017/08/24 13:01:33 bouyer Exp $
 
 SHA1 (weather_routing_pi-20170414-d65c968479af4fee78aa28b4b3f2c54660597eac.tar.gz) = e28c7831b923293a1e0d874150f038090979e181
 RMD160 (weather_routing_pi-20170414-d65c968479af4fee78aa28b4b3f2c54660597eac.tar.gz) = 54d584a02d811c17626e4969817a44d03f3b93de
 SHA512 (weather_routing_pi-20170414-d65c968479af4fee78aa28b4b3f2c54660597eac.tar.gz) = 20607b864eef999bfbf1b05f62661479eed484a4e1c407dac4605f703f59faf91f684acd34e078bbf3c89d6aca128000f3d6fd45e7f767f16fd888382e15f0bd
 Size (weather_routing_pi-20170414-d65c968479af4fee78aa28b4b3f2c54660597eac.tar.gz) = 847684 bytes
-SHA1 (patch-cmake_PluginConfigure.cmake) = e2873cbba3d776227d72b8538634f687dc04c439
+SHA1 (patch-cmake_PluginConfigure.cmake) = 5f0b145d34c064870090eaa598b5474020eb887d
 SHA1 (patch-src_Polar.cpp) = fa7af26e0dcba1dda3ae358c35353c6304d4f941
 SHA1 (patch-src_RouteMap.cpp) = a733a901f04eeb1699805e590325c0485ce26d1b
 SHA1 (patch-src_RouteMapOverlay.cpp) = 075ca5206f03e83277060bae1776ba77d26bd990
