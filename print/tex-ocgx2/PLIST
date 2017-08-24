@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/24 02:37:55 markd Exp $
+share/texmf-dist/tex/latex/ocgx2/fixocgx.sty
+share/texmf-dist/tex/latex/ocgx2/ocgbase.sty
+share/texmf-dist/tex/latex/ocgx2/ocgx2.sty
