@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/01/28 10:04:38 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2017/08/24 17:22:58 jperkin Exp $
 #
 
 DISTNAME=	john-1.8.0
@@ -19,15 +19,13 @@ TEST_TARGET=	check
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-.  if ${MACHINE_ARCH} == "sparc"
-BUILD_TARGET=	solaris-sparc-${${PKGSRC_COMPILER}==gcc:?gcc:cc}
-.  elif ${MACHINE_ARCH} == "sparc64"
-BUILD_TARGET=	solaris-sparcv9-${${PKGSRC_COMPILER}==gcc:?gcc:cc}
-.  elif ${MACHINE_ARCH} == "i386"
-BUILD_TARGET=	solaris-x86-any-${${PKGSRC_COMPILER}==gcc:?gcc:cc}
-.  elif ${MACHINE_ARCH} == "x86_64"
-BUILD_TARGET=	solaris-x86_64-${${PKGSRC_COMPILER}==gcc:?gcc:cc}
-.  endif
+JOHN_ARCH.i386=		x86-any
+JOHN_ARCH.sparc=	sparc
+JOHN_ARCH.sparc64=	sparcv9
+JOHN_ARCH.x86_64=	x86-64
+JOHN_CC.gcc=		gcc
+JOHN_CC.sunpro=		cc
+BUILD_TARGET=	solaris-${JOHN_ARCH.${MACHINE_ARCH}}-${JOHN_CC.${PKGSRC_COMPILER}}
 .elif ${OPSYS} == "NetBSD"
 .  if ${MACHINE_ARCH} == "i386"
 BUILD_TARGET=	openbsd-x86-any
