@@ -1,19 +1,17 @@
-$NetBSD: patch-cmake_PluginConfigure.cmake,v 1.1 2016/03/14 11:07:59 bouyer Exp $
+$NetBSD: patch-cmake_PluginConfigure.cmake,v 1.2 2017/08/24 13:01:33 bouyer Exp $
 Do not overwrite CMAKE_SHARED_LINKER_FLAGS
 
---- cmake/PluginConfigure.cmake.orig	2016-02-10 19:43:27.000000000 +0100
-+++ cmake/PluginConfigure.cmake	2016-02-10 19:43:46.000000000 +0100
-@@ -43,11 +43,9 @@
-   ENDIF(DEBUG)
+--- cmake/PluginConfigure.cmake.orig	2017-04-01 02:46:48.000000000 +0200
++++ cmake/PluginConfigure.cmake	2017-08-24 11:54:54.830898473 +0200
+@@ -44,9 +44,9 @@
   ENDIF(PROFILING)
  
-- IF(NOT APPLE)
+  IF(NOT APPLE)
 -  SET(CMAKE_SHARED_LINKER_FLAGS "-Wl,-Bsymbolic")
-- ELSE(NOT APPLE)
-+ IF(APPLE)
-   SET(CMAKE_SHARED_LINKER_FLAGS "-Wl -undefined dynamic_lookup")
-- ENDIF(NOT APPLE)
-+ ENDIF(APPLE)
++  SET(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,-Bsymbolic")
+  ELSE(NOT APPLE)
+-  SET(CMAKE_SHARED_LINKER_FLAGS "-Wl -undefined dynamic_lookup")
++  SET(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl -undefined dynamic_lookup")
+  ENDIF(NOT APPLE)
  
  ENDIF(NOT MSVC)
- 
