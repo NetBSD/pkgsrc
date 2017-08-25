@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/04/09 17:37:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/08/25 20:03:39 joerg Exp $
 bin/celery${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -109,6 +109,9 @@ ${PYSITELIB}/celery/backends/database/models.pyo
 ${PYSITELIB}/celery/backends/database/session.py
 ${PYSITELIB}/celery/backends/database/session.pyc
 ${PYSITELIB}/celery/backends/database/session.pyo
+${PYSITELIB}/celery/backends/dynamodb.py
+${PYSITELIB}/celery/backends/dynamodb.pyc
+${PYSITELIB}/celery/backends/dynamodb.pyo
 ${PYSITELIB}/celery/backends/elasticsearch.py
 ${PYSITELIB}/celery/backends/elasticsearch.pyc
 ${PYSITELIB}/celery/backends/elasticsearch.pyo
