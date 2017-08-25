@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/08/25 16:49:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2017/08/25 17:03:28 jperkin Exp $
 
 DISTNAME=	go-toml-1.0.0
 PKGNAME=	${DISTNAME:S/toml/toml-pelletier/}
@@ -9,7 +9,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pelletier/go-toml
-COMMENT=	TOML parser for Golang with reflection.
+COMMENT=	TOML parser for Golang with reflection
 LICENSE=	mit
 
 GO_DIST_BASE=	${DISTNAME}

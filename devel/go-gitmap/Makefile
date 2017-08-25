@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/25 17:03:26 jperkin Exp $
 
 DISTNAME=	gitmap-0.0.20170613
 PKGNAME=	go-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_PROJECT= ${PKGBASE:S/^go-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/bep/gitmap/
-COMMENT=	A fairly fast way to create a map from all the filenames to info objects for a given revision of a Git repo.
+COMMENT=	Git repository object map creator
 LICENSE=	mit
 
 GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}

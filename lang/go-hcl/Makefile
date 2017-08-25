@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/25 17:03:27 jperkin Exp $
 
 DISTNAME=	hcl-0.0.20160616
 PKGNAME=	go-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_PROJECT= ${PKGBASE:S/^go-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/hashicorp/hcl
-COMMENT=	HCL is a configuration language.
+COMMENT=	HCL is a configuration language
 LICENSE=	mpl-2.0
 
 GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}

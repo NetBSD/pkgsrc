@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/25 17:03:28 jperkin Exp $
 
 DISTNAME=	go-md2man-1.0.6
 PKGNAME=	${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_PROJECT= ${PKGBASE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/cpuguy83/go-md2man/
-COMMENT=	Uses blackfriday to process markdown into man pages.
+COMMENT=	Uses blackfriday to process markdown into man pages
 LICENSE=	mit
 
 GO_DIST_BASE=	${DISTNAME}
