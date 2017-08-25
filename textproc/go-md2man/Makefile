@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2017/08/25 17:03:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2017/08/25 17:17:05 jperkin Exp $
 
 DISTNAME=	go-md2man-1.0.6
-PKGNAME=	${DISTNAME}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cpuguy83/}
 CATEGORIES=	textproc
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_PROJECT= ${PKGBASE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/cpuguy83/go-md2man/
