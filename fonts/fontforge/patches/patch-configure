@@ -1,19 +1,11 @@
-$NetBSD: patch-configure,v 1.2 2016/04/07 10:09:02 adam Exp $
+$NetBSD: patch-configure,v 1.3 2017/08/25 09:20:38 adam Exp $
 
-Fix building on OS X.
-Portability fix.
+Portability fixes.
+Disable IPython modules.
 
---- configure.orig	2016-04-05 01:57:34.000000000 +0000
+--- configure.orig	2017-07-31 08:30:42.386015000 +0000
 +++ configure
-@@ -15228,7 +15228,6 @@ $as_echo "#define __Mac 1" >>confdefs.h
-        MACAPP=""
-       fi
- 
--      RAW_COMPILE_PLATFORM_CFLAGS=" $CFLAGS -arch x86_64 -arch i386 "
- 
- 
- 
-@@ -19653,7 +19652,7 @@ fi
+@@ -20382,7 +20382,7 @@ fi
  
  fi
  
@@ -22,7 +14,18 @@ Portability fix.
        ac_fn_c_check_header_mongrel "$LINENO" "zlib.h" "ac_cv_header_zlib_h" "$ac_includes_default"
  if test "x$ac_cv_header_zlib_h" = xyes; then :
  
-@@ -35279,7 +35278,7 @@ fi
+@@ -37045,9 +37045,8 @@ if test x"${i_do_have_python_scripting}"
+    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for IPython" >&5
+ $as_echo_n "checking for IPython... " >&6; }
+    if $( $PYTHON -c 'import IPython' 2>&5 ); then
+-        have_ipython=yes;
++        have_ipython=no;
+ 
+-$as_echo "#define HAVE_IPYTHON 1" >>confdefs.h
+ 
+         { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+@@ -37090,7 +37089,7 @@ fi
  #--------------------------------------------------------------------------
  
  # Check whether --enable-breakpad was given.
@@ -31,3 +34,12 @@ Portability fix.
    enableval=$enable_breakpad; have_breakpad=yes
  fi
  
+@@ -37307,7 +37306,7 @@ FONTFORGE_DATE_NOW=${SOURCE_DATE_EPOCH:-
+ FONTFORGE_DATE_OPTS="--date=@${FONTFORGE_DATE_NOW}"
+ if ! date --version 2>/dev/null ; then
+   # Use POSIX date instead of GNU date on BSD systems
+-  FONTFORGE_DATE_OPTS="-j -f %s ${FONTFORGE_DATE_NOW}"
++  FONTFORGE_DATE_OPTS="-j -r ${FONTFORGE_DATE_NOW}"
+ fi
+ FONTFORGE_MODTIME="$(date -u $FONTFORGE_DATE_OPTS +'%s')L"
+ FONTFORGE_MODTIME_STR="$(date -u $FONTFORGE_DATE_OPTS +'%H:%M %Z %e-%b-%Y')"

@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.100 2017/05/04 19:23:18 adam Exp $
+# $NetBSD: Makefile,v 1.101 2017/08/25 09:20:38 adam Exp $
 
-DISTNAME=	fontforge-dist-20161004
+DISTNAME=	fontforge-dist-20170731
 PKGNAME=	${DISTNAME:S/-dist-/-/}
 CATEGORIES=	fonts editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fontforge/}
-GITHUB_PROJECT=	fontforge
-GITHUB_RELEASE=	20161005
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://fontforge.github.io/
 COMMENT=	Postscript font editor
 LICENSE=	modified-bsd
 
+GITHUB_PROJECT=	fontforge
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_USING=	bsdtar
 WRKSRC=		${WRKDIR}/fontforge-2.0.${PKGVERSION_NOREV}
 
