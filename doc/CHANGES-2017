@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3426 2017/08/24 20:03:07 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3427 2017/08/25 05:29:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4823,3 +4823,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/boost-mpi version 1.65.0 [adam 2017-08-24]
 	Updated devel/py-click-log to 0.2.0 [adam 2017-08-24]
 	Updated time/py-vdirsyncer to 0.16.2 [adam 2017-08-24]
+	Updated databases/sqlite3 to 3.20.1 [adam 2017-08-25]
+	Updated devel/m4 to 1.4.18 [adam 2017-08-25]
