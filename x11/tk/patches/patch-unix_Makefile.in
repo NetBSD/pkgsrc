@@ -1,4 +1,4 @@
-$NetBSD: patch-unix_Makefile.in,v 1.7 2016/03/06 11:47:49 adam Exp $
+$NetBSD: patch-unix_Makefile.in,v 1.8 2017/08/25 11:05:33 adam Exp $
 
 --- unix/Makefile.in.orig	2016-02-29 19:13:21.000000000 +0000
 +++ unix/Makefile.in
@@ -91,9 +91,9 @@ $NetBSD: patch-unix_Makefile.in,v 1.7 2016/03/06 11:47:49 adam Exp $
  	@@INSTALL_LIB@
 -	@chmod 555 "$(DLL_INSTALL_DIR)/$(LIB_FILE)"
 +	@cd "$(DLL_INSTALL_DIR)" && if test "$(SHLIB_SUFFIX)" = ".dylib"; then \
-+		ln -sf libtk$(MAJOR_VERSION)$(MINOR_VERSION).$(SHLIB_VERSION)$(SHLIB_SUFFIX) $(LIB_FILE) ; \
++		ln -sf libtk$(MAJOR_VERSION)$(MINOR_VERSION)$(SHLIB_VERSION)$(SHLIB_SUFFIX) $(LIB_FILE) ; \
 +	else \
-+		ln -sf libtk$(MAJOR_VERSION)$(MINOR_VERSION)$(SHLIB_SUFFIX).$(SHLIB_VERSION) $(LIB_FILE) ; \
++		ln -sf libtk$(MAJOR_VERSION)$(MINOR_VERSION)$(SHLIB_SUFFIX)$(SHLIB_VERSION) $(LIB_FILE) ; \
 +	fi
 +	@echo "Installing ${TK_LIB_A_FILE} to $(DLL_INSTALL_DIR)/"
 +	@$(INSTALL_DATA) ${TK_LIB_A_FILE} $(DLL_INSTALL_DIR)/${TK_LIB_A_FILE}
