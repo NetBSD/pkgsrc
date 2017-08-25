@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3439 2017/08/25 12:48:15 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.3440 2017/08/25 18:54:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4842,3 +4842,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/gtk3 to 3.22.19 [prlw1 2017-08-25]
 	Updated devel/libwnck3 to 3.24.1 [prlw1 2017-08-25]
 	Updated devel/accerciser3 to 3.22.0 [prlw1 2017-08-25]
+	Updated devel/re2c to 1.0.1 [adam 2017-08-25]
+	Updated devel/py-meson to 0.42.0 [adam 2017-08-25]
