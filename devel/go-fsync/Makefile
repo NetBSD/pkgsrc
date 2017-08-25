@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/17 01:25:46 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:12 jperkin Exp $
 
 DISTNAME=	fsync-0.0.20170320
 PKGNAME=	go-${DISTNAME}
@@ -18,4 +18,3 @@ GO_SRCPATH=	github.com/spf13/fsync
 .include "../../devel/go-afero/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
-
