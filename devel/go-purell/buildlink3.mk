@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2017/08/17 01:37:13 gavan Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2017/08/25 16:49:14 jperkin Exp $
 
 BUILDLINK_TREE+=	go-purell
 
@@ -14,4 +14,3 @@ BUILDLINK_PKGSRCDIR.go-purell?=		../../devel/go-purell
 .endif  # GO_PURELL_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-go-purell
-

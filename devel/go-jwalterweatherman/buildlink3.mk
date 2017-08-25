@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2017/08/17 01:31:19 gavan Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2017/08/25 16:49:13 jperkin Exp $
 
 BUILDLINK_TREE+=	go-jwalterweatherman
 
@@ -14,4 +14,3 @@ BUILDLINK_PKGSRCDIR.go-jwalterweatherman?=		../../devel/go-jwalterweatherman
 .endif  # GO_JWALTERWEATHERMAN_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-go-jwalterweatherman
-
