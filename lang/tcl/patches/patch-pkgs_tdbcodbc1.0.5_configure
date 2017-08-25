@@ -1,23 +1,22 @@
-$NetBSD: patch-pkgs_itcl4.0.5_configure,v 1.4 2017/07/16 09:06:44 wiz Exp $
+$NetBSD: patch-pkgs_tdbcodbc1.0.5_configure,v 1.1 2017/08/25 11:05:33 adam Exp $
 
 Add support for DragonFly.
 
 Honor LDFLAGS on NetBSD.
 https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
 
---- pkgs/itcl4.0.5/configure.orig	2016-07-12 15:29:40.000000000 +0000
-+++ pkgs/itcl4.0.5/configure
-@@ -7443,8 +7443,7 @@ fi
- 		    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+--- pkgs/tdbcodbc1.0.5/configure.orig	2017-07-28 18:41:55.000000000 +0000
++++ pkgs/tdbcodbc1.0.5/configure
+@@ -7911,7 +7911,7 @@ fi
  fi
- 		LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
--		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so${SHLIB_VERSION}'
--		LDFLAGS="-Wl,-export-dynamic"
-+		LDFLAGS="-Wl,--export-dynamic"
- 		;;
- 	    esac
- 	    case "$arch" in
-@@ -7464,13 +7463,11 @@ fi
+ 	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
+ 	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so${SHLIB_VERSION}'
+-	    LDFLAGS="-Wl,-export-dynamic"
++	    LDFLAGS="-Wl,--export-dynamic"
+ 	    CFLAGS_OPTIMIZE="-O2"
+ 	    if test "${TCL_THREADS}" = "1"; then :
+ 
+@@ -7922,13 +7922,11 @@ fi
  
  fi
  	    # OpenBSD doesn't do version numbers with dots.
@@ -32,7 +31,7 @@ https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
  	    SHLIB_SUFFIX=".so"
  	    LDFLAGS="$LDFLAGS -export-dynamic"
  	    if test $doRpath = yes; then :
-@@ -7487,7 +7484,7 @@ fi
+@@ -7945,7 +7943,7 @@ fi
  
  fi
  	    ;;
@@ -41,7 +40,7 @@ https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
  	    # This configuration from FreeBSD Ports.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="${CC} -shared"
-@@ -7509,10 +7506,6 @@ fi
+@@ -7967,10 +7965,6 @@ fi
  	    case $system in
  	    FreeBSD-3.*)
  		# Version numbers are dot-stripped by system policy.
@@ -52,7 +51,7 @@ https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
  		;;
  	    esac
  	    ;;
-@@ -8123,7 +8116,7 @@ fi
+@@ -8581,7 +8575,7 @@ fi
  	    BSD/OS*) ;;
  	    CYGWIN_*|MINGW32_*) ;;
  	    IRIX*) ;;
