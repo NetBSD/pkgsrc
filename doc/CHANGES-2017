@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3428 2017/08/25 06:25:13 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3429 2017/08/25 09:08:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4827,3 +4827,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/m4 to 1.4.18 [adam 2017-08-25]
 	Updated www/py-djangorestframework to 3.6.4 [adam 2017-08-25]
 	Updated www/py-nevow to 0.14.3 [adam 2017-08-25]
+	Updated print/py-weasyprint to 0.40 [adam 2017-08-25]
+	Updated mail/dovecot2 to 2.2.32 [adam 2017-08-25]
+	Updated devel/snappy to 1.1.7 [adam 2017-08-25]
