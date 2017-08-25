@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3432 2017/08/25 12:09:13 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.3433 2017/08/25 12:17:24 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4835,3 +4835,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/tcl to 8.6.7 [adam 2017-08-25]
 	Updated x11/tk to 8.6.7 [adam 2017-08-25]
 	Updated devel/gobject-introspection to 1.52.1 [prlw1 2017-08-25]
+	Updated devel/at-spi2-core to 2.25.91 [prlw1 2017-08-25]
