@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/25 17:03:25 jperkin Exp $
 
 DISTNAME=	cast-1.1.0
 PKGNAME=	go-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_PROJECT= ${PKGBASE:S/^go-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/spf13/cast
-COMMENT=	safe and easy casting from one type to another in Go
+COMMENT=	Safe and easy casting from one type to another in Go
 LICENSE=	mit
 
 GO_DIST_BASE=	${DISTNAME}
