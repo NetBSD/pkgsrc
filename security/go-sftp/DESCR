@@ -1,1 +1,2 @@
-The sftp package provides support for file system operations on remote ssh servers using the SFTP subsystem.
+The sftp package provides support for file system operations on remote ssh
+servers using the SFTP subsystem.
