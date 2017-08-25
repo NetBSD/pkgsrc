@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/17 01:28:07 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:13 jperkin Exp $
 
 DISTNAME=	goorgeous-0.0.20170816
 PKGNAME=	go-${DISTNAME}
@@ -18,4 +18,3 @@ GO_SRCPATH=	github.com/chaseadamsio/goorgeous
 .include "../../devel/go-blackfriday/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
-

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/17 01:13:32 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:11 jperkin Exp $
 
 DISTNAME=	afero-0.0.20160605
 PKGNAME=	go-${DISTNAME}
@@ -22,4 +22,3 @@ GO_SRCPATH=	github.com/spf13/afero
 .include "../../security/go-crypto/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
-
