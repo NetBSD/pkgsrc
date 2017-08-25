@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3430 2017/08/25 09:25:08 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3431 2017/08/25 11:06:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4832,3 +4832,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/snappy to 1.1.7 [adam 2017-08-25]
 	Updated fonts/fontforge to 20170731 [adam 2017-08-25]
 	Updated devel/py-rope to 0.10.7 [adam 2017-08-25]
+	Updated lang/tcl to 8.6.7 [adam 2017-08-25]
+	Updated x11/tk to 8.6.7 [adam 2017-08-25]
