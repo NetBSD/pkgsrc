@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/17 02:02:39 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:14 jperkin Exp $
 
 DISTNAME=	hcl-0.0.20160616
 PKGNAME=	go-${DISTNAME}
@@ -17,4 +17,3 @@ GO_SRCPATH=	github.com/hashicorp/hcl
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
-
