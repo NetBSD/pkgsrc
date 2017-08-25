@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2017/08/07 19:08:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2017/08/25 12:39:43 prlw1 Exp $
 bin/gtk-builder-tool
 bin/gtk-encode-symbolic-svg
 bin/gtk-launch
@@ -462,6 +462,7 @@ share/gir-1.0/Gtk-3.0.gir
 share/glib-2.0/schemas/org.gtk.Demo.gschema.xml
 share/glib-2.0/schemas/org.gtk.Settings.ColorChooser.gschema.xml
 share/glib-2.0/schemas/org.gtk.Settings.Debug.gschema.xml
+share/glib-2.0/schemas/org.gtk.Settings.EmojiChooser.gschema.xml
 share/glib-2.0/schemas/org.gtk.Settings.FileChooser.gschema.xml
 share/gtk-3.0/gtkbuilder.rng
 share/gtk-doc/html/gail-libgail-util3/gail-libgail-util3-GailMisc.html
