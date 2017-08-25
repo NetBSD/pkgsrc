@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2017/07/03 13:12:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.56 2017/08/25 08:29:04 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -46,6 +46,7 @@ include/dovecot/base64.h
 include/dovecot/bits.h
 include/dovecot/bsearch-insert-pos.h
 include/dovecot/buffer.h
+include/dovecot/byteorder.h
 include/dovecot/charset-utf8.h
 include/dovecot/child-wait.h
 include/dovecot/client-common.h
@@ -872,6 +873,7 @@ share/doc/dovecot/wiki/Pigeonhole.Sieve.Troubleshooting.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Usage.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.txt
 share/doc/dovecot/wiki/Pigeonhole.txt
+share/doc/dovecot/wiki/Plugins.Apparmor.txt
 share/doc/dovecot/wiki/Plugins.Autocreate.txt
 share/doc/dovecot/wiki/Plugins.Compress.txt
 share/doc/dovecot/wiki/Plugins.Expire.txt
@@ -887,6 +889,7 @@ share/doc/dovecot/wiki/Plugins.MailFilter.txt
 share/doc/dovecot/wiki/Plugins.MailLog.txt
 share/doc/dovecot/wiki/Plugins.MailboxAlias.txt
 share/doc/dovecot/wiki/Plugins.Notify.txt
+share/doc/dovecot/wiki/Plugins.NotifyStatus.txt
 share/doc/dovecot/wiki/Plugins.PushNotification.txt
 share/doc/dovecot/wiki/Plugins.QuotaClone.txt
 share/doc/dovecot/wiki/Plugins.Snarf.txt
