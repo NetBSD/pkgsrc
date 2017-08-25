@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/25 17:03:27 jperkin Exp $
 
 DISTNAME=	osext-0.0.20151222
 PKGNAME=	go-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_PROJECT= ${PKGBASE:S/^go-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/kardianos/osext
-COMMENT=	Extensions to the standard "os" package. Executable and ExecutableFolder.
+COMMENT=	Extensions to the standard "os" package
 LICENSE=	modified-bsd
 
 GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}
