@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.2 2017/05/02 17:06:30 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.3 2017/08/25 17:20:51 jperkin Exp $
 #
-# used by security/go-crypto
-# used by security/go-crypto-acme
+# used by security/go-crypto-acme/Makefile
+# used by security/go-crypto/Makefile
 
 DISTNAME=	go-crypto-0.0.20170502
 CATEGORIES=	security
