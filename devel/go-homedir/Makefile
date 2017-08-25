@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/17 01:28:52 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:13 jperkin Exp $
 
 DISTNAME=	go-homedir-0.0.20161203
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mitchellh/}
@@ -16,4 +16,3 @@ GO_SRCPATH=	github.com/mitchellh/go-homedir
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
-

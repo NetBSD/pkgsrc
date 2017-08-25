@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/25 16:06:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/25 16:49:15 jperkin Exp $
 
 DISTNAME=	toml-0.2.0
 PKGNAME=	go-${DISTNAME:S/toml/toml-burntsushi/}
@@ -17,4 +17,3 @@ GO_SRCPATH=	github.com/BurntSushi/toml
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
-

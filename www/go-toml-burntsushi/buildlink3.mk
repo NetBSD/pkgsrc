@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2017/08/17 01:49:40 gavan Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2017/08/25 16:49:15 jperkin Exp $
 
 BUILDLINK_TREE+=	go-toml-burntsushi
 
@@ -14,4 +14,3 @@ BUILDLINK_PKGSRCDIR.go-toml-burntsushi?=		../../www/go-toml-burntsushi
 .endif  # GO_TOML_BURNTSUSHI_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-go-toml-burntsushi
-

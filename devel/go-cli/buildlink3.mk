@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2017/08/17 01:19:56 gavan Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2017/08/25 16:49:12 jperkin Exp $
 
 BUILDLINK_TREE+=	go-cli
 
@@ -14,4 +14,3 @@ BUILDLINK_PKGSRCDIR.go-cli?=		../../devel/go-cli
 .endif  # GO_CLI_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-go-cli
-

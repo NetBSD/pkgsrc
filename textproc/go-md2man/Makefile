@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/17 01:55:42 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:14 jperkin Exp $
 
 DISTNAME=	go-md2man-1.0.6
 PKGNAME=	${DISTNAME}
@@ -19,4 +19,3 @@ GO_SRCPATH=	github.com/cpuguy83/go-md2man
 .include "../../devel/go-sanitized_anchor_name/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
-

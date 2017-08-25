@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2017/08/17 02:03:23 gavan Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2017/08/25 16:49:14 jperkin Exp $
 
 BUILDLINK_TREE+=	go-websocket
 
@@ -14,4 +14,3 @@ BUILDLINK_PKGSRCDIR.go-websocket?=	../../net/go-websocket
 .endif  # GO_WEBSOCKET_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-go-websocket
-

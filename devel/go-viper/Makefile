@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/17 01:38:21 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:14 jperkin Exp $
 
 DISTNAME=	viper-0.0.20170723
 PKGNAME=	go-${DISTNAME}
@@ -32,4 +32,3 @@ GO_SRCPATH=	github.com/spf13/viper
 .include "../../devel/go-afero/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
-
