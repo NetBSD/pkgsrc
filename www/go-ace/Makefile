@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/17 01:08:30 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:15 jperkin Exp $
 
 DISTNAME=	ace-0.0.4b
 PKGNAME=	go-${DISTNAME}
@@ -22,4 +22,3 @@ post-patch:
 .include "../../www/go-gohtml/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
-
