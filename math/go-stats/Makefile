@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/17 02:03:11 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:14 jperkin Exp $
 
 DISTNAME=	stats-0.2.0.20170729
 PKGNAME=	go-${DISTNAME}
@@ -21,4 +21,3 @@ post-patch:
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
-
