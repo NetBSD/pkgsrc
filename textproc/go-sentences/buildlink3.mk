@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2017/08/17 01:56:16 gavan Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2017/08/25 16:49:15 jperkin Exp $
 
 BUILDLINK_TREE+=	go-sentences
 
@@ -14,4 +14,3 @@ BUILDLINK_PKGSRCDIR.go-sentences?=		../../textproc/go-sentences
 .endif  # GO_SENTENCES_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-go-sentences
-

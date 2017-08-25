@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/17 01:24:45 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:12 jperkin Exp $
 
 DISTNAME=	fsnotify-1.3.0
 PKGNAME=	go-${DISTNAME}
@@ -18,4 +18,3 @@ GO_SRCPATH=	github.com/fsnotify/fsnotify
 .include "../../devel/go-sys/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
-

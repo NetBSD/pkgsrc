@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2017/08/17 01:29:44 gavan Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2017/08/25 16:49:13 jperkin Exp $
 
 BUILDLINK_TREE+=	go-i18n
 
@@ -15,4 +15,3 @@ BUILDLINK_PKGSRCDIR.go-i18n?=		../../devel/go-i18n
 .endif  # GO_I18N_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-go-i18n
-

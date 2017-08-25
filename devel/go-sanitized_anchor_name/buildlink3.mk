@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2017/08/17 01:37:39 gavan Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2017/08/25 16:49:14 jperkin Exp $
 
 BUILDLINK_TREE+=	go-sanitized_anchor_name
 
@@ -14,4 +14,3 @@ BUILDLINK_PKGSRCDIR.go-sanitized_anchor_name?=		../../devel/go-sanitized_anchor_
 .endif  # GO_SANITIZED_ANCHOR_NAME_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-go-sanitized_anchor_name
-

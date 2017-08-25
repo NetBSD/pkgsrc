@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/17 01:23:10 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:12 jperkin Exp $
 
 DISTNAME=	errors-0.6.0
 PKGNAME=	go-${DISTNAME}
@@ -17,4 +17,3 @@ GO_SRCPATH=	github.com/pkg/errors
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
-

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2017/08/17 01:36:54 gavan Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2017/08/25 16:49:13 jperkin Exp $
 
 BUILDLINK_TREE+=	go-properties
 
@@ -14,4 +14,3 @@ BUILDLINK_PKGSRCDIR.go-properties?=		../../devel/go-properties
 .endif  # GO_PROPERTIES_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-go-properties
-

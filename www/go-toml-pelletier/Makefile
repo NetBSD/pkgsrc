@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/25 16:06:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/25 16:49:15 jperkin Exp $
 
 DISTNAME=	go-toml-1.0.0
 PKGNAME=	${DISTNAME:S/toml/toml-pelletier/}
@@ -18,4 +18,3 @@ GO_SRCPATH=	github.com/pelletier/go-toml
 .include "../../devel/go-buffruneio/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
-

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/17 01:27:21 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:13 jperkin Exp $
 
 DISTNAME=	golang-lru-0.0.20160813
 PKGNAME=	go-${DISTNAME}
@@ -17,4 +17,3 @@ GO_SRCPATH=	github.com/hashicorp/golang-lru
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
-

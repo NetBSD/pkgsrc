@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/17 01:37:39 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:14 jperkin Exp $
 
 DISTNAME=	sanitized_anchor_name-0.0.20151028
 PKGNAME=	go-${DISTNAME}
@@ -17,4 +17,3 @@ GO_SRCPATH=	github.com/shurcooL/sanitized_anchor_name
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
-
