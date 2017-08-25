@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/06/14 06:29:36 maya Exp $
+# $NetBSD: Makefile,v 1.5 2017/08/25 15:56:39 jperkin Exp $
 
 DISTNAME=	dtc-1.4.2
 PKGREVISION=	1
@@ -16,5 +16,8 @@ REPLACE_BASH+=	dtdiff
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+MAKE_FLAGS+=	INSTALL=${INSTALL}
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=libfdt/version.lds
 
 .include "../../mk/bsd.pkg.mk"
