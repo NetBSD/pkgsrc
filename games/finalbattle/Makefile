@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/08/01 17:40:11 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2017/08/25 14:55:30 dholland Exp $
 #
 
 DISTNAME=	finalbattle.0.0
@@ -14,6 +14,7 @@ PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://web.archive.org/web/2/http://www.newbreedsoftware.com/finalbattle/
+HOMEPAGE=	http://web.archive.org/web/19980219201525/http://zippy.sonoma.edu/kendrick/nbs/unix/x/finalbattle/
 COMMENT=	Multiplayer space battle simulation for X
 
 WRKSRC=		${WRKDIR}/final
