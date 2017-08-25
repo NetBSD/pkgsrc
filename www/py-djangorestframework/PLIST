@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/05/15 09:33:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/08/25 06:03:10 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -19,6 +19,15 @@ ${PYSITELIB}/rest_framework/authtoken/admin.pyo
 ${PYSITELIB}/rest_framework/authtoken/apps.py
 ${PYSITELIB}/rest_framework/authtoken/apps.pyc
 ${PYSITELIB}/rest_framework/authtoken/apps.pyo
+${PYSITELIB}/rest_framework/authtoken/management/__init__.py
+${PYSITELIB}/rest_framework/authtoken/management/__init__.pyc
+${PYSITELIB}/rest_framework/authtoken/management/__init__.pyo
+${PYSITELIB}/rest_framework/authtoken/management/commands/__init__.py
+${PYSITELIB}/rest_framework/authtoken/management/commands/__init__.pyc
+${PYSITELIB}/rest_framework/authtoken/management/commands/__init__.pyo
+${PYSITELIB}/rest_framework/authtoken/management/commands/drf_create_token.py
+${PYSITELIB}/rest_framework/authtoken/management/commands/drf_create_token.pyc
+${PYSITELIB}/rest_framework/authtoken/management/commands/drf_create_token.pyo
 ${PYSITELIB}/rest_framework/authtoken/migrations/0001_initial.py
 ${PYSITELIB}/rest_framework/authtoken/migrations/0001_initial.pyc
 ${PYSITELIB}/rest_framework/authtoken/migrations/0001_initial.pyo
@@ -116,6 +125,8 @@ ${PYSITELIB}/rest_framework/locale/ja/LC_MESSAGES/django.mo
 ${PYSITELIB}/rest_framework/locale/ja/LC_MESSAGES/django.po
 ${PYSITELIB}/rest_framework/locale/ko_KR/LC_MESSAGES/django.mo
 ${PYSITELIB}/rest_framework/locale/ko_KR/LC_MESSAGES/django.po
+${PYSITELIB}/rest_framework/locale/lv/LC_MESSAGES/django.mo
+${PYSITELIB}/rest_framework/locale/lv/LC_MESSAGES/django.po
 ${PYSITELIB}/rest_framework/locale/mk/LC_MESSAGES/django.mo
 ${PYSITELIB}/rest_framework/locale/mk/LC_MESSAGES/django.po
 ${PYSITELIB}/rest_framework/locale/nb/LC_MESSAGES/django.mo
@@ -140,6 +151,8 @@ ${PYSITELIB}/rest_framework/locale/ru/LC_MESSAGES/django.mo
 ${PYSITELIB}/rest_framework/locale/ru/LC_MESSAGES/django.po
 ${PYSITELIB}/rest_framework/locale/sk/LC_MESSAGES/django.mo
 ${PYSITELIB}/rest_framework/locale/sk/LC_MESSAGES/django.po
+${PYSITELIB}/rest_framework/locale/sl/LC_MESSAGES/django.mo
+${PYSITELIB}/rest_framework/locale/sl/LC_MESSAGES/django.po
 ${PYSITELIB}/rest_framework/locale/sv/LC_MESSAGES/django.mo
 ${PYSITELIB}/rest_framework/locale/sv/LC_MESSAGES/django.po
 ${PYSITELIB}/rest_framework/locale/tr/LC_MESSAGES/django.mo
@@ -250,6 +263,7 @@ ${PYSITELIB}/rest_framework/static/rest_framework/js/prettify-min.js
 ${PYSITELIB}/rest_framework/status.py
 ${PYSITELIB}/rest_framework/status.pyc
 ${PYSITELIB}/rest_framework/status.pyo
+${PYSITELIB}/rest_framework/templates/.DS_Store
 ${PYSITELIB}/rest_framework/templates/rest_framework/admin.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/admin/detail.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/admin/dict_value.html
