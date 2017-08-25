@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/25 17:03:27 jperkin Exp $
 
 DISTNAME=	go-shuffle-0.0.20170808
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shogo82148/}
@@ -7,7 +7,7 @@ GITHUB_TAG=	59829097ff3b062427a69e2c461ef60523e37280
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/shogo82148/go-shuffle
-COMMENT=	Package shuffle provides primitives for shuffling slices and user-defined collections.
+COMMENT=	Primitives for shuffling slices and user-defined collections
 LICENSE=	mit
 
 GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}
