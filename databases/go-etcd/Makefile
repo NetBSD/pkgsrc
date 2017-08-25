@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/25 17:03:25 jperkin Exp $
 
 DISTNAME=	go-etcd-2.0.0
 PKGNAME=	${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_PROJECT= ${PKGBASE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/coreos/go-etcd
-COMMENT=	etcd client for Go
+COMMENT=	CoreOS etcd client for Go
 LICENSE=	apache-2.0
 
 GO_DIST_BASE=	${DISTNAME}
