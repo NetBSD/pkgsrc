@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/17 01:59:34 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:14 jperkin Exp $
 
 # Making up a version number, as this is a snapshot after the latest release
 DISTNAME=	crypt-0.0.2b
@@ -21,4 +21,3 @@ GO_SRCPATH=	github.com/xordataexchange/crypt
 .include "../../security/go-crypto/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
-
