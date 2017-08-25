@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.46 2017/08/07 19:08:51 adam Exp $
+$NetBSD: distinfo,v 1.47 2017/08/25 12:39:43 prlw1 Exp $
 
-SHA1 (gtk+-3.22.17.tar.xz) = d9af05445d9478f211d9304333886f391d873bc0
-RMD160 (gtk+-3.22.17.tar.xz) = c0662bb1322c320b6cd93f297467be4c99ee4e9d
-SHA512 (gtk+-3.22.17.tar.xz) = 9503baa73f6e199a1fe807bec739df2bb8bc2e586e9c316184d37e874191eb5938c962d1eb83e58841579b16cde8b85d80e058a3577c0033de12fc3fce066dfa
-Size (gtk+-3.22.17.tar.xz) = 18702864 bytes
+SHA1 (gtk+-3.22.19.tar.xz) = 4020889d3d637c22f18b9f3d7cd8d5d5c937c638
+RMD160 (gtk+-3.22.19.tar.xz) = 48d2db1eba1e8e3316da86e829b711196906ee8a
+SHA512 (gtk+-3.22.19.tar.xz) = c83198794433ee6eb29f8740d59bd7056cd36808b4bff1a99563ab1a1742e6635dab4f2a8be33317f74d3b336f0d1adc28dd91410da056b50a08c215f184dce2
+Size (gtk+-3.22.19.tar.xz) = 18841024 bytes
 SHA1 (patch-aj) = cbfab43f27352f7c6bc57a7c562c2d84c69da07a
 SHA1 (patch-config.h.in) = dc5f8741eed554f88c0b6834cadad95083e4dc8f
 SHA1 (patch-configure) = 1dca87c6a85ee927b85d4edc14b0985c5130c0d9
