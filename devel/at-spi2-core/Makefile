@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2016/11/25 12:49:00 prlw1 Exp $
+# $NetBSD: Makefile,v 1.23 2017/08/25 12:17:00 prlw1 Exp $
 
-DISTNAME=	at-spi2-core-2.22.0
+DISTNAME=	at-spi2-core-2.25.91
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/at-spi2-core/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -19,7 +19,9 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
 PKGCONFIG_OVERRIDE+=	atspi-2.pc.in
 
-BUILD_DEFS+=	VARBASE PKG_SYSCONFBASE
+CHECK_PORTABILITY_SKIP+=	config/test-driver
+
+BUILD_DEFS+=		VARBASE PKG_SYSCONFBASE
 
 EGDIR=			${PREFIX}/share/examples/at-spi2-core
 PKG_SYSCONFSUBDIR=	at-spi2
@@ -29,6 +31,12 @@ default_sessiondir=	${PKG_SYSCONFBASE}/xdg/autostart
 eg_default_sessiondir=	${EGDIR}/xdg/autostart
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
+
+SUBST_CLASSES+=		eg
+SUBST_SED.eg+=		-e 's,defaults,examples/${PKGBASE},g'
+SUBST_FILES.eg+=	bus/Makefile.in
+SUBST_STAGE.eg= 	pre-configure
+SUBST_MESSAGE.eg=	Fixing path to examples directory.
 
 CONF_FILES=	${eg_busconfigdir}/accessibility.conf \
 			${busconfigdir}/accessibility.conf
@@ -41,4 +49,5 @@ MAKE_DIRS+=	${default_sessiondir}
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
+.include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
