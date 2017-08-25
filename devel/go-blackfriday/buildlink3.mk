@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2017/08/17 01:17:16 gavan Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2017/08/25 16:49:12 jperkin Exp $
 
 BUILDLINK_TREE+=	go-blackfriday
 
@@ -15,4 +15,3 @@ BUILDLINK_PKGSRCDIR.go-blackfriday?=		../../devel/go-blackfriday
 .endif  # GO_BLACKFRIDAY_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-go-blackfriday
-
