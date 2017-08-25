@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3438 2017/08/25 12:45:22 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.3439 2017/08/25 12:48:15 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4841,3 +4841,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-at-spi2 to 2.24.0 [prlw1 2017-08-25]
 	Updated x11/gtk3 to 3.22.19 [prlw1 2017-08-25]
 	Updated devel/libwnck3 to 3.24.1 [prlw1 2017-08-25]
+	Updated devel/accerciser3 to 3.22.0 [prlw1 2017-08-25]
