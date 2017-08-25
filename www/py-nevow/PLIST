@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/07/22 11:35:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/08/25 06:24:03 adam Exp $
 bin/nevow-xmlgettext
 bin/nit
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -38,6 +38,7 @@ ${PYSITELIB}/formless/test/test_freeform.pyo
 ${PYSITELIB}/formless/webform.py
 ${PYSITELIB}/formless/webform.pyc
 ${PYSITELIB}/formless/webform.pyo
+${PYSITELIB}/nevow/Canvas.fla
 ${PYSITELIB}/nevow/Canvas.swf
 ${PYSITELIB}/nevow/__init__.py
 ${PYSITELIB}/nevow/__init__.pyc
@@ -60,9 +61,12 @@ ${PYSITELIB}/nevow/appserver.pyo
 ${PYSITELIB}/nevow/athena.py
 ${PYSITELIB}/nevow/athena.pyc
 ${PYSITELIB}/nevow/athena.pyo
+${PYSITELIB}/nevow/athena_private/connection-status-down.png
+${PYSITELIB}/nevow/athena_private/connection-status-down.svg
 ${PYSITELIB}/nevow/blocks.py
 ${PYSITELIB}/nevow/blocks.pyc
 ${PYSITELIB}/nevow/blocks.pyo
+${PYSITELIB}/nevow/canvas.as
 ${PYSITELIB}/nevow/canvas.py
 ${PYSITELIB}/nevow/canvas.pyc
 ${PYSITELIB}/nevow/canvas.pyo
@@ -182,6 +186,7 @@ ${PYSITELIB}/nevow/livetrial/testcase.pyo
 ${PYSITELIB}/nevow/loaders.py
 ${PYSITELIB}/nevow/loaders.pyc
 ${PYSITELIB}/nevow/loaders.pyo
+${PYSITELIB}/nevow/newsfragments/.gitignore
 ${PYSITELIB}/nevow/page.py
 ${PYSITELIB}/nevow/page.pyc
 ${PYSITELIB}/nevow/page.pyo
