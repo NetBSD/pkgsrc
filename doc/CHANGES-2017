@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3427 2017/08/25 05:29:24 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3428 2017/08/25 06:25:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4825,3 +4825,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/py-vdirsyncer to 0.16.2 [adam 2017-08-24]
 	Updated databases/sqlite3 to 3.20.1 [adam 2017-08-25]
 	Updated devel/m4 to 1.4.18 [adam 2017-08-25]
+	Updated www/py-djangorestframework to 3.6.4 [adam 2017-08-25]
+	Updated www/py-nevow to 0.14.3 [adam 2017-08-25]
