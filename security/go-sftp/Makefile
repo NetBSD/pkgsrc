@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/17 01:59:47 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:14 jperkin Exp $
 
 DISTNAME=	sftp-1.0.0
 PKGNAME=	go-${DISTNAME}
@@ -20,4 +20,3 @@ GO_SRCPATH=	github.com/pkg/sftp
 .include "../../security/go-crypto/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
-

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/17 01:37:59 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:14 jperkin Exp $
 
 DISTNAME=	go-shuffle-0.0.20170808
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shogo82148/}
@@ -15,4 +15,3 @@ GO_SRCPATH=	github.com/shogo82148/go-shuffle
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
-
