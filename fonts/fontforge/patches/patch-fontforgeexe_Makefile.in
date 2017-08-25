@@ -1,10 +1,10 @@
-$NetBSD: patch-fontforgeexe_Makefile.in,v 1.2 2017/08/24 10:45:00 jperkin Exp $
+$NetBSD: patch-fontforgeexe_Makefile.in,v 1.3 2017/08/25 09:20:38 adam Exp $
 
 Fix linking Objective-C code.
 
---- fontforgeexe/Makefile.in.orig	2016-10-04 12:30:31.000000000 +0000
+--- fontforgeexe/Makefile.in.orig	2017-07-31 08:30:47.000000000 +0000
 +++ fontforgeexe/Makefile.in
-@@ -380,7 +380,7 @@ am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+@@ -391,7 +391,7 @@ am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
  am__v_lt_0 = --silent
  am__v_lt_1 = 
  libfontforgeexe_la_LINK = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) \
@@ -13,12 +13,3 @@ Fix linking Objective-C code.
  	$(libfontforgeexe_la_OBJCFLAGS) $(OBJCFLAGS) \
  	$(libfontforgeexe_la_LDFLAGS) $(LDFLAGS) -o $@
  PROGRAMS = $(bin_PROGRAMS)
-@@ -2039,7 +2039,7 @@ fontforge-main.obj: main.c
- 	$(AM_V_OBJC)$(LTOBJCCOMPILE) -c -o $@ $<
- 
- libfontforgeexe_la-macobjective.lo: macobjective.m
--	$(AM_V_OBJC)$(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(OBJC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libfontforgeexe_la_CPPFLAGS) $(CPPFLAGS) $(libfontforgeexe_la_OBJCFLAGS) $(OBJCFLAGS) -c -o libfontforgeexe_la-macobjective.lo `test -f 'macobjective.m' || echo '$(srcdir)/'`macobjective.m
-+	$(AM_V_OBJC)$(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --tag=CC --mode=compile $(OBJC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libfontforgeexe_la_CPPFLAGS) $(CPPFLAGS) $(libfontforgeexe_la_OBJCFLAGS) $(OBJCFLAGS) -c -o libfontforgeexe_la-macobjective.lo `test -f 'macobjective.m' || echo '$(srcdir)/'`macobjective.m
- 
- mostlyclean-libtool:
- 	-rm -f *.lo
