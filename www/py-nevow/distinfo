@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/07/22 11:35:25 adam Exp $
+$NetBSD: distinfo,v 1.7 2017/08/25 06:24:03 adam Exp $
 
-SHA1 (Nevow-0.14.2.tar.gz) = 8bc1ac8f8cf6a38e8b57bf4b8b8c0d5530cc6065
-RMD160 (Nevow-0.14.2.tar.gz) = 5a63406494ec7826327bb2def846967ceeb1056a
-SHA512 (Nevow-0.14.2.tar.gz) = 6b21e4471fbbe76bf2a64975ed2a04413d059d9a50ca89247d48db9436a9a5e747aa373921310f4a53120466d8033377f85cbea3af14a50b1297d85391d6474a
-Size (Nevow-0.14.2.tar.gz) = 528266 bytes
+SHA1 (Nevow-0.14.3.tar.gz) = a2b9a065298376ac86f4577c3b0c8a08039834ee
+RMD160 (Nevow-0.14.3.tar.gz) = 23e5d3795d4a0d3ec8a1a346815844c36457c64b
+SHA512 (Nevow-0.14.3.tar.gz) = 5488be9c771dc9d9b348ee705f8cb1f47400b4789ea574f5ed68c54ecb33e6cc2928d45193137921727f560256e16716adff66ca5179d2a79eb395e0d61c2f05
+Size (Nevow-0.14.3.tar.gz) = 548818 bytes
