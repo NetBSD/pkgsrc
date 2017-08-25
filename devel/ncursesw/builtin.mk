@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.13 2016/12/20 15:06:52 joerg Exp $
+# $NetBSD: builtin.mk,v 1.14 2017/08/25 11:41:43 jperkin Exp $
 
 BUILTIN_PKG:=	ncursesw
 
@@ -139,7 +139,9 @@ BUILDLINK_TARGET+=	buildlink-ncursesw-fake-libs
       (!empty(USE_BUILTIN.ncursesw:M[yY][eE][sS]) && \
        !empty(IS_BUILTIN.ncursesw:M[yY][eE][sS]))
 USE_NCURSES=			yes
+.    if ${OPSYS} != "SunOS"
 BUILDLINK_CPPFLAGS.ncursesw+=	-D_XOPEN_SOURCE_EXTENDED=1
+.    endif
 .  endif
 BUILDLINK_TARGETS+=		buildlink-ncursesw-curses-h
 
