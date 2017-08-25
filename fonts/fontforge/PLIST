@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2017/05/04 19:23:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2017/08/25 09:20:38 adam Exp $
 bin/fontforge
 bin/fontimage
 bin/fontlint
@@ -48,6 +48,7 @@ include/fontforge/gwwiconv.h
 include/fontforge/intl.h
 include/fontforge/libffstamp.h
 include/fontforge/lookups.h
+include/fontforge/mem.h
 include/fontforge/mm.h
 include/fontforge/namehash.h
 include/fontforge/nonlineartrans.h
@@ -860,7 +861,9 @@ share/fontforge/pixmaps/OFL.txt
 share/fontforge/pixmaps/changeweight.png
 share/fontforge/pixmaps/charviewicon.xbm
 share/fontforge/pixmaps/check_off.png
+share/fontforge/pixmaps/check_off_disabled.png
 share/fontforge/pixmaps/check_on.png
+share/fontforge/pixmaps/check_on_disabled.png
 share/fontforge/pixmaps/chooseraudio.png
 share/fontforge/pixmaps/chooserback.png
 share/fontforge/pixmaps/chooserbookmark.png
@@ -1119,7 +1122,9 @@ share/fontforge/pixmaps/ptinfohvcurve.png
 share/fontforge/pixmaps/ptinfotangent.png
 share/fontforge/pixmaps/python.png
 share/fontforge/pixmaps/radio_off.png
+share/fontforge/pixmaps/radio_off_disabled.png
 share/fontforge/pixmaps/radio_on.png
+share/fontforge/pixmaps/radio_on_disabled.png
 share/fontforge/pixmaps/resources
 share/fontforge/pixmaps/rmoverlap.png
 share/fontforge/pixmaps/rotate180.png
@@ -1213,12 +1218,14 @@ share/fontforge/python/simple/expand-a.py
 share/fontforge/python/simple/load-font-and-show-name.py
 share/fontforge/python/test.sfd
 share/fontforge/python/webcollab.py
+share/icons/hicolor/128x128/apps/fontforge.png
 share/icons/hicolor/16x16/apps/fontforge.png
 share/icons/hicolor/22x22/apps/fontforge.png
 share/icons/hicolor/24x24/apps/fontforge.png
 share/icons/hicolor/256x256/apps/fontforge.png
 share/icons/hicolor/32x32/apps/fontforge.png
 share/icons/hicolor/48x48/apps/fontforge.png
+share/icons/hicolor/64x64/apps/fontforge.png
 share/icons/hicolor/scalable/apps/fontforge.svg
 share/locale/ca/LC_MESSAGES/FontForge.mo
 share/locale/de/LC_MESSAGES/FontForge.mo
