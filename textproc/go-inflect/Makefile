@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/25 17:03:28 jperkin Exp $
 
 DISTNAME=	inflect-0.0.20170411
 PKGNAME=	go-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_PROJECT= ${PKGBASE:S/^go-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/markbates/inflect
-COMMENT=	inflect library for go
+COMMENT=	Inflect library for go
 LICENSE=	mit
 
 GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}

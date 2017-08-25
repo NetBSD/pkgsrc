@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/25 17:03:27 jperkin Exp $
 
 DISTNAME=	sanitized_anchor_name-0.0.20151028
 PKGNAME=	go-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_PROJECT= ${PKGBASE:S/^go-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/shurcooL/sanitized_anchor_name
-COMMENT=	Package sanitized_anchor_name provides a func to create sanitized anchor names.
+COMMENT=	Create sanitized anchor names
 LICENSE=	mit
 
 GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}

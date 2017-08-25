@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/25 17:03:27 jperkin Exp $
 
 DISTNAME=	purell-0.1.0
 PKGNAME=	go-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_PROJECT= ${PKGBASE:S/^go-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/PuerkitoBio/purell
-COMMENT=	Purell is a tiny Go library to normalize URLs.
+COMMENT=	Purell is a tiny Go library to normalize URLs
 LICENSE=	modified-bsd
 
 GO_DIST_BASE=	${DISTNAME}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/25 16:49:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/25 17:03:25 jperkin Exp $
 
 DISTNAME=	go-buffruneio-0.2.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pelletier/}
@@ -7,7 +7,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pelletier/go-buffruneio
-COMMENT=	Buffruneio is a wrapper around bufio to provide buffered runes access with unlimited unreads.
+COMMENT=	Wrapper around bufio to provide buffered runes access
 LICENSE=	mit
 
 GO_DIST_BASE=	${DISTNAME}
