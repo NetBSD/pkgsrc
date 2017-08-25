@@ -1,1 +1,2 @@
-Package shuffle provides primitives for shuffling slices and user-defined collections.
+Package shuffle provides primitives for shuffling slices and user-defined
+collections.
