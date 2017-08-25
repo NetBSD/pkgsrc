@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/14 19:46:10 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/25 20:02:04 joerg Exp $
 
 DISTNAME=	pytest-forked-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,6 +11,7 @@ COMMENT=	Run tests in isolated forked subprocesses
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=		# none
 
