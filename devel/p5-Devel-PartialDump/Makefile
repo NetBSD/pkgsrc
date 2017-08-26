@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2017/06/05 14:22:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2017/08/26 05:24:26 mef Exp $
 
-DISTNAME=	Devel-PartialDump-0.18
+DISTNAME=	Devel-PartialDump-0.20
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 
@@ -15,7 +14,7 @@ DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 DEPENDS+=	p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-namespace-clean>=0.08:../../devel/p5-namespace-clean
 # For test target
-BUILD_DEPENDS+=	p5-Test-Warn>=0.21:../../devel/p5-Test-Warn
+BUILD_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
 BUILD_DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 BUILD_DEPENDS+= p5-Class-Tiny-[0-9]*:../../devel/p5-Class-Tiny
 
