@@ -1,10 +1,10 @@
-$NetBSD: patch-xpcom_reflect_xptcall_md_unix_moz.build,v 1.8 2017/08/26 10:36:01 he Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_md_unix_moz.build,v 1.9 2017/08/26 21:18:08 he Exp $
 
 CONFIG['OS_TEST'] is apparently CPU, not MACHINE, so use 'powerpc'
 instead of the longish list of powerpc ports.
 
---- work/firefox-55.0.2/xpcom/reflect/xptcall/md/unix/moz.build.orig	2017-06-15 20:52:36.000000000 +0000
-+++ work/firefox-55.0.2/xpcom/reflect/xptcall/md/unix/moz.build
+--- xpcom/reflect/xptcall/md/unix/moz.build.orig	2017-06-15 20:52:36.000000000 +0000
++++ xpcom/reflect/xptcall/md/unix/moz.build
 @@ -221,7 +221,7 @@ if CONFIG['OS_TEST'] in ('powerpc64', 'p
                'xptcstubs_ppc64_linux.cpp',
            ]
