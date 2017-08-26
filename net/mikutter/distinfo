@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.128 2017/07/08 03:31:58 tsutsui Exp $
+$NetBSD: distinfo,v 1.129 2017/08/26 11:57:49 tsutsui Exp $
 
-SHA1 (mikutter.3.5.9.tar.gz) = 8a8a9d6aa6ec123a996f8c2e8fb55ef858d7a537
-RMD160 (mikutter.3.5.9.tar.gz) = fe1a51708f8615c4edaf77ba61212c4b048b1611
-SHA512 (mikutter.3.5.9.tar.gz) = bfaf5d12089eca129905b6f9ae419b32c9be4ab66362178c691579b25af8ccb40cd7064b4d415b76f0f2d09c3039ffab5f556d2d9b3f46fb7023b00ceb625ac4
-Size (mikutter.3.5.9.tar.gz) = 2734179 bytes
-SHA1 (patch-Gemfile) = d299f496c1d97d657aa978a2d3be915386d97ca1
+SHA1 (mikutter.3.5.10.tar.gz) = 7b4556999d2238ef40e9d062c515b187bf5f55de
+RMD160 (mikutter.3.5.10.tar.gz) = 4b93c2937a06e8c1da763b5cd437a9b13c67b92e
+SHA512 (mikutter.3.5.10.tar.gz) = b122c9a5da0a191102dad8ce0784124b69ff0f8d1451e7f9c1aea6651e75c874150b0644aaef76a0ac216880247ba074af8955984f93fc2b3935336ce3050744
+Size (mikutter.3.5.10.tar.gz) = 2733062 bytes
+SHA1 (patch-Gemfile) = 5bd004f83aecd41ca80e08112b1f4212a320c0e4
 SHA1 (patch-core_boot_delayer.rb) = 3070cd4966c509a2bb722d4baabcc1a7e7026b30
 SHA1 (patch-core_lib_mikutwitter_api__shortcuts.rb) = 36c96889e65ff312aa4e854509edfd0e75c59dd0
 SHA1 (patch-core_mui_gtk__inneruserlist.rb) = 552338b5029ca6236993b2c75f892a2b9fd64d2d
@@ -12,4 +12,5 @@ SHA1 (patch-core_mui_gtk__userlist.rb) = fc7a2d850e7e9ab4d5716c2534f991afbda88a7
 SHA1 (patch-core_plugin_libnotify_rnotify.rb) = 0bb5630f4411d11ad188c722fb1d14e2d6748d17
 SHA1 (patch-core_plugin_photo__support_Gemfile) = 754b96024904e2e2f55c83e88fd3c763eecf723c
 SHA1 (patch-core_plugin_photo__support_photo__support.rb) = 182135fc0b46035c343c746ddba091d71cdc81f4
+SHA1 (patch-core_userconfig.rb) = b932ab9f0d69690e2323a5843b2c30dc34b08cb8
 SHA1 (patch-mikutter.rb) = b82a38101b94d9f00a998965b02f05ee3947fc73
