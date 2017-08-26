@@ -1,0 +1,24 @@
+$NetBSD: patch-rlm_perl_configure,v 1.1 2017/08/26 10:07:28 fhajny Exp $
+
+Portable test syntax
+
+--- src/modules/rlm_perl/configure.orig	2016-09-29 15:19:48.000000000 +0000
++++ src/modules/rlm_perl/configure
+@@ -3451,7 +3451,7 @@ rm -f core conftest.err conftest.$ac_obj
+ 
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $LINKS" >&5
+ $as_echo "$LINKS" >&6; }
+-		if test "x$LINKS" == "xno"; then
++		if test "x$LINKS" = "xno"; then
+ 			fail="$fail libperl.so"
+ 			targetname=
+ 		fi
+@@ -3482,7 +3482,7 @@ rm -f core conftest.err conftest.$ac_obj
+ 
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $LINKS" >&5
+ $as_echo "$LINKS" >&6; }
+-		if test "x$LINKS" == "xno"; then
++		if test "x$LINKS" = "xno"; then
+ 			fail="$fail libperl.so"
+ 			targetname=
+ 		fi
