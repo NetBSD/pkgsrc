@@ -1,4 +1,7 @@
-$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__ppc__netbsd.cpp,v 1.1 2014/10/15 13:43:32 ryoon Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__ppc__netbsd.cpp,v 1.2 2017/08/26 10:36:01 he Exp $
+
+Adapt to the use of NS_InvokeByIndex() instead of XPTC_InvokeByIndex().
+Also a conditional on __GXX_ABI_VERSION < 100.
 
 --- xpcom/reflect/xptcall/md/unix/xptcinvoke_ppc_netbsd.cpp.orig	2014-10-11 09:06:50.000000000 +0000
 +++ xpcom/reflect/xptcall/md/unix/xptcinvoke_ppc_netbsd.cpp
@@ -7,10 +10,10 @@ $NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__ppc__netbsd.cpp,v 1.1 2
  // Platform specific code to invoke XPCOM methods on native objects
  
 -// The purpose of XPTC_InvokeByIndex() is to map a platform
-+// The purpose of NS_InvokeByIndex_P() is to map a platform
++// The purpose of NS_InvokeByIndex() is to map a platform
  // indepenpent call to the platform ABI. To do that,
 -// XPTC_InvokeByIndex() has to determine the method to call via vtable
-+// NS_InvokeByIndex_P() has to determine the method to call via vtable
++// NS_InvokeByIndex() has to determine the method to call via vtable
  // access. The parameters for the method are read from the
  // nsXPTCVariant* and prepared for the native ABI.  For the Linux/PPC
  // ABI this means that the first 8 integral and floating point
@@ -43,5 +46,5 @@ $NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__ppc__netbsd.cpp,v 1.1 2
 -XPTC_PUBLIC_API(nsresult)
 -XPTC_InvokeByIndex(nsISupports* that, uint32_t methodIndex,
 +EXPORT_XPCOM_API(nsresult)
-+NS_InvokeByIndex_P(nsISupports* that, PRUint32 methodIndex,
++NS_InvokeByIndex(nsISupports* that, uint32_t methodIndex,
                     uint32_t paramCount, nsXPTCVariant* params);
