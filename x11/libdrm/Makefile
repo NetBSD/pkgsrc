@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2017/05/26 09:28:14 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2017/08/26 05:47:56 wiz Exp $
 
-DISTNAME=		libdrm-2.4.81
+DISTNAME=		libdrm-2.4.83
 CATEGORIES=		x11 graphics
 MASTER_SITES=		http://dri.freedesktop.org/libdrm/
 EXTRACT_SUFX=		.tar.bz2
@@ -13,7 +13,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-* FreeBSD-*-* OpenBSD-*-* \
 			Linux-*-* SunOS-*-*
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libdrm.pc.in
 GNU_CONFIGURE=		yes
