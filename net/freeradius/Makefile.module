@@ -1,0 +1,13 @@
+# $NetBSD: Makefile.module,v 1.1 2017/08/26 10:07:28 fhajny Exp $
+
+.include "../../net/freeradius/Makefile.common"
+
+DEPENDS+=		freeradius>=${PKGVERSION_NOREV}:../../net/freeradius
+
+DISTINFO_FILE=		${.CURDIR}/../../net/freeradius/distinfo
+PATCHDIR=		${.CURDIR}/../../net/freeradius/patches
+
+BUILDLINK_DEPMETHOD.gdbm?=	build
+BUILDLINK_DEPMETHOD.libpcap?=	build
+BUILDLINK_DEPMETHOD.openssl?=	build
+BUILDLINK_DEPMETHOD.talloc?=	build
