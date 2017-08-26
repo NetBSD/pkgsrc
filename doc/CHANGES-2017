@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3451 2017/08/26 18:36:31 sevan Exp $
+$NetBSD: CHANGES-2017,v 1.3452 2017/08/26 19:58:08 sevan Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4858,3 +4858,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/u-boot-orangepi-2 version 2017.07 [jun 2017-08-26]
 	Added sysutils/u-boot-beagleboneblack version 2017.07 [sevan 2017-08-26]
 	Added sysutils/u-boot-beaglebonewhite version 2017.07 [sevan 2017-08-26]
+	Added sysutils/u-boot-beagleboard version 2017.07 [sevan 2017-08-26]
