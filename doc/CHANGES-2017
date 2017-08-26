@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3442 2017/08/26 05:48:07 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3443 2017/08/26 05:50:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4849,3 +4849,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Devel-PartialDump to 0.20 [mef 2017-08-26]
 	Updated devel/p5-Devel-Size to 0.81 [mef 2017-08-26]
 	Updated x11/libdrm to 2.4.83 [wiz 2017-08-26]
+	Updated graphics/png to 1.6.32 [wiz 2017-08-26]
