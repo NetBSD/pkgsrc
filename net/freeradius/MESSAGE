@@ -1,17 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2006/08/10 10:55:52 adrianp Exp $
+$NetBSD: MESSAGE,v 1.2 2017/08/26 10:07:28 fhajny Exp $
 
-Note to users who have been running radiusd as root before:
+This package provides the FreeRADIUS server with certain core modules.
+Other modules such as rest, SQL backends, redis, etc are provided by
+other packages such as net/freeradius3-mysql.
 
-As radiusd now runs unprivileged by default (as ${RADIUS_USER}:${RADIUS_GROUP}),
-you'll have to adapt some permissions:
+Some authentication methods require SSL configuration in order to
+work. To bootstrap a self-signed SSL certificate for those
+authentication methods, one can run
 
-  ${CHOWN} -R ${RADIUS_USER}:${RADIUS_GROUP} ${VARBASE}/run/radiusd
-  ${CHOWN} -R ${RADIUS_USER}:${RADIUS_GROUP} ${PKG_SYSCONFDIR}
-  ${FIND} ${PKG_SYSCONFDIR} -type d | ${XARGS} ${CHMOD} 0750
-  ${FIND} ${PKG_SYSCONFDIR} -type f | ${XARGS} ${CHMOD} 0640
-
-In addition to this the base logging directory has now been moved from
-${VARBASE}/log to ${VARBASE}/log/radiusd.
-
+      ${BOOTSTRAP}
 ===========================================================================
