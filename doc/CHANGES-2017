@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3443 2017/08/26 05:50:11 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3444 2017/08/26 07:51:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4850,3 +4850,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Devel-Size to 0.81 [mef 2017-08-26]
 	Updated x11/libdrm to 2.4.83 [wiz 2017-08-26]
 	Updated graphics/png to 1.6.32 [wiz 2017-08-26]
+	Updated databases/p5-DBI to 1.637 [wen 2017-08-26]
