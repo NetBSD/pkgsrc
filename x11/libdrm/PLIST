@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2016/11/15 10:05:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2017/08/26 05:47:56 wiz Exp $
 ${PLIST.arm}include/freedreno/freedreno_drmif.h
 ${PLIST.arm}include/freedreno/freedreno_ringbuffer.h
 include/libdrm/amdgpu.h
@@ -58,3 +58,4 @@ ${PLIST.intel}lib/pkgconfig/libdrm_intel.pc
 lib/pkgconfig/libdrm_nouveau.pc
 lib/pkgconfig/libdrm_radeon.pc
 ${PLIST.arm}lib/pkgconfig/libdrm_vc4.pc
+share/libdrm/amdgpu.ids
