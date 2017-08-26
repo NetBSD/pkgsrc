@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.710 2017/08/23 11:59:30 jmcneill Exp $
+# $NetBSD: Makefile,v 1.711 2017/08/26 16:05:56 jun Exp $
 #
 
 COMMENT=	System utilities
@@ -585,6 +585,7 @@ SUBDIR+=	ts
 #SUBDIR+=	u-boot			# only contains Makefile fragments
 SUBDIR+=	u-boot-chip
 SUBDIR+=	u-boot-nanopi-neo
+SUBDIR+=	u-boot-orangepi-2
 SUBDIR+=	u-boot-orangepi-plus2e
 SUBDIR+=	u-boot-sinovoip-bpi-m3
 SUBDIR+=	upower
