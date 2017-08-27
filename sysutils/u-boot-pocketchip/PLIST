@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/27 19:24:55 jmcneill Exp $
+share/u-boot/pocketchip/u-boot-sunxi-with-spl.bin
