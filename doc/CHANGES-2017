@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3460 2017/08/27 15:48:44 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.3461 2017/08/27 15:52:31 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4872,3 +4872,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/libpeas to 1.20.0 [prlw1 2017-08-27]
 	Updated graphics/adwaita-icon-theme to 3.24.0 [prlw1 2017-08-27]
 	Updated sysutils/gsettings-desktop-schemas to 3.24.0 [prlw1 2017-08-27]
+	Updated textproc/gspell to 1.4.2 [prlw1 2017-08-27]
