@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3453 2017/08/27 12:17:13 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3454 2017/08/27 12:28:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4862,3 +4862,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/jemalloc to 5.0.1 [adam 2017-08-27]
 	Updated finance/py-braintree to 3.38.0 [adam 2017-08-27]
 	Updated devel/py-hypothesis to 3.22.0 [adam 2017-08-27]
+	Renamed geography/py-pycountry to geography/py-country [adam 2017-08-27]
+	Updated geography/py-country to 17.5.14 [adam 2017-08-27]
