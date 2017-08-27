@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3455 2017/08/27 12:49:10 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3456 2017/08/27 13:10:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4867,3 +4867,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/libgcrypt to 1.8.1 [adam 2017-08-27]
 	Updated www/py-httpbin to 0.6.0 [adam 2017-08-27]
 	Updated devel/re2c to 1.0.2 [adam 2017-08-27]
+	Updated www/py-hyperlink to 17.3.1 [adam 2017-08-27]
