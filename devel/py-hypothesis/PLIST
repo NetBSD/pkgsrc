@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/07/24 10:23:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/08/27 12:16:07 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -57,6 +57,9 @@ ${PYSITELIB}/hypothesis/extra/pytz.pyo
 ${PYSITELIB}/hypothesis/internal/__init__.py
 ${PYSITELIB}/hypothesis/internal/__init__.pyc
 ${PYSITELIB}/hypothesis/internal/__init__.pyo
+${PYSITELIB}/hypothesis/internal/branchcheck.py
+${PYSITELIB}/hypothesis/internal/branchcheck.pyc
+${PYSITELIB}/hypothesis/internal/branchcheck.pyo
 ${PYSITELIB}/hypothesis/internal/charmap.py
 ${PYSITELIB}/hypothesis/internal/charmap.pyc
 ${PYSITELIB}/hypothesis/internal/charmap.pyo
@@ -99,6 +102,9 @@ ${PYSITELIB}/hypothesis/internal/lazyformat.pyo
 ${PYSITELIB}/hypothesis/internal/reflection.py
 ${PYSITELIB}/hypothesis/internal/reflection.pyc
 ${PYSITELIB}/hypothesis/internal/reflection.pyo
+${PYSITELIB}/hypothesis/internal/renaming.py
+${PYSITELIB}/hypothesis/internal/renaming.pyc
+${PYSITELIB}/hypothesis/internal/renaming.pyo
 ${PYSITELIB}/hypothesis/reporting.py
 ${PYSITELIB}/hypothesis/reporting.pyc
 ${PYSITELIB}/hypothesis/reporting.pyo
@@ -129,9 +135,9 @@ ${PYSITELIB}/hypothesis/searchstrategy/numbers.pyo
 ${PYSITELIB}/hypothesis/searchstrategy/recursive.py
 ${PYSITELIB}/hypothesis/searchstrategy/recursive.pyc
 ${PYSITELIB}/hypothesis/searchstrategy/recursive.pyo
-${PYSITELIB}/hypothesis/searchstrategy/reprwrapper.py
-${PYSITELIB}/hypothesis/searchstrategy/reprwrapper.pyc
-${PYSITELIB}/hypothesis/searchstrategy/reprwrapper.pyo
+${PYSITELIB}/hypothesis/searchstrategy/regex.py
+${PYSITELIB}/hypothesis/searchstrategy/regex.pyc
+${PYSITELIB}/hypothesis/searchstrategy/regex.pyo
 ${PYSITELIB}/hypothesis/searchstrategy/shared.py
 ${PYSITELIB}/hypothesis/searchstrategy/shared.pyc
 ${PYSITELIB}/hypothesis/searchstrategy/shared.pyo
@@ -147,9 +153,6 @@ ${PYSITELIB}/hypothesis/searchstrategy/strings.pyo
 ${PYSITELIB}/hypothesis/searchstrategy/types.py
 ${PYSITELIB}/hypothesis/searchstrategy/types.pyc
 ${PYSITELIB}/hypothesis/searchstrategy/types.pyo
-${PYSITELIB}/hypothesis/searchstrategy/wrappers.py
-${PYSITELIB}/hypothesis/searchstrategy/wrappers.pyc
-${PYSITELIB}/hypothesis/searchstrategy/wrappers.pyo
 ${PYSITELIB}/hypothesis/stateful.py
 ${PYSITELIB}/hypothesis/stateful.pyc
 ${PYSITELIB}/hypothesis/stateful.pyo
