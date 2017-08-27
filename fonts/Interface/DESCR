@@ -1,0 +1,19 @@
+Interface started out in late 2016 as an experiment to build a
+perfectly pixel-fitting font at a specific small size. The
+idea was that by crafting a font in a particular way, with a
+particular coordinate system (Units Per EM), and for a particular
+target rasterization size (11), it would be possible to get the
+best of both sharpness and readability.
+
+However after a few months of using an early version of Interface,
+it dawned on everyone exposed to the test that this approach had
+some serious real-world problems. Most notably that it was really
+hard to read longer text. Because of the pixel-aligning nature of
+that approach, the font took an almost mono-spaced appearance,
+making it really easy to read numbers, punctuation and very short
+words, but eye-straining to read anything longer.
+
+The project was rebooted with a different approach, sticking with
+the specific UPM, but crafting glyphs and kerning in a way that
+made for more variation in the rhythm and smoother vertical and
+horizontal stems.
