@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/07/20 10:28:33 adam Exp $
+$NetBSD: distinfo,v 1.3 2017/08/27 13:09:34 adam Exp $
 
-SHA1 (hyperlink-17.3.0.tar.gz) = 14bc4c9540794d61f7df1690f849662ce893ee94
-RMD160 (hyperlink-17.3.0.tar.gz) = 783b37a33bf3cc20595c80aade661107a9cbc2ed
-SHA512 (hyperlink-17.3.0.tar.gz) = 591918443d6f6efe0910d6f967a5fcc7b294856b10b91bf06f8a94bc821ce256ebe14e69bf7b782d071a3ded519ee8bd8e30edaa629e18f1299a387eb64a23b0
-Size (hyperlink-17.3.0.tar.gz) = 89710 bytes
+SHA1 (hyperlink-17.3.1.tar.gz) = adda500bc6a7c822309e51966f7d2d2e04115812
+RMD160 (hyperlink-17.3.1.tar.gz) = b77318cebf0c7dcade0c50536b1e54836a2656b6
+SHA512 (hyperlink-17.3.1.tar.gz) = c0c9d99a530c938b1d1e97b8344c5a0fb18f894c8b0b294cc8ae6aa6a550a5a0272cc6be7a913d371f3ce3dd8695b7ed239999f3ae5e8ce97e3693625ae761bb
+Size (hyperlink-17.3.1.tar.gz) = 91359 bytes
