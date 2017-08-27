@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17635 2017/08/26 10:07:46 fhajny Exp $
+$NetBSD: TODO,v 1.17636 2017/08/27 16:08:30 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -621,7 +621,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o evas-software-x11-1.7.10
 	o evas-tiff-1.7.10
 	o evas-xpm-1.7.10
-	o evince-3.24.0
 	o evolution-3.18.5.2
 	o evolution-couchdb-0.4.5
 	o evolution-data-server-3.16.2
