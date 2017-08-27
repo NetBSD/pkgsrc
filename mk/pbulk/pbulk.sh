@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: pbulk.sh,v 1.5 2017/08/11 19:20:20 sevan Exp $
+# $NetBSD: pbulk.sh,v 1.6 2017/08/27 18:18:57 sevan Exp $
 set -e
 
 usage="usage: ${0##*/} [-lun] [-c mk.conf.fragment] [-d nodes]"
