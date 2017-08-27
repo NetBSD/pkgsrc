@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/07 07:43:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/08/27 12:14:41 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -38,6 +38,9 @@ ${PYSITELIB}/braintree/apple_pay_card.pyo
 ${PYSITELIB}/braintree/attribute_getter.py
 ${PYSITELIB}/braintree/attribute_getter.pyc
 ${PYSITELIB}/braintree/attribute_getter.pyo
+${PYSITELIB}/braintree/authorization_adjustment.py
+${PYSITELIB}/braintree/authorization_adjustment.pyc
+${PYSITELIB}/braintree/authorization_adjustment.pyo
 ${PYSITELIB}/braintree/braintree_gateway.py
 ${PYSITELIB}/braintree/braintree_gateway.pyc
 ${PYSITELIB}/braintree/braintree_gateway.pyo
@@ -104,6 +107,27 @@ ${PYSITELIB}/braintree/discount_gateway.pyo
 ${PYSITELIB}/braintree/dispute.py
 ${PYSITELIB}/braintree/dispute.pyc
 ${PYSITELIB}/braintree/dispute.pyo
+${PYSITELIB}/braintree/dispute_details/__init__.py
+${PYSITELIB}/braintree/dispute_details/__init__.pyc
+${PYSITELIB}/braintree/dispute_details/__init__.pyo
+${PYSITELIB}/braintree/dispute_details/evidence.py
+${PYSITELIB}/braintree/dispute_details/evidence.pyc
+${PYSITELIB}/braintree/dispute_details/evidence.pyo
+${PYSITELIB}/braintree/dispute_details/status_history.py
+${PYSITELIB}/braintree/dispute_details/status_history.pyc
+${PYSITELIB}/braintree/dispute_details/status_history.pyo
+${PYSITELIB}/braintree/dispute_gateway.py
+${PYSITELIB}/braintree/dispute_gateway.pyc
+${PYSITELIB}/braintree/dispute_gateway.pyo
+${PYSITELIB}/braintree/dispute_search.py
+${PYSITELIB}/braintree/dispute_search.pyc
+${PYSITELIB}/braintree/dispute_search.pyo
+${PYSITELIB}/braintree/document_upload.py
+${PYSITELIB}/braintree/document_upload.pyc
+${PYSITELIB}/braintree/document_upload.pyo
+${PYSITELIB}/braintree/document_upload_gateway.py
+${PYSITELIB}/braintree/document_upload_gateway.pyc
+${PYSITELIB}/braintree/document_upload_gateway.pyo
 ${PYSITELIB}/braintree/environment.py
 ${PYSITELIB}/braintree/environment.pyc
 ${PYSITELIB}/braintree/environment.pyo
@@ -176,6 +200,9 @@ ${PYSITELIB}/braintree/exceptions/unexpected_error.pyo
 ${PYSITELIB}/braintree/exceptions/upgrade_required_error.py
 ${PYSITELIB}/braintree/exceptions/upgrade_required_error.pyc
 ${PYSITELIB}/braintree/exceptions/upgrade_required_error.pyo
+${PYSITELIB}/braintree/facilitated_details.py
+${PYSITELIB}/braintree/facilitated_details.pyc
+${PYSITELIB}/braintree/facilitated_details.pyo
 ${PYSITELIB}/braintree/facilitator_details.py
 ${PYSITELIB}/braintree/facilitator_details.pyc
 ${PYSITELIB}/braintree/facilitator_details.pyo
