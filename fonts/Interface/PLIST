@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/27 19:24:59 wiz Exp $
+share/fonts/X11/TTF/Interface-Bold.otf
+share/fonts/X11/TTF/Interface-BoldItalic.otf
+share/fonts/X11/TTF/Interface-Medium.otf
+share/fonts/X11/TTF/Interface-MediumItalic.otf
+share/fonts/X11/TTF/Interface-Regular.otf
+share/fonts/X11/TTF/Interface-RegularItalic.otf
