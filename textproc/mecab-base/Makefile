@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/10/25 20:54:24 marino Exp $
+# $NetBSD: Makefile,v 1.11 2017/08/28 19:04:42 fhajny Exp $
 #
 
 .include "../../textproc/mecab/Makefile.common"
@@ -55,4 +55,5 @@ CXXFLAGS+=	-march=i486
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
