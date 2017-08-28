@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.805 2017/08/08 14:19:17 nros Exp $
+# $NetBSD: Makefile,v 1.806 2017/08/28 11:30:53 bouyer Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -589,6 +589,7 @@ SUBDIR+=	xdialog
 SUBDIR+=	xditview
 SUBDIR+=	xdm
 SUBDIR+=	xdm3d
+SUBDIR+=	xdotool
 SUBDIR+=	xdpyinfo
 SUBDIR+=	xdriinfo
 SUBDIR+=	xearth
