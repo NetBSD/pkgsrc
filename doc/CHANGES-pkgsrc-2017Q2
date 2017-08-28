@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.10 2017/08/15 19:07:44 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.11 2017/08/28 19:04:05 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q2 branch:
 
@@ -106,4 +106,10 @@ lang/php71: security fix
 
 Pullup ticket #5533 - requested by maya
 devel/py-mercurial: security fix
+
+Pullup ticket #5536 - requested by he
+net/powerdns: build fix
+
+Pullup ticket #5535 - requested by he
+math/py-scipy: powerpc build fix
 
