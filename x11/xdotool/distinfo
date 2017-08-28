@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2017/08/28 11:30:53 bouyer Exp $
+
+SHA1 (xdotool-2.20110530.1.tar.gz) = bf8372b2e76e8ee3884763cee6e8b3f66bf29aa6
+RMD160 (xdotool-2.20110530.1.tar.gz) = 1aebcd835a4741a9e77aa489a3bdce195c582204
+Size (xdotool-2.20110530.1.tar.gz) = 107204 bytes
