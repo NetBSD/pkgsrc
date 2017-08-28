@@ -1,9 +1,9 @@
-$NetBSD: patch-gcc_config_alpha_linux.h,v 1.1 2017/08/25 16:33:54 he Exp $
+$NetBSD: patch-gcc_config_alpha_linux.h,v 1.2 2017/08/28 18:26:38 maya Exp $
 
 Move Linux-specific spec definitions to the Linux file.
 
---- work/gcc-5.4.0/gcc/config/alpha/linux.h.orig	2015-01-05 12:33:28.000000000 +0000
-+++ work/gcc-5.4.0/gcc/config/alpha/linux.h
+--- gcc/config/alpha/linux.h.orig	2015-01-05 12:33:28.000000000 +0000
++++ gcc/config/alpha/linux.h
 @@ -74,6 +74,32 @@ along with GCC; see the file COPYING3.  
  
  #define TARGET_POSIX_IO
