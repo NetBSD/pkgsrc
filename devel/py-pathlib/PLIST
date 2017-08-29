@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2017/08/29 06:55:55 wiz Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pathlib.py
+${PYSITELIB}/pathlib.pyc
+${PYSITELIB}/pathlib.pyo
