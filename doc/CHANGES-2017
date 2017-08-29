@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3481 2017/08/29 13:04:33 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3482 2017/08/29 13:36:04 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4893,3 +4893,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed security/gnupg21 successor security/gnupg2 [wiz 2017-08-29]
 	Updated textproc/groonga to 7.0.5 [fhajny 2017-08-29]
 	Removed security/dirmngr successor security/gnupg2 [wiz 2017-08-29]
+	Updated textproc/groonga to 7.0.6 [fhajny 2017-08-29]
