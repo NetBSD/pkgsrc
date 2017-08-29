@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2017/08/29 12:18:11 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2017/08/29 12:31:35 wiz Exp $
 
 DISTNAME=	gpgme-1.9.0
 CATEGORIES=	security
@@ -29,6 +29,7 @@ LIBS.SunOS+=		-lnsl -lsocket
 # 18 errors as of 1.9.0
 # https://dev.gnupg.org/T3056
 TEST_TARGET=		check
+#TEST_ENV+=		GPGME_DEBUG=9
 
 .include "options.mk"
 
