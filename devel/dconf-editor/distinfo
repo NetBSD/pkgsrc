@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/04/20 22:08:52 prlw1 Exp $
+$NetBSD: distinfo,v 1.2 2017/08/29 10:02:14 prlw1 Exp $
 
-SHA1 (dconf-editor-3.20.1.tar.xz) = 3873087902b708975a50bbbdb18459199d679c80
-RMD160 (dconf-editor-3.20.1.tar.xz) = 8ddc76f4560a1da5793679f7de45db5d09a165cb
-SHA512 (dconf-editor-3.20.1.tar.xz) = 2ef85cf32614373b9ecc098af1c12f66488e6e8abe6b51ce74b688d80acce216e75cf719c1ecc51773e01ea089aaecf73d9fc6abeb375e159b06ea15762cc0b7
-Size (dconf-editor-3.20.1.tar.xz) = 336820 bytes
+SHA1 (dconf-editor-3.22.3.tar.xz) = 50540d0605dc4f81ae64d901221bb5ea65494e3f
+RMD160 (dconf-editor-3.22.3.tar.xz) = 271990088515c863223cd33df16f8a6183761935
+SHA512 (dconf-editor-3.22.3.tar.xz) = 0e1ddce6e970ea23329c6233ed87e6d4541b6f1e991e3159bda44c43b8092a4d983acbca18bbedb88304ac1afb541a15073a261dab9ffe94c94cfd06e3e412dc
+Size (dconf-editor-3.22.3.tar.xz) = 394760 bytes
