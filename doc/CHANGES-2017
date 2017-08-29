@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3483 2017/08/29 13:38:36 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3484 2017/08/29 23:09:03 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4895,3 +4895,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed security/dirmngr successor security/gnupg2 [wiz 2017-08-29]
 	Updated textproc/groonga to 7.0.6 [fhajny 2017-08-29]
 	Added databases/postgresql-pgroonga version 1.2.3 [fhajny 2017-08-29]
+	Updated net/glib-networking to 2.50.0 [prlw1 2017-08-29]
