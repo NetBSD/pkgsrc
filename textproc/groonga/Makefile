@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2017/07/11 19:41:20 joerg Exp $
+# $NetBSD: Makefile,v 1.62 2017/08/29 12:54:47 fhajny Exp $
 #
 
-DISTNAME=	groonga-6.0.8
+DISTNAME=	groonga-7.0.5
 CATEGORIES=	textproc
 MASTER_SITES=	http://packages.groonga.org/source/groonga/
 
@@ -31,17 +31,19 @@ PKG_SYSCONFSUBDIR=	${PKGBASE}
 
 BUILD_DEFS+=		VARBASE
 
+EXAMPLE_CONF_DIR=	${PREFIX}/share/examples/groonga
+
 INSTALL_DIRS=		${BUILD_DIRS} vendor/onigmo-source
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
-CONF_FILES+=		share/examples/${PKGBASE}/groonga.conf \
+CONF_FILES+=		${EXAMPLE_CONF_DIR}/groonga.conf \
 			${PKG_SYSCONFDIR}/groonga.conf
-CONF_FILES+=		share/examples/groonga/synonyms.tsv \
+CONF_FILES+=		${EXAMPLE_CONF_DIR}/synonyms.tsv \
 			${PKG_SYSCONFDIR}/synonyms.tsv
 
 OWN_DIRS+=		${VARBASE}/log/${PKGBASE}
 
-CHECK_WRKREF_SKIP+=	bin/groonga
+CHECK_WRKREF_SKIP+=		bin/groonga
 CHECK_INTERPRETER_SKIP+=	share/groonga/examples/*
 
 REPLACE_RUBY+=	data/munin/groonga_cpu_time_
