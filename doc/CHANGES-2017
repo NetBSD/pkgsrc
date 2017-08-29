@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3469 2017/08/29 06:56:17 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3470 2017/08/29 07:32:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4881,3 +4881,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added x11/xdotool version 2.20110530.1 [bouyer 2017-08-28]
 	Updated net/p5-SOAP-Lite to 1.22 [wen 2017-08-29]
 	Added devel/py-pathlib version 1.0.1 [wiz 2017-08-29]
+	Updated textproc/p5-Text-BibTeX to 0.83 [wen 2017-08-29]
