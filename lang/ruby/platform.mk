@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.3 2017/04/23 14:14:04 taca Exp $
+# $NetBSD: platform.mk,v 1.4 2017/08/29 14:47:35 jmcneill Exp $
 #
 
 #
@@ -82,6 +82,15 @@ CONFIGURE_ARGS+=	--disable-dtrace
 # built with dtrace enabled yet, so this problem is on 7.99.* only.)
 #
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
+CONFIGURE_ARGS+=	--disable-dtrace
+.endif
+
+#
+# NetBSD
+#
+# dtrace support can cause problems with miniruby on arm.
+#
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
 CONFIGURE_ARGS+=	--disable-dtrace
 .endif
 
