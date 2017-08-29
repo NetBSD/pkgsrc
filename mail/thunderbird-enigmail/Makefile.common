@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2017/08/15 18:57:54 wiz Exp $
+# $NetBSD: Makefile.common,v 1.16 2017/08/29 12:11:36 wiz Exp $
 # used by mail/thunderbird-enigmail/Makefile
 # used by mail/seamonkey-enigmail/Makefile
 
@@ -15,8 +15,7 @@ USE_TOOLS+=	gmake perl sed unzip zip
 # https://aur.archlinux.org/packages/th/thunderbird-enigmail/PKGBUILD
 MAKE_JOBS_SAFE=	no
 
-.include "../../mail/thunderbird-enigmail/options.mk"
-
+DEPENDS+=		gnupg2>=2.0.7:../../security/gnupg2
 DEPENDS+=		pinentry-gtk2-[0-9]*:../../security/pinentry-gtk2
 
 DISTINFO_FILE=	${.CURDIR}/../../mail/thunderbird-enigmail/distinfo
