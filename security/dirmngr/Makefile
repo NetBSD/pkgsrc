@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2016/03/05 11:29:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.57 2017/08/29 11:54:00 wiz Exp $
 
 DISTNAME=	dirmngr-1.1.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/dirmngr/
 EXTRACT_SUFX=	.tar.bz2
@@ -56,7 +56,7 @@ OWN_DIRS_PERMS+=	${PREFIX}/libdata/dirmngr/extra-certs ${DIRMNGR_PERMS}
 INSTALLATION_DIRS=	sbin
 
 post-build:
-	${SETENV} ${MAKE_ENV} ${CC} ${CFLAGS} -DDIRMNGR_USER='"${DIRMNGR_USER}"' -DDIRMNGR_PATH='"${PREFIX}/bin/dirmngr"' -o ${WRKDIR}/runDirmngr ${FILESDIR}/runDirmngr.c
+	${SETENV} ${MAKE_ENV} ${CC} ${CFLAGS} ${LDFLAGS} -DDIRMNGR_USER='"${DIRMNGR_USER}"' -DDIRMNGR_PATH='"${PREFIX}/bin/dirmngr"' -o ${WRKDIR}/runDirmngr ${FILESDIR}/runDirmngr.c
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/runDirmngr ${DESTDIR}${PREFIX}/sbin
