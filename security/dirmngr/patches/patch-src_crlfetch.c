@@ -1,4 +1,6 @@
-$NetBSD: patch-src_crlfetch.c,v 1.1 2015/12/29 23:18:50 bsiegert Exp $
+$NetBSD: patch-src_crlfetch.c,v 1.2 2017/08/29 11:56:04 wiz Exp $
+
+Function is now void, do not use it as argument to return.
 
 --- src/crlfetch.c.orig	2009-08-07 14:09:47.000000000 +0000
 +++ src/crlfetch.c
