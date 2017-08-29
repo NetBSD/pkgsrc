@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/29 13:38:23 fhajny Exp $
+
+SHA1 (pgroonga-1.2.3.tar.gz) = 433ec0a22defafe42c2cd36c1bba69631a8f9e4f
+RMD160 (pgroonga-1.2.3.tar.gz) = e05b8105fbbbc85d620c0d3432209786a469582e
+SHA512 (pgroonga-1.2.3.tar.gz) = 5e8e2bc9e39c34f6cbc7f14d5ff7f1e5fc1c36430b0bcef8bbc6b547c9a86b511526c3e239c91915bfc703d3a0c9a54ab27fc1c96e9207dbd5a1cb381ec2c646
+Size (pgroonga-1.2.3.tar.gz) = 189791 bytes
