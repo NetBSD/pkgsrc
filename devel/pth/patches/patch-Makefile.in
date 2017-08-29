@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile.in,v 1.1 2017/08/29 11:40:13 wiz Exp $
+
+Honor LDFLAGS.
+
+--- Makefile.in.orig	2006-06-08 17:54:01.000000000 +0000
++++ Makefile.in
+@@ -168,10 +168,10 @@ pth_p.h: $(S)pth_p.h.in
+ 
+ #   build the static and possibly shared libraries
+ libpth.la: $(LOBJS)
+-	$(LIBTOOL) --mode=link --quiet $(CC) -o libpth.la $(LOBJS) \
++	$(LIBTOOL) --mode=link --quiet $(CC) -o libpth.la $(LDFLAGS) $(LOBJS) \
+ 	-rpath $(libdir) -version-info `$(SHTOOL) version -lc -dlibtool $(_VERSION_FILE)`
+ libpthread.la: pthread.lo $(LOBJS)
+-	$(LIBTOOL) --mode=link --quiet $(CC) -o libpthread.la pthread.lo $(LOBJS) \
++	$(LIBTOOL) --mode=link --quiet $(CC) -o libpthread.la pthread.lo $(LDFLAGS) $(LOBJS) \
+ 	-rpath $(libdir) -version-info `$(SHTOOL) version -lc -dlibtool $(_VERSION_FILE)`
+ 
+ #   build the manual pages
