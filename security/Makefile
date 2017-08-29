@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.623 2017/08/23 13:46:44 he Exp $
+# $NetBSD: Makefile,v 1.624 2017/08/29 12:12:54 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -96,7 +96,6 @@ SUBDIR+=	gnu-pw-mgr
 SUBDIR+=	gnupg
 SUBDIR+=	gnupg-pkcs11-scd
 SUBDIR+=	gnupg2
-SUBDIR+=	gnupg21
 SUBDIR+=	gnutls
 SUBDIR+=	go-crypt
 SUBDIR+=	go-crypto
