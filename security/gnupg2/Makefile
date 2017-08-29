@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2017/08/29 12:07:04 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2017/08/29 12:24:57 wiz Exp $
 
 DISTNAME=	gnupg-2.2.0
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
@@ -12,8 +12,6 @@ COMMENT=	GnuPG with OpenPGP and S/MIME capabilities
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	pinentry-[0-9]*:../../security/pinentry
-
-CONFLICTS=	dirmngr-[0-9]*
 
 BUILD_DEFS+=		VARBASE
 USE_PKGLOCALEDIR=	yes

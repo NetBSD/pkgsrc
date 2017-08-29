@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2017/08/29 11:54:00 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2017/08/29 12:24:57 wiz Exp $
 
 DISTNAME=	dirmngr-1.1.1
 PKGREVISION=	3
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnupg.org/aegypten2/
 COMMENT=	X509 certificate and CRL downloader
 LICENSE=	gnu-gpl-v3
-
-CONFLICTS=	gnupg2-2.1.[0-9]*
 
 DIRMNGR_USER?=		dirmngr
 DIRMNGR_GROUP?=		dirmngr
