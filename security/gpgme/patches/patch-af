@@ -1,18 +1,11 @@
-$NetBSD: patch-af,v 1.6 2009/11/15 18:41:55 drochner Exp $
+$NetBSD: patch-af,v 1.7 2017/08/29 11:26:20 wiz Exp $
 
---- src/get-env.c.orig	2004-12-07 21:47:40.000000000 +0100
+Add missing getenv_r() support.
+https://dev.gnupg.org/T3376
+
+--- src/get-env.c.orig	2016-11-16 12:22:41.000000000 +0000
 +++ src/get-env.c
-@@ -22,6 +22,9 @@
- #include <config.h>
- #endif
- #include <stdlib.h>
-+#if HAVE_RFUNCS_H
-+#include <rfuncs.h>
-+#endif
- #include <errno.h>
- #include <string.h>
- 
-@@ -53,7 +56,25 @@ _gpgme_getenv (const char *name, char **
+@@ -53,7 +53,25 @@ _gpgme_getenv (const char *name, char **
  
  #else
  
@@ -34,9 +27,9 @@ $NetBSD: patch-af,v 1.6 2009/11/15 18:41:55 drochner Exp $
 +        errno = ENOMEM;
 +    }
 +  if (!*value && errno != ENOENT)
-+      return gpg_error_from_errno (errno);
++      return gpg_error_from_syserror ();
 +  else
-+      return (0);
++      return 0;
 +}
  
  #endif
