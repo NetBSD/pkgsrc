@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.10 2017/08/29 12:07:04 wiz Exp $
+# $NetBSD: options.mk,v 1.11 2017/08/29 12:11:35 wiz Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg21
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg2
 PKG_SUPPORTED_OPTIONS=	ldap libusb-1
 PKG_SUGGESTED_OPTIONS=	libusb-1
 
