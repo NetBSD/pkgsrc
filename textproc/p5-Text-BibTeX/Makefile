@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2017/08/14 19:10:04 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2017/08/29 07:25:23 wen Exp $
 
-DISTNAME=	Text-BibTeX-0.81
+DISTNAME=	Text-BibTeX-0.83
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 BUILD_DEPENDS+=		p5-Capture-Tiny>=0.06:../../devel/p5-Capture-Tiny
 BUILD_DEPENDS+=		p5-Config-AutoConf>=0.14:../../devel/p5-Config-AutoConf
 BUILD_DEPENDS+=		p5-ExtUtils-LibBuilder>=0.01:../../devel/p5-ExtUtils-LibBuilder
-#BUILD_DEPENDS+=		{perl>=5.14.1,p5-ExtUtils-CBuilder>=0.27}:../../devel/p5-ExtUtils-CBuilder
+#BUILD_DEPENDS+=	{perl>=5.14.1,p5-ExtUtils-CBuilder>=0.27}:../../devel/p5-ExtUtils-CBuilder
 
 USE_LANGUAGES+=		c
 PERL5_PACKLIST=		auto/Text/BibTeX/.packlist
