@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2017/08/29 11:26:19 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2017/08/29 12:18:11 wiz Exp $
 
 DISTNAME=	gpgme-1.9.0
 CATEGORIES=	security
@@ -38,4 +38,3 @@ BUILDLINK_API_DEPENDS.libassuan+=	libassuan>=2.0.2
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.17
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-#_UNWRAP_FILES=
