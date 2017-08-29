@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.624 2017/08/29 12:12:54 wiz Exp $
+# $NetBSD: Makefile,v 1.625 2017/08/29 13:04:33 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -66,7 +66,6 @@ SUBDIR+=	dehydrated
 SUBDIR+=	destroy
 SUBDIR+=	dhbitty
 SUBDIR+=	dirb
-SUBDIR+=	dirmngr
 SUBDIR+=	dnssec-tools
 SUBDIR+=	dropbear
 SUBDIR+=	dsniff
