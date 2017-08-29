@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17637 2017/08/27 21:12:56 wiz Exp $
+$NetBSD: TODO,v 1.17638 2017/08/29 08:45:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1640,6 +1640,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o yacas-1.6.1
 	o yafc-1.1
 	o yaws-2.0.2
+	o yed-3.17.1
 	o yodl-2.14.3
 	o yorick-2.1.05
 	o yudit-2.9.6
