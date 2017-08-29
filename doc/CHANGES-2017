@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3484 2017/08/29 23:09:03 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.3485 2017/08/29 23:34:33 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4896,3 +4896,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/groonga to 7.0.6 [fhajny 2017-08-29]
 	Added databases/postgresql-pgroonga version 1.2.3 [fhajny 2017-08-29]
 	Updated net/glib-networking to 2.50.0 [prlw1 2017-08-29]
+	Updated math/gnome-calculator to 3.24.0 [prlw1 2017-08-29]
