@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2016/02/25 16:20:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.42 2017/08/29 13:06:19 wiz Exp $
 
 DISTNAME=	mDNSResponder-258.14
 PKGREVISION=	2
@@ -37,11 +37,7 @@ SBINARY=	mdnsd dnsextd
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-3.99.[1-7]-*) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-3.[0-9]-*) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-3.[0-9][._]*) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-[0-2]*) || \
-    !empty(MACHINE_PLATFORM:MSunOS-5.[0-9]-*)
+.if !empty(MACHINE_PLATFORM:MSunOS-5.[0-9]-*)
 .include "../../devel/librfuncs/buildlink3.mk"
 
 MAKE_ENV+=	EXTRA_LIBS=-Wl,-R${BUILDLINK_PREFIX.librfuncs}/lib\ ${BUILDLINK_LDFLAGS.librfuncs:Q}
