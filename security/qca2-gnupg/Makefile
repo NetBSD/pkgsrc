@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/03/05 11:29:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2017/08/29 12:23:25 wiz Exp $
 
 DISTNAME=	qca-gnupg-2.0.0-beta3
 PKGNAME=	qca2-gnupg-${DISTNAME:S/-beta/beta/:C/.*-//}
@@ -12,7 +12,7 @@ HOMEPAGE=	http://delta.affinix.com/qca/
 COMMENT=	Cross-platform crypto API for QT - GnuPG plugin
 LICENSE=	gnu-lgpl-v2.1
 
-DEPENDS+=	gnupg2>=2.0<2.1:../../security/gnupg2
+DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
