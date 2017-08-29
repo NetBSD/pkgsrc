@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3472 2017/08/29 08:32:43 wen Exp $
+$NetBSD: CHANGES-2017,v 1.3473 2017/08/29 10:03:47 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4884,3 +4884,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-Text-BibTeX to 0.83 [wen 2017-08-29]
 	Updated www/p5-HTTP-Headers-Fast to 0.21 [wen 2017-08-29]
 	Updated www/p5-HTTP-MultiPartParser to 0.02 [wen 2017-08-29]
+	Updated devel/dconf-editor to 3.22.3 [prlw1 2017-08-29]
