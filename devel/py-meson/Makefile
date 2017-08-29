@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/25 18:53:53 adam Exp $
+# $NetBSD: Makefile,v 1.3 2017/08/29 07:04:04 wiz Exp $
 
 DISTNAME=	meson-0.42.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Open source build system meant to be fast and user friendly
 LICENSE=	apache-2.0
 
 DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # c++ for tests
 USE_LANGUAGES=	c c++
