@@ -1,4 +1,7 @@
-$NetBSD: patch-man_CMakeLists.txt,v 1.1 2017/08/19 00:21:43 jlam Exp $
+$NetBSD: patch-man_CMakeLists.txt,v 1.2 2017/08/29 09:53:56 wiz Exp $
+
+Use GNUInstallDirs for easier packaging.
+https://github.com/Sude-/lgogdownloader/pull/121
 
 --- man/CMakeLists.txt.orig	2017-03-07 05:33:24.000000000 +0000
 +++ man/CMakeLists.txt
