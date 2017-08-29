@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/11/26 10:26:54 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/08/29 23:38:01 prlw1 Exp $
 bin/hitori
 share/appdata/org.gnome.Hitori.appdata.xml
 share/applications/org.gnome.Hitori.desktop
@@ -102,6 +102,7 @@ share/icons/hicolor/symbolic/apps/org.gnome.Hitori-symbolic.svg
 share/locale/an/LC_MESSAGES/hitori.mo
 share/locale/ar/LC_MESSAGES/hitori.mo
 share/locale/as/LC_MESSAGES/hitori.mo
+share/locale/be/LC_MESSAGES/hitori.mo
 share/locale/bg/LC_MESSAGES/hitori.mo
 share/locale/bs/LC_MESSAGES/hitori.mo
 share/locale/ca/LC_MESSAGES/hitori.mo
