@@ -1,9 +1,0 @@
-GnuPG-2 provides several utilities that are used by mail clients,
-such as Kmail and Balsa, including OpenPGP and S/MIME support.
-GnuPG-2 has a different architecture than GnuPG-1 (e.g. 1.4.5) in that
-it splits up functionality into several modules.  However, both
-versions may be installed alongside without any conflict.  In fact,
-the gpg version from GnuPG-1 is able to make use of the gpg-agent as
-included in GnuPG-2 and allows for seamless passphrase caching.  The
-advantage of GnuPG-1 is its smaller size and the lack of dependency on
-other modules at run and build time.
