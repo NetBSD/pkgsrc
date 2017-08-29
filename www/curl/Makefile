@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.186 2017/08/24 20:03:02 adam Exp $
+# $NetBSD: Makefile,v 1.187 2017/08/29 07:08:32 wiz Exp $
 
 DISTNAME=	curl-7.55.1
 PKGREVISION=	1
@@ -24,11 +24,6 @@ CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 PKGCONFIG_OVERRIDE=	libcurl.pc.in
 
 INSTALLATION_DIRS=	share/doc/curl
-
-# only needed for 7.55.0 due to a bug, see patches/patch-Makefile.am
-USE_TOOLS+=		automake
-pre-configure:
-	cd ${WRKSRC} && automake
 
 .include "../../mk/bsd.prefs.mk"
 
