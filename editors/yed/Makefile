@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2017/03/24 08:41:28 abs Exp $
+# $NetBSD: Makefile,v 1.8 2017/08/29 08:40:31 wiz Exp $
 
 DISTNAME=	yEd-3.17
-PKGNAME=	${DISTNAME:C:E:e:}
+PKGNAME=	${DISTNAME:S/yEd/yed/}
 CATEGORIES=	editors
 MASTER_SITES=	https://www.yworks.com/resources/yed/demo/
 EXTRACT_SUFX=	.zip
@@ -17,7 +17,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:S:E:e:}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_JAVA=	run
 USE_JAVA2=	6
