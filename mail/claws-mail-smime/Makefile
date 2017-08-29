@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2017/08/24 20:03:28 adam Exp $
+# $NetBSD: Makefile,v 1.58 2017/08/29 12:23:24 wiz Exp $
 #
 
 PLUGIN_NAME=	smime
@@ -10,7 +10,7 @@ COMMENT=	This plugin handles S/MIME signed and/or encrypted mails
 
 PLIST_SRC+=	PLIST
 
-DEPENDS+=	gnupg2>=2.0<2.1:../../security/gnupg2
+DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
 
 CONFIGURE_ARGS+=	--enable-smime-plugin
 CONFIGURE_ARGS+=	--enable-pgpcore-plugin
