@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3467 2017/08/28 11:31:45 bouyer Exp $
+$NetBSD: CHANGES-2017,v 1.3468 2017/08/29 04:34:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4879,3 +4879,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/u-boot-pocketchip version 2017.07 [jmcneill 2017-08-27]
 	Updated devel/py-argcomplete to 1.9.2 [fhajny 2017-08-28]
 	Added x11/xdotool version 2.20110530.1 [bouyer 2017-08-28]
+	Updated net/p5-SOAP-Lite to 1.22 [wen 2017-08-29]
