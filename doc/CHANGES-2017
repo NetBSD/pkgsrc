@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3477 2017/08/29 11:40:25 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3478 2017/08/29 12:07:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4889,3 +4889,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/gpgme to 1.9.0 [wiz 2017-08-29]
 	Updated security/gpa to 0.9.10 [wiz 2017-08-29]
 	Updated devel/pth to 2.0.7nb5 [wiz 2017-08-29]
+	Updated security/gnupg2 to 2.2.0 [wiz 2017-08-29]
