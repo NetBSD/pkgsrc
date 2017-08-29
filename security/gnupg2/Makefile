@@ -1,54 +1,49 @@
-# $NetBSD: Makefile,v 1.70 2017/08/24 20:03:38 adam Exp $
+# $NetBSD: Makefile,v 1.71 2017/08/29 12:07:04 wiz Exp $
 
-DISTNAME=	gnupg-2.0.30
-PKGNAME=	${DISTNAME:S/gnupg/gnupg2/}
-PKGREVISION=	4
+DISTNAME=	gnupg-2.2.0
+PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnupg.org/
+MAINTAINER=	ada@netbsdfr.org
+HOMEPAGE=	https://www.gnupg.org/
 COMMENT=	GnuPG with OpenPGP and S/MIME capabilities
 LICENSE=	gnu-gpl-v3
 
-INFO_FILES=		yes
-USE_LIBTOOL=		yes
+DEPENDS+=	pinentry-[0-9]*:../../security/pinentry
+
+CONFLICTS=	dirmngr-[0-9]*
+
+BUILD_DEFS+=		VARBASE
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config makeinfo
+USE_LIBTOOL=		yes
+INFO_FILES=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-pinentry-pgm=${PREFIX}/bin/pinentry
-
-.include "../../mk/bsd.prefs.mk"
-
-# Sometimes wrong include file gets detected, e.g. for Clang
-.if defined(OSX_SDK_PATH) && exists(${OSX_SDK_PATH:Q}/usr/include/stdint.h)
-CONFIGURE_ENV+=		gl_cv_absolute_stdint_h=${OSX_SDK_PATH:Q}/usr/include/stdint.h
-.elif exists(/usr/include/stdint.h)
-CONFIGURE_ENV+=		gl_cv_absolute_stdint_h=/usr/include/stdint.h
-.endif
+CONFIGURE_ARGS+=	--enable-g13
+CONFIGURE_ARGS+=	--enable-gpg-is-gpg2
 
 TEST_TARGET=		check
 
-DEPENDS+=	pinentry-[0-9]*:../../security/pinentry
+# SunOS does have getaddrinfo() and the code knows how to use it
+CONFIGURE_ARGS.SunOS+=	ac_cv_func_getaddrinfo=yes
+
+LDFLAGS.Darwin+=	-lintl -lresolv
+LDFLAGS.SunOS+=		-lintl -lsocket
 
 .include "options.mk"
 
-.include "../../archivers/bzip2/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pth/buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../security/libassuan2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.5.0
+BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.7
 .include "../../security/libgcrypt/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.4
+.include "../../databases/sqlite3/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.24
 .include "../../security/libgpg-error/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libksba+=		libksba>=1.0.2
+BUILDLINK_API_DEPENDS.libassuan+=	libassuan>=2.4.3
+.include "../../security/libassuan2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libksba+=		libksba>=1.3.4
 .include "../../security/libksba/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
+BUILDLINK_API_DEPENDS.npth+=		npth>=1.2
+.include "../../devel/npth/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
