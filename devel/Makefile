@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2493 2017/08/26 06:08:58 adam Exp $
+# $NetBSD: Makefile,v 1.2494 2017/08/29 06:56:08 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1981,6 +1981,7 @@ SUBDIR+=	py-ode
 SUBDIR+=	py-olefile
 SUBDIR+=	py-open-vcdiff
 SUBDIR+=	py-packaging
+SUBDIR+=	py-pathlib
 SUBDIR+=	py-pathlib2
 SUBDIR+=	py-pathspec
 SUBDIR+=	py-pbr
