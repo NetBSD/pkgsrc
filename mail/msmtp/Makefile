@@ -2,6 +2,7 @@
 
 DISTNAME=	msmtp-1.6.6
 CATEGORIES=	mail
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=msmtp/}
 EXTRACT_SUFX=	.tar.xz
 
@@ -15,6 +16,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config msgfmt xgettext
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS.Darwin+=	--with-macosx-keyring
 
 EGDIR=		${PREFIX}/share/examples/msmtp
 CONF_FILES=	${EGDIR}/msmtprc-user.example \
