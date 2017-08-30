@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3489 2017/08/30 08:13:08 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.3490 2017/08/30 10:22:36 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4903,3 +4903,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/ruby24-base to 2.4.1nb1 [taca 2017-08-30]
 	Updated x11/gnome-desktop3 to 3.24.2 [prlw1 2017-08-30]
 	Updated graphics/eog3 to 3.24.1 [prlw1 2017-08-30]
+	Updated editors/nano to 2.8.7 [wiedi 2017-08-30]
