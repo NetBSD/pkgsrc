@@ -5,7 +5,7 @@
 command=""
 while [ $# -gt 0 ]; do
     case "$1" in
-        -fno-common)
+        -fno-common|-pie)
             ;;
         -?PIC)
             # Ignore -fPIC and -DPIC options
