@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2017/08/29 12:24:57 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2017/08/30 18:36:56 ginsbach Exp $
 
 DISTNAME=	gnupg-2.2.0
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
@@ -35,6 +35,7 @@ LDFLAGS.SunOS+=		-lintl -lsocket
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.7
 .include "../../security/libgcrypt/buildlink3.mk"
+BUILDLINK_API_DEPENDS.sqlite3+=		sqlite3>=3.7.15
 .include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.24
 .include "../../security/libgpg-error/buildlink3.mk"
