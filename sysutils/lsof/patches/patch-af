@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.14 2009/05/17 20:40:46 seb Exp $
+$NetBSD: patch-af,v 1.15 2017/08/30 10:41:24 kamil Exp $
 
 --- dialects/n+obsd/dlsof.h.orig	2006-03-28 21:54:15.000000000 +0000
 +++ dialects/n+obsd/dlsof.h
@@ -50,7 +50,25 @@ $NetBSD: patch-af,v 1.14 2009/05/17 20:40:46 seb Exp $
  
  # if	defined(HASNFSPROTO)
  #include <nfs/rpcv2.h>
-@@ -489,7 +492,12 @@ extern KA_T Kpa;
+@@ -370,7 +373,6 @@ struct sockproto {
+ #define	Pregs		PFSregs
+ #define	Pfile		PFSfile
+ #define	Pfpregs		PFSfpregs
+-#define	Pctl		PFSctl
+ #define	Pstatus		PFSstatus
+ #define	Pnote		PFSnote
+ #define	Pnotepg		PFSnotepg
+@@ -382,6 +384,9 @@ struct sockproto {
+ #define	Pmap		PFSmap
+ #define	Pmaps		PFSmaps
+ #    endif	/* NETBSDV>=1006000 */
++#    if	NETBSDV<8099000
++#define	Pctl		PFSctl
++#    endif	/* NETBSDV<8099000 */
+ #   endif	/* defined(NetBSDV) */
+ #  endif	/* defined(HASPROCFS_PFSROOT) */
+ #include <machine/reg.h>
+@@ -489,7 +494,12 @@ extern KA_T Kpa;
  struct l_vfs {
  	KA_T addr;			/* kernel address */
  	fsid_t	fsid;			/* file system ID */
@@ -63,7 +81,7 @@ $NetBSD: patch-af,v 1.14 2009/05/17 20:40:46 seb Exp $
  	char *dir;			/* mounted directory */
  	char *fsname;			/* file system name */
  	struct l_vfs *next;		/* forward link */
-@@ -581,4 +589,12 @@ struct sfile {
+@@ -581,4 +591,12 @@ struct sfile {
  #  endif	/* defined(HASNCVPID) */
  # endif  /* defined(HASNCACHE) */
  
