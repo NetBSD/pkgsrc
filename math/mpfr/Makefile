@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2016/10/03 12:35:18 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2017/08/30 10:35:54 martin Exp $
 
 DISTNAME=		mpfr-3.1.5
 CATEGORIES=		math
@@ -17,3 +17,8 @@ INFO_FILES=		yes
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+.if (${MACHINE_ARCH} == alpha)
+CONFIGURE_ENV+=CFLAGS="${CFLAGS:N-mieee}"
+.endif
+
