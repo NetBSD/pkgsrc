@@ -1,28 +1,26 @@
-$NetBSD: patch-configure,v 1.18 2017/04/15 17:38:48 riastradh Exp $
+$NetBSD: patch-configure,v 1.19 2017/08/30 21:00:46 kamil Exp $
 
 Don't use gld on SunOS
 Use ncursesw6-config; define NCURSES_WIDECHAR to fix building on Darwin (at least).
-add check for shm_open
-avoid bad substitution
 
---- configure.orig	2016-12-20 20:16:44.000000000 +0000
+--- configure.orig	2017-08-30 16:50:40.000000000 +0000
 +++ configure
-@@ -631,7 +631,6 @@ SunOS)
+@@ -747,7 +747,6 @@ SunOS)
    solaris="yes"
    make="${MAKE-gmake}"
    install="${INSTALL-ginstall}"
 -  ld="gld"
    smbd="${SMBD-/usr/sfw/sbin/smbd}"
-   needs_libsunmath="no"
-   solarisrev=$(uname -r | cut -f2 -d.)
-@@ -2928,23 +2927,23 @@ if test "$curses" != "no" ; then
+   if test -f /usr/include/sys/soundcard.h ; then
+     audio_drv_list="oss"
+@@ -3117,12 +3116,13 @@ if test "$curses" != "no" ; then
      curses_inc_list="$($pkg_config --cflags ncurses 2>/dev/null):"
      curses_lib_list="$($pkg_config --libs ncurses 2>/dev/null):-lpdcurses"
    else
 -    curses_inc_list="$($pkg_config --cflags ncursesw 2>/dev/null):-I/usr/include/ncursesw:"
 -    curses_lib_list="$($pkg_config --libs ncursesw 2>/dev/null):-lncursesw:-lcursesw"
-+    curses_inc_list="$(@PREFIX@/bin/ncursesw6-config --cflags 2>/dev/null):-I/usr/include/ncursesw:"
-+    curses_lib_list="$(@PREFIX@/bin/ncursesw6-config --libs 2>/dev/null):-lncursesw:-lcursesw"
++    curses_inc_list="$(@PREFIX@/bin/ncursesw6-config --cflags ncursesw 2>/dev/null):-I/usr/include/ncursesw:"
++    curses_lib_list="$(@PREFIX@/bin/ncursesw6-config --libs ncursesw 2>/dev/null):-lncursesw:-lcursesw"
    fi
    curses_found=no
    cat > $TMPC << EOF
@@ -31,78 +29,3 @@ avoid bad substitution
  #include <curses.h>
  #include <wchar.h>
  int main(void) {
--  const char *s = curses_version();
-   wchar_t wch = L'w';
-   setlocale(LC_ALL, "");
-   resize_term(0, 0);
-   addwstr(L"wide chars\n");
-   addnwstr(&wch, 1);
-   add_wch(WACS_DEGREE);
--  return s != 0;
-+  return 0;
- }
- EOF
-   IFS=:
-@@ -3762,6 +3761,27 @@ if compile_prog "" "" ; then
-   fallocate_zero_range=yes
- fi
- 
-+# check for shm_open
-+shm_open=no
-+cat > $TMPC << EOF
-+#include <sys/types.h>
-+#include <sys/mman.h>
-+#include <fcntl.h>
-+#include <stddef.h> // for NULL
-+
-+int main(void)
-+{
-+    shm_open(NULL, O_RDWR, 0644);
-+    return 0;
-+}
-+EOF
-+if compile_prog "" "" ; then
-+    shm_open=yes
-+elif compile_prog "" "-lrt" ; then
-+    LIBS="$LIBS -lrt"
-+    shm_open=yes
-+fi
-+
- # check for posix_fallocate
- posix_fallocate=no
- cat > $TMPC << EOF
-@@ -4041,8 +4061,13 @@ fi
- cat > $TMPC <<EOF
- #include <signal.h>
- #include <time.h>
-+#include <sys/types.h>
-+#include <sys/mman.h>
-+#include <fcntl.h>
-+
- int main(void) {
-   timer_create(CLOCK_REALTIME, NULL, NULL);
-+    shm_open(NULL, O_RDWR, 0644);
-   return clock_gettime(CLOCK_REALTIME, NULL);
- }
- EOF
-@@ -4797,7 +4822,9 @@ if test "$want_tools" = "yes" ; then
-   tools="qemu-img\$(EXESUF) qemu-io\$(EXESUF) $tools"
-   if [ "$linux" = "yes" -o "$bsd" = "yes" -o "$solaris" = "yes" ] ; then
-     tools="qemu-nbd\$(EXESUF) $tools"
--    tools="ivshmem-client\$(EXESUF) ivshmem-server\$(EXESUF) $tools"
-+    if test "$shm_open" = "yes" ; then
-+      tools="ivshmem-client\$(EXESUF) ivshmem-server\$(EXESUF) $tools"
-+    fi
-   fi
- fi
- if test "$softmmu" = yes ; then
-@@ -5303,6 +5330,9 @@ fi
- if test "$fallocate_zero_range" = "yes" ; then
-   echo "CONFIG_FALLOCATE_ZERO_RANGE=y" >> $config_host_mak
- fi
-+if [ "$shm_open" = "yes" ] ; then
-+  echo "CONFIG_SHM_OPEN=y" >> $config_host_mak
-+fi
- if test "$posix_fallocate" = "yes" ; then
-   echo "CONFIG_POSIX_FALLOCATE=y" >> $config_host_mak
- fi

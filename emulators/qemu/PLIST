@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2017/04/22 20:18:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.51 2017/08/30 21:00:46 kamil Exp $
 ${PLIST.ivshmem}bin/ivshmem-client
 ${PLIST.ivshmem}bin/ivshmem-server
 ${PLIST.alpha}bin/qemu-alpha
@@ -146,7 +146,9 @@ share/qemu/pxe-rtl8139.rom
 share/qemu/pxe-virtio.rom
 share/qemu/qemu-icon.bmp
 share/qemu/qemu_logo_no_text.svg
+share/qemu/qemu_vga.ndrv
 share/qemu/s390-ccw.img
+share/qemu/s390-netboot.img
 share/qemu/sgabios.bin
 share/qemu/skiboot.lid
 share/qemu/slof.bin
