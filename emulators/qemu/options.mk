@@ -1,13 +1,9 @@
-# $NetBSD: options.mk,v 1.3 2017/02/27 05:19:29 adam Exp $
+# $NetBSD: options.mk,v 1.4 2017/08/30 21:00:46 kamil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
-PKG_SUPPORTED_OPTIONS=	gtk3 ivshmem sdl
+PKG_SUPPORTED_OPTIONS=	gtk3 sdl
 
 .include "../../mk/bsd.fast.prefs.mk"
-
-.if empty(MACHINE_PLATFORM:MNetBSD-[5-6].*-*)
-PKG_SUGGESTED_OPTIONS+=	ivshmem
-.endif
 
 .if empty(OPSYS:MDarwin)
 PKG_SUGGESTED_OPTIONS+=	sdl
@@ -15,11 +11,7 @@ PKG_SUGGESTED_OPTIONS+=	sdl
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		gtk ivshmem
-
-.if !empty(PKG_OPTIONS:Mivshmem)
-PLIST.ivshmem=		yes
-.endif
+PLIST_VARS+=		gtk
 
 .if !empty(PKG_OPTIONS:Mgtk3)
 PLIST.gtk=		yes

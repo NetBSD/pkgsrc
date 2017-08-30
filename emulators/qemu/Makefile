@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.171 2017/08/25 12:39:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.172 2017/08/30 21:00:46 kamil Exp $
 
-DISTNAME=	qemu-2.9.0
-PKGREVISION=	2
+DISTNAME=	qemu-2.10.0
 CATEGORIES=	emulators
 MASTER_SITES=	http://download.qemu-project.org/
 EXTRACT_SUFX=	.tar.xz
@@ -10,11 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.qemu-project.org/
 COMMENT=	CPU emulator using dynamic translation
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
-
-CONFLICTS+=		qemu-bin-[0-9]*
-NOT_FOR_PLATFORM+=	NetBSD-1.[0-6]*-*
-# qemu 1 does not work on NetBSD-5; see http://gnats.netbsd.org/46565.
-NOT_FOR_PLATFORM+=	NetBSD-5*-*
 
 USE_CURSES=		resize_term wide
 USE_LANGUAGES+=		c c++
@@ -85,10 +79,7 @@ PKG_SYSCONFSUBDIR=	qemu
 
 REPLACE_PERL+=		scripts/texi2pod.pl
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported yet as of 2.8.0
-
-BUILDLINK_PASSTHRU_DIRS+=	/usr/lib
-BUILDLINK_PASSTHRU_RPATHDIRS+=	/usr/lib
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported yet as of 2.10.0
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/qemu
 
@@ -97,17 +88,7 @@ UE_ARCHS+=		or1k ppc ppc64 ppc64abi32 sh4 sh4eb sparc sparc32plus
 UE_ARCHS+=		sparc64 x86_64 microblazeel s390x unicore32
 
 .if ${OPSYS} == "NetBSD"
-.  if (!empty(OS_VERSION:M5.99.*) || !empty(OS_VERSION:M[6-9].*))
-# XXX
-# i386 and x86_64 user emul require newer binutils for PROVIDE_HIDDEN()
-# http://git.qemu.org/qemu.git/commit/?id=845f2c2812d9ed24b36c02a3d06ee83aeafe8b49
-# but binutils-2.19 was enabled around 5.99.22:
-# http://cvsweb.NetBSD.org/bsdweb.cgi/src/share/mk/bsd.own.mk#rev1.594
 USER_EMUL=		i386 x86_64 sparc sparc64
-.  else
-CONFIGURE_ARGS+=	--disable-bsd-user
-USER_EMUL=
-.  endif
 PLIST.nbd=		YES
 .elif !empty(OPSYS:M*BSD) || !empty(OPSYS:MDragonFly)
 USER_EMUL=		i386 x86_64 sparc sparc64
@@ -119,15 +100,18 @@ PLIST.nbd=		YES
 .elif !empty(OPSYS:MLinux)
 USER_EMUL=		${UE_ARCHS}
 PLIST.nbd=		YES
+PLIST.ivshmem=		YES
 .elif !empty(MACHINE_PLATFORM:MSunOS-5.11-*)
 PLIST.nbd=		YES
 CONFIGURE_ARGS+=	--disable-coroutine-pool
 .endif
 
-PLIST_VARS+=		${UE_ARCHS} nbd
+PLIST_VARS+=		${UE_ARCHS} nbd ivshmem
 .for _var_ in ${USER_EMUL}
 PLIST.${_var_}=		YES
 .endfor
+
+TEST_TARGET=		check
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/Makefile.multinode-NetBSD \
