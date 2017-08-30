@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/04/26 07:18:10 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/08/30 08:00:16 prlw1 Exp $
 include/gnome-desktop-3.0/libgnome-desktop/gnome-bg-crossfade.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-bg-slide-show.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-bg.h
@@ -43,7 +43,6 @@ share/gtk-doc/html/gnome-desktop3/up-insensitive.png
 share/gtk-doc/html/gnome-desktop3/up.png
 share/gtk-doc/html/gnome-desktop3/wall-clock.html
 share/gtk-doc/html/gnome-desktop3/xkb-info.html
-share/libgnome-desktop-3.0/pnp.ids
 share/locale/af/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/am/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/an/LC_MESSAGES/gnome-desktop-3.0.mo
