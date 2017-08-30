@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2017/08/30 10:35:54 martin Exp $
+
+Remove alpha specific -miee* options currently not working on NetBSD (needs
+further investigation)
+
+--- configure.orig	2016-09-27 09:58:43.000000000 +0200
++++ configure	2017-08-30 12:24:27.235843640 +0200
+@@ -6337,7 +6337,7 @@
+ else
+ 
+   if test -n "$GCC"; then
+-    mpfr_cv_ieee_switches="-mfp-rounding-mode=d -mieee-with-inexact"
++    mpfr_cv_ieee_switches=""
+   else
+     mpfr_cv_ieee_switches="-fprm d -ieee_with_inexact"
+   fi
