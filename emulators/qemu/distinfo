@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.127 2017/08/30 21:00:46 kamil Exp $
+$NetBSD: distinfo,v 1.128 2017/08/30 21:07:10 kamil Exp $
 
 SHA1 (qemu-2.10.0.tar.xz) = 5d6815fa3ab1c6163c7e886f26153feabdcbb0f8
 RMD160 (qemu-2.10.0.tar.xz) = 18579f8a5fe77e729b15b1876f4b1456d2c7e30e
 SHA512 (qemu-2.10.0.tar.xz) = 67891e78a0df8538838c5fc6d5208e1e0c23f608013818ea8f2f6b7dcbf80404113559b4d33aea32daf25bd43c2d8b5befbebf9fab16adf74a50218239cead53
 Size (qemu-2.10.0.tar.xz) = 25040324 bytes
-SHA1 (patch-configure) = b64e69bb9b9615e59f921ff35c88f7c58632d265
+SHA1 (patch-configure) = 51d5396f99ef129631138bc51f47bc24775aa08b
 SHA1 (patch-contrib_ivshmem-client_ivshmem-client.c) = 40c8751607cbf66a37e4c4e08f2664b864e2e984
 SHA1 (patch-contrib_ivshmem-server_ivshmem-server.c) = d8f53432b5752f4263dc4ef96108a976a05147a3
 SHA1 (patch-ef) = 98a1de2fd48638886b5d16f6a61dc72910e98b41
