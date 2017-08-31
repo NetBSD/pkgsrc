@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/08/31 15:41:35 leot Exp $
+
+SHA1 (Net-Patricia-1.22.tar.gz) = 2a39c5910f9069a5b97647382061c12ae9c0458c
+RMD160 (Net-Patricia-1.22.tar.gz) = e16e5731e2911fa6770285977b6385bd77323e63
+SHA512 (Net-Patricia-1.22.tar.gz) = d76702d30784f8448dcf3a5269e052bc7bd6f5fe5a16824b6e3ede1d0182deb139522e45e1fb78749a7527ddbc950c213d843e43f45b5b0ed63b5b985b329861
+Size (Net-Patricia-1.22.tar.gz) = 27780 bytes
