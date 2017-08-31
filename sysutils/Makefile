@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.712 2017/08/27 19:25:14 jmcneill Exp $
+# $NetBSD: Makefile,v 1.713 2017/08/31 04:22:16 jnemeth Exp $
 #
 
 COMMENT=	System utilities
@@ -583,6 +583,9 @@ SUBDIR+=	tphdisk
 SUBDIR+=	tree
 SUBDIR+=	ts
 #SUBDIR+=	u-boot			# only contains Makefile fragments
+SUBDIR+=	u-boot-beagleboard
+SUBDIR+=	u-boot-beagleboneblack
+SUBDIR+=	u-boot-beaglebonewhite
 SUBDIR+=	u-boot-chip
 SUBDIR+=	u-boot-nanopi-neo
 SUBDIR+=	u-boot-orangepi-2
