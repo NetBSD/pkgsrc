@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.1 2017/08/14 21:14:10 wiz Exp $
+# $NetBSD: build.mk,v 1.2 2017/08/31 05:00:16 wiz Exp $
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-meson-[0-9]*:../../devel/py-meson
 
@@ -15,5 +15,7 @@ meson-build:
 do-install: meson-install
 meson-install:
 	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ninja -C output install
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/application.mk"
