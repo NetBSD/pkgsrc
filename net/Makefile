@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1172 2017/08/31 04:13:40 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1173 2017/08/31 15:42:44 leot Exp $
 #
 
 COMMENT=	Networking tools
@@ -514,6 +514,7 @@ SUBDIR+=	p5-Net-OAuth
 SUBDIR+=	p5-Net-OpenID-Common
 SUBDIR+=	p5-Net-OpenID-Consumer
 SUBDIR+=	p5-Net-Packet
+SUBDIR+=	p5-Net-Patricia
 SUBDIR+=	p5-Net-Pcap
 SUBDIR+=	p5-Net-RawIP
 SUBDIR+=	p5-Net-SMTP-TLS
