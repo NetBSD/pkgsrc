@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/13 14:36:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/08/31 15:15:13 taca Exp $
 bin/byebug${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/byebug/byebug.${RUBY_DLEXT}
@@ -84,6 +84,7 @@ ${GEM_LIBDIR}/lib/byebug/context.rb
 ${GEM_LIBDIR}/lib/byebug/core.rb
 ${GEM_LIBDIR}/lib/byebug/errors.rb
 ${GEM_LIBDIR}/lib/byebug/frame.rb
+${GEM_LIBDIR}/lib/byebug/helpers/bin.rb
 ${GEM_LIBDIR}/lib/byebug/helpers/eval.rb
 ${GEM_LIBDIR}/lib/byebug/helpers/file.rb
 ${GEM_LIBDIR}/lib/byebug/helpers/frame.rb
