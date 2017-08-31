@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/07/16 20:27:57 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/08/31 08:42:06 adam Exp $
 
-DISTNAME=	async-timeout-1.2.1
+DISTNAME=	async-timeout-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/async-timeout/}
