@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2016/10/20 14:40:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2017/08/31 15:18:09 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.yardopts
@@ -93,6 +93,7 @@ ${GEM_LIBDIR}/lib/mocha/parameter_matchers/any_parameters.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/anything.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/base.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/equals.rb
+${GEM_LIBDIR}/lib/mocha/parameter_matchers/equivalent_uri.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/has_entries.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/has_entry.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/has_key.rb
@@ -104,7 +105,6 @@ ${GEM_LIBDIR}/lib/mocha/parameter_matchers/kind_of.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/not.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/object.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/optionally.rb
-${GEM_LIBDIR}/lib/mocha/parameter_matchers/query_string.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/regexp_matches.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/responds_with.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/yaml_equivalent.rb
@@ -229,6 +229,7 @@ ${GEM_LIBDIR}/test/unit/parameter_matchers/all_of_test.rb
 ${GEM_LIBDIR}/test/unit/parameter_matchers/any_of_test.rb
 ${GEM_LIBDIR}/test/unit/parameter_matchers/anything_test.rb
 ${GEM_LIBDIR}/test/unit/parameter_matchers/equals_test.rb
+${GEM_LIBDIR}/test/unit/parameter_matchers/equivalent_uri_test.rb
 ${GEM_LIBDIR}/test/unit/parameter_matchers/has_entries_test.rb
 ${GEM_LIBDIR}/test/unit/parameter_matchers/has_entry_test.rb
 ${GEM_LIBDIR}/test/unit/parameter_matchers/has_key_test.rb
