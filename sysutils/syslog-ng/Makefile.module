@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.module,v 1.2 2016/08/21 20:18:30 fhajny Exp $
+# $NetBSD: Makefile.module,v 1.3 2017/08/31 12:53:50 fhajny Exp $
 # used by sysutils/py-syslog-ng/Makefile
 # used by sysutils/syslog-ng-amqp/Makefile
 # used by sysutils/syslog-ng-curl/Makefile
@@ -22,6 +22,7 @@ SYSLOG_MOD_TARGET?=	${SYSLOG_MOD_DIR}
 BUILD_TARGET?=		modules/${SYSLOG_MOD_DIR}/lib${SYSLOG_MOD_TARGET}.la
 
 INSTALL_TARGET=		install-moduleLTLIBRARIES
+INSTALL_MAKE_FLAGS+=	lib_LTLIBRARIES=""
 INSTALL_MAKE_FLAGS+=	module_LTLIBRARIES=${BUILD_TARGET}
 
 INSTALLATION_DIRS=	lib/syslog-ng
