@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2017/01/10 18:54:15 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/08/31 12:53:50 fhajny Exp $
 bin/dqtool
 bin/loggen
 bin/pdbtool
@@ -25,10 +25,13 @@ include/syslog-ng/compat/getutent.h
 include/syslog-ng/compat/glib.h
 include/syslog-ng/compat/lfs.h
 include/syslog-ng/compat/openssl_support.h
+include/syslog-ng/compat/pcre.h
 include/syslog-ng/compat/pio.h
 include/syslog-ng/compat/socket.h
 include/syslog-ng/compat/string.h
 include/syslog-ng/compat/time.h
+include/syslog-ng/control/control-commands.h
+include/syslog-ng/control/control-main.h
 include/syslog-ng/control/control-server.h
 include/syslog-ng/control/control.h
 include/syslog-ng/crypto.h
@@ -37,6 +40,8 @@ include/syslog-ng/debugger/debugger.h
 include/syslog-ng/debugger/tracer.h
 include/syslog-ng/dnscache.h
 include/syslog-ng/driver.h
+include/syslog-ng/evtlog.h
+include/syslog-ng/evtmaps.h
 include/syslog-ng/fdhelpers.h
 include/syslog-ng/file-perms.h
 include/syslog-ng/filter/filter-call.h
@@ -58,6 +63,7 @@ include/syslog-ng/gsocket.h
 include/syslog-ng/host-id.h
 include/syslog-ng/host-resolve.h
 include/syslog-ng/hostname.h
+include/syslog-ng/libtest/license_module_mock.h
 include/syslog-ng/libtest/mock-transport.h
 include/syslog-ng/libtest/msg_parse_lib.h
 include/syslog-ng/libtest/persist_lib.h
@@ -118,6 +124,7 @@ include/syslog-ng/parse-number.h
 include/syslog-ng/parser/parser-expr-parser.h
 include/syslog-ng/parser/parser-expr.h
 include/syslog-ng/pathutils.h
+include/syslog-ng/pe-versioning.h
 include/syslog-ng/persist-state.h
 include/syslog-ng/persistable-state-header.h
 include/syslog-ng/persistable-state-presenter.h
@@ -140,14 +147,21 @@ include/syslog-ng/rewrite/rewrite-unset.h
 include/syslog-ng/ringbuffer.h
 include/syslog-ng/run-id.h
 include/syslog-ng/scanner/csv-scanner/csv-scanner.h
+include/syslog-ng/scanner/kv-scanner/kv-scanner.h
+include/syslog-ng/scanner/list-scanner/list-scanner.h
 include/syslog-ng/scratch-buffers.h
 include/syslog-ng/seqnum.h
 include/syslog-ng/serialize.h
 include/syslog-ng/service-management.h
+include/syslog-ng/stats/stats-cluster-logpipe.h
+include/syslog-ng/stats/stats-cluster-single.h
 include/syslog-ng/stats/stats-cluster.h
+include/syslog-ng/stats/stats-control.h
 include/syslog-ng/stats/stats-counter.h
 include/syslog-ng/stats/stats-csv.h
 include/syslog-ng/stats/stats-log.h
+include/syslog-ng/stats/stats-query-commands.h
+include/syslog-ng/stats/stats-query.h
 include/syslog-ng/stats/stats-registry.h
 include/syslog-ng/stats/stats-syslog.h
 include/syslog-ng/stats/stats.h
@@ -188,6 +202,7 @@ include/syslog-ng/value-pairs/evttag.h
 include/syslog-ng/value-pairs/transforms.h
 include/syslog-ng/value-pairs/value-pairs.h
 include/syslog-ng/versioning.h
+lib/libevtlog.la
 lib/libsyslog-ng-native-connector.a
 lib/libsyslog-ng.la
 lib/pkgconfig/syslog-ng-add-contextual-data.pc
@@ -211,21 +226,27 @@ lib/syslog-ng/libdisk-buffer.la
 lib/syslog-ng/libgraphite.la
 lib/syslog-ng/libkvformat.la
 lib/syslog-ng/liblinux-kmsg-format.la
+lib/syslog-ng/libmap-value-pairs.la
 lib/syslog-ng/libpseudofile.la
 ${PLIST.systemd}lib/syslog-ng/libsdjournal.la
+lib/syslog-ng/libsnmptrapd-parser.la
+lib/syslog-ng/libstardate.la
 lib/syslog-ng/libsyslogformat.la
 lib/syslog-ng/libsystem-source.la
 lib/syslog-ng/libtest/libsyslog-ng-test.a
+lib/syslog-ng/libtfgetent.la
 sbin/syslog-ng
 sbin/syslog-ng-ctl
-share/doc/syslog-ng/INSTALL
+sbin/syslog-ng-debun
 share/doc/syslog-ng/syslog-ng.conf.doc
 share/examples/syslog-ng/scl.conf
 share/examples/syslog-ng/syslog-ng.conf
+share/examples/syslog-ng/syslog-ng.conf.HP-UX
 share/examples/syslog-ng/syslog-ng.conf.RedHat
 share/examples/syslog-ng/syslog-ng.conf.SunOS
 share/syslog-ng/include/scl/apache/apache.conf
 share/syslog-ng/include/scl/cim/template.conf
+share/syslog-ng/include/scl/cisco/plugin.conf
 share/syslog-ng/include/scl/elasticsearch/plugin.conf
 share/syslog-ng/include/scl/graphite/README
 share/syslog-ng/include/scl/graphite/plugin.conf
@@ -235,8 +256,10 @@ share/syslog-ng/include/scl/loggly/loggly.conf
 share/syslog-ng/include/scl/logmatic/logmatic.conf
 share/syslog-ng/include/scl/mbox/mbox.conf
 share/syslog-ng/include/scl/nodejs/plugin.conf
+share/syslog-ng/include/scl/osquery/plugin.conf
 share/syslog-ng/include/scl/pacct/plugin.conf
 share/syslog-ng/include/scl/rewrite/cc-mask.conf
+share/syslog-ng/include/scl/snmptrap/snmptrapd-source.conf
 share/syslog-ng/include/scl/solaris/plugin.conf
 share/syslog-ng/include/scl/syslogconf/README
 share/syslog-ng/include/scl/syslogconf/convert-syslogconf.awk
@@ -244,7 +267,7 @@ share/syslog-ng/include/scl/syslogconf/plugin.conf
 share/syslog-ng/include/scl/system/plugin.conf
 share/syslog-ng/tools/cfg-grammar.y
 share/syslog-ng/tools/lex-rules.am
-share/syslog-ng/tools/merge-grammar.pl
+share/syslog-ng/tools/merge-grammar.py
 share/syslog-ng/tools/system-expand.sh
 share/syslog-ng/xsd/patterndb-1.xsd
 share/syslog-ng/xsd/patterndb-2.xsd
