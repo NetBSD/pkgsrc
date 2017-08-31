@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/08/27 12:44:03 adam Exp $
+# $NetBSD: Makefile,v 1.4 2017/08/31 08:44:34 adam Exp $
 
-DISTNAME=	httpbin-0.6.0
+DISTNAME=	httpbin-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpbin/}
