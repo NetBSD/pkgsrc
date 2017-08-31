@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/01/10 18:54:15 fhajny Exp $
+# $NetBSD: Makefile,v 1.30 2017/08/31 12:53:50 fhajny Exp $
 
 .include "../../sysutils/syslog-ng/Makefile.common"
 
@@ -11,6 +11,9 @@ CONFIGURE_ARGS.SunOS+=	--enable-sun-streams
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 
 .include "options.mk"
+
+PYTHON_VERSIONS_ACCEPTED=	27
+REPLACE_PYTHON+=		lib/merge-grammar.py
 
 BUILD_DEFS+=		VARBASE
 
@@ -40,12 +43,12 @@ PKGCONFIG_OVERRIDE=	libtest/syslog-ng-test.pc.in			\
 			syslog-ng.pc.in
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/contrib/syslog-ng.conf.doc ${DESTDIR}${DOCDIR}
-.for f in syslog-ng.conf.RedHat syslog-ng.conf.SunOS
+.for f in syslog-ng.conf.HP-UX syslog-ng.conf.RedHat syslog-ng.conf.SunOS
 		${INSTALL_DATA} ${WRKSRC}/contrib/${f} ${DESTDIR}${EGDIR}
 .endfor
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/syslog2ng ${DESTDIR}${PREFIX}/bin
 
+.include "../../lang/python/application.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
