@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/07/20 10:25:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/08/31 08:59:53 adam Exp $
 bin/faker${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -290,6 +290,9 @@ ${PYSITELIB}/faker/providers/date_time/hr_HR/__init__.pyo
 ${PYSITELIB}/faker/providers/date_time/hu_HU/__init__.py
 ${PYSITELIB}/faker/providers/date_time/hu_HU/__init__.pyc
 ${PYSITELIB}/faker/providers/date_time/hu_HU/__init__.pyo
+${PYSITELIB}/faker/providers/date_time/ko_KR/__init__.py
+${PYSITELIB}/faker/providers/date_time/ko_KR/__init__.pyc
+${PYSITELIB}/faker/providers/date_time/ko_KR/__init__.pyo
 ${PYSITELIB}/faker/providers/date_time/pl_PL/__init__.py
 ${PYSITELIB}/faker/providers/date_time/pl_PL/__init__.pyc
 ${PYSITELIB}/faker/providers/date_time/pl_PL/__init__.pyo
@@ -575,6 +578,9 @@ ${PYSITELIB}/faker/providers/person/th_TH/__init__.pyo
 ${PYSITELIB}/faker/providers/person/tr_TR/__init__.py
 ${PYSITELIB}/faker/providers/person/tr_TR/__init__.pyc
 ${PYSITELIB}/faker/providers/person/tr_TR/__init__.pyo
+${PYSITELIB}/faker/providers/person/tw_GH/__init__.py
+${PYSITELIB}/faker/providers/person/tw_GH/__init__.pyc
+${PYSITELIB}/faker/providers/person/tw_GH/__init__.pyo
 ${PYSITELIB}/faker/providers/person/uk_UA/__init__.py
 ${PYSITELIB}/faker/providers/person/uk_UA/__init__.pyc
 ${PYSITELIB}/faker/providers/person/uk_UA/__init__.pyo
@@ -695,6 +701,9 @@ ${PYSITELIB}/faker/providers/phone_number/sv_SE/__init__.pyo
 ${PYSITELIB}/faker/providers/phone_number/tr_TR/__init__.py
 ${PYSITELIB}/faker/providers/phone_number/tr_TR/__init__.pyc
 ${PYSITELIB}/faker/providers/phone_number/tr_TR/__init__.pyo
+${PYSITELIB}/faker/providers/phone_number/tw_GH/__init__.py
+${PYSITELIB}/faker/providers/phone_number/tw_GH/__init__.pyc
+${PYSITELIB}/faker/providers/phone_number/tw_GH/__init__.pyo
 ${PYSITELIB}/faker/providers/phone_number/uk_UA/__init__.py
 ${PYSITELIB}/faker/providers/phone_number/uk_UA/__init__.pyc
 ${PYSITELIB}/faker/providers/phone_number/uk_UA/__init__.pyo
