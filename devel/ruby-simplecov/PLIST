@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/03/20 12:32:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/08/31 15:24:59 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -26,6 +26,7 @@ ${GEM_LIBDIR}/features/config_profiles.feature
 ${GEM_LIBDIR}/features/config_project_name.feature
 ${GEM_LIBDIR}/features/config_styles.feature
 ${GEM_LIBDIR}/features/config_tracked_files.feature
+${GEM_LIBDIR}/features/config_tracked_files_relevant_lines.feature
 ${GEM_LIBDIR}/features/cucumber_basic.feature
 ${GEM_LIBDIR}/features/maximum_coverage_drop.feature
 ${GEM_LIBDIR}/features/merging_test_unit_and_rspec.feature
@@ -42,6 +43,7 @@ ${GEM_LIBDIR}/features/step_definitions/html_steps.rb
 ${GEM_LIBDIR}/features/step_definitions/simplecov_steps.rb
 ${GEM_LIBDIR}/features/step_definitions/transformers.rb
 ${GEM_LIBDIR}/features/step_definitions/web_steps.rb
+${GEM_LIBDIR}/features/support/aruba_freedom_patch.rb
 ${GEM_LIBDIR}/features/support/env.rb
 ${GEM_LIBDIR}/features/test_unit_basic.feature
 ${GEM_LIBDIR}/features/test_unit_groups_and_filters_basic.feature
@@ -61,6 +63,7 @@ ${GEM_LIBDIR}/lib/simplecov/formatter/multi_formatter.rb
 ${GEM_LIBDIR}/lib/simplecov/formatter/simple_formatter.rb
 ${GEM_LIBDIR}/lib/simplecov/jruby_fix.rb
 ${GEM_LIBDIR}/lib/simplecov/last_run.rb
+${GEM_LIBDIR}/lib/simplecov/lines_classifier.rb
 ${GEM_LIBDIR}/lib/simplecov/load_global_config.rb
 ${GEM_LIBDIR}/lib/simplecov/no_defaults.rb
 ${GEM_LIBDIR}/lib/simplecov/profiles.rb
@@ -116,11 +119,13 @@ ${GEM_LIBDIR}/spec/fixtures/skipped_and_executed.rb
 ${GEM_LIBDIR}/spec/fixtures/utf-8.rb
 ${GEM_LIBDIR}/spec/helper.rb
 ${GEM_LIBDIR}/spec/last_run_spec.rb
+${GEM_LIBDIR}/spec/lines_classifier_spec.rb
 ${GEM_LIBDIR}/spec/multi_formatter_spec.rb
 ${GEM_LIBDIR}/spec/raw_coverage_spec.rb
 ${GEM_LIBDIR}/spec/result_merger_spec.rb
 ${GEM_LIBDIR}/spec/result_spec.rb
 ${GEM_LIBDIR}/spec/return_codes_spec.rb
+${GEM_LIBDIR}/spec/simplecov_spec.rb
 ${GEM_LIBDIR}/spec/source_file_line_spec.rb
 ${GEM_LIBDIR}/spec/source_file_spec.rb
 ${GEM_LIBDIR}/spec/support/fail_rspec_on_ruby_warning.rb
