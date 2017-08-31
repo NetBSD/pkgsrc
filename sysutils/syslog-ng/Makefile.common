@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.5 2017/01/10 18:54:15 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.6 2017/08/31 12:53:50 fhajny Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/Makefile.module
 
-DISTNAME=	syslog-ng-3.9.1
+DISTNAME=	syslog-ng-3.11.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=balabit/}
 
@@ -47,6 +47,7 @@ CONFIGURE_ARGS+=	--with-librabbitmq-client=no
 CONFIGURE_ARGS+=	--with-pidfile-dir=${VARBASE}/run
 
 CONFIGURE_ARGS.SunOS+=	--enable-dynamic-linking
+CONFIGURE_ARGS.SunOS+=	ac_cv_func_inotify_init=no
 
 SUBST_CLASSES+=		unamepath
 SUBST_STAGE.unamepath=	post-configure
@@ -54,7 +55,6 @@ SUBST_FILES.unamepath=	contrib/syslog2ng
 SUBST_VARS.unamepath=	UNAME
 
 REPLACE_AWK+=		contrib/syslog2ng
-REPLACE_PERL+=		lib/merge-grammar.pl
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -62,5 +62,4 @@ REPLACE_PERL+=		lib/merge-grammar.pl
 .include "../../devel/ivykis/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../sysutils/eventlog/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
