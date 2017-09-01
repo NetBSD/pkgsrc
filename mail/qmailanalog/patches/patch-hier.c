@@ -1,4 +1,6 @@
-$NetBSD: patch-hier.c,v 1.1 2012/03/14 23:15:16 joerg Exp $
+$NetBSD: patch-hier.c,v 1.2 2017/09/01 03:50:12 schmonz Exp $
+
+Don't install catpages.
 
 --- hier.c.orig	2012-03-13 17:48:44.000000000 +0000
 +++ hier.c
