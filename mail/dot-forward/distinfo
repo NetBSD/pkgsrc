@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2017/09/01 04:02:11 schmonz Exp $
+$NetBSD: distinfo,v 1.8 2017/09/01 04:03:25 schmonz Exp $
 
 SHA1 (dot-forward-0.71.tar.gz) = 2adacc13bb43fcf7ae13d3fbeaadd2649ff91137
 RMD160 (dot-forward-0.71.tar.gz) = 1e5fd7558296cf213274e6e80944ba26fed74c79
 SHA512 (dot-forward-0.71.tar.gz) = f37a30eabf3a7e7258bfbe9178218d053a5164a9698fbc34954eb8bd588fe2bbf61ffd85f5b817e3ce65d7c0efac1735b59b11faa4d425e2df4089769af94b8b
 Size (dot-forward-0.71.tar.gz) = 26352 bytes
-SHA1 (patch-aa) = 9438ddb97d4e935ef1f5d06618f9d440c320e361
+SHA1 (patch-Makefile) = 9438ddb97d4e935ef1f5d06618f9d440c320e361
 SHA1 (patch-hier.c) = ebedb97f1d8495d333bbb4de8702eba165e97a5e
