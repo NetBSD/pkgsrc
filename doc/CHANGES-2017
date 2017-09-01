@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3512 2017/09/01 11:54:43 szptvlfn Exp $
+$NetBSD: CHANGES-2017,v 1.3513 2017/09/01 20:58:53 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4945,3 +4945,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/php71 to 7.1.9 [taca 2017-09-01]
 	Updated print/gutenprint-lib to 5.2.13 [gdt 2017-09-01]
 	Updated graphics/feh to 2.19.3 [szptvlfn 2017-09-01]
+	Added cross/aarch64-none-elf-binutils version 2.29 [jmcneill 2017-09-01]
+	Added cross/aarch64-none-elf-gcc version 7.2 [jmcneill 2017-09-01]
