@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/01 20:55:37 jmcneill Exp $
+
+SHA1 (binutils-2.29.tar.bz2) = 4376bce1e58d591c6a5dd44fc8713f154208d735
+RMD160 (binutils-2.29.tar.bz2) = 89bf3332b715cf2e02fb36899f762abde01dbf68
+SHA512 (binutils-2.29.tar.bz2) = 8148587d7e4f14ebcbcb3f984b116deaae5d4008228628acde14bc242a64a4b53faf1f6077a2c4ca4750e2f254b698ba506bd657f79e1202e87e7029b0069337
+Size (binutils-2.29.tar.bz2) = 29073316 bytes
