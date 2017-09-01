@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile,v 1.1 2017/09/01 21:02:39 jmcneill Exp $
+
+--- Makefile.orig	2017-02-20 00:15:39.000000000 +0000
++++ Makefile
+@@ -107,8 +107,8 @@ BL_COMMON_SOURCES	:=	common/bl_common.c	
+ BUILD_BASE		:=	./build
+ BUILD_PLAT		:=	${BUILD_BASE}/${PLAT}/${BUILD_TYPE}
+ 
+-PLATFORMS		:=	$(shell ls -I common plat/)
+-SPDS			:=	$(shell ls -I none services/spd)
++PLATFORMS		:=	$(shell ls plat/ | fgrep -v -x common)
++SPDS			:=	$(shell ls services/spd | grep -v -x none)
+ HELP_PLATFORMS		:=	$(shell echo ${PLATFORMS} | sed 's/ /|/g')
+ 
+ # Convenience function for adding build definitions
+@@ -232,7 +232,7 @@ CFLAGS			+= 	-nostdinc -pedantic -ffrees
+ 				-mgeneral-regs-only -std=c99 -c -Os		\
+ 				${DEFINES} ${INCLUDES}
+ CFLAGS			+=	-ffunction-sections -fdata-sections
+-LDFLAGS			+=	--fatal-warnings -O1
++LDFLAGS			=	--fatal-warnings -O1
+ LDFLAGS			+=	--gc-sections
+ #LDFLAGS		+=	--fix-cortex-a53-843419
+ 
