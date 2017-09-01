@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.714 2017/09/01 10:18:26 jmcneill Exp $
+# $NetBSD: Makefile,v 1.715 2017/09/01 21:05:06 jmcneill Exp $
 #
 
 COMMENT=	System utilities
@@ -21,6 +21,7 @@ SUBDIR+=	amtterm
 SUBDIR+=	ansible
 SUBDIR+=	ansible2
 SUBDIR+=	apcupsd
+SUBDIR+=	arm-trusted-firmware-sun50iw1p1
 SUBDIR+=	asapm
 SUBDIR+=	atitvout
 SUBDIR+=	attr
@@ -591,6 +592,7 @@ SUBDIR+=	u-boot-chip
 SUBDIR+=	u-boot-nanopi-neo
 SUBDIR+=	u-boot-orangepi-2
 SUBDIR+=	u-boot-orangepi-plus2e
+SUBDIR+=	u-boot-pine64-plus
 SUBDIR+=	u-boot-pocketchip
 SUBDIR+=	u-boot-sinovoip-bpi-m3
 SUBDIR+=	upower
