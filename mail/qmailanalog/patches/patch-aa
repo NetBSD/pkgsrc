@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2010/03/15 17:30:45 schmonz Exp $
+$NetBSD: patch-aa,v 1.2 2017/09/01 03:50:12 schmonz Exp $
+
+DESTDIR support, and avoid building catpages.
 
 --- Makefile.orig	1998-08-30 21:39:26.000000000 +0000
 +++ Makefile
@@ -40,3 +42,12 @@ $NetBSD: patch-aa,v 1.1 2010/03/15 17:30:45 schmonz Exp $
  	error.a str.a 
  
  instcheck.o: \
+@@ -214,7 +222,7 @@ compile instcheck.c strerr.h error.h rea
+ 	./compile instcheck.c
+ 
+ it: \
+-man prog install instcheck
++prog install instcheck
+ 
+ load: \
+ make-load warn-auto.sh systype
