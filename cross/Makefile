@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.70 2017/07/03 17:33:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.71 2017/09/01 20:57:22 jmcneill Exp $
 #
 
 COMMENT=	Cross-platform development utilities
 
 SUBDIR+=	GenFw
+SUBDIR+=	aarch64-none-elf-binutils
+SUBDIR+=	aarch64-none-elf-gcc
 SUBDIR+=	arm-none-eabi-binutils
 SUBDIR+=	arm-none-eabi-gcc
 SUBDIR+=	arm-none-eabi-gdb
