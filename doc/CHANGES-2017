@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3509 2017/09/01 10:21:31 jmcneill Exp $
+$NetBSD: CHANGES-2017,v 1.3510 2017/09/01 10:52:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4941,3 +4941,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-faker to 0.8.1 [adam 2017-09-01]
 	Updated textproc/py-m2r to 0.1.11 [adam 2017-09-01]
 	Added sysutils/dtb-arm64-sun50i version 4.11.3 [jmcneill 2017-09-01]
+	Updated lang/php70 to 7.0.23 [taca 2017-09-01]
+	Updated lang/php71 to 7.1.9 [taca 2017-09-01]
