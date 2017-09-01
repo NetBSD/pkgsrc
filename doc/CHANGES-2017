@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3511 2017/09/01 11:27:33 gdt Exp $
+$NetBSD: CHANGES-2017,v 1.3512 2017/09/01 11:54:43 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4944,3 +4944,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/php70 to 7.0.23 [taca 2017-09-01]
 	Updated lang/php71 to 7.1.9 [taca 2017-09-01]
 	Updated print/gutenprint-lib to 5.2.13 [gdt 2017-09-01]
+	Updated graphics/feh to 2.19.3 [szptvlfn 2017-09-01]
