@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.713 2017/08/31 04:22:16 jnemeth Exp $
+# $NetBSD: Makefile,v 1.714 2017/09/01 10:18:26 jmcneill Exp $
 #
 
 COMMENT=	System utilities
@@ -129,6 +129,7 @@ SUBDIR+=	dptutil
 SUBDIR+=	dtb-arm-exynos5422
 SUBDIR+=	dtb-arm-tegra124
 SUBDIR+=	dtb-arm-vexpress
+SUBDIR+=	dtb-arm64-sun50i
 SUBDIR+=	dtb-arm64-tegra210
 SUBDIR+=	dtc
 SUBDIR+=	dtpstree
