@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/01 21:02:39 jmcneill Exp $
+share/arm-trusted-firmware/sun50iw1p1/bl31.bin
