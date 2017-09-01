@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3508 2017/09/01 10:19:24 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3509 2017/09/01 10:21:31 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4940,3 +4940,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/py-apsw to 3.20.1 [adam 2017-09-01]
 	Updated devel/py-faker to 0.8.1 [adam 2017-09-01]
 	Updated textproc/py-m2r to 0.1.11 [adam 2017-09-01]
+	Added sysutils/dtb-arm64-sun50i version 4.11.3 [jmcneill 2017-09-01]
