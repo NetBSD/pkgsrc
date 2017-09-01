@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2017/01/02 03:33:52 schmonz Exp $
+$NetBSD: patch-hier.c,v 1.3 2017/09/01 03:46:36 schmonz Exp $
 
 Install docs following hier(7), don't install catpages, set reasonable
 permissions, and avoid overwriting "setlock" from sysutils/daemontools.
