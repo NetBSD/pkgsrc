@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3510 2017/09/01 10:52:05 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3511 2017/09/01 11:27:33 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4943,3 +4943,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/dtb-arm64-sun50i version 4.11.3 [jmcneill 2017-09-01]
 	Updated lang/php70 to 7.0.23 [taca 2017-09-01]
 	Updated lang/php71 to 7.1.9 [taca 2017-09-01]
+	Updated print/gutenprint-lib to 5.2.13 [gdt 2017-09-01]
