@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2017/02/19 11:22:43 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2017/09/02 16:27:11 wiz Exp $
 
-DISTNAME=		libzip-1.2.0
+DISTNAME=		libzip-1.3.0
 CATEGORIES=		archivers devel
 MASTER_SITES=		https://www.nih.at/libzip/
 EXTRACT_SUFX=		.tar.xz
@@ -19,4 +19,5 @@ USE_TOOLS+=		perl:build
 TEST_TARGET=		check
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
