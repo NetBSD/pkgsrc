@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2017/08/24 20:03:39 adam Exp $
+# $NetBSD: Makefile,v 1.30 2017/09/02 22:02:25 wiz Exp $
 
 DISTNAME=	kfilemetadata-${_KDE_VERSION}
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	sysutils
 COMMENT=	Library for extracting file metadata
 LICENSE=	gnu-gpl-v3
