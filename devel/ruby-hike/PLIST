@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/15 14:11:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/09/02 15:04:49 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/hike.rb
+${GEM_LIBDIR}/lib/hike/cached_trail.rb
 ${GEM_LIBDIR}/lib/hike/extensions.rb
-${GEM_LIBDIR}/lib/hike/index.rb
+${GEM_LIBDIR}/lib/hike/fileutils.rb
 ${GEM_LIBDIR}/lib/hike/normalized_array.rb
 ${GEM_LIBDIR}/lib/hike/paths.rb
 ${GEM_LIBDIR}/lib/hike/trail.rb
