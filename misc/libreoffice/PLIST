@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2017/08/01 11:57:36 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.24 2017/09/02 04:09:21 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -14075,7 +14075,7 @@ ${PKGNAME}/lib/libreoffice/share/registry/writer.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/xsltfilter.xcd
 ${PKGNAME}/lib/libreoffice/share/template/common/internal/html.stw
 ${PKGNAME}/lib/libreoffice/share/template/common/internal/idxexample.odt
-${PKGNAME}/lib/libreoffice/share/template/common/officorr/Moderate_business_letter_sans_serif.ott
+${PKGNAME}/lib/libreoffice/share/template/common/officorr/Modern_business_letter_sans_serif.ott
 ${PKGNAME}/lib/libreoffice/share/template/common/officorr/Modern_business_letter_serif.ott
 ${PKGNAME}/lib/libreoffice/share/template/common/offimisc/Businesscard-with-logo.ott
 ${PKGNAME}/lib/libreoffice/share/template/common/personal/CV.ott
