@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/07/31 00:00:32 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/02 14:28:52 taca Exp $
 #
 
-DISTNAME=	1.8.0
+DISTNAME=	1.8.1
 PKGNAME=	${PHP_PKG_PREFIX}-excel-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	https://github.com/PHPOffice/PHPExcel/archive/
