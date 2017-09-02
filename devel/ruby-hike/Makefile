@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/07/30 22:32:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/02 15:04:49 taca Exp $
 
-DISTNAME=	hike-1.2.3
+DISTNAME=	hike-2.1.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
