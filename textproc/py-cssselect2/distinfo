@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/02 14:58:45 kleink Exp $
+
+SHA1 (cssselect2-0.2.0.tar.gz) = b559490b651768db652801622718cb3affed6918
+RMD160 (cssselect2-0.2.0.tar.gz) = aaf55accfd66c759d3106e5cc4ccd0acdacf046c
+SHA512 (cssselect2-0.2.0.tar.gz) = 18069dd22892d8457865c2960630e984e791c6779b8d3a6ce4542c3ae92535a8ab23fc964e59776095a999a38ad2c40facce3b9164fef68870bb54167b6dc49b
+Size (cssselect2-0.2.0.tar.gz) = 28197 bytes
