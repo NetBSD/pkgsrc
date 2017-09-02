@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/09/26 17:37:01 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/09/02 17:15:00 bsiegert Exp $
 go14/AUTHORS
 go14/CONTRIBUTORS
 go14/LICENSE
@@ -492,7 +492,6 @@ go14/pkg/${GO_PLATFORM}/regexp.a
 go14/pkg/${GO_PLATFORM}/regexp/syntax.a
 go14/pkg/${GO_PLATFORM}/runtime.a
 go14/pkg/${GO_PLATFORM}/runtime.h
-go14/pkg/${GO_PLATFORM}/runtime/cgo.a
 go14/pkg/${GO_PLATFORM}/runtime/debug.a
 go14/pkg/${GO_PLATFORM}/runtime/pprof.a
 go14/pkg/${GO_PLATFORM}/runtime/race.a
