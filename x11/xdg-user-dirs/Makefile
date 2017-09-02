@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2017/02/03 08:42:32 leot Exp $
+# $NetBSD: Makefile,v 1.10 2017/09/02 22:45:04 leot Exp $
 
-DISTNAME=	xdg-user-dirs-0.15
-PKGREVISION=	2
+DISTNAME=	xdg-user-dirs-0.16
 CATEGORIES=	x11
 MASTER_SITES=	http://user-dirs.freedesktop.org/releases/
 
@@ -18,13 +17,16 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
 
 EGDIR=		${PREFIX}/share/examples/xdg
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
 
 CONF_FILES+=	${EGDIR}/user-dirs.conf \
 		${PKG_SYSCONFDIR}/xdg/user-dirs.conf
 CONF_FILES+=	${EGDIR}/user-dirs.defaults \
 		${PKG_SYSCONFDIR}/xdg/user-dirs.defaults
+CONF_FILES+=	${EGDIR}/autostart/xdg-user-dirs.desktop \
+		${PKG_SYSCONFDIR}/xdg/autostart/xdg-user-dirs.desktop
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
