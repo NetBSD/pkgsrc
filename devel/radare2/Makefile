@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2017/02/23 07:44:09 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/09/02 22:02:25 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "Makefile.common"
 
 DISTNAME=	radare2-${RADARE2_VERSION}
