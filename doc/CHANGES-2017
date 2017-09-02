@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3519 2017/09/02 10:32:57 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.3520 2017/09/02 14:13:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4954,3 +4954,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/libreoffice to 5.4.1.2 [ryoon 2017-09-02]
 	Updated lang/openjdk8 to 1.8.144 [ryoon 2017-09-02]
 	Updated games/gnome-sudoku to 3.24.0 [prlw1 2017-09-02]
+	Updated databases/ruby-sequel to 5.0.0 [taca 2017-09-02]
