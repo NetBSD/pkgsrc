@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libxcb,v 1.16 2015/12/27 18:56:33 sevan Exp $
+# $NetBSD: xorg.libxcb,v 1.17 2017/09/02 19:17:37 tron Exp $
 #
 include/xcb/bigreq.h
 include/xcb/composite.h
@@ -76,8 +76,8 @@ lib/libxcb-dpms.so.0.1
 lib/libxcb-dpms.so.1.0
 lib/libxcb-dri2.0.0.0.dylib
 lib/libxcb-dri2.0.dylib
-lib/libxcb-dri2.dylib
 lib/libxcb-dri2.a
+lib/libxcb-dri2.dylib
 lib/libxcb-dri2.la
 lib/libxcb-dri2.so
 lib/libxcb-dri2.so.0
@@ -102,8 +102,8 @@ lib/libxcb-glx.so.0.0
 lib/libxcb-glx.so.0.1
 lib/libxcb-glx.so.0.2
 lib/libxcb-glx.so.1.0
-lib/libxcb-randr.0.1.0.dylib
 lib/libxcb-randr.0.0.0.dylib
+lib/libxcb-randr.0.1.0.dylib
 lib/libxcb-randr.0.dylib
 lib/libxcb-randr.a
 lib/libxcb-randr.dylib
@@ -237,7 +237,9 @@ lib/libxcb-xinerama.so.0
 lib/libxcb-xinerama.so.0.0
 lib/libxcb-xinerama.so.0.1
 lib/libxcb-xinerama.so.1.0
+lib/libxcb-xkb.1.dylib
 lib/libxcb-xkb.a
+lib/libxcb-xkb.dylib
 lib/libxcb-xkb.so
 lib/libxcb-xkb.so.0
 lib/libxcb-xkb.so.0.1
