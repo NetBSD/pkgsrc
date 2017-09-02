@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2017/09/02 16:27:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2017/09/02 22:02:24 wiz Exp $
 
 BUILDLINK_TREE+=	libzip
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libzip
 LIBZIP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libzip+=	libzip>=0.7.1
-BUILDLINK_ABI_DEPENDS.libzip+=	libzip>=1.2.0
+BUILDLINK_ABI_DEPENDS.libzip+=	libzip>=1.3.0
 BUILDLINK_PKGSRCDIR.libzip?=	../../archivers/libzip
 
 BUILDLINK_INCDIRS.libzip=	include lib/libzip/include
