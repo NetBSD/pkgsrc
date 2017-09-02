@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2014/08/19 13:39:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/09/02 14:28:52 taca Exp $
 share/examples/php${PKG_PHP_VERSION}-excel/01pharSimple.php
+share/examples/php${PKG_PHP_VERSION}-excel/01simple-download-ods.php
 share/examples/php${PKG_PHP_VERSION}-excel/01simple-download-pdf.php
 share/examples/php${PKG_PHP_VERSION}-excel/01simple-download-xls.php
 share/examples/php${PKG_PHP_VERSION}-excel/01simple-download-xlsx.php
@@ -68,7 +69,10 @@ share/examples/php${PKG_PHP_VERSION}-excel/36chartreadwriteHTML.php
 share/examples/php${PKG_PHP_VERSION}-excel/36chartreadwritePDF.php
 share/examples/php${PKG_PHP_VERSION}-excel/37page_layout_view.php
 share/examples/php${PKG_PHP_VERSION}-excel/38cloneWorksheet.php
+share/examples/php${PKG_PHP_VERSION}-excel/39dropdown.php
 share/examples/php${PKG_PHP_VERSION}-excel/40duplicateStyle.php
+share/examples/php${PKG_PHP_VERSION}-excel/41password.php
+share/examples/php${PKG_PHP_VERSION}-excel/42richText.php
 share/examples/php${PKG_PHP_VERSION}-excel/Excel2003XMLReader.php
 share/examples/php${PKG_PHP_VERSION}-excel/Excel2003XMLTest.xml
 share/examples/php${PKG_PHP_VERSION}-excel/GnumericReader.php
@@ -212,12 +216,15 @@ share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Cell/DefaultValueBinder.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Cell/Hyperlink.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Cell/IValueBinder.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Chart.php
+share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Chart/Axis.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Chart/DataSeries.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Chart/DataSeriesValues.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Chart/Exception.php
+share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Chart/GridLines.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Chart/Layout.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Chart/Legend.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Chart/PlotArea.php
+share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Chart/Properties.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Chart/Renderer/PHP Charting Libraries.txt
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Chart/Renderer/jpgraph.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Chart/Title.php
@@ -311,7 +318,10 @@ share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/AutoFilter/Column.p
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/AutoFilter/Column/Rule.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/BaseDrawing.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/CellIterator.php
+share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/Column.php
+share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/ColumnCellIterator.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/ColumnDimension.php
+share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/ColumnIterator.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/Drawing.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/HeaderFooter.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/HeaderFooterDrawing.php
@@ -320,6 +330,7 @@ share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/PageMargins.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/PageSetup.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/Protection.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/Row.php
+share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/RowCellIterator.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/RowDimension.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/RowIterator.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Worksheet/SheetView.php
@@ -352,6 +363,7 @@ share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Writer/Excel5/Xf.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Writer/Exception.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Writer/HTML.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Writer/IWriter.php
+share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Writer/OpenDocument.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Writer/PDF.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Writer/PDF/Core.php
 share/php${PKG_PHP_VERSION}-excel/Classes/PHPExcel/Writer/PDF/DomPDF.php
