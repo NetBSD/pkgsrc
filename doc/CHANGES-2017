@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3523 2017/09/02 14:29:37 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3524 2017/09/02 14:31:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4959,3 +4959,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/SOGo to 2.3.22 [taca 2017-09-02]
 	Updated security/pear-Crypt_GPG to 1.6.1 [taca 2017-09-02]
 	Updated textproc/php-excel to 1.8.1 [taca 2017-09-02]
+	Updated mail/dovecot2-pigeonhole to 0.4.20 [taca 2017-09-02]
