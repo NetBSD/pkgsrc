@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.121 2017/08/10 14:46:15 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.122 2017/09/02 03:47:46 ryoon Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -2520,6 +2520,8 @@ lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/az/me
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/be/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/bg/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/bn_BD/messages.json
+lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/ca/messages.json
+lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/cak/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/cs/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/cy/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/da/messages.json
@@ -2528,6 +2530,7 @@ lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/dsb/m
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/el/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/en_GB/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/en_US/messages.json
+lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/eo/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/es_AR/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/es_CL/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/es_ES/messages.json
@@ -2537,8 +2540,10 @@ lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/fa/me
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/fi/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/fr/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/fy_NL/messages.json
+lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/ga_IE/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/gu_IN/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/he/messages.json
+lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/hr/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/hi_IN/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/hsb/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/hu/messages.json
@@ -2546,6 +2551,7 @@ lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/hy_AM
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/id/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/it/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/ja/messages.json
+lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/ka/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/kab/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/kk/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/km/messages.json
@@ -2553,6 +2559,8 @@ lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/ko/me
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/lij/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/lo/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/lt/messages.json
+lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/mk/messages.json
+lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/mr/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/ms/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/my/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/nb_NO/messages.json
@@ -2578,6 +2586,7 @@ lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/tr/me
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/uk/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/ur/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/uz/messages.json
+lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/vi/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/zh_CN/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/_locales/zh_TW/messages.json
 lib/firefox/browser/features/screenshots@mozilla.org/webextension/assertIsBlankDocument.js
