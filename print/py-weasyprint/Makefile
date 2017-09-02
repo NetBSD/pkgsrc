@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2017/08/25 07:52:09 adam Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/02 16:16:34 kleink Exp $
 
 DISTNAME=	WeasyPrint-0.40
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/WeasyPrint/}
 
@@ -14,10 +15,9 @@ USE_LANGUAGES=	# empty
 
 DEPENDS+=	${PYPKGPREFIX}-cairosvg>=1.0.20:../../converters/py-cairosvg
 DEPENDS+=	${PYPKGPREFIX}-cairocffi>=0.5:../../graphics/py-cairocffi
-DEPENDS+=	${PYPKGPREFIX}-lxml>=3.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-html5lib>=0.999999999:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-tinycss2>=0.5:../../textproc/py-tinycss2
-DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.6:../../textproc/py-cssselect
+DEPENDS+=	${PYPKGPREFIX}-cssselect2>=0.1:../../textproc/py-cssselect2
 DEPENDS+=	${PYPKGPREFIX}-pyphen>=0.8:../../textproc/py-pyphen
 
 .include "../../lang/python/egg.mk"
