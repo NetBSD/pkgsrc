@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3526 2017/09/02 14:59:09 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3527 2017/09/02 15:00:14 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4962,3 +4962,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/dovecot2-pigeonhole to 0.4.20 [taca 2017-09-02]
 	Added devel/ruby-hike1 version 1.2.3 [taca 2017-09-02]
 	Updated misc/ruby-sprockets22 to 2.2.3nb2 [taca 2017-09-02]
+	Added textproc/py-cssselect2 version 0.2 [kleink 2017-09-02]
