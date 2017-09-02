@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3516 2017/09/02 03:50:14 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.3517 2017/09/02 04:10:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4951,3 +4951,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/u-boot-pine64-plus version 2017.07 [jmcneill 2017-09-01]
 	Updated www/firefox to 55.0.3 [ryoon 2017-09-02]
 	Updated www/firefox-l10n to 55.0.3 [ryoon 2017-09-02]
+	Updated misc/libreoffice to 5.4.1.2 [ryoon 2017-09-02]
