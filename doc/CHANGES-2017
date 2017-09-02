@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3525 2017/09/02 14:57:30 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3526 2017/09/02 14:59:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4961,3 +4961,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/php-excel to 1.8.1 [taca 2017-09-02]
 	Updated mail/dovecot2-pigeonhole to 0.4.20 [taca 2017-09-02]
 	Added devel/ruby-hike1 version 1.2.3 [taca 2017-09-02]
+	Updated misc/ruby-sprockets22 to 2.2.3nb2 [taca 2017-09-02]
