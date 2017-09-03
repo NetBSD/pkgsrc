@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2017/07/20 08:37:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2017/09/03 18:48:54 adam Exp $
 bin/cygdb${PYVERSSUFFIX}
 bin/cython${PYVERSSUFFIX}
 bin/cythonize${PYVERSSUFFIX}
@@ -177,6 +177,9 @@ ${PYSITELIB}/Cython/Compiler/Tests/TestTreeFragment.pyo
 ${PYSITELIB}/Cython/Compiler/Tests/TestTreePath.py
 ${PYSITELIB}/Cython/Compiler/Tests/TestTreePath.pyc
 ${PYSITELIB}/Cython/Compiler/Tests/TestTreePath.pyo
+${PYSITELIB}/Cython/Compiler/Tests/TestTypes.py
+${PYSITELIB}/Cython/Compiler/Tests/TestTypes.pyo
+${PYSITELIB}/Cython/Compiler/Tests/TestTypes.pyc
 ${PYSITELIB}/Cython/Compiler/Tests/TestUtilityLoad.py
 ${PYSITELIB}/Cython/Compiler/Tests/TestUtilityLoad.pyc
 ${PYSITELIB}/Cython/Compiler/Tests/TestUtilityLoad.pyo
