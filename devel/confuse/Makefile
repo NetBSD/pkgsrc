@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/07/30 22:32:14 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2017/09/03 08:36:52 wiz Exp $
 
 DISTNAME=	confuse-3.0
 CATEGORIES=	devel
@@ -7,7 +7,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	libconfuse
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.org/martinh/libconfuse/
+#HOMEPAGE=	https://github.org/martinh/libconfuse/
 COMMENT=	Configuration file parser library
 LICENSE=	isc
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2016/07/09 06:38:47 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2017/09/03 08:36:58 wiz Exp $
 
 DISTNAME=		nntpcache-3.0.2
 PKGREVISION=		12
@@ -6,7 +6,7 @@ CATEGORIES=		news
 MASTER_SITES=		http://www.xs4all.nl/~suelette/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://iq.org/~proff/nntpcache.org/
+#HOMEPAGE=		http://iq.org/~proff/nntpcache.org/
 COMMENT=		NNTP multi-server caching daemon
 LICENSE=		nntpcache-license
 

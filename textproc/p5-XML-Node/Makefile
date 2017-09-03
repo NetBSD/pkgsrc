@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2017/06/05 14:24:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2017/09/03 08:37:01 wiz Exp $
 
 DISTNAME=	XML-Node-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://belmont-shores.ics.uci.edu/XML::Node/
+#HOMEPAGE=	http://belmont-shores.ics.uci.edu/XML::Node/
 COMMENT=	Node-based XML parsing: an simplified interface to XML::Parser
 
 PERL5_PACKLIST=		auto/XML/Node/.packlist
