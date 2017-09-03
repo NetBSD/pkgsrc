@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/23 18:16:36 asau Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/03 08:36:58 wiz Exp $
 
 DISTNAME=	md4coll
 PKGNAME=	md4-collision-20051118
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.stachliu.com/
 EXTRACT_SUFX=	.c
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.stachliu.com/collisions.html
+#HOMEPAGE=	http://www.stachliu.com/collisions.html
 COMMENT=	MD4 Collision generator
 
 WRKSRC=			${WRKDIR}

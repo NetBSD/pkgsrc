@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/12/20 22:03:01 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2017/09/03 08:36:54 wiz Exp $
 #
 
 DISTNAME=		nighthawk-2.1
@@ -12,7 +12,7 @@ PATCHFILES=		nighthawk-2.1a.patch
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://jsno.arafuraconnect.com.au/proj_linux/nighthawk.html
+#HOMEPAGE=		http://jsno.arafuraconnect.com.au/proj_linux/nighthawk.html
 COMMENT=		C64 Paradroid clone
 
 WRKSRC=			${WRKDIR}/nighthawk

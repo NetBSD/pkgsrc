@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/06/08 17:43:33 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/09/03 08:36:55 wiz Exp $
 
 DISTNAME=	actdiag-0.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/actdiag/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://blockdiag.com/actdiag/build/html/
+#HOMEPAGE=	http://blockdiag.com/actdiag/build/html/
 COMMENT=	Simple activity-diagram image generator
 LICENSE=	apache-2.0
 

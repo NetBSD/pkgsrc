@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/23 17:18:42 asau Exp $
+# $NetBSD: Makefile,v 1.22 2017/09/03 08:36:57 wiz Exp $
 
 DISTNAME=	nProbe-source-1.3.1
 PKGREVISION=	4
@@ -8,7 +8,7 @@ MASTER_SITES=	http://luca.ntop.org/nprobeDownload/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ntop.org/nProbe.html
+#HOMEPAGE=	http://www.ntop.org/nProbe.html
 COMMENT=	Monitor a network interface and generate NetFlow data
 
 WRKSRC=		${WRKDIR}/nProbe

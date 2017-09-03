@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2016/12/17 13:33:08 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/03 08:36:52 wiz Exp $
 
 DISTNAME=	openrcs-20110824192219
 CATEGORIES=	devel
-MASTER_SITES=	http://chl.be/openrcs/
+#MASTER_SITES=	http://chl.be/openrcs/
 
 MAINTAINER=	asau@inbox.ru
-HOMEPAGE=	http://chl.be/openrcs/
+#HOMEPAGE=	http://chl.be/openrcs/
 COMMENT=	OpenRCS is RCS clone from OpenBSD project
 
 WRKSRC=		${WRKDIR}/openrcs

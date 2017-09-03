@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/06/14 20:16:02 gdt Exp $
+# $NetBSD: Makefile,v 1.32 2017/09/03 08:36:50 wiz Exp $
 
 DISTNAME=	mu-conference-0.8.81
 #The DISTFILE used to have _ separating name and version,
@@ -8,7 +8,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://download.gna.org/mu-conference/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	https://gna.org/projects/mu-conference/
+#HOMEPAGE=	https://gna.org/projects/mu-conference/
 COMMENT=	Implementation of the XEP-0045 Multi-User Chat protocol
 LICENSE=	gnu-gpl-v2
 

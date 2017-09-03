@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/02/28 15:20:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2017/09/03 08:37:00 wiz Exp $
 
 DISTNAME=	pfstat-2.5
 PKGREVISION=	10
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils net
 MASTER_SITES=	http://www.benzedrine.cx/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.benzedrine.cx/pfstat.html
+#HOMEPAGE=	http://www.benzedrine.cx/pfstat.html
 COMMENT=	Utility to render graphical statistics for PF
 LICENSE=	2-clause-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2017/08/24 20:03:34 adam Exp $
+# $NetBSD: Makefile,v 1.74 2017/09/03 08:36:57 wiz Exp $
 
 DISTNAME=	mlt-0.9.0
 PKGREVISION=	37
@@ -7,7 +7,7 @@ MASTER_SITES=	http://downloads.sourceforge.net/project/mlt/mlt/
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mltframework.org/twiki/bin/view/MLT/
+#HOMEPAGE=	http://www.mltframework.org/twiki/bin/view/MLT/
 COMMENT=	Open source multimedia framework
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/07/09 06:38:44 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2017/09/03 08:36:57 wiz Exp $
 
 DISTNAME=		repackaged-${PKGNAME_NOREV}
 PKGNAME=		nasd-1.3
@@ -7,7 +7,7 @@ CATEGORIES=		net sysutils
 MASTER_SITES=		${MASTER_SITE_LOCAL} # original tar file has some trailing base64 checksums
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.pdl.cmu.edu/NASD/Downloads/NASDcode.html
+#HOMEPAGE=		http://www.pdl.cmu.edu/NASD/Downloads/NASDcode.html
 COMMENT=		Prototype storage implementation
 
 BROKEN_EXCEPT_ON_PLATFORM=	OSF1-*-* Linux-*-* FreeBSD-*-* NetBSD-*-* \

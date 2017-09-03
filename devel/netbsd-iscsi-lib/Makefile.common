@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2014/10/05 16:41:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2017/09/03 08:36:52 wiz Exp $
 #
 # used by net/netbsd-iscsi-target/Makefile
 # used by net/netbsd-iscsi-initiator/Makefile
@@ -7,7 +7,7 @@ DISTNAME=	netbsd-iscsi-20111006
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 
 MAINTAINER=	sborrill@NetBSD.org
-HOMEPAGE=	http://www.alistaircrooks.co.uk/software.html
+#HOMEPAGE=	http://www.alistaircrooks.co.uk/software.html
 LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes

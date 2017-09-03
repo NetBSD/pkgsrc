@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/06/28 08:27:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2017/09/03 08:37:03 wiz Exp $
 
 DISTNAME=	Kwiki-Icons-Gnome-0.15
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Kwiki/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.kwiki.org/
+#HOMEPAGE=	http://www.kwiki.org/
 #HOMEPAGE=	http://search.cpan.org/dist/Kwiki-Icons-Gnome/
 COMMENT=	Kwiki GNOME icons plugin
 

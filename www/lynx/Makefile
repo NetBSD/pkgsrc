@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.126 2017/01/19 18:52:29 agc Exp $
+# $NetBSD: Makefile,v 1.127 2017/09/03 08:37:02 wiz Exp $
 
 DISTNAME=	lynx2.8.8rel.2
 PKGNAME=	${DISTNAME:S/lynx/lynx-/:S/rel//}
 PKGREVISION=	7
 CATEGORIES=	www
-MASTER_SITES=	http://lynx.isc.org/${SUBDIR:Q}/
+#MASTER_SITES=	http://lynx.isc.org/${SUBDIR:Q}/
 MASTER_SITES+=	ftp://ftp.cyf-kr.edu.pl/pub/unix/lynx/${SUBDIR:Q}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lynx.isc.org/
+#HOMEPAGE=	http://lynx.isc.org/
 COMMENT=	Alphanumeric display oriented World-Wide Web Client
 LICENSE=	gnu-gpl-v2
 

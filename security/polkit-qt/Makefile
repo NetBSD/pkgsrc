@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2016/03/05 11:27:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2017/09/03 08:36:59 wiz Exp $
 
 DISTNAME=	polkit-qt-0.9.4
 PKGREVISION=	19
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=apps/KDE4.x/admin/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://api.kde.org/kdesupport-api/kdesupport-apidocs/polkit-qt/html
+#HOMEPAGE=	http://api.kde.org/kdesupport-api/kdesupport-apidocs/polkit-qt/html
 COMMENT=	Qt Wrapper around PolicyKit
 LICENSE=	gnu-lgpl-v2.1
 

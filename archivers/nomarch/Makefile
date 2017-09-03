@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/10/09 14:05:53 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/09/03 08:36:49 wiz Exp $
 #
 
 DISTNAME=	nomarch-1.4
@@ -6,7 +6,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=utils/compress/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rus.members.beeb.net/nomarch.html
+#HOMEPAGE=	http://rus.members.beeb.net/nomarch.html
 COMMENT=	Free replacement for the arc program
 
 MAKE_FLAGS+=	PREFIX=${PREFIX:Q}
