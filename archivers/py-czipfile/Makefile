@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/01/01 14:43:22 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/03 08:53:04 wiz Exp $
 
 DISTNAME=	czipfile-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/czipfile/}
 
 MAINTAINER=	nonakap@gmail.com
-HOMEPAGE=	http://pypi.python.org/pypi/czipfile
+HOMEPAGE=	https://pypi.python.org/pypi/czipfile
 COMMENT=	Replacement for builtin zipfile, with fast, C-based zipfile decryption
 LICENSE=	python-software-foundation
 

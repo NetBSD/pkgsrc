@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2015/04/26 11:52:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2017/09/03 08:53:05 wiz Exp $
 
 DISTNAME=	mysql-connector-odbc-5.3.2-src
 PKGNAME=	${DISTNAME:S/mysql-connector-odbc/myodbc/:S/-src$//}
@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=Connector-ODBC/5.3/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mysql.com/
+HOMEPAGE=	https://www.mysql.com/
 COMMENT=	ODBC driver (server side) for MySQL
 LICENSE=	gnu-gpl-v2
 

@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2014/09/25 16:08:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/03 08:53:13 wiz Exp $
 #
 
 DISTNAME=	paris-traceroute-0.92-dev
 PKGNAME=	paris-traceroute-0.92
 CATEGORIES=	net
-MASTER_SITES=	http://paris-traceroute.net/downloads/
+MASTER_SITES=	https://paris-traceroute.net/downloads/
 
 MAINTAINER=	imil@NetBSD.org
-HOMEPAGE=	http://paris-traceroute.net/
+HOMEPAGE=	https://paris-traceroute.net/
 COMMENT=	Traceroute-like network diagnosis and measurement tool
 LICENSE=	gnu-gpl-v2
 

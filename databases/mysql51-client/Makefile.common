@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2017/05/05 16:22:28 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.36 2017/09/03 08:53:05 wiz Exp $
 #
 # used by databases/mysql51-client/Makefile
 # used by databases/mysql51-server/Makefile
@@ -8,7 +8,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-5.1/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mysql.com/
+HOMEPAGE=	https://www.mysql.com/
 LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=		yes

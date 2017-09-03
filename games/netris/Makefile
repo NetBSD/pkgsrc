@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/05/09 15:07:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2017/09/03 08:53:09 wiz Exp $
 #
 
 DISTNAME=		netris-0.52
@@ -12,7 +12,7 @@ PATCHFILES=		netris-0.5-v6-19991206a.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		uebs@gmx.at
-HOMEPAGE=		http://www.netris.org/
+HOMEPAGE=		https://www.netris.org/
 COMMENT=		Everybody's darling T*tris in a networked version
 
 USE_TOOLS+=		gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/01/01 14:43:55 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2017/09/03 08:53:14 wiz Exp $
 
 DISTNAME=	cryptkit-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cryptkit/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/cryptkit/
+HOMEPAGE=	https://sourceforge.net/projects/cryptkit/
 COMMENT=	Python Cryptographic Toolkit
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.9

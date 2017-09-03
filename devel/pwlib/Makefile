@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2016/03/05 11:27:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.69 2017/09/03 08:53:07 wiz Exp $
 
 DISTNAME=	pwlib-v1_8_3-src
 PKGNAME=	pwlib-1.8.3
@@ -8,7 +8,7 @@ MASTER_SITES+=	http://www.voxgratia.org/releases/
 EXTRACT_SUFX=	-tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/openh323/
+HOMEPAGE=	https://sourceforge.net/projects/openh323/
 COMMENT=	Portable Windows Library
 # note: obsoleted by devel/ptlib
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/01/01 14:43:27 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/09/03 08:53:06 wiz Exp $
 
 DISTNAME=	ckanclient-0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/ckanclient/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ckan.org/
+HOMEPAGE=	https://ckan.org/
 COMMENT=	Open-source data portal software
 LICENSE=	mit
 

@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.33 2014/12/30 08:11:14 plunky Exp $
+# $NetBSD: Makefile,v 1.34 2017/09/03 08:53:05 wiz Exp $
 #
 
 DISTNAME=	obexapp-1.4.15
 PKGREVISION=	2
 CATEGORIES=	comms
-MASTER_SITES=	http://people.freebsd.org/~emax/obexapp/
+MASTER_SITES=	https://people.freebsd.org/~emax/obexapp/
 
 MAINTAINER=	plunky@NetBSD.org
-HOMEPAGE=	http://people.freebsd.org/~emax/obexapp/
+HOMEPAGE=	https://people.freebsd.org/~emax/obexapp/
 COMMENT=	Obex application to transfer objects to mobile equipment
 LICENSE=	modified-bsd
 

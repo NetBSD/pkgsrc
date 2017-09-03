@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2017/03/07 23:17:51 sevan Exp $
+# $NetBSD: Makefile,v 1.41 2017/09/03 08:53:15 wiz Exp $
 
 DISTNAME=	pycrypto-2.6.1
 PKGNAME=	${DISTNAME:S/^py/${PYPKGPREFIX}-/}
@@ -7,7 +7,7 @@ CATEGORIES=	security python
 MASTER_SITES=	http://ftp.dlitz.net/pub/dlitz/crypto/pycrypto/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://www.dlitz.net/software/pycrypto/
+HOMEPAGE=	https://www.dlitz.net/software/pycrypto/
 COMMENT=	Cryptographic and hash functions for Python
 LICENSE=	public-domain AND python-software-foundation
 

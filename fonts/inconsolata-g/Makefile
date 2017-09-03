@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/06/01 16:35:34 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/03 08:53:08 wiz Exp $
 
 DISTNAME=	inconsolata-g_font
 PKGNAME=	inconsolata-g-20090213
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.fantascienza.net/leonardo/ar/inconsolatag/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://leonardo-m.livejournal.com/77079.html
+HOMEPAGE=	https://leonardo-m.livejournal.com/77079.html
 COMMENT=	Modified Inconsolata TrueType font
 #LICENSE=	ofl-v1.1
 
