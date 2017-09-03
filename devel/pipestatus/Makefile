@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:25 asau Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/03 08:53:07 wiz Exp $
 #
 
 DISTNAME=	pipestatus-0.6.0
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pipestatus/}
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/pipestatus/
+HOMEPAGE=	https://sourceforge.net/projects/pipestatus/
 COMMENT=	UNIX/POSIX shell helper for running pipes safely
 LICENSE=	public-domain
 

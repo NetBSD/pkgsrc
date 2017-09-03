@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/04/23 14:52:31 taca Exp $
+# $NetBSD: Makefile,v 1.23 2017/09/03 08:53:17 wiz Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typo3/}
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://typo3.com/
+HOMEPAGE=	https://typo3.com/
 COMMENT=	The TYPO3 content management system, 6.2 LTS release
 LICENSE=	gnu-gpl-v2
 

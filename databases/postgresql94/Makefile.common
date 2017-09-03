@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2017/08/13 19:25:17 adam Exp $
+# $NetBSD: Makefile.common,v 1.18 2017/09/03 08:53:06 wiz Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -22,7 +22,7 @@ MASTER_SITES=	${MASTER_SITE_PGSQL:=source/v${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER?=	adam@NetBSD.org
-HOMEPAGE=	http://www.postgresql.org/
+HOMEPAGE=	https://www.postgresql.org/
 LICENSE=	postgresql-license
 
 CONFLICTS+=	postgresql-[0-9]*

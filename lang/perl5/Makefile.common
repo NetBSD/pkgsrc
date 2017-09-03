@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2017/06/05 13:41:22 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.31 2017/09/03 08:53:09 wiz Exp $
 #
 # used by lang/perl5/Makefile
 # used by databases/p5-gdbm/Makefile
@@ -10,5 +10,5 @@ DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.perl.org/
+HOMEPAGE=	https://www.perl.org/
 LICENSE=	${PERL5_LICENSE}

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2017/08/24 20:03:36 adam Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/03 08:53:12 wiz Exp $
 
 DISTNAME=	megatools-1.9.95
 PKGREVISION=	5
 CATEGORIES=	filesystems security
-MASTER_SITES=	http://megatools.megous.com/builds/
+MASTER_SITES=	https://megatools.megous.com/builds/
 
 MAINTAINER=	root@zta.lk
-HOMEPAGE=	http://megatools.megous.com/
+HOMEPAGE=	https://megatools.megous.com/
 COMMENT=	Command line client for Mega.co.nz
 LICENSE=	gnu-gpl-v2
 

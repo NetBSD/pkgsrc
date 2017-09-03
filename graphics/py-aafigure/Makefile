@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/01/01 14:43:42 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/09/03 08:53:09 wiz Exp $
 
 DISTNAME=	aafigure-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	graphics converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aafigure/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://launchpad.net/aafigure
+HOMEPAGE=	https://launchpad.net/aafigure
 COMMENT=	ASCII art to image converter
 LICENSE=	modified-bsd
 

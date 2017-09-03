@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/08/18 07:31:10 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/03 08:53:09 wiz Exp $
 
 DISTNAME=	open-cobol-ce-1.1.r59
 PKGNAME=	${DISTNAME:S/.r/./}
@@ -7,7 +7,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=open-cobol/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/open-cobol/
+HOMEPAGE=	https://sourceforge.net/projects/open-cobol/
 COMMENT=	OpenCOBOL CE compiler
 LICENSE=	gnu-gpl-v2
 

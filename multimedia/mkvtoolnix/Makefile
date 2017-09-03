@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2017/08/24 20:03:34 adam Exp $
+# $NetBSD: Makefile,v 1.92 2017/09/03 08:53:11 wiz Exp $
 
 DISTNAME=	mkvtoolnix-9.5.0
 PKGREVISION=	7
@@ -7,7 +7,7 @@ MASTER_SITES=	https://mkvtoolnix.download/sources/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mkvtoolnix.download/
+HOMEPAGE=	https://mkvtoolnix.download/
 COMMENT=	Set of tools to create, alter and inspect Matroska files
 LICENSE=	gnu-gpl-v2
 

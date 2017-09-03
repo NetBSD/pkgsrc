@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/05/06 14:59:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2017/09/03 08:53:12 wiz Exp $
 
 DISTNAME=	miredo-1.2.2
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.remlab.net/files/miredo/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.remlab.net/miredo/
+HOMEPAGE=	https://www.remlab.net/miredo/
 COMMENT=	Teredo IPv6 tunneling
 LICENSE=	gnu-gpl-v2
 

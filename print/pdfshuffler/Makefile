@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2017/01/01 14:43:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/03 08:53:13 wiz Exp $
 
 DISTNAME=	pdfshuffler-0.6.0
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pdfshuffler/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/pdfshuffler/
+HOMEPAGE=	https://sourceforge.net/projects/pdfshuffler/
 COMMENT=	Simple PDF editor
 LICENSE=	gnu-gpl-v3
 

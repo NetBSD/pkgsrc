@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/07/23 01:29:35 dsainty Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/03 08:53:05 wiz Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV:S/./_/g}
@@ -8,7 +8,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=palm-db-tools/}
 
 MAINTAINER=	dsainty@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/palm-db-tools/
+HOMEPAGE=	https://sourceforge.net/projects/palm-db-tools/
 COMMENT=	Conversion utilities for PalmOS flat-file database programs
 LICENSE=	gnu-gpl-v2
 

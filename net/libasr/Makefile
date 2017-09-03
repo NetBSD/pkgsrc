@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/05/01 05:03:23 mef Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/03 08:53:12 wiz Exp $
 
 DISTNAME=	libasr-1.0.2
 CATEGORIES=	net
-MASTER_SITES=	http://www.opensmtpd.org/archives/
+MASTER_SITES=	https://www.opensmtpd.org/archives/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/OpenSMTPD/libasr

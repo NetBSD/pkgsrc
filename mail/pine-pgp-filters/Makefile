@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2017/09/03 08:36:56 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/09/03 08:53:11 wiz Exp $
 #
 
 DISTNAME=		pine-pgp-filters-1.6
 CATEGORIES=		security mail
 PKGREVISION=		1
-#MASTER_SITES=		http://dougbarton.us/PGP/scripts/ppf/
+#MASTER_SITES=		https://dougbarton.us/PGP/scripts/ppf/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-#HOMEPAGE=		http://dougbarton.us/PGP/scripts/ppf/
+#HOMEPAGE=		https://dougbarton.us/PGP/scripts/ppf/
 COMMENT=		Filters to integrate Pine with gnupg or pgp
 
 HAS_CONFIGURE=		yes

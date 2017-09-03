@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/09/11 17:03:29 taca Exp $
+# $NetBSD: Makefile,v 1.17 2017/09/03 08:53:16 wiz Exp $
 
 DISTNAME=		wordpress-${VERSION}-ja
 PKGNAME=		${PHP_PKG_PREFIX}-ja-wordpress-${VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=		www
 MASTER_SITES=		https://ja.wordpress.org/
 
 MAINTAINER=		ryoon@NetBSD.org
-HOMEPAGE=		http://ja.wordpress.org/
+HOMEPAGE=		https://ja.wordpress.org/
 COMMENT=		Blogging tool written in php (Localized for Japanese)
 LICENSE=		gnu-gpl-v2
 

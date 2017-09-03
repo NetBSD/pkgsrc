@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2017/06/23 17:12:54 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.19 2017/09/03 08:53:13 wiz Exp $
 
 PDNS_VERSION=		4.0.4
 DISTNAME=		pdns-${PDNS_VERSION}
@@ -7,7 +7,7 @@ MASTER_SITES=		http://downloads.powerdns.com/releases/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER?=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.powerdns.com/
+HOMEPAGE=		https://www.powerdns.com/
 LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		bison flex gmake pkg-config

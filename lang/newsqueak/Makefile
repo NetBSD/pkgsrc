@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/25 19:58:32 dholland Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/03 08:53:09 wiz Exp $
 
 DISTNAME=	newsqueak
 PKGNAME=	newsqueak-20000211
@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://www.herpolhode.com/rob/
 
 MAINTAINER=	dholland@NetBSD.org
-HOMEPAGE=	http://en.wikipedia.org/wiki/Newsqueak
+HOMEPAGE=	https://en.wikipedia.org/wiki/Newsqueak
 COMMENT=	Newsqueak: a language for communicating with mice
 LICENSE=	public-domain
 

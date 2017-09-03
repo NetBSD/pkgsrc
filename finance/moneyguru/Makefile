@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/12/25 12:47:44 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2017/09/03 08:53:08 wiz Exp $
 
 DISTNAME=	moneyguru-src-2.10.2
 PKGNAME=	${DISTNAME:S/-src//}
@@ -7,7 +7,7 @@ CATEGORIES=	finance
 MASTER_SITES=	https://download.hardcoded.net/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.hardcoded.net/moneyguru/
+HOMEPAGE=	https://www.hardcoded.net/moneyguru/
 COMMENT=	Personal finance management application
 LICENSE=	modified-bsd
 

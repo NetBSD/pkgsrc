@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2017/08/20 19:41:13 joerg Exp $
+# $NetBSD: Makefile,v 1.139 2017/09/03 08:53:09 wiz Exp $
 
 DISTNAME=	mesa-11.2.2
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mesa3d.org/
+HOMEPAGE=	https://www.mesa3d.org/
 COMMENT=	The Mesa 3D Graphics Library
 LICENSE=	mit
 

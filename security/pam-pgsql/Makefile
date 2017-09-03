@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/09/03 08:36:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/03 08:53:14 wiz Exp $
 
 DISTNAME=	pam-pgsql-0.7.3.1
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pam-pgsql/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://sourceforge.net/project/pam-pgsql/
+#HOMEPAGE=	https://sourceforge.net/project/pam-pgsql/
 COMMENT=	PAM module to authenticate using a PostgreSQL database
 LICENSE=	gnu-gpl-v2
 

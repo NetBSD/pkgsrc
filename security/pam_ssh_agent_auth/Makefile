@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/03/05 11:29:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/03 08:53:14 wiz Exp $
 
 DISTNAME=	pam_ssh_agent_auth-0.9.2
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pamsshagentauth/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/pamsshagentauth/
+HOMEPAGE=	https://sourceforge.net/projects/pamsshagentauth/
 COMMENT=	PAM module which permits authentication via ssh-agent
 LICENSE=	modified-bsd
 
