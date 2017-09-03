@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/06/29 09:01:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2017/09/03 08:37:04 wiz Exp $
 
 DISTNAME=      	Kwiki-Users-Remote-0.04
 PKGREVISION=	10
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Kwiki/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.kwiki.org/
+#HOMEPAGE=	http://www.kwiki.org/
 COMMENT=	Kwiki plugin to automatically set user name from HTTP authentication
 
 DEPENDS+=	p5-Kwiki>=0.37nb1:../../www/p5-Kwiki

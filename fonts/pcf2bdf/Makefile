@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 18:28:29 asau Exp $
+# $NetBSD: Makefile,v 1.15 2017/09/03 08:36:54 wiz Exp $
 #
 
 DISTNAME=	pcf2bdf-1.04
 PKGREVISION=	1
 CATEGORIES=	fonts graphics x11
-MASTER_SITES=	http://www.tsg.ne.jp/GANA/S/pcf2bdf/
+#MASTER_SITES=	http://www.tsg.ne.jp/GANA/S/pcf2bdf/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	http://www.tsg.ne.jp/GANA/S/pcf2bdf/
+#HOMEPAGE=	http://www.tsg.ne.jp/GANA/S/pcf2bdf/
 COMMENT=	Convert X font from PCF to BDF
 
 WRKSRC=		${WRKDIR}

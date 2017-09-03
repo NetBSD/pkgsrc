@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/08 12:42:22 asau Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/03 08:37:01 wiz Exp $
 #
 
 DISTNAME=	musca-0.9.24
@@ -8,7 +8,7 @@ MASTER_SITES=	http://aerosuidae.net/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://aerosuidae.net/musca/Musca_Window_Manager
+#HOMEPAGE=	http://aerosuidae.net/musca/Musca_Window_Manager
 COMMENT=	Simple dynamic window manager for X
 
 LICENSE=	gnu-gpl-v3
