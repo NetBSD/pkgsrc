@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.33 2015/12/02 21:14:16 leot Exp $
+$NetBSD: patch-ae,v 1.34 2017/09/03 11:30:54 leot Exp $
 
 For proper libtool usage split CC into CC_COMPILE and CC with libtool
 mode options compile/link respectively.
 
 Same for CXX.
 
---- Makedefs.in.orig	2015-02-17 13:10:19.000000000 +0000
+--- Makedefs.in.orig	2017-06-30 15:44:38.000000000 +0000
 +++ Makedefs.in
-@@ -19,9 +19,11 @@
+@@ -17,9 +17,11 @@
  
  AR		=	@AR@
  AWK		=	@AWK@
@@ -21,23 +21,23 @@ Same for CXX.
  DSO		=	@DSO@
  DSOXX		=	@DSOXX@
  GZIP		=	@GZIP@
-@@ -40,12 +42,12 @@ SHELL		=	/bin/sh
+@@ -38,12 +40,12 @@ SHELL		=	/bin/sh
  # Installation programs...
  #
  
--INSTALL_BIN	=	$(LIBTOOL) $(INSTALL) -c -m 555 @INSTALL_STRIP@
+-INSTALL_BIN	=	$(LIBTOOL) $(INSTALL) -c -m @CUPS_EXE_FILE_PERM@ @INSTALL_STRIP@
 -INSTALL_COMPDATA =	$(INSTALL) -c -m 444 @INSTALL_GZIP@
-+INSTALL_BIN	=	$(LIBTOOL) --mode=install $(INSTALL) -c -m 755 @INSTALL_STRIP@
++INSTALL_BIN	=	$(LIBTOOL) --mode=install $(INSTALL) -c -m @CUPS_EXE_FILE_PERM@ @INSTALL_STRIP@
 +INSTALL_COMPDATA =	$(INSTALL) -c -m 444
  INSTALL_CONFIG	=	$(INSTALL) -c -m @CUPS_CONFIG_FILE_PERM@
  INSTALL_DATA	=	$(INSTALL) -c -m 444
  INSTALL_DIR	=	$(INSTALL) -d
--INSTALL_LIB	=	$(LIBTOOL) $(INSTALL) -c -m 555 @INSTALL_STRIP@
-+INSTALL_LIB	=	$(LIBTOOL) --mode=install $(INSTALL) -c -m 755 @INSTALL_STRIP@
+-INSTALL_LIB	=	$(LIBTOOL) $(INSTALL) -c -m @CUPS_EXE_FILE_PERM@ @INSTALL_STRIP@
++INSTALL_LIB	=	$(LIBTOOL) --mode=install $(INSTALL) -c -m @CUPS_EXE_FILE_PERM@ @INSTALL_STRIP@
  INSTALL_MAN	=	$(INSTALL) -c -m 444
- INSTALL_SCRIPT	=	$(INSTALL) -c -m 555
+ INSTALL_SCRIPT	=	$(INSTALL) -c -m @CUPS_EXE_FILE_PERM@
  
-@@ -135,7 +137,7 @@ CXXLIBS		=	@CXXLIBS@
+@@ -141,7 +143,7 @@ CXXLIBS		=	@CXXLIBS@
  DBUS_NOTIFIER	=	@DBUS_NOTIFIER@
  DBUS_NOTIFIERLIBS =	@DBUS_NOTIFIERLIBS@
  DNSSD_BACKEND	=	@DNSSD_BACKEND@
@@ -46,7 +46,7 @@ Same for CXX.
  DSOLIBS		=	@DSOLIBS@ $(COMMONLIBS)
  DNSSDLIBS	=	@DNSSDLIBS@
  IPPFIND_BIN	=	@IPPFIND_BIN@
-@@ -246,11 +248,11 @@ USBQUIRKS	=	@USBQUIRKS@
+@@ -252,11 +254,11 @@ USBQUIRKS	=	@USBQUIRKS@
  
  .c.o:
  	echo Compiling $<...
