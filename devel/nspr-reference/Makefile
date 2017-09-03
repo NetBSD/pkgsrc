@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2014/04/19 01:16:26 asau Exp $
-#
+# $NetBSD: Makefile,v 1.12 2017/09/03 08:01:00 wiz Exp $
 
 DISTNAME=	nspr-reference
 PKGNAME=	${DISTNAME}-0.1
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=nspr/doc/}
+#MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=nspr/doc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_MOZILLA_ESR:=nspr/doc/}
+HOMEPAGE=	https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR
 COMMENT=	HTML Documentation for NSPR
 
 NO_CONFIGURE=		YES
