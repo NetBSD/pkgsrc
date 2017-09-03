@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.41 2016/07/09 06:38:30 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2017/09/03 08:53:10 wiz Exp $
 
 DISTNAME=	MHonArc-2.6.19
 PKGNAME=	mhonarc-2.6.19
 PKGREVISION=	4
 CATEGORIES=	mail
-MASTER_SITES=	http://www.mhonarc.org/release/MHonArc/tar/
+MASTER_SITES=	https://www.mhonarc.org/release/MHonArc/tar/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mhonarc.org/
+HOMEPAGE=	https://www.mhonarc.org/
 COMMENT=	Mailbox to HTML converter, suitable for list archives
 LICENSE=	gnu-gpl-v2
 
