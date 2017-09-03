@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2017/06/22 12:30:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2017/09/03 11:27:47 leot Exp $
 bin/driverless
 bin/foomatic-rip
 bin/ttfread
@@ -40,6 +40,7 @@ libexec/cups/filter/pdftopdf
 libexec/cups/filter/pdftops
 libexec/cups/filter/pdftoraster
 libexec/cups/filter/rastertoescpx
+libexec/cups/filter/rastertopclm
 libexec/cups/filter/rastertopclx
 libexec/cups/filter/rastertopdf
 libexec/cups/filter/rastertops
