@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2017/08/29 13:06:19 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2017/09/03 08:53:12 wiz Exp $
 
 DISTNAME=	mDNSResponder-258.14
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://www.opensource.apple.com/tarballs/mDNSResponder/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://developer.apple.com/bonjour/
+HOMEPAGE=	https://developer.apple.com/bonjour/
 COMMENT=	Apple's mDNS responder
 LICENSE=	apache-2.0 AND modified-bsd
 

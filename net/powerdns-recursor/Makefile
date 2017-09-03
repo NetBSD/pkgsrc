@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/08/02 20:15:42 fhajny Exp $
+# $NetBSD: Makefile,v 1.25 2017/09/03 08:53:13 wiz Exp $
 #
 
 DISTNAME=		pdns-recursor-4.0.6
@@ -7,7 +7,7 @@ MASTER_SITES=		http://downloads.powerdns.com/releases/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.powerdns.com/
+HOMEPAGE=		https://www.powerdns.com/
 COMMENT=		PowerDNS resolver/recursing nameserver
 LICENSE=		gnu-gpl-v2
 

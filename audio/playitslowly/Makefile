@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2016/08/28 15:48:28 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/03 08:53:04 wiz Exp $
 
 DISTNAME=	playitslowly-1.5.1
 CATEGORIES=	audio
-MASTER_SITES=	http://29a.ch/playitslowly/
+MASTER_SITES=	https://29a.ch/playitslowly/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://29a.ch/playitslowly/
+HOMEPAGE=	https://29a.ch/playitslowly/
 COMMENT=	Play back audio files at a different speed or pitch
 LICENSE=	gnu-gpl-v3
 

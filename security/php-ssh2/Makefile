@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/01/16 14:32:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.8 2017/09/03 08:53:14 wiz Exp $
 #
 
 MODNAME=		ssh2
@@ -6,7 +6,7 @@ PECL_VERSION=		0.13
 CATEGORIES+=		security
 
 MAINTAINER=		filip@joyent.com
-HOMEPAGE=		http://www.libssh2.org/
+HOMEPAGE=		https://www.libssh2.org/
 COMMENT=		PHP bindings to the functions of libssh2
 LICENSE=		php
 

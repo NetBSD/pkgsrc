@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/01/01 14:43:55 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/09/03 08:53:15 wiz Exp $
 
 VERSION=	0.6.0
 VERSION_EXCESSIVE=	1206569328141510525648634803928199668821045408958
@@ -8,7 +8,7 @@ CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycryptopp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tahoe-lafs.org/trac/pycryptopp
+HOMEPAGE=	https://tahoe-lafs.org/trac/pycryptopp
 COMMENT=	Python wrapper for (and copy of parts of) crypto++
 # GPL v2 or later.
 # or Transitive Grace Period Public Licence, version 1.0 or later.
