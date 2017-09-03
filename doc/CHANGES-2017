@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3543 2017/09/03 08:58:29 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3544 2017/09/03 09:04:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4979,3 +4979,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/go to 1.9 [bsiegert 2017-09-03]
 	Updated textproc/p5-Lingua-EN-Fathom to 1.19 [wiz 2017-09-03]
 	Removed databases/maatkit successor databases/percona-toolkit [wiz 2017-09-03]
+	Removed x11/multi-aterm [wiz 2017-09-03]
+	Removed x11/mrxvt [wiz 2017-09-03]
