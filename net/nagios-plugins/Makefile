@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.45 2017/07/04 19:45:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.46 2017/09/03 08:53:12 wiz Exp $
 #
 
 CATEGORIES=	net sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/nagiosplug/
+HOMEPAGE=	https://sourceforge.net/projects/nagiosplug/
 COMMENT=	Nagios plugins
 LICENSE=	gnu-gpl-v2
 

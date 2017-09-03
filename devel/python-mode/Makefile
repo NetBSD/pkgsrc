@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/06/10 21:51:04 jnemeth Exp $
+# $NetBSD: Makefile,v 1.28 2017/09/03 08:53:08 wiz Exp $
 #
 
 DISTNAME=	python-mode-1.0
@@ -8,7 +8,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=python-mode/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/python-mode/
+HOMEPAGE=	https://sourceforge.net/projects/python-mode/
 COMMENT=	Emacs mode for editing python files
 
 ELISP_FILES=	python-mode.el
