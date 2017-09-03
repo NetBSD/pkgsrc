@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/02/15 18:58:40 gls Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/03 08:53:14 wiz Exp $
 
 DISTNAME=	password-store-1.6.5
 CATEGORIES=	security
@@ -6,7 +6,7 @@ MASTER_SITES=	http://git.zx2c4.com/password-store/snapshot/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	imil@NetBSD.org
-HOMEPAGE=	http://www.passwordstore.org/
+HOMEPAGE=	https://www.passwordstore.org/
 COMMENT=	Standard UNIX password manager
 LICENSE=	gnu-gpl-v2
 

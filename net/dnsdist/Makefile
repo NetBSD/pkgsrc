@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/22 17:00:35 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/03 08:53:11 wiz Exp $
 
 DISTNAME=	dnsdist-1.2.0
 CATEGORIES=	net
@@ -6,7 +6,7 @@ MASTER_SITES=	https://downloads.powerdns.com/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	filip@joyent.com
-HOMEPAGE=	http://dnsdist.org/
+HOMEPAGE=	https://dnsdist.org/
 COMMENT=	Highly DNS-, DoS- and abuse-aware loadbalancer
 LICENSE=	gnu-gpl-v2
 

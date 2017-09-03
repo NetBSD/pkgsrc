@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2014/06/28 14:23:33 asau Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/03 08:53:17 wiz Exp $
 
 DISTNAME=	fever-1.2
 PKGNAME=	${PHP_PKG_PREFIX}-tt-rss-${DISTNAME:S/-/-plugin-/}
 CATEGORIES=	www
-MASTER_SITES=	-http://tt-rss.org/forum/download/file.php?id=452
+MASTER_SITES=	-https://tt-rss.org/forum/download/file.php?id=452
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tt-rss.org/forum/viewtopic.php?f=22&t=1981
+HOMEPAGE=	https://tt-rss.org/forum/viewtopic.php?f=22&t=1981
 COMMENT=	Fever emulation plugin for Tiny Tiny RSS
 
 DEPENDS+=	${PHP_PKG_PREFIX}-tt-rss>=1.7.9:../../www/php-tt-rss

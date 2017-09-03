@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2017/02/12 06:25:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2017/09/03 08:53:09 wiz Exp $
 
 DISTNAME=	nvtv-0.4.7
 PKGREVISION=	30
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nv-tv-out/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/nv-tv-out/
+HOMEPAGE=	https://sourceforge.net/projects/nv-tv-out/
 COMMENT=	Tool to manipulate TV-Out settings on NVidia cards
 
 ONLY_FOR_PLATFORM=	*-*-i386	# uses iopl()

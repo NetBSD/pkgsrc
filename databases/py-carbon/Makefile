@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/02/14 10:26:28 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/03 08:53:06 wiz Exp $
 
 DISTNAME=	carbon-0.9.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ GITHUB_PROJECT=	carbon
 MASTER_SITES=	${MASTER_SITE_GITHUB:=graphite-project/}
 
 MAINTAINER=	riz@NetBSD.org
-HOMEPAGE=	http://launchpad.net/graphite
+HOMEPAGE=	https://launchpad.net/graphite
 COMMENT=	Backend storage application for graphite
 LICENSE=	apache-2.0
 

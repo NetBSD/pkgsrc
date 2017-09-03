@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/04/05 12:33:49 fhajny Exp $
+# $NetBSD: Makefile,v 1.12 2017/09/03 08:53:17 wiz Exp $
 
 TTRVER=		1.12
 DISTNAME=	Tiny-Tiny-RSS-${TTRVER}
@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	-http://github.com/gothfox/Tiny-Tiny-RSS/archive/${TTRVER}.tar.gz
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://tt-rss.org/
+HOMEPAGE=	https://tt-rss.org/
 COMMENT=	Tiny Tiny RSS is an open source web-based RSS feed reader
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/08/01 15:09:53 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/03 08:53:07 wiz Exp $
 
 DISTNAME=	man-pages-4.05
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.kernel.org/pub/linux/docs/man-pages/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.kernel.org/doc/man-pages/
+HOMEPAGE=	https://www.kernel.org/doc/man-pages/
 COMMENT=	The Linux man-pages project for Linux kernel and C library interface
 #LICENSE=	many, and not even upstream cares about sorting them out
 

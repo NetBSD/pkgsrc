@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2017/06/01 13:30:24 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2017/09/03 08:53:05 wiz Exp $
 #
 # used by databases/mysql-cluster/Makefile
 
@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-Cluster-7.4/}
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mysql.com/products/cluster/
+HOMEPAGE=	https://www.mysql.com/products/cluster/
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2017/08/20 06:59:16 manu Exp $
+# $NetBSD: Makefile,v 1.74 2017/09/03 08:53:12 wiz Exp $
 #
 
 DISTNAME=		nagios-4.3.2
@@ -11,7 +11,7 @@ DISTFILES+=		nagios-netbsd40-icons.tar.gz
 SITES.nagios-netbsd40-icons.tar.gz= ${MASTER_SITE_LOCAL}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.nagios.org/
+HOMEPAGE=		https://www.nagios.org/
 COMMENT=		Network monitor
 LICENSE=		gnu-gpl-v2
 

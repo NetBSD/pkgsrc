@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2016/08/28 15:48:30 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2017/09/03 08:53:08 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-idle-${PY_DISTVERSION}
 CATEGORIES=	devel python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.python.org/idle/
+HOMEPAGE=	https://www.python.org/idle/
 COMMENT=	IDLE - The Integrated DeveLopment Environment for Python
 
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk

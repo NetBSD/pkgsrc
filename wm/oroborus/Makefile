@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.19 2012/10/23 10:24:15 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2017/09/03 08:53:16 wiz Exp $
 #
 
 DISTNAME=	oroborus_2.0.12-1
 PKGNAME=	${DISTNAME:S/_/-/:C/-.$//}
 PKGREVISION=	1
 CATEGORIES=	wm x11
-MASTER_SITES=	http://www.oroborus.org/debian/dists/sid/main/source/x11/
+MASTER_SITES=	https://www.oroborus.org/debian/dists/sid/main/source/x11/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.oroborus.org/
+HOMEPAGE=	https://www.oroborus.org/
 COMMENT=	Small and simple window manager for X
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
