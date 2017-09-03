@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/01/19 18:52:11 agc Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/03 08:36:54 wiz Exp $
 
 DISTNAME=		proj-pdf-docs
 PKGNAME=		proj-doc-1.1
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.remotesensing.org/pub/proj/
 MASTER_SITES+=		http://dl.maptools.org/dl/proj/
 
 MAINTAINER=		gdt@NetBSD.org
-HOMEPAGE=		http://www.remotesensing.org/proj/
+#HOMEPAGE=		http://www.remotesensing.org/proj/
 COMMENT=		PDF documentation for the PROJ cartographic projection software
 
 NO_BUILD=		yes

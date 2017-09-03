@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.11 2015/09/03 03:12:11 dsainty Exp $
+# $NetBSD: Makefile,v 1.12 2017/09/03 08:36:53 wiz Exp $
 #
 
 PKGNAME=		picprg-2.3d
 DISTNAME=		${PKGNAME_NOREV:S/-//}
 PKGREVISION=		2
 CATEGORIES=		devel
-MASTER_SITES=		http://www.finitesite.com/d3jsys/
+#MASTER_SITES=		http://www.finitesite.com/d3jsys/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.finitesite.com/d3jsys/
+#HOMEPAGE=		http://www.finitesite.com/d3jsys/
 COMMENT=		Parallel port PIC programmer
 
 # The programmer makes direct I/O bus accesses via the i386 in/out

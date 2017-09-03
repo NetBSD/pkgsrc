@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2016/02/25 11:09:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2017/09/03 08:36:50 wiz Exp $
 
 DISTNAME=	NetPIPE-3.7.1
 PKGNAME=	netpipe-3.7.1
 CATEGORIES=	benchmarks net
-MASTER_SITES=	http://www.scl.ameslab.gov/netpipe/code/
+#MASTER_SITES=	http://www.scl.ameslab.gov/netpipe/code/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.scl.ameslab.gov/netpipe/
+#HOMEPAGE=	http://www.scl.ameslab.gov/netpipe/
 COMMENT=	TCP/PVM/MPI testing and performance measuring tool
 LICENSE=	gnu-gpl-v2
 

@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.33 2017/01/19 18:52:24 agc Exp $
+# $NetBSD: Makefile,v 1.34 2017/09/03 08:36:59 wiz Exp $
 
 DISTNAME=	pks-0.9.4
 PKGREVISION=	5
 CATEGORIES=	security www
-MASTER_SITES+=	http://www.mit.edu/people/marc/pks/
+#MASTER_SITES+=	http://www.mit.edu/people/marc/pks/
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=pks/}
-PATCH_SITES=	http://www.mit.edu/people/marc/pks/
+#PATCH_SITES=	http://www.mit.edu/people/marc/pks/
 PATCHFILES=	pks094-patch2 \
 		pks094-patch3
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mit.edu/people/marc/pks/
+#HOMEPAGE=	http://www.mit.edu/people/marc/pks/
 COMMENT=	PGP Public Key Server
 LICENSE=	original-bsd
 

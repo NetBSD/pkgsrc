@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.22 2015/07/04 16:18:44 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2017/09/03 08:37:04 wiz Exp $
 
 DISTNAME=	xvattr-1.3
 PKGREVISION=	5
 CATEGORIES=	x11
-MASTER_SITES=	http://www.dtek.chalmers.se/groups/dvd/dist/
+#MASTER_SITES=	http://www.dtek.chalmers.se/groups/dvd/dist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.dtek.chalmers.se/groups/dvd/
+#HOMEPAGE=	http://www.dtek.chalmers.se/groups/dvd/
 COMMENT=	Modify Xv attributes
 LICENSE=	gnu-gpl-v2
 

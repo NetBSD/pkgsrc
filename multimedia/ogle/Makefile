@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.33 2016/03/01 20:12:01 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2017/09/03 08:36:57 wiz Exp $
 
 DISTNAME=	ogle-0.9.2
 PKGREVISION=	8
 CATEGORIES=	multimedia
-MASTER_SITES=	http://www.dtek.chalmers.se/groups/dvd/dist/
+#MASTER_SITES=	http://www.dtek.chalmers.se/groups/dvd/dist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.dtek.chalmers.se/groups/dvd/
+#HOMEPAGE=	http://www.dtek.chalmers.se/groups/dvd/
 COMMENT=	DVD player with menus
 
 LICENSE=	gnu-gpl-v2

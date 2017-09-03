@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.42 2017/01/19 18:52:12 agc Exp $
+# $NetBSD: Makefile,v 1.43 2017/09/03 08:36:55 wiz Exp $
 
 DISTNAME=	libmng-2.0.3
 PKGNAME=	${DISTNAME:S/lib//}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmng/}
-MASTER_SITES+=	http://www.libmng.com/download/
+#MASTER_SITES+=	http://www.libmng.com/download/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.libmng.com/
+#HOMEPAGE=	http://www.libmng.com/
 COMMENT=	Multiple-image Network Graphics (MNG) reference library
 
 GNU_CONFIGURE=		yes

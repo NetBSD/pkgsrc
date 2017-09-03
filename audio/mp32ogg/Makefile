@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/07/09 06:37:48 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2017/09/03 08:36:50 wiz Exp $
 
 DISTNAME=	mp32ogg-0.11
 PKGREVISION=	10
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	# empty
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://faceprint.com/code/
+#HOMEPAGE=	http://faceprint.com/code/
 COMMENT=	Convert MP3 files to Ogg Vorbis files
 LICENSE=	artistic
 

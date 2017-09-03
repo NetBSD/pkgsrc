@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2016/07/09 06:37:54 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2017/09/03 08:36:51 wiz Exp $
 
 DISTNAME=	vicq-0.4.1
 PKGREVISION=	12
@@ -7,7 +7,7 @@ MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gonzo.kiev.ua/projects/vicq.old/
+#HOMEPAGE=	http://gonzo.kiev.ua/projects/vicq.old/
 COMMENT=	Simple icq client written in perl
 LICENSE=	gnu-gpl-v2
 
