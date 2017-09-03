@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2017/08/01 14:59:08 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2017/09/03 08:53:17 wiz Exp $
 #
 
 DISTNAME=	keylaunch_1.3.9
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	x11
-MASTER_SITES=	http://www.oroborus.org/debian/dists/sid/main/source/x11/
+MASTER_SITES=	https://www.oroborus.org/debian/dists/sid/main/source/x11/
 MASTER_SITES+=	${MASTER_SITE_DEBIAN:=pool/main/k/keylaunch/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

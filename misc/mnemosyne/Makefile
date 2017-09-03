@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/01/01 14:43:47 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2017/09/03 08:53:11 wiz Exp $
 
 DISTNAME=	Mnemosyne-2.3.1
 PKGNAME=	${DISTNAME:S/M/m/}
@@ -6,7 +6,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mnemosyne-proj/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mnemosyne-proj.org/
+HOMEPAGE=	https://mnemosyne-proj.org/
 COMMENT=	Sophisticated flash-card tool which optimizes your learning process
 LICENSE=	gnu-gpl-v2
 

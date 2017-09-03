@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2017/02/12 06:25:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.45 2017/09/03 08:53:05 wiz Exp $
 
 VERSION=	1.2.1
 PKGREVISION=	37
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin-latex/}
 WRKSRC=		${WRKDIR}/pidgin-latex
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/pidgin-latex/
+HOMEPAGE=	https://sourceforge.net/projects/pidgin-latex/
 COMMENT=	Plugin for pidgin to render LaTeX as images
 
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk

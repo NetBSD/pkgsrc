@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/04/22 21:03:15 adam Exp $
+# $NetBSD: Makefile,v 1.11 2017/09/03 08:53:13 wiz Exp $
 
 DISTNAME=	ocsync-0.90.4
 PKGREVISION=	9
@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.owncloud.com/desktop/stable/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://owncloud.org/sync-clients/
+HOMEPAGE=	https://owncloud.org/sync-clients/
 COMMENT=	File synchronization program for OwnCloud
 LICENSE=	gnu-gpl-v2
 
