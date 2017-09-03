@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2017/06/05 14:24:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2017/09/03 08:53:16 wiz Exp $
 
 DISTNAME=		Search-Xapian-1.2.24.0
 PKGNAME=		${DISTNAME:S/^/p5-/}
@@ -7,7 +7,7 @@ CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Search/}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://xapian.org/docs/bindings/perl/Search/Xapian.html
+HOMEPAGE=		https://xapian.org/docs/bindings/perl/Search/Xapian.html
 COMMENT=		Perl XS frontend to the Xapian C++ search library
 LICENSE=		${PERL5_LICENSE}
 
