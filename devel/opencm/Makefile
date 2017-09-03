@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.57 2016/03/05 11:28:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.58 2017/09/03 08:36:52 wiz Exp $
 #
 
 DISTNAME=	${OPENCM_VERSION}-2-src
 PKGNAME=	${OPENCM_VERSION:C/alpha/rc/}
 PKGREVISION=	12
 CATEGORIES=	devel scm
-MASTER_SITES=	http://www.opencm.org/releases/
+#MASTER_SITES=	http://www.opencm.org/releases/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.opencm.org/
+#HOMEPAGE=	http://www.opencm.org/
 COMMENT=	Secure, high-integrity replacement for CVS
 
 WRKSRC=		${WRKDIR}/${OPENCM_VERSION}/base

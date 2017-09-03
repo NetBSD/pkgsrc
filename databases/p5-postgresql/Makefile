@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2017/06/05 14:22:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.39 2017/09/03 08:36:51 wiz Exp $
 
 DISTNAME=	pgsql_perl5-1.9.0
 PKGNAME=	p5-postgresql-1.9.0
@@ -7,7 +7,7 @@ CATEGORIES=	databases devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gborg.postgresql.org/project/pgperl/projdisplay.php
+#HOMEPAGE=	http://gborg.postgresql.org/project/pgperl/projdisplay.php
 COMMENT=	Perl interface class for PostgreSQL
 
 PERL5_PACKLIST=		auto/Pg/.packlist
