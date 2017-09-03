@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2016/12/30 07:08:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.59 2017/09/03 11:30:54 leot Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -612,7 +612,7 @@ share/cups/templates/trailer.tmpl
 share/cups/templates/users.tmpl
 ${PLIST.libusb}share/cups/usb/org.cups.usb-quirks
 share/doc/cups/LICENSE.txt
-share/doc/cups/README.txt
+share/doc/cups/README.md
 share/doc/cups/apple-touch-icon.png
 share/doc/cups/cups-printable.css
 share/doc/cups/cups.css
@@ -620,15 +620,11 @@ share/doc/cups/de/index.html
 share/doc/cups/es/index.html
 share/doc/cups/help/accounting.html
 share/doc/cups/help/api-admin.html
-share/doc/cups/help/api-array.html
-share/doc/cups/help/api-cups.html
-share/doc/cups/help/api-filedir.html
 share/doc/cups/help/api-filter.html
-share/doc/cups/help/api-httpipp.html
-share/doc/cups/help/api-overview.html
 share/doc/cups/help/api-ppd.html
 share/doc/cups/help/api-raster.html
 share/doc/cups/help/cgi.html
+share/doc/cups/help/cupspm.html
 share/doc/cups/help/encryption.html
 share/doc/cups/help/glossary.html
 share/doc/cups/help/kerberos.html
@@ -729,3 +725,4 @@ share/locale/it/cups_it.po
 share/locale/ja/cups_ja.po
 share/locale/pt_BR/cups_pt_BR.po
 share/locale/ru/cups_ru.po
+share/locale/zh_CN/cups_zh_CN.po

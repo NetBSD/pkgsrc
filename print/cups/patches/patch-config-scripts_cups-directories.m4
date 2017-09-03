@@ -1,4 +1,4 @@
-$NetBSD: patch-config-scripts_cups-directories.m4,v 1.3 2016/09/30 14:10:55 wiz Exp $
+$NetBSD: patch-config-scripts_cups-directories.m4,v 1.4 2017/09/03 11:30:54 leot Exp $
 
 The '$' while loops expand the variables as long as possible so that no
 references to other variables occur. This is necessary because fontpath
@@ -9,12 +9,12 @@ loop.
 I'm also sure that this is not the Right Way to fix it, but at least it
 works.
 
---- config-scripts/cups-directories.m4.orig	2016-09-13 23:39:47.000000000 +0000
+--- config-scripts/cups-directories.m4.orig	2017-06-30 15:44:38.000000000 +0000
 +++ config-scripts/cups-directories.m4
 @@ -101,7 +101,7 @@ dnl Fix "libdir" variable...
  if test "$libdir" = "\${exec_prefix}/lib"; then
- 	case "$uname" in
- 		Linux*)
+ 	case "$host_os_name" in
+ 		linux*)
 -			if test -d /usr/lib64 -a ! -d /usr/lib64/fakeroot; then
 +			if test -d /usr/lib64 -a ! -d /usr/lib64/fakeroot && false; then
  				libdir="$exec_prefix/lib64"
@@ -133,10 +133,10 @@ works.
 +AC_ARG_WITH(serverbindir, [  --with-serverbindir     set path for server helper programs],serverbindir="$withval",serverbindir="")
 +
 +if test x$serverbindir = x; then
- case "$uname" in
- 	*BSD* | Darwin*)
+ case "$host_os_name" in
+ 	*bsd* | darwin*)
  		# *BSD and Darwin (macOS)
-@@ -277,6 +319,10 @@ case "$uname" in
+@@ -277,6 +319,10 @@ case "$host_os_name" in
  		CUPS_SERVERBIN="$exec_prefix/lib/cups"
  		;;
  esac
