@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2013/02/16 11:20:32 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2017/09/03 09:22:57 wiz Exp $
 
 DISTNAME=	pidgin-facebookchat-source-1.69
 PKGNAME=	${DISTNAME:S/-source-/-/}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://pidgin-facebookchat.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/pidgin-facebookchat/
+HOMEPAGE=	https://github.com/dequis/purple-facebook
 COMMENT=	Plugin for pidgin to support Facebook IM
 LICENSE=	gnu-gpl-v3 # or later
 
