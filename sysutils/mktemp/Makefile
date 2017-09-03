@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/01/19 18:52:26 agc Exp $
+# $NetBSD: Makefile,v 1.13 2017/09/03 08:53:15 wiz Exp $
 #
 
 DISTNAME=	mktemp-1.7
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.mktemp.org/pub/mktemp/
 MASTER_SITES+=	ftp://ftp.usa.openbsd.org/pub/mktemp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mktemp.org/
+HOMEPAGE=	https://www.mktemp.org/
 COMMENT=	Small program for safe temporary file and directory creation
 LICENSE=	isc
 

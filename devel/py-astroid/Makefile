@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/07/16 20:14:15 adam Exp $
+# $NetBSD: Makefile,v 1.11 2017/09/03 08:53:07 wiz Exp $
 
 DISTNAME=	astroid-1.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astroid/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://bitbucket.org/logilab/astroid
+HOMEPAGE=	https://bitbucket.org/logilab/astroid
 COMMENT=	Rebuild a new abstract syntax tree from Python's ast
 LICENSE=	gnu-lgpl-v3
 

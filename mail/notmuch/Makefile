@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.31 2017/08/14 20:17:00 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2017/09/03 08:53:10 wiz Exp $
 
 DISTNAME=	notmuch-0.25
 CATEGORIES=	mail
-MASTER_SITES=	http://notmuchmail.org/releases/
+MASTER_SITES=	https://notmuchmail.org/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://notmuchmail.org/
+HOMEPAGE=	https://notmuchmail.org/
 COMMENT=	Mail indexer
 LICENSE=	gnu-gpl-v3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/05/01 15:07:31 gdt Exp $
+# $NetBSD: Makefile,v 1.26 2017/09/03 08:53:15 wiz Exp $
 #
 
 DISTNAME=		memtest86-4.0
@@ -11,7 +11,7 @@ MASTER_SITES=		${MASTER_SITE_FREEBSD}
 # There is a 4.0s on the FreeBSD distfiles site, apparently with
 # bugfixes.
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.memtest86.com/
+HOMEPAGE=		https://www.memtest86.com/
 COMMENT=		Stand alone memory test for x86 arch (no longer maintained)
 LICENSE=		gnu-gpl-v2
 
