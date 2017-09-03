@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/03 18:12:18 wiz Exp $
+
+SHA1 (translate-shell-0.9.6.4.tar.gz) = 968b20c09be5b6b28366ee5afbcb495e0f9d5365
+RMD160 (translate-shell-0.9.6.4.tar.gz) = 2d5e32ee48edde9e5d3c640e787beb9f57106032
+SHA512 (translate-shell-0.9.6.4.tar.gz) = 98c4a329794d38a5d22d98bf7bb821f1adc3e42dac96d2fd791e7cf64d785458d0f6006e83b21497f259525b1a70f306ab69090d3a12996610f742323a371147
+Size (translate-shell-0.9.6.4.tar.gz) = 69788 bytes
