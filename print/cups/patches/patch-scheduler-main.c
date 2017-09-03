@@ -1,9 +1,9 @@
-$NetBSD: patch-scheduler-main.c,v 1.1 2017/07/27 08:54:26 wiz Exp $
+$NetBSD: patch-scheduler-main.c,v 1.2 2017/09/03 11:30:54 leot Exp $
 
 Add a PidFile configuration directive to write a PID file.
 
---- scheduler/main.c.orig	2017-03-28 20:26:53.000000000 +0200
-+++ scheduler/main.c	2017-07-17 18:02:10.000000000 +0200
+--- scheduler/main.c.orig	2017-06-30 15:44:38.000000000 +0000
++++ scheduler/main.c
 @@ -72,6 +72,7 @@ static void		service_checkin(void);
  static void		service_checkout(void);
  #endif /* HAVE_ONDEMAND */
@@ -12,7 +12,7 @@ Add a PidFile configuration directive to write a PID file.
  
  
  /*
-@@ -675,6 +676,13 @@ main(int  argc,				/* I - Number of comm
+@@ -677,6 +678,13 @@ main(int  argc,				/* I - Number of comm
  #endif /* __APPLE__ */
  
   /*
@@ -26,7 +26,7 @@ Add a PidFile configuration directive to write a PID file.
    * Send server-started event...
    */
  
-@@ -1129,6 +1137,7 @@ main(int  argc,				/* I - Number of comm
+@@ -1139,6 +1147,7 @@ main(int  argc,				/* I - Number of comm
                    "Scheduler shutting down due to program error.");
    }
  
@@ -34,20 +34,20 @@ Add a PidFile configuration directive to write a PID file.
   /*
    * Close all network clients...
    */
-@@ -1152,6 +1161,12 @@ main(int  argc,				/* I - Number of comm
+@@ -1167,6 +1176,12 @@ main(int  argc,				/* I - Number of comm
+   */
  
-   cupsdFreeAllJobs();
+   cupsdDeleteTemporaryPrinters(1);
++ 
++/*
++ * Remove pidfile...
++ */
++ if (PidFile && *PidFile)
++   (void)unlink(PidFile);
  
-+ /*
-+  * Remove pidfile...
-+  */
-+  if (PidFile && *PidFile)
-+    (void)unlink(PidFile);
-+
  #ifdef __APPLE__
   /*
-   * Stop monitoring system event monitoring...
-@@ -2035,6 +2050,36 @@ service_checkout(void)
+@@ -2068,6 +2083,36 @@ service_checkout(void)
  
  
  /*
