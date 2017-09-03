@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile.in,v 1.5 2017/09/03 11:27:47 leot Exp $
+
+`-r' option of ln(1) is not widely supported, avoid it.
+
+--- Makefile.in.orig	2017-08-25 18:58:43.000000000 +0000
++++ Makefile.in
+@@ -5334,9 +5334,9 @@ install-exec-hook:
+ 	$(INSTALL) -d -m 755 $(DESTDIR)$(bindir)
+ 	$(INSTALL) -d -m 755 $(DESTDIR)$(pkgfilterdir)
+ 	$(INSTALL) -d -m 755 $(DESTDIR)$(pkgbackenddir)
+-@ENABLE_FOOMATIC_TRUE@	$(LN_S) -r -f $(DESTDIR)$(pkgfilterdir)/foomatic-rip $(DESTDIR)$(bindir)
+-@ENABLE_DRIVERLESS_TRUE@	$(LN_S) -r -f $(DESTDIR)$(pkgppdgendir)/driverless $(DESTDIR)$(bindir)
+-@ENABLE_DRIVERLESS_TRUE@	$(LN_S) -r -f $(DESTDIR)$(pkgppdgendir)/driverless $(DESTDIR)$(pkgbackenddir)
++@ENABLE_FOOMATIC_TRUE@	$(LN_S) -f $(DESTDIR)$(pkgfilterdir)/foomatic-rip $(DESTDIR)$(bindir)
++@ENABLE_DRIVERLESS_TRUE@	$(LN_S) -f $(DESTDIR)$(pkgppdgendir)/driverless $(DESTDIR)$(bindir)
++@ENABLE_DRIVERLESS_TRUE@	$(LN_S) -f $(DESTDIR)$(pkgppdgendir)/driverless $(DESTDIR)$(pkgbackenddir)
+ @ENABLE_BRAILLE_TRUE@	$(LN_S) -f imagetobrf $(DESTDIR)$(pkgfilterdir)/imagetoubrl
+ @ENABLE_BRAILLE_TRUE@	$(LN_S) -f textbrftoindexv3 $(DESTDIR)$(pkgfilterdir)/textbrftoindexv4
+ 
