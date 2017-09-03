@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/08/01 14:58:53 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/03 08:36:49 wiz Exp $
 #
 
 DISTNAME=	moodbar-0.1.2
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://pwsp.net/~qbob/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://amarok.kde.org/wiki/Moodbar
+#HOMEPAGE=	https://amarok.kde.org/wiki/Moodbar
 COMMENT=	Tool to show the "mood" of a track
 LICENSE=	gnu-gpl-v2
 
