@@ -1,0 +1,15 @@
+Translate Shell (formerly Google Translate CLI) is a command-line translator
+powered by Google Translate (default), Bing Translator, and Yandex.Translate.
+It gives you easy access to one of these translation engines your terminal:
+
+$ trans 'Saluton, Mondo!'
+Saluton, Mondo!
+
+Hello, World!
+
+Translations of Saluton, Mondo!
+[ Esperanto -> English ]
+Saluton ,
+    Hello,
+Mondo !
+    World!
