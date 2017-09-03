@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/06/08 17:43:40 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/03 09:22:58 wiz Exp $
 
 VERS=		1.0.5
 DISTNAME=	python-creole-${VERS}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-creole/}
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/python-creole/
+HOMEPAGE=	https://github.com/jedie/python-creole
 COMMENT=	Creole <-> HTML converter
 
 LICENSE=	gnu-gpl-v3
