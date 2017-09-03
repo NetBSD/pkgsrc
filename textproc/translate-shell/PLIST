@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/03 18:12:18 wiz Exp $
+bin/trans
+man/man1/trans.1
