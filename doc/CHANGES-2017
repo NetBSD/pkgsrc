@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3549 2017/09/03 11:59:37 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.3550 2017/09/03 12:56:19 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4986,3 +4986,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/cups to 2.2.4 [leot 2017-09-03]
 	Updated net/youtube-dl to 20170902 [leot 2017-09-03]
 	Updated devel/ocaml-batteries to 2.7.0 [jaapb 2017-09-03]
+	Updated devel/ocaml-sexplib to 0.9.2 [jaapb 2017-09-03]
