@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3546 2017/09/03 11:28:08 leot Exp $
+$NetBSD: CHANGES-2017,v 1.3547 2017/09/03 11:31:14 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4983,3 +4983,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed x11/mrxvt [wiz 2017-09-03]
 	Updated mail/mutt to 1.9.0 [tron 2017-09-03]
 	Updated print/cups-filters to 1.17.2 [leot 2017-09-03]
+	Updated print/cups to 2.2.4 [leot 2017-09-03]
