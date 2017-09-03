@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2017/01/19 18:52:20 agc Exp $
+# $NetBSD: Makefile,v 1.38 2017/09/03 08:53:13 wiz Exp $
 
 DISTNAME=	pure-ftpd-1.0.35
 PKGREVISION=	6
@@ -15,7 +15,7 @@ MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=pureftpd/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	dawszy@arhea.net
-HOMEPAGE=	http://www.pureftpd.org/project/pure-ftpd
+HOMEPAGE=	https://www.pureftpd.org/project/pure-ftpd
 COMMENT=	Secure FTP daemon with optional SQL support
 LICENSE=	modified-bsd
 

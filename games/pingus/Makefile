@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.25 2017/08/24 20:03:18 adam Exp $
+# $NetBSD: Makefile,v 1.26 2017/09/03 08:53:09 wiz Exp $
 
 DISTNAME=	pingus-0.7.3
 PKGREVISION=	18
 CATEGORIES=	games
-MASTER_SITES=	http://pingus.seul.org/files/
+MASTER_SITES=	https://pingus.seul.org/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pingus.seul.org/
+HOMEPAGE=	https://pingus.seul.org/
 COMMENT=	Lemmings(TM) Clone
 
 BUILD_DEPENDS+=		scons>=0.96:../../devel/scons

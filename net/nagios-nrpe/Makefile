@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2016/07/09 06:38:43 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2017/09/03 08:53:12 wiz Exp $
 #
 
 DISTNAME=		nrpe-2.15
@@ -8,7 +8,7 @@ CATEGORIES=		net sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nagios/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.nagios.org/
+HOMEPAGE=		https://www.nagios.org/
 COMMENT=		Nagios remote program execution daemon
 
 .include "../../mk/bsd.prefs.mk"
