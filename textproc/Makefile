@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.950 2017/09/02 14:59:07 kleink Exp $
+# $NetBSD: Makefile,v 1.951 2017/09/03 18:12:48 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -946,6 +946,7 @@ SUBDIR+=	tinyxml
 SUBDIR+=	tinyxml2
 SUBDIR+=	tokyodystopia
 SUBDIR+=	trang
+SUBDIR+=	translate-shell
 SUBDIR+=	troffcvt
 SUBDIR+=	unac
 SUBDIR+=	uncrustify
