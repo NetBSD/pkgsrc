@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/06/28 13:24:29 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.9 2017/09/03 08:07:10 wiz Exp $
 
 DISTNAME=	FusionInventory-Agent-Task-Network-1.0.2
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +7,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/G/GR/GROUSSE/}
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~grousse/FusionInventory-Agent-Task-Network-1.0.2/
+#HOMEPAGE=	http://search.cpan.org/~grousse/FusionInventory-Agent-Task-Network-1.0.2/
 COMMENT=	FusionInventory agent network tasks
 LICENSE=	gnu-gpl-v2
 
