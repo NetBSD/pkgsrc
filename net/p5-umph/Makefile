@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/06/05 14:24:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2017/09/03 09:22:58 wiz Exp $
 #
 
 DISTNAME=	umph-0.2.5
@@ -8,7 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://umph.googlecode.com/files/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/umph/
+HOMEPAGE=	https://code.google.com/archive/p/umph/
 COMMENT=	Command line tool for parsing video links from Youtube feeds
 LICENSE=	gnu-gpl-v3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/05/31 22:35:42 agc Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/03 09:22:57 wiz Exp $
 
 DISTNAME=		picoc-2.1
 PKGREVISION=		1
@@ -7,7 +7,7 @@ MASTER_SITES=		http://picoc.googlecode.com/files/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		agc@NetBSD.org
-HOMEPAGE=		http://code.google.com/p/picoc/
+HOMEPAGE=		https://github.com/zsaleeba/picoc
 COMMENT=		C interpreter
 LICENSE=		modified-bsd
 
