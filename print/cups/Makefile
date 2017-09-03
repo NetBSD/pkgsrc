@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.249 2017/08/20 23:55:54 jlam Exp $
+# $NetBSD: Makefile,v 1.250 2017/09/03 11:30:54 leot Exp $
 
-DISTNAME=	cups-2.2.3-source
+DISTNAME=	cups-2.2.4-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=apple/}
 
@@ -32,6 +31,7 @@ CONFIGURE_ARGS+=	--with-serverbindir=${PREFIX}/libexec/cups
 CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER}
 CONFIGURE_ARGS+=	--with-cups-group=${CUPS_GROUP}
 CONFIGURE_ARGS+=	--with-system-groups=${CUPS_SYSTEM_GROUPS:Q}
+CONFIGURE_ARGS+=	--with-exe-file-perm=0755
 CONFIGURE_ARGS+=	--enable-libpaper
 CONFIGURE_ARGS+=	--enable-libtool
 CONFIGURE_ARGS+=	--enable-ssl
@@ -145,7 +145,7 @@ post-extract:
 	${CP} ${FILESDIR}/cups.pam ${WRKDIR}/cups.pam
 
 post-install:
-	set -e; for file in LICENSE.txt README.txt; do			\
+	set -e; for file in LICENSE.txt README.md; do			\
 		${INSTALL_DATA} ${WRKSRC}/$${file}			\
 		     ${DESTDIR}${DOCDIR}/$${file}; \
 	done
