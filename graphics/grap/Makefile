@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2014/10/09 14:06:35 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2017/09/03 08:36:55 wiz Exp $
 
 DISTNAME=	grap-1.45
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.lunabase.org/~faber/Vault/software/grap/
+#MASTER_SITES=	http://www.lunabase.org/~faber/Vault/software/grap/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.lunabase.org/~faber/Vault/software/grap/
+#HOMEPAGE=	http://www.lunabase.org/~faber/Vault/software/grap/
 COMMENT=	Language for typesetting graphs
 LICENSE=	2-clause-bsd
 

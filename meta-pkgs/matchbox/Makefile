@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/12/19 12:27:29 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/03 08:36:56 wiz Exp $
 #
 
 DISTNAME=	matchbox-0.9.5
@@ -8,7 +8,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://projects.o-hand.com/matchbox/
+#HOMEPAGE=	http://projects.o-hand.com/matchbox/
 COMMENT=	The Matchbox window manager environment
 
 DEPENDS+=	libmatchbox-[0-9]*:../../devel/libmatchbox

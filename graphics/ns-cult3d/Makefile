@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/01/04 03:12:59 dholland Exp $
+# $NetBSD: Makefile,v 1.17 2017/09/03 08:36:55 wiz Exp $
 #
 
 DISTNAME=	Cult3D_NS4_5.2b1
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	www graphics
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://www.cult3d.com/
+#HOMEPAGE=	http://www.cult3d.com/
 COMMENT=	Netscape plugin for cult 3d files
 
 # Linux binary plugin

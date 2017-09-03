@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/11/23 00:05:30 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2017/09/03 08:36:57 wiz Exp $
 #
 
 DISTNAME=	nbtscan-1.5.1
@@ -11,7 +11,7 @@ PATCH_SITES=	http://www.NetBSD.org/~dholland/patchkits/nbtscan/
 PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.inetcat.net/software/nbtscan.html
+#HOMEPAGE=	http://www.inetcat.net/software/nbtscan.html
 COMMENT=	NetBIOS name network scanner
 
 GNU_CONFIGURE=	yes

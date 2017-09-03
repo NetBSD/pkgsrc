@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/01/27 18:41:12 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/03 08:36:52 wiz Exp $
 
 DISTNAME=	magit-1.2.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://github.com/magit/magit/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://magit.github.com/magit/
+#HOMEPAGE=	http://magit.github.com/magit/
 COMMENT=	Inspect and modify Git repositories from Emacs
 LICENSE=	gnu-gpl-v3
 

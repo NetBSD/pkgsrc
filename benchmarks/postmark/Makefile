@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/10/09 14:06:00 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2017/09/03 08:36:50 wiz Exp $
 
 DISTNAME=	postmark-1_5.c
 PKGNAME=	postmark-1.5
@@ -7,7 +7,7 @@ MASTER_SITES=	http://fsbench.filesystems.org/bench/
 EXTRACT_SUFX=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.netapp.com/tech_library/3022.html
+#HOMEPAGE=	http://www.netapp.com/tech_library/3022.html
 COMMENT=	NetApps file system benchmark
 
 EXTRACT_CMD=	${CP} $$extract_file postmark.c

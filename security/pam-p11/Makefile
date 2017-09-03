@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/03/05 11:29:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2017/09/03 08:36:59 wiz Exp $
 #
 
 DISTNAME=	pam_p11-0.1.5
@@ -9,7 +9,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://opensc-project.org/opensc/wiki/pam_p11
+#HOMEPAGE=	https://opensc-project.org/opensc/wiki/pam_p11
 COMMENT=	Smart card PAM module
 LICENSE=	gnu-lgpl-v2.1
 

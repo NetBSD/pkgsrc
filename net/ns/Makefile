@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2016/07/09 06:38:44 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2017/09/03 08:36:57 wiz Exp $
 
 DISTNAME=	ns-src-2.35
 PKGNAME=	ns-2.35
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nsnam/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://nsnam.isi.edu/nsnam/
+#HOMEPAGE=	http://nsnam.isi.edu/nsnam/
 COMMENT=	The UCB/LBNL Network Simulator Version 2
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
