@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/06/05 14:23:59 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.17 2017/09/03 08:03:55 wiz Exp $
 
 DISTNAME=	Geo-Distance-0.20
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +7,7 @@ CATEGORIES=	perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Geo/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~bluefeet/Geo-Distance-0.11/Distance.pm
+HOMEPAGE=	http://search.cpan.org/~bluefeet/Geo-Distance-0.20/
 COMMENT=	Calculate Distances and Closest Locations
 LICENSE=	${PERL5_LICENSE}
 
