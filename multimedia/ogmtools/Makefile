@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2013/12/10 14:16:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2017/09/03 08:53:11 wiz Exp $
 #
 
 DISTNAME=	ogmtools-1.5
 PKGREVISION=	1
 CATEGORIES=	multimedia
-MASTER_SITES=	http://www.bunkus.org/videotools/ogmtools/
+MASTER_SITES=	https://www.bunkus.org/videotools/ogmtools/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.bunkus.org/videotools/ogmtools/
+HOMEPAGE=	https://www.bunkus.org/videotools/ogmtools/
 COMMENT=	Ogg Media files manipulation tools
 
 USE_LANGUAGES=	c c++
