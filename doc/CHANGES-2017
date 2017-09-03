@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3544 2017/09/03 09:04:48 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3545 2017/09/03 09:46:06 tron Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4981,3 +4981,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed databases/maatkit successor databases/percona-toolkit [wiz 2017-09-03]
 	Removed x11/multi-aterm [wiz 2017-09-03]
 	Removed x11/mrxvt [wiz 2017-09-03]
+	Updated mail/mutt to 1.9.0 [tron 2017-09-03]
