@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/07/09 06:37:49 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2017/09/03 08:36:50 wiz Exp $
 #
 
 DISTNAME=	mstream-1.3
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://oss.gw.com/people/kim/
 
 MAINTAINER=	kim@tac.nyc.ny.us
-HOMEPAGE=	http://kimmo.suominen.com/gwradio/
+#HOMEPAGE=	http://kimmo.suominen.com/gwradio/
 COMMENT=	Mserv player package to queue tracks to IceS
 
 DEPENDS+=	ices-mp3>=0.3:../../audio/ices-mp3

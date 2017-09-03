@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2016/07/09 06:38:26 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2017/09/03 08:36:55 wiz Exp $
 
 DISTNAME=	mos201src
 PKGNAME=	moscow_ml-2.01
@@ -7,7 +7,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://www.itu.dk/people/sestoft/mosml/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.dina.kvl.dk/~sestoft/mosml.html
+#HOMEPAGE=	http://www.dina.kvl.dk/~sestoft/mosml.html
 COMMENT=	Moscow ML, a version of Standard ML
 
 WRKSRC=		${WRKDIR}/mosml/src

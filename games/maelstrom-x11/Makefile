@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/07/04 16:18:34 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2017/09/03 08:36:54 wiz Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-x11-2.0.6
@@ -10,7 +10,7 @@ MASTER_SITES+=		ftp://ftp.devolution.com/pub/maelstrom/Add-Ons/
 DISTFILES=		${DISTNAME} ${STREK} ${SWARS} ${ESOUND}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ambrosiasw.com/Products/Maelstrom.html
+#HOMEPAGE=		http://www.ambrosiasw.com/Products/Maelstrom.html
 COMMENT=	High resolution graphics version of Asteroids (X11 version)
 
 ESOUND=			Maelstrom-Sounds-L2.0.0.tar.gz
