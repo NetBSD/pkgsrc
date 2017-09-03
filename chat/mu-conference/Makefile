@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2017/09/03 08:36:50 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2017/09/03 09:13:14 wiz Exp $
 
 DISTNAME=	mu-conference-0.8.81
 #The DISTFILE used to have _ separating name and version,
 #but gdt accidentally didn't do that when making 0.8.81
 #PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	chat
-MASTER_SITES=	http://download.gna.org/mu-conference/
+#MASTER_SITES=	http://download.gna.org/mu-conference/
 
 MAINTAINER=	gdt@NetBSD.org
 #HOMEPAGE=	https://gna.org/projects/mu-conference/
