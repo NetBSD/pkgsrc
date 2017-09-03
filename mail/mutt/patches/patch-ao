@@ -1,18 +1,18 @@
-$NetBSD: patch-ao,v 1.2 2016/08/21 11:39:31 wiz Exp $
+$NetBSD: patch-ao,v 1.3 2017/09/03 09:45:36 tron Exp $
 
 Add change_folder_next option.
 
---- curs_main.c.orig	2016-08-11 01:47:00.000000000 +0000
-+++ curs_main.c
-@@ -1206,6 +1206,11 @@ int mutt_index_menu (void)
- #endif
+--- curs_main.c.orig	2017-09-02 19:17:12.000000000 +0100
++++ curs_main.c	2017-09-03 10:41:52.002596572 +0100
+@@ -1214,6 +1214,11 @@
  	else
  	{
-+	  if (option (OPTCHANGEFOLDERNEXT) && Context && Context->path)
-+	  {
-+	    strfcpy (buf, Context->path, sizeof (buf));
-+	    mutt_pretty_mailbox (buf, sizeof (buf));
-+	  }
  	  mutt_buffy (buf, sizeof (buf));
++          if (option (OPTCHANGEFOLDERNEXT) && Context && Context->path)
++          {
++            strfcpy (buf, Context->path, sizeof (buf));
++            mutt_pretty_mailbox (buf, sizeof (buf));
++          }
  
-           if (mutt_enter_fname (cp, buf, sizeof (buf), &menu->redraw, 1) == -1)
+           if (mutt_enter_fname (cp, buf, sizeof (buf), 1) == -1)
+           {
