@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/05/03 08:38:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/03 09:22:57 wiz Exp $
 #
 
 DISTNAME=	open-vcdiff-0.8.3
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://open-vcdiff.googlecode.com/files/
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/open-vcdiff/
+HOMEPAGE=	https://github.com/google/open-vcdiff
 COMMENT=	RFC 3284 encoder/decoder for VCDIFF Differencing and Compression
 LICENSE=	apache-2.0
 

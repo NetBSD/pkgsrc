@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/04/04 13:07:07 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/03 09:22:57 wiz Exp $
 
 DISTNAME=	jxrlib_1_1
 PKGNAME=	jxrlib-1.1
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	# javascript link
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://jxrlib.codeplex.com/
+HOMEPAGE=	https://github.com/curasystems/jxrlib
 COMMENT=	JPEG XR library
 LICENSE=	2-clause-bsd
 
