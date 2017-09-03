@@ -1,10 +1,10 @@
-$NetBSD: patch-config-scripts_cups-sharedlibs.m4,v 1.2 2015/12/02 21:14:16 leot Exp $
+$NetBSD: patch-config-scripts_cups-sharedlibs.m4,v 1.3 2017/09/03 11:30:54 leot Exp $
 
 libtoolize.
 
---- config-scripts/cups-sharedlibs.m4.orig	2013-10-18 20:36:01.000000000 +0000
+--- config-scripts/cups-sharedlibs.m4.orig	2017-06-30 15:44:38.000000000 +0000
 +++ config-scripts/cups-sharedlibs.m4
-@@ -22,6 +22,24 @@ cupsbase="cups"
+@@ -20,6 +20,24 @@ cupsbase="cups"
  LIBCUPSBASE="lib$cupsbase"
  LIBCUPSSTATIC="lib$cupsbase.a"
  
@@ -27,9 +27,9 @@ libtoolize.
 +AC_SUBST(LIBTOOL)
 +
  if test x$enable_shared != xno; then
- 	case "$uname" in
- 		SunOS*)
-@@ -67,6 +85,15 @@ if test x$enable_shared != xno; then
+ 	case "$host_os_name" in
+ 		sunos*)
+@@ -65,6 +83,15 @@ if test x$enable_shared != xno; then
  			DSOFLAGS="$DSOFLAGS -Wl,-soname,\`basename \$@\` -shared \$(OPTIM)"
  			;;
  	esac
@@ -45,7 +45,7 @@ libtoolize.
  else
  	PICFLAG=0
  	LIBCUPS="lib$cupsbase.a"
-@@ -90,8 +117,13 @@ AC_SUBST(LIBCUPSPPDC)
+@@ -88,8 +115,13 @@ AC_SUBST(LIBCUPSPPDC)
  AC_SUBST(LIBCUPSSTATIC)
  
  if test x$enable_shared = xno; then
@@ -61,23 +61,23 @@ libtoolize.
  
  	EXTLINKCUPS="-lcups"
  	EXTLINKCUPSIMAGE="-lcupsimage"
-@@ -119,10 +151,11 @@ if test "$DSO" != ":"; then
+@@ -117,10 +149,11 @@ if test "$DSO" != ":"; then
  	DSOLIBS="\$(LIBZ)"
  	IMGLIBS=""
  
 -	# Tell the run-time linkers where to find a DSO.  Some platforms
 -	# need this option, even when the library is installed in a
 -	# standard location...
--	case $uname in
+-	case $host_os_name in
 +	if test x$enable_libtool = xno; then
 +		# Tell the run-time linkers where to find a DSO.  Some platforms
 +		# need this option, even when the library is installed in a
 +		# standard location...
-+		case $uname in
-                 SunOS*)
++		case $host_os_name in
+                 sunos*)
                  	# Solaris...
  			if test $exec_prefix != /usr; then
-@@ -147,7 +180,8 @@ if test "$DSO" != ":"; then
+@@ -145,7 +178,8 @@ if test "$DSO" != ":"; then
  				EXPORT_LDFLAGS="-Wl,-rpath,$libdir"
  			fi
  			;;
