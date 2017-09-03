@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/10/03 11:43:37 asau Exp $
+# $NetBSD: Makefile,v 1.35 2017/09/03 08:36:53 wiz Exp $
 #
 
 DISTNAME=	manedit-0.8.1
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://gd.tuwien.ac.at/games/wolfpack/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wolfpack.twu.net/ManEdit/
+#HOMEPAGE=	http://wolfpack.twu.net/ManEdit/
 COMMENT=	UNIX Manual (man, manpage) page editor, viewer, and browser for X11
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/manedit

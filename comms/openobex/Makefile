@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2016/11/24 14:11:31 mef Exp $
+# $NetBSD: Makefile,v 1.31 2017/09/03 08:36:51 wiz Exp $
 
 DISTNAME=	openobex-1.7.1-Source
 PKGNAME=	${DISTNAME:C/-Source//}
@@ -7,7 +7,7 @@ CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openobex/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gitorious.org/openobex
+#HOMEPAGE=	https://gitorious.org/openobex
 COMMENT=	Implementation of the Object Exchange (OBEX) protocol
 LICENSE=	gnu-lgpl-v2
 

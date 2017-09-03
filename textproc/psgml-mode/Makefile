@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/02/17 19:18:09 dholland Exp $
+# $NetBSD: Makefile,v 1.24 2017/09/03 08:37:01 wiz Exp $
 
 DISTNAME=		psgml-1.3.2
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME:S/-/-mode-/}
@@ -7,7 +7,7 @@ CATEGORIES=		textproc editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=psgml/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.lysator.liu.se/~lenst/about_psgml/
+#HOMEPAGE=		http://www.lysator.liu.se/~lenst/about_psgml/
 COMMENT=		SGML/XML mode for Emacs
 
 EMACS_MODULES+=		base

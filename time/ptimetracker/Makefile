@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.27 2015/04/25 14:24:58 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2017/09/03 08:37:01 wiz Exp $
 
 DISTNAME=	ptimetracker-1.7.3
 PKGREVISION=	15
 CATEGORIES=	time kde
-MASTER_SITES=	http://www.eggtart.plus.com/ptt/prog/
+#MASTER_SITES=	http://www.eggtart.plus.com/ptt/prog/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.eggtart.plus.com/ptt/
+#HOMEPAGE=	http://www.eggtart.plus.com/ptt/
 COMMENT=	Keep track of the time spent on projects
 
 # USE_GNOME=	gnomehack gnomeprefix libgtkhtml libgnomeui
