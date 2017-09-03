@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/04/10 16:20:21 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2017/09/03 08:36:50 wiz Exp $
 
 DISTNAME=	mp3check-0.8.7
 CATEGORIES=	audio
@@ -6,7 +6,7 @@ MASTER_SITES=	http://mp3check.googlecode.com/files/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jo.ath.cx/soft/mp3check/
+#HOMEPAGE=	http://jo.ath.cx/soft/mp3check/
 COMMENT=	Check MP3 files for consistency
 LICENSE=	gnu-gpl-v2
 
