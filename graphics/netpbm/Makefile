@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.212 2017/05/24 16:10:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.213 2017/09/04 20:31:41 wiz Exp $
 
-DISTNAME=	netpbm-10.77.02
+DISTNAME=	netpbm-10.79.04
 CATEGORIES=	graphics
 MASTER_SITES=	#
 # manually created from svn checkout of
@@ -11,7 +11,7 @@ MASTER_SITES=	#
 # svn checkout http://svn.code.sf.net/p/netpbm/code/userguide netpbm-userguide
 # cd netpbm-userguide && for i in *.html; do python2.7 ../netpbm/buildtools/makeman $i; done && cd ..
 # tar -cvzf /archive/distfiles/netpbm-docs-r${SVN_REVISION}.tar.gz netpbm-userguide/*.[0-9]
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} netpbm-docs-r2897${EXTRACT_SUFX}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} netpbm-docs-r3052${EXTRACT_SUFX}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://netpbm.sourceforge.net/
