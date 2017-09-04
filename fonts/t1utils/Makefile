@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2017/08/15 18:41:16 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/09/04 12:46:41 wiz Exp $
 
-DISTNAME=	t1utils-1.40
+DISTNAME=	t1utils-1.41
 CATEGORIES=	fonts converters
 MASTER_SITES=	http://www.lcdf.org/~eddietwo/type/
 
