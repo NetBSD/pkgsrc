@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.12 2014/01/01 11:52:36 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/09/04 18:08:29 wiz Exp $
 #
 
 DISTNAME=	rarian-0.8.1
 PKGREVISION=	4
 CATEGORIES=	textproc
-MASTER_SITES=	http://rarian.freedesktop.org/Releases/
+MASTER_SITES=	https://rarian.freedesktop.org/Releases/
 MASTER_SITES+=	${MASTER_SITE_GNOME:=sources/rarian/0.8/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rarian.freedesktop.org/
+HOMEPAGE=	https://rarian.freedesktop.org/
 COMMENT=	Documentation metadata library
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
