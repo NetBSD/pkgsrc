@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2017/08/02 19:53:37 fhajny Exp $
+# $NetBSD: Makefile,v 1.30 2017/09/04 18:08:19 wiz Exp $
 
 DISTNAME=	redis-4.0.1
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
 MAINTAINER=	filip@joyent.com
-HOMEPAGE=	http://redis.io/
+HOMEPAGE=	https://redis.io/
 COMMENT=	Persistent key-value database with built-in net interface
 LICENSE=	modified-bsd
 

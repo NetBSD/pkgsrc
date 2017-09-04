@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.62 2016/02/02 07:38:29 dbj Exp $
+# $NetBSD: Makefile,v 1.63 2017/09/04 18:08:31 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-Tk-${PY_DISTVERSION}
 PKGREVISION=	4
 CATEGORIES=	x11 python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wiki.python.org/moin/TkInter
+HOMEPAGE=	https://wiki.python.org/moin/TkInter
 COMMENT=	Tkinter -- Python interface to Tcl/Tk
 LICENSE=	python-software-foundation
 

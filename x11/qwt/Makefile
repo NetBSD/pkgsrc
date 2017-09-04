@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2015/07/04 16:18:42 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2017/09/04 18:08:31 wiz Exp $
 
 DISTNAME=	qwt-5.0.2
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qwt/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/qwt/
+HOMEPAGE=	https://sourceforge.net/projects/qwt/
 COMMENT=	Qt widget library for technical purposes
 
 MAKE_JOBS_SAFE=		no

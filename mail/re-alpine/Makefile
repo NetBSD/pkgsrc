@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/05/14 15:15:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.17 2017/09/04 18:08:25 wiz Exp $
 #
 
 DISTNAME=	re-alpine-2.03
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=re-alpine/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	http://sourceforge.net/projects/re-alpine/
+HOMEPAGE=	https://sourceforge.net/projects/re-alpine/
 COMMENT=	Console-based mail and news client
 LICENSE=	apache-2.0
 
