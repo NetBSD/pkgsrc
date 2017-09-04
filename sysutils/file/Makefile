@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2016/06/16 15:27:49 fhajny Exp $
+# $NetBSD: Makefile,v 1.40 2017/09/04 12:13:28 wiz Exp $
 
-DISTNAME=		file-5.28
+DISTNAME=		file-5.32
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.astron.com/pub/file/
 
@@ -9,9 +9,8 @@ HOMEPAGE=		http://www.darwinsys.com/file/
 COMMENT=		Tool for determining file type
 LICENSE=		2-clause-bsd
 
-USE_LIBTOOL=		YES
-
-GNU_CONFIGURE=		YES
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-fsect-man5
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
@@ -34,5 +33,4 @@ BUILDLINK_TRANSFORM+=	rm:-Wunused-parameter
 CFLAGS.AIX+=	-D_LINUX_SOURCE_COMPAT
 
 .include "../../devel/zlib/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

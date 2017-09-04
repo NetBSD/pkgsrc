@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.28 2016/06/16 16:16:44 fhajny Exp $
+$NetBSD: distinfo,v 1.29 2017/09/04 12:13:28 wiz Exp $
 
-SHA1 (file-5.28.tar.gz) = 1b789a93bea54da3119d98986468cd90b1e571bf
-RMD160 (file-5.28.tar.gz) = ea054e34e1aa73ffe386f5401dfabbc9bda29a44
-SHA512 (file-5.28.tar.gz) = 42136505e21b14396e3af4e0d3f349687176cf0771d2dc9fed3599a30c7bab59184459f1e51033bce2d6ee0e292eba034bdfda727decca1219c1b3419e6bbfdc
-Size (file-5.28.tar.gz) = 777859 bytes
+SHA1 (file-5.32.tar.gz) = c2858a8043387d1229d8768ad42762a803d017db
+RMD160 (file-5.32.tar.gz) = b7d41a4c6b2c28d9f202d740e353416e2036c1ef
+SHA512 (file-5.32.tar.gz) = 315343229fa196335389544ee8010e9e80995ef4721938492dedcfb0465dfc45e1feb96f26dfe53cab484fb5d9bac54d2d72917fbfd28a1d998c6ad8c8f9792f
+Size (file-5.32.tar.gz) = 797025 bytes
 SHA1 (patch-aa) = dc787ea0d77d7ba88bcb1e17d38b26b13153a1c5
-SHA1 (patch-magic_Magdir_bioinformatics) = 6a12477ff915911abe409782877a810ad1725d26
 SHA1 (patch-src_fsmagic.c) = ee770cf37dfdfbc5a7c123d2691312610b76e76e
