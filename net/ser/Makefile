@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/12/25 02:50:27 obache Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/04 18:00:59 wiz Exp $
 #
 
 DISTNAME=	ser-0.8.14_src
@@ -8,7 +8,7 @@ CATEGORIES=	net comms
 MASTER_SITES=	ftp://ftp.berlios.de/pub/ser/0.8.14/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.iptel.org/ser/
+#HOMEPAGE=	http://www.iptel.org/ser/
 COMMENT=	SIP express router
 LICENSE=	gnu-gpl-v2
 

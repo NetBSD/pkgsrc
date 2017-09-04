@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2011/08/12 17:11:08 taca Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/04 18:00:59 wiz Exp $
 
 DISTNAME=	pdf-writer-1.1.8
 PKGREVISION=	1
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ruby-pdf.rubyforge.org/pdf-writer/
+#HOMEPAGE=	http://ruby-pdf.rubyforge.org/pdf-writer/
 COMMENT=	PDF generation library
 
 DEPENDS+=	${RUBY_PKGPREFIX}-color>=1.4.0:../../graphics/ruby-color

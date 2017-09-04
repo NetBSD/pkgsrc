@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2017/03/20 14:52:20 taca Exp $
+# $NetBSD: Makefile,v 1.15 2017/09/04 18:00:59 wiz Exp $
 
 DISTNAME=	prawn-2.2.2
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://prawn.majesticseacreature.com/
+#HOMEPAGE=	http://prawn.majesticseacreature.com/
 COMMENT=	Fast and nimble PDF generator for Ruby
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 OR ruby-license
 

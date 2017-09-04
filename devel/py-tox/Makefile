@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/04/26 13:25:29 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/04 18:00:52 wiz Exp $
 
 DISTNAME=	tox-2.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tox/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tox.testrun.org/
+#HOMEPAGE=	http://tox.testrun.org/
 COMMENT=	Virtualenv-based automation of test activities
 LICENSE=	mit
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/28 06:31:03 asau Exp $
+# $NetBSD: Makefile,v 1.17 2017/09/04 18:01:04 wiz Exp $
 
 DISTNAME=	webunit-${VERSION}
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	www textproc ruby
 MASTER_SITES=	http://www.xpenguin.biz/download/webunit/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.xpenguin.biz/download/webunit/index-en.html
+#HOMEPAGE=	http://www.xpenguin.biz/download/webunit/index-en.html
 COMMENT=	HTTP unit testing framework for Ruby
 LICENSE=	gnu-gpl-v2 OR ruby-license
 

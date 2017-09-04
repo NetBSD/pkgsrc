@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2017/01/01 14:44:01 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2017/09/04 18:01:02 wiz Exp $
 
 DISTNAME=	PyXML-0.8.4
 PKGNAME=	${PYPKGPREFIX}-xml-0.8.4
@@ -7,7 +7,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyxml/}
 
 MAINTAINER=	drochner@NetBSD.org
-HOMEPAGE=	http://pyxml.sourceforge.net/
+#HOMEPAGE=	http://pyxml.sourceforge.net/
 COMMENT=	Collection of libraries to process XML with Python
 
 CONFLICTS+=	PyXML-[0-9]*

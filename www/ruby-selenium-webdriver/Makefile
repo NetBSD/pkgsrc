@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2016/12/17 20:45:42 gson Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/04 18:01:04 wiz Exp $
 
 DISTNAME=	selenium-webdriver-2.45.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	ruby www
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	http://selenium.googlecode.com/
+#HOMEPAGE=	http://selenium.googlecode.com/
 COMMENT=	Tool for writing automated tests of websites
 LICENSE=	apache-2.0
 

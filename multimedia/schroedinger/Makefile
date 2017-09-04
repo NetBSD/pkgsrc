@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2012/10/08 09:21:12 asau Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/04 18:00:58 wiz Exp $
 #
 
 DISTNAME=	schroedinger-1.0.11
 CATEGORIES=	multimedia
-MASTER_SITES=	http://diracvideo.org/download/schroedinger/
+#MASTER_SITES=	http://diracvideo.org/download/schroedinger/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://diracvideo.org/
+#HOMEPAGE=	http://diracvideo.org/
 COMMENT=	Dirac video compression library
 #LICENSE=	mpl or lgpl or gpl or mit
 

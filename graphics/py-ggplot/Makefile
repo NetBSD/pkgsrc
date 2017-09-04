@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/12/01 15:03:21 marino Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/04 18:00:55 wiz Exp $
 
 DISTNAME=	ggplot-0.10.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/ggplot/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://yhat.github.io/ggplot/
+#HOMEPAGE=	https://yhat.github.io/ggplot/
 COMMENT=	Python implementation of the grammar of graphics
 LICENSE=	2-clause-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/10/18 11:41:17 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2017/09/04 18:00:52 wiz Exp $
 #
 
 DISTNAME=	RTFM-2.4.5
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.bestpractical.com/rtfm/
+#HOMEPAGE=	http://www.bestpractical.com/rtfm/
 COMMENT=	Enterprise-grade knowledge management tool
 
 DEPENDS+=	rt>=3.4.5:../../devel/rt3

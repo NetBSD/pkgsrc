@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/08/18 07:31:13 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/09/04 18:00:57 wiz Exp $
 #
 
 DISTNAME=	sci-0.5.6
@@ -7,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	http://linuxparts.com/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://linuxparts.com/software.html
+#HOMEPAGE=	http://linuxparts.com/software.html
 COMMENT=	Curses based data entry via templates
 
 GNU_CONFIGURE=	yes

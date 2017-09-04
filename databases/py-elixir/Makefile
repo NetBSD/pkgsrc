@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/01/01 14:43:27 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/09/04 18:00:51 wiz Exp $
 
 DISTNAME=	Elixir-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=E/Elixir/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://elixir.ematia.de/trac/wiki
+#HOMEPAGE=	http://elixir.ematia.de/trac/wiki
 COMMENT=	Elixir is a declarative layer on top of the SQLAlchemy library
 LICENSE=	mit
 

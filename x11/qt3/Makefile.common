@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.25 2014/10/05 16:41:09 wiz Exp $
+# $NetBSD: Makefile.common,v 1.26 2017/09/04 18:01:05 wiz Exp $
 # used by x11/qt3-libs/Makefile.common
 # used by x11/qt3/Makefile
 
 QTVERSION=	3.3.8
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.trolltech.com/products/qt/
+#HOMEPAGE=	http://www.trolltech.com/products/qt/

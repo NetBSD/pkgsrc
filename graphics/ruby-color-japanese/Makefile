@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/12 01:43:31 taca Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/04 18:00:55 wiz Exp $
 
 DISTNAME=	color-japanese-1.0.0
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://color-japanese.rubyforge.org/
+#HOMEPAGE=	http://color-japanese.rubyforge.org/
 COMMENT=	Defines RGB value for Japanese color names
 LICENSE=	mit
 

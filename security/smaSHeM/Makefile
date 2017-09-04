@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/11/15 05:11:50 agc Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/04 18:01:00 wiz Exp $
 
 DISTNAME=	smaSHeM-0.4
 CATEGORIES=	security
 MASTER_SITES=	http://labs.portcullis.co.uk/download/
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://labs.portcullis.co.uk/tools/smashem/
+#HOMEPAGE=	http://labs.portcullis.co.uk/tools/smashem/
 COMMENT=	System V shared memory segment manipulator
 LICENSE=	gnu-gpl-v2
 

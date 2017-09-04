@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.15 2016/03/05 11:27:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2017/09/04 18:01:00 wiz Exp $
 #
 
 PKGNAME=	qoauth-1.0.1
 DISTNAME=	${PKGNAME_NOREV}-src
 PKGREVISION=	11
 CATEGORIES=	security
-MASTER_SITES=	http://files.ayoy.net/qoauth/release/1.0.1/src/
+#MASTER_SITES=	http://files.ayoy.net/qoauth/release/1.0.1/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://files.ayoy.net/qoauth/release/1.0.1/src/
+#HOMEPAGE=	http://files.ayoy.net/qoauth/release/1.0.1/src/
 COMMENT=	OAuth library for Qt
 LICENSE=	gnu-lgpl-v3
 

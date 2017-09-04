@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2017/02/12 06:25:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.49 2017/09/04 18:00:49 wiz Exp $
 
 EGG_NAME=	Sonata-1.6.2.1
 DISTNAME=	${EGG_NAME:tl}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://download.berlios.de/sonata/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jfranz@bsdprojects.net
-HOMEPAGE=	http://sonata.berlios.de/
+#HOMEPAGE=	http://sonata.berlios.de/
 COMMENT=	Elegant GTK2 client for the Music Player Daemon
 LICENSE=	gnu-gpl-v3
 

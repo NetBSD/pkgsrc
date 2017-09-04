@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/07/25 16:12:56 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/04 18:00:52 wiz Exp $
 
 DISTNAME=	danielj7-hg-fastimport-d41a42894dfa
 PKGNAME=	${PYPKGPREFIX}-hg-fastimport-20170211
@@ -8,7 +8,7 @@ MASTER_SITES=	-https://bitbucket.org/danielj7/hg-fastimport/get/v20170211.tar.bz
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://mercurial.selenic.com/wiki/FastImportExtension
+#HOMEPAGE=	https://mercurial.selenic.com/wiki/FastImportExtension
 COMMENT=	Mercurial extension for importing from a git fast-import stream
 LICENSE=	gnu-gpl-v2
 

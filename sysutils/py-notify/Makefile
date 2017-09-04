@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2017/01/01 14:43:58 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2017/09/04 18:01:01 wiz Exp $
 
 DISTNAME=	py-notify-0.2.1
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}/1}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES= 	http://download.gna.org/py-notify/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://home.gna.org/py-notify/
+#HOMEPAGE=	http://home.gna.org/py-notify/
 COMMENT=	Python package providing tool for observer programming pattern
 LICENSE=	gnu-lgpl-v2.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/06/08 17:43:34 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/09/04 18:00:55 wiz Exp $
 #
 
 DISTNAME=	nwdiag-1.0.4
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nwdiag/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://blockdiag.com/nwdiag/build/html/
+#HOMEPAGE=	http://blockdiag.com/nwdiag/build/html/
 COMMENT=	Simple network-diagram image generator
 LICENSE=	apache-2.0
 

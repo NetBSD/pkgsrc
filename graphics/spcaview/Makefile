@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/09/08 21:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2017/09/04 18:00:56 wiz Exp $
 
 DISTNAME=	spca5xx-20060402
 PKGNAME=	spcaview-0.6b
@@ -11,7 +11,7 @@ PATCHFILES= 	spca5xx-bsd-0.6b.patch.gz
 PATCH_DIST_STRIP=	-p3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.medias.ne.jp/~takam/bsd/NetBSD.html#spca561
+#HOMEPAGE=	http://www.medias.ne.jp/~takam/bsd/NetBSD.html#spca561
 COMMENT=	USB Cameras based SPCA5xx Utilities
 
 MAKE_JOBS_SAFE=		no

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:45 asau Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/04 18:00:54 wiz Exp $
 
 DISTNAME=	sfslite-1.2.7
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_FREEBSD}
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://dist.okws.org/sfslite
+#HOMEPAGE=	http://dist.okws.org/sfslite
 COMMENT=	Standard version of the sfslite library
 LICENSE=	gnu-gpl-v2
 

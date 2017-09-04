@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2016/10/09 21:42:00 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2017/09/04 18:00:57 wiz Exp $
 
 DISTNAME=	teapop-0.3.8
 PKGREVISION=	16
@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	# ftp://ftp.toontown.org/pub/teapop/
 
 MAINTAINER=	dawszy@arhea.net
-HOMEPAGE=	http://www.toontown.org/teapop/
+#HOMEPAGE=	http://www.toontown.org/teapop/
 COMMENT=	Yet another RFC1939 compliant POP3 server
 
 USE_TOOLS+=	perl:run

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2017/02/12 06:26:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2017/09/04 18:01:04 wiz Exp $
 
 DISTNAME=	kiwi-1.9.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/kiwi/1.9/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.async.com.br/projects/kiwi/
+#HOMEPAGE=	http://www.async.com.br/projects/kiwi/
 COMMENT=	Framework and a set of enhanced PyGTK widgets
 LICENSE=	gnu-lgpl-v2.1 # or later
 

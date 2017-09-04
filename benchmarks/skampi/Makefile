@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.26 2012/10/18 16:58:18 asau Exp $
+# $NetBSD: Makefile,v 1.27 2017/09/04 18:00:50 wiz Exp $
 #
 
 DISTNAME=	skampi
 PKGNAME=	skampi-5.0.4.355
 CATEGORIES=	benchmarks parallel
-MASTER_SITES=	http://liinwww.ira.uka.de/~skampi/download/
+#MASTER_SITES=	http://liinwww.ira.uka.de/~skampi/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://liinwww.ira.uka.de/~skampi/
+#HOMEPAGE=	http://liinwww.ira.uka.de/~skampi/
 COMMENT=	MPI (Message Passing Interface) benchmarks
 LICENSE=	gnu-gpl-v2
 

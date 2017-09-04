@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2017/01/04 20:34:06 roy Exp $
+# $NetBSD: Makefile,v 1.35 2017/09/04 18:00:58 wiz Exp $
 #
 
 DISTNAME=		scli-0.3.1
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.ibr.cs.tu-bs.de/local/scli/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ibr.cs.tu-bs.de/projects/scli/
+#HOMEPAGE=		http://www.ibr.cs.tu-bs.de/projects/scli/
 COMMENT=		SNMP command line interface
 
 GNU_CONFIGURE=		yes
