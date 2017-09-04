@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.21 2017/07/06 11:29:59 wiz Exp $
+$NetBSD: patch-ab,v 1.22 2017/09/04 15:08:29 wiz Exp $
 
 Use installed poppler library so we can have a separate poppler-utils
 package.
 
 Always build pdftoppm.
 
---- utils/Makefile.in.orig	2017-05-21 21:19:46.000000000 +0000
+--- utils/Makefile.in.orig	2017-09-01 18:15:13.000000000 +0000
 +++ utils/Makefile.in
 @@ -96,10 +96,10 @@ host_triplet = @host@
  @BUILD_UTILS_TRUE@	pdfunite$(EXEEXT) $(am__EXEEXT_1) \
@@ -31,7 +31,7 @@ Always build pdftoppm.
  @BUILD_CAIRO_OUTPUT_TRUE@@BUILD_UTILS_TRUE@am__EXEEXT_3 = pdftocairo$(EXEEXT)
  am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)"
  PROGRAMS = $(bin_PROGRAMS)
-@@ -138,39 +138,39 @@ am_pdfdetach_OBJECTS = pdfdetach.$(OBJEX
+@@ -138,34 +138,34 @@ am_pdfdetach_OBJECTS = pdfdetach.$(OBJEX
  pdfdetach_OBJECTS = $(am_pdfdetach_OBJECTS)
  pdfdetach_LDADD = $(LDADD)
  pdfdetach_DEPENDENCIES = libparseargs.la \
@@ -63,13 +63,16 @@ Always build pdftoppm.
  pdfseparate_DEPENDENCIES = libparseargs.la \
 -	$(top_builddir)/poppler/libpoppler.la
 +	$(prefix)/lib/libpoppler.la
- am_pdfsig_OBJECTS = pdfsig.$(OBJEXT)
+ am_pdfsig_OBJECTS = pdfsig-pdfsig.$(OBJEXT)
  pdfsig_OBJECTS = $(am_pdfsig_OBJECTS)
  pdfsig_LDADD = $(LDADD)
  pdfsig_DEPENDENCIES = libparseargs.la \
 -	$(top_builddir)/poppler/libpoppler.la
 +	$(prefix)/lib/libpoppler.la
- am_pdftocairo_OBJECTS = pdftocairo-pdftocairo.$(OBJEXT) \
+ pdfsig_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(pdfsig_CXXFLAGS) \
+ 	$(CXXFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
+@@ -173,7 +173,7 @@ am_pdftocairo_OBJECTS = pdftocairo-pdfto
  	pdftocairo-pdftocairo-win32.$(OBJEXT)
  pdftocairo_OBJECTS = $(am_pdftocairo_OBJECTS)
  am__DEPENDENCIES_1 = libparseargs.la \
@@ -78,7 +81,7 @@ Always build pdftoppm.
  am__DEPENDENCIES_2 =
  @BUILD_CAIRO_OUTPUT_TRUE@@USE_CMS_TRUE@am__DEPENDENCIES_3 =  \
  @BUILD_CAIRO_OUTPUT_TRUE@@USE_CMS_TRUE@	$(am__DEPENDENCIES_2)
-@@ -184,7 +184,7 @@ am_pdftohtml_OBJECTS = pdftohtml-pdftoht
+@@ -187,7 +187,7 @@ am_pdftohtml_OBJECTS = pdftohtml-pdftoht
  pdftohtml_OBJECTS = $(am_pdftohtml_OBJECTS)
  pdftohtml_LDADD = $(LDADD)
  pdftohtml_DEPENDENCIES = libparseargs.la \
@@ -87,7 +90,7 @@ Always build pdftoppm.
  pdftohtml_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
  	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(pdftohtml_CXXFLAGS) \
  	$(CXXFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
-@@ -192,22 +192,22 @@ am_pdftoppm_OBJECTS = pdftoppm.$(OBJEXT)
+@@ -195,22 +195,22 @@ am_pdftoppm_OBJECTS = pdftoppm.$(OBJEXT)
  pdftoppm_OBJECTS = $(am_pdftoppm_OBJECTS)
  pdftoppm_LDADD = $(LDADD)
  pdftoppm_DEPENDENCIES = libparseargs.la \
@@ -114,7 +117,7 @@ Always build pdftoppm.
  AM_V_P = $(am__v_P_@AM_V@)
  am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
  am__v_P_0 = false
-@@ -550,8 +550,9 @@ AM_CPPFLAGS = \
+@@ -553,8 +553,9 @@ AM_CPPFLAGS = \
  
  LDADD = \
  	libparseargs.la				\
