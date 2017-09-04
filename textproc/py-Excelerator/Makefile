@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/01/01 14:44:00 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/09/04 18:08:28 wiz Exp $
 
 DISTNAME=	pyexcelerator-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-Excelerator-${VERSION}
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyexcelerator/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/pyexcelerator/
+HOMEPAGE=	https://sourceforge.net/projects/pyexcelerator/
 COMMENT=	Python library for generating Excel 97/2000/XP/2003 files
 
 USE_LANGUAGES=	#none
