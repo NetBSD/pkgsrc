@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3599 2017/09/04 17:59:14 bsiegert Exp $
+$NetBSD: CHANGES-2017,v 1.3600 2017/09/04 18:12:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5041,3 +5041,14 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-radon to 2.0.3 [adam 2017-09-04]
 	Removed time/gdeskcal [wiz 2017-09-04]
 	Updated www/caddy to 0.10.7 [bsiegert 2017-09-04]
+	Updated databases/slony1 to 2.2.6 [adam 2017-09-04]
+	Updated graphics/py-seaborn to 0.8.1 [adam 2017-09-04]
+	Updated devel/py-setuptools to 36.4.0 [adam 2017-09-04]
+	Updated devel/py-hypothesis to 3.23.2 [adam 2017-09-04]
+	Updated devel/py-dulwich to 0.18.3 [adam 2017-09-04]
+	Updated databases/py-sqlalchemy-utils to 0.32.16 [adam 2017-09-04]
+	Updated textproc/py-docutils to 0.14 [adam 2017-09-04]
+	Updated net/py-botocore to 1.7.3 [adam 2017-09-04]
+	Updated net/py-s3transfer to 0.1.11 [adam 2017-09-04]
+	Updated net/py-boto3 to 1.4.7 [adam 2017-09-04]
+	Updated net/py-awscli to 1.11.145 [adam 2017-09-04]
