@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3585 2017/09/04 14:43:23 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3586 2017/09/04 14:43:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5023,3 +5023,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added chat/py-hangups version 0.4.3 [leot 2017-09-04]
 	Updated net/wireshark to 2.2.9 [wiz 2017-09-04]
 	Updated security/keepassx to 2.0.3 [wiz 2017-09-04]
+	Updated audio/musicpd to 0.20.10 [wiz 2017-09-04]
