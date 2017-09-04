@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/01/01 14:43:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/04 18:55:09 wiz Exp $
 
 PEFILE_VERSION=	1.2.10-139
 DISTNAME=	pefile-${PEFILE_VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	https://pefile.googlecode.com/files/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	https://code.google.com/p/pefile/
+HOMEPAGE=	https://github.com/erocarrera/pefile
 COMMENT=	Python module to read and work with PE files
 LICENSE=	modified-bsd
 
