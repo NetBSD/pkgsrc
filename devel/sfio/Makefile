@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/09/10 14:18:11 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2017/09/04 18:00:54 wiz Exp $
 #
 
 # pkgsrc/mail/sendmail (as of 8.11.0) specifically wants 1999, not 2000.
@@ -15,7 +15,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.cpio
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://akpublic.research.att.com/sw/tools/sfio/
+#HOMEPAGE=	http://akpublic.research.att.com/sw/tools/sfio/
 COMMENT=	Safe and Fast IO library
 
 MAKE_JOBS_SAFE=	no

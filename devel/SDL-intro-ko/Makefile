@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 11:16:32 asau Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/04 18:00:52 wiz Exp $
 #
 
 DISTNAME=	SDL-1.0-korean-intro
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.libsdl.org/archives/
 
 MAINTAINER=	ianzag@mail.ru
-HOMEPAGE=	http://www.libsdl.org/docs.php
+#HOMEPAGE=	http://www.libsdl.org/docs.php
 COMMENT=	Simple DirectMedia Layer introduction (Korean)
 
 WRKSRC=		${WRKDIR}/intro.ko

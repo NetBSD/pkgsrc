@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2011/08/13 00:34:46 taca Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/04 18:01:04 wiz Exp $
 
 DISTNAME=	webby-0.9.4
 PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://webby.rubyforge.org/
+#HOMEPAGE=	http://webby.rubyforge.org/
 COMMENT=	Static web page generator
 LICENSE=	mit
 

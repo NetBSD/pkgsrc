@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2013/03/07 17:08:16 taca Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/04 18:01:00 wiz Exp $
 
 DISTNAME=	ezcrypto-0.7.2
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ezcrypto.rubyforge.org/
+#HOMEPAGE=	http://ezcrypto.rubyforge.org/
 COMMENT=	Ruby object-oriented wrapper for OpenSSL libraries
 LICENSE=	mit
 

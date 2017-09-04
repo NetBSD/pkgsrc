@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/23 07:24:28 taca Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/04 18:01:00 wiz Exp $
 
 DISTNAME=	ruby-hmac-0.4.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ruby-hmac.rubyforge.org/
+#HOMEPAGE=	http://ruby-hmac.rubyforge.org/
 COMMENT=	Common interface to HMAC functionality
 LICENSE=	mit
 

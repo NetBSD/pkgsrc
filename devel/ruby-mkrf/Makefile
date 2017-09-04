@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2015/06/04 13:20:10 taca Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/04 18:00:53 wiz Exp $
 
 DISTNAME=	mkrf-0.2.3
 PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mkrf.rubyforge.org/
+#HOMEPAGE=	http://mkrf.rubyforge.org/
 COMMENT=	Library for generating Rakefiles
 LICENSE=	mit
 

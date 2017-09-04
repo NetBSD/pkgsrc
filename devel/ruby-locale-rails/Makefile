@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2013/09/09 12:29:25 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/04 18:00:53 wiz Exp $
 
 DISTNAME=	locale_rails-2.0.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.yotabanana.com/hiki/ruby-locale-rails.html
+#HOMEPAGE=	http://www.yotabanana.com/hiki/ruby-locale-rails.html
 COMMENT=	Rails localized functions using ruby-locale
 LICENSE=	ruby-license
 
