@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3595 2017/09/04 15:08:41 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3596 2017/09/04 15:24:19 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5033,3 +5033,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-setuptools to 36.3.0 [wiz 2017-09-04]
 	Added sysutils/u-boot-cubieboard4 version 2017.07 [jmcneill 2017-09-04]
 	Updated print/poppler to 0.58.0 [wiz 2017-09-04]
+	Updated graphics/opencv to 3.3.0 [fhajny 2017-09-04]
+	Updated graphics/opencv-contrib-face to 3.3.0 [fhajny 2017-09-04]
