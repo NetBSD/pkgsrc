@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/11/07 14:44:57 gdt Exp $
+# $NetBSD: Makefile,v 1.10 2017/09/04 18:01:04 wiz Exp $
 #
 
 DISTNAME=	purge-${PURGEVERSION}-src
@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.wa.apana.org.au/~dean/sources/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.wa.apana.org.au/~dean/squidpurge/
+#HOMEPAGE=	http://www.wa.apana.org.au/~dean/squidpurge/
 COMMENT=	Squid cache tool to list, extract or purge objects
 
 PURGEVERSION=	20040201

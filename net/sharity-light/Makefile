@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/09/01 12:58:46 mef Exp $
+# $NetBSD: Makefile,v 1.13 2017/09/04 18:00:59 wiz Exp $
 #
 
 DISTNAME=	Sharity-Light.1.3
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://www.obdev.at/ftp/pub/Products/Sharity-Light/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.obdev.at/products/sharity-light/
+#HOMEPAGE=	http://www.obdev.at/products/sharity-light/
 COMMENT=	Userland smbfs -- SMB to NFS protocol converter
 LICENSE=	gnu-gpl-v2
 

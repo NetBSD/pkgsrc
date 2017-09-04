@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/06/21 15:42:10 taca Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/04 18:00:53 wiz Exp $
 
 DISTNAME=	gettext_rails-2.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.yotabanana.com/hiki/ruby-gettext.html
+#HOMEPAGE=	http://www.yotabanana.com/hiki/ruby-gettext.html
 COMMENT=	Localization for Ruby on Rails using Ruby-GetText-Package
 LICENSE=	ruby-license
 
