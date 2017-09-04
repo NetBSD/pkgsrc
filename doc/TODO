@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17664 2017/09/04 12:49:23 wiz Exp $
+$NetBSD: TODO,v 1.17665 2017/09/04 14:42:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1286,7 +1286,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gnome-menus-3.8.0
 	o py-google-api-python-client-1.6.3
 	o py-hsm-1.1.1
-	o py-hyperlink-17.3.1
 	o py-input-pad-1.4.2
 	o py-jaraco_util-11.0
 	o py-keybinder-0.3.1
@@ -1562,7 +1561,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowlab-1.40
 	o wine-2.0.2
 	o wine-devel-2.14
-	o wireshark-2.2.9
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wmx-8
