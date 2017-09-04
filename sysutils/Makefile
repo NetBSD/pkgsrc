@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.715 2017/09/01 21:05:06 jmcneill Exp $
+# $NetBSD: Makefile,v 1.716 2017/09/04 09:29:37 leot Exp $
 #
 
 COMMENT=	System utilities
@@ -382,6 +382,7 @@ SUBDIR+=	neb-wipe
 SUBDIR+=	netbsd-kmod-tools
 SUBDIR+=	netbt-hcidump
 SUBDIR+=	news
+SUBDIR+=	noice
 SUBDIR+=	notification-daemon
 SUBDIR+=	nrg2iso
 SUBDIR+=	ntfsprogs
