@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/01/19 18:52:14 agc Exp $
+# $NetBSD: Makefile,v 1.16 2017/09/04 18:00:56 wiz Exp $
 #
 
 DISTNAME=	rexx-imc-1.76
@@ -8,7 +8,7 @@ MASTER_SITES=	http://users.comlab.ox.ac.uk/ian.collier/distribution/
 MASTER_SITES+=	ftp://ftp.sai.msu.su/pub/unix/rexx/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://users.comlab.ox.ac.uk/ian.collier/Rexx/
+#HOMEPAGE=	http://users.comlab.ox.ac.uk/ian.collier/Rexx/
 COMMENT=	Implementation of IBM's REXX scripting language
 
 MAKE_JOBS_SAFE=	no

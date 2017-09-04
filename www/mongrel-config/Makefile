@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/07/30 22:32:25 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/04 18:01:03 wiz Exp $
 
 DISTNAME=	mongrel_config-0.3.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/fauna/mongrel
+#HOMEPAGE=	https://github.com/fauna/mongrel
 COMMENT=	Mongrel web-based configuration tool
 LICENSE=	gnu-lgpl-v2.1
 
