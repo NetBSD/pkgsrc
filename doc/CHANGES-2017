@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3581 2017/09/04 13:40:54 leot Exp $
+$NetBSD: CHANGES-2017,v 1.3582 2017/09/04 13:56:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5018,3 +5018,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated fonts/harfbuzz to 1.5.0 [wiz 2017-09-04]
 	Added devel/py-readlike version 0.1.2 [leot 2017-09-04]
 	Added devel/py-reparser version 1.4.3 [leot 2017-09-04]
+	Updated www/apache-tomcat8 to 8.0.46 [ryoon 2017-09-04]
+	Updated www/apache-tomcat7 to 7.0.81 [ryoon 2017-09-04]
