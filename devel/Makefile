@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2497 2017/09/04 13:35:08 leot Exp $
+# $NetBSD: Makefile,v 1.2498 2017/09/04 13:40:38 leot Exp $
 #
 
 COMMENT=	Development utilities
@@ -2054,6 +2054,7 @@ SUBDIR+=	py-rauth
 SUBDIR+=	py-readlike
 SUBDIR+=	py-readline
 SUBDIR+=	py-rednose
+SUBDIR+=	py-reparser
 SUBDIR+=	py-repoze.lru
 SUBDIR+=	py-requests
 SUBDIR+=	py-requests-file
