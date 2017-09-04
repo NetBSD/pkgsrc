@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/07/14 15:33:19 adam Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/04 18:55:08 wiz Exp $
 
 DISTNAME=	pydot-1.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -6,7 +6,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydot/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/pydot/
+HOMEPAGE=	https://github.com/erocarrera/pydot
 COMMENT=	Python interface to Graphviz's Dot language
 LICENSE=	mit
 
