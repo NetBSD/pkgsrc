@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.106 2017/07/12 09:00:33 wiz Exp $
+$NetBSD: distinfo,v 1.107 2017/09/04 20:31:41 wiz Exp $
 
-SHA1 (netpbm-10.77.02.tar.gz) = 73b6815ea922394050c7c596b3f7d502cde22866
-RMD160 (netpbm-10.77.02.tar.gz) = 99afb99fcce4f20aee35ecc67ff1522b17e8aa7b
-SHA512 (netpbm-10.77.02.tar.gz) = de9b78d7a6aa293d3ff9ddb3f1f0149966956e4c3e742fa64f4c27cf03150056e375237f3d05f2be4e1cb29bf8a0c7d36d3f515bec69ff8ec1fda24c0aa75506
-Size (netpbm-10.77.02.tar.gz) = 2776825 bytes
-SHA1 (netpbm-docs-r2897.tar.gz) = 80760e2a177034d54e5d09b3f273c84706ce13a6
-RMD160 (netpbm-docs-r2897.tar.gz) = 77a3b59080ca264214f18aee054a5e8ea33d69c6
-SHA512 (netpbm-docs-r2897.tar.gz) = 7625c1ae6c8689b896e762d368605f74060751bd4948951b788cff07a29d9f74aabf63ea57e172187e56a4dd7bff379d1672d224bc29fd7fdf5b4eb310ccbccd
-Size (netpbm-docs-r2897.tar.gz) = 469000 bytes
+SHA1 (netpbm-10.79.04.tar.gz) = 24a5f348b406891354595e85db8b7889c24619ea
+RMD160 (netpbm-10.79.04.tar.gz) = 772d63bc9b08bdc4ec09cb333c3eb9e7615388be
+SHA512 (netpbm-10.79.04.tar.gz) = b5a918bca061015fc6ef361074d010abe88f57dc27971a1db5d4102fd6a02cefc61f2220919d40c9c7a001afac466c74c8d9c1858e3c0f4370422cc4f4c31907
+Size (netpbm-10.79.04.tar.gz) = 2796774 bytes
+SHA1 (netpbm-docs-r3052.tar.gz) = 6986a401717fd1ecb330fd426738bd8069eaf85c
+RMD160 (netpbm-docs-r3052.tar.gz) = 3486f2df6e2e1b83cc5221a969da5db8b842c9ef
+SHA512 (netpbm-docs-r3052.tar.gz) = 0217139aaf8ddba720df3b5242988674d4e5c2ab8f7399de1ecbe169e702eb79dbb55e1622b1af14058cfd3110d1ef0453237e57fb498d3220369d99afa4d77f
+Size (netpbm-docs-r3052.tar.gz) = 472779 bytes
 SHA1 (patch-common.mk) = f590cc66e0fe6a07e848b9b46662bca350557bea
 SHA1 (patch-lib_Makefile) = ff67c418c9d16bdc9d9c95ba658686aa36f213a0
-SHA1 (patch-lib_util_nstring.h) = 394e258902f3d8fceea8840bca11cffd030060c6
 SHA1 (patch-pm__config.in.h) = dfe51691507a2c7be2946013b1f1b6bdd9b39f49
