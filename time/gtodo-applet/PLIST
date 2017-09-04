@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:58 joerg Exp $
-bin/gtodo-applet
-lib/bonobo/servers/gtodo_applet_Factory.server
-share/gconf/schemas/gtodo-applet.schemas
-share/gnome-2.0/ui/gtodo-applet.xml
