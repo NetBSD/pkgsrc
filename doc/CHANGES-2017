@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3561 2017/09/04 11:01:51 khorben Exp $
+$NetBSD: CHANGES-2017,v 1.3562 2017/09/04 12:13:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4998,3 +4998,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added misc/moreutils version 0.60 [leot 2017-09-04]
 	Updated net/Radicale2 to 2.1.5 [prlw1 2017-09-04]
 	Added devel/sloccount version 2.26 [khorben 2017-09-04]
+	Updated sysutils/file to 5.32 [wiz 2017-09-04]
