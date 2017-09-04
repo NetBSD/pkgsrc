@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/08/07 20:53:26 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/04 18:55:07 wiz Exp $
 
 DISTNAME=	spectro-edit_0.4
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -7,7 +7,7 @@ MASTER_SITES=	https://spectro-edit.googlecode.com/files/
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://code.google.com/p/spectro-edit/
+HOMEPAGE=	https://code.google.com/archive/p/spectro-edit/
 COMMENT=	Graphically view and edit WAV files
 LICENSE=	gnu-gpl-v3
 

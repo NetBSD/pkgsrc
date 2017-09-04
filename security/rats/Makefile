@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.27 2014/12/16 03:12:42 mef Exp $
+# $NetBSD: Makefile,v 1.28 2017/09/04 18:55:09 wiz Exp $
 #
 
 DISTNAME=		rats-2.1
 PKGREVISION=		5
 CATEGORIES=		security
-MASTER_SITES+=		http://code.google.com/p/rough-auditing-tool-for-security/downloads/
+MASTER_SITES+=		https://code.google.com/archive/p/rough-auditing-tool-for-security/downloads/
 
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=		http://code.google.com/p/rough-auditing-tool-for-security/
+HOMEPAGE=		https://code.google.com/archive/p/rough-auditing-tool-for-security/
 COMMENT=		Rough Auditing Tool for Security
 LICENSE=		gnu-gpl-v2
 

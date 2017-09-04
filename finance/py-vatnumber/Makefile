@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/01/01 14:43:39 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/04 18:55:08 wiz Exp $
 
 DISTNAME=		vatnumber-1.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=		finance python
 MASTER_SITES=		${MASTER_SITE_PYPI:=v/vatnumber/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://code.google.com/p/vatnumber/
+HOMEPAGE=		https://pypi.python.org/pypi/vatnumber/
 COMMENT=		Python module to validate VAT numbers
 LICENSE=		gnu-gpl-v3
 
