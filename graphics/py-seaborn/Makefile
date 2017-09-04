@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/07/14 15:00:01 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/04 17:19:38 adam Exp $
 
-DISTNAME=	seaborn-0.8
+DISTNAME=	seaborn-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/seaborn/}
