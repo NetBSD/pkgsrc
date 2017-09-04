@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/01/01 14:43:39 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/09/04 18:55:08 wiz Exp $
 
 VERSION=	0.4.0
 DISTNAME=	fs-${VERSION}
@@ -8,7 +8,7 @@ CATEGORIES=	filesystems
 MASTER_SITES=	http://pyfilesystem.googlecode.com/files/
 
 MAINTAINER=	gdt@ir.bbn.com
-HOMEPAGE=	http://code.google.com/p/pyfilesystem/
+HOMEPAGE=	https://github.com/PyFilesystem/pyfilesystem
 COMMENT=	Python filesystem access library
 LICENSE=	modified-bsd
 

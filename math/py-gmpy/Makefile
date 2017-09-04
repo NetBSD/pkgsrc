@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/08/28 15:48:33 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/04 18:55:09 wiz Exp $
 
 DISTNAME=	gmpy-1.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	http://gmpy.googlecode.com/files/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://code.google.com/p/gmpy
+HOMEPAGE=	https://github.com/aleaxit/gmpy
 COMMENT=	Python library for arbitrary precision arithmetic
 LICENSE=	gnu-lgpl-v2.1
 
