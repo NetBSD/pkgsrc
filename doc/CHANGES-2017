@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3598 2017/09/04 17:46:05 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3599 2017/09/04 17:59:14 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5040,3 +5040,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-pluggy to 0.5.1 [adam 2017-09-04]
 	Updated devel/py-radon to 2.0.3 [adam 2017-09-04]
 	Removed time/gdeskcal [wiz 2017-09-04]
+	Updated www/caddy to 0.10.7 [bsiegert 2017-09-04]
