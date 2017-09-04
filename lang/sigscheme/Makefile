@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/06/11 23:39:28 dholland Exp $
+# $NetBSD: Makefile,v 1.10 2017/09/04 18:55:09 wiz Exp $
 #
 
 DISTNAME=	sigscheme-0.8.5
@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://sigscheme.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/sigscheme/
+HOMEPAGE=	https://github.com/uim/sigscheme
 COMMENT=	R5RS Scheme interpreter for embedded use
 #LICENSE=	# See ${WRKSRC}/COPYING
 

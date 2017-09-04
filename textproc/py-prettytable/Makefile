@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:40 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/04 18:55:10 wiz Exp $
 #
 
 DISTNAME=	prettytable-0.7.2
@@ -8,7 +8,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PrettyTable/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/prettytable/
+HOMEPAGE=	https://pypi.python.org/pypi/PrettyTable/
 COMMENT=	Simple Python library for easily displaying tabular data
 LICENSE=	modified-bsd
 
