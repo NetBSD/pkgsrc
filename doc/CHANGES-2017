@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3607 2017/09/04 19:02:47 joerg Exp $
+$NetBSD: CHANGES-2017,v 1.3608 2017/09/04 19:35:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5059,3 +5059,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed chat/smirk [wiz 2017-09-04]
 	Added security/py-requests-ntlm version 1.0.0 [joerg 2017-09-04]
 	Added security/py-ntlm-auth version 1.0.5 [joerg 2017-09-04]
+	Updated databases/postgresql92 to 9.2.23 [adam 2017-09-04]
+	Updated databases/postgresql93 to 9.3.19 [adam 2017-09-04]
+	Updated databases/postgresql94 to 9.4.14 [adam 2017-09-04]
+	Updated databases/postgresql95 to 9.5.9 [adam 2017-09-04]
+	Updated databases/postgresql96 to 9.6.5 [adam 2017-09-04]
