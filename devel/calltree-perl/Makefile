@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.1 2016/09/17 06:13:30 mef Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/04 05:40:44 wiz Exp $
 
 DISTNAME=	Calltree-perl_pl
 PKGNAME=	${DISTNAME:tl:S/_pl//}-0.1
 COMMAND_NAME=	${DISTNAME:tl:S/_pl/.pl/}
 CATEGORIES=	devel
-MASTER_SITES=	http://gw55.quarry.iu.teragrid.org/mediawiki/images/3/39/
+#MASTER_SITES=	http://gw55.quarry.iu.teragrid.org/mediawiki/images/3/39/
 EXTRACT_SUFX=	# empty
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gw55.quarry.iu.teragrid.org/mediawiki/index.php?title=Perl_Static_Source_Code_Analysis
+#HOMEPAGE=	http://gw55.quarry.iu.teragrid.org/mediawiki/index.php?title=Perl_Static_Source_Code_Analysis
 COMMENT=	Static code analysis for perl script
 LICENSE=	modified-bsd
 
