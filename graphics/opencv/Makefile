@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2017/05/03 08:38:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.72 2017/09/04 15:23:49 fhajny Exp $
 
-DISTNAME=	opencv-3.2.0
+DISTNAME=	opencv-3.3.0
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opencv/}
 EXTRACT_SUFX=	.zip
@@ -19,7 +19,7 @@ INSTALLATION_DIRS+=	share/doc/opencv/papers
 INSTALLATION_DIRS+=	share/doc/opencv/ref/pics
 INSTALLATION_DIRS+=	share/OpenCV/haarcascades
 
-PKGCONFIG_OVERRIDE+=		unix-install/opencv.pc
+PKGCONFIG_OVERRIDE+=		build/unix-install/opencv.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 PY_PATCHPLIST=		yes
@@ -39,6 +39,12 @@ CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 # jasper uses SIZE_MAX and friends in its headers.
 CXXFLAGS+=		-D__STDC_LIMIT_MACROS
+
+CONFIGURE_DIRS+=	build
+CMAKE_ARG_PATH=		${WRKSRC}
+
+pre-configure:
+	${MKDIR} -p ${WRKSRC}/build
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
