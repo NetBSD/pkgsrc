@@ -1,3 +1,7 @@
+$NetBSD: patch-src_include_mips_cpu_types.h,v 1.2 2017/09/04 11:19:43 ryoon Exp $
+
+* Real MIPS MALTA has no FPU.
+
 --- src/include/mips_cpu_types.h.orig	2014-08-17 01:45:13.000000000 -0700
 +++ src/include/mips_cpu_types.h	2017-08-24 15:38:11.739142000 -0700
 @@ -98,10 +98,10 @@
