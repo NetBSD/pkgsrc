@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3554 2017/09/03 18:50:42 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3555 2017/09/04 05:52:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4991,3 +4991,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed mail/dovecot2-antispam-plugin [wiz 2017-09-03]
 	Added textproc/translate-shell version 0.9.6.4 [wiz 2017-09-03]
 	Updated devel/py-cython to 0.26.1 [adam 2017-09-03]
+	Removed time/gtodo-applet [wiz 2017-09-04]
