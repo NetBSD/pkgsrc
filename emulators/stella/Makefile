@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2017/01/26 12:45:41 mef Exp $
+# $NetBSD: Makefile,v 1.48 2017/09/04 09:24:26 wiz Exp $
 
 STELLA_VERSION=	4.7.3
 DISTNAME=	stella-${STELLA_VERSION}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=stella-emu/}
 GITHUB_TAG=	release-${STELLA_VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://stella.sourceforge.net/
+HOMEPAGE=	https://stella-emu.github.io/
 COMMENT=	Multi-platform Atari 2600 VCS emulator
 LICENSE=	gnu-gpl-v2
 
