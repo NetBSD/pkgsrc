@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/01/01 14:44:05 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/04 18:55:10 wiz Exp $
 
 VERSION=	0.9.8
 DISTNAME=	PyWebDAV-${VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=	www python
 MASTER_SITES=	http://pywebdav.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/pywebdav/
+HOMEPAGE=	https://pypi.python.org/pypi/PyWebDAV/
 COMMENT=	Standards compliant Python WebDAV server and library
 LICENSE=	gnu-gpl-v2
 
