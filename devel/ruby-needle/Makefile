@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2010/09/10 06:04:02 taca Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/04 18:00:53 wiz Exp $
 
 DISTNAME=	needle-1.3.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://needle.rubyforge.org/
+#HOMEPAGE=	http://needle.rubyforge.org/
 COMMENT=	Dependency injection for Ruby
 LICENSE=	modified-bsd OR ruby-license
 

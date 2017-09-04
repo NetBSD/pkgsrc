@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/09/08 18:53:46 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2017/09/04 18:00:56 wiz Exp $
 
 DISTNAME=	js-1.8.0-rc1
 PKGNAME=	spidermonkey-1.8.0rc1
@@ -7,7 +7,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=js/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mozilla.org/js/spidermonkey/
+#HOMEPAGE=	http://www.mozilla.org/js/spidermonkey/
 COMMENT=	Standalone JavaScript implementation in C
 
 CONFLICTS=	js-[0-9]*

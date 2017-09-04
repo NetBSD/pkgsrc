@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2016/02/16 14:28:23 taca Exp $
+# $NetBSD: Makefile,v 1.14 2017/09/04 18:00:51 wiz Exp $
 
 DISTNAME=	do_mysql-0.10.17
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dataobjects.info/
+#HOMEPAGE=	http://dataobjects.info/
 COMMENT=	MySQL driver for DataObjects
 LICENSE=	mit
 

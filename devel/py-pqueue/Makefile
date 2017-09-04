@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.18 2017/01/01 14:43:34 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2017/09/04 18:00:52 wiz Exp $
 
 DISTNAME=		PQueue-0.2
 PKGNAME=		${PYPKGPREFIX}-pqueue-0.2
 PKGREVISION=		1
 CATEGORIES=		devel python
-MASTER_SITES=		http://www.csse.monash.edu.au/hons/projects/1999/Andrew.Snare/
+#MASTER_SITES=		http://www.csse.monash.edu.au/hons/projects/1999/Andrew.Snare/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.csse.monash.edu.au/hons/projects/1999/Andrew.Snare/
+#HOMEPAGE=		http://www.csse.monash.edu.au/hons/projects/1999/Andrew.Snare/
 COMMENT=		Priority-queues using fibonacci heaps
 LICENSE=		gnu-lgpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/02/25 14:42:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2017/09/04 18:00:56 wiz Exp $
 
 DISTNAME=		siod
 PKGNAME=		siod-3.0
@@ -8,7 +8,7 @@ MASTER_SITES=		# ftp://ftp.std.com/pub/gjc/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://people.delphi.com/gjc/siod.html
+#HOMEPAGE=		http://people.delphi.com/gjc/siod.html
 COMMENT=		Small-footprint implementation of the Scheme programming language
 
 CONFLICTS=		siag-[0-9]*

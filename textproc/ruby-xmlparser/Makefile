@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2015/12/13 16:57:32 taca Exp $
+# $NetBSD: Makefile,v 1.18 2017/09/04 18:01:02 wiz Exp $
 
 DISTNAME=	xmlparser-0.7.3
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.yoshidam.net/
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.yoshidam.net/Ruby.html#xmlparser
+#HOMEPAGE=	http://www.yoshidam.net/Ruby.html#xmlparser
 COMMENT=	Ruby bindings to the Expat XML parsing library
 
 WRKSRC=			${WRKDIR}/${DISTNAME:C/-.*//}

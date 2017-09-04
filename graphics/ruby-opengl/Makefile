@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2016/05/26 17:08:57 taca Exp $
+# $NetBSD: Makefile,v 1.34 2017/09/04 18:00:55 wiz Exp $
 
 DISTNAME=	ruby-opengl-0.60.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	graphics
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://ruby-opengl.rubyforge.org/
+#HOMEPAGE=	http://ruby-opengl.rubyforge.org/
 COMMENT=	Ruby bindings for OpenGL, GLU and GLUT
 LICENSE=	mit
 
