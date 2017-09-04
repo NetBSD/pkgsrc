@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3603 2017/09/04 18:21:24 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3604 2017/09/04 18:25:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5055,3 +5055,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed www/ruby-net-flickr [wiz 2017-09-04]
 	Updated net/ocamlnet to 4.1.4 [jaapb 2017-09-04]
 	Removed editors/qgoogletranslator [wiz 2017-09-04]
+	Removed inputmethod/scim-python [wiz 2017-09-04]
