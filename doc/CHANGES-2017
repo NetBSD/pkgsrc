@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3573 2017/09/04 12:36:22 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3574 2017/09/04 12:37:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5010,3 +5010,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/p5-MailTools to 2.19 [wiz 2017-09-04]
 	Updated net/p5-Net-DNS to 1.12 [wiz 2017-09-04]
 	Updated www/p5-Net-HTTP to 6.17 [wiz 2017-09-04]
+	Updated textproc/p5-Text-BibTeX to 0.85 [wiz 2017-09-04]
