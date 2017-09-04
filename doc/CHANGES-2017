@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3605 2017/09/04 18:32:20 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3606 2017/09/04 18:59:44 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5057,3 +5057,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed editors/qgoogletranslator [wiz 2017-09-04]
 	Removed inputmethod/scim-python [wiz 2017-09-04]
 	Removed chat/smirk [wiz 2017-09-04]
+	Added security/py-requests-ntlm version 1.0.0 [joerg 2017-09-04]
