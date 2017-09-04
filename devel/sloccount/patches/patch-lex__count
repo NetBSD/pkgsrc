@@ -1,0 +1,15 @@
+$NetBSD: patch-lex__count,v 1.1 2017/09/04 11:00:36 khorben Exp $
+
+Correct path to the helper binaries
+
+--- lex_count.orig	2004-08-01 03:06:09.000000000 +0000
++++ lex_count
+@@ -62,7 +62,7 @@ sub count_file {
+   my ($file) = @_;
+   my $sloc = 0;
+ 
+-  $sloc = `lexcount1 < "$file"`;
++  $sloc = `@PREFIX@/libexec/sloccount/lexcount1 < "$file"`;
+   chomp($sloc);
+   print "$sloc $file\n";
+   $total_sloc += $sloc;
