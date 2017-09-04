@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/04/18 20:40:46 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2017/09/04 18:00:52 wiz Exp $
 #
 
 DISTNAME=		rsltcsrc
@@ -9,7 +9,7 @@ MASTER_SITES=		http://www.iist.unu.edu/newrh/III/3/1/docs/rsltc/source/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		MarkoSchuetz@web.de
-HOMEPAGE=		http://www.iist.unu.edu/newrh/III/3/1/page.html
+#HOMEPAGE=		http://www.iist.unu.edu/newrh/III/3/1/page.html
 COMMENT=		RAISE Specification Language Type Checker
 
 DEPENDS+=		gentle>=97:../../devel/gentle

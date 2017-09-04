@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.27 2014/02/04 00:12:07 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2017/09/04 18:00:50 wiz Exp $
 #
 
 DISTNAME=	quirc-0.9.84
 PKGREVISION=	8
 CATEGORIES=	chat
-MASTER_SITES=	http://quirc.org/
+#MASTER_SITES=	http://quirc.org/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://quirc.org/
+#HOMEPAGE=	http://quirc.org/
 COMMENT=	Stable and powerful graphical IRC client
 
 GNU_CONFIGURE=	YES

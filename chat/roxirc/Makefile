@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2014/10/09 14:06:02 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/09/04 18:00:50 wiz Exp $
 #
 
 DISTNAME=	roxirc-1.8
 PKGREVISION=	1
 CATEGORIES=	chat
-MASTER_SITES=	http://roxirc.lighter.net/download/
+#MASTER_SITES=	http://roxirc.lighter.net/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://roxirc.lighter.net/
+#HOMEPAGE=	http://roxirc.lighter.net/
 COMMENT=	Graphical IRC client written in tcl/tk
 
 DEPENDS+=	tk-[0-9]*:../../x11/tk
