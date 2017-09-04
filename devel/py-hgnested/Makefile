@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/01/01 14:43:33 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/04 18:08:20 wiz Exp $
 
 DISTNAME=	hgnested-0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hgnested/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bitbucket.org/cedk/hgnested
+HOMEPAGE=	https://bitbucket.org/cedk/hgnested
 COMMENT=	Mercurial extension to work with nested repositories
 LICENSE=	gnu-gpl-v3
 

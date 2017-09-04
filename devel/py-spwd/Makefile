@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2014/04/28 14:06:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/04 18:08:21 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-spwd-${PY_DISTVERSION}
 CATEGORIES=	devel misc python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://docs.python.org/2/library/spwd.html
+HOMEPAGE=	https://docs.python.org/2/library/spwd.html
 COMMENT=	Python module to access the Unix shadow password database
 LICENSE=	python-software-foundation
 

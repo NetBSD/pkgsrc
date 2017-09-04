@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/08/22 21:37:27 he Exp $
+# $NetBSD: Makefile,v 1.27 2017/09/04 18:08:25 wiz Exp $
 
 DISTNAME=	scipy-0.19.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://www.scipy.org/
+HOMEPAGE=	https://www.scipy.org/
 COMMENT=	Scientific Algorithms Library for Python
 LICENSE=	modified-bsd
 
