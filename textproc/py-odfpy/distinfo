@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/04 19:50:16 adam Exp $
+
+SHA1 (odfpy-1.3.5.tar.gz) = 2e7c62f4cd1d0155a6eaa175f101fa9757901a36
+RMD160 (odfpy-1.3.5.tar.gz) = c2577581fcfe24392cf0cebfb14e7acd3ec7ad41
+SHA512 (odfpy-1.3.5.tar.gz) = cd04c3323a82eff68aa05822443d387476b0aa1f7ab89b12f29f21dd3b64be65ed0545ce2d126d4f03382143d094a67a7ba7b1b1a91d5ff2bc94495bcf1bff23
+Size (odfpy-1.3.5.tar.gz) = 492825 bytes
