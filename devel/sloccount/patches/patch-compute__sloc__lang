@@ -1,0 +1,17 @@
+$NetBSD: patch-compute__sloc__lang,v 1.1 2017/09/04 11:00:36 khorben Exp $
+
+Correct path to the helper binaries
+
+--- compute_sloc_lang.orig	2004-08-01 03:02:54.000000000 +0000
++++ compute_sloc_lang
+@@ -49,8 +49,8 @@ do
+    esac
+ 
+    case "$use_c_count" in
+-     y) c_count -f ${language}_list.dat > ${language}_outfile.dat ;;
+-     *) ${language}_count -f ${language}_list.dat > ${language}_outfile.dat
++     y) "@PREFIX@/libexec/sloccount/c_count" -f ${language}_list.dat > ${language}_outfile.dat ;;
++     *) "@PREFIX@/libexec/sloccount/${language}_count" -f ${language}_list.dat > ${language}_outfile.dat
+         ;;
+    esac
+    tail -1 < ${language}_outfile.dat

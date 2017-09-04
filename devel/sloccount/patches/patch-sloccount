@@ -1,0 +1,55 @@
+$NetBSD: patch-sloccount,v 1.1 2017/09/04 11:00:36 khorben Exp $
+
+Correct path to the helper binaries
+
+--- sloccount.orig	2004-08-01 18:52:22.000000000 +0000
++++ sloccount
+@@ -39,6 +39,8 @@ fi
+ 
+ startingdir=`pwd`
+ 
++prefix="/usr/pkg"
++libexecdir="$prefix/libexec/sloccount"
+ 
+ # "datadir" is some suitable safe place for the data; here's the default:
+ datadir=${HOME}/.slocdata
+@@ -212,23 +214,23 @@ in
+   
+   case $split_things_up
+   in
+-   y) make_filelists $follow $notopfollow --datadir "$datadir" --skip src "$1"/* ||
++   y) "$libexecdir/make_filelists" $follow $notopfollow --datadir "$datadir" --skip src "$1"/* ||
+           exit 1
+       if [ -d "$1"/src ]
+       then
+-       make_filelists $notopfollow --datadir "$datadir" --prefix "src_" "$1"/src/* ||
++       "$libexecdir/make_filelists" $notopfollow --datadir "$datadir" --prefix "src_" "$1"/src/* ||
+           exit 1
+       fi
+       ;;
+-   *) make_filelists $follow $notopfollow --datadir "$datadir" "$@" || exit 1
++   *) "$libexecdir/make_filelists" $follow $notopfollow --datadir "$datadir" "$@" || exit 1
+       ;;
+   esac
+   
+   cd $datadir
+   if echo "Categorizing files." &&
+-     break_filelist --duplistfile sloc_hashes $duplicate_control $autogen * &&
++     "$libexecdir/break_filelist" --duplistfile sloc_hashes $duplicate_control $autogen * &&
+      echo "Computing results." &&
+-     compute_all *
++     "$libexecdir/compute_all" *
+   then
+     display_results=y
+   fi
+@@ -251,8 +253,8 @@ in
+   cd $datadir
+   case $details
+   in
+-    y)   get_sloc_details * ;;
+-    *)   get_sloc $addlang $showother $filecount $oneprogram $effort_model $schedule_model $personcost $overhead * ;;
++    y)   "$libexecdir/get_sloc_details" * ;;
++    *)   "$libexecdir/get_sloc" $addlang $showother $filecount $oneprogram $effort_model $schedule_model $personcost $overhead * ;;
+   esac;;
+ esac
+ 

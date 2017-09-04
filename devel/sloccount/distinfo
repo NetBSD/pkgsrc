@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2017/09/04 11:00:36 khorben Exp $
+
+SHA1 (sloccount-2.26.tar.gz) = 505031c6adfb93e454aaf8b0ee7de04122079d13
+RMD160 (sloccount-2.26.tar.gz) = a5bd1dbe8bd5e5c52ed790990c0d5d8fc49b26ff
+SHA512 (sloccount-2.26.tar.gz) = ed6ab315a56dbdc86c654b94e790c9ea9e2dcad0db26b63c0973c33eb7fa634b4ade0a1f3c6ccfd5172ea95f648c1dd3b0ae2575b0aa44b3fec708c24a6aca54
+Size (sloccount-2.26.tar.gz) = 190948 bytes
+SHA1 (patch-compute__all) = 86bee28f56a366c63f122a417bad92020e748df1
+SHA1 (patch-compute__sloc__lang) = 8692b6b086aad2cf986123c85f70229017a9bf37
+SHA1 (patch-lex__count) = b9014c54a9a4a3a39bb84c5b008be486931ea57f
+SHA1 (patch-makefile) = 0f696e08486299dadd919d3aee1d31d01d1c6ad1
+SHA1 (patch-rpm__unpacker) = 1bd30245b1ad1c6de72c0ec63acbd76b95d79efb
+SHA1 (patch-sloccount) = 610b0033e7b0e10939f1d4b5ec3f7e1fcaa83827
