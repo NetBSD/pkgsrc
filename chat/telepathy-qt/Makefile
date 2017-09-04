@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/01/01 14:43:26 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/04 18:08:18 wiz Exp $
 
 DISTNAME=	telepathy-qt-0.9.6.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-qt/
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://telepathy.freedesktop.org/doc/telepathy-qt/
+HOMEPAGE=	https://telepathy.freedesktop.org/doc/telepathy-qt/
 COMMENT=	Qt bindings for telepathy
 LICENSE=	gnu-lgpl-v2.1
 
