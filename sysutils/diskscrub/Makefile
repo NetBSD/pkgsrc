@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/07/09 06:38:59 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/09/04 18:55:09 wiz Exp $
 
 DISTNAME=	scrub-2.5.2
 PKGREVISION=	5
@@ -7,7 +7,7 @@ MASTER_SITES=	http://diskscrub.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/diskscrub/
+HOMEPAGE=	https://code.google.com/archive/p/diskscrub/
 COMMENT=	Utility to overwrite disks and scrub the data on them
 LICENSE=	gnu-gpl-v2
 
