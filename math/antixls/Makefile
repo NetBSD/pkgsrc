@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2016/07/09 06:38:32 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.13 2017/09/04 05:36:14 wiz Exp $
 
 DISTNAME=		antixls-0.2b
 PKGREVISION=		6
 CATEGORIES=		math
-MASTER_SITES=		http://www.af0.net/~dan/
+#MASTER_SITES=		http://www.af0.net/~dan/
 EXTRACT_SUFX=		.perl
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.af0.net/~dan/?antixls
+#HOMEPAGE=		http://www.af0.net/~dan/?antixls
 COMMENT=		Print XLS file with minimal formatting, or as CSV
 
 DEPENDS+=	p5-Spreadsheet-ParseExcel-[0-9]*:../../math/p5-Spreadsheet-ParseExcel
