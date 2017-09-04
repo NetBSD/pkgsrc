@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3568 2017/09/04 12:27:35 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3569 2017/09/04 12:29:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5005,3 +5005,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-HTML-Tree to 5.07 [wiz 2017-09-04]
 	Updated security/p5-IO-Socket-SSL to 2.050 [wiz 2017-09-04]
 	Updated converters/p5-JSON-XS to 3.04 [wiz 2017-09-04]
+	Updated devel/p5-List-MoreUtils-XS to 0.423 [wiz 2017-09-04]
