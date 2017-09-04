@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/08/13 19:25:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/09/04 19:33:43 adam Exp $
 man/man1/clusterdb.1
 man/man1/createdb.1
 man/man1/createlang.1
@@ -1144,6 +1144,7 @@ share/doc/postgresql/html/release-9-2-2.html
 share/doc/postgresql/html/release-9-2-20.html
 share/doc/postgresql/html/release-9-2-21.html
 share/doc/postgresql/html/release-9-2-22.html
+share/doc/postgresql/html/release-9-2-23.html
 share/doc/postgresql/html/release-9-2-3.html
 share/doc/postgresql/html/release-9-2-4.html
 share/doc/postgresql/html/release-9-2-5.html
@@ -1162,6 +1163,7 @@ share/doc/postgresql/html/release-9-3-15.html
 share/doc/postgresql/html/release-9-3-16.html
 share/doc/postgresql/html/release-9-3-17.html
 share/doc/postgresql/html/release-9-3-18.html
+share/doc/postgresql/html/release-9-3-19.html
 share/doc/postgresql/html/release-9-3-2.html
 share/doc/postgresql/html/release-9-3-3.html
 share/doc/postgresql/html/release-9-3-4.html
@@ -1176,6 +1178,7 @@ share/doc/postgresql/html/release-9-4-10.html
 share/doc/postgresql/html/release-9-4-11.html
 share/doc/postgresql/html/release-9-4-12.html
 share/doc/postgresql/html/release-9-4-13.html
+share/doc/postgresql/html/release-9-4-14.html
 share/doc/postgresql/html/release-9-4-2.html
 share/doc/postgresql/html/release-9-4-3.html
 share/doc/postgresql/html/release-9-4-4.html
@@ -1193,6 +1196,7 @@ share/doc/postgresql/html/release-9-5-5.html
 share/doc/postgresql/html/release-9-5-6.html
 share/doc/postgresql/html/release-9-5-7.html
 share/doc/postgresql/html/release-9-5-8.html
+share/doc/postgresql/html/release-9-5-9.html
 share/doc/postgresql/html/release-9-5.html
 share/doc/postgresql/html/release.html
 share/doc/postgresql/html/replication-origins.html
