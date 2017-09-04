@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3606 2017/09/04 18:59:44 joerg Exp $
+$NetBSD: CHANGES-2017,v 1.3607 2017/09/04 19:02:47 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5058,3 +5058,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed inputmethod/scim-python [wiz 2017-09-04]
 	Removed chat/smirk [wiz 2017-09-04]
 	Added security/py-requests-ntlm version 1.0.0 [joerg 2017-09-04]
+	Added security/py-ntlm-auth version 1.0.5 [joerg 2017-09-04]
