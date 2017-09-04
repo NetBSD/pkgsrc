@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3579 2017/09/04 12:49:23 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3580 2017/09/04 13:38:52 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5016,3 +5016,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/p5-Tk to 804.034 [wiz 2017-09-04]
 	Updated fonts/t1utils to 1.41 [wiz 2017-09-04]
 	Updated fonts/harfbuzz to 1.5.0 [wiz 2017-09-04]
+	Added devel/py-readlike version 0.1.2 [leot 2017-09-04]
