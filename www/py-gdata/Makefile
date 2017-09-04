@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/01/01 14:44:04 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2017/09/04 18:55:10 wiz Exp $
 
 DISTNAME=	gdata-2.0.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	http://gdata-python-client.googlecode.com/files/
 
 MAINTAINER=	mj@mjturner.net
-HOMEPAGE=	http://code.google.com/p/gdata-python-client/
+HOMEPAGE=	https://github.com/google/gdata-python-client
 COMMENT=	Google Data API Python client library
 LICENSE=	apache-2.0
 
