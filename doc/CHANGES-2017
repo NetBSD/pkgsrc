@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3593 2017/09/04 14:46:33 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3594 2017/09/04 15:05:41 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5031,3 +5031,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated finance/moneyguru to 2.11.0 [wiz 2017-09-04]
 	Updated databases/py-psycopg2 to 2.7.3.1 [wiz 2017-09-04]
 	Updated devel/py-setuptools to 36.3.0 [wiz 2017-09-04]
+	Added sysutils/u-boot-cubieboard4 version 2017.07 [jmcneill 2017-09-04]
