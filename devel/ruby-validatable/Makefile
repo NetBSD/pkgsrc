@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2010/09/10 06:34:24 taca Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/04 18:00:54 wiz Exp $
 
 DISTNAME=	validatable-1.6.7
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://validatable.rubyforge.org/
+#HOMEPAGE=	http://validatable.rubyforge.org/
 COMMENT=	Library for adding database/object validations
 LICENSE=	gnu-gpl-v2 OR ruby-license
 

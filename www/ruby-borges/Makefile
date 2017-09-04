@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/01/19 18:52:29 agc Exp $
+# $NetBSD: Makefile,v 1.22 2017/09/04 18:01:04 wiz Exp $
 
 DISTNAME=	borges-1.1.0
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://rubyforge.org/frs/download.php/574/
 MASTER_SITES+=	http://segment7.net/projects/ruby/borges/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://borges.rubyforge.org/
+#HOMEPAGE=	http://borges.rubyforge.org/
 COMMENT=	Ruby web application framework
 LICENSE=	modified-bsd
 
