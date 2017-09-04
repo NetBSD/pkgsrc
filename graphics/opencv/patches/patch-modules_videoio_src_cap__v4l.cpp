@@ -1,8 +1,8 @@
-$NetBSD: patch-modules_videoio_src_cap__v4l.cpp,v 1.2 2017/03/16 21:59:13 prlw1 Exp $
+$NetBSD: patch-modules_videoio_src_cap__v4l.cpp,v 1.3 2017/09/04 15:23:49 fhajny Exp $
 
 Conditionalize settings not available in NetBSD's v4l2 emulation.
 
---- modules/videoio/src/cap_v4l.cpp.orig	2016-12-23 12:54:44.000000000 +0000
+--- modules/videoio/src/cap_v4l.cpp.orig	2017-08-03 23:58:23.000000000 +0000
 +++ modules/videoio/src/cap_v4l.cpp
 @@ -216,6 +216,7 @@ make & enjoy!
  #include <fcntl.h>
@@ -12,7 +12,7 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
  #include <sys/types.h>
  #include <sys/mman.h>
  
-@@ -469,9 +470,13 @@ static int autosetup_capture_mode_v4l2(C
+@@ -470,9 +471,13 @@ static int autosetup_capture_mode_v4l2(C
              V4L2_PIX_FMT_UYVY,
              V4L2_PIX_FMT_SN9C10X,
              V4L2_PIX_FMT_SBGGR8,
@@ -28,7 +28,7 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
      };
  
      for (size_t i = 0; i < sizeof(try_order) / sizeof(__u32); i++) {
-@@ -520,12 +525,16 @@ static void v4l2_control_range(CvCapture
+@@ -521,12 +526,16 @@ static void v4l2_control_range(CvCapture
      case V4L2_CID_GAIN:
          cap->gain = range;
          break;
@@ -45,7 +45,7 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
      }
  }
  
-@@ -547,7 +556,9 @@ static void v4l2_scan_controls(CvCapture
+@@ -548,7 +557,9 @@ static void v4l2_scan_controls(CvCapture
          break;
    }
  
@@ -55,7 +55,7 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
  }
  
  static int v4l2_set_fps(CvCaptureCAM_V4L* capture) {
-@@ -563,8 +574,10 @@ static int v4l2_num_channels(__u32 palet
+@@ -564,8 +575,10 @@ static int v4l2_num_channels(__u32 palet
      case V4L2_PIX_FMT_YVU420:
      case V4L2_PIX_FMT_MJPEG:
      case V4L2_PIX_FMT_JPEG:
@@ -66,7 +66,7 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
      case V4L2_PIX_FMT_YUYV:
      case V4L2_PIX_FMT_UYVY:
          return 2;
-@@ -592,11 +605,13 @@ static void v4l2_create_frame(CvCaptureC
+@@ -593,11 +606,13 @@ static void v4l2_create_frame(CvCaptureC
          case V4L2_PIX_FMT_YVU420:
              size.height = size.height * 3 / 2; // "1.5" channels
              break;
@@ -80,7 +80,7 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
          }
      }
  
-@@ -1555,18 +1570,21 @@ static IplImage* icvRetrieveFrameCAM_V4L
+@@ -1558,18 +1573,21 @@ static IplImage* icvRetrieveFrameCAM_V4L
                  (unsigned char*)capture->frame.imageData);
          break;
  
@@ -102,15 +102,15 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
      case V4L2_PIX_FMT_Y16:
          if(capture->convert_rgb){
              y16_to_rgb24(capture->form.fmt.pix.width,
-@@ -1579,6 +1597,7 @@ static IplImage* icvRetrieveFrameCAM_V4L
+@@ -1582,6 +1600,7 @@ static IplImage* icvRetrieveFrameCAM_V4L
                     capture->frame.imageSize);
          }
          break;
 +#endif
      }
  
-     return(&capture->frame);
-@@ -1596,14 +1615,22 @@ static inline __u32 capPropertyToV4L2(in
+     if (capture->returnFrame)
+@@ -1602,14 +1621,22 @@ static inline __u32 capPropertyToV4L2(in
          return V4L2_CID_HUE;
      case CV_CAP_PROP_GAIN:
          return V4L2_CID_GAIN;
@@ -133,7 +133,7 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
      default:
          return -1;
      }
-@@ -1749,12 +1776,14 @@ static bool icvSetControl (CvCaptureCAM_
+@@ -1755,12 +1782,14 @@ static bool icvSetControl (CvCaptureCAM_
          return false;
      }
  
