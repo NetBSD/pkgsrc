@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3558 2017/09/04 09:36:37 leot Exp $
+$NetBSD: CHANGES-2017,v 1.3559 2017/09/04 09:45:22 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4995,3 +4995,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/gd to 2.2.5 [adam 2017-09-04]
 	Added sysutils/noice version 0.6 [leot 2017-09-04]
 	Added net/gallery-dl version 0.9.1 [leot 2017-09-04]
+	Added misc/moreutils version 0.60 [leot 2017-09-04]
