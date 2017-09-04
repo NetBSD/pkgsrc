@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2011/11/08 15:37:34 taca Exp $
+# $NetBSD: Makefile,v 1.21 2017/09/04 18:00:57 wiz Exp $
 
 DISTNAME=	tmail-1.2.7.1
 PKGREVISION=	2
 CATEGORIES=	mail
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://tmail.rubyforge.org/
+#HOMEPAGE=	http://tmail.rubyforge.org/
 COMMENT=	Mail manipulating library for Ruby including MIME multipart support
 LICENSE=	mit
 

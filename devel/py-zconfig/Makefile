@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/01/01 14:43:36 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/09/04 18:00:52 wiz Exp $
 
 DISTNAME=		ZConfig-2.6.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:tl}
@@ -6,7 +6,7 @@ CATEGORIES=		devel python
 MASTER_SITES=		${MASTER_SITE_PYPI:=Z/ZConfig/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.zope.org/Members/fdrake/zconfig/
+#HOMEPAGE=		http://www.zope.org/Members/fdrake/zconfig/
 COMMENT=		Configuration library
 #LICENSE=		zope-public-license-v2.1
 

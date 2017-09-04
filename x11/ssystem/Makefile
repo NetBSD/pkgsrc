@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/07/04 16:18:42 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2017/09/04 18:01:05 wiz Exp $
 #
 
 DISTNAME=	ssystem-1.6
@@ -7,7 +7,7 @@ CATEGORIES=	x11 graphics
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www1.las.es/~amil/ssystem/
+#HOMEPAGE=	http://www1.las.es/~amil/ssystem/
 COMMENT=	Solar System Flyby Simulator
 
 MAKE_JOBS_SAFE=		no

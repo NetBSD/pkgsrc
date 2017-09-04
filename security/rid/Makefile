@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.17 2013/04/06 14:58:20 rodent Exp $
+# $NetBSD: Makefile,v 1.18 2017/09/04 18:01:00 wiz Exp $
 #
 
 DISTNAME=	rid-1.11
 PKGREVISION=	2
 CATEGORIES=	security net
-MASTER_SITES=	http://www.theorygroup.com/Software/RID/
+#MASTER_SITES=	http://www.theorygroup.com/Software/RID/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.theorygroup.com/Software/RID/
+#HOMEPAGE=	http://www.theorygroup.com/Software/RID/
 COMMENT=	Remote Intrusion Detection to track down compromised hosts
 
 MAKE_JOBS_SAFE=		no

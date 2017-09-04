@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2013/10/17 07:56:40 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/04 18:00:50 wiz Exp $
 #
 
 DISTNAME=	taglib-extras-1.0.1
 PKGREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	http://www.kollide.net/~jefferai/
+#MASTER_SITES=	http://www.kollide.net/~jefferai/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.kollide.net/~jefferai/
+#HOMEPAGE=	http://www.kollide.net/~jefferai/
 COMMENT=	Extra plugins for taglib
 LICENSE=	gnu-lgpl-v2
 
