@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3560 2017/09/04 10:36:04 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.3561 2017/09/04 11:01:51 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4997,3 +4997,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added net/gallery-dl version 0.9.1 [leot 2017-09-04]
 	Added misc/moreutils version 0.60 [leot 2017-09-04]
 	Updated net/Radicale2 to 2.1.5 [prlw1 2017-09-04]
+	Added devel/sloccount version 2.26 [khorben 2017-09-04]
