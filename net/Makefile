@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1173 2017/08/31 15:42:44 leot Exp $
+# $NetBSD: Makefile,v 1.1174 2017/09/04 09:36:02 leot Exp $
 #
 
 COMMENT=	Networking tools
@@ -163,6 +163,7 @@ SUBDIR+=	freeradius2
 SUBDIR+=	freerdp
 SUBDIR+=	ftplibpp
 SUBDIR+=	ftpproxy
+SUBDIR+=	gallery-dl
 SUBDIR+=	gated
 SUBDIR+=	gcloud-golang-metadata
 SUBDIR+=	get-flash-videos
