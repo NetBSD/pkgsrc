@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3559 2017/09/04 09:45:22 leot Exp $
+$NetBSD: CHANGES-2017,v 1.3560 2017/09/04 10:36:04 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -4996,3 +4996,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/noice version 0.6 [leot 2017-09-04]
 	Added net/gallery-dl version 0.9.1 [leot 2017-09-04]
 	Added misc/moreutils version 0.60 [leot 2017-09-04]
+	Updated net/Radicale2 to 2.1.5 [prlw1 2017-09-04]
