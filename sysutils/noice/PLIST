@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/04 09:29:13 leot Exp $
+bin/noice
+man/man1/noice.1
