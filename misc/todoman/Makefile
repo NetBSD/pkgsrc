@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2017/05/17 11:17:35 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/09/04 14:44:58 wiz Exp $
 
-DISTNAME=	todoman-3.2.0
+DISTNAME=	todoman-3.2.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/todoman/}
 
@@ -11,7 +11,6 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites-[0-9]*:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-click>=6.0:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-click-log-[0-9]*:../../devel/py-click-log
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-humanize-[0-9]*:../../textproc/py-humanize
@@ -25,6 +24,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 # TEST_DEPENDS
 BUILD_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
+BUILD_DEPENDS+=	${PYPKGPREFIX}-flakes-[0-9]*:../../devel/py-flakes
 BUILD_DEPENDS+=	${PYPKGPREFIX}-flake8-import-order-[0-9]*:../../devel/py-flake8-import-order
 BUILD_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 BUILD_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
