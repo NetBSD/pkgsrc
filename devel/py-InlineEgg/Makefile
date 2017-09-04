@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/01/01 14:43:31 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2017/09/04 18:00:52 wiz Exp $
 
 DISTNAME=		InlineEgg-1.08
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://oss.corest.com/repo/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://oss.corest.com/projects/inlineegg.html
+#HOMEPAGE=		http://oss.corest.com/projects/inlineegg.html
 COMMENT=		Python module for writing inline assembler programs
 LICENSE=		inlineegg-license
 

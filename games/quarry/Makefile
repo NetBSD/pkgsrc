@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2017/02/12 06:25:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2017/09/04 18:00:55 wiz Exp $
 #
 
 DISTNAME=	quarry-0.2.0
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://download.gna.org/quarry/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://home.gna.org/quarry/index.html
+#HOMEPAGE=	http://home.gna.org/quarry/index.html
 COMMENT=	Multi-purpose GUI for several board games
 
 GNU_CONFIGURE=		yes

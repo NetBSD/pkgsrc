@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/09/26 15:02:18 taca Exp $
+# $NetBSD: Makefile,v 1.30 2017/09/04 18:00:53 wiz Exp $
 #
 
 DISTNAME=	rdtool-${RUBY_RD_VERSION}
@@ -9,7 +9,7 @@ MASTER_SITES=	# http://rubyforge.org/frs/download.php/33346/
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://uwabami.github.io/rdtool/index-en.html
+#HOMEPAGE=	http://uwabami.github.io/rdtool/index-en.html
 COMMENT=	Editing mode for RD (Ruby Document Format)
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/utils

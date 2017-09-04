@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2015/09/13 10:09:39 taca Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/04 18:00:53 wiz Exp $
 
 DISTNAME=	little-plugger-1.1.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gemcutter.org/gems/little-plugger
+#HOMEPAGE=	http://gemcutter.org/gems/little-plugger
 COMMENT=	Module that provides Gem based plugin management
 LICENSE=	mit
 

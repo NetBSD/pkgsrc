@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2017/02/12 06:25:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.44 2017/09/04 18:00:55 wiz Exp $
 
 DISTNAME=	pygoocanvas-0.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -7,7 +7,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygoocanvas/0.14/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://live.gnome.org/PyGoocanvas
+#HOMEPAGE=	http://live.gnome.org/PyGoocanvas
 COMMENT=	Python bindings for GooCanvas
 LICENSE=	gnu-lgpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/01/01 14:44:03 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/09/04 18:01:03 wiz Exp $
 
 DISTNAME=	HTMLgen
 PKGNAME=	${PYPKGPREFIX}-HTMLgen-2.2.2
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	py-HTMLgen-2.2.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://starship.python.net/crew/friedrich/HTMLgen/html/main.html
+#HOMEPAGE=	http://starship.python.net/crew/friedrich/HTMLgen/html/main.html
 COMMENT=	Class library for the generation of HTML documents
 
 NO_BUILD=	yes

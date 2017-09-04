@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/09/11 23:25:09 asau Exp $
+# $NetBSD: Makefile,v 1.16 2017/09/04 18:01:01 wiz Exp $
 
 DISTNAME=	scponly-4.8
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scponly/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	snj@NetBSD.org
-HOMEPAGE=	http://sublimation.org/scponly/wiki/
+#HOMEPAGE=	http://sublimation.org/scponly/wiki/
 COMMENT=	Shell that only permits sftp
 
 GNU_CONFIGURE=	yes

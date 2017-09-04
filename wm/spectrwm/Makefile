@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/07/24 19:57:23 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2017/09/04 18:01:03 wiz Exp $
 
 DISTNAME=	spectrwm-2.5.1
 CATEGORIES=	wm
@@ -6,7 +6,7 @@ MASTER_SITES=	https://opensource.conformal.com/snapshots/spectrwm/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://opensource.conformal.com/wiki/spectrwm
+#HOMEPAGE=	https://opensource.conformal.com/wiki/spectrwm
 COMMENT=	Small dynamic tiling window manager for X11
 LICENSE=	isc
 

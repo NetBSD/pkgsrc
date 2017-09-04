@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/01/01 14:43:25 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2017/09/04 18:00:51 wiz Exp $
 
 DISTNAME=	telepathy-mission-control-5.7.9
 PKGNAME=	telepathy-mission-control5-5.7.9
@@ -8,7 +8,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-mission-control/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mission-control.sourceforge.net/
+#HOMEPAGE=	http://mission-control.sourceforge.net/
 COMMENT=	Telepathy component providing abstractions for "end-user" applications
 
 GNU_CONFIGURE=	yes

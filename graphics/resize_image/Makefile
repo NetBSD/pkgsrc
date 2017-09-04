@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.18 2012/11/01 19:52:03 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2017/09/04 18:00:55 wiz Exp $
 #
 
 DISTNAME=	resize_image-0.6
 PKGREVISION=	5
 CATEGORIES=	graphics
-MASTER_SITES=	http://lab.erasme.org/resize_image/
+#MASTER_SITES=	http://lab.erasme.org/resize_image/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lab.erasme.org/resize_image/
+#HOMEPAGE=	http://lab.erasme.org/resize_image/
 COMMENT=	Fast image resizing tool
 
 USE_TOOLS+=	gmake
