@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2012/10/28 06:31:05 asau Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/04 18:08:31 wiz Exp $
 #
 
 DISTNAME=		snarf-7.0
 CATEGORIES=		www
-MASTER_SITES=		http://www.xach.com/snarf/download/source/
+MASTER_SITES=		https://www.xach.com/snarf/download/source/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.xach.com/snarf/
+HOMEPAGE=		https://www.xach.com/snarf/
 COMMENT=		Simple command-line tool to retrieve an HTTP URL
 
 GNU_CONFIGURE=		yes

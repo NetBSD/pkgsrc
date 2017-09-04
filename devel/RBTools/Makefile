@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2017/01/01 14:43:29 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/09/04 18:08:20 wiz Exp $
 
 DISTNAME=	RBTools-0.7.6
 CATEGORIES=	devel
 MASTER_SITES=	http://downloads.reviewboard.org/releases/RBTools/0.7/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.reviewboard.org/docs/manual/dev/users/tools/
+HOMEPAGE=	https://www.reviewboard.org/docs/manual/dev/users/tools/
 COMMENT=	Tool to submit patches to a Review Board
 LICENSE=	mit
 
