@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/04 13:33:42 leot Exp $
+
+SHA1 (readlike-0.1.2.tar.gz) = 18b2ea1db6885c79ad000b0f01790e3180e8744f
+RMD160 (readlike-0.1.2.tar.gz) = 08396b5df29c2c730dcc2ff086abc4077a9199ad
+SHA512 (readlike-0.1.2.tar.gz) = 4ecd694c69c615ec37da05341596af4ec26abeeda78ecf10fc3019533a7ab092ed1e1e4f8910a7835d7ffb157b203cb0395a2eba135d3aba861abb75d466980e
+Size (readlike-0.1.2.tar.gz) = 5068 bytes
