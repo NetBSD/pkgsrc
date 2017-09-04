@@ -1,15 +1,16 @@
-$NetBSD: distinfo,v 1.37 2017/03/16 21:59:13 prlw1 Exp $
+$NetBSD: distinfo,v 1.38 2017/09/04 15:23:49 fhajny Exp $
 
-SHA1 (opencv-3.2.0.zip) = 7a7d2eb8cf617f58d610d856e531f3d92b89bc42
-RMD160 (opencv-3.2.0.zip) = 09da1443a5ef3de036b11bf0d1f384da36d459d9
-SHA512 (opencv-3.2.0.zip) = c6418d2a7654fe9d50611e756778df4c6736f2de76b85773efbf490bb475dd95ec1041fe57a87163ce11a7db44430cd378c8416af3319f979ced92532bf5ebb5
-Size (opencv-3.2.0.zip) = 82033498 bytes
-SHA1 (patch-3rdparty_ippicv_downloader.cmake) = a0b7c1b52f9ec4f35ff3f846785fbbfec1eeac51
+SHA1 (opencv-3.3.0.zip) = 7ca35eceb3caa2d96b846b682dbcdf1e6fa66904
+RMD160 (opencv-3.3.0.zip) = d2cbf32ff7f62c8064e0ba774baa56fa1b168206
+SHA512 (opencv-3.3.0.zip) = 14430c6225926e5118daccb57c7276d9f9160c90a034b2c73a09b73ac90ba7ebd3ae78cccffb4a10b58bb0e5e16ebd03bf617030fa74cc67d9d18366bf6b4951
+Size (opencv-3.3.0.zip) = 84873317 bytes
+SHA1 (patch-3rdparty_ippicv_ippicv.cmake) = 14ce5de382084793ace32f43c6dfaf01f7ffb390
+SHA1 (patch-3rdparty_protobuf_src_google_protobuf_message__lite.cc) = f1b77384ea8110d2bf3a30ff3fe9f2fa39608caf
 SHA1 (patch-cmake_OpenCVDetectCXXCompiler.cmake) = 221b0551d0f29d7e79afe3da8a33b1b3a4f7bf20
 SHA1 (patch-modules_core_include_opencv2_core_types_c.h) = 75444e65677be99af8167f9060419d7970a7adaa
 SHA1 (patch-modules_core_src_downhill__simplex.cpp) = 1ad7c2fa126d15050b87785e8eec20dbe796b471
-SHA1 (patch-modules_core_src_parallel__pthreads.cpp) = c64ef8872c120db0ab92582496235858eec9bf92
+SHA1 (patch-modules_core_src_parallel__pthreads.cpp) = d8070117286b36a23a6788fc834aacc52d5919d7
 SHA1 (patch-modules_core_src_system.cpp) = 3b7ac545585a430d28c7077f360357079f127580
 SHA1 (patch-modules_flann_include_opencv2_flann_defines.h) = ab848e67c4e03219670598ac2d21071a617a5c33
 SHA1 (patch-modules_ts_src_ts.cpp) = b9a3992014b02dbd89d46375a2476385e91dc24c
-SHA1 (patch-modules_videoio_src_cap__v4l.cpp) = 96f33b2b209776ff8f38127c611d49413b308123
+SHA1 (patch-modules_videoio_src_cap__v4l.cpp) = 96aac9380d94818a52afd51f2d4b3f774debd080
