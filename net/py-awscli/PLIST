@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/03 21:24:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/09/04 18:10:48 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -863,6 +863,7 @@ ${PYSITELIB}/awscli/examples/ec2/confirm-product-instance.rst
 ${PYSITELIB}/awscli/examples/ec2/copy-image.rst
 ${PYSITELIB}/awscli/examples/ec2/copy-snapshot.rst
 ${PYSITELIB}/awscli/examples/ec2/create-customer-gateway.rst
+${PYSITELIB}/awscli/examples/ec2/create-default-vpc.rst
 ${PYSITELIB}/awscli/examples/ec2/create-dhcp-options.rst
 ${PYSITELIB}/awscli/examples/ec2/create-egress-only-internet-gateway.rst
 ${PYSITELIB}/awscli/examples/ec2/create-flow-logs.rst
@@ -873,6 +874,7 @@ ${PYSITELIB}/awscli/examples/ec2/create-key-pair.rst
 ${PYSITELIB}/awscli/examples/ec2/create-nat-gateway.rst
 ${PYSITELIB}/awscli/examples/ec2/create-network-acl-entry.rst
 ${PYSITELIB}/awscli/examples/ec2/create-network-acl.rst
+${PYSITELIB}/awscli/examples/ec2/create-network-interface-permission.rst
 ${PYSITELIB}/awscli/examples/ec2/create-network-interface.rst
 ${PYSITELIB}/awscli/examples/ec2/create-placement-group.rst
 ${PYSITELIB}/awscli/examples/ec2/create-route-table.rst
@@ -898,6 +900,7 @@ ${PYSITELIB}/awscli/examples/ec2/delete-key-pair.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-nat-gateway.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-network-acl-entry.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-network-acl.rst
+${PYSITELIB}/awscli/examples/ec2/delete-network-interface-permission.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-network-interface.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-placement-group.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-route-table.rst
@@ -941,6 +944,7 @@ ${PYSITELIB}/awscli/examples/ec2/describe-moving-addresses.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-nat-gateways.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-network-acls.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-network-interface-attribute.rst
+${PYSITELIB}/awscli/examples/ec2/describe-network-interface-permissions.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-network-interfaces.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-placement-groups.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-prefix-lists.rst
@@ -1474,6 +1478,7 @@ ${PYSITELIB}/awscli/examples/organizations/leave-organization.rst
 ${PYSITELIB}/awscli/examples/organizations/list-accounts-for-parent.rst
 ${PYSITELIB}/awscli/examples/organizations/list-accounts.rst
 ${PYSITELIB}/awscli/examples/organizations/list-children.rst
+${PYSITELIB}/awscli/examples/organizations/list-create-account-status.rst
 ${PYSITELIB}/awscli/examples/organizations/list-handshakes-for-account.rst
 ${PYSITELIB}/awscli/examples/organizations/list-handshakes-for-organization.rst
 ${PYSITELIB}/awscli/examples/organizations/list-organizational-units-for-parent.rst
