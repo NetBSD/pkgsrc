@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/01/01 14:43:35 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/04 18:08:21 wiz Exp $
 
 DISTNAME=	subprocess32-3.2.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/subprocess32/}
 
 MAINTAINER=	nonakap@gmail.com
-HOMEPAGE=	http://pypi.python.org/pypi/subprocess32
+HOMEPAGE=	https://pypi.python.org/pypi/subprocess32
 COMMENT=	Backport of the subprocess module from Python 3.2/3.3 for use on 2.x
 LICENSE=	python-software-foundation
 

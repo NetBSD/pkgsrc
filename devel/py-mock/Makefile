@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/06/08 17:43:23 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/09/04 18:08:21 wiz Exp $
 
 DISTNAME=	mock-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mock/}
 
 MAINTAINER=	gdt@ir.bbn.com
-HOMEPAGE=	http://pypi.python.org/pypi/mock
+HOMEPAGE=	https://pypi.python.org/pypi/mock
 COMMENT=	Python testing framework
 LICENSE=	gnu-gpl-v2
 

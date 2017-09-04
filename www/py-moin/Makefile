@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2017/01/01 14:44:05 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2017/09/04 18:08:30 wiz Exp $
 
 VER=		1.9.7
 DISTNAME=	moin-${VER}
@@ -8,7 +8,7 @@ CATEGORIES=	www python
 MASTER_SITES=	http://static.moinmo.in/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://moinmo.in/
+HOMEPAGE=	https://moinmo.in/
 COMMENT=	MoinMoin, a Python clone of WikiWiki
 LICENSE=	gnu-gpl-v2
 

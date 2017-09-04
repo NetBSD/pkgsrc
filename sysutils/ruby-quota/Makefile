@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/23 19:51:22 asau Exp $
+# $NetBSD: Makefile,v 1.23 2017/09/04 18:08:28 wiz Exp $
 #
 
 DISTNAME=	ruby-quota-0.5.1
@@ -8,7 +8,7 @@ CATEGORIES=	sysutils ruby
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ruby-quota/}
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/ruby-quota/
+HOMEPAGE=	https://sourceforge.net/projects/ruby-quota/
 COMMENT=	Quota interface for Ruby
 LICENSE=	modified-bsd
 

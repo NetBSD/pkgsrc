@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.155 2017/06/07 05:41:53 spz Exp $
+# $NetBSD: Makefile,v 1.156 2017/09/04 18:08:28 wiz Exp $
 
 DISTNAME=	sudo-1.8.20p2
 CATEGORIES=	security
-MASTER_SITES=	http://www.sudo.ws/dist/
+MASTER_SITES=	https://www.sudo.ws/dist/
 MASTER_SITES+=	ftp://ftp.sudo.ws/pub/sudo/
 MASTER_SITES+=	ftp://ftp.uwsg.indiana.edu/pub/security/sudo/
 MASTER_SITES+=	ftp://ftp.twaren.net/Unix/Security/Sudo/
 MASTER_SITES+=	http://ftp.tux.org/pub/security/sudo/
 
 MAINTAINER=	kim@tac.nyc.ny.us
-HOMEPAGE=	http://www.sudo.ws/
+HOMEPAGE=	https://www.sudo.ws/
 COMMENT=	Allow others to run commands as root
 LICENSE=	isc AND modified-bsd
 
