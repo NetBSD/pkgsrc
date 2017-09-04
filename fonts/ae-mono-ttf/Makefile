@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2017/08/01 14:58:58 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.5 2017/09/04 05:45:45 wiz Exp $
 
 DISTNAME=	ae_fonts_mono
 PKGNAME=	ae-mono-ttf-${VERSION}
 PKGREVISION=	1
 CATEGORIES=	fonts
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arabeyes/}
+#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arabeyes/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://www.arabeyes.org/project.php?proj=Khotot
+HOMEPAGE=	https://www.arabeyes.org/Khotot
 COMMENT=	Collection of PCF fonts that include Arabic glyphs
 
 NO_BUILD=	yes
