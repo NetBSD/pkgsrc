@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/04/06 03:45:21 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/04 18:08:26 wiz Exp $
 #
 
 DISTNAME=	pysmb-1.1.2
@@ -8,7 +8,7 @@ MASTER_SITES=	http://miketeo.net/files/Projects/pysmb/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://miketeo.net/wp/index.php/projects/pysmb
+HOMEPAGE=	https://miketeo.net/wp/index.php/projects/pysmb
 COMMENT=	Experimental SMB/CIFS library written in Python
 LICENSE=	zlib
 

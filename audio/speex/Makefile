@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.34 2016/12/12 14:53:13 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2017/09/04 18:08:18 wiz Exp $
 
 DISTNAME=	speex-1.2.0
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.us.xiph.org/releases/speex/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.speex.org/
+HOMEPAGE=	https://www.speex.org/
 COMMENT=	Open-source, patent-free voice codec
 LICENSE=	modified-bsd
 

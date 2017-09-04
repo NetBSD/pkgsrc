@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2016/07/09 06:38:45 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2017/09/04 18:08:26 wiz Exp $
 
 DISTNAME=	smokeping-2.6.7
 PKGREVISION=	6
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://oss.oetiker.ch/smokeping/pub/
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://oss.oetiker.ch/smokeping/index.en.html
+HOMEPAGE=	https://oss.oetiker.ch/smokeping/index.en.html
 COMMENT=	Latency/packet loss monitoring/graphing tool
 
 GNU_CONFIGURE=		yes

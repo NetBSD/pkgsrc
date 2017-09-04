@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2017/09/04 18:00:50 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/04 18:08:18 wiz Exp $
 
 DISTNAME=	telepathy-haze-0.8.0
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-haze/
 
 MAINTAINER=	jaapb@NetBSD.org
-#HOMEPAGE=	http://telepathy.freedesktop.org/doc/telepathy-haze/
+#HOMEPAGE=	https://telepathy.freedesktop.org/doc/telepathy-haze/
 COMMENT=	Libpurple connection manager for Telepathy
 LICENSE=	gnu-gpl-v2
 

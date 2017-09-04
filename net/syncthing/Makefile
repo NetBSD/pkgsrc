@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2017/08/14 18:41:56 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2017/09/04 18:08:26 wiz Exp $
 
 # Upstream regularly breaks protocol compatibility.  While users of
 # pkgsrc syncthing on multiple systems can update synchronously, an
@@ -20,7 +20,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 # Minor version updates may be committed without asking.  Major
 # updates not following the above policy will be reverted.
 COMMENT=	Keeps directories in sync across hosts
-HOMEPAGE=	http://syncthing.net/
+HOMEPAGE=	https://syncthing.net/
 MAINTAINER=	gdt@NetBSD.org
 LICENSE=	mpl-2.0
 

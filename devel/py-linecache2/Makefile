@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/04 18:08:20 wiz Exp $
 
 DISTNAME=		linecache2-1.0.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		devel python
 MASTER_SITES=		${MASTER_SITE_PYPI:=l/linecache2/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://pypi.python.org/pypi/linecache2
+HOMEPAGE=		https://pypi.python.org/pypi/linecache2
 COMMENT=		Backport of the linecache module to older Python versions
 LICENSE=		python-software-foundation
 

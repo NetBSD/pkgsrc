@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/09/11 23:04:34 asau Exp $
+# $NetBSD: Makefile,v 1.17 2017/09/04 18:08:25 wiz Exp $
 #
 
 DISTNAME=	statist-1.0.1
@@ -7,7 +7,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://www.usf.uni-osnabrueck.de/~breiter/tools/statist/v${PKGVERSION}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.usf.uni-osnabrueck.de/~breiter/tools/statist/index.en.html
+HOMEPAGE=	https://www.usf.uni-osnabrueck.de/~breiter/tools/statist/index.en.html
 COMMENT=	Small and portable statistics program
 LICENSE=	gnu-gpl-v2
 

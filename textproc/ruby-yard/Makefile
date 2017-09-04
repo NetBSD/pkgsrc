@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2017/06/05 15:27:28 taca Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/04 18:08:29 wiz Exp $
 
 DISTNAME=	yard-0.9.9
 CATEGORIES=	ruby textproc
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	http://yardoc.org/
+HOMEPAGE=	https://yardoc.org/
 COMMENT=	Documentation generation tool for the Ruby programming language
 LICENSE=	mit
 

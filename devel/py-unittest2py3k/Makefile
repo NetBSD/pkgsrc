@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/01/03 13:23:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/04 18:08:22 wiz Exp $
 
 DISTNAME=		unittest2py3k-0.5.1
 # to match python-2.x name
@@ -8,7 +8,7 @@ CATEGORIES=		devel python
 MASTER_SITES=		${MASTER_SITE_PYPI:=u/unittest2py3k/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://pypi.python.org/pypi/unittest2py3k
+HOMEPAGE=		https://pypi.python.org/pypi/unittest2py3k
 COMMENT=		Unittest features for Python 2.7 (Python 3.x version)
 LICENSE=		original-bsd
 

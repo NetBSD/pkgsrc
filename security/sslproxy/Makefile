@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/03/05 11:29:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/04 18:08:28 wiz Exp $
 
 DISTNAME=	sslproxy-1.1.2
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sslproxy/1.1.2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/sslproxy/
+HOMEPAGE=	https://sourceforge.net/projects/sslproxy/
 COMMENT=	Small SSL proxy
 LICENSE=	gnu-gpl-v2
 

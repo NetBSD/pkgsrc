@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/01/01 14:43:35 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/04 18:08:21 wiz Exp $
 
 DISTNAME=	tabular-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tabular/}
 
 MAINTAINER=	dholland@NetBSD.org
-HOMEPAGE=	http://pypi.python.org/pypi/tabular
+HOMEPAGE=	https://pypi.python.org/pypi/tabular
 COMMENT=	Tabular data tools for Python
 LICENSE=	mit
 

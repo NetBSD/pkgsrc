@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2017/02/20 05:52:31 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/04 18:08:22 wiz Exp $
 
 DISTNAME=	cucumber-wire-0.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://cucumber.io/
+HOMEPAGE=	https://cucumber.io/
 COMMENT=	Wire protocol for Cucumber
 LICENSE=	mit
 

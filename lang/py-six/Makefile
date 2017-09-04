@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/06/01 13:31:46 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/09/04 18:08:24 wiz Exp $
 
 DISTNAME=	six-1.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/six/}
 
 MAINTAINER=	nils@NetBSD.org
-HOMEPAGE=	http://pypi.python.org/pypi/six/
+HOMEPAGE=	https://pypi.python.org/pypi/six/
 COMMENT=	Python 2 and 3 compatibility utilities
 LICENSE=	mit
 

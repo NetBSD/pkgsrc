@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/01/21 20:06:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/04 18:08:18 wiz Exp $
 
 DISTNAME=	speech-dispatcher-0.8.4
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://devel.freebsoft.org/pub/projects/speechd/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://devel.freebsoft.org/speechd
+HOMEPAGE=	https://devel.freebsoft.org/speechd
 COMMENT=	Common interface to speech synthesis library
 LICENSE=	gnu-gpl-v2
 
