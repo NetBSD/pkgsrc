@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2017/06/05 14:24:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.71 2017/09/04 12:32:49 wiz Exp $
 
-DISTNAME=	MailTools-2.18
+DISTNAME=	MailTools-2.19
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
@@ -14,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 BUILD_DEPENDS+=	p5-Net>=1.09:../../net/p5-Net
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 
-PERL5_PACKLIST=		auto/Mail/.packlist
+PERL5_PACKLIST=	auto/MailTools/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
