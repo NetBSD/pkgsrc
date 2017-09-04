@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/01/29 05:18:09 mef Exp $
+# $NetBSD: Makefile,v 1.23 2017/09/04 15:57:01 joerg Exp $
 
 DISTNAME=	gdb-7.12.1
 PKGNAME=	${DISTNAME:S/^/avr-/}
@@ -34,6 +34,9 @@ pre-configure:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gdb/gdb ${DESTDIR}${PREFIX}/bin/avr-gdb
+
+.include "../../mk/bsd.prefs.mk"
+CPPFLAGS+=	-D__STDC_LIMIT_MACROS
 
 # to link -lcurses.7 => /usr/lib/libcurses.so.7
 # instead of terminfo
