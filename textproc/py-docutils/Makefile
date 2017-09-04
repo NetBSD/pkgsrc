@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2017/01/03 13:23:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.47 2017/09/04 18:05:58 adam Exp $
 
-DISTNAME=	docutils-0.13.1
+DISTNAME=	docutils-0.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docutils/}
@@ -23,7 +23,7 @@ REPLACE_PYTHON+=	docutils/utils/punctuation_chars.py
 REPLACE_PYTHON+=	docutils/utils/smartquotes.py
 REPLACE_PYTHON+=	docutils/writers/xetex/__init__.py
 
-CMDS=	rst2html rst2html5 rst2latex rst2man rst2odt rst2odt_prepstyles
+CMDS=	rst2html rst2html4 rst2html5 rst2latex rst2man rst2odt rst2odt_prepstyles
 CMDS+=	rst2pseudoxml rst2s5 rst2xetex rst2xml rstpep2html
 
 post-install:
