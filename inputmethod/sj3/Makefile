@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/03/15 17:56:16 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/04 18:55:09 wiz Exp $
 #
 
 .include "version.mk"
@@ -8,7 +8,7 @@ CATEGORIES=	japanese inputmethod
 MASTER_SITES=	http://sj3.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/sj3/
+HOMEPAGE=	https://code.google.com/archive/p/sj3/
 COMMENT=	SJ3 Japanese input method
 
 META_PACKAGE=	yes
