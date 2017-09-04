@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2017/01/01 14:43:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/04 18:08:20 wiz Exp $
 
 DISTNAME=	hglist-0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://alastairs-place.net/projects/hglist/
+MASTER_SITES=	https://alastairs-place.net/projects/hglist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://alastairs-place.net/projects/hglist/
+HOMEPAGE=	https://alastairs-place.net/projects/hglist/
 COMMENT=	Mercurial ls command
 LICENSE=	gnu-gpl-v2
 

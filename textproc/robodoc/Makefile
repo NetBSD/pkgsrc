@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/25 06:56:55 asau Exp $
+# $NetBSD: Makefile,v 1.15 2017/09/04 18:08:29 wiz Exp $
 #
 
 DISTNAME=	robodoc-3.2.3
@@ -7,7 +7,7 @@ CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=robodoc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/robodoc/
+HOMEPAGE=	https://sourceforge.net/projects/robodoc/
 COMMENT=	Tool to support project documentation within source code
 
 GNU_CONFIGURE=	YES

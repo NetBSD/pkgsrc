@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/04/04 11:34:05 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/04 18:08:28 wiz Exp $
 
 DISTNAME=		humanize-0.5.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=		python textproc
 MASTER_SITES=		${MASTER_SITE_PYPI:=h/humanize/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://travis-ci.org/jmoiron/humanize
+HOMEPAGE=		https://travis-ci.org/jmoiron/humanize
 COMMENT=		Convert numbers into easily readable format
 LICENSE=		mit
 

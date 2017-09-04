@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2017/08/21 12:49:16 jlam Exp $
+# $NetBSD: Makefile.common,v 1.19 2017/09/04 18:08:23 wiz Exp $
 #
 # used by emulators/suse131_alsa/Makefile
 # used by emulators/suse131_aspell/Makefile
@@ -85,7 +85,7 @@ MASTER_SITE_SUSE_${SUSE_VERSION}_UPD= \
 MASTER_SITES?=		${MASTER_SITE_SUSE_${SUSE_VERSION}}/${SUSE_ARCH}/
 DIST_SUBDIR?=		suse${SUSE_VERSION:S/.//}
 
-HOMEPAGE?=		http://www.opensuse.org/
+HOMEPAGE?=		https://www.opensuse.org/
 
 WRKSRC?=		${WRKDIR}
 BUILD_DIRS?=		# empty

@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.66 2017/04/22 21:03:14 adam Exp $
+# $NetBSD: Makefile,v 1.67 2017/09/04 18:08:25 wiz Exp $
 #
 
 DISTNAME=		swfdec-0.8.4
 PKGREVISION=		51
 CATEGORIES=		multimedia
-MASTER_SITES=		http://swfdec.freedesktop.org/download/swfdec/0.8/
+MASTER_SITES=		https://swfdec.freedesktop.org/download/swfdec/0.8/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://swfdec.freedesktop.org/
+HOMEPAGE=		https://swfdec.freedesktop.org/
 COMMENT=		Library for rendering Flash(R) animations and games
 
 SUPERSEDES=		swfdec-gtk2-[0-9]*

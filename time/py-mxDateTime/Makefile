@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2017/04/10 12:31:05 mef Exp $
+# $NetBSD: Makefile,v 1.40 2017/09/04 18:08:29 wiz Exp $
 
 VERSION=	3.2.9
 DISTNAME=	egenix-mx-base-${VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=	time python
 MASTER_SITES=	http://downloads.egenix.com/python/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.egenix.com/files/python/mxDateTime.html
+HOMEPAGE=	https://www.egenix.com/files/python/mxDateTime.html
 COMMENT=	Python extension that provides types and conversions for dates
 LICENSE=	egenix-public-license
 

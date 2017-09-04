@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/07/16 19:42:32 adam Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/04 18:08:19 wiz Exp $
 
 DISTNAME=	sqlsoup-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlsoup/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://bitbucket.org/zzzeek/sqlsoup
+HOMEPAGE=	https://bitbucket.org/zzzeek/sqlsoup
 COMMENT=	One step database access tool, built on the SQLAlchemy ORM
 LICENSE=	mit
 

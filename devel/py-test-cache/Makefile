@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/21 15:10:48 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/04 18:08:22 wiz Exp $
 
 DISTNAME=	pytest-cache-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-cache/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bitbucket.org/hpk42/pytest-cache/
+HOMEPAGE=	https://bitbucket.org/hpk42/pytest-cache/
 COMMENT=	Pytest plugin with mechanisms for caching across test runs
 LICENSE=	mit
 

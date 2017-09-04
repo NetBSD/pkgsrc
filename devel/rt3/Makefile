@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2017/06/05 14:23:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.66 2017/09/04 18:08:22 wiz Exp $
 
 DISTNAME=		rt-3.8.17
 PKGREVISION=		10
@@ -6,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
 MAINTAINER=		spz@NetBSD.org
-HOMEPAGE=		http://bestpractical.com/rt/
+HOMEPAGE=		https://bestpractical.com/rt/
 COMMENT=		Industrial-grade ticketing system
 LICENSE=		gnu-gpl-v2
 

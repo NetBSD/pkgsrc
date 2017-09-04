@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/06/08 08:38:35 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/09/04 18:08:26 wiz Exp $
 
 DISTNAME=	junos-eznc-2.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/junos-eznc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pypi.python.org/pypi/junos-eznc/
+HOMEPAGE=	https://pypi.python.org/pypi/junos-eznc/
 COMMENT=	Python library to manage JunOS devices
 LICENSE=	apache-2.0
 

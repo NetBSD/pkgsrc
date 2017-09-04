@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2016/03/05 11:28:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.60 2017/09/04 18:08:25 wiz Exp $
 
 DISTNAME=		root_v5.26.00b.source
 PKGNAME=		root-5.26
@@ -7,7 +7,7 @@ CATEGORIES=		misc
 MASTER_SITES=		ftp://root.cern.ch/root/
 
 MAINTAINER=		drochner@NetBSD.org
-HOMEPAGE=		http://root.cern.ch/
+HOMEPAGE=		https://root.cern.ch/
 COMMENT=		OO framework for data analysis and visualisation
 
 WRKSRC=			${WRKDIR}/root

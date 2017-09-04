@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/05/17 10:32:09 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/04 18:08:28 wiz Exp $
 #
 
 DISTNAME=	slocate-3.1
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://fossies.org/unix/misc/old/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/slocate/
+HOMEPAGE=	https://sourceforge.net/projects/slocate/
 COMMENT=	Secure Locate
 LICENSE=	gnu-gpl-v2
 

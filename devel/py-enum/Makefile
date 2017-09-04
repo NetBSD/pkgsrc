@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/10/19 22:22:46 kamil Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/04 18:08:20 wiz Exp $
 
 DISTNAME=	enum-0.4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/enum/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://pypi.python.org/pypi/enum/
+HOMEPAGE=	https://pypi.python.org/pypi/enum/
 COMMENT=	Robust enumerated type support in Python
 LICENSE=	gnu-gpl-v3 OR python-software-foundation
 

@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.54 2017/07/13 12:33:37 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2017/09/04 18:08:24 wiz Exp $
 
 DISTNAME=	puzzles
 PKGNAME=	puzzles-20160429
 PKGREVISION=	2
 CATEGORIES=	games
 # distfile changes every day
-MASTER_SITES=	# http://www.chiark.greenend.org.uk/~sgtatham/puzzles/
+MASTER_SITES=	# https://www.chiark.greenend.org.uk/~sgtatham/puzzles/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://www.chiark.greenend.org.uk/~sgtatham/puzzles/
+HOMEPAGE=	https://www.chiark.greenend.org.uk/~sgtatham/puzzles/
 COMMENT=	Collection of small one-player puzzle games by Simon Tatham
 LICENSE=	mit
 

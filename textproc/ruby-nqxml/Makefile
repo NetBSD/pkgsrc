@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/25 06:56:58 asau Exp $
+# $NetBSD: Makefile,v 1.15 2017/09/04 18:08:29 wiz Exp $
 #
 
 DISTNAME=	nqxml-1.1.3p1
@@ -8,7 +8,7 @@ CATEGORIES=	textproc ruby
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nqxml/}
 
 MAINTAINER=	neumann@s-direktnet.de
-HOMEPAGE=	http://sourceforge.net/projects/nqxml/
+HOMEPAGE=	https://sourceforge.net/projects/nqxml/
 COMMENT=	XML parser written in pure Ruby
 LICENSE=	ruby-license
 

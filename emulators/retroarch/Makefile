@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/04/25 14:20:47 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/04 18:08:23 wiz Exp $
 
 DISTNAME=	retroarch-20150203
 PKGNAME=	retroarch-0.0.20150203
@@ -8,7 +8,7 @@ MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/jmcneill/retroarch/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.libretro.com/
+HOMEPAGE=	https://www.libretro.com/
 COMMENT=	Official reference frontend for the libretro API
 LICENSE=	gnu-gpl-v3
 

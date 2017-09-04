@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/01/01 14:44:02 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/09/04 18:08:30 wiz Exp $
 
 DISTNAME=	pytyle-0.7.5
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
@@ -7,7 +7,7 @@ CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pytyle/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/pytyle/
+HOMEPAGE=	https://sourceforge.net/projects/pytyle/
 COMMENT=	Manual tiling manager
 LICENSE=	gnu-gpl-v3
 
