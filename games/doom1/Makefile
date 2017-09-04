@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/01/19 18:52:09 agc Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/04 18:08:23 wiz Exp $
 
 DISTNAME=	doom-1.8.wad
 PKGNAME=	doom1-1.8
@@ -8,7 +8,7 @@ MASTER_SITES+=	http://www.gamers.org/pub/games/idgames/idstuff/doom/
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-# HOMEPAGE=	http://www.idsoftware.com/archives/doomarc.html
+# HOMEPAGE=	https://www.idsoftware.com/archives/doomarc.html
 # AWOL
 COMMENT=	Shareware levels for Doom
 

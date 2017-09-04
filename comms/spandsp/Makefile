@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2015/04/25 14:20:30 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/04 18:08:19 wiz Exp $
 #
 
 DISTNAME=	spandsp-0.0.6pre21
 PKGREVISION=	1
 CATEGORIES=	comms
-MASTER_SITES=	http://www.soft-switch.org/downloads/spandsp/
+MASTER_SITES=	https://www.soft-switch.org/downloads/spandsp/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.soft-switch.org/downloads/spandsp/
+HOMEPAGE=	https://www.soft-switch.org/downloads/spandsp/
 COMMENT=	Library of DSP functions for telephony
 LICENSE=	gnu-lgpl-v2.1
 

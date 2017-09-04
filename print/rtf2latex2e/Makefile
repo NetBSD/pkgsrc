@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/08 13:45:46 asau Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/04 18:08:27 wiz Exp $
 #
 
 # fix install so it uses ${prefix}
@@ -9,7 +9,7 @@ CATEGORIES=	print textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rtf2latex2e/}
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	http://sourceforge.net/projects/rtf2latex2e/
+HOMEPAGE=	https://sourceforge.net/projects/rtf2latex2e/
 COMMENT=	RTF to LaTeX2e converter
 
 # ImageMagick is an optional component

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/01/01 14:43:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/04 18:08:24 wiz Exp $
 
 DISTNAME=	teeworlds-0.6.3-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://downloads.teeworlds.com/
 
 MAINTAINER=	fstd.lkml@gmail.com
-HOMEPAGE=	http://www.teeworlds.com/
+HOMEPAGE=	https://www.teeworlds.com/
 COMMENT=	Fast-paced retro multiplayer shooter
 LICENSE=	zlib AND 2-clause-bsd AND modified-bsd AND cc-by-sa-v3.0
 

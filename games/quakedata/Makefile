@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/01/19 18:52:10 agc Exp $
+# $NetBSD: Makefile,v 1.27 2017/09/04 18:08:24 wiz Exp $
 
 DISTNAME=	quake106
 PKGNAME=	quakedata-1.0
@@ -9,7 +9,7 @@ MASTER_SITES+=	ftp://ftp.idsoftware.com/idstuff/quake/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.idsoftware.com/
+HOMEPAGE=	https://www.idsoftware.com/
 COMMENT=	Game data files for Quake
 LICENSE=		quakedata-license
 

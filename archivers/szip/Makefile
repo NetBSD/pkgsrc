@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/10/09 14:05:54 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/09/04 18:08:18 wiz Exp $
 
 DISTNAME=	szip-2.1
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.hdfgroup.org/lib-external/szip/2.1/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.hdfgroup.org/doc_resource/SZIP/
+HOMEPAGE=	https://www.hdfgroup.org/doc_resource/SZIP/
 COMMENT=	Extended-Rice lossless compression
 LICENSE=		szip-license
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/01/19 18:52:10 agc Exp $
+# $NetBSD: Makefile,v 1.21 2017/09/04 18:08:24 wiz Exp $
 
 DISTNAME=	Sjeng-Free-11.0
 PKGNAME=	sjeng-11.0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://sjeng.sourceforge.net/ftp/
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=sjeng/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.sjeng.org/
+HOMEPAGE=	https://www.sjeng.org/
 COMMENT=	Engine for chess variations (bughouse, suicide, etc.)
 
 GNU_CONFIGURE=	YES

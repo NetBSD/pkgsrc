@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2017/08/31 15:21:32 taca Exp $
+# $NetBSD: Makefile,v 1.29 2017/09/04 18:08:23 wiz Exp $
 
 DISTNAME=	rspec-rails-3.6.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://relishapp.com/rspec
+HOMEPAGE=	https://relishapp.com/rspec
 COMMENT=	Test-double framework for rspec
 LICENSE=	mit
 

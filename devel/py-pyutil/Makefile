@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/02/14 10:26:28 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/09/04 18:08:21 wiz Exp $
 
 DISTNAME=	pyutil-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyutil/}
 
 MAINTAINER=	gdt@ir.bbn.com
-HOMEPAGE=	http://pypi.python.org/pypi/pyutil
+HOMEPAGE=	https://pypi.python.org/pypi/pyutil
 COMMENT=	Collection of mature utilities for Python programmers
 LICENSE=	gnu-gpl-v2
 

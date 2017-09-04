@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/11/04 10:03:36 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/04 18:08:20 wiz Exp $
 
 DISTNAME=	pylibmc-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylibmc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pypi.python.org/pypi/pylibmc
+HOMEPAGE=	https://pypi.python.org/pypi/pylibmc
 COMMENT=	Quick and small memcached client for Python
 LICENSE=	modified-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/06/18 09:21:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/04 18:08:24 wiz Exp $
 
 DISTNAME=	rustc-1.16.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.rust-lang.org/
+HOMEPAGE=	https://www.rust-lang.org/
 COMMENT=	Safe, concurrent, practical language
 LICENSE=	mit OR apache-2.0
 

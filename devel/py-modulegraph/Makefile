@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/07/31 05:18:56 adam Exp $
+# $NetBSD: Makefile,v 1.10 2017/09/04 18:08:21 wiz Exp $
 
 DISTNAME=	modulegraph-0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/modulegraph/}
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	http://bitbucket.org/ronaldoussoren/modulegraph
+HOMEPAGE=	https://bitbucket.org/ronaldoussoren/modulegraph
 COMMENT=	Python module dependency analysis tool
 LICENSE=	mit
 

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2015/04/13 23:12:43 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/04 18:08:30 wiz Exp $
 
 DISTNAME=	cc23b715b120
 PKGNAME=	${PYPKGPREFIX}-flup-1.0.3pre1
 CATEGORIES=	www python
-MASTER_SITES=	http://hg.saddi.com/flup-py3.0/archive/
+MASTER_SITES=	https://hg.saddi.com/flup-py3.0/archive/
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://hg.saddi.com/flup-py3.0/
+HOMEPAGE=	https://hg.saddi.com/flup-py3.0/
 COMMENT=	WSGI support modules (python-3.x version)
 LICENSE=	2-clause-bsd
 

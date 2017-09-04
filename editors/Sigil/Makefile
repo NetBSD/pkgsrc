@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2017/08/24 20:03:12 adam Exp $
+# $NetBSD: Makefile,v 1.97 2017/09/04 18:08:23 wiz Exp $
 
 DISTNAME=	Sigil-0.9.8
 PKGREVISION=	3
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	Sigil
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sigil-ebook.com/
+HOMEPAGE=	https://sigil-ebook.com/
 COMMENT=	Multi-platform WYSIWYG ebook editor (for the ePub format)
 LICENSE=	gnu-gpl-v3
 

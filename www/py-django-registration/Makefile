@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/09/04 18:01:03 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/04 18:08:30 wiz Exp $
 
 DISTNAME=	django-registration-2.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-registration/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://bitbucket.org/ubernostrum/django-registration/wiki/Home
+#HOMEPAGE=	https://bitbucket.org/ubernostrum/django-registration/wiki/Home
 COMMENT=	User-registration application for Django
 LICENSE=	modified-bsd
 

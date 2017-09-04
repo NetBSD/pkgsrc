@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2015/04/25 14:20:39 tnn Exp $
+# $NetBSD: Makefile,v 1.20 2017/09/04 18:08:22 wiz Exp $
 
 DISTNAME=	rubysdl-2.2.0
 PKGREVISION=	1
 CATEGORIES=	devel audio graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.kmc.gr.jp/~ohai/rubysdl.en.html
+HOMEPAGE=	https://www.kmc.gr.jp/~ohai/rubysdl.en.html
 COMMENT=	Ruby extension library to use SDL library
 LICENSE=	gnu-lgpl-v2.1 OR gnu-lgpl-v3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/11/14 14:19:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/04 18:08:21 wiz Exp $
 
 DISTNAME=	pkginfo-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pkginfo/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://pypi.python.org/pypi/pkginfo/
+HOMEPAGE=	https://pypi.python.org/pypi/pkginfo/
 COMMENT=	Query metadatdata from sdists / bdists / installed packages
 LICENSE=	mit
 

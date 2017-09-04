@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2017/06/24 19:39:47 adam Exp $
+# $NetBSD: Makefile,v 1.17 2017/09/04 18:08:24 wiz Exp $
 
 DISTNAME=	renpy-6.18.3-source
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-source//}
 CATEGORIES=	games
-MASTER_SITES=	http://www.renpy.org/dl/${PKGVERSION_NOREV}/
+MASTER_SITES=	https://www.renpy.org/dl/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.renpy.org/
+HOMEPAGE=	https://www.renpy.org/
 COMMENT=	Visual Novel Engine written in Python
 LICENSE=	mit
 
