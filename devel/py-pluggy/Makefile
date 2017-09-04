@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2017/07/20 15:55:53 adam Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/04 17:06:42 adam Exp $
 
-DISTNAME=	pluggy-0.4.0
+DISTNAME=	pluggy-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pluggy/}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pytest-dev/pluggy
