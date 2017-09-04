@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2495 2017/09/02 14:57:05 taca Exp $
+# $NetBSD: Makefile,v 1.2496 2017/09/04 11:01:12 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -2360,6 +2360,7 @@ SUBDIR+=	shunit2
 SUBDIR+=	silc-toolkit
 SUBDIR+=	slib
 SUBDIR+=	slibtool
+SUBDIR+=	sloccount
 SUBDIR+=	sml-mode
 SUBDIR+=	snappy
 SUBDIR+=	snappy-java10
