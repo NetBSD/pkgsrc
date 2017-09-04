@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2017/02/23 23:13:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/09/04 20:31:41 wiz Exp $
 bin/411toppm
 bin/anytopnm
 bin/asciitopgm
@@ -12,7 +12,6 @@ bin/cameratopam
 bin/cistopbm
 bin/cmuwmtopbm
 bin/ddbugtopbm
-bin/doc.url
 bin/escp2topbm
 bin/eyuvtoppm
 bin/fiascotopnm
@@ -92,6 +91,7 @@ bin/pamstretch
 bin/pamstretch-gen
 bin/pamsumm
 bin/pamsummcol
+bin/pamtable
 bin/pamthreshold
 bin/pamtilt
 bin/pamtoavs
@@ -388,7 +388,7 @@ include/netpbm/shhopt.h
 lib/libnetpbm.a
 lib/libnetpbm.so
 lib/libnetpbm.so.11
-lib/libnetpbm.so.11.77
+lib/libnetpbm.so.11.79
 man/man1/411toppm.1
 man/man1/anytopnm.1
 man/man1/asciitopgm.1
@@ -487,6 +487,7 @@ man/man1/pamstretch-gen.1
 man/man1/pamstretch.1
 man/man1/pamsumm.1
 man/man1/pamsummcol.1
+man/man1/pamtable.1
 man/man1/pamthreshold.1
 man/man1/pamtilt.1
 man/man1/pamtoavs.1
