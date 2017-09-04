@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3592 2017/09/04 14:46:12 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3593 2017/09/04 14:46:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5030,3 +5030,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-google-api-python-client to 1.6.3 [wiz 2017-09-04]
 	Updated finance/moneyguru to 2.11.0 [wiz 2017-09-04]
 	Updated databases/py-psycopg2 to 2.7.3.1 [wiz 2017-09-04]
+	Updated devel/py-setuptools to 36.3.0 [wiz 2017-09-04]
