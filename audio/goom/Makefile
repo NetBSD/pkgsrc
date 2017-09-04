@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/04/20 12:10:26 nros Exp $
-#
+# $NetBSD: Makefile,v 1.11 2017/09/04 05:50:48 wiz Exp $
 
 DISTNAME=		goom-2k4-0-src
 PKGNAME=		goom-2004.0
@@ -7,7 +6,7 @@ CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=goom/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ios-software.com/index.php3?page=projet&quoi=1&lg=AN
+HOMEPAGE=		http://www.fovea.cc/?page=details_produits&id=goom
 COMMENT=		Visual effects generator for mp3 players
 LICENSE=		gnu-lgpl-v2.1
 
