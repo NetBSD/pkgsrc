@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/01/03 21:27:33 roy Exp $
+# $NetBSD: Makefile,v 1.11 2017/09/04 18:00:50 wiz Exp $
 #
 
 DISTNAME=	smirk-20080111
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://smirk.googlecode.com/
+#HOMEPAGE=	http://smirk.googlecode.com/
 COMMENT=	Revival of the curses-based Rhapsody IRC client
 
 GNU_CONFIGURE=		yes
