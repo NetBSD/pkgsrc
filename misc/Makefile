@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.486 2017/08/23 18:56:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.487 2017/09/04 09:45:07 leot Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -202,6 +202,7 @@ SUBDIR+=	mkcue
 SUBDIR+=	mmv
 SUBDIR+=	mnemosyne
 SUBDIR+=	molden
+SUBDIR+=	moreutils
 SUBDIR+=	most
 SUBDIR+=	mousetweaks
 SUBDIR+=	mtail
