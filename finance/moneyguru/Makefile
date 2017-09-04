@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2017/09/03 08:53:08 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2017/09/04 14:45:43 wiz Exp $
 
-DISTNAME=	moneyguru-src-2.10.2
+DISTNAME=	moneyguru-src-2.11.0
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	https://download.hardcoded.net/
 
@@ -25,12 +24,7 @@ USE_TOOLS=	pax
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PY_PATCHPLIST=		yes
-REPLACE_PYTHON+=	cocoa/waf
-REPLACE_PYTHON+=	cocoa/wscript
-REPLACE_PYTHON+=	psmtabbarcontrol/waf
-REPLACE_PYTHON+=	psmtabbarcontrol/wscript
-REPLACE_PYTHON+=	run_template_cocoa.py
-REPLACE_PYTHON+=	run_template_qt.py
+REPLACE_PYTHON+=	run.py
 
 INSTALLATION_DIRS=	bin share/applications share/moneyguru
 
@@ -50,7 +44,7 @@ do-build:
 	${CHMOD} +x ${WRKSRC}/run.py
 
 do-install:
-	cd ${WRKSRC} && pax -pp -rw ambuttonbar build cocoa cocoalib core data help hscommon images locale psmtabbarcontrol qt qtlib run.py ${DESTDIR}${PREFIX}/share/moneyguru
+	cd ${WRKSRC} && pax -pp -rw build core data help hscommon images locale qt qtlib run.py ${DESTDIR}${PREFIX}/share/moneyguru
 	${INSTALL_DATA} ${WRKSRC}/debian/moneyguru.desktop ${DESTDIR}${PREFIX}/share/applications
 	${LN} -s ${DESTDIR}${PREFIX}/share/moneyguru/run.py ${DESTDIR}${PREFIX}/bin/moneyguru
 
