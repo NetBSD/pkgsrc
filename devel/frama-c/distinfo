@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2017/09/05 07:30:00 dholland Exp $
+$NetBSD: distinfo,v 1.8 2017/09/05 07:42:00 dholland Exp $
 
 SHA1 (frama-c-Phosphorus-20170501.tar.gz) = d9372127ba80636cc1c692a141a7a02dee8325da
 RMD160 (frama-c-Phosphorus-20170501.tar.gz) = 24a5b8578491d3c15aa539da69062803d0c6d137
@@ -8,7 +8,7 @@ SHA1 (patch-Makefile) = d9a23653196d4586c3cca87091518aea6791ddcc
 SHA1 (patch-configure) = a415684ab5ecb4fed276dede90439fa8ba6a09ed
 SHA1 (patch-share_Makefile.common) = f5230aee768e6af4c7458d96f1f210172daa9bb2
 SHA1 (patch-src_libraries_utils_c__bindings.c) = b37db1c51e9082e4a328a6a7189f57db3f12d624
-SHA1 (patch-src_plugins_e-acsl_Makefile) = 02542a247a7f4b266c7e9139c4ee555dda5fd1bb
+SHA1 (patch-src_plugins_e-acsl_Makefile.in) = 8b1c4838ecd609504c1070917c0b61433f1e1f12
 SHA1 (patch-src_plugins_wp_configure) = 6f0fb756d2460b6abf27313d367672e293a8d9e7
 SHA1 (patch-src_plugins_wp_configure.ac) = 3b15ff7b551da79ad1580b134258631f1527bc42
 SHA1 (patch-src_plugins_wp_share_coqwp_Zbits.v) = 26fac23dc015087b7126e40a47d566eb49a24293
