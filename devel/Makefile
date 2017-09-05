@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2498 2017/09/04 13:40:38 leot Exp $
+# $NetBSD: Makefile,v 1.2499 2017/09/05 18:23:25 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -1850,6 +1850,7 @@ SUBDIR+=	py-configparser
 SUBDIR+=	py-constantly
 SUBDIR+=	py-constants
 SUBDIR+=	py-construct
+SUBDIR+=	py-contextlib2
 SUBDIR+=	py-cookiecutter
 SUBDIR+=	py-coverage
 SUBDIR+=	py-cparser
