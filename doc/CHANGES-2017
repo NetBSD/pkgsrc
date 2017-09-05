@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3616 2017/09/05 08:09:41 dholland Exp $
+$NetBSD: CHANGES-2017,v 1.3617 2017/09/05 11:32:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5082,3 +5082,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed www/thoth-flickr [wiz 2017-09-05]
 	Updated devel/frama-c to 20170501 [dholland 2017-09-05]
 	Updated www/squid3 to 3.5.27nb1 [dholland 2017-09-05]
+	Updated x11/gtk3 to 3.22.20 [adam 2017-09-05]
+	Updated www/py-cfscrape to 1.9.0 [adam 2017-09-05]
