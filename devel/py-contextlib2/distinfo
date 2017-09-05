@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/05 18:22:48 minskim Exp $
+
+SHA1 (contextlib2-0.5.5.tar.gz) = e38ab407a51a2df2ef395b2c9fda68afc5e7ae80
+RMD160 (contextlib2-0.5.5.tar.gz) = 088c23e90ae94004822640c937a005fced5b7153
+SHA512 (contextlib2-0.5.5.tar.gz) = d5c97ff8eef7d8b14da0bfdc3515f8019bcc05e24cb922ce08ca2366d5182b029d873bbf172e9e6791297df05e24f6faf40868550063dcdb54f451b14c9e505d
+Size (contextlib2-0.5.5.tar.gz) = 28755 bytes
