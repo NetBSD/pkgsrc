@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gnomecanvas,v 1.2 2016/06/25 14:33:11 jaapb Exp $
+@comment $NetBSD: PLIST.gnomecanvas,v 1.3 2017/09/05 04:22:09 dholland Exp $
 ${OCAML_SITELIB}/lablgtk2/gnoCanvas.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/gnoCanvas.cmx
 ${OCAML_SITELIB}/lablgtk2/gnoCanvas.ml
@@ -9,15 +9,5 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablgnomecanvas.a
 ${OCAML_SITELIB}/lablgtk2/lablgnomecanvas.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablgnomecanvas.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablgnomecanvas.cmxs
-${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablpanel.a
-${OCAML_SITELIB}/lablgtk2/lablpanel.cma
-${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablpanel.cmxa
-${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablpanel.cmxs
 ${OCAML_SITELIB}/lablgtk2/liblablgnomecanvas.a
-${OCAML_SITELIB}/lablgtk2/liblablpanel.a
-${OCAML_SITELIB}/lablgtk2/panel.cmi
-${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/panel.cmx
-${OCAML_SITELIB}/lablgtk2/panel.ml
-${OCAML_SITELIB}/lablgtk2/panel_tags.h
 ${PLIST.stubs}${OCAML_SITELIB}/lablgtk2/dlllablgnomecanvas.so
-${PLIST.stubs}${OCAML_SITELIB}/lablgtk2/dlllablpanel.so
