@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17677 2017/09/04 17:59:14 bsiegert Exp $
+$NetBSD: TODO,v 1.17678 2017/09/05 07:42:45 dholland Exp $
 
 Suggested new packages
 ======================
@@ -657,7 +657,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fop-2.1
 	o fortunes-calvin-0.3
 	o fox-1.7.57
-	o frama-c-20140301
 	o freenet-0.7
 	o freesci-0.6.4
 	o freeswitch-1.2.3
