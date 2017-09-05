@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3615 2017/09/05 07:43:24 dholland Exp $
+$NetBSD: CHANGES-2017,v 1.3616 2017/09/05 08:09:41 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5081,3 +5081,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed inputmethod/scim-tegaki [wiz 2017-09-05]
 	Removed www/thoth-flickr [wiz 2017-09-05]
 	Updated devel/frama-c to 20170501 [dholland 2017-09-05]
+	Updated www/squid3 to 3.5.27nb1 [dholland 2017-09-05]
