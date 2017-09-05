@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST.gnomepanel,v 1.1 2017/09/05 04:22:09 dholland Exp $
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablpanel.a
+${OCAML_SITELIB}/lablgtk2/lablpanel.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablpanel.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablpanel.cmxs
+${OCAML_SITELIB}/lablgtk2/liblablpanel.a
+${OCAML_SITELIB}/lablgtk2/panel.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/panel.cmx
+${OCAML_SITELIB}/lablgtk2/panel.ml
+${OCAML_SITELIB}/lablgtk2/panel_tags.h
+${PLIST.stubs}${OCAML_SITELIB}/lablgtk2/dlllablpanel.so
