@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/08/17 06:28:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/09/05 15:49:37 taca Exp $
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/README.md
 ${CT_WEBDIR}/assets/ace/composer.json
@@ -2826,6 +2826,7 @@ ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messag
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.lv.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.nl.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.pl.xlf
+${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.pt_BR.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.ru.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.sl.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.sr.xlf
@@ -5581,7 +5582,10 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/ProxyManager/.gitignore
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/ProxyManager/CHANGELOG.md
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/ProxyManager/LICENSE
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/ProxyManager/LazyProxy/Instantiator/LazyLoadingValueHolderFactoryV1.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/ProxyManager/LazyProxy/Instantiator/LazyLoadingValueHolderFactoryV2.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/ProxyManager/LazyProxy/Instantiator/RuntimeInstantiator.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/ProxyManager/LazyProxy/PhpDumper/LazyLoadingValueHolderGenerator.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/ProxyManager/LazyProxy/PhpDumper/ProxyDumper.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/ProxyManager/README.md
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/ProxyManager/composer.json
@@ -5727,6 +5731,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Dependenc
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/DependencyInjection/Compiler/TranslatorPass.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/DependencyInjection/Compiler/UnusedTagsPass.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/DependencyInjection/Compiler/ValidateWorkflowsPass.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/DependencyInjection/Compiler/WorkflowGuardListenerPass.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/DependencyInjection/Configuration.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/DependencyInjection/FrameworkExtension.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/EventListener/ResolveControllerNameSubscriber.php
@@ -6447,6 +6452,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Co
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Compiler/ReplaceAliasByActualDefinitionPass.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Compiler/ResolveClassPass.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Compiler/ResolveDefinitionTemplatesPass.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Compiler/ResolveEnvPlaceholdersPass.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Compiler/ResolveFactoryClassPass.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Compiler/ResolveInstanceofConditionalsPass.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Compiler/ResolveInvalidReferencesPass.php
