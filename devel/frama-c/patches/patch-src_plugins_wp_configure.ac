@@ -1,0 +1,15 @@
+$NetBSD: patch-src_plugins_wp_configure.ac,v 1.1 2017/09/05 07:30:00 dholland Exp $
+
+Recognize more recent coq.
+
+--- src/plugins/wp/configure.ac~	2017-06-01 08:02:17.000000000 +0000
++++ src/plugins/wp/configure.ac
+@@ -63,7 +63,7 @@ if test "$ENABLE_WP" != "no"; then
+     if test "$COQC" = "yes" ; then
+       COQVERSION=`coqc -v | sed -n -e 's|.*version* *\([[^ ]]*\) .*$|\1|p' `
+       case $COQVERSION in
+-        8.4pl6|8.5*|trunk)
++        8.4pl6|8.5*|8.6*|trunk)
+           AC_MSG_RESULT(coqc version $COQVERSION found)
+           ;;
+         *) 
