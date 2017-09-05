@@ -1,0 +1,15 @@
+$NetBSD: patch-src_plugins_wp_configure,v 1.1 2017/09/05 07:30:00 dholland Exp $
+
+Recognize more recent coq.
+
+--- src/plugins/wp/configure~	2017-06-01 08:02:09.000000000 +0000
++++ src/plugins/wp/configure
+@@ -2254,7 +2254,7 @@ fi
+     if test "$COQC" = "yes" ; then
+       COQVERSION=`coqc -v | sed -n -e 's|.*version* *\([^ ]*\) .*$|\1|p' `
+       case $COQVERSION in
+-        8.4pl6|8.5*|trunk)
++        8.4pl6|8.5*|8.6*|trunk)
+           { $as_echo "$as_me:${as_lineno-$LINENO}: result: coqc version $COQVERSION found" >&5
+ $as_echo "coqc version $COQVERSION found" >&6; }
+           ;;

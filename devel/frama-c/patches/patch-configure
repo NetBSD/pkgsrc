@@ -1,15 +1,15 @@
-$NetBSD: patch-configure,v 1.1 2013/11/15 14:10:29 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2017/09/05 07:30:00 dholland Exp $
 
-Fix GNU make version comparison logic.
+Recognize more recent coq.
 
---- configure.orig	2013-11-15 14:08:17.000000000 +0000
+--- configure~	2017-06-01 08:02:19.000000000 +0000
 +++ configure
-@@ -2617,7 +2617,7 @@ MAKE_DISTRIB=`$MAKE -v | sed -n -e 's/\(
- MAKE_MAJOR=`$MAKE -v | sed -n  -f bin/sed_get_make_major `
- MAKE_MINOR=`$MAKE -v | sed -n -f bin/sed_get_make_minor `
- echo $ECHO_N "make version is $MAKE_DISTRIB Make $MAKE_MAJOR.$MAKE_MINOR: $ECHO_C"
--if test "$MAKE_DISTRIB" != GNU -o "$MAKE_MAJOR" -lt 3 -o "$MAKE_MINOR" -lt 81;
-+if test "$MAKE_DISTRIB" != GNU -o "$MAKE_MAJOR" -lt 3 -o "$MAKE_MAJOR" -eq 3 -a "$MAKE_MINOR" -lt 81;
- then
-    echo "${ECHO_T}"
-    as_fn_error $? "unsupported version; GNU Make version 3.81
+@@ -11308,7 +11308,7 @@ fi
+     if test "$COQC" = "yes" ; then
+       COQVERSION=`coqc -v | sed -n -e 's|.*version* *\([^ ]*\) .*$|\1|p' `
+       case $COQVERSION in
+-        8.4pl6|8.5*|trunk)
++        8.4pl6|8.5*|8.6*|trunk)
+           { $as_echo "$as_me:${as_lineno-$LINENO}: result: coqc version $COQVERSION found" >&5
+ $as_echo "coqc version $COQVERSION found" >&6; }
+           ;;

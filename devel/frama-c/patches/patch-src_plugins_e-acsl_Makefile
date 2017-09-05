@@ -1,0 +1,64 @@
+$NetBSD: patch-src_plugins_e-acsl_Makefile,v 1.1 2017/09/05 07:30:00 dholland Exp $
+
+Don't install nonexecutables with execute permission.
+
+--- src/plugins/e-acsl/Makefile~	2017-09-05 07:10:24.721100926 +0000
++++ src/plugins/e-acsl/Makefile
+@@ -157,7 +157,7 @@ EACSL_JEMALLOC_LIB = $(EACSL_LIBDIR)/$(E
+ $(EACSL_JEMALLOC_LIB):
+ 	cd $(EACSL_JEMALLOC_DIR) && $(MAKE) $(MAKEOPTS)
+ 	$(MKDIR) $(EACSL_LIBDIR)
+-	$(CP) $(EACSL_JEMALLOC_DIR)/lib/libjemalloc.a $@
++	$(CPNX) $(EACSL_JEMALLOC_DIR)/lib/libjemalloc.a $@
+ 
+ EACSL_GMP_DIR := $(EACSL_PLUGIN_DIR)/contrib/libgmp
+ EACSL_GMP_LIBNAME = libeacsl-gmp.a
+@@ -187,7 +187,7 @@ else
+ $(EACSL_GMP_LIB):
+ 	cd $(EACSL_GMP_DIR) && $(MAKE) $(MAKEOPTS)
+ 	$(MKDIR) $(EACSL_LIBDIR)
+-	$(CP) $(EACSL_GMP_DIR)/.libs/libgmp.a $@
++	$(CPNX) $(EACSL_GMP_DIR)/.libs/libgmp.a $@
+ endif
+ 
+ all:: $(EACSL_JEMALLOC_LIB) $(EACSL_GMP_LIB)
+@@ -367,32 +367,32 @@ MANUALS=$(wildcard $(E_ACSL_DIR)/doc/man
+ install::
+ 	$(PRINT_INSTALL) E-ACSL share files
+ 	$(MKDIR) $(FRAMAC_DATADIR)/e-acsl
+-	$(CP) $(E_ACSL_DIR)/share/e-acsl/*.[ch] $(FRAMAC_DATADIR)/e-acsl
++	$(CPNX) $(E_ACSL_DIR)/share/e-acsl/*.[ch] $(FRAMAC_DATADIR)/e-acsl
+ 	$(MKDIR) $(FRAMAC_DATADIR)/e-acsl/bittree_model \
+ 	         $(FRAMAC_DATADIR)/e-acsl/segment_model \
+ 	         $(FRAMAC_DATADIR)/e-acsl/glibc
+-	$(CP) $(E_ACSL_DIR)/share/e-acsl/bittree_model/* \
++	$(CPNX) $(E_ACSL_DIR)/share/e-acsl/bittree_model/* \
+ 	      $(FRAMAC_DATADIR)/e-acsl/bittree_model
+-	$(CP) $(E_ACSL_DIR)/share/e-acsl/segment_model/* \
++	$(CPNX) $(E_ACSL_DIR)/share/e-acsl/segment_model/* \
+ 	      $(FRAMAC_DATADIR)/e-acsl/segment_model
+-	$(CP) $(E_ACSL_DIR)/share/e-acsl/glibc/* \
++	$(CPNX) $(E_ACSL_DIR)/share/e-acsl/glibc/* \
+ 	      $(FRAMAC_DATADIR)/e-acsl/glibc
+         # manuals are not present in standard distribution.
+         # Don't fail because of that.
+ ifneq ("$(MANUALS)","")
+ 	$(PRINT_INSTALL) E-ACSL manuals
+ 	$(MKDIR) $(FRAMAC_DATADIR)/manuals
+-	$(CP) $(MANUALS) $(FRAMAC_DATADIR)/manuals;
++	$(CPNX) $(MANUALS) $(FRAMAC_DATADIR)/manuals;
+ endif
+ 	$(PRINT_INSTALL) E-ACSL libraries
+ 	$(MKDIR) $(LIBDIR)
+-	$(CP) $(EACSL_LIBDIR)/libeacsl-*.a $(LIBDIR)
++	$(CPNX) $(EACSL_LIBDIR)/libeacsl-*.a $(LIBDIR)
+ 	$(PRINT_INSTALL) E-ACSL scripts
+ 	$(MKDIR) $(BINDIR)
+ 	$(CP) $(E_ACSL_DIR)/scripts/e-acsl-gcc.sh $(BINDIR)/
+ 	$(PRINT_INSTALL) E-ACSL man pages
+ 	$(MKDIR) $(MANDIR)/man1
+-	$(CP) $(E_ACSL_DIR)/man/e-acsl-gcc.sh.1 $(MANDIR)/man1/
++	$(CPNX) $(E_ACSL_DIR)/man/e-acsl-gcc.sh.1 $(MANDIR)/man1/
+ 
+ uninstall::
+ 	$(PRINT_RM) E-ACSL share files
