@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2017/05/03 08:38:45 jperkin Exp $
+# $NetBSD: options.mk,v 1.24 2017/09/05 08:09:08 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	ecap inet6 snmp ssl squid-backend-aufs \
@@ -38,7 +38,7 @@ PKG_SUPPORTED_OPTIONS+=	squid-ipf
 PKG_SUPPORTED_OPTIONS+=	squid-pf
 .endif
 
-.if (${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD") && \
+.if (${OPSYS} == "NetBSD") && \
 	!empty(PKG_SUPPORTED_OPTIONS:Msquid-ipf)
 PKG_SUGGESTED_OPTIONS+=	squid-ipf
 .endif
