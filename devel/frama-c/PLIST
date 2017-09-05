@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/09/05 07:30:00 dholland Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/09/05 07:41:35 dholland Exp $
 bin/e-acsl-gcc.sh
 bin/frama-c
 bin/frama-c-config
@@ -580,7 +580,7 @@ lib/frama-c/plugins/META.frama-c-print_api
 lib/frama-c/plugins/META.frama-c-report
 lib/frama-c/plugins/META.frama-c-rtegen
 lib/frama-c/plugins/META.frama-c-scope
-lib/frama-c/plugins/META.frama-c-security_slicing
+${PLIST.gui}lib/frama-c/plugins/META.frama-c-security_slicing
 lib/frama-c/plugins/META.frama-c-slicing
 lib/frama-c/plugins/META.frama-c-sparecode
 lib/frama-c/plugins/META.frama-c-users
@@ -597,7 +597,7 @@ lib/frama-c/plugins/Print_api.cmi
 lib/frama-c/plugins/Report.cmi
 lib/frama-c/plugins/RteGen.cmi
 lib/frama-c/plugins/Scope.cmi
-lib/frama-c/plugins/Security_slicing.cmi
+${PLIST.gui}lib/frama-c/plugins/Security_slicing.cmi
 lib/frama-c/plugins/Slicing.cmi
 lib/frama-c/plugins/Sparecode.cmi
 lib/frama-c/plugins/Users.cmi
@@ -689,9 +689,9 @@ lib/frama-c/plugins/top/RteGen.cmxs
 lib/frama-c/plugins/top/Scope.cmo
 lib/frama-c/plugins/top/Scope.cmx
 lib/frama-c/plugins/top/Scope.cmxs
-lib/frama-c/plugins/top/Security_slicing.cmo
-lib/frama-c/plugins/top/Security_slicing.cmx
-lib/frama-c/plugins/top/Security_slicing.cmxs
+${PLIST.gui}lib/frama-c/plugins/top/Security_slicing.cmo
+${PLIST.gui}lib/frama-c/plugins/top/Security_slicing.cmx
+${PLIST.gui}lib/frama-c/plugins/top/Security_slicing.cmxs
 lib/frama-c/plugins/top/Slicing.cmo
 lib/frama-c/plugins/top/Slicing.cmx
 lib/frama-c/plugins/top/Slicing.cmxs
@@ -907,14 +907,14 @@ ${PLIST.gui}lib/frama-c/warning_manager.cmi
 ${PLIST.gui}lib/frama-c/warning_manager.cmo
 ${PLIST.gui}lib/frama-c/warning_manager.cmx
 ${PLIST.gui}lib/frama-c/warning_manager.o
-lib/frama-c/wbox.cmi
-lib/frama-c/wbox.cmo
-lib/frama-c/wbox.cmx
-lib/frama-c/wbox.o
-lib/frama-c/wfile.cmi
-lib/frama-c/wfile.cmo
-lib/frama-c/wfile.cmx
-lib/frama-c/wfile.o
+${PLIST.gui}lib/frama-c/wbox.cmi
+${PLIST.gui}lib/frama-c/wbox.cmo
+${PLIST.gui}lib/frama-c/wbox.cmx
+${PLIST.gui}lib/frama-c/wbox.o
+${PLIST.gui}lib/frama-c/wfile.cmi
+${PLIST.gui}lib/frama-c/wfile.cmo
+${PLIST.gui}lib/frama-c/wfile.cmx
+${PLIST.gui}lib/frama-c/wfile.o
 @comment lib/frama-c/widen.cmi
 @comment lib/frama-c/widen.cmo
 @comment lib/frama-c/widen.cmx
@@ -923,26 +923,26 @@ lib/frama-c/widen_type.cmi
 lib/frama-c/widen_type.cmo
 lib/frama-c/widen_type.cmx
 lib/frama-c/widen_type.o
-lib/frama-c/widget.cmi
-lib/frama-c/widget.cmo
-lib/frama-c/widget.cmx
-lib/frama-c/widget.o
-lib/frama-c/wpalette.cmi
-lib/frama-c/wpalette.cmo
-lib/frama-c/wpalette.cmx
-lib/frama-c/wpalette.o
-lib/frama-c/wpane.cmi
-lib/frama-c/wpane.cmo
-lib/frama-c/wpane.cmx
-lib/frama-c/wpane.o
-lib/frama-c/wtable.cmi
-lib/frama-c/wtable.cmo
-lib/frama-c/wtable.cmx
-lib/frama-c/wtable.o
-lib/frama-c/wtext.cmi
-lib/frama-c/wtext.cmo
-lib/frama-c/wtext.cmx
-lib/frama-c/wtext.o
+${PLIST.gui}lib/frama-c/widget.cmi
+${PLIST.gui}lib/frama-c/widget.cmo
+${PLIST.gui}lib/frama-c/widget.cmx
+${PLIST.gui}lib/frama-c/widget.o
+${PLIST.gui}lib/frama-c/wpalette.cmi
+${PLIST.gui}lib/frama-c/wpalette.cmo
+${PLIST.gui}lib/frama-c/wpalette.cmx
+${PLIST.gui}lib/frama-c/wpalette.o
+${PLIST.gui}lib/frama-c/wpane.cmi
+${PLIST.gui}lib/frama-c/wpane.cmo
+${PLIST.gui}lib/frama-c/wpane.cmx
+${PLIST.gui}lib/frama-c/wpane.o
+${PLIST.gui}lib/frama-c/wtable.cmi
+${PLIST.gui}lib/frama-c/wtable.cmo
+${PLIST.gui}lib/frama-c/wtable.cmx
+${PLIST.gui}lib/frama-c/wtable.o
+${PLIST.gui}lib/frama-c/wtext.cmi
+${PLIST.gui}lib/frama-c/wtext.cmo
+${PLIST.gui}lib/frama-c/wtext.cmx
+${PLIST.gui}lib/frama-c/wtext.o
 lib/frama-c/wto.cmi
 lib/frama-c/wto.cmo
 lib/frama-c/wto.cmx
@@ -951,10 +951,10 @@ lib/frama-c/wto_statement.cmi
 lib/frama-c/wto_statement.cmo
 lib/frama-c/wto_statement.cmx
 lib/frama-c/wto_statement.o
-lib/frama-c/wutil.cmi
-lib/frama-c/wutil.cmo
-lib/frama-c/wutil.cmx
-lib/frama-c/wutil.o
+${PLIST.gui}lib/frama-c/wutil.cmi
+${PLIST.gui}lib/frama-c/wutil.cmo
+${PLIST.gui}lib/frama-c/wutil.cmx
+${PLIST.gui}lib/frama-c/wutil.o
 lib/libeacsl-gmp.a
 lib/libeacsl-jemalloc.a
 man/man1/e-acsl-gcc.sh.1
