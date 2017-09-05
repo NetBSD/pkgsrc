@@ -1,0 +1,4 @@
+contextlib2 provides backports of features in the latest version of
+the standard library’s contextlib module to earlier Python
+versions. It also serves as a real world proving ground for potential
+future enhancements to that module.
