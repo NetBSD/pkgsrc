@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2017/09/02 14:27:38 taca Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/05 15:00:03 taca Exp $
 
-DISTNAME=	Crypt_GPG-1.6.1
+DISTNAME=	Crypt_GPG-1.6.2
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Object oriented interface to GNU Privacy Guard
+LICENSE=	lgpl2
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Console_CommandLine>=1.1.10:../../devel/pear-Console_CommandLine
 
