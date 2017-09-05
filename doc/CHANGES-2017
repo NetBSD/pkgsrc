@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3619 2017/09/05 15:50:28 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3620 2017/09/05 18:23:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5086,3 +5086,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-cfscrape to 1.9.0 [adam 2017-09-05]
 	Updated security/pear-Crypt_GPG to 1.6.2 [taca 2017-09-05]
 	Updated www/contao44 to 4.4.4 [taca 2017-09-05]
+	Added devel/py-contextlib2 version 0.5.5 [minskim 2017-09-05]
