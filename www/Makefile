@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1263 2017/09/04 18:16:49 wiz Exp $
+# $NetBSD: Makefile,v 1.1264 2017/09/05 06:03:22 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -897,7 +897,6 @@ SUBDIR+=	termtter
 SUBDIR+=	thin
 SUBDIR+=	thoth
 SUBDIR+=	thoth-delicious
-SUBDIR+=	thoth-flickr
 SUBDIR+=	thttpd
 SUBDIR+=	tidy
 SUBDIR+=	tinyproxy
