@@ -1,0 +1,14 @@
+$NetBSD: patch-share_Makefile.common,v 1.1 2017/09/05 07:30:00 dholland Exp $
+
+Don't install nonexecutables with execute permission.
+
+--- share/Makefile.common~	2017-06-01 08:02:11.000000000 +0000
++++ share/Makefile.common
+@@ -165,6 +165,7 @@ CHMOD_RW= sh -c \
+   if test -e $$f; then chmod u+w $$f; fi \
+ done' chmod_rw
+ CP      = install
++CPNX    = install -m 644
+ CP_IF_DIFF = sh -c \
+   'if cmp -s $$1 $$2; \
+    then touch -r $$2 $$1; \

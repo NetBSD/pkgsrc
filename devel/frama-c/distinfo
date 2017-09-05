@@ -1,7 +1,14 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:27:26 agc Exp $
+$NetBSD: distinfo,v 1.7 2017/09/05 07:30:00 dholland Exp $
 
-SHA1 (frama-c-Oxygen-20120901.tar.gz) = 65aef0a88b788d11a6b5061dc08741492859de40
-RMD160 (frama-c-Oxygen-20120901.tar.gz) = 76daf11770a52b1b1bc59ca9c576208ac08755a8
-SHA512 (frama-c-Oxygen-20120901.tar.gz) = fcf96dd2c0e50c4f125050b677f55d960d3a78d2d827cbb6f9ddd98892162cb1181053202ce46f74911b29ad895489d51939a2bb52dafed440ee2abcbde41224
-Size (frama-c-Oxygen-20120901.tar.gz) = 10815011 bytes
-SHA1 (patch-configure) = c7e895c967199433c9d55d99347ec14cad9b41ab
+SHA1 (frama-c-Phosphorus-20170501.tar.gz) = d9372127ba80636cc1c692a141a7a02dee8325da
+RMD160 (frama-c-Phosphorus-20170501.tar.gz) = 24a5b8578491d3c15aa539da69062803d0c6d137
+SHA512 (frama-c-Phosphorus-20170501.tar.gz) = b3b73932378cba7be8ac0cbb1f7311e8f60dde68cad55c10659ffa40e76ab3f106d554e245ccd90ffb5307b9a42b6ce51154a5b9c006687b8c5808c77ca4c2f3
+Size (frama-c-Phosphorus-20170501.tar.gz) = 7431131 bytes
+SHA1 (patch-Makefile) = d9a23653196d4586c3cca87091518aea6791ddcc
+SHA1 (patch-configure) = a415684ab5ecb4fed276dede90439fa8ba6a09ed
+SHA1 (patch-share_Makefile.common) = f5230aee768e6af4c7458d96f1f210172daa9bb2
+SHA1 (patch-src_libraries_utils_c__bindings.c) = b37db1c51e9082e4a328a6a7189f57db3f12d624
+SHA1 (patch-src_plugins_e-acsl_Makefile) = 02542a247a7f4b266c7e9139c4ee555dda5fd1bb
+SHA1 (patch-src_plugins_wp_configure) = 6f0fb756d2460b6abf27313d367672e293a8d9e7
+SHA1 (patch-src_plugins_wp_configure.ac) = 3b15ff7b551da79ad1580b134258631f1527bc42
+SHA1 (patch-src_plugins_wp_share_coqwp_Zbits.v) = 26fac23dc015087b7126e40a47d566eb49a24293
