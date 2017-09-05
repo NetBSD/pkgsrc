@@ -1,4 +1,4 @@
-$NetBSD: patch-src_closures.c,v 1.1 2017/05/26 18:55:41 joerg Exp $
+$NetBSD: patch-src_closures.c,v 1.2 2017/09/05 15:08:42 joerg Exp $
 
 --- src/closures.c.orig	2017-05-22 23:16:12.516083134 +0000
 +++ src/closures.c
@@ -75,7 +75,7 @@ $NetBSD: patch-src_closures.c,v 1.1 2017/05/26 18:55:41 joerg Exp $
 +  void *codeseg, *dataseg;
 +  size_t rounded_size;
 +
-+  dataseg = ADD_TO_POINTER(ptr, overhead);
++  dataseg = ADD_TO_POINTER(ptr, -overhead);
 +  memcpy(&rounded_size, dataseg, sizeof(rounded_size));
 +  memcpy(&codeseg, ADD_TO_POINTER(dataseg, sizeof(size_t)), sizeof(void *));
 +  munmap(dataseg, rounded_size);
