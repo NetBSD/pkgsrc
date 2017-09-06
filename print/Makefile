@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.693 2017/09/06 12:37:46 markd Exp $
+# $NetBSD: Makefile,v 1.694 2017/09/06 12:54:56 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -788,10 +788,6 @@ SUBDIR+=	tex-kix-doc
 SUBDIR+=	tex-knuth-doc
 SUBDIR+=	tex-koma-script
 SUBDIR+=	tex-koma-script-examples-doc
-SUBDIR+=	tex-kotex
-SUBDIR+=	tex-kotex-dev
-SUBDIR+=	tex-kotex-dev-doc
-SUBDIR+=	tex-kotex-doc
 SUBDIR+=	tex-kotex-oblivoir
 SUBDIR+=	tex-kotex-oblivoir-doc
 SUBDIR+=	tex-kotex-plain
