@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.37 2017/01/19 18:52:04 agc Exp $
+# $NetBSD: Makefile,v 1.38 2017/09/06 09:03:00 wiz Exp $
 #
 
 DISTNAME=		xisp-2.7p4
 PKGREVISION=		3
 CATEGORIES=		comms x11
-MASTER_SITES=		http://xisp.hellug.gr/release/
+MASTER_SITES=		https://xisp.hellug.gr/release/
 MASTER_SITES+=		${MASTER_SITE_SUNSITE:=system/network/serial/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://xisp.hellug.gr/
+HOMEPAGE=		https://xisp.hellug.gr/
 COMMENT=		User-friendly X11 interface to pppd/chat
 
 BUILD_DEFS+=		VARBASE
