@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/11/06 08:43:32 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/06 16:49:26 wiz Exp $
 
 DISTNAME=	rsfs
 PKGNAME=	tex-${DISTNAME}-2009
@@ -8,8 +8,6 @@ DIST_SUBDIR=	${PKGBASE}-${TEXLIVE_REV}.2010
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Ralph Smith's Formal Script font
-
-CONFLICTS+=	teTeX-texmf<=3.0nb15
 
 TEX_MIXEDMAP_FILES+=	rsfs.map
 

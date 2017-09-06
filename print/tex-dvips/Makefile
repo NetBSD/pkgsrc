@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/06/21 06:13:14 markd Exp $
+# $NetBSD: Makefile,v 1.22 2017/09/06 16:49:33 wiz Exp $
 
 DISTNAME=	dvips
 PKGNAME=	tex-${DISTNAME}-2017
@@ -9,7 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/dvips
 COMMENT=	Files for a DVI to PostScript driver
 LICENSE=	gnu-gpl-v2
 
-CONFLICTS+=	teTeX-texmf<=3.0nb15
 CONFLICTS+=	tex-bin-dvipsk<=2008.12898
 
 TEXLIVE_IGNORE_PATTERNS=	texmf-dist/dvips/base

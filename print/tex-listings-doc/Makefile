@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/08/02 11:19:20 markd Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/06 16:49:40 wiz Exp $
 
 DISTNAME=	listings.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.6
@@ -8,8 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/listings
 COMMENT=	Documentation for tex-listings
 LICENSE=	lppl-1.3c
-
-CONFLICTS+=	teTeX-texmf<=3.0nb20
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
