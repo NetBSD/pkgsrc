@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2017/03/26 20:10:11 markd Exp $
+# $NetBSD: Makefile,v 1.10 2017/09/06 16:29:25 wiz Exp $
 
 DISTNAME=	ptex
 PKGNAME=	tex-${DISTNAME}-3.2pl41220
-PKGREVISION=	3
+PKGREVISION=	4
 TEXLIVE_REV=	41220
 
 MAINTAINER=	minskim@NetBSD.org
@@ -13,7 +13,6 @@ DEPENDS+=	tex-adobemapping-[0-9]*:../../fonts/tex-adobemapping
 DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
 DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 DEPENDS+=	tex-ipaex-[0-9]*:../../fonts/tex-ipaex
-DEPENDS+=	tex-japanese-[0-9]*:../../print/tex-japanese
 DEPENDS+=	tex-japanese-otf-[0-9]*:../../fonts/tex-japanese-otf
 DEPENDS+=	tex-latex>=2010:../../print/tex-latex
 DEPENDS+=	tex-pbibtex-base-[0-9]*:../../print/tex-pbibtex-base
