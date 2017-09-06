@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.30 2016/07/09 06:38:19 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2017/09/06 10:40:29 wiz Exp $
 
 DISTNAME=	xscorch-0.2.0
 PKGREVISION=	11
 CATEGORIES=	games
-MASTER_SITES=	http://www.xscorch.org/releases/
+#MASTER_SITES=	http://www.xscorch.org/releases/
 
 MAINTAINER=	snj@NetBSD.org
-HOMEPAGE=	http://www.xscorch.org/
+#HOMEPAGE=	http://www.xscorch.org/
 COMMENT=	Multiplayer tank shoot-em-up
 
 USE_LIBTOOL=		YES
