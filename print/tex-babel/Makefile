@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/08/17 03:05:36 markd Exp $
+# $NetBSD: Makefile,v 1.8 2017/09/06 16:49:30 wiz Exp $
 
 DISTNAME=	babel
 PKGNAME=	tex-${DISTNAME}-3.12
@@ -9,7 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/babel
 COMMENT=	Multilingual support for Plain TeX or LaTeX
 LICENSE=	lppl-1.3c
 
-CONFLICTS+=	teTeX-texmf<=3.0nb13
 DEPENDS+=	tex-carlisle>=2010:../../print/tex-carlisle
 DEPENDS+=	tex-graphics>=1.0onb1:../../print/tex-graphics
 DEPENDS+=	tex-latex>=2009:../../print/tex-latex

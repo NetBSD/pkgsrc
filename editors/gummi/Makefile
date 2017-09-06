@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2017/09/04 20:20:53 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.45 2017/09/06 16:49:22 wiz Exp $
 
 DISTNAME=		gummi-0.6.6
 PKGREVISION=		8
@@ -17,7 +16,7 @@ USE_TOOLS+= 		pkg-config intltool msgfmt gmake automake autoreconf
 BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 
 # we need some latex, but not all
-#DEPENDS+= teTeX-texmf-[0-9]*:../../print/teTeX3-texmf
+#DEPENDS+= texlive-collection-all-[0-9]*:../../meta-pkgs/texlive-collection-all
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	yes
