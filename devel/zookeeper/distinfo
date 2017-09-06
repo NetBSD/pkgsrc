@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.4 2016/03/04 13:40:34 fhajny Exp $
+$NetBSD: distinfo,v 1.5 2017/09/06 11:12:19 fhajny Exp $
 
-SHA1 (zookeeper-3.4.8-deps.tar.gz) = 9c5161ab69cc6e47d67968882582eb0a75f9269f
-RMD160 (zookeeper-3.4.8-deps.tar.gz) = a8eb3b44757eadd81ca71b06925c3d9bee0f24a8
-SHA512 (zookeeper-3.4.8-deps.tar.gz) = 56c05c88412fad6d632a9b5a5586ee2085d718a815d48511619bc7b77423a78fe2b87b0e259b362cb3de54c91e2ca4b0791f364cf2666062edc74f2ea28cacb3
-Size (zookeeper-3.4.8-deps.tar.gz) = 11020711 bytes
-SHA1 (zookeeper-3.4.8.tar.gz) = 51b61611a329294f75aed82f3a4517a4b6ff116f
-RMD160 (zookeeper-3.4.8.tar.gz) = 09fe205c95a4c0ad681ffece837a37401e91fcbe
-SHA512 (zookeeper-3.4.8.tar.gz) = a5f0eca3c66655e0116aeddd92af228402d3d68350b30f9400b3638ef09610d903b7c87a2bb49a5594b12a4d082048c259ba3da121c1c6da4752dd5f5812bfec
-Size (zookeeper-3.4.8.tar.gz) = 22261552 bytes
+SHA1 (zookeeper-3.4.10-deps.tar.gz) = 560e5340bda5fc9ba61d230f85af040939e75b81
+RMD160 (zookeeper-3.4.10-deps.tar.gz) = 4c9b835b1204a4ef269aafb5792c5de58419aed5
+SHA512 (zookeeper-3.4.10-deps.tar.gz) = 2993e3247d010206706e56e2c67290da7042d4a90cbde0409f6c8af091981313e70233e527adbc50ce5c980eab47f79e77f30657b6f284a60cafbd840f2a5eff
+Size (zookeeper-3.4.10-deps.tar.gz) = 23663350 bytes
+SHA1 (zookeeper-3.4.10.tar.gz) = eb2145498c5f7a0d23650d3e0102318363206fba
+RMD160 (zookeeper-3.4.10.tar.gz) = 4b9b48d4a12abed14dd80071423d578afc68a5ba
+SHA512 (zookeeper-3.4.10.tar.gz) = 4c54e40ac8d0b267db4a188a30e39ed0ac2c3e8a8fadaf244be45ff5adee956df28f6cb9f1eb56f175e924fa3629b64f98286a090c46764c91c017613c80a51b
+Size (zookeeper-3.4.10.tar.gz) = 35042811 bytes
 SHA1 (patch-bin_zkEnv.sh) = 210b94572a221cc46898750da0a822c90708ef9f
-SHA1 (patch-build.xml) = 4a41413251c850973119b4d97b01dedc95b60727
+SHA1 (patch-build.xml) = 60abaa3f4a5eeb51d4c3e57bc3230e9725fd7abe
 SHA1 (patch-conf_zoo__sample.cfg) = 74885bea53e5b9b723fb1564db362a08d7b47705
 SHA1 (patch-src_c_src_zookeeper.c) = 0cc9710914d2a329eb8f7d18683778f460180b72
-SHA1 (patch-src_contrib_build-contrib.xml) = f9d66493d537fa0ffa383928ce715ccb99ef2f58
+SHA1 (patch-src_contrib_build-contrib.xml) = 309385cf89f87df116832c51acc298e934bbffdf
 SHA1 (patch-src_packages_templates_conf_zookeeper-env.sh) = 5abb72f885a5ac884dfcfa480438ce82d544d489
