@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2016/04/20 12:10:34 nros Exp $
+# $NetBSD: Makefile,v 1.82 2017/09/06 09:03:00 wiz Exp $
 
 DISTNAME=	xmcd-3.0.2
 PKGREVISION=	15
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://www.ibiblio.org/tkan/download/xmcd/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.amb.org/xmcd/
+HOMEPAGE=	https://www.amb.org/xmcd/
 COMMENT=	Motif CD player
 LICENSE=	gnu-gpl-v2
 

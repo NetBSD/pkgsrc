@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/04/20 09:59:39 dsainty Exp $
+# $NetBSD: Makefile,v 1.34 2017/09/06 09:03:04 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/ZoneMinder-/zoneminder-/}
 DISTNAME=	ZoneMinder-1.28.1
@@ -10,7 +10,7 @@ GITHUB_TYPE=	tag
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	dsainty@NetBSD.org
-HOMEPAGE=	http://www.zoneminder.com/
+HOMEPAGE=	https://www.zoneminder.com/
 COMMENT=	Video camera security and surveillance solution
 LICENSE=	gnu-gpl-v2
 

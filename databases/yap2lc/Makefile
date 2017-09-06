@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/02 21:25:55 asau Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/06 09:03:01 wiz Exp $
 
 DISTNAME=	yap2lc-0.5.9
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=yap2lc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/yap2lc/
+HOMEPAGE=	https://sourceforge.net/projects/yap2lc/
 COMMENT=	Yet Another Passwd 2 LDIF Converter
 
 BDB_ACCEPTED=		db4 db5

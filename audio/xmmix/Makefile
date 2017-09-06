@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2016/04/20 12:10:34 nros Exp $
+# $NetBSD: Makefile,v 1.34 2017/09/06 09:03:00 wiz Exp $
 
 DISTNAME=	xmmix-1.2
 PKGREVISION=	6
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://www.ibiblio.org/tkan/download/xmmix/1.2.2/src/
 
 MAINTAINER=	augustss@cs.chalmers.se
-HOMEPAGE=	http://www.amb.org/xmmix/
+HOMEPAGE=	https://www.amb.org/xmmix/
 COMMENT=	X interface to the audio mixer device
 LICENSE=	gnu-gpl-v2
 
