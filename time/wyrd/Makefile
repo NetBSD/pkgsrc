@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2017/07/11 14:19:21 jaapb Exp $
+# $NetBSD: Makefile,v 1.21 2017/09/06 10:40:34 wiz Exp $
 #
 
 DISTNAME=		wyrd-1.4.6
 PKGREVISION=	8
 CATEGORIES=		time
-MASTER_SITES=		http://pessimization.com/software/wyrd/
+#MASTER_SITES=		http://pessimization.com/software/wyrd/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://pessimization.com/software/wyrd/
+#HOMEPAGE=		http://pessimization.com/software/wyrd/
 COMMENT=		Text-based front-end to Remind
 LICENSE=		gnu-gpl-v2
 

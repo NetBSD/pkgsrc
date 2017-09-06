@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/11/25 12:53:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2017/09/06 10:40:32 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	tex-foiltex-2.1.4a
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/latex/contrib/supported/foiltex/}
 DISTFILES=	foiltex.dtx foiltex.ins
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.tex.ac.uk/tex-archive/help/Catalogue/entries/foiltex.html
+#HOMEPAGE=	http://www.tex.ac.uk/tex-archive/help/Catalogue/entries/foiltex.html
 COMMENT=	LaTeX2e class for overhead transparencies
 LICENSE=	foiltex-license
 

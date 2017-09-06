@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.7 2012/10/25 06:57:06 asau Exp $
+# $NetBSD: Makefile,v 1.8 2017/09/06 10:40:34 wiz Exp $
 #
 
 DISTNAME=	${W2L}beta2
 PKGNAME=	writer2latex-0.4b2
 PKGREVISION=	1
 CATEGORIES=	textproc
-MASTER_SITES=	http://www.hj-gym.dk/~hj/writer2latex/
+#MASTER_SITES=	http://www.hj-gym.dk/~hj/writer2latex/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.hj-gym.dk/~hj/writer2latex/
+#HOMEPAGE=	http://www.hj-gym.dk/~hj/writer2latex/
 COMMENT=	Convert OpenOffice.org/StarOffice documents to LaTeX and other formats
 
 WRKSRC=		${WRKDIR}/${W2L}
