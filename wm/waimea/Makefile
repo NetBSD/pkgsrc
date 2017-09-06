@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2016/07/09 13:10:15 rillig Exp $
+# $NetBSD: Makefile,v 1.54 2017/09/06 09:03:05 wiz Exp $
 #
 
 DISTNAME=	waimea-0.4.0
@@ -7,7 +7,7 @@ CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=waimea/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/waimea/
+HOMEPAGE=	https://sourceforge.net/projects/waimea/
 COMMENT=	Fast and highly customizable virtual window manager
 
 GNU_CONFIGURE=	YES

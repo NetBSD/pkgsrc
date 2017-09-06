@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2017/09/04 14:42:25 wiz Exp $
+# $NetBSD: Makefile,v 1.172 2017/09/06 09:03:03 wiz Exp $
 
 DISTNAME=	wireshark-2.2.9
 CATEGORIES=	net
@@ -6,7 +6,7 @@ MASTER_SITES=	https://www.wireshark.org/download/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.wireshark.org/
+HOMEPAGE=	https://www.wireshark.org/
 COMMENT=	Network protocol analyzer
 LICENSE=	gnu-gpl-v2
 
