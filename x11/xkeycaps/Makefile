@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.19 2017/01/19 18:52:30 agc Exp $
+# $NetBSD: Makefile,v 1.20 2017/09/06 09:03:06 wiz Exp $
 #
 
 DISTNAME=	xkeycaps-2.46
 PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
-MASTER_SITES+=	http://www.jwz.org/xkeycaps/
+MASTER_SITES+=	https://www.jwz.org/xkeycaps/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.jwz.org/xkeycaps/
+HOMEPAGE=	https://www.jwz.org/xkeycaps/
 COMMENT=	Graphical front-end to xmodmap
 
 USE_IMAKE=	yes

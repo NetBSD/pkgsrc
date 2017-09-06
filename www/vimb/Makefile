@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/04/22 21:04:03 adam Exp $
+# $NetBSD: Makefile,v 1.14 2017/09/06 09:03:05 wiz Exp $
 
 DISTNAME=	vimb-2.12
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fanglingsu/}
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://fanglingsu.github.io/vimb/
+HOMEPAGE=	https://fanglingsu.github.io/vimb/
 COMMENT=	Vim-like webkit browser
 LICENSE=	gnu-gpl-v3
 

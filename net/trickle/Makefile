@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.26 2016/03/05 11:29:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2017/09/06 09:03:03 wiz Exp $
 #
 
 DISTNAME=	trickle-1.06
 PKGREVISION=	15
 CATEGORIES=	net
-MASTER_SITES=	http://monkey.org/~marius/trickle/
+MASTER_SITES=	https://monkey.org/~marius/trickle/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://monkey.org/~marius/trickle/
+HOMEPAGE=	https://monkey.org/~marius/trickle/
 COMMENT=	Portable lightweight userspace bandwidth shaper
 
 USE_LIBTOOL=		yes

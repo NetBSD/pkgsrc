@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2017/02/12 06:25:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/06 09:03:02 wiz Exp $
 #
 
 DISTNAME=	zathura-djvu-0.2.6
 PKGREVISION=	2
 CATEGORIES=	graphics
-MASTER_SITES=	http://pwmt.org/projects/zathura-djvu/download/
+MASTER_SITES=	https://pwmt.org/projects/zathura-djvu/download/
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://pwmt.org/projects/zathura-djvu/
+HOMEPAGE=	https://pwmt.org/projects/zathura-djvu/
 COMMENT=	Add DjVu support to zathura using djvulibre library
 LICENSE=	zlib
 
