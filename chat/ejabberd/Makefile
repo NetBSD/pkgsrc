@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2017/08/20 12:58:04 fhajny Exp $
+# $NetBSD: Makefile,v 1.76 2017/09/06 12:26:32 fhajny Exp $
 
 DISTNAME=	ejabberd-17.08
 CATEGORIES=	chat
@@ -29,7 +29,6 @@ DEPENDS+=	erlang-p1_utils>=1.0.9:../../misc/erlang-p1_utils
 DEPENDS+=	erlang-stringprep>=1.0.9:../../textproc/erlang-stringprep
 DEPENDS+=	erlang-stun>=1.0.14:../../net/erlang-stun
 DEPENDS+=	erlang-xmpp>=1.1.14:../../net/erlang-xmpp
-CONFLICTS+=	jabberd-[0-9]*
 
 GNU_CONFIGURE=		yes
 USE_GCC_RUNTIME=	yes
