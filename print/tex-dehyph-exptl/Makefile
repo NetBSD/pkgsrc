@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/06/21 06:13:14 markd Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/06 16:49:32 wiz Exp $
 
 DISTNAME=	dehyph-exptl
 PKGNAME=	tex-${DISTNAME}-0.41
@@ -8,8 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/dehyph-exptl
 COMMENT=	Experimental hyphenation patterns for the German language
 LICENSE=	lppl-1.3c
-
-CONFLICTS+=	teTeX-texmf<=3.0nb12
 
 TEX_HYPHEN_DAT+=	german-x-2017-03-31 dehypht-x-2017-03-31.tex
 TEX_HYPHEN_DAT+=	= german-x-latest

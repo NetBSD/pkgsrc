@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2016/06/16 04:06:14 markd Exp $
+# $NetBSD: Makefile,v 1.23 2017/09/06 16:49:42 wiz Exp $
 
 DISTNAME=	pdftex
 PKGNAME=	tex-${DISTNAME}-2016
@@ -9,7 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/pdftex
 COMMENT=	TeX extension for direct creation of PDF
 LICENSE=	gnu-gpl-v2
 
-CONFLICTS+=	teTeX-bin<=3.0nb29
 DEPENDS+=	tex-dvips-[0-9]*:../../print/tex-dvips
 DEPENDS+=	tex-etex-[0-9]*:../../print/tex-etex
 DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
