@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.25 2016/04/20 12:10:33 nros Exp $
+# $NetBSD: Makefile,v 1.26 2017/09/06 10:40:25 wiz Exp $
 
 DISTNAME=	wmusic-1.5.0
 PKGREVISION=	6
 CATEGORIES=	audio windowmaker
-MASTER_SITES=	http://home.jtan.com/~john/wmusic/
+#MASTER_SITES=	http://home.jtan.com/~john/wmusic/
 
 MAINTAINER=	joel@carnat.net
-HOMEPAGE=	http://home.jtan.com/~john/wmusic/
+#HOMEPAGE=	http://home.jtan.com/~john/wmusic/
 COMMENT=	WindowMaker dockable remote for XMMS
 LICENSE=	gnu-gpl-v2
 

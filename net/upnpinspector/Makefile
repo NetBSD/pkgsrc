@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2017/01/01 14:43:53 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/09/06 10:40:31 wiz Exp $
 
 DISTNAME=	UPnP-Inspector-0.2.2
 PKGREVISION=	3
 CATEGORIES=	net
-MASTER_SITES=	http://coherence.beebits.net/download/
+#MASTER_SITES=	http://coherence.beebits.net/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://coherence.beebits.net/
+#HOMEPAGE=	http://coherence.beebits.net/
 COMMENT=	UPnP analyzer
 LICENSE=	mit
 
