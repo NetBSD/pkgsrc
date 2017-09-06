@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/04/23 18:45:15 shattered Exp $
-#
+# $NetBSD: Makefile,v 1.8 2017/09/06 09:10:36 wiz Exp $
 
 DISTNAME=	xvidtune-1.0.3
 CATEGORIES=	x11
@@ -7,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_XORG:=app/}
+#HOMEPAGE=	${MASTER_SITE_XORG:=app/}
 COMMENT=	Client interface to the X server video mode extension
 LICENSE=	mit
 
