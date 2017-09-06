@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3621 2017/09/05 18:32:00 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.3622 2017/09/06 10:18:00 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5088,3 +5088,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/contao44 to 4.4.4 [taca 2017-09-05]
 	Added devel/py-contextlib2 version 0.5.5 [minskim 2017-09-05]
 	Added net/ruby-pcaprub version 0.12.4 [minskim 2017-09-05]
+	Updated devel/apache-maven to 3.5.0 [fhajny 2017-09-06]
