@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/07/07 21:24:59 scole Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/06 09:03:01 wiz Exp $
 
 DISTNAME=	ttf-tlwg-${TLWG_VERSION}
 CATEGORIES=	fonts
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.xz
 TLWG_VERSION=	0.6.3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://linux.thai.net/projects/thaifonts-scalable
+HOMEPAGE=	https://linux.thai.net/projects/thaifonts-scalable
 COMMENT=	Thai fonts in TTF format
 LICENSE=	gnu-gpl-v2 AND vera-ttf-license
 

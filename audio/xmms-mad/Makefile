@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2016/04/20 12:10:34 nros Exp $
+# $NetBSD: Makefile,v 1.33 2017/09/06 09:03:00 wiz Exp $
 #
 
 DISTNAME=	xmms-mad-0.5.7
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmms-mad/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/xmms-mad/
+HOMEPAGE=	https://sourceforge.net/projects/xmms-mad/
 COMMENT=	Input plugin for XMMS that uses libmad
 LICENSE=	gnu-gpl-v2
 

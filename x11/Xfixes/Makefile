@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2016/02/26 11:27:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2017/09/06 09:03:05 wiz Exp $
 
 DISTNAME=		libXfixes-2.0.1
 PKGNAME=		${DISTNAME:S/libX/X/}
 PKGREVISION=		5
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://xlibs.freedesktop.org/release/
+MASTER_SITES=		https://xlibs.freedesktop.org/release/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
