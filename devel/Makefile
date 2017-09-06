@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2499 2017/09/05 18:23:25 minskim Exp $
+# $NetBSD: Makefile,v 1.2500 2017/09/06 10:37:52 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2427,7 +2427,6 @@ SUBDIR+=	tkdiff
 SUBDIR+=	tla
 SUBDIR+=	tlsh
 SUBDIR+=	tmake
-SUBDIR+=	tmin
 SUBDIR+=	topgit
 SUBDIR+=	tpasm
 SUBDIR+=	tradcpp
