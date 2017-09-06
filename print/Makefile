@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.690 2017/09/06 12:11:44 markd Exp $
+# $NetBSD: Makefile,v 1.691 2017/09/06 12:27:42 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -777,8 +777,6 @@ SUBDIR+=	tex-index-doc
 SUBDIR+=	tex-intro-scientific-doc
 SUBDIR+=	tex-jadetex
 SUBDIR+=	tex-jadetex-doc
-SUBDIR+=	tex-japanese
-SUBDIR+=	tex-japanese-doc
 SUBDIR+=	tex-jknapltx
 SUBDIR+=	tex-js-misc
 SUBDIR+=	tex-js-misc-doc
