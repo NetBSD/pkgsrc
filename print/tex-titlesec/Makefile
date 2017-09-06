@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/06/16 04:06:17 markd Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/06 16:49:45 wiz Exp $
 
 DISTNAME=	titlesec
 PKGNAME=	tex-${DISTNAME}-2.10.2
@@ -8,7 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Select alternative section titles
 LICENSE=	lppl-1.3c
 
-CONFLICTS+=	teTeX-texmf<=3.0nb18
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 
 .include "../../print/texlive/package.mk"
