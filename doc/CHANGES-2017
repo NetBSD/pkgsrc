@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3630 2017/09/06 13:26:52 wen Exp $
+$NetBSD: CHANGES-2017,v 1.3631 2017/09/06 13:35:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5118,3 +5118,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed print/tex-kotex-dev [markd 2017-09-06]
 	Removed print/tex-kotex-dev-doc [markd 2017-09-06]
 	Updated security/p5-Digest-SHA to 5.97 [wen 2027-09-06]
+	Updated security/p5-Digest-SHA3 to 0.26 [wen 2017-09-06]
