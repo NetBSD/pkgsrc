@@ -1,17 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2017/08/31 09:14:29 adam Exp $
+# $NetBSD: Makefile,v 1.13 2017/09/06 15:35:39 adam Exp $
 
-DISTNAME=	XlsxWriter-0.9.8
+DISTNAME=	XlsxWriter-0.9.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=jmcnamara/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=X/XlsxWriter/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jmcnamara/XlsxWriter/
 COMMENT=	Python module for creating Excel XLSX files
 LICENSE=	2-clause-bsd
-
-GITHUB_PROJECT=	XlsxWriter
-GITHUB_TAG=	RELEASE_${PKGVERSION_NOREV}
 
 USE_LANGUAGES=	# none
 
