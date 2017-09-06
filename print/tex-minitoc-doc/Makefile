@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/08/02 12:21:43 markd Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/06 16:49:40 wiz Exp $
 
 DISTNAME=	minitoc.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-61
@@ -8,8 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/minitoc
 COMMENT=	Documentation for tex-minitoc
 LICENSE=	lppl-1.3c
-
-CONFLICTS+=	teTeX-texmf<3.0nb29
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

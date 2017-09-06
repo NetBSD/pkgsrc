@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/01/30 03:26:10 markd Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/06 16:49:31 wiz Exp $
 
 DISTNAME=	carlisle
 PKGNAME=	tex-${DISTNAME}-2010
@@ -8,7 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	LaTeX packages created by David Carlisle
 LICENSE=	lppl-1.3c
 
-CONFLICTS+=	teTeX-texmf<=3.0nb13
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-cm-[0-9]*:../../fonts/tex-cm
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics

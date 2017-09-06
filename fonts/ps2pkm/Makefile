@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/06/20 20:50:49 markd Exp $
+# $NetBSD: Makefile,v 1.12 2017/09/06 16:49:22 wiz Exp $
 
 DISTNAME=	texlive-20170524-source
 PKGNAME=	ps2pkm-1.8
@@ -11,7 +11,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	Tool to convert PostSCript fonts into TeX PK fonts
 
-CONFLICTS+=	teTeX-bin<=3.0nb34
 DEPENDS+=	kpathsea>=6.0.1:../../print/kpathsea
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/08/23 23:59:34 markd Exp $
+# $NetBSD: Makefile,v 1.14 2017/09/06 16:49:35 wiz Exp $
 
 DISTNAME=	graphics
 PKGNAME=	tex-${DISTNAME}-1.2c
@@ -9,7 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/latex-graphics
 COMMENT=	Standard LaTeX graphics
 LICENSE=	lppl-1.3c
 
-CONFLICTS+=	teTeX-texmf<=3.0nb13
 DEPENDS+=	tex-graphics-cfg-[0-9]*:../../print/tex-graphics-cfg
 DEPENDS+=	tex-graphics-def-[0-9]*:../../print/tex-graphics-def
 

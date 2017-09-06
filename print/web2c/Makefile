@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2017/09/04 20:20:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.63 2017/09/06 16:49:47 wiz Exp $
 
 DISTNAME=	texlive-20170524-source
 PKGNAME=	web2c-2017
@@ -11,9 +11,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/web2c/
 COMMENT=	TeX implementation translating WEB to C
 
-CONFLICTS+=	ja-ptex-bin-[0-9]*
-CONFLICTS+=	teTeX-bin<=3.0nb28
-CONFLICTS+=	texlive-tetex<2010
 DEPENDS+=	kpathsea>=6.2.1:../../print/kpathsea
 DEPENDS+=	ptexenc>=1.3.4:../../print/ptexenc
 

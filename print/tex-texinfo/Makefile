@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/08/17 02:33:44 markd Exp $
+# $NetBSD: Makefile,v 1.8 2017/09/06 16:49:45 wiz Exp $
 
 DISTNAME=	texinfo
 PKGNAME=	tex-${DISTNAME}-5.1.44706
@@ -9,7 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/texinfo
 COMMENT=	Texinfo documentation system
 LICENSE=	gnu-gpl-v2
 
-CONFLICTS+=	teTeX-texmf<=3.0nb46
 DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 
 .include "../../print/texlive/package.mk"

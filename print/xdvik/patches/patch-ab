@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/02/23 19:32:01 minskim Exp $
+$NetBSD: patch-ab,v 1.2 2017/09/06 16:49:47 wiz Exp $
 
-Make sure teTeX3 compiles even if floor is defined by the OS (which is
+Make sure xdvik compiles even if floor is defined by the OS (which is
 the case on Mac OS 10.4 at least)
 
 --- special.c.orig	2008-05-03 12:45:10.000000000 -0700

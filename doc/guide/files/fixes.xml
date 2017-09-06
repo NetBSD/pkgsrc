@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.144 2016/07/16 14:28:49 jakllsch Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.145 2017/09/06 16:49:22 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -367,11 +367,11 @@ BUILD_DEPENDS+= scons-[0-9]*:../../devel/scons
 	<filename>buildlink3.mk</filename> file, this is specified
 	using the <varname>DEPENDS</varname> variable. The
 	<filename role="pkg">print/lyx</filename> package needs to
-	be able to execute the latex binary from the teTeX package
+	be able to execute the latex binary from the tex-latex-bin package
 	when it runs, and that is specified:</para>
 
 <programlisting>
-DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
+DEPENDS+=        tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 </programlisting>
       </listitem>
       <listitem>

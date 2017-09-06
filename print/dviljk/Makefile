@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/06/20 20:50:49 markd Exp $
+# $NetBSD: Makefile,v 1.13 2017/09/06 16:49:29 wiz Exp $
 
 DISTNAME=	texlive-20170524-source
 PKGNAME=	dviljk-2.6.5
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	DVI driver for the LaserJet printers using kpathsea
-
-CONFLICTS+=	teTeX-bin<=3.0nb32
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/dviljk

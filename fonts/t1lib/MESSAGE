@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/11/08 15:51:25 fredb Exp $
+$NetBSD: MESSAGE,v 1.3 2017/09/06 16:49:22 wiz Exp $
 
 Most programs that use the lib will look first in the directory
 specified by the environment variable T1LIB_CONFIG_DIR, and then
@@ -8,7 +8,7 @@ to run the "xglyph" test X client. E.g, for Bourne shells:
  ``T1LIB_CONFIG_DIR=${PREFIX}/share/t1lib xglyph &''
 
 The complete documentation requires LaTeX to build. If you have
-the print/teTeX package (or some other "tex"),
+the meta-pkgs/texlive-collection-all package (or some subset),
 ``cd ${PREFIX}/share/doc/t1lib; make'' to build t1lib_doc.dvi.
 
 ===========================================================================
