@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/09/04 18:00:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/06 15:42:23 adam Exp $
 
-DISTNAME=	tox-2.7.0
+DISTNAME=	tox-2.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tox/}
@@ -13,6 +13,8 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-virtualenv>=1.11.2:../../devel/py-virtualenv
 DEPENDS+=	${PYPKGPREFIX}-py>=1.4.17:../../devel/py-py
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.3.0<1.0:../../devel/py-pluggy
+
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
