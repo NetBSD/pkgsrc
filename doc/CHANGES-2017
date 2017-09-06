@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3636 2017/09/06 16:28:26 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3637 2017/09/06 16:29:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5134,3 +5134,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-xlsxwriter to 0.9.9 [adam 2017-09-06]
 	Updated devel/py-tox to 2.8.1 [adam 2017-09-06]
 	Updated print/tex-plain to 3.141592653.43076nb1 [wiz 2017-09-06]
+	Updated print/tex-ptex to 3.2pl41220nb4 [wiz 2017-09-06]
