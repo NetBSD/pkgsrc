@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.306 2017/08/27 19:25:27 wiz Exp $
+# $NetBSD: Makefile,v 1.307 2017/09/06 12:19:35 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -462,10 +462,6 @@ SUBDIR+=	tex-eulervm
 SUBDIR+=	tex-eulervm-doc
 SUBDIR+=	tex-euro-ce
 SUBDIR+=	tex-euro-ce-doc
-SUBDIR+=	tex-eurofont
-SUBDIR+=	tex-eurofont-doc
-SUBDIR+=	tex-eurosans
-SUBDIR+=	tex-eurosans-doc
 SUBDIR+=	tex-eurosym
 SUBDIR+=	tex-eurosym-doc
 SUBDIR+=	tex-euxm
