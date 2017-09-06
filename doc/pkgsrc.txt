@@ -5909,9 +5909,9 @@ version numbers recognized by pkg_info(1).
  5. If your package needs some executable to be able to run correctly and if
     there's no buildlink3.mk file, this is specified using the DEPENDS
     variable. The print/lyx package needs to be able to execute the latex
-    binary from the teTeX package when it runs, and that is specified:
+    binary from the tex-latex-bin package when it runs, and that is specified:
 
-    DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
+    DEPENDS+=        tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
  6. You can use wildcards in package dependencies. Note that such wildcard
     dependencies are retained when creating binary packages. The dependency is
