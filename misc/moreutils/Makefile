@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/09/04 09:44:41 leot Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/06 12:38:32 leot Exp $
 
 DISTNAME=	moreutils_0.60.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -19,6 +19,8 @@ DEPENDS+=	p5-IPC-Run-[0-9]*:../../devel/p5-IPC-Run
 
 USE_TOOLS+=	gmake pod2man perl:run
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+
+USE_LANGUAGES=	c99
 
 REPLACE_PERL+=	chronic
 REPLACE_PERL+=	combine
