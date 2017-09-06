@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/09/06 10:40:30 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/09/06 11:30:41 wiz Exp $
 
 DISTNAME=	xdot
 PKGNAME=	xdot-20121124
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 EXTRACT_SUFX=	.py
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/jrfonseca/wiki/XDot
+HOMEPAGE=	https://github.com/jrfonseca/xdot.py
 COMMENT=	Interactive viewer for graphs written in Graphviz's dot language
 LICENSE=	gnu-lgpl-v3
 
