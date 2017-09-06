@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.691 2017/09/06 12:27:42 markd Exp $
+# $NetBSD: Makefile,v 1.692 2017/09/06 12:31:19 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -916,7 +916,6 @@ SUBDIR+=	tex-minitoc
 SUBDIR+=	tex-minitoc-doc
 SUBDIR+=	tex-minted
 SUBDIR+=	tex-minted-doc
-SUBDIR+=	tex-misc
 SUBDIR+=	tex-misc209
 SUBDIR+=	tex-mkpattern
 SUBDIR+=	tex-mkpattern-doc
