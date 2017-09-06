@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/21 18:07:08 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/06 16:49:46 wiz Exp $
 
 DISTNAME=	umlaute
 PKGNAME=	tex-${DISTNAME}-2.1
@@ -8,7 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	German input encodings in LaTeX
 LICENSE=	lppl-1.3c
 
-CONFLICTS+=	teTeX-texmf<=3.0nb37
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 

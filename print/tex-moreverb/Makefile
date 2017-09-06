@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/01/27 10:13:21 markd Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/06 16:49:41 wiz Exp $
 
 DISTNAME=	moreverb
 PKGNAME=	tex-${DISTNAME}-2.3a
@@ -8,7 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Extended verbatim
 LICENSE=	lppl-1.3c
 
-CONFLICTS+=	teTeX-texmf<=3.0nb17
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 
 .include "../../print/texlive/package.mk"
