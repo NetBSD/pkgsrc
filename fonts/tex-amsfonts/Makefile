@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/05/05 16:18:35 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/09/06 16:27:19 wiz Exp $
 
 DISTNAME=	amsfonts
 PKGNAME=	tex-${DISTNAME}-3.04
@@ -9,10 +9,8 @@ HOMEPAGE=	http://ctan.org/pkg/amsfonts
 COMMENT=	TeX fonts from the American Mathematical Society
 LICENSE=	ofl-v1.1
 
-CONFLICTS+=	teTeX-texmf<=3.0nb13
 CONFLICTS+=	tex-cm<2009
 CONFLICTS+=	tex-latex-fonts<2009
-CONFLICTS+=	tex-misc<2009
 
 TEX_MAP_FILES+=		euler.map
 TEX_MIXEDMAP_FILES+=	cm.map
