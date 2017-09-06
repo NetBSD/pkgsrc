@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/03/19 16:34:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/09/06 14:14:31 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Guardfile
@@ -21,6 +21,7 @@ ${GEM_LIBDIR}/ext/fsevent_watch/main.c
 ${GEM_LIBDIR}/ext/fsevent_watch/signal_handlers.c
 ${GEM_LIBDIR}/ext/fsevent_watch/signal_handlers.h
 ${GEM_LIBDIR}/ext/rakefile.rb
+${GEM_LIBDIR}/lib/otnetstring.rb
 ${GEM_LIBDIR}/lib/rb-fsevent.rb
 ${GEM_LIBDIR}/lib/rb-fsevent/fsevent.rb
 ${GEM_LIBDIR}/lib/rb-fsevent/version.rb
