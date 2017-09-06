@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2017/09/03 08:36:50 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/09/06 09:03:00 wiz Exp $
 
 DISTNAME=		fisg-0.3.12
 CATEGORIES=		chat textproc
-MASTER_SITES=		http://www.tnsp.org/files/
+MASTER_SITES=		https://www.tnsp.org/files/
 
 MAINTAINER=		snj@NetBSD.org
 #HOMEPAGE=		https://www.tnsp.org/fisg.php

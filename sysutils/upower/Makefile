@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2017/08/22 12:10:42 jmcneill Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/06 09:03:04 wiz Exp $
 
 DISTNAME=	upower-0.99.4
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://upower.freedesktop.org/releases/
+MASTER_SITES=	https://upower.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

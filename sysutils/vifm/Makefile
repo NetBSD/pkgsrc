@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2017/02/13 00:11:35 maya Exp $
+# $NetBSD: Makefile,v 1.29 2017/09/06 09:03:04 wiz Exp $
 #
 
 DISTNAME=	vifm-0.8.2
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vifm/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://vifm.info/
+HOMEPAGE=	https://vifm.info/
 COMMENT=	Curses based file manager with vi like keybindings
 LICENSE=	gnu-gpl-v2
 

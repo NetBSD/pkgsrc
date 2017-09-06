@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.121 2017/08/16 07:33:39 wiz Exp $
+# $NetBSD: Makefile.common,v 1.122 2017/09/06 09:03:06 wiz Exp $
 #
 # used by x11/xscreensaver/Makefile
 # used by x11/xscreensaver-demo/Makefile
@@ -12,7 +12,7 @@ MASTER_SITES=		https://www.jwz.org/xscreensaver/
 DIST_SUBDIR=		xscreensaver
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.jwz.org/xscreensaver/
+HOMEPAGE=		https://www.jwz.org/xscreensaver/
 
 BUILDLINK_API_DEPENDS.Xrandr+=	Xrandr>=1.0.2
 

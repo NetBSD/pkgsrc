@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2017/07/10 17:43:25 schmonz Exp $
+# $NetBSD: Makefile,v 1.37 2017/09/06 09:03:05 wiz Exp $
 
 .include "../../textproc/xapian/Makefile.common"
 
 DISTNAME=		xapian-omega-${VERSION}
 
-HOMEPAGE=		http://xapian.org/docs/omega/overview.html
+HOMEPAGE=		https://xapian.org/docs/omega/overview.html
 COMMENT=		Search engine application for websites using Xapian
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

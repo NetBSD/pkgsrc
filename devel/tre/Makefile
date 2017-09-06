@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2012/10/31 11:19:51 asau Exp $
+# $NetBSD: Makefile,v 1.18 2017/09/06 09:03:01 wiz Exp $
 
 DISTNAME=	tre-0.8.0
 CATEGORIES=	devel
-MASTER_SITES=	http://laurikari.net/tre/
+MASTER_SITES=	https://laurikari.net/tre/
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://laurikari.net/tre/
+HOMEPAGE=	https://laurikari.net/tre/
 COMMENT=	Lightweight and robust POSIX compliant regexp matching library
 LICENSE=	modified-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/19 06:32:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/06 09:03:02 wiz Exp $
 #
 
 TB_VER=		38.8.0
@@ -8,7 +8,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/linux-i686/xpi/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mozillamessaging.com/en-US/thunderbird/
+HOMEPAGE=	https://www.mozillamessaging.com/en-US/thunderbird/
 COMMENT=	Language packs for mail/thunderbird38
 
 DIST_SUBDIR=	${PKGNAME_NOREV}

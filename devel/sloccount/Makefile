@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2017/09/04 11:00:36 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/06 09:03:01 wiz Exp $
 
 
 DISTNAME=	sloccount-2.26
 CATEGORIES=	devel
-MASTER_SITES=	http://www.dwheeler.com/sloccount/
+MASTER_SITES=	https://www.dwheeler.com/sloccount/
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://www.dwheeler.com/sloccount/
+HOMEPAGE=	https://www.dwheeler.com/sloccount/
 COMMENT=	Counting physical Source Lines of Code (SLOC)
 
 LICENSE=	gnu-gpl-v2

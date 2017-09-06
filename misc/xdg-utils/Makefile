@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2017/05/09 18:58:29 leot Exp $
+# $NetBSD: Makefile,v 1.12 2017/09/06 09:03:03 wiz Exp $
 
 DISTNAME=	xdg-utils-1.1.2
 CATEGORIES=	misc
-MASTER_SITES=	http://portland.freedesktop.org/download/
+MASTER_SITES=	https://portland.freedesktop.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://portland.freedesktop.org/
+HOMEPAGE=	https://portland.freedesktop.org/
 COMMENT=	Tools to assist applications with various desktop integration tasks
 LICENSE=	mit
 

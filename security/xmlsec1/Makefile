@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.31 2016/03/05 11:27:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2017/09/06 09:03:04 wiz Exp $
 #
 
 DISTNAME=		xmlsec1-1.2.19
 PKGREVISION=		1
 CATEGORIES=		security
-MASTER_SITES=		http://www.aleksey.com/xmlsec/download/
+MASTER_SITES=		https://www.aleksey.com/xmlsec/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.aleksey.com/xmlsec/
+HOMEPAGE=		https://www.aleksey.com/xmlsec/
 COMMENT=		XML signature and encryption library
 LICENSE=		mit AND mpl-1.1 # plus advertising clause
 

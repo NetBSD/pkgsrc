@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2012/10/23 19:51:35 asau Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/06 09:03:04 wiz Exp $
 #
 
 DISTNAME=		dvb-fe-xc5000-1.6.114.fw
 PKGNAME=		xc5k-firmware-1.6.114
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.linuxtv.org/downloads/firmware/
+MASTER_SITES=		https://www.linuxtv.org/downloads/firmware/
 EXTRACT_SUFX=		# none
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.linuxtv.org/
+HOMEPAGE=		https://www.linuxtv.org/
 COMMENT=		Firmware binary image for Xceive XC5000 tuners
 
 NO_CONFIGURE=		yes
