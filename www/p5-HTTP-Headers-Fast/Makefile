@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/08/29 07:45:39 wen Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/06 13:17:57 wen Exp $
 
 DISTNAME=	HTTP-Headers-Fast-0.21
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-HTTP-Date>0:../../www/p5-HTTP-Date
 BUILD_DEPENDS=	p5-Test-Requires>0:../../devel/p5-Test-Requires
 
-PERL5_MODULE_TYPE=	Module::Build
+PERL5_MODULE_TYPE=	Module::Build::Tiny
 PERL5_PACKLIST=		auto/HTTP/Headers/Fast/.packlist
 
 .include "../../lang/perl5/module.mk"
