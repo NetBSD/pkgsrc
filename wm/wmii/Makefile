@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2017/05/12 11:59:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2017/09/06 11:30:41 wiz Exp $
 
 DISTNAME=		wmii-3.6
 PKGREVISION=		4
@@ -6,7 +6,7 @@ CATEGORIES=		wm
 MASTER_SITES=		http://dl.suckless.org/wmii/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://code.google.com/p/wmii/
+HOMEPAGE=		https://github.com/0intro/wmii
 COMMENT=		Modular and keyboard-friendly window manager
 LICENSE=		mit
 
