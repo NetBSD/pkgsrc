@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.25 2014/05/17 16:10:50 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2017/09/06 10:40:35 wiz Exp $
 #
 
 DISTNAME=	zopeedit-0.7-src
 PKGNAME=	${DISTNAME:S/-src//}
 PKGREVISION=	6
 CATEGORIES=	www
-MASTER_SITES=	http://www.zope.org/Members/Caseman/ExternalEditor/0.7/
+#MASTER_SITES=	http://www.zope.org/Members/Caseman/ExternalEditor/0.7/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.zope.org/Members/Caseman/ExternalEditor
+#HOMEPAGE=	http://www.zope.org/Members/Caseman/ExternalEditor
 COMMENT=	Helper client application for Zope's ExternalEditor
 
 USE_LANGUAGES=	#none

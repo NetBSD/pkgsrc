@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/09/08 21:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2017/09/06 10:40:30 wiz Exp $
 #
 
 DISTNAME=	vid-1.0.1
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://members.home.com/housel/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://members.home.com/housel/projects.htm
+#HOMEPAGE=	http://members.home.com/housel/projects.htm
 COMMENT=	Simple-minded image capture program for some USB webcams
 
 BUILD_TARGET=	vid

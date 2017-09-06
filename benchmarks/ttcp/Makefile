@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/07/04 16:11:53 bsiegert Exp $
+# $NetBSD: Makefile,v 1.24 2017/09/06 10:40:26 wiz Exp $
 
 DISTNAME=	ttcp
 PKGNAME=	${DISTNAME}-1.12
@@ -8,7 +8,7 @@ CATEGORIES=	benchmarks net
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ccci.com/tools/ttcp/
+#HOMEPAGE=	http://www.ccci.com/tools/ttcp/
 COMMENT=	TCP testing and performance measuring tool
 LICENSE=	public-domain
 

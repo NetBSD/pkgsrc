@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2012/10/08 09:57:42 asau Exp $
+# $NetBSD: Makefile,v 1.8 2017/09/06 10:40:31 wiz Exp $
 #
 
 DISTNAME=	xtail-2.1
 CATEGORIES=	misc
-MASTER_SITES=	http://www.unicom.com/sw/xtail/
+#MASTER_SITES=	http://www.unicom.com/sw/xtail/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.unicom.com/sw/xtail/
+#HOMEPAGE=	http://www.unicom.com/sw/xtail/
 COMMENT=	Like "tail -f" on a bunch of files at once
 
 GNU_CONFIGURE=	YES
