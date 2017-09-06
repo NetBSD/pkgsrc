@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/01/30 04:56:44 markd Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/06 16:49:26 wiz Exp $
 
 DISTNAME=	symbol
 PKGNAME=	tex-${DISTNAME}-2014
@@ -7,8 +7,6 @@ TEXLIVE_REV=	31835
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Symbol fonts for TeX
 LICENSE=	lppl-1.3c
-
-CONFLICTS+=	teTeX-texmf<=3.0nb14
 
 TEX_MAP_FILES+=	usy.map
 

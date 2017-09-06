@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/01/30 03:26:10 markd Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/06 16:49:31 wiz Exp $
 
 DISTNAME=	changebar
 PKGNAME=	tex-${DISTNAME}-3.5c
@@ -8,7 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Generate changebars in LaTeX documents
 LICENSE=	lppl-1.3c
 
-CONFLICTS+=	teTeX-texmf<=3.0nb28
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-latex-bin>=2010:../../print/tex-latex-bin
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor

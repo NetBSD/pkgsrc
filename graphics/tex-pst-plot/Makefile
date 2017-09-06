@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/06/21 11:45:59 markd Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/06 16:49:27 wiz Exp $
 
 DISTNAME=	pst-plot
 PKGNAME=	tex-${DISTNAME}-1.79
@@ -9,7 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/pst-plot
 COMMENT=	Plot data using PSTricks
 LICENSE=	lppl-1.3c
 
-CONFLICTS=	teTeX-texmf<=3.0nb29
 DEPENDS+=	tex-multido-[0-9]*:../../devel/tex-multido
 DEPENDS+=	tex-pstricks-[0-9]*:../../graphics/tex-pstricks
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval

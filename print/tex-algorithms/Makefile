@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/06/16 04:05:59 markd Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/06 16:49:30 wiz Exp $
 
 DISTNAME=	algorithms
 PKGNAME=	tex-${DISTNAME}-0.1
@@ -8,7 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Suite of tools for typesetting algorithms in pseudo-code
 LICENSE=	gnu-lgpl-v2
 
-CONFLICTS+=	teTeX-texmf<=3.0nb19
 DEPENDS+=	tex-float-[0-9]*:../../print/tex-float
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex

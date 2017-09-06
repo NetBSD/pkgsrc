@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/08/17 01:33:44 markd Exp $
+# $NetBSD: Makefile,v 1.10 2017/09/06 16:49:27 wiz Exp $
 
 DISTNAME=	pstricks.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.74
@@ -8,8 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/pstricks-base
 COMMENT=	Documentation for tex-pstricks
 LICENSE=	lppl-1.3c
-
-CONFLICTS=	teTeX-texmf<=3.0nb29
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

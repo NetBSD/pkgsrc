@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/06/16 03:57:30 markd Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/06 16:49:25 wiz Exp $
 
 DISTNAME=	mflogo
 # should be 
@@ -10,8 +10,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/mflogo
 COMMENT=	LaTeX support for MetaFont logo fonts
 LICENSE=	lppl-1.3c
-
-CONFLICTS+=	teTeX-texmf<=3.0nb15
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
