@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2016/08/18 11:07:16 mef Exp $
+# $NetBSD: Makefile,v 1.15 2017/09/06 09:03:05 wiz Exp $
 #
 
 DISTNAME=		xdaliclock-2.43
 CATEGORIES=		x11 time
-MASTER_SITES=		http://www.jwz.org/xdaliclock/
+MASTER_SITES=		https://www.jwz.org/xdaliclock/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.jwz.org/xdaliclock/
+HOMEPAGE=		https://www.jwz.org/xdaliclock/
 COMMENT=		Animated digital clock
 LICENSE=		mit
 

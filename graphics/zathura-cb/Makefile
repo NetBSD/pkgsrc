@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2017/05/29 11:09:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2017/09/06 09:03:01 wiz Exp $
 #
 
 DISTNAME=	zathura-cb-0.1.6
 PKGREVISION=	3
 CATEGORIES=	graphics
-MASTER_SITES=	http://pwmt.org/projects/zathura-cb/download/
+MASTER_SITES=	https://pwmt.org/projects/zathura-cb/download/
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://pwmt.org/projects/zathura-cb/
+HOMEPAGE=	https://pwmt.org/projects/zathura-cb/
 COMMENT=	Adds comic book support to zathura
 LICENSE=	zlib
 
