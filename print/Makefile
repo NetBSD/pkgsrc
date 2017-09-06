@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.689 2017/09/06 11:58:32 markd Exp $
+# $NetBSD: Makefile,v 1.690 2017/09/06 12:11:44 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -431,13 +431,10 @@ SUBDIR+=	tex-context-fancybreak
 SUBDIR+=	tex-context-fancybreak-doc
 SUBDIR+=	tex-context-filter
 SUBDIR+=	tex-context-filter-doc
-SUBDIR+=	tex-context-fixme
 SUBDIR+=	tex-context-french
 SUBDIR+=	tex-context-french-doc
 SUBDIR+=	tex-context-fullpage
 SUBDIR+=	tex-context-fullpage-doc
-SUBDIR+=	tex-context-games
-SUBDIR+=	tex-context-games-doc
 SUBDIR+=	tex-context-gantt
 SUBDIR+=	tex-context-gantt-doc
 SUBDIR+=	tex-context-gnuplot
@@ -446,8 +443,6 @@ SUBDIR+=	tex-context-letter
 SUBDIR+=	tex-context-letter-doc
 SUBDIR+=	tex-context-lettrine
 SUBDIR+=	tex-context-lettrine-doc
-SUBDIR+=	tex-context-lilypond
-SUBDIR+=	tex-context-lilypond-doc
 SUBDIR+=	tex-context-mathsets
 SUBDIR+=	tex-context-mathsets-doc
 SUBDIR+=	tex-context-notes-zh-cn-doc
