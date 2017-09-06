@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/08/24 20:03:26 adam Exp $
+# $NetBSD: Makefile,v 1.30 2017/09/06 10:40:30 wiz Exp $
 
 DISTNAME=		uhd-3.9.4
 PKGREVISION=		7
@@ -8,7 +8,7 @@ MASTER_SITES=           ${MASTER_SITE_GITHUB:=EttusResearch/}
 GITHUB_TAG=		release_${PKGVERSION_NOREV:C/([0-9])\.([0-9])\.([0-9])/00\1_00\2_00\3/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://code.ettus.com/redmine/ettus/projects/uhd/wiki
+#HOMEPAGE=		http://code.ettus.com/redmine/ettus/projects/uhd/wiki
 COMMENT=		USRP (Universal Software Radio Peripheral) Hardware Drivers
 LICENSE=		gnu-gpl-v2
 

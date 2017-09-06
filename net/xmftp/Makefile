@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.21 2015/07/04 16:18:39 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2017/09/06 10:40:32 wiz Exp $
 #
 
 DISTNAME=	xmftp-1.0.4
 PKGREVISION=	4
 CATEGORIES=	net
-MASTER_SITES=	http://viraj.org/old/xmftp/
+#MASTER_SITES=	http://viraj.org/old/xmftp/
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://viraj.org/old/xmftp/
+#HOMEPAGE=	http://viraj.org/old/xmftp/
 COMMENT=	X/Motif FTP client
 
 WRKSRC=		${WRKDIR}/xmftp/source

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2013/02/16 11:24:37 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2017/09/06 10:40:33 wiz Exp $
 
 DISTNAME=	xnc-5.0.4.src
 PKGNAME=	xnc-5.0.4
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils x11
 MASTER_SITES=	http://www.xnc.dubna.su/src-5/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xnc.dubna.su/
+#HOMEPAGE=	http://xnc.dubna.su/
 COMMENT=	File manager for X Window
 LICENSE=	gnu-gpl-v2
 

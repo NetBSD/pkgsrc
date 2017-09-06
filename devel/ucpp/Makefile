@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2015/09/30 16:39:45 richard Exp $
-#
+# $NetBSD: Makefile,v 1.9 2017/09/06 10:40:26 wiz Exp $
 
 DISTNAME=	ucpp-1.3.2
 CATEGORIES=	devel
-MASTER_SITES=	http://ucpp.googlecode.com/files/
+#MASTER_SITES=	http://ucpp.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/ucpp/
+HOMEPAGE=	https://github.com/lpsantil/ucpp
 COMMENT=	C preprocessor and lexer
 LICENSE=	modified-bsd
 

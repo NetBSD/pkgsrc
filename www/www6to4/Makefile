@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/28 06:31:09 asau Exp $
+# $NetBSD: Makefile,v 1.15 2017/09/06 10:40:35 wiz Exp $
 #
 
 DISTNAME=	www6to4-1.6
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.pasta.cs.uit.no/pub/Vermicelli/
 
 MAINTAINER=	feico@pasta.cs.uit.no
-HOMEPAGE=	http://www.vermicelli.pasta.cs.uit.no/ipv6/software.html
+#HOMEPAGE=	http://www.vermicelli.pasta.cs.uit.no/ipv6/software.html
 COMMENT=	Lightweight http proxy, helps IPv4 only browsers
 
 USE_FEATURES+=		inet6

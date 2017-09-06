@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/04 09:19:21 asau Exp $
+# $NetBSD: Makefile,v 1.8 2017/09/06 10:40:29 wiz Exp $
 #
 
 DISTNAME=		CIA_WDB2.jpd
@@ -9,7 +9,7 @@ MASTER_SITES=		http://frmas.free.fr/files/
 EXTRACT_SUFX=		.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://frmas.free.fr/li_1.htm
+#HOMEPAGE=		http://frmas.free.fr/li_1.htm
 COMMENT=		Vector data for xrmap
 
 DEPENDS+=		xrmap-base>=2.29:../../geography/xrmap-base

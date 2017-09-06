@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2012/10/23 10:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/09/06 10:40:34 wiz Exp $
 #
 
 DISTNAME=	xtu-1.3
 CATEGORIES=	time
-MASTER_SITES=	http://coto.marsrakete.de/projects/xtu/
+#MASTER_SITES=	http://coto.marsrakete.de/projects/xtu/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://coto.marsrakete.de/projects/xtu/
+#HOMEPAGE=	http://coto.marsrakete.de/projects/xtu/
 COMMENT=	Small configurable X11 analog clock
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

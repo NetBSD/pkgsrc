@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2015/07/04 16:18:43 joerg Exp $
+# $NetBSD: Makefile,v 1.48 2017/09/06 10:40:35 wiz Exp $
 #
 
 DISTNAME=	xglobe-0.5
@@ -13,7 +13,7 @@ MASTER_SITES=	http://livingearth.com/LE/images/
 DISTFILES+=	${MAPS} ${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cs.unc.edu/~scheuerm/xglobe/
+#HOMEPAGE=	http://www.cs.unc.edu/~scheuerm/xglobe/
 COMMENT=	Displays the earth as seen from space, similar to xearth
 
 DIST_SUBDIR=	xglobe

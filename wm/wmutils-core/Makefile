@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/06/11 23:07:14 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/06 10:40:34 wiz Exp $
 
 DISTNAME=	wmutils-core-1.2
 CATEGORIES=	wm
@@ -7,7 +7,7 @@ GITHUB_PROJECT=	core
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wmutils.io/
+#HOMEPAGE=	http://wmutils.io/
 COMMENT=	Window Manipulation Utilities
 LICENSE=	isc
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/08/24 20:03:19 adam Exp $
+# $NetBSD: Makefile,v 1.24 2017/09/06 10:40:28 wiz Exp $
 
 DISTNAME=	warmux-11.01
 PKGREVISION=	20
@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.gna.org/warmux/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.warmux.org/
+#HOMEPAGE=	http://www.warmux.org/
 COMMENT=	Battle game
 LICENSE=	gnu-gpl-v2
 

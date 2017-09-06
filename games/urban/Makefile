@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/08/17 17:11:23 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2017/09/06 10:40:28 wiz Exp $
 #
 
 DISTNAME=	urban-1.5.3
@@ -8,7 +8,7 @@ MASTER_SITES=	http://urban.bengburken.net/files/linux/
 DISTFILES=	urban-1.5.3${EXTRACT_SUFX} sound${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://urban.bengburken.net/eng/
+#HOMEPAGE=	http://urban.bengburken.net/eng/
 COMMENT=	U.R.B.A.N The Cyborg Project
 
 PTHREAD_AUTO_VARS=	yes

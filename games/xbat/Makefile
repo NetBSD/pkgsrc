@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/09/20 19:18:15 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2017/09/06 10:40:28 wiz Exp $
 
 DISTNAME=	xev111
 PKGNAME=	xbat-1.11
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.nemoto.ecei.tohoku.ac.jp/~wai/Xbat/
 MASTER_SITES+=	${MASTER_SITE_FREEBSD}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nemoto.ecei.tohoku.ac.jp/~wai/index_e.html
+#HOMEPAGE=	http://www.nemoto.ecei.tohoku.ac.jp/~wai/index_e.html
 COMMENT=	XEVIOUS like shooting game
 
 RESTRICTED=	Possible copyright infringement

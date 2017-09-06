@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2015/07/04 16:18:28 joerg Exp $
+# $NetBSD: Makefile,v 1.59 2017/09/06 10:40:26 wiz Exp $
 #
 
 DISTNAME=	WSoundServer-0.4.0
@@ -8,7 +8,7 @@ CATEGORIES=	audio wm windowmaker
 MASTER_SITES=	# ftp://shadowmere.student.utwente.nl/pub/WindowMaker/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://shadowmere.student.utwente.nl/
+#HOMEPAGE=	http://shadowmere.student.utwente.nl/
 COMMENT=	Sound server for windowmaker
 LICENSE=	modified-bsd
 

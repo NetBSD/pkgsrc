@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2016/07/09 13:03:00 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2017/09/06 10:40:33 wiz Exp $
 #
 
 DISTNAME=	xdu-3.0
 PKGREVISION=	8
 CATEGORIES=	sysutils x11
-MASTER_SITES=	http://sd.wareonearth.com/~phil/xdu/
+#MASTER_SITES=	http://sd.wareonearth.com/~phil/xdu/
 EXTRACT_SUFX=	.tar.Z
 
 PATCH_SITES=	http://www.nn.iij4u.or.jp/~tutimura/xdu/
@@ -12,7 +12,7 @@ PATCHFILES+=	xdu-3.0.dirname.patch \
 		xdu-3.0.i18n.patch
 
 MAINTAINER=	hubertf@NetBSD.org
-HOMEPAGE=	http://sd.wareonearth.com/~phil/xdu/
+#HOMEPAGE=	http://sd.wareonearth.com/~phil/xdu/
 COMMENT=	Display the output of "du" in an X window
 
 WRKSRC=		${WRKDIR}

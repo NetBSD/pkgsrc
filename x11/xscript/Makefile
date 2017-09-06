@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/01/19 18:52:30 agc Exp $
+# $NetBSD: Makefile,v 1.19 2017/09/06 10:40:36 wiz Exp $
 #
 
 DISTNAME=	xscript.tar
@@ -10,7 +10,7 @@ MASTER_SITES+=	ftp://ftp.gwdg.de/pub/x11/x.org/R5contrib/
 EXTRACT_SUFX=	.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ee.ryerson.ca/~elf/xapps/Q-XVIII.html
+#HOMEPAGE=	http://www.ee.ryerson.ca/~elf/xapps/Q-XVIII.html
 COMMENT=	X Window system script recording and playback
 
 WRKSRC=		${WRKDIR}/test-distrib/src

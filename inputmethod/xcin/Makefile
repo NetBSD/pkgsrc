@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2016/07/09 06:38:24 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2017/09/06 10:40:30 wiz Exp $
 
 DISTNAME=	xcin-2.5.3.pre2
 PKGNAME=	xcin-2.5.3rc2
@@ -7,7 +7,7 @@ CATEGORIES=	chinese x11
 MASTER_SITES=	ftp://xcin.linux.org.tw/pub/xcin/xcin/devel/
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://xcin.linux.org.tw/
+#HOMEPAGE=	http://xcin.linux.org.tw/
 COMMENT=	Chinese XIM server
 LICENSE=	gnu-gpl-v2
 
