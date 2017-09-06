@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/01/16 23:45:13 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2017/09/06 10:40:30 wiz Exp $
 
 DISTNAME=	vic-2.8ucl1.4.0beta-4337
 PKGNAME=	vic-devel-2.8.1.4.0beta.4337
@@ -17,7 +17,7 @@ PATCHFILES=	vic-2.8ucl1.4.0_ov511.diff.gz
 .endif
 
 MAINTAINER=	sborrill@NetBSD.org
-HOMEPAGE=	http://mediatools.cs.ucl.ac.uk/nets/mmedia/
+#HOMEPAGE=	http://mediatools.cs.ucl.ac.uk/nets/mmedia/
 COMMENT=	MBONE video conferencing tool
 EXTRACT_SUFX=	.tgz
 

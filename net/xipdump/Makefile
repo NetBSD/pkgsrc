@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2015/07/04 16:18:39 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2017/09/06 10:40:32 wiz Exp $
 #
 
 DISTNAME=	xipdump-1.5.4
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.lse.epita.fr/twiki/pub/Projects/XipDump/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.lse.epita.fr/twiki/bin/view/Projects/XipDump
+#HOMEPAGE=	http://www.lse.epita.fr/twiki/bin/view/Projects/XipDump
 COMMENT=	Displays IP packets using X Window System
 
 PLIST_SRC=	${WRKDIR}/PLIST

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/02/12 06:25:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2017/09/06 10:40:30 wiz Exp $
 #
 
 DISTNAME=	viewnior-1.3
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	https://cloud.github.com/downloads/xsisqox/Viewnior/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://xsisqox.github.com/Viewnior/
+#HOMEPAGE=	http://xsisqox.github.com/Viewnior/
 COMMENT=	Viewnior is a fast and simple image viewer
 LICENSE=	gnu-gpl-v3
 

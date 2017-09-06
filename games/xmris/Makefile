@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.18 2012/10/06 11:55:01 asau Exp $
+# $NetBSD: Makefile,v 1.19 2017/09/06 10:40:28 wiz Exp $
 
 DISTNAME=		xmris.4.0.5
 PKGNAME=		xmris-4.05
 PKGREVISION=		3
 CATEGORIES=		games x11
-MASTER_SITES=		http://www.planetfall.pwp.blueyonder.co.uk/xmris/
+#MASTER_SITES=		http://www.planetfall.pwp.blueyonder.co.uk/xmris/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.planetfall.pwp.blueyonder.co.uk/xmris/
+#HOMEPAGE=		http://www.planetfall.pwp.blueyonder.co.uk/xmris/
 COMMENT=		Version of the Mr Do video arcade game for X
 LICENSE=		gnu-gpl-v2
 

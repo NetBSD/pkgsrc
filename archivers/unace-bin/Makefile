@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2012/09/11 19:47:01 asau Exp $
+# $NetBSD: Makefile,v 1.10 2017/09/06 10:40:25 wiz Exp $
 #
 
 DISTNAME=	linunace25
 PKGNAME=	unace-bin-2.50
 CATEGORIES=	archivers
-MASTER_SITES=	http://www.winace.com/files/
+#MASTER_SITES=	http://www.winace.com/files/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.winace.com/
+#HOMEPAGE=	http://www.winace.com/
 COMMENT=	Extract, list and test files in ACE archives (Linux binary)
 LICENSE=		unace-license
 

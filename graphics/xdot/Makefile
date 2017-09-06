@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2017/01/01 14:43:44 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/06 10:40:30 wiz Exp $
 
 DISTNAME=	xdot
 PKGNAME=	xdot-20121124
 CATEGORIES=	graphics
-MASTER_SITES=	http://xdot.jrfonseca.googlecode.com/git/
+#MASTER_SITES=	http://xdot.jrfonseca.googlecode.com/git/
 EXTRACT_SUFX=	.py
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/07/11 13:15:57 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2017/09/06 10:40:27 wiz Exp $
 
 DISTNAME=	x48-0.6.4
 PKGREVISION=	1
@@ -9,7 +9,7 @@ DISTFILES+=	sxrom-e.bz2 gxrom-r.bz2
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://x48.berlios.de/
+#HOMEPAGE=	http://x48.berlios.de/
 COMMENT=	HP48 emulator
 LICENSE=	gnu-gpl-v3
 

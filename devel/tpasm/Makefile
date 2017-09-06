@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/11/15 16:44:56 shattered Exp $
+# $NetBSD: Makefile,v 1.20 2017/09/06 10:40:26 wiz Exp $
 #
 
 DISTNAME=	tpasm1.7
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.ct0.com/pub/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.sqt.com/
+#HOMEPAGE=	http://www.sqt.com/
 COMMENT=	Assembler for 6805, 68HC11, 6502, Surplus, 8051, Z80, PIC, and AVR
 
 USE_LANGUAGES=	c++

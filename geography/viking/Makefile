@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2017/08/24 20:03:20 adam Exp $
+# $NetBSD: Makefile,v 1.80 2017/09/06 10:40:29 wiz Exp $
 #
 
 VERSION=		1.6.2
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=viking/}${VERSION}/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		gdt@NetBSD.org
-HOMEPAGE=		http://viking.sourceforge.net/
+#HOMEPAGE=		http://viking.sourceforge.net/
 COMMENT=		Viking manages GPS data, supports OpenStreetMap and geocaching
 
 LICENSE=		gnu-gpl-v2

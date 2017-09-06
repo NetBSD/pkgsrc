@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/29 05:07:12 asau Exp $
+# $NetBSD: Makefile,v 1.15 2017/09/06 10:40:35 wiz Exp $
 #
 
 DISTNAME=	xhangglider-0.94.0
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://www.netfort.gr.jp/~take/linux/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.netfort.gr.jp/~take/linux/xhang-en.html
+#HOMEPAGE=	http://www.netfort.gr.jp/~take/linux/xhang-en.html
 COMMENT=	Hanggliders fly in the background of the X screen
 LICENSE=	gnu-gpl-v2
 
