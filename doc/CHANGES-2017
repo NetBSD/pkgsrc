@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3622 2017/09/06 10:18:00 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3623 2017/09/06 10:37:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5089,3 +5089,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-contextlib2 version 0.5.5 [minskim 2017-09-05]
 	Added net/ruby-pcaprub version 0.12.4 [minskim 2017-09-05]
 	Updated devel/apache-maven to 3.5.0 [fhajny 2017-09-06]
+	Removed devel/tmin successor devel/afl [wiz 2017-09-06]
