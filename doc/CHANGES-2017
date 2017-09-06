@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3633 2017/09/06 14:01:17 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.3634 2017/09/06 14:15:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5123,3 +5123,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed net/p5-grake [ryoon 2017-09-06]
 	Removed net/p5-gcap [ryoon 2017-09-06]
 	Removed net/p5-umph [ryoon 2017-09-06]
+	Updated devel/ruby-rb-fsevent to 0.10.2 [taca 2017-09-06]
