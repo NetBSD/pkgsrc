@@ -1,20 +1,20 @@
-$NetBSD: patch-build.xml,v 1.1 2015/10/13 15:03:37 fhajny Exp $
+$NetBSD: patch-build.xml,v 1.2 2017/09/06 11:12:20 fhajny Exp $
 
 Don't look for a specific Ivy version.
 Add Ivy resolver tasks to let us forbid fetch on demand.
 
---- build.xml.orig	2014-02-20 10:14:08.000000000 +0000
+--- build.xml.orig	2017-03-23 10:14:59.000000000 +0000
 +++ build.xml
-@@ -105,7 +105,7 @@ xmlns:maven="antlib:org.apache.maven.art
+@@ -108,7 +108,7 @@ xmlns:cs="antlib:com.puppycrawl.tools.ch
      <property name="contrib.dir" value="${src.dir}/contrib"/>
      <property name="recipes.dir" value="${src.dir}/recipes"/>
  
--    <property name="ivy.version" value="2.2.0"/>
+-    <property name="ivy.version" value="2.4.0"/>
 +    <property name="ivy.version" value="0.0.0"/>
      <property name="ivy.url"
-               value="http://repo2.maven.org/maven2/org/apache/ivy/ivy" />
+               value="https://repo1.maven.org/maven2/org/apache/ivy/ivy" />
      <property name="ivy.home" value="${user.home}/.ant" />
-@@ -360,33 +360,45 @@ xmlns:maven="antlib:org.apache.maven.art
+@@ -364,33 +364,45 @@ xmlns:cs="antlib:com.puppycrawl.tools.ch
      </target>
  
      <target name="ivy-retrieve" depends="init,ivy-init">
