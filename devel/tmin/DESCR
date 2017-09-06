@@ -1,9 +1,0 @@
-Tmin is a simple utility meant to make it easy to narrow down
-complex test cases produced through fuzzing. It is closely related
-to another tool of this type, delta, but meant specifically for
-unknown, underspecified, or hard to parse data formats (without
-the need to tokenize and re-serialize data), and for easy integration
-with external UI automation harnesses.
-
-It also features alphabet normalization to simplify test cases that
-could not be shortened.
