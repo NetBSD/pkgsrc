@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2016/12/01 14:48:02 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2017/09/06 16:49:48 wiz Exp $
 
 DISTNAME=	texi2html-5.0
 PKGREVISION=	6
@@ -12,8 +12,6 @@ COMMENT=	Texinfo-to-HTML direct translator
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-Locale-libintl-[0-9]*:../../misc/p5-Locale-libintl
-
-CONFLICTS=	teTeX-bin-1.*
 
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes

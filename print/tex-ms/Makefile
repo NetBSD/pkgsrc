@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/01/27 10:13:21 markd Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/06 16:49:41 wiz Exp $
 
 DISTNAME=	ms
 PKGNAME=	tex-${DISTNAME}-2014
@@ -8,7 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Various LaTeX packages by Martin Schroeder
 LICENSE=	lppl-1.3c
 
-CONFLICTS+=	teTeX-texmf<=3.0nb17
 DEPENDS+=	tex-footmisc-[0-9]*:../../print/tex-footmisc
 DEPENDS+=	tex-koma-script-[0-9]*:../../print/tex-koma-script
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/01/30 04:56:42 markd Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/06 16:49:24 wiz Exp $
 
 DISTNAME=	helvetic
 PKGNAME=	tex-${DISTNAME}-2014
@@ -7,8 +7,6 @@ TEXLIVE_REV=	31835
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Adobe Helvetica fonts
 LICENSE=	gnu-gpl-v2
-
-CONFLICTS+=	teTeX-texmf<=3.0nb19
 
 TEX_MAP_FILES+=	uhv.map
 

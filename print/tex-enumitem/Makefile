@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/01/27 10:53:21 markd Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/06 16:49:33 wiz Exp $
 
 DISTNAME=	enumitem
 PKGNAME=	tex-${DISTNAME}-3.5.2
@@ -8,7 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Control layout of itemize, enumerate, and description
 LICENSE=	lppl-1.3c
 
-CONFLICTS+=	teTeX-texmf<=3.0nb17
 DEPENDS+=	tex-graphics>=1.0onb1:../../print/tex-graphics
 
 .include "../../print/texlive/package.mk"

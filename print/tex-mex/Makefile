@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/09/20 13:08:17 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/06 16:49:40 wiz Exp $
 
 DISTNAME=	mex
 PKGNAME=	tex-${DISTNAME}-1.05
@@ -14,8 +14,6 @@ DEPENDS+=	tex-hyphen-polish-[0-9]*:../../print/tex-hyphen-polish
 DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 #DEPENDS+=	tex-utf8mex-[0-9]*:../../print/tex-utf8mex
-
-CONFLICTS+=	teTeX-texmf<=3.0nb56
 
 INSTALLATION_DIRS+=	bin
 

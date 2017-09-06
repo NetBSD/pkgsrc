@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/01/27 10:32:34 markd Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/06 16:49:34 wiz Exp $
 
 DISTNAME=	geometry
 PKGNAME=	tex-${DISTNAME}-5.6
@@ -8,7 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Flexible and complete interface to document dimensions
 LICENSE=	lppl-1.3c
 
-CONFLICTS+=	teTeX-texmf<=3.0nb18
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 
