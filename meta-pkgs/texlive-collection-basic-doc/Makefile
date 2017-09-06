@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/05/06 10:15:58 markd Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/06 12:32:35 markd Exp $
 
 DISTNAME=	collection-basic-doc
 PKGNAME=	texlive-${DISTNAME}-2013
@@ -32,7 +32,6 @@ DEPENDS+=	tex-makeindex-doc-[0-9]*:../../textproc/tex-makeindex-doc
 # tex-metafont's documentation is installed by web2c.
 DEPENDS+=	tex-mflogo-doc-[0-9]*:../../fonts/tex-mflogo-doc
 # tex-mfware's documentation is installed by web2c.
-# tex-misc doesn't have a documentation package.
 DEPENDS+=	tex-pdftex-doc-[0-9]*:../../print/tex-pdftex-doc
 # tex-plain doesn't have a documentation package.
 DEPENDS+=	tex-tetex-doc-[0-9]*:../../print/tex-tetex-doc
