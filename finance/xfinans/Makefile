@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 16:10:14 asau Exp $
+# $NetBSD: Makefile,v 1.21 2017/09/06 10:40:27 wiz Exp $
 #
 
 DISTNAME=		xfinans-5.9
@@ -7,7 +7,7 @@ CATEGORIES=		finance x11
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=apps/financial/accounting/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.io.com/~acroyear/xfinans/
+#HOMEPAGE=		http://www.io.com/~acroyear/xfinans/
 COMMENT=		Xfinans is a useful financial tracking, and account balancing tool
 
 DEPENDS+=		gnuplot>=3.7:../../graphics/gnuplot

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/07/04 16:18:34 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2017/09/06 10:40:28 wiz Exp $
 
 DISTNAME=	xmbdfed-4.5
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	fonts graphics x11
 MASTER_SITES=	# ftp://crl.nmsu.edu/CLR/multiling/General/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://crl.nmsu.edu/~mleisher/xmbdfed.html
+#HOMEPAGE=	http://crl.nmsu.edu/~mleisher/xmbdfed.html
 COMMENT=	Motif-based BDF font editor with lots of features
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

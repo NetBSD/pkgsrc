@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/29 05:06:56 asau Exp $
+# $NetBSD: Makefile,v 1.12 2017/09/06 10:40:35 wiz Exp $
 
 DISTNAME=		wxHTML22
 PKGNAME=		wxWindows-docs-2.2
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://wesley.informatik.uni-freiburg.de/pub/linux/wxxt/docs/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.freiburg.linux.de/~wxxt/docs.html
+#HOMEPAGE=		http://www.freiburg.linux.de/~wxxt/docs.html
 COMMENT=		HTML documentation for wxWindows
 
 WRKSRC=			${WRKDIR}/wxHTML
