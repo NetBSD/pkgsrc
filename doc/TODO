@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17681 2017/09/06 13:54:01 wiz Exp $
+$NetBSD: TODO,v 1.17682 2017/09/06 14:45:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -419,7 +419,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o apache-tomcat7-7.0.81
 	o apollo-1.7
 	o apr0-2.4.1
-	o ardour-5.9
+	o ardour-5.11
 	o argtable-2.9
 	o argus-20121202
 	o aribas-1.64
@@ -514,6 +514,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o compiz-0.8.10
 	o cone-0.92
 	o cook-2.31
+	o coreutils-8.28
 	o courier-0.77.0
 	o courier-authlib-0.66.2
 	o courier-imap-4.16.1
@@ -1062,7 +1063,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.5
 	o monit-5.17
-	o mono-5.0
+	o mono-5.2
 	o mono-tools-4.2
 	o mono-xsp-4.2
 	o mono2-4.0.4.1
@@ -1263,6 +1264,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o psmisc-22.20
 	o pspp-0.10.1
 	o ptlib-2.16.2
+	o pulseaudio-11.0
 	o pure-ftpd-1.0.40
 	o putty-0.70
 	o pvs-5.0
@@ -1552,7 +1554,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o whowatch-1.8.5
 	o windowlab-1.40
 	o wine-2.0.2
-	o wine-devel-2.14
+	o wine-devel-2.16
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wmx-8
@@ -1574,6 +1576,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.2.2
 	o xf86-video-sisusb-0.9.4
+	o xfce4-panel-4.13.1
 	o xfce4-settings-4.13.1
 	o xfig-3.2.5c
 	o xforms-1.2.4
