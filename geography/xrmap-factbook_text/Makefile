@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/02/26 14:05:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2017/09/06 10:40:29 wiz Exp $
 #
 
 DISTNAME=		factbook_text_2006
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.ac-grenoble.fr/ge/geosciences/xrmap/data/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://frmas.free.fr/li_1.htm
+#HOMEPAGE=		http://frmas.free.fr/li_1.htm
 COMMENT=		CIA factbook for xrmap
 
 DEPENDS+=		xrmap-base>=2.29:../../geography/xrmap-base
