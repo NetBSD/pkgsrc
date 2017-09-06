@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2016/05/17 10:32:07 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/06 11:12:19 fhajny Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=		1
 COMMENT=		Highly reliable distributed coordination server
 
 DISTFILES=			${DEFAULT_DISTFILES} ${DISTNAME}-deps.tar.gz
