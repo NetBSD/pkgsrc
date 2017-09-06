@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2017/01/19 18:52:21 agc Exp $
+# $NetBSD: Makefile,v 1.43 2017/09/06 10:40:31 wiz Exp $
 
 DISTNAME=	wu-ftpd-2.6.2
 PKGREVISION=	3
@@ -12,7 +12,7 @@ PATCHFILES=	realpath.patch connect-dos.patch
 #PATCH_SITES=	ftp://ftp.sunet.se/pub/nir/ftp/servers/wuarchive-ftpd/wu-ftpd/patches/apply_to_2.6.2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.wu-ftpd.org/
+#HOMEPAGE=	http://www.wu-ftpd.org/
 COMMENT=	Replacement ftp server for Un*x systems
 
 CONFLICTS=	wu-ftpd-vr-[0-9]*

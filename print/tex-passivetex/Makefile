@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/03/17 18:06:49 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/06 10:40:32 wiz Exp $
 
 DISTNAME=	passivetex
 PKGNAME=	tex-${DISTNAME}-1.25
@@ -6,7 +6,7 @@ PKGREVISION=	2
 TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.tei-c.org.uk/Software/passivetex/
+#HOMEPAGE=	http://www.tei-c.org.uk/Software/passivetex/
 COMMENT=	Support package for XML/SGML typesetting
 
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts

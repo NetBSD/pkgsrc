@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/04 09:19:21 asau Exp $
+# $NetBSD: Makefile,v 1.13 2017/09/06 10:40:29 wiz Exp $
 #
 
 DISTNAME=		xrmap-2.29
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.ac-grenoble.fr/ge/geosciences/xrmap/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://frmas.free.fr/li_1.htm
+#HOMEPAGE=		http://frmas.free.fr/li_1.htm
 COMMENT=		Earth map viewer - base program
 
 MAKE_JOBS_SAFE=		no
