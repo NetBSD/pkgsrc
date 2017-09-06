@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2014/12/09 11:52:03 fhajny Exp $
+# $NetBSD: Makefile,v 1.12 2017/09/06 10:17:50 fhajny Exp $
 #
 
-DISTNAME=	apache-maven-3.2.3
+DISTNAME=	apache-maven-3.5.0
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=maven/maven-3/${PKGVERSION_NOREV}/binaries/}
 DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
@@ -12,7 +12,7 @@ COMMENT=	Apache Project's software project management and comprehension tool
 LICENSE=	apache-2.0
 
 USE_JAVA=	run
-USE_JAVA2=	1.5
+USE_JAVA2=	7
 USE_TOOLS+=	pax
 NO_BUILD=	yes
 

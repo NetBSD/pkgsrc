@@ -1,46 +1,56 @@
-$NetBSD: patch-bin_mvn,v 1.5 2017/06/20 11:52:08 jperkin Exp $
+$NetBSD: patch-bin_mvn,v 1.6 2017/09/06 10:17:51 fhajny Exp $
 
-Darwin's java_home needs to be evaluated not set.
+Reconcile JAVA_HOME evaluated at run time on Darwin vs. hardcoded
+via PKG_JAVA_HOME elsewhere.
 Follow pkgsrc path convention.
 
---- bin/mvn.orig	2014-08-11 20:59:27.000000000 +0000
+--- bin/mvn.orig	2017-04-03 19:36:16.000000000 +0000
 +++ bin/mvn
-@@ -83,7 +83,7 @@ case "`uname`" in
-              #
-              # Apple JDKs
-              #
--             export JAVA_HOME=/usr/libexec/java_home
-+             export JAVA_HOME=`/usr/libexec/java_home 2>/dev/null`
-            fi
-            ;;
+@@ -45,6 +45,7 @@ mingw=false;
+ case "`uname`" in
+   CYGWIN*) cygwin=true;;
+   MINGW*) mingw=true;;
++  Darwin) darwin=true;;
  esac
-@@ -94,6 +94,15 @@ if [ -z "$JAVA_HOME" ] ; then
-   fi
+ 
+ ## resolve links - $0 may be a link to Maven's home
+@@ -89,12 +90,17 @@ if $mingw ; then
+   # TODO classpath?
  fi
  
-+if [ "$JAVA_HOME" = "" ] ; then
-+  JAVA_HOME=@PKG_JAVA_HOME@
++if $darwin ; then
++  [ -n "$JAVA_HOME" ] &&
++  JAVA_HOME="`/usr/libexec/java_home 2>/dev/null`"
 +fi
 +
-+if [ "$M2_HOME" = "" ] ; then
-+  # try to find maven
-+  M2_HOME=@PREFIX@
-+fi
-+
- if [ -z "$M2_HOME" ] ; then
-   ## resolve links - $0 may be a link to maven's home
-   PRG="$0"
-@@ -196,7 +205,9 @@ export MAVEN_CMD_LINE_ARGS
+ if [ -z "$JAVA_HOME" ] ; then
+-  JAVACMD=`which java`
+-else
+-  JAVACMD="$JAVA_HOME/bin/java"
++  JAVA_HOME="@PKG_JAVA_HOME@"
+ fi
  
- exec "$JAVACMD" \
++JAVACMD="$JAVA_HOME/bin/java"
++
+ if [ ! -x "$JAVACMD" ] ; then
+   echo "The JAVA_HOME environment variable is not defined correctly" >&2
+   echo "This environment variable is needed to run this program" >&2
+@@ -102,7 +108,7 @@ if [ ! -x "$JAVACMD" ] ; then
+   exit 1
+ fi
+ 
+-CLASSWORLDS_JAR=`echo "${MAVEN_HOME}"/boot/plexus-classworlds-*.jar`
++CLASSWORLDS_JAR=`echo "${MAVEN_HOME}"/lib/java/maven/boot/plexus-classworlds-*.jar`
+ CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher
+ 
+ # For Cygwin, switch paths to Windows format before running java
+@@ -190,6 +196,8 @@ exec "$JAVACMD" \
    $MAVEN_OPTS \
--  -classpath "${M2_HOME}"/boot/plexus-classworlds-*.jar \
--  "-Dclassworlds.conf=${M2_HOME}/bin/m2.conf" \
-+  -classpath "${M2_HOME}"/lib/java/maven/boot/plexus-classworlds-*.jar \
+   $MAVEN_DEBUG_OPTS \
+   -classpath "${CLASSWORLDS_JAR}" \
+-  "-Dclassworlds.conf=${MAVEN_HOME}/bin/m2.conf" \
 +  "-Dclassworlds.conf=@PKG_SYSCONFDIR@/m2.conf" \
-   "-Dmaven.home=${M2_HOME}"  \
--  ${CLASSWORLDS_LAUNCHER} "$@"
-\ No newline at end of file
+   "-Dmaven.home=${MAVEN_HOME}" "-Dmaven.multiModuleProjectDirectory=${MAVEN_PROJECTBASEDIR}" \
 +  "-Dorg.apache.maven.global-settings=@PKG_SYSCONFDIR@/settings.xml" \
 +  "-Dorg.apache.maven.global-plugin-registry=@PKG_SYSCONFDIR@/plugin-registry.xml" \
-+  ${CLASSWORLDS_LAUNCHER} "$@"
+   ${CLASSWORLDS_LAUNCHER} "$@"
