@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.688 2017/09/06 11:52:41 markd Exp $
+# $NetBSD: Makefile,v 1.689 2017/09/06 11:58:32 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -238,7 +238,6 @@ SUBDIR+=	tex-arsclassica-doc
 SUBDIR+=	tex-ascii-chart-doc
 SUBDIR+=	tex-babel
 SUBDIR+=	tex-babel-albanian
-SUBDIR+=	tex-babel-bahasa
 SUBDIR+=	tex-babel-basque
 SUBDIR+=	tex-babel-bosnian
 SUBDIR+=	tex-babel-breton
