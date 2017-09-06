@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/01/19 20:23:34 riastradh Exp $
+# $NetBSD: Makefile,v 1.22 2017/09/06 10:40:27 wiz Exp $
 
 DISTNAME=		xquote-2.6.10
 PKGREVISION=		4
@@ -6,7 +6,7 @@ CATEGORIES=		finance x11
 MASTER_SITES=		http://xinvest.sunsite.dk/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://xinvest.sunsite.dk/xquote.html
+#HOMEPAGE=		http://xinvest.sunsite.dk/xquote.html
 COMMENT=		WWW ticker symbol quote retrieval program
 
 USE_IMAKE=		YES
