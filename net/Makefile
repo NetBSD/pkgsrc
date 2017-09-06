@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1175 2017/09/05 18:31:35 minskim Exp $
+# $NetBSD: Makefile,v 1.1176 2017/09/06 13:59:42 ryoon Exp $
 #
 
 COMMENT=	Networking tools
@@ -563,9 +563,6 @@ SUBDIR+=	p5-X500-DN
 SUBDIR+=	p5-XML-RPC
 SUBDIR+=	p5-XMLRPC-Lite
 SUBDIR+=	p5-Zabbix-Sender
-SUBDIR+=	p5-gcap
-SUBDIR+=	p5-grake
-SUBDIR+=	p5-umph
 SUBDIR+=	packit
 SUBDIR+=	paris-traceroute
 SUBDIR+=	parpd
