@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3628 2017/09/06 12:38:58 markd Exp $
+$NetBSD: CHANGES-2017,v 1.3629 2017/09/06 12:56:20 markd Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5111,3 +5111,9 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed print/tex-japanese-doc [markd 2017-09-06]
 	Removed print/tex-misc [markd 2017-09-06]
 	Removed print/tex-thailatex [markd 2017-09-06]
+	Removed fonts/tex-kotex-base [markd 2017-09-06]
+	Removed fonts/tex-kotex-base-doc [markd 2017-09-06]
+	Removed print/tex-kotex [markd 2017-09-06]
+	Removed print/tex-kotex-doc [markd 2017-09-06]
+	Removed print/tex-kotex-dev [markd 2017-09-06]
+	Removed print/tex-kotex-dev-doc [markd 2017-09-06]
