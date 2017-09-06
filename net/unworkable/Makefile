@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/09/18 23:50:23 wiedi Exp $
+# $NetBSD: Makefile,v 1.16 2017/09/06 11:30:41 wiz Exp $
 
 DISTNAME=	unworkable-0.53
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://unworkable.googlecode.com/files/
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/unworkable/
+HOMEPAGE=	https://github.com/niallo/Unworkable
 COMMENT=	BSD-licensed command-line torrent client
 LICENSE=	isc
 
