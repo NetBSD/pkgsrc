@@ -1,8 +1,21 @@
-$NetBSD: patch-ad,v 1.2 2004/03/02 16:05:01 adam Exp $
+$NetBSD: patch-callback_trampoline__r_trampoline.c,v 1.1 2017/09/06 08:21:00 he Exp $
+
+Add NetBSD bits for powerpc ("rs6000").
+Avoid multiple definition due to cache-rs6000 also being compiled separately.
 
 --- callback/trampoline_r/trampoline.c.orig	2004-01-26 15:00:05.000000000 +0000
 +++ callback/trampoline_r/trampoline.c
-@@ -283,7 +283,7 @@ extern void __TR_clear_cache();
+@@ -219,7 +219,9 @@ extern inline
+ #include "cache-hppa.c"
+ #endif
+ #ifdef __rs6000__
++#ifndef __NetBSD__
+ #include "cache-rs6000.c"
++#endif /* __NetBSD__ -- compiled separately from .s file, leads to multiple definition error */
+ #endif
+ #ifdef __convex__
+ #include "cache-convex.c"
+@@ -283,7 +285,7 @@ extern void __TR_clear_cache();
  #define TRAMP_LENGTH 32
  #define TRAMP_ALIGN 4
  #endif
@@ -11,7 +24,7 @@ $NetBSD: patch-ad,v 1.2 2004/03/02 16:05:01 adam Exp $
  #define TRAMP_LENGTH 24
  #define TRAMP_ALIGN 4
  #endif
-@@ -878,6 +878,39 @@ __TR_function alloc_trampoline_r (addres
+@@ -878,6 +880,39 @@ __TR_function alloc_trampoline_r (addres
  #define tramp_data(function)  \
    hilo(*(unsigned short *) (function + 2), *(unsigned short *) (function + 6))
  #endif
