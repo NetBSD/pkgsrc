@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.175 2017/08/31 10:18:12 wiz Exp $
+# $NetBSD: Makefile,v 1.176 2017/09/06 13:41:26 wiz Exp $
 
-DISTNAME=	gnutls-3.5.15
+DISTNAME=	gnutls-3.6.0
 CATEGORIES=	security devel
-MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.5/
+MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.6/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -37,7 +37,6 @@ TEST_TARGET=		check
 
 INFO_FILES=		yes
 
-REPLACE_BASH+=		tests/cert-tests/openpgp-certs
 REPLACE_BASH+=		tests/danetool.sh
 REPLACE_BASH+=		tests/ocsp-tests/ocsp-must-staple-connection
 REPLACE_BASH+=		tests/ocsp-tests/ocsp-tls-connection

@@ -1,0 +1,16 @@
+$NetBSD: patch-tests_suite_Makefile.in,v 1.1 2017/09/06 13:41:26 wiz Exp $
+
+Use autoconf variable for libdl.
+https://gitlab.com/gnutls/gnutls/issues/270
+
+--- tests/suite/Makefile.in.orig	2017-09-06 12:15:07.888159011 +0000
++++ tests/suite/Makefile.in
+@@ -1710,7 +1710,7 @@ TESTS_ENVIRONMENT = EXEEXT=$(EXEEXT) LC_
+ 	$(am__append_2) $(am__append_3)
+ @MACOSX_FALSE@@WINDOWS_FALSE@noinst_LTLIBRARIES = libecore.la
+ @MACOSX_FALSE@@WINDOWS_FALSE@mini_record_timing_LDADD = -lrt $(LDADD)
+-@MACOSX_FALSE@@WINDOWS_FALSE@eagain_cli_LDADD = libecore.la -lrt -lm -ldl -lpthread $(LDADD)
++@MACOSX_FALSE@@WINDOWS_FALSE@eagain_cli_LDADD = libecore.la -lrt -lm $(LIBDL) -lpthread $(LDADD)
+ @MACOSX_FALSE@@WINDOWS_FALSE@nodist_eagain_cli_SOURCES = mini-eagain2.c
+ prime_check_CPPFLAGS = $(AM_CPPFLAGS) $(NETTLE_CFLAGS)
+ TEST_EXTENSIONS = .sh
