@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/05/06 10:16:50 markd Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/06 12:21:29 markd Exp $
 
 DISTNAME=	collection-fontsrecommended-doc
 PKGNAME=	texlive-${DISTNAME}-2010
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	19478
@@ -20,8 +21,6 @@ DEPENDS+=	tex-cm-super-doc-[0-9]*:../../fonts/tex-cm-super-doc
 # tex-courier doesn't have a documentation package.
 DEPENDS+=	tex-euro-doc-[0-9]*:../../finance/tex-euro-doc
 DEPENDS+=	tex-euro-ce-doc-[0-9]*:../../fonts/tex-euro-ce-doc
-DEPENDS+=	tex-eurofont-doc-[0-9]*:../../fonts/tex-eurofont-doc
-DEPENDS+=	tex-eurosans-doc-[0-9]*:../../fonts/tex-eurosans-doc
 DEPENDS+=	tex-eurosym-doc-[0-9]*:../../fonts/tex-eurosym-doc
 DEPENDS+=	tex-fpl-doc-[0-9]*:../../fonts/tex-fpl-doc
 # tex-helvetic doesn't have a documentation package.
