@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/03/04 13:40:34 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/09/06 11:12:19 fhajny Exp $
 bin/zkCli.sh
 libexec/zkEnv.sh
 sbin/zkServer.sh
@@ -45,7 +45,7 @@ share/zookeeper/jline-0.9.94.LICENSE.txt
 share/zookeeper/jline-0.9.94.jar
 share/zookeeper/log4j-1.2.16.LICENSE.txt
 share/zookeeper/log4j-1.2.16.jar
-share/zookeeper/netty-3.7.0.Final.jar
+share/zookeeper/netty-3.10.5.Final.jar
 share/zookeeper/recipes/election/${PKGNAME}-recipes-election.jar
 share/zookeeper/recipes/lock/build.xml
 share/zookeeper/recipes/lock/src/c/INSTALL
