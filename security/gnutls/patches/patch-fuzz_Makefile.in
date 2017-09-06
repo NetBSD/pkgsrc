@@ -1,0 +1,16 @@
+$NetBSD: patch-fuzz_Makefile.in,v 1.1 2017/09/06 13:41:26 wiz Exp $
+
+Use autoconf variable for libdl.
+https://gitlab.com/gnutls/gnutls/issues/270
+
+--- fuzz/Makefile.in.orig	2017-09-06 12:15:06.271496815 +0000
++++ fuzz/Makefile.in
+@@ -1797,7 +1797,7 @@ gnutls_srp_client_fuzzer_SOURCES = gnutl
+ gnutls_srp_server_fuzzer_SOURCES = gnutls_srp_server_fuzzer.c main.c fuzzer.h mem.h srp.h
+ gnutls_set_trust_file_fuzzer_SOURCES = gnutls_set_trust_file_fuzzer.c main.c fuzzer.h
+ gnutls_x509_parser_fuzzer_SOURCES = gnutls_x509_parser_fuzzer.c main.c fuzzer.h
+-gnutls_set_trust_file_fuzzer_LDADD = $(LDADD) -ldl
++gnutls_set_trust_file_fuzzer_LDADD = $(LDADD) $(LIBDL)
+ TESTS = $(FUZZERS)
+ LCOV_INFO = coverage.info
+ all: all-am
