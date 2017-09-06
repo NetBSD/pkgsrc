@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.692 2017/09/06 12:31:19 markd Exp $
+# $NetBSD: Makefile,v 1.693 2017/09/06 12:37:46 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1234,7 +1234,6 @@ SUBDIR+=	tex-textmerg
 SUBDIR+=	tex-textmerg-doc
 SUBDIR+=	tex-textpos
 SUBDIR+=	tex-textpos-doc
-SUBDIR+=	tex-thailatex
 SUBDIR+=	tex-thmtools
 SUBDIR+=	tex-thmtools-doc
 SUBDIR+=	tex-threeparttable
