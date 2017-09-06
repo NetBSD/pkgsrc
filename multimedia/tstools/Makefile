@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/07/03 11:52:37 wiedi Exp $
+# $NetBSD: Makefile,v 1.8 2017/09/06 11:30:41 wiz Exp $
 #
 
 DISTNAME=	tstools-1_11
@@ -9,7 +9,7 @@ MASTER_SITES=	https://tstools.googlecode.com/files/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-multimedia@NetBSD.org
-HOMEPAGE=	https://code.google.com/p/tstools/
+HOMEPAGE=	https://github.com/kynesim/tstools
 COMMENT=	Cross-platform command line tools for working with MPEG data
 LICENSE=	mpl-1.1
 
