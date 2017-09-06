@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3624 2017/09/06 11:13:06 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3625 2017/09/06 11:44:17 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5092,3 +5092,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed devel/tmin successor devel/afl [wiz 2017-09-06]
 	Updated devel/libzookeeper to 3.4.10 [fhajny 2017-09-06]
 	Updated devel/zookeeper to 3.4.10 [fhajny 2017-09-06]
+	Updated security/vault to 0.8.2 [fhajny 2017-09-06]
