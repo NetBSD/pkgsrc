@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.49 2017/02/12 06:25:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.50 2017/09/06 09:03:02 wiz Exp $
 #
 
 DISTNAME=	xdx-2.5.0
 PKGREVISION=	3
 CATEGORIES=	ham
-MASTER_SITES=	http://sourceforge.net/projects/xdxclusterclient/files/latest/download
+MASTER_SITES=	https://sourceforge.net/projects/xdxclusterclient/files/latest/download
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/xdxclusterclient/
+HOMEPAGE=	https://sourceforge.net/projects/xdxclusterclient/
 COMMENT=	Amateur Radio tcp/ip DX-cluster client
 LICENSE=	gnu-gpl-v2
 
