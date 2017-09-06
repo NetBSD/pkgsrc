@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17682 2017/09/06 14:45:24 wiz Exp $
+$NetBSD: TODO,v 1.17683 2017/09/06 15:43:11 adam Exp $
 
 Suggested new packages
 ======================
@@ -672,7 +672,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ftplibpp-2.0.2
 	o fuse-archivemount-0.8.7
 	o fuse-bindfs-1.13.7
-	o fuse-emulator-1.3.8
 	o fuse-mp3fs-0.91 [needs fixes to work on NetBSD; started in wip]
 	o fvwm-devel-2.7.0
 	o fvwm2-themes-0.7.0
