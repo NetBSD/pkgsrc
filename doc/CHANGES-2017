@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3642 2017/09/07 10:36:45 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3643 2017/09/07 11:24:53 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5142,3 +5142,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-apache-libcloud to 2.2.0 [adam 2017-09-07]
 	Updated security/py-certbot to 0.18.0 [fhajny 2017-09-07]
 	Added fonts/monoid version 0.61 [wiz 2017-09-07]
+	Updated print/cups-filters to 1.17.2nb3 [prlw1 2017-09-07]
