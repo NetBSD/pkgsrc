@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.3 2017/08/18 13:26:28 ryoon Exp $
+# $NetBSD: u-boot.mk,v 1.4 2017/09/07 15:29:31 jmcneill Exp $
 
 UBOOT_VERSION?=	2017.07
 PKGNAME=	u-boot-${UBOOT_TARGET}-${UBOOT_VERSION}
@@ -30,6 +30,12 @@ REPLACE_FILES.python2=	scripts/fill_scrapyard.py \
 			tools/moveconfig.py
 
 MAKE_ENV+=	${UBOOT_ENV}
+
+post-patch:
+.for opt in ${UBOOT_OPTIONS}
+	@echo "=> Adding ${opt} to configs/${UBOOT_CONFIG}"
+	@echo ${opt} >> ${WRKSRC}/configs/${UBOOT_CONFIG}
+.endfor
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${UBOOT_CONFIG}
