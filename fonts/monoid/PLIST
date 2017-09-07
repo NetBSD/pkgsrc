@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/07 10:36:19 wiz Exp $
+share/fonts/X11/TTF/Monoid-Bold.ttf
+share/fonts/X11/TTF/Monoid-Italic.ttf
+share/fonts/X11/TTF/Monoid-Regular.ttf
+share/fonts/X11/TTF/Monoid-Retina.ttf
