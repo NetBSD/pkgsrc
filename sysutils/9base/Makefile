@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/12/10 14:11:32 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.19 2017/09/07 07:52:43 wiz Exp $
 
 DISTNAME=	9base-6
 PKGREVISION=	2
@@ -8,7 +7,7 @@ CATEGORIES=	sysutils shells
 MASTER_SITES=	http://dl.suckless.org/tools/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tools.suckless.org/9base
+HOMEPAGE=	https://tools.suckless.org/9base
 COMMENT=	Port of various original plan9 tools
 #LICENSE=	lucent-public-v1.02 AND mit
 
