@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/12 10:31:25 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.2 2017/09/07 07:54:00 wiz Exp $
 
 DISTNAME=	aspell-mt-0.50-0
 PKGNAME=	${DISTNAME:S/-0$/.0/1}
@@ -8,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/mt/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	http://linux.org.mt/spellcheck/
+#HOMEPAGE=	http://linux.org.mt/spellcheck/
 COMMENT=	Maltese language support for aspell
 LICENSE=	gnu-lgpl-v2.1
 
