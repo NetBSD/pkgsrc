@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3643 2017/09/07 11:24:53 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.3644 2017/09/07 13:14:49 jun Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5143,3 +5143,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-certbot to 0.18.0 [fhajny 2017-09-07]
 	Added fonts/monoid version 0.61 [wiz 2017-09-07]
 	Updated print/cups-filters to 1.17.2nb3 [prlw1 2017-09-07]
+	Added sysutils/u-boot-orangepi-one version 2017.07 [jun 2017-09-07]
