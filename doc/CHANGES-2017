@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3648 2017/09/07 15:20:55 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3649 2017/09/07 15:38:22 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5151,3 +5151,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/py-ldap to 2.4.43 [adam 2017-09-07]
 	Updated devel/py-txaio to 2.8.2 [adam 2017-09-07]
 	Updated www/py-tornado to 4.5.2 [adam 2017-09-07]
+	Renamed sysutils/u-boot-pine64-plus to sysutils/u-boot-pine64 [jmcneill 2017-09-07]
