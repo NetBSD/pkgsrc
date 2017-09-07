@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.51 2017/09/03 11:27:47 leot Exp $
+$NetBSD: distinfo,v 1.52 2017/09/07 11:24:29 prlw1 Exp $
 
 SHA1 (cups-filters-1.17.2.tar.xz) = f4febf63e2c0a6a9291798fa0ec4ae4f26cc753a
 RMD160 (cups-filters-1.17.2.tar.xz) = 06d9cda92a6d8b2d642332aeb06a8c5f9b953199
@@ -8,3 +8,4 @@ SHA1 (patch-Makefile.in) = 64b90009c2d0df370011ef70c823e7b9eda228bf
 SHA1 (patch-configure) = b55dc7dc22008351c396374aceb88d2be293d179
 SHA1 (patch-filter_gstoraster.c) = a9fac7892972943f345c6b76529feff0ba098458
 SHA1 (patch-filter_mupdftoraster.c) = 4c4f7d292163657f9541c8ce454ba57d248f7ef0
+SHA1 (patch-filter_pdf.cxx) = 34387489460e152719a9879a68310418aff95591
