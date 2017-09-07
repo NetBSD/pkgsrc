@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/06 12:38:32 leot Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/07 08:18:44 leot Exp $
 
 DISTNAME=	moreutils_0.60.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -29,14 +29,9 @@ REPLACE_PERL+=	vidir
 REPLACE_PERL+=	vipe
 REPLACE_PERL+=	zrun
 
-SUBST_CLASSES+=			pkgmandir
-SUBST_STAGE.pkgmandir=		pre-configure
-SUBST_FILES.pkgmandir=		Makefile
-SUBST_MESSAGE.pkgmandir=	Fixing man page installation.
-SUBST_SED.pkgmandir=		-e 's,share/man,${PKGMANDIR},'
-
 MAKE_ENV+=	\
 	PREFIX=${PREFIX} \
+	MANDIR=${PREFIX}/${PKGMANDIR} \
 	CFLAGS=${CFLAGS:Q} \
 	LDFLAGS=${LDFLAGS:Q} \
 	DOCBOOKXSL=${PREFIX}/share/xsl/docbook \
