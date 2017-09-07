@@ -158,6 +158,7 @@ ecore			Enable ecore library support.
 eekboard		Use eekboard for virtual keyboard support.
 efence			Build with Electric Fence malloc() debugger support.
 efnet			Enable tweaks to support EFNet.
+el1			Switch to EL1 before booting kernel (required for 32-bit kernels).
 elinks-exmode		Enable vi-like command entry.
 elinks-fastmem		Allow direct use of system memory allocation functions.
 elinks-html-highlight	Enable HTML highlighting using DOM engine.
