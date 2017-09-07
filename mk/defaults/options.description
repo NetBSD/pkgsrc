@@ -573,6 +573,7 @@ p5-module-build-license-creation	Enable license creation.
 pam			Enable PAM support.
 pcb-motif		Use Motif for the gui instead of GTK for cad/pcb.
 pcre			Enable Perl-compatible regular expressions.
+pcre2-jit		Enable JIT (just-in-time) support in pcre2.
 pcsc			Enable PC/SC support.
 pdf			Enable PDF support.
 perl			Enable Perl support.
