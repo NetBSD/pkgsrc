@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3646 2017/09/07 15:04:10 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.3647 2017/09/07 15:16:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5146,3 +5146,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/u-boot-orangepi-one version 2017.07 [jun 2017-09-07]
 	Updated mail/neomutt to 20170907 [wiz 2017-09-07]
 	Updated databases/ocaml-ldap to 2.3.0 [jaapb 2017-09-07]
+	Updated devel/py-test-runner to 2.12.1 [adam 2017-09-07]
+	Updated devel/py-pluggy to 0.5.2 [adam 2017-09-07]
+	Updated databases/py-ldap to 2.4.43 [adam 2017-09-07]
+	Updated devel/py-txaio to 2.8.2 [adam 2017-09-07]
