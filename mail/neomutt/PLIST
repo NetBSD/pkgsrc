@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2017/07/18 18:39:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/09/07 14:10:01 wiz Exp $
 bin/mutt
 bin/pgpewrap
 bin/pgpring
@@ -51,24 +51,6 @@ share/doc/mutt/samples/Tin.rc
 share/doc/mutt/samples/colors.default
 share/doc/mutt/samples/colors.linux
 share/doc/mutt/samples/gpg.rc
-share/doc/mutt/samples/iconv/iconv.aix-3.2.5.rc
-share/doc/mutt/samples/iconv/iconv.aix-4.1.5.rc
-share/doc/mutt/samples/iconv/iconv.aix-4.2.0.rc
-share/doc/mutt/samples/iconv/iconv.aix-4.3.2.rc
-share/doc/mutt/samples/iconv/iconv.freebsd-3.3.rc
-share/doc/mutt/samples/iconv/iconv.glibc-2.1.3.rc
-share/doc/mutt/samples/iconv/iconv.glibc-2.1.90.rc
-share/doc/mutt/samples/iconv/iconv.hpux-10.01.rc
-share/doc/mutt/samples/iconv/iconv.hpux-10.20.rc
-share/doc/mutt/samples/iconv/iconv.hpux-11.00.rc
-share/doc/mutt/samples/iconv/iconv.irix-6.5.rc
-share/doc/mutt/samples/iconv/iconv.osf1-4.0a.rc
-share/doc/mutt/samples/iconv/iconv.osf1-4.0d.rc
-share/doc/mutt/samples/iconv/iconv.solaris-2.4.rc
-share/doc/mutt/samples/iconv/iconv.solaris-2.5.1.rc
-share/doc/mutt/samples/iconv/iconv.solaris-2.6-cjk.rc
-share/doc/mutt/samples/iconv/iconv.solaris-2.6.rc
-share/doc/mutt/samples/iconv/iconv.solaris-2.7.rc
 share/doc/mutt/samples/pgp2.rc
 share/doc/mutt/samples/pgp5.rc
 share/doc/mutt/samples/pgp6.rc
