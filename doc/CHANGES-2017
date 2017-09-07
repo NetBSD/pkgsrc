@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3647 2017/09/07 15:16:13 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3648 2017/09/07 15:20:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5150,3 +5150,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-pluggy to 0.5.2 [adam 2017-09-07]
 	Updated databases/py-ldap to 2.4.43 [adam 2017-09-07]
 	Updated devel/py-txaio to 2.8.2 [adam 2017-09-07]
+	Updated www/py-tornado to 4.5.2 [adam 2017-09-07]
