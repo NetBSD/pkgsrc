@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/03/05 11:29:04 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.19 2017/09/07 07:55:01 wiz Exp $
 
 DISTNAME=	fetch-1.8
 PKGREVISION=	3
@@ -8,7 +7,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://www.FreeBSD.org/
+HOMEPAGE=	https://www.FreeBSD.org/
 COMMENT=	Client to fetch URLs
 LICENSE=	modified-bsd
 
