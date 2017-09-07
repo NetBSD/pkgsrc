@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3639 2017/09/06 21:08:19 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3640 2017/09/07 06:27:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5138,3 +5138,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed print/teTeX3-texmf [wiz 2017-09-06]
 	Removed print/teTeX3-bin [wiz 2017-09-06]
 	Updated finance/ledger to 3.1.1nb4 [wiz 2017-09-06]
+	Updated multimedia/py-m3u8 to 0.3.3 [adam 2017-09-07]
+	Updated net/py-apache-libcloud to 2.2.0 [adam 2017-09-07]
