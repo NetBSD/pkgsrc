@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/07/18 05:12:27 adam Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/07 06:26:39 adam Exp $
 
-DISTNAME=	apache-libcloud-2.1.0
+DISTNAME=	apache-libcloud-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/apache-libcloud/}
