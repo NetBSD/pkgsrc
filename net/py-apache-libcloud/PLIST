@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/07/18 05:12:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/09/07 06:26:39 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -744,7 +744,17 @@ ${PYSITELIB}/libcloud/test/compute/fixtures/azure/libcloud.pem
 ${PYSITELIB}/libcloud/test/compute/fixtures/azure_arm/_77777777_7777_7777_7777_777777777777_oauth2_token.json
 ${PYSITELIB}/libcloud/test/compute/fixtures/azure_arm/_subscriptions_99999999_9999_9999_9999_999999999999_providers_Microsoft_Commerce_RateCard.json
 ${PYSITELIB}/libcloud/test/compute/fixtures/azure_arm/_subscriptions_99999999_9999_9999_9999_999999999999_providers_Microsoft_Compute.json
+${PYSITELIB}/libcloud/test/compute/fixtures/azure_arm/_subscriptions_99999999_9999_9999_9999_999999999999_providers_Microsoft_Compute_disks.json
 ${PYSITELIB}/libcloud/test/compute/fixtures/azure_arm/_subscriptions_99999999_9999_9999_9999_999999999999_providers_Microsoft_Compute_locations_eastus_vmSizes.json
+${PYSITELIB}/libcloud/test/compute/fixtures/azure_arm/_subscriptions_99999999_9999_9999_9999_999999999999_providers_Microsoft_Compute_snapshots.json
+${PYSITELIB}/libcloud/test/compute/fixtures/azure_arm/_subscriptions_99999999_9999_9999_9999_999999999999_providers_Microsoft_Compute_virtualMachines.json
+${PYSITELIB}/libcloud/test/compute/fixtures/azure_arm/_subscriptions_99999999_9999_9999_9999_999999999999_resourceGroups_000000_providers_Microsoft_Compute_disks_test_disk_1.json
+${PYSITELIB}/libcloud/test/compute/fixtures/azure_arm/_subscriptions_99999999_9999_9999_9999_999999999999_resourceGroups_000000_providers_Microsoft_Compute_snapshots_test_snap_1.json
+${PYSITELIB}/libcloud/test/compute/fixtures/azure_arm/_subscriptions_99999999_9999_9999_9999_999999999999_resourceGroups_000000_providers_Microsoft_Compute_virtualMachines_test_node_1.json
+${PYSITELIB}/libcloud/test/compute/fixtures/azure_arm/_subscriptions_99999999_9999_9999_9999_999999999999_resourceGroups_000000_providers_Microsoft_Compute_virtualMachines_test_node_1_InstanceView.json
+${PYSITELIB}/libcloud/test/compute/fixtures/azure_arm/_subscriptions_99999999_9999_9999_9999_999999999999_resourceGroups_000000_providers_Microsoft_Network_networkInterfaces_test_node_1_nic.json
+${PYSITELIB}/libcloud/test/compute/fixtures/azure_arm/_subscriptions_99999999_9999_9999_9999_999999999999_resourceGroups_111111_providers_Microsoft_Compute_disks.json
+${PYSITELIB}/libcloud/test/compute/fixtures/azure_arm/_subscriptions_99999999_9999_9999_9999_999999999999_resourceGroups_111111_providers_Microsoft_Compute_snapshots.json
 ${PYSITELIB}/libcloud/test/compute/fixtures/bluebox/api_block_products_json.json
 ${PYSITELIB}/libcloud/test/compute/fixtures/bluebox/api_block_templates_json.json
 ${PYSITELIB}/libcloud/test/compute/fixtures/bluebox/api_blocks_99df878c_6e5c_4945_a635_d94da9fd3146_json.json
