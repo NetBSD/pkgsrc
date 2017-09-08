@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2017/09/08 13:19:34 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.12 2017/09/08 16:55:19 jaapb Exp $
 bin/js_of_ocaml
 bin/js_of_ocaml.exe
 bin/jsoo_link
@@ -542,7 +542,7 @@ ${OCAML_SITELIB}/js_of_ocaml/xmlHttpRequest.cmt
 ${OCAML_SITELIB}/js_of_ocaml/xmlHttpRequest.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/xmlHttpRequest.cmx
 ${OCAML_SITELIB}/js_of_ocaml/xmlHttpRequest.mli
-${OCAML_SITELIB}/stubslibs/dlljs_of_ocaml_stubs.so
+${OCAML_SITELIB}/stublibs/dlljs_of_ocaml_stubs.so
 man/man1/js_of_ocaml.1
 man/man1/jsoo_link.1
 man/man1/jsoo_minify.1
