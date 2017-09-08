@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2017/09/08 12:37:13 hauke Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/08 22:15:42 hauke Exp $
 #
 
 DISTNAME=	muse-3.20
 PKGNAME=	${EMACS_PKGNAME_PREFIX}emacs-${DISTNAME}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	textproc editors
-MASTER_SITES=	http://download.gna.org/muse-el/ \
-		https://web.archive.org/web/20170309215441/http://download.gna.org/muse-el/
+MASTER_SITES=	https://web.archive.org/web/20170309215441/http://download.gna.org/muse-el/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mwolson.org/projects/EmacsMuse.html
