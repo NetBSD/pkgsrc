@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2017/09/08 17:10:46 jaapb Exp $
+
+lwt_ssl for lwt 3.1
+--- configure.orig	2016-11-24 13:31:34.000000000 +0000
++++ configure
+@@ -410,8 +410,8 @@ check_library ssl "See: http://sourcefor
+ 
+ check_library lwt "See: http://ocsigen.org/lwt"
+ check_library lwt.unix  "Missing support for 'unix' in lwt."
+-check_library lwt.react "Missing support for 'react' in lwt."
+-check_library lwt.ssl   "Missing support for 'ssl' in lwt."
++check_library lwt_react "Missing support for 'react' in lwt."
++check_library lwt_ssl   "Missing support for 'ssl' in lwt."
+ check_library lwt.preemptive "Missing support for 'preemptive' in lwt."
+ 
+ check_library netstring \
