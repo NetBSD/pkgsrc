@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2017/09/08 12:45:33 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/09/08 16:54:31 jaapb Exp $
 ${OCAML_SITELIB}/lwt/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/log/lwt_log.a
 ${OCAML_SITELIB}/lwt/log/lwt_log.cma
@@ -209,6 +209,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/unix/lwt_unix_jobs_generated.cmx
 ${OCAML_SITELIB}/lwt/unix/lwt_unix_jobs_generated.ml
 ${OCAML_SITELIB}/lwt/unix/lwt_unix_unix.h
 ${OCAML_SITELIB}/lwt/unix/lwt_unix_windows.h
-${OCAML_SITELIB}/stubslibs/dlllwt_unix_stubs.so
+${OCAML_SITELIB}/stublibs/dlllwt_unix_stubs.so
 share/doc/lwt/CHANGES
 share/doc/lwt/README.md
