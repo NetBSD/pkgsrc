@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.15 2017/09/08 08:39:06 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.16 2017/09/08 19:09:26 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -150,7 +150,7 @@ INSTALLATION_DIRS+=	${OCAML_SITELIBDIR}/${OCAML_TOPKG_NAME}
 # Configure stuff for JBUILDER
 .if ${OCAML_USE_JBUILDER} == "yes"
 .include "../../devel/ocaml-jbuilder/buildlink3.mk"
-OCAML_USE_OPAM=	yes
+OCAML_USE_OPAM?=	yes
 .endif
 
 # Value for OCAML_SITELIBDIR
