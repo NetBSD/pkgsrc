@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/09/06 09:03:04 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/09/08 06:28:35 wiz Exp $
 
 DISTNAME=	upower-0.99.4
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	https://upower.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://upower.freedesktop.org
+HOMEPAGE=	https://upower.freedesktop.org
 COMMENT=	Power management system message bus service
 LICENSE=	gnu-gpl-v2
 
