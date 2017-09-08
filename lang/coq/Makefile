@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2017/07/11 14:19:20 jaapb Exp $
+# $NetBSD: Makefile,v 1.99 2017/09/08 17:19:01 jaapb Exp $
 #
 
-DISTNAME=	coq-8.6
-PKGREVISION=	4
+DISTNAME=	coq-8.6.1
 CATEGORIES=	lang math
 MASTER_SITES=	http://coq.inria.fr/distrib/V${PKGVERSION_NOREV}/files/
 
@@ -26,10 +25,15 @@ BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.10
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/ocaml.mk"
 
+PLIST_VARS+=	native
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
 PLIST_SUBST+=	COQIDE_TYPE="opt"
+PLIST.native=	yes
+CONFIGURE_ARGS+=	-native-compiler yes
+UNLIMIT_RESOURCES+=	stacksize # compilation of some files needs this
 .else
 PLIST_SUBST+=	COQIDE_TYPE="byte"
+CONFIGURE_ARGS+=	-native-compiler no
 .endif
 
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64")
