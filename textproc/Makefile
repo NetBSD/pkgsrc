@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.953 2017/09/04 19:50:16 adam Exp $
+# $NetBSD: Makefile,v 1.954 2017/09/08 22:23:04 markd Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -929,6 +929,8 @@ SUBDIR+=	tcl-xml
 SUBDIR+=	tei
 SUBDIR+=	tei-p5-schema
 SUBDIR+=	tei-xsl
+SUBDIR+=	tex-csvsimple
+SUBDIR+=	tex-csvsimple-doc
 SUBDIR+=	tex-latexdiff
 SUBDIR+=	tex-latexdiff-doc
 SUBDIR+=	tex-lwarp

@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/08 22:23:04 markd Exp $
+share/texmf-dist/doc/latex/csvsimple/CHANGES
+share/texmf-dist/doc/latex/csvsimple/README
+share/texmf-dist/doc/latex/csvsimple/amountsort.xml
+share/texmf-dist/doc/latex/csvsimple/catsort.xml
+share/texmf-dist/doc/latex/csvsimple/csvsimple-example.pdf
+share/texmf-dist/doc/latex/csvsimple/csvsimple-example.tex
+share/texmf-dist/doc/latex/csvsimple/csvsimple.pdf
+share/texmf-dist/doc/latex/csvsimple/csvsimple.tex
+share/texmf-dist/doc/latex/csvsimple/encoding.xml
+share/texmf-dist/doc/latex/csvsimple/gradesort.xml
+share/texmf-dist/doc/latex/csvsimple/matriculationsort.xml
+share/texmf-dist/doc/latex/csvsimple/namesort.xml
+share/texmf-dist/doc/latex/csvsimple/transform.xml
