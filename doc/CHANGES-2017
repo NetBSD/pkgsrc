@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3651 2017/09/08 02:26:20 manu Exp $
+$NetBSD: CHANGES-2017,v 1.3652 2017/09/08 02:29:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5154,3 +5154,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Renamed sysutils/u-boot-pine64-plus to sysutils/u-boot-pine64 [jmcneill 2017-09-07]
 	Updated devel/gdb to 8.0.1 [kamil 2017-09-07]
 	Updated net/nagios-plugin-dnsrbl to 0.4 [manu 2017-09-08]
+	Updated audio/pulseaudio to 11.0 [ryoon 2017-09-08]
