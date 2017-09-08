@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/08 11:59:54 jaapb Exp $
+${OCAML_SITELIB}/ppx_derivers/META
+${OCAML_SITELIB}/ppx_derivers/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_derivers/ppx_derivers.a
+${OCAML_SITELIB}/ppx_derivers/ppx_derivers.cma
+${OCAML_SITELIB}/ppx_derivers/ppx_derivers.cmi
+${OCAML_SITELIB}/ppx_derivers/ppx_derivers.cmt
+${OCAML_SITELIB}/ppx_derivers/ppx_derivers.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_derivers/ppx_derivers.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_derivers/ppx_derivers.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_derivers/ppx_derivers.cmxs
+${OCAML_SITELIB}/ppx_derivers/ppx_derivers.mli
+share/doc/ppx_derivers/README.md
