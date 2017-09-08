@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17687 2017/09/08 07:46:55 wiz Exp $
+$NetBSD: TODO,v 1.17688 2017/09/08 07:55:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -631,7 +631,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ex-20050325
 	o exaile-3.4.4
 	o exmh-2.8.0
-	o expat-2.2.4
 	o faces-1.7.7
 	o facter-2.4.5
 	o fakeroot-1.6.5
