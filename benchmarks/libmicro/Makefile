@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2015/11/07 20:54:17 dholland Exp $
-#
+# $NetBSD: Makefile,v 1.6 2017/09/08 06:17:45 wiz Exp $
 
 DISTNAME=	libmicro-${LIBMICRO_VERSION}
 CATEGORIES=	benchmarks
-MASTER_SITES=	http://hub.opensolaris.org/bin/download/Project+libmicro/Source+Archives/
+#MASTER_SITES=	http://hub.opensolaris.org/bin/download/Project+libmicro/Source+Archives/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hub.opensolaris.org/bin/view/Project+libmicro/
+#HOMEPAGE=	http://hub.opensolaris.org/bin/view/Project+libmicro/
 COMMENT=	Set of utilities to benchmark productivity of system calls
 LICENSE=	cddl-1.0
 
