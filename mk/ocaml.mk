@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.14 2017/07/26 09:41:31 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.15 2017/09/08 08:39:06 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -58,6 +58,7 @@ _PKG_VARS.ocaml=	\
 	OCAML_TOPKG_OPTIONAL_TARGETS \
 	OCAML_USE_JBUILDER \
 	JBUILDER_BUILD_FLAGS \
+	JBUILDER_BUILD_PACKAGES \
 	JBUILDER_BUILD_TARGETS \
 	OCAML_BUILD_ARGS \
 	OPAM_INSTALL_FILES
@@ -96,6 +97,7 @@ OCAML_TOPKG_NATIVE_TARGETS?=	# empty
 OPAM_INSTALL_FILES?=	${OCAML_TOPKG_NAME}
 JBUILDER_BUILD_FLAGS?=	# empty
 JBUILDER_BUILD_TARGETS?=	@install
+JBUILDER_BUILD_PACKAGES?=	# empty
 
 # Default value of OASIS_BUILD_ARGS
 OASIS_BUILD_ARGS?=	# empty
@@ -243,8 +245,14 @@ do-install:
 .if ${OCAML_USE_JBUILDER} == "yes"
 
 do-build:
+.if !empty(JBUILDER_BUILD_PACKAGES)
+	${RUN} cd ${WRKSRC} && jbuilder build -j ${MAKE_JOBS} \
+		${JBUILDER_BUILD_FLAGS} -p ${JBUILDER_BUILD_PACKAGES:ts,} \
+		${JBUILDER_BUILD_TARGETS}
+.else
 	${RUN} cd ${WRKSRC} && jbuilder build -j ${MAKE_JOBS} \
 		${JBUILDER_BUILD_FLAGS} ${JBUILDER_BUILD_TARGETS}
+.endif
 
 .endif # topkg-jbuilder
 
