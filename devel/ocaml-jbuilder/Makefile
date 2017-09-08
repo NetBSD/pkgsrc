@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/09/08 16:38:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/08 17:04:06 jaapb Exp $
 
 VERSION=	1.0_beta13
 PKGREVISION=	1
@@ -22,6 +22,7 @@ MAKE_ENV+=	MAKE_JOBS=${MAKE_JOBS}
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${OCAML_SITELIBDIR}/jbuilder
 
 OCAML_USE_FINDLIB=	yes
+OCAML_FINDLIB_DIRS=	jbuilder stublibs
 
 .include "../../mk/ocaml.mk"
 
