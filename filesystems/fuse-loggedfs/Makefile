@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/03/01 20:16:17 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.8 2017/09/08 06:07:46 wiz Exp $
 
 DISTNAME=	loggedfs-0.4
 PKGNAME=	fuse-${DISTNAME}
@@ -9,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=loggedfs/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_SOURCEFORGE:=loggedfs/}
+HOMEPAGE=	https://rflament.github.io/loggedfs/
 COMMENT=	FUSE file system which logs all operations
 
 CPPFLAGS.NetBSD+=	-D_KERNTYPES
