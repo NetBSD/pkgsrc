@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3670 2017/09/08 12:37:46 hauke Exp $
+$NetBSD: CHANGES-2017,v 1.3671 2017/09/08 12:45:51 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5180,3 +5180,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/ocaml-ppx_derivers version 1.0 [jaapb 2017-09-08]
 	Updated devel/ocaml-ppx_deriving to 4.2 [jaapb 2017-09-08]
 	Updated textproc/emacs-muse to 3.20 [hauke 2017-09-08]
+	Updated devel/ocaml-lwt to 3.1.0 [jaapb 2017-09-08]
