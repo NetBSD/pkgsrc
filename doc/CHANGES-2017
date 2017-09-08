@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3679 2017/09/08 17:11:07 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.3680 2017/09/08 17:19:45 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5189,3 +5189,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added chat/matterircd version 0.14.0 [jperkin 2017-09-08]
 	Updated misc/ocaml-opam to 2.0.0_beta4 [jaapb 2017-09-08]
 	Updated www/ocsigen to 2.8nb3 [jaapb 2017-09-08]
+	Updated lang/coq to 8.6.1 [jaapb 2017-09-08]
