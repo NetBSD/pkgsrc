@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3662 2017/09/08 09:13:06 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.3663 2017/09/08 10:26:29 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5168,3 +5168,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/p5-IO-Socket-SSL to 2.051 [wiz 2017-09-08]
 	Updated audio/mpg123 to 1.25.5 [wiz 2017-09-08]
 	Updated lang/ocaml to 4.05.0 [jaapb 2017-09-08]
+	Added sysutils/u-boot-jetson-tx1 version 2017.07 [jmcneill 2017-09-08]
