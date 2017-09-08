@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/19 12:05:30 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/09/08 16:50:05 jaapb Exp $
 ${OCAML_SITELIB}/base/META
 ${OCAML_SITELIB}/base/applicative.mli
 ${OCAML_SITELIB}/base/applicative_intf.ml
@@ -589,7 +589,7 @@ ${OCAML_SITELIB}/base/variant.mli
 ${OCAML_SITELIB}/base/variantslib.ml
 ${OCAML_SITELIB}/base/with_return.mli
 ${OCAML_SITELIB}/base/word_size.mli
-${OCAML_SITELIB}/stubslibs/dllbase_stubs.so
+${OCAML_SITELIB}/stublibs/dllbase_stubs.so
 share/doc/base/CHANGES.md
 share/doc/base/LICENSE.txt
 share/doc/base/README.org
