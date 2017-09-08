@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2016/02/01 15:05:56 leot Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/08 06:27:51 wiz Exp $
 
 DISTNAME=	tabbed-0.6
 CATEGORIES=	x11
-MASTER_SITES=	http://dl.suckless.org/tools/
+MASTER_SITES=	https://dl.suckless.org/tools/
 
 MAINTAINER=	amoibos@gmail.com
-HOMEPAGE=	http://tools.suckless.org/tabbed/
+HOMEPAGE=	https://tools.suckless.org/tabbed/
 COMMENT=	Simple generic tabbed frontend to xembed aware applications
 LICENSE=	mit
 
