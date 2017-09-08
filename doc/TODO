@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17692 2017/09/08 09:13:06 jaapb Exp $
+$NetBSD: TODO,v 1.17693 2017/09/08 22:23:04 hauke Exp $
 
 Suggested new packages
 ======================
@@ -590,7 +590,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o elftoolchain-0.7.1 [pkg/48227]
 	o elm-me-2.4.127
 	o elscreen-1.5.3
-	o emacs-muse-3.20
 	o embryo-1.7.10
 	o emerillon-0.1.90
 	o enigma-1.21
