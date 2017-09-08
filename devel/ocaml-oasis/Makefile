@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2017/07/11 10:07:54 jaapb Exp $
+# $NetBSD: Makefile,v 1.11 2017/09/08 09:51:21 jaapb Exp $
 
 DISTNAME=	oasis-0.4.10
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1694/
 
