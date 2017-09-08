@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2017/03/16 12:04:25 wiz Exp $
+$NetBSD: distinfo,v 1.31 2017/09/08 08:45:49 wiz Exp $
 
-SHA1 (xf86-video-ati-7.9.0.tar.bz2) = 86ee6db1d7dcdeb1948aeb7965be8102c18be46b
-RMD160 (xf86-video-ati-7.9.0.tar.bz2) = b9e6650008e4c43e45f7a603b7431bc296dc1475
-SHA512 (xf86-video-ati-7.9.0.tar.bz2) = 125e035da6581520d677c56474653ed75aa6d168bf5450cc973248416b5ada3114ea14d0615b44c58029bb1702609453ab532a506273df2a5dd99dd2af4a9d43
-Size (xf86-video-ati-7.9.0.tar.bz2) = 848502 bytes
+SHA1 (xf86-video-ati-7.10.0.tar.bz2) = 38e535ecc8445c1b9464ac34db959337929887f7
+RMD160 (xf86-video-ati-7.10.0.tar.bz2) = a32ec025d27c2883c378e50741aa0e038f55f962
+SHA512 (xf86-video-ati-7.10.0.tar.bz2) = 1f2f4af1d299af62644693e6fbc47a5078c9bc5e7887a1ac217121ef2fd29d8c9f50a8d9be9ddb0887d0b49141bb33484f82c1313a472ad6867266b53b4a11ad
+Size (xf86-video-ati-7.10.0.tar.bz2) = 876442 bytes
