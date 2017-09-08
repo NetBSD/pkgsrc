@@ -1,0 +1,23 @@
+$NetBSD: patch-src_files_META.in,v 1.1 2017/09/08 17:10:46 jaapb Exp $
+
+lwt_ssl and lwt_react for lwt 3.1
+--- src/files/META.in.orig	2016-11-24 13:31:34.000000000 +0000
++++ src/files/META.in
+@@ -37,7 +37,7 @@ package "baselib" (
+ )
+ 
+ package "http" (
+-  requires = "%%NAME%%.baselib,lwt.ssl,tyxml"
++  requires = "%%NAME%%.baselib,lwt_ssl,tyxml"
+   version = "[distributed with Ocsigen server]"
+   description = "HTTP library for Ocsigen server"
+   archive(byte) = "http.cma"
+@@ -188,7 +188,7 @@ package "ext" (
+ 
+   package "comet" (
+     exists_if = "ocsigen_comet.cmo,ocsigen_comet.cmx"
+-    requires = "ocsigenserver,lwt.react"
++    requires = "ocsigenserver,lwt_react"
+     version = "[distributed with Ocsigen server]"
+     description = "Comet server-to-client communication"
+     archive(byte) = "ocsigen_comet.cmo"
