@@ -1,0 +1,6 @@
+The package provides a simple LaTeX interface for the
+processing of files with comma separated values (CSV); it
+relies on the key value syntax supported by pgfkeys to simplify
+usage. Filtering and table generation is especially supported;
+however, this lightweight tool offers no support for data
+sorting or data base storage.
