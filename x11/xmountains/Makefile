@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2012/10/29 05:07:16 asau Exp $
-#
+# $NetBSD: Makefile,v 1.20 2017/09/08 06:30:34 wiz Exp $
 
 DISTNAME=	xmountains_2.7
 PKGNAME=	${DISTNAME:C/_/-/}
 PKGREVISION=	2
 CATEGORIES=	x11
-MASTER_SITES=	http://www2.epcc.ed.ac.uk/~spb/xmountains/
+#MASTER_SITES=	http://www2.epcc.ed.ac.uk/~spb/xmountains/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www2.epcc.ed.ac.uk/~spb/xmountains/
+HOMEPAGE=	https://spbooth.github.io/xmountains/about_xmountains.html
 COMMENT=	Fractal terrain generator for X11
 
 WRKSRC=		${WRKDIR}
