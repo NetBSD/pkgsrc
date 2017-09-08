@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3669 2017/09/08 12:21:54 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.3670 2017/09/08 12:37:46 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5179,3 +5179,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ocaml-jbuilder to 1.0_beta13 [jaapb 2017-09-08]
 	Added devel/ocaml-ppx_derivers version 1.0 [jaapb 2017-09-08]
 	Updated devel/ocaml-ppx_deriving to 4.2 [jaapb 2017-09-08]
+	Updated textproc/emacs-muse to 3.20 [hauke 2017-09-08]
