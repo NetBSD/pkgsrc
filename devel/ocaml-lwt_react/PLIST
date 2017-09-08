@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/08 12:58:06 jaapb Exp $
+${OCAML_SITELIB}/lwt_react/META
+${OCAML_SITELIB}/lwt_react/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_react/lwt_react.a
+${OCAML_SITELIB}/lwt_react/lwt_react.cma
+${OCAML_SITELIB}/lwt_react/lwt_react.cmi
+${OCAML_SITELIB}/lwt_react/lwt_react.cmt
+${OCAML_SITELIB}/lwt_react/lwt_react.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_react/lwt_react.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_react/lwt_react.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_react/lwt_react.cmxs
+${OCAML_SITELIB}/lwt_react/lwt_react.mli
+share/doc/lwt_react/CHANGES
+share/doc/lwt_react/README.md
