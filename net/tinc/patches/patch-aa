@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.6 2013/10/14 18:27:54 tonnerre Exp $
+$NetBSD: patch-aa,v 1.7 2017/09/08 13:53:25 jperkin Exp $
 
---- src/protocol_auth.c.orig	2013-05-15 21:15:26.000000000 +0000
+Patches from tonnerre in http://gnats.netbsd.org/30378
+
+--- src/protocol_auth.c.orig	2017-07-30 14:01:13.000000000 +0000
 +++ src/protocol_auth.c
-@@ -280,22 +280,28 @@ bool send_metakey(connection_t *c) {
+@@ -218,22 +218,28 @@ bool send_metakey(connection_t *c) {
  }
  
  bool metakey_h(connection_t *c) {
@@ -35,7 +37,7 @@ $NetBSD: patch-aa,v 1.6 2013/10/14 18:27:54 tonnerre Exp $
  		return false;
  	}
  
-@@ -310,6 +316,7 @@ bool metakey_h(connection_t *c) {
+@@ -251,6 +257,7 @@ bool metakey_h(connection_t *c) {
  
  	if(!hex2bin(buffer, buffer, len)) {
  		logger(LOG_ERR, "Got bad %s from %s(%s): %s", "METAKEY", c->name, c->hostname, "invalid key");
@@ -43,7 +45,7 @@ $NetBSD: patch-aa,v 1.6 2013/10/14 18:27:54 tonnerre Exp $
  		return false;
  	}
  
-@@ -318,6 +325,7 @@ bool metakey_h(connection_t *c) {
+@@ -259,6 +266,7 @@ bool metakey_h(connection_t *c) {
  	if(RSA_private_decrypt(len, (unsigned char *)buffer, (unsigned char *)c->inkey, myself->connection->rsa_key, RSA_NO_PADDING) != len) {	/* See challenge() */
  		logger(LOG_ERR, "Error during decryption of meta key for %s (%s): %s",
  			   c->name, c->hostname, ERR_error_string(ERR_get_error(), NULL));
@@ -51,7 +53,7 @@ $NetBSD: patch-aa,v 1.6 2013/10/14 18:27:54 tonnerre Exp $
  		return false;
  	}
  
-@@ -336,6 +344,7 @@ bool metakey_h(connection_t *c) {
+@@ -277,6 +285,7 @@ bool metakey_h(connection_t *c) {
  		
  		if(!c->incipher) {
  			logger(LOG_ERR, "%s (%s) uses unknown cipher!", c->name, c->hostname);
@@ -59,15 +61,15 @@ $NetBSD: patch-aa,v 1.6 2013/10/14 18:27:54 tonnerre Exp $
  			return false;
  		}
  
-@@ -345,6 +354,7 @@ bool metakey_h(connection_t *c) {
- 					c->incipher->iv_len)) {
+@@ -286,6 +295,7 @@ bool metakey_h(connection_t *c) {
+ 					EVP_CIPHER_iv_length(c->incipher))) {
  			logger(LOG_ERR, "Error during initialisation of cipher from %s (%s): %s",
  					c->name, c->hostname, ERR_error_string(ERR_get_error(), NULL));
 +			free(buffer);
  			return false;
  		}
  
-@@ -360,11 +370,13 @@ bool metakey_h(connection_t *c) {
+@@ -302,11 +312,13 @@ bool metakey_h(connection_t *c) {
  
  		if(!c->indigest) {
  			logger(LOG_ERR, "Node %s (%s) uses unknown digest!", c->name, c->hostname);
@@ -75,13 +77,13 @@ $NetBSD: patch-aa,v 1.6 2013/10/14 18:27:54 tonnerre Exp $
  			return false;
  		}
  
- 		if(c->inmaclength > c->indigest->md_size || c->inmaclength < 0) {
+ 		if(c->inmaclength > EVP_MD_size(c->indigest) || c->inmaclength < 0) {
  			logger(LOG_ERR, "%s (%s) uses bogus MAC length!", c->name, c->hostname);
 +			free(buffer);
  			return false;
  		}
  	} else {
-@@ -375,6 +387,7 @@ bool metakey_h(connection_t *c) {
+@@ -317,6 +329,7 @@ bool metakey_h(connection_t *c) {
  
  	c->allow_request = CHALLENGE;
  
@@ -89,7 +91,7 @@ $NetBSD: patch-aa,v 1.6 2013/10/14 18:27:54 tonnerre Exp $
  	return send_challenge(c);
  }
  
-@@ -404,22 +417,27 @@ bool send_challenge(connection_t *c) {
+@@ -350,22 +363,27 @@ bool send_challenge(connection_t *c) {
  }
  
  bool challenge_h(connection_t *c) {
@@ -121,7 +123,7 @@ $NetBSD: patch-aa,v 1.6 2013/10/14 18:27:54 tonnerre Exp $
  		return false;
  	}
  
-@@ -438,6 +456,7 @@ bool challenge_h(connection_t *c) {
+@@ -384,6 +402,7 @@ bool challenge_h(connection_t *c) {
  
  	/* Rest is done by send_chal_reply() */
  
