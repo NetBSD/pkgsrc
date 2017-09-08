@@ -1,0 +1,45 @@
+$NetBSD: patch-src__tags,v 1.1 2017/09/08 17:14:34 jaapb Exp $
+
+Use correct packages for ocaml-lwt 3 and js_of_ocaml 3
+--- src/_tags.orig	2017-02-07 15:42:18.000000000 +0000
++++ src/_tags
+@@ -2,32 +2,32 @@
+ true:keep_locs
+ 
+ <lib/type_dir/*.ml{,i}>:eliom_ppx,thread
+-<lib/type_dir/*.ml>:package(js_of_ocaml.deriving.ppx,lwt.ppx)
++<lib/type_dir/*.ml>:package(js_of_ocaml-ppx.deriving,lwt.ppx)
+ <lib/type_dir/*.ml>:package(js_of_ocaml.ppx)
+ 
+ <lib/server/*.ml{,i}>:eliom_ppx
+-<lib/server/*.ml>:package(js_of_ocaml.deriving.ppx,lwt.ppx)
++<lib/server/*.ml>:package(js_of_ocaml-ppx.deriving,lwt.ppx)
+ <lib/server/*.ml>:package(js_of_ocaml.ppx)
+ 
+ <lib/server/*.ml{,i}>:thread
+ <lib/server/*.ml{,i}>:package(lwt,ocsigenserver,ocsigenserver.ext,tyxml.functor)
+-<lib/server/*.ml{,i}>:package(react,js_of_ocaml)
++<lib/server/*.ml{,i}>:package(react,lwt_react,js_of_ocaml)
+ 
+-<lib/server/*.ml{,i}>:package(js_of_ocaml.deriving.ppx)
++<lib/server/*.ml{,i}>:package(js_of_ocaml-ppx.deriving)
+ 
+ <lib/*.eliom{,i}>:eliom_ppx
+ 
+ <lib/*.ml{,i}>:eliom_ppx
+-<lib/client/*.ml>:package(js_of_ocaml.deriving.ppx,lwt.ppx,js_of_ocaml.log)
++<lib/client/*.ml>:package(js_of_ocaml-ppx.deriving,lwt.ppx,js_of_ocaml-lwt.logger)
+ <lib/client/*.ml>:package(js_of_ocaml.ppx)
+ 
+ <lib/client/*.ml{,i}>: eliom_ppx
+ <lib/client/*.ml{,i}>:package(ocsigenserver.cookies,ocsigenserver.polytables,ocsigenserver.baselib.base)
+ <lib/client/*.ml{,i}>:package(deriving.runtime,js_of_ocaml.deriving)
+-<lib/client/*.ml{,i}>:package(lwt.react,tyxml.functor,js_of_ocaml.tyxml)
++<lib/client/*.ml{,i}>:package(lwt_react,tyxml.functor,js_of_ocaml.tyxml,js_of_ocaml-lwt,js_of_ocaml-lwt.logger)
+ <lib/client/*.ml{,i}>:package(react,js_of_ocaml,reactiveData)
+ 
+-<lib/client/*.ml{,i}>:package(js_of_ocaml.deriving.ppx)
++<lib/client/*.ml{,i}>:package(js_of_ocaml-ppx.deriving)
+ 
+ <lib/server/monitor/*.ml>:package(lwt.ppx)
+ <lib/server/monitor/*.ml{,i}>:thread

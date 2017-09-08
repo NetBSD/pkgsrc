@@ -1,0 +1,48 @@
+$NetBSD: patch-pkg_META,v 1.1 2017/09/08 17:14:34 jaapb Exp $
+
+Use correct packages for ocaml-lwt 3 and js_of_ocaml 3
+--- pkg/META.orig	2017-02-07 15:42:18.000000000 +0000
++++ pkg/META
+@@ -13,7 +13,7 @@ package "server" (
+               react,
+               reactiveData,
+               tyxml,
+-              lwt.react,
++              lwt_react,
+               cryptokit,
+               reactiveData"
+   archive(byte) = "server.cma"
+@@ -46,17 +46,18 @@ package "client" (
+               ppx_deriving.runtime,
+               js_of_ocaml,
+               js_of_ocaml.deriving,
+-              js_of_ocaml.tyxml,
+-              js_of_ocaml.log,
++              js_of_ocaml-tyxml,
++              js_of_ocaml-lwt,
++              js_of_ocaml-lwt.logger,
+               js_of_ocaml.weak,
+-              lwt.react,
++              lwt_react,
+               react,
+               reactiveData,
+               tyxml.functor"
+   archive(byte) = "client.cma eliom_client_main.cmo"
+ 
+   linkopts(javascript) = "+eliom.client/eliom_client.js"
+-  linkopts(javascript) += "+js_of_ocaml/classlist.js"
++  linkopts(javascript) += "+js_of_ocaml-compiler/classlist.js"
+ )
+ 
+ package "syntax" (
+@@ -98,8 +99,8 @@ package "syntax" (
+     description = "Syntax extension: predefined commonly use syntaxes"
+     version = "[distributed with Eliom]"
+ 
+-    requires(syntax, preprocessor) = "js_of_ocaml.syntax,js_of_ocaml.deriving.syntax,lwt.syntax,tyxml.syntax"
+-    requires(syntax, toploop) = "js_of_ocaml.syntax,js_of_ocaml.deriving.syntax,lwt.syntax,tyxml.syntax"
++    requires(syntax, preprocessor) = "js_of_ocaml.syntax,js_of_ocaml-camlp4.deriving,lwt.syntax,tyxml.syntax"
++    requires(syntax, toploop) = "js_of_ocaml.syntax,js_of_ocaml-camlp4.deriving,lwt.syntax,tyxml.syntax"
+     archive(syntax, preprocessor) = "-ignore dummy"
+   )
+ 
