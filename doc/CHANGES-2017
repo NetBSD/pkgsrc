@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3663 2017/09/08 10:26:29 jmcneill Exp $
+$NetBSD: CHANGES-2017,v 1.3664 2017/09/08 11:10:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5169,3 +5169,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/mpg123 to 1.25.5 [wiz 2017-09-08]
 	Updated lang/ocaml to 4.05.0 [jaapb 2017-09-08]
 	Added sysutils/u-boot-jetson-tx1 version 2017.07 [jmcneill 2017-09-08]
+	Updated net/tcpdump to 4.9.2 [wiz 2017-09-08]
