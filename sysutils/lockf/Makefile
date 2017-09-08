@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/07/15 17:03:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/08 06:18:03 wiz Exp $
 
 DISTNAME=	lockf-1
 CATEGORIES=	sysutils
@@ -6,7 +6,7 @@ MASTER_SITES=	# none
 DISTFILES=	# none
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.FreeBSD.org/
+HOMEPAGE=	https://www.FreeBSD.org/
 COMMENT=	FreeBSD's lockf
 LICENSE=	original-bsd
 
