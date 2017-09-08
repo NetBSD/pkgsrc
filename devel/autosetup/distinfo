@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/08 06:47:12 wiz Exp $
+
+SHA1 (autosetup-0.6.7.tar.gz) = f21eb35acb3b509506de3379bf543ed92b337ae4
+RMD160 (autosetup-0.6.7.tar.gz) = eb272c9d908f89d4cc7cfe8b887a80b91685b4b5
+SHA512 (autosetup-0.6.7.tar.gz) = 159284de46f0d38e1311776ac6f789962dc4a27f1e4acc0e3c3dd1e2d6c14f1627e6497504b05a642604e5abe7c9cab44f0c4f4d52dc4f50afb1f15646923cee
+Size (autosetup-0.6.7.tar.gz) = 223528 bytes
