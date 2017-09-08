@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2016/08/09 13:35:28 mef Exp $
+$NetBSD: patch-src_context.c,v 1.1 2017/09/08 09:42:34 adam Exp $
 
 date: 2009-03-10 23:06:06 +0900;  author: apb;  state: Exp;
 Fix a build failure on platforms where time_t is larger than long, by
@@ -7,7 +7,7 @@ portable printf format for time_t.)
 
 --- src/context.c.orig	2012-04-07 01:25:21.000000000 +0200
 +++ src/context.c	2012-04-07 01:27:52.000000000 +0200
-@@ -56,8 +56,8 @@
+@@ -57,8 +57,8 @@
  	  if (LONG_MIN <= TYPE_MINIMUM (time_t)
  	      && TYPE_MAXIMUM (time_t) <= LONG_MAX)
  	    {
