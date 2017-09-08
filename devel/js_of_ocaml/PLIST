@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2017/09/08 16:55:19 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/09/08 17:04:57 jaapb Exp $
 bin/js_of_ocaml
 bin/js_of_ocaml.exe
 bin/jsoo_link
@@ -350,14 +350,14 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/ocamlbuild_js_of_ocaml
 ${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/ocamlbuild_js_of_ocaml.mli
 ${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/opam
 ${OCAML_SITELIB}/js_of_ocaml-ppx/META
-@comment ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ppx/deriving/ppx_deriving_json.a
-@comment ${OCAML_SITELIB}/js_of_ocaml-ppx/deriving/ppx_deriving_json.cma
-@comment ${OCAML_SITELIB}/js_of_ocaml-ppx/deriving/ppx_deriving_json.cmi
-@comment ${OCAML_SITELIB}/js_of_ocaml-ppx/deriving/ppx_deriving_json.cmt
-@comment ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ppx/deriving/ppx_deriving_json.cmx
-@comment ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ppx/deriving/ppx_deriving_json.cmxa
-@comment ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ppx/deriving/ppx_deriving_json.cmxs
-@comment ${OCAML_SITELIB}/js_of_ocaml-ppx/deriving/ppx_deriving_json.ml
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ppx/deriving/ppx_deriving_json.a
+${OCAML_SITELIB}/js_of_ocaml-ppx/deriving/ppx_deriving_json.cma
+${OCAML_SITELIB}/js_of_ocaml-ppx/deriving/ppx_deriving_json.cmi
+${OCAML_SITELIB}/js_of_ocaml-ppx/deriving/ppx_deriving_json.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ppx/deriving/ppx_deriving_json.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ppx/deriving/ppx_deriving_json.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ppx/deriving/ppx_deriving_json.cmxs
+${OCAML_SITELIB}/js_of_ocaml-ppx/deriving/ppx_deriving_json.ml
 ${OCAML_SITELIB}/js_of_ocaml-ppx/opam
 ${OCAML_SITELIB}/js_of_ocaml-ppx/ppx.exe
 ${OCAML_SITELIB}/js_of_ocaml-ppx/ppx_js
