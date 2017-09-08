@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2017/02/02 20:43:01 leot Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/08 06:27:26 wiz Exp $
 
 DISTNAME=	st-0.7
 PKGNAME=	${DISTNAME:S/-/-term-/}
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	http://dl.suckless.org/st/
+MASTER_SITES=	https://dl.suckless.org/st/
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://st.suckless.org/
+HOMEPAGE=	https://st.suckless.org/
 COMMENT=	Simple terminal implementation for X
 LICENSE=	mit
 
