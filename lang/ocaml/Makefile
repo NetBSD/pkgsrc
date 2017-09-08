@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.112 2017/07/18 17:41:04 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2017/09/08 09:12:44 jaapb Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		3
+#PKGREVISION=		3
 
 CONFIGURE_ENV+=		disable_x11=yes
 
@@ -12,6 +12,9 @@ UNLIMIT_RESOURCES=	stacksize
 
 USE_GCC_RUNTIME=	yes
 
+PLIST_VARS+=	ocaml-stub ocaml-prof ocaml-opt ocaml-nat ocaml-spacetime
+
+.include "options.mk"
 ###
 ### PLIST components
 ###
@@ -23,7 +26,7 @@ USE_GCC_RUNTIME=	yes
     ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD" || \
     ${OPSYS} == "FreeBSD" || ${OPSYS} == "SunOS" || \
     ${OPSYS} == "Linux"
-PLIST_SRC+=	${PKGDIR}/PLIST.stub
+PLIST.ocaml-stub=	yes
 .endif
 
 # Optional components built only on certain platforms.
@@ -31,12 +34,12 @@ PLIST_SRC+=	${PKGDIR}/PLIST.stub
     !empty(MACHINE_ARCH:M*arm*) || \
     (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
 BUILD_TARGET+=	opt opt.opt
-PLIST_SRC+=	${PKGDIR}/PLIST.opt
+PLIST.ocaml-opt=	yes
 .  if empty(MACHINE_PLATFORM:MDarwin-*-powerpc) && \
       empty(MACHINE_PLATFORM:MSunOS-*-i386) && \
       empty(MACHINE_PLATFORM:MNetBSD-*-arm) && \
       empty(MACHINE_PLATFORM:MNetBSD-*-sparc)
-PLIST_SRC+=	${PKGDIR}/PLIST.prof
+PLIST.ocaml-prof=yes
 .  endif
 .endif
 
@@ -49,17 +52,14 @@ PLIST_SRC+=	${PKGDIR}/PLIST.prof
       (!empty(MACHINE_PLATFORM:MNetBSD-*-*) && empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)) || \
       !empty(MACHINE_PLATFORM:MDarwin-*-*) || \
       !empty(MACHINE_PLATFORM:MSunOS-*-*)
-PLIST_SRC+=	${PKGDIR}/PLIST.natdynlink
+PLIST.ocaml-nat= yes
 .  endif
 .endif
 
 # Spacetime profiling is only available for native code on 64-bit targets.
 .if ${MACHINE_ARCH} == "x86_64"
-PLIST_SRC+=	${PKGDIR}/PLIST.raw_spacetime
+PLIST.ocaml-spacetime= yes
 .endif
-
-# Common ocaml files.
-PLIST_SRC+=	${PKGDIR}/PLIST
 
 # This is needed because ${WRKSRC}/build/partial-install.sh uses
 # $PWD as part of its script.  However, with /bin/sh on SunOS
