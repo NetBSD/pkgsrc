@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2017/01/21 19:32:11 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.25 2017/09/08 02:27:44 ryoon Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -283,6 +283,7 @@ share/locale/gl/LC_MESSAGES/pulseaudio.mo
 share/locale/gu/LC_MESSAGES/pulseaudio.mo
 share/locale/he/LC_MESSAGES/pulseaudio.mo
 share/locale/hi/LC_MESSAGES/pulseaudio.mo
+share/locale/hr/LC_MESSAGES/pulseaudio.mo
 share/locale/hu/LC_MESSAGES/pulseaudio.mo
 share/locale/id/LC_MESSAGES/pulseaudio.mo
 share/locale/it/LC_MESSAGES/pulseaudio.mo
@@ -293,6 +294,7 @@ share/locale/lt/LC_MESSAGES/pulseaudio.mo
 share/locale/ml/LC_MESSAGES/pulseaudio.mo
 share/locale/mr/LC_MESSAGES/pulseaudio.mo
 share/locale/nl/LC_MESSAGES/pulseaudio.mo
+share/locale/nn/LC_MESSAGES/pulseaudio.mo
 share/locale/oc/LC_MESSAGES/pulseaudio.mo
 share/locale/or/LC_MESSAGES/pulseaudio.mo
 share/locale/pa/LC_MESSAGES/pulseaudio.mo
