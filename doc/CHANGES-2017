@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3681 2017/09/08 20:14:36 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3682 2017/09/08 20:27:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5191,3 +5191,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/ocsigen to 2.8nb3 [jaapb 2017-09-08]
 	Updated lang/coq to 8.6.1 [jaapb 2017-09-08]
 	Updated net/syncthing to 0.14.37 [wiz 2017-09-08]
+	Updated print/poppler-data to 0.4.8 [wiz 2017-09-08]
