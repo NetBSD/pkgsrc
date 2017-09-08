@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/09/08 16:55:19 jaapb Exp $
+# $NetBSD: Makefile,v 1.21 2017/09/08 17:04:57 jaapb Exp $
 #
 
 GITHUB_PROJECT=	js_of_ocaml
@@ -26,6 +26,7 @@ JBUILDER_BUILD_PACKAGES=	js_of_ocaml-compiler js_of_ocaml js_of_ocaml-ocamlbuild
 .include "../../devel/ocaml-cppo/buildlink3.mk"
 .include "../../devel/ocaml-lwt/buildlink3.mk"
 .include "../../devel/ocaml-migrate-parsetree/buildlink3.mk"
+.include "../../devel/ocaml-ppx_deriving/buildlink3.mk"
 .include "../../devel/ocaml-ppx_tools_versioned/buildlink3.mk"
 .include "../../textproc/ocaml-uchar/buildlink3.mk"
 .include "../../mk/ocaml.mk"
