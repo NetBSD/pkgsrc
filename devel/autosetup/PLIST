@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/08 06:47:12 wiz Exp $
+bin/autosetup
+bin/autosetup-config.guess
+bin/autosetup-config.sub
+bin/autosetup-find-tclsh
+bin/autosetup-test-tclsh
