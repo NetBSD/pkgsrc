@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.695 2017/09/06 16:49:28 wiz Exp $
+# $NetBSD: Makefile,v 1.696 2017/09/08 21:57:40 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -185,8 +185,6 @@ SUBDIR+=	tex-abstract
 SUBDIR+=	tex-abstract-doc
 SUBDIR+=	tex-acmconf
 SUBDIR+=	tex-acmconf-doc
-SUBDIR+=	tex-acromake
-SUBDIR+=	tex-acromake-doc
 SUBDIR+=	tex-acronym
 SUBDIR+=	tex-acronym-doc
 SUBDIR+=	tex-adjustbox
@@ -372,8 +370,6 @@ SUBDIR+=	tex-chessfss
 SUBDIR+=	tex-chessfss-doc
 SUBDIR+=	tex-chngcntr
 SUBDIR+=	tex-chngcntr-doc
-SUBDIR+=	tex-circle
-SUBDIR+=	tex-circle-doc
 SUBDIR+=	tex-cite
 SUBDIR+=	tex-cite-doc
 SUBDIR+=	tex-cjk
@@ -909,7 +905,6 @@ SUBDIR+=	tex-minitoc
 SUBDIR+=	tex-minitoc-doc
 SUBDIR+=	tex-minted
 SUBDIR+=	tex-minted-doc
-SUBDIR+=	tex-misc209
 SUBDIR+=	tex-mkpattern
 SUBDIR+=	tex-mkpattern-doc
 SUBDIR+=	tex-mltex
