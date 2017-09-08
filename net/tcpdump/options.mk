@@ -1,16 +1,10 @@
-# $NetBSD: options.mk,v 1.3 2012/06/12 15:46:01 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2017/09/08 11:10:41 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tcpdump
-PKG_SUPPORTED_OPTIONS=	inet6 ssl libsmi
-PKG_SUGGESTED_OPTIONS=	inet6 ssl
+PKG_SUPPORTED_OPTIONS=	ssl libsmi
+PKG_SUGGESTED_OPTIONS=	ssl
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--enable-ipv6
-.else
-CONFIGURE_ARGS+=	--disable-ipv6
-.endif
 
 .if !empty(PKG_OPTIONS:Mssl)
 USE_OLD_DES_API=	yes
