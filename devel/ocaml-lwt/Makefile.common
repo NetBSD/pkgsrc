@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.common,v 1.1 2017/09/08 12:45:33 jaapb Exp $
+
+# used by devel/ocaml-lwt_glib/Makefile
+# used by devel/ocaml-lwt_react/Makefile
+# used by devel/ocaml-lwt_ssl/Makefile
+
+LWT_VERSION=	3.1.0
+DISTNAME=	lwt-${LWT_VERSION}
+
+LICENSE=	gnu-lgpl-v2.1
+
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
+GITHUB_PROJECT=	lwt
+GITHUB_TAG=	${LWT_VERSION}
+
+OCAML_USE_JBUILDER=	yes
+JBUILDER_BUILD_FLAGS=	--only-packages
+
+DISTINFO_FILE=	${PKGDIR}/../../devel/ocaml-lwt/distinfo
+PATCHDIR=	${PKGDIR}/../../devel/ocaml-lwt/patches
