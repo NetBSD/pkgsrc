@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/07/11 11:14:58 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/08 11:51:36 jaapb Exp $
 
-VERSION=	1.0_beta10
+VERSION=	1.0_beta13
 GITHUB_PROJECT=	jbuilder
 GITHUB_TAG=	${VERSION:S/_/+/}
 DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/janestreet/jbuilder/
 COMMENT=	Composable build system for OCaml
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/jbuilder-1.0-beta10
+WRKSRC=		${WRKDIR}/jbuilder-1.0-beta13
 USE_LANGUAGES=	# none
 
 BUILD_TARGET=	default
