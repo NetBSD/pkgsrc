@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/03/16 19:55:55 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/09/08 07:55:17 wiz Exp $
 bin/xmlwf
 include/expat.h
 include/expat_config.h
@@ -6,5 +6,7 @@ include/expat_external.h
 lib/libexpat.la
 lib/pkgconfig/expat.pc
 man/man1/xmlwf.1
+share/doc/expat/AUTHORS
+share/doc/expat/changelog
 share/doc/html/expat/reference.html
 share/doc/html/expat/style.css
