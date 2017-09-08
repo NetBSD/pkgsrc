@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:15 joerg Exp $
-info/muse
-share/doc/emacs-muse/emacs-wiki-migration.txt
-share/doc/emacs-muse/muse.rnc
+@comment $NetBSD: PLIST,v 1.3 2017/09/08 22:21:05 hauke Exp $
 ${EMACS_LISPPREFIX}/muse/contrib/cgi.el
 ${EMACS_LISPPREFIX}/muse/contrib/cgi.elc
+${EMACS_LISPPREFIX}/muse/contrib/htmlize-hack.el
 ${EMACS_LISPPREFIX}/muse/contrib/httpd.el
 ${EMACS_LISPPREFIX}/muse/contrib/httpd.elc
 ${EMACS_LISPPREFIX}/muse/experimental/muse-cite.el
@@ -30,12 +28,16 @@ ${EMACS_LISPPREFIX}/muse/muse-html.el
 ${EMACS_LISPPREFIX}/muse/muse-html.elc
 ${EMACS_LISPPREFIX}/muse/muse-http.el
 ${EMACS_LISPPREFIX}/muse/muse-http.elc
+${EMACS_LISPPREFIX}/muse/muse-ikiwiki.el
+${EMACS_LISPPREFIX}/muse/muse-ikiwiki.elc
 ${EMACS_LISPPREFIX}/muse/muse-import-docbook.el
 ${EMACS_LISPPREFIX}/muse/muse-import-docbook.elc
 ${EMACS_LISPPREFIX}/muse/muse-import-latex.el
 ${EMACS_LISPPREFIX}/muse/muse-import-latex.elc
 ${EMACS_LISPPREFIX}/muse/muse-import-xml.el
 ${EMACS_LISPPREFIX}/muse/muse-import-xml.elc
+${EMACS_LISPPREFIX}/muse/muse-ipc.el
+${EMACS_LISPPREFIX}/muse/muse-ipc.elc
 ${EMACS_LISPPREFIX}/muse/muse-journal.el
 ${EMACS_LISPPREFIX}/muse/muse-journal.elc
 ${EMACS_LISPPREFIX}/muse/muse-latex.el
@@ -64,6 +66,8 @@ ${EMACS_LISPPREFIX}/muse/muse-xml.el
 ${EMACS_LISPPREFIX}/muse/muse-xml.elc
 ${EMACS_LISPPREFIX}/muse/muse.el
 ${EMACS_LISPPREFIX}/muse/muse.elc
+share/doc/emacs-muse/emacs-wiki-migration.txt
+share/doc/emacs-muse/muse.rnc
 share/examples/emacs-muse/QuickStart.muse
 share/examples/emacs-muse/emacs-muse.png
 share/examples/emacs-muse/muse-made-with.png
