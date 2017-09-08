@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2017/07/30 22:32:23 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2017/09/08 09:51:26 jaapb Exp $
 #
 
 DISTNAME=	ocaml-text-0.8
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vbmithr/}
 

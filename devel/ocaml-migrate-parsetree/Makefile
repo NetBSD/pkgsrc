@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/07/23 14:38:05 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/08 09:51:21 jaapb Exp $
 
 VERSION=	1.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 GITHUB_PROJECT=	ocaml-migrate-parsetree
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=	devel

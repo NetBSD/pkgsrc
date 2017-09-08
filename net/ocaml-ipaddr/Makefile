@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2017/07/21 14:21:26 jaapb Exp $
+# $NetBSD: Makefile,v 1.11 2017/09/08 09:51:24 jaapb Exp $
 
 VERSION=	2.8.0
 GITHUB_PROJECT=	ocaml-ipaddr
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 
