@@ -1,16 +1,15 @@
-$NetBSD: patch-otherlibs_dynlink_Makefile,v 1.4 2016/05/05 08:12:01 jaapb Exp $
+$NetBSD: patch-otherlibs_dynlink_Makefile,v 1.5 2017/09/08 09:12:44 jaapb Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp
-
---- otherlibs/dynlink/Makefile.orig	2016-04-01 12:53:41.000000000 +0000
+--- otherlibs/dynlink/Makefile.orig	2017-06-28 14:09:39.000000000 +0000
 +++ otherlibs/dynlink/Makefile
-@@ -88,12 +88,12 @@ extract_crc: dynlink.cma extract_crc.cmo
+@@ -90,12 +90,12 @@ extract_crc: dynlink.cma extract_crc.cmo
  INSTALL_LIBDIR=$(DESTDIR)$(LIBDIR)
  
  install:
--	cp dynlink.cmi dynlink.cma dynlink.mli "$(INSTALL_LIBDIR)"
+-	cp dynlink.cmi dynlink.cmti dynlink.cma dynlink.mli "$(INSTALL_LIBDIR)"
 -	cp extract_crc "$(INSTALL_LIBDIR)/extract_crc$(EXE)"
-+	$(BSD_INSTALL_DATA) dynlink.cmi dynlink.cma dynlink.mli "$(INSTALL_LIBDIR)"
++	$(BSD_INSTALL_DATA) dynlink.cmi dynlink.cmti dynlink.cma dynlink.mli "$(INSTALL_LIBDIR)"
 +	$(BSD_INSTALL_SCRIPT) extract_crc "$(INSTALL_LIBDIR)/extract_crc$(EXE)"
  
  installopt:

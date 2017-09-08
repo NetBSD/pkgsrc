@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST.natdynlink,v 1.2 2012/10/08 15:05:32 jaapb Exp $
-lib/ocaml/bigarray.cmxs
-lib/ocaml/dynlink.a
-lib/ocaml/dynlink.cmx
-lib/ocaml/dynlink.cmxa
-lib/ocaml/nums.cmxs
-lib/ocaml/str.cmxs
-lib/ocaml/unix.cmxs
