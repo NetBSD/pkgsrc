@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3674 2017/09/08 13:05:05 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.3675 2017/09/08 13:19:52 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5184,3 +5184,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/ocaml-lwt_react version 1.1.0 [jaapb 2017-09-08]
 	Added devel/ocaml-lwt_ssl version 1.1.0 [jaapb 2017-09-08]
 	Added devel/ocaml-lwt_glib version 1.1.0 [jaapb 2017-09-08]
+	Updated devel/js_of_ocaml to 3.0.0 [jaapb 2017-09-08]
