@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2017/08/24 02:44:50 markd Exp $
+# $NetBSD: Makefile,v 1.30 2017/09/08 22:25:26 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2017pre3
+PKGNAME=	texlive-${DISTNAME}-2017pre4
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	44959
@@ -214,7 +214,7 @@ DEPENDS+=	tex-cooking-[0-9]*:../../print/tex-cooking
 # depend crossreference
 DEPENDS+=	tex-csquotes-[0-9]*:../../print/tex-csquotes
 # depend css-colors
-# depend csvsimple
+DEPENDS+=	tex-csvsimple-[0-9]*:../../textproc/tex-csvsimple
 DEPENDS+=	tex-cuisine-[0-9]*:../../print/tex-cuisine
 # depend currency
 # depend currfile
