@@ -1,0 +1,77 @@
+$NetBSD: patch-META.lwt,v 1.1 2017/09/08 12:57:35 jaapb Exp $
+
+Directories need to be recognised
+--- META.lwt.orig	2017-07-19 21:50:36.000000000 +0000
++++ META.lwt
+@@ -14,7 +14,7 @@ plugin(byte) = "lwt.cma"
+ plugin(native) = "lwt.cmxs"
+ 
+ package "log" (
+-  #directory = "log"
++  directory = "log"
+   version = "3.1.0"
+   description = "Logger for Lwt"
+   requires = "bytes lwt result"
+@@ -26,7 +26,7 @@ package "log" (
+ )
+ 
+ package "ppx" (
+-  #directory = "ppx"
++  directory = "ppx"
+   version = "3.1.0"
+   description = "Lwt PPX syntax extension"
+   requires(ppx_driver) = "lwt.omp"
+@@ -50,7 +50,7 @@ package "omp" (
+ )
+ 
+ package "preemptive" (
+-  #directory = "preemptive"
++  directory = "preemptive"
+   version = "3.1.0"
+   description = "Preemptive thread support for Lwt"
+   requires = "bigarray
+@@ -70,7 +70,7 @@ package "preemptive" (
+ )
+ 
+ package "simple-top" (
+-  #directory = "simple-top"
++  directory = "simple-top"
+   version = "3.1.0"
+   description = "Lwt-OCaml top level integration (deprecated; use utop)"
+   requires = "bigarray
+@@ -90,7 +90,7 @@ package "simple-top" (
+ )
+ 
+ package "syntax" (
+-  #directory = "syntax"
++  directory = "syntax"
+   version = "3.1.0"
+   description = "Camlp4 syntax for Lwt (deprecated; use lwt.ppx)"
+   requires = "camlp4 lwt.syntax.options"
+@@ -101,7 +101,7 @@ package "syntax" (
+   exists_if = "lwt_syntax.cma"
+ 
+   package "log" (
+-    #directory = "log"
++    directory = "log"
+     version = "3.1.0"
+     description = "Camlp4 syntax for Lwt logging (deprecated; use lwt.ppx)"
+     requires = "camlp4 lwt.syntax.options"
+@@ -113,7 +113,7 @@ package "syntax" (
+   )
+ 
+   package "options" (
+-    #directory = "options"
++    directory = "options"
+     version = "3.1.0"
+     description = "Options for Lwt Camlp4 syntax extension (deprecated; use lwt.ppx)"
+     requires = "camlp4"
+@@ -126,7 +126,7 @@ package "syntax" (
+ )
+ 
+ package "unix" (
+-  #directory = "unix"
++  directory = "unix"
+   version = "3.1.0"
+   description = "Unix support for Lwt"
+   requires = "bigarray bytes lwt lwt.log result unix"
