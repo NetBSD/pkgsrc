@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.8 2017/01/21 19:32:11 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.9 2017/09/08 02:27:44 ryoon Exp $
 
 * Don't assume sys/capability.h is guaranteed present on Linux.
 * Fix NetBSD detection for libatomics_ops check.
@@ -15,7 +15,7 @@ $NetBSD: patch-configure.ac,v 1.8 2017/01/21 19:32:11 ryoon Exp $
  AC_PREREQ(2.63)
  
 -AC_INIT([pulseaudio],[m4_esyscmd(./git-version-gen .tarball-version)],[pulseaudio-discuss (at) lists (dot) freedesktop (dot) org],[pulseaudio],[http://pulseaudio.org/])
-+AC_INIT([pulseaudio],[10.0],[pulseaudio-discuss (at) lists (dot) freedesktop (dot) org],[pulseaudio],[http://pulseaudio.org/])
++AC_INIT([pulseaudio],[11.0],[pulseaudio-discuss (at) lists (dot) freedesktop (dot) org],[pulseaudio],[http://pulseaudio.org/])
  AC_CONFIG_SRCDIR([src/daemon/main.c])
  AC_CONFIG_MACRO_DIR([m4])
  AC_CONFIG_HEADERS([config.h])
