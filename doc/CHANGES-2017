@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3659 2017/09/08 08:46:00 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3660 2017/09/08 08:48:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5165,3 +5165,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/cmake to 3.9.2 [adam 2017-09-08]
 	Updated x11/xf86-video-amdgpu to 1.4.0 [wiz 2017-09-08]
 	Updated x11/xf86-video-ati to 7.10.0 [wiz 2017-09-08]
+	Updated security/p5-IO-Socket-SSL to 2.051 [wiz 2017-09-08]
