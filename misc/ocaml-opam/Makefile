@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2017/09/08 09:51:24 jaapb Exp $
+# $NetBSD: Makefile,v 1.17 2017/09/08 16:50:46 jaapb Exp $
 
-VERSION=	2.0.0_beta3
+VERSION=	2.0.0_beta4
 GITHUB_PROJECT=	opam
 GITHUB_TAG=	${VERSION:S/_/-/}
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
@@ -15,14 +14,7 @@ COMMENT=	OCaml package manager
 LICENSE=	gnu-lgpl-v3
 MAKE_JOBS_SAFE=	no
 
-HAS_CONFIGURE=	yes
-USE_TOOLS+=	bash gawk gmake
-
-CONFIGURE_ARGS+=	--prefix=${PREFIX} --mandir=${PREFIX}/${PKGMANDIR}
-
-BUILD_TARGET=	all
-INSTALL_TARGET=	install libinstall
-INSTALL_ENV+=	LIBINSTALL_DIR=${DESTDIR}${PREFIX}/${OCAML_SITELIBDIR}
+OCAML_USE_JBUILDER=	yes
 
 .include "../../devel/ocaml-cmdliner/buildlink3.mk"
 .include "../../devel/ocaml-extlib/buildlink3.mk"
