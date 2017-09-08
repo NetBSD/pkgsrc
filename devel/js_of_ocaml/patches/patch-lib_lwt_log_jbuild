@@ -1,0 +1,12 @@
+$NetBSD: patch-lib_lwt_log_jbuild,v 1.1 2017/09/08 13:19:34 jaapb Exp $
+
+Lwt_log is actually in lwt.unix now
+--- lib/lwt/log/jbuild.orig	2017-06-22 04:36:10.000000000 +0000
++++ lib/lwt/log/jbuild
+@@ -4,5 +4,5 @@
+   (public_name js_of_ocaml-lwt.logger)
+   (synopsis "Lwt logger for js_of_ocaml.")
+   (optional)
+-  (libraries (js_of_ocaml lwt lwt.log))
++  (libraries (js_of_ocaml lwt lwt.log lwt.unix))
+   (preprocess (pps (js_of_ocaml-ppx)))))
