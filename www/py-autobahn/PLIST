@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/07/23 17:25:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2017/09/08 11:09:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -20,13 +20,6 @@ ${PYSITELIB}/autobahn/asyncio/component.pyo
 ${PYSITELIB}/autobahn/asyncio/rawsocket.py
 ${PYSITELIB}/autobahn/asyncio/rawsocket.pyc
 ${PYSITELIB}/autobahn/asyncio/rawsocket.pyo
-${PYSITELIB}/autobahn/asyncio/test/README
-${PYSITELIB}/autobahn/asyncio/test/test_asyncio_rawsocket.py
-${PYSITELIB}/autobahn/asyncio/test/test_asyncio_rawsocket.pyc
-${PYSITELIB}/autobahn/asyncio/test/test_asyncio_rawsocket.pyo
-${PYSITELIB}/autobahn/asyncio/test/test_asyncio_websocket.py
-${PYSITELIB}/autobahn/asyncio/test/test_asyncio_websocket.pyc
-${PYSITELIB}/autobahn/asyncio/test/test_asyncio_websocket.pyo
 ${PYSITELIB}/autobahn/asyncio/util.py
 ${PYSITELIB}/autobahn/asyncio/util.pyc
 ${PYSITELIB}/autobahn/asyncio/util.pyo
