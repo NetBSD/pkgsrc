@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2017/04/22 21:03:22 adam Exp $
+# $NetBSD: Makefile,v 1.43 2017/09/08 02:38:46 ryoon Exp $
 
 DISTNAME=	qtwebkit-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebkit-${QTVERSION}
-PKGREVISION=	11
+PKGREVISION=	12
 COMMENT=	Qt5 WebView module
 
 BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
