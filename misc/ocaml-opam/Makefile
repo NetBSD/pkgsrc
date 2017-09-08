@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/09/08 16:50:46 jaapb Exp $
+# $NetBSD: Makefile,v 1.18 2017/09/08 19:10:21 jaapb Exp $
 
 VERSION=	2.0.0_beta4
 GITHUB_PROJECT=	opam
@@ -15,6 +15,14 @@ LICENSE=	gnu-lgpl-v3
 MAKE_JOBS_SAFE=	no
 
 OCAML_USE_JBUILDER=	yes
+OCAML_USE_OPAM=		no # obviously
+
+do-install:
+	cd ${WRKSRC} && _build/install/default/bin/opam-installer -i --prefix \
+			${DESTDIR}${PREFIX} \
+			--libdir ${OCAML_SITELIBDIR} \
+			--docdir ${DESTDIR}/${OCAML_TOPKG_DOCDIR} \
+			opam.install
 
 .include "../../devel/ocaml-cmdliner/buildlink3.mk"
 .include "../../devel/ocaml-extlib/buildlink3.mk"
