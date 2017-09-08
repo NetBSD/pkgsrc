@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/08 13:02:53 jaapb Exp $
+${OCAML_SITELIB}/lwt_ssl/META
+${OCAML_SITELIB}/lwt_ssl/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_ssl/lwt_ssl.a
+${OCAML_SITELIB}/lwt_ssl/lwt_ssl.cma
+${OCAML_SITELIB}/lwt_ssl/lwt_ssl.cmi
+${OCAML_SITELIB}/lwt_ssl/lwt_ssl.cmt
+${OCAML_SITELIB}/lwt_ssl/lwt_ssl.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_ssl/lwt_ssl.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_ssl/lwt_ssl.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_ssl/lwt_ssl.cmxs
+${OCAML_SITELIB}/lwt_ssl/lwt_ssl.mli
+share/doc/lwt_ssl/CHANGES
+share/doc/lwt_ssl/README.md
