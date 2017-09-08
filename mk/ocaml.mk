@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.16 2017/09/08 19:09:26 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.17 2017/09/08 22:18:46 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -76,9 +76,6 @@ OCAML_USE_OASIS?=	no
 # Default value of OCAML_USE_OASIS_DYNRUN
 OCAML_USE_OASIS_DYNRUN?=	no
 
-# Default value of OCAML_USE_OPAM
-OCAML_USE_OPAM?= no
-
 # Default value of OCAML_USE_TOPKG
 OCAML_USE_TOPKG?=	no
 
@@ -135,6 +132,14 @@ CONFIGURE_ARGS+=	--override is_native false
 .endif
 .endif
 
+# Configure stuff for JBUILDER
+.if ${OCAML_USE_JBUILDER} == "yes"
+.include "../../devel/ocaml-jbuilder/buildlink3.mk"
+OCAML_USE_OPAM?=	yes
+.else
+OCAML_USE_OPAM?=	no
+.endif
+
 # Configure stuff for OPAM
 .if ${OCAML_USE_OPAM} == "yes"
 .include "../../misc/ocaml-opam/buildlink3.mk"
@@ -145,12 +150,6 @@ CONFIGURE_ARGS+=	--override is_native false
 .include "../../misc/ocaml-topkg/buildlink3.mk"
 OCAML_USE_FINDLIB=	yes
 INSTALLATION_DIRS+=	${OCAML_SITELIBDIR}/${OCAML_TOPKG_NAME}
-.endif
-
-# Configure stuff for JBUILDER
-.if ${OCAML_USE_JBUILDER} == "yes"
-.include "../../devel/ocaml-jbuilder/buildlink3.mk"
-OCAML_USE_OPAM?=	yes
 .endif
 
 # Value for OCAML_SITELIBDIR
