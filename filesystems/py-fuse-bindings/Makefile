@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/01/01 14:43:39 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/09/08 06:23:13 wiz Exp $
 
 VERSION=		0.2.1
 DISTNAME=		fuse-python-${VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=		filesystems python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fuse/fuse-python}/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://sourceforge.net/apps/mediawiki/fuse/index.php?title=FusePython
+HOMEPAGE=		https://pypi.python.org/pypi/fuse-python
 COMMENT=		Python bindings for FUSE and refuse
 LICENSE=		gnu-lgpl-v2.1
 
