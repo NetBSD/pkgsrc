@@ -1,7 +1,17 @@
-$NetBSD: distinfo,v 1.9 2016/12/30 11:55:53 jaapb Exp $
+$NetBSD: distinfo,v 1.10 2017/09/08 17:10:46 jaapb Exp $
 
 SHA1 (ocsigenserver-2.8.tar.gz) = 1043cd33b3e356a29957b95005edff0930c11be4
 RMD160 (ocsigenserver-2.8.tar.gz) = 729596c04091ed471b51ff7139359461ef883de9
 SHA512 (ocsigenserver-2.8.tar.gz) = 80d5125a93239c73756b03a0f50d83e691810f93a15525daef2f7ccd69279e348f03486c26319a9511c1a746f375317082a89ba37ce0ba22872d6db7d3fddf1b
 Size (ocsigenserver-2.8.tar.gz) = 1265240 bytes
 SHA1 (patch-Makefile) = 637a45aacd7c8afaeb73be624eb7732b21e78b4d
+SHA1 (patch-Makefile.options) = 2a4e171d7be05411e28ada231b819901eb6c0fad
+SHA1 (patch-configure) = f7c97a277a30f828ccd41fdd00e0fa5d1d403022
+SHA1 (patch-src_extensions_Makefile) = 9715d890e08688023a98b596b72917ca08734b7c
+SHA1 (patch-src_extensions_ocsipersist-dbm_ocsidbm.ml) = cabdf3b511703186887108580697e7427a89658a
+SHA1 (patch-src_extensions_ocsipersist-pgsql_Makefile) = 9490a9d580142bbf9114d65396d54ac991b4ca7d
+SHA1 (patch-src_files_META.in) = bc90fa2f55e35e56922b741a94c1e1414571a9bc
+SHA1 (patch-src_http_Makefile) = 19f5620a710abffa479e364b1b48cbdc7cae7f5a
+SHA1 (patch-src_server_ocsigen_server.ml) = 0218d0878cd6c4654f6fccb4911889cb3bfe2e40
+SHA1 (patch-src_server_ocsigen_socket.ml) = a2f108c8355966f422f68541270d612e640a41b3
+SHA1 (patch-src_server_ocsigen_socket.mli) = 45a9d13b802322ccc3ce52eef0e6c5f704a9a62f
