@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2500 2017/09/06 10:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.2501 2017/09/08 06:47:34 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -72,6 +72,7 @@ SUBDIR+=	autogen
 SUBDIR+=	automake
 SUBDIR+=	automake14
 SUBDIR+=	automoc4
+SUBDIR+=	autosetup
 SUBDIR+=	avl
 SUBDIR+=	avltree
 SUBDIR+=	bam
