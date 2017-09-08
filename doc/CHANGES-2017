@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3677 2017/09/08 16:17:12 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.3678 2017/09/08 16:51:07 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5187,3 +5187,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/js_of_ocaml to 3.0.0 [jaapb 2017-09-08]
 	Updated net/tinc to 1.0.32 [jperkin 2017-09-08]
 	Added chat/matterircd version 0.14.0 [jperkin 2017-09-08]
+	Updated misc/ocaml-opam to 2.0.0_beta4 [jaapb 2017-09-08]
