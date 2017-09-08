@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2017/07/11 11:18:16 jaapb Exp $
+$NetBSD: distinfo,v 1.5 2017/09/08 12:21:36 jaapb Exp $
 
-SHA1 (ppx_deriving-4.1.tar.gz) = 8e1187b51387627a63aa764b448fe4f7ac18a0cf
-RMD160 (ppx_deriving-4.1.tar.gz) = 83414f3c22ec64a302ab4a399b8408ee533170f7
-SHA512 (ppx_deriving-4.1.tar.gz) = 5191565254edd036ebe4d1eae1c660bcac293c000ce1f3eb12aeb1fb05b82d93bb28ddb88ab31967f98827838ce1c57e6f83f767f4dfe41eb265bad6dfaa5e8a
-Size (ppx_deriving-4.1.tar.gz) = 46502 bytes
+SHA1 (ppx_deriving-4.2.tar.gz) = 7a5f18246cf19e59683874496dc0105335952884
+RMD160 (ppx_deriving-4.2.tar.gz) = cc57036e999a28a8553d80f0615da5fb42398d9c
+SHA512 (ppx_deriving-4.2.tar.gz) = 084526157d6f4b41f7ad73157c5edb54d5bb9130d706525031670d8495ede8af5545302f442c2d2c506772201b79ccc93bdc7fead9455d3a59977ddfa9c3284d
+Size (ppx_deriving-4.2.tar.gz) = 48327 bytes
 SHA1 (patch-Makefile) = 5c28a06e9669df38d220149964b5cdea2141b4bb
