@@ -1,24 +1,47 @@
-$NetBSD: patch-stdlib_Makefile,v 1.4 2016/05/05 08:12:01 jaapb Exp $
+$NetBSD: patch-stdlib_Makefile,v 1.5 2017/09/08 09:12:44 jaapb Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp
-
---- stdlib/Makefile.orig	2016-04-01 12:53:41.000000000 +0000
+--- stdlib/Makefile.orig	2017-06-28 14:09:39.000000000 +0000
 +++ stdlib/Makefile
-@@ -27,7 +27,7 @@ allopt-prof: stdlib.p.cmxa std_exit.p.cm
- installopt: installopt-default installopt-$(PROFILING)
+@@ -81,19 +81,19 @@ INSTALL_LIBDIR=$(DESTDIR)$(LIBDIR)
  
- installopt-default:
--	cp stdlib.cmxa stdlib.a std_exit.o *.cmx "$(INSTALL_LIBDIR)"
-+	$(BSD_INSTALL_DATA) stdlib.cmxa stdlib.a std_exit.o *.cmx "$(INSTALL_LIBDIR)"
- 	cd "$(INSTALL_LIBDIR)"; $(RANLIB) stdlib.a
- 
- installopt-noprof:
-@@ -41,7 +41,7 @@ installopt-noprof:
- 	  ln -s std_exit.o "$(INSTALL_LIBDIR)/std_exit.p.o"
- 
- installopt-prof:
--	cp stdlib.p.cmxa stdlib.p.a std_exit.p.cmx std_exit.p.o \
-+	$(BSD_INSTALL_DATA) stdlib.p.cmxa stdlib.p.a std_exit.p.cmx std_exit.p.o \
+ .PHONY: install
+ install::
+-	cp stdlib.cma std_exit.cmo *.cmi *.cmt *.cmti *.mli *.ml \
++	$(BSD_INSTALL_DATA) stdlib.cma std_exit.cmo *.cmi *.cmt *.cmti *.mli *.ml \
+ 	  camlheader_ur \
  	  "$(INSTALL_LIBDIR)"
- 	cd "$(INSTALL_LIBDIR)"; $(RANLIB) stdlib.p.a
+-	cp target_camlheader "$(INSTALL_LIBDIR)/camlheader"
++	$(BSD_INSTALL_SCRIPT) target_camlheader "$(INSTALL_LIBDIR)/camlheader"
+ 
+ ifeq "$(RUNTIMED)" "true"
+ install::
+-	cp target_camlheaderd $(INSTALL_LIBDIR)
++	$(BSD_INSTALL_SCRIPT) target_camlheaderd $(INSTALL_LIBDIR)
+ endif
+ 
+ ifeq "$(RUNTIMEI)" "true"
+ install::
+-	cp target_camlheaderi $(INSTALL_LIBDIR)
++	$(BSD_INSTALL_SCRIPT) target_camlheaderi $(INSTALL_LIBDIR)
+ endif
+ 
+ .PHONY: installopt
+@@ -101,7 +101,7 @@ installopt: installopt-default installop
+ 
+ .PHONY: installopt-default
+ installopt-default:
+-	cp stdlib.cmxa stdlib.$(A) std_exit.$(O) *.cmx "$(INSTALL_LIBDIR)"
++	$(BSD_INSTALL_DATA) stdlib.cmxa stdlib.$(A) std_exit.$(O) *.cmx "$(INSTALL_LIBDIR)"
+ 	cd "$(INSTALL_LIBDIR)"; $(RANLIB) stdlib.$(A)
+ 
+ .PHONY: installopt-noprof
+@@ -109,7 +109,7 @@ installopt-noprof:
+ 
+ .PHONY: installopt-prof
+ installopt-prof:
+-	cp stdlib.p.cmxa stdlib.p.$(A) std_exit.p.cmx std_exit.p.$(O) \
++	$(BSD_INSTALL_DATA) stdlib.p.cmxa stdlib.p.$(A) std_exit.p.cmx std_exit.p.$(O) \
+ 	  "$(INSTALL_LIBDIR)"
+ 	cd "$(INSTALL_LIBDIR)"; $(RANLIB) stdlib.p.$(A)
  
