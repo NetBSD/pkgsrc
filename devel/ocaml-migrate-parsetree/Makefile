@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/09/08 09:51:21 jaapb Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/08 22:19:52 jaapb Exp $
 
 VERSION=	1.0.1
 PKGREVISION=	2
@@ -16,7 +16,7 @@ USE_LANGUAGES=	c
 OCAML_USE_FINDLIB=	yes
 OCAML_FINDLIB_DIRS=	${GITHUB_PROJECT}
 OCAML_USE_JBUILDER=	yes
-OCAML_TOPKG_NAME=	${GITHUB_PROJECT}
+OPAM_INSTALL_FILES=	${GITHUB_PROJECT}
 
 .include "../../mk/ocaml.mk"
 .include "../../devel/ocamlbuild/buildlink3.mk"
