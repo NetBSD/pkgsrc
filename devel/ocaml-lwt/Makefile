@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2017/09/08 12:45:33 jaapb Exp $
+# $NetBSD: Makefile,v 1.31 2017/09/08 16:54:31 jaapb Exp $
 #
 
 .include "Makefile.common"
 
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	jaapb@NetBSD.org
