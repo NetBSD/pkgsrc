@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/08/27 12:16:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/09/08 11:03:28 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -78,6 +78,9 @@ ${PYSITELIB}/hypothesis/internal/conjecture/data.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/engine.py
 ${PYSITELIB}/hypothesis/internal/conjecture/engine.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/engine.pyo
+${PYSITELIB}/hypothesis/internal/conjecture/floats.py
+${PYSITELIB}/hypothesis/internal/conjecture/floats.pyc
+${PYSITELIB}/hypothesis/internal/conjecture/floats.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/minimizer.py
 ${PYSITELIB}/hypothesis/internal/conjecture/minimizer.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/minimizer.pyo
