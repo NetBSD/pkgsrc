@@ -1,0 +1,24 @@
+Minimal IRC server which integrates with Mattermost and Slack.
+
+Features:
+
+ - support direct messages / private channels / edited messages
+ - auto-join/leave to same channels as on mattermost
+ - reconnects with backoff on mattermost restarts
+ - support multiple users
+ - support channel backlog (messages when you're disconnected from
+   IRC/mattermost)
+ - search messages (/msg mattermost search query)
+ - scrollback support (/msg mattermost scrollback #channel limit)
+ - restrict to specified mattermost instances
+ - set default team/server
+ - WHOIS, WHO, JOIN, LEAVE, NICK, LIST, ISON, PRIVMSG, MODE, TOPIC,
+   LUSERS, AWAY, KICK, INVITE support
+ - support TLS (ssl)
+ - support LDAP logins (mattermost enterprise) (use your ldap
+   account/pass to login)
+ - &users channel that contains members of all teams (if mattermost is
+   so configured) for easy messaging
+ - supports mattermost roles (shows admins with @ status for now)
+ - gitlab auth hack by using mmtoken cookie (see
+   https://github.com/42wim/matterircd/issues/29)
