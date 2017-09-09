@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2015/04/25 14:23:03 tnn Exp $
+# $NetBSD: Makefile,v 1.52 2017/09/09 07:10:34 adam Exp $
 
-DISTNAME=	rocksndiamonds-3.3.1.2
-PKGREVISION=	1
-CATEGORIES=	games x11
+DISTNAME=	rocksndiamonds-4.0.0.2
+CATEGORIES=	games
 MASTER_SITES=	http://www.artsoft.org/RELEASES/unix/rocksndiamonds/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,20 +9,18 @@ HOMEPAGE=	http://www.artsoft.org/rocksndiamonds/
 COMMENT=	Game like Boulder Dash, Emerald Mine, or Sokoban
 LICENSE=	gnu-gpl-v2
 
+USE_GAMESGROUP=		yes
 USE_TOOLS+=		gmake
 
-INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man6
+INSTALLATION_DIRS+=	bin
 
-BUILD_DEFS+=	VARBASE SCORE_PATH
+BUILD_DEFS+=		VARBASE SCORE_PATH
+BUILD_DIRS=		src
 
 SHARESUBDIR=		share/rocksndiamonds
 SHAREDIR=		${PREFIX}/${SHARESUBDIR}
-
-SCORE_PATH=	${VARBASE}/games/rocksndiamonds
-
+SCORE_PATH=		${VARBASE}/games/rocksndiamonds
 REQD_DIRS+=		${SHARESUBDIR}
-
-USE_GAMESGROUP=		yes
 
 OWN_DIRS_PERMS+=	${SCORE_PATH:Q}
 OWN_DIRS_PERMS+=	${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
@@ -55,35 +52,25 @@ PLIST_SRC=	PLIST ${WRKDIR}/PLIST.F
 MAKE_FLAGS+=	JOYSTICK=-DHAVE_JOYSTICK
 .endif
 
-MAKE_FLAGS+=	CC=${CC:Q}
-MAKE_FLAGS+=	MAKE=${MAKE_PROGRAM:Q}
-MAKE_FLAGS+=	X11_PATH=${X11BASE}
 MAKE_FLAGS+=	RO_GAME_DIR=${PREFIX}/share/rocksndiamonds
 MAKE_FLAGS+=	RW_GAME_DIR=${SCORE_PATH:Q}
-MAKE_FLAGS+=	X11_INCL=
-MAKE_FLAGS+=	X11_LIBS=-lX11
-
-.include "options.mk"
+MAKE_FLAGS+=	TARGET=sdl2
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rocksndiamonds ${DESTDIR}${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/rocksndiamonds.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/rocksndiamonds.6
-	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
 	# auto-generated PLIST
 	rm -f ${WRKDIR}/PLIST.F
-	set -e;								\
-	cd ${WRKSRC} &&							\
-	for d in sounds graphics levels music; do 			\
-		find "$${d}" -type d -print | while read subdir; do	\
-			${INSTALL_DATA_DIR}				\
-				${DESTDIR}${SHAREDIR}/"$${subdir}";	\
-		done ;							\
-		find "$${d}" -type f -print | while read f; do		\
-			${INSTALL_DATA} "$${f}"				\
-				${DESTDIR}${SHAREDIR}/"$${f}";		\
-			${ECHO} ${SHARESUBDIR}/"$${f}" >> ${WRKDIR}/PLIST.F;\
-		done ;							\
+	${RUN} cd ${WRKSRC} && for d in sounds graphics levels music; do \
+		find "$${d}" -type d -print | while read s; do \
+			${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}/"$${s}"; \
+		done; \
+		find "$${d}" -type f -print | while read f; do \
+			${INSTALL_DATA} "$${f}"	${DESTDIR}${SHAREDIR}/"$${f}"; \
+			${ECHO} ${SHARESUBDIR}/"$${f}" >> ${WRKDIR}/PLIST.F; \
+		done; \
 	done
 
+.include "../../audio/SDL2_mixer/buildlink3.mk"
+.include "../../graphics/SDL2_image/buildlink3.mk"
+.include "../../net/SDL2_net/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
