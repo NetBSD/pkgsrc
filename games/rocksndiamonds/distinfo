@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.27 2015/11/03 20:57:03 agc Exp $
+$NetBSD: distinfo,v 1.28 2017/09/09 07:10:34 adam Exp $
 
-SHA1 (rocksndiamonds-3.3.1.2.tar.gz) = 14afa84205f4fbba6e774a232d39961160030744
-RMD160 (rocksndiamonds-3.3.1.2.tar.gz) = e901cf7ba00a4f8de7b747b1ffbbd54eb4a56617
-SHA512 (rocksndiamonds-3.3.1.2.tar.gz) = b627e4a8e2f03dc380b5a111cc42f296b283e63b20e019f522a8a1431fe9c138eb0dc7aa0fa03dd843c3a93bcd0a90704e651f5a590cb7d4c3e3b46976125755
-Size (rocksndiamonds-3.3.1.2.tar.gz) = 2614904 bytes
-SHA1 (patch-ab) = 0b364394ae03f31c9ed966039f2f2cd2e054bca1
-SHA1 (patch-ac) = 9cbf5ff897cae129455081c941d7ae355b525d1b
-SHA1 (patch-ag) = c9c500490948a03b6f5e2fa409f52112edbf7e92
-SHA1 (patch-ah) = 584b406eef29b2849f7fc42181a7b9f29e6c9c69
-SHA1 (patch-ak) = ec80d7e32285a827afacfda4f17e686f2876fd14
+SHA1 (rocksndiamonds-4.0.0.2.tar.gz) = 9f19c740bf6fdc13a8559647ebd49131fdb469f8
+RMD160 (rocksndiamonds-4.0.0.2.tar.gz) = f865b343b07494644c16b21853b1c93b68ff9e58
+SHA512 (rocksndiamonds-4.0.0.2.tar.gz) = caab7693b37e1fa535c42e7b54eac618adeaffa31c93e70d0eeb1be438efe8a576cca8ddf37b0dec9dab8dceb85785b587eebffc26feae02de4cfd66a5386d3a
+Size (rocksndiamonds-4.0.0.2.tar.gz) = 3522458 bytes
+SHA1 (patch-src_Makefile) = 702af16aeb41f10d3ea995ad8c5c2a43f3ce9a0e
+SHA1 (patch-src_libgame_joystick.c) = 152bfcca101d5b66838d68532fbd76599297a6ef
+SHA1 (patch-src_libgame_joystick.h) = 05122ba22e0e46ba9cf12cecef710c1d591c096e
+SHA1 (patch-src_libgame_system.c) = 02fd27e60d02a61d0ad4e7f3e19825088374d696

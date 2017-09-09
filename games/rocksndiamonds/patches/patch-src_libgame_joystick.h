@@ -1,8 +1,10 @@
-$NetBSD: patch-ah,v 1.3 2002/10/19 20:06:46 heinz Exp $
+$NetBSD: patch-src_libgame_joystick.h,v 1.1 2017/09/09 07:10:34 adam Exp $
 
---- src/libgame/joystick.h.orig	Fri Apr 19 23:16:40 2002
+Allow joystick on NetBSD.
+
+--- src/libgame/joystick.h.orig	2015-10-20 21:58:08.000000000 +0000
 +++ src/libgame/joystick.h
-@@ -21,7 +21,7 @@
+@@ -19,7 +19,7 @@
  #define	JOYSTICK_ACTIVE		(1 << 1)
  #define JOYSTICK_ACTIVATED	(JOYSTICK_AVAILABLE | JOYSTICK_ACTIVE)
  
