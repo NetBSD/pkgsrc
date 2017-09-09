@@ -1,10 +1,10 @@
-$NetBSD: patch-ai,v 1.11 2017/08/26 10:07:28 fhajny Exp $
+$NetBSD: patch-ai,v 1.12 2017/09/09 22:46:57 joerg Exp $
 
 Portable test syntax
 
---- configure.orig	2016-09-29 15:19:48.000000000 +0000
+--- configure.orig	2017-07-17 12:43:00.000000000 +0000
 +++ configure
-@@ -9031,7 +9031,7 @@ fi
+@@ -9047,7 +9047,7 @@ fi
  
  smart_prefix=
  
@@ -13,7 +13,7 @@ Portable test syntax
  
  $as_echo "#define HAVE_PCAP_H 1" >>confdefs.h
  
-@@ -9274,7 +9274,7 @@ fi
+@@ -9290,7 +9290,7 @@ fi
  
  smart_prefix=
  
@@ -22,7 +22,7 @@ Portable test syntax
  
  $as_echo "#define HAVE_COLLECTDC_H 1" >>confdefs.h
  
-@@ -9517,7 +9517,7 @@ fi
+@@ -9533,7 +9533,7 @@ fi
  
  smart_prefix=
  
@@ -31,7 +31,58 @@ Portable test syntax
  
  $as_echo "#define HAVE_CAPABILITY_H 1" >>confdefs.h
  
-@@ -12640,7 +12640,7 @@ subdirs="$subdirs $mysubdirs"
+@@ -10133,7 +10133,49 @@ $as_echo "no" >&6; }
+     eval "ac_cv_type_${ac_safe_type}_has_ipi_addr="
+  fi
+ 
+-if test "x$ac_cv_type_struct_in_pktinfo_has_ipi_addr" = "xyes"; then
++
++  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for ipi_spec_dst in struct in_pktinfo" >&5
++$as_echo_n "checking for ipi_spec_dst in struct in_pktinfo... " >&6; }
++
++
++  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++
++#include <netinet/in.h>
++#ifdef HAVE_STDDEF_H
++#include <stddef.h>
++#endif
++#ifndef offsetof
++#define offsetof(TYPE, MEMBER) ((int) &((TYPE *)0)->MEMBER)
++#endif
++
++int
++main ()
++{
++ int foo = offsetof(struct in_pktinfo, ipi_spec_dst)
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_c_try_compile "$LINENO"; then :
++  has_element=" "
++else
++  has_element=
++fi
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++
++  ac_safe_type=`echo "struct in_pktinfo" | sed 'y% %_%'`
++  if test "x$has_element" != "x"; then
++    { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
++$as_echo "yes" >&6; }
++    eval "ac_cv_type_${ac_safe_type}_has_ipi_spec_dst=yes"
++  else
++    { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
++$as_echo "no" >&6; }
++    eval "ac_cv_type_${ac_safe_type}_has_ipi_spec_dst="
++ fi
++
++if test "$ac_cv_type_struct_in_pktinfo_has_ipi_addr" = "yes" && test "$ac_cv_type_struct_in_pktinfo_has_ipi_spec_dst" = "yes"; then
+ 
+ $as_echo "#define HAVE_IP_PKTINFO /**/" >>confdefs.h
+ 
+@@ -12656,7 +12698,7 @@ subdirs="$subdirs $mysubdirs"
  
  
  
