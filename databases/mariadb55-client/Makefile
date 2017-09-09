@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/09/13 19:15:13 maya Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/09 17:03:02 dholland Exp $
 
 PKGNAME=	${DISTNAME:S/-/-client-/}
 COMMENT=	MarisDB 5.5, a free SQL database (client)
@@ -25,6 +25,13 @@ REPLACE_PERL+=	scripts/mysqld_multi.sh
 REPLACE_PERL+=	scripts/mysqldumpslow.sh
 REPLACE_PERL+=	scripts/mysqlhotcopy.sh
 REPLACE_PERL+=	scripts/mytop.sh
+
+# REPLACE_PERL doesn't replace @PERL_PATH@, which is what's found in these
+# files now.
+SUBST_CLASSES+=		perlpath
+SUBST_STAGE.perlpath=	pre-configure
+SUBST_FILES.perlpath=	${REPLACE_PERL}
+SUBST_SED.perlpath=	-e s,@PERL_PATH@,perl,
 
 SUBST_CLASSES+=		fixwrap
 SUBST_STAGE.fixwrap=	post-build
