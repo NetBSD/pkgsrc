@@ -1,15 +1,25 @@
-$NetBSD: patch-configure,v 1.1 2015/12/21 06:46:04 dbj Exp $
+$NetBSD: patch-configure,v 1.2 2017/09/09 22:52:55 dholland Exp $
 
-Recognize solaris, dragonfly, and darwin.
+Recognize more clang versions.
+Recognize solaris, dragonfly, bitrig, and darwin.
 
---- configure.orig	2015-04-22 14:11:11.000000000 +0000
+--- configure.orig	2016-11-21 19:22:17.000000000 +0000
 +++ configure
-@@ -497,7 +497,7 @@ else
+@@ -392,7 +392,7 @@ if test "$have_clang" = yes; then
+ 	fi
+ 
+ 	case $cxx_version in
+-		[3].[4-9]|[3].[4-9].[0-9]|[3].[4-9].[0-9][-.]*|[4].[0-9].[0-9])
++		[3].[4-9]|[3].[4-9].[0-9]|[3-6].[4-9].[0-9][-.]*)
+ 			_cxx_major=`echo $cxx_version | cut -d '.' -f 1`
+ 			_cxx_minor=`echo $cxx_version | cut -d '.' -f 2`
+ 			cxx_version="$cxx_version, ok"
+@@ -515,7 +515,7 @@ else
  	echo_n "Checking hosttype... "
  	echo $_host_os
  	case $_host_os in
 -		linux* | openbsd* | freebsd* | kfreebsd* | netbsd* | bsd* | gnu0.* | sunos* | hpux* | beos*)
-+		linux* | openbsd* | freebsd* | kfreebsd* | netbsd* | bsd* | gnu0.* | sunos* | hpux* | beos* | solaris* | dragonfly* | darwin*)
++		linux* | openbsd* | freebsd* | kfreebsd* | netbsd* | bsd* | gnu0.* | sunos* | hpux* | beos* | solaris* | dragonfly* | bitrig* | darwin*)
  			DEFINES="$DEFINES -DUNIX"
  			_host_os=unix
  			;;
