@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3684 2017/09/08 22:27:05 markd Exp $
+$NetBSD: CHANGES-2017,v 1.3685 2017/09/09 06:16:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5199,3 +5199,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed print/tex-misc209 [markd 2017-09-08]
 	Added textproc/tex-csvsimple version 1.20 [markd 2017-09-08]
 	Added textproc/tex-csvsimple-doc version 1.20 [markd 2017-09-08]
+	Updated textproc/json-glib to 1.2.8 [ryoon 2017-09-09]
