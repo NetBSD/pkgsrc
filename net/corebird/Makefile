@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2017/08/01 14:59:03 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2017/09/09 06:18:53 ryoon Exp $
 
-DISTNAME=	corebird-1.5.1
+DISTNAME=	corebird-1.6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=baedert/}
 GITHUB_PROJECT=	corebird
@@ -24,9 +24,9 @@ TEST_TARGET=	check
 .include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../www/librest07/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gspell+=	gspell>=1.2.2
 .include "../../textproc/gspell/buildlink3.mk"
+BUILDLINK_API_DEPENDS.json-glib+=	json-glib>=1.2.8
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
