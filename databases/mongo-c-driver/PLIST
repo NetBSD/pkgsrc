@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2017/08/17 17:04:35 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.14 2017/09/09 16:14:23 dholland Exp $
 bin/mongoc-stat
 include/libmongoc-1.0/mongoc-apm.h
 include/libmongoc-1.0/mongoc-bulk-operation.h
@@ -35,12 +35,12 @@ include/libmongoc-1.0/mongoc-stream-buffered.h
 include/libmongoc-1.0/mongoc-stream-file.h
 include/libmongoc-1.0/mongoc-stream-gridfs.h
 include/libmongoc-1.0/mongoc-stream-socket.h
-include/libmongoc-1.0/mongoc-stream.h
 ${PLIST.ssl}include/libmongoc-1.0/mongoc-stream-tls-libressl.h
 ${PLIST.ssl}include/libmongoc-1.0/mongoc-stream-tls-openssl.h
 ${PLIST.ssl}include/libmongoc-1.0/mongoc-stream-tls-secure-channel.h
 ${PLIST.ssl}include/libmongoc-1.0/mongoc-stream-tls-secure-transport.h
 ${PLIST.ssl}include/libmongoc-1.0/mongoc-stream-tls.h
+include/libmongoc-1.0/mongoc-stream.h
 include/libmongoc-1.0/mongoc-topology-description.h
 include/libmongoc-1.0/mongoc-uri.h
 include/libmongoc-1.0/mongoc-version-functions.h
