@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2016/07/09 06:37:59 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/09 17:17:51 dholland Exp $
 
 PKG_VERSION=		3.4.6
 # PKGNAME will have option name only when explictly selected
 PKGNAME=		nios2-gcc3-${PKG_VERSION}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		cross
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		GNU gcc3 for Altera FPGA Nios2 processor
