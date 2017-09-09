@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2017/08/29 23:38:01 prlw1 Exp $
+$NetBSD: distinfo,v 1.8 2017/09/09 14:40:24 joerg Exp $
 
 SHA1 (hitori-3.22.3.tar.xz) = dfdaff8560e1f2303af229a38f040bbedc0e635e
 RMD160 (hitori-3.22.3.tar.xz) = ed082d6a46ce248ed3c12b1c961f3a1eddfab344
 SHA512 (hitori-3.22.3.tar.xz) = a79e8f8f5e0ca4d202184fc301ddda44e2606ca911b9b3910e50f8ad218cd5047b8749e9c9798f970a107682c7f4fc49475be126c06cdd4a6914e1fa831ed7d5
 Size (hitori-3.22.3.tar.xz) = 462592 bytes
+SHA1 (patch-Makefile.in) = 7e46cbba64b670cd5c105b2d7691091d8bf975c8
