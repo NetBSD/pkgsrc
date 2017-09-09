@@ -1,0 +1,19 @@
+$NetBSD: patch-configure,v 1.3 2017/09/09 16:15:45 dholland Exp $
+
+Fix illegal shell syntax.
+
+--- configure~	2017-08-09 16:16:15.000000000 +0000
++++ configure
+@@ -2708,9 +2708,9 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ MONGOC_CURRENT_FILE=${srcdir}/VERSION_CURRENT
+ MONGOC_VERSION=$(cat $MONGOC_CURRENT_FILE)
+ # Ensure newline for "cut" implementations that need it, e.g. HP-UX.
+-MONGOC_MAJOR_VERSION=$((cat $MONGOC_CURRENT_FILE; echo) | cut -d- -f1 | cut -d. -f1)
+-MONGOC_MINOR_VERSION=$((cat $MONGOC_CURRENT_FILE; echo) | cut -d- -f1 | cut -d. -f2)
+-MONGOC_MICRO_VERSION=$((cat $MONGOC_CURRENT_FILE; echo) | cut -d- -f1 | cut -d. -f3)
++MONGOC_MAJOR_VERSION=$( (cat $MONGOC_CURRENT_FILE; echo) | cut -d- -f1 | cut -d. -f1)
++MONGOC_MINOR_VERSION=$( (cat $MONGOC_CURRENT_FILE; echo) | cut -d- -f1 | cut -d. -f2)
++MONGOC_MICRO_VERSION=$( (cat $MONGOC_CURRENT_FILE; echo) | cut -d- -f1 | cut -d. -f3)
+ MONGOC_PRERELEASE_VERSION=$(cut -s -d- -f2 $MONGOC_CURRENT_FILE)
+ 
+ 
