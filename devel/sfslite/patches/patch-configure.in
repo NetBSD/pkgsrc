@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.in,v 1.1 2017/09/09 19:45:46 dholland Exp $
+
+Don't trash LDFLAGS.
+
+--- configure.in~	2009-06-09 14:29:36.000000000 +0000
++++ configure.in
+@@ -347,7 +347,7 @@ for flag in $LDFLAGS; do
+ 	LIBAPM=
+ 	new_LDFLAGS="$new_LDFLAGS -all-static"
+     else
+-	new_LDFLAGS=" $flag"
++	new_LDFLAGS="$new_LDFLAGS $flag"
+     fi
+ done
+ LDFLAGS="$new_LDFLAGS"

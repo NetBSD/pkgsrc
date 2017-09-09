@@ -1,15 +1,24 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:29:32 agc Exp $
+$NetBSD: distinfo,v 1.6 2017/09/09 19:45:46 dholland Exp $
 
 SHA1 (sfslite-1.2.7.tar.gz) = 774c1defc74d9f354622f60aa5c038400b401c5b
 RMD160 (sfslite-1.2.7.tar.gz) = 3e72a4d6cb0975c13b51f13ff615e8a390c36e3b
 SHA512 (sfslite-1.2.7.tar.gz) = b2cd6d60a4349bdc54d973656fffdad9e4a4304dfa0cc8e27584e65bdd1359c2bd2be9552bd42fdd89475929b793509dd01589afe4cb72bb8ba14fca36ccb171
 Size (sfslite-1.2.7.tar.gz) = 1379432 bytes
-SHA1 (patch-aa) = 9c13092b1fe5e9d7c25eea9293fadbbaab096299
+SHA1 (patch-aa) = fa1f4a82d0d97375dafa972049aedc7ac0e80885
 SHA1 (patch-ab) = 0bfc67711150e5dc8eb74fba29e9abd5272e62db
 SHA1 (patch-ac) = 88294e8dc9785a68019f66d0513c6d043a6b9f2e
-SHA1 (patch-async_ihash.h) = 6ae910ad516739f04f0fd29849912c8eb457eca2
+SHA1 (patch-async_aio.C) = e35510da5504d401f9fdac6b9cb296bdb4f9b703
+SHA1 (patch-async_daemonize.C) = db816068eaee9c0096234795c725925ced6133ca
+SHA1 (patch-async_dns.C) = 6eb8ef8a772a6a83942d4335fd126717dae6e805
+SHA1 (patch-async_dnsparse.C) = 77dce63d143882a3fd531a78ef0a5b8edc48de1f
+SHA1 (patch-async_ifchg.C) = f941daa091908612a783bba57dbcf3bf92db3aaa
+SHA1 (patch-async_ihash.C) = 6365eadd3da6e765766f529311d58043a9b108ec
+SHA1 (patch-async_ihash.h) = 027b7b270804ebf11ba1d2e5b7ac26a025abfcda
 SHA1 (patch-async_itree.h) = a777c376d2e8ac2a4ffdd84ec319325edc2ebb9b
+SHA1 (patch-async_myname.C) = 0530b7a4bf43e99ff6a2ade6846db6af15fe4e6d
 SHA1 (patch-async_qhash.h) = c145936da65369dce93092df3535e6fad921d030
 SHA1 (patch-async_rwfd_c) = be0075129d6bfe3eda7f86721a8a977acd5296d2
 SHA1 (patch-async_vec.h) = 6f73867864f650de1c760228fc2f39f951554df5
+SHA1 (patch-configure) = 5fbf91e7b0d215a724814c36a55110df0f3409b8
+SHA1 (patch-configure.in) = a0f282d9a5fcd9843be8373ebe55511f8c9cad23
 SHA1 (patch-libsafeptr_sp__gc.h) = 1194e270b3869b26fce2f2fb6680f599a5dc675e
