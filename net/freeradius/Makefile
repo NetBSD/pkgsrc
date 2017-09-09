@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2017/08/26 10:07:28 fhajny Exp $
+# $NetBSD: Makefile,v 1.92 2017/09/09 22:46:57 joerg Exp $
 
 .include "Makefile.common"
 
@@ -191,6 +191,9 @@ EGDIRS= 		certs mods-available mods-config mods-config/attr_filter mods-config/f
 			mods-config/sql/main/postgresql mods-config/sql/main/postgresql/extras  \
 			mods-config/sql/main/sqlite mods-config/unbound mods-enabled  \
 			policy.d sites-available sites-enabled
+
+REPLACE_PERL+=		scripts/sql/radsqlrelay \
+			src/modules/rlm_counter/rad_counter
 
 .for f in ${EGFILES}
 CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
