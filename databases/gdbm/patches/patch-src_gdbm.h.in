@@ -1,0 +1,16 @@
+$NetBSD: patch-src_gdbm.h.in,v 1.1 2017/09/09 17:13:50 dholland Exp $
+
+Fix the compat define for GDBM_UNKNOWN_UPDATE to expand to something
+that actually exists.
+
+--- src/gdbm.h.in~	2017-01-02 11:51:49.000000000 +0000
++++ src/gdbm.h.in
+@@ -224,7 +224,7 @@ extern int gdbm_copy_meta (GDBM_FILE dst
+ # define _GDBM_MAX_ERRNO	GDBM_DIR_OVERFLOW
+ 
+ /* This one was never used and will be removed in the future */
+-# define GDBM_UNKNOWN_UPDATE GDBM_ERR_UNKNOWN_ERROR
++# define GDBM_UNKNOWN_UPDATE GDBM_UNKNOWN_ERROR
+   
+ typedef int gdbm_error;
+ extern gdbm_error gdbm_errno;
