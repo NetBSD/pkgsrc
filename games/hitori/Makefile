@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/08/29 23:38:01 prlw1 Exp $
+# $NetBSD: Makefile,v 1.12 2017/09/09 14:40:24 joerg Exp $
 
 DISTNAME=	hitori-3.22.3
 CATEGORIES=	games gnome
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3 AND cc-by-sa-v3.0
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config msgfmt
 USE_PKGLOCALEDIR=	yes
 
 BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool

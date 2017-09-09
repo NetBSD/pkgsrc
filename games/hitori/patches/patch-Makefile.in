@@ -1,0 +1,26 @@
+$NetBSD: patch-Makefile.in,v 1.1 2017/09/09 14:40:24 joerg Exp $
+
+Don't use modern msgfmt features they don't do anything.
+
+--- Makefile.in.orig	2017-04-30 22:19:31.000000000 +0000
++++ Makefile.in
+@@ -1416,8 +1416,7 @@ check-local: check-builder
+ # Desktop file
+ %.desktop: %.desktop.in
+ 	@$(MKDIR_P) $(dir $@)
+-	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -o $@-t \
+-	  -d $(top_srcdir)/po && mv $@-t $@
++	cp $< $@
+ 
+ check-desktop: $(desktop_DATA)
+ 	[ "$(DESKTOP_FILE_VALIDATE)" = "" ] || \
+@@ -1429,8 +1428,7 @@ check-local: check-desktop
+ 
+ %.appdata.xml: %.appdata.xml.in
+ 	@$(MKDIR_P) $(dir $@)
+-	$(AM_V_GEN) $(MSGFMT) --xml --template $< -o $@-t \
+-	  -d $(top_srcdir)/po && mv $@-t $@
++	cp $< $@
+ 
+ # Copy all the spec files. Of course, only one is actually used.
+ dist-hook:
