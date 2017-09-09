@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/08 09:51:23 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/09 21:57:46 dholland Exp $
 
 DISTNAME=		verifast-17.06
 PKGREVISION=		1
@@ -14,7 +14,7 @@ LICENSE=		mit
 
 USE_TOOLS+=		gmake pax pkg-config
 MAKE_FILE=		GNUmakefile
-BUILD_MAKE_FLAGS+=	-C src
+BUILD_MAKE_FLAGS+=	-C src NUMCPU=${MAKE_JOBS}
 
 BUILD_DEPENDS+=		vala-[0-9]*:../../lang/vala
 BUILD_DEPENDS+=		camlp4-[0-9]*:../../lang/camlp4
