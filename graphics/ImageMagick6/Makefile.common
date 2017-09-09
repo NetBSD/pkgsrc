@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.8 2017/06/14 09:56:20 he Exp $
+# $NetBSD: Makefile.common,v 1.9 2017/09/09 12:09:37 ryoon Exp $
 #
 # When updating this package, please upload the distfile
 # since they disappear immediately when new releases happen.
 
-IM_MAJOR_VER=		6.9.8
-IM_MINOR_VER=		10
+IM_MAJOR_VER=		6.9.9
+IM_MINOR_VER=		11
 IM_MAJOR_LIB_VER=	6
 
 .if (${IM_MINOR_VER} != NONE)
