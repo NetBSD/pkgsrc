@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 01:56:15 agc Exp $
+$NetBSD: distinfo,v 1.12 2017/09/09 15:23:30 dholland Exp $
 
 SHA1 (mysql-workbench-gpl-5.2.33b-src.tar.gz) = 1d47598fb0f956ce1a0c6b1afb462e8d6beeb1ed
 RMD160 (mysql-workbench-gpl-5.2.33b-src.tar.gz) = 60213dd583da6034d5c4f7766b0a7dbafe57100c
@@ -20,7 +20,7 @@ SHA1 (patch-ext_scintilla_gtk_ScintillaGTK.cxx) = 5900ce9f440a59833d3779c6f3700a
 SHA1 (patch-frontend_linux_linux_utilities_toolbar_manager.cpp) = cc2ecf41802836c1ce799ebdff26ad89b70f3459
 SHA1 (patch-frontend_linux_workbench_Makefile.in) = ad1146700a3d657089b73d86daf8e1da1b6722c6
 SHA1 (patch-frontend_linux_workbench_main.cpp) = 0ffcf6695f8aaf52be437d2d9281f788692cccaf
-SHA1 (patch-library_base_file_utilities.cpp) = af34c32bec2e194b9e8e96c264dd7b036c380978
+SHA1 (patch-library_base_file_utilities.cpp) = 00e2f119d16ad46c890dbbb761ca2a33ebe1f8d9
 SHA1 (patch-library_base_international_file.cpp) = 702e1465cbe2eec2b21d5b308e9c1184edb5c03b
 SHA1 (patch-library_canvas_src_mdc__canvas__view__printing_cpp) = 5c3e6c6f63421aa7aa5972a38e4f5b6d87aba71f
 SHA1 (patch-library_canvas_src_mdc__canvas__view_h) = 932e1e744ba0663afa0af3d618808fa9448b058a
