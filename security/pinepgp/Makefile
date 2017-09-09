@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2017/01/19 18:52:24 agc Exp $
+# $NetBSD: Makefile,v 1.19 2017/09/09 11:43:08 ryoon Exp $
 #
 
 DISTNAME=		pinepgp-0.18.0
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		security mail
 MASTER_SITES=		http://hany.sk/~hany/_data/pinepgp/
 MASTER_SITES+=		http://terminus.sk/~hany/_data/pinepgp/
@@ -10,6 +10,7 @@ MASTER_SITES+=		http://terminus.sk/~hany/_data/pinepgp/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://hany.sk/~hany/software/pinepgp/stable.html
 COMMENT=		PGP display and sending filters for pine
+LICENSE=		gnu-lgpl-v2.1
 
 DEPENDS+=		bash>=2:../../shells/bash
 
@@ -18,15 +19,6 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		cat
 CONFIGURE_ENV+=		CAT=${TOOLS_CAT:Q}
 
-PINEPGP_USEGPG?=	yes
-PINEPGP_USEPGP5?=	yes
-
-.if !empty(PINEPGP_USEGPG:M[yY][eE][sS])
-DEPENDS+=		gnupg>=1.2.3:../../security/gnupg
-.endif
-
-.if !empty(PINEPGP_USEPGP5:M[yY][eE][sS])
-DEPENDS+=		pgp5>=5.0:../../security/pgp5
-.endif
+.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"

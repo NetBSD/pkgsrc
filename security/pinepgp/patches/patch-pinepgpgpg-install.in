@@ -1,0 +1,12 @@
+$NetBSD: patch-pinepgpgpg-install.in,v 1.1 2017/09/09 11:43:08 ryoon Exp $
+
+* Defer BASH substitution
+
+--- pinepgpgpg-install.in.orig	2002-05-03 13:30:07.000000000 +0000
++++ pinepgpgpg-install.in
+@@ -1,4 +1,4 @@
+-#!@BASH@
++@BASH@
+ 
+ bindir=@bindir@
+ tmpdir=@tmpdir@
