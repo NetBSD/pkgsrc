@@ -1,0 +1,12 @@
+$NetBSD: patch-pinegpgp.in,v 1.1 2017/09/09 11:43:08 ryoon Exp $
+
+* Defer BASH substitution
+
+--- pinegpgp.in.orig	2002-05-03 13:30:07.000000000 +0000
++++ pinegpgp.in
+@@ -1,4 +1,4 @@
+-#!@BASH@
++@BASH@
+ 
+ tmpdir=@tmpdir@
+ 
