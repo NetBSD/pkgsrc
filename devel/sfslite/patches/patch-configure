@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2017/09/09 19:45:46 dholland Exp $
+
+Don't trash LDFLAGS.
+
+--- configure~	2009-06-09 14:29:57.000000000 +0000
++++ configure
+@@ -35514,9 +35514,9 @@ for flag in $LDFLAGS; do
+ 	LIBAPM=
+ 	new_LDFLAGS="$new_LDFLAGS -all-static"
+     else
+-	new_LDFLAGS=" $flag"
++	new_LDFLAGS="$new_LDFLAGS $flag"
+     fi
+ done
+ LDFLAGS="$new_LDFLAGS"
+ 
+ { $as_echo "$as_me:$LINENO: checking for MAP_NOSYNC option" >&5
