@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/10/24 22:34:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/09 15:17:12 dholland Exp $
 
 DISTNAME=		gcc-6.2.0
 PKGNAME=		cross-h8300-elf-${DISTNAME}
@@ -8,12 +8,13 @@ MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=		.tar.bz2
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			newlib-${NEWLIBVER}.tar.gz
-NEWLIBVER=		2.4.0
-SITES.newlib-${NEWLIBVER}.tar.gz=	ftp://sources.redhat.com/pub/newlib/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		#empty
 COMMENT=		GCC compiler for h8300-elf
+
+NEWLIBVER=		2.4.0
+SITES.newlib-${NEWLIBVER}.tar.gz=	ftp://sources.redhat.com/pub/newlib/
 
 DEPENDS+=	cross-h8300-elf-binutils-[0-9]*:../../cross/h8300-elf-binutils
 
@@ -41,9 +42,9 @@ CONFIGURE_ARGS+=	--target=h8300-elf
 CONFIGURE_ARGS+=	--enable-languages=c
 CONFIGURE_ARGS+=	--with-newlib
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
-CONFIGURE_ARGS+=        --with-gmp=${BUILDLINK_PREFIX.gmp}
-CONFIGURE_ARGS+=        --with-mpc=${BUILDLINK_PREFIX.mpcomplex}
-CONFIGURE_ARGS+=        --with-mpfr=${BUILDLINK_PREFIX.mpfr}
+CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
+CONFIGURE_ARGS+=	--with-mpc=${BUILDLINK_PREFIX.mpcomplex}
+CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
 MAKE_ENV+=		SHELL=${CONFIG_SHELL}
 INFO_FILES=		yes
 
