@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2017/07/30 22:47:55 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2017/09/09 22:48:09 joerg Exp $
 
 DISTNAME=	seahorse-2.32.0
 PKGREVISION=	44
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--disable-nautilus
 CONFIGURE_ENV+=		SSH_PATH=${SSH_PATH:Q}
 CONFIGURE_ENV+=		SSH_ADD_PATH=${SSH_ADD_PATH:Q}
 CONFIGURE_ENV+=		SSH_KEYGEN_PATH=${SSH_KEYGEN_PATH:Q}
-CONFIGURE_ENV+=		ac_cv_path_GNUPG=${GPGME_GPG}
+CONFIGURE_ENV+=		GNUPG=${GPGME_GPG}
 
 PKGCONFIG_OVERRIDE+=	libcryptui/cryptui.pc.in
 GCONF_SCHEMAS= 	seahorse.schemas
