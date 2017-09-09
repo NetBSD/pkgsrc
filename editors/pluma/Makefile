@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/09/09 22:03:30 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/09 22:37:49 dholland Exp $
 
 # XXX: meta-pkgs/mate/Makefile.common includes pyversion.mk which sets the
 # python version too early and clashes with PYTHON_VERSIONS_INCOMPATIBLE
@@ -13,9 +13,9 @@ CATEGORIES=	editors
 
 COMMENT=	Small and lightweight UTF-8 text editor for the MATE
 
+USE_TOOLS+=	bash:run
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
-DEPENDS+=	bash-[0-9]*:../../shells/bash
 
 PKGCONFIG_OVERRIDE+=	data/pluma.pc.in
 
