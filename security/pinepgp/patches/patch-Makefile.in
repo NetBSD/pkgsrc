@@ -1,0 +1,64 @@
+$NetBSD: patch-Makefile.in,v 1.1 2017/09/09 11:43:08 ryoon Exp $
+
+* Defer BASH substitutions
+
+--- Makefile.in.orig	2002-05-03 13:30:07.000000000 +0000
++++ Makefile.in
+@@ -48,7 +48,6 @@ $(SOURCES):	$(SOURCES:%=%.in)
+ 		s%\@CAT\@%$(CAT)%;\
+ 		s%\@RM\@%$(RM)%;\
+ 		s%\@MKTEMP\@%$(MKTEMP)%;\
+-		s%\@BASH\@%$(BASH)%;\
+ 		s%\@bindir\@%$(bindir)%;\
+ 		s%\@tmpdir\@%$(tmpdir)%' > $(@)
+ 	chmod 755 $(@)
+@@ -60,7 +59,8 @@ pinegpg:	pinegpgp
+ 		s%^cese=.*%cese="$(GPG) -at -se"%;\
+ 		s%^cec=.*%cec="\$(GPG)"%;\
+ 		s%^cefp=.*%cefp=gpg%' > $(@).c
+-	$(CPP) -DGPG $(BUILD_FLAGS) $(@).c | $(GREP) -v "^# .* .*" > $(@)
++	$(CPP) -DGPG $(BUILD_FLAGS) $(@).c | $(GREP) -v "^# .* .*" | \
++		${SED} -e 's%\@BASH\@%#!$(BASH)%' > $(@)
+ 	chmod 755 $(@)
+ 
+ pinepgp26x:	pinegpgp
+@@ -70,7 +70,8 @@ pinepgp26x:	pinegpgp
+ 		s%^cese=.*%cese="\$(PGP) -fat -se"%;\
+ 		s%^cec=.*%cec="\$(PGP) -f"%;\
+ 		s%^cefp=.*%cefp=pgp26x%' > $(@).c
+-	$(CPP) -DPGP26X $(BUILD_FLAGS) $(@).c | $(GREP) -v "^# .* .*" > $(@)
++	$(CPP) -DPGP26X $(BUILD_FLAGS) $(@).c | $(GREP) -v "^# .* .*" | \
++		${SED} -e 's%\@BASH\@%#!$(BASH)%' > $(@)
+ 	chmod 755 $(@)
+ 
+ pinepgp5x:	pinegpgp
+@@ -80,7 +81,8 @@ pinepgp5x:	pinegpgp
+ 		s%^cese=.*%cese="$(PGP5E) -fat -s"%;\
+ 		s%^cec=.*%cec="$(PGP5V) -f"%;\
+ 		s%^cefp=.*%cefp=pgp26x%' > $(@).c
+-	$(CPP) -DPGP5X $(BUILD_FLAGS) $(@).c | $(GREP) -v "^# .* .*" > $(@)
++	$(CPP) -DPGP5X $(BUILD_FLAGS) $(@).c | $(GREP) -v "^# .* .*" | \
++		${SED} -e 's%\@BASH\@%#!$(BASH)%' > $(@)
+ 	chmod 755 $(@)
+ 
+ pinepgp65x:	pinegpgp
+@@ -90,13 +92,18 @@ pinepgp65x:	pinegpgp
+ 		s%^cese=.*%cese="\$(PGP6) -fat -se -u $$USER"%;\
+ 		s%^cec=.*%cec="\$(PGP6) -f -u $$USER"%;\
+ 		s%^cefp=.*%cefp=pgp65x%' > $(@).c
+-	$(CPP) -DPGP65X $(BUILD_FLAGS) $(@).c | $(GREP) -v "^# .* .*" > $(@)
++	$(CPP) -DPGP65X $(BUILD_FLAGS) $(@).c | $(GREP) -v "^# .* .*" | \
++		${SED} -e 's%\@BASH\@%#!$(BASH)%' > $(@)
+ 	chmod 755 $(@)
+ 
+ install:	$(BUILD_FILTERS:%=install-%)
+ 
+ install-pinepgpgpg-install:	pinepgpgpg-install
+ 	mkdir -p $(DESTDIR)$(bindir)
++	${CAT} pinepgpgpg-install | \
++		${SED} -e 's%\@BASH\@%#!$(BASH)%' > \
++		pinepgpgpg-install.1
++	mv pinepgpgpg-install.1 pinepgpgpg-install
+ 	$(INSTALL) -m 755 pinepgpgpg-install	$(DESTDIR)$(bindir)
+ 
+ $(BUILD_FILTERS:%=install-%-install):	install-pinepgpgpg-install
