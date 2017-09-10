@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/10 20:00:49 wiz Exp $
+include/avcall.h
+include/callback.h
+include/ffcall-abi.h
+include/ffcall-version.h
+include/trampoline.h
+include/vacall.h
+include/vacall_r.h
+lib/libavcall.la
+lib/libcallback.la
+lib/libffcall.la
+lib/libtrampoline.la
+lib/libvacall.a
+man/man3/avcall.3
+man/man3/callback.3
+man/man3/trampoline.3
+man/man3/vacall.3
+share/doc/ffcall/avcall.html
+share/doc/ffcall/callback.html
+share/doc/ffcall/trampoline.html
+share/doc/ffcall/vacall.html
