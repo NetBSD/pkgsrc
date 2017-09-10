@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.54 2017/09/03 08:53:06 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2017/09/10 08:02:30 adam Exp $
 
-DISTNAME=	bsddb3-6.2.4
+DISTNAME=	bsddb3-6.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bsddb3/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/bsddb3/
+HOMEPAGE=	https://www.jcea.es/programacion/pybsddb.htm
 COMMENT=	Python bindings for Oracle Berkeley DB
 LICENSE=	modified-bsd
 
