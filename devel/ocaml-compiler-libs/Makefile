@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/08 09:51:20 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/10 05:51:15 dholland Exp $
 
 VERSION=	0.9.0
 GITHUB_PROJECT=	ocaml-compiler-libs
@@ -15,6 +15,7 @@ LICENSE=	apache-2.0
 
 OCAML_USE_FINDLIB=	yes
 OCAML_USE_JBUILDER=	yes
+OCAML_USE_OPAM=		yes
 
 OCAML_TOPKG_NAME=	${GITHUB_PROJECT}
 
