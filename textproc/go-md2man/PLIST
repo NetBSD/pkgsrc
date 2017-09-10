@@ -1,9 +1,23 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:55:42 gavan Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/09/10 11:05:23 gavan Exp $
 bin/go-md2man
 gopkg/pkg/${GO_PLATFORM}/github.com/cpuguy83/go-md2man/md2man.a
+gopkg/pkg/${GO_PLATFORM}/github.com/cpuguy83/go-md2man/vendor/github.com/russross/blackfriday.a
+gopkg/pkg/${GO_PLATFORM}/github.com/cpuguy83/go-md2man/vendor/github.com/shurcooL/sanitized_anchor_name.a
 gopkg/src/github.com/cpuguy83/go-md2man/LICENSE.md
 gopkg/src/github.com/cpuguy83/go-md2man/README.md
 gopkg/src/github.com/cpuguy83/go-md2man/go-md2man.1.md
 gopkg/src/github.com/cpuguy83/go-md2man/md2man.go
 gopkg/src/github.com/cpuguy83/go-md2man/md2man/md2man.go
 gopkg/src/github.com/cpuguy83/go-md2man/md2man/roff.go
+gopkg/src/github.com/cpuguy83/go-md2man/vendor.yml
+gopkg/src/github.com/cpuguy83/go-md2man/vendor/github.com/russross/blackfriday/LICENSE.txt
+gopkg/src/github.com/cpuguy83/go-md2man/vendor/github.com/russross/blackfriday/README.md
+gopkg/src/github.com/cpuguy83/go-md2man/vendor/github.com/russross/blackfriday/block.go
+gopkg/src/github.com/cpuguy83/go-md2man/vendor/github.com/russross/blackfriday/html.go
+gopkg/src/github.com/cpuguy83/go-md2man/vendor/github.com/russross/blackfriday/inline.go
+gopkg/src/github.com/cpuguy83/go-md2man/vendor/github.com/russross/blackfriday/latex.go
+gopkg/src/github.com/cpuguy83/go-md2man/vendor/github.com/russross/blackfriday/markdown.go
+gopkg/src/github.com/cpuguy83/go-md2man/vendor/github.com/russross/blackfriday/smartypants.go
+gopkg/src/github.com/cpuguy83/go-md2man/vendor/github.com/shurcooL/sanitized_anchor_name/LICENSE
+gopkg/src/github.com/cpuguy83/go-md2man/vendor/github.com/shurcooL/sanitized_anchor_name/README.md
+gopkg/src/github.com/cpuguy83/go-md2man/vendor/github.com/shurcooL/sanitized_anchor_name/main.go
