@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3719 2017/09/10 16:11:43 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3720 2017/09/10 16:12:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5239,3 +5239,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/ruby-multi_json to 1.12.2 [taca 2017-09-10]
 	Updated textproc/ruby-syntax to 1.2.2 [taca 2017-09-10]
 	Updated textproc/ruby-tilt to 2.0.8 [taca 2017-09-10]
+	Updated time/ruby-hitimes to 1.2.6 [taca 2017-09-10]
