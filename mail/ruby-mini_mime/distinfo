@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/10 14:22:40 taca Exp $
+
+SHA1 (mini_mime-0.1.4.gem) = 912ed597e7b054462592f0c2d9e5a7b8b5d15b8d
+RMD160 (mini_mime-0.1.4.gem) = e092364fcf5191e54a2d4197a2058f10f15d41a2
+SHA512 (mini_mime-0.1.4.gem) = 99f17a78f9b71a91c948f3c822f8ff14ffe3e6abb74494b001c6b4204341805a50e86433fc687ab9851a9aaa2bcc2d6a59374b7acad57719a696e8e74abe733d
+Size (mini_mime-0.1.4.gem) = 32768 bytes
