@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3727 2017/09/10 20:04:31 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3728 2017/09/10 20:49:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5247,3 +5247,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/u-boot-pinebook version 2017.09rc2 [jmcneill 2017-09-10]
 	Added devel/libffcall version 2.0 [wiz 2017-09-10]
 	Removed devel/ffcall successor devel/libffcall [wiz 2017-09-10]
+	Updated textproc/libxml2 to 2.9.5 [wiz 2017-09-10]
