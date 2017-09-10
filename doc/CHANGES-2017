@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3733 2017/09/10 21:13:55 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3734 2017/09/10 21:17:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5253,3 +5253,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-libxslt to 1.1.30 [wiz 2017-09-10]
 	Updated fonts/harfbuzz to 1.5.1 [wiz 2017-09-10]
 	Updated fonts/fontconfig to 2.12.5 [wiz 2017-09-10]
+	Updated math/mpfr to 3.1.6 [wiz 2017-09-10]
