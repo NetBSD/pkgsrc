@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/01/09 13:33:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/09/10 15:16:18 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
@@ -12,6 +12,7 @@ ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/console
 ${GEM_LIBDIR}/data/list.txt
 ${GEM_LIBDIR}/lib/public_suffix.rb
 ${GEM_LIBDIR}/lib/public_suffix/domain.rb
@@ -20,11 +21,20 @@ ${GEM_LIBDIR}/lib/public_suffix/list.rb
 ${GEM_LIBDIR}/lib/public_suffix/rule.rb
 ${GEM_LIBDIR}/lib/public_suffix/version.rb
 ${GEM_LIBDIR}/public_suffix.gemspec
+${GEM_LIBDIR}/test/.empty
 ${GEM_LIBDIR}/test/acceptance_test.rb
-${GEM_LIBDIR}/test/benchmark_helper.rb
-${GEM_LIBDIR}/test/execution_profiler.rb
-${GEM_LIBDIR}/test/initialization_profiler.rb
-${GEM_LIBDIR}/test/performance_benchmark.rb
+${GEM_LIBDIR}/test/benchmarks/bm_find.rb
+${GEM_LIBDIR}/test/benchmarks/bm_find_all.rb
+${GEM_LIBDIR}/test/benchmarks/bm_names.rb
+${GEM_LIBDIR}/test/benchmarks/bm_select.rb
+${GEM_LIBDIR}/test/benchmarks/bm_select_incremental.rb
+${GEM_LIBDIR}/test/benchmarks/bm_valid.rb
+${GEM_LIBDIR}/test/profilers/domain_profiler.rb
+${GEM_LIBDIR}/test/profilers/find_profiler.rb
+${GEM_LIBDIR}/test/profilers/find_profiler_jp.rb
+${GEM_LIBDIR}/test/profilers/initialization_profiler.rb
+${GEM_LIBDIR}/test/profilers/list_profsize.rb
+${GEM_LIBDIR}/test/profilers/object_binsize.rb
 ${GEM_LIBDIR}/test/psl_test.rb
 ${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_LIBDIR}/test/tests.txt
