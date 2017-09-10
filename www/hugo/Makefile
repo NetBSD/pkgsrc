@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/17 01:50:25 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/10 11:07:08 gavan Exp $
 
 DISTNAME=	hugo-0.26
 PKGNAME=	go-${DISTNAME}
@@ -14,6 +14,10 @@ LICENSE=	apache-2.0
 
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/gohugoio/hugo
+
+REPLACE_SH+=	bench.sh
+REPLACE_SH+=	benchSite.sh
+REPLACE_SH+=	pull-docs.sh
 
 .include "../../devel/go-purell/buildlink3.mk"
 .include "../../textproc/go-inflect/buildlink3.mk"
