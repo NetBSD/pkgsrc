@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2016/03/15 15:39:04 taca Exp $
-bin/coderay
+@comment $NetBSD: PLIST,v 1.10 2017/09/10 16:01:44 taca Exp $
+bin/coderay${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README_INDEX.rdoc
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/coderay
 ${GEM_LIBDIR}/lib/coderay.rb
 ${GEM_LIBDIR}/lib/coderay/duo.rb
@@ -76,8 +76,4 @@ ${GEM_LIBDIR}/lib/coderay/token_kinds.rb
 ${GEM_LIBDIR}/lib/coderay/tokens.rb
 ${GEM_LIBDIR}/lib/coderay/tokens_proxy.rb
 ${GEM_LIBDIR}/lib/coderay/version.rb
-${GEM_LIBDIR}/test/functional/basic.rb
-${GEM_LIBDIR}/test/functional/examples.rb
-${GEM_LIBDIR}/test/functional/for_redcloth.rb
-${GEM_LIBDIR}/test/functional/suite.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
