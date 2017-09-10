@@ -1,16 +1,12 @@
-# $NetBSD: options.mk,v 1.12 2016/09/20 14:10:25 wiz Exp $
+# $NetBSD: options.mk,v 1.13 2017/09/10 20:03:49 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp
 
+PKG_SUPPORTED_OPTIONS+=		doc
 # this option is essential for some others to work:
 PKG_SUPPORTED_OPTIONS+=		ffcall
-
-PKG_SUPPORTED_OPTIONS+=		readline
-
 PKG_SUPPORTED_OPTIONS+=		gmalloc
-
-PKG_SUPPORTED_OPTIONS+=		doc
-
+PKG_SUPPORTED_OPTIONS+=		readline
 PKG_SUGGESTED_OPTIONS+=		ffcall readline doc
 
 # CLISP doesn't work with jemalloc:
@@ -37,7 +33,7 @@ CONFIGURE_ARGS+=	--with-gmalloc
 
 .if !empty(PKG_OPTIONS:Mffcall)
 CONFIGURE_ARGS+=	--with-dynamic-ffi
-.  include "../../devel/ffcall/buildlink3.mk"
+.  include "../../devel/libffcall/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mreadline)
@@ -120,7 +116,7 @@ CONFIGURE_ENV+=		PS2PDF= ac_cv_prog_PS2PDF=
 # .include "../../devel/zlib/buildlink3.mk"
 # .endif
 
-## ffcall is required for some other options to work:
+## libffcall is required for some other options to work:
 # .if !empty(PKG_OPTIONS:Mpgsql) && empty(PKG_OPTIONS:Mffcall)
 # PKG_OPTIONS+=  ffcall
 # .endif
