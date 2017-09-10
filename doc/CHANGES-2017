@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3717 2017/09/10 16:09:23 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3718 2017/09/10 16:10:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5237,3 +5237,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/ruby-haml to 5.0.3 [taca 2017-09-10]
 	Updated textproc/ruby-kramdown to 1.15.0 [taca 2017-09-10]
 	Updated textproc/ruby-multi_json to 1.12.2 [taca 2017-09-10]
+	Updated textproc/ruby-syntax to 1.2.2 [taca 2017-09-10]
