@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2017/07/30 22:47:55 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2017/09/10 14:12:44 joerg Exp $
 
 DISTNAME=	seahorse-plugins-2.30.1
 PKGREVISION=	50
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-CONFIGURE_ENV+=		ac_cv_path_GNUPG=${GPGME_GPG}
+CONFIGURE_ENV+=		GNUPG=${GPGME_GPG}
 
 GCONF_SCHEMAS=		seahorse-gedit.schemas
 GCONF_SCHEMAS+=		seahorse-plugins.schemas
