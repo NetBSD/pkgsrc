@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2016/03/15 15:28:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.26 2017/09/10 15:58:14 taca Exp $
 bin/facter${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COMMITTERS.md
@@ -154,6 +154,12 @@ ${GEM_LIBDIR}/lib/facter/util/uptime.rb
 ${GEM_LIBDIR}/lib/facter/util/values.rb
 ${GEM_LIBDIR}/lib/facter/util/virtual.rb
 ${GEM_LIBDIR}/lib/facter/util/vlans.rb
+${GEM_LIBDIR}/lib/facter/util/windows.rb
+${GEM_LIBDIR}/lib/facter/util/windows/api_types.rb
+${GEM_LIBDIR}/lib/facter/util/windows/dir.rb
+${GEM_LIBDIR}/lib/facter/util/windows/error.rb
+${GEM_LIBDIR}/lib/facter/util/windows/process.rb
+${GEM_LIBDIR}/lib/facter/util/windows/user.rb
 ${GEM_LIBDIR}/lib/facter/util/windows_root.rb
 ${GEM_LIBDIR}/lib/facter/util/wmi.rb
 ${GEM_LIBDIR}/lib/facter/util/xendomains.rb
@@ -248,6 +254,7 @@ ${GEM_LIBDIR}/spec/fixtures/unit/gce/metadata/metadata.json
 ${GEM_LIBDIR}/spec/fixtures/unit/interfaces/ifconfig_net_tools_1.60.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/interfaces/ifconfig_net_tools_1.60.txt.em1
 ${GEM_LIBDIR}/spec/fixtures/unit/interfaces/ifconfig_net_tools_1.60.txt.lo
+${GEM_LIBDIR}/spec/fixtures/unit/interfaces/ifconfig_net_tools_1.60_v6.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/ipaddress/ifconfig_multiple_127_addresses.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/ipaddress/ifconfig_net_tools_1.60.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/ipaddress/ifconfig_non_english_locale.txt
@@ -369,6 +376,7 @@ ${GEM_LIBDIR}/spec/fixtures/virtual/proc_self_status/vserver_2_1/host
 ${GEM_LIBDIR}/spec/fixtures/virtual/proc_self_status/vserver_2_3/guest
 ${GEM_LIBDIR}/spec/fixtures/virtual/proc_self_status/vserver_2_3/host
 ${GEM_LIBDIR}/spec/integration/facter_spec.rb
+${GEM_LIBDIR}/spec/integration/util/windows/user_spec.rb
 ${GEM_LIBDIR}/spec/lib/facter_spec/cpuinfo.rb
 ${GEM_LIBDIR}/spec/lib/facter_spec/windows_network.rb
 ${GEM_LIBDIR}/spec/puppetlabs_spec/files.rb
