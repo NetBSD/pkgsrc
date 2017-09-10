@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2016/12/19 13:34:53 joerg Exp $
+$NetBSD: distinfo,v 1.12 2017/09/10 00:12:16 dholland Exp $
 
 SHA1 (cint-5.16.19-source.tar.gz) = 22307e50b4414f4e6e70d791d3ccfe2cc2163f59
 RMD160 (cint-5.16.19-source.tar.gz) = ff7deb0cdf5534fb8849eaf5febf9e57117066ff
@@ -21,4 +21,3 @@ SHA1 (patch-tool_ifdef_Makefile.base) = dfc90a0ea0a7fb87a49ad057b928d39c67aec410
 SHA1 (patch-tool_ifdef_get.c) = 6719537bd515260095a7d15a2e870df3ccd244eb
 SHA1 (patch-tool_ifdef_ifdef.cxx) = 62770d0fb6556ac2efc16f692c15c6acc38174ab
 SHA1 (patch-tool_makecint.cxx) = b81d05e92dd089ad7a4d85160266fa3d19a1dab4
-SHA1 (patch-readline_Makefile.base) = ac6656bdcd92ccb38f8ec200fb8780cdb2dc0000
