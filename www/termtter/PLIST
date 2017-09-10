@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/03/13 17:43:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/09/10 17:39:34 jmcneill Exp $
 bin/termtter${RUBY_SUFFIX}
 bin/termtter_frame${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -14,6 +14,7 @@ ${GEM_LIBDIR}/lib/plugins/addspace.rb
 ${GEM_LIBDIR}/lib/plugins/another_prompt.rb
 ${GEM_LIBDIR}/lib/plugins/appendtitle.rb
 ${GEM_LIBDIR}/lib/plugins/april_fool.rb
+${GEM_LIBDIR}/lib/plugins/ar-single.rb
 ${GEM_LIBDIR}/lib/plugins/ar.rb
 ${GEM_LIBDIR}/lib/plugins/async.rb
 ${GEM_LIBDIR}/lib/plugins/babelfish.rb
@@ -72,6 +73,7 @@ ${GEM_LIBDIR}/lib/plugins/favotter.rb
 ${GEM_LIBDIR}/lib/plugins/fib_filter.rb
 ${GEM_LIBDIR}/lib/plugins/fibyou.rb
 ${GEM_LIBDIR}/lib/plugins/filter.rb
+${GEM_LIBDIR}/lib/plugins/fluentd.rb
 ${GEM_LIBDIR}/lib/plugins/foo.rb
 ${GEM_LIBDIR}/lib/plugins/footer.rb
 ${GEM_LIBDIR}/lib/plugins/friends.rb
@@ -232,6 +234,7 @@ ${GEM_LIBDIR}/lib/termtter/system_extensions/windows.rb
 ${GEM_LIBDIR}/lib/termtter/task.rb
 ${GEM_LIBDIR}/lib/termtter/task_manager.rb
 ${GEM_LIBDIR}/lib/termtter/version.rb
+${GEM_LIBDIR}/spec/plugins/ar-single_spec.rb
 ${GEM_LIBDIR}/spec/plugins/capital_update_spec.rb
 ${GEM_LIBDIR}/spec/plugins/cool_spec.rb
 ${GEM_LIBDIR}/spec/plugins/curry_spec.rb
@@ -246,6 +249,7 @@ ${GEM_LIBDIR}/spec/plugins/english_spec_.rb
 ${GEM_LIBDIR}/spec/plugins/expand_url_spec.rb
 ${GEM_LIBDIR}/spec/plugins/fib_spec.rb
 ${GEM_LIBDIR}/spec/plugins/filter_spec_.rb
+${GEM_LIBDIR}/spec/plugins/fluentd_spec.rb
 ${GEM_LIBDIR}/spec/plugins/footer_spec.rb
 ${GEM_LIBDIR}/spec/plugins/gsub_spec.rb
 ${GEM_LIBDIR}/spec/plugins/haml_spec.rb
