@@ -1,6 +1,6 @@
-$NetBSD: patch-configure.ac,v 1.7 2017/08/01 11:57:37 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.8 2017/09/10 11:30:15 ryoon Exp $
 
---- configure.ac.orig	2017-07-25 20:26:39.000000000 +0000
+--- configure.ac.orig	2017-08-24 21:39:40.000000000 +0000
 +++ configure.ac
 @@ -6026,14 +6026,14 @@ if test "$GCC" = "yes" -o "$COM_IS_CLANG
          ], [AC_MSG_RESULT([no])])
@@ -20,6 +20,15 @@ $NetBSD: patch-configure.ac,v 1.7 2017/08/01 11:57:37 ryoon Exp $
              AC_MSG_RESULT([yes])
          ], [AC_MSG_RESULT([no])])
      AC_LANG_POP([C++])
+@@ -7603,7 +7603,7 @@ else
+     if test "$COM" = "MSC"; then
+         LIBJPEG_LIBS="${WORKDIR}/UnpackedTarball/jpeg-turbo/.libs/libjpeg.lib"
+     else
+-        LIBJPEG_LIBS="-L${WORKDIR}/UnpackedTarball/jpeg-turbo/.libs -ljpeg"
++        LIBJPEG_LIBS="${WORKDIR}/UnpackedTarball/jpeg-turbo/.libs/libjpeg.a"
+     fi
+ 
+     case "$host_cpu" in
 @@ -9175,11 +9175,11 @@ dnl HarfBuzz
  dnl ===================================================================
  libo_CHECK_SYSTEM_MODULE([graphite],[GRAPHITE],[graphite2 >= 0.9.3],
