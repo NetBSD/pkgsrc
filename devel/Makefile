@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2505 2017/09/08 13:05:39 jaapb Exp $
+# $NetBSD: Makefile,v 1.2506 2017/09/10 20:01:05 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -546,6 +546,7 @@ SUBDIR+=	libewf
 SUBDIR+=	libexecinfo
 SUBDIR+=	libextractor
 SUBDIR+=	libf2c
+SUBDIR+=	libffcall
 SUBDIR+=	libffi
 SUBDIR+=	libfirm
 SUBDIR+=	libfreefare
