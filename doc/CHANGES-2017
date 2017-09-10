@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3710 2017/09/10 15:33:36 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3711 2017/09/10 15:36:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5230,3 +5230,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/ruby-public_suffix to 3.0.0 [taca 2017-09-10]
 	Updated devel/lua-penlight to 1.5.4 [alnsn 2017-09-10]
 	Updated security/ruby-net-ssh to 4.2.0 [taca 2017-09-10]
+	Updated security/ruby-sshkit to 1.14.0 [taca 2017-09-10]
