@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/10 17:00:41 jmcneill Exp $
+share/u-boot/pinebook/u-boot-sunxi-with-spl.bin
