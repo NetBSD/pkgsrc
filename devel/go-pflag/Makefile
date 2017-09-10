@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/08/25 17:03:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/10 11:04:44 gavan Exp $
 
 DISTNAME=	pflag-1.0.0
 PKGNAME=	go-${DISTNAME}
@@ -14,6 +14,11 @@ LICENSE=	modified-bsd
 
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/spf13/pflag
+
+REPLACE_BASH+=	verify/all.sh
+REPLACE_BASH+=	verify/gofmt.sh
+REPLACE_BASH+=	verify/golint.sh
+USE_TOOLS+=	bash:run
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
