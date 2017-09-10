@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2017/08/24 20:03:28 adam Exp $
+# $NetBSD: Makefile,v 1.175 2017/09/10 20:36:56 rumko Exp $
 
 DISTNAME=		R-3.3.3
 PKGREVISION=		2
@@ -45,6 +45,10 @@ CONFIGURE_ARGS+=	--with-system-xz
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
 CONFIGURE_ARGS+=	--enable-long-double=no
 .endif
+
+# cpow and clog are not implemented on FreeBSD
+CONFIGURE_ENV.FreeBSD+=	ac_cv_have_decl_clog=no
+CONFIGURE_ENV.FreeBSD+=	ac_cv_have_decl_cpow=no
 
 .if ${OPSYS} != "Linux"
 USE_GNU_ICONV=		yes		# latin1 support, iconvlist
