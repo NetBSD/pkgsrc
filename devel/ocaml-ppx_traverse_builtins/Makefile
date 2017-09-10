@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/09/08 09:51:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/10 05:55:47 dholland Exp $
 
 VERSION=	0.9.0
 GITHUB_PROJECT=	ppx_traverse_builtins
@@ -19,6 +19,7 @@ USE_LANGUAGES=	# none
 
 OCAML_USE_FINDLIB=	yes
 OCAML_USE_JBUILDER=	yes
+OCAML_USE_OPAM=		yes
 
 .include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
