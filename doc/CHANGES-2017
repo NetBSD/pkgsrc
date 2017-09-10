@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3692 2017/09/09 21:49:40 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.3693 2017/09/10 02:10:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5207,3 +5207,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated chat/mcabber to 1.1.0 [leot 2017-09-09]
 	Updated devel/py-pathspec to 0.5.5 [adam 2017-09-09]
 	Updated graphics/inkscape to 0.92.1nb9 [prlw1 2017-09-09]
+	Updated mail/p5-Email-Simple to 2.214 [wen 2017-09-10]
