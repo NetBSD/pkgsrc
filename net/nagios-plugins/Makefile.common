@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2017/07/04 19:45:18 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.14 2017/09/10 14:11:30 joerg Exp $
 #
 # used by net/nagios-plugin-ldap/Makefile
 # used by net/nagios-plugin-mysql/Makefile
@@ -13,8 +13,8 @@ MASTER_SITES?=	http://nagios-plugins.org/download/
 
 .include "../../net/nagios-base/Makefile.common"
 
-DISTINFO_FILE?=	${.CURDIR}/../../net/nagios-plugins/distinfo
-PATCHDIR?=	${.CURDIR}/../../net/nagios-plugins/patches
+DISTINFO_FILE=	${.CURDIR}/../../net/nagios-plugins/distinfo
+PATCHDIR=	${.CURDIR}/../../net/nagios-plugins/patches
 
 BUILD_DEFS+=	NAGIOS_USER NAGIOS_GROUP
 
