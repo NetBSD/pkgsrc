@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2017/03/20 14:28:58 taca Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/10 14:40:05 taca Exp $
 #
 
-DISTNAME=	hashie-3.5.5
+DISTNAME=	hashie-3.5.6
 CATEGORIES=	misc
 
 MAINTAINER=	tsutsui@NetBSD.org
