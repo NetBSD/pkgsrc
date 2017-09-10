@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/17 01:55:54 gavan Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/09/10 11:05:46 gavan Exp $
 bin/mmark
 gopkg/pkg/${GO_PLATFORM}/github.com/miekg/mmark.a
 gopkg/src/github.com/miekg/mmark/CONVERSION_RFC7328.md
 gopkg/src/github.com/miekg/mmark/COPYRIGHT
 gopkg/src/github.com/miekg/mmark/LICENSE
+gopkg/src/github.com/miekg/mmark/Makefile
+gopkg/src/github.com/miekg/mmark/Makefile.release
 gopkg/src/github.com/miekg/mmark/README.md
 gopkg/src/github.com/miekg/mmark/block.go
 gopkg/src/github.com/miekg/mmark/block_test.go
