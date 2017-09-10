@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2017/06/25 07:10:19 wiz Exp $
+$NetBSD: distinfo,v 1.24 2017/09/10 21:36:54 wiz Exp $
 
-SHA1 (Scalar-List-Utils-1.48.tar.gz) = 073d78be62b0097e3a3246f503f74d3eaab8ff3a
-RMD160 (Scalar-List-Utils-1.48.tar.gz) = d0ed8296fd8440f9280448498b2a70c748d2fe84
-SHA512 (Scalar-List-Utils-1.48.tar.gz) = 1926e5d5d326c9ffc9137b644e1326e9ef907be96dd62b7bdf08527aaa62fe1c999860116e8917139f5a10a94dc6db588e1c547c91742e86b7daab6536f0733f
-Size (Scalar-List-Utils-1.48.tar.gz) = 87767 bytes
+SHA1 (Scalar-List-Utils-1.49.tar.gz) = fa313dcfa8fadc1228a7c4497712cdfded2aa1af
+RMD160 (Scalar-List-Utils-1.49.tar.gz) = 670527209fa08333aa67539ace60ab09a5d5ad44
+SHA512 (Scalar-List-Utils-1.49.tar.gz) = f65d8d96b7b96999f8d3ade93fd0eda9126ab416157981e5d206206e7906fea6bb657abb31bc38b48e70c51804bc42c8724e9ed516fc1d5636bbcb30120ccd39
+Size (Scalar-List-Utils-1.49.tar.gz) = 87866 bytes
