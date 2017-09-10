@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2017/03/20 15:31:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/09/10 16:07:39 taca Exp $
 bin/kramdown${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
@@ -37,7 +37,6 @@ ${GEM_LIBDIR}/doc/syntax.page
 ${GEM_LIBDIR}/doc/tests.page
 ${GEM_LIBDIR}/doc/virtual
 ${GEM_LIBDIR}/lib/kramdown.rb
-${GEM_LIBDIR}/lib/kramdown/compatibility.rb
 ${GEM_LIBDIR}/lib/kramdown/converter.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/base.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/hash_ast.rb
@@ -221,6 +220,8 @@ ${GEM_LIBDIR}/test/testcases/block/07_horizontal_rule/sepspaces.html
 ${GEM_LIBDIR}/test/testcases/block/07_horizontal_rule/sepspaces.text
 ${GEM_LIBDIR}/test/testcases/block/07_horizontal_rule/septabs.html
 ${GEM_LIBDIR}/test/testcases/block/07_horizontal_rule/septabs.text
+${GEM_LIBDIR}/test/testcases/block/08_list/brackets_in_item.latex
+${GEM_LIBDIR}/test/testcases/block/08_list/brackets_in_item.text
 ${GEM_LIBDIR}/test/testcases/block/08_list/escaping.html
 ${GEM_LIBDIR}/test/testcases/block/08_list/escaping.text
 ${GEM_LIBDIR}/test/testcases/block/08_list/item_ial.html
@@ -425,6 +426,9 @@ ${GEM_LIBDIR}/test/testcases/block/16_toc/toc_levels.text
 ${GEM_LIBDIR}/test/testcases/block/16_toc/toc_with_footnotes.html
 ${GEM_LIBDIR}/test/testcases/block/16_toc/toc_with_footnotes.options
 ${GEM_LIBDIR}/test/testcases/block/16_toc/toc_with_footnotes.text
+${GEM_LIBDIR}/test/testcases/block/16_toc/toc_with_links.html
+${GEM_LIBDIR}/test/testcases/block/16_toc/toc_with_links.options
+${GEM_LIBDIR}/test/testcases/block/16_toc/toc_with_links.text
 ${GEM_LIBDIR}/test/testcases/encoding.html
 ${GEM_LIBDIR}/test/testcases/encoding.text
 ${GEM_LIBDIR}/test/testcases/man/example.man
@@ -454,6 +458,8 @@ ${GEM_LIBDIR}/test/testcases/span/01_link/imagelinks.text
 ${GEM_LIBDIR}/test/testcases/span/01_link/inline.html
 ${GEM_LIBDIR}/test/testcases/span/01_link/inline.html.19
 ${GEM_LIBDIR}/test/testcases/span/01_link/inline.text
+${GEM_LIBDIR}/test/testcases/span/01_link/latex_escaping.latex
+${GEM_LIBDIR}/test/testcases/span/01_link/latex_escaping.text
 ${GEM_LIBDIR}/test/testcases/span/01_link/link_defs.html
 ${GEM_LIBDIR}/test/testcases/span/01_link/link_defs.text
 ${GEM_LIBDIR}/test/testcases/span/01_link/link_defs_with_ial.html
@@ -504,10 +510,13 @@ ${GEM_LIBDIR}/test/testcases/span/04_footnote/inside_footnote.html
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/inside_footnote.text
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/markers.html
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/markers.latex
+${GEM_LIBDIR}/test/testcases/span/04_footnote/markers.options
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/markers.text
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/placement.html
+${GEM_LIBDIR}/test/testcases/span/04_footnote/placement.options
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/placement.text
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/regexp_problem.html
+${GEM_LIBDIR}/test/testcases/span/04_footnote/regexp_problem.options
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/regexp_problem.text
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/without_backlink.html
 ${GEM_LIBDIR}/test/testcases/span/04_footnote/without_backlink.options
@@ -534,6 +543,8 @@ ${GEM_LIBDIR}/test/testcases/span/abbreviations/abbrev.html
 ${GEM_LIBDIR}/test/testcases/span/abbreviations/abbrev.text
 ${GEM_LIBDIR}/test/testcases/span/abbreviations/abbrev_defs.html
 ${GEM_LIBDIR}/test/testcases/span/abbreviations/abbrev_defs.text
+${GEM_LIBDIR}/test/testcases/span/abbreviations/in_footnote.html
+${GEM_LIBDIR}/test/testcases/span/abbreviations/in_footnote.text
 ${GEM_LIBDIR}/test/testcases/span/autolinks/url_links.html
 ${GEM_LIBDIR}/test/testcases/span/autolinks/url_links.text
 ${GEM_LIBDIR}/test/testcases/span/escaped_chars/normal.html
