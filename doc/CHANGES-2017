@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3724 2017/09/10 16:21:14 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3725 2017/09/10 17:01:49 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5244,3 +5244,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/ruby-css-parser to 1.6.0 [taca 2017-09-10]
 	Updated www/thin to 1.7.2 [taca 2017-09-10]
 	Updated www/ruby-raindrops to 0.19.0 [taca 2017-09-10]
+	Added sysutils/u-boot-pinebook version 2017.09rc2 [jmcneill 2017-09-10]
