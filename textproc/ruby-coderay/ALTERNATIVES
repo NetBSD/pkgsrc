@@ -1,0 +1,1 @@
+bin/coderay @PREFIX@/bin/coderay@RUBY_SUFFIX@
