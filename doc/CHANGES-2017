@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3707 2017/09/10 15:14:15 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3708 2017/09/10 15:16:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5227,3 +5227,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/ruby-sprockets-rails to 3.2.1 [taca 2017-09-10]
 	Updated net/ruby-addressable to 2.5.2 [taca 2017-09-10]
 	Updated net/ruby-dnsruby to 1.60.2 [taca 2017-09-10]
+	Updated net/ruby-public_suffix to 3.0.0 [taca 2017-09-10]
