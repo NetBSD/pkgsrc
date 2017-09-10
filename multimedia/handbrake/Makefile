@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2017/02/12 06:25:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2017/09/10 00:28:28 dholland Exp $
 #
 
 DISTNAME=	HandBrake-0.9.3
@@ -66,6 +66,12 @@ SUBST_STAGE.inchack=	pre-configure
 SUBST_FILES.inchack=	gtk/src/*.[ch]
 SUBST_SED.inchack=	-e "/^.include \"hb\.h\"/s,hb,../../libhb/hb,"
 SUBST_MESSAGE.inchack=	Working around harfbuzz header conflict.
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-fheinous-gnu-extensions
+.endif
 
 post-extract:
 	cp ${FILESDIR}/patch-ffmpeg-nodocs.patch \
