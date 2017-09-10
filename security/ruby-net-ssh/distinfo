@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2017/06/12 16:03:46 taca Exp $
+$NetBSD: distinfo,v 1.18 2017/09/10 15:32:59 taca Exp $
 
-SHA1 (net-ssh-4.1.0.gem) = de174a0126e9c3fe0f942bfbe30b236ce4e261cb
-RMD160 (net-ssh-4.1.0.gem) = f687c22c2986ead62b57ba794a38942574fa4fba
-SHA512 (net-ssh-4.1.0.gem) = c08ff3aee88ea8c2c86980aee724805a882636297b7c11ba6c5c4ab24504bb19e8050bd9bd86be5f437e65860cf18d9c366df48dca87596e29b1874c2fc9771c
-Size (net-ssh-4.1.0.gem) = 125952 bytes
+SHA1 (net-ssh-4.2.0.gem) = 91155a9a5e498e9b7d5a878f0de757f0c90ccfed
+RMD160 (net-ssh-4.2.0.gem) = c85f02fd384cbe575746f0055b56709e1aa6d060
+SHA512 (net-ssh-4.2.0.gem) = f1a82812d6d470fd53e9f6186f1f5cabe17fbc6a94ebd9e68b1a0330aa89390254cc53dd0e298c3f0b611ef6212f4a1c5939135e7455b698b90db193d863741e
+Size (net-ssh-4.2.0.gem) = 126976 bytes
