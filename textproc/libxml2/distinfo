@@ -1,23 +1,12 @@
-$NetBSD: distinfo,v 1.116 2017/06/21 00:23:23 tez Exp $
+$NetBSD: distinfo,v 1.117 2017/09/10 20:49:20 wiz Exp $
 
-SHA1 (libxml2-2.9.4.tar.gz) = 958ae70baf186263a4bd801a81dd5d682aedd1db
-RMD160 (libxml2-2.9.4.tar.gz) = bb59656e0683d64a38a2f1a45ca9d918837e1e56
-SHA512 (libxml2-2.9.4.tar.gz) = f5174ab1a3a0ec0037a47f47aa47def36674e02bfb42b57f609563f84c6247c585dbbb133c056953a5adb968d328f18cbc102eb0d00d48eb7c95478389e5daf9
-Size (libxml2-2.9.4.tar.gz) = 5374830 bytes
+SHA1 (libxml2-2.9.5.tar.gz) = 6ab515fa4d087a3973e880d46bf6bdad48114d20
+RMD160 (libxml2-2.9.5.tar.gz) = 598fbbd97120b672760c934c12648dfd1065f856
+SHA512 (libxml2-2.9.5.tar.gz) = 197dbd1722e5f90eea43837323352f48d215e198aa6b95685645ef7511e2beba8aadc0dd67e099c945120c5dbe7f8c9da5f376b22f447059e9ffa941c1bfd175
+Size (libxml2-2.9.5.tar.gz) = 5466888 bytes
 SHA1 (patch-aa) = e687eaa9805b855b0c8a944ec5c597bd34954472
 SHA1 (patch-ab) = d6d6e9a91307da0c7f334b5b9ad432878babd1ac
 SHA1 (patch-ac) = 34afe787f6012b460a85be993048e133907a1621
 SHA1 (patch-ad) = d65b7e3be9694147e96ce4bb70a1739e2279ba81
 SHA1 (patch-ae) = 4eede9719724f94402e850ee6d6043a74aaf62b2
 SHA1 (patch-encoding.c) = 6cf0a7d421828b9f40a4079ee85adb791c54d096
-SHA1 (patch-parseInternals.c) = dc58145943a4fb6368d848c0155d144b1f9b676c
-SHA1 (patch-parser.c) = 23e39127bf65e721dd76d80b389c1ccacf8e5746
-SHA1 (patch-result_XPath_xptr_vidbase) = f0ef1ac593cb25f96b7ffef93e0f214aa8fc6103
-SHA1 (patch-runtest.c) = 759fcee959833b33d72e85108f7973859dcba1f6
-SHA1 (patch-test_XPath_xptr_vidbase) = a9b497505f914924388145c6266aa517152f9da3
-SHA1 (patch-testlimits.c) = 8cba18464b619469abbb8488fd950a32a567be7b
-SHA1 (patch-timsort.h) = e09118e7c99d53f71c28fe4d54269c4801244959
-SHA1 (patch-valid.c) = 9eda3633b3ea5269e0ef33fa0508de18e7a76def
-SHA1 (patch-xmlIO.c) = 5efcc5e43a8b3139832ab69af6b5ab94e5a6ad59
-SHA1 (patch-xpath.c) = ec94ab2116f99a08f51630dee6b9e7e25d2b5c00
-SHA1 (patch-xpointer.c) = 8ca75f64b89369106c0d088ff7fd36b38005e032
