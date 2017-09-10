@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/09/08 02:38:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2017/09/10 17:11:47 wiz Exp $
 
 TORBVER=	6.0.8
 
@@ -41,6 +41,7 @@ CONFIGURE_ARGS+=        --enable-pie
 CONFIGURE_ARGS+=        --enable-tor-data-in-home-dir
 CFLAGS+=		-DTOR_BROWSER_DATA_IN_HOME_DIR=1
 CFLAGS+=		-DTOR_BROWSER_DATA_OUTSIDE_APP_DIR=1
+CFLAGS+=		-fPIC
 
 # Avoid build failure from security/manager/ssl/src/nsNSSCallbacks.cpp:601
 CFLAGS+=	-fpermissive
