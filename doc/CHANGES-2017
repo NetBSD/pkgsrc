@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3696 2017/09/10 12:20:46 tnn Exp $
+$NetBSD: CHANGES-2017,v 1.3697 2017/09/10 13:36:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5216,3 +5216,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/labltk to 8.06.3 [dholland 2017-09-10]
 	Updated databases/py-bsddb3 to 6.2.5 [adam 2017-09-10]
 	Updated net/unifi to 5.5.20 [tnn 2017-09-10]
+	Updated devel/ruby-thor to 0.20.0 [taca 2017-09-10]
