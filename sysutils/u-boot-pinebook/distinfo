@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2017/09/10 17:00:41 jmcneill Exp $
+
+SHA1 (u-boot-pinebook-2017.09rc2-ccba9fb2248b6206cb55452b7623b964b0e02cf4.tar.gz) = 7739ac071f86cd2ef61afe89390956dc05ca2ff4
+RMD160 (u-boot-pinebook-2017.09rc2-ccba9fb2248b6206cb55452b7623b964b0e02cf4.tar.gz) = b3fa5901238ac78b90c7b911f1c8a8068f57b921
+SHA512 (u-boot-pinebook-2017.09rc2-ccba9fb2248b6206cb55452b7623b964b0e02cf4.tar.gz) = 0c0c3f45b8c390c8d1e2af4db89085a0eaf6a10cda2cecdabc23db0ca4ff813229ab787f06615d89abcb8dacf5131af5d3740c26ca47e287b38f4e14411758c8
+Size (u-boot-pinebook-2017.09rc2-ccba9fb2248b6206cb55452b7623b964b0e02cf4.tar.gz) = 14440630 bytes
+SHA1 (patch-arch_arm_cpu_armv8_Kconfig) = 63cbbf2e3cebd46793fc03cc8e62297f6dc01aa9
+SHA1 (patch-drivers_video_sunxi_sunxi__de2.c) = a64bd9d6fbe075d9d01d196cfca8658d9ecd4bd2
+SHA1 (patch-include_configs_sunxi-common.h) = b71c28480cc084860d63e95af33bc7eead8ac6ac
+SHA1 (patch-lib_bch.c) = e346680a94696713f6d0e71e965283b9bdfbbdbf
