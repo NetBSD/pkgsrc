@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2017/05/15 18:07:40 dholland Exp $
+# $NetBSD: Makefile,v 1.50 2017/09/10 20:56:48 wiz Exp $
 
 .include "../../textproc/libxslt/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 
 MAINTAINER=	minskim@NetBSD.org
