@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/01/09 13:33:08 taca Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/10 15:16:18 taca Exp $
 
-DISTNAME=	public_suffix-2.0.5
+DISTNAME=	public_suffix-3.0.0
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
