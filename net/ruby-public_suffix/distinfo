@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/01/09 13:33:08 taca Exp $
+$NetBSD: distinfo,v 1.2 2017/09/10 15:16:18 taca Exp $
 
-SHA1 (public_suffix-2.0.5.gem) = c241227a2f49942d07fceb4bc20a03d762f7e666
-RMD160 (public_suffix-2.0.5.gem) = 21d6cefb3279819b0e1763944be1dfe904e48072
-SHA512 (public_suffix-2.0.5.gem) = d261dec44c11803631e267f36d82a59278d90dceb2811233ca511e895c5f1a58005b6afea980bd1bbd78bbfc7a3a4e02f9f1fbe351fded38be340ecc235da383
-Size (public_suffix-2.0.5.gem) = 89600 bytes
+SHA1 (public_suffix-3.0.0.gem) = 5fdef710c9ff7f2cb67010f6b0baa252f352377a
+RMD160 (public_suffix-3.0.0.gem) = a46db70cc04d41da7018986b5b70266455a768a5
+SHA512 (public_suffix-3.0.0.gem) = 9190c85fa48f2d69af3131cacdfeb4e4ebe2ff82f833d286ff3e87298cd3189d7c5b6facdcde502bea73beae8a950c1d6ef851ca0848824a59ac53f222db4806
+Size (public_suffix-3.0.0.gem) = 94720 bytes
