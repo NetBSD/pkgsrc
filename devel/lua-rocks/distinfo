@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2016/10/06 20:28:54 alnsn Exp $
+$NetBSD: distinfo,v 1.3 2017/09/10 14:51:01 alnsn Exp $
 
-SHA1 (luarocks-2.4.1.tar.gz) = 5f236aa3a5b84808469e763041fcb86bbaf75c08
-RMD160 (luarocks-2.4.1.tar.gz) = 940bac9868436e7de977d4331bc7201b276173d5
-SHA512 (luarocks-2.4.1.tar.gz) = d7ee476618b83fafade0259b1a279e39f4b6a5a3f21eec0dd4f97b4e4fd1259e481635a0ecbe5b23594554e79cee6c055798de3e83f350888888664ac7cdc3e7
-Size (luarocks-2.4.1.tar.gz) = 135200 bytes
+SHA1 (luarocks-2.4.2.tar.gz) = 3e595956eab7192036a4993c24125284cd789894
+RMD160 (luarocks-2.4.2.tar.gz) = 4f7417e68ca8d28c77c41018265f3e443cfcc460
+SHA512 (luarocks-2.4.2.tar.gz) = 30e3b3fb338387412f406c415af49d3624f4dfc05ac5f245185127a0288248ccfae924e7bbdd5b68fef00524c7cc70d9f632ae00f4c696bdf0582e71e8945bc4
+Size (luarocks-2.4.2.tar.gz) = 139110 bytes
 SHA1 (patch-Makefile) = c94a4daf6670a0a96f3d5ce7898d8e06aa422e0e
 SHA1 (patch-Makefile.install.inc) = f12fd0b89c32c9741a2af2b0b4a0e34d8fdfa6f0
