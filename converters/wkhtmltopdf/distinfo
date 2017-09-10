@@ -1,9 +1,33 @@
-$NetBSD: distinfo,v 1.1 2017/06/23 07:12:19 manu Exp $
+$NetBSD: distinfo,v 1.2 2017/09/10 19:58:36 joerg Exp $
 
 SHA1 (wkhtmltox-0.12.4.tar.bz2) = 6a0ca9b01d5e37af3fb451bbd934afff43cf26ae
 RMD160 (wkhtmltox-0.12.4.tar.bz2) = 665abd76618cdfac27585e62caa52b33d09990fa
 SHA512 (wkhtmltox-0.12.4.tar.bz2) = 1526c6138d6276d0f6188737a67848b8ae9c16016c119eb00bbdaf7159464f8799c53ca9a997ea40eea4c2d1cadc35a10607564949fd39a3b7b7e6745a3dbdcb
 Size (wkhtmltox-0.12.4.tar.bz2) = 36355721 bytes
 SHA1 (patch-qt_config.tests_mac_dwarf2.test) = efabd53a31dc69feac1bc2767c801fab5514a447
+SHA1 (patch-qt_config.tests_unix_freetype_freetype.pro) = 9db2892dd438581307b70ce73c62de721f91ab67
+SHA1 (patch-qt_config.tests_unix_libjpeg_libjpeg.pro) = 5012c36257fb1f2cef7f086e93b885030406d7b9
+SHA1 (patch-qt_config.tests_unix_libpng_libpng.pro) = be0dead445dbbfeef9bc2a816ef5efd85aba0411
+SHA1 (patch-qt_config.tests_x11_mitshm_mitshm.pro) = 5a411a67f6a99f87a9f22698a2a6e1e01b1a38e7
+SHA1 (patch-qt_config.tests_x11_xrender_xrender.pro) = a1120252f1f6b289caafa3835e2f2d42be69446c
 SHA1 (patch-qt_configure) = e13eb806e11a88a20650fc62d38d162145eaabae
 SHA1 (patch-qt_mkspecs_netbsd-g++_qmake.conf) = 508b1f25735d3a8f29a1da08a988f608186751bf
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_bytecompiler_BytecodeGenerator.cpp) = b8ef0623e9cd666d708295c006b5e72693ac715e
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_heap_MarkedSpace.cpp) = 79ad51f005e68156d2e339d0d925fc79ab79f059
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_heap_MarkedSpace.h) = d2af081598a049e33fb7b61cecf6163ec1986166
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_parser_JSParser.cpp) = 5cb93130dc74d039944700afbe0a78a3825cf0a4
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_runtime_Identifier.cpp) = a82582dd815b63cb7e6c15d3adb40cf1f216fde4
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_runtime_JSONObject.cpp) = e49fc03256fde8a615e984921874dda9b8f2f7a4
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_runtime_StringPrototype.cpp) = e5041f4cb61d57cc71b83be761b8b5f9402e92c9
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_wtf_Atomics.h) = 88580505164ab1b3961c70296a26f1dca4502728
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_wtf_HashSet.h) = 979b874cf3d47fe9568b82f78eb1dd66b065513e
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_wtf_ThreadSafeRefCounted.h) = 674e895fb9ae64376c2d88e62596db332cbf961a
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_wtf_text_AtomicString.cpp) = 5ec061aab070a3ac4d6680ccfe2f9cfcb0fbdf9a
+SHA1 (patch-qt_src_3rdparty_webkit_Source_WebCore_dom_DocumentMarkerController.cpp) = db09ecbfd0488fe13ff7dc9e785f420e00ba6162
+SHA1 (patch-qt_src_3rdparty_webkit_Source_WebCore_dom_Element.cpp) = 776c988688af27ebbcd43a75b40515a13b48b9d5
+SHA1 (patch-qt_src_3rdparty_webkit_Source_WebCore_html_HTMLImageElement.cpp) = 1dfde3ad2e0d30026e0cd2c62f5f959aeace394c
+SHA1 (patch-qt_src_3rdparty_webkit_Source_WebCore_platform_DefaultLocalizationStrategy.cpp) = d510329e032f0e7362802ea23b19528d5ecdcc81
+SHA1 (patch-qt_src_plugins_platforms_xlib_xlib.pro) = 18516ea36e61c57d2acc3f5fa06890ab7a88fbe6
+SHA1 (patch-src_image_image.pro) = d33d1676608ebe663bc7c0dd43a2b71b478da7a6
+SHA1 (patch-src_lib_lib.pro) = a3b1958c2bc63b79a195325cb226de37eecc17a0
+SHA1 (patch-src_pdf_pdf.pro) = e46a2a14aa3540b3128182f9938c5e64f9b39b8c
