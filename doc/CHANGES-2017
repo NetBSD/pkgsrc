@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3729 2017/09/10 20:50:17 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3730 2017/09/10 20:56:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5249,3 +5249,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed devel/ffcall successor devel/libffcall [wiz 2017-09-10]
 	Updated textproc/libxml2 to 2.9.5 [wiz 2017-09-10]
 	Updated textproc/py-libxml2 to 2.9.5 [wiz 2017-09-10]
+	Updated textproc/libxslt to 1.1.30 [wiz 2017-09-10]
