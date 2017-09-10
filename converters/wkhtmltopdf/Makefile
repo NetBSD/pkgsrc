@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/06/23 07:12:19 manu Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/10 19:58:36 joerg Exp $
 
 DISTNAME=       wkhtmltox-0.12.4
 PKGNAME=	wkhtmltopdf-0.12.4
+PKGREVISION=	1
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=wkhtmltopdf/}
 GITHUB_PROJECT= wkhtmltopdf
 GITHUB_RELEASE= ${PKGVERSION_NOREV}
@@ -13,10 +14,9 @@ HOMEPAGE=	https://wkhtmltopdf.org/
 COMMENT=	Command line tools to render HTML into PDF
 LICENSE=	gnu-lgpl-v3
 
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES+=	c c++ gnu++11
 USE_TOOLS+=	perl
 #USE_LIBTOOL=	yes
-CHECK_SHLIBS_SUPPORTED=	no	# until libtool
 
 SUBST_CLASSES+=		x11
 SUBST_MESSAGE.x11=	Fixing x11 options.
@@ -32,7 +32,8 @@ do-configure:
 	done
 
 do-build:
-	cd ${WRKSRC} && ${PYTHONBIN} scripts/build.py posix-local -debug
+	cd ${WRKSRC} && \
+	${PKGSRC_SETENV} ${MAKE_ENV}  ${PYTHONBIN} scripts/build.py posix-local -debug
 
 WKHTMLTOX_BUILD=${WRKSRC}/static-build/posix-local-dbg/${DISTNAME}
 WKHTMLTOX_BIN=${DESTDIR}${PREFIX}/bin
@@ -55,9 +56,11 @@ do-install:
 	    ln -sf libwkhtmltox.so.0.12.4 libwkhtmltox.so.0.1 && \
 	    ln -sf libwkhtmltox.so.0.12.4 libwkhtmltox.so.0
 
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
