@@ -1,6 +1,12 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 23:49:54 agc Exp $
+$NetBSD: distinfo,v 1.4 2017/09/10 01:00:01 dholland Exp $
 
 SHA1 (window-20120215.tar.gz) = 95e2f3376e101d014fa07e1e6f9a7129ccf51755
 RMD160 (window-20120215.tar.gz) = 34d2f8bad158a419387a4d6f7fa977f65d54ab9b
 SHA512 (window-20120215.tar.gz) = 95e67c3d16b54f936f018b9a80c1007da90b97445784c51c436ae38f3edde4eaa37f6fc49bcb0b15601f4c2663fa01592b7208f737632e11e0c4abbf88f318ba
 Size (window-20120215.tar.gz) = 84798 bytes
+SHA1 (patch-ww.h) = 19281574830d256c7e2f80b12a176f07c56beb8e
+SHA1 (patch-wwframe.c) = 81fe73d55e81e0b5f8f7803068688994d71fe714
+SHA1 (patch-wwlabel.c) = a7a72a85720822d1388f31b107432a074b1a260e
+SHA1 (patch-wwopen.c) = fae54637e369bc2cade2e30b7637e851b0c0649c
+SHA1 (patch-wwsize.c) = 4815a61b0c6f17fc5be95b14ab60e7ca02b03a24
+SHA1 (patch-wwunframe.c) = 59b7376002224dfea90d43b33fbb2782edfd731a
