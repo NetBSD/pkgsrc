@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2506 2017/09/10 20:01:05 wiz Exp $
+# $NetBSD: Makefile,v 1.2507 2017/09/10 20:04:32 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -241,7 +241,6 @@ SUBDIR+=	exempi
 SUBDIR+=	extra-cmake-modules
 SUBDIR+=	fann
 SUBDIR+=	fastdep
-SUBDIR+=	ffcall
 SUBDIR+=	fhist
 SUBDIR+=	flatzebra
 SUBDIR+=	flex
