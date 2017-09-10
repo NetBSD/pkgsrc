@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2016/03/05 11:28:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.49 2017/09/10 00:38:59 dholland Exp $
 
 DISTNAME=	wl-2.14.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.gohome.org/wl/stable/
 
