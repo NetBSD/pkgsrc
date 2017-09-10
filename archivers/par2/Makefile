@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2017/07/04 09:18:34 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2017/09/10 21:39:12 wiz Exp $
 
-DISTNAME=	par2cmdline-0.7.3
+DISTNAME=	par2cmdline-0.7.4
 PKGNAME=	${DISTNAME:S/cmdline//}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BlackIkeEagle/}
