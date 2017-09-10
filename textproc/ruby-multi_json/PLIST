@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/10/18 14:39:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/09/10 16:09:00 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -22,5 +22,4 @@ ${GEM_LIBDIR}/lib/multi_json/options_cache.rb
 ${GEM_LIBDIR}/lib/multi_json/parse_error.rb
 ${GEM_LIBDIR}/lib/multi_json/vendor/okjson.rb
 ${GEM_LIBDIR}/lib/multi_json/version.rb
-${GEM_LIBDIR}/multi_json.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
