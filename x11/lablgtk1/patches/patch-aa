@@ -1,8 +1,12 @@
-$NetBSD: patch-aa,v 1.3 2011/04/09 08:58:51 obache Exp $
+$NetBSD: patch-aa,v 1.4 2017/09/10 01:59:12 dholland Exp $
 
---- src/Makefile.orig	2003-05-15 16:17:53.000000000 +0200
+- build with PIC
+- don't link with unix.cma twice; it doesn't work
+- DESTDIR support
+
+--- src/Makefile.orig	2003-05-15 14:17:53.000000000 +0000
 +++ src/Makefile
-@@ -38,7 +38,7 @@ CFLAGS = -g $(GTKCFLAGS)
+@@ -38,11 +38,12 @@ CFLAGS = -g $(GTKCFLAGS)
  MLLINK += -cclib -lcamlrund
  MLFLAGS = -g
  else
@@ -11,7 +15,22 @@ $NetBSD: patch-aa,v 1.3 2011/04/09 08:58:51 obache Exp $
  endif
  
  THFLAGS = -thread
-@@ -137,32 +137,39 @@ testcc: lablgladecc lablgtktop
+-THLINK = unix.cma threads.cma
++#THLINK = unix.cma threads.cma $(MLLINK)  # duplicates unix.cma and fails
++THLINK = unix.cma threads.cma str.cma
+ 
+ ifdef USE_CC
+ CCOMPILER = $(CC) -c -I$(LIBDIR) $(CFLAGS)
+@@ -115,7 +116,7 @@ lablgtktop: $(MLLIBS) $(INITOBJS)
+ 	$(TOPLEVEL) -o $@ $(MLLINK) -I . $(MLLIBS) $(INITOBJS)
+ 
+ lablgtktop_t: $(MLLIBS) $(THOBJS) $(INITOBJS) $(THINITOBJS)
+-	$(TOPLEVEL) $(THFLAGS) -o $@ $(THLINK) $(MLLINK) \
++	$(TOPLEVEL) $(THFLAGS) -o $@ $(THLINK) \
+ 	   -I . $(MLLIBS) $(THOBJS) $(INITOBJS) $(THINITOBJS)
+ 
+ lablgtk: Makefile $(CONFIG) lablgtk.in
+@@ -137,32 +138,39 @@ testcc: lablgladecc lablgtktop
  	rm -f testcc.ml
  
  install:
