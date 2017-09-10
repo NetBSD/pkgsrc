@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2016/06/19 20:48:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2017/09/10 21:13:44 wiz Exp $
 bin/fc-cache
 bin/fc-cat
 bin/fc-list
@@ -77,6 +77,7 @@ man/man3/FcConfigGetRescanInterval.3
 man/man3/FcConfigGetSysRoot.3
 man/man3/FcConfigHome.3
 man/man3/FcConfigParseAndLoad.3
+man/man3/FcConfigParseAndLoadFromMemory.3
 man/man3/FcConfigReference.3
 man/man3/FcConfigSetCurrent.3
 man/man3/FcConfigSetRescanInterval.3
@@ -174,6 +175,7 @@ man/man3/FcPatternFilter.3
 man/man3/FcPatternFormat.3
 man/man3/FcPatternGet-Type.3
 man/man3/FcPatternGet.3
+man/man3/FcPatternGetWithBinding.3
 man/man3/FcPatternHash.3
 man/man3/FcPatternPrint.3
 man/man3/FcPatternReference.3
@@ -277,6 +279,7 @@ share/doc/fontconfig/fontconfig-devel/fcconfiggetrescaninterval.html
 share/doc/fontconfig/fontconfig-devel/fcconfiggetsysroot.html
 share/doc/fontconfig/fontconfig-devel/fcconfighome.html
 share/doc/fontconfig/fontconfig-devel/fcconfigparseandload.html
+share/doc/fontconfig/fontconfig-devel/fcconfigparseandloadfrommemory.html
 share/doc/fontconfig/fontconfig-devel/fcconfigreference.html
 share/doc/fontconfig/fontconfig-devel/fcconfigsetcurrent.html
 share/doc/fontconfig/fontconfig-devel/fcconfigsetrescaninterval.html
@@ -374,6 +377,7 @@ share/doc/fontconfig/fontconfig-devel/fcpatternfilter.html
 share/doc/fontconfig/fontconfig-devel/fcpatternformat.html
 share/doc/fontconfig/fontconfig-devel/fcpatternget-type.html
 share/doc/fontconfig/fontconfig-devel/fcpatternget.html
+share/doc/fontconfig/fontconfig-devel/fcpatterngetwithbinding.html
 share/doc/fontconfig/fontconfig-devel/fcpatternhash.html
 share/doc/fontconfig/fontconfig-devel/fcpatternprint.html
 share/doc/fontconfig/fontconfig-devel/fcpatternreference.html
@@ -448,10 +452,12 @@ share/fontconfig/conf.avail/30-metric-aliases.conf
 share/fontconfig/conf.avail/30-pkgsrc-aliases.conf
 share/fontconfig/conf.avail/30-urw-aliases.conf
 share/fontconfig/conf.avail/40-nonlatin.conf
+share/fontconfig/conf.avail/45-generic.conf
 share/fontconfig/conf.avail/45-latin.conf
 share/fontconfig/conf.avail/49-sansserif.conf
 share/fontconfig/conf.avail/50-user.conf
 share/fontconfig/conf.avail/51-local.conf
+share/fontconfig/conf.avail/60-generic.conf
 share/fontconfig/conf.avail/60-latin.conf
 share/fontconfig/conf.avail/65-fonts-persian.conf
 share/fontconfig/conf.avail/65-khmer.conf
