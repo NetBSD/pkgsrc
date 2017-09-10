@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3698 2017/09/10 14:02:16 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3699 2017/09/10 14:23:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5218,3 +5218,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/unifi to 5.5.20 [tnn 2017-09-10]
 	Updated devel/ruby-thor to 0.20.0 [taca 2017-09-10]
 	Updated graphics/ruby-mini-magick to 4.8.0 [taca 2017-09-10]
+	Added mail/ruby-mini_mime version 0.1.4 [taca 2017-09-10]
