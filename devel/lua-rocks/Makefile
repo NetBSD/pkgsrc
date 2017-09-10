@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/08/16 20:21:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/10 14:51:01 alnsn Exp $
 
-DISTNAME=	luarocks-2.4.1
+DISTNAME=	luarocks-2.4.2
 PKGNAME=	${DISTNAME:S/luarocks/${LUA_PKGPREFIX}-rocks/}
 CATEGORIES=	devel
 MASTER_SITES=	https://luarocks.org/releases/
