@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/09/08 11:59:54 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/10 05:55:09 dholland Exp $
 
 GITHUB_PROJECT=	ppx_derivers
 DISTNAME=	${GITHUB_PROJECT}-1.0
@@ -14,6 +14,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 OCAML_USE_JBUILDER=	yes
+OCAML_USE_OPAM=		yes
 
 .include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
