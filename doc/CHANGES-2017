@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3701 2017/09/10 14:40:27 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3702 2017/09/10 14:44:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5221,3 +5221,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added mail/ruby-mini_mime version 0.1.4 [taca 2017-09-10]
 	Updated misc/ruby-bundler to 1.15.4 [taca 2017-09-10]
 	Updated misc/ruby-hashie to 3.5.6 [taca 2017-09-10]
+	Updated misc/ruby-ohai to 13.3.0 [taca 2017-09-10]
