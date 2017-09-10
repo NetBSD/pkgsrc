@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/08/25 17:03:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/10 11:04:15 gavan Exp $
 
 DISTNAME=	cli-1.20.0
 PKGNAME=	go-${DISTNAME}
@@ -15,6 +15,11 @@ LICENSE=	mit
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	gopkg.in/urfave/cli.v1
 
+REPLACE_BASH+=	autocomplete/bash_autocomplete
+REPLACE_PYTHON+= generate-flag-types
+REPLACE_PYTHON+= runtests
+USE_TOOLS+=	bash:run
+
 # Deal with renaming
 pre-install:
 	${MKDIR} ${WRKDIR}/src/github.com/urfave
@@ -25,4 +30,5 @@ pre-install:
 .include "../../www/go-toml-burntsushi/buildlink3.mk"
 .include "../../devel/go-yaml/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
