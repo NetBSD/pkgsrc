@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3722 2017/09/10 16:17:40 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3723 2017/09/10 16:19:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5242,3 +5242,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/ruby-hitimes to 1.2.6 [taca 2017-09-10]
 	Updated www/ruby-capybara to 2.15.1 [taca 2017-09-10]
 	Updated www/ruby-css-parser to 1.6.0 [taca 2017-09-10]
+	Updated www/thin to 1.7.2 [taca 2017-09-10]
