@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/23 18:56:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/10 01:01:34 dholland Exp $
 
 DISTNAME=	tmate-2.2.1
 CATEGORIES=	misc
@@ -21,5 +21,5 @@ pre-configure:
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/msgpack/buildlink3.mk"
 .include "../../security/libssh/buildlink3.mk"
-.include "../../mk/termcap.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
