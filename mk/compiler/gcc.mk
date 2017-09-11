@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.183 2017/08/25 01:43:17 khorben Exp $
+# $NetBSD: gcc.mk,v 1.184 2017/09/11 09:06:41 jperkin Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -372,12 +372,14 @@ CWRAPPERS_APPEND.ld+=	${_RELRO_LDFLAGS}
 .endif
  
 # The user can choose the level of stack smashing protection.
-.if ${PKGSRC_USE_SSP} == "all"
+.if ${_GCC_VERSION:C/\..*$//} >= 4
+.  if ${PKGSRC_USE_SSP} == "all"
 _SSP_CFLAGS=		-fstack-protector-all
-.elif ${PKGSRC_USE_SSP} == "strong"
+.  elif ${PKGSRC_USE_SSP} == "strong"
 _SSP_CFLAGS=		-fstack-protector-strong
-.else
+.  else
 _SSP_CFLAGS=		-fstack-protector
+.  endif
 .endif
 
 _STACK_CHECK_CFLAGS=	-fstack-check
