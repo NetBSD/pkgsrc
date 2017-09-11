@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3764 2017/09/11 20:56:52 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3765 2017/09/11 21:05:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5290,3 +5290,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/filezilla to 3.27.1 [wiz 2017-09-11]
 	Updated math/blas to 3.7.1 [wiz 2017-09-11]
 	Updated math/lapack to 3.7.1 [wiz 2017-09-11]
+	Updated editors/vim-share to 8.0.1096 [wiz 2017-09-11]
