@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3748 2017/09/11 12:10:09 wen Exp $
+$NetBSD: CHANGES-2017,v 1.3749 2017/09/11 14:02:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5271,3 +5271,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated editors/emacs25-nox11 to 25.2nb2 [wiz 2017-09-11]
 	Updated sysutils/consul to 0.9.3 [fhajny 2017-09-11]
 	Updated www/moodle to 3.3.2 [wen 2017-09-11]
+	Updated mail/roundcube to 1.2.6 [taca 2017-09-11]
+	Updated mail/roundcube-plugin-enigma to 1.2.6 [taca 2017-09-11]
+	Updated mail/roundcube-plugin-password to 1.2.6 [taca 2017-09-11]
+	Updated mail/roundcube-plugin-zipdownload to 1.2.6 [taca 2017-09-11]
