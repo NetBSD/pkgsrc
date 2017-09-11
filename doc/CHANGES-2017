@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3743 2017/09/11 09:57:39 abs Exp $
+$NetBSD: CHANGES-2017,v 1.3744 2017/09/11 11:33:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5267,3 +5267,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed net/dcsharp [wiz 2017-09-11]
         Removed textproc/p5-Text-Substitute [abs 2017-09-11]
         Removed www/p5-HTML-FixEntities [abs 2017-09-11]
+	Updated editors/emacs25 to 25.2nb2 [wiz 2017-09-11]
