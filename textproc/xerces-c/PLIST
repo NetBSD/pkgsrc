@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2011/10/12 17:43:14 hans Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/09/11 21:30:03 wiz Exp $
 bin/CreateDOMDocument
 bin/DOMCount
 bin/DOMPrint
@@ -96,6 +96,7 @@ include/xercesc/dom/impl/DOMLSOutputImpl.hpp
 include/xercesc/dom/impl/DOMLSSerializerImpl.hpp
 include/xercesc/dom/impl/DOMLocatorImpl.hpp
 include/xercesc/dom/impl/DOMNamedNodeMapImpl.hpp
+include/xercesc/dom/impl/DOMNodeBase.hpp
 include/xercesc/dom/impl/DOMNodeIDMap.hpp
 include/xercesc/dom/impl/DOMNodeImpl.hpp
 include/xercesc/dom/impl/DOMNodeIteratorImpl.hpp
