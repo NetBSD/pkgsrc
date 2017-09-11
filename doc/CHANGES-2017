@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3751 2017/09/11 15:21:24 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3752 2017/09/11 15:36:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5277,3 +5277,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/roundcube-plugin-zipdownload to 1.2.6 [taca 2017-09-11]
 	Updated www/ruby-faraday to 0.13.1 [taca 2017-09-11]
 	Updated www/ruby-mustermann to 1.0.1 [taca 2017-09-11]
+	Updated www/ruby-patron to 0.9.1 [taca 2017-09-11]
