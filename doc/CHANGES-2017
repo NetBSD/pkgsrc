@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3754 2017/09/11 15:44:11 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3755 2017/09/11 15:49:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5280,3 +5280,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/ruby-patron to 0.9.1 [taca 2017-09-11]
 	Updated www/ruby-rack-cache to 1.7.1 [taca 2017-09-11]
 	Updated www/ruby-rack-contrib to 1.6.0 [taca 2017-09-11]
+	Updated www/ruby-selenium-webdriver to 3.5.2 [taca 2017-09-11]
