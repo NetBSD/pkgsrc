@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3758 2017/09/11 16:01:39 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3759 2017/09/11 16:02:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5284,3 +5284,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/ruby-specinfra to 2.71.2 [taca 2017-09-11]
 	Updated sysutils/ruby-serverspec to 2.40.0 [taca 2017-09-11]
 	Updated devel/gradle to 4.1 [fhajny 2017-09-11]
+	Updated www/ruby-jekyll to 3.5.2 [taca 2017-09-11]
