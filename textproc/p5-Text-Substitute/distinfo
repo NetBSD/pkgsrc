@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 01:59:53 agc Exp $
-
-SHA1 (Text-Substitute-0.15.tar.gz) = 9f6c09260e07087ab60867171e7ff72fc2f845ee
-RMD160 (Text-Substitute-0.15.tar.gz) = 1d9af80f9d5be5b42129d38569388e4d5625153b
-SHA512 (Text-Substitute-0.15.tar.gz) = 5347c654b24a8cd94506e5542260701c92d283f57b33aeac68947e663fc613bb19b26a380fa5c66acf3dda84b3dae4091f8b43afdc537e09a7374b8f7951108a
-Size (Text-Substitute-0.15.tar.gz) = 5503 bytes
