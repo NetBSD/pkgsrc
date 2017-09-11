@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2017/01/01 15:49:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2017/09/11 20:24:37 wiz Exp $
 bin/filezilla
 bin/fzputtygen
 bin/fzsftp
@@ -24,6 +24,7 @@ share/filezilla/resources/48x48/filezilla.png
 share/filezilla/resources/blukis/16x16/ascii.png
 share/filezilla/resources/blukis/16x16/auto.png
 share/filezilla/resources/blukis/16x16/binary.png
+share/filezilla/resources/blukis/16x16/bookmark.png
 share/filezilla/resources/blukis/16x16/bookmarks.png
 share/filezilla/resources/blukis/16x16/cancel.png
 share/filezilla/resources/blukis/16x16/compare.png
@@ -55,6 +56,7 @@ share/filezilla/resources/blukis/16x16/uploadadd.png
 share/filezilla/resources/blukis/32x32/ascii.png
 share/filezilla/resources/blukis/32x32/auto.png
 share/filezilla/resources/blukis/32x32/binary.png
+share/filezilla/resources/blukis/32x32/bookmark.png
 share/filezilla/resources/blukis/32x32/bookmarks.png
 share/filezilla/resources/blukis/32x32/cancel.png
 share/filezilla/resources/blukis/32x32/compare.png
@@ -86,6 +88,7 @@ share/filezilla/resources/blukis/32x32/uploadadd.png
 share/filezilla/resources/blukis/48x48/ascii.png
 share/filezilla/resources/blukis/48x48/auto.png
 share/filezilla/resources/blukis/48x48/binary.png
+share/filezilla/resources/blukis/48x48/bookmark.png
 share/filezilla/resources/blukis/48x48/bookmarks.png
 share/filezilla/resources/blukis/48x48/cancel.png
 share/filezilla/resources/blukis/48x48/compare.png
@@ -157,6 +160,23 @@ share/filezilla/resources/cyril/16x16/downloadadd.png
 share/filezilla/resources/cyril/16x16/file.png
 share/filezilla/resources/cyril/16x16/folder.png
 share/filezilla/resources/cyril/16x16/folderback.png
+share/filezilla/resources/cyril/16x16/folderclosed.png
+share/filezilla/resources/cyril/16x16/folderup.png
+share/filezilla/resources/cyril/16x16/help.png
+share/filezilla/resources/cyril/16x16/localtreeview.png
+share/filezilla/resources/cyril/16x16/logview.png
+share/filezilla/resources/cyril/16x16/processqueue.png
+share/filezilla/resources/cyril/16x16/queueview.png
+share/filezilla/resources/cyril/16x16/reconnect.png
+share/filezilla/resources/cyril/16x16/refresh.png
+share/filezilla/resources/cyril/16x16/remotetreeview.png
+share/filezilla/resources/cyril/16x16/server.png
+share/filezilla/resources/cyril/16x16/showhidden.png
+share/filezilla/resources/cyril/16x16/sitemanager.png
+share/filezilla/resources/cyril/16x16/speedlimits.png
+share/filezilla/resources/cyril/16x16/synchronize.png
+share/filezilla/resources/cyril/16x16/upload.png
+share/filezilla/resources/cyril/16x16/uploadadd.png
 share/filezilla/resources/cyril/theme.xml
 share/filezilla/resources/default/480x480/ascii.png
 share/filezilla/resources/default/480x480/auto.png
@@ -667,6 +687,7 @@ share/filezilla/resources/xrc/menus.xrc
 share/filezilla/resources/xrc/netconfwizard.xrc
 share/filezilla/resources/xrc/settings.xrc
 share/filezilla/resources/xrc/sitemanager.xrc
+share/filezilla/resources/xrc/storj.xrc
 share/filezilla/resources/xrc/update.xrc
 share/icons/hicolor/16x16/apps/filezilla.png
 share/icons/hicolor/32x32/apps/filezilla.png
@@ -675,6 +696,7 @@ share/icons/hicolor/48x48/apps/filezilla.png
 share/icons/hicolor/scalable/apps/filezilla.svg
 share/locale/an/LC_MESSAGES/filezilla.mo
 share/locale/ar/LC_MESSAGES/filezilla.mo
+share/locale/az/LC_MESSAGES/filezilla.mo
 share/locale/bg_BG/LC_MESSAGES/filezilla.mo
 share/locale/ca/LC_MESSAGES/filezilla.mo
 share/locale/ca_ES@valencia/LC_MESSAGES/filezilla.mo
