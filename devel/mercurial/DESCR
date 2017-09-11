@@ -16,4 +16,5 @@ And it just works: Mercurial strives to deliver on each of its
 promises. Most tasks simply work on the first try and without
 requiring arcane knowledge.
 
-This is a meta package for convenience.
+This is a meta package for convenience, to make mercurial
+available under an easy-to-remember name.
