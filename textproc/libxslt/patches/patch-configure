@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2017/09/11 01:30:52 ryoon Exp $
+
+* POSIX shell portability
+
+--- configure.orig	2017-08-29 11:30:40.000000000 +0000
++++ configure
+@@ -14627,7 +14627,7 @@ fi
+ 
+ 
+ 
+-if test "x$LIBXML_CONFIG_PREFIX" == "x" -a "x$LIBXML_SRC" == "x"
++if test "x$LIBXML_CONFIG_PREFIX" = "x" -a "x$LIBXML_SRC" = "x"
+ then
+ 
+ pkg_failed=no
