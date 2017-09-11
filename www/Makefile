@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1264 2017/09/05 06:03:22 wiz Exp $
+# $NetBSD: Makefile,v 1.1265 2017/09/11 09:57:39 abs Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -352,7 +352,6 @@ SUBDIR+=	p5-HTML-Email-Obfuscate
 SUBDIR+=	p5-HTML-Entities-Interpolate
 SUBDIR+=	p5-HTML-Escape
 SUBDIR+=	p5-HTML-FillInForm
-SUBDIR+=	p5-HTML-FixEntities
 SUBDIR+=	p5-HTML-Form
 SUBDIR+=	p5-HTML-FormFu
 SUBDIR+=	p5-HTML-Format
