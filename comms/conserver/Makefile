@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2014/10/09 14:06:03 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2017/09/11 15:00:03 hauke Exp $
 #
 
 DISTNAME=	conserver-7.2.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	comms
 MASTER_SITES=	http://www.conserver.com/
 
@@ -26,6 +26,10 @@ CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/log/conserver
 	${MACHINE_ARCH} == x86_64
 CONFIGURE_ARGS+=	--with-64bit
 .endif
+
+# Debug
+CFLAGS+=		-g3
+INSTALL_UNSTRIPPED=	yes
 
 BUILD_DEFS+=	CONSERVER_DEFAULTPORT CONSERVER_DEFAULTHOST
 
