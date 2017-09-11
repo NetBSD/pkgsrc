@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/06/04 15:26:43 taca Exp $
+$NetBSD: distinfo,v 1.2 2017/09/11 15:20:20 taca Exp $
 
-SHA1 (mustermann-1.0.0.gem) = 2d60387293cd055880c9ade9acc6bb71f7c43798
-RMD160 (mustermann-1.0.0.gem) = b08d163dae1af7443886334b6383c204228760ea
-SHA512 (mustermann-1.0.0.gem) = eaccd4784373d03f9fabfa645e5c1272b29f5b2fb54942bf36d0f0cb033fdd50ac34ee2cf4c5928f20c6cf25d2a5fd9442ed56ebdce93ca8a3c9efff7014256b
-Size (mustermann-1.0.0.gem) = 51200 bytes
+SHA1 (mustermann-1.0.1.gem) = 85d5b4e7a8bbd8370d139cf1cbba6e395bfa8c9b
+RMD160 (mustermann-1.0.1.gem) = 93a7a9f3d9df304bfb4e6b2231121689f738abb0
+SHA512 (mustermann-1.0.1.gem) = 6fbe0a0a2af41a4276283029ef3883e031080c7e1394e9a1e496c9de0dfbdd9dea3c753fc9fd64718f3d1d04ed61ea865165bab96e53c1b8b1258d91c5231562
+Size (mustermann-1.0.1.gem) = 51712 bytes
