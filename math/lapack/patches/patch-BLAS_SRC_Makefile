@@ -1,23 +1,23 @@
-$NetBSD: patch-BLAS_SRC_Makefile,v 1.4 2017/01/25 15:53:06 adam Exp $
+$NetBSD: patch-BLAS_SRC_Makefile,v 1.5 2017/09/11 20:56:28 wiz Exp $
 
 Use LIBTOOL.
 
---- BLAS/SRC/Makefile.orig	2016-12-23 23:01:32.000000000 +0000
+--- BLAS/SRC/Makefile.orig	2017-06-17 22:46:53.000000000 +0000
 +++ BLAS/SRC/Makefile
 @@ -138,8 +138,8 @@ ALLOBJ = $(SBLAS1) $(SBLAS2) $(SBLAS3) $
  	$(ZBLAS2) $(ZBLAS3) $(ALLBLAS)
  
  $(BLASLIB): $(ALLOBJ)
--	$(ARCH) $(ARCHFLAGS) $@ $(ALLOBJ)
+-	$(ARCH) $(ARCHFLAGS) $@ $^
 -	$(RANLIB) $@
 +	${LIBTOOL} --mode=link --tag=FC ${FC} ${LDFLAGS} -o libblas.la \
 +	$(ALLOBJ:.o=.lo) -rpath ${PREFIX}/lib -version-info 4:0
  
  single: $(SBLAS1) $(ALLBLAS) $(SBLAS2) $(SBLAS3)
- 	$(ARCH) $(ARCHFLAGS) $(BLASLIB) $(SBLAS1) $(ALLBLAS) \
-@@ -168,4 +168,4 @@ clean:
- 	rm -f *.o
+ 	$(ARCH) $(ARCHFLAGS) $(BLASLIB) $^
+@@ -167,4 +167,4 @@ cleanlib:
+ 	#rm -f $(BLASLIB)  # May point to a system lib, e.g. -lblas
  
  .f.o:
 -	$(FORTRAN) $(OPTS) -c -o $@ $<
-+	${LIBTOOL} --mode=compile --tag=FC ${FC} ${FFLAGS} -c $<
++	${LIBTOOL} --mode=compile --tag=FC ${FC} ${FFLAGS} -c -o $@ $<
