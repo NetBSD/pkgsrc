@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2017/08/24 20:03:40 adam Exp $
+# $NetBSD: Makefile,v 1.44 2017/09/11 07:38:23 wiz Exp $
 
 DISTNAME=	FlightCrew-0.7.2-Code
 PKGNAME=	${DISTNAME:S/-Code//}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://flightcrew.googlecode.com/files/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://code.google.com/archive/p/flightcrew/
+HOMEPAGE=	https://github.com/Sigil-Ebook/flightcrew
 COMMENT=	EPUB validator
 LICENSE=	gnu-lgpl-v3 AND cc-by-sa-v3.0
 
