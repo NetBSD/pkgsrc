@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/06/10 16:38:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/09/11 15:53:36 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
@@ -17,6 +17,7 @@ ${GEM_LIBDIR}/lib/specinfra/backend/cmd.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/docker.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/dockerfile.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/exec.rb
+${GEM_LIBDIR}/lib/specinfra/backend/jexec.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/lxc.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/powershell/command.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/powershell/script_helper.rb
@@ -140,10 +141,13 @@ ${GEM_LIBDIR}/lib/specinfra/command/freebsd/base/inventory.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/base/kernel_module.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/base/package.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/base/port.rb
+${GEM_LIBDIR}/lib/specinfra/command/freebsd/base/process.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/base/routing_table.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/base/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/base/user.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/base/zfs.rb
+${GEM_LIBDIR}/lib/specinfra/command/freebsd/v11.rb
+${GEM_LIBDIR}/lib/specinfra/command/freebsd/v11/interface.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/v6.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/v6/package.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/v6/user.rb
@@ -338,12 +342,14 @@ ${GEM_LIBDIR}/lib/specinfra/host_inventory/block_device.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/cpu.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/domain.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/ec2.rb
+${GEM_LIBDIR}/lib/specinfra/host_inventory/facter.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/filesystem.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/fqdn.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/group.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/hostname.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/kernel.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/memory.rb
+${GEM_LIBDIR}/lib/specinfra/host_inventory/ohai.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/platform.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/platform_version.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/user.rb
@@ -383,6 +389,8 @@ ${GEM_LIBDIR}/spec/command/debian/package_spec.rb
 ${GEM_LIBDIR}/spec/command/debian/port_spec.rb
 ${GEM_LIBDIR}/spec/command/debian/service_spec.rb
 ${GEM_LIBDIR}/spec/command/debian8/port_spec.rb
+${GEM_LIBDIR}/spec/command/debian9/port_spec.rb
+${GEM_LIBDIR}/spec/command/debian9/service_spec.rb
 ${GEM_LIBDIR}/spec/command/esxi/package_spec.rb
 ${GEM_LIBDIR}/spec/command/factory_spec.rb
 ${GEM_LIBDIR}/spec/command/freebsd/file_spec.rb
