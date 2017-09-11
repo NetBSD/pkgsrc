@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3746 2017/09/11 11:35:32 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3747 2017/09/11 11:53:15 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5269,3 +5269,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed www/p5-HTML-FixEntities [abs 2017-09-11]
 	Updated editors/emacs25 to 25.2nb2 [wiz 2017-09-11]
 	Updated editors/emacs25-nox11 to 25.2nb2 [wiz 2017-09-11]
+	Updated sysutils/consul to 0.9.3 [fhajny 2017-09-11]
