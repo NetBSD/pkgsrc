@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.36 2017/08/25 20:04:07 joerg Exp $
+$NetBSD: distinfo,v 1.37 2017/09/11 20:24:37 wiz Exp $
 
-SHA1 (FileZilla_3.25.2_src.tar.bz2) = c8da156611e7f8017505f425496afe22456f4c9d
-RMD160 (FileZilla_3.25.2_src.tar.bz2) = b0efa8cba24d950332c2ca845f330913faaec79b
-SHA512 (FileZilla_3.25.2_src.tar.bz2) = 6c6feeec0b1bd15ff2c3fecbec22bca9c79f4263e0d1855c6d27a3df54128cfd837f0a546d1540b87b4645e620b57961b8ac0f01bd52748832f5625139c39764
-Size (FileZilla_3.25.2_src.tar.bz2) = 4712781 bytes
+SHA1 (FileZilla_3.27.1_src.tar.bz2) = 25ba3f8d205b7d4720d8298aefc74d56224dfd57
+RMD160 (FileZilla_3.27.1_src.tar.bz2) = e4ad9a0df2659ba67bdd586008335e0a63da01c7
+SHA512 (FileZilla_3.27.1_src.tar.bz2) = ef07d91a0b38349cc2a1942d52afe1ae03760643028fcdac28f6523bea24498d6700d2d13d8c5bd5df933ff4e6a90df40bc399d6c0f0f2f7fdbe9b8b04381963
+Size (FileZilla_3.27.1_src.tar.bz2) = 4815446 bytes
 SHA1 (patch-configure) = 8bf5736d17ed78fe0a1d4f910194bba9f03c854e
-SHA1 (patch-src_engine_uri.cpp) = 9dcd565323a3160682f18267c6ba6803366f6070
-SHA1 (patch-src_include_uri.h) = 86bfbd334007db05ec597bf84276508616b5d232
 SHA1 (patch-src_putty_unix_uxshare.c) = 0c3102c10b742c461fe032f081d1a642c6fd6a59
