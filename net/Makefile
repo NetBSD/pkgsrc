@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1177 2017/09/08 06:21:30 wiz Exp $
+# $NetBSD: Makefile,v 1.1178 2017/09/11 07:50:37 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -88,7 +88,6 @@ SUBDIR+=	dante
 SUBDIR+=	daq
 SUBDIR+=	darkstat
 SUBDIR+=	dc_gui2
-SUBDIR+=	dcsharp
 SUBDIR+=	dctc
 SUBDIR+=	ddclient
 SUBDIR+=	deforaos-vncviewer
