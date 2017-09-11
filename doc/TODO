@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17712 2017/09/11 21:05:13 wiz Exp $
+$NetBSD: TODO,v 1.17713 2017/09/11 21:30:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1558,7 +1558,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xcircuit-3.9.44
 	o xcoral-3.14
 	o xemacs-current-21.5.31
-	o xerces-c-3.2.0
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xf86-video-geode-2.11.9 [wip]
