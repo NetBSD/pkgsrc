@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/06/20 13:42:33 taca Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/11 15:53:36 taca Exp $
 
-DISTNAME=	specinfra-2.68.0
+DISTNAME=	specinfra-2.71.2
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,8 +9,6 @@ COMMENT=	Common layer for serverspec and itamae
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-net-scp>=0:../../security/ruby-net-scp
-
-OVERRIDE_GEMSPEC+=	sfl:
 
 .include "../../lang/ruby/rubyversion.mk"
 
