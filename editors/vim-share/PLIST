@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2017/08/15 21:00:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.35 2017/09/11 21:05:00 wiz Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -655,6 +655,7 @@ share/vim/${VIM_SUBDIR}/pack/dist/opt/matchit/doc/tags
 share/vim/${VIM_SUBDIR}/pack/dist/opt/matchit/plugin/matchit.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/shellmenu/plugin/shellmenu.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/swapmouse/plugin/swapmouse.vim
+share/vim/${VIM_SUBDIR}/pack/dist/opt/termdebug/plugin/termdebug.vim
 share/vim/${VIM_SUBDIR}/plugin/README.txt
 share/vim/${VIM_SUBDIR}/plugin/getscriptPlugin.vim
 share/vim/${VIM_SUBDIR}/plugin/gzip.vim
@@ -1042,6 +1043,7 @@ share/vim/${VIM_SUBDIR}/syntax/murphi.vim
 share/vim/${VIM_SUBDIR}/syntax/mush.vim
 share/vim/${VIM_SUBDIR}/syntax/muttrc.vim
 share/vim/${VIM_SUBDIR}/syntax/mysql.vim
+share/vim/${VIM_SUBDIR}/syntax/n1ql.vim
 share/vim/${VIM_SUBDIR}/syntax/named.vim
 share/vim/${VIM_SUBDIR}/syntax/nanorc.vim
 share/vim/${VIM_SUBDIR}/syntax/nasm.vim
