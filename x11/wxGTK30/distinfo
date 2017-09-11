@@ -1,18 +1,16 @@
-$NetBSD: distinfo,v 1.8 2017/07/15 19:10:57 wiz Exp $
+$NetBSD: distinfo,v 1.9 2017/09/11 20:22:53 wiz Exp $
 
-SHA1 (wxWidgets-3.0.2-libtool.3.diff.bz2) = ffc3fbec9b1a8a9c19ac5f3750c78559b6bb2c81
-RMD160 (wxWidgets-3.0.2-libtool.3.diff.bz2) = 54f4aa932208172496e620def1d854602d87b12e
-SHA512 (wxWidgets-3.0.2-libtool.3.diff.bz2) = 31ea745d9d989e20fcb16e152c5312080d4eca5da9c2b27bf1a9ce7c8d40479711959bce3e33e6d3f10116c85a00e8f0b0b5699633966ebaf5afb418e69e6488
-Size (wxWidgets-3.0.2-libtool.3.diff.bz2) = 209972 bytes
-SHA1 (wxWidgets-3.0.2.tar.bz2) = 6461eab4428c0a8b9e41781b8787510484dea800
-RMD160 (wxWidgets-3.0.2.tar.bz2) = a7f404c8a64ca68fa31e408bded4387c2722196b
-SHA512 (wxWidgets-3.0.2.tar.bz2) = 098f79863103f3be0b7e21e4f0f1b34ab5277ef0033c1ef1387a9c673b0e0b76a2d732b183fa11b22cfcbbfdb7a4884f243d12f65cd49baa1772852307b393c4
-Size (wxWidgets-3.0.2.tar.bz2) = 20172909 bytes
-SHA1 (patch-Makefile.in) = 57f775d5471411a5439c83c943042badc153e00f
+SHA1 (wxWidgets-3.0.3-libtool.1.diff.bz2) = 7e108d1d58efc23354f5ac8ebe7e0f5938df6f51
+RMD160 (wxWidgets-3.0.3-libtool.1.diff.bz2) = 9a165c89abbe857c042a936a54a5fdf21737ba33
+SHA512 (wxWidgets-3.0.3-libtool.1.diff.bz2) = f7659bb6b2d3262399a6c5eaa4fe16c1204ec80addbfacf5e64052fe2a793f63dc071d7c261252db93556e86e55a2da939875a6f83ff2b1b09fd7d41636f65b3
+Size (wxWidgets-3.0.3-libtool.1.diff.bz2) = 213915 bytes
+SHA1 (wxWidgets-3.0.3.tar.bz2) = 3525306c926e208d9b0272aaa9c091b8c7264e5b
+RMD160 (wxWidgets-3.0.3.tar.bz2) = a74969aba91793ce3c870ca966234b6f3cf74403
+SHA512 (wxWidgets-3.0.3.tar.bz2) = dfe53682d7cda1d460f336a890603c4e823078be4b05e7cf43ab36cb49247f702808aa939d9311705bdf5f96eaa076e7a8f77f4415bc07c5bfdc19e5deff1dd1
+Size (wxWidgets-3.0.3.tar.bz2) = 20054446 bytes
 SHA1 (patch-build_aclocal_bakefile.m4) = 7d3d6fb1e6a72e370dc6147010fa5bf2c46f1206
 SHA1 (patch-configure) = 897f13daa5bc8246902d7d864096d621f2e54928
 SHA1 (patch-configure.in) = e49b9a83040201f01c22b3e1cbc4b331985f4e99
-SHA1 (patch-src_stc_scintilla_src_Editor.cxx) = 0b3fb6b8a6c3e72868a12d7b16ceebe295a599a8
 SHA1 (patch-src_tiff_configure) = e1c002f5b7d0bf2c0bec399dbb62d0146c14ec20
 SHA1 (patch-src_tiff_configure.ac) = 0d51a7c251f897aa00e58c3a7ec5f348b50d1821
 SHA1 (patch-src_unix_fswatcher__kqueue.cpp) = 49e142dbdd5c8b8f449ab19b4adbe403d515ab95
