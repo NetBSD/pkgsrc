@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2017/08/01 14:59:03 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2017/09/11 20:24:37 wiz Exp $
 
-VERSION=	3.25.2
+VERSION=	3.27.1
 DISTNAME=	FileZilla_${VERSION}_src
 PKGNAME=	filezilla-${VERSION}
 CATEGORIES=	net x11
@@ -29,12 +29,13 @@ GCC_REQD+=		4.9
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libfilezilla+=	libfilezilla>=0.9.0
+BUILDLINK_API_DEPENDS.libfilezilla+=	libfilezilla>=0.9.2
 .include "../../net/libfilezilla/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=3.4.0
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_API_DEPENDS.tinyxml+=	tinyxml>=2.6.2nb1
 .include "../../textproc/pugixml/buildlink3.mk"
+BUILDLINK_API_DEPENDS.wxGTK30+=	wxGTK30>=3.0.3
 .include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
