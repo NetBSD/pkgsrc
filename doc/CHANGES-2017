@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3742 2017/09/11 07:50:37 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3743 2017/09/11 09:57:39 abs Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5265,3 +5265,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-tox to 2.8.2 [adam 2017-09-11]
 	Updated devel/py-radon to 2.1.1 [adam 2017-09-11]
 	Removed net/dcsharp [wiz 2017-09-11]
+        Removed textproc/p5-Text-Substitute [abs 2017-09-11]
+        Removed www/p5-HTML-FixEntities [abs 2017-09-11]
