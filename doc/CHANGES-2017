@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3763 2017/09/11 20:56:41 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3764 2017/09/11 20:56:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5289,3 +5289,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/wxGTK30 to 3.0.3 [wiz 2017-09-11]
 	Updated net/filezilla to 3.27.1 [wiz 2017-09-11]
 	Updated math/blas to 3.7.1 [wiz 2017-09-11]
+	Updated math/lapack to 3.7.1 [wiz 2017-09-11]
