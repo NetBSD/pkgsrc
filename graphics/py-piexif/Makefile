@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2017/08/04 18:43:18 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/11 05:18:51 adam Exp $
 
-DISTNAME=	piexif-1.0.12
+DISTNAME=	piexif-1.0.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/piexif/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kleink@NetBSD.org
-HOMEPAGE=	http://piexif.readthedocs.org/
+HOMEPAGE=	https://github.com/hMatoba/Piexif
 COMMENT=	Exif manipulation with pure python script
 LICENSE=	mit
 
