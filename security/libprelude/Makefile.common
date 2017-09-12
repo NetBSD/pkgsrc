@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2017/04/22 17:51:16 taca Exp $
+# $NetBSD: Makefile.common,v 1.12 2017/09/12 06:14:08 dholland Exp $
 #
 # used by security/libprelude/Makefile
 # used by security/libprelude-lua/Makefile
@@ -10,7 +10,7 @@ VERSION=		0.9.24.1
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.com/download/releases/libprelude/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER?=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.prelude-siem.org/
 
 PATCHDIR=		${.CURDIR}/../../security/libprelude/patches
@@ -23,11 +23,13 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		chown bison gawk gmake pkg-config
 USE_LANGUAGES=		c c++
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--enable-easy-bindings
 PKG_SYSCONFSUBDIR=	prelude
+
+.include "../../mk/bsd.prefs.mk"
 
 PRELUDE_USER?=		_prelude
 PRELUDE_GROUP?=		_prelude
