@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2017/08/24 12:56:57 bouyer Exp $
+$NetBSD: distinfo,v 1.14 2017/09/12 17:31:20 bouyer Exp $
 
 SHA1 (OpenCPN-4.8.0-a13bc435462ae6c029660f1caa458dca79c927ec.zip) = 33ecc34915951c270fd758ec00a69574bc44ea25
 RMD160 (OpenCPN-4.8.0-a13bc435462ae6c029660f1caa458dca79c927ec.zip) = 084ad8ace3336954402a17b7610c3e2807a270a1
@@ -17,4 +17,5 @@ SHA1 (patch-src_chart1.cpp) = ae7c1d8a59c9a275914a613205de71e2dca89dc6
 SHA1 (patch-src_crashprint.cpp) = a96e8aa980eb3b19c3dce3343582511d608e6625
 SHA1 (patch-src_glu_CMakeLists.txt) = d63494a41071097252ac9e2cb95db75041f30b62
 SHA1 (patch-src_mipmap_mipmap.c) = 3bdb2c37e7a6d89fc6a531af6e0396a1ff385aeb
+SHA1 (patch-src_ocpndc.cpp) = cd425bec24050176a08e7ec8280bf853fd10c756
 SHA1 (patch-src_tcmgr.cpp) = 3fb4edf3368f3f3907f231ebcabd8e5061699040
