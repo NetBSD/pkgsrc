@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/02/21 08:00:24 kleink Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/09/12 16:24:00 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -36,6 +36,3 @@ ${PYSITELIB}/geojson/mapping.pyo
 ${PYSITELIB}/geojson/utils.py
 ${PYSITELIB}/geojson/utils.pyc
 ${PYSITELIB}/geojson/utils.pyo
-${PYSITELIB}/geojson/validation.py
-${PYSITELIB}/geojson/validation.pyc
-${PYSITELIB}/geojson/validation.pyo
