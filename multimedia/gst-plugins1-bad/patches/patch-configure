@@ -1,20 +1,20 @@
-$NetBSD: patch-configure,v 1.6 2017/01/03 17:10:12 wiz Exp $
+$NetBSD: patch-configure,v 1.7 2017/09/12 09:32:43 wiz Exp $
 
 Allow building with python 3.4-3.6.
 Fix unportable test(1) operator.
 
---- configure.orig	2016-11-01 15:15:05.000000000 +0000
+--- configure.orig	2017-07-14 08:21:19.000000000 +0000
 +++ configure
-@@ -24457,7 +24457,7 @@ fi
+@@ -24392,7 +24392,7 @@ fi
  
          # Find any Python interpreter.
      if test -z "$PYTHON"; then
--      for ac_prog in python python2 python3 python3.3 python3.2 python3.1 python3.0 python2.7  python2.6 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0
+-      for ac_prog in python python2 python3 python3.5 python3.4 python3.3 python3.2 python3.1 python3.0 python2.7  python2.6 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0
 +      for ac_prog in python python2 python3 python3.6 python3.5 python3.4 python3.3 python3.2 python3.1 python3.0 python2.7  python2.6 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0
  do
    # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
-@@ -35284,7 +35284,7 @@ fi
+@@ -35001,7 +35001,7 @@ fi
  
  if test "x$HAVE_GL" = "xyes" -a "x$HAVE_GLES2" = "xyes"; then
    GLES3_H_DEFINE=0

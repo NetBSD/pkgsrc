@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/29 09:17:39 ryoon Exp $
-lib/gstreamer-1.0/libgstmad.la
