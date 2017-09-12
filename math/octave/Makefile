@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.158 2017/09/08 02:38:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.159 2017/09/12 13:52:02 wiz Exp $
 
 DISTNAME=	octave-4.2.0
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GNU:=octave/}
 
