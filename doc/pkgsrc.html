@@ -365,10 +365,11 @@ builds)</a></span></dt>
 <dt><span class="sect1"><a href="#submitting-binary-packages">21.1. Submitting binary packages</a></span></dt>
 <dt><span class="sect1"><a href="#submitting-your-package">21.2. Submitting source packages (for non-NetBSD-developers)</a></span></dt>
 <dt><span class="sect1"><a href="#general-notes-for-changes">21.3. General notes when adding, updating, or removing packages</a></span></dt>
-<dt><span class="sect1"><a href="#committing-importing">21.4. Committing: Adding a package to CVS</a></span></dt>
-<dt><span class="sect1"><a href="#updating-package">21.5. Updating a package to a newer version</a></span></dt>
-<dt><span class="sect1"><a href="#renaming-package">21.6. Renaming a package in pkgsrc</a></span></dt>
-<dt><span class="sect1"><a href="#moving-package">21.7. Moving a package in pkgsrc</a></span></dt>
+<dt><span class="sect1"><a href="#commit-messages">21.4. Commit Messages</a></span></dt>
+<dt><span class="sect1"><a href="#committing-importing">21.5. Committing: Adding a package to CVS</a></span></dt>
+<dt><span class="sect1"><a href="#updating-package">21.6. Updating a package to a newer version</a></span></dt>
+<dt><span class="sect1"><a href="#renaming-package">21.7. Renaming a package in pkgsrc</a></span></dt>
+<dt><span class="sect1"><a href="#moving-package">21.8. Moving a package in pkgsrc</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#devfaq">22. Frequently Asked Questions</a></span></dt>
 <dt><span class="chapter"><a href="#gnome">23. GNOME packaging and porting</a></span></dt>
@@ -2974,10 +2975,11 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect1"><a href="#submitting-binary-packages">21.1. Submitting binary packages</a></span></dt>
 <dt><span class="sect1"><a href="#submitting-your-package">21.2. Submitting source packages (for non-NetBSD-developers)</a></span></dt>
 <dt><span class="sect1"><a href="#general-notes-for-changes">21.3. General notes when adding, updating, or removing packages</a></span></dt>
-<dt><span class="sect1"><a href="#committing-importing">21.4. Committing: Adding a package to CVS</a></span></dt>
-<dt><span class="sect1"><a href="#updating-package">21.5. Updating a package to a newer version</a></span></dt>
-<dt><span class="sect1"><a href="#renaming-package">21.6. Renaming a package in pkgsrc</a></span></dt>
-<dt><span class="sect1"><a href="#moving-package">21.7. Moving a package in pkgsrc</a></span></dt>
+<dt><span class="sect1"><a href="#commit-messages">21.4. Commit Messages</a></span></dt>
+<dt><span class="sect1"><a href="#committing-importing">21.5. Committing: Adding a package to CVS</a></span></dt>
+<dt><span class="sect1"><a href="#updating-package">21.6. Updating a package to a newer version</a></span></dt>
+<dt><span class="sect1"><a href="#renaming-package">21.7. Renaming a package in pkgsrc</a></span></dt>
+<dt><span class="sect1"><a href="#moving-package">21.8. Moving a package in pkgsrc</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#devfaq">22. Frequently Asked Questions</a></span></dt>
 <dt><span class="chapter"><a href="#gnome">23. GNOME packaging and porting</a></span></dt>
@@ -8590,10 +8592,11 @@ PERL5_PACKLIST= auto/Pg/.packlist
 <dt><span class="sect1"><a href="#submitting-binary-packages">21.1. Submitting binary packages</a></span></dt>
 <dt><span class="sect1"><a href="#submitting-your-package">21.2. Submitting source packages (for non-NetBSD-developers)</a></span></dt>
 <dt><span class="sect1"><a href="#general-notes-for-changes">21.3. General notes when adding, updating, or removing packages</a></span></dt>
-<dt><span class="sect1"><a href="#committing-importing">21.4. Committing: Adding a package to CVS</a></span></dt>
-<dt><span class="sect1"><a href="#updating-package">21.5. Updating a package to a newer version</a></span></dt>
-<dt><span class="sect1"><a href="#renaming-package">21.6. Renaming a package in pkgsrc</a></span></dt>
-<dt><span class="sect1"><a href="#moving-package">21.7. Moving a package in pkgsrc</a></span></dt>
+<dt><span class="sect1"><a href="#commit-messages">21.4. Commit Messages</a></span></dt>
+<dt><span class="sect1"><a href="#committing-importing">21.5. Committing: Adding a package to CVS</a></span></dt>
+<dt><span class="sect1"><a href="#updating-package">21.6. Updating a package to a newer version</a></span></dt>
+<dt><span class="sect1"><a href="#renaming-package">21.7. Renaming a package in pkgsrc</a></span></dt>
+<dt><span class="sect1"><a href="#moving-package">21.8. Moving a package in pkgsrc</a></span></dt>
 </dl>
 </div>
 <div class="sect1">
@@ -8679,7 +8682,48 @@ builds)</i></a>.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="committing-importing"></a>21.4. Committing: Adding a package to CVS</h2></div></div></div>
+<a name="commit-messages"></a>21.4. Commit Messages</h2></div></div></div>
+<p>For several years, there have been mirrors of pkgsrc in
+  fossil, git, and hg. Standard practise when using these tools is to
+  make the first line of a commit message function as a summary that
+  can be read without the rest, such as is commonly done with "git log
+  --oneline". For this reason, we have the following guidelines for
+  pkgsrc commit messages:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Start the commit message with a line that explains the
+    big picture in 50 characters or less. When a commit is for one
+    package, include the name of the package. For updates, include the
+    version to which it is updated.</p></li>
+<li class="listitem"><p>Leave the next line empty.</p></li>
+<li class="listitem"><p>Then come the details for the commit (changes in that
+    package, reason for a change) and any relevant PRs. Wrap this
+    section.</p></li>
+</ul></div>
+<p>Here is an example:
+  </p>
+<pre class="programlisting">
+  libxslt: update to 1.0.30
+
+  Changes since 1.0.29:
+  ...
+  </pre>
+<p>
+  </p>
+<p>Here is another example:
+  </p>
+<pre class="programlisting">
+  mk/bsd.pkg.mk: enable SSP by default on NetBSD
+
+  (rationale)
+  </pre>
+<p>
+  </p>
+<p>Commit messages are final: no <span class="quote">&#8220;<span class="quote">cvs admin</span>&#8221;</span> is
+  allowed on the pkgsrc repository to change commit messages.</p>
+</div>
+<div class="sect1">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="committing-importing"></a>21.5. Committing: Adding a package to CVS</h2></div></div></div>
 <p>This section is only of interest for pkgsrc developers with write
   access to the pkgsrc repository.</p>
 <p>When the package is finished, <span class="quote">&#8220;<span class="quote">cvs add</span>&#8221;</span> the files.
@@ -8711,7 +8755,7 @@ much easier to get wrong than <span class="quote">&#8220;<span class="quote">cvs
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="updating-package"></a>21.5. Updating a package to a newer version</h2></div></div></div>
+<a name="updating-package"></a>21.6. Updating a package to a newer version</h2></div></div></div>
 <p>Please always put a concise, appropriate and relevant summary of the
   changes between old and new versions into the commit log when updating
   a package. There are various reasons for this:</p>
@@ -8735,7 +8779,7 @@ much easier to get wrong than <span class="quote">&#8220;<span class="quote">cvs
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="renaming-package"></a>21.6. Renaming a package in pkgsrc</h2></div></div></div>
+<a name="renaming-package"></a>21.7. Renaming a package in pkgsrc</h2></div></div></div>
 <p>Renaming packages is not recommended.</p>
 <p>When renaming packages, be sure to fix any references to old name
   in other Makefiles, options, buildlink files, etc.</p>
@@ -8753,7 +8797,7 @@ much easier to get wrong than <span class="quote">&#8220;<span class="quote">cvs
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="moving-package"></a>21.7. Moving a package in pkgsrc</h2></div></div></div>
+<a name="moving-package"></a>21.8. Moving a package in pkgsrc</h2></div></div></div>
 <p>It is preferred that packages are not renamed or moved, but if needed
   please follow these steps.
 </p>
@@ -8808,7 +8852,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm81552784"></a><dl>
+<a name="idm84539152"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -8853,7 +8897,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm81552400"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm84538640"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -8869,7 +8913,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm81540112"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm84534672"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -8887,7 +8931,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm81535760"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm84530192"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -8905,7 +8949,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm81531536"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm84526096"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -8918,7 +8962,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm81529360"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm84523920"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -8934,7 +8978,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm81526288"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm84512528"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -8958,7 +9002,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm81519376"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm84505616"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -8983,7 +9027,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm81515536"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm84501904"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9031,7 +9075,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm81509136"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm84495376"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
