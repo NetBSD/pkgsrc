@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/08 22:51:04 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/09/12 14:55:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -17,6 +17,9 @@ ${PYSITELIB}/kazoo/exceptions.pyo
 ${PYSITELIB}/kazoo/handlers/__init__.py
 ${PYSITELIB}/kazoo/handlers/__init__.pyc
 ${PYSITELIB}/kazoo/handlers/__init__.pyo
+${PYSITELIB}/kazoo/handlers/eventlet.py
+${PYSITELIB}/kazoo/handlers/eventlet.pyc
+${PYSITELIB}/kazoo/handlers/eventlet.pyo
 ${PYSITELIB}/kazoo/handlers/gevent.py
 ${PYSITELIB}/kazoo/handlers/gevent.pyc
 ${PYSITELIB}/kazoo/handlers/gevent.pyo
@@ -50,18 +53,27 @@ ${PYSITELIB}/kazoo/protocol/serialization.pyo
 ${PYSITELIB}/kazoo/protocol/states.py
 ${PYSITELIB}/kazoo/protocol/states.pyc
 ${PYSITELIB}/kazoo/protocol/states.pyo
+${PYSITELIB}/kazoo/python2atexit.py
+${PYSITELIB}/kazoo/python2atexit.pyc
+${PYSITELIB}/kazoo/python2atexit.pyo
 ${PYSITELIB}/kazoo/recipe/__init__.py
 ${PYSITELIB}/kazoo/recipe/__init__.pyc
 ${PYSITELIB}/kazoo/recipe/__init__.pyo
 ${PYSITELIB}/kazoo/recipe/barrier.py
 ${PYSITELIB}/kazoo/recipe/barrier.pyc
 ${PYSITELIB}/kazoo/recipe/barrier.pyo
+${PYSITELIB}/kazoo/recipe/cache.py
+${PYSITELIB}/kazoo/recipe/cache.pyc
+${PYSITELIB}/kazoo/recipe/cache.pyo
 ${PYSITELIB}/kazoo/recipe/counter.py
 ${PYSITELIB}/kazoo/recipe/counter.pyc
 ${PYSITELIB}/kazoo/recipe/counter.pyo
 ${PYSITELIB}/kazoo/recipe/election.py
 ${PYSITELIB}/kazoo/recipe/election.pyc
 ${PYSITELIB}/kazoo/recipe/election.pyo
+${PYSITELIB}/kazoo/recipe/lease.py
+${PYSITELIB}/kazoo/recipe/lease.pyc
+${PYSITELIB}/kazoo/recipe/lease.pyo
 ${PYSITELIB}/kazoo/recipe/lock.py
 ${PYSITELIB}/kazoo/recipe/lock.pyc
 ${PYSITELIB}/kazoo/recipe/lock.pyo
@@ -101,6 +113,9 @@ ${PYSITELIB}/kazoo/tests/test_barrier.pyo
 ${PYSITELIB}/kazoo/tests/test_build.py
 ${PYSITELIB}/kazoo/tests/test_build.pyc
 ${PYSITELIB}/kazoo/tests/test_build.pyo
+${PYSITELIB}/kazoo/tests/test_cache.py
+${PYSITELIB}/kazoo/tests/test_cache.pyc
+${PYSITELIB}/kazoo/tests/test_cache.pyo
 ${PYSITELIB}/kazoo/tests/test_client.py
 ${PYSITELIB}/kazoo/tests/test_client.pyc
 ${PYSITELIB}/kazoo/tests/test_client.pyo
@@ -113,12 +128,24 @@ ${PYSITELIB}/kazoo/tests/test_counter.pyo
 ${PYSITELIB}/kazoo/tests/test_election.py
 ${PYSITELIB}/kazoo/tests/test_election.pyc
 ${PYSITELIB}/kazoo/tests/test_election.pyo
+${PYSITELIB}/kazoo/tests/test_eventlet_handler.py
+${PYSITELIB}/kazoo/tests/test_eventlet_handler.pyc
+${PYSITELIB}/kazoo/tests/test_eventlet_handler.pyo
 ${PYSITELIB}/kazoo/tests/test_exceptions.py
 ${PYSITELIB}/kazoo/tests/test_exceptions.pyc
 ${PYSITELIB}/kazoo/tests/test_exceptions.pyo
 ${PYSITELIB}/kazoo/tests/test_gevent_handler.py
 ${PYSITELIB}/kazoo/tests/test_gevent_handler.pyc
 ${PYSITELIB}/kazoo/tests/test_gevent_handler.pyo
+${PYSITELIB}/kazoo/tests/test_hosts.py
+${PYSITELIB}/kazoo/tests/test_hosts.pyc
+${PYSITELIB}/kazoo/tests/test_hosts.pyo
+${PYSITELIB}/kazoo/tests/test_interrupt.py
+${PYSITELIB}/kazoo/tests/test_interrupt.pyc
+${PYSITELIB}/kazoo/tests/test_interrupt.pyo
+${PYSITELIB}/kazoo/tests/test_lease.py
+${PYSITELIB}/kazoo/tests/test_lease.pyc
+${PYSITELIB}/kazoo/tests/test_lease.pyo
 ${PYSITELIB}/kazoo/tests/test_lock.py
 ${PYSITELIB}/kazoo/tests/test_lock.pyc
 ${PYSITELIB}/kazoo/tests/test_lock.pyo
@@ -149,3 +176,6 @@ ${PYSITELIB}/kazoo/tests/test_watchers.pyo
 ${PYSITELIB}/kazoo/tests/util.py
 ${PYSITELIB}/kazoo/tests/util.pyc
 ${PYSITELIB}/kazoo/tests/util.pyo
+${PYSITELIB}/kazoo/version.py
+${PYSITELIB}/kazoo/version.pyc
+${PYSITELIB}/kazoo/version.pyo
