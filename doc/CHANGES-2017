@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3766 2017/09/11 21:30:13 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3767 2017/09/12 03:20:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5292,3 +5292,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/lapack to 3.7.1 [wiz 2017-09-11]
 	Updated editors/vim-share to 8.0.1096 [wiz 2017-09-11]
 	Updated textproc/xerces-c to 3.2.0 [wiz 2017-09-11]
+	Updated editors/emacs25 to 25.3 [ryoon 2017-09-12]
+	Updated editors/emacs25-nox11 to 25.3 [ryoon 2017-09-12]
