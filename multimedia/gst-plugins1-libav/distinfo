@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.23 2017/03/16 14:35:23 wiz Exp $
+$NetBSD: distinfo,v 1.24 2017/09/12 14:03:09 wiz Exp $
 
-SHA1 (gst-libav-1.10.4.tar.xz) = 37665614f08325ff5b397c150af36329c54ff805
-RMD160 (gst-libav-1.10.4.tar.xz) = 0a8b164265a9f20c498dec3cbcad351a478d6fe6
-SHA512 (gst-libav-1.10.4.tar.xz) = 4037c4651c9f4c0e677f1f8136194c16319507dec3992270c1f98d461a69a55653d261ade45add833103872455e09c30695318181e81242ce78d1c2a2b95ca9c
-Size (gst-libav-1.10.4.tar.xz) = 8535052 bytes
-SHA1 (patch-configure) = 7267f03ca896117735ac6cef66d50886c05cd009
+SHA1 (gst-libav-1.12.2.tar.xz) = b4d24f0b943592528dff6823d259bcac5c66c4fd
+RMD160 (gst-libav-1.12.2.tar.xz) = ed0012a96a5b0e25655562235f102b5f7f73eae0
+SHA512 (gst-libav-1.12.2.tar.xz) = 970c6c3ab71d1431196f3e95ef046cb28ba82e40b206f96fe8b70de2bf9c7ff1cf35e004f7f7dd92dac0ad5e94ed07d45a52dd1a90bdbe105cdd65235f0b6247
+Size (gst-libav-1.12.2.tar.xz) = 8784544 bytes
+SHA1 (patch-configure) = 208c4d685538518698ae074c1e6b03e9a3c229bb
