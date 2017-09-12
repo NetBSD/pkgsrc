@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/10 11:01:23 drochner Exp $
-lib/gstreamer-1.0/libgstsouphttpsrc.la
+@comment $NetBSD: PLIST,v 1.2 2017/09/12 09:32:44 wiz Exp $
+lib/gstreamer-1.0/libgstsoup.la
