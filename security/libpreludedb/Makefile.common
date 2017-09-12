@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2017/08/16 20:45:44 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2017/09/12 06:15:19 dholland Exp $
 #
 # used by security/libpreludedb/Makefile
 # used by security/libpreludedb-mysql/Makefile
@@ -12,7 +12,7 @@ VERSION=		0.9.15.3
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.com/download/releases/libpreludedb/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER?=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://www.prelude-ids.org/download/releases/
 COMMENT=		Provides an interface to the database used to store IDMEF alerts
 
@@ -23,7 +23,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		make
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 USE_LANGUAGES=		c c++
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libpreludedb
