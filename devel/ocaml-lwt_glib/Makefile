@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/09/08 13:04:44 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/12 08:15:06 dholland Exp $
 
 .include "../../devel/ocaml-lwt/Makefile.common"
 
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/ocsigen/lwt/
 COMMENT=	Glib module for ocaml-lwt
 
 CONFLICTS=	ocaml-lwt<3.0.0
+USE_TOOLS+=	pkg-config
 
 JBUILDER_BUILD_TARGETS=	lwt_glib
 
