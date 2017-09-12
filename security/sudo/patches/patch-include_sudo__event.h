@@ -1,14 +1,14 @@
-$NetBSD: patch-include_sudo__event.h,v 1.1 2017/05/30 16:14:56 maya Exp $
+$NetBSD: patch-include_sudo__event.h,v 1.2 2017/09/12 06:34:22 adam Exp $
 
 Missing include, fixes build error:
 error: field 'timeout' has incomplete type
 struct timeval timeout; /* for SUDO_EV_TIMEOUT */
 
---- include/sudo_event.h.orig	2017-01-14 04:30:15.000000000 +0000
+--- include/sudo_event.h.orig	2017-08-23 18:07:28.000000000 +0000
 +++ include/sudo_event.h
-@@ -18,6 +18,7 @@
- #define SUDO_EVENT_H
+@@ -19,6 +19,7 @@
  
+ #include <signal.h>	/* for sigatomic_t and NSIG */
  #include "sudo_queue.h"
 +#include <sys/time.h> /* timeval */
  
