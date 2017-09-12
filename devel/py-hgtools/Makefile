@@ -1,21 +1,18 @@
-# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:25 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/12 04:00:07 adam Exp $
 
-HGTVERS=	6.3
-DISTNAME=	hgtools-${HGTVERS}
-PKGNAME=	${PYPKGPREFIX}-hgtools-${HGTVERS}
+DISTNAME=	hgtools-6.5.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hgtools/}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	imil@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/hgtools
+HOMEPAGE=	https://github.com/jaraco/hgtools
 COMMENT=	Classes and setuptools plugin for Mercurial and Git repositories
 LICENSE=	mit
 
-USE_LANGUAGES=	# none
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
 
-post-extract:
-	cd ${WRKSRC} && ${CHMOD} ${SHAREMODE} hgtools.egg-info/*
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
