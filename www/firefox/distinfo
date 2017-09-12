@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.294 2017/09/02 03:47:46 ryoon Exp $
+$NetBSD: distinfo,v 1.295 2017/09/12 07:39:08 martin Exp $
 
 SHA1 (firefox-55.0.3.source.tar.xz) = 8d9b0861ad71845d4b0e668f1981ec99e617ff36
 RMD160 (firefox-55.0.3.source.tar.xz) = aa14f156f2d346bdf787222977ad0642dff084de
@@ -31,6 +31,7 @@ SHA1 (patch-config_stl__wrappers_ostream) = 7be7fe36704ffbdc070a113b46b4f391a598
 SHA1 (patch-config_system-headers) = 96bc5e296d1ec9db9d764edadc36605a8f3aebe9
 SHA1 (patch-config_system__wrappers_unwind.h) = b3bdac0710179b9c8f8eabd824216d0114504491
 SHA1 (patch-dom_base_moz.build) = 5200cbfcf7b781324dca4c55d01bc8559a56aa4c
+SHA1 (patch-dom_base_nsWrapperCache.h) = 7442735fde38d6933ffabbb14dde3a756f3e72dc
 SHA1 (patch-dom_media_AudioStream.cpp) = 3d2e3d92849a355c05d7ec0ded61d551ffe0c581
 SHA1 (patch-dom_media_AudioStream.h) = 26f70000cc4810834204d15b45e1469dd5f23617
 SHA1 (patch-dom_media_CubebUtils.cpp) = 3632cd0dd4b95f53f01050b8898b33fe198916b6
@@ -102,6 +103,7 @@ SHA1 (patch-toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) =
 SHA1 (patch-toolkit_components_resistfingerprinting_nsRFPService.cpp) = 14d71a5197b09730b7065f95ee6c4ba3572d8241
 SHA1 (patch-toolkit_components_telemetry_Histograms.json) = 5232d568a68b3396b8deff04820a913f7e85cf99
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 5b6d2e5c9f685d32894898d3ef3aec09a1a1e5ce
+SHA1 (patch-toolkit_crashreporter_google-breakpad_src_third_party_curl_curlbuild.h) = 614ea9b9ca2cb41c075cf69e6c732a714afaf3e3
 SHA1 (patch-toolkit_library_gtest_moz.build) = a8ac2a2930ac00f891a695639acfadef2679a599
 SHA1 (patch-toolkit_library_moz.build) = f77301bd81d37e7a599dbff57fba47428e4a00e2
 SHA1 (patch-toolkit_moz.configure) = 2647f5b2c278d5d710a0faade7b48ccc2fbfc11f
