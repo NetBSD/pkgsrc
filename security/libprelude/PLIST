@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/08/23 18:56:34 hasso Exp $
+@comment $NetBSD: PLIST,v 1.14 2017/09/12 05:55:31 dholland Exp $
 bin/libprelude-config
 bin/prelude-adduser
 bin/prelude-admin
@@ -7,6 +7,7 @@ include/libprelude/daemonize.h
 include/libprelude/idmef-additional-data.h
 include/libprelude/idmef-class.h
 include/libprelude/idmef-criteria.h
+include/libprelude/idmef-criteria.hxx
 include/libprelude/idmef-criterion-value.h
 include/libprelude/idmef-data.h
 include/libprelude/idmef-message-helpers.h
@@ -15,19 +16,29 @@ include/libprelude/idmef-message-print.h
 include/libprelude/idmef-message-read.h
 include/libprelude/idmef-message-write.h
 include/libprelude/idmef-path.h
+include/libprelude/idmef-path.hxx
 include/libprelude/idmef-time.h
+include/libprelude/idmef-time.hxx
 include/libprelude/idmef-tree-data.h
 include/libprelude/idmef-tree-wrap.h
 include/libprelude/idmef-value-type.h
 include/libprelude/idmef-value.h
+include/libprelude/idmef-value.hxx
 include/libprelude/idmef.h
+include/libprelude/idmef.hxx
 include/libprelude/prelude-async.h
+include/libprelude/prelude-client-easy.hxx
 include/libprelude/prelude-client-profile.h
+include/libprelude/prelude-client-profile.hxx
 include/libprelude/prelude-client.h
+include/libprelude/prelude-client.hxx
 include/libprelude/prelude-config.h
 include/libprelude/prelude-connection-pool.h
+include/libprelude/prelude-connection-pool.hxx
 include/libprelude/prelude-connection.h
+include/libprelude/prelude-connection.hxx
 include/libprelude/prelude-error.h
+include/libprelude/prelude-error.hxx
 include/libprelude/prelude-extract.h
 include/libprelude/prelude-failover.h
 include/libprelude/prelude-hash.h
@@ -37,6 +48,7 @@ include/libprelude/prelude-io.h
 include/libprelude/prelude-linked-object.h
 include/libprelude/prelude-list.h
 include/libprelude/prelude-log.h
+include/libprelude/prelude-log.hxx
 include/libprelude/prelude-message-id.h
 include/libprelude/prelude-msg.h
 include/libprelude/prelude-msgbuf.h
@@ -47,8 +59,11 @@ include/libprelude/prelude-string.h
 include/libprelude/prelude-thread.h
 include/libprelude/prelude-timer.h
 include/libprelude/prelude.h
+include/libprelude/prelude.hxx
 lib/libprelude.la
+lib/libpreludecpp.la
 lib/pkgconfig/libprelude.pc
+man/man1/prelude-admin.1
 share/aclocal/libprelude.m4
 share/doc/libprelude/ch01.html
 share/doc/libprelude/ch02.html
@@ -104,18 +119,3 @@ share/examples/libprelude/client.conf
 share/examples/libprelude/global.conf
 share/examples/libprelude/idmef-client.conf
 share/examples/libprelude/tls.conf
-man/man1/prelude-admin.1
-include/libprelude/idmef-criteria.hxx
-include/libprelude/idmef-path.hxx
-include/libprelude/idmef-time.hxx
-include/libprelude/idmef-value.hxx
-include/libprelude/idmef.hxx
-include/libprelude/prelude-client-easy.hxx
-include/libprelude/prelude-client-profile.hxx
-include/libprelude/prelude-client.hxx
-include/libprelude/prelude-connection-pool.hxx
-include/libprelude/prelude-connection.hxx
-include/libprelude/prelude-error.hxx
-include/libprelude/prelude-log.hxx
-include/libprelude/prelude.hxx
-lib/libpreludecpp.la
