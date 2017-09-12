@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3767 2017/09/12 03:20:05 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.3768 2017/09/12 04:01:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5294,3 +5294,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/xerces-c to 3.2.0 [wiz 2017-09-11]
 	Updated editors/emacs25 to 25.3 [ryoon 2017-09-12]
 	Updated editors/emacs25-nox11 to 25.3 [ryoon 2017-09-12]
+	Updated devel/py-hgtools to 6.5.2 [adam 2017-09-12]
