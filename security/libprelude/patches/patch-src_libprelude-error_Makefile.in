@@ -1,0 +1,17 @@
+$NetBSD: patch-src_libprelude-error_Makefile.in,v 1.1 2017/09/12 05:58:41 dholland Exp $
+
+Use -P when preprocessing error symbols to avoid getting line number
+output, which on gcc5 introduces extra line breaks and makes the
+downstream processing fail miserably.
+
+--- src/libprelude-error/Makefile.in~	2017-09-12 05:42:25.856481751 +0000
++++ src/libprelude-error/Makefile.in
+@@ -1201,7 +1201,7 @@ code-to-errno.h: Makefile mkerrnos.awk e
+ 
+ mkerrcodes.h: Makefile mkerrcodes.awk
+ 	LANG="" $(AWK) -f $(srcdir)/mkerrcodes1.awk $(srcdir)/errnos.in >_$@
+-	$(CPP) _$@ | grep PRELUDE_ERROR_ | LANG="" $(AWK) -f $(srcdir)/mkerrcodes.awk >$@
++	$(CPP) -P _$@ | grep PRELUDE_ERROR_ | LANG="" $(AWK) -f $(srcdir)/mkerrcodes.awk >$@
+ 	-rm _$@
+ 
+ # It is correct to use $(CC_FOR_BUILD) here.  We want to run the
