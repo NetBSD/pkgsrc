@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.22 2017/09/12 09:32:44 wiz Exp $
+# $NetBSD: Makefile.common,v 1.23 2017/09/12 14:00:55 wiz Exp $
 #
 # used by audio/gst-plugins1-a52/Makefile
 # used by audio/gst-plugins1-lame/Makefile
-# used by audio/gst-plugins1-mad/Makefile
+# used by audio/gst-plugins1-mpg123/Makefile
 # used by audio/gst-plugins1-sid/Makefile
 # used by audio/gst-plugins1-twolame/Makefile
 # used by multimedia/gst-plugins1-dvdread/Makefile
