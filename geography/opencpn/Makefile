@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2017/08/24 20:03:19 adam Exp $
+# $NetBSD: Makefile,v 1.17 2017/09/12 17:31:20 bouyer Exp $
 #
 
 VERSION=	4.8.0
-#PKGREVISION=	0
+PKGREVISION=	1
 DISTNAME=	OpenCPN-${VERSION}
 PKGNAME=	opencpn-${VERSION}
 PKGREVISION=	1
