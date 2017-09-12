@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.31 2016/03/01 12:34:14 wiz Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.32 2017/09/12 13:40:38 wiz Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -94,6 +94,47 @@
   </para>
 </sect1>
 
+<sect1 id="commit-messages">
+  <title>Commit Messages</title>
+  <para>For several years, there have been mirrors of pkgsrc in
+  fossil, git, and hg. Standard practise when using these tools is to
+  make the first line of a commit message function as a summary that
+  can be read without the rest, such as is commonly done with "git log
+  --oneline". For this reason, we have the following guidelines for
+  pkgsrc commit messages:</para>
+
+  <itemizedlist>
+    <listitem><para>Start the commit message with a line that explains the
+    big picture in 50 characters or less. When a commit is for one
+    package, include the name of the package. For updates, include the
+    version to which it is updated.</para></listitem>
+    <listitem><para>Leave the next line empty.</para></listitem>
+    <listitem><para>Then come the details for the commit (changes in that
+    package, reason for a change) and any relevant PRs. Wrap this
+    section.</para></listitem>
+  </itemizedlist>
+
+  <para>Here is an example:
+  <programlisting>
+  libxslt: update to 1.0.30
+
+  Changes since 1.0.29:
+  ...
+  </programlisting>
+  </para>
+
+  <para>Here is another example:
+  <programlisting>
+  mk/bsd.pkg.mk: enable SSP by default on NetBSD
+
+  (rationale)
+  </programlisting>
+  </para>
+
+  <para>Commit messages are final: no <quote>cvs admin</quote> is
+  allowed on the pkgsrc repository to change commit messages.</para>
+</sect1>
+  
 <sect1 id="committing-importing">
 <title>Committing: Adding a package to CVS</title>
 <para>This section is only of interest for pkgsrc developers with write
