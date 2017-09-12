@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3775 2017/09/12 14:03:22 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3776 2017/09/12 14:06:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5307,3 +5307,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed audio/gst-plugins1-mad successor audio/gst-plugins1-mpg123 [wiz 2017-09-12]
 	Updated x11/qt5-qtwebkit to 5.5.1nb13 [wiz 2017-09-12]
 	Updated multimedia/gst-plugins1-libav to 1.12.2 [wiz 2017-09-12]
+	Updated multimedia/py-gstreamer1 to 1.12.2 [wiz 2017-09-12]
