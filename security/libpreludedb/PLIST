@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/10/02 09:50:38 hasso Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/09/12 06:14:40 dholland Exp $
 bin/libpreludedb-config
 bin/preludedb-admin
 include/libpreludedb/preludedb-error.h
@@ -11,9 +11,9 @@ include/libpreludedb/preludedb-version.h
 include/libpreludedb/preludedb.h
 lib/libpreludedb.la
 lib/libpreludedb/plugins/formats/classic.la
+man/man1/preludedb-admin.1
 share/aclocal/libpreludedb.m4
 share/gtk-doc/html/libpreludedb/ch01.html
-share/gtk-doc/html/libpreludedb/libpreludedb.devhelp2
 share/gtk-doc/html/libpreludedb/home.png
 share/gtk-doc/html/libpreludedb/index.html
 share/gtk-doc/html/libpreludedb/index.sgml
@@ -27,6 +27,7 @@ share/gtk-doc/html/libpreludedb/libpreludedb-preludedb-sql.html
 share/gtk-doc/html/libpreludedb/libpreludedb-preludedb-version.html
 share/gtk-doc/html/libpreludedb/libpreludedb-preludedb.html
 share/gtk-doc/html/libpreludedb/libpreludedb.devhelp
+share/gtk-doc/html/libpreludedb/libpreludedb.devhelp2
 share/gtk-doc/html/libpreludedb/right.png
 share/gtk-doc/html/libpreludedb/style.css
 share/gtk-doc/html/libpreludedb/up.png
@@ -36,11 +37,8 @@ share/libpreludedb/classic/mysql-update-14-2.sql
 share/libpreludedb/classic/mysql-update-14-3.sql
 share/libpreludedb/classic/mysql-update-14-4.sql
 share/libpreludedb/classic/mysql-update-14-5.sql
-share/libpreludedb/classic/pgsql-update-14-5.sql
-share/libpreludedb/classic/sqlite-update-14-5.sql
+share/libpreludedb/classic/mysql-update-14-6.sql
 share/libpreludedb/classic/mysql-update-14-7.sql
-share/libpreludedb/classic/pgsql-update-14-7.sql
-share/libpreludedb/classic/sqlite-update-14-7.sql
 share/libpreludedb/classic/mysql.sql
 share/libpreludedb/classic/mysql2pgsql.sh
 share/libpreludedb/classic/mysql2sqlite.sh
@@ -48,10 +46,12 @@ share/libpreludedb/classic/pgsql-update-14-1.sql
 share/libpreludedb/classic/pgsql-update-14-2.sql
 share/libpreludedb/classic/pgsql-update-14-3.sql
 share/libpreludedb/classic/pgsql-update-14-4.sql
-share/libpreludedb/classic/pgsql.sql
-share/libpreludedb/classic/sqlite.sql
-share/libpreludedb/classic/sqlite-update-14-4.sql
-share/libpreludedb/classic/mysql-update-14-6.sql
+share/libpreludedb/classic/pgsql-update-14-5.sql
 share/libpreludedb/classic/pgsql-update-14-6.sql
+share/libpreludedb/classic/pgsql-update-14-7.sql
+share/libpreludedb/classic/pgsql.sql
+share/libpreludedb/classic/sqlite-update-14-4.sql
+share/libpreludedb/classic/sqlite-update-14-5.sql
 share/libpreludedb/classic/sqlite-update-14-6.sql
-man/man1/preludedb-admin.1
+share/libpreludedb/classic/sqlite-update-14-7.sql
+share/libpreludedb/classic/sqlite.sql
