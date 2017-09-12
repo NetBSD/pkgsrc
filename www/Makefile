@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1265 2017/09/11 09:57:39 abs Exp $
+# $NetBSD: Makefile,v 1.1266 2017/09/12 05:51:29 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -155,7 +155,6 @@ SUBDIR+=	htdig
 SUBDIR+=	htmlcxx
 SUBDIR+=	htmldoc
 SUBDIR+=	htmldoc-x11
-SUBDIR+=	htmlfix
 SUBDIR+=	htmllint
 SUBDIR+=	http-parser
 SUBDIR+=	http_load
