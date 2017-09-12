@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2017/09/10 00:38:59 dholland Exp $
+@comment $NetBSD: PLIST,v 1.18 2017/09/12 08:19:46 dholland Exp $
 ${EMACS_INFOPREFIX}/wl-ja.info
 ${EMACS_INFOPREFIX}/wl.info
 ${EMACS_LISPPREFIX}/wl/acap.el
@@ -141,14 +141,6 @@ ${FOR_emacs25}${EMACS_LISPPREFIX}/wl/wl-e21.el
 ${FOR_emacs25}${EMACS_LISPPREFIX}/wl/wl-e21.elc
 ${FOR_emacs25nox}${EMACS_LISPPREFIX}/wl/wl-e21.el
 ${FOR_emacs25nox}${EMACS_LISPPREFIX}/wl/wl-e21.elc
-${FOR_emacs26}${EMACS_LISPPREFIX}/wl/wl-e21.el
-${FOR_emacs26}${EMACS_LISPPREFIX}/wl/wl-e21.elc
-${FOR_emacs26nox}${EMACS_LISPPREFIX}/wl/wl-e21.el
-${FOR_emacs26nox}${EMACS_LISPPREFIX}/wl/wl-e21.elc
-${FOR_emacs27}${EMACS_LISPPREFIX}/wl/wl-e21.el
-${FOR_emacs27}${EMACS_LISPPREFIX}/wl/wl-e21.elc
-${FOR_emacs27nox}${EMACS_LISPPREFIX}/wl/wl-e21.el
-${FOR_emacs27nox}${EMACS_LISPPREFIX}/wl/wl-e21.elc
 ${FOR_xemacs214}${EMACS_LISPPREFIX}/wl/wl-xmas.el
 ${FOR_xemacs214}${EMACS_LISPPREFIX}/wl/wl-xmas.elc
 ${EMACS_LISPPREFIX}/wl/wl-expire.el
