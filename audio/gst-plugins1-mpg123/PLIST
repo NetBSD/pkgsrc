@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/12 09:38:40 wiz Exp $
+lib/gstreamer-1.0/libgstmpg123.la
