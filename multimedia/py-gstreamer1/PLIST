@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/08 21:39:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/09/12 14:05:51 wiz Exp $
 ${PYSITELIB}/gi/overrides/Gst.py
 ${PYSITELIB}/gi/overrides/Gst.pyc
 ${PYSITELIB}/gi/overrides/Gst.pyo
@@ -6,3 +6,4 @@ ${PYSITELIB}/gi/overrides/GstPbutils.py
 ${PYSITELIB}/gi/overrides/GstPbutils.pyc
 ${PYSITELIB}/gi/overrides/GstPbutils.pyo
 ${PYSITELIB}/gi/overrides/_gi_gst.la
+lib/gstreamer-1.0/libgstpythonplugin.la
