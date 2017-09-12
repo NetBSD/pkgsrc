@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/08 17:44:49 jschauma Exp $
-bin/gpg-check
-bin/gpg-encrypt
-bin/gpg-sign
-bin/gpg-sign+encrypt
-bin/pinegpg
-bin/pinegpg-install
-bin/pinepgp5x
-bin/pinepgp5x-install
+@comment $NetBSD: PLIST,v 1.2 2017/09/12 02:32:17 ryoon Exp $
+${PLIST.gpg}bin/gpg-check
+${PLIST.gpg}bin/gpg-encrypt
+${PLIST.gpg}bin/gpg-sign
+${PLIST.gpg}bin/gpg-sign+encrypt
+${PLIST.gpg}bin/pinegpg
+${PLIST.gpg}bin/pinegpg-install
+${PLIST.pgp5}bin/pinepgp5x
+${PLIST.pgp5}bin/pinepgp5x-install
 bin/pinepgpgpg-install
-bin/pgp5x-check
-bin/pgp5x-encrypt
-bin/pgp5x-sign
-bin/pgp5x-sign+encrypt
+${PLIST.pgp5}bin/pgp5x-check
+${PLIST.pgp5}bin/pgp5x-encrypt
+${PLIST.pgp5}bin/pgp5x-sign
+${PLIST.pgp5}bin/pgp5x-sign+encrypt
