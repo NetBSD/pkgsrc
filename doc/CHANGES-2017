@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3769 2017/09/12 05:51:29 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3770 2017/09/12 06:40:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5296,3 +5296,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated editors/emacs25-nox11 to 25.3 [ryoon 2017-09-12]
 	Updated devel/py-hgtools to 6.5.2 [adam 2017-09-12]
 	Removed www/htmlfix [wiz 2017-09-12]
+	Updated security/sudo to 1.8.21p2 [adam 2017-09-12]
+	Updated multimedia/ffmpeg3 to 3.3.4 [adam 2017-09-12]
