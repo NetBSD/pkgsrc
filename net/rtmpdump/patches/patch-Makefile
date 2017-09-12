@@ -1,18 +1,10 @@
-$NetBSD: patch-Makefile,v 1.5 2017/07/13 13:19:59 wiz Exp $
+$NetBSD: patch-Makefile,v 1.6 2017/09/12 05:54:10 wiz Exp $
 
 * Pass LDFLAGS to linker
 * Libtoolize
 
 --- Makefile.orig	2011-07-12 00:24:33.000000000 +0000
 +++ Makefile
-@@ -1,6 +1,6 @@
- VERSION=v2.4
- 
--prefix=/usr/local
-+prefix=/usr/pkg
- 
- CC=$(CROSS_COMPILE)gcc
- LD=$(CROSS_COMPILE)ld
 @@ -22,11 +22,11 @@ CRYPTO_DEF=$(DEF_$(CRYPTO))
  DEF=-DRTMPDUMP_VERSION=\"$(VERSION)\" $(CRYPTO_DEF) $(XDEF)
  OPT=-O2
