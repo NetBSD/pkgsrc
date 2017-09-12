@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2016/12/16 00:01:31 joerg Exp $
+$NetBSD: distinfo,v 1.7 2017/09/12 06:55:42 dholland Exp $
 
 SHA1 (sks-1.1.5.tgz) = a353426e99de3fb02bf93b953f574335a9f2a590
 RMD160 (sks-1.1.5.tgz) = f47543870313f6bd0868e702849eb717aa045d67
@@ -9,3 +9,8 @@ SHA1 (patch-ab) = 919846f9c31a89f23430081dbad853d088dcb7e5
 SHA1 (patch-ac) = 0fbe22e67681970521ae66ca1903e9e95eda52ad
 SHA1 (patch-ad) = f96b913bc7ad6b5bd11a51569fc28ee042b1667c
 SHA1 (patch-cryptokit-1.7-sks.patch) = 5d50af8d169df2b96a850d7ffdb67f9d51e3e955
+SHA1 (patch-eventloop.ml) = 755c33c8add74d4e93828ccfc46774ee92d55c26
+SHA1 (patch-reconComm.ml) = 1a01ab79fe9ae0727f492529d37e21e6f90b2f49
+SHA1 (patch-script.ml) = fe229100a2214484a89e20f482b4f3198818e42c
+SHA1 (patch-sks__do.ml) = 078b7b49251e95ef2975172bf619db41563d6e52
+SHA1 (patch-tester.ml) = dde2d4382054de8c2e0a187b0fb8961ce530e5d1
