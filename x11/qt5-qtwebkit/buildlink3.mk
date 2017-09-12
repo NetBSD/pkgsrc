@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2017/04/22 21:03:22 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2017/09/12 13:42:52 wiz Exp $
 
 BUILDLINK_TREE+=	qt5-qtwebkit
 
@@ -18,7 +18,7 @@ BUILDLINK_LIBDIRS.qt5-qtwebkit+=	qt5/plugins
 .include "../../mk/curses.buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
-.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .endif
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
