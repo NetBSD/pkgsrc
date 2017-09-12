@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2017/09/12 08:31:20 dholland Exp $
+
+Remove bashism in configure script.
+
+--- configure.ac~	2016-03-29 03:30:07.000000000 +0000
++++ configure.ac
+@@ -465,7 +465,7 @@ if test "x$found_static" = xyes; then
+ 		LIBS="compat/memcpy.o -Wl,--wrap=memcpy $LIBS"
+ 	fi
+ 	LIBS="compat/clock_gettime.o libc/fdelt_chk.o $LIBS"
+-	LIBS="-Wl,-Bstatic ${LIBS/-ldl/} -Wl,-Bdynamic -ldl"
++	LIBS="-Wl,-Bstatic $(echo ${LIBS} | sed -e s/-ldl//) -Wl,-Bdynamic -ldl"
+ fi
+ 
+ # Check for BSD-style integer types.
