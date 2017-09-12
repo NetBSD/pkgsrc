@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2017/08/23 18:56:14 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2017/09/12 08:31:20 dholland Exp $
 
 SHA1 (tmate-2.2.1.tar.gz) = 8ef6999f7bf2511738650421e40b6a639e782d36
 RMD160 (tmate-2.2.1.tar.gz) = fd72920b91041905a218f59ba25eb1d58d4bfc6c
 SHA512 (tmate-2.2.1.tar.gz) = 3d4ce7510cd8da39bc4fe63f2a64179846a813bb3560ca811d9e1e2a28b06d95a9033047a900d76bda069c249d7ebbe1143daa082b23212c5d32a50bf1819d2d
 Size (tmate-2.2.1.tar.gz) = 610745 bytes
+SHA1 (patch-configure.ac) = dba0fdd160797e3884533d99686efdf9b0af9e7a
 SHA1 (patch-tmux.h) = 8c26d6ca70b1a8d51e7c920ea54f59d2023968fe
