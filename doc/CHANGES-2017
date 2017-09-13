@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3789 2017/09/13 10:01:10 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3790 2017/09/13 10:28:53 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5327,3 +5327,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/x264-devel to 20170912 [wiz 2017-09-13]
 	Updated net/rabbitmq to 3.6.12 [fhajny 2017-09-13]
 	Updated math/maxima to 5.40.0 [wiz 2017-09-13]
+	Updated security/py-certbot to 0.18.1 [fhajny 2017-09-13]
