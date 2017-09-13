@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3792 2017/09/13 14:56:24 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3793 2017/09/13 16:12:33 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5330,3 +5330,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-certbot to 0.18.1 [fhajny 2017-09-13]
 	Updated multimedia/mpv to 0.27.0 [leot 2017-09-13]
 	Updated mail/neomutt to 20170912 [wiz 2017-09-13]
+	Added finance/py-empyrical version 0.3.2 [minskim 2017-09-13]
