@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3788 2017/09/13 09:37:06 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.3789 2017/09/13 10:01:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5326,3 +5326,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/ImageMagick to 7.0.7.2 [wiz 2017-09-13]
 	Updated multimedia/x264-devel to 20170912 [wiz 2017-09-13]
 	Updated net/rabbitmq to 3.6.12 [fhajny 2017-09-13]
+	Updated math/maxima to 5.40.0 [wiz 2017-09-13]
