@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.19 2017/09/11 21:30:03 wiz Exp $
+$NetBSD: distinfo,v 1.20 2017/09/13 21:10:35 joerg Exp $
 
 SHA1 (xerces-c-3.2.0.tar.gz) = cf018d6b0c6d57b26cf0d634cb9370a4b0de8307
 RMD160 (xerces-c-3.2.0.tar.gz) = 4c610a5fea59dd036f5f0a40bec95a0c58bb9e19
 SHA512 (xerces-c-3.2.0.tar.gz) = 57ba8e5d0ca30a011928bb6528a071cdcc8429d9181d94cb5ffdca202d7a1be794607327132741da7d875fb3f6ea0aee97a46eb1f23a799c3f84173feaed02b9
 Size (xerces-c-3.2.0.tar.gz) = 6734012 bytes
+SHA1 (patch-src_xercesc_util_Base64.cpp) = 56cc5074564fd43bef11e458a037746e0a8b1bc4
