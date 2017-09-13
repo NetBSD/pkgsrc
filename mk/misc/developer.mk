@@ -1,4 +1,4 @@
-# $NetBSD: developer.mk,v 1.23 2017/09/12 14:04:59 wiz Exp $
+# $NetBSD: developer.mk,v 1.24 2017/09/13 09:06:34 wiz Exp $
 #
 # Public targets for developers:
 #
@@ -126,7 +126,7 @@ todo-entry-remove:
 
 changes-entry-commit: .PHONY ce-error-check
 	@${STEP_MSG} "Committing the change"
-	${RUN} cd ${PKGSRC_CHANGES_DIR} && cvs ${_NB_CVSROOT} commit -m ${PKGSRC_CHANGES_BASE:Q}": "${_CE_MSG1:Q} ${PKGSRC_CHANGES:T} ${PKGSRC_TODO:T}
+	${RUN} cd ${PKGSRC_CHANGES_DIR} && cvs ${_NB_CVSROOT} commit -m "doc: "${_CE_MSG1:Q} ${PKGSRC_CHANGES:T} ${PKGSRC_TODO:T}
 
 ce-error-check: .PHONY
 .if defined(_CE_ERRORS) && !empty(_CE_ERRORS:M*)
