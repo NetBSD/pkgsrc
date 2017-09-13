@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.36 2017/07/22 17:28:38 leot Exp $
+$NetBSD: distinfo,v 1.37 2017/09/13 10:35:58 leot Exp $
 
-SHA1 (mpv-0.26.0.tar.gz) = e384ec257aac966e0da821f873d8f12439e92796
-RMD160 (mpv-0.26.0.tar.gz) = 9b0c95f416070f5b0a88a6934d004fc33144dff6
-SHA512 (mpv-0.26.0.tar.gz) = fd772b4765317eb1ea3b54f12b86e0ac6c4d5e9d16895eb5bebe2e074a01f6b790981b9b34a87d9b23e4291149d3a7154b09fba4a259cec1949a6aa88d6ddec7
-Size (mpv-0.26.0.tar.gz) = 2916212 bytes
-SHA1 (patch-audio_out_ao__oss.c) = 31b8d0966a0a306a15fbb32876d5556e9f1a61a8
+SHA1 (mpv-0.27.0.tar.gz) = d4bddb88cf7a112a295a130a091181acbe25605b
+RMD160 (mpv-0.27.0.tar.gz) = d2edbdfdc6fdf3a0c210536ac3966e99113c83ad
+SHA512 (mpv-0.27.0.tar.gz) = 22738f907d84d362095773972f685e3b03ab4c8172a22ddede290fc221a83ab9135b96f8b18191dabe842b2963f68983929cf065097287fc1a054a7d5f1d0ae4
+Size (mpv-0.27.0.tar.gz) = 2956816 bytes
+SHA1 (patch-audio_out_ao__oss.c) = d7f3a75ab43efe396ce536fb54e6207a7ded3510
 SHA1 (patch-player_main.c) = 842432e448526a9d170e7efd2b01276e36072e16
