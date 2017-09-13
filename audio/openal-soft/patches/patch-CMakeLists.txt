@@ -1,0 +1,16 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2017/09/13 08:08:22 wiz Exp $
+
+Allow setting EXTRA_LIBS from command line.
+
+--- CMakeLists.txt.orig	2017-07-30 05:09:21.000000000 +0000
++++ CMakeLists.txt
+@@ -85,9 +85,6 @@ IF(WIN32)
+ ENDIF()
+ 
+ 
+-SET(EXTRA_LIBS "")
+-SET(EXTRA_LDFLAGS "")
+-
+ # QNX's gcc do not uses /usr/include and /usr/lib pathes by default
+ IF ("${CMAKE_C_PLATFORM_ID}" STREQUAL "QNX")
+     ADD_DEFINITIONS("-I/usr/include")
