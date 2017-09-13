@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.1 2016/02/08 01:53:48 markd Exp $
+$NetBSD: distinfo,v 1.2 2017/09/13 08:08:22 wiz Exp $
 
-SHA1 (openal-soft-1.17.2.tar.bz2) = 5d6151b544caaf53a15b798a495308e421044b0d
-RMD160 (openal-soft-1.17.2.tar.bz2) = 9b384c3bff9e65ec96f4ae7af2754b52871dabfc
-SHA512 (openal-soft-1.17.2.tar.bz2) = 50c20cd3ddada55d91643a79c2894d5a14315d5fc1ed8e870e3d8d3f410e8b7d8da29b838226e7fce37fbeca719ff919b51806f72e4cd529a18fbe8bd68860e3
-Size (openal-soft-1.17.2.tar.bz2) = 486934 bytes
-SHA1 (patch-alc_alcconfig.c) = a137776f204bb75bfa199b0802d985ebe030c10e
-SHA1 (patch-common_threads.c) = 87593018c95c146bc4f51e2e8caa0cf6f769d74b
+SHA1 (openal-soft-1.18.1.tar.bz2) = 1fe65b8342a596aa38ea643dc34cb7081444eef7
+RMD160 (openal-soft-1.18.1.tar.bz2) = f822be811120db3092225da544dc9ca7746bc47e
+SHA512 (openal-soft-1.18.1.tar.bz2) = 5ee86f21c499d79b139b78e3a8ddb6f79d293d7fb2076342396444a2a056eeb5bf39def18577280a41c9192ba5c6cfd3c67a68e97a6914a9c0ae81b4811c0c60
+Size (openal-soft-1.18.1.tar.bz2) = 638913 bytes
+SHA1 (patch-CMakeLists.txt) = 3bd95d57b8d7fb26c73debee69ac67a3b6d0a8cb
+SHA1 (patch-alc_alcconfig.c) = 6344ecd30cc00aff9208603c03744e4841fc8534
+SHA1 (patch-common_threads.c) = a4c7deb58bf344439efb5141c6f3ed25b944cb69
