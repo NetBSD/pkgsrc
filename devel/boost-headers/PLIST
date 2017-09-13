@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2017/08/24 19:31:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.38 2017/09/13 17:34:40 adam Exp $
 include/boost/accumulators/accumulators.hpp
 include/boost/accumulators/accumulators_fwd.hpp
 include/boost/accumulators/framework/accumulator_base.hpp
@@ -11070,6 +11070,8 @@ include/boost/stacktrace/detail/frame_noop.ipp
 include/boost/stacktrace/detail/frame_unwind.ipp
 include/boost/stacktrace/detail/libbacktrace_impls.hpp
 include/boost/stacktrace/detail/location_from_symbol.hpp
+include/boost/stacktrace/detail/pop_options.h
+include/boost/stacktrace/detail/push_options.h
 include/boost/stacktrace/detail/safe_dump_noop.ipp
 include/boost/stacktrace/detail/safe_dump_posix.ipp
 include/boost/stacktrace/detail/safe_dump_win.ipp
