@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.11 2017/08/28 19:04:05 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.12 2017/09/13 06:25:29 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q2 branch:
 
@@ -112,4 +112,34 @@ net/powerdns: build fix
 
 Pullup ticket #5535 - requested by he
 math/py-scipy: powerpc build fix
+
+Pullup ticket #5537 - requested by taca
+databases/postgresql92: security update
+databases/postgresql92-client: security update
+databases/postgresql92-docs: security update
+databases/postgresql92-server: security update
+
+Pullup ticket #5538 - requested by taca
+databases/postgresql93: security update
+databases/postgresql93-client: security update
+databases/postgresql93-docs: security update
+databases/postgresql93-server: security update
+
+Pullup ticket #5539 - requested by taca
+databases/postgresql94: security update
+databases/postgresql94-client: security update
+databases/postgresql94-docs: security update
+databases/postgresql94-server: security update
+
+Pullup ticket #5540 - requested by taca
+databases/postgresql95: security update
+databases/postgresql95-client: security update
+databases/postgresql95-docs: security update
+databases/postgresql95-server: security update
+
+Pullup ticket #5541 - requested by taca
+databases/postgresql96: security update
+databases/postgresql96-client: security update
+databases/postgresql96-docs: security update
+databases/postgresql96-server: security update
 
