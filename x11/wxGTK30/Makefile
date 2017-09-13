@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/09/11 20:22:53 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2017/09/13 08:23:47 adam Exp $
 
 DISTNAME=	wxWidgets-3.0.3
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK30/}
@@ -58,14 +58,11 @@ SUBST_SED.fix-paths+=		-e 's,@PREFIX@,${PREFIX},g'
 PLIST_SRC+=             ${PLIST_SRC_DFLT}
 PLIST_VARS+=		notdarwin
 .if ${OPSYS} == "Darwin"
-# Without this, it will choose -macox-version-min=10.5 and
-# hard code constants in the header files to match.
-# Then any other packages that use it
-# will fail unless they also set -macosx-version-min=10.5
-CONFIGURE_ARGS+=	--with-macosx-version-min=no
-
-PLIST_SRC+=		PLIST.cocoa
 CONFIGURE_ARGS+=	--with-osx_cocoa
+CONFIGURE_ARGS+=	--without-macosx-sdk
+CONFIGURE_ARGS+=	--without-macosx-version-min
+CPPFLAGS+=		-D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=1
+PLIST_SRC+=		PLIST.cocoa
 .else
 PLIST.notdarwin=	yes
 
