@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.8 2014/10/13 13:25:44 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/09/13 05:19:18 dholland Exp $
 ${PLIST.ocaml-opt}lib/ocaml/graphics.a
 lib/ocaml/graphics.cma
 lib/ocaml/graphics.cmi
+lib/ocaml/graphics.cmti
 lib/ocaml/graphics.cmx
 ${PLIST.ocaml-opt}lib/ocaml/graphics.cmxa
 ${PLIST.natdynlib}lib/ocaml/graphics.cmxs
 lib/ocaml/graphics.mli
 lib/ocaml/graphicsX11.cmi
 lib/ocaml/graphicsX11.cmx
+lib/ocaml/graphicsX11.cmti
 lib/ocaml/graphicsX11.mli
 lib/ocaml/libgraphics.a
 lib/ocaml/stublibs/dllgraphics.so
