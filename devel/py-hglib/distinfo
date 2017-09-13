@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:08 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/09/13 06:31:33 adam Exp $
 
-SHA1 (python-hglib-1.6.tar.gz) = 90307145f4f6628ae11e095e481c1d83550d9d78
-RMD160 (python-hglib-1.6.tar.gz) = 0249bb23995630bc589838b249cd46f4dc442ded
-SHA512 (python-hglib-1.6.tar.gz) = bfd10455e74e30df568c4c4827140fb6cc29893b0e062ce1764bd52852ec7487a70a0f5ea53c3fca7886f5d36365c9f4db52b8c93cad35fb67beeb44a2d56f2d
-Size (python-hglib-1.6.tar.gz) = 28639 bytes
+SHA1 (python-hglib-2.4.tar.gz) = d4ae1ac3e861af93d6f06295dcd66ad5cff6feae
+RMD160 (python-hglib-2.4.tar.gz) = ffd58027e84295533f7426091e952e85edb3085d
+SHA512 (python-hglib-2.4.tar.gz) = 91fff5b5badb798aa0a5a25d8544718afe545a53d1b4f5725abbf46a07a81fbbea12e3a8b05c874b4693668e3fc57362100844d7387ed3dc6dc7b50d3a7e8c52
+Size (python-hglib-2.4.tar.gz) = 29552 bytes
