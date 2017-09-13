@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17714 2017/09/12 09:34:09 wiz Exp $
+$NetBSD: TODO,v 1.17715 2017/09/13 08:08:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1111,7 +1111,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o oniguruma-5.9.6
 	o oo2c-2.1.7
 	o opal-3.16.2
-	o openal-soft-1.18.1
 	o opencsg-1.4.0
 	o openh323-1.19.1
 	o openmortal-0.7.1
