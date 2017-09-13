@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/13 16:10:21 minskim Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/empyrical/__init__.py
+${PYSITELIB}/empyrical/__init__.pyc
+${PYSITELIB}/empyrical/__init__.pyo
+${PYSITELIB}/empyrical/_version.py
+${PYSITELIB}/empyrical/_version.pyc
+${PYSITELIB}/empyrical/_version.pyo
+${PYSITELIB}/empyrical/periods.py
+${PYSITELIB}/empyrical/periods.pyc
+${PYSITELIB}/empyrical/periods.pyo
+${PYSITELIB}/empyrical/stats.py
+${PYSITELIB}/empyrical/stats.pyc
+${PYSITELIB}/empyrical/stats.pyo
+${PYSITELIB}/empyrical/tests/__init__.py
+${PYSITELIB}/empyrical/tests/__init__.pyc
+${PYSITELIB}/empyrical/tests/__init__.pyo
+${PYSITELIB}/empyrical/tests/test_stats.py
+${PYSITELIB}/empyrical/tests/test_stats.pyc
+${PYSITELIB}/empyrical/tests/test_stats.pyo
+${PYSITELIB}/empyrical/utils.py
+${PYSITELIB}/empyrical/utils.pyc
+${PYSITELIB}/empyrical/utils.pyo
