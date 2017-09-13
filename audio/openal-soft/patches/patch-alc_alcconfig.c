@@ -1,11 +1,11 @@
-$NetBSD: patch-alc_alcconfig.c,v 1.1 2016/02/08 01:53:48 markd Exp $
+$NetBSD: patch-alc_alcconfig.c,v 1.2 2017/09/13 08:08:22 wiz Exp $
 
 Allow the Makefile to specify the default config file path.
 
---- Alc/alcConfig.c.orig	2016-01-29 11:04:27.000000000 +0100
-+++ Alc/alcConfig.c	2016-01-29 11:04:41.000000000 +0100
-@@ -353,7 +353,7 @@
-     const char *str;
+--- Alc/alcConfig.c.orig	2017-07-30 05:09:21.000000000 +0000
++++ Alc/alcConfig.c
+@@ -424,7 +424,7 @@ void ReadALConfig(void)
+     al_string ppath;
      FILE *f;
  
 -    str = "/etc/openal/alsoft.conf";
