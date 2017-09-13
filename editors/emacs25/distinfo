@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.5 2017/09/12 03:19:02 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2017/09/13 14:21:34 ryoon Exp $
 
-SHA1 (emacs-25.3.tar.gz) = 732cd74b1df9288855c5f354606c115a1c4dcd95
-RMD160 (emacs-25.3.tar.gz) = 3a1f361ba79b73ba6598f66420477164206f7cdc
-SHA512 (emacs-25.3.tar.gz) = a64cf978be0896f06f918fad98391bededfffb2fc651b4941e55f7bab3bfeef16f2b723a5e12c3431fbf9d11098d81f0f0767585ed3d5db768a801aa4440ea68
-Size (emacs-25.3.tar.gz) = 63363581 bytes
-SHA1 (patch-lisp_gnus_mm-view.el) = b654fffd12d3467ea6ffa33f7d831ff69054dc4f
-SHA1 (patch-lisp_textmodes_enriched.el) = 62d807368088b11722cd68fafb0017c64f1eac3b
+SHA1 (emacs-25.3.tar.gz) = 82ad18404d460e32be29aa883a0e6bfc1901ae75
+RMD160 (emacs-25.3.tar.gz) = 8740bb96aeab77cd35c6d4625f3676991281c7bc
+SHA512 (emacs-25.3.tar.gz) = cd3f51ee5f6c95481f22cd48abfe1d4df1407207ed4b046c9563b24d524f85aa80f15900755091d532c31ea9bd9f6978300128c480d74d28b6b937f96846b1bb
+Size (emacs-25.3.tar.gz) = 62988771 bytes
 SHA1 (patch-src_inotify.c) = 1fdc6566ed57e8418f1ddc85bb03518d7d9d6bb3
