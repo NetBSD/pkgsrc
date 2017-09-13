@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2017/03/12 09:27:07 leot Exp $
-#
+# $NetBSD: Makefile,v 1.16 2017/09/13 08:37:41 wiz Exp $
 
-DISTNAME=	libva-1.7.3
-PKGREVISION=	5
+DISTNAME=	libva-1.8.2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.freedesktop.org/software/vaapi/releases/libva/
 EXTRACT_SUFX=	.tar.bz2
