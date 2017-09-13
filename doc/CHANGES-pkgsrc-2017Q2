@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.12 2017/09/13 06:25:29 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.13 2017/09/13 18:01:01 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q2 branch:
 
@@ -143,3 +143,7 @@ databases/postgresql96-client: security update
 databases/postgresql96-docs: security update
 databases/postgresql96-server: security update
 
+Pullup ticket #5542 - requested by taca
+devel/git: security update
+devel/git-base: security update
+devel/git-docs: security update
