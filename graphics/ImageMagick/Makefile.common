@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.155 2017/06/14 09:32:29 he Exp $
+# $NetBSD: Makefile.common,v 1.156 2017/09/13 08:56:18 wiz Exp $
 #
 # When updating this package, please upload the distfile
 # since they disappear immediately when new releases happen,
@@ -6,8 +6,8 @@
 #
 # used by graphics/p5-PerlMagick/Makefile
 
-IM_MAJOR_VER=		7.0.6
-IM_MINOR_VER=		0
+IM_MAJOR_VER=		7.0.7
+IM_MINOR_VER=		2
 IM_MAJOR_LIB_VER=	7
 
 .if (${IM_MINOR_VER} != NONE)
