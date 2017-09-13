@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/13 16:36:28 minskim Exp $
+
+SHA1 (python-editor-1.0.3.tar.gz) = 018e3c55a09ce6ac6531e9337bfa29a252aacdc2
+RMD160 (python-editor-1.0.3.tar.gz) = 0fc050d9a7049274753f66b7f9d33a1a3e0a4945
+SHA512 (python-editor-1.0.3.tar.gz) = 258d1ea17ea1c09d8ef52d3b624cc17710559f4a8db3c64696f72aecfcc0830d3509dcdcc9d1ac272155b2aaab432edb7142b0a37f2c3263a2505bff940a3cab
+Size (python-editor-1.0.3.tar.gz) = 6975 bytes
