@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3795 2017/09/13 16:37:55 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.3796 2017/09/13 17:29:25 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5333,3 +5333,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added finance/py-empyrical version 0.3.2 [minskim 2017-09-13]
 	Updated multimedia/adobe-flash-player to 27.0.0.130 [tsutsui 2017-09-13]
 	Added editors/py-editor version 1.0.3 [minskim 2017-09-13]
+	Updated databases/py-sqlalchemy to 1.1.14 [minskim 2017-09-13]
