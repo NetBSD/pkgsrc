@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3791 2017/09/13 10:36:13 leot Exp $
+$NetBSD: CHANGES-2017,v 1.3792 2017/09/13 14:56:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5329,3 +5329,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/maxima to 5.40.0 [wiz 2017-09-13]
 	Updated security/py-certbot to 0.18.1 [fhajny 2017-09-13]
 	Updated multimedia/mpv to 0.27.0 [leot 2017-09-13]
+	Updated mail/neomutt to 20170912 [wiz 2017-09-13]
