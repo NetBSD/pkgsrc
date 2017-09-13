@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3782 2017/09/13 08:08:40 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3783 2017/09/13 08:33:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5320,3 +5320,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-hglib to 2.4 [adam 2017-09-13]
 	Updated net/py-botocore to 1.7.9 [adam 2017-09-13]
 	Updated audio/openal-soft to 1.18.1 [wiz 2017-09-13]
+	Updated net/tigervnc to 1.8.0 [wiz 2017-09-13]
