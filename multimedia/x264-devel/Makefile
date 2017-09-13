@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2017/07/14 08:12:33 adam Exp $
+# $NetBSD: Makefile,v 1.64 2017/09/13 09:04:05 wiz Exp $
 
-DISTNAME=	x264-snapshot-20170712-2245
+DISTNAME=	x264-snapshot-20170912-2245
 PKGNAME=	${DISTNAME:S/-snapshot-/-devel-/:S/-2245$//}
 CATEGORIES=	multimedia
 MASTER_SITES=	ftp://ftp.videolan.org/pub/videolan/x264/snapshots/
