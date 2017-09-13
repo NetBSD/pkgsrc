@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2017/09/07 14:10:01 wiz Exp $
+$NetBSD: distinfo,v 1.27 2017/09/13 14:56:14 wiz Exp $
 
-SHA1 (neomutt-20170907.tar.gz) = 41faa67d7bcefa276534c128a650e26cb08fceec
-RMD160 (neomutt-20170907.tar.gz) = bc107fbb3998d088b48657cd12acee0a9063bd50
-SHA512 (neomutt-20170907.tar.gz) = 5dc7fca78c1f0fa16b4027a481e66cb7056e3587581f94d6681d4251fa6fc82870e0ac9cafe113e7d23ec1d8a6f7077ea38ad078c8b8e490f71bd3e90c7a89dd
-Size (neomutt-20170907.tar.gz) = 2532041 bytes
+SHA1 (neomutt-20170912.tar.gz) = acbb1debcb70a74a67d04654bd8379cb9728bb3f
+RMD160 (neomutt-20170912.tar.gz) = 77e4035991503f9fe33e6bf54b7843cfc98edecc
+SHA512 (neomutt-20170912.tar.gz) = 7551da47029667443257d9d370af7217846abf988d1469c4e08f367ef0bce2dfb658321df27176622bbd07e6d46c320380749d4ce05ee39cb1e8d9b6c3e1d7e6
+Size (neomutt-20170912.tar.gz) = 2533245 bytes
