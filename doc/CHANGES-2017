@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3796 2017/09/13 17:29:25 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.3797 2017/09/13 17:44:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5334,3 +5334,11 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/adobe-flash-player to 27.0.0.130 [tsutsui 2017-09-13]
 	Added editors/py-editor version 1.0.3 [minskim 2017-09-13]
 	Updated databases/py-sqlalchemy to 1.1.14 [minskim 2017-09-13]
+	Updated devel/boost-jam to 1.65.1 [adam 2017-09-13]
+	Updated devel/boost-headers to 1.65.1 [adam 2017-09-13]
+	Updated devel/boost-libs to 1.65.1 [adam 2017-09-13]
+	Updated devel/boost-docs to 1.65.1 [adam 2017-09-13]
+	Updated devel/boost-build to 1.65.1 [adam 2017-09-13]
+	Updated devel/boost-mpi to 1.65.1 [adam 2017-09-13]
+	Updated devel/py-boost to 1.65.1 [adam 2017-09-13]
+	Updated meta-pkgs/boost to 1.65.1 [adam 2017-09-13]
