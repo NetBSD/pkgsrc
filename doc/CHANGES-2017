@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3784 2017/09/13 08:37:51 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3785 2017/09/13 08:40:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5322,3 +5322,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/openal-soft to 1.18.1 [wiz 2017-09-13]
 	Updated net/tigervnc to 1.8.0 [wiz 2017-09-13]
 	Updated multimedia/libva to 1.8.2 [wiz 2017-09-13]
+	Updated misc/todoman to 3.2.4 [wiz 2017-09-13]
