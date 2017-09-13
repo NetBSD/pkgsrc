@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17721 2017/09/13 10:01:10 wiz Exp $
+$NetBSD: TODO,v 1.17722 2017/09/13 14:17:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -476,7 +476,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-3.7
+	o calibre-3.7 [wip]
 	o calligra-2.9.9 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -685,6 +685,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gdl-3.16.0
 	o gdm-2.32.2 [GNOME 2.32]
 	o gdm-3.0.3
+	o gecko-mediaplayer-1.0.9b
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o genius-1.0.21
 	o gens-2.15.5
@@ -998,6 +999,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lmbench-3
 	o lohit-fonts-2.4.2
 	o lottanzb-0.6
+	o lprof-1.11.4.1
 	o lq-sp-1.3.4.14
 	o lsh-2.1
 	o lua-keybinder-0.3.1
@@ -1299,8 +1301,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qlandkartegt-1.8.1 [pkg/49910]
 	o qnetwalk-1.4
 	o qt4-creator-3.4.0
-	o qt5-5.9.1
-	o qt5-qtbase-5.8
+	o qt5-5.9.1 [wip]
 	o quodlibet2-3.5.3
 	o racket-6.10
 	o radare2-1.0.2
@@ -1358,6 +1359,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scilab-5.5.2
 	o scm-5f2
 	o scribus-1.5.3
+	o scribus-qt4-1.4.6
 	o scripts-1.0.1
 	o scrollz-2.3
 	o scsh-1.3.0
@@ -1544,6 +1546,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o worker-3.8.3
 	o wxGTK-3.1.0
 	o wxRemind-101
+	o wxmaxima-17.05.1 [wip]
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xaric-0.13.7
