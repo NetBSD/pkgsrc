@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.229 2017/03/05 15:06:29 wiz Exp $
+# $NetBSD: Makefile,v 1.230 2017/09/13 08:56:18 wiz Exp $
 
 .include "Makefile.common"
 
@@ -74,6 +74,14 @@ SUBST_STAGE.fix-tools=	pre-install
 SUBST_MESSAGE.fix-tools=Unwrapping tools path in delegate paths.
 SUBST_FILES.fix-tools=	config/delegates.xml
 SUBST_SED.fix-tools=	-e 's,${TOOLS_DIR},,g'
+
+SUBST_CLASSES+=		fix-pc
+SUBST_STAGE.fix-pc=	pre-configure
+SUBST_MESSAGE.fix-pc=	Unwrapping pkg-config path in installed helper tools.
+SUBST_FILES.fix-pc+=	Magick++/bin/Magick++-config.in
+SUBST_FILES.fix-pc+=	MagickCore/MagickCore-config.in
+SUBST_FILES.fix-pc+=	MagickWand/MagickWand-config.in
+SUBST_SED.fix-pc=	-e 's,@PKG_CONFIG@,pkg-config,g'
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
