@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17718 2017/09/13 08:40:14 wiz Exp $
+$NetBSD: TODO,v 1.17719 2017/09/13 08:56:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -349,7 +349,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
-	o ImageMagick-7.0.7.1
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o Mesa-17.1.3
