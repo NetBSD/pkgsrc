@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3804 2017/09/14 16:18:19 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.3805 2017/09/14 17:01:30 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5350,3 +5350,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/libva to 1.8.3 [adam 2017-09-14]
 	Updated security/sqlmap to 1.1.9 [leot 2017-09-14]
 	Added finance/py-fecon235 version 5.17.0722 [minskim 2017-09-14]
+	Added security/ruby-jsobfu version 0.4.2 [minskim 2017-09-14]
