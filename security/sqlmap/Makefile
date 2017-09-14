@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/05/09 11:39:07 adam Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/14 12:43:54 leot Exp $
 
-DISTNAME=	sqlmap-1.1.5
+DISTNAME=	sqlmap-1.1.9
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlmap/}
 
@@ -25,7 +25,7 @@ REPLACE_PERL+=	sqlmap/extra/icmpsh/icmpsh-m.pl
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.1.3
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.1.9
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
