@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3808 2017/09/14 18:14:42 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.3809 2017/09/14 19:44:33 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5354,3 +5354,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/ruby-metasm version 1.0.3 [minskim 2017-09-14]
 	Added security/ruby-metasploit-concern version 2.0.5 [minskim 2017-09-14]
 	Updated security/ruby-metasploit_payloads-mettle to 0.2.2 [minskim 2017-09-14]
+	Added security/ruby-metasploit-model version 2.0.4 [minskim 2017-09-14]
