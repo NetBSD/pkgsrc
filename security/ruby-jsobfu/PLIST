@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/14 17:00:25 minskim Exp $
+bin/jsobfu${RUBY_SUFFIX}
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/bin/jsobfu
+${GEM_LIBDIR}/lib/jsobfu.rb
+${GEM_LIBDIR}/lib/jsobfu/disable.rb
+${GEM_LIBDIR}/lib/jsobfu/ecma_tight.rb
+${GEM_LIBDIR}/lib/jsobfu/hoister.rb
+${GEM_LIBDIR}/lib/jsobfu/obfuscator.rb
+${GEM_LIBDIR}/lib/jsobfu/scope.rb
+${GEM_LIBDIR}/lib/jsobfu/utils.rb
+${GEM_LIBDIR}/lib/jsobfu/version.rb
+${GEM_LIBDIR}/samples/basic.rb
+${GEM_LIBDIR}/spec/integration_spec.rb
+${GEM_LIBDIR}/spec/jsobfu/disable_spec.rb
+${GEM_LIBDIR}/spec/jsobfu/hoister_spec.rb
+${GEM_LIBDIR}/spec/jsobfu/obfuscator_spec.rb
+${GEM_LIBDIR}/spec/jsobfu/scope_spec.rb
+${GEM_LIBDIR}/spec/jsobfu/utils_spec.rb
+${GEM_LIBDIR}/spec/jsobfu_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/support/matchers/be_in_charset.rb
+${GEM_LIBDIR}/spec/support/matchers/evaluate_to.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
