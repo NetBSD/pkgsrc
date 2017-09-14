@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/14 19:43:45 minskim Exp $
+
+SHA1 (metasploit-model-2.0.4.gem) = fb61398f4425dd34a83a43e2e0eb2dce02ec7f00
+RMD160 (metasploit-model-2.0.4.gem) = 74a5ff5a3e8ec4bb2504d742fc7e83e5797dc76d
+SHA512 (metasploit-model-2.0.4.gem) = 70f6d948227bc99f877c3b5631a964087c0ebfdb091f128c72bc5da276bf57a5055aea5cdda4dc66e1fb177606afec9b7b3ee4076211f43928a2defb93294ac5
+Size (metasploit-model-2.0.4.gem) = 81408 bytes
