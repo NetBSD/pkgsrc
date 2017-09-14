@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2017/02/09 00:24:23 joerg Exp $
+$NetBSD: distinfo,v 1.10 2017/09/14 08:23:53 adam Exp $
 
-SHA1 (ninja-1.7.2.tar.gz) = a50e9008e90339d052f741e9c52a3475aa108fbb
-RMD160 (ninja-1.7.2.tar.gz) = a0f02eaae9db64241784de4ebb53ac5ae6e767eb
-SHA512 (ninja-1.7.2.tar.gz) = 29900d07364d87ad8b9614b82bc1b0afda5ca6522563ab73fb228f206ed6b29b70cf034a3caf5a9b2c0b105d1e076c6b425d93b5d14aa3ca3730d75611212a64
-Size (ninja-1.7.2.tar.gz) = 180611 bytes
-SHA1 (patch-configure.py) = 830ffd19fcf7f0664293b362c930695674e4b8f5
+SHA1 (ninja-1.8.2.tar.gz) = 17219deb34dd816363e37470f77ff7231509143a
+RMD160 (ninja-1.8.2.tar.gz) = 6623824c7d55a9e0b121d6614831a865da3eff0a
+SHA512 (ninja-1.8.2.tar.gz) = 1650bf9e3eddeb0b0fbb415c2b8e0a7c094421e991fa8139fd77fae0f6ee7ee980b7cf5e98d883c3a884f99abcb06fa26e3980af3a3a5bb6dd655124755782c2
+Size (ninja-1.8.2.tar.gz) = 185226 bytes
+SHA1 (patch-configure.py) = e89a04d9359d08a7e59bb5573a6887380c0b553b
 SHA1 (patch-src_subprocess-posix.cc) = 32b123fafbec24660813b2cdbc59ca6a2f2365f1
