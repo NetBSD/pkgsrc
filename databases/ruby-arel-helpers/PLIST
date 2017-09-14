@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/14 19:54:49 minskim Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/arel-helpers.gemspec
+${GEM_LIBDIR}/lib/arel-helpers.rb
+${GEM_LIBDIR}/lib/arel-helpers/arel_table.rb
+${GEM_LIBDIR}/lib/arel-helpers/ext/collection_proxy.rb
+${GEM_LIBDIR}/lib/arel-helpers/join_association.rb
+${GEM_LIBDIR}/lib/arel-helpers/query_builder.rb
+${GEM_LIBDIR}/lib/arel-helpers/version.rb
+${GEM_LIBDIR}/spec/arel_table_spec.rb
+${GEM_LIBDIR}/spec/env.rb
+${GEM_LIBDIR}/spec/env/migrations.rb
+${GEM_LIBDIR}/spec/env/models.rb
+${GEM_LIBDIR}/spec/join_association_spec.rb
+${GEM_LIBDIR}/spec/query_builder_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

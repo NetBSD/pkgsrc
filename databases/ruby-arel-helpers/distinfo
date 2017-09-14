@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/14 19:54:49 minskim Exp $
+
+SHA1 (arel-helpers-2.4.0.gem) = 70d5315176bbc2ed2dd7e9d4892e77ad7233c829
+RMD160 (arel-helpers-2.4.0.gem) = a9d712d003426df81cecd015c957e4749cd2f348
+SHA512 (arel-helpers-2.4.0.gem) = 3f1517b4b027728c2939314ecdd283af98d3616ebcfe2de8d819d64d78ec68dbdfbc2d26b07fb5df5345721cba8db446e2bea135f38c656e6366b560eedb8fd2
+Size (arel-helpers-2.4.0.gem) = 11776 bytes
