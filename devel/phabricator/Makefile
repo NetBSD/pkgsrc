@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/09/14 09:32:41 roy Exp $
+# $NetBSD: Makefile,v 1.13 2017/09/14 09:41:58 wiz Exp $
 
 DISTNAME=		phabricator-20170609
 CATEGORIES=		devel
@@ -28,9 +28,9 @@ DEPENDS+=		${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
 DEPENDS+=		${PHP_PKG_PREFIX}-zlib-[0-9]*:../../archivers/php-zlib
 DEPENDS+=		${PHP_PKG_PREFIX}-opcache-[0-9]*:../../devel/php-opcache
 .if ${PKG_PHP_MAJOR_VERS} == "5"
-DEPENDS+=		${PHP_PKG_PREFIX}-apcu-[0-9]*:../../www/php-apcu4
+DEPENDS+=		${PHP_PKG_PREFIX}-apcu<5:../../www/php-apcu4
 .else
-DEPENDS+=		${PHP_PKG_PREFIX}-apcu-[0-9]*:../../www/php-apcu
+DEPENDS+=		${PHP_PKG_PREFIX}-apcu>=5:../../www/php-apcu
 .endif
 #DEPENDS+=		:../../textproc/py-pygments?
 DEPENDS+=		libphutil-[0-9]*:../../devel/libphutil
