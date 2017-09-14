@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/14 17:00:25 minskim Exp $
+
+SHA1 (jsobfu-0.4.2.gem) = 5a7c0fa65ecb424b8aa20a7948588f1561538f9e
+RMD160 (jsobfu-0.4.2.gem) = cfaf40b3b98201e3074432a2e7ef8085592a3223
+SHA512 (jsobfu-0.4.2.gem) = 84374c8c65691eac6fbdaef78a6faf8a1659474789df2ad0b938cd9101e5b51c69ac5fb157eff3e714decb1402372fe98015a2ef3d77775f0af22fba34f93227
+Size (jsobfu-0.4.2.gem) = 27648 bytes
