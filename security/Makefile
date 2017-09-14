@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.628 2017/09/14 17:47:29 minskim Exp $
+# $NetBSD: Makefile,v 1.629 2017/09/14 19:44:15 minskim Exp $
 #
 
 COMMENT=	Security tools
@@ -465,6 +465,7 @@ SUBDIR+=	ruby-ezcrypto
 SUBDIR+=	ruby-hmac
 SUBDIR+=	ruby-jsobfu
 SUBDIR+=	ruby-metasploit-concern
+SUBDIR+=	ruby-metasploit-model
 SUBDIR+=	ruby-metasploit_payloads-mettle
 SUBDIR+=	ruby-net-scp
 SUBDIR+=	ruby-net-sftp
