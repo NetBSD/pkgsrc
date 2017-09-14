@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2017/09/13 16:12:15 minskim Exp $
+# $NetBSD: Makefile,v 1.49 2017/09/14 16:16:17 minskim Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -18,6 +18,7 @@ SUBDIR+=	p5-Finance-Quote
 SUBDIR+=	p5-Locale-Currency-Format
 SUBDIR+=	py-braintree
 SUBDIR+=	py-empyrical
+SUBDIR+=	py-fecon235
 SUBDIR+=	py-ofxparse
 SUBDIR+=	py-python-bitcoinlib
 SUBDIR+=	py-quickbooks
