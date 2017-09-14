@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2017/09/13 08:37:41 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/09/14 05:56:14 wiz Exp $
 
 DISTNAME=	libva-1.8.2
 CATEGORIES=	multimedia
-MASTER_SITES=	http://www.freedesktop.org/software/vaapi/releases/libva/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=01org/}
 EXTRACT_SUFX=	.tar.bz2
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.freedesktop.org/wiki/Software/vaapi
+HOMEPAGE=	https://github.com/01org/libva
 COMMENT=	Video Acceleration API
 LICENSE=	mit
 
