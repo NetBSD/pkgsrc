@@ -1,13 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2017/02/20 23:25:42 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/09/14 18:14:04 minskim Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/build/aarch64-iphone-darwin/bin/mettle
 ${GEM_LIBDIR}/build/aarch64-linux-musl/bin/mettle
 ${GEM_LIBDIR}/build/aarch64-linux-musl/bin/mettle.bin
+${GEM_LIBDIR}/build/arm-iphone-darwin/bin/mettle
 ${GEM_LIBDIR}/build/armv5b-linux-musleabi/bin/mettle
 ${GEM_LIBDIR}/build/armv5b-linux-musleabi/bin/mettle.bin
 ${GEM_LIBDIR}/build/armv5l-linux-musleabi/bin/mettle
 ${GEM_LIBDIR}/build/armv5l-linux-musleabi/bin/mettle.bin
+${GEM_LIBDIR}/build/darwin.x86_64/bin/mettle
 ${GEM_LIBDIR}/build/i486-linux-musl/bin/mettle
 ${GEM_LIBDIR}/build/i486-linux-musl/bin/mettle.bin
+${GEM_LIBDIR}/build/i686-w64-mingw32/bin/mettle.exe
 ${GEM_LIBDIR}/build/mips-linux-muslsf/bin/mettle
 ${GEM_LIBDIR}/build/mips-linux-muslsf/bin/mettle.bin
 ${GEM_LIBDIR}/build/mips64-linux-muslsf/bin/mettle
@@ -20,6 +24,7 @@ ${GEM_LIBDIR}/build/powerpc64le-linux-musl/bin/mettle
 ${GEM_LIBDIR}/build/powerpc64le-linux-musl/bin/mettle.bin
 ${GEM_LIBDIR}/build/s390x-linux-musl/bin/mettle
 ${GEM_LIBDIR}/build/s390x-linux-musl/bin/mettle.bin
+${GEM_LIBDIR}/build/x86_64-apple-darwin/bin/mettle
 ${GEM_LIBDIR}/build/x86_64-linux-musl/bin/mettle
 ${GEM_LIBDIR}/build/x86_64-linux-musl/bin/mettle.bin
 ${GEM_LIBDIR}/lib/metasploit_payloads/mettle.rb
