@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/14 16:15:45 minskim Exp $
+
+SHA1 (fecon235/v5.17.0722.tar.gz) = 35c8bfdc856c3eddfc493c8b2bad736605b0bf35
+RMD160 (fecon235/v5.17.0722.tar.gz) = 91aee5711e1b3f390115b0cfe5e44449e911cb4e
+SHA512 (fecon235/v5.17.0722.tar.gz) = fad134d775de71507e3f6deef5b49a501190f9c8754b62ebc138e7a11f61f55be89edba94801a17b279f12012da8f9b7a4b8a466b7921644aafd537e82766dbe
+Size (fecon235/v5.17.0722.tar.gz) = 2917910 bytes
