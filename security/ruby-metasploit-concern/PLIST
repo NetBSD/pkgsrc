@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/14 17:46:23 minskim Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CONTRIBUTING.md
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/app/models/metasploit/concern/loader.rb
+${GEM_LIBDIR}/lib/metasploit/concern.rb
+${GEM_LIBDIR}/lib/metasploit/concern/engine.rb
+${GEM_LIBDIR}/lib/metasploit/concern/error.rb
+${GEM_LIBDIR}/lib/metasploit/concern/error/base.rb
+${GEM_LIBDIR}/lib/metasploit/concern/error/eager_load.rb
+${GEM_LIBDIR}/lib/metasploit/concern/error/skip_autoload.rb
+${GEM_LIBDIR}/lib/metasploit/concern/version.rb
+${GEM_LIBDIR}/spec/support/shared/examples/metasploit/concern/run.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
