@@ -1,0 +1,15 @@
+$NetBSD: patch-bench_spbench_CMakeLists.txt,v 1.1 2017/09/14 11:21:03 prlw1 Exp $
+
+Make logical black arguments match.
+
+--- bench/spbench/CMakeLists.txt.orig	2017-06-15 07:10:20.000000000 +0000
++++ bench/spbench/CMakeLists.txt
+@@ -60,7 +60,7 @@ if(PASTIX_FOUND AND PASTIX_pastix_nompi.
+   endif(SCOTCH_FOUND)
+   set(SPARSE_LIBS ${SPARSE_LIBS} ${PASTIX_LIBRARIES_DEP} ${ORDERING_LIBRARIES})
+   set(PASTIX_ALL_LIBS ${PASTIX_LIBRARIES_DEP})
+-endif(PASTIX_FOUND AND BLAS_FOUND)
++endif(PASTIX_FOUND AND PASTIX_pastix_nompi.h_INCLUDE_DIRS AND BLAS_FOUND)
+ 
+ if(METIS_FOUND)
+   include_directories(${METIS_INCLUDE_DIRS})
