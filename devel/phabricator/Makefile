@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/08/13 15:03:55 taca Exp $
+# $NetBSD: Makefile,v 1.12 2017/09/14 09:32:41 roy Exp $
 
 DISTNAME=		phabricator-20170609
 CATEGORIES=		devel
@@ -12,11 +12,12 @@ HOMEPAGE=		http://phabricator.com/
 COMMENT=		Open software engineering platform
 LICENSE=		apache-2.0
 
-PHP_VERSIONS_ACCEPTED=	71
+PHP_VERSIONS_INCOMPATIBLE=      70
 
 USE_TOOLS+=		pax bash:run
 EXTRACT_USING=		bsdtar
 
+.include "../../lang/php/phpversion.mk"
 DEPENDS+=		${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
 DEPENDS+=		${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
 DEPENDS+=		${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
@@ -26,7 +27,11 @@ DEPENDS+=		${PHP_PKG_PREFIX}-posix-[0-9]*:../../devel/php-posix
 DEPENDS+=		${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
 DEPENDS+=		${PHP_PKG_PREFIX}-zlib-[0-9]*:../../archivers/php-zlib
 DEPENDS+=		${PHP_PKG_PREFIX}-opcache-[0-9]*:../../devel/php-opcache
+.if ${PKG_PHP_MAJOR_VERS} == "5"
+DEPENDS+=		${PHP_PKG_PREFIX}-apcu-[0-9]*:../../www/php-apcu4
+.else
 DEPENDS+=		${PHP_PKG_PREFIX}-apcu-[0-9]*:../../www/php-apcu
+.endif
 #DEPENDS+=		:../../textproc/py-pygments?
 DEPENDS+=		libphutil-[0-9]*:../../devel/libphutil
 DEPENDS+=		arcanist-[0-9]*:../../devel/arcanist
@@ -91,5 +96,4 @@ do-install:
 			${PAX} -rw * -s',.*\.orig$$,,' \
 				${DESTDIR}${PREFIX}/${PHABRICATOR_DIR}
 
-.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
