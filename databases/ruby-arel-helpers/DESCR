@@ -1,0 +1,2 @@
+Arel-helpers are tools to help construct database queries with
+ActiveRecord and Arel.
