@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3801 2017/09/14 11:21:24 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.3802 2017/09/14 11:35:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5347,3 +5347,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-meson to 0.42.1 [adam 2017-09-14]
 	Updated math/py-numexpr to 2.6.3 [adam 2017-09-14]
 	Updated math/eigen3 to 3.3.4 [prlw1 2017-09-14]
+	Updated multimedia/libva to 1.8.3 [adam 2017-09-14]
