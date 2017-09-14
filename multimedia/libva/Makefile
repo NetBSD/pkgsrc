@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2017/09/14 05:56:14 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/09/14 11:33:33 adam Exp $
 
-DISTNAME=	libva-1.8.2
+DISTNAME=	libva-1.8.3
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=01org/}
 EXTRACT_SUFX=	.tar.bz2
