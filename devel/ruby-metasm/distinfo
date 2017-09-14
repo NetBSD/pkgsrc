@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/14 17:22:13 minskim Exp $
+
+SHA1 (metasm-1.0.3.gem) = d009cf795ab07e3e4eb4cad16486284f5871a007
+RMD160 (metasm-1.0.3.gem) = 1d99902da9c5e89924ba1c055a9a556d8c903fb0
+SHA512 (metasm-1.0.3.gem) = 013549a343a1cc2890da458c03baef220a16462d8e8a90992b5b14ba347b9139e6a7673c36ca223e8a93c9973cb84be4b553579877ed0501ee01476b904b5224
+Size (metasm-1.0.3.gem) = 756736 bytes
