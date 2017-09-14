@@ -1,0 +1,5 @@
+Automatically includes Modules from
+app/concerns/<module_with_concerns>/<concern>.rb into
+<module_with_concerns> to ease monkey-patching associations and
+validations on ActiveRecord::Base descendents from other gems when
+layering schemas.
