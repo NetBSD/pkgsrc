@@ -1,19 +1,19 @@
-$NetBSD: patch-configure.py,v 1.3 2016/11/14 14:38:32 wiz Exp $
+$NetBSD: patch-configure.py,v 1.4 2017/09/14 08:23:53 adam Exp $
 
-* Add NetBSD support
+Add NetBSD support.
 
---- configure.py.orig	2016-11-07 18:34:46.000000000 +0000
+--- configure.py.orig	2017-09-11 01:20:10.000000000 +0000
 +++ configure.py
-@@ -95,7 +95,7 @@ class Platform(object):
+@@ -98,7 +98,7 @@ class Platform(object):
          return self._platform == 'aix'
  
      def uses_usr_local(self):
--        return self._platform in ('freebsd', 'openbsd', 'bitrig')
-+        return self._platform in ('freebsd', 'openbsd', 'bitrig', 'netbsd')
+-        return self._platform in ('freebsd', 'openbsd', 'bitrig', 'dragonfly')
++        return self._platform in ('freebsd', 'openbsd', 'bitrig', 'dragonfly', 'netbsd')
  
      def supports_ppoll(self):
-         return self._platform in ('freebsd', 'linux', 'openbsd', 'bitrig')
-@@ -350,8 +350,8 @@ else:
+         return self._platform in ('freebsd', 'linux', 'openbsd', 'bitrig',
+@@ -354,8 +354,8 @@ else:
          cflags += ['-D_WIN32_WINNT=0x0501']
      ldflags = ['-L$builddir']
      if platform.uses_usr_local():
