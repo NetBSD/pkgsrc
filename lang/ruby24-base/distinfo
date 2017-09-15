@@ -1,9 +1,17 @@
-$NetBSD: distinfo,v 1.2 2017/06/27 15:25:19 jperkin Exp $
+$NetBSD: distinfo,v 1.2.2.1 2017/09/15 19:25:23 spz Exp $
 
 SHA1 (ruby-2.4.1.tar.bz2) = b0bec75c260dcb81ca386fafef27bd718f8c28ad
 RMD160 (ruby-2.4.1.tar.bz2) = 02f0be92b3fb3fbb4bd1f945359c0d45297cefc6
 SHA512 (ruby-2.4.1.tar.bz2) = 1c80d4c30ecb51758a193b26b76802a06d214de7f15570f1e85b5fae4cec81bda7237f086b81f6f2b5767f2e93d347ad1fa3f49d7b5c2e084d5f57c419503f74
 Size (ruby-2.4.1.tar.bz2) = 12571597 bytes
+SHA1 (rubygems-2612-ruby24.patch) = 5da389b3858c8392a58ab1ab25c654e174c23857
+RMD160 (rubygems-2612-ruby24.patch) = db0542664fa3e4ac3b5f50a83644b2dca2c30a75
+SHA512 (rubygems-2612-ruby24.patch) = 03d4925fab0c5b47e033a69cb3b5807f9af218b745cfee57487e5120fbd468e568ba498709aae3adcce80d9584692e9cd71f659e79ba1ad5c2dc318610ae3dd2
+Size (rubygems-2612-ruby24.patch) = 13536 bytes
+SHA1 (rubygems-2613-ruby24.patch) = 002496ebe06922edf106638b80a29f9311411a42
+RMD160 (rubygems-2613-ruby24.patch) = 8476e8a8cf5ec19886f01dc2c4e3999b495a2105
+SHA512 (rubygems-2613-ruby24.patch) = 94c9963d6c917ded90f12748d61083e2a5cb8e41ae61c50b329930aaa6104eaec5426c32cbc3a8fe01e48564d004cfbc3eea2a5c1e1bb598fc4dad69d2ea5c93
+Size (rubygems-2613-ruby24.patch) = 11119 bytes
 SHA1 (patch-configure) = 680a13e6405a8aab61eba078f6d88488b426885c
 SHA1 (patch-ext_dbm_extconf.rb) = c998f8735db54b1ae2bc8b6caa359ce88bc7a45b
 SHA1 (patch-ext_openssl_ossl__ssl.c) = 03ec33b438f3269910d10fb221d1cfe8df33c9ee
