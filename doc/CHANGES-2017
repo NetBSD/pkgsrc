@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3813 2017/09/15 11:30:14 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3814 2017/09/15 12:55:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5369,3 +5369,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated games/wtfubar to 2.5.0 [rodent 2017-09-15]
 	Updated devel/py-babel to 2.5.1 [adam 2017-09-15]
 	Updated net/py-amqp to 2.2.2 [adam 2017-09-15]
+	Updated www/py-autobahn to 17.9.2 [adam 2017-09-15]
+	Updated www/py-channels to 1.1.7 [adam 2017-09-15]
+	Updated devel/py-lama to 7.4.3 [adam 2017-09-15]
