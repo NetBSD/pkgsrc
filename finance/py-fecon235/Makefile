@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/09/14 16:15:45 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/15 06:40:44 wiz Exp $
 
 GITHUB_PROJECT=	fecon235
 GITHUB_TAG=	v5.17.0722
@@ -13,10 +13,10 @@ HOMEPAGE=	https://github.com/rsvp/fecon235/
 COMMENT=	Computational tools for financial economics
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-matplotlib:../../graphics/py-matplotlib
-DEPENDS+=	${PYPKGPREFIX}-numpy:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pandas>0.18:../../math/py-pandas
-DEPENDS+=	${PYPKGPREFIX}-pandas-datareader:../../math/py-pandas-datareader
+DEPENDS+=	${PYPKGPREFIX}-pandas-datareader-[0-9]*:../../math/py-pandas-datareader
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-statsmodels-[0-9]*:../../math/py-statsmodels
 DEPENDS+=	${PYPKGPREFIX}-sympy-[0-9]*:../../math/py-sympy
