@@ -1,0 +1,18 @@
+$NetBSD: patch-src_cache.cc_config.h.in,v 1.1 2017/09/15 22:18:00 ast Exp $
+
+* Compile with pre-2016/12/16 v1.36 dirent.h on NetBSD
+
+--- config.h.in.orig	2017-09-15 22:23:22.225934988 +0200
++++ config.h.in	2017-09-15 22:25:22.674646455 +0200
+@@ -80,6 +80,11 @@
+ /* Git commit used to build this programm */
+ #undef PDFGREP_GIT_HEAD
+ 
++/* Define to 1 if you have to use const void * with scandir's compar()
++   function, to 0 if you are using the IEEE Std 1003.1 standard const struct
++   dirent **. */
++#undef SCANDIR_COMPAR_USES_CONST_VOID_POINTER
++
+ /* Define to 1 if you have the ANSI C header files. */
+ #undef STDC_HEADERS
+ 
