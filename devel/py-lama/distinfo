@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/07/30 17:34:41 adam Exp $
+$NetBSD: distinfo,v 1.3 2017/09/15 12:54:31 adam Exp $
 
-SHA1 (pylama-7.4.1.tar.gz) = b1ddb568f4a5cddcf94c1107484721acd29dccdb
-RMD160 (pylama-7.4.1.tar.gz) = c160db75885fca1d400ddd5192616c9bf8698481
-SHA512 (pylama-7.4.1.tar.gz) = 02615bbdb6bfb58524ac82921dcc9e016395e03360a6f7bb48a14f6be85a3c13d682f87956b04c7077c100b3e8641df9fdcca1d39468709d9ac167f3eabf5719
-Size (pylama-7.4.1.tar.gz) = 28346 bytes
+SHA1 (pylama-7.4.3.tar.gz) = 45e4780ea0d492df7c7a35ed358610f69f075fff
+RMD160 (pylama-7.4.3.tar.gz) = 122aae2985f3bd3402e394dc9ac41fa2e36e5728
+SHA512 (pylama-7.4.3.tar.gz) = 7d4ab9cb0a1390fa4d2dc96bd88cac52b4ec5a4a72e08e1e6dab913fea06e5bb19c761c1c23dcddf91a297f6688a1196e52cdd2f05dc9cb8564d3178a99e27b8
+Size (pylama-7.4.3.tar.gz) = 28631 bytes
