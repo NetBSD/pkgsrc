@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3814 2017/09/15 12:55:36 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3815 2017/09/15 17:36:26 asau Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5372,3 +5372,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-autobahn to 17.9.2 [adam 2017-09-15]
 	Updated www/py-channels to 1.1.7 [adam 2017-09-15]
 	Updated devel/py-lama to 7.4.3 [adam 2017-09-15]
+	Updated devel/netbeans-ide to 8.2 [asau 2017-09-15]
