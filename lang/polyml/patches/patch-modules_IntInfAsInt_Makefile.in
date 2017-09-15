@@ -1,0 +1,13 @@
+$NetBSD: patch-modules_IntInfAsInt_Makefile.in,v 1.1 2017/09/15 23:51:05 asau Exp $
+
+--- modules/IntInfAsInt/Makefile.in.orig	2017-03-22 17:51:06.000000000 +0000
++++ modules/IntInfAsInt/Makefile.in
+@@ -452,7 +452,7 @@ clean-local:
+ 
+ install-exec-local:
+ 	$(mkdir_p) $(DESTDIR)$(moduledir)
+-	$(INSTALL_PROGRAM) IntInfAsInt $(DESTDIR)$(moduledir)
++	$(INSTALL_DATA) IntInfAsInt $(DESTDIR)$(moduledir)
+ 
+ uninstall-local:
+ 	-rm -f $(DESTDIR)$(moduledir)/IntInfAsInt
