@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.6 2017/08/11 00:59:45 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2017/09/15 22:18:00 ast Exp $
 
 SHA1 (pdfgrep-2.0.1.tar.gz) = 35e8a5143849f7da72c6793e7056c079b5208b5c
 RMD160 (pdfgrep-2.0.1.tar.gz) = 5c656f03b00e80395d648f804db3fc6d748c701b
 SHA512 (pdfgrep-2.0.1.tar.gz) = 4285f8cb514975a0040cdd6b82133090e27ba5c2f95ca880dccc3dd4fa3427260a5fc73d807df9124a79fa36ac6ed8c11380cde11e00599ed7134d92c50df4a0
 Size (pdfgrep-2.0.1.tar.gz) = 187217 bytes
+SHA1 (patch-src_cache.cc) = 64f38fe8e99792119b79f7af50fb34d77bdffec3
+SHA1 (patch-src_cache.cc_config.h.in) = 2b05d4ccf870660f640aa85c6eadbd94a85322af
+SHA1 (patch-src_cache.cc_configure) = 1f522d758bf9d84fec4a3ffffacf4e9341074aa9
+SHA1 (patch-src_cache.cc_configure.ac) = f82c18c66c6b7f9036fe172a7310094620777199
 SHA1 (patch-src_pdfgrep.cc) = ac9290a2467b88592788adf1ec7d15b4cfb5c8a6
