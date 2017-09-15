@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/15 00:43:01 rodent Exp $
+bin/wtfubar
+man/man6/wtfubar.6
+share/doc/wtfubar/ChangeLog.md
+share/doc/wtfubar/README.md
+share/wtfubar/acronyms
+share/wtfubar/acronyms-o
+share/wtfubar/acronyms.comp
