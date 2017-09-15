@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3810 2017/09/14 19:55:54 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.3811 2017/09/15 00:42:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5356,3 +5356,13 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/ruby-metasploit_payloads-mettle to 0.2.2 [minskim 2017-09-14]
 	Added security/ruby-metasploit-model version 2.0.4 [minskim 2017-09-14]
 	Added databases/ruby-arel-helpers version 2.4.0 [minskim 2017-09-14]
+	Updated lang/ruby22-base to 2.2.8 [taca 2017-09-15]
+	Updated lang/ruby22 to 2.2.8 [taca 2017-09-15]
+	Updated lang/ruby23-base to 2.3.5 [taca 2017-09-15]
+	Updated databases/ruby-gdbm to 2.3.5 [taca 2017-09-15]
+	Updated devel/ruby-fiddle to 2.3.5 [taca 2017-09-15]
+	Updated devel/ruby-readline to 2.3.5 [taca 2017-09-15]
+	Updated x11/ruby-tk to 2.3.5 [taca 2017-09-15]
+	Updated lang/ruby23 to 2.3.5 [taca 2017-09-15]
+	Updated lang/ruby24-base to 2.4.2 [taca 2017-09-15]
+	Updated lang/ruby24 to 2.4.2 [taca 2017-09-15]
