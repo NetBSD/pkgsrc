@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2509 2017/09/14 17:22:51 minskim Exp $
+# $NetBSD: Makefile,v 1.2510 2017/09/15 16:15:42 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -2252,8 +2252,8 @@ SUBDIR+=	ruby-memcache
 SUBDIR+=	ruby-memoist
 SUBDIR+=	ruby-mercenary
 SUBDIR+=	ruby-metaclass
-SUBDIR+=	ruby-metasm
 SUBDIR+=	ruby-metaid
+SUBDIR+=	ruby-metasm
 SUBDIR+=	ruby-minitest
 SUBDIR+=	ruby-mixlib-authentication
 SUBDIR+=	ruby-mixlib-cli
