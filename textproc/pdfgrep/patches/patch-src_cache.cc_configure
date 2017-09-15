@@ -1,0 +1,66 @@
+$NetBSD: patch-src_cache.cc_configure,v 1.1 2017/09/15 22:18:00 ast Exp $
+
+* Compile with pre-2016/12/16 v1.36 dirent.h on NetBSD
+
+--- configure.orig	2017-03-06 10:29:52.000000000 +0100
++++ configure	2017-09-15 23:49:38.676008878 +0200
+@@ -621,6 +621,7 @@
+ # include <unistd.h>
+ #endif"
+ 
++ac_c_werror_flag=
+ ac_subst_vars='am__EXEEXT_FALSE
+ am__EXEEXT_TRUE
+ LTLIBOBJS
+@@ -5066,6 +5067,51 @@
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+ 
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking if scandir's compar() expects const void * pointers" >&5
++$as_echo_n "checking if scandir's compar() expects const void * pointers... " >&6; }
++
++ac_c_werror_flag=yes
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++#include <dirent.h>
++int
++main ()
++{
++
++    const char *dirname;
++    struct dirent ***namelist;
++    int (*f_select)(const struct dirent *);
++    int (*f_compar)(const void *, const void *);
++    scandir(dirname, namelist, f_select, f_compar);
++
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_c_try_compile "$LINENO"; then :
++
++     { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
++$as_echo "yes" >&6; }
++
++cat >>confdefs.h <<_ACEOF
++#define SCANDIR_COMPAR_USES_CONST_VOID_POINTER 1
++_ACEOF
++
++
++else
++
++     { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
++$as_echo "no" >&6; }
++
++cat >>confdefs.h <<_ACEOF
++#define SCANDIR_COMPAR_USES_CONST_VOID_POINTER 0
++_ACEOF
++
++
++
++fi
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++
+ 
+ 
+ 
