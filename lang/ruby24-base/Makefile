@@ -1,10 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2017/06/27 15:25:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2017/09/15 19:25:23 spz Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
 PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
+
+PATCH_SITES=	https://bugs.ruby-lang.org/attachments/download/6692/ \
+		https://bugs.ruby-lang.org/attachments/download/6693/
+PATCHFILES=	rubygems-2612-ruby24.patch rubygems-2613-ruby24.patch
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
