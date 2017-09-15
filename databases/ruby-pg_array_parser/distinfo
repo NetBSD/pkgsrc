@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/15 17:51:34 minskim Exp $
+
+SHA1 (pg_array_parser-0.0.9.gem) = ba9ab3d637607c053a7346cbf1a2faab650d3c0d
+RMD160 (pg_array_parser-0.0.9.gem) = d82fc8d18ef1ee81f96226bee91b4cf09c8b123c
+SHA512 (pg_array_parser-0.0.9.gem) = a1503d9598e1658eb63b6294ce1cf6f8d2e7e5c59382407946ec10d25a46b029b4bb8a8c634b190b42bef4954c4aeea60b6ffa16c596e0c3bea2df4c882896ae
+Size (pg_array_parser-0.0.9.gem) = 8192 bytes
