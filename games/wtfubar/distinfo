@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/15 00:43:01 rodent Exp $
+
+SHA1 (wtfubar-2.5.0.tar.xz) = f8583632b3165b74bebce32fc56d0438968c07fc
+RMD160 (wtfubar-2.5.0.tar.xz) = 14adfd0ccd45a517fa3411fac22247b3d44bf808
+SHA512 (wtfubar-2.5.0.tar.xz) = 86b48cb57ff3e646eb3ee2e0856c2e9a89be98cdf614b15410ea416d67d39893c6b8d343dccbf0eab60fea94001006f892ebcbc55044255969483ac99b029683
+Size (wtfubar-2.5.0.tar.xz) = 23960 bytes
