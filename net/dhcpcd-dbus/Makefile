@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/23 17:18:16 asau Exp $
-#
+# $NetBSD: Makefile,v 1.12 2017/09/16 08:37:35 wiz Exp $
 
 DISTNAME=		dhcpcd-dbus-0.6.0
 CATEGORIES=		net
@@ -8,7 +7,7 @@ MASTER_SITES+=		http://roy.aydogan.net/dhcpcd/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		roy@NetBSD.org
-HOMEPAGE=		http://roy.marples.name/projects/dhcpcd/
+HOMEPAGE=		https://roy.marples.name/projects/dhcpcd/
 COMMENT=		DBus binding for dhcpcd
 LICENSE=		modified-bsd
 
