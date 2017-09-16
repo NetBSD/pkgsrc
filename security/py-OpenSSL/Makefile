@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.47 2017/07/20 16:52:16 adam Exp $
+# $NetBSD: Makefile,v 1.48 2017/09/16 06:47:52 adam Exp $
 
-DISTNAME=	pyOpenSSL-17.2.0
+DISTNAME=	pyOpenSSL-17.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyOpenSSL/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/pyca/pyopenssl/
+HOMEPAGE=	https://pyopenssl.org/
 COMMENT=	Python interface to the OpenSSL library
 LICENSE=	apache-2.0
 
