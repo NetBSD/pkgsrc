@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.721 2017/09/10 17:01:04 jmcneill Exp $
+# $NetBSD: Makefile,v 1.722 2017/09/16 09:34:47 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -114,6 +114,7 @@ SUBDIR+=	depot
 SUBDIR+=	desktop-file-utils
 SUBDIR+=	detox
 SUBDIR+=	devkitd
+SUBDIR+=	dfc
 SUBDIR+=	di
 SUBDIR+=	direvent
 SUBDIR+=	dirsize
