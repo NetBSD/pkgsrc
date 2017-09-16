@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/08/24 20:03:00 adam Exp $
+# $NetBSD: Makefile,v 1.14 2017/09/16 15:42:13 tnn Exp $
 #
 
 DISTNAME=	sword-1.7.4
@@ -24,6 +24,9 @@ INSTALLATION_DIRS+=share/examples/sword
 INSTALL_TARGET= install install_config
 REQD_FILES=	${PREFIX}/share/examples/sword/sword.conf \
 		${PKG_SYSCONFDIR}/sword.conf
+
+# needed with at least GCC-5.4.0 which has a default value of 25
+CXXFLAGS+=	-ftemplate-depth=50
 
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libclucene/buildlink3.mk"
