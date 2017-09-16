@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/12/04 09:42:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/16 19:26:51 wiz Exp $
 
 PKGNAME=	suse_gstreamer-${SUSE_VERSION}
 PKGREVISION=	3
@@ -17,7 +17,7 @@ RPMPKGS+=	gstreamer-plugins-good-1.0.10-2.1.4.${SUSE_ARCH}
 RPMUPDPKGS+=	libgstapp-1_0-0-1.0.10-2.4.1.${SUSE_ARCH}
 RPMPKGS+=	liborc-0_4-0-0.4.17-2.1.2.${SUSE_ARCH}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linux compatibility package for gstreamer
 
 EMUL_MODULES.linux=	base

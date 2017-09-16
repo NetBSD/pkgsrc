@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2016/12/14 21:36:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/16 19:27:29 wiz Exp $
 
 DISTNAME=	xf86-video-dummy-0.3.8
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Virtual/offscreen frame buffer driver for the Xorg X server
 #LICENSE=	# TODO: (see mk/license.mk)

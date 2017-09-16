@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2017/09/04 18:00:49 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/16 19:26:41 wiz Exp $
 
 DISTNAME=	yuicompressor-2.4.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yuicompressor/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	https://bitbucket.org/sprat/yuicompressor
 COMMENT=	YUI Compressor packaged for Python
 LICENSE=	modified-bsd
