@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2017/02/28 22:50:07 leot Exp $
+# $NetBSD: Makefile,v 1.8 2017/09/16 20:15:05 leot Exp $
 #
 
-DISTNAME=	entr-3.7
+DISTNAME=	entr-3.8
 CATEGORIES=	sysutils
 MASTER_SITES=	http://entrproject.org/code/
 
@@ -10,7 +10,7 @@ HOMEPAGE=	http://entrproject.org/
 COMMENT=	Run arbitrary commands when files change
 LICENSE=	isc AND 2-clause-bsd
 
-WRKSRC=		${WRKDIR}/eradman-entr-c5b62bde107d
+WRKSRC=		${WRKDIR}/eradman-entr-592856d50559
 
 MAKE_ENV+=	MANPREFIX="${PREFIX}/${PKGMANDIR}"
 
