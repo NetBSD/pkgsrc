@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2017/09/16 09:30:26 wiz Exp $
+
+SHA1 (dfc-3.1.1.tar.gz) = 948e5ce2eb94bd2ce75475b5e57db0d1023397f6
+RMD160 (dfc-3.1.1.tar.gz) = 2caa55133f5757aaf42e82245dde35051e47a6e4
+SHA512 (dfc-3.1.1.tar.gz) = eac2c8d464d57626efe939f515889cf91510f7e6eb50382d045204d4f1d6b9b9f0af4b1d8974c9cbcff1eb5b8802157e421ec06e5a1e38dac74eba72f43f9701
+Size (dfc-3.1.1.tar.gz) = 52709 bytes
+SHA1 (patch-services-bsd.c) = 8edc22ac323bd14af617177f100d169f61b267a0
