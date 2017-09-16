@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/01/04 23:05:12 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/16 19:26:50 wiz Exp $
 
 GITHUB_PROJECT=	redmine_bootstrap_kit
 DISTNAME=	0.2.4
@@ -7,7 +7,7 @@ PKGNAME=	${RUBY_PKGPREFIX}-${GITHUB_PROJECT}-${DISTNAME}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jbox-web/}
 DIST_SUBDIR=	ruby-${GITHUB_PROJECT}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jbox-web/redmine_bootstrap_kit
 COMMENT=	Redmine plugin which facilitates developing Redmine plugins
 LICENSE=	mit
