@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2015/04/04 16:04:14 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/16 19:27:00 wiz Exp $
 #
 
 DISTNAME=	nagios-4.0.8
 CATEGORIES=	meta-pkgs net
 MASTER_SITES=	# empty
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Nagios meta package
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND modified-bsd
 

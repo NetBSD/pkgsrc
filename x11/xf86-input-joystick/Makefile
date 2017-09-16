@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2017/05/12 03:18:03 maya Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/16 19:27:28 wiz Exp $
 
 DISTNAME=	xf86-input-joystick-1.6.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Joystick input driver for the Xorg X server
 #LICENSE=	# TODO: (see mk/license.mk)

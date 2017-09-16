@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2017/01/04 23:45:27 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/16 19:26:53 wiz Exp $
 TRYTON_MODULE_NAME=	trytond_account_stock_landed_cost_weight
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	finance python
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tryton.org/
 COMMENT=	Tryton's account stock landed cost weight module
 LICENSE=	gnu-gpl-v3
