@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/09/13 08:08:22 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/16 09:36:48 wiz Exp $
 
 DISTNAME=	openal-soft-1.18.1
 CATEGORIES=	audio
@@ -6,7 +6,7 @@ MASTER_SITES=	http://kcat.strangesoft.net/openal-releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://kcat.strangesoft.net/
+HOMEPAGE=	http://kcat.strangesoft.net/openal.html
 COMMENT=	Alternative OpenAL implementation
 LICENSE=	gnu-lgpl-v2
 
