@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/02/01 09:53:08 prlw1 Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/16 19:53:50 alnsn Exp $
 
 DISTNAME=	ljsyscall-0.11
 PKGNAME=	${DISTNAME:S/ljsyscall/${LUA_PKGPREFIX}-ljsyscall/}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=justincormack/}
 GITHUB_TAG=	v${PKGVERSION}
 GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION}//}
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/justincormack/ljsyscall
 COMMENT=	LuaJIT syscall FFI for the Linux, NetBSD, FreeBSD and OSX kernels
 LICENSE=	mit

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2016/06/05 09:55:45 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/16 19:53:50 alnsn Exp $
 
 DISTNAME=	coxpcall-1.16.0
 PKGNAME=	${DISTNAME:S/coxpcall/${LUA_PKGPREFIX}-coxpcall/}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=keplerproject/}
 GITHUB_TAG=	v${PKGVERSION:S/./_/g}
 GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION_NOREV}//}
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://keplerproject.github.io/coxpcall
 COMMENT=	Module to encapsulate protected calls with a coroutine based loop
 LICENSE=	mit
