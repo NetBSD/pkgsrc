@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2016/02/22 10:11:22 roy Exp $
-#
+# $NetBSD: Makefile,v 1.27 2017/09/16 08:41:20 wiz Exp $
 
 DISTNAME=		openresolv-3.7.3
 CATEGORIES=		net
@@ -8,7 +7,7 @@ MASTER_SITES+=		http://roy.aydogan.net/openresolv/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		roy@NetBSD.org
-HOMEPAGE=		http://roy.marples.name/projects/openresolv/
+HOMEPAGE=		https://roy.marples.name/projects/openresolv/
 COMMENT=		Framework for managing /etc/resolv.conf
 LICENSE=		modified-bsd
 
