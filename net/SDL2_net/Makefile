@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2017/01/11 23:52:32 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/16 19:27:04 wiz Exp $
 
 DISTNAME=	SDL2_net-2.0.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_net/release/
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libsdl.org/projects/SDL_net/
 COMMENT=	Small sample cross-platform networking library
 LICENSE=	zlib

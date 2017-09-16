@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2013/06/16 23:47:18 asau Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/16 19:26:56 wiz Exp $
 
 DISTNAME=	libXfontcache-1.0.5
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	X-TrueType font cache extension client library
 LICENSE=	2-clause-bsd AND x11

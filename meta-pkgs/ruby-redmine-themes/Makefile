@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/01/04 23:19:54 rodent Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/16 19:27:00 wiz Exp $
 
 DISTNAME=	redmine-themes-1.3.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel meta-pkgs
 MASTER_SITES=	# blank
 DISTFILES=	# blank
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.redmine.org/
 COMMENT=	Redmine themes meta package
 

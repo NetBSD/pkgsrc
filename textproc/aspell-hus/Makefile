@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/11 11:39:25 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/16 19:27:11 wiz Exp $
 #
 
 DISTNAME=	aspell6-hus-0.03-1
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/hus/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aspell.net/
 COMMENT=	Huastec language support for aspell
 LICENSE=	gnu-gpl-v3
