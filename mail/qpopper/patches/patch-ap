@@ -1,8 +1,22 @@
-$NetBSD: patch-ap,v 1.4 2012/03/22 14:13:29 taca Exp $
+$NetBSD: patch-ap,v 1.5 2017/09/16 15:30:11 tnn Exp $
 
 --- popper/main.c.orig	2011-05-30 19:13:39.000000000 +0000
 +++ popper/main.c
-@@ -310,6 +310,7 @@ main ( int argc, char *argv[] )
+@@ -233,8 +233,13 @@ main ( int argc, char *argv[] )
+  * System prototypes (functions often missing prototypes in
+  * system header files)
+  */
++#if defined(SOME_OLD_PLATFORM)
+ void bzero();
+ pid_t wait3();
++#else
++#include <strings.h>
++#include <sys/wait.h>
++#endif
+ 
+ 
+ /*
+@@ -310,6 +315,7 @@ main ( int argc, char *argv[] )
      fd_set              fdset_templ;
      fd_set              fdset_read;
      int                 fd_flags    = 0;
@@ -10,7 +24,7 @@ $NetBSD: patch-ap,v 1.4 2012/03/22 14:13:29 taca Exp $
  
  
  #ifdef USE_PAM
-@@ -781,7 +782,10 @@ main ( int argc, char *argv[] )
+@@ -781,7 +787,10 @@ main ( int argc, char *argv[] )
          TRACE ( trace_file, POP_DEBUG, HERE, "listening using socket fd %d",
                  sockfd );
  
@@ -22,7 +36,7 @@ $NetBSD: patch-ap,v 1.4 2012/03/22 14:13:29 taca Exp $
  
          /*
           * Set file descriptor to be non-blocking in case there isn't really a
-@@ -823,6 +827,16 @@ main ( int argc, char *argv[] )
+@@ -823,6 +832,16 @@ main ( int argc, char *argv[] )
      signal ( SIGHUP,  VOIDSTAR hupit   );
      signal ( SIGTERM, VOIDSTAR cleanup );
  
