@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2017/09/04 18:08:21 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/16 19:26:48 wiz Exp $
 
 DISTNAME=	MiniMock-1.2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/MiniMock/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/MiniMock
 COMMENT=	Simplest possible mock library
 LICENSE=	mit

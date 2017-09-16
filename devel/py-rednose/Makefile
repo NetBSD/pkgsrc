@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2017/07/20 17:23:16 adam Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/16 19:26:48 wiz Exp $
 
 DISTNAME=	rednose-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rednose/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/JBKahn/rednose
 COMMENT=	Coloured output for nosetests
 LICENSE=	modified-bsd

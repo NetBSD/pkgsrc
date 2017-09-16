@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2015/04/17 07:05:02 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/16 19:27:27 wiz Exp $
 
 DISTNAME=	xditview-1.0.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Displays ditroff output on an X display
 LICENSE=	x11

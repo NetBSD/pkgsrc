@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2017/09/04 18:08:30 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/09/16 19:27:24 wiz Exp $
 
 DISTNAME=	python-digest-1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python www
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-digest/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://bitbucket.org/akoha/python-digest/
 COMMENT=	Python library to aid in implementing HTTP Digest Authentication
 LICENSE=	modified-bsd

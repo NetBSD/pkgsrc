@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2017/09/04 18:08:25 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/09/16 19:27:05 wiz Exp $
 
 DISTNAME=	eventlib-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eventlib/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://travis-ci.org/Yipit/eventlib/
 COMMENT=	Asynchronous event tracking app for Django
 LICENSE=	gnu-lgpl-v3

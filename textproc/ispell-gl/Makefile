@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2013/04/24 11:45:00 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/16 19:27:17 wiz Exp $
 #
 
 DISTNAME=	ispell-gl-0.5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ispell-gl/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ispell-gl.sourceforge.net/
 COMMENT=	Galician dictionary for interactive spelling checker
 LICENSE=	gnu-gpl-v2

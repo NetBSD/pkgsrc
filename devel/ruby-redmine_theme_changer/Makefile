@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/06 04:12:49 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/16 19:26:50 wiz Exp $
 #
 
 PLUGIN_NAME=	redmine_theme_changer
@@ -7,7 +7,7 @@ PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 MASTER_SITES=	https://bitbucket.org/haru_iida/${PLUGIN_NAME}/downloads/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.r-labs.org/projects/r-labs/wiki/Theme_Changer_en
 COMMENT=	Redmine plugin to allow each user to select the theme of Redmine
 LICENSE=	gnu-gpl-v2

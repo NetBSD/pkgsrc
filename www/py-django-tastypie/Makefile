@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2017/07/30 22:32:26 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/09/16 19:27:22 wiz Exp $
 
 DISTNAME=	django-tastypie-0.13.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python www
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-tastypie/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/toastdriven/django-tastypie/
 COMMENT=	Flexible and capable API layer for Django
 LICENSE=	modified-bsd

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2015/02/14 05:33:04 riastradh Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/16 19:27:22 wiz Exp $
 
 DISTNAME=	libWindowsWM-1.0.1
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Cygwin/X rootless window management extension
 LICENSE=	mit

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2017/01/01 14:43:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/16 19:27:06 wiz Exp $
 
 DISTNAME=	zeep-0.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zeep/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://docs.python-zeep.org/
 COMMENT=	Fast and modern Python SOAP client
 LICENSE=	mit

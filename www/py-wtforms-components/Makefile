@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2016/06/08 17:43:48 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/16 19:27:25 wiz Exp $
 
 DISTNAME=	WTForms-Components-0.9.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	python www
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/WTForms-Components/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/kvesteri/wtforms-components
 COMMENT=	Additional fields, validators and widgets for WTForms
 LICENSE=	modified-bsd

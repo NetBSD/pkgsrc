@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/16 19:27:19 wiz Exp $
 
 DISTNAME=	biplist-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/biplist/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://bitbucket.org/wooster/biplist
 COMMENT=	Library for reading/writing binary plists
 LICENSE=	modified-bsd

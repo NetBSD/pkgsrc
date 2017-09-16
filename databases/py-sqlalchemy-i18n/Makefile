@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2017/07/25 11:05:34 adam Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/16 19:26:44 wiz Exp $
 
 DISTNAME=	SQLAlchemy-i18n-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SQLAlchemy-i18n/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/kvesteri/sqlalchemy-i18n
 COMMENT=	Internationalization extension for SQLAlchemy models
 LICENSE=	modified-bsd

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2016/12/31 09:23:06 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/16 19:26:47 wiz Exp $
 
 MODNAME=	pthreads
 PECL_VERSION=	2.0.10
 CATEGORIES+=	devel
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/krakjoe/pthreads
 COMMENT=	PHP extension for POSIX threads support
 LICENSE=	php

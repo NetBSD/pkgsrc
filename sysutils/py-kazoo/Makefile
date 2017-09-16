@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2017/09/12 14:55:19 adam Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/16 19:27:08 wiz Exp $
 
 DISTNAME=	kazoo-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kazoo/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://kazoo.readthedocs.org/
 COMMENT=	Higher level Zookeeper client
 LICENSE=	apache-2.0

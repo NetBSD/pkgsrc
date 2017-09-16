@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2017/07/30 22:32:23 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/16 19:27:19 wiz Exp $
 
 DISTNAME=	colour-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/colour/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/vaab/colour
 COMMENT=	Converts and manipulates various color representation
 LICENSE=	2-clause-bsd

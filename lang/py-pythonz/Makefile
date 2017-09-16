@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2017/01/03 13:23:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2017/09/16 19:26:58 wiz Exp $
 
 DISTNAME=	pythonz-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	https://github.com/saghul/pythonz/archive/
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/saghul/pythonz/
 COMMENT=	Installation manager supporting CPython, Stackless, PyPy and Jython
 LICENSE=	mit

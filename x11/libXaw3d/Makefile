@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/01/06 21:42:27 leot Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/16 19:27:26 wiz Exp $
 #
 
 DISTNAME=	libXaw3d-1.6.2
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	X 3D Athena Widget Set
 #LICENSE=	x11 # AND others

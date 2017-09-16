@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2017/01/03 13:23:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/16 19:26:58 wiz Exp $
 
 DISTNAME=	hy-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hy/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hylang.org/
 COMMENT=	Lisp and Python love each other
 LICENSE=	mit

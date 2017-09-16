@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2017/01/01 14:43:52 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/16 19:27:06 wiz Exp $
 
 DISTNAME=	socketpool-0.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/socketpool/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/benoitc/socketpool
 COMMENT=	Simple Python socket pool
 LICENSE=	unlicense OR mit

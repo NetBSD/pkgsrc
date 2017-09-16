@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/16 19:27:25 wiz Exp $
 
 DISTNAME=	WTForms-Test-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	python www
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/WTForms-Test/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/kvesteri/wtforms-test
 COMMENT=	Various unit test helpers for WTForms based forms
 LICENSE=	modified-bsd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/08/24 20:03:43 adam Exp $
+# $NetBSD: Makefile,v 1.10 2017/09/16 19:27:26 wiz Exp $
 
 DISTNAME=	yahttp-0.1.5
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cmouse/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/cmouse/yahttp/
 COMMENT=	Yet Another HTTP Library
 LICENSE=	mit
