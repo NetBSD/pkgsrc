@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3823 2017/09/16 12:00:42 mef Exp $
+$NetBSD: CHANGES-2017,v 1.3824 2017/09/16 14:19:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5382,3 +5382,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed devel/wide [wiz 2017-09-16]
 	Added sysutils/dfc version 3.1.1 [wiz 2017-09-16]
 	Updated cad/gtkwave to 3.3.84 [mef 2017-09-16]
+	Added finance/homebank version 5.1.6 [ryoon 2017-09-16]
