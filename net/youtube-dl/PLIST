@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2017/08/18 11:11:51 leot Exp $
+@comment $NetBSD: PLIST,v 1.48 2017/09/16 20:41:15 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -98,6 +98,9 @@ ${PYSITELIB}/youtube_dl/extractor/afreecatv.pyo
 ${PYSITELIB}/youtube_dl/extractor/airmozilla.py
 ${PYSITELIB}/youtube_dl/extractor/airmozilla.pyc
 ${PYSITELIB}/youtube_dl/extractor/airmozilla.pyo
+${PYSITELIB}/youtube_dl/extractor/aliexpress.py
+${PYSITELIB}/youtube_dl/extractor/aliexpress.pyc
+${PYSITELIB}/youtube_dl/extractor/aliexpress.pyo
 ${PYSITELIB}/youtube_dl/extractor/aljazeera.py
 ${PYSITELIB}/youtube_dl/extractor/aljazeera.pyc
 ${PYSITELIB}/youtube_dl/extractor/aljazeera.pyo
@@ -1019,6 +1022,9 @@ ${PYSITELIB}/youtube_dl/extractor/makertv.pyo
 ${PYSITELIB}/youtube_dl/extractor/mangomolo.py
 ${PYSITELIB}/youtube_dl/extractor/mangomolo.pyc
 ${PYSITELIB}/youtube_dl/extractor/mangomolo.pyo
+${PYSITELIB}/youtube_dl/extractor/manyvids.py
+${PYSITELIB}/youtube_dl/extractor/manyvids.pyc
+${PYSITELIB}/youtube_dl/extractor/manyvids.pyo
 ${PYSITELIB}/youtube_dl/extractor/matchtv.py
 ${PYSITELIB}/youtube_dl/extractor/matchtv.pyc
 ${PYSITELIB}/youtube_dl/extractor/matchtv.pyo
