@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/16 21:45:00 minskim Exp $
+
+SHA1 (recog-2.1.15.gem) = 7420de1b2707229d9c6a75809482c65405a46c85
+RMD160 (recog-2.1.15.gem) = 95df925da51a82b70f8ec4e0ca4a2e1895f805ed
+SHA512 (recog-2.1.15.gem) = 222bab1d8a5c847de76bcf27a66d01aa72ed81d7ad856e3375272937e47451220199a3a9ba7811354381652ab93525e40d2caecfdf3f7f1fdca367555d601f13
+Size (recog-2.1.15.gem) = 224256 bytes
