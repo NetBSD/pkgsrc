@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2017/08/16 20:45:40 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2017/09/16 12:47:45 tnn Exp $
 
 DISTNAME=	libesmtp-1.0.6
 PKGREVISION=	3
@@ -22,6 +22,11 @@ CONFIGURE_ARGS+=	--disable-isoc
 
 .if !empty(MACHINE_PLATFORM:MIRIX-5*)
 CONFIGURE_ARGS+=	--enable-emulate-getaddrinfo
+.endif
+
+.if !empty(MACHINE_PLATFORM:M*)
+# assume all platforms have working snprintf these days.
+CPPFLAGS+=	-DHAVE_SNPRINTF=1 -DHAVE_VSNPRINTF=1
 .endif
 
 .include "../../security/openssl/buildlink3.mk"
