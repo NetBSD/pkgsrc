@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2510 2017/09/15 16:15:42 minskim Exp $
+# $NetBSD: Makefile,v 1.2511 2017/09/16 08:59:25 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2460,7 +2460,6 @@ SUBDIR+=	verifast
 SUBDIR+=	visualvm
 SUBDIR+=	vtcl
 SUBDIR+=	waf
-SUBDIR+=	wide
 SUBDIR+=	woboq_codebrowser
 SUBDIR+=	xa65
 SUBDIR+=	xdelta
