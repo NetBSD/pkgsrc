@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2016/12/15 23:50:01 joerg Exp $
+$NetBSD: distinfo,v 1.16 2017/09/16 12:30:28 tnn Exp $
 
 SHA1 (thrift-0.7.0.tar.gz) = b8f6877bc75878984355da4efe171ad99ff05b6a
 RMD160 (thrift-0.7.0.tar.gz) = d9db8ff077347134101cd017e086511c4317b052
@@ -18,6 +18,7 @@ SHA1 (patch-lib_cpp_src_async_TAsyncProtocolProcessor.h) = 49fd58352134e684e92bb
 SHA1 (patch-lib_cpp_src_async_TEvhttpServer.cpp) = 84558ef95935914cccb74405031bc532c9b180ad
 SHA1 (patch-lib_cpp_src_concurrency_FunctionRunner.h) = 8e15b54872ad0bb59276d25d7200517382a9fcb4
 SHA1 (patch-lib_cpp_src_concurrency_ThreadManager.h) = e97795f632ed98c19172fa25ff6a83a0c9580ff2
+SHA1 (patch-lib_cpp_src_protocol_TBase64Utils.cpp) = 27ad47af3f263e7f0d2a8bef397a8e35e3c0bd82
 SHA1 (patch-lib_cpp_src_server_TNonblockingServer.cpp) = 1f94bcad637279b151b8c0830854c5fc72919e68
 SHA1 (patch-lib_cpp_src_transport_TFileTransport.cpp) = e3d68d0287388dfd81c94555c3437fa8aafcea06
 SHA1 (patch-lib_cpp_src_transport_TSSLSocket.cpp) = 5b0ee2a0d276affc4ead52492e0100f4c0665550
