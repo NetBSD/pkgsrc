@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/06/14 15:50:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2017/09/16 13:20:11 tnn Exp $
 
 DISTNAME=	Data-Alias-1.20
 PKGNAME=	p5-${DISTNAME}
@@ -16,6 +16,9 @@ PERL5_PACKLIST=	auto/Data/Alias/.packlist
 USE_LANGUAGES=	c
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
+
+BROKEN=		Not compatible with the current version of Perl.
+BROKEN+=	See: https://rt.cpan.org/Public/Bug/Display.html?id=114544
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
