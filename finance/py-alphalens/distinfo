@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/16 21:31:35 minskim Exp $
+
+SHA1 (alphalens-0.1.1.tar.gz) = 1d48a690c2fa740194ea1d496bc646108cabef7b
+RMD160 (alphalens-0.1.1.tar.gz) = b3613b353d7703a607e738db2eb4bb15bc0e14a3
+SHA512 (alphalens-0.1.1.tar.gz) = 08dcc25061afe05e0fe9da1aae1cbcf7f9782d9c392f05cc3304e02a750e1270f2612c1eb857db6d754774eb4e18cc1de9a9117b8210aed2af7ac9107dacd0ac
+Size (alphalens-0.1.1.tar.gz) = 12304162 bytes
