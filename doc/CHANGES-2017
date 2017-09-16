@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3817 2017/09/16 03:27:40 maya Exp $
+$NetBSD: CHANGES-2017,v 1.3818 2017/09/16 06:54:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5375,3 +5375,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/netbeans-ide to 8.2 [asau 2017-09-15]
 	Added databases/ruby-pg_array_parser version 0.0.9 [minskim 2017-09-15]
 	Updated emulators/dosbox to 0.74nb10 [maya 2017-09-16]
+	Updated security/py-OpenSSL to 17.3.0 [adam 2017-09-16]
+	Updated www/py-channels to 1.1.8 [adam 2017-09-16]
