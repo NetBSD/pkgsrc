@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3818 2017/09/16 06:54:04 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3819 2017/09/16 08:36:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5377,3 +5377,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated emulators/dosbox to 0.74nb10 [maya 2017-09-16]
 	Updated security/py-OpenSSL to 17.3.0 [adam 2017-09-16]
 	Updated www/py-channels to 1.1.8 [adam 2017-09-16]
+	Removed chat/blackened [wiz 2017-09-16]
