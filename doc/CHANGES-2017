@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3821 2017/09/16 08:59:25 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3822 2017/09/16 09:35:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5380,3 +5380,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed chat/blackened [wiz 2017-09-16]
 	Updated editors/poedit to 2.0.3 [ryoon 2017-09-16]
 	Removed devel/wide [wiz 2017-09-16]
+	Added sysutils/dfc version 3.1.1 [wiz 2017-09-16]
