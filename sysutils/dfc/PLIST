@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/16 09:30:26 wiz Exp $
+bin/dfc
+man/fr/man1/dfc.1
+man/man1/dfc.1
+man/nl/man1/dfc.1
+share/doc/dfc/AUTHORS.md
+share/doc/dfc/CHANGELOG.md
+share/doc/dfc/HACKING.md
+share/doc/dfc/LICENSE
+share/doc/dfc/README.md
+share/doc/dfc/TRANSLATORS.md
+share/examples/dfc/dfcrc
+share/examples/dfc/dfcrc.fr
+share/examples/dfc/dfcrc.nl
+share/locale/fr/LC_MESSAGES/dfc.mo
+share/locale/nl/LC_MESSAGES/dfc.mo
