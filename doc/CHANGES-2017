@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3822 2017/09/16 09:35:00 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3823 2017/09/16 12:00:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5381,3 +5381,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated editors/poedit to 2.0.3 [ryoon 2017-09-16]
 	Removed devel/wide [wiz 2017-09-16]
 	Added sysutils/dfc version 3.1.1 [wiz 2017-09-16]
+	Updated cad/gtkwave to 3.3.84 [mef 2017-09-16]
