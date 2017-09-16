@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2017/07/11 08:18:43 adam Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/16 19:27:20 wiz Exp $
 
 DISTNAME=	pyquery-1.2.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyquery/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/gawel/pyquery
 COMMENT=	Python jquery-like library
 LICENSE=	modified-bsd
