@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3820 2017/09/16 08:40:40 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.3821 2017/09/16 08:59:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5379,3 +5379,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-channels to 1.1.8 [adam 2017-09-16]
 	Removed chat/blackened [wiz 2017-09-16]
 	Updated editors/poedit to 2.0.3 [ryoon 2017-09-16]
+	Removed devel/wide [wiz 2017-09-16]
