@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/07/08 16:11:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/16 19:26:50 wiz Exp $
 #
 
 GITHUB_TAG=	0.0.3
@@ -9,7 +9,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=txinto/}
 DIST_SUBDIR=	ruby-${GITHUB_PROJECT}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gatatac.org/projects/redmine-startpage/wiki
 COMMENT=	Redmine plugins to select any redmine subpage as start page
 LICENSE=	gnu-gpl-v2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/06/05 14:23:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/16 19:26:46 wiz Exp $
 
 DISTNAME=	IPC-Cache-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IPC/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~dclinton/IPC-Cache-0.02/Cache.pm
 COMMENT=	Perl module that implements an object storage space
 LICENSE=	gnu-gpl-v1

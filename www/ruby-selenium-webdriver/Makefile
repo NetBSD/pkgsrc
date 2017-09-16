@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2017/09/11 15:48:35 taca Exp $
+# $NetBSD: Makefile,v 1.8 2017/09/16 19:27:25 wiz Exp $
 
 DISTNAME=	selenium-webdriver-3.5.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	ruby www
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/seleniumhq/selenium
 COMMENT=	Tool for writing automated tests of websites
 LICENSE=	apache-2.0

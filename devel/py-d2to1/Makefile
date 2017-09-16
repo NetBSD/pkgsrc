@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2017/09/03 08:53:08 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/16 19:26:47 wiz Exp $
 
 DISTNAME=	d2to1-0.2.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/d2to1/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/d2to1
 COMMENT=	Allows using distutils2-like setup.cfg files package's metadata
 LICENSE=	modified-bsd

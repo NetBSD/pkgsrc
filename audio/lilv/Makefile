@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/08/07 17:56:12 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/16 19:26:42 wiz Exp $
 
 DISTNAME=	lilv-0.20.0
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://download.drobilla.net/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://drobilla.net/software/lilv/
 COMMENT=	C library to make the use of LV2 plugins as simple as possible
 LICENSE=	isc

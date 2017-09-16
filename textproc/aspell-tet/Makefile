@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/13 11:54:12 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/16 19:27:15 wiz Exp $
 #
 
 DISTNAME=	aspell5-tet-0.1.1
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/tet/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/tetum/dictionaries/spellcheckers.html
 COMMENT=	Tetum language support for aspell
 LICENSE=	gnu-gpl-v2

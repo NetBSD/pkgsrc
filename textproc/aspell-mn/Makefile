@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/12 00:01:28 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/16 19:27:13 wiz Exp $
 #
 
 DISTNAME=	aspell6-mn-0.06-2
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/mn/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openmn.org/
 COMMENT=	Mongolian language support for aspell
 LICENSE=	gnu-gpl-v2

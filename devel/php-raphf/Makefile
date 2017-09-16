@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2016/09/11 17:03:26 taca Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/16 19:26:47 wiz Exp $
 
 MODNAME=	raphf
 PECL_VERSION=	1.1.2
 CATEGORIES=	devel
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pecl.php.net/package/raphf
 COMMENT=	Resource and persistent handles factory
 LICENSE=	2-clause-bsd

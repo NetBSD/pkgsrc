@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2016/12/04 21:13:05 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/16 19:26:57 wiz Exp $
 TRYTON_MODULE_NAME=	trytond_google_maps
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	geography python
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tryton.org/
 COMMENT=	Google Maps module of the Tryton application platform
 LICENSE=	gnu-gpl-v3

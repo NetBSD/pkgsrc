@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2017/06/21 15:42:11 taca Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/16 19:26:51 wiz Exp $
 
 DISTNAME=	shoulda-matchers-2.8.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel ruby
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://thoughtbot.com/community/
 COMMENT=	Making tests easy on the fingers and eyes
 LICENSE=	mit

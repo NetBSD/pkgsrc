@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/11/01 19:42:14 markd Exp $
+# $NetBSD: Makefile,v 1.16 2017/09/16 19:27:26 wiz Exp $
 
 DISTNAME=	lbxproxy-1.0.3
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Proxy for Low Bandwidth extension (LBX) connections to X
 LICENSE=	x11 # XXX and others

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2016/12/04 21:13:06 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/16 19:27:01 wiz Exp $
 TRYTON_MODULE_NAME=	trytond_product_classification
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	misc python
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tryton.org/
 COMMENT=	Product classification module of the Tryton application platform
 LICENSE=	gnu-gpl-v3

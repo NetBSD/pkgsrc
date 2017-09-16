@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2017/06/18 13:48:53 taca Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/16 19:27:07 wiz Exp $
 
 DISTNAME=	rack-openid-1.4.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	ruby security
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/grosser/rack-openid
 COMMENT=	Provides a more HTTPish API around the ruby-openid library
 LICENSE=	mit
