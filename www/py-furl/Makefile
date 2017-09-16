@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2017/01/12 11:32:33 rodent Exp $
+# $NetBSD: Makefile,v 1.13 2017/09/16 19:27:24 wiz Exp $
 
 DISTNAME=	furl-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python www
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/furl/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/gruns/furl
 COMMENT=	URL manipulation made simple
 LICENSE=	unlicense

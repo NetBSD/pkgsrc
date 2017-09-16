@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2017/02/20 17:00:37 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/16 19:27:21 wiz Exp $
 TRYTON_MODULE_NAME=	trytond_calendar
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	python time
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tryton.org/
 COMMENT=	Calendar module of the Tryton application platform
 LICENSE=	gnu-gpl-v3

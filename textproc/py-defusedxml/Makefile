@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2017/04/14 21:15:51 adam Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/16 19:27:19 wiz Exp $
 
 DISTNAME=	defusedxml-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/defusedxml/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/tiran/defusedxml
 COMMENT=	XML bomb protection for Python stdlib modules
 LICENSE=	python-software-foundation

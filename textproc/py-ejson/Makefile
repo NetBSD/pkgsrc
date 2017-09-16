@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/02/20 17:00:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/16 19:27:19 wiz Exp $
 
 DISTNAME=	ejson-0.1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	python textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/ejson/}
 DIST_SUBDIR=	${PKGBASE:S/${PYPKGPREFIX}/py/1}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Yipit/ejson/
 COMMENT=	Extensible JSON serializers and deserializers
 LICENSE=	gnu-lgpl-v3
