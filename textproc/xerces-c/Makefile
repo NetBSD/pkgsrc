@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2017/09/11 21:30:03 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2017/09/16 12:06:34 tnn Exp $
 
 DISTNAME=	xerces-c-3.2.0
 CATEGORIES=	textproc
@@ -9,7 +9,7 @@ HOMEPAGE=	http://xerces.apache.org/
 COMMENT=	Validating C++ XML parser with DOM and SAX support
 LICENSE=	apache-2.0
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE=	xerces-c.pc.in
