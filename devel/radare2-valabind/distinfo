@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.4 2016/06/13 12:26:11 wiz Exp $
+$NetBSD: distinfo,v 1.5 2017/09/16 13:06:48 tnn Exp $
 
 SHA1 (valabind-0.10.0.tar.gz) = b5e0c2a7255736630fba0eba6c32e48bbed611eb
 RMD160 (valabind-0.10.0.tar.gz) = 743ac6a7834dad24245daaca8bc4328371481ded
 SHA512 (valabind-0.10.0.tar.gz) = 7457e373ad09ff2bee43fcd5dafa72aa36286d43ffbe9df10201847d7cff2f530875db26afe2a80966611556fa0846c1ece352983726fb33f7586e481358a8fc
 Size (valabind-0.10.0.tar.gz) = 52046 bytes
+SHA1 (patch-cxxwriter.vala) = 27e8db89ad5bc41ee97f81238a866a5f6d7ea48a
+SHA1 (patch-dlangwriter.vala) = 25a45e34104b9fa6800ccc9895619ef1e220b379
