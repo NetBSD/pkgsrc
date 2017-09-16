@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/09/10 15:25:14 alnsn Exp $
+# $NetBSD: Makefile,v 1.13 2017/09/16 19:53:50 alnsn Exp $
 #
 
 DISTNAME=	penlight-${PL_VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=stevedonovan/}
 GITHUB_TAG=	${PKGVERSION}
 GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION}//}
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://stevedonovan.github.com/Penlight/
 COMMENT=	Lua libraries for functional programming, OS path management, etc
 LICENSE=	mit

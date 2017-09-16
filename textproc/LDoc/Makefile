@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/02/25 09:21:10 alnsn Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/16 19:53:51 alnsn Exp $
 
 DISTNAME=	LDoc-1.4.6
 PKGNAME=	${DISTNAME:S/LDoc/${LUA_PKGPREFIX}-LDoc/}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=stevedonovan/}
 GITHUB_TAG=	${PKGVERSION}
 GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION_NOREV}//}
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/stevedonovan/LDoc
 COMMENT=	Lua Documentation Tool
 LICENSE=	mit
