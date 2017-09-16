@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/07/04 22:35:03 alnsn Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/16 19:53:51 alnsn Exp $
 
 DISTNAME=	copas-2.0.2
 PKGNAME=	${DISTNAME:S/copas/${LUA_PKGPREFIX}-copas/}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=keplerproject/}
 GITHUB_TAG=	v${PKGVERSION:S/./_/g}
 GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION_NOREV}//}
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://keplerproject.github.io/copas
 COMMENT=	Dispatcher based on coroutines that can be used by TCP_IP servers
 LICENSE=	mit
