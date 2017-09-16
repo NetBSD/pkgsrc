@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3830 2017/09/16 20:41:30 leot Exp $
+$NetBSD: CHANGES-2017,v 1.3831 2017/09/16 21:32:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5387,3 +5387,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/MoarVM to 2017.07 [bsiegert 2017-09-16]
 	Updated sysutils/entr to 3.8 [leot 2017-09-16]
 	Updated net/youtube-dl to 20170915 [leot 2017-09-16]
+	Added finance/py-alphalens version 0.1.1 [minskim 2017-09-16]
