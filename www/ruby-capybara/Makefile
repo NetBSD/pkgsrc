@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2017/09/10 16:14:59 taca Exp $
+# $NetBSD: Makefile,v 1.14 2017/09/16 19:27:25 wiz Exp $
 
 DISTNAME=	capybara-2.15.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel ruby www
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jnicklas/capybara
 COMMENT=	Integration testing tool for rack based web applications
 LICENSE=	mit

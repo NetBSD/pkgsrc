@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2017/01/10 13:54:43 kleink Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/16 19:27:20 wiz Exp $
 
 DISTNAME=	tinycss-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tinycss/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://tinycss.readthedocs.io/
 COMMENT=	Complete yet simple CSS parser for Python
 LICENSE=	modified-bsd

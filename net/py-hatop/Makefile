@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2016/08/28 15:48:34 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/16 19:27:05 wiz Exp $
 
 DISTNAME=	hatop-0.7.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	http://hatop.googlecode.com/files/
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://feurix.org/projects/hatop/
 COMMENT=	Interactive client and monitoring tool for HAProxy
 LICENSE=	gnu-gpl-v3

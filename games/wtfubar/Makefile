@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/09/15 00:43:01 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/16 19:26:57 wiz Exp $
 
 GITHUB_RELEASE=	wtfubar-2.5.0
 DISTNAME=	${GITHUB_RELEASE}
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=othyro/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/othyro/wtfubar
 COMMENT=	Fork of NetBSD's wtf
 LICENSE=	public-domain

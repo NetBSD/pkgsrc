@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/11 00:10:16 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/16 19:27:10 wiz Exp $
 #
 
 DISTNAME=	aspell6-fy-0.12-0
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/fy/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://borel.slu.edu/crubadan/
 COMMENT=	Frisian language support for aspell
 LICENSE=	gnu-gpl-v2

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2017/07/22 06:49:43 adam Exp $
+# $NetBSD: Makefile,v 1.17 2017/09/16 19:27:05 wiz Exp $
 
 DISTNAME=	kombu-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kombu/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kombu.readthedocs.org/
 COMMENT=	Messaging framework for Python
 LICENSE=	modified-bsd

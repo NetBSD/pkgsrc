@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/10/22 14:34:45 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/16 19:27:27 wiz Exp $
 #
 
 DISTNAME=	liblbxutil-1.1.0
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Low Bandwith X extension (LBX) utility routines
 LICENSE=	x11 # XXX and others

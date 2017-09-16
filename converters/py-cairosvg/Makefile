@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2017/07/14 17:02:20 adam Exp $
+# $NetBSD: Makefile,v 1.10 2017/09/16 19:26:43 wiz Exp $
 
 DISTNAME=	CairoSVG-2.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	converters graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CairoSVG/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cairosvg.org/
 COMMENT=	Simple SVG Converter for Cairo
 LICENSE=	gnu-lgpl-v3

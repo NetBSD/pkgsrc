@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/01/04 23:05:13 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/16 19:26:50 wiz Exp $
 #
 
 PLUGIN_NAME=	redmine_work_time
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://bitbucket.org/tkusukawa/${PLUGIN_NAME}/downloads/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.r-labs.org/projects/worktime/wiki/WorkTime
 COMMENT=	Redmine plugin to view and update Spent time by each user
 LICENSE=	gnu-gpl-v2

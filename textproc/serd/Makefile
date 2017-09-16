@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2015/04/19 23:10:52 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/16 19:27:20 wiz Exp $
 
 DISTNAME=	serd-0.20.0
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.drobilla.net/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://drobilla.net/software/serd/
 COMMENT=	Lightweight C library for RDF syntax
 LICENSE=	isc

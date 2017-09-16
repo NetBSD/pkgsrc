@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/03/09 06:54:58 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/16 19:27:31 wiz Exp $
 #
 
 DISTNAME=	xtrap-1.0.2
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	XTrap sample clients
 #LICENSE=	# TODO: (see mk/license.mk)

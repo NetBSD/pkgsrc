@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2015/04/17 07:08:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/16 19:26:58 wiz Exp $
 
 DISTNAME=	xgc-1.0.5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Graphics demo showing the X11 core protocol graphics primitives
 LICENSE=	mit

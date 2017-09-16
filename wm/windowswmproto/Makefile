@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2013/05/31 00:27:37 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/16 19:27:22 wiz Exp $
 
 DISTNAME=	windowswmproto-1.0.4
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Provides definition of the WindowsWM extension to the X11 protocol
 LICENSE=	mit
