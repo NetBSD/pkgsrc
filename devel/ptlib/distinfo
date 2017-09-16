@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2016/07/19 12:46:06 jperkin Exp $
+$NetBSD: distinfo,v 1.23 2017/09/16 15:13:09 tnn Exp $
 
 SHA1 (ptlib-2.10.7.tar.xz) = 51077b76aed30ab614e31b2a18cb383848d4332c
 RMD160 (ptlib-2.10.7.tar.xz) = 0c05b57f5435f4646af05278e66718e0e433a10a
@@ -28,6 +28,6 @@ SHA1 (patch-unix-ossaix.cxx) = 3e7a902eb4b73388db01bd53e6c30546c96fe78d
 SHA1 (patch-unix-osutil.cxx) = e907fc2c068f3e20af2f0e97540a1f4e47895a18
 SHA1 (patch-unix-pmachdep.h) = b96cdc036af8a1957cd56831c49c2a1d27ca9bf5
 SHA1 (patch-unix-serchan.cxx) = f77eb9839a84db91a16b72faafdc8d1499e78b31
-SHA1 (patch-unix-socket.cxx) = 80ff4d0bc67f4bf59e5bfd3e17e3b380f7774bbb
+SHA1 (patch-unix-socket.cxx) = 9806b53f6884698be9ec86c335fe2b0ea50c908a
 SHA1 (patch-unix-switch.cxx) = 2c1bc4057a79b6b34651b299042876d2452a84b7
 SHA1 (patch-unix-tlib.cxx) = 1685b856cf0991168954f5951f93b9b9f1e08db2
