@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.14 2017/09/16 15:11:57 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.15 2017/09/16 16:21:12 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q2 branch:
 
@@ -165,3 +165,8 @@ Pullup ticket #5547 - requested by taca
 lang/php: security update
 lang/php71: security update
 
+Pullup ticket #5548 - requested by he
+devel/SDL2: build fix for macppc
+
+Pullup ticket #5549 - requested by joerg
+devel/libffi: bug fix for sparc
