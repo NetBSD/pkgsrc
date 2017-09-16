@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/06/14 15:53:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2017/09/16 16:19:39 tnn Exp $
 
 DISTNAME=	Devel-BeginLift-0.001003
 PKGNAME=	p5-${DISTNAME}
@@ -18,6 +18,9 @@ PERL5_PACKLIST=		auto/Devel/BeginLift/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
+
+BROKEN=		Not compatible with the current version of Perl.
+BROKEN+=	See: https://rt.cpan.org/Public/Bug/Display.html?id=115272
 
 BUILDLINK_DEPMETHOD.p5-B-Hooks-OP-Check=	full
 BUILDLINK_API_DEPENDS.p5-B-Hooks-OP-Check+=	p5-B-Hooks-OP-Check>=0.19
