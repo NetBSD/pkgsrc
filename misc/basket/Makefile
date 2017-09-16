@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.39 2017/03/31 10:32:18 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2017/09/16 08:32:38 wiz Exp $
 
 DISTNAME=		basket-1.0.2
 PKGREVISION=		35
 CATEGORIES=		misc
-MASTER_SITES=		http://basket.kde.org/downloads/
+#MASTER_SITES=		http://basket.kde.org/downloads/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://basket.kde.org/
+HOMEPAGE=		https://basket-notepads.github.io/
 COMMENT=		Feature-rich note-taking KDE application
 
 USE_TOOLS+=		gmake msgfmt pkg-config
