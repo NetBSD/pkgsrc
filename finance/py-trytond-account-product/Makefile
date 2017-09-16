@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2016/12/04 21:13:01 rodent Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/16 19:26:53 wiz Exp $
 TRYTON_MODULE_NAME=	trytond_account_product
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	finance python
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tryton.org/
 COMMENT=	Account product module of the Tryton application platform
 LICENSE=	gnu-gpl-v3

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2017/09/04 18:55:09 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/09/16 19:27:06 wiz Exp $
 
 DISTNAME=	PySimpleSOAP-1.16
 PKGNAME=	${DISTNAME:tl:S/py/${PYPKGPREFIX}-/1}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysimplesoap/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	https://github.com/pysimplesoap/pysimplesoap
 COMMENT=	Python Simple SOAP Library
 LICENSE=	gnu-lgpl-v3

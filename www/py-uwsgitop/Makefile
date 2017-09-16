@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/01/03 13:23:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/16 19:27:25 wiz Exp $
 
 DISTNAME=	uwsgitop-0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	python www
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uwsgitop/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://projects.unbit.it/uwsgi/wiki/StatsServer
 COMMENT=	Command to interface with the uWSGI stats server
 LICENSE=	mit

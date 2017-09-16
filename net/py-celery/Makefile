@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/08/25 20:03:39 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2017/09/16 19:27:05 wiz Exp $
 
 DISTNAME=	celery-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/celery/}
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.celeryproject.org/
 COMMENT=	Asynchronous task/job queue based on distributed message passing
 LICENSE=	modified-bsd
