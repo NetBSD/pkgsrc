@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.13 2017/09/13 18:01:01 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q2,v 1.1.2.14 2017/09/16 15:11:57 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q2 branch:
 
@@ -147,3 +147,21 @@ Pullup ticket #5542 - requested by taca
 devel/git: security update
 devel/git-base: security update
 devel/git-docs: security update
+
+Pullup ticket #5543 - requested by taca
+lang/ruby22-base: security and build fixes
+
+Pullup ticket #5544 - requested by taca
+lang/ruby23-base: security and build fixes
+
+Pullup ticket #5545 - requested by taca
+lang/ruby24-base: security fix
+
+Pullup ticket #5546 - requested by taca
+lang/php: security update
+lang/php70: security update
+
+Pullup ticket #5547 - requested by taca
+lang/php: security update
+lang/php71: security update
+
