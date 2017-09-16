@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/08/25 15:56:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/16 08:40:46 wiz Exp $
 
 DISTNAME=	dtc-1.4.2
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils devel
 MASTER_SITES=	ftp://ftp.kernel.org/pub/software/utils/dtc/
 
 MAINTAINER=	joe.davis512@gmail.com
-HOMEPAGE=	http://devicetree.org/
+HOMEPAGE=	https://devicetree.org/
 COMMENT=	Device Tree Compiler (dtc)
 LICENSE=	gnu-gpl-v2
 
