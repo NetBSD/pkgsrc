@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2026 2017/06/01 03:41:44 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2027 2017/09/16 09:34:25 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -828,7 +828,4 @@ ${_MAKEVARS_MK.${_phase_}}: ${WRKDIR}
 .  include "bsd.pkg.debug.mk"
 .endif
 .include "misc/warnings.mk"
-.if make(import)
-.include "misc/import.mk"
-.endif
 .include "misc/can-be-built-here.mk"
