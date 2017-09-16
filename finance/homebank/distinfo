@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/16 14:17:01 ryoon Exp $
+
+SHA1 (homebank-5.1.6.tar.gz) = 52782a8d8b7c9710dce5ad92bd03d51140c71d65
+RMD160 (homebank-5.1.6.tar.gz) = 38dbfa9b53d42cfb3a9ec4602be808a6ef49e6b0
+SHA512 (homebank-5.1.6.tar.gz) = be7e0f2de44d5eb5d84295c1862b5e1168a36dc0ed66b453163d22ad064b813b38c1495a2cf49e237f41949ca63fa00f530bffdb1012fec99df2f8548ac038a4
+Size (homebank-5.1.6.tar.gz) = 2701911 bytes
