@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2017/01/14 23:36:29 schmonz Exp $
+# $NetBSD: Makefile,v 1.57 2017/09/16 08:55:24 wiz Exp $
 
 DISTNAME=	tmda-1.1.12
 PKGREVISION=	5
@@ -8,7 +8,7 @@ MASTER_SITES+=	ftp://tmda.net/pub/tmda/releases/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tmda.net/
+HOMEPAGE=	http://tmda.sourceforge.net/
 COMMENT=	Python-based SPAM reduction system
 
 REPLACE_PYTHON=	${TMDA_PROGRAMS}
