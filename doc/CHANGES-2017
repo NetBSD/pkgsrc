@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3829 2017/09/16 20:15:26 leot Exp $
+$NetBSD: CHANGES-2017,v 1.3830 2017/09/16 20:41:30 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5386,3 +5386,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated emulators/PC6001VX to 2.31.1 [tsutsui 2017-09-16]
 	Updated devel/MoarVM to 2017.07 [bsiegert 2017-09-16]
 	Updated sysutils/entr to 3.8 [leot 2017-09-16]
+	Updated net/youtube-dl to 20170915 [leot 2017-09-16]
