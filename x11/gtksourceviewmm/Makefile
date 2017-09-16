@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/08/16 20:21:17 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/09/16 19:27:26 wiz Exp $
 #
 
 DISTNAME=	gtksourceviewmm-3.2.0
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtksourceviewmm/3.2/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://developer.gnome.org/gtksourceviewmm/stable/
 COMMENT=	C++ wrapper for the gtksourceview widget library
 LICENSE=	gnu-gpl-v2

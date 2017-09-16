@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/06 04:31:27 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/16 19:26:49 wiz Exp $
 #
 
 THEME_NAME=	red-andy
@@ -7,7 +7,7 @@ PKGNAME=	${RUBY_PKGPREFIX}-redmine-${DISTNAME:S/_/-theme-/1}
 MASTER_SITES=	http://projects.andriylesyuk.com/attachments/download/581/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://blog.andriylesyuk.com/${THEME_NAME}-1-00-the-first-responsive-theme-for-redmine/
 COMMENT=	First responsive theme for Redmine
 LICENSE=	gnu-gpl-v2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/06 10:40:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/16 19:26:42 wiz Exp $
 #
 
 DISTNAME=	vcf-0.0.5
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://www.suse.de/~mana/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rodent@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.suse.de/~mana/ladspa.html
 COMMENT=	Some LADSPA plugins for audio EQ biquad filters
 LICENSE=	gnu-lgpl-v3
