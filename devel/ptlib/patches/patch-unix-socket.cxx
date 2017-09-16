@@ -1,6 +1,7 @@
-$NetBSD: patch-unix-socket.cxx,v 1.2 2012/10/13 00:49:39 darcy Exp $
+$NetBSD: patch-unix-socket.cxx,v 1.3 2017/09/16 15:13:10 tnn Exp $
 
 - Add DragonFly support
+- NetBSD no longer has RTF_LLINFO, RTF_CLONED, etc since net/route.h r1.98.
 
 --- src/ptlib/unix/socket.cxx.orig	2012-08-23 02:12:27.000000000 +0000
 +++ src/ptlib/unix/socket.cxx
@@ -49,7 +50,26 @@ $NetBSD: patch-unix-socket.cxx,v 1.2 2012/10/13 00:49:39 darcy Exp $
  
  PBoolean process_rtentry(struct rt_msghdr *rtm, char *ptr, unsigned long *p_net_addr,
                       unsigned long *p_net_mask, unsigned long *p_dest_addr, int *p_metric);
-@@ -1966,7 +1966,7 @@ PBoolean PIPSocket::GetInterfaceTable(In
+@@ -1194,10 +1194,15 @@ PBoolean process_rtentry(struct rt_msghd
+     return PFalse;
+   }
+ 
+-  if ((~rtm->rtm_flags&RTF_LLINFO)
+-#if defined(P_NETBSD) || defined(P_QNX)
++  if (
++#if defined(RTF_LLINFO)
++           (~rtm->rtm_flags&RTF_LLINFO)
++#else
++	1
++#endif
++#if defined(RTF_CLONED)
+         && (~rtm->rtm_flags&RTF_CLONED)     // Net BSD has flag one way
+-#elif !defined(P_OPENBSD) && !defined(P_FREEBSD)
++#elif defined(RTF_WASCLONED)
+         && (~rtm->rtm_flags&RTF_WASCLONED)  // MAC has it another
+ #else
+                                             // Open/Free BSD does not have it at all!
+@@ -1966,7 +1971,7 @@ PBoolean PIPSocket::GetInterfaceTable(In
          }
        }
  
