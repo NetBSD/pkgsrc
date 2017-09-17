@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/12/11 02:58:23 wen Exp $
+$NetBSD: distinfo,v 1.6 2017/09/17 08:45:09 wiz Exp $
 
-SHA1 (Fsdb-2.62.tar.gz) = a242bbe0f33a6b6f157ed14df551c395ad7dd816
-RMD160 (Fsdb-2.62.tar.gz) = b8d0ad07dee7a641b9bc008d881612b8e054280b
-SHA512 (Fsdb-2.62.tar.gz) = 235287e744bf0b7ab189c66e7fd21076f2c6b5c709f27e9748083dc4c9a0d0717ff958523a7733d44cf94ec1a383a8eb2b1cb5a3f39dfab19a1baee32cf7620d
-Size (Fsdb-2.62.tar.gz) = 478673 bytes
+SHA1 (Fsdb-2.63.tar.gz) = f420f0003cd88384146533e2e621e63adb392a76
+RMD160 (Fsdb-2.63.tar.gz) = def05a8f038440c8d6a0abb24d4532db0fc38fef
+SHA512 (Fsdb-2.63.tar.gz) = 3acffb1f67f360dbacd00bdc16a23fd43a7542b8366f44171a2fc2db21adaf5877256adf56c844c7c5867124b7328f90755ad375ef609f2fd00b2674d8f37142
+Size (Fsdb-2.63.tar.gz) = 481164 bytes
