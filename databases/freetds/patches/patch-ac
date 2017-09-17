@@ -1,13 +1,21 @@
-$NetBSD: patch-ac,v 1.7 2011/08/19 07:54:04 adam Exp $
+$NetBSD: patch-ac,v 1.8 2017/09/17 14:57:59 taca Exp $
 
---- doc/Makefile.in.orig	2011-06-10 08:29:28.000000000 +0000
+* Install documentation without execute bit on.
+
+--- doc/Makefile.in.orig	2017-09-02 09:00:55.000000000 +0000
 +++ doc/Makefile.in
-@@ -649,8 +649,9 @@ install-data-local: installdirs $(noinst
+@@ -744,12 +744,13 @@ install-data-local: $(INSTALLDIRS) $(noi
+ 	$(MKDIR_P) $(DOCDIR) 2>&1
+ 	if test -r $(DOCDIR)/userguide ; then d=.; else d="$(srcdir)"; fi; \
+ 	find $$d/$(DOCDIR)/userguide \( -type f -o -type l \) \
+-		-exec $(INSTALL) {} $(TARGET_DOCDIR)/userguide ';'
++		-exec $(INSTALL_DATA) {} $(TARGET_DOCDIR)/userguide ';'
  	if test -r $(DOCDIR)/reference ; then d=.; else d="$(srcdir)"; fi; \
- 	find $$d/$(DOCDIR)/reference \( -type f -o -type l \) -exec \
- 		$(INSTALL_DATA) {} $(TARGET_DOCDIR)/reference ';'
--	cd $(srcdir) && find images -name \*.gif -exec \
--		$(INSTALL_DATA) {} $(TARGET_DOCDIR)/{} ';'
+ 	find $$d/$(DOCDIR)/reference \( -type f -o -type l \) \
+-		-exec $(INSTALL) {} $(TARGET_DOCDIR)/reference ';'
+-	cd $(srcdir) && find images -name \*.gif \
+-		-exec  $(INSTALL) {} $(TARGET_DOCDIR)/{} ';'
++		-exec $(INSTALL_DATA) {} $(TARGET_DOCDIR)/reference ';'
 +	cd $(srcdir) && for f in `find images -name \*.gif`; do \
 +		$(INSTALL_DATA) $$f $(TARGET_DOCDIR)/$$f; \
 +	done
