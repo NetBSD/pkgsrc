@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2017/09/13 08:23:47 adam Exp $
+# $NetBSD: Makefile,v 1.24 2017/09/17 14:31:27 wiz Exp $
 
-DISTNAME=	wxWidgets-3.0.3
+DISTNAME=	wxWidgets-3.0.3.1
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK30/}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wxWidgets/}
@@ -8,9 +8,9 @@ GITHUB_PROJECT=	wxWidgets
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
-PATCHFILES=		${DISTNAME}-libtool.1.diff.bz2
+PATCHFILES=		wxWidgets-3.0.3-libtool.1.diff.bz2
 PATCH_SITES=		${MASTER_SITE_LOCAL}
-PATCH_DIST_STRIP.${DISTNAME}-libtool.1.diff.bz2= -p1
+PATCH_DIST_STRIP.wxWidgets-3.0.3-libtool.1.diff.bz2= -p1
 
 MAINTAINER=	dbj@NetBSD.org
 HOMEPAGE=	http://www.wxwidgets.org/
