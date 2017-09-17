@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2017/09/04 18:55:08 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/09/17 10:20:58 adam Exp $
 
-DISTNAME=	ipaddr-2.1.11
+DISTNAME=	ipaddr-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	https://googledrive.com/host/0B6wLlfdySbEUMkh1ZWhpZk1pZmc/
