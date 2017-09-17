@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/11/09 13:48:50 mef Exp $
+$NetBSD: distinfo,v 1.5 2017/09/17 20:33:44 wiz Exp $
 
-SHA1 (Net-Frame-Simple-1.07.tar.gz) = f2eeb061c002787c623678f155470f58a1d67057
-RMD160 (Net-Frame-Simple-1.07.tar.gz) = 46c9f622421831ce551b6e1621a23168dfd4e69a
-SHA512 (Net-Frame-Simple-1.07.tar.gz) = 7fe0a36862cf6640e60a7f2486ecee0078b5ab814c0a3ccaa79b65fed0fcbfdfbc9b7620259c4d0e6e7a38e6888d985eb3150204b05058fca843e3d3ebf32c50
-Size (Net-Frame-Simple-1.07.tar.gz) = 10944 bytes
+SHA1 (Net-Frame-Simple-1.08.tar.gz) = f0035177c28008bee18312b351fd9a6e1af7aa88
+RMD160 (Net-Frame-Simple-1.08.tar.gz) = 22ab010e8e4cbcc11355bf9ffd892ff3126544bf
+SHA512 (Net-Frame-Simple-1.08.tar.gz) = 5b5ef9ac66c7c02001e22560e6ff02c1d43ac6253bfb57095762692d0caffe8958a4b45dd40032e9ca584053702a54df521becb1d7df8d8e79482f11f037bad2
+Size (Net-Frame-Simple-1.08.tar.gz) = 11012 bytes
