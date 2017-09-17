@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2017/06/05 14:23:57 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.9 2017/09/17 15:35:46 wiz Exp $
 
-DISTNAME=	MooseX-Types-Path-Tiny-0.011
+DISTNAME=	MooseX-Types-Path-Tiny-0.012
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
@@ -13,6 +11,7 @@ COMMENT=	Path::Tiny types and coercions for Moose
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Moose>=2:../../devel/p5-Moose
+DEPENDS+=	p5-MooseX-Getopt-[0-9]*:../../devel/p5-MooseX-Getopt
 DEPENDS+=	p5-MooseX-Types-[0-9]*:../../devel/p5-MooseX-Types
 DEPENDS+=	p5-MooseX-Types-Stringlike-[0-9]*:../../devel/p5-MooseX-Types-Stringlike
 DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
