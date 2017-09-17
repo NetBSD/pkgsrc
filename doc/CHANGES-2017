@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3889 2017/09/17 12:03:44 adam Exp $
+$NetBSD: CHANGES-2017,v 1.3890 2017/09/17 12:25:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5451,3 +5451,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Parse-ErrorString-Perl to 0.27 [wiz 2017-09-17]
 	Updated math/py-sympy to 1.1.1 [adam 2017-09-17]
 	Updated multimedia/mkvtoolnix to 15.0.0 [adam 2017-09-17]
+	Removed devel/py-ipython013 successor devel/py-ipython [adam 2017-09-17]
