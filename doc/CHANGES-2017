@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3962 2017/09/17 20:48:27 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3963 2017/09/17 20:51:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5526,3 +5526,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/p5-Net-IPv6Addr to 0.7 [wiz 2017-09-17]
 	Updated net/p5-Net-Server to 2.009 [wiz 2017-09-17]
 	Updated net/p5-Net-Telnet-Cisco to 1.11 [wiz 2017-09-17]
+	Updated net/p5-Net-TFTP to 0.1901 [wiz 2017-09-17]
