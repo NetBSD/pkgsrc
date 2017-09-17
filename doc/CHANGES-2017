@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3911 2017/09/17 13:35:35 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3912 2017/09/17 13:36:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5473,3 +5473,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Test-Simple to 1.302096 [wiz 2017-09-17]
 	Updated devel/p5-Test-Spec to 0.53 [wiz 2017-09-17]
 	Updated devel/p5-Test-Trap to 0.3.3 [wiz 2017-09-17]
+	Updated devel/p5-Test2-Plugin-NoWarnings to 0.06 [wiz 2017-09-17]
