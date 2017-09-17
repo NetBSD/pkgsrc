@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3957 2017/09/17 20:36:33 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3958 2017/09/17 20:38:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5521,3 +5521,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/p5-Net-Frame-Simple to 1.08 [wiz 2017-09-17]
 	Updated net/p5-Net-Frame to 1.17 [wiz 2017-09-17]
 	Updated net/p5-Net-FTPSSL to 0.38 [wiz 2017-09-17]
+	Updated net/p5-Net-GitHub to 0.90 [wiz 2017-09-17]
