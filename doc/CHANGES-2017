@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3892 2017/09/17 12:47:07 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3893 2017/09/17 12:51:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5454,3 +5454,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed devel/py-ipython013 successor devel/py-ipython [adam 2017-09-17]
 	Updated textproc/py-xlsxwriter to 1.0.0 [adam 2017-09-17]
 	Updated devel/p5-Parse-Yapp to 1.21 [wiz 2017-09-17]
+	Updated devel/p5-Perl-Critic to 1.130 [wiz 2017-09-17]
