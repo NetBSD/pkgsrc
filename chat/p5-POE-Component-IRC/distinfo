@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 01:20:22 agc Exp $
+$NetBSD: distinfo,v 1.13 2017/09/17 08:02:26 wiz Exp $
 
-SHA1 (POE-Component-IRC-6.88.tar.gz) = fa4b8b1d4170fe14ea441c50dec1f77639e396b8
-RMD160 (POE-Component-IRC-6.88.tar.gz) = c6f936c4b0acc1ca923b7429f918c12160d22060
-SHA512 (POE-Component-IRC-6.88.tar.gz) = fbb036e494ce9ac4637746b4cddd453ee775799b7163eb1ad2f4dc4b476c8963b204266377b6603750fe64b1781d785e4ceca8ebce920e27399e8576035696d8
-Size (POE-Component-IRC-6.88.tar.gz) = 394374 bytes
+SHA1 (POE-Component-IRC-6.90.tar.gz) = 421aac24f2d93522cdbd9ccfe20245c31caac574
+RMD160 (POE-Component-IRC-6.90.tar.gz) = 081865c39d371cd7eb09f91644bff63e3a6eecb4
+SHA512 (POE-Component-IRC-6.90.tar.gz) = c8106bf740a60dc075f99df40c96f30232f69f1369ea5f68ce10636ab0640536ef2c806d73e721f21c21043ab7c386a1e54e099241bd52070648ffc9fd010750
+Size (POE-Component-IRC-6.90.tar.gz) = 375501 bytes
