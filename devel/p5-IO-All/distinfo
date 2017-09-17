@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 03:28:20 agc Exp $
+$NetBSD: distinfo,v 1.13 2017/09/17 10:40:07 wiz Exp $
 
-SHA1 (IO-All-0.86.tar.gz) = cfacb664034ad7bfa50322a7a7edee86eb7437e6
-RMD160 (IO-All-0.86.tar.gz) = 31b682d7049e92ed9ddd77f9f310b23dcbffec82
-SHA512 (IO-All-0.86.tar.gz) = 3bf2f1caae19d10905d8c959b88e0ef43703b3cd0fb389060fd6a6a0bba4d6b24a92b8d2568f4bbfca6b7614270adb7131225a7b7f9394b26467bdb780a16a0e
-Size (IO-All-0.86.tar.gz) = 78648 bytes
+SHA1 (IO-All-0.87.tar.gz) = cf8e7c3b378653bc824ecb32d9146867f65f8c66
+RMD160 (IO-All-0.87.tar.gz) = 71fe53106f2d7e5db8ff7354225202df5b25fa4d
+SHA512 (IO-All-0.87.tar.gz) = bd8cb6d44db51a9a140209223f016e48acd713ec03ced1b9c02933fd88c6363926635dae033b20905201b13e8186b8bcc3f428d4d85cd187fc68b777cd197267
+Size (IO-All-0.87.tar.gz) = 77819 bytes
