@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3867 2017/09/17 10:30:54 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3868 2017/09/17 10:35:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5423,3 +5423,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-ExtUtils-CBuilder to 0.28.02.26 [wiz 2017-09-17]
 	Updated devel/p5-ExtUtils-MakeMaker-CPANfile to 0.08 [wiz 2017-09-17]
 	Updated devel/p5-ExtUtils-ParseXS to 3.35 [wiz 2017-09-17]
+	Updated devel/p5-Function-Parameters to 2.001001 [wiz 2017-09-17]
