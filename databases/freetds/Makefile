@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2016/09/19 13:04:18 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2017/09/17 14:57:59 taca Exp $
 
-DISTNAME=	freetds-0.91
-PKGREVISION=	6
+DISTNAME=	freetds-1.00.55
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.freetds.org/pub/freetds/stable/
 
@@ -40,9 +39,6 @@ SUBST_FILES.visibility+=	src/tds/tds_checks.h
 SUBST_FILES.visibility+=	include/*.h
 SUBST_FILES.visibility+=	include/*/*.h
 SUBST_SED.visibility+=		-e 's,!defined(__MINGW32__),!defined(__MINGW32__) \&\& !(__GNUC__ == 4 \&\& __GNUC_MINOR__ == 2),g'
-
-pre-build:
-	cd ${WRKSRC}/doc/doc && ln -sf ${DISTNAME} freetds
 
 .include "options.mk"
 
