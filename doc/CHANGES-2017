@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3878 2017/09/17 11:12:22 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3879 2017/09/17 11:14:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5437,3 +5437,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-MetaCPAN-API to 0.51 [wiz 2017-09-17]
 	Updated devel/p5-MetaCPAN-Client to 2.017000 [wiz 2017-09-17]
 	Updated devel/p5-Module-CoreList to 5.20170821 [wiz 2017-09-17]
+	Updated devel/p5-Module-ScanDeps to 1.24 [wiz 2017-09-17]
