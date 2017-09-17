@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/01 02:16:26 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/09/17 13:31:04 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pymysql/__init__.py
 ${PYSITELIB}/pymysql/__init__.pyc
@@ -25,6 +24,9 @@ ${PYSITELIB}/pymysql/constants/CLIENT.pyo
 ${PYSITELIB}/pymysql/constants/COMMAND.py
 ${PYSITELIB}/pymysql/constants/COMMAND.pyc
 ${PYSITELIB}/pymysql/constants/COMMAND.pyo
+${PYSITELIB}/pymysql/constants/CR.py
+${PYSITELIB}/pymysql/constants/CR.pyc
+${PYSITELIB}/pymysql/constants/CR.pyo
 ${PYSITELIB}/pymysql/constants/ER.py
 ${PYSITELIB}/pymysql/constants/ER.pyc
 ${PYSITELIB}/pymysql/constants/ER.pyo
@@ -49,6 +51,9 @@ ${PYSITELIB}/pymysql/cursors.pyo
 ${PYSITELIB}/pymysql/err.py
 ${PYSITELIB}/pymysql/err.pyc
 ${PYSITELIB}/pymysql/err.pyo
+${PYSITELIB}/pymysql/optionfile.py
+${PYSITELIB}/pymysql/optionfile.pyc
+${PYSITELIB}/pymysql/optionfile.pyo
 ${PYSITELIB}/pymysql/tests/__init__.py
 ${PYSITELIB}/pymysql/tests/__init__.pyc
 ${PYSITELIB}/pymysql/tests/__init__.pyo
@@ -67,12 +72,15 @@ ${PYSITELIB}/pymysql/tests/test_basic.pyo
 ${PYSITELIB}/pymysql/tests/test_connection.py
 ${PYSITELIB}/pymysql/tests/test_connection.pyc
 ${PYSITELIB}/pymysql/tests/test_connection.pyo
+${PYSITELIB}/pymysql/tests/test_converters.py
+${PYSITELIB}/pymysql/tests/test_converters.pyc
+${PYSITELIB}/pymysql/tests/test_converters.pyo
 ${PYSITELIB}/pymysql/tests/test_cursor.py
 ${PYSITELIB}/pymysql/tests/test_cursor.pyc
 ${PYSITELIB}/pymysql/tests/test_cursor.pyo
-${PYSITELIB}/pymysql/tests/test_example.py
-${PYSITELIB}/pymysql/tests/test_example.pyc
-${PYSITELIB}/pymysql/tests/test_example.pyo
+${PYSITELIB}/pymysql/tests/test_err.py
+${PYSITELIB}/pymysql/tests/test_err.pyc
+${PYSITELIB}/pymysql/tests/test_err.pyo
 ${PYSITELIB}/pymysql/tests/test_issues.py
 ${PYSITELIB}/pymysql/tests/test_issues.pyc
 ${PYSITELIB}/pymysql/tests/test_issues.pyo
@@ -82,6 +90,9 @@ ${PYSITELIB}/pymysql/tests/test_load_local.pyo
 ${PYSITELIB}/pymysql/tests/test_nextset.py
 ${PYSITELIB}/pymysql/tests/test_nextset.pyc
 ${PYSITELIB}/pymysql/tests/test_nextset.pyo
+${PYSITELIB}/pymysql/tests/test_optionfile.py
+${PYSITELIB}/pymysql/tests/test_optionfile.pyc
+${PYSITELIB}/pymysql/tests/test_optionfile.pyo
 ${PYSITELIB}/pymysql/tests/thirdparty/__init__.py
 ${PYSITELIB}/pymysql/tests/thirdparty/__init__.pyc
 ${PYSITELIB}/pymysql/tests/thirdparty/__init__.pyo
