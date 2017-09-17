@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/04/16 15:40:57 mef Exp $
+$NetBSD: distinfo,v 1.8 2017/09/17 13:11:25 wiz Exp $
 
-SHA1 (Term-ProgressBar-2.18.tar.gz) = fee24909d8d1ac5324d0002402d7c30602ae422e
-RMD160 (Term-ProgressBar-2.18.tar.gz) = 98e26d5d11f81614126be53b4ac5418e566e8c75
-SHA512 (Term-ProgressBar-2.18.tar.gz) = 9483dfb546cf333fb03c4ea6f8d961ef67710036cfc913b1fda483cfcb05fd06161d427350d432acb178069772a8238ec1f5c429b2970cdc80f41d8105f0a8c8
-Size (Term-ProgressBar-2.18.tar.gz) = 18997 bytes
+SHA1 (Term-ProgressBar-2.21.tar.gz) = 6f3cd41f6f57d1d20bdc11a0e3b95b2d75e9438f
+RMD160 (Term-ProgressBar-2.21.tar.gz) = 19466e65887a090bcf79879b2d915c467faabf67
+SHA512 (Term-ProgressBar-2.21.tar.gz) = 0d778b86edffe095c8a320b52b4e9f482937e75ef17d0dcb5b3bd6cba8acc8e0fe26c893fa2b48bb5482ae13d4901d26273a796bc77152839eb5b14165b7d617
+Size (Term-ProgressBar-2.21.tar.gz) = 19309 bytes
