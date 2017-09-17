@@ -1,0 +1,9 @@
+This module implements RFC 2822 parser and formatter of email
+addresses and groups. It parses an input string from email headers
+which contain a list of email addresses or a groups of email addresses
+(like From, To, Cc, Bcc, Reply-To, Sender, ...). Also it can generate
+a string value for those headers from a list of email addresses
+objects.
+
+Parser and formatter functionality is implemented in XS and uses
+shared code from Dovecot IMAP server.
