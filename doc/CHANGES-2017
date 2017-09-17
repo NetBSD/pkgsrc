@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3903 2017/09/17 13:11:35 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3904 2017/09/17 13:13:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5465,3 +5465,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Safe-Isa to 1.000006 [wiz 2017-09-17]
 	Updated devel/p5-Shell-Perl to 0.004 [wiz 2017-09-17]
 	Updated devel/p5-Term-ProgressBar to 2.21 [wiz 2017-09-17]
+	Updated devel/p5-Test-EOL to 2.00 [wiz 2017-09-17]
