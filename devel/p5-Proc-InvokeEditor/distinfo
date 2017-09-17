@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:28:41 agc Exp $
+$NetBSD: distinfo,v 1.6 2017/09/17 12:58:35 wiz Exp $
 
-SHA1 (Proc-InvokeEditor-1.07.tar.gz) = 301c6e08278b147dee354127c61dffe721a6dafd
-RMD160 (Proc-InvokeEditor-1.07.tar.gz) = d8391020e434e6e390b059e033c10593723df105
-SHA512 (Proc-InvokeEditor-1.07.tar.gz) = e732b8e1bd9311a39de18c53a735bab2e45035454c5bb8bad5aff244a8a09a6bfade9acc9a7ffccb1967ce4f0c7f1338db4e567c367dd710456bc13c609e80ec
-Size (Proc-InvokeEditor-1.07.tar.gz) = 6580 bytes
+SHA1 (Proc-InvokeEditor-1.13.tar.gz) = 5c77158ef99fbcde0f1618151d8be7c43faaf629
+RMD160 (Proc-InvokeEditor-1.13.tar.gz) = 09b8e2d469684988b79202cd002008a5d3196cd2
+SHA512 (Proc-InvokeEditor-1.13.tar.gz) = 1048f2e825ef9324f566393dcc808a6b6c3a2080d202399369e05a266f97b8174f4f3e2a39fa75c55aafb2d2913da4909b1112acd2e804dc479a81ebd7a9348f
+Size (Proc-InvokeEditor-1.13.tar.gz) = 14032 bytes
