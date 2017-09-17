@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3836 2017/09/17 07:16:31 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3837 2017/09/17 07:27:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5393,3 +5393,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-Text-CSV_XS to 1.32 [wiz 2017-09-17]
 	Updated archivers/p5-Archive-Tar to 2.26 [wiz 2017-09-17]
 	Updated audio/p5-MP3-Tag to 1.14 [wiz 2017-09-17]
+	Updated graphics/p5-GraphViz to 2.24 [wiz 2017-09-17]
