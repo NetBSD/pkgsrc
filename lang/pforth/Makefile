@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/02 20:11:48 asau Exp $
+# $NetBSD: Makefile,v 1.26 2017/09/17 15:04:23 asau Exp $
 
 DISTNAME=		pforth_v27_20101121
 PKGNAME=		pforth-27
@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		http://pforth.googlecode.com/files/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		asau@NetBSD.org
+MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://www.softsynth.com/pforth/
 COMMENT=		Portable ANS-like Forth
 LICENSE=		mit
