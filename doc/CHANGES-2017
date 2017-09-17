@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3965 2017/09/17 20:58:51 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3966 2017/09/17 21:00:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5529,3 +5529,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/p5-Net-TFTP to 0.1901 [wiz 2017-09-17]
 	Updated net/p5-Net-Twitter to 4.01042 [wiz 2017-09-17]
 	Updated net/p5-NetAddr-MAC to 0.95 [wiz 2017-09-17]
+	Updated net/p5-NetPacket to 1.6.0 [wiz 2017-09-17]
