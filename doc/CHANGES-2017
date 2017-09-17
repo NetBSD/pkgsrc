@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3855 2017/09/17 09:18:50 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3856 2017/09/17 09:19:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5410,3 +5410,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/p5-Parse-Dia-SQL to 0.30 [wiz 2017-09-17]
 	Updated devel/p5-AnyEvent-RabbitMQ to 1.19 [wiz 2017-09-17]
 	Updated devel/p5-App-CLI to 0.45 [wiz 2017-09-17]
+	Updated devel/p5-B-Hooks-OP-PPAddr to 0.06 [wiz 2017-09-17]
