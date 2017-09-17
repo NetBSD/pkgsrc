@@ -1,0 +1,3 @@
+This perl module overrides CORE::GLOBAL::require with a code reference
+in a way that plays nice with any existing overloading and ensures
+the right calling package is in scope.
