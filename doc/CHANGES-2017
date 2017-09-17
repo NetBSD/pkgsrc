@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3861 2017/09/17 09:48:56 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3862 2017/09/17 09:50:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5416,3 +5416,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Context-Preserve to 0.02 [wiz 2017-09-17]
 	Updated devel/p5-CPAN-Perl-Releases to 3.34 [wiz 2017-09-17]
 	Updated devel/p5-CPANPLUS to 0.9170 [wiz 2017-09-17]
+	Updated devel/p5-Devel-Confess to 0.009004 [wiz 2017-09-17]
