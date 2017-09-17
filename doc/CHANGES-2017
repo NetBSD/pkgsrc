@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3955 2017/09/17 20:33:54 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3956 2017/09/17 20:35:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5519,3 +5519,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/p5-Net-eBay to 0.61 [wiz 2017-09-17]
 	Updated net/p5-Net-Frame-Layer-IPv6 to 1.08 [wiz 2017-09-17]
 	Updated net/p5-Net-Frame-Simple to 1.08 [wiz 2017-09-17]
+	Updated net/p5-Net-Frame to 1.17 [wiz 2017-09-17]
