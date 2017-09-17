@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2017/07/28 07:01:31 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/17 11:31:28 adam Exp $
 
-DISTNAME=	PyExecJS-1.4.0
+DISTNAME=	PyExecJS-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl:S/^py//}
 CATEGORIES=	python lang
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyExecJS/}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/doloopwhile/PyExecJS
