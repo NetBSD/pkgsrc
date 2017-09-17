@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3897 2017/09/17 12:58:45 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3898 2017/09/17 13:00:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5459,3 +5459,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-PerlIO-gzip to 0.20 [wiz 2017-09-17]
 	Updated devel/p5-PPIx-Regexp to 0.052 [wiz 2017-09-17]
 	Updated devel/p5-Proc-InvokeEditor to 1.13 [wiz 2017-09-17]
+	Updated devel/p5-Regexp-Assemble to 0.38 [wiz 2017-09-17]
