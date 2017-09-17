@@ -1,12 +1,10 @@
-$NetBSD: patch-au,v 1.9 2015/12/06 18:22:35 adam Exp $
+$NetBSD: patch-Makefile.pre.in,v 1.1 2017/09/17 09:54:53 adam Exp $
 
 Fix for unpriviliged build.
-Avoid opcode generator; it requires Python binary, and the file is already generated.
-http://hg.python.org/cpython/rev/a0f43f4481e0
 
---- Makefile.pre.in.orig	2015-12-05 19:47:10.000000000 +0000
+--- Makefile.pre.in.orig	2017-09-16 17:38:35.000000000 +0000
 +++ Makefile.pre.in
-@@ -537,7 +537,7 @@ gdbhooks: $(BUILDPYTHON)-gdb.py
+@@ -554,7 +554,7 @@ gdbhooks: $(BUILDPYTHON)-gdb.py
  
  SRC_GDB_HOOKS=$(srcdir)/Tools/gdb/libpython.py
  $(BUILDPYTHON)-gdb.py: $(SRC_GDB_HOOKS)
@@ -15,16 +13,7 @@ http://hg.python.org/cpython/rev/a0f43f4481e0
  
  # This rule is here for OPENSTEP/Rhapsody/MacOSX. It builds a temporary
  # minimal framework (not including the Lib directory and such) in the current
-@@ -696,8 +696,6 @@ Objects/bytearrayobject.o: $(srcdir)/Obj
- Objects/stringobject.o: $(srcdir)/Objects/stringobject.c \
- 				$(STRINGLIB_HEADERS)
- 
--$(OPCODETARGETS_H): $(OPCODETARGETGEN_FILES)
--	$(OPCODETARGETGEN) $(OPCODETARGETS_H)
- 
- Python/ceval.o: $(OPCODETARGETS_H)
- 
-@@ -952,7 +950,8 @@ altbininstall:	$(BUILDPYTHON)
+@@ -993,7 +993,8 @@ altbininstall:	$(BUILDPYTHON)
  				(cd $(DESTDIR)$(LIBDIR); $(LN) -sf $(INSTSONAME) $(LDLIBRARY)) \
  			fi \
  		fi; \
