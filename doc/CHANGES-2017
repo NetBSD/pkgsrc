@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3915 2017/09/17 14:31:38 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3916 2017/09/17 14:41:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5479,3 +5479,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-dogpile-cache to 0.6.4 [adam 2017-09-17]
 	Updated x11/p5-Alien-wxWidgets to 0.69 [wiz 2017-09-17]
 	Updated x11/wxGTK30 to 3.0.3.1 [wiz 2017-09-17]
+	Updated x11/p5-Wx to 0.9932nb1 [wiz 2017-09-17]
