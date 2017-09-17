@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 01:34:56 agc Exp $
+$NetBSD: distinfo,v 1.6 2017/09/17 08:10:01 wiz Exp $
 
-SHA1 (asterisk-perl-1.03.tar.gz) = 6177c1a36a4aaec0ac179be4d641a76b4d2daad0
-RMD160 (asterisk-perl-1.03.tar.gz) = e9b4f7e6e54f6d672c288c9932d4a359422256ed
-SHA512 (asterisk-perl-1.03.tar.gz) = 014b8195ca9117dd0a272096f3480dbec839bb7a9f6f48b28cee9cef9062863b2f3c4aad98b5e495ded07d79bbe610c631c6ad5480cd1bc7d1f7e6f8c39f47a4
-Size (asterisk-perl-1.03.tar.gz) = 27876 bytes
+SHA1 (asterisk-perl-1.08.tar.gz) = 6fb02c4849b47fe0f45ffb2bf008406e267f2905
+RMD160 (asterisk-perl-1.08.tar.gz) = 4ebdb5b3bab2dfe4745f57f850e0894a3ce0aad3
+SHA512 (asterisk-perl-1.08.tar.gz) = 0134dd2a3f4c698664caee223927d6f7c93bd7125dd72b474b2c034ada81397013f3083b96e7601f72a5297f1b548f3ec357c626398d508184ffe782821a9f62
+Size (asterisk-perl-1.08.tar.gz) = 40036 bytes

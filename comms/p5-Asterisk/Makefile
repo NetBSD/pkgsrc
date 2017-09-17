@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.18 2017/09/03 08:36:51 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.19 2017/09/17 08:10:01 wiz Exp $
 
-DISTNAME=		asterisk-perl-1.03
-PKGNAME=		p5-Asterisk-1.03
-PKGREVISION=		7
+DISTNAME=		asterisk-perl-1.08
+PKGNAME=		p5-Asterisk-${DISTNAME:S/asterisk-perl-//}
 CATEGORIES=		comms perl5
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/J/JA/JAMESGOL/}
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/I/IT/ITCHARLIE/}
 #MASTER_SITES+=		http://asterisk.gnuinter.net/files/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://asterisk.gnuinter.net/
 COMMENT=		Collection of perl modules to be used with Asterisk
 LICENSE=		artistic
+
+DEPENDS+=		p5-Net-Telnet-[0-9]*:../../net/p5-Net-Telnet
 
 PERL5_PACKLIST=		auto/asterisk-perl/.packlist
 EXAMPLES_DIR=		${PREFIX}/share/examples/p5-Asterisk
