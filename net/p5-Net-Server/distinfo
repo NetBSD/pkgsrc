@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2015/11/04 00:35:23 agc Exp $
+$NetBSD: distinfo,v 1.15 2017/09/17 20:46:53 wiz Exp $
 
-SHA1 (Net-Server-2.008.tar.gz) = ee8d6bda51c905a70f3a0ebaa7dca6c2d73d5f85
-RMD160 (Net-Server-2.008.tar.gz) = 1fc5cf50985e1d7555170e8d9e404416442192f7
-SHA512 (Net-Server-2.008.tar.gz) = cbc7697f598db10931a10701a23aa5e98a6eba377bbc6c17d3d77baf26e0e83cf4e9c163e954faca3d3145b33264fd5a10cc2f7c6e219a7d6425ed3cc73f254a
-Size (Net-Server-2.008.tar.gz) = 119565 bytes
+SHA1 (Net-Server-2.009.tar.gz) = afe284e76fa49b829d2bfa88402dc9fb2d916f18
+RMD160 (Net-Server-2.009.tar.gz) = 3c7d76a898ef080bf9e27087e5fec2a00b259e52
+SHA512 (Net-Server-2.009.tar.gz) = 36409f8d2478877c68cbfcbe9c08045b0c24a926b64f022faf3de8f4b4369ff417d5c41ff1e9800553c38da29c6d72ef301119c956cb26439f6b6366ff4b459c
+Size (Net-Server-2.009.tar.gz) = 146781 bytes
