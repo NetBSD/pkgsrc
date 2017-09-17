@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2017/08/23 15:03:50 he Exp $
+$NetBSD: distinfo,v 1.10 2017/09/17 22:13:30 wiz Exp $
 
-SHA1 (Net-SSH-Perl-2.12.tar.gz) = 1140c3e4c49d5cb56d6acd96f31e4b57c2c3bf92
-RMD160 (Net-SSH-Perl-2.12.tar.gz) = 2851cdaaff91e2c404356b669ad1564b12451551
-SHA512 (Net-SSH-Perl-2.12.tar.gz) = aa51263205b59915faec4c82ae90f241a4ad63074bd4dc967341c1bcf5eb515cc53bf06a66461afff4c1da3189699146dd43eb0c27c332b4df682f54af754b76
-Size (Net-SSH-Perl-2.12.tar.gz) = 256676 bytes
+SHA1 (Net-SSH-Perl-2.14.tar.gz) = 47077b150e1175949f8c086418084932ab4a563e
+RMD160 (Net-SSH-Perl-2.14.tar.gz) = 09a218c63f902b692b82f7dd14993eefc0a3a5ef
+SHA512 (Net-SSH-Perl-2.14.tar.gz) = 49fee3e7969260a97453adfdac7ed3852130a7404ca5016f6d16549e478b8f2808f47c5801f2dbf991cfb33b5f2653d55360ba938d9b36016620a46e1ffea879
+Size (Net-SSH-Perl-2.14.tar.gz) = 256963 bytes
 SHA1 (patch-aa) = d85b70f5f4d4ccb55aabef6671171bf64c6fcdb9
 SHA1 (patch-lib_Net_SSH_Perl_Kex.pm) = ebd933b7ee9510a8182083da97ef38433ee61102
