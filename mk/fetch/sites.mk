@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.152 2017/08/10 12:21:18 hauke Exp $
+# $NetBSD: sites.mk,v 1.153 2017/09/17 10:55:17 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -40,7 +40,6 @@ MASTER_SITE_OSDN+=	\
 	http://osdn.dl.osdn.jp/
 
 MASTER_SITE_PERL_CPAN+= \
-	http://ftp.tuwien.ac.at/pub/CPAN/modules/by-module/ \
 	http://cpan.perl.org/CPAN/modules/by-module/ \
 	ftp://cpan.pair.com/modules/by-module/ \
 	ftp://ftp.funet.fi/pub/languages/perl/CPAN/modules/by-module/ \
@@ -73,7 +72,6 @@ MASTER_SITE_SUNSITE+=   \
 MASTER_SITE_GNOME+=     \
 	http://ftp.gnome.org/pub/GNOME/ \
 	ftp://ftp.gnome.org/pub/GNOME/ \
-	http://ftp.tuwien.ac.at/hci/gnome.org/ \
 	ftp://ftp.cse.buffalo.edu/pub/Gnome/ \
 	ftp://ftp.kddlabs.co.jp/pub/GNOME/ \
 	https://download.gnome.org/
