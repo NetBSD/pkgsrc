@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:55 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/09/17 09:08:32 wiz Exp $
 
-SHA1 (AnyEvent-RabbitMQ-1.18.tar.gz) = 4b6298f886b04fab1500a8a799b51bc1302df749
-RMD160 (AnyEvent-RabbitMQ-1.18.tar.gz) = 01c35fb73a9861b0b6e2ae81d0cead700e680d38
-SHA512 (AnyEvent-RabbitMQ-1.18.tar.gz) = a795049fc273bb19eabea1ab1bad5e38fa9c4b65a42ebb5d00fa1eea3d208aaecb30405770897fcc8dffa78a8af7f2fb50ce94d77ccf602454e9a649ad18e44d
-Size (AnyEvent-RabbitMQ-1.18.tar.gz) = 89415 bytes
+SHA1 (AnyEvent-RabbitMQ-1.19.tar.gz) = 61b1f2309279c590e52eff9aa92bb6953e53923f
+RMD160 (AnyEvent-RabbitMQ-1.19.tar.gz) = 20da15908891b80e375f55a95e794d7b55abfd12
+SHA512 (AnyEvent-RabbitMQ-1.19.tar.gz) = 66a7b2ecc2171564041e5d923957f51c9ff1ce81fab1297b90c268cfccd0f06be36e02f1bec1eeaa11238f229972480c8cc1277a071fb6d88b883793c8131ba6
+Size (AnyEvent-RabbitMQ-1.19.tar.gz) = 86973 bytes
