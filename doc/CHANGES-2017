@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3864 2017/09/17 10:18:44 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3865 2017/09/17 10:19:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5420,3 +5420,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/python27 to 2.7.14 [adam 2017-09-17]
 	Updated devel/py-setuptools to 36.5.0 [adam 2017-09-17]
 	Updated devel/p5-Dist-Zilla to 6.010 [wiz 2017-09-17]
+	Updated devel/p5-ExtUtils-CBuilder to 0.28.02.26 [wiz 2017-09-17]
