@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.542 2017/09/15 17:52:28 minskim Exp $
+# $NetBSD: Makefile,v 1.543 2017/09/17 04:00:50 minskim Exp $
 
 COMMENT=	Databases
 
@@ -327,6 +327,7 @@ SUBDIR+=	postgresql96-pltcl
 SUBDIR+=	postgresql96-server
 SUBDIR+=	pxtools
 SUBDIR+=	py-PgSQL
+SUBDIR+=	py-alembic
 SUBDIR+=	py-apsw
 SUBDIR+=	py-asyncpg
 SUBDIR+=	py-barman
