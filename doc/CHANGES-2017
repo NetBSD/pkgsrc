@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3885 2017/09/17 11:48:39 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3886 2017/09/17 11:50:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5446,3 +5446,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Net-LDAP-Class to 0.27 [wiz 2017-09-17]
 	Updated devel/p5-Net-LDAP-Server-Test to 0.22 [wiz 2017-09-17]
 	Updated devel/p5-OOTools to 2.40 [wiz 2017-09-17]
+	Updated devel/p5-Params-Classify to 0.015 [wiz 2017-09-17]
