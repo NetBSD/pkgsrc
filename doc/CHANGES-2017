@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3850 2017/09/17 08:40:25 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3851 2017/09/17 08:45:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5405,3 +5405,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated converters/p5-Sereal to 3.015 [wiz 2017-09-17]
 	Updated databases/p5-DBIx-Class-Candy to 0.005003 [wiz 2017-09-17]
 	Updated databases/p5-DBM-Deep to 2.0014 [wiz 2017-09-17]
+	Updated databases/p5-Fsdb to 2.63 [wiz 2017-09-17]
