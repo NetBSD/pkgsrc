@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3834 2017/09/17 07:06:20 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3835 2017/09/17 07:12:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5391,3 +5391,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added net/ruby-recog version 2.1.15 [minskim 2017-09-16]
 	Added databases/py-alembic version 0.9.5 [minskim 2017-09-17]
 	Updated textproc/p5-Text-CSV_XS to 1.32 [wiz 2017-09-17]
+	Updated archivers/p5-Archive-Tar to 2.26 [wiz 2017-09-17]
