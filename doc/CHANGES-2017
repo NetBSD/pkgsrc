@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3859 2017/09/17 09:45:02 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3860 2017/09/17 09:46:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5414,3 +5414,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/p5-Devel-OverrideGlobalRequire version 0.001 [wiz 2017-09-17]
 	Updated devel/p5-circular-require to 0.12 [wiz 2017-09-17]
 	Updated devel/p5-Context-Preserve to 0.02 [wiz 2017-09-17]
+	Updated devel/p5-CPAN-Perl-Releases to 3.34 [wiz 2017-09-17]
