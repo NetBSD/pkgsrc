@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:28:40 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/09/17 12:56:16 wiz Exp $
 
-SHA1 (PerlIO-gzip-0.19.tar.gz) = 696f2227ebd06406fe4e9ec7b262bee34da7eb26
-RMD160 (PerlIO-gzip-0.19.tar.gz) = e1dcf4a3b5082f2e0fde242620be1950dc125a91
-SHA512 (PerlIO-gzip-0.19.tar.gz) = 514b4e224bb66f00c1e7e4678ede625b6fd0ce0c2687bb7bf662d8ffe942c6a711426f27399343a9c02b0313dae8aa41a7e4551f7d9e59a178cc1a6d067d8608
-Size (PerlIO-gzip-0.19.tar.gz) = 18956 bytes
+SHA1 (PerlIO-gzip-0.20.tar.gz) = a1627a023babe66a1e9994d04e08ce76b42ab2ee
+RMD160 (PerlIO-gzip-0.20.tar.gz) = 11997785b71ab07ea766ef05ae1b09e0e23e97fb
+SHA512 (PerlIO-gzip-0.20.tar.gz) = b24e8fa99cbcbaf07feabfc09cefc55a10c1dce59b495b59343ff5217536f7108c92f462751e70242e6567be32e69a0cc88a2e66325e926174a64042d4b87966
+Size (PerlIO-gzip-0.20.tar.gz) = 19076 bytes
