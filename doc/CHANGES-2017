@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3880 2017/09/17 11:16:00 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3881 2017/09/17 11:34:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5439,3 +5439,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Module-CoreList to 5.20170821 [wiz 2017-09-17]
 	Updated devel/p5-Module-ScanDeps to 1.24 [wiz 2017-09-17]
 	Updated devel/p5-Module-Starter to 1.730 [wiz 2017-09-17]
+	Updated devel/py-lupa to 1.5 [adam 2017-09-17]
+	Updated textproc/po4a to 0.52 [adam 2017-09-17]
+	Updated lang/py-execjs to 1.4.1 [adam 2017-09-17]
