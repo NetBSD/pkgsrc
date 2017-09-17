@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17739 2017/09/17 20:02:10 wiz Exp $
+$NetBSD: TODO,v 1.17740 2017/09/17 20:25:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1137,7 +1137,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-DBD-DB2-1.85
 	o p5-FormValidator-Simple-1.00
 	o p5-FusionInventory-Agent-2.3.21
-	o p5-GStreamer-0.20
 	o p5-GraphicsMagick-1.4.020160216
 	o p5-Gtk2-1.223
 	o p5-HTTP-Server-EV-0.69
