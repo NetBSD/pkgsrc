@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3912 2017/09/17 13:36:39 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3913 2017/09/17 13:40:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5474,3 +5474,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Test-Spec to 0.53 [wiz 2017-09-17]
 	Updated devel/p5-Test-Trap to 0.3.3 [wiz 2017-09-17]
 	Updated devel/p5-Test2-Plugin-NoWarnings to 0.06 [wiz 2017-09-17]
+	Updated databases/py-pymysql to 0.7.11 [adam 2017-09-17]
+	Updated devel/py-limits to 1.2.1 [adam 2017-09-17]
+	Updated devel/py-dogpile-cache to 0.6.4 [adam 2017-09-17]
