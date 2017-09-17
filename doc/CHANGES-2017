@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3922 2017/09/17 15:26:28 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3923 2017/09/17 15:31:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5486,3 +5486,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated editors/p5-Padre-Plugin-DataWalker to 0.04 [wiz 2017-09-17]
 	Updated editors/p5-Padre-Plugin-Ecliptic to 0.23 [wiz 2017-09-17]
 	Updated editors/p5-Padre-Plugin-Encrypt to 0.12 [wiz 2017-09-17]
+	Updated editors/p5-Padre-Plugin-Git to 0.12 [wiz 2017-09-17]
