@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:32:19 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/09/17 15:21:56 wiz Exp $
 
-SHA1 (Padre-Plugin-Ecliptic-0.19.tar.gz) = ea3f160e4ac4529f67d961ce427b47932001bdd7
-RMD160 (Padre-Plugin-Ecliptic-0.19.tar.gz) = 3c58792a8e2a64ecabcb496f53499f6d05f70379
-SHA512 (Padre-Plugin-Ecliptic-0.19.tar.gz) = 435a21d81aa6249dacbe539e95a502abc215e806b65a9e3cda36243d341fac49a91560596d4145fa93db996f6415eeb092c1cdaaac8617eabe84cc04080f0689
-Size (Padre-Plugin-Ecliptic-0.19.tar.gz) = 19424 bytes
+SHA1 (Padre-Plugin-Ecliptic-0.23.tar.gz) = 1060a9f55f556818c5ee455f54a2fb81c2048709
+RMD160 (Padre-Plugin-Ecliptic-0.23.tar.gz) = 62c1a26d9917298565e014b5262d4f7d8fd20689
+SHA512 (Padre-Plugin-Ecliptic-0.23.tar.gz) = ec7a19c64a9b297546e6f6cdf136719ffc4c7542fd300b9c0a52f782c2b7199a8dd95dcea787c99c06d2707c18029593524bb0f1bea5dc035124e8c8e34f0f8c
+Size (Padre-Plugin-Ecliptic-0.23.tar.gz) = 30693 bytes
