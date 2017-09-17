@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3935 2017/09/17 16:09:16 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3936 2017/09/17 16:15:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5499,3 +5499,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added mail/p5-Email-Address-XS version 1.00 [wiz 2017-09-17]
 	Updated mail/p5-Email-MIME to 1.946 [wiz 2017-09-17]
 	Added mail/p5-Mail-Message version 3.002 [wiz 2017-09-17]
+	Updated mail/p5-Mail-Box to 3.003 [wiz 2017-09-17]
