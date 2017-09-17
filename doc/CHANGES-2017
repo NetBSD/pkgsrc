@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3847 2017/09/17 08:25:25 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3848 2017/09/17 08:29:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5402,3 +5402,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated converters/p5-JSON-PP to 2.94 [wiz 2017-09-17]
 	Updated converters/p5-Sereal-Decoder to 3.015 [wiz 2017-09-17]
 	Updated converters/p5-Sereal-Encoder to 3.015 [wiz 2017-09-17]
+	Updated converters/p5-Sereal to 3.015 [wiz 2017-09-17]
