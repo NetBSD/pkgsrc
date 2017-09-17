@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3843 2017/09/17 08:12:00 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3844 2017/09/17 08:13:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5400,3 +5400,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated comms/p5-Asterisk to 1.08 [wiz 2017-09-17]
 	Updated converters/p5-JSON-MaybeXS to 1.003009 [wiz 2017-09-17]
 	Updated converters/p5-JSON-MaybeXS to 1.003009 [wiz 2017-09-17]
+	Updated converters/p5-JSON-PP to 2.94 [wiz 2017-09-17]
