@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/06/06 14:27:23 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2017/09/17 13:14:59 wiz Exp $
 
-SHA1 (Test-LeakTrace-0.15.tar.gz) = 6b045c535bc151c431c7431c1c1162e1b14c021c
-RMD160 (Test-LeakTrace-0.15.tar.gz) = 20cd48562c002734d629bf9f84e73bf8cd7b31fa
-SHA512 (Test-LeakTrace-0.15.tar.gz) = 664d1648cc9ce229456ca0c27430bdd36ba1d9bf6907afce6c612b90d6885aa6a71caeceb266aec1f843287e6bcda35ac28eab2ad6b662019c0fcb87d7f0d6be
-Size (Test-LeakTrace-0.15.tar.gz) = 49364 bytes
-SHA1 (patch-Makefile.PL) = 913adea30c7f208bde99d28ba371671286f4b913
+SHA1 (Test-LeakTrace-0.16.tar.gz) = ad1d825c838982ea7542af550c5760bb3b34b54b
+RMD160 (Test-LeakTrace-0.16.tar.gz) = 50cfe927559d5cbe7ab15ba70bdac1be9dc5d91d
+SHA512 (Test-LeakTrace-0.16.tar.gz) = 6fa7a5eaae01ca5232f3f297a104553dac5f57e4c6721d7084e5d44b0133206100878c7067b228b1e01b21f7639a97a0ec48ef77198deb0598d94d8861bab049
+Size (Test-LeakTrace-0.16.tar.gz) = 49435 bytes
