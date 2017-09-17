@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3939 2017/09/17 19:55:43 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3940 2017/09/17 19:57:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5503,3 +5503,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/p5-Mail-DKIM to 0.42 [wiz 2017-09-17]
 	Updated databases/freetds to 1.00.58 [taca 2017-09-17]
 	Updated mail/p5-Mail-IMAPClient to 3.39 [wiz 2017-09-17]
+	Updated mail/p5-Mail-Sendmail to 0.80 [wiz 2017-09-17]
