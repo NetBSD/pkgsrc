@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3951 2017/09/17 20:25:41 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3952 2017/09/17 20:29:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5515,3 +5515,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/p5-Locale-libintl to 1.28 [wiz 2017-09-17]
 	Updated misc/p5-Mac-PropertyList to 1.412 [wiz 2017-09-17]
 	Updated multimedia/p5-GStreamer to 0.20 [wiz 2017-09-17]
+	Updated net/p5-Net-DNS-Resolver-Programmable to 0.009 [wiz 2017-09-17]
