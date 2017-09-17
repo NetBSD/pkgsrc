@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2017/06/14 13:19:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.50 2017/09/17 14:41:22 wiz Exp $
 
 DISTNAME=	Wx-0.9932
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11 perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Wx/}
 
@@ -24,6 +25,6 @@ PERL5_PACKLIST=		auto/Wx/.packlist
 MAKE_PARAMS+=		--wx-toolkit=gtk2
 
 .include "../../lang/perl5/module.mk"
-.include "../../x11/wxGTK28-contrib/buildlink3.mk"
-
+BUILDLINK_API_DEPENDS.wxGTK30+= wxGTK30>=3.0.3.1
+.include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
