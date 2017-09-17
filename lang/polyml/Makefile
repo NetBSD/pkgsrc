@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2017/09/15 23:51:04 asau Exp $
+# $NetBSD: Makefile,v 1.17 2017/09/17 15:04:23 asau Exp $
 
 DISTNAME=	polyml-5.7
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=polyml/}
 
-MAINTAINER=	asau@NetBSD.org
+MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://polyml.org/
 COMMENT=	Poly/ML is an implementation of Standard ML
 
