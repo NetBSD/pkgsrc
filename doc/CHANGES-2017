@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3947 2017/09/17 20:13:12 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3948 2017/09/17 20:16:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5511,3 +5511,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/p5-Math-GMP to 2.15 [wiz 2017-09-17]
 	Updated math/p5-Math-Prime-Util to 0.66 [wiz 2017-09-17]
 	Updated math/p5-Spreadsheet-Read to 0.74 [wiz 2017-09-17]
+	Updated misc/p5-Locale-Codes to 3.54 [wiz 2017-09-17]
