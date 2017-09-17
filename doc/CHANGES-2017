@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3941 2017/09/17 20:00:16 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3942 2017/09/17 20:02:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5505,3 +5505,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/p5-Mail-IMAPClient to 3.39 [wiz 2017-09-17]
 	Updated mail/p5-Mail-Sendmail to 0.80 [wiz 2017-09-17]
 	Updated mail/p5-Mail-SPF-Query to 1.999.1 [wiz 2017-09-17]
+	Updated mail/p5-Net-ManageSieve to 0.13 [wiz 2017-09-17]
