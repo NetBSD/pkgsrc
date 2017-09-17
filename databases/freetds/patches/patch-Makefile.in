@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile.in,v 1.1 2017/09/17 14:57:59 taca Exp $
+
+* Install example files without execute bit on.
+
+--- Makefile.in.orig	2017-09-02 09:00:55.000000000 +0000
++++ Makefile.in
+@@ -875,10 +875,10 @@ uninstall-am: uninstall-local
+ install-data-local:
+ 	$(mkinstalldirs) $(ETC)
+ 	if test ! -f $(ETC)/freetds.conf; then \
+-		$(INSTALL) $(srcdir)/freetds.conf $(ETC)/freetds.conf; \
++		$(INSTALL_DATA) $(srcdir)/freetds.conf $(ETC)/freetds.conf; \
+ 	fi
+ 	if test ! -f $(ETC)/locales.conf; then \
+-		$(INSTALL) $(srcdir)/locales.conf $(ETC)/locales.conf; \
++		$(INSTALL_DATA) $(srcdir)/locales.conf $(ETC)/locales.conf; \
+ 	fi
+ 
+ clean-local:

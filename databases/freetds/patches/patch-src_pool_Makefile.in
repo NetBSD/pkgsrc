@@ -1,0 +1,15 @@
+$NetBSD: patch-src_pool_Makefile.in,v 1.1 2017/09/17 14:58:00 taca Exp $
+
+* Install example files without execute bit on.
+
+--- src/pool/Makefile.in.orig	2017-09-02 09:00:56.000000000 +0000
++++ src/pool/Makefile.in
+@@ -708,7 +708,7 @@ uninstall-am: uninstall-binPROGRAMS
+ install-data-local:
+ 	$(mkinstalldirs) $(ETC)
+ 	if test ! -f $(ETC)/pool.conf; then \
+-		$(INSTALL) $(srcdir)/pool.conf $(ETC)/pool.conf; \
++		$(INSTALL_DATA) $(srcdir)/pool.conf $(ETC)/pool.conf; \
+ 	fi
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
