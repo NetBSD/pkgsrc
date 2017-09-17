@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:32:19 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/09/17 15:13:12 wiz Exp $
 
-SHA1 (Padre-Plugin-Catalyst-0.09.tar.gz) = 933f8034f86aa8a1bc8dc8bed32d59c46670cfc2
-RMD160 (Padre-Plugin-Catalyst-0.09.tar.gz) = 8dda2199d2520960c98720256d654c239bf6a084
-SHA512 (Padre-Plugin-Catalyst-0.09.tar.gz) = 44b08156f5101d5d73c671e7eb65f700a9dc61d20c0a10ecf89246f4f61a1a3499e56ee225469ce106abb5ef5cec2b6ec92e4e78ffcd5fc20a319cf419fcb3e9
-Size (Padre-Plugin-Catalyst-0.09.tar.gz) = 50111 bytes
+SHA1 (Padre-Plugin-Catalyst-0.13.tar.gz) = 1f448e353dae0c5f20e95433f2dea622f479985b
+RMD160 (Padre-Plugin-Catalyst-0.13.tar.gz) = 1efda01efee8084152f025762b39443f70cdddc5
+SHA512 (Padre-Plugin-Catalyst-0.13.tar.gz) = d1b4f130d9fefa4b515d3bf1e905d603d6a65cbc26b68fdb82c9832f5b7dd1db227aa04dbc23c23c8afa911159f9f1a552d61505617a52ff078b6ceb8a3a220e
+Size (Padre-Plugin-Catalyst-0.13.tar.gz) = 55181 bytes
