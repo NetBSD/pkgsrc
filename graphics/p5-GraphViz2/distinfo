@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 21:34:13 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/09/17 15:52:21 wiz Exp $
 
-SHA1 (GraphViz2-1.12.tgz) = 3dc942c2a114376717dc7979f2d770870c094d0e
-RMD160 (GraphViz2-1.12.tgz) = dbfa38f7a495f490b7528a31c67668683be411f4
-SHA512 (GraphViz2-1.12.tgz) = 7a1e40bef3748c9bb6e787f1da28f8c3ed2d60fae3ab9cb6ad4d7ed9081b16b2b70e126223205f32b956f2cdd9da432aa39c23bda14c06c2c284241e69490c6e
-Size (GraphViz2-1.12.tgz) = 187694 bytes
+SHA1 (GraphViz2-2.46.tgz) = 287f0612f9e2e10727c0b253d3ee9af4cdbd9cc4
+RMD160 (GraphViz2-2.46.tgz) = ae60772098d04308529202bc3a8ad568cd32a76a
+SHA512 (GraphViz2-2.46.tgz) = 8a3a0c8d1e31314fe29800b65186b583a869e868680b75f7360a23faa8d9d1f95bac99fee2d1a7ebfe10b4a950b3759ed3d895ae4420cb2265f1fe2ace5715d7
+Size (GraphViz2-2.46.tgz) = 231387 bytes
