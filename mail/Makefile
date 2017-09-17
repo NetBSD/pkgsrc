@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.498 2017/09/10 14:23:27 taca Exp $
+# $NetBSD: Makefile,v 1.499 2017/09/17 15:59:56 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -189,6 +189,7 @@ SUBDIR+=	p5-Catalyst-View-Email
 SUBDIR+=	p5-Email-Abstract
 SUBDIR+=	p5-Email-Address
 SUBDIR+=	p5-Email-Address-List
+SUBDIR+=	p5-Email-Address-XS
 SUBDIR+=	p5-Email-Date
 SUBDIR+=	p5-Email-Date-Format
 SUBDIR+=	p5-Email-Find
