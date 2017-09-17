@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3917 2017/09/17 14:50:52 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3918 2017/09/17 14:59:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5481,3 +5481,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/wxGTK30 to 3.0.3.1 [wiz 2017-09-17]
 	Updated x11/p5-Wx to 0.9932nb1 [wiz 2017-09-17]
 	Updated editors/p5-Padre-Plugin-Autoformat to 1.22 [wiz 2017-09-17]
+	Updated databases/freetds to 1.00.55 [taca 2017-09-17]
