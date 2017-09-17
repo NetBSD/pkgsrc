@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/04/22 06:25:44 mef Exp $
+$NetBSD: distinfo,v 1.7 2017/09/17 10:53:02 wiz Exp $
 
-SHA1 (Make-1.1.3.tar.gz) = 957e3d041ec1ca34a115ea2efa1f648a7df44286
-RMD160 (Make-1.1.3.tar.gz) = 09ecaeeff12cd897557dd980b46cab7b0f84f66b
-SHA512 (Make-1.1.3.tar.gz) = 089e27217a48542a59bd61ca25d95629fee71af2a79df823c5cd2d6e225675f829b636c45fba0120758eb0e864d5f826c0cdf750c31928cb5515e9cc24dd2268
-Size (Make-1.1.3.tar.gz) = 271769 bytes
+SHA1 (Make-1.1.5.tar.gz) = db86f33c4ea852fc2e31237496ec917ae3a9f39a
+RMD160 (Make-1.1.5.tar.gz) = b1ad8b46c1867b923cc3b2bbbef41adf1b07d872
+SHA512 (Make-1.1.5.tar.gz) = c8877454994d7edd0790978796c737c801087eacf7100859e37b2451209ce216baf518f249c1ebfde90ef604eb36387c896c12b0a66a678cd5302ea0c002f0c7
+Size (Make-1.1.5.tar.gz) = 16351 bytes
