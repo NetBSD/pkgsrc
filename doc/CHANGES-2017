@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3926 2017/09/17 15:37:21 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3927 2017/09/17 15:39:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5490,3 +5490,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated editors/p5-PPIx-EditorTools to 0.19 [wiz 2017-09-17]
 	Updated filesystems/p5-MooseX-Types-Path-Tiny to 0.012 [wiz 2017-09-17]
 	Updated graphics/p5-GDGraph to 1.54 [wiz 2017-09-17]
+	Updated graphics/p5-cairo to 1.106 [wiz 2017-09-17]
