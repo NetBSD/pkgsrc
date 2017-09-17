@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3833 2017/09/17 04:01:29 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.3834 2017/09/17 07:06:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5390,3 +5390,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added finance/py-alphalens version 0.1.1 [minskim 2017-09-16]
 	Added net/ruby-recog version 2.1.15 [minskim 2017-09-16]
 	Added databases/py-alembic version 0.9.5 [minskim 2017-09-17]
+	Updated textproc/p5-Text-CSV_XS to 1.32 [wiz 2017-09-17]
