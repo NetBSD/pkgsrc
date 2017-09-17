@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2016/08/13 00:44:00 wen Exp $
+$NetBSD: distinfo,v 1.9 2017/09/17 15:37:11 wiz Exp $
 
-SHA1 (GDGraph-1.53.tar.gz) = 03bc00c10e5a2e1357c04489d4ca5092fd139098
-RMD160 (GDGraph-1.53.tar.gz) = 027680b651c0c2a6f734e4abf5833d8aeafaef24
-SHA512 (GDGraph-1.53.tar.gz) = b22a8cfae9717170b7a4dad9fef8b6b534958987c98645efc006024bb06058c147d2c7815771f7611b3dcc2c4e5edb22132f22705dc1cf6c77f0616103141915
-Size (GDGraph-1.53.tar.gz) = 156777 bytes
+SHA1 (GDGraph-1.54.tar.gz) = 13a022326f3fb587d6ff8b8de2dccc87a34934bc
+RMD160 (GDGraph-1.54.tar.gz) = bea2d35746a3464605d8268bdb0ba628a06b0f39
+SHA512 (GDGraph-1.54.tar.gz) = 0dd0da5fa0e879cf2addcbfdd02ee8e9e6af715b88b451dc29fe5028f30d7ba7fa0e126d07e7bb4f9a63e40b3be95a9cc0f6c061ea8644ba0ee7fdd2a7964fce
+Size (GDGraph-1.54.tar.gz) = 157158 bytes
