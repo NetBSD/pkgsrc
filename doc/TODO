@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17736 2017/09/17 15:31:55 wiz Exp $
+$NetBSD: TODO,v 1.17737 2017/09/17 15:33:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1150,7 +1150,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-NetPacket-1.6.0
 	o p5-Netdisco-2.033001
 	o p5-PAR-1.029
-	o p5-PPIx-EditorTools-0.19
 	o p5-Padre-Plugin-HG-0.17
 	o p5-Padre-Plugin-Kate-0.06
 	o p5-Padre-Plugin-Nopaste-0.08
