@@ -1,13 +1,14 @@
-$NetBSD: distinfo,v 1.65 2017/05/22 16:45:19 jperkin Exp $
+$NetBSD: distinfo,v 1.66 2017/09/17 09:54:52 adam Exp $
 
-SHA1 (Python-2.7.13.tar.xz) = 18a8f30a0356c751b8d0ea6f76e764cab13ee046
-RMD160 (Python-2.7.13.tar.xz) = be09518cdc335314de1c5ebe181690082ce780d7
-SHA512 (Python-2.7.13.tar.xz) = f37c9a28ce129d01e63c84d7db627a06402854578f62d17927334ea21ede318e04bbf66e890e3f47c85333e6b19f6e5581fb3f3e27efd24be27017d1b6529c4b
-Size (Python-2.7.13.tar.xz) = 12495628 bytes
+SHA1 (Python-2.7.14.tar.xz) = cf146474fc988b4b6b53fdd81b71c2815873b469
+RMD160 (Python-2.7.14.tar.xz) = 816553f988c661cfe31b6e89a513fdfbf87963d5
+SHA512 (Python-2.7.14.tar.xz) = 78310b0be6388ffa15f29a80afb9ab3c03a572cb094e9da00cfe391afadb51696e41f592eb658d6a31a2f422fdac8a55214a382cbb8cfb43d4a127d5b35ea7f9
+Size (Python-2.7.14.tar.xz) = 12576112 bytes
 SHA1 (patch-Include_pyerrors.h) = 0d2cd52d18cc719b895fa32ed7e11c6cb15bae54
 SHA1 (patch-Include_pyport.h) = f3e4ddbc954425a65301465410911222ca471320
 SHA1 (patch-Lib_distutils_unixccompiler.py) = db16c9aca2f29730945f28247b88b18828739bbb
 SHA1 (patch-Lib_multiprocessing_process.py) = 15699bd8ec822bf54a0631102e00e0a34f882803
+SHA1 (patch-Makefile.pre.in) = ceaf34237588b527478ce1f9163c9168382fa201
 SHA1 (patch-Modules___multiprocessing_multiprocessing.h) = 7ca8fe22ba4bdcde6d39dd50fe2e86c25994c146
 SHA1 (patch-Modules___multiprocessing_semaphore.c) = 03b9c33ef38da383d5f7c2c84c17fe38cdd2911e
 SHA1 (patch-Modules__ssl.c) = 6e68f88ad205106691900f091a897ffe0a4c363c
@@ -24,7 +25,6 @@ SHA1 (patch-al) = 541936b79f281db06761f4fa6a65a04e852b02b4
 SHA1 (patch-am) = 25c29f3799cb02db962d5c42d71ec59b4748466f
 SHA1 (patch-an) = 9aad78714c4fe1a21cf66a6627d97d164ecea196
 SHA1 (patch-ao) = 5bcfad96f8e490351160f1a7c1f4ece7706a33fa
-SHA1 (patch-au) = 0ecdb937cbd58e3dbfa6fb94d1af5838619c77fd
 SHA1 (patch-av) = e6aef090b444b455fe351308d251e670329b7dc3
 SHA1 (patch-aw) = d07129531ec1427669092c504c12247206408c2d
 SHA1 (patch-ax) = 8a7a0e5cbfec279a05945dffafea1b1131a76f0e
