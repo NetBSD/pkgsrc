@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3894 2017/09/17 12:53:07 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3895 2017/09/17 12:56:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5456,3 +5456,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Parse-Yapp to 1.21 [wiz 2017-09-17]
 	Updated devel/p5-Perl-Critic to 1.130 [wiz 2017-09-17]
 	Updated devel/p5-Perl-Tidy to 20170521 [wiz 2017-09-17]
+	Updated devel/p5-PerlIO-gzip to 0.20 [wiz 2017-09-17]
