@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:28:22 agc Exp $
+$NetBSD: distinfo,v 1.4 2017/09/17 10:41:51 wiz Exp $
 
-SHA1 (IO-Tee-0.64.tar.gz) = 29314311318e3e0bee01623a23eda4f1ba629b76
-RMD160 (IO-Tee-0.64.tar.gz) = 467e0816b73af545d69c4854ffd20c57dc3ac341
-SHA512 (IO-Tee-0.64.tar.gz) = 9473a9ce3222ee6998cc53851a34051a9ae5990b9c514b5e5d322832d76f0e20d7af51bf7f06603ad927ab9789e5ab10da7a0693e4867112cd3e1dc1ca25d017
-Size (IO-Tee-0.64.tar.gz) = 5039 bytes
+SHA1 (IO-Tee-0.65.tar.gz) = a445362330d19d528daecfd195eb8145ac98b0fa
+RMD160 (IO-Tee-0.65.tar.gz) = 6d7ed7990fd2bcaea6e1a50fb51e5295f100ea58
+SHA512 (IO-Tee-0.65.tar.gz) = f0f2f069c9c43098fc8fb343ef3a701e8ea5d6171a7f86b3c296f542435b1305f263085ede07431cfe34ccf02d845c8f3719ddf1eb6fe0d8def0c730f8e97236
+Size (IO-Tee-0.65.tar.gz) = 12842 bytes
