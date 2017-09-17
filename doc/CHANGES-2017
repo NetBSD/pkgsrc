@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3841 2017/09/17 08:10:11 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3842 2017/09/17 08:11:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5398,3 +5398,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated biology/p5-Bio-ASN1-EntrezGene to 1.72 [wiz 2017-09-17]
 	Updated chat/p5-POE-Component-IRC to 6.90 [wiz 2017-09-17]
 	Updated comms/p5-Asterisk to 1.08 [wiz 2017-09-17]
+	Updated converters/p5-JSON-MaybeXS to 1.003009 [wiz 2017-09-17]
