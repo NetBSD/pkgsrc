@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.499 2017/09/17 15:59:56 wiz Exp $
+# $NetBSD: Makefile,v 1.500 2017/09/17 16:09:04 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -228,6 +228,7 @@ SUBDIR+=	p5-Mail-Ezmlm
 SUBDIR+=	p5-Mail-IMAPClient
 SUBDIR+=	p5-Mail-ListDetector
 SUBDIR+=	p5-Mail-Mbox-MessageParser
+SUBDIR+=	p5-Mail-Message
 SUBDIR+=	p5-Mail-Milter
 SUBDIR+=	p5-Mail-POP3Client
 SUBDIR+=	p5-Mail-RFC822-Address
