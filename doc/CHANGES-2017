@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3900 2017/09/17 13:02:09 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3901 2017/09/17 13:07:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5462,3 +5462,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Regexp-Assemble to 0.38 [wiz 2017-09-17]
 	Updated devel/p5-Regexp-Parser to 0.22 [wiz 2017-09-17]
 	Updated devel/p5-Return-MultiLevel to 0.05 [wiz 2017-09-17]
+	Updated devel/p5-Safe-Isa to 1.000006 [wiz 2017-09-17]
