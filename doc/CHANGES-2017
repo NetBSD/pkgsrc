@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3967 2017/09/17 21:07:57 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3968 2017/09/17 21:34:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5531,3 +5531,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/p5-NetAddr-MAC to 0.95 [wiz 2017-09-17]
 	Updated net/p5-NetPacket to 1.6.0 [wiz 2017-09-17]
 	Updated net/p5-Nmap-Parser to 1.360 [wiz 2017-09-17]
+	Updated net/p5-SNMP-Info to 3.37 [wiz 2017-09-17]
