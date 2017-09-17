@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/04/10 05:31:05 mef Exp $
+$NetBSD: distinfo,v 1.4 2017/09/17 10:20:36 wiz Exp $
 
-SHA1 (ExtUtils-MakeMaker-CPANfile-0.07.tar.gz) = 97185c62b95dca040a33bde6deec3060d00673f6
-RMD160 (ExtUtils-MakeMaker-CPANfile-0.07.tar.gz) = 0a05dcb5c7988ce87057270dac22405573121663
-SHA512 (ExtUtils-MakeMaker-CPANfile-0.07.tar.gz) = 4a40428f27f37203fac922c802ac9f774fbba4790a5c106a6cecce444be1072c9010a9c53ac3232bdcf38a84790b6defa32696dd6ef46da1e6506b5179ac2192
-Size (ExtUtils-MakeMaker-CPANfile-0.07.tar.gz) = 11354 bytes
+SHA1 (ExtUtils-MakeMaker-CPANfile-0.08.tar.gz) = 79e86f7ef35e4538dff9fac3ff544c827c4e9499
+RMD160 (ExtUtils-MakeMaker-CPANfile-0.08.tar.gz) = 3b541307a311301ce0bf1249439041ef2be4b1ca
+SHA512 (ExtUtils-MakeMaker-CPANfile-0.08.tar.gz) = ac2cd88843d88954fdd1a6ff2c6277238a1eeddc0e9e0693eee3920c93e67f9b6e43f4b96d3471b5d4ff2ae6dde93216de2a85ee242fb3fd68c6dc134ba4923a
+Size (ExtUtils-MakeMaker-CPANfile-0.08.tar.gz) = 11645 bytes
