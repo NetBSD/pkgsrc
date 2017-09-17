@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:28:58 agc Exp $
+$NetBSD: distinfo,v 1.4 2017/09/17 09:32:22 wiz Exp $
 
-SHA1 (circular-require-0.11.tar.gz) = d33c9b715834ca4bc5d6c4cadccaf57c25b74729
-RMD160 (circular-require-0.11.tar.gz) = f3fdc79c01c08742a765ae860641d150a5c9039c
-SHA512 (circular-require-0.11.tar.gz) = 63f4af2ada88e45efb79cf245e826d13fb125b269cf739ce71bec4c692c624fb085cd34deb555341dfa2bb71b7827f63f3997a17429f398bbbe1a7503e1834dd
-Size (circular-require-0.11.tar.gz) = 16625 bytes
+SHA1 (circular-require-0.12.tar.gz) = d8a5c7eb4a2ea8cb4a687d3a216e28fc37321114
+RMD160 (circular-require-0.12.tar.gz) = d74abda3419c7f382b3e2007dc348507daa8ce22
+SHA512 (circular-require-0.12.tar.gz) = f07a3dacbdf63d3be829d142ce55b61216e2eb64ec9f52cb58764758dd8dc2d48facd5ca37acf3610f3b4ae3545a5dbff0ffe24afc547e0ff9b9e8d529393047
+Size (circular-require-0.12.tar.gz) = 18614 bytes
