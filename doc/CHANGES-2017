@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3888 2017/09/17 11:55:12 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3889 2017/09/17 12:03:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5449,3 +5449,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Params-Classify to 0.015 [wiz 2017-09-17]
 	Updated devel/p5-Test-Differences to 0.6400nb3 [wiz 2017-09-17]
 	Updated devel/p5-Parse-ErrorString-Perl to 0.27 [wiz 2017-09-17]
+	Updated math/py-sympy to 1.1.1 [adam 2017-09-17]
+	Updated multimedia/mkvtoolnix to 15.0.0 [adam 2017-09-17]
