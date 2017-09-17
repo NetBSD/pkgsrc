@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/09/17 13:23:04 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/17 13:28:42 wiz Exp $
 
 DISTNAME=		Test2-Suite-0.000077
 PKGNAME=		p5-${DISTNAME}
@@ -12,8 +12,8 @@ LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-Importer-[0-9]*:../../devel/p5-Importer
 DEPENDS+=		p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
+DEPENDS+=		p5-Sub-Info-[0-9]*:../../devel/p5-Sub-Info
 # TEST_DEPENDS
-BUILD_DEPENDS+=		p5-Sub-Info-[0-9]*:../../devel/p5-Sub-Info
 BUILD_DEPENDS+=		p5-Term-Table-[0-9]*:../../devel/p5-Term-Table
 
 PERL5_PACKLIST=		auto/Test2/Suite/.packlist
