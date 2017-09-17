@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3852 2017/09/17 08:47:39 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3853 2017/09/17 08:50:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5407,3 +5407,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/p5-DBM-Deep to 2.0014 [wiz 2017-09-17]
 	Updated databases/p5-Fsdb to 2.63 [wiz 2017-09-17]
 	Updated databases/p5-MARC-Record to 2.0.7 [wiz 2017-09-17]
+	Updated databases/p5-Parse-Dia-SQL to 0.30 [wiz 2017-09-17]
