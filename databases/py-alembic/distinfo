@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/17 04:00:15 minskim Exp $
+
+SHA1 (alembic-0.9.5.tar.gz) = 25df8e5085ed47a87d6af47ae906f89079123d5c
+RMD160 (alembic-0.9.5.tar.gz) = 46ef9e3d83835e13a85bdb9392ef91af5a7be535
+SHA512 (alembic-0.9.5.tar.gz) = 7588a681a6cf50a58ad697cb879d465d259880a473647d598242609c6321a8be7f53fc0d9a24fe976c4c65750eb0acc1a8e60253d4ccda33c87319ac9985e8b8
+Size (alembic-0.9.5.tar.gz) = 990808 bytes
