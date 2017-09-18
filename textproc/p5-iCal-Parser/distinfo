@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:59:59 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/09/18 12:49:43 wiz Exp $
 
-SHA1 (iCal-Parser-1.20.tar.gz) = d618836402e04f8d143d52bcc59b26744e3dc48e
-RMD160 (iCal-Parser-1.20.tar.gz) = e9a166de44567c3edaa33bb14e9abe74b6256ed3
-SHA512 (iCal-Parser-1.20.tar.gz) = 7ac0b34bdf50de999479d69d85bd37020ef06600468d3fa7d591476cd50c4784e8e6c1dfee569d6bd08ae2292fc5533228253520963aa2ba312c3a35ea16ae7d
-Size (iCal-Parser-1.20.tar.gz) = 58530 bytes
+SHA1 (iCal-Parser-1.21.tar.gz) = a8cac0230f74636e37978625d433d0732d9294c7
+RMD160 (iCal-Parser-1.21.tar.gz) = e47f2367fbb37e74b71c09e053e0799da58f4756
+SHA512 (iCal-Parser-1.21.tar.gz) = 4143b6bb949b8054635eaa4dcd1bcc2c11b8dd85f69dfe3edbcae615544e24ca75a2bb5039e6a262695e1c8df4487484183ed793774bc7ae9e7c082a91ea2d9a
+Size (iCal-Parser-1.21.tar.gz) = 48458 bytes
