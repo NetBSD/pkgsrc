@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2017/09/08 02:38:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.69 2017/09/18 09:53:02 maya Exp $
 #
 
 DISTNAME=		swfdec-0.8.4
-PKGREVISION=		52
+PKGREVISION=		53
 CATEGORIES=		multimedia
 MASTER_SITES=		https://swfdec.freedesktop.org/download/swfdec/0.8/
 

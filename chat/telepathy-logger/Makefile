@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2017/09/04 18:00:50 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2017/09/18 09:52:56 maya Exp $
 
 DISTNAME=	telepathy-logger-0.2.7
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-logger/
 EXTRACT_SUFX=	.tar.bz2

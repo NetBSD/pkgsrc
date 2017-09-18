@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2017/08/01 14:59:01 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2017/09/18 09:53:25 maya Exp $
 
 DISTNAME=	cyrus-imapd-2.4.18
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	http://cyrusimap.org/releases/
 MASTER_SITES+=	ftp://ftp.cyrusimap.org/cyrus-imapd/
