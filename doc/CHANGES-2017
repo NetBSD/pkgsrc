@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3985 2017/09/18 02:48:49 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3986 2017/09/18 03:42:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5547,3 +5547,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added databases/ruby-mysql28 version 2.8.2 [taca 2017-09-18]
 	Updated databases/ruby-dbd-mysql to 0.4.4nb1 [taca 2017-09-18]
 	Updated databases/ruby-mysql to 2.9.14 [taca 2017-09-18]
+	Updated databases/ruby-hiera to 3.4.1 [taca 2017-09-18]
