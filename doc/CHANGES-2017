@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4004 2017/09/18 12:01:21 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4005 2017/09/18 12:02:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5565,4 +5565,9 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/p5-Sys-Syslog to 0.35 [wiz 2017-09-18]
 	Updated textproc/p5-Data-FormValidator to 4.88 [wiz 2017-09-18]
 	Updated textproc/p5-Lingua-EN-Inflect to 1.902 [wiz 2017-09-18]
+<<<<<<< CHANGES-2017
+	Updated textproc/p5-Lingua-EN-Syllable to 0.30 [wiz 2017-09-18]
+=======
 	Updated textproc/py-lxml to 4.0.0 [adam 2017-09-18]
+>>>>>>> 1.4004
+	Updated textproc/p5-PDF-Table to 0.9.13 [wiz 2017-09-18]
