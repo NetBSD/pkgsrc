@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4006 2017/09/18 12:03:29 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4007 2017/09/18 12:05:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5568,3 +5568,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-Lingua-EN-Syllable to 0.30 [wiz 2017-09-18]
 	Updated textproc/py-lxml to 4.0.0 [adam 2017-09-18]
 	Updated textproc/p5-PDF-Table to 0.9.13 [wiz 2017-09-18]
+	Updated textproc/p5-String-CamelCase to 0.03 [wiz 2017-09-18]
