@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17742 2017/09/18 17:04:43 adam Exp $
+$NetBSD: TODO,v 1.17743 2017/09/18 23:04:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -7,7 +7,7 @@ Suggested new packages
 	http://gnats.NetBSD.org/summary/category/pkg.html
 
 	Any complete, polished packages in pkgsrc-wip (ditto)
-	http://www.pkgsrc.org/wip/
+	https://www.pkgsrc.org/wip/
 
 	Any interesting packages in FreeBSD's ports.
 	http://freshports.org/
