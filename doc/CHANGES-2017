@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3974 2017/09/18 00:55:49 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3975 2017/09/18 00:58:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5538,3 +5538,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/p5-Net-SSH to 2.14 [wiz 2017-09-17]
 	Updated devel/ruby-curses to 1.2.4 [taca 2017-09-18]
 	Updated devel/ruby-simplecov to 0.15.1 [taca 2017-09-18]
+	Updated misc/ruby-mini_portile2 to 2.3.0 [taca 2017-09-18]
