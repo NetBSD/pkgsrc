@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.29 2017/03/20 16:33:59 taca Exp $
-bin/rabbirc
-bin/rabbit
-bin/rabbit-command
-bin/rabbit-slide
-bin/rabbit-theme
+@comment $NetBSD: PLIST,v 1.30 2017/09/18 05:31:02 taca Exp $
+bin/rabbirc${RUBY_SUFFIX}
+bin/rabbit${RUBY_SUFFIX}
+bin/rabbit-command${RUBY_SUFFIX}
+bin/rabbit-slide${RUBY_SUFFIX}
+bin/rabbit-theme${RUBY_SUFFIX}
 ${RUBY_VENDORLIB}/rabbit/action.rb
 ${RUBY_VENDORLIB}/rabbit/action/basic.rb
 ${RUBY_VENDORLIB}/rabbit/action/radio.rb
@@ -90,6 +90,7 @@ ${RUBY_VENDORLIB}/rabbit/parser/ext/entity.rb
 ${RUBY_VENDORLIB}/rabbit/parser/ext/escape.rb
 ${RUBY_VENDORLIB}/rabbit/parser/ext/image.rb
 ${RUBY_VENDORLIB}/rabbit/parser/ext/inline.rb
+${RUBY_VENDORLIB}/rabbit/parser/ext/rouge.rb
 ${RUBY_VENDORLIB}/rabbit/parser/ext/tex.rb
 ${RUBY_VENDORLIB}/rabbit/parser/ext/video.rb
 ${RUBY_VENDORLIB}/rabbit/parser/image.rb
