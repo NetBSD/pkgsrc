@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.32 2017/09/12 13:40:38 wiz Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.33 2017/09/18 14:25:27 wiz Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -105,7 +105,7 @@
 
   <itemizedlist>
     <listitem><para>Start the commit message with a line that explains the
-    big picture in 50 characters or less. When a commit is for one
+    big picture in 65 characters or less. When a commit is for one
     package, include the name of the package. For updates, include the
     version to which it is updated.</para></listitem>
     <listitem><para>Leave the next line empty.</para></listitem>
