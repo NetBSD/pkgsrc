@@ -7167,7 +7167,7 @@ message function as a summary that can be read without the rest, such as is
 commonly done with "git log --oneline". For this reason, we have the following
 guidelines for pkgsrc commit messages:
 
-  * Start the commit message with a line that explains the big picture in 50
+  * Start the commit message with a line that explains the big picture in 65
     characters or less. When a commit is for one package, include the name of
     the package. For updates, include the version to which it is updated.
 
