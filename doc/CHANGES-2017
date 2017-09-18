@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3975 2017/09/18 00:58:53 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3976 2017/09/18 01:00:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5539,3 +5539,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-curses to 1.2.4 [taca 2017-09-18]
 	Updated devel/ruby-simplecov to 0.15.1 [taca 2017-09-18]
 	Updated misc/ruby-mini_portile2 to 2.3.0 [taca 2017-09-18]
+	Updated misc/ruby-progressbar to 1.8.3 [taca 2017-09-18]
