@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.141 2017/09/09 22:48:09 joerg Exp $
+# $NetBSD: Makefile,v 1.142 2017/09/18 09:53:34 maya Exp $
 
 DISTNAME=	seahorse-2.32.0
-PKGREVISION=	44
+PKGREVISION=	45
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/2.32/}
 EXTRACT_SUFX=	.tar.bz2
