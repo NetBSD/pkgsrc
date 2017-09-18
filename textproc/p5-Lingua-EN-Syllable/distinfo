@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:59:44 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/09/18 12:01:15 wiz Exp $
 
-SHA1 (Lingua-EN-Syllable-0.251.tar.gz) = 9d47a20e9e389e89b555ce1ea3d03ae07eceeb0c
-RMD160 (Lingua-EN-Syllable-0.251.tar.gz) = cb3e62c5ca38416b6ade52e8d6a6076849520006
-SHA512 (Lingua-EN-Syllable-0.251.tar.gz) = f95aa74e01276257813ec9f31e7b09d0f10e61e1cefffb9f769791eecac50802af6ee4026b0538495c784eed57dbd2189f0d42fc4e81a793820cb737d64dc70b
-Size (Lingua-EN-Syllable-0.251.tar.gz) = 3293 bytes
+SHA1 (Lingua-EN-Syllable-0.30.tar.gz) = bec28c6e58f328decc57ac3c608a673d158d0967
+RMD160 (Lingua-EN-Syllable-0.30.tar.gz) = 099cd8fd8805d2949ea040e0ad4ba8b8ff6c6f01
+SHA512 (Lingua-EN-Syllable-0.30.tar.gz) = 343591fc01eac98d61684b3a3ecdfd57faa7e532ef0c1fa5e2b2878468f34760e66e2b7e7490dac33e2901eb16288a8aad9c854c5fec9988444d3695c97b7cea
+Size (Lingua-EN-Syllable-0.30.tar.gz) = 11523 bytes
