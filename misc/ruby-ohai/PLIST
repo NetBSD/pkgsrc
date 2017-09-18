@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2017/09/10 14:43:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2017/09/18 04:18:34 taca Exp $
 bin/ohai${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -20,6 +20,7 @@ ${GEM_LIBDIR}/lib/ohai/hints.rb
 ${GEM_LIBDIR}/lib/ohai/loader.rb
 ${GEM_LIBDIR}/lib/ohai/log.rb
 ${GEM_LIBDIR}/lib/ohai/mash.rb
+${GEM_LIBDIR}/lib/ohai/mixin/azure_metadata.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/command.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/constant_helper.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/dmi_decode.rb
@@ -179,6 +180,7 @@ ${GEM_LIBDIR}/spec/data/plugins/lslpp.output
 ${GEM_LIBDIR}/spec/data/plugins/lua.output
 ${GEM_LIBDIR}/spec/data/plugins/messages.rb
 ${GEM_LIBDIR}/spec/data/plugins/node.output
+${GEM_LIBDIR}/spec/data/plugins/pacman.output
 ${GEM_LIBDIR}/spec/data/plugins/perl.output
 ${GEM_LIBDIR}/spec/data/plugins/php.output
 ${GEM_LIBDIR}/spec/data/plugins/pkg-query.output
@@ -207,6 +209,7 @@ ${GEM_LIBDIR}/spec/unit/config_spec.rb
 ${GEM_LIBDIR}/spec/unit/dsl/plugin_spec.rb
 ${GEM_LIBDIR}/spec/unit/hints_spec.rb
 ${GEM_LIBDIR}/spec/unit/loader_spec.rb
+${GEM_LIBDIR}/spec/unit/mixin/azure_metadata_spec.rb
 ${GEM_LIBDIR}/spec/unit/mixin/command_spec.rb
 ${GEM_LIBDIR}/spec/unit/mixin/ec2_metadata_spec.rb
 ${GEM_LIBDIR}/spec/unit/mixin/softlayer_metadata_spec.rb
