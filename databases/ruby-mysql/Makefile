@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2015/05/19 13:32:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.39 2017/09/18 02:48:08 taca Exp $
 #
 
-DISTNAME=	ruby-mysql-2.9.13
-PKGNAME=	${RUBY_PKGPREFIX}-mysql-2.9.13
+DISTNAME=	ruby-mysql-2.9.14
+PKGNAME=	${RUBY_PKGPREFIX}-mysql-2.9.14
 CATEGORIES=	databases ruby
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tmtm/}
 GITHUB_PROJECT=	ruby-mysql
