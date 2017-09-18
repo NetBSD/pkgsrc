@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.73 2017/04/22 21:03:13 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.74 2017/09/18 09:53:01 maya Exp $
 
 BUILDLINK_TREE+=	evolution
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	evolution
 EVOLUTION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.evolution+=	evolution>=2.8.0
-BUILDLINK_ABI_DEPENDS.evolution+=	evolution>=2.32.3nb44
+BUILDLINK_ABI_DEPENDS.evolution+=	evolution>=2.32.3nb45
 BUILDLINK_PKGSRCDIR.evolution?=	../../mail/evolution
 
 .include "../../devel/nspr/buildlink3.mk"

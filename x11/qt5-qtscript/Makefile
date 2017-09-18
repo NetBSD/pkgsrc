@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2017/09/12 13:52:00 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2017/09/18 09:53:09 maya Exp $
 
 DISTNAME=	qtscript-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtscript-${QTVERSION}
-PKGREVISION=	13
+PKGREVISION=	14
 COMMENT=	Qt5 module for script
 
 BUILD_TARGET=		sub-src
