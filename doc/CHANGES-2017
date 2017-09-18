@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4014 2017/09/18 12:47:12 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4015 2017/09/18 12:49:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5576,3 +5576,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-XML-Tiny to 2.07 [wiz 2017-09-18]
 	Updated textproc/p5-YAML-LibYAML to 0.66 [wiz 2017-09-18]
 	Updated textproc/p5-ack to 2.18 [wiz 2017-09-18]
+	Updated textproc/p5-iCal-Parser to 1.21 [wiz 2017-09-18]
