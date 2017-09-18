@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/09/05 15:49:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/09/18 12:19:55 taca Exp $
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/README.md
 ${CT_WEBDIR}/assets/ace/composer.json
@@ -1209,6 +1209,9 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Framework/FrameworkAwareInterface.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Framework/FrameworkAwareTrait.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Framework/ScopeAwareTrait.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/HttpKernel/Bundle/ContaoModuleBundle.php
+${CT_WEBDIR}/vendor/contao/core-bundle/src/HttpKernel/Header/HeaderStorageInterface.php
+${CT_WEBDIR}/vendor/contao/core-bundle/src/HttpKernel/Header/MemoryHeaderStorage.php
+${CT_WEBDIR}/vendor/contao/core-bundle/src/HttpKernel/Header/NativeHeaderStorage.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Image/ImageFactory.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Image/ImageFactoryInterface.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Image/ImageSizes.php
@@ -2105,6 +2108,7 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icon
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/below.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/burger.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/changelog.svg
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/chevron-down.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/clipboard.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/collapse.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/contao.svg
@@ -2138,6 +2142,7 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icon
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/error_404.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/error_404_1.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/exit.svg
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/exit_dark.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/expand.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/expand_.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/featured.svg
@@ -2210,6 +2215,7 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icon
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/placeholder.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/preview.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/profile.svg
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/profile_dark.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/published.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/redirect.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/redirect_1.svg
@@ -5425,6 +5431,11 @@ ${CT_WEBDIR}/vendor/symfony/monolog-bundle/Resources/config/schema/monolog-1.0.x
 ${CT_WEBDIR}/vendor/symfony/monolog-bundle/SwiftMailer/MessageFactory.php
 ${CT_WEBDIR}/vendor/symfony/monolog-bundle/composer.json
 ${CT_WEBDIR}/vendor/symfony/monolog-bundle/phpunit.xml.dist
+${CT_WEBDIR}/vendor/symfony/polyfill-apcu/Apcu.php
+${CT_WEBDIR}/vendor/symfony/polyfill-apcu/LICENSE
+${CT_WEBDIR}/vendor/symfony/polyfill-apcu/README.md
+${CT_WEBDIR}/vendor/symfony/polyfill-apcu/bootstrap.php
+${CT_WEBDIR}/vendor/symfony/polyfill-apcu/composer.json
 ${CT_WEBDIR}/vendor/symfony/polyfill-intl-icu/LICENSE
 ${CT_WEBDIR}/vendor/symfony/polyfill-intl-icu/README.md
 ${CT_WEBDIR}/vendor/symfony/polyfill-intl-icu/bootstrap.php
