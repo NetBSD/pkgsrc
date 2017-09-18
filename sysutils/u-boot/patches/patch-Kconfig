@@ -1,0 +1,10 @@
+$NetBSD: patch-Kconfig,v 1.1 2017/09/18 23:07:49 jmcneill Exp $
+
+--- Kconfig.orig	2017-07-10 17:07:38.000000000 +0000
++++ Kconfig
+@@ -367,5 +367,3 @@ source "fs/Kconfig"
+ source "lib/Kconfig"
+ 
+ source "test/Kconfig"
+-
+-source "scripts/Kconfig"
