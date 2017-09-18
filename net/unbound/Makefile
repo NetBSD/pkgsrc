@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2017/08/21 11:14:18 he Exp $
+# $NetBSD: Makefile,v 1.51 2017/09/18 13:02:39 he Exp $
 
-DISTNAME=	unbound-1.6.5
+DISTNAME=	unbound-1.6.6
 CATEGORIES=	net
 MASTER_SITES=	http://www.unbound.net/downloads/
 
@@ -98,4 +98,6 @@ PKG_USERS=	${UNBOUND_USER}:${UNBOUND_GROUP}
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+BUILDLINK_API_DEPENDS.flex+=	flex>=2.6.4
+.include "../../devel/flex/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
