@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2017/08/31 15:24:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/09/18 00:55:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -79,6 +79,7 @@ ${GEM_LIBDIR}/spec/1_8_fallbacks_spec.rb
 ${GEM_LIBDIR}/spec/command_guesser_spec.rb
 ${GEM_LIBDIR}/spec/config_loader_spec.rb
 ${GEM_LIBDIR}/spec/configuration_spec.rb
+${GEM_LIBDIR}/spec/defaults_spec.rb
 ${GEM_LIBDIR}/spec/deleted_source_spec.rb
 ${GEM_LIBDIR}/spec/faked_project/Gemfile
 ${GEM_LIBDIR}/spec/faked_project/Rakefile
