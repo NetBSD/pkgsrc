@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.69 2017/09/08 09:51:19 jaapb Exp $
+# $NetBSD: Makefile,v 1.70 2017/09/18 09:53:16 maya Exp $
 #
 
 DISTNAME=	frama-c-Phosphorus-20170501
 PKGNAME=	${DISTNAME:S/-Phosphorus//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://frama-c.com/download/
 
