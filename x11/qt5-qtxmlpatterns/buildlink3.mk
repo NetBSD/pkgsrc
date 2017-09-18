@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2017/04/22 21:03:23 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2017/09/18 09:53:10 maya Exp $
 
 BUILDLINK_TREE+=	qt5-qtxmlpatterns
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt5-qtxmlpatterns
 QT5_QTXMLPATTERNS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-qtxmlpatterns+=	qt5-qtxmlpatterns>=5.5.1
-BUILDLINK_ABI_DEPENDS.qt5-qtxmlpatterns+=	qt5-qtxmlpatterns>=5.5.1nb7
+BUILDLINK_ABI_DEPENDS.qt5-qtxmlpatterns+=	qt5-qtxmlpatterns>=5.5.1nb8
 BUILDLINK_PKGSRCDIR.qt5-qtxmlpatterns?=	../../x11/qt5-qtxmlpatterns
 
 BUILDLINK_INCDIRS.qt5-qtxmlpatterns+=	qt5/include

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2017/06/19 20:42:16 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2017/09/18 09:53:15 maya Exp $
 
 DISTNAME=	apr-util-1.6.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=apr/}
 EXTRACT_SUFX=	.tar.bz2

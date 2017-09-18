@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2017/04/22 21:03:12 adam Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/18 09:53:01 maya Exp $
 
 DISTNAME=	coreclr-1.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dotnet/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
