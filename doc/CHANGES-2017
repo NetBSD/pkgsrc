@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4023 2017/09/18 19:31:33 morr Exp $
+$NetBSD: CHANGES-2017,v 1.4024 2017/09/18 22:53:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5588,3 +5588,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-daemonize to 2.4.7 [adam 2017-09-18]
 	Updated databases/py-python-sql to 0.9 [adam 2017-09-18]
 	Updated net/haproxy to 1.7.9 [morr 2017-09-18]
+	Removed games/wtfubar [wiz 2017-09-18]
