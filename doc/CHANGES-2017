@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4011 2017/09/18 12:41:37 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4012 2017/09/18 12:42:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5573,3 +5573,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/contao44 to 4.4.5 [taca 2017-09-18]
 	Updated textproc/p5-Text-Reflow to 1.17 [wiz 2017-09-18]
 	Updated textproc/p5-Unicode-CaseFold to 1.01 [wiz 2017-09-18]
+	Updated textproc/p5-XML-Tiny to 2.07 [wiz 2017-09-18]
