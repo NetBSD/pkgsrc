@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2017/09/18 02:04:47 taca Exp $
-
-SHA1 (ruby-mysql-ext-2.9.13.gem) = e17ec42e870c92d9688196b8e293f990e6e9973d
-RMD160 (ruby-mysql-ext-2.9.13.gem) = 4793e314911c4d9cf0c7cc08075e301a09aa79e0
-SHA512 (ruby-mysql-ext-2.9.13.gem) = e8e11f31e2d4e7bddc65e7856d6ebe67d93b1e72e3fcb840bcf85512a7db5a262edf5b71d54e79ae7cebfa4642392215ad981e2c1e8e7fdcda13ad8354a24162
-Size (ruby-mysql-ext-2.9.13.gem) = 49152 bytes
