@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3981 2017/09/18 02:05:57 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3982 2017/09/18 02:37:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5545,3 +5545,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/ruby-faraday_middleware to 0.12.2 [taca 2017-09-18]
 	Updated www/ruby-websocket-driver to 0.7.0 [taca 2017-09-18]
 	Added databases/ruby-mysql-ext version 2.9.13 [taca 2017-09-18]
+	Added databases/ruby-mysql28 version 2.8.2 [taca 2017-09-18]
