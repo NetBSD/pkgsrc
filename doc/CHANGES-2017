@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4021 2017/09/18 17:12:30 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4022 2017/09/18 17:44:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5585,3 +5585,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/py-numexpr to 2.6.4 [adam 2017-09-18]
 	Updated devel/py-atpublic to 1.0 [adam 2017-09-18]
 	Updated geography/py-geojson to 2.2.0 [adam 2017-09-18]
+	Updated devel/py-daemonize to 2.4.7 [adam 2017-09-18]
+	Updated databases/py-python-sql to 0.9 [adam 2017-09-18]
