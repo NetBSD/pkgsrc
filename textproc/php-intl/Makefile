@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2017/05/05 08:23:01 maya Exp $
+# $NetBSD: Makefile,v 1.31 2017/09/18 09:53:36 maya Exp $
 
 MODNAME=		intl
 CATEGORIES+=		textproc
 COMMENT=		PHP extension for i18n
-PKGREVISION=		1
+PKGREVISION=		2
 LICENSE=		php
 
 USE_LANGUAGES=		c c++11
