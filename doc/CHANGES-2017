@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3977 2017/09/18 01:02:19 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3978 2017/09/18 01:03:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5541,3 +5541,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/ruby-mini_portile2 to 2.3.0 [taca 2017-09-18]
 	Updated misc/ruby-progressbar to 1.8.3 [taca 2017-09-18]
 	Updated net/ruby-slack-api to 1.6.0 [taca 2017-09-18]
+	Updated sysutils/capistrano to 3.9.1 [taca 2017-09-18]
