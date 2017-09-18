@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/02/27 03:19:59 wen Exp $
+$NetBSD: distinfo,v 1.7 2017/09/18 12:40:30 wiz Exp $
 
-SHA1 (Text-Reflow-1.11.tar.gz) = 8af1793f333c40e4dedf1fe8b38a7cbb4546d355
-RMD160 (Text-Reflow-1.11.tar.gz) = 1baf9c3bf3a02de05165ccdeab87c736badf6c93
-SHA512 (Text-Reflow-1.11.tar.gz) = 70637b7d042b564ca10f1a6d6ef67834e8b8579a75f8458db90378dc6d72fdcaf6de0cdd10e65e5e113f36c5bc8eb935732ca969153af08bb9b8018843900188
-Size (Text-Reflow-1.11.tar.gz) = 16120 bytes
+SHA1 (Text-Reflow-1.17.tar.gz) = 006d3e7d2a58fe218d3d63413729cdf29bda327d
+RMD160 (Text-Reflow-1.17.tar.gz) = 9f5b150f117f2f6836fc1fb6e554937427006d5a
+SHA512 (Text-Reflow-1.17.tar.gz) = 6f962241b1d2bb780271fa0c8264b31075694abefbb14d700e948c24ba8ed632778be01207a1d73780b9947ea227ebafa7f5b67d48c88a22ea43e4e45f5f7e1e
+Size (Text-Reflow-1.17.tar.gz) = 16651 bytes
