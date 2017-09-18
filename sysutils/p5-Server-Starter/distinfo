@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2017/06/06 23:58:52 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2017/09/18 11:53:39 wiz Exp $
 
-SHA1 (Server-Starter-0.32.tar.gz) = b2c6178ef3b323bd251bf9774f05320840dca461
-RMD160 (Server-Starter-0.32.tar.gz) = c4c8275c799b1115ba678bb1398b8bd6502fd9e8
-SHA512 (Server-Starter-0.32.tar.gz) = 3bcf985e14f9af4578400c80cd8bcb4018f1a6d0be022539fd3bfb6cc8d50b8fa903851b38a7ce8ac05c9c35d4a64076414f8bea283ef227911f6fda41e559ea
-Size (Server-Starter-0.32.tar.gz) = 23105 bytes
+SHA1 (Server-Starter-0.33.tar.gz) = c44aba9273b1e50937cf523eb2fc438de4d1b9bc
+RMD160 (Server-Starter-0.33.tar.gz) = bc771bb4e26af76c44bb4afe485629785d712ad7
+SHA512 (Server-Starter-0.33.tar.gz) = 1892723ca113cb2c269ce330881dce9010b4ced212f85adefaaa8dfbe90ea6ebcf319c12f0e3384da3a07740a4e2a1d84bb006f44d77fec62d9bc0aeeaa8ccf3
+Size (Server-Starter-0.33.tar.gz) = 23335 bytes
 SHA1 (patch-Build.PL) = d120ec1e80edffbbbc413be632c679a4dce1f873
