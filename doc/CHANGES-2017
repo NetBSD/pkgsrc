@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3990 2017/09/18 04:35:20 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3991 2017/09/18 05:31:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5552,3 +5552,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/ruby-chef-config to 13.4.24 [taca 2017-09-18]
 	Updated sysutils/ruby-chef to 13.4.24 [taca 2017-09-18]
 	Updated sysutils/ruby-chef-zero to 13.1.0 [taca 2017-09-18]
+	Updated graphics/rabbit to 2.2.1 [taca 2017-09-18]
