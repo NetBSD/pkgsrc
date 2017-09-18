@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/03/12 09:59:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/09/18 11:59:12 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -14,16 +14,20 @@ ${PYSITELIB}/lxml/__init__.pyo
 ${PYSITELIB}/lxml/_elementpath.py
 ${PYSITELIB}/lxml/_elementpath.pyc
 ${PYSITELIB}/lxml/_elementpath.pyo
+${PYSITELIB}/lxml/_elementpath.so
 ${PYSITELIB}/lxml/builder.py
 ${PYSITELIB}/lxml/builder.pyc
 ${PYSITELIB}/lxml/builder.pyo
+${PYSITELIB}/lxml/builder.so
 ${PYSITELIB}/lxml/cssselect.py
 ${PYSITELIB}/lxml/cssselect.pyc
 ${PYSITELIB}/lxml/cssselect.pyo
 ${PYSITELIB}/lxml/doctestcompare.py
 ${PYSITELIB}/lxml/doctestcompare.pyc
 ${PYSITELIB}/lxml/doctestcompare.pyo
+${PYSITELIB}/lxml/etree.h
 ${PYSITELIB}/lxml/etree.so
+${PYSITELIB}/lxml/etree_api.h
 ${PYSITELIB}/lxml/html/ElementSoup.py
 ${PYSITELIB}/lxml/html/ElementSoup.pyc
 ${PYSITELIB}/lxml/html/ElementSoup.pyo
@@ -45,12 +49,14 @@ ${PYSITELIB}/lxml/html/builder.pyo
 ${PYSITELIB}/lxml/html/clean.py
 ${PYSITELIB}/lxml/html/clean.pyc
 ${PYSITELIB}/lxml/html/clean.pyo
+${PYSITELIB}/lxml/html/clean.so
 ${PYSITELIB}/lxml/html/defs.py
 ${PYSITELIB}/lxml/html/defs.pyc
 ${PYSITELIB}/lxml/html/defs.pyo
 ${PYSITELIB}/lxml/html/diff.py
 ${PYSITELIB}/lxml/html/diff.pyc
 ${PYSITELIB}/lxml/html/diff.pyo
+${PYSITELIB}/lxml/html/diff.so
 ${PYSITELIB}/lxml/html/formfill.py
 ${PYSITELIB}/lxml/html/formfill.pyc
 ${PYSITELIB}/lxml/html/formfill.pyo
@@ -63,6 +69,7 @@ ${PYSITELIB}/lxml/html/soupparser.pyo
 ${PYSITELIB}/lxml/html/usedoctest.py
 ${PYSITELIB}/lxml/html/usedoctest.pyc
 ${PYSITELIB}/lxml/html/usedoctest.pyo
+${PYSITELIB}/lxml/includes/__init__.pxd
 ${PYSITELIB}/lxml/includes/__init__.py
 ${PYSITELIB}/lxml/includes/__init__.pyc
 ${PYSITELIB}/lxml/includes/__init__.pyo
