@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4019 2017/09/18 16:54:57 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4020 2017/09/18 17:04:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5581,3 +5581,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/apache24 to 2.4.27nb2 [wiz 2017-09-18]
 	Removed chat/mu-conference [gdt 2017-09-18]
 	Updated graphics/freetype2 to 2.8.1 [adam 2017-09-18]
+	Updated devel/py-test-mock to 1.6.3 [adam 2017-09-18]
+	Updated math/py-numexpr to 2.6.4 [adam 2017-09-18]
