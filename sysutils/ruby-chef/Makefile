@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/06/18 16:24:52 taca Exp $
+# $NetBSD: Makefile,v 1.8 2017/09/18 04:31:38 taca Exp $
 
-DISTNAME=	chef-13.1.31
+DISTNAME=	chef-13.4.24
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,7 +8,8 @@ HOMEPAGE=	https://github.com/opscode/chef
 COMMENT=	Configuration management tool for infrastructure automation
 LICENSE=	apache-2.0
 
-#DEPENDS+=	${RUBY_PKGPREFIX}-chef-config>=13.1.31<13.2:../../sysutils/ruby-chef-config
+DEPENDS+=	${RUBY_PKGPREFIX}-chef-config>=13.4.24<13.5:../../sysutils/ruby-chef-config
+DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-archive>=0.4<1:../../archivers/ruby-mixlib-archive
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-cli>=1.7<2:../../devel/ruby-mixlib-cli
 #DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-log>=1.3<2:../../devel/ruby-mixlib-log
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-authentication>=1.4<2:../../devel/ruby-mixlib-authentication
@@ -39,7 +40,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-proxifier>=1.0<2:../../net/ruby-proxifier
 DEPENDS+=	${RUBY_PKGPREFIX}-bundler>=1.10:../../misc/ruby-bundler
 
 RUBYGEM_OPTIONS+=	--format-executable
-RUBY_VERSIONS_ACCEPTED=	23 24	# www/ruby-ohai
+RUBY_VERSIONS_ACCEPTED=	23 24	# misc/ruby-ohai
 
 pre-configure:
 	cd ${WRKSRC}/bin && ${FIND} . -type f -exec ${CHMOD} ${BINMODE} {} \;
