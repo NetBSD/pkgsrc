@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4001 2017/09/18 11:56:37 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4002 2017/09/18 11:59:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5563,3 +5563,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/p5-Server-Starter to 0.33 [wiz 2017-09-18]
 	Updated sysutils/p5-Sys-SigAction to 0.23 [wiz 2017-09-18]
 	Updated sysutils/p5-Sys-Syslog to 0.35 [wiz 2017-09-18]
+	Updated textproc/p5-Data-FormValidator to 4.88 [wiz 2017-09-18]
