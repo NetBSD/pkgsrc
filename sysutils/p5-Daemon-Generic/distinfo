@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/01/30 14:18:15 mef Exp $
+$NetBSD: distinfo,v 1.2 2017/09/18 11:48:47 wiz Exp $
 
-SHA1 (Daemon-Generic-0.84.tar.gz) = a5100bdd9cfba55b2cdd81c81fce8fa275054548
-RMD160 (Daemon-Generic-0.84.tar.gz) = 28425f13f3dbe736212d1760dcf0bd38bad462dd
-SHA512 (Daemon-Generic-0.84.tar.gz) = eadf060653ec86b982f4388777b15bfcad55635042048d389ba7d88d2de5f778b849a2fabce3524f05e041fc76a51eae4af14e759659616b7d28fb4b657178e0
-Size (Daemon-Generic-0.84.tar.gz) = 15065 bytes
+SHA1 (Daemon-Generic-0.85.tar.gz) = 63dfd94618ec2e19b52d2df295ad5cafde01c285
+RMD160 (Daemon-Generic-0.85.tar.gz) = 379a4ddea85b2af61183f151d65fdd7483a9495e
+SHA512 (Daemon-Generic-0.85.tar.gz) = fe23e58d08013f9b10fd741f40636b44e20e7e8278be6ee6f6eecae59f18810c5d485e85fe56ded0ef23c3318b5a994f6821829a9966398a54b70859d827b9c4
+Size (Daemon-Generic-0.85.tar.gz) = 15101 bytes
