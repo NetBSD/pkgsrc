@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:06 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/09/18 17:35:10 adam Exp $
 
-SHA1 (daemonize-2.2.3.tar.gz) = 20c5b449ec0afa5e8c5db0a9c68eb4f9cc96b364
-RMD160 (daemonize-2.2.3.tar.gz) = 8ad03454b4cf37d0b15e31ee01d1e2032b151a92
-SHA512 (daemonize-2.2.3.tar.gz) = cd7bece2f0d43ba112bb13fd5e5b62f21b3d3cbee7c31068ca72cb8eba2b0aaa4ec78dedc68b4f5a47e8e4873de20e529edb8fe81748a14c02f455635acdce4e
-Size (daemonize-2.2.3.tar.gz) = 4465 bytes
+SHA1 (daemonize-2.4.7.tar.gz) = 3f2b94f29035ac9561c21c40c52b1d6ad889c37a
+RMD160 (daemonize-2.4.7.tar.gz) = ff9997ed1c1157a34593c986e9e74505772c4c09
+SHA512 (daemonize-2.4.7.tar.gz) = b348a35c2953ea5d654a8aa46dfabd822b90f3613c123af7b1a80723ce9bddf79e442fe9ad70e6e657651a599b8bdbdd7d009da98220ad7ff57d514231fa79a3
+Size (daemonize-2.4.7.tar.gz) = 8752 bytes
