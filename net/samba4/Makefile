@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2017/06/27 13:37:16 fhajny Exp $
+# $NetBSD: Makefile,v 1.34 2017/09/18 06:41:46 taca Exp $
 
 DISTNAME=	samba-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/stable/
 
@@ -12,7 +11,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-VERSION=	4.6.4
+VERSION=	4.6.7
 CONFLICTS+=	ja-samba-[0-9]* tdb-[0-9]* winbind-[0-9]*
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
@@ -146,7 +145,7 @@ RCD_SCRIPTS+=	samba nmbd smbd ${WINBINDD_RCD_SCRIPT}
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing paths.
-SUBST_FILES.paths=	${WRKDIR}/adduser.sh ${WRKDIR}/deluser.sh scripts/findsmb.in
+SUBST_FILES.paths=	${WRKDIR}/adduser.sh ${WRKDIR}/deluser.sh
 SUBST_FILES.paths+=	source3/script/findsmb.in source4/heimdal_build/roken.h
 SUBST_STAGE.paths=	post-patch
 SUBST_SED.paths+=	-e 's,@PERL@,${PERL5},g'
