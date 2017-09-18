@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2017/07/10 21:33:15 seb Exp $
+# $NetBSD: Makefile,v 1.71 2017/09/18 09:53:29 maya Exp $
 
 DISTNAME=	aria2-1.32.0
 #PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aria2/}
 EXTRACT_SUFX=	.tar.xz

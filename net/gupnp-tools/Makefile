@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2017/04/22 21:03:49 adam Exp $
+# $NetBSD: Makefile,v 1.56 2017/09/18 09:53:30 maya Exp $
 
 DISTNAME=	gupnp-tools-0.8.9
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gupnp-tools/0.8/}
 EXTRACT_SUFX=	.tar.xz

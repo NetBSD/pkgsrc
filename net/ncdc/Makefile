@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/04/22 21:03:50 adam Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/18 09:53:31 maya Exp $
 
 DISTNAME=	ncdc-1.20
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	https://dev.yorhel.nl/download/
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2017/04/22 21:03:25 adam Exp $
+# $NetBSD: Makefile,v 1.37 2017/09/18 09:53:12 maya Exp $
 #
 
 DISTNAME=	InspIRCd-1.2.0
 PKGNAME=	${DISTNAME:S/InspIRCd/inspircd/}
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	chat
 MASTER_SITES=	http://www.inspircd.org/downloads/
 EXTRACT_SUFX=	.tar.bz2

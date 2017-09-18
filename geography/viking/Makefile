@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.81 2017/09/06 11:52:20 gdt Exp $
+# $NetBSD: Makefile,v 1.82 2017/09/18 09:53:22 maya Exp $
 #
 
 VERSION=		1.6.2
 DISTNAME=		viking-${VERSION}
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=viking/}${VERSION}/
 EXTRACT_SUFX=		.tar.bz2
