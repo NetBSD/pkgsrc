@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.39 2017/03/20 16:33:59 taca Exp $
+$NetBSD: distinfo,v 1.40 2017/09/18 05:31:02 taca Exp $
 
-SHA1 (rabbit-2.2.0.tar.gz) = cd53b11128d8076b7241cc1f35e84e57713f7571
-RMD160 (rabbit-2.2.0.tar.gz) = aaf863f2122e91eeb39aeec2047706d28505c8a5
-SHA512 (rabbit-2.2.0.tar.gz) = 3b32cf5c818dc6553a4bf0d9cd195360c72dd606a42523f08b3c4a5d3630029c08f8ebe5ed314d72296ccb33f0c293fdad94ed810a2f1a11cddf3dbe4fbc46d3
-Size (rabbit-2.2.0.tar.gz) = 5223028 bytes
+SHA1 (rabbit-2.2.1.tar.gz) = 88a96da378173157a141bcc2c3c130f89ca714d6
+RMD160 (rabbit-2.2.1.tar.gz) = 4dd05b3e0cc9e944a8649ec8a9029817ae96dc1c
+SHA512 (rabbit-2.2.1.tar.gz) = 5da26b3ab9b2dfbb18fc84a320084d16552a1c797d654221b6d29bab72bf7c3ac8a886ee4e9f41b49fd6f70baf637bf7a5bb2b870dab5481e7e21fa801903f37
+Size (rabbit-2.2.1.tar.gz) = 5227210 bytes
