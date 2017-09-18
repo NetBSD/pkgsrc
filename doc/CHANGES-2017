@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3972 2017/09/17 22:13:40 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.3973 2017/09/18 00:54:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5536,3 +5536,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/p5-Zabbix-Sender to 0.06 [wiz 2017-09-17]
 	Updated security/p5-CryptX to 0.053 [wiz 2017-09-17]
 	Updated security/p5-Net-SSH to 2.14 [wiz 2017-09-17]
+	Updated devel/ruby-curses to 1.2.4 [taca 2017-09-18]
