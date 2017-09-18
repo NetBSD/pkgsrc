@@ -1,7 +1,7 @@
-$NetBSD: patch-server_core.c,v 1.1 2017/09/18 13:24:05 wiz Exp $
+$NetBSD: patch-server_core.c,v 1.2 2017/09/18 13:34:51 wiz Exp $
 
 Fix security problem using upstream patch.
-://svn.apache.org/viewvc/httpd/httpd/branches/2.4.x/server/core.c?r1=1805223&r2=1807754&pathrev=1807754&view=patch
+http://svn.apache.org/viewvc/httpd/httpd/branches/2.4.x/server/core.c?r1=1805223&r2=1807754&pathrev=1807754&view=patch
 
 --- server/core.c.orig	2016-12-05 14:34:29.000000000 +0000
 +++ server/core.c
