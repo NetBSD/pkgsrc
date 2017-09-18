@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.192 2017/09/16 08:36:00 wiz Exp $
+# $NetBSD: Makefile,v 1.193 2017/09/18 16:20:31 gdt Exp $
 #
 
 COMMENT=	Communication programs
@@ -86,7 +86,6 @@ SUBDIR+=	loudmouth
 SUBDIR+=	matterircd
 SUBDIR+=	mcabber
 SUBDIR+=	meanwhile
-SUBDIR+=	mu-conference
 SUBDIR+=	naim
 SUBDIR+=	ninja
 SUBDIR+=	p5-IRC-Utils
