@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.19 2017/05/14 11:02:15 spz Exp $
+$NetBSD: patch-builds_unix_unix-cc.in,v 1.1 2017/09/18 16:54:06 adam Exp $
+
+Provide tag to libtool.
+Use CFLAGS when compiling executables.
 
 --- builds/unix/unix-cc.in.orig	2017-03-30 10:20:23.000000000 +0000
 +++ builds/unix/unix-cc.in
