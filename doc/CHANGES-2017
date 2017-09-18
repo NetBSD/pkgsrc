@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.3993 2017/09/18 06:42:14 taca Exp $
+$NetBSD: CHANGES-2017,v 1.3994 2017/09/18 06:44:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5555,3 +5555,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/rabbit to 2.2.1 [taca 2017-09-18]
 	Updated sysutils/puppet to 5.2.0 [taca 2017-09-18]
 	Updated net/samba4 to 4.6.7 [taca 2017-09-18]
+	Updated games/ruby-squib to 0.13.4nb1 [taca 2017-09-18]
