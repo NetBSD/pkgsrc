@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4027 2017/09/19 15:58:40 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.4028 2017/09/19 19:26:04 roy Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5592,3 +5592,4 @@ Changes to the packages collection and infrastructure in 2017:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2017Q3 branch [gdt 2017-09-19]
 	Updated net/tor to 0.3.0.11 [wiz 2017-09-19]
 	Updated devel/cmake to 3.9.2nb1 [prlw1 2017-09-19]
+	Updated net/dhcpcd to 7.0.0rc2 [roy 2017-09-19]
