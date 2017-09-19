@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/09/11 16:02:12 taca Exp $
+# $NetBSD: Makefile,v 1.27 2017/09/19 16:36:07 taca Exp $
 
 DISTNAME=	jekyll-3.5.2
 CATEGORIES=	www
@@ -23,9 +23,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-minima>=2.1.1:../../www/ruby-jekyll-minima
 DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-feed>=0.9.2:../../www/ruby-jekyll-feed
 
 RUBYGEM_OPTIONS+=	--format-executable
-
-# restricted by ruby-jekyll-watch through ruby-dep and ruby-listen
-RUBY_VERSIONS_ACCEPTED= 22 23 24
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
