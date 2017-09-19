@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/18 09:06:55 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/19 08:11:44 wiz Exp $
 
 DISTNAME=	dfc-3.1.1
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://projects.gw-computing.net/attachments/download/615/
 # Note: the number at the end of the URL above changes for each release
 
 MAINTAINER=	mcy@lm7.fr
-HOMEPAGE=	http://projects.gw-computing.net/projects/dfc
+HOMEPAGE=	https://projects.gw-computing.net/projects/dfc
 COMMENT=	Display file system space usage using graph and colors
 LICENSE=	modified-bsd
 
