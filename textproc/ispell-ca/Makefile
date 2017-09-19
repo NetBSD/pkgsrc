@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2017/08/16 20:21:15 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.4 2017/09/19 08:25:23 wiz Exp $
 
 DISTNAME=	ispell-sc-ca
 PKGNAME=	${DISTNAME:S/-sc//1}-1.0
 CATEGORIES=	textproc
-MASTER_SITES=	http://www.softcatala.org/cgi-bin/gaudi/contadorb/load.cgi?/fitxers/linux/
+#MASTER_SITES=	http://www.softcatala.org/cgi-bin/gaudi/contadorb/load.cgi?/fitxers/linux/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jmmv@NetBSD.org
-HOMEPAGE=	https://www.softcatala.org/projectes/myspell/
+#HOMEPAGE=	https://www.softcatala.org/projectes/myspell/
 COMMENT=	Catalan dictionary for interactive spelling checker
 
 CONFLICTS+=	ispell-catalan-[0-9]*
