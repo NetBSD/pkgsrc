@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/08/16 20:21:05 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.12 2017/09/19 08:32:08 wiz Exp $
 
 DISTNAME=	folks-0.4.2
 PKGNAME=	lib${DISTNAME}
@@ -9,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/folks/0.4/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://telepathy.freedesktop.org/wiki/Folks
+HOMEPAGE=	https://wiki.gnome.org/action/show/Projects/Folks
 COMMENT=	Library to manage contacts
 LICENSE=	gnu-lgpl-v2
 
