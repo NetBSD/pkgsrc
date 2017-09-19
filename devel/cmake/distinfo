@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.104 2017/09/08 07:56:08 adam Exp $
+$NetBSD: distinfo,v 1.105 2017/09/19 15:58:21 prlw1 Exp $
 
 SHA1 (cmake-3.9.2.tar.gz) = 99ef24c8286d87a13fc2d27bef35566cf0cc4888
 RMD160 (cmake-3.9.2.tar.gz) = 133cfee5d133675b94851a4583d9e8186eb9654d
 SHA512 (cmake-3.9.2.tar.gz) = 9528d9f39d00bb282cf36b4126c09f6884751ac68ab924893884eecbb77ea99b0e560b30e30d46faaa89417e7386f4b376e6c7c61ccf2f23948765f8607f943c
 Size (cmake-3.9.2.tar.gz) = 7703777 bytes
 SHA1 (patch-CMakeLists.txt) = a0b03f2fad5ea174095c4fe52cea67d94cf46e2d
+SHA1 (patch-Modules_FindBoost.cmake) = 4f79011e4921bcf8cb5fb185865fd15d05620d14
 SHA1 (patch-Modules_FindCurses.cmake) = 09fcd7adfbc2dfc2cd8af4e047d870a5243d77dc
 SHA1 (patch-Modules_FindPythonInterp.cmake) = d1b39bdcd654f2a4fc63463cd20de656cce3cf8f
 SHA1 (patch-Modules_FindPythonLibs.cmake) = b5cedc6a2354beaf08e06d416c150154a7dc1f05
