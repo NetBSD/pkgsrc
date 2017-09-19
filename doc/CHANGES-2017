@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4024 2017/09/18 22:53:34 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4025 2017/09/19 01:23:16 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5589,3 +5589,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/py-python-sql to 0.9 [adam 2017-09-18]
 	Updated net/haproxy to 1.7.9 [morr 2017-09-18]
 	Removed games/wtfubar [wiz 2017-09-18]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2017Q3 branch [gdt 2017-09-19]
