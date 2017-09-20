@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4031 2017/09/20 12:05:55 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.4032 2017/09/20 15:14:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5596,3 +5596,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/rename to 1.3nb3 [jperkin 2017-09-20]
 	Updated net/host to 20070128nb1 [jperkin 2017-09-20]
 	Updated archivers/xz to 5.2.3nb1 [jperkin 2017-09-20]
+	Updated net/samba4 to 4.6.8 [taca 2017-09-20]
