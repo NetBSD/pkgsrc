@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2006/10/03 14:25:55 schwarz Exp $
+$NetBSD: patch-ac,v 1.5 2017/09/20 11:18:13 jperkin Exp $
+
+IRIX support.
 
 --- host.h.orig	2006-10-03 15:54:29.000000000 +0200
 +++ host.h	2006-10-03 15:55:13.000000000 +0200
