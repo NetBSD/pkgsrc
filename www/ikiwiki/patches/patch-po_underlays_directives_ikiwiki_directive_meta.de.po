@@ -1,0 +1,23 @@
+$NetBSD: patch-po_underlays_directives_ikiwiki_directive_meta.de.po,v 1.1 2017/09/20 02:57:32 schmonz Exp $
+
+Add upstream patch to fix build with po4a 0.52.
+
+--- po/underlays/directives/ikiwiki/directive/meta.de.po.orig	2017-06-22 08:24:57.000000000 +0000
++++ po/underlays/directives/ikiwiki/directive/meta.de.po
+@@ -71,7 +71,7 @@ msgid ""
+ "  page name.\n"
+ msgstr ""
+ "  Überschreibt den Titel der Seite, der normalerweise dem Namen\n"
+-"  der Seite entspricht."
++"  der Seite entspricht.\n"
+ 
+ #. type: Plain text
+ #, no-wrap
+@@ -362,7 +362,6 @@ msgid ""
+ msgstr ""
+ "  In beiden Fällen kann ein anzuspringender Anker auf der Zielseite\n"
+ "  angegeben werden, indem die übliche `#ANKER`-Syntax verwendet wird.\n"
+-" "
+ 
+ #. type: Bullet: '* '
+ msgid "robots"
