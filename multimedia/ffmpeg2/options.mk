@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.12 2017/05/29 08:38:16 leot Exp $
+# $NetBSD: options.mk,v 1.13 2017/09/20 08:21:17 adam Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg2
 PKG_SUPPORTED_OPTIONS=	ass doc faac fdk-aac fontconfig freetype gnutls lame \
-			libvpx opencore-amr openssl theora vorbis x11 x264 \
+			libvpx opencore-amr openssl rtmp theora vorbis x11 x264 \
 			x265 xcb xvid
 PKG_SUGGESTED_OPTIONS=	lame ass freetype fontconfig libvpx openssl \
 			theora vorbis x11 x264 xvid
@@ -115,6 +115,12 @@ CONFIGURE_ARGS+=	--enable-openssl
 .include "../../security/openssl/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-openssl
+.endif
+
+# RTMP support via librtmp
+.if !empty(PKG_OPTIONS:Mrtmp)
+CONFIGURE_ARGS+=	--enable-librtmp
+.include "../../net/rtmpdump/buildlink3.mk"
 .endif
 
 # OGG Theora support
