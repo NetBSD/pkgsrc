@@ -1,32 +1,35 @@
-# $NetBSD: options.mk,v 1.14 2017/01/13 12:16:03 leot Exp $
+# $NetBSD: options.mk,v 1.15 2017/09/20 19:49:38 adam Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.wireshark
-PKG_SUPPORTED_OPTIONS=	gtk3 lua qt5
-PKG_SUGGESTED_OPTIONS=	gtk3 lua
+PKG_OPTIONS_VAR=		PKG_OPTIONS.wireshark
+PKG_SUPPORTED_OPTIONS=		gtk3 lua
+PKG_OPTIONS_OPTIONAL_GROUPS=	qt
+PKG_OPTIONS_GROUP.qt=		qt4 qt5
+PKG_SUGGESTED_OPTIONS=		gtk3 lua
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		gtk3 icons lua mans qt5
+PLIST_VARS+=		gtk3 icons lua mans qt
 
-.if empty(PKG_OPTIONS:Mqt5)
+.if empty(PKG_OPTIONS:Mqt4) && empty(PKG_OPTIONS:Mqt5)
 CONFIGURE_ARGS+=	--without-qt
 .else
+.  if !empty(PKG_OPTIONS:Mqt4)
+CONFIGURE_ARGS+=	--with-qt=4
+.    include "../../x11/qt4-tools/buildlink3.mk"
+.  elif !empty(PKG_OPTIONS:Mqt5)
 CONFIGURE_ARGS+=	--with-qt=5
+.    include "../../x11/qt5-qtmultimedia/buildlink3.mk"
+.    include "../../x11/qt5-qttools/buildlink3.mk"
+.    if ${OPSYS} == "Darwin"
+.      include "../../x11/qt5-qtmacextras/buildlink3.mk"
+.    else
+.      include "../../x11/qt5-qtx11extras/buildlink3.mk"
+.    endif
+.  endif
+CONFIGURE_ENV+=		LRELEASE=${QTDIR}/bin/lrelease
 CONFIGURE_ENV+=		MOC=${QTDIR}/bin/moc
 CONFIGURE_ENV+=		RCC=${QTDIR}/bin/rcc
 CONFIGURE_ENV+=		UIC=${QTDIR}/bin/uic
-# RCC is not configured, so fix it here; see patch-ui_qt_Makefile.in
-SUBST_CLASSES+=		fix-rcc
-SUBST_MESSAGE.fix-rcc=	Fixing rcc path.
-SUBST_STAGE.fix-rcc=	pre-configure
-SUBST_FILES.fix-rcc=	ui/qt/Makefile.in
-SUBST_SED.fix-rcc=	-e 's,@RCC@,${QTDIR}/bin/rcc,'
-PLIST.qt5=		yes
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.  if ${OPSYS} == "Darwin"
-.include "../../x11/qt5-qtmacextras/buildlink3.mk"
-.  else
-.include "../../x11/qt5-qtx11extras/buildlink3.mk"
-.  endif
+PLIST.qt=		yes
 .endif
 
 .if empty(PKG_OPTIONS:Mgtk3)
@@ -47,7 +50,9 @@ install-gtk-desktop:
 
 # We might install the qt front end one day as well,
 # so have a generic icon target
-.if !empty(PKG_OPTIONS:Mgtk3) || !empty(PKG_OPTIONS:Mqt5)
+.if empty(PKG_OPTIONS:Mgtk3) && empty(PKG_OPTIONS:Mqt4) && empty(PKG_OPTIONS:Mqt5)
+CONFIGURE_ARGS+=	--disable-wireshark
+.else
 CONFIGURE_ARGS+=	--enable-wireshark
 PLIST.mans=		yes
 INSTALLATION_DIRS+=	share/applications
@@ -88,8 +93,6 @@ install-icons:
 		${DESTDIR}${PREFIX}/share/icons/hicolor/${d}x${d}/mimetypes/application-vnd.tcpdump.pcap.png
 .    endfor
 .  endif
-.else
-CONFIGURE_ARGS+=	--disable-wireshark
 .endif
 
 .if empty(PKG_OPTIONS:Mlua)
