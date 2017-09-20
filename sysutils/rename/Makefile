@@ -1,23 +1,22 @@
-# $NetBSD: Makefile,v 1.3 2012/10/23 19:51:21 asau Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/20 11:03:14 jperkin Exp $
 
 DISTNAME=	rename-1.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rename/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rename.sourceforge.net/
 COMMENT=	Rename recursively with regex patterns
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
-BUILDLINK_TRANSFORM+=	opt:-O3:${CFLAGS}
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin &&		\
-	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 &&	\
-	${INSTALL_PROGRAM} ${WRKSRC}/rename ${DESTDIR}${PREFIX}/bin &&	\
+	${INSTALL_PROGRAM} ${WRKSRC}/rename ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/rename.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
