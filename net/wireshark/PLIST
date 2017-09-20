@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2016/09/12 10:59:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.32 2017/09/20 19:49:38 adam Exp $
 bin/capinfos
 bin/captype
 bin/dftest
@@ -12,7 +12,7 @@ bin/reordercap
 bin/text2pcap
 bin/tshark
 ${PLIST.gtk3}bin/wireshark-gtk
-${PLIST.qt5}bin/wireshark
+${PLIST.qt}bin/wireshark
 lib/libwireshark.la
 lib/libwiretap.la
 lib/libwscodecs.la
