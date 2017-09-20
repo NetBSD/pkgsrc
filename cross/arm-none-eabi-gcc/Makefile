@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/08/31 19:55:19 sevan Exp $
+# $NetBSD: Makefile,v 1.8 2017/09/20 03:49:55 ryoon Exp $
 
 DISTNAME=		gcc-7.2.0
 PKGNAME=		cross-arm-none-eabi-${DISTNAME}
@@ -13,6 +13,8 @@ MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		# none
 COMMENT=		GCC for bare metal ARM EABI
 EXTRACT_SUFX=		.tar.gz
+
+EXTRACT_USING=		bsdtar
 
 # for http://gcc.gnu.org/bugzilla/show_bug.cgi?id=33549
 # use makeinfo from pkgsrc/devel/gtexinfo.
@@ -59,7 +61,7 @@ PLIST_VARS+= 		libcpp
 CFLAGS+=	-fbracket-depth=1024
 .endif
 
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
 PLIST.libcpp= 		yes
 .endif
 
