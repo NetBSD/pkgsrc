@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17744 2017/09/20 05:08:40 wiz Exp $
+$NetBSD: TODO,v 1.17745 2017/09/20 17:44:20 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1724,11 +1724,6 @@ Suggested cleanups in pkgsrc
 	  most commonly used cases into a well-documented file. For
 	  example, x11/kbproto/builtin.mk and x11/libXrender/builtin.mk
 	  almost look the same.
-
-	o Replace inclusion mk/tex.buildlink3.mk (pulling in a lot of
-	  tex packages) with (build) dependencies on the appropriate
-	  split tex packages. In case styles are used, look for
-	  \RequirePackage{...}.
 
 	o Make the use of mktexlsr in the install and deinstall
 	  scripts for tex-* packages more efficient.  If you install
