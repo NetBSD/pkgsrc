@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2014/08/11 23:01:50 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2017/09/20 08:21:17 adam Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg
 PKG_SUPPORTED_OPTIONS=	faac lame ass libvpx theora vorbis x264 xvid \
-			opencore-amr
+			opencore-amr rtmp
 PKG_SUGGESTED_OPTIONS=	lame ass libvpx theora vorbis x264 xvid
 #PKG_OPTIONS_OPTIONAL_GROUPS=	aac-decoder
 #PKG_OPTIONS_GROUP.aac-decoder=	faac
@@ -68,6 +68,12 @@ CONFIGURE_ARGS+=	--enable-version3
 .else
 CONFIGURE_ARGS+=	--disable-libopencore-amrnb
 CONFIGURE_ARGS+=	--disable-libopencore-amrwb
+.endif
+
+# RTMP support via librtmp
+.if !empty(PKG_OPTIONS:Mrtmp)
+CONFIGURE_ARGS+=	--enable-librtmp
+.include "../../net/rtmpdump/buildlink3.mk"
 .endif
 
 ###
