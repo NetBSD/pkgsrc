@@ -1,5 +1,7 @@
-$NetBSD: patch-librtmp_Makefile,v 1.4 2017/07/13 13:19:59 wiz Exp $
+$NetBSD: patch-librtmp_Makefile,v 1.5 2017/09/20 06:47:56 adam Exp $
 
+Use PREFIX and PKGMANDIR.
+Remove OPT.
 Libtoolize
 
 --- librtmp/Makefile.orig	2011-07-12 00:24:33.000000000 +0000
@@ -7,7 +9,8 @@ Libtoolize
 @@ -1,11 +1,11 @@
  VERSION=v2.4
  
- prefix=/usr/local
+-prefix=/usr/local
++prefix=${PREFIX}
  
  incdir=$(prefix)/include/librtmp
  bindir=$(prefix)/bin
@@ -17,12 +20,13 @@ Libtoolize
  BINDIR=$(DESTDIR)$(bindir)
  INCDIR=$(DESTDIR)$(incdir)
  LIBDIR=$(DESTDIR)$(libdir)
-@@ -68,28 +68,40 @@ SO_INST=$(SOINST_$(SHARED))
+@@ -66,30 +66,41 @@ SO_LIB=$(SOLIB_$(SHARED))
+ SO_INST=$(SOINST_$(SHARED))
+ 
  DEF=-DRTMPDUMP_VERSION=\"$(VERSION)\" $(CRYPTO_DEF) $(XDEF)
- OPT=-O2
+-OPT=-O2
  CFLAGS=-Wall $(XCFLAGS) $(INC) $(DEF) $(OPT) $(SO_DEF)
--LDFLAGS=$(XLDFLAGS)
-+LDFLAGS+=$(XLDFLAGS)
+ LDFLAGS=$(XLDFLAGS)
  
  
  OBJS=rtmp.o log.o amf.o hashswf.o parseurl.o
@@ -63,7 +67,7 @@ Libtoolize
  
  librtmp.pc: librtmp.pc.in Makefile
  	sed -e "s;@prefix@;$(prefix);" -e "s;@libdir@;$(libdir);" \
-@@ -97,12 +109,12 @@ librtmp.pc: librtmp.pc.in Makefile
+@@ -97,12 +108,12 @@ librtmp.pc: librtmp.pc.in Makefile
  		-e "s;@CRYPTO_REQ@;$(CRYPTO_REQ);" \
  		-e "s;@PRIVATE_LIBS@;$(PRIVATE_LIBS);" librtmp.pc.in > $@
  
