@@ -1,16 +1,26 @@
-$NetBSD: patch-Makefile,v 1.6 2017/09/12 05:54:10 wiz Exp $
+$NetBSD: patch-Makefile,v 1.7 2017/09/20 06:47:56 adam Exp $
 
-* Pass LDFLAGS to linker
-* Libtoolize
+Use PREFIX and PKGMANDIR.
+Remove OPT.
+Libtoolize
 
 --- Makefile.orig	2011-07-12 00:24:33.000000000 +0000
 +++ Makefile
-@@ -22,11 +22,11 @@ CRYPTO_DEF=$(DEF_$(CRYPTO))
+@@ -1,6 +1,6 @@
+ VERSION=v2.4
+ 
+-prefix=/usr/local
++prefix=${PREFIX}
+ 
+ CC=$(CROSS_COMPILE)gcc
+ LD=$(CROSS_COMPILE)ld
+@@ -20,13 +20,12 @@ DEF_=-DNO_CRYPTO
+ CRYPTO_DEF=$(DEF_$(CRYPTO))
+ 
  DEF=-DRTMPDUMP_VERSION=\"$(VERSION)\" $(CRYPTO_DEF) $(XDEF)
- OPT=-O2
+-OPT=-O2
  CFLAGS=-Wall $(XCFLAGS) $(INC) $(DEF) $(OPT)
--LDFLAGS=-Wall $(XLDFLAGS)
-+LDFLAGS+=-Wall $(XLDFLAGS)
+ LDFLAGS=-Wall $(XLDFLAGS)
  
  bindir=$(prefix)/bin
  sbindir=$(prefix)/sbin
@@ -19,7 +29,7 @@ $NetBSD: patch-Makefile,v 1.6 2017/09/12 05:54:10 wiz Exp $
  
  BINDIR=$(DESTDIR)$(bindir)
  SBINDIR=$(DESTDIR)$(sbindir)
-@@ -44,7 +44,7 @@ THREADLIB_mingw=
+@@ -44,7 +43,7 @@ THREADLIB_mingw=
  THREADLIB=$(THREADLIB_$(SYS))
  SLIBS=$(THREADLIB) $(LIBS)
  
@@ -28,7 +38,7 @@ $NetBSD: patch-Makefile,v 1.6 2017/09/12 05:54:10 wiz Exp $
  INCRTMP=librtmp/rtmp_sys.h librtmp/rtmp.h librtmp/log.h librtmp/amf.h
  
  EXT_posix=
-@@ -60,11 +60,11 @@ $(PROGS): $(LIBRTMP)
+@@ -60,11 +59,11 @@ $(PROGS): $(LIBRTMP)
  
  install:	$(PROGS)
  	-mkdir -p $(BINDIR) $(SBINDIR) $(MANDIR)/man1 $(MANDIR)/man8
@@ -43,7 +53,7 @@ $NetBSD: patch-Makefile,v 1.6 2017/09/12 05:54:10 wiz Exp $
  
  clean:
  	rm -f *.o rtmpdump$(EXT) rtmpgw$(EXT) rtmpsrv$(EXT) rtmpsuck$(EXT)
-@@ -76,19 +76,16 @@ $(LIBRTMP): FORCE
+@@ -76,19 +75,16 @@ $(LIBRTMP): FORCE
  	@cd librtmp; $(MAKE) all
  
  rtmpdump: rtmpdump.o
