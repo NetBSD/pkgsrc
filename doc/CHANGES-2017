@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4030 2017/09/20 11:18:22 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.4031 2017/09/20 12:05:55 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5595,3 +5595,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/dhcpcd to 7.0.0rc2 [roy 2017-09-19]
 	Updated sysutils/rename to 1.3nb3 [jperkin 2017-09-20]
 	Updated net/host to 20070128nb1 [jperkin 2017-09-20]
+	Updated archivers/xz to 5.2.3nb1 [jperkin 2017-09-20]
