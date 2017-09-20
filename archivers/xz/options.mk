@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2015/10/03 14:57:10 tnn Exp $
+# $NetBSD: options.mk,v 1.4 2017/09/20 12:05:46 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xz
 PKG_SUPPORTED_OPTIONS=	nls
@@ -9,6 +9,7 @@ PKG_SUGGESTED_OPTIONS=	nls
 PLIST_VARS+=		nls
 
 .if !empty(PKG_OPTIONS:Mnls)
+USE_PKGLOCALEDIR=	yes
 PLIST.nls=		yes
 CONFIGURE_ARGS+=	--enable-nls
 .include "../../devel/gettext-lib/buildlink3.mk"
