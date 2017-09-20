@@ -1,0 +1,19 @@
+$NetBSD: patch-po_underlays_basewiki_ikiwiki_wikilink.da.po,v 1.1 2017/09/20 02:57:32 schmonz Exp $
+
+Add upstream patch to fix build with po4a 0.52.
+
+--- po/underlays/basewiki/ikiwiki/wikilink.da.po.orig	2017-06-22 08:24:57.000000000 +0000
++++ po/underlays/basewiki/ikiwiki/wikilink.da.po
+@@ -31,9 +31,9 @@ msgid ""
+ "[[WikiLink]], just put the name of the page to link to in double brackets.  "
+ "For example `\\[[WikiLink]]`."
+ msgstr ""
+-"WikiLinks gør det muligt enkelt at lave henvisninger (linke) mellem sider i\n"
+-"wikien. Opret en [[WikiLink]] ved at skrive siden du vil henvise til med\n"
+-"dobbelte klammer omkring. Ekempelvis `\\[[WikiLink]]`.\n"
++"WikiLinks gør det muligt enkelt at lave henvisninger (linke) mellem sider i "
++"wikien. Opret en [[WikiLink]] ved at skrive siden du vil henvise til med "
++"dobbelte klammer omkring. Ekempelvis `\\[[WikiLink]]`."
+ 
+ #. type: Plain text
+ msgid ""
