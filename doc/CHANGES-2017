@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4028 2017/09/19 19:26:04 roy Exp $
+$NetBSD: CHANGES-2017,v 1.4029 2017/09/20 11:03:31 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5593,3 +5593,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/tor to 0.3.0.11 [wiz 2017-09-19]
 	Updated devel/cmake to 3.9.2nb1 [prlw1 2017-09-19]
 	Updated net/dhcpcd to 7.0.0rc2 [roy 2017-09-19]
+	Updated sysutils/rename to 1.3nb3 [jperkin 2017-09-20]
