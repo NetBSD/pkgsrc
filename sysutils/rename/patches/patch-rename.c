@@ -1,4 +1,6 @@
-$NetBSD: patch-rename.c,v 1.1 2011/09/10 16:35:04 abs Exp $
+$NetBSD: patch-rename.c,v 1.2 2017/09/20 11:03:14 jperkin Exp $
+
+Fix CPP.
 
 --- rename.c.orig	2002-05-20 15:50:50.000000000 +0000
 +++ rename.c
