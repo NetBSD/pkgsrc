@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2013/07/21 12:28:32 shattered Exp $
+$NetBSD: patch-ab,v 1.7 2017/09/20 11:18:13 jperkin Exp $
+
+Remove non-portable linker argument.
 
 --- Makefile.BSD.orig	2004-08-12 22:30:04.000000000 +0200
 +++ Makefile.BSD
