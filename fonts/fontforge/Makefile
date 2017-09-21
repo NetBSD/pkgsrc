@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2017/08/25 09:20:38 adam Exp $
+# $NetBSD: Makefile,v 1.102 2017/09/21 15:06:17 jperkin Exp $
 
 DISTNAME=	fontforge-dist-20170731
 PKGNAME=	${DISTNAME:S/-dist-/-/}
@@ -32,6 +32,13 @@ CHECK_INTERPRETER_SKIP+=share/fontforge/python/gdraw/*
 CHECK_INTERPRETER_SKIP+=share/fontforge/python/simple/*
 
 PY_PATCHPLIST=		yes
+
+.include "../../mk/bsd.prefs.mk"
+
+# Requires GNU date features
+.if ${OPSYS} == "SunOS"
+TOOLS_PLATFORM.date=
+.endif
 
 .include "options.mk"
 
