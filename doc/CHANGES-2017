@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4036 2017/09/21 11:42:40 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4037 2017/09/21 15:19:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5599,3 +5599,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/samba4 to 4.6.8 [taca 2017-09-20]
 	Updated games/gnuchess-book to 1.02nb1 [jperkin 2017-09-21]
 	Updated games/gnuchess-book-medium to 20000511nb4 [jperkin 2017-09-21]
+	Removed devel/py-unittest2py3k successor devel/py-unittest2 [adam 2017-09-21]
