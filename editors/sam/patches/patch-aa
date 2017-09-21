@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2001/05/01 09:16:25 agc Exp $
+$NetBSD: patch-aa,v 1.5 2017/09/21 14:37:40 bsiegert Exp $
 
---- libXg/Makefile.orig	Tue May  1 09:42:03 2001
-+++ libXg/Makefile	Tue May  1 09:48:09 2001
+--- libXg/Makefile.orig	2017-09-21 13:54:42.000000000 +0000
++++ libXg/Makefile
 @@ -1,24 +1,23 @@
  #	Copyright (c) 1992 AT&T - All rights reserved.
  #
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.4 2001/05/01 09:16:25 agc Exp $
  
  #	add name of librarian
  AR=ar
-@@ -36,7 +35,7 @@
+@@ -36,7 +35,7 @@ OBJS=	arc.o arith.o balloc.o bitblt.o bi
  	rdfontfile.o rectclip.o rune.o segment.o string.o strwidth.o texture.o\
  	wrbitmap.o wrbitmapfile.o xtbinit.o
  
@@ -44,7 +44,7 @@ $NetBSD: patch-aa,v 1.4 2001/05/01 09:16:25 agc Exp $
  compile:	$(LIB)
  test:	test.o
  	$(CC) -o $@ $? $(LIB) $(XLIBS) -lm
-@@ -47,10 +46,12 @@
+@@ -47,10 +46,12 @@ clean:
  nuke:	clean
  	rm -f $(LIB)
  
@@ -55,7 +55,7 @@ $NetBSD: patch-aa,v 1.4 2001/05/01 09:16:25 agc Exp $
  $(LIB):	$(OBJS)
  	$(AR) rv $(LIB) $(OBJS)
  	$(RANLIB) $(LIB)
--
--$(LIB)(%.o): %.o
  
+-$(LIB)(%.o): %.o
+-
  $(OBJS):	../include/libg.h libgint.h ../include/libc.h

@@ -1,0 +1,10 @@
+$NetBSD: patch-sam_B.rc,v 1.1 2017/09/21 14:37:40 bsiegert Exp $
+
+--- sam/B.rc.orig	2017-09-21 13:54:41.000000000 +0000
++++ sam/B.rc
+@@ -1,4 +1,4 @@
+-#!/bin/rc
++#!/usr/local/bin/rc
+ 
+ files=()
+ line=''
