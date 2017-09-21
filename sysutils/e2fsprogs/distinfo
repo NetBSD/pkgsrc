@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2017/02/11 15:10:33 tron Exp $
+$NetBSD: distinfo,v 1.23 2017/09/21 09:48:56 jperkin Exp $
 
 SHA1 (e2fsprogs-1.43.4.tar.xz) = 3073dfe3d67075d3ae68e41e78120f14a18ac9ba
 RMD160 (e2fsprogs-1.43.4.tar.xz) = cb6fb31aa7242d3e72f0427aac0271848d467ffe
@@ -11,8 +11,11 @@ SHA1 (patch-an) = 1199b17c4e65b8825b78fc02f7b2c9164eee56ef
 SHA1 (patch-ao) = a8fcacf506b003bf40ecadd5260ff0a6628ad2e6
 SHA1 (patch-as) = be316e404840a47422edbee65177bf6a9c94b335
 SHA1 (patch-aw) = 544634d6603762dabaeffe950440f533c6495b32
+SHA1 (patch-debugfs_debugfs.c) = 6092c8e61fcdda2e5b669dad26b6c335cc45c4c5
 SHA1 (patch-e2fsck_jfs__user.h) = 2fd21cedabc4356a0d76a6caa1dbf73461750800
 SHA1 (patch-lib_ext2fs_bitops.c) = 0ca90ee35d255b8f590a216554a22b738c6083bc
 SHA1 (patch-lib_ext2fs_bitops.h) = 8eec77c83bf85423a1420b18405e9ba655131528
 SHA1 (patch-lib_ext2fs_ext2fs.h) = 2811fd3eff03dd4fb7f72df4c854d2c33b37846f
 SHA1 (patch-lib_ext2fs_tdb.c) = dd50993cd0beba0451cfb3422ca9f54700ee0e38
+SHA1 (patch-lib_uuid_gen__uuid.c) = 083ac45a8d2d30a5c272720fb9a6a1785c97eee2
+SHA1 (patch-misc_create__inode.c) = 7b9b49bc6bdcf5845bb81414faed987c74228940

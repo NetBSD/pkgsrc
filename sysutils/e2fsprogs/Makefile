@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/02/11 15:10:33 tron Exp $
+# $NetBSD: Makefile,v 1.25 2017/09/21 09:48:56 jperkin Exp $
 
 DISTNAME=	e2fsprogs-1.43.4
 CATEGORIES=	sysutils
@@ -12,6 +12,7 @@ COMMENT=	Second extended file system (ext2fs) management programs
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND modified-bsd AND mit
 
 GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c99
 USE_TOOLS+=	makeinfo gmake
 INFO_FILES=	yes
 
