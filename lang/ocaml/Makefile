@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2017/09/08 09:12:44 jaapb Exp $
+# $NetBSD: Makefile,v 1.114 2017/09/21 13:56:59 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -89,6 +89,8 @@ SUBST_SED.linkopts+=	-e '\|bytecclinkopts=|s|""|"${LDFLAGS}"|'
 SUBST_SED.linkopts+=	-e "\|nativecclinkopts=|s|''|\"${LDFLAGS:C/-Wl,//}\"|"
 SUBST_STAGE.linkopts=	pre-configure
 SUBST_MESSAGE.linkopts=	Honor LDFLAGS.
+
+PRINT_PLIST_AWK+=	{ gsub(/lib\/ocaml\/${PKGMANDIR:S|/|\\/|}/, "lib/ocaml/$${PKGMANDIR}"); }
 
 do-test:
 	cd ${WRKSRC}/testsuite && ${MAKE_PROGRAM} all
