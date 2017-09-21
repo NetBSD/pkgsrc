@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/05/21 06:45:38 manu Exp $
+# $NetBSD: Makefile,v 1.26 2017/09/21 09:49:31 wiz Exp $
 
 DISTNAME=	rt-4.2.12
 PKGNAME=	${DISTNAME:S/rt/rt4/}
@@ -206,8 +206,7 @@ OWN_DIRS_PERMS+=	${RT_VAR_DIR}/mason_data/etc	${APACHE_USER}	${APACHE_GROUP}	077
 OWN_DIRS_PERMS+=	${RT_VAR_DIR}/mason_data/obj	${APACHE_USER}	${APACHE_GROUP}	0770
 OWN_DIRS_PERMS+=	${RT_VAR_DIR}/session_data	${APACHE_USER}	${APACHE_GROUP}	0770
 
-REPLACE_PERL+=		etc/upgrade/shrink_cgm_table.pl etc/upgrade/shrink_transactions_table.pl
-REPLACE_PERL+=		etc/upgrade/time-worked-history.pl etc/upgrade/upgrade-mysql-schema.pl
+REPLACE_PERL+=		etc/upgrade/upgrade-mysql-schema.pl
 
 INSTALL_MAKE_FLAGS+=	BIN_OWNER=${ROOT_USER:Q} LIBS_OWNER=${ROOT_USER:Q} \
 			LIBS_GROUP=${ROOT_GROUP:Q} RTGROUP=${ROOT_GROUP:Q} \
