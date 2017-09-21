@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.33 2017/01/09 16:19:28 sevan Exp $
+$NetBSD: README.MacOSX,v 1.34 2017/09/21 19:42:16 gdt Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and OS X, omitting information about previous pkgsrc
@@ -117,21 +117,18 @@ Therefore, pkgsrc uses nbsed on 10.9.
 
 ** XCode
 
-This section applies to 10.6 through 10.10.
+This section applies to 10.6 through 10.12.
 
 If you haven't already, you will need to install the OS X
 Developer Tools package (XCode) to obtain a compiler, etc.  The
 procedure depends on the version of OS X; recent versions use the
 App Store.
 
-** Command-line Tools
+*** Command-line Tools
 
-In 10.11, XCode has been reported as unsuitable [TODO: add details,
-but it seems it doesn't include an SDK for itself].  Instead, it is
-recommend to install command-line tools.
-
-Command Line Tools for Xcode can be obtained from
-https://developer.apple.com/downloads/
+XCode 9 (the current version), even when installed on OS X 10.12, does
+not include an SDK for 10.12.  If one installs "Commmand Line Tools",
+then pkgsrc can use the compiler.
 
 Since Xcode 7 (installed from the Apple Store) the development
 environment can upgrade itself without interaction from the user, but
@@ -139,6 +136,9 @@ will not automatically update the Command Line Tools.  This will
 cause system header files like stdlib.h not to be found by pkgsrc.
 The command `xcode-select --install' will install the Command Line
 Tools for Xcode.
+
+In the past at least, Command Line Tools for Xcode could be obtained
+from https://developer.apple.com/downloads/
 
 ** cvs
 
