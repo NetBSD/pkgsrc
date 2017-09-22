@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/08/22 07:57:51 adam Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/22 20:18:54 wiedi Exp $
 
 DISTNAME=	gevent-1.2.2
 PKGREVISION=	1
@@ -16,6 +16,9 @@ DEPENDS+=	${PYPKGPREFIX}-greenlet>=0.4.10:../../devel/py-greenlet
 MAKE_ENV+=	CARES_EMBED=0 LIBEV_EMBED=0
 
 USE_LANGUAGES=	c c++
+
+# Explicitly disable inotify on SunOS, assumes Linux statfs.
+MAKE_ENV.SunOS+=	ac_cv_header_sys_inotify_h=no
 
 do-test:
 	cd ${WRKSRC}/src/greentest && \
