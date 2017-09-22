@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/12/31 11:52:17 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/09/22 22:05:05 wiedi Exp $
 
 DISTNAME=		clex-4.6.4
 PKGREVISION=		1
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.clex.sk/
 COMMENT=		File manager with a full-screen user interface
 LICENSE=		gnu-gpl-v2
 
+USE_LANGUAGES=		c99
 USE_NCURSES=		yes # enter_{bold,reverse,underline}_mode
 GNU_CONFIGURE=		yes
 
