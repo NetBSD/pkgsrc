@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2017/09/02 16:53:29 gdt Exp $
+$NetBSD: distinfo,v 1.11 2017/09/22 17:18:42 gdt Exp $
 
 SHA1 (postgis-2.3.3.tar.gz) = 9be0c182bc50a99a89f7190ea9ab5053647c2e2b
 RMD160 (postgis-2.3.3.tar.gz) = 12724a16d41131c322c55fdd40bfc2e6fe0fdd95
@@ -6,3 +6,4 @@ SHA512 (postgis-2.3.3.tar.gz) = c0ec4b4b5c470e5f88d1bb72c528269a0cf954981385580d
 Size (postgis-2.3.3.tar.gz) = 11342032 bytes
 SHA1 (patch-extensions_address__standardizer_Makefile.in) = e560e734b3652b5ae4c539af8f077754979f2f29
 SHA1 (patch-extensions_postgis__topology_Makefile.in) = f1095e0a852d746027417d49a0c14bf00a5da00f
+SHA1 (patch-raster_rt__core_librtcore.h) = 4dd79beda6e8213addbe6280e1d1b90d5277e18f
