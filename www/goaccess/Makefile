@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/06/10 16:17:07 wiedi Exp $
+# $NetBSD: Makefile,v 1.17 2017/09/22 22:18:01 wiedi Exp $
 
 DISTNAME=	goaccess-1.2
 CATEGORIES=	www
@@ -11,6 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 
+USE_LANGUAGES=	c99
 USE_TOOLS+=     pkg-config aclocal autoconf automake
 USE_NCURSES=	yes
 
