@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.231 2017/08/05 11:06:29 bsiegert Exp $
+# $NetBSD: Makefile,v 1.232 2017/09/22 21:02:43 tez Exp $
 
 DISTNAME=	openssl-1.0.2k
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://www.openssl.org/source/
 
