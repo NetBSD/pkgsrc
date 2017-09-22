@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2017/02/15 17:34:37 adam Exp $
+# $NetBSD: Makefile,v 1.52 2017/09/22 02:58:50 maya Exp $
 
 .include "../../devel/libevent/Makefile.common"
 
@@ -18,6 +18,7 @@ TEST_TARGET=		verify
 
 LIBS.SunOS+=		-lnsl -lresolv
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
+CPPFLAGS.QNX+=		-D__EXT_POSIX2
 
 # XXX helps build, but needs more testing
 #CFLAGS.Interix+=	-Dsockaddr_storage=sockaddr_in -DNI_MAXSERV=32
