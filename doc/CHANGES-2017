@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4038 2017/09/21 19:25:28 morr Exp $
+$NetBSD: CHANGES-2017,v 1.4039 2017/09/22 09:59:55 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5601,3 +5601,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated games/gnuchess-book-medium to 20000511nb4 [jperkin 2017-09-21]
 	Removed devel/py-unittest2py3k successor devel/py-unittest2 [adam 2017-09-21]
 	Updated www/wordpress to 4.8.2 [morr 2017-09-21]
+	Updated www/ap2-perl to 2.0.10nb1 [fly 2017-09-22]
