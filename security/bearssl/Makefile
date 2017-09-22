@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/06/14 01:14:30 agc Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/22 22:00:57 wiedi Exp $
 
 DISTNAME=	bearssl-0.4
 CATEGORIES=	security
@@ -10,6 +10,8 @@ COMMENT=	Implementation of the SSL/TLS protocol (RFC 5246)
 LICENSE=	mit
 
 INSTALLATION_DIRS=	bin include lib
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 do-install:
 	cd ${WRKSRC}/build && \
