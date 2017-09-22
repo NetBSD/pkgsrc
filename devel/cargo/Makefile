@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/09/13 00:12:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/22 12:40:15 tnn Exp $
 
 CARGO_VER=	0.17.0
 RUST_VER=	1.16.0
@@ -36,7 +36,7 @@ DEPENDS+=	rust-[0-9]*:../../lang/rust
 
 MAKE_ENV+=	RUSTFLAGS="-Clink-arg=${COMPILER_RPATH_FLAG}${PREFIX}/lib"
 
-USE_TOOLS+=		curl gmake perl pkg-config
+USE_TOOLS+=		curl cmake gmake perl pkg-config
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
