@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2012/10/02 20:11:56 asau Exp $
-#
+# $NetBSD: Makefile,v 1.11 2017/09/22 07:06:35 wiz Exp $
 
 DISTNAME=	utilispc-1.13
 PKGNAME=	utilisp-1.13
 CATEGORIES=	lang
-MASTER_SITES=	http://dell.tanaka.ecc.u-tokyo.ac.jp/UtiLisp/
+MASTER_SITES=	https://dell.tanaka.ecc.u-tokyo.ac.jp/~ktanaka/UtiLisp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gps.tanaka.ecc.u-tokyo.ac.jp/wadalabfont/pukiwiki.php?%5B%5BUtiLisp%2FC%5D%5D
+HOMEPAGE=	https://gps.tanaka.ecc.u-tokyo.ac.jp/wadalabfont/pukiwiki.php?%5B%5BUtiLisp%2FC%5D%5D
 COMMENT=	UTI Lisp
 
 # severe 64-bit issues
