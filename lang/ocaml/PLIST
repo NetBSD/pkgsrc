@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2017/09/21 13:56:59 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.43 2017/09/22 09:48:28 jperkin Exp $
 bin/ocaml
 bin/ocamlc
 bin/ocamlc.byte
@@ -1371,7 +1371,7 @@ ${PLIST.ocaml-prof}${PLIST.ocaml-opt}lib/ocaml/lexing.p.cmx
 ${PLIST.ocaml-opt}lib/ocaml/libasmrun.a
 ${PLIST.ocaml-opt}lib/ocaml/libasmrun_pic.a
 lib/ocaml/libasmrun_shared.so
-${PLIST.ocaml-opt}lib/ocaml/libasmrunp.a
+${PLIST.ocaml-prof}${PLIST.ocaml-opt}lib/ocaml/libasmrunp.a
 ${PLIST.ocaml-opt}lib/ocaml/libbigarray.a
 ${PLIST.ocaml-opt}lib/ocaml/libcamlrun.a
 ${PLIST.ocaml-opt}lib/ocaml/libcamlrun_pic.a
