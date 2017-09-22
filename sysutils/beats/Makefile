@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2017/08/18 09:08:54 fhajny Exp $
+# $NetBSD: Makefile,v 1.16 2017/09/22 12:25:44 tnn Exp $
 
 DISTNAME=		beats-5.5.2
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=elastic/}
 GITHUB_PROJECT=		beats
-GITHUB_TAG=		v${PKGVERSION_NOREV}
+#GITHUB_TAG=		v${PKGVERSION_NOREV}
+GITHUB_TAG=		74bfb8f9ca009480a558685e745301f0171a4511
 
 MAINTAINER=		filip@joyent.com
 HOMEPAGE=		https://www.elastic.co/products/beats
@@ -14,7 +16,7 @@ LICENSE=		apache-2.0
 EXTRACT_USING=		bsdtar
 USE_TOOLS+=		gmake
 
-GO_DIST_BASE=		${DISTNAME}
+GO_DIST_BASE=		${PKGBASE}-${GITHUB_TAG:S/v//}
 GO_SRCPATH=		github.com/elastic/beats
 
 # Components to build/install
