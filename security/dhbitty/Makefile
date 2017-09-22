@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2014/10/09 14:06:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/22 07:02:57 wiz Exp $
 
 DISTNAME=		dhbitty.c
 PKGNAME=		dhbitty-20120806
 CATEGORIES=		security
-MASTER_SITES=		http://cipherdev.org/rnd/
+MASTER_SITES=		https://cipherdev.org/rnd/
 EXTRACT_SUFX=		#empty
 
 MAINTAINER=		agc@NetBSD.org
 COMMENT=		Small public key ECDH encryption/decryption program
-HOMEPAGE=		http://cipherdev.org/dhbitty.html
+HOMEPAGE=		https://cipherdev.org/dhbitty.html
 LICENSE=		public-domain
 
 WRKSRC=			${WRKDIR}
