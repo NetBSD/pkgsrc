@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2016/08/21 21:23:15 markd Exp $
+$NetBSD: distinfo,v 1.11 2017/09/23 11:58:37 tnn Exp $
 
 SHA1 (kwallet-5.25.0.tar.xz) = a2fd539438bb815ac2908ca4ce2aebb151567ce2
 RMD160 (kwallet-5.25.0.tar.xz) = 1774a1921deab705ce58cb2775918734ef36d176
 SHA512 (kwallet-5.25.0.tar.xz) = 36b6fdcbaf60ea8d66c7556374cd606c90d6978c6ca9f061596b9de9f24999418db91e440a7e963fb246c8befd4fb2393900ad032293636334bbb2925d2ce9a9
 Size (kwallet-5.25.0.tar.xz) = 293868 bytes
+SHA1 (patch-src_runtime_kwalletd_kwalletwizard.cpp) = 8bf816d41c0434054264140d171ec4d8805f784c
