@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2012/09/11 22:37:15 asau Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/23 13:15:28 tnn Exp $
 #
 
 DISTNAME=		super_pi
 PKGNAME=		super_pi-20030927
 CATEGORIES=		benchmarks math
 MASTER_SITES=		ftp://pi.super-computing.org/Linux/
+MASTER_SITES+=		http://www.phoronix-test-suite.com/benchmark-files/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		ftp://pi.super-computing.org/Linux/
