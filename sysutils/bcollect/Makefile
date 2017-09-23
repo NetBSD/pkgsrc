@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2017/04/19 11:24:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/23 05:26:30 wiz Exp $
 
 DISTNAME=	bcollect-0.6.0
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.ancient-solutions.com/pub/bsdprojects/bcollect/
+#MASTER_SITES=	ftp://ftp.ancient-solutions.com/pub/bsdprojects/bcollect/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bcollect.ancient-solutions.com/
+#HOMEPAGE=	http://bcollect.ancient-solutions.com/
 COMMENT=	Incremental remote backup tool
+LICENSE=	modified-bsd
 
-PKG_DESTDIR_SUPPORT=	destdir
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	lex yacc
 
