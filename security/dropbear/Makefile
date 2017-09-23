@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2017/05/16 21:54:21 snj Exp $
+# $NetBSD: Makefile,v 1.33 2017/09/23 20:14:57 wiedi Exp $
 
 DISTNAME=	dropbear-2016.74
 CATEGORIES=	security
@@ -46,6 +46,7 @@ CPPFLAGS+=		-DDROPBEAR_PATH_SSH_PROGRAM="\"${PREFIX}/bin/dbclient\""
 CPPFLAGS+=		-DXAUTH_COMMAND="\"${XAUTHBASE}/bin/xauth\""
 
 CFLAGS.NetBSD+=		-DHAVE_NETINET_IN_SYSTM_H
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 INSTALLATION_DIRS=	share/doc/dropbear ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
