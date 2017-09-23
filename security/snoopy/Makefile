@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/12/05 14:47:02 imil Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/23 20:30:30 wiedi Exp $
 
 DISTNAME=	snoopy-2.1.0
 CATEGORIES=	security
@@ -15,6 +15,8 @@ USE_LIBTOOL=	yes
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	aclocal autoheader autoconf automake gmake
+
+CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 
 pre-configure:
 		set -e; cd ${WRKSRC}; \
