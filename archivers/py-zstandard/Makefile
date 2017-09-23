@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/03/08 14:54:26 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/23 18:25:50 wiedi Exp $
 
 DISTNAME=	zstandard-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,5 @@ HOMEPAGE=	https://github.com/indygreg/python-zstandard
 COMMENT=	Zstandard bindings for Python
 LICENSE=	modified-bsd
 
-.include "../../archivers/zstd/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
