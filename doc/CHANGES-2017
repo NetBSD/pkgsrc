@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4040 2017/09/22 21:04:54 tez Exp $
+$NetBSD: CHANGES-2017,v 1.4041 2017/09/23 05:29:30 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5603,3 +5603,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/wordpress to 4.8.2 [morr 2017-09-21]
 	Updated www/ap2-perl to 2.0.10nb1 [fly 2017-09-22]
 	Updated security/openssl to 1.0.2knb1 [tez 2017-09-22]
+	Updated lang/perl5 to 5.26.0nb3 [fly 2017-09-23]
