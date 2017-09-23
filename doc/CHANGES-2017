@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4041 2017/09/23 05:29:30 maya Exp $
+$NetBSD: CHANGES-2017,v 1.4042 2017/09/23 23:06:33 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5314,6 +5314,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/py-mongo to 3.5.1 [adam 2017-09-12]
 	Updated geography/opencpn to 4.8.0nb1 [bouyer 2017-09-12]
 	Added devel/cargo version 0.17.0 [ryoon 2017-09-13]
+	Updated x11/ocaml-graphics to 4.05.0nb9 [dholland 2017-09-13]
 	Updated devel/py-uvloop to 0.8.1 [adam 2017-09-13]
 	Updated textproc/py-m2r to 0.1.12 [adam 2017-09-13]
 	Updated devel/py-hypothesis to 3.26.0 [adam 2017-09-13]
