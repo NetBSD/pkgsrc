@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2017/09/22 02:58:50 maya Exp $
+$NetBSD: distinfo,v 1.36 2017/09/23 03:24:55 maya Exp $
 
 SHA1 (libevent-2.1.8-stable.tar.gz) = 2a1b8bb7a262d3fd0ed6a080a20991a6eed675ec
 RMD160 (libevent-2.1.8-stable.tar.gz) = 6c7ce8cb51279f9b6b8d8897192db6a2da3d6797
@@ -6,4 +6,5 @@ SHA512 (libevent-2.1.8-stable.tar.gz) = a2fd3dd111e73634e4aeb1b29d06e420b15c024d
 Size (libevent-2.1.8-stable.tar.gz) = 1026485 bytes
 SHA1 (patch-Makefile.in) = 09c7524eb8657e1f76232db97273806a8c900219
 SHA1 (patch-evutil__rand.c) = 2b51e719d25181e03b5afb7df0bf443f1d62a8f1
+SHA1 (patch-signal.c) = 1058566e7a6e0ffb709fbd2a3440cac86e188657
 SHA1 (patch-test_bench__cascade.c) = 58bd32fe0cddc468fda57386283b5298b28ef93e
