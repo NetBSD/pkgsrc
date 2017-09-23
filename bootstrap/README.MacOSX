@@ -1,29 +1,26 @@
-$NetBSD: README.MacOSX,v 1.34 2017/09/21 19:42:16 gdt Exp $
+$NetBSD: README.MacOSX,v 1.35 2017/09/23 05:53:52 maya Exp $
 
 This file describes the use of current versions of pkgsrc with
-multiple versions of Darwin and OS X, omitting information about previous pkgsrc
-versions.
+multiple versions of Darwin and macOS, omitting information about
+previous pkgsrc versions.
 
-* Darwin vs OS X
+* Darwin vs macOS
 
-(Apple has renamed Mac OS X to OS X, but the filename
-remains.)
-
-OS X consists of Darwin (kernel/userland) plus Mac stuff on top.
+macOS consists of Darwin (kernel/userland) plus Mac stuff on top.
 pkgsrc used to target Darwin, but given the tools issued discussed
-below it is not clear that it works on Darwin without OS X.  Darwin
+below it is not clear that it works on Darwin without macOS.  Darwin
 from Apple is no longer open source.
 
-Users of non-OS X Darwin are invited to submit patches to this file.
+Users of non-macOS Darwin are invited to submit patches to this file.
 The only known project is:
   http://www.puredarwin.org/
 
-Until then, this file remains OS X-centric.
+Until then, this file remains macOS-centric.
 
-* OS X specific bootstrap arguments
+* macOS specific bootstrap arguments
 
 Providing the --binary-macpkg flag to the bootstrap script causes it
-to prepare a bootstrap kit as a native OS X package instead of using
+to prepare a bootstrap kit as a native macOS package instead of using
 the conventional .tar.bz2 format.  This requires the package-maker
 application to be installed.
 
@@ -31,7 +28,7 @@ application to be installed.
 
 ** native headers vs SDK
 
-OS X used to include system headers in /usr/include, so that one
+macOS used to include system headers in /usr/include, so that one
 could treat it like a relatively normal POSIX system.  Starting at
 approximately 10.9, headers were no longer available at the standard
 location, and one has to use an SDK that puts headers someplace else.
@@ -117,18 +114,17 @@ Therefore, pkgsrc uses nbsed on 10.9.
 
 ** XCode
 
-This section applies to 10.6 through 10.12.
+This section applies to 10.6 through 10.13.
 
-If you haven't already, you will need to install the OS X
+If you haven't already, you will need to install the macOS
 Developer Tools package (XCode) to obtain a compiler, etc.  The
-procedure depends on the version of OS X; recent versions use the
+procedure depends on the version of macOS; recent versions use the
 App Store.
 
 *** Command-line Tools
 
-XCode 9 (the current version), even when installed on OS X 10.12, does
-not include an SDK for 10.12.  If one installs "Commmand Line Tools",
-then pkgsrc can use the compiler.
+XCode 9 (the current version) does not include an SDK for 10.12.  If
+one installs "Commmand Line Tools", then pkgsrc can use the compiler.
 
 Since Xcode 7 (installed from the Apple Store) the development
 environment can upgrade itself without interaction from the user, but
@@ -144,20 +140,20 @@ from https://developer.apple.com/downloads/
 
 Note that as of 10.9, cvs is no longer provided by Apple.  You can build
 devel/scmcvs.  To obtain pkgsrc in order to bootstrap and build cvs,
-it may be useful to `git clone https://github.com/jsonn/pkgsrc.git`.
+it may be useful to `git clone https://github.com/NetBSD/pkgsrc.git`.
 
 ** X11
 
-X11 used to be built into OS X, but as of 10.8 it is no longer
+X11 used to be built into macOS, but as of 10.8 it is no longer
 included.  You can install XQuartz from
 https://www.xquartz.org, or try the newly-added pkgsrc
 version.
 
-* OS X Versions
+* macOS Versions
 
 Because Apple drops support for previous hardware faster than the
 hardware fails, many machines cannot be upgraded to recent versions of
-OS X, creating a greater than usual desire to support old systems.
+macOS, creating a greater than usual desire to support old systems.
 Because of the particular history of deprecation, most systems tend to
 run relatively recent versions or specific older versions (10.6 and
 10.5).
@@ -172,7 +168,9 @@ old systems.
 pkgsrc PRs about 10.5 or older that do not contain fixes may be closed
 without fixing.
 
-OS X 10.11 is considered new and there may be issues.
+macOS 10.12 - 10.13 are considered new and there may be issues.
+
+OS X 10.11 is  considered new and there may be issues.
 
 OS X 10.10 is considered current.
 
@@ -197,7 +195,7 @@ and slower G4 Macs.
 * Bulk builds
 
 Clearly, it is desirable for a bulk build to be useful on as many
-computers as possible.  The main issues are which ABI and which OS X
+computers as possible.  The main issues are which ABI and which macOS
 version.  Targeting older versions makes a build run on more systems,
 and targeting newer versions makes the build closer to what would be
 obtained from bootstrapping on a newer version and thus avoids some
