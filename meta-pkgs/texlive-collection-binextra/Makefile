@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/07/06 02:36:07 markd Exp $
+# $NetBSD: Makefile,v 1.10 2017/09/23 05:56:59 maya Exp $
 
 DISTNAME=	collection-binextra
 PKGNAME=	texlive-${DISTNAME}-2017pre2
@@ -15,7 +15,8 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 DEPENDS+=	tex-a2ping-[0-9]*:../../graphics/tex-a2ping
 # depend adhocfilelist
 # depend arara
-DEPENDS+=	asymptote-[0-9]*:../../graphics/asymptote
+# XXX asymptote conflicts with other packages by requiring ghostscript-agpl
+#DEPENDS+=	asymptote-[0-9]*:../../graphics/asymptote
 DEPENDS+=	tex-bibtex8-[0-9]*:../../print/tex-bibtex8
 # depend bibtexu
 # depend bundledoc
