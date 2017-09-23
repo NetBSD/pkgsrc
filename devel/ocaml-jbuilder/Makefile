@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/09/08 17:04:06 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/23 11:42:52 tnn Exp $
 
 VERSION=	1.0_beta13
 PKGREVISION=	1
@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/jbuilder-1.0-beta13
 USE_LANGUAGES=	# none
 
 BUILD_TARGET=	default
-MAKE_ENV+=	MAKE_JOBS=${MAKE_JOBS}
+MAKE_ENV+=	MAKE_JOBS=${MAKE_JOBS:U1}
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${OCAML_SITELIBDIR}/jbuilder
 
 OCAML_USE_FINDLIB=	yes
