@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4042 2017/09/23 23:06:33 dholland Exp $
+$NetBSD: CHANGES-2017,v 1.4043 2017/09/24 14:59:05 tron Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5605,3 +5605,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/ap2-perl to 2.0.10nb1 [fly 2017-09-22]
 	Updated security/openssl to 1.0.2knb1 [tez 2017-09-22]
 	Updated lang/perl5 to 5.26.0nb3 [fly 2017-09-23]
+	Updated mail/mutt to 1.9.1 [tron 2017-09-24]
