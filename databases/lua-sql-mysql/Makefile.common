@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2016/10/08 12:53:54 kamil Exp $
+# $NetBSD: Makefile.common,v 1.2 2017/09/24 14:27:55 wiz Exp $
 #
 # used by databases/lua-sql-postgres/Makefile
 # used by databases/lua-sql-sqlite/Makefile
@@ -13,7 +13,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=keplerproject/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 LICENSE=	mit
-HOMEPAGE=	http://www.keplerproject.org/luasql/
+HOMEPAGE=	https://keplerproject.github.io/luasql/
 
 USE_TOOLS+=		gmake
 
