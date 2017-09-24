@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/09/06 10:40:26 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2017/09/24 15:07:18 tnn Exp $
 #
 
 DISTNAME=	vera++-1.1.1
@@ -12,7 +12,7 @@ COMMENT=	Programmable verification and analysis tool for C++
 
 BUILD_TARGET=	build
 LICENSE=	boost-license
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c++11
 USE_TOOLS+=	gmake pax
 
 CXXFLAGS+=	-DVERA_ROOT=\"${PREFIX:Q}/share/vera++\"
