@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.28 2015/09/02 04:43:52 dholland Exp $
+# $NetBSD: Makefile,v 1.29 2017/09/24 14:33:23 wiz Exp $
 
 DISTNAME=	onyx-${VERS}
 PKGREVISION=	2
 CATEGORIES=	lang
-MASTER_SITES=	http://www.canonware.com/download/onyx/
+#MASTER_SITES=	http://www.canonware.com/download/onyx/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.canonware.com/onyx/
+#HOMEPAGE=	http://www.canonware.com/onyx/
+HOMEPAGE=	https://github.com/canonware/onyx
 COMMENT=	Embeddable stack-based threaded interpreted language
 
 BUILD_DEPENDS+=	cook-[0-9]*:../../devel/cook
