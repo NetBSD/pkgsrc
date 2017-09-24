@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.4037 2016/06/19 20:51:33 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.4038 2017/09/24 10:29:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2870,6 +2870,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated converters/txt2man to 1.5.6 [obache 2012-06-04]
 	Updated devel/p5-InlineX-C2XS to 0.22 [obache 2012-06-04]
 	Added textproc/ocaml-tyxml version 2.1 [wiz 2012-06-04]
+	Added devel/gdbus-codegen version 2.32.3 [drochner 2012-06-04]
 	Added devel/protobuf version 2.4.1 [obache 2012-06-04]
 	Updated net/bind99 to 9.9.1pl1 [taca 2012-06-04]
 	Updated net/bind98 to 9.8.3pl1 [taca 2012-06-04]
