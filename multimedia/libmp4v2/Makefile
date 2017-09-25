@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2017/05/06 18:12:00 maya Exp $
+# $NetBSD: Makefile,v 1.18 2017/09/25 22:30:06 joerg Exp $
 
 DISTNAME=		mpeg4ip-1.6.1
 PKGNAME=		libmp4v2-1.6.1
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		multimedia
 # distfile at sf is corrupt
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mpeg4ip/}
@@ -26,10 +26,6 @@ OVERRIDE_DIRDEPTH=	3
 
 # to install mp4* tools
 BUILD_DIRS=		. lib/mp4v2/util
-
-CFLAGS+=		-std=gnu89
-BUILDLINK_TRANSFORM+=	rm:-Werror
-BUILDLINK_TRANSFORM+=	rm:-fpermissive
 
 # lowercase min,max cannot be used as macros, conflicts with libstdc++6
 SUBST_CLASSES+=		minmax
