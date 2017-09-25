@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/08/24 20:03:07 adam Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/25 13:15:52 wiedi Exp $
 
 DISTNAME=	libstaroffice-0.0.2
 PKGREVISION=	2
@@ -23,4 +23,5 @@ PKGCONFIG_OVERRIDE+=	libstaroffice.pc.in
 
 .include "../../converters/librevenge/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
