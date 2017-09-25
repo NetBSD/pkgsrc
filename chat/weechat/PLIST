@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.24 2017/01/05 12:30:39 roy Exp $
+@comment $NetBSD: PLIST,v 1.25 2017/09/25 17:53:18 maya Exp $
 bin/weechat
 include/weechat/weechat-plugin.h
 lib/pkgconfig/weechat.pc
 lib/weechat/plugins/alias.so
+lib/weechat/plugins/buflist.so
 lib/weechat/plugins/charset.so
 lib/weechat/plugins/exec.so
 lib/weechat/plugins/fifo.so
