@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/08 00:32:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/09/25 22:30:43 joerg Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1312,7 +1312,6 @@ lib/calibre/routes/mapper.py
 lib/calibre/routes/middleware.py
 lib/calibre/routes/route.py
 lib/calibre/routes/util.py
-lib/calibre/six.py
 lib/calibre/templite/__init__.py
 lib/calibre/tinycss/__init__.py
 lib/calibre/tinycss/color3.py
