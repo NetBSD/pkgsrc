@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4044 2017/09/25 12:09:51 maya Exp $
+$NetBSD: CHANGES-2017,v 1.4045 2017/09/25 14:44:34 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5602,8 +5602,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated games/gnuchess-book-medium to 20000511nb4 [jperkin 2017-09-21]
 	Removed devel/py-unittest2py3k successor devel/py-unittest2 [adam 2017-09-21]
 	Updated www/wordpress to 4.8.2 [morr 2017-09-21]
-	Updated www/ap2-perl to 2.0.10nb1 [fly 2017-09-22]
+	Updated www/ap2-perl to 2.0.10nb1 [maya 2017-09-22]
 	Updated security/openssl to 1.0.2knb1 [tez 2017-09-22]
-	Updated lang/perl5 to 5.26.0nb3 [fly 2017-09-23]
+	Updated lang/perl5 to 5.26.0nb3 [maya 2017-09-23]
 	Updated mail/mutt to 1.9.1 [tron 2017-09-24]
-	Updated chat/weechat to 1.9.1 [fly 2017-09-25]
+	Updated chat/weechat to 1.9.1 [may 2017-09-25]
