@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2017/09/17 13:07:00 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/26 14:33:08 wiz Exp $
 
-DISTNAME=	Safe-Isa-1.000006
+DISTNAME=	Safe-Isa-1.000007
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/H/HA/HAARG/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/ET/ETHER/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Safe-Isa/
