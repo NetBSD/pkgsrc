@@ -1,0 +1,23 @@
+$NetBSD: patch-Build_PL,v 1.1 2017/09/26 10:40:26 wiz Exp $
+
+To force not to build from source. Take [1] from following.
+
+You have the following options:
+[1] Already installed SDL ver=1.2.15 path=/usr/pkg
+    SDL(v1.2.15) SDL_image(v1.2.12) SDL_mixer(v1.2.12) SDL_ttf(v2.0.11) SDL_gfx(v2.0.24) SDL_Pango(v1.3) 
+[2] Already installed SDL ver=1.2.15 path=/usr/pkg
+    SDL(v1.2.15) SDL_image(v1.2.12) SDL_mixer(v1.2.12) SDL_ttf(v2.0.11) SDL_gfx(v2.0.24) SDL_Pango(v1.3) 
+[3] Source code build
+    SDL(v1.2.15) SDL_image(v1.2.11) SDL_mixer(v1.2.12) SDL_ttf(v2.0.11) SDL_gfx(v2.0.25) SDL_Pango(v1.2) 
+[4] Quit installation
+
+--- Build.PL.orig	2014-05-14 15:48:03.000000000 +0900
++++ Build.PL	2015-02-12 13:32:17.000000000 +0900
+@@ -229,6 +229,7 @@ else {
+ 
+   if($ans > 0 && $ans < scalar(@candidates)) {
+     $choice = $candidates[$ans - 1];
++    $choice = $candidates[0];
+   }
+ 
+   $| = 0;
