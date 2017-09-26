@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4073 2017/09/26 14:24:40 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4074 2017/09/26 14:27:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5804,3 +5804,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-CPAN-Perl-Releases to 3.38 [wiz 2017-09-26]
 	Updated devel/p5-Devel-Cover to 1.27 [wiz 2017-09-26]
 	Updated devel/p5-File-Slurper to 0.010 [wiz 2017-09-26]
+	Updated devel/p5-Module-CoreList to 5.20170923 [wiz 2017-09-26]
