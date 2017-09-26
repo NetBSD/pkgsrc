@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2017/06/14 11:18:55 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.23 2017/09/26 10:59:39 ryoon Exp $
 bin/certcgi
 bin/certutil
 bin/cmsutil
@@ -120,6 +120,7 @@ include/nss/nss/shsign.h
 include/nss/nss/smime.h
 include/nss/nss/ssl.h
 include/nss/nss/sslerr.h
+include/nss/nss/sslexp.h
 include/nss/nss/sslproto.h
 include/nss/nss/sslt.h
 include/nss/nss/utilmodt.h
