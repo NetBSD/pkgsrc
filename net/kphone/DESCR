@@ -1,7 +1,0 @@
-KPhone is a SIP (Session Initiation Protocol) user agent for Linux,
-with which you can initiate VoIP (Voice over IP) connections over the
-Internet. It supports Presence and Instant Messaging, and to some extent
-also video calls between two hosts.
-
-The original KPhone was written by Billy Biggs, modifications made by
-Pekka Raisio, Jouni Vuorela and Juha Heinanen at Wirlab.

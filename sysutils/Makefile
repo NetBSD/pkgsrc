@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.722 2017/09/16 09:34:47 wiz Exp $
+# $NetBSD: Makefile,v 1.723 2017/09/26 10:27:12 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -101,7 +101,6 @@ SUBDIR+=	daemontools-run
 SUBDIR+=	dbus
 SUBDIR+=	dbus-glib
 SUBDIR+=	dbus-python-common
-SUBDIR+=	dbus-qt3
 SUBDIR+=	dbus-sharp
 SUBDIR+=	dbus-sharp-glib
 SUBDIR+=	dc-tools
@@ -163,7 +162,6 @@ SUBDIR+=	fatback
 SUBDIR+=	fdupes
 SUBDIR+=	file
 SUBDIR+=	filelight
-SUBDIR+=	filelight-kde3
 SUBDIR+=	findnewest
 SUBDIR+=	findutils
 SUBDIR+=	fix4SA110rev2
@@ -295,16 +293,13 @@ SUBDIR+=	iwi-firmware
 SUBDIR+=	iwi-firmware3
 SUBDIR+=	iwn-firmware
 SUBDIR+=	k3b
-SUBDIR+=	k3b-kde3
 SUBDIR+=	k4dirstat
 SUBDIR+=	kcron
 SUBDIR+=	kdbusaddons
 SUBDIR+=	kdf
-SUBDIR+=	kdirstat
 SUBDIR+=	kfilemetadata
 SUBDIR+=	kfilemetadata5
 SUBDIR+=	kfloppy
-SUBDIR+=	krusader
 SUBDIR+=	ksystemlog
 SUBDIR+=	kuser
 SUBDIR+=	lambd

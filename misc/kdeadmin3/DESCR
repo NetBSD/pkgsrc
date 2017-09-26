@@ -1,8 +1,0 @@
-This package provides applications that usually only a system administrator
-might need that are part of the standard KDE environment:
-
-* kcron: editor for the cron command scheduler
-* kpackage: manager for DEB, RPM, pkgsrc and similar software packages
-* kuser: an user manager
-* kwuftpd: front end to the wu-ftpd FTP daemon
-* secpolicy: a program to display PAM security policies
