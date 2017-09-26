@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/26 11:21:27 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/send2trash/__init__.py
+${PYSITELIB}/send2trash/__init__.pyc
+${PYSITELIB}/send2trash/__init__.pyo
+${PYSITELIB}/send2trash/compat.py
+${PYSITELIB}/send2trash/compat.pyc
+${PYSITELIB}/send2trash/compat.pyo
+${PYSITELIB}/send2trash/plat_gio.py
+${PYSITELIB}/send2trash/plat_gio.pyc
+${PYSITELIB}/send2trash/plat_gio.pyo
+${PYSITELIB}/send2trash/plat_osx.py
+${PYSITELIB}/send2trash/plat_osx.pyc
+${PYSITELIB}/send2trash/plat_osx.pyo
+${PYSITELIB}/send2trash/plat_other.py
+${PYSITELIB}/send2trash/plat_other.pyc
+${PYSITELIB}/send2trash/plat_other.pyo
+${PYSITELIB}/send2trash/plat_win.py
+${PYSITELIB}/send2trash/plat_win.pyc
+${PYSITELIB}/send2trash/plat_win.pyo
