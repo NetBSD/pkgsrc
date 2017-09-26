@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2013/07/17 08:39:59 jperkin Exp $
+# $NetBSD: options.mk,v 1.4 2017/09/26 07:01:55 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.compiz
-PKG_SUPPORTED_OPTIONS=	fuse gnome inotify kde3 kde4
-PLIST_VARS+=		gnome inotify kde kde3
+PKG_SUPPORTED_OPTIONS=	fuse gnome inotify kde4
+PLIST_VARS+=		gnome inotify kde
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -40,18 +40,6 @@ CONFIGURE_ARGS+=	--disable-gnome --disable-gnome-keybindings
 PLIST.inotify=		yes
 .else
 CONFIGURE_ARGS+=	--disable-inotify
-.endif
-
-.if !empty(PKG_OPTIONS:Mkde3)
-# XXX This option is broken on NetBSD 6.0.1/amd64 + pkgsrc-current
-.include "../../x11/kdebase3/buildlink3.mk"
-.include "../../x11/kdelibs3/buildlink3.mk"
-.include "../../sysutils/dbus-qt3/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-kconfig
-PLIST.kde=		yes
-PLIST.kde3=		yes
-.else
-CONFIGURE_ARGS+=	--disable-kde --disable-kconfig
 .endif
 
 .if !empty(PKG_OPTIONS:Mkde4)
