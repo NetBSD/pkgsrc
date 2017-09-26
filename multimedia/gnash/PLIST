@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/02/16 10:44:53 obache Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/09/26 09:44:08 wiz Exp $
 ${PLIST.gstreamer}bin/findmicrophones
 ${PLIST.gstreamer}bin/findwebcams
 bin/gnash
@@ -6,7 +6,6 @@ ${PLIST.gtk}bin/gnash-gtk-launcher
 ${PLIST.kde4}bin/gnash-qt-launcher
 bin/gprocessor
 ${PLIST.gtk}bin/gtk-gnash
-${PLIST.kde3}bin/kde3-gnash
 ${PLIST.kde4}bin/kde4-gnash
 bin/rtmpget
 include/gnash/AMF.h
@@ -185,7 +184,6 @@ lib/gnash/libgnashdevice.la
 lib/gnash/libgnashmedia.la
 lib/gnash/libgnashrender.la
 lib/gnash/libgnashsound.la
-${PLIST.kde3}lib/kde3/libklashpart.la
 ${PLIST.kde4}lib/kde4/libklashpart.la
 ${PLIST.plugin}lib/netscape/plugins/libgnashplugin.so
 lib/pkgconfig/gnash.pc
@@ -213,7 +211,6 @@ share/gnash/gnash-splash.swf
 share/gnash/gnash_128_96.ico
 ${PLIST.kde}share/kde/apps/klash/klashpartui.rc
 ${PLIST.kde}share/kde/apps/klash/pluginsinfo
-${PLIST.kde3}share/kde/services/klash_part.desktop
 ${PLIST.kde4}share/kde4/services/klash_part.desktop
 ${PLIST.gtk}share/icons/hicolor/32x32/apps/gnash.xpm
 ${PLIST.kde4}share/icons/hicolor/32x32/apps/klash.xpm
