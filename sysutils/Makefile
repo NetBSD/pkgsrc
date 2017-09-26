@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.723 2017/09/26 10:27:12 wiz Exp $
+# $NetBSD: Makefile,v 1.724 2017/09/26 11:21:45 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -443,6 +443,7 @@ SUBDIR+=	pstree
 SUBDIR+=	puppet
 SUBDIR+=	pv
 SUBDIR+=	pwgen
+SUBDIR+=	py-Send2Trash
 SUBDIR+=	py-attic
 SUBDIR+=	py-augeas
 SUBDIR+=	py-borgbackup
