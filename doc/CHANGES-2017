@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4080 2017/09/26 14:42:04 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4081 2017/09/26 14:46:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5811,3 +5811,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/p5-Math-Prime-Util to 0.67 [wiz 2017-09-26]
 	Updated textproc/p5-PDF-Create to 1.43 [wiz 2017-09-26]
 	Updated time/p5-Data-ICal-DateTime to 0.82 [wiz 2017-09-26]
+	Updated time/p5-DateTime-Format-CLDR to 1.19 [wiz 2017-09-26]
