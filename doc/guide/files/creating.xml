@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.24 2017/02/20 23:42:25 wiz Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.25 2017/09/26 03:23:30 maya Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -118,16 +118,6 @@ package from the set of installed files.</para></step>
 
 <para>Simple Perl modules are handled automatically by
 <command>url2pkg</command>, including dependencies.</para>
-
-</sect2>
-
-<sect2 id="creating.kde-app">
-<title>KDE3 & KDE4 applications</title>
-
-<para>KDE3 applications should always include
-<filename>meta-pkgs/kde3/kde3.mk</filename>, which contains numerous
-settings that are typical of KDE3 packages and KDE4 applications should
-always include <filename>meta-pkgs/kde4/kde4.mk</filename>, respectively.</para>
 
 </sect2>
 
