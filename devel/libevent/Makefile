@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2017/09/22 02:58:50 maya Exp $
+# $NetBSD: Makefile,v 1.53 2017/09/26 17:57:36 gson Exp $
 
 .include "../../devel/libevent/Makefile.common"
+
+PKGREVISION=	1
 
 PKGNAME=	${DISTNAME:S/-stable//}
 COMMENT=	Asynchronous event notification library
@@ -19,6 +21,9 @@ TEST_TARGET=		verify
 LIBS.SunOS+=		-lnsl -lresolv
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 CPPFLAGS.QNX+=		-D__EXT_POSIX2
+
+CFLAGS+=-g -O0
+INSTALL_UNSTRIPPED=yes
 
 # XXX helps build, but needs more testing
 #CFLAGS.Interix+=	-Dsockaddr_storage=sockaddr_in -DNI_MAXSERV=32
