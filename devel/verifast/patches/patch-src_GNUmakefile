@@ -1,29 +1,34 @@
-$NetBSD: patch-src_GNUmakefile,v 1.1 2017/07/12 01:54:16 ryoon Exp $
+$NetBSD: patch-src_GNUmakefile,v 1.2 2017/09/26 17:49:10 wiedi Exp $
 
-* Fix build under NetBSD
+* Fix build under NetBSD and SunOS
 
 --- src/GNUmakefile.orig	2017-06-13 16:58:54.000000000 +0000
 +++ src/GNUmakefile
-@@ -41,6 +41,8 @@ else
+@@ -41,6 +41,10 @@ else
            OS = Darwin
    else ifeq ($(shell uname -o), Cygwin)
            OS = Cygwin
 +  else ifeq ($(shell uname -s), NetBSD)
 +          OS = NetBSD
++  else ifeq ($(shell uname -s), SunOS)
++          OS = SunOS
    else
            $(error "Could not recognize your platform")
    endif
-@@ -50,6 +52,9 @@ endif
+@@ -50,6 +54,12 @@ endif
  ifndef WITHOUT_LABLGTK
    ifeq ($(OS), Cygwin)
      LABLGTK_FLAGS += -I +site-lib/lablgtk2 lablgtk.cmxa
 +  else ifeq ($(OS), NetBSD)
 +    LABLGTK_FLAGS_ += -I +site-lib/lablgtk2
 +    LABLGTK_FLAGS += ${LABLGTK_FLAGS_} lablgtk.cmxa
++  else ifeq ($(OS), SunOS)
++    LABLGTK_FLAGS_ += -I +site-lib/lablgtk2
++    LABLGTK_FLAGS += ${LABLGTK_FLAGS_} lablgtk.cmxa
    else
      LABLGTK_FLAGS_ += -I +../lablgtk2 -I +lablgtk2
      LABLGTK_FLAGS  += ${LABLGTK_FLAGS_} lablgtk.cmxa
-@@ -137,11 +142,7 @@ OCAML        = ${OCAMLBIN}/ocaml
+@@ -137,11 +147,7 @@ OCAML        = ${OCAMLBIN}/ocaml
  OCAMLC       = $(firstword $(wildcard ${OCAMLBIN}/ocamlc.opt ${OCAMLBIN}/ocamlc))
  OCAMLOPT     = $(firstword $(wildcard ${OCAMLBIN}/ocamlopt.opt ${OCAMLBIN}/ocamlopt))
  OCAMLDEP     = $(firstword $(wildcard ${OCAMLBIN}/ocamldep.opt ${OCAMLBIN}/ocamldep))
@@ -36,17 +41,20 @@ $NetBSD: patch-src_GNUmakefile,v 1.1 2017/07/12 01:54:16 ryoon Exp $
  
  # Do we build with "-I ./linux" or "-I ./win":
  ifeq ($(OS), Cygwin)
-@@ -198,6 +199,9 @@ endif
+@@ -198,6 +204,12 @@ endif
  ifeq ($(OS), Cygwin)
    include win/GNUmakefile
  endif
 +ifeq ($(OS), NetBSD)
 +  include linux/GNUmakefile
 +endif
++ifeq ($(OS), SunOS)
++  include linux/GNUmakefile
++endif
  
  include java_frontend/GNUmakefile
  
-@@ -378,7 +382,7 @@ clean::
+@@ -378,7 +390,7 @@ clean::
  ifndef WITHOUT_LABLGTK
  
  clean::
@@ -55,7 +63,7 @@ $NetBSD: patch-src_GNUmakefile,v 1.1 2017/07/12 01:54:16 ryoon Exp $
  
  branchleft_png.ml: branch-left.png
  	gdk_pixbuf_mlsource branch-left.png > branchleft_png.ml
-@@ -396,7 +400,7 @@ branchright_png.cmx: branchright_png.ml
+@@ -396,7 +408,7 @@ branchright_png.cmx: branchright_png.ml
  vfide.cmx: branchleft_png.cmx branchright_png.cmx Fonts.cmx vfide.ml $(GTKSOURCEVIEW_DEPS)
  	@echo "  OCAMLOPT " $@
  ifndef WITHOUT_GTKSOURCEVIEW
@@ -64,7 +72,7 @@ $NetBSD: patch-src_GNUmakefile,v 1.1 2017/07/12 01:54:16 ryoon Exp $
  endif
  	$(SET_LDD); $(OCAMLOPT) $(OCAMLCFLAGS) -thread -c -w p -warn-error FSU -c $(INCLUDES) \
  	-pp ${CAMLP4O} nums.cmxa $(LABLGTK_FLAGS) $(GTKSOURCEVIEW_LFLAGS) vfide.ml
-@@ -404,7 +408,7 @@ endif
+@@ -404,7 +416,7 @@ endif
  ../bin/vfide$(DOTEXE): vfide.cmx redux.cmx $(Z3DEPS) plugins2.cmx $(GTKSOURCEVIEW_DEPS)
  	@echo "  OCAMLOPT " $@
  ifndef WITHOUT_GTKSOURCEVIEW
