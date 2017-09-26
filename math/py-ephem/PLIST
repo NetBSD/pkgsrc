@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2014/01/20 12:47:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/09/26 17:32:26 adam Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/ephem/__init__.py
 ${PYSITELIB}/ephem/__init__.pyc
 ${PYSITELIB}/ephem/__init__.pyo
@@ -50,6 +51,9 @@ ${PYSITELIB}/ephem/tests/test_constants.pyo
 ${PYSITELIB}/ephem/tests/test_dates.py
 ${PYSITELIB}/ephem/tests/test_dates.pyc
 ${PYSITELIB}/ephem/tests/test_dates.pyo
+${PYSITELIB}/ephem/tests/test_github_issues.py
+${PYSITELIB}/ephem/tests/test_github_issues.pyc
+${PYSITELIB}/ephem/tests/test_github_issues.pyo
 ${PYSITELIB}/ephem/tests/test_jpl.py
 ${PYSITELIB}/ephem/tests/test_jpl.pyc
 ${PYSITELIB}/ephem/tests/test_jpl.pyo
@@ -59,6 +63,9 @@ ${PYSITELIB}/ephem/tests/test_launchpad_236872.pyo
 ${PYSITELIB}/ephem/tests/test_launchpad_244811.py
 ${PYSITELIB}/ephem/tests/test_launchpad_244811.pyc
 ${PYSITELIB}/ephem/tests/test_launchpad_244811.pyo
+${PYSITELIB}/ephem/tests/test_locales.py
+${PYSITELIB}/ephem/tests/test_locales.pyc
+${PYSITELIB}/ephem/tests/test_locales.pyo
 ${PYSITELIB}/ephem/tests/test_observers.py
 ${PYSITELIB}/ephem/tests/test_observers.pyc
 ${PYSITELIB}/ephem/tests/test_observers.pyo
@@ -92,4 +99,3 @@ ${PYSITELIB}/ephem/tests/usno/riset_moon.txt
 ${PYSITELIB}/ephem/tests/usno/riset_sun.txt
 ${PYSITELIB}/ephem/tests/usno/risettran_moon.txt
 ${PYSITELIB}/ephem/tests/usno/risettran_rigel.txt
-${PYSITELIB}/${EGG_FILE}
