@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2017/09/06 16:49:28 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2017/09/26 10:27:06 wiz Exp $
 
-DISTNAME=	bulk-large-20170622
+DISTNAME=	bulk-large-20170926
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -48,12 +48,8 @@ BUILD_DEPENDS+=	dbus-[0-9]*:../../sysutils/dbus
 BUILD_DEPENDS+=	dbus-glib-[0-9]*:../../sysutils/dbus-glib
 BUILD_DEPENDS+=	aspell-[0-9]*:../../textproc/aspell
 BUILD_DEPENDS+=	gnome-doc-utils-[0-9]*:../../textproc/gnome-doc-utils
-BUILD_DEPENDS+=	kdebase>=3<4:../../x11/kdebase3
-BUILD_DEPENDS+=	kdelibs>=3<4:../../x11/kdelibs3
 BUILD_DEPENDS+=	kdelibs4-[0-9]*:../../x11/kdelibs4
 BUILD_DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
-BUILD_DEPENDS+=	qt3-libs-[0-9]*:../../x11/qt3-libs
-BUILD_DEPENDS+=	qt3-tools-[0-9]*:../../x11/qt3-tools
 BUILD_DEPENDS+=	qt4-libs-[0-9]*:../../x11/qt4-libs
 BUILD_DEPENDS+=	qt4-tools-[0-9]*:../../x11/qt4-tools
 
@@ -61,7 +57,6 @@ BUILD_DEPENDS+=	qt4-tools-[0-9]*:../../x11/qt4-tools
 # 2. Applications
 #
 BUILD_DEPENDS+=	konversation>=1.4:../../chat/konversation
-BUILD_DEPENDS+=	konversation>=1.1<1.4:../../chat/konversation-kde3
 BUILD_DEPENDS+=	asterisk>=11:../../comms/asterisk
 BUILD_DEPENDS+=	avr-gcc-[0-9]*:../../cross/avr-gcc
 BUILD_DEPENDS+=	avr-libc-[0-9]*:../../cross/avr-libc
@@ -130,7 +125,6 @@ BUILD_DEPENDS+=	desktop-gnome-[0-9]*:../../meta-pkgs/desktop-gnome
 BUILD_DEPENDS+=	gnome-[0-9]*:../../meta-pkgs/gnome
 BUILD_DEPENDS+=	gnome-platform-[0-9]*:../../meta-pkgs/gnome-platform
 BUILD_DEPENDS+=	gnustep-[0-9]*:../../meta-pkgs/gnustep
-BUILD_DEPENDS+=	kde>=3<4:../../meta-pkgs/kde3
 BUILD_DEPENDS+=	kde4-[0-9]*:../../meta-pkgs/kde4
 BUILD_DEPENDS+=	matchbox-[0-9]*:../../meta-pkgs/matchbox
 BUILD_DEPENDS+=	windowmaker-desktop-[0-9]*:../../meta-pkgs/windowmaker-desktop

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/08/01 14:58:53 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2017/09/26 10:26:56 wiz Exp $
 
 DISTNAME=	efax-0.9
 PKGREVISION=	2
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/serialcomm/fax/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.cce.com/efax/
 COMMENT=	Collection of small programs for sending and receiving faxes
-
-CONFLICTS=	kdeutils<3.1
 
 CONF_FILES+=	${PREFIX}/share/examples/efax/efax.rc ${PKG_SYSCONFDIR}/efax.rc
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.629 2017/09/14 19:44:15 minskim Exp $
+# $NetBSD: Makefile,v 1.630 2017/09/26 10:27:11 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -9,7 +9,6 @@ SUBDIR+=	CoolKey
 SUBDIR+=	EasyPG
 SUBDIR+=	HElib
 SUBDIR+=	KeePass
-SUBDIR+=	MyPasswordSafe
 SUBDIR+=	PACK
 SUBDIR+=	PortableSigner
 SUBDIR+=	R-digest
@@ -135,7 +134,6 @@ SUBDIR+=	keychain
 SUBDIR+=	kgpg
 SUBDIR+=	knc
 SUBDIR+=	kpcli
-SUBDIR+=	kssh
 SUBDIR+=	kstart
 SUBDIR+=	kwallet
 SUBDIR+=	kwalletmanager
@@ -442,8 +440,6 @@ SUBDIR+=	py-xmlsec
 SUBDIR+=	py-yara
 SUBDIR+=	py-yubiauth
 SUBDIR+=	pyca
-SUBDIR+=	qca
-SUBDIR+=	qca-tls
 SUBDIR+=	qca2
 SUBDIR+=	qca2-gnupg
 SUBDIR+=	qca2-ossl

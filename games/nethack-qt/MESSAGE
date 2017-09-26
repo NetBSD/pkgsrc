@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.4 2011/06/01 11:20:29 wiz Exp $
-
-You can run the QT NetHack by typing "nethack qt"
-
-To fall back to tty mode, use "NETHACKOPTIONS=windowtype:tty nethack"
-or set that option in your .nethackrc file.
-
-===========================================================================

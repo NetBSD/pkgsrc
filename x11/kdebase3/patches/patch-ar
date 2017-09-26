@@ -1,9 +1,0 @@
-$NetBSD: patch-ar,v 1.5 2007/10/20 10:37:20 markd Exp $
-
---- applnk/old_desktop_files.orig	2005-09-10 20:25:45.000000000 +1200
-+++ applnk/old_desktop_files
-@@ -1,4 +1,3 @@
--kgamma.desktop
- randr.desktop
- xinerama.desktop
- energy.desktop

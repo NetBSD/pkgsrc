@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.488 2017/09/17 15:57:54 taca Exp $
+# $NetBSD: Makefile,v 1.489 2017/09/26 10:27:06 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -14,7 +14,6 @@ SUBDIR+=	astrolog
 SUBDIR+=	attica
 SUBDIR+=	attica-qt5
 SUBDIR+=	autocue
-SUBDIR+=	basket
 SUBDIR+=	bbappconf
 SUBDIR+=	bbdb
 SUBDIR+=	bbweather
@@ -125,21 +124,13 @@ SUBDIR+=	kanjidic2
 SUBDIR+=	kanjipad
 SUBDIR+=	kbruch
 SUBDIR+=	kcharselect
-SUBDIR+=	kchm
 SUBDIR+=	kchmviewer
 SUBDIR+=	kde-wallpapers4
-SUBDIR+=	kdeaccessibility3
-SUBDIR+=	kdeaddons3
-SUBDIR+=	kdeadmin3
-SUBDIR+=	kdeartwork3
 SUBDIR+=	kdeartwork4
-SUBDIR+=	kdeedu3
 SUBDIR+=	kdepim-runtime4
-SUBDIR+=	kdepim3
 SUBDIR+=	kdepim4
 SUBDIR+=	kdepimlibs4
 SUBDIR+=	kdeplasma-addons4
-SUBDIR+=	kdeutils3
 SUBDIR+=	kdrill
 SUBDIR+=	kemoticons
 SUBDIR+=	kgeography
@@ -150,7 +141,6 @@ SUBDIR+=	klettres
 SUBDIR+=	kmag
 SUBDIR+=	kmousetool
 SUBDIR+=	kmouth
-SUBDIR+=	koffice
 SUBDIR+=	koffice-l10n-da
 SUBDIR+=	koffice-l10n-de
 SUBDIR+=	koffice-l10n-en_GB
@@ -349,11 +339,9 @@ SUBDIR+=	step
 SUBDIR+=	superkaramba
 SUBDIR+=	sweeper
 SUBDIR+=	sword
-SUBDIR+=	taskjuggler
 SUBDIR+=	tds
 SUBDIR+=	team
 SUBDIR+=	tellico
-SUBDIR+=	tellico-kde3
 SUBDIR+=	teseq
 SUBDIR+=	tmate
 SUBDIR+=	tmux

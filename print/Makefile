@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.696 2017/09/08 21:57:40 markd Exp $
+# $NetBSD: Makefile,v 1.697 2017/09/26 10:27:11 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -76,7 +76,6 @@ SUBDIR+=	ja-vflib-utils
 SUBDIR+=	ja-vfxdvik
 SUBDIR+=	jcabc2ps
 SUBDIR+=	kbibtex
-SUBDIR+=	kbibtex-kde3
 SUBDIR+=	kpathsea
 SUBDIR+=	lacheck
 SUBDIR+=	latex-mk
@@ -127,7 +126,6 @@ SUBDIR+=	poppler-qt4
 SUBDIR+=	poppler-qt5
 SUBDIR+=	poppler-utils
 SUBDIR+=	poppler016
-SUBDIR+=	poppler016-qt3
 SUBDIR+=	poster
 SUBDIR+=	pscal
 SUBDIR+=	psify
@@ -153,7 +151,6 @@ SUBDIR+=	ruby-pdf-core
 SUBDIR+=	ruby-pdf-reader
 SUBDIR+=	ruby-pdf-writer
 SUBDIR+=	ruby-prawn
-SUBDIR+=	scribus
 SUBDIR+=	scribus-qt4
 SUBDIR+=	seetexk
 SUBDIR+=	stylewriter

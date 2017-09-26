@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2017/05/05 00:07:40 mef Exp $
+# $NetBSD: Makefile,v 1.38 2017/09/26 10:27:05 wiz Exp $
 #
 
 COMMENT=	Wireless communication tools and applications
@@ -40,7 +40,6 @@ SUBDIR+=	grig
 SUBDIR+=	hackrf
 SUBDIR+=	hamlib
 SUBDIR+=	libmirisdr
-SUBDIR+=	linpsk
 SUBDIR+=	locator
 SUBDIR+=	nec2c
 SUBDIR+=	osmo-sdr
