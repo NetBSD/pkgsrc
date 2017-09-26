@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2017/09/18 16:20:31 gdt Exp $
+# $NetBSD: Makefile,v 1.194 2017/09/26 10:26:56 wiz Exp $
 #
 
 COMMENT=	Communication programs
@@ -56,11 +56,8 @@ SUBDIR+=	irssi-icb
 SUBDIR+=	irssi-xmpp
 SUBDIR+=	jabberd
 SUBDIR+=	jabberd2
-SUBDIR+=	kadu
 SUBDIR+=	kgb-bot
-SUBDIR+=	kmess
 SUBDIR+=	konversation
-SUBDIR+=	konversation-kde3
 SUBDIR+=	ktp-accounts-kcm
 SUBDIR+=	ktp-approver
 SUBDIR+=	ktp-auth-handler
@@ -81,7 +78,6 @@ SUBDIR+=	libtelepathy
 SUBDIR+=	libtlen
 SUBDIR+=	licq-core
 SUBDIR+=	licq-gui-console
-SUBDIR+=	licq-gui-qt
 SUBDIR+=	loudmouth
 SUBDIR+=	matterircd
 SUBDIR+=	mcabber

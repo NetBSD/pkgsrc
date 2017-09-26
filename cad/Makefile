@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2017/02/21 20:37:03 plunky Exp $
+# $NetBSD: Makefile,v 1.95 2017/09/26 10:26:55 wiz Exp $
 #
 
 COMMENT=	CAD tools
@@ -66,7 +66,6 @@ SUBDIR+=	tnt-mmtl
 SUBDIR+=	transcalc
 SUBDIR+=	verilog-mode
 SUBDIR+=	veriwell
-SUBDIR+=	vipec
 SUBDIR+=	wcalc
 SUBDIR+=	wcalc-docs
 SUBDIR+=	xchiplogo

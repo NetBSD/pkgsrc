@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.258 2017/04/17 08:48:01 wiz Exp $
+# $NetBSD: Makefile,v 1.259 2017/09/26 10:27:09 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -96,11 +96,9 @@ SUBDIR+=	hwdecode-demos
 SUBDIR+=	intel-vaapi-driver
 SUBDIR+=	juk
 SUBDIR+=	kaffeine
-SUBDIR+=	kdemultimedia3
 SUBDIR+=	kdenlive
 SUBDIR+=	kmix
 SUBDIR+=	kmplayer
-SUBDIR+=	kmplayer-kde3
 SUBDIR+=	kodi
 SUBDIR+=	kscd
 SUBDIR+=	libaacs

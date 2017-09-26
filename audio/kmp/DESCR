@@ -1,7 +1,0 @@
-KMP is an Music Player Daemon client that uses the QT GUI toolkit so
-it will comfortably fit in with your KDE desktop, although only QT is
-required. MPD is a daemon that runs in the background and accepts
-connections from clients which can then tell MPD what to do. KMP aims
-to be a full featured and easy-to-use client. KMP will allow you to
-browse the server's collection, add songs to the playlist, change the
-volume, etc.

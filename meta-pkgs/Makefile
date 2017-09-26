@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2017/06/22 09:44:29 markd Exp $
+# $NetBSD: Makefile,v 1.96 2017/09/26 10:27:06 wiz Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -22,7 +22,6 @@ SUBDIR+=	gnuradio
 SUBDIR+=	gnustep
 SUBDIR+=	gstreamer0.10-plugins
 SUBDIR+=	kde-telepathy
-SUBDIR+=	kde3
 SUBDIR+=	kde4
 SUBDIR+=	kf5
 SUBDIR+=	libdbusmenu

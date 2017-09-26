@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/10 22:57:52 dillo Exp $
-lib/opensync/plugins/kdepim_lib.la
-lib/opensync/plugins/kdepim_sync.la
-share/opensync/defaults/kdepim-sync
