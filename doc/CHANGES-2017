@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4071 2017/09/26 14:20:24 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4072 2017/09/26 14:23:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5802,3 +5802,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/libbson to 1.8.0 [fhajny 2017-09-26]
 	Updated databases/mongo-c-driver to 1.8.0 [fhajny 2017-09-26]
 	Updated devel/p5-CPAN-Perl-Releases to 3.38 [wiz 2017-09-26]
+	Updated devel/p5-Devel-Cover to 1.27 [wiz 2017-09-26]
