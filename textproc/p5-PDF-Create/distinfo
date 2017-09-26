@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2017/04/29 08:41:44 mef Exp $
+$NetBSD: distinfo,v 1.21 2017/09/26 14:39:42 wiz Exp $
 
-SHA1 (PDF-Create-1.42.tar.gz) = 82200beb9733d9461b4b75fa0bf8ab2b0dfe4ee5
-RMD160 (PDF-Create-1.42.tar.gz) = 778da8eb1b14f8ea5b2093bdf20141953d59a59e
-SHA512 (PDF-Create-1.42.tar.gz) = f330cb0e7f0a17e85de7176b22de423cb1628d57058aea82a9507384bd8bbece24a48b93e37ba1c55681776b6d2167a0414261b1350d5192c0e53c8f853c5945
-Size (PDF-Create-1.42.tar.gz) = 120952 bytes
+SHA1 (PDF-Create-1.43.tar.gz) = 2d78fddf339838d0539c084ed3d2ad13386c67db
+RMD160 (PDF-Create-1.43.tar.gz) = 035a1b1a08f2f6ff2bf0482c729cd50947a427c8
+SHA512 (PDF-Create-1.43.tar.gz) = f63e50ad925459469c9c5bc8f716a0a76d9331702d4da5544f9e179cb6358c4b0550a7ac740bce502ad05cdde24fb6f992496d99f23f3b6b1e41081a1d6bce5d
+Size (PDF-Create-1.43.tar.gz) = 120986 bytes
