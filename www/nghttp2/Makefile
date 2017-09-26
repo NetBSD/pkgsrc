@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2017/08/24 20:03:02 adam Exp $
+# $NetBSD: Makefile,v 1.31 2017/09/26 07:05:05 adam Exp $
 
-DISTNAME=	nghttp2-1.25.0
-PKGREVISION=	1
+DISTNAME=	nghttp2-1.26.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tatsuhiro-t/}
 EXTRACT_SUFX=	.tar.xz
