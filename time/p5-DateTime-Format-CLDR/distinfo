@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/04/09 07:08:28 wen Exp $
+$NetBSD: distinfo,v 1.3 2017/09/26 14:45:53 wiz Exp $
 
-SHA1 (DateTime-Format-CLDR-1.18.tar.gz) = 969114ce3cf0a15a3aea1aefa16c9d5d2192cadc
-RMD160 (DateTime-Format-CLDR-1.18.tar.gz) = 6b77559eb766e7cae6af77601f569b06a1d3a7c2
-SHA512 (DateTime-Format-CLDR-1.18.tar.gz) = f9d8e82452d0510e04400427d55018e45b8f7d42830557ea430a01faf78565b1c471bb39721d13990883756dcaf839f7f47ba60e18e4724165188956b99383e5
-Size (DateTime-Format-CLDR-1.18.tar.gz) = 47410 bytes
+SHA1 (DateTime-Format-CLDR-1.19.tar.gz) = 764dc132c154e74a0c09f4c63a53526753bd17ea
+RMD160 (DateTime-Format-CLDR-1.19.tar.gz) = 40eb5a5eb4ef0fea5e90125c048836b9339a074a
+SHA512 (DateTime-Format-CLDR-1.19.tar.gz) = a061673e8c915c31707cdd6ea331cdab60a31e0f15a4c25ef903ec5b5cf55556d8b275f6febecbcc7e8285a1009f3a225477cd989799b3112f40551bd4237228
+Size (DateTime-Format-CLDR-1.19.tar.gz) = 47532 bytes
