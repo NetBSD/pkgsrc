@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.4 2017/09/16 19:09:53 bsiegert Exp $
+$NetBSD: distinfo,v 1.5 2017/09/26 14:35:46 mspo Exp $
 
-SHA1 (MoarVM-2017.07.tar.gz) = 312fc11eaaff4c6e23dfe3797230dd569be473c2
-RMD160 (MoarVM-2017.07.tar.gz) = d3a6dbd0c60a44943bbc50a7f187e67717081863
-SHA512 (MoarVM-2017.07.tar.gz) = 675633bdc97e30eb6a7a2208338b7124215a92ed1a129076b0e59f9f2f0996b903120e3aa2a915a370c637d6529fdccef0bbcc31ce91c1485df60f9ce7e9e689
-Size (MoarVM-2017.07.tar.gz) = 4396077 bytes
-SHA1 (patch-build_probe.pm) = 9cf0bbd99ff38715c0b8b57bcd227df18d9adfb4
+SHA1 (MoarVM-2017.09.1.tar.gz) = 290db2edc82c908c15d8f0bca5752c32e26422df
+RMD160 (MoarVM-2017.09.1.tar.gz) = 747a302f57618dc70b976e949e34a3aaa4935cc1
+SHA512 (MoarVM-2017.09.1.tar.gz) = c7b675a3894a2b58d15eefb52519b6b7e4519561525b6095327ab7621e29c3ea3c077c625bd48123cd514b4e32d2e7cbdb3861319d3e32de134d7f8475540fee
+Size (MoarVM-2017.09.1.tar.gz) = 4579930 bytes
 SHA1 (patch-build_setup.pm) = fd53d47bd3126b2c89d4e8d82c6bc0b6db5f4fdf
