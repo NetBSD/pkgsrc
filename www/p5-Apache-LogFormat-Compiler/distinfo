@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/05/21 11:01:31 wen Exp $
+$NetBSD: distinfo,v 1.5 2017/09/26 15:00:26 wiz Exp $
 
-SHA1 (Apache-LogFormat-Compiler-0.33.tar.gz) = 154a0ed10604b2d440410432a654bae7ee6c9e59
-RMD160 (Apache-LogFormat-Compiler-0.33.tar.gz) = f627e29038ab59fb71c3f6bc77a7478aed46189a
-SHA512 (Apache-LogFormat-Compiler-0.33.tar.gz) = 2d098316d02dd9d81dbdb9b4852917430fad0e8e8599464500ee838b5eb6b26ec30fff04f1a9d0fad87141f38b6262c0a0a9bb14c13c559c9b92b53649225e21
-Size (Apache-LogFormat-Compiler-0.33.tar.gz) = 16431 bytes
+SHA1 (Apache-LogFormat-Compiler-0.35.tar.gz) = 638292b2ff01e8ef331fba8e7018d0d40398b916
+RMD160 (Apache-LogFormat-Compiler-0.35.tar.gz) = 978304b4c21a066199e0c45464f3401eefab4863
+SHA512 (Apache-LogFormat-Compiler-0.35.tar.gz) = 9a4447e0be864e6ba3a6170daa6f219b0ddd6b765ab6fbe6125a808da76803fb4bf6eed131df793a8cf900378b5c72f11489d5429106b97931f6fbef08f9f349
+Size (Apache-LogFormat-Compiler-0.35.tar.gz) = 15996 bytes
