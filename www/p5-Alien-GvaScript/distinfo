@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.8 2017/06/09 17:08:57 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2017/09/26 14:58:51 wiz Exp $
 
-SHA1 (Alien-GvaScript-1.44.tar.gz) = f79afe590f39e4eea200c4a3f4e2b977520cd6f0
-RMD160 (Alien-GvaScript-1.44.tar.gz) = 76cf034b10bd2e30e569245c0a7dd3db165d3635
-SHA512 (Alien-GvaScript-1.44.tar.gz) = 36663f1c032f40538ce9e906e867d0631b4afefd6f6925fd1d396212ef3d1bed69fe2ff888c47a333917f09ab590e1ead0a1ac7c9ec8c2c81585d62d53755de4
-Size (Alien-GvaScript-1.44.tar.gz) = 332874 bytes
-SHA1 (patch-Build.PL) = 0b24c9a610d5f434eeb82365eefe0e47cd6d8b44
+SHA1 (Alien-GvaScript-1.45.tar.gz) = 20ce3459e42a208ef7ab3eb20f1374db49cb57cc
+RMD160 (Alien-GvaScript-1.45.tar.gz) = 65cb05267893f0d55f8d96149f1539fa808cbb06
+SHA512 (Alien-GvaScript-1.45.tar.gz) = c3eb330c83056272583de848a04b417e6a503d0a2fe76e5c9bb08aa7e705ef1c5e80237f649d302b962ae9b1bc69ba7a95bc98de4df1dd662958400690dcc92a
+Size (Alien-GvaScript-1.45.tar.gz) = 332636 bytes
 SHA1 (patch-aa) = 50df9bee65c8556a9021d2eefc84edc21d87fdec
