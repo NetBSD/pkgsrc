@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/09/26 11:22:39 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/26 11:26:24 wiz Exp $
 
 DISTNAME=	dupeguru-src-4.0.3
 PKGNAME=	${DISTNAME:S/-src//}
@@ -13,8 +13,8 @@ LICENSE=	gnu-gpl-v3
 BUILD_DEPENDS+=	${PYPKGPREFIX}-polib>=1.0.4:../../devel/py-polib
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.3.4nb1:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
-DEPENDS+=	${PYPKGPREFIX}-hsaudiotag3k-[0-9]*:../../nih/py-hsaudiotag3k
-DEPENDS+=	${PYPKGPREFIX}-Send2Trash-[0-9]*:../../nih/py-Send2Trash
+DEPENDS+=	${PYPKGPREFIX}-hsaudiotag3k-[0-9]*:../../audio/py-hsaudiotag3k
+DEPENDS+=	${PYPKGPREFIX}-Send2Trash-[0-9]*:../../sysutils/py-Send2Trash
 #DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 #DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 
