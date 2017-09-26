@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2017/08/17 17:04:35 fhajny Exp $
+# $NetBSD: Makefile,v 1.27 2017/09/26 14:18:21 fhajny Exp $
 
-DISTNAME=	mongo-c-driver-1.7.0
+DISTNAME=	mongo-c-driver-1.8.0
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 
@@ -43,4 +43,5 @@ PYTHON_FOR_BUILD_ONLY=	yes
 # libbson and mongo-c-driver released are tied
 BUILDLINK_API_DEPENDS.libbson+=	libbson>=${PKGVERSION_NOREV}
 .include "../../devel/libbson/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

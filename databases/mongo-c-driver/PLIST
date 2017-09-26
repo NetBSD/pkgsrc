@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2017/09/09 16:14:23 dholland Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/09/26 14:18:21 fhajny Exp $
 bin/mongoc-stat
 include/libmongoc-1.0/mongoc-apm.h
 include/libmongoc-1.0/mongoc-bulk-operation.h
@@ -25,21 +25,21 @@ include/libmongoc-1.0/mongoc-log.h
 include/libmongoc-1.0/mongoc-macros.h
 include/libmongoc-1.0/mongoc-matcher.h
 include/libmongoc-1.0/mongoc-opcode.h
-${PLIST.ssl}include/libmongoc-1.0/mongoc-rand.h
+include/libmongoc-1.0/mongoc-rand.h
 include/libmongoc-1.0/mongoc-read-concern.h
 include/libmongoc-1.0/mongoc-read-prefs.h
 include/libmongoc-1.0/mongoc-server-description.h
 include/libmongoc-1.0/mongoc-socket.h
-${PLIST.ssl}include/libmongoc-1.0/mongoc-ssl.h
+include/libmongoc-1.0/mongoc-ssl.h
 include/libmongoc-1.0/mongoc-stream-buffered.h
 include/libmongoc-1.0/mongoc-stream-file.h
 include/libmongoc-1.0/mongoc-stream-gridfs.h
 include/libmongoc-1.0/mongoc-stream-socket.h
-${PLIST.ssl}include/libmongoc-1.0/mongoc-stream-tls-libressl.h
-${PLIST.ssl}include/libmongoc-1.0/mongoc-stream-tls-openssl.h
-${PLIST.ssl}include/libmongoc-1.0/mongoc-stream-tls-secure-channel.h
-${PLIST.ssl}include/libmongoc-1.0/mongoc-stream-tls-secure-transport.h
-${PLIST.ssl}include/libmongoc-1.0/mongoc-stream-tls.h
+include/libmongoc-1.0/mongoc-stream-tls-libressl.h
+include/libmongoc-1.0/mongoc-stream-tls-openssl.h
+include/libmongoc-1.0/mongoc-stream-tls-secure-channel.h
+include/libmongoc-1.0/mongoc-stream-tls-secure-transport.h
+include/libmongoc-1.0/mongoc-stream-tls.h
 include/libmongoc-1.0/mongoc-stream.h
 include/libmongoc-1.0/mongoc-topology-description.h
 include/libmongoc-1.0/mongoc-uri.h
@@ -254,6 +254,7 @@ man/man3/mongoc_collection_validate.3
 man/man3/mongoc_collection_write_command_with_opts.3
 man/man3/mongoc_common_task_examples.3
 man/man3/mongoc_connection_pooling.3
+man/man3/mongoc_create_indexes.3
 man/man3/mongoc_cursor_clone.3
 man/man3/mongoc_cursor_current.3
 man/man3/mongoc_cursor_destroy.3
@@ -462,6 +463,7 @@ man/man3/mongoc_stream_socket_get_socket.3
 man/man3/mongoc_stream_socket_new.3
 man/man3/mongoc_stream_socket_t.3
 man/man3/mongoc_stream_t.3
+man/man3/mongoc_stream_timed_out.3
 man/man3/mongoc_stream_tls_t.3
 man/man3/mongoc_stream_uncork.3
 man/man3/mongoc_stream_write.3
@@ -477,6 +479,7 @@ man/man3/mongoc_uri_copy.3
 man/man3/mongoc_uri_destroy.3
 man/man3/mongoc_uri_get_auth_mechanism.3
 man/man3/mongoc_uri_get_auth_source.3
+man/man3/mongoc_uri_get_compressors.3
 man/man3/mongoc_uri_get_database.3
 man/man3/mongoc_uri_get_hosts.3
 man/man3/mongoc_uri_get_mechanism_properties.3
@@ -495,11 +498,13 @@ man/man3/mongoc_uri_get_username.3
 man/man3/mongoc_uri_get_write_concern.3
 man/man3/mongoc_uri_new.3
 man/man3/mongoc_uri_new_for_host_port.3
+man/man3/mongoc_uri_new_with_error.3
 man/man3/mongoc_uri_option_is_bool.3
 man/man3/mongoc_uri_option_is_int32.3
 man/man3/mongoc_uri_option_is_utf8.3
 man/man3/mongoc_uri_set_auth_mechanism.3
 man/man3/mongoc_uri_set_auth_source.3
+man/man3/mongoc_uri_set_compressors.3
 man/man3/mongoc_uri_set_database.3
 man/man3/mongoc_uri_set_mechanism_properties.3
 man/man3/mongoc_uri_set_option_as_bool.3
