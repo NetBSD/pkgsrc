@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2017/09/08 02:38:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2017/09/26 13:10:56 adam Exp $
 
-DISTNAME=	SDL2-2.0.5
-PKGREVISION=	5
+DISTNAME=	SDL2-2.0.6
 CATEGORIES=	devel
 MASTER_SITES=	http://www.libsdl.org/release/
 
@@ -10,12 +9,14 @@ HOMEPAGE=	http://www.libsdl.org/
 COMMENT=	Simple DirectMedia Layer is a cross-platform multimedia library
 LICENSE=	zlib
 
-USE_LANGUAGES=	c c++
-GNU_CONFIGURE=	YES
-USE_LIBTOOL=	YES
-USE_TOOLS+=	gmake pkg-config autoconf automake autoreconf
-
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake pkg-config autoconf automake autoreconf
+GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	sdl2.pc.in
+
+CHECK_PORTABILITY_SKIP+=build-scripts/androidbuildlibs.sh
+CHECK_PORTABILITY_SKIP+=build-scripts/iosbuild.sh
 
 .include "../../mk/bsd.prefs.mk"
 
