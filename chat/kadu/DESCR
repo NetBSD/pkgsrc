@@ -1,8 +1,0 @@
-Chat client for Gadu-Gadu network (Poland), featuring:
-* support for Gadu-Gadu protocol v6
-* encrypted transmission using OpenSSL
-* sending SMS to Polish GSM networks
-* file transfer (DCC)
-* conference
-* animated emoticons
-* more...

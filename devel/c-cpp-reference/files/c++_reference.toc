@@ -1,7 +1,0 @@
-<!DOCTYPE kdeveloptoc>
-<kdeveloptoc>
-<title>C++ Reference</title>
-<base href="file:@PREFIX@/share/doc/kde/HTML/en/kdevelop/reference/"/>
-<tocsect1 name="Query" url="CPLUSPLUS/cref.html">
-</tocsect1>
-</kdeveloptoc>

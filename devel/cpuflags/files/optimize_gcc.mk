@@ -1,4 +1,4 @@
-# $Id: optimize_gcc.mk,v 1.36 2009/04/21 16:47:48 tnn Exp $
+# $Id: optimize_gcc.mk,v 1.37 2017/09/26 10:26:58 wiz Exp $
 
 # This file is 'experimental' - which is doublespeak for unspeakably
 # ugly, and quite broken by design.
@@ -39,9 +39,6 @@ PKG_EXCLUDE_INLINE_FUNCTIONS+=mail/procmail
 
 # aspell-0.60.5: gcc-4.1.2 NetBSD 4.0_BETA2 i386
 PKG_EXCLUDE_INLINE_FUNCTIONS+=textproc/aspell
-
-# gcc3.3.3 NetBSD i386/3.0 breaks kde3
-PKG_EXCLUDE_FAST_MATH+=x11/qt3-libs
 
 # gcc4.1.3 NetBSD i386/4.99.29 breaks liboil
 PKG_EXCLUDE_OMIT_FRAME_POINTER+=devel/liboil
