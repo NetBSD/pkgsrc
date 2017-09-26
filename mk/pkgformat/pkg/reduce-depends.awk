@@ -2,7 +2,7 @@
 #
 # $NetBSD: reduce-depends.awk,v 1.4 2017/05/19 14:58:51 joerg Exp $
 #
-# Copyright (c) 2006 The NetBSD Foundation, Inc.
+# Copyright (c) 2006-2017 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -16,13 +16,6 @@
 # 2. Redistributions in binary form must reproduce the above copyright
 #    notice, this list of conditions and the following disclaimer in the
 #    documentation and/or other materials provided with the distribution.
-# 3. All advertising materials mentioning features or use of this software
-#    must display the following acknowledgement:
-#        This product includes software developed by the NetBSD
-#        Foundation, Inc. and its contributors.
-# 4. Neither the name of The NetBSD Foundation nor the names of its
-#    contributors may be used to endorse or promote products derived
-#    from this software without specific prior written permission.
 #
 # THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
 # ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
@@ -43,21 +36,102 @@
 #	reduce-depends.awk -- reduce a list of dependencies
 #
 # SYNOPSIS
-#	reduce-depends.awk "depends_list"
+#	reduce-depends.awk depends-list
 #
 # DESCRIPTION
 #	reduce-depends.awk removes some extraneous dependencies from the
 #	dependency list.  The dependency list should be passed as a single
 #	argument, and the output will be a list of the reduced dependencies,
-#	echo one on a new line.
+#	each dependency separated by a new line.
+#
+#	depends-list	A whitespace-separated list of dependencies.
+#			This must be passed to the script as a single
+#			argument.
 #
 # ENVIRONMENT
-#	CAT
+#	CAT	The name or path to the cat(1) utility.
+#
 #	PKG_ADMIN
+#		The name or path to the pkg_admin(1) utility.
+#
 #	PWD_CMD
-#	TEST
+#		The command to get the physical path to the current
+#		working directory.  The default is "pwd -P".
+#
+#	TEST	The name or path to the test(1) utility.
 #
 ######################################################################
+
+function shquote(s)
+{
+	# Escape single quotes (') by replacing them with '\''.
+	gsub(/'/, "'\\''", s)
+	# Surround with single quotes (').
+	return "'" s "'"
+}
+
+function version_cmp(v1, cmp, v2,	cmd, pattern, pkg)
+{
+	pkg = shquote("test-" v1)
+	test_pattern = shquote("test" cmp v2)
+	cmd = PKG_ADMIN " pmatch " test_pattern " " pkg
+	if (system(cmd) == 0) {
+		# v1 "cmp" v2
+		return 1
+	}
+	return 0
+}
+
+function add_reduced(reduced, pattern, dir,	depend)
+{
+	depend = pattern ":" dir
+	if (!(depend in reduced)) reduced[depend] = depend
+}
+
+###
+# get_endpoint(cmp, patterns)
+#
+# Parameters:
+#	cmp (string)
+#		The relational operator ("<", "<=", ">", ">=").
+#
+#	patterns (array)
+#		The keys of the array form the set of dependency
+#		patterns that need to be reduced to a single pattern.
+#		The patterns all use the relational operator (cmp)
+#		and each expresses a ray of version strings.
+#
+# Return value:
+#	endpoint (string)
+#		The endpoint for the ray of version strings.
+#
+# Description:
+#	Returns a version string that is the endpoint of the ray of
+#	version strings formed from the intersection of the rays
+#	expressed by the patterns listed in the patterns array.
+#
+function get_endpoint(cmp, patterns, 	endpoint, key, match_all, pattern, pkg)
+{
+	endpoint = ""			# return value if patterns array is empty
+	for (key in patterns) {
+		endpoint = patterns[key]
+		pkg = shquote(gensub(cmp, "-", 1, key))
+		match_all = 1
+		for (pattern in patterns) {
+			if (key == pattern) continue
+			# Fix up the pattern to be closed if it is open.
+			if (cmp == "<")		sub("<", "<=", pattern)
+			else if (cmp == ">")	sub(">", ">=", pattern)
+			cmd = PKG_ADMIN " pmatch " shquote(pattern) " " pkg
+			if (system(cmd) != 0) {
+				match_all = 0
+				break
+			}
+		}
+		if (match_all == 1) break
+	}
+	return endpoint
+}
 
 BEGIN {
 	CAT = ENVIRON["CAT"] ? ENVIRON["CAT"] : "cat"
@@ -68,8 +142,12 @@ BEGIN {
 	PROGNAME = "reduce-depends.awk"
 	ERRCAT = CAT " 1>&2"
 
-	# Gather all dependencies into the depends array.  Index 0 of the
-	# depends[pkgpath] array is the number of patterns associated with
+	# Match version numbers with an ERE.
+	# XXX This matches more than it should.
+	VERSION_RE = "[0-9A-Za-z.+]+"
+
+	# Gather all dependencies into the patterns array.  Index 0 of the
+	# patterns[pkgpath] array is the number of patterns associated with
 	# that pkgpath.
 	#
 	args = ARGV[1]
@@ -81,19 +159,17 @@ BEGIN {
 			print "ERROR: [" PROGNAME "] invalid dependency pattern: " ARGV[i] | ERRCAT
 			exit 1
 		}
-		if (pattern_seen[pattern] == 1)
-			continue
+		if (pattern_seen[pattern] == 1) continue
 		pattern_seen[pattern] = 1
-		cmd = TEST " -d " dir
+		cmd = TEST " -d " shquote(dir)
 		if (system(cmd) == 0) {
-			cmd = "cd " dir " && " PWD_CMD
+			cmd = "cd " shquote(dir) " && " PWD_CMD
 			while ((cmd | getline pkgpath) > 0) {
 				if (!(pkgpath in pkgsrcdirs)) {
-					pkgpaths[P++] = pkgpath
 					pkgsrcdirs[pkgpath] = dir
 				}
-				depends[pkgpath, 0]++;
-				depends[pkgpath, depends[pkgpath, 0]] = pattern
+				D = ++patterns[pkgpath, 0]
+				patterns[pkgpath, D] = pattern
 			}
 			close(cmd)
 		} else {
@@ -102,61 +178,106 @@ BEGIN {
 		}
 	}
 
-	# Reduce dependencies to the strictest set of dependencies it
-	# can derive from all of depends[...].  It only understands
-	# dependencies of the form foo>=1.0, and leaves the other
-	# dependencies undisturbed.
-	#
-	# The algorithm takes dependencies of the form foo>=1.0 and
-	# converts them to foo-1.0.  It then compares this pkg name against
-	# each dependency to see if it satisfies them all.  The key fact
-	# is the the strictest dependency, when converted to a pkg name,
-	# will satisfy every dependency.
-	#
-	for (p = 0; p < P; p++) {
-		pkgpath = pkgpaths[p]
-		D = depends[pkgpath, 0];
-		match_all = 1;
+	for (pkgpath in pkgsrcdirs) {
+		dir = pkgsrcdirs[pkgpath]
+		D = patterns[pkgpath, 0]
 		for (d = 1; d <= D; d++) {
-			dep = depends[pkgpath, d]
-			if (dep ~ /[{]/ || \
-			    dep ~ />=[0-9][0-9\.]*(nb[0-9]+)?<[0-9]+/ || \
-			    dep !~ />=[0-9]+/)
-			{
-				reduced[N++] = dep ":" pkgsrcdirs[pkgpath]
-				continue
+			pattern = patterns[pkgpath, d]
+			lt_bound = ""; le_bound = ""; ge_bound = ""; gt_bound = ""
+			if (match(pattern, "<" VERSION_RE "$")) {
+				lt_bound = substr(pattern, RSTART + 1, RLENGTH)
+				pattern = substr(pattern, 1, RSTART - 1)
 			}
-			ge_depends[dep] = dep
-		}
-		for (dep in ge_depends) {
-			dep2pkg = dep; sub(">=", "-", dep2pkg)
-			match_all = 1
-			for (pattern in ge_depends) {
-				cmd = PKG_ADMIN " pmatch \"" pattern "\" " dep2pkg
-				if (system(cmd) != 0) {
-					match_all = 0
-					break
-				}
+			if (match(pattern, "<=" VERSION_RE "$")) {
+				le_bound = substr(pattern, RSTART + 2, RLENGTH)
+				pattern = substr(pattern, 1, RSTART - 1)
 			}
-			if (match_all == 0) continue
-			reduced[N++] = dep ":" pkgsrcdirs[pkgpath]
-			break
+			if (match(pattern, ">" VERSION_RE "$")) {
+				gt_bound = substr(pattern, RSTART + 1, RLENGTH)
+				pattern = substr(pattern, 1, RSTART - 1)
+			}
+			if (match(pattern, ">=" VERSION_RE "$")) {
+				ge_bound = substr(pattern, RSTART + 2, RLENGTH)
+				pattern = substr(pattern, 1, RSTART - 1)
+			}
+			base = pattern
+			if (lt_bound) lt_patterns[base "<"  lt_bound] = lt_bound
+			if (le_bound) le_patterns[base "<=" le_bound] = le_bound
+			if (gt_bound) gt_patterns[base ">"  gt_bound] = gt_bound
+			if (ge_bound) ge_patterns[base ">=" ge_bound] = ge_bound
+			if (!(lt_bound || le_bound || gt_bound || ge_bound)) {
+				add_reduced(reduced, pattern, dir)
+			} else {
+				pkgbase[pkgpath] = base
+			}
 		}
-		#
+		lt_bound = get_endpoint("<",  lt_patterns)
+		le_bound = get_endpoint("<=", le_patterns)
+		gt_bound = get_endpoint(">",  gt_patterns)
+		ge_bound = get_endpoint(">=", ge_patterns)
+
+		# Lower bound and relational operator.
+		lower_bound = ""; gt = ""
+		if (gt_bound && ge_bound) {
+			if (version_cmp(gt_bound, ">=", ge_bound)) {
+				lower_bound = gt_bound; gt = ">"
+			} else {
+				lower_bound = ge_bound; gt = ">="
+			}
+		} else if (gt_bound) {
+			lower_bound = gt_bound; gt = ">"
+		} else if (ge_bound) {
+			lower_bound = ge_bound; gt = ">="
+		}
+
+		# Upper bound and relational operator.
+		upper_bound = ""; lt = ""
+		if (lt_bound && le_bound) {
+			if (version_cmp(lt_bound, "<=", le_bound)) {
+				upper_bound = lt_bound; lt = "<"
+			} else {
+				upper_bound = le_bound; lt = "<="
+			}
+		} else if (lt_bound) {
+			upper_bound = lt_bound; lt = "<"
+		} else if (le_bound) {
+			upper_bound = le_bound; lt = "<="
+		}
+
 		# If there are conflicting dependencies, then just pass them
 		# through and let the rest of the pkgsrc machinery handle it.
 		#
-		if (match_all == 0) {
+		# Othewise, build a new dependency based on the intersection
+		# of the rays determined by the various bounds.
+		#
+		if (lower_bound && upper_bound &&
+		    ((gt == ">" && version_cmp(lower_bound, ">=", upper_bound)) ||
+		     (gt == ">=" && version_cmp(lower_bound, ">", upper_bound)))) {
 			for (d = 1; d <= D; d++) {
-				dep = depends[pkgpath, d]
-				reduced[N++] = dep ":" pkgsrcdirs[pkgpath]
+				add_reduced(reduced, patterns[pkgpath, d], dir)
 			}
+		} else if (lower_bound || upper_bound) {
+			pattern = pkgbase[pkgpath] gt lower_bound lt upper_bound
+			add_reduced(reduced, pattern, dir)
 		}
-		for (dep in ge_depends)
-			delete ge_depends[dep]
+
+		delete lt_patterns
+		delete le_patterns
+		delete gt_patterns
+		delete ge_patterns
 	}
 
-	# Output reduced dependencies.
-	for (n = 0; n < N; n++)
-		print reduced[n];
+	# Output reduced dependencies in sorted order.
+	N = 1
+	for(pattern in reduced) output[N++] = pattern
+	for(i = 1; i < N; i++) {
+		pattern = output[i]
+		j = i - 1
+		while((j > 0) && (output[j] > pattern)) {
+			output[j+1] = output[j]
+			j--
+		}
+		output[j+1] = pattern
+	}
+	for (i = 1; i < N; i++) print(output[i])
 }

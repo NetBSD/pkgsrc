@@ -46,4 +46,5 @@ syntax( 2 )
 
 test_suite( "pkgsrc_pkgformat_pkg" )
 
+atf_test_program { name = "reduce-depends_test" }
 atf_test_program { name = "scripts_test" }
