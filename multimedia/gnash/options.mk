@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2014/08/11 23:09:45 wiz Exp $
+# $NetBSD: options.mk,v 1.21 2017/09/26 09:44:08 wiz Exp $
 #
 
 #
@@ -10,13 +10,13 @@ PKG_OPTIONS_OPTIONAL_GROUPS=	gnash-media
 PKG_OPTIONS_GROUP.gnash-media=	ffmpeg gstreamer
 PKG_OPTIONS_REQUIRED_GROUPS=	gnash-gui gnash-renderer
 # XXX: add support for SDL or FLTK GUIs?
-PKG_OPTIONS_GROUP.gnash-gui=	gtk kde kde3
+PKG_OPTIONS_GROUP.gnash-gui=	gtk kde
 PKG_OPTIONS_GROUP.gnash-renderer=	agg cairo opengl
 PKG_SUGGESTED_OPTIONS+=		agg gstreamer gtk
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	gtk kde kde3 kde4 plugin gstreamer
+PLIST_VARS+=	gtk kde kde4 plugin gstreamer
 
 ###
 ### Select GUIs.
@@ -53,22 +53,6 @@ CONFIGURE_ARGS+=	--with-plugins-install=system
 .include "../../x11/kde-baseapps4/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../meta-pkgs/kde4/kde4.mk"
-
-.elif !empty(PKG_OPTIONS:Mkde3)
-GNASH_GUIS+=		kde3
-PLIST.kde=		yes
-PLIST.kde3=		yes
-CONFIGURE_ARGS+=	--with-plugins-install=system
-# broken, not wroked as expected.
-#CONFIGURE_ARGS+=	--with-kde3-plugindir=${PREFIX}/lib/kde3
-#CONFIGURE_ARGS+=	--with-kde-appsdatadir=${PREFIX}/share/kde/apps
-#CONFIGURE_ARGS+=	--with-kde3-configdir=${PREFIX}/share/kde/config
-#CONFIGURE_ARGS+=	--with-kde3-servicesdir=${PREFIX}/share/kde/services
-.include "../../x11/kdebase3/buildlink3.mk"
-.include "../../meta-pkgs/kde3/kde3.mk"
-# overwrite, or not kde ralated files also will be installed in share/kde.
-CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
-.endif
 
 CONFIGURE_ARGS+=	--enable-gui=${GNASH_GUIS:tW:S/ /,/}
 
