@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2017/09/26 11:22:39 wiz Exp $
+
+SHA1 (dupeguru-src-4.0.3.tar.gz) = a794780e187a36d45c384395e9bd8c2b8f5018bf
+RMD160 (dupeguru-src-4.0.3.tar.gz) = 5cd2b7f93276fcd8f09b699cfec5246f7dc5abed
+SHA512 (dupeguru-src-4.0.3.tar.gz) = dc8a5a122ad1d3d235825a498fb75b192566d3b5a33382ebb0002a361428af5cc453b143002ea3f57a9cb6ee30ce49f0b9f5a54bce2a90364fb1b92e102a289a
+Size (dupeguru-src-4.0.3.tar.gz) = 686580 bytes
+SHA1 (patch-qt_platform.py) = e97e226b53f57f8c4e9bf21f4726e024bb0b2d67
