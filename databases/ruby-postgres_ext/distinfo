@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/26 16:25:55 minskim Exp $
+
+SHA1 (postgres_ext-3.0.0.gem) = a87ea4dbc98dbc72fc388b96e07fcda84aeed1a4
+RMD160 (postgres_ext-3.0.0.gem) = 276807e8c32845233efe715eb25412bd58b6cf87
+SHA512 (postgres_ext-3.0.0.gem) = 3d17a0f6ed98badf5c196ddc78e50d47c6a24edc19276f3939255f3d23490e30a3abc344da020d0480a8ec73586c6084349caf472f735461c4f9b6084d4d2c52
+Size (postgres_ext-3.0.0.gem) = 21504 bytes
