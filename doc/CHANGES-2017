@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4083 2017/09/26 14:49:41 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4084 2017/09/26 14:56:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5814,3 +5814,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/p5-DateTime-Format-CLDR to 1.19 [wiz 2017-09-26]
 	Updated time/p5-DateTime-Format-Pg to 0.16013 [wiz 2017-09-26]
 	Updated time/p5-Test-Time to 0.05 [wiz 2017-09-26]
+	Updated time/p5-Time-Interval to 1.234 [wiz 2017-09-26]
