@@ -144,8 +144,7 @@ II. The pkgsrc developer's guide
         10.1. Common types of packages
 
             10.1.1. Perl modules
-            10.1.2. KDE3 & KDE4 applications
-            10.1.3. Python modules and programs
+            10.1.2. Python modules and programs
 
         10.2. Examples
 
@@ -1076,7 +1075,6 @@ in PKG_PATH.
 After these preparations, installing a package is very easy:
 
 # pkg_add libreoffice
-# pkg_add kde-3.5.7
 # pkg_add ap24-php71-*
 
 Note that any prerequisite packages needed to run the package in question will
@@ -1232,7 +1230,7 @@ You can change these settings either in your shell's environment, or, if you
 want to keep the settings, by editing the mk.conf file, and adding the
 definitions there.
 
-If a package depends on many other packages (such as meta-pkgs/kde3), the build
+If a package depends on many other packages (such as meta-pkgs/kde4), the build
 process may alternate between periods of downloading source, and compiling. To
 ensure you have all the source downloaded initially you can run the command:
 
@@ -2357,8 +2355,7 @@ Table of Contents
     10.1. Common types of packages
 
         10.1.1. Perl modules
-        10.1.2. KDE3 & KDE4 applications
-        10.1.3. Python modules and programs
+        10.1.2. Python modules and programs
 
     10.2. Examples
 
@@ -2587,8 +2584,7 @@ Table of Contents
 10.1. Common types of packages
 
     10.1.1. Perl modules
-    10.1.2. KDE3 & KDE4 applications
-    10.1.3. Python modules and programs
+    10.1.2. Python modules and programs
 
 10.2. Examples
 
@@ -2680,13 +2676,7 @@ package involves only a few steps.
 Simple Perl modules are handled automatically by url2pkg, including
 dependencies.
 
-10.1.2. KDE3 & KDE4 applications
-
-KDE3 applications should always include meta-pkgs/kde3/kde3.mk, which contains
-numerous settings that are typical of KDE3 packages and KDE4 applications
-should always include meta-pkgs/kde4/kde4.mk, respectively.
-
-10.1.3. Python modules and programs
+10.1.2. Python modules and programs
 
 Python modules and programs packages are easily created using a set of
 predefined variables.
