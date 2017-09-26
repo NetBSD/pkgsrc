@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.343 2017/08/17 13:52:12 wen Exp $
+# $NetBSD: Makefile,v 1.344 2017/09/26 10:27:06 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -142,7 +142,6 @@ SUBDIR+=	isl
 SUBDIR+=	itpp
 SUBDIR+=	kalgebra
 SUBDIR+=	kcalc
-SUBDIR+=	kseg
 SUBDIR+=	lapack
 SUBDIR+=	libffm
 SUBDIR+=	libint
@@ -278,7 +277,6 @@ SUBDIR+=	qalculate
 SUBDIR+=	qalculate-bases
 SUBDIR+=	qalculate-currency
 SUBDIR+=	qalculate-gtk
-SUBDIR+=	qalculate-kde
 SUBDIR+=	qalculate-units
 SUBDIR+=	qhull
 SUBDIR+=	quadpack
