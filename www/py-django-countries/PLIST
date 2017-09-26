@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/16 07:17:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/09/26 17:16:16 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -27,6 +27,8 @@ ${PYSITELIB}/django_countries/ioc_data.pyc
 ${PYSITELIB}/django_countries/ioc_data.pyo
 ${PYSITELIB}/django_countries/locale/ar/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/ar/LC_MESSAGES/django.po
+${PYSITELIB}/django_countries/locale/bg/LC_MESSAGES/django.mo
+${PYSITELIB}/django_countries/locale/bg/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/ca/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/ca/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/cs/LC_MESSAGES/django.mo
@@ -59,6 +61,8 @@ ${PYSITELIB}/django_countries/locale/ja/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/ja/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/ko_KR/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/ko_KR/LC_MESSAGES/django.po
+${PYSITELIB}/django_countries/locale/lt/LC_MESSAGES/django.mo
+${PYSITELIB}/django_countries/locale/lt/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/lv/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/lv/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/nb/LC_MESSAGES/django.mo
