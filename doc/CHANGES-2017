@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4052 2017/09/26 08:18:35 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4053 2017/09/26 10:12:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5615,3 +5615,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/vault to 0.8.3 [fhajny 2017-09-26]
 	Updated databases/redis to 4.0.2 [fhajny 2017-09-26]
 	Updated devel/gradle to 4.2 [fhajny 2017-09-26]
+	Updated devel/py-polib to 1.0.8 [wiz 2017-09-26]
