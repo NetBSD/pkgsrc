@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.46 2017/09/18 09:53:05 maya Exp $
+# $NetBSD: buildlink3.mk,v 1.47 2017/09/26 09:12:24 wiz Exp $
 
 BUILDLINK_TREE+=	compiz
 
@@ -20,10 +20,6 @@ pkgbase := compiz
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gnome-control-center/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.endif
-
-.if !empty(PKG_BUILD_OPTIONS.compiz:Mkde3)
-.include "../../x11/kdebase3/buildlink3.mk"
 .endif
 
 # XXX NLS is supposed to be optional, but it doens't appear to be.
