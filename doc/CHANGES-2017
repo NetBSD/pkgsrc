@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4090 2017/09/26 17:34:56 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4091 2017/09/26 17:39:31 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5824,3 +5824,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-apache-libcloud to 2.2.1 [adam 2017-09-26]
 	Updated math/py-ephem to 3.7.6.0 [adam 2017-09-26]
 	Removed math/py-ephem3 successor math/py-ephem [adam 2017-09-26]
+	Added devel/blosc version 1.12.1 [minskim 2017-09-26]
