@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4048 2017/09/26 06:42:32 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4049 2017/09/26 07:05:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5610,3 +5610,5 @@ Changes to the packages collection and infrastructure in 2017:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2017Q3 branch [gdt 2017-09-25]
 	Updated devel/cmake to 3.9.3 [adam 2017-09-26]
 	Updated lang/gcc7 to 7.2.0 [maya 2017-09-26]
+	Updated converters/help2man to 1.47.5 [adam 2017-09-26]
+	Updated www/nghttp2 to 1.26.0 [adam 2017-09-26]
