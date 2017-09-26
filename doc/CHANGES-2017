@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4058 2017/09/26 10:38:27 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4059 2017/09/26 10:41:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5789,3 +5789,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed devel/its4 [wiz 2017-09-26]
 	Removed lang/onyx [wiz 2017-09-26]
 	Added devel/p5-Tie-Simple version 1.04 [wiz 2017-09-26]
+	Added devel/p5-Alien-SDL version 1.446 [wiz 2017-09-26]
