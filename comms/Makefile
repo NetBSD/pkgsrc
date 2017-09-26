@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2017/07/20 17:20:57 adam Exp $
+# $NetBSD: Makefile,v 1.107 2017/09/26 10:26:56 wiz Exp $
 #
 
 COMMENT=	Communication utilities
@@ -36,7 +36,6 @@ SUBDIR+=	libmal
 SUBDIR+=	libopensync
 SUBDIR+=	libopensync-plugin-evolution2
 SUBDIR+=	libopensync-plugin-file
-SUBDIR+=	libopensync-plugin-kdepim
 SUBDIR+=	libopensync-plugin-syncml
 SUBDIR+=	libsyncml
 SUBDIR+=	libticables2

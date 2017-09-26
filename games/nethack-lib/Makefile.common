@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.31 2017/05/09 14:12:30 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.32 2017/09/26 10:27:01 wiz Exp $
 #
 # used by games/nethack/Makefile
 # used by games/nethack-lib/Makefile
 # used by games/nethack-x11/Makefile
 # used by games/nethack-tty/Makefile
-# used by games/nethack-qt/Makefile
 
 NETHACK_BASEVER=	3.4.3
 NETHACK_VERSION=	${NETHACK_BASEVER}

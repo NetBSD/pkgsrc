@@ -1,7 +1,0 @@
-Web development tools for the K Desktop Environment.
-o Quanta is designed for quick web development and is rapidly becoming
-  a mature editor with a number of great features.
-o KImageMapEditor is a tool for easily defining regions in HTML image maps.
-o Kommander is a visual dialog building tool which may be expanded to create
-  full mainwindow applications. The primary objective is to create as much
-  functionality as possible without using any scripting language.

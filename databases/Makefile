@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.546 2017/09/18 02:46:00 taca Exp $
+# $NetBSD: Makefile,v 1.547 2017/09/26 10:26:57 wiz Exp $
 
 COMMENT=	Databases
 
@@ -60,8 +60,6 @@ SUBDIR+=	jdbc-mysql51
 SUBDIR+=	jdbc-postgresql92
 SUBDIR+=	jdbc-postgresql93
 SUBDIR+=	jdbc-postgresql94
-SUBDIR+=	kmysqladmin
-SUBDIR+=	krecipes
 SUBDIR+=	kyotocabinet
 SUBDIR+=	lbdb
 SUBDIR+=	ldapvi
@@ -108,7 +106,6 @@ SUBDIR+=	mysql56-client
 SUBDIR+=	mysql56-server
 SUBDIR+=	mysql57-client
 SUBDIR+=	mysql57-server
-SUBDIR+=	mysqlcc
 SUBDIR+=	mysqltuner
 SUBDIR+=	mytop
 SUBDIR+=	nss-pgsql
