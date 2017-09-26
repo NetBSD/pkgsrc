@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2017/01/01 14:43:26 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2017/09/26 10:26:57 wiz Exp $
 
 DISTNAME=	luma-3.0.7
 CATEGORIES=	databases
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 REPLACE_PYTHON=		luma/luma.py
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PYSITELIB}/luma/plugins/browser
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-qt3-base, py-ldap
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ldap
 
 SUBST_CLASSES+=		luma
 SUBST_STAGE.luma=	pre-configure

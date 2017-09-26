@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1179 2017/09/16 21:45:33 minskim Exp $
+# $NetBSD: Makefile,v 1.1180 2017/09/26 10:27:10 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -263,24 +263,19 @@ SUBDIR+=	jumpgate
 SUBDIR+=	jwhois
 SUBDIR+=	kdenetwork-filesharing
 SUBDIR+=	kdenetwork-strigi-analyzers
-SUBDIR+=	kdenetwork3
 SUBDIR+=	kdnssd
 SUBDIR+=	kftpgrabber
 SUBDIR+=	kget
-SUBDIR+=	kiax
 SUBDIR+=	kismet
 SUBDIR+=	kmldonkey
-SUBDIR+=	kmldonkey-kde3
 SUBDIR+=	knewstuff
 SUBDIR+=	knock
 SUBDIR+=	knot
 SUBDIR+=	kopete
-SUBDIR+=	kphone
 SUBDIR+=	kppp
 SUBDIR+=	krdc
 SUBDIR+=	krfb
 SUBDIR+=	ktorrent
-SUBDIR+=	ktorrent-kde3
 SUBDIR+=	kxmlrpcclient
 SUBDIR+=	lambdamoo
 SUBDIR+=	lambdamoo-core
