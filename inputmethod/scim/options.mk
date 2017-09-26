@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2012/08/19 08:09:08 obache Exp $
+# $NetBSD: options.mk,v 1.2 2017/09/26 10:02:21 wiz Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.scim
@@ -28,14 +28,6 @@ PLIST.gtk3=		yes
 .else
 CONFIGURE_ARGS+=	--enable-gtk3-immodule=no
 .endif
-
-#.if !empty(PKG_OPTIONS:Mqt3)
-#.include "../../x11/qt3-libs/buildlink3.mk"
-#CONFIGURE_ARGS+=	--enable-qt3-immodule
-#PLIST.qt=		yes
-#.else
-#CONFIGURE_ARGS+=	--disable-qt3-immodule
-#.endif
 
 .if !empty(PKG_OPTIONS:Mqt)
 .include "../../x11/qt4-libs/buildlink3.mk"
