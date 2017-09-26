@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/02 22:29:54 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/09/26 17:41:28 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/colour.egg-info/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/colour.egg-info/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/colour.egg-info/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/colour.egg-info/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/colour.egg-info/top_level.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/colour.py
