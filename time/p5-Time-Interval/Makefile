@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/09/26 14:56:28 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/09/26 15:05:21 wiz Exp $
 
 DISTNAME=	Time-Interval-1.234
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 
-MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/Time/Interval/.packlist
 USE_LANGUAGES=	# none
 
