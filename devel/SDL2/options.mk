@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.5 2015/02/11 20:32:20 snj Exp $
+# $NetBSD: options.mk,v 1.6 2017/09/26 13:10:56 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.SDL2
 PKG_OPTIONS_REQUIRED_GROUPS=	gl
-PKG_SUPPORTED_OPTIONS=	alsa arts dbus esound nas oss pulseaudio x11
+PKG_SUPPORTED_OPTIONS=	alsa dbus esound nas oss pulseaudio x11
 PKG_OPTIONS_GROUP.gl=	opengl
 PKG_SUGGESTED_OPTIONS+=	oss
 
@@ -23,10 +23,6 @@ PKG_SUGGESTED_OPTIONS+=	opengl
 
 .if !empty(PKG_OPTIONS:Malsa)
 .include "../../audio/alsa-lib/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Marts)
-.include "../../audio/arts/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mdbus)
