@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.724 2017/09/26 11:21:45 wiz Exp $
+# $NetBSD: Makefile,v 1.725 2017/09/26 11:24:22 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -134,6 +134,7 @@ SUBDIR+=	dtb-arm64-sun50i
 SUBDIR+=	dtb-arm64-tegra210
 SUBDIR+=	dtc
 SUBDIR+=	dtpstree
+SUBDIR+=	dupeguru
 SUBDIR+=	duplicity
 SUBDIR+=	dvd+rw-tools
 SUBDIR+=	dvdisaster
