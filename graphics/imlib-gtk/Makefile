@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/08/16 20:45:39 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/09/26 10:27:03 wiz Exp $
 
 DISTNAME=	imlib-1.9.15
 PKGNAME=	imlib-gtk-1.9.15
@@ -27,7 +27,6 @@ CPPFLAGS+=		-DENABLE_NLS
 CONFIGURE_ENV+=		ac_cv_path_CONVERT_PROG="${LOCALBASE}/bin/convert"
 CONFIGURE_ENV+=		X_LDFLAGS=${X_LDFLAGS:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-# breaks kde3 kuickshow if shm and other than XAA acceleration
 CONFIGURE_ARGS+=	--disable-shm
 
 PKG_SYSCONFSUBDIR=	imlib
