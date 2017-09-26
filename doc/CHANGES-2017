@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4092 2017/09/26 17:54:13 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4093 2017/09/26 17:59:38 gson Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5828,3 +5828,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-IP to 0.83 [adam 2017-09-26]
 	Updated textproc/py-colour to 0.1.4 [adam 2017-09-26]
 	Updated textproc/py-docx to 0.8.6 [adam 2017-09-26]
+	Updated devel/libevent to 2.1.8nb1 [gson 2017-09-26]
