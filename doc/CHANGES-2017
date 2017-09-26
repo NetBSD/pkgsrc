@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4094 2017/09/26 22:24:07 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4095 2017/09/26 22:28:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5830,3 +5830,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-docx to 0.8.6 [adam 2017-09-26]
 	Updated devel/libevent to 2.1.8nb1 [gson 2017-09-26]
 	Updated www/p5-Apache2-AuthCookie to 3.27 [wiz 2017-09-26]
+	Updated www/p5-App-Nopaste to 1.011 [wiz 2017-09-26]
