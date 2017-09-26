@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4066 2017/09/26 11:24:34 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4067 2017/09/26 11:38:05 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5797,3 +5797,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added audio/py-hsaudiotag3k version 1.1.3 [wiz 2017-09-26]
 	Added sysutils/py-Send2Trash version 1.4.1 [wiz 2017-09-26]
 	Added sysutils/dupeguru version 4.0.3 [wiz 2017-09-26]
+	Updated graphics/php-imagick to 3.4.3 [maya 2017-09-26]
