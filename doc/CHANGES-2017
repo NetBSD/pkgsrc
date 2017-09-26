@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4061 2017/09/26 11:00:08 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.4062 2017/09/26 11:17:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5792,3 +5792,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/p5-Alien-SDL version 1.446 [wiz 2017-09-26]
 	Updated devel/nspr to 4.17 [ryoon 2017-09-26]
 	Updated devel/nss to 3.33 [ryoon 2017-09-26]
+	Updated devel/p5-SDL to 2.546 [wiz 2017-09-26]
