@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2017/06/12 07:50:28 maya Exp $
+# $NetBSD: Makefile,v 1.5 2017/09/26 14:45:53 wiz Exp $
 
-DISTNAME=	DateTime-Format-CLDR-1.18
+DISTNAME=	DateTime-Format-CLDR-1.19
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	time perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MA/MAROS/
 
@@ -13,7 +12,12 @@ LICENSE=	${PERL5_LICENSE}
 
 # for make test
 BUILD_DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
+BUILD_DEPENDS+=	p5-DateTime-Event-Recurrence-[0-9]*:../../time/p5-DateTime-Event-Recurrence
+BUILD_DEPENDS+=	p5-DateTime-Set-[0-9]*:../../time/p5-DateTime-Set
 BUILD_DEPENDS+=	p5-DateTime-Incomplete-[0-9]*:../../time/p5-DateTime-Incomplete
+BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/DateTime/Format/CLDR/.packlist
