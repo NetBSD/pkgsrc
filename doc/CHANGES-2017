@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4049 2017/09/26 07:05:49 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4050 2017/09/26 07:41:23 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5612,3 +5612,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/gcc7 to 7.2.0 [maya 2017-09-26]
 	Updated converters/help2man to 1.47.5 [adam 2017-09-26]
 	Updated www/nghttp2 to 1.26.0 [adam 2017-09-26]
+	Updated security/vault to 0.8.3 [fhajny 2017-09-26]
