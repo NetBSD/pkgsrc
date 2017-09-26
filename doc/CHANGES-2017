@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4056 2017/09/26 10:32:32 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4057 2017/09/26 10:33:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5787,3 +5787,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed textproc/kdoc [wiz 2017-09-26]
 	Removed x11/qwt [wiz 2017-09-26]
 	Removed devel/its4 [wiz 2017-09-26]
+	Removed lang/onyx [wiz 2017-09-26]
