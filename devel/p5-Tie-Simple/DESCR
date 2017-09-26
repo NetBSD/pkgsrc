@@ -1,0 +1,8 @@
+This module adds the ability to quickly create new types of TIE objects
+without creating a complete class. It does so in such a way as to try and
+make the programmers life easier when it comes to single-use ties that I
+find myself wanting to use from time-to-time.
+
+The Tie::Simple package is actually a front-end to other classes which
+really do all the work once tied, but this package does the dwimming to
+automatically figure out what you're trying to do.
