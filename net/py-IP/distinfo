@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 00:35:29 agc Exp $
+$NetBSD: distinfo,v 1.7 2017/09/26 17:37:40 adam Exp $
 
-SHA1 (IPy-0.81.tar.gz) = c8a731313a2964c8c6aad18cec632b7332368f01
-RMD160 (IPy-0.81.tar.gz) = 6e708020c18cddb2f3588c2bd7fac98884842cb9
-SHA512 (IPy-0.81.tar.gz) = 6a760818f5463ff5ee118c4a3cb08be54a8a460a73eb37cf7ccc44941c0b118e9c81ec4fdb48d4e957375b3b0487d6a55c1657996d19884ab137b867f3b1dbfc
-Size (IPy-0.81.tar.gz) = 32318 bytes
+SHA1 (IPy-0.83.tar.gz) = 0836e6788479b6507bccac1f9607c646d9c2562c
+RMD160 (IPy-0.83.tar.gz) = 9d059c6949134ac0f74ae768a8d6dbac5cdb9b54
+SHA512 (IPy-0.83.tar.gz) = 6bd69d96fa77dc4ceaf119b81c19a524b871badb37665a763a055e1c8b2ce3433c6e9534f03aa64d02e559dca2fac2c4e1d09b7fd78ed79c0fded88f803ad2de
+Size (IPy-0.83.tar.gz) = 31816 bytes
