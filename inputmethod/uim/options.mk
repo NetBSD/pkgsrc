@@ -1,11 +1,8 @@
-# $NetBSD: options.mk,v 1.33 2017/05/21 09:12:34 ryoon Exp $
+# $NetBSD: options.mk,v 1.34 2017/09/26 09:42:26 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
 PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gnome3 gtk gtk3 m17nlib openssl prime sj3 sqlite uim-fep wnn4 xim
-PKG_SUPPORTED_OPTIONS+=	editline
-PKG_OPTIONS_OPTIONAL_GROUPS=	kde qt
-PKG_OPTIONS_GROUP.kde=	kde kde3
-PKG_OPTIONS_GROUP.qt=	qt qt3
+PKG_SUPPORTED_OPTIONS+=	editline kde qt
 PKG_SUGGESTED_OPTIONS=	anthy expat gtk gtk3 prime uim-fep xim
 
 # Store installed modules
@@ -22,19 +19,8 @@ PKG_SUGGESTED_OPTIONS+=	editline
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mqt)
-.  if !empty(PKG_OPTIONS:Mqt3) || !empty(PKG_OPTIONS:Mkde3)
-PKG_FAIL_REASON+=	"'qt' conflict with 'qt3' or 'kde3' option"
-.  endif
-.endif
-.if !empty(PKG_OPTIONS:Mqt3)
-.  if !empty(PKG_OPTIONS:Mqt) || !empty(PKG_OPTIONS:Mkde)
-PKG_FAIL_REASON+=	"'qt3' conflict with 'qt' or 'kde' option"
-.  endif
-.endif
-
 PLIST_VARS+=		helperdata uim-dict-gtk uim-dict-gtk3 uim-dict-helperdata fep
-PLIST_VARS+=		anthy curl eb expat ffi gnome gnome3 gtk gtk3 kde kde3 m17nlib openssl qt qt3 sqlite wnn xim
+PLIST_VARS+=		anthy curl eb expat ffi gnome gnome3 gtk gtk3 kde m17nlib openssl qt sqlite wnn xim
 PLIST_VARS+=		canna prime sj3
 PLIST_VARS+=		editline
 
@@ -164,12 +150,6 @@ PLIST.uim-dict-helperdata=	yes
 .  endif
 .endif
 
-.if !empty(PKG_OPTIONS:Mkde3)
-.  include "../../x11/kdelibs3/buildlink3.mk"
-.  include "../../x11/qt3-libs/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-kde-applet
-PLIST.kde3=		yes
-.endif
 
 .if !empty(PKG_OPTIONS:Mkde)
 .  include "../../x11/kdelibs4/buildlink3.mk"
@@ -190,14 +170,6 @@ CHECK_FILES_SKIP+=	${PREFIX}/share/uim/pixmaps/m17n-.*\.png
 UIM_MODULES+=		m17nlib
 .else
 CONFIGURE_ARGS+=	--without-m17nlib
-.endif
-
-.if !empty(PKG_OPTIONS:Mqt3) || !empty(PKG_OPTIONS:Mkde3)
-.  include "../../x11/qt3-libs/buildlink3.mk"
-.  include "../../x11/qt3-tools/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-qt CXXFLAGS=-lc
-PLIST.helperdata=	yes
-PLIST.qt3=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mqt) || !empty(PKG_OPTIONS:Mkde)
@@ -251,6 +223,4 @@ CONFIGURE_ARGS+=	--enable-default-toolkit=gtk
 CONFIGURE_ARGS+=	--enable-default-toolkit=gtk3
 .elif !empty(PKG_OPTIONS:Mqt) || !empty(PKG_OPTIONS:Mkde)
 CONFIGURE_ARGS+=	--enable-default-toolkit=qt4
-.elif !empty(PKG_OPTIONS:Mqt3) || !empty(PKG_OPTIONS:Mkde3)
-CONFIGURE_ARGS+=	--enable-default-toolkit=qt
 .endif
