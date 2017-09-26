@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2017/01/01 14:43:46 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/09/26 17:32:26 adam Exp $
 
-DISTNAME=	pyephem-3.7.5.1
+DISTNAME=	pyephem-3.7.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyephem/ephem/}
-CATEGORIES=	geography math
+CATEGORIES=	math geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyephem/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,25 +10,7 @@ HOMEPAGE=	http://www.rhodesmill.org/brandon/projects/pyephem.html
 COMMENT=	Scientific-grade astronomical computations for Python
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v3
 
-do-test:
-	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${TEST_ENV} ${MAKE_ENV} \
-	 ${PYTHONBIN} ${PYSETUP} ${PYSETUPARGS} "test")
-
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
-
-REPLACE_PYTHON+=	src/ephem/tests/test_angles.py
-REPLACE_PYTHON+=	src/ephem/tests/test_bodies.py
-REPLACE_PYTHON+=	src/ephem/tests/test_cities.py
-REPLACE_PYTHON+=	src/ephem/tests/test_constants.py
-REPLACE_PYTHON+=	src/ephem/tests/test_dates.py
-REPLACE_PYTHON+=	src/ephem/tests/test_jpl.py
-REPLACE_PYTHON+=	src/ephem/tests/test_launchpad_236872.py
-REPLACE_PYTHON+=	src/ephem/tests/test_launchpad_244811.py
-REPLACE_PYTHON+=	src/ephem/tests/test_observers.py
-REPLACE_PYTHON+=	src/ephem/tests/test_rst.py
-REPLACE_PYTHON+=	src/ephem/tests/test_stars.py
-REPLACE_PYTHON+=	src/ephem/tests/test_usno.py
-REPLACE_PYTHON+=	src/ephem/tests/test_usno_equinoxes.py
+REPLACE_PYTHON+=	ephem/tests/test_*.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
