@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.8 2015/04/02 21:29:24 joerg Exp $
+# $NetBSD: options.mk,v 1.9 2017/09/26 09:43:03 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.celestia
 PKG_SUPPORTED_OPTIONS=		lua
 PKG_OPTIONS_OPTIONAL_GROUPS=	gui
-PKG_OPTIONS_GROUP.gui=		glut gnome gtk kde
+PKG_OPTIONS_GROUP.gui=		glut gnome gtk
 PKG_SUGGESTED_OPTIONS=		gtk lua
 
 .include "../../mk/bsd.options.mk"
@@ -35,14 +35,6 @@ PLIST_SRC=		${PKGDIR}/PLIST.gtk
 .  include "../../devel/libgnomeui/buildlink3.mk"
 .  include "../../graphics/gtkglext/buildlink3.mk"
 .  include "../../multimedia/libtheora/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mkde)
-CONFIGURE_ARGS+=	--with-kde
-PLIST_SRC=		${PKGDIR}/PLIST.kde
-.  include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.  include "../../multimedia/libtheora/buildlink3.mk"
-.  include "../../x11/kdelibs3/buildlink3.mk"
 .endif
 
 PLIST_SRC+=	${PKGDIR}/PLIST
