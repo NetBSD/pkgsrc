@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4123 2017/09/27 15:39:07 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4124 2017/09/27 15:54:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5869,3 +5869,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/p5-Coro version 6.514 [wiz 2017-09-27]
 	Updated www/p5-HTTP-Server-EV to 0.69 [wiz 2017-09-27]
 	Updated www/p5-Jemplate to 0.30 [wiz 2017-09-27]
+	Added www/p5-Test-LWP-UserAgent version 0.033 [wiz 2017-09-27]
