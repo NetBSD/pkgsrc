@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/07/24 00:02:43 wen Exp $
+$NetBSD: distinfo,v 1.5 2017/09/27 15:57:46 wiz Exp $
 
-SHA1 (LWP-Protocol-PSGI-0.09.tar.gz) = 9b0bf6a650b62a167db0897f6e0aa0b310f97529
-RMD160 (LWP-Protocol-PSGI-0.09.tar.gz) = c106113cf4b4a719e30d2a42852e56fab66a9bce
-SHA512 (LWP-Protocol-PSGI-0.09.tar.gz) = b3d193b4b2b25f3af213f0773569869553f17e2b121f7e97aa3b83e3d11dab18b6629f9eaa357d78c6b6a03092e8a85de5373bd29b3127a2425ceb76b7c3f7ff
-Size (LWP-Protocol-PSGI-0.09.tar.gz) = 13545 bytes
+SHA1 (LWP-Protocol-PSGI-0.10.tar.gz) = e62818676f343306d10b3a95f833abea5e40dd37
+RMD160 (LWP-Protocol-PSGI-0.10.tar.gz) = ccdf2e5dad14bfd2e271455cc91bf80ada934452
+SHA512 (LWP-Protocol-PSGI-0.10.tar.gz) = 6ebc0583dc1df771106b24fe39096ec8f1d70847e7a109ebbb29ba9a058bdcd41e574652f0fc0a260e7f612cbbdda498bed37007cfcd5d73f6e9ee1fb55fdb37
+Size (LWP-Protocol-PSGI-0.10.tar.gz) = 13913 bytes
