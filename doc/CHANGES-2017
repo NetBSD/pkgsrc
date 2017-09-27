@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4150 2017/09/27 20:15:25 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4151 2017/09/27 20:30:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5896,3 +5896,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Log-Dispatch to 2.67 [wiz 2017-09-27]
 	Updated devel/p5-Method-Signatures to 20170211 [wiz 2017-09-27]
 	Updated devel/p5-MooseX-App to 1.39 [wiz 2017-09-27]
+	Updated security/py-cryptodome to 3.4.7 [adam 2017-09-27]
+	Updated textproc/py-pandocfilters to 1.4.2 [adam 2017-09-27]
+	Updated math/py-infinity to 1.4 [adam 2017-09-27]
+	Updated www/py-bottle to 0.12.13 [adam 2017-09-27]
