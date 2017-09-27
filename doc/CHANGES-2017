@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4112 2017/09/27 13:56:21 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4113 2017/09/27 13:59:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5858,3 +5858,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed koffice-l10n-pl [wiz 2017-09-27]
 	Updated www/p5-Catalyst-Controller-HTML-FormFu to 2.02 [wiz 2017-09-27]
 	Updated www/p5-Catalyst-Engine-PSGI to 0.14 [wiz 2017-09-27]
+	Updated www/p5-Catalyst-Plugin-Static-Simple to 0.34 [wiz 2017-09-27]
