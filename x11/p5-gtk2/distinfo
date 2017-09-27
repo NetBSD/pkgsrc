@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.19 2017/06/08 12:58:33 ryoon Exp $
+$NetBSD: distinfo,v 1.20 2017/09/27 17:13:21 wiz Exp $
 
-SHA1 (Gtk2-1.249.tar.gz) = e7e78aa3ebae975b1a8aaf35ef4d35b16aa84d38
-RMD160 (Gtk2-1.249.tar.gz) = 6a4ebb0430f20eb9f883ef718cf204baa05a76bc
-SHA512 (Gtk2-1.249.tar.gz) = 839debf57e51b04f00829b75a97839867f3c40c076a9ed29e4e160787dfc5520c31efb5b915b2eeb6db040c907f9de3d2a3d15192cf6047db89a69fdc741b671
-Size (Gtk2-1.249.tar.gz) = 742086 bytes
-SHA1 (patch-Makefile.PL) = f725fa9c2e444904645b77ab71a5e66c7a193922
-SHA1 (patch-xs_GdkDisplay.xs) = c3693b3624a62d9d4a5ee53fc1ace829642bcc4c
+SHA1 (Gtk2-1.24992.tar.gz) = dfa2cd92fc4536062dbcffcf8fc70392f9aae70b
+RMD160 (Gtk2-1.24992.tar.gz) = 414d12f4dfcb7e8f404e4b8a26bb5bef0ca345b1
+SHA512 (Gtk2-1.24992.tar.gz) = a3d0ac22ce0f356f1a73c6b7d27161f76573b64cfde54e76d751ce8318eda9410e57d905e03b2562b8d31b80d3dba2bd4a8a7980a331bd5ca0c6f75e61e4e6f7
+Size (Gtk2-1.24992.tar.gz) = 768646 bytes
