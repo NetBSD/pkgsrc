@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.546 2017/09/27 13:31:54 wiz Exp $
+# $NetBSD: Makefile,v 1.547 2017/09/27 13:32:30 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -321,7 +321,6 @@ SUBDIR+=	mpc
 SUBDIR+=	mpdas
 SUBDIR+=	mpegaudio
 SUBDIR+=	mpg123
-SUBDIR+=	mpg123-arts
 SUBDIR+=	mpg123-esound
 SUBDIR+=	mpg123-nas
 SUBDIR+=	mpg123-oss
