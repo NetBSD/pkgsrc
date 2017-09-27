@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2017/06/28 08:27:41 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.11 2017/09/27 22:24:36 wiz Exp $
 
-DISTNAME=	FusionInventory-Agent-2.2.7
+DISTNAME=	FusionInventory-Agent-2.3.21
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	net perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/F/FU/FUSINV/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/G/GB/GBOUGARD/}
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~fusinv/
@@ -30,9 +28,16 @@ DEPENDS+=	p5-HTTP-Proxy-[0-9]*:../../www/p5-HTTP-Proxy
 DEPENDS+=	p5-HTTP-Server-Simple-[0-9]*:../../www/p5-HTTP-Server-Simple
 DEPENDS+=	p5-IO-Capture-[0-9]*:../../devel/p5-IO-Capture
 DEPENDS+=	p5-IPC-Run-[0-9]*:../../devel/p5-IPC-Run
-DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-DEPENDS+=	p5-Test-MockModule-[0-9]*:../../devel/p5-Test-MockModule
 DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
+DEPENDS+=	p5-SUPER-[0-9]*:../../devel/p5-SUPER
+DEPENDS+=	p5-Net-SNMP-[0-9]*:../../net/p5-Net-SNMP
+DEPENDS+=	p5-File-Copy-Recursive-[0-9]*:../../sysutils/p5-File-Copy-Recursive
+# TEST_DEPENDS
+BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=	p5-Test-MockModule-[0-9]*:../../devel/p5-Test-MockModule
+BUILD_DEPENDS+=	p5-Test-MockObject-[0-9]*:../../devel/p5-Test-MockObject
+BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 
 PERL5_PACKLIST= auto/FusionInventory/Agent/.packlist
 
@@ -42,8 +47,6 @@ MAKE_PARAMS+=	PREFIX=${PREFIX} LOCALSTATEDIR=${VARBASE}/fusioninventory
 MAKE_PARAMS+=	SYSCONFDIR=${PKG_SYSCONFDIR} PKGMANDIR=${PKGMANDIR}
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
-
-REPLACE_PERL+=	memconf
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
