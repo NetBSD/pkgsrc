@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4106 2017/09/27 13:30:50 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4107 2017/09/27 13:31:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5845,3 +5845,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-Catalyst-Authentication-Store-Htpasswd to 1.006 [wiz 2017-09-27]
 	Updated math/py-networkx to 2.0 [adam 2017-09-27]
 	Updated textproc/py-rdflib to 4.2.2 [adam 2017-09-27]
+	Removed audio/libao-arts [wiz 2017-09-27]
