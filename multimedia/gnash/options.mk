@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2017/09/26 09:44:08 wiz Exp $
+# $NetBSD: options.mk,v 1.22 2017/09/27 13:37:28 wiz Exp $
 #
 
 #
@@ -53,6 +53,7 @@ CONFIGURE_ARGS+=	--with-plugins-install=system
 .include "../../x11/kde-baseapps4/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../meta-pkgs/kde4/kde4.mk"
+.endif
 
 CONFIGURE_ARGS+=	--enable-gui=${GNASH_GUIS:tW:S/ /,/}
 
@@ -86,7 +87,6 @@ CONFIGURE_ARGS+=	--enable-renderer=${GNASH_RENDER:tW:S/ /,/}
 GNASH_MEDIA+=	ffmpeg
 .include "../../audio/libdca/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
 .include "../../multimedia/ffmpeg1/buildlink3.mk"
 .endif
 
