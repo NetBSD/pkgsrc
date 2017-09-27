@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4097 2017/09/27 06:46:49 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4098 2017/09/27 06:57:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5834,3 +5834,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-CGI-Fast to 2.12 [wiz 2017-09-27]
 	Updated devel/git to 2.14.2 [adam 2017-09-27]
 	Updated multimedia/libmatroska to 1.4.8 [adam 2017-09-27]
+	Updated www/p5-Catalyst-Authentication-Credential-HTTP to 1.018 [wiz 2017-09-27]
