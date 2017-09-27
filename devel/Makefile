@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2519 2017/09/26 17:39:00 minskim Exp $
+# $NetBSD: Makefile,v 1.2520 2017/09/27 15:35:01 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -940,6 +940,7 @@ SUBDIR+=	p5-Const-Fast
 SUBDIR+=	p5-Context-Preserve
 SUBDIR+=	p5-Contextual-Return
 SUBDIR+=	p5-Convert-Binary-C
+SUBDIR+=	p5-Coro
 SUBDIR+=	p5-Curses
 SUBDIR+=	p5-Curses-UI
 SUBDIR+=	p5-Curses-UI-POE
