@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4109 2017/09/27 13:33:18 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4110 2017/09/27 13:35:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5848,3 +5848,11 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed audio/libao-arts [wiz 2017-09-27]
 	Removed audio/mpg123-arts [wiz 2017-09-27]
 	Updated audio/audacious-plugins to 3.5.2nb15 [wiz 2017-09-27]
+	Removed koffice-l10n-da [wiz 2017-09-27]
+	Removed koffice-l10n-de [wiz 2017-09-27]
+	Removed koffice-l10n-en_GB [wiz 2017-09-27]
+	Removed koffice-l10n-es [wiz 2017-09-27]
+	Removed koffice-l10n-et [wiz 2017-09-27]
+	Removed koffice-l10n-fi [wiz 2017-09-27]
+	Removed koffice-l10n-fr [wiz 2017-09-27]
+	Removed koffice-l10n-pl [wiz 2017-09-27]
