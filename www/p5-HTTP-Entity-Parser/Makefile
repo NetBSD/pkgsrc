@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2017/09/27 15:18:27 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/27 16:26:15 wiz Exp $
 
 DISTNAME=	HTTP-Entity-Parser-0.20
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 
@@ -10,14 +11,14 @@ HOMEPAGE=	http://search.cpan.org/dist/HTTP-Entity-Parser/
 COMMENT=	PSGI compliant HTTP Entity Parser
 LICENSE=	${PERL5_LICENSE}
 
+DEPENDS+=	p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
 DEPENDS+=	p5-WWW-Form-UrlEncoded>=0.23:../../www/p5-WWW-Form-UrlEncoded
 DEPENDS+=	p5-HTTP-MultiPartParser>=0:../../www/p5-HTTP-MultiPartParser
+DEPENDS+=	p5-Hash-MultiValue-[0-9]*:../../devel/p5-Hash-MultiValue
+DEPENDS+=	p5-Stream-Buffered-[0-9]*:../../devel/p5-Stream-Buffered
 
 # for make test
 BUILD_DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
-BUILD_DEPENDS+=	p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
-BUILD_DEPENDS+=	p5-Hash-MultiValue-[0-9]*:../../devel/p5-Hash-MultiValue
-BUILD_DEPENDS+=	p5-Stream-Buffered-[0-9]*:../../devel/p5-Stream-Buffered
 BUILD_DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
 
 USE_LANGUAGES=		# empty
