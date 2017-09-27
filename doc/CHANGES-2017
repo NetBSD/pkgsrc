@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4114 2017/09/27 14:04:00 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4115 2017/09/27 14:11:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5860,3 +5860,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-Catalyst-Engine-PSGI to 0.14 [wiz 2017-09-27]
 	Updated www/p5-Catalyst-Plugin-Static-Simple to 0.34 [wiz 2017-09-27]
 	Updated devel/p5-Moose to 2.2006nb1 [wiz 2017-09-27]
+	Updated www/p5-Catalyst-Runtime to 5.90115 [wiz 2017-09-27]
