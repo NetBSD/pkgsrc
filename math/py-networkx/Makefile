@@ -1,41 +1,38 @@
-# $NetBSD: Makefile,v 1.22 2016/09/11 16:55:17 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2017/09/27 13:25:54 adam Exp $
 
-DISTNAME=	networkx-1.11
+DISTNAME=	networkx-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/networkx/}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://networkx.github.io/
 COMMENT=	Python package for creating and manipulating graphs and networks
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-decorator>=4.0.10:../../devel/py-decorator
-BUILD_DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.7:../../devel/py-nose
+DEPENDS+=	${PYPKGPREFIX}-decorator>=4.1.0:../../devel/py-decorator
 
 USE_LANGUAGES=	# none
 
-SUBST_CLASSES+=		python
-SUBST_STAGE.python=	post-patch
-SUBST_FILES.python+=	networkx/readwrite/tests/*.py
-SUBST_FILES.python+=	networkx/utils/tests/*.py
-SUBST_FILES.python+=	networkx/tests/*.py
-SUBST_FILES.python+=	networkx/generators/tests/*.py
-SUBST_FILES.python+=	networkx/classes/tests/*.py
-SUBST_FILES.python+=	networkx/algorithms/tests/*.py
-SUBST_FILES.python+=	networkx/algorithms/approximation/tests/*.py
-SUBST_FILES.python+=	networkx/algorithms/assortativity/tests/*.py
-SUBST_FILES.python+=	networkx/algorithms/bipartite/tests/*.py
-SUBST_FILES.python+=	networkx/algorithms/centrality/tests/*.py
-SUBST_FILES.python+=	networkx/algorithms/chordal/tests/*.py
-SUBST_FILES.python+=	networkx/algorithms/community/tests/*.py
-SUBST_FILES.python+=	networkx/algorithms/components/tests/*.py
-SUBST_FILES.python+=	networkx/algorithms/isomorphism/tests/*.py
-SUBST_FILES.python+=	networkx/algorithms/link_analysis/tests/*.py
-SUBST_FILES.python+=	networkx/algorithms/shortest_paths/tests/*.py
-SUBST_FILES.python+=	networkx/algorithms/traversal/tests/*.py
-SUBST_MESSAGE.python=	Fixing path to Python interpreter.
-SUBST_SED.python=	-e "s,/usr/bin/env python,${PYTHONBIN},g"
+REPLACE_PYTHON+=	networkx/algorithms/approximation/tests/*.py
+REPLACE_PYTHON+=	networkx/algorithms/assortativity/tests/*.py
+REPLACE_PYTHON+=	networkx/algorithms/bipartite/tests/*.py
+REPLACE_PYTHON+=	networkx/algorithms/centrality/tests/*.py
+REPLACE_PYTHON+=	networkx/algorithms/chordal/tests/*.py
+REPLACE_PYTHON+=	networkx/algorithms/community/tests/*.py
+REPLACE_PYTHON+=	networkx/algorithms/components/tests/*.py
+REPLACE_PYTHON+=	networkx/algorithms/isomorphism/tests/*.py
+REPLACE_PYTHON+=	networkx/algorithms/link_analysis/tests/*.py
+REPLACE_PYTHON+=	networkx/algorithms/shortest_paths/tests/*.py
+REPLACE_PYTHON+=	networkx/algorithms/tests/*.py
+REPLACE_PYTHON+=	networkx/algorithms/traversal/tests/*.py
+REPLACE_PYTHON+=	networkx/classes/tests/*.py
+REPLACE_PYTHON+=	networkx/generators/tests/*.py
+REPLACE_PYTHON+=	networkx/readwrite/tests/*.py
+REPLACE_PYTHON+=	networkx/tests/*.py
+REPLACE_PYTHON+=	networkx/utils/tests/*.py
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
