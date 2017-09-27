@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/27 20:14:44 adam Exp $
 
-DISTNAME=	pandocfilters-1.4.1
+DISTNAME=	pandocfilters-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	textproc
+CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandocfilters/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
