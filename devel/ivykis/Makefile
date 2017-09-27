@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/07/30 22:32:14 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/09/27 12:50:31 fhajny Exp $
 
-DISTNAME=	ivykis-0.42
+DISTNAME=	ivykis-0.42.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=buytenh/}
 
