@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4134 2017/09/27 16:29:30 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4135 2017/09/27 16:31:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5880,3 +5880,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-Role-REST-Client to 0.22 [wiz 2017-09-27]
 	Updated www/p5-HTTP-Entity-Parser to 0.20nb1 [wiz 2017-09-27]
 	Updated www/p5-SVN-Web to 0.63 [wiz 2017-09-27]
+	Updated www/p5-Starlet to 0.31 [wiz 2017-09-27]
