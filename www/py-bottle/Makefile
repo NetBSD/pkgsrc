@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:44 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.5 2017/09/27 20:29:51 adam Exp $
 
-DISTNAME=	bottle-0.12.7
-CATEGORIES=	www
+DISTNAME=	bottle-0.12.13
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bottle/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,5 +12,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} bottle.py bottle${PYVERSSUFFIX}.py || ${TRUE}
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
