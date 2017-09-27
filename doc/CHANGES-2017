@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4158 2017/09/27 21:35:46 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4159 2017/09/27 21:41:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5907,3 +5907,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added converters/p5-Convert-UU version 0.5201 [wiz 2017-09-27]
 	Added devel/p5-Module-Compile version 0.35 [wiz 2017-09-27]
 	Updated editors/p5-Padre-Plugin-Kate to 0.06 [wiz 2017-09-27]
+	Updated editors/p5-Padre-Plugin-Nopaste to 0.08 [wiz 2017-09-27]
