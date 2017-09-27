@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2522 2017/09/27 21:02:30 wiz Exp $
+# $NetBSD: Makefile,v 1.2523 2017/09/27 21:21:32 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1260,6 +1260,7 @@ SUBDIR+=	p5-Module-Build-WithXSpp
 SUBDIR+=	p5-Module-Build-XSUtil
 SUBDIR+=	p5-Module-CPANTS-Analyse
 SUBDIR+=	p5-Module-CPANfile
+SUBDIR+=	p5-Module-Compile
 SUBDIR+=	p5-Module-CoreList
 SUBDIR+=	p5-Module-Dependency
 SUBDIR+=	p5-Module-ExtractUse
