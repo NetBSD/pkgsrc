@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.57 2017/03/24 16:55:15 wiz Exp $
+# $NetBSD: options.mk,v 1.58 2017/09/27 13:50:27 wiz Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -44,9 +44,6 @@ PKG_SUPPORTED_OPTIONS+=	vdpau
 PKG_SUPPORTED_OPTIONS+=	lirc
 .endif
 
-.  if ${OPSYS} != "SunOS"
-PKG_SUPPORTED_OPTIONS+=	arts
-.  endif
 .elif !empty(PKGNAME:M*mencoder*)
 PKG_SUPPORTED_OPTIONS+=	faac lame
 .endif
@@ -111,14 +108,6 @@ CONFIGURE_ARGS+=	--enable-aa
 .  include "../../graphics/aalib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-aa
-.endif
-
-.if !empty(PKG_OPTIONS:Marts)
-CONFIGURE_ARGS+=	--enable-arts
-EXTRA_LIBS+=		-lartsc
-.  include "../../audio/arts/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-arts
 .endif
 
 .if !empty(PKG_OPTIONS:Mcaca)
