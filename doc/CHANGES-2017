@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4140 2017/09/27 16:56:31 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4141 2017/09/27 17:03:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5886,3 +5886,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-WWW-Form-UrlEncoded to 0.24 [wiz 2017-09-27]
 	Updated www/p5-WWW-Mechanize-Shell to 0.56 [wiz 2017-09-27]
 	Updated www/p5-WordPress-XMLRPC to 2.12 [wiz 2017-09-27]
+	Updated www/p5-libwww to 6.27 [wiz 2017-09-27]
