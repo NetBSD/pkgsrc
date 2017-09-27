@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4156 2017/09/27 21:16:26 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4157 2017/09/27 21:21:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5905,3 +5905,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/p5-Devel-Leak version 0.04 [wiz 2017-09-27]
 	Updated textproc/p5-Search-Xapian to 1.2.25.0 [wiz 2017-09-27]
 	Added converters/p5-Convert-UU version 0.5201 [wiz 2017-09-27]
+	Added devel/p5-Module-Compile version 0.35 [wiz 2017-09-27]
