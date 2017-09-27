@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4108 2017/09/27 13:32:30 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4109 2017/09/27 13:33:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5847,3 +5847,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-rdflib to 4.2.2 [adam 2017-09-27]
 	Removed audio/libao-arts [wiz 2017-09-27]
 	Removed audio/mpg123-arts [wiz 2017-09-27]
+	Updated audio/audacious-plugins to 3.5.2nb15 [wiz 2017-09-27]
