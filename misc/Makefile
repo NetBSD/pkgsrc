@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.489 2017/09/26 10:27:06 wiz Exp $
+# $NetBSD: Makefile,v 1.490 2017/09/27 13:35:17 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -141,14 +141,6 @@ SUBDIR+=	klettres
 SUBDIR+=	kmag
 SUBDIR+=	kmousetool
 SUBDIR+=	kmouth
-SUBDIR+=	koffice-l10n-da
-SUBDIR+=	koffice-l10n-de
-SUBDIR+=	koffice-l10n-en_GB
-SUBDIR+=	koffice-l10n-es
-SUBDIR+=	koffice-l10n-et
-SUBDIR+=	koffice-l10n-fi
-SUBDIR+=	koffice-l10n-fr
-SUBDIR+=	koffice-l10n-pl
 SUBDIR+=	kp
 SUBDIR+=	kremotecontrol
 SUBDIR+=	kstars
