@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2017/08/24 20:03:05 adam Exp $
-#
+# $NetBSD: Makefile,v 1.47 2017/09/27 13:47:01 wiz Exp $
 
 DISTNAME=	mad123-0.8.5
 PKGREVISION=	20
@@ -16,19 +15,13 @@ USE_TOOLS+=	nroff
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mad123
-PKG_SUPPORTED_OPTIONS=	arts oss sun
+PKG_SUPPORTED_OPTIONS=	oss sun
 PKG_SUGGESTED_OPTIONS+=	oss
 .if ${OPSYS} != "DragonFly" && ${OPSYS} != "Linux" && ${OPSYS} != "SunOS"
 PKG_SUGGESTED_OPTIONS+=	sun
 .endif
-PKG_SUGGESTED_OPTIONS.Linux+= arts
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Marts)
-MAKE_FLAGS+=	USE_ARTS=yes
-.include "../../audio/arts/buildlink3.mk"
-.endif
 
 .if !empty(PKG_OPTIONS:Moss)
 MAKE_FLAGS+=	USE_OSS=yes
