@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 02:47:04 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/09/27 13:56:05 wiz Exp $
 
-SHA1 (Catalyst-Engine-PSGI-0.13.tar.gz) = 1c3f9513240cf104abf0615b69594625d4dc32e4
-RMD160 (Catalyst-Engine-PSGI-0.13.tar.gz) = ba1f215d467af27b9a5034a6f46b86bb662d51a6
-SHA512 (Catalyst-Engine-PSGI-0.13.tar.gz) = 4447545400fc28c2eeb23230aec875a12b6837a03baa4c9e47da84f9b245ae06045423d8f14f28f9c2d11d6542f45c714a99301f0fd1301caa0950eaa7364b14
-Size (Catalyst-Engine-PSGI-0.13.tar.gz) = 146321 bytes
+SHA1 (Catalyst-Engine-PSGI-0.14.tar.gz) = 60a7cba737c4c5c5618dd7ade6a00bebbad9b26f
+RMD160 (Catalyst-Engine-PSGI-0.14.tar.gz) = b838bce6bf4141b70a2a3f270b2b33bf6f6fad05
+SHA512 (Catalyst-Engine-PSGI-0.14.tar.gz) = 422d800045bc23ab3d13ff4ffba9205572e6c5b9895b4180eca16d61f34a16f08e46576d26e3f166f62fce0c903f4fd5587aa1c4b729f710435e8663ead42829
+Size (Catalyst-Engine-PSGI-0.14.tar.gz) = 14793 bytes
