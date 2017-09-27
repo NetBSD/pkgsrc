@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2014/08/18 09:34:49 gls Exp $
+@comment $NetBSD: PLIST,v 1.14 2017/09/27 13:46:30 wiz Exp $
 bin/cmus
 bin/cmus-remote
 ${PLIST.flac}lib/cmus/ip/flac.so
@@ -13,7 +13,6 @@ ${PLIST.musepack}lib/cmus/ip/mpc.so
 ${PLIST.opus}lib/cmus/ip/opus.so
 lib/cmus/ip/wav.so
 ${PLIST.wavpack}lib/cmus/ip/wavpack.so
-${PLIST.arts}lib/cmus/op/arts.so
 ${PLIST.pulseaudio}lib/cmus/op/pulse.so
 ${PLIST.libao}lib/cmus/op/ao.so
 ${PLIST.oss}lib/cmus/op/oss.so
