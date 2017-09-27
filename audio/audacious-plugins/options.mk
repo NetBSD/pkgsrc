@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.7 2014/10/28 02:20:26 mef Exp $
+# $NetBSD: options.mk,v 1.8 2017/09/27 13:33:07 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.audacious-plugins
-PKG_SUPPORTED_OPTIONS=	arts esound inet6 jack midi pulseaudio sid
-PKG_SUGGESTED_OPTIONS+=	inet6 pulseaudio jack arts
+PKG_SUPPORTED_OPTIONS=	esound inet6 jack midi pulseaudio sid
+PKG_SUGGESTED_OPTIONS+=	inet6 pulseaudio jack
 
 .include "../../mk/bsd.options.mk"
 
@@ -12,14 +12,6 @@ PLIST_VARS+=	sid
 PLIST.sid=	yes
 .else
 CONFIGURE_ARGS+=	--disable-sid
-.endif
-
-PLIST_VARS+=	arts
-.if !empty(PKG_OPTIONS:Marts)
-.  include "../../audio/arts/buildlink3.mk"
-PLIST.arts=	yes
-.else
-CONFIGURE_ARGS+=	--disable-arts
 .endif
 
 PLIST_VARS+=	esd
