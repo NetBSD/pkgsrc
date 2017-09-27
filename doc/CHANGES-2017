@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4161 2017/09/27 21:58:29 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4162 2017/09/27 22:24:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5910,3 +5910,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated editors/p5-Padre-Plugin-Nopaste to 0.08 [wiz 2017-09-27]
 	Updated editors/p5-Padre-Plugin-SpellCheck to 1.33 [wiz 2017-09-27]
 	Updated editors/p5-Padre-Plugin-XS to 0.12 [wiz 2017-09-27]
+	Updated net/p5-FusionInventory-Agent to 2.3.21 [wiz 2017-09-27]
