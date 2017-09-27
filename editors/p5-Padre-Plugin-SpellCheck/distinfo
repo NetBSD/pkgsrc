@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:32:20 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/09/27 21:47:35 wiz Exp $
 
-SHA1 (Padre-Plugin-SpellCheck-1.1.2.tar.gz) = 49da5fd81f99f242a0819a14995f6dea98d1ba47
-RMD160 (Padre-Plugin-SpellCheck-1.1.2.tar.gz) = 7f7205b6ec870430f2516af5e3d843b7c1761dd5
-SHA512 (Padre-Plugin-SpellCheck-1.1.2.tar.gz) = f4afc5d4d8a2a76beb2ef3e4b2c4a2336a8d66ff0a535298afecd4f140e7339e08d5409291cae5c4f212b046a67673e03f4eb4c3ff85fbb53938d13026f08cb4
-Size (Padre-Plugin-SpellCheck-1.1.2.tar.gz) = 17801 bytes
+SHA1 (Padre-Plugin-SpellCheck-1.33.tar.gz) = 711d41707abff9c52775b98efccf3d197164d55e
+RMD160 (Padre-Plugin-SpellCheck-1.33.tar.gz) = 1d1208f6845ce83b7ebb9fbce672d2d4af91af9d
+SHA512 (Padre-Plugin-SpellCheck-1.33.tar.gz) = c0ce22b2cd8aefcce299013aa88f8175d0c6a5a4a7bd1358ffcf6b620e02f8bcc3905bfd583cde5cf31f91d9efcac11ca517f91dc8b00d9daeede8a7ec9099b1
+Size (Padre-Plugin-SpellCheck-1.33.tar.gz) = 52171 bytes
