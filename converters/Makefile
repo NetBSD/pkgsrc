@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2017/07/09 14:13:53 manu Exp $
+# $NetBSD: Makefile,v 1.157 2017/09/27 21:16:14 wiz Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -61,6 +61,7 @@ SUBDIR+=	p5-Convert-Bencode
 SUBDIR+=	p5-Convert-BinHex
 SUBDIR+=	p5-Convert-Color
 SUBDIR+=	p5-Convert-TNEF
+SUBDIR+=	p5-Convert-UU
 SUBDIR+=	p5-Convert-UUlib
 SUBDIR+=	p5-Data-Hexify
 SUBDIR+=	p5-JSON
