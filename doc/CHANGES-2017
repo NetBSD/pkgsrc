@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4154 2017/09/27 21:02:39 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4155 2017/09/27 21:03:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5903,3 +5903,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/p5-Digest-CRC to 0.22.2 [wiz 2017-09-27]
 	Updated editors/p5-Padre-Plugin-HG to 0.17 [wiz 2017-09-27]
 	Added devel/p5-Devel-Leak version 0.04 [wiz 2017-09-27]
+	Updated textproc/p5-Search-Xapian to 1.2.25.0 [wiz 2017-09-27]
