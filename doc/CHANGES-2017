@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4100 2017/09/27 12:17:20 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4101 2017/09/27 12:33:45 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5837,3 +5837,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-Catalyst-Authentication-Credential-HTTP to 1.018 [wiz 2017-09-27]
 	Updated finance/py-ofxparse to 0.16 [adam 2017-09-27]
 	Updated lang/nodejs to 8.6.0 [fhajny 2017-09-27]
+	Updated databases/elasticsearch to 5.6.2 [fhajny 2017-09-27]
