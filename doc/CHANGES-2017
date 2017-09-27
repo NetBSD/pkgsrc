@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4143 2017/09/27 17:19:51 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4144 2017/09/27 19:16:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5889,3 +5889,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-libwww to 6.27 [wiz 2017-09-27]
 	Updated x11/p5-gtk2 to 1.24992 [wiz 2017-09-27]
 	Added devel/p5-FFI-CheckLib version 0.16 [wiz 2017-09-27]
+	Updated databases/p5-DBD-postgresql to 3.7.0 [wiz 2017-09-27]
