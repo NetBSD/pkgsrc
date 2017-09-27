@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.107 2017/09/03 08:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2017/09/27 14:03:51 wiz Exp $
 
 DISTNAME=	Moose-2.2006
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -21,6 +22,7 @@ DEPENDS+=	p5-Eval-Closure>=0.04:../../devel/p5-Eval-Closure #XXX
 DEPENDS+=	p5-Module-Runtime>=0.014:../../devel/p5-Module-Runtime
 DEPENDS+=	p5-Module-Runtime-Conflicts>=0.002:../../devel/p5-Module-Runtime-Conflicts
 DEPENDS+=	p5-MRO-Compat>=0.05:../../devel/p5-MRO-Compat
+DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 DEPENDS+=	p5-Package-Stash>=0.32:../../devel/p5-Package-Stash
 DEPENDS+=	p5-Package-Stash-XS>=0.24:../../devel/p5-Package-Stash-XS
 DEPENDS+=	p5-Params-Util>=1.00:../../devel/p5-Params-Util
