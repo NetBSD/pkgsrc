@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/01/03 13:23:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2017/09/27 13:30:03 adam Exp $
 
-DISTNAME=	rdflib-4.2.0
+DISTNAME=	rdflib-4.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	python textproc
+CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdflib/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
@@ -12,7 +12,8 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-isodate-[0-9]*:../../time/py-isodate
 DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
-DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
+BUILD_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
+BUILD_DEPENDS+=	${PYPKGPREFIX}-networkx-[0-9]*:../../math/py-networkx
 
 USE_LANGUAGES=	# none
 
@@ -24,16 +25,12 @@ REPLACE_PYTHON+=	rdflib/plugins/parsers/structureddata.py
 REPLACE_PYTHON+=	rdflib/tools/rdfpipe.py
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/csv2rdf \
-		${DESTDIR}${PREFIX}/bin/csv2rdf${PYVERSSUFFIX} || ${TRUE}
-	${MV} ${DESTDIR}${PREFIX}/bin/rdf2dot \
-		${DESTDIR}${PREFIX}/bin/rdf2dot${PYVERSSUFFIX} || ${TRUE}
-	${MV} ${DESTDIR}${PREFIX}/bin/rdfgraphisomorphism \
-		${DESTDIR}${PREFIX}/bin/rdfgraphisomorphism${PYVERSSUFFIX} || ${TRUE}
-	${MV} ${DESTDIR}${PREFIX}/bin/rdfpipe \
-		${DESTDIR}${PREFIX}/bin/rdfpipe${PYVERSSUFFIX} || ${TRUE}
-	${MV} ${DESTDIR}${PREFIX}/bin/rdfs2dot \
-		${DESTDIR}${PREFIX}/bin/rdfs2dot${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${MV} csv2rdf csv2rdf${PYVERSSUFFIX} && \
+		${MV} rdf2dot rdf2dot${PYVERSSUFFIX} && \
+		${MV} rdfgraphisomorphism rdfgraphisomorphism${PYVERSSUFFIX} && \
+		${MV} rdfpipe rdfpipe${PYVERSSUFFIX} && \
+		${MV} rdfs2dot rdfs2dot${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

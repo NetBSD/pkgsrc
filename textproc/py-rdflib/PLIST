@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/19 22:03:29 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/09/27 13:30:03 adam Exp $
 bin/csv2rdf${PYVERSSUFFIX}
 bin/rdf2dot${PYVERSSUFFIX}
 bin/rdfgraphisomorphism${PYVERSSUFFIX}
@@ -8,6 +8,7 @@ ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/rdflib/__init__.py
@@ -37,6 +38,9 @@ ${PYSITELIB}/rdflib/extras/cmdlineutils.pyo
 ${PYSITELIB}/rdflib/extras/describer.py
 ${PYSITELIB}/rdflib/extras/describer.pyc
 ${PYSITELIB}/rdflib/extras/describer.pyo
+${PYSITELIB}/rdflib/extras/external_graph_libs.py
+${PYSITELIB}/rdflib/extras/external_graph_libs.pyc
+${PYSITELIB}/rdflib/extras/external_graph_libs.pyo
 ${PYSITELIB}/rdflib/extras/infixowl.py
 ${PYSITELIB}/rdflib/extras/infixowl.pyc
 ${PYSITELIB}/rdflib/extras/infixowl.pyo
