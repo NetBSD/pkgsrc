@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4137 2017/09/27 16:36:02 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4138 2017/09/27 16:46:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5883,3 +5883,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-Starlet to 0.31 [wiz 2017-09-27]
 	Updated www/p5-Test-WWW-Mechanize-PSGI to 0.37 [wiz 2017-09-27]
 	Updated www/p5-WWW-Amazon-Wishlist to 2.018 [wiz 2017-09-27]
+	Updated www/p5-WWW-Form-UrlEncoded to 0.24 [wiz 2017-09-27]
