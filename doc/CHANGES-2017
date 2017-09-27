@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4116 2017/09/27 14:14:27 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4117 2017/09/27 15:14:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5862,3 +5862,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Moose to 2.2006nb1 [wiz 2017-09-27]
 	Updated www/p5-Catalyst-Runtime to 5.90115 [wiz 2017-09-27]
 	Updated www/p5-Cookie-Baker to 0.08 [wiz 2017-09-27]
+	Updated www/p5-FCGI-ProcManager to 0.28 [wiz 2017-09-27]
