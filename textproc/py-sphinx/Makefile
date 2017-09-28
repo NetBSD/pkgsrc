@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2017/08/19 13:58:00 adam Exp $
+# $NetBSD: Makefile,v 1.42 2017/09/28 11:18:24 adam Exp $
 
-DISTNAME=	Sphinx-1.6.3
+DISTNAME=	Sphinx-1.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
@@ -28,7 +28,6 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
 .endif
 
-# test dependency
 BUILD_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
@@ -43,10 +42,11 @@ do-test:
 	cd ${WRKSRC}/tests && ${PYTHONBIN} run.py
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-apidoc ${DESTDIR}${PREFIX}/bin/sphinx-apidoc${PYVERSSUFFIX} || ${TRUE}
-	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-autogen ${DESTDIR}${PREFIX}/bin/sphinx-autogen${PYVERSSUFFIX} || ${TRUE}
-	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-build ${DESTDIR}${PREFIX}/bin/sphinx-build${PYVERSSUFFIX} || ${TRUE}
-	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-quickstart ${DESTDIR}${PREFIX}/bin/sphinx-quickstart${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${MV} sphinx-apidoc sphinx-apidoc${PYVERSSUFFIX} && \
+		${MV} sphinx-autogen sphinx-autogen${PYVERSSUFFIX} && \
+		${MV} sphinx-build sphinx-build${PYVERSSUFFIX} && \
+		${MV} sphinx-quickstart sphinx-quickstart${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
