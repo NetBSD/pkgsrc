@@ -1,0 +1,15 @@
+$NetBSD: patch-build_Makefile.OSX,v 1.1 2017/09/28 10:40:35 spz Exp $
+
+make sure hardening flags can be inherited
+
+--- build/Makefile.OSX.orig	2011-03-08 17:20:28.000000000 +0000
++++ build/Makefile.OSX
+@@ -6,7 +6,7 @@ NETLIBS =
+ 
+ # Compile flags for normal build
+ CC = cc
+-CFLAGS = -g -O2 -Wall -Wno-unused -D_REENTRANT -D_BSD_SOCKLEN_T_=int $(LFSDEF) $(OSDEF)
++CFLAGS += -g -O2 -Wall -Wno-unused -D_REENTRANT -D_BSD_SOCKLEN_T_=int $(LFSDEF) $(OSDEF)
+ 
+ # Compile flags for debugging
+ # CFLAGS = -g -DDEBUG -Wall -D_REENTRANT $(LFSDEF) $(OSDEF)
