@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4166 2017/09/28 04:18:57 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4167 2017/09/28 04:19:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5915,3 +5915,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated geography/geos to 3.6.2 [gdt 2017-09-28]
 	Added devel/p5-Alien-Build version 1.16 [wiz 2017-09-28]
 	Added textproc/p5-Alien-Hunspell version 0.11 [wiz 2017-09-28]
+	Updated textproc/p5-Text-Hunspell to 2.14 [wiz 2017-09-28]
