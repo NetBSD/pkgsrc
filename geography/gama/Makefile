@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20.4.1 2017/09/28 00:11:11 gdt Exp $
+# $NetBSD: Makefile,v 1.20.4.2 2017/09/28 12:17:17 gdt Exp $
 #
 
-DISTNAME=	gama-1.19
+DISTNAME=	gama-1.18
+PKGREVISION=	3
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GNU:=gama/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	http://www.gnu.org/s/gama/
 COMMENT=	Geodetic network adjustment (surveying)
 LICENSE=	gnu-gpl-v2 # or later
 
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
