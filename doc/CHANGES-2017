@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4180 2017/09/28 13:46:39 taca Exp $
+$NetBSD: CHANGES-2017,v 1.4181 2017/09/28 16:22:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5932,3 +5932,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/qpdf to 7.0.0 [ryoon 2017-09-28]
 	Updated devel/gtexinfo to 6.5 [ryoon 2017-09-28]
 	Updated www/contao44 to 4.4.6 [taca 2017-09-28]
+	Updated textproc/py-cjson to 1.2.1 [adam 2017-09-28]
