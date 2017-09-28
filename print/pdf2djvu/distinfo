@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2017/05/16 12:43:47 ryoon Exp $
+$NetBSD: distinfo,v 1.13 2017/09/28 12:41:34 ryoon Exp $
 
-SHA1 (pdf2djvu-0.9.5.tar.xz) = 31243c5c90cf89110191866159bdfd9164150e45
-RMD160 (pdf2djvu-0.9.5.tar.xz) = 638aaf4b4a2885a5138cad3df0e67bbe89496f2a
-SHA512 (pdf2djvu-0.9.5.tar.xz) = d3628f40f17fc2a2449f45a51a5641cb0fc0f55fc71cc481cd71e029bc870280bdf938d3ed1e757c61ea100d9a67af316362f9e7c3cc10c0d704ca3645d6633a
-Size (pdf2djvu-0.9.5.tar.xz) = 267188 bytes
+SHA1 (pdf2djvu-0.9.7.tar.xz) = 2b3e655301a97191a19791a05d73b7cd2428be66
+RMD160 (pdf2djvu-0.9.7.tar.xz) = fba9b77b24829b726e636e9362fbb887d50544a4
+SHA512 (pdf2djvu-0.9.7.tar.xz) = d068e214b90f85c97117e30fb1d3c2625defc81348f65c656712b754ddac3116338a1294d8545caec2cf00e6e8014b0e6a97b043504d90a5074469e039eb9366
+Size (pdf2djvu-0.9.7.tar.xz) = 268344 bytes
