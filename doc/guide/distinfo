@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2017/07/03 09:57:53 leot Exp $
+$NetBSD: distinfo,v 1.16 2017/09/28 07:32:14 leot Exp $
 
-SHA1 (pkgsrc-guide/htdocs-share-20170703.tar.gz) = 69a97a388d4d297aafa20e1c41cf275a6e52bd8a
-RMD160 (pkgsrc-guide/htdocs-share-20170703.tar.gz) = 0a347d30905777922092ab4b27a74514880958e1
-SHA512 (pkgsrc-guide/htdocs-share-20170703.tar.gz) = cf05a9c992fd2e8a8bb05bd8f4d5f0774c69cb2b210350076b3cded68ca74e1a56aa52fea2cedbb93da2b1a1f37f32c5c35090358ddf009e52cb481d635aaf2d
-Size (pkgsrc-guide/htdocs-share-20170703.tar.gz) = 106077 bytes
+SHA1 (pkgsrc-guide/htdocs-share-20170928.tar.gz) = 55a123d60d669c2de3c236b5e9d42f5a8fe3d6a0
+RMD160 (pkgsrc-guide/htdocs-share-20170928.tar.gz) = a2cd4d3c19b3550149fd40879ce838e1bbdf2c55
+SHA512 (pkgsrc-guide/htdocs-share-20170928.tar.gz) = 46204cbdcb7158c4c3693b3bc211d7b158252fdd57d9593f0b5fddc782538c54b604fb0f5f1db46207e62ab69a06197378f79e434f20315056c97c588e068d93
+Size (pkgsrc-guide/htdocs-share-20170928.tar.gz) = 106162 bytes
