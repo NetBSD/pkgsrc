@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/08/27 12:27:13 adam Exp $
+$NetBSD: distinfo,v 1.2 2017/09/28 05:04:35 adam Exp $
 
-SHA1 (pycountry-17.5.14.tar.gz) = 3c4dc1eabb09c771a5193ac18fb7256ef030c215
-RMD160 (pycountry-17.5.14.tar.gz) = a915f898d99f4f871ddde7c77f8ff4b7eba6bc59
-SHA512 (pycountry-17.5.14.tar.gz) = bf5a13ce128f9512287f09c3edb565a3493bf490e420a01c8a45bbb96cfb2482674e8c81cf4db909a92db647f4ba71d03f4aca51995f6c64e4eb59f5c617bcea
-Size (pycountry-17.5.14.tar.gz) = 9203433 bytes
+SHA1 (pycountry-17.9.23.tar.gz) = ca133fb1d438451ac0f197b079c0c297a604a7a5
+RMD160 (pycountry-17.9.23.tar.gz) = 37aa188a36288e13a65330eee91551fa6659f8de
+SHA512 (pycountry-17.9.23.tar.gz) = 168e2d2693629a39a85a4c6aa7187323693ca73d6af0cc947d3536ae373eca602e7e3add91ba114966db4ebf52118ef3d6a3dbf8339734ec68682bab559beeb5
+Size (pycountry-17.9.23.tar.gz) = 9208478 bytes
