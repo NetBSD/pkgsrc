@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/28 17:27:34 schmonz Exp $
+bin/qmail-autoresponder
+${PLIST.mysql}bin/qmail-autoresponder-mysql
+man/man1/qmail-autoresponder-mysql.1
+man/man1/qmail-autoresponder.1
