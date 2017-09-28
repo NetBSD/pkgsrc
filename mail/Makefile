@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.501 2017/09/26 10:27:05 wiz Exp $
+# $NetBSD: Makefile,v 1.502 2017/09/28 17:28:02 schmonz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -298,6 +298,7 @@ SUBDIR+=	qcheck
 SUBDIR+=	qgreylist
 SUBDIR+=	qmHandle
 SUBDIR+=	qmail
+SUBDIR+=	qmail-autoresponder
 SUBDIR+=	qmail-conf
 SUBDIR+=	qmail-lint
 SUBDIR+=	qmail-qfilter
