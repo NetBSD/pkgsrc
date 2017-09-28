@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2017/05/18 20:09:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2017/09/28 11:18:24 adam Exp $
 bin/sphinx-apidoc${PYVERSSUFFIX}
 bin/sphinx-autogen${PYVERSSUFFIX}
 bin/sphinx-build${PYVERSSUFFIX}
@@ -561,6 +561,7 @@ ${PYSITELIB}/sphinx/texinputs/sphinx.sty
 ${PYSITELIB}/sphinx/texinputs/sphinxhowto.cls
 ${PYSITELIB}/sphinx/texinputs/sphinxmanual.cls
 ${PYSITELIB}/sphinx/texinputs/sphinxmulticell.sty
+${PYSITELIB}/sphinx/texinputs_win/Makefile_t
 ${PYSITELIB}/sphinx/themes/agogo/layout.html
 ${PYSITELIB}/sphinx/themes/agogo/static/agogo.css_t
 ${PYSITELIB}/sphinx/themes/agogo/static/bgfooter.png
