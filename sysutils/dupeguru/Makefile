@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/26 11:26:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/28 22:20:45 wiz Exp $
 
 DISTNAME=	dupeguru-src-4.0.3
 PKGNAME=	${DISTNAME:S/-src//}
@@ -42,6 +42,7 @@ do-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/share/dupeguru/send2trash
 	${LN} -s ${DESTDIR}${PREFIX}/share/dupeguru/run.py ${DESTDIR}${PREFIX}/bin/dupeguru
 	${INSTALL_DATA} ${WRKSRC}/build/dupeguru-arch/dupeguru.desktop ${DESTDIR}${PREFIX}/share/applications
+	${RM} -f ${DESTDIR}${PREFIX}/share/dupeguru/qt/platform.py.orig
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
