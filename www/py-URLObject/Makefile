@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/07/30 22:32:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/28 04:58:47 adam Exp $
 
-DISTNAME=	URLObject-2.4.0
+DISTNAME=	URLObject-2.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=U/URLObject/}
