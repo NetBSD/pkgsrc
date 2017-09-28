@@ -119,20 +119,17 @@ BEGIN {
 		match_all = 1;
 		for (d = 1; d <= D; d++) {
 			dep = depends[pkgpath, d]
-			if (dep ~ /[{]/ || \
-			    dep ~ />=[0-9][0-9\.]*(nb[0-9]+)?<[0-9]+/ || \
-			    dep !~ />=[0-9]+/)
-			{
+			if (dep ~ /.+>=[0-9A-Za-z.]+$/) {
+				ge_depends[dep] = dep
+			} else {
 				reduced[N++] = dep ":" pkgsrcdirs[pkgpath]
-				continue
 			}
-			ge_depends[dep] = dep
 		}
 		for (dep in ge_depends) {
 			dep2pkg = dep; sub(">=", "-", dep2pkg)
 			match_all = 1
 			for (pattern in ge_depends) {
-				cmd = PKG_ADMIN " pmatch \"" pattern "\" " dep2pkg
+				cmd = PKG_ADMIN " pmatch '" pattern "' '" dep2pkg "'"
 				if (system(cmd) != 0) {
 					match_all = 0
 					break
