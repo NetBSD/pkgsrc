@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/06/17 11:45:47 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/09/28 09:15:24 jaapb Exp $
 ${OCAML_SITELIB}/re/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/re.a
 ${OCAML_SITELIB}/re/re.annot
@@ -73,3 +73,35 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/re_str.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/re_str.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/re_str.cmxs
 ${OCAML_SITELIB}/re/re_str.mli
+share/doc/ocaml-re/api/Re.Group.html
+share/doc/ocaml-re/api/Re.Mark.Set.html
+share/doc/ocaml-re/api/Re.Mark.html
+share/doc/ocaml-re/api/Re.html
+share/doc/ocaml-re/api/Re_emacs.html
+share/doc/ocaml-re/api/Re_glob.html
+share/doc/ocaml-re/api/Re_pcre.html
+share/doc/ocaml-re/api/Re_perl.html
+share/doc/ocaml-re/api/Re_posix.html
+share/doc/ocaml-re/api/Re_str.html
+share/doc/ocaml-re/api/index.html
+share/doc/ocaml-re/api/index_attributes.html
+share/doc/ocaml-re/api/index_class_types.html
+share/doc/ocaml-re/api/index_classes.html
+share/doc/ocaml-re/api/index_exceptions.html
+share/doc/ocaml-re/api/index_extensions.html
+share/doc/ocaml-re/api/index_methods.html
+share/doc/ocaml-re/api/index_module_types.html
+share/doc/ocaml-re/api/index_modules.html
+share/doc/ocaml-re/api/index_types.html
+share/doc/ocaml-re/api/index_values.html
+share/doc/ocaml-re/api/style.css
+share/doc/ocaml-re/api/type_Re.Group.html
+share/doc/ocaml-re/api/type_Re.Mark.Set.html
+share/doc/ocaml-re/api/type_Re.Mark.html
+share/doc/ocaml-re/api/type_Re.html
+share/doc/ocaml-re/api/type_Re_emacs.html
+share/doc/ocaml-re/api/type_Re_glob.html
+share/doc/ocaml-re/api/type_Re_pcre.html
+share/doc/ocaml-re/api/type_Re_perl.html
+share/doc/ocaml-re/api/type_Re_posix.html
+share/doc/ocaml-re/api/type_Re_str.html
