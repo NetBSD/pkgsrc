@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4163 2017/09/28 00:13:00 gdt Exp $
+$NetBSD: CHANGES-2017,v 1.4164 2017/09/28 00:24:49 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5912,3 +5912,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated editors/p5-Padre-Plugin-XS to 0.12 [wiz 2017-09-27]
 	Updated net/p5-FusionInventory-Agent to 2.3.21 [wiz 2017-09-27]
 	Updated geography/gama to 1.19 [gdt 2017-09-28]
+	Updated geography/geos to 3.6.2 [gdt 2017-09-28]
