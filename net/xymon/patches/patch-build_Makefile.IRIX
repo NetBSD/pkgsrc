@@ -1,0 +1,15 @@
+$NetBSD: patch-build_Makefile.IRIX,v 1.1 2017/09/28 10:40:35 spz Exp $
+
+make sure hardening flags can be inherited
+
+--- build/Makefile.IRIX.orig	2011-03-08 17:20:28.000000000 +0000
++++ build/Makefile.IRIX
+@@ -8,7 +8,7 @@ NETLIBS =
+ 
+ # Compile flags for normal build
+ CC = cc
+-CFLAGS = -g -O -D_REENTRANT $(OSDEF) $(LFSDEF)
++CFLAGS += -g -O -D_REENTRANT $(OSDEF) $(LFSDEF)
+ 
+ # Compile flags for debugging
+ # CFLAGS = -g -DDEBUG -D_REENTRANT $(OSDEF) $(LFSDEF)
