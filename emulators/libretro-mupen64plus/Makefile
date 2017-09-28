@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/02/25 12:50:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2017/09/28 16:03:25 jperkin Exp $
 
 DISTNAME=	mupen64plus-libretro-20150204
 PKGNAME=	libretro-mupen64plus-20150204
@@ -21,6 +21,11 @@ SUBST_STAGE.vc=		pre-configure
 SUBST_MESSAGE.vc=	Fixing path to VideoCore libraries.
 SUBST_FILES.vc=		Makefile
 SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
+
+SUBST_CLASSES+=		d2u
+SUBST_STAGE.d2u=	post-extract
+SUBST_FILES.d2u=	mupen64plus-video-angrylion/n64video.c
+SUBST_FILTER_CMD.d2u=	${TR} -d '\r'
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
