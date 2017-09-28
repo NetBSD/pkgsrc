@@ -1,6 +1,7 @@
-$NetBSD: patch-ac,v 1.6 2014/02/27 20:22:41 spz Exp $
+$NetBSD: patch-ac,v 1.7 2017/09/28 10:40:35 spz Exp $
 
 pkgsrcify
+allow hardening
 
 --- client/Makefile.orig	2014-01-07 21:43:56.000000000 +0000
 +++ client/Makefile
@@ -30,8 +31,40 @@ pkgsrcify
  all: $(PROGRAMS) $(COMMONTOOLS) xymonclient.cfg clientlaunch.cfg $(EXTRATOOLS)
  
  xymonclient.cfg: xymonclient.cfg.DIST
-@@ -62,22 +81,21 @@ netbsd-meminfo: netbsd-meminfo.c
- 	$(CC) -o $@ netbsd-meminfo.c
+@@ -38,46 +57,45 @@ else
+ endif
+ 
+ logfetch: logfetch.c $(XYMONCLIENTLIB)
+-	$(CC) $(CFLAGS) -o $@ logfetch.c $(XYMONCLIENTLIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ logfetch.c $(XYMONCLIENTLIBS)
+ 
+ clientupdate: clientupdate.c $(XYMONCLIENTCOMMLIB) $(XYMONCLIENTLIB)
+-	$(CC) $(CFLAGS) -o $@ clientupdate.c $(XYMONCLIENTCOMMLIBS) $(XYMONCLIENTLIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ clientupdate.c $(XYMONCLIENTCOMMLIBS) $(XYMONCLIENTLIBS)
+ 
+ orcaxymon: orcaxymon.c $(XYMONCLIENTCOMMLIB) $(XYMONCLIENTLIB)
+-	$(CC) $(CFLAGS) -o $@ orcaxymon.c $(XYMONCLIENTCOMMLIBS) $(XYMONCLIENTLIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ orcaxymon.c $(XYMONCLIENTCOMMLIBS) $(XYMONCLIENTLIBS)
+ 
+ msgcache: msgcache.c $(XYMONCLIENTLIB)
+-	$(CC) $(CFLAGS) -o $@ msgcache.c $(XYMONCLIENTCOMMLIBS) $(XYMONCLIENTLIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ msgcache.c $(XYMONCLIENTCOMMLIBS) $(XYMONCLIENTLIBS)
+ 
+ hpux-meminfo: hpux-meminfo.c
+-	$(CC) -o $@ hpux-meminfo.c
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ hpux-meminfo.c
+ 
+ freebsd-meminfo: freebsd-meminfo.c
+-	$(CC) -o $@ freebsd-meminfo.c
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ freebsd-meminfo.c
+ 
+ openbsd-meminfo: openbsd-meminfo.c
+-	$(CC) -o $@ openbsd-meminfo.c
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ openbsd-meminfo.c
+ 
+ netbsd-meminfo: netbsd-meminfo.c
+-	$(CC) -o $@ netbsd-meminfo.c
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ netbsd-meminfo.c
  
  install:
 -	if test ! -d $(INSTALLROOT)$(XYMONHOME)       ; then mkdir -p $(INSTALLROOT)$(XYMONHOME)       ; chmod 755 $(INSTALLROOT)$(XYMONHOME)      ; fi

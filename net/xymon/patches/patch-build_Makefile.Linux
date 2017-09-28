@@ -1,4 +1,4 @@
-$NetBSD: patch-build_Makefile.Linux,v 1.1 2013/03/29 07:19:06 sbd Exp $
+$NetBSD: patch-build_Makefile.Linux,v 1.2 2017/09/28 10:40:35 spz Exp $
 
 --- build/Makefile.Linux.orig	2012-07-23 11:29:13.000000000 +0000
 +++ build/Makefile.Linux
@@ -11,11 +11,11 @@ $NetBSD: patch-build_Makefile.Linux,v 1.1 2013/03/29 07:19:06 sbd Exp $
  GCCVER := $(shell gcc -dumpversion|cut -d. -f1)
  ifeq ($(GCCVER),4)
 -   CFLAGS = -g -O2 -Wall -Wno-unused -Wno-pointer-sign -D_REENTRANT $(LFSDEF) $(OSDEF)
-+   CFLAGS = -g -O2 -Wall -Wno-unused -Wno-pointer-sign -D_REENTRANT $(LFSDEF) $(OSDEF) \
++   CFLAGS += -g -O2 -Wall -Wno-unused -Wno-pointer-sign -D_REENTRANT $(LFSDEF) $(OSDEF) \
 +       -I${PKGDIR}/include -L${PKGDIR}/lib -Wl,--rpath=${PKGDIR}/lib
  else
 -   CFLAGS = -g -O2 -Wall -Wno-unused -D_REENTRANT $(LFSDEF) $(OSDEF)
-+   CFLAGS = -g -O2 -Wall -Wno-unused -D_REENTRANT $(LFSDEF) $(OSDEF) \
++   CFLAGS += -g -O2 -Wall -Wno-unused -D_REENTRANT $(LFSDEF) $(OSDEF) \
 +       -I${PKGDIR}/include -L${PKGDIR}/lib -Wl,--rpath=${PKGDIR}/lib
  endif
  

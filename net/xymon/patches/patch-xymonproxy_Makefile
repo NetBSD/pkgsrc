@@ -1,0 +1,19 @@
+$NetBSD: patch-xymonproxy_Makefile,v 1.1 2017/09/28 10:40:35 spz Exp $
+
+allow hardening
+
+--- xymonproxy/Makefile.orig	2012-11-14 11:29:54.000000000 +0000
++++ xymonproxy/Makefile
+@@ -15,10 +15,10 @@ MSGCGIOBJS = xymoncgimsg.o
+ all: $(PROGRAMS)
+ 
+ xymonproxy: $(PROXYOBJS) $(XYMONCOMMLIB) $(XYMONTIMELIB) $(XYMONLIB)
+-	$(CC) $(CFLAGS) -o $@ $(PROXYOBJS) $(XYMONCOMMLIBS) $(XYMONTIMELIBS) $(XYMONLIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(PROXYOBJS) $(XYMONCOMMLIBS) $(XYMONTIMELIBS) $(XYMONLIBS)
+ 
+ xymoncgimsg.cgi: $(MSGCGIOBJS) $(XYMONCOMMLIB) $(XYMONLIB)
+-	$(CC) $(CFLAGS) -o $@ $(MSGCGIOBJS) $(XYMONCOMMLIBS) $(XYMONLIBS) 
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(MSGCGIOBJS) $(XYMONCOMMLIBS) $(XYMONLIBS) 
+ 
+ ################################################
+ # Default compilation rules
