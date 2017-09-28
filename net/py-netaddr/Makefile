@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/09/04 18:08:26 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/09/28 12:25:11 adam Exp $
 
-DISTNAME=	netaddr-0.7.18
+DISTNAME=	netaddr-0.7.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/netaddr/}
@@ -10,11 +10,14 @@ HOMEPAGE=	https://pypi.python.org/pypi/netaddr/
 COMMENT=	Python library for manipluating network addresses
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+USE_LANGUAGES=		# none
 
 REPLACE_PYTHON+=	netaddr/eui/ieee.py
 REPLACE_PYTHON+=	netaddr/ip/iana.py
 REPLACE_PYTHON+=	netaddr/tools/netaddr
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} netaddr netaddr${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
