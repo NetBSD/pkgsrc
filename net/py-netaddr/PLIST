@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2016/03/06 15:07:07 adam Exp $
-bin/netaddr
+@comment $NetBSD: PLIST,v 1.3 2017/09/28 12:25:11 adam Exp $
+bin/netaddr${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,6 +10,12 @@ ${PYSITELIB}/netaddr/__init__.pyo
 ${PYSITELIB}/netaddr/compat.py
 ${PYSITELIB}/netaddr/compat.pyc
 ${PYSITELIB}/netaddr/compat.pyo
+${PYSITELIB}/netaddr/contrib/__init__.py
+${PYSITELIB}/netaddr/contrib/__init__.pyc
+${PYSITELIB}/netaddr/contrib/__init__.pyo
+${PYSITELIB}/netaddr/contrib/subnet_splitter.py
+${PYSITELIB}/netaddr/contrib/subnet_splitter.pyc
+${PYSITELIB}/netaddr/contrib/subnet_splitter.pyo
 ${PYSITELIB}/netaddr/core.py
 ${PYSITELIB}/netaddr/core.pyc
 ${PYSITELIB}/netaddr/core.pyo
