@@ -1,0 +1,12 @@
+This is a simple program to automatically respond to emails. Features:
+
+- Limits rate of automatic responses (defaults to a maximum of one
+  message every hour).
+- Will not respond to nearly every type of mailing list or bulk email.
+- Will not respond to bounce messages or MAILER-DAEMON.
+- Bounces looping messages.
+- Can insert the original subject into the response.
+- Can copy original message into response.
+- Can use links in the rate-limiting data directory to limit inode usage
+  to a single inode.
+- Can limit responses to a certain date/time range.
