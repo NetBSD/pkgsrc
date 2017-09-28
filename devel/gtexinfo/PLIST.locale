@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST.locale,v 1.9 2016/10/19 12:49:39 wiz Exp $
+@comment $NetBSD: PLIST.locale,v 1.10 2017/09/28 12:53:59 ryoon Exp $
 share/locale/ca.us-ascii/LC_MESSAGES/texinfo_document.mo
 share/locale/ca/LC_MESSAGES/texinfo.mo
 share/locale/ca/LC_MESSAGES/texinfo_document.mo
 share/locale/cs/LC_MESSAGES/texinfo.mo
+share/locale/cs/LC_MESSAGES/texinfo_document.mo
 share/locale/da/LC_MESSAGES/texinfo.mo
+share/locale/da/LC_MESSAGES/texinfo_document.mo
 share/locale/de.us-ascii/LC_MESSAGES/texinfo_document.mo
 share/locale/de/LC_MESSAGES/texinfo.mo
 share/locale/de/LC_MESSAGES/texinfo_document.mo
