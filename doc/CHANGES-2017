@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4167 2017/09/28 04:19:33 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4168 2017/09/28 04:45:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5916,3 +5916,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/p5-Alien-Build version 1.16 [wiz 2017-09-28]
 	Added textproc/p5-Alien-Hunspell version 0.11 [wiz 2017-09-28]
 	Updated textproc/p5-Text-Hunspell to 2.14 [wiz 2017-09-28]
+	Updated sysutils/p5-Sys-Utmp to 1.7 [wiz 2017-09-28]
