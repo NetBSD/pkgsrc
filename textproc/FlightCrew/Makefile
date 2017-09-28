@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2017/09/11 07:38:23 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2017/09/28 15:49:08 jperkin Exp $
 
 DISTNAME=	FlightCrew-0.7.2-Code
 PKGNAME=	${DISTNAME:S/-Code//}
@@ -32,6 +32,7 @@ SUBST_CLASSES+=		d2u
 SUBST_STAGE.d2u=	post-extract
 SUBST_MESSAGE.d2u=	Removing CR end-of-line markers.
 SUBST_FILES.d2u=	CMakeLists.txt
+SUBST_FILES.d2u+=	src/FlightCrew/CMakeLists.txt
 SUBST_FILES.d2u+=	src/FlightCrew/tests/CMakeLists.txt
 SUBST_FILES.d2u+=	src/FlightCrew/Validators/Opf/ReachabilityAnalysis.cpp
 SUBST_FILTER_CMD.d2u=	${TR} -d '\r'
