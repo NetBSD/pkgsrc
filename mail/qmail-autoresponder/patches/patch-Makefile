@@ -1,0 +1,37 @@
+$NetBSD: patch-Makefile,v 1.1 2017/09/28 17:27:34 schmonz Exp $
+
+Link with bglibs 2.
+
+--- Makefile.orig	2017-08-22 23:38:24.000000000 +0000
++++ Makefile
+@@ -14,11 +14,12 @@ clean: TARGETS
+ clean-spac: clean AUTOFILES
+ 	rm -f `cat AUTOFILES`
+ 
+-compile: conf-cc
+-	( echo '#!/bin/sh'; \
++compile: conf-cc conf-bgincs
++	( bgincs=`head -n 1 conf-bgincs`; \
++	  echo '#!/bin/sh'; \
+ 	  echo 'source=$$1; shift'; \
+ 	  echo 'base=`echo "$$source" | sed -e s:\\\\.c$$::`'; \
+-	  echo exec `head -n 1 conf-cc` -I.  '-o $${base}.o -c $$source $${1+"$$@"}'; \
++	  echo exec `head -n 1 conf-cc` -I. "-I'$${bgincs}'" '-o $${base}.o -c $$source $${1+"$$@"}'; \
+ 	) >compile
+ 	chmod 755 compile
+ 
+@@ -33,10 +34,11 @@ install: INSTHIER conf-bin conf-man
+ 
+ libraries: 
+ 
+-load: conf-ld
+-	( echo '#!/bin/sh';\
++load: conf-ld conf-bglibs
++	( bglibs=`head -n 1 conf-bglibs`; \
++	  echo '#!/bin/sh';\
+ 	  echo 'main="$$1"; shift';\
+-	  echo exec `head -n 1 conf-ld` -L. '-o "$$main" "$$main.o" $${1+"$$@"}'; \
++	  echo exec `head -n 1 conf-ld` -L. "-L'$${bglibs}'" "-Wl,-R'$${bglibs}'" '-o "$$main" "$$main.o" $${1+"$$@"}'; \
+ 	) >load
+ 	chmod 755 load
+ 
