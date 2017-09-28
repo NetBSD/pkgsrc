@@ -1,12 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2017/01/22 23:44:47 gdt Exp $
+# $NetBSD: Makefile,v 1.30 2017/09/28 00:24:41 gdt Exp $
 
-# Do not update to 3.6, because there is serious ABI breakage which
-# prevents osm2pgsql from working, and may well cause other programs
-# to have issues.  osm2pgsql plans to stop using geos, and it seems
-# better to have slightly old geos in pkgsrc then to have a bunch of
-# broken other programs.  Please email me if you have a problem with
-# this.  -- gdt, 20170122
-DISTNAME=	geos-3.5.1
+DISTNAME=	geos-3.6.2
 CATEGORIES=	geography
 MASTER_SITES=	http://download.osgeo.org/geos/
 EXTRACT_SUFX=	.tar.bz2
@@ -22,10 +16,10 @@ EXTRACT_SUFX=	.tar.bz2
 # geos shlib name changes.  However, people on the geos list dispute
 # this characterization.
 
-# The following packages either incorrectly (from the geos
-# READMEviewpoint) or suboptimally (from some comments ont he list)
-# link directly against -lgeos and should be revbumped on every update
-# (and perhaps fixed not to use -lgeos):
+# The following packages either incorrectly (from the geos README
+# viewpoint) or suboptimally (from some comments on the list) link
+# directly against -lgeos and should be revbumped on every update (and
+# perhaps fixed not to use -lgeos):
 #   geography/gdal-lib
 #   geoggraph/osm2pgsql
 #     https://github.com/openstreetmap/osm2pgsql/issues/634

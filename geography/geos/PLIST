@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2015/09/06 19:45:44 gdt Exp $
+@comment $NetBSD: PLIST,v 1.14 2017/09/28 00:24:41 gdt Exp $
 bin/geos-config
 include/geos.h
 include/geos/algorithm/Angle.h
@@ -163,8 +163,11 @@ include/geos/index/quadtree/Root.h
 include/geos/index/strtree/AbstractNode.h
 include/geos/index/strtree/AbstractSTRtree.h
 include/geos/index/strtree/Boundable.h
+include/geos/index/strtree/BoundablePair.h
+include/geos/index/strtree/GeometryItemDistance.h
 include/geos/index/strtree/Interval.h
 include/geos/index/strtree/ItemBoundable.h
+include/geos/index/strtree/ItemDistance.h
 include/geos/index/strtree/SIRtree.h
 include/geos/index/strtree/STRtree.h
 include/geos/index/sweepline/SweepLineEvent.h
@@ -261,6 +264,8 @@ include/geos/operation/buffer/SubgraphDepthLocater.h
 include/geos/operation/distance/ConnectedElementLocationFilter.h
 include/geos/operation/distance/ConnectedElementPointFilter.h
 include/geos/operation/distance/DistanceOp.h
+include/geos/operation/distance/FacetSequence.h
+include/geos/operation/distance/FacetSequenceTreeBuilder.h
 include/geos/operation/distance/GeometryLocation.h
 include/geos/operation/intersection/Rectangle.h
 include/geos/operation/intersection/RectangleIntersection.h
@@ -336,6 +341,7 @@ include/geos/precision/CommonBitsOp.h
 include/geos/precision/CommonBitsRemover.h
 include/geos/precision/EnhancedPrecisionOp.h
 include/geos/precision/GeometryPrecisionReducer.h
+include/geos/precision/MinimumClearance.h
 include/geos/precision/PrecisionReducerCoordinateOperation.h
 include/geos/precision/SimpleGeometryPrecisionReducer.h
 include/geos/profiler.h
