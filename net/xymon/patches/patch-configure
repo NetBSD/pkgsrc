@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.4 2016/02/16 05:58:56 spz Exp $
+$NetBSD: patch-configure,v 1.5 2017/09/28 10:40:35 spz Exp $
 
 Make sure the toplevel configure script exits on failure.
 
@@ -18,4 +18,3 @@ Make sure the toplevel configure script exits on failure.
  	;;
  
    "--help")
-
