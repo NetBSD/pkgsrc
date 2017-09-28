@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/03 15:34:22 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/09/28 16:21:21 adam Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/cjson.so
