@@ -1,0 +1,18 @@
+$NetBSD: patch-build_Makefile.Darwin,v 1.1 2017/09/28 10:40:35 spz Exp $
+
+make sure hardening flags can be inherited
+
+--- build/Makefile.Darwin.orig	2012-08-01 08:48:15.000000000 +0000
++++ build/Makefile.Darwin
+@@ -10,9 +10,9 @@ NETLIBS =
+ CC = gcc
+ GCCVER := $(shell gcc -dumpversion|cut -d. -f1)
+ ifeq ($(GCCVER),4)
+-   CFLAGS = -g -O -Wall -Wno-unused -Wno-pointer-sign -D_REENTRANT -DBIND_8_COMPAT=1 $(LFSDEF) $(OSDEF)
++   CFLAGS += -g -O -Wall -Wno-unused -Wno-pointer-sign -D_REENTRANT -DBIND_8_COMPAT=1 $(LFSDEF) $(OSDEF)
+ else
+-   CFLAGS = -g -O -Wall -Wno-unused -D_REENTRANT -DBIND_8_COMPAT=1 $(LFSDEF) $(OSDEF)
++   CFLAGS += -g -O -Wall -Wno-unused -D_REENTRANT -DBIND_8_COMPAT=1 $(LFSDEF) $(OSDEF)
+ endif
+ 
+ 
