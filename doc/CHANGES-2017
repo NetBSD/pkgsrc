@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4172 2017/09/28 09:15:46 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.4173 2017/09/28 10:44:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5922,3 +5922,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated geography/py-country to 17.9.23 [adam 2017-09-28]
 	Updated devel/p5-Mac-SystemDirectory to 0.10 [tron 2017-09-28]
 	Updated devel/ocaml-re to 1.7.1nb2 [jaapb 2017-09-28]
+	Updated textproc/py-alabaster to 0.7.10 [adam 2017-09-28]
+	Updated security/py-m2crypto to 0.26.4 [adam 2017-09-28]
