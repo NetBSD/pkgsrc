@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2017/09/28 07:35:35 leot Exp $
+# $NetBSD: Makefile,v 1.47 2017/09/28 07:56:41 leot Exp $
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
 CATEGORIES=		# empty
@@ -108,7 +108,7 @@ regen-doc: build
 	cd .. && cvs update pkgsrc.*
 	${MAKE} ${MAKEFLAGS} install-doc
 	@${STEP_MSG} "Committing the files in pkgsrc/doc"
-	cd .. && cvs commit -m "regen" pkgsrc.*
+	cd .. && cvs commit -m "doc/pkgsrc.*: regen" pkgsrc.*
 
 regen-htdocs: build
 	@${STEP_MSG} "Updating the files in htdocs"
