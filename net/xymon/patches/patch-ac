@@ -1,9 +1,104 @@
-$NetBSD: patch-ac,v 1.5 2014/02/27 20:22:41 spz Exp $
+$NetBSD: patch-ac,v 1.6 2017/09/28 10:40:35 spz Exp $
 
 pkgsrc uses rc.d files to stop/start, don't copy that xymon.sh
+allow hardening
 
---- xymond/Makefile.orig	2014-01-19 15:23:42.000000000 +0000
+--- xymond/Makefile.orig	2015-03-13 06:15:38.000000000 +0000
 +++ xymond/Makefile
+@@ -41,25 +41,25 @@ all: $(PROGRAMS) cfgfiles
+ client: $(CLIENTPROGRAMS)
+ 
+ xymond: $(XYMONDOBJS) $(XYMONCOMMLIB) $(XYMONTIMELIB)
+-	$(CC) $(LDFLAGS) -o $@ $(RPATHOPT) $(XYMONDOBJS) $(XYMONCOMMLIBS) $(XYMONTIMELIBS) $(PCRELIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(XYMONDOBJS) $(XYMONCOMMLIBS) $(XYMONTIMELIBS) $(PCRELIBS)
+ 
+ xymond_channel: $(CHANNELOBJS) $(XYMONCOMMLIB) $(XYMONTIMELIB)
+-	$(CC) $(LDFLAGS) -o $@ $(RPATHOPT) $(CHANNELOBJS) $(XYMONCOMMLIBS) $(XYMONTIMELIBS) $(PCRELIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(CHANNELOBJS) $(XYMONCOMMLIBS) $(XYMONTIMELIBS) $(PCRELIBS)
+ 
+ xymond_locator: $(LOCATOROBJS) $(XYMONCOMMLIB)
+-	$(CC) $(LDFLAGS) -o $@ $(RPATHOPT) $(LOCATOROBJS) $(XYMONCOMMLIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(LOCATOROBJS) $(XYMONCOMMLIBS)
+ 
+ xymond_filestore: $(FILESTOREOBJS) $(XYMONCOMMLIB) $(XYMONTIMELIB)
+-	$(CC) $(LDFLAGS) -o $@ $(RPATHOPT) $(FILESTOREOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS) $(PCRELIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(FILESTOREOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS) $(PCRELIBS)
+ 
+ xymond_history: $(HISTORYOBJS) $(XYMONCOMMLIB) $(XYMONTIMELIB)
+-	$(CC) $(LDFLAGS) -o $@ $(RPATHOPT) $(HISTORYOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(HISTORYOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS)
+ 
+ xymond_alert: $(ALERTOBJS) $(XYMONCOMMLIB)
+-	$(CC) $(LDFLAGS) -o $@ $(RPATHOPT) $(ALERTOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS) $(PCRELIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(ALERTOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS) $(PCRELIBS)
+ 
+ xymond_rrd: $(RRDOBJS) $(XYMONCOMMLIB)
+-	$(CC) $(LDFLAGS) -o $@ $(RPATHOPT) $(RRDOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS) $(RRDLIBS) $(PCRELIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(RRDOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS) $(RRDLIBS) $(PCRELIBS)
+ 
+ xymond.o: xymond.c
+ 	$(CC) $(CFLAGS) $(SSLFLAGS) -c -o $@ xymond.c
+@@ -74,22 +74,22 @@ xymond_capture.o: xymond_capture.c
+ 	$(CC) $(CFLAGS) $(PCREINCDIR) -c -o $@ xymond_capture.c
+ 
+ xymond_sample: $(SAMPLEOBJS) $(XYMONCOMMLIB)
+-	$(CC) $(LDFLAGS) -o $@ $(RPATHOPT) $(SAMPLEOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(SAMPLEOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS)
+ 
+ xymond_capture: $(CAPTUREOBJS) $(XYMONCOMMLIB)
+-	$(CC) $(LDFLAGS) -o $@ $(RPATHOPT) $(CAPTUREOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS) $(PCRELIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(CAPTUREOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS) $(PCRELIBS)
+ 
+ xymond_distribute: $(DISTRIBUTEOBJS) $(XYMONCOMMLIB)
+-	$(CC) $(LDFLAGS) -o $@ $(RPATHOPT) $(DISTRIBUTEOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS) $(PCRELIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(DISTRIBUTEOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS) $(PCRELIBS)
+ 
+ xymond_hostdata: $(HOSTDATAOBJS) $(XYMONCOMMLIB)
+-	$(CC) $(LDFLAGS) -o $@ $(RPATHOPT) $(HOSTDATAOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(HOSTDATAOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS)
+ 
+ xymond_client: $(CLIENTOBJS) $(XYMONCOMMLIB)
+-	$(CC) $(LDFLAGS) -o $@ $(RPATHOPT) $(CLIENTOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS) $(PCRELIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(CLIENTOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS) $(PCRELIBS)
+ 
+ ../client/xymond_client: $(CLIENTOBJS) ../lib/libxymonclientcomm.a  ../lib/libxymontime.a ../lib/libxymonclient.a
+-	$(CC) -o $@ $(RPATHOPT) $(CLIENTOBJS) ../lib/libxymonclientcomm.a  ../lib/libxymontime.a ../lib/libxymonclient.a $(PCRELIBS) $(NETLIBS) $(LIBRTDEF)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(CLIENTOBJS) ../lib/libxymonclientcomm.a  ../lib/libxymontime.a ../lib/libxymonclient.a $(PCRELIBS) $(NETLIBS) $(LIBRTDEF)
+ 
+ xymond_client.o: xymond_client.c client/*.c
+ 	$(CC) $(CFLAGS) -c -o $@ xymond_client.c
+@@ -98,25 +98,25 @@ combostatus.o: combostatus.c
+ 	$(CC) $(CFLAGS) $(PCREINCDIR) -c -o $@ $<
+ 
+ combostatus: $(COMBOTESTOBJS) $(XYMONCOMMLIB) $(XYMONTIMELIB)
+-	$(CC) $(LDFLAGS) -o $@ $(RPATHOPT) $(COMBOTESTOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS) $(PCRELIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(COMBOTESTOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS) $(PCRELIBS)
+ 
+ xymon-mailack.o: xymon-mailack.c
+ 	$(CC) $(CFLAGS) $(PCREINCDIR) -c -o $@ xymon-mailack.c
+ 
+ xymon-mailack: $(MAILACKOBJS) $(XYMONCOMMLIB)
+-	$(CC) $(CFLAGS) -o $@ $(RPATHOPT) $(MAILACKOBJS) $(XYMONCOMMLIBS) $(PCRELIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(MAILACKOBJS) $(XYMONCOMMLIBS) $(PCRELIBS)
+ 
+ trimhistory: $(TRIMHISTOBJS) $(XYMONCOMMLIB)
+-	$(CC) $(CFLAGS) -o $@ $(RPATHOPT) $(TRIMHISTOBJS) $(XYMONCOMMLIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(TRIMHISTOBJS) $(XYMONCOMMLIBS)
+ 
+ xymonfetch: $(FETCHOBJS) $(XYMONCOMMLIB) $(XYMONTIMELIB)
+-	$(CC) $(CFLAGS) -o $@ $(RPATHOPT) $(FETCHOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(FETCHOBJS) $(XYMONTIMELIBS) $(XYMONCOMMLIBS)
+ 
+ convertnk: $(CONVERTNKOBJS) $(XYMONCOMMLIB)
+-	$(CC) $(CFLAGS) -o $@ $(RPATHOPT) $(CONVERTNKOBJS) $(XYMONCOMMLIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(CONVERTNKOBJS) $(XYMONCOMMLIBS)
+ 
+ rrdcachectl: $(RRDCACHECTLOBJS) $(XYMONCOMMLIB)
+-	$(CC) $(CFLAGS) -o $@ $(RPATHOPT) $(RRDCACHECTLOBJS) $(XYMONCOMMLIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(RPATHOPT) $(RRDCACHECTLOBJS) $(XYMONCOMMLIBS)
+ 
+ xymon.sh: xymon.sh.DIST
+ 	cat $< | sed -e 's!@XYMONHOME@!$(XYMONHOME)!g' | sed -e 's!@XYMONLOGDIR@!$(XYMONLOGDIR)!g' | sed -e 's!@XYMONUSER@!$(XYMONUSER)!g' | sed -e 's!@RUNTIMEDEFS@!$(RUNTIMEDEFS)!g' >$@
 @@ -187,7 +187,9 @@ install-cfg:
  	cd etcfiles; ../../build/merge-sects graphs.cfg $(INSTALLROOT)$(INSTALLETCDIR)/graphs.cfg
  	cd etcfiles; ../../build/merge-lines columndoc.csv $(INSTALLROOT)$(INSTALLETCDIR)/columndoc.csv
