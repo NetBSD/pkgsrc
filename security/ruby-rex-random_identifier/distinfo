@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/29 16:51:00 minskim Exp $
+
+SHA1 (rex-random_identifier-0.1.4.gem) = 0618f0aa569cc8a03d4e17c3185eee4419169f2c
+RMD160 (rex-random_identifier-0.1.4.gem) = 569a87fe5a01c0aa020a01019dc69d0f8c9f90d9
+SHA512 (rex-random_identifier-0.1.4.gem) = 8e302a511a0540f826ddfa6e51c5b29da0c42ef6bd3dc433d6624688efba245c1df3903dbf37aacaecdd39b53f721e3d6b4fa8247f8cd31e7679ff96293094f7
+Size (rex-random_identifier-0.1.4.gem) = 16896 bytes
