@@ -1,0 +1,8 @@
+This module converts a Python dictionary or other native data type into a
+valid XML string.
+
+Supported item are int, float, long, decimal.Decimal, bool, str, unicode,
+datetime, None and other number-like objects. Supported collection are
+list, set, tuple and dict, as well as iterable and dict-like objects.
+Items with a datetime type are converted to ISO format strings. Items
+with a None type become empty XML elements.
