@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/29 13:49:25 joerg Exp $
+${PYSITELIB}/_regex.so
+${PYSITELIB}/_regex_core.py
+${PYSITELIB}/_regex_core.pyc
+${PYSITELIB}/_regex_core.pyo
+${PYSITELIB}/regex-2017.7.28-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/regex-2017.7.28-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/regex-2017.7.28-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/regex-2017.7.28-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/regex.py
+${PYSITELIB}/regex.pyc
+${PYSITELIB}/regex.pyo
+${PYSITELIB}/test_regex.py
+${PYSITELIB}/test_regex.pyc
+${PYSITELIB}/test_regex.pyo
