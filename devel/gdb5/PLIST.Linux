@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2015/03/15 14:31:31 bsiegert Exp $
-bin/gdbserver
-man/man1/gdbserver.1
