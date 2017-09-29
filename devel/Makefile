@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2536 2017/09/29 21:15:41 joerg Exp $
+# $NetBSD: Makefile,v 1.2537 2017/09/29 21:17:40 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -2094,6 +2094,7 @@ SUBDIR+=	py-stsci.distutils
 SUBDIR+=	py-subprocess32
 SUBDIR+=	py-subversion
 SUBDIR+=	py-subvertpy
+SUBDIR+=	py-sure
 SUBDIR+=	py-sysctl
 SUBDIR+=	py-tabular
 SUBDIR+=	py-termcolor
