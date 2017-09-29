@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/29 11:04:19 adam Exp $
+
+SHA1 (jsonpickle-0.9.5.tar.gz) = 0af23f64d24d8e163fc3610e3778956cc36c4b47
+RMD160 (jsonpickle-0.9.5.tar.gz) = fcc7cc4fb7c6fe9d929358b8ec0e31db7ddfcdb0
+SHA512 (jsonpickle-0.9.5.tar.gz) = 4fd3a61a08c149ccce578c78c4f3117546f58819a1015f9d8fc794c84af9b882e77905ca42a12b1f9716e2652fc4e959a85d3aee3b937be687bd5a9abe8859e2
+Size (jsonpickle-0.9.5.tar.gz) = 65748 bytes
