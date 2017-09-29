@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2535 2017/09/29 21:12:54 joerg Exp $
+# $NetBSD: Makefile,v 1.2536 2017/09/29 21:15:41 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -1974,6 +1974,7 @@ SUBDIR+=	py-mako
 SUBDIR+=	py-mando
 SUBDIR+=	py-mccabe
 SUBDIR+=	py-memcached
+SUBDIR+=	py-memory-profiler
 SUBDIR+=	py-mercurial
 SUBDIR+=	py-meson
 SUBDIR+=	py-minimock
