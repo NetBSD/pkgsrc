@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/29 13:27:30 wiz Exp $
+
+SHA1 (Alien-Base-ModuleBuild-0.046.tar.gz) = 13611dcd30412e9e09cfa271981f7a5ae74da091
+RMD160 (Alien-Base-ModuleBuild-0.046.tar.gz) = 4ac1dc0f12ef0196b25d289faf7a65320375dad1
+SHA512 (Alien-Base-ModuleBuild-0.046.tar.gz) = 41982421de8873662ae8552bdb8e00a79787e521522ec4074fb21c879dfd3e89798cfae7e38564c3f85d28e10b8361b201a7eb113c845ef934c913a455bf527b
+Size (Alien-Base-ModuleBuild-0.046.tar.gz) = 66588 bytes
