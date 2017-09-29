@@ -1,0 +1,2 @@
+py-twrequests is a Small add-on for the python requests http library. It
+uses twisted’s ThreadPool, so that requests’ API returns deferred.
