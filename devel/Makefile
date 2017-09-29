@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2525 2017/09/29 06:18:30 alnsn Exp $
+# $NetBSD: Makefile,v 1.2526 2017/09/29 13:19:55 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1498,6 +1498,7 @@ SUBDIR+=	p5-Set-Array
 SUBDIR+=	p5-Set-IntSpan
 SUBDIR+=	p5-Set-Object
 SUBDIR+=	p5-Set-Scalar
+SUBDIR+=	p5-Shell-Guess
 SUBDIR+=	p5-Shell-Perl
 SUBDIR+=	p5-ShipIt
 SUBDIR+=	p5-Signal-Mask
