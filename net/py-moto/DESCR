@@ -1,0 +1,2 @@
+A library that allows your python tests to easily mock out the boto
+library.
