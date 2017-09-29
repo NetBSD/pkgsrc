@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.725 2017/09/26 11:24:22 wiz Exp $
+# $NetBSD: Makefile,v 1.726 2017/09/29 13:17:47 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -423,6 +423,7 @@ SUBDIR+=	p5-Sys-Utmp
 SUBDIR+=	p5-UPS-Nut
 SUBDIR+=	p5-Unburden-Home-Dir
 SUBDIR+=	p5-Unix-ConfigFile
+SUBDIR+=	p5-Unix-Process
 SUBDIR+=	p5-Unix-Statgrab
 SUBDIR+=	p5-Unix-Syslog
 SUBDIR+=	p5-collectd
