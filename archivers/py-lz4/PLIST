@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/29 21:36:23 joerg Exp $
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/lz4/__init__.py
+${PYSITELIB}/lz4/__init__.pyc
+${PYSITELIB}/lz4/__init__.pyo
+${PYSITELIB}/lz4/_version.so
+${PYSITELIB}/lz4/block/__init__.py
+${PYSITELIB}/lz4/block/__init__.pyc
+${PYSITELIB}/lz4/block/__init__.pyo
+${PYSITELIB}/lz4/block/_block.so
+${PYSITELIB}/lz4/deprecated.py
+${PYSITELIB}/lz4/deprecated.pyc
+${PYSITELIB}/lz4/deprecated.pyo
+${PYSITELIB}/lz4/frame/__init__.py
+${PYSITELIB}/lz4/frame/__init__.pyc
+${PYSITELIB}/lz4/frame/__init__.pyo
+${PYSITELIB}/lz4/frame/_frame.so
+${PYSITELIB}/lz4/lz4version.py
+${PYSITELIB}/lz4/lz4version.pyc
+${PYSITELIB}/lz4/lz4version.pyo
+${PYSITELIB}/lz4/version.py
+${PYSITELIB}/lz4/version.pyc
+${PYSITELIB}/lz4/version.pyo
