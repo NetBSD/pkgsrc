@@ -1,0 +1,3 @@
+This module provides a pure-python version of the LIGOTimeGPS class,
+used to represent GPS times (number of seconds elapsed since GPS
+epoch) with nanoseconds precision.
