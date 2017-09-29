@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2017/09/29 21:22:07 joerg Exp $
+# $NetBSD: Makefile,v 1.171 2017/09/29 21:23:11 joerg Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -134,6 +134,7 @@ SUBDIR+=	py-iso8601
 SUBDIR+=	py-isodate
 SUBDIR+=	py-jdcal
 SUBDIR+=	py-ligotimegps
+SUBDIR+=	py-maya
 SUBDIR+=	py-mxDateTime
 SUBDIR+=	py-parsedatetime
 SUBDIR+=	py-pendulum
