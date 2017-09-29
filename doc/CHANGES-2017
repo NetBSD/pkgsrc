@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4184 2017/09/29 06:26:05 alnsn Exp $
+$NetBSD: CHANGES-2017,v 1.4185 2017/09/29 06:37:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5938,3 +5938,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/go-siphash version 1.0.0 [alnsn 2017-09-29]
 	Added devel/go-goptlib version 0.7 [alnsn 2017-09-29]
 	Added net/obfs4proxy version 0.0.7 [alnsn 2017-09-29]
+	Updated net/lftp to 4.8.2 [adam 2017-09-29]
+	Updated security/py-asn1crypto to 0.23.0 [adam 2017-09-29]
