@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2016/08/01 10:55:52 wiz Exp $
+$NetBSD: distinfo,v 1.3 2017/09/29 07:01:48 adam Exp $
 
-SHA1 (click-threading-0.4.0.tar.gz) = ad82183bbfc1ee66a9fc4793af4231d2d4f11397
-RMD160 (click-threading-0.4.0.tar.gz) = 64330fa496069235d32597814e279ea0e5b9c3d1
-SHA512 (click-threading-0.4.0.tar.gz) = fae52136d0c333fba2c0166c0e5e18db461dc3fa1b046d258cad324d7dc95c35320e7cd5ca37776d96be453f8af17af5d9cf136c5f65ed9eae5d6d1e79fd0638
-Size (click-threading-0.4.0.tar.gz) = 3476 bytes
+SHA1 (click-threading-0.4.4.tar.gz) = fa563f90d8cb20105cb162db54def2afab974540
+RMD160 (click-threading-0.4.4.tar.gz) = cae114bb173413748821a50a7c6e203af316cc63
+SHA512 (click-threading-0.4.4.tar.gz) = 7fd17ad04065160a3278eab4e2c070424d9d69de145e88a8dc2ad9a3064162d91ad5c46b8d30e19640b2c4b420c0bb801ff6fd6dd9985f34ce2ede35cf8373f1
+Size (click-threading-0.4.4.tar.gz) = 9945 bytes
