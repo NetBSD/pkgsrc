@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4199 2017/09/29 13:31:55 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4200 2017/09/29 14:12:26 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5962,3 +5962,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/p5-Shell-Config-Generate version 0.29 [wiz 2017-09-29]
 	Added devel/p5-Alien-Base-ModuleBuild version 0.046 [wiz 2017-09-29]
 	Updated devel/p5-Alien-Build to 1.18 [wiz 2017-09-29]
+	Removed devel/gdb5 [kamil 2017-09-29]
+	Removed devel/gdb6 [kamil 2017-09-29]
