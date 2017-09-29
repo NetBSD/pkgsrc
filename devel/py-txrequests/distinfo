@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2017/09/29 14:31:50 joerg Exp $
+
+SHA1 (txrequests-0.9.5.tar.gz) = cdcb38df0afe2cb0a77ad449b9e1409ab6887a34
+RMD160 (txrequests-0.9.5.tar.gz) = 03c89b5505db545599a064f3cbf40c11e19c172e
+SHA512 (txrequests-0.9.5.tar.gz) = e9f527eb2fed0038d7e68b5bd74d0a0e58a1d7cc3e181068423dce871ff10b2d5f1ae92e44248e75b4ad8d44b32366ee9eb6cf8fdd114a562baa6b35fab6eb7b
+Size (txrequests-0.9.5.tar.gz) = 5265 bytes
+SHA1 (patch-requests_____init____.py) = 733037737da7f012030e89091d1b3ca28c3d7657
+SHA1 (patch-setup.py) = 855002a41e0eee403e1938b714145cb0598b30c1
