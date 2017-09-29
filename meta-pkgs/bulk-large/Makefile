@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2017/09/26 10:27:06 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2017/09/29 12:40:27 wiz Exp $
 
-DISTNAME=	bulk-large-20170926
+DISTNAME=	bulk-large-20170929
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -68,7 +68,7 @@ BUILD_DEPENDS+=	mysql-server>=5.6:../../databases/mysql56-server
 BUILD_DEPENDS+=	postgresql93-[0-9]*:../../databases/postgresql93
 BUILD_DEPENDS+=	valgrind-[0-9]*:../../devel/valgrind
 BUILD_DEPENDS+=	abiword-[0-9]*:../../editors/abiword
-BUILD_DEPENDS+=	emacs24>=24<25:../../editors/emacs24
+BUILD_DEPENDS+=	emacs25>=25<26:../../editors/emacs25
 BUILD_DEPENDS+=	emacs-packages-[0-9]*:../../editors/emacs-packages
 BUILD_DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
 BUILD_DEPENDS+=	p5-Padre-[0-9]*:../../editors/p5-Padre

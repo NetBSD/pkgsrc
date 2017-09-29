@@ -1,7 +1,0 @@
-# $NetBSD: version.mk,v 1.8 2015/04/29 16:43:23 jperkin Exp $
-
-_EMACS_FLAVOR=	emacs
-_EMACS_REQD=	emacs24-nox11>=24.1<24.5.50
-
-_EMACS_VERSION_MAJOR=	24
-_EMACS_VERSION_MINOR=	5
