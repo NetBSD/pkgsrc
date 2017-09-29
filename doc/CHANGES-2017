@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4192 2017/09/29 11:06:57 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4193 2017/09/29 12:40:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5948,3 +5948,10 @@ Changes to the packages collection and infrastructure in 2017:
 	Added time/py-ligotimegps version 1.1 [wiz 2017-09-29]
 	Added textproc/py-jsonpickle version 0.9.5 [adam 2017-09-29]
 	Updated textproc/py-deepdiff to 3.3.0 [adam 2017-09-29]
+	Removed editors/emacs22 [wiz 2017-09-29]
+	Removed editors/emacs22-nox11 [wiz 2017-09-29]
+	Removed editors/emacs23 [wiz 2017-09-29]
+	Removed editors/emacs23-nox11 [wiz 2017-09-29]
+	Removed editors/emacs24 [wiz 2017-09-29]
+	Removed editors/emacs24-nox11 [wiz 2017-09-29]
+	Removed inputmethod/ibus-el [wiz 2017-09-29]

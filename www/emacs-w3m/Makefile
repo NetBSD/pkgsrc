@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2016/12/12 13:53:10 hauke Exp $
+# $NetBSD: Makefile,v 1.33 2017/09/29 12:40:28 wiz Exp $
 
 DISTNAME=	emacs-w3m-1.4.4
 PKGREVISION=	4
@@ -31,7 +31,7 @@ SUBST_SED.fix-icondir=		-e 's|etc/images/w3m|etc/w3m|g'
 SUBST_SED.fix-icondir+=		-e 's|images/w3m|w3m|g'
 
 EMACS_BUILDLINK=# defined
-EMACS_VERSIONS_ACCEPTED=	emacs22 emacs22nox emacs21 emacs21nox emacs20 \
+EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 \
 				xemacs215 xemacs215nox xemacs214 xemacs214nox
 
 .include "../../editors/emacs/modules.mk"

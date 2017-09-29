@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/04/06 20:27:22 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.24 2017/09/29 12:40:27 wiz Exp $
 
 DISTNAME=	eieio-0.17
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -12,7 +11,7 @@ HOMEPAGE=	http://cedet.sourceforge.net/eieio.shtml
 COMMENT=	Enhanced Integration of Emacs Interpreted Objects
 
 EMACS_VERSIONS_ACCEPTED= \
-	emacs20 emacs21 emacs21nox emacs22 emacs22nox \
+	emacs20 emacs21 emacs21nox 
 	xemacs214 xemacs214nox xemacs215 xemacs215nox
 
 EMACS_MODULES+=	base
