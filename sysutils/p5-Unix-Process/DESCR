@@ -1,0 +1,5 @@
+Perl extension to get pid info from (/bin/ps).
+
+All fields from the ps command can be fetched by calling a function
+of their name. If the pid is not given as an argument to the function,
+$$ (cur pid) is assumed.
