@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/01/12 00:52:25 rodent Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/09/29 12:34:06 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -75,6 +75,9 @@ ${PYSITELIB}/phonenumbers/data/alt_format_381.pyo
 ${PYSITELIB}/phonenumbers/data/alt_format_385.py
 ${PYSITELIB}/phonenumbers/data/alt_format_385.pyc
 ${PYSITELIB}/phonenumbers/data/alt_format_385.pyo
+${PYSITELIB}/phonenumbers/data/alt_format_39.py
+${PYSITELIB}/phonenumbers/data/alt_format_39.pyc
+${PYSITELIB}/phonenumbers/data/alt_format_39.pyo
 ${PYSITELIB}/phonenumbers/data/alt_format_43.py
 ${PYSITELIB}/phonenumbers/data/alt_format_43.pyc
 ${PYSITELIB}/phonenumbers/data/alt_format_43.pyo
@@ -90,6 +93,9 @@ ${PYSITELIB}/phonenumbers/data/alt_format_505.pyo
 ${PYSITELIB}/phonenumbers/data/alt_format_506.py
 ${PYSITELIB}/phonenumbers/data/alt_format_506.pyc
 ${PYSITELIB}/phonenumbers/data/alt_format_506.pyo
+${PYSITELIB}/phonenumbers/data/alt_format_52.py
+${PYSITELIB}/phonenumbers/data/alt_format_52.pyc
+${PYSITELIB}/phonenumbers/data/alt_format_52.pyo
 ${PYSITELIB}/phonenumbers/data/alt_format_54.py
 ${PYSITELIB}/phonenumbers/data/alt_format_54.pyc
 ${PYSITELIB}/phonenumbers/data/alt_format_54.pyo
@@ -111,6 +117,9 @@ ${PYSITELIB}/phonenumbers/data/alt_format_62.pyo
 ${PYSITELIB}/phonenumbers/data/alt_format_63.py
 ${PYSITELIB}/phonenumbers/data/alt_format_63.pyc
 ${PYSITELIB}/phonenumbers/data/alt_format_63.pyo
+${PYSITELIB}/phonenumbers/data/alt_format_64.py
+${PYSITELIB}/phonenumbers/data/alt_format_64.pyc
+${PYSITELIB}/phonenumbers/data/alt_format_64.pyo
 ${PYSITELIB}/phonenumbers/data/alt_format_66.py
 ${PYSITELIB}/phonenumbers/data/alt_format_66.pyc
 ${PYSITELIB}/phonenumbers/data/alt_format_66.pyo
@@ -135,6 +144,9 @@ ${PYSITELIB}/phonenumbers/data/alt_format_84.pyo
 ${PYSITELIB}/phonenumbers/data/alt_format_855.py
 ${PYSITELIB}/phonenumbers/data/alt_format_855.pyc
 ${PYSITELIB}/phonenumbers/data/alt_format_855.pyo
+${PYSITELIB}/phonenumbers/data/alt_format_856.py
+${PYSITELIB}/phonenumbers/data/alt_format_856.pyc
+${PYSITELIB}/phonenumbers/data/alt_format_856.pyo
 ${PYSITELIB}/phonenumbers/data/alt_format_90.py
 ${PYSITELIB}/phonenumbers/data/alt_format_90.pyc
 ${PYSITELIB}/phonenumbers/data/alt_format_90.pyo
@@ -1545,6 +1557,9 @@ ${PYSITELIB}/phonenumbers/shortdata/region_PM.pyo
 ${PYSITELIB}/phonenumbers/shortdata/region_PR.py
 ${PYSITELIB}/phonenumbers/shortdata/region_PR.pyc
 ${PYSITELIB}/phonenumbers/shortdata/region_PR.pyo
+${PYSITELIB}/phonenumbers/shortdata/region_PS.py
+${PYSITELIB}/phonenumbers/shortdata/region_PS.pyc
+${PYSITELIB}/phonenumbers/shortdata/region_PS.pyo
 ${PYSITELIB}/phonenumbers/shortdata/region_PT.py
 ${PYSITELIB}/phonenumbers/shortdata/region_PT.pyc
 ${PYSITELIB}/phonenumbers/shortdata/region_PT.pyo
