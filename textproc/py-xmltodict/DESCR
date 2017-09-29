@@ -1,0 +1,2 @@
+xmltodict is a Python module that makes working with XML feel like you
+are working with JSON. It has optional namespace and streaming support.
