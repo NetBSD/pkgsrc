@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/29 21:31:20 joerg Exp $
+
+SHA1 (moto-1.1.10.tar.gz) = 08996831604ffa1679c2fdc99d3102a5e1599322
+RMD160 (moto-1.1.10.tar.gz) = 75cc4fb68b8b15a69fc6c55a2776b2e3c747cb03
+SHA512 (moto-1.1.10.tar.gz) = 3a84da75d523c447c857edccf1b79d0d1c27f89f8d57ba4a24c235ca1793ba4bff8bf894d424cda23aea066b5df489b2c4efb49bf4c6dbf39a8e89dd5dde38cb
+Size (moto-1.1.10.tar.gz) = 778497 bytes
