@@ -1,0 +1,9 @@
+py-lz4 provides Python bindings for the LZ4 compression library by Yann
+Collet.
+
+At this time the project contains bindings for the LZ4 block format,
+which are considered stable.
+
+Support for the LZ4 frame format is a work-in-progress and available as a
+technology preview. A future relase will implement support for the LZ4
+stream format.
