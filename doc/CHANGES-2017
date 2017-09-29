@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4200 2017/09/29 14:12:26 kamil Exp $
+$NetBSD: CHANGES-2017,v 1.4201 2017/09/29 14:14:32 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5606,7 +5606,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/openssl to 1.0.2knb1 [tez 2017-09-22]
 	Updated lang/perl5 to 5.26.0nb3 [maya 2017-09-23]
 	Updated mail/mutt to 1.9.1 [tron 2017-09-24]
-	Updated chat/weechat to 1.9.1 [may 2017-09-25]
+	Updated chat/weechat to 1.9.1 [maya 2017-09-25]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2017Q3 branch [gdt 2017-09-25]
 	Updated devel/cmake to 3.9.3 [adam 2017-09-26]
 	Updated lang/gcc7 to 7.2.0 [maya 2017-09-26]
