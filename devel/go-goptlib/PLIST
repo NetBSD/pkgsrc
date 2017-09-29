@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2017/09/29 06:17:06 alnsn Exp $
+bin/dummy-client
+bin/dummy-server
+gopkg/pkg/${GO_PLATFORM}/git.torproject.org/pluggable-transports/goptlib.git.a
+gopkg/src/git.torproject.org/pluggable-transports/goptlib.git/COPYING
+gopkg/src/git.torproject.org/pluggable-transports/goptlib.git/README
+gopkg/src/git.torproject.org/pluggable-transports/goptlib.git/args.go
+gopkg/src/git.torproject.org/pluggable-transports/goptlib.git/args_test.go
+gopkg/src/git.torproject.org/pluggable-transports/goptlib.git/examples/dummy-client/dummy-client.go
+gopkg/src/git.torproject.org/pluggable-transports/goptlib.git/examples/dummy-server/dummy-server.go
+gopkg/src/git.torproject.org/pluggable-transports/goptlib.git/proxy_test.go
+gopkg/src/git.torproject.org/pluggable-transports/goptlib.git/pt.go
+gopkg/src/git.torproject.org/pluggable-transports/goptlib.git/pt_test.go
+gopkg/src/git.torproject.org/pluggable-transports/goptlib.git/socks.go
+gopkg/src/git.torproject.org/pluggable-transports/goptlib.git/socks_test.go
