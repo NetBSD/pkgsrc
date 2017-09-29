@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4204 2017/09/29 16:26:48 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.4205 2017/09/29 16:44:16 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5979,3 +5979,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-whitenoise version 4.0b3 [joerg 2017-09-29]
 	Added security/ruby-metasploit-payloads version 1.3.9 [minskim 2017-09-29]
 	Added security/ruby-rex-text version 0.2.15 [minskim 2017-09-29]
+	Updated geography/py-geojson to 2.3.0 [kleink 2017-09-29]
