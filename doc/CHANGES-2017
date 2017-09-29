@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4206 2017/09/29 16:53:12 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.4207 2017/09/29 17:16:34 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5981,3 +5981,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/ruby-rex-text version 0.2.15 [minskim 2017-09-29]
 	Updated geography/py-geojson to 2.3.0 [kleink 2017-09-29]
 	Added security/ruby-rex-random_identifier version 0.1.4 [minskim 2017-09-29]
+	Added security/ruby-rex-powershell version 0.1.72 [minskim 2017-09-29]
