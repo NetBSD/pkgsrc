@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4194 2017/09/29 12:41:31 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4195 2017/09/29 13:17:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5957,3 +5957,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed inputmethod/ibus-el [wiz 2017-09-29]
 	Updated textproc/py-phonenumbers to 8.8.2 [adam 2017-09-29]
 	Updated mail/py-aiosmtpd to 1.1 [adam 2017-09-29]
+	Added sysutils/p5-Unix-Process version 1.3101 [wiz 2017-09-29]
