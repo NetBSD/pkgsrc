@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/29 21:22:51 joerg Exp $
+
+SHA1 (maya-0.3.2.tar.gz) = 3018922d9e3cbfdd6e29aade6691d438e47434a1
+RMD160 (maya-0.3.2.tar.gz) = 699be35913b552e7a8f7d2f61957d5283c450c0e
+SHA512 (maya-0.3.2.tar.gz) = bdd91aaa92d52ad0c7a2af9eca28e6076e204f6a28a57f18cbc7bf543d6fb331a9329100ebb7231206acc7ee019cd732a3b4bd26894aeb6f746b92f0288ead3d
+Size (maya-0.3.2.tar.gz) = 8715 bytes
