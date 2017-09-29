@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/29 13:47:27 joerg Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/jsonref.py
+${PYSITELIB}/jsonref.pyc
+${PYSITELIB}/jsonref.pyo
+${PYSITELIB}/proxytypes.py
+${PYSITELIB}/proxytypes.pyc
+${PYSITELIB}/proxytypes.pyo
