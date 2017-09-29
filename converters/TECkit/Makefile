@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/01/09 03:10:45 chuck Exp $
+# $NetBSD: Makefile,v 1.8 2017/09/29 13:32:01 joerg Exp $
 
 DISTNAME=	TECkit_2.5.3
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -23,6 +23,12 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	autoconf automake
 
 PKGCONFIG_OVERRIDE=	teckit.pc.in
+
+.include "../../mk/compiler.mk"
+
+.if !empty(CC_VERSION:Mgcc-[5-9]*)
+CFLAGS+=	-Wno-narrowing
+.endif
 
 pre-configure:
 		(cd ${WRKSRC}; ./autogen.sh)
