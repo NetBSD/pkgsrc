@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2017/09/29 06:17:06 alnsn Exp $
+
+SHA1 (go-goptlib/0.7.tar.gz) = 545360c0ea5c68e83332dd2fd9ed1d922dfe9886
+RMD160 (go-goptlib/0.7.tar.gz) = 80b2c27d7a40ccad3de6df949c67735c60c34af3
+SHA512 (go-goptlib/0.7.tar.gz) = 93fd8823fbc74426d50f5d4e13839202ff5b55367e81dc964d5463573453ca4d3b274a84fbc1fde8b5e10ecadf6e2c9e85eb6fbed0a991340b9b8bf7fa4a1857
+Size (go-goptlib/0.7.tar.gz) = 25827 bytes
