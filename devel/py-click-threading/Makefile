@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/08/01 10:55:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/09/29 07:01:48 adam Exp $
 
-DISTNAME=	click-threading-0.4.0
+DISTNAME=	click-threading-0.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/click-threading/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
