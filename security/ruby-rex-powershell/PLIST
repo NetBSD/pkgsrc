@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/29 17:15:41 minskim Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CODE_OF_CONDUCT.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/data/templates/to_mem_dotnet.ps1.template
+${GEM_LIBDIR}/data/templates/to_mem_old.ps1.template
+${GEM_LIBDIR}/data/templates/to_mem_pshreflection.ps1.template
+${GEM_LIBDIR}/lib/rex/powershell.rb
+${GEM_LIBDIR}/lib/rex/powershell/command.rb
+${GEM_LIBDIR}/lib/rex/powershell/function.rb
+${GEM_LIBDIR}/lib/rex/powershell/obfu.rb
+${GEM_LIBDIR}/lib/rex/powershell/output.rb
+${GEM_LIBDIR}/lib/rex/powershell/param.rb
+${GEM_LIBDIR}/lib/rex/powershell/parser.rb
+${GEM_LIBDIR}/lib/rex/powershell/payload.rb
+${GEM_LIBDIR}/lib/rex/powershell/psh_methods.rb
+${GEM_LIBDIR}/lib/rex/powershell/script.rb
+${GEM_LIBDIR}/lib/rex/powershell/templates.rb
+${GEM_LIBDIR}/lib/rex/powershell/version.rb
+${GEM_LIBDIR}/rex-powershell.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
