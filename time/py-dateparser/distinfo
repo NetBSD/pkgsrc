@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/29 21:21:52 joerg Exp $
+
+SHA1 (dateparser-0.6.0.tar.gz) = b667cd1e1185325829b22200e76891e78c0914d5
+RMD160 (dateparser-0.6.0.tar.gz) = 284ba1f95884c46d8aa2dc69d5251dc5cb7a0f82
+SHA512 (dateparser-0.6.0.tar.gz) = 3347ab8c6e961f52d06ce5f1eba8d613ca3bacf011043168a9523f9ee977834c87a497e2a28f43f592999bffdb95240935c259ddde73af373d8428eb441983d0
+Size (dateparser-0.6.0.tar.gz) = 101754 bytes
