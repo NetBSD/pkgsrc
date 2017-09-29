@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1269 2017/09/29 14:34:03 joerg Exp $
+# $NetBSD: Makefile,v 1.1270 2017/09/29 14:39:54 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -711,6 +711,7 @@ SUBDIR+=	py-jonpy
 SUBDIR+=	py-landslide
 SUBDIR+=	py-livereload
 SUBDIR+=	py-mechanize
+SUBDIR+=	py-meinheld
 SUBDIR+=	py-meld3
 SUBDIR+=	py-mezzanine
 SUBDIR+=	py-mod_wsgi
