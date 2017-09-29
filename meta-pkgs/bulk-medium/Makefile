@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2017/08/29 12:23:25 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2017/09/29 12:40:27 wiz Exp $
 
-DISTNAME=	bulk-medium-20170620
+DISTNAME=	bulk-medium-20170929
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -67,7 +67,7 @@ BUILD_DEPENDS+=	git-[0-9]*:../../devel/git
 BUILD_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 BUILD_DEPENDS+=	git-docs-[0-9]*:../../devel/git-docs
 BUILD_DEPENDS+=	mercurial-[0-9]*:../../devel/mercurial
-BUILD_DEPENDS+=	emacs24>=24<25:../../editors/emacs24
+BUILD_DEPENDS+=	emacs25>=25<26:../../editors/emacs25
 BUILD_DEPENDS+=	emacs-packages-[0-9]*:../../editors/emacs-packages
 BUILD_DEPENDS+=	nvi-[0-9]*:../../editors/nvi
 BUILD_DEPENDS+=	vim-gtk2-[0-9]*:../../editors/vim-gtk2

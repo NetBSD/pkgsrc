@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2017/08/01 14:59:02 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.32 2017/09/29 12:40:28 wiz Exp $
 
 DISTNAME=		bbdb-2.35
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -12,9 +11,7 @@ HOMEPAGE=		https://sourceforge.net/projects/bbdb/
 COMMENT=		Insidious Big Brother DataBase, a rolodex-like database Emacs program
 
 # bbdb is included in xemacs-packages
-EMACS_VERSIONS_ACCEPTED=	emacs25 \
-				emacs24 emacs24nox emacs23 emacs23nox \
-				emacs22 emacs22nox emacs21 emacs21nox \
+EMACS_VERSIONS_ACCEPTED=	emacs25 emacs21 emacs21nox
 
 CONFLICTS+=		xemacs-packages-[0-9]*
 

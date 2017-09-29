@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/02/17 19:18:09 dholland Exp $
+# $NetBSD: Makefile,v 1.12 2017/09/29 12:40:28 wiz Exp $
 
 DISTNAME=		nxml-mode-20041004
 PKGREVISION=		3
@@ -11,7 +11,7 @@ COMMENT=		Major mode for editing XML documents for emacs
 
 NO_CONFIGURE=		yes
 USE_TOOLS+=		makeinfo
-EMACS_VERSIONS_ACCEPTED=	emacs22 emacs22nox emacs21 emacs21nox
+EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox
 
 MESSAGE_SUBST+=		LISPDIR=${EMACS_LISPPREFIX:Q}
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX:Q}/nxml-mode/schema \
