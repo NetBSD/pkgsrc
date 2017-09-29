@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/09/28 12:57:20 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/09/29 21:11:40 wiz Exp $
 
 DISTNAME=	qpdf-7.0.0
 CATEGORIES=	print
@@ -17,6 +17,7 @@ USE_LANGUAGES=	c c++
 PKGCONFIG_OVERRIDE+=	libqpdf.pc.in
 REPLACE_PERL=	qpdf/fix-qdf
 
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
