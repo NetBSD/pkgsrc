@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2017/03/06 10:00:15 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.36 2017/09/29 12:40:27 wiz Exp $
 
 DISTNAME=	ddskk-16.2
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/^ddskk/skk/}
@@ -17,8 +16,7 @@ CONFLICTS=	ddskk-[0-9]*
 EMACS_MODULES+=	base leim
 EMACS_BUILDLINK=YES
 
-EMACS_VERSIONS_ACCEPTED=	emacs25 emacs25nox emacs24 emacs24nox
-EMACS_VERSIONS_ACCEPTED+=	emacs23 emacs23nox
+EMACS_VERSIONS_ACCEPTED=	emacs25 emacs25nox
 
 MAKE_FLAGS+=	EMACS=${EMACS_BIN:Q}
 MAKE_ENV=	prefix=${DESTDIR:Q}${PREFIX:Q} \
@@ -46,7 +44,7 @@ post-extract:
 
 PLIST_VARS+=	jisx0213
 
-.if ${EMACS_VERSION_MAJOR} >= 23 || ${EMACS_VERSION_MAJOR} == 21
+.if ${EMACS_VERSION_MAJOR} >= 21
 PLIST.jisx0213=	yes
 .endif
 

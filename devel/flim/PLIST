@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/07/24 06:57:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/09/29 12:40:26 wiz Exp $
 ${EMACS_INFOPREFIX}/mime-en.info
 ${EMACS_INFOPREFIX}/mime-ja.info
 ${FOR_xemacs214}${EMACS_LISPPREFIX}/flim/auto-autoloads.el
@@ -31,8 +31,6 @@ ${FOR_emacs20}${EMACS_LISPPREFIX}/flim/md4.el
 ${FOR_emacs20}${EMACS_LISPPREFIX}/flim/md4.elc
 ${FOR_emacs21}${EMACS_LISPPREFIX}/flim/md4.el
 ${FOR_emacs21}${EMACS_LISPPREFIX}/flim/md4.elc
-${FOR_emacs22}${EMACS_LISPPREFIX}/flim/md4.el
-${FOR_emacs22}${EMACS_LISPPREFIX}/flim/md4.elc
 ${FOR_emacs20}${EMACS_LISPPREFIX}/flim/md5-el.el
 ${FOR_emacs20}${EMACS_LISPPREFIX}/flim/md5-el.elc
 ${EMACS_LISPPREFIX}/flim/md5.el
@@ -71,8 +69,6 @@ ${FOR_emacs20}${EMACS_LISPPREFIX}/flim/ntlm.el
 ${FOR_emacs20}${EMACS_LISPPREFIX}/flim/ntlm.elc
 ${FOR_emacs21}${EMACS_LISPPREFIX}/flim/ntlm.el
 ${FOR_emacs21}${EMACS_LISPPREFIX}/flim/ntlm.elc
-${FOR_emacs22}${EMACS_LISPPREFIX}/flim/ntlm.el
-${FOR_emacs22}${EMACS_LISPPREFIX}/flim/ntlm.elc
 ${EMACS_LISPPREFIX}/flim/qmtp.el
 ${EMACS_LISPPREFIX}/flim/qmtp.elc
 ${EMACS_LISPPREFIX}/flim/sasl-cram.el
@@ -83,8 +79,6 @@ ${FOR_emacs20}${EMACS_LISPPREFIX}/flim/sasl-ntlm.el
 ${FOR_emacs20}${EMACS_LISPPREFIX}/flim/sasl-ntlm.elc
 ${FOR_emacs21}${EMACS_LISPPREFIX}/flim/sasl-ntlm.el
 ${FOR_emacs21}${EMACS_LISPPREFIX}/flim/sasl-ntlm.elc
-${FOR_emacs22}${EMACS_LISPPREFIX}/flim/sasl-ntlm.el
-${FOR_emacs22}${EMACS_LISPPREFIX}/flim/sasl-ntlm.elc
 ${EMACS_LISPPREFIX}/flim/sasl-scram.el
 ${EMACS_LISPPREFIX}/flim/sasl-scram.elc
 ${EMACS_LISPPREFIX}/flim/sasl.el

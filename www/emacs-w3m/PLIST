@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2016/12/12 13:53:10 hauke Exp $
+@comment $NetBSD: PLIST,v 1.14 2017/09/29 12:40:28 wiz Exp $
 ${NOTFOR_emacs}${EMACS_INFOPREFIX}/emacs-w3m-ja.info
 ${NOTFOR_emacs}${EMACS_INFOPREFIX}/emacs-w3m-ja.info-1
 ${NOTFOR_emacs}${EMACS_INFOPREFIX}/emacs-w3m-ja.info-2
@@ -30,16 +30,12 @@ ${FOR_emacs20}${EMACS_LISPPREFIX}/w3m/w3m-e20.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-e21.el
 ${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-e21.elc
 ${FOR_emacs21nox}${EMACS_LISPPREFIX}/w3m/w3m-e21.elc
-${FOR_emacs22}${EMACS_LISPPREFIX}/w3m/w3m-e21.elc
-${FOR_emacs22nox}${EMACS_LISPPREFIX}/w3m/w3m-e21.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-form.el
 ${EMACS_LISPPREFIX}/w3m/w3m-form.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-fsf.el
 ${FOR_emacs20}${EMACS_LISPPREFIX}/w3m/w3m-fsf.elc
 ${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-fsf.elc
 ${FOR_emacs21nox}${EMACS_LISPPREFIX}/w3m/w3m-fsf.elc
-${FOR_emacs22}${EMACS_LISPPREFIX}/w3m/w3m-fsf.elc
-${FOR_emacs22nox}${EMACS_LISPPREFIX}/w3m/w3m-fsf.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-hist.el
 ${EMACS_LISPPREFIX}/w3m/w3m-hist.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-image.el

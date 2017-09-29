@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/11/23 06:08:29 mef Exp $
+# $NetBSD: Makefile,v 1.26 2017/09/29 12:40:27 wiz Exp $
 
 DISTNAME=	mailcrypt-3.5.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -11,9 +11,6 @@ COMMENT=	Emacs frontend for PGP and GPG
 
 # What we would like to say here is: "we want GNU emacs"
 EMACS_VERSIONS_ACCEPTED=	emacs25 \
-				emacs24 emacs24nox \
-				emacs23 emacs23nox \
-				emacs22 emacs22nox \
 				emacs21 emacs21nox \
 				emacs20
 

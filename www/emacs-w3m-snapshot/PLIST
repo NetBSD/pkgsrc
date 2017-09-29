@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2015/07/23 12:19:10 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/09/29 12:40:28 wiz Exp $
 info/emacs-w3m-ja.info
 info/emacs-w3m.info
 ${EMACS_LISPPREFIX}/w3m/ChangeLog
 ${EMACS_LISPPREFIX}/w3m/ChangeLog.1
 ${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/bookmark-w3m.el
-${FOR_emacs22}${EMACS_LISPPREFIX}/w3m/bookmark-w3m.el
-${NOTFOR_emacs21}${NOTFOR_emacs22}${NOTFOR_emacs22nox}${EMACS_LISPPREFIX}/w3m/bookmark-w3m.el.gz
-${NOTFOR_emacs22}${NOTFOR_emacs22nox}${NOTFOR_emacs21}${NOTFOR_emacs21nox}${NOTFOR_emacs20}${EMACS_LISPPREFIX}/w3m/bookmark-w3m.elc
+${NOTFOR_emacs21}${EMACS_LISPPREFIX}/w3m/bookmark-w3m.el.gz
+${NOTFOR_emacs21}${NOTFOR_emacs21nox}${NOTFOR_emacs20}${EMACS_LISPPREFIX}/w3m/bookmark-w3m.elc
 ${EMACS_LISPPREFIX}/w3m/mew-shimbun.el
 ${PLIST.mew}${EMACS_LISPPREFIX}/w3m/mew-shimbun.elc
 ${EMACS_LISPPREFIX}/w3m/mew-w3m.el

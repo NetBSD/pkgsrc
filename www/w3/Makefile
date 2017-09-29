@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/04/06 20:27:29 rodent Exp $
+# $NetBSD: Makefile,v 1.30 2017/09/29 12:40:28 wiz Exp $
 
 DISTNAME=	w3-4.0pre.47
 PKGNAME=	${EMACS_PKGNAME_PREFIX}w3-4.0b47
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.gnu.org/software/w3/
 COMMENT=	World Wide Web browser for Emacs
 
 # included in xemacs-packages
-# emacs22 doesn't work
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20
 
 GNU_CONFIGURE=		yes
