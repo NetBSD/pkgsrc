@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/29 14:33:38 joerg Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/cookies.py
+${PYSITELIB}/cookies.pyc
+${PYSITELIB}/cookies.pyo
+${PYSITELIB}/test_cookies.py
+${PYSITELIB}/test_cookies.pyc
+${PYSITELIB}/test_cookies.pyo
