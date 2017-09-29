@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2017/09/29 13:45:04 joerg Exp $
+
+SHA1 (pyaml-17.8.0.tar.gz) = 9a036114c4ee65ed77ad8734da5288b9cb9cc3ae
+RMD160 (pyaml-17.8.0.tar.gz) = cd658ce11e386f5b7760c797c64078a428ab094d
+SHA512 (pyaml-17.8.0.tar.gz) = 11d7555de58ac4dd3bd98965c78d779f18b172d7875d38cb99337213fb22562618e8f332aa9d0ff73c5b8e981a5b69059cbfb0b67d388d74c4fa5f1b83313cf3
+Size (pyaml-17.8.0.tar.gz) = 15583 bytes
+SHA1 (patch-setup.py) = 8718125829210a220c8eaf2d87744cc05f024b38
