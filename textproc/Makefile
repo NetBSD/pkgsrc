@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.961 2017/09/29 13:47:51 joerg Exp $
+# $NetBSD: Makefile,v 1.962 2017/09/29 13:49:42 joerg Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -791,6 +791,7 @@ SUBDIR+=	py-pysrt
 SUBDIR+=	py-pytoml
 SUBDIR+=	py-rdflib
 SUBDIR+=	py-rebulk
+SUBDIR+=	py-regex
 SUBDIR+=	py-relatorio
 SUBDIR+=	py-rst2pdf
 SUBDIR+=	py-snowballstemmer
