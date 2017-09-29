@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2524 2017/09/28 04:17:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2525 2017/09/29 06:18:30 alnsn Exp $
 #
 
 COMMENT=	Development utilities
@@ -310,6 +310,7 @@ SUBDIR+=	go-check
 SUBDIR+=	go-cli
 SUBDIR+=	go-cobra
 SUBDIR+=	go-consul-api
+SUBDIR+=	go-ed25519
 SUBDIR+=	go-emoji
 SUBDIR+=	go-errors
 SUBDIR+=	go-flags-svent
@@ -321,6 +322,7 @@ SUBDIR+=	go-glog
 SUBDIR+=	go-gls
 SUBDIR+=	go-golang-lru
 SUBDIR+=	go-goorgeous
+SUBDIR+=	go-goptlib
 SUBDIR+=	go-homedir
 SUBDIR+=	go-i18n
 SUBDIR+=	go-immutable-radix
@@ -339,6 +341,7 @@ SUBDIR+=	go-ratelimit
 SUBDIR+=	go-review
 SUBDIR+=	go-sanitized_anchor_name
 SUBDIR+=	go-shuffle
+SUBDIR+=	go-siphash
 SUBDIR+=	go-sys
 SUBDIR+=	go-termbox
 SUBDIR+=	go-testify
