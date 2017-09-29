@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4207 2017/09/29 17:16:34 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.4208 2017/09/29 21:47:52 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5977,8 +5977,20 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-cookies version 2.2.1 [joerg 2017-09-29]
 	Added www/py-meinheld version 0.6.1 [joerg 2017-09-29]
 	Added www/py-whitenoise version 4.0b3 [joerg 2017-09-29]
+	Added devel/py-crayons version 0.1.2 [joerg 2017-09-29]
+	Added devel/py-memory-profiler version 0.47 [joerg 2017-09-29]
+	Added devel/py-sure version 1.4.6 [joerg 2017-09-29]
+	Added time/py-pendulum version 1.2.5 [joerg 2017-09-29]
+	Added textproc/py-ramlfications version 0.1.9 [joerg 2017-09-29]
+	Added time/py-dateparser version 0.6.0 [joerg 2017-09-29]
+	Added time/py-maya version 0.3.2 [joerg 2017-09-29]
 	Added security/ruby-metasploit-payloads version 1.3.9 [minskim 2017-09-29]
 	Added security/ruby-rex-text version 0.2.15 [minskim 2017-09-29]
 	Updated geography/py-geojson to 2.3.0 [kleink 2017-09-29]
 	Added security/ruby-rex-random_identifier version 0.1.4 [minskim 2017-09-29]
 	Added security/ruby-rex-powershell version 0.1.72 [minskim 2017-09-29]
+	Added www/py-flask-common version 0.2.0 [joerg 2017-09-29]
+	Added archivers/py-lz4 version 0.10.1 [joerg 2017-09-29]
+	Added devel/py-buildbot-worker version 0.9.11 [joerg 2017-09-29]
+	Removed devel/py-buildbot-slave [joerg 2017-09-29]
+	Updated devel/py-buildbot to 0.9.11 [joerg 2017-09-29]
