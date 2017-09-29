@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/01/19 18:52:18 agc Exp $
-#
+# $NetBSD: Makefile,v 1.24 2017/09/29 12:40:28 wiz Exp $
 
 DISTNAME=	elscreen-1.4.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -32,8 +31,6 @@ EMACS_BUILDLINK=# empty
 # Emacs 24 or later is not supported. Try wip/elscreen-current
 # instead.
 EMACS_VERSIONS_ACCEPTED= \
-	emacs23 emacs23nox \
-	emacs22 emacs22nox \
 	emacs21 emacs21nox \
 	emacs20
 
