@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4208 2017/09/29 21:47:52 joerg Exp $
+$NetBSD: CHANGES-2017,v 1.4209 2017/09/29 21:55:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5994,3 +5994,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-buildbot-worker version 0.9.11 [joerg 2017-09-29]
 	Removed devel/py-buildbot-slave [joerg 2017-09-29]
 	Updated devel/py-buildbot to 0.9.11 [joerg 2017-09-29]
+	Updated sysutils/p5-Sys-Utmp to 1.8 [wiz 2017-09-29]
