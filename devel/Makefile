@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2533 2017/09/29 14:16:44 joerg Exp $
+# $NetBSD: Makefile,v 1.2534 2017/09/29 14:32:23 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -2120,6 +2120,8 @@ SUBDIR+=	py-traitlets
 SUBDIR+=	py-tryton
 SUBDIR+=	py-trytond
 SUBDIR+=	py-txaio
+SUBDIR+=	py-txgithub
+SUBDIR+=	py-txrequests
 SUBDIR+=	py-typing
 SUBDIR+=	py-unit
 SUBDIR+=	py-unitgui
