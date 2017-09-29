@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2017/01/01 02:06:46 tron Exp $
+# $NetBSD: Makefile.common,v 1.42 2017/09/29 12:40:27 wiz Exp $
 #
 # used by editors/emacs/Makefile
 # used by editors/emacs-nox11/Makefile
@@ -62,12 +62,6 @@ DEPENDS+=	${EMACS_PACKAGE}>=${EMACS_MAJOR}:${EMACS_PKGDIR}
 #   emacs20		20.7nb16
 #   emacs21		21.4anb26
 #   emacs21-nox11	21.4anb13
-#   emacs22		22.3nb26
-#   emacs22-nox11	22.3nb3
-#   emacs23		23.4nb12
-#   emacs23-nox11	23.4nb1
-#   emacs24		24.2nb6
-#   emacs24-nox11	24.2
 #   emacs25+		n/a
 #
 # Set VER to the version from the above table, and REV to the
@@ -83,24 +77,6 @@ REV=	26
 .elif ${MY_EMACS_TYPE} == "emacs21nox"
 VER=	21.4
 REV=	13
-.elif ${MY_EMACS_TYPE} == "emacs22"
-VER=	22.3
-REV=	26
-.elif ${MY_EMACS_TYPE} == "emacs22nox"
-VER=	22.3
-REV=	3
-.elif ${MY_EMACS_TYPE} == "emacs23"
-VER=	23.4
-REV=	12
-.elif ${MY_EMACS_TYPE} == "emacs23nox"
-VER=	23.4
-REV=	1
-.elif ${MY_EMACS_TYPE} == "emacs24"
-VER=	24.2
-REV=	6
-.elif ${MY_EMACS_TYPE} == "emacs24nox"
-VER=	24.2
-REV=	0
 .else
 VER=	${_EMACS_VERSION_MAJOR}
 REV=	0
