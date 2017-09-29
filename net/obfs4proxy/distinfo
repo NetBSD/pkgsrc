@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2017/09/29 06:24:03 alnsn Exp $
+
+SHA1 (obfs4proxy-0.0.7.tar.xz) = b81ed0ccdf2aa8d4195e0e7ca4a4403e3b34f860
+RMD160 (obfs4proxy-0.0.7.tar.xz) = d08600d43121683f0d4275854a632c4c92c3f513
+SHA512 (obfs4proxy-0.0.7.tar.xz) = b5da21d9ea0aae48667b3260500af15eaa135a30762a17cccd58554fca3090437db41e34166744956d302df3e2b98282f88fb4732c1df7086cb4b45942e1b90c
+Size (obfs4proxy-0.0.7.tar.xz) = 56184 bytes
