@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2017/09/29 08:47:53 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/ligotimegps/__init__.py
+${PYSITELIB}/ligotimegps/__init__.pyo
+${PYSITELIB}/ligotimegps/__init__.pyc
+${PYSITELIB}/ligotimegps/_version.pyo
+${PYSITELIB}/ligotimegps/_version.pyc
+${PYSITELIB}/ligotimegps/test_ligotimegps.pyo
+${PYSITELIB}/ligotimegps/test_ligotimegps.pyc
+${PYSITELIB}/ligotimegps/_version.py
+${PYSITELIB}/ligotimegps/test_ligotimegps.py
