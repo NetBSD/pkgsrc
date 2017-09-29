@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4193 2017/09/29 12:40:29 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4194 2017/09/29 12:41:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5955,3 +5955,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed editors/emacs24 [wiz 2017-09-29]
 	Removed editors/emacs24-nox11 [wiz 2017-09-29]
 	Removed inputmethod/ibus-el [wiz 2017-09-29]
+	Updated textproc/py-phonenumbers to 8.8.2 [adam 2017-09-29]
+	Updated mail/py-aiosmtpd to 1.1 [adam 2017-09-29]
