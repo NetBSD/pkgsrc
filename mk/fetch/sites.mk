@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.153 2017/09/17 10:55:17 wiz Exp $
+# $NetBSD: sites.mk,v 1.154 2017/09/29 06:17:12 maya Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -294,7 +294,5 @@ MASTER_SITE_HASKELL_HACKAGE+=	\
 MASTER_SITE_BACKUP?=	\
 	http://cdn.NetBSD.org/pub/pkgsrc/distfiles/ \
 	http://ftp6.NetBSD.org/pub/pkgsrc/distfiles/ \
-	ftp://ftp.fr.NetBSD.org/pub/pkgsrc/distfiles/ \
 	http://ftp.fr.NetBSD.org/pub/pkgsrc/distfiles/ \
-	ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/ \
 	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
