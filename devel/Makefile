@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2528 2017/09/29 13:28:10 wiz Exp $
+# $NetBSD: Makefile,v 1.2529 2017/09/29 13:56:18 kamil Exp $
 #
 
 COMMENT=	Development utilities
@@ -258,8 +258,6 @@ SUBDIR+=	gccmakedep
 SUBDIR+=	gconfmm
 SUBDIR+=	gcvs
 SUBDIR+=	gdb
-SUBDIR+=	gdb5
-SUBDIR+=	gdb6
 SUBDIR+=	gdb7
 SUBDIR+=	gdbus-codegen
 SUBDIR+=	gdl
