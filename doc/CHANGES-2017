@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4195 2017/09/29 13:17:57 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4196 2017/09/29 13:20:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5958,3 +5958,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-phonenumbers to 8.8.2 [adam 2017-09-29]
 	Updated mail/py-aiosmtpd to 1.1 [adam 2017-09-29]
 	Added sysutils/p5-Unix-Process version 1.3101 [wiz 2017-09-29]
+	Added devel/p5-Shell-Guess version 0.07 [wiz 2017-09-29]
