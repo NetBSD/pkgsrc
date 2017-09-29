@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 02:46:58 agc Exp $
+$NetBSD: distinfo,v 1.11 2017/09/29 07:57:38 wen Exp $
 
-SHA1 (mini_httpd-1.21/mini_httpd-1.21.tar.gz) = affd3e73f54ddf89c8ee82afdecf046eaabf755b
-RMD160 (mini_httpd-1.21/mini_httpd-1.21.tar.gz) = 7fae61ee60cece845c9ccb7aa7507acdfe30683d
-SHA512 (mini_httpd-1.21/mini_httpd-1.21.tar.gz) = e5f0e0450d2f464bda1ff0e0dff90422c9f54d28a2cbab028a2d02db0636ad6936d2871f35ec089e57cf5aa2e1f0fed27e195be110367c8d8dffe3e3f4367201
-Size (mini_httpd-1.21/mini_httpd-1.21.tar.gz) = 43351 bytes
+SHA1 (mini_httpd-1.27/mini_httpd-1.27.tar.gz) = 6c9dc710e027dfecdb7e5ff5c3aeeb183eeb4c4a
+RMD160 (mini_httpd-1.27/mini_httpd-1.27.tar.gz) = 7acea463e1461b9cd72d2c3a240d67bcafd14990
+SHA512 (mini_httpd-1.27/mini_httpd-1.27.tar.gz) = a7374374d70eb6e531225bf944d80158c7a1870f0e9d3ab720f83706f722eaeac3a891f06c3d6ac2189e1d368504db0ce512440a1d09be109f804c8a0c7901e1
+Size (mini_httpd-1.27/mini_httpd-1.27.tar.gz) = 43473 bytes
 SHA1 (patch-aa) = 9156d0f4a7d8b727db34bdf8b7691509f51f9e31
 SHA1 (patch-ab) = bf0f1cc373c0b7da4c4f4f4f0001ba357c16510a
 SHA1 (patch-ac) = c0587f2efa9a349cf739eafdeb2ee54f1fa44629
