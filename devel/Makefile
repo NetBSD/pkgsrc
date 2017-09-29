@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2529 2017/09/29 13:56:18 kamil Exp $
+# $NetBSD: Makefile,v 1.2530 2017/09/29 14:09:45 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -2094,6 +2094,7 @@ SUBDIR+=	py-subversion
 SUBDIR+=	py-subvertpy
 SUBDIR+=	py-sysctl
 SUBDIR+=	py-tabular
+SUBDIR+=	py-termcolor
 SUBDIR+=	py-test
 SUBDIR+=	py-test-cache
 SUBDIR+=	py-test-cov
