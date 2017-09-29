@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/08/16 21:22:11 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.10 2017/09/29 12:40:27 wiz Exp $
 
 DISTNAME=	js2-20080406
 PKGREVISION=	2
@@ -16,7 +15,7 @@ USE_LANGUAGES=	# none
 MESSAGE_SUBST+=	LISPDIR=${EMACS_LISPPREFIX:Q}
 
 # no xemacs at all; emacs21 doesn't support full functionality
-EMACS_VERSIONS_ACCEPTED=	emacs25 emacs24 emacs23 emacs22 emacs22nox
+EMACS_VERSIONS_ACCEPTED=	emacs25
 
 do-build:
 	cd ${WRKSRC} && ${EMACS_BIN} -batch -f batch-byte-compile ${DISTNAME}.el
