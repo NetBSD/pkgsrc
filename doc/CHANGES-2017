@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4187 2017/09/29 07:15:29 leot Exp $
+$NetBSD: CHANGES-2017,v 1.4188 2017/09/29 07:49:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5942,3 +5942,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-asn1crypto to 0.23.0 [adam 2017-09-29]
 	Updated devel/py-click-threading to 0.4.4 [adam 2017-09-29]
 	Updated devel/py-faker to 0.8.4 [adam 2017-09-29]
+	Updated devel/p5-Log-Any to 1.700 [wen 2017-09-29]
