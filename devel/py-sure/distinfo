@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/09/29 21:17:18 joerg Exp $
+
+SHA1 (sure-1.4.6.tar.gz) = d6e3d9d9a4a5832f346221547b1457c038c6680c
+RMD160 (sure-1.4.6.tar.gz) = edcf85db5bd329a1c8b72cce5ca753e6140455b2
+SHA512 (sure-1.4.6.tar.gz) = bbaaefc671c306b1d779a3a77ab095e7a51303f89468f00f5d0288dbfccbbecadef5d2bfde0dfbcc5888cb77b3c37b53fbe48afbc13263f2eb04e64dfde8bd77
+Size (sure-1.4.6.tar.gz) = 45608 bytes
