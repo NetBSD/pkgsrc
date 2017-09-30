@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2013/10/13 12:45:15 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.8 2017/09/30 07:48:48 wiz Exp $
 
 DISTNAME=	or1ksim-0.2.0rc2
 PKGREVISION=	1
 CATEGORIES=	emulators
-MASTER_SITES=	http://www.opencores.org/projects.cgi/web/or1k/
+#MASTER_SITES=	http://www.opencores.org/projects.cgi/web/or1k/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://opencores.org/or1k/Or1ksim
+#HOMEPAGE=	http://opencores.org/or1k/Or1ksim
+HOMEPAGE=	https://github.com/openrisc/or1ksim
 COMMENT=	OpenRISC emulator
 
 GNU_CONFIGURE=  yes
