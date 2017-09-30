@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/04/25 14:23:01 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2017/09/30 07:45:03 wiz Exp $
 
 DISTNAME=	neverball-1.6.0
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://neverball.org/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://neverball.org/
+HOMEPAGE=	https://neverball.org/
 COMMENT=	Puzzle/action game similar to Super Monkey Ball
 
 USE_TOOLS+=	gmake pax
