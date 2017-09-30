@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/09/30 14:25:29 adam Exp $
+# $NetBSD: Makefile,v 1.7 2017/09/30 14:28:03 adam Exp $
 
 DISTNAME=	cached-property-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,8 +13,6 @@ LICENSE=	modified-bsd
 BUILD_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 
 USE_LANGUAGES=	# none
-
-# UnicodeDecodeError: 'ascii' codec can't decode byte 0xe2 in position 561: ordinal not in range(128)
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
