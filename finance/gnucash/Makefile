@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.249 2017/09/18 09:53:21 maya Exp $
+# $NetBSD: Makefile,v 1.250 2017/09/30 08:21:25 wiz Exp $
 
-DISTNAME=		gnucash-2.6.17
-PKGREVISION=		1
+DISTNAME=		gnucash-2.6.18-1
+PKGNAME=		${DISTNAME:S/-1/.1/}
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -18,6 +18,8 @@ DEPENDS+=		${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 # /usr/pkg/share/gnucash/python/pycons/console.py imports readline
 DEPENDS+=		${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 DEPENDS+=		dconf-[0-9]*:../../devel/dconf
+
+WRKSRC=			${WRKDIR}/${DISTNAME:S/-1//}
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
