@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/12/04 21:13:08 rodent Exp $
+$NetBSD: distinfo,v 1.2 2017/09/30 15:34:03 adam Exp $
 
-SHA1 (zeep-0.23.0.tar.gz) = 5ce6162a6a7f7a88d1dd8deddb57c7649724124e
-RMD160 (zeep-0.23.0.tar.gz) = c58ddcd5667872131e8b1afe6bf4fd18efa746df
-SHA512 (zeep-0.23.0.tar.gz) = 13c1fdefb8eb83c0c37a8cc9fdc12b09117947c573b7fb26f225d08174e37d4eccf768876e8aba147a4ece4d3340dabefc1f1edb8a21a5fd435e3a87ee00fa53
-Size (zeep-0.23.0.tar.gz) = 89608 bytes
+SHA1 (zeep-2.4.0.tar.gz) = 85e06d33b689a3856ba5ae79baee9cd4e87e3eb3
+RMD160 (zeep-2.4.0.tar.gz) = a892f2a4b802564af2293c3ae8e528ec7e81b0ce
+SHA512 (zeep-2.4.0.tar.gz) = 7bd21d8feede66678557d7f6de3788509ae5d1785dd0c1ec4ffc076b73e8dac8df58eb6cc63c53ac4e28399bf1ac74ca93ef5710269406e88ea2da05f7456a5f
+Size (zeep-2.4.0.tar.gz) = 146930 bytes
