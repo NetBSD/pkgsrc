@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2017/09/05 06:00:47 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2017/09/30 07:24:46 wiz Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -20,7 +20,6 @@ SUBDIR+=	ibus
 SUBDIR+=	ibus-anthy
 SUBDIR+=	ibus-array
 SUBDIR+=	ibus-chewing
-SUBDIR+=	ibus-el
 SUBDIR+=	ibus-handwrite
 SUBDIR+=	ibus-hangul
 SUBDIR+=	ibus-input-pad
