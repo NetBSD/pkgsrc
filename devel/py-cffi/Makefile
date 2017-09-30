@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2017/07/03 18:17:45 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2017/09/30 13:09:47 adam Exp $
 
-DISTNAME=	cffi-1.10.0
+DISTNAME=	cffi-1.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cffi/}
 
@@ -11,25 +10,19 @@ HOMEPAGE=	https://pypi.python.org/pypi/cffi/
 COMMENT=	Foreign Function Interface for Python calling C code
 LICENSE=	mit
 
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
 
 DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 
-USE_LANGUAGES=	c
-
-.if !empty(PKGSRC_RUN_TEST:M[yY][eE][sS])
-USE_LANGUAGES+=	c++
-.endif
-
 TEST_ENV+=	TMPDIR=${WRKDIR}/tmp
 
 do-test:
 	${MKDIR} ${WRKDIR}/tmp
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${TEST_ENV} ${PREFIX}/bin/py.test-${PYVERSSUFFIX} -v
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${TEST_ENV} ${PREFIX}/bin/py.test-${PYVERSSUFFIX}
 
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../lang/python/egg.mk"
