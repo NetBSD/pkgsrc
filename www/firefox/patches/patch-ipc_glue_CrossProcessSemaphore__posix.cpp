@@ -1,9 +1,9 @@
-$NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.2 2017/08/10 14:46:15 ryoon Exp $
+$NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.3 2017/09/30 05:34:12 ryoon Exp $
 
 - avoid use of sem_t on NetBSD
   http://mail-index.netbsd.org/pkgsrc-bugs/2017/06/23/msg062225.html
 
---- ipc/glue/CrossProcessSemaphore_posix.cpp.orig	2017-07-31 16:20:47.000000000 +0000
+--- ipc/glue/CrossProcessSemaphore_posix.cpp.orig	2017-09-14 20:16:01.000000000 +0000
 +++ ipc/glue/CrossProcessSemaphore_posix.cpp
 @@ -9,6 +9,11 @@
  #include "nsDebug.h"
@@ -163,15 +163,15 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.2 2017/08/10 14:46:
    if (aWaitTime.isSome()) {
      struct timespec ts;
      if (clock_gettime(CLOCK_REALTIME, &ts) == -1) {
-@@ -142,6 +228,7 @@ CrossProcessSemaphore::Wait(const Maybe<
-       continue;
+@@ -140,6 +226,7 @@ CrossProcessSemaphore::Wait(const Maybe<
+     while ((ret = sem_wait(mSemaphore)) == -1 && errno == EINTR) {
      }
    }
 +#endif
    return ret == 0;
  }
  
-@@ -149,7 +236,17 @@ void
+@@ -147,7 +234,17 @@ void
  CrossProcessSemaphore::Signal()
  {
    MOZ_ASSERT(*mRefCount > 0, "Attempting to signal a semaphore with zero ref count");
