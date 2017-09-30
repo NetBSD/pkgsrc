@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/04/14 14:13:18 leot Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/30 14:13:08 adam Exp $
 
-DISTNAME=	guessit-2.1.2
+DISTNAME=	guessit-2.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	textproc
+CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/guessit/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,16 +10,15 @@ HOMEPAGE=	http://guessit.io/
 COMMENT=	Extracts as much information as possible from a video filename
 LICENSE=	gnu-lgpl-v3
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
-
 DEPENDS+=	${PYPKGPREFIX}-babelfish>=0.5.5:../../textproc/py-babelfish
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-rebulk>=0.8.2:../../textproc/py-rebulk
+DEPENDS+=	${PYPKGPREFIX}-rebulk>=0.9.0:../../textproc/py-rebulk
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/guessit ${DESTDIR}${PREFIX}/bin/guessit-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} guessit guessit${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
