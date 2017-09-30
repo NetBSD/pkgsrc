@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/09/29 21:46:04 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2017/09/30 07:22:37 wiz Exp $
 
 DISTNAME=	buildbot-0.9.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -29,8 +29,12 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-treq-[0-9]*:../../devel/py-treq
 BUILD_DEPENDS+=	${PYPKGPREFIX}-txgithub-[0-9]*:../../devel/py-txgithub
 BUILD_DEPENDS+=	${PYPKGPREFIX}-txrequests-[0-9]*:../../devel/py-txrequests
 BUILD_DEPENDS+=	${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
-BUILD_DEPENDS+=	${PYPKGPREFIX}-scandir-[0-9]*:../../devel/py-scandir
 BUILD_DEPENDS+=	${PYPKGPREFIX}-moto-[0-9]*:../../net/py-moto
 
 .include "../../lang/python/egg.mk"
+
+.if "${PYPKGPREFIX}" == "py27" || "${PYPKGPREFIX}" == "py34"
+BUILD_DEPENDS+=	${PYPKGPREFIX}-scandir-[0-9]*:../../devel/py-scandir
+.endif
+
 .include "../../mk/bsd.pkg.mk"
