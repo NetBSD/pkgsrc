@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4217 2017/09/30 09:59:09 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4218 2017/09/30 11:20:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6006,3 +6006,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-kerberos to 1.2.5 [adam 2017-09-30]
 	Updated devel/py-pylint to 1.7.4 [adam 2017-09-30]
 	Updated devel/py-cython to 0.27 [adam 2017-09-30]
+	Updated www/firefox52 to 52.4.0 [ryoon 2017-09-30]
