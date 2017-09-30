@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/09/29 21:36:23 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2017/09/30 12:38:02 wiz Exp $
 
 DISTNAME=	lz4-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,6 @@ HOMEPAGE=	https://github.com/python-lz4/python-lz4
 COMMENT=	Python LZ4 binding
 LICENSE=	modified-bsd
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
