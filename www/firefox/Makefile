@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.306 2017/09/18 09:53:37 maya Exp $
+# $NetBSD: Makefile,v 1.307 2017/09/30 05:34:11 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		55.0
-MOZ_BRANCH_MINOR=	.3
+MOZ_BRANCH=		56.0
+MOZ_BRANCH_MINOR=	
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	firefox-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/b/beta/:S/esr//}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
@@ -23,6 +22,8 @@ MOZILLA_DIR=	# empty
 
 # Note: when updating remember to conditionalise about-background.png in PLIST
 CONFIGURE_ARGS+=	--enable-application=browser
+
+CFLAGS+=	-I${PREFIX}/include/nspr
 
 # workround for link of libxul.so etc.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/firefox ${COMPILER_RPATH_FLAG}${PREFIX}/lib

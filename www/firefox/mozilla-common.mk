@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.97 2017/08/10 14:46:15 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.98 2017/09/30 05:34:11 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -19,6 +19,9 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
 USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize
+
+CONFIGURE_ENV+=		BINDGEN_CFLAGS="-isystem${PREFIX}/include/nspr \
+			-isystem${X11BASE}/include/pixman-1"
 
 test:
 	cd ${WRKSRC}/${OBJDIR}/dist/bin &&	\
@@ -71,13 +74,6 @@ CONFIGURE_ARGS+=	--disable-gconf
 CONFIGURE_ARGS+=	--enable-url-classifier
 CONFIGURE_ARGS+=	--disable-icf
 CONFIGURE_ARGS+=	--disable-updater
-
-#.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && ${OPSYS} != "SunOS"
-#BUILD_DEPENDS+=		cargo-[0-9]*:../../devel/cargo
-#CONFIGURE_ARGS+=	--enable-rust
-#.else
-CONFIGURE_ARGS+=	--disable-rust
-#.endif
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
@@ -193,6 +189,9 @@ BUILDLINK_API_DEPENDS.nss+=	nss>=3.29.5
 .include "../../graphics/MesaLib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../lang/clang/buildlink3.mk"
+BUILDLINK_API_DEPENDS.rust+=	rust>=1.20.0
+.include "../../lang/rust/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"

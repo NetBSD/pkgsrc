@@ -1,22 +1,12 @@
-$NetBSD: patch-toolkit_moz.configure,v 1.5 2017/08/15 01:24:47 ryoon Exp $
+$NetBSD: patch-toolkit_moz.configure,v 1.6 2017/09/30 05:34:12 ryoon Exp $
 
 * skia part: support bigendian architectures
 
---- toolkit/moz.configure.orig	2017-07-31 16:20:52.000000000 +0000
+--- toolkit/moz.configure.orig	2017-09-14 20:16:01.000000000 +0000
 +++ toolkit/moz.configure
-@@ -88,8 +88,7 @@ include('../js/moz.configure')
- 
- # Rust
- # ==============================================================
--include('../build/moz.configure/rust.configure',
--        when='--enable-compile-environment')
-+include('../build/moz.configure/rust.configure')
- 
- 
- # L10N
-@@ -356,6 +355,26 @@ add_old_configure_assignment('FT2_LIBS',
- add_old_configure_assignment('FT2_CFLAGS',
-                              ft2_info.cflags)
+@@ -314,6 +314,26 @@ def freetype2_combined_info(fontconfig_i
+ add_old_configure_assignment('_HAVE_FREETYPE2',
+                              depends_if(freetype2_info)(lambda _: True))
  
 +# Graphite2
 +# ==============================================================
@@ -33,7 +23,7 @@ $NetBSD: patch-toolkit_moz.configure,v 1.5 2017/08/15 01:24:47 ryoon Exp $
 +option('--with-system-harfbuzz',
 +       help="Use system harfbuzz (located with pkgconfig)")
 +
-+system_harfbuzz = pkg_check_modules('MOZ_HARFBUZZ', 'harfbuzz >= 1.4.6',
++system_harfbuzz = pkg_check_modules('MOZ_HARFBUZZ', 'harfbuzz >= 1.4.7',
 +                                    when='--with-system-harfbuzz')
 +
 +set_config('MOZ_SYSTEM_HARFBUZZ', depends_if(system_harfbuzz)(lambda _: True))
@@ -41,42 +31,16 @@ $NetBSD: patch-toolkit_moz.configure,v 1.5 2017/08/15 01:24:47 ryoon Exp $
  # Apple platform decoder support
  # ==============================================================
  @depends(toolkit)
-@@ -623,13 +642,13 @@ id_and_secret_keyfile('Leanplum SDK')
- option('--enable-stylo', nargs='?', choices=('build',),
-        help='Include Stylo in the build and/or enable it at runtime')
+@@ -600,7 +620,7 @@ def stylo_config(value, _, target):
  
--@depends('--enable-stylo')
--def stylo_config(value):
-+@depends('--enable-stylo', '--enable-rust')
-+def stylo_config(value, rust_enabled):
-     build_stylo = None
-     enable_stylo = None
- 
-     # The default is to not build Stylo at all.
--    if value.origin == 'default':
-+    if not rust_enabled or value.origin == 'default':
-         pass
-     elif value == 'build':
-         build_stylo = True
-@@ -769,12 +788,14 @@ set_config('SERVO_TARGET_DIR', servo_tar
- option('--enable-webrender', nargs='?', choices=('build',),
-        help='Include WebRender in the build and/or enable it at runtime')
- 
--@depends('--enable-webrender', milestone)
--def webrender(value, milestone):
-+@depends('--enable-webrender', '--enable-rust', milestone)
-+def webrender(value, rust_enabled, milestone):
-     build_webrender = None
-     enable_webrender = None
- 
--    if value.origin == 'default':
-+    if not rust_enabled:
-+        pass
-+    elif value.origin == 'default':
-         # if nothing is specified, default to just building on Nightly
-         build_webrender = milestone.is_nightly
-     elif value == 'build':
-@@ -954,11 +975,11 @@ add_old_configure_assignment('NECKO_PROT
+     # If nothing is specified, default to building stylo where possible.
+     if value.origin == 'default':
+-        if target.os == 'GNU' and target.bitness == 32:
++        if target.os != 'WINNT' and target.bitness == 32:
+             # The clang setup we use in automation is a little unusual, and
+             # doesn't play well with bindgen on 32-bit Linux.
+             pass
+@@ -1047,11 +1067,11 @@ add_old_configure_assignment('NECKO_PROT
  # ==============================================================
  option('--disable-skia', help='Disable use of Skia')
  
