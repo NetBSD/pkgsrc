@@ -349,6 +349,30 @@ EOF
 }
 
 ###
+### underscores_in_versions_test
+###
+
+atf_test_case underscores_in_versions_test
+
+underscores_in_versions_test_head()
+{
+	atf_set "descr" "underscores in versions strings"
+}
+
+underscores_in_versions_test_body()
+{
+	cat > input << EOF
+pkg_install>=1.0_beta3:../../pkgtools/pkg_install
+pkg_install<1.2:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install>=1.0_beta3<1.2:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
 ### multiple_package_dependencies_test
 ###
 
@@ -391,5 +415,6 @@ atf_init_test_cases()
 	atf_add_test_case overlapping_intervals_test
 	atf_add_test_case disjoint_test
 	atf_add_test_case strings_in_versions_test
+	atf_add_test_case underscores_in_versions_test
 	atf_add_test_case multiple_package_dependencies_test
 }

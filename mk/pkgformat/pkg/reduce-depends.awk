@@ -144,7 +144,7 @@ BEGIN {
 
 	# Match version numbers with an ERE.
 	# XXX This matches more than it should.
-	VERSION_RE = "[0-9A-Za-z.+]+"
+	VERSION_RE = "[0-9A-Za-z._+]+"
 
 	# Gather all dependencies into the patterns array.  Index 0 of the
 	# patterns[pkgpath] array is the number of patterns associated with
