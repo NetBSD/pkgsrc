@@ -1,4 +1,4 @@
-# $NetBSD: loaders.mk,v 1.2 2010/11/15 14:50:04 drochner Exp $
+# $NetBSD: loaders.mk,v 1.3 2017/09/30 14:05:24 adam Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # GTK2 modules.  It takes care of rebuilding the corresponding databases at
@@ -15,8 +15,8 @@ GDK_PIXBUF_QUERY_LOADERS= \
  ${BUILDLINK_PREFIX.gdk-pixbuf2}/bin/gdk-pixbuf-query-loaders
 GDK_PIXBUF_LOADERS_DB= \
  ${BUILDLINK_PREFIX.gdk-pixbuf2}/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
-FILES_SUBST+= GDK_PIXBUF_LOADERS_DB=${GDK_PIXBUF_LOADERS_DB:Q}
-FILES_SUBST+= GDK_PIXBUF_QUERY_LOADERS=${GDK_PIXBUF_QUERY_LOADERS:Q}
+FILES_SUBST+=	GDK_PIXBUF_LOADERS_DB=${GDK_PIXBUF_LOADERS_DB:Q}
+FILES_SUBST+=	GDK_PIXBUF_QUERY_LOADERS=${GDK_PIXBUF_QUERY_LOADERS:Q}
 INSTALL_TEMPLATES+=	../../graphics/gdk-pixbuf2/files/loaders.tmpl
 DEINSTALL_TEMPLATES+=	../../graphics/gdk-pixbuf2/files/loaders.tmpl
 
