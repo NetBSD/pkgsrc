@@ -1,6 +1,6 @@
-$NetBSD: patch-dom_media_AudioStream.h,v 1.3 2016/12/03 09:58:26 ryoon Exp $
+$NetBSD: patch-dom_media_AudioStream.h,v 1.4 2017/09/30 05:34:12 ryoon Exp $
 
---- dom/media/AudioStream.h.orig	2016-10-31 20:15:33.000000000 +0000
+--- dom/media/AudioStream.h.orig	2017-09-14 20:15:56.000000000 +0000
 +++ dom/media/AudioStream.h
 @@ -16,7 +16,11 @@
  #include "mozilla/TimeStamp.h"
@@ -12,9 +12,9 @@ $NetBSD: patch-dom_media_AudioStream.h,v 1.3 2016/12/03 09:58:26 ryoon Exp $
  #include "soundtouch/SoundTouchFactory.h"
 +#endif
  
- namespace mozilla {
- 
-@@ -282,7 +286,11 @@ private:
+ #if defined(XP_WIN)
+ #include "mozilla/audio/AudioNotificationReceiver.h"
+@@ -299,7 +303,11 @@ private:
    uint32_t mChannels;
    uint32_t mOutChannels;
    AudioClock mAudioClock;
