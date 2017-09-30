@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.92 2017/09/08 02:38:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.93 2017/09/30 11:58:02 mef Exp $
 
-DISTNAME=	fldigi-4.0.8
-PKGREVISION=	2
+DISTNAME=	fldigi-4.0.10
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fldigi/}
 
@@ -18,12 +17,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=		STRIP=${STRIP}
 
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
-
-SUBST_CLASSES+=		perl
-SUBST_STAGE.perl=	post-configure
-SUBST_FILES.perl=	scripts/fldigi-shell
-SUBST_MESSAGE.perl=	Replacing Perl PATH
-SUBST_SED.perl=		-e s\|/usr/bin/perl\|${PERL5:Q}\|g
 
 SUBST_CLASSES+=		asciidoc
 SUBST_STAGE.asciidoc=	post-configure
