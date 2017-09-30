@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2017/02/14 09:54:30 markd Exp $
+$NetBSD: distinfo,v 1.7 2017/09/30 13:44:35 adam Exp $
 
-SHA1 (cx_Freeze-5.0.1.tar.gz) = c652cc99c7ba7aff8b6db82495d782f5256a80bc
-RMD160 (cx_Freeze-5.0.1.tar.gz) = e6486b3a5f44d861f4f3ab8d96f084d29c1cc908
-SHA512 (cx_Freeze-5.0.1.tar.gz) = 26c60d4970a602abac7ac2fdf19222187921b25e85898902fa13644d4f7ede28ab7c28bbcad732eb07dfc17a59878278af5c802d1c85b483bba6df5955a865cc
-Size (cx_Freeze-5.0.1.tar.gz) = 60127 bytes
+SHA1 (cx_Freeze-5.0.2.tar.gz) = 3457e63a966c2c0bae179a7bb869b9b6226d9ef0
+RMD160 (cx_Freeze-5.0.2.tar.gz) = bf969fb2ad526aa15d5be90d0875bd5d51fd3ce8
+SHA512 (cx_Freeze-5.0.2.tar.gz) = eac1a5cfd5b73f43a9447f3fce8a6ba513e253da10f44a74e4fbcd5b83068a57316e215aa03acac6807dee235e6f690b4bbba1447667bb2cba33b1182cb87d29
+Size (cx_Freeze-5.0.2.tar.gz) = 60104 bytes
 SHA1 (patch-aa) = 970bcecf2c7d687826e945f1020427b9229f9f02
