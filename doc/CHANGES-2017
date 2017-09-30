@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4221 2017/09/30 12:20:48 mef Exp $
+$NetBSD: CHANGES-2017,v 1.4222 2017/09/30 12:45:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6010,3 +6010,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/firefox52-l10n to 52.4.0 [ryoon 2017-09-30]
 	Updated ham/fldigi to 4.0.10 [mef 2017-09-30]
 	Updated cad/gtkwave to 3.3.85 [mef 2017-09-30]
+	Updated graphics/py-fits to 3.4 [adam 2017-09-30]
+	Updated security/gnupg2 to 2.2.1 [adam 2017-09-30]
