@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.63 2017/04/05 16:45:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.64 2017/09/30 08:21:25 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -495,6 +495,21 @@ share/gnucash/accounts/C/acctchrt_renter.gnucash-xea
 share/gnucash/accounts/C/acctchrt_retiremt.gnucash-xea
 share/gnucash/accounts/C/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/C/acctchrt_spouseretire.gnucash-xea
+share/gnucash/accounts/ca/acctchrt_brokerage.gnucash-xea
+share/gnucash/accounts/ca/acctchrt_carloan.gnucash-xea
+share/gnucash/accounts/ca/acctchrt_cdmoneymkt.gnucash-xea
+share/gnucash/accounts/ca/acctchrt_childcare.gnucash-xea
+share/gnucash/accounts/ca/acctchrt_common.gnucash-xea
+share/gnucash/accounts/ca/acctchrt_currency.gnucash-xea
+share/gnucash/accounts/ca/acctchrt_eduloan.gnucash-xea
+share/gnucash/accounts/ca/acctchrt_fixedassets.gnucash-xea
+share/gnucash/accounts/ca/acctchrt_homeloan.gnucash-xea
+share/gnucash/accounts/ca/acctchrt_homeown.gnucash-xea
+share/gnucash/accounts/ca/acctchrt_otherloan.gnucash-xea
+share/gnucash/accounts/ca/acctchrt_renter.gnucash-xea
+share/gnucash/accounts/ca/acctchrt_retiremt.gnucash-xea
+share/gnucash/accounts/ca/acctchrt_spouseinc.gnucash-xea
+share/gnucash/accounts/ca/acctchrt_spouseretire.gnucash-xea
 share/gnucash/accounts/cs/acctchrt_brokerage.gnucash-xea
 share/gnucash/accounts/cs/acctchrt_carloan.gnucash-xea
 share/gnucash/accounts/cs/acctchrt_cdmoneymkt.gnucash-xea
