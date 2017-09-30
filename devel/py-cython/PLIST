@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2017/09/03 18:48:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2017/09/30 09:53:23 adam Exp $
 bin/cygdb${PYVERSSUFFIX}
 bin/cython${PYVERSSUFFIX}
 bin/cythonize${PYVERSSUFFIX}
@@ -139,6 +139,7 @@ ${PYSITELIB}/Cython/Compiler/PyrexTypes.pyo
 ${PYSITELIB}/Cython/Compiler/Pythran.py
 ${PYSITELIB}/Cython/Compiler/Pythran.pyc
 ${PYSITELIB}/Cython/Compiler/Pythran.pyo
+${PYSITELIB}/Cython/Compiler/Pythran.so
 ${PYSITELIB}/Cython/Compiler/Scanning.pxd
 ${PYSITELIB}/Cython/Compiler/Scanning.py
 ${PYSITELIB}/Cython/Compiler/Scanning.pyc
@@ -178,8 +179,8 @@ ${PYSITELIB}/Cython/Compiler/Tests/TestTreePath.py
 ${PYSITELIB}/Cython/Compiler/Tests/TestTreePath.pyc
 ${PYSITELIB}/Cython/Compiler/Tests/TestTreePath.pyo
 ${PYSITELIB}/Cython/Compiler/Tests/TestTypes.py
-${PYSITELIB}/Cython/Compiler/Tests/TestTypes.pyo
 ${PYSITELIB}/Cython/Compiler/Tests/TestTypes.pyc
+${PYSITELIB}/Cython/Compiler/Tests/TestTypes.pyo
 ${PYSITELIB}/Cython/Compiler/Tests/TestUtilityLoad.py
 ${PYSITELIB}/Cython/Compiler/Tests/TestUtilityLoad.pyc
 ${PYSITELIB}/Cython/Compiler/Tests/TestUtilityLoad.pyo
@@ -475,6 +476,7 @@ ${PYSITELIB}/Cython/Tests/__init__.pyo
 ${PYSITELIB}/Cython/Tests/xmlrunner.py
 ${PYSITELIB}/Cython/Tests/xmlrunner.pyc
 ${PYSITELIB}/Cython/Tests/xmlrunner.pyo
+${PYSITELIB}/Cython/Utility/AsyncGen.c
 ${PYSITELIB}/Cython/Utility/Buffer.c
 ${PYSITELIB}/Cython/Utility/Builtins.c
 ${PYSITELIB}/Cython/Utility/CConvert.pyx
