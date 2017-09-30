@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/04/05 15:54:26 wiz Exp $
-${PYSITELIB}/_cffi_backend.so
+@comment $NetBSD: PLIST,v 1.7 2017/09/30 13:09:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,9 +6,11 @@ ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/_cffi_backend.so
 ${PYSITELIB}/cffi/__init__.py
 ${PYSITELIB}/cffi/__init__.pyc
 ${PYSITELIB}/cffi/__init__.pyo
+${PYSITELIB}/cffi/_cffi_errors.h
 ${PYSITELIB}/cffi/_cffi_include.h
 ${PYSITELIB}/cffi/_embedding.h
 ${PYSITELIB}/cffi/api.py
