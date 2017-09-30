@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4215 2017/09/30 08:21:51 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4216 2017/09/30 09:38:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6001,3 +6001,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/firefox to 56.0 [ryoon 2017-09-30]
 	Updated www/firefox-l10n to 56.0 [ryoon 2017-09-30]
 	Updated finance/gnucash to 2.6.18.1 [wiz 2017-09-30]
+	Updated www/py-uwsgitop to 0.10 [adam 2017-09-30]
+	Updated textproc/py-pytoml to 0.1.14 [adam 2017-09-30]
