@@ -166,6 +166,7 @@ BEGIN {
 			cmd = "cd " shquote(dir) " && " PWD_CMD
 			while ((cmd | getline pkgpath) > 0) {
 				if (!(pkgpath in pkgsrcdirs)) {
+					pkgpaths[P++] = pkgpath
 					pkgsrcdirs[pkgpath] = dir
 				}
 				D = ++patterns[pkgpath, 0]
@@ -178,7 +179,8 @@ BEGIN {
 		}
 	}
 
-	for (pkgpath in pkgsrcdirs) {
+	for (p = 0; p < P; p++) {
+		pkgpath = pkgpaths[p]
 		dir = pkgsrcdirs[pkgpath]
 		D = patterns[pkgpath, 0]
 		for (d = 1; d <= D; d++) {
@@ -206,7 +208,8 @@ BEGIN {
 			if (gt_bound) gt_patterns[base ">"  gt_bound] = gt_bound
 			if (ge_bound) ge_patterns[base ">=" ge_bound] = ge_bound
 			if (!(lt_bound || le_bound || gt_bound || ge_bound)) {
-				add_reduced(reduced, pattern, dir)
+				depend = pattern ":" dir
+				if (!(depend in reduced)) reduced[depend] = ++N
 			} else {
 				pkgbase[pkgpath] = base
 			}
@@ -254,11 +257,13 @@ BEGIN {
 		    ((gt == ">" && version_cmp(lower_bound, ">=", upper_bound)) ||
 		     (gt == ">=" && version_cmp(lower_bound, ">", upper_bound)))) {
 			for (d = 1; d <= D; d++) {
-				add_reduced(reduced, patterns[pkgpath, d], dir)
+				depend = patterns[pkgpath, d] ":" dir
+				if (!(depend in reduced)) reduced[depend] = ++N
 			}
 		} else if (lower_bound || upper_bound) {
 			pattern = pkgbase[pkgpath] gt lower_bound lt upper_bound
-			add_reduced(reduced, pattern, dir)
+			depend = pattern ":" dir
+			if (!(depend in reduced)) reduced[depend] = ++N
 		}
 
 		delete lt_patterns
@@ -267,17 +272,7 @@ BEGIN {
 		delete ge_patterns
 	}
 
-	# Output reduced dependencies in sorted order.
-	N = 1
-	for(pattern in reduced) output[N++] = pattern
-	for(i = 1; i < N; i++) {
-		pattern = output[i]
-		j = i - 1
-		while((j > 0) && (output[j] > pattern)) {
-			output[j+1] = output[j]
-			j--
-		}
-		output[j+1] = pattern
-	}
-	for (i = 1; i < N; i++) print(output[i])
+	# Output reduced dependencies.
+	for (depend in reduced) output[reduced[depend]] = depend
+	for (i = 1; i <= N; i++) print(output[i])
 }
