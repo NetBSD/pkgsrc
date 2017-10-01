@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2017/09/17 20:44:40 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/10/01 06:21:36 wiz Exp $
 
-DISTNAME=	Net-IPv6Addr-0.7
+DISTNAME=	Net-IPv6Addr-0.9
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
