@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2017/06/05 14:23:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2017/10/01 06:20:33 wiz Exp $
 
-DISTNAME=	Git-Repository-1.320
+DISTNAME=	Git-Repository-1.321
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Git/}
 
