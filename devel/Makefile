@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2539 2017/09/30 04:45:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.2540 2017/10/01 23:46:54 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -1837,7 +1837,12 @@ SUBDIR+=	py-blinker
 SUBDIR+=	py-boost
 SUBDIR+=	py-bugzilla
 SUBDIR+=	py-buildbot
+SUBDIR+=	py-buildbot-console-view
+SUBDIR+=	py-buildbot-grid-view
+SUBDIR+=	py-buildbot-pkg
+SUBDIR+=	py-buildbot-waterfall-view
 SUBDIR+=	py-buildbot-worker
+SUBDIR+=	py-buildbot-www
 SUBDIR+=	py-cached-property
 SUBDIR+=	py-cachetools
 SUBDIR+=	py-capstone
