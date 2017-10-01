@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2017/10/01 23:45:50 joerg Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/buildbot_www/VERSION
+${PYSITELIB}/buildbot_www/__init__.py
+${PYSITELIB}/buildbot_www/__init__.pyc
+${PYSITELIB}/buildbot_www/__init__.pyo
+${PYSITELIB}/buildbot_www/static/d3.min.js
+${PYSITELIB}/buildbot_www/static/fonts/FontAwesome.otf
+${PYSITELIB}/buildbot_www/static/fonts/fontawesome-webfont.eot
+${PYSITELIB}/buildbot_www/static/fonts/fontawesome-webfont.svg
+${PYSITELIB}/buildbot_www/static/fonts/fontawesome-webfont.ttf
+${PYSITELIB}/buildbot_www/static/fonts/fontawesome-webfont.woff
+${PYSITELIB}/buildbot_www/static/img/favicon.ico
+${PYSITELIB}/buildbot_www/static/img/nobody.png
+${PYSITELIB}/buildbot_www/static/index.html
+${PYSITELIB}/buildbot_www/static/scripts.js
+${PYSITELIB}/buildbot_www/static/styles.css
+${PYSITELIB}/buildbot_www/static/tests.js
