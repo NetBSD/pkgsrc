@@ -1,4 +1,4 @@
--- $NetBSD: Kyuafile,v 1.1 2017/06/01 02:09:43 jlam Exp $
+-- $NetBSD: Kyuafile,v 1.2 2017/10/01 04:00:40 jlam Exp $
 --[[-----------------------------------------------------------------------
 Copyright (c) 2017 The NetBSD Foundation, Inc.
 All rights reserved.
@@ -46,4 +46,5 @@ syntax( 2 )
 
 test_suite( "pkgsrc_pkgformat_pkg" )
 
+atf_test_program { name = "reduce-depends_test" }
 atf_test_program { name = "scripts_test" }
