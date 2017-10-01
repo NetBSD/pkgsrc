@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2017/10/01 23:44:31 joerg Exp $
+${PYSITELIB}/buildbot_pkg-2017.10.1-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/buildbot_pkg-2017.10.1-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/buildbot_pkg-2017.10.1-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/buildbot_pkg-2017.10.1-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/buildbot_pkg-2017.10.1-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/buildbot_pkg.py
+${PYSITELIB}/buildbot_pkg.pyc
+${PYSITELIB}/buildbot_pkg.pyo
