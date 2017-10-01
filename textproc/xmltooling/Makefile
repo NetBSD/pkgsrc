@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/08/24 20:03:40 adam Exp $
+# $NetBSD: Makefile,v 1.27 2017/10/01 08:46:37 wiz Exp $
 
 DISTNAME=	xmltooling-1.5.6
 PKGREVISION=	4
@@ -9,6 +9,8 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://shibboleth.net/
 COMMENT=	High level interface for XML processing library
 LICENSE=	apache-2.0
+
+BROKEN=		xerces-c needs C++11, but xmltooling does not support this yet
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
