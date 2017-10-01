@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4234 2017/10/01 09:37:12 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4235 2017/10/01 09:46:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6030,3 +6030,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/p5-DBICx-Sugar to 0.0200 [wiz 2017-10-01]
 	Updated www/seamonkey to 2.48nb3 [ryoon 2017-10-01]
 	Updated audio/libopenmpt to 0.3.1 [wiz 2017-10-01]
+	Updated textproc/xqilla to 2.3.3 [wiz 2017-10-01]
