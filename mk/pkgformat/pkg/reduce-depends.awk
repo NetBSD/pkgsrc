@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: reduce-depends.awk,v 1.5 2017/10/01 04:00:40 jlam Exp $
+# $NetBSD: reduce-depends.awk,v 1.6 2017/10/01 17:57:18 jlam Exp $
 #
 # Copyright (c) 2006-2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -111,7 +111,7 @@ function get_endpoint(cmp, patterns, 	endpoint, key, match_all, pattern, pkg)
 	endpoint = ""			# return value if patterns array is empty
 	for (key in patterns) {
 		endpoint = patterns[key]
-		pkg = shquote(gensub(cmp, "-", 1, key))
+		pkg = key; sub(cmp, "-", pkg); pkg = shquote(pkg)
 		match_all = 1
 		for (pattern in patterns) {
 			if (key == pattern) continue
