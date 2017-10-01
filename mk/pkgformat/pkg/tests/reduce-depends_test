@@ -1,0 +1,421 @@
+#!/usr/bin/env atf-sh
+#
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	AWK
+#		The name or path to the awk(1) utility.
+#
+#	PKGSRCDIR
+#		The location of the pkgsrc source tree.  The default is
+#		"/usr/pkgsrc".
+
+write_contents()
+{
+	local file="$1"; shift
+	echo ">>> $file"
+	cat "$file"
+	echo "<<< $file"
+}
+
+check_reduce()
+{
+	: ${AWK:=awk}
+	: ${PKGSRCDIR:=/usr/pkgsrc}
+
+	local input="$1"; shift
+	local expected="$1"; shift
+
+	case $input in
+	/*)	;;
+	*)	input="${HOME}/$input" ;;
+	esac
+
+	( cd ${PKGSRCDIR}/pkgtools/pkg_install &&
+	  ${AWK} -f ${PKGSRCDIR}/mk/pkgformat/pkg/reduce-depends.awk \
+	  	"$(cat $input)"
+	) > value
+
+	if cmp expected value; then
+		: "success"
+	else
+		write_contents expected
+		write_contents value
+		atf_fail "output does not match expected"
+	fi
+}
+
+
+###
+### skip_irreducible_depends_test
+###
+
+atf_test_case skip_irreducible_depends_test
+
+skip_irreducible_depends_test_head()
+{
+	atf_set "descr" "skip irreducible dependencies"
+}
+
+skip_irreducible_depends_test_body()
+{
+	cat > input << EOF
+cwrappers-1{,nb1}:../../pkgtools/cwrappers
+pkg_install>=1:../../pkgtools/pkg_install
+pkg_install<2:../../pkgtools/pkg_install
+pkg_install-{0nb3,1nb2}:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+cwrappers-1{,nb1}:../../pkgtools/cwrappers
+pkg_install-{0nb3,1nb2}:../../pkgtools/pkg_install
+pkg_install>=1<2:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### less_or_equal_depends_test
+###
+
+atf_test_case less_or_equal_depends_test
+
+less_or_equal_depends_test_head()
+{
+	atf_set "descr" "reduce only <="
+}
+
+less_or_equal_depends_test_body()
+{
+	cat > input << EOF
+pkg_install<=1:../../pkgtools/pkg_install
+pkg_install<=2:../../pkgtools/pkg_install
+pkg_install<=3:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install<=1:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### less_depends_test
+###
+
+atf_test_case less_depends_test
+
+less_depends_test_head()
+{
+	atf_set "descr" "reduce only <"
+}
+
+less_depends_test_body()
+{
+	cat > input << EOF
+pkg_install<1:../../pkgtools/pkg_install
+pkg_install<2:../../pkgtools/pkg_install
+pkg_install<3:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install<1:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### greater_or_equal_depends_test
+###
+
+atf_test_case greater_or_equal_depends_test
+
+greater_or_equal_depends_test_head()
+{
+	atf_set "descr" "reduce only >="
+}
+
+greater_or_equal_depends_test_body()
+{
+	cat > input << EOF
+pkg_install>=1:../../pkgtools/pkg_install
+pkg_install>=2:../../pkgtools/pkg_install
+pkg_install>=3:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install>=3:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### greater_depends_test
+###
+
+atf_test_case greater_depends_test
+
+greater_depends_test_head()
+{
+	atf_set "descr" "reduce only >"
+}
+
+greater_depends_test_body()
+{
+	cat > input << EOF
+pkg_install>1:../../pkgtools/pkg_install
+pkg_install>2:../../pkgtools/pkg_install
+pkg_install>3:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install>3:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### less_and_less_equal_same_bound_test
+###
+
+atf_test_case less_and_less_equal_same_bound_test
+
+less_and_less_equal_same_bound_test_head()
+{
+	atf_set "descr" "reduce < and <=, same bound"
+}
+
+less_and_less_equal_same_bound_test_body()
+{
+	cat > input << EOF
+pkg_install<1:../../pkgtools/pkg_install
+pkg_install<=1:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install<1:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### greater_and_greater_equal_same_bound_test
+###
+
+atf_test_case greater_and_greater_equal_same_bound_test
+
+greater_and_greater_equal_same_bound_test_head()
+{
+	atf_set "descr" "reduce > and >=, same bound"
+}
+
+greater_and_greater_equal_same_bound_test_body()
+{
+	cat > input << EOF
+pkg_install>1:../../pkgtools/pkg_install
+pkg_install>=1:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install>1:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### lower_and_upper_bounds_test
+###
+
+atf_test_case lower_and_upper_bounds_test
+
+lower_and_upper_bounds_test_head()
+{
+	atf_set "descr" "reduce >, >=, <, and <= into one interval"
+}
+
+lower_and_upper_bounds_test_body()
+{
+	cat > input << EOF
+pkg_install>1:../../pkgtools/pkg_install
+pkg_install>=1:../../pkgtools/pkg_install
+pkg_install<2:../../pkgtools/pkg_install
+pkg_install<=2:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install>1<2:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### overlapping_intervals_test
+###
+
+atf_test_case overlapping_intervals_test
+
+overlapping_intervals_test_head()
+{
+	atf_set "descr" "reduce overlapping intervals"
+}
+
+overlapping_intervals_test_body()
+{
+	cat > input << EOF
+pkg_install>1<3:../../pkgtools/pkg_install
+pkg_install>2<4:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install>2<3:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### disjoint_test
+###
+
+atf_test_case disjoint_test
+
+disjoint_test_head()
+{
+	atf_set "descr" "can't reduce disjoint intervals"
+}
+
+disjoint_test_body()
+{
+	cat > input << EOF
+pkg_install<1:../../pkgtools/pkg_install
+pkg_install>1:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install<1:../../pkgtools/pkg_install
+pkg_install>1:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### strings_in_versions_test
+###
+
+atf_test_case strings_in_versions_test
+
+strings_in_versions_test_head()
+{
+	atf_set "descr" "strings as separators in versions strings"
+}
+
+strings_in_versions_test_body()
+{
+	cat > input << EOF
+pkg_install>=1.0<2.0:../../pkgtools/pkg_install
+pkg_install>1.1beta3nb2:../../pkgtools/pkg_install
+pkg_install<1.2:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install>1.1beta3nb2<1.2:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### underscores_in_versions_test
+###
+
+atf_test_case underscores_in_versions_test
+
+underscores_in_versions_test_head()
+{
+	atf_set "descr" "underscores in versions strings"
+}
+
+underscores_in_versions_test_body()
+{
+	cat > input << EOF
+pkg_install>=1.0_beta3:../../pkgtools/pkg_install
+pkg_install<1.2:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install>=1.0_beta3<1.2:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### multiple_package_dependencies_test
+###
+
+atf_test_case multiple_package_dependencies_test
+
+multiple_package_dependencies_test_head()
+{
+	atf_set "descr" "multiple package dependencies"
+}
+
+multiple_package_dependencies_test_body()
+{
+	cat > input << EOF
+cwrappers>1:../../pkgtools/cwrappers
+cwrappers>=1:../../pkgtools/cwrappers
+cwrappers<2:../../pkgtools/cwrappers
+cwrappers<=2:../../pkgtools/cwrappers
+pkg_install>=1.0<2.0:../../pkgtools/pkg_install
+pkg_install>1.1beta3nb2:../../pkgtools/pkg_install
+pkg_install<1.2:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+cwrappers>1<2:../../pkgtools/cwrappers
+pkg_install>1.1beta3nb2<1.2:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+atf_init_test_cases()
+{
+	atf_add_test_case skip_irreducible_depends_test
+	atf_add_test_case less_or_equal_depends_test
+	atf_add_test_case less_depends_test
+	atf_add_test_case greater_or_equal_depends_test
+	atf_add_test_case greater_depends_test
+	atf_add_test_case less_and_less_equal_same_bound_test
+	atf_add_test_case greater_and_greater_equal_same_bound_test
+	atf_add_test_case lower_and_upper_bounds_test
+	atf_add_test_case overlapping_intervals_test
+	atf_add_test_case disjoint_test
+	atf_add_test_case strings_in_versions_test
+	atf_add_test_case underscores_in_versions_test
+	atf_add_test_case multiple_package_dependencies_test
+}
