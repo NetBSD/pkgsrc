@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2017/08/14 20:26:36 wiz Exp $
+$NetBSD: distinfo,v 1.23 2017/10/01 09:37:00 wiz Exp $
 
-SHA1 (libopenmpt-0.2.8760-beta27-autotools.tar.gz) = 5b2ac9aafb1085443cf723514e45cf764c76efb3
-RMD160 (libopenmpt-0.2.8760-beta27-autotools.tar.gz) = d654c437cb90556d4c7eec57a193c183fcf71af7
-SHA512 (libopenmpt-0.2.8760-beta27-autotools.tar.gz) = 666d3d50def9f49eea70b0e9ac3d2b380e92f8db04fbc86fcfc3aea5dde1098535a82acbf749766066a5213b5deb96c11f742d4e05fe05f1fa4ef821c52faf72
-Size (libopenmpt-0.2.8760-beta27-autotools.tar.gz) = 1287276 bytes
+SHA1 (libopenmpt-0.3.1+release.autotools.tar.gz) = bb76233648def6d8b61ccbd32296ec3fa1d636a2
+RMD160 (libopenmpt-0.3.1+release.autotools.tar.gz) = 11efcc52b1752d69c1feeedf9f6bab7c8e88dc3b
+SHA512 (libopenmpt-0.3.1+release.autotools.tar.gz) = ff57ae9aa68e322840939dbfd4ee04dc9449387da9514dce66c1995414cd3010c80aedcfb6f7c70d839f6e6588802d7be24e5c9601a7f393450eb10e454b50a8
+Size (libopenmpt-0.3.1+release.autotools.tar.gz) = 1372292 bytes
