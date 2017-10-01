@@ -1,4 +1,7 @@
-$NetBSD: patch-txgithub_scripts_gist.py,v 1.1 2017/09/30 20:58:00 joerg Exp $
+$NetBSD: patch-txgithub_scripts_gist.py,v 1.2 2017/10/01 09:52:19 wiz Exp $
+
+Fix for python-3.x.
+https://github.com/tomprince/txgithub/issues/13
 
 --- txgithub/scripts/gist.py.orig	2017-09-30 20:47:17.806190554 +0000
 +++ txgithub/scripts/gist.py
