@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/10/01 23:44:52 joerg Exp $
+
+SHA1 (buildbot-console-view-0.9.11.tar.gz) = e1cb0a2baadc2eeb123862007a824c63e33d8fea
+RMD160 (buildbot-console-view-0.9.11.tar.gz) = 91be975417eb43a938724cb93d97174e30fa5606
+SHA512 (buildbot-console-view-0.9.11.tar.gz) = 24a7915713665aeefe0389fa2aae1cdbde2b0dea0041b4a00410b77956b76897a9a427658303bf976916c5a0e3bb373a4a21339f4ded0b716d80ec380ad16cb4
+Size (buildbot-console-view-0.9.11.tar.gz) = 640623 bytes
