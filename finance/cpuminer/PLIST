@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/10/01 15:07:14 khorben Exp $
+bin/minerd
+man/man1/minerd.1
+share/examples/cpuminer/minerd.conf
