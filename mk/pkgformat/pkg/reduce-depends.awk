@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: reduce-depends.awk,v 1.6 2017/10/01 17:57:18 jlam Exp $
+# $NetBSD: reduce-depends.awk,v 1.7 2017/10/01 22:58:19 jlam Exp $
 #
 # Copyright (c) 2006-2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -80,6 +80,11 @@ function version_cmp(v1, cmp, v2,	cmd, pattern, pkg)
 		return 1
 	}
 	return 0
+}
+
+function delete_array(array,	key)
+{
+	for (key in array) delete array[key]
 }
 
 ###
@@ -266,10 +271,10 @@ BEGIN {
 			if (!(depend in reduced)) reduced[depend] = ++N
 		}
 
-		delete lt_patterns
-		delete le_patterns
-		delete gt_patterns
-		delete ge_patterns
+		delete_array(lt_patterns)
+		delete_array(le_patterns)
+		delete_array(gt_patterns)
+		delete_array(ge_patterns)
 	}
 
 	# Output reduced dependencies.
