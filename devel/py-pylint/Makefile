@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/09/30 09:47:03 adam Exp $
+# $NetBSD: Makefile,v 1.17 2017/10/01 23:30:50 joerg Exp $
 
 DISTNAME=	pylint-1.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,6 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-backports.functools_lru_cache-[0-9]*:../../devel/py-bac
 DEPENDS+=	${PYPKGPREFIX}-configparser-[0-9]*:../../devel/py-configparser
 DEPENDS+=	${PYPKGPREFIX}-singledispatch-[0-9]*:../../devel/py-singledispatch
 .endif
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
