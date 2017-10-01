@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/11/06 02:38:21 wen Exp $
+$NetBSD: distinfo,v 1.4 2017/10/01 06:58:56 wiz Exp $
 
-SHA1 (DBICx-Sugar-0.0100.tar.gz) = 20a46958881b80a1e2963a94ab19d75203159f8e
-RMD160 (DBICx-Sugar-0.0100.tar.gz) = 27b6b152edd549c7a63946810956e699f0c316dd
-SHA512 (DBICx-Sugar-0.0100.tar.gz) = f034da76509a6c80f23739aa8cc7971f738d39c32a0841d68030308fbdc2ba63de08acb4dcd140c8bcd1e951ec52ca2ec7b3dfa0a04c6b0c4a2da1c67a3daac7
-Size (DBICx-Sugar-0.0100.tar.gz) = 17009 bytes
+SHA1 (DBICx-Sugar-0.0200.tar.gz) = cb0f7bc773559421d5d87992491ac50adbdb9881
+RMD160 (DBICx-Sugar-0.0200.tar.gz) = b4a85be5469e3065e837e115d21ef595ee47c10b
+SHA512 (DBICx-Sugar-0.0200.tar.gz) = 6220362dfec558ac8053d3ff097fd09fdec7b7309e441d723c6f79764a17ffd23057d10516c4d2a5a59ebf8c77e81fa50d5f59e7c47807ad658b83a61c1187fb
+Size (DBICx-Sugar-0.0200.tar.gz) = 19652 bytes
