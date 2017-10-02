@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4265 2017/10/02 15:35:45 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4266 2017/10/02 15:38:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6066,3 +6066,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/libfilezilla to 0.11.0 [wiz 2017-10-02]
 	Updated net/filezilla to 3.28.0 [wiz 2017-10-02]
 	Updated graphics/librsvg to 2.40.18 [wiz 2017-10-02]
+	Updated security/libsecret to 0.18.5 [wiz 2017-10-02]
