@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.46 2017/04/26 13:43:21 mef Exp $
+$NetBSD: distinfo,v 1.47 2017/10/02 13:44:08 wiz Exp $
 
-SHA1 (iso-codes-3.75.tar.xz) = 61a95d96f46a074fe3611ec1a505d549bb7b7f15
-RMD160 (iso-codes-3.75.tar.xz) = 74a3d4a4701bbf06c1412dbf1c5f7a16a56ca6c7
-SHA512 (iso-codes-3.75.tar.xz) = 157899048cec091864ad8a7723314e28a0ccc4a0e1a5c2101bb630baf1a034bf117e38263e3c95e0135ba9d3a4d76635c8201c50a54e25f6af24c87253b8b40e
-Size (iso-codes-3.75.tar.xz) = 3461424 bytes
+SHA1 (iso-codes-3.76.tar.xz) = 78c35aad9edfcad19dde878940168ed4bc1596c5
+RMD160 (iso-codes-3.76.tar.xz) = aea178de24f4063fc28c5ace02c37d4b40c2fb46
+SHA512 (iso-codes-3.76.tar.xz) = a0f6714a79a52b5dab82a268e85cb2d019ff5255744b88d088dcd7d5a15eb9710876a338a0a5d0f5659b4146bc6cc53d6d3474d621b3dcca7c47afabfc7e0dfa
+Size (iso-codes-3.76.tar.xz) = 3474728 bytes
 SHA1 (patch-bin_xml__from__json.py) = 39fc944725377362faa3b39d03e164c7d57f1497
