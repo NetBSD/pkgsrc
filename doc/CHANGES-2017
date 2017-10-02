@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4260 2017/10/02 15:15:31 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4261 2017/10/02 15:16:37 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6061,3 +6061,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/notmuch to 0.25.1 [wiz 2017-10-02]
 	Updated audio/openal-soft to 1.18.2 [wiz 2017-10-02]
 	Updated databases/shared-mime-info to 1.9 [wiz 2017-10-02]
+	Updated sysutils/syslog-ng to 3.12.1 [fhajny 2017-10-02]
