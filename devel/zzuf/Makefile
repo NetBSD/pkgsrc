@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/04/16 21:46:12 khorben Exp $
+# $NetBSD: Makefile,v 1.6 2017/10/02 13:36:32 wiedi Exp $
 #
 
 DISTNAME=	zzuf-0.15
@@ -9,6 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://caca.zoy.org/wiki/zzuf/
 COMMENT=	Transparent application input fuzzer
 
+USE_LANGUAGES=	c99
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
@@ -38,6 +39,8 @@ NETBSDLIB.rt!=								\
 	fi || ${TRUE};							\
 	echo "$$lib"
 .endif
+
+CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 
 TEST_TARGET=	check
 
