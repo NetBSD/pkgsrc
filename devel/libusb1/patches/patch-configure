@@ -1,26 +1,9 @@
-$NetBSD: patch-configure,v 1.4 2016/04/09 08:18:58 richard Exp $
+$NetBSD: patch-configure,v 1.5 2017/10/02 13:20:28 leot Exp $
 
-prepare DragonFlyBSD and SunOS backend support
+prepare DragonFlyBSD backend support
 
 --- configure.orig	2016-03-25 05:42:03.826039410 +0000
 +++ configure
-@@ -657,6 +657,8 @@ OS_WINDOWS_FALSE
- OS_WINDOWS_TRUE
- OS_NETBSD_FALSE
- OS_NETBSD_TRUE
-+OS_SUNOS_FALSE
-+OS_SUNOS_TRUE
- OS_OPENBSD_FALSE
- OS_OPENBSD_TRUE
- OS_DARWIN_FALSE
-@@ -666,6 +668,7 @@ OS_LINUX_TRUE
- OS_HAIKU
- OS_WINDOWS
- OS_NETBSD
-+OS_SUNOS
- OS_OPENBSD
- OS_DARWIN
- USE_UDEV
 @@ -11939,6 +11942,11 @@ $as_echo "OpenBSD" >&6; }
  	backend="openbsd"
  	threads="posix"
@@ -33,75 +16,3 @@ prepare DragonFlyBSD and SunOS backend support
  *-netbsd*)
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: NetBSD" >&5
  $as_echo "NetBSD" >&6; }
-@@ -11969,6 +11977,13 @@ subdirs="$subdirs libusb/os/haiku"
- 	backend="haiku"
- 	threads="posix"
- 	;;
-+*-solaris*)
-+	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: SunOS" >&5
-+$as_echo "SunOS" >&6; }
-+	backend="sunos"
-+	threads="posix"
-+	;;
-+
- *)
- 	as_fn_error $? "unsupported operating system" "$LINENO" 5
- esac
-@@ -12230,6 +12245,31 @@ done
- $as_echo "#define POLL_NFDS_TYPE nfds_t" >>confdefs.h
- 
- 	;;
-+
-+sunos)
-+
-+$as_echo "#define OS_SUNOS 1" >>confdefs.h
-+
-+
-+	THREAD_CFLAGS="-pthread"
-+	LIBS="-pthread -ldevinfo"
-+	for ac_header in poll.h
-+do :
-+  ac_fn_c_check_header_mongrel "$LINENO" "poll.h" "ac_cv_header_poll_h" "$ac_includes_default"
-+if test "x$ac_cv_header_poll_h" = xyes; then :
-+  cat >>confdefs.h <<_ACEOF
-+#define HAVE_POLL_H 1
-+_ACEOF
-+
-+fi
-+
-+done
-+
-+
-+$as_echo "#define POLL_NFDS_TYPE nfds_t" >>confdefs.h
-+
-+	;;
-+
- netbsd)
- 
- $as_echo "#define OS_NETBSD 1" >>confdefs.h
-@@ -12317,6 +12357,14 @@ else
-   OS_OPENBSD_FALSE=
- fi
- 
-+ if test "x$backend" = xsunos; then
-+  OS_SUNOS_TRUE=
-+  OS_SUNOS_FALSE='#'
-+else
-+  OS_SUNOS_TRUE='#'
-+  OS_SUNOS_FALSE=
-+fi
-+
-  if test "x$backend" = xnetbsd; then
-   OS_NETBSD_TRUE=
-   OS_NETBSD_FALSE='#'
-@@ -12834,6 +12882,10 @@ if test -z "${OS_OPENBSD_TRUE}" && test
-   as_fn_error $? "conditional \"OS_OPENBSD\" was never defined.
- Usually this means the macro was only invoked conditionally." "$LINENO" 5
- fi
-+if test -z "${OS_SUNOS_TRUE}" && test -z "${OS_SUNOS_FALSE}"; then
-+  as_fn_error $? "conditional \"OS_SUNOS\" was never defined.
-+Usually this means the macro was only invoked conditionally." "$LINENO" 5
-+fi
- if test -z "${OS_NETBSD_TRUE}" && test -z "${OS_NETBSD_FALSE}"; then
-   as_fn_error $? "conditional \"OS_NETBSD\" was never defined.
- Usually this means the macro was only invoked conditionally." "$LINENO" 5
