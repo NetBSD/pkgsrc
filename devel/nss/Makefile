@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.140 2017/09/26 10:59:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.141 2017/10/02 20:45:11 leot Exp $
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
+PKGREVISION=		1
 NSS_RELEASE=		3.33.0
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_DIST_DIR_VERSION:S/_0$//}_RTM/src/}
@@ -16,6 +17,7 @@ CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}js/src/configure
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}configure
 
 USE_GCC_RUNTIME=	yes
+USE_LANGUAGES=		c99
 USE_TOOLS+=		gmake perl pax pkg-config
 MAKE_JOBS_SAFE=		no
 
