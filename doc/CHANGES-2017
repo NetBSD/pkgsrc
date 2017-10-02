@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4259 2017/10/02 15:13:53 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4260 2017/10/02 15:15:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6060,3 +6060,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated converters/libzmf to 0.0.2 [wiz 2017-10-02]
 	Updated mail/notmuch to 0.25.1 [wiz 2017-10-02]
 	Updated audio/openal-soft to 1.18.2 [wiz 2017-10-02]
+	Updated databases/shared-mime-info to 1.9 [wiz 2017-10-02]
