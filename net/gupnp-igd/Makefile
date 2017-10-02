@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2017/09/18 09:53:02 maya Exp $
+# $NetBSD: Makefile,v 1.39 2017/10/02 15:46:43 wiz Exp $
 
-DISTNAME=	gupnp-igd-0.2.3
-PKGREVISION=	10
+DISTNAME=	gupnp-igd-0.2.4
 CATEGORIES=	net devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gupnp-igd/0.2/}
 EXTRACT_SUFX=	.tar.xz
