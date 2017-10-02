@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.122 2017/09/20 02:57:31 schmonz Exp $
+$NetBSD: distinfo,v 1.123 2017/10/02 03:27:29 schmonz Exp $
 
-SHA1 (ikiwiki_3.20170622.tar.xz) = 96e7582c93a3db23ac9600b5e24bff71a6dbc4be
-RMD160 (ikiwiki_3.20170622.tar.xz) = 97fd8872a5782592fa29f31eae96f8bc15573ca9
-SHA512 (ikiwiki_3.20170622.tar.xz) = f3d257a4aac3b5009462312381ee4904fe5032a0408a4988cdea3e1997f94d2e13bae0dd5b9228623ccd001b37539c33135db56025a1b46df6b6955502e9e9eb
-Size (ikiwiki_3.20170622.tar.xz) = 2633776 bytes
-SHA1 (patch-po_underlays_basewiki_ikiwiki_wikilink.da.po) = de90c6a3914545c706ffb5b9ec7249dc00bc6460
-SHA1 (patch-po_underlays_directives_ikiwiki_directive_meta.de.po) = 5a7f3e3bb4d4eca55379beb564974582f67985b2
+SHA1 (ikiwiki_3.20171001.tar.xz) = 9a9ca402e38abed89449609ddfc988ce3c60b316
+RMD160 (ikiwiki_3.20171001.tar.xz) = 3dff6be4423cd890bd434816634b2d13be996165
+SHA512 (ikiwiki_3.20171001.tar.xz) = 1f5c5a48aa95e6e3898fdb40826f90d554ff328c367133e69a2a2da4c9286e0e54ba2f2dcd57ff452fa3105c92b4d72297d771688661fb8ecf22b7a0cf78bd97
+Size (ikiwiki_3.20171001.tar.xz) = 2638780 bytes
