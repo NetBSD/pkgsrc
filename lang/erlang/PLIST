@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2017/07/04 11:40:48 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.28 2017/10/02 18:10:38 fhajny Exp $
 bin/ct_run
 bin/dialyzer
 bin/epmd
@@ -1262,6 +1262,7 @@ lib/erlang/lib/diameter-${VERSION.diameter}/ebin/diameter_gen_acct_rfc6733.beam
 lib/erlang/lib/diameter-${VERSION.diameter}/ebin/diameter_gen_base_accounting.beam
 lib/erlang/lib/diameter-${VERSION.diameter}/ebin/diameter_gen_base_rfc3588.beam
 lib/erlang/lib/diameter-${VERSION.diameter}/ebin/diameter_gen_base_rfc6733.beam
+lib/erlang/lib/diameter-${VERSION.diameter}/ebin/diameter_gen_doic_rfc7683.beam
 lib/erlang/lib/diameter-${VERSION.diameter}/ebin/diameter_gen_relay.beam
 lib/erlang/lib/diameter-${VERSION.diameter}/ebin/diameter_info.beam
 lib/erlang/lib/diameter-${VERSION.diameter}/ebin/diameter_lib.beam
@@ -1307,6 +1308,7 @@ lib/erlang/lib/diameter-${VERSION.diameter}/include/diameter_gen_acct_rfc6733.hr
 lib/erlang/lib/diameter-${VERSION.diameter}/include/diameter_gen_base_accounting.hrl
 lib/erlang/lib/diameter-${VERSION.diameter}/include/diameter_gen_base_rfc3588.hrl
 lib/erlang/lib/diameter-${VERSION.diameter}/include/diameter_gen_base_rfc6733.hrl
+lib/erlang/lib/diameter-${VERSION.diameter}/include/diameter_gen_doic_rfc7683.hrl
 lib/erlang/lib/diameter-${VERSION.diameter}/include/diameter_gen_relay.hrl
 lib/erlang/lib/diameter-${VERSION.diameter}/src/base/diameter.erl
 lib/erlang/lib/diameter-${VERSION.diameter}/src/base/diameter_app.erl
@@ -1345,12 +1347,14 @@ lib/erlang/lib/diameter-${VERSION.diameter}/src/dict/acct_rfc6733.dia
 lib/erlang/lib/diameter-${VERSION.diameter}/src/dict/base_accounting.dia
 lib/erlang/lib/diameter-${VERSION.diameter}/src/dict/base_rfc3588.dia
 lib/erlang/lib/diameter-${VERSION.diameter}/src/dict/base_rfc6733.dia
+lib/erlang/lib/diameter-${VERSION.diameter}/src/dict/doic_rfc7683.dia
 lib/erlang/lib/diameter-${VERSION.diameter}/src/dict/relay.dia
 lib/erlang/lib/diameter-${VERSION.diameter}/src/gen/diameter_dict_parser.erl
 lib/erlang/lib/diameter-${VERSION.diameter}/src/gen/diameter_gen_acct_rfc6733.erl
 lib/erlang/lib/diameter-${VERSION.diameter}/src/gen/diameter_gen_base_accounting.erl
 lib/erlang/lib/diameter-${VERSION.diameter}/src/gen/diameter_gen_base_rfc3588.erl
 lib/erlang/lib/diameter-${VERSION.diameter}/src/gen/diameter_gen_base_rfc6733.erl
+lib/erlang/lib/diameter-${VERSION.diameter}/src/gen/diameter_gen_doic_rfc7683.erl
 lib/erlang/lib/diameter-${VERSION.diameter}/src/gen/diameter_gen_relay.erl
 lib/erlang/lib/diameter-${VERSION.diameter}/src/info/diameter_dbg.erl
 lib/erlang/lib/diameter-${VERSION.diameter}/src/info/diameter_info.erl
