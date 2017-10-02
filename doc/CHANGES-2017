@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4276 2017/10/02 20:45:36 leot Exp $
+$NetBSD: CHANGES-2017,v 1.4277 2017/10/02 22:45:34 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6079,3 +6079,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/erlang to 20.1 [fhajny 2017-10-02]
 	Updated audio/pulseaudio to 11.1 [ryoon 2017-10-02]
 	Updated devel/nss to 3.33nb1 [leot 2017-10-02]
+	Updated fonts/py-fonttools to 3.15.1 [khorben 2017-10-02]
