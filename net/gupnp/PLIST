@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/09/30 14:52:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/10/02 15:45:46 wiz Exp $
 bin/gupnp-binding-tool
 include/gupnp-1.0/libgupnp/gupnp-acl.h
 include/gupnp-1.0/libgupnp/gupnp-context-manager.h
@@ -42,6 +42,22 @@ share/gtk-doc/html/gupnp/api-context.html
 share/gtk-doc/html/gupnp/api-device-control.html
 share/gtk-doc/html/gupnp/api-device-impl.html
 share/gtk-doc/html/gupnp/api-device-info.html
+share/gtk-doc/html/gupnp/api-index-0-12-3.html
+share/gtk-doc/html/gupnp/api-index-0-13-0.html
+share/gtk-doc/html/gupnp/api-index-0-13-3.html
+share/gtk-doc/html/gupnp/api-index-0-17-0.html
+share/gtk-doc/html/gupnp/api-index-0-17-2.html
+share/gtk-doc/html/gupnp/api-index-0-19-1.html
+share/gtk-doc/html/gupnp/api-index-0-19-2.html
+share/gtk-doc/html/gupnp/api-index-0-20-11.html
+share/gtk-doc/html/gupnp/api-index-0-20-12.html
+share/gtk-doc/html/gupnp/api-index-0-20-3.html
+share/gtk-doc/html/gupnp/api-index-0-20-4.html
+share/gtk-doc/html/gupnp/api-index-0-20-5.html
+share/gtk-doc/html/gupnp/api-index-0-20-8.html
+share/gtk-doc/html/gupnp/api-index-0-20-9.html
+share/gtk-doc/html/gupnp/api-index-deprecated.html
+share/gtk-doc/html/gupnp/api-index-full.html
 share/gtk-doc/html/gupnp/api-tools.html
 share/gtk-doc/html/gupnp/api-utility.html
 share/gtk-doc/html/gupnp/api.html
@@ -55,7 +71,6 @@ share/gtk-doc/html/gupnp/gupnp-gupnp-service-introspection.html
 share/gtk-doc/html/gupnp/gupnp.devhelp2
 share/gtk-doc/html/gupnp/home.png
 share/gtk-doc/html/gupnp/index.html
-share/gtk-doc/html/gupnp/ix01.html
 share/gtk-doc/html/gupnp/left-insensitive.png
 share/gtk-doc/html/gupnp/left.png
 share/gtk-doc/html/gupnp/overview.html
