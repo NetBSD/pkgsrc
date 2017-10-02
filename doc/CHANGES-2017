@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4244 2017/10/02 12:54:55 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4245 2017/10/02 13:10:18 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6045,3 +6045,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-mercurial to 4.3.3 [wiz 2017-10-02]
 	Updated www/py-yarl to 0.13.0 [adam 2017-10-02]
 	Updated devel/py-dulwich to 0.18.4 [adam 2017-10-02]
+	Updated net/youtube-dl to 20171001 [leot 2017-10-02]
