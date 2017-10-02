@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2017/09/16 09:36:48 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/10/02 15:13:44 wiz Exp $
 
-DISTNAME=	openal-soft-1.18.1
+DISTNAME=	openal-soft-1.18.2
 CATEGORIES=	audio
 MASTER_SITES=	http://kcat.strangesoft.net/openal-releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -41,10 +41,6 @@ CMAKE_ARGS+=	-DALSOFT_NO_CONFIG_UTIL:BOOL=ON
 CMAKE_ARGS+=	-DALSOFT_REQUIRE_OSS:BOOL=OFF
 .else
 CMAKE_ARGS+=	-DALSOFT_REQUIRE_OSS:BOOL=ON
-.endif
-
-.if !empty(BUILTIN_LIB_FOUND.ossaudio:M[Yy][Ee][Ss])
-CMAKE_ARGS+=	-DEXTRA_LIBS=${LIBOSSAUDIO:Q}
 .endif
 
 CFLAGS+= -DSYS_CONF_DIR="\"${PKG_SYSCONFDIR}\""
