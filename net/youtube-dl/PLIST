@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2017/09/16 20:41:15 leot Exp $
+@comment $NetBSD: PLIST,v 1.49 2017/10/02 13:10:06 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -113,6 +113,9 @@ ${PYSITELIB}/youtube_dl/extractor/alphaporno.pyo
 ${PYSITELIB}/youtube_dl/extractor/amcnetworks.py
 ${PYSITELIB}/youtube_dl/extractor/amcnetworks.pyc
 ${PYSITELIB}/youtube_dl/extractor/amcnetworks.pyo
+${PYSITELIB}/youtube_dl/extractor/americastestkitchen.py
+${PYSITELIB}/youtube_dl/extractor/americastestkitchen.pyc
+${PYSITELIB}/youtube_dl/extractor/americastestkitchen.pyo
 ${PYSITELIB}/youtube_dl/extractor/amp.py
 ${PYSITELIB}/youtube_dl/extractor/amp.pyc
 ${PYSITELIB}/youtube_dl/extractor/amp.pyo
@@ -890,6 +893,9 @@ ${PYSITELIB}/youtube_dl/extractor/jpopsukitv.pyo
 ${PYSITELIB}/youtube_dl/extractor/jwplatform.py
 ${PYSITELIB}/youtube_dl/extractor/jwplatform.pyc
 ${PYSITELIB}/youtube_dl/extractor/jwplatform.pyo
+${PYSITELIB}/youtube_dl/extractor/kakao.py
+${PYSITELIB}/youtube_dl/extractor/kakao.pyc
+${PYSITELIB}/youtube_dl/extractor/kakao.pyo
 ${PYSITELIB}/youtube_dl/extractor/kaltura.py
 ${PYSITELIB}/youtube_dl/extractor/kaltura.pyc
 ${PYSITELIB}/youtube_dl/extractor/kaltura.pyo
@@ -1394,6 +1400,9 @@ ${PYSITELIB}/youtube_dl/extractor/pokemon.pyo
 ${PYSITELIB}/youtube_dl/extractor/polskieradio.py
 ${PYSITELIB}/youtube_dl/extractor/polskieradio.pyc
 ${PYSITELIB}/youtube_dl/extractor/polskieradio.pyo
+${PYSITELIB}/youtube_dl/extractor/popcorntv.py
+${PYSITELIB}/youtube_dl/extractor/popcorntv.pyc
+${PYSITELIB}/youtube_dl/extractor/popcorntv.pyo
 ${PYSITELIB}/youtube_dl/extractor/porn91.py
 ${PYSITELIB}/youtube_dl/extractor/porn91.pyc
 ${PYSITELIB}/youtube_dl/extractor/porn91.pyo
