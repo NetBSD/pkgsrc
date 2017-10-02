@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.309 2017/09/07 10:36:32 wiz Exp $
+# $NetBSD: Makefile,v 1.310 2017/10/02 22:08:50 khorben Exp $
 #
 
 COMMENT=	Fonts
@@ -111,6 +111,7 @@ SUBDIR+=	font-winitzki-cyrillic
 SUBDIR+=	font-xfree86-type1
 SUBDIR+=	fontconfig
 SUBDIR+=	fontforge
+SUBDIR+=	fonttools
 SUBDIR+=	freefont-ttf
 SUBDIR+=	freefonts
 SUBDIR+=	gbdfed
