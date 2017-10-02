@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4273 2017/10/02 15:54:35 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4274 2017/10/02 18:11:18 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6074,3 +6074,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/gupnp-igd to 0.2.4 [wiz 2017-10-02]
 	Updated net/dnsmasq to 2.78 [wiz 2017-10-02]
 	Updated net/openvpn to 2.4.4 [wiz 2017-10-02]
+	Updated lang/erlang-doc to 20.1 [fhajny 2017-10-02]
+	Updated lang/erlang-man to 20.1 [fhajny 2017-10-02]
+	Updated lang/erlang to 20.1 [fhajny 2017-10-02]
