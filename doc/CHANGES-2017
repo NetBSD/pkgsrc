@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4239 2017/10/01 23:50:19 joerg Exp $
+$NetBSD: CHANGES-2017,v 1.4240 2017/10/02 03:27:35 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6039,3 +6039,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-buildbot-pkg version 0.9.11 [joerg 2017-10-01]
 	Added devel/py-buildbot-waterfall-view version 0.9.11 [joerg 2017-10-01]
 	Added devel/py-buildbot-www version 0.9.11 [joerg 2017-10-01]
+	Updated www/ikiwiki to 3.20171001 [schmonz 2017-10-02]
