@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/09/26 17:23:05 mspo Exp $
+# $NetBSD: Makefile,v 1.2 2017/10/02 15:19:48 maya Exp $
 
 DISTNAME=	rakudo-2017.09
 PKGREVISION=	1
@@ -14,6 +14,8 @@ MAKE_JOBS_SAFE=	no
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl gmake
+
+TEST_TARGET=		test
 
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${PERL5}
