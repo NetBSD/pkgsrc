@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2017/07/04 11:40:48 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.27 2017/10/02 18:10:39 fhajny Exp $
 lib/erlang/doc/applications.html
 lib/erlang/doc/design_principles/applications.html
 lib/erlang/doc/design_principles/appup_cookbook.html
@@ -1149,6 +1149,7 @@ lib/erlang/lib/snmp-${VERSION.snmp}/doc/pdf/snmp-${VERSION.snmp}.pdf
 lib/erlang/lib/snmp-${VERSION.snmp}/info
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/SSH_app.html
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/SSH_protocols.png
+lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/configure_algos.html
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/index.html
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/introduction.html
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/notes.html
