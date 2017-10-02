@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/08/16 09:17:33 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/10/02 14:05:11 wiz Exp $
 bin/notify-send
 include/libnotify/notification.h
 include/libnotify/notify-enum-types.h
@@ -16,10 +16,12 @@ share/gtk-doc/html/libnotify/api-index-full.html
 share/gtk-doc/html/libnotify/ch01.html
 share/gtk-doc/html/libnotify/home.png
 share/gtk-doc/html/libnotify/index.html
-share/gtk-doc/html/libnotify/index.sgml
+share/gtk-doc/html/libnotify/left-insensitive.png
 share/gtk-doc/html/libnotify/left.png
 share/gtk-doc/html/libnotify/libnotify-notify.html
 share/gtk-doc/html/libnotify/libnotify.devhelp2
+share/gtk-doc/html/libnotify/right-insensitive.png
 share/gtk-doc/html/libnotify/right.png
 share/gtk-doc/html/libnotify/style.css
+share/gtk-doc/html/libnotify/up-insensitive.png
 share/gtk-doc/html/libnotify/up.png
