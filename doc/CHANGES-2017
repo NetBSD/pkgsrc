@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4275 2017/10/02 19:22:17 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.4276 2017/10/02 20:45:36 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6078,3 +6078,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/erlang-man to 20.1 [fhajny 2017-10-02]
 	Updated lang/erlang to 20.1 [fhajny 2017-10-02]
 	Updated audio/pulseaudio to 11.1 [ryoon 2017-10-02]
+	Updated devel/nss to 3.33nb1 [leot 2017-10-02]
