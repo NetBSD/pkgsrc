@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.10 2013/12/10 00:25:18 prlw1 Exp $
+$NetBSD: patch-ab,v 1.11 2017/10/02 15:35:35 wiz Exp $
 
 Allow gdk-pixbuf2/loaders.mk to do its thing.
 
---- gdk-pixbuf-loader/Makefile.in.orig	2012-04-16 17:07:37.000000000 +0000
+--- gdk-pixbuf-loader/Makefile.in.orig	2017-07-20 01:15:24.000000000 +0000
 +++ gdk-pixbuf-loader/Makefile.in
-@@ -706,10 +706,6 @@ uninstall-am: uninstall-gdk_pixbuf_modul
- @ENABLE_PIXBUF_LOADER_TRUE@	$(AM_V_GEN) ( $(GDK_PIXBUF_QUERYLOADERS) ./libpixbufloader-svg.la && $(GDK_PIXBUF_QUERYLOADERS)) > gdk-pixbuf.loaders 2>/dev/null
+@@ -854,10 +854,6 @@ uninstall-am: uninstall-gdk_pixbuf_modul
+ @ENABLE_PIXBUF_LOADER_TRUE@	$< > $@
  
  @ENABLE_PIXBUF_LOADER_TRUE@install-data-hook:
 -@ENABLE_PIXBUF_LOADER_TRUE@	if test -z "$(DESTDIR)"; then \
