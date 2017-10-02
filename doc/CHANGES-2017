@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4243 2017/10/02 12:11:36 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4244 2017/10/02 12:54:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6043,3 +6043,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/png to 1.6.34 [wiz 2017-10-02]
 	Updated textproc/py-pdfrw to 0.4 [adam 2017-10-02]
 	Updated devel/py-mercurial to 4.3.3 [wiz 2017-10-02]
+	Updated www/py-yarl to 0.13.0 [adam 2017-10-02]
+	Updated devel/py-dulwich to 0.18.4 [adam 2017-10-02]
