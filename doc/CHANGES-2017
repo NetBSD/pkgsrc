@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4262 2017/10/02 15:20:47 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4263 2017/10/02 15:22:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6063,3 +6063,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/shared-mime-info to 1.9 [wiz 2017-10-02]
 	Updated sysutils/syslog-ng to 3.12.1 [fhajny 2017-10-02]
 	Updated textproc/libexttextcat to 3.4.5 [wiz 2017-10-02]
+	Updated net/libfilezilla to 0.11.0 [wiz 2017-10-02]
