@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2017/08/31 12:53:50 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.12 2017/10/02 15:16:27 fhajny Exp $
 bin/dqtool
 bin/loggen
 bin/pdbtool
@@ -91,6 +91,7 @@ include/syslog-ng/logproto/logproto-dgram-server.h
 include/syslog-ng/logproto/logproto-framed-client.h
 include/syslog-ng/logproto/logproto-framed-server.h
 include/syslog-ng/logproto/logproto-indented-multiline-server.h
+include/syslog-ng/logproto/logproto-multiline-server.h
 include/syslog-ng/logproto/logproto-record-server.h
 include/syslog-ng/logproto/logproto-regexp-multiline-server.h
 include/syslog-ng/logproto/logproto-server.h
@@ -188,7 +189,6 @@ include/syslog-ng/tls-support.h
 include/syslog-ng/tlscontext.h
 include/syslog-ng/transport/logtransport.h
 include/syslog-ng/transport/transport-aux-data.h
-include/syslog-ng/transport/transport-device.h
 include/syslog-ng/transport/transport-file.h
 include/syslog-ng/transport/transport-pipe.h
 include/syslog-ng/transport/transport-socket.h
@@ -233,8 +233,10 @@ lib/syslog-ng/libsnmptrapd-parser.la
 lib/syslog-ng/libstardate.la
 lib/syslog-ng/libsyslogformat.la
 lib/syslog-ng/libsystem-source.la
+lib/syslog-ng/libtags-parser.la
 lib/syslog-ng/libtest/libsyslog-ng-test.a
 lib/syslog-ng/libtfgetent.la
+lib/syslog-ng/libxml.la
 sbin/syslog-ng
 sbin/syslog-ng-ctl
 sbin/syslog-ng-debun
@@ -265,6 +267,8 @@ share/syslog-ng/include/scl/syslogconf/README
 share/syslog-ng/include/scl/syslogconf/convert-syslogconf.awk
 share/syslog-ng/include/scl/syslogconf/plugin.conf
 share/syslog-ng/include/scl/system/plugin.conf
+share/syslog-ng/include/scl/windowseventlog/plugin.conf
+share/syslog-ng/include/scl/windowseventlog/windowseventlog.xml
 share/syslog-ng/tools/cfg-grammar.y
 share/syslog-ng/tools/lex-rules.am
 share/syslog-ng/tools/merge-grammar.py
