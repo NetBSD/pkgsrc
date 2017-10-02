@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2017/09/10 21:13:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2017/10/02 14:42:44 wiz Exp $
 bin/fc-cache
 bin/fc-cat
 bin/fc-list
@@ -450,7 +450,6 @@ share/fontconfig/conf.avail/20-unhint-small-vera.conf
 share/fontconfig/conf.avail/25-unhint-nonlatin.conf
 share/fontconfig/conf.avail/30-metric-aliases.conf
 share/fontconfig/conf.avail/30-pkgsrc-aliases.conf
-share/fontconfig/conf.avail/30-urw-aliases.conf
 share/fontconfig/conf.avail/40-nonlatin.conf
 share/fontconfig/conf.avail/45-generic.conf
 share/fontconfig/conf.avail/45-latin.conf

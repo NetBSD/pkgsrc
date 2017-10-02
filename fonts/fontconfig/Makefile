@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.101 2017/09/10 21:13:44 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2017/10/02 14:42:44 wiz Exp $
 
-DISTNAME=	fontconfig-2.12.5
+DISTNAME=	fontconfig-2.12.6
 CATEGORIES=	fonts
 MASTER_SITES=	https://www.fontconfig.org/release/
 EXTRACT_SUFX=	.tar.bz2
@@ -70,7 +70,7 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/conf.d
 FC_STDCONF=	10-scale-bitmap-fonts.conf 10-hinting-full.conf \
 	10-hinting-medium.conf 10-hinting-none.conf 10-hinting-slight.conf \
 	20-unhint-small-vera.conf \
-	30-metric-aliases.conf 30-urw-aliases.conf 40-nonlatin.conf \
+	30-metric-aliases.conf 40-nonlatin.conf \
 	45-latin.conf 49-sansserif.conf 50-user.conf 51-local.conf \
 	60-latin.conf 65-fonts-persian.conf 65-nonlatin.conf 69-unifont.conf \
 	80-delicious.conf 90-synthetic.conf
