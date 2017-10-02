@@ -1,4 +1,4 @@
-# $NetBSD: Logging.pm,v 1.1 2015/11/25 16:42:21 rillig Exp $
+# $NetBSD: Logging.pm,v 1.2 2017/10/02 14:41:21 wiz Exp $
 #
 # Subroutines for printing messages to the user in a common format.
 # The subroutines all have the parameters C<$fname>,
@@ -122,7 +122,7 @@ sub print_summary_and_exit($) {
 		if ($errors != 0 || $warnings != 0) {
 			print("$errors errors and $warnings warnings found." . ($explain_flag ? "" : " (Use -e for more details.)") . "\n");
 		} else {
-			print "looks fine.\n";
+			print "Looks fine.\n";
 		}
 	}
 	exit($errors != 0);

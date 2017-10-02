@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.t,v 1.1 2015/11/25 16:42:21 rillig Exp $
+# $NetBSD: pkglint.t,v 1.2 2017/10/02 14:41:21 wiz Exp $
 #
 
 require 'pkglint.pl';			# so we can test its internals
@@ -131,7 +131,7 @@ sub test_pkglint_main {
 	test_unit($unit, undef, 0, '^usage: pkglint ', '^$');
 
 	@ARGV = ('..');
-	test_unit($unit, undef, 0, '^looks fine', '^$');
+	test_unit($unit, undef, 0, '^Looks fine', '^$');
 
 	@ARGV = ('.');
 	test_unit($unit, undef, 1, '^ERROR:.+how to check', '^$');
@@ -167,7 +167,7 @@ EOT
 		},
 		'mail/getmail' => {
 			stdout_re => <<EOT,
-^looks fine\.\$
+^Looks fine\.\$
 EOT
 			stderr_re => undef,
 			exitcode => 0,
