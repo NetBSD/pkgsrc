@@ -163,7 +163,7 @@ func (pkglint *Pkglint) PrintSummary() {
 				G.errors, ifelseStr(G.errors == 1, "error", "errors"),
 				G.warnings, ifelseStr(G.warnings == 1, "warning", "warnings"))
 		} else {
-			io.WriteString(G.logOut, "looks fine.\n")
+			io.WriteString(G.logOut, "Looks fine.\n")
 		}
 		if G.explanationsAvailable && !G.opts.Explain {
 			fmt.Fprint(G.logOut, "(Run \"pkglint -e\" to show explanations.)\n")

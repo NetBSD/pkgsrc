@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.design.xml,v 1.1 2015/11/25 16:42:21 rillig Exp $ -->
+<!-- $NetBSD: chap.design.xml,v 1.2 2017/10/02 14:41:21 wiz Exp $ -->
 
 <chapter id="design">
 <title>Design goals</title>
@@ -44,7 +44,7 @@
 
 	<para>There are only two cases of what the output of
 	&pkglint; is. One is a single line containing the text
-	<quote>looks fine.</quote>, the other is a list of diagnostics,
+	<quote>Looks fine.</quote>, the other is a list of diagnostics,
 	followed by a summary on the number of diagnostics.</para>
 
 	<para>If no warnings are printed, the single line <quote>looks
