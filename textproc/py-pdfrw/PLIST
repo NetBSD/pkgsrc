@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2017/03/16 20:07:05 darcy Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/10/02 10:56:15 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/pdfrw/__init__.py
 ${PYSITELIB}/pdfrw/__init__.pyc
 ${PYSITELIB}/pdfrw/__init__.pyo
@@ -12,6 +13,9 @@ ${PYSITELIB}/pdfrw/buildxobj.pyo
 ${PYSITELIB}/pdfrw/compress.py
 ${PYSITELIB}/pdfrw/compress.pyc
 ${PYSITELIB}/pdfrw/compress.pyo
+${PYSITELIB}/pdfrw/crypt.py
+${PYSITELIB}/pdfrw/crypt.pyc
+${PYSITELIB}/pdfrw/crypt.pyo
 ${PYSITELIB}/pdfrw/errors.py
 ${PYSITELIB}/pdfrw/errors.pyc
 ${PYSITELIB}/pdfrw/errors.pyo
