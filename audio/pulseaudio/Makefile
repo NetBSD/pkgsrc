@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.120 2017/09/08 02:27:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.121 2017/10/02 19:21:15 ryoon Exp $
 
-DISTNAME=	pulseaudio-11.0
+DISTNAME=	pulseaudio-11.1
 CATEGORIES=	audio
 MASTER_SITES=	http://freedesktop.org/software/pulseaudio/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -89,6 +89,8 @@ CONF_FILES+=	${EGDIR}/default.pa ${PKG_SYSCONFDIR}/default.pa
 CONF_FILES+=	${EGDIR}/system.pa ${PKG_SYSCONFDIR}/system.pa
 CONF_FILES+=	${EGDIR}/pulseaudio-system.conf \
 		${PKG_SYSCONFBASE}/dbus-1/system.d/pulseaudio-system.conf
+
+PLIST_SUBST+=	PULSELIBVER=11.0
 
 PLIST_VARS+=		alsa bonjour coreaudio evdev oss sun
 
