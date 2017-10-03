@@ -1,0 +1,7 @@
+fdtools is a set of utilities for working with file descriptors. With
+these tools, you can examine and manipulate file descriptor properties
+from shell scripts, where without them you might have resorted to a
+different language. These tools can rewind file descriptors, switch them
+between blocking and nonblocking mode, and examine their inode
+information. On some systems (currently only Linux, as far as I know)
+they can also allocate, lock, and switch virtual consoles.
