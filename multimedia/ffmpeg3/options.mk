@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.8 2017/09/20 08:21:17 adam Exp $
+# $NetBSD: options.mk,v 1.9 2017/10/03 12:39:42 wiz Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg3
 PKG_SUPPORTED_OPTIONS=	ass doc fdk-aac fontconfig freetype gnutls \
-			lame libvpx opencore-amr openssl opus rtmp theora \
-			vorbis x11 x264 x265 xcb xvid
+			lame libvpx opencore-amr openssl opus rpi \
+			rtmp theora vorbis x11 x264 x265 xcb xvid
 PKG_SUGGESTED_OPTIONS=	lame ass freetype fontconfig libvpx openssl \
 			theora vorbis x11 x264 xvid
 
@@ -137,6 +137,18 @@ CONFIGURE_ARGS+=	--enable-libmp3lame
 .if !empty(PKG_OPTIONS:Mopus)
 CONFIGURE_ARGS+=	--enable-libopus
 .include "../../audio/libopus/buildlink3.mk"
+.endif
+
+# Raspberry Pi support
+.if !empty(PKG_OPTIONS:Mrpi)
+.include "../../misc/raspberrypi-userland/buildlink3.mk"
+SUBST_CLASSES+=		vc
+SUBST_STAGE.vc=		pre-configure
+SUBST_MESSAGE.vc=	Fixing path to VideoCore libraries.
+SUBST_FILES.vc=		configure
+SUBST_SED.vc+=		-e 's;-isystem/opt/vc;-I${PREFIX};g'
+SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
+CONFIGURE_ARGS+=	--enable-omx-rpi --enable-mmal --disable-xvmc
 .endif
 
 # XviD support
