@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2014/10/09 14:06:57 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2017/10/03 00:21:44 schmonz Exp $
 
 DISTNAME=		daemontools-0.76
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://cr.yp.to/daemontools/ ftp://cr.yp.to/daemontools/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
@@ -16,7 +16,7 @@ SITES.${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 
 DJB_RESTRICTED=		no
 
-WRKSRC=			${WRKDIR}/admin/${DISTNAME}
+WRKSRC=			${WRKDIR}/admin/${PKGNAME_NOREV}
 DJB_SLASHPACKAGE=	YES
 
 CMDDIR=			${WRKSRC}/command
