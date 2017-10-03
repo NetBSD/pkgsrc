@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2017/08/18 13:54:17 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.10 2017/10/03 10:55:13 wiz Exp $
 # used by lang/oracle-jre8/Makefile
 # used by lang/oracle-jdk8/Makefile
 
@@ -19,6 +19,9 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 EMUL_PLATFORMS=		darwin-x86_64 linux-i386 linux-x86_64 solaris-i386 solaris-x86_64
 
 USE_TOOLS+=	pax
+
+# pre-built binaries without RELRO
+CHECK_RELRO_SUPPORTED=	no
 
 # JDK8 Update number
 UPDATE_NUMBER=	144
