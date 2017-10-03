@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2017/10/03 17:03:30 minskim Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.pullreview.yml
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.simplecov
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CONTRIBUTING.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/windows_error.rb
+${GEM_LIBDIR}/lib/windows_error/error_code.rb
+${GEM_LIBDIR}/lib/windows_error/nt_status.rb
+${GEM_LIBDIR}/lib/windows_error/version.rb
+${GEM_LIBDIR}/lib/windows_error/win32.rb
+${GEM_LIBDIR}/spec/lib/windows_error/error_code_spec.rb
+${GEM_LIBDIR}/spec/lib/windows_error/nt_status_spec.rb
+${GEM_LIBDIR}/spec/lib/windows_error/win32_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/windows_error.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
