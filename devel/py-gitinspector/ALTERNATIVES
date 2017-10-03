@@ -1,1 +1,1 @@
-bin/gitinspector @PREFIX@/bin/gitinspector
+bin/gitinspector @PREFIX@/bin/gitinspector-@PYVERSSUFFIX@
