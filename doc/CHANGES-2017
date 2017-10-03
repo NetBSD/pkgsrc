@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4287 2017/10/03 12:20:18 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4288 2017/10/03 12:32:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6090,3 +6090,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/scons to 3.0.0 [wiz 2017-10-03]
 	Updated geography/mapcode to 2.5.4 [fhajny 2017-10-03]
 	Updated multimedia/ffmpeg2 to 2.8.13 [wiz 2017-10-03]
+	Updated lang/vala to 0.38.1 [wiz 2017-10-03]
