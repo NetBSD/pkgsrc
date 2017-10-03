@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2017/08/16 20:45:43 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.34 2017/10/03 15:12:42 wiz Exp $
 
 DISTNAME=	apsfilter-7.2.8
+PKGREVISION=	1
 CATEGORIES=	print
 #MASTER_SITES=	http://www.apsfilter.org/download/
 
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	recode-[0-9]*:../../converters/recode
 #DEPENDS+=	html2ps-[0-9]*:../../print/html2ps
-DEPENDS+=	transfig-[0-9]*:../../print/transfig
+DEPENDS+=	fig2dev-[0-9]*:../../print/fig2dev
 DEPENDS+=	jpeg>=6b:../../graphics/jpeg
 DEPENDS+=	netpbm>=9.7nb1:../../graphics/netpbm
 DEPENDS+=	a2ps-[0-9]*:../../print/a2ps
