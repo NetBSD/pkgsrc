@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.55 2017/08/07 23:54:09 maya Exp $
+# $NetBSD: NetBSD.mk,v 1.56 2017/10/03 13:18:00 jperkin Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -161,6 +161,7 @@ _OPSYS_SUPPORTS_CWRAPPERS=	yes
 # use readelf in check/bsd.check-vars.mk
 _OPSYS_CAN_CHECK_RELRO=		yes
 _OPSYS_CAN_CHECK_SHLIBS=	yes
+_OPSYS_CAN_CHECK_SSP=		no  # only supports libssp at this time
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
