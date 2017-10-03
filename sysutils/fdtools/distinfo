@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2017/10/03 00:43:22 schmonz Exp $
+
+SHA1 (fdtools-2015.03.28.tar.bz2) = 7bd1c9e067df8297e1f4bc430c33903899585aee
+RMD160 (fdtools-2015.03.28.tar.bz2) = d1bfed8c1718b5ec178cc763416f677f4cc26f0d
+SHA512 (fdtools-2015.03.28.tar.bz2) = e6b5665869538758edd90876c1696d753aa5859e9dc2ceffbcac98ea682e730424ea972126d20d90945d554a833278059558d85ce5290c09b3f339d0191f565c
+Size (fdtools-2015.03.28.tar.bz2) = 40057 bytes
+SHA1 (patch-conf-compile_defaults_host__compile.sh) = 07d7dcb943e664f838c7b1a72f8bb92d4ad994a0
+SHA1 (patch-conf-compile_defaults_host__link.sh) = d7e2ba5574885e4f09158678681f58e457a14732
+SHA1 (patch-src_recvfd.c) = 4fe086cae8fa9623e29954cb03ee5a63a72d25af
+SHA1 (patch-src_sigsched.c) = ed4cf2111ab65fb80f5cbcfd6aa0c49db12a845a
