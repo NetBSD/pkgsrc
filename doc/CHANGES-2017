@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4295 2017/10/03 15:12:43 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4296 2017/10/03 15:57:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6098,3 +6098,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added print/fig2dev version 3.2.6a [wiz 2017-10-03]
 	Updated graphics/xfig to 3.2.6a [wiz 2017-10-03]
 	Removed print/transfig [wiz 2017-10-03]
+	Added security/ruby-rubyntlm version 0.6.2 [minskim 2017-10-03]
