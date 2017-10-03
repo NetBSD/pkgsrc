@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/09/30 04:42:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2017/10/03 14:07:55 maya Exp $
 
 DISTNAME=	rustc-1.20.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -157,6 +157,9 @@ do-install:
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/lib/rustlib/install.log
 	${RM} -rf ${DESTDIR}${PREFIX}/lib/rustlib/src
+
+GENERATE_PLIST+= find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
+		 sed 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
 
 .if ${OPSYS} == "Darwin"
 .PHONY: fix-darwin-install-name
