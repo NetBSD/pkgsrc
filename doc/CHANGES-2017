@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4281 2017/10/03 00:45:14 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.4282 2017/10/03 08:33:56 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6084,3 +6084,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/skalibs version 2.6.0.0 [schmonz 2017-10-03]
 	Added sysutils/fdtools version 2015.03.28 [schmonz 2017-10-03]
 	Added devel/py-bcolz version 1.1.2 [minskim 2017-10-03]
+	Updated print/qpdf to 7.0.0nb1 [leot 2017-10-03]
