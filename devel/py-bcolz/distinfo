@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/10/03 00:43:51 minskim Exp $
+
+SHA1 (bcolz-1.1.2.tar.gz) = 171c3667c4d50af7b53e8090c62633c92f11599f
+RMD160 (bcolz-1.1.2.tar.gz) = 6dd12b6f5e9fbf5c0982a4e4d65c99294b62172e
+SHA512 (bcolz-1.1.2.tar.gz) = cc0149b5a8a0ded7653c4f1e2232fbf8501027538a3e5d8de4be0eed096e17e7d3845f19cb687a533a4c385b31f5a5262fe140a27ac63b434b57667ec5a55e66
+Size (bcolz-1.1.2.tar.gz) = 1271418 bytes
