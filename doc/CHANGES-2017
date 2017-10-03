@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4285 2017/10/03 11:54:05 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4286 2017/10/03 12:15:12 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6088,3 +6088,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/py-vdirsyncer to 0.16.3 [wiz 2017-10-03]
 	Updated net/libsoup to 2.60.0 [wiz 2017-10-03]
 	Updated devel/scons to 3.0.0 [wiz 2017-10-03]
+	Updated geography/mapcode to 2.5.4 [fhajny 2017-10-03]
