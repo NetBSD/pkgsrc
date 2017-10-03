@@ -1,0 +1,5 @@
+You need the fig2dev program in addition to xfig to be complete.
+Xfig saves figures in its own, proprietary .fig format. The fig2dev
+program allows you to print and export figures. Fig2dev translates
+the .fig files to various languages and formats such as PostScript,
+png, jpeg, pstricks, tikz, etc.
