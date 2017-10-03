@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/01/16 13:49:40 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2017/10/03 12:15:02 fhajny Exp $
 
-DISTNAME=	mapcode-cpp-2.5.2
+DISTNAME=	mapcode-cpp-2.5.4
 PKGNAME=	${DISTNAME:S/-cpp//}
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mapcode-foundation/}
@@ -32,7 +32,7 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/build/libmapcode.so ${DESTDIR}${PREFIX}/lib
 
 do-test:
-	cd ${WRKSRC}/unittest && ${SETENV} ${TEST_ENV} LD_LIBRARY_PATH=${WRKSRC}/build ${WRKSRC}/build/unittest
+	cd ${WRKSRC}/test && ${SETENV} ${TEST_ENV} LD_LIBRARY_PATH=${WRKSRC}/build ../build/unittest
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
