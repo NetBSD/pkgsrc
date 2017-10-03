@@ -1,0 +1,16 @@
+$NetBSD: patch-libqpdf.pc.in,v 1.1 2017/10/03 08:33:45 leot Exp $
+
+graphics/jpeg does not provide any `.pc' files and adding it to the list of
+`Requires.private:' breaks all packages that need to retrieve pkg-config
+information for libqpdf.
+
+--- libqpdf.pc.in.orig	2017-09-16 17:22:15.000000000 +0000
++++ libqpdf.pc.in
+@@ -6,6 +6,6 @@ includedir=@includedir@
+ Name: libqpdf
+ Description: PDF transformation library
+ Version: @PACKAGE_VERSION@
+-Requires.private: zlib, libjpeg
++Requires.private: zlib
+ Libs: -L${libdir} -lqpdf
+ Cflags: -I${includedir}
