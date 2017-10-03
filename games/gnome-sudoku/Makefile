@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2017/09/02 10:32:20 prlw1 Exp $
+# $NetBSD: Makefile,v 1.16 2017/10/03 12:36:53 wiz Exp $
 
 DISTNAME=	gnome-sudoku-3.24.0
+PKGREVISION=	1
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-sudoku/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
