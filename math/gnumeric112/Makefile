@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2017/06/05 14:24:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2017/10/03 14:36:56 wiz Exp $
 
-DISTNAME=	gnumeric-1.12.23
-PKGREVISION=	5
+DISTNAME=	gnumeric-1.12.35
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnumeric/1.12/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +10,9 @@ HOMEPAGE=	http://www.gnumeric.org/
 COMMENT=	Spreadsheet program from the GNOME project
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
+BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+
+USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config yacc
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -38,13 +39,13 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.12.9
 #BUILDLINK_API_DEPENDS.libgda+=	libgda>=3.1.1
 #.include "../../databases/libgda/buildlink3.mk"
 #.include "../../databases/libgnomedb/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgsf+=	libgsf>=1.14.32
+BUILDLINK_API_DEPENDS.libgsf+=	libgsf>=1.14.33
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
-BUILDLINK_API_DEPENDS.goffice0.10+= goffice0.10>=0.10.23
+BUILDLINK_API_DEPENDS.goffice0.10+= goffice0.10>=0.10.28
 .include "../../misc/goffice0.10/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.4.12
 .include "../../textproc/libxml2/buildlink3.mk"
