@@ -1,7 +1,9 @@
-$NetBSD: patch-aa,v 1.1 2011/09/14 17:43:32 hans Exp $
+$NetBSD: patch-src_Makefile,v 1.1 2017/10/03 00:21:44 schmonz Exp $
 
---- src/Makefile.orig	2001-07-12 18:49:49.000000000 +0200
-+++ src/Makefile	2011-07-28 20:57:29.930235807 +0200
+Use a pkgsrc-capable shell on all platforms.
+
+--- src/Makefile.orig	2001-07-12 16:49:49.000000000 +0000
++++ src/Makefile
 @@ -265,7 +265,7 @@ readproctitle.o: compile error.h readpro
  rts: envdir envuidgid fghack matchtest multilog pgrphack \
  readproctitle rts.tests setlock setuidgid softlimit supervise svc \
