@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.184 2017/09/11 09:06:41 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.185 2017/10/03 09:38:16 jperkin Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -371,17 +371,6 @@ _GCC_LDFLAGS+=		${_RELRO_LDFLAGS}
 CWRAPPERS_APPEND.ld+=	${_RELRO_LDFLAGS}
 .endif
  
-# The user can choose the level of stack smashing protection.
-.if ${_GCC_VERSION:C/\..*$//} >= 4
-.  if ${PKGSRC_USE_SSP} == "all"
-_SSP_CFLAGS=		-fstack-protector-all
-.  elif ${PKGSRC_USE_SSP} == "strong"
-_SSP_CFLAGS=		-fstack-protector-strong
-.  else
-_SSP_CFLAGS=		-fstack-protector
-.  endif
-.endif
-
 _STACK_CHECK_CFLAGS=	-fstack-check
 
 .if ${_PKGSRC_USE_STACK_CHECK} == "yes"
@@ -875,6 +864,17 @@ CC_VERSION=		gcc-${_GCC_REQD}
 .else
 CC_VERSION_STRING=	${CC_VERSION}
 CC_VERSION=		${_GCC_PKG}
+.endif
+
+# The user can choose the level of stack smashing protection.
+.if !empty(CC_VERSION:Mgcc-[4-9]*)
+.  if ${PKGSRC_USE_SSP} == "all"
+_SSP_CFLAGS=		-fstack-protector-all
+.  elif ${PKGSRC_USE_SSP} == "strong"
+_SSP_CFLAGS=		-fstack-protector-strong
+.  else
+_SSP_CFLAGS=		-fstack-protector
+.  endif
 .endif
 
 # Prepend the path to the compiler to the PATH.
