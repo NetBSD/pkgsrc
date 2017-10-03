@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4284 2017/10/03 11:49:47 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4285 2017/10/03 11:54:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6087,3 +6087,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/qpdf to 7.0.0nb1 [leot 2017-10-03]
 	Updated time/py-vdirsyncer to 0.16.3 [wiz 2017-10-03]
 	Updated net/libsoup to 2.60.0 [wiz 2017-10-03]
+	Updated devel/scons to 3.0.0 [wiz 2017-10-03]
