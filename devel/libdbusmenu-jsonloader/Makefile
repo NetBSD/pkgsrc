@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/05/29 12:20:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/10/03 12:36:53 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../meta-pkgs/libdbusmenu/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-jsonloader-/}
