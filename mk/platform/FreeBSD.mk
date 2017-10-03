@@ -1,4 +1,4 @@
-# $NetBSD: FreeBSD.mk,v 1.35 2017/05/31 22:55:01 jlam Exp $
+# $NetBSD: FreeBSD.mk,v 1.36 2017/10/03 13:18:00 jperkin Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -79,6 +79,7 @@ _OPSYS_SUPPORTS_SSP=	yes
 
 _OPSYS_SUPPORTS_CWRAPPERS=	yes
 _OPSYS_CAN_CHECK_SHLIBS=	yes # use readelf in check/bsd.check-vars.mk
+_OPSYS_CAN_CHECK_SSP=		no  # only supports libssp at this time
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
