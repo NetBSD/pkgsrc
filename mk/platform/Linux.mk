@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.76 2017/08/04 08:59:20 jperkin Exp $
+# $NetBSD: Linux.mk,v 1.77 2017/10/03 13:18:00 jperkin Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -112,6 +112,7 @@ _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 _OPSYS_SUPPORTS_CWRAPPERS=	yes
 
 _OPSYS_CAN_CHECK_SHLIBS=	yes # use readelf in check/bsd.check-vars.mk
+_OPSYS_CAN_CHECK_SSP=		no  # only supports libssp at this time
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
