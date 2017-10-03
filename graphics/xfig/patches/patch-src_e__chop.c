@@ -1,7 +1,9 @@
-$NetBSD: patch-ai,v 1.1 2009/06/22 18:29:33 drochner Exp $
+$NetBSD: patch-src_e__chop.c,v 1.1 2017/10/03 15:09:36 wiz Exp $
 
---- e_chop.c.orig	2009-03-30 17:52:10.000000000 +0200
-+++ e_chop.c
+Remove unportable header.
+
+--- src/e_chop.c.orig	2016-07-23 21:10:27.000000000 +0000
++++ src/e_chop.c
 @@ -19,9 +19,6 @@
  /* >>>>>>>>>>>>>>>>>>> fixme -- don't forget undo ! <<<<<<<<<<<<<<<< */
  

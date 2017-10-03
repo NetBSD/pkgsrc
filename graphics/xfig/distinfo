@@ -1,26 +1,10 @@
-$NetBSD: distinfo,v 1.28 2015/11/03 21:34:35 agc Exp $
+$NetBSD: distinfo,v 1.29 2017/10/03 15:09:36 wiz Exp $
 
-SHA1 (xfig.3.2.5b.full.tar.gz) = 0730d7e6bc217c0de02682efb0078821512bb542
-RMD160 (xfig.3.2.5b.full.tar.gz) = aad4cfd808c116d34218e9890a898652e4f52ab6
-SHA512 (xfig.3.2.5b.full.tar.gz) = f31243e6d7c676f2329844097f6b97c4a22e65824a6c17efec743f0197406a6f2f5b1ae3cac2e97f99f9a7c364a6e4569624dfaee3d93c2d6212573aedcfb87c
-Size (xfig.3.2.5b.full.tar.gz) = 5821049 bytes
-SHA1 (patch-aa) = c931f4735f7502cc9d7c116378dcd3b420a40c6f
-SHA1 (patch-ab) = 549f3795923e984988684f2ba29cafb437d9f83d
-SHA1 (patch-ac) = b43b811dce9aa3cdb5d18dc7c403a4a2e503fd44
-SHA1 (patch-ad) = fc686b6509ff45f6aa8ba235b95eb85e1dbead88
-SHA1 (patch-ae) = 8bb5d1c01faae34a6ad2cd1eaddf794cbf39a02e
-SHA1 (patch-ag) = 021f15be1fd36adc80c638bbb485e2f3753ac11b
-SHA1 (patch-ai) = bd3f0c40e542aae1cfd739dbe0c0f096ddfdefcf
-SHA1 (patch-ak) = fcc358a595590ea3136d71bd9f61449d54914c46
-SHA1 (patch-al) = ca20d3ec7bcf2ac24fd0a415495f805add23142d
-SHA1 (patch-am) = 72adbda34425fda49f2072a3d40a3d942e07e1ba
-SHA1 (patch-an) = 4bfce8dbd420bc4b4d8efa5b01a39e3a9ce03ca6
-SHA1 (patch-ao) = 4b3878cd2a5ef57dd34d51604e204bd106261ad2
-SHA1 (patch-ap) = 84a453de2badd82eb31d950981f086e48310d66f
-SHA1 (patch-aq) = 83c15caff521ab857b0a2744590cbd17f678c107
-SHA1 (patch-d__text.c) = f57cb3c7d0b68a9d27e87538db17ae106acb0ba5
-SHA1 (patch-d__text.h) = 3816e30a21c5c4dfd41a8e43d785babc2c8c7789
-SHA1 (patch-e__edit.c) = 9c3630139f3002a3ea65528e44a3af81af35093f
-SHA1 (patch-w__export.c) = 2787cb59a692d5e435249fea21d6978877db7ea7
-SHA1 (patch-w__print.c) = 1856279ad76a2e71ea896a66d874a0b72330acd0
-SHA1 (patch-w__util.c) = 35f2cfe73697c0b6005e3a8c3e46b44b2ed8f721
+SHA1 (xfig-3.2.6a.tar.xz) = 6413bd1884b6bcb8ea8e53a2511856334b30bb5f
+RMD160 (xfig-3.2.6a.tar.xz) = 740793039ec8a6c14eca92f70f2f3096c31e4183
+SHA512 (xfig-3.2.6a.tar.xz) = 8d6952301cab297f87041ca645c316863c4ee454ba6318ae94b2493ca9dfeda6b0240a038001f82c390d1a772c4b5e3c43c9414ea150fd18adb8780a608d8cd0
+Size (xfig-3.2.6a.tar.xz) = 5053800 bytes
+SHA1 (patch-src_e__chop.c) = f702a2e61c1afdd93b973c3a277d3359f5f03515
+SHA1 (patch-src_w__intersect.c) = 73b60f7fc63b14b784c021a1a1fcd0dab6a68009
+SHA1 (patch-src_w__keyboard.c) = c829331d2f25837c54e0609cbf6d32024cbf3b2f
+SHA1 (patch-src_w__snap.c) = e0dc98e05da064ec2c9de061fa6a44e5f9a25988
