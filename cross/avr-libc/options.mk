@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2016/11/15 20:30:01 riastradh Exp $
+# $NetBSD: options.mk,v 1.2 2017/10/03 15:12:42 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.avr-libc
 PKG_SUPPORTED_OPTIONS+=		doc
@@ -32,7 +32,7 @@ BUILD_DEPENDS+=         tex-tabu-[0-9]*:../../print/tex-tabu
 BUILD_DEPENDS+=         tex-tocloft-[0-9]*:../../print/tex-tocloft
 BUILD_DEPENDS+=         tex-xcolor-[0-9]*:../../print/tex-xcolor
 BUILD_DEPENDS+=         tex-xkeyval-[0-9]*:../../print/tex-xkeyval
-BUILD_DEPENDS+=         transfig-[0-9]*:../../print/transfig
+BUILD_DEPENDS+=         fig2dev-[0-9]*:../../print/fig2dev
 BUILD_DEPENDS+=         makeindexk-[0-9]*:../../textproc/makeindexk
 
 post-extract:
