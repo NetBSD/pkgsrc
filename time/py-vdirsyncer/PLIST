@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2017/08/14 20:00:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/10/03 09:50:02 wiz Exp $
 bin/vdirsyncer
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -69,9 +69,15 @@ ${PYSITELIB}/vdirsyncer/storage/memory.pyo
 ${PYSITELIB}/vdirsyncer/storage/singlefile.py
 ${PYSITELIB}/vdirsyncer/storage/singlefile.pyc
 ${PYSITELIB}/vdirsyncer/storage/singlefile.pyo
-${PYSITELIB}/vdirsyncer/sync.py
-${PYSITELIB}/vdirsyncer/sync.pyc
-${PYSITELIB}/vdirsyncer/sync.pyo
+${PYSITELIB}/vdirsyncer/sync/__init__.py
+${PYSITELIB}/vdirsyncer/sync/__init__.pyc
+${PYSITELIB}/vdirsyncer/sync/__init__.pyo
+${PYSITELIB}/vdirsyncer/sync/exceptions.py
+${PYSITELIB}/vdirsyncer/sync/exceptions.pyc
+${PYSITELIB}/vdirsyncer/sync/exceptions.pyo
+${PYSITELIB}/vdirsyncer/sync/status.py
+${PYSITELIB}/vdirsyncer/sync/status.pyc
+${PYSITELIB}/vdirsyncer/sync/status.pyo
 ${PYSITELIB}/vdirsyncer/utils.py
 ${PYSITELIB}/vdirsyncer/utils.pyc
 ${PYSITELIB}/vdirsyncer/utils.pyo
