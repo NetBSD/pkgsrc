@@ -1,6 +1,7 @@
-$NetBSD: patch-src_e__chop.c,v 1.1 2017/10/03 15:09:36 wiz Exp $
+$NetBSD: patch-src_e__chop.c,v 1.2 2017/10/04 11:58:45 wiz Exp $
 
 Remove unportable header.
+https://sourceforge.net/p/mcj/tickets/16/
 
 --- src/e_chop.c.orig	2016-07-23 21:10:27.000000000 +0000
 +++ src/e_chop.c
