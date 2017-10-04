@@ -1,9 +1,20 @@
-$NetBSD: patch-deps_cares_cares.gyp,v 1.1 2016/10/25 19:54:00 fhajny Exp $
+$NetBSD: patch-deps_cares_cares.gyp,v 1.2 2017/10/04 16:20:58 fhajny Exp $
 
 Add support for NetBSD.
---- deps/cares/cares.gyp.orig	2013-03-14 10:55:24.000000000 +0900
-+++ deps/cares/cares.gyp	2013-03-14 10:55:47.000000000 +0900
-@@ -140,6 +140,10 @@
+SunOS headers need _XOPEN_SOURCE=600 with c99.
+
+--- deps/cares/cares.gyp.orig	2017-10-03 17:11:11.000000000 +0000
++++ deps/cares/cares.gyp
+@@ -20,7 +20,7 @@
+       ['OS=="solaris"', {
+         'defines': [
+           '__EXTENSIONS__',
+-          '_XOPEN_SOURCE=500'
++          '_XOPEN_SOURCE=600'
+         ]
+       }]
+     ]
+@@ -151,6 +151,10 @@
            'include_dirs': [ 'config/freebsd' ],
            'sources': [ 'config/freebsd/ares_config.h' ]
          }],
