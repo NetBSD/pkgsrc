@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2017/04/05 17:36:00 kim Exp $
+# $NetBSD: Makefile.common,v 1.6 2017/10/04 15:46:46 jperkin Exp $
 
 # used by net/proftpd/Makefile
 # used by net/proftpd/Makefile.module
@@ -37,7 +37,8 @@ CONFIGURE_ENV+=		install_user=${ROOT_USER}
 
 BUILD_DEFS+=		VARBASE
 
-CHECK_SHLIBS_SKIP=libexec/proftpd/*.a
+CHECK_SHLIBS_SKIP=	libexec/proftpd/*.a
+CHECK_SSP_SKIP=		${CHECK_SHLIBS_SKIP}
 
 .include "options.mk"
 
