@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: reduce-depends.awk,v 1.8 2017/10/04 04:13:00 jlam Exp $
+# $NetBSD: reduce-depends.awk,v 1.9 2017/10/04 04:13:12 jlam Exp $
 #
 # Copyright (c) 2006-2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -73,8 +73,9 @@ function shquote(s)
 function version_cmp(v1, cmp, v2,	cmd, pattern, pkg)
 {
 	pkg = shquote("test-" v1)
-	test_pattern = shquote("test" cmp v2)
-	cmd = PKG_ADMIN " pmatch " test_pattern " " pkg
+	if (cmp == "=") cmp = "-"
+	pattern = shquote("test" cmp v2)
+	cmd = PKG_ADMIN " pmatch " pattern " " pkg
 	if (system(cmd) == 0) {
 		# v1 "cmp" v2
 		return 1
@@ -190,87 +191,148 @@ BEGIN {
 			# Repeatedly strip off possible boundary conditions to
 			# arrive at the PKGBASE.
 			pattern = patterns[pkgpath, d]
-			lt_bound = ""; le_bound = ""; ge_bound = ""; gt_bound = ""
-			if (match(pattern, "<" VERSION_RE "$")) {
-				lt_bound = substr(pattern, RSTART + 1, RLENGTH)
+			any_bound = ""; eq_bound = ""
+			lt_bound = "";  le_bound = ""
+			ge_bound = "";  gt_bound = ""
+			if (match(pattern, /-\[0-9\]\*$/)) {
+				any_bound = substr(pattern, RSTART + 1, RLENGTH)
 				pattern = substr(pattern, 1, RSTART - 1)
-			}
-			if (match(pattern, "<=" VERSION_RE "$")) {
-				le_bound = substr(pattern, RSTART + 2, RLENGTH)
+				print(pattern " / " any_bound) | ERRCAT
+			} else if (match(pattern, "-" VERSION_RE "$")) {
+				eq_bound = substr(pattern, RSTART + 1, RLENGTH)
 				pattern = substr(pattern, 1, RSTART - 1)
-			}
-			if (match(pattern, ">" VERSION_RE "$")) {
-				gt_bound = substr(pattern, RSTART + 1, RLENGTH)
-				pattern = substr(pattern, 1, RSTART - 1)
-			}
-			if (match(pattern, ">=" VERSION_RE "$")) {
-				ge_bound = substr(pattern, RSTART + 2, RLENGTH)
-				pattern = substr(pattern, 1, RSTART - 1)
+			} else {
+				if (match(pattern, "<" VERSION_RE "$")) {
+					lt_bound = substr(pattern, RSTART + 1, RLENGTH)
+					pattern = substr(pattern, 1, RSTART - 1)
+				} else if (match(pattern, "<=" VERSION_RE "$")) {
+					le_bound = substr(pattern, RSTART + 2, RLENGTH)
+					pattern = substr(pattern, 1, RSTART - 1)
+				}
+				if (match(pattern, ">" VERSION_RE "$")) {
+					gt_bound = substr(pattern, RSTART + 1, RLENGTH)
+					pattern = substr(pattern, 1, RSTART - 1)
+				} else if (match(pattern, ">=" VERSION_RE "$")) {
+					ge_bound = substr(pattern, RSTART + 2, RLENGTH)
+					pattern = substr(pattern, 1, RSTART - 1)
+				}
 			}
 			base = pattern
-			if (lt_bound) lt_patterns[base "<"  lt_bound] = lt_bound
-			if (le_bound) le_patterns[base "<=" le_bound] = le_bound
-			if (gt_bound) gt_patterns[base ">"  gt_bound] = gt_bound
-			if (ge_bound) ge_patterns[base ">=" ge_bound] = ge_bound
-			if (!(lt_bound || le_bound || gt_bound || ge_bound)) {
+			if (any_bound) any_patterns[base "-" any_bound] = any_bound
+			if (eq_bound)  eq_patterns[base "-"  eq_bound] = eq_bound
+			if (lt_bound)  lt_patterns[base "<"  lt_bound] = lt_bound
+			if (le_bound)  le_patterns[base "<=" le_bound] = le_bound
+			if (gt_bound)  gt_patterns[base ">"  gt_bound] = gt_bound
+			if (ge_bound)  ge_patterns[base ">=" ge_bound] = ge_bound
+			if (!any_bound && !eq_bound &&
+			    !lt_bound && !le_bound && !gt_bound && !ge_bound) {
 				depend = pattern ":" dir
 				if (!(depend in reduced)) reduced[depend] = ++N
 			} else {
 				pkgbase[pkgpath] = base
 			}
 		}
-		lt_bound = get_endpoint("<",  lt_patterns)
-		le_bound = get_endpoint("<=", le_patterns)
-		gt_bound = get_endpoint(">",  gt_patterns)
-		ge_bound = get_endpoint(">=", ge_patterns)
 
-		# Lower bound and relational operator.
-		lower_bound = ""; gt = ""
-		if (gt_bound && ge_bound) {
-			if (version_cmp(gt_bound, ">=", ge_bound)) {
+		# Set reducible to false if the patterns can't be reduced.
+		reducible = 1
+
+		any_bound = ""; eq_bound = ""
+		lt_bound = "";  le_bound = ""
+		ge_bound = "";  gt_bound = ""
+
+		# The "equal" bounds must be in the same equivalence class.
+		for (key in eq_patterns) {
+			value = eq_patterns[key]
+			if (!eq_bound) {
+				eq_bound = value
+			} else if (!version_cmp(value, "=", eq_bound)) {
+				reducible = 0
+				break
+			}
+		}
+
+		if (reducible) {
+			lt_bound = get_endpoint("<",  lt_patterns)
+			le_bound = get_endpoint("<=", le_patterns)
+			gt_bound = get_endpoint(">",  gt_patterns)
+			ge_bound = get_endpoint(">=", ge_patterns)
+
+			# Lower bound and relational operator.
+			lower_bound = ""; gt = ""
+			if (gt_bound && ge_bound) {
+				if (version_cmp(gt_bound, ">=", ge_bound)) {
+					lower_bound = gt_bound; gt = ">"
+				} else {
+					lower_bound = ge_bound; gt = ">="
+				}
+			} else if (gt_bound) {
 				lower_bound = gt_bound; gt = ">"
-			} else {
+			} else if (ge_bound) {
 				lower_bound = ge_bound; gt = ">="
 			}
-		} else if (gt_bound) {
-			lower_bound = gt_bound; gt = ">"
-		} else if (ge_bound) {
-			lower_bound = ge_bound; gt = ">="
-		}
 
-		# Upper bound and relational operator.
-		upper_bound = ""; lt = ""
-		if (lt_bound && le_bound) {
-			if (version_cmp(lt_bound, "<=", le_bound)) {
+			# Upper bound and relational operator.
+			upper_bound = ""; lt = ""
+			if (lt_bound && le_bound) {
+				if (version_cmp(lt_bound, "<=", le_bound)) {
+					upper_bound = lt_bound; lt = "<"
+				} else {
+					upper_bound = le_bound; lt = "<="
+				}
+			} else if (lt_bound) {
 				upper_bound = lt_bound; lt = "<"
-			} else {
+			} else if (le_bound) {
 				upper_bound = le_bound; lt = "<="
 			}
-		} else if (lt_bound) {
-			upper_bound = lt_bound; lt = "<"
-		} else if (le_bound) {
-			upper_bound = le_bound; lt = "<="
+
+			# Lower bound must be less than the upper bound.
+			if (lower_bound && upper_bound &&
+			    ((gt == ">" && version_cmp(lower_bound, ">=", upper_bound)) ||
+			     (gt == ">=" && version_cmp(lower_bound, ">", upper_bound)))) {
+				reducible = 0
+			}
 		}
 
-		# If there are conflicting dependencies, then just pass them
-		# through and let the rest of the pkgsrc machinery handle it.
-		#
-		# Othewise, build a new dependency based on the intersection
-		# of the rays determined by the various bounds.
-		#
-		if (lower_bound && upper_bound &&
-		    ((gt == ">" && version_cmp(lower_bound, ">=", upper_bound)) ||
-		     (gt == ">=" && version_cmp(lower_bound, ">", upper_bound)))) {
+		# "Equal" bound must be within the other bounds.
+		if (reducible && eq_bound &&
+		    ((lower_bound && version_cmp(eq_bound, "<", lower_bound)) ||
+		     (upper_bound && version_cmp(eq_bound, ">", upper_bound)))) {
+			reducible = 0
+		}
+
+		if (reducible) {
+			# Set "pattern" to the new dependency pattern based
+			# on the intersection of the sets determined by the
+			# various bounds.
+			pattern = ""
+			base = pkgbase[pkgpath]
+			if (eq_bound) {
+				pattern = base "-" eq_bound
+			} else if (lower_bound || upper_bound) {
+				pattern = base gt lower_bound lt upper_bound
+			} else {
+				for (key in any_patterns) {
+					any_bound = any_patterns[key]
+					break
+				}
+				if (any_bound) pattern = base "-" any_bound
+			}
+			if (pattern) {
+				depend = pattern ":" dir
+				if (!(depend in reduced)) reduced[depend] = ++N
+			}
+		} else {
+			# Conflicting dependencies, so just pass them through
+			# and let the rest of the pkgsrc machinery handle it.
 			for (d = 1; d <= D; d++) {
 				depend = patterns[pkgpath, d] ":" dir
 				if (!(depend in reduced)) reduced[depend] = ++N
 			}
-		} else if (lower_bound || upper_bound) {
-			pattern = pkgbase[pkgpath] gt lower_bound lt upper_bound
-			depend = pattern ":" dir
-			if (!(depend in reduced)) reduced[depend] = ++N
 		}
 
+		# Cleanup arrays used in the next loop iteration.
+		delete_array(any_patterns)
+		delete_array(eq_patterns)
 		delete_array(lt_patterns)
 		delete_array(le_patterns)
 		delete_array(gt_patterns)
