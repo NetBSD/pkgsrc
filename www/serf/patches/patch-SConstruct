@@ -1,8 +1,9 @@
-$NetBSD: patch-SConstruct,v 1.8 2016/12/07 20:00:20 maya Exp $
+$NetBSD: patch-SConstruct,v 1.9 2017/10/04 11:53:10 wiz Exp $
 
 Hack: Use OPENSSL variable as final shared library path; fixes lib id on Darwin.
 Don't append -O2 compiler flag.
 Don't special case sunos5 in naming shlibs
+Fix build with scons-3.x.
 
 --- SConstruct.orig	2015-09-17 12:46:24.000000000 +0000
 +++ SConstruct
@@ -23,6 +24,15 @@ Don't special case sunos5 in naming shlibs
                    tools=('default', 'textfile',),
                    CPPPATH=['.', ],
                    )
+@@ -183,7 +184,7 @@ CALLOUT_OKAY = not (env.GetOption('clean
+ 
+ unknown = opts.UnknownVariables()
+ if unknown:
+-  print 'Warning: Used unknown variables:', ', '.join(unknown.keys())
++  print ('Warning: Used unknown variables:', ', '.join(unknown.keys()))
+ 
+ apr = str(env['APR'])
+ apu = str(env['APU'])
 @@ -215,8 +216,7 @@ incdir = '$PREFIX/include/serf-$MAJOR'
  # Unfortunately we can't set the .dylib compatibility_version option separately
  # from current_version, so don't use the PATCH level to avoid that build and
