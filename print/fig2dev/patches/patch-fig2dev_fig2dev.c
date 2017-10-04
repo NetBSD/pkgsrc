@@ -1,6 +1,7 @@
-$NetBSD: patch-fig2dev_fig2dev.c,v 1.1 2017/10/03 14:59:08 wiz Exp $
+$NetBSD: patch-fig2dev_fig2dev.c,v 1.2 2017/10/04 12:01:43 wiz Exp $
 
 NetBSD defines _setmode, but is not Windows.
+https://sourceforge.net/p/mcj/tickets/17/
 
 --- fig2dev/fig2dev.c.orig	2017-01-04 11:04:09.000000000 +0000
 +++ fig2dev/fig2dev.c
