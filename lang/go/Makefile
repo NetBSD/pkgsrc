@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2017/09/03 16:49:52 tron Exp $
+# $NetBSD: Makefile,v 1.57 2017/10/04 10:03:53 jperkin Exp $
 
 .include "version.mk"
 
@@ -72,6 +72,8 @@ CHECK_RELRO_SKIP+=		go/bin/gofmt
 CHECK_RELRO_SKIP+=		go/pkg/bootstrap/bin/asm
 CHECK_RELRO_SKIP+=		go/pkg/bootstrap/bin/compile
 CHECK_RELRO_SKIP+=		go/pkg/bootstrap/bin/link
+# also does not support SSP at this time
+CHECK_SSP_SKIP=			${CHECK_RELRO_SKIP}
 
 # uses /bin/rc (for Plan 9)
 CHECK_INTERPRETER_SKIP+=	go/include/plan9/mklibc.rc
