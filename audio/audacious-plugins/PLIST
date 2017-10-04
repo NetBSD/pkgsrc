@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2014/11/21 22:14:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.12.26.1 2017/10/04 15:39:51 spz Exp $
 lib/audacious/Container/asx.so
 lib/audacious/Container/asx3.so
 lib/audacious/Container/audpl.so
@@ -23,6 +23,7 @@ lib/audacious/General/delete-files.so
 lib/audacious/General/gtkui.so
 lib/audacious/General/hotkey.so
 lib/audacious/General/lyricwiki.so
+lib/audacious/General/mpris2.so
 lib/audacious/General/scrobbler.so
 lib/audacious/General/search-tool.so
 lib/audacious/General/skins.so
