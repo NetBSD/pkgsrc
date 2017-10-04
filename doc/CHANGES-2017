@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4309 2017/10/04 16:21:08 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4310 2017/10/04 18:37:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6114,3 +6114,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/py-stdnum to 1.7 [adam 2017-10-04]
 	Updated lang/erlang to 20.1nb1 [jperkin 2017-10-04]
 	Updated lang/nodejs6 to 6.11.4 [fhajny 2017-10-04]
+	Updated mail/getmail to 5.2 [schmonz 2017-10-04]
