@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4303 2017/10/04 12:44:45 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4304 2017/10/04 12:52:53 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6108,3 +6108,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/openssh to 7.6.1 [wiz 2017-10-04]
 	Updated devel/py-scandir to 1.6 [adam 2017-10-04]
 	Updated devel/py-tox to 2.9.1 [adam 2017-10-04]
+	Updated devel/nspr to 4.17nb1 [jperkin 2017-10-04]
