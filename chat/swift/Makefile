@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/09/18 09:53:12 maya Exp $
+# $NetBSD: Makefile,v 1.30 2017/10/04 20:37:40 wiz Exp $
 
 DISTNAME=	swift-3.0
 PKGREVISION=	16
@@ -10,7 +10,9 @@ HOMEPAGE=	http://swift.im/
 COMMENT=	Swift XMPP Client
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	scons>=1.3:../../devel/scons
+# would be nicer to build with pkgsrc version, but
+# swift-3.0 does not build with scons>=3
+#DEPENDS+=	scons>=1.3:../../devel/scons
 
 USE_LANGUAGES=	c c++11
 USE_TOOLS+=	pkg-config
@@ -34,11 +36,11 @@ do-configure:
 	${ECHO} "allow_warnings=\"true\"" >> config.py ;
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons Swift
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./scons Swift
 
 do-install:
 	cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons \
+	${SETENV} ${MAKE_ENV} ./scons \
 	    SWIFT_INSTALLDIR=${DESTDIR}/${PREFIX} ${DESTDIR}/${PREFIX}
 	${INSTALL_DATA} ${WRKSRC}/Swift/Packaging/Debian/debian/swift-im.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
