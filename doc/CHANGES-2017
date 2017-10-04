@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4298 2017/10/04 03:49:29 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4299 2017/10/04 06:33:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6102,3 +6102,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added misc/ruby-windows_error version 0.1.2 [minskim 2017-10-03]
 	Updated graphics/py-Pillow to 4.3.0 [adam 2017-10-03]
 	Updated devel/py-cython to 0.27.1 [adam 2017-10-03]
+	Updated www/curl to 7.56.0 [wiz 2017-10-04]
