@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2017/07/17 12:30:55 jaapb Exp $
+# $NetBSD: options.mk,v 1.8 2017/10/04 13:08:20 jaapb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocamlnet
 PKG_SUPPORTED_OPTIONS=	gtk gtk2 gnutls cmxs
@@ -36,6 +36,7 @@ CONFIGURE_ARGS+=	-disable-gtk2
 .if !empty(PKG_OPTIONS:Mgnutls)
 .  include "../../security/gnutls/buildlink3.mk"
 PLIST.gnutls=		yes
+OCAML_FINDLIB_DIRS+=	nettls-gnutls
 CONFIGURE_ARGS+=	-enable-gnutls
 .else
 CONFIGURE_ARGS+=	-disable-gnutls
