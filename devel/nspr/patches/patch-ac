@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.13 2017/08/01 12:10:48 ryoon Exp $
+$NetBSD: patch-ac,v 1.14 2017/10/04 12:52:43 jperkin Exp $
 
 add runpath to Linux caught during check-shlibs-elf
 
@@ -66,6 +66,15 @@ add runpath to Linux caught during check-shlibs-elf
      DSO_CFLAGS=-fPIC
      MDCPUCFG_H=_openbsd.cfg
      PR_MD_CSRCS=openbsd.c
+@@ -2293,7 +2323,7 @@ tools are selected during the Xcode/Deve
+         if `$CC -print-prog-name=ld` -v 2>&1 | grep -c GNU >/dev/null; then
+             GCC_USE_GNU_LD=1
+         fi
+-        DSO_LDOPTS='-shared -Wl,-h,$(notdir $@),-z,combreloc,-z,defs,-z,ignore' 
++        DSO_LDOPTS='-shared -Wl,-h,$(notdir $@),-z,combreloc,-z,defs'
+         if test -n "$USE_B_DIRECT"; then
+             DSO_LDOPTS="$DSO_LDOPTS,-Bdirect"
+         fi
 @@ -2760,7 +2790,7 @@ if test -n "$USE_PTHREADS"; then
  	if test -z "`egrep -i '(unrecognize|unknown)' conftest.out | grep pthread`" && test -z "`egrep -i '(error|incorrect)' conftest.out`" ; then
  	    ac_cv_have_dash_pthread=yes
