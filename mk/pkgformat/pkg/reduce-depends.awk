@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: reduce-depends.awk,v 1.7 2017/10/01 22:58:19 jlam Exp $
+# $NetBSD: reduce-depends.awk,v 1.8 2017/10/04 04:13:00 jlam Exp $
 #
 # Copyright (c) 2006-2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -145,7 +145,7 @@ BEGIN {
 
 	# Match version numbers with an ERE.
 	# XXX This matches more than it should.
-	VERSION_RE = "[0-9A-Za-z._+]+"
+	VERSION_RE = "[0-9A-Za-z._~+]+"
 
 	# Gather all dependencies into the patterns array.  Index 0 of the
 	# patterns[pkgpath] array is the number of patterns associated with
