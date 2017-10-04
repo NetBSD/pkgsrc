@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/02/22 12:58:20 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/10/04 12:25:45 adam Exp $
 
-DISTNAME=	scandir-1.5
+DISTNAME=	scandir-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scandir/}
