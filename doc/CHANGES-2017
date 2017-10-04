@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4297 2017/10/03 17:05:47 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.4298 2017/10/04 03:49:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6100,3 +6100,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed print/transfig [wiz 2017-10-03]
 	Added security/ruby-rubyntlm version 0.6.2 [minskim 2017-10-03]
 	Added misc/ruby-windows_error version 0.1.2 [minskim 2017-10-03]
+	Updated graphics/py-Pillow to 4.3.0 [adam 2017-10-03]
+	Updated devel/py-cython to 0.27.1 [adam 2017-10-03]
