@@ -300,17 +300,17 @@ EOF
 }
 
 ###
-### disjoint_test
+### disjoint_intervals_test
 ###
 
-atf_test_case disjoint_test
+atf_test_case disjoint_intervals_test
 
-disjoint_test_head()
+disjoint_intervals_test_head()
 {
 	atf_set "descr" "can't reduce disjoint intervals"
 }
 
-disjoint_test_body()
+disjoint_intervals_test_body()
 {
 	cat > input << EOF
 pkg_install<1:../../pkgtools/pkg_install
@@ -319,6 +319,301 @@ EOF
 	cat > expected << EOF
 pkg_install<1:../../pkgtools/pkg_install
 pkg_install>1:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### exact_match_more_than_lower_bound_test
+###
+
+atf_test_case exact_match_more_than_lower_bound_test
+
+exact_match_more_than_lower_bound_test_head()
+{
+	atf_set "descr" "exact match more than lower bound"
+}
+
+exact_match_more_than_lower_bound_test_body()
+{
+	cat > input << EOF
+pkg_install-2:../../pkgtools/pkg_install
+pkg_install>=1:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install-2:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### exact_match_less_than_lower_bound_test
+###
+
+atf_test_case exact_match_less_than_lower_bound_test
+
+exact_match_less_than_lower_bound_test_head()
+{
+	atf_set "descr" "exact match less than lower bound"
+}
+
+exact_match_less_than_lower_bound_test_body()
+{
+	cat > input << EOF
+pkg_install>=2:../../pkgtools/pkg_install
+pkg_install-1:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install>=2:../../pkgtools/pkg_install
+pkg_install-1:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### exact_match_less_than_upper_bound_test
+###
+
+atf_test_case exact_match_less_than_upper_bound_test
+
+exact_match_less_than_upper_bound_test_head()
+{
+	atf_set "descr" "exact match less than upper bound"
+}
+
+exact_match_less_than_upper_bound_test_body()
+{
+	cat > input << EOF
+pkg_install-2:../../pkgtools/pkg_install
+pkg_install<3:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install-2:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### exact_match_more_than_upper_bound_test
+###
+
+atf_test_case exact_match_more_than_upper_bound_test
+
+exact_match_more_than_upper_bound_test_head()
+{
+	atf_set "descr" "exact match more than upper bound"
+}
+
+exact_match_more_than_upper_bound_test_body()
+{
+	cat > input << EOF
+pkg_install<1:../../pkgtools/pkg_install
+pkg_install-2:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install<1:../../pkgtools/pkg_install
+pkg_install-2:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### exact_match_in_interval_test
+###
+
+atf_test_case exact_match_in_interval_test
+
+exact_match_in_interval_test_head()
+{
+	atf_set "descr" "exact match in interval"
+}
+
+exact_match_in_interval_test_body()
+{
+	cat > input << EOF
+pkg_install-2:../../pkgtools/pkg_install
+pkg_install>=1:../../pkgtools/pkg_install
+pkg_install<3:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install-2:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### exact_match_outside_interval_test
+###
+
+atf_test_case exact_match_outside_interval_test
+
+exact_match_outside_interval_test_head()
+{
+	atf_set "descr" "exact match outside interval"
+}
+
+exact_match_outside_interval_test_body()
+{
+	cat > input << EOF
+pkg_install-4:../../pkgtools/pkg_install
+pkg_install>=1:../../pkgtools/pkg_install
+pkg_install<3:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install-4:../../pkgtools/pkg_install
+pkg_install>=1:../../pkgtools/pkg_install
+pkg_install<3:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### exact_match_conflicts_test
+###
+
+atf_test_case exact_match_conflicts_test
+
+exact_match_conflicts_test_head()
+{
+	atf_set "descr" "exact match conflicts"
+}
+
+exact_match_conflicts_test_body()
+{
+	cat > input << EOF
+pkg_install-2:../../pkgtools/pkg_install
+pkg_install-1:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install-2:../../pkgtools/pkg_install
+pkg_install-1:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### only_any_test
+###
+
+atf_test_case only_any_test
+
+only_any_test_head()
+{
+	atf_set "descr" "only 'any' pattern"
+}
+
+only_any_test_body()
+{
+	cat > input << EOF
+pkg_install-[0-9]*:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install-[0-9]*:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### any_with_lower_bound_test
+###
+
+atf_test_case any_with_lower_bound_test
+
+any_with_lower_bound_test_head()
+{
+	atf_set "descr" "'any' pattern with lower bound"
+}
+
+any_with_lower_bound_test_body()
+{
+	cat > input << EOF
+pkg_install-[0-9]*:../../pkgtools/pkg_install
+pkg_install>=1:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install>=1:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### any_with_upper_bound_test
+###
+
+atf_test_case any_with_upper_bound_test
+
+any_with_upper_bound_test_head()
+{
+	atf_set "descr" "'any' pattern with upper bound"
+}
+
+any_with_upper_bound_test_body()
+{
+	cat > input << EOF
+pkg_install-[0-9]*:../../pkgtools/pkg_install
+pkg_install<2:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install<2:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### any_with_interval_test
+###
+
+atf_test_case any_with_interval_test
+
+any_with_interval_test_head()
+{
+	atf_set "descr" "'any' pattern with interval"
+}
+
+any_with_interval_test_body()
+{
+	cat > input << EOF
+pkg_install-[0-9]*:../../pkgtools/pkg_install
+pkg_install>=1:../../pkgtools/pkg_install
+pkg_install<2:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install>=1<2:../../pkgtools/pkg_install
+EOF
+	check_reduce input expected
+	atf_pass
+}
+
+###
+### any_with_exact_match_test
+###
+
+atf_test_case any_with_exact_match_test
+
+any_with_exact_match_test_head()
+{
+	atf_set "descr" "'any' pattern with exact match"
+}
+
+any_with_exact_match_test_body()
+{
+	cat > input << EOF
+pkg_install-[0-9]*:../../pkgtools/pkg_install
+pkg_install-1:../../pkgtools/pkg_install
+EOF
+	cat > expected << EOF
+pkg_install-1:../../pkgtools/pkg_install
 EOF
 	check_reduce input expected
 	atf_pass
@@ -438,7 +733,19 @@ atf_init_test_cases()
 	atf_add_test_case greater_and_greater_equal_same_bound_test
 	atf_add_test_case lower_and_upper_bounds_test
 	atf_add_test_case overlapping_intervals_test
-	atf_add_test_case disjoint_test
+	atf_add_test_case disjoint_intervals_test
+	atf_add_test_case exact_match_more_than_lower_bound_test
+	atf_add_test_case exact_match_less_than_lower_bound_test
+	atf_add_test_case exact_match_less_than_upper_bound_test
+	atf_add_test_case exact_match_more_than_upper_bound_test
+	atf_add_test_case exact_match_in_interval_test
+	atf_add_test_case exact_match_outside_interval_test
+	atf_add_test_case exact_match_conflicts_test
+	atf_add_test_case only_any_test
+	atf_add_test_case any_with_lower_bound_test
+	atf_add_test_case any_with_upper_bound_test
+	atf_add_test_case any_with_interval_test
+	atf_add_test_case any_with_exact_match_test
 	atf_add_test_case strings_in_versions_test
 	atf_add_test_case underscores_in_versions_test
 	atf_add_test_case tildes_in_versions_test
