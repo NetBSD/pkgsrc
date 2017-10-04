@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.74 2017/08/25 11:05:33 adam Exp $
+$NetBSD: distinfo,v 1.74.4.1 2017/10/04 16:07:20 spz Exp $
 
 SHA1 (tcl8.6.7-src.tar.gz) = 68934c6ecf827348085e0f06c7396b31fb539d83
 RMD160 (tcl8.6.7-src.tar.gz) = 5f114bbd95c7208f929fe9ddb3432636d376844c
@@ -24,3 +24,4 @@ SHA1 (patch-unix_tclUnixCompat.c) = 7ffa40a1a56345f5b86cd896e8e3b0d5748d8c5e
 SHA1 (patch-unix_tclUnixFCmd.c) = e715d9419a36a8414355252bb3da0ef48b07fe4f
 SHA1 (patch-unix_tclUnixInit.c) = 50eafafdd10e35266f9fe5b73a80e7b50f393f88
 SHA1 (patch-unix_tclUnixPort.h) = f7d2e7b8912b9bff1709ac2c34aee1f4725e90ac
+SHA1 (patch-unix_tclUnixSock.c) = 77c09de2786ec5f8c4a5ab4004acf5172fa1fe3b
