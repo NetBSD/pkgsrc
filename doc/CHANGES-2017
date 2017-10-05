@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4312 2017/10/05 08:22:11 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4313 2017/10/05 09:58:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6119,3 +6119,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-test to 3.2.3 [adam 2017-10-05]
 	Updated lang/python36 to 3.6.3 [adam 2017-10-05]
 	Updated math/py-numpy to 1.13.3 [adam 2017-10-05]
+	Updated net/py-cymruwhois to 1.6 [adam 2017-10-05]
+	Updated net/py-dnsdiag to 1.6.3 [adam 2017-10-05]
