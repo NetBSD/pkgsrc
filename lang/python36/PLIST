@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/07/18 13:43:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/10/05 08:17:25 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1607,6 +1607,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_iomenu.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_macosx.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_macosx.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_macosx.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_outwin.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_outwin.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_outwin.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_paragraph.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_paragraph.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_paragraph.pyo
@@ -1751,6 +1754,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/windows.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/zoomheight.py
 lib/python${PY_VER_SUFFIX}/idlelib/zoomheight.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/zoomheight.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/zzdummy.py
+lib/python${PY_VER_SUFFIX}/idlelib/zzdummy.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/zzdummy.pyo
 lib/python${PY_VER_SUFFIX}/imaplib.py
 lib/python${PY_VER_SUFFIX}/imaplib.pyc
 lib/python${PY_VER_SUFFIX}/imaplib.pyo
@@ -2529,6 +2535,9 @@ lib/python${PY_VER_SUFFIX}/test/badsyntax_future7.py
 lib/python${PY_VER_SUFFIX}/test/badsyntax_future8.py
 lib/python${PY_VER_SUFFIX}/test/badsyntax_future9.py
 lib/python${PY_VER_SUFFIX}/test/badsyntax_pep3120.py
+lib/python${PY_VER_SUFFIX}/test/bisect.py
+lib/python${PY_VER_SUFFIX}/test/bisect.pyc
+lib/python${PY_VER_SUFFIX}/test/bisect.pyo
 lib/python${PY_VER_SUFFIX}/test/bytecode_helper.py
 lib/python${PY_VER_SUFFIX}/test/bytecode_helper.pyc
 lib/python${PY_VER_SUFFIX}/test/bytecode_helper.pyo
@@ -2905,6 +2914,9 @@ lib/python${PY_VER_SUFFIX}/test/pydocfodder.pyo
 lib/python${PY_VER_SUFFIX}/test/pystone.py
 lib/python${PY_VER_SUFFIX}/test/pystone.pyc
 lib/python${PY_VER_SUFFIX}/test/pystone.pyo
+lib/python${PY_VER_SUFFIX}/test/pythoninfo.py
+lib/python${PY_VER_SUFFIX}/test/pythoninfo.pyc
+lib/python${PY_VER_SUFFIX}/test/pythoninfo.pyo
 lib/python${PY_VER_SUFFIX}/test/randv2_32.pck
 lib/python${PY_VER_SUFFIX}/test/randv2_64.pck
 lib/python${PY_VER_SUFFIX}/test/randv3.pck
@@ -2935,7 +2947,6 @@ lib/python${PY_VER_SUFFIX}/test/seq_tests.py
 lib/python${PY_VER_SUFFIX}/test/seq_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/seq_tests.pyo
 lib/python${PY_VER_SUFFIX}/test/sgml_input.html
-lib/python${PY_VER_SUFFIX}/test/sha256.pem
 lib/python${PY_VER_SUFFIX}/test/signalinterproctester.py
 lib/python${PY_VER_SUFFIX}/test/signalinterproctester.pyc
 lib/python${PY_VER_SUFFIX}/test/signalinterproctester.pyo
@@ -3693,6 +3704,18 @@ lib/python${PY_VER_SUFFIX}/test/test_import/data/circular_imports/subpkg/util.py
 lib/python${PY_VER_SUFFIX}/test/test_import/data/circular_imports/util.py
 lib/python${PY_VER_SUFFIX}/test/test_import/data/circular_imports/util.pyc
 lib/python${PY_VER_SUFFIX}/test/test_import/data/circular_imports/util.pyo
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package/__init__.py
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package/__init__.pyc
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package/__init__.pyo
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package/submodule.py
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package/submodule.pyc
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package/submodule.pyo
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package2/submodule1.py
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package2/submodule1.pyc
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package2/submodule1.pyo
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package2/submodule2.py
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package2/submodule2.pyc
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package2/submodule2.pyo
 lib/python${PY_VER_SUFFIX}/test/test_importlib/__init__.py
 lib/python${PY_VER_SUFFIX}/test/test_importlib/__init__.pyc
 lib/python${PY_VER_SUFFIX}/test/test_importlib/__init__.pyo
