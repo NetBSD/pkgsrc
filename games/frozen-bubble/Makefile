@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2017/09/26 11:17:37 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2017/10/05 09:57:02 leot Exp $
 
 DISTNAME=	frozen-bubble-2.2.1-beta1
 PKGNAME=	${DISTNAME:S/-beta/beta/}
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://www.frozen-bubble.org/data/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	leot1990@users.sourceforge.net
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://www.frozen-bubble.org/
 COMMENT=	Pop the frozen bubbles
 LICENSE=	gnu-gpl-v2
