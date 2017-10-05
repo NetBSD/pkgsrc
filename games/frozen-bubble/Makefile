@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2017/10/05 09:57:02 leot Exp $
+# $NetBSD: Makefile,v 1.57 2017/10/05 10:05:43 leot Exp $
 
 DISTNAME=	frozen-bubble-2.2.1-beta1
 PKGNAME=	${DISTNAME:S/-beta/beta/}
@@ -19,6 +19,8 @@ DEPENDS+=	p5-IPC-System-Simple-[0-9]*:../../devel/p5-IPC-System-Simple
 DEPENDS+=	p5-Locale-Maketext-Lexicon-[0-9]*:../../misc/p5-Locale-Maketext-Lexicon
 
 USE_TOOLS+=	gmake perl pkg-config
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 MAKE_ENV+=	CP=${CP:Q} GMAKE=${GMAKE:Q} PERL5=${PERL5:Q} INSTALLDIRS="vendor"
 INSTALL_MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR} \
