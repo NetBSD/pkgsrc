@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.113 2017/07/28 21:10:00 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2017/10/05 15:34:13 wiz Exp $
 
 DISTNAME=	xorg-server-${XORG_VERSION}
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Modular X11 server from modular X.org
