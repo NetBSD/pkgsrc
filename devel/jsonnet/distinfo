@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2017/10/05 19:40:35 seb Exp $
+
+SHA1 (jsonnet/v0.9.4.tar.gz) = 61a07521ec245a288f2fa24ba63f54b4de128b81
+RMD160 (jsonnet/v0.9.4.tar.gz) = 1f6125e1e361d3bdfd6e73bf0a1359159202b9f6
+SHA512 (jsonnet/v0.9.4.tar.gz) = 0a2945aa5b9fa5411b8d049a94e253399607b92b4a0439307cb4f5ba2cc22a8def4f12dd8c1fec3df30ed4e112682b056a805a673fab84bc083a74b7c71b59a4
+Size (jsonnet/v0.9.4.tar.gz) = 556697 bytes
+SHA1 (patch-Makefile) = c0072b993fc238ea72f287f5f5b64be9c9aee8e6
