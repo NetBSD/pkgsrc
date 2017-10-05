@@ -1,1 +1,1 @@
-bin/cymruwhois @PREFIX@/bin/cymruwhois-@PYVERSSUFFIX@
+bin/cymruwhois @PREFIX@/bin/cymruwhois@PYVERSSUFFIX@
