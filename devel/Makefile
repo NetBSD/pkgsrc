@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2542 2017/10/03 00:44:42 minskim Exp $
+# $NetBSD: Makefile,v 1.2543 2017/10/05 03:43:30 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -2122,9 +2122,9 @@ SUBDIR+=	py-thrift
 SUBDIR+=	py-tlsh
 SUBDIR+=	py-tortoisehg
 SUBDIR+=	py-tox
-SUBDIR+=	py-treq
 SUBDIR+=	py-traceback2
 SUBDIR+=	py-traitlets
+SUBDIR+=	py-treq
 SUBDIR+=	py-tryton
 SUBDIR+=	py-trytond
 SUBDIR+=	py-txaio
