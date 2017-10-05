@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2017/10/02 13:42:10 wiz Exp $
+$NetBSD: distinfo,v 1.16 2017/10/05 22:39:05 wiz Exp $
 
-SHA1 (khal-0.9.7.tar.gz) = 6b9257591a82b9b169d8b7251616148c2d144214
-RMD160 (khal-0.9.7.tar.gz) = 027f99cb7b98c67696f757b5aedfd0d4739fbd3c
-SHA512 (khal-0.9.7.tar.gz) = 24fd1ee472971f029f998b061da719a0dfe4ee9584a5ea237b6cf0c886b5c45d7a7ee4bf9c23c41eb0dd0c5eba0bcabed7a5f05ae486a890150429031e215180
-Size (khal-0.9.7.tar.gz) = 173401 bytes
+SHA1 (khal-0.9.8.tar.gz) = 0b30ca17d502e7a1c0ea9bc10f3cccdcacc61454
+RMD160 (khal-0.9.8.tar.gz) = 7fc4b63b56ea13f1c08f044298b2ab761a258676
+SHA512 (khal-0.9.8.tar.gz) = 4c47bd18e7458ca7a6adf0684872923b4e49e6bfe481269cf9f77dee29dd47dbacf0d557890080618b4d3f08766fc8fae32de7682167642f0705e5b3b6b5dc01
+Size (khal-0.9.8.tar.gz) = 173717 bytes
