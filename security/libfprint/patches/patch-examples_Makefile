@@ -1,0 +1,15 @@
+$NetBSD: patch-examples_Makefile,v 1.1 2017/10/06 14:16:00 hauke Exp $
+
+Do not build C++ test binary.
+
+--- examples/Makefile.in.orig	2017-05-14 16:27:17.000000000 +0000
++++ examples/Makefile.in
+@@ -89,7 +89,7 @@ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+ noinst_PROGRAMS = verify_live$(EXEEXT) enroll$(EXEEXT) verify$(EXEEXT) \
+-	img_capture$(EXEEXT) cpp-test$(EXEEXT) $(am__EXEEXT_1)
++	img_capture$(EXEEXT) $(am__EXEEXT_1)
+ @BUILD_X11_EXAMPLES_TRUE@am__append_1 = img_capture_continuous
+ subdir = examples
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
