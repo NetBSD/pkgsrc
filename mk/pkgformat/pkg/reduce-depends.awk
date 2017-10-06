@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: reduce-depends.awk,v 1.9 2017/10/04 04:13:12 jlam Exp $
+# $NetBSD: reduce-depends.awk,v 1.10 2017/10/06 14:46:21 wiz Exp $
 #
 # Copyright (c) 2006-2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -197,7 +197,7 @@ BEGIN {
 			if (match(pattern, /-\[0-9\]\*$/)) {
 				any_bound = substr(pattern, RSTART + 1, RLENGTH)
 				pattern = substr(pattern, 1, RSTART - 1)
-				print(pattern " / " any_bound) | ERRCAT
+				# print(pattern " / " any_bound) | ERRCAT
 			} else if (match(pattern, "-" VERSION_RE "$")) {
 				eq_bound = substr(pattern, RSTART + 1, RLENGTH)
 				pattern = substr(pattern, 1, RSTART - 1)
