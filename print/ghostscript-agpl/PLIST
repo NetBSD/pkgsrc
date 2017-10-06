@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2016/09/30 12:37:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/10/06 06:15:00 adam Exp $
 bin/dvipdf
 bin/eps2eps
-bin/font2c
 bin/gs
 bin/gsbj
 bin/gsc
@@ -28,7 +27,6 @@ bin/ps2pdfwr
 bin/ps2ps
 bin/ps2ps2
 bin/unix-lpr.sh
-bin/wftopfa
 include/ghostscript/gdevdsp.h
 include/ghostscript/gserrors.h
 include/ghostscript/iapi.h
@@ -38,7 +36,6 @@ lib/libgs.so.9
 lib/libgs.so.${PKGVERSION}
 man/de/man1/dvipdf.1
 man/de/man1/eps2eps.1
-man/de/man1/font2c.1
 man/de/man1/gsnd.1
 man/de/man1/pdf2dsc.1
 man/de/man1/pdf2ps.1
@@ -49,10 +46,8 @@ man/de/man1/ps2pdf12.1
 man/de/man1/ps2pdf13.1
 man/de/man1/ps2pdf14.1
 man/de/man1/ps2ps.1
-man/de/man1/wftopfa.1
 man/man1/dvipdf.1
 man/man1/eps2eps.1
-man/man1/font2c.1
 man/man1/gs.1
 man/man1/gsbj.1
 man/man1/gsdj.1
@@ -73,7 +68,6 @@ man/man1/ps2pdf13.1
 man/man1/ps2pdf14.1
 man/man1/ps2pdfwr.1
 man/man1/ps2ps.1
-man/man1/wftopfa.1
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/CIDFSubst/DroidSansFallback.ttf
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/CIDFont/ArtifexBullet
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/CMap/78-EUC-H
@@ -476,7 +470,6 @@ share/ghostscript/${PKGVERSION}/lib/Stp720pl.upp
 share/ghostscript/${PKGVERSION}/lib/Stp870p.upp
 share/ghostscript/${PKGVERSION}/lib/Stp870pl.upp
 share/ghostscript/${PKGVERSION}/lib/acctest.ps
-share/ghostscript/${PKGVERSION}/lib/addxchar.ps
 share/ghostscript/${PKGVERSION}/lib/align.ps
 share/ghostscript/${PKGVERSION}/lib/bj8.rpd
 share/ghostscript/${PKGVERSION}/lib/bj8gc12f.upp
@@ -510,14 +503,12 @@ share/ghostscript/${PKGVERSION}/lib/cdj550.upp
 share/ghostscript/${PKGVERSION}/lib/cdj690.upp
 share/ghostscript/${PKGVERSION}/lib/cdj690ec.upp
 share/ghostscript/${PKGVERSION}/lib/cid2code.ps
-share/ghostscript/${PKGVERSION}/lib/decrypt.ps
 share/ghostscript/${PKGVERSION}/lib/dmp_init.ps
 share/ghostscript/${PKGVERSION}/lib/dmp_site.ps
 share/ghostscript/${PKGVERSION}/lib/dnj750c.upp
 share/ghostscript/${PKGVERSION}/lib/dnj750m.upp
 share/ghostscript/${PKGVERSION}/lib/docie.ps
 share/ghostscript/${PKGVERSION}/lib/escp_24.src
-share/ghostscript/${PKGVERSION}/lib/font2c.ps
 share/ghostscript/${PKGVERSION}/lib/font2pcl.ps
 share/ghostscript/${PKGVERSION}/lib/ghostpdf.ppd
 share/ghostscript/${PKGVERSION}/lib/gs_ce_e.ps
@@ -533,8 +524,6 @@ share/ghostscript/${PKGVERSION}/lib/gs_lgx_e.ps
 share/ghostscript/${PKGVERSION}/lib/gs_m.xbm
 share/ghostscript/${PKGVERSION}/lib/gs_m.xpm
 share/ghostscript/${PKGVERSION}/lib/gs_m_m.xbm
-share/ghostscript/${PKGVERSION}/lib/gs_pfile.ps
-share/ghostscript/${PKGVERSION}/lib/gs_rdlin.ps
 share/ghostscript/${PKGVERSION}/lib/gs_s.xbm
 share/ghostscript/${PKGVERSION}/lib/gs_s.xpm
 share/ghostscript/${PKGVERSION}/lib/gs_s_m.xbm
@@ -548,20 +537,13 @@ share/ghostscript/${PKGVERSION}/lib/gslp.ps
 share/ghostscript/${PKGVERSION}/lib/gsnup.ps
 share/ghostscript/${PKGVERSION}/lib/ht_ccsto.ps
 share/ghostscript/${PKGVERSION}/lib/image-qa.ps
-share/ghostscript/${PKGVERSION}/lib/impath.ps
 share/ghostscript/${PKGVERSION}/lib/jispaper.ps
 share/ghostscript/${PKGVERSION}/lib/landscap.ps
-share/ghostscript/${PKGVERSION}/lib/level1.ps
 share/ghostscript/${PKGVERSION}/lib/lines.ps
-share/ghostscript/${PKGVERSION}/lib/markhint.ps
-share/ghostscript/${PKGVERSION}/lib/markpath.ps
 share/ghostscript/${PKGVERSION}/lib/mkcidfm.ps
 share/ghostscript/${PKGVERSION}/lib/necp2x.upp
 share/ghostscript/${PKGVERSION}/lib/necp2x6.upp
-share/ghostscript/${PKGVERSION}/lib/packfile.ps
-share/ghostscript/${PKGVERSION}/lib/pcharstr.ps
 share/ghostscript/${PKGVERSION}/lib/pdf2dsc.ps
-share/ghostscript/${PKGVERSION}/lib/pdfwrite.ps
 share/ghostscript/${PKGVERSION}/lib/pf2afm.ps
 share/ghostscript/${PKGVERSION}/lib/pfbtopfa.ps
 share/ghostscript/${PKGVERSION}/lib/ppath.ps
@@ -569,9 +551,7 @@ share/ghostscript/${PKGVERSION}/lib/pphs.ps
 share/ghostscript/${PKGVERSION}/lib/prfont.ps
 share/ghostscript/${PKGVERSION}/lib/printafm.ps
 share/ghostscript/${PKGVERSION}/lib/ps2ai.ps
-share/ghostscript/${PKGVERSION}/lib/ps2ascii.ps
 share/ghostscript/${PKGVERSION}/lib/ps2epsi.ps
-share/ghostscript/${PKGVERSION}/lib/quit.ps
 share/ghostscript/${PKGVERSION}/lib/ras1.upp
 share/ghostscript/${PKGVERSION}/lib/ras24.upp
 share/ghostscript/${PKGVERSION}/lib/ras3.upp
@@ -582,8 +562,6 @@ share/ghostscript/${PKGVERSION}/lib/rollconv.ps
 share/ghostscript/${PKGVERSION}/lib/s400a1.upp
 share/ghostscript/${PKGVERSION}/lib/s400b1.upp
 share/ghostscript/${PKGVERSION}/lib/sharp.upp
-share/ghostscript/${PKGVERSION}/lib/showchar.ps
-share/ghostscript/${PKGVERSION}/lib/showpage.ps
 share/ghostscript/${PKGVERSION}/lib/sipixa6.upp
 share/ghostscript/${PKGVERSION}/lib/st640ih.upp
 share/ghostscript/${PKGVERSION}/lib/st640ihg.upp
@@ -619,10 +597,7 @@ share/ghostscript/${PKGVERSION}/lib/stcolor.ps
 share/ghostscript/${PKGVERSION}/lib/stocht.ps
 share/ghostscript/${PKGVERSION}/lib/traceimg.ps
 share/ghostscript/${PKGVERSION}/lib/traceop.ps
-share/ghostscript/${PKGVERSION}/lib/type1enc.ps
-share/ghostscript/${PKGVERSION}/lib/type1ops.ps
 share/ghostscript/${PKGVERSION}/lib/uninfo.ps
-share/ghostscript/${PKGVERSION}/lib/unprot.ps
 share/ghostscript/${PKGVERSION}/lib/viewcmyk.ps
 share/ghostscript/${PKGVERSION}/lib/viewgif.ps
 share/ghostscript/${PKGVERSION}/lib/viewjpeg.ps
@@ -630,7 +605,5 @@ share/ghostscript/${PKGVERSION}/lib/viewmiff.ps
 share/ghostscript/${PKGVERSION}/lib/viewpbm.ps
 share/ghostscript/${PKGVERSION}/lib/viewpcx.ps
 share/ghostscript/${PKGVERSION}/lib/viewps2a.ps
-share/ghostscript/${PKGVERSION}/lib/wftopfa.ps
 share/ghostscript/${PKGVERSION}/lib/winmaps.ps
-share/ghostscript/${PKGVERSION}/lib/wrfont.ps
 share/ghostscript/${PKGVERSION}/lib/zeroline.ps
