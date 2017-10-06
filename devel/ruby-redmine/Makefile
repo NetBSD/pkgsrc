@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/09/29 13:13:25 taca Exp $
+# $NetBSD: Makefile,v 1.25 2017/10/06 14:34:01 jperkin Exp $
 
 DISTNAME=	redmine-3.3.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -114,6 +114,7 @@ CHECK_INTERPRETER_SKIP+=${RM_DIR}/gems/gems/loofah-2.0.3/benchmark/benchmark.rb
 
 # Selenium has Linux .so files.
 CHECK_SHLIBS_SUPPORTED=	no
+CHECK_SSP_SUPPORTED=	no
 
 SUBST_CLASSES+=		pkgcfg
 SUBST_FILES.pkgcfg=	rmagick-2.16.0/ext/RMagick/extconf.rb
