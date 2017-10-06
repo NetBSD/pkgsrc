@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4329 2017/10/06 18:39:08 bsiegert Exp $
+$NetBSD: CHANGES-2017,v 1.4330 2017/10/06 19:25:20 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6142,3 +6142,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/getmail to 5.4 [schmonz 2017-10-06]
 	Added net/ruby-xdr version 2.0.0 [minskim 2017-10-06]
 	Updated lang/go to 1.9.1 [bsiegert 2017-10-06]
+	Added sysutils/u-boot-cubieboard2 version 2017.07 [jmcneill 2017-10-06]
