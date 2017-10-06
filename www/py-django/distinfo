@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.70 2017/09/06 15:19:17 adam Exp $
+$NetBSD: distinfo,v 1.71 2017/10/06 08:52:58 adam Exp $
 
-SHA1 (Django-1.11.5.tar.gz) = c16f8090c2251ff03e041afda77264474777a2d7
-RMD160 (Django-1.11.5.tar.gz) = 76c2246e8e292109dcb1462f96cd7891cc63baf9
-SHA512 (Django-1.11.5.tar.gz) = bd43524d80721f10e98ca1cb2d487b51258c5e66febcda4ff4487c4c057f2920bb84452ff966b1cfe5dbb7d11138b467f7e1d65017ac9dd92f76497147fce89c
-Size (Django-1.11.5.tar.gz) = 7875054 bytes
+SHA1 (Django-1.11.6.tar.gz) = a3d2e59f5bccff436e59caa4f5e8aadbd490893a
+RMD160 (Django-1.11.6.tar.gz) = 5865cb8eb78f4d81255320ab5a4e1c7ddc3fecc3
+SHA512 (Django-1.11.6.tar.gz) = 62ef5d6d7158d6030cc0a0faac09a8b85d7b06084f94b9e568aac0293f95c0e971875ae1ec75e62e42e33fd50f6294d9cfe54a10683f5b4b7327368a8ec63cf9
+Size (Django-1.11.6.tar.gz) = 7874450 bytes
