@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4326 2017/10/06 14:17:48 hauke Exp $
+$NetBSD: CHANGES-2017,v 1.4327 2017/10/06 16:20:43 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6139,3 +6139,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-awscli to 1.11.166 [adam 2017-10-06]
 	Updated www/py-django to 1.11.6 [adam 2017-10-06]
 	Updated security/libfprint to 0.7.0 [hauke 2017-10-06]
+	Updated mail/getmail to 5.4 [schmonz 2017-10-06]
