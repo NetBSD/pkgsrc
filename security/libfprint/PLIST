@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/10/06 14:16:00 hauke Exp $
+bin/enroll
+bin/img_capture
+bin/verify
+bin/verify_live
 include/libfprint/fprint.h
-lib/libfprint.a
 lib/libfprint.la
-lib/libfprint.so
-lib/libfprint.so.0
 lib/pkgconfig/libfprint.pc
