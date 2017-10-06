@@ -1,4 +1,4 @@
-$NetBSD: patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c,v 1.6 2014/12/31 10:06:57 adam Exp $
+$NetBSD: patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c,v 1.7 2017/10/06 02:39:38 gavan Exp $
 
 --- agent/mibgroup/hardware/cpu/cpu_sysctl.c.orig	2014-12-08 20:23:22.000000000 +0000
 +++ agent/mibgroup/hardware/cpu/cpu_sysctl.c
@@ -51,6 +51,15 @@ $NetBSD: patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c,v 1.6 2014/12/31 10:06:
  #endif
      for ( i = 0; i < n; i++ ) {
          cpu = netsnmp_cpu_get_byIdx( i, 1 );
+@@ -158,7 +165,7 @@
+     /*
+      * Load the latest CPU usage statistics
+      */
+-int netsnmp_cpu_arch_load( netsnmp_cache *cache, void *magic ) {
++int __attribute__((optimize("O0"))) netsnmp_cpu_arch_load( netsnmp_cache *cache, void *magic ) {
+ 
+     /*
+      * Strictly speaking, BSDi ought to use
 @@ -190,9 +197,11 @@ int netsnmp_cpu_arch_load( netsnmp_cache
      netsnmp_cpu_info *cpu = netsnmp_cpu_get_byIdx( -1, 0 );
  
