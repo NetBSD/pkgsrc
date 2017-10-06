@@ -1,0 +1,114 @@
+$NetBSD: patch-configure.ac,v 1.1 2017/10/06 20:47:37 rumko Exp $
+
+Do not include system paths in R_LD_LIBRARY_PATH.
+NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
+
+--- configure.ac.orig	2016-10-04 09:15:04.000000000 +0000
++++ configure.ac
+@@ -33,6 +33,7 @@ m4_define([R_VERSION],
+ AC_INIT([R],[R_VERSION],[https://bugs.r-project.org],[R],[https://www.r-project.org])
+ AC_CONFIG_SRCDIR([src/include/Defn.h])
+ AC_CONFIG_AUX_DIR([tools])
++AC_CONFIG_MACRO_DIR([m4])
+ 
+ ### * Information on the package.
+ 
+@@ -290,7 +291,7 @@ AC_ARG_ENABLE([BLAS-shlib],
+ 
+ ## As from R 3.2.0 split up -L... and -lR
+ if test "${want_R_shlib}" = yes; then
+-  LIBR0="-L\$(R_HOME)/lib\$(R_ARCH)"
++  LIBR0="-Wl,-R${prefix}/lib/R/lib\$(R_ARCH) -L\$(R_HOME)/lib\$(R_ARCH)"
+   LIBR1=-lR
+ else
+   LIBR0=
+@@ -689,7 +690,7 @@ case "${host_os}" in
+     ## Not so bad in later versions of Darwin, 
+     ## where DYLD_FALLBACK_LIBRARY_PATH is used (see below).
+     ;;
+-  *)
++  donotuse*)
+     for arg in ${LDFLAGS}; do
+       case "${arg}" in
+         -L*)
+@@ -1376,7 +1377,7 @@ rm -f libconftest${DYLIB_EXT} conftest.c
+     fpicflags="${darwin_pic}"
+     shlib_cxxldflags="${shlib_ldflags}"
+     ;;
+-  freebsd*)
++  freebsd*|dragonfly*)
+     ## maybe this needs to depend on the compiler:
+     ## -export-dynamic used to work, but does not with clang.
+     ## Seems FreeBSD has used the GNU linker since at least 3.0 (Oct 1998)
+@@ -1472,6 +1473,12 @@ rm -f libconftest${DYLIB_EXT} conftest.c
+     ;;
+   netbsd*)
+     ## See the comments about FreeBSD
++    fpicflags="-fPIC"
++    case "${host_cpu}" in
++      powerpc*)
++      cpicflags="-fPIC"
++      ;;
++    esac
+     if ${CPP} - -dM < /dev/null | grep __ELF__ >/dev/null ; then
+       main_ldflags="-Wl,--export-dynamic"
+       shlib_ldflags="-shared"
+@@ -1514,22 +1521,22 @@ rm -f libconftest${DYLIB_EXT} conftest.c
+   solaris*)
+ ## SPARC has only an 8k global object table, 1024 entries on 64-bit,
+ ## so need PIC not pic.  They are the same on other Solaris platforms.
+-    shlib_ldflags="-G"
+-    shlib_cxxldflags="-G"
+    if test "${GCC}" = yes; then
++      shlib_ldflags="-shared"
++      shlib_cxxldflags="-shared"
+       cpicflags="-fPIC"
+       ld=`${CC} -print-prog-name=ld`
+       ldoutput=`${ld} -v 2>&1 | grep GNU`
+       if test -n "${ldoutput}"; then
+ 	main_ldflags="-Wl,-export-dynamic"
+-	shlib_ldflags="-shared"
+-        shlib_cxxldflags="-shared"
+       else
+         ## it seems gcc c 4.6.2 needs this with Solaris linker
+ 	shlib_ldflags="-shared"
+         shlib_cxxldflags="-shared"
+       fi
+     else
++      shlib_ldflags="-G"
++      shlib_cxxldflags="-G"
+       cpicflags="-KPIC"
+       if test "`basename ${CXX}`" = "CC" ; then
+         ## Forte version 7 needs -lCstd: Forte 6 does not.	
+@@ -1584,7 +1591,7 @@ R_SH_VAR_ADD(MAIN_LDFLAGS, [${main_ldfla
+ : ${CPICFLAGS="${cpicflags}"}
+ if test -z "${CPICFLAGS}"; then
+   case "${host_os}" in
+-    aix*|irix*|mingw*|osf*)
++    aix*|irix*|mingw*|osf*|darwin*)
+       ;;
+     *)
+       AC_MSG_WARN([I could not determine CPICFLAGS.])
+@@ -1667,10 +1674,10 @@ case "${host_os}" in
+     DYLIB_EXT=".dylib"
+     dylib_ldflags="${darwin_dylib_ldflags}"
+     MAJR_VERSION=`echo "${PACKAGE_VERSION}" | sed  -e "s/[[\.]][[1-9]]$/.0/"` 
+-    LIBR_LDFLAGS="-install_name libR.dylib -compatibility_version ${MAJR_VERSION}  -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
+-    RLAPACK_LDFLAGS="-install_name libRlapack.dylib -compatibility_version ${MAJR_VERSION} -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
++    LIBR_LDFLAGS="-install_name ${PREFIX}/lib/R/lib/libR.dylib -compatibility_version ${MAJR_VERSION}  -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
++    RLAPACK_LDFLAGS="-install_name ${PREFIX}/lib/R/lib/libRlapack.dylib -compatibility_version ${MAJR_VERSION} -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
+     ## don't use version in libRblas so we can replace it with any BLAS implementation
+-    RBLAS_LDFLAGS="-install_name libRblas.dylib -headerpad_max_install_names"
++    RBLAS_LDFLAGS="-install_name ${PREFIX}/lib/R/lib/libRblas.dylib -headerpad_max_install_names"
+     ;;
+   hpux*)
+     ## Needs to avoid embedding a relative path ../../../bin.
+@@ -2582,7 +2589,7 @@ case "${host_os}" in
+     r_ld_library_defaults="/usr/lib64:/lib64:/usr/lib:/lib"
+     ;;
+   solaris*)
+-    r_ld_library_defaults="/usr/lib:/lib"
++    r_ld_library_defaults="/usr/lib:/lib:/usr/lib/amd64:/lib/amd64:/usr/lib/64:/lib/64"
+     ;;
+   *)
+     r_ld_library_defaults=

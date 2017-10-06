@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.175 2017/09/10 20:36:56 rumko Exp $
+# $NetBSD: Makefile,v 1.176 2017/10/06 20:47:37 rumko Exp $
 
 DISTNAME=		R-3.3.3
 PKGREVISION=		2
@@ -21,6 +21,7 @@ INSTALL_TARGET=		install install-info
 TEST_TARGET=		check
 USE_TOOLS+=		gmake gzip:run makeinfo perl:run sed unzip:run xmkmf
 USE_TOOLS+=		pkg-config
+USE_TOOLS+=		aclocal autoconf autoreconf automake
 USE_LANGUAGES=		c c++ fortran
 USE_LIBTOOL=		yes
 TEXINFO_REQD=		5.1
@@ -45,10 +46,6 @@ CONFIGURE_ARGS+=	--with-system-xz
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
 CONFIGURE_ARGS+=	--enable-long-double=no
 .endif
-
-# cpow and clog are not implemented on FreeBSD
-CONFIGURE_ENV.FreeBSD+=	ac_cv_have_decl_clog=no
-CONFIGURE_ENV.FreeBSD+=	ac_cv_have_decl_cpow=no
 
 .if ${OPSYS} != "Linux"
 USE_GNU_ICONV=		yes		# latin1 support, iconvlist
@@ -140,6 +137,9 @@ BUILDLINK_API_DEPENDS.bzip2+=	bzip2>=1.0.5
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.[0-6]*)
 CONFIGURE_ARGS+=	--enable-mbcs=no
 .endif
+
+pre-configure:
+	${RUN} cd ${WRKSRC} && autoreconf -fvi
 
 # Fix library names.  Relies on build system using -headerpad_max_install_names.
 .if ${OPSYS} == "Darwin"
