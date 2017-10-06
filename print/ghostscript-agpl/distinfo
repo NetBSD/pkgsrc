@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.17 2017/07/12 08:55:36 wiz Exp $
+$NetBSD: distinfo,v 1.18 2017/10/06 06:15:00 adam Exp $
 
-SHA1 (ghostscript-9.21.tar.gz) = 6f60d7fcb5eef6a8bec5abedf21c6a7008a8c0c7
-RMD160 (ghostscript-9.21.tar.gz) = c389ab9346f86ba4ff9e5b80aca0dda7acb866a5
-SHA512 (ghostscript-9.21.tar.gz) = c5ff632dc9b418ebeecaae796cecbaf9ffcb84d7a1b62c1af2e6c9082f7b9f24fe9dd9f6a57bde3640f54c3036f0b99b32aac9f8ca1f489c012369ab2b72ae92
-Size (ghostscript-9.21.tar.gz) = 38398778 bytes
+SHA1 (ghostscript-9.22.tar.gz) = 666d16cb4fd9b22f6bcfa874b30cbfadf7c9d67d
+RMD160 (ghostscript-9.22.tar.gz) = ece611db0c38de2e8061560c50cd16265144d50f
+SHA512 (ghostscript-9.22.tar.gz) = 599ba003e168d302e327ea7c2b83a4247059a1b7222452cbea4966dac448a79e8d7f07a1f287fa0c14cfa5269bb623382ed02fb3ea3a0e526dae08aaa1cd8b89
+Size (ghostscript-9.22.tar.gz) = 38773429 bytes
 SHA1 (patch-base_gserrors_h) = ce75cfb7528871842a3bd35e18a6d91c89823909
 SHA1 (patch-base_lib.mak) = 723926f167b49568376ef0c0da6aa4ec01fe1516
 SHA1 (patch-base_mkromfs.c) = 96006928e0b5381e7101027372b6e6408f1c4a0b
