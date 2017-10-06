@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/05/12 10:02:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/10/06 06:31:44 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/mechanicalsoup/__init__.py
 ${PYSITELIB}/mechanicalsoup/__init__.pyc
 ${PYSITELIB}/mechanicalsoup/__init__.pyo
+${PYSITELIB}/mechanicalsoup/__version__.py
+${PYSITELIB}/mechanicalsoup/__version__.pyc
+${PYSITELIB}/mechanicalsoup/__version__.pyo
 ${PYSITELIB}/mechanicalsoup/browser.py
 ${PYSITELIB}/mechanicalsoup/browser.pyc
 ${PYSITELIB}/mechanicalsoup/browser.pyo
