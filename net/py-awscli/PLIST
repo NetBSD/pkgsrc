@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/09/04 18:10:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/10/06 08:37:28 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -81,9 +81,6 @@ ${PYSITELIB}/awscli/customizations/cloudformation/exceptions.pyo
 ${PYSITELIB}/awscli/customizations/cloudformation/package.py
 ${PYSITELIB}/awscli/customizations/cloudformation/package.pyc
 ${PYSITELIB}/awscli/customizations/cloudformation/package.pyo
-${PYSITELIB}/awscli/customizations/cloudformation/s3uploader.py
-${PYSITELIB}/awscli/customizations/cloudformation/s3uploader.pyc
-${PYSITELIB}/awscli/customizations/cloudformation/s3uploader.pyo
 ${PYSITELIB}/awscli/customizations/cloudformation/yamlhelper.py
 ${PYSITELIB}/awscli/customizations/cloudformation/yamlhelper.pyc
 ${PYSITELIB}/awscli/customizations/cloudformation/yamlhelper.pyo
@@ -429,9 +426,36 @@ ${PYSITELIB}/awscli/customizations/s3endpoint.pyo
 ${PYSITELIB}/awscli/customizations/s3errormsg.py
 ${PYSITELIB}/awscli/customizations/s3errormsg.pyc
 ${PYSITELIB}/awscli/customizations/s3errormsg.pyo
+${PYSITELIB}/awscli/customizations/s3uploader.py
+${PYSITELIB}/awscli/customizations/s3uploader.pyc
+${PYSITELIB}/awscli/customizations/s3uploader.pyo
 ${PYSITELIB}/awscli/customizations/scalarparse.py
 ${PYSITELIB}/awscli/customizations/scalarparse.pyc
 ${PYSITELIB}/awscli/customizations/scalarparse.pyo
+${PYSITELIB}/awscli/customizations/servicecatalog/__init__.py
+${PYSITELIB}/awscli/customizations/servicecatalog/__init__.pyc
+${PYSITELIB}/awscli/customizations/servicecatalog/__init__.pyo
+${PYSITELIB}/awscli/customizations/servicecatalog/exceptions.py
+${PYSITELIB}/awscli/customizations/servicecatalog/exceptions.pyc
+${PYSITELIB}/awscli/customizations/servicecatalog/exceptions.pyo
+${PYSITELIB}/awscli/customizations/servicecatalog/generate.py
+${PYSITELIB}/awscli/customizations/servicecatalog/generate.pyc
+${PYSITELIB}/awscli/customizations/servicecatalog/generate.pyo
+${PYSITELIB}/awscli/customizations/servicecatalog/generatebase.py
+${PYSITELIB}/awscli/customizations/servicecatalog/generatebase.pyc
+${PYSITELIB}/awscli/customizations/servicecatalog/generatebase.pyo
+${PYSITELIB}/awscli/customizations/servicecatalog/generateproduct.py
+${PYSITELIB}/awscli/customizations/servicecatalog/generateproduct.pyc
+${PYSITELIB}/awscli/customizations/servicecatalog/generateproduct.pyo
+${PYSITELIB}/awscli/customizations/servicecatalog/generateprovisioningartifact.py
+${PYSITELIB}/awscli/customizations/servicecatalog/generateprovisioningartifact.pyc
+${PYSITELIB}/awscli/customizations/servicecatalog/generateprovisioningartifact.pyo
+${PYSITELIB}/awscli/customizations/servicecatalog/helptext.py
+${PYSITELIB}/awscli/customizations/servicecatalog/helptext.pyc
+${PYSITELIB}/awscli/customizations/servicecatalog/helptext.pyo
+${PYSITELIB}/awscli/customizations/servicecatalog/utils.py
+${PYSITELIB}/awscli/customizations/servicecatalog/utils.pyc
+${PYSITELIB}/awscli/customizations/servicecatalog/utils.pyo
 ${PYSITELIB}/awscli/customizations/sessendemail.py
 ${PYSITELIB}/awscli/customizations/sessendemail.pyc
 ${PYSITELIB}/awscli/customizations/sessendemail.pyo
@@ -777,6 +801,11 @@ ${PYSITELIB}/awscli/examples/deploy/stop-deployment.rst
 ${PYSITELIB}/awscli/examples/deploy/uninstall.rst
 ${PYSITELIB}/awscli/examples/deploy/update-application.rst
 ${PYSITELIB}/awscli/examples/deploy/update-deployment-group.rst
+${PYSITELIB}/awscli/examples/devicefarm/create-device-pool.rst
+${PYSITELIB}/awscli/examples/devicefarm/create-project.rst
+${PYSITELIB}/awscli/examples/devicefarm/create-upload.rst
+${PYSITELIB}/awscli/examples/devicefarm/get-upload.rst
+${PYSITELIB}/awscli/examples/devicefarm/list-projects.rst
 ${PYSITELIB}/awscli/examples/directconnect/allocate-connection-on-interconnect.rst
 ${PYSITELIB}/awscli/examples/directconnect/allocate-hosted-connection.rst
 ${PYSITELIB}/awscli/examples/directconnect/allocate-private-virtual-interface.rst
@@ -1046,6 +1075,8 @@ ${PYSITELIB}/awscli/examples/ec2/terminate-instances.rst
 ${PYSITELIB}/awscli/examples/ec2/unassign-ipv6-addresses.rst
 ${PYSITELIB}/awscli/examples/ec2/unassign-private-ip-addresses.rst
 ${PYSITELIB}/awscli/examples/ec2/unmonitor-instances.rst
+${PYSITELIB}/awscli/examples/ec2/update-security-group-rule-descriptions-egress.rst
+${PYSITELIB}/awscli/examples/ec2/update-security-group-rule-descriptions-ingress.rst
 ${PYSITELIB}/awscli/examples/ecr/batch-delete-image.rst
 ${PYSITELIB}/awscli/examples/ecr/batch-get-image.rst
 ${PYSITELIB}/awscli/examples/ecr/create-repository.rst

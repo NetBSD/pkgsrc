@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2017/09/04 18:10:48 adam Exp $
+# $NetBSD: Makefile,v 1.12 2017/10/06 08:37:28 adam Exp $
 
-DISTNAME=	awscli-1.11.145
+DISTNAME=	awscli-1.11.166
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/awscli/}
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-s3transfer>=0.1.9:../../net/py-s3transfer
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 
 USE_LANGUAGES=		# none
+
+PYTHON_SELF_CONFLICT=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
