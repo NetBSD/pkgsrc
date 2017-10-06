@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4323 2017/10/06 06:34:56 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4324 2017/10/06 08:38:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6135,3 +6135,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/apache24 to 2.4.28 [adam 2017-10-06]
 	Updated www/py-MechanicalSoup to 0.8.0 [adam 2017-10-06]
 	Updated security/py-asn1 to 0.3.7 [adam 2017-10-06]
+	Updated net/py-botocore to 1.7.24 [adam 2017-10-06]
+	Updated net/py-awscli to 1.11.166 [adam 2017-10-06]
