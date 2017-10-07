@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/10/03 14:07:55 maya Exp $
+# $NetBSD: Makefile,v 1.12 2017/10/07 13:08:37 wiz Exp $
 
 DISTNAME=	rustc-1.20.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -17,6 +17,9 @@ USE_TOOLS+=		bash gmake perl:build pkg-config
 UNLIMIT_RESOURCES+=	cputime
 
 TEST_TARGET=	check
+
+# bin/* lib/*, but names vary
+CHECK_RELRO_SUPPORTED=	no
 
 # Required for LLVM (-std=c++11)
 GCC_REQD+=	4.8
