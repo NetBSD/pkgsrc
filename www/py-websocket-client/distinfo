@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/10/07 17:24:03 maya Exp $
+
+SHA1 (websocket_client-0.44.0.tar.gz) = 736908072e36c1f3dc5714b685e246d8090ee1df
+RMD160 (websocket_client-0.44.0.tar.gz) = 9ecd207dae7b49dca4e730b8c78a01405500d727
+SHA512 (websocket_client-0.44.0.tar.gz) = 845e29c3ee7233f77d630c21a7cd8bc0ac1f619cafbd77cf2cb493e2d6b1900611bf7e9a6b927f10685a267ca2dbe6434f8b2a1e796534649253b3f1dd446738
+Size (websocket_client-0.44.0.tar.gz) = 194701 bytes
