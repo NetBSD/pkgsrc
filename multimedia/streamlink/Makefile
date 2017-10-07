@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/10/07 17:27:41 maya Exp $
+# $NetBSD: Makefile,v 1.11 2017/10/07 19:04:42 maya Exp $
 
 DISTNAME=	streamlink-0.8.1
 CATEGORIES=	multimedia
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-cryptodome>=3.4.3:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-iso-639-[0-9]*:../../devel/py-iso-639
 DEPENDS+=	${PYPKGPREFIX}-iso3166-[0-9]*:../../devel/py-iso3166
-DEPENDS+=	${PYPKGPREFIX}-websocket_client-[0-9]*:../../www/py-websocket_client
+DEPENDS+=	${PYPKGPREFIX}-websocket_client-[0-9]*:../../www/py-websocket-client
 
 EGG_NAME=	${PKGNAME_NOREV}
 
