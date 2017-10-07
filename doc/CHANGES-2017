@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4336 2017/10/07 11:59:16 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4337 2017/10/07 12:33:23 morr Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6163,3 +6163,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-ZopeI18NMessageid to 4.1.0 [adam 2017-10-07]
 	Updated devel/py-ZopeConfiguration to 4.1.0 [adam 2017-10-07]
 	Updated net/py-foolscap to 0.12.7 [adam 2017-10-07]
+	Updated editors/vim-share to 8.0.1176 [morr 2017-10-07]
