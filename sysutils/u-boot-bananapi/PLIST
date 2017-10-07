@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/10/07 13:58:52 jmcneill Exp $
+share/u-boot/bananapi/u-boot-sunxi-with-spl.bin
