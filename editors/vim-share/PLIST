@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2017/09/11 21:05:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2017/10/07 12:32:23 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -1224,6 +1224,7 @@ share/vim/${VIM_SUBDIR}/syntax/tags.vim
 share/vim/${VIM_SUBDIR}/syntax/tak.vim
 share/vim/${VIM_SUBDIR}/syntax/takcmp.vim
 share/vim/${VIM_SUBDIR}/syntax/takout.vim
+share/vim/${VIM_SUBDIR}/syntax/tap.vim
 share/vim/${VIM_SUBDIR}/syntax/tar.vim
 share/vim/${VIM_SUBDIR}/syntax/taskdata.vim
 share/vim/${VIM_SUBDIR}/syntax/taskedit.vim
@@ -1368,6 +1369,7 @@ share/vim/${VIM_SUBDIR}/tutor/tutor.ja.sjis
 share/vim/${VIM_SUBDIR}/tutor/tutor.ja.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.ko.euc
 share/vim/${VIM_SUBDIR}/tutor/tutor.ko.utf-8
+share/vim/${VIM_SUBDIR}/tutor/tutor.lv
 share/vim/${VIM_SUBDIR}/tutor/tutor.nb
 share/vim/${VIM_SUBDIR}/tutor/tutor.nb.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.nl
