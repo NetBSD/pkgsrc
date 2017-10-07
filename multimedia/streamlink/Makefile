@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2017/04/27 16:02:29 maya Exp $
+# $NetBSD: Makefile,v 1.10 2017/10/07 17:27:41 maya Exp $
 
-DISTNAME=	streamlink-0.5.0
+DISTNAME=	streamlink-0.8.1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=streamlink/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -19,9 +19,9 @@ DEPENDS+=	${PYPKGPREFIX}-cryptodome>=3.4.3:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-iso-639-[0-9]*:../../devel/py-iso-639
 DEPENDS+=	${PYPKGPREFIX}-iso3166-[0-9]*:../../devel/py-iso3166
+DEPENDS+=	${PYPKGPREFIX}-websocket_client-[0-9]*:../../www/py-websocket_client
 
 EGG_NAME=	${PKGNAME_NOREV}
-
 
 REPLACE_PYTHON+=	src/streamlink/packages/flashmedia/flv.py
 REPLACE_PYTHON+=	src/streamlink/packages/flashmedia/tag.py
