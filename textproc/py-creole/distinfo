@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 02:00:02 agc Exp $
+$NetBSD: distinfo,v 1.4 2017/10/07 07:31:14 adam Exp $
 
-SHA1 (python-creole-1.0.5.tar.gz) = fabef2732acdca81704f16f29222006d8b9e95a3
-RMD160 (python-creole-1.0.5.tar.gz) = c7079a6f46e2e726058944f12b204d9b174f32df
-SHA512 (python-creole-1.0.5.tar.gz) = 0d11325c0fa3a284d759484fc2d2f2f6e5642b31cb543b1c804e141e8de9fc6bb80bc36c0f3f947b77f14d41f40b1e0836236c9a2e898e3a2fce8f3f72c73f95
-Size (python-creole-1.0.5.tar.gz) = 66232 bytes
-SHA1 (patch-setup.py) = 87fedc68753bd108c6c87b0ce6d5187e3627371b
+SHA1 (python-creole-1.3.1.tar.gz) = 39f03906157df6910a5de64b999c39dcdd7972f4
+RMD160 (python-creole-1.3.1.tar.gz) = e715a82b22e6508f299a79bbce940f36b627c3dc
+SHA512 (python-creole-1.3.1.tar.gz) = 15a1fbd2aab578f60ba06a4df6484a73fac47eb594ca85e2a8d1bf79a5315d5f29cdc33ad8f6e81d075a8f9afd44c7b7a6c956e4e800b0c6f5a9413b38356274
+Size (python-creole-1.3.1.tar.gz) = 75834 bytes
+SHA1 (patch-setup.py) = 34bda5f9884544cdf214536e63b7ba12b52fe321
