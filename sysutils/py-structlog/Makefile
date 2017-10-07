@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2017/09/16 19:27:08 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/10/07 11:18:28 adam Exp $
 
-DISTNAME=	structlog-15.1.0
+DISTNAME=	structlog-17.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	python sysutils
+CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/structlog/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.structlog.org/
 COMMENT=	Painless structural logging
 LICENSE=	apache-2.0 AND mit
+
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
