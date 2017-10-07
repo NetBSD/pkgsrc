@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4334 2017/10/07 11:15:15 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4335 2017/10/07 11:43:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6153,3 +6153,9 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-Whoosh to 2.7.4 [adam 2017-10-07]
 	Updated textproc/py-phonenumbers to 8.8.3 [adam 2017-10-07]
 	Updated www/py-sparqlwrapper to 1.8.0 [adam 2017-10-07]
+	Updated sysutils/py-structlog to 17.2.0 [adam 2017-10-07]
+	Updated devel/py-serpent to 1.23 [adam 2017-10-07]
+	Updated textproc/py-sphinx-theme-cloud to 1.9.4 [adam 2017-10-07]
+	Updated devel/py-stevedore to 1.27.1 [adam 2017-10-07]
+	Updated devel/py-ZopeEvent to 4.3.0 [adam 2017-10-07]
+	Updated devel/py-ZopeInterface to 4.4.3 [adam 2017-10-07]
