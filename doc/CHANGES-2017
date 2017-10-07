@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4343 2017/10/07 18:19:21 gdt Exp $
+$NetBSD: CHANGES-2017,v 1.4344 2017/10/07 18:39:57 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6171,3 +6171,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-websocket-client version 0.44.0 [maya 2017-10-07]
 	Updated multimedia/streamlink to 0.8.1 [maya 2017-10-07]
 	Updated geography/gama to 1.19 [gdt 2017-10-07]
+	Updated databases/postgresql-postgis2 to 2.4.0 [gdt 2017-10-07]
