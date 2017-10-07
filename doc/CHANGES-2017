@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4331 2017/10/06 21:18:48 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4332 2017/10/07 07:32:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6145,3 +6145,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/u-boot-cubieboard2 version 2017.07 [jmcneill 2017-10-06]
 	Updated graphics/openjpeg to 2.3.0 [adam 2017-10-06]
 	Updated multimedia/mkvtoolnix to 16.0.0 [adam 2017-10-06]
+	Updated textproc/py-tabulate to 0.8.1 [adam 2017-10-07]
+	Updated textproc/py-enchant to 1.6.11 [adam 2017-10-07]
+	Updated textproc/py-textile to 2.3.16 [adam 2017-10-07]
+	Updated textproc/py-creole to 1.3.1 [adam 2017-10-07]
