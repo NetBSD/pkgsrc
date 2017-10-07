@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/09/04 18:08:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/10/07 11:14:42 adam Exp $
 
-DISTNAME=	SPARQLWrapper-1.6.4
+DISTNAME=	SPARQLWrapper-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-CATEGORIES=	python www
+CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SPARQLWrapper/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,7 +10,7 @@ HOMEPAGE=	https://rdflib.github.io/sparqlwrapper/
 COMMENT=	SPARQL endpoint interface to Python
 LICENSE=	w3c
 
-DEPENDS+=	${PYPKGPREFIX}-rdflib>=2.4.2:../../textproc/py-rdflib
+DEPENDS+=	${PYPKGPREFIX}-rdflib>=4.0:../../textproc/py-rdflib
 
 USE_LANGUAGES=	# none
 
