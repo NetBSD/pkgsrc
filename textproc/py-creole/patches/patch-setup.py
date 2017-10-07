@@ -1,15 +1,15 @@
-$NetBSD: patch-setup.py,v 1.1 2012/10/11 15:35:09 wen Exp $
+$NetBSD: patch-setup.py,v 1.2 2017/10/07 07:31:14 adam Exp $
 
 Install README.creole into right directory.
 
---- setup.py.orig	2012-10-11 06:13:34.000000000 +0000
+--- setup.py.orig	2015-08-15 20:26:05.000000000 +0000
 +++ setup.py
-@@ -44,7 +44,7 @@ setup(
-     url='http://code.google.com/p/python-creole/',
+@@ -207,7 +207,7 @@ setup(
+     url='https://github.com/jedie/python-creole/',
      packages=find_packages(),
      include_package_data=True, # include package data under svn source control
 -    data_files=[("", ["README.creole"])], # README used in unittest test_setup_utils.py
 +    data_files=[("share/doc/py-creole", ["README.creole"])], # README used in unittest test_setup_utils.py
-     zip_safe=True, # http://packages.python.org/distribute/setuptools.html#setting-the-zip-safe-flag
-     keywords="creole markup creole2html html2creole rest2html html2rest html2textile",
-     classifiers=[
+     entry_points={
+         "console_scripts": [
+             "creole2html = creole.cmdline:cli_creole2html",
