@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2017/08/16 17:54:09 adam Exp $
+# $NetBSD: Makefile,v 1.126 2017/10/07 22:30:38 maya Exp $
 
 DISTNAME=	vice-3.1
 CATEGORIES=	emulators
@@ -24,6 +24,10 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-ethernet
 CONFIGURE_ARGS+=	--enable-fullscreen
 CONFIGURE_ARGS.NetBSD+=	--without-oss
+
+# Avoid PLIST mismatch if these programs are installed
+CONFIGURE_ENV+=		ac_cv_prog_TEXI2DVI=no
+CONFIGURE_ENV+=		ac_cv_prog_PDFTEX=no
 
 INFO_FILES=		yes
 FONTS_DIRS.x11=		${PREFIX}/share/vice/fonts
