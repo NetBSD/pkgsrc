@@ -1,0 +1,22 @@
+[build]
+rustc = "@RUSTC@"
+cargo = "@CARGO@"
+python = "@PYTHONBIN@"
+vendor = true
+extended = true
+verbose = 2
+[install]
+prefix = "@PREFIX@"
+sysconfdir = ""
+mandir = "man"
+[rust]
+channel = "stable"
+rpath = true
+codegen-tests = false
+[dist]
+src-tarball = false
+[llvm]
+static-libstdcpp = false
+ninja = true
+[target.x86_64-unknown-netbsd]
+llvm-config = "@PREFIX@/bin/llvm-config"
