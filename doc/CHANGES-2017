@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4335 2017/10/07 11:43:51 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4336 2017/10/07 11:59:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6159,3 +6159,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-stevedore to 1.27.1 [adam 2017-10-07]
 	Updated devel/py-ZopeEvent to 4.3.0 [adam 2017-10-07]
 	Updated devel/py-ZopeInterface to 4.4.3 [adam 2017-10-07]
+	Updated devel/py-ZopeSchema to 4.5.0 [adam 2017-10-07]
+	Updated devel/py-ZopeI18NMessageid to 4.1.0 [adam 2017-10-07]
+	Updated devel/py-ZopeConfiguration to 4.1.0 [adam 2017-10-07]
+	Updated net/py-foolscap to 0.12.7 [adam 2017-10-07]
