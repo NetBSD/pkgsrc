@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/10/08 14:11:09 wen Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/10/07 11:07:39 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -34,15 +34,21 @@ ${PYSITELIB}/whoosh/analysis/tokenizers.pyo
 ${PYSITELIB}/whoosh/automata/__init__.py
 ${PYSITELIB}/whoosh/automata/__init__.pyc
 ${PYSITELIB}/whoosh/automata/__init__.pyo
-${PYSITELIB}/whoosh/automata/fst.py
-${PYSITELIB}/whoosh/automata/fst.pyc
-${PYSITELIB}/whoosh/automata/fst.pyo
+${PYSITELIB}/whoosh/automata/fsa.py
+${PYSITELIB}/whoosh/automata/fsa.pyc
+${PYSITELIB}/whoosh/automata/fsa.pyo
 ${PYSITELIB}/whoosh/automata/glob.py
 ${PYSITELIB}/whoosh/automata/glob.pyc
 ${PYSITELIB}/whoosh/automata/glob.pyo
+${PYSITELIB}/whoosh/automata/lev.py
+${PYSITELIB}/whoosh/automata/lev.pyc
+${PYSITELIB}/whoosh/automata/lev.pyo
 ${PYSITELIB}/whoosh/automata/nfa.py
 ${PYSITELIB}/whoosh/automata/nfa.pyc
 ${PYSITELIB}/whoosh/automata/nfa.pyo
+${PYSITELIB}/whoosh/automata/reg.py
+${PYSITELIB}/whoosh/automata/reg.pyc
+${PYSITELIB}/whoosh/automata/reg.pyo
 ${PYSITELIB}/whoosh/classify.py
 ${PYSITELIB}/whoosh/classify.pyc
 ${PYSITELIB}/whoosh/classify.pyo
@@ -58,9 +64,6 @@ ${PYSITELIB}/whoosh/codec/memory.pyo
 ${PYSITELIB}/whoosh/codec/plaintext.py
 ${PYSITELIB}/whoosh/codec/plaintext.pyc
 ${PYSITELIB}/whoosh/codec/plaintext.pyo
-${PYSITELIB}/whoosh/codec/whoosh2.py
-${PYSITELIB}/whoosh/codec/whoosh2.pyc
-${PYSITELIB}/whoosh/codec/whoosh2.pyo
 ${PYSITELIB}/whoosh/codec/whoosh3.py
 ${PYSITELIB}/whoosh/codec/whoosh3.pyc
 ${PYSITELIB}/whoosh/codec/whoosh3.pyo
