@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4344 2017/10/07 18:39:57 gdt Exp $
+$NetBSD: CHANGES-2017,v 1.4345 2017/10/07 19:49:08 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6172,3 +6172,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/streamlink to 0.8.1 [maya 2017-10-07]
 	Updated geography/gama to 1.19 [gdt 2017-10-07]
 	Updated databases/postgresql-postgis2 to 2.4.0 [gdt 2017-10-07]
+	Added sysutils/u-boot-hummingbird-a31 version 2017.07 [jmcneill 2017-10-07]
