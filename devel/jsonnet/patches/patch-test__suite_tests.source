@@ -1,0 +1,17 @@
+$NetBSD: patch-test__suite_tests.source,v 1.1 2017/10/08 11:23:24 seb Exp $
+
+try to use mktemp in a portable way; do not use python
+
+--- test_suite/tests.source.orig	2017-09-30 07:43:05.000000000 +0000
++++ test_suite/tests.source
+@@ -31,7 +31,9 @@ get_temp_dir() {
+     if [ -z "$TMP_DIR" ]; then
+         # We use Python to avoid portability problems with `mktemp`.
+         # See: https://unix.stackexchange.com/questions/30091/fix-or-alternative-for-mktemp-in-os-x
+-        TMP_DIR="`python2 -c "import tempfile; print(tempfile.mkdtemp(prefix='jsonnet_'))"`"
++        #TMP_DIR="`python2 -c "import tempfile; print(tempfile.mkdtemp(prefix='jsonnet_'))"`"
++	: ${MKTEMP=mktemp}
++        TMP_DIR="$(${MKTEMP} -d ${TMPDIR-/tmp}/jsonnet_${0##*/}.XXXXXX)"
+         $($VERBOSE) && echo "Created temporary directory $TMP_DIR"
+     fi
+ }

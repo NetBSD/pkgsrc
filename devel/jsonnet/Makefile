@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/10/05 19:40:35 seb Exp $
+# $NetBSD: Makefile,v 1.2 2017/10/08 11:23:24 seb Exp $
 
-DISTNAME=	v0.9.4
+DISTNAME=	v0.9.5
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S/v//}
 #PKGREVISION=	1
 CATEGORIES=	devel local
@@ -14,17 +14,20 @@ LICENSE=	apache-2.0
 EXTRACT_USING=	gtar
 
 GITHUB_PROJECT=	jsonnet
+GITHUB_TAG=	${DISTNAME}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 USE_LANGUAGES=	c c++11
 
-USE_TOOLS+=	gmake bash
+USE_TOOLS+=	gmake bash mktemp
 REPLACE_BASH+=	examples/check.sh examples/terraform/check.sh
 REPLACE_BASH+=	test_suite/run_tests.sh test_suite/run_fmt_tests.sh
+REPLACE_BASH+=	test_suite/run_fmt_idempotence_tests.sh
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 TEST_TARGET=	test
+TEST_ENV+=	MKTEMP=${TOOLS_PATH.mktemp}
 
 INSTALLATION_DIRS=	lib include bin
 
