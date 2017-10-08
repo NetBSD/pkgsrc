@@ -2,6 +2,7 @@ package main
 
 import (
 	"netbsd.org/pkglint/line"
+	"netbsd.org/pkglint/linechecks"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
 	"path"
@@ -14,7 +15,7 @@ func ChecklinesPlist(lines []line.Line) {
 		defer trace.Call1(lines[0].Filename())()
 	}
 
-	LineChecker{lines[0]}.CheckRcsid(`@comment `, "@comment ")
+	linechecks.CheckRcsid(lines[0], `@comment `, "@comment ")
 
 	if len(lines) == 1 {
 		lines[0].Warnf("PLIST files shouldn't be empty.")
@@ -33,14 +34,16 @@ func ChecklinesPlist(lines []line.Line) {
 	ck := &PlistChecker{
 		make(map[string]*PlistLine),
 		make(map[string]*PlistLine),
-		""}
+		"",
+		false}
 	ck.Check(lines)
 }
 
 type PlistChecker struct {
-	allFiles  map[string]*PlistLine
-	allDirs   map[string]*PlistLine
-	lastFname string
+	allFiles              map[string]*PlistLine
+	allDirs               map[string]*PlistLine
+	lastFname             string
+	warnedAboutIconThemes bool
 }
 
 type PlistLine struct {
@@ -355,19 +358,27 @@ func (ck *PlistChecker) checkpathShare(pline *PlistLine) {
 				"warning is harmless.")
 		}
 
-	case hasPrefix(text, "share/icons/hicolor/") && G.Pkg != nil && G.Pkg.Pkgpath != "graphics/hicolor-icon-theme":
-		f := "../../graphics/hicolor-icon-theme/buildlink3.mk"
-		if G.Pkg.included[f] == nil {
-			line.Errorf("Packages that install hicolor icons must include %q in the Makefile.", f)
+	case hasPrefix(text, "share/icons/") && G.Pkg != nil:
+		if hasPrefix(text, "share/icons/hicolor/") && G.Pkg.Pkgpath != "graphics/hicolor-icon-theme" {
+			f := "../../graphics/hicolor-icon-theme/buildlink3.mk"
+			if G.Pkg.included[f] == nil {
+				line.Errorf("Packages that install hicolor icons must include %q in the Makefile.", f)
+			}
 		}
 
-	case hasPrefix(text, "share/icons/gnome") && G.Pkg != nil && G.Pkg.Pkgpath != "graphics/gnome-icon-theme":
-		f := "../../graphics/gnome-icon-theme/buildlink3.mk"
-		if G.Pkg.included[f] == nil {
-			line.Errorf("The package Makefile must include %q.", f)
-			Explain(
-				"Packages that install GNOME icons must maintain the icon theme",
-				"cache.")
+		if hasPrefix(text, "share/icons/gnome") && G.Pkg.Pkgpath != "graphics/gnome-icon-theme" {
+			f := "../../graphics/gnome-icon-theme/buildlink3.mk"
+			if G.Pkg.included[f] == nil {
+				line.Errorf("The package Makefile must include %q.", f)
+				Explain(
+					"Packages that install GNOME icons must maintain the icon theme",
+					"cache.")
+			}
+		}
+
+		if !ck.warnedAboutIconThemes && contains(text[12:], "/") && G.Pkg.vardef["ICON_THEMES"] == nil {
+			line.Warnf("Packages that install icon theme files should set ICON_THEMES.")
+			ck.warnedAboutIconThemes = true
 		}
 
 	case hasPrefix(text, "share/doc/html/"):

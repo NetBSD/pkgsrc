@@ -1,3 +1,7 @@
+// Package regex provides a registry of precompiled regular expressions
+// to allow reusing them without the syntactic overhead of declaring
+// pattern variables everywhere in the code.
+// The registry is not thread-safe, but the precompiled patterns are.
 package regex
 
 import (
@@ -8,22 +12,22 @@ import (
 	"time"
 )
 
-type RegexPattern string
+type Pattern string
 
 var (
 	Profiling bool
 )
 
 var (
-	res       map[RegexPattern]*regexp.Regexp
+	res       map[Pattern]*regexp.Regexp
 	rematch   *histogram.Histogram
 	renomatch *histogram.Histogram
 	retime    *histogram.Histogram
 )
 
-func Compile(re RegexPattern) *regexp.Regexp {
+func Compile(re Pattern) *regexp.Regexp {
 	if res == nil {
-		res = make(map[RegexPattern]*regexp.Regexp)
+		res = make(map[Pattern]*regexp.Regexp)
 	}
 	cre := res[re]
 	if cre == nil {
@@ -33,7 +37,7 @@ func Compile(re RegexPattern) *regexp.Regexp {
 	return cre
 }
 
-func Match(s string, re RegexPattern) []string {
+func Match(s string, re Pattern) []string {
 	if !Profiling {
 		return Compile(re).FindStringSubmatch(s)
 	}
@@ -61,7 +65,7 @@ func Match(s string, re RegexPattern) []string {
 	return m
 }
 
-func Matches(s string, re RegexPattern) bool {
+func Matches(s string, re Pattern) bool {
 	matches := Compile(re).MatchString(s)
 	if Profiling {
 		if matches {
@@ -73,42 +77,42 @@ func Matches(s string, re RegexPattern) bool {
 	return matches
 }
 
-func Match1(s string, re RegexPattern) (matched bool, m1 string) {
+func Match1(s string, re Pattern) (matched bool, m1 string) {
 	if m := matchn(s, re, 1); m != nil {
 		return true, m[1]
 	}
 	return
 }
 
-func Match2(s string, re RegexPattern) (matched bool, m1, m2 string) {
+func Match2(s string, re Pattern) (matched bool, m1, m2 string) {
 	if m := matchn(s, re, 2); m != nil {
 		return true, m[1], m[2]
 	}
 	return
 }
 
-func Match3(s string, re RegexPattern) (matched bool, m1, m2, m3 string) {
+func Match3(s string, re Pattern) (matched bool, m1, m2, m3 string) {
 	if m := matchn(s, re, 3); m != nil {
 		return true, m[1], m[2], m[3]
 	}
 	return
 }
 
-func Match4(s string, re RegexPattern) (matched bool, m1, m2, m3, m4 string) {
+func Match4(s string, re Pattern) (matched bool, m1, m2, m3, m4 string) {
 	if m := matchn(s, re, 4); m != nil {
 		return true, m[1], m[2], m[3], m[4]
 	}
 	return
 }
 
-func Match5(s string, re RegexPattern) (matched bool, m1, m2, m3, m4, m5 string) {
+func Match5(s string, re Pattern) (matched bool, m1, m2, m3, m4, m5 string) {
 	if m := matchn(s, re, 5); m != nil {
 		return true, m[1], m[2], m[3], m[4], m[5]
 	}
 	return
 }
 
-func ReplaceFirst(s string, re RegexPattern, replacement string) ([]string, string) {
+func ReplaceFirst(s string, re Pattern, replacement string) ([]string, string) {
 	if m := Compile(re).FindStringSubmatchIndex(s); m != nil {
 		replaced := s[:m[0]] + replacement + s[m[1]:]
 		mm := make([]string, len(m)/2)
@@ -128,7 +132,7 @@ func PrintStats() {
 	}
 }
 
-func matchn(s string, re RegexPattern, n int) []string {
+func matchn(s string, re Pattern, n int) []string {
 	if m := Match(s, re); m != nil {
 		if len(m) != 1+n {
 			panic(fmt.Sprintf("expected match%d, got match%d for %q", len(m)-1, n, re))
