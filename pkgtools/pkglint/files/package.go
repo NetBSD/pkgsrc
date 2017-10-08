@@ -503,7 +503,7 @@ func (pkg *Package) pkgnameFromDistname(pkgname, distname string) string {
 			defer trace.Call(str, smod, trace.Ref(result))()
 		}
 		qsep := regexp.QuoteMeta(smod[1:2])
-		if m, left, from, right, to, flags := regex.Match5(smod, regex.RegexPattern(`^S`+qsep+`(\^?)([^:]*?)(\$?)`+qsep+`([^:]*)`+qsep+`([1g]*)$`)); m {
+		if m, left, from, right, to, flags := regex.Match5(smod, regex.Pattern(`^S`+qsep+`(\^?)([^:]*?)(\$?)`+qsep+`([^:]*)`+qsep+`([1g]*)$`)); m {
 			result := mkopSubst(str, left != "", from, right != "", to, flags)
 			if trace.Tracing {
 				trace.Stepf("subst %q %q => %q", str, smod, result)
