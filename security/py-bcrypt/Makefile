@@ -1,23 +1,20 @@
-# $NetBSD: Makefile,v 1.9 2017/09/16 19:27:06 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/10/08 08:58:21 adam Exp $
 
-DISTNAME=	bcrypt-1.1.1
+DISTNAME=	bcrypt-3.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
-CATEGORIES=	python security
+CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bcrypt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/pyca/bcrypt/
+HOMEPAGE=	https://github.com/pyca/bcrypt
 COMMENT=	Modern password hashing for your software and your servers
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
-DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-cffi>=1.1:../../devel/py-cffi
+DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 CONFLICTS+=	${PYPKGPREFIX}-py-bcrypt-[0-9]*
-
-.include "options.mk"
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
