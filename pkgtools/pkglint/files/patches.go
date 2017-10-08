@@ -4,6 +4,7 @@ package main
 
 import (
 	"netbsd.org/pkglint/line"
+	"netbsd.org/pkglint/linechecks"
 	"netbsd.org/pkglint/textproc"
 	"netbsd.org/pkglint/trace"
 	"path"
@@ -36,7 +37,7 @@ func (ck *PatchChecker) Check() {
 		defer trace.Call0()()
 	}
 
-	if (LineChecker{ck.lines[0]}).CheckRcsid(``, "") {
+	if linechecks.CheckRcsid(ck.lines[0], ``, "") {
 		ck.exp.Advance()
 	}
 	ck.previousLineEmpty = ck.exp.ExpectEmptyLine(G.opts.WarnSpace)
@@ -318,34 +319,6 @@ func guessFileType(line line.Line, fname string) (fileType FileType) {
 	return ftUnknown
 }
 
-func checkwordAbsolutePathname(line line.Line, word string) {
-	if trace.Tracing {
-		defer trace.Call1(word)()
-	}
-
-	switch {
-	case matches(word, `^/dev/(?:null|tty|zero)$`):
-		// These are defined by POSIX.
-	case word == "/bin/sh":
-		// This is usually correct, although on Solaris, it's pretty feature-crippled.
-	case matches(word, `^/s\W`):
-		// Probably a sed(1) command
-	case matches(word, `^/(?:[a-z]|\$[({])`):
-		// Absolute paths probably start with a lowercase letter.
-		line.Warnf("Found absolute pathname: %s", word)
-		Explain(
-			"Absolute pathnames are often an indicator for unportable code.  As",
-			"pkgsrc aims to be a portable system, absolute pathnames should be",
-			"avoided whenever possible.",
-			"",
-			"A special variable in this context is ${DESTDIR}, which is used in",
-			"GNU projects to specify a different directory for installation than",
-			"what the programs see later when they are executed.  Usually it is",
-			"empty, so if anything after that variable starts with a slash, it is",
-			"considered an absolute pathname.")
-	}
-}
-
 // Looks for strings like "/dev/cd0" appearing in source code
 func checklineSourceAbsolutePathname(line line.Line, text string) {
 	if !strings.ContainsAny(text, "\"'") {
@@ -364,7 +337,7 @@ func checklineSourceAbsolutePathname(line line.Line, text string) {
 			// ok; Python example: libdir = prefix + '/lib'
 
 		default:
-			checkwordAbsolutePathname(line, str)
+			linechecks.CheckwordAbsolutePathname(line, str)
 		}
 	}
 }
@@ -389,7 +362,7 @@ func checklineOtherAbsolutePathname(line line.Line, text string) {
 			if trace.Tracing {
 				trace.Step1("before=%q", before)
 			}
-			checkwordAbsolutePathname(line, path)
+			linechecks.CheckwordAbsolutePathname(line, path)
 		}
 	}
 }

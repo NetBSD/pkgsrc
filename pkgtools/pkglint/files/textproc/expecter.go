@@ -52,7 +52,7 @@ func (exp *Expecter) StepBack() {
 	exp.index--
 }
 
-func (exp *Expecter) AdvanceIfMatches(re regex.RegexPattern) bool {
+func (exp *Expecter) AdvanceIfMatches(re regex.Pattern) bool {
 	if trace.Tracing {
 		defer trace.Call(exp.CurrentLine().Text(), re)()
 	}
