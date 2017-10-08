@@ -1,4 +1,6 @@
-$NetBSD: patch-src_config_param.nbsd70.h,v 1.1 2016/04/04 12:48:29 jakllsch Exp $
+$NetBSD: patch-src_config_param.nbsd70.h,v 1.2 2017/10/08 02:41:39 sevan Exp $
+
+- Add support for NetBSD 7
 
 --- src/config/param.nbsd70.h.orig	2016-04-03 18:39:15.000000000 +0000
 +++ src/config/param.nbsd70.h
