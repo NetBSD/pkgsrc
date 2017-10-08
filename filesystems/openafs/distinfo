@@ -1,12 +1,17 @@
-$NetBSD: distinfo,v 1.15 2017/07/21 01:39:33 sevan Exp $
+$NetBSD: distinfo,v 1.16 2017/10/08 02:41:39 sevan Exp $
 
 SHA1 (openafs-1.6.21-src.tar.bz2) = ea48a2fde9ed4732e8041216c9e24dd500e24ea4
 RMD160 (openafs-1.6.21-src.tar.bz2) = 834b42debfcbf0a003280ac0300b3af65625ad48
 SHA512 (openafs-1.6.21-src.tar.bz2) = 451c38ed5031b8a962da3276bf5d0f1b74c5956c2d10cdb8bbd22ea633880ebf35cf5fc71feb5d2eca4306762f6c2376a46f4522150291acfc469f8be2da757f
 Size (openafs-1.6.21-src.tar.bz2) = 14682997 bytes
-SHA1 (patch-acinclude.m4) = 16efdc809c134698a0a834c3e8064d201f61ca68
-SHA1 (patch-configure) = be58e44c599e2c424a7b561010d890c97e5d871a
+SHA1 (patch-acinclude.m4) = 1949234224ee12f6d70f2a7ac914342bdfe9b50d
+SHA1 (patch-configure) = fc07ae1945b047dcdafbeade183fad3b2bd876e4
 SHA1 (patch-src_cf_osconf.m4) = 2ae23bc82dd3f19cfa3fecf50dcca514e09d7a4b
 SHA1 (patch-src_comerr_Makefile.in) = dd5e996481d7ef908710868aa9dc1b65feb98717
-SHA1 (patch-src_config_afs__sysnames.h) = b1b9da619b37e03d1be2bd6da6073332028b0227
-SHA1 (patch-src_config_param.nbsd70.h) = bebb86bd5c01e25befbb800f6ae43058e13524d4
+SHA1 (patch-src_config_afs__sysnames.h) = 26819b314797a149def42f5b63cbeb19ef6309e8
+SHA1 (patch-src_config_param.armv6_nbsd80.h) = eea7a8f8a141d285ba5a2bb4317950f0b860528f
+SHA1 (patch-src_config_param.nbsd70.h) = 700216e464d801aee3ada0a597a5e2b3a4dab510
+SHA1 (patch-src_config_param.nbsd80.h) = cc9445a1b06ac977d93c9fe0b68cc67475beec08
+SHA1 (patch-src_des_andrew-conf.h) = 6ea03fcaf988d3d91bc1d3386e239496fc3069f0
+SHA1 (patch-src_des_conf-arm32-bsd.h) = ff1b2a3cc35ab272913c95adab28c3304234a891
+SHA1 (patch-src_lwp_lwp.c) = c4a92a29621ceaf54c56cd20772c18f76b0fe745
