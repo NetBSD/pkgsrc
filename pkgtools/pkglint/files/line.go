@@ -17,6 +17,7 @@ import (
 	"fmt"
 	"io"
 	"netbsd.org/pkglint/line"
+	"netbsd.org/pkglint/linechecks"
 	"netbsd.org/pkglint/regex"
 	"path"
 	"strconv"
@@ -205,7 +206,7 @@ func (line *LineImpl) AutofixReplace(from, to string) bool {
 	return false
 }
 
-func (line *LineImpl) AutofixReplaceRegexp(from regex.RegexPattern, to string) bool {
+func (line *LineImpl) AutofixReplaceRegexp(from regex.Pattern, to string) bool {
 	for _, rawLine := range line.raw {
 		if rawLine.Lineno != 0 {
 			if replaced := regex.Compile(from).ReplaceAllString(rawLine.textnl, to); replaced != rawLine.textnl {
@@ -242,4 +243,5 @@ func (line *LineImpl) AutofixMark(reason string) {
 
 func init() {
 	line.NewLineEOF = NewLineEOF
+	linechecks.Explain = Explain
 }
