@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2017/09/18 09:53:35 maya Exp $
+# $NetBSD: Makefile,v 1.76 2017/10/08 04:45:00 ryoon Exp $
 
-DISTNAME=	open-vm-tools-10.1.10-6082533
-PKGNAME=	open-vm-tools-10.1.10
-PKGREVISION=	1
+DISTNAME=	open-vm-tools-10.1.15
 CATEGORIES=	sysutils
-MASTER_SITES=	https://github.com/vmware/open-vm-tools/releases/download/stable-10.1.10/
+MASTER_SITES=	https://github.com/vmware/open-vm-tools/releases/download/${PKGVERSION_NOREV}/
 
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	https://github.com/vmware/open-vm-tools
