@@ -1,4 +1,6 @@
-$NetBSD: patch-acinclude.m4,v 1.1 2016/04/04 12:48:29 jakllsch Exp $
+$NetBSD: patch-acinclude.m4,v 1.2 2017/10/08 02:41:39 sevan Exp $
+
+- Add support for NetBSD 7 to 9
 
 --- acinclude.m4.orig	2016-03-16 14:31:22.000000000 +0000
 +++ acinclude.m4
