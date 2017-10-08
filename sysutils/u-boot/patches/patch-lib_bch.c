@@ -1,6 +1,6 @@
-$NetBSD: patch-lib_bch.c,v 1.2 2017/09/18 23:07:49 jmcneill Exp $
+$NetBSD: patch-lib_bch.c,v 1.3 2017/10/08 12:09:43 jmcneill Exp $
 
---- lib/bch.c.orig	2017-07-10 17:07:38.000000000 +0000
+--- lib/bch.c.orig	2017-09-11 18:10:40.000000000 +0000
 +++ lib/bch.c
 @@ -61,8 +61,10 @@
  #include <linux/bitops.h>
@@ -30,8 +30,8 @@ $NetBSD: patch-lib_bch.c,v 1.2 2017/09/18 23:07:49 jmcneill Exp $
  };
  
  #ifdef USE_HOSTCC
--#ifndef __BSD_VISIBLE
-+#if !defined(__BSD_VISIBLE) && !defined(__APPLE__)
+-#if !defined(__DragonFly__) && !defined(__FreeBSD__)
++#if !defined(__DragonFly__) && !defined(__FreeBSD__) && !defined(__APPLE__)
  static int fls(int x)
  {
  	int r = 32;
