@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.125 2017/09/18 09:53:27 maya Exp $
+# $NetBSD: Makefile,v 1.126 2017/10/08 04:51:35 ryoon Exp $
 
-VERREL=		5.4.1
+VERREL=		5.4.2
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -98,7 +97,7 @@ MORE_DISTFILES= \
 	7239a4430efd4d0189c4f24df67f08e5-mysql-connector-c++-1.1.4.tar.gz \
 	c0b4799ea9850eae3ead14f0a60e9418-postgresql-9.2.1.tar.bz2 \
 	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
-	harfbuzz-1.3.2.tar.bz2 \
+	harfbuzz-1.4.8.tar.bz2 \
 	graphite2-minimal-1.3.10.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz \
