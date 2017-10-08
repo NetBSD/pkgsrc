@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4359 2017/10/08 20:23:37 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4360 2017/10/08 22:31:30 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6207,3 +6207,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/u-boot-a10-olinuxino-lime version 2017.09 [jmcneill 2017-10-08]
 	Updated net/quagga to 1.2.2 [gdt 2017-10-08]
 	Updated math/py-autograd to 1.1.13 [adam 2017-10-08]
+	Updated pkgtools/pkglint to 5.4.21 [rillig 2017-10-08]
