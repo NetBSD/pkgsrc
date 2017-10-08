@@ -1,10 +1,19 @@
-$NetBSD: patch-SConstruct,v 1.6 2017/05/29 14:44:47 ryoon Exp $
+$NetBSD: patch-SConstruct,v 1.7 2017/10/08 22:17:06 tnn Exp $
 
 Add support for NetBSD/Dragonfly, fix locations.
 Respect LDFLAGS and CXXFLAGS
 
 --- SConstruct.orig	2017-04-20 21:43:42.000000000 +0000
 +++ SConstruct
+@@ -30,7 +30,7 @@ EnsureSConsVersion( 2, 3, 0 )
+ def print_build_failures():
+     from SCons.Script import GetBuildFailures
+     for bf in GetBuildFailures():
+-        print "%s failed: %s" % (bf.node, bf.errstr)
++        print("%s failed: %s" % (bf.node, bf.errstr))
+ atexit.register(print_build_failures)
+ 
+ def versiontuple(v):
 @@ -49,8 +49,12 @@ def get_running_os_name():
      running_os = os.sys.platform
      if running_os.startswith('linux'):
@@ -27,6 +36,42 @@ Respect LDFLAGS and CXXFLAGS
  
      for p in os_list_to_check:
          if p == 'posix' and target_os in posix_os_list:
+@@ -511,7 +515,7 @@ try:
+         version_data = json.load(version_fp)
+ 
+     if 'version' not in version_data:
+-        print "version.json does not contain a version string"
++        print("version.json does not contain a version string")
+         Exit(1)
+     if 'githash' not in version_data:
+         version_data['githash'] = utils.getGitVersion()
+@@ -519,7 +523,7 @@ try:
+ except IOError as e:
+     # If the file error wasn't because the file is missing, error out
+     if e.errno != errno.ENOENT:
+-        print "Error opening version.json: {0}".format(e.strerror)
++        print("Error opening version.json: {0}".format(e.strerror))
+         Exit(1)
+ 
+     version_data = {
+@@ -528,7 +532,7 @@ except IOError as e:
+     }
+ 
+ except ValueError as e:
+-    print "Error decoding version.json: {0}".format(e)
++    print("Error decoding version.json: {0}".format(e))
+     Exit(1)
+ 
+ # Setup the command-line variables
+@@ -598,7 +602,7 @@ def variable_distsrc_converter(val):
+ 
+ variables_files = variable_shlex_converter(get_option('variables-files'))
+ for file in variables_files:
+-    print "Using variable customization file %s" % file
++    print("Using variable customization file %s" % file)
+ 
+ env_vars = Variables(
+     files=variables_files,
 @@ -892,6 +896,7 @@ envDict = dict(BUILD_ROOT=buildDir,
                 INSTALL_DIR=installDir,
                 CONFIG_HEADER_DEFINES={},
@@ -35,6 +80,31 @@ Respect LDFLAGS and CXXFLAGS
                 )
  
  env = Environment(variables=env_vars, **envDict)
+@@ -901,12 +906,12 @@ env.AddMethod(env_os_is_wrapper, 'Target
+ env.AddMethod(env_get_os_name_wrapper, 'GetTargetOSName')
+ 
+ def fatal_error(env, msg, *args):
+-    print msg.format(*args)
++    print(msg.format(*args))
+     Exit(1)
+ 
+ def conf_error(env, msg, *args):
+-    print msg.format(*args)
+-    print "See {0} for details".format(env['CONFIGURELOG'].abspath)
++    print(msg.format(*args))
++    print("See {0} for details".format(env['CONFIGURELOG'].abspath))
+ 
+     Exit(1)
+ 
+@@ -926,7 +931,7 @@ else:
+ env.AddMethod(lambda env: env['VERBOSE'], 'Verbose')
+ 
+ if has_option('variables-help'):
+-    print env_vars.GenerateHelpText(env)
++    print(env_vars.GenerateHelpText(env))
+     Exit(0)
+ 
+ unknown_vars = env_vars.UnknownVariables()
 @@ -1029,7 +1034,9 @@ def CheckForProcessor(context, which_arc
  os_macros = {
      "windows": "_WIN32",
@@ -45,6 +115,15 @@ Respect LDFLAGS and CXXFLAGS
      "openbsd": "__OpenBSD__",
      "osx": "__APPLE__",
      "linux": "__linux__",
+@@ -1124,7 +1131,7 @@ else:
+     env['TARGET_ARCH'] = detected_processor
+ 
+ if env['TARGET_OS'] not in os_macros:
+-    print "No special config for [{0}] which probably means it won't work".format(env['TARGET_OS'])
++    print("No special config for [{0}] which probably means it won't work".format(env['TARGET_OS']))
+ elif not detectConf.CheckForOS(env['TARGET_OS']):
+     env.ConfError("TARGET_OS ({0}) is not supported by compiler", env['TARGET_OS'])
+ 
 @@ -1360,7 +1367,7 @@ elif env['_LIBDEPS'] == '$_LIBDEPS_LIBS'
  
  libdeps.setup_environment(env, emitting_shared=(link_model.startswith("dynamic")))
