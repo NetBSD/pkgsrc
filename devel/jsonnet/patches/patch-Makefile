@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile,v 1.1 2017/10/05 19:40:35 seb Exp $
+$NetBSD: patch-Makefile,v 1.2 2017/10/08 11:23:24 seb Exp $
 
 - leverage pkgsrc CPPFLAGS, CFLAGS and CXXFLAGS handling
 - take care of 'od -t u1' output variations
 - do not build the JavaScript implementation
 
---- Makefile.orig	2017-06-21 02:59:07.000000000 +0000
+--- Makefile.orig	2017-09-30 07:43:05.000000000 +0000
 +++ Makefile
 @@ -29,8 +29,9 @@ OD ?= od
  
@@ -16,7 +16,7 @@ $NetBSD: patch-Makefile,v 1.1 2017/10/05 19:40:35 seb Exp $
 +CXXFLAGS += $(OPT) -Wall -Wextra -Woverloaded-virtual -pedantic -std=c++0x -fPIC
 +CFLAGS += $(OPT) -Wall -Wextra -pedantic -std=c99 -fPIC
  MAKEDEPENDFLAGS ?= -Iinclude -Ithird_party/md5
- EMCXXFLAGS = $(CXXFLAGS) --memory-init-file 0 -s DISABLE_EXCEPTION_CATCHING=0
+ EMCXXFLAGS = $(CXXFLAGS) -Os --memory-init-file 0 -s DISABLE_EXCEPTION_CATCHING=0 -s OUTLINING_LIMIT=10000
  EMCFLAGS = $(CFLAGS) --memory-init-file 0 -s DISABLE_EXCEPTION_CATCHING=0
 @@ -67,8 +68,6 @@ ALL = \
  	libjsonnet++.so \
@@ -27,7 +27,7 @@ $NetBSD: patch-Makefile,v 1.1 2017/10/05 19:40:35 seb Exp $
  	$(LIB_OBJ)
  
  ALL_HEADERS = \
-@@ -108,17 +107,17 @@ MAKEDEPEND_SRCS = \
+@@ -107,17 +106,17 @@ MAKEDEPEND_SRCS = \
  
  depend:
  	rm -f Makefile.depend
@@ -48,7 +48,7 @@ $NetBSD: patch-Makefile,v 1.1 2017/10/05 19:40:35 seb Exp $
  
  # C binding.
  libjsonnet.so: $(LIB_OBJ)
-@@ -144,7 +143,7 @@ LIBJSONNET_TEST_SNIPPET_SRCS = \
+@@ -143,7 +142,7 @@ LIBJSONNET_TEST_SNIPPET_SRCS = \
  	include/libjsonnet.h
  
  libjsonnet_test_snippet: $(LIBJSONNET_TEST_SNIPPET_SRCS)
@@ -57,7 +57,7 @@ $NetBSD: patch-Makefile,v 1.1 2017/10/05 19:40:35 seb Exp $
  
  LIBJSONNET_TEST_FILE_SRCS = \
  	core/libjsonnet_test_file.c \
-@@ -152,13 +151,13 @@ LIBJSONNET_TEST_FILE_SRCS = \
+@@ -151,13 +150,13 @@ LIBJSONNET_TEST_FILE_SRCS = \
  	include/libjsonnet.h
  
  libjsonnet_test_file: $(LIBJSONNET_TEST_FILE_SRCS)
