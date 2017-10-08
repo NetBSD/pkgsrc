@@ -4,6 +4,7 @@ package main
 
 import (
 	"netbsd.org/pkglint/line"
+	"netbsd.org/pkglint/linechecks"
 	"netbsd.org/pkglint/textproc"
 	"netbsd.org/pkglint/trace"
 	"path"
@@ -596,7 +597,7 @@ func (scc *SimpleCommandChecker) checkAbsolutePathnames() {
 	isSubst := false
 	for _, arg := range scc.strcmd.Args {
 		if !isSubst {
-			LineChecker{scc.shline.mkline}.CheckAbsolutePathname(arg)
+			linechecks.CheckAbsolutePathname(scc.shline.mkline, arg)
 		}
 		if false && isSubst && !matches(arg, `"^[\"\'].*[\"\']$`) {
 			scc.shline.mkline.Warnf("Substitution commands like %q should always be quoted.", arg)
