@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/23 17:33:12 jmcneill Exp $
-
-PKGREVISION=		1
+# $NetBSD: Makefile,v 1.3 2017/10/08 12:09:43 jmcneill Exp $
 
 UBOOT_TARGET=		jetson-tx1
 UBOOT_CONFIG=		p2371-2180_defconfig
