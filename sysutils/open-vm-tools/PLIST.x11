@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST.x11,v 1.2 2016/10/09 03:41:56 ryoon Exp $
-bin/vmware-user-suid-wrapper
-etc/vmware-tools/xdg/autostart/vmware-user.desktop
-lib/open-vm-tools/plugins/vmusr/libdesktopEvents.so
-lib/open-vm-tools/plugins/vmusr/libdndcp.so
-lib/open-vm-tools/plugins/vmusr/libresolutionSet.so
