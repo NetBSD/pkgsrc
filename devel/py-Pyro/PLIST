@@ -1,7 +1,14 @@
-@comment $NetBSD: PLIST,v 1.6 2013/12/04 16:41:01 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/10/08 10:21:57 adam Exp $
+bin/pyro4-check-config
+bin/pyro4-flameserver
+bin/pyro4-httpgateway
+bin/pyro4-ns
+bin/pyro4-nsc
+bin/pyro4-test-echoserver
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/Pyro4/__init__.py
@@ -28,6 +35,9 @@ ${PYSITELIB}/Pyro4/message.pyo
 ${PYSITELIB}/Pyro4/naming.py
 ${PYSITELIB}/Pyro4/naming.pyc
 ${PYSITELIB}/Pyro4/naming.pyo
+${PYSITELIB}/Pyro4/naming_storage.py
+${PYSITELIB}/Pyro4/naming_storage.pyc
+${PYSITELIB}/Pyro4/naming_storage.pyo
 ${PYSITELIB}/Pyro4/nsc.py
 ${PYSITELIB}/Pyro4/nsc.pyc
 ${PYSITELIB}/Pyro4/nsc.pyo
@@ -37,6 +47,9 @@ ${PYSITELIB}/Pyro4/socketserver/__init__.pyo
 ${PYSITELIB}/Pyro4/socketserver/multiplexserver.py
 ${PYSITELIB}/Pyro4/socketserver/multiplexserver.pyc
 ${PYSITELIB}/Pyro4/socketserver/multiplexserver.pyo
+${PYSITELIB}/Pyro4/socketserver/threadpool.py
+${PYSITELIB}/Pyro4/socketserver/threadpool.pyc
+${PYSITELIB}/Pyro4/socketserver/threadpool.pyo
 ${PYSITELIB}/Pyro4/socketserver/threadpoolserver.py
 ${PYSITELIB}/Pyro4/socketserver/threadpoolserver.pyc
 ${PYSITELIB}/Pyro4/socketserver/threadpoolserver.pyo
@@ -49,12 +62,6 @@ ${PYSITELIB}/Pyro4/test/__init__.pyo
 ${PYSITELIB}/Pyro4/test/echoserver.py
 ${PYSITELIB}/Pyro4/test/echoserver.pyc
 ${PYSITELIB}/Pyro4/test/echoserver.pyo
-${PYSITELIB}/Pyro4/threadutil.py
-${PYSITELIB}/Pyro4/threadutil.pyc
-${PYSITELIB}/Pyro4/threadutil.pyo
-${PYSITELIB}/Pyro4/tpjobqueue.py
-${PYSITELIB}/Pyro4/tpjobqueue.pyc
-${PYSITELIB}/Pyro4/tpjobqueue.pyo
 ${PYSITELIB}/Pyro4/util.py
 ${PYSITELIB}/Pyro4/util.pyc
 ${PYSITELIB}/Pyro4/util.pyo
@@ -67,3 +74,6 @@ ${PYSITELIB}/Pyro4/utils/flame.pyo
 ${PYSITELIB}/Pyro4/utils/flameserver.py
 ${PYSITELIB}/Pyro4/utils/flameserver.pyc
 ${PYSITELIB}/Pyro4/utils/flameserver.pyo
+${PYSITELIB}/Pyro4/utils/httpgateway.py
+${PYSITELIB}/Pyro4/utils/httpgateway.pyc
+${PYSITELIB}/Pyro4/utils/httpgateway.pyo
