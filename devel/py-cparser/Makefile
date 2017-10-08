@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2017/07/05 12:36:22 adam Exp $
+# $NetBSD: Makefile,v 1.11 2017/10/08 09:13:01 adam Exp $
 
 DISTNAME=	pycparser-2.18
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
-CATEGORIES=	lang
+CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycparser/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
