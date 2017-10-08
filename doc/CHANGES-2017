@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4349 2017/10/08 04:52:06 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.4350 2017/10/08 09:11:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6177,3 +6177,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/php-nextcloud to 12.0.3 [ryoon 2017-10-08]
 	Updated sysutils/open-vm-tools to 10.1.15 [ryoon 2017-10-08]
 	Updated misc/libreoffice to 5.4.2.2 [ryoon 2017-10-08]
+	Updated databases/py-sqlparse to 0.2.4 [adam 2017-10-08]
+	Updated devel/py-construct to 2.8.16 [adam 2017-10-08]
+	Updated security/py-bcrypt to 3.1.3 [adam 2017-10-08]
+	Updated textproc/py-generateDS to 2.28b [adam 2017-10-08]
