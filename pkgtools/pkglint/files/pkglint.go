@@ -6,6 +6,7 @@ import (
 	"netbsd.org/pkglint/getopt"
 	"netbsd.org/pkglint/histogram"
 	"netbsd.org/pkglint/line"
+	"netbsd.org/pkglint/linechecks"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
 	"os"
@@ -279,9 +280,9 @@ func ChecklinesDescr(lines []line.Line) {
 	}
 
 	for _, line := range lines {
-		LineChecker{line}.CheckLength(80)
-		LineChecker{line}.CheckTrailingWhitespace()
-		LineChecker{line}.CheckValidCharacters(`[\t -~]`)
+		linechecks.CheckLength(line, 80)
+		linechecks.CheckTrailingWhitespace(line)
+		linechecks.CheckValidCharacters(line, `[\t -~]`)
 		if contains(line.Text(), "${") {
 			line.Notef("Variables are not expanded in the DESCR file.")
 		}
@@ -326,11 +327,11 @@ func ChecklinesMessage(lines []line.Line) {
 		line.Warnf("Expected a line of exactly 75 \"=\" characters.")
 		explainMessage()
 	}
-	LineChecker{lines[1]}.CheckRcsid(``, "")
+	linechecks.CheckRcsid(lines[1], ``, "")
 	for _, line := range lines {
-		LineChecker{line}.CheckLength(80)
-		LineChecker{line}.CheckTrailingWhitespace()
-		LineChecker{line}.CheckValidCharacters(`[\t -~]`)
+		linechecks.CheckLength(line, 80)
+		linechecks.CheckTrailingWhitespace(line)
+		linechecks.CheckValidCharacters(line, `[\t -~]`)
 	}
 	if lastLine := lines[len(lines)-1]; lastLine.Text() != hline {
 		lastLine.Warnf("Expected a line of exactly 75 \"=\" characters.")

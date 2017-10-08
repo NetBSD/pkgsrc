@@ -21,7 +21,7 @@ type Line interface {
 	ReferenceFrom(Line) string
 
 	AutofixReplace(from, to string) bool
-	AutofixReplaceRegexp(from regex.RegexPattern, to string) bool
+	AutofixReplaceRegexp(from regex.Pattern, to string) bool
 	AutofixInsertBefore(text string) bool
 	AutofixDelete() bool
 	AutofixMark(reason string)
