@@ -1,12 +1,16 @@
-@comment $NetBSD: PLIST,v 1.5 2017/08/25 06:03:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/10/08 09:43:29 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/rest_framework/.vscode/settings.json
 ${PYSITELIB}/rest_framework/__init__.py
 ${PYSITELIB}/rest_framework/__init__.pyc
 ${PYSITELIB}/rest_framework/__init__.pyo
+${PYSITELIB}/rest_framework/apps.py
+${PYSITELIB}/rest_framework/apps.pyc
+${PYSITELIB}/rest_framework/apps.pyo
 ${PYSITELIB}/rest_framework/authentication.py
 ${PYSITELIB}/rest_framework/authentication.pyc
 ${PYSITELIB}/rest_framework/authentication.pyo
@@ -46,6 +50,9 @@ ${PYSITELIB}/rest_framework/authtoken/serializers.pyo
 ${PYSITELIB}/rest_framework/authtoken/views.py
 ${PYSITELIB}/rest_framework/authtoken/views.pyc
 ${PYSITELIB}/rest_framework/authtoken/views.pyo
+${PYSITELIB}/rest_framework/checks.py
+${PYSITELIB}/rest_framework/checks.pyc
+${PYSITELIB}/rest_framework/checks.pyo
 ${PYSITELIB}/rest_framework/compat.py
 ${PYSITELIB}/rest_framework/compat.pyc
 ${PYSITELIB}/rest_framework/compat.pyo
@@ -210,9 +217,21 @@ ${PYSITELIB}/rest_framework/reverse.pyo
 ${PYSITELIB}/rest_framework/routers.py
 ${PYSITELIB}/rest_framework/routers.pyc
 ${PYSITELIB}/rest_framework/routers.pyo
-${PYSITELIB}/rest_framework/schemas.py
-${PYSITELIB}/rest_framework/schemas.pyc
-${PYSITELIB}/rest_framework/schemas.pyo
+${PYSITELIB}/rest_framework/schemas/__init__.py
+${PYSITELIB}/rest_framework/schemas/__init__.pyc
+${PYSITELIB}/rest_framework/schemas/__init__.pyo
+${PYSITELIB}/rest_framework/schemas/generators.py
+${PYSITELIB}/rest_framework/schemas/generators.pyc
+${PYSITELIB}/rest_framework/schemas/generators.pyo
+${PYSITELIB}/rest_framework/schemas/inspectors.py
+${PYSITELIB}/rest_framework/schemas/inspectors.pyc
+${PYSITELIB}/rest_framework/schemas/inspectors.pyo
+${PYSITELIB}/rest_framework/schemas/utils.py
+${PYSITELIB}/rest_framework/schemas/utils.pyc
+${PYSITELIB}/rest_framework/schemas/utils.pyo
+${PYSITELIB}/rest_framework/schemas/views.py
+${PYSITELIB}/rest_framework/schemas/views.pyc
+${PYSITELIB}/rest_framework/schemas/views.pyo
 ${PYSITELIB}/rest_framework/serializers.py
 ${PYSITELIB}/rest_framework/serializers.pyc
 ${PYSITELIB}/rest_framework/serializers.pyo
@@ -255,7 +274,7 @@ ${PYSITELIB}/rest_framework/static/rest_framework/img/glyphicons-halflings.png
 ${PYSITELIB}/rest_framework/static/rest_framework/img/grid.png
 ${PYSITELIB}/rest_framework/static/rest_framework/js/ajax-form.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/bootstrap.min.js
-${PYSITELIB}/rest_framework/static/rest_framework/js/coreapi-0.1.0.js
+${PYSITELIB}/rest_framework/static/rest_framework/js/coreapi-0.1.1.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/csrf.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/default.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/jquery-1.12.4.min.js
@@ -264,6 +283,7 @@ ${PYSITELIB}/rest_framework/status.py
 ${PYSITELIB}/rest_framework/status.pyc
 ${PYSITELIB}/rest_framework/status.pyo
 ${PYSITELIB}/rest_framework/templates/.DS_Store
+${PYSITELIB}/rest_framework/templates/rest_framework/.DS_Store
 ${PYSITELIB}/rest_framework/templates/rest_framework/admin.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/admin/detail.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/admin/dict_value.html
@@ -287,8 +307,6 @@ ${PYSITELIB}/rest_framework/templates/rest_framework/docs/langs/shell.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/docs/link.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/docs/sidebar.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/filters/base.html
-${PYSITELIB}/rest_framework/templates/rest_framework/filters/django_filter.html
-${PYSITELIB}/rest_framework/templates/rest_framework/filters/django_filter_crispyforms.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/filters/ordering.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/filters/search.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/horizontal/checkbox.html
@@ -366,6 +384,9 @@ ${PYSITELIB}/rest_framework/utils/html.pyo
 ${PYSITELIB}/rest_framework/utils/humanize_datetime.py
 ${PYSITELIB}/rest_framework/utils/humanize_datetime.pyc
 ${PYSITELIB}/rest_framework/utils/humanize_datetime.pyo
+${PYSITELIB}/rest_framework/utils/json.py
+${PYSITELIB}/rest_framework/utils/json.pyc
+${PYSITELIB}/rest_framework/utils/json.pyo
 ${PYSITELIB}/rest_framework/utils/mediatypes.py
 ${PYSITELIB}/rest_framework/utils/mediatypes.pyc
 ${PYSITELIB}/rest_framework/utils/mediatypes.pyo
