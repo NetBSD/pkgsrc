@@ -585,6 +585,7 @@ func (gd *GlobalData) InitVartypes() {
 	acl("HAS_CONFIGURE", lkNone, BtYes, "Makefile, Makefile.common: set")
 	pkglist("HEADER_TEMPLATES", lkShell, BtPathname)
 	pkg("HOMEPAGE", lkNone, BtHomepage)
+	pkg("ICON_THEMES", lkNone, BtYes)
 	acl("IGNORE_PKG.*", lkNone, BtYes, "*: set, use-loadtime")
 	sys("IMAKE", lkNone, BtShellCommand)
 	acl("INCOMPAT_CURSES", lkSpace, BtMachinePlatformPattern, "Makefile: set, append")
