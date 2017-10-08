@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/10/08 13:18:58 jmcneill Exp $
+share/u-boot/a10-olinuxino-lime/u-boot-sunxi-with-spl.bin
