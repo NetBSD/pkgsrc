@@ -1,29 +1,20 @@
-# $NetBSD: Makefile,v 1.7 2017/01/01 14:44:00 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.8 2017/10/08 09:10:11 adam Exp $
 
-DISTNAME=	generateDS-2.14a
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
-EGG_NAME=	generateDS-${PKGVERSION_NOREV}0
-CATEGORIES=	textproc
+DISTNAME=	generateDS-2.28b0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/0$//}
+CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/generateDS/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.davekuhlman.org/generateDS.html
 COMMENT=	Python XML data binding library
-
 LICENSE=	mit
 
-PY_PATCHPLIST=	yes
-PYDISTUTILSPKG=	yes
-# TODO: explain
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-xml
+DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
-REPLACE_PYTHON=	generateDS.py libgenerateDS/gui/*.py libgenerateDS/*.py
+USE_LANGUAGES=	# none
+
+PYTHON_SELF_CONFLICT=	yes
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/application.mk"
-# TODO: Explain why this is commented out and present.
-#.include "../../textproc/py-xml/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
