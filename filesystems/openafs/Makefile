@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/07/21 01:39:33 sevan Exp $
+# $NetBSD: Makefile,v 1.16 2017/10/08 02:41:39 sevan Exp $
 
 DISTNAME=	openafs-1.6.21-src
 PKGNAME=	${DISTNAME:C/-src//}
@@ -50,11 +50,6 @@ pre-patch:
 		${SED} -e 's|nbsd60|nbsd'$$i'|g' param.i386_nbsd60.h > param.i386_nbsd$$i.h; \
 		${SED} -e 's|nbsd60|nbsd'$$i'|g' param.amd64_nbsd60.h > param.amd64_nbsd$$i.h; \
 		${CP} param.nbsd60.h param.nbsd$$i.h; \
-	done
-
-post-patch:
-	cd ${WRKSRC}/src/config && for i in 80 90; do \
-		${CP} param.nbsd70.h param.nbsd$$i.h; \
 	done
 
 MAKE_ENV+=	LD_RUN_PATH=${PREFIX}/lib
