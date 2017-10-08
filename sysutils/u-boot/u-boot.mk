@@ -1,6 +1,6 @@
-# $NetBSD: u-boot.mk,v 1.4 2017/09/07 15:29:31 jmcneill Exp $
+# $NetBSD: u-boot.mk,v 1.5 2017/10/08 12:09:42 jmcneill Exp $
 
-UBOOT_VERSION?=	2017.07
+UBOOT_VERSION?=	2017.09
 PKGNAME=	u-boot-${UBOOT_TARGET}-${UBOOT_VERSION}
 DISTNAME?=	u-boot-${UBOOT_VERSION}
 DISTINFO_FILE?=	${.CURDIR}/../../sysutils/u-boot/distinfo
