@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"netbsd.org/pkglint/line"
+	"netbsd.org/pkglint/linechecks"
 	"netbsd.org/pkglint/trace"
 	"strings"
 )
@@ -54,7 +55,7 @@ type distinfoLinesChecker struct {
 }
 
 func (ck *distinfoLinesChecker) checkLines(lines []line.Line) {
-	LineChecker{lines[0]}.CheckRcsid(``, "")
+	linechecks.CheckRcsid(lines[0], ``, "")
 	if 1 < len(lines) && lines[1].Text() != "" {
 		lines[1].Notef("Empty line expected.")
 	}

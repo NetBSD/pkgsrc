@@ -26,7 +26,7 @@ func (list *MkShList) AddSeparator(separator MkShSeparator) *MkShList {
 
 type MkShAndOr struct {
 	Pipes []*MkShPipeline
-	Ops   []string // Either "&&" or "||"
+	Ops   []string // Each element is either "&&" or "||"
 }
 
 func NewMkShAndOr(pipeline *MkShPipeline) *MkShAndOr {
@@ -147,7 +147,7 @@ func (c *StrCommand) HasOption(opt string) bool {
 	return false
 }
 
-func (c *StrCommand) AnyArgMatches(pattern regex.RegexPattern) bool {
+func (c *StrCommand) AnyArgMatches(pattern regex.Pattern) bool {
 	for _, arg := range c.Args {
 		if matches(arg, pattern) {
 			return true

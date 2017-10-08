@@ -2,6 +2,7 @@ package main
 
 import (
 	"netbsd.org/pkglint/line"
+	"netbsd.org/pkglint/linechecks"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
 	"path"
@@ -676,7 +677,7 @@ func (cv *VartypeCheck) Pathmask() {
 	if !matches(cv.ValueNoVar, `^[#\-0-9A-Za-z._~+%*?/\[\]]*`) {
 		cv.Line.Warnf("%q is not a valid pathname mask.", cv.Value)
 	}
-	LineChecker{cv.Line}.CheckAbsolutePathname(cv.Value)
+	linechecks.CheckAbsolutePathname(cv.Line, cv.Value)
 }
 
 // Like Filename, but including slashes
@@ -688,7 +689,7 @@ func (cv *VartypeCheck) Pathname() {
 	if !matches(cv.ValueNoVar, `^[#\-0-9A-Za-z._~+%/]*$`) {
 		cv.Line.Warnf("%q is not a valid pathname.", cv.Value)
 	}
-	LineChecker{cv.Line}.CheckAbsolutePathname(cv.Value)
+	linechecks.CheckAbsolutePathname(cv.Line, cv.Value)
 }
 
 func (cv *VartypeCheck) Perl5Packlist() {

@@ -1,6 +1,6 @@
+// Package getopt provides a parser for command line options,
+// supporting multi-value options such as -Wall,no-extra.
 package getopt
-
-// Self-written getopt to support multi-argument options.
 
 import (
 	"fmt"

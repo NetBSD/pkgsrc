@@ -67,7 +67,7 @@ func (gd *GlobalData) Initialize() {
 	gd.loadDeprecatedVars()
 }
 
-func (gd *GlobalData) Latest(category string, re regex.RegexPattern, repl string) string {
+func (gd *GlobalData) Latest(category string, re regex.Pattern, repl string) string {
 	key := category + "/" + string(re) + " => " + repl
 	if latest, found := gd.latest[key]; found {
 		return latest

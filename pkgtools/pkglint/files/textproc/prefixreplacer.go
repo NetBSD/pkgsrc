@@ -11,6 +11,8 @@ var Testing bool
 
 type PrefixReplacerMark string
 
+// PrefixReplacer parses an arbitrary string into its components by repeatedly
+// stripping off a prefix matched by a literal string or a regular expression.
 type PrefixReplacer struct {
 	rest string
 	s    string
@@ -80,7 +82,7 @@ func (pr *PrefixReplacer) AdvanceHspace() bool {
 	return false
 }
 
-func (pr *PrefixReplacer) AdvanceRegexp(re regex.RegexPattern) bool {
+func (pr *PrefixReplacer) AdvanceRegexp(re regex.Pattern) bool {
 	pr.m = nil
 	pr.s = ""
 	if !strings.HasPrefix(string(re), "^") {

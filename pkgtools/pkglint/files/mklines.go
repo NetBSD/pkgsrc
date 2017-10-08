@@ -2,6 +2,7 @@ package main
 
 import (
 	"netbsd.org/pkglint/line"
+	"netbsd.org/pkglint/linechecks"
 	"netbsd.org/pkglint/trace"
 	"path"
 	"strings"
@@ -101,7 +102,7 @@ func (mklines *MkLines) Check() {
 
 	// In the second pass, the actual checks are done.
 
-	LineChecker{mklines.lines[0]}.CheckRcsid(`#\s+`, "# ")
+	linechecks.CheckRcsid(mklines.lines[0], `#\s+`, "# ")
 
 	var substcontext SubstContext
 	var varalign VaralignBlock

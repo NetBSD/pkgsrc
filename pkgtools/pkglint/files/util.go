@@ -25,19 +25,19 @@ func hasPrefix(s, prefix string) bool {
 func hasSuffix(s, suffix string) bool {
 	return strings.HasSuffix(s, suffix)
 }
-func matches(s string, re regex.RegexPattern) bool {
+func matches(s string, re regex.Pattern) bool {
 	return regex.Matches(s, re)
 }
-func match1(s string, re regex.RegexPattern) (matched bool, m1 string) {
+func match1(s string, re regex.Pattern) (matched bool, m1 string) {
 	return regex.Match1(s, re)
 }
-func match2(s string, re regex.RegexPattern) (matched bool, m1, m2 string) {
+func match2(s string, re regex.Pattern) (matched bool, m1, m2 string) {
 	return regex.Match2(s, re)
 }
-func match3(s string, re regex.RegexPattern) (matched bool, m1, m2, m3 string) {
+func match3(s string, re regex.Pattern) (matched bool, m1, m2, m3 string) {
 	return regex.Match3(s, re)
 }
-func match4(s string, re regex.RegexPattern) (matched bool, m1, m2, m3, m4 string) {
+func match4(s string, re regex.Pattern) (matched bool, m1, m2, m3, m4 string) {
 	return regex.Match4(s, re)
 }
 
@@ -55,7 +55,7 @@ func imax(a, b int) int {
 	return b
 }
 
-func mustMatch(s string, re regex.RegexPattern) []string {
+func mustMatch(s string, re regex.Pattern) []string {
 	if m := regex.Match(s, re); m != nil {
 		return m
 	}
@@ -261,7 +261,7 @@ func mkopSubst(s string, left bool, from string, right bool, to string, flags st
 	if trace.Tracing {
 		defer trace.Call(s, left, from, right, to, flags)()
 	}
-	re := regex.RegexPattern(ifelseStr(left, "^", "") + regexp.QuoteMeta(from) + ifelseStr(right, "$", ""))
+	re := regex.Pattern(ifelseStr(left, "^", "") + regexp.QuoteMeta(from) + ifelseStr(right, "$", ""))
 	done := false
 	gflag := contains(flags, "g")
 	return regex.Compile(re).ReplaceAllStringFunc(s, func(match string) string {
@@ -319,7 +319,7 @@ func containsVarRef(s string) bool {
 	return contains(s, "${")
 }
 
-func reReplaceRepeatedly(from string, re regex.RegexPattern, to string) string {
+func reReplaceRepeatedly(from string, re regex.Pattern, to string) string {
 	replaced := regex.Compile(re).ReplaceAllString(from, to)
 	if replaced != from {
 		return reReplaceRepeatedly(replaced, re, to)

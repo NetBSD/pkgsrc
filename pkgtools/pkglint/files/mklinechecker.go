@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"netbsd.org/pkglint/linechecks"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
 	"os"
@@ -17,8 +18,8 @@ type MkLineChecker struct {
 func (ck MkLineChecker) Check() {
 	mkline := ck.MkLine
 
-	LineChecker{mkline}.CheckTrailingWhitespace()
-	LineChecker{mkline}.CheckValidCharacters(`[\t -~]`)
+	linechecks.CheckTrailingWhitespace(mkline)
+	linechecks.CheckValidCharacters(mkline, `[\t -~]`)
 
 	switch {
 	case mkline.IsVarassign():
@@ -787,14 +788,6 @@ func (ck MkLineChecker) checkVarassignSpecific() {
 		}
 	}
 
-	if varname == "CONFIGURE_ARGS" && contains(value, "=${PREFIX}/share/kde") {
-		mkline.Notef("Please .include \"../../meta-pkgs/kde3/kde3.mk\" instead of this line.")
-		Explain(
-			"That file does many things automatically and consistently that this",
-			"package also does.  When using kde3.mk, you can probably also leave",
-			"out some explicit dependencies.")
-	}
-
 	if varname == "PYTHON_VERSIONS_ACCEPTED" {
 		ck.checkVarassignPythonVersions(varname, value)
 	}
@@ -1050,7 +1043,7 @@ func (ck MkLineChecker) checkCompareVarStr(varname, op, value string) {
 	}
 }
 
-func (ck MkLineChecker) CheckValidCharactersInValue(reValid regex.RegexPattern) {
+func (ck MkLineChecker) CheckValidCharactersInValue(reValid regex.Pattern) {
 	mkline := ck.MkLine
 	rest := regex.Compile(reValid).ReplaceAllString(mkline.Value(), "")
 	if rest != "" {

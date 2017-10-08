@@ -44,6 +44,7 @@ func (s *Suite) Test_ChecklinesPlist(c *check.C) {
 		"WARN: PLIST:12: Please remove this line. It is no longer necessary.",
 		"WARN: PLIST:13: Manual page missing for sbin/clockctl.",
 		"ERROR: PLIST:14: The package Makefile must include \"../../graphics/gnome-icon-theme/buildlink3.mk\".",
+		"WARN: PLIST:14: Packages that install icon theme files should set ICON_THEMES.",
 		"ERROR: PLIST:16: Duplicate filename \"share/tzinfo\", already appeared in line 15.")
 }
 
@@ -125,7 +126,7 @@ func (s *Suite) Test_PlistLineSorter_Sort(c *check.C) {
 		"lib/before.la",
 		"lib/after.la",
 		"@exec echo \"after lib/after.la\"")
-	ck := &PlistChecker{nil, nil, ""}
+	ck := &PlistChecker{nil, nil, "", false}
 	plines := ck.NewLines(lines)
 
 	NewPlistLineSorter(plines).Sort()
