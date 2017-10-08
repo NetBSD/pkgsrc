@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/10/03 00:43:51 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2017/10/08 09:24:43 adam Exp $
 
 DISTNAME=	bcolz-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bcolz/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
