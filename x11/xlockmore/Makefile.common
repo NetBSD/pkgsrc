@@ -1,16 +1,15 @@
-# $NetBSD: Makefile.common,v 1.76 2017/09/06 09:03:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.77 2017/10/09 08:50:24 wiz Exp $
 #
 # used by x11/xlockmore/Makefile
 # used by x11/xlockmore-lite/Makefile
 
 DISTNAME=	xlockmore-5.46
 CATEGORIES=	x11
-MASTER_SITES=	http://www.tux.org/~bagleyd/xlock/
-MASTER_SITES+=	ftp://ibiblio.org/pub/Linux/X11/screensavers/
+MASTER_SITES=	http://sillycycle.com/xlock/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.tux.org/~bagleyd/xlockmore.html
+HOMEPAGE=	http://sillycycle.com/xlockmore.html
 
 CONFLICTS+=	xlockmore-[0-9]* xlockmore-lite-[0-9]*
 
