@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.12 2017/06/09 16:51:00 ryoon Exp $
+$NetBSD: distinfo,v 1.13 2017/10/09 07:43:50 wiz Exp $
 
-SHA1 (xmltv-0.5.56.tar.bz2) = 51bc2b37c00bc1bcab767773d42abf26c9071677
-RMD160 (xmltv-0.5.56.tar.bz2) = 067c3cd231659fb99518947b9e46fca5fcae0c8e
-SHA512 (xmltv-0.5.56.tar.bz2) = ae43d8348b0658485330a6eae4f69278278ba95185c1bc2b3ef1ab18380b8b8c6aabb583fff23601d92a073b65af64a33f37276b83794f5ff5d8ccca79a4f7de
-Size (xmltv-0.5.56.tar.bz2) = 716236 bytes
-SHA1 (patch-aa) = a1e1fb2c990c980dc9429cf3cd71f7c25cf190ee
+SHA1 (xmltv-0.5.69.tar.bz2) = cf3ca499812fddae9677e88a0771e217d300180d
+RMD160 (xmltv-0.5.69.tar.bz2) = 76f905a04ac18e0ab24237bd81304d7c689782c7
+SHA512 (xmltv-0.5.69.tar.bz2) = b76991bdcf2803f67c0c24b52d44b62ebfc37f177dbfb31a781fefe420ee5a575b522ed6a6669fa9f0462ac866abd382a1b3fe2cf91d3bfab1758f95facd333c
+Size (xmltv-0.5.69.tar.bz2) = 1273028 bytes
+SHA1 (patch-aa) = 96c55dc5927e51c0210b39468884b7171fa497ea
 SHA1 (patch-filter_tv__grep.PL) = fc0854c72507309425bda0366607007dd12aed40
 SHA1 (patch-grab_it_tv__grab__it.PL) = af1c588ceb394002f3e128a23a60e14611729a8d
 SHA1 (patch-lib_XMLTV.pm.PL) = 2ad4dbe0536c0889a84d09484de33ea9a235c7f9
