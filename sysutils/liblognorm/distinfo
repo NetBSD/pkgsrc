@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2017/04/06 20:00:49 fhajny Exp $
+$NetBSD: distinfo,v 1.9 2017/10/09 14:27:36 fhajny Exp $
 
-SHA1 (liblognorm-2.0.3.tar.gz) = 5020e1d5b70d211418d1663bdbea5a6c32586c42
-RMD160 (liblognorm-2.0.3.tar.gz) = e82de43ea406d6e207f0541be748ddabe15c68b8
-SHA512 (liblognorm-2.0.3.tar.gz) = 8f343f3029c506a9c060b1b55e478da9ceedc1fbf27ca53a991ffbddb397383adfee2d79beb174a6c997599ee3c0fa4bbc9925fa850e5bf4f4d7b181ddae7cdb
-Size (liblognorm-2.0.3.tar.gz) = 660680 bytes
+SHA1 (liblognorm-2.0.4.tar.gz) = 5f4f410fef6f256531d96db1477106b0906fa446
+RMD160 (liblognorm-2.0.4.tar.gz) = 5ff12b3363abfd243df95288f8ef3cbb9427716e
+SHA512 (liblognorm-2.0.4.tar.gz) = 3c7cbf0c8c320708615218009354d198ba0893632ca464a07270f59d137753dfc7ad6dae66b565660f14e9285f9c8964824d36070b1872b6c633589b4996ba02
+Size (liblognorm-2.0.4.tar.gz) = 665898 bytes
