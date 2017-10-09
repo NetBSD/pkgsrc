@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4372 2017/10/09 07:37:48 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4373 2017/10/09 07:39:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6220,3 +6220,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/p5-Net-IPv6Addr to 0.91 [wiz 2017-10-09]
 	Updated security/p5-Digest-SHA to 5.98 [wiz 2017-10-09]
 	Updated security/p5-Digest-SHA3 to 0.27 [wiz 2017-10-09]
+	Updated devel/p5-Devel-Cover to 1.28 [wiz 2017-10-09]
