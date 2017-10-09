@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4381 2017/10/09 14:27:46 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4382 2017/10/09 22:41:23 brook Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6229,3 +6229,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed net/py-spreadmodule [wiz 2017-10-09]
 	Updated print/py-weasyprint to 0.41 [kleink 2017-10-09]
 	Updated sysutils/liblognorm to 2.0.4 [fhajny 2017-10-09]
+	Added www/R-curl version 3.0 [brook 2017-10-09]
