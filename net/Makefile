@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1184 2017/10/06 17:01:41 minskim Exp $
+# $NetBSD: Makefile,v 1.1185 2017/10/09 08:31:30 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -676,7 +676,6 @@ SUBDIR+=	py-soappy
 SUBDIR+=	py-socketpool
 SUBDIR+=	py-softlayer
 SUBDIR+=	py-softlayer_messaging
-SUBDIR+=	py-spreadmodule
 SUBDIR+=	py-suds
 SUBDIR+=	py-tldextract
 SUBDIR+=	py-tweepy
