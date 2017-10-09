@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/02/26 14:03:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/10/09 15:27:39 jperkin Exp $
 
 JETTYVER=	9.2.14.v20151106
 DISTNAME=	jetty-distribution-${JETTYVER}
@@ -56,6 +56,7 @@ CONF_FILES+=		${JETTY_HOME}/start-example.ini ${JETTY_BASE}/start.ini
 REPLACE_BASH+=		bin/jetty.sh
 
 CHECK_SHLIBS_SKIP+=	share/jetty/lib/setuid/libsetuid-*.so
+CHECK_SSP_SKIP+=	${CHECK_SHLIBS_SKIP}
 
 do-install:
 	cd ${WRKSRC} && ${PAX} -rw -pm . ${DESTDIR}${JETTY_HOME}
