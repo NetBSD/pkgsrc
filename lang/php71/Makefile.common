@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2016/08/04 14:09:03 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.2 2017/10/09 21:43:30 jdolecek Exp $
 # used by lang/php71/Makefile.php
 # used by lang/php/ext.mk
 # used by meta-pkgs/php71-extensions/Makefile
@@ -12,8 +12,6 @@ MAINTAINER?=		pkgsrc-users@NetBSD.org
 
 # needed due to (broken?) configure checks in php-xmlrpc and php5-dom
 CONFIGURE_ENV+=		PHP_LIBXML_SHARED="1"
-
-EXTRACT_USING=		gtar
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
