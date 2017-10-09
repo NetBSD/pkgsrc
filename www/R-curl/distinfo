@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/10/09 22:38:12 brook Exp $
+
+SHA1 (R/curl_3.0.tar.gz) = 8caefb774c13b095f4454e45e0fee65dce786b75
+RMD160 (R/curl_3.0.tar.gz) = 646b85310b489035729640fdec5ff8ac5c012ed1
+SHA512 (R/curl_3.0.tar.gz) = 3271053b5a84006b93e9463e209830055d76c5c3074d045b340f14cde40242e289e29822952550ce6ef34d4c341666ae58832b0b3f7f58718931b36ca998a1df
+Size (R/curl_3.0.tar.gz) = 412212 bytes
