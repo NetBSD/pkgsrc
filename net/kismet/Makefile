@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.49 2017/02/28 15:20:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.50 2017/10/09 08:13:10 wiz Exp $
 
 DISTNAME=		kismet-2008-05-R1
 PKGNAME=		kismet-2008.05.01
 PKGREVISION=		36
 CATEGORIES=		net
-MASTER_SITES=		http://www.kismetwireless.net/code/
+MASTER_SITES=		https://www.kismetwireless.net/code/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.kismetwireless.net/
+HOMEPAGE=		https://www.kismetwireless.net/
 COMMENT=		802.11 wireless network detector, sniffer and IDS
 
 USE_LANGUAGES=		c c++
