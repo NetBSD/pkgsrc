@@ -1,21 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2017/10/08 11:23:24 seb Exp $
+# $NetBSD: Makefile,v 1.3 2017/10/09 08:37:09 wiz Exp $
 
-DISTNAME=	v0.9.5
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S/v//}
-#PKGREVISION=	1
+DISTNAME=	jsonnet-0.9.5
 CATEGORIES=	devel local
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jsonnet.org/
 COMMENT=	Domain specific configuration language
 LICENSE=	apache-2.0
 
-EXTRACT_USING=	gtar
-
-GITHUB_PROJECT=	jsonnet
-GITHUB_TAG=	${DISTNAME}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+EXTRACT_USING=	bsdtar
 
 USE_LANGUAGES=	c c++11
 
