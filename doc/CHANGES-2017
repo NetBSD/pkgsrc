@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4369 2017/10/09 07:33:47 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4370 2017/10/09 07:36:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6217,3 +6217,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Log-Any to 1.70.0 [wiz 2017-10-09]
 	Updated devel/p5-Term-Table to 0.010 [wiz 2017-10-09]
 	Updated devel/p5-Test-MockModule to 0.13 [wiz 2017-10-09]
+	Updated net/p5-Net-IPv6Addr to 0.91 [wiz 2017-10-09]
