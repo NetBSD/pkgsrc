@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/09/29 21:17:18 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2017/10/09 08:32:01 wiz Exp $
 
 DISTNAME=	sure-1.4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sure/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/gabrielfalcao/sure
+HOMEPAGE=	https://github.com/gabrielfalcao/sure
 COMMENT=	Python testing tool
 LICENSE=	gnu-gpl-v3
 
