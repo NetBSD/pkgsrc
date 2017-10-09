@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17821 2017/10/08 09:11:05 adam Exp $
+$NetBSD: TODO,v 1.17822 2017/10/09 07:44:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1136,7 +1136,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-DBD-DB2-1.85
 	o p5-Publican-4.3.2
 	o p5-RT-Authen-ExternalAuth-0.27
-	o p5-xmltv-0.5.66
 	o packagekit-0.5.3
 	o pam-krb5-4.7
 	o pam-passwdqc-1.3.0
