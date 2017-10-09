@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4375 2017/10/09 07:40:13 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4376 2017/10/09 07:44:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6223,3 +6223,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Devel-Cover to 1.28 [wiz 2017-10-09]
 	Updated devel/p5-Safe-Isa to 1.000008 [wiz 2017-10-09]
 	Updated devel/p5-Test-Simple to 1.302098 [wiz 2017-10-09]
+	Updated multimedia/p5-xmltv to 0.5.69 [wiz 2017-10-09]
