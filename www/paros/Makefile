@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/03/25 21:03:09 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2017/10/09 15:32:07 jperkin Exp $
 #
 
 DISTNAME=	paros-3.2.13-unix
@@ -24,6 +24,8 @@ WRKSRC=		${WRKDIR}/${PKGBASE}
 # contains Linux/Windows binaries
 CHECK_SHLIBS_SKIP=	lib/paros/libmozembed-linux-gtk1.2.so
 CHECK_SHLIBS_SKIP+=	lib/paros/libmozembed-linux-gtk2.so
+CHECK_SHLIBS_SKIP+=	lib/paros/libjdic.so lib/paros/libtray.so
+CHECK_SSP_SKIP+=	${CHECK_SHLIBS_SKIP}
 
 SUBST_CLASSES+=		java
 SUBST_MESSAGE.java=	Fixing hardcoded path to Java.
@@ -40,8 +42,6 @@ do-configure:
 do-install:
 	@cd ${WRKDIR} && pax -rw -pm ${PKGBASE} ${DESTDIR}${PREFIX}/lib/
 	${INSTALL_SCRIPT} ${WRKDIR}/paros.sh ${DESTDIR}${PREFIX}/bin/paros
-
-CHECK_SHLIBS_SKIP+=	lib/paros/libjdic.so lib/paros/libtray.so
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
