@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4380 2017/10/09 12:32:26 kleink Exp $
+$NetBSD: CHANGES-2017,v 1.4381 2017/10/09 14:27:46 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6228,3 +6228,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed chat/naim [wiz 2017-10-09]
 	Removed net/py-spreadmodule [wiz 2017-10-09]
 	Updated print/py-weasyprint to 0.41 [kleink 2017-10-09]
+	Updated sysutils/liblognorm to 2.0.4 [fhajny 2017-10-09]
