@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/04/22 06:33:28 mef Exp $
+$NetBSD: distinfo,v 1.3 2017/10/09 07:32:37 wiz Exp $
 
-SHA1 (Term-Table-0.008.tar.gz) = 0914e19ac6c6072fa4d12d27fb24625ede683319
-RMD160 (Term-Table-0.008.tar.gz) = 2535e35472627d3c662654064515c21125c4fa62
-SHA512 (Term-Table-0.008.tar.gz) = d741313933c8925ca3451056d05172c440ab4a46f5a4cbaeae3c6d4b82d29314e69643e8c3e60dced42768f2102277461b2d2dc4bf945d982df9265f49339d06
-Size (Term-Table-0.008.tar.gz) = 24084 bytes
+SHA1 (Term-Table-0.010.tar.gz) = 692796c032c5ff4d3c4fa3e8449eb961c13b643c
+RMD160 (Term-Table-0.010.tar.gz) = e869d774cc2da1123713215c88b324f7d92d6318
+SHA512 (Term-Table-0.010.tar.gz) = 7d4b5c19f0efaf530f4d05258e6963be4ebae4488657c722f115cc93c8431940d318e2b228e8a8e7d9923ebee2acc4541ec98d9b78c84091faee8544a5fd76af
+Size (Term-Table-0.010.tar.gz) = 24244 bytes
