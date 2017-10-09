@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/09/29 14:13:32 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2017/10/09 08:47:02 wiz Exp $
 
 DISTNAME=	pytest-localserver-0.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-localserver/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bitbucket.org/pytest-dev/pytest-localserver/
+HOMEPAGE=	https://bitbucket.org/pytest-dev/pytest-localserver/
 COMMENT=	py.test plugin to test server connections locally
 LICENSE=	mit
 
