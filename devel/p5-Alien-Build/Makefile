@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/09/29 13:31:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/10/09 07:23:11 wiz Exp $
 
-DISTNAME=	Alien-Build-1.18
+DISTNAME=	Alien-Build-1.22
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/P/PL/PLICEASE/
@@ -14,7 +14,6 @@ PERL5_PACKLIST=         auto/Alien/Build/.packlist
 
 USE_TOOLS+=	pkg-config:run
 
-DEPENDS+=	p5-Alien-Base-ModuleBuild-[0-9]*:../../devel/p5-Alien-Base-ModuleBuild
 DEPENDS+=	p5-Capture-Tiny>=0.17:../../devel/p5-Capture-Tiny
 DEPENDS+=	p5-File-chdir-[0-9]*:../../devel/p5-File-chdir
 DEPENDS+=	p5-File-Which>=1.10:../../devel/p5-File-Which
