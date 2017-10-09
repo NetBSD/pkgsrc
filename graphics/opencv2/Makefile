@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/05/03 08:38:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2017/10/09 08:17:41 wiz Exp $
 
 DISTNAME=	opencv-2.4.11
 PKGREVISION=	6
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencvlibrary/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	anthony.mallet@laas.fr
-HOMEPAGE=	http://code.opencv.org/projects/OpenCV/wiki/WikiStart
+HOMEPAGE=	http://opencv.org/
 COMMENT=	Library for computer vision problems
 LICENSE=	modified-bsd
 
