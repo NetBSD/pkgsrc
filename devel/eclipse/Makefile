@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2015/01/04 04:56:53 dholland Exp $
+# $NetBSD: Makefile,v 1.32 2017/10/09 15:23:11 jperkin Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}
@@ -41,6 +41,7 @@ do-build:
 .else
 NO_BUILD=		yes
 CHECK_SHLIBS_SUPPORTED=	no
+CHECK_SSP_SUPPORTED=	no
 
 do-extract:
 	${MKDIR} ${WRKDIR}/result
