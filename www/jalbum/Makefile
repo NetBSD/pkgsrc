@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2016/03/25 21:03:09 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2017/10/09 15:26:11 jperkin Exp $
 
 DISTNAME=		Jalbum${VERSION}
 PKGNAME=		jalbum-${VERSION}
@@ -25,6 +25,7 @@ INSTALLATION_DIRS+=	bin ${PREFIX}/share/jalbum
 USE_TOOLS+=		pax
 
 CHECK_SHLIBS_SKIP+=	share/jalbum/lib/*
+CHECK_SSP_SKIP+=	${CHECK_SHLIBS_SKIP}
 
 post-extract:
 	${ECHO} "===> Removing invalid skins"
