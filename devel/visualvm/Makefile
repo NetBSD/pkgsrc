@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/06 10:40:27 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/10/09 15:36:46 jperkin Exp $
 
 DISTNAME=	visualvm_138
 PKGNAME=	visualvm-1.3.8
@@ -22,6 +22,7 @@ VISUALVMDIR=	lib/visualvm
 
 # Contains shlibs for many different arches
 CHECK_SHLIBS_SUPPORTED= no
+CHECK_SSP_SUPPORTED=	no
 
 INSTALLATION_DIRS= bin ${VISUALVMDIR}
 
