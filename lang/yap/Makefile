@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/05/29 11:09:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2017/10/09 08:52:04 wiz Exp $
 
 DISTNAME=		yap-6.3.3
 PKGREVISION=		5
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.dcc.fc.up.pt/~vsc/Yap/
 MASTER_SITES+=		http://www.dcc.fc.up.pt/~vsc/Yap/current/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ncc.up.pt/~vsc/Yap/
+HOMEPAGE=		http://www.dcc.fc.up.pt/~vsc/Yap/
 COMMENT=		ISO-compliant Prolog
 
 USE_LANGUAGES=		c c++
