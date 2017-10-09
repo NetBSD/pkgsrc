@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4363 2017/10/09 07:23:24 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4364 2017/10/09 07:25:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6211,3 +6211,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated pkgtools/pkglint4 to 4.164 [rillig 2017-10-08]
 	Updated cad/p5-gds2 to 3.35 [wiz 2017-10-09]
 	Updated devel/p5-Alien-Build to 1.22 [wiz 2017-10-09]
+	Updated devel/p5-Alien-Base-ModuleBuild to 1.00 [wiz 2017-10-09]
