@@ -1,8 +1,8 @@
-# $NetBSD: version.mk,v 1.28 2017/09/03 07:12:07 bsiegert Exp $
+# $NetBSD: version.mk,v 1.28.4.1 2017/10/09 12:30:42 spz Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
-GO_VERSION=	1.9
+GO_VERSION=	1.9.1
 GO14_VERSION=	1.4.3
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64 *-*-*arm*
