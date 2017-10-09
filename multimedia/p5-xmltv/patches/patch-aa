@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.4 2017/06/09 16:51:00 ryoon Exp $
+$NetBSD: patch-aa,v 1.5 2017/10/09 07:43:51 wiz Exp $
 
 * Fix build with Perl 5.26.0
 
---- Makefile.PL.orig	2009-08-10 05:22:03.000000000 +0000
+--- Makefile.PL.orig	2017-01-24 04:59:45.000000000 +0000
 +++ Makefile.PL
 @@ -3,2 +3,4 @@
  
 +use FindBin;
 +use lib $FindBin::Bin;
  use ExtUtils::MakeMaker;
-@@ -750,3 +752,3 @@ END
+@@ -1072,3 +1074,3 @@ END
      print STDERR "\n";
 -    if (not ask(0, 'Do you want to proceed with this configuration?', 1)) {
 +    if (1 == 0) {
- 	# Need to set {install} for each component by prompting.
+         # Need to set {install} for each component by prompting.
