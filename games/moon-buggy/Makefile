@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2015/08/18 07:31:08 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/10/09 08:14:02 wiz Exp $
 
 DISTNAME=		moon-buggy-1.0.51
 PKGREVISION=		1
 CATEGORIES=		games
-MASTER_SITES=		http://m.seehuhn.de/programs/
+#MASTER_SITES=		http://m.seehuhn.de/programs/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.seehuhn.de/pages/moon-buggy
+#HOMEPAGE=		http://www.seehuhn.de/pages/moon-buggy
 COMMENT=		Game on the Moon
 LICENSE=		gnu-gpl-v2
 
