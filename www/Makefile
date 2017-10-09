@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1273 2017/10/07 17:24:32 maya Exp $
+# $NetBSD: Makefile,v 1.1274 2017/10/09 22:39:57 brook Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
 
+SUBDIR+=	R-curl
 SUBDIR+=	SOGo
 SUBDIR+=	SOGo3
 SUBDIR+=	SpeedyCGI
