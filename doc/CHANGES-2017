@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4378 2017/10/09 08:16:35 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4379 2017/10/09 08:31:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6226,3 +6226,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/p5-xmltv to 0.5.69 [wiz 2017-10-09]
 	Updated devel/py-libmc to 1.5.2 [adam 2017-10-09]
 	Removed chat/naim [wiz 2017-10-09]
+	Removed net/py-spreadmodule [wiz 2017-10-09]
