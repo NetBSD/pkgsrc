@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.40 2016/05/14 16:13:10 bsiegert Exp $
-#
+# $NetBSD: Makefile,v 1.41 2017/10/09 08:06:20 wiz Exp $
 
 DISTNAME=	alpine-2.20
 CATEGORIES=	mail
-MASTER_SITES=	http://patches.freeiz.com/alpine/release/src/
+#MASTER_SITES=	http://patches.freeiz.com/alpine/release/src/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://patches.freeiz.com/alpine/release/
+#HOMEPAGE=	http://patches.freeiz.com/alpine/release/
 COMMENT=	Program for Internet News and E-mail
 LICENSE=	apache-2.0
 
