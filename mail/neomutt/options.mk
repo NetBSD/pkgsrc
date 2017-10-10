@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.9 2017/07/18 18:39:37 wiz Exp $
+# $NetBSD: options.mk,v 1.10 2017/10/10 08:27:28 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	slang ncurses ncursesw curses
 PKG_SUPPORTED_OPTIONS=	debug gpgme gssapi idn ssl smime sasl
 PKG_SUPPORTED_OPTIONS+=	mutt-hcache tokyocabinet
-PKG_SUGGESTED_OPTIONS=	ncursesw gpgme idn mutt-hcache sasl smime ssl
+PKG_SUGGESTED_OPTIONS=	ncursesw gpgme idn sasl smime ssl
 PKG_SUGGESTED_OPTIONS+=	gssapi
 PKG_SUGGESTED_OPTIONS+=	mutt-hcache tokyocabinet
 
