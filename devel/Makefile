@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2544 2017/10/05 19:41:35 seb Exp $
+# $NetBSD: Makefile,v 1.2545 2017/10/10 07:27:40 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -1984,6 +1984,7 @@ SUBDIR+=	py-memory-profiler
 SUBDIR+=	py-mercurial
 SUBDIR+=	py-meson
 SUBDIR+=	py-minimock
+SUBDIR+=	py-mixbox
 SUBDIR+=	py-mock
 SUBDIR+=	py-modulegraph
 SUBDIR+=	py-more-itertools
@@ -1997,6 +1998,7 @@ SUBDIR+=	py-nosexcover
 SUBDIR+=	py-ode
 SUBDIR+=	py-olefile
 SUBDIR+=	py-open-vcdiff
+SUBDIR+=	py-ordered-set
 SUBDIR+=	py-packaging
 SUBDIR+=	py-pathlib
 SUBDIR+=	py-pathlib2
