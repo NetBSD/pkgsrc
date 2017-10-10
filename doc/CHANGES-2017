@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4383 2017/10/10 07:33:53 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4384 2017/10/10 07:44:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6234,3 +6234,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-mixbox version 1.0.2 [adam 2017-10-10]
 	Updated security/py-cybox to 2.1.0.14 [adam 2017-10-10]
 	Updated security/py-stix to 1.2.0.4 [adam 2017-10-10]
+	Updated devel/py-ZopeComponent to 4.4.1 [adam 2017-10-10]
+	Updated devel/py-cffi to 1.11.2 [adam 2017-10-10]
