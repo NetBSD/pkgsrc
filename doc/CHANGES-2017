@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4392 2017/10/10 19:49:04 tez Exp $
+$NetBSD: CHANGES-2017,v 1.4393 2017/10/10 21:24:06 tez Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6244,3 +6244,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/ocaml to 4.05.0nb1 [he 2017-10-10]
 	Updated finance/py-stripe to 1.66.0 [adam 2017-10-10]
 	Updated graphics/ImageMagick to 7.0.7.7 [tez 2017-10-10]
+	Updated security/mit-krb5 to 1.14.6 [tez 2017-10-10]
