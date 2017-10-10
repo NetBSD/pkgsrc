@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.87 2017/07/09 17:03:12 schmonz Exp $
+# $NetBSD: Darwin.mk,v 1.88 2017/10/10 13:57:23 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -145,6 +145,7 @@ _OPSYS_PREFER.openssl?=		pkgsrc	# builtin deprecated from 10.7 onwards
 
 # Remove common GNU ld arguments incompatible with the Darwin linker.
 BUILDLINK_TRANSFORM+=	rm:-Wl,-O1
+BUILDLINK_TRANSFORM+=	rm:-Wl,-O2
 BUILDLINK_TRANSFORM+=	rm:-Wl,-Bdynamic
 BUILDLINK_TRANSFORM+=	rm:-Wl,-Bsymbolic
 BUILDLINK_TRANSFORM+=	rm:-Wl,-export-dynamic
