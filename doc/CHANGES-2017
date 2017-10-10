@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4387 2017/10/10 08:19:11 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.4388 2017/10/10 10:07:08 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6239,3 +6239,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/unbound to 1.6.7 [he 2017-10-10]
 	Updated mail/mutt to 1.9.1nb1 [jperkin 2017-10-10]
 	Updated mail/neomutt to 20170912nb1 [jperkin 2017-10-10]
+	Updated textproc/ocaml-csv to 2.0 [jaapb 2017-10-10]
