@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4382 2017/10/09 22:41:23 brook Exp $
+$NetBSD: CHANGES-2017,v 1.4383 2017/10/10 07:33:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6230,3 +6230,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/py-weasyprint to 0.41 [kleink 2017-10-09]
 	Updated sysutils/liblognorm to 2.0.4 [fhajny 2017-10-09]
 	Added www/R-curl version 3.0 [brook 2017-10-09]
+	Added devel/py-ordered-set version 2.0.2 [adam 2017-10-10]
+	Added devel/py-mixbox version 1.0.2 [adam 2017-10-10]
+	Updated security/py-cybox to 2.1.0.14 [adam 2017-10-10]
+	Updated security/py-stix to 1.2.0.4 [adam 2017-10-10]
