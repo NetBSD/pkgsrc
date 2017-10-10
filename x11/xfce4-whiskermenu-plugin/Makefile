@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/09/06 09:03:06 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/10/10 13:58:00 jperkin Exp $
 
 DISTNAME=	xfce4-whiskermenu-plugin-2.1.2
 CATEGORIES=	x11
@@ -14,13 +14,6 @@ COMMENT=	Alternate application launcher for Xfce
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config msgfmt perl intltool
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-Wl,-O1
-BUILDLINK_TRANSFORM+=	rm:-Wl,--as-needed
-.endif
 
 .include "../../x11/xfce4-garcon/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
