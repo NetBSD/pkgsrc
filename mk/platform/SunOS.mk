@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.76 2017/06/21 08:20:10 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.77 2017/10/10 13:57:23 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -85,6 +85,8 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
 BUILDLINK_TRANSFORM+=	rm:-Wl,--no-as-needed
 BUILDLINK_TRANSFORM+=	rm:-Wl,--warn-common
 BUILDLINK_TRANSFORM+=	rm:-Wl,--warn-shared-textrel
+BUILDLINK_TRANSFORM+=	rm:-Wl,-O1
+BUILDLINK_TRANSFORM+=	rm:-Wl,-O2
 BUILDLINK_TRANSFORM+=	rm:-Wl,-export-dynamic
 BUILDLINK_TRANSFORM+=	rm:-export-dynamic
 
