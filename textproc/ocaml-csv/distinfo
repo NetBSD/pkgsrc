@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/07/11 12:35:54 jaapb Exp $
+$NetBSD: distinfo,v 1.5 2017/10/10 09:47:25 jaapb Exp $
 
-SHA1 (ocaml-csv-1.7.tar.gz) = dcde33b0c95cf9db59bdbf9453832c5ea6bd09d7
-RMD160 (ocaml-csv-1.7.tar.gz) = ecdd7fe3f32b7b0ca277a663b8453b16bebc24e7
-SHA512 (ocaml-csv-1.7.tar.gz) = cbe3d316e6f99318b3958bbfba3308225e709afb481a333d314adb66c20683171c23ac0565fc8d8e936b9dad13b9330b5208340b9fc671b4ccddf3a7d8b82b3e
-Size (ocaml-csv-1.7.tar.gz) = 45160 bytes
+SHA1 (ocaml-csv-2.0.tar.gz) = 822f20ec6a26dbcee7a86949cd5c70ac3946c4e2
+RMD160 (ocaml-csv-2.0.tar.gz) = cb66f007d7597fd2ce97f9cdabc5fb8a21d71119
+SHA512 (ocaml-csv-2.0.tar.gz) = ee3f9b1f26caf590601b4b44d34e364dd050ef86f90753522cdfe92047ea633f7ccfd16aae8a9b1c76b27a696c2d9125ffef13716f4cc3cc29a295913c9f3ac5
+Size (ocaml-csv-2.0.tar.gz) = 44660 bytes
