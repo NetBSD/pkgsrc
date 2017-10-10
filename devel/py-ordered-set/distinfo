@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/10/10 07:27:10 adam Exp $
+
+SHA1 (ordered-set-2.0.2.tar.gz) = ba4cdb482c7b9b9235acb186a8dc33e4af5289a4
+RMD160 (ordered-set-2.0.2.tar.gz) = 9551cfa1218948b67470649ef010bb4bbfcdd7d5
+SHA512 (ordered-set-2.0.2.tar.gz) = 47369faf275e99665a5d04f20465a868174164ebbe32f775433bd3ba9b5a6e0fe1c3562c891f21de7489ea6c248fe967663c45b26f4fd21ba2d058cd0102a093
+Size (ordered-set-2.0.2.tar.gz) = 4881 bytes
