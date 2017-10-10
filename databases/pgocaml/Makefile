@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2017/09/08 09:51:19 jaapb Exp $
+# $NetBSD: Makefile,v 1.8 2017/10/10 10:15:28 jaapb Exp $
 
 DISTNAME=	pgocaml-2.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1597/
 EXTRACT_SUFX=	.tgz
