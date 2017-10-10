@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.97 2017/09/13 08:56:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.98 2017/10/10 19:47:50 tez Exp $
 bin/Magick++-config
 bin/MagickCore-config
 bin/MagickWand-config
@@ -1272,5 +1272,6 @@ share/examples/ImageMagick/thresholds.xml
 share/examples/ImageMagick/type-apple.xml
 share/examples/ImageMagick/type-dejavu.xml
 share/examples/ImageMagick/type-ghostscript.xml
+share/examples/ImageMagick/type-urw-base35.xml
 share/examples/ImageMagick/type-windows.xml
 share/examples/ImageMagick/type.xml
