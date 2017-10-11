@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4414 2017/10/11 19:53:55 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4415 2017/10/11 20:35:16 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6268,3 +6268,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/libXres to 1.2.0 [wiz 2017-10-11]
 	Updated x11/libXfont2 to 2.0.2 [wiz 2017-10-11]
 	Updated emulators/qemu to 2.10.1 [adam 2017-10-11]
+	Added sysutils/u-boot-nanopi-neo2 version 2017.09 [jmcneill 2017-10-11]
