@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4405 2017/10/11 09:41:03 sborrill Exp $
+$NetBSD: CHANGES-2017,v 1.4406 2017/10/11 12:20:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6259,3 +6259,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/p5-Net-Libdnet6 to 0.27nb4 [wiz 2017-10-11]
 	Updated devel/dconf to 0.26.1 [wiz 2017-10-11]
 	Updated sysutils/salt to 2017.7.2 [sborrill 2017-10-11]
+	Updated mail/py-authres to 1.0.1 [adam 2017-10-11]
