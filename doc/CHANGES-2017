@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4399 2017/10/11 07:13:51 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4400 2017/10/11 07:15:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6251,3 +6251,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-HTTP-Server-Simple-Static to 0.13 [wiz 2017-10-11]
 	Updated net/syncthing to 0.14.39 [wiz 2017-10-11]
 	Updated devel/p5-Test-Simple to 1.302100 [wiz 2017-10-11]
+	Updated devel/p5-Term-Table to 0.011 [wiz 2017-10-11]
