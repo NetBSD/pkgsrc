@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2017/10/11 13:57:15 jaapb Exp $
+${OCAML_SITELIB}/ppx_enumerate/META
+${OCAML_SITELIB}/ppx_enumerate/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_enumerate/ppx_enumerate.a
+${OCAML_SITELIB}/ppx_enumerate/ppx_enumerate.cma
+${OCAML_SITELIB}/ppx_enumerate/ppx_enumerate.cmi
+${OCAML_SITELIB}/ppx_enumerate/ppx_enumerate.cmt
+${OCAML_SITELIB}/ppx_enumerate/ppx_enumerate.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_enumerate/ppx_enumerate.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_enumerate/ppx_enumerate.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_enumerate/ppx_enumerate.cmxs
+${OCAML_SITELIB}/ppx_enumerate/ppx_enumerate.mli
+share/doc/ppx_enumerate/CHANGES.md
+share/doc/ppx_enumerate/LICENSE.txt
+share/doc/ppx_enumerate/README.md
