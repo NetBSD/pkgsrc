@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2017/09/04 18:08:20 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/10/11 07:07:10 adam Exp $
 
-DISTNAME=	logilab-common-1.3.0
+DISTNAME=	logilab-common-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/logilab-common/}
@@ -18,12 +18,13 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.4.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
 .endif
 
+USE_LANGUAGES=	# none
+
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
-post-extract:
-	${MV} ${WRKSRC}/bin/logilab-pytest ${WRKSRC}/bin/logilab-pytest${PYVERSSUFFIX}
-
 post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${MV} logilab-pytest logilab-pytest${PYVERSSUFFIX} || ${TRUE}
 	${INSTALL_MAN} ${WRKSRC}/doc/logilab-pytest.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/logilab-pytest${PYVERSSUFFIX}.1
 
