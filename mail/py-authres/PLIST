@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/10/26 10:56:30 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/10/11 12:18:42 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/authres/__init__.py
 ${PYSITELIB}/authres/__init__.pyc
@@ -6,6 +6,9 @@ ${PYSITELIB}/authres/__init__.pyo
 ${PYSITELIB}/authres/__main__.py
 ${PYSITELIB}/authres/__main__.pyc
 ${PYSITELIB}/authres/__main__.pyo
+${PYSITELIB}/authres/arc.py
+${PYSITELIB}/authres/arc.pyc
+${PYSITELIB}/authres/arc.pyo
 ${PYSITELIB}/authres/core.py
 ${PYSITELIB}/authres/core.pyc
 ${PYSITELIB}/authres/core.pyo

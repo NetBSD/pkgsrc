@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/10/26 10:56:30 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2017/10/11 12:18:42 adam Exp $
 
-SHA1 (authres-0.800.tar.gz) = 57bffe1c2653c7f48776205cfd151dd67ca3594e
-RMD160 (authres-0.800.tar.gz) = 765bbc517e8a71b44a66d607ee132acd8a335c55
-SHA512 (authres-0.800.tar.gz) = d9e73309064e396c51ed55394ce505c21869d267922df55b6723cb6b2409282c7827d35d381877b5f08e037042e015d59246603d51219c829df7b81011499fe7
-Size (authres-0.800.tar.gz) = 19863 bytes
+SHA1 (authres-1.0.1.tar.gz) = d5e57faae39079d5f383f60f88930b4182bdcb79
+RMD160 (authres-1.0.1.tar.gz) = 691464b737ccd9c1af21a0466ba4136befe0f6ff
+SHA512 (authres-1.0.1.tar.gz) = 33efaf3d158c67d7f1a84187873fe0dc9520510bb9b63178399ccec6c7e9150f602bbb8624f1837c8386f6eb2c1c55509e7f2d06224c2cea23f34d45f432f6f3
+Size (authres-1.0.1.tar.gz) = 20721 bytes
