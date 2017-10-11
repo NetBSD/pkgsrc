@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2017/06/22 09:37:23 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/10/11 09:23:49 markd Exp $
 
 DISTNAME=	collection-plaingeneric
 PKGNAME=	texlive-${DISTNAME}-2017pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44177
+TEXLIVE_REV=	44986
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -82,6 +82,7 @@ DEPENDS+=	tex-present-[0-9]*:../../print/tex-present
 DEPENDS+=	tex-resumemac-[0-9]*:../../print/tex-resumemac
 # depend schemata
 # depend shade
+# depend simplekv
 # depend systeme
 # depend tabto-generic
 # depend termmenu
