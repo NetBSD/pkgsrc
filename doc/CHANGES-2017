@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4407 2017/10/11 13:52:22 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.4408 2017/10/11 13:57:39 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6261,3 +6261,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/salt to 2017.7.2 [sborrill 2017-10-11]
 	Updated mail/py-authres to 1.0.1 [adam 2017-10-11]
 	Added devel/ocaml-ppx_compare version 0.9.0 [jaapb 2017-10-11]
+	Added devel/ocaml-ppx_enumerate version 0.9.0 [jaapb 2017-10-11]
