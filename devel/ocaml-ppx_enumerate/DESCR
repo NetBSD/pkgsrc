@@ -1,0 +1,2 @@
+ppx_enumerate is a ppx rewriter which generates a definition for the list of all
+values of a type with (for a type which only has finitely many values).
