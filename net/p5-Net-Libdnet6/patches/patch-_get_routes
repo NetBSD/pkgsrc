@@ -1,0 +1,96 @@
+$NetBSD: patch-_get_routes,v 1.1 2017/10/11 07:34:51 wiz Exp $
+
+fix netstat -r parsing
+https://rt.cpan.org/Public/Bug/Display.html?id=114642
+
+--- lib/Net/Libdnet6.pm.orig	2016-05-24 19:26:45.000000000 +0200
++++ lib/Net/Libdnet6.pm	2016-05-24 19:27:28.000000000 +0200
+@@ -68,11 +68,11 @@
+    }
+ 
+    my $osname = {
+-      linux   => [ \&_get_routes_linux, ],
+-      freebsd => [ \&_get_routes_bsd,   ],
+-      openbsd => [ \&_get_routes_bsd,   ],
+-      netbsd  => [ \&_get_routes_bsd,   ],
+-      darwin  => [ \&_get_routes_bsd,   ],
++      linux   => [ \&_get_routes_linux,   ],
++      freebsd => [ \&_get_routes_freebsd, ],
++      openbsd => [ \&_get_routes_netbsd,  ],
++      netbsd  => [ \&_get_routes_netbsd,  ],
++      darwin  => [ \&_get_routes_freebsd, ],
+    };
+ 
+    *_get_routes = $osname->{$^O}->[0] || \&_get_routes_other;
+@@ -227,7 +227,7 @@
+    return;
+ }
+ 
+-sub _get_routes_bsd {
++sub _get_routes_freebsd {
+    return unless $_pathNetstat;
+ 
+    my $buf = `$_pathNetstat -rnf inet6 2> /dev/null`;
+@@ -294,6 +294,62 @@
+    return;
+ }
+ 
++sub _get_routes_netbsd {
++   return unless $_pathNetstat;
++
++   my $buf = `$_pathNetstat -rnf inet6 2> /dev/null`;
++   return unless $buf;
++
++   my @ifRoutes = ();
++   my %devIps;
++   my $lno;
++   for (split('\n', $buf)) {
++      $lno++; next unless $lno >= 5; # skip header
++      my @elts = split(/\s+/);
++
++      my $destination = $elts[0] || undef;
++      my $gateway = $elts[1] || undef;
++      my $flags = $elts[2] || undef;
++      my $if = $elts[6] || undef;
++
++      if (defined($destination)) {
++         $destination =~ s/%[a-z]+[0-9]+//;
++      }
++      if (defined($gateway)) {
++         $gateway =~ s/%[a-z]+[0-9]+//;
++      }
++
++      next if ! defined($destination);
++
++      if (Net::IPv6Addr::is_ipv6($destination)) {
++         my $route = {
++            destination => $destination,
++            interface   => $if,
++         };
++         if (Net::IPv6Addr::is_ipv6($gateway)) {
++            $route->{nextHop} = $gateway;
++         }
++         push @ifRoutes, $route;
++      }
++      elsif ($destination eq 'default') {
++         my $route = {
++            destination => $destination,
++            interface => $if,
++         };
++         if (Net::IPv6Addr::is_ipv6($gateway)) {
++            $route->{nextHop} = $gateway;
++         }
++         push @ifRoutes, $route;
++      }
++   }
++
++   if (@ifRoutes > 1) {
++      return \@ifRoutes;
++   }
++
++   return;
++}
++
+ sub _is_in_network {
+    my ($src, $net, $mask) = @_;
+    my $net1 = addr_net6($src.'/'.$mask);
