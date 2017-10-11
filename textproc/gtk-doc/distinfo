@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2015/11/04 01:59:30 agc Exp $
+$NetBSD: distinfo,v 1.24 2017/10/11 15:46:46 wiz Exp $
 
-SHA1 (gtk-doc-1.21.tar.xz) = 49b4fc9d4cf618c53f39f35f4cf2fc27b7b3dae4
-RMD160 (gtk-doc-1.21.tar.xz) = a746d8aeac6472f63912507f3a556121fe9fa21e
-SHA512 (gtk-doc-1.21.tar.xz) = caef8f6fd42f2961b6703af6d8b9f003b6e6ba2e9e955b94d9c0ecce8d267b7f4c2315d273dbdca1aff244e81867e675434b09a9410248e93101e86105f60f9d
-Size (gtk-doc-1.21.tar.xz) = 647484 bytes
+SHA1 (gtk-doc-1.26.tar.xz) = a34d5c4730c64c164d34dd3b16ed30f6e2451b1d
+RMD160 (gtk-doc-1.26.tar.xz) = 133a3d66d02ddf901dd4d514f15f7dff1b54a070
+SHA512 (gtk-doc-1.26.tar.xz) = 91f0e0e51d9f77794c0ab57bad5c2da242252f029ab2d4252f8740ccf8b18fed49a7f010f654f5ba60ebed74f7b65a5ef1f762c8661eebfcacfe15dc3bc3c52c
+Size (gtk-doc-1.26.tar.xz) = 706432 bytes
