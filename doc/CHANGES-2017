@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4409 2017/10/11 14:23:02 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.4410 2017/10/11 14:28:23 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6263,3 +6263,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/ocaml-ppx_compare version 0.9.0 [jaapb 2017-10-11]
 	Added devel/ocaml-ppx_enumerate version 0.9.0 [jaapb 2017-10-11]
 	Added devel/ocaml-ppx_hash version 0.9.0 [jaapb 2017-10-11]
+	Updated multimedia/adobe-flash-player to 27.0.0.159 [tsutsui 2017-10-11]
