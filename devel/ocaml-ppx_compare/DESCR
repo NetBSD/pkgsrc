@@ -1,0 +1,7 @@
+Generation of fast comparison functions from type expressions and definitions.
+
+Ppx_compare is a ppx rewriter that derives comparison functions from type
+representations. The scaffolded functions are usually much faster than ocaml's
+Pervasives.compare. Scaffolding functions also gives you more flexibility by
+allowing you to override them for a specific type and more safety by making
+sure that you only compare comparable values.
