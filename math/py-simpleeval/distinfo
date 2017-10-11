@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 23:33:43 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/10/11 07:10:47 adam Exp $
 
-SHA1 (simpleeval-0.8.2.tar.gz) = ee345de583c739aa77b71bb3be23e6a14c6e6e0c
-RMD160 (simpleeval-0.8.2.tar.gz) = dfb2a6aefcd75b3812d52d548ab8d0949deb48ba
-SHA512 (simpleeval-0.8.2.tar.gz) = 288d597c646ee0c70e3a6e04fd8db112b7b7a00ad53101114cc1724110c2f71d7b5f382f9052ebdb8dbc6b48c1391c870966b72df368701548d513d3053c1759
-Size (simpleeval-0.8.2.tar.gz) = 8282 bytes
+SHA1 (simpleeval-0.9.5.tar.gz) = cc32bf8af97dd209a6b99d61be89b12943f38c4b
+RMD160 (simpleeval-0.9.5.tar.gz) = e4ec3942ae9cdfb72fddef0d55c1e3215481da86
+SHA512 (simpleeval-0.9.5.tar.gz) = 27e50b3927fa45045cd9d40bcc1959d0d456aacb5c080b490d305cef1a5785889cb151512f2eeace6ffebffa69d155b3495f3e16dbaad244d16d7486a3a1708f
+Size (simpleeval-0.9.5.tar.gz) = 16893 bytes
