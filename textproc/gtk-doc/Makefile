@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2017/10/11 15:46:46 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2017/10/11 16:13:58 wiz Exp $
 
 DISTNAME=	gtk-doc-1.26
 CATEGORIES=	textproc gnome
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--with-xml-catalog=${XML_DEFAULT_CATALOG:Q}
 USE_TOOLS+=		gmake pkg-config:run msgfmt
 
 # one test failure that's not there with python-2.x as of 1.26
+# https://bugzilla.gnome.org/show_bug.cgi?id=786174
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
 
 SUBST_CLASSES+=		fix-pc
