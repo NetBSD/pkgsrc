@@ -1,0 +1,3 @@
+PyNaCl is a Python binding to libsodium, which is a fork of the Networking and
+Cryptography library. These libraries have a stated goal of improving
+usability, security and speed.
