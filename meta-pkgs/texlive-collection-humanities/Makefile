@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2017/08/06 12:24:19 markd Exp $
+# $NetBSD: Makefile,v 1.3 2017/10/12 10:03:16 markd Exp $
 
 DISTNAME=	collection-humanities
 PKGNAME=	texlive-${DISTNAME}-2017pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44655
+TEXLIVE_REV=	45363
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -59,6 +59,7 @@ DEPENDS+=	tex-qtree-[0-9]*:../../print/tex-qtree
 # depend sides
 # depend stage
 # depend textglos
+# depend theatre
 # depend thalie
 # depend tree-dvips
 # depend verse
