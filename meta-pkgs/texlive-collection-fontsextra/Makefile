@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2017/08/06 12:34:05 markd Exp $
+# $NetBSD: Makefile,v 1.11 2017/10/12 10:28:27 markd Exp $
 
 DISTNAME=	collection-fontsextra
 PKGNAME=	texlive-${DISTNAME}-2017pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44784
+TEXLIVE_REV=	45445
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -78,6 +78,7 @@ DEPENDS+=	tex-cmll-[0-9]*:../../fonts/tex-cmll
 DEPENDS+=	tex-cmpica-[0-9]*:../../fonts/tex-cmpica
 DEPENDS+=	tex-cmtiup-[0-9]*:../../fonts/tex-cmtiup
 # depend cochineal
+# depend coelacanth
 DEPENDS+=	tex-comfortaa-[0-9]*:../../fonts/tex-comfortaa
 DEPENDS+=	tex-comicneue-[0-9]*:../../fonts/tex-comicneue
 DEPENDS+=	tex-concmath-fonts-[0-9]*:../../fonts/tex-concmath-fonts
@@ -91,6 +92,7 @@ DEPENDS+=	tex-cyklop-[0-9]*:../../fonts/tex-cyklop
 DEPENDS+=	tex-dancers-[0-9]*:../../fonts/tex-dancers
 DEPENDS+=	tex-dantelogo-[0-9]*:../../fonts/tex-dantelogo
 DEPENDS+=	tex-dejavu-[0-9]*:../../fonts/tex-dejavu
+# depend dejavu-otf
 DEPENDS+=	tex-dice-[0-9]*:../../fonts/tex-dice
 DEPENDS+=	tex-dictsym-[0-9]*:../../fonts/tex-dictsym
 DEPENDS+=	tex-dingbat-[0-9]*:../../fonts/tex-dingbat
