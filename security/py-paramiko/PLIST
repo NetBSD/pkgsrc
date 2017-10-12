@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.13 2017/05/19 14:47:10 he Exp $
+@comment $NetBSD: PLIST,v 1.14 2017/10/12 12:42:26 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/paramiko/__init__.py
@@ -47,12 +46,18 @@ ${PYSITELIB}/paramiko/dsskey.pyo
 ${PYSITELIB}/paramiko/ecdsakey.py
 ${PYSITELIB}/paramiko/ecdsakey.pyc
 ${PYSITELIB}/paramiko/ecdsakey.pyo
+${PYSITELIB}/paramiko/ed25519key.py
+${PYSITELIB}/paramiko/ed25519key.pyc
+${PYSITELIB}/paramiko/ed25519key.pyo
 ${PYSITELIB}/paramiko/file.py
 ${PYSITELIB}/paramiko/file.pyc
 ${PYSITELIB}/paramiko/file.pyo
 ${PYSITELIB}/paramiko/hostkeys.py
 ${PYSITELIB}/paramiko/hostkeys.pyc
 ${PYSITELIB}/paramiko/hostkeys.pyo
+${PYSITELIB}/paramiko/kex_ecdh_nist.py
+${PYSITELIB}/paramiko/kex_ecdh_nist.pyc
+${PYSITELIB}/paramiko/kex_ecdh_nist.pyo
 ${PYSITELIB}/paramiko/kex_gex.py
 ${PYSITELIB}/paramiko/kex_gex.pyc
 ${PYSITELIB}/paramiko/kex_gex.pyo
@@ -86,9 +91,6 @@ ${PYSITELIB}/paramiko/proxy.pyo
 ${PYSITELIB}/paramiko/py3compat.py
 ${PYSITELIB}/paramiko/py3compat.pyc
 ${PYSITELIB}/paramiko/py3compat.pyo
-${PYSITELIB}/paramiko/resource.py
-${PYSITELIB}/paramiko/resource.pyc
-${PYSITELIB}/paramiko/resource.pyo
 ${PYSITELIB}/paramiko/rsakey.py
 ${PYSITELIB}/paramiko/rsakey.pyc
 ${PYSITELIB}/paramiko/rsakey.pyo
