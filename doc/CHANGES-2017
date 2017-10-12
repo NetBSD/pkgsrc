@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4417 2017/10/12 06:44:04 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4418 2017/10/12 08:29:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6273,3 +6273,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-test-xdist to 1.20.1 [adam 2017-10-12]
 	Updated time/py-arrow to 0.10.0 [adam 2017-10-12]
 	Updated textproc/py-tinycss2 to 0.6.1 [adam 2017-10-12]
+	Updated finance/py-stripe to 1.67.0 [adam 2017-10-12]
+	Updated security/py-cryptography_vectors to 2.1.1 [adam 2017-10-12]
+	Updated security/py-cryptography to 2.1.1 [adam 2017-10-12]
