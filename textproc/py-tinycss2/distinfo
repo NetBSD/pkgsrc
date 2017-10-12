@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/08/21 15:35:43 adam Exp $
+$NetBSD: distinfo,v 1.3 2017/10/12 06:43:44 adam Exp $
 
-SHA1 (tinycss2-0.6.0.tar.gz) = f47423981a4d5f7a3ef548447289e680a6ca1f53
-RMD160 (tinycss2-0.6.0.tar.gz) = dc15ee622de1d3e9df21cafc5ab65c02b5d0ee04
-SHA512 (tinycss2-0.6.0.tar.gz) = 667464a3ef8b0a1acc37a13a818db5c2a05550042cc0d8c0ab819b01ca17e2c1716b037d71a634ae68233361d926184301e3c0ab13158778ef8a0add4d525bf4
-Size (tinycss2-0.6.0.tar.gz) = 60645 bytes
+SHA1 (tinycss2-0.6.1.tar.gz) = 28fe6ae369ef6d4d2d2932595f06ecc940b5d62f
+RMD160 (tinycss2-0.6.1.tar.gz) = dce70f896677117bdaa4b8181cab6f09095b77fb
+SHA512 (tinycss2-0.6.1.tar.gz) = fa064bbb06d641a497a3c1eb35118bbf8ca8c4d32fbd3d8c64bb10d6cdab24387e77cd4c3277a957f23de2bd527a407836245f4387d7f880958858bd9cc7ab89
+Size (tinycss2-0.6.1.tar.gz) = 59548 bytes
