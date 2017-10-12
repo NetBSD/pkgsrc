@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2016/08/07 10:17:53 nros Exp $
+# $NetBSD: Makefile,v 1.5 2017/10/12 18:21:24 nros Exp $
 
 DISTNAME=	qore-asn1-module-0.0.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
 
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 PTHREAD_OPTS+=	require
 
 INSTALLATION_DIRS+=     share/doc/qore-asn1-module
