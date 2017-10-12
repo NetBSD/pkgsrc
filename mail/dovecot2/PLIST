@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2017/08/25 08:29:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.57 2017/10/12 10:34:28 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -271,6 +271,7 @@ include/dovecot/istream-header-filter.h
 include/dovecot/istream-jsonstr.h
 include/dovecot/istream-mail.h
 include/dovecot/istream-metawrap.h
+include/dovecot/istream-multiplex.h
 include/dovecot/istream-nonuls.h
 include/dovecot/istream-private.h
 include/dovecot/istream-qp.h
@@ -433,6 +434,7 @@ include/dovecot/ostream-failure-at.h
 include/dovecot/ostream-file-private.h
 include/dovecot/ostream-hash.h
 include/dovecot/ostream-metawrap.h
+include/dovecot/ostream-multiplex.h
 include/dovecot/ostream-null.h
 include/dovecot/ostream-private.h
 include/dovecot/ostream-rawlog.h
@@ -575,6 +577,7 @@ lib/dovecot/lib20_fts_plugin.la
 lib/dovecot/lib20_listescape_plugin.la
 lib/dovecot/lib20_mail_log_plugin.la
 lib/dovecot/lib20_mailbox_alias_plugin.la
+lib/dovecot/lib20_notify_status_plugin.la
 lib/dovecot/lib20_push_notification_plugin.la
 lib/dovecot/lib20_quota_clone_plugin.la
 lib/dovecot/lib20_replication_plugin.la
