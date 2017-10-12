@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2017/08/24 02:40:56 markd Exp $
+# $NetBSD: Makefile,v 1.4 2017/10/12 10:47:51 markd Exp $
 
 DISTNAME=	collection-mathscience
 PKGNAME=	texlive-${DISTNAME}-2017pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44906
+TEXLIVE_REV=	45511
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -17,6 +17,7 @@ DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-lat
 DEPENDS+=	tex-SIstyle-[0-9]*:../../print/tex-SIstyle
 DEPENDS+=	tex-SIunits-[0-9]*:../../print/tex-SIunits
 # depend alg
+# depend algobox
 DEPENDS+=	tex-algorithm2e-[0-9]*:../../print/tex-algorithm2e
 DEPENDS+=	tex-algorithmicx-[0-9]*:../../print/tex-algorithmicx
 DEPENDS+=	tex-algorithms-[0-9]*:../../print/tex-algorithms
@@ -62,6 +63,7 @@ DEPENDS+=	tex-concrete-[0-9]*:../../fonts/tex-concrete
 # depend delimseasy
 # depend diffcoeff
 # depend digiconfigs
+# depend dijkstra
 # depend drawmatrix
 # depend drawstack
 # depend dyntree
@@ -72,6 +74,7 @@ DEPENDS+=	tex-concrete-[0-9]*:../../fonts/tex-concrete
 # depend endiagram
 # depend engtlc
 # depend eqnarray
+# depend eqnnumwarn
 # depend extarrows
 # depend extpfeil
 # depend faktor
@@ -167,6 +170,7 @@ DEPENDS+=	tex-stmaryrd-[0-9]*:../../fonts/tex-stmaryrd
 # depend ulqda
 # depend unitsdef
 # depend venn
+# depend witharrows
 # depend xymtex
 # depend yhmath
 # depend youngtab
