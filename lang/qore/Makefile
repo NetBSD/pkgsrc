@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2017/07/30 19:27:08 nros Exp $
+# $NetBSD: Makefile,v 1.15 2017/10/12 18:17:46 nros Exp $
 
-DISTNAME=	qore-0.8.12.11
+DISTNAME=	qore-0.8.13
 CATEGORIES=	lang
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=   .tar.bz2
@@ -20,7 +20,8 @@ PTHREAD_OPTS+=	native
 FLEX_REQD=	2.5.31
 
 PKGCONFIG_OVERRIDE+=	qore.pc.in
-REPLACE_QORE=		bin/qget bin/rest bin/schema-reverse 
+REPLACE_QORE=		bin/qdbg bin/qdbg-remote bin/qdbg-server
+REPLACE_QORE+=		bin/qget bin/rest bin/schema-reverse
 REPLACE_QORE+=		bin/sfrest bin/sqlutil doxygen/qdx
 
 CONFIGURE_ARGS+=--with-libsuffix=""
