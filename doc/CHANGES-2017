@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4428 2017/10/12 19:24:36 nros Exp $
+$NetBSD: CHANGES-2017,v 1.4429 2017/10/12 23:30:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6289,3 +6289,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated editors/emacs21 to 21.4anb39 [tez 2017-10-12]
 	Updated sysutils/entr to 3.9 [leot 2017-10-12]
 	Updated lang/qore to 0.8.13 [nros 2017-10-12]
+	Updated x11/modular-xorg-server to 1.19.5 [wiz 2017-10-12]
