@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/09/02 14:26:56 kleink Exp $
+# $NetBSD: Makefile,v 1.4 2017/10/12 06:43:44 adam Exp $
 
-DISTNAME=	tinycss2-0.6.0
+DISTNAME=	tinycss2-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tinycss2/}
