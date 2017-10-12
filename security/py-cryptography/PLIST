@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2017/07/18 13:58:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2017/10/12 08:28:40 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -146,9 +146,6 @@ ${PYSITELIB}/cryptography/hazmat/primitives/hashes.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/hmac.py
 ${PYSITELIB}/cryptography/hazmat/primitives/hmac.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/hmac.pyo
-${PYSITELIB}/cryptography/hazmat/primitives/interfaces.py
-${PYSITELIB}/cryptography/hazmat/primitives/interfaces.pyc
-${PYSITELIB}/cryptography/hazmat/primitives/interfaces.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/__init__.py
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/__init__.pyo
