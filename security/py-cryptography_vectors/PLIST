@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/07/18 13:52:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/10/12 08:28:40 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -169,6 +169,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/RSA/oaep-custom/oaep-sha512-sha224.
 ${PYSITELIB}/cryptography_vectors/asymmetric/RSA/oaep-custom/oaep-sha512-sha256.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/RSA/oaep-custom/oaep-sha512-sha384.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/RSA/oaep-custom/oaep-sha512-sha512.txt
+${PYSITELIB}/cryptography_vectors/asymmetric/RSA/oaep-label.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/RSA/pkcs-1v2-1d2-vec/oaep-int.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/RSA/pkcs-1v2-1d2-vec/oaep-vect.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/RSA/pkcs-1v2-1d2-vec/pss-int.txt
@@ -420,6 +421,7 @@ ${PYSITELIB}/cryptography_vectors/ciphers/Camellia/camellia-256-ecb.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/Camellia/camellia-cbc.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/Camellia/camellia-cfb.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/Camellia/camellia-ofb.txt
+${PYSITELIB}/cryptography_vectors/ciphers/ChaCha20/rfc7539.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/ChaCha20Poly1305/boringssl.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/ChaCha20Poly1305/openssl.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/IDEA/idea-cbc.txt
@@ -2073,6 +2075,7 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/cp_user_notice_no_explicit_text.pe
 ${PYSITELIB}/cryptography_vectors/x509/custom/cp_user_notice_with_explicit_text.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/cp_user_notice_with_notice_reference.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_all_reasons.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/crl_delta_crl_indicator.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_dup_entry_ext.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_empty.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_ian_aia_aki.pem
@@ -2082,9 +2085,11 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/crl_unsupported_reason.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/dsa_selfsigned_ca.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ec_no_named_curve.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/extended_key_usage.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/freshestcrl.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ian_uri.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/inhibit_any_policy_5.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/inhibit_any_policy_negative.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/invalid_signature.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/invalid_version.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/nc_excluded.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/nc_invalid_ip_netmask.pem
@@ -2118,9 +2123,11 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/unsupported_extension_critical.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/unsupported_subject_name.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/unsupported_subject_public_key_info.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/utf8_common_name.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/valid_signature.pem
 ${PYSITELIB}/cryptography_vectors/x509/department-of-state-root.pem
 ${PYSITELIB}/cryptography_vectors/x509/e-trust.ru.der
 ${PYSITELIB}/cryptography_vectors/x509/ecdsa_root.pem
+${PYSITELIB}/cryptography_vectors/x509/ocsp/req-sha1.der
 ${PYSITELIB}/cryptography_vectors/x509/rapidssl_sha256_ca_g3.pem
 ${PYSITELIB}/cryptography_vectors/x509/requests/basic_constraints.pem
 ${PYSITELIB}/cryptography_vectors/x509/requests/dsa_sha1.der
@@ -2141,6 +2148,10 @@ ${PYSITELIB}/cryptography_vectors/x509/requests/unsupported_extension.pem
 ${PYSITELIB}/cryptography_vectors/x509/requests/unsupported_extension_critical.pem
 ${PYSITELIB}/cryptography_vectors/x509/san_edipartyname.der
 ${PYSITELIB}/cryptography_vectors/x509/san_x400address.der
+${PYSITELIB}/cryptography_vectors/x509/tls-feature-ocsp-staple.pem
+${PYSITELIB}/cryptography_vectors/x509/unique_identifier.pem
+${PYSITELIB}/cryptography_vectors/x509/utf8-dnsname.pem
 ${PYSITELIB}/cryptography_vectors/x509/v1_cert.pem
 ${PYSITELIB}/cryptography_vectors/x509/verisign_md2_root.pem
 ${PYSITELIB}/cryptography_vectors/x509/wildcard_san.pem
+${PYSITELIB}/cryptography_vectors/x509/wosign-bc-invalid.pem
