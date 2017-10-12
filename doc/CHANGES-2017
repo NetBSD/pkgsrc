@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4427 2017/10/12 17:56:59 leot Exp $
+$NetBSD: CHANGES-2017,v 1.4428 2017/10/12 19:24:36 nros Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6288,3 +6288,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added math/py-quadprog version 0.1.6 [minskim 2017-10-12]
 	Updated editors/emacs21 to 21.4anb39 [tez 2017-10-12]
 	Updated sysutils/entr to 3.9 [leot 2017-10-12]
+	Updated lang/qore to 0.8.13 [nros 2017-10-12]
