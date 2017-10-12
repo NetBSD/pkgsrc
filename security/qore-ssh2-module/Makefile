@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2016/08/07 11:44:43 nros Exp $
+# $NetBSD: Makefile,v 1.7 2017/10/12 18:21:24 nros Exp $
 
 DISTNAME=	qore-ssh2-module-1.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=   .tar.bz2
@@ -14,7 +15,7 @@ LICENSE=	gnu-lgpl-v2.1 OR mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_TOOLS+=	gmake pax
 PTHREAD_OPTS+=	native
 
