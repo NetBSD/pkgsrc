@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4416 2017/10/12 06:28:30 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4417 2017/10/12 06:44:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6271,3 +6271,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/u-boot-nanopi-neo2 version 2017.09 [jmcneill 2017-10-11]
 	Updated devel/py-async-timeout to 2.0.0 [adam 2017-10-12]
 	Updated devel/py-test-xdist to 1.20.1 [adam 2017-10-12]
+	Updated time/py-arrow to 0.10.0 [adam 2017-10-12]
+	Updated textproc/py-tinycss2 to 0.6.1 [adam 2017-10-12]
