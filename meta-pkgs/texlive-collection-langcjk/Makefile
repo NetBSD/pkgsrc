@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2017/08/06 12:36:26 markd Exp $
+# $NetBSD: Makefile,v 1.8 2017/10/12 09:51:53 markd Exp $
 
 DISTNAME=	collection-langcjk
 PKGNAME=	texlive-${DISTNAME}-2017pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44835
+TEXLIVE_REV=	45194
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -20,6 +20,7 @@ DEPENDS+=	tex-cjkpunct-[0-9]*:../../print/tex-cjkpunct
 DEPENDS+=	tex-cjkutils-[0-9]*:../../print/tex-cjkutils
 DEPENDS+=	tex-dnp-[0-9]*:../../print/tex-dnp
 DEPENDS+=	tex-garuda-c90-[0-9]*:../../fonts/tex-garuda-c90
+# depend fixjfm
 # depend jfmutil
 DEPENDS+=	tex-norasi-c90-[0-9]*:../../fonts/tex-norasi-c90
 # depend pxtatescale
