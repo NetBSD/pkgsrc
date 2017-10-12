@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4426 2017/10/12 17:34:40 tez Exp $
+$NetBSD: CHANGES-2017,v 1.4427 2017/10/12 17:56:59 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6287,3 +6287,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/ruby-rex-core version 0.1.12 [minskim 2017-10-12]
 	Added math/py-quadprog version 0.1.6 [minskim 2017-10-12]
 	Updated editors/emacs21 to 21.4anb39 [tez 2017-10-12]
+	Updated sysutils/entr to 3.9 [leot 2017-10-12]
