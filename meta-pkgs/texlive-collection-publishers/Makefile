@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2017/08/06 12:57:48 markd Exp $
+# $NetBSD: Makefile,v 1.12 2017/10/12 10:42:21 markd Exp $
 
 DISTNAME=	collection-publishers
 PKGNAME=	texlive-${DISTNAME}-2017pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44960
+TEXLIVE_REV=	45487
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -15,6 +15,7 @@ DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-lat
 DEPENDS+=	tex-IEEEconf-[0-9]*:../../print/tex-IEEEconf
 DEPENDS+=	tex-IEEEtran-[0-9]*:../../print/tex-IEEEtran
 # depend aastex
+# depend abnt
 DEPENDS+=	tex-abntex2-[0-9]*:../../print/tex-abntex2
 # depend acmart
 DEPENDS+=	tex-acmconf-[0-9]*:../../print/tex-acmconf
@@ -39,6 +40,7 @@ DEPENDS+=	tex-arsclassica-[0-9]*:../../print/tex-arsclassica
 # depend bangorexam
 # depend beamer-FUBerlin
 # depend beamer-verona
+# depend beilstein
 # depend bgteubner
 # depend br-lex
 # depend brandeis-dissertation
@@ -75,6 +77,8 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend gzt
 # depend h2020proposal
 # depend har2nat
+# depend hecthese
+# depend hithesis
 # depend hobete
 # depend hustthesis
 # depend icsv
@@ -90,7 +94,9 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend kdgdocs
 # depend kluwer
 # depend ksp-thesis
+# depend ku-template
 # depend langsci
+# depend limecv
 # depend lion-msc
 # depend lni
 # depend lps
