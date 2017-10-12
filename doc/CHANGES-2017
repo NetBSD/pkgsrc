@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4424 2017/10/12 16:19:45 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.4425 2017/10/12 16:38:00 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6285,3 +6285,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-pyaml to 17.10.0 [adam 2017-10-12]
 	Updated lang/nodejs to 8.7.0 [fhajny 2017-10-12]
 	Added security/ruby-rex-core version 0.1.12 [minskim 2017-10-12]
+	Added math/py-quadprog version 0.1.6 [minskim 2017-10-12]
