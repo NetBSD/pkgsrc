@@ -1,7 +1,10 @@
-# $NetBSD: Makefile.plugin,v 1.1 2016/07/18 15:03:05 fhajny Exp $
+# $NetBSD: Makefile.plugin,v 1.2 2017/10/12 10:34:28 adam Exp $
 #
+# used by mail/dovecot2-gssapi/Makefile
+# used by mail/dovecot2-ldap/Makefile
 # used by mail/dovecot2-mysql/Makefile
 # used by mail/dovecot2-pgsql/Makefile
+# used by mail/dovecot2-sqlite/Makefile
 
 .include "../../mail/dovecot2/Makefile.common"
 
