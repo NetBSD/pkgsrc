@@ -1,11 +1,11 @@
-$NetBSD: patch-deps_v8_src_base_platform_platform-posix.cc,v 1.3 2015/09/09 00:04:54 ryoon Exp $
+$NetBSD: patch-deps_v8_src_base_platform_platform-posix.cc,v 1.4 2017/10/12 14:12:15 fhajny Exp $
 
 Use sysconf(_SC_THREAD_STACK_MIN) instead of PTHREAD_STACK_MIN.
 Cast explicitly.
 
---- deps/v8/src/base/platform/platform-posix.cc.orig	2015-09-08 15:30:38.000000000 +0000
+--- deps/v8/src/base/platform/platform-posix.cc.orig	2017-10-11 12:35:30.000000000 +0000
 +++ deps/v8/src/base/platform/platform-posix.cc
-@@ -329,6 +329,8 @@ int OS::GetCurrentThreadId() {
+@@ -347,6 +347,8 @@ int OS::GetCurrentThreadId() {
    return static_cast<int>(syscall(__NR_gettid));
  #elif V8_OS_ANDROID
    return static_cast<int>(gettid());
@@ -13,8 +13,8 @@ Cast explicitly.
 +  return static_cast<int>(reinterpret_cast<intptr_t>(pthread_self()));
  #elif V8_OS_AIX
    return static_cast<int>(thread_self());
- #elif V8_OS_SOLARIS
-@@ -535,8 +537,13 @@ Thread::Thread(const Options& options)
+ #elif V8_OS_FUCHSIA
+@@ -533,8 +535,13 @@ Thread::Thread(const Options& options)
      : data_(new PlatformData),
        stack_size_(options.stack_size()),
        start_semaphore_(NULL) {
@@ -28,7 +28,7 @@ Cast explicitly.
    }
    set_name(options.name());
  }
-@@ -552,7 +559,7 @@ static void SetThreadName(const char* na
+@@ -550,7 +557,7 @@ static void SetThreadName(const char* na
    pthread_set_name_np(pthread_self(), name);
  #elif V8_OS_NETBSD
    STATIC_ASSERT(Thread::kMaxThreadNameLength <= PTHREAD_MAX_NAMELEN_NP);
