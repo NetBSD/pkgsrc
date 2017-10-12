@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2017/09/23 05:56:59 maya Exp $
+# $NetBSD: Makefile,v 1.11 2017/10/12 09:39:15 markd Exp $
 
 DISTNAME=	collection-binextra
 PKGNAME=	texlive-${DISTNAME}-2017pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44515
+TEXLIVE_REV=	45125
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -90,6 +90,8 @@ DEPENDS+=	tex-texdoc-[0-9]*:../../print/tex-texdoc
 # depend texosquery
 # texware entirely included in web2c
 # tie entirely included in web2c
+# depend tlcockpit
+# depend tlshell
 # depend tpic2pdftex
 # depend typeoutfileinfo
 # web entirely included in web2c
