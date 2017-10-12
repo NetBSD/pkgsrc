@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2016/10/09 21:41:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/10/12 18:21:24 nros Exp $
 
 DISTNAME=	qore-pgsql-module-2.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +15,7 @@ LICENSE=	gnu-lgpl-v2.1 OR mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_TOOLS+=	gmake pax
 PTHREAD_OPTS+=	native
 
