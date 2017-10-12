@@ -1,0 +1,13 @@
+$NetBSD: patch-src_ql__json.qpp,v 1.1 2017/10/12 18:38:48 nros Exp $
+Fix build using c++11
+--- src/ql_json.qpp.orig	2017-10-12 17:48:07.000000000 +0000
++++ src/ql_json.qpp
+@@ -474,7 +474,7 @@ static int do_json_value(QoreString* str
+    if (vtype == NT_FLOAT) {
+       double f = v.getAsFloat();
+       // check for nan, +/-inf and serialize as null
+-      if (isnan(f) || isinf(f))
++      if (std::isnan(f) || std::isinf(f))
+          str->concat("null");
+       else
+          str->sprintf("%.20g", f);
