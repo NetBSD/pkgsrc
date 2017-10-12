@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.345 2017/09/26 17:33:37 adam Exp $
+# $NetBSD: Makefile,v 1.346 2017/10/12 16:37:37 minskim Exp $
 
 COMMENT=	Mathematics
 
@@ -265,6 +265,7 @@ SUBDIR+=	py-pandas
 SUBDIR+=	py-pandas-datareader
 SUBDIR+=	py-patsy
 SUBDIR+=	py-pytables
+SUBDIR+=	py-quadprog
 SUBDIR+=	py-roman
 SUBDIR+=	py-rpy
 SUBDIR+=	py-scikit-learn
