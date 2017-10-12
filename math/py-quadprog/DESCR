@@ -1,0 +1,2 @@
+quadprog solves a strictly convex quadratic program using the
+Goldfarb/Idnani dual algorithm.
