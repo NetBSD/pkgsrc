@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4422 2017/10/12 12:54:01 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4423 2017/10/12 14:12:26 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6283,3 +6283,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/py-nacl version 1.1.2 [adam 2017-10-12]
 	Updated security/py-paramiko to 2.3.1 [adam 2017-10-12]
 	Updated textproc/py-pyaml to 17.10.0 [adam 2017-10-12]
+	Updated lang/nodejs to 8.7.0 [fhajny 2017-10-12]
