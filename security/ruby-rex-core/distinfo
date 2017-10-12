@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/10/12 16:18:13 minskim Exp $
+
+SHA1 (rex-core-0.1.12.gem) = 873237c8b44ae5673437cceb167fc75cb9d750e2
+RMD160 (rex-core-0.1.12.gem) = 9068dbac9fc37f60c857fea5e0d6224e9af73684
+SHA512 (rex-core-0.1.12.gem) = 87d2e04752ea019f327f5a3bf07149d3245d2dc709485033ac069f31bb592a4840cfd547042f5537b0a2c90988aff54a6067999e02f2dacc8e0f4029dd9a3537
+Size (rex-core-0.1.12.gem) = 30208 bytes
