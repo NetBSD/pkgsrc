@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2017/08/27 16:08:06 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.18 2017/10/13 16:36:03 prlw1 Exp $
 #
 # used by print/evince3/Makefile
 # would probably be used by print/evince3-nautilus/Makefile if that existed
@@ -26,7 +26,6 @@ CONFIGURE_ARGS+=	--disable-browser-plugin
 # Disable thumbnail cache
 CONFIGURE_ARGS+=	--disable-libgnome-desktop
 
-BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 # XXX fake for "configure" to allow build w/o a gs installed
@@ -39,6 +38,7 @@ pre-configure:
 .include "../../databases/shared-mime-info/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.36.0
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/glib2/buildtools.mk"
 BUILDLINK_API_DEPENDS.adwaita-icon-theme+=	adwaita-icon-theme>=2.17.1
 .include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
