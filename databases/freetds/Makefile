@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2017/09/17 17:31:03 taca Exp $
+# $NetBSD: Makefile,v 1.61 2017/10/13 17:18:42 taca Exp $
 
-DISTNAME=	freetds-1.00.58
+DISTNAME=	freetds-1.00.64
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.freetds.org/pub/freetds/stable/
 
@@ -35,9 +35,9 @@ INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS} ETC=${DESTDIR}${EGDIR}
 SUBST_CLASSES+=			visibility
 SUBST_STAGE.visibility+=	pre-configure
 SUBST_MESSAGE.visibility+=	Turn off visibility for GCC 4.2
-SUBST_FILES.visibility+=	src/tds/tds_checks.h
-SUBST_FILES.visibility+=	include/*.h
-SUBST_FILES.visibility+=	include/*/*.h
+SUBST_FILES.visibility+=	include/freetds/odbc.h \
+				include/freetds/popvis.h \
+				include/freetds/pushvis.h
 SUBST_SED.visibility+=		-e 's,!defined(__MINGW32__),!defined(__MINGW32__) \&\& !(__GNUC__ == 4 \&\& __GNUC_MINOR__ == 2),g'
 
 .include "options.mk"
