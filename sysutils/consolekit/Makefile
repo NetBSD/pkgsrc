@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2016/07/09 06:38:58 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2017/10/13 16:36:04 prlw1 Exp $
 
 CONSOLEKIT_VER=	1.0.2
 DISTNAME=	ConsoleKit2-1.0.2
@@ -61,8 +61,7 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/50-shutdown.rules	\
 	${DESTDIR}${RULESDIR}/50-shutdown.rules
 
-BUILD_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-
+.include "../../devel/glib2/buildtools.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/polkit/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
