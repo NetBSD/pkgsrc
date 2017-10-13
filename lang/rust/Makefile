@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/10/07 17:40:27 maya Exp $
+# $NetBSD: Makefile,v 1.14 2017/10/13 12:42:12 ryoon Exp $
 
 DISTNAME=	rustc-1.20.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -121,7 +121,7 @@ CARGO=			${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}/cargo/bin/cargo
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	post-configure
 SUBST_FILES.config+=	config.toml
-SUBST_VARS.config+=	RUSTC CARGO PREFIX PYTHONBIN
+SUBST_VARS.config+=	RUSTC CARGO PREFIX PYTHONBIN RUST_ARCH
 
 do-configure:
 	${CP} ${FILESDIR}/config.toml ${WRKSRC}/config.toml
