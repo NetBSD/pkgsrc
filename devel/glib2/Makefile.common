@@ -1,12 +1,13 @@
-# $NetBSD: Makefile.common,v 1.56 2017/08/16 20:21:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.57 2017/10/13 15:35:10 prlw1 Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
+# used by devel/py-glib2-tools/Makefile
 # used by sysutils/gio-fam/Makefile
 
 # When updating this package, please apply patch-ak to configure.in and
 # then run a matching version of autoconf to regen patch-aa.
-DISTNAME=	glib-2.52.3
+DISTNAME=	glib-2.54.1
 PKGNAME=	${DISTNAME:S/glib/glib2/}
 CATEGORIES=	# empty; redefined in Makefile
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glib/${PKGVERSION_NOREV:R}/}
@@ -15,7 +16,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://developer.gnome.org/glib/
 COMMENT=	# empty; redefined in Makefile
-LICENSE=	gnu-lgpl-v2
+LICENSE=	gnu-lgpl-v2.1
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
