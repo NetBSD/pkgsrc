@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4442 2017/10/13 16:00:19 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.4443 2017/10/13 16:08:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6310,3 +6310,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/glib2 to 2.54.1 [prlw1 2017-10-13]
 	Added devel/py-glib2-tools version 2.54.1 [prlw1 2017-10-13]
 	Added security/ruby-rex-arch version 0.1.11 [minskim 2017-10-13]
+	Updated www/contao44 to 4.4.7 [taca 2017-10-13]
