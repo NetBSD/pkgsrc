@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.80 2017/05/12 08:38:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.81 2017/10/13 09:35:19 jperkin Exp $
 
-DISTNAME=	zsh-5.3.1
+DISTNAME=	zsh-5.4.2
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zsh/}
 EXTRACT_SUFX=	.tar.xz
@@ -46,6 +46,7 @@ PLIST_VARS+=	xattr
 .if exists(/usr/include/sys/xattr.h)
 PLIST.xattr=	yes
 .endif
+PRINT_PLIST_AWK+=	{if ($$0 ~ /attr.so/) {$$0 = "$${PLIST.xattr}" $$0;}}
 
 MAKE_JOBS_SAFE=		no
 INSTALL_TARGET=		install install.info
