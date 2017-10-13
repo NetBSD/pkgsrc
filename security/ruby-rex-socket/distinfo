@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/10/13 18:22:46 minskim Exp $
+
+SHA1 (rex-socket-0.1.8.gem) = 8582e7b496c64102891ba5da4babb1309de6a2b5
+RMD160 (rex-socket-0.1.8.gem) = 47567320b6c0861fc4cea8c0a34fcee77239cfb9
+SHA512 (rex-socket-0.1.8.gem) = 435ada39f7fe0b5a5d41f7f69a8f69336a212c0d17b8f71403f508e626e23475b78e62c4d7c5b6c27e8be13f3754e1445e00c675cd3d0d69b9198503cee27c8a
+Size (rex-socket-0.1.8.gem) = 40448 bytes
