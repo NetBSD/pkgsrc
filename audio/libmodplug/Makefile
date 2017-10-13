@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.15 2014/10/09 14:05:56 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/10/13 16:00:59 adam Exp $
 
-DISTNAME=		libmodplug-0.8.8.5
-CATEGORIES=		audio
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=modplug-xmms/}
+DISTNAME=	libmodplug-0.8.9.0
+CATEGORIES=	audio
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=modplug-xmms/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://modplug-xmms.sourceforge.net/
-COMMENT=		Library for decoding mod-like music formats
-LICENSE=		public-domain
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://modplug-xmms.sourceforge.net/
+COMMENT=	Library for decoding mod-like music formats
+LICENSE=	public-domain
 
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
-
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	libmodplug.pc.in
 
 .include "../../mk/oss.buildlink3.mk"
