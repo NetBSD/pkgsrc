@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/09/28 13:46:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/10/13 16:08:28 taca Exp $
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/README.md
 ${CT_WEBDIR}/assets/ace/composer.json
@@ -503,7 +503,6 @@ ${CT_WEBDIR}/assets/tinymce4/js/skins/contao/img/anchor.gif
 ${CT_WEBDIR}/assets/tinymce4/js/skins/contao/img/loader.gif
 ${CT_WEBDIR}/assets/tinymce4/js/skins/contao/img/object.gif
 ${CT_WEBDIR}/assets/tinymce4/js/skins/contao/img/trans.gif
-${CT_WEBDIR}/assets/tinymce4/js/skins/contao/skin.ie7.min.css
 ${CT_WEBDIR}/assets/tinymce4/js/skins/contao/skin.min.css
 ${CT_WEBDIR}/assets/tinymce4/js/skins/lightgray/content.inline.min.css
 ${CT_WEBDIR}/assets/tinymce4/js/skins/lightgray/content.min.css
@@ -2849,6 +2848,7 @@ ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Database/Version400Update.php
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Database/Version410Update.php
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Database/Version430Update.php
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Database/Version440Update.php
+${CT_WEBDIR}/vendor/contao/installation-bundle/src/Database/Version447Update.php
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/DependencyInjection/ContaoInstallationExtension.php
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Event/ContaoInstallationEvents.php
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Event/InitializeApplicationEvent.php
@@ -9094,6 +9094,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Workflow/EventListener
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Workflow/Exception/ExceptionInterface.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Workflow/Exception/InvalidArgumentException.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Workflow/Exception/InvalidDefinitionException.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Workflow/Exception/InvalidTokenConfigurationException.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Workflow/Exception/LogicException.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Workflow/LICENSE
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Workflow/Marking.php
