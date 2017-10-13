@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/06/23 17:06:33 youri Exp $
+# $NetBSD: Makefile,v 1.7 2017/10/13 16:36:04 prlw1 Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
@@ -8,12 +8,11 @@ MASTER_SITES+=	http://pub.mate-desktop.org/releases/${VERSION:R}/
 
 COMMENT=	File manager for the MATE desktop
 
-BUILD_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-
 PKGCONFIG_OVERRIDE+=	libcaja-extension/libcaja-extension.pc.in
 
 .include "options.mk"
 
+.include "../../devel/glib2/buildtools.mk"
 .include "../../devel/glib2/schemas.mk"
 
 .include "../../x11/mate-desktop/buildlink3.mk"
