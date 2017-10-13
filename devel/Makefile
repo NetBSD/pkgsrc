@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2547 2017/10/11 13:58:15 jaapb Exp $
+# $NetBSD: Makefile,v 1.2548 2017/10/13 15:44:29 prlw1 Exp $
 #
 
 COMMENT=	Development utilities
@@ -1926,6 +1926,7 @@ SUBDIR+=	py-game
 SUBDIR+=	py-generate
 SUBDIR+=	py-gflags
 SUBDIR+=	py-gitinspector
+SUBDIR+=	py-glib2-tools
 SUBDIR+=	py-gobject
 SUBDIR+=	py-gobject-shared
 SUBDIR+=	py-gobject3

@@ -1,0 +1,2 @@
+This package provides glib2's python dependent tools: gdbus-codegen,
+glib-mkenums and glib-genmarshal.
