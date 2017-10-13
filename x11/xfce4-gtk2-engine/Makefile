@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2017/06/20 14:59:54 youri Exp $
+# $NetBSD: Makefile,v 1.40 2017/10/13 23:40:57 prlw1 Exp $
 
 PKGREVISION= 4
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -16,5 +16,6 @@ MAKE_DIRS+=	${PREFIX}/share/themes/Xfce
 
 CONFIGURE_ARGS+=--enable-gtk3
 
+.include "../../devel/glib/buildtools.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
