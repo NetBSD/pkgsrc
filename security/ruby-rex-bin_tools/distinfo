@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/10/13 18:11:49 minskim Exp $
+
+SHA1 (rex-bin_tools-0.1.4.gem) = 8309919351495be7791ef87cda9f872bfeec218a
+RMD160 (rex-bin_tools-0.1.4.gem) = 047fbe5083ef2c037590c27cca9369775a15070c
+SHA512 (rex-bin_tools-0.1.4.gem) = d2d595c0cfac254a7b66e072c9cf8bf264555532dbc8038aaf59bd92d134d0e797a7e9aa6cfbf518889ecebbeb93f32636095b571be62214fcf85bcadefcb982
+Size (rex-bin_tools-0.1.4.gem) = 81920 bytes

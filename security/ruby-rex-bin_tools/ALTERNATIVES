@@ -1,0 +1,4 @@
+bin/msfbinscan @PREFIX@/bin/msfbinscan@RUBY_SUFFIX@
+bin/msfelfscan @PREFIX@/bin/msfelfscan@RUBY_SUFFIX@
+bin/msfmachscan @PREFIX@/bin/msfmachscan@RUBY_SUFFIX@
+bin/msfpescan @PREFIX@/bin/msfpescan@RUBY_SUFFIX@
