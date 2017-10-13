@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2017/09/19 16:36:07 taca Exp $
+# $NetBSD: Makefile,v 1.28 2017/10/13 16:52:46 taca Exp $
 
 DISTNAME=	jekyll-3.5.2
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -21,6 +22,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rouge>=1.7<2:../../www/ruby-rouge
 DEPENDS+=	${RUBY_PKGPREFIX}-safe_yaml>=1.0<2:../../textproc/ruby-safe_yaml
 DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-minima>=2.1.1:../../www/ruby-jekyll-minima
 DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-feed>=0.9.2:../../www/ruby-jekyll-feed
+DEPENDS+=       ${RUBY_PKGPREFIX}-bundler>=1.7:../../misc/ruby-bundler
 
 RUBYGEM_OPTIONS+=	--format-executable
 
