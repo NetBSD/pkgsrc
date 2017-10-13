@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4454 2017/10/13 17:59:59 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.4455 2017/10/13 18:13:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6330,3 +6330,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/ruby-rex-zip version 0.1.3 [minskim 2017-10-13]
 	Added security/ruby-rex-registry version 0.1.3 [minskim 2017-10-13]
 	Added security/ruby-rex-nop version 0.1.1 [minskim 2017-10-13]
+	Added security/ruby-rex-bin_tools version 0.1.4 [minskim 2017-10-13]
