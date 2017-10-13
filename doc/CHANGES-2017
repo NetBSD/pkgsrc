@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4435 2017/10/13 10:45:57 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4436 2017/10/13 14:19:14 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6303,3 +6303,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated shells/zsh to 5.4.2 [jperkin 2017-10-13]
 	Updated graphics/py-matplotlib to 2.1.0 [adam 2017-10-13]
 	Updated devel/py-distorm3 to 3.3.4 [adam 2017-10-13]
+	Updated databases/py-peewee to 2.10.2 [fhajny 2017-10-13]
