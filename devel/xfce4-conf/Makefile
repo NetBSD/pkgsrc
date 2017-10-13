@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2017/06/20 16:11:05 youri Exp $
+# $NetBSD: Makefile,v 1.10 2017/10/13 16:36:03 prlw1 Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 VERSION=	4.12.1
+PKGREVISION=	1
 DISTNAME=	xfconf-${VERSION}
 PKGNAME=	xfce4-conf-${VERSION}
 CATEGORIES=	devel
@@ -20,8 +21,7 @@ MAKE_DIRS+=	${PREFIX}/include/xfce4
 BUILDLINK_API_DEPENDS.dbus+=		dbus>=1.0.0
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.72
 
-DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-
+.include "../../devel/glib2/buildtools.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/libxfce4util/buildlink3.mk"
