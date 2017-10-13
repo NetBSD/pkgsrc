@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4443 2017/10/13 16:08:55 taca Exp $
+$NetBSD: CHANGES-2017,v 1.4444 2017/10/13 16:10:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6311,3 +6311,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-glib2-tools version 2.54.1 [prlw1 2017-10-13]
 	Added security/ruby-rex-arch version 0.1.11 [minskim 2017-10-13]
 	Updated www/contao44 to 4.4.7 [taca 2017-10-13]
+	Updated audio/libmodplug to 0.8.9.0 [adam 2017-10-13]
+	Updated games/rocksndiamonds to 4.0.1.0 [adam 2017-10-13]
