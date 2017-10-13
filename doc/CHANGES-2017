@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4447 2017/10/13 16:53:08 taca Exp $
+$NetBSD: CHANGES-2017,v 1.4448 2017/10/13 17:08:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6316,3 +6316,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/ruby-rex-java version 0.1.5 [minskim 2017-10-13]
 	Added security/ruby-rex-ole version 0.1.6 [minskim 2017-10-13]
 	Updated www/ruby-jekyll to 3.5.2nb1 [taca 2017-10-13]
+	Added security/ruby-rex-mime version 0.1.5 [minskim 2017-10-13]
