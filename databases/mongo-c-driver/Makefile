@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2017/09/26 14:18:21 fhajny Exp $
+# $NetBSD: Makefile,v 1.28 2017/10/13 14:27:54 fhajny Exp $
 
-DISTNAME=	mongo-c-driver-1.8.0
+DISTNAME=	mongo-c-driver-1.8.1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 
@@ -25,6 +25,8 @@ USE_TOOLS+=	gmake pkg-config
 
 CONFIGURE_ARGS+=	--enable-man-pages=yes
 CONFIGURE_ARGS+=	--with-libbson=system
+CONFIGURE_ARGS+=	--with-snappy=system
+CONFIGURE_ARGS+=	--with-zlib=system
 CONFIGURE_ENV+=		SPHINX_BUILD=${PREFIX}/bin/sphinx-build${PYVERSSUFFIX}
 
 PKGCONFIG_OVERRIDE+=	src/libmongoc-1.0.pc.in
@@ -43,5 +45,6 @@ PYTHON_FOR_BUILD_ONLY=	yes
 # libbson and mongo-c-driver released are tied
 BUILDLINK_API_DEPENDS.libbson+=	libbson>=${PKGVERSION_NOREV}
 .include "../../devel/libbson/buildlink3.mk"
+.include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
