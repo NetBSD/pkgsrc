@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4431 2017/10/13 06:59:15 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4432 2017/10/13 07:12:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6295,3 +6295,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated emulators/fuse-emulator-utils to 1.3.5 [adam 2017-10-13]
 	Updated mail/dovecot2-pigeonhole to 0.4.21 [adam 2017-10-13]
 	Updated textproc/py-biplist to 1.0.2 [adam 2017-10-13]
+	Updated www/py-django-countries to 5.0 [adam 2017-10-13]
+	Updated devel/py-pkgconfig to 1.2.2 [adam 2017-10-13]
