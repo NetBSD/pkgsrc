@@ -1,10 +1,10 @@
-$NetBSD: patch-setup.py,v 1.2 2017/05/29 20:59:21 adam Exp $
+$NetBSD: patch-setup.py,v 1.3 2017/10/13 09:50:35 adam Exp $
 
 Build only selected packages (see Makefile.common).
 
---- setup.py.orig	2017-05-29 17:27:20.000000000 +0000
+--- setup.py.orig	2017-10-07 19:25:46.000000000 +0000
 +++ setup.py
-@@ -100,12 +100,6 @@ mpl_packages = [
+@@ -99,12 +99,6 @@ mpl_packages = [
      setupext.BackendMacOSX(),
      setupext.BackendQt5(),
      setupext.BackendQt4(),
@@ -17,12 +17,12 @@ Build only selected packages (see Makefile.common).
      setupext.BackendAgg(),
      setupext.BackendCairo(),
      setupext.Windowing(),
-@@ -175,7 +175,7 @@ if __name__ == '__main__':
+@@ -180,7 +174,7 @@ if __name__ == '__main__':
  
-     required_failed = []
-     good_packages = []
--    for package in mpl_packages:
-+    for package in @MPL_PACKAGES@:
-         if isinstance(package, str):
-             print_raw('')
-             print_raw(package.upper())
+         required_failed = []
+         good_packages = []
+-        for package in mpl_packages:
++        for package in @MPL_PACKAGES@:
+             if isinstance(package, str):
+                 print_raw('')
+                 print_raw(package.upper())
