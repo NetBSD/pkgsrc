@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2017/10/13 15:44:29 prlw1 Exp $
+
+SHA1 (glib-2.54.1.tar.xz) = 3be679369c7134e05b188285154b00940370b109
+RMD160 (glib-2.54.1.tar.xz) = c14a2ab435e47d706a88d4d1efb1008216107abc
+SHA512 (glib-2.54.1.tar.xz) = 2971feede03540f5cd2b4bd60b0c3fcbd5ad95ba96d07f6e6d3f4a6b90c31555e52f3480b51976574642fd5ab99dd557061ee5db1a1855fc601297cd74a8f1a8
+Size (glib-2.54.1.tar.xz) = 7829104 bytes
+SHA1 (patch-gio_gdbus-2.0_codegen_gdbus-codegen.in) = ccbb10335fb477e347993444d68d5e88d9e93050
+SHA1 (patch-gobject_glib-genmarshal.in) = f21ca416d4eb4ad5a8ce3ffa053f8bcd2be8953a
+SHA1 (patch-gobject_glib-mkenums.in) = 7c58333ec4946ecb26e709db0be51b7f07035db9
