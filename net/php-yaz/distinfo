@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2016/08/13 17:32:48 taca Exp $
+$NetBSD: distinfo,v 1.8 2017/10/13 17:17:10 taca Exp $
 
-SHA1 (php-yaz/yaz-1.2.1.tgz) = 14bff15680012d15c0d5b20ec384931b3340a438
-RMD160 (php-yaz/yaz-1.2.1.tgz) = 8157d3ec0b6580a95eaad7da058a8da154682bac
-SHA512 (php-yaz/yaz-1.2.1.tgz) = 92525e485e5499f8b4ef8b1e9b21a3fa7004206f545a3a5b300ee11e3c5ff10d335645d5c42fe3b7523a55fe58ffb0a671c67dfc627bc4bd36aeab63dfe42bf1
-Size (php-yaz/yaz-1.2.1.tgz) = 20147 bytes
+SHA1 (php-yaz/yaz-1.2.2.tgz) = 2dd894690eda5734a9c9eaaa4fbed7275223cf02
+RMD160 (php-yaz/yaz-1.2.2.tgz) = a9702ad81085f955af793e1c9e246d30537cf3a1
+SHA512 (php-yaz/yaz-1.2.2.tgz) = cb90d4ac9fcdadcb9215f7b795657dd3fdff69f2b2d399beb2afa6327a0be733d2a563863e2ca861182eadcc2faccfbe64e72d108662afc68d393a6bc5cc4bb2
+Size (php-yaz/yaz-1.2.2.tgz) = 20131 bytes
