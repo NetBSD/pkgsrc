@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.645 2017/10/13 18:12:59 minskim Exp $
+# $NetBSD: Makefile,v 1.646 2017/10/13 18:23:32 minskim Exp $
 #
 
 COMMENT=	Security tools
@@ -485,6 +485,7 @@ SUBDIR+=	ruby-rex-ole
 SUBDIR+=	ruby-rex-powershell
 SUBDIR+=	ruby-rex-random_identifier
 SUBDIR+=	ruby-rex-registry
+SUBDIR+=	ruby-rex-socket
 SUBDIR+=	ruby-rex-struct2
 SUBDIR+=	ruby-rex-text
 SUBDIR+=	ruby-rex-zip
