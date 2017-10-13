@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4458 2017/10/13 18:40:03 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.4459 2017/10/13 18:52:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6334,3 +6334,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/ruby-rex-socket version 0.1.8 [minskim 2017-10-13]
 	Added security/ruby-rex-sslscan version 0.1.5 [minskim 2017-10-13]
 	Added security/ruby-rex-rop_builder version 0.1.3 [minskim 2017-10-13]
+	Added security/ruby-rex-encoder version 0.1.4 [minskim 2017-10-13]
