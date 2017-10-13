@@ -1,15 +1,13 @@
-$NetBSD: patch-ak,v 1.19 2016/02/23 11:27:55 wiz Exp $
+$NetBSD: patch-ak,v 1.20 2017/10/13 15:35:10 prlw1 Exp $
 
 - solaris sun studio check and fix
 - use pkgsrc libtool
 - broken dlopen(NULL,0) detection and workaround
   http://bugzilla.gnome.org/show_bug.cgi?id=140329
-- remove unnecessary executions of libtool from configure
-  https://bugzilla.gnome.org/show_bug.cgi?id=736710
 
---- configure.ac.orig	2015-05-13 02:45:52.000000000 +0000
+--- configure.ac.orig	2017-06-22 13:15:19.000000000 +0000
 +++ configure.ac
-@@ -750,7 +750,7 @@ int main (void)
+@@ -687,7 +687,7 @@ int main (void)
  AC_MSG_RESULT($g_have_gnuc_visibility)
  AM_CONDITIONAL(HAVE_GNUC_VISIBILITY, [test x$g_have_gnuc_visibility = xyes])
  
@@ -18,7 +16,7 @@ $NetBSD: patch-ak,v 1.19 2016/02/23 11:27:55 wiz Exp $
  AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#if defined(__SUNPRO_C) || (__SUNPRO_C >= 0x550)
  #else
  # include "error: this is not Sun Studio."
-@@ -1102,10 +1102,22 @@ AC_CHECK_TYPE([struct ip_mreqn], [
+@@ -1040,10 +1040,22 @@ AC_CHECK_TYPE([struct ip_mreqn], [
  
  case $host in
    *-*-solaris* )
@@ -45,13 +43,7 @@ $NetBSD: patch-ak,v 1.19 2016/02/23 11:27:55 wiz Exp $
  esac
  
  dnl
-@@ -1440,11 +1452,12 @@ if test x"$glib_native_win32" = xyes; th
-   G_MODULE_LDFLAGS=
- else
-   export SED
--  G_MODULE_LDFLAGS=`(./libtool --config; echo eval echo \\$export_dynamic_flag_spec) | sh`
-+  eval G_MODULE_LDFLAGS=$export_dynamic_flag_spec
- fi
+@@ -1383,6 +1395,7 @@ fi
  dnl G_MODULE_IMPL= don't reset, so cmd-line can override
  G_MODULE_NEED_USCORE=0
  G_MODULE_BROKEN_RTLD_GLOBAL=0
@@ -59,7 +51,7 @@ $NetBSD: patch-ak,v 1.19 2016/02/23 11:27:55 wiz Exp $
  G_MODULE_HAVE_DLERROR=0
  dnl *** force native WIN32 shared lib loader 
  if test -z "$G_MODULE_IMPL"; then
-@@ -1489,13 +1502,12 @@ AS_IF([ test "$G_MODULE_IMPL" = "G_MODUL
+@@ -1427,9 +1440,9 @@ AS_IF([ test "$G_MODULE_IMPL" = "G_MODUL
  	LDFLAGS="$LDFLAGS $G_MODULE_LDFLAGS"
  dnl *** check for OSF1/5.0 RTLD_GLOBAL brokenness
  	echo "void glib_plugin_test(void) { }" > plugin.c
@@ -71,11 +63,7 @@ $NetBSD: patch-ak,v 1.19 2016/02/23 11:27:55 wiz Exp $
  		${LDFLAGS} -module -o plugin.la -export-dynamic \
  		-shrext ".o" -avoid-version plugin.lo \
  		-rpath /dont/care >/dev/null 2>&1
--	eval `./libtool --config | grep ^objdir`
- 	AC_CACHE_CHECK([for RTLD_GLOBAL brokenness],
- 		glib_cv_rtldglobal_broken,[
- 		AC_TRY_RUN([
-@@ -1558,6 +1570,38 @@ dnl *** check for having dlerror()
+@@ -1496,6 +1509,38 @@ dnl *** check for having dlerror()
  		[G_MODULE_HAVE_DLERROR=0])
  	LIBS="$LIBS_orig"
  ])
@@ -114,16 +102,7 @@ $NetBSD: patch-ak,v 1.19 2016/02/23 11:27:55 wiz Exp $
  dnl *** done, have we got an implementation?
  if test -z "$G_MODULE_IMPL"; then
  	G_MODULE_IMPL=0
-@@ -1568,8 +1612,6 @@ fi
- 
- AC_MSG_CHECKING(for the suffix of module shared libraries)
- export SED
--shrext_cmds=`./libtool --config | grep '^shrext_cmds='`
--eval $shrext_cmds
- module=yes eval std_shrext=$shrext_cmds
- # chop the initial dot
- glib_gmodule_suffix=`echo $std_shrext | sed 's/^\.//'`
-@@ -1587,6 +1629,7 @@ AC_SUBST(G_MODULE_PLUGIN_LIBS)
+@@ -1525,6 +1570,7 @@ AC_SUBST(G_MODULE_PLUGIN_LIBS)
  AC_SUBST(G_MODULE_LDFLAGS)
  AC_SUBST(G_MODULE_HAVE_DLERROR)
  AC_SUBST(G_MODULE_BROKEN_RTLD_GLOBAL)
@@ -131,7 +110,7 @@ $NetBSD: patch-ak,v 1.19 2016/02/23 11:27:55 wiz Exp $
  AC_SUBST(G_MODULE_NEED_USCORE)
  AC_SUBST(GLIB_DEBUG_FLAGS)
  
-@@ -1963,22 +2006,8 @@ AS_IF([ test x"$have_threads" = xposix],
+@@ -1919,22 +1965,8 @@ AS_IF([ test x"$have_threads" = xposix],
        G_THREAD_LIBS="-lpthread -lthread"
        ;;
      *)
