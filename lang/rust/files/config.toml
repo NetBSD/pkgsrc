@@ -17,6 +17,6 @@ codegen-tests = false
 src-tarball = false
 [llvm]
 static-libstdcpp = false
-ninja = true
+ninja = false
 [target.x86_64-unknown-netbsd]
 llvm-config = "@PREFIX@/bin/llvm-config"
