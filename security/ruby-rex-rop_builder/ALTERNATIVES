@@ -1,0 +1,1 @@
+bin/msfrop @PREFIX@/bin/msfrop@RUBY_SUFFIX@
