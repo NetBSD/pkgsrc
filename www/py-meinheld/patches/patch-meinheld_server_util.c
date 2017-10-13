@@ -1,4 +1,4 @@
-$NetBSD: patch-meinheld_server_util.c,v 1.1 2017/09/30 12:51:57 wiz Exp $
+$NetBSD: patch-meinheld_server_util.c,v 1.2 2017/10/13 14:51:16 jperkin Exp $
 
 Add NetBSD support.
 
@@ -13,7 +13,12 @@ Add NetBSD support.
      struct accept_filter_arg afa;
      bzero(&afa, sizeof(afa));
      strcpy(afa.af_name, "httpready");
-@@ -63,6 +63,9 @@ enable_cork(client_t *client)
+@@ -59,10 +59,13 @@ int
+ enable_cork(client_t *client)
+ {
+     int on = 1;
+-#ifdef linux
++#if defined(linux) || defined(__sun)
      setsockopt(client->fd, IPPROTO_TCP, TCP_CORK, &on, sizeof(on));
  #elif defined(__APPLE__) || defined(__FreeBSD__)
      setsockopt(client->fd, IPPROTO_TCP, TCP_NOPUSH, &on, sizeof(on));
@@ -23,7 +28,12 @@ Add NetBSD support.
  #else
  #error
  #endif
-@@ -81,6 +84,9 @@ disable_cork(client_t *client)
+@@ -77,10 +80,13 @@ disable_cork(client_t *client)
+     int off = 0;
+     int on = 1;
+     if(client->use_cork == 1){
+-#ifdef linux
++#if defined(linux) || defined(__sun)
          setsockopt(client->fd, IPPROTO_TCP, TCP_CORK, &off, sizeof(off));
  #elif defined(__APPLE__) || defined(__FreeBSD__)
          setsockopt(client->fd, IPPROTO_TCP, TCP_NOPUSH, &off, sizeof(off));
