@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4434 2017/10/13 09:35:29 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.4435 2017/10/13 10:45:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6301,3 +6301,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/py-sqlalchemy-utils to 0.32.18 [adam 2017-10-13]
 	Updated net/lftp to 4.8.3 [adam 2017-10-13]
 	Updated shells/zsh to 5.4.2 [jperkin 2017-10-13]
+	Updated graphics/py-matplotlib to 2.1.0 [adam 2017-10-13]
+	Updated devel/py-distorm3 to 3.3.4 [adam 2017-10-13]
