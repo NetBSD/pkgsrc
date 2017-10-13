@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2017/09/12 09:32:43 wiz Exp $
+# $NetBSD: Makefile.common,v 1.24 2017/10/13 23:47:56 prlw1 Exp $
 #
 # used by audio/gst-plugins1-alsa/Makefile
 # used by audio/gst-plugins1-cdparanoia/Makefile
@@ -34,5 +34,6 @@ LICENSE=		gnu-lgpl-v2
 CONFIGURE_ARGS+=	--disable-${driver}
 .endfor
 
+.include "../../devel/glib2/buildtools.mk"
 .include "../../devel/orc/buildlink3.mk"
 .include "plugins.mk"
