@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/10/13 15:59:36 minskim Exp $
+
+SHA1 (rex-arch-0.1.11.gem) = 8a6db5c295cc20887507dcded49db45830208bcd
+RMD160 (rex-arch-0.1.11.gem) = 8c23f48076537901ce16d07352cf4d8a00e7f69b
+SHA512 (rex-arch-0.1.11.gem) = 0b32c62b6a288f461bb081b7710e8191d49fa35522dde28d10bd9e016b2e9bd0b221391b07b3b30b79cd9ccd65157cab3ba6a5d918683a3674d41dfa1b1286e8
+Size (rex-arch-0.1.11.gem) = 19456 bytes
