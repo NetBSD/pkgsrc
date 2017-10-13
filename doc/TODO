@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17828 2017/10/13 15:35:36 prlw1 Exp $
+$NetBSD: TODO,v 1.17829 2017/10/13 17:16:13 taca Exp $
 
 Suggested new packages
 ======================
@@ -1202,7 +1202,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o poppler-0.60.1
 	o posh-0.12.6
 	o postal-0.72
-	o postfix-3.2.2
 	o pound-2.8a
 	o povray-3.7.0.0
 	o powerdns-ldap-3.7.3
