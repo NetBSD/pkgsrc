@@ -1,12 +1,12 @@
-$NetBSD: patch-xl2tpd.c,v 1.2 2014/02/14 22:06:39 christos Exp $
+$NetBSD: patch-xl2tpd.c,v 1.3 2017/10/13 17:24:05 christos Exp $
 
 Expose functions
 
---- xl2tpd.c.orig	2014-01-16 17:02:04.000000000 -0500
-+++ xl2tpd.c	2014-02-14 14:27:24.000000000 -0500
-@@ -19,6 +19,7 @@
- #define _BSD_SOURCE
- #define _XOPEN_SOURCE_EXTENDED
+--- xl2tpd.c.orig	2017-08-02 13:46:06.000000000 -0400
++++ xl2tpd.c	2017-10-13 12:50:10.384619299 -0400
+@@ -20,6 +20,7 @@
+ #define _DEFAULT_SOURCE
+ #define _XOPEN_SOURCE_EXTENDED	1
  #define _GNU_SOURCE
 +#define _NETBSD_SOURCE
  

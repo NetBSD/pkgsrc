@@ -1,21 +1,21 @@
-$NetBSD: patch-pty.c,v 1.3 2014/02/14 22:06:39 christos Exp $
+$NetBSD: patch-pty.c,v 1.4 2017/10/13 17:24:05 christos Exp $
 
 Fix pty allocation to use openpty(3) for all BSD's
 Fix closing slave bug.
 Set the pty queue size if we have it.
-Set set _NETBSRC_SOURCE for older NetBSD versions and sockaddr_storage.
+Set set _NETBSD_SOURCE for older NetBSD versions and sockaddr_storage.
 
---- pty.c.orig	2014-01-16 17:02:04.000000000 -0500
-+++ pty.c	2014-02-14 14:28:45.000000000 -0500
+--- pty.c.orig	2017-08-02 13:46:06.000000000 -0400
++++ pty.c	2017-10-13 12:57:26.789420473 -0400
 @@ -17,6 +17,7 @@
  #define _ISOC99_SOURCE
  #define _XOPEN_SOURCE
  #define _BSD_SOURCE
 +#define _NETBSD_SOURCE
+ #define _DEFAULT_SOURCE
  #define _XOPEN_SOURCE_EXTENDED
  
- #include <stdlib.h>
-@@ -25,6 +26,7 @@
+@@ -26,6 +27,7 @@
  #include <errno.h>
  #include <stdio.h>
  #include <fcntl.h>
@@ -23,7 +23,7 @@ Set set _NETBSRC_SOURCE for older NetBSD versions and sockaddr_storage.
  #include "l2tp.h"
  
  
-@@ -41,13 +43,12 @@
+@@ -42,13 +44,12 @@
  #define PTY01 "0123456789abcdef"
  #endif
  
@@ -41,7 +41,7 @@ Set set _NETBSRC_SOURCE for older NetBSD versions and sockaddr_storage.
  int getPtyMaster_pty (char *tty10, char *tty01)
  {
      char *p10;
-@@ -110,56 +111,63 @@
+@@ -111,14 +112,13 @@
  
      return fd;
  }
@@ -52,16 +52,17 @@ Set set _NETBSRC_SOURCE for older NetBSD versions and sockaddr_storage.
 +int getPtyMaster_ptmx(char *ttybuf, int ttybuflen)
  {
      int amaster, aslave;
-     char *tty = (char*) malloc(64);
+     char *tty = malloc(64);
  
 -    if((openpty(&amaster, &aslave, tty, NULL, NULL)) == -1)
-+    if (openpty(&amaster, &aslave, tty, NULL, NULL) == -1)
++    if(openpty(&amaster, &aslave, tty, NULL, NULL) == -1)
      {
  	l2tp_log (LOG_WARNING, "%s: openpty() returned %s\n",
  		__FUNCTION__, strerror(errno));
- 	free(tty);
+@@ -126,41 +126,51 @@
  	return -EINVAL;
      }
+ 
 +#ifdef TIOCSQSIZE
 +    {
 +	int qsize = 32768;
@@ -74,7 +75,7 @@ Set set _NETBSRC_SOURCE for older NetBSD versions and sockaddr_storage.
 +	l2tp_log(LOG_WARNING, "set queue size for %s to %d\n", tty, qsize);
 +    }
 +#endif
- 
++
      ttybuf[0] = '\0';
      strncat(ttybuf, tty, ttybuflen);
  
@@ -96,7 +97,7 @@ Set set _NETBSRC_SOURCE for older NetBSD versions and sockaddr_storage.
      if(fd >= 0) {
  	return fd;
      }
--
+ 
 -    l2tp_log (LOG_WARNING, "%s: failed to use pts -- using legacy ptys\n", __FUNCTION__);
 -    fd = getPtyMaster_pty(&a,&b);
 +#ifndef ALLBSD
