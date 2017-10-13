@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4438 2017/10/13 14:28:03 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4439 2017/10/13 14:58:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6306,3 +6306,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/py-peewee to 2.10.2 [fhajny 2017-10-13]
 	Updated devel/libbson to 1.8.1 [fhajny 2017-10-13]
 	Updated databases/mongo-c-driver to 1.8.1 [fhajny 2017-10-13]
+	Updated x11/libdrm to 2.4.84 [wiz 2017-10-13]
