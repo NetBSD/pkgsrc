@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/13 20:11:17 riz Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/10/14 10:23:01 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/examples/__init__.py
 ${PYSITELIB}/examples/__init__.pyc
 ${PYSITELIB}/examples/__init__.pyo
@@ -8,11 +14,6 @@ ${PYSITELIB}/examples/oauth.pyo
 ${PYSITELIB}/examples/streaming.py
 ${PYSITELIB}/examples/streaming.pyc
 ${PYSITELIB}/examples/streaming.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/tweepy/__init__.py
 ${PYSITELIB}/tweepy/__init__.pyc
 ${PYSITELIB}/tweepy/__init__.pyo
@@ -37,9 +38,6 @@ ${PYSITELIB}/tweepy/error.pyo
 ${PYSITELIB}/tweepy/models.py
 ${PYSITELIB}/tweepy/models.pyc
 ${PYSITELIB}/tweepy/models.pyo
-${PYSITELIB}/tweepy/oauth.py
-${PYSITELIB}/tweepy/oauth.pyc
-${PYSITELIB}/tweepy/oauth.pyo
 ${PYSITELIB}/tweepy/parsers.py
 ${PYSITELIB}/tweepy/parsers.pyc
 ${PYSITELIB}/tweepy/parsers.pyo
