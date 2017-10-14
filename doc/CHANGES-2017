@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4463 2017/10/14 10:44:40 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.4464 2017/10/14 14:46:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6340,3 +6340,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-lxml to 4.1.0 [adam 2017-10-14]
 	Updated net/py-tweepy to 3.5.0 [adam 2017-10-14]
 	Updated databases/ocaml-sqlite3 to 4.3.0 [jaapb 2017-10-14]
+	Updated lang/gcc49 to 4.9.4nb5 [ryoon 2017-10-14]
