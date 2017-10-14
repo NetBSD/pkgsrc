@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2017/07/30 22:47:55 wiz Exp $
+# $NetBSD: Makefile.common,v 1.30 2017/10/14 12:20:12 prlw1 Exp $
 #
 # used by audio/gnome-vfs-cdda/Makefile
 # used by net/gnome-vfs-smb/Makefile
@@ -99,6 +99,7 @@ do-install:
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/glib2/buildtools.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
