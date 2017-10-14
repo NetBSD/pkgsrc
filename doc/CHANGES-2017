@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4461 2017/10/14 10:18:17 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.4462 2017/10/14 10:30:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6337,3 +6337,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/ruby-rex-encoder version 0.1.4 [minskim 2017-10-13]
 	Added security/ruby-rex-exploitation version 0.1.15 [minskim 2017-10-13]
 	Added devel/ocaml-ppx_base version 0.9.0 [jaapb 2017-10-14]
+	Updated textproc/py-lxml to 4.1.0 [adam 2017-10-14]
+	Updated net/py-tweepy to 3.5.0 [adam 2017-10-14]
