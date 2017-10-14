@@ -1,0 +1,15 @@
+$NetBSD: patch-src_jbuild,v 1.1 2017/10/14 10:17:52 jaapb Exp $
+
+Remove superfluous dependency
+--- src/jbuild.orig	2017-03-16 16:39:36.000000000 +0000
++++ src/jbuild
+@@ -7,8 +7,7 @@
+     ppx_sexp_conv
+     ppx_compare
+     ppx_enumerate
+-    ppx_hash
+-    ppx_js_style))
++    ppx_hash))
+   (preprocess no_preprocessing)))
+ 
+ (jbuild_version 1)
