@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2017/10/14 10:17:52 jaapb Exp $
+bin/ppx-base
+${OCAML_SITELIB}/ppx_base/META
+${OCAML_SITELIB}/ppx_base/opam
+${OCAML_SITELIB}/ppx_base/ppx.exe
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_base/ppx_base.a
+${OCAML_SITELIB}/ppx_base/ppx_base.cma
+${OCAML_SITELIB}/ppx_base/ppx_base.cmi
+${OCAML_SITELIB}/ppx_base/ppx_base.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_base/ppx_base.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_base/ppx_base.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_base/ppx_base.cmxs
+${OCAML_SITELIB}/ppx_base/ppx_base.ml-gen
+share/doc/ppx_base/LICENSE.txt
