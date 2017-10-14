@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2017/10/03 12:12:34 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2017/10/14 21:05:38 prlw1 Exp $
 
 DISTNAME=	libunique-1.1.6
 PKGREVISION=	24
@@ -41,5 +41,6 @@ CFLAGS+=	-Wno-tautological-compare
 
 .include "options.mk"
 
+.include "../../devel/glib2/buildtools.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
