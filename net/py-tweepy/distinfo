@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 00:35:32 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/10/14 10:23:01 adam Exp $
 
-SHA1 (tweepy-2.3.0.tar.gz) = 104dd4beac140296297587164eb7fc7f09db8312
-RMD160 (tweepy-2.3.0.tar.gz) = 80c734fd19768bac1ec7e8de26759ab22c21e2ba
-SHA512 (tweepy-2.3.0.tar.gz) = ed8f80cb291d65fc84dbb048e08bfe616cc4a3562efdf0fc0c0eb083478fcfa742d7b110044ec4c752a1ea9c065bec0e836590528eb2eae9656351a6e0637474
-Size (tweepy-2.3.0.tar.gz) = 25273 bytes
+SHA1 (tweepy-3.5.0.tar.gz) = 572ab73540ac6aadd19c125dfaa3208c661ca65d
+RMD160 (tweepy-3.5.0.tar.gz) = 96db56b0233e8ec01b57e2d28b1176b6f42c328c
+SHA512 (tweepy-3.5.0.tar.gz) = cf87f0b7dea0ca444c17a3fdb9c2ebef814683c110511876c1997630b3202393276d3dd2de3b37fc21eb7a15382d22cc886109bda5a11b3d06a08081704c8c2a
+Size (tweepy-3.5.0.tar.gz) = 24348 bytes
