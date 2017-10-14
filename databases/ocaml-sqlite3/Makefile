@@ -1,26 +1,25 @@
-# $NetBSD: Makefile,v 1.31 2017/09/18 09:53:14 maya Exp $
+# $NetBSD: Makefile,v 1.32 2017/10/14 10:44:20 jaapb Exp $
 
-VERSION=	4.0.5
+VERSION=	4.3.0
 GITHUB_PROJECT=	sqlite3-ocaml
-GITHUB_TAG=	v${VERSION}
-DISTNAME=	${GITHUB_PROJECT}-${VERSION}
+GITHUB_RELEASE=	${VERSION}
+DISTNAME=	sqlite3-${VERSION}
 PKGNAME=	ocaml-sqlite3-${VERSION}
-PKGREVISION=	6
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mmottl/}
+EXTRACT_SUFX=	.tbz
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://github.com/mmottl/sqlite3-ocaml/
 COMMENT=	Sqlite bindings for OCaml
 LICENSE=	mit
 
-#HAS_CONFIGURE=	yes
-#CONFIGURE_ARGS+=	--destdir "${DESTDIR}" --prefix "${PREFIX}"
-WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${VERSION}
-
 USE_TOOLS+=	gmake pkg-config
-OCAML_USE_OASIS=	yes
+OCAML_USE_JBUILDER=	yes
 
 .include "../../mk/ocaml.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/ocaml-base/buildlink3.mk"
+.include "../../devel/ocaml-configurator/buildlink3.mk"
+.include "../../devel/ocaml-stdio/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
