@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2017/08/27 15:26:03 prlw1 Exp $
+# $NetBSD: Makefile,v 1.35 2017/10/14 10:51:45 prlw1 Exp $
 
 DISTNAME=	gtksourceview-3.24.3
 PKGNAME=	${DISTNAME:S/gtksourceview/gtksourceview3/}
@@ -32,6 +32,7 @@ BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.48
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/glib2/buildtools.mk"
 .if !empty(PKG_OPTIONS:Mintrospection)
 PLIST.introspection=	yes
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.42.0
