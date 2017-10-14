@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/07/30 22:47:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/10/14 13:35:35 prlw1 Exp $
 #
 
 DISTNAME=	vte-0.38.4
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
 CONFIGURE_ARGS+=	--disable-introspection
 CONFIGURE_ARGS+=	--disable-vala
 
+.include "../../devel/glib2/buildtools.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
