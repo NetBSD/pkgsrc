@@ -1,4 +1,4 @@
-# $NetBSD: plugins.mk,v 1.13 2017/09/08 06:14:03 wiz Exp $
+# $NetBSD: plugins.mk,v 1.14 2017/10/14 21:35:33 prlw1 Exp $
 #
 # This file is shared across the gst-plugins-{base,good} packages to
 # simplify their code.  It provides a framework to write simple packages
@@ -91,4 +91,5 @@ SUBST_SED.fix-libtool=		-e 's,--libtool=\"$$(top_builddir)/libtool\",--libtool=\
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/glib2/buildtools.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
