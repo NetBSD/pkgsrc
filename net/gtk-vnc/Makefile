@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2017/09/08 02:38:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.57 2017/10/14 21:45:24 prlw1 Exp $
 #
 
 DISTNAME=	gtk-vnc-0.5.2
@@ -54,6 +54,7 @@ SUBST_SED.mapfile=	-e '/VERSION_SCRIPT_FLAGS.*GTK_VNC_VERSION_FILE/d'
 #libview
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/glib2/buildtools.mk"
 .include "../../devel/zlib/buildlink3.mk"
 # libview is only used for an example which is not installed
 #.include "../../devel/libview/buildlink3.mk"
