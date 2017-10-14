@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2017/07/30 22:47:58 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2017/10/14 10:45:51 prlw1 Exp $
 #
 
 .include "Makefile.common"
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
 
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.10.0
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/glib2/buildtools.mk"
 .include "../../devel/pango/buildlink3.mk"
 # for FC_WIDTH
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.1.93
