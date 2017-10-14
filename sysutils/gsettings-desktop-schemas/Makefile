@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/08/27 15:48:24 prlw1 Exp $
+# $NetBSD: Makefile,v 1.10 2017/10/14 10:49:26 prlw1 Exp $
 
 DISTNAME=	gsettings-desktop-schemas-3.24.0
 CATEGORIES=	sysutils gnome
@@ -18,6 +18,7 @@ USE_LANGUAGES=		c
 
 PKGCONFIG_OVERRIDE+=	gsettings-desktop-schemas.pc.in
 
+.include "../../devel/glib2/buildtools.mk"
 .include "../../devel/glib2/schemas.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection:=	build
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.31
