@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/10/13 16:36:03 prlw1 Exp $
+# $NetBSD: Makefile,v 1.11 2017/10/15 22:31:02 prlw1 Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -21,7 +21,8 @@ MAKE_DIRS+=	${PREFIX}/include/xfce4
 BUILDLINK_API_DEPENDS.dbus+=		dbus>=1.0.0
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.72
 
-.include "../../devel/glib2/buildtools.mk"
+TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/libxfce4util/buildlink3.mk"
