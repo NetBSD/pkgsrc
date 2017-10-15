@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2017/10/14 10:47:45 prlw1 Exp $
+# $NetBSD: Makefile,v 1.73 2017/10/15 23:19:12 prlw1 Exp $
 
 DISTNAME=		avahi-0.6.32
 PKGREVISION=		7
@@ -96,7 +96,6 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/glib2/buildtools.mk"
 BUILDLINK_API_DEPENDS.libdaemon+=	libdaemon>=0.14
 .include "../../devel/libdaemon/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"

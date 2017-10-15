@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2017/10/13 22:38:31 prlw1 Exp $
+# $NetBSD: Makefile,v 1.44 2017/10/15 23:19:13 prlw1 Exp $
 
 DISTNAME=	libnotify-0.7.7
 CATEGORIES=	sysutils gnome
@@ -24,7 +24,6 @@ PKGCONFIG_OVERRIDE=	libnotify.pc.in
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.26.0
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/glib2/buildtools.mk"
 BUILDLINK_DEPMETHOD.gtk3=	build
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

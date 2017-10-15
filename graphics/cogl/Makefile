@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/10/14 21:16:43 prlw1 Exp $
+# $NetBSD: Makefile,v 1.18 2017/10/15 23:19:11 prlw1 Exp $
 
 DISTNAME=	cogl-1.22.0
 PKGREVISION=	3
@@ -39,7 +39,6 @@ PKGCONFIG_OVERRIDE+=	cogl-path/cogl-path.pc.in
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.32.0
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/glib2/buildtools.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.20.0
 .include "../../devel/pango/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.0

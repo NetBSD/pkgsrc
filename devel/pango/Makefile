@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.207 2017/10/13 21:50:48 prlw1 Exp $
+# $NetBSD: Makefile,v 1.208 2017/10/15 23:19:11 prlw1 Exp $
 
 DISTNAME=	pango-1.40.12
 CATEGORIES=	devel fonts
@@ -34,7 +34,6 @@ CHECK_PORTABILITY_SKIP+= docs/check.docs
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.33.12
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/glib2/buildtools.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection:= build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2017/10/14 12:15:25 prlw1 Exp $
+# $NetBSD: Makefile,v 1.65 2017/10/15 23:19:12 prlw1 Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -41,7 +41,6 @@ post-install:
 
 BUILDLINK_ABI_DEPENDS.glib2+=	glib2>=2.41.0
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/glib2/buildtools.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

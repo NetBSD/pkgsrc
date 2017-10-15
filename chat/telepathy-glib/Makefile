@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2017/10/14 21:20:22 prlw1 Exp $
+# $NetBSD: Makefile,v 1.51 2017/10/15 23:19:10 prlw1 Exp $
 
 DISTNAME=	telepathy-glib-0.24.1
 PKGREVISION=	6
@@ -27,7 +27,6 @@ TEST_TARGET=		check
 
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.36
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/glib2/buildtools.mk"
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.30.0
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../lang/python/application.mk"
