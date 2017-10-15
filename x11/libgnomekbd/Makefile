@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2017/10/14 21:25:36 prlw1 Exp $
+# $NetBSD: Makefile,v 1.54 2017/10/15 23:19:13 prlw1 Exp $
 #
 
 DISTNAME=	libgnomekbd-2.32.0
@@ -23,7 +23,6 @@ PKGCONFIG_OVERRIDE+=	libgnomekbd.pc.in
 PKGCONFIG_OVERRIDE+=	libgnomekbdui.pc.in
 
 .include "../../devel/GConf/schemas.mk"
-.include "../../devel/glib2/buildtools.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=4.0
 .include "../../x11/libxklavier/buildlink3.mk"

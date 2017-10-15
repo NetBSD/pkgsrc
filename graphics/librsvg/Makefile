@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2017/10/13 23:45:20 prlw1 Exp $
+# $NetBSD: Makefile,v 1.96 2017/10/15 23:19:11 prlw1 Exp $
 
 DISTNAME=	librsvg-2.40.18
 CATEGORIES=	graphics gnome
@@ -46,7 +46,6 @@ CONFIGURE_ARGS+=	--disable-introspection
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/glib2/buildtools.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"

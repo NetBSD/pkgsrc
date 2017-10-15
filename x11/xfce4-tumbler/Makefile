@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2017/10/14 13:36:52 prlw1 Exp $
+# $NetBSD: Makefile,v 1.31 2017/10/15 23:19:14 prlw1 Exp $
 #
 #
 
@@ -36,7 +36,6 @@ CFLAGS+=		-g
 
 .include "options.mk"
 
-.include "../../devel/glib2/buildtools.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
