@@ -1,6 +1,7 @@
-$NetBSD: patch-libtest_test.hpp,v 1.2 2014/04/01 13:51:56 fhajny Exp $
+$NetBSD: patch-libtest_test.hpp,v 1.2.30.1 2017/10/15 11:26:40 spz Exp $
 
 cstdarg needed for va_start.
+
 --- libtest/test.hpp.orig	2014-02-09 11:52:42.000000000 +0000
 +++ libtest/test.hpp
 @@ -57,6 +57,7 @@

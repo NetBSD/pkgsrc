@@ -1,4 +1,6 @@
-$NetBSD: patch-clients_memflush.cc,v 1.1 2014/04/16 16:23:13 joerg Exp $
+$NetBSD: patch-clients_memflush.cc,v 1.1.30.1 2017/10/15 11:26:40 spz Exp $
+
+Fix for missing definition of 'false'.
 
 --- clients/memflush.cc.orig	2014-04-16 15:33:58.000000000 +0000
 +++ clients/memflush.cc
