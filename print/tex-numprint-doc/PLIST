@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2017/10/15 20:29:41 markd Exp $
+share/texmf-dist/doc/latex/numprint/ChangeLog.nbaseprt
+share/texmf-dist/doc/latex/numprint/ChangeLog.numprint
+share/texmf-dist/doc/latex/numprint/Makefile
+share/texmf-dist/doc/latex/numprint/README
+share/texmf-dist/doc/latex/numprint/getversion.tex
+share/texmf-dist/doc/latex/numprint/nbaseprt.pdf
+share/texmf-dist/doc/latex/numprint/nbaseprttest.tex
+share/texmf-dist/doc/latex/numprint/numprint.pdf
+share/texmf-dist/doc/latex/numprint/numprinttest.tex
