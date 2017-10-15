@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/10/13 21:51:56 prlw1 Exp $
+# $NetBSD: Makefile,v 1.25 2017/10/15 23:19:11 prlw1 Exp $
 
 DISTNAME=	at-spi2-core-2.25.91
 CATEGORIES=	devel gnome
@@ -45,7 +45,6 @@ CONF_FILES+=	${eg_default_sessiondir}/at-spi-dbus-bus.desktop \
 MAKE_DIRS+=	${default_sessiondir}
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/glib2/buildtools.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"

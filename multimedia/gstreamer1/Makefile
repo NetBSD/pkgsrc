@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/10/13 21:56:36 prlw1 Exp $
+# $NetBSD: Makefile,v 1.34 2017/10/15 23:19:12 prlw1 Exp $
 
 DISTNAME=	gstreamer-1.12.2
 PKGNAME=	${DISTNAME:S/gstreamer/gstreamer1/}
@@ -27,5 +27,4 @@ PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-base.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/glib2/buildtools.mk"
 .include "../../mk/bsd.pkg.mk"
