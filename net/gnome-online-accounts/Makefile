@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/10/13 16:36:03 prlw1 Exp $
+# $NetBSD: Makefile,v 1.15 2017/10/15 22:31:02 prlw1 Exp $
 
 DISTNAME=	gnome-online-accounts-3.16.3
 PKGREVISION=	11
@@ -12,6 +12,7 @@ COMMENT=	Service that allows online accounts to be used with GNOME
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	gtk-doc>=1.3:../../textproc/gtk-doc
+TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -20,7 +21,6 @@ USE_TOOLS+=		gmake intltool pkg-config msgfmt
 
 .include "../../chat/telepathy-glib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/glib2/buildtools.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
