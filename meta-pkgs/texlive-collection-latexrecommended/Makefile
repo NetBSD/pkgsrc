@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2017/06/23 23:39:06 markd Exp $
+# $NetBSD: Makefile,v 1.7 2017/10/15 20:42:47 markd Exp $
 
 DISTNAME=	collection-latexrecommended
-PKGNAME=	texlive-${DISTNAME}-2017
+PKGNAME=	texlive-${DISTNAME}-2017.45456
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44177
+TEXLIVE_REV=	45456
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -24,6 +24,7 @@ DEPENDS+=	tex-ctable-[0-9]*:../../print/tex-ctable
 DEPENDS+=	tex-eso-pic-[0-9]*:../../print/tex-eso-pic
 DEPENDS+=	tex-euenc-[0-9]*:../../fonts/tex-euenc
 DEPENDS+=	tex-euler-[0-9]*:../../print/tex-euler
+DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 DEPENDS+=	tex-extsizes-[0-9]*:../../print/tex-extsizes
 DEPENDS+=	tex-fancybox-[0-9]*:../../print/tex-fancybox
 DEPENDS+=	tex-fancyref-[0-9]*:../../print/tex-fancyref
@@ -65,6 +66,7 @@ DEPENDS+=	tex-subfig-[0-9]*:../../print/tex-subfig
 DEPENDS+=	tex-textcase-[0-9]*:../../print/tex-textcase
 DEPENDS+=	tex-thumbpdf-[0-9]*:../../print/tex-thumbpdf
 DEPENDS+=	tex-typehtml-[0-9]*:../../print/tex-typehtml
+DEPENDS+=	tex-ucharcat-[0-9]*:../../print/tex-ucharcat
 DEPENDS+=	tex-underscore-[0-9]*:../../print/tex-underscore
 DEPENDS+=	tex-unicode-math-[0-9]*:../../math/tex-unicode-math
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
