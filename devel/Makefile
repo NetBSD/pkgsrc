@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2549 2017/10/14 10:20:33 jaapb Exp $
+# $NetBSD: Makefile,v 1.2550 2017/10/15 14:10:39 prlw1 Exp $
 #
 
 COMMENT=	Development utilities
@@ -287,6 +287,7 @@ SUBDIR+=	glade
 SUBDIR+=	glade3
 SUBDIR+=	glib
 SUBDIR+=	glib2
+SUBDIR+=	glib2-tools
 SUBDIR+=	glibmm
 SUBDIR+=	global
 SUBDIR+=	gmake

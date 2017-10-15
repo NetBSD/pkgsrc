@@ -1,0 +1,2 @@
+This package provides glib2/gobject's python dependent tools:
+glib-mkenums and glib-genmarshal.
