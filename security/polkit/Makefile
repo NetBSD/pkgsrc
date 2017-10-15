@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/10/13 22:04:44 prlw1 Exp $
+# $NetBSD: Makefile,v 1.8 2017/10/15 23:19:12 prlw1 Exp $
 #
 
 DISTNAME=	polkit-0.113
@@ -65,6 +65,5 @@ SUBST_SED.paths+=	-e 's,/usr/bin/,${PREFIX}/bin/,g'
 .include "../../lang/spidermonkey17/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/glib2/buildtools.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

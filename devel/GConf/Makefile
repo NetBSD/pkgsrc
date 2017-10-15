@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2017/10/13 22:54:02 prlw1 Exp $
+# $NetBSD: Makefile,v 1.93 2017/10/15 23:19:10 prlw1 Exp $
 
 .include "../../devel/GConf/Makefile.common"
 
@@ -35,6 +35,5 @@ BUILDLINK_ABI_DEPENDS.dbus-glib+=	dbus-glib>=0.74
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/buildlink3.mk"
-.include "../../devel/glib2/buildtools.mk"
 .include "../../devel/glib2/modules.mk"
 .include "../../mk/bsd.pkg.mk"
