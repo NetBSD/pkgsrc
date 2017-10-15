@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2017/10/12 10:08:24 markd Exp $
+# $NetBSD: Makefile,v 1.18 2017/10/15 20:48:28 markd Exp $
 
 DISTNAME=	collection-pictures
-PKGNAME=	texlive-${DISTNAME}-2017pre3
+PKGNAME=	texlive-${DISTNAME}-2017pre4
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	45417
@@ -158,11 +158,11 @@ DEPENDS+=	tex-tikzscale-[0-9]*:../../graphics/tex-tikzscale
 DEPENDS+=	tex-tikzsymbols-[0-9]*:../../graphics/tex-tikzsymbols
 # depend timing-diagrams
 # depend tqft
-# depend tkz-base
+DEPENDS+=	tex-tkz-base-[0-9]*:../../graphics/tex-tkz-base
 # depend tkz-berge
 # depend tkz-doc
 # depend tkz-euclide
-# depend tkz-fct
+DEPENDS+=	tex-tkz-fct-[0-9]*:../../graphics/tex-tkz-fct
 # depend tkz-graph
 # depend tkz-kiviat
 # depend tkz-linknodes
