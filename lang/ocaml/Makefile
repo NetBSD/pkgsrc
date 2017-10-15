@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.114 2017/09/21 13:56:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.114.4.1 2017/10/15 11:49:07 spz Exp $
 
 .include "Makefile.common"
 
-#PKGREVISION=		3
+PKGREVISION=		1
 
 CONFIGURE_ENV+=		disable_x11=yes
 
@@ -98,7 +98,7 @@ do-test:
 post-install:
 	set -e ; cd ${DESTDIR}${PREFIX}/lib/ocaml/${PKGMANDIR}/man1;	\
 	for m in *; do							\
-	  ln -s ${PREFIX}/lib/ocaml/${PKGMANDIR}/man1/$$m		\
+	  ln -sf ${PREFIX}/lib/ocaml/${PKGMANDIR}/man1/$$m		\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$$m;		\
 	done
 
