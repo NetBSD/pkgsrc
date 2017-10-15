@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/10/15 20:16:52 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/10/15 20:32:28 markd Exp $
 
 DISTNAME=	tkz-base
 PKGNAME=	tex-${DISTNAME}-1.16
@@ -9,6 +9,7 @@ HOMEPAGE=	http://ctan.org/pkg/tkz-base
 COMMENT=	Tools for drawing with a cartesian coordinate system
 LICENSE=	lppl-1.3c
 
+DEPENDS+=       tex-numprint-[0-9]*:../../print/tex-numprint
 DEPENDS+=       tex-pgf-[0-9]*:../../print/tex-pgf
 
 .include "../../print/texlive/package.mk"
