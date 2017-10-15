@@ -1,6 +1,7 @@
-$NetBSD: patch-tests_libmemcached-1.0_ketama.cc,v 1.4 2014/04/01 13:51:56 fhajny Exp $
+$NetBSD: patch-tests_libmemcached-1.0_ketama.cc,v 1.4.30.1 2017/10/15 11:26:40 spz Exp $
 
 Use stdint.
+
 --- tests/libmemcached-1.0/ketama.cc.orig	2014-02-09 11:52:42.000000000 +0000
 +++ tests/libmemcached-1.0/ketama.cc
 @@ -33,6 +33,7 @@
