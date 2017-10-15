@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.701 2017/10/15 20:30:59 markd Exp $
+# $NetBSD: Makefile,v 1.702 2017/10/15 20:39:15 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1274,6 +1274,8 @@ SUBDIR+=	tex-type1cm
 SUBDIR+=	tex-type1cm-doc
 SUBDIR+=	tex-typehtml
 SUBDIR+=	tex-typehtml-doc
+SUBDIR+=	tex-ucharcat
+SUBDIR+=	tex-ucharcat-doc
 SUBDIR+=	tex-ucs
 SUBDIR+=	tex-ucs-doc
 SUBDIR+=	tex-udesoftec
