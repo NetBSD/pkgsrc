@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2017/09/22 09:48:28 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.43.4.1 2017/10/15 11:49:07 spz Exp $
 bin/ocaml
 bin/ocamlc
 bin/ocamlc.byte
@@ -1277,12 +1277,12 @@ lib/ocaml/digest.mli
 ${PLIST.ocaml-prof}lib/ocaml/digest.p.cmt
 ${PLIST.ocaml-prof}${PLIST.ocaml-opt}lib/ocaml/digest.p.cmx
 ${PLIST.ocaml-opt}${PLIST.ocaml-nat}lib/ocaml/dynlink.a
-${PLIST.ocaml-nat}lib/ocaml/dynlink.cma
-${PLIST.ocaml-nat}lib/ocaml/dynlink.cmi
-${PLIST.ocaml-nat}lib/ocaml/dynlink.cmti
+${PLIST.ocaml-opt}lib/ocaml/dynlink.cma
+${PLIST.ocaml-opt}lib/ocaml/dynlink.cmi
+${PLIST.ocaml-opt}lib/ocaml/dynlink.cmti
 ${PLIST.ocaml-nat}${PLIST.ocaml-opt}lib/ocaml/dynlink.cmx
 ${PLIST.ocaml-nat}${PLIST.ocaml-opt}lib/ocaml/dynlink.cmxa
-${PLIST.ocaml-nat}lib/ocaml/dynlink.mli
+${PLIST.ocaml-opt}lib/ocaml/dynlink.mli
 lib/ocaml/ephemeron.cmi
 lib/ocaml/ephemeron.cmt
 lib/ocaml/ephemeron.cmti

@@ -1,0 +1,16 @@
+$NetBSD: patch-testsuite_tests_lib-dynlink-native_Makefile,v 1.1.2.2 2017/10/15 11:49:07 spz Exp $
+
+Fix apparently erroneous feature test, this stuff depends
+on "native dynamic linking" support.
+
+--- testsuite/tests/lib-dynlink-native/Makefile.orig	2017-07-13 08:56:45.000000000 +0000
++++ testsuite/tests/lib-dynlink-native/Makefile
+@@ -23,7 +23,7 @@ LD_PATH = $(TOPDIR)/otherlibs/$(UNIXLIBV
+ 
+ .PHONY: default
+ default:
+-	@if ! $(SUPPORTS_SHARED_LIBRARIES) || $(BYTECODE_ONLY) ; then \
++	@if ! $(NATDYNLINK) || $(BYTECODE_ONLY) ; then \
+ 	  echo " ... testing 'main' => skipped"; \
+ 	else \
+ 	   $(SET_LD_PATH) $(MAKE) all; \

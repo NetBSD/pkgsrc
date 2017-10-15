@@ -1,9 +1,18 @@
-$NetBSD: patch-configure,v 1.24 2017/09/08 09:12:44 jaapb Exp $
+$NetBSD: patch-configure,v 1.24.4.1 2017/10/15 11:49:07 spz Exp $
 
 All kinds of OS-specific changes to configure
 
---- configure.orig	2016-11-04 16:08:24.000000000 +0000
+--- configure.orig	2017-07-13 08:56:44.000000000 +0000
 +++ configure
+@@ -359,7 +359,7 @@ mkexe="\$(BYTECC)"
+ mkexedebugflag="-g"
+ bytecccompopts=""
+ byteccprivatecompopts=""
+-bytecclinkopts=""
++bytecclinkopts="   -L/usr/lib -Wl,-R/usr/lib -Wl,-R/usr/pkg/lib"
+ ostype="Unix"
+ exe=""
+ iflexdir=""
 @@ -764,7 +764,10 @@ if test $with_sharedlibs = "yes"; then
          *gcc*)
            sharedcccompopts="-fPIC"
@@ -48,7 +57,7 @@ All kinds of OS-specific changes to configure
      i386-*-gnu0.3)                natdynlink=true;;
      i[3456]86-*-haiku*)           natdynlink=true;;
      arm*-*-linux*)                natdynlink=true;;
-@@ -891,6 +893,7 @@ case "$target" in
+@@ -901,6 +903,7 @@ case "$target" in
    sparc*-*-gnu*)                arch=sparc; system=gnu;;
    i[3456]86-*-linux*)           arch=i386; system=linux_`sh ./runtest elf.c`;;
    i[3456]86-*-*bsd*)            arch=i386; system=bsd_`sh ./runtest elf.c`;;
@@ -56,7 +65,7 @@ All kinds of OS-specific changes to configure
    i[3456]86-*-nextstep*)        arch=i386; system=nextstep;;
    i[3456]86-*-solaris*)         if $arch64; then
                                    arch=amd64; system=solaris
-@@ -900,6 +903,7 @@ case "$target" in
+@@ -910,6 +913,7 @@ case "$target" in
    i[3456]86-*-haiku*)           arch=i386; system=beos;;
    i[3456]86-*-beos*)            arch=i386; system=beos;;
    i[3456]86-*-cygwin*)          arch=i386; system=cygwin;;
@@ -64,7 +73,16 @@ All kinds of OS-specific changes to configure
    i[3456]86-*-darwin*)          if $arch64; then
                                    arch=amd64; system=macosx
                                  else
-@@ -937,6 +941,7 @@ case "$target" in
+@@ -921,7 +925,7 @@ case "$target" in
+   powerpc*-*-linux*)            arch=power;
+                                 if $arch64; then model=ppc64; else model=ppc; fi
+                                 system=elf;;
+-  powerpc-*-netbsd*)            arch=power; model=ppc; system=elf;;
++  powerpc-*-netbsd*)            arch=power; model=ppc; system=netbsd;;
+   powerpc-*-openbsd*)           arch=power; model=ppc; system=bsd_elf;;
+   s390x*-*-linux*)              arch=s390x; model=z10; system=elf;;
+   armv6*-*-linux-gnueabihf)     arch=arm; model=armv6; system=linux_eabihf;;
+@@ -947,6 +951,7 @@ case "$target" in
    x86_64-*-mingw*)              arch=amd64; system=mingw;;
    aarch64-*-linux*)             arch=arm64; system=linux;;
    x86_64-*-cygwin*)             arch=amd64; system=cygwin;;
@@ -72,7 +90,16 @@ All kinds of OS-specific changes to configure
  esac
  
  # Some platforms exist both in 32-bit and 64-bit variants, not distinguished
-@@ -973,7 +978,6 @@ case "$arch,$nativecc,$system,$model" in
+@@ -974,7 +979,7 @@ fi
+ nativecccompopts="$bytecccompopts"
+ nativeccprivatecompopts="$byteccprivatecompopts"
+ nativeccprofopts=''
+-nativecclinkopts=''
++nativecclinkopts="-L/usr/lib -R/usr/lib -R/usr/pkg/lib"
+ # FIXME the naming of nativecclinkopts is broken: these are options for
+ # ld (for shared libs), not for cc
+ nativeccrpath="$byteccrpath"
+@@ -983,7 +988,6 @@ case "$arch,$nativecc,$system,$model" in
    *,*,nextstep,*)      nativecclinkopts="-posix";;
    *,*,rhapsody,*)      if $arch64; then partialld="ld -r -arch ppc64"; fi;;
    amd64,gcc*,macosx,*) partialld="ld -r -arch x86_64";;
@@ -80,7 +107,7 @@ All kinds of OS-specific changes to configure
    power,gcc*,elf,ppc)   partialld="ld -r -m elf32ppclinux";;
    power,gcc*,elf,ppc64)   partialld="ld -r -m elf64ppc";;
    power,gcc*,elf,ppc64le)   partialld="ld -r -m elf64lppc";;
-@@ -991,8 +995,8 @@ case "$arch,$system" in
+@@ -1001,8 +1005,8 @@ case "$arch,$system" in
                      fi;;
    amd64,solaris)  as="${TOOLPREF}as --64"
                    aspp="${TOOLPREF}gcc -m64 -c";;
@@ -91,16 +118,26 @@ All kinds of OS-specific changes to configure
    power,elf)      if $arch64; then
                      as="${TOOLPREF}as -a64 -mppc64"
                      aspp="${TOOLPREF}gcc -m64 -c"
-@@ -1048,6 +1052,8 @@ case "$arch,$system" in
+@@ -1023,7 +1027,7 @@ case "$arch,$system" in
+                   aspp="${TOOLPREF}cc -c";;
+   *,freebsd)      as="${TOOLPREF}as"
+                   aspp="${TOOLPREF}cc -c";;
+-  amd64,*|arm,*|arm64,*|i386,*|power,bsd*|sparc,*)
++  amd64,*|arm,*|arm64,*|i386,*|power,bsd*|power,netbsd|sparc,*)
+                   as="${TOOLPREF}as"
+                   case "$ccfamily" in
+                       clang-*)
+@@ -1058,6 +1062,9 @@ case "$arch,$system" in
    arm,linux*) profiling='true';;
    power,elf) profiling='true';;
    power,bsd*) profiling='true';;
++  power,netbsd) profiling='true';;
 +	*,*,dragonfly) profiling='true';;
 +	amd64,solaris) profiling='true';;
    *) profiling='false';;
  esac
  
-@@ -1642,6 +1648,8 @@ fi
+@@ -1652,6 +1659,8 @@ fi
  x11_include="not found"
  x11_link="not found"
  
@@ -109,7 +146,7 @@ All kinds of OS-specific changes to configure
  if test -z "$x11_include_dir" -a -z "$x11_lib_dir"; then
    if pkg-config --exists x11 2>/dev/null; then
      x11_include=`pkg-config --cflags x11`
-@@ -1688,6 +1696,7 @@ if test "$x11_include" = "not found"; th
+@@ -1698,6 +1707,7 @@ if test "$x11_include" = "not found"; th
      /usr/XFree86/include/X11  \
                                \
      /usr/include              \
@@ -117,7 +154,7 @@ All kinds of OS-specific changes to configure
      /usr/local/include        \
      /usr/unsupported/include  \
      /usr/athena/include       \
-@@ -1745,6 +1754,7 @@ if test "$x11_include" = "not found"; th
+@@ -1755,6 +1765,7 @@ if test "$x11_include" = "not found"; th
                            \
      /usr/lib64            \
      /usr/lib              \
@@ -125,7 +162,7 @@ All kinds of OS-specific changes to configure
      /usr/local/lib        \
      /usr/unsupported/lib  \
      /usr/athena/lib       \
-@@ -1766,19 +1776,16 @@ if test "$x11_include" = "not found"; th
+@@ -1776,19 +1787,16 @@ if test "$x11_include" = "not found"; th
        if test $dir = /usr/lib; then
          x11_link="-lX11"
        else
