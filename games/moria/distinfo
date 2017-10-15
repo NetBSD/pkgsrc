@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 20:56:59 agc Exp $
+$NetBSD: distinfo,v 1.14 2017/10/15 03:16:07 maya Exp $
 
 SHA1 (um5.5.2.tar.Z) = 69c7a7bf4e2c5be123ee7a82f5ad12ad5d0f5b08
 RMD160 (um5.5.2.tar.Z) = 1556c76f151d7ea29da79071a57398f63d0b138b
@@ -6,8 +6,8 @@ SHA512 (um5.5.2.tar.Z) = 987bbccb9cb4870ec91704cd20cf19875320d1cfe62c4c5a0063bfc
 Size (um5.5.2.tar.Z) = 910536 bytes
 SHA1 (patch-aa) = 45338539960c193e9f7556aa6a588cf40bfbe726
 SHA1 (patch-ab) = 21418a69d7a694894dd9408513693f87fff91953
-SHA1 (patch-ac) = ea9e23de0a147f317a579a4a04502cb165b4c4bd
-SHA1 (patch-ad) = f83f4596677b8d37493145f82a4d2d5cb489b53a
+SHA1 (patch-ac) = aefb05ebf219bcf803d92409937f48a65c0a6b0a
+SHA1 (patch-ad) = a13dade7ce548ed078870db8b63548d0a91265dc
 SHA1 (patch-ae) = 5cf8ad7c6e5d87856a31a5456ba9ed2422075988
 SHA1 (patch-af) = f8a9f32dffa2123512e36c774ca75e0b28a053cc
 SHA1 (patch-ag) = af425b9a48c17f170fc780909b7287264a053cc4
@@ -18,3 +18,5 @@ SHA1 (patch-ak) = 3b39f9bd883cae5cd0a8a2561fcb1bcdbfa0bc1b
 SHA1 (patch-al) = 0625fd70eeecaa7e0b5f5874b180244fb1f034c2
 SHA1 (patch-am) = b5d250e9b870e3540c382c7e7c588e1f1c5a4910
 SHA1 (patch-source_files_c) = 56d4c89b4ab2b0e916f06a39cfb25b8cb6a52877
+SHA1 (patch-source_generate.c) = 2f659fab5d7a54a93b2abeea16ef9540b5d76466
+SHA1 (patch-source_tables.c) = b934535fdf8d1ee53e24538ff92be591d72e4b6c
