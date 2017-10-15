@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2017/10/15 03:16:07 maya Exp $
+$NetBSD: distinfo,v 1.15 2017/10/15 08:35:38 maya Exp $
 
 SHA1 (um5.5.2.tar.Z) = 69c7a7bf4e2c5be123ee7a82f5ad12ad5d0f5b08
 RMD160 (um5.5.2.tar.Z) = 1556c76f151d7ea29da79071a57398f63d0b138b
@@ -19,4 +19,3 @@ SHA1 (patch-al) = 0625fd70eeecaa7e0b5f5874b180244fb1f034c2
 SHA1 (patch-am) = b5d250e9b870e3540c382c7e7c588e1f1c5a4910
 SHA1 (patch-source_files_c) = 56d4c89b4ab2b0e916f06a39cfb25b8cb6a52877
 SHA1 (patch-source_generate.c) = 2f659fab5d7a54a93b2abeea16ef9540b5d76466
-SHA1 (patch-source_tables.c) = b934535fdf8d1ee53e24538ff92be591d72e4b6c
