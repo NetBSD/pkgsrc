@@ -1,8 +1,23 @@
-$NetBSD: patch-ac,v 1.2 2004/04/26 10:55:27 seb Exp $
+$NetBSD: patch-ac,v 1.3 2017/10/15 03:16:07 maya Exp $
 
 --- source/config.h.orig	1994-07-22 01:47:13.000000000 +0000
 +++ source/config.h
-@@ -200,16 +200,18 @@ some of the system defines set up here.
+@@ -12,6 +12,14 @@ Constant.h should always be included aft
+ some of the system defines set up here.
+ #endif
+ 
++#include <sys/stat.h>
++
++#include <time.h>
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
++#include <unistd.h>
++
+ /* Person to bother if something goes wrong.  */
+ /* Recompile files.c and misc2.c if this changes.  */
+ #define WIZARD	"David Grabiner"
+@@ -200,16 +208,18 @@ some of the system defines set up here.
  
  /* This must be unix; change MORIA_LIB as appropriate.  */
  #define MORIA_SAV	"moria.save"
