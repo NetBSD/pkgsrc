@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2017/10/13 21:47:23 prlw1 Exp $
+# $NetBSD: Makefile,v 1.35 2017/10/15 23:19:11 prlw1 Exp $
 
 DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
@@ -34,7 +34,6 @@ post-install:
 .include "../../databases/shared-mime-info/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.37.2
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/glib2/buildtools.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection:= build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"

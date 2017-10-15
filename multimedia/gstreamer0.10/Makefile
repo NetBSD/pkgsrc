@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2017/10/13 22:03:03 prlw1 Exp $
+# $NetBSD: Makefile,v 1.62 2017/10/15 23:19:12 prlw1 Exp $
 #
 
 DISTNAME=		gstreamer-0.10.36
@@ -72,6 +72,5 @@ PLIST.introspection=	yes
 CONFIGURE_ARGS+=	--disable-introspection
 .endif
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/glib2/buildtools.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
