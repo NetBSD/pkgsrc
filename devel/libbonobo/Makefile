@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2017/10/14 21:37:16 prlw1 Exp $
+# $NetBSD: Makefile,v 1.81 2017/10/15 23:19:11 prlw1 Exp $
 
 DISTNAME=		libbonobo-2.32.0
 PKGREVISION=		11
@@ -32,7 +32,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.26.0
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/glib2/buildtools.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
