@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.772 2017/09/26 10:27:01 wiz Exp $
+# $NetBSD: Makefile,v 1.773 2017/10/15 20:34:22 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -698,6 +698,10 @@ SUBDIR+=	tex-tikzscale
 SUBDIR+=	tex-tikzscale-doc
 SUBDIR+=	tex-tikzsymbols
 SUBDIR+=	tex-tikzsymbols-doc
+SUBDIR+=	tex-tkz-base
+SUBDIR+=	tex-tkz-base-doc
+SUBDIR+=	tex-tkz-fct
+SUBDIR+=	tex-tkz-fct-doc
 SUBDIR+=	tex-venndiagram
 SUBDIR+=	tex-venndiagram-doc
 SUBDIR+=	tex-xypic
