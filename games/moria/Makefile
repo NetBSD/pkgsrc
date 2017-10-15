@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2017/01/03 21:50:53 roy Exp $
+# $NetBSD: Makefile,v 1.20 2017/10/15 03:16:07 maya Exp $
 
 DISTNAME=		um5.5.2
 PKGNAME=		moria-5.5.2
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		games
 # The "offical" master site has lost the pub/Games directory.
 #MASTER_SITES=		ftp://ftp.cis.ksu.edu/pub/Games/Moria/source/
@@ -27,6 +27,8 @@ SPECIAL_PERMS=		bin/moria ${SETGID_GAMES_PERMS}
 do-configure:
 	@${RM} -f ${WRKSRC}/*.[ch] ${WRKSRC}/Makefile
 	@cd ${WRKSRC}; ${LN} -s source/* unix/* .
+
+PKGSRC_USE_FORTIFY=no
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
