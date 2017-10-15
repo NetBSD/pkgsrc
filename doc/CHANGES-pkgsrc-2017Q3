@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.4 2017/10/09 12:32:16 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.5 2017/10/15 14:03:47 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q3 branch:
 
@@ -13,4 +13,32 @@ math/py-numpy: security update
 
 Pullup ticket #5565 - requested by sevan
 lang/go: security update
+
+Pullup ticket #5567 - requested by sevan
+devel/libmemcached: build fix for Darwin
+
+Pullup ticket #5568 - requested by he
+lang/ocaml: fix for NetBSD/powerpc
+
+Pullup ticket #5569 - requested by sevan
+security/mit-krb5: security update
+
+Pullup ticket #5570 - requested by sevan
+sysutils/salt: security update
+
+Pullup ticket #5571 - requested by sevan
+x11/libXfont2: security update
+
+Pullup ticket #5572 - requested by sevan
+x11/libXres: security update
+
+Pullup ticket #5574 - requested by sevan
+editors/emacs21: security patch
+
+Pullup ticket #5576 - requested by taca
+x11/modular-xorg-server: security update
+
+Pullup ticket #5577 - requested by maya
+lang/gcc49: functionality fix
+lang/gcc49-libs: functionality fix
 
