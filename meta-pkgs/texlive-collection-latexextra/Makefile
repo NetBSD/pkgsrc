@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2017/09/08 22:25:26 markd Exp $
+# $NetBSD: Makefile,v 1.31 2017/10/15 20:46:12 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2017pre4
+PKGNAME=	texlive-${DISTNAME}-2017pre5
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44959
+TEXLIVE_REV=	45509
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -149,6 +149,7 @@ DEPENDS+=	tex-changepage-[0-9]*:../../print/tex-changepage
 # depend changes
 DEPENDS+=	tex-chappg-[0-9]*:../../print/tex-chappg
 # depend chapterfolder
+# depend cheatsheet
 # depend chet
 # depend chextras
 # depend childdoc
@@ -212,6 +213,7 @@ DEPENDS+=	tex-cooking-[0-9]*:../../print/tex-cooking
 # depend cprotect
 # depend crbox
 # depend crossreference
+# depend crossreftools
 DEPENDS+=	tex-csquotes-[0-9]*:../../print/tex-csquotes
 # depend css-colors
 DEPENDS+=	tex-csvsimple-[0-9]*:../../textproc/tex-csvsimple
@@ -309,6 +311,7 @@ DEPENDS+=	tex-draftwatermark-[0-9]*:../../print/tex-draftwatermark
 # depend dtk
 # depend dtxdescribe
 # depend dtxgallery
+# depend ducksay
 # depend dvdcoll
 # depend dynamicnumber
 # depend dynblocks
@@ -364,7 +367,6 @@ DEPENDS+=	tex-esint-[0-9]*:../../fonts/tex-esint
 # depend etaremune
 # depend etextools
 # depend etoc
-DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 # depend eukdate
 # depend eulerpx
 DEPENDS+=	tex-europasscv-[0-9]*:../../print/tex-europasscv
@@ -395,6 +397,7 @@ DEPENDS+=	tex-excludeonly-[0-9]*:../../print/tex-excludeonly
 # depend fancytabs
 # depend fancytooltips
 # depend fcolumn
+# depend fetchcls
 # depend ffslides
 # depend fgruler
 # depend fibeamer
@@ -445,6 +448,7 @@ DEPENDS+=	tex-footnpag-[0-9]*:../../print/tex-footnpag
 # depend foreign
 DEPENDS+=	tex-forloop-[0-9]*:../../print/tex-forloop
 # depend formlett
+# depend forms16be
 # depend formular
 # depend fragments
 # depend frame
@@ -553,6 +557,7 @@ DEPENDS+=	tex-incgraph-[0-9]*:../../graphics/tex-incgraph
 # depend isodate
 # depend isodoc
 # depend isonums
+# depend isopt
 # depend isorot
 # depend isotope
 # depend issuulinks
@@ -574,6 +579,7 @@ DEPENDS+=	tex-kix-[0-9]*:../../print/tex-kix
 # depend koma-moderncvclassic
 # depend koma-script-sfs
 # depend komacv
+# depend komacv-rg
 # depend ktv-texdata
 # depend l3build
 # depend labbook
@@ -662,6 +668,7 @@ DEPENDS+=	tex-media9-[0-9]*:../../print/tex-media9
 # depend meetingmins
 # depend memexsupp
 # depend memory
+# depend mensa-tex
 # depend menu
 # depend menukeys
 # depend method
@@ -708,6 +715,7 @@ DEPENDS+=	tex-mparhack-[0-9]*:../../print/tex-mparhack
 # depend multidef
 # depend multienv
 # depend multiexpand
+# depend multilang
 DEPENDS+=	tex-multirow-[0-9]*:../../print/tex-multirow
 # depend mversion
 # depend mwe
@@ -746,13 +754,14 @@ DEPENDS+=	tex-nopageno-[0-9]*:../../print/tex-nopageno
 # depend normalcolor
 # depend notes
 # depend notespages
+# depend notestex
 DEPENDS+=	tex-notoccite-[0-9]*:../../print/tex-notoccite
 # depend nowidow
 # depend nox
 DEPENDS+=	tex-ntheorem-[0-9]*:../../print/tex-ntheorem
 # depend numberedblock
 # depend numname
-# depend numprint
+DEPENDS+=	tex-numprint-[0-9]*:../../print/tex-numprint
 # depend numspell
 # depend ocg-p
 # depend ocgx
@@ -800,6 +809,7 @@ DEPENDS+=	tex-pdfcomment-[0-9]*:../../print/tex-pdfcomment
 # depend pdfcprot
 # depend pdfmarginpar
 # depend pdfpagediff
+# depend pdfreview
 # depend pdfscreen
 # depend pdfslide
 # depend pdfsync
@@ -954,6 +964,7 @@ DEPENDS+=	tex-sidecap-[0-9]*:../../print/tex-sidecap
 DEPENDS+=	tex-snapshot-[0-9]*:../../print/tex-snapshot
 # depend snotez
 DEPENDS+=	tex-soul-[0-9]*:../../print/tex-soul
+# depend spark-otf
 # depend sparklines
 DEPENDS+=	tex-sphack-[0-9]*:../../print/tex-sphack
 # depend splitindex
@@ -1138,6 +1149,7 @@ DEPENDS+=	tex-xfor-[0-9]*:../../print/tex-xfor
 # depend xhfill
 DEPENDS+=	tex-xifthen-[0-9]*:../../devel/tex-xifthen
 # depend xint
+# depend xltabular
 # depend xmpincl
 # depend xnewcommand
 # depend xoptarg
