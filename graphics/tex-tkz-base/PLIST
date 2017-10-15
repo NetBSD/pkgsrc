@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2017/10/15 20:16:52 markd Exp $
+share/texmf-dist/tex/latex/tkz-base/tkz-base.cfg
+share/texmf-dist/tex/latex/tkz-base/tkz-base.sty
+share/texmf-dist/tex/latex/tkz-base/tkz-obj-marks.tex
+share/texmf-dist/tex/latex/tkz-base/tkz-obj-points.tex
+share/texmf-dist/tex/latex/tkz-base/tkz-obj-segments.tex
+share/texmf-dist/tex/latex/tkz-base/tkz-tools-arith.tex
+share/texmf-dist/tex/latex/tkz-base/tkz-tools-base.tex
+share/texmf-dist/tex/latex/tkz-base/tkz-tools-math.tex
+share/texmf-dist/tex/latex/tkz-base/tkz-tools-misc.tex
+share/texmf-dist/tex/latex/tkz-base/tkz-tools-obsolete.tex
+share/texmf-dist/tex/latex/tkz-base/tkz-tools-utilities.tex
