@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2017/10/15 20:16:52 markd Exp $
+share/texmf-dist/doc/latex/tkz-base/README
+share/texmf-dist/doc/latex/tkz-base/examples/Makefile
+share/texmf-dist/doc/latex/tkz-base/examples/info_base_tex.txt
+share/texmf-dist/doc/latex/tkz-base/examples/latex/tkzbase-tex.zip
+share/texmf-dist/doc/latex/tkz-base/examples/tkzbasepreamble.ltx
+share/texmf-dist/doc/latex/tkz-base/latex/TKZdoc.zip
+share/texmf-dist/doc/latex/tkz-base/tkz-base-screen.pdf
