@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2017/10/15 20:38:19 markd Exp $
+share/texmf-dist/doc/latex/ucharcat/README
+share/texmf-dist/doc/latex/ucharcat/ucharcat.pdf

@@ -1,0 +1,5 @@
+The package implements the \Ucharcat command for LuaLaTeX.
+\Ucharcat is a new primitive in XeTeX, an extension of the
+existing \Uchar command, that allows the specification of the
+catcode as well as character code of the character token being
+constructed.
