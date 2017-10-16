@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4479 2017/10/16 16:30:38 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.4480 2017/10/16 16:51:43 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6383,3 +6383,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/translate-shell to 0.9.6.5 [leot 2017-10-16]
 	Updated databases/pg_repack to 1.4.2 [fhajny 2017-10-16]
 	Added devel/ruby-bindata version 2.4.1 [minskim 2017-10-16]
+	Added net/ruby-ruby_smb version 0.0.18 [minskim 2017-10-16]
