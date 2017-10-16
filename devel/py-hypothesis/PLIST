@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2017/09/30 13:12:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/10/16 18:35:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -117,6 +117,9 @@ ${PYSITELIB}/hypothesis/internal/reflection.pyo
 ${PYSITELIB}/hypothesis/internal/renaming.py
 ${PYSITELIB}/hypothesis/internal/renaming.pyc
 ${PYSITELIB}/hypothesis/internal/renaming.pyo
+${PYSITELIB}/hypothesis/provisional.py
+${PYSITELIB}/hypothesis/provisional.pyc
+${PYSITELIB}/hypothesis/provisional.pyo
 ${PYSITELIB}/hypothesis/reporting.py
 ${PYSITELIB}/hypothesis/reporting.pyc
 ${PYSITELIB}/hypothesis/reporting.pyo
@@ -174,12 +177,6 @@ ${PYSITELIB}/hypothesis/statistics.pyo
 ${PYSITELIB}/hypothesis/strategies.py
 ${PYSITELIB}/hypothesis/strategies.pyc
 ${PYSITELIB}/hypothesis/strategies.pyo
-${PYSITELIB}/hypothesis/tools/__init__.py
-${PYSITELIB}/hypothesis/tools/__init__.pyc
-${PYSITELIB}/hypothesis/tools/__init__.pyo
-${PYSITELIB}/hypothesis/tools/mergedbs.py
-${PYSITELIB}/hypothesis/tools/mergedbs.pyc
-${PYSITELIB}/hypothesis/tools/mergedbs.pyo
 ${PYSITELIB}/hypothesis/types.py
 ${PYSITELIB}/hypothesis/types.pyc
 ${PYSITELIB}/hypothesis/types.pyo
