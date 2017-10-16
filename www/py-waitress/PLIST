@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/07/09 21:24:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/10/16 12:07:24 adam Exp $
 bin/waitress-serve${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -10,6 +10,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/waitress/__init__.py
 ${PYSITELIB}/waitress/__init__.pyc
 ${PYSITELIB}/waitress/__init__.pyo
+${PYSITELIB}/waitress/__main__.py
+${PYSITELIB}/waitress/__main__.pyc
+${PYSITELIB}/waitress/__main__.pyo
 ${PYSITELIB}/waitress/adjustments.py
 ${PYSITELIB}/waitress/adjustments.pyc
 ${PYSITELIB}/waitress/adjustments.pyo
