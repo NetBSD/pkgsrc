@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2017/06/24 08:07:14 adam Exp $
-${PLIST.py2x}bin/iptest2
-${PLIST.py3x}bin/iptest3
+@comment $NetBSD: PLIST,v 1.8 2017/10/16 18:03:49 adam Exp $
 bin/iptest${PYVERSSUFFIX}
-${PLIST.py2x}bin/ipython2
-${PLIST.py3x}bin/ipython3
+bin/iptest3
 bin/ipython${PYVERSSUFFIX}
+bin/ipython3
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/IPython/__init__.py
 ${PYSITELIB}/IPython/__init__.pyc
 ${PYSITELIB}/IPython/__init__.pyo
@@ -183,9 +182,6 @@ ${PYSITELIB}/IPython/core/pylabtools.pyo
 ${PYSITELIB}/IPython/core/release.py
 ${PYSITELIB}/IPython/core/release.pyc
 ${PYSITELIB}/IPython/core/release.pyo
-${PYSITELIB}/IPython/core/shadowns.py
-${PYSITELIB}/IPython/core/shadowns.pyc
-${PYSITELIB}/IPython/core/shadowns.pyo
 ${PYSITELIB}/IPython/core/shellapp.py
 ${PYSITELIB}/IPython/core/shellapp.pyc
 ${PYSITELIB}/IPython/core/shellapp.pyo
@@ -374,9 +370,6 @@ ${PYSITELIB}/IPython/external/decorators/_decorators.pyo
 ${PYSITELIB}/IPython/external/decorators/_numpy_testing_noseclasses.py
 ${PYSITELIB}/IPython/external/decorators/_numpy_testing_noseclasses.pyc
 ${PYSITELIB}/IPython/external/decorators/_numpy_testing_noseclasses.pyo
-${PYSITELIB}/IPython/external/decorators/_numpy_testing_utils.py
-${PYSITELIB}/IPython/external/decorators/_numpy_testing_utils.pyc
-${PYSITELIB}/IPython/external/decorators/_numpy_testing_utils.pyo
 ${PYSITELIB}/IPython/external/mathjax.py
 ${PYSITELIB}/IPython/external/mathjax.pyc
 ${PYSITELIB}/IPython/external/mathjax.pyo
@@ -712,9 +705,6 @@ ${PYSITELIB}/IPython/utils/PyColorize.pyo
 ${PYSITELIB}/IPython/utils/__init__.py
 ${PYSITELIB}/IPython/utils/__init__.pyc
 ${PYSITELIB}/IPython/utils/__init__.pyo
-${PYSITELIB}/IPython/utils/_get_terminal_size.py
-${PYSITELIB}/IPython/utils/_get_terminal_size.pyc
-${PYSITELIB}/IPython/utils/_get_terminal_size.pyo
 ${PYSITELIB}/IPython/utils/_process_cli.py
 ${PYSITELIB}/IPython/utils/_process_cli.pyc
 ${PYSITELIB}/IPython/utils/_process_cli.pyo
@@ -730,18 +720,9 @@ ${PYSITELIB}/IPython/utils/_process_win32.pyo
 ${PYSITELIB}/IPython/utils/_process_win32_controller.py
 ${PYSITELIB}/IPython/utils/_process_win32_controller.pyc
 ${PYSITELIB}/IPython/utils/_process_win32_controller.pyo
-${PYSITELIB}/IPython/utils/_signatures.py
-${PYSITELIB}/IPython/utils/_signatures.pyc
-${PYSITELIB}/IPython/utils/_signatures.pyo
 ${PYSITELIB}/IPython/utils/_sysinfo.py
 ${PYSITELIB}/IPython/utils/_sysinfo.pyc
 ${PYSITELIB}/IPython/utils/_sysinfo.pyo
-${PYSITELIB}/IPython/utils/_tokenize_py2.py
-${PYSITELIB}/IPython/utils/_tokenize_py2.pyc
-${PYSITELIB}/IPython/utils/_tokenize_py2.pyo
-${PYSITELIB}/IPython/utils/_tokenize_py3.py
-${PYSITELIB}/IPython/utils/_tokenize_py3.pyc
-${PYSITELIB}/IPython/utils/_tokenize_py3.pyo
 ${PYSITELIB}/IPython/utils/capture.py
 ${PYSITELIB}/IPython/utils/capture.pyc
 ${PYSITELIB}/IPython/utils/capture.pyo
@@ -814,9 +795,6 @@ ${PYSITELIB}/IPython/utils/process.pyo
 ${PYSITELIB}/IPython/utils/py3compat.py
 ${PYSITELIB}/IPython/utils/py3compat.pyc
 ${PYSITELIB}/IPython/utils/py3compat.pyo
-${PYSITELIB}/IPython/utils/rlineimpl.py
-${PYSITELIB}/IPython/utils/rlineimpl.pyc
-${PYSITELIB}/IPython/utils/rlineimpl.pyo
 ${PYSITELIB}/IPython/utils/sentinel.py
 ${PYSITELIB}/IPython/utils/sentinel.pyc
 ${PYSITELIB}/IPython/utils/sentinel.pyo
@@ -919,11 +897,7 @@ ${PYSITELIB}/IPython/utils/ulinecache.pyo
 ${PYSITELIB}/IPython/utils/version.py
 ${PYSITELIB}/IPython/utils/version.pyc
 ${PYSITELIB}/IPython/utils/version.pyo
-${PYSITELIB}/IPython/utils/warn.py
-${PYSITELIB}/IPython/utils/warn.pyc
-${PYSITELIB}/IPython/utils/warn.pyo
 ${PYSITELIB}/IPython/utils/wildcard.py
 ${PYSITELIB}/IPython/utils/wildcard.pyc
 ${PYSITELIB}/IPython/utils/wildcard.pyo
-${PYSITELIB}/${EGG_FILE}
 man/man1/ipython${PYVERSSUFFIX}.1
