@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2017/03/20 19:16:27 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2017/10/16 12:16:34 adam Exp $
 
 DISTNAME=	ipython_genutils-0.2.0
 PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython_genutils/}
 
 MAINTAINER=	minskim@NetBSD.org
