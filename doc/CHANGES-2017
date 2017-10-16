@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4481 2017/10/16 17:04:03 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4482 2017/10/16 17:05:24 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6386,3 +6386,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added net/ruby-ruby_smb version 0.0.18 [minskim 2017-10-16]
 	Added lang/py-parso version 0.1.0 [adam 2017-10-16]
 	Added editors/py-jedi version 0.11.0 [adam 2017-10-16]
+	Added security/ruby-bcrypt_pbkdf version 1.0.0 [minskim 2017-10-16]
