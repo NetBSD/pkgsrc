@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2017/07/18 13:44:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2017/10/16 17:20:38 adam Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
@@ -64,6 +64,9 @@ ${PYSITELIB}/setuptools/__init__.pyo
 ${PYSITELIB}/setuptools/archive_util.py
 ${PYSITELIB}/setuptools/archive_util.pyc
 ${PYSITELIB}/setuptools/archive_util.pyo
+${PYSITELIB}/setuptools/build_meta.py
+${PYSITELIB}/setuptools/build_meta.pyc
+${PYSITELIB}/setuptools/build_meta.pyo
 ${PYSITELIB}/setuptools/cli-32.exe
 ${PYSITELIB}/setuptools/cli-64.exe
 ${PYSITELIB}/setuptools/cli.exe
@@ -94,6 +97,9 @@ ${PYSITELIB}/setuptools/command/build_py.pyo
 ${PYSITELIB}/setuptools/command/develop.py
 ${PYSITELIB}/setuptools/command/develop.pyc
 ${PYSITELIB}/setuptools/command/develop.pyo
+${PYSITELIB}/setuptools/command/dist_info.py
+${PYSITELIB}/setuptools/command/dist_info.pyc
+${PYSITELIB}/setuptools/command/dist_info.pyo
 ${PYSITELIB}/setuptools/command/easy_install.py
 ${PYSITELIB}/setuptools/command/easy_install.pyc
 ${PYSITELIB}/setuptools/command/easy_install.pyo
