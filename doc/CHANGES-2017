@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4473 2017/10/16 10:26:54 maya Exp $
+$NetBSD: CHANGES-2017,v 1.4474 2017/10/16 10:36:54 markd Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6363,3 +6363,16 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/gtk3 to 3.22.24 [adam 2017-10-16]
 	Updated sysutils/py-diffoscope to 87 [adam 2017-10-16]
 	Updated net/wpa_supplicant to 2.6nb1 [maya 2017-10-16]
+	Updated devel/tex-latexbug-doc to 1.0c [markd 2017-10-16]
+	Updated devel/tex-latexbug to 1.0c [markd 2017-10-16]
+	Updated print/tex-babel-russian to 1.3j [markd 2017-10-16]
+	Updated print/tex-cellspace to 1.7 [markd 2017-10-16]
+	Updated print/tex-cellspace-doc to 1.7 [markd 2017-10-16]
+	Updated print/tex-pdfpages-doc to 0.5k [markd 2017-10-16]
+	Updated print/tex-pdfpages to 0.5k [markd 2017-10-16]
+	Updated print/tex-cweb to 3.70 [markd 2017-10-16]
+	Updated print/tex-cweb-doc to 3.70 [markd 2017-10-16]
+	Updated fonts/tex-newpx to 1.321 [markd 2017-10-16]
+	Updated fonts/tex-newpx-doc to 1.321 [markd 2017-10-16]
+	Updated graphics/tex-pst-barcode to 0.18 [markd 2017-10-16]
+	Updated graphics/tex-pst-barcode-doc to 0.18 [markd 2017-10-16]
