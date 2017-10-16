@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/03/17 21:30:35 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2017/10/16 12:14:29 adam Exp $
 
 DISTNAME=	line_profiler-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,10 +14,9 @@ DEPENDS+=	${PYPKGPREFIX}-ipython>0.13:../../devel/py-ipython
 
 USE_LANGUAGES=	c
 
-.include "../../lang/python/egg.mk"
-
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/kernprof \
-		${DESTDIR}${PREFIX}/bin/kernprof${PYVERSSUFFIX}
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${MV} kernprof kernprof${PYVERSSUFFIX} || ${TRUE}
 
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
