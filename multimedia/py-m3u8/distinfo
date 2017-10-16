@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/09/07 06:21:10 adam Exp $
+$NetBSD: distinfo,v 1.5 2017/10/16 10:48:49 adam Exp $
 
-SHA1 (m3u8-0.3.3.tar.gz) = 22c8fd406b2461ffeae3e6a08970048045a30ecc
-RMD160 (m3u8-0.3.3.tar.gz) = 88b565f9c50a67b7cf166afae829aff69f0fc553
-SHA512 (m3u8-0.3.3.tar.gz) = 85fa88713e26c4a25c30a686cf7b5cd10d5f8836b2b051ce0dffb4e6146c00d1586a2849b8b02c7f54ab8c9f86109c7ca8dfd73e521053f300c9e46ce21a7dca
-Size (m3u8-0.3.3.tar.gz) = 13616 bytes
+SHA1 (m3u8-0.3.4.tar.gz) = 9ae82e5ba71cc5e93f7474a30f07fc6f0b437f52
+RMD160 (m3u8-0.3.4.tar.gz) = 763dc2634da026abefe15407469b632d9565bb72
+SHA512 (m3u8-0.3.4.tar.gz) = a36b6e66fac3bb6af7451d80aa6deaf281f0992bbf088af2f9933c40f037320320c6d265c643a505f5e99b1940222d6c0991c21ee01492bfb48548cd94789913
+Size (m3u8-0.3.4.tar.gz) = 13672 bytes
