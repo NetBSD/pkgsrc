@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2017/10/06 06:22:05 adam Exp $
+# $NetBSD: Makefile,v 1.63 2017/10/16 18:55:59 jperkin Exp $
 #
 # When updating this package, make sure that no strings like
 # "PR 12345" are in the commit message. Upstream likes
@@ -36,7 +36,7 @@ CONFIGURE_ENV+=		ac_cv_path_RSYNC=/nonexistent
 .include "../../mk/compiler.mk"
 
 CFLAGS.SunOS+=	-D__EXTENSIONS__
-.if !empty(CC_VERSION:Mgcc-[7-9]*)
+.if !empty(CC_VERSION:Mgcc-[6-9]*)
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 .else
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1
