@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/07/07 08:51:16 adam Exp $
+$NetBSD: distinfo,v 1.4 2017/10/16 06:44:28 adam Exp $
 
-SHA1 (isodate-0.5.4.tar.gz) = 40ccf07a8e46284a79cfc4d41e151f71ae63f535
-RMD160 (isodate-0.5.4.tar.gz) = 8b483cedd72d92c3d0182a0d409672e1e21dc893
-SHA512 (isodate-0.5.4.tar.gz) = ef5fd27ffa61ad10abf499723c452fd8fd6c2f08a0d5aca6ead88857e5d159f50a3d01769b9fe0aed59a57b0f89a70b359135b0d7c5e6a75d023daa824e5d80a
-Size (isodate-0.5.4.tar.gz) = 27691 bytes
+SHA1 (isodate-0.6.0.tar.gz) = 2c69e08c9894a9cd96c627146463260f5731df62
+RMD160 (isodate-0.6.0.tar.gz) = caa3c15705b67d1e8fbcc18536643818affbb306
+SHA512 (isodate-0.6.0.tar.gz) = e977748e13ee2c94ab47bfc47113d152280e9acff6f70e773de73717392148dd2c111a7db2d9fa3679d37936c6ed9a23dc526cb00bd601df45459b6a244f9f7d
+Size (isodate-0.6.0.tar.gz) = 28480 bytes
