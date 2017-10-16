@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.466 2017/10/05 04:06:02 jnemeth Exp $
+# $NetBSD: Makefile,v 1.467 2017/10/16 17:01:50 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -180,6 +180,7 @@ SUBDIR+=	py-execjs
 SUBDIR+=	py-hy
 SUBDIR+=	py-js2py
 SUBDIR+=	py-jsparser
+SUBDIR+=	py-parso
 SUBDIR+=	py-pyrex
 SUBDIR+=	py-pythonz
 SUBDIR+=	py-six
