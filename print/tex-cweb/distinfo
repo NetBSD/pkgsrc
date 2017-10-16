@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/06/20 22:07:26 markd Exp $
+$NetBSD: distinfo,v 1.5 2017/10/16 10:23:04 markd Exp $
 
-SHA1 (tex-cweb-44166/cweb.tar.xz) = 14d451a74c8ad1251fd9bb9dffd416b695a971f2
-RMD160 (tex-cweb-44166/cweb.tar.xz) = 7062ff98c1d2f0792bb0c899b84747146a31a6e2
-SHA512 (tex-cweb-44166/cweb.tar.xz) = 2784e7a8602daaaf2af4c421bb62c675c360ca97608c8f96c5e8e96725138ba2efc586d41bfecad9c245bff314e08bfc420249c554c81c8c764889c8413aaffe
-Size (tex-cweb-44166/cweb.tar.xz) = 12896 bytes
+SHA1 (tex-cweb-45065/cweb.tar.xz) = 1f77207c23af6e525f92ec205b2b7edd4047c049
+RMD160 (tex-cweb-45065/cweb.tar.xz) = 2262ca053748c947e790b2db49b93eed3d45207f
+SHA512 (tex-cweb-45065/cweb.tar.xz) = 49340ea70bd235f7d5d00d4087b0e90518ffeb83782993134823def6383f6e96d41d9ae6dfc5b85fe1fbfcf8f2944489dfd6167f3dc77bfcf0c5678c3356e617
+Size (tex-cweb-45065/cweb.tar.xz) = 12920 bytes
