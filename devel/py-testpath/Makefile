@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2017/04/23 05:04:02 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/10/16 17:14:10 adam Exp $
 
-DISTNAME=	testpath-0.3
+DISTNAME=	testpath-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=jupyter/}
-GITHUB_PROJECT=	testpath
+CATEGORIES=	devel python
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/testpath/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jupyter/testpath
@@ -13,12 +12,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-NO_BUILD=	yes
-PY_PATCHPLIST=	yes
+post-extract:
+	${RM} ${WRKSRC}/testpath/cli-*.exe
 
-do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${PYSITELIB}/testpath
-	${INSTALL_DATA} ${WRKSRC}/testpath/*.py ${DESTDIR}${PREFIX}/${PYSITELIB}/testpath/
-
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

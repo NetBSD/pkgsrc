@@ -1,6 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/23 05:04:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/10/16 17:14:10 adam Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/testpath/__init__.py
+${PYSITELIB}/testpath/__init__.pyc
+${PYSITELIB}/testpath/__init__.pyo
 ${PYSITELIB}/testpath/asserts.py
+${PYSITELIB}/testpath/asserts.pyc
+${PYSITELIB}/testpath/asserts.pyo
 ${PYSITELIB}/testpath/commands.py
+${PYSITELIB}/testpath/commands.pyc
+${PYSITELIB}/testpath/commands.pyo
 ${PYSITELIB}/testpath/env.py
+${PYSITELIB}/testpath/env.pyc
+${PYSITELIB}/testpath/env.pyo
 ${PYSITELIB}/testpath/tempdir.py
+${PYSITELIB}/testpath/tempdir.pyc
+${PYSITELIB}/testpath/tempdir.pyo
