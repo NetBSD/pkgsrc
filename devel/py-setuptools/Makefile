@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.139 2017/09/17 09:55:59 adam Exp $
+# $NetBSD: Makefile,v 1.140 2017/10/16 17:20:38 adam Exp $
 
-DISTNAME=	setuptools-36.5.0
+DISTNAME=	setuptools-36.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
@@ -22,11 +22,6 @@ DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 REPLACE_PYTHON+=	setuptools/command/easy_install.py
 
 PYSETUPTESTTARGET=	pytest
-
-# upstream often forgets deleting files, and packages on Windows,
-# so permissions are usually wrong
-post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info/*.orig
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
