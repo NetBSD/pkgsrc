@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/10/16 08:38:27 jaapb Exp $
+
+SHA1 (configurator-0.9.1.tar.gz) = acbc6517596493bd976405476a1883048b76a26e
+RMD160 (configurator-0.9.1.tar.gz) = 17fe5e5ac2c5e30fbcdb05c8d1ccc4e05acbec9f
+SHA512 (configurator-0.9.1.tar.gz) = 43d864d3317241dd66829747dd956ac42614cc687bbca23e2575cb1b3ab9d0c628dfbdd8f026bcd4d76cb87cf282d955d6a90f0e69543ee1ee1f01a1efa9b54b
+Size (configurator-0.9.1.tar.gz) = 10231 bytes
