@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/06/20 22:07:26 markd Exp $
+# $NetBSD: Makefile,v 1.4 2017/10/16 10:23:04 markd Exp $
 
 DISTNAME=	cweb
-PKGNAME=	tex-${DISTNAME}-3.64b
-TEXLIVE_REV=	44166
+PKGNAME=	tex-${DISTNAME}-3.70
+TEXLIVE_REV=	45065
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/cweb
