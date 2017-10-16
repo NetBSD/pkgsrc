@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/10/16 17:02:14 adam Exp $
+
+SHA1 (parso-0.1.0.tar.gz) = c22a0b97443810af0b45e24bf0424f1bd7583800
+RMD160 (parso-0.1.0.tar.gz) = a01b2e40ee094cd55054ce93c7a9dbeb0a839d92
+SHA512 (parso-0.1.0.tar.gz) = e0ab487c717324e03ec4ef57c34268973410f34fecb30786b889c174e8867c304aba1257ee7ed09e1334718680ef931f7ee0e55ce71444c1004eeb1cd5e59ef4
+Size (parso-0.1.0.tar.gz) = 378813 bytes
