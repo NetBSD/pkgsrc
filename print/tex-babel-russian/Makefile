@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2017/06/20 21:01:17 markd Exp $
+# $NetBSD: Makefile,v 1.5 2017/10/16 08:51:03 markd Exp $
 
 DISTNAME=	babel-russian
-PKGNAME=	tex-${DISTNAME}-1.3i
-TEXLIVE_REV=	42885
+PKGNAME=	tex-${DISTNAME}-1.3j
+TEXLIVE_REV=	45007
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/babel-russian
