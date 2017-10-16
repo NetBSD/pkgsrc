@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.1 2017/09/03 18:12:18 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/10/16 14:13:14 leot Exp $
 
-DISTNAME=	translate-shell-0.9.6.4
+DISTNAME=	translate-shell-0.9.6.5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=soimort/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://www.soimort.org/translate-shell/
 COMMENT=	Command-line translator
 LICENSE=	unlicense
 
-WRKSRC=		${WRKDIR}/translate-shell-${PKGVERSION_NOREV}
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:run gawk:run
 
