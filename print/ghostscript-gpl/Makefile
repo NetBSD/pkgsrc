@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2017/08/01 14:59:04 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2017/10/16 15:47:01 jperkin Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-gpl/}
@@ -75,7 +75,7 @@ CONFIGURE_ENV.HPUX+=	ac_cv_func_fopen64=no
 CFLAGS+=		-fPIC
 .endif
 
-.if ${OPSYS} == "SunOS" && !empty(CC_VERSION:Mgcc-[7-9]*)
+.if ${OPSYS} == "SunOS" && !empty(CC_VERSION:Mgcc-[6-9]*)
 CPPFLAGS+=		-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 .endif
 
