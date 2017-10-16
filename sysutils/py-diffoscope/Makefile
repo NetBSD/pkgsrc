@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/12/13 15:44:59 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2017/10/16 09:53:42 adam Exp $
 
-DISTNAME=	diffoscope-63
+DISTNAME=	diffoscope-87
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	sysutils
+CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/diffoscope/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,9 +17,8 @@ DEPENDS+=	colordiff-[0-9]*:../../devel/colordiff
 # for xxd
 DEPENDS+=	vim-[0-9]*:../../editors/vim
 
-USE_TOOLS+=	gtar:run xz:run bzip2:run
-
-USE_LANGUAGES=		# none
+USE_LANGUAGES=	# none
+USE_TOOLS+=	bzip2:run gtar:run xz:run
 
 SUBST_CLASSES+=		gtar
 SUBST_SED.gtar+=	-e "s,'tar,'gtar,"
@@ -31,7 +30,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} diffoscope diffoscope-${PYVERSSUFFIX}
+		${MV} diffoscope diffoscope-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
