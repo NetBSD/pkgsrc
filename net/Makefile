@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1185 2017/10/09 08:31:30 wiz Exp $
+# $NetBSD: Makefile,v 1.1186 2017/10/16 16:51:29 minskim Exp $
 #
 
 COMMENT=	Networking tools
@@ -733,6 +733,7 @@ SUBDIR+=	ruby-pluggaloid
 SUBDIR+=	ruby-proxifier
 SUBDIR+=	ruby-public_suffix
 SUBDIR+=	ruby-recog
+SUBDIR+=	ruby-ruby_smb
 SUBDIR+=	ruby-rubytter
 SUBDIR+=	ruby-slack-api
 SUBDIR+=	ruby-snmp
