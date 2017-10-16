@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.213 2017/09/04 20:31:41 wiz Exp $
+# $NetBSD: Makefile,v 1.214 2017/10/16 15:35:41 jperkin Exp $
 
 DISTNAME=	netpbm-10.79.04
 CATEGORIES=	graphics
@@ -69,7 +69,7 @@ MAKE_FLAGS+=	NETWORKLD="-lsocket -lresolv"
 .include "../../mk/compiler.mk"
 
 # Ridiculous but they hardcode it in every file so we have no choice.
-.if ${OPSYS} == "SunOS" && !empty(CC_VERSION:Mgcc-[7-9]*)
+.if ${OPSYS} == "SunOS" && !empty(CC_VERSION:Mgcc-[6-9]*)
 SUBST_CLASSES+=		xopen
 SUBST_STAGE.xopen=	pre-configure
 SUBST_FILES.xopen=	*.c */*.c */*/*.c */*/*/*.c */*/*/*/*.c */*/*/*/*/*.c
