@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2017/07/30 22:47:49 wiz Exp $
+# $NetBSD: Makefile,v 1.136 2017/10/16 18:46:55 jperkin Exp $
 #
 
 DISTNAME=	libgnomeui-2.24.5
@@ -24,7 +24,7 @@ PKGCONFIG_OVERRIDE=	${PKGCONFIG_BASE}.in
 
 .include "../../mk/compiler.mk"
 
-.if ${OPSYS} == "SunOS" && !empty(CC_VERSION:Mgcc-[7-9]*)
+.if ${OPSYS} == "SunOS" && !empty(CC_VERSION:Mgcc-[6-9]*)
 SUBST_CLASSES+=		xopen
 SUBST_STAGE.xopen=	pre-configure
 SUBST_FILES.xopen=	libgnomeui/gnome-file-entry.c libgnomeui/gnome-client.c
