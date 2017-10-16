@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/10/16 17:19:13 minskim Exp $
+
+SHA1 (rbnacl-4.0.2.gem) = f7287624e7a7cce2604f61911d0ef16ae23d9ce9
+RMD160 (rbnacl-4.0.2.gem) = e5724b5bf8cf3de9be51f0f1f3326d6ad4296023
+SHA512 (rbnacl-4.0.2.gem) = d13d36e4248d5e40bb5d9496e08823438d312c16d14e3068be89a62dd7f80ec7f99fa5995752b183656b6ae863af77645b16ce45d05a74ad0dfbd4a93c8854d4
+Size (rbnacl-4.0.2.gem) = 220160 bytes
