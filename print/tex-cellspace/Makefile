@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2016/01/30 03:26:10 markd Exp $
+# $NetBSD: Makefile,v 1.3 2017/10/16 08:59:02 markd Exp $
 
 DISTNAME=	cellspace
-PKGNAME=	tex-${DISTNAME}-1.6
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-1.7
+TEXLIVE_REV=	45034
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/cellspace
 COMMENT=	Ensure minimal spacing of table cells
 LICENSE=	lppl-1.3c
 
