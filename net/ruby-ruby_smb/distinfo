@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/10/16 16:50:55 minskim Exp $
+
+SHA1 (ruby_smb-0.0.18.gem) = c06d476c644cc1f4277c7f29db85e51a00aab624
+RMD160 (ruby_smb-0.0.18.gem) = d14eba684ebc2bff570a7b9dd55b6a2f99302a7d
+SHA512 (ruby_smb-0.0.18.gem) = 1700e1730fde8d5007c224bedfbdf6f258217a04060326d78e200833b349771d7f617878a034c40a3067957720b601f1a2ee6d0a3a7333a376c355003641bf30
+Size (ruby_smb-0.0.18.gem) = 76800 bytes
