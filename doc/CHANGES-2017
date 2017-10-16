@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4483 2017/10/16 17:20:29 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.4484 2017/10/16 17:21:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6388,3 +6388,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added editors/py-jedi version 0.11.0 [adam 2017-10-16]
 	Added security/ruby-bcrypt_pbkdf version 1.0.0 [minskim 2017-10-16]
 	Added security/ruby-rbnacl version 4.0.2 [minskim 2017-10-16]
+	Updated devel/py-testpath to 0.3.1 [adam 2017-10-16]
+	Updated devel/py-setuptools to 36.6.0 [adam 2017-10-16]
