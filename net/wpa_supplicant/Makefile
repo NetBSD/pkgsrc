@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2016/11/16 15:07:34 maya Exp $
+# $NetBSD: Makefile,v 1.18 2017/10/16 10:26:21 maya Exp $
 #
 
 DISTNAME=	wpa_supplicant-2.6
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://hostap.epitest.fi/releases/
 
