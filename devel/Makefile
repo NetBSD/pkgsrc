@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2554 2017/10/16 18:10:41 adam Exp $
+# $NetBSD: Makefile,v 1.2555 2017/10/17 18:44:14 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -1956,7 +1956,6 @@ SUBDIR+=	py-ipaddr
 SUBDIR+=	py-ipykernel
 SUBDIR+=	py-ipython
 SUBDIR+=	py-ipython010
-SUBDIR+=	py-ipython1
 SUBDIR+=	py-ipython5
 SUBDIR+=	py-ipython_genutils
 SUBDIR+=	py-iso-639
