@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/10/16 09:53:42 adam Exp $
+# $NetBSD: Makefile,v 1.5 2017/10/17 08:35:34 wiz Exp $
 
 DISTNAME=	diffoscope-87
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,7 +26,7 @@ SUBST_FILES.gtar+=	diffoscope/comparators/tar.py tests/comparators/test_utils.py
 SUBST_MESSAGE.gtar=	Fix path to gtar.
 SUBST_STAGE.gtar=	post-configure
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 34
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
