@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2017/10/17 08:42:30 bouyer Exp $
+# $NetBSD: Makefile,v 1.7 2017/10/17 11:02:06 wiz Exp $
 
 VERSION=	4.8.2
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel48-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://downloads.xenproject.org/release/xen/${VERSION}/
 DIST_SUBDIR=	xen48
