@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2017/08/20 12:38:02 fhajny Exp $
+$NetBSD: distinfo,v 1.8 2017/10/17 14:52:43 fhajny Exp $
 
-SHA1 (esip-1.0.15.tar.gz) = c47e445521570d6c3def5a0b6c3669593eaa85db
-RMD160 (esip-1.0.15.tar.gz) = 57c3b8a7acacc23354b3ddd5c468b9de7f5f710a
-SHA512 (esip-1.0.15.tar.gz) = 302555bc1191d858ebcc178c0ba8bd71fa74d83601037d85a472c948664cb4ef8762e09b2587a8f420ccf1b0f21eeecd9b2fcd8b49375186363227bc1eefb675
-Size (esip-1.0.15.tar.gz) = 84870 bytes
-SHA1 (patch-rebar.config) = 5be1d018e6ce92e5f3a74b51459582fc19adbbdd
+SHA1 (esip-1.0.16.tar.gz) = e79b575f697c83885521d778d1a2212c5ff64d95
+RMD160 (esip-1.0.16.tar.gz) = 6acf07e6515ba549879c163c0c10709420e3d01a
+SHA512 (esip-1.0.16.tar.gz) = 9000d48154685bee82d6ad905fe44fcc02a1ed0aacf34d652f395af75facb98720b07596c52a56fcaa5916c981d13bf3d6530553627919c2ed5613ef28761a6e
+Size (esip-1.0.16.tar.gz) = 85555 bytes
+SHA1 (patch-rebar.config) = 213ccfbcd8a03ce304e13f77cb8039638a933539
