@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4526 2017/10/17 18:18:13 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.4527 2017/10/17 18:34:22 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6437,3 +6437,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated chat/ejabberd to 17.09 [fhajny 2017-10-17]
 	Added graphics/erlang-eimp version 1.0.1 [fhajny 2017-10-17]
 	Added security/ruby-nexpose version 7.1.1 [minskim 2017-10-17]
+	Added security/ruby-nessus_rest version 0.1.6 [minskim 2017-10-17]
