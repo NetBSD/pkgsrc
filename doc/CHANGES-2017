@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4527 2017/10/17 18:34:22 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.4528 2017/10/17 18:47:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6438,3 +6438,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Added graphics/erlang-eimp version 1.0.1 [fhajny 2017-10-17]
 	Added security/ruby-nexpose version 7.1.1 [minskim 2017-10-17]
 	Added security/ruby-nessus_rest version 0.1.6 [minskim 2017-10-17]
+	Updated devel/py-entrypoints to 0.2.3 [adam 2017-10-17]
+	Updated www/py-nbformat to 4.4.0 [adam 2017-10-17]
+	Updated www/py-nbconvert to 5.3.1 [adam 2017-10-17]
+	Removed devel/py-ipython1 successor devel/py-ipython [adam 2017-10-17]
+	Updated fonts/py-fonttools to 3.17.0 [adam 2017-10-17]
