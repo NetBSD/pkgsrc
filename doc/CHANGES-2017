@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4511 2017/10/17 14:02:03 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4512 2017/10/17 14:04:08 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6422,3 +6422,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/libfastjson to 0.99.7 [fhajny 2017-10-17]
 	Updated multimedia/adobe-flash-player to 27.0.0.170 [tsutsui 2017-10-17]
 	Updated misc/erlang-p1_utils to 1.0.10 [fhajny 2017-10-17]
+	Updated devel/erlang-cache_tab to 1.0.11 [fhajny 2017-10-17]
