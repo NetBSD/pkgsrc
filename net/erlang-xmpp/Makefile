@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/08/20 12:28:37 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2017/10/17 14:53:22 fhajny Exp $
 
-DISTNAME=	xmpp-1.1.14
+DISTNAME=	xmpp-1.1.15
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -9,9 +9,9 @@ HOMEPAGE=	https://github.com/processone/xmpp/
 COMMENT=	XMPP parsing and serialization library on top of Fast XML
 LICENSE=	apache-2.0
 
-DEPENDS+=	erlang-fast_xml>=1.1.23:../../textproc/erlang-fast_xml
-DEPENDS+=	erlang-stringprep>=1.0.9:../../textproc/erlang-stringprep
-DEPENDS+=	erlang-p1_utils>=1.0.9:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-fast_xml>=1.1.24:../../textproc/erlang-fast_xml
+DEPENDS+=	erlang-stringprep>=1.0.10:../../textproc/erlang-stringprep
+DEPENDS+=	erlang-p1_utils>=1.0.10:../../misc/erlang-p1_utils
 
 GITHUB_PROJECT=	xmpp
 
