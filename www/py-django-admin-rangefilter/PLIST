@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2017/10/17 06:56:12 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/rangefilter/__init__.py
+${PYSITELIB}/rangefilter/__init__.pyc
+${PYSITELIB}/rangefilter/__init__.pyo
+${PYSITELIB}/rangefilter/apps.py
+${PYSITELIB}/rangefilter/apps.pyc
+${PYSITELIB}/rangefilter/apps.pyo
+${PYSITELIB}/rangefilter/filter.py
+${PYSITELIB}/rangefilter/filter.pyc
+${PYSITELIB}/rangefilter/filter.pyo
+${PYSITELIB}/rangefilter/models.py
+${PYSITELIB}/rangefilter/models.pyc
+${PYSITELIB}/rangefilter/models.pyo
+${PYSITELIB}/rangefilter/templates/rangefilter/date_filter.html
+${PYSITELIB}/rangefilter/templates/rangefilter/date_filter_1_8.html
+${PYSITELIB}/rangefilter/tests.py
+${PYSITELIB}/rangefilter/tests.pyc
+${PYSITELIB}/rangefilter/tests.pyo
