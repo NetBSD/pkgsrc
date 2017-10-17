@@ -1,22 +1,20 @@
-@comment $NetBSD: PLIST,v 1.13 2014/02/20 19:05:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2017/10/17 08:34:24 wiz Exp $
 include/gtkspell-2.0/gtkspell/gtkspell.h
 lib/libgtkspell.la
 lib/pkgconfig/gtkspell-2.0.pc
 share/gtk-doc/html/gtkspell/chapter-tutorial.html
 share/gtk-doc/html/gtkspell/gtkspell-gtkspell.html
+share/gtk-doc/html/gtkspell/gtkspell.devhelp
 share/gtk-doc/html/gtkspell/gtkspell.devhelp2
 share/gtk-doc/html/gtkspell/home.png
 share/gtk-doc/html/gtkspell/index.html
 share/gtk-doc/html/gtkspell/index.sgml
-share/gtk-doc/html/gtkspell/left-insensitive.png
 share/gtk-doc/html/gtkspell/left.png
 share/gtk-doc/html/gtkspell/reference.html
-share/gtk-doc/html/gtkspell/right-insensitive.png
 share/gtk-doc/html/gtkspell/right.png
 share/gtk-doc/html/gtkspell/style.css
 share/gtk-doc/html/gtkspell/tutorial-building.html
 share/gtk-doc/html/gtkspell/tutorial.html
-share/gtk-doc/html/gtkspell/up-insensitive.png
 share/gtk-doc/html/gtkspell/up.png
 share/locale/af/LC_MESSAGES/gtkspell.mo
 share/locale/be/LC_MESSAGES/gtkspell.mo
