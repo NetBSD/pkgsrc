@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.8 2017/08/23 02:38:38 maya Exp $
+$NetBSD: distinfo,v 1.8.4.1 2017/10/17 19:17:50 bsiegert Exp $
 
 SHA1 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = fecadf952821e830ce1a1d19655288eef8488f88
 RMD160 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = 539bfa12db7054228250d6dd380bbf96c1a040f8
 SHA512 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = c5cb1cdff40d2d71fd3e692a9d0efadf2aa17290daf5195391a1c81ddd9dfc913a8e44d5be2b12be85b2a5565ea31631c99c7053564f2fb2225c80ea0bb0e4a4
 Size (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = 2867999 bytes
-SHA1 (xen-4.6.5.tar.gz) = af371af662211ee1480167b6c9e35142156f3a8d
-RMD160 (xen-4.6.5.tar.gz) = 3f2468d7d3715d14842ac57b2180118ef48e93fa
-SHA512 (xen-4.6.5.tar.gz) = d3e1b16fa9d695a5fc28ca4375b8de3dfcab480437d4d0151972d9f286528c9f667841e7a6888c918c580371d6984658a8d3b92235553c8c9c052d93154547b5
-Size (xen-4.6.5.tar.gz) = 19712756 bytes
+SHA1 (xen-4.6.6.tar.gz) = 82f39ef4bf754ffd679ab5d15709bc34a98fccb7
+RMD160 (xen-4.6.6.tar.gz) = 6412f75183647172d72597e8779235b60e1c00f3
+SHA512 (xen-4.6.6.tar.gz) = 4683fe6c44dce3a6f9ff410d026f39094ccd6937ea0052f08ef5e066172ee840548322654cc15d7ded9f5bce10d43b5e46f6a04f16ef3c03ea3ba2cc2f7724ec
+Size (xen-4.6.6.tar.gz) = 19725113 bytes
 SHA1 (patch-.._.._ipxe_src_core_settings.c) = 9e053e5e9936f49c46af0d59382a67d5f28cb39d
 SHA1 (patch-.._.._ipxe_src_interface_efi_efi_snp.c) = 7cd8a2d2dbeff55624b5d3461d22cd8331221762
 SHA1 (patch-.._.._ipxe_src_net_fcels.c) = 7c13c87af5e38233f8b867503789f536394e7005
@@ -20,8 +20,9 @@ SHA1 (patch-.._docs_man_xlcpupool.cfg.pod.5) = b44813af965e4d9d0d51c18b22d286736
 SHA1 (patch-.._docs_misc_xl-disk-configuration.txt) = 5b59cfc2569d1a4c10d6c0fcb98ed35278723b79
 SHA1 (patch-Makefile) = 87defa487fcc7ba36fada41a7347e2f969f59045
 SHA1 (patch-Rules.mk) = ec0af52c494718204f15adac30ddd06713ff572c
-SHA1 (patch-XSA-211-1) = 432d65327e1ebe3d3317ac5f42f3912bb23d08ca
-SHA1 (patch-XSA-211-2) = fbcff5e2d8947dbaed95c241e76b94219576b834
+SHA1 (patch-XSA228) = 746ebc0636e141be4891b632660db835b2f9b039
+SHA1 (patch-XSA233) = dc01c99933f7a5c67394531618cdea810fbd7c26
+SHA1 (patch-XSA240) = 26c0fc28f5f74f907e0082ec9f8bbe8ec6e22c5a
 SHA1 (patch-configure) = a58d149de07613fb03444234278778a6a24b9b26
 SHA1 (patch-console_daemon_utils.c) = 915078ce6155a367e3e597fa7ab551f6afac083f
 SHA1 (patch-examples_Makefile) = 5fe7bb876d254cf0c4f774ed0f08dcaea5b355ff
