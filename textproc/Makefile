@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.964 2017/09/29 21:20:46 joerg Exp $
+# $NetBSD: Makefile,v 1.965 2017/10/17 11:34:36 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -732,6 +732,7 @@ SUBDIR+=	py-cssutils
 SUBDIR+=	py-deepdiff
 SUBDIR+=	py-defusedxml
 SUBDIR+=	py-dicttoxml
+SUBDIR+=	py-diff-match-patch
 SUBDIR+=	py-docutils
 SUBDIR+=	py-docx
 SUBDIR+=	py-ejson
