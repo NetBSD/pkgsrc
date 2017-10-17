@@ -1,2 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/23 05:13:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/10/17 18:06:44 adam Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/entrypoints.py
+${PYSITELIB}/entrypoints.pyc
+${PYSITELIB}/entrypoints.pyo
