@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.773 2017/10/15 20:34:22 markd Exp $
+# $NetBSD: Makefile,v 1.774 2017/10/17 15:10:19 fhajny Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -90,6 +90,7 @@ SUBDIR+=	eog-plugins-map
 SUBDIR+=	eog3
 SUBDIR+=	eom
 SUBDIR+=	epeg
+SUBDIR+=	erlang-eimp
 SUBDIR+=	evas
 SUBDIR+=	evas-buffer
 SUBDIR+=	evas-edb
