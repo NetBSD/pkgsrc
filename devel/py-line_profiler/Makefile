@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/10/16 12:14:29 adam Exp $
+# $NetBSD: Makefile,v 1.3 2017/10/17 18:37:22 adam Exp $
 
 DISTNAME=	line_profiler-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,13 +10,14 @@ HOMEPAGE=	https://github.com/rkern/line_profiler
 COMMENT=	Python line-by-line profiler
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-ipython>0.13:../../devel/py-ipython
-
 USE_LANGUAGES=	c
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 		${MV} kernprof kernprof${PYVERSSUFFIX} || ${TRUE}
 
+PYTHON_VERSIONED_DEPENDENCIES=	ipython
+
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
