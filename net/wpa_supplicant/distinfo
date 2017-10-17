@@ -1,7 +1,18 @@
-$NetBSD: distinfo,v 1.9 2016/11/16 15:07:34 maya Exp $
+$NetBSD: distinfo,v 1.9.10.1 2017/10/17 05:47:37 spz Exp $
 
 SHA1 (wpa_supplicant-2.6.tar.gz) = 8189704e257c3e9f8300c49dc6e49a381b1d6299
 RMD160 (wpa_supplicant-2.6.tar.gz) = 2fb26394d22ac3acde2d9d7c6543af8eaac9c55a
 SHA512 (wpa_supplicant-2.6.tar.gz) = 46442cddb6ca043b8b08d143908f149954c238e0f3a57a0df73ca4fab9c1acd91b078f3f26375a1d99cd1d65625986328018c735d8705882c8f91e389cad28a6
 Size (wpa_supplicant-2.6.tar.gz) = 2753524 bytes
 SHA1 (patch-aa) = 998ba9cc4ef9ebd0b629a6368957da0f1159dda0
+SHA1 (patch-src_ap_ieee802__11.c) = 8edce32847c55e0ac49b395b2aa5f370c6055bd5
+SHA1 (patch-src_ap_wpa__auth.c) = 2631770dfe42fba748ab4be4174998fff30e1f24
+SHA1 (patch-src_ap_wpa__auth.h) = 8e44f75449e656a710747a8cd581ff9d05c5eff6
+SHA1 (patch-src_ap_wpa__auth__ft.c) = ed4a15b05c46bb88ce9bf597c65088311fa47852
+SHA1 (patch-src_ap_wpa__auth__i.h) = f33a5214d0c8071f7eed9dd5fd67b6b32f0e856c
+SHA1 (patch-src_common_wpa__common.h) = 853adbcf1749d7ccd80feeb4aa6aa8ba8ac0a7e8
+SHA1 (patch-src_rsn__supp_tdls.c) = b695b8096661894e8e473ccb09386c33a8353a45
+SHA1 (patch-src_rsn__supp_wpa.c) = 4a4d966e68481eef76e7323e3d69c4c5bf8e6432
+SHA1 (patch-src_rsn__supp_wpa__ft.c) = c48b83ee5e10289d21ac3310ab92684dc69bdced
+SHA1 (patch-src_rsn__supp_wpa__i.h) = f2c9260cf6bdf59493f9870fbedc0d4e0881b641
+SHA1 (patch-wpa__supplicant_wnm__sta.c) = 818b9fcabeac9d3c6ced075a5a804b34c0d56774
