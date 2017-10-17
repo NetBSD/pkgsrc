@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4519 2017/10/17 14:51:01 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4520 2017/10/17 14:51:26 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6430,3 +6430,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/erlang-fast_yaml to 1.0.11 [fhajny 2017-10-17]
 	Updated converters/erlang-iconv to 1.0.6 [fhajny 2017-10-17]
 	Updated databases/erlang-p1_mysql to 1.0.4 [fhajny 2017-10-17]
+	Updated databases/erlang-p1_pgsql to 1.1.4 [fhajny 2017-10-17]
