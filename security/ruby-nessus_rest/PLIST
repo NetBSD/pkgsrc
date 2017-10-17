@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2017/10/17 18:33:09 minskim Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/examples/backup-reports.rb
+${GEM_LIBDIR}/examples/serial-scan.rb
+${GEM_LIBDIR}/examples/simple.rb
+${GEM_LIBDIR}/lib/nessus_rest.rb
+${GEM_LIBDIR}/nessus_rest.gemspec
+${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/test_nessus_rest.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
