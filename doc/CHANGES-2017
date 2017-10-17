@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4496 2017/10/17 09:39:39 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4497 2017/10/17 09:40:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6405,3 +6405,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Term-Table to 0.012 [wiz 2017-10-17]
 	Updated devel/p5-List-MoreUtils to 0.426 [wiz 2017-10-17]
 	Updated devel/p5-Test-Simple to 1.302101 [wiz 2017-10-17]
+	Updated devel/p5-UNIVERSAL-isa to 1.20171012 [wiz 2017-10-17]
