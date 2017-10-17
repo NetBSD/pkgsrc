@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4525 2017/10/17 15:09:33 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4526 2017/10/17 18:18:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6436,3 +6436,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/erlang-xmpp to 1.1.15 [fhajny 2017-10-17]
 	Updated chat/ejabberd to 17.09 [fhajny 2017-10-17]
 	Added graphics/erlang-eimp version 1.0.1 [fhajny 2017-10-17]
+	Added security/ruby-nexpose version 7.1.1 [minskim 2017-10-17]
