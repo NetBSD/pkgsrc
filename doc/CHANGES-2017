@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4501 2017/10/17 10:48:31 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4502 2017/10/17 10:58:47 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6410,3 +6410,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/p5-CryptX to 0.054 [wiz 2017-10-17]
 	Updated www/p5-Mojolicious to 7.47 [wiz 2017-10-17]
 	Updated net/glib-networking to 2.54.0 [wiz 2017-10-17]
+	Updated sysutils/xenkernel46 to 4.6.6nb1 [bouyer 2017-10-17]
+	Updated sysutils/xentools46 to 4.6.6nb1 [bouyer 2017-10-17]
+	Updated sysutils/xenstoretools to 4.6.6 [bouyer 2017-10-17]
