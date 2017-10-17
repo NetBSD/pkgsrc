@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.17 2017/09/08 22:18:46 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.18 2017/10/17 09:42:52 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -143,6 +143,7 @@ OCAML_USE_OPAM?=	no
 # Configure stuff for OPAM
 .if ${OCAML_USE_OPAM} == "yes"
 .include "../../misc/ocaml-opam/buildlink3.mk"
+OCAML_USE_FINDLIB=	yes
 .endif
 
 # Configure stuff for TOPKG
