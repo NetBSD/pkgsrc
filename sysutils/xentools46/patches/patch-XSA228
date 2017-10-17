@@ -1,0 +1,65 @@
+$NetBSD: patch-XSA228,v 1.1 2017/10/17 10:57:34 bouyer Exp $
+
+From cb91f4c43bd4158daa6561c73921a6455176f278 Mon Sep 17 00:00:00 2001
+From: Jan Beulich <jbeulich@suse.com>
+Date: Mon, 31 Jul 2017 15:17:56 +0100
+Subject: [PATCH] gnttab: split maptrack lock to make it fulfill its purpose
+ again
+
+The way the lock is currently being used in get_maptrack_handle(), it
+protects only the maptrack limit: The function acts on current's list
+only, so races on list accesses are impossible even without the lock.
+
+Otoh list access races are possible between __get_maptrack_handle() and
+put_maptrack_handle(), due to the invocation of the former for other
+than current from steal_maptrack_handle(). Introduce a per-vCPU lock
+for list accesses to become race free again. This lock will be
+uncontended except when it becomes necessary to take the steal path,
+i.e. in the common case there should be no meaningful performance
+impact.
+
+When in get_maptrack_handle adds a stolen entry to a fresh, empty,
+freelist, we think that there is probably no concurrency.  However,
+this is not a fast path and adding the locking there makes the code
+clearly correct.
+
+Also, while we are here: the stolen maptrack_entry's tail pointer was
+not properly set.  Set it.
+
+This is XSA-228.
+
+Reported-by: Ian Jackson <ian.jackson@eu.citrix.com>
+Signed-off-by: Jan Beulich <jbeulich@suse.com>
+Signed-off-by: Ian Jackson <Ian.Jackson@eu.citrix.com>
+---
+ docs/misc/grant-tables.txt    |  7 ++++++-
+ xen/common/grant_table.c      | 30 ++++++++++++++++++++++++------
+ xen/include/xen/grant_table.h |  2 +-
+ xen/include/xen/sched.h       |  1 +
+ 4 files changed, 32 insertions(+), 8 deletions(-)
+
+diff --git a/docs/misc/grant-tables.txt b/docs/misc/grant-tables.txt
+index 417ce2d..64da5cf 100644
+--- ../docs/misc/grant-tables.txt.orig
++++ ../docs/misc/grant-tables.txt
+@@ -87,7 +87,8 @@ is complete.
+                                inconsistent grant table state such as current
+                                version, partially initialized active table pages,
+                                etc.
+-  grant_table->maptrack_lock : spinlock used to protect the maptrack free list
++  grant_table->maptrack_lock : spinlock used to protect the maptrack limit
++  v->maptrack_freelist_lock  : spinlock used to protect the maptrack free list
+   active_grant_entry->lock   : spinlock used to serialize modifications to
+                                active entries
+ 
+@@ -102,6 +103,10 @@ is complete.
+  The maptrack free list is protected by its own spinlock. The maptrack
+  lock may be locked while holding the grant table lock.
+ 
++ The maptrack_freelist_lock is an innermost lock.  It may be locked
++ while holding other locks, but no other locks may be acquired within
++ it.
++
+  Active entries are obtained by calling active_entry_acquire(gt, ref).
+  This function returns a pointer to the active entry after locking its
+  spinlock. The caller must hold the grant table read lock before
