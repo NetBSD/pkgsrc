@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4488 2017/10/17 06:57:01 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4489 2017/10/17 08:34:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6397,3 +6397,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-django-import-export version 0.5.1 [adam 2017-10-17]
 	Added www/py-django-admin-sortable2 version 0.6.16 [adam 2017-10-17]
 	Added www/py-django-admin-rangefilter version 0.3.0 [adam 2017-10-17]
+	Updated textproc/gtkspell to 2.0.16nb25 [wiz 2017-10-17]
