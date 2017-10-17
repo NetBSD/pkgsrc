@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4498 2017/10/17 09:42:03 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4499 2017/10/17 09:44:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6407,3 +6407,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Test-Simple to 1.302101 [wiz 2017-10-17]
 	Updated devel/p5-UNIVERSAL-isa to 1.20171012 [wiz 2017-10-17]
 	Updated net/p5-Geo-IP to 1.51 [wiz 2017-10-17]
+	Updated security/p5-CryptX to 0.054 [wiz 2017-10-17]
