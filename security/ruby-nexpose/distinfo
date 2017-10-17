@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/10/17 18:15:18 minskim Exp $
+
+SHA1 (nexpose-7.1.1.gem) = 0508256b3778816dbd0896a8cf3b873851f2dba6
+RMD160 (nexpose-7.1.1.gem) = d20d691ecddc626c18c42290709503ce20a884f0
+SHA512 (nexpose-7.1.1.gem) = cfe108517f43bc54223a9a24815610a64e6a2b59b1f7f75c2ae7800a163b1a1a4cd70034c0427410d6a2fb389d5e847cd736a177987146d6bed74e3781b5301e
+Size (nexpose-7.1.1.gem) = 110592 bytes
