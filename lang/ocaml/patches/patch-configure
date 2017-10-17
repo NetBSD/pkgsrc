@@ -1,18 +1,9 @@
-$NetBSD: patch-configure,v 1.25 2017/10/10 12:10:05 he Exp $
+$NetBSD: patch-configure,v 1.26 2017/10/17 08:26:48 wiz Exp $
 
 All kinds of OS-specific changes to configure
 
 --- configure.orig	2017-07-13 08:56:44.000000000 +0000
 +++ configure
-@@ -359,7 +359,7 @@ mkexe="\$(BYTECC)"
- mkexedebugflag="-g"
- bytecccompopts=""
- byteccprivatecompopts=""
--bytecclinkopts=""
-+bytecclinkopts="   -L/usr/lib -Wl,-R/usr/lib -Wl,-R/usr/pkg/lib"
- ostype="Unix"
- exe=""
- iflexdir=""
 @@ -764,7 +764,10 @@ if test $with_sharedlibs = "yes"; then
          *gcc*)
            sharedcccompopts="-fPIC"
@@ -90,15 +81,6 @@ All kinds of OS-specific changes to configure
  esac
  
  # Some platforms exist both in 32-bit and 64-bit variants, not distinguished
-@@ -974,7 +979,7 @@ fi
- nativecccompopts="$bytecccompopts"
- nativeccprivatecompopts="$byteccprivatecompopts"
- nativeccprofopts=''
--nativecclinkopts=''
-+nativecclinkopts="-L/usr/lib -R/usr/lib -R/usr/pkg/lib"
- # FIXME the naming of nativecclinkopts is broken: these are options for
- # ld (for shared libs), not for cc
- nativeccrpath="$byteccrpath"
 @@ -983,7 +988,6 @@ case "$arch,$nativecc,$system,$model" in
    *,*,nextstep,*)      nativecclinkopts="-posix";;
    *,*,rhapsody,*)      if $arch64; then partialld="ld -r -arch ppc64"; fi;;
