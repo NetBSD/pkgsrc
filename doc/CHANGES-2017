@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4528 2017/10/17 18:47:33 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4529 2017/10/17 19:39:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6443,3 +6443,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-nbconvert to 5.3.1 [adam 2017-10-17]
 	Removed devel/py-ipython1 successor devel/py-ipython [adam 2017-10-17]
 	Updated fonts/py-fonttools to 3.17.0 [adam 2017-10-17]
+	Added security/ruby-openvas-omp version 0.0.4 [minskim 2017-10-17]
