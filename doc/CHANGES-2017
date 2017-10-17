@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4487 2017/10/17 06:34:08 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4488 2017/10/17 06:57:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6394,3 +6394,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-ipython5 version 5.5.0 [adam 2017-10-16]
 	Updated devel/py-hypothesis to 3.33.0 [adam 2017-10-16]
 	Updated www/py-djangorestframework to 3.7.1 [adam 2017-10-17]
+	Added www/py-django-import-export version 0.5.1 [adam 2017-10-17]
+	Added www/py-django-admin-sortable2 version 0.6.16 [adam 2017-10-17]
+	Added www/py-django-admin-rangefilter version 0.3.0 [adam 2017-10-17]
