@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4507 2017/10/17 11:37:56 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4508 2017/10/17 11:40:08 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6418,3 +6418,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added textproc/py-diff-match-patch version 20121119 [adam 2017-10-17]
 	Added textproc/py-text-unidecode version 1.0 [adam 2017-10-17]
 	Updated devel/py-faker to 0.8.6 [adam 2017-10-17]
+	Updated sysutils/consul to 1.0.0 [fhajny 2017-10-17]
