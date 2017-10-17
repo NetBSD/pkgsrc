@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2017/08/20 12:26:32 fhajny Exp $
+# $NetBSD: Makefile,v 1.10 2017/10/17 14:48:53 fhajny Exp $
 
-DISTNAME=	fast_tls-1.0.15
+DISTNAME=	fast_tls-1.0.16
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -11,7 +11,7 @@ LICENSE=	apache-2.0
 
 GITHUB_PROJECT=	fast_tls
 
-DEPENDS+=	erlang-p1_utils>=1.0.9:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-p1_utils>=1.0.10:../../misc/erlang-p1_utils
 
 GNU_CONFIGURE=	yes
 
