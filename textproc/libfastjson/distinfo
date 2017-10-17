@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/06/19 12:23:16 fhajny Exp $
+$NetBSD: distinfo,v 1.5 2017/10/17 11:42:30 fhajny Exp $
 
-SHA1 (libfastjson-0.99.6.tar.gz) = 0ae1c3a41cce1cb5c99c2a63e943803ab5dfbcf8
-RMD160 (libfastjson-0.99.6.tar.gz) = b53b75b2230fd299d2d3f44561b672915184bf2d
-SHA512 (libfastjson-0.99.6.tar.gz) = b3b4a5ba959723ffbf8d8218c97c696ccbb781e8c2563ede6ffd7bcbdfcf75495deba5c2b8952c6c215b78dd9cfa728c95cf56bde9b1cfa7ebd6ba68b5b8f166
-Size (libfastjson-0.99.6.tar.gz) = 431066 bytes
+SHA1 (libfastjson-0.99.7.tar.gz) = c37476bc4b1a60945be35a3bea1111191d92e5c3
+RMD160 (libfastjson-0.99.7.tar.gz) = 0de29e844852dbef3d9f7b09eeb345baae45479b
+SHA512 (libfastjson-0.99.7.tar.gz) = e33942dd90af1dffaf328d2db03951dcb7aabf4f7ed499116a5986516af6971a5e2a244a1a2a72d5ee6c496c9a27e7ace165fb0337706c649b1d97c8f0d2f75d
+Size (libfastjson-0.99.7.tar.gz) = 433298 bytes
