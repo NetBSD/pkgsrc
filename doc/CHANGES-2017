@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4504 2017/10/17 11:12:17 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4505 2017/10/17 11:27:15 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6413,3 +6413,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/xenkernel46 to 4.6.6nb1 [bouyer 2017-10-17]
 	Updated sysutils/xentools46 to 4.6.6nb1 [bouyer 2017-10-17]
 	Updated sysutils/xenstoretools to 4.6.6 [bouyer 2017-10-17]
+	Updated databases/elasticsearch to 5.6.3 [fhajny 2017-10-17]
