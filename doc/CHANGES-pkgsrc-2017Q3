@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.5 2017/10/15 14:03:47 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.6 2017/10/17 05:49:49 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q3 branch:
 
@@ -41,4 +41,7 @@ x11/modular-xorg-server: security update
 Pullup ticket #5577 - requested by maya
 lang/gcc49: functionality fix
 lang/gcc49-libs: functionality fix
+
+Pullup ticket #5578 - requested by maya
+net/wpa_supplicant: security patch
 
