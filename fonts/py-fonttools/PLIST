@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2017/10/08 09:39:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/10/17 18:45:27 adam Exp $
 bin/fonttools${PYVERSSUFFIX}
 bin/pyftinspect${PYVERSSUFFIX}
 bin/pyftmerge${PYVERSSUFFIX}
@@ -183,9 +183,15 @@ ${PYSITELIB}/fontTools/pens/recordingPen.pyo
 ${PYSITELIB}/fontTools/pens/reportLabPen.py
 ${PYSITELIB}/fontTools/pens/reportLabPen.pyc
 ${PYSITELIB}/fontTools/pens/reportLabPen.pyo
+${PYSITELIB}/fontTools/pens/reverseContourPen.py
+${PYSITELIB}/fontTools/pens/reverseContourPen.pyc
+${PYSITELIB}/fontTools/pens/reverseContourPen.pyo
 ${PYSITELIB}/fontTools/pens/statisticsPen.py
 ${PYSITELIB}/fontTools/pens/statisticsPen.pyc
 ${PYSITELIB}/fontTools/pens/statisticsPen.pyo
+${PYSITELIB}/fontTools/pens/svgPathPen.py
+${PYSITELIB}/fontTools/pens/svgPathPen.pyc
+${PYSITELIB}/fontTools/pens/svgPathPen.pyo
 ${PYSITELIB}/fontTools/pens/t2CharStringPen.py
 ${PYSITELIB}/fontTools/pens/t2CharStringPen.pyc
 ${PYSITELIB}/fontTools/pens/t2CharStringPen.pyo
@@ -541,6 +547,9 @@ ${PYSITELIB}/fontTools/varLib/interpolatable.pyo
 ${PYSITELIB}/fontTools/varLib/interpolate_layout.py
 ${PYSITELIB}/fontTools/varLib/interpolate_layout.pyc
 ${PYSITELIB}/fontTools/varLib/interpolate_layout.pyo
+${PYSITELIB}/fontTools/varLib/iup.py
+${PYSITELIB}/fontTools/varLib/iup.pyc
+${PYSITELIB}/fontTools/varLib/iup.pyo
 ${PYSITELIB}/fontTools/varLib/merger.py
 ${PYSITELIB}/fontTools/varLib/merger.pyc
 ${PYSITELIB}/fontTools/varLib/merger.pyo
