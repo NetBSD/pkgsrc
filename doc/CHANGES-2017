@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4491 2017/10/17 09:35:31 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4492 2017/10/17 09:37:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6398,6 +6398,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-django-admin-sortable2 version 0.6.16 [adam 2017-10-17]
 	Added www/py-django-admin-rangefilter version 0.3.0 [adam 2017-10-17]
 	Updated textproc/gtkspell to 2.0.16nb25 [wiz 2017-10-17]
-	Updated sysutils/xenkernel48 version 4.8.2nb1 [bouyer 2017-10-17]
-	Updated sysutils/xentools48 version 4.8.2nb1 [bouyer 2017-10-17]
+	Updated sysutils/xenkernel48 to 4.8.2nb1 [bouyer 2017-10-17]
+	Updated sysutils/xentools48 to 4.8.2nb1 [bouyer 2017-10-17]
 	Updated devel/p5-String-Print to 0.92nb1 [wiz 2017-10-17]
