@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/10/17 15:09:21 fhajny Exp $
+
+SHA1 (eimp-1.0.1.tar.gz) = 22d5c4b0f651d41d8d70efba5e0cf89623bccc92
+RMD160 (eimp-1.0.1.tar.gz) = ece6b12173f730eda79f52177d6531645e7d0669
+SHA512 (eimp-1.0.1.tar.gz) = fda00f4c40c719fc5b94424435c3aa43dc5b8145f3b48a22cc0e6359f2eaf2008ba8278ffe1eedc11a31b4393d573eeacbdc6921e6293fbdedfe22f3dda992d7
+Size (eimp-1.0.1.tar.gz) = 3469838 bytes
