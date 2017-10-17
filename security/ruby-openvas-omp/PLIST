@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2017/10/17 19:38:12 minskim Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/TODO
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/examples/basic-scan.rb
+${GEM_LIBDIR}/lib/openvas-omp.rb
+${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/test_openvas-omp.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
