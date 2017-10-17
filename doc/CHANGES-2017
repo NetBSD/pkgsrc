@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4494 2017/10/17 09:38:23 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4495 2017/10/17 09:38:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6403,3 +6403,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-String-Print to 0.92nb1 [wiz 2017-10-17]
 	Updated devel/p5-Log-Report to 1.22 [wiz 2017-10-17]
 	Updated devel/p5-Term-Table to 0.012 [wiz 2017-10-17]
+	Updated devel/p5-List-MoreUtils to 0.426 [wiz 2017-10-17]
