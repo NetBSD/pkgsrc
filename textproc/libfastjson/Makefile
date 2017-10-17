@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/07/30 22:32:23 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/10/17 11:42:30 fhajny Exp $
 
-DISTNAME=	libfastjson-0.99.6
+DISTNAME=	libfastjson-0.99.7
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.rsyslog.com/libfastjson/
 
