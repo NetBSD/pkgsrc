@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.42 2017/08/10 14:46:15 ryoon Exp $
+# $NetBSD: options.mk,v 1.43 2017/10/17 03:39:04 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -13,7 +13,6 @@ PKG_SUGGESTED_OPTIONS+=	pulseaudio mozilla-jemalloc dbus
 PKG_SUGGESTED_OPTIONS+=	oss dbus
 .endif
 
-# On NetBSD/amd64 6.99.21 libxul.so is invalid when --enable-webrtc is set.
 PKG_SUGGESTED_OPTIONS.Linux+=	webrtc
 
 .include "../../mk/bsd.options.mk"
@@ -100,6 +99,7 @@ PLIST_VARS+=		webrtc
 .if !empty(PKG_OPTIONS:Mwebrtc)
 .include "../../graphics/libv4l/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-webrtc
+PLIST.webrtc=		yes
 .else
 CONFIGURE_ARGS+=	--disable-webrtc
 .endif

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.123 2017/09/30 05:34:11 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.124 2017/10/17 03:39:04 ryoon Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -3295,6 +3295,7 @@ lib/firefox/chrome/toolkit/content/global/appPicker.xul
 lib/firefox/chrome/toolkit/content/global/autocomplete.css
 lib/firefox/chrome/toolkit/content/global/backgroundPageThumbs.xhtml
 lib/firefox/chrome/toolkit/content/global/backgroundPageThumbsContent.js
+${PLIST.webrtc}lib/firefox/components/PeerConnection.js
 lib/firefox/chrome/toolkit/content/global/bindings/autocomplete.xml
 lib/firefox/chrome/toolkit/content/global/bindings/browser.xml
 lib/firefox/chrome/toolkit/content/global/bindings/button.xml
