@@ -1,0 +1,3 @@
+eimp is an Erlang/Elixir application for manipulating graphic
+images using external C libraries. It supports WebP, JPEG, PNG
+and GIF.
