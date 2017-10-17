@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/10/17 11:02:06 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/10/17 11:10:36 bouyer Exp $
 #
 VERSION=	4.8.2
 VERSION_IPXE=	827dd1bfee67daa683935ce65316f7e0f057fe1c
@@ -16,6 +16,7 @@ DIST_LIBPCI=	pciutils-2.2.9.tar.bz2
 DIST_SUBDIR=		xen48
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools48-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
 
