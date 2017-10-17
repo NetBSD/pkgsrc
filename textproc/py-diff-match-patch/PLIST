@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2017/10/17 11:34:36 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/diff_match_patch/__init__.py
+${PYSITELIB}/diff_match_patch/__init__.pyc
+${PYSITELIB}/diff_match_patch/__init__.pyo
+${PYSITELIB}/diff_match_patch/diff_match_patch.py
+${PYSITELIB}/diff_match_patch/diff_match_patch.pyc
+${PYSITELIB}/diff_match_patch/diff_match_patch.pyo
+${PYSITELIB}/diff_match_patch/diff_match_patch_test.py
+${PYSITELIB}/diff_match_patch/diff_match_patch_test.pyc
+${PYSITELIB}/diff_match_patch/diff_match_patch_test.pyo
