@@ -1,4 +1,4 @@
-$NetBSD: patch-tools_ocamlcp.ml,v 1.4 2016/12/30 11:15:00 jaapb Exp $
+$NetBSD: patch-tools_ocamlcp.ml,v 1.5 2017/10/17 08:26:05 wiz Exp $
 
 pkgsrc_runtime flag
 
@@ -8,7 +8,7 @@ pkgsrc_runtime flag
    let _output_obj = option "-output-obj"
    let _output_complete_obj = option "-output-complete-obj"
    let _pack = option "-pack"
-+	let _pkgsrc_runtime = option "-pkgsrc-runtime"
++  let _pkgsrc_runtime = option "-pkgsrc-runtime"
    let _plugin = option_with_arg "-plugin"
    let _pp _s = incompatible "-pp"
    let _ppx _s = incompatible "-ppx"
