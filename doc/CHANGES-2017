@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4509 2017/10/17 11:42:39 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4510 2017/10/17 13:52:50 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6420,3 +6420,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-faker to 0.8.6 [adam 2017-10-17]
 	Updated sysutils/consul to 1.0.0 [fhajny 2017-10-17]
 	Updated textproc/libfastjson to 0.99.7 [fhajny 2017-10-17]
+	Updated multimedia/adobe-flash-player to 27.0.0.170 [tsutsui 2017-10-17]
