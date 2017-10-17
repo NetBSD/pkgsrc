@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/07/24 08:53:45 maya Exp $
+# $NetBSD: Makefile,v 1.5.4.1 2017/10/17 19:02:25 bsiegert Exp $
 
-VERSION=	4.8.0
+VERSION=	4.8.2
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel48-${VERSION}
 PKGREVISION=	1
