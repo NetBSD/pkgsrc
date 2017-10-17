@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/04/23 05:18:01 markd Exp $
+$NetBSD: distinfo,v 1.2 2017/10/17 18:31:40 adam Exp $
 
-SHA1 (nbconvert-5.1.1.tar.gz) = 43914301766bd545778bfef4ab3bab753171408d
-RMD160 (nbconvert-5.1.1.tar.gz) = d3356341dbb7d00ca4a664fadc5acdd8b1970145
-SHA512 (nbconvert-5.1.1.tar.gz) = 7db7e4db28a56d5ee61883aa272e9e7302b1d070024e02a981c3a9f4fda01ac130af22b36bb4a3c8f6376579f6713dfe9432222a57f87ccd0889d192743dd668
-Size (nbconvert-5.1.1.tar.gz) = 395032 bytes
+SHA1 (nbconvert-5.3.1.tar.gz) = cab9b6e972e18dce1b1ef9562a7a1d36ede5fade
+RMD160 (nbconvert-5.3.1.tar.gz) = e31538b2929d3d9aae4f2a72eaa7ac188f8a77cc
+SHA512 (nbconvert-5.3.1.tar.gz) = ef5e91478ca28f734e9425c36282867710af5f444b310232e524924bfcb443766957407183d5d865413c041e089826fe9cdb0474815a0c8729a26fc7a6999530
+Size (nbconvert-5.3.1.tar.gz) = 516541 bytes
