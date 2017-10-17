@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.17 2017/08/20 12:58:04 fhajny Exp $
+$NetBSD: patch-ae,v 1.18 2017/10/17 14:55:36 fhajny Exp $
 
 - Default locations.
 - Use 'su -' instead of just 'su'. Fixes priv delegation on SunOS
@@ -7,20 +7,20 @@ $NetBSD: patch-ae,v 1.17 2017/08/20 12:58:04 fhajny Exp $
 - At least SunOS has not wheel group.
 - Portable grep calls.
 
---- ejabberdctl.template.orig	2017-08-14 07:43:02.000000000 +0000
+--- ejabberdctl.template.orig	2017-09-28 13:21:11.000000000 +0000
 +++ ejabberdctl.template
-@@ -56,8 +56,8 @@ done
+@@ -57,8 +57,8 @@ done
  
  # define ejabberd variables if not already defined from the command line
- : ${ETC_DIR:={{sysconfdir}}/ejabberd}
--: ${LOGS_DIR:={{localstatedir}}/log/ejabberd}
--: ${SPOOL_DIR:={{localstatedir}}/lib/ejabberd}
-+: ${LOGS_DIR:=@EJABBERD_LOGDIR@}
-+: ${SPOOL_DIR:=@EJABBERD_DB@}
- : ${EJABBERD_CONFIG_PATH:="$ETC_DIR"/ejabberd.yml}
- : ${EJABBERDCTL_CONFIG_PATH:="$ETC_DIR"/ejabberdctl.cfg}
+ : "${ETC_DIR:="{{sysconfdir}}/ejabberd"}"
+-: "${LOGS_DIR:="{{localstatedir}}/log/ejabberd"}"
+-: "${SPOOL_DIR:="{{localstatedir}}/lib/ejabberd"}"
++: "${LOGS_DIR:=@EJABBERD_LOGDIR@}"
++: "${SPOOL_DIR:=@EJABBERD_DB@}"
+ : "${EJABBERD_CONFIG_PATH:="$ETC_DIR/ejabberd.yml"}"
+ : "${EJABBERDCTL_CONFIG_PATH:="$ETC_DIR/ejabberdctl.cfg"}"
  [ -f "$EJABBERDCTL_CONFIG_PATH" ] && . "$EJABBERDCTL_CONFIG_PATH"
-@@ -108,7 +108,7 @@ export ERL_LIBS
+@@ -109,7 +109,7 @@ export ERL_LIBS
  exec_cmd()
  {
      case $EXEC_CMD in
@@ -29,7 +29,7 @@ $NetBSD: patch-ae,v 1.17 2017/08/20 12:58:04 fhajny Exp $
          as_current_user) "$@" ;;
      esac
  }
-@@ -207,19 +207,19 @@ uid()
+@@ -208,14 +208,14 @@ uid()
  # stop epmd if there is no other running node
  stop_epmd()
  {
@@ -42,14 +42,7 @@ $NetBSD: patch-ae,v 1.17 2017/08/20 12:58:04 fhajny Exp $
  check_start()
  {
 -    "$EPMD" -names 2>/dev/null | grep -q " ${ERLANG_NODE%@*} " && {
--        ps ux | grep -v grep | grep -q " $ERLANG_NODE " && {
 +    "$EPMD" -names 2>/dev/null | grep " ${ERLANG_NODE%@*} " >/dev/null && {
-+        ps ux | grep -v grep | grep " $ERLANG_NODE " >/dev/null && {
+         pgrep -f "$ERLANG_NODE" >/dev/null && {
              echo "ERROR: The ejabberd node '$ERLANG_NODE' is already running."
              exit 4
-         } || {
--            ps ux | grep -v grep | grep -q beam && {
-+            ps ux | grep -v grep | grep beam >/dev/null && {
-                 echo "ERROR: The ejabberd node '$ERLANG_NODE' is registered,"
-                 echo "       but no related beam process has been found."
-                 echo "Shutdown all other erlang nodes, and call 'epmd -kill'."
