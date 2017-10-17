@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.653 2017/10/17 18:17:51 minskim Exp $
+# $NetBSD: Makefile,v 1.654 2017/10/17 18:33:52 minskim Exp $
 #
 
 COMMENT=	Security tools
@@ -466,6 +466,7 @@ SUBDIR+=	ruby-metasploit-concern
 SUBDIR+=	ruby-metasploit-model
 SUBDIR+=	ruby-metasploit-payloads
 SUBDIR+=	ruby-metasploit_payloads-mettle
+SUBDIR+=	ruby-nessus_rest
 SUBDIR+=	ruby-net-scp
 SUBDIR+=	ruby-net-sftp
 SUBDIR+=	ruby-net-ssh
