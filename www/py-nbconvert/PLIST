@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/23 05:18:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/10/17 18:31:40 adam Exp $
 bin/jupyter-nbconvert${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
@@ -226,12 +226,18 @@ ${PYSITELIB}/nbconvert/preprocessors/highlightmagics.pyo
 ${PYSITELIB}/nbconvert/preprocessors/latex.py
 ${PYSITELIB}/nbconvert/preprocessors/latex.pyc
 ${PYSITELIB}/nbconvert/preprocessors/latex.pyo
+${PYSITELIB}/nbconvert/preprocessors/regexremove.py
+${PYSITELIB}/nbconvert/preprocessors/regexremove.pyc
+${PYSITELIB}/nbconvert/preprocessors/regexremove.pyo
 ${PYSITELIB}/nbconvert/preprocessors/sanitize.py
 ${PYSITELIB}/nbconvert/preprocessors/sanitize.pyc
 ${PYSITELIB}/nbconvert/preprocessors/sanitize.pyo
 ${PYSITELIB}/nbconvert/preprocessors/svg2pdf.py
 ${PYSITELIB}/nbconvert/preprocessors/svg2pdf.pyc
 ${PYSITELIB}/nbconvert/preprocessors/svg2pdf.pyo
+${PYSITELIB}/nbconvert/preprocessors/tagremove.py
+${PYSITELIB}/nbconvert/preprocessors/tagremove.pyc
+${PYSITELIB}/nbconvert/preprocessors/tagremove.pyo
 ${PYSITELIB}/nbconvert/preprocessors/tests/__init__.py
 ${PYSITELIB}/nbconvert/preprocessors/tests/__init__.pyc
 ${PYSITELIB}/nbconvert/preprocessors/tests/__init__.pyo
@@ -251,6 +257,7 @@ ${PYSITELIB}/nbconvert/preprocessors/tests/files/SVG.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Skip Exceptions.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/Unicode.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/files/python.png
+${PYSITELIB}/nbconvert/preprocessors/tests/files/update-display-id.ipynb
 ${PYSITELIB}/nbconvert/preprocessors/tests/test_clearoutput.py
 ${PYSITELIB}/nbconvert/preprocessors/tests/test_clearoutput.pyc
 ${PYSITELIB}/nbconvert/preprocessors/tests/test_clearoutput.pyo
@@ -272,12 +279,18 @@ ${PYSITELIB}/nbconvert/preprocessors/tests/test_highlightmagics.pyo
 ${PYSITELIB}/nbconvert/preprocessors/tests/test_latex.py
 ${PYSITELIB}/nbconvert/preprocessors/tests/test_latex.pyc
 ${PYSITELIB}/nbconvert/preprocessors/tests/test_latex.pyo
+${PYSITELIB}/nbconvert/preprocessors/tests/test_regexremove.py
+${PYSITELIB}/nbconvert/preprocessors/tests/test_regexremove.pyc
+${PYSITELIB}/nbconvert/preprocessors/tests/test_regexremove.pyo
 ${PYSITELIB}/nbconvert/preprocessors/tests/test_sanitize.py
 ${PYSITELIB}/nbconvert/preprocessors/tests/test_sanitize.pyc
 ${PYSITELIB}/nbconvert/preprocessors/tests/test_sanitize.pyo
 ${PYSITELIB}/nbconvert/preprocessors/tests/test_svg2pdf.py
 ${PYSITELIB}/nbconvert/preprocessors/tests/test_svg2pdf.pyc
 ${PYSITELIB}/nbconvert/preprocessors/tests/test_svg2pdf.pyo
+${PYSITELIB}/nbconvert/preprocessors/tests/test_tagremove.py
+${PYSITELIB}/nbconvert/preprocessors/tests/test_tagremove.pyc
+${PYSITELIB}/nbconvert/preprocessors/tests/test_tagremove.pyo
 ${PYSITELIB}/nbconvert/resources/__init__.py
 ${PYSITELIB}/nbconvert/resources/__init__.pyc
 ${PYSITELIB}/nbconvert/resources/__init__.pyo
