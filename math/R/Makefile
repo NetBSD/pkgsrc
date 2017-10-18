@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.176 2017/10/06 20:47:37 rumko Exp $
+# $NetBSD: Makefile,v 1.177 2017/10/18 16:14:30 adam Exp $
 
-DISTNAME=		R-3.3.3
-PKGREVISION=		2
-CATEGORIES=		math
-MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-3/}
+DISTNAME=	R-3.3.3
+PKGREVISION=	2
+CATEGORIES=	math
+MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-3/}
 
-MAINTAINER=		markd@NetBSD.org
-HOMEPAGE=		http://www.R-project.org/
-COMMENT=		Statistical language for data analysis and graphics
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	markd@NetBSD.org
+HOMEPAGE=	http://www.R-project.org/
+COMMENT=	Statistical language for data analysis and graphics
+LICENSE=	gnu-gpl-v2
 
 #needs FPC code not found in older versions of NetBSD
 NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
@@ -19,11 +19,10 @@ USE_GCC_RUNTIME=	yes
 BUILD_TARGET=		all info
 INSTALL_TARGET=		install install-info
 TEST_TARGET=		check
-USE_TOOLS+=		gmake gzip:run makeinfo perl:run sed unzip:run xmkmf
-USE_TOOLS+=		pkg-config
-USE_TOOLS+=		aclocal autoconf autoreconf automake
 USE_LANGUAGES=		c c++ fortran
 USE_LIBTOOL=		yes
+USE_TOOLS+=		aclocal autoconf autoreconf automake
+USE_TOOLS+=		gmake gzip:run makeinfo perl:run pkg-config sed unzip:run
 TEXINFO_REQD=		5.1
 INFO_FILES=		yes
 
@@ -31,7 +30,6 @@ PTHREAD_AUTO_VARS=	yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-R-shlib
-CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-tcltk
 CONFIGURE_ARGS+=	--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
@@ -51,9 +49,18 @@ CONFIGURE_ARGS+=	--enable-long-double=no
 USE_GNU_ICONV=		yes		# latin1 support, iconvlist
 .endif
 
+PLIST_VARS+=		x11
+
 # Disable Mac OS specific support used by R.app
+.if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--disable-R-framework
-CONFIGURE_ARGS+=	--without-aqua
+CONFIGURE_ARGS+=	--with-aqua
+CONFIGURE_ARGS+=	--without-x
+.else
+USE_TOOLS+=		xmkmf
+CONFIGURE_ARGS+=	--with-x
+PLIST.x11=		yes
+.endif
 
 # Use BLAS (math/blas)
 CONFIGURE_ARGS+=	--without-atlas
@@ -157,6 +164,7 @@ fix-darwin-install-name:
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 # uses callback interface
 .include "../../devel/readline/buildlink3.mk"
@@ -167,8 +175,11 @@ fix-darwin-install-name:
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
+
+.if ${OPSYS} != "Darwin"
+.include "../../x11/libXt/buildlink3.mk"
+.endif
 
 INSTALL_TEMPLATES+=	../../math/R/files/pkg-index.tmpl
 DEINSTALL_TEMPLATES+=	../../math/R/files/pkg-index.tmpl

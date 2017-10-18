@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2017/03/11 09:50:34 wen Exp $
+@comment $NetBSD: PLIST,v 1.27 2017/10/18 16:14:30 adam Exp $
 bin/R
 bin/Rscript
 info/R-FAQ.info.gz
@@ -1431,8 +1431,8 @@ lib/R/library/utils/iconvlist
 lib/R/library/utils/libs/utils.so
 lib/R/library/utils/misc/exDIF.csv
 lib/R/library/utils/misc/exDIF.dif
-lib/R/modules/R_X11.so
-lib/R/modules/R_de.so
+${PLIST.x11}lib/R/modules/R_X11.so
+${PLIST.x11}lib/R/modules/R_de.so
 lib/R/modules/internet.so
 lib/R/modules/lapack.so
 lib/R/share/R/REMOVE.R
