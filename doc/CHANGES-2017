@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4530 2017/10/18 08:30:30 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4531 2017/10/18 10:00:14 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6446,3 +6446,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/ruby-openvas-omp version 0.0.4 [minskim 2017-10-17]
 	Updated security/py-keyring to 10.4.0 [adam 2017-10-18]
 	Updated www/py-notebook to 5.2.0 [adam 2017-10-18]
+	Updated devel/librdkafka to 0.11.1 [fhajny 2017-10-18]
