@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/09/17 13:29:45 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/10/18 18:32:59 wiz Exp $
 
-DISTNAME=		Test2-Suite-0.000077
+DISTNAME=		Test2-Suite-0.000080
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/E/EX/EXODIST/}
@@ -16,6 +16,9 @@ DEPENDS+=		p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
 DEPENDS+=		p5-Term-Table-[0-9]*:../../devel/p5-Term-Table
 
 PERL5_PACKLIST=		auto/Test2/Suite/.packlist
+
+# one test failure in 0.000080:
+# https://github.com/Test-More/Test2-Suite/issues/140
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
