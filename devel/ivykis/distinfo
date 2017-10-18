@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/09/27 12:50:31 fhajny Exp $
+$NetBSD: distinfo,v 1.6 2017/10/18 11:05:22 fhajny Exp $
 
-SHA1 (ivykis-0.42.1.tar.gz) = c662a66826fc251370fc792a1df03fd21e60c2ff
-RMD160 (ivykis-0.42.1.tar.gz) = 32f2370cc7a197636f7385ab6706bc29d0b4de38
-SHA512 (ivykis-0.42.1.tar.gz) = fd0468661424cc9f2c17e2037700570e035e22d6cbb149a8c20462bb64dbda9b94bb76aef4373ac00b702516a46c5e7eab933e3c878920a596615b70c970631d
-Size (ivykis-0.42.1.tar.gz) = 653649 bytes
+SHA1 (ivykis-0.42.2.tar.gz) = 2960df8660a8fb2149243aaff1db992f7e107fca
+RMD160 (ivykis-0.42.2.tar.gz) = 5c1bff9dcdd3a0855e22b1d4a7fad6525ab1a36b
+SHA512 (ivykis-0.42.2.tar.gz) = 0a166869b434668219c379a8acf7b2da17cb1e29aef74f9dde869a322d3b34e36c84bd67800f7fb234a29bf9372061329189f02ab6d7f85bb2622b4c43185270
+Size (ivykis-0.42.2.tar.gz) = 653885 bytes
