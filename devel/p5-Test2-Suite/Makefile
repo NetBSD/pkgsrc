@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/10/18 18:32:59 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/10/18 18:58:30 wiz Exp $
 
 DISTNAME=		Test2-Suite-0.000080
 PKGNAME=		p5-${DISTNAME}
@@ -12,13 +12,10 @@ LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-Importer-[0-9]*:../../devel/p5-Importer
 DEPENDS+=		p5-Sub-Info-[0-9]*:../../devel/p5-Sub-Info
-DEPENDS+=		p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
+DEPENDS+=		p5-Test-Simple>=1.302102:../../devel/p5-Test-Simple
 DEPENDS+=		p5-Term-Table-[0-9]*:../../devel/p5-Term-Table
 
 PERL5_PACKLIST=		auto/Test2/Suite/.packlist
-
-# one test failure in 0.000080:
-# https://github.com/Test-More/Test2-Suite/issues/140
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
