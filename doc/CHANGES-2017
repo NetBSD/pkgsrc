@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4532 2017/10/18 11:01:19 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4533 2017/10/18 11:05:31 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6448,3 +6448,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-notebook to 5.2.0 [adam 2017-10-18]
 	Updated devel/librdkafka to 0.11.1 [fhajny 2017-10-18]
 	Updated sysutils/rsyslog to 8.30.0 [fhajny 2017-10-18]
+	Updated devel/ivykis to 0.42.2 [fhajny 2017-10-18]
