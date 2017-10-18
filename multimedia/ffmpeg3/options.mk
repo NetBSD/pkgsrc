@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2017/10/03 12:39:42 wiz Exp $
+# $NetBSD: options.mk,v 1.10 2017/10/18 20:25:41 adam Exp $
 
 # Global and legacy options
 
@@ -141,14 +141,16 @@ CONFIGURE_ARGS+=	--enable-libopus
 
 # Raspberry Pi support
 .if !empty(PKG_OPTIONS:Mrpi)
-.include "../../misc/raspberrypi-userland/buildlink3.mk"
+CONFIGURE_ARGS+=	--disable-xvmc
+CONFIGURE_ARGS+=	--enable-omx-rpi
+CONFIGURE_ARGS+=	--enable-mmal
 SUBST_CLASSES+=		vc
 SUBST_STAGE.vc=		pre-configure
 SUBST_MESSAGE.vc=	Fixing path to VideoCore libraries.
 SUBST_FILES.vc=		configure
 SUBST_SED.vc+=		-e 's;-isystem/opt/vc;-I${PREFIX};g'
 SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
-CONFIGURE_ARGS+=	--enable-omx-rpi --enable-mmal --disable-xvmc
+.include "../../misc/raspberrypi-userland/buildlink3.mk"
 .endif
 
 # XviD support

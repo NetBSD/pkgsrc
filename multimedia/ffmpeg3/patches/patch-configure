@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.4 2017/05/17 15:28:51 he Exp $
+$NetBSD: patch-configure,v 1.5 2017/10/18 20:25:41 adam Exp $
 
 Enable PIC on non-i386 NetBSD.
 
---- configure.orig	2016-10-27 16:17:39.000000000 +0000
+--- configure.orig	2017-10-15 15:59:36.000000000 +0000
 +++ configure
-@@ -4676,6 +4676,11 @@ case $target_os in
+@@ -4939,6 +4939,11 @@ case $target_os in
          ;;
      netbsd)
          disable symver
@@ -16,7 +16,7 @@ Enable PIC on non-i386 NetBSD.
          oss_indev_extralibs="-lossaudio"
          oss_outdev_extralibs="-lossaudio"
          enabled gcc || check_ldflags -Wl,-zmuldefs
-@@ -5138,10 +5143,13 @@ check_cc <<EOF && enable attribute_may_a
+@@ -5359,10 +5364,13 @@ check_cc <<EOF && enable attribute_may_a
  union { int x; } __attribute__((may_alias)) x;
  EOF
  
@@ -31,14 +31,5 @@ Enable PIC on non-i386 NetBSD.
  EOF
 -od -t x1 $TMPO | grep -q '42 *49 *47 *45' && enable bigendian
  
- if ! enabled ppc64 || enabled bigendian; then
-     disable vsx
-@@ -6805,7 +6814,7 @@ Version: $version
- Requires: $(enabled shared || echo $requires)
- Requires.private: $(enabled shared && echo $requires)
- Conflicts:
--Libs: -L\${libdir} $(enabled rpath && echo "-Wl,-rpath,\${libdir}") -l${shortname} $(enabled shared || echo $libs)
-+Libs: -L\${libdir} -Wl,-R\${libdir} $(enabled rpath && echo "-Wl,-rpath,\${libdir}") -l${shortname} $(enabled shared || echo $libs)
- Libs.private: $(enabled shared && echo $libs)
- Cflags: -I\${includedir}
- EOF
+ check_cc <<EOF && enable const_nan
+ #include <math.h>
