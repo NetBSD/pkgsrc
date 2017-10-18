@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.18 2017/01/03 13:23:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2017/10/18 07:22:53 adam Exp $
 
-DISTNAME=	keyring-5.3
+DISTNAME=	keyring-10.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
-CATEGORIES=	security
+CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/keyring/}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	https://pypi.python.org/pypi/keyring
+HOMEPAGE=	https://github.com/jaraco/keyring
 COMMENT=	Store and access your passwords safely
 LICENSE=	python-software-foundation
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-hgtools>=5.0:../../devel/py-hgtools
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
+
+USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	keyring/cli.py
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/keyring ${DESTDIR}${PREFIX}/bin/keyring-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} keyring keyring-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
