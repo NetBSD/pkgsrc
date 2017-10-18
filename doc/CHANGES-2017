@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4536 2017/10/18 16:29:38 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4537 2017/10/18 18:21:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6453,3 +6453,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-Dancer2 to 0.205002 [wen 2017-10-18]
 	Updated math/py-rpy to 2.9.0 [adam 2017-10-18]
 	Updated databases/py-alembic to 0.9.6 [adam 2017-10-18]
+	Updated devel/p5-Devel-Cover to 1.29 [wiz 2017-10-18]
