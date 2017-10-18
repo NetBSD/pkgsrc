@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.6 2017/10/17 05:49:49 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.7 2017/10/18 18:17:20 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q3 branch:
 
@@ -44,4 +44,10 @@ lang/gcc49-libs: functionality fix
 
 Pullup ticket #5578 - requested by maya
 net/wpa_supplicant: security patch
+
+Pullup ticket #5581 - requested by bsiegert
+sysutils/consul: security update
+
+Pullup ticket #5582 - requested by bsiegert
+multimedia/adobe-flash-player: security update
 
