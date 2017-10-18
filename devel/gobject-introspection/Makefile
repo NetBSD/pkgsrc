@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2017/08/25 12:08:47 prlw1 Exp $
+# $NetBSD: Makefile,v 1.53 2017/10/18 21:32:24 wiz Exp $
 
-DISTNAME=	gobject-introspection-1.52.1
+DISTNAME=	gobject-introspection-1.54.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -49,7 +49,7 @@ CHECK_INTERPRETER_SKIP+= lib/gobject-introspection/giscanner/*.py
 #.include "../../graphics/cairo-gobject/buildlink3.mk"
 #TEST_TARGET=	check
 
-BUILDLINK_API_DEPENDS.glib2+= glib2>=2.52.1
+BUILDLINK_API_DEPENDS.glib2+= glib2>=2.54.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libffi+= libffi>=3.0.0
 .include "../../devel/libffi/buildlink3.mk"
