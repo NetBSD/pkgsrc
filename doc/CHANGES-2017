@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4539 2017/10/18 18:26:42 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4540 2017/10/18 18:28:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6456,3 +6456,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Devel-Cover to 1.29 [wiz 2017-10-18]
 	Updated devel/p5-MetaCPAN-Client to 2.018000 [wiz 2017-10-18]
 	Updated devel/p5-Module-Runtime to 0.016 [wiz 2017-10-18]
+	Updated devel/p5-Test-Simple to 1.302103 [wiz 2017-10-18]
