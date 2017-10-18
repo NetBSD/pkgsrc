@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2016/10/03 12:25:36 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2017/10/18 16:17:12 adam Exp $
 
-DISTNAME=	rpy2-2.5.6
+DISTNAME=	rpy2-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/rpy2/rpy/}
-PKGREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rpy2/}
 
@@ -11,28 +10,23 @@ HOMEPAGE=	http://rpy.sourceforge.net/
 COMMENT=	R interface for Python
 LICENSE=	mpl-1.1 OR gnu-gpl-v2 OR gnu-lgpl-v2.1
 
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 USE_LANGUAGES+=		c fortran77
 
-BUILDLINK_API_DEPENDS.R+= R>=2.11.0
+BUILDLINK_API_DEPENDS.R+=	R>=3.3.0
 
 LDFLAGS.SunOS+=		-mimpure-text
 
-REPLACE_PYTHON=			rpy/tests.py
+REPLACE_PYTHON=		rpy/tests.py
 
-.include "../../lang/python/pyversion.mk"
-
-PLIST_VARS=	sd
-.if ${PYPKGPREFIX} == "py27"
-PLIST.sd=	yes
-DEPENDS+=	${PYPKGPREFIX}-singledispatch-[0-9]*:../../devel/py-singledispatch
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../math/R/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
