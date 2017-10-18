@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4535 2017/10/18 14:00:56 wen Exp $
+$NetBSD: CHANGES-2017,v 1.4536 2017/10/18 16:29:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6451,3 +6451,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ivykis to 0.42.2 [fhajny 2017-10-18]
 	Updated mail/cyrus-imapd24 to 2.4.20 [gavan 2017-10-18]
 	Updated www/p5-Dancer2 to 0.205002 [wen 2017-10-18]
+	Updated math/py-rpy to 2.9.0 [adam 2017-10-18]
+	Updated databases/py-alembic to 0.9.6 [adam 2017-10-18]
