@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4547 2017/10/19 06:54:55 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4548 2017/10/19 08:23:30 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6466,3 +6466,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated converters/py-cairosvg to 2.1.1 [adam 2017-10-19]
 	Added devel/py-test-timeout version 1.2.0 [adam 2017-10-19]
 	Updated www/py-aiohttp to 2.3.0 [adam 2017-10-19]
+	Updated security/netpgpverify to 20171019 [jperkin 2017-10-19]
