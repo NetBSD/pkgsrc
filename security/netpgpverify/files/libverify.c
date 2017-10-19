@@ -2138,18 +2138,18 @@ valid_dates(pgpv_signature_t *signature, pgpv_pubkey_t *pubkey, char *buf, size_
 	cc = 0;
 	if (signature->birth < pubkey->birth) {
 		TIME_SNPRINTF(cc, buf, size, "Signature time (%.24s) was before pubkey creation ", signature->birth);
-		TIME_SNPRINTF(cc, &buf[cc], size - cc, "(%s)\n", pubkey->birth);
+		TIME_SNPRINTF(cc, &buf[cc], size - cc, "(%s)", pubkey->birth);
 		return cc;
 	}
 	now = time(NULL);
 	if (signature->expiry != 0) {
 		if ((t = signature->birth + signature->expiry) < now) {
-			TIME_SNPRINTF(cc, buf, size, "Signature expired on %.24s\n", t);
+			TIME_SNPRINTF(cc, buf, size, "Signature expired on %.24s", t);
 			return cc;
 		}
 	}
 	if (now < signature->birth) {
-		TIME_SNPRINTF(cc, buf, size, "Signature not valid before %.24s\n", signature->birth);
+		TIME_SNPRINTF(cc, buf, size, "Signature not valid before %.24s", signature->birth);
 		return cc;
 	}
 	return 0;
@@ -2167,12 +2167,12 @@ key_expired(pgpv_pubkey_t *pubkey, char *buf, size_t size)
 	cc = 0;
 	if (pubkey->expiry != 0) {
 		if ((t = pubkey->birth + pubkey->expiry) < now) {
-			TIME_SNPRINTF(cc, buf, size, "Pubkey expired on %.24s\n", t);
+			TIME_SNPRINTF(cc, buf, size, "Pubkey expired on %.24s", t);
 			return (int)cc;
 		}
 	}
 	if (now < pubkey->birth) {
-		TIME_SNPRINTF(cc, buf, size, "Pubkey not valid before %.24s\n", pubkey->birth);
+		TIME_SNPRINTF(cc, buf, size, "Pubkey not valid before %.24s", pubkey->birth);
 		return (int)cc;
 	}
 	return 0;
@@ -3222,9 +3222,6 @@ pgpv_verify(pgpv_cursor_t *cursor, pgpv_t *pgp, const void *p, ssize_t size)
 		return 0;
 	}
 	if (!match_sig_id(cursor, pgp, signature, litdata, (unsigned)j, sub)) {
-		snprintf(cursor->why, sizeof(cursor->why),
-			"Signature does not match %.*s",
-			(int)obuf.c, (char *)obuf.v);
 		return 0;
 	}
 	ARRAY_APPEND(cursor->datacookies, pkt);
