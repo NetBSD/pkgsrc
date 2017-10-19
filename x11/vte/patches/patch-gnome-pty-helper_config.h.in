@@ -1,0 +1,20 @@
+$NetBSD: patch-gnome-pty-helper_config.h.in,v 1.1 2017/10/19 13:51:34 jperkin Exp $
+
+Don't define _XOPEN_SOURCE if using C99.
+
+--- gnome-pty-helper/config.h.in.orig	2010-11-16 18:21:13.000000000 +0000
++++ gnome-pty-helper/config.h.in
+@@ -201,11 +201,13 @@
+ /* Use all glibc features. */
+ #undef _GNU_SOURCE
+ 
++#if (__STDC_VERSION__ - 0 < 199901L)
+ /* Needed to get declarations for msg_control and msg_controllen on Solaris */
+ #undef _XOPEN_SOURCE
+ 
+ /* Needed to get declarations for msg_control and msg_controllen on Solaris */
+ #undef _XOPEN_SOURCE_EXTENDED
++#endif
+ 
+ /* Needed to get declarations for msg_control and msg_controllen on Solaris */
+ #undef __EXTENSIONS__
