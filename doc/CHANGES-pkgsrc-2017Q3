@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.7 2017/10/18 18:17:20 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.8 2017/10/19 17:54:34 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q3 branch:
 
@@ -44,6 +44,12 @@ lang/gcc49-libs: functionality fix
 
 Pullup ticket #5578 - requested by maya
 net/wpa_supplicant: security patch
+
+Pullup ticket #5579 - requested by bouyer
+sysutils/xenkernel48, sysutils/xentools48: security fix
+
+Pullup ticket #5580 - requested by bouyer
+sysutils/xenkernel46, sysutils/xentools46: security fix
 
 Pullup ticket #5581 - requested by bsiegert
 sysutils/consul: security update
