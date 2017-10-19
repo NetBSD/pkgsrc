@@ -1,0 +1,19 @@
+$NetBSD: patch-configure,v 1.1 2017/10/19 13:51:34 jperkin Exp $
+
+Don't define _XOPEN_SOURCE if using C99.
+
+--- configure.orig	2011-06-14 21:38:29.000000000 +0000
++++ configure
+@@ -12574,10 +12574,12 @@ rm -f conftest*
+ case $host in
+ *-*-solaris*)
+ 
++$as_echo "#if (__STDC_VERSION__ - 0 < 199901L)" >>confdefs.h
+ $as_echo "#define _XOPEN_SOURCE_EXTENDED 1" >>confdefs.h
+ 
+ 
+ $as_echo "#define _XOPEN_SOURCE 1" >>confdefs.h
++$as_echo "#endif" >>confdefs.h
+ 
+ 
+ $as_echo "#define __EXTENSIONS__ 1" >>confdefs.h
