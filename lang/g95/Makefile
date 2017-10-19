@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2017/06/21 01:12:56 maya Exp $
+# $NetBSD: Makefile,v 1.28.6.1 2017/10/19 17:56:46 bsiegert Exp $
 
 DISTNAME=	g95_source
 PKGNAME=	g95-0.93
@@ -34,6 +34,15 @@ GCC_CONFIGURE_ARGS+=	--disable-libssp # to build on NetBSD 6.99.43
 LDFLAGS.Darwin+=	-Wl,-read_only_relocs,suppress
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+.  if exists(/usr/lib/${MACHINE_ARCH}-linux-gnu)
+MAKE_ENV+=             LIBRARY_PATH=/usr/lib/${MACHINE_ARCH}-linux-gnu
+.  endif
+MAKE_ENV+=             ac_cv_have_decl_asprintf=yes
+USE_TOOLS+=            perl:build
+.endif
+
 .if ${OPSYS} == "SunOS"
 GCC_CONFIGURE_ENV+=	OBJDUMP=/usr/sfw/bin/gobjdump
 GCC_CONFIGURE_ARGS+=	--without-gnu-ld --with-ld=/usr/ccs/bin/ld
@@ -42,8 +51,6 @@ GCC_CONFIGURE_ARGS+=	--without-gnu-as --with-as=/usr/ccs/bin/as
 .  else
 GCC_CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/sfw/bin/gas
 .  endif
-.elif ${OPSYS} == "Linux"
-USE_TOOLS+=	perl:build
 .endif
 
 post-extract:
