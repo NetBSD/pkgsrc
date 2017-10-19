@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.76 2017/09/26 10:59:39 ryoon Exp $
+$NetBSD: distinfo,v 1.77 2017/10/19 15:28:45 jperkin Exp $
 
 SHA1 (nss-3.33.tar.gz) = 85d25795b01be3f4459707ce04e9bbed9e549865
 RMD160 (nss-3.33.tar.gz) = fe4d2fb56f15db3531e0efbdff8eda4aced41a03
@@ -17,4 +17,5 @@ SHA1 (patch-nss_cmd_platlibs.mk) = 7dadcb72acf15714c61ae74b21c5baf45bc51d4c
 SHA1 (patch-nss_coreconf_OpenBSD.mk) = fccc17845c28f5b1268c96eb4e952e32dd530d1d
 SHA1 (patch-nss_coreconf_command.mk) = 008f7670f164bf19555a7691f5a59fc8bf687078
 SHA1 (patch-nss_lib_freebl_config.mk) = 5d374317b75c7db968a126f616bb396a012f675d
+SHA1 (patch-nss_lib_freebl_verified_kremlib.h) = a50ba4e027635b4342cf67d168c3a75ecefeb7b9
 SHA1 (patch-security_nss_cmd_shlibsign_sign.sh) = 7948b7b502a4c148ee185836dde8a84d3aa388af
