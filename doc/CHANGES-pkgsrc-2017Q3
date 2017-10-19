@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.8 2017/10/19 17:54:34 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.9 2017/10/19 17:58:21 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q3 branch:
 
@@ -56,4 +56,7 @@ sysutils/consul: security update
 
 Pullup ticket #5582 - requested by bsiegert
 multimedia/adobe-flash-player: security update
+
+Pullup ticket #5583 - requested by maya
+lang/g95: Linux build fix
 
