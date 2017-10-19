@@ -1,0 +1,20 @@
+$NetBSD: patch-config.h.in,v 1.1 2017/10/19 13:51:34 jperkin Exp $
+
+Don't define _XOPEN_SOURCE if using C99.
+
+--- config.h.in.orig	2011-06-14 21:38:39.000000000 +0000
++++ config.h.in
+@@ -203,11 +203,13 @@
+ /* Use all glibc features. */
+ #undef _GNU_SOURCE
+ 
++#if (__STDC_VERSION__ - 0 < 199901L)
+ /* Needed to get declarations for msg_control and msg_controllen on Solaris */
+ #undef _XOPEN_SOURCE
+ 
+ /* Needed to get declarations for msg_control and msg_controllen on Solaris */
+ #undef _XOPEN_SOURCE_EXTENDED
++#endif
+ 
+ /* Needed to get declarations for msg_control and msg_controllen on Solaris */
+ #undef __EXTENSIONS__
