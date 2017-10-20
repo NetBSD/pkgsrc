@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.6 2016/09/17 15:33:59 richard Exp $
+@comment $NetBSD: PLIST.Linux,v 1.7 2017/10/20 08:20:30 triaxx Exp $
 bin/hal-setup-keymap
 libexec/hal-system-sonypic
 libexec/hald-addon-acpi
@@ -6,6 +6,8 @@ libexec/hald-addon-cpufreq
 libexec/hald-addon-generic-backlight
 libexec/hald-addon-hid-ups
 ${PLIST.imac}libexec/hald-addon-imac-backlight
+${PLIST.imac}libexec/hald-addon-macbook-backlight
+${PLIST.imac}libexec/hald-addon-macbookpro-backlight
 libexec/hald-addon-input
 libexec/hald-addon-ipw-killswitch
 libexec/hald-addon-leds
@@ -43,4 +45,6 @@ libexec/scripts/linux/hal-system-wol-supported-linux
 share/examples/hal/90-hal.rules
 share/hal/fdi/policy/10osvendor/10-cpufreq.fdi
 ${PLIST.imac}share/hal/fdi/policy/10osvendor/10-imac-backlight.fdi
+${PLIST.imac}share/hal/fdi/policy/10osvendor/10-macbook-backlight.fdi
+${PLIST.imac}share/hal/fdi/policy/10osvendor/10-macbookpro-utils.fdi
 share/hal/fdi/policy/10osvendor/10-keymap.fdi
