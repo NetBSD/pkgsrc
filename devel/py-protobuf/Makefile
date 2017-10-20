@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2017/05/12 20:11:39 leot Exp $
+# $NetBSD: Makefile,v 1.12 2017/10/20 23:02:25 minskim Exp $
 
 .include "../../devel/protobuf/Makefile.common"
 
 DISTNAME=	protobuf-python-${PROTOBUFVER}
-PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
 CATEGORIES+=	python
 
