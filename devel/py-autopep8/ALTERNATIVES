@@ -1,0 +1,1 @@
+bin/autopep8 @PREFIX@/bin/autopep8-@PYVERSSUFFIX@
