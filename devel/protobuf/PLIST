@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/05/02 10:49:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/10/20 23:02:25 minskim Exp $
 bin/protoc
 include/google/protobuf/any.h
 include/google/protobuf/any.pb.h
@@ -6,6 +6,7 @@ include/google/protobuf/any.proto
 include/google/protobuf/api.pb.h
 include/google/protobuf/api.proto
 include/google/protobuf/arena.h
+include/google/protobuf/arena_impl.h
 include/google/protobuf/arenastring.h
 include/google/protobuf/compiler/code_generator.h
 include/google/protobuf/compiler/command_line_interface.h
@@ -25,8 +26,6 @@ include/google/protobuf/compiler/php/php_generator.h
 include/google/protobuf/compiler/plugin.h
 include/google/protobuf/compiler/plugin.pb.h
 include/google/protobuf/compiler/plugin.proto
-include/google/protobuf/compiler/profile.pb.h
-include/google/protobuf/compiler/profile.proto
 include/google/protobuf/compiler/python/python_generator.h
 include/google/protobuf/compiler/ruby/ruby_generator.h
 include/google/protobuf/descriptor.h
