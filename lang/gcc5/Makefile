@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2017/08/25 16:33:53 he Exp $
+# $NetBSD: Makefile,v 1.24 2017/10/20 23:49:47 maya Exp $
 
 GCC_PKGNAME=		gcc5
-PKGREVISION=		6
 .include		"version.mk"
 
 DISTNAME=	gcc-${GCC5_DIST_VERSION}
@@ -11,7 +10,7 @@ PKGNAME=	${GCC_PKGNAME}-${GCC5_DIST_VERSION}
 ## PKGREVISION of this package!
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC5_DIST_VERSION}/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	maya@NetBSD.org
 HOMEPAGE=	http://gcc.gnu.org/
