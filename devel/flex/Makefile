@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2017/07/24 14:34:49 maya Exp $
+# $NetBSD: Makefile,v 1.61 2017/10/20 06:22:24 triaxx Exp $
 
 DISTNAME=	flex-2.6.4
 CATEGORIES=	devel lang
@@ -31,6 +31,9 @@ LDFLAGS.SCO_SV+=	-lsocket
 
 # https://github.com/westes/flex/issues/219
 CONFIGURE_ENV.NetBSD+=	ac_cv_func_reallocarray=no
+
+# https://github.com/westes/flex/issues/241
+CFLAGS.Linux+=		-D_GNU_SOURCE
 
 #.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
 USE_LANGUAGES=		c c++
