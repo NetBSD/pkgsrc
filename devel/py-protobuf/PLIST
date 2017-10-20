@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/10/19 12:16:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/10/20 23:02:25 minskim Exp $
 ${PYSITELIB}/google/protobuf/__init__.py
 ${PYSITELIB}/google/protobuf/__init__.pyc
 ${PYSITELIB}/google/protobuf/__init__.pyo
@@ -218,6 +218,12 @@ ${PYSITELIB}/google/protobuf/struct_pb2.pyo
 ${PYSITELIB}/google/protobuf/symbol_database.py
 ${PYSITELIB}/google/protobuf/symbol_database.pyc
 ${PYSITELIB}/google/protobuf/symbol_database.pyo
+${PYSITELIB}/google/protobuf/test_messages_proto2_pb2.py
+${PYSITELIB}/google/protobuf/test_messages_proto2_pb2.pyc
+${PYSITELIB}/google/protobuf/test_messages_proto2_pb2.pyo
+${PYSITELIB}/google/protobuf/test_messages_proto3_pb2.py
+${PYSITELIB}/google/protobuf/test_messages_proto3_pb2.pyc
+${PYSITELIB}/google/protobuf/test_messages_proto3_pb2.pyo
 ${PYSITELIB}/google/protobuf/text_encoding.py
 ${PYSITELIB}/google/protobuf/text_encoding.pyc
 ${PYSITELIB}/google/protobuf/text_encoding.pyo
