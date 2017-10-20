@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2017/07/20 07:25:00 wiz Exp $
+$NetBSD: distinfo,v 1.11 2017/10/20 23:02:25 minskim Exp $
 
-SHA1 (protobuf-python-3.3.0.tar.gz) = 01ccddc003234d11626422b8a8bc82723a5485b1
-RMD160 (protobuf-python-3.3.0.tar.gz) = fe3ab218c8a580c50b057a36e5ab1e18d3087e0c
-SHA512 (protobuf-python-3.3.0.tar.gz) = bf1cb12524b0008016714c129f0f8605ef66b484fbe4e527b4f364b8a56ba70b046ad3c945094553ed85941a4215a1041cb0797531de7f0a620267d966fed26e
-Size (protobuf-python-3.3.0.tar.gz) = 4492367 bytes
+SHA1 (protobuf-python-3.4.1.tar.gz) = 8ffff7abd3faaf282176dd45b19d39a7c6718262
+RMD160 (protobuf-python-3.4.1.tar.gz) = 7d2c2876b7533da6c9cad8f9aa4dac71c9678494
+SHA512 (protobuf-python-3.4.1.tar.gz) = 571c7e08c3186c465e65b8dc441563de9d604571f8f9784e86a8c59359f5617d9903ae299950d1049feff8d4db9557c6bf193b1fd9bae8eabcd43e797b4c2581
+Size (protobuf-python-3.4.1.tar.gz) = 4559061 bytes
 SHA1 (patch-configure) = ec7003c29d2d3e9aeb9ea90921313e9eb68d3127
 SHA1 (patch-configure.ac) = 208a5ce72905aa95ad73ee0f751d4a58f0c37f5f
 SHA1 (patch-gmock_configure) = a39355c602366450e3cdb6bc7dbc0523fc194319
