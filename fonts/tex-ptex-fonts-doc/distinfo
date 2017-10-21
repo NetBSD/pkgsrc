@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/06/21 11:46:00 markd Exp $
+$NetBSD: distinfo,v 1.3 2017/10/21 03:21:44 markd Exp $
 
-SHA1 (tex-ptex-fonts-42950/ptex-fonts.doc.tar.xz) = 28cfc4acf168ebca73149e5b5df10e472de65495
-RMD160 (tex-ptex-fonts-42950/ptex-fonts.doc.tar.xz) = 22b9b5174feb3ff17ad679993567ecc192100c74
-SHA512 (tex-ptex-fonts-42950/ptex-fonts.doc.tar.xz) = e9a99e52ede0d831c17706e9849e12c658a2b3287f1594550291c5efae4bc58a2ecd6b8ca9395a3ff9e26d8645e1261905f1de33e5a0add09055404541726802
-Size (tex-ptex-fonts-42950/ptex-fonts.doc.tar.xz) = 4204 bytes
+SHA1 (tex-ptex-fonts-45138/ptex-fonts.doc.tar.xz) = 8ce12d081447bc792d6c7f81d8b780072b2852c8
+RMD160 (tex-ptex-fonts-45138/ptex-fonts.doc.tar.xz) = 405edb215fb51ac1c26f50236146a82bc4eacdf4
+SHA512 (tex-ptex-fonts-45138/ptex-fonts.doc.tar.xz) = 568d03da1230d00f164a9bd60d9b2a700207d86a4e24f059c464c2f46ea96d6c942bc5effdbaf831f7664453ab88266daca4b017ea4e31d4dde4039e5a4ac9bc
+Size (tex-ptex-fonts-45138/ptex-fonts.doc.tar.xz) = 4320 bytes
