@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/08/18 14:58:51 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/10/21 01:22:56 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gtk3.${RUBY_DLEXT}
@@ -111,6 +111,7 @@ ${GEM_LIBDIR}/sample/gtk-demo/clipboard.rb
 ${GEM_LIBDIR}/sample/gtk-demo/cmy.jpg
 ${GEM_LIBDIR}/sample/gtk-demo/col_resize_cursor.png
 ${GEM_LIBDIR}/sample/gtk-demo/colorsel.rb
+${GEM_LIBDIR}/sample/gtk-demo/combobox.rb
 ${GEM_LIBDIR}/sample/gtk-demo/context_menu_cursor.png
 ${GEM_LIBDIR}/sample/gtk-demo/copy_cursor.png
 ${GEM_LIBDIR}/sample/gtk-demo/crosshair_cursor.png
@@ -119,6 +120,7 @@ ${GEM_LIBDIR}/sample/gtk-demo/css_accordion.rb
 ${GEM_LIBDIR}/sample/gtk-demo/css_basics.css
 ${GEM_LIBDIR}/sample/gtk-demo/css_basics.rb
 ${GEM_LIBDIR}/sample/gtk-demo/css_blendmodes.css
+${GEM_LIBDIR}/sample/gtk-demo/css_blendmodes.rb
 ${GEM_LIBDIR}/sample/gtk-demo/css_multiplebgs.css
 ${GEM_LIBDIR}/sample/gtk-demo/css_multiplebgs.rb
 ${GEM_LIBDIR}/sample/gtk-demo/css_pixbufs.css
@@ -160,8 +162,10 @@ ${GEM_LIBDIR}/sample/gtk-demo/ew_resize_cursor.png
 ${GEM_LIBDIR}/sample/gtk-demo/expander.rb
 ${GEM_LIBDIR}/sample/gtk-demo/filtermodel.rb
 ${GEM_LIBDIR}/sample/gtk-demo/filtermodel.ui
+${GEM_LIBDIR}/sample/gtk-demo/fishbowl.rb
 ${GEM_LIBDIR}/sample/gtk-demo/fishbowl.ui
 ${GEM_LIBDIR}/sample/gtk-demo/floppybuddy.gif
+${GEM_LIBDIR}/sample/gtk-demo/flowbox.rb
 ${GEM_LIBDIR}/sample/gtk-demo/font-features.ui
 ${GEM_LIBDIR}/sample/gtk-demo/font_features.rb
 ${GEM_LIBDIR}/sample/gtk-demo/glarea-gl.fs.glsl
