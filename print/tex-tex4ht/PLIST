@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/06/21 13:25:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/10/21 04:09:02 markd Exp $
 share/texmf-dist/tex/generic/tex4ht/2up.4ht
 share/texmf-dist/tex/generic/tex4ht/8859-6.4ht
 share/texmf-dist/tex/generic/tex4ht/CJK.4ht
@@ -43,6 +43,7 @@ share/texmf-dist/tex/generic/tex4ht/arabicore.4ht
 share/texmf-dist/tex/generic/tex4ht/array.4ht
 share/texmf-dist/tex/generic/tex4ht/article.4ht
 share/texmf-dist/tex/generic/tex4ht/austrian.4ht
+share/texmf-dist/tex/generic/tex4ht/authblk.4ht
 share/texmf-dist/tex/generic/tex4ht/babel.4ht
 share/texmf-dist/tex/generic/tex4ht/beamer.4ht
 share/texmf-dist/tex/generic/tex4ht/beamerbasefont.4ht
