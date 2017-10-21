@@ -1,9 +1,9 @@
-$NetBSD: patch-configure.ac,v 1.1 2017/10/06 20:47:37 rumko Exp $
+$NetBSD: patch-configure.ac,v 1.2 2017/10/21 02:40:56 markd Exp $
 
 Do not include system paths in R_LD_LIBRARY_PATH.
 NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
 
---- configure.ac.orig	2016-10-04 09:15:04.000000000 +0000
+--- configure.ac.orig	2017-08-04 22:15:02.000000000 +0000
 +++ configure.ac
 @@ -33,6 +33,7 @@ m4_define([R_VERSION],
  AC_INIT([R],[R_VERSION],[https://bugs.r-project.org],[R],[https://www.r-project.org])
@@ -22,7 +22,7 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
    LIBR1=-lR
  else
    LIBR0=
-@@ -689,7 +690,7 @@ case "${host_os}" in
+@@ -702,7 +703,7 @@ case "${host_os}" in
      ## Not so bad in later versions of Darwin, 
      ## where DYLD_FALLBACK_LIBRARY_PATH is used (see below).
      ;;
@@ -31,7 +31,7 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
      for arg in ${LDFLAGS}; do
        case "${arg}" in
          -L*)
-@@ -1376,7 +1377,7 @@ rm -f libconftest${DYLIB_EXT} conftest.c
+@@ -1339,7 +1340,7 @@ rm -f libconftest${DYLIB_EXT} conftest.c
      fpicflags="${darwin_pic}"
      shlib_cxxldflags="${shlib_ldflags}"
      ;;
@@ -40,7 +40,7 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
      ## maybe this needs to depend on the compiler:
      ## -export-dynamic used to work, but does not with clang.
      ## Seems FreeBSD has used the GNU linker since at least 3.0 (Oct 1998)
-@@ -1472,6 +1473,12 @@ rm -f libconftest${DYLIB_EXT} conftest.c
+@@ -1428,6 +1429,12 @@ rm -f libconftest${DYLIB_EXT} conftest.c
      ;;
    netbsd*)
      ## See the comments about FreeBSD
@@ -53,7 +53,7 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
      if ${CPP} - -dM < /dev/null | grep __ELF__ >/dev/null ; then
        main_ldflags="-Wl,--export-dynamic"
        shlib_ldflags="-shared"
-@@ -1514,22 +1521,22 @@ rm -f libconftest${DYLIB_EXT} conftest.c
+@@ -1464,22 +1471,22 @@ rm -f libconftest${DYLIB_EXT} conftest.c
    solaris*)
  ## SPARC has only an 8k global object table, 1024 entries on 64-bit,
  ## so need PIC not pic.  They are the same on other Solaris platforms.
@@ -80,16 +80,16 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
        cpicflags="-KPIC"
        if test "`basename ${CXX}`" = "CC" ; then
          ## Forte version 7 needs -lCstd: Forte 6 does not.	
-@@ -1584,7 +1591,7 @@ R_SH_VAR_ADD(MAIN_LDFLAGS, [${main_ldfla
+@@ -1534,7 +1541,7 @@ R_SH_VAR_ADD(MAIN_LDFLAGS, [${main_ldfla
  : ${CPICFLAGS="${cpicflags}"}
  if test -z "${CPICFLAGS}"; then
    case "${host_os}" in
--    aix*|irix*|mingw*|osf*)
-+    aix*|irix*|mingw*|osf*|darwin*)
+-    aix*|mingw*)
++    aix*|mingw*|darwin*)
        ;;
      *)
        AC_MSG_WARN([I could not determine CPICFLAGS.])
-@@ -1667,10 +1674,10 @@ case "${host_os}" in
+@@ -1616,10 +1623,10 @@ case "${host_os}" in
      DYLIB_EXT=".dylib"
      dylib_ldflags="${darwin_dylib_ldflags}"
      MAJR_VERSION=`echo "${PACKAGE_VERSION}" | sed  -e "s/[[\.]][[1-9]]$/.0/"` 
@@ -103,7 +103,7 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
      ;;
    hpux*)
      ## Needs to avoid embedding a relative path ../../../bin.
-@@ -2582,7 +2589,7 @@ case "${host_os}" in
+@@ -2558,7 +2565,7 @@ case "${host_os}" in
      r_ld_library_defaults="/usr/lib64:/lib64:/usr/lib:/lib"
      ;;
    solaris*)
