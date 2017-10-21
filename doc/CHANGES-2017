@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4559 2017/10/20 23:50:36 maya Exp $
+$NetBSD: CHANGES-2017,v 1.4560 2017/10/21 01:23:28 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6479,3 +6479,26 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/protobuf to 3.4.1 [minskim 2017-10-20]
 	Updated devel/py-protobuf to 3.4.1 [minskim 2017-10-20]
 	Updated lang/gcc5 to 5.5.0 [maya 2017-10-20]
+	Updated devel/ruby-gnome2-atk to 3.1.9 [tsutsui 2017-10-21]
+	Updated devel/ruby-gnome2-gio to 3.1.9 [tsutsui 2017-10-21]
+	Updated devel/ruby-gnome2-glib to 3.1.9 [tsutsui 2017-10-21]
+	Updated devel/ruby-gnome2-gobject-introspection to 3.1.9 [tsutsui 2017-10-21]
+	Updated devel/ruby-gnome2-pango to 3.1.9 [tsutsui 2017-10-21]
+	Updated graphics/ruby-gnome2-cairo-gobject to 3.1.9 [tsutsui 2017-10-21]
+	Updated graphics/ruby-gnome2-clutter to 3.1.9 [tsutsui 2017-10-21]
+	Updated graphics/ruby-gnome2-clutter-gdk to 3.1.9 [tsutsui 2017-10-21]
+	Updated graphics/ruby-gnome2-clutter-gtk to 3.1.9 [tsutsui 2017-10-21]
+	Updated graphics/ruby-gnome2-gdk3 to 3.1.9 [tsutsui 2017-10-21]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 3.1.9 [tsutsui 2017-10-21]
+	Updated graphics/ruby-gnome2-rsvg to 3.1.9 [tsutsui 2017-10-21]
+	Updated meta-pkgs/ruby-gnome2 to 3.1.9 [tsutsui 2017-10-21]
+	Updated multimedia/ruby-gnome2-clutter-gstreamer to 3.1.9 [tsutsui 2017-10-21]
+	Updated multimedia/ruby-gnome2-gstreamer to 3.1.9 [tsutsui 2017-10-21]
+	Updated print/ruby-gnome2-poppler to 3.1.9 [tsutsui 2017-10-21]
+	Updated www/ruby-gnome2-webkit-gtk to 3.1.9 [tsutsui 2017-10-21]
+	Updated www/ruby-gnome2-webkit-gtk2 to 3.1.9 [tsutsui 2017-10-21]
+	Updated x11/ruby-gnome2-gtk to 3.1.9 [tsutsui 2017-10-21]
+	Updated x11/ruby-gnome2-gtk3 to 3.1.9 [tsutsui 2017-10-21]
+	Updated x11/ruby-gnome2-gtksourceview2 to 3.1.9 [tsutsui 2017-10-21]
+	Updated x11/ruby-gnome2-gtksourceview3 to 3.1.9 [tsutsui 2017-10-21]
+	Updated x11/ruby-gnome2-vte to 3.1.9 [tsutsui 2017-10-21]
