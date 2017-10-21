@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.177 2017/10/18 16:14:30 adam Exp $
+# $NetBSD: Makefile,v 1.178 2017/10/21 02:40:56 markd Exp $
 
-DISTNAME=	R-3.3.3
-PKGREVISION=	2
+DISTNAME=	R-3.4.2
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-3/}
 
@@ -31,6 +30,7 @@ PTHREAD_AUTO_VARS=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-R-shlib
 CONFIGURE_ARGS+=	--with-readline
+CONFIGURE_ARGS+=	--with-lapack
 CONFIGURE_ARGS+=	--with-tcltk
 CONFIGURE_ARGS+=	--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 CONFIGURE_ARGS+=	--with-tk-config=${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
@@ -174,6 +174,7 @@ fix-darwin-install-name:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
+.include "../../math/lapack/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 
