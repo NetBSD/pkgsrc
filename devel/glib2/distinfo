@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.224 2017/10/15 08:23:06 prlw1 Exp $
+$NetBSD: distinfo,v 1.225 2017/10/21 08:57:33 prlw1 Exp $
 
 SHA1 (glib-2.54.1.tar.xz) = 3be679369c7134e05b188285154b00940370b109
 RMD160 (glib-2.54.1.tar.xz) = c14a2ab435e47d706a88d4d1efb1008216107abc
@@ -35,4 +35,4 @@ SHA1 (patch-glib_gtimezone.c) = d9686da52f171a073d80cfd9f80aa490088a00a3
 SHA1 (patch-gobject_Makefile.am) = 6eed6b57f5ff0aa0dfb623110b23a3ff78aa4e75
 SHA1 (patch-gobject_Makefile.in) = a4768ff7b0607a8a4dfbb2cff087a987b451fd18
 SHA1 (patch-gobject_glib-genmarshal.in) = f21ca416d4eb4ad5a8ce3ffa053f8bcd2be8953a
-SHA1 (patch-gobject_glib-mkenums.in) = 7c58333ec4946ecb26e709db0be51b7f07035db9
+SHA1 (patch-gobject_glib-mkenums.in) = 7468c428ca33de20571d0199d17a0dcc6ea9d624
