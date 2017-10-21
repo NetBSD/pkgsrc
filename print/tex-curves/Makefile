@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/16 10:30:14 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/10/21 04:01:35 markd Exp $
 
 DISTNAME=	curves
-PKGNAME=	tex-${DISTNAME}-1.53
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-1.55
+TEXLIVE_REV=	45255
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/curves
