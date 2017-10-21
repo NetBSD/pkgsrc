@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/10/13 12:42:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2017/10/21 12:15:56 ryoon Exp $
 
 DISTNAME=	rustc-1.20.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -70,6 +70,17 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 #SITES.${RUST_STAGE0}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
 #DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
 #.endif
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
+RUST_ARCH=		i686-unknown-netbsd
+RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+# Do not trust ryoon@.
+SITES.${RUST_STAGE0}=	https://deuterium.ryoon.net/pub/rust/
+SITES.${RUST_STD_STAGE0}=	https://deuterium.ryoon.net/pub/rust/
+DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
+# For atomic ops
+CFLAGS+=		-march=i586
+.endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=		x86_64-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
