@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/08/21 11:18:37 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/10/21 18:07:33 tsutsui Exp $
 bin/jwm
 man/man1/jwm.1
 share/examples/jwm/system.jwmrc
@@ -6,6 +6,7 @@ share/jwm/jwm-blue.svg
 share/jwm/jwm-gray.svg
 share/jwm/jwm-orange.svg
 share/jwm/jwm.xbm
+share/locale/da/LC_MESSAGES/jwm.mo
 share/locale/de/LC_MESSAGES/jwm.mo
 share/locale/es/LC_MESSAGES/jwm.mo
 share/locale/fr/LC_MESSAGES/jwm.mo
