@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2017/10/02 13:10:06 leot Exp $
+@comment $NetBSD: PLIST,v 1.50 2017/10/22 14:03:26 wiz Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -680,6 +680,9 @@ ${PYSITELIB}/youtube_dl/extractor/freshlive.pyo
 ${PYSITELIB}/youtube_dl/extractor/funimation.py
 ${PYSITELIB}/youtube_dl/extractor/funimation.pyc
 ${PYSITELIB}/youtube_dl/extractor/funimation.pyo
+${PYSITELIB}/youtube_dl/extractor/funk.py
+${PYSITELIB}/youtube_dl/extractor/funk.pyc
+${PYSITELIB}/youtube_dl/extractor/funk.pyo
 ${PYSITELIB}/youtube_dl/extractor/funnyordie.py
 ${PYSITELIB}/youtube_dl/extractor/funnyordie.pyc
 ${PYSITELIB}/youtube_dl/extractor/funnyordie.pyo
@@ -1610,6 +1613,9 @@ ${PYSITELIB}/youtube_dl/extractor/sendtonews.pyo
 ${PYSITELIB}/youtube_dl/extractor/servingsys.py
 ${PYSITELIB}/youtube_dl/extractor/servingsys.pyc
 ${PYSITELIB}/youtube_dl/extractor/servingsys.pyo
+${PYSITELIB}/youtube_dl/extractor/servus.py
+${PYSITELIB}/youtube_dl/extractor/servus.pyc
+${PYSITELIB}/youtube_dl/extractor/servus.pyo
 ${PYSITELIB}/youtube_dl/extractor/sexu.py
 ${PYSITELIB}/youtube_dl/extractor/sexu.pyc
 ${PYSITELIB}/youtube_dl/extractor/sexu.pyo
@@ -1640,6 +1646,9 @@ ${PYSITELIB}/youtube_dl/extractor/skysports.pyo
 ${PYSITELIB}/youtube_dl/extractor/slideshare.py
 ${PYSITELIB}/youtube_dl/extractor/slideshare.pyc
 ${PYSITELIB}/youtube_dl/extractor/slideshare.pyo
+${PYSITELIB}/youtube_dl/extractor/slideslive.py
+${PYSITELIB}/youtube_dl/extractor/slideslive.pyc
+${PYSITELIB}/youtube_dl/extractor/slideslive.pyo
 ${PYSITELIB}/youtube_dl/extractor/slutload.py
 ${PYSITELIB}/youtube_dl/extractor/slutload.pyc
 ${PYSITELIB}/youtube_dl/extractor/slutload.pyo
@@ -1970,6 +1979,9 @@ ${PYSITELIB}/youtube_dl/extractor/uktvplay.pyo
 ${PYSITELIB}/youtube_dl/extractor/unistra.py
 ${PYSITELIB}/youtube_dl/extractor/unistra.pyc
 ${PYSITELIB}/youtube_dl/extractor/unistra.pyo
+${PYSITELIB}/youtube_dl/extractor/unity.py
+${PYSITELIB}/youtube_dl/extractor/unity.pyc
+${PYSITELIB}/youtube_dl/extractor/unity.pyo
 ${PYSITELIB}/youtube_dl/extractor/uol.py
 ${PYSITELIB}/youtube_dl/extractor/uol.pyc
 ${PYSITELIB}/youtube_dl/extractor/uol.pyo
