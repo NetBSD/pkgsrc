@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4574 2017/10/22 18:43:48 leot Exp $
+$NetBSD: CHANGES-2017,v 1.4575 2017/10/22 20:22:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6539,3 +6539,9 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/py-asyncpg to 0.13.0 [adam 2017-10-22]
 	Updated net/youtube-dl to 20171020 [wiz 2017-10-22]
 	Updated comms/gammu to 1.38.5 [leot 2017-10-22]
+	Updated databases/mysql55-client to 5.5.58 [adam 2017-10-22]
+	Updated databases/mysql55-server to 5.5.58 [adam 2017-10-22]
+	Updated databases/mysql56-client to 5.6.38 [adam 2017-10-22]
+	Updated databases/mysql56-server to 5.6.38 [adam 2017-10-22]
+	Updated databases/mysql57-client to 5.7.20 [adam 2017-10-22]
+	Updated databases/mysql57-server to 5.7.20 [adam 2017-10-22]
