@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4568 2017/10/22 02:42:08 wen Exp $
+$NetBSD: CHANGES-2017,v 1.4569 2017/10/22 02:47:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6532,3 +6532,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated ham/fldigi to 4.0.11 [mef 2017-10-22]
 	Updated cad/gtkwave to 3.3.86 [mef 2017-10-22]
 	Updated devel/p5-Test-Simple to 1.302106 [wen 2017-10-22]
+	Updated devel/p5-Module-CoreList to 5.20171020 [wen 2017-10-22]
