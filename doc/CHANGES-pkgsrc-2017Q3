@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.9 2017/10/19 17:58:21 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.10 2017/10/22 18:13:36 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q3 branch:
 
@@ -59,4 +59,10 @@ multimedia/adobe-flash-player: security update
 
 Pullup ticket #5583 - requested by maya
 lang/g95: Linux build fix
+
+Pullup ticket #5584 - requested by sevan
+print/mupdf: bugfix
+
+Pullup ticket #5585 - requested by sevan
+x11/libXfont: security fix
 
