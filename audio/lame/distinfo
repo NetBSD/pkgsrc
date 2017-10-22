@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2017/10/21 22:51:00 wiz Exp $
+$NetBSD: distinfo,v 1.30 2017/10/22 09:30:41 tron Exp $
 
 SHA1 (lame-3.100.tar.gz) = 64c53b1a4d493237cef5e74944912cd9f98e618d
 RMD160 (lame-3.100.tar.gz) = e467c1f9458ca6878cd46e89fffce8970b9ea936
@@ -6,3 +6,4 @@ SHA512 (lame-3.100.tar.gz) = 0844b9eadb4aacf8000444621451277de365041cc1d97b7f7a5
 Size (lame-3.100.tar.gz) = 1524133 bytes
 SHA1 (patch-ab) = ee5b570e8800aefdaffe94a6ed072fa7b62fba6b
 SHA1 (patch-ad) = fa14817f765a61f046a96a1b556e2c8203fc27ad
+SHA1 (patch-include_libmp3lame.sym) = 2278fa631fb8ce05864d3ef09a45c0b3d73ab065
