@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4572 2017/10/22 10:05:02 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4573 2017/10/22 14:03:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6537,3 +6537,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/grip to 3.6.1 [triaxx 2017-10-22]
 	Updated mail/dovecot2 to 2.2.33.2 [adam 2017-10-22]
 	Updated databases/py-asyncpg to 0.13.0 [adam 2017-10-22]
+	Updated net/youtube-dl to 20171020 [wiz 2017-10-22]
