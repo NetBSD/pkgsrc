@@ -1,0 +1,17 @@
+$NetBSD: patch-include_libmp3lame.sym,v 1.1 2017/10/22 09:30:41 tron Exp $
+
+Fix build under macOS.
+
+Idea for patch taken from this mailing list post:
+
+https://hydrogenaud.io/index.php?PHPSESSID=n9gjuo3hnkrna4rt06g6j01r67&topic=114777.msg946373#msg946373
+
+
+--- include/libmp3lame.sym.orig	2017-09-06 20:33:35.000000000 +0100
++++ include/libmp3lame.sym	2017-10-22 10:26:22.000000000 +0100
+@@ -1,5 +1,4 @@
+ lame_init
+-lame_init_old
+ lame_set_num_samples
+ lame_get_num_samples
+ lame_set_in_samplerate
