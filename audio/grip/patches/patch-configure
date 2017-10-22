@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.3 2017/10/22 07:55:24 triaxx Exp $
+
+id3lib has a unused variable warning that makes build fail.
+
+--- configure.orig	2017-10-04 13:07:02.000000000 +0000
++++ configure
+@@ -3067,7 +3067,6 @@ fi
+ 
+ 
+ warning_flags="$CFLAGS -Wall"
+-werror_flags="$warning_flags -Werror"
+ 
+ # Check whether --enable-werror was given.
+ if test "${enable_werror+set}" = set; then :
