@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/11/20 13:02:14 leot Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/10/23 10:45:41 leot Exp $
 bin/netsurf-gtk
 share/netsurf/Messages
 share/netsurf/SearchEngines
@@ -19,7 +19,7 @@ share/netsurf/en/maps.html
 share/netsurf/en/welcome.html
 share/netsurf/favicon.png
 share/netsurf/fr/Messages
-share/netsurf/history.gtk2.ui
+share/netsurf/globalhistory.gtk2.ui
 share/netsurf/hotlist.gtk2.ui
 share/netsurf/icons/arrow-l.png
 share/netsurf/icons/content.png
@@ -36,6 +36,7 @@ share/netsurf/it/welcome.html
 share/netsurf/ja/welcome.html
 share/netsurf/languages
 share/netsurf/licence.html
+share/netsurf/localhistory.gtk2.ui
 share/netsurf/login.gtk2.ui
 share/netsurf/maps.html
 share/netsurf/netsurf-16x16.xpm
