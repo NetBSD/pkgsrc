@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 02:47:27 agc Exp $
+$NetBSD: distinfo,v 1.8 2017/10/23 15:27:19 adam Exp $
 
-SHA1 (Flask-Bootstrap-3.3.2.1.tar.gz) = 12240bb089fb3a923300beaa57313d67b7210da2
-RMD160 (Flask-Bootstrap-3.3.2.1.tar.gz) = 82e5c8a3f1b75c51949f90d2aca806edfbcbb459
-SHA512 (Flask-Bootstrap-3.3.2.1.tar.gz) = f01c24816c2969597a249d1e0eb7acb08cc2ce3b57b79ccc7266ffd3c030c37fc3e5ef654280979e3b679e1a388c8634234ba48de7362ab0755ddf3dd5d0254c
-Size (Flask-Bootstrap-3.3.2.1.tar.gz) = 441889 bytes
+SHA1 (Flask-Bootstrap-3.3.7.1.tar.gz) = 42dfd7b88826c4fbd25badee5f24ef62d9c8b91c
+RMD160 (Flask-Bootstrap-3.3.7.1.tar.gz) = ea03aca56be6f4cef365ac7da9085440955fd9a0
+SHA512 (Flask-Bootstrap-3.3.7.1.tar.gz) = 23500d9575de5c52fcfd8a41bb7d5680440a0f1bae25e7a089b7f0e3885304a4c7d5b916f98adbfe80b98c8d107feef0c5c282e7a4bec7038310e778da4ca2e7
+Size (Flask-Bootstrap-3.3.7.1.tar.gz) = 456359 bytes
