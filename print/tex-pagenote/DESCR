@@ -1,0 +1,3 @@
+The pagenote package provides tagged notes on a separate page
+(also known as 'end notes'). Unless the memoir class is used,
+the package requires the ifmtarg package.
