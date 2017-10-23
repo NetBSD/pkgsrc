@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/06/16 04:06:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/10/23 02:08:35 markd Exp $
 bin/makeglossaries
 share/texmf-dist/scripts/glossaries/glossaries.perl
 share/texmf-dist/tex/latex/glossaries/base/glossaries-babel.sty
@@ -28,5 +28,6 @@ share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-images.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-long.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-multipar.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-parent.tex
+share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-symbolnames.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-symbols.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-url.tex
