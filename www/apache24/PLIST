@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2017/06/19 20:01:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2017/10/23 21:12:44 adam Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -1280,6 +1280,8 @@ share/httpd/manual/mod/mpm_winnt.html.ja.utf8
 share/httpd/manual/mod/mpmt_os2.html
 share/httpd/manual/mod/mpmt_os2.html.en
 share/httpd/manual/mod/mpmt_os2.html.fr
+share/httpd/manual/mod/overrides.html
+share/httpd/manual/mod/overrides.html.en
 share/httpd/manual/mod/prefork.html
 share/httpd/manual/mod/prefork.html.de
 share/httpd/manual/mod/prefork.html.en
