@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4600 2017/10/23 14:23:38 maya Exp $
+$NetBSD: CHANGES-2017,v 1.4601 2017/10/23 15:08:53 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6629,3 +6629,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added graphics/py-strich version 0.8 [joerg 2017-10-23]
 	Updated devel/ocamlgraph to 1.8.8 [jaapb 2017-10-23]
 	Added sysutils/ovmf version 0.0.2017624 [maya 2017-10-23]
+	Updated chat/irssi to 1.0.5nb1 [maya 2017-10-23]
