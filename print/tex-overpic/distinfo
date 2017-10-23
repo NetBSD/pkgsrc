@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:34 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/10/23 09:17:36 markd Exp $
 
-SHA1 (tex-overpic-19712/overpic.tar.xz) = a00a2d2b5807c0f7e17fc1017829cceb3fb5cb8e
-RMD160 (tex-overpic-19712/overpic.tar.xz) = 960165d24484b9da60ad0dc04b9ef86ff64f52ca
-SHA512 (tex-overpic-19712/overpic.tar.xz) = 40ec76b3dedd3161fd0ef8d7673443d8f81bfd79411cfcd1b4a8cc853be15a5dd9a542e710c52b07b5fadf0bd2a7744097bb5c9da8180c31f5fd70817e984325
-Size (tex-overpic-19712/overpic.tar.xz) = 1676 bytes
+SHA1 (tex-overpic-45500/overpic.tar.xz) = 8126917b9bc687c0b3100b3ae031da18572a8722
+RMD160 (tex-overpic-45500/overpic.tar.xz) = a78bfb0c36c8608ac5953c4cf9ba3bca7c9d0b07
+SHA512 (tex-overpic-45500/overpic.tar.xz) = e8f2dc46c0ce1b3b65e5e7315ebf16024e643ccf362d3a3b5f729e8a2f8d942ae97507e331c773ac9d967b18fab50baeca915608132b901e2ac6d00012a5f8de
+Size (tex-overpic-45500/overpic.tar.xz) = 1692 bytes
