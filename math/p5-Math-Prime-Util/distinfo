@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2017/09/26 14:37:13 wiz Exp $
+$NetBSD: distinfo,v 1.15 2017/10/23 13:01:48 wiz Exp $
 
-SHA1 (Math-Prime-Util-0.67.tar.gz) = 7f58a95832ff78e463d2856327fbc6cd29fef6fd
-RMD160 (Math-Prime-Util-0.67.tar.gz) = 8f9ea466dd1effe4e9564461cc27fac0e1d46025
-SHA512 (Math-Prime-Util-0.67.tar.gz) = 0be38e6edb2d878103e0570eeb40430527b9389676d7e861889f42b235668be67c19019fe6c756087100110fb8c40c87b0440ea5d04079c8d14db38448c9e39d
-Size (Math-Prime-Util-0.67.tar.gz) = 588847 bytes
+SHA1 (Math-Prime-Util-0.68.tar.gz) = 27c8efbdaaa7b89dea87fe31deab3be36f02b8cf
+RMD160 (Math-Prime-Util-0.68.tar.gz) = b7d844fdbd1cac14ce23946ff6a2f3731f60a83b
+SHA512 (Math-Prime-Util-0.68.tar.gz) = 6373537d10939ffa4c2542e64da575b1da73652dda26df6108e703faf148c0edec5add016d5c53cbdcd1947fe62d9bdeee752ee9699348f7092056c5c322a238
+Size (Math-Prime-Util-0.68.tar.gz) = 593993 bytes
