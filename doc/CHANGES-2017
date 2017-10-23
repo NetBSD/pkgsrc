@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4598 2017/10/23 13:38:57 joerg Exp $
+$NetBSD: CHANGES-2017,v 1.4599 2017/10/23 13:43:53 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6627,3 +6627,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added archivers/brotli version 1.0.1 [adam 2017-10-23]
 	Updated devel/py-autopep8 to 1.3.3 [adam 2017-10-23]
 	Added graphics/py-strich version 0.8 [joerg 2017-10-23]
+	Updated devel/ocamlgraph to 1.8.8 [jaapb 2017-10-23]
