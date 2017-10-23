@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4580 2017/10/23 10:36:02 markd Exp $
+$NetBSD: CHANGES-2017,v 1.4581 2017/10/23 10:45:59 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6609,3 +6609,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added print/tex-makecell-doc version 0.1e [markd 2017-10-23]
 	Added print/tex-pagenote version 1.1a [markd 2017-10-23]
 	Added print/tex-pagenote-doc version 1.1a [markd 2017-10-23]
+	Updated www/netsurf to 3.7 [leot 2017-10-23]
