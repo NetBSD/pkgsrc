@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 02:47:28 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/10/23 15:39:50 adam Exp $
 
-SHA1 (Flask-Limiter-0.7.9.tar.gz) = c5cb4b5a8b9be727635834ccc7c069f94b987374
-RMD160 (Flask-Limiter-0.7.9.tar.gz) = d8fc210d23aa9bc8c87421f152c2a2c5f08c5c67
-SHA512 (Flask-Limiter-0.7.9.tar.gz) = db6a07e792d4d9d2cc14065a13c5035fc74482220469516c965f649b062332b8b7196c14118e8f7c956419eab054690dffa097f48f7e562aaa3fe2bbad45d249
-Size (Flask-Limiter-0.7.9.tar.gz) = 73864 bytes
+SHA1 (Flask-Limiter-0.9.5.1.tar.gz) = 4545914e75900df811bd8b5ea2ec416b000952fa
+RMD160 (Flask-Limiter-0.9.5.1.tar.gz) = f69703633ba0f98c6f6a8abff8eb1e94aeb6c720
+SHA512 (Flask-Limiter-0.9.5.1.tar.gz) = 4d076a7846c3ae900ee79d975ea59c3e31c36e79e83d57f674fa29ea908b25d73bd2c386d5243e8af3482859f8aad2bbdaa1bd9d07e4c3f62c9d0330f90c4cad
+Size (Flask-Limiter-0.9.5.1.tar.gz) = 95790 bytes
