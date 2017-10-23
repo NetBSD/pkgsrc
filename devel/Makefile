@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2557 2017/10/23 11:26:02 prlw1 Exp $
+# $NetBSD: Makefile,v 1.2558 2017/10/23 15:20:45 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2151,6 +2151,7 @@ SUBDIR+=	py-uvloop
 SUBDIR+=	py-vcversioner
 SUBDIR+=	py-vine
 SUBDIR+=	py-virtualenv
+SUBDIR+=	py-visitor
 SUBDIR+=	py-wcwidth
 SUBDIR+=	py-wheel
 SUBDIR+=	py-whichcraft
