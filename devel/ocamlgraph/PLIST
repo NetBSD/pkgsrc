@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/06/17 16:31:30 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/10/23 13:43:31 jaapb Exp $
 ${PLIST.lablgtk}bin/graph-editor
 ${PLIST.lablgtk}bin/graph-viewer
 ${PLIST.lablgtk}${OCAML_SITELIB}/ocamlgraph/dgraph.cmi
@@ -12,6 +12,7 @@ ${PLIST.ocaml-opt}${PLIST.lablgtk}${OCAML_SITELIB}/ocamlgraph/viewgraph.cmx
 ${PLIST.ocaml-opt}${PLIST.lablgtk}${OCAML_SITELIB}/ocamlgraph/viewgraph.o
 ${OCAML_SITELIB}/ocamlgraph/META
 ${OCAML_SITELIB}/ocamlgraph/builder.mli
+${OCAML_SITELIB}/ocamlgraph/chaoticIteration.mli
 ${OCAML_SITELIB}/ocamlgraph/classic.mli
 ${OCAML_SITELIB}/ocamlgraph/clique.mli
 ${OCAML_SITELIB}/ocamlgraph/cliquetree.mli
@@ -41,6 +42,8 @@ ${OCAML_SITELIB}/ocamlgraph/graph.cmi
 ${OCAML_SITELIB}/ocamlgraph/graph.cmo
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocamlgraph/graph.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocamlgraph/graph.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocamlgraph/graph.cmxs
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocamlgraph/graph.o
 ${OCAML_SITELIB}/ocamlgraph/graphml.mli
 ${OCAML_SITELIB}/ocamlgraph/graphviz.mli
 ${OCAML_SITELIB}/ocamlgraph/imperative.mli
@@ -67,5 +70,6 @@ ${OCAML_SITELIB}/ocamlgraph/util.mli
 ${OCAML_SITELIB}/ocamlgraph/viewGraph_core.mli
 ${OCAML_SITELIB}/ocamlgraph/viewGraph_select.mli
 ${OCAML_SITELIB}/ocamlgraph/viewGraph_utils.mli
+${OCAML_SITELIB}/ocamlgraph/weakTopological.mli
 ${OCAML_SITELIB}/ocamlgraph/xDot.mli
 ${OCAML_SITELIB}/ocamlgraph/xDotDraw.mli
