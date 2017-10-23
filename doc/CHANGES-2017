@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4590 2017/10/23 13:01:58 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4591 2017/10/23 13:03:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6619,3 +6619,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added net/p5-Net-DNS-Resolver-Mock version 1.20170814 [wiz 2017-10-23]
 	Updated mail/p5-Mail-DKIM to 0.44 [wiz 2017-10-23]
 	Updated math/p5-Math-Prime-Util to 0.68 [wiz 2017-10-23]
+	Updated net/p5-Net-DNS to 1.13 [wiz 2017-10-23]
