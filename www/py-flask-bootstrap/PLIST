@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/04/02 22:53:02 rodent Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/10/23 15:27:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,6 +8,12 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/flask_bootstrap/__init__.py
 ${PYSITELIB}/flask_bootstrap/__init__.pyc
 ${PYSITELIB}/flask_bootstrap/__init__.pyo
+${PYSITELIB}/flask_bootstrap/forms.py
+${PYSITELIB}/flask_bootstrap/forms.pyc
+${PYSITELIB}/flask_bootstrap/forms.pyo
+${PYSITELIB}/flask_bootstrap/nav.py
+${PYSITELIB}/flask_bootstrap/nav.pyc
+${PYSITELIB}/flask_bootstrap/nav.pyo
 ${PYSITELIB}/flask_bootstrap/static/css/bootstrap-theme.css
 ${PYSITELIB}/flask_bootstrap/static/css/bootstrap-theme.css.map
 ${PYSITELIB}/flask_bootstrap/static/css/bootstrap-theme.min.css
