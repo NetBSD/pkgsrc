@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.97 2016/10/09 14:39:27 bsiegert Exp $
+$NetBSD: distinfo,v 1.98 2017/10/23 11:49:10 ryoon Exp $
 
 SHA1 (mplayer/Abyss-1.7.tar.bz2) = 46d122cb60496eecbc96f26a0cfe0bda883fd725
 RMD160 (mplayer/Abyss-1.7.tar.bz2) = ca1e1c77177dc23300d011c1e00711c6bb81756a
@@ -292,6 +292,7 @@ SHA1 (patch-gui_interface.c) = 04c347b6cb0a54132e6b089142c8ed282f583a1c
 SHA1 (patch-libao2_ao_sun.c) = ce7042b394b9b8c051597c734b70290c8bf0a8d5
 SHA1 (patch-libvo_vo__corevideo.h) = c29a24266edb6727dda68a378fac413b5b0ab7ec
 SHA1 (patch-libvo_vo__gif89a.c) = f7ee649bebef4b7f3fd4659613f61667109ee825
+SHA1 (patch-libvo_vo__vdpau.c) = df3de0e079f7047228065bf36390aa3ad01b7f97
 SHA1 (patch-stream_dvb_tune.c) = 46cb5fb4700d7da5ed997dd468033c1edbe9be03
 SHA1 (patch-stream_dvbin.h) = ee4f74eb786100e7cc62be228d73ce29d88638d1
 SHA1 (patch-stream_stream__dvdnav.c) = 6f7e54629b32c83de8e4b31fe414b78f6043e0e8
