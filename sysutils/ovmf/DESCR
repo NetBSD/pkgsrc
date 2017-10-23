@@ -1,0 +1,3 @@
+Open Virtual Machine Firmware is a build of EDK II for virtual machines.
+It includes full support for UEFI allowing use of UEFI in place of a
+traditional BIOS in your VM.

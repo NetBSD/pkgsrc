@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2017/10/23 14:21:57 maya Exp $
+
+SHA1 (edk2/vUDK2017.tar.gz) = 5bfb90aedb958d747eb8803b2a60d416842a39d6
+RMD160 (edk2/vUDK2017.tar.gz) = f8260ec115b2db0816cd9eb012b7ded77b151840
+SHA512 (edk2/vUDK2017.tar.gz) = d941a661d570b0f69962105920b3524c4aac1f4883468914305eb68015148d70f6593c52872a79a6143cf87dc44e9ce2b8957834b4524cb8a04b12473c6d7d81
+Size (edk2/vUDK2017.tar.gz) = 38737483 bytes
+SHA1 (patch-BaseTools_Conf_tools__def.template) = a6486b74d0e9e39738e2979a6940a051e9d4521a
+SHA1 (patch-EmulatorPkg_build.sh) = 3ad9cc36a05d5763b1b6eba75ae58ac16751a6fe
+SHA1 (patch-OvmfPkg_build.sh) = 7555880aaadfda4954b0bf8beab9a5441cc8374c
