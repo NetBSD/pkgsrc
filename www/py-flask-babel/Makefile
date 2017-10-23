@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/09/16 19:27:23 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/10/23 15:33:03 adam Exp $
 
-DISTNAME=	Flask-Babel-0.11.1
+DISTNAME=	Flask-Babel-0.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Babel/}
@@ -10,12 +10,10 @@ HOMEPAGE=	https://github.com/mitsuhiko/flask-babel
 COMMENT=	Adds i18n/l10n support to Flask applications
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.5:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-speaklater>=1.2:../../devel/py-speaklater
 DEPENDS+=	${PYPKGPREFIX}-babel>=2.3:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.5:../../textproc/py-jinja2
 
-USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 
 .include "../../lang/python/egg.mk"
