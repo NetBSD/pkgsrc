@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/22 00:13:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/10/23 01:39:34 markd Exp $
 share/texmf-dist/dvips/pstricks-add/pstricks-add.pro
 share/texmf-dist/tex/generic/pstricks-add/pstricks-add.tex
-share/texmf-dist/tex/latex/pstricks-add/pstricks-add.cfg
 share/texmf-dist/tex/latex/pstricks-add/pstricks-add.sty
