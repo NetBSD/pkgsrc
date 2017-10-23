@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.702 2017/10/15 20:39:15 markd Exp $
+# $NetBSD: Makefile,v 1.703 2017/10/23 10:31:00 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -859,6 +859,8 @@ SUBDIR+=	tex-luatex85-doc
 SUBDIR+=	tex-macros2e-doc
 SUBDIR+=	tex-magaz
 SUBDIR+=	tex-magaz-doc
+SUBDIR+=	tex-makecell
+SUBDIR+=	tex-makecell-doc
 SUBDIR+=	tex-makecmds
 SUBDIR+=	tex-makecmds-doc
 SUBDIR+=	tex-marginnote
@@ -972,6 +974,8 @@ SUBDIR+=	tex-otibet-doc
 SUBDIR+=	tex-oubraces
 SUBDIR+=	tex-oubraces-doc
 SUBDIR+=	tex-overpic
+SUBDIR+=	tex-pagenote
+SUBDIR+=	tex-pagenote-doc
 SUBDIR+=	tex-pageslts
 SUBDIR+=	tex-paralist
 SUBDIR+=	tex-paralist-doc
