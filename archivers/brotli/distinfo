@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/10/23 13:15:29 adam Exp $
+
+SHA1 (brotli-1.0.1.tar.gz) = 33719c380ca2623f748f783666cea242a3b0339a
+RMD160 (brotli-1.0.1.tar.gz) = 13a391d712dea9675e7d5267a07f626895b39ebc
+SHA512 (brotli-1.0.1.tar.gz) = de6f787012243fdc5eafa559ffc765e1d69bf78cf337efdd743bb422706b5ae86b4966f07a8410165044b988b7ca2999065efc4693bda7111e53fe64917e24c0
+Size (brotli-1.0.1.tar.gz) = 23731694 bytes
