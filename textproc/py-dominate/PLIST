@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2017/10/23 15:22:29 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/dominate/__init__.py
+${PYSITELIB}/dominate/__init__.pyc
+${PYSITELIB}/dominate/__init__.pyo
+${PYSITELIB}/dominate/_version.py
+${PYSITELIB}/dominate/_version.pyc
+${PYSITELIB}/dominate/_version.pyo
+${PYSITELIB}/dominate/document.py
+${PYSITELIB}/dominate/document.pyc
+${PYSITELIB}/dominate/document.pyo
+${PYSITELIB}/dominate/dom1core.py
+${PYSITELIB}/dominate/dom1core.pyc
+${PYSITELIB}/dominate/dom1core.pyo
+${PYSITELIB}/dominate/dom_tag.py
+${PYSITELIB}/dominate/dom_tag.pyc
+${PYSITELIB}/dominate/dom_tag.pyo
+${PYSITELIB}/dominate/tags.py
+${PYSITELIB}/dominate/tags.pyc
+${PYSITELIB}/dominate/tags.pyo
+${PYSITELIB}/dominate/util.py
+${PYSITELIB}/dominate/util.pyc
+${PYSITELIB}/dominate/util.pyo
