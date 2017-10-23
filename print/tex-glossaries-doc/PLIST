@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2016/06/16 04:06:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/10/23 02:08:35 markd Exp $
+man/man1/makeglossaries-lite.1
+man/man1/makeglossaries.1
 share/texmf-dist/doc/latex/glossaries/CHANGES
 share/texmf-dist/doc/latex/glossaries/INSTALL
 share/texmf-dist/doc/latex/glossaries/README
@@ -111,3 +113,5 @@ share/texmf-dist/doc/latex/glossaries/samples/samplexdy.pdf
 share/texmf-dist/doc/latex/glossaries/samples/samplexdy.tex
 share/texmf-dist/doc/latex/glossaries/samples/samplexdy2.pdf
 share/texmf-dist/doc/latex/glossaries/samples/samplexdy2.tex
+share/texmf-dist/doc/latex/glossaries/samples/samplexdy3.pdf
+share/texmf-dist/doc/latex/glossaries/samples/samplexdy3.tex
