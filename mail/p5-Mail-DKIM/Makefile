@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2017/09/26 14:34:54 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2017/10/23 12:58:48 wiz Exp $
 
-DISTNAME=		Mail-DKIM-0.43
+DISTNAME=		Mail-DKIM-0.44
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		mail perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Mail/}
@@ -11,10 +11,11 @@ COMMENT=		Perl5 module for DKIM-based mail-signing and -verifying
 LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-Crypt-OpenSSL-RSA>=0.27:../../security/p5-Crypt-OpenSSL-RSA
-#DEPENDS+=		{perl>=5.9.3,p5-Digest-SHA-[0-9]*}:../../security/p5-Digest-SHA
 DEPENDS+=		p5-MailTools-[0-9]*:../../mail/p5-MailTools
-#DEPENDS+=		{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
+DEPENDS+=		p5-YAML-LibYAML-[0-9]*:../../textproc/p5-YAML-LibYAML
+# TEST_DEPENDS
+BUILD_DEPENDS+=		p5-Net-DNS-Resolver-Mock-[0-9]*:../../net/p5-Net-DNS-Resolver-Mock
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Mail/DKIM/.packlist
