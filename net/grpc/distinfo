@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2017/10/23 15:48:04 minskim Exp $
+
+SHA1 (grpc-1.6.7.tar.gz) = 0a2677d7f05b5fe3bcf6820f89237fad615eb301
+RMD160 (grpc-1.6.7.tar.gz) = b6856325273d210a36619de6e80c8f11753a73cc
+SHA512 (grpc-1.6.7.tar.gz) = 7c4c3e21cb24cdd18022c75d94b78ea099fe3f97af39bf26672e0240945d109f122e79a8476f82b086ec22747569b69826a850ad2c0e8e37df3b3f4a0b67e7e5
+Size (grpc-1.6.7.tar.gz) = 4835956 bytes
+SHA1 (patch-CMakeLists.txt) = e560a1f4d70ba520b5bf454da97946bf8b803360
+SHA1 (patch-src_core_ext_transport_chttp2_transport_flow__control.c) = 81d7c5e3065c3ea9d505d654a9c5a723793d85a5
