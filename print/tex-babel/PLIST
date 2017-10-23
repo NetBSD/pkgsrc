@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/08/17 03:05:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/10/23 09:13:59 markd Exp $
 share/texmf-dist/makeindex/babel/bbglo.ist
 share/texmf-dist/makeindex/babel/bbind.ist
 share/texmf-dist/tex/generic/babel/UKenglish.sty
@@ -7,6 +7,8 @@ share/texmf-dist/tex/generic/babel/afrikaans.sty
 share/texmf-dist/tex/generic/babel/albanian.sty
 share/texmf-dist/tex/generic/babel/american.sty
 share/texmf-dist/tex/generic/babel/austrian.sty
+share/texmf-dist/tex/generic/babel/babel-bidi-basic-r.lua
+share/texmf-dist/tex/generic/babel/babel-bidi.lua
 share/texmf-dist/tex/generic/babel/babel.def
 share/texmf-dist/tex/generic/babel/babel.sty
 share/texmf-dist/tex/generic/babel/bahasa.sty
