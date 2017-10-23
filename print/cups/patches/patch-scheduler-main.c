@@ -1,18 +1,18 @@
-$NetBSD: patch-scheduler-main.c,v 1.2 2017/09/03 11:30:54 leot Exp $
+$NetBSD: patch-scheduler-main.c,v 1.3 2017/10/23 12:34:54 leot Exp $
 
 Add a PidFile configuration directive to write a PID file.
 
---- scheduler/main.c.orig	2017-06-30 15:44:38.000000000 +0000
+--- scheduler/main.c.orig	2017-10-13 18:22:26.000000000 +0000
 +++ scheduler/main.c
-@@ -72,6 +72,7 @@ static void		service_checkin(void);
- static void		service_checkout(void);
- #endif /* HAVE_ONDEMAND */
- static void		usage(int status) __attribute__((noreturn));
+@@ -61,6 +61,7 @@
+  * Local functions...
+  */
+ 
 +static int		create_pidfile(const char *path);
- 
- 
- /*
-@@ -677,6 +678,13 @@ main(int  argc,				/* I - Number of comm
+ static void		parent_handler(int sig);
+ static void		process_children(void);
+ static void		sigchld_handler(int sig);
+@@ -676,6 +677,13 @@ main(int  argc,				/* I - Number of comm
  #endif /* __APPLE__ */
  
   /*
@@ -26,7 +26,7 @@ Add a PidFile configuration directive to write a PID file.
    * Send server-started event...
    */
  
-@@ -1139,6 +1147,7 @@ main(int  argc,				/* I - Number of comm
+@@ -1143,6 +1151,7 @@ main(int  argc,				/* I - Number of comm
                    "Scheduler shutting down due to program error.");
    }
  
@@ -34,7 +34,7 @@ Add a PidFile configuration directive to write a PID file.
   /*
    * Close all network clients...
    */
-@@ -1167,6 +1176,12 @@ main(int  argc,				/* I - Number of comm
+@@ -1168,6 +1177,12 @@ main(int  argc,				/* I - Number of comm
    */
  
    cupsdDeleteTemporaryPrinters(1);
@@ -47,7 +47,7 @@ Add a PidFile configuration directive to write a PID file.
  
  #ifdef __APPLE__
   /*
-@@ -2068,6 +2083,36 @@ service_checkout(void)
+@@ -2088,6 +2103,36 @@ service_checkout(int shutdown)          
  
  
  /*

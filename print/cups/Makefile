@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.250 2017/09/03 11:30:54 leot Exp $
+# $NetBSD: Makefile,v 1.251 2017/10/23 12:34:54 leot Exp $
 
-DISTNAME=	cups-2.2.4-source
+DISTNAME=	cups-2.2.5-source
 PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=apple/}
