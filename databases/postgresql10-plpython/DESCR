@@ -1,0 +1,9 @@
+PL/Python allows you to write functions in the Python programming
+language that may be used in SQL queries as if they were built into
+Postgres.  The PL/Python intepreter is a full Python interpreter.
+
+PL/Python is currently only available as an "untrusted" language
+(meaning it does not offer any way of restricting what users can do
+in it).  It has therefore been named "plpythonu".  The trusted variant
+plpython may become available again in future, if a new secure execution
+mechanism is developed in Python.
