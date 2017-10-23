@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4584 2017/10/23 12:47:18 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4585 2017/10/23 12:48:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6613,3 +6613,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed devel/py-glib2-tools [prlw1 2017-10-23]
 	Updated print/cups to 2.2.5 [leot 2017-10-23]
 	Updated devel/p5-ExtUtils-CppGuess to 0.12 [wiz 2017-10-23]
+	Updated devel/p5-Test2-Suite to 0.000082 [wiz 2017-10-23]
