@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/09/26 13:10:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/10/23 20:48:43 adam Exp $
 bin/sdl2-config
 include/SDL2/SDL.h
 include/SDL2/SDL_assert.h
@@ -61,6 +61,7 @@ include/SDL2/SDL_test_harness.h
 include/SDL2/SDL_test_images.h
 include/SDL2/SDL_test_log.h
 include/SDL2/SDL_test_md5.h
+include/SDL2/SDL_test_memory.h
 include/SDL2/SDL_test_random.h
 include/SDL2/SDL_thread.h
 include/SDL2/SDL_timer.h
