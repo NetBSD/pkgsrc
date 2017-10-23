@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/10/23 10:11:21 leot Exp $
+# $NetBSD: Makefile,v 1.13 2017/10/23 10:17:39 leot Exp $
 
 DISTNAME=	orc-0.4.27
 CATEGORIES=	devel
@@ -11,7 +11,7 @@ COMMENT=	Compiler for vector operations
 LICENSE=	modified-bsd
 
 USE_LIBTOOL=		yes
-USE_TOOLS=		gmake
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	orc.pc.in
 
