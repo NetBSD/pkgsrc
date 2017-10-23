@@ -1,0 +1,32 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2017/10/23 15:48:04 minskim Exp $
+
+Make this build with pkgsrc google-benchmark and libcares.
+
+--- CMakeLists.txt.orig	2017-10-19 02:10:38.000000000 +0000
++++ CMakeLists.txt
+@@ -159,6 +159,8 @@ elseif("${gRPC_CARES_PROVIDER}" STREQUAL
+   find_package(c-ares CONFIG)
+   if(TARGET c-ares::cares)
+     set(_gRPC_CARES_LIBRARIES c-ares::cares)
++  else()
++    set(_gRPC_CARES_LIBRARIES cares)
+   endif()
+   set(_gRPC_FIND_CARES "if(NOT c-ares_FOUND)\n  find_package(c-ares CONFIG)\nendif()")
+ endif()
+@@ -282,7 +284,6 @@ if("${gRPC_BENCHMARK_PROVIDER}" STREQUAL
+       message(WARNING "gRPC_BENCHMARK_PROVIDER is \"module\" but BENCHMARK_ROOT_DIR is wrong")
+   endif()
+ elseif("${gRPC_BENCHMARK_PROVIDER}" STREQUAL "package")
+-  find_package(benchmark)
+   if(TARGET benchmark::benchmark)
+     set(_gRPC_BENCHMARK_LIBRARIES benchmark::benchmark)
+   endif()
+@@ -339,7 +340,7 @@ function(protobuf_generate_grpc_cpp)
+              "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}_mock.grpc.pb.h"
+              "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}.pb.cc"
+              "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}.pb.h"
+-      COMMAND $<TARGET_FILE:${_gRPC_PROTOBUF_PROTOC}>
++      COMMAND ${_gRPC_PROTOBUF_PROTOC}
+       ARGS --grpc_out=generate_mock_code=true:${_gRPC_PROTO_GENS_DIR}
+            --cpp_out=${_gRPC_PROTO_GENS_DIR}
+            --plugin=protoc-gen-grpc=$<TARGET_FILE:grpc_cpp_plugin>
