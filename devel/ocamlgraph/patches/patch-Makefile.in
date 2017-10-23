@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile.in,v 1.2 2016/06/17 16:31:30 jaapb Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2017/10/23 13:43:31 jaapb Exp $
 
 Change configure procedure to use pkgsrc settings rather than detection
 Also install in site-lib
---- Makefile.in.orig	2016-04-12 06:47:31.000000000 +0000
+--- Makefile.in.orig	2017-10-17 09:25:15.000000000 +0000
 +++ Makefile.in
 @@ -33,7 +33,7 @@ OCAMLDOC = @OCAMLDOC@
  OCAMLLEX = @OCAMLLEX@
@@ -22,7 +22,7 @@ Also install in site-lib
  all: byte $(OCAMLBEST) viewer dgraph editor
  else
  all: byte $(OCAMLBEST)
-@@ -240,7 +240,7 @@ $(DGRAPH_DIR)/dgraph.opt: $(CMXA) $(DGRA
+@@ -246,7 +246,7 @@ $(DGRAPH_DIR)/dgraph.opt: $(CMXA) $(DGRA
  # while graph.cmi may be required at the same time by some .cmo of the
  # bytecodes, leading to tentative access to a corrupted graph.cmi.
  
@@ -31,7 +31,7 @@ Also install in site-lib
  graph.cmx: | $(DGRAPH_DIR)/dgraph.byte \
  	$(VIEWER_DIR)/viewgraph.byte \
  	$(ED_DIR)/editor.byte
-@@ -381,7 +381,7 @@ INSTALL_LIBDIR=$(DESTDIR)$(OCAMLLIB)/oca
+@@ -387,7 +387,7 @@ INSTALL_LIBDIR=$(DESTDIR)$(OCAMLLIB)/oca
  
  install: install-$(OCAMLBEST) install-byte
  	mkdir -p $(BINDIR)
@@ -40,25 +40,25 @@ Also install in site-lib
  ifeq ($(OCAMLBEST),byte)
  	cp -f $(BINDIR)/graph-editor.byte $(BINDIR)/graph-editor$(EXE)
  	cp -f $(BINDIR)/graph-viewer.byte $(BINDIR)/graph-viewer$(EXE)
-@@ -395,7 +395,7 @@ install-byte:
+@@ -401,7 +401,7 @@ install-byte:
  	mkdir -p $(INSTALL_LIBDIR)
  	cp -f graph.cmo graph.cmi $(CMA) $(INSTALL_LIBDIR)
- 	cp -f $(SRCDIR)/*.mli $(INSTALL_LIBDIR)
+ 	cp -f $(OCAMLGRAPH_SRCDIR)/*.mli $(INSTALL_LIBDIR)
 -ifeq (@LABLGNOMECANVAS@,yes)
 +ifeq (${USE_LABLGTK},yes)
  	mkdir -p $(BINDIR)
  	cp -f $(ED_DIR)/editor.byte $(BINDIR)/graph-editor.byte
  	cp -f $(VIEWER_CMILIB) $(VIEWER_CMOLIB) $(INSTALL_LIBDIR)
-@@ -409,7 +409,7 @@ install-opt: install-byte
+@@ -415,7 +415,7 @@ install-opt: install-byte
  	cp -f graph$(OBJEXT) graph$(LIBEXT) graph.cmi graph.cmx \
  		$(CMXA) $(CMXS) $(INSTALL_LIBDIR)
- 	cp -f $(SRCDIR)/*.mli $(INSTALL_LIBDIR)
+ 	cp -f $(OCAMLGRAPH_SRCDIR)/*.mli $(INSTALL_LIBDIR)
 -ifeq (@LABLGNOMECANVAS@,yes)
 +ifeq (${USE_LABLGTK},yes)
  	mkdir -p $(BINDIR)
  	cp -f $(ED_DIR)/editor.opt $(BINDIR)/graph-editor.opt
  	cp -f $(VIEWER_CMILIB) $(VIEWER_CMXLIB) $(VIEWER_CMXLIB:.cmx=.o) \
-@@ -421,12 +421,12 @@ ifeq (@LABLGNOMECANVAS@,yes)
+@@ -427,14 +427,14 @@ ifeq (@LABLGNOMECANVAS@,yes)
  endif
  
  ifdef DESTDIR
@@ -66,19 +66,21 @@ Also install in site-lib
 +OCAMLFINDDEST := -destdir $(DESTDIR)${PREFIX}/${OCAML_SITELIBDIR}
  endif
  
+ ifeq ($(OCAMLBEST),byte)
+   OCAMLFIND_OPT_FILES=
+ else
+   OCAMLFIND_OPT_FILES=graph$(OBJEXT) graph$(LIBEXT) graph.cmx $(CMXA) $(CMXS)
+-  ifeq (@LABLGNOMECANVAS@,yes)
++  ifeq (${USE_LABLGTK},yes)
+     OCAMLFIND_OPT_FILES+=\
+       $(VIEWER_CMXLIB) $(VIEWER_CMXLIB:.cmx=.o) \
+       $(DGRAPH_CMXLIB) $(DGRAPH_CMXLIB:.cmx=.o)
+@@ -443,7 +443,7 @@ endif
+ 
  install-findlib: META
  ifdef OCAMLFIND
 -ifeq (@LABLGNOMECANVAS@,yes)
 +ifeq (${USE_LABLGTK},yes)
  	$(OCAMLFIND) install $(OCAMLFINDDEST) ocamlgraph META \
- 		$(SRCDIR)/*.mli $(VIEWER_DIR)/*.mli $(DGRAPH_DIR)/*.mli \
- 		graph$(OBJEXT) graph$(LIBEXT) graph.cmx graph.cmo graph.cmi \
-@@ -455,7 +455,7 @@ NODOC	= blocks dot_parser dot_lexer vers
- NODOC	:= $(patsubst %, $(SRCDIR)/%.cmo, $(NODOC))
- DOC_CMO	= $(filter-out $(NODOC) $(LIB), $(CMO))
- DOC_SRC	= $(CMI:.cmi=.mli) $(DOC_CMO:.cmo=.mli) $(DOC_CMO:.cmo=.ml)
--ifeq (@LABLGNOMECANVAS@,yes)
-+ifeq (${USE_LABLGTK},yes)
- DOC_SRC := $(DOC_SRC) $(DGRAPH_CMI:.cmi=.mli)
- endif
- 
+ 		$(OCAMLGRAPH_SRCDIR)/*.mli $(VIEWER_DIR)/*.mli $(DGRAPH_DIR)/*.mli \
+ 		graph.cmo graph.cmi \
