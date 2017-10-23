@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2017/10/23 13:15:29 adam Exp $
+bin/brotli
+include/brotli/decode.h
+include/brotli/encode.h
+include/brotli/port.h
+include/brotli/types.h
+lib/libbrotlicommon-static.a
+lib/libbrotlicommon.so
+lib/libbrotlicommon.so.1.0.1
+lib/libbrotlidec-static.a
+lib/libbrotlidec.so
+lib/libbrotlidec.so.1.0.1
+lib/libbrotlienc-static.a
+lib/libbrotlienc.so
+lib/libbrotlienc.so.1.0.1
+lib/pkgconfig/libbrotlicommon.pc
+lib/pkgconfig/libbrotlidec.pc
+lib/pkgconfig/libbrotlienc.pc
