@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4593 2017/10/23 13:06:07 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4594 2017/10/23 13:07:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6622,3 +6622,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/p5-Net-DNS to 1.13 [wiz 2017-10-23]
 	Updated textproc/p5-Text-CSV_XS to 1.33 [wiz 2017-10-23]
 	Updated textproc/p5-XML-LibXML to 2.0130 [wiz 2017-10-23]
+	Updated www/p5-Mojolicious to 7.48 [wiz 2017-10-23]
