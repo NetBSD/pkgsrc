@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2558 2017/10/23 15:20:45 adam Exp $
+# $NetBSD: Makefile,v 1.2559 2017/10/24 07:01:28 maya Exp $
 #
 
 COMMENT=	Development utilities
@@ -326,6 +326,7 @@ SUBDIR+=	go-homedir
 SUBDIR+=	go-i18n
 SUBDIR+=	go-immutable-radix
 SUBDIR+=	go-ini
+SUBDIR+=	go-isatty
 SUBDIR+=	go-jwalterweatherman
 SUBDIR+=	go-mapstructure
 SUBDIR+=	go-mow-cli
@@ -338,7 +339,9 @@ SUBDIR+=	go-protobuf
 SUBDIR+=	go-purell
 SUBDIR+=	go-ratelimit
 SUBDIR+=	go-review
+SUBDIR+=	go-runewidth
 SUBDIR+=	go-sanitized_anchor_name
+SUBDIR+=	go-shellwords
 SUBDIR+=	go-shuffle
 SUBDIR+=	go-siphash
 SUBDIR+=	go-sys
