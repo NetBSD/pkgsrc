@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4610 2017/10/24 07:04:03 maya Exp $
+$NetBSD: CHANGES-2017,v 1.4611 2017/10/24 07:28:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6652,3 +6652,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/go-isatty version 0.0.3 [maya 2017-10-24]
 	Added devel/go-shellwords version 1.0.3 [maya 2017-10-24]
 	Added devel/go-runewidth version 0.0.2 [maya 2017-10-24]
+	Updated www/lighttpd to 1.4.47 [adam 2017-10-24]
