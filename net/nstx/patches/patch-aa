@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/11/16 02:04:39 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2017/10/24 00:00:36 khorben Exp $
 
---- Makefile.orig	2004-06-27 14:46:38.000000000 -0700
+Add support for CFLAGS and LDFLAGS
+
+--- Makefile.orig	2004-06-27 21:46:38.000000000 +0000
 +++ Makefile
 @@ -1,5 +1,3 @@
 -CFLAGS += -ggdb -Wall -Werror
@@ -8,3 +10,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/11/16 02:04:39 minskim Exp $
  NSTXD_SRCS = nstxd.c nstx_encode.c nstx_pstack.c nstx_dns.c nstx_tuntap.c nstx_queue.c
  NSTXD_OBJS = ${NSTXD_SRCS:.c=.o}
  
+@@ -11,10 +9,10 @@ PROGS = nstxd nstxcd
+ all: $(PROGS)
+ 
+ nstxd: $(NSTXD_OBJS)
+-	$(CC) $(CFLAGS) -o nstxd $(NSTXD_OBJS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o nstxd $(NSTXD_OBJS)
+ 
+ nstxcd: $(NSTXCD_OBJS)
+-	$(CC) $(CFLAGS) -o nstxcd $(NSTXCD_OBJS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o nstxcd $(NSTXCD_OBJS)
+ 
+ clean:
+ 	rm -f *.o $(PROGS) Makefile.bak *~ core
