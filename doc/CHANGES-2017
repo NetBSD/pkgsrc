@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4617 2017/10/24 14:09:05 jlam Exp $
+$NetBSD: CHANGES-2017,v 1.4618 2017/10/24 18:15:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6659,3 +6659,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/apr to 1.6.3 [ryoon 2017-10-24]
 	Updated devel/apr-util to 1.6.1 [ryoon 2017-10-24]
 	Updated pkgtools/rc.subr to 20171024 [jlam 2017-10-24]
+	Updated databases/py-psycopg2 to 2.7.3.2 [adam 2017-10-24]
+	Updated audio/mpg123 to 1.25.7 [adam 2017-10-24]
+	Updated multimedia/mkvtoolnix to 17.0.0 [adam 2017-10-24]
