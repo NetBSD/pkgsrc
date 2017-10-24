@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4612 2017/10/24 07:43:39 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4613 2017/10/24 11:04:41 morr Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6654,3 +6654,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/go-runewidth version 0.0.2 [maya 2017-10-24]
 	Updated www/lighttpd to 1.4.47 [adam 2017-10-24]
 	Updated textproc/py-sphinx to 1.6.5 [adam 2017-10-24]
+	Updated editors/vim-share to 8.0.1214 [morr 2017-10-24]
