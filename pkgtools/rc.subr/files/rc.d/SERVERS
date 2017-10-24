@@ -1,10 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: SERVERS,v 1.1.1.1 2003/06/19 16:07:12 grant Exp $
+# $NetBSD: SERVERS,v 1.2 2017/10/24 14:07:59 jlam Exp $
 #
 
 # PROVIDE: SERVERS
-# REQUIRE: mountcritremote
 
 #	This is a dummy dependency, for early-start servers relying on
 #	some basic configuration.
