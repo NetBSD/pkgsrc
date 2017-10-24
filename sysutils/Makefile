@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.735 2017/10/23 14:23:29 maya Exp $
+# $NetBSD: Makefile,v 1.736 2017/10/24 07:01:28 maya Exp $
 #
 
 COMMENT=	System utilities
@@ -175,6 +175,7 @@ SUBDIR+=	fs-kit
 SUBDIR+=	fscd
 SUBDIR+=	fsviewer
 SUBDIR+=	ftwin
+SUBDIR+=	fzf
 SUBDIR+=	gamin
 SUBDIR+=	gcdmaster
 SUBDIR+=	gcombust
