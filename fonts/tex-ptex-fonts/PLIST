@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/06/16 03:57:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/10/24 00:52:47 wiz Exp $
 share/texmf-dist/fonts/source/ptex-fonts/ascgrp/ascgrp.mf
 share/texmf-dist/fonts/source/ptex-fonts/ascgrp/ascii.mf
 share/texmf-dist/fonts/source/ptex-fonts/ascgrp/ascii10.mf
@@ -19,6 +19,7 @@ share/texmf-dist/fonts/source/ptex-fonts/nmin-ngoth/nmin6.pl
 share/texmf-dist/fonts/source/ptex-fonts/nmin-ngoth/nmin7.pl
 share/texmf-dist/fonts/source/ptex-fonts/nmin-ngoth/nmin8.pl
 share/texmf-dist/fonts/source/ptex-fonts/nmin-ngoth/nmin9.pl
+share/texmf-dist/fonts/source/ptex-fonts/standard/Makefile
 share/texmf-dist/fonts/source/ptex-fonts/standard/goth10.pl
 share/texmf-dist/fonts/source/ptex-fonts/standard/goth5.pl
 share/texmf-dist/fonts/source/ptex-fonts/standard/goth6.pl
