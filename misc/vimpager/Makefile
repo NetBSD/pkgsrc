@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/02/15 12:39:21 mef Exp $
+# $NetBSD: Makefile,v 1.7 2017/10/24 04:24:40 maya Exp $
 
 DISTNAME=	vimpager-1.8.9
 CATEGORIES=	misc
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.vim.org/scripts/script.php?script_id=1723
 COMMENT=	Use ViM as PAGER
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	vim{,-gtk,-gtk2,-motif,-xaw}>=7.0:../../editors/vim
+DEPENDS+=	vim{,-gtk2,-gtk3,-motif,-xaw}>=7.0:../../editors/vim
 
 NO_BUILD=	yes
 
