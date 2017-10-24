@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2017/09/18 09:53:15 maya Exp $
+# $NetBSD: Makefile,v 1.50 2017/10/24 12:25:13 ryoon Exp $
 
-DISTNAME=	apr-util-1.6.0
-PKGREVISION=	1
+DISTNAME=	apr-util-1.6.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=apr/}
 EXTRACT_SUFX=	.tar.bz2
