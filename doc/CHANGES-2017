@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4613 2017/10/24 11:04:41 morr Exp $
+$NetBSD: CHANGES-2017,v 1.4614 2017/10/24 11:46:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6655,3 +6655,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/lighttpd to 1.4.47 [adam 2017-10-24]
 	Updated textproc/py-sphinx to 1.6.5 [adam 2017-10-24]
 	Updated editors/vim-share to 8.0.1214 [morr 2017-10-24]
+	Updated misc/screen to 4.6.2 [ryoon 2017-10-24]
