@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4616 2017/10/24 12:25:43 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.4617 2017/10/24 14:09:05 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6658,3 +6658,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/screen to 4.6.2 [ryoon 2017-10-24]
 	Updated devel/apr to 1.6.3 [ryoon 2017-10-24]
 	Updated devel/apr-util to 1.6.1 [ryoon 2017-10-24]
+	Updated pkgtools/rc.subr to 20171024 [jlam 2017-10-24]
