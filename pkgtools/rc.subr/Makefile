@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2016/10/17 01:11:30 dholland Exp $
+# $NetBSD: Makefile,v 1.31 2017/10/24 14:07:59 jlam Exp $
 #
 
-PKGNAME=		rc.subr-20161016
+PKGNAME=		rc.subr-20171024
 CATEGORIES=		pkgtools
 
 MAINTAINER=		sbd@NetBSD.org
