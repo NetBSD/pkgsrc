@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2017/09/26 10:26:57 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2017/10/24 04:45:18 adam Exp $
 
 DISTNAME=	luma-3.0.7
 CATEGORIES=	databases
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://luma.sourceforge.net/
 COMMENT=	LDAP browser
 LICENSE=	gnu-gpl-v2
+
+DEPENDS+=	${PYPKGPREFIX}-ldap-[0-9]*:../../databases/py-ldap
 
 REPLACE_PYTHON=		luma/luma.py
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PYSITELIB}/luma/plugins/browser
@@ -39,7 +41,6 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/luma.1.gz ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${CP} -R ${WRKSRC}/luma/plugins/browser/templates ${DESTDIR}${PREFIX}/${PYSITELIB}/luma/plugins/browser/templates
 
-.include "../../databases/py-ldap/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../x11/py-qt4/buildlink3.mk"
