@@ -1,7 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/01/12 11:52:10 agc Exp $
---- Makefile.orig	2003-03-10 13:54:28.000000000 +0100
-+++ Makefile	2004-08-25 15:04:13.000000000 +0200
-@@ -3,21 +3,22 @@
+$NetBSD: patch-aa,v 1.2 2017/10/25 21:32:35 khorben Exp $
+--- Makefile.orig	2003-03-10 12:54:28.000000000 +0000
++++ Makefile
+@@ -2,22 +2,23 @@
+ 
  SRC = wmSMPmon.c ../wmgeneral/wmgeneral.c 
  EXE = wmSMPmon
 -OBJ = $(SRC:.c=.o)
@@ -17,7 +18,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/01/12 11:52:10 agc Exp $
 -all: $(OBJ)
 -	$(CC) -o $(EXE) $(OBJ) $(LIB)
 +all: ${OBJ}
-+	${CC} -o ${EXE} ${OBJ} ${INC} ${LIB}
++	${CC} ${LDFLAGS} -o ${EXE} ${OBJ} ${INC} ${LIB}
  
 -$(OBJ): %.o : %.c 
 -	$(CC) $(CFLAGS) -c -o $@ $<
