@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2016/04/20 12:10:33 nros Exp $
+# $NetBSD: Makefile,v 1.20 2017/10/25 22:04:30 khorben Exp $
 #
 
 DISTNAME=	wmmixer-1.0-beta1
 PKGNAME=	wmmixer-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://www.geocities.com/SiliconValley/Vista/2471/files/
 EXTRACT_SUFX=	.tgz
@@ -19,6 +19,10 @@ WRKSRC=			${WRKDIR}/wmmixer
 USE_IMAKE=		YES
 USE_LANGUAGES=		c c++
 NO_INSTALL_MANPAGES=	YES
+
+MAKE_FLAGS+=		CCOPTIONS=${CFLAGS:Q}
+MAKE_FLAGS+=		CXXOPTIONS=${CFLAGS:Q}
+MAKE_FLAGS+=		LOCAL_LDFLAGS=${LDFLAGS:Q}
 
 pre-build:
 	${TOUCH} ${WRKSRC}/wmmixer.man
