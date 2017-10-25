@@ -1,9 +1,9 @@
-$NetBSD: patch-deps_cares_cares.gyp,v 1.2 2017/10/04 16:20:58 fhajny Exp $
+$NetBSD: patch-deps_cares_cares.gyp,v 1.3 2017/10/25 13:45:18 fhajny Exp $
 
 Add support for NetBSD.
 SunOS headers need _XOPEN_SOURCE=600 with c99.
 
---- deps/cares/cares.gyp.orig	2017-10-03 17:11:11.000000000 +0000
+--- deps/cares/cares.gyp.orig	2017-10-24 19:09:57.000000000 +0000
 +++ deps/cares/cares.gyp
 @@ -20,7 +20,7 @@
        ['OS=="solaris"', {
@@ -14,6 +14,15 @@ SunOS headers need _XOPEN_SOURCE=600 with c99.
          ]
        }]
      ]
+@@ -136,7 +136,7 @@
+         }],
+         [ 'OS not in "win android"', {
+           'cflags': [
+-            '--std=gnu89'
++            '--std=gnu99'
+           ],
+         }],
+         [ 'OS=="linux"', {
 @@ -151,6 +151,10 @@
            'include_dirs': [ 'config/freebsd' ],
            'sources': [ 'config/freebsd/ares_config.h' ]
