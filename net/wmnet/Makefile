@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/09/06 10:40:31 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2017/10/25 21:51:02 khorben Exp $
 
 DISTNAME=	wmnet-1.06
 PKGREVISION=	5
@@ -16,7 +16,8 @@ COMMENT=	Dockable network monitor
 
 USE_IMAKE=	YES
 
-MAKE_FLAGS+=	CDEBUGFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	CCOPTIONS=${CFLAGS:Q}
+MAKE_FLAGS+=	LOCAL_LDFLAGS=${LDFLAGS:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
