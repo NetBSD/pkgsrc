@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4619 2017/10/24 23:42:17 gdt Exp $
+$NetBSD: CHANGES-2017,v 1.4620 2017/10/25 03:57:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6663,3 +6663,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/mpg123 to 1.25.7 [adam 2017-10-24]
 	Updated multimedia/mkvtoolnix to 17.0.0 [adam 2017-10-24]
 	Updated ham/hamlib to 3.1 [gdt 2017-10-24]
+	Updated security/py-cryptography_vectors to 2.1.2 [adam 2017-10-25]
+	Updated security/py-cryptography to 2.1.2 [adam 2017-10-25]
+	Updated devel/py-pep8 to 1.7.1 [adam 2017-10-25]
