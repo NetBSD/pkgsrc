@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/06/01 06:36:02 adam Exp $
+$NetBSD: distinfo,v 1.7 2017/10/25 03:55:44 adam Exp $
 
-SHA1 (pep8-1.7.0.tar.gz) = a1804f7279f1631f8b2810c09b9010114c0d0c3d
-RMD160 (pep8-1.7.0.tar.gz) = bca97f9cd30b21ce1f765b1f4f520747443b5d3e
-SHA512 (pep8-1.7.0.tar.gz) = 0077dac97846fe3a5fc654cd3ce8578845cf3b93ee097a3ae6ff2db4ae0797ad5766c69f036d6a5add786eb929a9beb6d657ab693227b8df2ba46ec0f9284b0a
-Size (pep8-1.7.0.tar.gz) = 79704 bytes
+SHA1 (pep8-1.7.1.tar.gz) = 65d3cbf90fd347d6416920ae9ebb3a0a7a919c71
+RMD160 (pep8-1.7.1.tar.gz) = abf24374d1dfe2f028d5122d54d8dc9fc9a22bba
+SHA512 (pep8-1.7.1.tar.gz) = d20d6a6f91bc865580e3d39c50e26f9c6be81fd8e80a1b9a029d7ea9c906748e46080b841dc5507004089e5ee0d0cb3f70a74bb35131c58113ff5571153af4da
+Size (pep8-1.7.1.tar.gz) = 80334 bytes
