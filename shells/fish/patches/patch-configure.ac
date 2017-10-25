@@ -1,8 +1,18 @@
-$NetBSD: patch-configure.ac,v 1.1 2017/10/24 03:51:41 maya Exp $
+$NetBSD: patch-configure.ac,v 1.2 2017/10/25 09:32:38 maya Exp $
 
 --- configure.ac.orig	2017-06-03 12:45:13.000000000 +0000
 +++ configure.ac
-@@ -323,7 +323,24 @@ AC_CHECK_FUNCS( wcslcpy lrand48_r killpg
+@@ -251,6 +251,9 @@ AC_CHECK_FILES([/proc/self/stat])
+ AC_DEFINE([NCURSES_NOMACROS], [1], [Define to 1 to disable ncurses macros that conflict with the STL])
+ AC_DEFINE([NOMACROS], [1], [Define to 1 to disable curses macros that conflict with the STL])
+ 
++# Get variadic tparm on NetBSD curses
++AC_DEFINE([TPARM_VARARGS], [1], [Define to 1 to get variadic tparm on NetBSD curses])
++
+ # Threading is excitingly broken on Solaris without adding -pthread to CXXFLAGS
+ # Only support GCC for now
+ dnl Ideally we would use the AX_PTHREAD macro here, but it's GPL3-licensed
+@@ -323,7 +326,24 @@ AC_CHECK_FUNCS( wcslcpy lrand48_r killpg
  AC_CHECK_FUNCS( backtrace_symbols getifaddrs )
  AC_CHECK_FUNCS( futimens clock_gettime )
  AC_CHECK_FUNCS( getpwent flock )
@@ -28,3 +38,11 @@ $NetBSD: patch-configure.ac,v 1.1 2017/10/24 03:51:41 maya Exp $
  
  AC_CHECK_DECL( [mkostemp], [ AC_CHECK_FUNCS([mkostemp]) ] )
  
+@@ -553,6 +573,7 @@ AC_COMPILE_IFELSE(
+ 	#else
+ 	#include <curses.h>
+ 	#endif
++	#define TPARM_VARARGS
+ 
+ 	#if HAVE_TERM_H
+ 	#include <term.h>
