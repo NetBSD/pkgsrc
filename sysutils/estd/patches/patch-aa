@@ -1,11 +1,18 @@
-$NetBSD: patch-aa,v 1.10 2015/03/06 18:08:38 khorben Exp $
+$NetBSD: patch-aa,v 1.11 2017/10/25 21:38:52 khorben Exp $
 
-Use BSD_INSTALL_* instead of directly invoking install(1), add DESTDIR
-support and install all the files in the proper locations.
+- Use BSD_INSTALL_* instead of directly invoking install(1)
+- Add DESTDIR support and install all the files in the proper locations.
+- Add support for LDFLAGS
 
 --- Makefile.orig	2015-02-18 21:38:03.000000000 +0000
 +++ Makefile
-@@ -19,7 +19,8 @@ estd:	estd.c
+@@ -14,12 +14,13 @@ clean:
+ 	rm -f *~
+ 
+ estd:	estd.c
+-	gcc ${CFLAGS} ${LIBS} -o estd estd.c
++	gcc ${CFLAGS} ${LDFLAGS} ${LIBS} -o estd estd.c
+ 	
  all: estd
  
  install: all
