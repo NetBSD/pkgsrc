@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4628 2017/10/25 13:56:15 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4629 2017/10/25 14:20:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6674,3 +6674,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/nodejs to 8.8.0 [fhajny 2017-10-25]
 	Updated lang/nodejs6 to 6.11.5 [fhajny 2017-10-25]
 	Updated lang/nodejs4 to 4.8.5 [fhajny 2017-10-25]
+	Updated www/apache-tomcat85 to 8.5.23 [ryoon 2017-10-25]
