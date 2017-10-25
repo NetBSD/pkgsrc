@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2559 2017/10/24 07:01:28 maya Exp $
+# $NetBSD: Makefile,v 1.2560 2017/10/25 22:17:13 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -1981,6 +1981,7 @@ SUBDIR+=	py-line_profiler
 SUBDIR+=	py-linecache2
 SUBDIR+=	py-lockfile
 SUBDIR+=	py-logan
+SUBDIR+=	py-logbook
 SUBDIR+=	py-logilab-astng
 SUBDIR+=	py-logilab-common
 SUBDIR+=	py-lupa
