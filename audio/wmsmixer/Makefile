@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2017/09/06 10:40:25 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2017/10/25 21:17:13 khorben Exp $
 #
 
 DISTNAME=	wmsmixer-0.5.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://www.hibernaculum.net/download/
 
@@ -16,6 +16,10 @@ NOT_FOR_PLATFORM=	Interix-*-*
 USE_IMAKE=	YES
 USE_LANGUAGES=	c++
 NO_INSTALL_MANPAGES= YES
+
+MAKE_FLAGS+=	CCOPTIONS=${CFLAGS:Q}
+MAKE_FLAGS+=	CXXOPTIONS=${CFLAGS:Q}
+MAKE_FLAGS+=	LOCAL_LDFLAGS=${LDFLAGS:Q}
 
 INSTALLATION_DIRS+= share/doc/wmsmixer share/examples/wmsmixer
 
