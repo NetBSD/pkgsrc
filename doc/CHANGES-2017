@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4623 2017/10/25 09:33:06 maya Exp $
+$NetBSD: CHANGES-2017,v 1.4624 2017/10/25 11:00:14 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6669,3 +6669,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-html2text to 2017.10.4 [adam 2017-10-25]
 	Updated devel/py-flake8-import-order to 0.14 [adam 2017-10-25]
 	Updated shells/fish to 2.6.0nb2 [maya 2017-10-25]
+	Updated print/mupdf to 1.11nb5 [leot 2017-10-25]
