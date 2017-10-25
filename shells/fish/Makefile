@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2017/10/25 09:32:38 maya Exp $
+# $NetBSD: Makefile,v 1.14 2017/10/25 14:47:40 maya Exp $
 
 DISTNAME=		fish-2.6.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		shells
 MASTER_SITES=		http://fishshell.com/files/${PKGVERSION_NOREV}/
 
@@ -46,6 +46,7 @@ PLIST.open=	yes
 pre-configure:
 	${RUN} cd ${WRKSRC} && autoreconf -fiv
 
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../lang/python/application.mk"
