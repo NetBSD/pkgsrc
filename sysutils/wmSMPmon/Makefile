@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/10/25 21:30:42 khorben Exp $
+# $NetBSD: Makefile,v 1.16 2017/10/25 21:32:35 khorben Exp $
 
 DISTNAME=	wmSMPmon-2.3
 PKGREVISION=	1
@@ -13,6 +13,7 @@ COMMENT=	Dockable CPU (SMP) monitor
 WRKSRC=		${WRKDIR}/wmSMPmon-2.x/wmSMPmon
 
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
