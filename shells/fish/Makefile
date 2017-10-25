@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2017/10/24 03:51:41 maya Exp $
+# $NetBSD: Makefile,v 1.13 2017/10/25 09:32:38 maya Exp $
 
 DISTNAME=		fish-2.6.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		shells
 MASTER_SITES=		http://fishshell.com/files/${PKGVERSION_NOREV}/
 
@@ -14,7 +14,6 @@ EXTRACT_USING=		gtar
 
 USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes
-USE_NCURSES=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-xsel
 USE_TOOLS+=		gmake autoreconf autoconf automake
@@ -50,6 +49,5 @@ pre-configure:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../lang/python/application.mk"
-# Broken auto completion with netbsd curses
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
