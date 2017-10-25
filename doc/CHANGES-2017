@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4627 2017/10/25 13:45:29 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4628 2017/10/25 13:56:15 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6673,3 +6673,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ocaml-migrate-parsetree to 1.0.6 [jaapb 2017-10-25]
 	Updated lang/nodejs to 8.8.0 [fhajny 2017-10-25]
 	Updated lang/nodejs6 to 6.11.5 [fhajny 2017-10-25]
+	Updated lang/nodejs4 to 4.8.5 [fhajny 2017-10-25]
