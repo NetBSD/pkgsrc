@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4635 2017/10/26 07:12:34 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4636 2017/10/26 09:13:06 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6682,3 +6682,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/ghostscript-gpl to 9.06nb15 [maya 2017-10-26]
 	Updated www/nghttp2 to 1.27.0 [adam 2017-10-26]
 	Updated security/py-m2crypto to 0.27.0 [adam 2017-10-26]
+	Updated lang/nodejs to 8.8.1 [fhajny 2017-10-26]
