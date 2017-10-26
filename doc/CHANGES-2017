@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4634 2017/10/26 07:01:53 maya Exp $
+$NetBSD: CHANGES-2017,v 1.4635 2017/10/26 07:12:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6680,3 +6680,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-logbook version 1.1.0 [minskim 2017-10-25]
 	Updated print/ghostscript-gpl to 9.06nb14 [maya 2017-10-26]
 	Updated print/ghostscript-gpl to 9.06nb15 [maya 2017-10-26]
+	Updated www/nghttp2 to 1.27.0 [adam 2017-10-26]
+	Updated security/py-m2crypto to 0.27.0 [adam 2017-10-26]
