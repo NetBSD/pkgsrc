@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2017/09/28 10:44:11 adam Exp $
+# $NetBSD: Makefile,v 1.44 2017/10/26 07:08:10 adam Exp $
 
-DISTNAME=	M2Crypto-0.26.4
+DISTNAME=	M2Crypto-0.27.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/M2Crypto/}
@@ -14,9 +14,9 @@ DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
 
 PYSETUPBUILDARGS=	build_ext --openssl=${BUILDLINK_PREFIX.openssl}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.26.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.27.0
 
-.include "../../lang/python/egg.mk"
 .include "../../devel/swig/buildlink3.mk"
+.include "../../lang/python/egg.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
