@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4638 2017/10/26 15:02:21 tez Exp $
+$NetBSD: CHANGES-2017,v 1.4639 2017/10/26 15:10:17 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6685,3 +6685,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/nodejs to 8.8.1 [fhajny 2017-10-26]
 	Updated net/djbdns to 1.05nb12 [schmonz 2017-10-26]
 	Updated net/wget to 1.19.1nb2 [tez 2017-10-26]
+	Updated multimedia/adobe-flash-player to 27.0.0.183 [tsutsui 2017-10-26]
