@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4636 2017/10/26 09:13:06 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4637 2017/10/26 14:48:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6683,3 +6683,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/nghttp2 to 1.27.0 [adam 2017-10-26]
 	Updated security/py-m2crypto to 0.27.0 [adam 2017-10-26]
 	Updated lang/nodejs to 8.8.1 [fhajny 2017-10-26]
+	Updated net/djbdns to 1.05nb12 [schmonz 2017-10-26]
