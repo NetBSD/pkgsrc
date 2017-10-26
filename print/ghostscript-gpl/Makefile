@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2017/10/16 15:47:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2017/10/26 04:41:37 maya Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-gpl/}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/}
 MASTER_SITES+=	https://ghostscript.com/releases/
@@ -101,10 +101,7 @@ post-extract:
 #	${RM} -rf ${WRKSRC}/jasper
 	${RM} -rf ${WRKSRC}/libpng
 #	${RM} -rf ${WRKSRC}/tiff
-# UX:i386ld: ERROR: symbol: 'deflate_copyright' defined in two shared objects: libgs.so: size = 53, libz.so.1: size = 68
-.if ${OS_VARIANT} == "SCOOSR5"
 	${RM} -rf ${WRKSRC}/zlib
-.endif
 	${RM} -rf ${WRKSRC}/freetype
 #
 #  To allow outside customization, rename cidfmap
