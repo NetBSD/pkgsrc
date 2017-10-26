@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4633 2017/10/26 04:41:57 maya Exp $
+$NetBSD: CHANGES-2017,v 1.4634 2017/10/26 07:01:53 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6679,3 +6679,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/bfs version 1.1.3 [fhajny 2017-10-25]
 	Added devel/py-logbook version 1.1.0 [minskim 2017-10-25]
 	Updated print/ghostscript-gpl to 9.06nb14 [maya 2017-10-26]
+	Updated print/ghostscript-gpl to 9.06nb15 [maya 2017-10-26]
