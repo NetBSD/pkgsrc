@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2017/10/26 04:41:37 maya Exp $
+# $NetBSD: Makefile,v 1.31 2017/10/26 07:01:33 maya Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-gpl/}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/}
 MASTER_SITES+=	https://ghostscript.com/releases/
@@ -34,6 +34,7 @@ UNLIMIT_RESOURCES+=	datasize	# gsromfs1.c
 BUILD_TARGET=		so
 INSTALL_TARGET=		soinstall
 CONFIGURE_ARGS+=	--with-omni=no	# otherwise pulls in libstdc++
+CONFIGURE_ARGS+=	--with-system-libtiff
 
 REPLACE_PERL+=		toolbin/localcluster/clusterpush.pl
 REPLACE_PERL+=		toolbin/checkdeps.pl
@@ -100,7 +101,7 @@ post-extract:
 	${MKDIR} ${WRKSRC}/obj
 #	${RM} -rf ${WRKSRC}/jasper
 	${RM} -rf ${WRKSRC}/libpng
-#	${RM} -rf ${WRKSRC}/tiff
+	${RM} -rf ${WRKSRC}/tiff
 	${RM} -rf ${WRKSRC}/zlib
 	${RM} -rf ${WRKSRC}/freetype
 #
