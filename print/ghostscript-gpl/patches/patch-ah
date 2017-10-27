@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.6 2015/02/24 08:21:07 markd Exp $
+$NetBSD: patch-ah,v 1.7 2017/10/27 16:17:49 jperkin Exp $
 
 (1) First chunk to fix the X11_TYPE=native problem, which
     freetype2 in /usr/X11R7/ is way old, and work around to 
@@ -57,6 +57,24 @@ $NetBSD: patch-ah,v 1.6 2015/02/24 08:21:07 markd Exp $
  
  $as_echo "#define USE_LIBPAPER 1" >>confdefs.h
  
+@@ -5832,7 +5835,7 @@ if ${ac_cv_lib_z_deflate+:} false; then
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lz  $LIBS"
++LIBS="-L${ZLIB_DIR} -Wl,-R${ZLIB_DIR} -lz $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -5871,7 +5874,7 @@ if test "x$ac_cv_header_zlib_h" = xyes;
+   cat >>confdefs.h <<_ACEOF
+ #define HAVE_ZLIB_H 1
+ _ACEOF
+- SHARE_ZLIB=1; AUX_SHARED_ZLIB="-l\$(ZLIB_NAME)"
++ SHARE_ZLIB=1; AUX_SHARED_ZLIB="-L${ZLIB_DIR} -Wl,-R${ZLIB_DIR} -l\$(ZLIB_NAME)"
+ fi
+ 
+ done
 @@ -6474,7 +6477,9 @@ done
                  LCUPSINCLUDE="include \$(GLSRCDIR)/lcups.mak"
                  LCUPSIINCLUDE="include \$(GLSRCDIR)/lcupsi.mak"
