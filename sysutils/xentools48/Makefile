@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/10/17 11:10:36 bouyer Exp $
+# $NetBSD: Makefile,v 1.11 2017/10/27 23:50:38 khorben Exp $
 #
 VERSION=	4.8.2
 VERSION_IPXE=	827dd1bfee67daa683935ce65316f7e0f057fe1c
@@ -77,6 +77,7 @@ CONFLICTS+=		xenstoretools-[0-9]*
 
 CHECK_PORTABILITY_SKIP=	tools/examples/* \
 			tools/qemu-xen/scripts/qemu-binfmt-conf.sh
+CHECK_RELRO_SKIP=	libexec/xen/boot/hvmloader
 
 EGDIR=			${PREFIX}/share/examples/xen
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
