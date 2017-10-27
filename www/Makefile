@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1277 2017/10/17 06:56:12 adam Exp $
+# $NetBSD: Makefile,v 1.1278 2017/10/27 13:31:32 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -115,8 +115,6 @@ SUBDIR+=	fengoffice
 SUBDIR+=	ffproxy
 SUBDIR+=	firefox
 SUBDIR+=	firefox-l10n
-SUBDIR+=	firefox10
-SUBDIR+=	firefox10-l10n
 SUBDIR+=	firefox17
 SUBDIR+=	firefox17-l10n
 SUBDIR+=	firefox24
