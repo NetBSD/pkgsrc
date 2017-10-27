@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/02/20 09:37:12 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/10/27 08:49:01 taca Exp $
 
 MODNAME=		tidy
 CATEGORIES+=		www
 COMMENT=		PHP extension for tidy functions
-PKGREVISION=		1
 LICENSE=		php
 
 CONFIGURE_ARGS+=	--with-tidy=shared,${BUILDLINK_PREFIX.tidy}
