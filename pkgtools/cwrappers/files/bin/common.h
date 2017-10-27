@@ -1,4 +1,4 @@
-/* $NetBSD: common.h,v 1.6 2017/06/11 19:34:43 joerg Exp $ */
+/* $NetBSD: common.h,v 1.7 2017/10/27 20:59:59 khorben Exp $ */
 
 /*-
  * Copyright (c) 2009, 2017 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -93,6 +93,8 @@ void	*xmalloc(size_t);
 void	*xrealloc(void *, size_t);
 char	*xstrdup(const char *);
 char	*xstrndup(const char *, size_t);
+
+void	operation_mode_as(void);
 
 void	operation_mode_cc(struct arglist *);
 void	normalise_cc(struct arglist *);

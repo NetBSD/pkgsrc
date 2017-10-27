@@ -1,4 +1,4 @@
-/* $NetBSD: base-wrapper.c,v 1.5 2017/06/11 19:34:43 joerg Exp $ */
+/* $NetBSD: base-wrapper.c,v 1.6 2017/10/27 20:59:59 khorben Exp $ */
 
 /*-
  * Copyright (c) 2007, 2017 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -128,7 +128,9 @@ main(int argc, char **argv)
 		goto skip_transforms;
 #endif
 
-#if defined(WRAPPER_LD)
+#if defined(WRAPPER_AS)
+	operation_mode_as();
+#elif defined(WRAPPER_LD)
 	operation_mode_ld(&args);
 #else
 	operation_mode_cc(&args);
