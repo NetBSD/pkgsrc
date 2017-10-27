@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.8 2013/09/20 23:06:07 joerg Exp $
+$NetBSD: patch-ab,v 1.9 2017/10/27 20:57:16 khorben Exp $
 
 Use $(host_alias) as the program prefix so it matches ${MACHINE_GNU_PLATFORM}
 
@@ -35,3 +35,14 @@ Pass down correct path for libf95 to g95specs.c.
  	if test -n "`ls @GCC_DIR@/g95/gcc/libgcc_s.*`" ; then \
  	   (cd @GCC_DIR@/g95/gcc; tar cf - libgcc_s.*) | \
             (cd $(DESTDIR)@DEST_LIBDIR@; tar xf -) ; \
+@@ -1445,8 +1447,8 @@ install-data-hook:
+ 	fi
+ 
+ ggc-page.o: $(srcdir)/ggc-page40.c $(srcdir)/ggc-page41.c
+-@GCC41_TRUE@	$(CC) -c -g -o ggc-page.o -I. $(CPPFLAGS) -DIN_GCC $(srcdir)/ggc-page41.c
+-@GCC41_FALSE@	$(CC) -c -g -o ggc-page.o -I. $(CPPFLAGS) -DIN_GCC $(srcdir)/ggc-page40.c
++@GCC41_TRUE@	$(CC) -c $(CFLAGS) -g -o ggc-page.o -I. $(CPPFLAGS) -DIN_GCC $(srcdir)/ggc-page41.c
++@GCC41_FALSE@	$(CC) -c $(CFLAGS) -g -o ggc-page.o -I. $(CPPFLAGS) -DIN_GCC $(srcdir)/ggc-page40.c
+ 
+ options.h options.o: $(srcdir)/lang.opt
+ 	$(AWK) -f @GCC_DIR@/gcc/opt-functions.awk \
