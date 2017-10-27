@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/07/07 03:13:48 taca Exp $
+# $NetBSD: Makefile,v 1.15 2017/10/27 08:45:06 taca Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -52,10 +52,6 @@ CFLAGS+=	-DSQLITE_ENABLE_LOCKING_STYLE=0 -DSQLITE_WITHOUT_ZONEMALLOC
 .if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER} == "clang"
 CONFIGURE_ARGS+=	--disable-libgcc
 .endif
-
-post-extract:
-	cd ${WRKSRC} && \
-		${FIND} . -xdev -type f -name '*.orig' -exec ${RM} -f {} \;
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${DESTDIR}${PREFIX}/bin/php
