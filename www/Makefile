@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1281 2017/10/27 13:52:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.1282 2017/10/27 13:59:52 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -117,8 +117,6 @@ SUBDIR+=	firefox
 SUBDIR+=	firefox-l10n
 SUBDIR+=	firefox36
 SUBDIR+=	firefox36-l10n
-SUBDIR+=	firefox38
-SUBDIR+=	firefox38-l10n
 SUBDIR+=	firefox45
 SUBDIR+=	firefox45-l10n
 SUBDIR+=	firefox52
