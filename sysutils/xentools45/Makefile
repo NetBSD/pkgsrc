@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2017/09/08 09:51:25 jaapb Exp $
+# $NetBSD: Makefile,v 1.52 2017/10/27 23:50:38 khorben Exp $
 
 VERSION=	4.5.5
 PKGREVISION=	7
@@ -38,6 +38,7 @@ CONFLICTS+=		xenstoretools-[0-9]*
 XENTOP=			${WRKDIR}/xen-${VERSION}
 WRKSRC=			${XENTOP}/tools
 CHECK_PORTABILITY_SKIP=	examples/*
+CHECK_RELRO_SKIP=	libexec/xen/boot/hvmloader
 
 EGDIR=			${PREFIX}/share/examples/xen
 MESSAGE_SUBST+=		EGDIR=${EGDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/10/17 11:10:36 bouyer Exp $
+# $NetBSD: Makefile,v 1.24 2017/10/27 23:50:38 khorben Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
@@ -38,6 +38,7 @@ CONFLICTS+=		xenstoretools-[0-9]*
 XENTOP=			${WRKDIR}/xen-${VERSION}
 WRKSRC=			${XENTOP}/tools
 CHECK_PORTABILITY_SKIP=	examples/*
+CHECK_RELRO_SKIP=	libexec/xen/boot/hvmloader
 
 EGDIR=			${PREFIX}/share/examples/xen
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
