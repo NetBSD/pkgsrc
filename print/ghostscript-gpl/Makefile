@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2017/10/26 07:01:33 maya Exp $
+# $NetBSD: Makefile,v 1.32 2017/10/27 16:17:49 jperkin Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-gpl/}
@@ -84,7 +84,8 @@ CPPFLAGS+=		-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 # require linking against libiconv when it should do so.
 BUILDLINK_TRANSFORM.IRIX+=	l:fontconfig:fontconfig:iconv
 
-CONFIGURE_ENV+=	LPLIBDIR=${PREFIX}/lib
+CONFIGURE_ENV+=		LPLIBDIR=${PREFIX}/lib
+CONFIGURE_ENV+=		ZLIB_DIR=${BUILDLINK_PREFIX.zlib}/lib
 
 # On OpenBSD 5.3, libxcb is required libXt.
 LDFLAGS.OpenBSD+=	-lxcb
