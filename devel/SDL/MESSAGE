@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2017/10/27 01:28:53 nat Exp $
+
+To enable dma for use with NetBSD-8 or above.
+
+Set the following environment variables:
+	SDL_DSP_DMA_PRECISION
+	SDL_DSP_DMA_FREQ
+	SDL_DSP_DMA_CHANNELS
+
+	SDL_DSP_NOSELECT=1
+
+DMA parameters must match the hw virtual channel format for playback to
+work with dma.
+
+===========================================================================
