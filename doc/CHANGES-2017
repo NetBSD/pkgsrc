@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4641 2017/10/27 09:51:20 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4642 2017/10/27 13:06:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6690,3 +6690,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/php70 to 7.0.25 [taca 2017-10-27]
 	Updated lang/php71 to 7.1.11 [taca 2017-10-27]
 	Added databases/postgresql-pljava version 1.5.0 [fhajny 2017-10-27]
+	Updated converters/dos2unix to 7.4.0 [ryoon 2017-10-27]
