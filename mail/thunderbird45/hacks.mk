@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2017/04/27 13:38:18 ryoon Exp $
+# $NetBSD: hacks.mk,v 1.2 2017/10/27 18:01:43 ryoon Exp $
 
 # workround for link of thunderbird-bin etc.
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/${MOZILLA_NAME}
@@ -8,4 +8,3 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/${MOZILLA_NAME}
 # https://www.illumos.org/issues/4383
 INSTALL_UNSTRIPPED=yes
 .endif
-.include "../../devel/xulrunner17/hacks.mk"
