@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/12/09 22:25:28 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2017/10/27 20:59:59 khorben Exp $
 #
 PROGS=	as-wrapper cc-wrapper c++-wrapper cpp-wrapper f77-wrapper \
 	imake-wrapper ld-wrapper libtool-wrapper shlibtool-wrapper
@@ -16,7 +16,7 @@ LDADD+=		-lnbcompat
 
 CC_SRCS=	${LIB_SRCS} generic-transform-cc.c normalise-cc.c
 
-SRCS.as-wrapper=	${CC_SRCS} as-wrapper.c
+SRCS.as-wrapper=	${CC_SRCS} as-wrapper.c normalise-as.c
 SRCS.cc-wrapper=	${CC_SRCS} cc-wrapper.c transform-cc.c
 SRCS.c++-wrapper=	${CC_SRCS} c++-wrapper.c transform-cc.c
 SRCS.cpp-wrapper=	${CC_SRCS} cpp-wrapper.c
