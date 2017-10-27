@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4647 2017/10/27 13:41:36 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.4648 2017/10/27 13:46:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6701,3 +6701,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed devel/xulrunner17 [ryoon 2017-10-27]
 	Removed www/firefox17 [ryoon 2017-10-27]
 	Removed www/firefox17-l10n [ryoon 2017-10-27]
+	Removed devel/xulrunner24 [ryoon 2017-10-27]
+	Removed www/firefox24 [ryoon 2017-10-27]
+	Removed www/firefox24-l10n [ryoon 2017-10-27]
