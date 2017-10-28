@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4667 2017/10/28 16:46:56 leot Exp $
+$NetBSD: CHANGES-2017,v 1.4668 2017/10/28 18:20:55 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6740,3 +6740,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/sxiv to 24 [leot 2017-10-28]
 	Updated print/tex-beamer-doc to 3.43nb1 [leot 2017-10-28]
 	Updated net/gallery-dl to 1.0.0 [leot 2017-10-28]
+	Updated lang/go to 1.9.2 [chronos 2017-10-28]
