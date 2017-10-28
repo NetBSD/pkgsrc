@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4654 2017/10/27 21:01:06 khorben Exp $
+$NetBSD: CHANGES-2017,v 1.4655 2017/10/28 04:51:11 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6719,3 +6719,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed www/thunderbird38 [ryoon 2017-10-27]
 	Removed www/thunderbird38-l10n [ryoon 2017-10-27]
 	Updated pkgtools/cwrappers to 20171027 [khorben 2017-10-27]
+	Updated mail/nullmailer to 2.1 [schmonz 2017-10-28]
