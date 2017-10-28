@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/09/29 21:18:49 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2017/10/28 09:06:26 adam Exp $
 
-DISTNAME=	pendulum-1.2.5
+DISTNAME=	pendulum-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python time
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pendulum/}
@@ -10,9 +10,10 @@ HOMEPAGE=	https://github.com/sdispater/pendulum
 COMMENT=	Human-friendly date and time handling
 LICENSE=	mit
 
-DEPENDS+=		${PYPKGPREFIX}-tzdata-[0-9]*:../../time/py-tzdata
-DEPENDS+=		${PYPKGPREFIX}-tzlocal-[0-9]*:../../time/py-tzlocal
-DEPENDS+=		${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-tzdata-[0-9]*:../../time/py-tzdata
+DEPENDS+=	${PYPKGPREFIX}-tzlocal-[0-9]*:../../time/py-tzlocal
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
