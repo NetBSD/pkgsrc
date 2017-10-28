@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2017/09/29 12:40:27 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2017/10/28 05:22:37 wiz Exp $
 
-DISTNAME=	bulk-medium-20170929
+DISTNAME=	bulk-medium-20171028
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -120,7 +120,6 @@ BUILD_DEPENDS+=	xe-guest-utilities-[0-9]*:../../sysutils/xe-guest-utilities
 BUILD_DEPENDS+=	xenkernel45-[0-9]*:../../sysutils/xenkernel45
 BUILD_DEPENDS+=	xentools45-[0-9]*:../../sysutils/xentools45
 BUILD_DEPENDS+=	ispell-[0-9]*:../../textproc/ispell
-BUILD_DEPENDS+=	firefox10-[0-9]*:../../www/firefox10
 BUILD_DEPENDS+=	seamonkey-[0-9]*:../../www/seamonkey
 BUILD_DEPENDS+=	xlockmore-[0-9]*:../../x11/xlockmore
 
