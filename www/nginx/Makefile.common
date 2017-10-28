@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2017/07/23 21:08:18 adam Exp $
+# $NetBSD: Makefile.common,v 1.12 2017/10/28 10:57:29 adam Exp $
 # used by www/nginx/Makefile
 # used by www/nginx-devel/Makefile
 
@@ -6,13 +6,13 @@
 # Do *not* add any version-specific data here, any change
 # in this file will affect both packages
 
-CATEGORIES=		www
-MASTER_SITES=		http://nginx.org/download/
-DISTFILES=		${DEFAULT_DISTFILES}
+CATEGORIES=	www
+MASTER_SITES=	http://nginx.org/download/
+DISTFILES=	${DEFAULT_DISTFILES}
 
-HOMEPAGE=		http://nginx.org/
-COMMENT=		Lightweight HTTP server and mail proxy server
-LICENSE=		2-clause-bsd
+HOMEPAGE=	http://nginx.org/
+COMMENT=	Lightweight HTTP server and mail proxy server
+LICENSE=	2-clause-bsd
 
 .include "../../mk/bsd.prefs.mk"
 
