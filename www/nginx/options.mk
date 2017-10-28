@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.41 2017/07/23 21:08:18 adam Exp $
+# $NetBSD: options.mk,v 1.42 2017/10/28 10:57:29 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=		dav flv gtools inet6 luajit mail-proxy memcache naxsi \
@@ -104,7 +104,7 @@ CONFIGURE_ENV+=		LUAJIT_INC=${PREFIX}/include/luajit-2.0
 CONFIGURE_ARGS+=	--add-module=../${LUA_DISTNAME}
 .endif
 .if !empty(PKG_OPTIONS:Mluajit) || make(makesum)
-LUA_VERSION=		0.10.8
+LUA_VERSION=		0.10.10
 LUA_DISTNAME=		lua-nginx-module-${LUA_VERSION}
 LUA_DISTFILE=		${LUA_DISTNAME}.tar.gz
 SITES.${LUA_DISTFILE}=	-https://github.com/openresty/lua-nginx-module/archive/v${LUA_VERSION}.tar.gz
@@ -115,7 +115,7 @@ DISTFILES+=		${LUA_DISTFILE}
 CONFIGURE_ARGS+=	--add-module=../${ECHOMOD_DISTNAME}
 .endif
 .if !empty(PKG_OPTIONS:Mecho) || make(makesum)
-ECHOMOD_VERSION=	0.60
+ECHOMOD_VERSION=	0.61
 ECHOMOD_DISTNAME=	echo-nginx-module-${ECHOMOD_VERSION}
 ECHOMOD_DISTFILE=	${ECHOMOD_DISTNAME}.tar.gz
 SITES.${ECHOMOD_DISTFILE}=	-https://github.com/openresty/echo-nginx-module/archive/v${ECHOMOD_VERSION}.tar.gz
@@ -188,7 +188,7 @@ CONFIGURE_ARGS+=	--without-http_uwsgi_module
 CONFIGURE_ARGS+=	--add-module=../nchan-${PUSH_VERSION}
 .endif
 .if !empty(PKG_OPTIONS:Mpush) || make(makesum)
-PUSH_VERSION=		1.1.7
+PUSH_VERSION=		1.1.8
 PUSH_DISTNAME=		nginx_http_push_module-${PUSH_VERSION}
 PUSH_DISTFILE=		${PUSH_DISTNAME}.tar.gz
 SITES.${PUSH_DISTFILE}=	-https://github.com/slact/nchan/archive/v${PUSH_VERSION}.tar.gz
