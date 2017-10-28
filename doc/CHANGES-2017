@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4663 2017/10/28 14:42:20 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.4664 2017/10/28 15:56:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6736,3 +6736,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/nginx-devel to 1.13.6 [adam 2017-10-28]
 	Updated www/nginx to 1.12.2 [adam 2017-10-28]
 	Updated net/mikutter to 3.5.13 [tsutsui 2017-10-28]
+	Updated mail/qmail-qfilter to 2.1nb5 [schmonz 2017-10-28]
