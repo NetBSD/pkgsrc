@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2017/04/23 15:52:33 leot Exp $
-${PYSITELIB}/_ruamel_yaml.so
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
+@comment $NetBSD: PLIST,v 1.4 2017/10/28 08:51:25 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PLIST.pyreq}${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/_ruamel_yaml.so
 ${PYSITELIB}/ruamel/yaml/__init__.py
 ${PYSITELIB}/ruamel/yaml/__init__.pyc
 ${PYSITELIB}/ruamel/yaml/__init__.pyo
@@ -61,6 +61,9 @@ ${PYSITELIB}/ruamel/yaml/representer.pyo
 ${PYSITELIB}/ruamel/yaml/resolver.py
 ${PYSITELIB}/ruamel/yaml/resolver.pyc
 ${PYSITELIB}/ruamel/yaml/resolver.pyo
+${PYSITELIB}/ruamel/yaml/scalarfloat.py
+${PYSITELIB}/ruamel/yaml/scalarfloat.pyc
+${PYSITELIB}/ruamel/yaml/scalarfloat.pyo
 ${PYSITELIB}/ruamel/yaml/scalarint.py
 ${PYSITELIB}/ruamel/yaml/scalarint.pyc
 ${PYSITELIB}/ruamel/yaml/scalarint.pyo
