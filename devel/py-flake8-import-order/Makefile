@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/10/25 09:11:59 adam Exp $
+# $NetBSD: Makefile,v 1.4 2017/10/28 07:42:09 adam Exp $
 
-DISTNAME=	flake8-import-order-0.14
+DISTNAME=	flake8-import-order-0.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flake8-import-order/}
@@ -10,10 +10,11 @@ HOMEPAGE=	https://pypi.python.org/pypi/flake8-import-order/
 COMMENT=	Flake8 and pylama plugin that checks the ordering of import statements
 LICENSE=	gnu-lgpl-v3
 
+DEPENDS+=	${PYPKGPREFIX}-asttokens-[0-9]*:../../lang/py-asttokens
 DEPENDS+=	${PYPKGPREFIX}-codestyle-[0-9]*:../../devel/py-codestyle
-DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 
 # TEST_DEPENDS
+BUILD_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 BUILD_DEPENDS+=	${PYPKGPREFIX}-lama-[0-9]*:../../devel/py-lama
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
