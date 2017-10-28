@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2017/08/23 02:57:09 maya Exp $
+$NetBSD: distinfo,v 1.35 2017/10/28 03:14:16 khorben Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
@@ -47,6 +47,7 @@ SHA1 (patch-blktap_drivers_Makefile) = c6be57154a403a64e3d6bc22d6bd833fe33fc9af
 SHA1 (patch-blktap_lib_blktaplib.h) = 571e35081df24785ae67133b04d2b0ff016a0ded
 SHA1 (patch-configure) = 11df58a8e1cd6bcc319db0aff508367e59592cba
 SHA1 (patch-console_daemon_utils.c) = 362966402e4925a37b400e324e59af738b65cafc
+SHA1 (patch-debugger_gdbsx_Makefile) = 1e16761b20604bb5a9ee22174f0bb46005fb19c7
 SHA1 (patch-examples_Makefile) = ee02f973416ca4ffda5381cd7a4ddb3b43579621
 SHA1 (patch-examples_xend-config.sxp) = 1c3423b6eead47f09768d571a65891caed12aa99
 SHA1 (patch-firmware_etherboot_Makefile) = 9928566768b20d9400d8df379c09b30ba60b2575
