@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4658 2017/10/28 08:26:43 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4659 2017/10/28 08:54:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6727,3 +6727,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-flake8-import-order to 0.14.1 [adam 2017-10-28]
 	Updated sysutils/py-crontab to 2.2.6 [adam 2017-10-28]
 	Updated textproc/py-regex to 2017.09.23 [adam 2017-10-28]
+	Updated devel/py-ruamel-ordereddict to 0.4.13 [adam 2017-10-28]
+	Updated devel/py-ruamel-yaml to 0.15.34 [adam 2017-10-28]
+	Updated time/py-maya to 0.3.3 [adam 2017-10-28]
