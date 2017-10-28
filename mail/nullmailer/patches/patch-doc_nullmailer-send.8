@@ -1,0 +1,31 @@
+$NetBSD: patch-doc_nullmailer-send.8,v 1.1 2017/10/28 04:51:06 schmonz Exp $
+
+Override hard-coded paths.
+
+--- doc/nullmailer-send.8.orig	2017-10-24 00:12:30.000000000 +0000
++++ doc/nullmailer-send.8
+@@ -182,19 +182,19 @@ However, the data are integrity protecte
+ This option must be used with the insecure option - to acknowledge that you know what you are doing.
+ .SH FILES
+ .TP
+-.B /var/spool/nullmailer/failed
++.B @VARBASE@/spool/nullmailer/failed
+ The failed message queue.
+ .TP
+-.B /var/spool/nullmailer/queue
++.B @VARBASE@/spool/nullmailer/queue
+ The outgoing message queue.
+ .TP
+-.B /var/spool/nullmailer/trigger
++.B @VARBASE@/spool/nullmailer/trigger
+ A trigger file to cause immediate delivery.
+ .TP
+-.B /usr/local/etc/nullmailer
++.B @PKG_SYSCONFDIR@/nullmailer
+ The configuration directory.
+ .TP
+-.B /usr/local/libexec/nullmailer
++.B @PREFIX@/libexec/nullmailer
+ The protocol program directory.
+ .SH SEE ALSO
+ nullmailer-dsn(1),

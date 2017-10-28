@@ -1,20 +1,22 @@
-$NetBSD: patch-ac,v 1.6 2013/09/03 17:50:28 shattered Exp $
+$NetBSD: patch-doc_nullmailer-queue.8,v 1.1 2017/10/28 04:51:06 schmonz Exp $
 
---- doc/nullmailer-queue.8.orig	2002-12-23 12:29:20.000000000 -0500
+Override hard-coded paths.
+
+--- doc/nullmailer-queue.8.orig	2017-10-24 00:12:30.000000000 +0000
 +++ doc/nullmailer-queue.8
-@@ -31,13 +31,13 @@ being bounced by your relay host. To sen
- them all on one line separated by a comma.
+@@ -35,13 +35,13 @@ If this file is not empty, its contents 
+ sender on all messages.
  .SH OTHER FILES
  .TP
--.B /var/nullmailer/queue
+-.B /var/spool/nullmailer/queue
 +.B @VARBASE@/spool/nullmailer/queue
  The directory into which the completed messages are moved.
  .TP
--.B /var/nullmailer/tmp
+-.B /var/spool/nullmailer/tmp
 +.B @VARBASE@/spool/nullmailer/tmp
  The directory in which messages are formed temporarily.
  .TP
--.B /var/nullmailer/trigger
+-.B /var/spool/nullmailer/trigger
 +.B @VARBASE@/spool/nullmailer/trigger
  A pipe used to trigger
  .BR nullmailer-send
