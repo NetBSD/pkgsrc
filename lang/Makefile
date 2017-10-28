@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.467 2017/10/16 17:01:50 adam Exp $
+# $NetBSD: Makefile,v 1.468 2017/10/28 07:38:07 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -173,6 +173,7 @@ SUBDIR+=	php71
 SUBDIR+=	picoc
 SUBDIR+=	pict
 SUBDIR+=	polyml
+SUBDIR+=	py-asttokens
 SUBDIR+=	py-basicproperty
 SUBDIR+=	py-byterun
 SUBDIR+=	py-cxfreeze
