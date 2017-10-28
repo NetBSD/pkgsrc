@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/09/29 13:57:34 joerg Exp $
+$NetBSD: distinfo,v 1.2 2017/10/28 09:13:28 adam Exp $
 
-SHA1 (pytzdata-2017.2.2.tar.gz) = e864249dff89cc444c9389fa3b7ae21f4a596d6c
-RMD160 (pytzdata-2017.2.2.tar.gz) = 15754520e3a4aed59185d41fe73078ae28f08189
-SHA512 (pytzdata-2017.2.2.tar.gz) = 79f83f6a80655f0a91ec88add732dac0fbca75eecdb25ff93aaced900bb06de1d07f2a9d527b5e27d80b5bfe7cb92d1527475744717c3c2f13ce9e9d1983886a
-Size (pytzdata-2017.2.2.tar.gz) = 238705 bytes
+SHA1 (pytzdata-2017.3.tar.gz) = deb8ab2d7d4e76885f1c3cb5b14980b7b40b9ce5
+RMD160 (pytzdata-2017.3.tar.gz) = 400ef900965e2c57af7a3fb820644ad54e7fe471
+SHA512 (pytzdata-2017.3.tar.gz) = 4056543abeb80c768651401f490794ffee51bfcf5ba7be1dac01fa021a217a3ab829c7580ccf7fcf8ee26c8c2cdcd76d452e94ba180a5c67ae066d627830e7fe
+Size (pytzdata-2017.3.tar.gz) = 280392 bytes
