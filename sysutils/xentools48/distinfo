@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2017/10/28 03:14:17 khorben Exp $
+$NetBSD: distinfo,v 1.6 2017/10/28 04:08:46 khorben Exp $
 
 SHA1 (xen48/gmp-4.3.2.tar.bz2) = c011e8feaf1bb89158bd55eaabd7ef8fdd101a2c
 RMD160 (xen48/gmp-4.3.2.tar.bz2) = a8f3f41501ece290c348aeb4444bbea40bc53e71
@@ -52,7 +52,6 @@ SHA1 (patch-Config.mk) = 7976ce94c553c2fc6badc6d41e9cb8334fea40c8
 SHA1 (patch-Makefile) = fdcd5fbb22613e55ac1b000a46b1ecbbd99eef59
 SHA1 (patch-XSA233) = e6a7230035966d7d292ef3ca477f2eb3458ae12f
 SHA1 (patch-XSA240) = 754bbe5080a81e1526b7938fed01ba435e65e50b
-SHA1 (patch-debugger_gdbsx_Makefile) = 1e16761b20604bb5a9ee22174f0bb46005fb19c7
 SHA1 (patch-docs_man_xl.cfg.pod.5.in) = e1ee6f2d48f6ce001c44c7ac688ea179b625b584
 SHA1 (patch-docs_man_xl.conf.pod.5) = d77e3313750db315d540d7713c95cd54d6f02938
 SHA1 (patch-docs_man_xl.pod.1.in) = 9b37ef724f2827bc05110e5456a8668257509cab
@@ -75,6 +74,7 @@ SHA1 (patch-tools_Makefile) = 4277125963bf7521cc0f682bb48dd21b69998f3e
 SHA1 (patch-tools_Rules.mk) = 8ff6318747e3ddf703cb9b43b6405c7b0f22ee5c
 SHA1 (patch-tools_configure) = b7b26dec49388f543f42dcb389113d6a2ed96e1b
 SHA1 (patch-tools_console_daemon_utils.c) = 1c954e1edadad2607f7b87eaf2d6285be7f968ff
+SHA1 (patch-tools_debugger_gdbsx_Makefile) = bd419144660f19b13d6924dfa87f96a9eb6a3574
 SHA1 (patch-tools_examples_Makefile) = fe258fc26e4507ca2fb4363c5e2197ee06e89d64
 SHA1 (patch-tools_firmware_etherboot_Makefile) = 82aa5cb09a9654e27c4686a02a3eb1123a594342
 SHA1 (patch-tools_firmware_hvmloader_Makefile) = 02cac5e9314c4c71105f15a3c1c303c573d6583a
