@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4657 2017/10/28 06:55:17 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4658 2017/10/28 08:26:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6723,3 +6723,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated meta-pkgs/bulk-medium to 20171028 [wiz 2017-10-28]
 	Added net/py-responses version 0.8.1 [adam 2017-10-28]
 	Updated net/py-tldextract to 2.2.0 [adam 2017-10-28]
+	Added lang/py-asttokens version 1.1.6 [adam 2017-10-28]
+	Updated devel/py-flake8-import-order to 0.14.1 [adam 2017-10-28]
+	Updated sysutils/py-crontab to 2.2.6 [adam 2017-10-28]
+	Updated textproc/py-regex to 2017.09.23 [adam 2017-10-28]
