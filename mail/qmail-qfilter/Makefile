@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2017/04/27 20:04:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.26 2017/10/28 15:56:06 schmonz Exp $
 #
 
 DISTNAME=		qmail-qfilter-2.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 
@@ -13,8 +13,6 @@ LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		qmail>=1.03nb9:../../mail/qmail
 
-OWN_DIRS_PERMS+=	${QMAIL_QFILTER_TMPDIR} ${QMAIL_DAEMON_USER} ${REAL_ROOT_GROUP} 700
-
 REPLACE_PERL=		samples/block-long-dates			\
 			samples/deny-filetypes				\
 			samples/rename-filetypes
@@ -22,13 +20,12 @@ REPLACE_PERL=		samples/block-long-dates			\
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
 SUBST_FILES.paths=	qmail-qfilter.c
-SUBST_SED.paths=	-e 's|/tmp|${QMAIL_QFILTER_TMPDIR}|g'
 SUBST_SED.paths+=	-e 's|/var/qmail|${QMAILDIR}|g'
 SUBST_MESSAGE.paths=	Fixing paths.
 
-INSTALLATION_DIRS=	bin man ${PKGMANDIR}/man1 share/examples/qmail-qfilter
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/qmail-qfilter
 INSTALL_ENV+=		install_prefix=${DESTDIR:Q}
-BUILD_DEFS+=		QMAILDIR QMAIL_DAEMON_USER QMAIL_QFILTER_TMPDIR
+BUILD_DEFS+=		QMAILDIR
 
 DJB_RESTRICTED=		NO
 DJB_MAKE_TARGETS=	NO
