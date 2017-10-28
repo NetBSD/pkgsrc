@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/10/28 16:00:04 leot Exp $
 #
 
-DISTNAME=	sxiv-1.3.2
+DISTNAME=	sxiv-24
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=muennich/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,10 +14,14 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	PREFIX=${PREFIX} MANPREFIX=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=	AUTORELOAD=nop
+
+USE_LANGUAGES=	c99
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
