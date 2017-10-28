@@ -1,0 +1,14 @@
+$NetBSD: patch-test_Makefile.am,v 1.1 2017/10/28 04:51:06 schmonz Exp $
+
+Use bash explicitly, and avoid GNUism in find(1).
+
+--- test/Makefile.am.orig	2017-10-24 00:12:30.000000000 +0000
++++ test/Makefile.am
+@@ -31,5 +31,5 @@ dist-hook:
+ check: all
+ 	./address-test
+ 	./argparse-test
+-	sh $(srcdir)/clitest.sh
+-	$(srcdir)/runtests `find $(abs_srcdir)/tests -type f -not -name '.*'`
++	bash $(srcdir)/clitest.sh
++	$(srcdir)/runtests `find $(abs_srcdir)/tests -type f \! -name '.*'`

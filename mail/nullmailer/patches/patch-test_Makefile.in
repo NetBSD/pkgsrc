@@ -1,0 +1,17 @@
+$NetBSD: patch-test_Makefile.in,v 1.1 2017/10/28 04:51:06 schmonz Exp $
+
+Use bash explicitly, and avoid GNUism in find(1).
+
+--- test/Makefile.in.orig	2017-10-24 00:12:35.000000000 +0000
++++ test/Makefile.in
+@@ -612,8 +612,8 @@ dist-hook:
+ check: all
+ 	./address-test
+ 	./argparse-test
+-	sh $(srcdir)/clitest.sh
+-	$(srcdir)/runtests `find $(abs_srcdir)/tests -type f -not -name '.*'`
++	bash $(srcdir)/clitest.sh
++	$(srcdir)/runtests `find $(abs_srcdir)/tests -type f \! -name '.*'`
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

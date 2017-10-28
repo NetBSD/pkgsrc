@@ -1,0 +1,25 @@
+$NetBSD: patch-test_functions.in,v 1.1 2017/10/28 04:51:06 schmonz Exp $
+
+Find and use mkfifo(8) and svc(8) for tests.
+
+--- test/functions.in.orig	2017-10-24 02:56:07.000000000 +0000
++++ test/functions.in
+@@ -10,7 +10,8 @@ mkdir -p \
+     $tmpdir/protocols \
+     $QUEUEDIR/{failed,queue,tmp} \
+     $SYSCONFDIR
+-mknod $QUEUEDIR/trigger p
++export PATH=/sbin:$PATH
++mkfifo $QUEUEDIR/trigger
+ ln -s $builddir/src $tmpdir/sbin
+ ln -s $builddir/src $tmpdir/bin
+ ln -s $builddir/protocols/* $tmpdir/protocols/
+@@ -128,7 +129,7 @@ splitblank() {
+   done
+ }
+ 
+-export PATH=/bin:/usr/bin:/usr/local/bin
++export PATH=/bin:/usr/bin:/usr/local/bin:@PREFIX@/bin
+ rm -f $SYSCONFDIR/*
+ echo f.q.d.n >$SYSCONFDIR/me
+ echo q.d.n >$SYSCONFDIR/defaultdomain
