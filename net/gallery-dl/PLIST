@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/04 09:35:26 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/10/28 16:46:40 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -66,6 +66,9 @@ ${PYSITELIB}/gallery_dl/extractor/archivedmoe.pyo
 ${PYSITELIB}/gallery_dl/extractor/archiveofsins.py
 ${PYSITELIB}/gallery_dl/extractor/archiveofsins.pyc
 ${PYSITELIB}/gallery_dl/extractor/archiveofsins.pyo
+${PYSITELIB}/gallery_dl/extractor/b4k.py
+${PYSITELIB}/gallery_dl/extractor/b4k.pyc
+${PYSITELIB}/gallery_dl/extractor/b4k.pyo
 ${PYSITELIB}/gallery_dl/extractor/batoto.py
 ${PYSITELIB}/gallery_dl/extractor/batoto.pyc
 ${PYSITELIB}/gallery_dl/extractor/batoto.pyo
@@ -171,9 +174,6 @@ ${PYSITELIB}/gallery_dl/extractor/khinsider.pyo
 ${PYSITELIB}/gallery_dl/extractor/kireicake.py
 ${PYSITELIB}/gallery_dl/extractor/kireicake.pyc
 ${PYSITELIB}/gallery_dl/extractor/kireicake.pyo
-${PYSITELIB}/gallery_dl/extractor/kisscomic.py
-${PYSITELIB}/gallery_dl/extractor/kisscomic.pyc
-${PYSITELIB}/gallery_dl/extractor/kisscomic.pyo
 ${PYSITELIB}/gallery_dl/extractor/kissmanga.py
 ${PYSITELIB}/gallery_dl/extractor/kissmanga.pyc
 ${PYSITELIB}/gallery_dl/extractor/kissmanga.pyo
@@ -282,15 +282,21 @@ ${PYSITELIB}/gallery_dl/extractor/tumblr.pyo
 ${PYSITELIB}/gallery_dl/extractor/twitter.py
 ${PYSITELIB}/gallery_dl/extractor/twitter.pyc
 ${PYSITELIB}/gallery_dl/extractor/twitter.pyo
+${PYSITELIB}/gallery_dl/extractor/warosu.py
+${PYSITELIB}/gallery_dl/extractor/warosu.pyc
+${PYSITELIB}/gallery_dl/extractor/warosu.pyo
+${PYSITELIB}/gallery_dl/extractor/whatisthisimnotgoodwithcomputers.py
+${PYSITELIB}/gallery_dl/extractor/whatisthisimnotgoodwithcomputers.pyc
+${PYSITELIB}/gallery_dl/extractor/whatisthisimnotgoodwithcomputers.pyo
 ${PYSITELIB}/gallery_dl/extractor/worldthree.py
 ${PYSITELIB}/gallery_dl/extractor/worldthree.pyc
 ${PYSITELIB}/gallery_dl/extractor/worldthree.pyo
 ${PYSITELIB}/gallery_dl/extractor/yandere.py
 ${PYSITELIB}/gallery_dl/extractor/yandere.pyc
 ${PYSITELIB}/gallery_dl/extractor/yandere.pyo
-${PYSITELIB}/gallery_dl/extractor/yonkouprod.py
-${PYSITELIB}/gallery_dl/extractor/yonkouprod.pyc
-${PYSITELIB}/gallery_dl/extractor/yonkouprod.pyo
+${PYSITELIB}/gallery_dl/extractor/yeet.py
+${PYSITELIB}/gallery_dl/extractor/yeet.pyc
+${PYSITELIB}/gallery_dl/extractor/yeet.pyo
 ${PYSITELIB}/gallery_dl/job.py
 ${PYSITELIB}/gallery_dl/job.pyc
 ${PYSITELIB}/gallery_dl/job.pyo
