@@ -1,4 +1,6 @@
-$NetBSD: patch-lib_selfpipe.cc,v 1.1 2017/02/17 17:08:32 joerg Exp $
+$NetBSD: patch-lib_selfpipe.cc,v 1.2 2017/10/28 04:51:06 schmonz Exp $
+
+Add missing include.
 
 --- lib/selfpipe.cc.orig	2017-02-17 10:54:28.240596810 +0000
 +++ lib/selfpipe.cc
