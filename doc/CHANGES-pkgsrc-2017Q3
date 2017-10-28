@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.10 2017/10/22 18:13:36 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.11 2017/10/28 19:09:09 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q3 branch:
 
@@ -65,4 +65,18 @@ print/mupdf: bugfix
 
 Pullup ticket #5585 - requested by sevan
 x11/libXfont: security fix
+
+Pullup ticket #5586 - requested by he
+graphics/ImageMagick: security update
+
+Pullup ticket #5587 - requested by maya
+chat/irssi: security update
+chat/irssi-icb: security update
+chat/irssi-xmpp: security update
+
+Pullup ticket #5588 - requested by maya
+shells/fish: build fix
+
+Pullup ticket #5589 - requested by tez
+net/wget: security patch
 
