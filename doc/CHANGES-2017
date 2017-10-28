@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4666 2017/10/28 16:11:32 leot Exp $
+$NetBSD: CHANGES-2017,v 1.4667 2017/10/28 16:46:56 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6739,3 +6739,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/qmail-qfilter to 2.1nb5 [schmonz 2017-10-28]
 	Updated graphics/sxiv to 24 [leot 2017-10-28]
 	Updated print/tex-beamer-doc to 3.43nb1 [leot 2017-10-28]
+	Updated net/gallery-dl to 1.0.0 [leot 2017-10-28]
