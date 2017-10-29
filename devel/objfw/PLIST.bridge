@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.bridge,v 1.1 2017/08/01 15:51:52 maya Exp $
+@comment $NetBSD: PLIST.bridge,v 1.2 2017/10/29 12:13:13 bsiegert Exp $
 include/ObjFW_Bridge/NSArray+OFObject.h
 include/ObjFW_Bridge/NSArray_OFArray.h
 include/ObjFW_Bridge/NSBridging.h
@@ -12,7 +12,7 @@ include/ObjFW_Bridge/OFDictionary+NSObject.h
 include/ObjFW_Bridge/OFDictionary_NSDictionary.h
 include/ObjFW_Bridge/OFString+NSObject.h
 include/ObjFW_Bridge/ObjFW_Bridge.h
-lib/libobjfw-bridge.8.0.dylib
+lib/libobjfw-bridge.8.1.dylib
 lib/libobjfw-bridge.8.dylib
 lib/libobjfw-bridge.a
 lib/libobjfw-bridge.dylib
