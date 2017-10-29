@@ -1,17 +1,10 @@
-# $NetBSD: options.mk,v 1.46 2017/08/19 22:11:43 schmonz Exp $
+# $NetBSD: options.mk,v 1.47 2017/10/29 00:46:14 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai sasl syncdir tls
 PKG_SUPPORTED_OPTIONS+=		qmail-customerror qmail-rejectutils qmail-srs
 PKG_SUGGESTED_OPTIONS+=		eai sasl syncdir tls
 PKG_SUGGESTED_OPTIONS+=		qmail-customerror qmail-rejectutils qmail-srs
-
-# For users migrating from 2017Q2; remove compatibility after 2017Q3 is branched
-QMAIL_PATCHES_ALWAYS_ON=	netqmail bigdns maildiruniq outgoingip rcptcheck remote
-QMAIL_PATCHES_REMOVED=		badrcptto qregex realrcptto viruscan
-PKG_OPTIONS_ALWAYS_ON=		${QMAIL_PATCHES_ALWAYS_ON:S/^/qmail-/}
-PKG_OPTIONS_REMOVED=		${QMAIL_PATCHES_REMOVED:S/^/qmail-/}
-PKG_SUPPORTED_OPTIONS+=		${PKG_OPTIONS_ALWAYS_ON} ${PKG_OPTIONS_REMOVED}
 
 # Formerly optional patches, now unconditionally applied:
 QMAILPATCHES=			netqmail:${DEFAULT_DISTFILES}
@@ -60,22 +53,6 @@ PATCHFILES+=			${REMOTE_PATCH}
 SITES.${REMOTE_PATCH}=		https://schmonz.com/qmail/remote/
 
 .include "../../mk/bsd.options.mk"
-
-# For users migrating from 2017Q2; remove compatibility after 2017Q3 is branched
-.for i in ${PKG_OPTIONS_ALWAYS_ON}
-.  if !empty(PKG_OPTIONS:M${i})
-PKG_LEGACY_OPTIONS+=		${i}
-PKG_OPTIONS_DEPRECATED_WARNINGS+="WARN: Please unset \"${i}\" option (it's now always enabled)."
-.  endif
-.endfor
-
-# For users migrating from 2017Q2; remove compatibility after 2017Q3 is branched
-.for i in ${PKG_OPTIONS_REMOVED}
-.  if !empty(PKG_OPTIONS:M${i})
-PKG_LEGACY_OPTIONS+=		${i}
-PKG_OPTIONS_DEPRECATED_WARNINGS+="WARN: Please unset \"${i}\" option (it's now always included, as a program)."
-.  endif
-.endfor
 
 .if !empty(PKG_OPTIONS:Meai)
 .  include "../../devel/libidn2/buildlink3.mk"
