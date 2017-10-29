@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2017/10/22 14:03:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.51 2017/10/29 10:52:44 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -728,6 +728,9 @@ ${PYSITELIB}/youtube_dl/extractor/giantbomb.pyo
 ${PYSITELIB}/youtube_dl/extractor/giga.py
 ${PYSITELIB}/youtube_dl/extractor/giga.pyc
 ${PYSITELIB}/youtube_dl/extractor/giga.pyo
+${PYSITELIB}/youtube_dl/extractor/gigya.py
+${PYSITELIB}/youtube_dl/extractor/gigya.pyc
+${PYSITELIB}/youtube_dl/extractor/gigya.pyo
 ${PYSITELIB}/youtube_dl/extractor/glide.py
 ${PYSITELIB}/youtube_dl/extractor/glide.pyc
 ${PYSITELIB}/youtube_dl/extractor/glide.pyo
@@ -1160,9 +1163,6 @@ ${PYSITELIB}/youtube_dl/extractor/myspass.pyo
 ${PYSITELIB}/youtube_dl/extractor/myvi.py
 ${PYSITELIB}/youtube_dl/extractor/myvi.pyc
 ${PYSITELIB}/youtube_dl/extractor/myvi.pyo
-${PYSITELIB}/youtube_dl/extractor/myvideo.py
-${PYSITELIB}/youtube_dl/extractor/myvideo.pyc
-${PYSITELIB}/youtube_dl/extractor/myvideo.pyo
 ${PYSITELIB}/youtube_dl/extractor/myvidster.py
 ${PYSITELIB}/youtube_dl/extractor/myvidster.pyc
 ${PYSITELIB}/youtube_dl/extractor/myvidster.pyo
@@ -2261,6 +2261,9 @@ ${PYSITELIB}/youtube_dl/extractor/youjizz.pyo
 ${PYSITELIB}/youtube_dl/extractor/youku.py
 ${PYSITELIB}/youtube_dl/extractor/youku.pyc
 ${PYSITELIB}/youtube_dl/extractor/youku.pyo
+${PYSITELIB}/youtube_dl/extractor/younow.py
+${PYSITELIB}/youtube_dl/extractor/younow.pyc
+${PYSITELIB}/youtube_dl/extractor/younow.pyo
 ${PYSITELIB}/youtube_dl/extractor/youporn.py
 ${PYSITELIB}/youtube_dl/extractor/youporn.pyc
 ${PYSITELIB}/youtube_dl/extractor/youporn.pyo
