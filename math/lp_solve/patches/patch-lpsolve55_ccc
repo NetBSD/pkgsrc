@@ -1,4 +1,4 @@
-$NetBSD: patch-lpsolve55_ccc,v 1.4 2017/10/28 11:23:50 khorben Exp $
+$NetBSD: patch-lpsolve55_ccc,v 1.5 2017/10/29 22:16:03 khorben Exp $
 
 recent versions of gcc are noisy unless main() is declared returning 'int'
 and isnan() needs a floating argument else NOISNAN is defined causing
@@ -10,8 +10,8 @@ problems.
  src='../lp_MDO.c ../shared/commonlib.c ../shared/mmio.c ../shared/myblas.c ../ini.c ../fortify.c ../colamd/colamd.c ../lp_rlp.c ../lp_crash.c ../bfp/bfp_LUSOL/lp_LUSOL.c ../bfp/bfp_LUSOL/LUSOL/lusol.c ../lp_Hash.c ../lp_lib.c ../lp_wlp.c ../lp_matrix.c ../lp_mipbb.c ../lp_MPS.c ../lp_params.c ../lp_presolve.c ../lp_price.c ../lp_pricePSE.c ../lp_report.c ../lp_scale.c ../lp_simplex.c ../lp_SOS.c ../lp_utils.c ../yacc_read.c'
  c=cc
  
-+tmpdir=$(mktemp -d)
-+[ $? -eq 0 ] || return 2
++tmpdir="@WRKDIR@/tmp"
++mkdir "$tmpdir" || return 2
 +
  #determine platform (32/64 bit)
 ->/tmp/platform.c
