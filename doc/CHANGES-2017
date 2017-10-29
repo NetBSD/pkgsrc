@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4672 2017/10/29 20:53:51 scole Exp $
+$NetBSD: CHANGES-2017,v 1.4673 2017/10/29 22:25:01 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6745,3 +6745,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/youtube-dl to 20171029 [leot 2017-10-29]
 	Updated devel/objfw to 0.90.2 [bsiegert 2017-10-29]
 	Updated fonts/ttf-tlwg to 0.6.4 [scole 2017-10-29]
+	Updated lang/libduktape to 2.2.0 [leot 2017-10-29]
