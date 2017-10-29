@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2017/06/22 03:06:26 schmonz Exp $
+# $NetBSD: options.mk,v 1.18 2017/10/29 00:34:29 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lighttpd
 PKG_SUPPORTED_OPTIONS=	bzip2 fam gdbm inet6 ldap lua mysql ssl memcached geoip gssapi webdav
@@ -87,6 +87,7 @@ PLIST.mysql=		yes
 .if !empty(PKG_OPTIONS:Mssl)
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
+PLIST.ssl=		yes
 .endif
 
 ###
