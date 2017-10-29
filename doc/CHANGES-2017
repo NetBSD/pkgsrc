@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4671 2017/10/29 12:13:54 bsiegert Exp $
+$NetBSD: CHANGES-2017,v 1.4672 2017/10/29 20:53:51 scole Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6744,3 +6744,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/firefox to 56.0.2nb1 [ryoon 2017-10-29]
 	Updated net/youtube-dl to 20171029 [leot 2017-10-29]
 	Updated devel/objfw to 0.90.2 [bsiegert 2017-10-29]
+	Updated fonts/ttf-tlwg to 0.6.4 [scole 2017-10-29]
