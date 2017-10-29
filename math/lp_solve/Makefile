@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/09/08 05:12:39 richard Exp $
+# $NetBSD: Makefile,v 1.11 2017/10/29 22:16:03 khorben Exp $
 #
 
 DISTNAME=	lp_solve_5.5.2.3_source
@@ -20,6 +20,7 @@ SUBST_STAGE.dl=		pre-build
 SUBST_SED.dl+=		-e s,-ldl,${DL_LIBS:Q},g
 SUBST_SED.dl+=		-e s,^opts=.*,opts=\'${CFLAGS:Q}\',g
 SUBST_SED.dl+=		-e s,-fpic,-fPIC,g
+SUBST_VARS.dl+=		WRKDIR
 SUBST_FILES.dl+=	lp_solve/ccc
 SUBST_FILES.dl+=	lpsolve55/ccc
 SUBST_FILES.dl+=	demo/ccc
