@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/05/05 03:59:48 agc Exp $
+$NetBSD: distinfo,v 1.2 2017/10/29 22:26:56 leot Exp $
 
-SHA1 (duktape-1.5.0.tar.xz) = 6c53eff86e498c9a81181dfaf72034d616a35cba
-RMD160 (duktape-1.5.0.tar.xz) = c4af4b76978e03fe621886601b65d9fbad240b19
-SHA512 (duktape-1.5.0.tar.xz) = f9b1500980e75700296d054d91edcd6a86d5ee20d63a7c246c66af7d5f5f097191cf59c4175214138345154afb6e3f5bb338a549ac3fbadeba858d8beb610093
-Size (duktape-1.5.0.tar.xz) = 708528 bytes
+SHA1 (duktape-2.2.0.tar.xz) = 059d8f6ce4537bfca5689da693225802bb482706
+RMD160 (duktape-2.2.0.tar.xz) = cd341d62ed4f2ec3a1969426dec8ef82ede47925
+SHA512 (duktape-2.2.0.tar.xz) = 6fe67660ad4cfbab37b9048840bd8c42ee9585441c17253e1f17cb06e4527d1413851bc167d8b013990d5cae9f8e6eb4cb6ff80866f55bd8d67b0cf47580be7c
+Size (duktape-2.2.0.tar.xz) = 969136 bytes
