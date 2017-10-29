@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/08/01 15:51:52 maya Exp $
+# $NetBSD: Makefile,v 1.2 2017/10/29 12:13:13 bsiegert Exp $
 
-DISTNAME=	objfw-0.90
+DISTNAME=	objfw-0.90.2
 CATEGORIES=	devel
 MASTER_SITES=	https://heap.zone/objfw/downloads/
 
