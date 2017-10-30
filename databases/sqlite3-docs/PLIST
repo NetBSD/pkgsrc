@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.72 2017/08/25 05:27:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.73 2017/10/30 18:36:13 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -45,7 +45,7 @@ share/doc/sqlite3/c3ref/c_dbstatus_options.html
 share/doc/sqlite3/c3ref/c_deny.html
 share/doc/sqlite3/c3ref/c_deterministic.html
 share/doc/sqlite3/c3ref/c_fail.html
-share/doc/sqlite3/c3ref/c_fcntl_busyhandler.html
+share/doc/sqlite3/c3ref/c_fcntl_begin_atomic_write.html
 share/doc/sqlite3/c3ref/c_index_constraint_eq.html
 share/doc/sqlite3/c3ref/c_index_scan_unique.html
 share/doc/sqlite3/c3ref/c_iocap_atomic.html
@@ -301,6 +301,7 @@ share/doc/sqlite3/images/btreemodule_balance_quick.svg
 share/doc/sqlite3/images/btreemodule_balance_shallower.svg
 share/doc/sqlite3/images/btreemodule_delete1.svg
 share/doc/sqlite3/images/btreemodule_overview.svg
+share/doc/sqlite3/images/cc-diff.jpg
 share/doc/sqlite3/images/chw.jpg
 share/doc/sqlite3/images/cpu-usage.jpg
 share/doc/sqlite3/images/dan1.jpg
@@ -603,6 +604,7 @@ share/doc/sqlite3/releaselog/3_1_5.html
 share/doc/sqlite3/releaselog/3_1_6.html
 share/doc/sqlite3/releaselog/3_20_0.html
 share/doc/sqlite3/releaselog/3_20_1.html
+share/doc/sqlite3/releaselog/3_21_0.html
 share/doc/sqlite3/releaselog/3_2_0.html
 share/doc/sqlite3/releaselog/3_2_1.html
 share/doc/sqlite3/releaselog/3_2_2.html
