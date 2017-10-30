@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2017/04/05 17:07:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2017/10/30 18:31:28 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -396,7 +396,6 @@ ${PYSITELIB}/pytz/zoneinfo/CET
 ${PYSITELIB}/pytz/zoneinfo/CST6CDT
 ${PYSITELIB}/pytz/zoneinfo/Canada/Atlantic
 ${PYSITELIB}/pytz/zoneinfo/Canada/Central
-${PYSITELIB}/pytz/zoneinfo/Canada/East-Saskatchewan
 ${PYSITELIB}/pytz/zoneinfo/Canada/Eastern
 ${PYSITELIB}/pytz/zoneinfo/Canada/Mountain
 ${PYSITELIB}/pytz/zoneinfo/Canada/Newfoundland
@@ -617,7 +616,9 @@ ${PYSITELIB}/pytz/zoneinfo/W-SU
 ${PYSITELIB}/pytz/zoneinfo/WET
 ${PYSITELIB}/pytz/zoneinfo/Zulu
 ${PYSITELIB}/pytz/zoneinfo/iso3166.tab
+${PYSITELIB}/pytz/zoneinfo/leapseconds
 ${PYSITELIB}/pytz/zoneinfo/localtime
 ${PYSITELIB}/pytz/zoneinfo/posixrules
+${PYSITELIB}/pytz/zoneinfo/tzdata.zi
 ${PYSITELIB}/pytz/zoneinfo/zone.tab
 ${PYSITELIB}/pytz/zoneinfo/zone1970.tab
