@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/01 16:58:27 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/.DS_Store
+@comment $NetBSD: PLIST,v 1.3 2017/10/30 10:10:20 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -366,6 +365,9 @@ ${PYSITELIB}/openpyxl/utils/formulas.pyo
 ${PYSITELIB}/openpyxl/utils/indexed_list.py
 ${PYSITELIB}/openpyxl/utils/indexed_list.pyc
 ${PYSITELIB}/openpyxl/utils/indexed_list.pyo
+${PYSITELIB}/openpyxl/utils/protection.py
+${PYSITELIB}/openpyxl/utils/protection.pyc
+${PYSITELIB}/openpyxl/utils/protection.pyo
 ${PYSITELIB}/openpyxl/utils/units.py
 ${PYSITELIB}/openpyxl/utils/units.pyc
 ${PYSITELIB}/openpyxl/utils/units.pyo
