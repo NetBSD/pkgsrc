@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4679 2017/10/30 15:08:24 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4680 2017/10/30 15:33:54 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6753,3 +6753,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/libxml2 to 2.9.6 [fhajny 2017-10-30]
 	Updated graphics/ImageMagick to 7.0.7.8 [fhajny 2017-10-30]
 	Updated graphics/ImageMagick6 to 6.9.9.20 [fhajny 2017-10-30]
+	Updated net/gst-rtsp-server to 1.12.3 [prlw1 2017-10-30]
