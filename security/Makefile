@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.655 2017/10/17 19:39:19 minskim Exp $
+# $NetBSD: Makefile,v 1.656 2017/10/30 18:21:20 adam Exp $
 #
 
 COMMENT=	Security tools
@@ -384,6 +384,7 @@ SUBDIR+=	py-argon2_cffi
 SUBDIR+=	py-asn1
 SUBDIR+=	py-asn1-modules
 SUBDIR+=	py-asn1crypto
+SUBDIR+=	py-asyncssh
 SUBDIR+=	py-backports.ssl_match_hostname
 SUBDIR+=	py-bcrypt
 SUBDIR+=	py-certbot
