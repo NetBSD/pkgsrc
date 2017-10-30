@@ -1,4 +1,6 @@
-$NetBSD: patch-src_fallback.h,v 1.2 2017/10/25 09:32:38 maya Exp $
+$NetBSD: patch-src_fallback.h,v 1.3 2017/10/30 11:45:14 jperkin Exp $
+
+Work around NetBSD curses.
 
 --- src/fallback.h.orig	2017-06-03 12:45:13.000000000 +0000
 +++ src/fallback.h
