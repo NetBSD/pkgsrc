@@ -1,4 +1,6 @@
-$NetBSD: patch-src_output.h,v 1.1 2017/10/24 03:51:41 maya Exp $
+$NetBSD: patch-src_output.h,v 1.2 2017/10/30 11:45:14 jperkin Exp $
+
+Work around NetBSD curses.
 
 --- src/output.h.orig	2017-06-03 12:45:13.000000000 +0000
 +++ src/output.h
