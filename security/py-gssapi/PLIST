@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/24 18:49:35 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/10/30 18:17:13 adam Exp $
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
@@ -25,17 +25,22 @@ ${PYSITELIB}/gssapi/raw/__init__.pyo
 ${PYSITELIB}/gssapi/raw/_enum_extensions/__init__.py
 ${PYSITELIB}/gssapi/raw/_enum_extensions/__init__.pyc
 ${PYSITELIB}/gssapi/raw/_enum_extensions/__init__.pyo
-${PYSITELIB}/gssapi/raw/_enum_extensions/ext_dce.so
+${PLIST.posix}${PYSITELIB}/gssapi/raw/_enum_extensions/ext_dce.so
+${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/_enum_extensions/ext_iov_mic.so
 ${PYSITELIB}/gssapi/raw/chan_bindings.so
 ${PYSITELIB}/gssapi/raw/creds.so
 ${PYSITELIB}/gssapi/raw/cython_converters.so
 ${PYSITELIB}/gssapi/raw/exceptions.so
 ${PYSITELIB}/gssapi/raw/ext_cred_imp_exp.so
-${PYSITELIB}/gssapi/raw/ext_dce.so
+${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_cred_store.so
+${PLIST.posix}${PYSITELIB}/gssapi/raw/ext_dce.so
+${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_iov_mic.so
 ${PYSITELIB}/gssapi/raw/ext_password.so
-${PYSITELIB}/gssapi/raw/ext_password_add.so
-${PYSITELIB}/gssapi/raw/ext_rfc5588.so
-${PYSITELIB}/gssapi/raw/ext_rfc6680.so
+${PLIST.posix}${PYSITELIB}/gssapi/raw/ext_password_add.so
+${PLIST.posix}${PYSITELIB}/gssapi/raw/ext_rfc5588.so
+${PLIST.posix}${PYSITELIB}/gssapi/raw/ext_rfc6680.so
+${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_rfc6680_comp_oid.so
+${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_s4u.so
 ${PYSITELIB}/gssapi/raw/mech_krb5.so
 ${PYSITELIB}/gssapi/raw/message.so
 ${PYSITELIB}/gssapi/raw/misc.so
