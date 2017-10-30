@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/01/01 14:43:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/10/30 18:17:13 adam Exp $
 
 DISTNAME=	gssapi-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,15 +13,23 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-AUTO_MKDIRS=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 1.2.0, self tests don't run
-
 .include "../../lang/python/distutils.mk"
 
 .if ${PYVERSSUFFIX} == "2.7"
 DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 .endif
 
-.include "../../mk/krb5.buildlink3.mk"
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	mitkrb posix
+
+# On Darwin, py-gssapi uses -framework GSS
+.if ${OPSYS} != "Darwin"
+PLIST.posix=	yes
+.  include "../../mk/krb5.buildlink3.mk"
+.  if ${KRB5_TYPE} == "mit-krb5"
+PLIST.mitkrb=	yes
+.  endif
+.endif
+
 .include "../../mk/bsd.pkg.mk"
