@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2016/05/25 12:41:17 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2017/10/30 14:44:05 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ImageMagick
-PKG_SUPPORTED_OPTIONS=	x11 jasper djvu openexr wmf
-PKG_SUGGESTED_OPTIONS=	x11 jasper
+PKG_SUPPORTED_OPTIONS=	x11 jp2 djvu openexr wmf
+PKG_SUGGESTED_OPTIONS=	x11 jp2
+PKG_OPTIONS_LEGACY_OPTS+=	jasper:jp2
 
 .include "../../mk/bsd.options.mk"
 
@@ -14,12 +15,11 @@ PKG_SUGGESTED_OPTIONS=	x11 jasper
 CONFIGURE_ARGS+=	--without-x
 .endif
 
-.if !empty(PKG_OPTIONS:Mjasper)
-BUILDLINK_API_DEPENDS.jasper+=	jasper>=1.701.0
-.include "../../graphics/jasper/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-jp2
+.if !empty(PKG_OPTIONS:Mjp2)
+.include "../../graphics/openjpeg/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-openjp2
 .else
-CONFIGURE_ARGS+=	--without-jp2
+CONFIGURE_ARGS+=	--without-openjp2
 .endif
 
 .if !empty(PKG_OPTIONS:Mdjvu)
