@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2017/10/17 18:45:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2017/10/30 18:24:50 adam Exp $
 bin/fonttools${PYVERSSUFFIX}
 bin/pyftinspect${PYVERSSUFFIX}
 bin/pyftmerge${PYVERSSUFFIX}
@@ -559,6 +559,12 @@ ${PYSITELIB}/fontTools/varLib/models.pyo
 ${PYSITELIB}/fontTools/varLib/mutator.py
 ${PYSITELIB}/fontTools/varLib/mutator.pyc
 ${PYSITELIB}/fontTools/varLib/mutator.pyo
+${PYSITELIB}/fontTools/varLib/mvar.py
+${PYSITELIB}/fontTools/varLib/mvar.pyc
+${PYSITELIB}/fontTools/varLib/mvar.pyo
+${PYSITELIB}/fontTools/varLib/varStore.py
+${PYSITELIB}/fontTools/varLib/varStore.pyc
+${PYSITELIB}/fontTools/varLib/varStore.pyo
 ${PYSITELIB}/fontTools/voltLib/__init__.py
 ${PYSITELIB}/fontTools/voltLib/__init__.pyc
 ${PYSITELIB}/fontTools/voltLib/__init__.pyo
