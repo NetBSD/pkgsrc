@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2017/09/02 14:13:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.54 2017/10/31 15:53:04 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -145,6 +145,8 @@ ${GEM_LIBDIR}/doc/release_notes/4.7.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.8.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.9.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.0.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.1.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.2.0.txt
 ${GEM_LIBDIR}/doc/schema_modification.rdoc
 ${GEM_LIBDIR}/doc/security.rdoc
 ${GEM_LIBDIR}/doc/sharding.rdoc
@@ -268,6 +270,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/pagination.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_array.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_array_ops.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_enum.rb
+${GEM_LIBDIR}/lib/sequel/extensions/pg_extended_date_support.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_hstore.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_hstore_ops.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_inet.rb
@@ -486,6 +489,7 @@ ${GEM_LIBDIR}/spec/extensions/pg_array_associations_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pg_array_ops_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pg_array_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pg_enum_spec.rb
+${GEM_LIBDIR}/spec/extensions/pg_extended_date_support_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pg_hstore_ops_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pg_hstore_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pg_inet_ops_spec.rb
