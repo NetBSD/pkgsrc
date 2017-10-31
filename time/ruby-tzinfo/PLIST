@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2016/01/03 05:17:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.26 2017/10/31 15:46:33 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES.md
@@ -99,6 +99,7 @@ ${GEM_LIBDIR}/test/zoneinfo/Europe/Paris
 ${GEM_LIBDIR}/test/zoneinfo/Europe/Prague
 ${GEM_LIBDIR}/test/zoneinfo/Factory
 ${GEM_LIBDIR}/test/zoneinfo/iso3166.tab
+${GEM_LIBDIR}/test/zoneinfo/leapseconds
 ${GEM_LIBDIR}/test/zoneinfo/posix/Europe/London
 ${GEM_LIBDIR}/test/zoneinfo/posixrules
 ${GEM_LIBDIR}/test/zoneinfo/right/Europe/London
