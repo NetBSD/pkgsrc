@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.2 2014/10/20 19:11:23 drochner Exp $
+$NetBSD: patch-python_libxml__wrap.h,v 1.1 2017/10/31 13:15:44 fhajny Exp $
 
 fix for Python-2.6
 
---- libxml_wrap.h.orig	2014-10-03 09:00:54.000000000 +0000
-+++ libxml_wrap.h
+--- python/libxml_wrap.h.orig	2014-10-03 09:00:54.000000000 +0000
++++ python/libxml_wrap.h
 @@ -28,7 +28,6 @@
   * and don't use Capsule but CObjects
   */
