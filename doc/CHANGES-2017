@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4682 2017/10/30 18:38:30 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4683 2017/10/31 07:40:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6759,3 +6759,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/py-pytz to 2017.3 [adam 2017-10-30]
 	Updated databases/sqlite3 to 3.21.0 [adam 2017-10-30]
 	Updated devel/py-dulwich to 0.18.5 [adam 2017-10-30]
+	Updated textproc/p5-XML-LibXML to 2.0132 [wen 2017-10-31]
