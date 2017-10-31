@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2004/11/25 18:37:43 minskim Exp $
+$NetBSD: patch-python_libxml.py,v 1.1 2017/10/31 13:15:44 fhajny Exp $
 
---- libxml.py.orig	2004-09-28 05:59:58.000000000 -0500
-+++ libxml.py
+--- python/libxml.py.orig	2004-09-28 05:59:58.000000000 -0500
++++ python/libxml.py
 @@ -281,7 +281,7 @@ class xmlCore:
      # defined as python2 properties
      # 

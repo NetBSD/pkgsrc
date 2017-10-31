@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2017/09/10 20:50:07 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2017/10/31 13:15:44 fhajny Exp $
 
 .include "../../textproc/libxml2/Makefile.common"
 
@@ -9,13 +9,13 @@ LICENSE=	modified-bsd
 
 USE_GCC_RUNTIME=	yes
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/python
+PYSETUPSUBDIR=	python
 NO_CONFIGURE=	YES
 
 SUBST_CLASSES+=		setup
 SUBST_MESSAGE.setup=	Fixing hardcoded paths.
 SUBST_STAGE.setup=	pre-build
-SUBST_FILES.setup=	setup.py
+SUBST_FILES.setup=	python/setup.py
 SUBST_SED.setup=	-e "/ROOT/s,'/usr','${BUILDLINK_PREFIX.libxml2}',g"
 SUBST_SED.setup+=	-e "/^\"/s,/usr/include,${BUILDLINK_PREFIX.iconv}/include,g"
 SUBST_SED.setup+=	-e "/^\"/s,/usr/local/include,${BUILDLINK_PREFIX.iconv}/include,g"
