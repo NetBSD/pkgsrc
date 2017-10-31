@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/09/04 18:57:20 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2017/10/31 08:27:03 adam Exp $
 
-DISTNAME=	ntlm-auth-1.0.5
+DISTNAME=	ntlm-auth-1.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	security
+CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/ntlm-auth/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,6 +11,8 @@ COMMENT=	NTLM authentication handler for python-requests
 LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10:../../lang/py-six
+
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
