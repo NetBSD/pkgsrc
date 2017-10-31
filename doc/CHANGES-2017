@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4688 2017/10/31 14:33:33 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4689 2017/10/31 15:46:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6768,3 +6768,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-flake8-import-order to 0.14.2 [adam 2017-10-31]
 	Updated www/apache-tomcat7 to 7.0.82 [fhajny 2017-10-31]
 	Updated www/apache-tomcat8 to 8.0.47 [fhajny 2017-10-31]
+	Updated time/ruby-tzinfo to 1.2.4 [taca 2017-10-31]
