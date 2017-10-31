@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4685 2017/10/31 08:29:15 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4686 2017/10/31 13:01:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6763,3 +6763,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-HTML-Mason to 1.58 [wen 2017-10-31]
 	Updated security/py-ntlm-auth to 1.0.6 [adam 2017-10-31]
 	Updated security/py-requests-ntlm to 1.1.0 [adam 2017-10-31]
+	Updated devel/py-astor to 0.6 [adam 2017-10-31]
+	Updated devel/py-Pyro to 4.63 [adam 2017-10-31]
+	Updated devel/py-flake8-import-order to 0.14.2 [adam 2017-10-31]
