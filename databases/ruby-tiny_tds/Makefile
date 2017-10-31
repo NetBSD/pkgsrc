@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2017/09/18 02:52:55 taca Exp $
+# $NetBSD: Makefile,v 1.17 2017/10/31 15:54:39 taca Exp $
 
-DISTNAME=	tiny_tds-2.0.0
+DISTNAME=	tiny_tds-2.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases ruby
 
