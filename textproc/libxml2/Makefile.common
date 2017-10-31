@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2017/10/30 14:02:02 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.9 2017/10/31 13:15:44 fhajny Exp $
 #
 # used by textproc/libxml2/Makefile
 # used by textproc/py-libxml2/Makefile
@@ -10,3 +10,6 @@ MASTER_SITES+=	http://xmlsoft.org/sources/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xmlsoft.org/
+
+DISTINFO_FILE=	${.CURDIR}/../../textproc/libxml2/distinfo
+PATCHDIR=	${.CURDIR}/../../textproc/libxml2/patches
