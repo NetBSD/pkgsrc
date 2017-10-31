@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.4 2015/10/23 20:01:08 tnn Exp $
+$NetBSD: patch-python_setup.py,v 1.1 2017/10/31 13:15:44 fhajny Exp $
 
 Trust pkgsrc to know which iconv to use.
 It will be either in the buildlink directory, or in the compiler's
 default search path.
 
---- setup.py.orig	2014-10-16 07:35:21.000000000 +0000
-+++ setup.py
+--- python/setup.py.orig	2014-10-16 07:35:21.000000000 +0000
++++ python/setup.py
 @@ -56,11 +56,7 @@ else:
  # - iconv.h
  # - libxslt/xsltconfig.h
