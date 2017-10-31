@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2015/07/07 22:23:25 rodent Exp $
+# $NetBSD: Makefile.common,v 1.2.20.1 2017/10/31 17:01:37 spz Exp $
 #
 # used by devel/ruby-redmine_bootstrap_kit/Makefile
 # used by devel/ruby-redmine_code_review/Makefile
@@ -9,6 +9,8 @@
 # used by devel/ruby-redmine_work_time/Makefile
 
 CATEGORIES=	devel
+
+RUBY_VERSIONS_ACCEPTED=	22
 
 .include "../../lang/ruby/rubyversion.mk"
 
