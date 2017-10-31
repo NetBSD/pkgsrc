@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4686 2017/10/31 13:01:36 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4687 2017/10/31 14:31:21 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6766,3 +6766,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-astor to 0.6 [adam 2017-10-31]
 	Updated devel/py-Pyro to 4.63 [adam 2017-10-31]
 	Updated devel/py-flake8-import-order to 0.14.2 [adam 2017-10-31]
+	Updated www/apache-tomcat7 to 7.0.82 [fhajny 2017-10-31]
