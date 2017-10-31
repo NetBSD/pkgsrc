@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2016/09/02 14:07:43 maya Exp $
+# $NetBSD: Makefile,v 1.79.12.1 2017/10/31 14:34:23 spz Exp $
 
-DISTNAME=	lame-3.99.5
-PKGREVISION=	3
+DISTNAME=	lame-3.100
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lame/}
 
