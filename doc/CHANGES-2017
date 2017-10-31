@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4684 2017/10/31 07:44:17 wen Exp $
+$NetBSD: CHANGES-2017,v 1.4685 2017/10/31 08:29:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6761,3 +6761,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-dulwich to 0.18.5 [adam 2017-10-30]
 	Updated textproc/p5-XML-LibXML to 2.0132 [wen 2017-10-31]
 	Updated www/p5-HTML-Mason to 1.58 [wen 2017-10-31]
+	Updated security/py-ntlm-auth to 1.0.6 [adam 2017-10-31]
+	Updated security/py-requests-ntlm to 1.1.0 [adam 2017-10-31]
