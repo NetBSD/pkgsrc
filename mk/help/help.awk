@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.27 2013/08/31 21:27:53 rillig Exp $
+# $NetBSD: help.awk,v 1.28 2017/10/31 16:24:42 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -180,8 +180,10 @@ always {
 END {
 	end_of_topic();
 	if (print_index) {
+		print "Available help topics:";
+		print "";
 		for (k in all_keywords) {
-			print all_keywords[k] "\t" k;
+			print k | "LC_ALL=C sort";
 		}
 	} else if (!found_anything) {
 		print "No help found for "topic".";
