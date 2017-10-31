@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/06/20 07:24:08 manu Exp $
+# $NetBSD: Makefile,v 1.12.6.1 2017/10/31 18:12:24 spz Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -58,10 +58,6 @@ INSTALL_UNSTRIPPED=	yes
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
 CFLAGS+=	-DSQLITE_ENABLE_LOCKING_STYLE=0 -DSQLITE_WITHOUT_ZONEMALLOC
 .endif
-
-post-extract:
-	cd ${WRKSRC} && \
-		${FIND} . -xdev -type f -name '*.orig' -exec ${RM} -f {} \;
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${DESTDIR}${PREFIX}/bin/php
