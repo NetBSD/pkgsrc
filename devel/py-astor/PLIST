@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/18 03:22:03 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/10/31 12:51:23 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,15 +6,30 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/astor/__init__.py
 ${PYSITELIB}/astor/__init__.pyc
 ${PYSITELIB}/astor/__init__.pyo
-${PYSITELIB}/astor/codegen.py
-${PYSITELIB}/astor/codegen.pyc
-${PYSITELIB}/astor/codegen.pyo
-${PYSITELIB}/astor/misc.py
-${PYSITELIB}/astor/misc.pyc
-${PYSITELIB}/astor/misc.pyo
-${PYSITELIB}/astor/treewalk.py
-${PYSITELIB}/astor/treewalk.pyc
-${PYSITELIB}/astor/treewalk.pyo
+${PYSITELIB}/astor/code_gen.py
+${PYSITELIB}/astor/code_gen.pyc
+${PYSITELIB}/astor/code_gen.pyo
+${PYSITELIB}/astor/file_util.py
+${PYSITELIB}/astor/file_util.pyc
+${PYSITELIB}/astor/file_util.pyo
+${PYSITELIB}/astor/node_util.py
+${PYSITELIB}/astor/node_util.pyc
+${PYSITELIB}/astor/node_util.pyo
+${PYSITELIB}/astor/op_util.py
+${PYSITELIB}/astor/op_util.pyc
+${PYSITELIB}/astor/op_util.pyo
+${PYSITELIB}/astor/rtrip.py
+${PYSITELIB}/astor/rtrip.pyc
+${PYSITELIB}/astor/rtrip.pyo
+${PYSITELIB}/astor/source_repr.py
+${PYSITELIB}/astor/source_repr.pyc
+${PYSITELIB}/astor/source_repr.pyo
+${PYSITELIB}/astor/string_repr.py
+${PYSITELIB}/astor/string_repr.pyc
+${PYSITELIB}/astor/string_repr.pyo
+${PYSITELIB}/astor/tree_walk.py
+${PYSITELIB}/astor/tree_walk.pyc
+${PYSITELIB}/astor/tree_walk.pyo
 ${PYSITELIB}/setuputils.py
 ${PYSITELIB}/setuputils.pyc
 ${PYSITELIB}/setuputils.pyo
