@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2017/09/18 03:42:14 taca Exp $
+# $NetBSD: Makefile,v 1.12 2017/10/31 15:51:29 taca Exp $
 
-DISTNAME=	hiera-3.4.1
+DISTNAME=	hiera-3.4.2
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
