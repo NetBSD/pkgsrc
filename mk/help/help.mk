@@ -1,4 +1,4 @@
-# $NetBSD: help.mk,v 1.12 2016/02/01 18:47:23 leot Exp $
+# $NetBSD: help.mk,v 1.13 2017/10/31 16:24:42 rillig Exp $
 #
 
 # This is the integrated pkgsrc online help system. To query for the
@@ -31,9 +31,12 @@ help:
 	@${ECHO} "usage: "${MAKE:Q}" help topic=<topic>"
 	@${ECHO} ""
 	@${ECHO} "	<topic> may be a variable name or a make target,"
-	@${ECHO} "	for example CONFIGURE_DIRS or patch. For convenience,"
-	@${ECHO} "	you don't need to use uppercase letters when typing"
-	@${ECHO} "	variable names."
+	@${ECHO} "	for example CONFIGURE_DIRS or patch."
+	@${ECHO} ""
+	@${ECHO} "	For convenience, all-uppercase topics such as variable"
+	@${ECHO} "	names may also be given in all-lowercase."
+	@${ECHO} ""
+	@${ECHO} "	The special topic :index lists all available topics."
 	@${ECHO} ""
 .else
 	${RUN} cd ${PKGSRCDIR};						\
