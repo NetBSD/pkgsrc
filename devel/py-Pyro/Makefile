@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2017/10/08 10:21:57 adam Exp $
+# $NetBSD: Makefile,v 1.22 2017/10/31 12:53:58 adam Exp $
 
-DISTNAME=	Pyro4-4.62
+DISTNAME=	Pyro4-4.63
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pyro4/}
