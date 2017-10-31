@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/03/11 15:12:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/10/31 15:47:50 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -379,7 +379,6 @@ ${GEM_LIBDIR}/lib/tzinfo/data/definitions/CET.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/CST6CDT.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Canada/Atlantic.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Canada/Central.rb
-${GEM_LIBDIR}/lib/tzinfo/data/definitions/Canada/East__m__Saskatchewan.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Canada/Eastern.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Canada/Mountain.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Canada/Newfoundland.rb
