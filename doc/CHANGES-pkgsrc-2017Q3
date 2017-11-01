@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.11 2017/10/28 19:09:09 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.12 2017/11/01 19:41:08 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q3 branch:
 
@@ -79,4 +79,47 @@ shells/fish: build fix
 
 Pullup ticket #5589 - requested by tez
 net/wget: security patch
+
+Pullup ticket #5590 - requested by sevan
+lang/nodejs6: security update
+
+Pullup ticket #5593 - requested by sevan
+lang/nodejs4: security update
+
+Pullup ticket #5599 - requested by sevan
+bootstrap/bootstrap: build fix
+
+Pullup ticket #5601 - requested by sevan
+audio/lame: security update
+
+Pullup ticket #5604 - requested by sevan
+net/nmap: build fix for nmap with Lua option
+
+Pullup ticket #5610 - requested by taca
+devel/ruby-redmine: build fix
+meta-pkgs/ruby-redmine-plugins: build fix
+
+Pullup ticket #5611 - requested by taca
+lang/php70: security update
+
+Pullup ticket #5612 - requested by taca
+lang/php71: security update
+
+Pullup ticket #5613 - requested by taca
+lang/php56: security update
+
+Pullup ticket #5614 - requested by taca
+databases/php-ldap: revision cleanup
+databases/php-mssql: revision cleanup
+databases/php-pdo_dblib: revision cleanup
+databases/php-pdo_sqlite: revision cleanup
+graphics/php-gd: revision cleanup
+meta-pkgs/php56-extensions: revision cleanup
+meta-pkgs/php70-extensions: revision cleanup
+meta-pkgs/php71-extensions: revision cleanup
+textproc/php-intl: revision cleanup
+textproc/php-xsl: revision cleanup
+www/php-curl: revision cleanup
+www/php-fpm: revision cleanup
+www/php-tidy: revision cleanup
 
