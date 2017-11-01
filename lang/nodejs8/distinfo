@@ -1,0 +1,28 @@
+$NetBSD: distinfo,v 1.1 2017/11/01 12:07:31 fhajny Exp $
+
+SHA1 (node-v8.9.0.tar.gz) = a5175e5458f9d6b9fb618b7fc5f9eb9cfbdcd3c8
+RMD160 (node-v8.9.0.tar.gz) = c85f9a7440441aa059891a77398153008f9bbc58
+SHA512 (node-v8.9.0.tar.gz) = 653de03b94f0a3ce1e62ac707b95165afd2a21af8995842aa6965e8855e5d98718b7fa406c6dff01f03c01c9a6df1005bc0505cc6092a92690663ad44cc36462
+Size (node-v8.9.0.tar.gz) = 31094211 bytes
+SHA1 (patch-common.gypi) = 5b3a50617358637a6f910de28bb5a14f037317a6
+SHA1 (patch-deps_cares_cares.gyp) = 2235eb44bc984fa2e745fdf1786f1ae6de6ef80f
+SHA1 (patch-deps_npm_node__modules_node-gyp_gyp_pylib_gyp_generator_make.py) = 78d6ddd37ae30e869e0da666a78baad86a638c50
+SHA1 (patch-deps_npm_node__modules_node-gyp_gyp_pylib_gyp_xcode__emulation.py) = 6f21f937d2baf5799192e96865771cef6b4822a5
+SHA1 (patch-deps_uv_common.gypi) = ba9caa1f6d9d6df1913d0d72a8d18ea6db0a32ff
+SHA1 (patch-deps_uv_src_unix_netbsd.c) = e048cf06ced17d3183cb0f7abdc0c19339ca86a2
+SHA1 (patch-deps_v8_src_arm_cpu-arm.cc) = d0d11ac474ab109a6f40b26fa457b12d742eb48d
+SHA1 (patch-deps_v8_src_base_atomicops.h) = 552d2b7781b39b93392fd00043b1cf4cb10802da
+SHA1 (patch-deps_v8_src_base_platform_platform-freebsd.cc) = 686c2054838a25cfeed7fb9870a959e48dc4de35
+SHA1 (patch-deps_v8_src_base_platform_platform-openbsd.cc) = 5e593879dbab095f99e82593272a0de91043f9a8
+SHA1 (patch-deps_v8_src_base_platform_platform-posix.cc) = 368620c2a20538c1e5ff194e72d62f173a7f0c91
+SHA1 (patch-deps_v8_src_base_platform_semaphore.cc) = aa84bf1dbaac5808529f6b01502d117c88751649
+SHA1 (patch-deps_v8_src_compiler_types.h) = 711cc94535200374104c3cd1f0fbbd00994701a6
+SHA1 (patch-deps_v8_src_globals.h) = ec9798befbfbcd432b0c61bc914fe9d6a4bf4a86
+SHA1 (patch-deps_v8_src_log-utils.h) = 32bbf2de2af7a8ab6900a4d5e968dcc1357f6de2
+SHA1 (patch-deps_v8_tools_run-llprof.sh) = 39aa3faf77492ef8dd35b411b7b0e4605b469af3
+SHA1 (patch-src_cares__wrap.cc) = a26a162f130468cbc0650a33b27b71377d273704
+SHA1 (patch-src_inspector__agent.cc) = f6d25964a6446a1cb3c7733b7668c87932efad98
+SHA1 (patch-tools_gyp_pylib_gyp_common.py) = 585dd239415da146fa50ed86e42dd99080e86002
+SHA1 (patch-tools_gyp_pylib_gyp_generator_make.py) = be3cc1aaa85c3d59b6f2758df813cb5ad8d8f74e
+SHA1 (patch-tools_gyp_pylib_gyp_xcode__emulation.py) = 15937c419f3226ab280c7bcd5d726773cb5add57
+SHA1 (patch-tools_install.py) = aae60d31e8c2e74f18c61c328913412545943d79
