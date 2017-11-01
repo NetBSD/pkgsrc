@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.30 2015/12/11 23:31:09 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2017/11/01 06:41:23 maya Exp $
 
 DISTNAME=	xmlto-0.0.28
 PKGREVISION=	1
 CATEGORIES=	textproc
-MASTER_SITES=	https://fedorahosted.org/releases/x/m/xmlto/
+MASTER_SITES=	https://releases.pagure.org/xmlto/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://fedorahosted.org/xmlto/
+HOMEPAGE=	https://pagure.io/xmlto/
 COMMENT=	Tool to help transform XML documents into other formats
 LICENSE=	gnu-gpl-v2
 
