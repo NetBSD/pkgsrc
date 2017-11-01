@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4698 2017/11/01 18:17:17 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4699 2017/11/01 18:22:28 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6778,3 +6778,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added lang/nodejs8 version 8.9.0 [fhajny 2017-11-01]
 	Updated devel/kafka to 1.0.0 [fhajny 2017-11-01]
 	Updated x11/libdrm to 2.4.87 [wiz 2017-11-01]
+	Updated devel/gradle to 4.3 [fhajny 2017-11-01]
