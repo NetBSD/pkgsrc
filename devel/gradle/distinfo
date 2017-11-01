@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/09/26 08:18:26 fhajny Exp $
+$NetBSD: distinfo,v 1.5 2017/11/01 18:22:18 fhajny Exp $
 
-SHA1 (gradle-4.2-bin.zip) = 250b259120dda8d431443ba22dcdb5265026bd9b
-RMD160 (gradle-4.2-bin.zip) = 1c952304f11700aade89f59562f931f9c598c9bb
-SHA512 (gradle-4.2-bin.zip) = 134fc3c9b245797c3bbe3f7c5da3944d9edd710e90b76a9068403096cf85d9faad7f772cbaff7ec51e22712075082dae392b32186a95929e81cb1af8cd9348cf
-Size (gradle-4.2-bin.zip) = 71094000 bytes
+SHA1 (gradle-4.3-bin.zip) = cfaf7a7702e014717becc855982d349868467dbf
+RMD160 (gradle-4.3-bin.zip) = 691516e85cf8816ae4ebbd51d961d1174fd15992
+SHA512 (gradle-4.3-bin.zip) = 7b9537bbfaa15e90716da057e2b1d7bf92fc069918002b6e0ead08873d6f46185e739c82e2b27b58bd7c9357e9fd7373a548af6384ef9705ebccdd69a3577bf0
+Size (gradle-4.3-bin.zip) = 73018108 bytes
