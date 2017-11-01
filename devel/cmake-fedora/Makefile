@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2016/07/28 17:52:08 prlw1 Exp $
+# $NetBSD: Makefile,v 1.12 2017/11/01 06:44:49 maya Exp $
 
 DISTNAME=	cmake-fedora-2.6.0-modules-only
 PKGNAME=	${DISTNAME:S/-modules-only//}
 CATEGORIES=	devel
-MASTER_SITES=	https://fedorahosted.org/releases/c/m/cmake-fedora/
+# Doesn't host our old version, fedorahosted retired.
+#MASTER_SITES=	https://releases.pagure.org/cmake-fedora/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://fedorahosted.org/cmake-fedora/
+HOMEPAGE=	https://pagure.io/cmake-fedora
 COMMENT=	Set of cmake modules for fedora developers
 LICENSE=	modified-bsd
 
