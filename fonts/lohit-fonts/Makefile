@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2015/07/04 16:18:32 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2017/11/01 05:19:33 maya Exp $
 
 DISTNAME=		lohit-fonts-2.3.8
 CATEGORIES=		fonts
-MASTER_SITES=		http://rbhalera.fedorapeople.org/released/lohit/
+MASTER_SITES=		https://releases.pagure.org/lohit/
 MASTER_SITES+=		${MASTER_SITE_GENTOO:=distfiles/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://fedorahosted.org/lohit
+HOMEPAGE=		https://pagure.io/lohit
 COMMENT=		Free fonts for Indian languages
 LICENSE=		gnu-gpl-v2
 
