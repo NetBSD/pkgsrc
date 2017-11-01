@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.16 2017/09/03 08:53:09 wiz Exp $
+# $NetBSD: Makefile.common,v 1.17 2017/11/01 12:07:31 fhajny Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs4/Makefile
 # used by lang/nodejs6/Makefile
+# used by lang/nodejs8/Makefile
 
 CATEGORIES=	devel
 MASTER_SITES=	https://nodejs.org/dist/${DISTNAME:S/node-//}/
