@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4693 2017/10/31 15:54:57 taca Exp $
+$NetBSD: CHANGES-2017,v 1.4694 2017/11/01 09:26:16 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6773,3 +6773,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/ruby-hiera to 3.4.2 [taca 2017-10-31]
 	Updated databases/ruby-sequel to 5.2.0 [taca 2017-10-31]
 	Updated databases/ruby-tiny_tds to 2.1.0 [taca 2017-10-31]
+	Updated x11/ocaml-lablgtk to 2.18.6 [jaapb 2017-11-01]
