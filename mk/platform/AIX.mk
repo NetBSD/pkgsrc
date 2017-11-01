@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.42 2016/03/10 16:58:19 jperkin Exp $
+# $NetBSD: AIX.mk,v 1.43 2017/11/01 15:29:09 khorben Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -62,8 +62,8 @@ _OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
 # FIXME: Adjust to work on this system and enable the lines below.
 #_OPSYS_MAX_CMDLEN_CMD=	/sbin/sysctl -n kern.argmax
 
-# On AIX, there are a handful of utilies (i.e., ar(1), ld(1), strip(1), etc)
-# that care about the type of object files they should examine via the various'
+# On AIX, there are a handful of utilities (i.e., ar(1), ld(1), strip(1), etc)
+# that care about the type of object files they should examine via the various
 # flags.  Alternatively, it is easier to export OBJECT_MODE with the
 # appropriate $ABI versus piping through flags for all related utilities.
 .if defined(ABI)
