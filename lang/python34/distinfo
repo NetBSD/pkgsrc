@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2017/08/14 09:20:00 adam Exp $
+$NetBSD: distinfo,v 1.28 2017/11/01 21:51:21 wiz Exp $
 
 SHA1 (Python-3.4.7.tar.xz) = 7b05bf099f3f311ba568232d0d03d64e67da9908
 RMD160 (Python-3.4.7.tar.xz) = 8c4cde8603a15cd55b59b665a84efd0e8f9d7553
@@ -7,7 +7,6 @@ Size (Python-3.4.7.tar.xz) = 14511368 bytes
 SHA1 (patch-Lib_distutils_unixccompiler.py) = 7d6df07921ad3357757d4681a964256b560b3f57
 SHA1 (patch-Modules_socketmodule.c) = 3b091755d7c104b5d1fc696a0d4a679ed3565ef4
 SHA1 (patch-Modules_socketmodule.h) = ed334a97c2a6662c5b44b4e50c1b8efcc220fa1f
-SHA1 (patch-aa) = 14359f8d0527eff08073c0aea60dfe8961d9255d
 SHA1 (patch-ah) = 0acdfcbf3ebcb96b18a1cf28f18b286aa507a62f
 SHA1 (patch-al) = 5cf4d44d24020a9b6fe41deeb916edbe87a937cb
 SHA1 (patch-am) = 5822927f1c315b4fce5078626efe5418c764665e
