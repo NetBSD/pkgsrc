@@ -1,22 +1,27 @@
-# $NetBSD: Makefile,v 1.1 2017/04/23 04:23:52 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/11/02 10:47:37 adam Exp $
 
-DISTNAME=	jupyter_core-4.3.0
+DISTNAME=	jupyter_core-4.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_core/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jupyter.org
+HOMEPAGE=	http://jupyter.org/
 COMMENT=	Jupyter core package
 LICENSE=	modified-bsd
 
-DEPENDS+=       ${PYPKGPREFIX}-traitlets>=4.1.0:../../devel/py-traitlets
+DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.1.0:../../devel/py-traitlets
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/jupyter ${DESTDIR}${PREFIX}/bin/jupyter${PYVERSSUFFIX}
-	${MV} ${DESTDIR}${PREFIX}/bin/jupyter-migrate ${DESTDIR}${PREFIX}/bin/jupyter-migrate${PYVERSSUFFIX}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} jupyter jupyter${PYVERSSUFFIX} && \
+	${MV} jupyter-migrate jupyter-migrate${PYVERSSUFFIX} || ${TRUE}
+
+do-test:
+	cd ${WRKSRC}/jupyter_core && py.test-${PYVERSSUFFIX}
 
 .include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"
