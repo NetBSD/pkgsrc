@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4701 2017/11/02 06:19:05 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4702 2017/11/02 07:35:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6781,3 +6781,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/gradle to 4.3 [fhajny 2017-11-01]
 	Updated sysutils/libpciaccess to 0.14 [wiz 2017-11-01]
 	Updated devel/git to 2.15.0 [adam 2017-11-02]
+	Updated devel/py-hypothesis to 3.33.1 [adam 2017-11-02]
+	Updated devel/py-flake8-import-order to 0.14.3 [adam 2017-11-02]
