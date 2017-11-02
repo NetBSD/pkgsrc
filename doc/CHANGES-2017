@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4705 2017/11/02 10:48:33 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4706 2017/11/02 12:59:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6789,3 +6789,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/py-elasticsearch to 5.4.0 [fhajny 2017-11-02]
 	Updated www/py-furl to 1.0.1 [adam 2017-11-02]
 	Updated devel/py-jupyter_core to 4.4.0 [adam 2017-11-02]
+	Updated databases/py-multidict to 3.3.2 [adam 2017-11-02]
+	Updated www/py-mechanize to 0.3.6 [adam 2017-11-02]
