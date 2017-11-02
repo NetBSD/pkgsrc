@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/10/16 06:37:08 adam Exp $
+# $NetBSD: Makefile,v 1.4 2017/11/02 12:55:31 adam Exp $
 
-DISTNAME=	multidict-3.3.0
+DISTNAME=	multidict-3.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/multidict/}
@@ -13,8 +13,6 @@ LICENSE=	apache-2.0
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-USE_LANGUAGES=		c
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"
