@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/07/26 10:58:52 adam Exp $
+$NetBSD: distinfo,v 1.6 2017/11/02 12:58:46 adam Exp $
 
-SHA1 (mechanize-0.3.5.tar.gz) = 97d789bc05f15602e6046d2ea0cfc50ec6ac135a
-RMD160 (mechanize-0.3.5.tar.gz) = 5ae4806b1601f69cac6918a2cc4181df6d392585
-SHA512 (mechanize-0.3.5.tar.gz) = c9eb002d3c39cd15859e7c218870af2fdf35ca14e917c66f57eb1efea7c5600427dc9f44458d1f3892746d1fbe2f64a866002d7c621f48e77198b63b5bcd4811
-Size (mechanize-0.3.5.tar.gz) = 201495 bytes
+SHA1 (mechanize-0.3.6.tar.gz) = afa66a5ab93eff8f3183ed301f3291e40c9b7e97
+RMD160 (mechanize-0.3.6.tar.gz) = ba557b8d71795edada2907e55d9a801317e97d06
+SHA512 (mechanize-0.3.6.tar.gz) = bc838d826dd8b08f699d4788fae8962746dbc266d892b34eff2f11b16a28ff22357d011fa1b177e813e4d879b36cd83f464173297ba58208a6ba37f9f2f130be
+Size (mechanize-0.3.6.tar.gz) = 201845 bytes
