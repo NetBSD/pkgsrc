@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/10/17 11:31:36 fhajny Exp $
+# $NetBSD: Makefile,v 1.19 2017/11/02 15:30:50 fhajny Exp $
 
 DISTNAME=		beats-5.6.3
 CATEGORIES=		sysutils
@@ -47,6 +47,7 @@ SMF_INSTANCES+=		${BEATS}
 OWN_DIRS+=		${BEATS_DIR} ${BEATS_LOGDIR}
 
 MAKE_ENV+=		GOPATH=${WRKDIR}:${PREFIX}/gopkg
+MAKE_ENV+=		CGO_LDFLAGS="-L${BUILDLINK_PREFIX.libpcap}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libpcap}/lib"
 BUILD_TARGET=		#
 
 INSTALLATION_DIRS+=	bin share/examples/beats
