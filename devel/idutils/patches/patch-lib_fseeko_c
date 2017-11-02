@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_fseeko_c,v 1.1 2014/12/15 11:35:42 mef Exp $
+$NetBSD: patch-lib_fseeko_c,v 1.2 2017/11/02 04:26:21 agc Exp $
 
 fseeko.c:127:22: error: incompatible types when assigning to type '__off_t' from type 'fpos_t'
          fp_->_offset = u.f;
@@ -6,7 +6,16 @@ fseeko.c:127:22: error: incompatible types when assigning to type '__off_t' from
 
 --- lib/fseeko.c~	2012-01-29 01:26:04.000000000 +0900
 +++ lib/fseeko.c	2014-11-20 23:51:55.000000000 +0900
-@@ -124,7 +124,7 @@ fseeko (FILE *fp, off_t offset, int when
+@@ -109,7 +109,7 @@
+       fp->_flags &= ~_IO_EOF_SEEN;
+       fp->_offset = pos;
+ #elif defined __sferror || defined __DragonFly__ /* FreeBSD, NetBSD, OpenBSD, DragonFly, MacOS X, Cygwin */
+-# if defined __CYGWIN__
++# if defined(__CYGWIN__) || defined(__FreeBSD__)
+       /* fp_->_offset is typed as an integer.  */
+       fp_->_offset = pos;
+ # else
+@@ -124,7 +124,7 @@
              off_t o;
            } u;
          u.o = pos;
