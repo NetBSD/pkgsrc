@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2017/09/16 19:27:18 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.5 2017/11/03 19:44:21 wiz Exp $
 
 DISTNAME=	Publican-v4.3.1
 PKGNAME=	p5-${DISTNAME:S/v//1}
 PKGREVISION=	2
 CATEGORIES=	textproc
-MASTER_SITES=	https://fedorahosted.org/releases/p/u/publican/
+#MASTER_SITES=	https://fedorahosted.org/releases/p/u/publican/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://fedorahosted.org/publican/
+HOMEPAGE=	https://sourceware.org/publican/en-US/index.html
 COMMENT=	Single source publishing tool based on DocBook XML
 LICENSE=	gnu-gpl-v2
 
