@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.393 2017/07/09 14:30:07 khorben Exp $
+# $NetBSD: bsd.prefs.mk,v 1.394 2017/11/03 18:07:40 bsiegert Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -207,6 +207,9 @@ LOWER_VENDOR?=		sgi
 .elif ${OPSYS} == "Linux"
 OS_VERSION:=		${OS_VERSION:C/-.*$//}
 LOWER_OPSYS?=		linux
+.  if exists(/etc/lsb-release)
+CHROMEOS_RELEASE_NAME!=	awk -F = '$$1 == "CHROMEOS_RELEASE_NAME" { print $$2 }' /etc/lsb-release
+.  endif
 .  if exists(/etc/debian_version)
 LOWER_VENDOR?=		debian
 .  elif exists(/etc/mandrake-release)
@@ -217,10 +220,13 @@ LOWER_VENDOR?=		redhat
 LOWER_VENDOR?=		slackware
 .  elif exists(/etc/ssdlinux_version)
 LOWER_VENDOR?=		ssd
+.  elif !empty(CHROMEOS_RELEASE_NAME)
+LOWER_VENDOR?=		chromeos
 .  elif ${MACHINE_ARCH} == "i386"
 LOWER_VENDOR?=          pc
 .  endif
 LOWER_VENDOR?=          unknown
+OS_VARIANT=		${LOWER_VENDOR}
 .  if !defined(HOST_MACHINE_ARCH)
 HOST_MACHINE_ARCH!=	${UNAME} -m
 MAKEFLAGS+=		HOST_MACHINE_ARCH=${HOST_MACHINE_ARCH:Q}
