@@ -1,11 +1,11 @@
-$NetBSD: patch-ah,v 1.3 2014/06/01 16:58:21 wiz Exp $
+$NetBSD: patch-src_variable.c,v 1.1 2017/11/03 15:00:10 adam Exp $
 
 Add NetBSD native X and pkgsrc modular X directories to the candidate
 font path list.
 
 --- src/variable.c.orig	2013-07-03 16:31:53.000000000 +0000
 +++ src/variable.c
-@@ -281,6 +281,15 @@ static const struct path_table fontpath_
+@@ -279,6 +279,15 @@ static const struct path_table fontpath_
      { "$`kpsexpand '$TEXMFMAIN'`/fonts/type1!" },
      { "$`kpsexpand '$TEXMFDIST'`/fonts/type1!" },
  #endif
