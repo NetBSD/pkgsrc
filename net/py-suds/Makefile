@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/01/01 14:43:52 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/11/03 19:40:31 wiz Exp $
 
 DISTNAME=	suds-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/suds/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://fedorahosted.org/suds/
+HOMEPAGE=	https://pypi.python.org/pypi/suds
 COMMENT=	Lightweight SOAP python client for consuming Web Services
 LICENSE=	gnu-lgpl-v3
 
