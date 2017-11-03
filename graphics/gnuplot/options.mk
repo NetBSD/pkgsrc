@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.11 2015/10/28 19:03:17 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2017/11/03 15:00:10 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuplot
-PKG_SUPPORTED_OPTIONS=	cairo cerf gd lua pdf gnuplot-pdf-doc x11 qt4 wxwidgets
+PKG_SUPPORTED_OPTIONS=	cairo cerf gd gnuplot-pdf-doc lua pdf qt4 qt5 wxwidgets x11
 PKG_SUGGESTED_OPTIONS=	cairo cerf gd gnuplot-pdf-doc x11
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	gnuplot-pdf-doc x11 qt4
+PLIST_VARS+=	gnuplot-pdf-doc qt x11
 
 .if !empty(PKG_OPTIONS:Mcairo)
 .include "../../devel/pango/buildlink3.mk"
@@ -57,19 +57,23 @@ CONFIGURE_ARGS+=	--without-x
 .if !empty(PKG_OPTIONS:Mqt4)
 USE_LANGUAGES+=		c++
 CONFIGURE_ARGS+=	--with-qt=qt4
-PLIST.qt4=		yes
+PLIST.qt=		yes
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
+.elif !empty(PKG_OPTIONS:Mqt5)
+USE_LANGUAGES+=		c++11
+CONFIGURE_ARGS+=	--with-qt=qt5
+PLIST.qt=		yes
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtsvg/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--with-qt=no
 .endif
 
 .if !empty(PKG_OPTIONS:Mwxwidgets)
 USE_LANGUAGES+=		c++
-# force wxt terminal into single threaded mode to avoid crashes
-# c.f. http://sourceforge.net/p/gnuplot/mailman/message/31928881/
-CONFIGURE_ARGS+=	--enable-wxwidgets --with-wx-single-threaded
-.include "../../x11/wxGTK28/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-wxwidgets
+.include "../../x11/wxGTK30/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-wxwidgets
 .endif
