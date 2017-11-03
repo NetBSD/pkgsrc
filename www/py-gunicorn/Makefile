@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2017/04/14 13:24:30 adam Exp $
+# $NetBSD: Makefile,v 1.10 2017/11/03 14:39:27 leot Exp $
 
 DISTNAME=	gunicorn-19.7.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gunicorn/}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,8 +16,8 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_TOOLS+=	pax
 
-DOCDIR=		${PREFIX}/share/doc/py-gunicorn
-EXAMPLESDIR=	${PREFIX}/share/examples/py-gunicorn
+DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
+EXAMPLESDIR=	${PREFIX}/share/examples/${PKGBASE}
 AUTO_MKDIRS=	yes
 
 post-install:
@@ -24,6 +25,8 @@ post-install:
 		${DESTDIR}${DOCDIR}
 	cd ${WRKSRC}/examples && pax -wr -pma *		\
 		${DESTDIR}${EXAMPLESDIR}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} gunicorn gunicorn-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} gunicorn_paster gunicorn_paster-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
