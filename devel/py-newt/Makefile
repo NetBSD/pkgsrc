@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2017/01/01 14:43:34 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/11/03 19:39:13 wiz Exp $
 
 DISTNAME=	newt-0.52.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	https://fedorahosted.org/releases/n/e/newt/
+MASTER_SITES=	https://releases.pagure.org/newt/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://fedorahosted.org/newt/
+HOMEPAGE=	https://pagure.io/newt
 COMMENT=	Windowing toolkit based on libslang2
 LICENSE=	gnu-lgpl-v2
 
