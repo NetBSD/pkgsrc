@@ -1,20 +1,20 @@
-$NetBSD: patch-ac,v 1.3 2014/03/25 23:19:19 asau Exp $
+$NetBSD: patch-src_gp__hist.h,v 1.1 2017/11/03 15:00:10 adam Exp $
 
 NetBSD editline keeps header files in "readline", not "editline".
 Same applies to DragonFly.
 FreeBSD requires additional header file to get access to history.
 
---- src/gp_hist.h.orig	2011-02-21 07:56:57.000000000 +0000
+--- src/gp_hist.h.orig	2016-05-26 01:10:06.000000000 +0000
 +++ src/gp_hist.h
-@@ -70,7 +70,10 @@ extern long int gnuplot_history_size;
+@@ -57,7 +57,10 @@ extern TBOOLEAN history_full;
+ /* NetBSD editline / WinEditLine
   * (almost) compatible readline replacement
   */
- #if defined(HAVE_LIBEDITLINE)
 -# include <editline/readline.h>
 +# if defined(__FreeBSD__)
 +#   include <readline/history.h>
 +# endif
 +# include <readline/readline.h>
- #endif
  
- #if defined(READLINE) && !defined(HAVE_LIBREADLINE) && !defined(HAVE_LIBEDITLINE)
+ 
+ #elif defined(READLINE)
