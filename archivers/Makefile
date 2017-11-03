@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2017/10/23 13:15:29 adam Exp $
+# $NetBSD: Makefile,v 1.157 2017/11/03 20:07:12 bsiegert Exp $
 #
 
 COMMENT=	Archivers
@@ -10,6 +10,7 @@ SUBDIR+=	arc
 SUBDIR+=	archangel
 SUBDIR+=	arj
 SUBDIR+=	ark
+SUBDIR+=	atool
 SUBDIR+=	bicom
 SUBDIR+=	bmap-tools
 SUBDIR+=	brotli
