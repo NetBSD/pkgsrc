@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4719 2017/11/03 22:05:06 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.4720 2017/11/03 22:08:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6808,3 +6808,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added fonts/lanna-io version 20170628 [scole 2017-11-03]
 	Added archivers/atool version 0.39.0 [bsiegert 2017-11-03]
 	Updated lang/rust to 1.21.0 [ryoon 2017-11-03]
+	Updated www/firefox to 56.0.2nb2 [ryoon 2017-11-03]
