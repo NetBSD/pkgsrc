@@ -1,31 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2017/10/25 10:42:13 maya Exp $
-fzf comes with bindings for bash, zsh and fish.
-You can install them in the following way:
+$NetBSD: MESSAGE,v 1.2 2017/11/03 09:25:27 maya Exp $
+fzf comes with bindings for bash, zsh and fish in
+	PREFIX/gopkg/src/github.com/junegunn/fzf/shell/
 
-bash/zsh:
-	Append key bindings and completion files to ~/.bashrc:
-	cat PREFIX/gopkg/src/github.com/junegunn/fzf/shell/key-bindings.bash \
-	    PREFIX/gopkg/src/github.com/junegunn/fzf/shell/key-bindings.bash \
-	    >> ~/.bashrc
-	    source ~/.bashrc
-
-	or ~/.zshrc:
-	cat PREFIX/gopkg/src/github.com/junegunn/fzf/shell/key-bindings.zsh \
-	    PREFIX/gopkg/src/github.com/junegunn/fzf/shell/key-bindings.zsh \
-	    >> ~/.zshrc
-	    source ~/.zshrc
-
-fish:
-	cp PREFIX/gopkg/src/github.com/junegunn/fzf/shell/key-bindings.fish \
-	    ~/.config/fish/functions/fzf_key_bindings.fish
-
-	Add "fzf_key_bindings" to fish_user_key_bindings.
-	If you don't have one, use:
-
-	echo "
-	function fish_user_key_bindings
-		fzf_key_bindings
-	end
-	" > ~/.config/fish/functions/fish_user_key_bindings.fish
+And vim bindings in
+	PREFIX/gopkg/src/github.com/junegunn/fzf/plugin/fzf.vim
 ===========================================================================
