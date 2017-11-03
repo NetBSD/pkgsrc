@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.311 2017/10/02 22:25:34 khorben Exp $
+# $NetBSD: Makefile,v 1.312 2017/11/03 19:40:54 scole Exp $
 #
 
 COMMENT=	Fonts
@@ -153,6 +153,7 @@ SUBDIR+=	ko-x11fonts
 SUBDIR+=	kochi-ttf
 SUBDIR+=	konatu-ttf
 SUBDIR+=	koruri-ttf
+SUBDIR+=	lanna-io
 SUBDIR+=	lato-ttf
 SUBDIR+=	lcdftypetools
 SUBDIR+=	libXfontcache
