@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2017/10/25 03:53:05 adam Exp $
+# $NetBSD: Makefile,v 1.62 2017/11/03 10:36:12 adam Exp $
 
-DISTNAME=	cryptography-2.1.2
+DISTNAME=	cryptography-2.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cryptography/}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-cffi>=1.8.2:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-cparser>=2.10:../../devel/py-cparser
 DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-# actually, TEST_DEPENDS
+# TEST_DEPENDS
 BUILD_DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
 BUILD_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=0.8:../../devel/py-test
