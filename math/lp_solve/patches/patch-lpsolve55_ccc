@@ -1,4 +1,4 @@
-$NetBSD: patch-lpsolve55_ccc,v 1.3 2017/07/13 13:02:43 wiz Exp $
+$NetBSD: patch-lpsolve55_ccc,v 1.3.4.1 2017/11/04 17:06:24 bsiegert Exp $
 
 recent versions of gcc are noisy unless main() is declared returning 'int'
 and isnan() needs a floating argument else NOISNAN is defined causing
@@ -6,16 +6,56 @@ problems.
 
 --- lpsolve55/ccc.orig	2009-03-25 00:27:18.000000000 +0000
 +++ lpsolve55/ccc
-@@ -18,7 +18,7 @@ mkdir bin bin/$PLATFORM >/dev/null 2>&1
- echo '#include <stdio.h>'>>/tmp/isnan.c
- echo '#include <stdlib.h>'>>/tmp/isnan.c
- echo '#include <math.h>'>>/tmp/isnan.c
+@@ -2,29 +2,34 @@
+ src='../lp_MDO.c ../shared/commonlib.c ../shared/mmio.c ../shared/myblas.c ../ini.c ../fortify.c ../colamd/colamd.c ../lp_rlp.c ../lp_crash.c ../bfp/bfp_LUSOL/lp_LUSOL.c ../bfp/bfp_LUSOL/LUSOL/lusol.c ../lp_Hash.c ../lp_lib.c ../lp_wlp.c ../lp_matrix.c ../lp_mipbb.c ../lp_MPS.c ../lp_params.c ../lp_presolve.c ../lp_price.c ../lp_pricePSE.c ../lp_report.c ../lp_scale.c ../lp_simplex.c ../lp_SOS.c ../lp_utils.c ../yacc_read.c'
+ c=cc
+ 
++tmpdir="@WRKDIR@/tmp"
++mkdir "$tmpdir" || return 2
++
+ #determine platform (32/64 bit)
+->/tmp/platform.c
+-echo '#include <stdlib.h>'>>/tmp/platform.c
+-echo '#include <stdio.h>'>>/tmp/platform.c
+-echo 'main(){printf("ux%d", (int) (sizeof(void *)*8));}'>>/tmp/platform.c
+-$c /tmp/platform.c -o /tmp/platform
+-PLATFORM=`/tmp/platform`
+-rm /tmp/platform /tmp/platform.c >/dev/null 2>&1
++>$tmpdir/platform.c
++echo '#include <stdlib.h>'>>$tmpdir/platform.c
++echo '#include <stdio.h>'>>$tmpdir/platform.c
++echo 'main(){printf("ux%d", (int) (sizeof(void *)*8));}'>>$tmpdir/platform.c
++$c $tmpdir/platform.c -o $tmpdir/platform
++PLATFORM=`$tmpdir/platform`
++rm $tmpdir/platform $tmpdir/platform.c >/dev/null 2>&1
+ 
+ mkdir bin bin/$PLATFORM >/dev/null 2>&1
+ 
+ #check if this system has the isnan function
+->/tmp/isnan.c
+-echo '#include <stdio.h>'>>/tmp/isnan.c
+-echo '#include <stdlib.h>'>>/tmp/isnan.c
+-echo '#include <math.h>'>>/tmp/isnan.c
 -echo 'main(){isnan(0);}'>>/tmp/isnan.c
-+echo 'int main(){isnan(0.0);}'>>/tmp/isnan.c
- $c /tmp/isnan.c -o /tmp/isnan $math >/dev/null 2>&1
+-$c /tmp/isnan.c -o /tmp/isnan $math >/dev/null 2>&1
++>$tmpdir/isnan.c
++echo '#include <stdio.h>'>>$tmpdir/isnan.c
++echo '#include <stdlib.h>'>>$tmpdir/isnan.c
++echo '#include <math.h>'>>$tmpdir/isnan.c
++echo 'int main(){isnan(0.0);}'>>$tmpdir/isnan.c
++$c $tmpdir/isnan.c -o $tmpdir/isnan $math >/dev/null 2>&1
  if [ $? = 0 ]
  then NOISNAN=
-@@ -44,7 +44,7 @@ ranlib bin/$PLATFORM/liblpsolve55.a
+ else NOISNAN=-DNOISNAN
+ fi
+-rm /tmp/isnan.c /tmp/isnan >/dev/null 2>&1
++rm $tmpdir/isnan.c $tmpdir/isnan >/dev/null 2>&1
++
++rmdir $tmpdir
+ 
+ def=
+ so=
+@@ -44,7 +49,7 @@ ranlib bin/$PLATFORM/liblpsolve55.a
  if [ "$so" != "" ]
  then
    $c -fpic -s -c -I.. -I../shared -I../bfp -I../bfp/bfp_LUSOL -I../bfp/bfp_LUSOL/LUSOL -I../colamd -I. $opts $NOISNAN -DYY_NEVER_INTERACTIVE -DPARSER_LP -DINVERSE_ACTIVE=INVERSE_LUSOL -DRoleIsExternalInvEngine $src
