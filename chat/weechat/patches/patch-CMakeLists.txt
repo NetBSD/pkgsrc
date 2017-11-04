@@ -1,16 +1,9 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2017/11/04 17:16:58 maya Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2017/11/04 17:23:20 maya Exp $
+
+Check that eat_newline_glitch can be assigned to
 
 --- CMakeLists.txt.orig	2017-09-23 11:08:45.000000000 +0000
 +++ CMakeLists.txt
-@@ -25,7 +25,7 @@ project(weechat C)
- 
- # CMake options
- set(CMAKE_VERBOSE_MAKEFILE OFF)
--set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH})
-+set (CMAKE_MODULE_PATH "/usr/pkgsrc/chat/weechat/work/.buildlink/cmake-Modules" "/usr/pkgsrc/chat/weechat/work/.buildlink/cmake-Modules" "/usr/pkgsrc/chat/weechat/work/.buildlink/cmake-Modules" "/usr/pkgsrc/chat/weechat/work/.buildlink/cmake-Modules" "/usr/pkgsrc/chat/weechat/work/.buildlink/cmake-Modules" "/usr/pkgsrc/chat/weechat/work/.buildlink/cmake-Modules" "/usr/pkgsrc/chat/weechat/work/.buildlink/cmake-Modules" "/usr/pkgsrc/chat/weechat/work/.buildlink/cmake-Modules" "/usr/pkgsrc/chat/weechat/work/.buildlink/cmake-Modules" "/usr/pkgsrc/chat/weechat/work/.buildlink/cmake-Modules" ${CMAKE_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH})
- set(CMAKE_SKIP_RPATH ON)
- set(CMAKE_C_FLAGS   "${CMAKE_C_FLAGS} -Wall -Wextra -Werror-implicit-function-declaration")
- set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Werror-implicit-function-declaration")
 @@ -150,7 +150,33 @@ check_include_files("sys/resource.h" HAV
  
  check_function_exists(mallinfo HAVE_MALLINFO)
