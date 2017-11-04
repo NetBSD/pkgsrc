@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2017/09/18 09:53:20 maya Exp $
+# $NetBSD: Makefile,v 1.79 2017/11/04 03:46:56 manu Exp $
 
-DISTNAME=	glusterfs-3.8.9
+DISTNAME=	glusterfs-3.12.2
 #PKGREVISION=	1
-PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
 
@@ -25,11 +24,17 @@ MAKE_FLAGS+=		LEXLIB=""
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # only 2.x supported as of 3.8.x
 
 REPLACE_PYTHON+=	contrib/ipaddr-py/ipaddr.py
+REPLACE_PYTHON+=	events/src/glustereventsd.py
+REPLACE_PYTHON+=	events/src/peer_eventsapi.py
+REPLACE_PYTHON+=	events/tools/eventsdash.py
 REPLACE_PYTHON+=	extras/ganesha/scripts/generate-epoch.py
 REPLACE_PYTHON+=	extras/geo-rep/schedule_georep.py.in
 REPLACE_PYTHON+=	extras/snap_scheduler/gcron.py
 REPLACE_PYTHON+=	extras/snap_scheduler/snap_scheduler.py
+REPLACE_PYTHON+=	geo-replication/src/peer_georep-sshkey.py.in
 REPLACE_PYTHON+=	geo-replication/src/peer_mountbroker.in
+REPLACE_PYTHON+=	geo-replication/src/peer_mountbroker.py
+REPLACE_PYTHON+=	geo-replication/src/peer_mountbroker.py.in
 REPLACE_PYTHON+=	geo-replication/syncdaemon/changelogagent.py
 REPLACE_PYTHON+=	geo-replication/syncdaemon/gsyncd.py
 REPLACE_PYTHON+=	geo-replication/syncdaemon/gsyncdstatus.py
