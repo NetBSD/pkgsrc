@@ -1,9 +1,14 @@
-$NetBSD: distinfo,v 1.36.4.1 2017/10/22 18:12:21 bsiegert Exp $
+$NetBSD: distinfo,v 1.36.4.2 2017/11/04 17:48:30 bsiegert Exp $
 
 SHA1 (mupdf-1.11-source.tar.gz) = f782d36aaa896319207e81953e5a622201477b5b
 RMD160 (mupdf-1.11-source.tar.gz) = 573307473a1ac81aca4519b0e57a7111aae7803f
 SHA512 (mupdf-1.11-source.tar.gz) = 501670f540e298a8126806ebbd9db8b29866f663b7bbf26c9ade1933e42f0c00ad410b9d93f3ddbfb3e45c38722869095de28d832fe3fb3703c55cc9a01dbf63
 Size (mupdf-1.11-source.tar.gz) = 40156070 bytes
+SHA1 (patch-CVE-2017-14685) = c84be44c21ca29e0d0a455e0d7efe9a38ac46fb5
+SHA1 (patch-CVE-2017-14686) = b573adc7baa25a2f8b2068b1833f4cc17f38f3eb
+SHA1 (patch-CVE-2017-14687) = 651efafea77050216645ded2e2d3592970713b74
+SHA1 (patch-CVE-2017-15369) = 37bc5e52c67591b04640c03f5a227c278a26aa11
+SHA1 (patch-CVE-2017-15587) = 3bdafc7647148b0b29d37804a14306ea4458a529
 SHA1 (patch-Makethird) = a4d1bb3c8d509a84803c9b60521fd9b6b17b9717
 SHA1 (patch-ab) = a18b1e5b82454bdf06e23185e619b7f8c7a24290
 SHA1 (patch-ac) = c2decf6eae4c6343636439c7d7f6621826fc4e3c
