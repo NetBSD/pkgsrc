@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/11/03 22:04:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2017/11/04 15:51:43 tnn Exp $
 
 DISTNAME=	rustc-1.21.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -88,8 +88,11 @@ RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
 
-.if !defined(RUST_ARCH)
+# You may override RUST_BOOTSTRAP_PATH and RUST_ARCH in mk.conf if you have a local bootstrap compiler.
+.if !defined(RUST_ARCH) && !defined(RUST_BOOTSTRAP_PATH)
 NOT_FOR_PLATFORM+=	${MACHINE_PLATFORM}
+.else
+RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-bootstrap
 .endif
 
 OPSYSVARS+=		SOEXT
@@ -123,11 +126,19 @@ SUBST_FILES.rpath=	src/bootstrap/bin/rustc.rs
 SUBST_VARS.rpath=	PREFIX
 
 post-extract:
-	${MV} ${WRKDIR}/rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}/rust-std-${RUST_ARCH}/lib/rustlib/${RUST_ARCH} \
-		${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}/rustc/lib/rustlib
+	set -e;									\
+	if test -e ${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}/install.sh	\
+	  -a ! -e ${RUST_BOOTSTRAP_PATH}/bin/rustc; then \
+		cd ${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH};		\
+		${TOOLS_BASH} ./install.sh --prefix=${RUST_BOOTSTRAP_PATH};	\
+		cd ${WRKDIR}/rust-std-${RUST_STAGE0_VER}-${RUST_ARCH};		\
+		${TOOLS_BASH} ./install.sh --prefix=${RUST_BOOTSTRAP_PATH};	\
+	fi
 
-RUSTC=			${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}/rustc/bin/rustc
-CARGO=			${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}/cargo/bin/cargo
+RUSTC=			${RUST_BOOTSTRAP_PATH}/bin/rustc
+CARGO=			${RUST_BOOTSTRAP_PATH}/bin/cargo
+LD_LIBRARY_PATH=	${RUST_BOOTSTRAP_PATH}/lib
+PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH:Q}
 
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	post-configure
@@ -140,7 +151,6 @@ do-configure:
 do-build:
 	cd ${WRKSRC} \
 	&& env ${MAKE_ENV} \
-		LD_LIBRARY_PATH=${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}/rustc/lib \
 		${PYTHONBIN} ./x.py dist
 
 do-install:
