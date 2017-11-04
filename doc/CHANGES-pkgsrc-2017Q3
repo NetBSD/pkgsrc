@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.12 2017/11/01 19:41:08 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.13 2017/11/04 19:57:49 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q3 branch:
 
@@ -122,4 +122,25 @@ textproc/php-xsl: revision cleanup
 www/php-curl: revision cleanup
 www/php-fpm: revision cleanup
 www/php-tidy: revision cleanup
+
+Pullup ticket #5591 - requested by sevan
+math/lp_solve: security fix
+
+Pullup ticket #5594 - requested by sevan
+www/lighttpd: SunOS build fix
+
+Pullup ticket #5595 - requested by sevan
+print/mupdf: security fix
+
+Pullup ticket #5596 - requested by sevan
+lang/g95: build fix
+
+Pullup ticket #5598 - requested by sevan
+multimedia/mplayer-share: build fix
+
+Pullup ticket #5597 - requested by sevan
+www/apache-tomcat85: security fix
+
+Pullup ticket #5602 - requested by sevan
+audio/grip: Linux build fix
 
