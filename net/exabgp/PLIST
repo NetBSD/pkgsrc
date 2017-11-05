@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/06/20 14:10:16 he Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/11/05 08:35:16 he Exp $
 bin/exabgp
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
@@ -437,6 +437,9 @@ ${PYSITELIB}/exabgp/netlink/tc.pyo
 ${PYSITELIB}/exabgp/protocol/__init__.py
 ${PYSITELIB}/exabgp/protocol/__init__.pyc
 ${PYSITELIB}/exabgp/protocol/__init__.pyo
+${PYSITELIB}/exabgp/protocol/enum.py
+${PYSITELIB}/exabgp/protocol/enum.pyc
+${PYSITELIB}/exabgp/protocol/enum.pyo
 ${PYSITELIB}/exabgp/protocol/family.py
 ${PYSITELIB}/exabgp/protocol/family.pyc
 ${PYSITELIB}/exabgp/protocol/family.pyo
