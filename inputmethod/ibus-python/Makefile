@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/01/01 14:43:44 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/11/05 04:19:15 tsutsui Exp $
 
 .include "../../inputmethod/ibus/Makefile.common"
 
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-libnotify
 CONFIGURE_ARGS+=	--disable-engine
 CONFIGURE_ARGS+=	--disable-surround-text
+CONFIGURE_ARGS+=	--disable-emoji-dict
 
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc-4.1.[0-9]*)
