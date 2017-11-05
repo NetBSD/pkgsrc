@@ -1,0 +1,26 @@
+$NetBSD: distinfo,v 1.1 2017/11/05 03:47:10 tsutsui Exp $
+
+SHA1 (unicode-emoji-5.0/ReadMe.txt) = c1c3959c2c604fb9375dc590d23322ef5c620e38
+RMD160 (unicode-emoji-5.0/ReadMe.txt) = e6c8b9158226479de6f680646708a2813bc3fb3d
+SHA512 (unicode-emoji-5.0/ReadMe.txt) = 1865b04ea4e5adec1cf1c28fbdd7192033aa0ad3b6c5d4e8c47810d3548951aaf6d4a89f5890dcbb7484d9f4502b5c89046c7129964a5fece4fdeea18e342d91
+Size (unicode-emoji-5.0/ReadMe.txt) = 74 bytes
+SHA1 (unicode-emoji-5.0/emoji-data.txt) = 11fd60a01e17df80035c459728350073cd9ed37b
+RMD160 (unicode-emoji-5.0/emoji-data.txt) = 0953eed3805c5eeb9b2986c45e8d2519a5eea887
+SHA512 (unicode-emoji-5.0/emoji-data.txt) = 3b68cb709700cf871f545f357a54864c6cf1dee2ee7046f42d895c0811a75129206edf2c0617a5f1183417066f0fdf2e74086e880a65826590aac9d1d31f568f
+Size (unicode-emoji-5.0/emoji-data.txt) = 35041 bytes
+SHA1 (unicode-emoji-5.0/emoji-sequences.txt) = 6f223cfb856a4016b590227fed1d38ab2f66476d
+RMD160 (unicode-emoji-5.0/emoji-sequences.txt) = 50b1756c67f139f4d6750ceb478295a6aaf0aca6
+SHA512 (unicode-emoji-5.0/emoji-sequences.txt) = 729bbf862b8d7ff6225b7416a0a464592f89040e4c27674c0d9afb6e0d997162c0a336c2a1e9de41313dcd45b504b3b27915ee8c67e45186c942c2996076d554
+Size (unicode-emoji-5.0/emoji-sequences.txt) = 103383 bytes
+SHA1 (unicode-emoji-5.0/emoji-test.txt) = d9ce82ea1e92197a882608791e588e9a410f635d
+RMD160 (unicode-emoji-5.0/emoji-test.txt) = eb010b5afd02b6a24c59dde7705bc58acef34140
+SHA512 (unicode-emoji-5.0/emoji-test.txt) = 368483fadaa2c87e1197d0b0351c1e68b4244e73ab93542d73df7169d1dfcdf98b0fc1da8a969645f6a2d45db1f2db5f75ba919dd05f1012fbc2f3fb524f5c5d
+Size (unicode-emoji-5.0/emoji-test.txt) = 341770 bytes
+SHA1 (unicode-emoji-5.0/emoji-variation-sequences.txt) = f10af64ed42bddfad9326ac0198e9ca0072888a8
+RMD160 (unicode-emoji-5.0/emoji-variation-sequences.txt) = a12159b2d6a1094b2d84734cf8c5353daa6bbe33
+SHA512 (unicode-emoji-5.0/emoji-variation-sequences.txt) = 484509ed56c5ea5e73160e211643a938d3fa08474281d316e5ed2d2346f38f5140a147454a9cb81c9f463d6c62befd98a8b70b695ee50effdbcfc6085dcaa520
+Size (unicode-emoji-5.0/emoji-variation-sequences.txt) = 36120 bytes
+SHA1 (unicode-emoji-5.0/emoji-zwj-sequences.txt) = 0b7c4ac207b13c0cfeb1d0cfefad1604ba5332eb
+RMD160 (unicode-emoji-5.0/emoji-zwj-sequences.txt) = 7c270965bc4f3709fead5cc5e96e809f7fc885ff
+SHA512 (unicode-emoji-5.0/emoji-zwj-sequences.txt) = 26398ac77035d2f5df7a61f4c2a8a098af8e551576c9c9f157379c05aa8f75de5a0827c9bc476eb20f32c38b0c3605f6a1d9e07fe27f0e75df359ed2a7e6d25b
+Size (unicode-emoji-5.0/emoji-zwj-sequences.txt) = 115207 bytes
