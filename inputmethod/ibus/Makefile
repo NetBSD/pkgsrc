@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.47 2017/02/12 06:25:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.48 2017/11/05 04:19:15 tsutsui Exp $
 
-PKGREVISION= 3
 .include "Makefile.common"
 
 COMMENT=	Intelligent Input Bus
 
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+BUILD_DEPENDS+=	cldr-emoji-annotation-[0-9]*:../../textproc/cldr-emoji-annotation
+BUILD_DEPENDS+=	unicode-emoji-[0-9]*:../../textproc/unicode-emoji
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -25,6 +26,8 @@ CONFIGURE_ARGS+=	--enable-gtk3
 CONFIGURE_ARGS+=	--enable-surrounding-text
 CONFIGURE_ARGS+=	--enable-introspection=yes
 CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
+CONFIGURE_ARGS+=	--with-unicode-emoji-dir=${PREFIX}/share/unicode/emoji
+CONFIGURE_ARGS+=	--with-emoji-annotation-dir=${PREFIX}/share/unicode/cldr/common/annotations
 
 SUBST_CLASSES+=		dbus
 SUBST_STAGE.dbus=	post-configure
