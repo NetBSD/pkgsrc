@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2017/07/04 12:35:12 he Exp $
+# $NetBSD: Makefile,v 1.22 2017/11/05 08:35:16 he Exp $
 
-VERSION=	3.4.19
+VERSION=	3.4.22
 DISTNAME=	${VERSION}
-PKGREVISION=	1
 PKGNAME=	exabgp-${VERSION}
 EGG_NAME=	exabgp-${VERSION}
 CATEGORIES=	net
