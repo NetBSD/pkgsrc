@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4726 2017/11/05 04:22:42 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.4727 2017/11/05 08:36:19 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6815,3 +6815,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added textproc/cldr-emoji-annotation version 31.90.0.1 [tsutsui 2017-11-05]
 	Updated inputmethod/ibus to 1.5.17 [tsutsui 2017-11-05]
 	Updated inputmethod/ibus-python to 1.5.17 [tsutsui 2017-11-05]
+	Updated net/exabgp to 3.4.22 [he 2017-11-05]
