@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4724 2017/11/05 03:52:57 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.4725 2017/11/05 03:54:59 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6812,3 +6812,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated filesystems/glusterfs to 3.12.2 [manu 2017-11-04]
 	Added www/drupal8 version 8.4.2 [wen 2017-11-04]
 	Added textproc/unicode-emoji version 5.0 [tsutsui 2017-11-05]
+	Added textproc/cldr-emoji-annotation version 31.90.0.1 [tsutsui 2017-11-05]
