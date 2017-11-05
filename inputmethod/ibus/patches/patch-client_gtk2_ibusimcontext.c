@@ -1,11 +1,11 @@
-$NetBSD: patch-client_gtk2_ibusimcontext.c,v 1.1 2013/11/12 02:57:43 dholland Exp $
+$NetBSD: patch-client_gtk2_ibusimcontext.c,v 1.2 2017/11/05 04:19:15 tsutsui Exp $
 
 NetBSD 6.99.25's gcc says:
    error: #pragma GCC diagnostic not allowed inside functions
 
---- client/gtk2/ibusimcontext.c~	2013-09-20 03:15:51.000000000 +0000
+--- client/gtk2/ibusimcontext.c.orig	2017-10-22 10:31:49.000000000 +0000
 +++ client/gtk2/ibusimcontext.c
-@@ -509,6 +509,9 @@ daemon_name_vanished (GDBusConnection *c
+@@ -559,6 +559,9 @@ daemon_name_vanished (GDBusConnection *c
      _daemon_is_running = FALSE;
  }
  
@@ -15,7 +15,7 @@ NetBSD 6.99.25's gcc says:
  static void
  ibus_im_context_class_init (IBusIMContextClass *class)
  {
-@@ -593,10 +596,7 @@ ibus_im_context_class_init (IBusIMContex
+@@ -642,10 +645,7 @@ ibus_im_context_class_init (IBusIMContex
  
      /* always install snooper */
      if (_key_snooper_id == 0) {
@@ -26,7 +26,7 @@ NetBSD 6.99.25's gcc says:
      }
  
      _daemon_name_watch_id = g_bus_watch_name (G_BUS_TYPE_SESSION,
-@@ -607,21 +607,22 @@ ibus_im_context_class_init (IBusIMContex
+@@ -656,21 +656,22 @@ ibus_im_context_class_init (IBusIMContex
                                                NULL,
                                                NULL);
  }
