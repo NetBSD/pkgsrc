@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.967 2017/10/23 15:22:29 adam Exp $
+# $NetBSD: Makefile,v 1.968 2017/11/05 03:48:42 tsutsui Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -964,6 +964,7 @@ SUBDIR+=	troffcvt
 SUBDIR+=	unac
 SUBDIR+=	uncrustify
 SUBDIR+=	uni2ascii
+SUBDIR+=	unicode-emoji
 SUBDIR+=	unroff
 SUBDIR+=	untex
 SUBDIR+=	uriparser
