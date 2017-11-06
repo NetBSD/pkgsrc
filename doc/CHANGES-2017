@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4730 2017/11/06 11:03:28 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4731 2017/11/06 11:07:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6823,3 +6823,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-coverage to 4.4.2 [adam 2017-11-06]
 	Updated devel/py-hypothesis to 3.34.1 [adam 2017-11-06]
 	Added net/p5-Net-Frame-Layer-ICMPv6 version 1.10 [wiz 2017-11-06]
+	Added net/p5-Net-Frame-Device version 1.12 [wiz 2017-11-06]
