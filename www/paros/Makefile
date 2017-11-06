@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/10/09 15:32:07 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.18 2017/11/06 13:33:48 wiz Exp $
 
 DISTNAME=	paros-3.2.13-unix
 PKGNAME=	${DISTNAME:S/-unix//}
@@ -9,8 +8,9 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paros/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	salo@NetBSD.org
-HOMEPAGE=	http://www.parosproxy.org/
+HOMEPAGE=	https://sourceforge.net/projects/paros/
 COMMENT=	HTTP/HTTPS proxy for assessing web application vulnerabilities
+LICENSE=	artistic
 
 NO_BUILD=	yes
 USE_JAVA2=	yes
