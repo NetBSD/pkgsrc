@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/10/24 06:57:50 maya Exp $
+# $NetBSD: Makefile,v 1.2 2017/11/06 11:15:32 wiz Exp $
 
-GITHUB_PROJECT=	fzf
-DISTNAME=	0.17.1
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+DISTNAME=	fzf-0.17.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=junegunn/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/junegunn/fzf/
