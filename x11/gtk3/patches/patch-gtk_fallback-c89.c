@@ -1,12 +1,12 @@
-$NetBSD: patch-gtk_fallback-c89.c,v 1.2 2015/11/07 20:20:01 wiz Exp $
+$NetBSD: patch-gtk_fallback-c89.c,v 1.3 2017/11/06 10:00:57 tnn Exp $
 
 Work around the fact that math.h may declare these functions
 non-static.
 https://bugzilla.gnome.org/show_bug.cgi?id=757748                                                                                                         
 
---- gtk/fallback-c89.c.orig	2014-03-06 04:42:58.000000000 +0000
+--- gtk/fallback-c89.c.orig	2017-05-25 10:47:34.000000000 +0000
 +++ gtk/fallback-c89.c
-@@ -22,19 +22,20 @@
+@@ -24,19 +24,20 @@
  /* Workaround for round() for non-GCC/non-C99 compilers */
  #ifndef HAVE_ROUND
  static inline double
@@ -29,7 +29,7 @@ https://bugzilla.gnome.org/show_bug.cgi?id=757748
  {
    if (ceil (x + 0.5) == floor (x + 0.5))
    {
-@@ -53,6 +54,7 @@ rint (double x)
+@@ -55,6 +56,7 @@ rint (double x)
        return ceil (x - 0.5);
    }
  }
@@ -37,7 +37,7 @@ https://bugzilla.gnome.org/show_bug.cgi?id=757748
  #endif
  
  #ifndef HAVE_NEARBYINT
-@@ -60,8 +62,9 @@ rint (double x)
+@@ -62,10 +64,11 @@ rint (double x)
  /* This is quite similar to rint() in most respects */
  
  static inline double
@@ -48,3 +48,5 @@ https://bugzilla.gnome.org/show_bug.cgi?id=757748
  }
 +#define nearbyint(x)	my_nearbyint(x)
  #endif
+ 
+ #ifndef HAVE_DECL_ISINF
