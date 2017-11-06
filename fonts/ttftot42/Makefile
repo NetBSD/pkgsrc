@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 18:28:31 asau Exp $
-#
+# $NetBSD: Makefile,v 1.12 2017/11/06 13:38:55 wiz Exp $
 
 DISTNAME=	ttftot42-0.3.1
 PKGREVISION=	3
 CATEGORIES=	fonts print
-MASTER_SITES=	http://www.nih.at/ttftot42/
+MASTER_SITES=	https://www.nih.at/ttftot42/
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://www.nih.at/ttftot42/index.html
+HOMEPAGE=	https://www.nih.at/ttftot42/index.html
 COMMENT=	TrueType font to Type 42 converter
 
 GNU_CONFIGURE=	yes
