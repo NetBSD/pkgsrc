@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.737 2017/10/25 14:58:46 fhajny Exp $
+# $NetBSD: Makefile,v 1.738 2017/11/06 22:14:01 jmcneill Exp $
 #
 
 COMMENT=	System utilities
@@ -595,6 +595,7 @@ SUBDIR+=	u-boot-beagleboard
 SUBDIR+=	u-boot-beagleboneblack
 SUBDIR+=	u-boot-beaglebonewhite
 SUBDIR+=	u-boot-chip
+SUBDIR+=	u-boot-chip-pro
 SUBDIR+=	u-boot-cubieboard2
 SUBDIR+=	u-boot-cubieboard4
 SUBDIR+=	u-boot-cubietruck
