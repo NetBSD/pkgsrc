@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2017/03/12 14:40:53 taca Exp $
+# $NetBSD: Makefile,v 1.16 2017/11/06 13:36:00 wiz Exp $
 
 DISTNAME=	msgpack-1.1.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://msgpack.org/
+HOMEPAGE=	https://msgpack.org/
 COMMENT=	MessagePack implementation for Ruby
 LICENSE=	apache-2.0
 
