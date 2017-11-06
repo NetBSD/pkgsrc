@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.9 2017/10/31 13:15:44 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.10 2017/11/06 16:16:53 prlw1 Exp $
 #
 # used by textproc/libxml2/Makefile
 # used by textproc/py-libxml2/Makefile
 
-DISTNAME=	libxml2-2.9.6
+DISTNAME=	libxml2-2.9.7
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://xmlsoft.org/libxml2/
 MASTER_SITES+=	http://xmlsoft.org/sources/
