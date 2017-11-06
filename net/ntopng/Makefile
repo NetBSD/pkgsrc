@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/09/18 09:53:31 maya Exp $
+# $NetBSD: Makefile,v 1.15 2017/11/06 13:30:12 wiz Exp $
 
 DISTNAME=	ntopng-2.4-stable
 PKGNAME=	ntopng-2.4
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ntop/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://www.ntop.org/
+HOMEPAGE=	https://www.ntop.org/
 COMMENT=	Network traffic probe
 LICENSE=	gnu-gpl-v3
 
