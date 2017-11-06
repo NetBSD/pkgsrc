@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2017/10/30 18:24:50 adam Exp $
+# $NetBSD: Makefile,v 1.31 2017/11/06 13:34:30 wiz Exp $
 
 DISTNAME=	fonttools-3.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=F/FontTools/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/fonttools/fonttools
+HOMEPAGE=	https://github.com/fonttools/fonttools
 COMMENT=	Library for manipulating fonts
 LICENSE=	modified-bsd
 
