@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.36 2017/04/25 12:16:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2017/11/06 13:27:21 wiz Exp $
 
 DISTNAME=	keychain-2.8.3
 PKGREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=	http://www.funtoo.org/archive/keychain/
+MASTER_SITES=	https://www.funtoo.org/archive/keychain/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.funtoo.org/Keychain
+HOMEPAGE=	https://www.funtoo.org/Keychain
 COMMENT=	Nice ssh-agent front-end
 LICENSE=	gnu-gpl-v2
 
