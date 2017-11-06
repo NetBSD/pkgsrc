@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.24 2017/09/06 09:03:03 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2017/11/06 13:38:29 wiz Exp $
 
 DISTNAME=		tspc-2.1.1-src
 PKGNAME=		${DISTNAME:S/-src//}
 PKGREVISION=		2
 CATEGORIES=		net
-MASTER_SITES=		https://www.hexago.com/files/
+#MASTER_SITES=		https://www.hexago.com/files/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
+#HOMEPAGE=		https://www.hexago.com/
 COMMENT=		Tunnel Setup Protocol Client for Freenet6
-HOMEPAGE=		https://www.hexago.com/
 
 BROKEN_EXCEPT_ON_PLATFORM=	NetBSD-*-* OpenBSD-*-* FreeBSD-*-* Linux-*-* \
 				Darwin-*-* SunOS-*-*
