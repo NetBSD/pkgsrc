@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2016/07/09 06:37:52 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.9 2017/11/06 13:24:58 wiz Exp $
 
 DISTNAME=		dccserver-0.5
 PKGREVISION=		2
 CATEGORIES=		chat
-MASTER_SITES=		http://www.nih.at/dccserver/
+MASTER_SITES=		https://www.nih.at/dccserver/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		wiz@NetBSD.org
-HOMEPAGE=		http://www.nih.at/dccserver/
+HOMEPAGE=		https://www.nih.at/dccserver/
 COMMENT=		Standalone replacement for the mIRC /dccserver command
 LICENSE=		2-clause-bsd AND modified-bsd
 
