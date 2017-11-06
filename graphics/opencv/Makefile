@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2017/09/04 15:23:49 fhajny Exp $
+# $NetBSD: Makefile,v 1.73 2017/11/06 13:30:27 wiz Exp $
 
 DISTNAME=	opencv-3.3.0
 CATEGORIES=	graphics devel
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=opencv/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	anthony.mallet@laas.fr
-HOMEPAGE=	http://opencv.org/
+HOMEPAGE=	https://opencv.org/
 COMMENT=	Library for computer vision problems
 LICENSE=	modified-bsd
 
