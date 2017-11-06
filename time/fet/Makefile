@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.25 2017/09/18 09:53:36 maya Exp $
+# $NetBSD: Makefile,v 1.26 2017/11/06 13:25:32 wiz Exp $
 
 DISTNAME=	fet-5.25.0
 PKGREVISION=	18
 CATEGORIES=	time
-MASTER_SITES=	http://lalescu.ro/liviu/fet/download/
+MASTER_SITES=	https://lalescu.ro/liviu/fet/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lalescu.ro/liviu/fet/
+HOMEPAGE=	https://lalescu.ro/liviu/fet/
 COMMENT=	Automatically schedule timetables
 LICENSE=	gnu-gpl-v2
 
