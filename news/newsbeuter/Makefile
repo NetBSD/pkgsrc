@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2017/09/18 09:53:32 maya Exp $
+# $NetBSD: Makefile,v 1.11 2017/11/06 13:29:56 wiz Exp $
 
 DISTNAME=	newsbeuter-2.9
 PKGREVISION=	9
 CATEGORIES=	news
-MASTER_SITES=	http://www.newsbeuter.org/downloads/
+MASTER_SITES=	https://www.newsbeuter.org/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.newsbeuter.org/
+HOMEPAGE=	https://www.newsbeuter.org/
 COMMENT=	Open-source RSS/Atom feed reader for text terminals
 LICENSE=	mit
 
