@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1189 2017/10/28 06:52:56 adam Exp $
+# $NetBSD: Makefile,v 1.1190 2017/11/06 11:07:27 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -486,7 +486,9 @@ SUBDIR+=	p5-Net-Dev-MIBLoadOrder
 SUBDIR+=	p5-Net-Domain-TLD
 SUBDIR+=	p5-Net-FTPSSL
 SUBDIR+=	p5-Net-Frame
+SUBDIR+=	p5-Net-Frame-Device
 SUBDIR+=	p5-Net-Frame-Dump
+SUBDIR+=	p5-Net-Frame-Layer-ICMPv6
 SUBDIR+=	p5-Net-Frame-Layer-IPv6
 SUBDIR+=	p5-Net-Frame-Simple
 SUBDIR+=	p5-Net-GitHub
