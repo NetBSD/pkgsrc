@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4732 2017/11/06 12:23:32 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4733 2017/11/06 16:17:17 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6825,3 +6825,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added net/p5-Net-Frame-Layer-ICMPv6 version 1.10 [wiz 2017-11-06]
 	Added net/p5-Net-Frame-Device version 1.12 [wiz 2017-11-06]
 	Updated www/py-notebook to 5.2.1 [adam 2017-11-06]
+	Updated textproc/libxml2 to 2.9.7 [prlw1 2017-11-06]
