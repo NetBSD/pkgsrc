@@ -1,0 +1,4 @@
+This module is used to get network information, and is especially
+useful when you want to do low-level network programming.
+
+It also provides useful functions to lookup network MAC addresses.
