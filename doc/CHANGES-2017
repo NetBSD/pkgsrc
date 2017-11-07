@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4735 2017/11/06 22:14:51 jmcneill Exp $
+$NetBSD: CHANGES-2017,v 1.4736 2017/11/07 02:17:53 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6828,3 +6828,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/libxml2 to 2.9.7 [prlw1 2017-11-06]
 	Updated textproc/itstool to 2.0.4 [prlw1 2017-11-06]
 	Added sysutils/u-boot-chip-pro version 2017.09 [jmcneill 2017-11-06]
+	Updated net/bind910 to 9.10.6nb1 [kamil 2017-11-07]
