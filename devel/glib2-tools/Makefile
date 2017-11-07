@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/10/21 08:57:33 prlw1 Exp $
+# $NetBSD: Makefile,v 1.3 2017/11/07 15:53:11 prlw1 Exp $
 
 .include "../../devel/glib2/Makefile.common"
-
-PKGREVISION=	1
 
 PKGNAME:=	${PKGNAME:S/glib2/glib2-tools/}
 CATEGORIES=	devel gnome
