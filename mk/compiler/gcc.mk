@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.185 2017/10/03 09:38:16 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.186 2017/11/07 16:57:58 khorben Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -336,7 +336,7 @@ _MKPIE_CFLAGS.gcc=	-fPIC
 # XXX for executables it should be:
 #_MKPIE_CFLAGS.gcc=	-fPIE
 # XXX for libraries a sink wrapper around gcc is required and used instead
-_MKPIE_LDFLAGS.gcc=	-pie
+_MKPIE_LDFLAGS.gcc=	-fPIC -pie
 .endif
 
 .if ${_PKGSRC_MKPIE} == "yes"
