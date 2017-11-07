@@ -1,4 +1,4 @@
-/* $NetBSD: normalise-ld.c,v 1.3 2017/06/11 19:34:43 joerg Exp $ */
+/* $NetBSD: normalise-ld.c,v 1.4 2017/11/07 16:49:22 khorben Exp $ */
 
 /*-
  * Copyright (c) 2009, 2017 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -44,6 +44,16 @@ operation_mode_ld(struct arglist *args)
 	TAILQ_FOREACH(arg, args, link) {
 		if (arg->val[0] != '-')
 			continue;
+		if (strcmp(arg->val, "-N") == 0 ||
+		    strcmp(arg->val, "--omagic") == 0) {
+			current_operation_mode = mode_link_omagic;
+			continue;
+		}
+		if (strcmp(arg->val, "-r") == 0 ||
+		    strcmp(arg->val, "--relocatable") == 0) {
+			current_operation_mode = mode_link_relocatable;
+			continue;
+		}
 		if (strcmp(arg->val, "-shared") == 0 ||
 		    strcmp(arg->val, "-Bshareable") == 0) {
 			current_operation_mode = mode_link_shared;
