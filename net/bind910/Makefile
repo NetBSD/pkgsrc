@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2017/07/31 13:37:53 taca Exp $
+# $NetBSD: Makefile,v 1.38 2017/11/07 02:16:44 kamil Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 
@@ -21,7 +22,7 @@ BUILD_DEFS+=	BIND_DIR VARBASE
 
 .include "options.mk"
 
-USE_TOOLS+=		pax perl
+USE_TOOLS+=		pax perl pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 #CONFIG_SHELL=		sh -x
