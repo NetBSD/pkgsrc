@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/09/03 14:16:43 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/11/07 15:14:58 wiz Exp $
 
-DISTNAME=	0.8.9
+DISTNAME=	0.8.10
 PKGNAME=	${PYPKGPREFIX}-hg-git-${DISTNAME}
 CATEGORIES=	devel scm
 MASTER_SITES=	https://bitbucket.org/durin42/hg-git/get/
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.9.7:../../devel/py-dulwich
 
 DIST_SUBDIR=	hg-git
-WRKSRC=		${WRKDIR}/durin42-hg-git-88de3215e138
+WRKSRC=		${WRKDIR}/durin42-hg-git-6ef27582bfa5
 
 USE_LANGUAGES=	# none
 
