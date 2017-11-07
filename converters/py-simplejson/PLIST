@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2017/07/03 17:13:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/11/07 13:06:41 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -16,9 +16,15 @@ ${PYSITELIB}/simplejson/decoder.pyo
 ${PYSITELIB}/simplejson/encoder.py
 ${PYSITELIB}/simplejson/encoder.pyc
 ${PYSITELIB}/simplejson/encoder.pyo
+${PYSITELIB}/simplejson/errors.py
+${PYSITELIB}/simplejson/errors.pyc
+${PYSITELIB}/simplejson/errors.pyo
 ${PYSITELIB}/simplejson/ordered_dict.py
 ${PYSITELIB}/simplejson/ordered_dict.pyc
 ${PYSITELIB}/simplejson/ordered_dict.pyo
+${PYSITELIB}/simplejson/raw_json.py
+${PYSITELIB}/simplejson/raw_json.pyc
+${PYSITELIB}/simplejson/raw_json.pyo
 ${PYSITELIB}/simplejson/scanner.py
 ${PYSITELIB}/simplejson/scanner.pyc
 ${PYSITELIB}/simplejson/scanner.pyo
