@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4737 2017/11/07 08:09:06 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4738 2017/11/07 12:06:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6831,3 +6831,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/bind910 to 9.10.6nb1 [kamil 2017-11-07]
 	Updated devel/libuv to 1.16.0 [adam 2017-11-07]
 	Updated textproc/py-jsbeautifier to 1.7.4 [adam 2017-11-07]
+	Updated devel/glib2 to 2.54.2 [adam 2017-11-07]
+	Updated x11/gtk3 to 3.22.25 [adam 2017-11-07]
