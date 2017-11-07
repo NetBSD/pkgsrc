@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2017/08/14 01:31:56 maya Exp $
+@comment $NetBSD: PLIST,v 1.17 2017/11/07 13:16:07 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
@@ -238,6 +238,9 @@ ${PYSITELIB}/hgext/strip.pyo
 ${PYSITELIB}/hgext/transplant.py
 ${PYSITELIB}/hgext/transplant.pyc
 ${PYSITELIB}/hgext/transplant.pyo
+${PYSITELIB}/hgext/uncommit.py
+${PYSITELIB}/hgext/uncommit.pyc
+${PYSITELIB}/hgext/uncommit.pyo
 ${PYSITELIB}/hgext/win32mbcs.py
 ${PYSITELIB}/hgext/win32mbcs.pyc
 ${PYSITELIB}/hgext/win32mbcs.pyo
@@ -296,18 +299,12 @@ ${PYSITELIB}/mercurial/cext/parsers.so
 ${PYSITELIB}/mercurial/cffi/__init__.py
 ${PYSITELIB}/mercurial/cffi/__init__.pyc
 ${PYSITELIB}/mercurial/cffi/__init__.pyo
-${PYSITELIB}/mercurial/cffi/base85.py
-${PYSITELIB}/mercurial/cffi/base85.pyc
-${PYSITELIB}/mercurial/cffi/base85.pyo
 ${PYSITELIB}/mercurial/cffi/bdiff.py
 ${PYSITELIB}/mercurial/cffi/bdiff.pyc
 ${PYSITELIB}/mercurial/cffi/bdiff.pyo
 ${PYSITELIB}/mercurial/cffi/bdiffbuild.py
 ${PYSITELIB}/mercurial/cffi/bdiffbuild.pyc
 ${PYSITELIB}/mercurial/cffi/bdiffbuild.pyo
-${PYSITELIB}/mercurial/cffi/diffhelpers.py
-${PYSITELIB}/mercurial/cffi/diffhelpers.pyc
-${PYSITELIB}/mercurial/cffi/diffhelpers.pyo
 ${PYSITELIB}/mercurial/cffi/mpatch.py
 ${PYSITELIB}/mercurial/cffi/mpatch.pyc
 ${PYSITELIB}/mercurial/cffi/mpatch.pyo
@@ -320,9 +317,6 @@ ${PYSITELIB}/mercurial/cffi/osutil.pyo
 ${PYSITELIB}/mercurial/cffi/osutilbuild.py
 ${PYSITELIB}/mercurial/cffi/osutilbuild.pyc
 ${PYSITELIB}/mercurial/cffi/osutilbuild.pyo
-${PYSITELIB}/mercurial/cffi/parsers.py
-${PYSITELIB}/mercurial/cffi/parsers.pyc
-${PYSITELIB}/mercurial/cffi/parsers.pyo
 ${PYSITELIB}/mercurial/changegroup.py
 ${PYSITELIB}/mercurial/changegroup.pyc
 ${PYSITELIB}/mercurial/changegroup.pyo
@@ -443,6 +437,7 @@ ${PYSITELIB}/mercurial/help/hgweb.txt
 ${PYSITELIB}/mercurial/help/internals/bundles.txt
 ${PYSITELIB}/mercurial/help/internals/censor.txt
 ${PYSITELIB}/mercurial/help/internals/changegroups.txt
+${PYSITELIB}/mercurial/help/internals/config.txt
 ${PYSITELIB}/mercurial/help/internals/requirements.txt
 ${PYSITELIB}/mercurial/help/internals/revlogs.txt
 ${PYSITELIB}/mercurial/help/internals/wireprotocol.txt
@@ -602,6 +597,9 @@ ${PYSITELIB}/mercurial/pure/base85.pyo
 ${PYSITELIB}/mercurial/pure/bdiff.py
 ${PYSITELIB}/mercurial/pure/bdiff.pyc
 ${PYSITELIB}/mercurial/pure/bdiff.pyo
+${PYSITELIB}/mercurial/pure/charencode.py
+${PYSITELIB}/mercurial/pure/charencode.pyc
+${PYSITELIB}/mercurial/pure/charencode.pyo
 ${PYSITELIB}/mercurial/pure/diffhelpers.py
 ${PYSITELIB}/mercurial/pure/diffhelpers.pyc
 ${PYSITELIB}/mercurial/pure/diffhelpers.pyo
@@ -632,6 +630,9 @@ ${PYSITELIB}/mercurial/registrar.pyo
 ${PYSITELIB}/mercurial/repair.py
 ${PYSITELIB}/mercurial/repair.pyc
 ${PYSITELIB}/mercurial/repair.pyo
+${PYSITELIB}/mercurial/repository.py
+${PYSITELIB}/mercurial/repository.pyc
+${PYSITELIB}/mercurial/repository.pyo
 ${PYSITELIB}/mercurial/repoview.py
 ${PYSITELIB}/mercurial/repoview.pyc
 ${PYSITELIB}/mercurial/repoview.pyo
@@ -871,6 +872,36 @@ ${PYSITELIB}/mercurial/templates/static/style-gitweb.css
 ${PYSITELIB}/mercurial/templates/static/style-monoblue.css
 ${PYSITELIB}/mercurial/templates/static/style-paper.css
 ${PYSITELIB}/mercurial/templates/static/style.css
+${PYSITELIB}/mercurial/thirdparty/__init__.py
+${PYSITELIB}/mercurial/thirdparty/__init__.pyc
+${PYSITELIB}/mercurial/thirdparty/__init__.pyo
+${PYSITELIB}/mercurial/thirdparty/attr/__init__.py
+${PYSITELIB}/mercurial/thirdparty/attr/__init__.pyc
+${PYSITELIB}/mercurial/thirdparty/attr/__init__.pyo
+${PYSITELIB}/mercurial/thirdparty/attr/_compat.py
+${PYSITELIB}/mercurial/thirdparty/attr/_compat.pyc
+${PYSITELIB}/mercurial/thirdparty/attr/_compat.pyo
+${PYSITELIB}/mercurial/thirdparty/attr/_config.py
+${PYSITELIB}/mercurial/thirdparty/attr/_config.pyc
+${PYSITELIB}/mercurial/thirdparty/attr/_config.pyo
+${PYSITELIB}/mercurial/thirdparty/attr/_funcs.py
+${PYSITELIB}/mercurial/thirdparty/attr/_funcs.pyc
+${PYSITELIB}/mercurial/thirdparty/attr/_funcs.pyo
+${PYSITELIB}/mercurial/thirdparty/attr/_make.py
+${PYSITELIB}/mercurial/thirdparty/attr/_make.pyc
+${PYSITELIB}/mercurial/thirdparty/attr/_make.pyo
+${PYSITELIB}/mercurial/thirdparty/attr/converters.py
+${PYSITELIB}/mercurial/thirdparty/attr/converters.pyc
+${PYSITELIB}/mercurial/thirdparty/attr/converters.pyo
+${PYSITELIB}/mercurial/thirdparty/attr/exceptions.py
+${PYSITELIB}/mercurial/thirdparty/attr/exceptions.pyc
+${PYSITELIB}/mercurial/thirdparty/attr/exceptions.pyo
+${PYSITELIB}/mercurial/thirdparty/attr/filters.py
+${PYSITELIB}/mercurial/thirdparty/attr/filters.pyc
+${PYSITELIB}/mercurial/thirdparty/attr/filters.pyo
+${PYSITELIB}/mercurial/thirdparty/attr/validators.py
+${PYSITELIB}/mercurial/thirdparty/attr/validators.pyc
+${PYSITELIB}/mercurial/thirdparty/attr/validators.pyo
 ${PYSITELIB}/mercurial/transaction.py
 ${PYSITELIB}/mercurial/transaction.pyc
 ${PYSITELIB}/mercurial/transaction.pyo
@@ -892,6 +923,9 @@ ${PYSITELIB}/mercurial/upgrade.pyo
 ${PYSITELIB}/mercurial/url.py
 ${PYSITELIB}/mercurial/url.pyc
 ${PYSITELIB}/mercurial/url.pyo
+${PYSITELIB}/mercurial/urllibcompat.py
+${PYSITELIB}/mercurial/urllibcompat.pyc
+${PYSITELIB}/mercurial/urllibcompat.pyo
 ${PYSITELIB}/mercurial/util.py
 ${PYSITELIB}/mercurial/util.pyc
 ${PYSITELIB}/mercurial/util.pyo
@@ -917,4 +951,4 @@ ${PYSITELIB}/mercurial/zstd.so
 man/man1/hg.1
 man/man5/hgignore.5
 man/man5/hgrc.5
-share/doc/mercurial/README
+share/doc/mercurial/README.rst
