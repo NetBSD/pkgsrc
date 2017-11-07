@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17857 2017/11/07 12:06:16 adam Exp $
+$NetBSD: TODO,v 1.17858 2017/11/07 13:16:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1252,7 +1252,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-keybinder-0.3.1
 	o py-libxml2-2.9.7
 	o py-libxslt-1.1.32
-	o py-mercurial-4.4
 	o py-mezzanine-4.2.2
 	o py-musicbrainz-0.7.4
 	o py-ncclient-0.5.3
