@@ -1,8 +1,8 @@
-$NetBSD: patch-rel_overlay_bin_couchdb,v 1.1 2016/11/16 15:59:29 fhajny Exp $
+$NetBSD: patch-rel_overlay_bin_couchdb,v 1.2 2017/11/07 15:33:27 fhajny Exp $
 
 Set pkgsrc standard paths.
 
---- rel/overlay/bin/couchdb.orig	2016-09-12 09:34:26.000000000 +0000
+--- rel/overlay/bin/couchdb.orig	2017-07-30 22:11:20.000000000 +0000
 +++ rel/overlay/bin/couchdb
 @@ -12,11 +12,7 @@
  # License for the specific language governing permissions and limitations under
@@ -23,4 +23,4 @@ Set pkgsrc standard paths.
  exec "$BINDIR/erlexec" -boot "$ROOTDIR/releases/$APP_VSN/couchdb" \
 -     -args_file "$ROOTDIR/etc/vm.args" \
 +     -args_file "@PKG_SYSCONFDIR@/vm.args" \
-      -config "$ROOTDIR/releases/$APP_VSN/sys.config"
+      -config "$ROOTDIR/releases/$APP_VSN/sys.config" "$@"
