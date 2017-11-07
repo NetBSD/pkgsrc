@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2017/10/09 08:16:35 wiz Exp $
+# $NetBSD: Makefile,v 1.196 2017/11/07 17:15:41 scole Exp $
 #
 
 COMMENT=	Communication programs
@@ -78,6 +78,7 @@ SUBDIR+=	libtelepathy
 SUBDIR+=	libtlen
 SUBDIR+=	licq-core
 SUBDIR+=	licq-gui-console
+SUBDIR+=	line-purple
 SUBDIR+=	loudmouth
 SUBDIR+=	matterircd
 SUBDIR+=	mcabber
