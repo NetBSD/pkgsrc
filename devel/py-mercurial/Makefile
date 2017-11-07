@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/10/05 22:32:50 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/11/07 13:16:07 wiz Exp $
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -32,7 +32,7 @@ do-test:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.1  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/doc/*.5  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_DATA} ${WRKSRC}/README  \
+	${INSTALL_DATA} ${WRKSRC}/README.rst  \
 		${DESTDIR}${PREFIX}/share/doc/mercurial
 
 .include "../../lang/python/distutils.mk"
