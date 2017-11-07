@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/06/21 10:02:18 adam Exp $
+# $NetBSD: Makefile,v 1.3 2017/11/07 08:06:21 adam Exp $
 
-DISTNAME=	jsbeautifier-1.6.14
+DISTNAME=	jsbeautifier-1.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	textproc
+CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsbeautifier/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,11 +12,12 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-editorconfig-core>=0.12.0:../../devel/py-editorconfig-core
 DEPENDS+=	${PYPKGPREFIX}-six>=1.6.1:../../lang/py-six
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/js-beautify ${DESTDIR}${PREFIX}/bin/js-beautify-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} js-beautify js-beautify-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/14 12:22:25 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/11/07 08:06:21 adam Exp $
 bin/js-beautify-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -11,6 +11,36 @@ ${PYSITELIB}/jsbeautifier/__init__.pyo
 ${PYSITELIB}/jsbeautifier/__version__.py
 ${PYSITELIB}/jsbeautifier/__version__.pyc
 ${PYSITELIB}/jsbeautifier/__version__.pyo
+${PYSITELIB}/jsbeautifier/core/__init__.py
+${PYSITELIB}/jsbeautifier/core/__init__.pyc
+${PYSITELIB}/jsbeautifier/core/__init__.pyo
+${PYSITELIB}/jsbeautifier/core/acorn.py
+${PYSITELIB}/jsbeautifier/core/acorn.pyc
+${PYSITELIB}/jsbeautifier/core/acorn.pyo
+${PYSITELIB}/jsbeautifier/core/inputscanner.py
+${PYSITELIB}/jsbeautifier/core/inputscanner.pyc
+${PYSITELIB}/jsbeautifier/core/inputscanner.pyo
+${PYSITELIB}/jsbeautifier/core/options.py
+${PYSITELIB}/jsbeautifier/core/options.pyc
+${PYSITELIB}/jsbeautifier/core/options.pyo
+${PYSITELIB}/jsbeautifier/core/output.py
+${PYSITELIB}/jsbeautifier/core/output.pyc
+${PYSITELIB}/jsbeautifier/core/output.pyo
+${PYSITELIB}/jsbeautifier/core/token.py
+${PYSITELIB}/jsbeautifier/core/token.pyc
+${PYSITELIB}/jsbeautifier/core/token.pyo
+${PYSITELIB}/jsbeautifier/javascript/__init__.py
+${PYSITELIB}/jsbeautifier/javascript/__init__.pyc
+${PYSITELIB}/jsbeautifier/javascript/__init__.pyo
+${PYSITELIB}/jsbeautifier/javascript/beautifier.py
+${PYSITELIB}/jsbeautifier/javascript/beautifier.pyc
+${PYSITELIB}/jsbeautifier/javascript/beautifier.pyo
+${PYSITELIB}/jsbeautifier/javascript/options.py
+${PYSITELIB}/jsbeautifier/javascript/options.pyc
+${PYSITELIB}/jsbeautifier/javascript/options.pyo
+${PYSITELIB}/jsbeautifier/javascript/tokenizer.py
+${PYSITELIB}/jsbeautifier/javascript/tokenizer.pyc
+${PYSITELIB}/jsbeautifier/javascript/tokenizer.pyo
 ${PYSITELIB}/jsbeautifier/tests/__init__.py
 ${PYSITELIB}/jsbeautifier/tests/__init__.pyc
 ${PYSITELIB}/jsbeautifier/tests/__init__.pyo
