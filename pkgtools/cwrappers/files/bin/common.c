@@ -1,4 +1,4 @@
-/* $NetBSD: common.c,v 1.7 2017/06/11 19:34:43 joerg Exp $ */
+/* $NetBSD: common.c,v 1.8 2017/11/07 16:50:52 khorben Exp $ */
 
 /*-
  * Copyright (c) 2009, 2017 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -275,9 +275,14 @@ parse_config(const char *wrapper)
 			TAILQ_INSERT_TAIL(&prepend_executable_args, arg, link);
 		}
 		if (strncmp(line, "append_executable=", 18) == 0) {
+			char *last, *p;
+			unsigned int i;
 			struct argument *arg;
-			arg = argument_copy(line + 18);
-			TAILQ_INSERT_TAIL(&append_executable_args, arg, link);
+			for (p = strtok_r(line + 18, " ", &last), i = 0; p;
+					(p = strtok_r(NULL, " ", &last)), i++) {
+				arg = argument_copy(p);
+				TAILQ_INSERT_TAIL(&append_executable_args, arg, link);
+			}
 		}
 		if (strncmp(line, "prepend_shared=", 15) == 0) {
 			struct argument *arg;
