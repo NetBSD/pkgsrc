@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.19 2017/06/20 12:38:42 adam Exp $
+# $NetBSD: Makefile,v 1.20 2017/11/07 12:54:06 adam Exp $
 
-DISTNAME=	mutagen-1.38
+DISTNAME=	mutagen-1.39
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	audio
+CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mutagen/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/quodlibet/mutagen
 COMMENT=	Audio metadata handling for Python
 LICENSE=	gnu-gpl-v2
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
