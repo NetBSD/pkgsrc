@@ -1,4 +1,4 @@
-/* $NetBSD: common.h,v 1.7 2017/10/27 20:59:59 khorben Exp $ */
+/* $NetBSD: common.h,v 1.8 2017/11/07 16:49:22 khorben Exp $ */
 
 /*-
  * Copyright (c) 2009, 2017 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -50,6 +50,8 @@ enum operation_mode {
 	mode_assemble,
 	mode_compile,
 	mode_link_executable,
+	mode_link_omagic,
+	mode_link_relocatable,
 	mode_link_shared
 };
 extern enum operation_mode current_operation_mode;
