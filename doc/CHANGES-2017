@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4746 2017/11/07 17:16:35 scole Exp $
+$NetBSD: CHANGES-2017,v 1.4747 2017/11/08 04:04:53 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6843,3 +6843,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/rabbitmq to 3.6.14 [fhajny 2017-11-07]
 	Updated pkgtools/cwrappers to 20171107 [khorben 2017-11-07]
 	Added chat/line-purple version 0.1 [scole 2017-11-07]
+	Updated pkgtools/cwrappers to 20171108 [khorben 2017-11-08]
