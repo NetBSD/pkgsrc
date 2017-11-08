@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/11/08 14:36:34 tnn Exp $
+bin/geckodriver
