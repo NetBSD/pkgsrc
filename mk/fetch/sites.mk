@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.154 2017/09/29 06:17:12 maya Exp $
+# $NetBSD: sites.mk,v 1.155 2017/11/08 11:58:02 tnn Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -289,6 +289,9 @@ MASTER_SITE_PYPI+= \
 
 MASTER_SITE_HASKELL_HACKAGE+=	\
 	http://hackage.haskell.org/package/
+
+MASTER_SITE_CRATESIO+=	\
+	https://crates.io/api/v1/crates/
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
