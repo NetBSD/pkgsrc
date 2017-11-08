@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4750 2017/11/08 09:32:08 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4751 2017/11/08 09:48:03 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6848,3 +6848,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated meta-pkgs/modular-xorg-libs to 1.5 [wiz 2017-11-08]
 	Updated devel/py-flake8-import-order to 0.15 [adam 2017-11-08]
 	Updated textproc/py-regex to 2017.11.08 [adam 2017-11-08]
+	Updated comms/py-gammu to 2.10 [leot 2017-11-08]
