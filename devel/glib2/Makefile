@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.237 2017/10/16 00:40:08 prlw1 Exp $
+# $NetBSD: Makefile,v 1.238 2017/11/08 14:03:42 wiz Exp $
 
 .include "Makefile.common"
 
@@ -53,6 +53,13 @@ CONFIGURE_ENV+=		LIBELF_LIBS='-lelf'
 .  include "../../devel/libelf/buildlink3.mk"
 .  endif
 .endif
+
+# XXX: Kludge to avoid uncoditionally pick up some gtkdoc-* tools if gtk-doc
+# XXX: package is installed and then fails in the installation phase.
+CONFIGURE_ENV+=	ac_cv_prog_GTKDOC_CHECK= \
+		ac_cv_path_GTKDOC_CHECK_PATH= \
+		ac_cv_path_GTKDOC_REBASE= \
+		ac_cv_path_GTKDOC_MKPDF=
 
 # to run gdbus-codegen to generate gdbus-daemon-generated.{h,c}
 TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
