@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4787 2017/11/08 20:54:28 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4788 2017/11/08 20:55:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6886,3 +6886,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-autovivification to 0.18 [wiz 2017-11-08]
 	Updated devel/p5-indirect to 0.38 [wiz 2017-11-08]
 	Updated editors/p5-PPIx-EditorTools to 0.20 [wiz 2017-11-08]
+	Updated finance/p5-Finance-Quote to 1.44 [wiz 2017-11-08]
