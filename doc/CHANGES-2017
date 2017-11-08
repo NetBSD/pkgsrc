@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4753 2017/11/08 12:40:06 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4754 2017/11/08 14:39:10 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6852,3 +6852,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-lexicon to 2.1.11 [fhajny 2017-11-08]
 	Updated www/py-djangorestframework to 3.7.3 [adam 2017-11-08]
 	Updated sysutils/py-crontab to 2.2.7 [adam 2017-11-08]
+	Added www/geckodriver version 0.19.1 [tnn 2017-11-08]
