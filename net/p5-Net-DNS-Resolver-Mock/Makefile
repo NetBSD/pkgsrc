@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/10/23 12:56:56 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/11/08 20:57:21 wiz Exp $
 
-DISTNAME=	Net-DNS-Resolver-Mock-1.20170814
+DISTNAME=	Net-DNS-Resolver-Mock-1.20171031
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
