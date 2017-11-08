@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4748 2017/11/08 08:43:55 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4749 2017/11/08 08:48:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6845,3 +6845,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added chat/line-purple version 0.1 [scole 2017-11-07]
 	Updated pkgtools/cwrappers to 20171108 [khorben 2017-11-08]
 	Updated fonts/bdftopcf to 1.1 [wiz 2017-11-08]
+	Updated meta-pkgs/modular-xorg-libs to 1.5 [wiz 2017-11-08]
