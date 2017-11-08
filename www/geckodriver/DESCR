@@ -1,0 +1,4 @@
+Geckodriver provides the HTTP API described by the W3C WebDriver protocol to
+communicate with Gecko browsers, such as Firefox. It translates calls into
+the Firefox remote protocol by acting as a proxy between the local- and remote
+ends. This is used by browser automation frameworks such as Selenium.
