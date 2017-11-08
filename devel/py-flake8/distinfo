@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.10 2017/11/02 06:45:51 wiz Exp $
+$NetBSD: distinfo,v 1.11 2017/11/08 08:39:04 wiz Exp $
 
 SHA1 (flake8-3.5.0.tar.gz) = 302f39432917f57bb4f0f1c1573c96074913b46f
 RMD160 (flake8-3.5.0.tar.gz) = 4533c09c33394ca31ab081ed09f370dfac415882
 SHA512 (flake8-3.5.0.tar.gz) = ac5d1bd9c44ed76c9e5cbd941b24bb552aa76e156b24ccda6cc8440ee90f3a574fdb393665adc75298e4f57111d7ab3115ef21ef9088fb327d0a9703d442450c
 Size (flake8-3.5.0.tar.gz) = 140608 bytes
-SHA1 (patch-setup.py) = 277225adaba8588a333ba12977b95ae0d7ede1ab
