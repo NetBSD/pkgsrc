@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4796 2017/11/08 21:13:24 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4797 2017/11/08 21:15:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6895,3 +6895,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/p5-Net-SSLeay to 1.82 [wiz 2017-11-08]
 	Updated textproc/p5-Lingua-EN-Inflect to 1.903 [wiz 2017-11-08]
 	Updated textproc/p5-Syntax-Highlight-Engine-Kate to 0.12 [wiz 2017-11-08]
+	Updated textproc/p5-Text-CSV_XS to 1.34 [wiz 2017-11-08]
