@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4776 2017/11/08 20:33:54 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4777 2017/11/08 20:35:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6875,3 +6875,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/p5-Cwd-Guard version 0.05 [wiz 2017-11-08]
 	Updated devel/p5-Module-Build-XSUtil to 0.18 [wiz 2017-11-08]
 	Updated devel/p5-PPIx-Regexp to 0.053 [wiz 2017-11-08]
+	Updated devel/p5-Role-Tiny to 2.000006 [wiz 2017-11-08]
