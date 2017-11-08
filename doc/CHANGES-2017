@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4749 2017/11/08 08:48:29 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4750 2017/11/08 09:32:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6846,3 +6846,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated pkgtools/cwrappers to 20171108 [khorben 2017-11-08]
 	Updated fonts/bdftopcf to 1.1 [wiz 2017-11-08]
 	Updated meta-pkgs/modular-xorg-libs to 1.5 [wiz 2017-11-08]
+	Updated devel/py-flake8-import-order to 0.15 [adam 2017-11-08]
+	Updated textproc/py-regex to 2017.11.08 [adam 2017-11-08]
