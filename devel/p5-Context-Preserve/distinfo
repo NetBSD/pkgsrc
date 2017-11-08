@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/09/17 09:44:52 wiz Exp $
+$NetBSD: distinfo,v 1.5 2017/11/08 16:28:43 wiz Exp $
 
-SHA1 (Context-Preserve-0.02.tar.gz) = a7ccfb5b957a1e60baeb195d666df6437cd9caa8
-RMD160 (Context-Preserve-0.02.tar.gz) = 2a48c8bfc9ec57bc3e0ea93a9ccb98dd3a6cc282
-SHA512 (Context-Preserve-0.02.tar.gz) = e5c230e38430c6ea9b7ed75e075a12454262adf1883e5ab6ada4696099e2f246d0f9b613934b4197b0529e126ea083d12d9bbe4ece5cfb82a93f913b7d70b068
-Size (Context-Preserve-0.02.tar.gz) = 25305 bytes
+SHA1 (Context-Preserve-0.03.tar.gz) = e3274ccad8fdaf598e66ad6b7ae24ea2e8c64296
+RMD160 (Context-Preserve-0.03.tar.gz) = 6edd2f4568e1bb2785a96ef34801b593a1279afa
+SHA512 (Context-Preserve-0.03.tar.gz) = a5f412d553ba2ded7302f594b920bd9c04021c5ec60e94939da097a0fa2de61a0b49dd864e3212eb9b3a7d5236295e1923452e81d56789ae6852c73ec3086cea
+Size (Context-Preserve-0.03.tar.gz) = 25915 bytes
