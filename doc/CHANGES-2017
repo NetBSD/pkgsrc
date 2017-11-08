@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4793 2017/11/08 21:07:41 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4794 2017/11/08 21:08:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6892,3 +6892,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/p5-SNMP-Info to 3.38 [wiz 2017-11-08]
 	Updated security/p5-Digest-SHA3 to 1.01 [wiz 2017-11-08]
 	Updated security/p5-IO-Socket-SSL to 2.052 [wiz 2017-11-08]
+	Updated security/p5-Net-SSLeay to 1.82 [wiz 2017-11-08]
