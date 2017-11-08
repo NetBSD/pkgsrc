@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2017/08/01 14:58:53 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/11/08 09:47:51 leot Exp $
 
-DISTNAME=	python-gammu-2.9
+DISTNAME=	python-gammu-2.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 MASTER_SITES=	http://dl.cihar.com/python-gammu/
 CATEGORIES=	comms
