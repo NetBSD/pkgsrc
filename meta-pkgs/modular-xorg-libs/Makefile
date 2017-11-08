@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2015/12/11 15:59:56 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/11/08 08:48:20 wiz Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-libs-1.4
+PKGNAME=	modular-xorg-libs-1.5
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 DISTFILES=	# empty
@@ -35,7 +35,6 @@ META_PACKAGE=	yes
 .include "../../x11/libXevie/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
-.include "../../x11/libXfont/buildlink3.mk"
 .include "../../x11/libXfont2/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
