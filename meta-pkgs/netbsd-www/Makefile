@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2016/07/09 06:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2017/11/08 22:22:53 wiz Exp $
 
-DISTNAME=	netbsd-www-1.9
-PKGREVISION=	2
+DISTNAME=	netbsd-www-1.10
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -20,6 +19,7 @@ DEPENDS+=	libxslt>=1.0.20:../../textproc/libxslt
 DEPENDS+=	netbsd-doc-print>=1.4:../../meta-pkgs/netbsd-doc-print
 DEPENDS+=	opensp>=1.1:../../textproc/opensp
 DEPENDS+=	psutils>=1.17:../../print/psutils
+DEPENDS+=	fig2dev-[0-9]*:../../print/fig2dev
 DEPENDS+=	w3m>=0.4:../../www/w3m
 DEPENDS+=	xplanet>=1.2.0nb3:../../x11/xplanet
 
