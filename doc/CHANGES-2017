@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4807 2017/11/08 21:47:57 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4808 2017/11/08 22:23:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6906,3 +6906,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-Mojolicious to 7.55 [wiz 2017-11-08]
 	Updated www/p5-URI-db to 0.18 [wiz 2017-11-08]
 	Updated www/p5-libwww to 6.29 [wiz 2017-11-08]
+	Updated meta-pkgs/netbsd-www to 1.10 [wiz 2017-11-08]
