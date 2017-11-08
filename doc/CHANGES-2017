@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4756 2017/11/08 16:22:43 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4757 2017/11/08 16:24:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6855,3 +6855,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/geckodriver version 0.19.1 [tnn 2017-11-08]
 	Updated net/youtube-dl to 20171106 [leot 2017-11-08]
 	Updated converters/p5-Unicode-Collate to 1.21 [wiz 2017-11-08]
+	Updated devel/p5-Alien-Build to 1.32 [wiz 2017-11-08]
