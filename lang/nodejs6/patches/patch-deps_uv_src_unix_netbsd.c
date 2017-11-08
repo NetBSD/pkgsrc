@@ -1,8 +1,8 @@
-$NetBSD: patch-deps_uv_src_unix_netbsd.c,v 1.1 2016/10/25 19:54:00 fhajny Exp $
+$NetBSD: patch-deps_uv_src_unix_netbsd.c,v 1.2 2017/11/08 18:31:15 fhajny Exp $
 
---- deps/uv/src/unix/netbsd.c.orig	2016-04-05 21:52:30.000000000 +0000
+--- deps/uv/src/unix/netbsd.c.orig	2017-11-06 22:14:03.000000000 +0000
 +++ deps/uv/src/unix/netbsd.c
-@@ -43,6 +43,11 @@
+@@ -40,6 +40,11 @@
  #include <unistd.h>
  #include <time.h>
  
@@ -11,18 +11,18 @@ $NetBSD: patch-deps_uv_src_unix_netbsd.c,v 1.1 2016/10/25 19:54:00 fhajny Exp $
 +# include <sys/param.h>
 +#endif
 +
- #undef NANOSEC
- #define NANOSEC ((uint64_t) 1e9)
+ static char *process_title;
  
-@@ -90,7 +95,11 @@ int uv_exepath(char* buffer, size_t* siz
+ 
+@@ -80,7 +85,11 @@ int uv_exepath(char* buffer, size_t* siz
    mib[0] = CTL_KERN;
    mib[1] = KERN_PROC_ARGS;
-   mib[2] = mypid;
+   mib[2] = -1;
 +#if __NetBSD_Version__ >= 799000000
-+  mib[3] = KERN_PROC_PATHNAME;
+   mib[3] = KERN_PROC_PATHNAME;
 +#else
-   mib[3] = KERN_PROC_ARGV;
++  mib[3] = KERN_PROC_ARGV;
 +#endif
+   int_size = ARRAY_SIZE(int_buf);
  
-   cb = *size;
-   if (sysctl(mib, 4, buffer, &cb, NULL, 0))
+   if (sysctl(mib, 4, int_buf, &int_size, NULL, 0))
