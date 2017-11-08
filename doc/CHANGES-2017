@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4759 2017/11/08 16:27:13 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4760 2017/11/08 16:28:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6858,3 +6858,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Alien-Build to 1.32 [wiz 2017-11-08]
 	Updated devel/p5-App-CLI to 0.49 [wiz 2017-11-08]
 	Updated devel/p5-Class-Accessor to 0.51 [wiz 2017-11-08]
+	Updated devel/p5-Class-Container to 0.13 [wiz 2017-11-08]
