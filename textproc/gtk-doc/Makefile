@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2017/10/11 16:13:58 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2017/11/08 14:29:50 wiz Exp $
 
 DISTNAME=	gtk-doc-1.26
 CATEGORIES=	textproc gnome
@@ -31,6 +31,8 @@ SUBST_MESSAGE.fix-pc=	Unwrapping pkg-config path in installed helper tools.
 SUBST_FILES.fix-pc+=	gtkdoc-depscan.in
 SUBST_FILES.fix-pc+=	gtkdoc/config.py.in
 SUBST_SED.fix-pc=	-e 's,@PKG_CONFIG@,pkg-config,g'
+
+MAKE_JOBS_SAFE=		no
 
 TEST_TARGET=	check
 
