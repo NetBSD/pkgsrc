@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4766 2017/11/08 17:44:12 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4767 2017/11/08 18:31:24 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6865,3 +6865,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-File-Save-Home to 0.11 [wiz 2017-11-08]
 	Updated lang/nodejs to 9.1.0 [fhajny 2017-11-08]
 	Updated lang/nodejs8 to 8.9.1 [fhajny 2017-11-08]
+	Updated lang/nodejs6 to 6.12.0 [fhajny 2017-11-08]
