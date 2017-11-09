@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2017/11/01 09:25:36 jaapb Exp $
+$NetBSD: distinfo,v 1.11 2017/11/09 10:57:57 jaapb Exp $
 
 SHA1 (lablgtk-2.18.6.tar.gz) = 2dd099ecca246274df8f6f363c8d418ff3a67568
 RMD160 (lablgtk-2.18.6.tar.gz) = 6fef28c6ec2757da3e0773d33c77c13abaf61895
@@ -6,3 +6,4 @@ SHA512 (lablgtk-2.18.6.tar.gz) = 0d30da0e4a93b1693ac6d63161d40c8cd6d9337e105a65f
 Size (lablgtk-2.18.6.tar.gz) = 804837 bytes
 SHA1 (patch-configure) = a559be17f6687bfb4919617c01e5c28252bf9e99
 SHA1 (patch-src_Makefile) = 5cdcc55b1b2be61bf7303c1f5fb28bb02d931aae
+SHA1 (patch-src_gutf8.ml) = a813e6b7dc3944a23b4b069c9484417a592c42e8
