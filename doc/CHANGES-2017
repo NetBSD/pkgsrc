@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4813 2017/11/09 19:00:46 snj Exp $
+$NetBSD: CHANGES-2017,v 1.4814 2017/11/09 19:18:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6918,3 +6918,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/gnupg2 to 2.2.2 [adam 2017-11-09]
 	Updated lang/py-execjs to 1.5.0 [adam 2017-11-09]
 	Updated security/dropbear to 2017.75 [snj 2017-11-09]
+	Updated www/firefox52 to 52.4.1 [ryoon 2017-11-09]
