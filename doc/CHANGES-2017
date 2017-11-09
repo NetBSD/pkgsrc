@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4812 2017/11/09 08:35:16 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4813 2017/11/09 19:00:46 snj Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6917,3 +6917,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/py-reportlab to 3.3.0nb2 [wiz 2017-11-09]
 	Updated security/gnupg2 to 2.2.2 [adam 2017-11-09]
 	Updated lang/py-execjs to 1.5.0 [adam 2017-11-09]
+	Updated security/dropbear to 2017.75 [snj 2017-11-09]
