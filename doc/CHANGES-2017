@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4809 2017/11/09 01:14:40 taca Exp $
+$NetBSD: CHANGES-2017,v 1.4810 2017/11/09 07:52:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6911,3 +6911,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/roundcube-plugin-enigma to 1.2.7 [taca 2017-11-09]
 	Updated mail/roundcube-plugin-password to 1.2.7 [taca 2017-11-09]
 	Updated mail/roundcube-plugin-zipdownload to 1.2.7 [taca 2017-11-09]
+	Updated textproc/py-regex to 2017.11.09 [adam 2017-11-09]
+	Updated devel/py-hypothesis to 3.36.0 [adam 2017-11-09]
+	Updated textproc/py-jinja2 to 2.10 [adam 2017-11-09]
