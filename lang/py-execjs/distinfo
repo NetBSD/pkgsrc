@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2017/09/17 11:31:28 adam Exp $
+$NetBSD: distinfo,v 1.3 2017/11/09 08:34:12 adam Exp $
 
-SHA1 (PyExecJS-1.4.1.tar.gz) = d6b4eaf15d56a6f806312499cfee5d4ad3166bf8
-RMD160 (PyExecJS-1.4.1.tar.gz) = e7ef964de836e5c406403b5743bee5fa6d832c31
-SHA512 (PyExecJS-1.4.1.tar.gz) = ee02f9f41ee2ec1624fdd3bcb11d3bd4b16fd0982f5cf65a102dd7b6c36a8c3ea9aca6393127885795511ac44598c97dcb988823140b85511b05ce3500557d2d
-Size (PyExecJS-1.4.1.tar.gz) = 14592 bytes
+SHA1 (PyExecJS-1.5.0.tar.gz) = 4646581cd884529e77ff26a0bc2994f8291fb0fc
+RMD160 (PyExecJS-1.5.0.tar.gz) = 7d135bc0657faa9271996a63ea4bc44876eab070
+SHA512 (PyExecJS-1.5.0.tar.gz) = 5b7f76a0aa29d961d33e6f316e222968ba7df87d3cba2d36e1e534c542d1f69579aca850a3fa0043e33126c9799a2db5f21171f115c612791f72c73e66dab183
+Size (PyExecJS-1.5.0.tar.gz) = 13215 bytes
 SHA1 (patch-setup.py) = 42a9a59cba78e159e38837cbe3377410308b4617

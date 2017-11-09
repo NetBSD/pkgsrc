@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/09/17 11:31:28 adam Exp $
+# $NetBSD: Makefile,v 1.3 2017/11/09 08:34:12 adam Exp $
 
-DISTNAME=	PyExecJS-1.4.1
+DISTNAME=	PyExecJS-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl:S/^py//}
-CATEGORIES=	python lang
+CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyExecJS/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
