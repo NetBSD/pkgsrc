@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/05/04 20:23:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/11/09 07:52:17 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,9 +12,9 @@ ${PYSITELIB}/jinja2/__init__.pyo
 ${PYSITELIB}/jinja2/_compat.py
 ${PYSITELIB}/jinja2/_compat.pyc
 ${PYSITELIB}/jinja2/_compat.pyo
-${PYSITELIB}/jinja2/_stringdefs.py
-${PYSITELIB}/jinja2/_stringdefs.pyc
-${PYSITELIB}/jinja2/_stringdefs.pyo
+${PYSITELIB}/jinja2/_identifier.py
+${PYSITELIB}/jinja2/_identifier.pyc
+${PYSITELIB}/jinja2/_identifier.pyo
 ${PYSITELIB}/jinja2/asyncfilters.py
 ${PLIST.async}${PYSITELIB}/jinja2/asyncfilters.pyc
 ${PLIST.async}${PYSITELIB}/jinja2/asyncfilters.pyo
@@ -60,6 +60,9 @@ ${PYSITELIB}/jinja2/loaders.pyo
 ${PYSITELIB}/jinja2/meta.py
 ${PYSITELIB}/jinja2/meta.pyc
 ${PYSITELIB}/jinja2/meta.pyo
+${PYSITELIB}/jinja2/nativetypes.py
+${PYSITELIB}/jinja2/nativetypes.pyc
+${PYSITELIB}/jinja2/nativetypes.pyo
 ${PYSITELIB}/jinja2/nodes.py
 ${PYSITELIB}/jinja2/nodes.pyc
 ${PYSITELIB}/jinja2/nodes.pyo
