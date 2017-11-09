@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2017/10/16 18:35:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2017/11/09 07:41:44 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -69,9 +69,6 @@ ${PYSITELIB}/hypothesis/internal/cache.pyo
 ${PYSITELIB}/hypothesis/internal/charmap.py
 ${PYSITELIB}/hypothesis/internal/charmap.pyc
 ${PYSITELIB}/hypothesis/internal/charmap.pyo
-${PYSITELIB}/hypothesis/internal/classmap.py
-${PYSITELIB}/hypothesis/internal/classmap.pyc
-${PYSITELIB}/hypothesis/internal/classmap.pyo
 ${PYSITELIB}/hypothesis/internal/compat.py
 ${PYSITELIB}/hypothesis/internal/compat.pyc
 ${PYSITELIB}/hypothesis/internal/compat.pyo
