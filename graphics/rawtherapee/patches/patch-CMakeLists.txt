@@ -1,0 +1,18 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2017/11/10 23:01:02 ryoon Exp $
+
+* Install man pages under PKGMANDIR
+
+--- CMakeLists.txt.orig	2017-09-30 19:31:22.000000000 +0000
++++ CMakeLists.txt
+@@ -432,9 +432,9 @@ install(FILES RELEASE_NOTES.txt DESTINAT
+ # The standard location for man pages in Linux is /usr/share/man
+ # Use "manpath" to see the search paths for man pages on your system.
+ if(BUILD_BUNDLE)
+-    install(FILES "${PROJECT_SOURCE_DIR}/doc/manpage/rawtherapee.1" DESTINATION "${DATADIR}/share/man/man1")
++    install(FILES "${PROJECT_SOURCE_DIR}/doc/manpage/rawtherapee.1" DESTINATION "${DATADIR}/${PKGMANDIR}/man1")
+ else()
+-    install(FILES "${PROJECT_SOURCE_DIR}/doc/manpage/rawtherapee.1" DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man1")
++    install(FILES "${PROJECT_SOURCE_DIR}/doc/manpage/rawtherapee.1" DESTINATION "${CMAKE_INSTALL_PREFIX}/${PKGMANDIR}/man1")
+ endif()
+ 
+ if(WIN32)
