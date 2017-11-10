@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4820 2017/11/10 15:07:16 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4821 2017/11/10 22:47:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6929,3 +6929,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/gstreamer1 to 1.12.3 [prlw1 2017-11-10]
 	Updated net/mDNSResponder to 258.14nb3 [jperkin 2017-11-10]
 	Added databases/postgresql-redislog version 0.2 [fhajny 2017-11-10]
+	Updated www/seamonkey to 2.49.1 [ryoon 2017-11-10]
