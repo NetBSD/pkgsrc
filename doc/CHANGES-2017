@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4819 2017/11/10 11:22:02 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.4820 2017/11/10 15:07:16 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6928,3 +6928,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/py-m3u8 to 0.3.5 [adam 2017-11-10]
 	Updated multimedia/gstreamer1 to 1.12.3 [prlw1 2017-11-10]
 	Updated net/mDNSResponder to 258.14nb3 [jperkin 2017-11-10]
+	Added databases/postgresql-redislog version 0.2 [fhajny 2017-11-10]
