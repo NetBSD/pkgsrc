@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.551 2017/11/02 06:46:24 wiz Exp $
+# $NetBSD: Makefile,v 1.552 2017/11/10 15:08:08 fhajny Exp $
 
 COMMENT=	Databases
 
@@ -283,6 +283,7 @@ SUBDIR+=	postgresql-pgbench
 SUBDIR+=	postgresql-pgroonga
 SUBDIR+=	postgresql-pljava
 SUBDIR+=	postgresql-postgis2
+SUBDIR+=	postgresql-redislog
 SUBDIR+=	postgresql10
 SUBDIR+=	postgresql10-client
 SUBDIR+=	postgresql10-contrib
