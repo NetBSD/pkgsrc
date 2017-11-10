@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4816 2017/11/09 20:46:18 schnoebe Exp $
+$NetBSD: CHANGES-2017,v 1.4817 2017/11/10 08:00:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6921,3 +6921,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/firefox52 to 52.4.1 [ryoon 2017-11-09]
 	Updated www/firefox52-l10n to 52.4.1 [ryoon 2017-11-09]
 	Updated print/hplip to 3.17.10 [schnoebe 2017-11-09]
+	Updated textproc/py-mistune to 0.8.1 [adam 2017-11-10]
+	Updated devel/py-pexpect to 4.3.0 [adam 2017-11-10]
+	Updated net/py-botocore to 1.7.43 [adam 2017-11-10]
+	Updated net/py-awscli to 1.11.185 [adam 2017-11-10]
+	Updated multimedia/py-m3u8 to 0.3.5 [adam 2017-11-10]
