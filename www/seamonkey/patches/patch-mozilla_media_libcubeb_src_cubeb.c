@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_media_libcubeb_src_cubeb.c,v 1.2 2017/01/01 16:14:08 ryoon Exp $
+$NetBSD: patch-mozilla_media_libcubeb_src_cubeb.c,v 1.3 2017/11/10 22:45:27 ryoon Exp $
 
---- mozilla/media/libcubeb/src/cubeb.c.orig	2016-12-14 02:09:53.000000000 +0000
+--- mozilla/media/libcubeb/src/cubeb.c.orig	2017-10-16 07:19:00.000000000 +0000
 +++ mozilla/media/libcubeb/src/cubeb.c
-@@ -60,6 +60,9 @@ int audiotrack_init(cubeb ** context, ch
+@@ -54,6 +54,9 @@ int audiotrack_init(cubeb ** context, ch
  #if defined(USE_KAI)
  int kai_init(cubeb ** context, char const * context_name);
  #endif
@@ -11,8 +11,8 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb.c,v 1.2 2017/01/01 16:14:08 ryoo
 +#endif
  
  
- int
-@@ -152,6 +155,9 @@ cubeb_init(cubeb ** context, char const 
+ static int
+@@ -141,6 +144,9 @@ cubeb_init(cubeb ** context, char const 
  #if defined(USE_KAI)
      kai_init,
  #endif
