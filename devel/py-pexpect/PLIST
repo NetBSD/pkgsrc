@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/05/04 10:43:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/11/10 07:51:58 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pexpect/ANSI.py
 ${PYSITELIB}/pexpect/ANSI.pyc
@@ -9,9 +9,9 @@ ${PYSITELIB}/pexpect/FSM.pyo
 ${PYSITELIB}/pexpect/__init__.py
 ${PYSITELIB}/pexpect/__init__.pyc
 ${PYSITELIB}/pexpect/__init__.pyo
-${PYSITELIB}/pexpect/async.py
-${PLIST.py3x}${PYSITELIB}/pexpect/async.pyc
-${PLIST.py3x}${PYSITELIB}/pexpect/async.pyo
+${PYSITELIB}/pexpect/_async.py
+${PLIST.py3x}${PYSITELIB}/pexpect/_async.pyc
+${PLIST.py3x}${PYSITELIB}/pexpect/_async.pyo
 ${PYSITELIB}/pexpect/bashrc.sh
 ${PYSITELIB}/pexpect/exceptions.py
 ${PYSITELIB}/pexpect/exceptions.pyc
