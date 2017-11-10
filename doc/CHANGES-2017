@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4822 2017/11/10 22:53:17 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.4823 2017/11/10 22:54:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6931,3 +6931,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added databases/postgresql-redislog version 0.2 [fhajny 2017-11-10]
 	Updated www/seamonkey to 2.49.1 [ryoon 2017-11-10]
 	Updated www/seamonkey-l10n to 2.49.1 [ryoon 2017-11-10]
+	Updated misc/libreoffice to 5.4.3.2 [ryoon 2017-11-10]
