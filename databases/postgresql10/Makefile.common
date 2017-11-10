@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2017/10/23 20:33:49 adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2017/11/10 14:47:41 fhajny Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -77,6 +77,14 @@ CONFIGURE_ENV+=		MSGFMT=${TOOLS_PATH.msgfmt}
 # procfs and largefile.
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=		ac_cv_header_sys_ucred_h=no
+.endif
+
+# pkgsrc silently filters the --as-needed linker arg, but that makes
+# it leak into the pgxs Makefiles and compromises manual building
+# against PostgreSQL files installed. Disable it here to prevent
+# that from happening.
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin"
+CONFIGURE_ENV+=		pgac_cv_prog_cc_ldflags__Wl___as_needed=no
 .endif
 
 # configure fails on OpenBSD and MirBSD if thread safety is enabled.
