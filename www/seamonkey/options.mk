@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.38 2017/07/14 13:22:07 ryoon Exp $
+# $NetBSD: options.mk,v 1.39 2017/11/10 22:45:27 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
 
 PKG_OPTIONS_REQUIRED_GROUPS=	gtk
 PKG_OPTIONS_GROUP.gtk=		gtk2 gtk3
 PKG_SUPPORTED_OPTIONS=	alsa dbus debug mozilla-jemalloc
-PKG_SUPPORTED_OPTIONS+=	mozilla-lightning webrtc pulseaudio
+PKG_SUPPORTED_OPTIONS+=	webrtc pulseaudio
 
 PLIST_VARS+=	debug gnome jemalloc
 
@@ -68,16 +68,6 @@ PLIST.debug=		yes
 .else
 CONFIGURE_ARGS+=	--disable-debug --disable-debug-symbols
 CONFIGURE_ARGS+=	--enable-install-strip
-.endif
-
-.if !empty(PKG_OPTIONS:Mmozilla-lightning)
-CONFIGURE_ARGS+=	--enable-calendar
-PLIST_SRC+=		PLIST.lightning
-XPI_FILES+=		${WRKSRC}/${OBJDIR}/dist/xpi-stage/gdata-provider*.xpi
-XPI_FILES+=		${WRKSRC}/${OBJDIR}/dist/xpi-stage/lightning*.xpi
-XPI_FILES+=		${WRKSRC}/${OBJDIR}/dist/xpi-stage/quitter*.xpi
-.else
-CONFIGURE_ARGS+=	--disable-calendar
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)

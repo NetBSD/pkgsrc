@@ -1,54 +1,19 @@
-$NetBSD: patch-mozilla_config_system-headers,v 1.23 2017/08/18 23:55:07 ryoon Exp $
+$NetBSD: patch-mozilla_config_system-headers,v 1.24 2017/11/10 22:45:27 ryoon Exp $
 
---- mozilla/config/system-headers.orig	2017-07-07 05:35:48.000000000 +0000
+--- mozilla/config/system-headers.orig	2017-10-16 07:17:08.000000000 +0000
 +++ mozilla/config/system-headers
-@@ -624,6 +624,8 @@ libgnome/libgnome.h
+@@ -624,6 +624,7 @@ libgnome/libgnome.h
  libgnomeui/gnome-icon-lookup.h
  libgnomeui/gnome-icon-theme.h
  libgnomeui/gnome-ui-init.h
 +libv4l2.h
-+limits
  limits.h
  link.h
  #ifdef ANDROID
-@@ -714,6 +716,7 @@ mapiutil.h
- mapix.h
- Math64.h
- math.h
-+complex
- mbstring.h
- #ifdef ANDROID
- android/native_window.h
-@@ -1302,6 +1305,25 @@ vpx/vp8cx.h
- vpx/vp8dx.h
- vpx_mem/vpx_mem.h
+@@ -1267,6 +1268,15 @@ libsn/sn-launcher.h
+ libsn/sn-monitor.h
+ libsn/sn-util.h
  #endif
-+#ifdef GKMEDIAS_SHARED_LIBRARY
-+vpx/vpx_codec.h
-+vpx/vpx_decoder.h
-+vpx/vpx_encoder.h
-+vpx/vp8cx.h
-+vpx/vp8dx.h
-+vpx_mem/vpx_mem.h
-+vorbis/codec.h
-+theora/theoradec.h
-+tremor/ivorbiscodec.h
-+speex/speex_resampler.h
-+soundtouch/SoundTouch.h
-+ogg/ogg.h
-+ogg/os_types.h
-+nestegg/nestegg.h
-+cubeb/cubeb.h
-+speex/speex_resampler.h
-+soundtouch/SoundTouch.h
-+#endif
- gst/gst.h
- gst/app/gstappsink.h
- gst/app/gstappsrc.h
-@@ -1332,3 +1354,26 @@ unicode/utypes.h
- #endif
- libutil.h
- unwind.h
 +#if MOZ_SYSTEM_GRAPHITE2==1
 +graphite2/Font.h
 +graphite2/Segment.h
@@ -58,6 +23,13 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.23 2017/08/18 23:55:07 ryoon Ex
 +harfbuzz/hb-ot.h
 +harfbuzz/hb.h
 +#endif
+ #if MOZ_SYSTEM_HUNSPELL==1
+ hunspell.hxx
+ #endif
+@@ -1335,3 +1345,17 @@ unicode/utypes.h
+ libutil.h
+ unwind.h
+ fenv.h
 +#if MOZ_SYSTEM_OGG==1
 +ogg/ogg.h
 +ogg/os_types.h
