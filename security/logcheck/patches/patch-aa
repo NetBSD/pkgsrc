@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2003/05/01 20:43:41 jmmv Exp $
+$NetBSD: patch-aa,v 1.3 2017/11/10 10:34:51 jperkin Exp $
 
---- Makefile.orig	1999-10-31 16:07:29.000000000 +0100
+--- Makefile.orig	1999-10-31 15:07:29.000000000 +0000
 +++ Makefile
 @@ -5,13 +5,15 @@
  # Thanks to rbulling@obscure.org for cleaning this Makefile up..
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.2 2003/05/01 20:43:41 jmmv Exp $
  # Braindead HPUX compiler flags
  #CFLAGS = -O -Aa
  
-@@ -19,35 +21,22 @@ CFLAGS = -O
+@@ -19,35 +21,19 @@ CFLAGS = -O
  # the new paths!!
  
  # This is where keyword files go.
@@ -34,11 +34,10 @@ $NetBSD: patch-aa,v 1.2 2003/05/01 20:43:41 jmmv Exp $
  # if you want this. /usr/local/etc was kept for compatibility reasons.
 -#INSTALLDIR_SH = /usr/local/bin
 -INSTALLDIR_SH = /usr/local/etc
-+INSTALLDIR_SH = /usr/local/bin
- 
- # The scratch directory for logcheck files.
+-
+-# The scratch directory for logcheck files.
 -TMPDIR = /usr/local/etc/tmp
-+TMPDIR = /var/adm/tmp
++INSTALLDIR_SH = /usr/local/bin
  
  # Debug mode for logtail
  # CFLAGS = -g -DDEBUG
@@ -60,7 +59,7 @@ $NetBSD: patch-aa,v 1.2 2003/05/01 20:43:41 jmmv Exp $
  
  clean:		
  		/bin/rm ./src/logtail ./src/logtail.o
-@@ -60,19 +49,21 @@ uninstall:	
+@@ -60,19 +46,17 @@ uninstall:	
  		/bin/rm $(INSTALLDIR)/logcheck.violations.ignore
  		/bin/rm $(INSTALLDIR_BIN)/logtail
  
@@ -68,13 +67,12 @@ $NetBSD: patch-aa,v 1.2 2003/05/01 20:43:41 jmmv Exp $
 +build:	
  		@echo "Making $(SYSTYPE)"
  		$(CC) $(CFLAGS) -o ./src/logtail ./src/logtail.c
+-		@echo "Creating temp directory $(TMPDIR)"
+-		@if [ ! -d $(TMPDIR) ]; then /bin/mkdir $(TMPDIR); fi
+-		@echo "Setting temp directory permissions"
+-		chmod 700 $(TMPDIR)
 +
 +install:
- 		@echo "Creating temp directory $(TMPDIR)"
--		@if [ ! -d $(TMPDIR) ]; then /bin/mkdir $(TMPDIR); fi
-+		@if [ ! -d $(TMPDIR) ]; then /bin/mkdir -p $(TMPDIR); fi
- 		@echo "Setting temp directory permissions"
- 		chmod 700 $(TMPDIR)
  		@echo "Copying files"
 -		cp ./systems/$(SYSTYPE)/logcheck.hacking $(INSTALLDIR)
 -		cp ./systems/$(SYSTYPE)/logcheck.violations $(INSTALLDIR)
