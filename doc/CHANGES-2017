@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4817 2017/11/10 08:00:43 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4818 2017/11/10 09:27:16 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6926,3 +6926,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-botocore to 1.7.43 [adam 2017-11-10]
 	Updated net/py-awscli to 1.11.185 [adam 2017-11-10]
 	Updated multimedia/py-m3u8 to 0.3.5 [adam 2017-11-10]
+	Updated multimedia/gstreamer1 to 1.12.3 [prlw1 2017-11-10]
