@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2017/05/21 10:40:28 adam Exp $
+# $NetBSD: Makefile,v 1.5 2017/11/10 16:18:47 khorben Exp $
 
 DISTNAME=	liblinear-2.11
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.csie.ntu.edu.tw/~cjlin/liblinear/
 
@@ -14,6 +15,9 @@ USE_LIBTOOL=	yes
 
 BUILD_TARGET=	all lib
 AUTO_MKDIRS=	yes
+
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/predict ${DESTDIR}${PREFIX}/bin/liblinear-predict
