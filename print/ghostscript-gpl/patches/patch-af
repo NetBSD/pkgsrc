@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2017/04/11 10:31:14 jperkin Exp $
+$NetBSD: patch-af,v 1.5 2017/11/10 18:17:55 khorben Exp $
 
 (From the log for revision 1.4 of print/ghostscript/patches/patch-af)
 date: 2008/11/13 17:36:54;  author: chuck;  state: Exp;  lines: +22 -4
@@ -35,16 +35,19 @@ the best way to fix that.   at least it compiles now....
  
  GS_SO=$(BINDIR)/$(GS_SONAME)
  GS_SO_MAJOR=$(BINDIR)/$(GS_SONAME_MAJOR) 
-@@ -86,11 +85,11 @@ $(GS_SO_MAJOR): $(GS_SO_MAJOR_MINOR)
+@@ -85,12 +84,12 @@ $(GS_SO_MAJOR): $(GS_SO_MAJOR_MINOR)
+ 
  # Build the small Ghostscript loaders, with Gtk+ and without
  $(GSSOC_XE): $(GS_SO) $(PSSRC)$(SOC_LOADER)
- 	$(GLCC) -g -o $(GSSOC_XE) $(PSSRC)dxmainc.c \
+-	$(GLCC) -g -o $(GSSOC_XE) $(PSSRC)dxmainc.c \
 -	-L$(BINDIR) -l$(GS)
++	$(GLCC) -g -o $(GSSOC_XE) $(LDFLAGS) $(PSSRC)dxmainc.c \
 +	-L$(BINDIR) -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib -l$(GS)
  
  $(GSSOX_XE): $(GS_SO) $(PSSRC)$(SOC_LOADER)
- 	$(GLCC) -g $(SOC_CFLAGS) -o $(GSSOX_XE) $(PSSRC)$(SOC_LOADER) \
+-	$(GLCC) -g $(SOC_CFLAGS) -o $(GSSOX_XE) $(PSSRC)$(SOC_LOADER) \
 -	-L$(BINDIR) -l$(GS) $(SOC_LIBS)
++	$(GLCC) -g $(SOC_CFLAGS) -o $(GSSOX_XE) $(LDFLAGS) $(PSSRC)$(SOC_LOADER) \
 +	-L$(BINDIR) -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib -l$(GS) $(SOC_LIBS)
  
  # ------------------------- Recursive make targets ------------------------- #
