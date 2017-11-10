@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.775 2017/10/23 13:41:05 joerg Exp $
+# $NetBSD: Makefile,v 1.776 2017/11/10 23:02:35 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -464,6 +464,7 @@ SUBDIR+=	quesoglc
 SUBDIR+=	qvplay
 SUBDIR+=	rabbit
 SUBDIR+=	radiance
+SUBDIR+=	rawtherapee
 SUBDIR+=	rayshade
 SUBDIR+=	refocus-it
 SUBDIR+=	resize_image
