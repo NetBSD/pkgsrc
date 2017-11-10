@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.14 2017/11/08 06:57:41 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.15 2017/11/10 07:12:40 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q3 branch:
 
@@ -147,4 +147,10 @@ audio/grip: Linux build fix
 Pullup ticket #5621 - requested by sevan
 textproc/libxml2: security update
 textproc/py-libxml2: security update
+
+Pullup ticket #5622 - requested by sevan
+www/apache-tomcat7: security update
+
+Pullup ticket #5623 - requested by sevan
+www/apache-tomcat8: security update
 
