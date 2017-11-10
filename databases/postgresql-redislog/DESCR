@@ -1,0 +1,2 @@
+redislog is an extension that allows PostgreSQL to ship log entries
+to a Redis server, directly in JSON format.
