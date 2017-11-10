@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2017/09/04 19:33:43 adam Exp $
+# $NetBSD: Makefile.common,v 1.32 2017/11/10 14:47:41 fhajny Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -75,6 +75,14 @@ CONFIGURE_ARGS+=	--without-zlib
 # sys/ucred.h shouldn't be included on Solaris, causes conflicts between
 # procfs and largefile.
 CONFIGURE_ENV.SunOS+=	ac_cv_header_sys_ucred_h=no
+
+# pkgsrc silently filters the --as-needed linker arg, but that makes
+# it leak into the pgxs Makefiles and compromises manual building
+# against PostgreSQL files installed. Disable it here to prevent
+# that from happening.
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin"
+CONFIGURE_ENV+=		pgac_cv_prog_cc_ldflags__Wl___as_needed=no
+.endif
 
 # configure fails on OpenBSD and MirBSD if thread safety is enabled.
 CONFIGURE_ARGS.MirBSD+=		--disable-thread-safety
