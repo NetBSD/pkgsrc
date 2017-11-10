@@ -1,8 +1,8 @@
-$NetBSD: patch-suite_installer_Makefile.in,v 1.4 2013/01/07 21:55:30 ryoon Exp $
+$NetBSD: patch-suite_installer_Makefile.in,v 1.5 2017/11/10 22:45:27 ryoon Exp $
 
---- suite/installer/Makefile.in.orig	2012-11-18 10:14:25.000000000 +0000
+--- suite/installer/Makefile.in.orig	2017-10-16 07:06:49.000000000 +0000
 +++ suite/installer/Makefile.in
-@@ -16,7 +16,7 @@ MOZ_PKG_REMOVALS = $(srcdir)/removed-fil
+@@ -11,7 +11,7 @@ MOZ_PKG_REMOVALS = $(srcdir)/removed-fil
  MOZ_PKG_MANIFEST_P = $(srcdir)/package-manifest.in
  # Be fatal, except when building with XULRunner which already bundles some files.
  ifndef SYSTEM_LIBXUL
@@ -10,4 +10,4 @@ $NetBSD: patch-suite_installer_Makefile.in,v 1.4 2013/01/07 21:55:30 ryoon Exp $
 +MOZ_PKG_FATAL_WARNINGS = 0
  endif
  
- MOZ_NONLOCALIZED_PKG_LIST = \
+ MOZ_PKG_DUPEFLAGS = \
