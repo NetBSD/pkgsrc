@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2017/11/08 14:36:34 tnn Exp $
+$NetBSD: distinfo,v 1.2 2017/11/11 20:25:56 tnn Exp $
 
 SHA1 (advapi32-sys-0.1.2.crate) = 7401392119f5441f522c1dd92eff980b220d2e44
 RMD160 (advapi32-sys-0.1.2.crate) = c4e3f087f4cd61df70a2d7e1be0056b563ff74e4
@@ -356,3 +356,4 @@ SHA1 (zip-0.1.19.crate) = 2ef141a2840bab15e9c20ccad9ee12790024c891
 RMD160 (zip-0.1.19.crate) = d5149a98f19dcad4b2dd8e757eede9e7f960526d
 SHA512 (zip-0.1.19.crate) = ac04524caf2d0b0c6dbc9105aa9cd3796504d5f5faef15a84b552a1bdba115de4805ca2d71d6b48cbaa5803c0d748e502efd087b6ad081de6673ac53cbed50c4
 Size (zip-0.1.19.crate) = 17251 bytes
+SHA1 (patch-vendor_mozrunner_src_runner.rs) = d5dee072ccf08b6a8109f94a1f3df5d5a4de0240
