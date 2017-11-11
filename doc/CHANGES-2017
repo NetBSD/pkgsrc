@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4826 2017/11/11 03:18:36 gdt Exp $
+$NetBSD: CHANGES-2017,v 1.4827 2017/11/11 17:29:17 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6935,3 +6935,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added graphics/rawtherapee version 5.3 [ryoon 2017-11-10]
 	Updated net/corebird to 1.7.2 [ryoon 2017-11-11]
 	Updated filesystems/fuse-encfs to 1.9.2 [gdt 2017-11-11]
+	Updated net/netcat6 to 1.0nb4 [maya 2017-11-11]
