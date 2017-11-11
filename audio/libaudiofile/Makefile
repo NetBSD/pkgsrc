@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2017/08/01 16:47:37 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2017/11/11 13:13:15 maya Exp $
 
 DISTNAME=	audiofile-0.3.6
 PKGNAME=	lib${DISTNAME}
@@ -15,6 +15,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	audiofile.pc.in
+TEST_TARGET=		check
 
 DOCDIR=			${PREFIX}/share/doc/libaudiofile
 
