@@ -1,0 +1,14 @@
+$NetBSD: patch-dynconfig_wscript,v 1.1 2017/11/11 01:32:46 jklos Exp $
+
+--- dynconfig/wscript.orig	2017-01-11 07:55:14.000000000 +0000
++++ dynconfig/wscript
+@@ -302,9 +302,6 @@ def configure(conf):
+         flavor = 'FHS-PATH'
+     else:
+         flavor = 'STD-PATH'
+-        if conf.env.PREFIX == '/usr' or conf.env.PREFIX == '/usr/local':
+-           Logs.error("Don't install directly under /usr or /usr/local without using the FHS option (--enable-fhs)")
+-           raise Utils.WafError("ERROR: invalid --prefix=%s value" % (conf.env.PREFIX))
+ 
+     explicit_set ={}
+ 
