@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2006/07/07 18:47:52 ghen Exp $
+$NetBSD: patch-aa,v 1.6 2017/11/11 17:28:39 maya Exp $
+
+Don't try to define alloca on BSDs
 
 --- src/netsupport.c.orig	2006-03-14 01:33:01.000000000 +0000
 +++ src/netsupport.c
