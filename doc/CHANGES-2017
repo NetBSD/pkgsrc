@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4828 2017/11/11 19:43:27 maya Exp $
+$NetBSD: CHANGES-2017,v 1.4829 2017/11/11 21:32:29 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6937,3 +6937,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated filesystems/fuse-encfs to 1.9.2 [gdt 2017-11-11]
 	Updated net/netcat6 to 1.0nb4 [maya 2017-11-11]
 	Updated net/socat to 1.7.3.2nb1 [maya 2017-11-11]
+	Added www/py-selenium version 3.7.1 [tnn 2017-11-11]
