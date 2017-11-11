@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/11/11 20:25:56 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2017/11/11 21:39:19 tnn Exp $
 
 DISTNAME=	geckodriver-0.19.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mozilla/}
 GITHUB_PROJECT=	geckodriver
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/mozilla/geckodriver/
 COMMENT=	W3C WebDriver-compatible proxy for Gecko-based browsers
 LICENSE=	mpl-1.1
 
-DEPENDS+=	rust-[0-9]*:../../lang/rust
+BUILD_DEPENDS+=	rust-[0-9]*:../../lang/rust
 
 CARGO_CRATE_DEPENDS+=		\
 	advapi32-sys-0.1.2	\
