@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/08/16 20:45:43 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2017/11/12 15:36:58 khorben Exp $
 #
 
 DISTNAME=	5440DL_lin64bit_1_2_1
@@ -33,5 +33,5 @@ post-extract:
 
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/jbigkit/buildlink3.mk"
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups-base/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
