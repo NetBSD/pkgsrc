@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.104 2017/01/19 18:52:20 agc Exp $
+# $NetBSD: Makefile,v 1.104.8.1 2017/11/12 12:27:20 spz Exp $
 
 DISTNAME=	rsync-3.1.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://rsync.samba.org/ftp/rsync/
 MASTER_SITES+=	http://rsync.samba.org/ftp/rsync/old-versions/
@@ -17,6 +18,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-included-popt
 CONFIGURE_ARGS+=	--with-rsyncd-conf=${PKG_SYSCONFDIR}/rsyncd.conf
 TEST_TARGET=		test
+
+USE_TOOLS+=	perl
 
 PKG_SYSCONFSUBDIR=	rsync
 
