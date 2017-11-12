@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2017/05/19 13:29:03 prlw1 Exp $
+# $NetBSD: Makefile,v 1.35 2017/11/12 15:37:00 khorben Exp $
 
 .include "Makefile.common"
 
@@ -42,7 +42,7 @@ INSTALL_TARGET=	install-bin install-man
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcups)
-DEPENDS+=	{cups>=1.0,${TEXTTOPS_DEPENDS}}:../../print/cups
+DEPENDS+=	{cups-base>=1.0,${TEXTTOPS_DEPENDS}}:../../print/cups-base
 .else
 DEPENDS+=	${TEXTTOPS_DEPENDS}:../../print/mpage
 .endif
