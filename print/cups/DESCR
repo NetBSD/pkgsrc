@@ -10,3 +10,7 @@ and AppSocket protocols are also supported with reduced functionality.
 CUPS adds network printer browsing and PostScript Printer Description
 ("PPD")-based printing options to support real world applications under
 UNIX.
+
+This is a meta-package for installing CUPS and the necessary backends,
+filters, and other software that is required for using printer drivers
+from CUPS 1.6.0 on.

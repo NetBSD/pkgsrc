@@ -1,0 +1,6 @@
+# $NetBSD: cups.pam,v 1.1 2017/11/12 14:10:15 khorben Exp $
+#
+# PAM configuration for Common UNIX Printing System
+#
+auth	required	@LOCALBASE@/lib/security/pam_unix.so nullok
+account	required	@LOCALBASE@/lib/security/pam_unix.so
