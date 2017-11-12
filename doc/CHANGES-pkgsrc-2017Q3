@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.15 2017/11/10 07:12:40 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.16 2017/11/12 11:24:23 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q3 branch:
 
@@ -143,6 +143,27 @@ www/apache-tomcat85: security fix
 
 Pullup ticket #5602 - requested by sevan
 audio/grip: Linux build fix
+
+Pullup ticket #5603 - requested by sevan
+sysutils/hal: build fix
+
+Pullup ticket #5605 - requested by sevan
+devel/flex: Linux build fix
+
+Pullup ticket #5609 - requested by sevan
+devel/libgnome: build fix
+
+Pullup ticket #5615 - requested by joerg
+print/py-reportlab: bugfix
+
+Pullup ticket #5606 - requested by sevan
+multimedia/smpeg: build fix
+
+Pullup ticket #5617 - requested by maya
+chat/weechat: build fix
+
+Pullup ticket #5616 - requested by morr
+www/wordpress: security fix
 
 Pullup ticket #5621 - requested by sevan
 textproc/libxml2: security update
