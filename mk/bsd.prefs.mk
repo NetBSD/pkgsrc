@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.394 2017/11/03 18:07:40 bsiegert Exp $
+# $NetBSD: bsd.prefs.mk,v 1.395 2017/11/12 13:34:14 khorben Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -703,6 +703,12 @@ _PKGSRC_MKPIE=	no
 .if (${PKGSRC_MKPIE:tl} == "yes") && \
     (${_OPSYS_SUPPORTS_MKPIE:Uno} == "yes")
 _PKGSRC_MKPIE=	yes
+.endif
+
+_PKGSRC_MKREPRO=	no
+.if (${PKGSRC_MKREPRO:tl} == "yes") && \
+    (${_OPSYS_SUPPORTS_MKREPRO:Uno} == "yes")
+_PKGSRC_MKREPRO=	yes
 .endif
 
 _PKGSRC_USE_FORTIFY=	no
