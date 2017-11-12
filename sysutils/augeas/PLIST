@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2014/12/30 13:55:01 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.1.24.1 2017/11/12 11:46:10 bsiegert Exp $
 bin/augparse
 bin/augtool
+bin/dump
 bin/fadot
 include/augeas.h
 include/fa.h
