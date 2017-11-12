@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4832 2017/11/12 13:51:09 leot Exp $
+$NetBSD: CHANGES-2017,v 1.4833 2017/11/12 14:12:18 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6940,3 +6940,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-selenium version 3.7.1 [tnn 2017-11-11]
 	Updated sysutils/py-borgbackup to 1.1.2 [bsiegert 2017-11-12]
 	Updated net/gallery-dl to 1.0.1 [leot 2017-11-12]
+	Added print/cups-base version 2.2.5 [khorben 2017-11-12]
