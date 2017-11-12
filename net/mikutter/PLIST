@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2016/12/24 15:45:50 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.38 2017/11/12 16:27:23 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -313,6 +313,8 @@ share/mikutter/core/plugin/extract/po/vi/extract.po
 share/mikutter/core/plugin/extract/po/zh/extract.po
 share/mikutter/core/plugin/extract/po/zh_CN/extract.po
 share/mikutter/core/plugin/extract/po/zh_TW/extract.po
+share/mikutter/core/plugin/file_path/.mikutter.yml
+share/mikutter/core/plugin/file_path/file_path.rb
 share/mikutter/core/plugin/followingcontrol/.mikutter.yml
 share/mikutter/core/plugin/followingcontrol/followingcontrol.rb
 share/mikutter/core/plugin/gtk/.mikutter.yml
