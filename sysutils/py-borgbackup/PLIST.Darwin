@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1 2015/12/27 21:06:06 wiz Exp $
-${PYSITELIB}/borg/platform_darwin.so
+@comment $NetBSD: PLIST.Darwin,v 1.2 2017/11/12 10:52:42 bsiegert Exp $
+${PYSITELIB}/borg/platform/darwin.so
