@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4830 2017/11/12 09:49:00 bsiegert Exp $
+$NetBSD: CHANGES-2017,v 1.4831 2017/11/12 10:53:18 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6938,3 +6938,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/netcat6 to 1.0nb4 [maya 2017-11-11]
 	Updated net/socat to 1.7.3.2nb1 [maya 2017-11-11]
 	Added www/py-selenium version 3.7.1 [tnn 2017-11-11]
+	Updated sysutils/py-borgbackup to 1.1.2 [bsiegert 2017-11-12]
