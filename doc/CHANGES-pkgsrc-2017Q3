@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.19 2017/11/12 13:04:21 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.20 2017/11/12 13:17:11 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q3 branch:
 
@@ -229,3 +229,8 @@ www/curl: security update
 Pullup ticket #5640 - requested by sevan
 net/rsync: security patch
 
+Pullup ticket #5635 - requested by taca
+mail/roundcube: security update
+mail/roundcube-plugin-enigma: security update
+mail/roundcube-plugin-password: security update
+mail/roundcube-plugin-zipdownload: security update
