@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2017/08/05 10:25:46 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2017/11/12 10:52:42 bsiegert Exp $
 
-DISTNAME=	borgbackup-1.0.11
+DISTNAME=	borgbackup-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/borgbackup/}
@@ -20,6 +20,7 @@ MAKE_ENV+=	BORG_LZ4_PREFIX=${BUILDLINK_PREFIX.lz4}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} borg borg-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} borgfs borgfs-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
