@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.16 2017/11/12 11:24:23 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.17 2017/11/12 12:22:27 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q3 branch:
 
@@ -175,3 +175,5 @@ www/apache-tomcat7: security update
 Pullup ticket #5623 - requested by sevan
 www/apache-tomcat8: security update
 
+Pullup ticket #5641 - requested by he
+www/curl: security update
