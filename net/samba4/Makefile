@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2017/09/20 15:14:30 taca Exp $
+# $NetBSD: Makefile,v 1.36 2017/11/12 16:03:35 khorben Exp $
 
 DISTNAME=	samba-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/stable/
 
