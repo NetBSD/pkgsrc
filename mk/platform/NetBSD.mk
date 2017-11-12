@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.56 2017/10/03 13:18:00 jperkin Exp $
+# $NetBSD: NetBSD.mk,v 1.57 2017/11/12 13:34:14 khorben Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -141,6 +141,9 @@ _OPSYS_SUPPORTS_MKPIE=	yes
     (${MACHINE_ARCH} == "x86_64")
 _OPSYS_SUPPORTS_RELRO=	yes
 .endif
+
+# Register support for REPRO (with GCC)
+_OPSYS_SUPPORTS_MKREPRO=	yes
 
 # Register support for SSP on most architectures (with GCC)
 .if (${MACHINE_ARCH} != "alpha") && \

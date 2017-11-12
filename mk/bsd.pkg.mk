@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2027 2017/09/16 09:34:25 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2028 2017/11/12 13:34:14 khorben Exp $
 #
 # This file is in the public domain.
 #
@@ -314,6 +314,10 @@ OVERRIDE_DIRDEPTH?=	2
 .  include "smf.mk"
 .endif
 .endif
+
+# Handle Reproducible Builds
+#
+.include "repro/repro.mk"
 
 # Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
 # of dependencies for building, and the current target.
