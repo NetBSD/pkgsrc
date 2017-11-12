@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2016/10/09 20:32:12 dholland Exp $
+# $NetBSD: Makefile,v 1.19.10.1 2017/11/12 11:32:53 bsiegert Exp $
 
 DISTNAME=	imapsync-1.607
 PKGREVISION=	3
 CATEGORIES=	mail
-MASTER_SITES=	https://fedorahosted.org/released/imapsync/
+MASTER_SITES=	https://releases.pagure.org/imapsync/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	https://fedorahosted.org/imapsync/
+HOMEPAGE=	https://pagure.io/imapsync
 COMMENT=	Incremental recursive IMAP transfer tool
 LICENSE=	public-domain
 
