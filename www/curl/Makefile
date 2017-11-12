@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.187 2017/08/29 07:08:32 wiz Exp $
+# $NetBSD: Makefile,v 1.187.4.1 2017/11/12 12:13:32 spz Exp $
 
-DISTNAME=	curl-7.55.1
-PKGREVISION=	1
+DISTNAME=	curl-7.56.1
 CATEGORIES=	www
 MASTER_SITES=	https://curl.haxx.se/download/
 EXTRACT_SUFX=	.tar.bz2
