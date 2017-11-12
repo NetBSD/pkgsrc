@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2017/06/11 05:26:45 dogcow Exp $
+# $NetBSD: options.mk,v 1.6 2017/11/12 15:36:58 khorben Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba4
 PKG_SUPPORTED_OPTIONS=	ads fam ldap pam winbind # cups # cups option is broken for me.
@@ -40,7 +40,7 @@ CONFIGURE_ARGS+=	--without-ads
 ###
 PLIST_VARS+=		cups
 .if !empty(PKG_OPTIONS:Mcups)
-.  include "../../print/cups/buildlink3.mk"
+.  include "../../print/cups-base/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-cups
 PLIST.cups=		yes
 INSTALLATION_DIRS+=	libexec/cups/backend

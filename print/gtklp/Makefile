@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2017/05/19 13:29:04 prlw1 Exp $
+# $NetBSD: Makefile,v 1.43 2017/11/12 15:36:59 khorben Exp $
 #
 
 DISTNAME=	gtklp-1.2.7
@@ -19,5 +19,5 @@ MAKE_FLAGS+=		install_sh=${WRKSRC}/install-sh
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups-base/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

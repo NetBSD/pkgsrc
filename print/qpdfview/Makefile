@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2017/09/04 20:20:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.47 2017/11/12 15:36:59 khorben Exp $
 
 VER=		0.4.16
 DISTNAME=	qpdfview-${VER}
@@ -27,7 +27,7 @@ do-configure:
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups-base/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
 .include "../../print/poppler-qt4/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"

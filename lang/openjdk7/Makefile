@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2017/08/14 00:02:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.117 2017/11/12 15:36:58 khorben Exp $
 
 JDK_MICRO=	141
 DISTNAME=	openjdk-1.7.${JDK_MICRO}-20170813
@@ -295,6 +295,6 @@ MAKE_ENV+=	STRIP=${PREFIX}/bin/gstrip
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.cups?=	build
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups-base/buildlink3.mk"
 .include "../../mk/java-env.mk"
 .include "../../mk/bsd.pkg.mk"
