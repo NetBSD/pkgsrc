@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ $# -ge 2 ]; then
+	args="$1"
+	mod="$2"
+	shift 2
+
+	exec /usr/bin/ar "$mod$args" "$@"
+else
+	exec /usr/bin/ar "$@"
+fi
