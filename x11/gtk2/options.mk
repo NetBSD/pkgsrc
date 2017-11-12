@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2017/05/19 13:18:19 prlw1 Exp $
+# $NetBSD: options.mk,v 1.16 2017/11/12 15:36:59 khorben Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk2
 PKG_SUPPORTED_OPTIONS=	cups debug
@@ -13,7 +13,7 @@ PKG_SUGGESTED_OPTIONS=		x11
 
 PLIST_VARS+=		cups
 .if !empty(PKG_OPTIONS:Mcups)
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups-base/buildlink3.mk"
 PLIST.cups=		yes
 .else
 CONFIGURE_ENV+=		ac_cv_path_CUPS_CONFIG=no

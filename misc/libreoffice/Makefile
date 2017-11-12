@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2017/11/10 22:54:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.128 2017/11/12 15:36:58 khorben Exp $
 
 VERREL=		5.4.3
 VERRC=		2
@@ -328,7 +328,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../net/libcmis/buildlink3.mk"
 .include "../../net/mDNSResponder/buildlink3.mk"
 .if !empty(PKG_OPTIONS:Mcups)
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups-base/buildlink3.mk"
 .endif
 .include "../../print/poppler-cpp/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"

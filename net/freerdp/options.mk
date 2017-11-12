@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2016/06/24 11:33:59 he Exp $
+# $NetBSD: options.mk,v 1.7 2017/11/12 15:36:58 khorben Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freerdp
 PKG_SUPPORTED_OPTIONS=	alsa cups ffmpeg pcsc pulseaudio debug
@@ -25,7 +25,7 @@ CMAKE_ARGS+=	-DWITH_ALSA=OFF
 ### CUPS support
 ###
 .if !empty(PKG_OPTIONS:Mcups)
-.  include "../../print/cups/buildlink3.mk"
+.  include "../../print/cups-base/buildlink3.mk"
 CMAKE_ARGS+=	-DWITH_CUPS=ON
 PLIST.cups=	yes
 .else
