@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4847 2017/11/13 13:59:18 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4848 2017/11/13 14:01:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6961,3 +6961,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Log-Agent to 1.003 [wiz 2017-11-13]
 	Updated devel/p5-PadWalker to 2.3 [wiz 2017-11-13]
 	Updated devel/p5-Set-Object to 1.38 [wiz 2017-11-13]
+	Updated mail/p5-MIME-Types to 2.14 [wiz 2017-11-13]
