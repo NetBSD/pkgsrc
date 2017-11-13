@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2017/11/10 14:47:41 fhajny Exp $
+# $NetBSD: Makefile,v 1.11 2017/11/13 09:33:31 adam Exp $
 
 PKGNAME=	${DISTNAME:C/-/92-client-/}
-PKGREVISION=	1
 COMMENT=	PostgreSQL database client programs
 
 .include "../../databases/postgresql92/Makefile.common"
@@ -39,9 +38,6 @@ BUILD_DIRS+=	src/backend
 .for f in pg_service.conf psqlrc
 CONF_FILES+=	share/postgresql/${f}.sample ${PKG_SYSCONFDIR}/${f}
 .endfor
-
-# XXX work around core dumps with the native libedit
-USE_GNU_READLINE=	yes
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
