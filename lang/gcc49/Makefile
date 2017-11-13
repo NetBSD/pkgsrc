@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/10/14 14:46:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2017/11/13 19:36:26 maya Exp $
 
 GCC_PKGNAME=	gcc49
 .include	"version.mk"
@@ -14,7 +14,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC49_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	maya@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gcc.gnu.org/
 COMMENT=	The GNU Compiler Collection (GCC) - 4.9 Release Series
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
