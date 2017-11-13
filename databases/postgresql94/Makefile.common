@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2017/11/10 14:47:41 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.21 2017/11/13 09:33:32 adam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -16,7 +16,7 @@
 # used by databases/postgresql94-pltcl/Makefile
 # used by databases/postgresql94-server/Makefile
 
-DISTNAME=	postgresql-9.4.14
+DISTNAME=	postgresql-9.4.15
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PGSQL:=source/v${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -65,11 +65,12 @@ CONFIGURE_ARGS+=	--localedir=${PG_LOCALE_DIR}
 CONFIGURE_ARGS+=	--with-template=${PG_TEMPLATE.${OPSYS}}
 
 CONFIGURE_ARGS+=	--enable-nls
+CONFIGURE_ARGS+=	--with-gssapi
+CONFIGURE_ARGS+=	--with-libxml
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-tcl
-CONFIGURE_ARGS+=	--without-zlib
 
 # sys/ucred.h shouldn't be included on Solaris, causes conflicts between
 # procfs and largefile.
@@ -84,8 +85,8 @@ CONFIGURE_ENV+=		pgac_cv_prog_cc_ldflags__Wl___as_needed=no
 .endif
 
 # configure fails on OpenBSD and MirBSD if thread safety is enabled.
-CONFIGURE_ARGS.MirBSD+=		--disable-thread-safety
-CONFIGURE_ARGS.OpenBSD+=	--disable-thread-safety
+CONFIGURE_ARGS.MirBSD+=	--disable-thread-safety
+CONFIGURE_ARGS.OpenBSD+=--disable-thread-safety
 
 # PGSQL_BLCKSZ is the size in bytes of a PostgreSQL disk page or block.
 # This also limits the size of a tuple.  The valid values are powers
@@ -108,9 +109,13 @@ USE_LIBLTDL?=		no
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 LIBS.SunOS+=		-lintl
-# XXX work around core dumps with the native libedit
-USE_GNU_READLINE=	yes
-.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+
+.include "../../mk/readline.buildlink3.mk"
+.if ${READLINE_TYPE} == "editline"
+CONFIGURE_ARGS+=	--with-libedit-preferred
+.endif
 
 .if !defined(META_PACKAGE)
 post-extract:
