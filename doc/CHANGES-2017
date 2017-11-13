@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4862 2017/11/13 16:53:28 he Exp $
+$NetBSD: CHANGES-2017,v 1.4863 2017/11/13 17:36:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6976,3 +6976,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-XML-Compile-SOAP12 to 3.05 [wiz 2017-11-13]
 	Updated print/ghostscript-gpl to 9.06nb18 [he 2017-11-13]
 	Updated print/ghostscript-gpl to 9.06nb19 [he 2017-11-13]
+	Updated x11/qt5-qtbase to 5.5.1nb16 [minskim 2017-11-13]
