@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2017/09/17 08:17:38 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/11/13 13:37:08 wiz Exp $
 
-DISTNAME=	Sereal-Decoder-3.015
+DISTNAME=	Sereal-Decoder-4.002
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	security perl5 converters
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../CPAN/authors/id/Y/YV/YVES/}
@@ -14,6 +14,9 @@ BUILD_DEPENDS+=	p5-Test-LongString-[0-9]*:../../devel/p5-Test-LongString
 BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 
 PERL5_PACKLIST=		auto/Sereal/Decoder/.packlist
+
+# problem with zstd/ in 4.002
+MAKE_JOBS_SAFE=		no
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
