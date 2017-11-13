@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4839 2017/11/13 09:36:13 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4840 2017/11/13 11:57:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6952,3 +6952,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/postgresql95 to 9.5.10 [adam 2017-11-13]
 	Updated databases/postgresql96 to 9.6.6 [adam 2017-11-13]
 	Updated databases/postgresql10 to 10.1 [adam 2017-11-13]
+	Updated mail/neomutt to 20171027 [wiz 2017-11-13]
