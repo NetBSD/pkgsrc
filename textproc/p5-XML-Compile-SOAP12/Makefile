@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/06/05 14:24:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2017/11/13 15:37:25 wiz Exp $
 
-DISTNAME=	XML-Compile-SOAP12-3.04
+DISTNAME=	XML-Compile-SOAP12-3.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MARKOV/}
 
@@ -15,6 +14,7 @@ DEPENDS+=	p5-Log-Report-[0-9]*:../../devel/p5-Log-Report
 DEPENDS+=	p5-XML-Compile-[0-9]*:../../textproc/p5-XML-Compile
 DEPENDS+=	p5-XML-Compile-Cache-[0-9]*:../../textproc/p5-XML-Compile-Cache
 DEPENDS+=	p5-XML-Compile-SOAP-[0-9]*:../../textproc/p5-XML-Compile-SOAP
+DEPENDS+=	p5-common-sense-[0-9]*:../../devel/p5-common-sense
 # TEST_DEPENDS
 BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-XML-Compile-Tester-[0-9]*:../../textproc/p5-XML-Compile-Tester
