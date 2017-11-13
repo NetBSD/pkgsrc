@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4835 2017/11/13 01:46:01 wen Exp $
+$NetBSD: CHANGES-2017,v 1.4836 2017/11/13 07:51:31 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6943,3 +6943,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added print/cups-base version 2.2.5 [khorben 2017-11-12]
 	Updated net/mikutter to 3.5.14 [tsutsui 2017-11-12]
 	Updated devel/p5-Moose to 2.2007 [wen 2017-11-13]
+	Updated geography/py-obspy to 1.1.0 [wen 2017-11-13]
