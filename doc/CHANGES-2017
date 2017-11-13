@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4851 2017/11/13 14:21:06 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4852 2017/11/13 14:22:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6965,3 +6965,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/p5-Mail-Message to 3.003 [wiz 2017-11-13]
 	Updated mail/p5-User-Identity to 0.98 [wiz 2017-11-13]
 	Updated misc/p5-Locale-libintl to 1.29 [wiz 2017-11-13]
+	Updated net/p5-Net-Frame-Simple to 1.09 [wiz 2017-11-13]
