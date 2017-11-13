@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2017/11/10 14:47:41 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.3 2017/11/13 09:33:31 adam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -16,7 +16,7 @@
 # used by databases/postgresql10-pltcl/Makefile
 # used by databases/postgresql10-server/Makefile
 
-DISTNAME=	postgresql-10.0
+DISTNAME=	postgresql-10.1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PGSQL:=source/v${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -75,9 +75,7 @@ CONFIGURE_ENV+=		MSGFMT=${TOOLS_PATH.msgfmt}
 
 # sys/ucred.h shouldn't be included on Solaris, causes conflicts between
 # procfs and largefile.
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=		ac_cv_header_sys_ucred_h=no
-.endif
+CONFIGURE_ENV.SunOS+=	ac_cv_header_sys_ucred_h=no
 
 # pkgsrc silently filters the --as-needed linker arg, but that makes
 # it leak into the pgxs Makefiles and compromises manual building
@@ -88,9 +86,8 @@ CONFIGURE_ENV+=		pgac_cv_prog_cc_ldflags__Wl___as_needed=no
 .endif
 
 # configure fails on OpenBSD and MirBSD if thread safety is enabled.
-.if ${OPSYS} == "OpenBSD" || ${OPSYS} == "MirBSD"
-CONFIGURE_ARGS+=	--disable-thread-safety
-.endif
+CONFIGURE_ARGS.MirBSD+=	--disable-thread-safety
+CONFIGURE_ARGS.OpenBSD+=--disable-thread-safety
 
 # PGSQL_BLCKSZ is the size in bytes of a PostgreSQL disk page or block.
 # This also limits the size of a tuple.  The valid values are powers
