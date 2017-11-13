@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2017/11/08 16:22:30 wiz Exp $
+$NetBSD: distinfo,v 1.19 2017/11/13 08:07:58 wen Exp $
 
-SHA1 (Unicode-Collate-1.21.tar.gz) = 40a01e738ed7bb0a2fc7d2fb3c48bc942f249dba
-RMD160 (Unicode-Collate-1.21.tar.gz) = 7dff3215c1f677ad4264a09200d606a451a7dc70
-SHA512 (Unicode-Collate-1.21.tar.gz) = a603d7affb60c4064325ee7a409570d40787e1fe9f50310fb6a1a1f6fe51d92a7ce398edfbb6fc708e48cb0eff1c5afc03695ea07d37a6c9bbb63e7eb104aa54
-Size (Unicode-Collate-1.21.tar.gz) = 893521 bytes
+SHA1 (Unicode-Collate-1.22.tar.gz) = 744d13b4b1f70a9177ad16dc866a26d57e1324a7
+RMD160 (Unicode-Collate-1.22.tar.gz) = e26f1220abf62d9e5647c62bbe969e91ded42830
+SHA512 (Unicode-Collate-1.22.tar.gz) = 942d63667488b3601008fe2050d07ac4e289c0c1132b929a87061fad9054f40e2efc9c2e10d6373fab6d1be01d9d78a08317eadf30ed65257ae47af9e855efaf
+Size (Unicode-Collate-1.22.tar.gz) = 893792 bytes
