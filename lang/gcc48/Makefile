@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2017/07/28 23:40:07 maya Exp $
+# $NetBSD: Makefile,v 1.38 2017/11/13 19:36:26 maya Exp $
 
 GCC_PKGNAME=	gcc48
 .include	"version.mk"
@@ -13,7 +13,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC48_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	maya@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gcc.gnu.org/
 COMMENT=	The GNU Compiler Collection (GCC) - 4.8 Release Series
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
