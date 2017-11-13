@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4854 2017/11/13 14:30:05 he Exp $
+$NetBSD: CHANGES-2017,v 1.4855 2017/11/13 15:10:37 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6968,3 +6968,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/p5-Net-Frame-Simple to 1.09 [wiz 2017-11-13]
 	Updated textproc/p5-XML-LibXML-Simple to 0.98 [wiz 2017-11-13]
 	Updated graphics/ImageMagick to 7.0.7.11 [he 2017-11-13]
+	Updated print/ghostscript-gpl to 9.06nb17 [he 2017-11-13]
