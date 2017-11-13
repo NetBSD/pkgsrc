@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2017/11/13 09:33:33 adam Exp $
+# $NetBSD: Makefile.common,v 1.9 2017/11/13 09:35:46 adam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -117,6 +117,7 @@ LIBS.SunOS+=		-lintl
 CONFIGURE_ARGS+=	--with-libedit-preferred
 .endif
 
+.if !defined(META_PACKAGE)
 post-extract:
 .  if !empty(USE_LIBLTDL:M[yY][eE][sS])
 	cp -f ${COMMON_FILESDIR}/dynloader-ltdl.h \
