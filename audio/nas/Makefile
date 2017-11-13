@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2015/08/06 22:23:17 khorben Exp $
+# $NetBSD: Makefile,v 1.97 2017/11/13 12:23:36 khorben Exp $
 
 DISTNAME=	nas-1.9.4.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -19,6 +19,8 @@ USE_TOOLS+=		yacc lex makedepend
 USE_IMAKE=		yes
 
 MAKE_FLAGS+=		CDEBUGFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=		EXTRA_LDOPTIONS=${LDFLAGS:Q}
+MAKE_FLAGS+=		SHLIBGLOBALSFLAGS=${LDFLAGS:Q}
 
 PKG_SYSCONFSUBDIR=	nas
 
