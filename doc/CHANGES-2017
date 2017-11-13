@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4858 2017/11/13 15:22:40 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4859 2017/11/13 15:35:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6972,3 +6972,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Function-Parameters to 2.001003 [wiz 2017-11-13]
 	Updated finance/p5-Finance-Quote to 1.45 [wiz 2017-11-13]
 	Updated math/p5-Math-Prime-Util to 0.69 [wiz 2017-11-13]
+	Updated math/p5-Spreadsheet-Read to 0.75 [wiz 2017-11-13]
