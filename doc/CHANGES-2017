@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4845 2017/11/13 13:56:42 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4846 2017/11/13 13:57:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6959,3 +6959,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/cmake to 3.9.6 [adam 2017-11-13]
 	Updated converters/p5-Sereal to 4.002 [wiz 2017-11-13]
 	Updated devel/p5-Log-Agent to 1.003 [wiz 2017-11-13]
+	Updated devel/p5-PadWalker to 2.3 [wiz 2017-11-13]
