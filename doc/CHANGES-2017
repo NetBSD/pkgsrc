@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4861 2017/11/13 16:42:17 he Exp $
+$NetBSD: CHANGES-2017,v 1.4862 2017/11/13 16:53:28 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6975,3 +6975,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/p5-Spreadsheet-Read to 0.75 [wiz 2017-11-13]
 	Updated textproc/p5-XML-Compile-SOAP12 to 3.05 [wiz 2017-11-13]
 	Updated print/ghostscript-gpl to 9.06nb18 [he 2017-11-13]
+	Updated print/ghostscript-gpl to 9.06nb19 [he 2017-11-13]
