@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/23 20:33:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/11/13 09:33:31 adam Exp $
 man/man1/clusterdb.1
 man/man1/createdb.1
 man/man1/createuser.1
@@ -914,6 +914,7 @@ share/doc/postgresql/html/release-1-0.html
 share/doc/postgresql/html/release-1-01.html
 share/doc/postgresql/html/release-1-02.html
 share/doc/postgresql/html/release-1-09.html
+share/doc/postgresql/html/release-10-1.html
 share/doc/postgresql/html/release-10.html
 share/doc/postgresql/html/release-6-0.html
 share/doc/postgresql/html/release-6-1-1.html
@@ -1187,6 +1188,7 @@ share/doc/postgresql/html/release-9-2-20.html
 share/doc/postgresql/html/release-9-2-21.html
 share/doc/postgresql/html/release-9-2-22.html
 share/doc/postgresql/html/release-9-2-23.html
+share/doc/postgresql/html/release-9-2-24.html
 share/doc/postgresql/html/release-9-2-3.html
 share/doc/postgresql/html/release-9-2-4.html
 share/doc/postgresql/html/release-9-2-5.html
@@ -1207,6 +1209,7 @@ share/doc/postgresql/html/release-9-3-17.html
 share/doc/postgresql/html/release-9-3-18.html
 share/doc/postgresql/html/release-9-3-19.html
 share/doc/postgresql/html/release-9-3-2.html
+share/doc/postgresql/html/release-9-3-20.html
 share/doc/postgresql/html/release-9-3-3.html
 share/doc/postgresql/html/release-9-3-4.html
 share/doc/postgresql/html/release-9-3-5.html
@@ -1221,6 +1224,7 @@ share/doc/postgresql/html/release-9-4-11.html
 share/doc/postgresql/html/release-9-4-12.html
 share/doc/postgresql/html/release-9-4-13.html
 share/doc/postgresql/html/release-9-4-14.html
+share/doc/postgresql/html/release-9-4-15.html
 share/doc/postgresql/html/release-9-4-2.html
 share/doc/postgresql/html/release-9-4-3.html
 share/doc/postgresql/html/release-9-4-4.html
@@ -1231,6 +1235,7 @@ share/doc/postgresql/html/release-9-4-8.html
 share/doc/postgresql/html/release-9-4-9.html
 share/doc/postgresql/html/release-9-4.html
 share/doc/postgresql/html/release-9-5-1.html
+share/doc/postgresql/html/release-9-5-10.html
 share/doc/postgresql/html/release-9-5-2.html
 share/doc/postgresql/html/release-9-5-3.html
 share/doc/postgresql/html/release-9-5-4.html
@@ -1245,6 +1250,7 @@ share/doc/postgresql/html/release-9-6-2.html
 share/doc/postgresql/html/release-9-6-3.html
 share/doc/postgresql/html/release-9-6-4.html
 share/doc/postgresql/html/release-9-6-5.html
+share/doc/postgresql/html/release-9-6-6.html
 share/doc/postgresql/html/release-9-6.html
 share/doc/postgresql/html/release.html
 share/doc/postgresql/html/replication-origins.html
