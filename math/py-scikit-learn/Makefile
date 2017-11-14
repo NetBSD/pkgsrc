@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/07/05 21:31:28 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2017/11/14 22:56:37 minskim Exp $
 
-DISTNAME=	scikit-learn-0.18.1
+DISTNAME=	scikit-learn-0.18.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-learn/}
