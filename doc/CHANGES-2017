@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4863 2017/11/13 17:36:48 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.4864 2017/11/14 09:45:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6977,3 +6977,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/ghostscript-gpl to 9.06nb18 [he 2017-11-13]
 	Updated print/ghostscript-gpl to 9.06nb19 [he 2017-11-13]
 	Updated x11/qt5-qtbase to 5.5.1nb16 [minskim 2017-11-13]
+	Updated finance/p5-Finance-Quote to 1.47 [wiz 2017-11-14]
