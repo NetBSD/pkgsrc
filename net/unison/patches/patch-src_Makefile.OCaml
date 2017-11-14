@@ -1,9 +1,9 @@
-$NetBSD: patch-Makefile.OCaml,v 1.5 2015/01/06 12:58:37 wiz Exp $
+$NetBSD: patch-src_Makefile.OCaml,v 1.1 2017/11/14 13:03:35 jaapb Exp $
 
 Correct lablgtk paths for 2.16, and use ocamlopt.opt for compilation
 
---- Makefile.OCaml.orig	2014-09-28 16:48:05.000000000 +0000
-+++ Makefile.OCaml
+--- src/Makefile.OCaml.orig	2015-10-05 18:14:23.000000000 +0000
++++ src/Makefile.OCaml
 @@ -75,8 +75,8 @@ OCAMLLIBDIR=$(shell ocamlc -v | tail -1 
  #
  # This should be set to an appropriate value automatically, depending
