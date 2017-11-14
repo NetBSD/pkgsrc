@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/07/05 21:31:28 minskim Exp $
+$NetBSD: distinfo,v 1.2 2017/11/14 22:56:37 minskim Exp $
 
-SHA1 (scikit-learn-0.18.1.tar.gz) = 1d81e86d23761b3eb60ec7841e6acf9f5e208a7d
-RMD160 (scikit-learn-0.18.1.tar.gz) = 0c17d3083be1c36a05192bf5e8d76669b1ca3696
-SHA512 (scikit-learn-0.18.1.tar.gz) = 7149e683424351a28c19501302ece147cb03d4d12b08822eb2b1898a4978b96803323778fbba628008dd7a7c85daea4e9b550a71ee76851f9a09b2baac18a799
-Size (scikit-learn-0.18.1.tar.gz) = 8933930 bytes
+SHA1 (scikit-learn-0.18.2.tar.gz) = 0931b7d7c9db97b02fb4de34c4e24a01e2bf000b
+RMD160 (scikit-learn-0.18.2.tar.gz) = 037129c5d196a55f2b0359f171616c9922b12d4d
+SHA512 (scikit-learn-0.18.2.tar.gz) = 7c5c7bdd577ad215790654ce1eff6e802aebe53283ab6c5f12684cf99aeecc8976f9a9803f619f549d4d03be0d7634f249046e4b4f15afa12aecb2697e2e0b05
+Size (scikit-learn-0.18.2.tar.gz) = 9224516 bytes
