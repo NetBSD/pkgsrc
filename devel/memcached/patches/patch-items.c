@@ -1,10 +1,10 @@
-$NetBSD: patch-items.c,v 1.1 2017/02/16 11:10:53 adam Exp $
+$NetBSD: patch-items.c,v 1.2 2017/11/14 14:13:52 fhajny Exp $
 
 time_t changes
 
---- items.c.orig	2017-01-08 01:10:24.000000000 +0000
+--- items.c.orig	2017-11-04 21:49:54.000000000 +0000
 +++ items.c
-@@ -489,10 +489,10 @@ char *item_cachedump(const unsigned int 
+@@ -588,10 +588,10 @@ char *item_cachedump(const unsigned int 
          /* Copy the key since it may not be null-terminated in the struct */
          strncpy(key_temp, ITEM_key(it), it->nkey);
          key_temp[it->nkey] = 0x00; /* terminate */
@@ -17,9 +17,9 @@ time_t changes
          if (bufcurr + len + 6 > memlimit)  /* 6 is END\r\n\0 */
              break;
          memcpy(buffer + bufcurr, temp, len);
-@@ -615,13 +615,13 @@ void item_stats(ADD_STAT add_stats, void
-                 APPEND_NUM_FMT_STAT(fmt, n, "number_noexp", "%u", lru_size_map[3]);
-             }
+@@ -768,13 +768,13 @@ void item_stats(ADD_STAT add_stats, void
+             APPEND_NUM_FMT_STAT(fmt, n, "age_hot", "%u", age_hot);
+             APPEND_NUM_FMT_STAT(fmt, n, "age_warm", "%u", age_warm);
          }
 -        APPEND_NUM_FMT_STAT(fmt, n, "age", "%u", age);
 +        APPEND_NUM_FMT_STAT(fmt, n, "age", "%jd", age);
