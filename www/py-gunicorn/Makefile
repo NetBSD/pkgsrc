@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/11/03 14:39:27 leot Exp $
+# $NetBSD: Makefile,v 1.11 2017/11/14 00:28:00 minskim Exp $
 
 DISTNAME=	gunicorn-19.7.1
 PKGREVISION=	1
@@ -19,6 +19,8 @@ USE_TOOLS+=	pax
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 EXAMPLESDIR=	${PREFIX}/share/examples/${PKGBASE}
 AUTO_MKDIRS=	yes
+
+INSTALLATION_DIRS+=	share/doc/${PKGBASE} share/examples/${PKGBASE}
 
 post-install:
 	cd ${WRKSRC}/docs/source && pax -wr -pma *.rst	\
