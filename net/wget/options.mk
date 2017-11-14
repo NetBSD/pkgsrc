@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2014/04/26 11:17:18 tron Exp $
+# $NetBSD: options.mk,v 1.10 2017/11/14 09:51:13 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wget
 PKG_SUPPORTED_OPTIONS=	idn inet6
@@ -12,8 +12,11 @@ PKG_SUGGESTED_OPTIONS=	idn inet6 openssl
 ### Support IDN
 ###
 .if !empty(PKG_OPTIONS:Midn)
-.include "../../devel/libidn/buildlink3.mk"
+.include "../../devel/libidn2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-iri
+.else
+CONFIGURE_ARGS+=	--disable-iri
 .endif
 
 ###
