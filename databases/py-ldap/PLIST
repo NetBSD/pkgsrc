@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2017/05/09 07:52:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2017/11/15 07:50:40 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,9 +6,6 @@ ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/_ldap.so
-${PYSITELIB}/dsml.py
-${PYSITELIB}/dsml.pyc
-${PYSITELIB}/dsml.pyo
 ${PYSITELIB}/ldap/__init__.py
 ${PYSITELIB}/ldap/__init__.pyc
 ${PYSITELIB}/ldap/__init__.pyo
@@ -75,6 +72,9 @@ ${PYSITELIB}/ldap/logger.pyo
 ${PYSITELIB}/ldap/modlist.py
 ${PYSITELIB}/ldap/modlist.pyc
 ${PYSITELIB}/ldap/modlist.pyo
+${PYSITELIB}/ldap/pkginfo.py
+${PYSITELIB}/ldap/pkginfo.pyc
+${PYSITELIB}/ldap/pkginfo.pyo
 ${PYSITELIB}/ldap/resiter.py
 ${PYSITELIB}/ldap/resiter.pyc
 ${PYSITELIB}/ldap/resiter.pyo
