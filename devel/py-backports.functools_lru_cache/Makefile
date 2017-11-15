@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/07/16 20:10:37 adam Exp $
+# $NetBSD: Makefile,v 1.3 2017/11/15 14:18:46 adam Exp $
 
 DISTNAME=	backports.functools_lru_cache-1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/backports.functools_lru_cache/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
