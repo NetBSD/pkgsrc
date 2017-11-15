@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/07/28 08:12:30 wen Exp $
+$NetBSD: distinfo,v 1.6 2017/11/15 10:49:00 wiz Exp $
 
-SHA1 (experimental-0.016.tar.gz) = f17ed1e9cc83c9ead54c961f3d405371956729f7
-RMD160 (experimental-0.016.tar.gz) = e95f56cf0e8941bb89da562027a6e546adf3041c
-SHA512 (experimental-0.016.tar.gz) = ac789541be8b3f69d6acc82ef3a689c5bc36d5c4f2cf04800813a36fdb5da36d52b86aa09ef2ba4beed2a6745fc88f753fdb9de4b63b9c88860b73b90ff9d6cb
-Size (experimental-0.016.tar.gz) = 12397 bytes
+SHA1 (experimental-0.017.tar.gz) = 3ae5329bd1344ab4695c21bc9dda7b673b2fbe61
+RMD160 (experimental-0.017.tar.gz) = f42235889875176f8b0ba8d83847b29bcbb80ab5
+SHA512 (experimental-0.017.tar.gz) = 328526b08309b133286ab5816f2ce17bf91dfa32b4bed91548b12869aa8a76557897398fc2d4d5a0072c463d2dfde410a486e14fb2fd3b4567f1cf880c6e768e
+Size (experimental-0.017.tar.gz) = 12543 bytes
