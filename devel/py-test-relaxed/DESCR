@@ -1,0 +1,12 @@
+pytest-relaxed provides 'relaxed' test discovery for pytest.
+
+Has it ever felt strange to you that we put our tests in tests/, then name the
+files test_foo.py, name the test classes TestFoo, and finally name the test
+methods test_foo_bar? Especially when almost all of the code inside of tests/
+is, well, tests?
+
+This pytest plugin takes a page from the rest of Python, where you don't have
+to explicitly note public module/class members, but only need to hint as to
+which ones are private. By default, all files and objects pytest is told to
+scan will be considered tests; to mark something as not-a-test, simply prefix
+it with an underscore.
