@@ -1,8 +1,12 @@
-$NetBSD: patch-an,v 1.1 2009/12/29 21:51:00 joerg Exp $
+$NetBSD: patch-src_Makefile.in.in,v 1.1 2017/11/15 15:01:36 hauke Exp $
 
---- src/Makefile.in.in.orig	2009-12-29 21:28:28.000000000 +0000
+Deal with bulk build namespace intrusion.
+
+Was patch-an
+
+--- src/Makefile.in.in.orig	2013-08-21 17:43:45.000000000 +0000
 +++ src/Makefile.in.in
-@@ -451,10 +451,10 @@ RAW_EXE  = temacs
+@@ -437,10 +437,10 @@ RAW_EXE  = temacs
  DO_TEMACS = $(DUMPENV) ./$(RAW_EXE)
  DO_XEMACS = ./$(PROGNAME)
  
@@ -16,7 +20,7 @@ $NetBSD: patch-an,v 1.1 2009/12/29 21:51:00 joerg Exp $
  XEMACS_BATCH_PACKAGES = $(DO_XEMACS) $(BATCH_PACKAGES)
  temacs_loadup_args = -l $(LISP)/loadup.el
  dump_temacs_args   = $(temacs_loadup_args) dump
-@@ -663,7 +663,7 @@ load-shadows: update-elc-2
+@@ -644,7 +644,7 @@ load-shadows: update-elc-2
  
  release: all
  	-if [ -w $(LISP) ]; then \
@@ -25,7 +29,7 @@ $NetBSD: patch-an,v 1.1 2009/12/29 21:51:00 joerg Exp $
  	else true; fi
  	-$(dump_temacs)
  	touch release
-@@ -974,7 +974,7 @@ run-rtcmacs: rtcmacs
+@@ -931,7 +931,7 @@ run-rtcmacs: rtcmacs
  	ignore POLL; \
  	check -access; \
  	suppress rui; \
