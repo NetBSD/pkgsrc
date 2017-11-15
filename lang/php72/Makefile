@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2017/11/15 08:56:12 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2017/11/15 11:01:17 jdolecek Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
 #
 PKGNAME=		php-${PHP_VERSION:S/RC/rc/}
 CATEGORIES=		lang
+
+# XXX remove this once the files would be available on standard location
 MASTER_SITES=   https://downloads.php.net/~pollita/
 
 HOMEPAGE=		http://www.php.net/
