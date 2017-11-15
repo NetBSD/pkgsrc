@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4881 2017/11/15 10:41:43 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4882 2017/11/15 10:48:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7002,3 +7002,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated converters/p5-Sereal to 4.004 [wiz 2017-11-15]
 	Updated converters/p5-Unicode-Collate to 1.23 [wiz 2017-11-15]
 	Updated devel/p5-Compress-Raw-Zlib to 2.075 [wiz 2017-11-15]
+	Updated devel/p5-Search-Elasticsearch to 6.00 [wiz 2017-11-15]
