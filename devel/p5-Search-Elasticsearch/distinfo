@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2017/04/16 15:36:47 mef Exp $
+$NetBSD: distinfo,v 1.9 2017/11/15 10:48:03 wiz Exp $
 
-SHA1 (Search-Elasticsearch-5.02.tar.gz) = cfea34e59e7881b7fa61fc6576cb12520337019e
-RMD160 (Search-Elasticsearch-5.02.tar.gz) = 95a3721175d25813d65d0ffd4527e8e5396e401a
-SHA512 (Search-Elasticsearch-5.02.tar.gz) = a119f8f0dde74cd4e4aa556815311ab8abb5f92ce057978f9a15c78c8aab9424dcfae641e508d32c1d06f5d315e347f74fd308081f8a0df3d71b6c6b492b767c
-Size (Search-Elasticsearch-5.02.tar.gz) = 104021 bytes
+SHA1 (Search-Elasticsearch-6.00.tar.gz) = 0e3ea3ba61496dc8f3ca1975b084653152d57534
+RMD160 (Search-Elasticsearch-6.00.tar.gz) = 03bfd23ed84f633d6d939d282eb88520a2956325
+SHA512 (Search-Elasticsearch-6.00.tar.gz) = c25e31523f63915ac56d953ef601537f2e6a76fb82d20eda837950bf4043de1e48a16758c5c1391383e17784fd740d01a522271c34757500ff47de152552f621
+Size (Search-Elasticsearch-6.00.tar.gz) = 109121 bytes
