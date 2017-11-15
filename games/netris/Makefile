@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2017/09/03 08:53:09 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.21 2017/11/15 22:15:16 wiz Exp $
 
 DISTNAME=		netris-0.52
 PKGREVISION=		4
 CATEGORIES=		games
-MASTER_SITES=		ftp://ftp.netris.org/pub/netris/
+#MASTER_SITES=		ftp://ftp.netris.org/pub/netris/
 
 PATCH_SITES=		ftp://ftp2.v6.linux.or.jp/pub/Linux/IPv6-2/netris/ \
 			http://ftp2.v6.linux.or.jp/pub/Linux/IPv6-2/netris/
@@ -12,7 +11,7 @@ PATCHFILES=		netris-0.5-v6-19991206a.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		uebs@gmx.at
-HOMEPAGE=		https://www.netris.org/
+#HOMEPAGE=		https://www.netris.org/
 COMMENT=		Everybody's darling T*tris in a networked version
 
 USE_TOOLS+=		gmake
