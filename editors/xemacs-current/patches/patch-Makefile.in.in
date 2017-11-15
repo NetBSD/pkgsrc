@@ -1,0 +1,42 @@
+$NetBSD: patch-Makefile.in.in,v 1.1 2017/11/15 14:49:32 hauke Exp $
+
+Prefix {c,e}tags to avoid conflicts.
+
+was patch-aa
+
+--- Makefile.in.in.orig	2013-08-21 17:45:17.000000000 +0000
++++ Makefile.in.in
+@@ -407,7 +407,7 @@ install-arch-dep: mkdir
+ 	   fi; \
+ 	   ${INSTALL_DATA} lib-src/config.values $(DESTDIR)${docdir}/config.values; \
+ 	   ${INSTALL_DATA} lib-src/DOC $(DESTDIR)${docdir}/DOC; \
+-	   for subdir in `find ${archlibdir} -type d ! -name RCS ! -name SCCS ! -name CVS -print` ; \
++	   for subdir in `find $(DESTDIR)${archlibdir} -type d ! -name RCS ! -name SCCS ! -name CVS -print` ; \
+ 	     do (cd $${subdir} && $(RM) -r RCS CVS SCCS \#* *~) ; done ; \
+ 	else true; fi
+ #if (defined(PDUMP) && !defined (DUMP_IN_EXEC)) || (defined (PDUMP) && defined(WIN32_NATIVE))
+@@ -430,7 +430,8 @@ install-arch-dep: mkdir
+ # endif /* CYGWIN */
+ #endif /* WIN32_NATIVE */
+ #ifdef HAVE_SHLIB
+-	$(INSTALL_DATA) $(srcdir)/modules/auto-autoloads.* $(DESTDIR)$(moduledir)
++	$(INSTALL_DATA) $(srcdir)/modules/auto-autoloads.el $(DESTDIR)$(moduledir)
++	$(INSTALL_DATA) $(srcdir)/modules/auto-autoloads.elc $(DESTDIR)$(moduledir)
+ #endif
+ 
+ install-arch-indep: mkdir info
+@@ -471,8 +472,12 @@ install-arch-indep: mkdir info
+ 	fi
+ 	cd ${srcdir}/etc && \
+ 	  for page in xemacs etags ctags gnuserv gnuclient gnuattach gnudoit; do \
+-	    ${INSTALL_DATA} ${srcdir}/etc/$${page}.1 $(DESTDIR)${mandir}/$${page}${manext} ; \
+-	    chmod 0644 $(DESTDIR)${mandir}/$${page}${manext} ; \
++            if [ $${page} = etags ] || [ $${page} = ctags ] ; \
++            then \
++              ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 $(DESTDIR)${mandir}/xemacs-$${page}${manext} ; \
++            else \
++              ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 $(DESTDIR)${mandir}/$${page}${manext} ; \
++            fi \
+ 	  done
+ 	@echo "If you would like to save approximately 4M of disk space, do"
+ 	@echo "make gzip-el"
