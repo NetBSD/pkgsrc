@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/10/28 07:38:07 adam Exp $
+$NetBSD: distinfo,v 1.2 2017/11/15 08:16:14 adam Exp $
 
-SHA1 (asttokens-1.1.6.tar.gz) = 209004427e8b0c3c09139c2b782321e1410fbc3c
-RMD160 (asttokens-1.1.6.tar.gz) = 5b80f776702a88cacf18f0c22812289a8d1977c7
-SHA512 (asttokens-1.1.6.tar.gz) = 2b835e7a88c0d503bb185293d3fc008e285d1e0818ce59091ac622af7717ba95036b5d5c6b23d6e14ae7f660b48bc0333d9e0e48e8c110a25f41f75883a46ee2
-Size (asttokens-1.1.6.tar.gz) = 32925 bytes
+SHA1 (asttokens-1.1.7.tar.gz) = 89ae7c9abfd72984aece5d574bb13bcd2b1e27fc
+RMD160 (asttokens-1.1.7.tar.gz) = 35573b4c73332a0071638a568ee0fc7b3de4eaa1
+SHA512 (asttokens-1.1.7.tar.gz) = 4ec0e5c88036f88a6a72660ccfcd5ab6f5a4ab902fed22f1062f70bb713281317f657f1d0084eb61fb9e763ccd5cda920d7a02aaa90b4d07a512ccef555134cd
+Size (asttokens-1.1.7.tar.gz) = 32984 bytes
