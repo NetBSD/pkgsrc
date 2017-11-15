@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/09/30 10:10:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/11/15 23:29:26 markd Exp $
 bin/fitscheck${PYVERSSUFFIX}
 bin/fitsdiff${PYVERSSUFFIX}
 bin/fitshead${PYVERSSUFFIX}
@@ -15,6 +15,12 @@ ${PYSITELIB}/pyfits/__init__.pyo
 ${PYSITELIB}/pyfits/_compat/__init__.py
 ${PYSITELIB}/pyfits/_compat/__init__.pyc
 ${PYSITELIB}/pyfits/_compat/__init__.pyo
+${PLIST.py2x}${PYSITELIB}/pyfits/_compat/_odict_py2/__init__.py
+${PLIST.py2x}${PYSITELIB}/pyfits/_compat/_odict_py2/__init__.pyc
+${PLIST.py2x}${PYSITELIB}/pyfits/_compat/_odict_py2/__init__.pyo
+${PLIST.py2x}${PYSITELIB}/pyfits/_compat/_weakset_py2/__init__.py
+${PLIST.py2x}${PYSITELIB}/pyfits/_compat/_weakset_py2/__init__.pyc
+${PLIST.py2x}${PYSITELIB}/pyfits/_compat/_weakset_py2/__init__.pyo
 ${PYSITELIB}/pyfits/_compat/odict.py
 ${PYSITELIB}/pyfits/_compat/odict.pyc
 ${PYSITELIB}/pyfits/_compat/odict.pyo
