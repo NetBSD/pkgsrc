@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/08/19 14:01:17 adam Exp $
+# $NetBSD: Makefile,v 1.4 2017/11/15 23:07:47 minskim Exp $
 
 DISTNAME=	typing-3.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	python-software-foundation
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36	# introduced in Python 3.6
+PYTHON_VERSIONS_INCOMPATIBLE=	35 36	# introduced in Python 3.5
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
