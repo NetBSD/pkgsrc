@@ -1,8 +1,13 @@
-$NetBSD: patch-ad,v 1.2 2006/09/04 09:20:51 martin Exp $
+$NetBSD: patch-src_unexelf.c,v 1.1 2017/11/15 14:53:27 hauke Exp $
 
---- src/unexelf.c.orig	2005-10-29 09:18:21.000000000 +0200
-+++ src/unexelf.c	2006-08-30 17:51:08.000000000 +0200
-@@ -492,10 +492,19 @@
+Enhance ELF macros to deal with 32/64 bit arches
+Special-case alpha
+
+Was patch-ad
+
+--- src/unexelf.c.orig	2013-08-21 17:43:45.000000000 +0000
++++ src/unexelf.c
+@@ -490,10 +490,19 @@ typedef struct {
  
  #ifndef ElfW
  # ifdef __STDC__
@@ -24,7 +29,7 @@ $NetBSD: patch-ad,v 1.2 2006/09/04 09:20:51 martin Exp $
  #endif
  
  #ifndef ELF_BSS_SECTION_NAME
-@@ -961,7 +970,7 @@
+@@ -959,7 +968,7 @@ unexec (Extbyte *new_name, Extbyte *old_
        memcpy (NEW_SECTION_H (nn).sh_offset + new_base, src,
  	      NEW_SECTION_H (nn).sh_size);
  
