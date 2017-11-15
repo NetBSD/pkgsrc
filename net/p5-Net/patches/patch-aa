@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.10 2014/09/07 12:34:19 wiz Exp $
+$NetBSD: patch-aa,v 1.11 2017/11/15 11:41:24 wiz Exp $
+
+Make configure step non-interactive.
 
 --- Configure.orig	2014-05-30 22:05:23.000000000 +0000
 +++ Configure
