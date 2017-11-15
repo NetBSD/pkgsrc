@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.15 2017/08/16 20:21:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.16 2017/11/15 20:28:27 minskim Exp $
 # used by devel/hdf5/Makefile
 # used by devel/hdf5-c++/Makefile
 
-DISTNAME=	hdf5-1.8.18
+DISTNAME=	hdf5-1.10.1
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.hdfgroup.org/HDF5/current18/src/
+MASTER_SITES=	https://support.hdfgroup.org/ftp/HDF5/current/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
