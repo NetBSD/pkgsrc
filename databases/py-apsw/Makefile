@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2017/09/18 09:53:14 maya Exp $
+# $NetBSD: Makefile,v 1.13 2017/11/15 08:23:52 adam Exp $
 
 DISTNAME=	apsw-${GITHUB_RELEASE}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-r1//}
-PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rogerbinns/}
 GITHUB_PROJECT=	apsw
-GITHUB_RELEASE=	3.20.1-r1
+GITHUB_RELEASE=	3.21.0-r1
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	rhialto@falu.nl
@@ -17,7 +16,7 @@ LICENSE=	zlib
 USE_LANGUAGES=	c
 EGG_NAME=	${DISTNAME:S/-r1/.post1/}
 
-BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.18
+BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.21
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
