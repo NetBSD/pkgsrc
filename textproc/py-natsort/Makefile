@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/08/22 07:46:22 adam Exp $
+# $NetBSD: Makefile,v 1.5 2017/11/15 14:13:58 adam Exp $
 
-DISTNAME=	natsort-5.1.0
+DISTNAME=	natsort-5.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/natsort/}
