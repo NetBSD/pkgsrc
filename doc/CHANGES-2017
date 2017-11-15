@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4887 2017/11/15 14:09:39 taca Exp $
+$NetBSD: CHANGES-2017,v 1.4888 2017/11/15 14:15:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7008,3 +7008,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/feh to 2.22.2 [szptvlfn 2017-11-15]
 	Updated www/contao35 to 3.5.31 [taca 2017-11-15]
 	Updated www/contao44 to 4.4.8 [taca 2017-11-15]
+	Updated textproc/py-natsort to 5.1.1 [adam 2017-11-15]
+	Updated devel/py-test to 3.2.5 [adam 2017-11-15]
