@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4884 2017/11/15 11:41:33 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4885 2017/11/15 11:58:28 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7005,3 +7005,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Search-Elasticsearch to 6.00 [wiz 2017-11-15]
 	Updated devel/p5-experimental to 0.017 [wiz 2017-11-15]
 	Updated net/p5-Net to 3.11 [wiz 2017-11-15]
+	Updated graphics/feh to 2.22.2 [szptvlfn 2017-11-15]
