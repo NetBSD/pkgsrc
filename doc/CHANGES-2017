@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4876 2017/11/15 09:25:06 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4877 2017/11/15 09:51:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6997,3 +6997,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/php-sodium version 7.2.0RC6 [jdolecek 2017-11-15]
 	Added devel/py-test-relaxed version 1.0.0 [adam 2017-11-15]
 	Updated security/py-paramiko to 2.4.0 [adam 2017-11-15]
+	Updated converters/p5-Sereal-Decoder to 4.004 [wiz 2017-11-15]
