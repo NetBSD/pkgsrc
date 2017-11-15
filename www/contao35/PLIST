@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2017/09/28 12:46:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2017/11/15 14:07:53 taca Exp $
 ${CT_WEBDIR}/.htaccess.default
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/1.1.9/ace.js
@@ -3305,6 +3305,7 @@ ${CT_WEBDIR}/vendor/leafo/scssphp/src/Type.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Util.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Version.php
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/CONTRIBUTING.md
+${CT_WEBDIR}/vendor/matthiasmullie/minify/Dockerfile
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/LICENSE
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/bin/minifycss
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/bin/minifyjs
@@ -3315,6 +3316,7 @@ ${CT_WEBDIR}/vendor/matthiasmullie/minify/data/js/keywords_reserved.txt
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/data/js/operators.txt
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/data/js/operators_after.txt
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/data/js/operators_before.txt
+${CT_WEBDIR}/vendor/matthiasmullie/minify/docker-compose.yml
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/src/CSS.php
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/src/Exception.php
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/src/Exceptions/BasicException.php
