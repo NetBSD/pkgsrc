@@ -1,0 +1,18 @@
+$NetBSD: patch-modules_common_Makefile.common,v 1.1 2017/11/15 14:59:55 hauke Exp $
+
+Deal with a difference between bmake and gmake in using $< in a
+makefile target
+
+Was patch-al
+
+--- modules/common/Makefile.common.orig	2013-08-21 17:43:44.000000000 +0000
++++ modules/common/Makefile.common
+@@ -98,7 +98,7 @@ extraclean: realclean
+ 	-$(RM) *~ \#*
+ 
+ install: $(OBJECT_TO_BUILD)
+-	$(INSTALL_PROGRAM) $< $(DESTDIR)$(INSTALLPATH)
++	$(INSTALL_PROGRAM) $(OBJECT_TO_BUILD) $(DESTDIR)$(INSTALLPATH)
+ 
+ ##
+ ## Local Variables:
