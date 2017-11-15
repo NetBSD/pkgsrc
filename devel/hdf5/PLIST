@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.24 2015/11/26 11:25:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2017/11/15 20:28:27 minskim Exp $
 bin/gif2h5
 bin/h52gif
 bin/h5cc
+bin/h5clear
 bin/h5copy
 bin/h5debug
 bin/h5diff
 bin/h5dump
+bin/h5format_convert
 bin/h5import
 bin/h5jam
 bin/h5ls
@@ -16,6 +18,7 @@ bin/h5repack
 bin/h5repart
 bin/h5stat
 bin/h5unjam
+bin/h5watch
 include/H5ACpublic.h
 include/H5Apublic.h
 include/H5Cpublic.h
@@ -38,6 +41,7 @@ include/H5Fpublic.h
 include/H5Gpublic.h
 include/H5IMpublic.h
 include/H5Ipublic.h
+include/H5LDpublic.h
 include/H5LTpublic.h
 include/H5Lpublic.h
 include/H5MMpublic.h
@@ -58,12 +62,23 @@ include/H5public.h
 include/H5version.h
 include/hdf5.h
 include/hdf5_hl.h
+lib/libdynlib1.la
+lib/libdynlib2.la
+lib/libdynlib3.la
+lib/libdynlib4.la
+lib/libdynlibadd.la
+lib/libdynlibdiff.la
+lib/libdynlibdump.la
+lib/libdynlibls.la
+lib/libdynlibvers.la
 lib/libhdf5.la
 lib/libhdf5.settings
 lib/libhdf5_hl.la
 share/doc/hdf5/COPYING
 share/doc/hdf5/HISTORY-1_0-1_8_0_rc3.txt
+share/doc/hdf5/HISTORY-1_10.txt
 share/doc/hdf5/HISTORY-1_8.txt
+share/doc/hdf5/HISTORY-1_8_0-1_10_0.txt
 share/doc/hdf5/RELEASE.txt
 share/examples/hdf5/README
 share/examples/hdf5/c/h5_attribute.c
@@ -89,6 +104,14 @@ share/examples/hdf5/c/h5_reference.c
 share/examples/hdf5/c/h5_select.c
 share/examples/hdf5/c/h5_shared_mesg.c
 share/examples/hdf5/c/h5_subset.c
+share/examples/hdf5/c/h5_vds-eiger.c
+share/examples/hdf5/c/h5_vds-exc.c
+share/examples/hdf5/c/h5_vds-exclim.c
+share/examples/hdf5/c/h5_vds-percival-unlim-maxmin.c
+share/examples/hdf5/c/h5_vds-percival-unlim.c
+share/examples/hdf5/c/h5_vds-percival.c
+share/examples/hdf5/c/h5_vds-simpleIO.c
+share/examples/hdf5/c/h5_vds.c
 share/examples/hdf5/c/h5_write.c
 share/examples/hdf5/c/ph5example.c
 share/examples/hdf5/c/run-c-ex.sh
