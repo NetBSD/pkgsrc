@@ -1,23 +1,15 @@
-$NetBSD: distinfo,v 1.28 2016/03/26 23:26:14 joerg Exp $
+$NetBSD: distinfo,v 1.29 2017/11/15 14:46:31 hauke Exp $
 
-SHA1 (xemacs-21.5.27.tar.gz) = 55fc3e9c8fe3cac92791ffe1a0870aeae1baf0b8
-RMD160 (xemacs-21.5.27.tar.gz) = ee0caff8730c999d37aa3a19b19f23d5756837ad
-SHA512 (xemacs-21.5.27.tar.gz) = e52060d956c5792305b184025dfcb4fe7f41040a666938635aa3c9dd1d4266d8feceff199a31bef9cf10685132937a27b68ca2bcda4126bf3f2e2fb7b108d965
-Size (xemacs-21.5.27.tar.gz) = 15042023 bytes
-SHA1 (patch-aa) = 5e099de33676099916771080c606046ca9acdac6
-SHA1 (patch-ab) = a08798d080167fbdc213d5eda2bd75f271c66792
-SHA1 (patch-ac) = 8e93d6a06ca6d90ca62ee872179ae8484761d434
-SHA1 (patch-ad) = 244ddfebb25ccca7b34b308cced61f256b50d0a7
-SHA1 (patch-ae) = 902a375f974e06eb5d67b69deadead98c625d97a
-SHA1 (patch-af) = e71e89be5ce6070bca4b4ab8456f92cf52c50c6e
-SHA1 (patch-ag) = f859010a113a9765819f92c79ce905cf4fd801dd
-SHA1 (patch-ah) = 53d806344f2429d26ee8a10005d1087d84fb0321
-SHA1 (patch-ai) = ed24c7c0cc802386c0293c34842882d5ec770426
-SHA1 (patch-aj) = aeebaec687a1ea2974d909404938fc060d5df75f
-SHA1 (patch-ak) = c8a3369efdd4af32b1a65cdb3d798724d63b3ed5
-SHA1 (patch-al) = 33000a300de6358c0ba3260708d6d625dcd625a2
-SHA1 (patch-am) = 0ccbead4be5da92e73a15432ff1b063da13cf0b4
-SHA1 (patch-an) = f382865087f011ea3806d707cbf784fac81ad746
-SHA1 (patch-src_config.h.in) = 8032e1a040b46131763d40e625a1b7e841f9b233
-SHA1 (patch-src_glyphs-eimage.c) = a382113190a65d27747a90e58294a41f3bb6df42
-SHA1 (patch-src_lisp.h) = a99b2c3a25c5a20f654ca217234dc49b2424262d
+SHA1 (xemacs-21.5.34.tar.gz) = ed1fe3ff6ce6eeb9ff75ac0ee34c6530e1c355ce
+RMD160 (xemacs-21.5.34.tar.gz) = 2f6a5bc7fd72508722dded16ee7742db3e87ffaf
+SHA512 (xemacs-21.5.34.tar.gz) = b61d88fe530a77b88c2ed0cecd6597ed3c265450bc61f7c6823920f774b2d566ef6fc18a6c33928d846d08d465617d4ccd3c4656606ec8634127a683abbc929a
+Size (xemacs-21.5.34.tar.gz) = 15816932 bytes
+SHA1 (patch-Makefile.in.in) = 113ba387173c3ac18754f74297f63cd92648428b
+SHA1 (patch-configure) = 0f576275a42b883f4502fbe5156aa2d84f17f6a8
+SHA1 (patch-lib-src_Makefile.in.in) = 6e9c2b9e4cd9e63fbdc88ff4792e74a57ed925ae
+SHA1 (patch-lib-src_fakemail.c) = e62f75055b80f207696cfd77cd7b55fd46e8249b
+SHA1 (patch-modules_common_Makefile.common) = d62a23a05e72cc196557e2f7fbbccea791ee0101
+SHA1 (patch-src_Makefile.in.in) = fdc21712f28a332fda4bd11ea45002eca957cc83
+SHA1 (patch-src_dired.c) = d850495e567224dc7a43e1db74f4e305a906f177
+SHA1 (patch-src_lisp.h) = c5f3b5f920ec6d451a5d5c5d1e414d6ae3d6660f
+SHA1 (patch-src_unexelf.c) = 96b2cf1d2512ad23fca98db9b48c34533bba8b66
