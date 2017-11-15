@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2017/06/05 07:28:47 adam Exp $
+# $NetBSD: Makefile,v 1.50 2017/11/15 14:19:43 adam Exp $
 
 .include "Makefile.common"
 
@@ -16,7 +16,7 @@ PYTHON_VERSIONED_DEPENDENCIES=	cairo
 
 .include "../../lang/python/pyversion.mk"
 .if "${PYPKGPREFIX}" == "py27"
-DEPENDS+=	${PYPKGPREFIX}-functools32-[0-9]*:../../devel/py-functools32
+DEPENDS+=	${PYPKGPREFIX}-backports.functools_lru_cache-[0-9]*:../../devel/py-backports.functools_lru_cache
 DEPENDS+=	${PYPKGPREFIX}-subprocess32-[0-9]*:../../devel/py-subprocess32
 .endif
 
