@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/05/05 06:50:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/11/15 07:47:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -247,12 +247,12 @@ ${PYSITELIB}/ldap3/protocol/schemas/slapd24.pyo
 ${PYSITELIB}/ldap3/strategy/__init__.py
 ${PYSITELIB}/ldap3/strategy/__init__.pyc
 ${PYSITELIB}/ldap3/strategy/__init__.pyo
-${PYSITELIB}/ldap3/strategy/async.py
-${PYSITELIB}/ldap3/strategy/async.pyc
-${PYSITELIB}/ldap3/strategy/async.pyo
 ${PYSITELIB}/ldap3/strategy/asyncStream.py
 ${PYSITELIB}/ldap3/strategy/asyncStream.pyc
 ${PYSITELIB}/ldap3/strategy/asyncStream.pyo
+${PYSITELIB}/ldap3/strategy/asynchronous.py
+${PYSITELIB}/ldap3/strategy/asynchronous.pyc
+${PYSITELIB}/ldap3/strategy/asynchronous.pyo
 ${PYSITELIB}/ldap3/strategy/base.py
 ${PYSITELIB}/ldap3/strategy/base.pyc
 ${PYSITELIB}/ldap3/strategy/base.pyo
