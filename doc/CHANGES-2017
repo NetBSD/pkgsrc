@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4879 2017/11/15 10:05:39 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4880 2017/11/15 10:40:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7000,3 +7000,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated converters/p5-Sereal-Decoder to 4.004 [wiz 2017-11-15]
 	Updated converters/p5-Sereal-Encoder to 4.004 [wiz 2017-11-15]
 	Updated converters/p5-Sereal to 4.004 [wiz 2017-11-15]
+	Updated converters/p5-Unicode-Collate to 1.23 [wiz 2017-11-15]
