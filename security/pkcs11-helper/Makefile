@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/09/19 13:04:19 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/11/15 22:18:52 wiz Exp $
 
 DISTNAME=	pkcs11-helper-1.10
 PKGREVISION=	7
@@ -7,7 +7,7 @@ MASTER_SITES=	https://github.com/downloads/alonbl/pkcs11-helper/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	gdt@ir.bbn.com
-HOMEPAGE=	http://www.opensc-project.org/opensc/wiki/pkcs11-helper
+HOMEPAGE=	https://github.com/OpenSC/OpenSC/wiki/pkcs11-helper
 COMMENT=	Library that simplifies the interaction with PKCS\#11
 LICENSE=	modified-bsd OR gnu-gpl-v2
 
