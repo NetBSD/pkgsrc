@@ -1,8 +1,12 @@
-$NetBSD: patch-ak,v 1.1 2007/06/30 17:59:03 joerg Exp $
+$NetBSD: patch-src_dired.c,v 1.1 2017/11/15 14:58:53 hauke Exp $
 
---- src/dired.c.orig	2004-11-04 23:06:21.000000000 +0000
+Prefer NAME_MAX over MAXNAMLEN, if available
+
+Was patch-ak
+
+--- src/dired.c.orig	2013-08-21 17:43:45.000000000 +0000
 +++ src/dired.c
-@@ -22,6 +22,7 @@ Boston, MA 02111-1307, USA.  */
+@@ -20,6 +20,7 @@ along with XEmacs.  If not, see <http://
  /* Synched up with: FSF 19.30. */
  
  #include <config.h>
@@ -10,7 +14,7 @@ $NetBSD: patch-ak,v 1.1 2007/06/30 17:59:03 joerg Exp $
  #include "lisp.h"
  
  #include "buffer.h"
-@@ -104,7 +105,11 @@ If FILES-ONLY is the symbol t, then only
+@@ -103,7 +104,11 @@ If FILES-ONLY is the symbol t, then only
    directory = Ffile_name_as_directory (directory);
    directorylen = XSTRING_LENGTH (directory);
  
