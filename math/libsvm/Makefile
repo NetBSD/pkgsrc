@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2017/09/16 19:26:59 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.6 2017/11/15 22:13:38 wiz Exp $
 
 DISTNAME=	libsvm-3.20
 CATEGORIES=	math
-MASTER_SITES=	http://www.csie.ntu.edu.tw/~cjlin/libsvm/
+MASTER_SITES=	https://www.csie.ntu.edu.tw/~cjlin/libsvm/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.csie.ntu.edu.tw/~cjlin/libsvm/
+HOMEPAGE=	https://www.csie.ntu.edu.tw/~cjlin/libsvm/
 COMMENT=	Library for Support Vector Machines
 LICENSE=	modified-bsd
 
