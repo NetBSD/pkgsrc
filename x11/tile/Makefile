@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2012/10/29 05:06:53 asau Exp $
-#
+# $NetBSD: Makefile,v 1.9 2017/11/15 22:20:14 wiz Exp $
 
 DISTNAME=		tile_0.7.3
 PKGNAME=		tile-0.7.3
 PKGREVISION=		2
 CATEGORIES=		x11
 # cvs only has 0.7.1 and mentions "cvs server loss"...
-MASTER_SITES=		http://www.unixdev.net/downloads/tile/0.7.3/
+#MASTER_SITES=		http://www.unixdev.net/downloads/tile/0.7.3/
 
 MAINTAINER=		inittab@unixdev.net
-HOMEPAGE=		http://www.unixdev.net/projects/tile
+#HOMEPAGE=		http://www.unixdev.net/projects/tile
 COMMENT=		X11 Window Tiler
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
