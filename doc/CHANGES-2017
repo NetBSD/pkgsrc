@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4890 2017/11/15 15:08:23 hauke Exp $
+$NetBSD: CHANGES-2017,v 1.4891 2017/11/15 18:23:20 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7012,3 +7012,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-test to 3.2.5 [adam 2017-11-15]
 	Updated editors/xemacs-current to 21.5.34 [hauke 2017-11-15]
 	Updated editors/xemacs-current-nox11 to 21.5.34 [hauke 2017-11-15]
+	Updated security/yara to 3.7.0 [he 2017-11-15]
+	Updated security/py-yara to 3.7.0 [he 2017-11-15]
