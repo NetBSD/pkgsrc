@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.26 2017/10/17 08:26:48 wiz Exp $
+$NetBSD: patch-configure,v 1.27 2017/11/15 12:52:15 gdt Exp $
 
 All kinds of OS-specific changes to configure
 
@@ -73,7 +73,16 @@ All kinds of OS-specific changes to configure
    powerpc-*-openbsd*)           arch=power; model=ppc; system=bsd_elf;;
    s390x*-*-linux*)              arch=s390x; model=z10; system=elf;;
    armv6*-*-linux-gnueabihf)     arch=arm; model=armv6; system=linux_eabihf;;
-@@ -947,6 +951,7 @@ case "$target" in
+@@ -930,6 +934,8 @@ case "$target" in
+   armv6t2*-*-linux-gnueabi)     arch=arm; model=armv6t2; system=linux_eabi;;
+   armv6*-*-linux-gnueabi)       arch=arm; model=armv6; system=linux_eabi;;
+   armv6*-*-freebsd*)            arch=arm; model=armv6; system=freebsd;;
++  armv6-*-netbsdelf*)		arch=arm; model=armv6; system=netbsd;;
++  armv7-*-netbsdelf*)		arch=arm; model=armv7; system=netbsd;;
+   earmv6*-*-netbsd*)            arch=arm; model=armv6; system=netbsd;;
+   earmv7*-*-netbsd*)            arch=arm; model=armv7; system=netbsd;;
+   armv5te*-*-linux-gnueabi)     arch=arm; model=armv5te; system=linux_eabi;;
+@@ -947,6 +953,7 @@ case "$target" in
    x86_64-*-mingw*)              arch=amd64; system=mingw;;
    aarch64-*-linux*)             arch=arm64; system=linux;;
    x86_64-*-cygwin*)             arch=amd64; system=cygwin;;
@@ -81,7 +90,7 @@ All kinds of OS-specific changes to configure
  esac
  
  # Some platforms exist both in 32-bit and 64-bit variants, not distinguished
-@@ -983,7 +988,6 @@ case "$arch,$nativecc,$system,$model" in
+@@ -983,7 +990,6 @@ case "$arch,$nativecc,$system,$model" in
    *,*,nextstep,*)      nativecclinkopts="-posix";;
    *,*,rhapsody,*)      if $arch64; then partialld="ld -r -arch ppc64"; fi;;
    amd64,gcc*,macosx,*) partialld="ld -r -arch x86_64";;
@@ -89,7 +98,7 @@ All kinds of OS-specific changes to configure
    power,gcc*,elf,ppc)   partialld="ld -r -m elf32ppclinux";;
    power,gcc*,elf,ppc64)   partialld="ld -r -m elf64ppc";;
    power,gcc*,elf,ppc64le)   partialld="ld -r -m elf64lppc";;
-@@ -1001,8 +1005,8 @@ case "$arch,$system" in
+@@ -1001,8 +1007,8 @@ case "$arch,$system" in
                      fi;;
    amd64,solaris)  as="${TOOLPREF}as --64"
                    aspp="${TOOLPREF}gcc -m64 -c";;
@@ -100,7 +109,7 @@ All kinds of OS-specific changes to configure
    power,elf)      if $arch64; then
                      as="${TOOLPREF}as -a64 -mppc64"
                      aspp="${TOOLPREF}gcc -m64 -c"
-@@ -1023,7 +1027,7 @@ case "$arch,$system" in
+@@ -1023,7 +1029,7 @@ case "$arch,$system" in
                    aspp="${TOOLPREF}cc -c";;
    *,freebsd)      as="${TOOLPREF}as"
                    aspp="${TOOLPREF}cc -c";;
@@ -109,7 +118,7 @@ All kinds of OS-specific changes to configure
                    as="${TOOLPREF}as"
                    case "$ccfamily" in
                        clang-*)
-@@ -1058,6 +1062,9 @@ case "$arch,$system" in
+@@ -1058,6 +1064,9 @@ case "$arch,$system" in
    arm,linux*) profiling='true';;
    power,elf) profiling='true';;
    power,bsd*) profiling='true';;
@@ -119,7 +128,7 @@ All kinds of OS-specific changes to configure
    *) profiling='false';;
  esac
  
-@@ -1652,6 +1659,8 @@ fi
+@@ -1652,6 +1661,8 @@ fi
  x11_include="not found"
  x11_link="not found"
  
@@ -128,7 +137,7 @@ All kinds of OS-specific changes to configure
  if test -z "$x11_include_dir" -a -z "$x11_lib_dir"; then
    if pkg-config --exists x11 2>/dev/null; then
      x11_include=`pkg-config --cflags x11`
-@@ -1698,6 +1707,7 @@ if test "$x11_include" = "not found"; th
+@@ -1698,6 +1709,7 @@ if test "$x11_include" = "not found"; th
      /usr/XFree86/include/X11  \
                                \
      /usr/include              \
@@ -136,7 +145,7 @@ All kinds of OS-specific changes to configure
      /usr/local/include        \
      /usr/unsupported/include  \
      /usr/athena/include       \
-@@ -1755,6 +1765,7 @@ if test "$x11_include" = "not found"; th
+@@ -1755,6 +1767,7 @@ if test "$x11_include" = "not found"; th
                            \
      /usr/lib64            \
      /usr/lib              \
@@ -144,7 +153,7 @@ All kinds of OS-specific changes to configure
      /usr/local/lib        \
      /usr/unsupported/lib  \
      /usr/athena/lib       \
-@@ -1776,19 +1787,16 @@ if test "$x11_include" = "not found"; th
+@@ -1776,19 +1789,16 @@ if test "$x11_include" = "not found"; th
        if test $dir = /usr/lib; then
          x11_link="-lX11"
        else
