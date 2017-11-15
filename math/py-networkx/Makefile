@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2017/09/27 13:25:54 adam Exp $
+# $NetBSD: Makefile,v 1.24 2017/11/15 23:22:28 markd Exp $
 
 DISTNAME=	networkx-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/networkx/}
 EXTRACT_SUFX=	.zip
@@ -32,6 +33,9 @@ REPLACE_PYTHON+=	networkx/generators/tests/*.py
 REPLACE_PYTHON+=	networkx/readwrite/tests/*.py
 REPLACE_PYTHON+=	networkx/tests/*.py
 REPLACE_PYTHON+=	networkx/utils/tests/*.py
+
+post-install:
+	mv ${DESTDIR}${PREFIX}/share/doc/${DISTNAME} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
