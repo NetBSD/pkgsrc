@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4871 2017/11/15 03:33:12 manu Exp $
+$NetBSD: CHANGES-2017,v 1.4872 2017/11/15 07:52:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6986,3 +6986,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/memcached to 1.5.3 [fhajny 2017-11-14]
 	Updated math/py-scikit-learn to 0.18.2 [minskim 2017-11-14]
 	Updated filesystems/glusterfs to 3.12.3 [manu 2017-11-15]
+	Updated devel/py-test to 3.2.4 [adam 2017-11-15]
+	Updated databases/py-ldap3 to 2.4 [adam 2017-11-15]
+	Updated databases/py-ldap to 2.5.1 [adam 2017-11-15]
