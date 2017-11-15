@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/08/11 22:54:16 jdolecek Exp $
+# $NetBSD: Makefile,v 1.3 2017/11/15 09:15:50 jdolecek Exp $
 
 MODNAME=	apcu_bc
 PKGMODNAME= apc
@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	APCu  Backwards Compatibility Module
 LICENSE=	php
 
-PHP_VERSIONS_ACCEPTED=	70 71
+PHP_VERSIONS_ACCEPTED=	70 71 72
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 
