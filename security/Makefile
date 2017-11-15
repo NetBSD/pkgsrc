@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.656 2017/10/30 18:21:20 adam Exp $
+# $NetBSD: Makefile,v 1.657 2017/11/15 08:58:35 jdolecek Exp $
 #
 
 COMMENT=	Security tools
@@ -349,6 +349,7 @@ SUBDIR+=	php-mcrypt
 SUBDIR+=	php-oauth
 SUBDIR+=	php-oauth1
 SUBDIR+=	php-pecl-mcrypt
+SUBDIR+=	php-sodium
 SUBDIR+=	php-ssdeep
 SUBDIR+=	php-ssh2
 SUBDIR+=	php-suhosin
