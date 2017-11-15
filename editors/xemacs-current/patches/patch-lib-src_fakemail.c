@@ -1,9 +1,13 @@
-$NetBSD: patch-aj,v 1.1 2007/06/30 17:59:03 joerg Exp $
+$NetBSD: patch-lib-src_fakemail.c,v 1.1 2017/11/15 14:57:58 hauke Exp $
 
---- lib-src/fakemail.c.orig	2007-06-30 17:23:25.000000000 +0000
+Fix build on DragonFly.
+
+Was patch-aj
+
+--- lib-src/fakemail.c.orig	2013-08-21 17:43:44.000000000 +0000
 +++ lib-src/fakemail.c
-@@ -149,15 +149,13 @@ extern int fclose (), pclose ();
- extern char *malloc (), *realloc ();
+@@ -148,15 +148,13 @@ extern char *malloc (), *realloc ();
+ #include <osreldate.h>
  #endif
  
 -#if defined(__FreeBSD_version) && __FreeBSD_version >= 400000 
@@ -16,7 +20,7 @@ $NetBSD: patch-aj,v 1.1 2007/06/30 17:59:03 joerg Exp $
 -#if defined(__FreeBSD_version) && __FreeBSD_version >= 400000 
 -extern uid_t geteuid (); 
 -#else 
-+#if defined(__FreeBSD_version) && __FreeBSD_version < 400000
++#if defined(__FreeBSD_version) && __FreeBSD_version < 400000 
  extern unsigned short geteuid (); 
  #endif 
  static struct passwd *my_entry;
