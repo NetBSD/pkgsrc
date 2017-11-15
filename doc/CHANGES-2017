@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4892 2017/11/15 20:30:19 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.4893 2017/11/15 21:37:54 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7016,3 +7016,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-yara to 3.7.0 [he 2017-11-15]
 	Updated devel/hdf5 to 1.10.1 [minskim 2017-11-15]
 	Updated devel/hdf5-c++ to 1.10.1 [minskim 2017-11-15]
+	Updated lang/nodejs to 9.2.0 [fhajny 2017-11-15]
