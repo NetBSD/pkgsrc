@@ -1,8 +1,10 @@
-$NetBSD: patch-src_lisp.h,v 1.1 2016/03/26 23:26:14 joerg Exp $
+$NetBSD: patch-src_lisp.h,v 1.2 2017/11/15 15:04:25 hauke Exp $
 
---- src/lisp.h.orig	2016-03-26 13:47:05.129185443 +0000
+Don't try to define max_align_t in C11 or C++11 mode.
+
+--- src/lisp.h.orig	2013-08-21 17:43:44.000000000 +0000
 +++ src/lisp.h
-@@ -957,6 +957,7 @@ typedef int Boolint;
+@@ -1156,6 +1156,7 @@ typedef int Boolint;
  
  /* No type has a greater alignment requirement than max_align_t.
     (except perhaps for types we don't use, like long double) */
@@ -10,7 +12,7 @@ $NetBSD: patch-src_lisp.h,v 1.1 2016/03/26 23:26:14 joerg Exp $
  typedef union
  {
    struct { long l; } l;
-@@ -964,6 +965,7 @@ typedef union
+@@ -1163,6 +1164,7 @@ typedef union
    struct { void (*f)(void); } f;
    struct { double d; } d;
  } max_align_t;
