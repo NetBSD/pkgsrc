@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.469 2017/11/01 12:07:31 fhajny Exp $
+# $NetBSD: Makefile,v 1.470 2017/11/15 08:56:12 jdolecek Exp $
 #
 
 COMMENT=	Programming languages
@@ -171,6 +171,7 @@ SUBDIR+=	pforth
 SUBDIR+=	php56
 SUBDIR+=	php70
 SUBDIR+=	php71
+SUBDIR+=	php72
 SUBDIR+=	picoc
 SUBDIR+=	pict
 SUBDIR+=	polyml
