@@ -1,0 +1,29 @@
+$NetBSD: patch-configure,v 1.1 2017/11/15 14:50:50 hauke Exp $
+
+Add POSIX syntax for passing ld(1) options through the compiler 
+front end
+
+Remove bashism
+
+Was patch-ab
+
+--- configure.orig	2013-08-21 17:45:50.000000000 +0000
++++ configure
+@@ -10107,7 +10107,7 @@ $as_echo_n "checking for runtime librari
+     linux* | irix*) dash_r="-rpath " ;;
+     *)
+       dash_r=""
+-      for try_dash_r in "-R" "-R " "-rpath "; do
++      for try_dash_r in "-Wl,R" "-R" "-R " "-rpath "; do
+         xe_check_libs="${try_dash_r}/no/such/file-or-directory"
+ 
+ if test "$GCC" = "yes"; then
+@@ -21819,7 +21819,7 @@ fi
+ if test "$have_vdb_mach" = yes ; then
+   echo "  Using mach exception mechanism as vdb fault handler."
+ fi
+-if test "$have_vdb_fake" = yes && test "$with_vdb" == fake; then
++if test "$have_vdb_fake" = yes && test "$with_vdb" = fake; then
+   echo "  Virtual dirty bit write barrier manually disabled."
+ fi
+ test "$with_pdump" = yes && echo "  Using the new portable dumper."
