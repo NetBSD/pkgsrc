@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.100 2017/10/29 09:47:57 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.101 2017/11/16 01:04:38 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -71,7 +71,6 @@ CONFIGURE_ARGS+=	--disable-libjpeg-turbo
 CONFIGURE_ARGS+=	--disable-elf-hack
 CONFIGURE_ARGS+=	--disable-gconf
 #CONFIGURE_ARGS+=	--enable-readline
-CONFIGURE_ARGS+=	--enable-url-classifier
 CONFIGURE_ARGS+=	--disable-icf
 CONFIGURE_ARGS+=	--disable-updater
 
