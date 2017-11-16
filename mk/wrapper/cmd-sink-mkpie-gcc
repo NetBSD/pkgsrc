@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-mkpie-gcc,v 1.4 2017/11/16 00:31:47 khorben Exp $
+# $NetBSD: cmd-sink-mkpie-gcc,v 1.5 2017/11/16 00:36:10 khorben Exp $
 #
 # Copyright (c) 2016 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -31,9 +31,8 @@
 
 # Append any optional flags required when linking binaries.
 if $test "$dont_link_binary" != "yes"; then
-	# XXX obtain these flags from _MKPIE_LDFLAGS.gcc and _MKPIE_CFLAGS.gcc
-	MKPIE_FLAGS="-pie"
-	$test "$has_source" = "yes" && MKPIE_FLAGS="-fPIC $MKPIE_FLAGS"
+	MKPIE_FLAGS="$MKPIE_LDFLAGS"
+	$test "$has_source" = "yes" && MKPIE_FLAGS="$MKPIE_CFLAGS $MKPIE_FLAGS"
 	for arg in $MKPIE_FLAGS; do
 		$debug_log $wrapperlog "    (cmd-sink-mkpie-gcc) pop:  $arg"
 		. $buildcmd
