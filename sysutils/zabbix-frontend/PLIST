@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/05/21 17:30:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/11/16 12:50:34 he Exp $
 share/zabbix/php/actionconf.php
 share/zabbix/php/adm.gui.php
 share/zabbix/php/adm.housekeeper.php
@@ -429,6 +429,7 @@ share/zabbix/php/include/classes/validators/CColorValidator.php
 share/zabbix/php/include/classes/validators/CDecimalStringValidator.php
 share/zabbix/php/include/classes/validators/CDecimalValidator.php
 share/zabbix/php/include/classes/validators/CFunctionValidator.php
+share/zabbix/php/include/classes/validators/CHtmlUrlValidator.php
 share/zabbix/php/include/classes/validators/CIPRangeValidator.php
 share/zabbix/php/include/classes/validators/CIPValidator.php
 share/zabbix/php/include/classes/validators/CIdValidator.php
@@ -737,7 +738,6 @@ share/zabbix/php/popup.php
 share/zabbix/php/popup_httpstep.php
 share/zabbix/php/popup_media.php
 share/zabbix/php/popup_trexpr.php
-share/zabbix/php/popup_usrgrp.php
 share/zabbix/php/profile.php
 share/zabbix/php/queue.php
 share/zabbix/php/report2.php
