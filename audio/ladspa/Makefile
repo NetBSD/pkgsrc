@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2017/07/15 18:12:51 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/11/16 15:05:31 khorben Exp $
 
 DISTNAME=	ladspa_sdk_1.13
 PKGNAME=	${DISTNAME:S/_sdk_/-/}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.ladspa.org/download/
 EXTRACT_SUFX=	.tgz
@@ -20,8 +21,13 @@ MAKE_FILE=	makefile
 BUILDLINK_LIBS.dl+=	${BUILDLINK_LDADD.dl}
 
 INSTALLATION_DIRS+=	bin include lib
-REAL_LDFLAGS=	${LDFLAGS:S/-Wl,-z,/-z /g}
-MAKEFLAGS+=	REAL_LDFLAGS=${REAL_LDFLAGS:Q}
+
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+
+#XXX does not work (No rule to make target 'targets')
+#do-test:
+#	cd ${WRKSRC} && && ${BUILD_MAKE_CMD} test
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
