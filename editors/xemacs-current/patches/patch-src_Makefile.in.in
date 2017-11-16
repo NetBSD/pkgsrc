@@ -1,11 +1,25 @@
-$NetBSD: patch-src_Makefile.in.in,v 1.1 2017/11/15 15:01:36 hauke Exp $
+$NetBSD: patch-src_Makefile.in.in,v 1.2 2017/11/16 15:07:05 hauke Exp $
 
 Deal with bulk build namespace intrusion.
+
+SunOS 5 bmake / gmake fixes
 
 Was patch-an
 
 --- src/Makefile.in.in.orig	2013-08-21 17:43:45.000000000 +0000
 +++ src/Makefile.in.in
+@@ -392,9 +392,9 @@ ldflags  = $(LDFLAGS) $(ld_switch_all) $
+ 
+ #ifdef SOLARIS2
+ %.o : %.c
+-#else
+-.c.o:
++	$(CC) -c $(cflags) $<
+ #endif
++.c.o:
+ 	$(CC) -c $(cflags) $<
+ 
+ ## Create preprocessor output (debugging purposes only)
 @@ -437,10 +437,10 @@ RAW_EXE  = temacs
  DO_TEMACS = $(DUMPENV) ./$(RAW_EXE)
  DO_XEMACS = ./$(PROGNAME)
