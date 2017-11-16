@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4899 2017/11/16 08:00:35 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4900 2017/11/16 09:59:02 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7043,3 +7043,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/nss to 3.34 [ryoon 2017-11-16]
 	Updated devel/py-attrs to 17.3.0 [adam 2017-11-16]
 	Updated devel/py-hypothesis to 3.37.0 [adam 2017-11-16]
+	Updated textproc/icu to 59.1nb3 [he 2017-11-16]
