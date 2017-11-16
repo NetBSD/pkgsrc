@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/09/18 09:53:35 maya Exp $
+# $NetBSD: Makefile,v 1.4 2017/11/16 11:01:12 he Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "Makefile.common"
 
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
