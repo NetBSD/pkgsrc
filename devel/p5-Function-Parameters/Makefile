@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/11/13 15:10:33 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/11/16 10:32:36 wiz Exp $
 
 DISTNAME=	Function-Parameters-2.001003
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
-# one self test failure:
-# https://github.com/mauke/Function-Parameters/issues/33
 # TEST_DEPENDS
 BUILD_DEPENDS+=	p5-Dir-Self-[0-9]*:../../devel/p5-Dir-Self
 
