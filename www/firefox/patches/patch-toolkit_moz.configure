@@ -1,10 +1,10 @@
-$NetBSD: patch-toolkit_moz.configure,v 1.6 2017/09/30 05:34:12 ryoon Exp $
+$NetBSD: patch-toolkit_moz.configure,v 1.7 2017/11/16 01:04:38 ryoon Exp $
 
 * skia part: support bigendian architectures
 
---- toolkit/moz.configure.orig	2017-09-14 20:16:01.000000000 +0000
+--- toolkit/moz.configure.orig	2017-09-15 04:15:40.000000000 +0000
 +++ toolkit/moz.configure
-@@ -314,6 +314,26 @@ def freetype2_combined_info(fontconfig_i
+@@ -317,6 +317,26 @@ def freetype2_combined_info(fontconfig_i
  add_old_configure_assignment('_HAVE_FREETYPE2',
                               depends_if(freetype2_info)(lambda _: True))
  
@@ -31,16 +31,7 @@ $NetBSD: patch-toolkit_moz.configure,v 1.6 2017/09/30 05:34:12 ryoon Exp $
  # Apple platform decoder support
  # ==============================================================
  @depends(toolkit)
-@@ -600,7 +620,7 @@ def stylo_config(value, _, target):
- 
-     # If nothing is specified, default to building stylo where possible.
-     if value.origin == 'default':
--        if target.os == 'GNU' and target.bitness == 32:
-+        if target.os != 'WINNT' and target.bitness == 32:
-             # The clang setup we use in automation is a little unusual, and
-             # doesn't play well with bindgen on 32-bit Linux.
-             pass
-@@ -1047,11 +1067,11 @@ add_old_configure_assignment('NECKO_PROT
+@@ -940,11 +960,11 @@ include('nss.configure')
  # ==============================================================
  option('--disable-skia', help='Disable use of Skia')
  
