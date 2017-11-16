@@ -1,0 +1,15 @@
+$NetBSD: patch-src_libbacktrace_configure,v 1.1 2017/11/16 19:48:24 jperkin Exp $
+
+Use pkgsrc libtool.
+
+--- src/libbacktrace/configure.orig	2017-10-09 20:04:51.000000000 +0000
++++ src/libbacktrace/configure
+@@ -7783,7 +7783,7 @@ fi
+ LIBTOOL_DEPS="$ltmain"
+ 
+ # Always use our own libtool.
+-LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++LIBTOOL='libtool'
+ 
+ 
+ 

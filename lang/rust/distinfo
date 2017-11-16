@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2017/11/03 22:04:10 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2017/11/16 19:48:24 jperkin Exp $
 
 SHA1 (rust-1.20.0-i686-apple-darwin.tar.gz) = a6dfd1c13abe89f285979a7264a1a8b0987ccaf9
 RMD160 (rust-1.20.0-i686-apple-darwin.tar.gz) = da59f39d68ae4b4b1a11e371962fba6d7cf0ef2d
@@ -16,6 +16,10 @@ SHA1 (rust-1.20.0-x86_64-apple-darwin.tar.gz) = 3fd58362b30e3cb10442a77fc6b047f9
 RMD160 (rust-1.20.0-x86_64-apple-darwin.tar.gz) = 458b8cc20775c7db7d691632e4ba70ebac2426f8
 SHA512 (rust-1.20.0-x86_64-apple-darwin.tar.gz) = 276f75b785076045512035a98c6ec78057497340db5077bf0a1e491fe571ef63bebce6e50884a1f636f04d601c5c9e85018588c3e2bf2f4b15653fbc54b279de
 Size (rust-1.20.0-x86_64-apple-darwin.tar.gz) = 129228477 bytes
+SHA1 (rust-1.20.0-x86_64-sun-solaris.tar.gz) = 11a2577ec593273909e8d847e64996976c07c52e
+RMD160 (rust-1.20.0-x86_64-sun-solaris.tar.gz) = 32b87d37f327d2dcbcc7b489491e9df04a7e9c34
+SHA512 (rust-1.20.0-x86_64-sun-solaris.tar.gz) = f74936810faa8919ab86e2eabc83408b920bfa49ebfe0f1c033ae27abe157bec4a2350b75c2ce8a934490b58f1730b7d8dc58db48b74bd251f968b32b71d74db
+Size (rust-1.20.0-x86_64-sun-solaris.tar.gz) = 148849221 bytes
 SHA1 (rust-1.20.0-x86_64-unknown-linux-gnu.tar.gz) = cb015e25b4666624b7984e2d9154f1bf273c2ae7
 RMD160 (rust-1.20.0-x86_64-unknown-linux-gnu.tar.gz) = 0215150d516b0b313b64d48606743e4c51061f2e
 SHA512 (rust-1.20.0-x86_64-unknown-linux-gnu.tar.gz) = 709a3df5733443bd53e18f78998fbd0ff0cba38d6ef5526570f3d388414576f38019d5fbece7408ab28b5d6fbd9ceb4b830ce31352da1ff5ccfc4e2757d68d17
@@ -53,5 +57,8 @@ RMD160 (rustc-1.21.0-src.tar.gz) = dfb1ca914e2042f9f92f679bf743f575d25ece47
 SHA512 (rustc-1.21.0-src.tar.gz) = 47f29a5c9c926c1b209516a8546c67a24c1c6ee15c6302c8c6d340047b3e1f713cc6d09e568b67ae4b47b08cbb0befd95fc0d7a72f2ce21a5224d4e5da03b4f5
 Size (rustc-1.21.0-src.tar.gz) = 52555346 bytes
 SHA1 (patch-src_bootstrap_bin_rustc.rs) = 617cc7ae52d92fdf80af0aff169c17a9cec4d67c
+SHA1 (patch-src_libbacktrace_configure) = b2c1e9b93a99408aad42ab9f1af27704cc81bdd8
+SHA1 (patch-src_libstd_build.rs) = 32dad8a474300f9f37bce8b92acca762cf8cc4ab
 SHA1 (patch-src_llvm_cmake_modules_AddLLVM.cmake) = 282d97cce8d01cfefe565185d4999c2db9ccc13f
 SHA1 (patch-src_llvm_lib_CodeGen_MachineDominanceFrontier.cpp) = 2899771b1a23be840b9305eff7e5e5f957239ccb
+SHA1 (patch-src_tools_rust-installer_install-template.sh) = 88fe49a449e219ba1e3a11766615082120fc9680

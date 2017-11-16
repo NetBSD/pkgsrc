@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/11/04 15:51:43 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2017/11/16 19:48:24 jperkin Exp $
 
 DISTNAME=	rustc-1.21.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -12,7 +12,27 @@ LICENSE=	mit OR apache-2.0
 
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++11
+USE_LIBTOOL=		yes
 USE_TOOLS+=		bash gmake perl:build pkg-config
+
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--python=${PYTHONBIN}
+CONFIGURE_ARGS+=	--release-channel=stable
+CONFIGURE_ARGS+=	--enable-local-rust
+CONFIGURE_ARGS+=	--local-rust-root=${RUST_BOOTSTRAP_PATH}
+CONFIGURE_ARGS+=	--enable-extended	# Build and install cargo too.
+CONFIGURE_ARGS+=	--enable-rpath
+CONFIGURE_ARGS+=	--disable-codegen-tests
+CONFIGURE_ARGS+=	--disable-dist-src
+CONFIGURE_ARGS+=	--disable-llvm-static-stdcpp
+CONFIGURE_ARGS+=	--disable-ninja
+
+# This should allow us to perform "offline" builds (so cargo doesn't fetch
+# dependencies during the build stage) but this isn't hooked up yet.
+CONFIGURE_ARGS+=	--enable-vendor
 
 UNLIMIT_RESOURCES+=	cputime
 
@@ -20,6 +40,7 @@ TEST_TARGET=	check
 
 # bin/* lib/*, but names vary
 CHECK_RELRO_SUPPORTED=	no
+CHECK_SSP_SUPPORTED=	no
 
 # Required for LLVM (-std=c++11)
 GCC_REQD+=	4.8
@@ -30,6 +51,17 @@ GCC_REQD+=	4.8
 # Under NetBSD, do not use DT_RUNPATH
 #
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-Wl,--enable-new-dtags
+
+#
+# Use bundled LLVM and libumem on SunOS.
+#
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--disable-jemalloc
+.else
+CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
+BUILDLINK_API_DEPENDS.llvm+=  llvm>=4.0.1nb1
+.include "../../lang/llvm/buildlink3.mk"
+.endif
 
 #
 # Rust unfortunately requires itself to build.  On platforms which aren't
@@ -64,12 +96,13 @@ RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
-#.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-#RUST_ARCH:=		x86_64-sun-solaris
-#RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
-#SITES.${RUST_STAGE0}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
-#DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
-#.endif
+.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+RUST_ARCH:=		x86_64-sun-solaris
+RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+SITES.${RUST_STAGE0}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
+DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
+RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}
+.endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=		i686-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -95,29 +128,12 @@ NOT_FOR_PLATFORM+=	${MACHINE_PLATFORM}
 RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-bootstrap
 .endif
 
-OPSYSVARS+=		SOEXT
-SOEXT.Darwin=		dylib
-SOEXT.*=		so
-
-RUST_VERHASH=		63283ac5
-PLIST_SUBST+=		RUST_ARCH=${RUST_ARCH:Q}
-PLIST_SUBST+=		RUST_VERHASH=${RUST_VERHASH:Q}
-PLIST_SUBST+=		SOEXT=${SOEXT:Q}
-PRINT_PLIST_AWK+=	{ gsub(/${RUST_ARCH}/, "$${RUST_ARCH}") }
-PRINT_PLIST_AWK+=	{ gsub(/${RUST_VERHASH}/, "$${RUST_VERHASH}") }
-PRINT_PLIST_AWK+=	{ gsub(/\.${SOEXT}/, ".$${SOEXT}") }
-
 .if ${OPSYS} == "SunOS"
 BUILD_DEPENDS+=		grep>=0:../../textproc/grep
 BUILD_DEPENDS+=		coreutils>=0:../../sysutils/coreutils
 TOOLS_PATH.grep=	${PREFIX}/bin/ggrep
 TOOLS_CREATE+=		md5sum
 TOOLS_PATH.md5sum=	${PREFIX}/bin/gmd5sum
-
-SUBST_CLASSES+=		ranlib
-SUBST_STAGE.ranlib=	post-patch
-SUBST_FILES.ranlib=	mk/rt.mk
-SUBST_SED.ranlib=	-e 's,RANLIB=.* \\,RANLIB="true" \\,g'
 .endif
 
 SUBST_CLASSES+=		rpath
@@ -135,28 +151,20 @@ post-extract:
 		${TOOLS_BASH} ./install.sh --prefix=${RUST_BOOTSTRAP_PATH};	\
 	fi
 
-RUSTC=			${RUST_BOOTSTRAP_PATH}/bin/rustc
-CARGO=			${RUST_BOOTSTRAP_PATH}/bin/cargo
+.if ${OPSYS} != "SunOS"
 LD_LIBRARY_PATH=	${RUST_BOOTSTRAP_PATH}/lib
 PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH:Q}
-
-SUBST_CLASSES+=		config
-SUBST_STAGE.config=	post-configure
-SUBST_FILES.config+=	config.toml
-SUBST_VARS.config+=	RUSTC CARGO PREFIX PYTHONBIN RUST_ARCH
-
-do-configure:
-	${CP} ${FILESDIR}/config.toml ${WRKSRC}/config.toml
+.endif
 
 do-build:
 	cd ${WRKSRC} \
 	&& env ${MAKE_ENV} \
-		${PYTHONBIN} ./x.py dist
+		${PYTHONBIN} ./x.py -v dist
 
 do-install:
 	cd ${WRKSRC} \
 	&& env ${MAKE_ENV} ${INSTALL_ENV} \
-		${PYTHONBIN} ./x.py install
+		${PYTHONBIN} ./x.py -v install
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/lib/rustlib/install.log
@@ -194,7 +202,7 @@ fix-darwin-install-name:
 # Create a relocatable stage2 bootstrap from the bits we just built that can be
 # used to build the next version of rust.  Currently only tested on SmartOS.
 #
-BOOTSTRAP_TMPDIR=	${WRKDIR}/${PKGNAME}-${RUST_ARCH}/rustc
+BOOTSTRAP_TMPDIR=	${WRKDIR}/${PKGNAME}-${RUST_ARCH}
 USE_TOOLS+=		gtar
 
 stage0-bootstrap: install
@@ -222,8 +230,6 @@ stage0-bootstrap: install
 .include "../../devel/cmake/buildlink3.mk"
 .include "../../devel/libgit2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.llvm+=  llvm>=4.0.1nb1
-.include "../../lang/llvm/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../security/libssh2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
