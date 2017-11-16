@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2017/11/09 07:41:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/11/16 07:59:55 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -114,6 +114,9 @@ ${PYSITELIB}/hypothesis/internal/reflection.pyo
 ${PYSITELIB}/hypothesis/internal/renaming.py
 ${PYSITELIB}/hypothesis/internal/renaming.pyc
 ${PYSITELIB}/hypothesis/internal/renaming.pyo
+${PYSITELIB}/hypothesis/internal/validation.py
+${PYSITELIB}/hypothesis/internal/validation.pyc
+${PYSITELIB}/hypothesis/internal/validation.pyo
 ${PYSITELIB}/hypothesis/provisional.py
 ${PYSITELIB}/hypothesis/provisional.pyc
 ${PYSITELIB}/hypothesis/provisional.pyo
