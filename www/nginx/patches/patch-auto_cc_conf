@@ -1,0 +1,15 @@
+$NetBSD: patch-auto_cc_conf,v 1.1 2017/11/16 21:10:56 khorben Exp $
+
+Add support for LDFLAGS
+
+--- auto/cc/conf.orig	2017-07-11 13:24:06.000000000 +0000
++++ auto/cc/conf
+@@ -3,7 +3,7 @@
+ # Copyright (C) Nginx, Inc.
+ 
+ 
+-LINK="\$(CC)"
++LINK="\$(CC) \$(LDFLAGS)"
+ 
+ MAIN_LINK=
+ MODULE_LINK="-shared"
