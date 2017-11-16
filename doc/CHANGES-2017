@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4906 2017/11/16 14:52:30 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.4907 2017/11/16 15:11:10 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7051,3 +7051,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/zabbix-frontend to 3.2.10 [he 2017-11-16]
 	Updated databases/py-cassandra-driver to 3.12.0 [fhajny 2017-11-16]
 	Updated devel/gradle to 4.3.1 [fhajny 2017-11-16]
+	Updated multimedia/adobe-flash-player to 27.0.0.187 [tsutsui 2017-11-16]
