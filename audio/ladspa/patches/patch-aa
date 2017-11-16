@@ -1,4 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2017/07/15 18:12:51 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2017/11/16 15:05:31 khorben Exp $
+
+* Fix the destination directories
+* Use cc(1) to link the plug-ins
+* Add support for CFLAGS and LDFLAGS
 
 --- makefile.orig	2007-11-06 10:42:45.000000000 +0000
 +++ makefile
@@ -15,18 +19,21 @@ $NetBSD: patch-aa,v 1.5 2017/07/15 18:12:51 wiz Exp $
  
  ###############################################################################
  #
-@@ -14,8 +14,8 @@ INSTALL_BINARY_DIR	=	/usr/bin/
+@@ -14,9 +14,11 @@ INSTALL_BINARY_DIR	=	/usr/bin/
  #
  
  INCLUDES	=	-I.
 -LIBRARIES	=	-ldl -lm
 -CFLAGS		=	$(INCLUDES) -Wall -Werror -O3 -fPIC
-+LIBRARIES	=	$(DL_LIBS) -lm
-+CFLAGS		=	$(INCLUDES) -Wall -Werror -fPIC
++CPPFLAGS	=	$(INCLUDES)
++CFLAGS		=	-Wall -Werror -fPIC
  CXXFLAGS	=	$(CFLAGS)
++LIBRARIES	=	$(DL_LIBS) -lm
++LDFLAGS		=
  PLUGINS		=	../plugins/amp.so				\
  			../plugins/delay.so				\
-@@ -25,8 +25,8 @@ PLUGINS		=	../plugins/amp.so				\
+ 			../plugins/filter.so				\
+@@ -25,8 +27,8 @@ PLUGINS		=	../plugins/amp.so				\
  PROGRAMS	=	../bin/analyseplugin				\
  			../bin/applyplugin 				\
  			../bin/listplugins
@@ -37,24 +44,24 @@ $NetBSD: patch-aa,v 1.5 2017/07/15 18:12:51 wiz Exp $
  
  ###############################################################################
  #
-@@ -34,12 +34,12 @@ CPP		=	c++
+@@ -34,12 +36,12 @@ CPP		=	c++
  #
  
  ../plugins/%.so:	plugins/%.c ladspa.h
 -	$(CC) $(CFLAGS) -o plugins/$*.o -c plugins/$*.c
 -	$(LD) -o ../plugins/$*.so plugins/$*.o -shared
-+	$(CC) $(CFLAGS) $(LDFLAGS) -o plugins/$*.o -c plugins/$*.c
-+	$(LD) $(REAL_LDFLAGS) -o ../plugins/$*.so plugins/$*.o -shared
++	$(CC) $(CPPFLAGS) $(CFLAGS) -o plugins/$*.o -c plugins/$*.c
++	$(CC) -shared $(LDFLAGS) -o ../plugins/$*.so plugins/$*.o
  
  ../plugins/%.so:	plugins/%.cpp ladspa.h
 -	$(CPP) $(CXXFLAGS) -o plugins/$*.o -c plugins/$*.cpp
 -	$(CPP) -o ../plugins/$*.so plugins/$*.o -shared
-+	$(CXX) $(CXXFLAGS) -o plugins/$*.o -c plugins/$*.cpp
-+	$(CXX) $(LDFLAGS) -o ../plugins/$*.so plugins/$*.o -shared
++	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o plugins/$*.o -c plugins/$*.cpp
++	$(CXX) -shared $(LDFLAGS) -o ../plugins/$*.so plugins/$*.o
  
  ###############################################################################
  #
-@@ -58,13 +58,13 @@ test:	/tmp/test.wav ../snd/noise.wav alw
+@@ -58,13 +60,13 @@ test:	/tmp/test.wav ../snd/noise.wav alw
  	-sndfile-play /tmp/test.wav
  	@echo Test complete.
  
@@ -75,7 +82,7 @@ $NetBSD: patch-aa,v 1.5 2017/07/15 18:12:51 wiz Exp $
  
  /tmp/test.wav:	targets ../snd/noise.wav
  	../bin/listplugins
-@@ -82,7 +82,7 @@ install:	targets
+@@ -82,7 +84,7 @@ install:	targets
  				../plugins/delay.so delay_5s 1 0.1	\
  				../plugins/amp.so amp_mono 4		\
  
@@ -84,24 +91,24 @@ $NetBSD: patch-aa,v 1.5 2017/07/15 18:12:51 wiz Exp $
  
  ###############################################################################
  #
-@@ -90,17 +90,17 @@ targets:	$(PLUGINS) $(PROGRAMS)
+@@ -90,17 +92,17 @@ targets:	$(PLUGINS) $(PROGRAMS)
  #
  
  ../bin/applyplugin:	applyplugin.o load.o default.o
 -	$(CC) $(CFLAGS) $(LIBRARIES)					\
-+	$(CC) $(CFLAGS) $(LDFLAGS) $(LIBRARIES)					\
++	$(CC) $(LDFLAGS) $(LIBRARIES)					\
  		-o ../bin/applyplugin					\
  		applyplugin.o load.o default.o
  
  ../bin/analyseplugin:	analyseplugin.o load.o default.o
 -	$(CC) $(CFLAGS) $(LIBRARIES)					\
-+	$(CC) $(CFLAGS) $(LDFLAGS) $(LIBRARIES)					\
++	$(CC) $(LDFLAGS) $(LIBRARIES)					\
  		-o ../bin/analyseplugin 				\
  		analyseplugin.o load.o default.o
  
  ../bin/listplugins:	listplugins.o search.o
 -	$(CC) $(CFLAGS) $(LIBRARIES)					\
-+	$(CC) $(CFLAGS) $(LDFLAGS) $(LIBRARIES)					\
++	$(CC) $(LDFLAGS) $(LIBRARIES)					\
  		-o ../bin/listplugins	 				\
  		listplugins.o search.o
  
