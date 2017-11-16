@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4901 2017/11/16 10:28:38 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4902 2017/11/16 11:01:47 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7045,3 +7045,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-hypothesis to 3.37.0 [adam 2017-11-16]
 	Updated textproc/icu to 59.1nb3 [he 2017-11-16]
 	Updated lang/perl5 to 5.26.1nb1 [wiz 2017-11-16]
+	Updated sysutils/zabbix to 3.2.7nb3 [he 2017-11-16]
