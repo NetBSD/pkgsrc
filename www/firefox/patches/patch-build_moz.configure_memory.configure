@@ -1,15 +1,15 @@
-$NetBSD: patch-build_moz.configure_memory.configure,v 1.1 2017/02/16 02:25:17 maya Exp $
+$NetBSD: patch-build_moz.configure_memory.configure,v 1.2 2017/11/16 01:04:38 ryoon Exp $
 
 Recognise DragonflyBSD
 
---- build/moz.configure/memory.configure.orig	2017-01-16 16:16:51.000000000 +0000
+--- build/moz.configure/memory.configure.orig	2017-09-15 04:15:39.000000000 +0000
 +++ build/moz.configure/memory.configure
-@@ -66,7 +66,7 @@ def jemalloc_os_define(jemalloc, jemallo
-             return 'MOZ_MEMORY_LINUX'
-         if target.kernel == 'Darwin':
-             return 'MOZ_MEMORY_DARWIN'
--        if target.kernel in ('kFreeBSD', 'FreeBSD', 'NetBSD'):
-+        if target.kernel in ('kFreeBSD', 'FreeBSD', 'NetBSD', 'DragonFly'):
-             return 'MOZ_MEMORY_BSD'
+@@ -32,7 +32,7 @@ def jemalloc(value, target, build_projec
+         return True
+ 
+     if value and target.kernel not in ('WINNT', 'Linux', 'Darwin', 'kFreeBSD',
+-                                       'FreeBSD', 'NetBSD'):
++                                       'FreeBSD', 'NetBSD', 'DragonFly'):
          die('--enable-jemalloc is not supported on %s', target.kernel)
+ 
  
