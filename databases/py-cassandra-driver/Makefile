@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2017/08/02 15:32:48 fhajny Exp $
+# $NetBSD: Makefile,v 1.23 2017/11/16 14:49:12 fhajny Exp $
 
-DISTNAME=	python-driver-3.11.0
+DISTNAME=	python-driver-3.12.0
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}-cassandra/}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=datastax/}
@@ -15,8 +15,8 @@ EGG_NAME=	cassandra_driver-${PKGVERSION_NOREV}
 
 .include "../../lang/python/pyversion.mk"
 
-DEPENDS+=	${PYPKGPREFIX}-cython>=0.20:../../devel/py-cython
-DEPENDS+=	${PYPKGPREFIX}-six>=1.6:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-cython>=0.27:../../devel/py-cython
+DEPENDS+=	${PYPKGPREFIX}-six>=1.9:../../lang/py-six
 .if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-futures-[0-9]*:../../devel/py-futures
 .endif
