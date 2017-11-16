@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.111 2017/10/04 10:52:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.112 2017/11/16 09:58:26 he Exp $
 
 DISTNAME=	icu4c-59_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=icu/}
 EXTRACT_SUFX=	.tgz
