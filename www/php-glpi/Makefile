@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2017/07/21 10:11:27 hauke Exp $
+# $NetBSD: Makefile,v 1.4 2017/11/17 11:07:39 hauke Exp $
 
 DISTNAME=	glpi-${GLPI_VERSION}
-GLPI_VERSION=	9.1.6
+GLPI_VERSION=	9.2.1
 CATEGORIES=	www
 
 MASTER_SITES=	https://github.com/glpi-project/glpi/releases/download/${GLPI_VERSION}/
@@ -45,12 +45,12 @@ PKG_SYSCONFDIR_PERMS=	${APACHE_USER} ${APACHE_GROUP} 0700
 EGDIR=		share/examples/glpi
 GLPI_DIR=	share/glpi
 
-.for ddd in based_config.php config.php config_path.php define.php
+.for ddd in config_path.php
 CONF_FILES+=	${EGDIR}/${ddd} ${PKG_SYSCONFDIR}/${ddd}
 .endfor
 
 MAKE_DIRS_PERMS+=	${VARBASE}/glpi ${APACHE_USER} ${APACHE_GROUP} 0700
-.for ddd in _cron _dumps _graphs _lock _log _pictures _plugins \
+.for ddd in _cache _cron _dumps _graphs _lock _log _pictures _plugins \
 	 _rss _sessions _tmp _uploads
 MAKE_DIRS_PERMS+=	${VARBASE}/glpi/${ddd} \
 			${APACHE_USER} ${APACHE_GROUP} 0750
