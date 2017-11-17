@@ -1,35 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/11/11 21:30:21 tnn Exp $
+$NetBSD: distinfo,v 1.2 2017/11/17 08:15:42 adam Exp $
 
-SHA1 (buck-release-be2bf932342e5d67f58c9b26f5065c745d285d0d.tar.gz) = bb3172f35cdd915f648a15e82f8b03dc077fd4fb
-RMD160 (buck-release-be2bf932342e5d67f58c9b26f5065c745d285d0d.tar.gz) = bb00fb2cd0bd9ec82ad1fde5b013ef9641e05f41
-SHA512 (buck-release-be2bf932342e5d67f58c9b26f5065c745d285d0d.tar.gz) = 2458543428327f2fabf009809ae3cfc7bb377b09c10d5788969d2386a32766aeec660220bf2156cbab8198a3bd32c80aab72ad8e3f86e4b6f67c45513064ec4c
-Size (buck-release-be2bf932342e5d67f58c9b26f5065c745d285d0d.tar.gz) = 393952515 bytes
-SHA1 (jna-4.4.0.tar.gz) = d9b54e98393a696f458468bc8f3167f701a9ea9f
-RMD160 (jna-4.4.0.tar.gz) = d429a117a74206326c9508f267ee953438857c1f
-SHA512 (jna-4.4.0.tar.gz) = b0d60527f9075c24202edc79170cf3a5ffd7ae3533572edb0426109c59084cb3bb2925982ab139d0384ff6399afe3973b6370ae0b77d6e7e11076b446986f2fb
-Size (jna-4.4.0.tar.gz) = 69248416 bytes
-SHA1 (selenium-3.7.1.tar.gz) = ea35a2a5402ef87e68869db9bc6b6c465a219ea1
-RMD160 (selenium-3.7.1.tar.gz) = 791f328c08e3ada70431730f139de609df44ed04
-SHA512 (selenium-3.7.1.tar.gz) = 2aa225d775d414dcc8e97362ae7abce75d583b9cd1c1fba8e6b9e0304c296474348654d20ae03cf354292485a36d4f0adb53eb9f4968cd609739220c8d52bf22
-Size (selenium-3.7.1.tar.gz) = 142414162 bytes
-SHA1 (sqlite-amalgamation-3200000.zip) = 6786fced716237689cfa8212265967f28cef5de9
-RMD160 (sqlite-amalgamation-3200000.zip) = 83ed9c47458f6220047ab45ebc42aa7b7930733d
-SHA512 (sqlite-amalgamation-3200000.zip) = 659b5fe93d526d6121f1530581d3fce5af90c986decf2fab7505fea14dc1ebc9167943261a433207fd70df0019bbcb4faeb5e49e586fc9ba6300439b6e00d1e8
-Size (sqlite-amalgamation-3200000.zip) = 2069628 bytes
-SHA1 (sqlite-jdbc-3.20.0.tar.gz) = 1d38a4f12abb61909cea045cbc3df39080f2cbd3
-RMD160 (sqlite-jdbc-3.20.0.tar.gz) = 0db4de6426786e92ba14915eea7249a1629f284a
-SHA512 (sqlite-jdbc-3.20.0.tar.gz) = c678e02c04287aac7a2810f5b7885c2d01d0ace4a35f6839a3baef977b1e994029f9ae5ba9a4fde966c1b2b9c50d8a3a6264e6be93d54685772c351bf934d400
-Size (sqlite-jdbc-3.20.0.tar.gz) = 10419597 bytes
-SHA1 (patch-buck_bin_buck) = 480c168e0dbe8fa1d106f8f20af7324378b5f421
-SHA1 (patch-buck_programs_buck__tool.py) = 65b8b77d142f21996316e447571c202bd43f95c0
-SHA1 (patch-buck_programs_timing.py) = 45fb598af62322ea76ad31fc5c08d36e4f7eb55d
-SHA1 (patch-buck_src_com_facebook_buck_cxx_toolchain_ArchiverProvider.java) = c714cbeb10285a93427e641af2757806dc8983bb
-SHA1 (patch-buck_src_com_facebook_buck_cxx_toolchain_DefaultCxxPlatforms.java) = 9137be4a52ebafa184282e71dc5e54c2204e23c0
-SHA1 (patch-buck_src_com_facebook_buck_jvm_java_JUnitStep.java) = 5a5d41c58834f37e4b7dd957e3b4bd94d5f3e751
-SHA1 (patch-buck_src_com_facebook_buck_python_PythonBuckConfig.java) = 971eccab2b5d8dd086a028fd3fb62216d97c75c7
-SHA1 (patch-buck_src_com_facebook_buck_util_environment_Platform.java) = 4c840915ac95f8a488d295112dfbe471512048c3
-SHA1 (patch-buck_src_com_facebook_buck_worker_WorkerProcessPoolFactory.java) = be112ad34da8f4382d7f9d61d7d93efe64b68988
-SHA1 (patch-jna_build.xml) = 44beb573483dfe82590f1ffe87cf71594c63ecf2
-SHA1 (patch-rake-tasks_checks.rb) = bf9eda0ccf0f20c6add4d39061bfe7a1c5dae43f
-SHA1 (patch-src_com_facebook_buck_cxx_toolchain_CxxPlatforms.java) = 13a7e28c091e892eac81641055521b1f877aeff4
-SHA1 (patch-src_com_facebook_buck_shell_AbstractGenruleStep.java) = d1267e2e7cbf3c2b278cc3617543937e2f34a43f
+SHA1 (selenium-3.7.0.tar.gz) = c0dd89eea9a8d8aee69666c4e39e8e77ab26d2e3
+RMD160 (selenium-3.7.0.tar.gz) = d710ea2dbc8aa2aa73fa4ebb976f81cfc9347d27
+SHA512 (selenium-3.7.0.tar.gz) = 80594daea5af899ec9979bd4297e53cbc8cab15639295ed6f7b69f958040963ca23404bf6858f00c729e8a3081bb78b56696456e9a8a89829b8e3409a37ba6f7
+Size (selenium-3.7.0.tar.gz) = 844257 bytes
