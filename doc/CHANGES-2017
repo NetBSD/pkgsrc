@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4919 2017/11/17 09:52:25 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4920 2017/11/17 11:08:08 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7065,3 +7065,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Downgraded www/py-selenium to 3.7.0 [adam 2017-11-17]
 	Updated security/py-asyncssh to 1.11.1 [adam 2017-11-17]
 	Updated www/lighttpd to 1.4.48 [adam 2017-11-17]
+	Updated www/php-glpi to 9.2.1 [hauke 2017-11-17]
