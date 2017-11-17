@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/10/28 09:06:26 adam Exp $
+# $NetBSD: Makefile,v 1.3 2017/11/17 11:18:49 adam Exp $
 
-DISTNAME=	pendulum-1.3.1
+DISTNAME=	pendulum-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	python time
+CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pendulum/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
