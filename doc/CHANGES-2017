@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4911 2017/11/17 00:22:47 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.4912 2017/11/17 00:49:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7056,3 +7056,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-h5py to 2.7.1 [minskim 2017-11-16]
 	Updated www/firefox52 to 52.5.0 [ryoon 2017-11-17]
 	Updated www/firefox52-l10n to 52.5.0 [ryoon 2017-11-17]
+	Updated mail/thunderbird to 52.4.0 [ryoon 2017-11-17]
