@@ -1,14 +1,16 @@
 <?php
 
-// $NetBSD: config_path.php,v 1.1 2017/07/18 14:29:51 hauke Exp $
+// $NetBSD: config_path.php,v 1.2 2017/11/17 11:07:39 hauke Exp $
 //
-// pkgsrc GLPI path setup file
+// pkgsrc GLPI path setup file, see
+// <http://glpi-developer-documentation.readthedocs.io/en/master/packaging.html>
 
 // Configuration
 define('GLPI_CONFIG_DIR',	'@PKG_SYSCONFDIR@');
 
 // Runtime Data
 define('GLPI_DOC_DIR',		'@VARBASE@/glpi');
+define('GLPI_CACHE_DIR',	GLPI_DOC_DIR . '/_cache');
 define('GLPI_CRON_DIR',		GLPI_DOC_DIR . '/_cron');
 define('GLPI_DUMP_DIR',		GLPI_DOC_DIR . '/_dumps');
 define('GLPI_GRAPH_DIR',	GLPI_DOC_DIR . '/_graphs');
@@ -21,7 +23,7 @@ define('GLPI_TMP_DIR',		GLPI_DOC_DIR . '/_tmp');
 define('GLPI_UPLOAD_DIR',	GLPI_DOC_DIR . '/_uploads');
 
 // Log file
-define('GLPI_LOG_DIR',        '@VARBASE@/log/glpi');
+define('GLPI_LOG_DIR',		'@VARBASE@/log/glpi');
 
 // System libraries
 //  htmlawed not in pkgsrc - built-in, anyway?
