@@ -1,4 +1,11 @@
-$NetBSD: patch-Makefile.in.in,v 1.1 2017/11/15 14:49:32 hauke Exp $
+$NetBSD: patch-Makefile.in.in,v 1.2 2017/11/17 13:06:03 hauke Exp $
+
+Sprinkle DESTDIR dust.
+
+Avoid installing backup~ files.
+
+The standards.info provided by XEmacs conflicts with the one installed by
+devel/autoconf, which is probably newer.
 
 Prefix {c,e}tags to avoid conflicts.
 
@@ -25,7 +32,14 @@ was patch-aa
  #endif
  
  install-arch-indep: mkdir info
-@@ -471,8 +472,12 @@ install-arch-indep: mkdir info
+@@ -465,14 +466,19 @@ install-arch-indep: mkdir info
+ 	    ${INSTALL_DATA} ${srcdir}/info/dir $(DESTDIR)${infodir}/dir ; \
+ 	  fi ; \
+ 	  for file in *.info* ; do \
++	    test $${file} = "standards.info" && continue ; \
+ 	    ${INSTALL_DATA} $${file} $(DESTDIR)${infodir}/$${file} ; \
+ 	    chmod 0644 $(DESTDIR)${infodir}/$${file}; \
+ 	  done ; \
  	fi
  	cd ${srcdir}/etc && \
  	  for page in xemacs etags ctags gnuserv gnuclient gnuattach gnudoit; do \
