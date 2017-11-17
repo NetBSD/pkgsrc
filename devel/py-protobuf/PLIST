@@ -1,4 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2017/10/20 23:02:25 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/11/17 22:09:11 he Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/google/protobuf/__init__.py
 ${PYSITELIB}/google/protobuf/__init__.pyc
 ${PYSITELIB}/google/protobuf/__init__.pyo
@@ -179,6 +186,9 @@ ${PYSITELIB}/google/protobuf/internal/wire_format_test.pyo
 ${PYSITELIB}/google/protobuf/json_format.py
 ${PYSITELIB}/google/protobuf/json_format.pyc
 ${PYSITELIB}/google/protobuf/json_format.pyo
+${PYSITELIB}/google/protobuf/map_proto2_unittest_pb2.py
+${PYSITELIB}/google/protobuf/map_proto2_unittest_pb2.pyc
+${PYSITELIB}/google/protobuf/map_proto2_unittest_pb2.pyo
 ${PYSITELIB}/google/protobuf/map_unittest_pb2.py
 ${PYSITELIB}/google/protobuf/map_unittest_pb2.pyc
 ${PYSITELIB}/google/protobuf/map_unittest_pb2.pyo
@@ -278,10 +288,4 @@ ${PYSITELIB}/google/protobuf/util/json_format_proto3_pb2.pyo
 ${PYSITELIB}/google/protobuf/wrappers_pb2.py
 ${PYSITELIB}/google/protobuf/wrappers_pb2.pyc
 ${PYSITELIB}/google/protobuf/wrappers_pb2.pyo
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+

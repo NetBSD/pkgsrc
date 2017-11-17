@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2017/02/07 13:50:31 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/11/17 22:09:11 he Exp $
 
 .include "Makefile.common"
 
 DISTNAME=	protobuf-cpp-${PROTOBUFVER}
 PKGNAME=	${DISTNAME:S/-cpp//}
 
-MAINTAINER=	aran@100acres.us
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Google protocol buffers
 
 GNU_CONFIGURE=	yes
