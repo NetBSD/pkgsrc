@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.17 2017/10/20 23:02:25 minskim Exp $
+$NetBSD: distinfo,v 1.18 2017/11/17 22:09:11 he Exp $
 
-SHA1 (protobuf-cpp-3.4.1.tar.gz) = f5a62fa19d590525aa4338df42da375ea8912091
-RMD160 (protobuf-cpp-3.4.1.tar.gz) = 79d4802e0362b01d7ae12719143d4311281d2413
-SHA512 (protobuf-cpp-3.4.1.tar.gz) = 6189e23c7e381f62e971bd0e35ad9c3ed8effe584755357013887c6a582cb5a9a654c39affa2a073b658854138f31bfb70f89fa1df494e9386f1d64fd73d07d2
-Size (protobuf-cpp-3.4.1.tar.gz) = 4274863 bytes
+SHA1 (protobuf-cpp-3.5.0.tar.gz) = b5ae3104b6a9401beaac3d8af11da83df7135448
+RMD160 (protobuf-cpp-3.5.0.tar.gz) = 8cd9bb39287dd3d5277e5fd8c6e156a9d2a81206
+SHA512 (protobuf-cpp-3.5.0.tar.gz) = b1d3f3617898e3f73630ea7a43416a60b970291b4f93952b8d4f68ee5cd401f752d76cd1f6a65a87186b415208142401e01ffebb2ec52534e1db31abcc0d052e
+Size (protobuf-cpp-3.5.0.tar.gz) = 4269335 bytes
 SHA1 (patch-configure) = ec7003c29d2d3e9aeb9ea90921313e9eb68d3127
 SHA1 (patch-configure.ac) = 208a5ce72905aa95ad73ee0f751d4a58f0c37f5f
 SHA1 (patch-gmock_configure) = a39355c602366450e3cdb6bc7dbc0523fc194319
