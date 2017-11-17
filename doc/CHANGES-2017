@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4920 2017/11/17 11:08:08 hauke Exp $
+$NetBSD: CHANGES-2017,v 1.4921 2017/11/17 11:19:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7066,3 +7066,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-asyncssh to 1.11.1 [adam 2017-11-17]
 	Updated www/lighttpd to 1.4.48 [adam 2017-11-17]
 	Updated www/php-glpi to 9.2.1 [hauke 2017-11-17]
+	Updated security/libassuan2 to 2.4.4 [adam 2017-11-17]
+	Updated time/py-pendulum to 1.3.2 [adam 2017-11-17]
