@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.738 2017/11/06 22:14:01 jmcneill Exp $
+# $NetBSD: Makefile,v 1.739 2017/11/18 18:38:48 jmcneill Exp $
 #
 
 COMMENT=	System utilities
@@ -591,6 +591,7 @@ SUBDIR+=	ts
 #SUBDIR+=	u-boot			# only contains Makefile fragments
 SUBDIR+=	u-boot-a10-olinuxino-lime
 SUBDIR+=	u-boot-bananapi
+SUBDIR+=	u-boot-bananapi-m3
 SUBDIR+=	u-boot-beagleboard
 SUBDIR+=	u-boot-beagleboneblack
 SUBDIR+=	u-boot-beaglebonewhite
@@ -609,7 +610,6 @@ SUBDIR+=	u-boot-orangepi-plus2e
 SUBDIR+=	u-boot-pine64
 SUBDIR+=	u-boot-pinebook
 SUBDIR+=	u-boot-pocketchip
-SUBDIR+=	u-boot-sinovoip-bpi-m3
 SUBDIR+=	upower
 SUBDIR+=	ups-nut
 SUBDIR+=	ups-nut-cgi
