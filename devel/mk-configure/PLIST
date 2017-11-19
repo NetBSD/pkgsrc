@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2016/06/12 15:30:17 cheusov Exp $
-bin/mkc_check_common.sh
+@comment $NetBSD: PLIST,v 1.12 2017/11/19 15:08:25 cheusov Exp $
 bin/mkc_check_compiler
 bin/mkc_check_custom
 bin/mkc_check_decl
@@ -14,6 +13,7 @@ bin/mkc_long_lines
 bin/mkc_test_helper
 bin/mkc_which
 bin/mkcmake
+libexec/mk-configure/mkc_check_common.sh
 man/man1/mkc_check_custom.1
 man/man1/mkc_check_decl.1
 man/man1/mkc_check_funclib.1
@@ -26,7 +26,7 @@ share/doc/mk-configure/FAQ
 share/doc/mk-configure/LICENSE
 share/doc/mk-configure/NEWS
 share/doc/mk-configure/NOTES
-share/doc/mk-configure/README
+share/doc/mk-configure/README.md
 share/doc/mk-configure/TODO
 share/doc/mk-configure/presentation.pdf
 share/examples/mk-configure/Makefile.inc
