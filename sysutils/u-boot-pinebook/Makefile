@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/09/10 17:00:41 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2017/11/19 16:50:35 jmcneill Exp $
 
-UBOOT_VERSION=		2017.09rc2
+UBOOT_VERSION=		2017.09
 UBOOT_TARGET=		pinebook
 UBOOT_CONFIG=		pinebook_defconfig
 UBOOT_BIN=		u-boot-sunxi-with-spl.bin
@@ -8,7 +8,7 @@ UBOOT_BIN=		u-boot-sunxi-with-spl.bin
 # Use anarsoul's fork of mainline U-Boot with Pinebook support patched in
 MASTER_SITES=		${MASTER_SITE_GITHUB:=anarsoul/}
 GITHUB_PROJECT=		u-boot-pine64
-GITHUB_TAG=		ccba9fb2248b6206cb55452b7623b964b0e02cf4
+GITHUB_TAG=		0e9350e3ff11c91eb6959d0d4589a4cc5e576e35
 DISTNAME=		u-boot-${UBOOT_TARGET}-${UBOOT_VERSION}
 EXTRACT_SUFX=		.tar.gz
 
