@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2017/10/21 01:22:56 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/11/19 10:38:40 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gtk3.${RUBY_DLEXT}
@@ -289,6 +289,7 @@ ${GEM_LIBDIR}/sample/gtk-demo/textview.rb
 ${GEM_LIBDIR}/sample/gtk-demo/theming.ui
 ${GEM_LIBDIR}/sample/gtk-demo/theming_style_classes.rb
 ${GEM_LIBDIR}/sample/gtk-demo/transparent.rb
+${GEM_LIBDIR}/sample/gtk-demo/tree_store.rb
 ${GEM_LIBDIR}/sample/gtk-demo/vertical_text_cursor.png
 ${GEM_LIBDIR}/sample/gtk-demo/w_resize_cursor.png
 ${GEM_LIBDIR}/sample/gtk-demo/wait_cursor.png
