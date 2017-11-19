@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2017/08/24 14:02:39 wen Exp $
+@comment $NetBSD: PLIST,v 1.35 2017/11/19 08:36:57 wen Exp $
 share/examples/mediawiki/mediawiki.conf
 share/mediawiki/.eslintrc.json
 share/mediawiki/.stylelintrc
@@ -3310,6 +3310,7 @@ share/mediawiki/extensions/SyntaxHighlight_GeSHi/COPYING
 share/mediawiki/extensions/SyntaxHighlight_GeSHi/Gruntfile.js
 share/mediawiki/extensions/SyntaxHighlight_GeSHi/README
 share/mediawiki/extensions/SyntaxHighlight_GeSHi/ResourceLoaderGeSHiVisualEditorModule.php
+share/mediawiki/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.GeSHi.php
 share/mediawiki/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.ace.php
 share/mediawiki/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.class.php
 share/mediawiki/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.compat.php
@@ -4374,6 +4375,7 @@ share/mediawiki/includes/compat/normal/UtfNormalUtil.php
 share/mediawiki/includes/composer/ComposerHookHandler.php
 share/mediawiki/includes/composer/ComposerPackageModifier.php
 share/mediawiki/includes/composer/ComposerVersionNormalizer.php
+share/mediawiki/includes/composer/ComposerVendorHtaccessCreator.php
 share/mediawiki/includes/config/Config.php
 share/mediawiki/includes/config/ConfigException.php
 share/mediawiki/includes/config/ConfigFactory.php
@@ -11999,6 +12001,7 @@ share/mediawiki/tests/selenium/wdio.conf.jenkins.js
 share/mediawiki/tests/selenium/wdio.conf.js
 share/mediawiki/thumb.php
 share/mediawiki/thumb_handler.php
+share/mediawiki/vendor/.htaccess
 share/mediawiki/vendor/README.md
 share/mediawiki/vendor/autoload.php
 share/mediawiki/vendor/composer.json
