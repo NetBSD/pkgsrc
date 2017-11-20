@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.26 2017/07/06 04:50:01 msaitoh Exp $
+$NetBSD: distinfo,v 1.27 2017/11/20 03:14:42 msaitoh Exp $
 
-SHA1 (pciutils-3.5.5.tar.gz) = 409e7b0587c6a476ef93a90ecc4ab3b028a554bb
-RMD160 (pciutils-3.5.5.tar.gz) = bdfc4cb7b396374ecd3d9ee228cfb6af7faaa9f7
-SHA512 (pciutils-3.5.5.tar.gz) = b2c89e1d742c5a23cad662ed6bb1d47d7587b0d823fcbf3abc6d613735961473f7d29c83a4ccb49b64ec4f674026f17e88693eb34b42cb6c128abd1407c778ba
-Size (pciutils-3.5.5.tar.gz) = 437331 bytes
-SHA1 (patch-aa) = e2890ed3646c774a5f72bdff00af6b1d32cc7219
+SHA1 (pciutils-3.5.6.tar.gz) = 9f22fe9fccf1c5089167dc534409df8bd724f43d
+RMD160 (pciutils-3.5.6.tar.gz) = d4c89bdcff620646de5cc847f93d598822799168
+SHA512 (pciutils-3.5.6.tar.gz) = d9bac2d1744db21937d84d27ad1fe8d508d421468b6adeb179fb550aab4b9a57c0a67230a425f28dbc0a91caa276f6a069e99d929daf350607c61e65f7918e73
+Size (pciutils-3.5.6.tar.gz) = 436463 bytes
+SHA1 (patch-aa) = d8caa8b69987d14397fd863d776a533e4c19b26e
 SHA1 (patch-ab) = 881db39792c9d72f527438e2b475ac2ea842b536
 SHA1 (patch-ac) = 4b90e99c051391b9cd3a6c1f5781f41b4a855c29
-SHA1 (patch-ad) = bfe9069e96fd46798afec73c93ad71db3a0e0e37
