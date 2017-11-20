@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2017/11/16 18:50:53 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2017/11/20 17:10:43 minskim Exp $
 
 DISTNAME=	ipython-6.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython/}
 
@@ -28,7 +28,7 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-.if "${PYPKGPREFIX}" == "34"
+.if "${PYPKGPREFIX}" == "py34"
 DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
 .endif
 
