@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/08/24 20:03:11 adam Exp $
+# $NetBSD: Makefile,v 1.21 2017/11/20 23:04:05 wiz Exp $
 
 DISTNAME=	libgit2-0.26.0
 PKGREVISION=	1
@@ -23,6 +23,7 @@ do-test:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/libssh2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+# for tests
 .include "../../lang/python/pyversion.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/http-parser/buildlink3.mk"
