@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2017/01/28 04:41:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.82 2017/11/20 08:29:42 maya Exp $
 
 BASH_VERSION=		4.4
 BASH_PATCHLEVEL=	012
@@ -7,7 +7,6 @@ DISTNAME=	bash-${BASH_VERSION}
 PKGNAME=	bash-${BASH_VERSION}.${BASH_PATCHLEVEL}
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/}
-MASTER_SITES+=	ftp://ftp.cwru.edu/pub/bash/
 
 PATCH_SITES=	${MASTER_SITES:=bash-4.4-patches/}
 PATCHFILES+=	bash44-001 bash44-002 bash44-003 bash44-004 bash44-005
@@ -23,8 +22,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
 COMMENT=	The GNU Bourne Again Shell
 LICENSE=	gnu-gpl-v3
-
-CONFLICTS=	static-bash-[0-9]*
 
 USE_TOOLS+=		makeinfo bison
 USE_PKGLOCALEDIR=	yes
@@ -59,7 +56,7 @@ CONFIGURE_ARGS+=	--enable-array-variables
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bash
-PKG_SUPPORTED_OPTIONS=	static
+PKG_SUPPORTED_OPTIONS=	#static XXX 2017-11-20 broken
 
 .include "../../mk/bsd.options.mk"
 
