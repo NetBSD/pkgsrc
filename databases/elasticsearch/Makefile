@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2017/10/30 11:27:32 fhajny Exp $
+# $NetBSD: Makefile,v 1.36 2017/11/20 15:36:47 fhajny Exp $
 
-DISTNAME=	elasticsearch-5.6.3
+DISTNAME=	elasticsearch-6.0.0
 CATEGORIES=	textproc
 MASTER_SITES=	https://artifacts.elastic.co/downloads/elasticsearch/
 
@@ -53,13 +53,13 @@ OWN_DIRS_PERMS+=	${ES_LOGDIR} ${ES_USER} ${ES_GROUP} 0700
 OWN_DIRS_PERMS+=	${ES_DBDIR} ${ES_USER} ${ES_GROUP} 0700
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/scripts
 
-REPLACE_BASH+=		bin/elasticsearch bin/elasticsearch.in.sh bin/elasticsearch-plugin
+REPLACE_BASH+=		bin/elasticsearch*
 INSTALLATION_DIRS+=	bin ${ES_BASEDIR}/bin
 INSTALLATION_DIRS+=	${EGDIR} ${PREFIX}/share/doc/elasticsearch
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	bin/elasticsearch bin/elasticsearch-plugin config/elasticsearch.yml
+SUBST_FILES.paths=	bin/elasticsearch-env config/elasticsearch.yml
 SUBST_VARS.paths=	PKG_JAVA_HOME PKG_SYSCONFDIR ES_DBDIR ES_BASEDIR ES_LOGDIR
 
 do-install:
@@ -71,8 +71,10 @@ do-install:
 		${DESTDIR}${PREFIX}/share/doc/elasticsearch
 .endfor
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/elasticsearch ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/elasticsearch-env ${DESTDIR}${ES_BASEDIR}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/elasticsearch-keystore ${DESTDIR}${ES_BASEDIR}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/elasticsearch-plugin ${DESTDIR}${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/elasticsearch.in.sh ${DESTDIR}${ES_BASEDIR}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/elasticsearch-translog ${DESTDIR}${ES_BASEDIR}/bin
 	cd ${WRKSRC} && ${PAX} -rw -pp lib modules ${DESTDIR}${ES_BASEDIR}
 
 .include "../../mk/java-vm.mk"
