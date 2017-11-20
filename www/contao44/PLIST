@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/11/15 14:09:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/11/20 04:53:56 taca Exp $
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/README.md
 ${CT_WEBDIR}/assets/ace/composer.json
@@ -3350,9 +3350,14 @@ ${CT_WEBDIR}/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Reader.
 ${CT_WEBDIR}/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/SimpleAnnotationReader.php
 ${CT_WEBDIR}/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/TokenParser.php
 ${CT_WEBDIR}/vendor/doctrine/annotations/phpstan.neon
+${CT_WEBDIR}/vendor/doctrine/cache/.coveralls.yml
+${CT_WEBDIR}/vendor/doctrine/cache/.gitignore
+${CT_WEBDIR}/vendor/doctrine/cache/.travis.yml
 ${CT_WEBDIR}/vendor/doctrine/cache/LICENSE
 ${CT_WEBDIR}/vendor/doctrine/cache/README.md
 ${CT_WEBDIR}/vendor/doctrine/cache/UPGRADE.md
+${CT_WEBDIR}/vendor/doctrine/cache/build.properties
+${CT_WEBDIR}/vendor/doctrine/cache/build.xml
 ${CT_WEBDIR}/vendor/doctrine/cache/composer.json
 ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/ApcCache.php
 ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/ApcuCache.php
@@ -3362,17 +3367,13 @@ ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/CacheProvider.php
 ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/ChainCache.php
 ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/ClearableCache.php
 ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/CouchbaseCache.php
-${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/ExtMongoDBCache.php
 ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/FileCache.php
 ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/FilesystemCache.php
 ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/FlushableCache.php
-${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/LegacyMongoDBCache.php
 ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MemcacheCache.php
 ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MemcachedCache.php
 ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MongoDBCache.php
-${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MultiDeleteCache.php
 ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MultiGetCache.php
-${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MultiOperationCache.php
 ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MultiPutCache.php
 ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/PhpFileCache.php
 ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/PredisCache.php
@@ -3384,6 +3385,7 @@ ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/VoidCache.php
 ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/WinCacheCache.php
 ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/XcacheCache.php
 ${CT_WEBDIR}/vendor/doctrine/cache/lib/Doctrine/Common/Cache/ZendDataCache.php
+${CT_WEBDIR}/vendor/doctrine/cache/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/doctrine/collections/CONTRIBUTING.md
 ${CT_WEBDIR}/vendor/doctrine/collections/LICENSE
 ${CT_WEBDIR}/vendor/doctrine/collections/README.md
@@ -3466,8 +3468,6 @@ ${CT_WEBDIR}/vendor/doctrine/common/lib/Doctrine/Common/Util/ClassUtils.php
 ${CT_WEBDIR}/vendor/doctrine/common/lib/Doctrine/Common/Util/Debug.php
 ${CT_WEBDIR}/vendor/doctrine/common/lib/Doctrine/Common/Util/Inflector.php
 ${CT_WEBDIR}/vendor/doctrine/common/lib/Doctrine/Common/Version.php
-${CT_WEBDIR}/vendor/doctrine/common/phpstan.neon
-${CT_WEBDIR}/vendor/doctrine/dbal/.scrutinizer.yml
 ${CT_WEBDIR}/vendor/doctrine/dbal/LICENSE
 ${CT_WEBDIR}/vendor/doctrine/dbal/README.md
 ${CT_WEBDIR}/vendor/doctrine/dbal/SECURITY.md
@@ -3555,16 +3555,13 @@ ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/ConnectionExceptio
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/ConstraintViolationException.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/DatabaseObjectExistsException.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/DatabaseObjectNotFoundException.php
-${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/DeadlockException.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/DriverException.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/ForeignKeyConstraintViolationException.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/InvalidArgumentException.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/InvalidFieldNameException.php
-${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/LockWaitTimeoutException.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/NonUniqueFieldNameException.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/NotNullConstraintViolationException.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/ReadOnlyException.php
-${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/RetryableException.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/ServerException.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/SyntaxErrorException.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/TableExistsException.php
@@ -3589,7 +3586,6 @@ ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/MySQLKeyw
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/OracleKeywords.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/PostgreSQL91Keywords.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/PostgreSQL92Keywords.php
-${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/PostgreSQL94Keywords.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/PostgreSQLKeywords.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/ReservedKeywordsValidator.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/SQLAnywhere11Keywords.php
@@ -3606,7 +3602,6 @@ ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/MySqlPlatform.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/OraclePlatform.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/PostgreSQL91Platform.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/PostgreSQL92Platform.php
-${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/PostgreSQL94Platform.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/PostgreSqlPlatform.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SQLAnywhere11Platform.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SQLAnywhere12Platform.php
@@ -3684,11 +3679,7 @@ ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/BinaryType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/BlobType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/BooleanType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/ConversionException.php
-${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/DateImmutableType.php
-${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/DateIntervalType.php
-${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/DateTimeImmutableType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/DateTimeType.php
-${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/DateTimeTzImmutableType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/DateTimeTzType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/DateType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/DecimalType.php
@@ -3696,16 +3687,13 @@ ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/FloatType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/GuidType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/IntegerType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/JsonArrayType.php
-${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/JsonType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/ObjectType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/SimpleArrayType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/SmallIntType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/StringType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/TextType.php
-${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/TimeImmutableType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/TimeType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/Type.php
-${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/VarDateTimeImmutableType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/VarDateTimeType.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/Version.php
 ${CT_WEBDIR}/vendor/doctrine/dbal/lib/Doctrine/DBAL/VersionAwarePlatformDriver.php
@@ -3738,6 +3726,7 @@ ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Controller/ProfilerController.php
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/DataCollector/DoctrineDataCollector.php
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/DependencyInjection/Compiler/DoctrineOrmMappingsPass.php
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/DependencyInjection/Compiler/EntityListenerPass.php
+${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/DependencyInjection/Compiler/ServiceRepositoryCompilerPass.php
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/DependencyInjection/Configuration.php
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/DependencyInjection/DoctrineExtension.php
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/DoctrineBundle.php
@@ -3749,6 +3738,9 @@ ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Mapping/DisconnectedMetadataFactory
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Mapping/EntityListenerServiceResolver.php
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/README.md
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Registry.php
+${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Repository/ContainerRepositoryFactory.php
+${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Repository/ServiceEntityRepository.php
+${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Repository/ServiceEntityRepositoryInterface.php
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Resources/config/dbal.xml
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Resources/config/orm.xml
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Resources/config/schema/doctrine-1.0.xsd
@@ -3790,10 +3782,13 @@ ${CT_WEBDIR}/vendor/doctrine/doctrine-cache-bundle/Resources/config/services.xml
 ${CT_WEBDIR}/vendor/doctrine/doctrine-cache-bundle/composer.json
 ${CT_WEBDIR}/vendor/doctrine/doctrine-cache-bundle/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/doctrine/doctrine-cache-bundle/ruleset.xml
+${CT_WEBDIR}/vendor/doctrine/inflector/.gitignore
+${CT_WEBDIR}/vendor/doctrine/inflector/.travis.yml
 ${CT_WEBDIR}/vendor/doctrine/inflector/LICENSE
 ${CT_WEBDIR}/vendor/doctrine/inflector/README.md
 ${CT_WEBDIR}/vendor/doctrine/inflector/composer.json
 ${CT_WEBDIR}/vendor/doctrine/inflector/lib/Doctrine/Common/Inflector/Inflector.php
+${CT_WEBDIR}/vendor/doctrine/inflector/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/doctrine/lexer/LICENSE
 ${CT_WEBDIR}/vendor/doctrine/lexer/README.md
 ${CT_WEBDIR}/vendor/doctrine/lexer/composer.json
