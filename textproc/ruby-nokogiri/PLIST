@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2017/06/05 15:22:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.23.6.1 2017/11/20 19:35:32 bsiegert Exp $
 bin/nokogiri${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -158,13 +158,9 @@ ${GEM_LIBDIR}/lib/nokogiri/xml/xpath_context.rb
 ${GEM_LIBDIR}/lib/nokogiri/xslt.rb
 ${GEM_LIBDIR}/lib/nokogiri/xslt/stylesheet.rb
 ${GEM_LIBDIR}/lib/xsd/xmlparser/nokogiri.rb
-${GEM_LIBDIR}/patches/libxml2/0001-Fix-comparison-with-root-node-in-xmlXPathCmpNodes.patch
-${GEM_LIBDIR}/patches/libxml2/0002-Fix-XPointer-paths-beginning-with-range-to.patch
-${GEM_LIBDIR}/patches/libxml2/0003-Disallow-namespace-nodes-in-XPointer-ranges.patch
-${GEM_LIBDIR}/patches/libxslt/0001-Fix-heap-overread-in-xsltFormatNumberConversion.patch
-${GEM_LIBDIR}/patches/libxslt/0002-Check-for-integer-overflow-in-xsltAddTextString.patch
 ${GEM_LIBDIR}/patches/sort-patches-by-date
 ${GEM_LIBDIR}/suppressions/README.txt
+${GEM_LIBDIR}/suppressions/nokogiri_ruby-2.supp
 ${GEM_LIBDIR}/tasks/test.rb
 ${GEM_LIBDIR}/test/css/test_nthiness.rb
 ${GEM_LIBDIR}/test/css/test_parser.rb
