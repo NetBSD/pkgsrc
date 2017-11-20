@@ -1,4 +1,4 @@
-$NetBSD: patch-src_libs_zbxsysinfo_common_net.c,v 1.1 2017/11/16 11:01:12 he Exp $
+$NetBSD: patch-src_libs_zbxsysinfo_common_net.c,v 1.2 2017/11/20 08:09:46 he Exp $
 
 Can't portably use _res in a threaded program(!)
 Convert to using res_nsend().
@@ -69,7 +69,7 @@ Convert to using res_nsend().
 -		_res.nscount = saved_nscount;
 -	}
 +	res = res_nsend(&res_state, buf, res, answer.buffer, sizeof(answer.buffer));
-+	res_nclose(&res_state);
++	res_ndestroy(&res_state);
  
  	hp = (HEADER *)answer.buffer;
  
