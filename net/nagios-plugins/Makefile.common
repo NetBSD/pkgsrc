@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2017/09/10 14:11:30 joerg Exp $
+# $NetBSD: Makefile.common,v 1.14.4.1 2017/11/20 21:14:20 bsiegert Exp $
 #
 # used by net/nagios-plugin-ldap/Makefile
 # used by net/nagios-plugin-mysql/Makefile
@@ -23,5 +23,6 @@ CONFIGURE_ARGS.DragonFly+=	fu_cv_sys_stat_statvfs=no
 CONFIGURE_ARGS+=	--with-nagios-user=${NAGIOS_USER:Q}
 CONFIGURE_ARGS+=	--with-nagios-group=${NAGIOS_GROUP:Q}
 CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/share/nagios
+CONFIGURE_ARGS+=	--with-ldap=no
 
 CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
