@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2017/11/02 09:51:46 fhajny Exp $
+# $NetBSD: Makefile,v 1.15 2017/11/20 15:40:05 fhajny Exp $
 
-DISTNAME=	elasticsearch-py-5.4.0
+DISTNAME=	elasticsearch-py-6.0.0
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elastic/}
@@ -15,7 +15,7 @@ GITHUB_PROJECT=	elasticsearch-py
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.8.2:../../www/py-urllib3
+DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.21.1:../../www/py-urllib3
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
