@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/11/16 19:48:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2017/11/20 16:02:59 abs Exp $
 
 DISTNAME=	rustc-1.21.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -35,6 +35,8 @@ CONFIGURE_ARGS+=	--disable-ninja
 CONFIGURE_ARGS+=	--enable-vendor
 
 UNLIMIT_RESOURCES+=	cputime
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 TEST_TARGET=	check
 
