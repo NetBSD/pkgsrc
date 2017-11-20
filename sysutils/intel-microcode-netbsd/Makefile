@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2017/07/11 04:07:51 msaitoh Exp $
+# $NetBSD: Makefile,v 1.15 2017/11/20 03:41:09 msaitoh Exp $
 #
 
-DISTNAME=	microcode-20170707
-PKGNAME=	intel-microcode-netbsd-20170707
+DISTNAME=	microcode-20171117
+PKGNAME=	intel-microcode-netbsd-20171117
 CATEGORIES=	sysutils
-MASTER_SITES=	http://downloadmirror.intel.com/26925/eng/
+MASTER_SITES=	https://downloadmirror.intel.com/27337/eng/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	drochner@NetBSD.org
