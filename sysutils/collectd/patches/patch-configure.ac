@@ -1,36 +1,44 @@
-$NetBSD: patch-configure.ac,v 1.10 2016/10/13 15:17:28 fhajny Exp $
+$NetBSD: patch-configure.ac,v 1.11 2017/11/21 15:18:23 fhajny Exp $
 
 Add KERNEL_NETBSD, add entry and disk plugins for NetBSD,
 and also do swap for "have_swapctl_three_args" (as for NetBSD).
 Also, the start of process support, but that's not yet finished.
 
---- configure.ac.orig	2016-09-11 08:10:25.243038749 +0000
+--- configure.ac.orig	2017-11-18 09:03:27.330751467 +0000
 +++ configure.ac
-@@ -147,6 +147,7 @@ AM_CONDITIONAL([BUILD_DARWIN], [test "x$
+@@ -1,6 +1,6 @@
+ dnl Process this file with autoconf to produce a configure script.
+ AC_PREREQ([2.60])
+-AC_INIT([collectd],[m4_esyscmd(./version-gen.sh)])
++AC_INIT([collectd],[5.8.0])
+ AC_CONFIG_SRCDIR(src/target_set.c)
+ AC_CONFIG_HEADERS(src/config.h)
+ AC_CONFIG_AUX_DIR([build-aux])
+@@ -110,6 +110,7 @@ AM_CONDITIONAL([BUILD_DARWIN], [test "x$
  AM_CONDITIONAL([BUILD_FREEBSD], [test "x$ac_system" = "xFreeBSD"])
  AM_CONDITIONAL([BUILD_LINUX], [test "x$ac_system" = "xLinux"])
  AM_CONDITIONAL([BUILD_OPENBSD], [test "x$ac_system" = "xOpenBSD"])
 +AM_CONDITIONAL([BUILD_NETBSD], [test "x$ac_system" = "xNetBSD"])
  AM_CONDITIONAL([BUILD_SOLARIS], [test "x$ac_system" = "xSolaris"])
  
- if test "x$ac_system" = "xLinux"
-@@ -5717,6 +5718,7 @@ plugin_load="no"
- plugin_log_logstash="no"
+ if test "x$ac_system" = "xSolaris"; then
+@@ -6136,6 +6137,7 @@ plugin_log_logstash="no"
+ plugin_mcelog="no"
  plugin_memory="no"
  plugin_multimeter="no"
 +plugin_netstat_udp="no"
  plugin_nfs="no"
  plugin_numa="no"
- plugin_perl="no"
-@@ -5803,6 +5805,7 @@ then
- 	plugin_entropy="yes"
- 	plugin_irq="yes"
- 	plugin_processes="yes"
-+        plugin_netstat_udp="yes"
+ plugin_ovs_events="no"
+@@ -6229,6 +6231,7 @@ if test "x$ac_system" = "xNetBSD"; then
+   plugin_entropy="yes"
+   plugin_irq="yes"
+   plugin_processes="yes"
++  plugin_netstat_udp="yes"
  fi
  
  # Mac OS X devices
-@@ -6194,6 +6197,7 @@ AC_PLUGIN([multimeter],          [$plugi
+@@ -6568,6 +6571,7 @@ AC_PLUGIN([multimeter],          [$plugi
  AC_PLUGIN([mysql],               [$with_libmysql],          [MySQL statistics])
  AC_PLUGIN([netapp],              [$with_libnetapp],         [NetApp plugin])
  AC_PLUGIN([netlink],             [$with_libmnl],            [Enhanced Linux network statistics])
@@ -38,7 +46,7 @@ Also, the start of process support, but that's not yet finished.
  AC_PLUGIN([network],             [yes],                     [Network communication plugin])
  AC_PLUGIN([nfs],                 [$plugin_nfs],             [NFS statistics])
  AC_PLUGIN([nginx],               [$with_libcurl],           [nginx statistics])
-@@ -6624,6 +6628,7 @@ AC_MSG_RESULT([    multimeter  . . . . .
+@@ -6987,6 +6991,7 @@ AC_MSG_RESULT([    multimeter  . . . . .
  AC_MSG_RESULT([    mysql . . . . . . . . $enable_mysql])
  AC_MSG_RESULT([    netapp  . . . . . . . $enable_netapp])
  AC_MSG_RESULT([    netlink . . . . . . . $enable_netlink])
