@@ -1,9 +1,9 @@
-$NetBSD: patch-src_memory.c,v 1.4 2016/12/07 17:28:39 fhajny Exp $
+$NetBSD: patch-src_memory.c,v 1.5 2017/11/21 15:18:23 fhajny Exp $
 
 Add a port for NetBSD using VM_UVMEXP2, and preferring
 sysctl over sysctlbyname.
 
---- src/memory.c.orig	2016-11-30 08:52:01.316911197 +0000
+--- src/memory.c.orig	2017-11-18 09:03:27.358750191 +0000
 +++ src/memory.c
 @@ -66,6 +66,10 @@ static mach_port_t port_host;
  static vm_size_t pagesize;
@@ -61,7 +61,7 @@ sysctl over sysctlbyname.
 -  pagesize = getpagesize();
 -  if (pagesize <= 0) {
 -    ERROR("memory plugin: Invalid pagesize: %i", pagesize);
--    return (-1);
+-    return -1;
 -  }
 -/* #endif HAVE_SYSCTL */
 -

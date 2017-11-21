@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.9 2017/01/19 17:20:42 he Exp $
+# $NetBSD: options.mk,v 1.10 2017/11/21 15:18:22 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.collectd
 PKG_SUPPORTED_OPTIONS=	cpu df interface load memory syslog uptime
 PKG_SUGGESTED_OPTIONS+=	cpu df interface load memory syslog uptime
 
 PKG_SUPPORTED_OPTIONS.NetBSD+=	contextswitch disk entropy irq pf netstat_udp
-PKG_SUPPORTED_OPTIONS.NetBSD+=	swap tcpconns users processes
+PKG_SUPPORTED_OPTIONS.NetBSD+=	swap tcpconns users # processes
 PKG_SUGGESTED_OPTIONS.NetBSD+=	contextswitch disk entropy irq pf netstat_udp
-PKG_SUGGESTED_OPTIONS.NetBSD+=	swap tcpconns users processes
+PKG_SUGGESTED_OPTIONS.NetBSD+=	swap tcpconns users # processes
 
 PKG_SUPPORTED_OPTIONS.FreeBSD+=	contextswitch pf processes swap tcpconns zfs-arc
 PKG_SUGGESTED_OPTIONS.FreeBSD+=	contextswitch pf processes swap tcpconns zfs-arc

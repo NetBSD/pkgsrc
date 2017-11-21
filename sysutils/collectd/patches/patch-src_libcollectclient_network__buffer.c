@@ -1,12 +1,13 @@
-$NetBSD: patch-src_libcollectclient_network__buffer.c,v 1.3 2016/12/07 17:28:39 fhajny Exp $
+$NetBSD: patch-src_libcollectclient_network__buffer.c,v 1.4 2017/11/21 15:18:23 fhajny Exp $
 
 Need the workaround on at least SunOS too.
---- src/libcollectdclient/network_buffer.c.orig	2016-11-30 08:52:01.316911197 +0000
+
+--- src/libcollectdclient/network_buffer.c.orig	2017-11-18 09:03:27.358750191 +0000
 +++ src/libcollectdclient/network_buffer.c
 @@ -36,7 +36,7 @@
  #include <pthread.h>
  
- #if HAVE_LIBGCRYPT
+ #if HAVE_GCRYPT_H
 -#if defined __APPLE__
 +#if defined __APPLE__ || defined(__sun)
  /* default xcode compiler throws warnings even when deprecated functionality
