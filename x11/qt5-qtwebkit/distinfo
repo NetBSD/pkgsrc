@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2017/04/26 10:27:43 wiz Exp $
+$NetBSD: distinfo,v 1.10 2017/11/21 17:00:28 minskim Exp $
 
 SHA1 (qtwebkit-opensource-src-5.5.1.tar.xz) = e1e16f3eb48c1ce863b9ab33364e4ac178ae51a7
 RMD160 (qtwebkit-opensource-src-5.5.1.tar.xz) = 0594ec1150f7899d72f57d8ff2f108f3f75faaf9
@@ -13,6 +13,7 @@ SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = a6cfdbced0bb528f47
 SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = 2ed23192d9a4ec2c0f7b7b9a48bed664adbc7fb3
 SHA1 (patch-Source_JavaScriptCore_dfg_DFGNode.h) = cf39645a9b61299bb7b5b700a4cf2af68aa2f9f6
 SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = 09bfdb6e63b835fb50611289d4a1c50cd18c9e37
+SHA1 (patch-Source_JavaScriptCore_runtime_DatePrototype.cpp) = b87c0e9d453d4f4d2a8fc2dac077b79ba761a62a
 SHA1 (patch-Source_JavaScriptCore_tools_CodeProfiling.cpp) = da6e2627337be1d6a4692697f23381b1bc80d08a
 SHA1 (patch-Source_QtWebKit.pro) = cfa9b6a36ce63f7655a164bbc696db2c0a44d288
 SHA1 (patch-Source_ThirdParty_ANGLE_Target.pri) = 33473cbae5e2f835b0cea6cfd5fe50f031bea60c
