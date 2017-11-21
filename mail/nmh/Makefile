@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.92 2016/03/05 11:28:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.93 2017/11/21 10:32:02 leot Exp $
 
-DISTNAME=		nmh-1.6
-PKGREVISION=		5
+DISTNAME=		nmh-1.7
 CATEGORIES=		mail
-MASTER_SITES=		http://savannah.nongnu.org/download/nmh/
+MASTER_SITES=		https://download.savannah.nongnu.org/releases/nmh/
 
 MAINTAINER=		leot@NetBSD.org
 HOMEPAGE=		http://www.nongnu.org/nmh/
@@ -15,17 +14,7 @@ CONFLICTS+=		ja-mh6-[0-9]*
 
 USE_TOOLS+=		lex
 
-# We choose DOT_LOCKING in our patches because ".lock" files are
-# the most common locking mechanism supported by mail software.
-# It also works well over NFS.
-
-# Locks supported by `mail.local' are ".lock" and flock(2).
-
 .include "../../mk/bsd.prefs.mk"
-# Avoids SEGV in nmh's private version of strcasecmp() under gcc4
-.if !empty(PKGSRC_COMPILER:Mgcc*)
-CFLAGS+=		-O1
-.endif
 
 .include "options.mk"
 
@@ -35,7 +24,7 @@ NMH_MTA?=		smtp
 GNU_CONFIGURE=		yes
 
 GNU_CONFIGURE_LIBDIR=	${PREFIX}/libexec/nmh
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--with-mts=${NMH_MTA:Q}
 CONFIGURE_ARGS+=	--without-readline
 
@@ -43,7 +32,7 @@ DOCDIR=			share/doc/nmh
 EGDIR=			${PREFIX}/share/examples/nmh
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
 
-BUILD_DEFS+=		NMH_MTA NMH_EDITOR NMH_PAGER NMH_HASH_BACKUP
+BUILD_DEFS+=		NMH_MTA NMH_EDITOR NMH_PAGER NMH_HASH_BACKUP PKG_SYSCONFBASE
 
 PKG_SYSCONFSUBDIR=	nmh
 CONF_FILES=		# empty
@@ -52,18 +41,22 @@ CONF_FILES=		# empty
 			digestcomps		\
 			distcomps		\
 			forwcomps		\
+			mhical.12hour		\
+			mhical.24hour		\
 			mhl.body		\
 			mhl.digest		\
 			mhl.format		\
 			mhl.forward		\
 			mhl.headers		\
 			mhl.reply		\
+			mhl.replywithoutbody	\
 			mhn.defaults		\
 			mts.conf		\
 			rcvdistcomps		\
 			rcvdistcomps.outbox	\
 			replcomps		\
 			replgroupcomps		\
+			rmmproc.messageid	\
 			scan.MMDDYY		\
 			scan.YYYYMMDD		\
 			scan.default		\
@@ -86,11 +79,11 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 CONFIGURE_ENV+=		ac_cv_func_arc4random=no
 .endif
 
+TEST_TARGET=		check
+
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/mhn.defaults.dist \
 	    ${DESTDIR}${EGDIR}/mhn.defaults
-
-.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
 .include "../../databases/gdbm_compat/buildlink3.mk"

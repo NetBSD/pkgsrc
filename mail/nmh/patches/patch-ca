@@ -1,10 +1,13 @@
-$NetBSD: patch-ca,v 1.8 2014/09/06 16:07:43 schnoebe Exp $
+$NetBSD: patch-ca,v 1.9 2017/11/21 10:32:02 leot Exp $
 
-install config files into share/examples
+- Introduce $egdir and install all configuration files in it, in order to
+  properly use CONF_FILES to manage configuration files for pkgsrc.
+- Adjust TEST_ENVIRONMENT in order to use $egdir instead of $nmhetcdir
+  and adjust $nmhetcdirinst to fix the `mhparam etcdir' test.
 
---- Makefile.in.orig	2014-06-15 20:34:16.000000000 +0000
+--- Makefile.in.orig	2017-08-03 02:22:59.000000000 +0000
 +++ Makefile.in
-@@ -819,6 +819,7 @@ smtpservers = @smtpservers@
+@@ -864,6 +864,7 @@ smtpserver = @smtpserver@
  srcdir = @srcdir@
  supported_locks = @supported_locks@
  sysconfdir = @sysconfdir@
@@ -12,15 +15,26 @@ install config files into share/examples
  target_alias = @target_alias@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
-@@ -4030,18 +4031,18 @@ uninstall-dist_docDATA:
- 	dir='$(DESTDIR)$(docdir)'; $(am__uninstall_files_from_dir)
- install-dist_sysconfDATA: $(dist_sysconf_DATA)
+@@ -881,8 +882,8 @@ TESTS_ENVIRONMENT = MH_OBJ_DIR="@abs_bui
+ 		    CURL_USER_AGENT='@CURL_USER_AGENT@' \
+ 		    MH_TEST_DIR=`cd "@abs_builddir@" && pwd -P`/test/testdir \
+ 		    nmhlibexecdir="$(nmhlibexecdir)" bindir="$(bindir)" \
+-		    mandir="$(mandir)" nmhetcdir="$(nmhetcdir)" \
+-		    nmhetcdirinst="@nmhetcdirinst@$(nmhetcdir)" \
++		    mandir="$(mandir)" nmhetcdir="$(egdir)" \
++		    nmhetcdirinst="$(nmhetcdir)" \
+ 		    supported_locks="$(supported_locks)" \
+ 		    default_locking="${default_locking}" \
+ 		    MULTIBYTE_ENABLED=$(MULTIBYTE_ENABLED) \
+@@ -4625,46 +4626,46 @@ uninstall-dist_docs_contribDATA:
+ 	dir='$(DESTDIR)$(docs_contribdir)'; $(am__uninstall_files_from_dir)
+ install-dist_nmhetcDATA: $(dist_nmhetc_DATA)
  	@$(NORMAL_INSTALL)
--	@list='$(dist_sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
-+	@list='$(dist_sysconf_DATA)'; test -n "$(egdir)" || list=; \
+-	@list='$(dist_nmhetc_DATA)'; test -n "$(nmhetcdir)" || list=; \
++	@list='$(dist_nmhetc_DATA)'; test -n "$(egdir)" || list=; \
  	if test -n "$$list"; then \
--	  echo " $(MKDIR_P) '$(DESTDIR)$(sysconfdir)'"; \
--	  $(MKDIR_P) "$(DESTDIR)$(sysconfdir)" || exit 1; \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(nmhetcdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(nmhetcdir)" || exit 1; \
 +	  echo " $(MKDIR_P) '$(DESTDIR)$(egdir)'"; \
 +	  $(MKDIR_P) "$(DESTDIR)$(egdir)" || exit 1; \
  	fi; \
@@ -29,22 +43,25 @@ install config files into share/examples
  	  echo "$$d$$p"; \
  	done | $(am__base_list) | \
  	while read files; do \
--	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
--	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(nmhetcdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(nmhetcdir)" || exit $$?; \
 +	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(egdir)'"; \
 +	  $(INSTALL_DATA) $$files "$(DESTDIR)$(egdir)" || exit $$?; \
  	done
  
- uninstall-dist_sysconfDATA:
-@@ -4051,18 +4052,18 @@ uninstall-dist_sysconfDATA:
- 	dir='$(DESTDIR)$(sysconfdir)'; $(am__uninstall_files_from_dir)
- install-sysconfDATA: $(sysconf_DATA)
+ uninstall-dist_nmhetcDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	@list='$(dist_nmhetc_DATA)'; test -n "$(nmhetcdir)" || list=; \
++	@list='$(dist_nmhetc_DATA)'; test -n "$(egdir)" || list=; \
+ 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+ 	dir='$(DESTDIR)$(nmhetcdir)'; $(am__uninstall_files_from_dir)
+ install-nmhetcDATA: $(nmhetc_DATA)
  	@$(NORMAL_INSTALL)
--	@list='$(sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
-+	@list='$(sysconf_DATA)'; test -n "$(egdir)" || list=; \
+-	@list='$(nmhetc_DATA)'; test -n "$(nmhetcdir)" || list=; \
++	@list='$(nmhetc_DATA)'; test -n "$(egdir)" || list=; \
  	if test -n "$$list"; then \
--	  echo " $(MKDIR_P) '$(DESTDIR)$(sysconfdir)'"; \
--	  $(MKDIR_P) "$(DESTDIR)$(sysconfdir)" || exit 1; \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(nmhetcdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(nmhetcdir)" || exit 1; \
 +	  echo " $(MKDIR_P) '$(DESTDIR)$(egdir)'"; \
 +	  $(MKDIR_P) "$(DESTDIR)$(egdir)" || exit 1; \
  	fi; \
@@ -53,10 +70,19 @@ install config files into share/examples
  	  echo "$$d$$p"; \
  	done | $(am__base_list) | \
  	while read files; do \
--	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
--	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(nmhetcdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(nmhetcdir)" || exit $$?; \
 +	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(egdir)'"; \
 +	  $(INSTALL_DATA) $$files "$(DESTDIR)$(egdir)" || exit $$?; \
  	done
  
- uninstall-sysconfDATA:
+ uninstall-nmhetcDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	@list='$(nmhetc_DATA)'; test -n "$(nmhetcdir)" || list=; \
++	@list='$(nmhetc_DATA)'; test -n "$(egdir)" || list=; \
+ 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+-	dir='$(DESTDIR)$(nmhetcdir)'; $(am__uninstall_files_from_dir)
++	dir='$(DESTDIR)$(egdir)'; $(am__uninstall_files_from_dir)
+ 
+ ID: $(am__tagged_files)
+ 	$(am__define_uniq_tagged_files); mkid -fID $$unique
