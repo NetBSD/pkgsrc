@@ -1,8 +1,8 @@
-$NetBSD: patch-src_disk.c,v 1.2 2016/12/07 17:28:39 fhajny Exp $
+$NetBSD: patch-src_disk.c,v 1.3 2017/11/21 15:18:23 fhajny Exp $
 
 Provide a port to NetBSD.
 
---- src/disk.c.orig	2016-11-30 08:52:01.312911569 +0000
+--- src/disk.c.orig	2017-11-18 09:03:27.354750373 +0000
 +++ src/disk.c
 @@ -135,6 +135,35 @@ static int numdisk;
  static int pnumdisk;
@@ -73,9 +73,9 @@ Provide a port to NetBSD.
 +
 +#endif /* HAVE_SYSCTL && KERNEL_NETBSD */
  
-   return (0);
+   return 0;
  } /* int disk_init */
-@@ -1026,7 +1081,129 @@ static int disk_read(void) {
+@@ -1017,7 +1072,129 @@ static int disk_read(void) {
                    1000000.0;
      disk_submit(stat_disk[i].name, "disk_time", read_time, write_time);
    }
@@ -204,5 +204,5 @@ Provide a port to NetBSD.
 +
 +#endif /* HAVE_SYSCTL && KERNEL_NETBSD */
  
-   return (0);
+   return 0;
  } /* int disk_read */
