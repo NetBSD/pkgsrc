@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/10/13 15:17:28 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/11/21 15:18:22 fhajny Exp $
 bin/collectd-nagios
 bin/collectd-tg
 bin/collectdctl
@@ -6,6 +6,9 @@ include/collectd/client.h
 include/collectd/lcc_features.h
 include/collectd/network.h
 include/collectd/network_buffer.h
+include/collectd/network_parse.h
+include/collectd/server.h
+include/collectd/types.h
 lib/collectd/aggregation.la
 lib/collectd/apcups.la
 ${PLIST.apple-sensors}lib/collectd/apple_sensors.la

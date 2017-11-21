@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/06/14 13:42:54 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2017/11/21 15:18:23 fhajny Exp $
 
 PKGNAME=		p5-${DISTNAME}
 COLLECTD_PACKAGE=	perl
@@ -15,14 +15,8 @@ PERL5_PACKLIST+=	auto/Collectd/.packlist
 CONFIGURE_ARGS+=	--with-libperl=${BUILDLINK_PREFIX.perl}
 CONFIGURE_ARGS+=	--with-perl-bindings=${MAKE_PARAMS:Q}
 
-post-build:
-	cd ${WRKSRC}/bindings && ${BUILD_MAKE_CMD} perl
-
-do-install:
-	cd ${WRKSRC}/src && ${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV}		\
-	  ${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS} ${INSTALL_TARGET}
-	cd ${WRKSRC}/bindings && ${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV}	\
-	  ${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS} install
+BUILD_TARGET+=		perl
+INSTALL_TARGET+=	install-exec-local
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
