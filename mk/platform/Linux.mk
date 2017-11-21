@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.77 2017/10/03 13:18:00 jperkin Exp $
+# $NetBSD: Linux.mk,v 1.78 2017/11/21 19:16:47 bsiegert Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -82,6 +82,11 @@ _OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
 _OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX}
 .endif
 _OPSYS_INCLUDE_DIRS?=	/usr/include
+
+.if !empty(OS_VARIANT:Mchromeos)
+_OPSYS_LIB_DIRS+=	/usr/local/lib
+_OPSYS_INCLUDE_DIRS+=	/usr/local/include
+.endif
 
 # These are libc builtins
 _OPSYS_PREFER.getopt?=		native
