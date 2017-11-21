@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/09/06 16:07:43 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/11/21 10:32:02 leot Exp $
 bin/ali
 bin/anno
 bin/burst
@@ -17,7 +17,9 @@ bin/install-mh
 bin/mark
 bin/mhbuild
 bin/mhfixmsg
+bin/mhical
 bin/mhlist
+bin/mhlogin
 bin/mhmail
 bin/mhn
 bin/mhparam
@@ -25,7 +27,6 @@ bin/mhpath
 bin/mhshow
 bin/mhstore
 bin/msgchk
-bin/msh
 bin/new
 bin/next
 bin/packf
@@ -45,11 +46,9 @@ bin/unseen
 bin/whatnow
 bin/whom
 libexec/nmh/ap
-libexec/nmh/conflict
 libexec/nmh/dp
 libexec/nmh/fmtdump
 libexec/nmh/mhl
-libexec/nmh/mhtest
 libexec/nmh/mkstemp
 libexec/nmh/post
 libexec/nmh/rcvdist
@@ -78,8 +77,10 @@ man/man1/mark.1
 man/man1/mh-mkstemp.1
 man/man1/mhbuild.1
 man/man1/mhfixmsg.1
+man/man1/mhical.1
 man/man1/mhl.1
 man/man1/mhlist.1
+man/man1/mhlogin.1
 man/man1/mhmail.1
 man/man1/mhn.1
 man/man1/mhparam.1
@@ -87,7 +88,6 @@ man/man1/mhpath.1
 man/man1/mhshow.1
 man/man1/mhstore.1
 man/man1/msgchk.1
-man/man1/msh.1
 man/man1/new.1
 man/man1/next.1
 man/man1/packf.1
@@ -121,15 +121,14 @@ man/man5/mh-sequence.5
 man/man5/mh-tailor.5
 man/man5/mh_profile.5
 man/man5/mts.conf.5
+man/man7/MH.7
 man/man7/mh-chart.7
 man/man7/mh-mime.7
 man/man7/nmh.7
 man/man8/ap.8
-man/man8/conflict.8
 man/man8/dp.8
 man/man8/fmtdump.8
 man/man8/post.8
-share/doc/nmh/COMPLETION-BASH
 share/doc/nmh/COMPLETION-TCSH
 share/doc/nmh/COMPLETION-ZSH
 share/doc/nmh/COPYRIGHT
@@ -143,28 +142,32 @@ share/doc/nmh/README
 share/doc/nmh/README-ATTACHMENTS
 share/doc/nmh/README-HOOKS
 share/doc/nmh/README-components
-share/doc/nmh/README-iCalendar
 share/doc/nmh/README.SASL
 share/doc/nmh/README.about
 share/doc/nmh/README.developers
 share/doc/nmh/README.manpages
 share/doc/nmh/TODO
 share/doc/nmh/VERSION
-share/doc/nmh/contrib/build_nmh
+share/doc/nmh/contrib/localpostproc
 share/doc/nmh/contrib/ml
+share/doc/nmh/contrib/replaliases
 share/doc/nmh/contrib/replyfilter
 share/doc/nmh/contrib/vpick
 share/examples/nmh/MailAliases
+share/examples/nmh/bash_completion_nmh
 share/examples/nmh/components
 share/examples/nmh/digestcomps
 share/examples/nmh/distcomps
 share/examples/nmh/forwcomps
+share/examples/nmh/mhical.12hour
+share/examples/nmh/mhical.24hour
 share/examples/nmh/mhl.body
 share/examples/nmh/mhl.digest
 share/examples/nmh/mhl.format
 share/examples/nmh/mhl.forward
 share/examples/nmh/mhl.headers
 share/examples/nmh/mhl.reply
+share/examples/nmh/mhl.replywithoutbody
 share/examples/nmh/mhn.defaults
 share/examples/nmh/mhshow.marker
 share/examples/nmh/mts.conf
@@ -172,6 +175,7 @@ share/examples/nmh/rcvdistcomps
 share/examples/nmh/rcvdistcomps.outbox
 share/examples/nmh/replcomps
 share/examples/nmh/replgroupcomps
+share/examples/nmh/rmmproc.messageid
 share/examples/nmh/scan.MMDDYY
 share/examples/nmh/scan.YYYYMMDD
 share/examples/nmh/scan.curses
