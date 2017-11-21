@@ -1,8 +1,8 @@
-$NetBSD: patch-src_irq.c,v 1.4 2016/12/07 17:28:39 fhajny Exp $
+$NetBSD: patch-src_irq.c,v 1.5 2017/11/21 15:18:23 fhajny Exp $
 
 Provide a port to NetBSD.
 
---- src/irq.c.orig	2016-11-30 08:52:01.316911197 +0000
+--- src/irq.c.orig	2017-11-18 09:03:27.354750373 +0000
 +++ src/irq.c
 @@ -27,10 +27,20 @@
  #include "plugin.h"
@@ -26,7 +26,7 @@ Provide a port to NetBSD.
  /*
   * (Module-)Global variables
   */
-@@ -79,6 +89,7 @@ static void irq_submit(const char *irq_n
+@@ -75,6 +85,7 @@ static void irq_submit(const char *irq_n
    plugin_dispatch_values(&vl);
  } /* void irq_submit */
  
@@ -34,9 +34,9 @@ Provide a port to NetBSD.
  static int irq_read(void) {
    FILE *fh;
    char buffer[1024];
-@@ -171,6 +182,64 @@ static int irq_read(void) {
+@@ -167,6 +178,64 @@ static int irq_read(void) {
  
-   return (0);
+   return 0;
  } /* int irq_read */
 +#endif /* KERNEL_LINUX */
 +
