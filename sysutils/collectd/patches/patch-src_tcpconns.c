@@ -1,11 +1,11 @@
-$NetBSD: patch-src_tcpconns.c,v 1.6 2016/12/07 17:28:39 fhajny Exp $
+$NetBSD: patch-src_tcpconns.c,v 1.7 2017/11/21 15:18:23 fhajny Exp $
 
 Include <sys/param.h>
 Re-order to fix build on NetBSD.
 
---- src/tcpconns.c.orig	2016-11-30 08:52:01.328910078 +0000
+--- src/tcpconns.c.orig	2017-11-18 09:03:27.370749644 +0000
 +++ src/tcpconns.c
-@@ -111,9 +111,9 @@
+@@ -128,9 +128,9 @@
  #include <net/route.h>
  #include <netdb.h>
  #include <netinet/in.h>
@@ -16,8 +16,8 @@ Re-order to fix build on NetBSD.
  #include <netinet/ip_var.h>
  #include <netinet/tcp.h>
  #include <netinet/tcp_timer.h>
-@@ -820,6 +820,7 @@ static int conn_init(void) {
-   return (0);
+@@ -897,6 +897,7 @@ static int conn_init(void) {
+   return 0;
  } /* int conn_init */
  
 +#include <sys/param.h>
