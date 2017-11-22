@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2017/11/15 20:28:27 minskim Exp $
+# $NetBSD: Makefile,v 1.49 2017/11/22 10:34:10 markd Exp $
 
 COMMENT=	Hierarchical Data Format (new generation)
+PKGREVISION=	1
 
 INSTALLATION_DIRS=	bin lib include
 INSTALLATION_DIRS+=	share/doc/hdf5
@@ -9,7 +10,7 @@ INSTALLATION_DIRS+=	share/examples/hdf5/c
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/src/misc/h5cc \
 		${DESTDIR}${PREFIX}/bin/
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/src/misc/h5clear \
+	libtool   --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/tools/src/misc/h5clear \
 		${DESTDIR}${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/src/misc/h5redeploy.in \
 		${DESTDIR}${PREFIX}/bin/h5redeploy
