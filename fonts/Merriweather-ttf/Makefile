@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2016/11/15 16:05:42 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/11/22 13:41:20 wiz Exp $
 
-DISTNAME=	Merriweather-1.584
+DISTNAME=	Merriweather-2.002
 PKGNAME=	${DISTNAME:S/her/her-ttf/}
 CATEGORIES=	fonts
-MASTER_SITES=	${MASTER_SITE_GITHUB:=EbenSorkin/}
-GITHUB_PROJECT=	Merriweather
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
+# does not provide distfile for versions > 1.584; 2.002 is from fontsquirrel
+#MASTER_SITES=	${MASTER_SITE_GITHUB:=EbenSorkin/}
+#GITHUB_PROJECT=	Merriweather
+#GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -22,7 +23,7 @@ FONTS_DIRS.ttf+=	${PREFIX}/share/fonts/X11/OTF
 FONTS_DIRS.ttf+=	${PREFIX}/share/fonts/X11/TTF
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/OTF/*.otf ${DESTDIR}${PREFIX}/share/fonts/X11/OTF
-	${INSTALL_DATA} ${WRKSRC}/TTF/*.ttf ${DESTDIR}${PREFIX}/share/fonts/X11/TTF
+	${INSTALL_DATA} ${WRKSRC}/*.otf ${DESTDIR}${PREFIX}/share/fonts/X11/OTF
+#	${INSTALL_DATA} ${WRKSRC}/TTF/*.ttf ${DESTDIR}${PREFIX}/share/fonts/X11/TTF
 
 .include "../../mk/bsd.pkg.mk"
