@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.7 2013/12/08 13:08:59 prlw1 Exp $
+$NetBSD: patch-al,v 1.8 2017/11/22 08:45:59 wiz Exp $
 
-http://bugzilla.gnome.org/show_bug.cgi?id=583329
+https://bugzilla.gnome.org/show_bug.cgi?id=790698
 
 --- glib/tests/convert.c.orig	2013-09-05 10:43:41.000000000 +0000
 +++ glib/tests/convert.c
