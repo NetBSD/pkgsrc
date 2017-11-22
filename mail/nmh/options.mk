@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2017/11/21 10:32:02 leot Exp $
+# $NetBSD: options.mk,v 1.6 2017/11/22 08:42:24 leot Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.nmh
 PKG_SUPPORTED_OPTIONS=		nmh-backup-hash oauth sasl tls
@@ -33,5 +33,5 @@ CONFIGURE_ARGS+=	--without-cyrus-sasl
 CONFIGURE_ARGS+=	--with-tls
 .include "../../security/openssl/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--with-tls
+CONFIGURE_ARGS+=	--without-tls
 .endif
