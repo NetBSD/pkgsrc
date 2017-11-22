@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2569 2017/11/22 10:48:49 markd Exp $
+# $NetBSD: Makefile,v 1.2570 2017/11/22 19:31:56 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -241,6 +241,7 @@ SUBDIR+=	extra-cmake-modules
 SUBDIR+=	fann
 SUBDIR+=	fastdep
 SUBDIR+=	fhist
+SUBDIR+=	flatbuffers
 SUBDIR+=	flatzebra
 SUBDIR+=	flex
 SUBDIR+=	flexdock
