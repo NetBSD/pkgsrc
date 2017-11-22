@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/11/22 10:47:34 markd Exp $
+${PYSITELIB}/backports/__init__.py
+${PYSITELIB}/backports/__init__.pyc
+${PYSITELIB}/backports/__init__.pyo

@@ -1,0 +1,10 @@
+This backports namespace reserves a namespace beneath which we can happily
+place all of the various features that we want to cut-and-paste from later
+Python versions. I hope that this will provide two benefits:
+
+1. It should provide greater sanity, and a bit more organization, in the
+   Package Index.
+2. When you are ready to port a Python application to a new version of Python,
+   you can search the code for any import statements that name a backports
+   package, and remove the backports for features that have now “arrived” in
+   the version of Python to which you are upgrading.
