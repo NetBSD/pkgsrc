@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/09/03 08:53:10 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2017/11/22 19:16:20 bsiegert Exp $
 
 .include "dist.mk"
 
@@ -87,7 +87,9 @@ PLIST.nis=	yes
 .else
 PLIST.dll=	yes
 .  if ${OPSYS} != "NetBSD" || exists(/usr/bin/ypcat)
+.    if "${OS_VARIANT}" != "chromeos"
 PLIST.nis=	yes
+.    endif
 .  else
 PLIST.no-nis=	yes
 .  endif
