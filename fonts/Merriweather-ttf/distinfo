@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/11/15 16:05:42 wiz Exp $
+$NetBSD: distinfo,v 1.2 2017/11/22 13:41:20 wiz Exp $
 
-SHA1 (Merriweather-1.584.zip) = 096f74e0209f365440ba3da99e7efbfd09a7d7ae
-RMD160 (Merriweather-1.584.zip) = 6126cef28958d69cc3a84b2d201373c61aa2c4dc
-SHA512 (Merriweather-1.584.zip) = a3585231f253aada0dcfcc1c80b350c4266e66f2bd1c9234ff22f3db96b206b5e2f90f0a5733e2ca4da895da2e375cd5e637b3d67fce801f525dbf6a56833423
-Size (Merriweather-1.584.zip) = 1138766 bytes
+SHA1 (Merriweather-2.002.zip) = ee853dc5d0825fa623171f23119a0cef154b01be
+RMD160 (Merriweather-2.002.zip) = 8f6aeca31358d07b33bb7c0894f5720c698c5e8a
+SHA512 (Merriweather-2.002.zip) = 02585b5f35a0acb06ced5de9bebd5dfa56d72719e66fe04c013472e2806c464c2aff76c6529d9746fef8e72f2f290c9e8544fa212d02921e9a5a37a82b175f4c
+Size (Merriweather-2.002.zip) = 625849 bytes
