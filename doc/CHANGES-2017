@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4949 2017/11/22 11:17:52 markd Exp $
+$NetBSD: CHANGES-2017,v 1.4950 2017/11/22 13:41:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7122,3 +7122,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-backports version 1.0 [markd 2017-11-22]
 	Added math/py-pywavelets version 0.5.2 [markd 2017-11-22]
 	Added math/py-scikit-image version 0.13.1 [markd 2017-11-22]
+	Updated fonts/Merriweather-ttf to 2.002 [wiz 2017-11-22]
