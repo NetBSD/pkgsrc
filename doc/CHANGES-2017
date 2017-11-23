@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4992 2017/11/23 22:37:07 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4993 2017/11/23 22:42:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7188,3 +7188,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-mercurial to 4.4.1 [wiz 2017-11-23]
 	Updated chat/prosody to 0.10.0 [fhajny 2017-11-23]
 	Updated net/glib-networking to 2.54.1 [wiz 2017-11-23]
+	Updated devel/py-setuptools to 36.7.2 [wiz 2017-11-23]
