@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4958 2017/11/23 14:43:32 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4959 2017/11/23 15:00:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7154,3 +7154,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/syncthing to 0.14.40 [wiz 2017-11-23]
 	Updated audio/musicpd to 0.20.11 [wiz 2017-11-23]
 	Updated sysutils/dbus to 1.12.2 [wiz 2017-11-23]
+	Updated devel/py-meson to 0.43.0nb1 [wiz 2017-11-23]
