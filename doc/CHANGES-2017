@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4975 2017/11/23 15:59:59 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4976 2017/11/23 16:03:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7171,3 +7171,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated converters/libvisio to 0.1.6 [wiz 2017-11-23]
 	Updated net/libsoup to 2.60.2 [wiz 2017-11-23]
 	Updated devel/pango to 1.40.14 [wiz 2017-11-23]
+	Updated net/wget to 1.19.2 [wiz 2017-11-23]
