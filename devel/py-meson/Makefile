@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/10/16 10:58:59 adam Exp $
+# $NetBSD: Makefile,v 1.6 2017/11/23 14:59:52 wiz Exp $
 
 DISTNAME=	meson-0.43.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson/}
 
@@ -24,6 +25,12 @@ SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fixing man page installation path.
 
 REPLACE_PYTHON+=	*.py
+REPLACE_PYTHON+=	*/*.py
+REPLACE_PYTHON+=	*/*/*.py
+REPLACE_PYTHON+=	*/*/*/*.py
+REPLACE_PYTHON+=	*/*/*/*.in
+REPLACE_PYTHON+=	*/*/*/*/*.py
+REPLACE_PYTHON+=	*/*/*/*/*/*.py
 
 post-extract:
 	# see https://github.com/mesonbuild/meson/issues/695
