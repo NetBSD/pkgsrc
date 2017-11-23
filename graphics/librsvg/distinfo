@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.35 2017/10/02 15:35:35 wiz Exp $
+$NetBSD: distinfo,v 1.36 2017/11/23 20:22:01 wiz Exp $
 
-SHA1 (librsvg-2.40.18.tar.xz) = 7b2ef7dd55daae92a0b8fcb0a8b42aeb5246afa9
-RMD160 (librsvg-2.40.18.tar.xz) = 5d8200b411fcbdf8b73b48b0c0e23ce34dff2351
-SHA512 (librsvg-2.40.18.tar.xz) = faf503d0d881801ce129715e7ae979ee1675bd32beac9170b1889c94aac64caf486968bc86f3480463b84e94f28c1d805551ffdcb7068ecadd0688146e0fb182
-Size (librsvg-2.40.18.tar.xz) = 574384 bytes
-SHA1 (patch-ab) = c551fe8af953a5d54964730649a8590b4243f4db
+SHA1 (librsvg-2.40.19.tar.xz) = 34e147bd29f658d537725e7fe6403ccaa555851d
+RMD160 (librsvg-2.40.19.tar.xz) = 915e3e0478c6fd4768827e93451175ae98fea2cc
+SHA512 (librsvg-2.40.19.tar.xz) = ee3921d0344f9c8503a77086e3d0411a5a638beeeefb959529fd07819e21f82504dcd3004faa93c65d77da30d0db055b7cb56ec8517c1bfae3c1ae23582dbce3
+Size (librsvg-2.40.19.tar.xz) = 1792716 bytes
 SHA1 (patch-test-driver) = 802362f69cc54ce59483715f4c943d629a1680a7
