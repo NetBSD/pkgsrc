@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2017/08/25 12:22:28 prlw1 Exp $
+# $NetBSD: Makefile,v 1.20 2017/11/23 15:19:14 wiz Exp $
 
-DISTNAME=	at-spi2-atk-2.25.1
+DISTNAME=	at-spi2-atk-2.26.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/at-spi2-atk/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -18,7 +18,7 @@ PKGCONFIG_OVERRIDE+=	atk-bridge-2.0.pc.in
 
 CHECK_PORTABILITY_SKIP+=	config/test-driver
 
-BUILDLINK_API_DEPENDS.atk+=	atk>=2.15.4
+BUILDLINK_API_DEPENDS.atk+=	atk>=2.25.2
 .include "../../devel/atk/buildlink3.mk"
 BUILDLINK_API_DEPENDS.at-spi2-core+=	at-spi2-core>=2.17.90
 .include "../../devel/at-spi2-core/buildlink3.mk"
