@@ -1,0 +1,15 @@
+GMime is a C library which may be used for the creation and parsing
+of messages using the Multipurpose Internet Mail Extension (MIME),
+as defined by numerous IETF specifications.
+
+GMime features an extremely robust high-performance parser designed
+to be able to preserve byte-for-byte information allowing developers
+to re-seralize the parsed messages back to a stream exactly as the
+parser found them. It also features integrated GnuPG and S/MIME
+v3.2 support.
+
+Built on top of GObject (the object system used by the GNOME
+desktop), many developers should find its API design and memory
+management very familiar.
+
+This package contains v3 of the gmime API.
