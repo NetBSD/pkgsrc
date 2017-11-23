@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2017/09/06 09:03:04 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/11/23 17:20:10 wiz Exp $
 #
 
 DISTNAME=	zathura-ps-0.2.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	https://pwmt.org/projects/zathura-ps/download/
 
