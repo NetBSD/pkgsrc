@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2017/10/02 15:22:01 wiz Exp $
+$NetBSD: distinfo,v 1.11 2017/11/23 16:04:17 wiz Exp $
 
-SHA1 (libfilezilla-0.11.0.tar.bz2) = 489d0efe96a9e86242f097ce18917396163ddc1e
-RMD160 (libfilezilla-0.11.0.tar.bz2) = 6dd64427183c022e31cfbcca9660b57edb08531e
-SHA512 (libfilezilla-0.11.0.tar.bz2) = aa5356a8fbb9488072c9d32c7ab2de51de426a97cb30ec8b07c9e55bca351f82d8c4879f413aae05d5a2602bb153c0832f6bd7a71b8510a4957bafe9926d1d19
-Size (libfilezilla-0.11.0.tar.bz2) = 395727 bytes
+SHA1 (libfilezilla-0.11.1.tar.bz2) = 372a306b95a573c8eef3057ccb595f4389c9feb3
+RMD160 (libfilezilla-0.11.1.tar.bz2) = d5ff932d4d8088429940d1041d943bf9055a6c44
+SHA512 (libfilezilla-0.11.1.tar.bz2) = a41ad8b2b0de25cba3283a55344a147383860d6ae7df7a0c634b48c07319bcb8057f84611e5cb98696e1f94856f5901f948c2e376fffe7151e145bf18ab82cc4
+Size (libfilezilla-0.11.1.tar.bz2) = 395868 bytes
