@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/10/15 23:19:13 prlw1 Exp $
+# $NetBSD: Makefile,v 1.6 2017/11/23 17:19:46 wiz Exp $
 #
 
 DISTNAME=	vte-0.38.4
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.38/}
 EXTRACT_SUFX=	.tar.xz
