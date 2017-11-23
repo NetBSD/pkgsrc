@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4969 2017/11/23 15:45:00 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4970 2017/11/23 15:48:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7165,3 +7165,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added mail/gmime3 version 3.0.2 [wiz 2017-11-23]
 	Updated mail/notmuch to 0.25.2 [wiz 2017-11-23]
 	Updated devel/libgsf to 1.14.42 [wiz 2017-11-23]
+	Updated textproc/libxslt to 1.1.32 [wiz 2017-11-23]
