@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2017/08/16 20:21:12 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2017/11/23 15:49:42 wiz Exp $
 
-DISTNAME=	libogg-1.3.2
+DISTNAME=	libogg-1.3.3
 CATEGORIES=	multimedia devel
 MASTER_SITES=	http://downloads.xiph.org/releases/ogg/
 EXTRACT_SUFX=	.tar.xz
