@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/08/05 08:03:05 nros Exp $
+$NetBSD: distinfo,v 1.7 2017/11/23 15:24:55 wiz Exp $
 
-SHA1 (jbig2dec-0.13.tar.gz) = d7b07ef308e95dc44a83f2193ca4f445630e6355
-RMD160 (jbig2dec-0.13.tar.gz) = 84b4c9730d3a62e75524f4a251379b884cfe00d3
-SHA512 (jbig2dec-0.13.tar.gz) = ef64a65c54bec65f61602de7130dc9594aae58aaea7958f7cc987f25d0794511e15a423e86501ace4f40c0364796fb97ceab72edb0b69232926767ba16c1b05d
-Size (jbig2dec-0.13.tar.gz) = 442571 bytes
-SHA1 (patch-jbig2__huffman.c) = be3e48b6d324090ffd607babccc602003be54788
-SHA1 (patch-jbig2__image.c) = c0f18948e009be0dc3ba5f0ef67d51538c0cc932
-SHA1 (patch-jbig2__symbol__dict.c) = 5cf647fa56577e540f21772e64e6c2f89f1d647c
+SHA1 (jbig2dec-0.14.tar.gz) = c4c834962d1357f9aaacecd7fca8236326e45975
+RMD160 (jbig2dec-0.14.tar.gz) = c7421f9ff09bc125f3245ba7540fd969932ba8ab
+SHA512 (jbig2dec-0.14.tar.gz) = 066bd880ac0665fc1e42b0ae0e481008b125aab6e173b7f82d61a2a30e72c90085cbded9b2a68c6836f92dea3d8d8d5c2228dba76e0d99c79c922197d215705b
+Size (jbig2dec-0.14.tar.gz) = 463572 bytes
