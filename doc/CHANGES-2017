@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4968 2017/11/23 15:43:25 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4969 2017/11/23 15:45:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7164,3 +7164,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/vala to 0.38.3 [wiz 2017-11-23]
 	Added mail/gmime3 version 3.0.2 [wiz 2017-11-23]
 	Updated mail/notmuch to 0.25.2 [wiz 2017-11-23]
+	Updated devel/libgsf to 1.14.42 [wiz 2017-11-23]
