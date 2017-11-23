@@ -1,23 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2014/03/10 13:01:17 fhajny Exp $
+$NetBSD: patch-ab,v 1.6 2017/11/23 22:06:15 fhajny Exp $
 
-enable POSIX functionality by default
 set the logging paths
 set up the pid files
 
---- prosody.cfg.lua.dist.orig	2014-01-12 11:41:40.000000000 +0000
+--- prosody.cfg.lua.dist.orig	2017-11-17 20:50:11.470659000 +0000
 +++ prosody.cfg.lua.dist
-@@ -63,7 +63,7 @@ modules_enabled = {
- 		--"http_files"; -- Serve static files from a directory over HTTP
- 
- 	-- Other specific functionality
--		--"posix"; -- POSIX functionality, sends server to background, enables syslog, etc.
-+		"posix"; -- POSIX functionality, sends server to background, enables syslog, etc.
- 		--"groups"; -- Shared roster support
- 		--"announce"; -- Send announcement to all online users
- 		--"welcome"; -- Welcome users who register accounts
-@@ -139,12 +139,15 @@ authentication = "internal_plain"
+@@ -161,12 +161,13 @@ archive_expires_after = "1w" -- Remove a
  -- Logging configuration
- -- For advanced logging see http://prosody.im/doc/logging
+ -- For advanced logging see https://prosody.im/doc/logging
  log = {
 -	info = "prosody.log"; -- Change 'info' to 'debug' for verbose logging
 -	error = "prosody.err";
@@ -26,6 +16,14 @@ set up the pid files
  	-- "*syslog"; -- Uncomment this for logging to syslog
  	-- "*console"; -- Log to the console, useful for debugging with daemonize=false
  }
+ 
++
+ -- Uncomment to enable statistics
+ -- For more info see https://prosody.im/doc/statistics
+ -- statistics = "internal"
+@@ -181,6 +182,9 @@ log = {
+ -- Location of directory to find certificates in (relative to main config file):
+ certificates = "certs"
  
 +-- Enable PID file by default
 +pidfile = "@PROSODY_RUN@/prosody.pid";
