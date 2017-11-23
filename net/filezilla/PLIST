@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2017/09/11 20:24:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2017/11/23 16:13:20 wiz Exp $
 bin/filezilla
 bin/fzputtygen
 bin/fzsftp
@@ -184,6 +184,7 @@ share/filezilla/resources/default/480x480/binary.png
 share/filezilla/resources/default/480x480/bookmark.png
 share/filezilla/resources/default/480x480/bookmarks.png
 share/filezilla/resources/default/480x480/cancel.png
+share/filezilla/resources/default/480x480/close.png
 share/filezilla/resources/default/480x480/compare.png
 share/filezilla/resources/default/480x480/disconnect.png
 share/filezilla/resources/default/480x480/download.png
