@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.252 2017/11/12 14:10:15 khorben Exp $
+# $NetBSD: Makefile,v 1.253 2017/11/23 17:20:09 wiz Exp $
 
 .include "../../print/cups/Makefile.common"
 
 PKGNAME=	cups-${CUPS_VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	# empty
 
 MAINTAINER=	sbd@NetBSD.org
