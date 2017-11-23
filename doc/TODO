@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17883 2017/11/23 15:25:04 wiz Exp $
+$NetBSD: TODO,v 1.17884 2017/11/23 15:30:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1454,7 +1454,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o thaixfonts-1.2.7
 	o thttpd-2.27
 	o thunderbird-enigmail-1.9.8.3
-	o tiff-4.0.9
 	o tig-2.2
 	o tightvnc-2.7.10
 	o tile-0.7.4
@@ -1492,7 +1491,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o userppp-030706
 	o userspace-rcu-0.9.1
 	o utilisp-1.14
-	o vala-0.38.3
 	o valgrind-3.13
 	o varnish-4.1.8
 	o varnish-5.1.3
