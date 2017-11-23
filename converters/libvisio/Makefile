@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2017/09/18 09:52:57 maya Exp $
+# $NetBSD: Makefile,v 1.49 2017/11/23 15:56:25 wiz Exp $
 
-DISTNAME=	libvisio-0.1.5
-PKGREVISION=	9
+DISTNAME=	libvisio-0.1.6
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/libvisio/
 EXTRACT_SUFX=	.tar.xz
@@ -14,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1 OR gnu-gpl-v2
 #BUILD_DEPENDS+=	doxygen>=1.8.9:../../devel/doxygen
 BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		perl:build pkg-config
 GNU_CONFIGURE=		yes
