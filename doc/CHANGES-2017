@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4981 2017/11/23 19:40:31 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4982 2017/11/23 20:07:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7177,3 +7177,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/nickle to 2.81 [wiz 2017-11-23]
 	Updated graphics/jasper to 2.0.14 [snj 2017-11-23]
 	Updated x11/gtk3 to 3.22.26 [wiz 2017-11-23]
+	Updated x11/gtksourceview3 to 3.24.5 [wiz 2017-11-23]
