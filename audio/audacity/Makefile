@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.107 2017/02/24 21:54:51 maya Exp $
+# $NetBSD: Makefile,v 1.108 2017/11/23 17:19:47 wiz Exp $
 
 DISTNAME=		audacity-minsrc-2.1.2
 PKGNAME=		${DISTNAME:S/-minsrc//1}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		audio
 # sadly fosshub.com does not provice hot link
 MASTER_SITES=		${MASTER_SITE_LOCAL}

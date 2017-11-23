@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/06/23 17:18:23 youri Exp $
+# $NetBSD: Makefile,v 1.3 2017/11/23 17:19:57 wiz Exp $
 
+PKGREVISION= 1
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-icon-theme-${VERSION:R}.2
