@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2017/08/25 12:17:00 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.14 2017/11/23 15:16:39 wiz Exp $
 include/at-spi-2.0/atspi/atspi-accessible.h
 include/at-spi-2.0/atspi/atspi-action.h
 include/at-spi-2.0/atspi/atspi-application.h
@@ -75,7 +75,6 @@ share/gtk-doc/html/libatspi/libatspi-atspi-table.html
 share/gtk-doc/html/libatspi/libatspi-atspi-text.html
 share/gtk-doc/html/libatspi/libatspi-atspi-types.html
 share/gtk-doc/html/libatspi/libatspi-atspi-value.html
-share/gtk-doc/html/libatspi/libatspi.devhelp2
 share/gtk-doc/html/libatspi/object-tree.html
 share/gtk-doc/html/libatspi/right-insensitive.png
 share/gtk-doc/html/libatspi/right.png
