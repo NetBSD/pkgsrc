@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2017/07/03 18:07:44 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.44 2017/11/23 15:12:50 wiz Exp $
 include/atk-1.0/atk/atk-enum-types.h
 include/atk-1.0/atk/atk.h
 include/atk-1.0/atk/atkaction.h
@@ -63,6 +63,7 @@ share/gtk-doc/html/atk/AtkUtil.html
 share/gtk-doc/html/atk/AtkValue.html
 share/gtk-doc/html/atk/AtkWindow.html
 share/gtk-doc/html/atk/accessibles.html
+share/gtk-doc/html/atk/annotation-glossary.html
 share/gtk-doc/html/atk/api-index-1-12.html
 share/gtk-doc/html/atk/api-index-1-13.html
 share/gtk-doc/html/atk/api-index-1-20.html
