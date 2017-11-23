@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4990 2017/11/23 20:44:56 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4991 2017/11/23 22:06:31 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7186,3 +7186,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/thunderbird-enigmail to 1.9.8.3 [wiz 2017-11-23]
 	Updated security/py-certifi to 2017.11.5 [wiz 2017-11-23]
 	Updated devel/py-mercurial to 4.4.1 [wiz 2017-11-23]
+	Updated chat/prosody to 0.10.0 [fhajny 2017-11-23]
