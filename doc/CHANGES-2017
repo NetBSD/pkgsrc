@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4953 2017/11/22 19:32:35 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.4954 2017/11/23 10:22:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7147,3 +7147,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/ruby-gnome2-vte to 3.2.1 [tsutsui 2017-11-22]
 	Updated devel/mk-configure to 0.29.3 [cheusov 2017-11-22]
 	Added devel/flatbuffers version 1.8.0 [minskim 2017-11-22]
+	Updated security/py-OpenSSL to 17.4.0 [adam 2017-11-23]
+	Updated finance/py-braintree to 3.39.0 [adam 2017-11-23]
