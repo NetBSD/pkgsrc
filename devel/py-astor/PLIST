@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/10/31 12:51:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/11/23 10:29:03 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -9,6 +9,9 @@ ${PYSITELIB}/astor/__init__.pyo
 ${PYSITELIB}/astor/code_gen.py
 ${PYSITELIB}/astor/code_gen.pyc
 ${PYSITELIB}/astor/code_gen.pyo
+${PYSITELIB}/astor/codegen.py
+${PYSITELIB}/astor/codegen.pyc
+${PYSITELIB}/astor/codegen.pyo
 ${PYSITELIB}/astor/file_util.py
 ${PYSITELIB}/astor/file_util.pyc
 ${PYSITELIB}/astor/file_util.pyo
