@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4954 2017/11/23 10:22:48 adam Exp $
+$NetBSD: CHANGES-2017,v 1.4955 2017/11/23 10:36:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7149,3 +7149,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/flatbuffers version 1.8.0 [minskim 2017-11-22]
 	Updated security/py-OpenSSL to 17.4.0 [adam 2017-11-23]
 	Updated finance/py-braintree to 3.39.0 [adam 2017-11-23]
+	Updated devel/py-astor to 0.6.2 [adam 2017-11-23]
+	Updated www/py-mod_wsgi to 4.5.22 [adam 2017-11-23]
