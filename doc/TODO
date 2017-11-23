@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17882 2017/11/23 15:21:56 wiz Exp $
+$NetBSD: TODO,v 1.17883 2017/11/23 15:25:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -901,7 +901,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o jasper-2.0.14
 	o java-db3-3.87
 	o java-rxtx-2.1.17
-	o jbig2dec-0.14
 	o jcabc2ps-20150524
 	o jchkmail-2.6.2
 	o jdbc-mysql5-5.1.36
