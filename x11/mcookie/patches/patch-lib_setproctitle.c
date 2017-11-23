@@ -1,18 +1,18 @@
-$NetBSD: patch-lib_setproctitle.c,v 1.1 2016/09/20 08:00:51 wiz Exp $
+$NetBSD: patch-lib_setproctitle.c,v 1.2 2017/11/23 20:27:20 wiz Exp $
 
 Remove setproctitle, conflicts with NetBSD version and not used
 in mcookie.
 
---- lib/setproctitle.c.orig	2016-03-08 12:00:42.000000000 +0000
+--- lib/setproctitle.c.orig	2017-09-27 09:05:13.698361518 +0000
 +++ lib/setproctitle.c
-@@ -48,27 +48,3 @@ void initproctitle (int argc, char **arg
- 	else
- 		argv_lth = argv0[argc-1] + strlen(argv0[argc-1]) - argv0[0];
+@@ -49,27 +49,3 @@ void initproctitle (int argc, char **arg
+ 	if (argv_lth > 1)
+ 		argv0 = argv;
  }
 -
 -void setproctitle (const char *prog, const char *txt)
 -{
--        int i;
+-        size_t i;
 -        char buf[SPT_BUFSIZE];
 -
 -        if (!argv0)
