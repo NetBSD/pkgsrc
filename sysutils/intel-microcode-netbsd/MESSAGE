@@ -1,0 +1,8 @@
+===========================================================================
+
+To use ${PKGNAME} to update your system's microcode,
+you'll need to create a symlink so that cpuctl will find the firmware files:
+
+ln -s ${PREFIX}/libdata/firmware/cpu_x86_intel1 /libdata/firmware/
+
+===========================================================================
