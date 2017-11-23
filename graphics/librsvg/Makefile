@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.96 2017/10/15 23:19:11 prlw1 Exp $
+# $NetBSD: Makefile,v 1.97 2017/11/23 20:22:01 wiz Exp $
 
-DISTNAME=	librsvg-2.40.18
+DISTNAME=	librsvg-2.40.19
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -24,9 +24,6 @@ PKGCONFIG_OVERRIDE=	librsvg.pc.in
 
 TEST_TARGET=		check
 
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.24.0
-
 CONFIGURE_ARGS.Darwin+=	--disable-Bsymbolic
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.librsvg
@@ -45,9 +42,12 @@ BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 CONFIGURE_ARGS+=	--disable-introspection
 .endif
 
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.24.0
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.38
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
 .include "../../graphics/cairo/buildlink3.mk"
 BUILDLINK_DEPMETHOD.cairo-gobject+=	build
 .include "../../graphics/cairo-gobject/buildlink3.mk"
@@ -55,6 +55,7 @@ BUILDLINK_DEPMETHOD.cairo-gobject+=	build
 .include "../../graphics/gdk-pixbuf2/loaders.mk"
 BUILDLINK_API_DEPENDS.libcroco+=	libcroco>=0.6.1
 .include "../../textproc/libcroco/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.9
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
