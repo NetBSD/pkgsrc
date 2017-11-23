@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2015/08/30 15:08:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2017/11/23 14:43:23 wiz Exp $
 ${PLIST.launchd}Library/LaunchAgents/org.freedesktop.dbus-session.plist
 bin/dbus-cleanup-sockets
 bin/dbus-daemon
@@ -26,6 +26,8 @@ include/dbus-1.0/dbus/dbus-syntax.h
 include/dbus-1.0/dbus/dbus-threads.h
 include/dbus-1.0/dbus/dbus-types.h
 include/dbus-1.0/dbus/dbus.h
+lib/cmake/DBus1/DBus1Config.cmake
+lib/cmake/DBus1/DBus1ConfigVersion.cmake
 lib/dbus-1.0/include/dbus/dbus-arch-deps.h
 lib/libdbus-1.la
 lib/pkgconfig/dbus-1.pc
@@ -62,3 +64,5 @@ share/doc/dbus/examples/example-system-enable-stats.conf
 share/doc/dbus/introspect.dtd
 share/doc/dbus/introspect.xsl
 share/doc/dbus/system-activation.txt
+share/xml/dbus-1/busconfig.dtd
+share/xml/dbus-1/introspect.dtd
