@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4984 2017/11/23 20:22:11 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4985 2017/11/23 20:24:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7180,3 +7180,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/gtksourceview3 to 3.24.5 [wiz 2017-11-23]
 	Updated games/lgogdownloader to 3.3 [wiz 2017-11-23]
 	Updated graphics/librsvg to 2.40.19 [wiz 2017-11-23]
+	Updated math/fftw to 3.3.7 [wiz 2017-11-23]
