@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.101 2017/10/03 12:36:54 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2017/11/23 17:20:17 wiz Exp $
 
 DISTNAME=	midori_0.5.11_all_
 PKGNAME=	${DISTNAME:S/_all_//:S/_/-/}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	www
 MASTER_SITES=	http://midori-browser.org/downloads/
 

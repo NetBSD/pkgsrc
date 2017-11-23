@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2017/06/20 15:35:23 youri Exp $
+# $NetBSD: Makefile,v 1.37 2017/11/23 17:19:53 wiz Exp $
 
-PKGREVISION= 5
+PKGREVISION= 6
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 VERSION=	0.4.0
