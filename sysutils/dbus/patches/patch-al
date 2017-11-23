@@ -1,10 +1,10 @@
-$NetBSD: patch-al,v 1.5 2015/12/06 11:35:55 wiz Exp $
+$NetBSD: patch-al,v 1.6 2017/11/23 14:43:23 wiz Exp $
 
 Adapt path for pkgsrc.
 
---- tools/Makefile.in.orig	2015-07-21 16:32:32.000000000 +0000
+--- tools/Makefile.in.orig	2017-11-13 13:36:10.000000000 +0000
 +++ tools/Makefile.in
-@@ -428,7 +428,7 @@ AM_CPPFLAGS = \
+@@ -515,7 +515,7 @@ AM_CPPFLAGS = \
  	$(DBUS_STATIC_BUILD_CPPFLAGS) \
  	$(DBUS_X_CFLAGS) \
  	-DDBUS_COMPILATION \
@@ -12,10 +12,10 @@ Adapt path for pkgsrc.
 +	-DDBUS_MACHINE_UUID_FILE=\""$(localstatedir)/db/dbus/machine-id"\" \
  	$(NULL)
  
- 
-@@ -847,9 +847,9 @@ uninstall-am: uninstall-binPROGRAMS
- .PRECIOUS: Makefile
- 
+ AM_CFLAGS = \
+@@ -1092,9 +1092,9 @@ uninstall-am: uninstall-binPROGRAMS unin
+ @DBUS_WIN_TRUE@disable-uac.rc: Win32.Manifest
+ @DBUS_WIN_TRUE@	echo '1 24 "$<"' > $@
  
 -# create the /var/lib/dbus directory for dbus-uuidgen
 +# create the /var/db/dbus directory for dbus-uuidgen
