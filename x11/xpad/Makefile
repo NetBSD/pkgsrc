@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2017/09/06 09:03:06 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2017/11/23 17:20:22 wiz Exp $
 #
 
 DISTNAME=	xpad-4.8.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	http://launchpad.net/xpad/trunk/${PKGVERSION_NOREV}/+download/
 EXTRACT_SUFX=	.tar.bz2

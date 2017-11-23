@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.137 2017/10/19 23:05:43 jaapb Exp $
+# $NetBSD: Makefile,v 1.138 2017/11/23 17:19:41 wiz Exp $
 #
 
 DISTNAME=	libgnomeui-2.24.5
-PKGREVISION=	35
+PKGREVISION=	36
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeui/2.24/}
 EXTRACT_SUFX=	.tar.bz2
