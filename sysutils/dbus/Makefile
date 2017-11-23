@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.110 2017/10/02 13:36:34 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2017/11/23 14:43:23 wiz Exp $
 
-DISTNAME=	dbus-1.10.24
+DISTNAME=	dbus-1.12.2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -38,7 +38,6 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 # directory. See the commit message on revision 1.35
 CONFIGURE_ARGS+=	--with-session-socket-dir=/tmp
 
-CONFIGURE_ARGS+=	--without-init-scripts
 CONFIGURE_ARGS+=	--disable-ansi
 CONFIGURE_ARGS+=	--disable-console-owner-file
 CONFIGURE_ARGS+=	--disable-doxygen-docs
@@ -66,7 +65,6 @@ PTHREAD_AUTO_VARS=	yes
 .if ${OPSYS} == "Linux"
 PLIST.linux=		yes
 .else
-CONFIGURE_ARGS+=	--disable-abstract-sockets
 CONFIGURE_ARGS+=	--disable-selinux
 .endif
 
@@ -109,5 +107,6 @@ post-install:
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_ABI_DEPENDS.expat+=	expat>=2.1.0
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
