@@ -1,15 +1,15 @@
-$NetBSD: patch-ak,v 1.5 2015/12/06 11:35:55 wiz Exp $
+$NetBSD: patch-ak,v 1.6 2017/11/23 14:43:23 wiz Exp $
 
 Adapt path for pkgsrc.
 
---- dbus/Makefile.in.orig	2015-08-25 15:52:09.000000000 +0000
+--- dbus/Makefile.in.orig	2017-11-13 13:36:10.000000000 +0000
 +++ dbus/Makefile.in
-@@ -589,7 +589,7 @@ dbusdatadir = $(datadir)/dbus-1
- AM_CPPFLAGS = -I$(top_builddir) -I$(top_srcdir) \
- 	$(DBUS_STATIC_BUILD_CPPFLAGS) $(SYSTEMD_CFLAGS) \
- 	$(VALGRIND_CFLAGS) -DDBUS_COMPILATION \
+@@ -619,7 +619,7 @@ dbusdatadir = $(datadir)/dbus-1
+ AM_CPPFLAGS = $(CODE_COVERAGE_CPPFLAGS) -I$(top_builddir) \
+ 	-I$(top_srcdir) $(DBUS_STATIC_BUILD_CPPFLAGS) \
+ 	$(SYSTEMD_CFLAGS) $(VALGRIND_CFLAGS) -DDBUS_COMPILATION \
 -	-DDBUS_MACHINE_UUID_FILE=\""$(localstatedir)/lib/dbus/machine-id"\" \
 +	-DDBUS_MACHINE_UUID_FILE=\""$(localstatedir)/db/dbus/machine-id"\" \
  	-DDBUS_SYSTEM_CONFIG_FILE=\""$(dbusdatadir)/system.conf"\" \
  	-DDBUS_SESSION_CONFIG_FILE=\""$(dbusdatadir)/session.conf"\" \
- 	$(NULL) $(am__append_2)
+ 	-DDBUS_RUNSTATEDIR=\""$(runstatedir)"\" $(NULL) \
