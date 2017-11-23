@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2017/03/31 10:32:15 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2017/11/23 15:41:40 wiz Exp $
 
 DISTNAME=	gmime-2.6.23
 PKGREVISION=	2
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://spruce.sourceforge.net/gmime/
-COMMENT=	Library for the creation and parsing of MIME messages
+COMMENT=	Library for the creation and parsing of MIME messages (API v2.6)
 LICENSE=	gnu-lgpl-v2.1
 
 USE_PKGLOCALEDIR=	yes
