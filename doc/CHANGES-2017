@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4965 2017/11/23 15:25:04 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.4966 2017/11/23 15:30:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7161,3 +7161,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/at-spi2-atk to 2.26.1 [wiz 2017-11-23]
 	Updated fonts/harfbuzz to 1.7.1 [wiz 2017-11-23]
 	Updated graphics/jbig2dec to 0.14 [wiz 2017-11-23]
+	Updated lang/vala to 0.38.3 [wiz 2017-11-23]
