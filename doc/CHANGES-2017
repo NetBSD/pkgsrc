@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5018 2017/11/24 14:28:50 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5019 2017/11/24 14:29:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7216,3 +7216,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Test-Simple to 1.302113 [wiz 2017-11-24]
 	Updated devel/p5-Test-Spec to 0.54 [wiz 2017-11-24]
 	Updated devel/p5-Test2-Suite to 0.000084 [wiz 2017-11-24]
+	Updated graphics/p5-GD to 2.67 [wiz 2017-11-24]
