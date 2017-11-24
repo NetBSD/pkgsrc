@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17908 2017/11/23 22:42:04 wiz Exp $
+$NetBSD: TODO,v 1.17909 2017/11/24 15:00:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -683,7 +683,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gdl-3.16.0
 	o gdm-2.32.2 [GNOME 2.32]
 	o gdm-3.0.3
-	o geany-1.31
 	o gecko-mediaplayer-1.0.9b
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o genius-1.0.21
