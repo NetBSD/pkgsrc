@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2017/11/24 06:46:01 kamil Exp $
+bin/dte
+man/man1/dte.1
+man/man5/dte-syntax.5
+man/man5/dterc.5

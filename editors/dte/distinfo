@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/11/24 06:46:01 kamil Exp $
+
+SHA1 (dte-1.5.tar.gz) = d7986ebeed08a55b8fffbd597edbcfba43fac072
+RMD160 (dte-1.5.tar.gz) = d4855277018dc95e2a73606a7f0c71b3864f14a4
+SHA512 (dte-1.5.tar.gz) = 39c5c2ba22eff49ed167db122c72352eea9989f8799b04a86d3cdd1e38bf6617965e8e0fd94b6644e7cb626d343012f2c491517a036960bad7c628754dfbf605
+Size (dte-1.5.tar.gz) = 223623 bytes
