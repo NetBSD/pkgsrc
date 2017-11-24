@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2017/11/23 17:19:54 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2017/11/24 22:15:58 wiz Exp $
 
 DISTNAME=	gcompris-12.11
 PKGREVISION=	28
@@ -12,6 +12,7 @@ COMMENT=	Educational games for children
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	gnuchess-[0-9]*:../../games/gnuchess
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 USE_TOOLS+=		gmake intltool gtar pkg-config msgfmt texi2html
 GNU_CONFIGURE=		YES
@@ -24,7 +25,6 @@ INFO_FILES=	yes
 PTHREAD_AUTO_VARS=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-sqlite2, py-gtk2
-PYTHON_VERSIONED_DEPENDENCIES=	cairo:link
 
 PKG_SUPPORTED_OPTIONS=	gnet
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcompris
@@ -53,7 +53,6 @@ post-install:
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/application.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

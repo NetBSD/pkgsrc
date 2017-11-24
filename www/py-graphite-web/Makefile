@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/01/01 14:44:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/11/24 22:15:59 wiz Exp $
 
 DISTNAME=	graphite-web-0.9.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,11 +16,11 @@ DEPENDS+=	${PYPKGPREFIX}-django>=1.3.1:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-tagging>=0.3.1:../../www/py-django-tagging
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 EGG_NAME=	${DISTNAME:S/graphite-/graphite_/}
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONED_DEPENDENCIES=	cairo
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -74,6 +74,5 @@ post-install:
 	${LN} -s ${PKG_SYSCONFDIR}/local_settings.py ${DESTDIR}${PREFIX}/${PYSITELIB}/graphite/
 
 .include "../../databases/py-carbon/Makefile.common"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
