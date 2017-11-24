@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2017/09/17 20:16:12 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2017/11/24 14:31:18 wiz Exp $
 
-DISTNAME=	Locale-Codes-3.54
+DISTNAME=	Locale-Codes-3.55
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	misc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Locale/}
