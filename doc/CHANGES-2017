@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5003 2017/11/24 13:20:02 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5004 2017/11/24 13:21:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7201,3 +7201,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated archivers/py-lz4 to 0.11.1 [adam 2017-11-24]
 	Updated textproc/py-colour to 0.1.5 [adam 2017-11-24]
 	Updated converters/p5-JSON to 2.97000 [wiz 2017-11-24]
+	Updated converters/p5-JSON-PP to 2.97000 [wiz 2017-11-24]
