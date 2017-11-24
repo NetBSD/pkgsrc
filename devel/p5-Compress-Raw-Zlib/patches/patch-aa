@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.5 2014/06/29 17:07:18 schmonz Exp $
+$NetBSD: patch-aa,v 1.6 2017/11/24 13:42:15 wiz Exp $
 
   Record the path to the zlib library in the executable/library.
   COMPILER_RPATH_FLAG is specific to pkgsrc.
 
---- Makefile.PL.orig	2014-02-02 19:26:41.000000000 +0000
+--- Makefile.PL.orig	2017-11-21 19:35:45.000000000 +0000
 +++ Makefile.PL
-@@ -84,7 +84,7 @@ WriteMakefile( 
+@@ -88,7 +88,7 @@ WriteMakefile( 
      (
        $BUILD_ZLIB
          ? zlib_files($ZLIB_LIB)
--        : (LIBS => [ "-L$ZLIB_LIB -lz " ])
-+        : (LIBS => [ "-L$ZLIB_LIB $ENV{'COMPILER_RPATH_FLAG'}$ZLIB_LIB -lz " ])
+-        : (LIBS => [ "-L$ZLIB_LIB -l$ZLIB_LIBRARY_NAME " ])
++        : (LIBS => [ "-L$ZLIB_LIB $ENV{'COMPILER_RPATH_FLAG'}$ZLIB_LIB -l$ZLIB_LIBRARY_NAME " ])
      ),
      OPTIMIZE => $OPTIMIZE,
  
