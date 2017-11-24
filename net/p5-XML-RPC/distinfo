@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/01/24 13:39:42 mef Exp $
+$NetBSD: distinfo,v 1.2 2017/11/24 14:35:08 wiz Exp $
 
-SHA1 (XML-RPC-0.9.tar.gz) = 0d70904c825e8cde1509b2985322feddf2cd2fd0
-RMD160 (XML-RPC-0.9.tar.gz) = 1d00728c9b9a72a5cf8eaeb5360494539026517f
-SHA512 (XML-RPC-0.9.tar.gz) = e02be983e2a691563d5b77d6018bbcc41271aeb702e24f8d6f81286e7fc339c44494e1efd47bcc283ee586da1508d1954a9ff1e67d91bf9151b0ab4e393268fc
-Size (XML-RPC-0.9.tar.gz) = 4745 bytes
-SHA1 (patch-make-dist.sh) = 02c28cbb2bb5d433115c8b71e30ddb0f4cf79c1a
+SHA1 (XML-RPC-1.1.tar.gz) = 7fbe1f2f74cd4efe4ac5fd12ceffea8108ed03e7
+RMD160 (XML-RPC-1.1.tar.gz) = 6ca825674d5d5f66afe50192237f5a18c67185af
+SHA512 (XML-RPC-1.1.tar.gz) = 163ec99c6c7dd75db5389320d6aeace56ba9313870f6c5c9633669f413ac2f0feace9c472ac35d51cef092d36e7a2ac306d19478b8257233ad5a6ddb5401c00e
+Size (XML-RPC-1.1.tar.gz) = 5847 bytes
