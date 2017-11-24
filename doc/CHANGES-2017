@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5028 2017/11/24 15:15:07 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5029 2017/11/24 15:24:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7226,3 +7226,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-WWW-Mechanize-Cached to 1.51 [wiz 2017-11-24]
 	Updated devel/geany to 1.32 [wiz 2017-11-24]
 	Updated devel/glibmm to 2.54.1 [wiz 2017-11-24]
+	Updated x11/gtkmm3 to 3.22.2 [wiz 2017-11-24]
