@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5008 2017/11/24 13:40:22 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5009 2017/11/24 13:42:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7206,3 +7206,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/p5-Data-Table to 1.76 [wiz 2017-11-24]
 	Updated databases/p5-Fsdb to 2.64 [wiz 2017-11-24]
 	Updated devel/p5-CPAN-Perl-Releases to 3.42 [wiz 2017-11-24]
+	Updated devel/p5-Compress-Raw-Zlib to 2.076 [wiz 2017-11-24]
