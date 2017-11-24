@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.776 2017/11/10 23:02:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.777 2017/11/24 22:17:41 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -422,7 +422,6 @@ SUBDIR+=	py-biggles
 SUBDIR+=	py-blockdiag
 SUBDIR+=	py-brewer2mpl
 SUBDIR+=	py-cairo
-SUBDIR+=	py-cairo3
 SUBDIR+=	py-cairocffi
 SUBDIR+=	py-chart
 SUBDIR+=	py-cycler
