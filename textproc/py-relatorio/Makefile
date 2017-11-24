@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/01/01 14:44:01 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/11/24 22:15:59 wiz Exp $
 
 DISTNAME=	relatorio-0.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,11 +14,10 @@ DEPENDS+=	${PYPKGPREFIX}-genshi>=0.5:../../www/py-genshi
 DEPENDS+=	${PYPKGPREFIX}-lxml>=2.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-pycha-[0-9]*:../../graphics/py-pycha
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 USE_LANGUAGES=		#none
-PYTHON_VERSIONED_DEPENDENCIES=	cairo
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2 via py-pycha
 
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
