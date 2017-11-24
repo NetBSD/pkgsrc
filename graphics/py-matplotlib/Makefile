@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2017/11/15 14:19:43 adam Exp $
+# $NetBSD: Makefile,v 1.51 2017/11/24 22:15:59 wiz Exp $
 
 .include "Makefile.common"
 
@@ -9,10 +9,9 @@ DEPENDS+=	${PYPKGPREFIX}-cycler-[0-9]*:../../graphics/py-cycler
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2008b:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=1.5.6:../../devel/py-pyparsing
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
-
-PYTHON_VERSIONED_DEPENDENCIES=	cairo
 
 .include "../../lang/python/pyversion.mk"
 .if "${PYPKGPREFIX}" == "py27"
@@ -46,7 +45,6 @@ do-test:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
