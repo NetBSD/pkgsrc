@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/01/01 14:43:29 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2017/11/24 22:15:58 wiz Exp $
 
 DISTNAME=	bzr-gtk-${VER}
 PKGREVISION=	1
@@ -12,9 +12,9 @@ COMMENT=	Various GTK+ frontends to Bazaar commands
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.8:../../x11/py-gtk2
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cair
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONED_DEPENDENCIES=	cairo
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
 REPLACE_PYTHON=	create-credits.py info.py
 
@@ -26,7 +26,6 @@ BZR_PLUGIN_TEST=no
 .include "../../devel/bzr/plugin.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
