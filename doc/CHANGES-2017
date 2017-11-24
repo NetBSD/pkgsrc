@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5025 2017/11/24 14:42:25 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5026 2017/11/24 14:51:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7223,3 +7223,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-Text-VisualWidth-PP to 0.05 [wiz 2017-11-24]
 	Updated www/p5-CGI-Fast to 2.13 [wiz 2017-11-24]
 	Updated www/p5-Mojolicious to 7.57 [wiz 2017-11-24]
+	Updated www/p5-WWW-Mechanize-Cached to 1.51 [wiz 2017-11-24]
