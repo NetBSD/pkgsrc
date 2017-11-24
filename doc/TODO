@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17909 2017/11/24 15:00:51 wiz Exp $
+$NetBSD: TODO,v 1.17910 2017/11/24 15:15:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -426,7 +426,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o asterisk13-13.17.1
 	o asunder-2.8
 	o aterm-1.0.1
-	o atkmm-2.25.4
 	o aubio-0.4.2
 	o audacious-3.7.1
 	o audacious-plugins-3.7.1
@@ -703,7 +702,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.18.3
 	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.5 [wip]
-	o glibmm-2.54.1
 	o gliv-1.9.7
 	o glom-1.14.2 [GNOME 2.26]
 	o glx-utils-8.3.0
