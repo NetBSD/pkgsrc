@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/07/31 18:30:21 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/11/24 15:00:37 wiz Exp $
 bin/geany
 include/geany/app.h
 include/geany/build.h
@@ -82,6 +82,7 @@ share/doc/geany/html/index.html
 share/doc/geany/manual.txt
 share/geany/GPL-2
 share/geany/colorschemes/alt.conf
+share/geany/filedefs/filetypes.Arduino.conf
 share/geany/filedefs/filetypes.CUDA.conf
 share/geany/filedefs/filetypes.Clojure.conf
 share/geany/filedefs/filetypes.Cython.conf
@@ -236,6 +237,7 @@ share/locale/kk/LC_MESSAGES/geany.mo
 share/locale/ko/LC_MESSAGES/geany.mo
 share/locale/lb/LC_MESSAGES/geany.mo
 share/locale/lt/LC_MESSAGES/geany.mo
+share/locale/lv/LC_MESSAGES/geany.mo
 share/locale/mn/LC_MESSAGES/geany.mo
 share/locale/nl/LC_MESSAGES/geany.mo
 share/locale/nn/LC_MESSAGES/geany.mo
