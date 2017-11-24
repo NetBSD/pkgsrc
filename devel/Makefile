@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2570 2017/11/22 19:31:56 minskim Exp $
+# $NetBSD: Makefile,v 1.2571 2017/11/24 13:51:16 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -927,6 +927,7 @@ SUBDIR+=	p5-Class-XML
 SUBDIR+=	p5-Class-XPath
 SUBDIR+=	p5-Class-XSAccessor
 SUBDIR+=	p5-Clone
+SUBDIR+=	p5-Clone-Choose
 SUBDIR+=	p5-Clone-Fast
 SUBDIR+=	p5-Clone-PP
 SUBDIR+=	p5-Compress-PPMd
