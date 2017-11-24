@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2015/11/03 21:34:16 agc Exp $
+$NetBSD: distinfo,v 1.18 2017/11/24 16:02:21 wiz Exp $
 
-SHA1 (py2cairo-1.10.0.tar.bz2) = 2efa8dfafbd6b8e492adaab07231556fec52d6eb
-RMD160 (py2cairo-1.10.0.tar.bz2) = ce75db9af32ef1a3e90f6aaa649cbb2493a941a4
-SHA512 (py2cairo-1.10.0.tar.bz2) = cb3d54de9af4134460ce731da8166a3127a642c8a2e6184109437ddec115cd55b8dd2413a5c81700277bfe2f22fcfe268db4f3ba0f7649751e85bb34295f79fc
-Size (py2cairo-1.10.0.tar.bz2) = 402070 bytes
+SHA1 (pycairo-1.15.4.tar.gz) = f1848d6673f47c1703fc2d1094c781b3f65faac7
+RMD160 (pycairo-1.15.4.tar.gz) = b6b753dd9a16e0bf86e7d07375bb38ba056b5ab4
+SHA512 (pycairo-1.15.4.tar.gz) = 7e785d23393a8d0c5aca9a4440eb64b0eca9a60c1a18b0dc8452edd6de9422c743d082530387bcbedd34d52377d0892ad395998e9467ba08e22c318684cbee34
+Size (pycairo-1.15.4.tar.gz) = 178436 bytes
