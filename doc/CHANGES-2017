@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5012 2017/11/24 13:52:21 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5013 2017/11/24 14:10:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7210,3 +7210,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Devel-StackTrace to 2.03 [wiz 2017-11-24]
 	Added devel/p5-Clone-Choose version 0.008 [wiz 2017-11-24]
 	Updated devel/p5-Hash-Merge to 0.299 [wiz 2017-11-24]
+	Updated devel/p5-MetaCPAN-Client to 2.021000 [wiz 2017-11-24]
