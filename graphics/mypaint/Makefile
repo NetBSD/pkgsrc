@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2017/02/12 06:25:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2017/11/24 22:15:58 wiz Exp $
 
 DISTNAME=	mypaint-1.1.0
 PKGREVISION=	4
@@ -13,12 +13,12 @@ LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	bash:run msgfmt pkg-config
 
-PYTHON_VERSIONED_DEPENDENCIES=	cairo
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
 
 USE_PKGLOCALEDIR=	yes
@@ -51,6 +51,5 @@ do-install:
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
