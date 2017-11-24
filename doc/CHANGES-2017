@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5022 2017/11/24 14:37:11 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5023 2017/11/24 14:39:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7220,3 +7220,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/p5-Locale-Codes to 3.55 [wiz 2017-11-24]
 	Updated net/p5-XML-RPC to 1.1 [wiz 2017-11-24]
 	Updated textproc/p5-PDF-Table to 0.9.14 [wiz 2017-11-24]
+	Updated textproc/p5-Text-VisualWidth-PP to 0.05 [wiz 2017-11-24]
