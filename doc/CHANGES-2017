@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5011 2017/11/24 13:51:35 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5012 2017/11/24 13:52:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7209,3 +7209,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Compress-Raw-Zlib to 2.076 [wiz 2017-11-24]
 	Updated devel/p5-Devel-StackTrace to 2.03 [wiz 2017-11-24]
 	Added devel/p5-Clone-Choose version 0.008 [wiz 2017-11-24]
+	Updated devel/p5-Hash-Merge to 0.299 [wiz 2017-11-24]
