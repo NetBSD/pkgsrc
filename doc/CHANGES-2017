@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4997 2017/11/24 11:22:24 leot Exp $
+$NetBSD: CHANGES-2017,v 1.4998 2017/11/24 11:23:32 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7193,3 +7193,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added editors/dte version 1.5 [kamil 2017-11-24]
 	Updated devel/libuv to 1.17.0 [adam 2017-11-24]
 	Updated lang/py27-html-docs to 2.7.14 [leot 2017-11-24]
+	Updated lang/py34-html-docs to 3.4.7 [leot 2017-11-24]
