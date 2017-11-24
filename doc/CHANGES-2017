@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.4999 2017/11/24 11:24:50 leot Exp $
+$NetBSD: CHANGES-2017,v 1.5000 2017/11/24 11:25:45 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7195,3 +7195,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/py27-html-docs to 2.7.14 [leot 2017-11-24]
 	Updated lang/py34-html-docs to 3.4.7 [leot 2017-11-24]
 	Updated lang/py35-html-docs to 3.5.4 [leot 2017-11-24]
+	Updated lang/py36-html-docs to 3.6.3 [leot 2017-11-24]
