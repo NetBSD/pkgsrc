@@ -1,11 +1,11 @@
-$NetBSD: patch-sshd.c,v 1.8 2016/12/30 04:43:16 taca Exp $
+$NetBSD: patch-sshd.c,v 1.8.8.1 2017/11/25 08:49:32 bsiegert Exp $
 
 * Interix support
 * Revive tcp_wrappers support.
 
---- sshd.c.orig	2016-12-19 04:59:41.000000000 +0000
+--- sshd.c.orig	2017-10-02 19:34:26.000000000 +0000
 +++ sshd.c
-@@ -123,6 +123,13 @@
+@@ -122,6 +122,13 @@
  #include "version.h"
  #include "ssherr.h"
  
@@ -19,7 +19,7 @@ $NetBSD: patch-sshd.c,v 1.8 2016/12/30 04:43:16 taca Exp $
  /* Re-exec fds */
  #define REEXEC_DEVCRYPTO_RESERVED_FD	(STDERR_FILENO + 1)
  #define REEXEC_STARTUP_PIPE_FD		(STDERR_FILENO + 2)
-@@ -220,7 +227,11 @@ int *startup_pipes = NULL;
+@@ -219,7 +226,11 @@ int *startup_pipes = NULL;
  int startup_pipe;		/* in child */
  
  /* variables used for privilege separation */
@@ -30,17 +30,8 @@ $NetBSD: patch-sshd.c,v 1.8 2016/12/30 04:43:16 taca Exp $
 +#endif
  struct monitor *pmonitor = NULL;
  int privsep_is_preauth = 1;
- 
-@@ -541,7 +552,7 @@ privsep_preauth_child(void)
- 	demote_sensitive_data();
- 
- 	/* Demote the child */
--	if (getuid() == 0 || geteuid() == 0) {
-+	if (getuid() == ROOTUID || geteuid() == ROOTUID) {
- 		/* Change our root directory */
- 		if (chroot(_PATH_PRIVSEP_CHROOT_DIR) == -1)
- 			fatal("chroot(\"%s\"): %s", _PATH_PRIVSEP_CHROOT_DIR,
-@@ -552,10 +563,15 @@ privsep_preauth_child(void)
+ static int privsep_chroot = 1;
+@@ -550,10 +561,15 @@ privsep_preauth_child(void)
  		/* Drop our privileges */
  		debug3("privsep user:group %u:%u", (u_int)privsep_pw->pw_uid,
  		    (u_int)privsep_pw->pw_gid);
@@ -56,7 +47,7 @@ $NetBSD: patch-sshd.c,v 1.8 2016/12/30 04:43:16 taca Exp $
  	}
  }
  
-@@ -619,10 +635,17 @@ privsep_preauth(Authctxt *authctxt)
+@@ -617,10 +633,17 @@ privsep_preauth(Authctxt *authctxt)
  		/* Arrange for logging to be sent to the monitor */
  		set_log_handler(mm_log_handler, pmonitor);
  
@@ -74,7 +65,7 @@ $NetBSD: patch-sshd.c,v 1.8 2016/12/30 04:43:16 taca Exp $
  
  		return 0;
  	}
-@@ -634,7 +657,7 @@ privsep_postauth(Authctxt *authctxt)
+@@ -632,7 +655,7 @@ privsep_postauth(Authctxt *authctxt)
  #ifdef DISABLE_FD_PASSING
  	if (1) {
  #else
@@ -83,7 +74,7 @@ $NetBSD: patch-sshd.c,v 1.8 2016/12/30 04:43:16 taca Exp $
  #endif
  		/* File descriptor passing is broken or root login */
  		use_privsep = 0;
-@@ -1389,8 +1412,10 @@ main(int ac, char **av)
+@@ -1393,8 +1416,10 @@ main(int ac, char **av)
  	av = saved_argv;
  #endif
  
@@ -95,7 +86,16 @@ $NetBSD: patch-sshd.c,v 1.8 2016/12/30 04:43:16 taca Exp $
  
  	/* Ensure that fds 0, 1 and 2 are open or directed to /dev/null */
  	sanitise_stdfd();
-@@ -1766,7 +1791,7 @@ main(int ac, char **av)
+@@ -1636,7 +1661,7 @@ main(int ac, char **av)
+ 	);
+ 
+ 	/* Store privilege separation user for later use if required. */
+-	privsep_chroot = use_privsep && (getuid() == 0 || geteuid() == 0);
++	privsep_chroot = use_privsep && (getuid() == ROOTUID || geteuid() == ROOTUID);
+ 	if ((privsep_pw = getpwnam(SSH_PRIVSEP_USER)) == NULL) {
+ 		if (privsep_chroot || options.kerberos_authentication)
+ 			fatal("Privilege separation user %s does not exist",
+@@ -1769,7 +1794,7 @@ main(int ac, char **av)
  		    (st.st_uid != getuid () ||
  		    (st.st_mode & (S_IWGRP|S_IWOTH)) != 0))
  #else
@@ -104,7 +104,7 @@ $NetBSD: patch-sshd.c,v 1.8 2016/12/30 04:43:16 taca Exp $
  #endif
  			fatal("%s must be owned by root and not group or "
  			    "world-writable.", _PATH_PRIVSEP_CHROOT_DIR);
-@@ -1789,8 +1814,10 @@ main(int ac, char **av)
+@@ -1792,8 +1817,10 @@ main(int ac, char **av)
  	 * to create a file, and we can't control the code in every
  	 * module which might be used).
  	 */
@@ -115,7 +115,7 @@ $NetBSD: patch-sshd.c,v 1.8 2016/12/30 04:43:16 taca Exp $
  
  	if (rexec_flag) {
  		rexec_argv = xcalloc(rexec_argc + 2, sizeof(char *));
-@@ -1972,6 +1999,25 @@ main(int ac, char **av)
+@@ -1981,6 +2008,25 @@ main(int ac, char **av)
  	audit_connection_from(remote_ip, remote_port);
  #endif
  
