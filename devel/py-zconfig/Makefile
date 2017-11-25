@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2017/09/04 18:00:52 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/11/25 12:39:16 wiz Exp $
 
-DISTNAME=		ZConfig-2.6.1
+DISTNAME=		ZConfig-3.2.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=		devel python
 MASTER_SITES=		${MASTER_SITE_PYPI:=Z/ZConfig/}
@@ -10,15 +10,12 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Configuration library
 #LICENSE=		zope-public-license-v2.1
 
+# TEST_DEPENDS
+BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+#BUILD_DEPENDS+=		${PYPKGPREFIX}-manuel-[0-9]*:../../?/py-manuel
+#BUILD_DEPENDS+=		${PYPKGPREFIX}-zope-testrunner-[0-9]*:../../?/py-zope-testrunner
+
 USE_LANGUAGES=		# empty
-
-INSTALLATION_DIRS+=	share/doc/py-zconfig
-
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/zconfig.pdf \
-		${DESTDIR}${PREFIX}/share/doc/py-zconfig
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
