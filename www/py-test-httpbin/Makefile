@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/08/22 13:30:40 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/11/25 12:56:31 wiz Exp $
 
-DISTNAME=	pytest-httpbin-0.2.3
+DISTNAME=	pytest-httpbin-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-httpbin/}
@@ -15,6 +15,9 @@ DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-httpbin-[0-9]*:../../www/py-httpbin
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+# test failure in 0.3.0:
+# https://github.com/kevin1024/pytest-httpbin/issues/46
 
 USE_LANGUAGES=	# none
 
