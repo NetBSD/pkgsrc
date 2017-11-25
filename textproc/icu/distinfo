@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.65 2017/04/25 08:58:44 maya Exp $
+$NetBSD: distinfo,v 1.65.6.1 2017/11/25 09:05:15 bsiegert Exp $
 
 SHA1 (icu4c-59_1-src.tgz) = e86189f53c0a01cecf093a555e1ebbd14abf5b82
 RMD160 (icu4c-59_1-src.tgz) = fe4bad598bbe0833b05e4626a1c941ad5e58a809
@@ -15,10 +15,11 @@ SHA1 (patch-config_Makefile.inc.in) = e7cee161315321d2580074054d87714b55319886
 SHA1 (patch-config_icu-config-bottom) = 168b89ee9180d4ae545125866ee91eb004010501
 SHA1 (patch-config_mh-darwin) = 32f0e4c241535e37e4cad9b871ed3d36b4184199
 SHA1 (patch-config_mh-scoosr5) = 47703dcc184f58c0382da3225f849424ab74d472
-SHA1 (patch-config_mh-solaris-gcc) = 19f76c27bef22cc3b572e4b67a526d5f1aa077bc
+SHA1 (patch-config_mh-solaris-gcc) = e1097930f577917d3583e425d9d2affa1c3dcaf2
 SHA1 (patch-configure) = fdeae51f4390779dfd8df8471196e322cbb9ea3d
 SHA1 (patch-configure.ac) = b0291cf02351cbad9b0c7340baea9eb81cabb158
 SHA1 (patch-i18n_digitlst.cpp) = 2db1a8e28e353ecf201f965d9719d451534865ad
+SHA1 (patch-i18n_zonemeta.cpp) = 8a222ef88837c3afdbc7c7e11a94245c97a1f0e5
 SHA1 (patch-icudefs.mk.in) = c2a9469bf896b5f0702d5795c3b1c2b394893663
 SHA1 (patch-runConfigureICU) = ee780dbe797c7230208f378f73a0bc4d215b1bb2
 SHA1 (patch-tools-toolutil-pkg_genc.cpp) = 3cbcf3387d6a39315b26a3e2a2ffb715507e9110
