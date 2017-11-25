@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2017/07/26 08:24:06 adam Exp $
+$NetBSD: distinfo,v 1.3.4.1 2017/11/25 09:04:18 bsiegert Exp $
 
 SHA1 (zabbix-3.2.7.tar.gz) = eb5bd34e1ad3dd75c54ed072f0799d55d0939d49
 RMD160 (zabbix-3.2.7.tar.gz) = 7997a7a1419d8d543ba0f8e961a247a04272c438
@@ -6,6 +6,7 @@ SHA512 (zabbix-3.2.7.tar.gz) = f60c82829c076a7f8b9d2f0c7dc91f7b65594ac4dcfaa08b1
 Size (zabbix-3.2.7.tar.gz) = 16016367 bytes
 SHA1 (patch-frontends_php_locale_add__new__language.sh) = c187e2b4ae8dd9e409f5c32469cb7b0f02647d8b
 SHA1 (patch-frontends_php_locale_make__mo.sh) = 2f0aaa63e80fcd5d4fa8c507fd764f80070b7864
+SHA1 (patch-src_libs_zbxsysinfo_common_net.c) = 29d0d81b100eb65ea6e96dde08f930e3b834fb3c
 SHA1 (patch-src_zabbix__agent_Makefile.in) = a591c3e831eb34dc10cb5b1078891b5cad53b756
 SHA1 (patch-src_zabbix__proxy_Makefile.in) = 535eccd707a8947903fbec41028b127a3bbbeffc
 SHA1 (patch-src_zabbix__server_Makefile.in) = d297b8c4a940867d0a3eaff7bcb3b178a87dfd49
