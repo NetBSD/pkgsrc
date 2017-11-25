@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.22 2017/11/20 21:15:20 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.23 2017/11/25 09:42:23 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q3 branch:
 
@@ -243,4 +243,26 @@ textproc/ruby-nokogiri: bugfix
 
 Pullup ticket #5645 - requested by taca
 net/nagios-plugin-ldap: build fix
+
+Pullup ticket #5646 - requested by he
+devel/git-base: security fix
+
+Pullup ticket #5647 - requested by taca
+www/contao35: security fix
+
+Pullup ticket #5649 - requested by maya
+security/openssh: security fix
+
+Pullup ticket #5648 - requested by taca
+www/contao44: security fix
+
+Pullup ticket #5650 - requested by he
+sysutils/zabbix: bugfix
+
+Pullup ticket #5651 - requested by he
+textproc/icu: security fix
+
+Pullup ticket #5652 - requested by khorben
+www/firefox52: security fix
+www/firefox52-l10n: security fix
 
