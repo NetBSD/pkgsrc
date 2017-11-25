@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2016/01/27 12:26:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2017/11/25 15:48:49 bsiegert Exp $
 
 .include "../../archivers/libarchive/Makefile.common"
+.include "../../mk/bsd.prefs.mk"
 
 PKGNAME=	${DISTNAME:S/libarchive/bsdtar/}
 COMMENT=	Fast multi-format tape archiver
@@ -11,6 +12,9 @@ COMMENT=	Fast multi-format tape archiver
 CONFIGURE_ARGS+=	--enable-bsdtar=static
 CONFIGURE_ARGS+=	--disable-bsdcpio
 CONFIGURE_ARGS+=	--disable-shared
+.if "${OS_VARIANT}" == "chromeos"
+CONFIGURE_ARGS+=	--disable-acl
+.endif
 
 .include "../../archivers/bzip2/builtin.mk"
 .include "../../archivers/xz/builtin.mk"
