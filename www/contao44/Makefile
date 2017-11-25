@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2017/09/18 12:19:55 taca Exp $
+# $NetBSD: Makefile,v 1.8.4.1 2017/11/25 08:52:07 bsiegert Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
 PKGNAME=	${PHP_PKG_PREFIX}-contao${CT_VER}-${CT_VERSION}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=contao/}
 GITHUB_PROJECT=	managed-edition
 GITHUB_RELEASE=	${CT_VERSION}
+DIST_SUBDIR=	contao448-20171116
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	https://contao.org/
@@ -22,7 +24,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.6:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.6:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.6:../../archivers/php-zlib
 
-CT_VERSION=	4.4.5
+CT_VERSION=	4.4.8
 USE_TOOLS=	bash:run pax
 NO_BUILD=	yes
 
