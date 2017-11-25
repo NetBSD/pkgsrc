@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5037 2017/11/25 12:57:48 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5038 2017/11/25 13:08:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7235,3 +7235,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-zconfig to 3.2.0 [wiz 2017-11-25]
 	Updated www/py-test-httpbin to 0.3.0 [wiz 2017-11-25]
 	Updated devel/waf to 2.0.2 [wiz 2017-11-25]
+	Updated lang/php70 to 7.0.26 [taca 2017-11-25]
