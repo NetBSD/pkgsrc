@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2017/04/25 15:50:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.15.6.1 2017/11/25 08:49:25 bsiegert Exp $
 ${CT_WEBDIR}/.htaccess.default
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/1.1.9/ace.js
@@ -3305,6 +3305,7 @@ ${CT_WEBDIR}/vendor/leafo/scssphp/src/Type.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Util.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Version.php
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/CONTRIBUTING.md
+${CT_WEBDIR}/vendor/matthiasmullie/minify/Dockerfile
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/LICENSE
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/bin/minifycss
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/bin/minifyjs
@@ -3315,6 +3316,7 @@ ${CT_WEBDIR}/vendor/matthiasmullie/minify/data/js/keywords_reserved.txt
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/data/js/operators.txt
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/data/js/operators_after.txt
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/data/js/operators_before.txt
+${CT_WEBDIR}/vendor/matthiasmullie/minify/docker-compose.yml
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/src/CSS.php
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/src/Exception.php
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/src/Exceptions/BasicException.php
@@ -3649,7 +3651,7 @@ ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_confi
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/tecnickcom/tcpdf/CHANGELOG.TXT
 ${CT_WEBDIR}/vendor/tecnickcom/tcpdf/LICENSE.TXT
-${CT_WEBDIR}/vendor/tecnickcom/tcpdf/README.TXT
+${CT_WEBDIR}/vendor/tecnickcom/tcpdf/README.md
 ${CT_WEBDIR}/vendor/tecnickcom/tcpdf/composer.json
 ${CT_WEBDIR}/vendor/tecnickcom/tcpdf/config/tcpdf_config.php
 ${CT_WEBDIR}/vendor/tecnickcom/tcpdf/fonts/courier.php
