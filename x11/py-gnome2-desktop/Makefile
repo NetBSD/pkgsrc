@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2017/11/24 22:15:59 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2017/11/25 08:58:56 wiz Exp $
 
 DISTNAME=	gnome-python-desktop-2.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python/2/}
@@ -17,7 +17,6 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 
 #DEPENDS+=	bug-buddy>=2.16:../../net/bug-buddy
-DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 PKGCONFIG_OVERRIDE+=	gnome-python-desktop-2.0.pc.in
 
@@ -36,6 +35,7 @@ PYTHON_VERSIONS_ACCEPTED=	${PYTHON_VERSION_DEFAULT:M27}
 .include "../../lang/python/extension.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
+.include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../multimedia/gnome-media/buildlink3.mk"
 .include "../../multimedia/totem-pl-parser/buildlink3.mk"
 # works, but should better be in its own pkg to limit dependencies
