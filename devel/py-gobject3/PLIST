@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/10/25 11:27:09 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/11/25 23:54:00 wiz Exp $
 ${PYSITELIB}/gi/__init__.py
 ${PYSITELIB}/gi/__init__.pyc
 ${PYSITELIB}/gi/__init__.pyo
@@ -10,9 +10,6 @@ ${PYSITELIB}/gi/_error.pyc
 ${PYSITELIB}/gi/_error.pyo
 ${PYSITELIB}/gi/_gi.la
 ${PYSITELIB}/gi/_gi_cairo.la
-${PYSITELIB}/gi/_gobject/__init__.py
-${PYSITELIB}/gi/_gobject/__init__.pyc
-${PYSITELIB}/gi/_gobject/__init__.pyo
 ${PYSITELIB}/gi/_option.py
 ${PYSITELIB}/gi/_option.pyc
 ${PYSITELIB}/gi/_option.pyo
@@ -67,7 +64,7 @@ ${PYSITELIB}/gi/repository/__init__.pyo
 ${PYSITELIB}/gi/types.py
 ${PYSITELIB}/gi/types.pyc
 ${PYSITELIB}/gi/types.pyo
-${PYSITELIB}/pygobject-${PKGVERSION}-py${PYVERSSUFFIX}-${PLATFORM}.egg-info
+${PYSITELIB}/pygobject-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info
 ${PYSITELIB}/pygtkcompat/__init__.py
 ${PYSITELIB}/pygtkcompat/__init__.pyc
 ${PYSITELIB}/pygtkcompat/__init__.pyo
