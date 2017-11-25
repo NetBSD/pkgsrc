@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2017/11/24 22:15:58 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2017/11/25 08:58:55 wiz Exp $
 
 # https://bugzilla.gnome.org/show_bug.cgi?id=685094
 # https://bugzilla.gnome.org/show_bug.cgi?id=707196
-DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 TEST_TARGET=	check
 

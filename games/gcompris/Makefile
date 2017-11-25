@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2017/11/24 22:15:58 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2017/11/25 08:58:55 wiz Exp $
 
 DISTNAME=	gcompris-12.11
 PKGREVISION=	28
@@ -12,7 +12,6 @@ COMMENT=	Educational games for children
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	gnuchess-[0-9]*:../../games/gnuchess
-DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 USE_TOOLS+=		gmake intltool gtar pkg-config msgfmt texi2html
 GNU_CONFIGURE=		YES
@@ -50,6 +49,7 @@ post-install:
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/py-sqlite2/buildlink3.mk"
+.include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"

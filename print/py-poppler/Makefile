@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2017/11/24 22:15:59 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2017/11/25 08:58:55 wiz Exp $
 
 DISTNAME=	pypoppler-0.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,14 +11,13 @@ HOMEPAGE=	https://launchpad.net/poppler-python
 COMMENT=	Python bindings for the Poppler PDF rendering library
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
-
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 PY_PATCHPLIST=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
 
+.include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../devel/atk/buildlink3.mk"
 BUILDLINK_API_DEPENDS.poppler-glib+=	poppler-glib>=0.12.1
