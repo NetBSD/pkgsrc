@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5034 2017/11/25 12:10:17 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5035 2017/11/25 12:39:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7232,3 +7232,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed graphics/py-cairo3 successor graphics/py-cairo [wiz 2017-11-24]
 	Updated graphics/py-cairo to 1.15.4nb1 [wiz 2017-11-25]
 	Updated devel/mm-common to 0.9.11 [wiz 2017-11-25]
+	Updated devel/py-zconfig to 3.2.0 [wiz 2017-11-25]
