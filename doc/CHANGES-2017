@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5041 2017/11/25 18:34:38 leot Exp $
+$NetBSD: CHANGES-2017,v 1.5042 2017/11/25 23:54:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7239,3 +7239,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/php71 to 7.1.12 [taca 2017-11-25]
 	Updated www/moodle to 3.4 [wen 2017-11-25]
 	Updated net/gallery-dl to 1.0.2 [leot 2017-11-25]
+	Updated devel/py-gobject3 to 3.26.1 [wiz 2017-11-25]
