@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/06/12 00:31:10 dholland Exp $
+# $NetBSD: Makefile,v 1.20 2017/11/26 10:54:19 wiz Exp $
 
 DISTNAME=	uucp-1.07
 PKGREVISION=	7
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=uucp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.airs.com/ian/uucp.html
+HOMEPAGE=	https://www.airs.com/ian/uucp.html
 COMMENT=	Taylor UUCP
 
 USE_TOOLS+=	mkdir:run pwd:run rmdir:run
