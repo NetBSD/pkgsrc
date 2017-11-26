@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2017/11/08 16:06:36 leot Exp $
+@comment $NetBSD: PLIST,v 1.53 2017/11/26 20:57:27 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -611,9 +611,6 @@ ${PYSITELIB}/youtube_dl/extractor/fczenit.pyo
 ${PYSITELIB}/youtube_dl/extractor/filmon.py
 ${PYSITELIB}/youtube_dl/extractor/filmon.pyc
 ${PYSITELIB}/youtube_dl/extractor/filmon.pyo
-${PYSITELIB}/youtube_dl/extractor/firstpost.py
-${PYSITELIB}/youtube_dl/extractor/firstpost.pyc
-${PYSITELIB}/youtube_dl/extractor/firstpost.pyo
 ${PYSITELIB}/youtube_dl/extractor/firsttv.py
 ${PYSITELIB}/youtube_dl/extractor/firsttv.pyc
 ${PYSITELIB}/youtube_dl/extractor/firsttv.pyo
@@ -623,9 +620,6 @@ ${PYSITELIB}/youtube_dl/extractor/fivemin.pyo
 ${PYSITELIB}/youtube_dl/extractor/fivetv.py
 ${PYSITELIB}/youtube_dl/extractor/fivetv.pyc
 ${PYSITELIB}/youtube_dl/extractor/fivetv.pyo
-${PYSITELIB}/youtube_dl/extractor/fktv.py
-${PYSITELIB}/youtube_dl/extractor/fktv.pyc
-${PYSITELIB}/youtube_dl/extractor/fktv.pyo
 ${PYSITELIB}/youtube_dl/extractor/flickr.py
 ${PYSITELIB}/youtube_dl/extractor/flickr.pyc
 ${PYSITELIB}/youtube_dl/extractor/flickr.pyo
@@ -698,9 +692,6 @@ ${PYSITELIB}/youtube_dl/extractor/gameinformer.pyo
 ${PYSITELIB}/youtube_dl/extractor/gameone.py
 ${PYSITELIB}/youtube_dl/extractor/gameone.pyc
 ${PYSITELIB}/youtube_dl/extractor/gameone.pyo
-${PYSITELIB}/youtube_dl/extractor/gamersyde.py
-${PYSITELIB}/youtube_dl/extractor/gamersyde.pyc
-${PYSITELIB}/youtube_dl/extractor/gamersyde.pyo
 ${PYSITELIB}/youtube_dl/extractor/gamespot.py
 ${PYSITELIB}/youtube_dl/extractor/gamespot.pyc
 ${PYSITELIB}/youtube_dl/extractor/gamespot.pyo
@@ -1037,6 +1028,9 @@ ${PYSITELIB}/youtube_dl/extractor/mangomolo.pyo
 ${PYSITELIB}/youtube_dl/extractor/manyvids.py
 ${PYSITELIB}/youtube_dl/extractor/manyvids.pyc
 ${PYSITELIB}/youtube_dl/extractor/manyvids.pyo
+${PYSITELIB}/youtube_dl/extractor/massengeschmacktv.py
+${PYSITELIB}/youtube_dl/extractor/massengeschmacktv.pyc
+${PYSITELIB}/youtube_dl/extractor/massengeschmacktv.pyo
 ${PYSITELIB}/youtube_dl/extractor/matchtv.py
 ${PYSITELIB}/youtube_dl/extractor/matchtv.pyc
 ${PYSITELIB}/youtube_dl/extractor/matchtv.pyo
@@ -1355,6 +1349,9 @@ ${PYSITELIB}/youtube_dl/extractor/pearvideo.pyo
 ${PYSITELIB}/youtube_dl/extractor/people.py
 ${PYSITELIB}/youtube_dl/extractor/people.pyc
 ${PYSITELIB}/youtube_dl/extractor/people.pyo
+${PYSITELIB}/youtube_dl/extractor/performgroup.py
+${PYSITELIB}/youtube_dl/extractor/performgroup.pyc
+${PYSITELIB}/youtube_dl/extractor/performgroup.pyo
 ${PYSITELIB}/youtube_dl/extractor/periscope.py
 ${PYSITELIB}/youtube_dl/extractor/periscope.pyc
 ${PYSITELIB}/youtube_dl/extractor/periscope.pyo
