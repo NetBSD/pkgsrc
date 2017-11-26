@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5049 2017/11/26 16:38:52 gdt Exp $
+$NetBSD: CHANGES-2017,v 1.5050 2017/11/26 16:49:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7247,3 +7247,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-Test-WWW-Mechanize-PSGI to 0.38 [wiz 2017-11-26]
 	Removed chat/iip [wiz 2017-11-26]
 	Updated geography/gama to 1.20 [gdt 2017-11-26]
+	Updated www/nghttp2 to 1.28.0 [adam 2017-11-26]
+	Updated www/nginx-devel to 1.13.7 [adam 2017-11-26]
