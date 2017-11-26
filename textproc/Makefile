@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.969 2017/11/05 03:54:40 tsutsui Exp $
+# $NetBSD: Makefile,v 1.970 2017/11/26 23:38:17 minskim Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -829,6 +829,7 @@ SUBDIR+=	qore-yaml-module
 SUBDIR+=	qprint
 SUBDIR+=	qsubst
 SUBDIR+=	queequeg
+SUBDIR+=	rapidjson
 SUBDIR+=	raptor
 SUBDIR+=	raptor2
 SUBDIR+=	rarian
