@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/11/24 22:15:58 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/11/26 09:31:48 wiz Exp $
 
 DISTNAME=	playitslowly-1.5.1
 CATEGORIES=	audio
@@ -13,7 +13,6 @@ DEPENDS+=	${PYPKGPREFIX}-gstreamer1-[0-9]*:../../multimedia/py-gstreamer1
 DEPENDS+=	gst-plugins1-soundtouch-[0-9]*:../../audio/gst-plugins1-soundtouch
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
-PYTHON_VERSIONED_DEPENDENCIES=	gobject
 REPLACE_PYTHON+=	playitslowly/app.py
 
 SUBST_CLASSES+=		exec
@@ -27,6 +26,5 @@ USE_LANGUAGES=	# none
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
