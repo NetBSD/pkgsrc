@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2015/03/15 15:10:01 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2017/11/26 10:55:14 wiz Exp $
 
 DISTNAME=	xfsprogs-2.7.3.src
 PKGNAME=	${DISTNAME:S/.src//}
 PKGREVISION=	3
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://oss.sgi.com/projects/xfs/cmd_tars/
+#MASTER_SITES=	ftp://oss.sgi.com/projects/xfs/cmd_tars/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://oss.sgi.com/projects/xfs/
+#HOMEPAGE=	http://oss.sgi.com/projects/xfs/
 COMMENT=	XFS filesystem manipulation utilities
 
 GNU_CONFIGURE=	yes
