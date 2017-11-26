@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/11/26 17:10:58 adam Exp $
+
+SHA1 (pytest-sugar-0.9.0.tar.gz) = 0d69a8315cb458695810ce98e83949b960f72db3
+RMD160 (pytest-sugar-0.9.0.tar.gz) = da6d6dcfe8ea73de232aa9eea0ce9cee9671b8c4
+SHA512 (pytest-sugar-0.9.0.tar.gz) = 04aaa1590264ce0629a3079edfa3eb5f370f2cdcc4f78a4ecd018e81ff465697cc7e84908bb8abf950c20966335c17325731357730c9955ab6dcbb213b6af358
+Size (pytest-sugar-0.9.0.tar.gz) = 11741 bytes
