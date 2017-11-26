@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/07/04 16:18:34 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.29 2017/11/26 10:44:42 wiz Exp $
 
 DISTNAME=	VLGothic-20141206
 PKGNAME=	${DISTNAME:tl:S/-/-ttf-/}
@@ -8,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_OSDN:=vlgothic/62375/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	yamajun@ofug.net
-HOMEPAGE=	http://vlgothic.dicey.org/
+#HOMEPAGE=	http://vlgothic.dicey.org/
 COMMENT=	Free Japanese TrueType fonts named 'VLGothic'
 LICENSE=	modified-bsd AND mplusfont
 
