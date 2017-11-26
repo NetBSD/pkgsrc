@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2017/11/23 17:19:47 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.36 2017/11/26 10:38:41 wiz Exp $
 
 DISTNAME=	bsl-0.5.0
 PKGREVISION=	31
@@ -7,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=buzztard/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://buzztard.sourceforge.net/
+HOMEPAGE=	http://buzztrax.org/
 COMMENT=	Buzz song loader
 LICENSE=	gnu-gpl-v2
 
