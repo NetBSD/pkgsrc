@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2017/09/13 10:35:58 leot Exp $
+# $NetBSD: Makefile,v 1.61 2017/11/26 13:57:08 leot Exp $
 
 DISTNAME=	mpv-0.27.0
 CATEGORIES=	multimedia
@@ -18,6 +18,8 @@ NOT_PAX_MPROTECT_SAFE+=	bin/mpv
 BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 # ${WRKSRC}/bootstrap.py mentions needed version
 BUILD_DEPENDS+=	waf>=1.8.12:../../devel/waf
+
+WAF_CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
