@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2016/03/14 11:48:10 tnn Exp $
-#
+# $NetBSD: Makefile,v 1.11 2017/11/26 10:38:20 wiz Exp $
 
 DISTNAME=	bml-0.8.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=buzztard/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://buzztard.sourceforge.net/
+HOMEPAGE=	http://buzztrax.org/
 COMMENT=	Buzz machine loader
 LICENSE=	gnu-lgpl-v2.1
 
