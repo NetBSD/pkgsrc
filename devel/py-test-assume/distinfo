@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/11/26 17:10:46 adam Exp $
+
+SHA1 (pytest-assume-1.2.zip) = 4ff5eb4a1876cb26a62b196767d7e7eabbf0004a
+RMD160 (pytest-assume-1.2.zip) = fcad56ef9cd244b1bee34615eb84a86b8670f5cf
+SHA512 (pytest-assume-1.2.zip) = fafbb094bac11d332a03bdbf55925e9764f6608545988742ec456b7c0f735adde0705bd02f9b9cf1fbd0e985c59d40c56d4f4e520c84396c08b9b58ab50c0741
+Size (pytest-assume-1.2.zip) = 4709 bytes
