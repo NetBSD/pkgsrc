@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2016/03/05 11:29:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2017/11/26 10:50:00 wiz Exp $
 
 DISTNAME=	litmus-0.13
 PKGREVISION=	2
 CATEGORIES=	www
-MASTER_SITES=	http://www.webdav.org/neon/litmus/
+#MASTER_SITES=	http://www.webdav.org/neon/litmus/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.webdav.org/neon/litmus/
+#HOMEPAGE=	http://www.webdav.org/neon/litmus/
 COMMENT=	WebDAV server protocol compliance test suite
 LICENSE=	gnu-gpl-v2
 
