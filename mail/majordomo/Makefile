@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2017/11/06 13:27:55 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2017/11/26 09:11:03 spz Exp $
 
 DISTNAME=		majordomo-1.94.5
-PKGREVISION=		21
+PKGREVISION=		22
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.sgi.com/other/majordomo/1.94.5/
 MASTER_SITES+=		ftp://ftp-europe.sgi.com/other/majordomo/1.94.5/
