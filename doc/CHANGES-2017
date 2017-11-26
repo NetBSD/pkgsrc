@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5046 2017/11/26 10:03:04 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5047 2017/11/26 10:06:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7244,3 +7244,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated converters/p5-Unicode-Collate to 1.25 [wiz 2017-11-26]
 	Updated devel/p5-ExtUtils-CBuilder to 0.28.02.30 [wiz 2017-11-26]
 	Updated devel/p5-Params-ValidationCompiler to 0.25 [wiz 2017-11-26]
+	Updated www/p5-Test-WWW-Mechanize-PSGI to 0.38 [wiz 2017-11-26]
