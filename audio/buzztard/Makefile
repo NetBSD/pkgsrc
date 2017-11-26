@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2017/11/23 17:19:47 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.41 2017/11/26 10:38:57 wiz Exp $
 
 DISTNAME=	buzztard-0.5.0
 PKGREVISION=	36
@@ -7,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=buzztard/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://buzztard.sourceforge.net/
+HOMEPAGE=	http://buzztrax.org/
 COMMENT=	Modular, free, open source music studio
 LICENSE=	gnu-gpl-v3 AND gnu-fdl-v1.1
 
