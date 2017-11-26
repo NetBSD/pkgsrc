@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2571 2017/11/24 13:51:16 wiz Exp $
+# $NetBSD: Makefile,v 1.2572 2017/11/26 17:12:46 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -1908,6 +1908,7 @@ SUBDIR+=	py-editorconfig-core
 SUBDIR+=	py-entrypoints
 SUBDIR+=	py-enum
 SUBDIR+=	py-enum34
+SUBDIR+=	py-exam
 SUBDIR+=	py-execnet
 SUBDIR+=	py-expect
 SUBDIR+=	py-expressions
@@ -2122,6 +2123,7 @@ SUBDIR+=	py-sysctl
 SUBDIR+=	py-tabular
 SUBDIR+=	py-termcolor
 SUBDIR+=	py-test
+SUBDIR+=	py-test-assume
 SUBDIR+=	py-test-cache
 SUBDIR+=	py-test-cov
 SUBDIR+=	py-test-flake8
@@ -2129,8 +2131,10 @@ SUBDIR+=	py-test-forked
 SUBDIR+=	py-test-isort
 SUBDIR+=	py-test-localserver
 SUBDIR+=	py-test-mock
+SUBDIR+=	py-test-pythonpath
 SUBDIR+=	py-test-relaxed
 SUBDIR+=	py-test-runner
+SUBDIR+=	py-test-sugar
 SUBDIR+=	py-test-timeout
 SUBDIR+=	py-test-utils
 SUBDIR+=	py-test-xdist
