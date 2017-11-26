@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5043 2017/11/26 09:59:32 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5044 2017/11/26 10:01:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7241,3 +7241,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/gallery-dl to 1.0.2 [leot 2017-11-25]
 	Updated devel/py-gobject3 to 3.26.1 [wiz 2017-11-25]
 	Updated audio/p5-Audio-Scan to 0.99 [wiz 2017-11-26]
+	Updated converters/p5-Unicode-Collate to 1.25 [wiz 2017-11-26]
