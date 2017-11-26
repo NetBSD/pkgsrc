@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1286 2017/11/11 21:32:29 tnn Exp $
+# $NetBSD: Makefile,v 1.1287 2017/11/26 17:40:05 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -728,6 +728,7 @@ SUBDIR+=	py-python-digest
 SUBDIR+=	py-python-mimeparse
 SUBDIR+=	py-python3-digest
 SUBDIR+=	py-pywebdav
+SUBDIR+=	py-raven
 SUBDIR+=	py-recaptcha
 SUBDIR+=	py-robobrowser
 SUBDIR+=	py-rss2gen
