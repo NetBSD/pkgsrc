@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2017/04/19 13:51:06 wiz Exp $
+$NetBSD: distinfo,v 1.9 2017/11/26 10:02:56 wiz Exp $
 
-SHA1 (Params-ValidationCompiler-0.24.tar.gz) = b65c93673fc8ecde87e5eae358f5aaec8e86ed6e
-RMD160 (Params-ValidationCompiler-0.24.tar.gz) = 5370e02073f64161786d5c1cde11c63ac56c5d47
-SHA512 (Params-ValidationCompiler-0.24.tar.gz) = ea54587db2729991fd7f9d8c9f420449e8d0218473f465783a69d4b118cdfe9e7d7ff045d57ba6d989a79950fb61ad81caac781b3bbaeb6325e061e664cc1665
-Size (Params-ValidationCompiler-0.24.tar.gz) = 43439 bytes
+SHA1 (Params-ValidationCompiler-0.25.tar.gz) = 1a9e92d86b11c597979c67b208a810012e283daf
+RMD160 (Params-ValidationCompiler-0.25.tar.gz) = 63317869a2cbae8f8a206ccaa3232ae2d03afda2
+SHA512 (Params-ValidationCompiler-0.25.tar.gz) = a305d63a53f4e5b350a508cf001922ea1043d27068e9f46a3528e01da8d1973e671b980e3fadd22cf6b601cdc683f425dc8450fb653dedad2e84da61d0cc4ff2
+Size (Params-ValidationCompiler-0.25.tar.gz) = 44714 bytes
