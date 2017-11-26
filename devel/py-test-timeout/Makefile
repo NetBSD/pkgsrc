@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/11/06 13:35:03 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/11/26 16:56:06 adam Exp $
 
 DISTNAME=	pytest-timeout-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -14,11 +14,5 @@ DEPENDS+=	${PYPKGPREFIX}-test>=2.8.0:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-#post-install:
-#	cd ${DESTDIR}${PREFIX}/bin && \
-#		${MV} py.test py.test-${PYVERSSUFFIX} && \
-#		${MV} pytest pytest-${PYVERSSUFFIX} || ${TRUE}
-
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
