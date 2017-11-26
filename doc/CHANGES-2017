@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5055 2017/11/26 20:58:00 leot Exp $
+$NetBSD: CHANGES-2017,v 1.5056 2017/11/26 23:38:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7259,3 +7259,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-raven version 6.3.0 [adam 2017-11-26]
 	Updated mail/procmail to 3.22nb5 [snj 2017-11-26]
 	Updated net/youtube-dl to 20171126 [leot 2017-11-26]
+	Added textproc/rapidjson version 1.1.0 [minskim 2017-11-26]
