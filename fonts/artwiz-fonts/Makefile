@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/07/04 16:18:30 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.19 2017/11/26 10:43:48 wiz Exp $
 
 DISTNAME=	artwiz-aleczapka-1.3
 PKGNAME=	${DISTNAME:S/aleczapka/fonts/}
@@ -9,7 +8,7 @@ MASTER_SITES=	http://fluxbox.org/artwiz-aleczapka/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.vastwaters.com/
+HOMEPAGE=	http://artwizaleczapka.sourceforge.net/
 COMMENT=	Set of free fonts for X11 desktops
 
 WRKSRC=		${WRKDIR}/artwiz-aleczapka
