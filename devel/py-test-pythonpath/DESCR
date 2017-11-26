@@ -1,0 +1,2 @@
+This is a py.test plugin for adding to the PYTHONPATH from the pytests.ini file
+before tests run.
