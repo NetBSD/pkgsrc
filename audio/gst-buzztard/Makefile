@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/15 10:03:37 obache Exp $
-#
+# $NetBSD: Makefile,v 1.10 2017/11/26 10:39:20 wiz Exp $
 
 DISTNAME=	gst-buzztard-0.5.0
 PKGREVISION=	6
@@ -7,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=buzztard/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://buzztard.sourceforge.net/
+HOMEPAGE=	http://buzztrax.org/
 COMMENT=	GStreamer plugin for buzztard
 LICENSE=	gnu-gpl-v2
 
