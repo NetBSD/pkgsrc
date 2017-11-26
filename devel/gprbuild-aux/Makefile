@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/11/26 03:37:25 marino Exp $
-#
+# $NetBSD: Makefile,v 1.9 2017/11/26 10:45:28 wiz Exp $
 
 DISTNAME=	gprbuild-aux-${SNAPSHOT}
 CATEGORIES=	devel
@@ -7,7 +6,7 @@ MASTER_SITES=	https://codeload.github.com/AdaCore/gprbuild/tar.gz/${TAGNAME}?dum
 DISTFILES=	gprbuild-${TAGNAME}.tar.gz
 
 MAINTAINER=	draco@marino.st
-HOMEPAGE=	http://www.adacore.com/home/products/gnatpro/toolsuite/gprbuild/
+HOMEPAGE=	https://github.com/AdaCore/gprbuild
 COMMENT=	Adacore multi-language software build tool
 LICENSE=	gnu-gpl-v3
 
