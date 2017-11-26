@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5051 2017/11/26 17:13:18 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5052 2017/11/26 17:21:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7253,3 +7253,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-test-assume version 1.2 [adam 2017-11-26]
 	Added devel/py-test-sugar version 0.9.0 [adam 2017-11-26]
 	Added devel/py-test-pythonpath version 0.7.1 [adam 2017-11-26]
+	Updated devel/py-test-flake8 to 0.9.1 [adam 2017-11-26]
+	Updated devel/py-test-relaxed to 1.1.0 [adam 2017-11-26]
