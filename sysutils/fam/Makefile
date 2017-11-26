@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.42 2017/01/19 18:52:25 agc Exp $
-#
+# $NetBSD: Makefile,v 1.43 2017/11/26 10:42:46 wiz Exp $
 
 DISTNAME=		fam-2.7.0
 PKGREVISION=		9
 CATEGORIES=		sysutils devel
-MASTER_SITES=		ftp://oss.sgi.com/projects/fam/download/stable/
+#MASTER_SITES=		ftp://oss.sgi.com/projects/fam/download/stable/
 MASTER_SITES+=		${MASTER_SITE_GENTOO:=distfiles/}
 
 CONFLICTS+=		gamin-[0-9]*
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://oss.sgi.com/projects/fam/
+#HOMEPAGE=		http://oss.sgi.com/projects/fam/
 COMMENT=		File Alteration Monitor
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1 # fam and libfam
 
