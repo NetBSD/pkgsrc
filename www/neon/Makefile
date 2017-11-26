@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.70 2016/10/03 12:26:22 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2017/11/26 10:50:17 wiz Exp $
 
 DISTNAME=	neon-0.30.2
 CATEGORIES=	www
-MASTER_SITES=	http://www.webdav.org/neon/
+#MASTER_SITES=	http://www.webdav.org/neon/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.webdav.org/neon/
+#HOMEPAGE=	http://www.webdav.org/neon/
 COMMENT=	HTTP and WebDAV client library
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
