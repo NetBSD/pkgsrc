@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2017/02/12 06:25:12 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.50 2017/11/26 10:45:55 wiz Exp $
 
 DISTNAME=	gps-${GPS_VERSION}
 PKGREVISION=	15
@@ -8,7 +7,7 @@ MASTER_SITES=	http://downloads.dragonlace.net/src/
 DISTFILES=	gps-5.2.1-1-src.tgz
 
 MAINTAINER=	draco@marino.st
-HOMEPAGE=	http://www.adacore.com/home/products/gnatpro/toolsuite/gps/
+HOMEPAGE=	https://github.com/AdaCore/gps
 COMMENT=	GNAT Programming Studio - IDE for Ada and many other languages
 LICENSE=	gnu-gpl-v2
 
