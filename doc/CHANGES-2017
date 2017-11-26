@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5048 2017/11/26 10:48:04 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5049 2017/11/26 16:38:52 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7246,3 +7246,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Params-ValidationCompiler to 0.25 [wiz 2017-11-26]
 	Updated www/p5-Test-WWW-Mechanize-PSGI to 0.38 [wiz 2017-11-26]
 	Removed chat/iip [wiz 2017-11-26]
+	Updated geography/gama to 1.20 [gdt 2017-11-26]
