@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2016/12/30 13:33:44 wiz Exp $
+# $NetBSD: Makefile.common,v 1.16 2017/11/26 10:53:41 wiz Exp $
 #
 # used by databases/sqsh/Makefile
 # used by databases/sqsh-motif/Makefile
@@ -17,7 +17,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sqsh/}
 VERSION=	2.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.sqsh.org/
+HOMEPAGE=	https://sourceforge.net/projects/sqsh/
 LICENSE=	gnu-gpl-v2
 
 PATCHDIR=	${.CURDIR}/../../databases/sqsh/patches
