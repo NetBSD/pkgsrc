@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5063 2017/11/27 23:33:00 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.5064 2017/11/27 23:37:51 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7268,3 +7268,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/grafana to 4.6.2 [tnn 2017-11-27]
 	Added security/2fa version 20171122 [bsiegert 2017-11-27]
 	Added devel/py-lru-dict to 1.1.6 [minskim 2017-11-27]
+	Updated mail/thunderbird to 52.5.0 [ryoon 2017-11-27]
