@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5066 2017/11/27 23:49:43 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.5067 2017/11/27 23:54:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7271,3 +7271,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/thunderbird to 52.5.0 [ryoon 2017-11-27]
 	Updated mail/thunderbird-l10n to 52.5.0 [ryoon 2017-11-27]
 	Updated devel/nss to 3.34.1 [ryoon 2017-11-27]
+	Updated net/corebird to 1.7.3 [ryoon 2017-11-27]
