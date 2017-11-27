@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.14 2017/11/11 01:51:30 ryoon Exp $
+$NetBSD: distinfo,v 1.15 2017/11/27 23:53:54 ryoon Exp $
 
-SHA1 (corebird-1.7.2.tar.xz) = 5c645349d0c20b4693c5356cb9bf0ea5d5fec7b7
-RMD160 (corebird-1.7.2.tar.xz) = 5a029b60f4d62aeb5c893867cc3c80070e32f1bd
-SHA512 (corebird-1.7.2.tar.xz) = f19ff6cce77ec6301b3195f212803b2109955eb7b70625b830e8ac2f5cff824665734a99059bc592839b5653c374d360c6852e2a427fb2b3f246e593a648dfba
-Size (corebird-1.7.2.tar.xz) = 704696 bytes
+SHA1 (corebird-1.7.3.tar.xz) = f4024f31c1643a085f0ac131af9054f36f9faaff
+RMD160 (corebird-1.7.3.tar.xz) = 0968f745ff58d97a1a493677557da6280c0fe6dc
+SHA512 (corebird-1.7.3.tar.xz) = 1b963742acdc327231e7885ec08a9a6ee551d23436360e5282b07754489dc42a8d1779824f2ee9d6f1448a088d978404db8e0ea05f7c66d8f08301113eecdb2b
+Size (corebird-1.7.3.tar.xz) = 705080 bytes
 SHA1 (patch-data_Makefile.am) = cebf21049f03cdcca06b476040125edcdc86d675
 SHA1 (patch-data_Makefile.in) = 8ed5776f7b694a7cf574f5e8097811eb7cd060b4
 SHA1 (patch-po_Makevars) = 7d1f0dcef0caf53d6fa1187306d6264c158b8210
