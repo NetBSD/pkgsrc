@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2017/10/18 07:22:53 adam Exp $
+# $NetBSD: Makefile,v 1.20 2017/11/27 13:05:44 adam Exp $
 
-DISTNAME=	keyring-10.4.0
+DISTNAME=	keyring-10.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/keyring/}
@@ -11,6 +11,8 @@ COMMENT=	Store and access your passwords safely
 LICENSE=	python-software-foundation
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=2.8:../../devel/py-test
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-sugar-[0-9]*:../../devel/py-test-sugar
 
 USE_LANGUAGES=	# none
 
