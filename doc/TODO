@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17917 2017/11/26 09:57:17 wiz Exp $
+$NetBSD: TODO,v 1.17918 2017/11/27 15:19:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -559,7 +559,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o drivel-3.0.5
 	o dtach-0.9
 	o duplicity-0.7.11
-	o dvdstyler-3.0.3
+	o dvdstyler-3.0.4
 	o eagle-8.1.0
 	o easymenu-0.7.2p1
 	o eboard-1.1.1
@@ -745,6 +745,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-pw-mgr-2.0
 	o gnucap-20130423
 	o gnucobol-2.2
+	o gnumeric112-1.12.36
 	o gnustep-back-0.24.1
 	o gnustep-base-1.24.8
 	o gnustep-examples-1.4.0
@@ -1071,6 +1072,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
 	o munin-server-1.4.6
+	o mupdf-1.12.0
 	o muse-0.9.2
 	o musicpd-0.20.12
 	o myodbc-5.3.4
@@ -1506,7 +1508,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o whowatch-1.8.5
 	o windowlab-1.40
 	o wine-2.0.3
-	o wine-devel-2.21
+	o wine-devel-2.22
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wmx-8
