@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2017/11/15 07:50:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2017/11/27 10:47:27 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -48,6 +48,9 @@ ${PYSITELIB}/ldap/controls/simple.pyo
 ${PYSITELIB}/ldap/controls/sss.py
 ${PYSITELIB}/ldap/controls/sss.pyc
 ${PYSITELIB}/ldap/controls/sss.pyo
+${PYSITELIB}/ldap/controls/vlv.py
+${PYSITELIB}/ldap/controls/vlv.pyc
+${PYSITELIB}/ldap/controls/vlv.pyo
 ${PYSITELIB}/ldap/dn.py
 ${PYSITELIB}/ldap/dn.pyc
 ${PYSITELIB}/ldap/dn.pyo
@@ -63,9 +66,15 @@ ${PYSITELIB}/ldap/filter.pyo
 ${PYSITELIB}/ldap/functions.py
 ${PYSITELIB}/ldap/functions.pyc
 ${PYSITELIB}/ldap/functions.pyo
-${PYSITELIB}/ldap/ldapobject.py
-${PYSITELIB}/ldap/ldapobject.pyc
-${PYSITELIB}/ldap/ldapobject.pyo
+${PYSITELIB}/ldap/ldapobject/__init__.py
+${PYSITELIB}/ldap/ldapobject/__init__.pyc
+${PYSITELIB}/ldap/ldapobject/__init__.pyo
+${PYSITELIB}/ldap/ldapobject/reconnect.py
+${PYSITELIB}/ldap/ldapobject/reconnect.pyc
+${PYSITELIB}/ldap/ldapobject/reconnect.pyo
+${PYSITELIB}/ldap/ldapobject/simple.py
+${PYSITELIB}/ldap/ldapobject/simple.pyc
+${PYSITELIB}/ldap/ldapobject/simple.pyo
 ${PYSITELIB}/ldap/logger.py
 ${PYSITELIB}/ldap/logger.pyc
 ${PYSITELIB}/ldap/logger.pyo
