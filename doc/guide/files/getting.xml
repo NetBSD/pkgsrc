@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.34 2017/01/07 01:24:05 sevan Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.35 2017/11/27 11:51:47 leot Exp $ -->
 
 <chapter id="getting">
 <title>Where to get pkgsrc and how to keep it up-to-date</title>
@@ -21,7 +21,7 @@ and dashes.</para>
 	quarterly basis from the current branch and only gets modified
 	for security updates. The names of the stable branches are built
 	from the year and the quarter, for example
-	<literal>2016Q4</literal>.</para>
+	<literal>&pkgsrc.version.latest;</literal>.</para>
 
 	<para>The second step is to decide <emphasis>how</emphasis> you
 	want to download pkgsrc. You can get it as a tar file or via CVS.
@@ -55,18 +55,14 @@ and dashes.</para>
 
 	<para>You can fetch the same files using FTP.</para>
 
-	<para>The tar file for the stable branch 2016Q4 is in the
-	directory <filename>pkgsrc-2016Q4</filename> and is also called <ulink
-	url="ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2016Q4/pkgsrc.tar.gz"><filename>pkgsrc.tar.gz</filename></ulink>.</para>
+	<para>The tar file for the stable branch &pkgsrc.version.latest; is in the
+	directory <filename>&pkgsrc.branch.latest;</filename> and is also called <ulink
+	url="&url.pkgsrc.tarball.latest;"><filename>&filename.pkgsrc.tarball.latest;</filename></ulink>.</para>
 
-	<para>To download a pkgsrc stable tarball, run:</para>
+	<para>To download the latest pkgsrc stable tarball, run:</para>
 
 <screen>
-&uprompt; <userinput>ftp ftp://ftp.NetBSD.org/pub/pkgsrc/<replaceable>pkgsrc-20xxQy</replaceable>/pkgsrc.tar.gz</userinput></screen>
-
-	<para>Where <replaceable>pkgsrc-20xxQy</replaceable> is the
-	stable branch to be downloaded, for example, 
-	<quote>pkgsrc-2016Q4</quote>.</para>
+&uprompt; <userinput>ftp ftp://ftp.NetBSD.org/pub/pkgsrc/&pkgsrc.branch.latest;/&filename.pkgsrc.tarball.latest;</userinput></screen>
 
 	<para>If you prefer, you can also fetch it using "wget", "curl",
 	or your web browser.</para>
@@ -94,11 +90,8 @@ and dashes.</para>
 
 <para>To fetch a specific pkgsrc stable branch, run:</para>
 
-<screen>&uprompt; <userinput>cd /usr &amp;&amp; cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r <replaceable>pkgsrc-20xxQy</replaceable> -P pkgsrc</userinput>
+<screen>&uprompt; <userinput>cd /usr &amp;&amp; cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r &pkgsrc.branch.latest; -P pkgsrc</userinput>
 </screen>
-
-	<para>Where <replaceable>pkgsrc-20xxQy</replaceable> is the stable 
-	branch to be checked out, for example, <quote>pkgsrc-2016Q4</quote></para>
 
 	<para>This will create the directory <filename>pkgsrc/</filename> 
 	in your <filename>/usr/</filename> directory and all the package source 
@@ -201,7 +194,7 @@ release -d
 	by adding the option <quote>-A</quote> after the
 	<quote>update</quote> keyword. To switch from the current branch
 	back to the stable branch, add the
-	<quote>-rpkgsrc-2016Q4</quote> option.</para>
+	<quote>-r&pkgsrc.branch.latest;</quote> option.</para>
 
 </sect3>
 <sect3 id="uptodate-cvs-changes">
