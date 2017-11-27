@@ -1,0 +1,18 @@
+2fa is a two-factor authentication agent.
+
+"2fa -add name" adds a new key to the 2fa keychain with the given name. It
+prints a prompt to standard error and reads a two-factor key from standard
+input. Two-factor keys are short case-insensitive strings of letters A-Z and
+digits 2-7.
+
+"2fa name" prints a two-factor authentication code from the key with the
+given name.
+
+With no arguments, "2fa" prints two-factor authentication codes from all
+known time-based keys.
+
+The default time-based authentication codes are derived from a hash of the
+key and the current time, so it is important that the system clock have at
+least one-minute accuracy.
+
+The keychain is stored unencrypted in the text file "$HOME/.2fa".

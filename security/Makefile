@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.657 2017/11/15 08:58:35 jdolecek Exp $
+# $NetBSD: Makefile,v 1.658 2017/11/27 18:47:09 bsiegert Exp $
 #
 
 COMMENT=	Security tools
 
+SUBDIR+=	2fa
 SUBDIR+=	Bastille
 SUBDIR+=	CSP
 SUBDIR+=	CoolKey
