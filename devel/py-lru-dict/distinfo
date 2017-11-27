@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/11/27 23:28:37 minskim Exp $
+
+SHA1 (lru-dict-1.1.6.tar.gz) = c3f5743617f097132b231b0ba15725ab63a788da
+RMD160 (lru-dict-1.1.6.tar.gz) = c970d786bf6fc51728bd1a1d6599b3f57aa31663
+SHA512 (lru-dict-1.1.6.tar.gz) = 3e9ef734ba1dbf4914e1e133063e170038f89884f5ebfe2fd80b949f866e92d16e76b4dc833f73330438dc8b6c48ba4c285a0d6eda65d21d42da3887fd344395
+Size (lru-dict-1.1.6.tar.gz) = 9434 bytes
