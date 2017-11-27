@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5061 2017/11/27 18:52:47 bsiegert Exp $
+$NetBSD: CHANGES-2017,v 1.5062 2017/11/27 23:29:54 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7267,3 +7267,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-keyring to 10.5.0 [adam 2017-11-27]
 	Updated www/grafana to 4.6.2 [tnn 2017-11-27]
 	Added security/2fa version 20171122 [bsiegert 2017-11-27]
+	Updated devel/py-lru-dict to 1.1.6 [minskim 2017-11-27]
