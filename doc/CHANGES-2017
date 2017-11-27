@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5057 2017/11/27 08:08:18 maya Exp $
+$NetBSD: CHANGES-2017,v 1.5058 2017/11/27 10:47:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7261,3 +7261,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/youtube-dl to 20171126 [leot 2017-11-26]
 	Added textproc/rapidjson version 1.1.0 [minskim 2017-11-26]
 	Added x11/mrxvt version 0.5.4nb11 [maya 2017-11-27]
+	Updated devel/py-uvloop to 0.9.0 [adam 2017-11-27]
+	Updated databases/py-ldap to 2.5.2 [adam 2017-11-27]
