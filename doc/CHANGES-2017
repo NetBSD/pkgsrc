@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5064 2017/11/27 23:37:51 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.5065 2017/11/27 23:39:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7269,3 +7269,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/2fa version 20171122 [bsiegert 2017-11-27]
 	Added devel/py-lru-dict to 1.1.6 [minskim 2017-11-27]
 	Updated mail/thunderbird to 52.5.0 [ryoon 2017-11-27]
+	Updated mail/thunderbird-l10n to 52.5.0 [ryoon 2017-11-27]
