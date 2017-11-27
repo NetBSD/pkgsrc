@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.808 2017/09/26 10:27:14 wiz Exp $
+# $NetBSD: Makefile,v 1.809 2017/11/27 08:07:31 maya Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -313,6 +313,7 @@ SUBDIR+=	modular-xorg-xquartz
 SUBDIR+=	motif
 SUBDIR+=	mowitz
 SUBDIR+=	mozo
+SUBDIR+=	mrxvt
 SUBDIR+=	mxterm
 SUBDIR+=	neXtaw
 SUBDIR+=	numlockx
