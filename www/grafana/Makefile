@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2017/10/13 12:28:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2017/11/27 16:04:54 tnn Exp $
 
 GITHUB_PROJECT=	grafana
-DISTNAME=	grafana-4.4.1
+DISTNAME=	grafana-4.6.2
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	https://grafana.com/
