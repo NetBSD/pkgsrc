@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/06/24 06:47:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/11/27 10:44:55 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -17,10 +17,8 @@ ${PYSITELIB}/uvloop/_testbase.pyc
 ${PYSITELIB}/uvloop/_testbase.pyo
 ${PYSITELIB}/uvloop/cbhandles.pxd
 ${PYSITELIB}/uvloop/cbhandles.pyx
-${PYSITELIB}/uvloop/chain_futs.pyx
 ${PYSITELIB}/uvloop/dns.pyx
 ${PYSITELIB}/uvloop/errors.pyx
-${PYSITELIB}/uvloop/future.pyx
 ${PYSITELIB}/uvloop/handles/async_.pxd
 ${PYSITELIB}/uvloop/handles/async_.pyx
 ${PYSITELIB}/uvloop/handles/basetransport.pxd
@@ -62,6 +60,7 @@ ${PYSITELIB}/uvloop/loop.c
 ${PYSITELIB}/uvloop/loop.pxd
 ${PYSITELIB}/uvloop/loop.pyx
 ${PYSITELIB}/uvloop/loop.so
+${PYSITELIB}/uvloop/pseudosock.pyx
 ${PYSITELIB}/uvloop/request.pxd
 ${PYSITELIB}/uvloop/request.pyx
 ${PYSITELIB}/uvloop/server.pxd
