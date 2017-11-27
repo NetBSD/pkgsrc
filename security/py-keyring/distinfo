@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2017/10/18 07:22:53 adam Exp $
+$NetBSD: distinfo,v 1.10 2017/11/27 13:05:44 adam Exp $
 
-SHA1 (keyring-10.4.0.tar.gz) = 485136b7b239c69b75c26524de20cbce5a61e759
-RMD160 (keyring-10.4.0.tar.gz) = 2fcd27c2cb600cbf8ec551517af842113de350e8
-SHA512 (keyring-10.4.0.tar.gz) = 34b1503588fedd480b2031d5557349bc6cd70108e68205a38338e091d2865df512f9a9aa3525fb11fbbb9bc06b2cfa759685495ca94b4044ec034070aa3dc0bb
-Size (keyring-10.4.0.tar.gz) = 39632 bytes
+SHA1 (keyring-10.5.0.tar.gz) = e352dc4a0ef9ea16c99e777c505f50a5dd582e00
+RMD160 (keyring-10.5.0.tar.gz) = 530e608095737f8a6dc7a254df8cc79a45be61fc
+SHA512 (keyring-10.5.0.tar.gz) = da1cd064ae896458b1bfc6906a3d40abaa45b6e69f5760fb87d7f7176eab2c909515bbf6e3f01ecd821e340fd1f967ef2aed02053d4211e87533ea4fd6b4e08c
+Size (keyring-10.5.0.tar.gz) = 40664 bytes
