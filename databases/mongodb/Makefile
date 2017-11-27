@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2017/08/24 20:03:08 adam Exp $
+# $NetBSD: Makefile,v 1.24 2017/11/27 14:06:16 gdt Exp $
 
 DISTNAME=	mongodb-src-r3.4.4
 PKGNAME=	${DISTNAME:S/src-r//:S/-rc/rc/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
@@ -89,7 +89,7 @@ MONGODB_MAN_FILES=	bsondump.1 mongo.1 mongod.1 mongodump.1 mongoexport.1	\
 			mongofiles.1 mongoimport.1 mongooplog.1 mongoperf.1	\
 			mongorestore.1 mongos.1 mongosniff.1 mongostat.1 mongotop.1
 
-NOT_PAX_MPROTECT_SAFE+=	bin/mongo
+NOT_PAX_MPROTECT_SAFE+=	bin/mongo bin/mongodb
 
 RCD_SCRIPTS=		mongodb
 
