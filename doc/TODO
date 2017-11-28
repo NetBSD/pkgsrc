@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17925 2017/11/28 13:47:39 wiz Exp $
+$NetBSD: TODO,v 1.17926 2017/11/28 13:49:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -930,7 +930,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ktorrent3-3.3.4
 	o labelnation-1.218
 	o latex2html-2015
-	o latexmk-454
 	o lbdb-0.40
 	o lcc-4.2
 	o ldapsdk-6.0.7
