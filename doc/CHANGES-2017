@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5072 2017/11/28 08:42:52 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5073 2017/11/28 09:08:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7279,3 +7279,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/oracle-jdk8 to 8.0.152 [ryoon 2017-11-28]
 	Updated devel/py-py to 1.5.2 [adam 2017-11-28]
 	Updated devel/py-pluggy to 0.6.0 [adam 2017-11-28]
+	Updated www/py-WebOb to 1.7.4 [adam 2017-11-28]
+	Updated fonts/py-fonttools to 3.20.1 [adam 2017-11-28]
+	Updated textproc/py-markdown2 to 2.3.5 [adam 2017-11-28]
+	Updated devel/py-test to 3.3.0 [adam 2017-11-28]
+	Updated math/py-rpy to 2.9.1 [adam 2017-11-28]
