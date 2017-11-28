@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/17 06:53:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/11/28 10:01:13 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -33,6 +33,8 @@ ${PYSITELIB}/import_export/instance_loaders.pyc
 ${PYSITELIB}/import_export/instance_loaders.pyo
 ${PYSITELIB}/import_export/locale/ar/LC_MESSAGES/django.mo
 ${PYSITELIB}/import_export/locale/ar/LC_MESSAGES/django.po
+${PYSITELIB}/import_export/locale/bg/LC_MESSAGES/django.mo
+${PYSITELIB}/import_export/locale/bg/LC_MESSAGES/django.po
 ${PYSITELIB}/import_export/locale/ca/LC_MESSAGES/django.mo
 ${PYSITELIB}/import_export/locale/ca/LC_MESSAGES/django.po
 ${PYSITELIB}/import_export/locale/cs/LC_MESSAGES/django.mo

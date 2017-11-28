@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/10/17 06:53:32 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/11/28 10:01:13 adam Exp $
 
-DISTNAME=	django-import-export-0.5.1
+DISTNAME=	django-import-export-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-import-export/}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-diff-match-patch-[0-9]*:../../textproc/py-diff-match-pa
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-tablib>=0.9:../../textproc/py-tablib
 
-USE_LANGUAGES=		# none
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
