@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2017/11/28 13:48:07 hauke Exp $
+${PYSITELIB}/PACKAGENAME-1.0-py${PYVERSSUFFIX}.egg-info
+${PYSITELIB}/bonjour/__init__.py
+${PYSITELIB}/bonjour/__init__.pyc
+${PYSITELIB}/bonjour/__init__.pyo
+${PYSITELIB}/bonjour/_bonjour.so
+${DOCDIR}/COPYING.txt
+${DOCDIR}/README
+${EGDIR}/browse.py
+${EGDIR}/query.py
+${EGDIR}/register.py
+${EGDIR}/serviceTypes.py
+${EGDIR}/test.py
+${EGDIR}/wxBrowse.py
