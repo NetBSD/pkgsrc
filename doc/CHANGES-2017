@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5079 2017/11/28 13:47:39 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5080 2017/11/28 13:49:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7300,3 +7300,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/wxmaxima to 17.10.1 [wiz 2017-11-28]
 	Updated converters/convmv to 2.04 [wiz 2017-11-28]
 	Updated textproc/iso-codes to 3.77 [wiz 2017-11-28]
+	Updated print/latexmk to 454 [wiz 2017-11-28]
