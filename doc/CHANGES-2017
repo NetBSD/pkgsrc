@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5083 2017/11/28 14:06:26 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5084 2017/11/28 14:07:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7304,3 +7304,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added net/py-bonjour version bonjour.0.3 [hauke 2017-11-28]
 	Updated audio/musicpd to 0.20.12 [wiz 2017-11-28]
 	Updated security/nettle to 3.4 [wiz 2017-11-28]
+	Updated devel/orc to 0.4.28 [wiz 2017-11-28]
