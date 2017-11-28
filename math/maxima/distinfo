@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.31 2017/09/13 10:00:53 wiz Exp $
+$NetBSD: distinfo,v 1.32 2017/11/28 15:18:21 wiz Exp $
 
-SHA1 (maxima-5.40.0.tar.gz) = 31672bd475e4e508421c6633bd4186f4a97b694a
-RMD160 (maxima-5.40.0.tar.gz) = df5e7a02be653ac174e8a38f0057a8df84d34573
-SHA512 (maxima-5.40.0.tar.gz) = 7aa36ae56c289e1cc6bb1722a6ee93fed5bf893747a26bb52a48f93cd02d65b63c453f37dc2c86ab4596ad192150aed9ad6b361ab295eda5207d9633c07cdee6
-Size (maxima-5.40.0.tar.gz) = 41668208 bytes
+SHA1 (maxima-5.41.0.tar.gz) = 0f69a6603d7334bfec6388151eeb768e8c5e7626
+RMD160 (maxima-5.41.0.tar.gz) = e58cedfa395ac5cb4715d1b60ed7cf6ae48979cf
+SHA512 (maxima-5.41.0.tar.gz) = 1b93ae2db055ba7fb4a95924a896667f0cfa1c675c603c104181662aeb32b10b006158526b2f3ad93a59688a23eacdc82e870bb8ffb182a89e1e51de013ec209
+Size (maxima-5.41.0.tar.gz) = 41540226 bytes
