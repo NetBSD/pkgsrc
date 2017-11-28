@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1190 2017/11/06 11:07:27 wiz Exp $
+# $NetBSD: Makefile,v 1.1191 2017/11/28 13:48:28 hauke Exp $
 #
 
 COMMENT=	Networking tools
@@ -629,6 +629,7 @@ SUBDIR+=	py-apache-libcloud
 SUBDIR+=	py-awscli
 SUBDIR+=	py-beanstalkc
 SUBDIR+=	py-bitmessage
+SUBDIR+=	py-bonjour
 SUBDIR+=	py-boto
 SUBDIR+=	py-boto3
 SUBDIR+=	py-botocore
