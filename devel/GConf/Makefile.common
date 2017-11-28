@@ -1,21 +1,19 @@
-# $NetBSD: Makefile.common,v 1.21 2017/07/30 22:47:49 wiz Exp $
+# $NetBSD: Makefile.common,v 1.22 2017/11/28 14:33:52 wiz Exp $
 #
 # used by devel/GConf/Makefile
 # used by devel/GConf-ui/Makefile
 
-GCONF_VERSION=		2.32.4
+GCONF_VERSION=		3.2.3
 
 DISTNAME=		GConf-${GCONF_VERSION}
 CATEGORIES=		devel gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/2.32/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/3.2/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.gnome.org/projects/gconf/
 COMMENT=		Configuration database system used by GNOME
 LICENSE=		gnu-lgpl-v2
-
-# not ready yet.  .schemas are installed in the depot.
 
 DISTINFO_FILE=		${.CURDIR}/../GConf/distinfo
 FILESDIR=		${.CURDIR}/../GConf/files
@@ -32,7 +30,6 @@ PKG_SYSCONFSUBDIR=	gconf
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-sysconfsubdir=
-CONFIGURE_ARGS+=	--enable-gconf-source=xml::${PKG_SYSCONFDIR}/gconf.xml.defaults
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.28
 .include "../../devel/glib2/buildlink3.mk"
