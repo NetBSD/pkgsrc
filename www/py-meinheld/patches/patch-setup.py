@@ -1,6 +1,7 @@
-$NetBSD: patch-setup.py,v 1.2 2017/10/13 14:51:16 jperkin Exp $
+$NetBSD: patch-setup.py,v 1.3 2017/11/28 12:47:28 wiz Exp $
 
 Add NetBSD support.
+https://github.com/mopemope/meinheld/pull/89
 
 --- setup.py.orig	2016-11-01 23:46:07.000000000 +0000
 +++ setup.py
