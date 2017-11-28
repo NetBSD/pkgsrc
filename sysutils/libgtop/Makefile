@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2017/07/30 22:47:56 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2017/11/28 14:56:09 wiz Exp $
 
 DISTNAME=		libgtop-2.28.4
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.28/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,9 +20,9 @@ PKGCONFIG_OVERRIDE=	libgtop-2.0.pc.in
 TEXINFO_REQD=		4.6
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake makeinfo msgfmt perl pkg-config intltool
+USE_TOOLS+=		bash gmake makeinfo msgfmt perl pkg-config intltool
 
-CONFIGURE_ARGS+=	--enable-gtk-doc
+CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ENV+=		LN_S="${LN} -s"
 
@@ -101,7 +101,5 @@ CPPFLAGS+=	-DHAVE_STATVFS_WRITES_COUNT
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.20
-.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
