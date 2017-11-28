@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/11/15 07:43:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/11/28 09:04:56 adam Exp $
 bin/py.test-${PYVERSSUFFIX}
 bin/pytest-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -26,9 +26,6 @@ ${PYSITELIB}/_pytest/_code/code.pyo
 ${PYSITELIB}/_pytest/_code/source.py
 ${PYSITELIB}/_pytest/_code/source.pyc
 ${PYSITELIB}/_pytest/_code/source.pyo
-${PYSITELIB}/_pytest/_pluggy.py
-${PYSITELIB}/_pytest/_pluggy.pyc
-${PYSITELIB}/_pytest/_pluggy.pyo
 ${PYSITELIB}/_pytest/_version.py
 ${PYSITELIB}/_pytest/_version.pyc
 ${PYSITELIB}/_pytest/_version.pyo
@@ -80,6 +77,9 @@ ${PYSITELIB}/_pytest/hookspec.pyo
 ${PYSITELIB}/_pytest/junitxml.py
 ${PYSITELIB}/_pytest/junitxml.pyc
 ${PYSITELIB}/_pytest/junitxml.pyo
+${PYSITELIB}/_pytest/logging.py
+${PYSITELIB}/_pytest/logging.pyc
+${PYSITELIB}/_pytest/logging.pyo
 ${PYSITELIB}/_pytest/main.py
 ${PYSITELIB}/_pytest/main.pyc
 ${PYSITELIB}/_pytest/main.pyo
@@ -137,12 +137,6 @@ ${PYSITELIB}/_pytest/tmpdir.pyo
 ${PYSITELIB}/_pytest/unittest.py
 ${PYSITELIB}/_pytest/unittest.pyc
 ${PYSITELIB}/_pytest/unittest.pyo
-${PYSITELIB}/_pytest/vendored_packages/__init__.py
-${PYSITELIB}/_pytest/vendored_packages/__init__.pyc
-${PYSITELIB}/_pytest/vendored_packages/__init__.pyo
-${PYSITELIB}/_pytest/vendored_packages/pluggy.py
-${PYSITELIB}/_pytest/vendored_packages/pluggy.pyc
-${PYSITELIB}/_pytest/vendored_packages/pluggy.pyo
 ${PYSITELIB}/_pytest/warnings.py
 ${PYSITELIB}/_pytest/warnings.pyc
 ${PYSITELIB}/_pytest/warnings.pyo
