@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2017/10/30 18:24:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/11/28 08:59:32 adam Exp $
 bin/fonttools${PYVERSSUFFIX}
 bin/pyftinspect${PYVERSSUFFIX}
 bin/pyftmerge${PYVERSSUFFIX}
@@ -529,6 +529,18 @@ ${PYSITELIB}/fontTools/ttx.pyo
 ${PYSITELIB}/fontTools/unicode.py
 ${PYSITELIB}/fontTools/unicode.pyc
 ${PYSITELIB}/fontTools/unicode.pyo
+${PYSITELIB}/fontTools/unicodedata/Blocks.py
+${PYSITELIB}/fontTools/unicodedata/Blocks.pyc
+${PYSITELIB}/fontTools/unicodedata/Blocks.pyo
+${PYSITELIB}/fontTools/unicodedata/ScriptExtensions.py
+${PYSITELIB}/fontTools/unicodedata/ScriptExtensions.pyc
+${PYSITELIB}/fontTools/unicodedata/ScriptExtensions.pyo
+${PYSITELIB}/fontTools/unicodedata/Scripts.py
+${PYSITELIB}/fontTools/unicodedata/Scripts.pyc
+${PYSITELIB}/fontTools/unicodedata/Scripts.pyo
+${PYSITELIB}/fontTools/unicodedata/__init__.py
+${PYSITELIB}/fontTools/unicodedata/__init__.pyc
+${PYSITELIB}/fontTools/unicodedata/__init__.pyo
 ${PYSITELIB}/fontTools/varLib/__init__.py
 ${PYSITELIB}/fontTools/varLib/__init__.pyc
 ${PYSITELIB}/fontTools/varLib/__init__.pyo
