@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17933 2017/11/28 14:47:41 wiz Exp $
+$NetBSD: TODO,v 1.17934 2017/11/28 15:18:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1018,7 +1018,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o manedit-1.2.1
 	o mapserver-7.0.1
 	o matchbox-panel-0.9.3
-	o maxima-5.41.0
 	o mbuf-20141227
 	o mbuffer-20160228
 	o mcollective-2.3.2
