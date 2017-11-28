@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2017/09/04 04:50:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2017/11/28 09:14:34 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -97,6 +97,9 @@ ${PYSITELIB}/pyasn1/type/namedtype.pyo
 ${PYSITELIB}/pyasn1/type/namedval.py
 ${PYSITELIB}/pyasn1/type/namedval.pyc
 ${PYSITELIB}/pyasn1/type/namedval.pyo
+${PYSITELIB}/pyasn1/type/opentype.py
+${PYSITELIB}/pyasn1/type/opentype.pyc
+${PYSITELIB}/pyasn1/type/opentype.pyo
 ${PYSITELIB}/pyasn1/type/tag.py
 ${PYSITELIB}/pyasn1/type/tag.pyc
 ${PYSITELIB}/pyasn1/type/tag.pyo
