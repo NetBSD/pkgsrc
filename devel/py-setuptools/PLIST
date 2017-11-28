@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2017/10/16 17:20:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.42 2017/11/28 14:09:09 wiz Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
@@ -188,9 +188,6 @@ ${PYSITELIB}/setuptools/namespaces.pyo
 ${PYSITELIB}/setuptools/package_index.py
 ${PYSITELIB}/setuptools/package_index.pyc
 ${PYSITELIB}/setuptools/package_index.pyo
-${PYSITELIB}/setuptools/py26compat.py
-${PYSITELIB}/setuptools/py26compat.pyc
-${PYSITELIB}/setuptools/py26compat.pyo
 ${PYSITELIB}/setuptools/py27compat.py
 ${PYSITELIB}/setuptools/py27compat.pyc
 ${PYSITELIB}/setuptools/py27compat.pyo
