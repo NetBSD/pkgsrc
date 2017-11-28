@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5085 2017/11/28 14:09:21 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5086 2017/11/28 14:34:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7306,3 +7306,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/nettle to 3.4 [wiz 2017-11-28]
 	Updated devel/orc to 0.4.28 [wiz 2017-11-28]
 	Updated devel/py-setuptools to 38.1.0 [wiz 2017-11-28]
+	Updated devel/GConf to 3.2.3 [wiz 2017-11-28]
