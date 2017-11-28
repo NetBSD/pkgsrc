@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2016/08/21 11:35:33 kamil Exp $
+# $NetBSD: Makefile,v 1.56 2017/11/28 19:32:25 minskim Exp $
 #
 
 COMMENT=	Shells
@@ -34,5 +34,6 @@ SUBDIR+=	tcsh
 SUBDIR+=	xonsh
 SUBDIR+=	xsh
 SUBDIR+=	zsh
+SUBDIR+=	zsh-completions
 
 .include "../mk/misc/category.mk"
