@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2017/11/28 13:48:07 hauke Exp $
+# $NetBSD: Makefile,v 1.2 2017/11/28 14:24:31 hauke Exp $
 
-PKGNAME=	${PYPKGPREFIX}-bonjour.${PKGVER}
+PKGNAME=	${PYPKGPREFIX}-bonjour-${PKGVER}
 DISTNAME=	bonjour-py-${PKGVER}
 PKGVER=		0.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.mcs.anl.gov/fl/research/accessgrid/bonjour-py/
 
