@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2016/04/08 14:52:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2017/11/28 13:47:22 wiz Exp $
 share/iso-codes/json/iso_15924.json
 share/iso-codes/json/iso_3166-1.json
 share/iso-codes/json/iso_3166-2.json
@@ -350,13 +350,17 @@ share/locale/id/LC_MESSAGES/iso_639.mo
 share/locale/id/LC_MESSAGES/iso_639_3.mo
 share/locale/is/LC_MESSAGES/iso_15924.mo
 share/locale/is/LC_MESSAGES/iso_3166-1.mo
+share/locale/is/LC_MESSAGES/iso_3166-2.mo
 share/locale/is/LC_MESSAGES/iso_3166-3.mo
 share/locale/is/LC_MESSAGES/iso_3166.mo
+share/locale/is/LC_MESSAGES/iso_3166_2.mo
 share/locale/is/LC_MESSAGES/iso_4217.mo
 share/locale/is/LC_MESSAGES/iso_639-2.mo
 share/locale/is/LC_MESSAGES/iso_639-3.mo
+share/locale/is/LC_MESSAGES/iso_639-5.mo
 share/locale/is/LC_MESSAGES/iso_639.mo
 share/locale/is/LC_MESSAGES/iso_639_3.mo
+share/locale/is/LC_MESSAGES/iso_639_5.mo
 share/locale/it/LC_MESSAGES/iso_15924.mo
 share/locale/it/LC_MESSAGES/iso_3166-1.mo
 share/locale/it/LC_MESSAGES/iso_3166-2.mo
@@ -366,8 +370,10 @@ share/locale/it/LC_MESSAGES/iso_3166_2.mo
 share/locale/it/LC_MESSAGES/iso_4217.mo
 share/locale/it/LC_MESSAGES/iso_639-2.mo
 share/locale/it/LC_MESSAGES/iso_639-3.mo
+share/locale/it/LC_MESSAGES/iso_639-5.mo
 share/locale/it/LC_MESSAGES/iso_639.mo
 share/locale/it/LC_MESSAGES/iso_639_3.mo
+share/locale/it/LC_MESSAGES/iso_639_5.mo
 share/locale/ja/LC_MESSAGES/iso_15924.mo
 share/locale/ja/LC_MESSAGES/iso_3166-1.mo
 share/locale/ja/LC_MESSAGES/iso_3166-2.mo
