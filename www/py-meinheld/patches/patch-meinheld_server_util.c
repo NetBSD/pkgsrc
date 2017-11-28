@@ -1,6 +1,7 @@
-$NetBSD: patch-meinheld_server_util.c,v 1.2 2017/10/13 14:51:16 jperkin Exp $
+$NetBSD: patch-meinheld_server_util.c,v 1.3 2017/11/28 12:47:28 wiz Exp $
 
 Add NetBSD support.
+https://github.com/mopemope/meinheld/pull/89
 
 --- meinheld/server/util.c.orig	2015-09-16 12:56:12.000000000 +0000
 +++ meinheld/server/util.c
