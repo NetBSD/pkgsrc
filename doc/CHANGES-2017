@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5074 2017/11/28 09:44:12 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5075 2017/11/28 10:51:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7290,3 +7290,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-boto3 to 1.4.8 [adam 2017-11-28]
 	Updated net/py-awscli to 1.12.2 [adam 2017-11-28]
 	Updated databases/py-sqlalchemy-utils to 0.32.21 [adam 2017-11-28]
+	Updated textproc/py-tabulate to 0.8.2 [adam 2017-11-28]
+	Updated www/py-terminado to 0.8 [adam 2017-11-28]
+	Updated textproc/py-phonenumbers to 8.8.6 [adam 2017-11-28]
+	Updated www/py-django-import-export to 0.6.0 [adam 2017-11-28]
+	Updated graphics/libimagequant to 2.11.4 [adam 2017-11-28]
