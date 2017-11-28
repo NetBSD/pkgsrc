@@ -1,0 +1,3 @@
+Bonjour provides service advertising and discovery on the local
+network via multicast DNS.  These files use SWIG to provide a Python
+interface for use by applications to interact with Bonjour.
