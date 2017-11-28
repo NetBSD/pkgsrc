@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2015/08/18 07:31:00 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2017/11/28 14:47:31 wiz Exp $
 
-DISTNAME=		physfs-2.0.3
-PKGREVISION=		1
+DISTNAME=		physfs-3.0.1
 CATEGORIES=		devel
 MASTER_SITES=		http://offload1.icculus.org/physfs/downloads/
 EXTRACT_SUFX=		.tar.bz2
@@ -14,6 +13,8 @@ LICENSE=		zlib
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 PTHREAD_AUTO_VARS=	yes
+
+PKGCONFIG_OVERRIDE+=	extras/physfs.pc.in
 
 CFLAGS.SunOS+=		-DPHYSFS_NO_CDROM_SUPPORT=1
 
