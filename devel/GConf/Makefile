@@ -1,14 +1,10 @@
-# $NetBSD: Makefile,v 1.93 2017/10/15 23:19:10 prlw1 Exp $
+# $NetBSD: Makefile,v 1.94 2017/11/28 14:33:52 wiz Exp $
 
 .include "../../devel/GConf/Makefile.common"
 
-PKGREVISION=		11
-
 CONFIGURE_ARGS+=	--disable-gtk
-CONFIGURE_ARGS+=	ac_cv_header_ldap_h=no
 CONFIGURE_ARGS+=	--disable-defaults-service
-
-CONFLICTS+=	GConf2-[0-9]*
+CONFIGURE_ARGS+=	--with-openldap=no
 
 OWN_DIRS=	${PKG_SYSCONFDIR}/2
 OWN_DIRS+=	${PKG_SYSCONFDIR}/gconf.xml.defaults
@@ -18,14 +14,8 @@ OWN_DIRS+=	${PKG_SYSCONFDIR}/gconf.xml.system
 EGDIR=		${PREFIX}/share/examples/GConf
 CONF_FILES=	${EGDIR}/path ${PKG_SYSCONFDIR}/2/path
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2.32.4
 REPLACE_PYTHON=	gsettings/gsettings-schema-convert
-
-# XXX: We need to use XML_CATALOGS here to register the installed DTD.
-#      But we have to wait until a public identifier is choosen for it.
-
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/gconf/schemas
+INSTALLATION_DIRS=	share/gconf/schemas
 
 BUILDLINK_ABI_DEPENDS.dbus-glib+=	dbus-glib>=0.74
 .include "../../lang/python/application.mk"
