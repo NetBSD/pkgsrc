@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2017/07/06 07:43:33 adam Exp $
+# $NetBSD: Makefile,v 1.13 2017/11/28 09:02:59 adam Exp $
 
-DISTNAME=	markdown2-2.3.4
+DISTNAME=	markdown2-2.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	textproc
+CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/markdown2/}
 EXTRACT_SUFX=	.zip
 
