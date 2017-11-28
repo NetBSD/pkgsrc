@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/11/08 08:11:36 adam Exp $
+$NetBSD: distinfo,v 1.8 2017/11/28 09:24:35 adam Exp $
 
-SHA1 (flake8-import-order-0.15.tar.gz) = fea4545a365f4072d944ddb2ee2644ed165a156b
-RMD160 (flake8-import-order-0.15.tar.gz) = 7308d5b644a1aa73ce6cf134312b496f7c4d473f
-SHA512 (flake8-import-order-0.15.tar.gz) = 711ce210af840d6971c76cf2052cf73ff85128e60d4d3c68e199e907469393cba2f1bdfa858ec690bdae479d5b4c13c565f549849e79aba7ec14c25d4afa0faf
-Size (flake8-import-order-0.15.tar.gz) = 16692 bytes
+SHA1 (flake8-import-order-0.16.tar.gz) = 5843bb9ec7aff31229093a5411fd241d7bf8541a
+RMD160 (flake8-import-order-0.16.tar.gz) = 25ac7bf030fd887536b95ee16200ae048cceab9b
+SHA512 (flake8-import-order-0.16.tar.gz) = 21fd249ede7a91cde98fad1e00bf5da2aa836c2bdb5c2aace820be26a81355dda7ed9fdab979bd686fcd65922ee0bba1e2c1a9df088bf652c03134c1ccd13b48
+Size (flake8-import-order-0.16.tar.gz) = 17845 bytes
