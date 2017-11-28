@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/31 08:29:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/11/28 14:47:31 wiz Exp $
 bin/test_physfs
 include/physfs.h
 lib/libphysfs.a
 lib/libphysfs.so
 lib/libphysfs.so.1
 lib/libphysfs.so.${PKGVERSION}
+lib/pkgconfig/physfs.pc
