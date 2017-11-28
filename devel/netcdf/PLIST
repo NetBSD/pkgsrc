@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.7 2013/04/09 15:57:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/11/28 17:52:02 minskim Exp $
 bin/nc-config
 bin/nccopy
 bin/ncdump
 bin/ncgen
 bin/ncgen3
 include/netcdf.h
+include/netcdf_mem.h
+include/netcdf_meta.h
 lib/libnetcdf.la
+lib/libnetcdf.settings
 lib/pkgconfig/netcdf.pc
 man/man1/nccopy.1
 man/man1/ncdump.1
