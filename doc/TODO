@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17926 2017/11/28 13:49:38 wiz Exp $
+$NetBSD: TODO,v 1.17927 2017/11/28 13:53:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1069,7 +1069,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-node-1.4.6
 	o munin-server-1.4.6
 	o muse-0.9.2
-	o musicpd-0.20.12
 	o myodbc-5.3.4
 	o mysql-workbench-6.3
 	o nagios-base-4.3.1
