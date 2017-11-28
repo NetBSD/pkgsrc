@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2017/10/18 16:17:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2017/11/28 09:07:23 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -120,9 +120,6 @@ ${PYSITELIB}/rpy2/robjects/language.pyo
 ${PYSITELIB}/rpy2/robjects/lib/__init__.py
 ${PYSITELIB}/rpy2/robjects/lib/__init__.pyc
 ${PYSITELIB}/rpy2/robjects/lib/__init__.pyo
-${PYSITELIB}/rpy2/robjects/lib/dbplyr.py
-${PYSITELIB}/rpy2/robjects/lib/dbplyr.pyc
-${PYSITELIB}/rpy2/robjects/lib/dbplyr.pyo
 ${PYSITELIB}/rpy2/robjects/lib/dplyr.py
 ${PYSITELIB}/rpy2/robjects/lib/dplyr.pyc
 ${PYSITELIB}/rpy2/robjects/lib/dplyr.pyo
