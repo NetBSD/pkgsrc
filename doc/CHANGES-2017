@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5073 2017/11/28 09:08:31 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5074 2017/11/28 09:44:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7284,3 +7284,9 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-markdown2 to 2.3.5 [adam 2017-11-28]
 	Updated devel/py-test to 3.3.0 [adam 2017-11-28]
 	Updated math/py-rpy to 2.9.1 [adam 2017-11-28]
+	Updated security/py-asn1 to 0.4.2 [adam 2017-11-28]
+	Updated devel/py-flake8-import-order to 0.16 [adam 2017-11-28]
+	Updated net/py-botocore to 1.8.2 [adam 2017-11-28]
+	Updated net/py-boto3 to 1.4.8 [adam 2017-11-28]
+	Updated net/py-awscli to 1.12.2 [adam 2017-11-28]
+	Updated databases/py-sqlalchemy-utils to 0.32.21 [adam 2017-11-28]
