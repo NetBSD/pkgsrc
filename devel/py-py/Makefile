@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2017/07/30 18:02:40 adam Exp $
+# $NetBSD: Makefile,v 1.12 2017/11/28 08:36:44 adam Exp $
 
-DISTNAME=	py-1.4.34
+DISTNAME=	py-1.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/py/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/py/
-COMMENT=	Python development support library
+HOMEPAGE=	https://github.com/pytest-dev/py
+COMMENT=	Library with cross-python path, ini-parsing, io, code, log facilities
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
