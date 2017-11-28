@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2017/11/07 13:06:41 adam Exp $
+# $NetBSD: Makefile,v 1.34 2017/11/28 11:01:11 adam Exp $
 
-DISTNAME=	simplejson-3.12.0
+DISTNAME=	simplejson-3.13.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/simplejson/}
@@ -11,9 +11,6 @@ COMMENT=	Simplejson is a simple, fast, extensible JSON encoder/decoder
 LICENSE=	mit
 
 USE_LANGUAGES=	c
-
-do-test:
-	cd ${WRKSRC} && ${PYTHONBIN} setup.py test -q
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
