@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5095 2017/11/28 17:54:21 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.5096 2017/11/28 19:32:59 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7316,3 +7316,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/maxima to 5.41.0 [wiz 2017-11-28]
 	Updated sysutils/di to 4.44 [wiz 2017-11-28]
 	Updated devel/netcdf to 4.4.1.1 [minskim 2017-11-28]
+	Added shells/zsh-completions version 0.27.0 [minskim 2017-11-28]
