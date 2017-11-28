@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/10/03 12:28:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/11/28 14:06:12 wiz Exp $
 bin/nettle-hash
 bin/nettle-lfib-stream
 bin/nettle-pbkdf2
@@ -17,6 +17,7 @@ include/nettle/camellia.h
 include/nettle/cast128.h
 include/nettle/cbc.h
 include/nettle/ccm.h
+include/nettle/cfb.h
 include/nettle/chacha-poly1305.h
 include/nettle/chacha.h
 include/nettle/ctr.h
@@ -32,6 +33,7 @@ include/nettle/ecdsa.h
 include/nettle/eddsa.h
 include/nettle/gcm.h
 include/nettle/gosthash94.h
+include/nettle/hkdf.h
 include/nettle/hmac.h
 include/nettle/knuth-lfib.h
 include/nettle/macros.h
@@ -48,6 +50,8 @@ include/nettle/pbkdf2.h
 include/nettle/pgp.h
 include/nettle/pkcs1.h
 include/nettle/poly1305.h
+include/nettle/pss-mgf1.h
+include/nettle/pss.h
 include/nettle/realloc.h
 include/nettle/ripemd160.h
 include/nettle/rsa.h
