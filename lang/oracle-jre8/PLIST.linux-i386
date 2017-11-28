@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.6 2017/03/11 07:36:10 ryoon Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.7 2017/11/28 05:15:27 ryoon Exp $
 bin/oracle8-java
 bin/oracle8-javaws
 bin/oracle8-keytool
@@ -281,14 +281,18 @@ java/oracle-8/lib/psfontj2d.properties.default
 java/oracle-8/lib/resources.jar
 java/oracle-8/lib/rt.jar
 ${PLIST.jce}java/oracle-8/lib/security/README.txt
-java/oracle-8/lib/security/US_export_policy.jar
+${PLIST.jce}java/oracle-8/lib/security/US_export_policy.jar
 java/oracle-8/lib/security/blacklist
 java/oracle-8/lib/security/blacklisted.certs
 java/oracle-8/lib/security/cacerts
 java/oracle-8/lib/security/java.policy
 java/oracle-8/lib/security/java.security.default
 java/oracle-8/lib/security/javaws.policy
-java/oracle-8/lib/security/local_policy.jar
+${PLIST.jce}java/oracle-8/lib/security/local_policy.jar
+java/oracle-8/lib/security/policy/limited/local_policy.jar
+java/oracle-8/lib/security/policy/limited/US_export_policy.jar
+java/oracle-8/lib/security/policy/unlimited/local_policy.jar
+java/oracle-8/lib/security/policy/unlimited/US_export_policy.jar
 java/oracle-8/lib/security/trusted.libraries
 java/oracle-8/lib/sound.properties.default
 java/oracle-8/lib/tzdb.dat
