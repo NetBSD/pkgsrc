@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2017/10/13 14:51:16 jperkin Exp $
+$NetBSD: distinfo,v 1.4 2017/11/28 12:47:28 wiz Exp $
 
 SHA1 (meinheld-0.6.1.tar.gz) = d3b1c307e26e131da5030a18a5d750d788a37893
 RMD160 (meinheld-0.6.1.tar.gz) = b8a7a17385b21c0bf6570b7e9c41a5e9934c9ed4
 SHA512 (meinheld-0.6.1.tar.gz) = 02b8c8573c244e92a7dbf86524a7e1c1fe02a7aa1b107fc3d07d02b6ba22d70cbd7ddb6f8f3470db740dba3138ecee36dc2f00dd5d1e63c83435bea0f0344a9b
 Size (meinheld-0.6.1.tar.gz) = 79703 bytes
-SHA1 (patch-meinheld_server_picoev__select.c) = 4d9e5219f30fb7c4b04ed3a2a6390177defe057d
-SHA1 (patch-meinheld_server_util.c) = fddcc91fd315dc007d61dcd59be5b40edf921985
-SHA1 (patch-setup.py) = 33d93962e8f2ce329ece5bf6a4e2b6c6403c80fd
+SHA1 (patch-meinheld_server_picoev__select.c) = e040d34904d4af7abaf6485334ad166eda48e5b5
+SHA1 (patch-meinheld_server_util.c) = 7ca3ed9f5b4e1bcf33de9f2e7e96f2ba59c2846a
+SHA1 (patch-setup.py) = 4f344f6c380ec58acd89d59b1514dd504c976d4b
