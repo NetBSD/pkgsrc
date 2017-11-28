@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/04/25 20:14:26 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2017/11/28 11:41:46 adam Exp $
 
-DISTNAME=	nose2-0.6.5
+DISTNAME=	nose2-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nose2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,9 +10,16 @@ HOMEPAGE=	https://github.com/nose-devs/nose2/
 COMMENT=	Next generation of nicer testing for Python
 LICENSE=	2-clause-bsd
 
-USE_LANGUAGES=	# none
+DEPENDS+=	${PYPKGPREFIX}-coverage>=4.4.1:../../devel/py-coverage
+DEPENDS+=	${PYPKGPREFIX}-six>=1.7:../../lang/py-six
 
-DEPENDS+=	${PYPKGPREFIX}-six>=1.1:../../lang/py-six
+.include "../../lang/python/pyversion.mk"
+
+.if "${PYPKGPREFIX}" == "py27"
+DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+.endif
+
+USE_LANGUAGES=	# none
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/bin/nose2
