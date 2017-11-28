@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17922 2017/11/28 09:44:12 adam Exp $
+$NetBSD: TODO,v 1.17923 2017/11/28 13:14:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1512,7 +1512,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o worker-3.12.0
 	o wxGTK-3.1.0
 	o wxRemind-101
-	o wxmaxima-17.05.1 [wip]
 	o x264-devel-20171125
 	o x2vnc-1.31
 	o xa65-2.3.7
