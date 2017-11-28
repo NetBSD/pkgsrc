@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/03/21 23:58:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/11/28 08:36:44 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,9 +10,6 @@ ${PYSITELIB}/py/__init__.pyo
 ${PYSITELIB}/py/__metainfo.py
 ${PYSITELIB}/py/__metainfo.pyc
 ${PYSITELIB}/py/__metainfo.pyo
-${PYSITELIB}/py/_apipkg.py
-${PYSITELIB}/py/_apipkg.pyc
-${PYSITELIB}/py/_apipkg.pyo
 ${PYSITELIB}/py/_builtin.py
 ${PYSITELIB}/py/_builtin.pyc
 ${PYSITELIB}/py/_builtin.pyo
@@ -40,9 +37,6 @@ ${PYSITELIB}/py/_code/source.pyo
 ${PYSITELIB}/py/_error.py
 ${PYSITELIB}/py/_error.pyc
 ${PYSITELIB}/py/_error.pyo
-${PYSITELIB}/py/_iniconfig.py
-${PYSITELIB}/py/_iniconfig.pyc
-${PYSITELIB}/py/_iniconfig.pyo
 ${PYSITELIB}/py/_io/__init__.py
 ${PYSITELIB}/py/_io/__init__.pyc
 ${PYSITELIB}/py/_io/__init__.pyo
@@ -97,6 +91,15 @@ ${PYSITELIB}/py/_process/killproc.pyo
 ${PYSITELIB}/py/_std.py
 ${PYSITELIB}/py/_std.pyc
 ${PYSITELIB}/py/_std.pyo
+${PYSITELIB}/py/_vendored_packages/__init__.py
+${PYSITELIB}/py/_vendored_packages/__init__.pyc
+${PYSITELIB}/py/_vendored_packages/__init__.pyo
+${PYSITELIB}/py/_vendored_packages/apipkg.py
+${PYSITELIB}/py/_vendored_packages/apipkg.pyc
+${PYSITELIB}/py/_vendored_packages/apipkg.pyo
+${PYSITELIB}/py/_vendored_packages/iniconfig.py
+${PYSITELIB}/py/_vendored_packages/iniconfig.pyc
+${PYSITELIB}/py/_vendored_packages/iniconfig.pyo
 ${PYSITELIB}/py/_xmlgen.py
 ${PYSITELIB}/py/_xmlgen.pyc
 ${PYSITELIB}/py/_xmlgen.pyo
