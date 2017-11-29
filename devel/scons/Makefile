@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2017/11/29 09:07:58 adam Exp $
+# $NetBSD: Makefile,v 1.41 2017/11/29 09:09:03 adam Exp $
 
 DISTNAME=	scons-3.0.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scons/}
-MASTER_SITES+=	${MASTER_SITE_PYPI:=S/Scons/}
+MASTER_SITES+=	${MASTER_SITE_PYPI:=S/SCons/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.scons.org/
