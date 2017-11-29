@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5097 2017/11/29 01:27:50 gdt Exp $
+$NetBSD: CHANGES-2017,v 1.5098 2017/11/29 08:02:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7318,3 +7318,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/netcdf to 4.4.1.1 [minskim 2017-11-28]
 	Added shells/zsh-completions version 0.27.0 [minskim 2017-11-28]
 	Updated geography/gama to 1.21 [gdt 2017-11-29]
+	Updated devel/py-uvloop to 0.9.1 [adam 2017-11-29]
+	Updated devel/py-test-localserver to 0.4.1 [adam 2017-11-29]
