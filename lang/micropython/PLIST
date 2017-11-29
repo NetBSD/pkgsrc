@@ -1,7 +1,2 @@
-@comment $NetBSD: PLIST,v 1.2 2017/11/29 15:13:31 hauke Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/11/29 16:34:40 hauke Exp $
 bin/micropython
-@pkgdir share/examples/micropython/unix
-@pkgdir share/examples/micropython/network
-@pkgdir share/examples/micropython/hwapi
-@pkgdir share/examples/micropython/embedding
-@pkgdir share/examples/micropython/SDdatalogger
