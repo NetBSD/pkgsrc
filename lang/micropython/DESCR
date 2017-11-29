@@ -11,3 +11,5 @@ bytearray, tuple, list, dict, set, frozenset, array.array,
 collections.namedtuple, classes and instances.  Builtin modules
 include sys, time, and struct.  Note that only subset of Python 3.4
 functionality is implemented for the data types and modules.
+
+Documentation is at <http://docs.micropython.org/en/latest/>.
