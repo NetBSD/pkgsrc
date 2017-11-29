@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2016/04/28 13:49:04 gson Exp $
+$NetBSD: patch-aa,v 1.7 2017/11/29 16:52:44 gson Exp $
 
 - honor pkgsrc CC, AR, LD, RANLIB (CC matters for libtool, the others less so)
 - use libtool
@@ -21,7 +21,16 @@ $NetBSD: patch-aa,v 1.6 2016/04/28 13:49:04 gson Exp $
  LN          = ln
  
  SHELL       = /bin/sh
-@@ -196,6 +196,13 @@ LDFLAGS     = -shared -soname=$(SONAME) 
+@@ -181,7 +181,7 @@ OTHER_FLAGS = -fullwarn
+ endif
+ 
+ ifeq ($(OS), LINUX)
+-EXTRA_OBJS  = $(TARGETDIR)/md.o
++EXTRA_OBJS  = $(TARGETDIR)/md.lo
+ SFLAGS      = -fPIC
+ LDFLAGS     = -shared -soname=$(SONAME) -lc
+ OTHER_FLAGS = -Wall
+@@ -196,6 +196,13 @@ LDFLAGS     = -shared -soname=$(SONAME)
  OTHER_FLAGS = -Wall
  endif
  
@@ -58,7 +67,7 @@ $NetBSD: patch-aa,v 1.6 2016/04/28 13:49:04 gson Exp $
  DLIBRARY    = $(TARGETDIR)/libst.$(DSO_SUFFIX).$(VERSION)
  EXAMPLES    = examples
  
-@@ -344,8 +351,7 @@ $(TARGETDIR):
+@@ -344,12 +351,11 @@ $(TARGETDIR):
  	if [ ! -d $(TARGETDIR) ]; then mkdir $(TARGETDIR); fi
  
  $(SLIBRARY): $(OBJS)
@@ -68,6 +77,11 @@ $NetBSD: patch-aa,v 1.6 2016/04/28 13:49:04 gson Exp $
  	rm -f obj; $(LN) $(LNFLAGS) $(TARGETDIR) obj
  
  $(DLIBRARY): $(OBJS:%.o=%-pic.o)
+-	$(LD) $(LDFLAGS) $^ -o $@
++	${LIBTOOL} --mode=link --tag=CC $(LD) $(LDFLAGS) $^ -o $@
+ 	if test "$(LINKNAME)"; then                             \
+ 		cd $(TARGETDIR);				\
+ 		rm -f $(SONAME) $(LINKNAME);			\
 @@ -361,11 +367,11 @@ $(HEADER): public.h
  	rm -f $@
  	cp public.h $@
