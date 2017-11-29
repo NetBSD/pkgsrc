@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/04/23 06:59:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/11/29 14:07:50 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -36,9 +36,6 @@ ${PYSITELIB}/cheroot/test/helper.py
 ${PYSITELIB}/cheroot/test/helper.pyc
 ${PYSITELIB}/cheroot/test/helper.pyo
 ${PYSITELIB}/cheroot/test/test.pem
-${PYSITELIB}/cheroot/test/test_compat.py
-${PYSITELIB}/cheroot/test/test_compat.pyc
-${PYSITELIB}/cheroot/test/test_compat.pyo
 ${PYSITELIB}/cheroot/test/test_config_server.py
 ${PYSITELIB}/cheroot/test/test_config_server.pyc
 ${PYSITELIB}/cheroot/test/test_config_server.pyo
@@ -48,9 +45,6 @@ ${PYSITELIB}/cheroot/test/test_conn.pyo
 ${PYSITELIB}/cheroot/test/test_core.py
 ${PYSITELIB}/cheroot/test/test_core.pyc
 ${PYSITELIB}/cheroot/test/test_core.pyo
-${PYSITELIB}/cheroot/test/test_http.py
-${PYSITELIB}/cheroot/test/test_http.pyc
-${PYSITELIB}/cheroot/test/test_http.pyo
 ${PYSITELIB}/cheroot/test/test_wsgiapps.py
 ${PYSITELIB}/cheroot/test/test_wsgiapps.pyc
 ${PYSITELIB}/cheroot/test/test_wsgiapps.pyo
