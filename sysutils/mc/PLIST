@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2017/03/13 09:20:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/11/29 14:09:00 wiz Exp $
 bin/mc
 bin/mcdiff
 bin/mcedit
@@ -263,6 +263,7 @@ share/mc/syntax/fortran.syntax
 share/mc/syntax/glsl.syntax
 share/mc/syntax/go.syntax
 share/mc/syntax/haskell.syntax
+share/mc/syntax/hive.syntax
 share/mc/syntax/html.syntax
 share/mc/syntax/idl.syntax
 share/mc/syntax/ini.syntax
@@ -278,6 +279,7 @@ share/mc/syntax/lua.syntax
 share/mc/syntax/m4.syntax
 share/mc/syntax/mail.syntax
 share/mc/syntax/makefile.syntax
+share/mc/syntax/markdown.syntax
 share/mc/syntax/ml.syntax
 share/mc/syntax/named.syntax
 share/mc/syntax/nemerle.syntax
@@ -292,6 +294,7 @@ share/mc/syntax/po.syntax
 share/mc/syntax/povray.syntax
 share/mc/syntax/procmail.syntax
 share/mc/syntax/properties.syntax
+share/mc/syntax/protobuf.syntax
 share/mc/syntax/puppet.syntax
 share/mc/syntax/python.syntax
 share/mc/syntax/r.syntax
@@ -306,6 +309,7 @@ share/mc/syntax/swig.syntax
 share/mc/syntax/syntax.syntax
 share/mc/syntax/tcl.syntax
 share/mc/syntax/texinfo.syntax
+share/mc/syntax/ts.syntax
 share/mc/syntax/tt.syntax
 share/mc/syntax/unknown.syntax
 share/mc/syntax/verilog.syntax
