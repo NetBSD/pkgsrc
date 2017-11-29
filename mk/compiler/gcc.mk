@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.188 2017/11/15 19:04:24 khorben Exp $
+# $NetBSD: gcc.mk,v 1.189 2017/11/29 22:55:15 khorben Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -343,6 +343,7 @@ _MKPIE_LDFLAGS.gcc=	-pie
 _GCC_CFLAGS+=		${_MKPIE_CFLAGS.gcc}
 #_GCC_LDFLAGS+=		${_MKPIE_LDFLAGS.gcc}
 CWRAPPERS_APPEND.cc+=	${_MKPIE_CFLAGS.gcc}
+CWRAPPERS_APPEND.cxx+=	${_MKPIE_CFLAGS.gcc}
 # this differs for libraries and executables (handled in mk/cwrappers.mk)
 # CWRAPPERS_APPEND.ld+=	${_MKPIE_LDFLAGS.gcc}
 .endif
