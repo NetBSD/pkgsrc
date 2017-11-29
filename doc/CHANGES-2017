@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5099 2017/11/29 09:14:54 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5100 2017/11/29 12:39:05 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7322,3 +7322,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-test-localserver to 0.4.1 [adam 2017-11-29]
 	Updated devel/scons to 3.0.1 [adam 2017-11-29]
 	Updated www/py-notebook to 5.2.2 [adam 2017-11-29]
+	Updated net/py-lexicon to 2.1.12 [fhajny 2017-11-29]
