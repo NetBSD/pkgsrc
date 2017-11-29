@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17935 2017/11/28 15:51:06 wiz Exp $
+$NetBSD: TODO,v 1.17936 2017/11/29 14:02:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -408,7 +408,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap22-vhost-ldap-2.4.0
 	o apache-ivy-2.4.0
 	o apache-tomcat7-7.0.81
-	o apache24-2.4.29
 	o apollo-1.7
 	o apr0-2.4.1
 	o ardour-5.11
@@ -961,6 +960,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o liblzo-2.09
 	o libmcs-0.7.2
 	o libmediawiki-4.14.0
+	o libmicrohttpd-0.9.57
 	o libmilter-8.16.0.16
 	o libmtag-0.3.6
 	o liboobs-2.32.0 [GNOME 2.32]
@@ -1019,6 +1019,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o matchbox-panel-0.9.3
 	o mbuf-20141227
 	o mbuffer-20160228
+	o mc-4.8.20
 	o mcollective-2.3.2
 	o mcsim-5.6.5
 	o mecab-ipadic-2.7.0.20070801
@@ -1217,7 +1218,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ephem3-3.7.6.0
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
-	o py-gobject3-common-3.26.1
 	o py-hsm-1.1.1
 	o py-input-pad-1.4.2
 	o py-jaraco_util-11.0
@@ -1431,7 +1431,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
-	o tor-browser-7.0.5
+	o tor-browser-7.0.10
 	o totem-3.14.1
 	o totem-pl-parser-3.10.3
 	o tripwire-2.3.1 [see also pkg/22362]
