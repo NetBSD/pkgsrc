@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2017/11/27 10:44:55 adam Exp $
+$NetBSD: distinfo,v 1.4 2017/11/29 07:56:47 adam Exp $
 
-SHA1 (uvloop-0.9.0.tar.gz) = 641239a1873b63bce52d82ee66efbbc8640bd8dc
-RMD160 (uvloop-0.9.0.tar.gz) = 7fc56ccae62a6c74cc416fc2f4a545dece6624fc
-SHA512 (uvloop-0.9.0.tar.gz) = c75797e5443d998ad209e0f349edb830622acdabc2f0c85e050c73266d0ce3001f73c05c2bb1122b421ed458348d3294e3bb96d730ec43ceeafe1a96e2579a9d
-Size (uvloop-0.9.0.tar.gz) = 1793384 bytes
+SHA1 (uvloop-0.9.1.tar.gz) = 5346e478820e5acf5015710697b66bbb3ebe1e78
+RMD160 (uvloop-0.9.1.tar.gz) = d3cc88080cd7aeccc413100aa19bbe012b63c093
+SHA512 (uvloop-0.9.1.tar.gz) = 00933b77be63ce75d0580a833d843178436fbe26be4f10b57b2d85eb04c6a95b57776a61aa45c36d3b9c72f602b71cda927e4e2361c913e8dc139a7178c865d8
+Size (uvloop-0.9.1.tar.gz) = 1797657 bytes
 SHA1 (patch-setup.py) = 4be1c2b9612dfaa749ae1c92382fd054b17a1d8c
