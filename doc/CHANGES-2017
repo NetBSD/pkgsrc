@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5098 2017/11/29 08:02:20 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5099 2017/11/29 09:14:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7320,3 +7320,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated geography/gama to 1.21 [gdt 2017-11-29]
 	Updated devel/py-uvloop to 0.9.1 [adam 2017-11-29]
 	Updated devel/py-test-localserver to 0.4.1 [adam 2017-11-29]
+	Updated devel/scons to 3.0.1 [adam 2017-11-29]
+	Updated www/py-notebook to 5.2.2 [adam 2017-11-29]
