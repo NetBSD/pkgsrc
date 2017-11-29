@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.52 2017/11/24 14:24:54 wiz Exp $
+$NetBSD: distinfo,v 1.53 2017/11/29 13:45:22 wiz Exp $
 
-SHA1 (Test-Simple-1.302113.tar.gz) = cb3a81bf8e93eff950d1bdfcef3ffbce2da96bb7
-RMD160 (Test-Simple-1.302113.tar.gz) = 04bcc5330b8d9a6e7f195ba09630c816b83705f0
-SHA512 (Test-Simple-1.302113.tar.gz) = 2e72f0d9e33e09339ec67ad8f99fb23aae333db1f3fc13f125e68ef17f1c109e6544c00c47a920b202507d37e603a606979544b0cb7d78ea8b8e32ced18cca83
-Size (Test-Simple-1.302113.tar.gz) = 286875 bytes
+SHA1 (Test-Simple-1.302118.tar.gz) = aa227a42a0d7bae8c882adbbd8f9894dbb2bb069
+RMD160 (Test-Simple-1.302118.tar.gz) = 1704bf05fe522e4a2a32dccfa15842acec22b61e
+SHA512 (Test-Simple-1.302118.tar.gz) = 61d64aa0c4047fab07bef16487f02a19c524f9de00b814ce5874db604aae8a8f6e2f51387bd2bae67750fdb6c6e567f3528bc3a0e00ebb58a45f9f97ff762a52
+Size (Test-Simple-1.302118.tar.gz) = 289176 bytes
