@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/11/06 12:22:42 adam Exp $
+# $NetBSD: Makefile,v 1.4 2017/11/29 09:14:22 adam Exp $
 
-DISTNAME=	notebook-5.2.1
+DISTNAME=	notebook-5.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/notebook/}
