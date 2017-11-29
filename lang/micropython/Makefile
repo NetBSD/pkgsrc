@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2017/11/29 15:13:31 hauke Exp $
+# $NetBSD: Makefile,v 1.4 2017/11/29 16:34:40 hauke Exp $
 
 DISTNAME=	micropython-1.9.2
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://micropython.org/resources/source/
 EXTRACT_SUFX=	.tar.xz
