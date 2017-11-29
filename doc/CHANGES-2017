@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5112 2017/11/29 14:09:10 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5113 2017/11/29 14:12:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7335,3 +7335,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/curl to 7.57.0 [wiz 2017-11-29]
 	Updated www/libmicrohttpd to 0.9.57 [wiz 2017-11-29]
 	Updated sysutils/mc to 4.8.20 [wiz 2017-11-29]
+	Updated net/py-portend to 2.2 [adam 2017-11-29]
+	Added devel/py-jaraco.classes version 1.4.3 [adam 2017-11-29]
+	Updated www/py-cheroot to 5.9.2 [adam 2017-11-29]
+	Updated www/py-cherrypy to 12.0.1 [adam 2017-11-29]
