@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5104 2017/11/29 13:43:12 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5105 2017/11/29 13:44:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7327,3 +7327,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Log-Any to 1.70.0 [wiz 2017-11-29]
 	Updated devel/p5-Moose to 2.2009 [wiz 2017-11-29]
 	Updated devel/p5-Mouse to 2.5.0 [wiz 2017-11-29]
+	Updated devel/p5-Params-ValidationCompiler to 0.26 [wiz 2017-11-29]
