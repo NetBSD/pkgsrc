@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/11/29 14:06:39 adam Exp $
+
+SHA1 (jaraco.classes-1.4.3.tar.gz) = 73fff5dee2f7090b90a7651021b8520e632c0240
+RMD160 (jaraco.classes-1.4.3.tar.gz) = e1250f172edd118861ccb69b59343b0c23719aa4
+SHA512 (jaraco.classes-1.4.3.tar.gz) = 69539e901454fd31452605e4fce3603c2033ecb97abd3c5c1b9123e1a062b2c4ff141d8ff0b0468126f59660ff990c3af751b8a07e7dac13b8f2c670723a04a6
+Size (jaraco.classes-1.4.3.tar.gz) = 6258 bytes
