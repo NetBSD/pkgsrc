@@ -1,0 +1,40 @@
+$NetBSD: patch-bootstrap,v 1.1 2017/11/30 15:41:17 adam Exp $
+
+Test compiler for unordered_map; Clang 5 with -std=gnu++1z can't include it properly.
+Use external libuv; the one included with cmake makes building fail.
+
+--- bootstrap.orig	2017-11-20 15:19:54.000000000 +0000
++++ bootstrap
+@@ -1056,6 +1056,7 @@ TMPFILE=`cmake_tmp_file`
+ echo '
+ #include <iostream>
+ #include <memory>
++#include <unordered_map>
+ 
+ #if __cplusplus < 201103L
+ #error "Compiler is not in a mode aware of C++11."
+@@ -1305,11 +1306,8 @@ objs=""
+ for a in ${CMAKE_CXX_SOURCES} ${CMAKE_C_SOURCES} ${LexerParser_CXX_SOURCES} ${LexerParser_C_SOURCES} ${KWSYS_CXX_SOURCES} ${KWSYS_C_SOURCES}; do
+   objs="${objs} ${a}.o"
+ done
+-for a in ${LIBUV_C_SOURCES}; do
+-  objs="${objs} uv-`cmake_obj ${a}`"
+-done
+ 
+-libs=""
++libs="-luv"
+ 
+ uv_c_flags=""
+ if ${cmake_system_mingw}; then
+@@ -1419,11 +1417,6 @@ for a in ${KWSYS_CXX_SOURCES}; do
+   echo "${a}.o : ${src} ${dep}" >> "${cmake_bootstrap_dir}/Makefile"
+   echo "	${cmake_cxx_compiler} ${cmake_cxx_flags} -DKWSYS_NAMESPACE=cmsys ${src_flags} -c ${src} -o ${a}.o" >> "${cmake_bootstrap_dir}/Makefile"
+ done
+-for a in ${LIBUV_C_SOURCES}; do
+-  src=`cmake_escape "${cmake_source_dir}/Utilities/cmlibuv/${a}"`
+-  echo "uv-`cmake_obj ${a}` : ${src} ${dep}" >> "${cmake_bootstrap_dir}/Makefile"
+-  echo "	${cmake_c_compiler} ${cmake_c_flags} ${uv_c_flags} -c ${src} -o uv-`cmake_obj ${a}`" >> "${cmake_bootstrap_dir}/Makefile"
+-done
+ echo '
+ rebuild_cache:
+ 	cd "${cmake_binary_dir}" && "${cmake_source_dir}/bootstrap"
