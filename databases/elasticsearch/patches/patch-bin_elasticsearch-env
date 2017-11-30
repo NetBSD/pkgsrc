@@ -1,0 +1,45 @@
+$NetBSD: patch-bin_elasticsearch-env,v 1.1 2017/11/30 17:50:30 fhajny Exp $
+
+Fix default paths.
+
+--- bin/elasticsearch-env.orig	2017-11-10 18:40:01.000000000 +0000
++++ bin/elasticsearch-env
+@@ -19,22 +19,17 @@ while [ -h "$SCRIPT" ] ; do
+   fi
+ done
+ 
+-# determine Elasticsearch home; to do this, we strip from the path until we find
+-# bin, and then strip bin (there is an assumption here that there is no nested
+-# directory under bin also named bin)
+-ES_HOME=`dirname "$SCRIPT"`
+-
+-# now make ES_HOME absolute
+-ES_HOME=`cd "$ES_HOME"; pwd`
+-
+-while [ "`basename "$ES_HOME"`" != "bin" ]; do
+-  ES_HOME=`dirname "$ES_HOME"`
+-done
+-ES_HOME=`dirname "$ES_HOME"`
++# hardcode home dir, because we can
++ES_HOME="@ES_BASEDIR@"
+ 
+ # now set the classpath
+ ES_CLASSPATH="$ES_HOME/lib/*"
+ 
++#set default JAVA_HOME
++if [ -z "$JAVA_HOME" ]; then
++  JAVA_HOME="@PKG_JAVA_HOME@"
++fi
++
+ # now set the path to java
+ if [ -x "$JAVA_HOME/bin/java" ]; then
+   JAVA="$JAVA_HOME/bin/java"
+@@ -67,7 +62,7 @@ fi
+ 
+ export HOSTNAME=$HOSTNAME
+ 
+-if [ -z "$ES_PATH_CONF" ]; then ES_PATH_CONF="$ES_HOME"/config; fi
++if [ -z "$ES_PATH_CONF" ]; then ES_PATH_CONF="@PKG_SYSCONFDIR@"; fi
+ 
+ if [ -z "$ES_PATH_CONF" ]; then
+   echo "ES_PATH_CONF must be set to the configuration path"
