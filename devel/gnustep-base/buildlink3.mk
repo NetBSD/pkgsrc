@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2017/09/18 09:52:57 maya Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2017/11/30 16:45:01 adam Exp $
 
 BUILDLINK_TREE+=	gnustep-base
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnustep-base
 GNUSTEP_BASE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnustep-base+=	gnustep-base>=1.24.0
-BUILDLINK_ABI_DEPENDS.gnustep-base+=	gnustep-base>=1.24.0nb16
+BUILDLINK_ABI_DEPENDS.gnustep-base+=	gnustep-base>=1.24.0nb17
 BUILDLINK_PKGSRCDIR.gnustep-base?=	../../devel/gnustep-base
 
 .include "../../devel/gnustep-make/buildlink3.mk"

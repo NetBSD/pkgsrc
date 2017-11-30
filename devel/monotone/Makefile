@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.103 2017/09/18 09:53:17 maya Exp $
+# $NetBSD: Makefile,v 1.104 2017/11/30 16:45:21 adam Exp $
 
 DISTNAME=	monotone-1.1
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	devel scm
 MASTER_SITES=	http://www.monotone.ca/downloads/1.1/
 EXTRACT_SUFX=	.tar.bz2
