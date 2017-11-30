@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/10/06 08:37:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2017/11/30 11:16:01 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -324,6 +324,24 @@ ${PYSITELIB}/awscli/customizations/generatecliskeleton.pyo
 ${PYSITELIB}/awscli/customizations/globalargs.py
 ${PYSITELIB}/awscli/customizations/globalargs.pyc
 ${PYSITELIB}/awscli/customizations/globalargs.pyo
+${PYSITELIB}/awscli/customizations/history/__init__.py
+${PYSITELIB}/awscli/customizations/history/__init__.pyc
+${PYSITELIB}/awscli/customizations/history/__init__.pyo
+${PYSITELIB}/awscli/customizations/history/commands.py
+${PYSITELIB}/awscli/customizations/history/commands.pyc
+${PYSITELIB}/awscli/customizations/history/commands.pyo
+${PYSITELIB}/awscli/customizations/history/constants.py
+${PYSITELIB}/awscli/customizations/history/constants.pyc
+${PYSITELIB}/awscli/customizations/history/constants.pyo
+${PYSITELIB}/awscli/customizations/history/db.py
+${PYSITELIB}/awscli/customizations/history/db.pyc
+${PYSITELIB}/awscli/customizations/history/db.pyo
+${PYSITELIB}/awscli/customizations/history/list.py
+${PYSITELIB}/awscli/customizations/history/list.pyc
+${PYSITELIB}/awscli/customizations/history/list.pyo
+${PYSITELIB}/awscli/customizations/history/show.py
+${PYSITELIB}/awscli/customizations/history/show.pyc
+${PYSITELIB}/awscli/customizations/history/show.pyo
 ${PYSITELIB}/awscli/customizations/iamvirtmfa.py
 ${PYSITELIB}/awscli/customizations/iamvirtmfa.pyc
 ${PYSITELIB}/awscli/customizations/iamvirtmfa.pyo
