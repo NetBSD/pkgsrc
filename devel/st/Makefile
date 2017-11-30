@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/04/28 13:49:04 gson Exp $
+# $NetBSD: Makefile,v 1.19 2017/11/30 10:58:14 gson Exp $
 #
 
 DISTNAME=	st-1.9
@@ -25,7 +25,7 @@ post-extract:
 
 do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-		${WRKSRC}/libst.la ${DESTDIR}${PREFIX}/lib
+		${WRKSRC}/target/libst.la ${DESTDIR}${PREFIX}/lib
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
 		${WRKSRC}/examples/lookupdns ${DESTDIR}${PREFIX}/bin/st-lookupdns
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
