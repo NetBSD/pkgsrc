@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/11/30 15:53:19 wiz Exp $
+
+SHA1 (xf86-video-vboxvideo-1.0.0.tar.bz2) = 219e0efdcc5afbd048aed4b780833765f01624bf
+RMD160 (xf86-video-vboxvideo-1.0.0.tar.bz2) = f1d698214ecfebfa82027a586ab3d9fb1101ca9f
+SHA512 (xf86-video-vboxvideo-1.0.0.tar.bz2) = 1a9856a966495a3a291592ee3113ed5ee83e3ef530bf37d91605206a62f641726511ad48ca79b8a3e94f601f8cf15341255b0c7d14f5c8acf985b84f965d8dfc
+Size (xf86-video-vboxvideo-1.0.0.tar.bz2) = 353342 bytes
