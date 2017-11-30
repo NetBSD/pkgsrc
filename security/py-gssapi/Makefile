@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/10/30 18:17:13 adam Exp $
+# $NetBSD: Makefile,v 1.6 2017/11/30 08:07:33 adam Exp $
 
-DISTNAME=	gssapi-1.2.0
+DISTNAME=	gssapi-1.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	security
+CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gssapi/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +11,7 @@ COMMENT=	Low-level and high-level wrappers around GSSAPI C libraries
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-six>=1.4.0:../../lang/py-six
 
 .include "../../lang/python/distutils.mk"
 
