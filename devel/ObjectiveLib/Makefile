@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2017/09/18 09:53:15 maya Exp $
+# $NetBSD: Makefile,v 1.24 2017/11/30 16:45:19 adam Exp $
 #
 
 PKGNAME=	ObjectiveLib-1.0.0
 DISTNAME=	objectivelib-1.0.0
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=objectivelib/}
 

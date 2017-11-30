@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2017/09/18 09:53:22 maya Exp $
+# $NetBSD: Makefile,v 1.70 2017/11/30 16:45:26 adam Exp $
 
 DISTNAME=	cheese-2.26.3
-PKGREVISION=	52
+PKGREVISION=	53
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/cheese/2.26/}
 
