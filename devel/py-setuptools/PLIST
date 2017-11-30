@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2017/11/28 14:09:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.43 2017/11/30 07:52:55 adam Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
@@ -164,6 +164,9 @@ ${PYSITELIB}/setuptools/extension.pyo
 ${PYSITELIB}/setuptools/extern/__init__.py
 ${PYSITELIB}/setuptools/extern/__init__.pyc
 ${PYSITELIB}/setuptools/extern/__init__.pyo
+${PYSITELIB}/setuptools/glibc.py
+${PYSITELIB}/setuptools/glibc.pyc
+${PYSITELIB}/setuptools/glibc.pyo
 ${PYSITELIB}/setuptools/glob.py
 ${PYSITELIB}/setuptools/glob.pyc
 ${PYSITELIB}/setuptools/glob.pyo
@@ -188,6 +191,9 @@ ${PYSITELIB}/setuptools/namespaces.pyo
 ${PYSITELIB}/setuptools/package_index.py
 ${PYSITELIB}/setuptools/package_index.pyc
 ${PYSITELIB}/setuptools/package_index.pyo
+${PYSITELIB}/setuptools/pep425tags.py
+${PYSITELIB}/setuptools/pep425tags.pyc
+${PYSITELIB}/setuptools/pep425tags.pyo
 ${PYSITELIB}/setuptools/py27compat.py
 ${PYSITELIB}/setuptools/py27compat.pyc
 ${PYSITELIB}/setuptools/py27compat.pyo
@@ -217,6 +223,9 @@ ${PYSITELIB}/setuptools/unicode_utils.pyo
 ${PYSITELIB}/setuptools/version.py
 ${PYSITELIB}/setuptools/version.pyc
 ${PYSITELIB}/setuptools/version.pyo
+${PYSITELIB}/setuptools/wheel.py
+${PYSITELIB}/setuptools/wheel.pyc
+${PYSITELIB}/setuptools/wheel.pyo
 ${PYSITELIB}/setuptools/windows_support.py
 ${PYSITELIB}/setuptools/windows_support.pyc
 ${PYSITELIB}/setuptools/windows_support.pyo
