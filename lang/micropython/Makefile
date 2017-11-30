@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2017/11/29 16:34:40 hauke Exp $
+# $NetBSD: Makefile,v 1.5 2017/11/30 14:41:30 hauke Exp $
 
 DISTNAME=	micropython-1.9.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://micropython.org/resources/source/
 EXTRACT_SUFX=	.tar.xz
@@ -26,6 +26,12 @@ MAKE_ENV+=	MICROPY_CPYTHON3=${PYTHONBIN:Q}
 
 REPLACE_PYTHON+=	tools/make-frozen.py
 REPLACE_PYTHON+=	tests/run-tests
+
+SUBST_CLASSES+=                 fix-paths
+SUBST_STAGE.fix-paths=          pre-configure
+SUBST_MESSAGE.fix-paths=        Fixing absolute paths.
+SUBST_FILES.fix-paths=          unix/main.c
+SUBST_SED.fix-paths=            -e 's,%PREFIX%,${PREFIX},g'
 
 pre-configure:
 	cd ${WRKSRC}/lib/axtls && ${GMAKE} clean
