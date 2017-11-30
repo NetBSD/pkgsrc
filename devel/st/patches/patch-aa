@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2017/11/29 16:52:44 gson Exp $
+$NetBSD: patch-aa,v 1.8 2017/11/30 10:58:14 gson Exp $
 
 - honor pkgsrc CC, AR, LD, RANLIB (CC matters for libtool, the others less so)
 - use libtool
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.7 2017/11/29 16:52:44 gson Exp $
 
 --- Makefile.orig	2009-10-01 22:55:03.000000000 +0000
 +++ Makefile
-@@ -57,10 +57,10 @@ VERSION     = 1.9
+@@ -57,17 +57,19 @@ VERSION     = 1.9
  # possible compilation options.
  ##########################
  
@@ -21,7 +21,35 @@ $NetBSD: patch-aa,v 1.7 2017/11/29 16:52:44 gson Exp $
  LN          = ln
  
  SHELL       = /bin/sh
-@@ -181,7 +181,7 @@ OTHER_FLAGS = -fullwarn
+ ECHO        = /bin/echo
+ 
+ BUILD       = DBG
+-TARGETDIR   = $(OS)_$(shell uname -r)_$(BUILD)
++# Use a fixed target directory so the pkgsrc top-level Makefile
++# can find the files at the install stage
++TARGETDIR  = target
+ 
+ DEFINES     = -D$(OS)
+ CFLAGS      =
+@@ -104,7 +106,7 @@ TARGETS     = aix-debug aix-optimized
+ 
+ ifeq ($(OS), AIX)
+ AIX_VERSION = $(shell uname -v).$(shell uname -r)
+-TARGETDIR   = $(OS)_$(AIX_VERSION)_$(BUILD)
++#TARGETDIR   = $(OS)_$(AIX_VERSION)_$(BUILD)
+ CC          = xlC
+ STATIC_ONLY = yes
+ ifeq ($(BUILD), OPT)
+@@ -116,7 +118,7 @@ endif
+ endif
+ 
+ ifeq ($(OS), CYGWIN)
+-TARGETDIR   = $(OS)_$(BUILD)
++#TARGETDIR   = $(OS)_$(BUILD)
+ CC          = gcc
+ LD          = gcc
+ DSO_SUFFIX  = dll
+@@ -181,7 +183,7 @@ OTHER_FLAGS = -fullwarn
  endif
  
  ifeq ($(OS), LINUX)
@@ -30,21 +58,33 @@ $NetBSD: patch-aa,v 1.7 2017/11/29 16:52:44 gson Exp $
  SFLAGS      = -fPIC
  LDFLAGS     = -shared -soname=$(SONAME) -lc
  OTHER_FLAGS = -Wall
-@@ -196,6 +196,13 @@ LDFLAGS     = -shared -soname=$(SONAME)
- OTHER_FLAGS = -Wall
- endif
- 
-+ifeq ($(OS), NETBSD)
-+OTHER_FLAGS = -Wall
-+TARGETDIR   = .
-+# The following is a lie; we do build dynamic libraries
-+STATIC_ONLY = yes
-+endif
-+
- ifeq ($(OS), OPENBSD)
+@@ -194,6 +196,8 @@ ifeq ($(OS), NETBSD)
  SFLAGS      = -fPIC
  LDFLAGS     = -shared -soname=$(SONAME) -lc
-@@ -285,15 +292,15 @@ endif
+ OTHER_FLAGS = -Wall
++# The following is a lie; we do build dynamic libraries
++STATIC_ONLY = yes
+ endif
+ 
+ ifeq ($(OS), OPENBSD)
+@@ -211,7 +215,7 @@ LDFLAGS     = -shared -all -expect_unres
+ endif
+ 
+ ifeq (SOLARIS, $(findstring SOLARIS, $(OS)))
+-TARGETDIR   = $(OS)_$(shell uname -r | sed 's/^5/2/')_$(BUILD)
++#TARGETDIR   = $(OS)_$(shell uname -r | sed 's/^5/2/')_$(BUILD)
+ CC          = gcc
+ LD          = gcc
+ RANLIB      = true
+@@ -228,7 +232,6 @@ endif
+ # End of platform section.
+ ##########################
+ 
+-
+ ifeq ($(BUILD), OPT)
+ OTHER_FLAGS += -O
+ else
+@@ -285,15 +288,15 @@ endif
  
  CFLAGS      += $(DEFINES) $(OTHER_FLAGS) $(EXTRA_CFLAGS)
  
@@ -67,7 +107,7 @@ $NetBSD: patch-aa,v 1.7 2017/11/29 16:52:44 gson Exp $
  DLIBRARY    = $(TARGETDIR)/libst.$(DSO_SUFFIX).$(VERSION)
  EXAMPLES    = examples
  
-@@ -344,12 +351,11 @@ $(TARGETDIR):
+@@ -344,12 +347,11 @@ $(TARGETDIR):
  	if [ ! -d $(TARGETDIR) ]; then mkdir $(TARGETDIR); fi
  
  $(SLIBRARY): $(OBJS)
@@ -82,7 +122,7 @@ $NetBSD: patch-aa,v 1.7 2017/11/29 16:52:44 gson Exp $
  	if test "$(LINKNAME)"; then                             \
  		cd $(TARGETDIR);				\
  		rm -f $(SONAME) $(LINKNAME);			\
-@@ -361,11 +367,11 @@ $(HEADER): public.h
+@@ -361,11 +363,11 @@ $(HEADER): public.h
  	rm -f $@
  	cp public.h $@
  
