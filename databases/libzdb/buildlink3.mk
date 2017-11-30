@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2017/09/18 09:52:57 maya Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2017/11/30 16:45:01 adam Exp $
 
 BUILDLINK_TREE+=	libzdb
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libzdb
 LIBZDB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libzdb+=	libzdb>=2.6
-BUILDLINK_ABI_DEPENDS.libzdb?=	libzdb>=3.1nb7
+BUILDLINK_ABI_DEPENDS.libzdb?=	libzdb>=3.1nb8
 BUILDLINK_PKGSRCDIR.libzdb?=	../../databases/libzdb
 
 pkgbase := libzdb

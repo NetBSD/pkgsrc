@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2017/11/15 08:23:52 adam Exp $
+# $NetBSD: Makefile,v 1.14 2017/11/30 16:45:18 adam Exp $
 
 DISTNAME=	apsw-${GITHUB_RELEASE}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-r1//}
+PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rogerbinns/}
 GITHUB_PROJECT=	apsw
