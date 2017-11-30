@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5114 2017/11/29 15:14:07 hauke Exp $
+$NetBSD: CHANGES-2017,v 1.5115 2017/11/30 07:50:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7340,3 +7340,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-cheroot to 5.9.2 [adam 2017-11-29]
 	Updated www/py-cherrypy to 12.0.1 [adam 2017-11-29]
 	Updated lang/micropython to 1.9.2 [hauke 2017-11-29]
+	Updated multimedia/x265 to 2.6 [adam 2017-11-30]
+	Updated devel/git to 2.15.1 [adam 2017-11-30]
