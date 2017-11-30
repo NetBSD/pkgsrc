@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2017/11/29 16:52:44 gson Exp $
+$NetBSD: distinfo,v 1.12 2017/11/30 10:05:34 gson Exp $
 
 SHA1 (st-1.9.tar.gz) = 316597c082743f0e32391ac84d435c428b76bf8b
 RMD160 (st-1.9.tar.gz) = 5daaa5a81f5cdc96465115e8093f702a2154844a
@@ -6,4 +6,5 @@ SHA512 (st-1.9.tar.gz) = 66a63076993b36f52cad472dd39cfb0ed256c75153ac06573b062ff
 Size (st-1.9.tar.gz) = 108756 bytes
 SHA1 (patch-aa) = 106df4696363fcdc26a43b305fffe8c68dd6bbeb
 SHA1 (patch-ab) = 2bcc3365b0a74b5254c74febebd58ce95ee4cbc0
+SHA1 (patch-examples_res.c) = 963192e7ee762c4eee21a23c65bd7a1e90523ff5
 SHA1 (patch-md_h) = 954e32e14277d6875c0fe60d51d8c374c88c6c50
