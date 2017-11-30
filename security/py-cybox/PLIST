@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/10/10 07:30:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/11/30 08:16:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -517,6 +517,9 @@ ${PYSITELIB}/cybox/objects/socket_address_object.pyo
 ${PYSITELIB}/cybox/objects/system_object.py
 ${PYSITELIB}/cybox/objects/system_object.pyc
 ${PYSITELIB}/cybox/objects/system_object.pyo
+${PYSITELIB}/cybox/objects/unix_user_account_object.py
+${PYSITELIB}/cybox/objects/unix_user_account_object.pyc
+${PYSITELIB}/cybox/objects/unix_user_account_object.pyo
 ${PYSITELIB}/cybox/objects/uri_object.py
 ${PYSITELIB}/cybox/objects/uri_object.pyc
 ${PYSITELIB}/cybox/objects/uri_object.pyo
@@ -805,6 +808,9 @@ ${PYSITELIB}/cybox/test/objects/network_subnet_test.pyo
 ${PYSITELIB}/cybox/test/objects/obj_metadata_test.py
 ${PYSITELIB}/cybox/test/objects/obj_metadata_test.pyc
 ${PYSITELIB}/cybox/test/objects/obj_metadata_test.pyo
+${PYSITELIB}/cybox/test/objects/pdf_file_test.py
+${PYSITELIB}/cybox/test/objects/pdf_file_test.pyc
+${PYSITELIB}/cybox/test/objects/pdf_file_test.pyo
 ${PYSITELIB}/cybox/test/objects/pipe_test.py
 ${PYSITELIB}/cybox/test/objects/pipe_test.pyc
 ${PYSITELIB}/cybox/test/objects/pipe_test.pyo
@@ -823,6 +829,9 @@ ${PYSITELIB}/cybox/test/objects/sms_message_test.pyo
 ${PYSITELIB}/cybox/test/objects/socket_address_test.py
 ${PYSITELIB}/cybox/test/objects/socket_address_test.pyc
 ${PYSITELIB}/cybox/test/objects/socket_address_test.pyo
+${PYSITELIB}/cybox/test/objects/unix_user_account_test.py
+${PYSITELIB}/cybox/test/objects/unix_user_account_test.pyc
+${PYSITELIB}/cybox/test/objects/unix_user_account_test.pyo
 ${PYSITELIB}/cybox/test/objects/uri_test.py
 ${PYSITELIB}/cybox/test/objects/uri_test.pyc
 ${PYSITELIB}/cybox/test/objects/uri_test.pyo
