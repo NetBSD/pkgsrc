@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2017/06/14 09:30:43 maya Exp $
+# $NetBSD: Makefile,v 1.42 2017/11/30 15:55:26 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.19.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 DISTFILES=	# empty
@@ -84,6 +84,7 @@ DEPENDS+=	xf86-video-tga-[0-9]*:../../x11/xf86-video-tga
 DEPENDS+=	xf86-video-trident-[0-9]*:../../x11/xf86-video-trident
 DEPENDS+=	xf86-video-tseng-[0-9]*:../../x11/xf86-video-tseng
 DEPENDS+=	xf86-video-vesa-[0-9]*:../../x11/xf86-video-vesa
+DEPENDS+=	xf86-video-vboxvideo-[0-9]*:../../x11/xf86-video-vboxvideo
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 DEPENDS+=	xf86-video-vmware-[0-9]*:../../x11/xf86-video-vmware
 DEPENDS+=	xf86-video-voodoo-[0-9]*:../../x11/xf86-video-voodoo
