@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.80 2017/09/18 09:53:05 maya Exp $
+# $NetBSD: buildlink3.mk,v 1.81 2017/11/30 16:45:09 adam Exp $
 
 BUILDLINK_TREE+=	epiphany
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	epiphany
 EPIPHANY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.epiphany+=		epiphany>=2.28
-BUILDLINK_ABI_DEPENDS.epiphany+=		epiphany>=2.30.6nb54
+BUILDLINK_ABI_DEPENDS.epiphany+=		epiphany>=2.30.6nb56
 BUILDLINK_PKGSRCDIR.epiphany?=		../../www/epiphany
 
 .include "../../mk/bsd.fast.prefs.mk"

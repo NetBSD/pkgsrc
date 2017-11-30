@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2017/09/18 09:53:32 maya Exp $
+# $NetBSD: Makefile,v 1.77 2017/11/30 16:45:36 adam Exp $
 
 DISTNAME=	tin-2.2.1
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/stable/
 MASTER_SITES+=	ftp://ftp.funet.fi/pub/unix/news/tin-unoff/

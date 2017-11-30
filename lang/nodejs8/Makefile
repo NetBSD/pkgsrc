@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/11/08 17:44:02 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2017/11/30 16:45:28 adam Exp $
 
 DISTNAME=	node-v8.9.1
 
@@ -7,6 +7,7 @@ GCC_REQD+=	4.9.4
 
 CONFIGURE_ARGS+=	--with-intl=system-icu
 
+PKGREVISION= 1
 .include "../../lang/nodejs/Makefile.common"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
