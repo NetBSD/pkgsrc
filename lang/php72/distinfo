@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2017/11/15 11:01:31 jdolecek Exp $
+$NetBSD: distinfo,v 1.3 2017/11/30 20:45:46 jdolecek Exp $
 
-SHA1 (php-7.2.0RC6.tar.bz2) = dfc81aa8965ec73f3d24725d207ad9f6b362a238
-RMD160 (php-7.2.0RC6.tar.bz2) = 8b4dac9c5247b3d63b8d7a785bb5015555f37fee
-SHA512 (php-7.2.0RC6.tar.bz2) = 35cf7e4aaf461c360885aaa4bb7997ae60eb7d8a8134c8ab4c42412576a9c36b56f1acc24358be3e7722142a10f330719907f254d6bf174fb22a6d61d3fe3fde
-Size (php-7.2.0RC6.tar.bz2) = 14953026 bytes
+SHA1 (php-7.2.0.tar.bz2) = b15bd8fef8d5b99b993784e9c2254ab82f616c64
+RMD160 (php-7.2.0.tar.bz2) = a39b7057bcb93b656fda39008ee4743c4f7f2a0f
+SHA512 (php-7.2.0.tar.bz2) = f4b4d97a0b662cab9ed47a549453ad522da45fa5aa34e3ece49a8b85b49b7a5921d2d7cdd0a6766b09d63c4f7fd022502222656ce112fc80f85e8f2409c5c826
+Size (php-7.2.0.tar.bz2) = 14594486 bytes
 SHA1 (patch-acinclude.m4) = b682280fd89950c082c2226bdb7364b0dc475bad
 SHA1 (patch-configure) = a9d48535baf94415ca49ccda43e196010969ea9e
 SHA1 (patch-ext_curl_config.m4) = f583f90a499d4f0bdb3d21fa8f129a30d2fa6d6c

@@ -13,6 +13,7 @@ PHP 7.2.x builds upon 7.1.x, adding new features:
 * Object return type declarations
 * Parameter Type Widening
 * Trailing commas in list syntax
+* HashContext as Object
 * Argon2 in password hash
 * Libsodium as part of PHP Core
 * Deprecated: __autoload, $php_errormsg, create_function(),
