@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/03 21:11:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/11/30 11:11:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/s3transfer/__init__.py
 ${PYSITELIB}/s3transfer/__init__.pyc
 ${PYSITELIB}/s3transfer/__init__.pyo
+${PYSITELIB}/s3transfer/bandwidth.py
+${PYSITELIB}/s3transfer/bandwidth.pyc
+${PYSITELIB}/s3transfer/bandwidth.pyo
 ${PYSITELIB}/s3transfer/compat.py
 ${PYSITELIB}/s3transfer/compat.pyc
 ${PYSITELIB}/s3transfer/compat.pyo
