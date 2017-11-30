@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5119 2017/11/30 15:53:59 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5120 2017/11/30 15:55:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7354,3 +7354,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-s3transfer to 0.1.12 [adam 2017-11-30]
 	Updated net/py-awscli to 1.14.1 [adam 2017-11-30]
 	Added x11/xf86-video-vboxvideo version 1.0.0 [wiz 2017-11-30]
+	Updated meta-pkgs/modular-xorg-drivers to 1.19.0nb4 [wiz 2017-11-30]
