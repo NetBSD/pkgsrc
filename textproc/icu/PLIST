@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2017/04/22 20:11:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2017/11/30 16:03:18 adam Exp $
 bin/derb
 bin/genbrk
 bin/gencfu
@@ -64,6 +64,8 @@ include/unicode/messagepattern.h
 include/unicode/msgfmt.h
 include/unicode/normalizer2.h
 include/unicode/normlzr.h
+include/unicode/nounit.h
+include/unicode/numberformatter.h
 include/unicode/numfmt.h
 include/unicode/numsys.h
 include/unicode/parseerr.h
@@ -91,6 +93,7 @@ include/unicode/smpdtfmt.h
 include/unicode/sortkey.h
 include/unicode/std_string.h
 include/unicode/strenum.h
+include/unicode/stringoptions.h
 include/unicode/stringpiece.h
 include/unicode/stringtriebuilder.h
 include/unicode/stsearch.h
@@ -192,28 +195,28 @@ lib/icu/current
 lib/icu/pkgdata.inc
 lib/libicudata.a
 lib/libicudata.so
-lib/libicudata.so.59
 lib/libicudata.so.${PKGVERSION}
+lib/libicudata.so.60
 lib/libicui18n.a
 lib/libicui18n.so
-lib/libicui18n.so.59
 lib/libicui18n.so.${PKGVERSION}
+lib/libicui18n.so.60
 lib/libicuio.a
 lib/libicuio.so
-lib/libicuio.so.59
 lib/libicuio.so.${PKGVERSION}
+lib/libicuio.so.60
 lib/libicutest.a
 lib/libicutest.so
-lib/libicutest.so.59
 lib/libicutest.so.${PKGVERSION}
+lib/libicutest.so.60
 lib/libicutu.a
 lib/libicutu.so
-lib/libicutu.so.59
 lib/libicutu.so.${PKGVERSION}
+lib/libicutu.so.60
 lib/libicuuc.a
 lib/libicuuc.so
-lib/libicuuc.so.59
 lib/libicuuc.so.${PKGVERSION}
+lib/libicuuc.so.60
 lib/pkgconfig/icu-i18n.pc
 lib/pkgconfig/icu-io.pc
 lib/pkgconfig/icu-uc.pc
