@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5121 2017/11/30 16:04:13 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5122 2017/11/30 20:52:56 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7357,3 +7357,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated meta-pkgs/modular-xorg-drivers to 1.19.0nb4 [wiz 2017-11-30]
 	Updated devel/cmake to 3.10.0 [adam 2017-11-30]
 	Updated textproc/icu to 60.1 [adam 2017-11-30]
+	Updated lang/php72 to 7.2.0 [jdolecek 2017-11-30]
