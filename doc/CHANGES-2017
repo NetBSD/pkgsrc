@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5116 2017/11/30 08:08:55 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5117 2017/11/30 08:26:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7346,3 +7346,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-aiohttp to 2.3.5 [adam 2017-11-30]
 	Updated www/py-asgiref to 2.0.1 [adam 2017-11-30]
 	Updated security/py-gssapi to 1.2.3 [adam 2017-11-30]
+	Updated security/py-cybox to 2.1.0.16 [adam 2017-11-30]
+	Updated devel/py-test-timeout to 1.2.1 [adam 2017-11-30]
+	Updated security/py-cryptography_vectors to 2.1.4 [adam 2017-11-30]
+	Updated security/py-cryptography to 2.1.4 [adam 2017-11-30]
