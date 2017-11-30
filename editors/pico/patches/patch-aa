@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.17 2009/11/26 00:10:42 joerg Exp $
+$NetBSD: patch-aa,v 1.18 2017/11/30 15:16:25 wiz Exp $
 
---- pico/makefile.neb.orig	2001-10-24 00:19:07.000000000 +0200
-+++ pico/makefile.neb	2003-07-28 14:04:16.000000000 +0200
-@@ -32,16 +32,12 @@
+--- pico/makefile.neb.orig	2001-10-23 22:18:36.000000000 +0000
++++ pico/makefile.neb
+@@ -32,16 +32,12 @@ LN=          ln -s
  MAKE=        make
  OPTIMIZE=    # -O
  PROFILE=     # -pg
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.17 2009/11/26 00:10:42 joerg Exp $
  LIBS=		$(EXTRALDFLAGS) -ltermcap
  
  OFILES=		attach.o basic.o bind.o browse.o buffer.o \
-@@ -55,17 +51,17 @@
+@@ -55,17 +51,17 @@ HFILES=		headers.h estruct.h edef.h efun
  # dependencies for the Unix versions of pico and libpico.a
  #
  all:		pico pilot
@@ -29,17 +29,17 @@ $NetBSD: patch-aa,v 1.17 2009/11/26 00:10:42 joerg Exp $
  
  pico:		main.o
 -		$(CC) $(CFLAGS) main.o libpico.a $(LIBS) -o pico
-+		$(LDCC) $(CFLAGS) main.o libpico.la $(LIBS) -o pico
++		$(LDCC) $(LDFLAGS) $(CFLAGS) main.o libpico.la $(LIBS) -o pico
  
  pilot:		pilot.o
 -		$(CC) $(CFLAGS) pilot.o libpico.a $(LIBS) -o pilot
-+		$(LDCC) $(CFLAGS) pilot.o libpico.la $(LIBS) -o pilot
++		$(LDCC) $(LDFLAGS) $(CFLAGS) pilot.o libpico.la $(LIBS) -o pilot
  
 -libpico.a:	$(OFILES)
 -		$(LIBCMD) $(LIBARGS) libpico.a $(OFILES)
 -		$(RANLIB) libpico.a
 +libpico.la:	$(OFILES)
-+		$(LDCC) -o libpico.la $(OFILES:.o=.lo) -rpath $(PREFIX)/lib \
++		$(LDCC) $(LDFLAGS) -o libpico.la $(OFILES:.o=.lo) -rpath $(PREFIX)/lib \
 +			-version-info 6:0
  
  clean:
