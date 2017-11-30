@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/09/04 18:08:13 adam Exp $
+# $NetBSD: Makefile,v 1.3 2017/11/30 11:11:38 adam Exp $
 
-DISTNAME=	s3transfer-0.1.11
+DISTNAME=	s3transfer-0.1.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/s3transfer/}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-botocore>=1.3.0:../../net/py-botocore
 DEPENDS+=	${PYPKGPREFIX}-futures>=2.2.0:../../devel/py-futures
 .endif
 
-USE_LANGUAGES=		# none
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
