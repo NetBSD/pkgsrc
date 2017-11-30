@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5123 2017/11/30 22:19:48 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.5124 2017/11/30 22:30:31 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7359,3 +7359,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/icu to 60.1 [adam 2017-11-30]
 	Updated lang/php72 to 7.2.0 [jdolecek 2017-11-30]
 	Updated sysutils/rsyslog to 8.31.0 [fhajny 2017-11-30]
+	Updated databases/redis to 4.0.4 [fhajny 2017-11-30]
