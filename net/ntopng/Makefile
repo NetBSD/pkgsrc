@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2017/11/06 13:30:12 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/11/30 16:45:34 adam Exp $
 
 DISTNAME=	ntopng-2.4-stable
 PKGNAME=	ntopng-2.4
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ntop/}
 

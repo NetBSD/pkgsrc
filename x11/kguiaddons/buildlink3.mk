@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2017/09/18 09:53:07 maya Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2017/11/30 16:45:11 adam Exp $
 
 BUILDLINK_TREE+=	kguiaddons
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kguiaddons
 KGUIADDONS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kguiaddons+=	kguiaddons>=5.18.0
-BUILDLINK_ABI_DEPENDS.kguiaddons?=	kguiaddons>=5.25.0nb5
+BUILDLINK_ABI_DEPENDS.kguiaddons?=	kguiaddons>=5.25.0nb6
 BUILDLINK_PKGSRCDIR.kguiaddons?=	../../x11/kguiaddons
 
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"

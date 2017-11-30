@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2017/09/18 09:52:57 maya Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2017/11/30 16:45:01 adam Exp $
 
 BUILDLINK_TREE+=	sqlite3
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	sqlite3
 SQLITE3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.0.8
-BUILDLINK_ABI_DEPENDS.sqlite3+=	sqlite3>=3.20.1nb1
+BUILDLINK_ABI_DEPENDS.sqlite3+=	sqlite3>=3.21.0nb1
 BUILDLINK_PKGSRCDIR.sqlite3?=	../../databases/sqlite3
 
 pkgbase:= sqlite3
