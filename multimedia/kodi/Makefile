@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2017/11/23 17:20:05 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2017/11/30 16:45:31 adam Exp $
 
 PKGNAME=	kodi-15.2
-PKGREVISION=	19
+PKGREVISION=	20
 DISTNAME=	15.2-Isengard
 CATEGORIES=	multimedia
 MASTER_SITES=	http://mirrors.kodi.tv/releases/source/
