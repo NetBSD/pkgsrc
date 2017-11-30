@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2017/11/03 10:36:12 adam Exp $
+# $NetBSD: Makefile,v 1.63 2017/11/30 08:23:27 adam Exp $
 
-DISTNAME=	cryptography-2.1.3
+DISTNAME=	cryptography-2.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cryptography/}
