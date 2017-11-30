@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2017/10/10 07:30:58 adam Exp $
+# $NetBSD: Makefile,v 1.7 2017/11/30 08:16:19 adam Exp $
 
-DISTNAME=	python-cybox-2.1.0.14
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
+DISTNAME=	cybox-2.1.0.16
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CybOXProject/}
 
@@ -18,7 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=2.2.3:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-mixbox>=1.0.2:../../devel/py-mixbox
 
 USE_LANGUAGES=	# none
-EGG_NAME=	${DISTNAME:S/^python-//}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
