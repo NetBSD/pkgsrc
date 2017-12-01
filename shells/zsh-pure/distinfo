@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/12/01 01:10:40 minskim Exp $
+
+SHA1 (pure-1.6.0.tar.gz) = fdcae56272b485cb0c00e1046a665703124c5026
+RMD160 (pure-1.6.0.tar.gz) = 54f1c0dd584723b46c3d0f54d85fa90baa284e3f
+SHA512 (pure-1.6.0.tar.gz) = 99235d53e59503053cb06f0fb52e9d270990c18196912c93e6714255c456f760c988eb8a6a5bdf34002d1159ab1294e78a3c74ddcee2ac81cef9822fdd219c26
+Size (pure-1.6.0.tar.gz) = 102322 bytes
