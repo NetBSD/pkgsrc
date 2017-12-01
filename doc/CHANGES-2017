@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5130 2017/12/01 10:35:45 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5131 2017/12/01 11:26:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7372,3 +7372,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-zmq to 16.0.3 [adam 2017-12-01]
 	Updated devel/py-futures to 3.2.0 [adam 2017-12-01]
 	Updated finance/py-ofxparse to 0.17 [adam 2017-12-01]
+	Updated audio/faac to 1.29.9.2 [adam 2017-12-01]
+	Updated audio/faad2 to 2.8.6 [adam 2017-12-01]
+	Updated audio/xmms-faad to 2.8.6 [adam 2017-12-01]
