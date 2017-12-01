@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5132 2017/12/01 12:10:40 wen Exp $
+$NetBSD: CHANGES-2017,v 1.5133 2017/12/01 19:24:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7376,3 +7376,10 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/faad2 to 2.8.6 [adam 2017-12-01]
 	Updated audio/xmms-faad to 2.8.6 [adam 2017-12-01]
 	Updated textproc/p5-Text-Xslate to 3.5.1 [wen 2017-12-01]
+	Updated lang/llvm to 5.0.0 [adam 2017-12-01]
+	Updated lang/clang to 5.0.0 [adam 2017-12-01]
+	Updated lang/clang-static-analyzer to 5.0.0 [adam 2017-12-01]
+	Updated lang/libunwind to 5.0.0 [adam 2017-12-01]
+	Updated devel/polly to 5.0.0 [adam 2017-12-01]
+	Updated devel/lldb to 5.0.0 [adam 2017-12-01]
+	Updated lang/libLLVM to 5.0.0 [adam 2017-12-01]
