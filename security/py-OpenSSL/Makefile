@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2017/11/23 10:12:33 adam Exp $
+# $NetBSD: Makefile,v 1.50 2017/12/01 08:53:17 adam Exp $
 
-DISTNAME=	pyOpenSSL-17.4.0
+DISTNAME=	pyOpenSSL-17.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyOpenSSL/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://pyopenssl.org/
 COMMENT=	Python interface to the OpenSSL library
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=0.3:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.1.4:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
 # TEST_DEPENDS
 BUILD_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
@@ -19,7 +19,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=3.0.1:../../devel/py-test
 
 # https://github.com/pyca/pyopenssl/issues/656
 do-test:
-	cd ${WRKSRC} && PYTHONPATH=src py.test-${PYVERSSUFFIX} -v
+	cd ${WRKSRC} && PYTHONPATH=src py.test-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../security/openssl/buildlink3.mk"
