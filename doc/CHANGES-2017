@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5128 2017/12/01 09:03:14 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5129 2017/12/01 09:20:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7366,3 +7366,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-OpenSSL to 17.5.0 [adam 2017-12-01]
 	Updated www/py-terminado to 0.8.1 [adam 2017-12-01]
 	Updated sysutils/py-diffoscope to 88 [adam 2017-12-01]
+	Updated devel/libuv to 1.18.0 [adam 2017-12-01]
+	Updated devel/gperftools to 2.6.2 [adam 2017-12-01]
