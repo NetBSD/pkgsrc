@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.23 2017/07/11 19:47:37 adam Exp $
+# $NetBSD: Makefile.common,v 1.24 2017/12/01 19:22:12 adam Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-static-analyzer/Makefile
 
-DISTNAME=	cfe-4.0.1.src
+DISTNAME=	cfe-5.0.0.src
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -120,6 +120,7 @@ post-extract:
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
 .include "../../lang/llvm/buildlink3.mk"

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2017/07/16 16:10:05 adam Exp $
+# $NetBSD: Makefile,v 1.13 2017/12/01 19:22:12 adam Exp $
 
-DISTNAME=	lldb-4.0.1.src
+DISTNAME=	lldb-5.0.0.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
@@ -11,6 +11,8 @@ HOMEPAGE=	http://lldb.org/
 COMMENT=	Next generation, high-performance debugger
 LICENSE=	modified-bsd
 
+DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
+DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../lang/clang
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 CONFIGURE_DIRS=		${WRKDIR}/build
@@ -31,6 +33,7 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 CMAKE_ARGS+=	-DHAVE_CXX_ATOMICS64_WITHOUT_LIB=ON
+CMAKE_ARGS+=	-DLLDB_CODESIGN_IDENTITY=""
 CMAKE_ARGS+=	-DLLDB_USE_SYSTEM_SIX:BOOL=TRUE
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
@@ -81,9 +84,7 @@ post-extract:
 .include "../../devel/libatomic_ops/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../lang/clang
 .include "../../lang/clang/buildlink3.mk"
-DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
 .include "../../lang/llvm/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
