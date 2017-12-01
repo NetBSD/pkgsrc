@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2017/07/23 16:09:17 adam Exp $
+# $NetBSD: Makefile,v 1.50 2017/12/01 11:17:51 adam Exp $
 # IMPORTANT: Do not forget to update audio/xmms-faad
 
-DISTNAME=	faad2-2.8.1
+DISTNAME=	faad2-2.8.6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=faac/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://faac.sourceforge.net/
