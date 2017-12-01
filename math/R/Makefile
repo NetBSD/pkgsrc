@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.178 2017/10/21 02:40:56 markd Exp $
+# $NetBSD: Makefile,v 1.179 2017/12/01 03:19:30 wen Exp $
 
-DISTNAME=	R-3.4.2
+DISTNAME=	R-3.4.3
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-3/}
 
@@ -164,6 +164,7 @@ fix-darwin-install-name:
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 # uses callback interface
