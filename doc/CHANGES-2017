@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5126 2017/12/01 03:20:55 wen Exp $
+$NetBSD: CHANGES-2017,v 1.5127 2017/12/01 03:40:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7362,3 +7362,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/redis to 4.0.4 [fhajny 2017-11-30]
 	Added shells/zsh-pure version 1.6.0 [minskim 2017-12-01]
 	Updated math/R to 3.4.3 [wen 2017-12-01]
+	Updated devel/p5-Moo to 2.003004 [wen 2017-12-01]
