@@ -1,24 +1,26 @@
-$NetBSD: patch-tools_llvm-config_llvm-config.cpp,v 1.3 2017/03/17 22:38:18 adam Exp $
+$NetBSD: patch-tools_llvm-config_llvm-config.cpp,v 1.4 2017/12/01 19:22:13 adam Exp $
 
 Avoid conflict with lang/clang.
 Use -lLLVM-3.8 instead of -lLLVM-3.8.0 so we don't break unnecessarily
 on patch updates.
 
---- tools/llvm-config/llvm-config.cpp.orig	2017-01-12 19:47:38.000000000 +0000
+--- tools/llvm-config/llvm-config.cpp.orig	2017-06-01 20:51:55.000000000 +0000
 +++ tools/llvm-config/llvm-config.cpp
-@@ -332,9 +332,9 @@ int main(int argc, char **argv) {
+@@ -332,11 +332,11 @@ int main(int argc, char **argv) {
          ("-I" + ActiveIncludeDir + " " + "-I" + ActiveObjRoot + "/include");
    } else {
      ActivePrefix = CurrentExecPrefix;
 -    ActiveIncludeDir = ActivePrefix + "/include";
 +    ActiveIncludeDir = "@PREFIX@/include/libLLVM";
-     ActiveBinDir = ActivePrefix + "/bin";
+     SmallString<256> path(StringRef(LLVM_TOOLS_INSTALL_DIR));
+     sys::fs::make_absolute(ActivePrefix, path);
+     ActiveBinDir = path.str();
 -    ActiveLibDir = ActivePrefix + "/lib" + LLVM_LIBDIR_SUFFIX;
 +    ActiveLibDir = "@PREFIX@/lib/libLLVM";
      ActiveCMakeDir = ActiveLibDir + "/cmake/llvm";
      ActiveIncludeOption = "-I" + ActiveIncludeDir;
    }
-@@ -370,14 +370,14 @@ int main(int argc, char **argv) {
+@@ -372,14 +372,14 @@ int main(int argc, char **argv) {
      StaticDir = ActiveLibDir;
    } else if (HostTriple.isOSDarwin()) {
      SharedExt = "dylib";
@@ -35,7 +37,7 @@ on patch updates.
      StaticExt = "a";
      StaticDir = SharedDir = ActiveLibDir;
      StaticPrefix = SharedPrefix = "lib";
-@@ -390,7 +390,7 @@ int main(int argc, char **argv) {
+@@ -392,7 +392,7 @@ int main(int argc, char **argv) {
  
    bool DyLibExists = false;
    const std::string DyLibName =
@@ -44,7 +46,7 @@ on patch updates.
  
    // If LLVM_LINK_DYLIB is ON, the single shared library will be returned
    // for "--libs", etc, if they exist. This behaviour can be overridden with
-@@ -491,7 +491,7 @@ int main(int argc, char **argv) {
+@@ -493,7 +493,7 @@ int main(int argc, char **argv) {
          OS << ActiveIncludeOption << ' ' << LLVM_CXXFLAGS << '\n';
        } else if (Arg == "--ldflags") {
          OS << ((HostTriple.isWindowsMSVCEnvironment()) ? "-LIBPATH:" : "-L")
