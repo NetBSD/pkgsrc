@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2017/08/15 13:55:17 adam Exp $
+# $NetBSD: Makefile,v 1.15 2017/12/01 11:00:03 adam Exp $
 
-DISTNAME=	faac-1.29.4
+DISTNAME=	faac-1.29.9.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=faac/}
-#EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://faac.sourceforge.net/
