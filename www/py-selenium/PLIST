@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/11/17 08:15:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/12/01 10:02:29 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -247,3 +247,15 @@ ${PYSITELIB}/selenium/webdriver/support/ui.pyo
 ${PYSITELIB}/selenium/webdriver/support/wait.py
 ${PYSITELIB}/selenium/webdriver/support/wait.pyc
 ${PYSITELIB}/selenium/webdriver/support/wait.pyo
+${PYSITELIB}/selenium/webdriver/webkitgtk/__init__.py
+${PYSITELIB}/selenium/webdriver/webkitgtk/__init__.pyc
+${PYSITELIB}/selenium/webdriver/webkitgtk/__init__.pyo
+${PYSITELIB}/selenium/webdriver/webkitgtk/options.py
+${PYSITELIB}/selenium/webdriver/webkitgtk/options.pyc
+${PYSITELIB}/selenium/webdriver/webkitgtk/options.pyo
+${PYSITELIB}/selenium/webdriver/webkitgtk/service.py
+${PYSITELIB}/selenium/webdriver/webkitgtk/service.pyc
+${PYSITELIB}/selenium/webdriver/webkitgtk/service.pyo
+${PYSITELIB}/selenium/webdriver/webkitgtk/webdriver.py
+${PYSITELIB}/selenium/webdriver/webkitgtk/webdriver.pyc
+${PYSITELIB}/selenium/webdriver/webkitgtk/webdriver.pyo
