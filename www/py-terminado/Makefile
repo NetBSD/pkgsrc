@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/11/28 09:49:12 adam Exp $
+# $NetBSD: Makefile,v 1.3 2017/12/01 08:56:12 adam Exp $
 
-DISTNAME=	terminado-0.8
+DISTNAME=	terminado-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/terminado/}
@@ -12,6 +12,8 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-ptyprocess-[0-9]*:../../sysutils/py-ptyprocess
 DEPENDS+=	${PYPKGPREFIX}-tornado>=4:../../www/py-tornado
+
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
