@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.18 2017/11/23 10:12:33 adam Exp $
+$NetBSD: distinfo,v 1.19 2017/12/01 08:53:17 adam Exp $
 
-SHA1 (pyOpenSSL-17.4.0.tar.gz) = 029cb3647adbc8a6aed8e8b9f497dc91b68f75a8
-RMD160 (pyOpenSSL-17.4.0.tar.gz) = 0bb8cfcdcc3333376037450029b92bf6ce84d5a6
-SHA512 (pyOpenSSL-17.4.0.tar.gz) = c3c791b15f2245d3c1381f84471f9e1b07b4a01c318a5a4012ec70193ba055fe948ba150f9c88d2dabe30b37f2025fe26ffb95c01682ca656d561014d41cf965
-Size (pyOpenSSL-17.4.0.tar.gz) = 169362 bytes
+SHA1 (pyOpenSSL-17.5.0.tar.gz) = 77bb6a9f5f20834bd9ba5d1bdc4bd82d6b6208be
+RMD160 (pyOpenSSL-17.5.0.tar.gz) = 2b46a05a02bd5b276abb0afc14e9e3cc900ca8c8
+SHA512 (pyOpenSSL-17.5.0.tar.gz) = f194662b5842f1e3a4fcb910b9f2e6482d1dcdf834f306acc3dd6d9723f65038f7bff550248fa6268d90c839c9d9e8248bb6c7d399495fe6aed25291b93ece86
+Size (pyOpenSSL-17.5.0.tar.gz) = 170870 bytes
 SHA1 (patch-tests_memdbg.py) = 0cca9c930a8f6065205ed28ec6d2551b45f4d606
