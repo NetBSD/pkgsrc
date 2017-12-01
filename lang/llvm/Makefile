@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/09/30 04:38:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2017/12/01 19:22:12 adam Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -12,9 +12,8 @@
 # Always update all */buildlink3.mk to require the latest stable release
 # version in BUILDLINK_API_DEPENDS, as there is no backwards compatibility
 
-DISTNAME=	llvm-4.0.1.src
+DISTNAME=	llvm-5.0.0.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	1
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -49,11 +48,9 @@ REPLACE_PERL+=		utils/*.pl
 REPLACE_PERL+=		utils/codegen-diff
 REPLACE_PERL+=		utils/llvm-native-gxx
 
-REPLACE_PYTHON+=	*.py
-REPLACE_PYTHON+=	*/*.py
-REPLACE_PYTHON+=	*/*/*.py
-REPLACE_PYTHON+=	*/*/*/*.py
-REPLACE_PYTHON+=	*/*/*/*/*.py
+REPLACE_PYTHON+=	tools/opt-viewer/*.py
+REPLACE_PYTHON+=	tools/sancov/*.py
+REPLACE_PYTHON+=	utils/*.py
 REPLACE_PYTHON+=	utils/Misc/zkill
 REPLACE_PYTHON+=	utils/bisect
 REPLACE_PYTHON+=	utils/clang-parse-diagnostics-file
@@ -100,5 +97,6 @@ post-extract:
 .endfor
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
