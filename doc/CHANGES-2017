@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5131 2017/12/01 11:26:54 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5132 2017/12/01 12:10:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7375,3 +7375,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/faac to 1.29.9.2 [adam 2017-12-01]
 	Updated audio/faad2 to 2.8.6 [adam 2017-12-01]
 	Updated audio/xmms-faad to 2.8.6 [adam 2017-12-01]
+	Updated textproc/p5-Text-Xslate to 3.5.1 [wen 2017-12-01]
