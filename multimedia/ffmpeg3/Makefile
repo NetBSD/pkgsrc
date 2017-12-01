@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/07/30 05:21:15 adam Exp $
+# $NetBSD: Makefile,v 1.25 2017/12/01 21:43:15 sevan Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg3/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,7 +19,6 @@ CONF_FILES+=	${PREFIX}/share/examples/ffmpeg3/ffserver.conf \
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--enable-cross-compile
-CONFIGURE_ARGS+=	--arch=${MACHINE_ARCH}
 CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}
 CONFIGURE_ARGS+=	--host-ld=${NATIVE_CC:Q}
 CONFIGURE_ARGS+=	--target-os=${LOWER_OPSYS}
@@ -52,5 +51,9 @@ CONFIGURE_ARGS+=	--disable-asm
 CFLAGS+=		-mstackrealign -mpreferred-stack-boundary=4
 .  endif
 .endif
+
+# configure script uses uname -m to detect arch, as opposed to uname -p in
+# GNU/configure. Unable to detect NetBSD/macppc hosts correctly.
+CONFIGURE_ARGS+=	--arch=${MACHINE_ARCH}
 
 .include "../../multimedia/ffmpeg3/Makefile.common"
