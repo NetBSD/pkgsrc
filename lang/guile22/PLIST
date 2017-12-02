@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/03/16 14:13:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/12/02 18:34:04 gdt Exp $
 guile/2.2/bin/guild
 guile/2.2/bin/guile
 guile/2.2/bin/guile-config
@@ -133,6 +133,7 @@ guile/2.2/info/guile.info
 guile/2.2/info/r5rs.info
 guile/2.2/lib/charset.alias
 guile/2.2/lib/guile/2.2/ccache/ice-9/and-let-star.go
+guile/2.2/lib/guile/2.2/ccache/ice-9/arrays.go
 guile/2.2/lib/guile/2.2/ccache/ice-9/atomic.go
 guile/2.2/lib/guile/2.2/ccache/ice-9/binary-ports.go
 guile/2.2/lib/guile/2.2/ccache/ice-9/boot-9.go
@@ -193,6 +194,7 @@ guile/2.2/lib/guile/2.2/ccache/ice-9/runq.go
 guile/2.2/lib/guile/2.2/ccache/ice-9/rw.go
 guile/2.2/lib/guile/2.2/ccache/ice-9/safe-r5rs.go
 guile/2.2/lib/guile/2.2/ccache/ice-9/safe.go
+guile/2.2/lib/guile/2.2/ccache/ice-9/sandbox.go
 guile/2.2/lib/guile/2.2/ccache/ice-9/save-stack.go
 guile/2.2/lib/guile/2.2/ccache/ice-9/scm-style-repl.go
 guile/2.2/lib/guile/2.2/ccache/ice-9/serialize.go
@@ -401,6 +403,7 @@ guile/2.2/lib/guile/2.2/ccache/system/repl/debug.go
 guile/2.2/lib/guile/2.2/ccache/system/repl/error-handling.go
 guile/2.2/lib/guile/2.2/ccache/system/repl/repl.go
 guile/2.2/lib/guile/2.2/ccache/system/repl/server.go
+guile/2.2/lib/guile/2.2/ccache/system/syntax.go
 guile/2.2/lib/guile/2.2/ccache/system/vm/assembler.go
 guile/2.2/lib/guile/2.2/ccache/system/vm/coverage.go
 guile/2.2/lib/guile/2.2/ccache/system/vm/debug.go
@@ -434,12 +437,13 @@ guile/2.2/lib/guile/2.2/ccache/web/server/http.go
 guile/2.2/lib/guile/2.2/ccache/web/uri.go
 guile/2.2/lib/guile/2.2/extensions/guile-readline.la
 guile/2.2/lib/libguile-2.2.la
-guile/2.2/lib/libguile-2.2.so.1.0.0-gdb.scm
+guile/2.2/lib/libguile-2.2.so.1.3.0-gdb.scm
 guile/2.2/lib/pkgconfig/guile-2.2.pc
 guile/2.2/man/man1/guile.1
 guile/2.2/share/aclocal/guile.m4
 guile/2.2/share/guile/2.2/guile-procedures.txt
 guile/2.2/share/guile/2.2/ice-9/and-let-star.scm
+guile/2.2/share/guile/2.2/ice-9/arrays.scm
 guile/2.2/share/guile/2.2/ice-9/atomic.scm
 guile/2.2/share/guile/2.2/ice-9/binary-ports.scm
 guile/2.2/share/guile/2.2/ice-9/boot-9.scm
@@ -504,6 +508,7 @@ guile/2.2/share/guile/2.2/ice-9/runq.scm
 guile/2.2/share/guile/2.2/ice-9/rw.scm
 guile/2.2/share/guile/2.2/ice-9/safe-r5rs.scm
 guile/2.2/share/guile/2.2/ice-9/safe.scm
+guile/2.2/share/guile/2.2/ice-9/sandbox.scm
 guile/2.2/share/guile/2.2/ice-9/save-stack.scm
 guile/2.2/share/guile/2.2/ice-9/scm-style-repl.scm
 guile/2.2/share/guile/2.2/ice-9/serialize.scm
@@ -723,6 +728,7 @@ guile/2.2/share/guile/2.2/system/repl/describe.scm
 guile/2.2/share/guile/2.2/system/repl/error-handling.scm
 guile/2.2/share/guile/2.2/system/repl/repl.scm
 guile/2.2/share/guile/2.2/system/repl/server.scm
+guile/2.2/share/guile/2.2/system/syntax.scm
 guile/2.2/share/guile/2.2/system/vm/assembler.scm
 guile/2.2/share/guile/2.2/system/vm/coverage.scm
 guile/2.2/share/guile/2.2/system/vm/debug.scm
