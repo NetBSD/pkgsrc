@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2017/11/23 17:19:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/12/02 20:02:35 leot Exp $
 
-PKGREVISION= 1
 .include "../../print/cups/Makefile.common"
 
 DISTNAME=	cups-${CUPS_VERS}-source
@@ -13,6 +12,7 @@ HOMEPAGE=	https://www.cups.org/
 COMMENT=	Common UNIX Printing System
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
+GITHUB_PROJECT=	cups
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 CONFLICTS+=	LPRng-[0-9]* LPRng-core-[0-9]*
