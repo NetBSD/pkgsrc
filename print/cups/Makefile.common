@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.1 2017/11/12 14:10:15 khorben Exp $
+# $NetBSD: Makefile.common,v 1.2 2017/12/02 20:02:34 leot Exp $
 #
 # used by print/cups/Makefile
 # used by print/cups-base/Makefile
 
-CUPS_VERS=	2.2.5
+CUPS_VERS=	2.2.6
 DISTNAME=	cups-${CUPS_VERS}-source
 CATEGORIES=	print
 
