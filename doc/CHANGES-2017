@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5137 2017/12/02 12:01:24 wen Exp $
+$NetBSD: CHANGES-2017,v 1.5138 2017/12/02 12:10:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7387,3 +7387,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/R-zoo to 1.8.0 [wen 2017-12-02]
 	Updated math/R-xts to 0.10.0 [wen 2017-12-02]
 	Updated math/R-statmod to 1.4.30 [wen 2017-12-02]
+	Updated math/R-sp to 1.2.5 [wen 2017-12-02]
