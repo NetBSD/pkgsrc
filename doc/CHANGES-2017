@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5140 2017/12/02 18:34:23 gdt Exp $
+$NetBSD: CHANGES-2017,v 1.5141 2017/12/02 20:03:00 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7390,3 +7390,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/R-sp to 1.2.5 [wen 2017-12-02]
 	Updated net/tor to 0.3.1.9 [wiz 2017-12-02]
 	Updated lang/guile22 to 2.2.3 [gdt 2017-12-02]
+	Updated print/cups-base to 2.2.6 [leot 2017-12-02]
