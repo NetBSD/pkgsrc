@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/03/09 14:04:36 wen Exp $
+# $NetBSD: Makefile,v 1.7 2017/12/02 11:53:30 wen Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,11 +9,11 @@ COMMENT=	R's eXtensible Time Series
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	xts
-R_PKGVER=	0.9-7
+R_PKGVER=	0.10-0
 
 USE_LANGUAGES+=	c fortran
 
-DEPENDS+=	R-zoo>=1.7.10:../../math/R-zoo
+DEPENDS+=	R-zoo>=1.7.12:../../math/R-zoo
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
