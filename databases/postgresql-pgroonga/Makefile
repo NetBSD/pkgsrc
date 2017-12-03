@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/29 13:38:23 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2017/12/03 00:11:39 joerg Exp $
 
 DISTNAME=	pgroonga-1.2.3
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -17,7 +17,7 @@ PGSQL_VERSIONS_ACCEPTED=	96 95 94 93
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++ c99
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/postgresql/contrib
 
