@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/10/04 17:19:33 nros Exp $
+# $NetBSD: Makefile,v 1.4 2017/12/03 11:09:46 wiz Exp $
 
 libfpx_ver=	1.3.1
 DISTNAME=	libfpx-${libfpx_ver}-9
@@ -6,7 +6,6 @@ PKGNAME=	libfpx-${libfpx_ver}
 PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.imagemagick.org/pub/ImageMagick/delegates/
-MASTER_SITES+=	ftp://ftp.kddlabs.co.jp/graphics/ImageMagick/delegates/
 MASTER_SITES+=	http://www.imagemagick.org/download/delegates/
 EXTRACT_SUFX=	.tar.xz
 
