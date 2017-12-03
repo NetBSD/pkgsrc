@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2017/10/19 08:50:34 adam Exp $
+# $NetBSD: Makefile,v 1.36 2017/12/03 00:12:35 joerg Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 COMMENT=	Framework for writing networked applications
@@ -7,7 +7,7 @@ COMMENT=	Framework for writing networked applications
 DEPENDS+=	${PYPKGPREFIX}-automat>=0.3.0:../../devel/py-automat
 DEPENDS+=	${PYPKGPREFIX}-constantly>=15.1:../../devel/py-constantly
 DEPENDS+=	${PYPKGPREFIX}-hyperlink>=17.1.1:../../www/py-hyperlink
-DEPENDS+=	${PYPKGPREFIX}-idna>=2.4:../../devel/py-incremental
+DEPENDS+=	${PYPKGPREFIX}-idna>=2.4:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-incremental>=16.10.1:../../devel/py-incremental
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=16.0.0:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-service_identity-[0-9]*:../../security/py-service_identity
