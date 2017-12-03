@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5151 2017/12/03 08:48:40 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5152 2017/12/03 08:50:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7401,3 +7401,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/p5-Math-Prime-Util to 0.70 [wiz 2017-12-03]
 	Updated security/p5-Crypt-OpenSSL-Bignum to 0.09 [wiz 2017-12-03]
 	Updated textproc/p5-Text-Xslate to v3.5.3 [wiz 2017-12-03]
+	Updated www/p5-CGI to 4.38 [wiz 2017-12-03]
