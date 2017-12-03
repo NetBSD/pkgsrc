@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.4 2017/12/03 11:47:33 jdolecek Exp $
+$NetBSD: distinfo,v 1.5 2017/12/03 12:22:59 jdolecek Exp $
 
 SHA1 (php-7.2.0.tar.bz2) = b15bd8fef8d5b99b993784e9c2254ab82f616c64
 RMD160 (php-7.2.0.tar.bz2) = a39b7057bcb93b656fda39008ee4743c4f7f2a0f
 SHA512 (php-7.2.0.tar.bz2) = f4b4d97a0b662cab9ed47a549453ad522da45fa5aa34e3ece49a8b85b49b7a5921d2d7cdd0a6766b09d63c4f7fd022502222656ce112fc80f85e8f2409c5c826
 Size (php-7.2.0.tar.bz2) = 14594486 bytes
 SHA1 (patch-configure) = 0a0de9cebbc9550875b164209983ce6fda0648d1
-SHA1 (patch-ext_curl_config.m4) = f583f90a499d4f0bdb3d21fa8f129a30d2fa6d6c
+SHA1 (patch-ext_curl_config.m4) = 86a293d57aafcd42d1feab4a6d0d4f88dbcfb5c8
 SHA1 (patch-ext_imap_config.m4) = f4e10ab81697b72019313f63bc630627a08efd92
 SHA1 (patch-ext_intl_config.m4) = 1ea3d3e6f05d5fed0bd4ca4518440199aec0954d
 SHA1 (patch-ext_pcre_pcrelib_config.h) = c5fba95856628f68639fe63feeef04a5f83d3916
@@ -16,7 +16,7 @@ SHA1 (patch-ext_phar_phar_phar.php) = f630e3946b21b76d4fe857a43e00e25c9445f2c8
 SHA1 (patch-ext_recode_recode.c) = a97a1815d6a41410f68c289debbb9396128a2159
 SHA1 (patch-ext_sqlite3_libsqlite_sqlite3.c) = 8a529a1b3f7c97731f2e719d006f67c3a7259bb5
 SHA1 (patch-ext_xsl_php__xsl.h) = a9877bff7bacc77926a4541a0ac171c00ad1a627
-SHA1 (patch-makedist) = 2ac0e0391c031c4fcf4993e2269cde4c6bfddfd5
+SHA1 (patch-makedist) = 3e796ab59bece3f762f41fd0c6f142c88c2d88a8
 SHA1 (patch-php.ini-development) = dd65962000ec06439fae3c9bf252fa46be4e33fd
 SHA1 (patch-php.ini-production) = ae61dffedf574b688fe576b0b2af748b7a28cd89
 SHA1 (patch-run-tests.php) = 86c4d3f03eb8e31b5a35820f426533c9478571fb
