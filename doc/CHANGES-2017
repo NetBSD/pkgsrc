@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5153 2017/12/03 09:07:26 maya Exp $
+$NetBSD: CHANGES-2017,v 1.5154 2017/12/03 17:53:43 morr Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7403,3 +7403,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-Text-Xslate to v3.5.3 [wiz 2017-12-03]
 	Updated www/p5-CGI to 4.38 [wiz 2017-12-03]
 	Updated graphics/tiff to 4.0.9nb1 [maya 2017-12-03]
+	Updated editors/vim-share to 8.0.1365 [morr 2017-12-03]
+	Updated www/wordpress to 4.9.1 [morr 2017-12-03]
