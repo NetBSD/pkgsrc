@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5145 2017/12/03 08:33:43 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5146 2017/12/03 08:34:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7395,3 +7395,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed devel/go-runewidth successor textproc/go-runewidth [maya 2017-12-02]
 	Updated devel/p5-Log-Any to 1.70.3 [wiz 2017-12-03]
 	Updated devel/p5-Test-Simple to 1.302120 [wiz 2017-12-03]
+	Updated devel/p5-Test2-Suite to 0.000094 [wiz 2017-12-03]
