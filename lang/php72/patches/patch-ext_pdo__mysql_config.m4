@@ -1,4 +1,6 @@
-$NetBSD: patch-ext_pdo__mysql_config.m4,v 1.1 2017/11/15 08:56:12 jdolecek Exp $
+$NetBSD: patch-ext_pdo__mysql_config.m4,v 1.2 2017/12/03 12:48:56 jdolecek Exp $
+
+Reported upstream as #75615
 
 --- ext/pdo_mysql/config.m4.orig	2015-06-23 17:33:33.000000000 +0000
 +++ ext/pdo_mysql/config.m4
