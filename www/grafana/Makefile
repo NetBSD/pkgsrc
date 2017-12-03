@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/11/27 16:04:54 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2017/12/03 11:06:24 wiz Exp $
 
 GITHUB_PROJECT=	grafana
 DISTNAME=	grafana-4.6.2
@@ -20,7 +20,7 @@ WRKSRC=				${WRKDIR}/src/github.com/grafana/grafana
 # We don't have suitable infrastructure in pkgsrc for generating frontend
 # assets, so we'll extract prebuilt frontend assets.
 FE_DISTNAME=			${DISTNAME}.linux-x64${EXTRACT_SUFX}
-SITES.${FE_DISTNAME}=		https://s3-us-west-2.amazonaws.com/grafana-releases/release/
+SITES.grafana-4.6.2.linux-x64.tar.gz=		https://s3-us-west-2.amazonaws.com/grafana-releases/release/
 DISTFILES+=			${FE_DISTNAME}
 EXTRACT_ONLY+=			${FE_DISTNAME}
 EXTRACT_DIR.${FE_DISTNAME}=	${WRKDIR}/frontend_assets
