@@ -1,4 +1,6 @@
-$NetBSD: patch-ext_curl_config.m4,v 1.1 2017/11/15 11:01:31 jdolecek Exp $
+$NetBSD: patch-ext_curl_config.m4,v 1.2 2017/12/03 12:22:59 jdolecek Exp $
+
+Reported upstream as #75614
 
 --- ext/curl/config.m4.orig	2017-11-15 10:50:33.000000000 +0000
 +++ ext/curl/config.m4
