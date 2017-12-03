@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5143 2017/12/03 00:37:58 maya Exp $
+$NetBSD: CHANGES-2017,v 1.5144 2017/12/03 08:32:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7393,3 +7393,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/cups-base to 2.2.6 [leot 2017-12-02]
 	Updated print/cups to 2.2.6 [leot 2017-12-02]
 	Removed devel/go-runewidth successor textproc/go-runewidth [maya 2017-12-02]
+	Updated devel/p5-Log-Any to 1.70.3 [wiz 2017-12-03]
