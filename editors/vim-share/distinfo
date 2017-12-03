@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.168 2017/10/24 11:04:03 morr Exp $
+$NetBSD: distinfo,v 1.169 2017/12/03 17:49:14 morr Exp $
 
-SHA1 (vim-8.0.1214.tar.gz) = 8b3d4364f096d23111ea0d38ce1238464697e32e
-RMD160 (vim-8.0.1214.tar.gz) = b0bdd750c55c4697fef24eeda05dbbb5588c90e4
-SHA512 (vim-8.0.1214.tar.gz) = 8b67aef9f18f67c2ec98ba207388d3d44aac8ffc4ef7d78627008f9391d9687b4682e71cbc053741d4eab7f1556026999a1ece71fc8e6dec18baf06a05cfd228
-Size (vim-8.0.1214.tar.gz) = 13367477 bytes
+SHA1 (vim-8.0.1365.tar.gz) = 43da2e97e3268baceca2a2cd4589a221e4391d62
+RMD160 (vim-8.0.1365.tar.gz) = 49ede42440179e4edccd4b3cba4f6fededdbb6a4
+SHA512 (vim-8.0.1365.tar.gz) = d9fbe600765b94bcc9c3b17153559f5309d22812fcb97228abdb9bb9bdf963a95c829f6748c21aee6c31a5ae3a72b6faecd8bba12a0152d6f825eeb248e8ff4d
+Size (vim-8.0.1365.tar.gz) = 13404107 bytes
 SHA1 (patch-Makefile) = a7a25e77bcb5b53118b12af1dbca7f8312f353a5
-SHA1 (patch-auto_configure) = c71e1e5dc3d7dc204272826a3f24e17712b1bfa5
+SHA1 (patch-auto_configure) = 695495938039da354fddcdea5bff8c58e2c901b2
 SHA1 (patch-configure) = 8bd8d7f463959c1b3b93364c8f3b156ad49965be
 SHA1 (patch-feature.h) = 19c5ac2d7056adf9e6e074732871abc4058a59eb
 SHA1 (patch-link.sh) = 24db881cea873330a8a3bf672f6135d0835651fd
