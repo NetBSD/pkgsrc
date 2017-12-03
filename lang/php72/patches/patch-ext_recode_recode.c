@@ -1,8 +1,13 @@
-$NetBSD: patch-ext_recode_recode.c,v 1.1 2017/11/15 08:56:12 jdolecek Exp $
+$NetBSD: patch-ext_recode_recode.c,v 1.2 2017/12/03 12:48:56 jdolecek Exp $
 
-program_name is expected variable, is required by recode 3.5 and recode 3.6 to actually work.
+program_name is expected variable, is required by recode 3.5 and
+recode 3.6 to actually work.
 
-The config.m4 test for it is broken at least for some platforms -  it only tests if program without it compiles, but on Solaris and MacOS/Darwin at least it only fails when run.
+The config.m4 test for it is broken at least for some platforms -
+it only tests if program without it compiles, but on Solaris and
+MacOS/Darwin at least it only fails when run.
+
+Reported upstream as #75617
 
 --- ext/recode/recode.c.orig	2016-07-24 13:07:47.000000000 +0000
 +++ ext/recode/recode.c
