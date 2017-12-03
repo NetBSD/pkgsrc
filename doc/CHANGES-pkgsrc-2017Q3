@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.23 2017/11/25 09:42:23 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.24 2017/12/03 11:42:17 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q3 branch:
 
@@ -265,4 +265,12 @@ textproc/icu: security fix
 Pullup ticket #5652 - requested by khorben
 www/firefox52: security fix
 www/firefox52-l10n: security fix
+
+Pullup ticket #5655 - requested by khorben
+www/firefox52: security fix
+www/firefox52-l10n: update
+
+Pullup ticket #5656 - requested by khorben
+mail/thunderbird: security fix
+mail/thunderbird-l10n: update
 
