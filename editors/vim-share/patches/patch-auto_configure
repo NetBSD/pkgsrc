@@ -1,4 +1,4 @@
-$NetBSD: patch-auto_configure,v 1.4 2017/08/15 21:00:11 wiz Exp $
+$NetBSD: patch-auto_configure,v 1.5 2017/12/03 17:49:14 morr Exp $
 
 Buildlink takes care of include files.
 Also, remove stray dollar.
@@ -14,12 +14,3 @@ Also, remove stray dollar.
      GUI_INC_LOC="`echo $GUI_INC_LOC|sed 's%-I%%g'`"
  
    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for location of Motif GUI includes" >&5
-@@ -14093,7 +14093,7 @@ if test "x$MACOSX" = "xyes"; then
-   { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether we need -framework Cocoa" >&5
- $as_echo_n "checking whether we need -framework Cocoa... " >&6; }
-       if test "x$features" != "xtiny" || test "x$enable_multibyte" = "xyes"; then
--    LIBS=$"$LIBS -framework Cocoa"
-+    LIBS="$LIBS -framework Cocoa"
-     { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
- $as_echo "yes" >&6; }
-   else
