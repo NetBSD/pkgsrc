@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2017/12/04 06:15:23 jnemeth Exp $
+
+SHA1 (easy-rsa/v3.0.3.tar.gz) = 18d570d55f342a912780e8c071d65f68746c0e7b
+RMD160 (easy-rsa/v3.0.3.tar.gz) = 59a640871a5351f502d9bdb5140aa1396d207523
+SHA512 (easy-rsa/v3.0.3.tar.gz) = edc097936bc2400f131e17fe8a94b81d009befa21622d51064262b2ea2f39b28774c51224353f8b1cba790bfc53b9184e5a39abf85aee0a9310f5e08380019d2
+Size (easy-rsa/v3.0.3.tar.gz) = 636592 bytes
