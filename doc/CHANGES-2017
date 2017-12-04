@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5164 2017/12/04 16:36:47 maya Exp $
+$NetBSD: CHANGES-2017,v 1.5165 2017/12/04 18:20:55 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7415,3 +7415,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/rust to 1.22.1nb1 [ryoon 2017-12-04]
 	Updated www/firefox to 57.0.1 [ryoon 2017-12-04]
 	Updated devel/at-spi2-core to 2.26.2nb1 [maya 2017-12-04]
+	Updated net/grpc to 1.7.2 [minskim 2017-12-04]
