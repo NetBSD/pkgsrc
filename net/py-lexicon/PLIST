@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2017/11/08 12:04:37 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.12 2017/12/04 14:42:06 fhajny Exp $
 bin/lexicon
 ${PYSITELIB}/dns_${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/dns_${EGG_INFODIR}/SOURCES.txt
@@ -76,6 +76,8 @@ ${PYSITELIB}/lexicon/providers/vultr.pyo
 ${PYSITELIB}/lexicon/providers/vultr.pyc
 ${PYSITELIB}/lexicon/providers/yandex.pyo
 ${PYSITELIB}/lexicon/providers/yandex.pyc
+${PYSITELIB}/lexicon/providers/zonomi.pyo
+${PYSITELIB}/lexicon/providers/zonomi.pyc
 ${PYSITELIB}/lexicon/providers/base.py
 ${PYSITELIB}/lexicon/providers/cloudflare.py
 ${PYSITELIB}/lexicon/providers/cloudns.py
@@ -102,3 +104,4 @@ ${PYSITELIB}/lexicon/providers/softlayer.py
 ${PYSITELIB}/lexicon/providers/transip.py
 ${PYSITELIB}/lexicon/providers/vultr.py
 ${PYSITELIB}/lexicon/providers/yandex.py
+${PYSITELIB}/lexicon/providers/zonomi.py
