@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2017/11/29 12:25:45 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2017/12/04 14:49:53 ryoon Exp $
 
 DISTNAME=	rustc-1.22.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
 
@@ -14,6 +15,8 @@ USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bash gmake perl:build pkg-config
+# For internal llvm
+BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
@@ -60,9 +63,9 @@ BUILDLINK_TRANSFORM.NetBSD+=	rm:-Wl,--enable-new-dtags
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--disable-jemalloc
 .else
-CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
-BUILDLINK_API_DEPENDS.llvm+=  llvm>=4.0.1nb1
-.include "../../lang/llvm/buildlink3.mk"
+#CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
+#BUILDLINK_API_DEPENDS.llvm+=  llvm>=4.0.1nb1
+#.include "../../lang/llvm/buildlink3.mk"
 .endif
 
 #
