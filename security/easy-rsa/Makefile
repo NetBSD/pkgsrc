@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2017/12/04 06:15:23 jnemeth Exp $
+# $NetBSD: Makefile,v 1.2 2017/12/04 06:55:56 jnemeth Exp $
 
-DISTNAME=	v3.0.3
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+DISTNAME=	easy-rsa-3.0.3
 #PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenVPN/}
@@ -13,6 +12,7 @@ HOMEPAGE=	https://github.com/OpenVPN/easy-rsa/
 LICENSE=	gnu-gpl-v2
 
 GITHUB_PROJECT=	easy-rsa
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 WRKSRC=		${WRKDIR}/easy-rsa-3.0.3
 USE_LANGUAGES=	# none
 
