@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2017/12/04 06:15:23 jnemeth Exp $
+bin/easyrsa
+share/doc/easyrsa/COPYING.md
+share/doc/easyrsa/ChangeLog
+share/doc/easyrsa/EasyRSA-Advanced.md
+share/doc/easyrsa/EasyRSA-Readme.md
+share/doc/easyrsa/EasyRSA-Upgrade-Notes.md
+share/doc/easyrsa/Hacking.md
+share/doc/easyrsa/Intro-To-PKI.md
+share/doc/easyrsa/KNOWN_ISSUES
+share/doc/easyrsa/README.md
+share/doc/easyrsa/README.quickstart.md
+share/doc/easyrsa/TODO
+share/examples/easyrsa/openssl-1.0.cnf
+share/examples/easyrsa/vars.example
+share/examples/easyrsa/x509-types/COMMON
+share/examples/easyrsa/x509-types/ca
+share/examples/easyrsa/x509-types/client
+share/examples/easyrsa/x509-types/server
