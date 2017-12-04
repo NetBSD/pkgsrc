@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/09/13 08:33:03 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2017/12/04 19:46:34 bouyer Exp $
 
 DISTNAME=	tigervnc-1.8.0
 CATEGORIES=	net
@@ -65,7 +65,9 @@ XORG_CONFIGURE_ARGS+=	--with-xkb-bin-directory=${X11BASE}/bin
 .endif
 
 pre-configure:
-	cd ${WRKSRC}/unix/xserver && autoreconf -fvi &&	\
+	cd ${WRKSRC}/unix/xserver && \
+	${PKGSRC_SETENV} ACLOCAL_PATH=${X11BASE}/share/aclocal \
+		autoreconf -fvi &&	\
 	${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV} CONFIG_SHELL=${BASH}	\
 		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}	\
 			./configure ${XORG_CONFIGURE_ARGS}
