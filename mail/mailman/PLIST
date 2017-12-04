@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2015/09/06 05:02:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.27 2017/12/04 01:52:58 maya Exp $
 lib/mailman/Mailman/Archiver/Archiver.py
 lib/mailman/Mailman/Archiver/Archiver.pyc
 lib/mailman/Mailman/Archiver/HyperArch.py
@@ -416,7 +416,6 @@ lib/mailman/messages/it/LC_MESSAGES/mailman.po
 lib/mailman/messages/it/README.it
 lib/mailman/messages/ja/LC_MESSAGES/mailman.mo
 lib/mailman/messages/ja/LC_MESSAGES/mailman.po
-lib/mailman/messages/ja/README.ja
 lib/mailman/messages/ko/LC_MESSAGES/mailman.mo
 lib/mailman/messages/ko/LC_MESSAGES/mailman.po
 lib/mailman/messages/ko/README.ko
@@ -692,6 +691,7 @@ lib/mailman/templates/da/unsub.txt
 lib/mailman/templates/da/unsubauth.txt
 lib/mailman/templates/da/userpass.txt
 lib/mailman/templates/da/verify.txt
+lib/mailman/templates/de/adminaddrchgack.txt
 lib/mailman/templates/de/admindbdetails.html
 lib/mailman/templates/de/admindbpreamble.html
 lib/mailman/templates/de/admindbsummary.html
@@ -1321,6 +1321,7 @@ lib/mailman/templates/it/unsub.txt
 lib/mailman/templates/it/unsubauth.txt
 lib/mailman/templates/it/userpass.txt
 lib/mailman/templates/it/verify.txt
+lib/mailman/templates/ja/adminaddrchgack.txt
 lib/mailman/templates/ja/admindbdetails.html
 lib/mailman/templates/ja/admindbpreamble.html
 lib/mailman/templates/ja/admindbsummary.html
@@ -1526,9 +1527,6 @@ lib/mailman/templates/no/unsub.txt
 lib/mailman/templates/no/unsubauth.txt
 lib/mailman/templates/no/userpass.txt
 lib/mailman/templates/no/verify.txt
-lib/mailman/templates/pl/admindbdetails.html
-lib/mailman/templates/pl/admindbpreamble.html
-lib/mailman/templates/pl/admindbsummary.html
 lib/mailman/templates/pl/adminsubscribeack.txt
 lib/mailman/templates/pl/adminunsubscribeack.txt
 lib/mailman/templates/pl/admlogin.html
@@ -1544,11 +1542,9 @@ lib/mailman/templates/pl/archtocnombox.html
 lib/mailman/templates/pl/article.html
 lib/mailman/templates/pl/bounce.txt
 lib/mailman/templates/pl/checkdbs.txt
-lib/mailman/templates/pl/convert.txt
 lib/mailman/templates/pl/cronpass.txt
 lib/mailman/templates/pl/disabled.txt
 lib/mailman/templates/pl/emptyarchive.html
-lib/mailman/templates/pl/headfoot.html
 lib/mailman/templates/pl/help.txt
 lib/mailman/templates/pl/invite.txt
 lib/mailman/templates/pl/listinfo.html
@@ -2195,6 +2191,7 @@ lib/mailman/tests/bounces/simple_37.txt
 lib/mailman/tests/bounces/simple_38.txt
 lib/mailman/tests/bounces/simple_39.txt
 lib/mailman/tests/bounces/simple_40.txt
+lib/mailman/tests/bounces/simple_41.txt
 lib/mailman/tests/bounces/sina_01.txt
 lib/mailman/tests/bounces/smtp32_01.txt
 lib/mailman/tests/bounces/smtp32_02.txt
@@ -2256,3 +2253,4 @@ share/doc/mailman/mailman-member.ps
 share/doc/mailman/mailman-member.txt
 share/examples/mailman/crontab.in
 share/examples/mailman/mailman.conf
+@pkgdir lib/mailman/pythonlib
