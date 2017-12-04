@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/12/04 06:55:56 jnemeth Exp $
+# $NetBSD: Makefile,v 1.3 2017/12/04 07:19:55 wiz Exp $
 
 DISTNAME=	easy-rsa-3.0.3
-#PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenVPN/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 COMMENT=	CLI utility to build and manage a PKI CA
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,7 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 GITHUB_PROJECT=	easy-rsa
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-WRKSRC=		${WRKDIR}/easy-rsa-3.0.3
 USE_LANGUAGES=	# none
 
 EASYRSA_DOC_FILES=	COPYING.md ChangeLog KNOWN_ISSUES README.md
