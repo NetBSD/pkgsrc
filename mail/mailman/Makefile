@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.79 2017/01/01 14:43:45 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2017/12/04 01:52:58 maya Exp $
 
-DISTNAME=	mailman-2.1.20
-PKGNAME=	mailman-2.1.20
+DISTNAME=	mailman-2.1.25
+PKGNAME=	mailman-2.1.25
 CATEGORIES=	mail www
-MASTER_SITES=	http://launchpad.net/mailman/2.1/2.1.20/+download/
+MASTER_SITES=	http://launchpad.net/mailman/2.1/2.1.25/+download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
