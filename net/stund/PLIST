@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/12/04 23:59:20 jmcneill Exp $
+bin/stun_client
+sbin/stund
+share/doc/stund/license.txt
