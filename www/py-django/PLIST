@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2017/05/08 04:58:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.44 2017/12/04 14:23:00 adam Exp $
 bin/django-admin${PYVERSSUFFIX}
 bin/django-admin${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -4355,6 +4355,9 @@ ${PYSITELIB}/django/db/migrations/operations/models.pyo
 ${PYSITELIB}/django/db/migrations/operations/special.py
 ${PYSITELIB}/django/db/migrations/operations/special.pyc
 ${PYSITELIB}/django/db/migrations/operations/special.pyo
+${PYSITELIB}/django/db/migrations/operations/utils.py
+${PYSITELIB}/django/db/migrations/operations/utils.pyc
+${PYSITELIB}/django/db/migrations/operations/utils.pyo
 ${PYSITELIB}/django/db/migrations/optimizer.py
 ${PYSITELIB}/django/db/migrations/optimizer.pyc
 ${PYSITELIB}/django/db/migrations/optimizer.pyo
