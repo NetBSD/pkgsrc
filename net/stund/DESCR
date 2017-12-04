@@ -1,0 +1,3 @@
+This project implements a simple STUN server and client on Windows, Linux,
+and Solaris. The STUN protocol (Simple Traversal of UDP through NATs) is
+described in the IETF RFC 3489.
