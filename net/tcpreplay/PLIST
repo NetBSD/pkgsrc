@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2009/05/02 17:35:43 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/12/04 09:32:01 he Exp $
+bin/tcpcapinfo
 bin/tcpbridge
 bin/tcpprep
 bin/tcpreplay
 bin/tcpreplay-edit
 bin/tcprewrite
+man/man1/tcpcapinfo.1
 man/man1/tcpbridge.1
 man/man1/tcpprep.1
 man/man1/tcpreplay.1
