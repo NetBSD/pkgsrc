@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5158 2017/12/04 08:21:36 he Exp $
+$NetBSD: CHANGES-2017,v 1.5159 2017/12/04 14:23:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7409,3 +7409,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/easy-rsa version v3.0.3 [jnemeth 2017-12-04]
 	Updated devel/p5-experimental to 0.019 [wiz 2017-12-04]
 	Updated audio/lame to 3.100nb1 [he 2017-12-04]
+	Updated www/py-django to 1.11.8 [adam 2017-12-04]
