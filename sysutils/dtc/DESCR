@@ -1,4 +1,4 @@
-Device Tree Compiler (dtc) toolchain for working with device tree source and 
+Device Tree Compiler (dtc) toolchain for working with device tree source and
 binary files and libfdt, a utility library for reading and manipulating the
 binary format.
 
