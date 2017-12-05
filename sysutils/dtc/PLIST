@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2016/09/19 18:11:16 jakllsch Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/12/05 09:54:18 adam Exp $
 bin/convert-dtsv0
 bin/dtc
 bin/dtdiff
 bin/fdtdump
 bin/fdtget
+bin/fdtoverlay
 bin/fdtput
 include/fdt.h
 include/libfdt.h
