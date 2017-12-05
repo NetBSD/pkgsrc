@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/17 06:54:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/12/05 09:27:50 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -41,6 +41,8 @@ ${PYSITELIB}/adminsortable2/models.pyo
 ${PYSITELIB}/adminsortable2/static/adminsortable2/css/sortable.css
 ${PYSITELIB}/adminsortable2/static/adminsortable2/icons/drag.png
 ${PYSITELIB}/adminsortable2/static/adminsortable2/js/inline-sortable.js
+${PYSITELIB}/adminsortable2/static/adminsortable2/js/inline-stacked.js
+${PYSITELIB}/adminsortable2/static/adminsortable2/js/inline-tabular.js
 ${PYSITELIB}/adminsortable2/static/adminsortable2/js/libs/jquery.ui.core-1.11.4.js
 ${PYSITELIB}/adminsortable2/static/adminsortable2/js/libs/jquery.ui.core-1.7.1.js
 ${PYSITELIB}/adminsortable2/static/adminsortable2/js/libs/jquery.ui.mouse-1.11.4.js
