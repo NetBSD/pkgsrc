@@ -1,0 +1,18 @@
+$NetBSD: patch-libfdt_Makefile.libfdt,v 1.1 2017/12/05 09:54:18 adam Exp $
+
+On Darwin, shared libraries have different naming.
+
+--- libfdt/Makefile.libfdt.orig	2017-12-05 08:44:44.000000000 +0000
++++ libfdt/Makefile.libfdt
+@@ -3,7 +3,11 @@
+ # This is not a complete Makefile of itself.  Instead, it is designed to
+ # be easily embeddable into other systems of Makefiles.
+ #
++ifeq ($(HOSTOS),darwin)
++LIBFDT_soname = libfdt.1.$(SHAREDLIB_EXT)
++else
+ LIBFDT_soname = libfdt.$(SHAREDLIB_EXT).1
++endif
+ LIBFDT_INCLUDES = fdt.h libfdt.h libfdt_env.h
+ LIBFDT_VERSION = version.lds
+ LIBFDT_SRCS = fdt.c fdt_ro.c fdt_wip.c fdt_sw.c fdt_rw.c fdt_strerror.c fdt_empty_tree.c \
