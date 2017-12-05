@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/12/04 08:40:48 adam Exp $
+# $NetBSD: Makefile,v 1.10 2017/12/05 19:57:46 joerg Exp $
 
 DISTNAME=	qt5-${QTVERSION}
 PKGREVISION=	1
@@ -31,7 +31,7 @@ DEPENDS+=	qt5-qttools-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qttools
 DEPENDS+=	qt5-qttranslations-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qttranslations
 DEPENDS+=	qt5-qtwebchannel-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtwebchannel
 DEPENDS+=	qt5-qtwebkit-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtwebkit
-DEPENDS+=	qt5-qtwebsockets-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtwebsockets
+DEPENDS+=	qt5-websockets-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtwebsockets
 DEPENDS+=	qt5-qtxmlpatterns-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtxmlpatterns
 DEPENDS+=	qt5-sqlite3-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-sqlite3
 .if ${OPSYS} == "Darwin"
