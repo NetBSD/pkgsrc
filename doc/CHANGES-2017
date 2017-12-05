@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5166 2017/12/05 00:00:29 jmcneill Exp $
+$NetBSD: CHANGES-2017,v 1.5167 2017/12/05 09:29:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7417,3 +7417,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/at-spi2-core to 2.26.2nb1 [maya 2017-12-04]
 	Updated net/grpc to 1.7.2 [minskim 2017-12-04]
 	Added net/stund version 0.97 [jmcneill 2017-12-04]
+	Updated www/py-django-admin-sortable2 to 0.6.17 [adam 2017-12-05]
+	Updated www/py-django-import-export to 0.6.1 [adam 2017-12-05]
