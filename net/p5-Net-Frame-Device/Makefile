@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/11/06 11:07:05 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/12/05 20:00:13 joerg Exp $
 
 DISTNAME=	Net-Frame-Device-1.12
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	artistic
 
 DEPENDS+=	p5-Class-Gomor>=1.0:../../devel/p5-Class-Gomor
 DEPENDS+=	p5-Net-Libdnet-[0-9]*:../../net/p5-Net-Libdnet
-DEPENDS+=	p5-Net-Libdnet-[0-9]*:../../net/p5-Net-Libdnet6
+DEPENDS+=	p5-Net-Libdnet6-[0-9]*:../../net/p5-Net-Libdnet6
 DEPENDS+=	p5-Net-IPv4Addr-[0-9]*:../../net/p5-Net-IPv4Addr
 DEPENDS+=	p5-Net-IPv6Addr-[0-9]*:../../net/p5-Net-IPv6Addr
 DEPENDS+=	p5-Net-Pcap>=0.12:../../net/p5-Net-Pcap
@@ -22,7 +22,6 @@ DEPENDS+=	p5-Net-Frame-Dump>=1.08:../../net/p5-Net-Frame-Dump
 DEPENDS+=	p5-Net-Frame-Layer-IPv6-[0-9]*:../../net/p5-Net-Frame-Layer-IPv6
 DEPENDS+=	p5-Net-Frame-Layer-ICMPv6-[0-9]*:../../net/p5-Net-Frame-Layer-ICMPv6
 DEPENDS+=	p5-Net-Frame-Simple-[0-9]*:../../net/p5-Net-Frame-Simple
-DEPENDS+=	p5-Net-Libdnet6-[0-9]*:../../net/p5-Net-Libdnet6
 
 PERL5_PACKLIST=		auto/Net/Frame/Device/.packlist
 
