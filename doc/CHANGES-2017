@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5174 2017/12/06 11:54:08 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5175 2017/12/06 12:54:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7427,3 +7427,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/dhcpcd to 7.0.0rc4 [roy 2017-12-06]
 	Updated www/py-aiohttp to 2.3.6 [adam 2017-12-06]
 	Updated devel/py-test to 3.3.1 [adam 2017-12-06]
+	Updated security/py-gssapi to 1.3.0 [adam 2017-12-06]
+	Updated time/py-tzlocal to 1.5.1 [adam 2017-12-06]
+	Updated www/py-sanic to 0.7.0 [adam 2017-12-06]
