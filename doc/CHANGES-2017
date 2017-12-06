@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5168 2017/12/05 09:54:46 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5169 2017/12/06 00:12:09 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7420,3 +7420,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-django-admin-sortable2 to 0.6.17 [adam 2017-12-05]
 	Updated www/py-django-import-export to 0.6.1 [adam 2017-12-05]
 	Updated sysutils/dtc to 1.4.5 [adam 2017-12-05]
+	Updated net/get_iplayer to 3.07 [prlw1 2017-12-06]
