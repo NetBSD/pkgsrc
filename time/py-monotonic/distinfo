@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/12/06 21:51:59 triaxx Exp $
+
+SHA1 (monotonic-1.4.tar.gz) = acd976b92fc9e4bcf05e3e72235c5f4a917d52db
+RMD160 (monotonic-1.4.tar.gz) = 6fbd142d6a25b5842f92f405ae4b14605530945c
+SHA512 (monotonic-1.4.tar.gz) = f9fa079cc325592b0bff799fabe7f9e87922cfe351776ed08be7a0060d27f81ae2c23aa7a1fac2ac2203ec26547e05fe3a918e68e6a474768b431ce860522eca
+Size (monotonic-1.4.tar.gz) = 7463 bytes
