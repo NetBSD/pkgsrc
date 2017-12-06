@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5179 2017/12/06 22:05:38 jdolecek Exp $
+$NetBSD: CHANGES-2017,v 1.5180 2017/12/06 22:05:57 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7434,3 +7434,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added time/py-monotonic to 1.4 [triaxx 2017-12-06]
 	Added devel/py-fasteners version 0.14.1 [triaxx 2017-12-06]
 	Added devel/php-xdebug version 2.5.5 [jdolecek 2017-12-06]
+	Added devel/php-xdebug-devel version 2.6.0alpha1 [jdolecek 2017-12-06]
