@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/08/03 07:48:52 adam Exp $
+# $NetBSD: Makefile,v 1.4 2017/12/06 12:53:56 adam Exp $
 
-DISTNAME=	sanic-0.6.0
+DISTNAME=	sanic-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sanic/}
