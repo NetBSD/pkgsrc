@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5172 2017/12/06 07:58:35 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5173 2017/12/06 10:44:16 roy Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7424,3 +7424,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/p5-SQL-Translator to 0.11023 [wiz 2017-12-06]
 	Updated www/p5-Catalyst-Action-REST to 1.21 [wiz 2017-12-06]
 	Updated www/p5-Mojolicious to 7.58 [wiz 2017-12-06]
+	Updated net/dhcpcd to 7.0.0rc4 [roy 2017-12-06]
