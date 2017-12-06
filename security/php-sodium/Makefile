@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2017/11/15 08:58:35 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2017/12/06 21:47:18 jdolecek Exp $
 
 MODNAME=		sodium
 CATEGORIES+=		security
 COMMENT=		PHP extension for the sodium crypto algorithms library
 
-CONFIGURE_ARGS+=	--with-${MODNAME}=shared
+CONFIGURE_ARGS+=	--with-${MODNAME}=${${BUILDLINK_PREFIX.libsodium}
 
 PHP_VERSIONS_ACCEPTED=	72
 
