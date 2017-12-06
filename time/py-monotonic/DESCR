@@ -1,0 +1,3 @@
+This module provides a monotonic() function which returns the value (in
+fractional seconds) of a clock which never goes backwards. It is compatible
+with Python 2 and Python 3.
