@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5170 2017/12/06 07:05:48 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5171 2017/12/06 07:15:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7422,3 +7422,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/dtc to 1.4.5 [adam 2017-12-05]
 	Updated net/get_iplayer to 3.07 [prlw1 2017-12-06]
 	Updated databases/p5-SQL-Translator to 0.11023 [wiz 2017-12-06]
+	Updated www/p5-Catalyst-Action-REST to 1.21 [wiz 2017-12-06]
