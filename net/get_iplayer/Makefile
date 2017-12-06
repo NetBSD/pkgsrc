@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2017/05/17 14:39:38 prlw1 Exp $
+# $NetBSD: Makefile,v 1.10 2017/12/06 00:11:47 prlw1 Exp $
 
-DISTNAME=	get_iplayer-3.01
+DISTNAME=	get_iplayer-3.07
 CATEGORIES=	net multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=get-iplayer/}
 
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v3
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 DEPENDS+=	p5-XML-LibXML-[0-9]*:../../textproc/p5-XML-LibXML
-DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 DEPENDS+=	p5-libwww>=6.0:../../www/p5-libwww
 DEPENDS+=	p5-Mojolicious>=6.0:../../www/p5-Mojolicious
 
