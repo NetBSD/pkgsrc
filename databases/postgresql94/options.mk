@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2017/11/13 09:33:32 adam Exp $
+# $NetBSD: options.mk,v 1.3 2017/12/07 14:19:32 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql94
-PKG_SUPPORTED_OPTIONS=	bonjour dtrace kerberos ldap pam
+PKG_SUPPORTED_OPTIONS=	bonjour dtrace ldap pam
 
 .include "../../mk/bsd.options.mk"
 
@@ -17,22 +17,6 @@ LIBS+=			-ldns_sd
 # Dtrace support
 .if !empty(PKG_OPTIONS:Mdtrace)
 CONFIGURE_ARGS+=	--enable-dtrace
-.endif
-
-# Kerberos5 authentication for the PostgreSQL backend
-.if !empty(PKG_OPTIONS:Mkerberos)
-.  include "../../mk/krb5.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-krb5
-
-CHECK_BUILTIN.${KRB5_TYPE}:=	yes
-.include	"../../security/${KRB5_TYPE}/builtin.mk"
-CHECK_BUILTIN.${KRB5_TYPE}:=	no
-
-.	if !empty(USE_BUILTIN.${KRB5_TYPE}:M[yY][eE][sS]) && \
-		exists(${SH_KRB5_CONFIG})
-CFLAGS_KRB5!=	${SH_KRB5_CONFIG} --cflags
-CPPFLAGS+=	${CFLAGS_KRB5}
-.	endif
 .endif
 
 # LDAP authentication for the PostgreSQL backend
