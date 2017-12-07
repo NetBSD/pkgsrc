@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.12 2017/06/18 15:27:24 taca Exp $
+$NetBSD: distinfo,v 1.13 2017/12/07 13:00:33 hauke Exp $
 
-SHA1 (davical-1.1.5.tar.gz) = 589a013d3545e20cade8c21b3fc77dc073b94f14
-RMD160 (davical-1.1.5.tar.gz) = e871532ae1341594d91b5c9a1eef7ea21ef7bfd2
-SHA512 (davical-1.1.5.tar.gz) = d48786c52b4ecffa53463b2246a701e14fa5ea68a7c91f77423df15e439298988ad725455145663fe87223e81a66b02b4ca10b43bf5797b01ee59ca00f1d0957
-Size (davical-1.1.5.tar.gz) = 1781265 bytes
+SHA1 (davical-1.1.6.tar.gz) = d975bec35906d8a4123689aa5193044c9cdc6941
+RMD160 (davical-1.1.6.tar.gz) = 9bc63554eeab66af9ef2140bd854d0d063962509
+SHA512 (davical-1.1.6.tar.gz) = 3aa3b79c3530510063fc152b0aff60401c923e7b42a4c6a6bb5d06e8ad149ee190482ee2a6b8f8ad9b57142139d9f2e0be1cd9f7546a9cc4b77b78de541834c4
+Size (davical-1.1.6.tar.gz) = 1784517 bytes
 SHA1 (patch-aa) = a2a8be1a131cd47c6541c0a0793a00a33ba3a9f2
 SHA1 (patch-ab) = 7ae06c595f54d3a959db481d303978b29ebbd899
-SHA1 (patch-ac) = 29e805d37943a21d5ccd383651c19acb1a32038e
+SHA1 (patch-ac) = 357abb2ad470121f3f30d19a4602692c77661872
 SHA1 (patch-ad) = ecbac45e18ed6cea2915caadfb4dca1a2ce32667
 SHA1 (patch-ae) = cb753f0490ef3e5c5d8ff67b8d0aec7c4fe7d384
