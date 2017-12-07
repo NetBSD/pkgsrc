@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5184 2017/12/07 12:54:10 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.5185 2017/12/07 13:01:10 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7436,3 +7436,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/php-xdebug-devel version 2.6.0alpha1 [jdolecek 2017-12-06]
 	Updated net/haproxy to 1.8.1 [fhajny 2017-12-07]
 	Updated lang/rust to 1.22.1nb2 [ryoon 2017-12-07]
+	Updated www/davical to 1.1.6 [hauke 2017-12-07]
