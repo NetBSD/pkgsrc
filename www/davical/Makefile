@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2017/09/03 08:53:16 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2017/12/07 13:00:33 hauke Exp $
 
 DISTNAME=	davical-${DAVICAL_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-davical-${DAVICAL_VERSION}
@@ -10,9 +10,9 @@ HOMEPAGE=	https://www.davical.org/
 COMMENT=	Simple CalDAV server using a PostgreSQL backend
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3
 
-DAVICAL_VERSION=1.1.5
+DAVICAL_VERSION=1.1.6
 GITLAB_TAG=	r${DAVICAL_VERSION}
-GITLAB_REV=	7ccc7c449176475891ec50d5524928628df6f8d1
+GITLAB_REV=	3ba605288fb0fc0a4f2abce09874f8dab5ffdfb8
 
 DAVICALDIR=	${PREFIX}/share/davical
 EGDIR=		${PREFIX}/share/examples/davical
