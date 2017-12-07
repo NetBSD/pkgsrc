@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2017/06/05 16:01:56 taca Exp $
+$NetBSD: distinfo,v 1.12 2017/12/07 13:12:44 hauke Exp $
 
-SHA1 (libawl-0.57.tar.gz) = 3895707944695644255bd7070e8755ca4435ab2a
-RMD160 (libawl-0.57.tar.gz) = dd659c3fe36919089da1cbb3f8cb4986b04c1a66
-SHA512 (libawl-0.57.tar.gz) = 0000a6ebb8d60c064f4083d2bc0c8d4f3f80fa69e422cab831192a8973749b0a88b2656a02f7d288a6fb7c7381e75b6d7886f4d15e335e886c28e98c277bc504
-Size (libawl-0.57.tar.gz) = 573804 bytes
+SHA1 (libawl-0.58.tar.gz) = 373595431813632e3bc79d07b2993a3815693532
+RMD160 (libawl-0.58.tar.gz) = ed1015fc9c0f358722a4b8c07703603c1ee45968
+SHA512 (libawl-0.58.tar.gz) = a47edde4fe3cca78f0e1d13efa330139458bc537e65c5fe8557b48d2face86e63569f4d384e2e67fb3600644e0e88aa91df5ca6d6552009162f8c02f4d60b760
+Size (libawl-0.58.tar.gz) = 573623 bytes
 SHA1 (patch-Makefile) = d56f95c5731321f87baec22bad0b1a830ea9bdef
