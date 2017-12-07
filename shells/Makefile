@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2017/12/01 01:11:18 minskim Exp $
+# $NetBSD: Makefile,v 1.58 2017/12/07 23:16:07 minskim Exp $
 #
 
 COMMENT=	Shells
@@ -34,6 +34,7 @@ SUBDIR+=	tcsh
 SUBDIR+=	xonsh
 SUBDIR+=	xsh
 SUBDIR+=	zsh
+SUBDIR+=	zsh-autosuggestions
 SUBDIR+=	zsh-completions
 SUBDIR+=	zsh-pure
 
