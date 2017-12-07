@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2017/03/06 22:47:04 wiz Exp $
+$NetBSD: distinfo,v 1.13 2017/12/07 12:35:41 adam Exp $
 
-SHA1 (dpkg_1.18.23.tar.xz) = a090c0003d27bd467b9d4e683f2fa634f88d9486
-RMD160 (dpkg_1.18.23.tar.xz) = 84ee173c6efa0437f9faccefea59f82edaea821e
-SHA512 (dpkg_1.18.23.tar.xz) = 4f9bed1fb0558fa6b003601b7be8d67eb592140b7f9ac4cf0bccb394e14b42a822cdc692c8c6e27ad2929719fe78659f21c128cb17618733d344fd3489f42be7
-Size (dpkg_1.18.23.tar.xz) = 4516252 bytes
+SHA1 (dpkg_1.18.24.tar.xz) = 155fe5c91728bdf82756674d5aa85e4ff2e3eac6
+RMD160 (dpkg_1.18.24.tar.xz) = 0fe5e443ed2f25ecc401c16855f2e920152b963e
+SHA512 (dpkg_1.18.24.tar.xz) = 74df36a49a1b6b2243db14bd7ee0b69e50c2f0e79fc87e86e9b3cba2261fb717e421f7190a3ba54b4680a2f83855e5857dcb2625aa56847133258567392f1d42
+Size (dpkg_1.18.24.tar.xz) = 4530444 bytes
