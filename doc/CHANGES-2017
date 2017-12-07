@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5185 2017/12/07 13:01:10 hauke Exp $
+$NetBSD: CHANGES-2017,v 1.5186 2017/12/07 13:13:32 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7437,3 +7437,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/haproxy to 1.8.1 [fhajny 2017-12-07]
 	Updated lang/rust to 1.22.1nb2 [ryoon 2017-12-07]
 	Updated www/davical to 1.1.6 [hauke 2017-12-07]
+	Updated devel/php-libawl to 0.58 [hauke 2017-12-07]
