@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/11/08 11:50:32 adam Exp $
+# $NetBSD: Makefile,v 1.8 2017/12/07 12:39:39 adam Exp $
 
-DISTNAME=	python-crontab-2.2.7
+DISTNAME=	python-crontab-2.2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-crontab/}
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=0.10:../../time/py-dateutil
 
-USE_LANGUAGES=		# empty
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
