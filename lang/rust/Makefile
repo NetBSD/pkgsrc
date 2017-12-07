@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2017/12/04 14:49:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2017/12/07 12:53:31 ryoon Exp $
 
 DISTNAME=	rustc-1.22.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
 
