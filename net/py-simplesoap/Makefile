@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/09/16 19:27:06 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/12/07 13:16:18 adam Exp $
 
-DISTNAME=	PySimpleSOAP-1.16
+DISTNAME=	PySimpleSOAP-1.16.2
 PKGNAME=	${DISTNAME:tl:S/py/${PYPKGPREFIX}-/1}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysimplesoap/}
@@ -11,7 +11,6 @@ COMMENT=	Python Simple SOAP Library
 LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 1.16
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
