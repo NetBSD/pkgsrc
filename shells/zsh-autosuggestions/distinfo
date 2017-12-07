@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/12/07 23:14:32 minskim Exp $
+
+SHA1 (zsh-autosuggestions-0.4.2.tar.gz) = 8cd6c149b1c4ac92d66e69857febd8f0f0aff141
+RMD160 (zsh-autosuggestions-0.4.2.tar.gz) = 1ab509c1bd223760662362f252aa57473cd06408
+SHA512 (zsh-autosuggestions-0.4.2.tar.gz) = 67aae94211e6666d3a0f539509142d94b03ceb3d171e92b26fbf1a5a86185af515af07b9c244e258da321f1116624e6ed85eb77df73bd89e76246d415a18852b
+Size (zsh-autosuggestions-0.4.2.tar.gz) = 19251 bytes
