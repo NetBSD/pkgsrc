@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.739 2017/11/18 18:38:48 jmcneill Exp $
+# $NetBSD: Makefile,v 1.740 2017/12/08 16:48:06 jperkin Exp $
 #
 
 COMMENT=	System utilities
@@ -85,6 +85,7 @@ SUBDIR+=	collectd-postgresql
 SUBDIR+=	collectd-riemann
 SUBDIR+=	collectd-rrdtool
 SUBDIR+=	collectd-snmp
+SUBDIR+=	collectd-write_prometheus
 SUBDIR+=	conky
 SUBDIR+=	consolekit
 SUBDIR+=	consul
