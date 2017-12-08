@@ -1,19 +1,16 @@
-@comment $NetBSD: PLIST,v 1.8 2017/02/03 14:08:11 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/12/08 08:12:58 adam Exp $
 bin/chattr
 bin/lsattr
-bin/uuidgen
 info/libext2fs.info
 lib/e2initrd_helper
 man/man1/chattr.1
 man/man1/lsattr.1
-man/man1/uuidgen.1
 man/man5/e2fsck.conf.5
 man/man5/ext2.5
 man/man5/ext3.5
 man/man5/ext4.5
 man/man5/mke2fs.conf.5
 man/man8/badblocks.8
-man/man8/blkid.8
 man/man8/debugfs.8
 man/man8/dumpe2fs.8
 man/man8/e2freefrag.8
@@ -22,7 +19,7 @@ man/man8/e2image.8
 man/man8/e2label.8
 man/man8/e2undo.8
 man/man8/filefrag.8
-man/man8/findfs.8
+${PLIST.fsck}man/man8/fsck.8
 man/man8/fsck.ext2.8
 man/man8/fsck.ext3.8
 man/man8/fsck.ext4.8
@@ -34,9 +31,7 @@ man/man8/mkfs.ext4.8
 man/man8/mklost+found.8
 man/man8/resize2fs.8
 man/man8/tune2fs.8
-man/man8/uuidd.8
 sbin/badblocks
-sbin/blkid
 sbin/debugfs
 sbin/dumpe2fs
 sbin/e2freefrag
@@ -45,7 +40,7 @@ sbin/e2image
 sbin/e2label
 sbin/e2undo
 sbin/filefrag
-sbin/findfs
+${PLIST.fsck}sbin/fsck
 sbin/fsck.ext2
 sbin/fsck.ext3
 sbin/fsck.ext4
@@ -57,7 +52,6 @@ sbin/mkfs.ext4
 sbin/mklost+found
 sbin/resize2fs
 sbin/tune2fs
-sbin/uuidd
 share/examples/ext2fs/mke2fs.conf
 share/locale/ca/LC_MESSAGES/e2fsprogs.mo
 share/locale/cs/LC_MESSAGES/e2fsprogs.mo
