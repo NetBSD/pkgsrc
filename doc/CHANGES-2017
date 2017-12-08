@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5195 2017/12/08 14:17:03 gdt Exp $
+$NetBSD: CHANGES-2017,v 1.5196 2017/12/08 15:28:00 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7451,3 +7451,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed databases/postgresql-pgbench successor databases/postgresqlNN-contrib [adam 2017-12-08]
 	Updated x11/mlterm to 3.8.4 [tsutsui 2017-12-08]
 	Updated databases/postgresql-postgis2 to 2.4.2 [gdt 2017-12-08]
+	Added databases/repmgr version 4.0.1 [jperkin 2017-12-08]
