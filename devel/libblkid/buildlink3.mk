@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2011/01/08 20:43:38 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2017/12/08 08:03:35 adam Exp $
 
 BUILDLINK_TREE+=	libblkid
 
@@ -6,9 +6,8 @@ BUILDLINK_TREE+=	libblkid
 LIBBLKID_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libblkid+=	libblkid>=2.18
-BUILDLINK_PKGSRCDIR.libblkid?=	../../devel/libblkid
+BUILDLINK_PKGSRCDIR.libblkid?=		../../devel/libblkid
 
-.include "../../devel/libuuid/buildlink3.mk"
 .endif	# LIBBLKID_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libblkid
