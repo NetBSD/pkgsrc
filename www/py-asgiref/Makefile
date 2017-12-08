@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/11/30 08:01:48 adam Exp $
+# $NetBSD: Makefile,v 1.3 2017/12/08 12:07:50 adam Exp $
 
 DISTNAME=	asgiref-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 34
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
