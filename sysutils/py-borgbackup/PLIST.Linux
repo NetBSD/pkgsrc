@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2017/12/08 21:12:05 bsiegert Exp $
+${PYSITELIB}/borg/platform/linux.so
