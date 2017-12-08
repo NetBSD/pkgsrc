@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2017/12/08 15:27:46 jperkin Exp $
+bin/repmgr
+bin/repmgrd
+lib/postgresql/repmgr.so
+share/doc/repmgr/README.md
+share/examples/repmgr/repmgr.conf.sample
+share/postgresql/extension/repmgr--4.0.sql
+share/postgresql/extension/repmgr--unpackaged--4.0.sql
+share/postgresql/extension/repmgr.control
