@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2016/04/15 14:36:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2017/12/08 07:48:12 spz Exp $
 include/poppler/Annot.h
 include/poppler/Array.h
 include/poppler/BuiltinFont.h
@@ -9,6 +9,8 @@ include/poppler/Catalog.h
 include/poppler/CharCodeToUnicode.h
 include/poppler/CharTypes.h
 include/poppler/CompactFontTables.h
+include/poppler/CurlCachedFile.h
+include/poppler/CurlPDFDocBuilder.h
 include/poppler/DateInfo.h
 include/poppler/Decrypt.h
 include/poppler/Dict.h
@@ -27,6 +29,8 @@ include/poppler/GlobalParams.h
 include/poppler/Hints.h
 include/poppler/JArithmeticDecoder.h
 include/poppler/JBIG2Stream.h
+include/poppler/JPEG2000Stream.h
+include/poppler/JPXStream.h
 include/poppler/Lexer.h
 include/poppler/Linearization.h
 include/poppler/Link.h
@@ -115,9 +119,6 @@ include/poppler/splash/SplashPath.h
 include/poppler/splash/SplashPattern.h
 include/poppler/splash/SplashScreen.h
 include/poppler/splash/SplashState.h
-include/poppler/splash/SplashT1Font.h
-include/poppler/splash/SplashT1FontEngine.h
-include/poppler/splash/SplashT1FontFile.h
 include/poppler/splash/SplashTypes.h
 include/poppler/splash/SplashXPath.h
 include/poppler/splash/SplashXPathScanner.h
