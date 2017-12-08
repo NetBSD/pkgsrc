@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.159 2017/12/03 19:49:03 bsiegert Exp $
+# $NetBSD: Makefile.common,v 1.160 2017/12/08 20:12:43 bsiegert Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk2/Makefile
@@ -40,11 +40,6 @@ CONFIGURE_ARGS+=	--with-modified-by=${MAINTAINER:Q}
 CONFIGURE_ARGS+=	${VIM_EXTRA_OPTS}
 CONFIGURE_ARGS+=	--enable-multibyte
 CONFIGURE_ARGS+=	--enable-cscope
-
-# has libselinux but not selinux.h
-.if "${OS_VARIANT}" == "chromeos"
-CONFIGURE_ARGS+=	--disable-selinux
-.endif
 
 PATCH_ARGS=		-d ${WRKDIR}/${DISTNAME} --forward --quiet \
 				-E ${PATCH_STRIP:Q}
