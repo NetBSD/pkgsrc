@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/09/16 06:51:54 adam Exp $
+# $NetBSD: Makefile,v 1.6 2017/12/08 20:38:59 joerg Exp $
 
 DISTNAME=	channels-1.1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,9 @@ USE_LANGUAGES=		# empty
 DEPENDS+=	${PYPKGPREFIX}-django>=1.8:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=1.1:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-daphne>=1.3:../../www/py-daphne
+
+# py-asgiref
+PYTHON_VERSIONS_INCOMPATIBLE=	27 34
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
