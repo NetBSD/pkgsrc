@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5198 2017/12/08 20:06:14 spz Exp $
+$NetBSD: CHANGES-2017,v 1.5199 2017/12/08 20:13:31 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7454,3 +7454,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added databases/repmgr version 4.0.1 [jperkin 2017-12-08]
 	Added sysutils/collectd-write_prometheus version 5.8.0 [jperkin 2017-12-08]
 	Updated print/poppler to 0.61.1 [spz 2017-12-08]
+	Updated editors/vim-share to 8.0.1379 [bsiegert 2017-12-08]
