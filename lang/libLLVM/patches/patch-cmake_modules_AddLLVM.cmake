@@ -1,12 +1,12 @@
-$NetBSD: patch-cmake_modules_AddLLVM.cmake,v 1.5 2017/12/01 19:22:13 adam Exp $
+$NetBSD: patch-cmake_modules_AddLLVM.cmake,v 1.6 2017/12/08 02:14:44 gdt Exp $
 
 Disable library install rules. Handled manually.
 Make sure llvm-config goes in libexec/libLLVM to avoid conflict.
 Don't use non-portable -z discard-unused on SunOS.
 
---- cmake/modules/AddLLVM.cmake.orig	2017-07-12 21:43:14.000000000 +0000
+--- cmake/modules/AddLLVM.cmake.orig	2017-01-17 21:47:58.000000000 +0000
 +++ cmake/modules/AddLLVM.cmake
-@@ -198,9 +198,6 @@ function(add_link_opts target_name)
+@@ -182,9 +182,6 @@ function(add_link_opts target_name)
          # ld64's implementation of -dead_strip breaks tools that use plugins.
          set_property(TARGET ${target_name} APPEND_STRING PROPERTY
                       LINK_FLAGS " -Wl,-dead_strip")
@@ -16,7 +16,7 @@ Don't use non-portable -z discard-unused on SunOS.
        elseif(NOT WIN32 AND NOT LLVM_LINKER_IS_GOLD)
          # Object files are compiled with -ffunction-data-sections.
          # Versions of bfd ld < 2.23.1 have a bug in --gc-sections that breaks
-@@ -607,10 +604,6 @@ macro(add_llvm_library name)
+@@ -591,10 +588,6 @@ macro(add_llvm_library name)
          set_property(GLOBAL PROPERTY LLVM_HAS_EXPORTS True)
        endif()
  
@@ -27,7 +27,7 @@ Don't use non-portable -z discard-unused on SunOS.
  
        if (NOT CMAKE_CONFIGURATION_TYPES)
          add_custom_target(install-${name}
-@@ -648,10 +641,6 @@ macro(add_llvm_loadable_module name)
+@@ -632,10 +625,6 @@ macro(add_llvm_loadable_module name)
            set_property(GLOBAL PROPERTY LLVM_HAS_EXPORTS True)
          endif()
  
@@ -38,7 +38,7 @@ Don't use non-portable -z discard-unused on SunOS.
        endif()
        set_property(GLOBAL APPEND PROPERTY LLVM_EXPORTS ${name})
      endif()
-@@ -839,7 +828,7 @@ macro(add_llvm_tool name)
+@@ -823,7 +812,7 @@ macro(add_llvm_tool name)
  
        install(TARGETS ${name}
                ${export_to_llvmexports}
@@ -47,3 +47,12 @@ Don't use non-portable -z discard-unused on SunOS.
                COMPONENT ${name})
  
        if (NOT CMAKE_CONFIGURATION_TYPES)
+@@ -864,7 +853,7 @@ macro(add_llvm_utility name)
+   set_target_properties(${name} PROPERTIES FOLDER "Utils")
+   if( LLVM_INSTALL_UTILS AND LLVM_BUILD_UTILS )
+     install (TARGETS ${name}
+-      RUNTIME DESTINATION bin
++      RUNTIME DESTINATION libexec/libLLVM
+       COMPONENT ${name})
+     if (NOT CMAKE_CONFIGURATION_TYPES)
+       add_custom_target(install-${name}
