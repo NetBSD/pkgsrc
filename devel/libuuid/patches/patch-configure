@@ -1,20 +1,52 @@
-$NetBSD: patch-configure,v 1.6 2016/08/19 15:56:48 wiz Exp $
+$NetBSD: patch-configure,v 1.7 2017/12/08 08:03:35 adam Exp $
 
+Add --disable-uuidgen and --disable-mcookie.
 Shell portability.
-Disable flock.
 
---- configure.orig	2016-08-11 09:29:39.053534157 +0000
+--- configure.orig	2017-10-19 11:10:01.000000000 +0000
 +++ configure
-@@ -21297,7 +21297,7 @@ else
+@@ -1250,6 +1250,7 @@ enable_zramctl
+ enable_fsck
+ enable_partx
+ enable_uuidd
++enable_uuidgen
+ enable_mountpoint
+ enable_fallocate
+ enable_unshare
+@@ -1269,6 +1270,7 @@ enable_lslogins
+ enable_wdctl
+ enable_cal
+ enable_logger
++enable_mcookie
+ enable_switch_root
+ enable_pivot_root
+ enable_lsmem
+@@ -2024,6 +2026,7 @@ Optional Features:
+   --disable-fsck          do not build fsck
+   --disable-partx         do not build addpart, delpart, partx
+   --disable-uuidd         do not build the uuid daemon
++  --disable-uuidgen       do not build uuidgen
+   --disable-mountpoint    do not build mountpoint
+   --disable-fallocate     do not build fallocate
+   --disable-unshare       do not build unshare
+@@ -2043,6 +2046,7 @@ Optional Features:
+   --disable-wdctl         do not build wdctl
+   --disable-cal           do not build cal
+   --disable-logger        do not build logger
++  --disable-mcookie       do not build mcookie
+   --disable-switch_root   do not build switch_root
+   --disable-pivot_root    do not build pivot_root
+   --disable-lsmem         do not build lsmem
+@@ -22393,7 +22397,7 @@ else
  fi
  
  
--if test "x$enable_libmount_force_mountinfo" == xyes; then :
-+if test "x$enable_libmount_force_mountinfo" = xyes; then :
+-if test "x$enable_libmount_support_mtab" == xyes; then :
++if test "x$enable_libmount_support_mtab" = xyes; then :
  
  
- $as_echo "#define USE_LIBMOUNT_FORCE_MOUNTINFO 1" >>confdefs.h
-@@ -22193,7 +22193,7 @@ $as_echo "$as_me: WARNING: sys/signalfd.
+ $as_echo "#define USE_LIBMOUNT_SUPPORT_MTAB 1" >>confdefs.h
+@@ -23293,7 +23297,7 @@ $as_echo "$as_me: WARNING: sys/signalfd.
      esac
    fi
  
@@ -23,16 +55,64 @@ Disable flock.
  
  
  $as_echo "#define HAVE_UUIDD 1" >>confdefs.h
-@@ -25133,7 +25133,7 @@ fi
+@@ -23311,17 +23315,22 @@ fi
+ 
+ 
+ 
++# Check whether --enable-uuidgen was given.
++if test "${enable_uuidgen+set}" = set; then :
++  enableval=$enable_uuidgen;
++else
  
    if test "x$ul_default_estate" != x; then
-   enable_flock=$ul_default_estate
--  build_flock=yes
-+  build_flock=no
-   if test "x$ul_default_estate" = xno; then
-     build_flock=no
+   enable_uuidgen=$ul_default_estate
+-  build_uuidgen=yes
+-  if test "x$ul_default_estate" = xno; then
+-    build_uuidgen=no
++  else
++  enable_uuidgen=check
    fi
-@@ -29181,7 +29181,7 @@ else
+-else
++fi
+ 
++if test "x$enable_uuidgen" = xno; then
++  build_uuidgen=no
++else
+   build_uuidgen=yes
+-  enable_uuidgen=check
+ fi
+ 
+ 
+@@ -25956,17 +25965,23 @@ fi
+ 
+ 
+ 
++# Check whether --enable-mcookie was given.
++if test "${enable_mcookie+set}" = set; then :
++  enableval=$enable_mcookie;
++else
+ 
+   if test "x$ul_default_estate" != x; then
+   enable_mcookie=$ul_default_estate
+-  build_mcookie=yes
+-  if test "x$ul_default_estate" = xno; then
+-    build_mcookie=no
++  else
++    enable_mcookie=check
+   fi
+-else
+ 
++fi
++
++if test "x$enable_mcookie" = xno; then
++  build_mcookie=no
++else
+   build_mcookie=yes
+-  enable_mcookie=yes
+ fi
+ 
+  if test "x$build_mcookie" = xyes; then
+@@ -31063,7 +31078,7 @@ else
  fi
  
  

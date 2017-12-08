@@ -1,12 +1,11 @@
-$NetBSD: patch-ab,v 1.7 2015/11/27 14:57:35 jperkin Exp $
+$NetBSD: patch-libuuid_src_gen__uuid.c,v 1.1 2017/12/08 08:03:35 adam Exp $
 
 fcntl is portable, flock is not.
-
 Solaris does not have ifr.ifr_hwaddr.
 
---- libuuid/src/gen_uuid.c.orig	2015-11-02 09:17:06.000000000 +0000
+--- libuuid/src/gen_uuid.c.orig	2017-09-27 09:05:13.000000000 +0000
 +++ libuuid/src/gen_uuid.c
-@@ -167,7 +167,7 @@ static int get_node_id(unsigned char *no
+@@ -172,7 +172,7 @@ static int get_node_id(unsigned char *no
  	for (i = 0; i < n; i+= ifreq_size(*ifrp) ) {
  		ifrp = (struct ifreq *)((char *) ifc.ifc_buf+i);
  		strncpy(ifr.ifr_name, ifrp->ifr_name, IFNAMSIZ);
@@ -15,7 +14,7 @@ Solaris does not have ifr.ifr_hwaddr.
  		if (ioctl(sd, SIOCGIFHWADDR, &ifr) < 0)
  			continue;
  		a = (unsigned char *) &ifr.ifr_hwaddr.sa_data;
-@@ -222,12 +222,17 @@ static int get_clock(uint32_t *clock_hig
+@@ -227,12 +227,17 @@ static int get_clock(uint32_t *clock_hig
  	THREAD_LOCAL int		state_fd = -2;
  	THREAD_LOCAL FILE		*state_f;
  	THREAD_LOCAL uint16_t		clock_seq;
@@ -33,7 +32,7 @@ Solaris does not have ifr.ifr_hwaddr.
  	if (state_fd == -1)
  		ret = -1;
  
-@@ -248,7 +253,8 @@ static int get_clock(uint32_t *clock_hig
+@@ -253,7 +258,8 @@ static int get_clock(uint32_t *clock_hig
  	}
  	if (state_fd >= 0) {
  		rewind(state_f);
@@ -43,7 +42,7 @@ Solaris does not have ifr.ifr_hwaddr.
  			if ((errno == EAGAIN) || (errno == EINTR))
  				continue;
  			fclose(state_f);
-@@ -320,7 +326,8 @@ try_again:
+@@ -325,7 +331,8 @@ try_again:
  			fflush(state_f);
  		}
  		rewind(state_f);

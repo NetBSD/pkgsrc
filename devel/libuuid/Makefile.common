@@ -1,0 +1,26 @@
+# $NetBSD: Makefile.common,v 1.1 2017/12/08 08:03:35 adam Exp $
+# used by devel/libblkid/Makefile
+# used by devel/libuuid/Makefile
+# used by x11/mcookie/Makefile
+
+DISTNAME=	util-linux-2.31
+MASTER_SITES=	https://www.kernel.org/pub/linux/utils/util-linux/v${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.xz
+EXTRACT_USING=	bsdtar
+
+MAINTAINER?=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/karelzak/util-linux
+
+DISTINFO_FILE=	${.CURDIR}/../../devel/libuuid/distinfo
+PATCHDIR=	${.CURDIR}/../../devel/libuuid/patches
+
+USE_GCC_RUNTIME=	yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-all-programs
+CONFIGURE_ARGS+=	--disable-bash-completion
+CONFIGURE_ARGS+=	--without-ncurses
+CONFIGURE_ARGS+=	--without-ncursesw
+
+TEST_TARGET=		check
