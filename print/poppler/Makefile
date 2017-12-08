@@ -1,32 +1,35 @@
-# $NetBSD: Makefile,v 1.66 2013/10/29 19:05:23 drochner Exp $
+# $NetBSD: Makefile,v 1.67 2017/12/08 07:48:11 spz Exp $
 
 .include "../../print/poppler/Makefile.common"
 
 COMMENT=		PDF rendering library
 MAINTAINER=		reed@reedmedia.net
 
-USE_TOOLS+=		gmake
-
-#PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-cairo.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-splash.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler.pc.in
-GNU_CONFIGURE=		yes
+#PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-cairo.pc.cmake
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-splash.pc.cmake
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler.pc.cmake
 
 INSTALLATION_DIRS+=	include/poppler share/doc/poppler
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 # TODO: Later add an option to choose Splash versus Cairo backend.
 # Build the Splash graphics backend.
-CONFIGURE_ARGS+=	--enable-splash-output
-# Don't build the cairo graphics backend.
-CONFIGURE_ARGS+=	--disable-cairo-output
+CMAKE_ARGS+=    -DENABLE_SPLASH=ON
+CMAKE_ARGS+=    -DCMAKE_DISABLE_FIND_PACKAGE_CAIRO=TRUE
 # Don't compile GTK+ test program.
-CONFIGURE_ARGS+=	--disable-gtk-test
+CMAKE_ARGS+=    -DBUILD_GTK_TESTS=OFF
 # Don't compile GLib wrapper which also needs gtk2
-CONFIGURE_ARGS+=	--disable-poppler-glib
+CMAKE_ARGS+=    -DENABLE_GLIB=OFF
 # Don't build and install the tools
-CONFIGURE_ARGS+=	--disable-utils
-CONFIGURE_ARGS+=	--disable-poppler-cpp
+CMAKE_ARGS+=    -DENABLE_UTILS=OFF
+# Don't compile poppler cpp wrapper.
+CMAKE_ARGS+=    -DENABLE_CPP=OFF
+# Don't compile poppler qt4 wrapper.
+CMAKE_ARGS+=    -DENABLE_QT4=OFF
+# Don't compile poppler qt5 wrapper.
+CMAKE_ARGS+=    -DENABLE_QT5=OFF
+# Don't build libcurl based HTTP support. ## might want to include
+CMAKE_ARGS+=    -DENABLE_LIBCURL=OFF
+
 
 .include "../../mk/bsd.prefs.mk"
 
