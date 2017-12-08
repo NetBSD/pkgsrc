@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.92 2017/09/04 19:57:18 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.93 2017/12/08 07:48:11 spz Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
@@ -8,7 +8,7 @@
 # used by print/poppler-qt5/Makefile
 # used by print/poppler-utils/Makefile
 
-POPPLER_VERS=		0.59.0
+POPPLER_VERS=		0.61.1
 DISTNAME=		poppler-${POPPLER_VERS}
 CATEGORIES=		print
 MASTER_SITES=		https://poppler.freedesktop.org/
@@ -24,8 +24,10 @@ USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 
+USE_CMAKE=		yes
+
 # Don't accidentally find libtiff
-CONFIGURE_ARGS+=	--disable-libtiff
+CMAKE_ARGS+=    -DCMAKE_DISABLE_FIND_PACKAGE_TIFF=TRUE
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)

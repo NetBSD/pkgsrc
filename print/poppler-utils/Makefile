@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2017/07/11 16:35:03 adam Exp $
+# $NetBSD: Makefile,v 1.35 2017/12/08 07:48:12 spz Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -9,26 +9,27 @@ MAINTAINER=		reed@reedmedia.net
 CONFLICTS+=		poppler-0.5.1 poppler-0.5.1nb1 poppler-0.5.1nb2
 CONFLICTS+=		xpdf<3.02pl4nb1
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
-
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-# Don't build the splash graphics backend.
-CONFIGURE_ARGS+=	--disable-splash-output
-# Don't compile poppler qt wrapper.
-CONFIGURE_ARGS+=	--disable-poppler-qt
+# Build the splash graphics backend. ## for pdftoppm
+CMAKE_ARGS+=    -DENABLE_SPLASH=ON
 # Don't compile GTK+ test program.
-CONFIGURE_ARGS+=	--disable-gtk-test
+CMAKE_ARGS+=    -DBUILD_GTK_TESTS=OFF
 # Don't compile GLib wrapper which also needs gtk2
-CONFIGURE_ARGS+=	--disable-poppler-glib
-# Enable build and install of the tools
-CONFIGURE_ARGS+=	--enable-utils	# the default
+CMAKE_ARGS+=    -DENABLE_GLIB=OFF
+# Build and install the tools
+CMAKE_ARGS+=    -DENABLE_UTILS=ON
+# Don't compile poppler cpp wrapper.
+CMAKE_ARGS+=    -DENABLE_CPP=OFF
+# Don't compile poppler qt4 wrapper.
+CMAKE_ARGS+=    -DENABLE_QT4=OFF
+# Don't compile poppler qt5 wrapper.
+CMAKE_ARGS+=    -DENABLE_QT5=OFF
+# Don't build libcurl based HTTP support. ## might want to include
+CMAKE_ARGS+=    -DENABLE_LIBCURL=OFF
+
 
 BUILDLINK_API_DEPENDS.poppler+=     poppler>=${POPPLER_VERS}
 .include "../../print/poppler/buildlink3.mk"
 
-# needed to build libpoppler-cairo
-BUILD_DIRS=		fofi goo poppler utils
 INSTALL_DIRS=		utils
 
 .include "../../mk/bsd.prefs.mk"
