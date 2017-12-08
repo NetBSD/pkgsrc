@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.553 2017/12/08 12:18:01 adam Exp $
+# $NetBSD: Makefile,v 1.554 2017/12/08 15:28:58 jperkin Exp $
 
 COMMENT=	Databases
 
@@ -396,6 +396,7 @@ SUBDIR+=	qore-sqlite3-module
 SUBDIR+=	quicklist
 SUBDIR+=	rdb
 SUBDIR+=	redis
+SUBDIR+=	repmgr
 SUBDIR+=	rrdtool
 SUBDIR+=	rrdtool12
 SUBDIR+=	ruby-activeldap
