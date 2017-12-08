@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2017/02/03 14:08:11 mef Exp $
+$NetBSD: patch-ac,v 1.6 2017/12/08 08:12:58 adam Exp $
 
 DragonFly Support
 
---- lib/blkid/getsize.c.orig	2016-06-08 21:39:43.000000000 +0000
+--- lib/blkid/getsize.c.orig	2017-10-16 05:45:45.000000000 +0000
 +++ lib/blkid/getsize.c
 @@ -36,6 +36,9 @@
  #ifdef HAVE_SYS_DISKLABEL_H
@@ -30,7 +30,7 @@ DragonFly Support
  
 @@ -151,8 +159,11 @@ blkid_loff_t blkid_get_dev_size(int fd)
  		if (fstat(fd, &st) >= 0 &&
- 		    (S_ISBLK(st.st_mode) || S_ISCHR(st.st_mode)))
+ 		    blkidP_is_disk_device(st.st_mode))
  			part = st.st_rdev & 7;
 -
 +#ifdef __DragonFly__

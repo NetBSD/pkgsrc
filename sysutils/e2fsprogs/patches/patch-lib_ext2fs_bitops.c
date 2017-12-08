@@ -1,4 +1,6 @@
-$NetBSD: patch-lib_ext2fs_bitops.c,v 1.2 2017/02/03 14:08:11 mef Exp $
+$NetBSD: patch-lib_ext2fs_bitops.c,v 1.3 2017/12/08 08:12:58 adam Exp $
+
+Avoid conflict with popcountXX().
 
 --- lib/ext2fs/bitops.c.orig	2016-09-02 13:17:32.000000000 +0900
 +++ lib/ext2fs/bitops.c	2017-02-03 21:44:49.000000000 +0900
