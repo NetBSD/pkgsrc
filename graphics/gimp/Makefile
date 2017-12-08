@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.273 2017/09/04 20:20:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.274 2017/12/08 08:52:57 maya Exp $
 
 DISTNAME=	gimp-2.8.22
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
