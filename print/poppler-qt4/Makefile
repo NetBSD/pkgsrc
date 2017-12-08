@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2016/04/15 14:36:21 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2017/12/08 07:48:12 spz Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -6,12 +6,18 @@ PKGNAME=		poppler-qt4-${POPPLER_VERS}
 COMMENT=		PDF rendering library (QT4 wrapper)
 MAINTAINER=		reed@reedmedia.net
 
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-cairo-output
-CONFIGURE_ARGS+=	--enable-poppler-qt4
-CONFIGURE_ARGS+=	--disable-gtk-test
-CONFIGURE_ARGS+=	--disable-utils
-CONFIGURE_ENV+=		MOCQT4=${QTDIR}/bin/moc
+CMAKE_ARGS+=    -DENABLE_SPLASH=ON
+CMAKE_ARGS+=    -DCMAKE_DISABLE_FIND_PACKAGE_CAIRO=TRUE
+CMAKE_ARGS+=    -DBUILD_GTK_TESTS=OFF
+CMAKE_ARGS+=    -DENABLE_GLIB=OFF
+CMAKE_ARGS+=    -DENABLE_UTILS=OFF
+CMAKE_ARGS+=    -DENABLE_CPP=OFF
+CMAKE_ARGS+=    -DENABLE_QT4=ON
+CMAKE_ARGS+=    -DENABLE_QT5=OFF
+# Don't build libcurl based HTTP support. ## might want to include
+CMAKE_ARGS+=    -DENABLE_LIBCURL=OFF
+
+CMAKE_ARGS+=	-DMOCQT4=${QTDIR}/bin/moc
 
 BUILDLINK_API_DEPENDS.poppler+= poppler>=${POPPLER_VERS}
 .include "../../print/poppler/buildlink3.mk"
