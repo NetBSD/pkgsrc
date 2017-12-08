@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2017/11/17 11:36:30 adam Exp $
+$NetBSD: distinfo,v 1.9 2017/12/08 12:37:05 adam Exp $
 
-SHA1 (libsass-3.4.7-src.tar.gz) = c618fd9980e2e9e6e5ce71580aa45e916e77d02a
-RMD160 (libsass-3.4.7-src.tar.gz) = 204e76023313293081e40255f1c248e04e71d7b3
-SHA512 (libsass-3.4.7-src.tar.gz) = b7ec9deac376f754741b95841e5c2d7afe3b0a03e204d2204e59dab6d8ba7b0a770c37d4e119112622504a994112d282e90e72c343459c5475bb23e83036da89
-Size (libsass-3.4.7-src.tar.gz) = 320687 bytes
+SHA1 (libsass-3.4.7.tar.gz) = 011ebff7a592d00de274fceea2bb93d8234aee90
+RMD160 (libsass-3.4.7.tar.gz) = 6e8b801143491465447417633be5deafa7bb9b03
+SHA512 (libsass-3.4.7.tar.gz) = 5d743d4345b11e9e5315aa858637d3388d2b464150a46bc8a712e1e5d1b3df9c1e6b4dcac26f91827f1c38db24a5a084d04c0962a428f2994f42ad66a25b35a8
+Size (libsass-3.4.7.tar.gz) = 319824 bytes
 SHA1 (patch-src_units.hpp) = f3d4d926e2cf9517bea9fc4ee47e597908c150cc
