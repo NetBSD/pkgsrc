@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2017/11/21 15:18:22 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.17 2017/12/08 16:49:01 jperkin Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
@@ -13,6 +13,7 @@
 # used by sysutils/collectd-riemann/Makefile
 # used by sysutils/collectd-rrdtool/Makefile
 # used by sysutils/collectd-snmp/Makefile
+# used by sysutils/collectd-write_prometheus/Makefile
 # used by sysutils/p5-collectd/Makefile
 # used by sysutils/py-collectd/Makefile
 
