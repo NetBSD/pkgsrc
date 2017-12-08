@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5190 2017/12/07 23:15:27 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.5191 2017/12/08 02:17:38 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7444,3 +7444,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/nodejs8 to 8.9.2 [fhajny 2017-12-07]
 	Updated lang/nodejs6 to 6.12.1 [fhajny 2017-12-07]
 	Added shells/zsh-autosuggestions version 0.4.2 [minskim 2017-12-07]
+	Updated lang/libLLVM to 4.0.1 [gdt 2017-12-08]
