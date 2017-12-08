@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5194 2017/12/08 14:13:07 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.5195 2017/12/08 14:17:03 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7450,3 +7450,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/e2fsprogs to 1.43.7 [adam 2017-12-08]
 	Removed databases/postgresql-pgbench successor databases/postgresqlNN-contrib [adam 2017-12-08]
 	Updated x11/mlterm to 3.8.4 [tsutsui 2017-12-08]
+	Updated databases/postgresql-postgis2 to 2.4.2 [gdt 2017-12-08]
