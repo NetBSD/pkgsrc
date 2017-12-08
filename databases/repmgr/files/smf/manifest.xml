@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
+<service_bundle type="manifest" name="export">
+  <service name="@SMF_PREFIX@/@SMF_NAME@" type="service" version="1">
+    <create_default_instance enabled="false" />
+    <single_instance />
+    <dependency name="network" grouping="require_all" restart_on="none" type="service">
+      <service_fmri value="svc:/milestone/network:default" />
+    </dependency>
+    <dependency name="filesystem-local" grouping="require_all" restart_on="none" type="service">
+      <service_fmri value="svc:/system/filesystem/local:default" />
+    </dependency>
+    <method_context>
+      <method_credential user="@PGUSER@" group="@PGGROUP@" />
+      <method_environment>
+        <envvar name="PATH" value="@PREFIX@/bin:@PREFIX@/sbin:/usr/bin:/usr/sbin:/bin:/sbin"/>
+      </method_environment>
+    </method_context>
+    <exec_method type="method" name="start" exec="@PREFIX@/bin/repmgrd -f %{config_file} -p %{data}/repmgrd.pid -d" timeout_seconds="300" />
+    <exec_method type="method" name="stop" exec=":kill" timeout_seconds="60"/>
+    <exec_method type="method" name="refresh" exec=":kill -HUP" timeout_seconds="60"/>
+    <property_group name="application" type="application">
+      <propval name="data" type="astring" value="@PGHOME@/data" />
+      <propval name="config_file" type="astring" value="@PKG_SYSCONFDIR@/repmgr.conf" />
+    </property_group>
+    <template>
+      <common_name>
+        <loctext xml:lang="C">Replication Manager for PostgreSQL clusters</loctext>
+      </common_name>
+      <documentation>
+        <doc_link name="repmgr.org" uri="http://repmgr.org" />
+      </documentation>
+    </template>
+  </service>
+</service_bundle>
