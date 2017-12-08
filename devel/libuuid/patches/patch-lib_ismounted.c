@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_ismounted.c,v 1.2 2017/01/24 21:42:26 bsiegert Exp $
+$NetBSD: patch-lib_ismounted.c,v 1.1 2017/12/08 08:03:35 adam Exp $
 
 Fix build on NetBSD.
 
