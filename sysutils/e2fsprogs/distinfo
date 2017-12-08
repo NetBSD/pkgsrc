@@ -1,21 +1,21 @@
-$NetBSD: distinfo,v 1.23 2017/09/21 09:48:56 jperkin Exp $
+$NetBSD: distinfo,v 1.24 2017/12/08 08:12:58 adam Exp $
 
-SHA1 (e2fsprogs-1.43.4.tar.xz) = 3073dfe3d67075d3ae68e41e78120f14a18ac9ba
-RMD160 (e2fsprogs-1.43.4.tar.xz) = cb6fb31aa7242d3e72f0427aac0271848d467ffe
-SHA512 (e2fsprogs-1.43.4.tar.xz) = c0f699e70d6d346a8130d965053f7951bb10a56aabce37938ec8f28d07b976adf5680c941cddae17c17b2f73bfaf5491f05e39e667d2416b7d30c807fbd8a630
-Size (e2fsprogs-1.43.4.tar.xz) = 5265788 bytes
+SHA1 (e2fsprogs-1.43.7.tar.xz) = 06c5798cbd72d8c6655f5442848ffd33a0c913fc
+RMD160 (e2fsprogs-1.43.7.tar.xz) = ccfa3a6e474fbb3c5314bd5b6e6cc00eb1bb5076
+SHA512 (e2fsprogs-1.43.7.tar.xz) = 2ef270364d3cea620db3c3b9932849d0ff5b49d4a9a9b24f0d1ac36888199bd67432edc5f939d9f697ee0342b71a063e1ad4ce8119528a7adab7a777c1de57ba
+Size (e2fsprogs-1.43.7.tar.xz) = 5286684 bytes
 SHA1 (patch-ab) = 9b686655a75239279a456dc8889113be06519cd7
-SHA1 (patch-ac) = 1d1c27fde75e3c8db8327a4519417bb2c733f953
+SHA1 (patch-ac) = 1a7faec14d69cb1d317908297e5500c0cb72aa4f
 SHA1 (patch-af) = bcda43bb14afdbf6a98dfedd949af4d1aff443d6
 SHA1 (patch-an) = 1199b17c4e65b8825b78fc02f7b2c9164eee56ef
 SHA1 (patch-ao) = a8fcacf506b003bf40ecadd5260ff0a6628ad2e6
 SHA1 (patch-as) = be316e404840a47422edbee65177bf6a9c94b335
-SHA1 (patch-aw) = 544634d6603762dabaeffe950440f533c6495b32
-SHA1 (patch-debugfs_debugfs.c) = 6092c8e61fcdda2e5b669dad26b6c335cc45c4c5
+SHA1 (patch-aw) = d864c60c302230acdbdb1e33436883ad594c6808
+SHA1 (patch-debugfs_debugfs.c) = 085d29bc53e616dbeb08f4f48fd9d94e1d837e80
 SHA1 (patch-e2fsck_jfs__user.h) = 2fd21cedabc4356a0d76a6caa1dbf73461750800
-SHA1 (patch-lib_ext2fs_bitops.c) = 0ca90ee35d255b8f590a216554a22b738c6083bc
+SHA1 (patch-lib_ext2fs_bitops.c) = 068cc0dfb6b2a6a185178479f20100917c7407c8
 SHA1 (patch-lib_ext2fs_bitops.h) = 8eec77c83bf85423a1420b18405e9ba655131528
 SHA1 (patch-lib_ext2fs_ext2fs.h) = 2811fd3eff03dd4fb7f72df4c854d2c33b37846f
 SHA1 (patch-lib_ext2fs_tdb.c) = dd50993cd0beba0451cfb3422ca9f54700ee0e38
 SHA1 (patch-lib_uuid_gen__uuid.c) = 083ac45a8d2d30a5c272720fb9a6a1785c97eee2
-SHA1 (patch-misc_create__inode.c) = 7b9b49bc6bdcf5845bb81414faed987c74228940
+SHA1 (patch-misc_create__inode.c) = b3a9f313ea7cb55d9a40c7916a7862472e0aeaa8
