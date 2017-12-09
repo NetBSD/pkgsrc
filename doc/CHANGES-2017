@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5201 2017/12/09 02:26:41 taca Exp $
+$NetBSD: CHANGES-2017,v 1.5202 2017/12/09 02:32:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7457,3 +7457,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated editors/vim-share to 8.0.1379 [bsiegert 2017-12-08]
 	Updated converters/php-iconv to 7.0.26nb1 [taca 2017-12-09]
 	Updated databases/ruby-sequel to 5.3.0 [taca 2017-12-09]
+	Updated mail/pear-Mail_Mime to 1.10.2 [taca 2017-12-09]
