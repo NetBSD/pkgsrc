@@ -1,0 +1,9 @@
+tamago-tsunagi is Emacs plug-in to bridge inputmethods of (Free)Wnn, Canna,
+sj3, and Anthy.  It is fork from IM egg(tamago) and it supports Emacs-24.3
+and later, one of successors of editors/tamago.
+
+Similar work may also be found at
+
+	http://anonscm.debian.org/cgit/pkg-anthy/egg.git
+
+but it does not have capability with (Free)Wnn and Canna.

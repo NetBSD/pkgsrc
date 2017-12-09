@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2017/12/09 03:28:49 taca Exp $
+
+tamago-tsunagi supports these inputmethods and if you use one of them,
+please install the corresponding package.
+
+       FreeWnn		inputmethod/ja-freewnn-server
+       Canna		inputmethod/canna-server
+       sj3		inputmethod/sj3-server
+       Anthy		inputmethod/anthy
+
+===========================================================================

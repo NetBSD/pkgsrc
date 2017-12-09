@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile.in,v 1.1 2017/12/09 03:28:50 taca Exp $
+
+Fix makefile syntax.
+
+--- Makefile.in.orig	2015-02-02 22:22:57.000000000 +0000
++++ Makefile.in
+@@ -140,15 +140,13 @@ install-site: all
+ 	  do  \
+ 	    ${INSTALL_DATA}  $${FILE} ${DESTDIR}${lispdir}/egg/egg; \
+ 	  done; \
+-	touch ${DESTDIR}${lispdir}/egg/egg/.nosearch; \
+-#
++	touch ${DESTDIR}${lispdir}/egg/egg/.nosearch
+ 	mkdir -p ${DESTDIR}${lispdir}/egg/its ; \
+ 	for FILE in ${ITSSRCS} ${ITSELCS} ; \
+ 	  do  \
+ 	    ${INSTALL_DATA}  $${FILE} ${DESTDIR}${lispdir}/egg/its ; \
+ 	  done; \
+-	touch ${DESTDIR}${lispdir}/egg/its/.nosearch; \
+-
++	touch ${DESTDIR}${lispdir}/egg/its/.nosearch
+ 
+ uninstall-site:
+ 	if [ -d ${lispdir}/egg ]; then \
