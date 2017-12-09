@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.244 2017/10/22 19:29:20 bsiegert Exp $
+# $NetBSD: bootstrap,v 1.245 2017/12/09 00:33:36 sevan Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -542,6 +542,7 @@ CYGWIN_*)
 	need_awk=no
 	need_sed=no
 	need_xargs=no
+	machine_arch=`uname -m`
 	# only used for unprivileged builds.
 	whoamiprog='id -u'
 	groupsprog='id -g'
