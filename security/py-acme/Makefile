@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/05/11 08:23:35 fhajny Exp $
+# $NetBSD: Makefile,v 1.8 2017/12/09 16:39:03 fhajny Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/certbot/acme/}
 CATEGORIES=	security
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-requests>2.10:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-rfc3339-[0-9]*:../../time/py-rfc3339
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-six>1.9.0:../../lang/py-six
 
 EGG_NAME=	${DISTNAME:S/certbot/acme/}
 
