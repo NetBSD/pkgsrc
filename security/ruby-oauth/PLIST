@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/06/05 15:15:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/12/09 19:18:47 tsutsui Exp $
 bin/oauth${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
@@ -19,7 +19,6 @@ ${GEM_LIBDIR}/lib/oauth/client/em_http.rb
 ${GEM_LIBDIR}/lib/oauth/client/helper.rb
 ${GEM_LIBDIR}/lib/oauth/client/net_http.rb
 ${GEM_LIBDIR}/lib/oauth/consumer.rb
-${GEM_LIBDIR}/lib/oauth/core_ext.rb
 ${GEM_LIBDIR}/lib/oauth/errors.rb
 ${GEM_LIBDIR}/lib/oauth/errors/error.rb
 ${GEM_LIBDIR}/lib/oauth/errors/problem.rb
@@ -29,6 +28,7 @@ ${GEM_LIBDIR}/lib/oauth/oauth.rb
 ${GEM_LIBDIR}/lib/oauth/oauth_test_helper.rb
 ${GEM_LIBDIR}/lib/oauth/request_proxy.rb
 ${GEM_LIBDIR}/lib/oauth/request_proxy/action_controller_request.rb
+${GEM_LIBDIR}/lib/oauth/request_proxy/action_dispatch_request.rb
 ${GEM_LIBDIR}/lib/oauth/request_proxy/base.rb
 ${GEM_LIBDIR}/lib/oauth/request_proxy/curb_request.rb
 ${GEM_LIBDIR}/lib/oauth/request_proxy/em_http_request.rb
