@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2017/10/31 15:53:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.55 2017/12/09 02:26:16 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -147,6 +147,7 @@ ${GEM_LIBDIR}/doc/release_notes/4.9.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.0.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.1.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.2.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.3.0.txt
 ${GEM_LIBDIR}/doc/schema_modification.rdoc
 ${GEM_LIBDIR}/doc/security.rdoc
 ${GEM_LIBDIR}/doc/sharding.rdoc
@@ -303,6 +304,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/symbol_aref.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/symbol_aref_refinement.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/symbol_as.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/symbol_as_refinement.rb
+${GEM_LIBDIR}/lib/sequel/extensions/synchronize_sql.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/thread_local_timezones.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/to_dot.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/virtual_row_method_block.rb
@@ -537,6 +539,7 @@ ${GEM_LIBDIR}/spec/extensions/subclasses_spec.rb
 ${GEM_LIBDIR}/spec/extensions/subset_conditions_spec.rb
 ${GEM_LIBDIR}/spec/extensions/symbol_aref_refinement_spec.rb
 ${GEM_LIBDIR}/spec/extensions/symbol_as_refinement_spec.rb
+${GEM_LIBDIR}/spec/extensions/synchronize_sql_spec.rb
 ${GEM_LIBDIR}/spec/extensions/table_select_spec.rb
 ${GEM_LIBDIR}/spec/extensions/tactical_eager_loading_spec.rb
 ${GEM_LIBDIR}/spec/extensions/thread_local_timezones_spec.rb
