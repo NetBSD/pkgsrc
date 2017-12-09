@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5205 2017/12/09 10:41:21 leot Exp $
+$NetBSD: CHANGES-2017,v 1.5206 2017/12/09 13:04:16 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7468,3 +7468,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/postfix-sqlite to 3.2.4 [taca 2017-12-09]
 	Added inputmethod/tamago-tsunagi version 5.0.7.1 [taca 2017-12-09]
 	Updated net/gallery-dl to 1.1.0 [leot 2017-12-09]
+	Added sysutils/u-boot-jetson-tk1 version 2017.11 [jmcneill 2017-12-09]
