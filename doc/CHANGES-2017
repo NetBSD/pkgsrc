@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5199 2017/12/08 20:13:31 bsiegert Exp $
+$NetBSD: CHANGES-2017,v 1.5200 2017/12/09 02:23:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7455,3 +7455,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/collectd-write_prometheus version 5.8.0 [jperkin 2017-12-08]
 	Updated print/poppler to 0.61.1 [spz 2017-12-08]
 	Updated editors/vim-share to 8.0.1379 [bsiegert 2017-12-08]
+	Updated converters/php-iconv to 7.0.26nb1 [taca 2017-12-09]
