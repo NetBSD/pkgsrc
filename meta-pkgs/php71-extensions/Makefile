@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/10/27 08:49:01 taca Exp $
+# $NetBSD: Makefile,v 1.4 2017/12/09 02:37:38 taca Exp $
 
 DISTNAME=	${PHP_PKG_PREFIX}-extensions-${PHP_VERSION}
 CATEGORIES=	meta-pkgs www
@@ -7,7 +7,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.php.net/
-COMMENT=	"meta-package" for the PHP 7.0 HTML-embedded scripting language
+COMMENT=	"meta-package" for the PHP 7.1 HTML-embedded scripting language
 
 DEPENDS+=	php>=${PHP_VERSION}<${NEXT_VERS}:${PHPPKGSRCDIR}
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=${PHP_VERSION}<${NEXT_VERS}:../../www/ap-php
