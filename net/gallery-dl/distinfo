@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2017/11/25 18:34:23 leot Exp $
+$NetBSD: distinfo,v 1.5 2017/12/09 10:41:05 leot Exp $
 
-SHA1 (gallery_dl-1.0.2.tar.gz) = 05c82d44b9d85a27c27c6ba6a1aa9adc6d7b6976
-RMD160 (gallery_dl-1.0.2.tar.gz) = 1bfb8d4d577101c556e5b3f2b77a2acbbb1dd9d7
-SHA512 (gallery_dl-1.0.2.tar.gz) = 427e43592823f6bf77cd6018caac2f5293953a6df1124f2cd82cb3dc0736cb0c9ffde0ec0ad0e9aa3cf5f20a47facee5bf8d2ebdfa53439c8503385e9dbc2161
-Size (gallery_dl-1.0.2.tar.gz) = 110824 bytes
+SHA1 (gallery_dl-1.1.0.tar.gz) = 01b59b347f61e6c5ab2da6967303bfb3b81020d9
+RMD160 (gallery_dl-1.1.0.tar.gz) = 9591346034f79bf10a77484723e983cd1d58c639
+SHA512 (gallery_dl-1.1.0.tar.gz) = b9937b613de89acaffb288d0f955f3efc7eea3749f9ae59ab5f477d79c3ba9c7300218a306dfa8dc99ce9240c3e13d6cf10e5e7dd384059f39862fcf9fbf2af4
+Size (gallery_dl-1.1.0.tar.gz) = 111685 bytes
 SHA1 (patch-gallery__dl_version.py) = aa869f0441895fd7741c153fdd18ef6b35f6e355
