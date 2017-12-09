@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5206 2017/12/09 13:04:16 jmcneill Exp $
+$NetBSD: CHANGES-2017,v 1.5207 2017/12/09 16:39:30 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7469,3 +7469,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added inputmethod/tamago-tsunagi version 5.0.7.1 [taca 2017-12-09]
 	Updated net/gallery-dl to 1.1.0 [leot 2017-12-09]
 	Added sysutils/u-boot-jetson-tk1 version 2017.11 [jmcneill 2017-12-09]
+	Updated security/py-acme to 0.20.0 [fhajny 2017-12-09]
+	Updated security/py-certbot to 0.20.0 [fhajny 2017-12-09]
