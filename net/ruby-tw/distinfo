@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2017/02/05 02:29:41 tsutsui Exp $
+$NetBSD: distinfo,v 1.13 2017/12/09 19:41:17 tsutsui Exp $
 
-SHA1 (tw-1.0.12.gem) = ac48ca9580464069eebd3d83d03971dfbbba3d6b
-RMD160 (tw-1.0.12.gem) = 2366604ad1b69c77d5f4fdfffd74603392674adf
-SHA512 (tw-1.0.12.gem) = dc0e379b5775517e0061c9f3ec9ef4d6f16a0ed2fce8bf2e42cae000b7edb5bfa5711ddd64eb888d0c800ab6edaa17a6fa1e26a239ad67ad309c81a8da10164f
-Size (tw-1.0.12.gem) = 14848 bytes
+SHA1 (tw-1.2.1.gem) = 144c371ce2b41dd81692e407c0670a7ed63939c8
+RMD160 (tw-1.2.1.gem) = feb2da03a90691ad15cdc126edd1dbdbf9d9771b
+SHA512 (tw-1.2.1.gem) = c4de7bb1fd19873c8d0147f452693151f19c29bec33d647eb3f7903109ac03419ec8df1f01a2b8c21e34a72fe39272c9fb45826873f5c4215fd2c99f5c0eb4ea
+Size (tw-1.2.1.gem) = 14848 bytes
