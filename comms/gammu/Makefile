@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/10/22 18:43:28 leot Exp $
+# $NetBSD: Makefile,v 1.27 2017/12/09 19:36:32 leot Exp $
 #
 
 DISTNAME=	gammu-1.38.5
@@ -38,6 +38,12 @@ REPLACE_BASH=	utils/gammu-config utils/jadmaker
 
 # needed because of https://bugs.cihar.com/view.php?id=908
 BUILDLINK_TRANSFORM+=	rm:-Werror
+
+SUBST_CLASSES+=			cmakelists
+SUBST_STAGE.cmakelists=		pre-configure
+SUBST_MESSAGE.cmakelists=	Fixing CMakeLists.txt
+SUBST_FILES.cmakelists=		CMakeLists.txt
+SUBST_SED.cmakelists=		-e 's/LIB_SUFFIX "64"/LIB_SUFFIX ""/'
 
 LDFLAGS.SunOS+=	-lintl
 
