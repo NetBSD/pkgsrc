@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/10/04 13:13:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/12/09 18:00:46 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -52,14 +52,9 @@ ${GEM_LIBDIR}/lib/twitter/rest/favorites.rb
 ${GEM_LIBDIR}/lib/twitter/rest/friends_and_followers.rb
 ${GEM_LIBDIR}/lib/twitter/rest/help.rb
 ${GEM_LIBDIR}/lib/twitter/rest/lists.rb
-${GEM_LIBDIR}/lib/twitter/rest/media.rb
 ${GEM_LIBDIR}/lib/twitter/rest/oauth.rb
 ${GEM_LIBDIR}/lib/twitter/rest/places_and_geo.rb
 ${GEM_LIBDIR}/lib/twitter/rest/request.rb
-${GEM_LIBDIR}/lib/twitter/rest/request/multipart_with_file.rb
-${GEM_LIBDIR}/lib/twitter/rest/response/parse_error_json.rb
-${GEM_LIBDIR}/lib/twitter/rest/response/parse_json.rb
-${GEM_LIBDIR}/lib/twitter/rest/response/raise_error.rb
 ${GEM_LIBDIR}/lib/twitter/rest/saved_searches.rb
 ${GEM_LIBDIR}/lib/twitter/rest/search.rb
 ${GEM_LIBDIR}/lib/twitter/rest/spam_reporting.rb
@@ -85,7 +80,6 @@ ${GEM_LIBDIR}/lib/twitter/streaming/response.rb
 ${GEM_LIBDIR}/lib/twitter/streaming/stall_warning.rb
 ${GEM_LIBDIR}/lib/twitter/suggestion.rb
 ${GEM_LIBDIR}/lib/twitter/target_user.rb
-${GEM_LIBDIR}/lib/twitter/token.rb
 ${GEM_LIBDIR}/lib/twitter/trend.rb
 ${GEM_LIBDIR}/lib/twitter/trend_results.rb
 ${GEM_LIBDIR}/lib/twitter/tweet.rb
