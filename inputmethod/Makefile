@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2017/09/30 07:24:46 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2017/12/09 03:31:06 taca Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -98,6 +98,7 @@ SUBDIR+=	skkfep
 SUBDIR+=	skkinput
 SUBDIR+=	skkserv
 SUBDIR+=	skktools
+SUBDIR+=	tamago-tsunagi
 SUBDIR+=	tc
 SUBDIR+=	tegaki-pygtk
 SUBDIR+=	tegaki-python
