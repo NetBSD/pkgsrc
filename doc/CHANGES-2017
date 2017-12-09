@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5215 2017/12/09 17:56:19 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.5216 2017/12/09 17:57:06 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7479,3 +7479,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/nodejs4 to 4.8.7 [fhajny 2017-12-09]
 	Updated lang/nodejs8 to 8.9.3 [fhajny 2017-12-09]
 	Updated lang/nodejs to 9.2.1 [fhajny 2017-12-09]
+	Updated lang/nodejs6 to 6.12.2 [fhajny 2017-12-09]
