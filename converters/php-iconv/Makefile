@@ -1,10 +1,15 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 00:20:15 asau Exp $
+# $NetBSD: Makefile,v 1.12 2017/12/09 02:23:07 taca Exp $
 
 MODNAME=		iconv
+PKGREVISION=		1
 CATEGORIES+=		converters
 COMMENT=		PHP extension for character set conversion
 
 CONFLICTS=	php-iconv-[0-9]*
+
+INSTALLATION_DIRS+=	${PREFIX}/include/php/ext/iconv
+
+PLIST_SRC+=		${.CURDIR}/PLIST
 
 .include "../../converters/libiconv/buildlink3.mk"
 
@@ -22,6 +27,9 @@ CONFIGURE_ARGS+=	--with-iconv=shared,${BUILDLINK_PREFIX.iconv}
 .else
 CONFIGURE_ARGS+=	--with-iconv
 .endif
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/php_iconv.h ${DESTDIR}${PREFIX}/include/php/ext/iconv
 
 .include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
