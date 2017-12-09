@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/05 15:33:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/12/09 17:48:43 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -14,14 +14,17 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/appveyor.yml
 ${GEM_LIBDIR}/http-form_data.gemspec
 ${GEM_LIBDIR}/lib/http/form_data.rb
+${GEM_LIBDIR}/lib/http/form_data/composite_io.rb
 ${GEM_LIBDIR}/lib/http/form_data/file.rb
 ${GEM_LIBDIR}/lib/http/form_data/multipart.rb
 ${GEM_LIBDIR}/lib/http/form_data/multipart/param.rb
 ${GEM_LIBDIR}/lib/http/form_data/part.rb
+${GEM_LIBDIR}/lib/http/form_data/readable.rb
 ${GEM_LIBDIR}/lib/http/form_data/urlencoded.rb
 ${GEM_LIBDIR}/lib/http/form_data/version.rb
 ${GEM_LIBDIR}/spec/fixtures/expected-multipart-body.tpl
 ${GEM_LIBDIR}/spec/fixtures/the-http-gem.info
+${GEM_LIBDIR}/spec/lib/http/form_data/composite_io_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/form_data/file_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/form_data/multipart_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/form_data/part_spec.rb
