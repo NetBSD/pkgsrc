@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2017/02/05 01:13:32 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.12 2017/12/09 17:53:16 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.gitignore
@@ -33,6 +33,7 @@ ${GEM_LIBDIR}/lib/http/mime_type/json.rb
 ${GEM_LIBDIR}/lib/http/options.rb
 ${GEM_LIBDIR}/lib/http/redirector.rb
 ${GEM_LIBDIR}/lib/http/request.rb
+${GEM_LIBDIR}/lib/http/request/body.rb
 ${GEM_LIBDIR}/lib/http/request/writer.rb
 ${GEM_LIBDIR}/lib/http/response.rb
 ${GEM_LIBDIR}/lib/http/response/body.rb
@@ -62,6 +63,7 @@ ${GEM_LIBDIR}/spec/lib/http/options/new_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/options/proxy_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/options_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/redirector_spec.rb
+${GEM_LIBDIR}/spec/lib/http/request/body_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/request/writer_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/request_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/response/body_spec.rb
@@ -75,6 +77,7 @@ ${GEM_LIBDIR}/spec/support/black_hole.rb
 ${GEM_LIBDIR}/spec/support/capture_warning.rb
 ${GEM_LIBDIR}/spec/support/dummy_server.rb
 ${GEM_LIBDIR}/spec/support/dummy_server/servlet.rb
+${GEM_LIBDIR}/spec/support/fakeio.rb
 ${GEM_LIBDIR}/spec/support/http_handling_shared.rb
 ${GEM_LIBDIR}/spec/support/proxy_server.rb
 ${GEM_LIBDIR}/spec/support/servers/config.rb
