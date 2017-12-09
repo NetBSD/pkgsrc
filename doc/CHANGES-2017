@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5208 2017/12/09 16:43:00 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.5209 2017/12/09 16:57:13 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7472,3 +7472,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-acme to 0.20.0 [fhajny 2017-12-09]
 	Updated security/py-certbot to 0.20.0 [fhajny 2017-12-09]
 	Updated databases/redis to 4.0.6 [fhajny 2017-12-09]
+	Updated devel/librdkafka to 0.11.3 [fhajny 2017-12-09]
