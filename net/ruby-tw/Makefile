@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2017/05/30 15:13:03 taca Exp $
+# $NetBSD: Makefile,v 1.20 2017/12/09 19:41:17 tsutsui Exp $
 
-DISTNAME=	tw-1.0.12
+DISTNAME=	tw-1.2.1
 CATEGORIES=	net
 
 MAINTAINER=	tsutsui@NetBSD.org
@@ -9,11 +9,11 @@ COMMENT=	CUI Twitter Client
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-args_parser>=0.2.0:../../misc/ruby-args_parser
-DEPENDS+=	${RUBY_PKGPREFIX}-launchy>=2.4.2:../../misc/ruby-launchy
-DEPENDS+=	${RUBY_PKGPREFIX}-parallel>=0.9.1:../../misc/ruby-parallel
-DEPENDS+=	${RUBY_PKGPREFIX}-rainbow>=2.0.0:../../misc/ruby-rainbow
-DEPENDS+=	${RUBY_PKGPREFIX}-twitter>=5.15.0:../../net/ruby-twitter
-DEPENDS+=	${RUBY_PKGPREFIX}-userstream>=1.4.0:../../net/ruby-userstream
+DEPENDS+=	${RUBY_PKGPREFIX}-launchy>=2.4.3:../../misc/ruby-launchy
+DEPENDS+=	${RUBY_PKGPREFIX}-parallel>=1.12.0:../../misc/ruby-parallel
+DEPENDS+=	${RUBY_PKGPREFIX}-rainbow>=3.0.0:../../misc/ruby-rainbow
+DEPENDS+=	${RUBY_PKGPREFIX}-twitter>=6.2.0:../../net/ruby-twitter
+DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.5.4:../../security/ruby-oauth
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
