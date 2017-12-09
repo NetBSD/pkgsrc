@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2017/10/20 15:56:58 tsutsui Exp $
+# $NetBSD: Makefile,v 1.38 2017/12/09 22:39:28 tsutsui Exp $
 
 DISTNAME=	nokogiri-1.8.1
 CATEGORIES=	textproc
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	tsutsui@NetBSD.org
 HOMEPAGE=	http://nokogiri.org/
 COMMENT=	HTML, XML, SAX, and Reader parser with XPath and CSS selector support
 LICENSE=	mit
