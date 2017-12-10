@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5234 2017/12/10 16:38:09 leot Exp $
+$NetBSD: CHANGES-2017,v 1.5235 2017/12/10 16:49:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7504,3 +7504,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-setuptools to 38.2.4 [adam 2017-12-10]
 	Added devel/py-xopen version 0.3.2 [bacon 2017-12-10]
 	Updated graphics/sxiv to 24nb1 [leot 2017-12-10]
+	Updated devel/py-construct to 2.8.17 [adam 2017-12-10]
+	Updated converters/py-cairosvg to 2.1.2 [adam 2017-12-10]
+	Added converters/py-confusable_homoglyphs version 3.0.0 [adam 2017-12-10]
+	Updated www/py-django-registration to 2.3 [adam 2017-12-10]
