@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.22 2017/04/18 15:06:22 jperkin Exp $
+$NetBSD: distinfo,v 1.23 2017/12/10 17:33:33 adam Exp $
 
-SHA1 (pycurl-7.43.0.tar.gz) = e8e9c7e9ae91ae32096b8c86cfc7d49976a66d1b
-RMD160 (pycurl-7.43.0.tar.gz) = 887605e420279d92862187e7f989fb032c3e08ed
-SHA512 (pycurl-7.43.0.tar.gz) = 7442462c74c19964b9d72976e9b92bf68bb37debc1401bc399590bea42704065da13d6de710e795eeae79a4651b9a08841d50454243cb0994c7eb1c1bab233a5
-Size (pycurl-7.43.0.tar.gz) = 182522 bytes
+SHA1 (pycurl-7.43.0.1.tar.gz) = caa8e7b21c1552a1638b771e9c4933b51b7acebd
+RMD160 (pycurl-7.43.0.1.tar.gz) = 29e3009d4c99576f9ad4624fcccaea7ada935e56
+SHA512 (pycurl-7.43.0.1.tar.gz) = c084955d6239230a9cb694fe31465da10daab37a5d030d5cbf69ae860402471d1b0c820858451d239363d9b0829899189e9939abf67875ad035867e5f72a66fe
+Size (pycurl-7.43.0.1.tar.gz) = 195861 bytes
 SHA1 (patch-setup.py) = 41722b45efbbc3e3b65f88354b647b4c6304ab50
-SHA1 (patch-src_easy.c) = ccb16c66536b0ec2df96346bf008b9030fb6d1d6
