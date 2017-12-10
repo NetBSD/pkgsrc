@@ -1,0 +1,9 @@
+A homoglyph is one of two or more graphemes, characters, or glyphs with shapes
+that appear identical or very similar wikipedia:Homoglyph
+
+Unicode homoglyphs can be a nuisance on the web. Your most popular client,
+AlaskaJazz, might be upset to be impersonated by a trickster who deliberately
+chose the username AlaskaJazz.
+
+* AlaskaJazz is single script: only Latin characters.
+* AlaskaJazz is mixed-script: the first character is a greek letter.
