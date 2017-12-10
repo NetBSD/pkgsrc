@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5226 2017/12/10 00:46:52 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.5227 2017/12/10 01:12:51 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7490,3 +7490,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed net/ruby-userstream [tsutsui 2017-12-09]
 	Updated www/firefox to 57.0.2 [ryoon 2017-12-10]
 	Updated www/firefox-l10n to 57.0.2 [ryoon 2017-12-10]
+	Updated cross/arm-none-eabi-binutils to 2.29.1 [ryoon 2017-12-10]
+	Updated cross/aarch64-none-elf-binutils to 2.29.1 [ryoon 2017-12-10]
