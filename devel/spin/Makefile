@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2015/04/18 20:41:10 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2017/12/10 13:56:34 adam Exp $
 
-DISTNAME=	spin525
-PKGNAME=	spin-5.2.5
+DISTNAME=	spin647
+PKGNAME=	spin-6.4.7
 CATEGORIES=	devel
 MASTER_SITES=	http://spinroot.com/spin/Src/
 
@@ -10,15 +10,13 @@ HOMEPAGE=	http://spinroot.com/spin/whatispin.html
 COMMENT=	Formal correctness prover
 LICENSE=	spin-license
 
-# yacc output used without dependency
-MAKE_JOBS_SAFE=	no
-
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-WRKSRC=		${WRKDIR}/Spin/Src5.2.5
+WRKSRC=		${WRKDIR}/Spin/Src${PKGVERSION_NOREV}
 USE_TOOLS+=	yacc
 MAKE_FILE=	makefile
+MAKE_FLAGS=	CC=${CC:Q}
 BUILD_TARGET=	spin
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/spin ${DESTDIR}${PREFIX}/bin/spin
