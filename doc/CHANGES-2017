@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5228 2017/12/10 09:05:28 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5229 2017/12/10 09:52:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7496,3 +7496,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-markdown to 2.6.10 [adam 2017-12-10]
 	Updated www/py-django-reversion to 2.0.12 [adam 2017-12-10]
 	Updated textproc/py-regex to 2017.12.09 [adam 2017-12-10]
+	Updated devel/py-lazr.delegates to 2.0.4 [adam 2017-12-10]
+	Updated devel/py-lazr.config to 2.2.1 [adam 2017-12-10]
