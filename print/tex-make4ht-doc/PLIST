@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2017/12/10 20:17:53 markd Exp $
+share/texmf-dist/doc/support/make4ht/README
+share/texmf-dist/doc/support/make4ht/changelog.tex
+share/texmf-dist/doc/support/make4ht/make4ht-doc.pdf
+share/texmf-dist/doc/support/make4ht/make4ht-doc.tex
+share/texmf-dist/doc/support/make4ht/readme.tex
