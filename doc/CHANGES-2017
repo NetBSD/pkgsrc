@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5232 2017/12/10 14:55:00 bacon Exp $
+$NetBSD: CHANGES-2017,v 1.5233 2017/12/10 14:57:32 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7502,4 +7502,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-sortedcontainers to 1.5.9 [adam 2017-12-10]
 	Updated devel/spin to 6.4.7 [adam 2017-12-10]
 	Updated devel/py-setuptools to 38.2.4 [adam 2017-12-10]
-	Added devel/py-xopen version 0.3.2 [root 2017-12-10]
+	Added devel/py-xopen version 0.3.2 [bacon 2017-12-10]
