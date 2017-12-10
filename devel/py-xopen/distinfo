@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/12/10 14:48:50 bacon Exp $
+
+SHA1 (xopen-0.3.2.tar.gz) = d9fad7acc894acc73fe4c9c4f4999a9adde92921
+RMD160 (xopen-0.3.2.tar.gz) = 770ec07acbf3e6349af1a024febcc0007ec6af13
+SHA512 (xopen-0.3.2.tar.gz) = 06e3e8ac9e3b96d393649bef91ab8ea9c01d03b4ad0d4e59760262d6fd5ea5a751267841de8a5f51ab0317f0d5426a0d99704201a14fd5834f6e26b6e0059bcf
+Size (xopen-0.3.2.tar.gz) = 4666 bytes
