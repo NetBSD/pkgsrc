@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2017/08/21 11:39:46 adam Exp $
+# $NetBSD: Makefile,v 1.20 2017/12/10 08:56:29 adam Exp $
 
-DISTNAME=	django-reversion-2.0.10
+DISTNAME=	django-reversion-2.0.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-reversion/}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-django>=1.8:../../www/py-django
 
-USE_LANGUAGES=		# empty
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
