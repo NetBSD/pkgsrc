@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.704 2017/11/12 14:11:14 khorben Exp $
+# $NetBSD: Makefile,v 1.705 2017/12/10 20:19:21 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -860,6 +860,8 @@ SUBDIR+=	tex-luatex85-doc
 SUBDIR+=	tex-macros2e-doc
 SUBDIR+=	tex-magaz
 SUBDIR+=	tex-magaz-doc
+SUBDIR+=	tex-make4ht
+SUBDIR+=	tex-make4ht-doc
 SUBDIR+=	tex-makecell
 SUBDIR+=	tex-makecell-doc
 SUBDIR+=	tex-makecmds
