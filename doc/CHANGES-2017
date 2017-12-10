@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5230 2017/12/10 10:19:47 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5231 2017/12/10 14:05:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7500,3 +7500,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-lazr.config to 2.2.1 [adam 2017-12-10]
 	Updated www/py-yarl to 0.16.0 [adam 2017-12-10]
 	Updated devel/py-sortedcontainers to 1.5.9 [adam 2017-12-10]
+	Updated devel/spin to 6.4.7 [adam 2017-12-10]
+	Updated devel/py-setuptools to 38.2.4 [adam 2017-12-10]
