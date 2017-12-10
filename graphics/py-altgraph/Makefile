@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2017/09/16 19:26:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/12/10 17:04:46 adam Exp $
 
-DISTNAME=	altgraph-0.14
+DISTNAME=	altgraph-0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/altgraph/}
