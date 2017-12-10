@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2017/09/27 21:16:14 wiz Exp $
+# $NetBSD: Makefile,v 1.158 2017/12/10 16:34:41 adam Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -100,6 +100,7 @@ SUBDIR+=	psiconv
 SUBDIR+=	pstotext
 SUBDIR+=	py-cairosvg
 SUBDIR+=	py-chardet
+SUBDIR+=	py-confusable_homoglyphs
 SUBDIR+=	py-jpCodecs
 SUBDIR+=	py-simplejson
 SUBDIR+=	py-yenc
