@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/10/08 10:12:40 adam Exp $
+# $NetBSD: Makefile,v 1.5 2017/12/10 17:01:48 adam Exp $
 
-DISTNAME=	intervals-0.8.0
+DISTNAME=	intervals-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/intervals/}
@@ -17,6 +17,9 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-pygments>=1.2:../../textproc/py-pygments
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=2.2.3:../../devel/py-test
 
 USE_LANGUAGES=	# none
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
