@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5238 2017/12/10 20:20:36 markd Exp $
+$NetBSD: CHANGES-2017,v 1.5239 2017/12/10 21:04:32 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7517,3 +7517,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-curl to 7.43.0.1 [adam 2017-12-10]
 	Added print/tex-make4ht version 0.1c [markd 2017-12-10]
 	Added print/tex-make4ht-doc version 0.1c [markd 2017-12-10]
+	Updated net/youtube-dl to 20171210 [leot 2017-12-10]
