@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/11/13 19:19:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/12/10 20:04:58 markd Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -10,9 +10,7 @@ bin/kgravity.kss
 bin/klines.kss
 bin/klorenz.kss
 bin/kpartsaver.kss
-bin/kpendulum.kss
 bin/kpolygon.kss
-bin/krotation.kss
 bin/kscience.kss
 bin/kslideshow.kss
 bin/ksolarwinds.kss
