@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.302 2017/12/04 15:17:55 ryoon Exp $
+$NetBSD: distinfo,v 1.303 2017/12/10 00:45:09 ryoon Exp $
 
-SHA1 (firefox-57.0.1.source.tar.xz) = 55931b5768520997b3fe4544d4e34ced1dcdba1f
-RMD160 (firefox-57.0.1.source.tar.xz) = 2e0ad1cdee4954f98abcfeb9bc28f263a291bddf
-SHA512 (firefox-57.0.1.source.tar.xz) = 8cbfe0ad2c0f935dbc3a0ac4e855c489c83bf8c4506815dbae6e27f5d6a262ecf19ac82b6e81d52782559834fa14403116ecbf3acc8e3bc56b6c319e68316edd
-Size (firefox-57.0.1.source.tar.xz) = 251048924 bytes
+SHA1 (firefox-57.0.2.source.tar.xz) = 2edcb2fade6cc4ed9339825bad1bdad381da7824
+RMD160 (firefox-57.0.2.source.tar.xz) = 798fad0cecceac45db490dd79fb25b0ecb1ec83b
+SHA512 (firefox-57.0.2.source.tar.xz) = e66402c182fae579dc645de1570a2eba4f95953f608de668da07a1ee4f371041cbdb3e01ce6e4708d8fa3b6b3ebe5b79e03e48ced3605f66cb09ac49abf3bbcd
+Size (firefox-57.0.2.source.tar.xz) = 248772480 bytes
 SHA1 (patch-aa) = a2b7c767773f462452701237b2b06c9a4f01d1b5
 SHA1 (patch-build_gyp.mozbuild) = bb3a2f8c1cad0e9cfdaefa721c5992cba2e2bf50
 SHA1 (patch-build_moz.configure_init.configure) = 5ec8da6b5aad7682a88b010a99e19f5d4403e6db
@@ -76,7 +76,9 @@ SHA1 (patch-toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) =
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 5b6d2e5c9f685d32894898d3ef3aec09a1a1e5ce
 SHA1 (patch-toolkit_crashreporter_google-breakpad_src_third_party_curl_curlbuild.h) = 0730c0c5d8e0865aa8a2f311b27559a3f6793a52
 SHA1 (patch-toolkit_library_moz.build) = 34e757ad08ebaee1cbc69993ec0f6774d41a14a2
-SHA1 (patch-toolkit_moz.configure) = 3dd9df2ac5c3f942b7f2616c2fae6bd36d3437e7
+SHA1 (patch-toolkit_modules_GMPUtils.jsm) = 85883d2064f7bb135913ee2019200a1caf48efe7
+SHA1 (patch-toolkit_moz.configure) = 264962a7bb3c25c2dd6f3d2bd41510a41cccbdc9
+SHA1 (patch-toolkit_mozapps_extensions_test_browser_browser__gmpProvider.js) = 73dcf54a069b806807d9c9ddf54f66bc347c3c33
 SHA1 (patch-toolkit_xre_glxtest.cpp) = cf048491778610454b914400e53072afedd96e7b
 SHA1 (patch-toolkit_xre_nsEmbedFunctions.cpp) = 4a6ae13adfdfc63d50c1a53ee71aad1ee82e6131
 SHA1 (patch-xpcom_base_nscore.h) = d7c96eda884d7f370442749c43caba50da61bbe4
