@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2017/12/10 20:17:53 markd Exp $
+bin/make4ht
+share/texmf-dist/scripts/make4ht/filters/make4ht-cleanspan-nat.lua
+share/texmf-dist/scripts/make4ht/filters/make4ht-cleanspan.lua
+share/texmf-dist/scripts/make4ht/filters/make4ht-entities.lua
+share/texmf-dist/scripts/make4ht/filters/make4ht-filter.lua
+share/texmf-dist/scripts/make4ht/filters/make4ht-fix-links.lua
+share/texmf-dist/scripts/make4ht/filters/make4ht-fixligatures.lua
+share/texmf-dist/scripts/make4ht/filters/make4ht-hruletohr.lua
+share/texmf-dist/scripts/make4ht/lapp-mk4.lua
+share/texmf-dist/scripts/make4ht/make4ht
+share/texmf-dist/scripts/make4ht/make4ht-dom.lua
+share/texmf-dist/scripts/make4ht/make4ht-lib.lua
+share/texmf-dist/scripts/make4ht/mathnode.lua
+share/texmf-dist/scripts/make4ht/mkparams.lua
+share/texmf-dist/scripts/make4ht/mkutils.lua
