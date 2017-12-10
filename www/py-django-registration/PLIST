@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2016/03/06 14:53:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/12/10 16:36:31 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/registration/__init__.py
 ${PYSITELIB}/registration/__init__.pyc
@@ -13,6 +14,12 @@ ${PYSITELIB}/registration/admin.pyo
 ${PYSITELIB}/registration/auth_urls.py
 ${PYSITELIB}/registration/auth_urls.pyc
 ${PYSITELIB}/registration/auth_urls.pyo
+${PYSITELIB}/registration/auth_urls_classes.py
+${PYSITELIB}/registration/auth_urls_classes.pyc
+${PYSITELIB}/registration/auth_urls_classes.pyo
+${PYSITELIB}/registration/auth_urls_functions.py
+${PYSITELIB}/registration/auth_urls_functions.pyc
+${PYSITELIB}/registration/auth_urls_functions.pyo
 ${PYSITELIB}/registration/backends/__init__.py
 ${PYSITELIB}/registration/backends/__init__.pyc
 ${PYSITELIB}/registration/backends/__init__.pyo
@@ -179,6 +186,9 @@ ${PYSITELIB}/registration/tests/views.pyo
 ${PYSITELIB}/registration/urls.py
 ${PYSITELIB}/registration/urls.pyc
 ${PYSITELIB}/registration/urls.pyo
+${PYSITELIB}/registration/validators.py
+${PYSITELIB}/registration/validators.pyc
+${PYSITELIB}/registration/validators.pyo
 ${PYSITELIB}/registration/views.py
 ${PYSITELIB}/registration/views.pyc
 ${PYSITELIB}/registration/views.pyo
