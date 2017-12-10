@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2017/08/24 20:03:30 adam Exp $
+# $NetBSD: Makefile,v 1.56 2017/12/10 20:04:58 markd Exp $
 
 DISTNAME=	kdeartwork-15.08.3
 PKGNAME=	${DISTNAME:S/-1/4-1/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	misc
 COMMENT=	Artwork for the KDE integrated X11 desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
@@ -11,6 +11,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
 
 CMAKE_ARGS+=	-DXSCREENSAVER_CONFIG_DIR:PATH=${BUILDLINK_PREFIX.xscreensaver}/libexec/xscreensaver/config
 CMAKE_ARGS+=	-DXSCREENSAVER_DIR:PATH=${BUILDLINK_PREFIX.xscreensaver}/libexec/xscreensaver
+CMAKE_ARGS+=	-DWITH_Eigen3:BOOL=OFF
 
 #BUILD_MAKE_FLAGS+= VERBOSE=1
 
@@ -19,7 +20,7 @@ BUILDLINK_API_DEPENDS.xscreensaver+=  xscreensaver>=5.10
 .include "../../meta-pkgs/kde4/kde4.mk"
 
 .include "../../graphics/libkexiv2/buildlink3.mk"
-.include "../../math/eigen3/buildlink3.mk"
+#.include "../../math/eigen3/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/kde-runtime4/buildlink3.mk"
 .include "../../x11/kde-workspace4/buildlink3.mk"
