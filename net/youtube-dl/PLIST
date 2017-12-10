@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2017/11/26 20:57:27 leot Exp $
+@comment $NetBSD: PLIST,v 1.54 2017/12/10 21:04:17 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -548,9 +548,9 @@ ${PYSITELIB}/youtube_dl/extractor/einthusan.pyo
 ${PYSITELIB}/youtube_dl/extractor/eitb.py
 ${PYSITELIB}/youtube_dl/extractor/eitb.pyc
 ${PYSITELIB}/youtube_dl/extractor/eitb.pyo
-${PYSITELIB}/youtube_dl/extractor/ellentv.py
-${PYSITELIB}/youtube_dl/extractor/ellentv.pyc
-${PYSITELIB}/youtube_dl/extractor/ellentv.pyo
+${PYSITELIB}/youtube_dl/extractor/ellentube.py
+${PYSITELIB}/youtube_dl/extractor/ellentube.pyc
+${PYSITELIB}/youtube_dl/extractor/ellentube.pyo
 ${PYSITELIB}/youtube_dl/extractor/elpais.py
 ${PYSITELIB}/youtube_dl/extractor/elpais.pyc
 ${PYSITELIB}/youtube_dl/extractor/elpais.pyo
@@ -1730,6 +1730,9 @@ ${PYSITELIB}/youtube_dl/extractor/streamcz.pyo
 ${PYSITELIB}/youtube_dl/extractor/streetvoice.py
 ${PYSITELIB}/youtube_dl/extractor/streetvoice.pyc
 ${PYSITELIB}/youtube_dl/extractor/streetvoice.pyo
+${PYSITELIB}/youtube_dl/extractor/stretchinternet.py
+${PYSITELIB}/youtube_dl/extractor/stretchinternet.pyc
+${PYSITELIB}/youtube_dl/extractor/stretchinternet.pyo
 ${PYSITELIB}/youtube_dl/extractor/sunporno.py
 ${PYSITELIB}/youtube_dl/extractor/sunporno.pyc
 ${PYSITELIB}/youtube_dl/extractor/sunporno.pyo
