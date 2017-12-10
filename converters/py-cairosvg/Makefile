@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2017/10/19 06:38:47 adam Exp $
+# $NetBSD: Makefile,v 1.12 2017/12/10 15:58:36 adam Exp $
 
-DISTNAME=	CairoSVG-2.1.1
+DISTNAME=	CairoSVG-2.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	converters graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CairoSVG/}
