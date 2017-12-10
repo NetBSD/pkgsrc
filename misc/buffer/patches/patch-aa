@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.8 2016/03/30 08:45:12 jperkin Exp $
+$NetBSD: patch-aa,v 1.9 2017/12/10 22:51:05 spz Exp $
 
-Use pkgsrc layout/flags.
+Use pkgsrc layout and flags.
 
---- Makefile.orig	Wed Jul 14 11:59:17 1993
-+++ Makefile	Sun Sep 12 12:35:57 1999
+--- Makefile.orig	1994-10-04 16:44:53.000000000 +0000
++++ Makefile
 @@ -4,13 +4,13 @@
  #   You should also add -DSYS5 for Ultrix, AIX, and Solarix.
  # Add -DDEF_SHMEM=n if you can only have n bytes of shared memory
  #   (eg: -DDEF_SHMEM=524288 if you can only have half a meg.)
 -CFLAGS=
-+CFLAGS=-O
++#CFLAGS=-O # inherit pkgsrc CFLAGS, don't overwrite them
  
  # Where to install buffer and its manual pages
 -INSTBIN=/usr/local/bin
@@ -22,12 +22,12 @@ Use pkgsrc layout/flags.
  
  RM=/bin/rm
  ALL=README buffer.man Makefile buffer.c sem.c COPYING
-@@ -18,18 +18,14 @@
+@@ -18,18 +18,14 @@ ALL=README buffer.man Makefile buffer.c 
  all: buffer
  
  buffer: buffer.o sem.o
 -	$(CC) -o buffer $(CFLAGS) buffer.o sem.o
-+	$(CC) -o buffer buffer.o sem.o
++	$(CC) $(CFLAGS) $(LDFLAGS) -o buffer buffer.o sem.o
  
  clean:
  	$(RM) -f *.o core buffer .merrs
