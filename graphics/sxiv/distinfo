@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2017/10/28 16:00:04 leot Exp $
+$NetBSD: distinfo,v 1.3 2017/12/10 16:37:52 leot Exp $
 
 SHA1 (sxiv-24.tar.gz) = 47940118169d51dbf02338e76878215ef066013f
 RMD160 (sxiv-24.tar.gz) = 61eaf03ca5c106289d41588f2d882f43ca8a6ff1
 SHA512 (sxiv-24.tar.gz) = e4c9d4e18b4f1999b6441256b4c0d4683a105f1f64d4f754d6f9bc4f467ee1ccc6b6996cec8a210276c5fbec59417627fb838cb4f7be37cce32fa2c5d45d347b
 Size (sxiv-24.tar.gz) = 47148 bytes
+SHA1 (patch-autoreload_nop.c) = ba3c730f1bb0b8ff530594b2c0f3e6a52cd0d1ba
