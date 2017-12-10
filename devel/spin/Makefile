@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/12/10 13:56:34 adam Exp $
+# $NetBSD: Makefile,v 1.6 2017/12/10 14:02:33 adam Exp $
 
 DISTNAME=	spin647
 PKGNAME=	spin-6.4.7
@@ -8,7 +8,7 @@ MASTER_SITES=	http://spinroot.com/spin/Src/
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://spinroot.com/spin/whatispin.html
 COMMENT=	Formal correctness prover
-LICENSE=	spin-license
+LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/Spin/Src${PKGVERSION_NOREV}
 USE_TOOLS+=	yacc
