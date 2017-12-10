@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2017/05/26 19:35:48 adam Exp $
+# $NetBSD: options.mk,v 1.3 2017/12/10 15:51:04 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fuse
 PKG_SUPPORTED_OPTIONS=	gtk sdl
@@ -9,9 +9,10 @@ PKG_SUGGESTED_OPTIONS=	gtk
 PLIST_VARS+=		gtk sdl
 
 .if !empty(PKG_OPTIONS:Mgtk)
-CONFIGURE_ARGS+=	--with-gtk3
 PLIST.gtk=		yes
 .include "../../x11/gtk3/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-gtk
 .endif
 
 .if !empty(PKG_OPTIONS:Msdl)
