@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/10/28 16:00:04 leot Exp $
+# $NetBSD: Makefile,v 1.4 2017/12/10 16:37:52 leot Exp $
 #
 
 DISTNAME=	sxiv-24
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=muennich/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
