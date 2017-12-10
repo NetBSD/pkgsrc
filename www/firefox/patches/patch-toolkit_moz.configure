@@ -1,8 +1,8 @@
-$NetBSD: patch-toolkit_moz.configure,v 1.7 2017/11/16 01:04:38 ryoon Exp $
+$NetBSD: patch-toolkit_moz.configure,v 1.8 2017/12/10 00:45:09 ryoon Exp $
 
 * skia part: support bigendian architectures
 
---- toolkit/moz.configure.orig	2017-09-15 04:15:40.000000000 +0000
+--- toolkit/moz.configure.orig	2017-11-02 16:16:34.000000000 +0000
 +++ toolkit/moz.configure
 @@ -317,6 +317,26 @@ def freetype2_combined_info(fontconfig_i
  add_old_configure_assignment('_HAVE_FREETYPE2',
@@ -31,6 +31,15 @@ $NetBSD: patch-toolkit_moz.configure,v 1.7 2017/11/16 01:04:38 ryoon Exp $
  # Apple platform decoder support
  # ==============================================================
  @depends(toolkit)
+@@ -418,7 +438,7 @@ option('--enable-eme',
+ def enable_eme(value, target):
+     # Widevine EME by default enabled on desktop Windows, MacOS and Linux,
+     # x86 and x64 builds.
+-    if (target.kernel in ('Darwin', 'WINNT', 'Linux') and
++    if (target.kernel in ('Darwin', 'WINNT', 'Linux', 'NetBSD') and
+         target.os not in ('Android', 'iOS') and
+         target.cpu in ('x86', 'x86_64')):
+         return value
 @@ -940,11 +960,11 @@ include('nss.configure')
  # ==============================================================
  option('--disable-skia', help='Disable use of Skia')
