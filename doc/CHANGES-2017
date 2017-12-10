@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5224 2017/12/09 20:01:35 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.5225 2017/12/10 00:45:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7488,3 +7488,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/ruby-rainbow to 3.0.0 [tsutsui 2017-12-09]
 	Updated net/ruby-tw to 1.2.1 [tsutsui 2017-12-09]
 	Removed net/ruby-userstream [tsutsui 2017-12-09]
+	Updated www/firefox to 57.0.2 [ryoon 2017-12-10]
