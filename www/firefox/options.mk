@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.43 2017/10/17 03:39:04 ryoon Exp $
+# $NetBSD: options.mk,v 1.44 2017/12/10 00:45:09 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc
 PKG_SUPPORTED_OPTIONS+=	alsa oss pulseaudio dbus
+PKG_SUPPORTED_OPTIONS+=	widevinecdm
 PLIST_VARS+=		gnome jemalloc debug
 
 .if ${OPSYS} == "Linux"
@@ -16,10 +17,6 @@ PKG_SUGGESTED_OPTIONS+=	oss dbus
 PKG_SUGGESTED_OPTIONS.Linux+=	webrtc
 
 .include "../../mk/bsd.options.mk"
-
-CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk3
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
 
 .if !empty(PKG_OPTIONS:Malsa)
 CONFIGURE_ARGS+=	--enable-alsa
@@ -102,4 +99,9 @@ CONFIGURE_ARGS+=	--enable-webrtc
 PLIST.webrtc=		yes
 .else
 CONFIGURE_ARGS+=	--disable-webrtc
+.endif
+
+# Enable Google widevine CDM. This requires external libwidevinecdm.so.
+.if !empty(PKG_OPTIONS:Mwidevinecdm)
+CONFIGURE_ARGS+=	--enable-eme=widevine
 .endif
