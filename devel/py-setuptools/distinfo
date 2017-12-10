@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.121 2017/11/30 07:52:55 adam Exp $
+$NetBSD: distinfo,v 1.122 2017/12/10 14:04:44 adam Exp $
 
-SHA1 (setuptools-38.2.3.zip) = a1044deb1f2c42f037003f02704557fb4ee55694
-RMD160 (setuptools-38.2.3.zip) = 7e1d8038fad7949098e9937268c92a6d011cfe1e
-SHA512 (setuptools-38.2.3.zip) = 43fda5f6148e03070a2574671ca1b0cf1906b981bc45f4255fa95d28bb3a9bd967b9f3d631e286a391a32287881e2dbabb2c6fbe9b3e198993e1846444d19c45
-Size (setuptools-38.2.3.zip) = 736331 bytes
+SHA1 (setuptools-38.2.4.zip) = 37328c5a707856eb0fb086da6cf60ceb85a493c2
+RMD160 (setuptools-38.2.4.zip) = 3a1bf0440ed85216820258588fb01b8db3427456
+SHA512 (setuptools-38.2.4.zip) = 43cd74f4b7615345ff9f1235c6a65d91038095dcac72100e10ba26c0e92cb913841ce71a674bf525d38a6537a61f389be822c82589080fd901ce236b1abd37fa
+Size (setuptools-38.2.4.zip) = 736683 bytes
 SHA1 (patch-setup.py) = dd94c9a4e15b8b0dc428515f73369ed168b8c7b2
