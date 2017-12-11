@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.7 2017/10/02 15:16:27 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.8 2017/12/11 14:45:11 fhajny Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/Makefile.module
 
-DISTNAME=	syslog-ng-3.12.1
+DISTNAME=	syslog-ng-3.13.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=balabit/}
 
@@ -28,7 +28,6 @@ CONFIGURE_ARGS+=	--disable-geoip
 CONFIGURE_ARGS+=	--disable-http
 CONFIGURE_ARGS+=	--disable-ipv6
 CONFIGURE_ARGS+=	--disable-java
-CONFIGURE_ARGS+=	--disable-json
 CONFIGURE_ARGS+=	--disable-mongodb
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-redis
@@ -41,7 +40,6 @@ CONFIGURE_ARGS+=	--disable-tcp-wrapper
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/db/syslog-ng
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-ivykis=${BUILDLINK_PREFIX.ivykis}
-CONFIGURE_ARGS+=	--with-jsonc=no
 CONFIGURE_ARGS+=	--with-mongoc=no
 CONFIGURE_ARGS+=	--with-librabbitmq-client=no
 CONFIGURE_ARGS+=	--with-pidfile-dir=${VARBASE}/run
@@ -54,12 +52,16 @@ SUBST_STAGE.unamepath=	post-configure
 SUBST_FILES.unamepath=	contrib/syslog2ng
 SUBST_VARS.unamepath=	UNAME
 
+PYTHON_VERSIONS_ACCEPTED=      27
+
 REPLACE_AWK+=		contrib/syslog2ng
+REPLACE_PYTHON+=	lib/merge-grammar.py
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/ivykis/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
