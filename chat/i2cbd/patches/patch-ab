@@ -1,6 +1,9 @@
-$NetBSD: patch-ab,v 1.4 2003/10/24 21:12:18 jwise Exp $
---- config.mk.orig	Tue Oct 30 20:50:40 2001
-+++ config.mk	Sat Aug  2 22:28:11 2003
+$NetBSD: patch-ab,v 1.5 2017/12/11 07:54:42 spz Exp $
+
+pkgsrcify
+
+--- config.mk.orig	2003-10-24 20:47:04.000000000 +0000
++++ config.mk
 @@ -3,7 +3,6 @@
  #	For copying and distribution information, see the file COPYING.
  #
@@ -9,12 +12,14 @@ $NetBSD: patch-ab,v 1.4 2003/10/24 21:12:18 jwise Exp $
  BINDIR		= ${PREFIX}/sbin
  MANDIR		= ${PREFIX}/man
  MAN8DIR		= ${PREFIX}/man/man8
-@@ -19,7 +18,7 @@
+@@ -19,8 +18,8 @@ EXTRAWARNS	= -Wshadow -Wpointer-arith -W
  # affect portability to some platforms.  The others here are irrelevant.
  BADWARNS	= -Wwrite-strings -Wconversion -Waggregate-return -Wredundant-decls
  DEBUG		= -DDEBUG -DVERBOSE -g
 -CFLAGS		= ${WARNS} ${EXTRAWARNS} ${DEBUG}
-+CFLAGS		= ${WARNS} ${EXTRAWARNS} ${DEBUG} -DPREFIX=\"${PREFIX}\" -DPKG_SYSCONFDIR=\"${PKG_SYSCONFDIR}\"
- LDFLAGS		=
+-LDFLAGS		=
++CFLAGS		+= ${WARNS} ${EXTRAWARNS} ${DEBUG} -DPREFIX=\"${PREFIX}\" -DPKG_SYSCONFDIR=\"${PKG_SYSCONFDIR}\"
++#LDFLAGS		=
  LIBS		= -lutil
  
+ LINT		= lint
