@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2017/10/02 15:16:27 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/12/11 14:45:11 fhajny Exp $
 bin/dqtool
 bin/loggen
 bin/pdbtool
@@ -13,6 +13,8 @@ include/syslog-ng/block-ref-parser.h
 include/syslog-ng/bookmark.h
 include/syslog-ng/cache.h
 include/syslog-ng/cfg-args.h
+include/syslog-ng/cfg-block-generator.h
+include/syslog-ng/cfg-block.h
 include/syslog-ng/cfg-grammar.h
 include/syslog-ng/cfg-lexer-subst.h
 include/syslog-ng/cfg-lexer.h
@@ -21,6 +23,8 @@ include/syslog-ng/cfg-tree.h
 include/syslog-ng/cfg.h
 include/syslog-ng/children.h
 include/syslog-ng/compat/compat.h
+include/syslog-ng/compat/getent-bb.h
+include/syslog-ng/compat/getent.h
 include/syslog-ng/compat/getutent.h
 include/syslog-ng/compat/glib.h
 include/syslog-ng/compat/lfs.h
@@ -215,6 +219,7 @@ lib/syslog-ng/libafprog.la
 lib/syslog-ng/libafsocket.la
 lib/syslog-ng/libafstomp.la
 lib/syslog-ng/libafuser.la
+lib/syslog-ng/libappmodel.la
 lib/syslog-ng/libbasicfuncs.la
 lib/syslog-ng/libcef.la
 lib/syslog-ng/libconfgen.la
@@ -224,6 +229,7 @@ lib/syslog-ng/libdate.la
 lib/syslog-ng/libdbparser.la
 lib/syslog-ng/libdisk-buffer.la
 lib/syslog-ng/libgraphite.la
+lib/syslog-ng/libjson-plugin.la
 lib/syslog-ng/libkvformat.la
 lib/syslog-ng/liblinux-kmsg-format.la
 lib/syslog-ng/libmap-value-pairs.la
@@ -247,13 +253,20 @@ share/examples/syslog-ng/syslog-ng.conf.HP-UX
 share/examples/syslog-ng/syslog-ng.conf.RedHat
 share/examples/syslog-ng/syslog-ng.conf.SunOS
 share/syslog-ng/include/scl/apache/apache.conf
+share/syslog-ng/include/scl/cim/adapter.conf
 share/syslog-ng/include/scl/cim/template.conf
 share/syslog-ng/include/scl/cisco/plugin.conf
+share/syslog-ng/include/scl/default-network-drivers/plugin.conf
 share/syslog-ng/include/scl/elasticsearch/plugin.conf
+share/syslog-ng/include/scl/ewmm/ewmm.conf
 share/syslog-ng/include/scl/graphite/README
 share/syslog-ng/include/scl/graphite/plugin.conf
+share/syslog-ng/include/scl/graylog2/plugin.conf
 share/syslog-ng/include/scl/hdfs/plugin.conf
+share/syslog-ng/include/scl/iptables/iptables.conf
 share/syslog-ng/include/scl/kafka/plugin.conf
+share/syslog-ng/include/scl/loadbalancer/gen-loadbalancer.sh
+share/syslog-ng/include/scl/loadbalancer/plugin.conf
 share/syslog-ng/include/scl/loggly/loggly.conf
 share/syslog-ng/include/scl/logmatic/logmatic.conf
 share/syslog-ng/include/scl/mbox/mbox.conf
@@ -263,6 +276,7 @@ share/syslog-ng/include/scl/pacct/plugin.conf
 share/syslog-ng/include/scl/rewrite/cc-mask.conf
 share/syslog-ng/include/scl/snmptrap/snmptrapd-source.conf
 share/syslog-ng/include/scl/solaris/plugin.conf
+share/syslog-ng/include/scl/sudo/sudo.conf
 share/syslog-ng/include/scl/syslogconf/README
 share/syslog-ng/include/scl/syslogconf/convert-syslogconf.awk
 share/syslog-ng/include/scl/syslogconf/plugin.conf

@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.30 2017/08/31 12:53:50 fhajny Exp $
+# $NetBSD: Makefile,v 1.31 2017/12/11 14:45:11 fhajny Exp $
 
 .include "../../sysutils/syslog-ng/Makefile.common"
 
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-stomp
 CONFIGURE_ARGS+=	--enable-tcp-wrapper
+CONFIGURE_ARGS+=	--with-jsonc=system
 
 CONFIGURE_ARGS.SunOS+=	--enable-dynamic-linking
 CONFIGURE_ARGS.SunOS+=	--enable-sun-streams
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 
 .include "options.mk"
-
-PYTHON_VERSIONS_ACCEPTED=	27
-REPLACE_PYTHON+=		lib/merge-grammar.py
 
 BUILD_DEFS+=		VARBASE
 
@@ -49,6 +47,6 @@ post-install:
 .endfor
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/syslog2ng ${DESTDIR}${PREFIX}/bin
 
-.include "../../lang/python/application.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
+.include "../../textproc/json-c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
