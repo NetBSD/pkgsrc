@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile,v 1.1 2017/12/11 07:54:42 spz Exp $
+
+RELRO package
+
+--- src/Makefile.orig	2006-05-11 03:44:52.000000000 +0000
++++ src/Makefile
+@@ -91,7 +91,7 @@ all: icbd
+ icbd: $(OBJ)
+ 
+ icbd: $(OBJ)
+-	$(CC) $(LDFLAGS) -o icbd $(OBJ) $(LIBS) $(OTHERLIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o icbd $(OBJ) $(LIBS) $(OTHERLIBS)
+ 
+ install: all
+ 	${INSTALL} -c -s -m 0755 icbd $(BINDIR)/icbd

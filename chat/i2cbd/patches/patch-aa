@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2003/07/29 16:25:56 jmmv Exp $
+$NetBSD: patch-aa,v 1.3 2017/12/11 07:54:42 spz Exp $
+
+pkgsrcify
 
 --- config.h.orig	Tue Oct 30 20:37:28 2001
 +++ config.h
