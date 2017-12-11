@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5241 2017/12/11 10:45:19 manu Exp $
+$NetBSD: CHANGES-2017,v 1.5242 2017/12/11 11:30:16 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7521,3 +7521,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/nasm to 2.13.02 [adam 2017-12-11]
 	Updated multimedia/ffmpeg3 to 3.4.1 [adam 2017-12-11]
 	Updated net/iftop to 1.0pre4 [manu 2017-12-11]
+	Updated graphics/ImageMagick to 7.0.7.11nb2 [jperkin 2017-12-11]
