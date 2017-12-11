@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.1 2009/07/07 21:20:37 joerg Exp $
+$NetBSD: patch-iftop.c,v 1.1 2017/12/11 10:44:17 manu Exp $
 
---- iftop.c.orig	2009-07-05 17:30:23.000000000 +0200
-+++ iftop.c
-@@ -528,6 +528,12 @@ void packet_init() {
+--- iftop.c.orig	2014-01-19 21:21:19.000000000 +0100
++++ iftop.c	2017-12-11 11:22:55.000000000 +0100
+@@ -756,8 +756,14 @@
+     }
      else if(dlt == DLT_PPP) {
          packet_handler = handle_ppp_packet;
      }
@@ -15,3 +16,4 @@ $NetBSD: patch-aa,v 1.1 2009/07/07 21:20:37 joerg Exp $
  /* 
   * SLL support not available in older libpcaps
   */
+ #ifdef DLT_LINUX_SLL

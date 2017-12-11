@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2017/04/24 12:15:27 sborrill Exp $
+# $NetBSD: Makefile,v 1.20 2017/12/11 10:44:16 manu Exp $
 #
 
-DISTNAME=	iftop-0.17
-PKGREVISION=	5
+DISTNAME=	iftop-1.0pre4
+#PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.ex-parrot.com/~pdw/iftop/download/
 
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.ex-parrot.com/~pdw/iftop/download/
 COMMENT=	Display bandwidth usage on an interface
 
 USE_CURSES=		chgat
+FAKE_NCURSES=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-resolver=netdb_1thread
 
