@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2017/11/24 15:14:50 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2017/12/11 13:37:43 jperkin Exp $
 
 DISTNAME=	glibmm-2.54.1
 CATEGORIES=	devel gnome
@@ -29,6 +29,14 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/docs/${tool} \
 		${DESTDIR}${PREFIX}/share/glibmm-2.4/doctool/${tool}
 .endfor
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	notmac
+
+.if ${OPSYS} != "Darwin"
+PLIST.notmac=	yes
+.endif
 
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.50.0
 .include "../../devel/glib2/buildlink3.mk"

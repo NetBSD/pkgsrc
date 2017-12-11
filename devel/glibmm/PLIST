@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2017/11/24 15:14:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.39 2017/12/11 13:37:43 jperkin Exp $
 include/giomm-2.4/giomm.h
 include/giomm-2.4/giomm/action.h
 include/giomm-2.4/giomm/actiongroup.h
@@ -40,7 +40,7 @@ include/giomm-2.4/giomm/dbusserver.h
 include/giomm-2.4/giomm/dbussubtreevtable.h
 include/giomm-2.4/giomm/dbusutils.h
 include/giomm-2.4/giomm/dbuswatchname.h
-include/giomm-2.4/giomm/desktopappinfo.h
+${PLIST.notmac}include/giomm-2.4/giomm/desktopappinfo.h
 include/giomm-2.4/giomm/drive.h
 include/giomm-2.4/giomm/emblem.h
 include/giomm-2.4/giomm/emblemedicon.h
@@ -125,7 +125,7 @@ include/giomm-2.4/giomm/private/dbusserver_p.h
 include/giomm-2.4/giomm/private/dbussubtreevtable_p.h
 include/giomm-2.4/giomm/private/dbusutils_p.h
 include/giomm-2.4/giomm/private/dbuswatchname_p.h
-include/giomm-2.4/giomm/private/desktopappinfo_p.h
+${PLIST.notmac}include/giomm-2.4/giomm/private/desktopappinfo_p.h
 include/giomm-2.4/giomm/private/drive_p.h
 include/giomm-2.4/giomm/private/emblem_p.h
 include/giomm-2.4/giomm/private/emblemedicon_p.h
