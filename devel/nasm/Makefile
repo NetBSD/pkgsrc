@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2017/08/11 22:17:34 maya Exp $
+# $NetBSD: Makefile,v 1.56 2017/12/11 09:02:54 adam Exp $
 
-DISTNAME=	nasm-2.13.01
+DISTNAME=	nasm-2.13.02
 CATEGORIES=	devel lang
 MASTER_SITES=	http://www.nasm.us/pub/nasm/releasebuilds/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nasm.us/
 COMMENT=	General-purpose x86 assembler
 LICENSE=	2-clause-bsd
-
-#AUTO_MKDIRS=		yes
 
 USE_TOOLS+=		gmake makeinfo perl
 GNU_CONFIGURE=		yes
