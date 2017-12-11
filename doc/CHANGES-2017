@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5239 2017/12/10 21:04:32 leot Exp $
+$NetBSD: CHANGES-2017,v 1.5240 2017/12/11 09:04:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7518,3 +7518,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added print/tex-make4ht version 0.1c [markd 2017-12-10]
 	Added print/tex-make4ht-doc version 0.1c [markd 2017-12-10]
 	Updated net/youtube-dl to 20171210 [leot 2017-12-10]
+	Updated devel/nasm to 2.13.02 [adam 2017-12-11]
+	Updated multimedia/ffmpeg3 to 3.4.1 [adam 2017-12-11]
