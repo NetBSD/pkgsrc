@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.233 2017/11/23 17:19:42 wiz Exp $
+# $NetBSD: Makefile,v 1.234 2017/12/11 11:30:05 jperkin Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "Makefile.common"
 
 PKGNAME=	ImageMagick-${DISTVERSION}
@@ -17,12 +17,13 @@ CONFIGURE_ARGS+=	--with-fontconfig
 CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
 CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
 CONFIGURE_ARGS+=	--with-xml=yes
-CONFIGURE_ARGS+=	--disable-openmp
 CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 # This one used to be optional, but it depends on ghostscript even if it's
 # disabled so having a way to disable it seems pointless.
 CONFIGURE_ARGS+=	--with-gslib
+# http://www.imagemagick.org/discourse-server/viewtopic.php?f=2&t=25475
+CONFIGURE_ARGS.NetBSD+=	--disable-openmp
 PKGCONFIG_OVERRIDE+=	MagickWand/MagickWand.pc.in
 PKGCONFIG_OVERRIDE+=	MagickCore/MagickCore.pc.in
 PKGCONFIG_OVERRIDE+=	MagickCore/ImageMagick.pc.in
