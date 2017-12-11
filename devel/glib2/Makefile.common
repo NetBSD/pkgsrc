@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.59 2017/11/07 15:53:11 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.60 2017/12/11 13:34:00 jperkin Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -67,7 +67,8 @@ SUBST_MESSAGE.thr=	Fixing libgthread.
 .endif
 
 # glib-2.48.0 dropped support for OSX < 10.9.0 just to add notification
-# support, so we just disable that feature for older releases.
+# support, so we just disable that feature for older releases, and work
+# around some ObjC detection.
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-9].*) || \
     !empty(MACHINE_PLATFORM:MDarwin-1[012].*)
 SUBST_CLASSES+=		gcocoa
@@ -76,8 +77,14 @@ SUBST_FILES.gcocoa=	configure
 SUBST_FILES.gcocoa+=	gio/Makefile.in gio/giomodule.c
 SUBST_SED.gcocoa=	-e 's,10.9.0,10.0.0,g'
 SUBST_SED.gcocoa+=	-e 's,gcocoanotificationbackend.c,,g'
+SUBST_SED.gcocoa+=	-e 's,gnextstepsettingsbackend.c,gnextstepsettingsbackend.m,g'
 SUBST_SED.gcocoa+=	-e '/gcocoanotificationbackend/d'
 SUBST_SED.gcocoa+=	-e '/g_type_ensure.*g_cocoa_notification/d'
+SUBST_SED.gcocoa+=	-e '/-xobjective-c/d'
+
+pre-configure:
+	${MV} ${WRKSRC}/gio/gnextstepsettingsbackend.c \
+	    ${WRKSRC}/gio/gnextstepsettingsbackend.m
 .endif
 
 .if !empty(MACHINE_PLATFORM:MDarwin-[56].*-*)
