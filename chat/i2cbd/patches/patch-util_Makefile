@@ -1,0 +1,15 @@
+$NetBSD: patch-util_Makefile,v 1.1 2017/12/11 07:54:42 spz Exp $
+
+RELRO package
+
+--- util/Makefile.orig	2001-10-30 19:14:59.000000000 +0000
++++ util/Makefile
+@@ -10,7 +10,7 @@ SRCS=		icbdb.c
+ all: icbdb
+ 
+ icbdb: icbdb.c ../src/userdb.c
+-	$(CC) $(CFLAGS) -o icbdb icbdb.c ../src/userdb.c $(LIBS) $(OTHERLIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o icbdb icbdb.c ../src/userdb.c $(LIBS) $(OTHERLIBS)
+ 
+ install: all
+ 	${INSTALL} -c -s -m 0755 icbdb $(BINDIR)/icbdb

@@ -1,11 +1,22 @@
-$NetBSD: distinfo,v 1.17 2015/11/22 17:17:32 dholland Exp $
+$NetBSD: distinfo,v 1.18 2017/12/11 07:54:42 spz Exp $
 
 SHA1 (i2cbd-2.0_BETA5.tar.gz) = be219c5b6fa2413681214d756dee02c3cd252843
 RMD160 (i2cbd-2.0_BETA5.tar.gz) = d48988fb175857370c2523c86e0e586decbe28ae
 SHA512 (i2cbd-2.0_BETA5.tar.gz) = 8e13e005c46dfbb8a63a1269872270db03a0f1378a0cb14a879a8572583e47893047ebabd2e7391964d94ab9e5a4c89d88a3a5c5727195904fd0f5173b8e51b3
 Size (i2cbd-2.0_BETA5.tar.gz) = 59158 bytes
-SHA1 (patch-aa) = 0151f8e68be11e759425d2e9569df3d465c50931
-SHA1 (patch-ab) = bca8ecb0f41be6405333f2bcf7722dc725ffc777
+SHA1 (patch-aa) = 0cf7ee306f19da66876ec8ebf2022468ded274a8
+SHA1 (patch-ab) = 77627f5771535862530f8a497a16e64bee19075f
 SHA1 (patch-ac) = ca8e6b7324a22fb9ecabf2374e34febb55196e28
-SHA1 (patch-src_access.c) = 4762a7a050c811bb64cae8b2aabff9116cd25601
+SHA1 (patch-src_Makefile) = c4fb1672fd18c4ff8701a16ed3a023032c6e1991
+SHA1 (patch-src_access.c) = 59ff909eade534eca94a40163066e6812f699f8e
+SHA1 (patch-src_groups.c) = 989cb50a2917a370eda6c8ce2e5085253e24a5d1
+SHA1 (patch-src_ipcf.c) = 757b62b454dac6eb5c3335d4167e753734f03256
+SHA1 (patch-src_main.c) = d28d6d265860c5a47614ef690bc81420230f8627
+SHA1 (patch-src_s__group.c) = b16c754174884ea31f46dade9e7456d8fbb670b0
 SHA1 (patch-src_s__info.c) = 5e13e0b8934f45beac84be459ca85d9d089a4d3f
+SHA1 (patch-src_s__user.c) = 8f6571192ca0cdcd6ac29498df2e0940b444d62b
+SHA1 (patch-src_send.c) = 8cc38335b56139220009dcfaf2dc567c1c86cffb
+SHA1 (patch-src_serverserve.c) = 3d68156b6b8c15debe8f13583ebaceedd648820e
+SHA1 (patch-src_signals.c) = 7aef0d213b9975bbe48bb523c6a1bc1b73289d6f
+SHA1 (patch-util_Makefile) = 18e8ae7816a2fac268966b4ac4aa3571022e5eb9
+SHA1 (patch-util_icbdb.c) = f249aa4f286fccaa292c30af290b2ad705972556
