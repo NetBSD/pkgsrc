@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 00:35:05 agc Exp $
+$NetBSD: distinfo,v 1.7 2017/12/11 10:44:16 manu Exp $
 
-SHA1 (iftop-0.17.tar.gz) = 75ce6afc8c0bf851278b0a15e66f523af90cfda9
-RMD160 (iftop-0.17.tar.gz) = 0111fdd3d2ba068acd41d9279c987d6699840736
-SHA512 (iftop-0.17.tar.gz) = 41e3bc5feac5927f67356f491fcab7a28f7a32102cc33c67d81c1dc755273c42e32b540b14b6254a540f1b6c1b1ad6c50e3095c3b5282db2ea12dd0049ce2ebd
-Size (iftop-0.17.tar.gz) = 160381 bytes
-SHA1 (patch-aa) = 1c0c12967ba01d18f2826f874a8f5a076d88c31b
+SHA1 (iftop-1.0pre4.tar.gz) = 7f8e16ea26a0dee37ec9d1cbcef7b27692036572
+RMD160 (iftop-1.0pre4.tar.gz) = 10730f5deccbc090ed0d5b91de009a1af9e0c90d
+SHA512 (iftop-1.0pre4.tar.gz) = abd74e8025bb82fef9ebab4997b1d018201a523d47c0128128ca37797490046538d74758dc4471735c22b890e5bd238ad6b2a30776d465138ede367cdd263d22
+Size (iftop-1.0pre4.tar.gz) = 204665 bytes
+SHA1 (patch-addrs_ioctl.c) = 3b7907efd321409038217eb2476814b9adbb5114
 SHA1 (patch-dlcommon.h) = 787296f9d337a6b6a5ef080452cd14a3580a5fc3
+SHA1 (patch-iftop.c) = 1f840b7446b839443279b3f2fa52a060401cdc88
+SHA1 (patch-iftop.h) = 4a0760bc69e821e43d41da46ab44dfd35ddfb5dd
