@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/08/25 18:53:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/12/12 08:36:43 adam Exp $
 bin/meson
 bin/mesonconf
 bin/mesonintrospect
@@ -143,6 +143,9 @@ ${PYSITELIB}/mesonbuild/modules/pkgconfig.pyo
 ${PYSITELIB}/mesonbuild/modules/python3.py
 ${PYSITELIB}/mesonbuild/modules/python3.pyc
 ${PYSITELIB}/mesonbuild/modules/python3.pyo
+${PYSITELIB}/mesonbuild/modules/qt.py
+${PYSITELIB}/mesonbuild/modules/qt.pyc
+${PYSITELIB}/mesonbuild/modules/qt.pyo
 ${PYSITELIB}/mesonbuild/modules/qt4.py
 ${PYSITELIB}/mesonbuild/modules/qt4.pyc
 ${PYSITELIB}/mesonbuild/modules/qt4.pyo
