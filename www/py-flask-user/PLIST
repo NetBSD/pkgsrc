@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/01/12 11:58:23 rodent Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/12/12 10:28:20 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -120,6 +120,8 @@ ${PYSITELIB}/flask_user/translations/it/LC_MESSAGES/flask_user.mo
 ${PYSITELIB}/flask_user/translations/it/LC_MESSAGES/flask_user.po
 ${PYSITELIB}/flask_user/translations/nl/LC_MESSAGES/flask_user.mo
 ${PYSITELIB}/flask_user/translations/nl/LC_MESSAGES/flask_user.po
+${PYSITELIB}/flask_user/translations/ru/LC_MESSAGES/flask_user.mo
+${PYSITELIB}/flask_user/translations/ru/LC_MESSAGES/flask_user.po
 ${PYSITELIB}/flask_user/translations/sv/LC_MESSAGES/flask_user.mo
 ${PYSITELIB}/flask_user/translations/sv/LC_MESSAGES/flask_user.po
 ${PYSITELIB}/flask_user/translations/tr/LC_MESSAGES/flask_user.mo

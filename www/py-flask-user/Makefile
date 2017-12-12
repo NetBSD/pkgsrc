@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2017/09/16 19:27:23 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/12/12 10:28:20 adam Exp $
 
-DISTNAME=	Flask-User-0.6.11
+DISTNAME=	Flask-User-0.6.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python www
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-User/}
@@ -11,8 +11,7 @@ HOMEPAGE=	https://github.com/lingthio/Flask-User
 COMMENT=	Customizable user account management for Flask
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
-DEPENDS+=	${PYPKGPREFIX}-py-bcrypt-[0-9]*:../../security/py-py-bcrypt
+DEPENDS+=	${PYPKGPREFIX}-bcrypt-[0-9]*:../../security/py-py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-flask-babel-[0-9]*:../../www/py-flask-babel
@@ -20,12 +19,15 @@ DEPENDS+=	${PYPKGPREFIX}-flask-login-[0-9]*:../../www/py-flask-login
 DEPENDS+=	${PYPKGPREFIX}-flask-mail-[0-9]*:../../www/py-flask-mail
 DEPENDS+=	${PYPKGPREFIX}-flask-sqlalchemy-[0-9]*:../../www/py-flask-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-flask-wtf-[0-9]*:../../www/py-flask-wtf
+DEPENDS+=	${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
+# TEST_DEPENDS
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 
-post-install:
-	${CHMOD} -x ${DESTDIR}${PREFIX}/${PYSITELIB}/flask_user/translations/zh/LC_MESSAGES/flask_user.mo
+post-extract:
+	${CHMOD} -x ${WRKSRC}/flask_user/translations/zh/LC_MESSAGES/flask_user.mo
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
