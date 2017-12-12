@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/07/16 20:33:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/12/12 08:38:18 adam Exp $
 bin/epylint${PYVERSSUFFIX}
 bin/pylint${PYVERSSUFFIX}
 bin/pyreverse${PYVERSSUFFIX}
@@ -709,7 +709,6 @@ ${PYSITELIB}/pylint/test/functional/too_many_star_expressions.txt
 ${PYSITELIB}/pylint/test/functional/too_many_statements.py
 ${PYSITELIB}/pylint/test/functional/too_many_statements.txt
 ${PYSITELIB}/pylint/test/functional/trailing_comma_tuple.py
-${PYSITELIB}/pylint/test/functional/trailing_comma_tuple.rc
 ${PYSITELIB}/pylint/test/functional/trailing_comma_tuple.txt
 ${PYSITELIB}/pylint/test/functional/trailing_newlines.py
 ${PYSITELIB}/pylint/test/functional/trailing_newlines.txt
