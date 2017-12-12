@@ -1,0 +1,13 @@
+$NetBSD: patch-setup,v 1.1 2017/12/12 07:13:01 spz Exp $
+
+--- ./setup.orig	1995-02-24 21:19:30.000000000 +0000
++++ ./setup
+@@ -450,7 +450,7 @@ MANDIR		= ${mandir}
+ CC		= ${compiler}
+ 
+ # Compile options.
+-CFLAGS		= ${extra} ${cflags}
++CFLAGS		= ${CFLAGS} ${extra} ${cflags}
+ TCLCFLAGS	= ${extra} ${cflags}
+ 
+ # Lint flags
