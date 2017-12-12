@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5247 2017/12/12 08:39:44 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5248 2017/12/12 10:40:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7538,3 +7538,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-django-admin-sortable2 to 0.6.18 [adam 2017-12-12]
 	Updated devel/py-meson to 0.44.0 [adam 2017-12-12]
 	Updated devel/py-pylint to 1.7.5 [adam 2017-12-12]
+	Updated www/py-flask-login to 0.4.1 [adam 2017-12-12]
+	Updated www/py-flask-sqlalchemy to 2.3.2 [adam 2017-12-12]
+	Updated www/py-flask-testing to 0.6.2 [adam 2017-12-12]
+	Updated www/py-flask-user to 0.6.19 [adam 2017-12-12]
