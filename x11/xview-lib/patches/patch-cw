@@ -1,8 +1,12 @@
-$NetBSD: patch-cw,v 1.5 2012/11/16 00:29:40 joerg Exp $
+$NetBSD: patch-cw,v 1.6 2017/12/12 20:42:41 hauke Exp $
 
 --- lib/libxview/textsw/txt_again.c.orig	1993-06-29 05:17:32.000000000 +0000
 +++ lib/libxview/textsw/txt_again.c
-@@ -28,6 +28,8 @@ Pkg_private CHAR    *STRNCPY();
+@@ -24,10 +24,11 @@ static char     sccsid[] = "@(#)txt_agai
+ #include <string.h>
+ #endif /* SVR4 */
+ 
+-Pkg_private CHAR    *STRNCPY();
  Pkg_private Es_index textsw_do_input();
  Pkg_private Es_index textsw_do_pending_delete();
  
@@ -11,7 +15,7 @@ $NetBSD: patch-cw,v 1.5 2012/11/16 00:29:40 joerg Exp $
  string_t        null_string = {0, 0, 0};
  
  #define	TEXT_DELIMITER	"\\"
-@@ -182,6 +184,7 @@ textsw_string_min_free(ptr_to_string, mi
+@@ -182,6 +183,7 @@ textsw_string_min_free(ptr_to_string, mi
   * Following is stolen from 3.2ALPHA sprintf(str, fmt, va_alist) SIDE_EFFECT:
   * TXTSW_STRING_FREE(ptr_to_string) is modified by this routine.
   */
@@ -19,7 +23,7 @@ $NetBSD: patch-cw,v 1.5 2012/11/16 00:29:40 joerg Exp $
  #ifndef SVR4
  
  /* VARARGS2 */
-@@ -325,6 +328,46 @@ va_dcl
+@@ -325,6 +327,46 @@ va_dcl
  
  #endif /* SVR4 */
  
@@ -66,7 +70,7 @@ $NetBSD: patch-cw,v 1.5 2012/11/16 00:29:40 joerg Exp $
  static	void
  textsw_record_buf(again, buffer, buffer_length)
      register string_t *again;
-@@ -619,6 +662,8 @@ textsw_record_trash_insert(textsw)
+@@ -619,6 +661,8 @@ textsw_record_trash_insert(textsw)
   */
  /* VARARGS2 */
  
@@ -75,7 +79,7 @@ $NetBSD: patch-cw,v 1.5 2012/11/16 00:29:40 joerg Exp $
  static int
  #ifdef ANSI_FUNC_PROTO
  textsw_scanf(register string_t *ptr_to_string, register char  *fmt, ...)
-@@ -705,6 +750,57 @@ va_dcl
+@@ -705,6 +749,57 @@ va_dcl
  
  #endif /* OW_I18N */
  }
@@ -133,7 +137,7 @@ $NetBSD: patch-cw,v 1.5 2012/11/16 00:29:40 joerg Exp $
  
  static int
  textsw_next_is_delimiter(again)
-@@ -848,7 +944,7 @@ textsw_get_recorded_x(view)
+@@ -848,7 +943,7 @@ textsw_get_recorded_x(view)
      int             found_it_already = FALSE;
  
      if (!TXTSW_DO_AGAIN(folio))
