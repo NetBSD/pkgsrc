@@ -1,4 +1,4 @@
-$NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
+$NetBSD: patch-cy,v 1.6 2017/12/12 20:42:41 hauke Exp $
 
 --- lib/libxview/textsw/txt_file.c.orig	1993-06-29 05:17:48.000000000 +0000
 +++ lib/libxview/textsw/txt_file.c
@@ -10,12 +10,13 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
  #ifdef SVR4
  #include <dirent.h>
  #include <string.h>
-@@ -45,13 +46,27 @@ static char     sccsid[] = "@(#)txt_file
+@@ -43,15 +44,26 @@ static char     sccsid[] = "@(#)txt_file
+ 	if ((unsigned)(to_test) != 0) (flags) |= (flag);	\
+ 	else (flags) &= ~(flag)
  
- extern CHAR    *STRCAT();
- extern CHAR    *STRNCAT();
+-extern CHAR    *STRCAT();
+-extern CHAR    *STRNCAT();
 -#ifdef SVR4
-+
 +#if (defined(SVR4) || (__NetBSD_Version__ >= 103080000)) || defined(__DragonFly__)
 +#define GETCWD
 +#endif
@@ -40,7 +41,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
  
  Pkg_private int textsw_change_directory();
  Pkg_private void textsw_display(), textsw_display_view_margins();
-@@ -314,7 +329,11 @@ textsw_load_selection(folio, locx, locy,
+@@ -314,7 +326,11 @@ textsw_load_selection(folio, locx, locy,
      register int    locx, locy;
      int             no_cd;
  {
@@ -52,7 +53,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
      register int    result;
  
      if (textsw_get_selection_as_filename(
-@@ -354,21 +373,21 @@ textsw_full_pathname(name)
+@@ -354,21 +370,21 @@ textsw_full_pathname(name)
      }
  
  #ifdef		OW_I18N
@@ -78,7 +79,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
  	return (0);
  #endif		/* OW_I18N */
  
-@@ -459,8 +478,13 @@ textsw_load_file(abstract, filename, res
+@@ -459,8 +475,13 @@ textsw_load_file(abstract, filename, res
      int             reset_views;
      int             locx, locy;
  {
@@ -92,7 +93,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
      int             result;
      Es_status       status;
      Es_handle       new_esh;
-@@ -546,7 +570,11 @@ textsw_load_file_quietly(abstract, filen
+@@ -546,7 +567,11 @@ textsw_load_file_quietly(abstract, filen
      int             reset_views;
      int             locx, locy;
  {
@@ -104,7 +105,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
      Es_status       status;
      Es_handle       new_esh;
      Es_index        start_at;
-@@ -587,7 +615,11 @@ textsw_save_store_common(folio, output_n
+@@ -587,7 +612,11 @@ textsw_save_store_common(folio, output_n
      CHAR           *output_name;
      int             reload;
  {
@@ -116,7 +117,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
      Es_handle       new_esh;
      register Es_handle output;
      Es_status       result;
-@@ -604,9 +636,16 @@ textsw_save_store_common(folio, output_n
+@@ -604,9 +633,16 @@ textsw_save_store_common(folio, output_n
  	es_destroy(output);
  	if (folio->checkpoint_name) {
  #ifdef OW_I18N
@@ -133,7 +134,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
  	    if (unlink(temp_mb) == -1) {	/* } for match */
  #else
  	    if (unlink(folio->checkpoint_name) == -1) {
-@@ -733,7 +772,11 @@ textsw_save_internal(folio, error_buf, l
+@@ -733,7 +769,11 @@ textsw_save_internal(folio, error_buf, l
      int             locx, locy;	/* Currently unused */
  {
      Pkg_private Es_handle es_file_make_backup();
@@ -145,7 +146,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
      register char  *msg;
      Es_handle       backup, original = ES_NULL;
      int             status;
-@@ -826,10 +869,16 @@ Was the file edited with another editor?
+@@ -826,10 +866,16 @@ Was the file edited with another editor?
  	    textsw_save_store_common(folio, original_name, RELOAD)) {
        case ES_SUCCESS: {
  #ifdef OW_I18N
@@ -162,7 +163,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
  	(void) es_destroy(original);
  	textsw_notify(folio->first_view,
  #ifdef OW_I18N
-@@ -868,7 +917,11 @@ textsw_save(abstract, locx, locy)
+@@ -868,7 +914,11 @@ textsw_save(abstract, locx, locy)
      Textsw          abstract;
      int             locx, locy;
  {
@@ -174,7 +175,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
      Es_status       status;
      Textsw_view_handle view = VIEW_ABS_TO_REP(abstract);
  
-@@ -964,12 +1017,16 @@ textsw_get_from_fd(view, fd, print_error
+@@ -964,12 +1014,16 @@ textsw_get_from_fd(view, fd, print_error
      return (result);
  }
  
@@ -192,7 +193,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
  
      if (0 == textsw_get_selection_as_filename(
  				    textsw, buf, SIZEOF(buf), locx, locy)) {
-@@ -988,15 +1045,27 @@ textsw_get_from_file(view, filename, pri
+@@ -988,15 +1042,27 @@ textsw_get_from_file(view, filename, pri
      int             fd;
      Es_status       status;
      Textsw_status   result = TEXTSW_STATUS_CANNOT_INSERT_FROM_FILE;
@@ -220,7 +221,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
  	    if ((fd = open(buf_mb, 0)) >= 0) {	/* } for match */
  		textsw_implicit_commit(folio);
  #else
-@@ -1027,16 +1096,22 @@ textsw_get_from_file(view, filename, pri
+@@ -1027,16 +1093,22 @@ textsw_get_from_file(view, filename, pri
  }
  
  
@@ -244,7 +245,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
      char           *notice_msg2;
      Es_status       status;
      int             cannot_open = 0;
-@@ -1047,9 +1122,15 @@ textsw_file_stuff(view, locx, locy)
+@@ -1047,9 +1119,15 @@ textsw_file_stuff(view, locx, locy)
      if (0 == textsw_get_selection_as_filename(
  				     folio, buf, SIZEOF(buf), locx, locy)) {
  #ifdef OW_I18N
@@ -260,7 +261,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
  	if ((fd = open(buf_mb, 0)) < 0) {		/* } for match */
  #else
  	if ((fd = open(buf, 0)) < 0) {
-@@ -1141,8 +1222,13 @@ textsw_file_stuff_from_str(view, buf, lo
+@@ -1141,8 +1219,13 @@ textsw_file_stuff_from_str(view, buf, lo
  {
      Textsw_folio    folio = FOLIO_FOR_VIEW(view);
      int             fd;
@@ -274,7 +275,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
      char           *notice_msg2;
      Es_status       status;
      int             cannot_open = 0;
-@@ -1150,9 +1236,15 @@ textsw_file_stuff_from_str(view, buf, lo
+@@ -1150,9 +1233,15 @@ textsw_file_stuff_from_str(view, buf, lo
      Xv_Notice	    text_notice;
      Frame	    frame;
  #ifdef OW_I18N
@@ -290,7 +291,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
      if ((fd = open(buf_mb, 0)) < 0) {	/* } for match */
  #else
      if ((fd = open(buf, 0)) < 0) {
-@@ -1245,9 +1337,15 @@ textsw_store_init(textsw, filename)
+@@ -1245,9 +1334,15 @@ textsw_store_init(textsw, filename)
  {
      struct stat     stat_buf;
  #ifdef OW_I18N
@@ -306,7 +307,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
      if (stat(filename_mb, &stat_buf) == 0) {	/* } for match */
  #else
      if (stat(filename, &stat_buf) == 0) {
-@@ -1310,10 +1408,16 @@ textsw_process_store_error(textsw, filen
+@@ -1310,10 +1405,16 @@ textsw_process_store_error(textsw, filen
        case ES_CANNOT_OVERWRITE:
  #ifdef OW_I18N
        {
@@ -323,7 +324,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
          frame = FRAME_FROM_FOLIO_OR_VIEW(textsw);
          text_notice = (Xv_Notice)xv_get(frame, 
                                  XV_KEY_DATA, text_notice_key, 
-@@ -1465,9 +1569,12 @@ textsw_store_file_internal(abstract, fil
+@@ -1465,9 +1566,12 @@ textsw_store_file_internal(abstract, fil
  	if (status == ES_SUCCESS) {
  	    if (textsw->state & TXTSW_STORE_CHANGES_FILE) {
  #ifdef OW_I18N
@@ -338,7 +339,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
  		textsw_notify(textsw->first_view,
  			      TEXTSW_ACTION_LOADED_FILE, filename_mbs,
  			      TEXTSW_ACTION_LOADED_FILE_WCS, filename, 0);
-@@ -1491,9 +1598,15 @@ textsw_store_file(abstract, filename, lo
+@@ -1491,9 +1595,15 @@ textsw_store_file(abstract, filename, lo
      int             locx, locy;
  {
  #ifdef OW_I18N
@@ -354,7 +355,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
      return (textsw_store_file_internal(abstract, filename_wcs, locx, locy));
  #else
      return (textsw_store_file_internal(abstract, filename, locx, locy));
-@@ -1516,7 +1629,11 @@ textsw_store_to_selection(textsw, locx, 
+@@ -1516,7 +1626,11 @@ textsw_store_to_selection(textsw, locx, 
      Textsw_folio    textsw;
      int             locx, locy;
  {
@@ -366,7 +367,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
  
      if (textsw_get_selection_as_filename(
  			    textsw, filename, SIZEOF(filename), locx, locy))
-@@ -1545,11 +1662,19 @@ textsw_reset_2(abstract, locx, locy, pre
+@@ -1545,11 +1659,19 @@ textsw_reset_2(abstract, locx, locy, pre
  #endif /* SVR4 */
      Pkg_private Es_handle es_mem_create();
      Es_handle       piece_esh, old_original_esh, new_original_esh;
@@ -388,7 +389,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
  #endif
      int             status;
      Textsw_folio    folio = FOLIO_FOR_VIEW(VIEW_ABS_TO_REP(abstract));
-@@ -1591,7 +1716,11 @@ textsw_reset_2(abstract, locx, locy, pre
+@@ -1591,7 +1713,11 @@ textsw_reset_2(abstract, locx, locy, pre
  	    (char *) window_get(abstract, TEXTSW_TEMP_FILENAME);
  	if (temp_name)
  #ifdef OW_I18N
@@ -400,7 +401,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
  #else
  	    (void) STRCPY(save_name, temp_name);
  #endif
-@@ -2150,7 +2279,11 @@ textsw_post_error(folio_or_view, locx, l
+@@ -2150,7 +2276,11 @@ textsw_post_error(folio_or_view, locx, l
      int             locx, locy;	/* Unused */
      char           *msg1, *msg2;
  {
@@ -412,7 +413,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
      int             size_to_use = sizeof(buf);
      Frame	    frame;
      Xv_Notice	    text_notice;
-@@ -2226,8 +2359,13 @@ textsw_change_directory(textsw, filename
+@@ -2226,8 +2356,13 @@ textsw_change_directory(textsw, filename
      CHAR           *full_pathname_wc;
      char            filename[MAXPATHLEN];
  #endif
@@ -426,7 +427,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
      struct stat     stat_buf;
      int             result = 0;
      int             notice_result;
-@@ -2402,8 +2540,13 @@ textsw_checkpoint_internal(folio)
+@@ -2402,8 +2537,13 @@ textsw_checkpoint_internal(folio)
  	CHAR           *name;
  	if (textsw_file_name(folio, &name) != 0)
  	    return (ES_CANNOT_GET_NAME);
@@ -440,7 +441,7 @@ $NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
  #ifdef OW_I18N
  	(void) SPRINTF(folio->checkpoint_name, "%ws%%%%", name);
  #else
-@@ -2773,7 +2916,11 @@ textsw_invalid_data_notice(view, filenam
+@@ -2773,7 +2913,11 @@ textsw_invalid_data_notice(view, filenam
      int			 flag;
  {
      Xv_Notice	text_notice;

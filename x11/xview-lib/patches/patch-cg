@@ -1,8 +1,8 @@
-$NetBSD: patch-cg,v 1.2 2009/12/10 20:35:57 abs Exp $
+$NetBSD: patch-cg,v 1.3 2017/12/12 20:42:41 hauke Exp $
 
 --- lib/libxview/ttysw/cim_change.c.orig	1993-06-29 05:17:12.000000000 +0000
 +++ lib/libxview/ttysw/cim_change.c
-@@ -17,10 +17,10 @@ static char     sccsid[] = "@(#)cim_chan
+@@ -17,15 +17,13 @@ static char     sccsid[] = "@(#)cim_chan
  #include <xview_private/i18n_impl.h>
  #include <sys/types.h>
  #include <pixrect/pixrect.h>
@@ -14,3 +14,8 @@ $NetBSD: patch-cg,v 1.2 2009/12/10 20:35:57 abs Exp $
  
  char            boldify;
  
+-extern char    *strcpy();
+-
+ /* static */ void ttysw_roll();
+ static void reverse();
+ /* static */ void ttysw_swap();
