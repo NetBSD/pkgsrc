@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2017/10/13 09:35:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.82 2017/12/12 23:57:29 minskim Exp $
 
 DISTNAME=	zsh-5.4.2
 CATEGORIES=	shells
@@ -43,7 +43,8 @@ CONFIGURE_ENV.NetBSD+=	zsh_cv_sys_dynamic_execsyms=yes
 INSTALLATION_DIRS+=	share/doc/zsh
 
 PLIST_VARS+=	xattr
-.if exists(/usr/include/sys/xattr.h)
+.if exists(/usr/include/sys/xattr.h) || \
+    exists(/usr/include/${NATIVE_MACHINE_GNU_ARCH}-${LOWER_OPSYS}-gnu/sys/xattr.h)
 PLIST.xattr=	yes
 .endif
 PRINT_PLIST_AWK+=	{if ($$0 ~ /attr.so/) {$$0 = "$${PLIST.xattr}" $$0;}}
