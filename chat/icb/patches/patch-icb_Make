@@ -1,0 +1,15 @@
+$NetBSD: patch-icb_Make,v 1.1 2017/12/12 07:13:01 spz Exp $
+
+RELRO
+
+--- icb/Make.orig	1995-02-24 21:20:17.000000000 +0000
++++ icb/Make
+@@ -129,7 +129,7 @@ default: icb
+ icb: ${PMAKE} $(OBJ) $(LIBS)
+ 
+ icb: ${PMAKE} $(OBJ)
+-	$(CC) $(CFLAGS) -o icb $(OBJ) $(LIBS) $(OTHERLIBS) 
++	$(CC) $(CFLAGS) $(LDFLAGS) -o icb $(OBJ) $(LIBS) $(OTHERLIBS) 
+ 
+ main.o: main.c ../config
+ 	$(CC) $(CFLAGS) -c -DDEFAULTHOST=\"${DEFAULTHOST}\" \
