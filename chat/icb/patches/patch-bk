@@ -1,8 +1,14 @@
-$NetBSD: patch-bk,v 1.2 2008/12/17 02:19:59 christos Exp $
+$NetBSD: patch-bk,v 1.3 2017/12/12 07:13:01 spz Exp $
 
---- tcl/Make.orig	1995-02-24 16:19:48.000000000 -0500
-+++ tcl/Make	2008-12-16 20:18:01.000000000 -0500
-@@ -11,13 +11,7 @@
+--- tcl/Make.orig	1995-02-24 21:19:48.000000000 +0000
++++ tcl/Make
+@@ -6,18 +6,12 @@
+ #	You should not need to modify this makefile.
+ 
+ LIBDIR = ..
+-CFLAGS = $(TCLCFLAGS) -I. -DTCL_VERSION=\"3.3\"
++CFLAGS += $(TCLCFLAGS) -I. -DTCL_VERSION=\"3.3\"
+ #PMAKE = &
  
  SRC = \
  	panic.c \
@@ -16,7 +22,7 @@ $NetBSD: patch-bk,v 1.2 2008/12/17 02:19:59 christos Exp $
  	tclAssem.c \
  	tclBasic.c \
  	tclCmdAH.c \
-@@ -30,13 +24,7 @@
+@@ -30,13 +24,7 @@ SRC = \
  
  OBJ = \
  	panic.o \
@@ -30,7 +36,7 @@ $NetBSD: patch-bk,v 1.2 2008/12/17 02:19:59 christos Exp $
  	tclAssem.o \
  	tclBasic.o \
  	tclCmdAH.o \
-@@ -80,28 +68,3 @@
+@@ -80,28 +68,3 @@ depend:
  	$(MAKEDEPEND) $(DEPENDFLAGS) *.c
  
  # DO NOT DELETE THIS LINE -- make depend depends on it.
