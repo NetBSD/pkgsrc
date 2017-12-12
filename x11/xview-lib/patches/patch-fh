@@ -1,8 +1,17 @@
-$NetBSD: patch-fh,v 1.2 2009/12/10 20:35:58 abs Exp $
+$NetBSD: patch-fh,v 1.3 2017/12/12 20:42:41 hauke Exp $
 
 --- lib/libxview/textsw/es_mem.c.orig	1993-06-29 05:17:30.000000000 +0000
 +++ lib/libxview/textsw/es_mem.c
-@@ -117,7 +117,7 @@ es_mem_destroy(esh)
+@@ -36,8 +36,6 @@ typedef struct es_mem_text {
+ typedef Es_mem_text *Es_mem_data;
+ #define	ABS_TO_REP(esh)	(Es_mem_data)esh->data
+ 
+-extern CHAR    *STRNCPY();
+-
+ Pkg_private Es_handle es_mem_create();
+ static Es_status es_mem_commit();
+ static Es_handle es_mem_destroy();
+@@ -117,7 +115,7 @@ es_mem_destroy(esh)
  }
  
  /* ARGSUSED */
