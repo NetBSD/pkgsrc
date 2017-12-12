@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5246 2017/12/12 03:12:20 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.5247 2017/12/12 08:39:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7535,3 +7535,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed sysutils/syslog-ng-json [fhajny 2017-12-11]
 	Updated devel/re2 to 20170301nb1 [minskim 2017-12-11]
 	Updated sysutils/file to 5.32nb1 [ryoon 2017-12-12]
+	Updated www/py-django-admin-sortable2 to 0.6.18 [adam 2017-12-12]
+	Updated devel/py-meson to 0.44.0 [adam 2017-12-12]
+	Updated devel/py-pylint to 1.7.5 [adam 2017-12-12]
