@@ -1,0 +1,15 @@
+$NetBSD: patch-readline_Make,v 1.1 2017/12/12 07:13:01 spz Exp $
+
+--- readline/Make.orig	1995-02-24 21:19:59.000000000 +0000
++++ readline/Make
+@@ -34,8 +34,8 @@ INCDIR = ..
+ READLINE_DEFINES = $(TYPES) -DVI_MODE
+ 
+ DEBUG_FLAGS = -g
+-LDFLAGS = $(DEBUG_FLAGS) 
+-CFLAGS = $(DEBUG_FLAGS) $(USG) -I. -I..
++LDFLAGS += $(DEBUG_FLAGS) 
++CFLAGS += $(DEBUG_FLAGS) $(USG) -I. -I..
+ 
+ # A good alternative is gcc -traditional.
+ #CC = gcc -traditional
