@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/10/16 10:58:59 adam Exp $
+$NetBSD: distinfo,v 1.5 2017/12/12 08:36:43 adam Exp $
 
-SHA1 (meson-0.43.0.tar.gz) = 7e44b1dc8172ceda2f7ea9525762c585c8fc94a4
-RMD160 (meson-0.43.0.tar.gz) = f8d188b064f1764a0d137738e6ef3710d9845e67
-SHA512 (meson-0.43.0.tar.gz) = 17f7e7f87c344ae0a2f53975c65ef3b4eae204a57eb97141aedb4edf65aa21af29a6f61e3870022efd2d126ce768602fbb894ec7d919875dd44ccdb39a5df044
-Size (meson-0.43.0.tar.gz) = 1066663 bytes
+SHA1 (meson-0.44.0.tar.gz) = b62e989e806ac2935cb29479100a11e2c3251ed1
+RMD160 (meson-0.44.0.tar.gz) = b80bd1e84377aa108acec4f02dc269008df7fc6d
+SHA512 (meson-0.44.0.tar.gz) = 32312842bef6d15a73abb250972df29212ae495eb13f9ddf50f300974a42c679c51d34af560b430ef5465f8353d9f98e91a90e749590584968da766ad75ae989
+Size (meson-0.44.0.tar.gz) = 1102630 bytes
