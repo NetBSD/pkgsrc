@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2017/01/12 12:03:02 rodent Exp $
+$NetBSD: distinfo,v 1.5 2017/12/12 10:07:26 adam Exp $
 
-SHA1 (Flask-Testing-0.6.1.tar.gz) = 3f087821c11279fc1270a3a24bb7bb848eb08bbb
-RMD160 (Flask-Testing-0.6.1.tar.gz) = d86b1c5cb835d96f822d670da41f3fe25da2dfed
-SHA512 (Flask-Testing-0.6.1.tar.gz) = f7a0a89885693f568e8e03a9ae689add3b9577517faa6b842bb6b990a2be447ecb9ccf693dd5279ca98dfcc8b18e2041fccf0cf36c28cea5fdc0dbdc9b64f065
-Size (Flask-Testing-0.6.1.tar.gz) = 42541 bytes
+SHA1 (Flask-Testing-0.6.2.tar.gz) = 83ec46ab013a3a3933493f0c11eaaec5227eb8a8
+RMD160 (Flask-Testing-0.6.2.tar.gz) = c33e390984329159213c9c8c00ba31a006bcf880
+SHA512 (Flask-Testing-0.6.2.tar.gz) = 1ce6a32f2c4e2d6d39c0bd2f01b8d20e2ee8faa5cb31d308bbcda2159f8307cc42f445e328a3752c3c3c66f4fffef75b400c70954b1aeb1aabab8a54c565b5ce
+Size (Flask-Testing-0.6.2.tar.gz) = 129078 bytes
+SHA1 (patch-setup.py) = fe943d9be269ff42100b0185ad7ed476b0326c0a
