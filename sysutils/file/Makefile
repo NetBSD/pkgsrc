@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2017/09/04 12:13:28 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2017/12/12 03:11:51 ryoon Exp $
 
 DISTNAME=		file-5.32
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.astron.com/pub/file/
 
