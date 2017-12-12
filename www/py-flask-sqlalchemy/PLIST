@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/08/04 13:47:10 kleink Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/12/12 09:53:24 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,3 +11,6 @@ ${PYSITELIB}/flask_sqlalchemy/__init__.pyo
 ${PYSITELIB}/flask_sqlalchemy/_compat.py
 ${PYSITELIB}/flask_sqlalchemy/_compat.pyc
 ${PYSITELIB}/flask_sqlalchemy/_compat.pyo
+${PYSITELIB}/flask_sqlalchemy/model.py
+${PYSITELIB}/flask_sqlalchemy/model.pyc
+${PYSITELIB}/flask_sqlalchemy/model.pyo
