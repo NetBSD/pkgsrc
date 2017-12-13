@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2017/10/02 18:10:38 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.29 2017/12/13 14:45:20 fhajny Exp $
 bin/ct_run
 bin/dialyzer
 bin/epmd
@@ -1129,9 +1129,11 @@ lib/erlang/lib/crypto-${VERSION.crypto}/ebin/crypto.beam
 lib/erlang/lib/crypto-${VERSION.crypto}/ebin/crypto_ec_curves.beam
 lib/erlang/lib/crypto-${VERSION.crypto}/priv/lib/crypto.so
 lib/erlang/lib/crypto-${VERSION.crypto}/priv/lib/crypto_callback.so
+lib/erlang/lib/crypto-${VERSION.crypto}/priv/lib/otp_test_engine.so
 lib/erlang/lib/crypto-${VERSION.crypto}/priv/obj/Makefile
 lib/erlang/lib/crypto-${VERSION.crypto}/priv/obj/crypto.o
 lib/erlang/lib/crypto-${VERSION.crypto}/priv/obj/crypto_callback.o
+lib/erlang/lib/crypto-${VERSION.crypto}/priv/obj/otp_test_engine.o
 lib/erlang/lib/crypto-${VERSION.crypto}/src/crypto.erl
 lib/erlang/lib/crypto-${VERSION.crypto}/src/crypto_ec_curves.erl
 lib/erlang/lib/debugger-${VERSION.debugger}/ebin/dbg_debugged.beam
@@ -1384,7 +1386,6 @@ lib/erlang/lib/edoc-${VERSION.edoc}/ebin/edoc_specs.beam
 lib/erlang/lib/edoc-${VERSION.edoc}/ebin/edoc_tags.beam
 lib/erlang/lib/edoc-${VERSION.edoc}/ebin/edoc_types.beam
 lib/erlang/lib/edoc-${VERSION.edoc}/ebin/edoc_wiki.beam
-lib/erlang/lib/edoc-${VERSION.edoc}/ebin/otpsgml_layout.beam
 lib/erlang/lib/edoc-${VERSION.edoc}/include/edoc_doclet.hrl
 lib/erlang/lib/edoc-${VERSION.edoc}/priv/edoc.dtd
 lib/erlang/lib/edoc-${VERSION.edoc}/priv/edoc_generate
@@ -1410,7 +1411,6 @@ lib/erlang/lib/edoc-${VERSION.edoc}/src/edoc_tags.erl
 lib/erlang/lib/edoc-${VERSION.edoc}/src/edoc_types.erl
 lib/erlang/lib/edoc-${VERSION.edoc}/src/edoc_types.hrl
 lib/erlang/lib/edoc-${VERSION.edoc}/src/edoc_wiki.erl
-lib/erlang/lib/edoc-${VERSION.edoc}/src/otpsgml_layout.erl
 lib/erlang/lib/eldap-${VERSION.eldap}/asn1/ELDAPv3.asn1
 lib/erlang/lib/eldap-${VERSION.eldap}/ebin/ELDAPv3.beam
 lib/erlang/lib/eldap-${VERSION.eldap}/ebin/ELDAPv3.hrl
