@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2017/11/13 11:57:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/12/13 17:54:48 wiz Exp $
 bin/neomutt
 lib/neomutt/pgpewrap
 lib/neomutt/pgpring
@@ -45,7 +45,6 @@ share/doc/neomutt/lua/test_lua-api_runner.neomuttrc
 share/doc/neomutt/lua/test_lua-api_spec.lua
 share/doc/neomutt/manual.txt
 share/doc/neomutt/mime.types
-share/doc/neomutt/neomutt-syntax.vim
 share/doc/neomutt/samples/Mush.rc
 share/doc/neomutt/samples/Pine.rc
 share/doc/neomutt/samples/Tin.rc
