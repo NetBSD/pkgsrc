@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5251 2017/12/13 12:45:04 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.5252 2017/12/13 12:53:54 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7548,3 +7548,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-ipykernel to 4.7.0 [adam 2017-12-13]
 	Updated textproc/php-json to 7.0.26nb1 [jperkin 2017-12-13]
 	Updated sysutils/beats to 6.0.1 [fhajny 2017-12-13]
+	Updated databases/elasticsearch to 6.0.1 [fhajny 2017-12-13]
