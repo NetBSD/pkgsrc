@@ -1,4 +1,6 @@
-$NetBSD: patch-Makefile.pre.in,v 1.4 2017/08/14 09:16:28 adam Exp $
+$NetBSD: patch-Makefile.pre.in,v 1.5 2017/12/13 12:55:32 jperkin Exp $
+
+Do not build/install libpython3.so.
 
 --- Makefile.pre.in.orig	2017-08-07 07:59:11.000000000 +0000
 +++ Makefile.pre.in
@@ -11,6 +13,15 @@ $NetBSD: patch-Makefile.pre.in,v 1.4 2017/08/14 09:16:28 adam Exp $
  NO_AS_NEEDED=	@NO_AS_NEEDED@
  LDLAST=		@LDLAST@
  SGI_ABI=	@SGI_ABI@
+@@ -202,7 +202,7 @@ DIST=		$(DISTFILES) $(DISTDIRS)
+ LIBRARY=	@LIBRARY@
+ LDLIBRARY=      @LDLIBRARY@
+ BLDLIBRARY=     @BLDLIBRARY@
+-PY3LIBRARY=     @PY3LIBRARY@
++PY3LIBRARY=
+ DLLLIBRARY=	@DLLLIBRARY@
+ LDLIBRARYDIR=   @LDLIBRARYDIR@
+ INSTSONAME=	@INSTSONAME@
 @@ -864,7 +864,7 @@ regen-opcode-targets:
  	$(PYTHON_FOR_REGEN) $(srcdir)/Python/makeopcodetargets.py \
  		$(srcdir)/Python/opcode_targets.h
