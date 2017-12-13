@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2017/11/10 07:51:58 adam Exp $
+$NetBSD: distinfo,v 1.11 2017/12/13 07:36:22 adam Exp $
 
-SHA1 (pexpect-4.3.0.tar.gz) = 0eab7b4daeba6007697d964ff70409b816a72b13
-RMD160 (pexpect-4.3.0.tar.gz) = 69e9ddcbb6c29a38558f7c62572b975d3a9c37ca
-SHA512 (pexpect-4.3.0.tar.gz) = 26ee26d5b2054e906e5aa36eb077f84b8c7f8f39bb1f211e40a62b8d8c4048631a4e08105a4c17e1c23548d5e9b47fafbc095a37d5363210919de0ca074d225b
-Size (pexpect-4.3.0.tar.gz) = 146576 bytes
+SHA1 (pexpect-4.3.1.tar.gz) = 8f2f0d6f4a1688107dcaf0c17136e645f7de499d
+RMD160 (pexpect-4.3.1.tar.gz) = 991f3e7310bc4b56e63812dd16dba73267f09df2
+SHA512 (pexpect-4.3.1.tar.gz) = eb1416aa1f803d52a3c3663ea1b982f34489d1924df44bf2d36ba63699fa8c98c04437f4bf49a312dfcd01c35b062acb93095fcde7055595fd4c11b933039cff
+Size (pexpect-4.3.1.tar.gz) = 146852 bytes
