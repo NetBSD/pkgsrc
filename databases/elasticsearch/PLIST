@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2017/11/20 15:36:47 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.24 2017/12/13 12:53:45 fhajny Exp $
 bin/elasticsearch
 bin/elasticsearch-plugin
 lib/elasticsearch/bin/elasticsearch-env
@@ -35,7 +35,7 @@ lib/elasticsearch/lib/lucene-spatial-extras-7.0.1.jar
 lib/elasticsearch/lib/lucene-spatial3d-7.0.1.jar
 lib/elasticsearch/lib/lucene-suggest-7.0.1.jar
 lib/elasticsearch/lib/plugin-cli-${PKGVERSION}.jar
-lib/elasticsearch/lib/securesm-1.1.jar
+lib/elasticsearch/lib/securesm-1.2.jar
 lib/elasticsearch/lib/snakeyaml-1.15.jar
 lib/elasticsearch/lib/spatial4j-0.6.jar
 lib/elasticsearch/lib/t-digest-3.0.jar
