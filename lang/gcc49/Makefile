@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/11/13 19:36:26 maya Exp $
+# $NetBSD: Makefile,v 1.24 2017/12/13 10:54:53 jperkin Exp $
 
 GCC_PKGNAME=	gcc49
 .include	"version.mk"
@@ -119,7 +119,7 @@ CONFIGURE_ARGS+=	--with-arch=i486 --with-tune=i486
 .endif
 
 # Disable fixincludes on SmartOS, header changes result in broken includes
-# being generated, see https://github.com/joyent/pkgsrc/issues/270
+# being generated, see https://github.com/joyent/pkgsrc-legacy/issues/270
 .if ${OS_VARIANT} == "SmartOS"
 SUBST_CLASSES+=		fixinc
 SUBST_STAGE.fixinc=	pre-configure
