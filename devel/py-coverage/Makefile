@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2017/11/06 10:37:32 adam Exp $
+# $NetBSD: Makefile,v 1.13 2017/12/13 08:16:08 adam Exp $
 
 DISTNAME=	coverage-4.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/coverage/}
 
@@ -17,7 +18,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-greenlet-[0-9]*:../../devel/py-greenlet
 USE_LANGUAGES=	c
 
 post-install:
-	${RM} ${DESTDIR}${PREFIX}/bin/coverage
+	${RM} -f ${DESTDIR}${PREFIX}/bin/coverage ${DESTDIR}${PREFIX}/bin/coverage[23]
 
 do-test:
 	cd ${WRKSRC} && nosetests-${PYVERSSUFFIX}
