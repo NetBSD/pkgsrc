@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/10/05 08:17:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/12/13 12:56:10 jperkin Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -107,7 +107,6 @@ include/python${PY_VER_SUFFIX}/warnings.h
 include/python${PY_VER_SUFFIX}/weakrefobject.h
 lib/libpython${PY_VER_SUFFIX}.so
 lib/libpython${PY_VER_SUFFIX}.so.1.0
-lib/libpython3.so
 lib/pkgconfig/python-${PY_VER_SUFFIX}.pc
 lib/python${PY_VER_SUFFIX}/LICENSE.txt
 lib/python${PY_VER_SUFFIX}/__future__.py
