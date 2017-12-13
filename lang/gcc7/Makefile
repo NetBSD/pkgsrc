@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/11/13 19:36:26 maya Exp $
+# $NetBSD: Makefile,v 1.15 2017/12/13 10:54:53 jperkin Exp $
 
 GCC_PKGNAME=		gcc7
 .include		"version.mk"
@@ -65,6 +65,15 @@ BOOT_LDFLAGS=		-static-libstdc++ -static-libgcc ${LDFLAGS_FOR_TARGET}
 BOOT_LDFLAGS+=		${LDFLAGS:M-Wl,-syslibroot*}
 # GCC does not understand this option; remove it, or stage build will fail
 BUILDLINK_TRANSFORM+=	rm:-stdlib=libc++
+
+# Disable fixincludes on SmartOS, header changes result in broken includes
+# being generated, see https://github.com/joyent/pkgsrc-legacy/issues/270
+.if ${OS_VARIANT} == "SmartOS"
+SUBST_CLASSES+=		fixinc
+SUBST_STAGE.fixinc=	pre-configure
+SUBST_FILES.fixinc=	gcc/Makefile.in
+SUBST_SED.fixinc=	-e "s,\./fixinc.sh,-c true,"
+.endif
 
 .include "options.mk"
 
