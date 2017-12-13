@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2017/11/28 05:15:27 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.12 2017/12/13 09:34:48 jperkin Exp $
 # used by lang/oracle-jre8/Makefile
 # used by lang/oracle-jdk8/Makefile
 
@@ -20,8 +20,10 @@ EMUL_PLATFORMS=		darwin-x86_64 linux-i386 linux-x86_64 solaris-i386 solaris-x86_
 
 USE_TOOLS+=	pax
 
-# pre-built binaries without RELRO
+# Contains pre-built binaries
 CHECK_RELRO_SUPPORTED=	no
+CHECK_SHLIBS_SUPPORTED=	no
+CHECK_SSP_SUPPORTED=	no
 
 # JDK8 Update number
 UPDATE_NUMBER=	152
@@ -83,6 +85,8 @@ FETCH_MESSAGE+=	"	or ${ARCHIVE}"
 FETCH_MESSAGE+=	""
 FETCH_MESSAGE+=	" Click Download for '${DOWNLOAD_NAME}', read and accept the"
 FETCH_MESSAGE+=	" license, then choose '${EMUL_OPSYS} tar.gz file'."
+
+PRINT_PLIST_AWK+=	/^java\/.*\/man\// { sub("\\.gz$$", ""); }
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${JAVA_HOME}
