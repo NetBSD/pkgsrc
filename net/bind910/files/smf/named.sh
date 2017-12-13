@@ -208,7 +208,7 @@ case "$method" in
         # If not, check if the default rndc key file exists.
         if [ ! -f ${rndc_key_file} ]; then
             echo "$I: Creating default rndc key file: ${rndc_key_file}." >&2
-            /usr/sbin/rndc-confgen ${rndc_cmd_opts}
+            @PREFIX@/sbin/rndc-confgen ${rndc_cmd_opts}
             if [ $? -ne 0 ]; then
                 echo "$I : Warning: rndc configuration failed! Use of 'rndc' to" \
                     "control 'named' may fail and 'named' may report further error" \
