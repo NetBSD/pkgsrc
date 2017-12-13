@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5249 2017/12/13 09:01:04 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5250 2017/12/13 11:42:51 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7546,3 +7546,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-hypothesis to 3.42.2 [adam 2017-12-13]
 	Updated textproc/py-regex to 2017.12.12 [adam 2017-12-13]
 	Updated devel/py-ipykernel to 4.7.0 [adam 2017-12-13]
+	Updated textproc/php-json to 7.0.26nb1 [jperkin 2017-12-13]
