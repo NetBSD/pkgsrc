@@ -1,17 +1,24 @@
-$NetBSD: patch-configure.ac,v 1.2 2015/03/31 15:22:40 joerg Exp $
+$NetBSD: patch-configure.ac,v 1.3 2017/12/13 21:15:12 maya Exp $
+
+Assume all other operating systems are nix-like
+(SmartOS, dragonflybsd)
+
+Improve portability of test (==)
+
+Don't let package add its optimization flags
 
 --- configure.ac.orig	2010-03-07 12:22:36.000000000 +0000
 +++ configure.ac
-@@ -320,7 +320,7 @@ case "$host_os" in
-         fi
+@@ -319,7 +319,7 @@ case "$host_os" in
          ;;
  
--    *bsd*)
-+    *bsd* | dragonfly*)
-         hc_cv_is_nix=yes
+     *)
+-        hc_cv_is_nix=no
++        hc_cv_is_nix=yes
          hc_cv_is_windows=no
          hc_cv_is_mingw32=no
-@@ -558,7 +558,7 @@ AC_CHECK_DECLS( SIOCADDRT,            [h
+         hc_cv_is_apple=no
+@@ -546,7 +546,7 @@ AC_CHECK_DECLS( SIOCADDRT,            [h
  AC_CHECK_DECLS( SIOCDELRT,            [hc_cv_have_siocdelrt=yes],           [hc_cv_have_siocdelrt=no],           [#include <linux/sockios.h>] )
  AC_CHECK_DECLS( SIOCDIFADDR,          [hc_cv_have_siocdifaddr=yes],         [hc_cv_have_siocdifaddr=no],         [#include <linux/sockios.h>] )
  
@@ -20,7 +27,7 @@ $NetBSD: patch-configure.ac,v 1.2 2015/03/31 15:22:40 joerg Exp $
      AC_CHECK_DECLS( MTEWARN,          [hc_cv_have_mtewarn=yes],             [hc_cv_have_mtewarn=no],             [#include <sys/mtio.h>] )
  else
      hc_cv_have_mtewarn=no
-@@ -1749,7 +1749,7 @@ if test "$hc_cv_auto_optimize" = "yes"; 
+@@ -1742,7 +1742,7 @@ if test "$hc_cv_auto_optimize" = "yes"; 
          xscale-yes|arm*-yes)
  
              hc_cv_is_intel_x86_arch=no
