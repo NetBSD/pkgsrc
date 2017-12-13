@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5256 2017/12/13 14:46:04 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.5257 2017/12/13 16:20:00 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7555,3 +7555,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/erlang-doc to 20.2 [fhajny 2017-12-13]
 	Updated lang/erlang-man to 20.2 [fhajny 2017-12-13]
 	Updated lang/erlang to 20.2 [fhajny 2017-12-13]
+	Updated multimedia/adobe-flash-player to 28.0.0.126 [tsutsui 2017-12-13]
