@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2017/11/20 17:10:43 minskim Exp $
+# $NetBSD: Makefile,v 1.25 2017/12/13 08:58:03 adam Exp $
 
 DISTNAME=	ipython-6.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython/}
 
@@ -33,7 +33,7 @@ DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
 .endif
 
 post-install:
-	cd ${DESTDIR}${PREFIX} && \
+	cd ${DESTDIR}${PREFIX} && ${RM} bin/iptest3 bin/ipython3 && \
 	${MV} bin/iptest bin/iptest${PYVERSSUFFIX} && \
 	${MV} bin/ipython bin/ipython${PYVERSSUFFIX} && \
 	${MV} ${PKGMANDIR}/man1/ipython.1 ${PKGMANDIR}/man1/ipython${PYVERSSUFFIX}.1 || ${TRUE}
