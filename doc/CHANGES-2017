@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5255 2017/12/13 12:56:19 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.5256 2017/12/13 14:46:04 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7552,3 +7552,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/python34 to 3.4.7nb1 [jperkin 2017-12-13]
 	Updated lang/python35 to 3.5.4nb1 [jperkin 2017-12-13]
 	Updated lang/python36 to 3.6.3nb1 [jperkin 2017-12-13]
+	Updated lang/erlang-doc to 20.2 [fhajny 2017-12-13]
+	Updated lang/erlang-man to 20.2 [fhajny 2017-12-13]
+	Updated lang/erlang to 20.2 [fhajny 2017-12-13]
