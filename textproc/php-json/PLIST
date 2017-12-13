@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/12/13 11:42:41 jperkin Exp $
+include/php/ext/json/php_json.h
