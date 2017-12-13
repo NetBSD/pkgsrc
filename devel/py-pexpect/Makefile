@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2017/11/10 07:51:58 adam Exp $
+# $NetBSD: Makefile,v 1.21 2017/12/13 07:36:22 adam Exp $
 
-DISTNAME=	pexpect-4.3.0
+DISTNAME=	pexpect-4.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pexpect/}
@@ -10,9 +10,9 @@ HOMEPAGE=	http://pexpect.sourceforge.net/
 COMMENT=	Pure Python Expect-like module
 LICENSE=	mit
 
-USE_LANGUAGES=	# none
+DEPENDS+=	${PYPKGPREFIX}-ptyprocess>=0.5:../../sysutils/py-ptyprocess
 
-DEPENDS+=	${PYPKGPREFIX}-ptyprocess-[0-9]*:../../sysutils/py-ptyprocess
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
