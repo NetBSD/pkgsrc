@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/05/04 20:28:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/12/13 08:59:59 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/ipykernel/__init__.py
 ${PYSITELIB}/ipykernel/__init__.pyc
@@ -125,12 +125,18 @@ ${PYSITELIB}/ipykernel/serialize.pyo
 ${PYSITELIB}/ipykernel/tests/__init__.py
 ${PYSITELIB}/ipykernel/tests/__init__.pyc
 ${PYSITELIB}/ipykernel/tests/__init__.pyo
+${PYSITELIB}/ipykernel/tests/_asyncio.py
+${PLIST.async}${PYSITELIB}/ipykernel/tests/_asyncio.pyc
+${PLIST.async}${PYSITELIB}/ipykernel/tests/_asyncio.pyo
 ${PYSITELIB}/ipykernel/tests/test_connect.py
 ${PYSITELIB}/ipykernel/tests/test_connect.pyc
 ${PYSITELIB}/ipykernel/tests/test_connect.pyo
 ${PYSITELIB}/ipykernel/tests/test_embed_kernel.py
 ${PYSITELIB}/ipykernel/tests/test_embed_kernel.pyc
 ${PYSITELIB}/ipykernel/tests/test_embed_kernel.pyo
+${PYSITELIB}/ipykernel/tests/test_eventloop.py
+${PYSITELIB}/ipykernel/tests/test_eventloop.pyc
+${PYSITELIB}/ipykernel/tests/test_eventloop.pyo
 ${PYSITELIB}/ipykernel/tests/test_io.py
 ${PYSITELIB}/ipykernel/tests/test_io.pyc
 ${PYSITELIB}/ipykernel/tests/test_io.pyo
