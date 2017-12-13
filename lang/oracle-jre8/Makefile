@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/06/01 13:30:25 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2017/12/13 09:34:48 jperkin Exp $
 
 # Note: Regen distinfo with PKG_OPTIONS.oracle-jre8+=oracle-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
@@ -42,7 +42,6 @@ CONF_FILES+=	${JAVA_HOME}/lib/${file}.default ${JAVA_HOME}/lib/${file}
 .endfor
 
 CHECK_FILES_SKIP+=	${JAVA_HOME}/lib/${JAVA_ARCH}/client/classes.jsa
-CHECK_SHLIBS_SUPPORTED=	NO
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.oracle-jre8
 PKG_SUPPORTED_OPTIONS=	oracle-jre-jce

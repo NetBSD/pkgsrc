@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-x86_64,v 1.5 2017/03/11 07:36:10 ryoon Exp $
+@comment $NetBSD: PLIST.solaris-x86_64,v 1.6 2017/12/13 09:34:48 jperkin Exp $
 bin/oracle8-java
 bin/oracle8-javaws
 bin/oracle8-keytool
@@ -145,13 +145,15 @@ java/oracle-8/lib/resources.jar
 java/oracle-8/lib/rt.jar
 java/oracle-8/lib/sdp/sdp.conf.template
 ${PLIST.jce}java/oracle-8/lib/security/README.txt
-java/oracle-8/lib/security/US_export_policy.jar
 java/oracle-8/lib/security/blacklist
 java/oracle-8/lib/security/blacklisted.certs
 java/oracle-8/lib/security/cacerts
 java/oracle-8/lib/security/java.policy
 java/oracle-8/lib/security/java.security.default
-java/oracle-8/lib/security/local_policy.jar
+java/oracle-8/lib/security/policy/limited/US_export_policy.jar
+java/oracle-8/lib/security/policy/limited/local_policy.jar
+java/oracle-8/lib/security/policy/unlimited/US_export_policy.jar
+java/oracle-8/lib/security/policy/unlimited/local_policy.jar
 java/oracle-8/lib/security/sunpkcs11-solaris.cfg.default
 java/oracle-8/lib/security/trusted.libraries
 java/oracle-8/lib/security/ucrypto-solaris.cfg.default
