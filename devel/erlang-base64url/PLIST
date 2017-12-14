@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2017/12/14 21:00:30 fhajny Exp $
+lib/erlang/lib/base64url-${PKGVERSION}/ebin/base64url.app
+lib/erlang/lib/base64url-${PKGVERSION}/ebin/base64url.beam
