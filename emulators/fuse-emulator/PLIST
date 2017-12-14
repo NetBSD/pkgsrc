@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/05/26 19:35:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/12/14 08:11:52 adam Exp $
 bin/fuse
 man/man1/fuse.1
 share/fuse/128-0.rom
@@ -6,7 +6,6 @@ share/fuse/128-1.rom
 share/fuse/48.rom
 share/fuse/cassette.bmp
 share/fuse/disciple.rom
-share/fuse/disk_plus3.szx
 ${PLIST.sdl}share/fuse/fuse.font
 share/fuse/keyboard.scr
 ${PLIST.gtk}share/fuse/menu_data.ui
@@ -26,20 +25,6 @@ share/fuse/plusd.rom
 share/fuse/se-0.rom
 share/fuse/se-1.rom
 share/fuse/speccyboot-1.4.rom
-share/fuse/tape_128.szx
-share/fuse/tape_16.szx
-share/fuse/tape_2048.szx
-share/fuse/tape_2068.szx
-share/fuse/tape_48.szx
-share/fuse/tape_48_ntsc.szx
-share/fuse/tape_pentagon.szx
-share/fuse/tape_plus2.szx
-share/fuse/tape_plus2a.szx
-share/fuse/tape_plus3.szx
-share/fuse/tape_plus3e.szx
-share/fuse/tape_scorpion.szx
-share/fuse/tape_se.szx
-share/fuse/tape_ts2068.szx
 share/fuse/tc2048.rom
 share/fuse/tc2068-0.rom
 share/fuse/tc2068-1.rom
