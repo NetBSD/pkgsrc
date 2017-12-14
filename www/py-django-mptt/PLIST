@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2017/02/02 07:27:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/12/14 13:54:17 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/mptt/__init__.py
 ${PYSITELIB}/mptt/__init__.pyc
@@ -21,10 +22,10 @@ ${PYSITELIB}/mptt/fields.pyo
 ${PYSITELIB}/mptt/forms.py
 ${PYSITELIB}/mptt/forms.pyc
 ${PYSITELIB}/mptt/forms.pyo
+${PYSITELIB}/mptt/locale/da/LC_MESSAGES/django.mo
+${PYSITELIB}/mptt/locale/da/LC_MESSAGES/django.po
 ${PYSITELIB}/mptt/locale/de/LC_MESSAGES/django.mo
 ${PYSITELIB}/mptt/locale/de/LC_MESSAGES/django.po
-${PYSITELIB}/mptt/locale/dk/LC_MESSAGES/django.mo
-${PYSITELIB}/mptt/locale/dk/LC_MESSAGES/django.po
 ${PYSITELIB}/mptt/locale/es/LC_MESSAGES/django.mo
 ${PYSITELIB}/mptt/locale/es/LC_MESSAGES/django.po
 ${PYSITELIB}/mptt/locale/es_AR/LC_MESSAGES/django.mo
@@ -45,6 +46,8 @@ ${PYSITELIB}/mptt/locale/pt_BR/LC_MESSAGES/django.mo
 ${PYSITELIB}/mptt/locale/pt_BR/LC_MESSAGES/django.po
 ${PYSITELIB}/mptt/locale/ru/LC_MESSAGES/django.mo
 ${PYSITELIB}/mptt/locale/ru/LC_MESSAGES/django.po
+${PYSITELIB}/mptt/locale/uk/LC_MESSAGES/django.mo
+${PYSITELIB}/mptt/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/mptt/locale/zh_Hant/LC_MESSAGES/django.mo
 ${PYSITELIB}/mptt/locale/zh_Hant/LC_MESSAGES/django.po
 ${PYSITELIB}/mptt/managers.py
