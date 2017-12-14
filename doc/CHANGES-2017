@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5269 2017/12/14 20:25:58 schnoebe Exp $
+$NetBSD: CHANGES-2017,v 1.5270 2017/12/14 20:39:20 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7577,3 +7577,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-django-mptt to 0.9.0 [adam 2017-12-14]
 	Updated pkgtools/lintpkgsrc to 4.93 [adam 2017-12-14]
 	Updated print/hplip to 3.17.11 [schnoebe 2017-12-14]
+	Updated devel/erlang-cache_tab to 1.0.12 [fhajny 2017-12-14]
