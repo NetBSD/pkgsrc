@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5268 2017/12/14 14:13:00 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5269 2017/12/14 20:25:58 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7576,3 +7576,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-django-js-asset version 0.1.1 [adam 2017-12-14]
 	Updated www/py-django-mptt to 0.9.0 [adam 2017-12-14]
 	Updated pkgtools/lintpkgsrc to 4.93 [adam 2017-12-14]
+	Updated print/hplip to 3.17.11 [schnoebe 2017-12-14]
