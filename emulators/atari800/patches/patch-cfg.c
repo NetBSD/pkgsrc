@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.9 2013/05/19 07:35:56 adam Exp $
+$NetBSD: patch-cfg.c,v 1.1 2017/12/14 22:12:19 adam Exp $
 
---- cfg.c.orig	2011-04-18 01:47:48.000000000 +0000
+Provide PkgSrc path for the configuration file.
+
+--- cfg.c.orig	2014-04-05 19:40:14.000000000 +0000
 +++ cfg.c
-@@ -64,7 +64,7 @@ void CFG_FindROMImages(const char *direc
+@@ -68,7 +68,7 @@ int CFG_save_on_exit = FALSE;
  #endif
  
  #ifndef SYSTEM_WIDE_CFG_FILE
