@@ -1,6 +1,6 @@
 #! @PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.12 2017/06/22 06:11:25 markd Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.13 2017/12/14 14:11:40 adam Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -608,6 +608,12 @@ sub get_default_makefile_vars() {
 
     my ($vars);
     if ( -f '/etc/mk.conf' && ( $vars = parse_makefile_vars('/etc/mk.conf') ) )
+    {
+        foreach my $var ( keys %{$vars} ) {
+            $default_vars->{$var} = $vars->{$var};
+        }
+    }
+    elsif ( -f ${conf_prefix} . '/etc/mk.conf' && ( $vars = parse_makefile_vars(${conf_prefix} . '/etc/mk.conf') ) )
     {
         foreach my $var ( keys %{$vars} ) {
             $default_vars->{$var} = $vars->{$var};
