@@ -1,4 +1,4 @@
-$NetBSD: patch-ef,v 1.8 2016/09/04 09:21:04 ryoon Exp $
+$NetBSD: patch-audio_audio.c,v 1.1 2017/12/14 08:01:10 adam Exp $
 
 Avoid conflicts with SSP read() macro in NetBSD's <ssp/unistd.h>
 (PR lib/43832: ssp causes common names to be defines)
