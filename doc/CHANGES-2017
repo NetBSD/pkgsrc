@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5272 2017/12/14 20:42:33 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.5273 2017/12/14 20:44:23 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7580,3 +7580,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/erlang-cache_tab to 1.0.12 [fhajny 2017-12-14]
 	Updated textproc/erlang-fast_xml to 1.1.25 [fhajny 2017-12-14]
 	Updated textproc/erlang-fast_yaml to 1.0.12 [fhajny 2017-12-14]
+	Updated security/erlang-fast_tls to 1.0.17 [fhajny 2017-12-14]
