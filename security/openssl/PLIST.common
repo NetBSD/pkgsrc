@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.31 2017/11/24 20:34:23 bsiegert Exp $
+@comment $NetBSD: PLIST.common,v 1.32 2017/12/14 09:18:47 jperkin Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -1648,7 +1648,7 @@ man/man3/bn_mul_normal.3
 man/man3/bn_mul_part_recursive.3
 man/man3/bn_mul_recursive.3
 man/man3/bn_mul_words.3
-man/man3/bn_print.3
+${PLIST.notmac}man/man3/bn_print.3
 man/man3/bn_set_high.3
 man/man3/bn_set_low.3
 man/man3/bn_set_max.3
