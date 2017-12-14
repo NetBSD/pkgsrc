@@ -1,4 +1,4 @@
-$NetBSD: patch-sys_unix_Makefile.src,v 1.1 2011/06/01 11:20:29 wiz Exp $
+$NetBSD: patch-sys_unix_Makefile.src,v 1.2 2017/12/14 16:13:31 jperkin Exp $
 
 Make configurable.
 
@@ -16,8 +16,12 @@ Make configurable.
  
  # Pick the SYSSRC and SYSOBJ lines corresponding to your desired operating
  # system.
-@@ -154,12 +158,24 @@ GNOMEINC=-I/usr/lib/glib/include -I/usr/
- CFLAGS = -O -I../include
+@@ -151,15 +155,27 @@ GNOMEINC=-I/usr/lib/glib/include -I/usr/
+ # flags for debugging:
+ # CFLAGS = -g -I../include
+ 
+-CFLAGS = -O -I../include
++CFLAGS += -I../include
  LFLAGS = 
  
 +.if "${GTYPE}" == "-x11" || "${GTYPE}" == "-qt"
