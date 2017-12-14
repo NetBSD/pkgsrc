@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2017/09/26 10:27:01 wiz Exp $
+# $NetBSD: Makefile.common,v 1.33 2017/12/14 16:13:31 jperkin Exp $
 #
 # used by games/nethack/Makefile
 # used by games/nethack-lib/Makefile
@@ -33,7 +33,7 @@ USE_TOOLS+=		gzip yacc lex awk
 
 SUBST_CLASSES+=		ttylib
 SUBST_MESSAGE.ttylib=	Configuring to use correct termcap library
-SUBST_STAGE.ttylib=	post-patch
+SUBST_STAGE.ttylib=	pre-configure
 SUBST_FILES.ttylib=	sys/unix/Makefile.src
 SUBST_SED.ttylib=	-e 's!^WINTTYLIB = -ltermlib!WINTTYLIB = -L${BUILDLINK_PREFIX.termcap}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.termcap}/lib -l${BUILDLINK_LIBNAME.termcap}!'
 
@@ -43,9 +43,15 @@ NETHACK_OS.*=		BSD
 
 SUBST_CLASSES+=		os
 SUBST_MESSAGE.os=	Configuring for ${NETHACK_OS}
-SUBST_STAGE.os=		post-patch
+SUBST_STAGE.os=		pre-configure
 SUBST_FILES.os=		include/unixconf.h
 SUBST_SED.os=		-e 's,__NETHACK_OS__,${NETHACK_OS},'
+
+SUBST_CLASSES+=		configh
+SUBST_STAGE.configh=	pre-configure
+SUBST_FILES.configh=	include/config.h
+SUBST_VARS.configh=	PREFIX
+SUBST_SED.configh=	-e "s|@GZIP_PROGRAM@|${GZIP_CMD:[1]}|g"
 
 USE_GAMESGROUP=		yes
 NETHACK_USER=		${GAMES_USER}
@@ -60,13 +66,5 @@ MAKE_ENV+=		VARDIR=${VARDIR:Q}
 
 pre-configure:
 	@${CHMOD} 755 ${WRKSRC}/sys/unix/setup.sh
-
-post-patch:
-	@${MV} ${WRKSRC}/include/config.h ${WRKSRC}/config.h-pre
-	@${SED} -e 's|@PREFIX@|${PREFIX}|g'				\
-		-e 's|@GZIP_PROGRAM@|'`${ECHO} ${GZIP_CMD}		\
-		| ${AWK} '{ print $$1 }'`'|g'				\
-		< ${WRKSRC}/config.h-pre > ${WRKSRC}/include/config.h
-	@${RM} -f ${WRKSRC}/config.h-pre
 
 .endif # !NO_BUILD

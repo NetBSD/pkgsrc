@@ -1,10 +1,16 @@
-$NetBSD: patch-sys_unix_Makefile.utl,v 1.1 2011/06/01 11:20:29 wiz Exp $
+$NetBSD: patch-sys_unix_Makefile.utl,v 1.2 2017/12/14 16:13:31 jperkin Exp $
 
 Make configurable.
 
---- sys/unix/Makefile.utl.orig	2011-05-27 15:13:59.000000000 +0000
+--- sys/unix/Makefile.utl.orig	2003-12-07 23:39:13.000000000 +0000
 +++ sys/unix/Makefile.utl
-@@ -94,6 +94,14 @@ LFLAGS =
+@@ -89,11 +89,19 @@
+ # flags for debugging:
+ # CFLAGS = -g -I../include
+ 
+-CFLAGS = -O -I../include
++CFLAGS += -I../include
+ LFLAGS =
  
  LIBS =
   
