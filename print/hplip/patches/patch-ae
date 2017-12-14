@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.9 2015/08/27 23:53:24 khorben Exp $
+$NetBSD: patch-ae,v 1.10 2017/12/14 20:24:42 schnoebe Exp $
 
 # Conform to autoconf's standard variable usage, making it easier
 # to install on pkgsrc platforms
@@ -8,10 +8,27 @@ $NetBSD: patch-ae,v 1.9 2015/08/27 23:53:24 khorben Exp $
 # still needs to handle the buildlink path for libusb-1.0 :(
 # schnoebe -- Fri May 24 14:55:57 CDT 2013
 
---- Makefile.am.orig	2015-06-07 19:25:33.000000000 +0000
+--- Makefile.am.orig	2017-11-23 12:10:34.000000000 +0000
 +++ Makefile.am
-@@ -105,22 +105,22 @@ libhpip_la_SOURCES = ip/xconvolve.c ip/x
+@@ -8,7 +8,7 @@ CFLAGS+= -DCONFDIR=\"$(hplip_confdir)\"
+ CXXFLAGS+= -DCONFDIR=\"$(hplip_confdir)\"
  
+ hplipdir = $(datadir)/hplip
+-apparmordir = /etc/apparmor.d
++apparmordir = $(sysconfdir)/apparmor.d
+ docdir = $(hpdocdir)
+ htmldir = $(hphtmldir)
+ doc_DATA = COPYING copyright prnt/hpijs/README_LIBJPG
+@@ -106,6 +106,7 @@ libhpmud_la_LDFLAGS += -lusb
+ else
+ libhpmud_la_SOURCES += io/hpmud/musb.c 
+ libhpmud_la_CFLAGS  += -I/usr/include/libusb-1.0
++libhpmud_la_CFLAGS  += -I$(prefix)/include/libusb-1.0
+ libhpmud_la_LDFLAGS += -lusb-1.0
+ endif
+ 
+@@ -127,12 +128,12 @@ libhpip_la_SOURCES = ip/xconvolve.c ip/x
+ 	ip/hpip.h ip/ipdefs.h ip/xform.h ip/xjpg_dct.h ip/xjpg_huf.h ip/xjpg_mrk.h
  
  #hpmud rules data dir
 -rulessystemdir=/usr/lib/systemd/system
@@ -19,13 +36,15 @@ $NetBSD: patch-ae,v 1.9 2015/08/27 23:53:24 khorben Exp $
  dist_rulessystem_DATA =data/rules/hplip-printer@.service
  
  # hpmud.rules
+ if !HPLIP_CLASS_DRIVER
 -rulesdir = /etc/udev/rules.d
 +rulesdir = $(sysconfdir)/udev/rules.d
  if UDEV_SYSFS_RULES
  dist_rules_DATA = data/rules/56-hpmud_sysfs.rules
  else
- dist_rules_DATA = data/rules/56-hpmud.rules
+@@ -140,11 +141,11 @@ dist_rules_DATA = data/rules/56-hpmud.ru
  endif
+ endif #HPLIP_CLASS_DRIVER
  
 -halpredir = /usr/share/hal/fdi/preprobe/10osvendor
 +halpredir = $(datadir)/hal/fdi/preprobe/10osvendor
@@ -36,9 +55,9 @@ $NetBSD: patch-ae,v 1.9 2015/08/27 23:53:24 khorben Exp $
 +hplip_confdir = $(sysconfdir)/hp
  hplip_conf_DATA = hplip.conf
  
- #pstotiff filter
-@@ -128,7 +128,7 @@ pstotiffdir = $(cupsfilterdir)
- pstotiff_SCRIPTS = fax/filters/pstotiff
+ if !HPLIP_CLASS_DRIVER
+@@ -154,7 +155,7 @@ pstotiff_SCRIPTS = fax/filters/pstotiff
+ endif #HPLIP_CLASS_DRIVER
  
  # hplip.state
 -hplip_statedir = /var/lib/hp
@@ -46,8 +65,30 @@ $NetBSD: patch-ae,v 1.9 2015/08/27 23:53:24 khorben Exp $
  dist_hplip_state_DATA =
  
  if FULL_BUILD
-@@ -359,9 +359,9 @@ endif
+@@ -229,11 +230,11 @@ endif # FAX_BUILD
+ if !HPLIP_CLASS_DRIVER
+ # AppArmor Changes
+ if APPARMOR_BUILD
+-apparmor_profiledir = /etc/apparmor.d
++apparmor_profiledir = $(sysconfdir)/apparmor.d
+ apparmor_profile_DATA = apparmor/usr.share.hplip
+ dist_apparmor_profile_DATA = apparmor/usr.share.hplip
  
+-apparmor_abstractiondir = /etc/apparmor.d/abstractions
++apparmor_abstractiondir = $(sysconfdir)/apparmor.d/abstractions
+ apparmor_abstraction_DATA = apparmor/abstractions/hplip
+ dist_apparmor_abstraction_DATA = apparmor/abstractions/hplip
+ 
+@@ -360,6 +361,7 @@ endif
+ 
+ if !LIBUSB01_BUILD
+ hpmudext_la_CFLAGS +=-I/usr/include/libusb-1.0 
++hpmudext_la_CFLAGS +=-I$(prefix)/include/libusb-1.0 
+ endif
+ endif #!HPLIP_CLASS_DRIVER
+ # ui (qt3)
+@@ -445,9 +447,9 @@ endif
+ endif #HPLIP_CLASS_DRIVER
  # PolicyKit
  if POLICYKIT_INSTALL
 -policykit_dbus_etcdir = /etc/dbus-1/system.d
@@ -58,8 +99,8 @@ $NetBSD: patch-ae,v 1.9 2015/08/27 23:53:24 khorben Exp $
  dist_policykit_dbus_share_DATA = data/policykit/com.hp.hplip.service
  policykit_policydir = $(policykit_dir)
  dist_policykit_policy_DATA = data/policykit/com.hp.hplip.policy
-@@ -541,13 +541,13 @@ install-data-hook:
- if HPLIP_BUILD
+@@ -680,13 +682,13 @@ if HPLIP_BUILD
+ if !HPLIP_CLASS_DRIVER
  #	   If scanner build, add hpaio entry to sane dll.conf.
  	if [ "$(scan_build)" = "yes" ]; then \
 -	   $(mkinstalldirs) $(DESTDIR)/etc/sane.d; \
@@ -75,6 +116,6 @@ $NetBSD: patch-ae,v 1.9 2015/08/27 23:53:24 khorben Exp $
 +	   if ! grep ^hpaio $(DESTDIR)$(sysconfdir)/sane.d/dll.conf >/dev/null 2>/dev/null ; then \
 +		  echo "Adding hpaio entry to $(sysconfdir)/sane.d/dll.conf." ; \
 +		  echo hpaio >>$(DESTDIR)$(sysconfdir)/sane.d/dll.conf ; \
- 	   fi \
- 	fi
- if FULL_BUILD
+ 	   fi; \
+  	   if [ \( "$(UNAME)" = "x86_64" -a  -d "$(libdir)/x86_64-linux-gnu/sane" \) ]; then \
+ 	  	ln -sf $(libdir)/sane/libsane-hpaio.so $(libdir)/x86_64-linux-gnu/sane/ ; \
