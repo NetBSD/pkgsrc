@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.741 2017/12/09 13:03:20 jmcneill Exp $
+# $NetBSD: Makefile,v 1.742 2017/12/14 03:38:43 jnemeth Exp $
 #
 
 COMMENT=	System utilities
@@ -562,7 +562,6 @@ SUBDIR+=	syslog-ng
 SUBDIR+=	syslog-ng-amqp
 SUBDIR+=	syslog-ng-curl
 SUBDIR+=	syslog-ng-geoip
-SUBDIR+=	syslog-ng-json
 SUBDIR+=	syslog-ng-mongodb
 SUBDIR+=	syslog-ng-redis
 SUBDIR+=	syslog-ng-smtp
