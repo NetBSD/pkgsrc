@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5282 2017/12/14 21:12:31 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.5283 2017/12/14 22:14:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7590,3 +7590,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/erlang-base64url version 1.0 [fhajny 2017-12-14]
 	Added security/erlang-jose version 1.8.4 [fhajny 2017-12-14]
 	Updated chat/ejabberd to 17.11 [fhajny 2017-12-14]
+	Updated textproc/icu to 60.2 [adam 2017-12-14]
+	Updated sysutils/py-Send2Trash to 1.4.2 [adam 2017-12-14]
+	Updated emulators/atari800 to 3.1.0 [adam 2017-12-14]
+	Updated devel/cmake to 3.10.1 [adam 2017-12-14]
