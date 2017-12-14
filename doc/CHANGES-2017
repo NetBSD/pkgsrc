@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5259 2017/12/13 21:30:14 maya Exp $
+$NetBSD: CHANGES-2017,v 1.5260 2017/12/14 02:04:08 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7558,3 +7558,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/adobe-flash-player to 28.0.0.126 [tsutsui 2017-12-13]
 	Updated mail/neomutt to 20171208 [wiz 2017-12-13]
 	Updated emulators/hercules to 3.11nb3 [maya 2017-12-13]
+	Updated emulators/qemu to 2.11.0 [kamil 2017-12-14]
