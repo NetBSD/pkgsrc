@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5275 2017/12/14 20:50:06 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.5276 2017/12/14 20:52:07 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7583,3 +7583,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/erlang-fast_tls to 1.0.17 [fhajny 2017-12-14]
 	Updated devel/erlang-ezlib to 1.0.3 [fhajny 2017-12-14]
 	Updated graphics/erlang-eimp to 1.0.2 [fhajny 2017-12-14]
+	Updated net/erlang-xmpp to 1.1.16 [fhajny 2017-12-14]
