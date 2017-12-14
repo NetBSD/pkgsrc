@@ -1,10 +1,10 @@
-$NetBSD: patch-setup.py,v 1.1 2017/11/26 17:40:05 adam Exp $
+$NetBSD: patch-setup.py,v 1.2 2017/12/14 13:18:07 adam Exp $
 
 Relax requirements.
 
---- setup.py.orig	2017-11-26 17:23:27.000000000 +0000
+--- setup.py.orig	2017-12-11 18:59:44.000000000 +0000
 +++ setup.py
-@@ -60,20 +60,20 @@ tests_require = [
+@@ -60,19 +60,19 @@ tests_require = [
      'bottle',
      'celery>=2.5',
      'exam>=0.5.2',
@@ -24,7 +24,6 @@ Relax requirements.
 +    'pytest-xdist>=1.18.2',
 +    'pytest-pythonpath>=0.7.1',
 +    'pytest-sugar>=0.8',
-     'pytest-assume',
      'pytest-cov',
 -    'pytest-flake8==0.9',
 +    'pytest-flake8>=0.9',
