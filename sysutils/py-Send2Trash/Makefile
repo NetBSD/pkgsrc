@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/09/26 11:21:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/12/14 21:46:57 adam Exp $
 
-DISTNAME=	Send2Trash-1.4.1
+DISTNAME=	Send2Trash-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	python sysutils
+CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Send2Trash/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
