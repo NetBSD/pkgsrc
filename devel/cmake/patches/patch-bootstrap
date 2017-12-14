@@ -1,18 +1,9 @@
-$NetBSD: patch-bootstrap,v 1.1 2017/11/30 15:41:17 adam Exp $
+$NetBSD: patch-bootstrap,v 1.2 2017/12/14 22:13:34 adam Exp $
 
-Test compiler for unordered_map; Clang 5 with -std=gnu++1z can't include it properly.
 Use external libuv; the one included with cmake makes building fail.
 
 --- bootstrap.orig	2017-11-20 15:19:54.000000000 +0000
 +++ bootstrap
-@@ -1056,6 +1056,7 @@ TMPFILE=`cmake_tmp_file`
- echo '
- #include <iostream>
- #include <memory>
-+#include <unordered_map>
- 
- #if __cplusplus < 201103L
- #error "Compiler is not in a mode aware of C++11."
 @@ -1305,11 +1306,8 @@ objs=""
  for a in ${CMAKE_CXX_SOURCES} ${CMAKE_C_SOURCES} ${LexerParser_CXX_SOURCES} ${LexerParser_C_SOURCES} ${KWSYS_CXX_SOURCES} ${KWSYS_C_SOURCES}; do
    objs="${objs} ${a}.o"

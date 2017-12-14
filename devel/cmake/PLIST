@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2017/11/30 15:41:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.48 2017/12/14 22:13:34 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -2082,6 +2082,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/Darwin-Intel-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-Intel-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-Intel.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-NAG-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Darwin-NVIDIA-CUDA.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-PGI-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-PGI-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-PGI-Fortran.cmake
