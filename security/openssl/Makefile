@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.235 2017/12/14 09:18:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.236 2017/12/14 20:44:20 tron Exp $
 
 DISTNAME=	openssl-1.0.2n
 PKGREVISION=	1
@@ -177,7 +177,9 @@ pre-configure:
 PLIST_VARS+=	notmac
 .if ${OPSYS} == "Darwin"
 post-install:
+	${CP} -p ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/BN_print.3 ${WRKDIR}
 	${RM} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/bn_print.3*
+	${MV} -f ${WRKDIR}/BN_print.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
 .else
 PLIST.notmac=	yes
 .endif
