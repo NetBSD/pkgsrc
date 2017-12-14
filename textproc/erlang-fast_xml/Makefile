@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2017/10/17 14:49:23 fhajny Exp $
+# $NetBSD: Makefile,v 1.10 2017/12/14 20:41:24 fhajny Exp $
 
-DISTNAME=	fast_xml-1.1.24
+DISTNAME=	fast_xml-1.1.25
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
