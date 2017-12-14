@@ -1,24 +1,17 @@
-$NetBSD: distinfo,v 1.129 2017/10/11 19:53:23 adam Exp $
+$NetBSD: distinfo,v 1.130 2017/12/14 02:03:52 kamil Exp $
 
-SHA1 (qemu-2.10.1.tar.xz) = 7d404902de032c14ba65d2daef030cb94d65980c
-RMD160 (qemu-2.10.1.tar.xz) = dc97c919686fea43e3cb3a13edab5dcbf5c2eb2d
-SHA512 (qemu-2.10.1.tar.xz) = 62e9717ede71a49f3ffd9b86c321470f64c90e575be1a9da01078cfc9466b0aeb08adf5d05bab7ee1e89dfce75def7b276af01f77b7151d406999e7af21b6711
-Size (qemu-2.10.1.tar.xz) = 24979688 bytes
-SHA1 (patch-configure) = 51d5396f99ef129631138bc51f47bc24775aa08b
+SHA1 (qemu-2.11.0.tar.xz) = 458f3382fe5028faa89174a7321d21a0a8058b63
+RMD160 (qemu-2.11.0.tar.xz) = 3e9094d77312ae762dae216d453871d26cfc7e3a
+SHA512 (qemu-2.11.0.tar.xz) = 902cb11bcfde03a139efb8e5af978364d4160c9943142b1b3f92045066bf004aad7733ddb4d033aab40559cb00a79c907e0ffecf546e4a1a3659c19ec463940e
+Size (qemu-2.11.0.tar.xz) = 28984736 bytes
+SHA1 (patch-Makefile) = b3899fb8d0dd2f29bf3edd843836612e6e6c019c
+SHA1 (patch-configure) = 179486600f69c2678bd8ffc62626d919e4688386
 SHA1 (patch-contrib_ivshmem-client_ivshmem-client.c) = 40c8751607cbf66a37e4c4e08f2664b864e2e984
 SHA1 (patch-contrib_ivshmem-server_ivshmem-server.c) = d8f53432b5752f4263dc4ef96108a976a05147a3
 SHA1 (patch-ef) = 98a1de2fd48638886b5d16f6a61dc72910e98b41
-SHA1 (patch-et) = e9b850ac5985cbe934b541acbfdb330cce421d50
 SHA1 (patch-hw_display_omap__dss.c) = 6b13242f28e32346bc70548c216c578d98fd3420
-SHA1 (patch-hw_net_e1000.c) = 761e9afb5c74a03ee6cf0b918dd27122777a27b7
-SHA1 (patch-hw_net_e1000__regs.h) = b93974c75bec94cbba048c0b61917177c5cc08c1
-SHA1 (patch-hw_net_e1000e__core.c) = 55917bcb9ca0f80476159e51f4240e8c1df68132
-SHA1 (patch-hw_net_e1000x__common.h) = 093501bafdaa3a4b4ae705c45ea656a602907d18
 SHA1 (patch-hw_net_etraxfs__eth.c) = e5dd1661d60dbcd27b332403e0843500ba9544bc
 SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
-SHA1 (patch-hw_ppc_mac__newworld.c) = 5131bb6edf8b0acf6e7ed3b6bc7be962dc71eca6
-SHA1 (patch-hw_ppc_mac__oldworld.c) = b71667ab281dc23c9d971dc8754eeefc879bd1d7
 SHA1 (patch-hw_usb_dev-mtp.c) = f5a446079d51b19eae6c2f5e0c9810c181e4f02d
-SHA1 (patch-memory.c) = f8a97fa2ee2afcd361deaa1f0023b83d059e100b
 SHA1 (patch-slirp_tcp__subr.c) = f011c9dc58282e61b26017547a9884f30a6e6154
 SHA1 (patch-tests_Makefile.include) = 42345d697cb2e324dccf1d68bd8d61e8001c6162
