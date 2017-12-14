@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5260 2017/12/14 02:04:08 kamil Exp $
+$NetBSD: CHANGES-2017,v 1.5261 2017/12/14 08:19:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7559,3 +7559,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/neomutt to 20171208 [wiz 2017-12-13]
 	Updated emulators/hercules to 3.11nb3 [maya 2017-12-13]
 	Updated emulators/qemu to 2.11.0 [kamil 2017-12-14]
+	Updated emulators/fuse-emulator to 1.5.0 [adam 2017-12-14]
+	Updated emulators/fuse-emulator-utils to 1.4.0 [adam 2017-12-14]
