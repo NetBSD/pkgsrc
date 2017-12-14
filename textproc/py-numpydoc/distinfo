@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 02:00:04 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/12/14 13:36:12 adam Exp $
 
-SHA1 (numpydoc-0.5.tar.gz) = 5ac7ae0122669dc457d5abba1f9b81f03098bd38
-RMD160 (numpydoc-0.5.tar.gz) = a44f50895bf3fdcfbdb95d10aa64acd87cae624b
-SHA512 (numpydoc-0.5.tar.gz) = f5ddd07103f3eadad979ddca2bfb4b1681fb783e58de80fbb2cbcb85dcdbe2340f708c94c9d494dce44ac3b1dff1b4b7bcf57231c2eb848f9468b72cec03b038
-Size (numpydoc-0.5.tar.gz) = 32051 bytes
+SHA1 (numpydoc-0.7.0.tar.gz) = 0f8d396c6c0a4abad13556c1a13b02cd324d842b
+RMD160 (numpydoc-0.7.0.tar.gz) = d86376df9747ca1fabf33434737312f2a365002f
+SHA512 (numpydoc-0.7.0.tar.gz) = 1a9bedaa6fe8bcd626b739b458a1647e550ac4489f8ccec2d4b11f93ee5c2a58e5d0e6692330d478a9ba91956da88eabdf020aa04f534e1e445c020903dcf14a
+Size (numpydoc-0.7.0.tar.gz) = 19047 bytes
