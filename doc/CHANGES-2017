@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5265 2017/12/14 12:12:14 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5266 2017/12/14 13:39:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7568,3 +7568,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/screen to 4.6.2nb1 [wiz 2017-12-14]
 	Updated audio/mpg123 to 1.25.8 [adam 2017-12-14]
 	Updated multimedia/mkvtoolnix to 18.0.0 [adam 2017-12-14]
+	Updated www/py-raven to 6.4.0 [adam 2017-12-14]
+	Updated devel/py-ruamel-yaml to 0.15.35 [adam 2017-12-14]
+	Updated www/py-mod_wsgi to 4.5.23 [adam 2017-12-14]
+	Updated textproc/py-numpydoc to 0.7.0 [adam 2017-12-14]
+	Updated math/py-pandas to 0.21.1 [adam 2017-12-14]
