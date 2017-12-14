@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/10/12 12:08:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/12/14 08:39:09 adam Exp $
 include/sodium.h
 include/sodium/core.h
 include/sodium/crypto_aead_aes256gcm.h
@@ -11,6 +11,7 @@ include/sodium/crypto_auth_hmacsha512256.h
 include/sodium/crypto_box.h
 include/sodium/crypto_box_curve25519xchacha20poly1305.h
 include/sodium/crypto_box_curve25519xsalsa20poly1305.h
+include/sodium/crypto_core_ed25519.h
 include/sodium/crypto_core_hchacha20.h
 include/sodium/crypto_core_hsalsa20.h
 include/sodium/crypto_core_salsa20.h
@@ -32,6 +33,7 @@ include/sodium/crypto_pwhash_argon2id.h
 include/sodium/crypto_pwhash_scryptsalsa208sha256.h
 include/sodium/crypto_scalarmult.h
 include/sodium/crypto_scalarmult_curve25519.h
+include/sodium/crypto_scalarmult_ed25519.h
 include/sodium/crypto_secretbox.h
 include/sodium/crypto_secretbox_xchacha20poly1305.h
 include/sodium/crypto_secretbox_xsalsa20poly1305.h
