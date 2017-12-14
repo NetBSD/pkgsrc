@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2017/10/17 14:03:53 fhajny Exp $
+$NetBSD: distinfo,v 1.9 2017/12/14 20:38:18 fhajny Exp $
 
-SHA1 (cache_tab-1.0.11.tar.gz) = 6503cd3277c550d929842cda47576551d5933579
-RMD160 (cache_tab-1.0.11.tar.gz) = 80fac0627a24887db13013ae9b0df7a63b94cc34
-SHA512 (cache_tab-1.0.11.tar.gz) = 9f84aa9c8f3ac77faed41588b21e8bd18083a70ed06ab1ca4cc3b474cf88d733e20def3803123e091530ee9528bfef5528d2f18b23b8501874af0219792270e1
-Size (cache_tab-1.0.11.tar.gz) = 18596 bytes
+SHA1 (cache_tab-1.0.12.tar.gz) = 3ae5940a1e402b7b79f0cf3d6c44679a0e0fd2cd
+RMD160 (cache_tab-1.0.12.tar.gz) = 43ae6444406ae1637d96a350c2c691ecb64b0df3
+SHA512 (cache_tab-1.0.12.tar.gz) = 8cea5d4a20ba14013bb2e947874c64ff7159855a518451c3aa83c74425f3525ec71d1eb539bb743c84c1fbe2ad3453aaffddf76a58cc6bfe7c9caa055c05ac76
+Size (cache_tab-1.0.12.tar.gz) = 18655 bytes
