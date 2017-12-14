@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.49 2017/10/17 14:55:36 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.50 2017/12/14 21:12:21 fhajny Exp $
 lib/erlang/lib/${PKGNAME}/COPYING
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
+lib/erlang/lib/${PKGNAME}/ebin/acme_challenge.beam
 lib/erlang/lib/${PKGNAME}/ebin/cyrsasl.beam
 lib/erlang/lib/${PKGNAME}/ebin/cyrsasl_anonymous.beam
 lib/erlang/lib/${PKGNAME}/ebin/cyrsasl_digest.beam
@@ -12,6 +13,8 @@ lib/erlang/lib/${PKGNAME}/ebin/cyrsasl_scram.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd.app
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_access_permissions.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_acme.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_acme_comm.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_admin.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_app.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_auth.beam
@@ -38,6 +41,7 @@ lib/erlang/lib/${PKGNAME}/ebin/ejabberd_hooks.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_http.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_http_ws.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_idna.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_iq.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_listener.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_local.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_logger.beam
@@ -103,6 +107,7 @@ lib/erlang/lib/${PKGNAME}/ebin/jlib.beam
 lib/erlang/lib/${PKGNAME}/ebin/misc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_adhoc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_admin_extra.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_admin_update_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_announce.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_announce_mnesia.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_announce_riak.beam
@@ -184,6 +189,7 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_pubsub.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_push.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_push_keepalive.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_push_mnesia.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_push_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_register.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_register_web.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_roster.beam
@@ -253,6 +259,8 @@ lib/erlang/lib/${PKGNAME}/include/XmppAddr.hrl
 lib/erlang/lib/${PKGNAME}/include/adhoc.hrl
 lib/erlang/lib/${PKGNAME}/include/bosh.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd.hrl
+lib/erlang/lib/${PKGNAME}/include/ejabberd_acme.hrl
+lib/erlang/lib/${PKGNAME}/include/ejabberd_auth.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_commands.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_config.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_ctl.hrl
@@ -278,6 +286,7 @@ lib/erlang/lib/${PKGNAME}/include/mod_offline.hrl
 lib/erlang/lib/${PKGNAME}/include/mod_privacy.hrl
 lib/erlang/lib/${PKGNAME}/include/mod_private.hrl
 lib/erlang/lib/${PKGNAME}/include/mod_proxy65.hrl
+lib/erlang/lib/${PKGNAME}/include/mod_push.hrl
 lib/erlang/lib/${PKGNAME}/include/mod_roster.hrl
 lib/erlang/lib/${PKGNAME}/include/mod_shared_roster.hrl
 lib/erlang/lib/${PKGNAME}/include/mod_vcard.hrl
@@ -285,6 +294,22 @@ lib/erlang/lib/${PKGNAME}/include/mod_vcard_xupdate.hrl
 lib/erlang/lib/${PKGNAME}/include/pubsub.hrl
 lib/erlang/lib/${PKGNAME}/include/translate.hrl
 lib/erlang/lib/${PKGNAME}/priv/bin/captcha.sh
+lib/erlang/lib/${PKGNAME}/priv/css/admin.css
+lib/erlang/lib/${PKGNAME}/priv/css/bosh.css
+lib/erlang/lib/${PKGNAME}/priv/css/muc.css
+lib/erlang/lib/${PKGNAME}/priv/css/oauth.css
+lib/erlang/lib/${PKGNAME}/priv/css/register.css
+lib/erlang/lib/${PKGNAME}/priv/img/admin-logo-fill.png
+lib/erlang/lib/${PKGNAME}/priv/img/admin-logo.png
+lib/erlang/lib/${PKGNAME}/priv/img/bosh-logo.png
+lib/erlang/lib/${PKGNAME}/priv/img/favicon.png
+lib/erlang/lib/${PKGNAME}/priv/img/oauth-logo.png
+lib/erlang/lib/${PKGNAME}/priv/img/powered-by-ejabberd.png
+lib/erlang/lib/${PKGNAME}/priv/img/powered-by-erlang.png
+lib/erlang/lib/${PKGNAME}/priv/img/valid-xhtml10.png
+lib/erlang/lib/${PKGNAME}/priv/img/vcss.png
+lib/erlang/lib/${PKGNAME}/priv/js/admin.js
+lib/erlang/lib/${PKGNAME}/priv/js/muc.js
 lib/erlang/lib/${PKGNAME}/priv/msgs/ca.msg
 lib/erlang/lib/${PKGNAME}/priv/msgs/cs.msg
 lib/erlang/lib/${PKGNAME}/priv/msgs/de.msg
@@ -314,6 +339,7 @@ lib/erlang/lib/${PKGNAME}/priv/msgs/zh.msg
 lib/erlang/lib/${PKGNAME}/priv/sql/lite.sql
 lib/erlang/lib/${PKGNAME}/priv/sql/mssql.sql
 lib/erlang/lib/${PKGNAME}/priv/sql/mysql.sql
+lib/erlang/lib/${PKGNAME}/priv/sql/pg.new.sql
 lib/erlang/lib/${PKGNAME}/priv/sql/pg.sql
 sbin/ejabberdctl
 share/bash-completion.d/ejabberd
