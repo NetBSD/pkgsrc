@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/11/26 17:40:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/12/14 13:18:07 adam Exp $
 bin/raven${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -160,6 +160,7 @@ ${PYSITELIB}/raven/contrib/webpy/utils.pyo
 ${PYSITELIB}/raven/contrib/zconfig/__init__.py
 ${PYSITELIB}/raven/contrib/zconfig/__init__.pyc
 ${PYSITELIB}/raven/contrib/zconfig/__init__.pyo
+${PYSITELIB}/raven/contrib/zconfig/component.xml
 ${PYSITELIB}/raven/contrib/zerorpc/__init__.py
 ${PYSITELIB}/raven/contrib/zerorpc/__init__.pyc
 ${PYSITELIB}/raven/contrib/zerorpc/__init__.pyo
@@ -168,6 +169,10 @@ ${PYSITELIB}/raven/contrib/zope/__init__.pyc
 ${PYSITELIB}/raven/contrib/zope/__init__.pyo
 ${PYSITELIB}/raven/contrib/zope/component.xml
 ${PYSITELIB}/raven/data/cacert.pem
+${PYSITELIB}/raven/deprecation.py
+${PYSITELIB}/raven/environ.py
+${PYSITELIB}/raven/environ.pyc
+${PYSITELIB}/raven/environ.pyo
 ${PYSITELIB}/raven/events.py
 ${PYSITELIB}/raven/events.pyc
 ${PYSITELIB}/raven/events.pyo
