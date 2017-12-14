@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/11/23 10:35:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/12/14 13:25:22 adam Exp $
 bin/mod_wsgi-express${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -121,6 +121,7 @@ ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.5.2.rst.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.5.20.rst.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.5.21.rst.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.5.22.rst.txt
+${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.5.23.rst.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.5.3.rst.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.5.4.rst.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.5.5.rst.txt
@@ -301,6 +302,7 @@ ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.5.2.html
 ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.5.20.html
 ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.5.21.html
 ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.5.22.html
+${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.5.23.html
 ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.5.3.html
 ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.5.4.html
 ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.5.5.html
