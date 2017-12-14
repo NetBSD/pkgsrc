@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2017/11/02 09:41:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2017/12/14 13:37:59 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -909,6 +909,9 @@ ${PYSITELIB}/pandas/tests/internals/test_internals.pyo
 ${PYSITELIB}/pandas/tests/io/__init__.py
 ${PYSITELIB}/pandas/tests/io/__init__.pyc
 ${PYSITELIB}/pandas/tests/io/__init__.pyo
+${PYSITELIB}/pandas/tests/io/conftest.py
+${PYSITELIB}/pandas/tests/io/conftest.pyc
+${PYSITELIB}/pandas/tests/io/conftest.pyo
 ${PYSITELIB}/pandas/tests/io/data/S4_EDUC1.dta
 ${PYSITELIB}/pandas/tests/io/data/banklist.csv
 ${PYSITELIB}/pandas/tests/io/data/banklist.html
@@ -1022,6 +1025,7 @@ ${PYSITELIB}/pandas/tests/io/data/stata10_117.dta
 ${PYSITELIB}/pandas/tests/io/data/stata11_115.dta
 ${PYSITELIB}/pandas/tests/io/data/stata11_117.dta
 ${PYSITELIB}/pandas/tests/io/data/stata12_117.dta
+${PYSITELIB}/pandas/tests/io/data/stata13_dates.dta
 ${PYSITELIB}/pandas/tests/io/data/stata14_118.dta
 ${PYSITELIB}/pandas/tests/io/data/stata15.dta
 ${PYSITELIB}/pandas/tests/io/data/stata1_114.dta
@@ -1243,6 +1247,7 @@ ${PYSITELIB}/pandas/tests/io/parser/data/iris.csv
 ${PYSITELIB}/pandas/tests/io/parser/data/salaries.csv
 ${PYSITELIB}/pandas/tests/io/parser/data/salaries.csv.bz2
 ${PYSITELIB}/pandas/tests/io/parser/data/salaries.csv.gz
+${PYSITELIB}/pandas/tests/io/parser/data/salaries.csv.zip
 ${PYSITELIB}/pandas/tests/io/parser/data/sauron.SHIFT_JIS.csv
 ${PYSITELIB}/pandas/tests/io/parser/data/sub_char.csv
 ${PYSITELIB}/pandas/tests/io/parser/data/tar_csv.tar
@@ -1257,6 +1262,7 @@ ${PYSITELIB}/pandas/tests/io/parser/data/tips.csv.bz2
 ${PYSITELIB}/pandas/tests/io/parser/data/tips.csv.gz
 ${PYSITELIB}/pandas/tests/io/parser/data/unicode_series.csv
 ${PYSITELIB}/pandas/tests/io/parser/data/utf16_ex.txt
+${PYSITELIB}/pandas/tests/io/parser/data/utf16_ex_small.zip
 ${PYSITELIB}/pandas/tests/io/parser/dialect.py
 ${PYSITELIB}/pandas/tests/io/parser/dialect.pyc
 ${PYSITELIB}/pandas/tests/io/parser/dialect.pyo
