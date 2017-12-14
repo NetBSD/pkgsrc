@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1287 2017/11/26 17:40:05 adam Exp $
+# $NetBSD: Makefile,v 1.1288 2017/12/14 13:52:58 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -633,6 +633,7 @@ SUBDIR+=	py-django-filter
 SUBDIR+=	py-django-formtools
 SUBDIR+=	py-django-import-export
 SUBDIR+=	py-django-inline-ordering
+SUBDIR+=	py-django-js-asset
 SUBDIR+=	py-django-kronos
 SUBDIR+=	py-django-mezzanine-filebrowser
 SUBDIR+=	py-django-mezzanine-grappelli
