@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.8 2013/05/19 07:35:56 adam Exp $
+$NetBSD: patch-configure,v 1.1 2017/12/14 22:12:19 adam Exp $
 
 Compatibility fixes.
 
---- configure.orig	2013-03-03 15:58:11.000000000 +0000
+--- configure.orig	2014-04-12 14:00:06.000000000 +0000
 +++ configure
-@@ -7347,11 +7347,8 @@ $as_echo "#define SDL 1" >>confdefs.h
+@@ -7577,11 +7577,8 @@ $as_echo "#define SUPPORTS_PLATFORM_TIME
              LIBS="$LIBS $SDL_LIBS"
              CPPFLAGS="$CPPFLAGS $SDL_CFLAGS"
              if [ "$a8_host" = "win" ]; then
@@ -16,7 +16,7 @@ Compatibility fixes.
              fi
              a8_use_sdl=yes
  
-@@ -8259,11 +8256,8 @@ $as_echo "#define SDL 1" >>confdefs.h
+@@ -8512,11 +8509,8 @@ $as_echo "#define SUPPORTS_PLATFORM_TIME
              LIBS="$LIBS $SDL_LIBS"
              CPPFLAGS="$CPPFLAGS $SDL_CFLAGS"
              if [ "$a8_host" = "win" ]; then
@@ -28,7 +28,7 @@ Compatibility fixes.
              fi
              a8_use_sdl=yes
  
-@@ -8601,7 +8595,7 @@ $as_echo "#define IDE 1" >>confdefs.h
+@@ -8870,7 +8864,7 @@ $as_echo "#define IDE 1" >>confdefs.h
  
      fi
  
