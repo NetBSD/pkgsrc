@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2017/12/14 20:58:26 fhajny Exp $
+lib/erlang/lib/fs-${PKGVERSION}/ebin/fs.app
+lib/erlang/lib/fs-${PKGVERSION}/ebin/fs.beam
+lib/erlang/lib/fs-${PKGVERSION}/ebin/fs_app.beam
+lib/erlang/lib/fs-${PKGVERSION}/ebin/fs_event_bridge.beam
+lib/erlang/lib/fs-${PKGVERSION}/ebin/fs_server.beam
+lib/erlang/lib/fs-${PKGVERSION}/ebin/fs_sup.beam
+lib/erlang/lib/fs-${PKGVERSION}/ebin/fsevents.beam
+lib/erlang/lib/fs-${PKGVERSION}/ebin/inotifywait.beam
+lib/erlang/lib/fs-${PKGVERSION}/ebin/inotifywait_win32.beam
+lib/erlang/lib/fs-${PKGVERSION}/ebin/kqueue.beam
+lib/erlang/lib/fs-${PKGVERSION}/include/api.hrl
