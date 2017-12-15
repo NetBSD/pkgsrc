@@ -1,10 +1,14 @@
-$NetBSD: patch-hotspot_make_solaris_makefiles_jsig.make,v 1.1 2015/07/03 20:40:59 fhajny Exp $
+$NetBSD: patch-hotspot_make_solaris_makefiles_jsig.make,v 1.2 2017/12/15 14:27:52 jperkin Exp $
 
 GCC support.
 
---- hotspot/make/solaris/makefiles/jsig.make.orig	2015-06-10 10:31:44.000000000 +0000
+--- hotspot/make/solaris/makefiles/jsig.make.orig	2017-11-28 00:13:38.000000000 +0000
 +++ hotspot/make/solaris/makefiles/jsig.make
-@@ -42,15 +42,25 @@ LIBJSIG_MAPFILE = $(MAKEFILES_DIR)/mapfi
+@@ -39,18 +39,29 @@ DEST_JSIG_DIZ       = $(JDK_LIBDIR)/$(LI
+ 
+ LIBJSIG_MAPFILE = $(MAKEFILES_DIR)/mapfile-vers-jsig
+ 
++LFLAGS_JSIG += $(CFLAGS)
  LFLAGS_JSIG += $(MAPFLAG:FILENAME=$(LIBJSIG_MAPFILE))
  
  ifdef USE_GCC
