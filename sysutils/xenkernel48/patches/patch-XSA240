@@ -1,4 +1,4 @@
-$NetBSD: patch-XSA240,v 1.1 2017/10/17 08:42:30 bouyer Exp $
+$NetBSD: patch-XSA240,v 1.2 2017/12/15 14:02:15 bouyer Exp $
 
 From 2315b8c651e0cc31c9153d09c9912b8fbe632ad2 Mon Sep 17 00:00:00 2001
 From: Jan Beulich <jbeulich@suse.com>
@@ -532,7 +532,7 @@ index 54acc60723..ffa66eb146 100644
 +### pv-linear-pt
 +> `= <boolean>`
 +
-+> Default: `true`
++> Default: `false`
 +
 +Allow PV guests to have pagetable entries pointing to other pagetables
 +of the same level (i.e., allowing L2 PTEs to point to other L2 pages).
@@ -540,9 +540,9 @@ index 54acc60723..ffa66eb146 100644
 +used to allow operating systems a simple way to consistently map the
 +current process's pagetables into its own virtual address space.
 +
-+None of the most common PV operating systems (Linux, MiniOS)
-+use this technique, but NetBSD in PV mode,  and maybe custom operating
-+systems which do.
++None of the most common PV operating systems (Linux, NetBSD, MiniOS)
++use this technique, but there may be custom operating systems which
++do.
  
  ### reboot
  > `= t[riple] | k[bd] | a[cpi] | p[ci] | P[ower] | e[fi] | n[o] [, [w]arm | [c]old]`
@@ -576,3 +576,90 @@ index 31d4a03840..5d125cff3a 100644
 -- 
 2.14.1
 
+From: Jan Beulich <jbeulich@suse.com>
+Subject: x86: don't wrongly trigger linear page table assertion
+
+_put_page_type() may do multiple iterations until its cmpxchg()
+succeeds. It invokes set_tlbflush_timestamp() on the first
+iteration, however. Code inside the function takes care of this, but
+- the assertion in _put_final_page_type() would trigger on the second
+  iteration if time stamps in a debug build are permitted to be
+  sufficiently much wider than the default 6 bits (see WRAP_MASK in
+  flushtlb.c),
+- it returning -EINTR (for a continuation to be scheduled) would leave
+  the page inconsistent state (until the re-invocation completes).
+Make the set_tlbflush_timestamp() invocation conditional, bypassing it
+(for now) only in the case we really can't tolerate the stamp to be
+stored.
+
+This is part of XSA-240.
+
+Signed-off-by: Jan Beulich <jbeulich@suse.com>
+Reviewed-by: George Dunlap <george.dunlap@citrix.com>
+
+--- xen/arch/x86/mm.c.orig
++++ xen/arch/x86/mm.c
+@@ -2561,30 +2561,21 @@
+                 break;
+             }
+ 
+-            if ( ptpg && PGT_type_equal(x, ptpg->u.inuse.type_info) )
+-            {
+-                /*
+-                 * page_set_tlbflush_timestamp() accesses the same union
+-                 * linear_pt_count lives in. Unvalidated page table pages,
+-                 * however, should occur during domain destruction only
+-                 * anyway.  Updating of linear_pt_count luckily is not
+-                 * necessary anymore for a dying domain.
+-                 */
+-                ASSERT(page_get_owner(page)->is_dying);
+-                ASSERT(page->linear_pt_count < 0);
+-                ASSERT(ptpg->linear_pt_count > 0);
+-                ptpg = NULL;
+-            }
+-
+             /*
+              * Record TLB information for flush later. We do not stamp page
+              * tables when running in shadow mode:
+              *  1. Pointless, since it's the shadow pt's which must be tracked.
+              *  2. Shadow mode reuses this field for shadowed page tables to
+              *     store flags info -- we don't want to conflict with that.
++             * Also page_set_tlbflush_timestamp() accesses the same union
++             * linear_pt_count lives in. Pages (including page table ones),
++             * however, don't need their flush time stamp set except when
++             * the last reference is being dropped. For page table pages
++             * this happens in _put_final_page_type().
+              */
+-            if ( !(shadow_mode_enabled(page_get_owner(page)) &&
++            if ( (!ptpg || !PGT_type_equal(x, ptpg->u.inuse.type_info)) &&  
++                 !(shadow_mode_enabled(page_get_owner(page)) &&
+                    (page->count_info & PGC_page_table)) )
+                 page->tlbflush_timestamp = tlbflush_current_time();
+         }
+ 
+From: Jan Beulich <jbeulich@suse.com>
+Subject: x86: don't wrongly trigger linear page table assertion (2)
+
+_put_final_page_type(), when free_page_type() has exited early to allow
+for preemption, should not update the time stamp, as the page continues
+to retain the typ which is in the process of being unvalidated. I can't
+see why the time stamp update was put on that path in the first place
+(albeit it may well have been me who had put it there years ago).
+
+This is part of XSA-240.
+
+Signed-off-by: Jan Beulich <jbeulich@suse.com>
+Reviewed-by: <George Dunlap <george.dunlap.com>
+
+--- xen/arch/x86/mm.c.orig
++++ xen/arch/x86/mm.c
+@@ -2560,9 +2560,6 @@ static int _put_final_page_type(struct p
+     {
+         ASSERT((page->u.inuse.type_info &
+                 (PGT_count_mask|PGT_validated|PGT_partial)) == 1);
+-        if ( !(shadow_mode_enabled(page_get_owner(page)) &&
+-               (page->count_info & PGC_page_table)) )
+-            page->tlbflush_timestamp = tlbflush_current_time();
+         wmb();
+         page->u.inuse.type_info |= PGT_validated;
+     }
