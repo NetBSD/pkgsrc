@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5287 2017/12/15 09:15:01 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.5288 2017/12/15 09:17:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7609,3 +7609,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated finance/py-braintree to 3.39.1 [adam 2017-12-15]
 	Updated devel/py-nose2 to 0.7.3 [adam 2017-12-15]
 	Updated textproc/itstool to 2.0.4nb1 [jperkin 2017-12-15]
+	Updated pkgtools/lintpkgsrc to 4.94 [leot 2017-12-15]
