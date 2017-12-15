@@ -1,6 +1,6 @@
-#! @PERL@
+#!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.14 2017/12/15 09:17:04 leot Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.15 2017/12/15 10:54:59 adam Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
