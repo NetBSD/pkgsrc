@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2017/12/07 23:16:07 minskim Exp $
+# $NetBSD: Makefile,v 1.59 2017/12/15 17:37:21 minskim Exp $
 #
 
 COMMENT=	Shells
@@ -37,5 +37,6 @@ SUBDIR+=	zsh
 SUBDIR+=	zsh-autosuggestions
 SUBDIR+=	zsh-completions
 SUBDIR+=	zsh-pure
+SUBDIR+=	zsh-syntax-highlighting
 
 .include "../mk/misc/category.mk"
