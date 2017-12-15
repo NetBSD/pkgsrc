@@ -1,6 +1,6 @@
 #! @PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.13 2017/12/14 14:11:40 adam Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.14 2017/12/15 09:17:04 leot Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -23,9 +23,10 @@ use IPC::Open3;
 use Cwd 'realpath', 'getcwd';
 
 # Buildtime configuration
-my $conf_make      = '@MAKE@';
-my $conf_pkgsrcdir = '@PKGSRCDIR@';
-my $conf_prefix    = '@PREFIX@';
+my $conf_make       = '@MAKE@';
+my $conf_pkgsrcdir  = '@PKGSRCDIR@';
+my $conf_prefix     = '@PREFIX@';
+my $conf_sysconfdir = '@PKG_SYSCONFDIR@';
 
 my (
     $pkglist,                     # list of Pkg packages
@@ -613,7 +614,7 @@ sub get_default_makefile_vars() {
             $default_vars->{$var} = $vars->{$var};
         }
     }
-    elsif ( -f ${conf_prefix} . '/etc/mk.conf' && ( $vars = parse_makefile_vars(${conf_prefix} . '/etc/mk.conf') ) )
+    elsif ( -f ${conf_sysconfdir} . '/mk.conf' && ( $vars = parse_makefile_vars(${conf_sysconfdir} . '/mk.conf') ) )
     {
         foreach my $var ( keys %{$vars} ) {
             $default_vars->{$var} = $vars->{$var};
