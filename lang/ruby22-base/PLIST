@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/09/15 00:33:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/12/15 03:26:03 taca Exp $
 bin/erb${RUBY_SUFFIX}
 bin/gem${RUBY_SUFFIX}
 bin/irb${RUBY_SUFFIX}
@@ -686,6 +686,7 @@ ${RUBY_LIB}/rubygems/resolver/specification.rb
 ${RUBY_LIB}/rubygems/resolver/stats.rb
 ${RUBY_LIB}/rubygems/resolver/vendor_set.rb
 ${RUBY_LIB}/rubygems/resolver/vendor_specification.rb
+${RUBY_LIB}/rubygems/safe_yaml.rb
 ${RUBY_LIB}/rubygems/security.rb
 ${RUBY_LIB}/rubygems/security/policies.rb
 ${RUBY_LIB}/rubygems/security/policy.rb
