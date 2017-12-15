@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.146 2017/11/10 22:45:27 ryoon Exp $
+$NetBSD: distinfo,v 1.147 2017/12/15 23:50:55 maya Exp $
 
 SHA1 (seamonkey-2.49.1.source.tar.xz) = 6ef366a03ef31b8c0bfb7a1fd908bf5feed1be79
 RMD160 (seamonkey-2.49.1.source.tar.xz) = 4529cd5ce107af03e496cb8353d2045109b53635
@@ -114,5 +114,7 @@ SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp) = 
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcstubs__asm__mips.S) = 40231c0cbd4694f375211c21fe0473fd5fb9f483
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcstubs__asm__sparc64__netbsd.s) = 219bdb7ef05d156642dd4124e444696c744badfd
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcstubs__netbsd__m68k.cpp) = 09b4833061face404731f2ec99a7fd2b3f313f70
+SHA1 (patch-netwerk_srtp_src_crypto_hash_hmac.c) = f1c41712212182af22403f32a4153b6542aa14b1
+SHA1 (patch-netwerk_srtp_src_crypto_kernel_crypto__kernel.c) = 439709724e30ef5b4e671fb4b525dca804f9597c
 SHA1 (patch-rc) = bf98fe87c83c322dcdfe3d7aff3ca8e6f273a567
 SHA1 (patch-suite_installer_Makefile.in) = 3403f4229f62ad09b379ac6d54328e33c039506c
