@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2017/12/15 17:36:38 minskim Exp $
+share/doc/zsh-syntax-highlighting/COPYING.md
+share/doc/zsh-syntax-highlighting/README.md
+share/doc/zsh-syntax-highlighting/all.md
+share/doc/zsh-syntax-highlighting/changelog.md
+share/doc/zsh-syntax-highlighting/highlighters.md
+share/doc/zsh-syntax-highlighting/highlighters/brackets.md
+share/doc/zsh-syntax-highlighting/highlighters/cursor.md
+share/doc/zsh-syntax-highlighting/highlighters/line.md
+share/doc/zsh-syntax-highlighting/highlighters/main.md
+share/doc/zsh-syntax-highlighting/highlighters/pattern.md
+share/doc/zsh-syntax-highlighting/highlighters/root.md
+share/zsh-syntax-highlighting/.revision-hash
+share/zsh-syntax-highlighting/.version
+share/zsh-syntax-highlighting/highlighters/brackets/brackets-highlighter.zsh
+share/zsh-syntax-highlighting/highlighters/cursor/cursor-highlighter.zsh
+share/zsh-syntax-highlighting/highlighters/line/line-highlighter.zsh
+share/zsh-syntax-highlighting/highlighters/main/main-highlighter.zsh
+share/zsh-syntax-highlighting/highlighters/pattern/pattern-highlighter.zsh
+share/zsh-syntax-highlighting/highlighters/root/root-highlighter.zsh
+share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
