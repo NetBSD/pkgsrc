@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5291 2017/12/15 17:37:52 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.5292 2017/12/15 21:29:36 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7629,3 +7629,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/postgresql93-pltcl to 9.3.20nb1 [dholland 2017-12-15]
 	Updated databases/postgresql93-server to 9.3.20nb1 [dholland 2017-12-15]
 	Added shells/zsh-syntax-highlighting version 0.6.0 [minskim 2017-12-15]
+	Updated lang/nodejs to 9.3.0 [fhajny 2017-12-15]
