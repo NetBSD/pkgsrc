@@ -1,8 +1,8 @@
-$NetBSD: patch-hotspot_make_solaris_makefiles_dtrace.make,v 1.1 2015/07/03 20:40:59 fhajny Exp $
+$NetBSD: patch-hotspot_make_solaris_makefiles_dtrace.make,v 1.2 2017/12/15 14:27:52 jperkin Exp $
 
 Enable DTrace support with GCC.
 
---- hotspot/make/solaris/makefiles/dtrace.make.orig	2015-06-10 10:31:44.000000000 +0000
+--- hotspot/make/solaris/makefiles/dtrace.make.orig	2017-11-28 00:13:38.000000000 +0000
 +++ hotspot/make/solaris/makefiles/dtrace.make
 @@ -29,13 +29,6 @@
  
@@ -45,6 +45,42 @@ Enable DTrace support with GCC.
  # making libjvm_db
  
  # Use mapfile with libjvm_db.so
+@@ -99,7 +101,7 @@ XLIBJVM_DTRACE_DIZ         = $(XLIBJVM_D
+ $(XLIBJVM_DB): $(DTRACE_SRCDIR)/$(JVM_DB).c $(JVMOFFS).h $(LIBJVM_DB_MAPFILE)
+ 	@echo Making $@
+ 	$(QUIETLY) mkdir -p $(XLIBJVM_DIR) ; \
+-	$(CC) $(SYMFLAG) $(ARCHFLAG/$(ISA)) -D$(TYPE) -I. -I$(GENERATED) \
++	$(CC) $(CFLAGS) $(SYMFLAG) $(ARCHFLAG/$(ISA)) -D$(TYPE) -I. -I$(GENERATED) \
+ 		$(SHARED_FLAG) $(LFLAGS_JVM_DB) -o $@ $(DTRACE_SRCDIR)/$(JVM_DB).c -lc
+ ifeq ($(ENABLE_FULL_DEBUG_SYMBOLS),1)
+ 	$(QUIETLY) $(OBJCOPY) --only-keep-debug $@ $(XLIBJVM_DB_DEBUGINFO)
+@@ -125,7 +127,7 @@ endif
+ $(XLIBJVM_DTRACE): $(DTRACE_SRCDIR)/$(JVM_DTRACE).c $(DTRACE_SRCDIR)/$(JVM_DTRACE).h $(LIBJVM_DTRACE_MAPFILE)
+ 	@echo Making $@
+ 	$(QUIETLY) mkdir -p $(XLIBJVM_DIR) ; \
+-	$(CC) $(SYMFLAG) $(ARCHFLAG/$(ISA)) -D$(TYPE) -I. \
++	$(CC) $(CFLAGS) $(SYMFLAG) $(ARCHFLAG/$(ISA)) -D$(TYPE) -I. \
+ 		$(SHARED_FLAG) $(LFLAGS_JVM_DTRACE) -o $@ $(DTRACE_SRCDIR)/$(JVM_DTRACE).c -lc -lthread -ldoor
+ ifeq ($(ENABLE_FULL_DEBUG_SYMBOLS),1)
+ 	$(QUIETLY) $(OBJCOPY) --only-keep-debug $@ $(XLIBJVM_DTRACE_DEBUGINFO)
+@@ -190,7 +192,7 @@ $(JVMOFFS.o): $(JVMOFFS).h $(JVMOFFS).cp
+ 
+ $(LIBJVM_DB): $(DTRACE_SRCDIR)/$(JVM_DB).c $(JVMOFFS.o) $(XLIBJVM_DB) $(LIBJVM_DB_MAPFILE)
+ 	@echo Making $@
+-	$(QUIETLY) $(CC) $(SYMFLAG) $(ARCHFLAG) -D$(TYPE) -I. -I$(GENERATED) \
++	$(QUIETLY) $(CC) $(CFLAGS) $(SYMFLAG) $(ARCHFLAG) -D$(TYPE) -I. -I$(GENERATED) \
+ 		$(SHARED_FLAG) $(LFLAGS_JVM_DB) -o $@ $(DTRACE_SRCDIR)/$(JVM_DB).c -lc
+ ifeq ($(ENABLE_FULL_DEBUG_SYMBOLS),1)
+ 	$(QUIETLY) $(OBJCOPY) --only-keep-debug $@ $(LIBJVM_DB_DEBUGINFO)
+@@ -211,7 +213,7 @@ endif
+ 
+ $(LIBJVM_DTRACE): $(DTRACE_SRCDIR)/$(JVM_DTRACE).c $(XLIBJVM_DTRACE) $(DTRACE_SRCDIR)/$(JVM_DTRACE).h $(LIBJVM_DTRACE_MAPFILE)
+ 	@echo Making $@
+-	$(QUIETLY) $(CC) $(SYMFLAG) $(ARCHFLAG) -D$(TYPE) -I.  \
++	$(QUIETLY) $(CC) $(CFLAGS) $(SYMFLAG) $(ARCHFLAG) -D$(TYPE) -I.  \
+ 		$(SHARED_FLAG) $(LFLAGS_JVM_DTRACE) -o $@ $(DTRACE_SRCDIR)/$(JVM_DTRACE).c -lc -lthread -ldoor
+ ifeq ($(ENABLE_FULL_DEBUG_SYMBOLS),1)
+ 	$(QUIETLY) $(OBJCOPY) --only-keep-debug $@ $(LIBJVM_DTRACE_DEBUGINFO)
 @@ -352,8 +354,6 @@ dtraceCheck:
  
  endif # ifneq ("${dtraceFound}", "")
