@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5289 2017/12/15 14:03:16 bouyer Exp $
+$NetBSD: CHANGES-2017,v 1.5290 2017/12/15 16:57:46 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7612,3 +7612,19 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated pkgtools/lintpkgsrc to 4.94 [leot 2017-12-15]
 	Updated sysutils/xenkernel46 to 4.6.6nb2 [bouyer 2017-12-15]
 	Updated sysutils/xenkernel48 to 4.8.2nb2 [bouyer 2017-12-15]
+	Updated databases/postgresql92 to 9.2.24nb1 [dholland 2017-12-15]
+	Updated databases/postgresql92-client to 9.2.24nb1 [dholland 2017-12-15]
+	Updated databases/postgresql92-contrib to 9.2.24nb1 [dholland 2017-12-15]
+	Updated databases/postgresql92-docs to 9.2.24nb1 [dholland 2017-12-15]
+	Updated databases/postgresql92-plperl to 9.2.24nb1 [dholland 2017-12-15]
+	Updated databases/postgresql92-plpython to 9.2.24nb1 [dholland 2017-12-15]
+	Updated databases/postgresql92-pltcl to 9.2.24nb1 [dholland 2017-12-15]
+	Updated databases/postgresql92-server to 9.2.24nb1 [dholland 2017-12-15]
+	Updated databases/postgresql93 to 9.3.20nb1 [dholland 2017-12-15]
+	Updated databases/postgresql93-client to 9.3.20nb1 [dholland 2017-12-15]
+	Updated databases/postgresql93-contrib to 9.3.20nb1 [dholland 2017-12-15]
+	Updated databases/postgresql93-docs to 9.3.20nb1 [dholland 2017-12-15]
+	Updated databases/postgresql93-plperl to 9.3.20nb1 [dholland 2017-12-15]
+	Updated databases/postgresql93-plpython to 9.3.20nb1 [dholland 2017-12-15]
+	Updated databases/postgresql93-pltcl to 9.3.20nb1 [dholland 2017-12-15]
+	Updated databases/postgresql93-server to 9.3.20nb1 [dholland 2017-12-15]
