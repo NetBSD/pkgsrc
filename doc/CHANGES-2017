@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5286 2017/12/15 07:54:18 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5287 2017/12/15 09:15:01 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7608,3 +7608,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-mode to 2.4.3 [taca 2017-12-15]
 	Updated finance/py-braintree to 3.39.1 [adam 2017-12-15]
 	Updated devel/py-nose2 to 0.7.3 [adam 2017-12-15]
+	Updated textproc/itstool to 2.0.4nb1 [jperkin 2017-12-15]
