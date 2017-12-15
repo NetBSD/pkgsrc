@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2017/10/23 20:33:49 adam Exp $
+# $NetBSD: options.mk,v 1.2 2017/12/15 16:52:23 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql10
-PKG_SUPPORTED_OPTIONS=	bonjour dtrace icu ldap pam
+PKG_SUPPORTED_OPTIONS=	bonjour dtrace icu gssapi ldap pam
+PKG_SUGGESTED_OPTIONS=	gssapi
 
 .include "../../mk/bsd.options.mk"
 
@@ -24,6 +25,14 @@ CONFIGURE_ARGS+=	--enable-dtrace
 USE_TOOLS+=		pkg-config
 CONFIGURE_ARGS+=	--with-icu
 .  include "../../textproc/icu/buildlink3.mk"
+.endif
+
+# GSSAPI (Kerberos5) authentication for the PostgreSQL backend
+.if !empty(PKG_OPTIONS:Mgssapi)
+.  include "../../mk/krb5.buildlink3.mk"
+CONFIGURE_ARGS+=       --with-gssapi
+.else
+CONFIGURE_ARGS+=       --without-gssapi
 .endif
 
 # LDAP authentication for the PostgreSQL backend
