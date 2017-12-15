@@ -1,0 +1,17 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2017/12/15 16:00:19 jperkin Exp $
+
+Support user CFLAGS.
+
+--- CMakeLists.txt.orig	2017-12-15 15:54:13.974668000 +0000
++++ CMakeLists.txt
+@@ -4,8 +4,4 @@ project(libreplaygain C)
+ 
+ set(CMAKE_VERBOSE_MAKEFILE false)
+ 
+-if(NOT MSVC)
+-set(CMAKE_C_FLAGS "-O3 -fomit-frame-pointer -pipe")
+-endif(NOT MSVC)
+-
+-add_subdirectory(src)
+\ No newline at end of file
++add_subdirectory(src)
