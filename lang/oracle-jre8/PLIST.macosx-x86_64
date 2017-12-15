@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.macosx-x86_64,v 1.1 2015/11/10 11:35:30 jperkin Exp $
+@comment $NetBSD: PLIST.macosx-x86_64,v 1.2 2017/12/15 17:51:46 minskim Exp $
 bin/oracle8-java
 bin/oracle8-javaws
 bin/oracle8-keytool
@@ -149,13 +149,15 @@ java/oracle-8/lib/psfont.properties.ja.default
 java/oracle-8/lib/psfontj2d.properties.default
 java/oracle-8/lib/resources.jar
 java/oracle-8/lib/rt.jar
-java/oracle-8/lib/security/US_export_policy.jar
 java/oracle-8/lib/security/blacklist
 java/oracle-8/lib/security/blacklisted.certs
 java/oracle-8/lib/security/cacerts
 java/oracle-8/lib/security/java.policy
 java/oracle-8/lib/security/java.security.default
-java/oracle-8/lib/security/local_policy.jar
+java/oracle-8/lib/security/policy/limited/US_export_policy.jar
+java/oracle-8/lib/security/policy/limited/local_policy.jar
+java/oracle-8/lib/security/policy/unlimited/US_export_policy.jar
+java/oracle-8/lib/security/policy/unlimited/local_policy.jar
 java/oracle-8/lib/security/trusted.libraries
 java/oracle-8/lib/server/Xusage.txt
 java/oracle-8/lib/server/libjsig.dylib
