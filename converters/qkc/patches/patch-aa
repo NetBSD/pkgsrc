@@ -1,12 +1,17 @@
-$NetBSD: patch-aa,v 1.1 2003/07/08 13:43:18 markd Exp $
+$NetBSD: patch-aa,v 1.2 2017/12/15 15:44:12 jperkin Exp $
 
---- Makefile.orig	1995-10-01 00:00:00.000000000 +1200
+Use pkgsrc variables.
+
+--- Makefile.orig	1995-10-01 00:00:00.000000000 +0000
 +++ Makefile
-@@ -1,6 +1,6 @@
+@@ -1,8 +1,8 @@
  # Makefile for qkc
  
 -CC     = cc
 +#CC     = cc
  BIND   = $(CC)
- CFLAGS = -O
+-CFLAGS = -O
++#CFLAGS = -O
  LFLAGS = -o qkc $(CFLAGS)
+ OBJ    = qkc.o qkcopt.o qkchelp.o qkcconv.o qkctbl.o
+ 
