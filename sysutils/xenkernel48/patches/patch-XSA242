@@ -1,4 +1,4 @@
-$NetBSD: patch-XSA242,v 1.1 2017/10/17 08:42:30 bouyer Exp $
+$NetBSD: patch-XSA242,v 1.2 2017/12/15 14:02:15 bouyer Exp $
 
 From: Jan Beulich <jbeulich@suse.com>
 Subject: x86: don't allow page_unlock() to drop the last type reference
@@ -11,9 +11,9 @@ This is XSA-242.
 
 Signed-off-by: Jan Beulich <jbeulich@suse.com>
 
---- xen/arch/x86/mm.c.orig
-+++ xen/arch/x86/mm.c
-@@ -1923,7 +1923,11 @@ void page_unlock(struct page_info *page)
+--- xen/arch/x86/mm.c.orig	2017-12-15 14:30:10.000000000 +0100
++++ xen/arch/x86/mm.c	2017-12-15 14:31:32.000000000 +0100
+@@ -1906,7 +1906,11 @@
  
      do {
          x = y;
@@ -25,7 +25,7 @@ Signed-off-by: Jan Beulich <jbeulich@suse.com>
      } while ( (y = cmpxchg(&page->u.inuse.type_info, x, nx)) != x );
  }
  
-@@ -2611,6 +2615,17 @@ static int _put_page_type(struct page_in
+@@ -2575,6 +2579,17 @@
                     (page->count_info & PGC_page_table)) )
                  page_set_tlbflush_timestamp(page);
          }
