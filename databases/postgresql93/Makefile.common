@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2017/12/07 14:19:32 adam Exp $
+# $NetBSD: Makefile.common,v 1.31 2017/12/15 16:52:24 dholland Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -65,7 +65,6 @@ CONFIGURE_ARGS+=	--localedir=${PG_LOCALE_DIR}
 CONFIGURE_ARGS+=	--with-template=${PG_TEMPLATE.${OPSYS}}
 
 CONFIGURE_ARGS+=	--enable-nls
-CONFIGURE_ARGS+=	--with-gssapi
 CONFIGURE_ARGS+=	--with-libxml
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--without-perl
@@ -112,7 +111,6 @@ LIBS.SunOS+=		-lintl
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 
-.include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .if ${READLINE_TYPE} == "editline"
 CONFIGURE_ARGS+=	--with-libedit-preferred
