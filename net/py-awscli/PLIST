@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/11/30 11:16:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/12/16 07:56:54 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -447,6 +447,9 @@ ${PYSITELIB}/awscli/customizations/s3errormsg.pyo
 ${PYSITELIB}/awscli/customizations/s3uploader.py
 ${PYSITELIB}/awscli/customizations/s3uploader.pyc
 ${PYSITELIB}/awscli/customizations/s3uploader.pyo
+${PYSITELIB}/awscli/customizations/sagemaker.py
+${PYSITELIB}/awscli/customizations/sagemaker.pyc
+${PYSITELIB}/awscli/customizations/sagemaker.pyo
 ${PYSITELIB}/awscli/customizations/scalarparse.py
 ${PYSITELIB}/awscli/customizations/scalarparse.pyc
 ${PYSITELIB}/awscli/customizations/scalarparse.pyo
@@ -767,6 +770,7 @@ ${PYSITELIB}/awscli/examples/configservice/start-configuration-recorder.rst
 ${PYSITELIB}/awscli/examples/configservice/stop-configuration-recorder.rst
 ${PYSITELIB}/awscli/examples/configservice/subscribe.rst
 ${PYSITELIB}/awscli/examples/configure/_description.rst
+${PYSITELIB}/awscli/examples/configure/add-model.rst
 ${PYSITELIB}/awscli/examples/configure/get/_description.rst
 ${PYSITELIB}/awscli/examples/configure/get/_examples.rst
 ${PYSITELIB}/awscli/examples/configure/set/_description.rst
@@ -836,18 +840,25 @@ ${PYSITELIB}/awscli/examples/directconnect/confirm-private-virtual-interface.rst
 ${PYSITELIB}/awscli/examples/directconnect/confirm-public-virtual-interface.rst
 ${PYSITELIB}/awscli/examples/directconnect/create-bgp-peer.rst
 ${PYSITELIB}/awscli/examples/directconnect/create-connection.rst
+${PYSITELIB}/awscli/examples/directconnect/create-direct-connect-gateway-association.rst
+${PYSITELIB}/awscli/examples/directconnect/create-direct-connect-gateway.rst
 ${PYSITELIB}/awscli/examples/directconnect/create-interconnect.rst
 ${PYSITELIB}/awscli/examples/directconnect/create-lag.rst
 ${PYSITELIB}/awscli/examples/directconnect/create-private-virtual-interface.rst
 ${PYSITELIB}/awscli/examples/directconnect/create-public-virtual-interface.rst
 ${PYSITELIB}/awscli/examples/directconnect/delete-bgp-peer.rst
 ${PYSITELIB}/awscli/examples/directconnect/delete-connection.rst
+${PYSITELIB}/awscli/examples/directconnect/delete-direct-connect-gateway-association.rst
+${PYSITELIB}/awscli/examples/directconnect/delete-direct-connect-gateway.rst
 ${PYSITELIB}/awscli/examples/directconnect/delete-interconnect.rst
 ${PYSITELIB}/awscli/examples/directconnect/delete-lag.rst
 ${PYSITELIB}/awscli/examples/directconnect/delete-virtual-interface.rst
 ${PYSITELIB}/awscli/examples/directconnect/describe-connection-loa.rst
 ${PYSITELIB}/awscli/examples/directconnect/describe-connections-on-interconnect.rst
 ${PYSITELIB}/awscli/examples/directconnect/describe-connections.rst
+${PYSITELIB}/awscli/examples/directconnect/describe-direct-connect-gateway-associations.rst
+${PYSITELIB}/awscli/examples/directconnect/describe-direct-connect-gateway-attachments.rst
+${PYSITELIB}/awscli/examples/directconnect/describe-direct-connect-gateways.rst
 ${PYSITELIB}/awscli/examples/directconnect/describe-hosted-connections.rst
 ${PYSITELIB}/awscli/examples/directconnect/describe-interconnect-loa.rst
 ${PYSITELIB}/awscli/examples/directconnect/describe-interconnects.rst
@@ -882,6 +893,7 @@ ${PYSITELIB}/awscli/examples/dynamodb/query.rst
 ${PYSITELIB}/awscli/examples/dynamodb/scan.rst
 ${PYSITELIB}/awscli/examples/dynamodb/update-item.rst
 ${PYSITELIB}/awscli/examples/dynamodb/update-table.rst
+${PYSITELIB}/awscli/examples/ec2/accept-reserved-instances-exchange-quote.rst
 ${PYSITELIB}/awscli/examples/ec2/accept-vpc-peering-connection.rst
 ${PYSITELIB}/awscli/examples/ec2/allocate-address.rst
 ${PYSITELIB}/awscli/examples/ec2/allocate-hosts.rst
@@ -910,6 +922,7 @@ ${PYSITELIB}/awscli/examples/ec2/confirm-product-instance.rst
 ${PYSITELIB}/awscli/examples/ec2/copy-image.rst
 ${PYSITELIB}/awscli/examples/ec2/copy-snapshot.rst
 ${PYSITELIB}/awscli/examples/ec2/create-customer-gateway.rst
+${PYSITELIB}/awscli/examples/ec2/create-default-subnet.rst
 ${PYSITELIB}/awscli/examples/ec2/create-default-vpc.rst
 ${PYSITELIB}/awscli/examples/ec2/create-dhcp-options.rst
 ${PYSITELIB}/awscli/examples/ec2/create-egress-only-internet-gateway.rst
@@ -974,6 +987,7 @@ ${PYSITELIB}/awscli/examples/ec2/describe-conversion-tasks.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-customer-gateways.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-dhcp-options.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-egress-only-internet-gateways.rst
+${PYSITELIB}/awscli/examples/ec2/describe-elastic-gpus.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-export-tasks.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-flow-logs.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-hosts.rst
@@ -1046,6 +1060,7 @@ ${PYSITELIB}/awscli/examples/ec2/enable-vpc-classic-link-dns-support.rst
 ${PYSITELIB}/awscli/examples/ec2/enable-vpc-classic-link.rst
 ${PYSITELIB}/awscli/examples/ec2/get-console-output.rst
 ${PYSITELIB}/awscli/examples/ec2/get-password-data.rst
+${PYSITELIB}/awscli/examples/ec2/get-reserved-instances-exchange-quote.rst
 ${PYSITELIB}/awscli/examples/ec2/import-key-pair.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-hosts.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-id-format.rst
@@ -1062,6 +1077,7 @@ ${PYSITELIB}/awscli/examples/ec2/modify-volume-attribute.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-vpc-attribute.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-vpc-endpoint.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-vpc-peering-connection-options.rst
+${PYSITELIB}/awscli/examples/ec2/modify-vpc-tenancy.rst
 ${PYSITELIB}/awscli/examples/ec2/monitor-instances.rst
 ${PYSITELIB}/awscli/examples/ec2/move-address-to-vpc.rst
 ${PYSITELIB}/awscli/examples/ec2/purchase-reserved-instances-offering.rst
@@ -1101,8 +1117,12 @@ ${PYSITELIB}/awscli/examples/ecr/create-repository.rst
 ${PYSITELIB}/awscli/examples/ecr/delete-repository.rst
 ${PYSITELIB}/awscli/examples/ecr/describe-repositories.rst
 ${PYSITELIB}/awscli/examples/ecr/get-authorization-token.rst
+${PYSITELIB}/awscli/examples/ecr/get-lifecycle-policy-preview.rst
+${PYSITELIB}/awscli/examples/ecr/get-lifecycle-policy.rst
 ${PYSITELIB}/awscli/examples/ecr/get-login.rst
 ${PYSITELIB}/awscli/examples/ecr/get-login_description.rst
+${PYSITELIB}/awscli/examples/ecr/put-lifecycle-policy.rst
+${PYSITELIB}/awscli/examples/ecr/start-lifecycle-policy-preview.rst
 ${PYSITELIB}/awscli/examples/ecs/create-cluster.rst
 ${PYSITELIB}/awscli/examples/ecs/create-service.rst
 ${PYSITELIB}/awscli/examples/ecs/delete-cluster.rst
@@ -1187,6 +1207,7 @@ ${PYSITELIB}/awscli/examples/elb/remove-tags.rst
 ${PYSITELIB}/awscli/examples/elb/set-load-balancer-listener-ssl-certificate.rst
 ${PYSITELIB}/awscli/examples/elb/set-load-balancer-policies-for-backend-server.rst
 ${PYSITELIB}/awscli/examples/elb/set-load-balancer-policies-of-listener.rst
+${PYSITELIB}/awscli/examples/elbv2/add-listener-certificates.rst
 ${PYSITELIB}/awscli/examples/elbv2/add-tags.rst
 ${PYSITELIB}/awscli/examples/elbv2/create-listener.rst
 ${PYSITELIB}/awscli/examples/elbv2/create-load-balancer.rst
@@ -1197,6 +1218,8 @@ ${PYSITELIB}/awscli/examples/elbv2/delete-load-balancer.rst
 ${PYSITELIB}/awscli/examples/elbv2/delete-rule.rst
 ${PYSITELIB}/awscli/examples/elbv2/delete-target-group.rst
 ${PYSITELIB}/awscli/examples/elbv2/deregister-targets.rst
+${PYSITELIB}/awscli/examples/elbv2/describe-account-limits.rst
+${PYSITELIB}/awscli/examples/elbv2/describe-listener-certificates.rst
 ${PYSITELIB}/awscli/examples/elbv2/describe-listeners.rst
 ${PYSITELIB}/awscli/examples/elbv2/describe-load-balancer-attributes.rst
 ${PYSITELIB}/awscli/examples/elbv2/describe-load-balancers.rst
@@ -1212,7 +1235,9 @@ ${PYSITELIB}/awscli/examples/elbv2/modify-rule.rst
 ${PYSITELIB}/awscli/examples/elbv2/modify-target-group-attributes.rst
 ${PYSITELIB}/awscli/examples/elbv2/modify-target-group.rst
 ${PYSITELIB}/awscli/examples/elbv2/register-targets.rst
+${PYSITELIB}/awscli/examples/elbv2/remove-listener-certificates.rst
 ${PYSITELIB}/awscli/examples/elbv2/remove-tags.rst
+${PYSITELIB}/awscli/examples/elbv2/set-ip-address-type.rst
 ${PYSITELIB}/awscli/examples/elbv2/set-rule-priorities.rst
 ${PYSITELIB}/awscli/examples/elbv2/set-security-groups.rst
 ${PYSITELIB}/awscli/examples/elbv2/set-subnets.rst
