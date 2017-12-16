@@ -1,30 +1,15 @@
-$NetBSD: patch-Makefile.in,v 1.1 2016/06/19 17:25:31 prlw1 Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2017/12/16 19:46:29 prlw1 Exp $
 
-Install documentation.
+Install man pages in mandir.
 
---- Makefile.in.orig	2012-05-16 08:40:16.000000000 +0000
+--- Makefile.in.orig	2016-12-20 10:11:00.000000000 +0000
 +++ Makefile.in
-@@ -12,8 +12,11 @@ LDFLAGS=@LDFLAGS@
- INSTALL = @INSTALL@
+@@ -13,7 +13,7 @@ INSTALL = @INSTALL@
  INSTALL_DATA = @INSTALL_DATA@
  
--BINDIR=@prefix@/bin
+ BINDIR=@prefix@/bin
 -MANDIR=@prefix@/man
-+prefix=@prefix@
-+exec_prefix=@exec_prefix@
-+BINDIR=@bindir@
 +MANDIR=@mandir@
-+DOCDIR=@docdir@
  
  LIBS=@LIBS@
- LIB_TERMINAL=@LIB_TERMINAL@
-@@ -47,6 +50,8 @@ install:        build
- 		$(mkinstalldirs) $(DESTDIR)$(BINDIR)
- 		$(mkinstalldirs) $(DESTDIR)$(MANDIR)
- 		$(mkinstalldirs) $(DESTDIR)$(MANDIR)/man1
-+		$(mkinstalldirs) $(DESTDIR)$(DOCDIR)
- 		$(INSTALL) src/ne $(DESTDIR)$(BINDIR)/ne
--#		$(INSTALL_DATA) doc/ne.1 $(DESTDIR)$(MANDIR)/man1
-+		$(INSTALL_DATA) doc/ne.1 $(DESTDIR)$(MANDIR)/man1
-+		$(INSTALL_DATA) doc/ne.pdf $(DESTDIR)$(DOCDIR)
- # End
+ TERMCAP=@TERMCAP@
