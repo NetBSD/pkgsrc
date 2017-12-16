@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/11/27 14:06:16 gdt Exp $
+# $NetBSD: Makefile,v 1.25 2017/12/16 17:15:05 tnn Exp $
 
 DISTNAME=	mongodb-src-r3.4.4
 PKGNAME=	${DISTNAME:S/src-r//:S/-rc/rc/}
@@ -89,7 +89,7 @@ MONGODB_MAN_FILES=	bsondump.1 mongo.1 mongod.1 mongodump.1 mongoexport.1	\
 			mongofiles.1 mongoimport.1 mongooplog.1 mongoperf.1	\
 			mongorestore.1 mongos.1 mongosniff.1 mongostat.1 mongotop.1
 
-NOT_PAX_MPROTECT_SAFE+=	bin/mongo bin/mongodb
+NOT_PAX_MPROTECT_SAFE+=	bin/mongo bin/mongod
 
 RCD_SCRIPTS=		mongodb
 
