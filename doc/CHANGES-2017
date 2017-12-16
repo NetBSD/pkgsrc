@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5293 2017/12/16 07:58:46 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5294 2017/12/16 19:46:54 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7635,3 +7635,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-botocore to 1.8.15 [adam 2017-12-16]
 	Updated net/py-boto3 to 1.5.1 [adam 2017-12-16]
 	Updated net/py-awscli to 1.14.11 [adam 2017-12-16]
+	Updated editors/ne to 3.13 [prlw1 2017-12-16]
