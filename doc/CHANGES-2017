@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5297 2017/12/17 11:42:03 leot Exp $
+$NetBSD: CHANGES-2017,v 1.5298 2017/12/17 14:20:50 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7639,3 +7639,9 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/libusb-compat to 0.1.6rc2 [khorben 2017-12-16]
 	Updated lang/gnucobol to 2.2 [ryoon 2017-12-17]
 	Updated textproc/translate-shell to 0.9.6.6 [leot 2017-12-17]
+	Updated inputmethod/ibus-mozc to 2.20.2673.102 [tsutsui 2017-12-17]
+	Updated inputmethod/mozc-elisp to 2.20.2673.102 [tsutsui 2017-12-17]
+	Updated inputmethod/mozc-renderer to 2.20.2673.102 [tsutsui 2017-12-17]
+	Updated inputmethod/mozc-server to 2.20.2673.102 [tsutsui 2017-12-17]
+	Updated inputmethod/mozc-tool to 2.20.2673.102 [tsutsui 2017-12-17]
+	Updated inputmethod/uim-mozc to 2.20.2673.102 [tsutsui 2017-12-17]
