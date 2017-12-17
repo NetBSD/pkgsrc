@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2017/12/14 08:52:17 adam Exp $
+# $NetBSD: Makefile,v 1.16 2017/12/17 16:48:23 tnn Exp $
 
 DISTNAME=	libassuan-2.4.5
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libassuan/
+MASTER_SITES+=	http://mirrors.dotsrc.org/gcrypt/libassuan/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
