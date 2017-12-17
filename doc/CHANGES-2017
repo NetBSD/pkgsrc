@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5298 2017/12/17 14:20:50 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.5299 2017/12/17 16:59:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7645,3 +7645,9 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated inputmethod/mozc-server to 2.20.2673.102 [tsutsui 2017-12-17]
 	Updated inputmethod/mozc-tool to 2.20.2673.102 [tsutsui 2017-12-17]
 	Updated inputmethod/uim-mozc to 2.20.2673.102 [tsutsui 2017-12-17]
+	Updated textproc/py-biplist to 1.0.3 [adam 2017-12-17]
+	Updated net/py-ipaddress to 1.0.19 [adam 2017-12-17]
+	Updated devel/py-pylint to 1.8.1 [adam 2017-12-17]
+	Updated print/py-reportlab to 3.4.0 [adam 2017-12-17]
+	Updated devel/py-memcached to 1.59 [adam 2017-12-17]
+	Updated security/py-asn1crypto to 0.24.0 [adam 2017-12-17]
