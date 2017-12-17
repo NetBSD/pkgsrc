@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/12/07 12:53:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2017/12/17 01:00:02 ryoon Exp $
 
 DISTNAME=	rustc-1.22.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -116,8 +116,11 @@ RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 SITES.${RUST_STAGE0}=	https://deuterium.ryoon.net/pub/rust/
 SITES.${RUST_STD_STAGE0}=	https://deuterium.ryoon.net/pub/rust/
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
+DIST_SUBDIR=		${PKGNAME}
 # For atomic ops
 CFLAGS+=		-march=i586
+pre-build:
+	${TOOLS_PLATFORM.paxctl} +am ${WRKDIR}/rust-bootstrap/bin/cargo
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=		x86_64-unknown-netbsd
