@@ -1,4 +1,6 @@
-$NetBSD: patch-base_clock.cc,v 1.1 2016/05/16 11:51:49 ryoon Exp $
+$NetBSD: patch-base_clock.cc,v 1.2 2017/12/17 14:15:43 tsutsui Exp $
+
+* NetBSD support
 
 --- base/clock.cc.orig	2016-05-15 08:11:10.000000000 +0000
 +++ base/clock.cc

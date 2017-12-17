@@ -1,4 +1,6 @@
-$NetBSD: patch-session_session.cc,v 1.4 2016/05/16 11:51:49 ryoon Exp $
+$NetBSD: patch-session_session.cc,v 1.5 2017/12/17 14:15:43 tsutsui Exp $
+
+* NetBSD support
 
 --- session/session.cc.orig	2016-05-15 08:11:12.000000000 +0000
 +++ session/session.cc

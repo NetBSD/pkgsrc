@@ -1,4 +1,6 @@
-$NetBSD: patch-gui_word__register__dialog_word__register__dialog.cc,v 1.3 2016/05/16 11:51:49 ryoon Exp $
+$NetBSD: patch-gui_word__register__dialog_word__register__dialog.cc,v 1.4 2017/12/17 14:15:43 tsutsui Exp $
+
+* NetBSD support
 
 --- gui/word_register_dialog/word_register_dialog.cc.orig	2016-05-15 08:11:11.000000000 +0000
 +++ gui/word_register_dialog/word_register_dialog.cc
