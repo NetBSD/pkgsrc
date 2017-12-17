@@ -1,24 +1,44 @@
-$NetBSD: patch-Makefile,v 1.1 2015/12/12 16:56:04 wiedi Exp $
+$NetBSD: patch-Makefile,v 1.2 2017/12/17 14:30:36 bacon Exp $
 
-Don't overwrite pkgsrc CC and CFLAGS
-
---- Makefile.orig	2014-05-19 13:11:41.000000000 +0000
+Respect env, add librt for NetBSD
+--- Makefile.orig	2017-10-23 17:10:17.000000000 +0000
 +++ Makefile
 @@ -1,6 +1,6 @@
 -CC=			gcc
-+#CC=			gcc
++CC?=			gcc
  #CC=			clang --analyze
 -CFLAGS=		-g -Wall -Wno-unused-function -O2
-+#CFLAGS=		-g -Wall -Wno-unused-function -O2
++CFLAGS?=		-g -Wall -Wno-unused-function -O2
  WRAP_MALLOC=-DUSE_MALLOC_WRAPPERS
  AR=			ar
  DFLAGS=		-DHAVE_PTHREAD $(WRAP_MALLOC)
-@@ -11,7 +11,7 @@ AOBJS=		QSufSort.o bwt_gen.o bwase.o bwa
+@@ -12,11 +12,14 @@ AOBJS=		bwashm.o bwase.o bwaseqio.o bwtg
  			bwtsw2_chain.o fastmap.o bwtsw2_pair.o
  PROG=		bwa
  INCLUDES=	
 -LIBS=		-lm -lz -lpthread
-+LIBS=		-lm -lz -lpthread $(LDFLAGS)
++LDFLAGS+=	-lm -lz -lpthread
  SUBDIRS=	.
  
+ ifeq ($(shell uname -s),Linux)
+-	LIBS += -lrt
++	LDFLAGS += -lrt
++endif
++ifeq ($(shell uname -s),NetBSD)
++	LDFLAGS += -lrt
+ endif
+ 
  .SUFFIXES:.c .o .cc
+@@ -27,10 +30,10 @@ endif
+ all:$(PROG)
+ 
+ bwa:libbwa.a $(AOBJS) main.o
+-		$(CC) $(CFLAGS) $(DFLAGS) $(AOBJS) main.o -o $@ -L. -lbwa $(LIBS)
++		$(CC) $(CFLAGS) $(DFLAGS) $(AOBJS) main.o -o $@ -L. -lbwa $(LDFLAGS)
+ 
+ bwamem-lite:libbwa.a example.o
+-		$(CC) $(CFLAGS) $(DFLAGS) example.o -o $@ -L. -lbwa $(LIBS)
++		$(CC) $(CFLAGS) $(DFLAGS) example.o -o $@ -L. -lbwa $(LDFLAGS)
+ 
+ libbwa.a:$(LOBJS)
+ 		$(AR) -csru $@ $(LOBJS)
