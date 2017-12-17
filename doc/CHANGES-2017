@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5295 2017/12/16 22:56:05 khorben Exp $
+$NetBSD: CHANGES-2017,v 1.5296 2017/12/17 04:55:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7637,3 +7637,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-awscli to 1.14.11 [adam 2017-12-16]
 	Updated editors/ne to 3.13 [prlw1 2017-12-16]
 	Updated devel/libusb-compat to 0.1.6rc2 [khorben 2017-12-16]
+	Updated lang/gnucobol to 2.2 [ryoon 2017-12-17]
