@@ -1,6 +1,8 @@
-$NetBSD: patch-unix_ibus_ibus.gyp,v 1.1 2014/06/15 13:08:34 ryoon Exp $
+$NetBSD: patch-unix_ibus_ibus.gyp,v 1.2 2017/12/17 14:15:43 tsutsui Exp $
 
---- unix/ibus/ibus.gyp.orig	2014-05-21 10:49:56.000000000 +0000
+* use ${PREFIX} paths
+
+--- unix/ibus/ibus.gyp.orig	2017-11-02 13:32:47.000000000 +0000
 +++ unix/ibus/ibus.gyp
 @@ -31,8 +31,8 @@
    'variables': {

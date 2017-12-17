@@ -1,8 +1,10 @@
-$NetBSD: patch-net_net.gyp,v 1.1 2013/04/29 09:52:18 ryoon Exp $
+$NetBSD: patch-net_net.gyp,v 1.2 2017/12/17 14:15:43 tsutsui Exp $
 
---- net/net.gyp.orig	2013-03-29 04:33:42.000000000 +0000
+* NetBSD support
+
+--- net/net.gyp.orig	2017-11-02 13:32:47.000000000 +0000
 +++ net/net.gyp
-@@ -61,7 +61,7 @@
+@@ -64,7 +64,7 @@
                  },
                },
              }],
@@ -10,4 +12,4 @@ $NetBSD: patch-net_net.gyp,v 1.1 2013/04/29 09:52:18 ryoon Exp $
 +            ['target_platform=="Linux" or target_platform=="NetBSD"', {
                # Enable libcurl
                'cflags': [
-                 '<!@(<(pkg_config_command) --cflags libcurl)',
+                 '<!@(pkg-config --cflags libcurl)',
