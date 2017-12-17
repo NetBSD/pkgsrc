@@ -1,4 +1,6 @@
-$NetBSD: patch-gui_dictionary__tool_dictionary__tool.cc,v 1.5 2014/06/15 13:08:34 ryoon Exp $
+$NetBSD: patch-gui_dictionary__tool_dictionary__tool.cc,v 1.6 2017/12/17 14:15:43 tsutsui Exp $
+
+* NetBSD support
 
 --- gui/dictionary_tool/dictionary_tool.cc.orig	2014-05-21 10:51:22.000000000 +0000
 +++ gui/dictionary_tool/dictionary_tool.cc
