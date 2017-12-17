@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2017/12/08 08:52:58 maya Exp $
+# $NetBSD: Makefile,v 1.86 2017/12/17 21:16:07 leot Exp $
 
 DISTNAME=	cups-filters-1.17.9
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	http://openprinting.org/download/cups-filters/
 EXTRACT_SUFX=	.tar.xz
@@ -72,6 +72,8 @@ post-install:
 	${CHMOD} go-rwx ${DESTDIR}${PREFIX}/libexec/cups/backend/serial
 	${INSTALL_SCRIPT} ${WRKSRC}/cups-browsed-daemonize.sh ${DESTDIR}${PREFIX}/libexec/cups-browsed
 
+.include "options.mk"
+
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
@@ -79,7 +81,6 @@ post-install:
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../net/avahi/buildlink3.mk"
 BUILDLINK_ABI_DEPENDS.cups-base+=	cups-base>=1.7.4nb1
 .include "../../print/cups-base/buildlink3.mk"
 .include "../../print/ghostscript/buildlink3.mk"
