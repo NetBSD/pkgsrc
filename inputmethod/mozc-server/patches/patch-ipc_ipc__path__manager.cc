@@ -1,4 +1,6 @@
-$NetBSD: patch-ipc_ipc__path__manager.cc,v 1.4 2014/01/19 01:18:50 ryoon Exp $
+$NetBSD: patch-ipc_ipc__path__manager.cc,v 1.5 2017/12/17 14:15:43 tsutsui Exp $
+
+* NetBSD support
 
 --- ipc/ipc_path_manager.cc.orig	2014-01-06 07:10:26.000000000 +0000
 +++ ipc/ipc_path_manager.cc

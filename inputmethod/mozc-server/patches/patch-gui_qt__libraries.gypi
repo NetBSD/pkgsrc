@@ -1,13 +1,15 @@
-$NetBSD: patch-gui_qt__libraries.gypi,v 1.3 2014/06/15 13:08:34 ryoon Exp $
+$NetBSD: patch-gui_qt__libraries.gypi,v 1.4 2017/12/17 14:15:43 tsutsui Exp $
 
---- gui/qt_libraries.gypi.orig	2014-05-21 10:51:21.000000000 +0000
+* NetBSD support
+
+--- gui/qt_libraries.gypi.orig	2017-11-02 13:32:47.000000000 +0000
 +++ gui/qt_libraries.gypi
-@@ -84,7 +84,7 @@
+@@ -98,7 +98,7 @@
          '$(SDKROOT)/System/Library/Frameworks/Carbon.framework',
        ]
      }],
--    ['OS=="linux"', {
-+    ['OS=="linux" or OS=="netbsd"', {
-       'conditions': [
-         ['qt_dir', {
-           'libraries': [
+-    ['target_platform=="Linux"', {
++    ['target_platform=="Linux" or target_platform=="NetBSD"', {
+       'cflags': ['<!@(pkg-config --cflags Qt5Widgets Qt5Gui Qt5Core)'],
+       'libraries': ['<!@(pkg-config --libs Qt5Widgets Qt5Gui Qt5Core)'],
+     }],
