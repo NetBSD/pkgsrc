@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2016/07/09 13:03:52 wiz Exp $
+# $NetBSD: Makefile.common,v 1.26 2017/12/17 14:15:43 tsutsui Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
@@ -7,14 +7,14 @@
 # used by inputmethod/uim-mozc/Makefile
 #
 
-DISTNAME=	mozc-2.17.2313.102
+DISTNAME=	mozc-2.20.2673.102
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/google/mozc/
-COMMENT=	Japanese inputmethod Mozc engine for IBus
+COMMENT=	Japanese inputmethod Mozc engine
 LICENSE=	modified-bsd
 
 UIM_MOZC=	uim-mozc-321.3ea28b1
@@ -34,6 +34,7 @@ BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	gmake pkg-config
+GCC_REQD+=	4.7	# for c++11
 
 OPENSSL_CFLAGS=		-I${BUILDLINK_PREFIX.openssl}/include
 OPENSSL_INC=		-I${BUILDLINK_PREFIX.openssl}/include
@@ -43,15 +44,13 @@ OPENSSL_LIBS=		-lssl -lcrypto
 SUBST_CLASSES+=		gyp
 SUBST_STAGE.gyp=	pre-configure
 SUBST_MESSAGE.gyp=	Fix gyp defaults
-SUBST_FILES.gyp+=	base/base.gyp
 SUBST_FILES.gyp+=	base/process.cc
-SUBST_FILES.gyp+=	base/system_util.cc
+SUBST_FILES.gyp+=	gyp/directories.gypi
 SUBST_FILES.gyp+=	handwriting/zinnia_handwriting.cc
-SUBST_FILES.gyp+=	unix/ibus/gen_mozc_xml.py
 SUBST_FILES.gyp+=	unix/ibus/ibus.gyp
-SUBST_FILES.gyp+=	gyp/common.gypi
+SUBST_FILES.gyp+=	unix/ibus/path_util.cc
 SUBST_VARS.gyp+=	OPENSSL_CFLAGS OPENSSL_INC OPENSSL_LDFLAGS OPENSSL_LIBS
-SUBST_VARS.gyp+=	PREFIX QTDIR
+SUBST_VARS.gyp+=	PREFIX
 
 # To disable flock(1) in link stage.
 ALL_ENV+=	LINK=${CXX}
@@ -78,7 +77,7 @@ do-configure:
 .include "../../inputmethod/zinnia/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
