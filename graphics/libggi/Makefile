@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2017/01/19 18:52:12 agc Exp $
+# $NetBSD: Makefile,v 1.57 2017/12/17 05:01:05 ryoon Exp $
 #
 
 DISTNAME=	libggi-2.2.2.src
@@ -10,7 +10,7 @@ MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=ggi/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ggi-project.org/
+#HOMEPAGE=	http://www.ggi-project.org/
 COMMENT=	General Graphics Interface library is a flexible drawing library
 
 MAKE_JOBS_SAFE=		no
