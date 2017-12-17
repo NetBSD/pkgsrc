@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/12/12 08:38:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/12/17 16:32:57 adam Exp $
 bin/epylint${PYVERSSUFFIX}
 bin/pylint${PYVERSSUFFIX}
 bin/pyreverse${PYVERSSUFFIX}
@@ -178,6 +178,7 @@ ${PYSITELIB}/pylint/reporters/ureports/text_writer.py
 ${PYSITELIB}/pylint/reporters/ureports/text_writer.pyc
 ${PYSITELIB}/pylint/reporters/ureports/text_writer.pyo
 ${PYSITELIB}/pylint/test/a.py
+${PYSITELIB}/pylint/test/acceptance/test_stdlib.py
 ${PYSITELIB}/pylint/test/conftest.py
 ${PYSITELIB}/pylint/test/data/__init__.py
 ${PYSITELIB}/pylint/test/data/ascript
@@ -278,6 +279,8 @@ ${PYSITELIB}/pylint/test/functional/bad_reversed_sequence.py
 ${PYSITELIB}/pylint/test/functional/bad_reversed_sequence.txt
 ${PYSITELIB}/pylint/test/functional/bad_staticmethod_argument.py
 ${PYSITELIB}/pylint/test/functional/bad_staticmethod_argument.txt
+${PYSITELIB}/pylint/test/functional/bad_thread_instantiation.py
+${PYSITELIB}/pylint/test/functional/bad_thread_instantiation.txt
 ${PYSITELIB}/pylint/test/functional/bad_whitespace.py
 ${PYSITELIB}/pylint/test/functional/bad_whitespace.txt
 ${PYSITELIB}/pylint/test/functional/bare_except.py
@@ -357,6 +360,11 @@ ${PYSITELIB}/pylint/test/functional/deprecated_module_uninstalled.rc
 ${PYSITELIB}/pylint/test/functional/deprecated_module_uninstalled.txt
 ${PYSITELIB}/pylint/test/functional/disable_msg_github_issue_1389.py
 ${PYSITELIB}/pylint/test/functional/disable_msg_github_issue_1389.rc
+${PYSITELIB}/pylint/test/functional/disable_ungrouped_imports.py
+${PYSITELIB}/pylint/test/functional/disable_ungrouped_imports.txt
+${PYSITELIB}/pylint/test/functional/disable_wrong_import_order.py
+${PYSITELIB}/pylint/test/functional/disable_wrong_import_order.txt
+${PYSITELIB}/pylint/test/functional/disable_wrong_import_position.py
 ${PYSITELIB}/pylint/test/functional/docstrings.py
 ${PYSITELIB}/pylint/test/functional/docstrings.txt
 ${PYSITELIB}/pylint/test/functional/duplicate_argument_name.py
@@ -390,6 +398,8 @@ ${PYSITELIB}/pylint/test/functional/fixme.txt
 ${PYSITELIB}/pylint/test/functional/fixme_bad_formatting_1139.py
 ${PYSITELIB}/pylint/test/functional/fixme_bad_formatting_1139.rc
 ${PYSITELIB}/pylint/test/functional/fixme_bad_formatting_1139.txt
+${PYSITELIB}/pylint/test/functional/formatted_string_literal_with_if_py36.py
+${PYSITELIB}/pylint/test/functional/formatted_string_literal_with_if_py36.rc
 ${PYSITELIB}/pylint/test/functional/formatting.txt
 ${PYSITELIB}/pylint/test/functional/function_redefined.py
 ${PYSITELIB}/pylint/test/functional/function_redefined.txt
@@ -406,9 +416,12 @@ ${PYSITELIB}/pylint/test/functional/genexpr_variable_scope.txt
 ${PYSITELIB}/pylint/test/functional/globals.py
 ${PYSITELIB}/pylint/test/functional/globals.txt
 ${PYSITELIB}/pylint/test/functional/import_error.py
+${PYSITELIB}/pylint/test/functional/import_error.rc
 ${PYSITELIB}/pylint/test/functional/import_error.txt
 ${PYSITELIB}/pylint/test/functional/inconsistent_mro.py
 ${PYSITELIB}/pylint/test/functional/inconsistent_mro.txt
+${PYSITELIB}/pylint/test/functional/inconsistent_returns.py
+${PYSITELIB}/pylint/test/functional/inconsistent_returns.txt
 ${PYSITELIB}/pylint/test/functional/indexing_exception.py
 ${PYSITELIB}/pylint/test/functional/indexing_exception.rc
 ${PYSITELIB}/pylint/test/functional/indexing_exception.txt
@@ -425,6 +438,9 @@ ${PYSITELIB}/pylint/test/functional/invalid_all_object.txt
 ${PLIST.py2x}${PYSITELIB}/pylint/test/functional/invalid_encoded_data.py
 ${PLIST.py2x}${PYSITELIB}/pylint/test/functional/invalid_encoded_data.rc
 ${PLIST.py2x}${PYSITELIB}/pylint/test/functional/invalid_encoded_data.txt
+${PYSITELIB}/pylint/test/functional/invalid_encoding_py27.py
+${PYSITELIB}/pylint/test/functional/invalid_encoding_py27.rc
+${PYSITELIB}/pylint/test/functional/invalid_encoding_py27.txt
 ${PYSITELIB}/pylint/test/functional/invalid_exceptions_caught.py
 ${PYSITELIB}/pylint/test/functional/invalid_exceptions_caught.txt
 ${PYSITELIB}/pylint/test/functional/invalid_exceptions_raised.py
@@ -455,6 +471,8 @@ ${PYSITELIB}/pylint/test/functional/iterable_context_py2.txt
 ${PYSITELIB}/pylint/test/functional/iterable_context_py3.py
 ${PYSITELIB}/pylint/test/functional/iterable_context_py3.rc
 ${PYSITELIB}/pylint/test/functional/iterable_context_py3.txt
+${PYSITELIB}/pylint/test/functional/keyword_arg_before_vararg.py
+${PYSITELIB}/pylint/test/functional/keyword_arg_before_vararg.txt
 ${PYSITELIB}/pylint/test/functional/len_checks.py
 ${PYSITELIB}/pylint/test/functional/len_checks.txt
 ${PYSITELIB}/pylint/test/functional/line_endings.py
@@ -524,6 +542,12 @@ ${PYSITELIB}/pylint/test/functional/monkeypatch_method.py
 ${PYSITELIB}/pylint/test/functional/monkeypatch_method.txt
 ${PYSITELIB}/pylint/test/functional/multiple_imports.py
 ${PYSITELIB}/pylint/test/functional/multiple_imports.txt
+${PYSITELIB}/pylint/test/functional/namePresetCamelCase.py
+${PYSITELIB}/pylint/test/functional/namePresetCamelCase.rc
+${PYSITELIB}/pylint/test/functional/namePresetCamelCase.txt
+${PYSITELIB}/pylint/test/functional/name_preset_snake_case.py
+${PYSITELIB}/pylint/test/functional/name_preset_snake_case.rc
+${PYSITELIB}/pylint/test/functional/name_preset_snake_case.txt
 ${PYSITELIB}/pylint/test/functional/name_styles.py
 ${PYSITELIB}/pylint/test/functional/name_styles.rc
 ${PYSITELIB}/pylint/test/functional/name_styles.txt
@@ -583,6 +607,8 @@ ${PYSITELIB}/pylint/test/functional/print_always_warns.txt
 ${PYSITELIB}/pylint/test/functional/protected_access_access_different_scopes.py
 ${PYSITELIB}/pylint/test/functional/protected_access_access_different_scopes.rc
 ${PYSITELIB}/pylint/test/functional/protected_access_access_different_scopes.txt
+${PYSITELIB}/pylint/test/functional/raising_format_tuple.py
+${PYSITELIB}/pylint/test/functional/raising_format_tuple.txt
 ${PYSITELIB}/pylint/test/functional/raising_non_exception_py3.py
 ${PYSITELIB}/pylint/test/functional/raising_non_exception_py3.rc
 ${PYSITELIB}/pylint/test/functional/raising_non_exception_py3.txt
@@ -637,6 +663,9 @@ ${PYSITELIB}/pylint/test/functional/star_needs_assignment_target_py35.rc
 ${PYSITELIB}/pylint/test/functional/star_needs_assignment_target_py35.txt
 ${PYSITELIB}/pylint/test/functional/statement_without_effect.py
 ${PYSITELIB}/pylint/test/functional/statement_without_effect.txt
+${PYSITELIB}/pylint/test/functional/stop_iteration_inside_generator.py
+${PYSITELIB}/pylint/test/functional/stop_iteration_inside_generator.rc
+${PYSITELIB}/pylint/test/functional/stop_iteration_inside_generator.txt
 ${PYSITELIB}/pylint/test/functional/string_formatting.py
 ${PYSITELIB}/pylint/test/functional/string_formatting.txt
 ${PYSITELIB}/pylint/test/functional/string_formatting_disable.py
@@ -709,6 +738,7 @@ ${PYSITELIB}/pylint/test/functional/too_many_star_expressions.txt
 ${PYSITELIB}/pylint/test/functional/too_many_statements.py
 ${PYSITELIB}/pylint/test/functional/too_many_statements.txt
 ${PYSITELIB}/pylint/test/functional/trailing_comma_tuple.py
+${PYSITELIB}/pylint/test/functional/trailing_comma_tuple.rc
 ${PYSITELIB}/pylint/test/functional/trailing_comma_tuple.txt
 ${PYSITELIB}/pylint/test/functional/trailing_newlines.py
 ${PYSITELIB}/pylint/test/functional/trailing_newlines.txt
@@ -913,6 +943,7 @@ ${PYSITELIB}/pylint/test/input/func_w0233.py
 ${PYSITELIB}/pylint/test/input/func_w0332_py_30.py
 ${PYSITELIB}/pylint/test/input/func_w0401.py
 ${PYSITELIB}/pylint/test/input/func_w0401_disabled.py
+${PYSITELIB}/pylint/test/input/func_w0401_disabled_in_func.py
 ${PYSITELIB}/pylint/test/input/func_w0401_package/__init__.py
 ${PYSITELIB}/pylint/test/input/func_w0401_package/all_the_things.py
 ${PYSITELIB}/pylint/test/input/func_w0401_package/thing1.py
@@ -927,6 +958,7 @@ ${PYSITELIB}/pylint/test/input/func_w0623_py30.py
 ${PYSITELIB}/pylint/test/input/func_w0801.py
 ${PYSITELIB}/pylint/test/input/ignore_except_pass_by_default.py
 ${PYSITELIB}/pylint/test/input/noext
+${PYSITELIB}/pylint/test/input/not__init__.py
 ${PYSITELIB}/pylint/test/input/similar1
 ${PYSITELIB}/pylint/test/input/similar2
 ${PYSITELIB}/pylint/test/input/w0401_cycle.py
@@ -976,6 +1008,7 @@ ${PYSITELIB}/pylint/test/messages/func_w0312.txt
 ${PYSITELIB}/pylint/test/messages/func_w0332_py_30.txt
 ${PYSITELIB}/pylint/test/messages/func_w0401.txt
 ${PYSITELIB}/pylint/test/messages/func_w0401_disabled.txt
+${PYSITELIB}/pylint/test/messages/func_w0401_disabled_in_func.txt
 ${PYSITELIB}/pylint/test/messages/func_w0401_package.txt
 ${PYSITELIB}/pylint/test/messages/func_w0404.txt
 ${PYSITELIB}/pylint/test/messages/func_w0405.txt
@@ -1022,7 +1055,9 @@ ${PYSITELIB}/pylint/test/regrtest_data/package/subpackage/module.py
 ${PYSITELIB}/pylint/test/regrtest_data/package_all/__init__.py
 ${PYSITELIB}/pylint/test/regrtest_data/package_all/notmissing.py
 ${PYSITELIB}/pylint/test/regrtest_data/precedence_test.py
+${PYSITELIB}/pylint/test/regrtest_data/py3k-disabled.rc
 ${PYSITELIB}/pylint/test/regrtest_data/py3k_error_flag.py
+${PYSITELIB}/pylint/test/regrtest_data/py3k_errors_and_warnings.py
 ${PYSITELIB}/pylint/test/regrtest_data/special_attr_scope_lookup_crash.py
 ${PYSITELIB}/pylint/test/regrtest_data/syntax_error.py
 ${PYSITELIB}/pylint/test/regrtest_data/test_pylintrc_comments.py
