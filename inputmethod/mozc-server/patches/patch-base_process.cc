@@ -1,8 +1,10 @@
-$NetBSD: patch-base_process.cc,v 1.4 2016/05/16 11:51:49 ryoon Exp $
+$NetBSD: patch-base_process.cc,v 1.5 2017/12/17 14:15:43 tsutsui Exp $
 
---- base/process.cc.orig	2016-05-15 08:11:10.000000000 +0000
+* NetBSD support
+
+--- base/process.cc.orig	2017-11-02 13:32:45.000000000 +0000
 +++ base/process.cc
-@@ -46,12 +46,12 @@
+@@ -44,12 +44,12 @@
  #include "base/mac_process.h"
  #endif  // OS_MACOSX
  
@@ -17,8 +19,8 @@ $NetBSD: patch-base_process.cc,v 1.4 2016/05/16 11:51:49 ryoon Exp $
  
  #include <cstdlib>
  #include <memory>
-@@ -125,12 +125,12 @@ bool Process::OpenBrowser(const string &
-   return ShellExecuteInSystemDir(L"open", wurl.c_str(), NULL, SW_SHOW);
+@@ -96,12 +96,12 @@ bool Process::OpenBrowser(const string &
+   return WinUtil::ShellExecuteInSystemDir(L"open", wurl.c_str(), nullptr);
  #endif
  
 -#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL)
@@ -33,7 +35,7 @@ $NetBSD: patch-base_process.cc,v 1.4 2016/05/16 11:51:49 ryoon Exp $
  
  #ifdef OS_MACOSX
    return MacProcess::OpenBrowserForMac(url);
-@@ -209,7 +209,7 @@ bool Process::SpawnProcess(const string 
+@@ -180,7 +180,7 @@ bool Process::SpawnProcess(const string 
    }
  #endif
  
@@ -42,7 +44,7 @@ $NetBSD: patch-base_process.cc,v 1.4 2016/05/16 11:51:49 ryoon Exp $
    // Do not call posix_spawn() for obviously bad path.
    if (!S_ISREG(statbuf.st_mode)) {
      LOG(ERROR) << "Not a regular file: " << path;
-@@ -232,7 +232,7 @@ bool Process::SpawnProcess(const string 
+@@ -203,7 +203,7 @@ bool Process::SpawnProcess(const string 
    // (www.gnu.org/software/libc/manual/html_node/Heap-Consistency-Checking.html)
    const int kOverwrite = 0;  // Do not overwrite.
    ::setenv("MALLOC_CHECK_", "2", kOverwrite);
@@ -51,7 +53,7 @@ $NetBSD: patch-base_process.cc,v 1.4 2016/05/16 11:51:49 ryoon Exp $
    pid_t tmp_pid = 0;
  
    // Spawn new process.
-@@ -403,7 +403,7 @@ bool Process::LaunchErrorMessageDialog(c
+@@ -374,7 +374,7 @@ bool Process::LaunchErrorMessageDialog(c
    }
  #endif  // OS_WIN
  
@@ -60,7 +62,7 @@ $NetBSD: patch-base_process.cc,v 1.4 2016/05/16 11:51:49 ryoon Exp $
    const char kMozcTool[] = "mozc_tool";
    const string arg = "--mode=error_message_dialog --error_type=" + error_type;
    size_t pid = 0;
-@@ -411,7 +411,7 @@ bool Process::LaunchErrorMessageDialog(c
+@@ -382,7 +382,7 @@ bool Process::LaunchErrorMessageDialog(c
      LOG(ERROR) << "cannot launch " << kMozcTool;
      return false;
    }
