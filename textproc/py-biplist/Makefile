@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/10/13 06:58:46 adam Exp $
+# $NetBSD: Makefile,v 1.8 2017/12/17 16:17:54 adam Exp $
 
-DISTNAME=	biplist-1.0.2
+DISTNAME=	biplist-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/biplist/}
