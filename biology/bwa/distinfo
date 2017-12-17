@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.4 2017/02/14 21:34:34 joerg Exp $
+$NetBSD: distinfo,v 1.5 2017/12/17 14:30:36 bacon Exp $
 
-SHA1 (bwa-0.7.9a.tar.bz2) = a77ce327e8acba554b1d27bfdd1c148f79726484
-RMD160 (bwa-0.7.9a.tar.bz2) = a51b7c686a206144eab2aee0a372d5ae46fcfce1
-SHA512 (bwa-0.7.9a.tar.bz2) = 93804b2c0ac0f675e76f762441e1eec039d7f1cf77b033fd88f2e6c39d9cd4b5c21bba9fb44e34a3dab28c630c3855792a707e5b33109d4be0097cec97eaa686
-Size (bwa-0.7.9a.tar.bz2) = 166193 bytes
-SHA1 (patch-Makefile) = 2bb665cb579d20a07ae7c2be8ba0ed874d60d5b0
-SHA1 (patch-kopen.c) = 9c92b812a7e55bf9d7d136d91be02982610d9f51
+SHA1 (bwa-0.7.17.tar.gz) = 77f9aac723110227ea51cb42011336d291d03723
+RMD160 (bwa-0.7.17.tar.gz) = d26a266387dee4fc9fcf6eef4f7ffcc076495c22
+SHA512 (bwa-0.7.17.tar.gz) = 114e61b7cc5edcb67172d1eca7be1fa670ea33dd48b5c02c98318e254871363775c0dab327fd7ee7023200a5fedc745fa01cbe0fd9550d783f091d4df6926f48
+Size (bwa-0.7.17.tar.gz) = 232593 bytes
+SHA1 (patch-Makefile) = 72ac08d92540a88da08bf4d988ca3f6132327a6a
