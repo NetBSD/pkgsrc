@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5303 2017/12/18 09:10:44 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5304 2017/12/18 11:28:09 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7656,3 +7656,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated inputmethod/ibus-skk to 1.4.3 [ryoon 2017-12-18]
 	Added devel/py-clint version 0.5.1 [adam 2017-12-18]
 	Updated textproc/py-mistune to 0.8.3 [adam 2017-12-18]
+	Updated textproc/gtk-doc to 1.26nb1 [jperkin 2017-12-18]
