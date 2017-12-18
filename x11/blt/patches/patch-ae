@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.6 2005/10/07 17:39:26 perry Exp $
+$NetBSD: patch-ae,v 1.7 2017/12/18 15:06:26 jperkin Exp $
 
---- configure.orig	2002-10-04 01:33:59.000000000 -0400
-+++ configure	2005-10-07 13:33:26.000000000 -0400
-@@ -3384,8 +3384,8 @@
+--- configure.orig	2002-10-04 05:33:59.000000000 +0000
++++ configure
+@@ -3384,8 +3384,8 @@ case $target in
      TK_LIB_NAME="tk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
      ;;
    *)
@@ -13,7 +13,7 @@ $NetBSD: patch-ae,v 1.6 2005/10/07 17:39:26 perry Exp $
      ;;
  esac
  
-@@ -4072,7 +4072,8 @@
+@@ -4072,7 +4072,8 @@ fi
      EXTRA_LIB_SPECS="-ldl"
      ;;
  
@@ -23,7 +23,7 @@ $NetBSD: patch-ae,v 1.6 2005/10/07 17:39:26 perry Exp $
      # Not available on all versions:  check for include file.
      ac_safe=`echo "dlfcn.h" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for dlfcn.h""... $ac_c" 1>&6
-@@ -4109,9 +4110,10 @@
+@@ -4109,9 +4110,10 @@ test_ok=no
  fi
  
      if test "$test_ok" = yes; then
@@ -35,3 +35,15 @@ $NetBSD: patch-ae,v 1.6 2005/10/07 17:39:26 perry Exp $
      fi
      ;;
  
+@@ -4181,9 +4183,9 @@ fi
+   *-solaris2*)
+ 
+     SHLIB_CFLAGS="-KPIC"
+-    if test "${blt_with_gnu_ld}" = "yes" -a "$blt_have_gcc" = "yes" ; then
++    if test "$blt_have_gcc" = "yes" ; then
+       SHLIB_LD="gcc"
+-      SHLIB_LD_FLAGS='-rdynamic -shared -Wl,-E -Wl,-soname,$@'
++      SHLIB_LD_FLAGS='-shared -Wl,-soname,$@'
+       LD_RUN_PATH="-Wl,-rpath,${loader_run_path}"
+     else
+       SHLIB_LD="/usr/ccs/bin/ld"
