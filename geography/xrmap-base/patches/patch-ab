@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2004/09/09 10:26:27 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2017/12/18 14:12:40 jperkin Exp $
 
---- editkit/Imakefile.orig	2003-05-18 21:41:24.000000000 +0200
+--- editkit/Imakefile.orig	2003-05-18 19:41:24.000000000 +0000
 +++ editkit/Imakefile
 @@ -1,14 +1,6 @@
 -XCOMM Should install to /usr or /usr/local ??
@@ -18,3 +18,12 @@ $NetBSD: patch-ab,v 1.1 2004/09/09 10:26:27 drochner Exp $
  
  XCOMM
  XCOMM Normally -- except for new architectures -- you should be done there.
+@@ -17,7 +9,7 @@ XCOMM
+ XCOMM Compile options:
+ XCOMM
+ 
+-CFLAGS = -O2 -fomit-frame-pointer -pipe -Wall -DTHREED -DGREEK -DJUSTIFY -DSHARE_DIR="\"$(DESTDIR)$(SHARE_DIR)\""
++CFLAGS += -Wall -DTHREED -DGREEK -DJUSTIFY -DSHARE_DIR="\"$(DESTDIR)$(SHARE_DIR)\""
+ 
+ LOCAL_LIBRARIES=$(XLIB)
+ DEPLIBS=		# I don't know what I'm doing, and I hate imake!
