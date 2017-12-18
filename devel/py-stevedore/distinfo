@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/12/18 08:48:26 adam Exp $
+$NetBSD: distinfo,v 1.4 2017/12/18 09:05:33 adam Exp $
 
-SHA1 (stevedore-1.28.0.tar.gz) = 3a59ff1652efab5c89dedbf18936c6eb00f8070e
-RMD160 (stevedore-1.28.0.tar.gz) = a17cd13695020b58b7259262a1c0e5eab442a015
-SHA512 (stevedore-1.28.0.tar.gz) = e148560e255a362a51ce91e8bc2380828ba9a41e1988138bcff2d5b270097cadffdee30f3c98e123d8ced9f6f0ff350b52e793fd400ce6b45095860788bd6b86
-Size (stevedore-1.28.0.tar.gz) = 504872 bytes
+SHA1 (stevedore-1.27.1.tar.gz) = 57a30969e7cd61192b880388054467e7b749a16b
+RMD160 (stevedore-1.27.1.tar.gz) = a8beea61cde88107ee2afb55d0f17eabdc877868
+SHA512 (stevedore-1.27.1.tar.gz) = a5ebed4133043e456f55b866053cc6673cfe0512c652ed1b61ae844a5b7a88a70d80ac6e9fda00c57e8bec23e6bc35de72a507f49b5208099219db9e53c73f46
+Size (stevedore-1.27.1.tar.gz) = 508891 bytes
