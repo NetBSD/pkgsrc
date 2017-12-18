@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2008/05/27 13:51:02 obache Exp $
+$NetBSD: patch-aa,v 1.7 2017/12/18 14:31:56 jperkin Exp $
 
 --- configure.orig	2007-12-25 01:47:49.000000000 +0000
 +++ configure
@@ -28,7 +28,15 @@ $NetBSD: patch-aa,v 1.6 2008/05/27 13:51:02 obache Exp $
  
  #================================================================
  # Options
-@@ -2966,7 +2947,7 @@ if test "${ac_cv_lib_pthread_main+set}" 
+@@ -2402,6 +2383,7 @@ then
+     MYCFLAGS="-Wall -fPIC -fsigned-char -O1"
+   fi
+ fi
++MYCFLAGS="-fPIC ${CFLAGS}"
+ 
+ # Underlying libraries
+ 
+@@ -2966,7 +2948,7 @@ if test "${ac_cv_lib_pthread_main+set}"
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -37,7 +45,7 @@ $NetBSD: patch-aa,v 1.6 2008/05/27 13:51:02 obache Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -3019,7 +3000,9 @@ fi
+@@ -3019,7 +3001,9 @@ fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_main" >&5
  echo "${ECHO_T}$ac_cv_lib_pthread_main" >&6
  if test $ac_cv_lib_pthread_main = yes; then
