@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/08/16 18:02:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/12/18 19:29:27 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -200,6 +200,9 @@ ${PYSITELIB}/js2py/internals/speed.py
 ${PYSITELIB}/js2py/internals/trans_utils.py
 ${PYSITELIB}/js2py/internals/trans_utils.pyc
 ${PYSITELIB}/js2py/internals/trans_utils.pyo
+${PYSITELIB}/js2py/node_import.py
+${PYSITELIB}/js2py/node_import.pyc
+${PYSITELIB}/js2py/node_import.pyo
 ${PYSITELIB}/js2py/prototypes/__init__.py
 ${PYSITELIB}/js2py/prototypes/__init__.pyc
 ${PYSITELIB}/js2py/prototypes/__init__.pyo
@@ -236,6 +239,9 @@ ${PYSITELIB}/js2py/prototypes/jsstring.pyo
 ${PYSITELIB}/js2py/prototypes/jstypedarray.py
 ${PYSITELIB}/js2py/prototypes/jstypedarray.pyc
 ${PYSITELIB}/js2py/prototypes/jstypedarray.pyo
+${PYSITELIB}/js2py/py_node_modules/__init__.py
+${PYSITELIB}/js2py/py_node_modules/__init__.pyc
+${PYSITELIB}/js2py/py_node_modules/__init__.pyo
 ${PYSITELIB}/js2py/pyjs.py
 ${PYSITELIB}/js2py/pyjs.pyc
 ${PYSITELIB}/js2py/pyjs.pyo
