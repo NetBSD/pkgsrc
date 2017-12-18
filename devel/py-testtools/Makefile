@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2017/05/21 06:45:39 adam Exp $
+# $NetBSD: Makefile,v 1.18 2017/12/18 08:48:26 adam Exp $
 
 DISTNAME=	testtools-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/testtools/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
