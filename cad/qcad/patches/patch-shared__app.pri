@@ -1,11 +1,11 @@
-$NetBSD: patch-shared__app.pri,v 1.1 2016/08/30 10:56:04 plunky Exp $
+$NetBSD: patch-shared__app.pri,v 1.2 2017/12/18 21:21:44 plunky Exp $
 
 fix build for pkgsrc, by allowing qmake to link binaries in situ
 and create an install target
 
 --- shared_app.pri.orig	2016-07-01 07:13:14.000000000 +0000
 +++ shared_app.pri
-@@ -1,24 +1,24 @@
+@@ -1,24 +1,23 @@
  include($$PWD/shared.pri)
 
  LIBS += \
@@ -40,8 +40,7 @@ and create an install target
      LIBS += \
 -        -lopennurbs \
 -        -lzlib
-+        -L$$PWD/src/3rdparty/opennurbs/opennurbs -lopennurbs \
-+        -L$$PWD/src/3rdparty/opennurbs/zlib -lzlib
++        -L$$PWD/src/3rdparty/opennurbs/opennurbs -lopennurbs
  }
 
  win32 {

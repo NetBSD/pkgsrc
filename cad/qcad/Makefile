@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2017/04/09 00:23:26 mef Exp $
+# $NetBSD: Makefile,v 1.68 2017/12/18 21:21:44 plunky Exp $
 #
 
-DISTNAME=		qcad-3.16.7.0
+DISTNAME=		qcad-3.19.1.0
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_GITHUB:=qcad/}
 EXTRACT_SUFX=		.zip
@@ -69,6 +69,7 @@ do-install:
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.7
 .include "../../x11/qt4-tools/buildlink3.mk"
