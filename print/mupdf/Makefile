@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2017/10/25 11:00:03 leot Exp $
+# $NetBSD: Makefile,v 1.55 2017/12/18 15:06:33 leot Exp $
 
-DISTNAME=	mupdf-1.11-source
+DISTNAME=	mupdf-1.12.0-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	5
 CATEGORIES=	print
 MASTER_SITES=	https://mupdf.com/downloads/archive/
 
@@ -34,10 +33,11 @@ CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 post-extract:
 	${RM} -fr \
 	    ${WRKSRC}/thirdparty/curl \
+	    ${WRKSRC}/thirdparty/freeglut \
 	    ${WRKSRC}/thirdparty/freetype \
-	    ${WRKSRC}/thirdparty/glfw \
 	    ${WRKSRC}/thirdparty/harfbuzz \
 	    ${WRKSRC}/thirdparty/jbig2dec \
+	    ${WRKSRC}/thirdparty/lcms2 \
 	    ${WRKSRC}/thirdparty/libjpeg \
 	    ${WRKSRC}/thirdparty/openjpeg \
 	    ${WRKSRC}/thirdparty/zlib
@@ -54,6 +54,9 @@ post-install:
 .include "../../graphics/jbig2dec/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+# XXX: Needs lcms2-2.9 that ATM is not in pkgsrc.
+#BUILDLINK_API_DEPENDS.lcms2+= lcms2>=2.9
+#.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
