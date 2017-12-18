@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5315 2017/12/18 21:22:36 plunky Exp $
+$NetBSD: CHANGES-2017,v 1.5316 2017/12/18 21:25:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7676,3 +7676,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/libdrm to 2.4.89 [wiz 2017-12-18]
 	Updated finance/gnucash to 2.6.19 [wiz 2017-12-18]
 	Updated cad/qcad to 3.19.1.0 [plunky 2017-12-18]
+	Updated finance/gnucash-docs to 2.6.19 [wiz 2017-12-18]
