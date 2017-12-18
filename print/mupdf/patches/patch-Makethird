@@ -1,10 +1,12 @@
-$NetBSD: patch-Makethird,v 1.7 2017/04/12 13:03:08 leot Exp $
+$NetBSD: patch-Makethird,v 1.8 2017/12/18 15:06:34 leot Exp $
 
-o mujs building support with libtool
+- mujs building support with libtool
+- Avoid the internal lcms2 version provided and honors SYS_LCMS2_{CFLAGS,LIBS}.
+  These are handled in patches/patch-ab.
 
---- Makethird.orig	2017-03-31 14:23:45.000000000 +0000
+--- Makethird.orig	2017-11-23 11:42:45.000000000 +0000
 +++ Makethird
-@@ -26,13 +26,13 @@ ifneq "$(wildcard $(MUJS_DIR)/README)" "
+@@ -27,13 +27,13 @@ ifneq "$(wildcard $(MUJS_DIR)/README)" "
  MUJS_OUT := $(OUT)/thirdparty/mujs
  MUJS_SRC := one.c
  
@@ -21,3 +23,13 @@ o mujs building support with libtool
  	$(CC_CMD)
  
  MUJS_CFLAGS := -I$(MUJS_DIR)
+@@ -575,7 +575,8 @@ $(LCMS2_OUT)/%.o: $(LCMS2_DIR)/src/%.c |
+ 
+ LCMS2_CFLAGS := -I$(LCMS2_DIR)/include
+ else
+-LCMS2_CFLAGS := -DNO_ICC
++LCMS2_CFLAGS := $(SYS_LCMS2_CFLAGS)
++LCMS2_LIBS := $(SYS_LCMS2_LIBS)
+ endif
+ 
+ # --- cURL ---
