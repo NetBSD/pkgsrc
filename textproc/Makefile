@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.970 2017/11/26 23:38:17 minskim Exp $
+# $NetBSD: Makefile,v 1.971 2017/12/18 11:09:14 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -752,6 +752,7 @@ SUBDIR+=	py-html5lib
 SUBDIR+=	py-humanize
 SUBDIR+=	py-inflection
 SUBDIR+=	py-iniparse
+SUBDIR+=	py-jade
 SUBDIR+=	py-jellyfish
 SUBDIR+=	py-jinja2
 SUBDIR+=	py-jmespath
