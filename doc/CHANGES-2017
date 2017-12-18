@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5300 2017/12/17 21:16:23 leot Exp $
+$NetBSD: CHANGES-2017,v 1.5301 2017/12/18 05:54:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7652,3 +7652,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-memcached to 1.59 [adam 2017-12-17]
 	Updated security/py-asn1crypto to 0.24.0 [adam 2017-12-17]
 	Updated print/cups-filters to 1.17.9nb4 [leot 2017-12-17]
+	Updated inputmethod/libskk to 1.0.3 [ryoon 2017-12-18]
