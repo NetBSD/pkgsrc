@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5313 2017/12/18 20:47:01 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5314 2017/12/18 20:55:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7674,3 +7674,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-django-treebeard to 4.2.0 [adam 2017-12-18]
 	Updated lang/py-js2py to 0.58 [adam 2017-12-18]
 	Updated x11/libdrm to 2.4.89 [wiz 2017-12-18]
+	Updated finance/gnucash to 2.6.19 [wiz 2017-12-18]
