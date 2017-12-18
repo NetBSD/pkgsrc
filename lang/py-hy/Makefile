@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2017/09/16 19:26:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/12/18 12:48:46 adam Exp $
 
-DISTNAME=	hy-0.10.1
+DISTNAME=	hy-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hy/}
@@ -10,20 +10,18 @@ HOMEPAGE=	http://hylang.org/
 COMMENT=	Lisp and Python love each other
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-astor>=0.5:../../devel/py-astor
+DEPENDS+=	${PYPKGPREFIX}-clint>=0.4:../../devel/py-clint
 DEPENDS+=	${PYPKGPREFIX}-rply>=0.7.0:../../devel/py-rply
-DEPENDS+=	${PYPKGPREFIX}-astor>=0.3:../../devel/py-astor
 
 USE_LANGUAGES=	# none
 
-PY_PATCHPLIST=	yes
-
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/hy \
-		${DESTDIR}${PREFIX}/bin/hy${PYVERSSUFFIX} || ${TRUE}
-	${MV} ${DESTDIR}${PREFIX}/bin/hy2py \
-		${DESTDIR}${PREFIX}/bin/hy2py${PYVERSSUFFIX} || ${TRUE}
-	${MV} ${DESTDIR}${PREFIX}/bin/hyc \
-		${DESTDIR}${PREFIX}/bin/hyc${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${RM} hy[23] hy2py[23] hyc[23] && \
+		${MV} hy hy${PYVERSSUFFIX} && \
+		${MV} hy2py hy2py${PYVERSSUFFIX} && \
+		${MV} hyc hyc${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
