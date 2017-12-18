@@ -1,18 +1,13 @@
-$NetBSD: distinfo,v 1.38 2017/10/25 11:00:03 leot Exp $
+$NetBSD: distinfo,v 1.39 2017/12/18 15:06:33 leot Exp $
 
-SHA1 (mupdf-1.11-source.tar.gz) = f782d36aaa896319207e81953e5a622201477b5b
-RMD160 (mupdf-1.11-source.tar.gz) = 573307473a1ac81aca4519b0e57a7111aae7803f
-SHA512 (mupdf-1.11-source.tar.gz) = 501670f540e298a8126806ebbd9db8b29866f663b7bbf26c9ade1933e42f0c00ad410b9d93f3ddbfb3e45c38722869095de28d832fe3fb3703c55cc9a01dbf63
-Size (mupdf-1.11-source.tar.gz) = 40156070 bytes
-SHA1 (patch-CVE-2017-14685) = c84be44c21ca29e0d0a455e0d7efe9a38ac46fb5
-SHA1 (patch-CVE-2017-14686) = b573adc7baa25a2f8b2068b1833f4cc17f38f3eb
-SHA1 (patch-CVE-2017-14687) = 651efafea77050216645ded2e2d3592970713b74
-SHA1 (patch-CVE-2017-15369) = 37bc5e52c67591b04640c03f5a227c278a26aa11
-SHA1 (patch-CVE-2017-15587) = 3bdafc7647148b0b29d37804a14306ea4458a529
-SHA1 (patch-Makethird) = a4d1bb3c8d509a84803c9b60521fd9b6b17b9717
-SHA1 (patch-ab) = a18b1e5b82454bdf06e23185e619b7f8c7a24290
-SHA1 (patch-ac) = c2decf6eae4c6343636439c7d7f6621826fc4e3c
+SHA1 (mupdf-1.12.0-source.tar.gz) = 0daee66600023de2bda2f1928a97a8515c17d2d2
+RMD160 (mupdf-1.12.0-source.tar.gz) = 9d36991f260c55c28ffc7f3b1d2acee84f735407
+SHA512 (mupdf-1.12.0-source.tar.gz) = 11ae620e55e9ebd5844abd7decacc0dafc90dd1f4907ba6ed12f5c725d3920187fc730a7fc33979bf3ff9451da7dbb51f34480a878083e2064f3455555f47d96
+Size (mupdf-1.12.0-source.tar.gz) = 51508917 bytes
+SHA1 (patch-Makethird) = 77820f7344e00140a9792b5a6a3ddb1afa01b7bb
+SHA1 (patch-ab) = 0aafa5815fc0907e3ddcc8f0e7c83510a82669d8
+SHA1 (patch-ac) = 799efd894505fd960953905e61022411e8adf1ef
 SHA1 (patch-ae) = c6b113818b32cb4470e8549c00a16e0b2f364ede
-SHA1 (patch-scripts_hexdump.c) = 65a029086f429a1f8568066a712c1d8e0106c867
-SHA1 (patch-source_fitz_load-jpx.c) = 57f22296a519d9e0ab9247fd5e742e2390a63fd5
-SHA1 (patch-thirdparty_mujs_Makefile) = cd6a20d56020ae5028f95e24e75f5e4a62127f9f
+SHA1 (patch-platform_gl_gl-app.h) = 6e5e547df27ecb2b82cadd71489d2eb9138c1ce2
+SHA1 (patch-source_fitz_load-jpx.c) = 18b47e3b478183c8e85a6ad1e6cabbbf48cf9f6b
+SHA1 (patch-thirdparty_mujs_Makefile) = 713946f25ae1ea44878b19b9430324e3d9f98990
