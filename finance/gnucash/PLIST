@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2017/09/30 08:21:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.65 2017/12/18 20:55:27 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -434,6 +434,7 @@ share/doc/gnucash/Money95mfunds_fr.qif
 share/doc/gnucash/Money95stocks_fr.qif
 share/doc/gnucash/NEWS
 share/doc/gnucash/README
+share/doc/gnucash/README-ca.win32-bin.txt
 share/doc/gnucash/README-de.win32-bin.txt
 share/doc/gnucash/README-fr.win32-bin.txt
 share/doc/gnucash/README-it.win32-bin.txt
