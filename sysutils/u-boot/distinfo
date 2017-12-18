@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.8 2017/11/15 22:08:27 jmcneill Exp $
+$NetBSD: distinfo,v 1.9 2017/12/18 23:27:14 jmcneill Exp $
 
 SHA1 (u-boot-2017.11.tar.bz2) = 6a3932b39a0f165aba210663ea2500bcfb9c8794
 RMD160 (u-boot-2017.11.tar.bz2) = 38e1331640b81e74ea78ebf41f94bcdbd675dcb2
 SHA512 (u-boot-2017.11.tar.bz2) = 485b9ab7cea0a250d964822bdb99a8426852b4e815b506329dedc4f5a69757c8b1a812998561161d44d98f6fabb9c8937e8250de1244d258fc9f13624b38d643
 Size (u-boot-2017.11.tar.bz2) = 11982382 bytes
 SHA1 (patch-arch_arm_cpu_armv8_Kconfig) = 63cbbf2e3cebd46793fc03cc8e62297f6dc01aa9
+SHA1 (patch-drivers_video_sunxi_sunxi__display.c) = 0a441ed39e95b11fa621b1e8e8568e7e4f1fd33a
 SHA1 (patch-include_configs_tegra-common.h) = 01b68620414f85edd029e54f7f8dc158888c4072
 SHA1 (patch-lib_bch.c) = b1f1c7418f1004c151b9e5e06ab7047a1736ae47
 SHA1 (patch-tools_Makefile) = adc5082d369363113135d5c892822b57ee80ff19
