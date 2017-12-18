@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/08/12 14:29:46 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2017/12/18 23:31:20 jmcneill Exp $
+
+PKGREVISION=		1
 
 UBOOT_TARGET=		nanopi-neo
 UBOOT_CONFIG=		nanopi_neo_defconfig
