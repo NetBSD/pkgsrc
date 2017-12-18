@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5311 2017/12/18 15:07:26 leot Exp $
+$NetBSD: CHANGES-2017,v 1.5312 2017/12/18 19:30:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7671,3 +7671,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/beats to 6.1.0 [fhajny 2017-12-18]
 	Updated print/mupdf to 1.12.0 [leot 2017-12-18]
 	Updated print/zathura-pdf-mupdf to 0.3.1nb8 [leot 2017-12-18]
+	Updated www/py-django-treebeard to 4.2.0 [adam 2017-12-18]
+	Updated lang/py-js2py to 0.58 [adam 2017-12-18]
