@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/12/08 08:52:56 maya Exp $
+# $NetBSD: Makefile,v 1.16 2017/12/18 12:54:10 jperkin Exp $
 
 PKGREVISION= 1
 .include "../../print/poppler/Makefile.common"
@@ -30,6 +30,8 @@ CMAKE_ARGS+=    -DENABLE_QT4=OFF
 CMAKE_ARGS+=    -DENABLE_QT5=OFF
 # Don't build libcurl based HTTP support. ## might want to include
 CMAKE_ARGS+=    -DENABLE_LIBCURL=OFF
+
+LDFLAGS.SunOS+=		-liconv
 
 BUILDLINK_API_DEPENDS.poppler+=	poppler-${POPPLER_VERS}{,nb*}
 .include "../../print/poppler/buildlink3.mk"
