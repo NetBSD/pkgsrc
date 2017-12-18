@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2017/12/18 11:09:14 adam Exp $
+
+SHA1 (pyjade-4.0.0.tar.gz) = 68589d0723974d6d5a07c512fda04a99fa1e8792
+RMD160 (pyjade-4.0.0.tar.gz) = e6e26346c9ddac69e2135b72a259be45fcb801f6
+SHA512 (pyjade-4.0.0.tar.gz) = 0a384b843d2eb5884f2690ed5bb9b9b253474568ff1e9faca356a5c50749bb53fb759a099c7719bef495dc7af0073f143afad1c0d6d68f0f61d63624506f12b6
+Size (pyjade-4.0.0.tar.gz) = 29251 bytes
+SHA1 (patch-pyjade_ext_django_compiler.py) = 886954961dffafdfcdf4fd02b3ccf58e781650e1
+SHA1 (patch-pyjade_ext_django_loader.py) = c6bc26ea7cc2500d3149e28baed7e4790505d962
