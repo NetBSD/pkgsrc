@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5307 2017/12/18 13:54:53 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.5308 2017/12/18 14:27:46 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7667,3 +7667,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-buildbot-www to 0.9.14 [adam 2017-12-18]
 	Updated lang/py-hy to 0.13.0 [adam 2017-12-18]
 	Updated sysutils/consul to 1.0.2 [fhajny 2017-12-18]
+	Updated databases/elasticsearch to 6.1.0 [fhajny 2017-12-18]
