@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5304 2017/12/18 11:28:09 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.5305 2017/12/18 12:15:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7657,3 +7657,11 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-clint version 0.5.1 [adam 2017-12-18]
 	Updated textproc/py-mistune to 0.8.3 [adam 2017-12-18]
 	Updated textproc/gtk-doc to 1.26nb1 [jperkin 2017-12-18]
+	Added textproc/py-jade version 4.0.0 [adam 2017-12-18]
+	Updated devel/py-buildbot to 0.9.14 [adam 2017-12-18]
+	Updated devel/py-buildbot-worker to 0.9.14 [adam 2017-12-18]
+	Updated devel/py-buildbot-console-view to 0.9.14 [adam 2017-12-18]
+	Updated devel/py-buildbot-grid-view to 0.9.14 [adam 2017-12-18]
+	Updated devel/py-buildbot-pkg to 0.9.14 [adam 2017-12-18]
+	Updated devel/py-buildbot-waterfall-view to 0.9.14 [adam 2017-12-18]
+	Updated devel/py-buildbot-www to 0.9.14 [adam 2017-12-18]
