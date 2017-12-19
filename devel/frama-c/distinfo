@@ -1,14 +1,15 @@
-$NetBSD: distinfo,v 1.8 2017/09/05 07:42:00 dholland Exp $
+$NetBSD: distinfo,v 1.9 2017/12/19 08:17:21 markd Exp $
 
 SHA1 (frama-c-Phosphorus-20170501.tar.gz) = d9372127ba80636cc1c692a141a7a02dee8325da
 RMD160 (frama-c-Phosphorus-20170501.tar.gz) = 24a5b8578491d3c15aa539da69062803d0c6d137
 SHA512 (frama-c-Phosphorus-20170501.tar.gz) = b3b73932378cba7be8ac0cbb1f7311e8f60dde68cad55c10659ffa40e76ab3f106d554e245ccd90ffb5307b9a42b6ce51154a5b9c006687b8c5808c77ca4c2f3
 Size (frama-c-Phosphorus-20170501.tar.gz) = 7431131 bytes
 SHA1 (patch-Makefile) = d9a23653196d4586c3cca87091518aea6791ddcc
-SHA1 (patch-configure) = a415684ab5ecb4fed276dede90439fa8ba6a09ed
+SHA1 (patch-configure) = 84c96178f487a65fe875a336e0f271a7d101e5a7
 SHA1 (patch-share_Makefile.common) = f5230aee768e6af4c7458d96f1f210172daa9bb2
 SHA1 (patch-src_libraries_utils_c__bindings.c) = b37db1c51e9082e4a328a6a7189f57db3f12d624
 SHA1 (patch-src_plugins_e-acsl_Makefile.in) = 8b1c4838ecd609504c1070917c0b61433f1e1f12
-SHA1 (patch-src_plugins_wp_configure) = 6f0fb756d2460b6abf27313d367672e293a8d9e7
-SHA1 (patch-src_plugins_wp_configure.ac) = 3b15ff7b551da79ad1580b134258631f1527bc42
+SHA1 (patch-src_plugins_gui_gtk__helper.ml) = 9870ffaaa9b042d4052d3eff1affaec6e254597b
+SHA1 (patch-src_plugins_wp_configure) = a32631ddfe6f5c639b98cac2778aa9f5279e1033
+SHA1 (patch-src_plugins_wp_configure.ac) = a68d7ecebae07106d0d76ddbed4bf01ba0026e1a
 SHA1 (patch-src_plugins_wp_share_coqwp_Zbits.v) = 26fac23dc015087b7126e40a47d566eb49a24293
