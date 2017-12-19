@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST.Linux,v 1.5 2017/02/06 01:29:10 markd Exp $
+@comment $NetBSD: PLIST.Linux,v 1.6 2017/12/19 09:16:29 markd Exp $
 ${PLIST.py36}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_sysconfigdata_linux.py
+share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_curses.so
+share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_elementtree.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_sqlite3.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/ossaudiodev.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/readline.so
