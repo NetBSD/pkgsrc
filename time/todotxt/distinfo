@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/12/19 11:39:50 leot Exp $
+
+SHA1 (todotxt-2.10.tar.gz) = 1cff257c4f45acb302246f51f1acaf00832e5e2e
+RMD160 (todotxt-2.10.tar.gz) = 9d3304d8d118f393b6c96c1411049b60ec2de34c
+SHA512 (todotxt-2.10.tar.gz) = b14d9d13948836d971f72b941770e8e2c59d171d35f074205900619c5c3efd7ca0a482887046c1865890afb6595fe27c69677c54ea5824163d291e16fa5329d3
+Size (todotxt-2.10.tar.gz) = 56509 bytes
