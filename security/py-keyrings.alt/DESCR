@@ -1,0 +1,2 @@
+Alternate keyring backend implementations for use with the
+keyring (security/py-keyring) package.
