@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17956 2017/12/18 15:06:47 leot Exp $
+$NetBSD: TODO,v 1.17957 2017/12/19 05:59:51 adam Exp $
 
 Suggested new packages
 ======================
@@ -1223,7 +1223,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cassa-1.11.0
 	o py-cssselect2-0.2.1
 	o py-cups-1.9.73
-	o py-curl-7.43.0.1
 	o py-django-photologue-2.7
 	o py-doctor-15.1.0
 	o py-ephem3-3.7.6.0
@@ -1232,7 +1231,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gstreamer1-1.12.4
 	o py-hsm-1.1.1
 	o py-input-pad-1.4.2
-	o py-ipaddress-1.0.19
 	o py-jaraco_util-11.0
 	o py-keybinder-0.3.1
 	o py-mercurial-4.4.2
@@ -1250,7 +1248,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-quixote-2.9
 	o py-radare2-1.0.1
 	o py-scgi-1.15
-	o py-setuptools-38.2.4
 	o py-simpletal-5.1
 	o py-smb-1.1.17
 	o py-softlayer-5.1.0
@@ -1264,8 +1261,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qlandkartegt-1.8.1 [pkg/49910]
 	o qnetwalk-1.4
 	o qt4-creator-3.4.0
-	o qt5-5.9.1 [wip]
-	o qt5-5.9.3
+	o qt5-5.10.1 [wip]
 	o quodlibet2-3.5.3
 	o racket-6.10
 	o radare2-1.0.2
