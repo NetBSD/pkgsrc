@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5316 2017/12/18 21:25:12 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5317 2017/12/19 05:59:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7677,3 +7677,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated finance/gnucash to 2.6.19 [wiz 2017-12-18]
 	Updated cad/qcad to 3.19.1.0 [plunky 2017-12-18]
 	Updated finance/gnucash-docs to 2.6.19 [wiz 2017-12-18]
+	Added devel/py-args version 0.1.0 [adam 2017-12-19]
