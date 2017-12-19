@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2017/11/23 17:20:10 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2017/12/19 08:32:14 adam Exp $
 
-DISTNAME=	pycups-${VERSION}
-PKGNAME=	${PYPKGPREFIX}-cups-${VERSION}
-PKGREVISION=	4
-VERSION=	1.9.71
+DISTNAME=	pycups-1.9.73
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	print python
 MASTER_SITES=	http://cyberelk.net/tim/data/pycups/
+MASTER_SITES+=	${MASTER_SITE_PYPI:=p/pycups/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
@@ -13,7 +12,7 @@ HOMEPAGE=	http://cyberelk.net/tim/software/pycups/
 COMMENT=	Python bindings for the CUPS API
 LICENSE=	gnu-gpl-v2
 
-CFLAGS+=	-DVERSION=\"${VERSION}\"
+CFLAGS+=	-DVERSION=\"${PKGVERSION_NOREV}\"
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fix cups paths.
