@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.160 2017/12/03 11:09:46 wiz Exp $
+# $NetBSD: Makefile.common,v 1.161 2017/12/19 09:09:38 markd Exp $
 #
 # When updating this package, please upload the distfile
 # since they disappear immediately when new releases happen,
@@ -45,3 +45,4 @@ CONFIGURE_ARGS+=	--without-gvc
 CONFIGURE_ARGS+=	--without-jbig
 CONFIGURE_ARGS+=	--without-lqr
 CONFIGURE_ARGS+=	--without-modules
+CONFIGURE_ARGS+=	--disable-opencl
