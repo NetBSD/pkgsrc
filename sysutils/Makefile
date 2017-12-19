@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.742 2017/12/14 03:38:43 jnemeth Exp $
+# $NetBSD: Makefile,v 1.743 2017/12/19 11:45:57 leot Exp $
 #
 
 COMMENT=	System utilities
@@ -478,6 +478,7 @@ SUBDIR+=	py-xattr
 SUBDIR+=	qlogtools
 SUBDIR+=	radeontool
 SUBDIR+=	radmind
+SUBDIR+=	rcm
 SUBDIR+=	rconfig
 SUBDIR+=	rdfind
 SUBDIR+=	rdiff-backup
