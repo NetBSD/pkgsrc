@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2017/05/03 08:38:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2017/12/19 20:05:37 markd Exp $
 #
 
 DISTNAME=	codeblocks_16.01
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=codeblocks/}
 
@@ -20,6 +20,8 @@ USE_LANGUAGES=	c c++11
 
 CONFIGURE_ARGS+=	--with-contrib-plugins=AutoVersioning,BrowseTracker,byogames,cbkoders,codesnippets,codestat,dragscroll,envvars,help,keybinder,libfinder,profiler,regex,exporter,symtab
 # wxsmith makes error in build process
+
+CXXFLAGS.Linux+=	-std=c++11
 
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
