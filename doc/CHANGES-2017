@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5323 2017/12/19 11:33:20 leot Exp $
+$NetBSD: CHANGES-2017,v 1.5324 2017/12/19 11:40:57 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7689,3 +7689,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/gnumeric112 to 1.12.36 [markd 2017-12-19]
 	Updated multimedia/mjpegtools to 2.1.0 [markd 2017-12-19]
 	Updated lang/py36-html-docs to 3.6.4 [leot 2017-12-19]
+	Added time/todotxt version 2.10 [leot 2017-12-19]
