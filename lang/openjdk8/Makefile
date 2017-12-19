@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2017/12/15 14:27:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.57 2017/12/19 13:26:29 jperkin Exp $
 
 DISTNAME=	openjdk-1.8.152-20171128
 PKGNAME=	openjdk8-1.8.152
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.xz
@@ -48,7 +49,7 @@ CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
 CONFIGURE_ARGS+=	--with-boot-jdk=${ALT_BOOTDIR}
 CONFIGURE_ARGS+=	--with-zlib=system
 CONFIGURE_ARGS+=	--with-giflib=bundled
-CONFIGURE_ARGS+=	--with-cups=${BUILDLINK_PREFIX.cups}
+CONFIGURE_ARGS+=	--with-cups-include=${BUILDLINK_PREFIX.cups-base}/include
 CONFIGURE_ARGS+=	--with-freetype-lib=${BUILDLINK_PREFIX.freetype2}/lib
 CONFIGURE_ARGS+=	--with-freetype-include=${BUILDLINK_PREFIX.freetype2}/include
 CONFIGURE_ARGS+=	--disable-freetype-bundling
@@ -261,7 +262,7 @@ MAKE_ENV+=	STRIP=${PREFIX}/bin/gstrip
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-BUILDLINK_DEPMETHOD.cups?=	build
+BUILDLINK_DEPMETHOD.cups-base?=	build
 .include "../../print/cups-base/buildlink3.mk"
 .include "../../mk/java-env.mk"
 .include "../../mk/bsd.pkg.mk"
