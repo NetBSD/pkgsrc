@@ -1,0 +1,4 @@
+Provides bindings to the functions of libssh2 which implements
+the SSH2 protocol.
+
+This package is for compatibility with PHP 5.6 only.
