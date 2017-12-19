@@ -1,4 +1,4 @@
-$NetBSD: patch-src_plugins_wp_configure.ac,v 1.1 2017/09/05 07:30:00 dholland Exp $
+$NetBSD: patch-src_plugins_wp_configure.ac,v 1.2 2017/12/19 08:17:21 markd Exp $
 
 Recognize more recent coq.
 
@@ -9,7 +9,7 @@ Recognize more recent coq.
        COQVERSION=`coqc -v | sed -n -e 's|.*version* *\([[^ ]]*\) .*$|\1|p' `
        case $COQVERSION in
 -        8.4pl6|8.5*|trunk)
-+        8.4pl6|8.5*|8.6*|trunk)
++        8.4pl6|8.5*|8.6*|8.7*|trunk)
            AC_MSG_RESULT(coqc version $COQVERSION found)
            ;;
          *) 
