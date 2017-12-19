@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2015/04/25 14:23:40 tnn Exp $
+# $NetBSD: Makefile,v 1.58 2017/12/19 10:34:47 markd Exp $
 
-DISTNAME=	mjpegtools-2.0.0
-PKGREVISION=	4
+DISTNAME=	mjpegtools-2.1.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mjpeg/}
 
@@ -21,6 +20,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-libquicktime
 CONFIGURE_ARGS+=	--enable-large-file
 CONFIGURE_ARGS+=	--with-lame-includes=${BUILDLINK_PREFIX.lame}
+CONFIGURE_ARGS+=	--with-pic
 
 SHLIBTOOL_OVERRIDE=	# empty
 PKGCONFIG_OVERRIDE=	mjpegtools.pc.in
@@ -37,6 +37,7 @@ CONFIGURE_ENV+=		mjt_cv_extern___progname=no
 .endif
 
 BUILDLINK_TRANSFORM+=	rm:-laudio
+BUILDLINK_TRANSFORM+=	rm:-fno-PIC
 
 .include "options.mk"
 
