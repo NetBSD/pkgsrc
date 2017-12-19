@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2017/12/19 11:45:25 leot Exp $
+bin/lsrc
+bin/mkrc
+bin/rcdn
+bin/rcup
+man/man1/lsrc.1
+man/man1/mkrc.1
+man/man1/rcdn.1
+man/man1/rcup.1
+man/man5/rcrc.5
+man/man7/rcm.7
+share/rcm/rcm.sh
