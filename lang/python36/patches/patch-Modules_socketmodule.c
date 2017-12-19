@@ -1,10 +1,10 @@
-$NetBSD: patch-Modules_socketmodule.c,v 1.1 2017/05/30 13:36:39 bouyer Exp $
+$NetBSD: patch-Modules_socketmodule.c,v 1.2 2017/12/19 09:37:14 adam Exp $
 
 Support NetBSD's socketcan implementation
 
---- Modules/socketmodule.c.orig	2017-05-30 13:31:59.096006411 +0200
-+++ Modules/socketmodule.c	2017-05-30 13:37:39.696032387 +0200
-@@ -1405,8 +1405,13 @@
+--- Modules/socketmodule.c.orig	2017-12-19 04:53:56.000000000 +0000
++++ Modules/socketmodule.c
+@@ -1375,8 +1375,13 @@ makesockaddr(SOCKET_T sockfd, struct soc
          /* need to look up interface name given index */
          if (a->can_ifindex) {
              ifr.ifr_ifindex = a->can_ifindex;
@@ -18,23 +18,23 @@ Support NetBSD's socketcan implementation
          }
  
          return Py_BuildValue("O&h", PyUnicode_DecodeFSDefault,
-@@ -1905,12 +1910,14 @@
+@@ -1878,12 +1883,14 @@ getsockaddrarg(PySocketSockObject *s, Py
      }
- #endif
+ #endif /* HAVE_LINUX_TIPC_H */
  
--#if defined(AF_CAN) && defined(CAN_RAW) && defined(CAN_BCM)
-+#if defined(AF_CAN) && defined(CAN_RAW)
+-#if defined(AF_CAN) && defined(CAN_RAW) && defined(CAN_BCM) && defined(SIOCGIFINDEX)
++#if defined(AF_CAN) && defined(CAN_RAW) && defined(SIOCGIFINDEX)
      case AF_CAN:
          switch (s->sock_proto) {
          case CAN_RAW:
-+#ifdef CAN_BCM
++#if defined(CAN_BCM)
          /* fall-through */
          case CAN_BCM:
 +#endif
          {
              struct sockaddr_can *addr;
              PyObject *interfaceName;
-@@ -1930,7 +1937,12 @@
+@@ -1903,7 +1910,12 @@ getsockaddrarg(PySocketSockObject *s, Py
              } else if ((size_t)len < sizeof(ifr.ifr_name)) {
                  strncpy(ifr.ifr_name, PyBytes_AS_STRING(interfaceName), sizeof(ifr.ifr_name));
                  ifr.ifr_name[(sizeof(ifr.ifr_name))-1] = '\0';
@@ -48,7 +48,7 @@ Support NetBSD's socketcan implementation
                      s->errorhandler();
                      Py_DECREF(interfaceName);
                      return 0;
-@@ -7136,6 +7148,20 @@
+@@ -7111,6 +7123,20 @@ PyInit__socket(void)
      PyModule_AddIntConstant(m, "CAN_BCM_RX_TIMEOUT", RX_TIMEOUT);
      PyModule_AddIntConstant(m, "CAN_BCM_RX_CHANGED", RX_CHANGED);
  #endif
