@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2017/09/25 22:30:06 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2017/12/19 10:08:14 markd Exp $
 
 DISTNAME=		mpeg4ip-1.6.1
 PKGNAME=		libmp4v2-1.6.1
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		multimedia
 # distfile at sf is corrupt
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mpeg4ip/}
