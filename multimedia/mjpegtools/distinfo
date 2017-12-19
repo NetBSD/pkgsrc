@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.27 2015/11/03 23:54:30 agc Exp $
+$NetBSD: distinfo,v 1.28 2017/12/19 10:34:47 markd Exp $
 
-SHA1 (mjpegtools-2.0.0.tar.gz) = f411e8573d446711dbe8455a6ae9257e1afe1e70
-RMD160 (mjpegtools-2.0.0.tar.gz) = 454e23bedb2bd592912a546d0621b5c3662c3bb2
-SHA512 (mjpegtools-2.0.0.tar.gz) = 1b666293f55b10869e959305d9b3b2ab0388292498f49ba791439ae167f1d8c8921457e0e5312b74d53f61a68fc13da0222f1f83aced5fe5b04768be0cce07ad
-Size (mjpegtools-2.0.0.tar.gz) = 1749671 bytes
+SHA1 (mjpegtools-2.1.0.tar.gz) = b9effa86280e23d67369e842e5cb645948583097
+RMD160 (mjpegtools-2.1.0.tar.gz) = b63a26442e440512d946c4591ee604689f6e8159
+SHA512 (mjpegtools-2.1.0.tar.gz) = 10d3288f47d7cc4de87fa63f65e0fd4bd0a9af95db77155eecccecae7a7e60ebab83eaec44cf7a2c3d9e627f0cc086eda208abee1a7a74cbf3f85e87bb979ac5
+Size (mjpegtools-2.1.0.tar.gz) = 1844336 bytes
 SHA1 (patch-aa) = 0c46a6a6d5f7e5103cdcc51e03f9d109900cb37b
-SHA1 (patch-lavtools_Makefile.in) = 1f67844db005e16e4ba2bfc5d5fca552ca9a4aff
-SHA1 (patch-y4mdenoise_MotionSearcher.hh) = 005783ee930add3897041778a9d3b3817e18cce2
