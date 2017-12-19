@@ -1,6 +1,7 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2016/02/07 22:10:47 markd Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2017/12/19 09:47:55 markd Exp $
 
 Fix build error with Qt >= 5.3.2
+tests require gtest, so make optional
 
 --- CMakeLists.txt.orig	2015-09-10 04:26:44.095679440 +0000
 +++ CMakeLists.txt
@@ -12,3 +13,19 @@ Fix build error with Qt >= 5.3.2
  IF(WIN32)
  	find_package(Qt5WinExtras)
  ENDIF()
+@@ -165,10 +166,12 @@ SET(LUMINANCE_HDR_H ${LUMINANCE_HDR_H}
+ SET(LUMINANCE_HDR_RCCS icons.qrc)
+ QT5_ADD_RESOURCES(LUMINANCE_HDR_RCCS_SRCS ${LUMINANCE_HDR_RCCS})
+ 
+-ENABLE_TESTING()
+-
+ ADD_SUBDIRECTORY(src)
+-ADD_SUBDIRECTORY(test)
++
++IF(ENABLE_UNIT_TEST)
++    ENABLE_TESTING()
++    ADD_SUBDIRECTORY(test)
++ENDIF(ENABLE_UNIT_TEST)
+ 
+ # translations
+ FILE(GLOB LUMINANCE_TS i18n/lang_*.ts)
