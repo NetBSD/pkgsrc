@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2016/10/27 22:14:19 gdt Exp $
+$NetBSD: distinfo,v 1.7 2017/12/19 01:57:47 wiedi Exp $
 
 SHA1 (proj-4.9.3.tar.gz) = 2f5a1f13d65f9ac35bbad1e3449f32b256967856
 RMD160 (proj-4.9.3.tar.gz) = cffdce968c8929fd7f38a65e3d905a62858589a2
@@ -9,3 +9,4 @@ RMD160 (proj-datumgrid-1.5.tar.gz) = 9a75d4c1652c6b1a614ee5e90c77138a2af34025
 SHA512 (proj-datumgrid-1.5.tar.gz) = 37f3d50e7efbebc6a0e5f48926f85d4c3e651b2d20de055c96da352c21dbb649e70f7f7a5efd15225a04a610007a925b3785c46730f8b50ff390e181c084b440
 Size (proj-datumgrid-1.5.tar.gz) = 2252308 bytes
 SHA1 (patch-README) = 05ec5a5aa1b1e3f54dc4b313b308a8124c236172
+SHA1 (patch-src_pj__mutex.c) = d2bc1a32579172ece5c2cdc0e9f40121ddeb5044
