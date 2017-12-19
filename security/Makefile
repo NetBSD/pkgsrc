@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.661 2017/12/19 10:04:06 jdolecek Exp $
+# $NetBSD: Makefile,v 1.662 2017/12/19 11:55:52 leot Exp $
 #
 
 COMMENT=	Security tools
@@ -411,6 +411,7 @@ SUBDIR+=	py-hsm
 SUBDIR+=	py-itsdangerous
 SUBDIR+=	py-kerberos
 SUBDIR+=	py-keyring
+SUBDIR+=	py-keyrings.alt
 SUBDIR+=	py-lasso
 SUBDIR+=	py-libtaxii
 SUBDIR+=	py-m2crypto
