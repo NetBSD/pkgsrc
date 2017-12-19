@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2017/02/16 09:46:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2017/12/19 09:28:25 markd Exp $
 bin/inkscape
 bin/inkview
 lib/inkscape/lib2geom_LIB.a
@@ -36,6 +36,7 @@ share/inkscape/attributes/svgprops
 share/inkscape/branding/README
 share/inkscape/branding/inkscape-flat.svg
 share/inkscape/branding/inkscape-text.svg
+share/inkscape/branding/inkscape.logo.svg
 share/inkscape/branding/inkscape.svg
 share/inkscape/branding/sodipodi.svg
 share/inkscape/branding/tux.svg
@@ -569,7 +570,6 @@ share/inkscape/extensions/xaml2svg/shapes.xsl
 share/inkscape/extensions/xaml2svg/transform.xsl
 share/inkscape/filters/README
 share/inkscape/filters/filters.svg
-share/inkscape/filters/filters.svg.h
 share/inkscape/fonts/README
 share/inkscape/gradients/README
 share/inkscape/icons/OCAL.png
@@ -645,14 +645,12 @@ share/inkscape/palettes/Topographic.gpl
 share/inkscape/palettes/Ubuntu.gpl
 share/inkscape/palettes/echo-palette.gpl
 share/inkscape/palettes/inkscape.gpl
-share/inkscape/palettes/palettes.h
 share/inkscape/palettes/svg.gpl
 share/inkscape/palettes/webhex.gpl
 share/inkscape/palettes/websafe22.gpl
 share/inkscape/palettes/windowsXP.gpl
 share/inkscape/patterns/README
 share/inkscape/patterns/patterns.svg
-share/inkscape/patterns/patterns.svg.h
 share/inkscape/screens/README
 share/inkscape/screens/about.svg
 share/inkscape/symbols/AigaSymbols.svg
@@ -661,7 +659,6 @@ share/inkscape/symbols/FlowSymbols.svg
 share/inkscape/symbols/LogicSymbols.svg
 share/inkscape/symbols/MapSymbolsNPS.svg
 share/inkscape/symbols/README
-share/inkscape/symbols/symbols.h
 share/inkscape/templates/CD_label_120x120.svg
 share/inkscape/templates/LaTeX_Beamer.svg
 share/inkscape/templates/README
@@ -691,7 +688,6 @@ share/inkscape/templates/default.zh_TW.svg
 share/inkscape/templates/default_pt.svg
 share/inkscape/templates/default_px.svg
 share/inkscape/templates/no_layers.svg
-share/inkscape/templates/templates.h
 share/inkscape/tutorials/README
 share/inkscape/tutorials/edge3d.svg
 share/inkscape/tutorials/gpl-2.svg
