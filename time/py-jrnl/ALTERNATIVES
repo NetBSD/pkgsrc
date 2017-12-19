@@ -1,0 +1,1 @@
+bin/jrnl @PREFIX@/bin/jrnl-@PYVERSSUFFIX@
