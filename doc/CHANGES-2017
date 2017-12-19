@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5332 2017/12/19 14:07:26 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.5333 2017/12/19 14:27:23 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7698,3 +7698,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/openjdk8 to 1.8.152nb1 [jperkin 2017-12-19]
 	Updated devel/gradle to 4.4 [fhajny 2017-12-19]
 	Updated textproc/libfastjson to 0.99.8 [fhajny 2017-12-19]
+	Added time/py-jrnl version 1.9.8 [leot 2017-12-19]
