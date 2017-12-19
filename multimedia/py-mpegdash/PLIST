@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2017/12/19 12:22:20 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/mpegdash/__init__.py
+${PYSITELIB}/mpegdash/__init__.pyc
+${PYSITELIB}/mpegdash/__init__.pyo
+${PYSITELIB}/mpegdash/nodes.py
+${PYSITELIB}/mpegdash/nodes.pyc
+${PYSITELIB}/mpegdash/nodes.pyo
+${PYSITELIB}/mpegdash/parser.py
+${PYSITELIB}/mpegdash/parser.pyc
+${PYSITELIB}/mpegdash/parser.pyo
+${PYSITELIB}/mpegdash/utils.py
+${PYSITELIB}/mpegdash/utils.pyc
+${PYSITELIB}/mpegdash/utils.pyo
