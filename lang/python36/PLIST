@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/12/13 12:56:10 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/12/19 09:37:14 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -332,6 +332,8 @@ lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/install-sh
 lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/libpython${PY_VER_SUFFIX}.a
 lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/makesetup
 lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/python-config.py
+lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/python-config.pyc
+lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/python-config.pyo
 lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/python.o
 lib/python${PY_VER_SUFFIX}/configparser.py
 lib/python${PY_VER_SUFFIX}/configparser.pyc
@@ -1456,6 +1458,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/__init__.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/__main__.py
 lib/python${PY_VER_SUFFIX}/idlelib/__main__.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/__main__.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/_pyclbr.py
+lib/python${PY_VER_SUFFIX}/idlelib/_pyclbr.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/_pyclbr.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/autocomplete.py
 lib/python${PY_VER_SUFFIX}/idlelib/autocomplete.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/autocomplete.pyo
@@ -1558,6 +1563,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_autocomplete.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_autoexpand.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_autoexpand.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_autoexpand.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_browser.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_browser.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_browser.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_calltips.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_calltips.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_calltips.pyo
@@ -1633,6 +1641,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_replace.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_rstrip.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_rstrip.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_rstrip.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_run.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_run.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_run.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_scrolledlist.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_scrolledlist.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_scrolledlist.pyo
@@ -1732,9 +1743,6 @@ lib/python${PY_VER_SUFFIX}/idlelib/stackviewer.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/statusbar.py
 lib/python${PY_VER_SUFFIX}/idlelib/statusbar.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/statusbar.pyo
-lib/python${PY_VER_SUFFIX}/idlelib/tabbedpages.py
-lib/python${PY_VER_SUFFIX}/idlelib/tabbedpages.pyc
-lib/python${PY_VER_SUFFIX}/idlelib/tabbedpages.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/textview.py
 lib/python${PY_VER_SUFFIX}/idlelib/textview.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/textview.pyo
@@ -4226,6 +4234,9 @@ lib/python${PY_VER_SUFFIX}/test/test_readline.pyo
 lib/python${PY_VER_SUFFIX}/test/test_regrtest.py
 lib/python${PY_VER_SUFFIX}/test/test_regrtest.pyc
 lib/python${PY_VER_SUFFIX}/test/test_regrtest.pyo
+lib/python${PY_VER_SUFFIX}/test/test_repl.py
+lib/python${PY_VER_SUFFIX}/test/test_repl.pyc
+lib/python${PY_VER_SUFFIX}/test/test_repl.pyo
 lib/python${PY_VER_SUFFIX}/test/test_reprlib.py
 lib/python${PY_VER_SUFFIX}/test/test_reprlib.pyc
 lib/python${PY_VER_SUFFIX}/test/test_reprlib.pyo
@@ -4701,6 +4712,7 @@ lib/python${PY_VER_SUFFIX}/test/win_console_handler.py
 lib/python${PY_VER_SUFFIX}/test/win_console_handler.pyc
 lib/python${PY_VER_SUFFIX}/test/win_console_handler.pyo
 lib/python${PY_VER_SUFFIX}/test/wrongcert.pem
+lib/python${PY_VER_SUFFIX}/test/xmltestdata/expat224_utf8_bug.xml
 lib/python${PY_VER_SUFFIX}/test/xmltestdata/simple-ns.xml
 lib/python${PY_VER_SUFFIX}/test/xmltestdata/simple.xml
 lib/python${PY_VER_SUFFIX}/test/xmltestdata/test.xml
