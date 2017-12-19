@@ -1,10 +1,11 @@
-$NetBSD: patch-Makefile.pre.in,v 1.4 2017/12/13 12:56:10 jperkin Exp $
+$NetBSD: patch-Makefile.pre.in,v 1.5 2017/12/19 09:37:14 adam Exp $
 
 Use only one optimisation level; needed for PLIST and setuptools compatibility.
 Do not build/install libpython3.so.
 Simplify _sysconfigdata to include only platform name.
+Swap targets libinstall and libainstall, to byte-compile python-config.py.
 
---- Makefile.pre.in.orig	2017-10-03 05:52:02.000000000 +0000
+--- Makefile.pre.in.orig	2017-12-19 04:53:56.000000000 +0000
 +++ Makefile.pre.in
 @@ -96,7 +96,7 @@ PY_CFLAGS_NODIST=$(CONFIGURE_CFLAGS_NODI
  # be able to build extension modules using the directories specified in the
@@ -24,7 +25,7 @@ Simplify _sysconfigdata to include only platform name.
  DLLLIBRARY=	@DLLLIBRARY@
  LDLIBRARYDIR=   @LDLIBRARYDIR@
  INSTSONAME=	@INSTSONAME@
-@@ -431,7 +431,7 @@ LIBRARY_OBJS=	\
+@@ -432,7 +432,7 @@ LIBRARY_OBJS=	\
  # On some systems, object files that reference DTrace probes need to be modified
  # in-place by dtrace(1).
  DTRACE_DEPS = \
@@ -33,15 +34,15 @@ Simplify _sysconfigdata to include only platform name.
  # XXX: should gcmodule, etc. be here, too?
  
  #########################################################################
-@@ -867,7 +867,6 @@ regen-opcode-targets:
- 	$(PYTHON_FOR_REGEN) $(srcdir)/Python/makeopcodetargets.py \
- 		$(srcdir)/Python/opcode_targets.h
+@@ -886,7 +886,6 @@ regen-opcode-targets:
+ 		$(srcdir)/Python/opcode_targets.h.new
+ 	$(UPDATE_FILE) $(srcdir)/Python/opcode_targets.h $(srcdir)/Python/opcode_targets.h.new
  
 -Python/ceval.o: $(srcdir)/Python/opcode_targets.h $(srcdir)/Python/ceval_gil.h
  
  Python/frozen.o: $(srcdir)/Python/importlib.h $(srcdir)/Python/importlib_external.h
  
-@@ -876,13 +875,13 @@ Python/frozen.o: $(srcdir)/Python/import
+@@ -895,13 +894,13 @@ Python/frozen.o: $(srcdir)/Python/import
  # an include guard, so we can't use a pipeline to transform its output.
  Include/pydtrace_probes.h: $(srcdir)/Include/pydtrace.d
  	$(MKDIR_P) Include
@@ -57,7 +58,16 @@ Simplify _sysconfigdata to include only platform name.
  
  Objects/typeobject.o: Objects/typeslots.inc
  
-@@ -1141,7 +1140,8 @@ altbininstall: $(BUILDPYTHON) @FRAMEWORK
+@@ -1102,7 +1101,7 @@ altinstall: commoninstall
+ 	fi
+ 
+ commoninstall:  check-clean-src @FRAMEWORKALTINSTALLFIRST@ \
+-		altbininstall libinstall inclinstall libainstall \
++		altbininstall libainstall inclinstall libinstall \
+ 		sharedinstall oldsharedinstall altmaninstall \
+ 		@FRAMEWORKALTINSTALLLAST@
+ 
+@@ -1161,7 +1160,8 @@ altbininstall: $(BUILDPYTHON) @FRAMEWORK
  		if test -n "$(PY3LIBRARY)"; then \
  			$(INSTALL_SHARED) $(PY3LIBRARY) $(DESTDIR)$(LIBDIR)/$(PY3LIBRARY); \
  		fi; \
@@ -67,7 +77,7 @@ Simplify _sysconfigdata to include only platform name.
  	fi
  	if test "x$(LIPO_32BIT_FLAGS)" != "x" ; then \
  		rm -f $(DESTDIR)$(BINDIR)python$(VERSION)-32$(EXE); \
-@@ -1318,7 +1318,7 @@ libinstall:	build_all $(srcdir)/Modules/
+@@ -1338,7 +1338,7 @@ libinstall:	build_all $(srcdir)/Modules/
  			esac; \
  		done; \
  	done
@@ -76,7 +86,7 @@ Simplify _sysconfigdata to include only platform name.
  		$(DESTDIR)$(LIBDEST); \
  	$(INSTALL_DATA) $(srcdir)/LICENSE $(DESTDIR)$(LIBDEST)/LICENSE.txt
  	if test -d $(DESTDIR)$(LIBDEST)/distutils/tests; then \
-@@ -1336,11 +1336,6 @@ libinstall:	build_all $(srcdir)/Modules/
+@@ -1356,11 +1356,6 @@ libinstall:	build_all $(srcdir)/Modules/
  		-x 'bad_coding|badsyntax|site-packages|lib2to3/tests/data' \
  		$(DESTDIR)$(LIBDEST)
  	-PYTHONPATH=$(DESTDIR)$(LIBDEST) $(RUNSHARED) \
@@ -88,7 +98,7 @@ Simplify _sysconfigdata to include only platform name.
  		$(PYTHON_FOR_BUILD) -Wi $(DESTDIR)$(LIBDEST)/compileall.py \
  		-d $(LIBDEST)/site-packages -f \
  		-x badsyntax $(DESTDIR)$(LIBDEST)/site-packages
-@@ -1349,10 +1344,6 @@ libinstall:	build_all $(srcdir)/Modules/
+@@ -1369,10 +1364,6 @@ libinstall:	build_all $(srcdir)/Modules/
  		-d $(LIBDEST)/site-packages -f \
  		-x badsyntax $(DESTDIR)$(LIBDEST)/site-packages
  	-PYTHONPATH=$(DESTDIR)$(LIBDEST) $(RUNSHARED) \
@@ -99,7 +109,7 @@ Simplify _sysconfigdata to include only platform name.
  		$(PYTHON_FOR_BUILD) -m lib2to3.pgen2.driver $(DESTDIR)$(LIBDEST)/lib2to3/Grammar.txt
  	-PYTHONPATH=$(DESTDIR)$(LIBDEST) $(RUNSHARED) \
  		$(PYTHON_FOR_BUILD) -m lib2to3.pgen2.driver $(DESTDIR)$(LIBDEST)/lib2to3/PatternGrammar.txt
-@@ -1453,7 +1444,7 @@ sharedinstall: sharedmods
+@@ -1473,7 +1464,7 @@ sharedinstall: sharedmods
  		--install-scripts=$(BINDIR) \
  		--install-platlib=$(DESTSHARED) \
  		--root=$(DESTDIR)/
