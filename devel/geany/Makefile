@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2017/11/24 15:00:37 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2017/12/19 08:22:45 markd Exp $
 
 DISTNAME=	geany-1.32
 CATEGORIES=	devel
@@ -21,6 +21,7 @@ PKGCONFIG_OVERRIDE+=	geany.pc.in
 CONFIGURE_ARGS+=	--enable-plugins
 CONFIGURE_ARGS+=	--enable-vte
 CONFIGURE_ARGS+=	--enable-socket
+CONFIGURE_ARGS+=	--disable-gtkdoc-header
 
 MAKE_FLAGS+=		CCLD=${CXX:Q}
 
