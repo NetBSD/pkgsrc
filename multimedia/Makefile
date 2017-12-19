@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.259 2017/09/26 10:27:09 wiz Exp $
+# $NetBSD: Makefile,v 1.260 2017/12/19 12:22:19 adam Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -180,6 +180,7 @@ SUBDIR+=	py-gstreamer0.10
 SUBDIR+=	py-gstreamer1
 SUBDIR+=	py-m3u8
 SUBDIR+=	py-ming
+SUBDIR+=	py-mpegdash
 SUBDIR+=	regionset
 SUBDIR+=	replex
 SUBDIR+=	ruby-gnome2-clutter-gstreamer
