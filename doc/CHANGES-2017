@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5329 2017/12/19 13:10:28 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5330 2017/12/19 13:26:39 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7695,3 +7695,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/py-keyrings.alt version 2.3 [leot 2017-12-19]
 	Added multimedia/py-mpegdash version 0.1.5 [adam 2017-12-19]
 	Updated sysutils/py-notify to 0.3.1 [adam 2017-12-19]
+	Updated lang/openjdk8 to 1.8.152nb1 [jperkin 2017-12-19]
