@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.61 2017/09/09 21:48:56 prlw1 Exp $
+$NetBSD: distinfo,v 1.62 2017/12/19 09:28:25 markd Exp $
 
-SHA1 (inkscape-0.92.1.tar.bz2) = bede1252b344dc08abb6736084364d8125a6dffc
-RMD160 (inkscape-0.92.1.tar.bz2) = 5748920692ac64bb3e1822b7cb9e96c727b23c55
-SHA512 (inkscape-0.92.1.tar.bz2) = f8f3bfb812a214216c3ffac7064a4619f847cf9810417c782481dba12e6c6a44123c8b8a9289fbf5287f2e6b6df39a641d94a000d842faee5ff808eec86187a0
-Size (inkscape-0.92.1.tar.bz2) = 31222684 bytes
+SHA1 (inkscape-0.92.2.tar.bz2) = c620d7aac594a0f839f2f7840d57e26f00991d16
+RMD160 (inkscape-0.92.2.tar.bz2) = 5508b38c47ed0a860a734eef8f8ca8e53f4e923a
+SHA512 (inkscape-0.92.2.tar.bz2) = e790cafb7cc2be2eb75f04ac4c18ae8558ae997f4261c38dac9c2a3383c7a12a0f4a090956770d1341b212fc9698d31d212f2c1609421907255f8af650569b30
+Size (inkscape-0.92.2.tar.bz2) = 31224100 bytes
 SHA1 (patch-CMakeScripts_DefineDependsandFlags.cmake) = 4052c5a9f6f96afaac715f282f14d082b5d19bcf
 SHA1 (patch-CMakeScripts_Pod2man.cmake) = 6176956791ae3e8eb007345e5ec19100812bdeb8
 SHA1 (patch-ag) = 6b6000f3940ec6db9404a206f9757928c1d5740b
@@ -11,7 +11,7 @@ SHA1 (patch-aj) = 31d6cc8bb179629023bd04bcac0fd935b2c9636d
 SHA1 (patch-ap) = 412509a03d26e925548e3371529a1273db958611
 SHA1 (patch-aq) = fb7de44d33fdc5895ce84ca8d44ff6a6c328c402
 SHA1 (patch-config.h.cmake) = 1dcc7237fba3dbdfd7993ea2f5a2176785fb561e
-SHA1 (patch-src_CMakeLists.txt) = 47c2a225667b6e5554ab579df1cb323742bcd08c
+SHA1 (patch-src_CMakeLists.txt) = ccd5eeca81891f83c5eaf8cb80d33f001beaf55c
 SHA1 (patch-src_extension_internal_pdfinput_pdf-input.cpp) = 437cb3a461df047fef3c91e86c89cdcf15ef9965
 SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = ebb2ad7862ac6d97a8dc40be27b7560defcc80fe
 SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.h) = ba408f45544853f9323f8bd879bd55604072bb7a
