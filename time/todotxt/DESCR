@@ -1,0 +1,7 @@
+A simple and extensible shell script for managing your todo.txt file.
+
+With a simple but powerful shell script called todo.sh, you can interact
+with todo.txt at the command line for quick and easy, Unix-y access.
+
+The Todo.txt CLI supports archiving completed tasks to done.txt and
+priority/context tab autocompletion.
