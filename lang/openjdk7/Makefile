@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2017/11/23 17:20:01 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2017/12/19 11:46:33 jperkin Exp $
 
 JDK_MICRO=	141
 DISTNAME=	openjdk-1.7.${JDK_MICRO}-20170813
@@ -66,7 +66,7 @@ MAKE_ENV+=	ALT_BOOTDIR=${ALT_BOOTDIR}
 MAKE_ENV+=	ALT_DROPS_DIR=${DISTDIR}/${DIST_SUBDIR}
 MAKE_ENV+=	ALT_FREETYPE_LIB_PATH=${BUILDLINK_PREFIX.freetype2}/lib
 MAKE_ENV+=	ALT_FREETYPE_HEADERS_PATH=${BUILDLINK_PREFIX.freetype2}/include
-MAKE_ENV+=	ALT_CUPS_HEADERS_PATH=${BUILDLINK_PREFIX.cups}/include
+MAKE_ENV+=	ALT_CUPS_HEADERS_PATH=${BUILDLINK_PREFIX.cups-base}/include
 MAKE_ENV+=	ALT_COMPILER_PATH=${WRAPPER_DIR}/bin
 MAKE_ENV+=	ALT_PACKAGE_PATH=${PREFIX}
 MAKE_ENV+=	RHINO_JAR=${WRKDIR}/${RHINO}/js.jar
@@ -295,7 +295,7 @@ MAKE_ENV+=	STRIP=${PREFIX}/bin/gstrip
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-BUILDLINK_DEPMETHOD.cups?=	build
+BUILDLINK_DEPMETHOD.cups-base?=	build
 .include "../../print/cups-base/buildlink3.mk"
 .include "../../mk/java-env.mk"
 .include "../../mk/bsd.pkg.mk"
