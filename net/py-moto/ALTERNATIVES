@@ -1,0 +1,1 @@
+bin/moto_server @PREFIX@/bin/moto_server@PYVERSSUFFIX@
