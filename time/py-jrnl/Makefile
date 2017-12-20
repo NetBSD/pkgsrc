@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2017/12/19 14:26:21 leot Exp $
+# $NetBSD: Makefile,v 1.2 2017/12/20 11:08:06 leot Exp $
 
 DISTNAME=	jrnl-1.9.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
+GITHUB_PROJECT=	jrnl
 MASTER_SITES=	${MASTER_SITE_GITHUB:=maebert/}
 
 MAINTAINER=	leot@NetBSD.org
