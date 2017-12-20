@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5339 2017/12/20 22:41:02 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5340 2017/12/20 22:41:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7707,3 +7707,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/boost-libs to 1.65.1nb3 [minskim 2017-12-20]
 	Updated databases/pgbouncer to 1.8.1 [fhajny 2017-12-20]
 	Updated x11/modular-xorg-server to 1.19.6 [wiz 2017-12-20]
+	Updated x11/modular-xorg-xephyr to 1.19.6 [wiz 2017-12-20]
