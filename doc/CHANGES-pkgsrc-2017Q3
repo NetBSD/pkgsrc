@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.24 2017/12/03 11:42:17 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.25 2017/12/20 19:13:03 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q3 branch:
 
@@ -273,4 +273,22 @@ www/firefox52-l10n: update
 Pullup ticket #5656 - requested by khorben
 mail/thunderbird: security fix
 mail/thunderbird-l10n: update
+
+Pullup ticket #5653 - requested by bsiegert
+mail/procmail: security patch
+
+Pullup ticket #5654 - requested by bsiegert
+lang/openjdk8: security update
+
+Pullup ticket #5659 - requested by bsiegert
+www/wordpress: security update
+
+Pullup ticket #5660 - requested by bsiegert
+x11/libXfont: security update
+
+Pullup ticket #5661 - requested by bsiegert
+x11/libXfont2: security update
+
+Pullup ticket #5662 - requested by bsiegert
+x11/libXcursor: security update
 
