@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.50 2017/09/02 04:13:41 ryoon Exp $
+$NetBSD: distinfo,v 1.50.4.1 2017/12/20 16:54:59 spz Exp $
 
 SHA1 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 7408f52d3bbe35c2b14bbd3215cbf60f1335d334
 RMD160 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 24f1577b5fc86d137f070aedb4610c8c89e45815
@@ -44,10 +44,10 @@ SHA1 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 29b
 RMD160 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = b13d0e42839fb746d41f9001e488162b47803140
 SHA512 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 1403e582dacd0474e57d9aa8f1333060c50d099ef5d2c5a992ff7f63dcde2e538ff1e7fb78e45d12fd5aea6daf0704672e7f326399d415ee0d6bb53b6f925e9f
 Size (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 37883700 bytes
-SHA1 (openjdk7/openjdk-1.8.144-20170830.tar.xz) = a897c539fec09e9f97769f4fd64e4f387569c8b4
-RMD160 (openjdk7/openjdk-1.8.144-20170830.tar.xz) = 4506dc7484898d397adf34922d534082d9f598ad
-SHA512 (openjdk7/openjdk-1.8.144-20170830.tar.xz) = 207f9ba412276a87b6305c83290266a65f7a9ae93299bcf8e6169863c1fceeae4345687efb99b3c02822c84f2d1ad0bec66c66c6a74c002958a4bc2db34ed0a7
-Size (openjdk7/openjdk-1.8.144-20170830.tar.xz) = 55434592 bytes
+SHA1 (openjdk7/openjdk-1.8.152-20171128.tar.xz) = e4937fd9af8c1a111358a3a8d64fc6765509cd23
+RMD160 (openjdk7/openjdk-1.8.152-20171128.tar.xz) = db7f212a789ab2265d802e51c6c5274a97151c65
+SHA512 (openjdk7/openjdk-1.8.152-20171128.tar.xz) = 4e3e3c1c4049071df292b317ab4d7ec2fe0c98b3d1f628a61997f8a564936dba1380691a8ef04fb84b2759fd9db34fe0646f4fb7959084acd6ffba022d69597a
+Size (openjdk7/openjdk-1.8.152-20171128.tar.xz) = 55518112 bytes
 SHA1 (patch-aa) = 512a42ff1a0d6c4a0672ec32e9396cc0c5c8c9fb
 SHA1 (patch-al) = f65f739805c2ef471a4de10d6da42e86c5561b8c
 SHA1 (patch-an) = fce4da00762770c1c0592bd225bf73e875252178
@@ -59,7 +59,7 @@ SHA1 (patch-bh) = 6194a7c319a496f8ff7df173912cf87118f26a63
 SHA1 (patch-bi) = 190056b3d4c42986ae0a600668b02711598361b8
 SHA1 (patch-bn) = a50dbe17236a90d60d4bbb852ae447e51a279892
 SHA1 (patch-common_autoconf_boot-jdk.m4) = 530da90ea4062f9d8c208557ff634579b0b19f55
-SHA1 (patch-common_autoconf_generated-configure.sh) = 116f1b37fc737ca30998a28b40ef00f7be95a744
+SHA1 (patch-common_autoconf_generated-configure.sh) = becb70acee2cfaa5f8bab588ece118303fe1f123
 SHA1 (patch-common_autoconf_spec.gmk.in) = e98bc4c8a09f49c6a26447e6f78abf4709ee694b
 SHA1 (patch-hotspot_agent_src_os_bsd_Makefile) = a686ca478011561df93cce6311b5a344d79c3a24
 SHA1 (patch-hotspot_agent_src_share_classes_sun_jvm_hotspot_utilities_PlatformInfo.java) = 893f3b7ad0839a75be49ddd0f5eefcff2dbd2928
@@ -106,12 +106,12 @@ SHA1 (patch-hotspot_src_share_vm_runtime_arguments.cpp) = 80265396c62de95b0937d7
 SHA1 (patch-hotspot_src_share_vm_utilities_globalDefinitions__gcc.hpp) = a8e8fef04d7acb4772f57961e7df3681bd53d0b9
 SHA1 (patch-hotspot_src_share_vm_utilities_hashtable.cpp) = 83b90d951ce3aa9e913a36d792ac7376fb3d8bc7
 SHA1 (patch-jdk_make_CompileDemos.gmk) = 4d5e2e9b0e35e373e6246408c775c25094b6f1c7
-SHA1 (patch-jdk_make_CompileLaunchers.gmk) = fc386f8992db579483ad779f1aecfca762a29f92
+SHA1 (patch-jdk_make_CompileLaunchers.gmk) = 1a8807595c5774fc6ecfc7caa3b53b806cc9537b
 SHA1 (patch-jdk_make_CreateJars.gmk) = 0f49c8ec33121d7878ea4b6bd06d2e4e4af9a1d5
 SHA1 (patch-jdk_make_GenerateSources.gmk) = ec1b64805afb6edca637d87529b1d3fa59d20828
 SHA1 (patch-jdk_make_Images.gmk) = e6643dcb25ad5457efe610f6ab7fd0ccc9b5ed41
 SHA1 (patch-jdk_make_lib_Awt2dLibraries.gmk) = 519960ee33b748b5d91b101c2d644117a6b18e12
-SHA1 (patch-jdk_make_lib_CoreLibraries.gmk) = 0afdb43822b01b244d56446ae11d15629eeec285
+SHA1 (patch-jdk_make_lib_CoreLibraries.gmk) = 60392b9e8f4c823cffb120b9d7418bf8cb31e776
 SHA1 (patch-jdk_make_lib_NioLibraries.gmk) = 5a1044c444e534d627b46d820d27bb545e65959d
 SHA1 (patch-jdk_make_lib_ServiceabilityLibraries.gmk) = 76eb64f3602f67ccb346df7a0acedf097869ba76
 SHA1 (patch-jdk_make_lib_SoundLibraries.gmk) = b63cf0ebe204acf7264704916df875a31de84393
@@ -127,7 +127,7 @@ SHA1 (patch-jdk_src_solaris_classes_sun_nio_ch_DefaultAsynchronousChannelProvide
 SHA1 (patch-jdk_src_solaris_native_com_sun_media_sound_PLATFORM__API__BsdOS__ALSA__PCM.c) = 7fab23dce20b4ff18123ea65841589ae673f5675
 SHA1 (patch-jdk_src_solaris_native_java_lang_UNIXProcess__md.c) = 2596d03c4a2e0d978aabfd4b170b0dd1d6260c6d
 SHA1 (patch-jdk_src_solaris_native_java_lang_java__props__md.c) = 672c9a044936cb11cc91e9a3e550dc69ef665209
-SHA1 (patch-jdk_src_solaris_native_java_net_NetworkInterface.c) = 4e4cd6b8aef0011edf176505624ef4f518eb6c7e
+SHA1 (patch-jdk_src_solaris_native_java_net_NetworkInterface.c) = 6d58169565503ef8e50224fce8380e42cb87baba
 SHA1 (patch-jdk_src_solaris_native_java_net_net__util__md.c) = c51d6b0687011a54c27e6253cad33d8f8cc27124
 SHA1 (patch-jdk_src_solaris_native_sun_awt_X11Color.c) = cf0f8218e0088b677cd66fd5bc0d575ab08b710f
 SHA1 (patch-jdk_test_Makefile) = 36430647c444dea491ae0c916c6ad7b1a3607ec6
