@@ -1,14 +1,18 @@
-$NetBSD: patch-bd,v 1.3 2014/09/04 07:37:44 wiz Exp $
+$NetBSD: patch-bd,v 1.3.28.1 2017/12/20 16:36:28 spz Exp $
 
 First chunk:
 https://bugzilla.redhat.com/show_bug.cgi?id=1121299
 CVE-2014-3618
 
 Second chunk:
+https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=876511
+CVE-2017-16844
+
+Third chunk:
 Avoid conflict with existing getline() functions.
 
---- src/formisc.c.orig	2001-06-29 02:20:45.000000000 +0000
-+++ src/formisc.c
+--- src/formisc.c.orig	2001-06-28 19:20:45.000000000 -0700
++++ src/formisc.c	2017-11-26 12:21:14.260042851 -0800
 @@ -84,12 +84,11 @@ normal:	   *target++= *start++;
  	case '"':*target++=delim='"';start++;
        }
@@ -23,6 +27,15 @@ Avoid conflict with existing getline() functions.
        }
       hitspc=2;
     }
+@@ -104,7 +103,7 @@ void loadsaved(sp)const struct saved*con
+ }
+ 							    /* append to buf */
+ void loadbuf(text,len)const char*const text;const size_t len;
+-{ if(buffilled+len>buflen)			  /* buf can't hold the text */
++{ while(buffilled+len>buflen)			  /* buf can't hold the text */
+      buf=realloc(buf,buflen+=Bsize);
+   tmemmove(buf+buffilled,text,len);buffilled+=len;
+ }
 @@ -115,7 +114,7 @@ void loadchar(c)const int c;		      /* a
    buf[buffilled++]=c;
  }
