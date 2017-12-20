@@ -1,6 +1,6 @@
-$NetBSD: patch-jdk_make_CompileLaunchers.gmk,v 1.4 2016/07/19 12:32:15 jperkin Exp $
+$NetBSD: patch-jdk_make_CompileLaunchers.gmk,v 1.4.12.1 2017/12/20 16:54:59 spz Exp $
 
---- jdk/make/CompileLaunchers.gmk.orig	2016-05-06 12:11:21.000000000 +0000
+--- jdk/make/CompileLaunchers.gmk.orig	2017-11-28 00:13:34.000000000 +0000
 +++ jdk/make/CompileLaunchers.gmk
 @@ -121,7 +121,7 @@ define SetupLauncher
    endif
@@ -18,7 +18,7 @@ $NetBSD: patch-jdk_make_CompileLaunchers.gmk,v 1.4 2016/07/19 12:32:15 jperkin E
 -  UNPACKEXE_ZIPOBJS := -lz
 +  UNPACKEXE_ZIPOBJS := @COMPILER_RPATH_FLAG@@BUILDLINK_PREFIX.zlib@/lib -L@BUILDLINK_PREFIX.zlib@/lib -lz
  else
-   UNPACKEXE_CFLAGS := -I$(JDK_TOPDIR)/src/share/native/java/util/zip/zlib-1.2.8
+   UNPACKEXE_CFLAGS := -I$(JDK_TOPDIR)/src/share/native/java/util/zip/zlib
    UNPACKEXE_ZIPOBJS := $(JDK_OUTPUTDIR)/objs/libzip/zcrc32$(OBJ_SUFFIX) \
 @@ -548,9 +548,7 @@ BUILD_JEXEC_DST_DIR := $(JDK_OUTPUTDIR)/
  # jdk/make/java/Makefile

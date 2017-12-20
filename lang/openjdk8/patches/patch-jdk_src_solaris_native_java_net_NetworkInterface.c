@@ -1,10 +1,10 @@
-$NetBSD: patch-jdk_src_solaris_native_java_net_NetworkInterface.c,v 1.3 2016/10/27 13:06:42 ryoon Exp $
+$NetBSD: patch-jdk_src_solaris_native_java_net_NetworkInterface.c,v 1.3.10.1 2017/12/20 16:54:59 spz Exp $
 
 Zones support.
 
---- jdk/src/solaris/native/java/net/NetworkInterface.c.orig	2016-10-26 22:56:37.000000000 +0000
+--- jdk/src/solaris/native/java/net/NetworkInterface.c.orig	2017-11-28 00:13:32.000000000 +0000
 +++ jdk/src/solaris/native/java/net/NetworkInterface.c
-@@ -42,6 +42,7 @@
+@@ -39,6 +39,7 @@
  #include <fcntl.h>
  #include <stropts.h>
  #include <sys/sockio.h>
@@ -12,7 +12,7 @@ Zones support.
  #endif
  
  #if defined(__linux__)
-@@ -62,14 +63,12 @@
+@@ -58,14 +59,12 @@
  #include <sys/param.h>
  #include <sys/ioctl.h>
  #include <sys/sockio.h>
@@ -29,17 +29,17 @@ Zones support.
  #endif
  #include <net/if_dl.h>
  #include <netinet/in_var.h>
-@@ -1710,7 +1709,8 @@ static short getSubnet(JNIEnv *env, int 
- }
+@@ -82,7 +81,8 @@
+     #ifndef SIOCGLIFHWADDR
+         #define SIOCGLIFHWADDR _IOWR('i', 192, struct lifreq)
+     #endif
+-    #define DEV_PREFIX "/dev/"
++    #define NET_DEV_PREFIX "/dev/"
++    #define ZONE_NET_DEV_PREFIX    "/dev/net/"
+ #endif
  
- 
--#define DEV_PREFIX  "/dev/"
-+#define NET_DEV_PREFIX	"/dev/"
-+#define ZONE_NET_DEV_PREFIX	"/dev/net/"
- 
- /*
-  * Solaris specific DLPI code to get hardware address from a device.
-@@ -1728,9 +1728,18 @@ static int getMacFromDevice
+ #ifdef LIFNAMSIZ
+@@ -1843,9 +1843,18 @@ static int getMacFromDevice
      char buf[128];
      int flags = 0;
  
@@ -58,5 +58,5 @@ Zones support.
      strcat(style1dev, ifname);
 +
      if ((fd = open(style1dev, O_RDWR)) < 0) {
-          // Can't open it. We probably are missing the privilege.
-          // We'll have to try something else
+         // Can't open it. We probably are missing the privilege.
+         // We'll have to try something else
