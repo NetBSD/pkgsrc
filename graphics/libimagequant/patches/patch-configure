@@ -1,8 +1,9 @@
-$NetBSD: patch-configure,v 1.5 2017/07/03 21:50:32 adam Exp $
+$NetBSD: patch-configure,v 1.6 2017/12/20 11:52:23 dholland Exp $
 
 Remove unwanted compiler flags.
+Avoid leaving scratch files in /tmp.
 
---- configure.orig	2017-07-02 21:40:53.000000000 +0000
+--- configure.orig	2017-11-27 15:38:43.000000000 +0000
 +++ configure
 @@ -2,7 +2,7 @@
  
@@ -13,7 +14,17 @@ Remove unwanted compiler flags.
  
  DEBUG=
  QUIET=0
-@@ -136,7 +136,7 @@ cflags "-std=c99 -I."
+@@ -124,7 +124,8 @@ if [ "$QUIET" -ne 1 ]; then
+ fi
+ 
+ # /tmp, because mingw has problems opening /dev/null and gives false negative
+-if ! echo "int main(){}" | "$CC" -xc -std=c99 -o /tmp/gcccheck - > /dev/null; then
++# not /tmp, because that's not safe
++if ! echo "int main(){}" | "$CC" -xc -std=c99 -o ./tmp-gcccheck - > /dev/null; then
+     error "Compiler" "$CC failed to compile anything (make sure it's installed and supports C99)"
+ fi
+ 
+@@ -136,7 +137,7 @@ cflags "-std=c99 -I."
  
  # DEBUG
  if [ -z "$DEBUG" ]; then
@@ -22,7 +33,7 @@ Remove unwanted compiler flags.
      status "Debug" "no"
  else
      cflags "-O1 -g"
-@@ -174,15 +174,9 @@ if [ -n "$OPENMP" ]; then
+@@ -174,15 +175,9 @@ if [ -n "$OPENMP" ]; then
      else
          OPENMPFLAGS="-fopenmp"
      fi
@@ -38,7 +49,7 @@ Remove unwanted compiler flags.
  else
      # silence warnings about omp pragmas
      cflags "-Wno-unknown-pragmas"
-@@ -190,20 +184,10 @@ else
+@@ -190,20 +185,10 @@ else
      status "OpenMP" "no"
  fi
  
