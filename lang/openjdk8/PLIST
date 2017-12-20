@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/03/31 07:55:14 abs Exp $
+@comment $NetBSD: PLIST,v 1.7.6.1 2017/12/20 16:54:59 spz Exp $
 bin/openjdk8-jar
 bin/openjdk8-java
 bin/openjdk8-javac
@@ -433,12 +433,14 @@ java/openjdk8/jre/lib/psfont.properties.ja
 java/openjdk8/jre/lib/psfontj2d.properties
 java/openjdk8/jre/lib/resources.jar
 java/openjdk8/jre/lib/rt.jar
-java/openjdk8/jre/lib/security/US_export_policy.jar
 java/openjdk8/jre/lib/security/blacklisted.certs
 java/openjdk8/jre/lib/security/cacerts
 java/openjdk8/jre/lib/security/java.policy
 java/openjdk8/jre/lib/security/java.security
-java/openjdk8/jre/lib/security/local_policy.jar
+java/openjdk8/jre/lib/security/policy/limited/US_export_policy.jar
+java/openjdk8/jre/lib/security/policy/limited/local_policy.jar
+java/openjdk8/jre/lib/security/policy/unlimited/US_export_policy.jar
+java/openjdk8/jre/lib/security/policy/unlimited/local_policy.jar
 java/openjdk8/jre/lib/sound.properties
 java/openjdk8/jre/lib/tzdb.dat
 java/openjdk8/lib/${ARCH}/jexec
