@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2017/09/08 07:56:08 adam Exp $
+# $NetBSD: Makefile,v 1.136 2017/12/20 16:39:07 minskim Exp $
 
 .include "Makefile.version"
 
@@ -12,7 +12,7 @@ COMMENT=	Cross platform make
 LICENSE=	modified-bsd
 
 USE_TOOLS+=		gmake
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	bootstrap
 
