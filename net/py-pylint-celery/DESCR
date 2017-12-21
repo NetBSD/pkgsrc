@@ -1,0 +1,2 @@
+pylint-celery is a Pylint plugin for improving code analysis for when analysing
+code using Celery. It is also used by the Prospector tool.
