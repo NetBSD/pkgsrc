@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2017/01/02 09:51:18 adam Exp $
+# $NetBSD: options.mk,v 1.5 2017/12/21 08:18:38 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nghttp2
 PKG_SUPPORTED_OPTIONS=	nghttp2-asio nghttp2-tools
@@ -34,16 +34,13 @@ CONFIGURE_ARGS+=	--with-boost=no
 GCC_REQD+=		4.8
 CONFIGURE_ARGS+=	--enable-app
 CONFIGURE_ARGS+=	--enable-hpack-tools
-CONFIGURE_ARGS+=	--with-spdylay
 PLIST.tools=		yes
 .include "../../devel/libev/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libcares/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
-.include "../../www/spdylay/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-app
 CONFIGURE_ARGS+=	--disable-hpack-tools
-CONFIGURE_ARGS+=	--without-spdylay
 .endif
