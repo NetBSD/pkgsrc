@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/07/16 20:14:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/12/21 09:57:44 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -22,12 +22,18 @@ ${PYSITELIB}/astroid/astpeephole.pyo
 ${PYSITELIB}/astroid/bases.py
 ${PYSITELIB}/astroid/bases.pyc
 ${PYSITELIB}/astroid/bases.pyo
+${PYSITELIB}/astroid/brain/brain_attrs.py
+${PYSITELIB}/astroid/brain/brain_attrs.pyc
+${PYSITELIB}/astroid/brain/brain_attrs.pyo
 ${PYSITELIB}/astroid/brain/brain_builtin_inference.py
 ${PYSITELIB}/astroid/brain/brain_builtin_inference.pyc
 ${PYSITELIB}/astroid/brain/brain_builtin_inference.pyo
 ${PYSITELIB}/astroid/brain/brain_collections.py
 ${PYSITELIB}/astroid/brain/brain_collections.pyc
 ${PYSITELIB}/astroid/brain/brain_collections.pyo
+${PYSITELIB}/astroid/brain/brain_curses.py
+${PYSITELIB}/astroid/brain/brain_curses.pyc
+${PYSITELIB}/astroid/brain/brain_curses.pyo
 ${PYSITELIB}/astroid/brain/brain_dateutil.py
 ${PYSITELIB}/astroid/brain/brain_dateutil.pyc
 ${PYSITELIB}/astroid/brain/brain_dateutil.pyo
@@ -88,6 +94,9 @@ ${PYSITELIB}/astroid/brain/brain_threading.pyo
 ${PYSITELIB}/astroid/brain/brain_typing.py
 ${PYSITELIB}/astroid/brain/brain_typing.pyc
 ${PYSITELIB}/astroid/brain/brain_typing.pyo
+${PYSITELIB}/astroid/brain/brain_uuid.py
+${PYSITELIB}/astroid/brain/brain_uuid.pyc
+${PYSITELIB}/astroid/brain/brain_uuid.pyo
 ${PYSITELIB}/astroid/builder.py
 ${PYSITELIB}/astroid/builder.pyc
 ${PYSITELIB}/astroid/builder.pyo
@@ -282,6 +291,9 @@ ${PYSITELIB}/astroid/tests/testdata/python3/data/unicode_package/core/__init__.p
 ${PYSITELIB}/astroid/tests/unittest_brain.py
 ${PYSITELIB}/astroid/tests/unittest_brain.pyc
 ${PYSITELIB}/astroid/tests/unittest_brain.pyo
+${PYSITELIB}/astroid/tests/unittest_brain_numpy.py
+${PYSITELIB}/astroid/tests/unittest_brain_numpy.pyc
+${PYSITELIB}/astroid/tests/unittest_brain_numpy.pyo
 ${PYSITELIB}/astroid/tests/unittest_builder.py
 ${PYSITELIB}/astroid/tests/unittest_builder.pyc
 ${PYSITELIB}/astroid/tests/unittest_builder.pyo
