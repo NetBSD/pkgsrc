@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1290 2017/12/21 03:50:43 manu Exp $
+# $NetBSD: Makefile,v 1.1291 2017/12/21 10:22:55 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -726,6 +726,7 @@ SUBDIR+=	py-parsel
 SUBDIR+=	py-paste
 SUBDIR+=	py-pelican
 SUBDIR+=	py-pendrell
+SUBDIR+=	py-pylint-django
 SUBDIR+=	py-pystache
 SUBDIR+=	py-python-digest
 SUBDIR+=	py-python-mimeparse
