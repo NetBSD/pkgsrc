@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.15 2017/12/13 17:54:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2017/12/21 12:22:13 wiz Exp $
 bin/neomutt
-lib/neomutt/pgpewrap
-lib/neomutt/pgpring
-lib/neomutt/smime_keys
+libexec/neomutt/pgpewrap
+libexec/neomutt/pgpring
+libexec/neomutt/smime_keys
 man/man1/neomutt.1
 man/man1/pgpewrap_neomutt.1
 man/man1/pgpring_neomutt.1
@@ -18,13 +18,18 @@ share/doc/neomutt/LICENSE.md
 share/doc/neomutt/PGP-Notes.txt
 share/doc/neomutt/README.SSL
 share/doc/neomutt/README.md
+share/doc/neomutt/advancedusage.html
 share/doc/neomutt/colorschemes/neonwolf-256.neomuttrc
 share/doc/neomutt/colorschemes/solarized-dark-256.neomuttrc
 share/doc/neomutt/colorschemes/vombatidae.neomuttrc
 share/doc/neomutt/colorschemes/zenburn.neomuttrc
+share/doc/neomutt/configuration.html
+share/doc/neomutt/gettingstarted.html
 share/doc/neomutt/hcache-bench/README.md
 share/doc/neomutt/hcache-bench/neomutt-hcache-bench.sh
 share/doc/neomutt/hcache-bench/neomuttrc
+share/doc/neomutt/index.html
+share/doc/neomutt/intro.html
 share/doc/neomutt/keybase/LICENSE
 share/doc/neomutt/keybase/README.md
 share/doc/neomutt/keybase/attachmentView.png
@@ -43,8 +48,13 @@ share/doc/neomutt/logo/neomutt-64.png
 share/doc/neomutt/logo/neomutt.svg
 share/doc/neomutt/lua/test_lua-api_runner.neomuttrc
 share/doc/neomutt/lua/test_lua-api_spec.lua
+share/doc/neomutt/manual.html
 share/doc/neomutt/manual.txt
 share/doc/neomutt/mime.types
+share/doc/neomutt/mimesupport.html
+share/doc/neomutt/miscellany.html
+share/doc/neomutt/optionalfeatures.html
+share/doc/neomutt/reference.html
 share/doc/neomutt/samples/Mush.rc
 share/doc/neomutt/samples/Pine.rc
 share/doc/neomutt/samples/Tin.rc
@@ -59,7 +69,9 @@ share/doc/neomutt/samples/sample.neomuttrc
 share/doc/neomutt/samples/sample.neomuttrc-tlr
 share/doc/neomutt/samples/smime.rc
 share/doc/neomutt/samples/smime_keys_test.pl
+share/doc/neomutt/security.html
 share/doc/neomutt/smime-notes.txt
+share/doc/neomutt/tuning.html
 share/doc/neomutt/vim-keys/README.md
 share/doc/neomutt/vim-keys/vim-keys.rc
 share/examples/neomutt/neomuttrc

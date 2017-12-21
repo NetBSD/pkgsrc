@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2017/12/13 17:54:48 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2017/12/21 12:22:13 wiz Exp $
 
-DISTNAME=		neomutt-20171208
+DISTNAME=		neomutt-20171215
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=neomutt/}
 GITHUB_TAG=		${DISTNAME}
@@ -10,14 +10,17 @@ HOMEPAGE=		https://www.neomutt.org/
 COMMENT=		Fork of mutt with integrated community patches
 LICENSE=		gnu-gpl-v2 OR gnu-gpl-v3 # or newer
 
-USE_TOOLS+=		autoconf automake autoreconf msgfmt gmake
+USE_TOOLS+=		msgfmt gmake
 
 BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
+BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
-GNU_CONFIGURE=		yes
+HAS_CONFIGURE=		yes
 EXTRACT_USING=		bsdtar
-CONFIGURE_ARGS+=	--enable-notmuch
-#CONFIGURE_ARGS+=	CFLAGS="-g -O0"
+CONFIGURE_ARGS+=	--notmuch
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 
 EGDIR=			${PREFIX}/share/examples/neomutt
 CONF_FILES=		${EGDIR}/neomuttrc ${PKG_SYSCONFDIR}/neomuttrc
@@ -34,9 +37,6 @@ CONFIGURE_ENV+=		SENDMAIL=/usr/sbin/sendmail
 .endif
 
 .include "options.mk"
-
-pre-configure:
-	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
