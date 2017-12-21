@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5342 2017/12/21 03:50:43 manu Exp $
+$NetBSD: CHANGES-2017,v 1.5343 2017/12/21 08:00:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7708,5 +7708,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/pgbouncer to 1.8.1 [fhajny 2017-12-20]
 	Updated x11/modular-xorg-server to 1.19.6 [wiz 2017-12-20]
 	Updated x11/modular-xorg-xephyr to 1.19.6 [wiz 2017-12-20]
-	Added www/ap2-upload 0.7 [manu 2017-12-21]
-	Added www/ap22-auth-ofba 0.6 [manu 2017-12-21]
+	Added www/ap2-upload version 0.7 [manu 2017-12-21]
+	Added www/ap22-auth-ofba version 0.6 [manu 2017-12-21]
+	Updated www/py-djangorestframework to 3.7.4 [adam 2017-12-21]
+	Updated devel/re2c to 1.0.3 [adam 2017-12-21]
+	Updated archivers/py-lz4 to 0.12.0 [adam 2017-12-21]
