@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/12/21 10:22:56 adam Exp $
+
+SHA1 (pylint-django-0.7.2.tar.gz) = 14a5033d1b85609f37ebfb051d7d11e4162627f1
+RMD160 (pylint-django-0.7.2.tar.gz) = a8344c79f5f8d2a10a612623e43ba98618033a75
+SHA512 (pylint-django-0.7.2.tar.gz) = 421f4fb92e8017f5e34f90530be8593112f47c65ffa8aac23ba811059a556becc9a2a677581033e83c8d4f8647e3e633208d81662ebad94af1f3955db8bdeca6
+Size (pylint-django-0.7.2.tar.gz) = 12752 bytes
