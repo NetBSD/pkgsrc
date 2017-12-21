@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/12/21 03:47:25 manu Exp $
+
+SHA1 (mod_upload-0.7.tar.gz) = f812cb2ff53597deb289f7f7739c883424d02d7e
+RMD160 (mod_upload-0.7.tar.gz) = ee3e5ff82b5f4e558ae255c8adc18ca7d4339dc9
+SHA512 (mod_upload-0.7.tar.gz) = cbf06237573360aa4fcc1cdb316b18a67826bfa6efc43ad35d3e5eca28fb360eac36e7e99dc9bea1db7f578fdbcf3e467c3947bca4707fb8925a87ff8c56a1a9
+Size (mod_upload-0.7.tar.gz) = 58324 bytes
