@@ -1,0 +1,10 @@
+When using Microsoft Office with a WebDAV share, Office programs
+will prompt for authentication each time they are started, even if
+the share is already mounted.
+
+The only way to prevent all behavior implement Microsoft Office
+Forms Based Authentication (OFBA) protocol.  This is what this
+modules implements.
+
+MS-OFBA is documented here
+https://msdn.microsoft.com/en-us/library/office/cc313069%28v=office.12%29.aspx
