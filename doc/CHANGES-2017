@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5347 2017/12/21 09:47:55 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5348 2017/12/21 10:25:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7721,3 +7721,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/libassuan2 to 2.5.1 [adam 2017-12-21]
 	Updated security/gnupg2 to 2.2.4 [adam 2017-12-21]
 	Updated security/gpgme to 1.10.0 [adam 2017-12-21]
+	Updated devel/py-astroid to 1.6.0 [adam 2017-12-21]
+	Added devel/py-pylint-plugin-utils version 0.2.6 [adam 2017-12-21]
+	Added devel/py-pylint-common version 0.2.5 [adam 2017-12-21]
+	Added www/py-pylint-django version 0.7.2 [adam 2017-12-21]
+	Added net/py-pylint-celery version 0.3 [adam 2017-12-21]
