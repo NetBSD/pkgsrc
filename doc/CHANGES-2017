@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5348 2017/12/21 10:25:03 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5349 2017/12/21 10:37:32 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7726,3 +7726,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-pylint-common version 0.2.5 [adam 2017-12-21]
 	Added www/py-pylint-django version 0.7.2 [adam 2017-12-21]
 	Added net/py-pylint-celery version 0.3 [adam 2017-12-21]
+	Updated sysutils/bcmfw to 2.2 [plunky 2017-12-21]
