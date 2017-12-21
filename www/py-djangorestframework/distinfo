@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2017/11/08 12:29:22 adam Exp $
+$NetBSD: distinfo,v 1.10 2017/12/21 07:33:44 adam Exp $
 
-SHA1 (djangorestframework-3.7.3.tar.gz) = ec256a3affdc8735bc4c451e362cf3b6488d8384
-RMD160 (djangorestframework-3.7.3.tar.gz) = d500e7009ad37d18bd31340b083bc64847d11e44
-SHA512 (djangorestframework-3.7.3.tar.gz) = 47f9f7219d194c8227c58cafc4b939ccebfb84b26abc0a713373174d3badf03e51ea1b1e0d078b2280fde39a6c947d641b7409b8489d99ba1e0ed0d564abcebd
-Size (djangorestframework-3.7.3.tar.gz) = 1014442 bytes
+SHA1 (djangorestframework-3.7.4.tar.gz) = ce6c679207cd637debd8f654c3c77ba91b55ba73
+RMD160 (djangorestframework-3.7.4.tar.gz) = b61922b4a2cb3064205a1842c7206b6307196964
+SHA512 (djangorestframework-3.7.4.tar.gz) = 049cf389747a47362a604a1f62d977f43aef58e7350b56779338d5bba404f188c3aacb15c82f8234fd52dc914cdfccca4a3a8da1298cd28c3da64aca59a44ba4
+Size (djangorestframework-3.7.4.tar.gz) = 862056 bytes
