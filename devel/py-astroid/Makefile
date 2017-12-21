@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2017/09/03 08:53:07 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/12/21 09:57:44 adam Exp $
 
-DISTNAME=	astroid-1.5.3
+DISTNAME=	astroid-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astroid/}
@@ -22,10 +22,6 @@ DEPENDS+=	${PYPKGPREFIX}-singledispatch-[0-9]*:../../devel/py-singledispatch
 .endif
 
 USE_LANGUAGES=	# none
-
-do-test:
-	cd ${WRKSRC}/astroid/tests && \
-		${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover -p "unittest*.py"
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
