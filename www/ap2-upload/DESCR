@@ -1,0 +1,3 @@
+Standalone upload manager for Apache. It can also replace
+PHP native upload implementation for performance benefit on
+network filesystems.
