@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2017/11/14 14:13:52 fhajny Exp $
+# $NetBSD: Makefile,v 1.55 2017/12/21 08:37:14 adam Exp $
 
-DISTNAME=	memcached-1.5.3
+DISTNAME=	memcached-1.5.4
 CATEGORIES=	devel
 MASTER_SITES=	http://www.memcached.org/files/
 
@@ -11,6 +11,7 @@ LICENSE=	2-clause-bsd
 
 USE_TOOLS+=		perl
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-coverage # coverage fails on some platforms
 CONFIGURE_ARGS+=	--with-libevent=${BUILDLINK_PREFIX.libevent}
 
 REPLACE_PERL=		scripts/memcached-tool
@@ -30,7 +31,7 @@ MEMCACHED_HOME?=	${VARBASE}/chroot/${PKGBASE}
 PKG_GROUPS=		${MEMCACHED_GROUP}
 PKG_USERS=		${MEMCACHED_USER}:${MEMCACHED_GROUP}
 PKG_GROUPS_VARS+=	MEMCACHED_GROUP
-PKG_USERS_VARS+=	MEMCACHED_USER
+PKG_USERS_VARS=		MEMCACHED_USER
 PKG_HOME.${MEMCACHED_USER}=	${MEMCACHED_HOME}
 PKG_GECOS.${MEMCACHED_USER}=	Memcached
 
