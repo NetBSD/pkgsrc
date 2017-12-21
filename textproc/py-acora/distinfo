@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/01/12 00:36:53 rodent Exp $
+$NetBSD: distinfo,v 1.4 2017/12/21 14:09:13 adam Exp $
 
-SHA1 (acora-2.0.tar.gz) = 783a3367609bf118b34c86cf96e78ccea1b5e5cc
-RMD160 (acora-2.0.tar.gz) = 48327b8551511900397e8a21b53e2bd9a7efff7b
-SHA512 (acora-2.0.tar.gz) = b17dc38886006baa21f46964753063f6fb8de84fced25dfe49014b08fcdf5a2990142d1468998f7121cad2b0d2898c253595f3b7099a4fc0a124ba95db948a2f
-Size (acora-2.0.tar.gz) = 166284 bytes
+SHA1 (acora-2.1.tar.gz) = dabbfcef46185a18a3e0f6eb1880d6af5f37dac6
+RMD160 (acora-2.1.tar.gz) = 703bfb93dc9c782a730a29d1452a93e752b1af11
+SHA512 (acora-2.1.tar.gz) = dc9eec9b3e240e856fe09b05c28adbf9d9981411847d8a6e63d9baecfec087b93ba1ac6f9234d8a7234a6dc0330ba07f0673535a6a19a826372bd78cc0d884e9
+Size (acora-2.1.tar.gz) = 196557 bytes
