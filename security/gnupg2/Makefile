@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2017/12/05 22:29:53 triaxx Exp $
+# $NetBSD: Makefile,v 1.80 2017/12/21 09:45:41 adam Exp $
 
-DISTNAME=	gnupg-2.2.3
-PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
-PKGREVISION=	1
+DISTNAME=	gnupg-2.2.4
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/
 EXTRACT_SUFX=	.tar.bz2
@@ -41,7 +39,7 @@ BUILDLINK_API_DEPENDS.sqlite3+=		sqlite3>=3.7.15
 .include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.24
 .include "../../security/libgpg-error/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libassuan+=	libassuan>=2.4.3
+BUILDLINK_API_DEPENDS.libassuan+=	libassuan>=2.5.1
 .include "../../security/libassuan2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libksba+=		libksba>=1.3.4
 .include "../../security/libksba/buildlink3.mk"
