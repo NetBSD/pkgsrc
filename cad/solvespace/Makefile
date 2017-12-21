@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/02/21 20:36:39 plunky Exp $
+# $NetBSD: Makefile,v 1.2 2017/12/21 08:40:06 plunky Exp $
 #
 #
 # Both of these hashes need to be updated when the solvespace version
@@ -35,7 +35,6 @@ USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 
 CMAKE_ARGS+=		-DGIT_COMMIT_HASH=${SOLVESPACE_HASH}
-CMAKE_ARGS+=		-DCMAKE_CXX_FLAGS="-D_GLIBCXX_USE_CXX11_ABI=0"
 
 SUBST_CLASSES+=		libdxfrw
 SUBST_STAGE.libdxfrw=	post-patch
