@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5351 2017/12/21 12:22:26 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5352 2017/12/21 14:07:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7729,3 +7729,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/bcmfw to 2.2 [plunky 2017-12-21]
 	Added sysutils/u-boot-nanopi-m1 version 2017.11 [jmcneill 2017-12-21]
 	Updated mail/neomutt to 20171215 [wiz 2017-12-21]
+	Updated www/py-djangorestframework to 3.7.7 [adam 2017-12-21]
+	Updated net/py-Socks to 1.6.8 [adam 2017-12-21]
+	Updated security/py-keyring to 10.5.1 [adam 2017-12-21]
