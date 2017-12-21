@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/12/21 03:50:43 manu Exp $
+lib/httpd/mod_auth_ofba.so
+sbin/ofba_session
+share/doc/mod_auth_ofba/README
