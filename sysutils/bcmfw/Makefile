@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2017/05/31 18:12:47 plunky Exp $
+# $NetBSD: Makefile,v 1.12 2017/12/21 10:36:44 plunky Exp $
 
-DISTNAME=		bcmfw-2.1
+DISTNAME=		bcmfw-2.2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://github.com/plunky/bcmfw/archive/
 DIST_SUBDIR=		${PKGNAME_NOREV}
