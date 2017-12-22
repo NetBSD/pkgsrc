@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.8 2017/02/14 21:20:48 joerg Exp $
+$NetBSD: distinfo,v 1.9 2017/12/22 21:45:23 markd Exp $
 
-SHA1 (ipmitool-1.8.11.tar.gz) = 4cb6ff3736fd3e166abc5303d6373672327a5db1
-RMD160 (ipmitool-1.8.11.tar.gz) = 189b2232bcd148bc89c610dfae73c6f12f42fb36
-SHA512 (ipmitool-1.8.11.tar.gz) = 48093790baf2532887ac87de9b55fbe38f46f271b84e6152e6b0ba11170b29aad78dfcd42036389750edbedff325476b8366b3ea1401b97148b8bc8c1bd71e4b
-Size (ipmitool-1.8.11.tar.gz) = 769964 bytes
-SHA1 (patch-ad) = 3941c5ea9286137e58ae6fb62aea6daff390ffa1
+SHA1 (ipmitool-1.8.18.tar.gz) = b85b7d01a3b8296227505ee0ad078134fc2c81ff
+RMD160 (ipmitool-1.8.18.tar.gz) = d1426f799b76f26aa98357c0c36fa68f3fa3c883
+SHA512 (ipmitool-1.8.18.tar.gz) = 274d424fff079f7628c0f9fe06580937cb9717c809a71b2f5ef97266c6b6c89983b662fbb1f090e2f94861f1799677c8fc6536013828a8a5e6cb239af53e45ab
+Size (ipmitool-1.8.18.tar.gz) = 995313 bytes
+SHA1 (patch-ad) = 4af586b36f1744d263c66ed28aa17a9f9840a415
 SHA1 (patch-ae) = 67828b62b46a30b204dd436681c5ecac39bb29b3
-SHA1 (patch-lib_ipmi__hpmfwupg.c) = e00723a892ad0427d61ecfd6648ff51c338326bc
-SHA1 (patch-src_plugins_lan_lan.c) = 0866b9a996b27e408605fb64ff507cc123875e59
-SHA1 (patch-src_plugins_lanplus_lanplus.c) = d4be54639dd5cf883cf06fa454930e14eda271f6
+SHA1 (patch-src_plugins_lanplus_lanplus__crypt__impl.c) = 8aaa1c6328bd6c0559ae9863cad671cdd32ab514
