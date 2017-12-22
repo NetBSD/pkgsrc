@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2017/05/29 20:59:21 adam Exp $
+# $NetBSD: Makefile,v 1.61 2017/12/22 12:21:54 adam Exp $
 
 .include "../../graphics/py-matplotlib/Makefile.common"
 
@@ -7,7 +7,7 @@ COMMENT=	GTK frontend for matplotlib
 
 MPL_PACKAGES=	[setupext.Numpy(),setupext.LibAgg(),setupext.BackendGtkAgg(),setupext.BackendGtk()]
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
+PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
 
 post-patch:
 	( ${ECHO} "[directories]"; \
