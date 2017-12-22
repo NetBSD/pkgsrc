@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2017/06/20 17:00:07 adam Exp $
+$NetBSD: distinfo,v 1.8 2017/12/22 19:05:44 he Exp $
 
 SHA1 (pygame-1.9.3.tar.gz) = b3ef126f0baea3bd0986fddebba82b6b13f6f282
 RMD160 (pygame-1.9.3.tar.gz) = ac95b8c2afa5076746227a6d1ae9c200d14d5757
@@ -7,4 +7,4 @@ Size (pygame-1.9.3.tar.gz) = 2974541 bytes
 SHA1 (patch-Setup.in) = 71659c0150ec53b063cd47531b8b0a93ea671ceb
 SHA1 (patch-Setup__Unix.in) = 03fb45137f018761e6b9f19de056c0fdff5d153d
 SHA1 (patch-config__darwin.py) = c39c00b3252195dcf4476574e9b8439acf66c0ab
-SHA1 (patch-config__unix.py) = b02951432fb41d1e9cffd6d85de877b710e39b28
+SHA1 (patch-config__unix.py) = 1cce6e0d55777dd8e7cdd3b8d734f00fc8a6decf
