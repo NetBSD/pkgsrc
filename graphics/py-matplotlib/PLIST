@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2017/10/13 09:50:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2017/12/22 12:21:54 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -193,9 +193,9 @@ ${PYSITELIB}/matplotlib/backends/web_backend/jquery/css/themes/base/images/ui-ic
 ${PYSITELIB}/matplotlib/backends/web_backend/jquery/css/themes/base/jquery-ui.min.css
 ${PYSITELIB}/matplotlib/backends/web_backend/jquery/js/jquery-1.11.3.min.js
 ${PYSITELIB}/matplotlib/backends/web_backend/jquery/js/jquery-ui.min.js
-${PYSITELIB}/matplotlib/backends/web_backend/mpl.js
-${PYSITELIB}/matplotlib/backends/web_backend/mpl_tornado.js
-${PYSITELIB}/matplotlib/backends/web_backend/nbagg_mpl.js
+${PYSITELIB}/matplotlib/backends/web_backend/js/mpl.js
+${PYSITELIB}/matplotlib/backends/web_backend/js/mpl_tornado.js
+${PYSITELIB}/matplotlib/backends/web_backend/js/nbagg_mpl.js
 ${PYSITELIB}/matplotlib/backends/web_backend/nbagg_uat.ipynb
 ${PYSITELIB}/matplotlib/backends/web_backend/single_figure.html
 ${PYSITELIB}/matplotlib/backends/windowing.py
