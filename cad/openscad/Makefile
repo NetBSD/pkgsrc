@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2017/08/24 20:03:05 adam Exp $
+# $NetBSD: Makefile,v 1.46 2017/12/22 21:50:02 plunky Exp $
 #
 
 DISTNAME=	openscad-2015.03-3.src
@@ -29,7 +29,8 @@ MAKE_ENV+=	INSTALL_ROOT=${DESTDIR}
 
 do-configure:
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake \
-	    PREFIX=${PREFIX} -after QMAKE_YACC=bison QMAKE_LEX=flex
+	    PREFIX=${PREFIX} -after QMAKE_YACC=bison QMAKE_LEX=flex \
+	    QMAKE_CXXFLAGS+=-std=c++0x
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
