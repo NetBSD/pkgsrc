@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5356 2017/12/22 12:24:31 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5357 2017/12/22 19:06:20 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7740,3 +7740,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-hypothesis to 3.44.3 [adam 2017-12-22]
 	Updated fonts/py-fonttools to 3.21.0 [adam 2017-12-22]
 	Updated graphics/py-matplotlib to 2.1.1 [adam 2017-12-22]
+	Updated devel/py-game to 1.9.3nb1 [he 2017-12-22]
