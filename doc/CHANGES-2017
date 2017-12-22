@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5355 2017/12/22 06:08:26 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5356 2017/12/22 12:24:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7739,3 +7739,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/py-tempora to 1.10 [adam 2017-12-22]
 	Updated devel/py-hypothesis to 3.44.3 [adam 2017-12-22]
 	Updated fonts/py-fonttools to 3.21.0 [adam 2017-12-22]
+	Updated graphics/py-matplotlib to 2.1.1 [adam 2017-12-22]
