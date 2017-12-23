@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.28 2017/04/19 12:23:34 joerg Exp $
+$NetBSD: distinfo,v 1.29 2017/12/23 21:11:32 wiz Exp $
 
-SHA1 (fossil-src-2.2.tar.gz) = b4e1899a174af3631764c6ce5309c30ff9520b22
-RMD160 (fossil-src-2.2.tar.gz) = 060a45797e4f688809f1790202ae16d04987274e
-SHA512 (fossil-src-2.2.tar.gz) = 1a1aedf3f9883a64f9f98c9a01857f5fb69cff0be23817016a4bc405b2efc85f21ac86a771d5e7314128e3fabc21444ac717017cf0935241fd4af964b7c086e0
-Size (fossil-src-2.2.tar.gz) = 4826890 bytes
-SHA1 (patch-src_export.c) = 098ed4cfc33bc559e08f790307be2d526956f5e1
+SHA1 (fossil-src-2.4.tar.gz) = 3851ae290a178853456ad39189b28e2256eaac88
+RMD160 (fossil-src-2.4.tar.gz) = d30aead999eb8d1eb5f77b4ac509f2dcd17e1283
+SHA512 (fossil-src-2.4.tar.gz) = de7f2321677df7f6dc2a3a20e58f456602d938f40125ef33d401f28cdaa93e38d3db10e109547df269bc95a2ac8669ade05b6fd6fad39e6633f15ffdd91c499f
+Size (fossil-src-2.4.tar.gz) = 4919205 bytes
