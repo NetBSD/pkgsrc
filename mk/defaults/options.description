@@ -105,9 +105,9 @@ curses			Enable curses support.
 cvs			Enable CVS support.
 cvsgraph		Enable cvsgraph support.
 cython			Enable Cython support.
+daemontools-moresignals	Add options to send SIG{QUIT,USR1,USR2} to daemons.
 dar-int32		Use 32-bit integers for file lengths in Dar.
 dar-int64		Use 64-bit integers for file lengths in Dar.
-daemontools-moresignals	Add options to send SIG{QUIT,USR1,USR2} to daemons.
 darwin			Build and/or run on Darwin and Mac OS X.
 db2			Enable db2 support.
 db4			Enable db4 support.
@@ -205,6 +205,8 @@ flambda			Enable Flambda optimisation passes
 floppyd			Use floppyd to access floppy device.
 fluidsynth		Enable MIDI support using fluidsynth.
 fontconfig		Enable FONTCONFIG (fonts/fontconfig) support.
+fossil-system-sqlite	Use pkgsrc sqlite for fossil instead of built-in.
+fossil-th1-hooks	Add support for TH1 scripts in fossil.
 freediameter-all-extensions	Build all extensions for freeDiameter (except test and debug).
 freeradius-simul-use	Enable Simultaneous-Use.
 freeswitch-08k		8000Hz Audio Files
