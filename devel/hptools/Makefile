@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2012/10/31 11:17:06 asau Exp $
-#
+# $NetBSD: Makefile,v 1.16 2017/12/24 09:52:16 wiz Exp $
 
 DISTNAME=	hptools-src-3.0.8
 PKGNAME=	hptools-3.0.8
 CATEGORIES=	devel
-MASTER_SITES=	http://www.hpcalc.org/hp48/pc/programming/
+MASTER_SITES=	https://www.hpcalc.org/hp48/pc/programming/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.hpcalc.org/hp48/pc/programming/
+HOMEPAGE=	https://www.hpcalc.org/hp48/pc/programming/
 COMMENT=	SDK for Hewlett-Packard HP-48G/49G/39G/40G calculators
 LICENSE=	hptools-license
 
