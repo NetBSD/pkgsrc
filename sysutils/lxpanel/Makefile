@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/05/12 10:39:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2017/12/24 09:59:46 wiz Exp $
 
 DISTNAME=	lxpanel-0.8.2
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	http://lxde.org/
+HOMEPAGE=	https://lxde.org/
 COMMENT=	Lightweight X11 desktop panel from LXDE
 LICENSE=	gnu-gpl-v2
 
