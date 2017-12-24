@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2017/12/03 00:12:35 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2017/12/24 13:44:56 wiedi Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 COMMENT=	Framework for writing networked applications
@@ -17,7 +17,7 @@ REPLACE_PYTHON+=	src/twisted/mail/test/pop3testserver.py
 REPLACE_PYTHON+=	src/twisted/trial/test/scripttest.py
 REPLACE_PYTHON+=	src/twisted/python/test/pullpipe.py
 
-CFLAGS.SunOS+=	-D_XOPEN_SOURCE=1 -D_XOPEN_SOURCE_EXTENDED=1 -Du_int=uint32_t
+USE_LANGUAGES=		c99
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
