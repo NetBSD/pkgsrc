@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/11/13 14:16:13 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/12/24 10:07:22 wiz Exp $
 
 DISTNAME=	Mail-Message-3.003
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=	angelmadames@gmail.com
-HOMEPAGE=	http://search.cpan.org/~markov/Mail-Message-3.000
+HOMEPAGE=	http://search.cpan.org/~markov/Mail-Message/
 COMMENT=	Object container for MIME-encoded message
 LICENSE=	${PERL5_LICENSE}
 
