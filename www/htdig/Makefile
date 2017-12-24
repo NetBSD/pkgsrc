@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.42 2017/01/19 18:52:29 agc Exp $
+# $NetBSD: Makefile,v 1.43 2017/12/24 09:45:30 wiz Exp $
 
 DISTNAME=	htdig-3.2.0b6
 PKGREVISION=	1
 CATEGORIES=	www databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=htdig/}
-MASTER_SITES+=	http://www.htdig.org/files/
-MASTER_SITES+=	http://www.it.htdig.org/files/
+#MASTER_SITES+=	http://www.htdig.org/files/
+#MASTER_SITES+=	http://www.it.htdig.org/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
