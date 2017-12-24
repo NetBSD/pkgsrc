@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2015/06/11 08:47:29 prlw1 Exp $
+# $NetBSD: Makefile,v 1.3 2017/12/24 10:14:43 wiz Exp $
 
 DISTNAME=	qqwing-1.3.4
 CATEGORIES=	games
-MASTER_SITES=	http://qqwing.com/
+MASTER_SITES=	https://qqwing.com/
 
 MAINTAINER=	prlw1@cam.ac.uk
-HOMEPAGE=	http://qqwing.com/
+HOMEPAGE=	https://qqwing.com/
 COMMENT=	Sudoku puzzle generator and solver
 LICENSE=	gnu-gpl-v2
 
