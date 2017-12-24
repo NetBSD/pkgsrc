@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/11/30 16:45:07 adam Exp $
+# $NetBSD: Makefile,v 1.22 2017/12/24 10:01:39 wiz Exp $
 
 DISTNAME=	mono-nat-1.0.2
 PKGREVISION=	18
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://projects.qnetp.net/attachments/download/22/
 
 MAINTAINER=	kefren@NetBSD.org
-HOMEPAGE=	https://projects.qnetp.net/projects/show/mono-nat
+HOMEPAGE=	https://github.com/mono/Mono.Nat
 COMMENT=	C\# library for uPnP management
 
 GNU_CONFIGURE=	yes
