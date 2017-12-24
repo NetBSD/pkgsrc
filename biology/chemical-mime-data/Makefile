@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/09/11 20:32:11 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2017/12/24 09:42:12 wiz Exp $
 
 DISTNAME=	chemical-mime-data-0.1.94
 CATEGORIES=	biology
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=chemical-mime/}
+#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=chemical-mime/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://chemical-mime.sourceforge.net/
+#HOMEPAGE=	http://chemical-mime.sourceforge.net/
 COMMENT=	Chemical mime and file type support for desktops
 LICENSE=	gnu-lgpl-v2.1 # or later
 
