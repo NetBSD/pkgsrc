@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2017/10/31 15:46:33 taca Exp $
+# $NetBSD: Makefile,v 1.41 2017/12/24 10:16:53 wiz Exp $
 
 DISTNAME=	tzinfo-1.2.4
 CATEGORIES=	time
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://tzinfo.github.io/
+HOMEPAGE=	https://tzinfo.github.io/
 COMMENT=	Daylight savings aware timezone library
 LICENSE=	mit
 
