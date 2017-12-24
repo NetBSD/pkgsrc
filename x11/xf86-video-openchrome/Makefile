@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/03/08 09:13:45 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2017/12/24 10:19:02 wiz Exp $
 
 DISTNAME=	xf86-video-openchrome-0.6.0
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	http://xorg.freedesktop.org/archive/individual/driver/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openchrome.org/
+HOMEPAGE=	https://www.freedesktop.org/wiki/Openchrome/
 COMMENT=	Modular Xorg OpenChrome driver for VIA UniChrome video chipsets
 
 USE_LANGUAGES=	c99
