@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2012/10/31 11:17:19 asau Exp $
-#
+# $NetBSD: Makefile,v 1.10 2017/12/24 09:56:07 wiz Exp $
 
 DISTNAME=		liboop-1.0
 PKGREVISION=		1
 CATEGORIES=		devel
-MASTER_SITES=		http://download.ofb.net/liboop/
+MASTER_SITES=		http://ftp.lysator.liu.se/pub/liboop/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.liboop.org/
+HOMEPAGE=		https://www.lysator.liu.se/liboop/
 COMMENT=		Event loop management library
 
 USE_PKGLOCALEDIR=	YES
