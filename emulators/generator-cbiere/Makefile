@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.14 2015/04/25 14:20:45 tnn Exp $
-#
+# $NetBSD: Makefile,v 1.15 2017/12/24 09:51:50 wiz Exp $
 
 DISTNAME=	generator-0.35-cbiere-r4
 PKGNAME=	generator-cbiere-0.35r4
 PKGREVISION=	3
 CATEGORIES=	emulators
-MASTER_SITES=	http://www.squish.net/generator/cbiere/generator/
+#MASTER_SITES=	http://www.squish.net/generator/cbiere/generator/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://squish.net/generator/
+HOMEPAGE=	https://segaretro.org/Generator_(emulator)
 COMMENT=	Sega Mega drive genesis emulator (Improved)
 
 MAKE_JOBS_SAFE=		no
