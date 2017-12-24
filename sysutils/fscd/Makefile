@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/05/07 10:09:24 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.7 2017/12/24 09:49:03 wiz Exp $
 
 DISTNAME=	fscd-1.1
 PKGREVISION=	1
@@ -7,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://komkon2.de/
 
 MAINTAINER=	jdf@NetBSD.org
-HOMEPAGE=	https://vcs.in-berlin.de/schrank21_fscd
+HOMEPAGE=	https://vcs.in-berlin.de/schrank21_fscd/index
 COMMENT=	FreeBSD service check daemon to monitor services
 LICENSE=	2-clause-bsd
 
