@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/09/06 21:08:09 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/12/24 09:53:06 wiz Exp $
 
 DISTNAME=	ledger-3.1.1
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ledger/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	base@atomicules.co.uk
-HOMEPAGE=	http://ledger-cli.org/
+HOMEPAGE=	https://ledger-cli.org/
 COMMENT=	Double-entry accounting system for command-line
 LICENSE=	modified-bsd
 
