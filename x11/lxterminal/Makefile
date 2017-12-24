@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/02/12 06:26:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2017/12/24 09:59:47 wiz Exp $
 
 DISTNAME=	lxterminal-0.2.0
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 
 MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	http://www.lxde.org/
+HOMEPAGE=	https://www.lxde.org/
 COMMENT=	Desktop-independent VTE-based terminal emulator with tabs
 LICENSE=	gnu-gpl-v2
 
