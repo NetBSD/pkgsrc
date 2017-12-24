@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.35 2015/11/25 12:50:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2017/12/24 09:52:51 wiz Exp $
 
 DISTNAME=		igmt_v1.2
 PKGNAME=		iGMT-1.2
 PKGREVISION=		6
 CATEGORIES=		graphics
-MASTER_SITES=		http://www.gfz-potsdam.de/pb1/op/igmt/
+MASTER_SITES=		https://www.gfz-potsdam.de/pb1/op/igmt/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gfz-potsdam.de/pb1/op/igmt/
+HOMEPAGE=		https://www.gfz-potsdam.de/pb1/op/igmt/
 COMMENT=		Interactive Mapping of Geoscientific Datasets
 
 DEPENDS+=		GMT>=3.3.6:../../graphics/GMT
