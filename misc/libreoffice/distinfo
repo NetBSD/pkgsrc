@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.44 2017/12/21 14:39:24 ryoon Exp $
+$NetBSD: distinfo,v 1.45 2017/12/24 09:13:10 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -228,6 +228,7 @@ SHA1 (patch-mysqlc_Library__mysqlc.mk) = c75e938a59cf64cf02ce6545f05752d64d63459
 SHA1 (patch-solenv_gbuild_AllLangResTarget.mk) = df3a3900fc8b5542f1cc37f7bd509afdb53d9c1b
 SHA1 (patch-solenv_gbuild_Module.mk) = cbd6ca3acae187458e49fe76d973e6475ed5fe1d
 SHA1 (patch-vcl_Executable__visualbackendtest.mk) = 2db5f3e7daabb2a79181de5e136de019d5264b58
+SHA1 (patch-vcl_unx_gtk3_gtk3gtkframe.cxx) = 9dcb8320649be91a2fc3f545f09c3a703cd46899
 SHA1 (patch-xmloff_source_draw_ximp3dscene.cxx) = bdd0b2563e54424dd468c2334e17ab23057a69fb
 SHA1 (patch-xmlsecurity_source_gpg_CertificateImpl.hxx) = 51372020a640f9f1ccd8ebd8694e33c4fdedff47
 SHA1 (patch-xmlsecurity_source_gpg_xmlsignature__gpgimpl.cxx) = 50dac45907c8d0651e9fc4a0df3f74affc940931
