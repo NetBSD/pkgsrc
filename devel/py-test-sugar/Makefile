@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/11/26 17:10:58 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/12/24 10:13:36 wiz Exp $
 
 DISTNAME=	pytest-sugar-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-sugar/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pivotfinland.com/pytest-sugar/
+HOMEPAGE=	https://pivotfinland.com/pytest-sugar/
 COMMENT=	Py.test plugin that changes the default look and feel
 LICENSE=	modified-bsd
 
