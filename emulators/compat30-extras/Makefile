@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2007/10/07 12:59:12 kano Exp $
+# $NetBSD: Makefile,v 1.5 2017/12/24 09:44:16 wiz Exp $
 
 COMPAT_PKG=		compat30	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		3.0
 
-HOMEPAGE=		http://www.NetBSD.org/releases/formal-3.0/index.html
+HOMEPAGE=		https://www.netbsd.org/releases/formal-3/
 COMMENT=		Additional shared libraries for NetBSD 3.0 compatibility
 
 EMUL_PLATFORMS=		netbsd-i386 netbsd-sparc netbsd-vax
