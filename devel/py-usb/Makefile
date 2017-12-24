@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2017/01/01 14:43:36 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/12/24 10:13:22 wiz Exp $
 
 VERSION=	1.0.0
 DISTNAME=	pyusb-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-usb-${VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=walac/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=pyusb/}
 GITHUB_PROJECT=	pyusb
 
 MAINTAINER=	wiml@hhhh.org
-HOMEPAGE=	http://walac.github.io/pyusb/
+HOMEPAGE=	https://pyusb.github.io/pyusb/
 COMMENT=	Python interface to USB via libusb
 LICENSE=	modified-bsd
 
