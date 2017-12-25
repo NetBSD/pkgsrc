@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2017/10/29 00:34:29 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.16 2017/12/25 15:56:29 taca Exp $
 lib/lighttpd/mod_access.la
 lib/lighttpd/mod_accesslog.la
 lib/lighttpd/mod_alias.la
@@ -39,6 +39,8 @@ lib/lighttpd/mod_uploadprogress.la
 lib/lighttpd/mod_userdir.la
 lib/lighttpd/mod_usertrack.la
 lib/lighttpd/mod_vhostdb.la
+${PLIST.ldap}lib/lighttpd/mod_vhostdb_ldap.la
+${PLIST.ldap}lib/lighttpd/mod_vhostdb_ldap.so
 lib/lighttpd/mod_webdav.la
 lib/lighttpd/mod_wstunnel.la
 man/man8/lighttpd-angel.8
