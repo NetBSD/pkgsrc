@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/09/04 18:08:30 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/12/25 09:20:27 adam Exp $
 
 DISTNAME=	Django-1.4.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,14 +11,14 @@ COMMENT=	Django, a high-level Python Web framework (LTS version)
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=		# empty
-REPLACE_PYTHON=		${WRKSRC}/django/bin/*.py
-REPLACE_PYTHON+=	${WRKSRC}/django/bin/profiling/*.py
-REPLACE_PYTHON+=	${WRKSRC}/django/contrib/admin/bin/*.py
-REPLACE_PYTHON+=	${WRKSRC}/django/contrib/admin/static/admin/js/*.py
-REPLACE_PYTHON+=	${WRKSRC}/django/conf/project_template/*.py
+REPLACE_PYTHON=		django/bin/*.py
+REPLACE_PYTHON+=	django/bin/profiling/*.py
+REPLACE_PYTHON+=	django/contrib/admin/bin/*.py
+REPLACE_PYTHON+=	django/contrib/admin/static/admin/js/*.py
+REPLACE_PYTHON+=	django/conf/project_template/*.py
 
 PYTHON_VERSIONED_DEPENDENCIES=	flup
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # use py-django if you want python-3.x support
+PYTHON_VERSIONS_ACCEPTED=	27 # use py-django if you want python-3.x support
 
 .include "options.mk"
 

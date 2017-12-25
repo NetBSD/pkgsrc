@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2017/12/04 14:23:00 adam Exp $
+# $NetBSD: Makefile,v 1.94 2017/12/25 09:18:24 adam Exp $
 
 DISTNAME=	Django-1.11.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -10,11 +10,12 @@ HOMEPAGE=	https://www.djangoproject.com/
 COMMENT=	Django, a high-level Python Web framework
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=		# empty
-REPLACE_PYTHON=		${WRKSRC}/django/bin/django-admin.py
-REPLACE_PYTHON+=	${WRKSRC}/django/conf/project_template/manage.py-tpl
-
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+
+USE_LANGUAGES=	# none
+
+REPLACE_PYTHON=	django/bin/django-admin.py
+REPLACE_PYTHON+=django/conf/project_template/manage.py-tpl
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
