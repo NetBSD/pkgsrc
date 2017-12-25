@@ -1,10 +1,23 @@
-$NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.5 2016/10/30 10:37:17 wiz Exp $
+$NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.6 2017/12/25 00:18:39 ryoon Exp $
 
 Move variable declarations to top, for C90.
 
---- src/joystick/bsd/SDL_sysjoystick.c.orig	2016-10-20 03:56:26.000000000 +0000
+--- src/joystick/bsd/SDL_sysjoystick.c.orig	2017-10-23 19:27:46.000000000 +0000
 +++ src/joystick/bsd/SDL_sysjoystick.c
-@@ -289,6 +289,10 @@ SDL_SYS_JoystickOpen(SDL_Joystick * joy,
+@@ -45,6 +45,12 @@
+ #ifdef __DragonFly__
+ #include <bus/usb/usb.h>
+ #include <bus/usb/usbhid.h>
++#elif defined(__NetBSD__)
++#include <dev/usb/usb.h>
++#include <dev/usb/usbhid.h>
++#if __NetBSD_Version__ >= 899000900
++#include <dev/hid/hid.h>
++#endif
+ #else
+ #include <dev/usb/usb.h>
+ #include <dev/usb/usbhid.h>
+@@ -291,6 +297,10 @@ SDL_SYS_JoystickOpen(SDL_Joystick * joy,
      struct report *rep = NULL;
      int fd;
      int i;
@@ -15,7 +28,7 @@ Move variable declarations to top, for C90.
  
      fd = open(path, O_RDONLY);
      if (fd == -1) {
-@@ -338,8 +342,6 @@ SDL_SYS_JoystickOpen(SDL_Joystick * joy,
+@@ -340,8 +350,6 @@ SDL_SYS_JoystickOpen(SDL_Joystick * joy,
          rep->rid = -1;          /* XXX */
      }
  #if defined(__NetBSD__)

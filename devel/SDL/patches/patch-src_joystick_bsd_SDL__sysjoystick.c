@@ -1,8 +1,21 @@
-$NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.5 2015/03/03 19:14:04 jmcneill Exp $
+$NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.6 2017/12/25 00:18:39 ryoon Exp $
 
 --- src/joystick/bsd/SDL_sysjoystick.c.orig	2012-01-19 06:30:06.000000000 +0000
 +++ src/joystick/bsd/SDL_sysjoystick.c
-@@ -77,7 +77,7 @@
+@@ -46,6 +46,12 @@
+ #ifdef __DragonFly__
+ #include <bus/usb/usb.h>
+ #include <bus/usb/usbhid.h>
++#elif defined(__NetBSD__)
++#include <dev/usb/usb.h>
++#include <dev/usb/usbhid.h>
++#if __NetBSD_Version__ >= 899000900
++#include <dev/hid/hid.h>
++#endif
+ #else
+ #include <dev/usb/usb.h>
+ #include <dev/usb/usbhid.h>
+@@ -77,7 +83,7 @@
  #include "../SDL_sysjoystick.h"
  #include "../SDL_joystick_c.h"
  
@@ -11,7 +24,7 @@ $NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.5 2015/03/03 19:14:04 jmc
  #define MAX_JOY_JOYS	2
  #define MAX_JOYS	(MAX_UHID_JOYS + MAX_JOY_JOYS)
  
-@@ -148,9 +148,11 @@ static char *joydevnames[MAX_JOYS];
+@@ -148,9 +154,11 @@ static char *joydevnames[MAX_JOYS];
  static int	report_alloc(struct report *, struct report_desc *, int);
  static void	report_free(struct report *);
  
@@ -25,7 +38,7 @@ $NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.5 2015/03/03 19:14:04 jmc
  #define REP_BUF_DATA(rep) ((rep)->buf->ugd_data)
  #else
  #define REP_BUF_DATA(rep) ((rep)->buf->data)
-@@ -314,6 +316,45 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+@@ -314,6 +322,45 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
  #endif
  		rep->rid = -1; /* XXX */
  	}
@@ -71,7 +84,7 @@ $NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.5 2015/03/03 19:14:04 jmc
  	if (report_alloc(rep, hw->repdesc, REPORT_INPUT) < 0) {
  		goto usberr;
  	}
-@@ -386,10 +427,21 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+@@ -386,10 +433,21 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
  		if (hw->axis_map[i] > 0)
  			hw->axis_map[i] = joy->naxes++;
  
@@ -93,7 +106,7 @@ $NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.5 2015/03/03 19:14:04 jmc
  	return (0);
  usberr:
  	close(hw->fd);
-@@ -459,63 +511,62 @@ SDL_SYS_JoystickUpdate(SDL_Joystick *joy
+@@ -459,63 +517,62 @@ SDL_SYS_JoystickUpdate(SDL_Joystick *joy
  	
  	rep = &joy->hwdata->inreport;
  
