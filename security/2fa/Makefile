@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/11/27 18:47:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2017/12/25 03:23:21 ryoon Exp $
 
 DISTNAME=	2fa
 PKGNAME=	2fa-20171122
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 GO_DIST_BASE=	2fa-${GITHUB_TAG}
 GO_SRCPATH=	rsc.io/2fa
 
-CHECK_RELRO_SKIP+=	bin/caddy
+CHECK_RELRO_SKIP+=	bin/2fa
 
 INSTALLATION_DIRS=	bin
 
