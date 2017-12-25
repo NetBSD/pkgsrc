@@ -1,17 +1,19 @@
-$NetBSD: patch-aa,v 1.2 2017/12/15 15:44:12 jperkin Exp $
+$NetBSD: patch-aa,v 1.3 2017/12/25 00:15:35 ryoon Exp $
 
 Use pkgsrc variables.
 
---- Makefile.orig	1995-10-01 00:00:00.000000000 +0000
+--- Makefile.orig	1995-09-30 15:00:00.000000000 +0000
 +++ Makefile
-@@ -1,8 +1,8 @@
+@@ -1,9 +1,9 @@
  # Makefile for qkc
  
 -CC     = cc
 +#CC     = cc
  BIND   = $(CC)
 -CFLAGS = -O
+-LFLAGS = -o qkc $(CFLAGS)
 +#CFLAGS = -O
- LFLAGS = -o qkc $(CFLAGS)
++LFLAGS = -o qkc $(CFLAGS) ${LDFLAGS}
  OBJ    = qkc.o qkcopt.o qkchelp.o qkcconv.o qkctbl.o
  
+ .c.o:
