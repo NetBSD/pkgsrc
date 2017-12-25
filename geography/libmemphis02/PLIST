@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/22 17:42:53 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/12/25 08:57:35 wiz Exp $
 include/libmemphis-0.2/memphis/memphis-data-pool.h
 include/libmemphis-0.2/memphis/memphis-debug.h
 include/libmemphis-0.2/memphis/memphis-map.h
@@ -18,7 +18,6 @@ share/gtk-doc/html/libmemphis-0.2/api-index-full.html
 share/gtk-doc/html/libmemphis-0.2/ch01.html
 share/gtk-doc/html/libmemphis-0.2/home.png
 share/gtk-doc/html/libmemphis-0.2/index.html
-share/gtk-doc/html/libmemphis-0.2/index.sgml
 share/gtk-doc/html/libmemphis-0.2/left-insensitive.png
 share/gtk-doc/html/libmemphis-0.2/left.png
 share/gtk-doc/html/libmemphis-0.2/libmemphis-0.2.devhelp2
