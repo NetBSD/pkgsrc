@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2017/12/14 16:13:31 jperkin Exp $
+$NetBSD: distinfo,v 1.21 2017/12/25 22:22:11 he Exp $
 
 SHA1 (nethack-343-src.tgz) = c26537093c38152bc0fbcec20468d975b35f59fd
 RMD160 (nethack-343-src.tgz) = 42f600d24715a0b7e631b357c135761410b3ca95
@@ -6,12 +6,12 @@ SHA512 (nethack-343-src.tgz) = 052342c19619219f291571d48cf7799f962eb6ec6f8a27642
 Size (nethack-343-src.tgz) = 3497458 bytes
 SHA1 (patch-aa) = 31d89b27e52189de9a51fbb04f1ed390c5377b2b
 SHA1 (patch-ab) = 49947b960f2b7871fc798398d1c1ceab8d462ec9
-SHA1 (patch-ac) = 50cac811281c629edf2a72e523b62b51f8c3c840
 SHA1 (patch-ad) = be56ef8459f3273a0b316bb94e0ae7397a53c37f
 SHA1 (patch-ae) = 8530c1e033f2522e05b699db36d84f77ecf886be
 SHA1 (patch-af) = a567c4c664f135ad24f3f0069ddc29bf5b950b21
 SHA1 (patch-ag) = 5bf322fb92a3cd9df9559e56265f0477d9e92487
 SHA1 (patch-ai) = 73c5b2ea1227531089474705f2f18bc411366365
+SHA1 (patch-include_system.h) = a352695aa31c9459ec5559ec5fb7fef7bfdcb9c8
 SHA1 (patch-sys_unix_Makefile.src) = d2d961ab9aec3d9f88d5b5340530f95181b0a92b
 SHA1 (patch-sys_unix_Makefile.utl) = 3bcec6ffab218370f132b4a850f7b35316487ec6
 SHA1 (patch-util_makedefs.c) = 63faf92a7f511fcf73317789a3008350cdd404d9

@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.10 2011/06/01 11:20:29 wiz Exp $
+$NetBSD: patch-include_system.h,v 1.1 2017/12/25 22:22:11 he Exp $
 
 Fix for NetBSD.
 
---- include/system.h.orig	2003-12-07 15:39:13.000000000 -0800
+--- include/system.h.orig	2003-12-07 23:39:13.000000000 +0000
 +++ include/system.h
 @@ -79,10 +79,10 @@ typedef long	off_t;
  # if !defined(__SC__) && !defined(LINUX)
@@ -35,7 +35,22 @@ Fix for NetBSD.
  E int	FDECL(strlen, (const char *));
  #   endif
  #  endif /* HPUX */
-@@ -521,7 +521,7 @@ E struct tm *FDECL(localtime, (const tim
+@@ -476,9 +476,14 @@ E  char *sprintf();
+ #  if !defined(SVR4) && !defined(apollo)
+ #   if !(defined(ULTRIX_PROTO) && defined(__GNUC__))
+ #    if !(defined(SUNOS4) && defined(__STDC__)) /* Solaris unbundled cc (acc) */
++#if 0
+ E int FDECL(vsprintf, (char *, const char *, va_list));
+ E int FDECL(vfprintf, (FILE *, const char *, va_list));
+ E int FDECL(vprintf, (const char *, va_list));
++#else
++#include <stdarg.h>
++#include <stdio.h>
++#endif
+ #    endif
+ #   endif
+ #  endif
+@@ -521,7 +526,7 @@ E struct tm *FDECL(localtime, (const tim
  #  endif
  # endif
  
