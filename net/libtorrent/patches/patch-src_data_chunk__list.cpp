@@ -1,4 +1,6 @@
-$NetBSD: patch-src_data_chunk__list.cpp,v 1.3 2013/09/18 16:32:05 joerg Exp $
+$NetBSD: patch-src_data_chunk__list.cpp,v 1.4 2017/12/26 23:14:42 he Exp $
+
+Add some casts now required.
 
 --- src/data/chunk_list.cc.orig	2012-02-22 07:50:27.000000000 +0000
 +++ src/data/chunk_list.cc	2013-05-12 12:25:45.000000000 +0100
