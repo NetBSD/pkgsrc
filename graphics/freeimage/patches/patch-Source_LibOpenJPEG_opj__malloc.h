@@ -1,4 +1,6 @@
-$NetBSD: patch-Source_LibOpenJPEG_opj__malloc.h,v 1.1 2015/02/12 22:40:05 snj Exp $
+$NetBSD: patch-Source_LibOpenJPEG_opj__malloc.h,v 1.2 2017/12/26 11:55:01 he Exp $
+
+Add a case for NetBSD.
 
 --- Source/LibOpenJPEG/opj_malloc.h.orig	2015-02-12 12:40:33.000000000 -0800
 +++ Source/LibOpenJPEG/opj_malloc.h	2015-02-12 12:42:08.000000000 -0800
