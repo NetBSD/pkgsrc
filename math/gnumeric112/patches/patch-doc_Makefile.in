@@ -1,0 +1,16 @@
+$NetBSD: patch-doc_Makefile.in,v 1.1 2017/12/26 16:45:41 wiz Exp $
+
+Disable cs translation, since it causes itstool-2.0.4 to coredump.
+https://github.com/itstool/itstool/issues/22
+
+--- doc/Makefile.in.orig	2017-07-10 22:46:03.000000000 +0000
++++ doc/Makefile.in
+@@ -460,7 +460,7 @@ EXTRA_DIST = make-func-list.pl C/func.de
+ noinst_DATA = $(am__append_1)
+ DISTCLEANFILES = C/func.defs
+ HELP_ID = gnumeric
+-HELP_LINGUAS = cs de es
++HELP_LINGUAS = de es
+ HELP_FILES = gnumeric.xml
+ HELP_EXTRA = \
+ 	about-authors.xml			\
