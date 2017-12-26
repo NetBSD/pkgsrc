@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5363 2017/12/26 11:28:19 he Exp $
+$NetBSD: CHANGES-2017,v 1.5364 2017/12/26 11:55:38 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7747,3 +7747,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated geography/libmemphis02 to 0.2.3nb1 [wiz 2017-12-25]
 	Updated games/nethack-lib to 3.4.3nb5 [he 2017-12-25]
 	Updated net/gift to 0.11.8.1nb9 [he 2017-12-26]
+	Updated graphics/freeimage to 3.17.0nb3 [he 2017-12-26]
