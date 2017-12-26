@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/03/07 11:49:43 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/12/26 13:26:45 wiz Exp $
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome.manifest
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome/enigmail.jar
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/components/enigmail.js
@@ -13,6 +13,7 @@ lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/app.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/armor.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/attachment.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/card.jsm
+lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/clipboard.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/commandLine.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/configBackup.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/configure.jsm
@@ -23,6 +24,16 @@ lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/decryptP
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/decryption.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/dialog.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/encryption.jsm
+lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_common.jsm
+lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_main.jsm
+lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_shared.js
+lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_shared_unix.js
+lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_shared_win.js
+lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_unix.jsm
+lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_win.jsm
+lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_worker_common.js
+lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_worker_unix.js
+lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailprocess_worker_win.js
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/errorHandling.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/events.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/execution.jsm
@@ -55,11 +66,10 @@ lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/pipeCons
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/prefs.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/promise.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/protocolHandler.jsm
+lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/rng.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/rules.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/streams.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subprocess.jsm
-lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subprocess_worker_unix.js
-lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subprocess_worker_win.js
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/system.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/time.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/timer.jsm
