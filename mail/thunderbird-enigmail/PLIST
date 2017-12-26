@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/08/15 18:57:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/12/26 12:43:43 wiz Exp $
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome.manifest
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome/enigmail.jar
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/components/enigmail.js
@@ -66,6 +66,7 @@ lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/pipeCo
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/prefs.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/promise.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/protocolHandler.jsm
+lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/rng.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/rules.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/streams.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subprocess.jsm
