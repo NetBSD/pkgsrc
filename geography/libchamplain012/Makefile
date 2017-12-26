@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/11/30 16:45:03 adam Exp $
+# $NetBSD: Makefile,v 1.13 2017/12/26 14:35:31 wiz Exp $
 
 DISTNAME=	libchamplain-0.12.10
 PKGNAME=	libchamplain012-0.12.10
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
-CONFIGURE_ARGS+=--enable-gtk-doc
+CONFIGURE_ARGS+=--disable-gtk-doc
 CONFIGURE_ARGS+=--enable-memphis
 
 PKGCONFIG_OVERRIDE+=	champlain-gtk.pc.in
@@ -28,6 +28,6 @@ PKGCONFIG_OVERRIDE+=	champlain.pc.in
 .include "../../graphics/clutter/buildlink3.mk"
 .include "../../graphics/clutter-gtk/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
-.include "../../textproc/gtk-doc/buildlink3.mk"
+#.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
