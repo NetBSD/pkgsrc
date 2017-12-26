@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5365 2017/12/26 12:43:57 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5366 2017/12/26 13:26:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7749,3 +7749,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/gift to 0.11.8.1nb9 [he 2017-12-26]
 	Updated graphics/freeimage to 3.17.0nb3 [he 2017-12-26]
 	Updated mail/thunderbird-enigmail to 1.9.9 [wiz 2017-12-26]
+	Updated mail/seamonkey-enigmail to 1.9.9 [wiz 2017-12-26]
