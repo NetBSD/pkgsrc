@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2017/07/08 08:08:25 nros Exp $
+$NetBSD: distinfo,v 1.6 2017/12/26 11:55:01 he Exp $
 
 SHA1 (FreeImage3170.zip) = 6752c83798c2f81dee71a2e8bb11657068672669
 RMD160 (FreeImage3170.zip) = c4e87846098327ee346c49ae81b6036f6d9ab36d
@@ -8,4 +8,6 @@ SHA1 (patch-Makefile) = 196331f954913d5b49ae1e2464fb356a26212168
 SHA1 (patch-Makefile.fip) = c12dd636f83f774a11c91c4e3373176fd27e562d
 SHA1 (patch-Source_FreeImage_PluginPCX.cpp) = 26853626d1dc6a52804f946fd0576269de380512
 SHA1 (patch-Source_FreeImage_PluginXPM.cpp) = eac7be24c3d64593feebdb548df8a404db66c113
-SHA1 (patch-Source_LibOpenJPEG_opj__malloc.h) = 4ba7924e5ce04b98c9c249bc31df600b7fbdcde3
+SHA1 (patch-Source_LibOpenJPEG_opj__malloc.h) = 7e8b65d17cf1f0ed295964d477b96acac56bd927
+SHA1 (patch-Source_LibWebP_src_dsp_dsp.upsampling_mips_dsp_r2.c) = 9725fa20d545e6482f4396487b70c104ddb37ce6
+SHA1 (patch-Source_LibWebP_src_dsp_dsp.yuv_mips_dsp_r2.c) = bd569e2b2fa7b79a3651f53352fc8e5d26d0b2d3
