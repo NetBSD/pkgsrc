@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/11/22 19:30:48 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2017/12/27 20:47:00 he Exp $
 
 DISTNAME=	flatbuffers-1.8.0
 CATEGORIES=	devel
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
