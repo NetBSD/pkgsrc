@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/07/09 06:38:26 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/12/27 22:58:55 dholland Exp $
 
 DISTNAME=	pfe-0.33.71
 PKGREVISION=	9
@@ -20,8 +20,8 @@ BUILD_TARGET=	all mans docs
 INSTALL_TARGET=	install install-mans install-docs
 TEST_TARGET=	tests
 
-BUILD_DEPENDS=	xmlto-[0-9]*:../../textproc/xmlto	# documentation
-PYTHON_FOR_BUILD_ONLY=	yes
+TOOL_DEPENDS=	xmlto-[0-9]*:../../textproc/xmlto	# documentation
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/termcap.buildlink3.mk"
