@@ -1,0 +1,16 @@
+$NetBSD: patch-config.h.in,v 1.1 2017/12/27 14:13:55 wiz Exp $
+
+Adapt for NetBSD-8.99.9.
+
+--- config.h.in.orig	2017-12-27 12:38:30.274552468 +0100
++++ config.h.in	2017-12-27 12:42:21.573673909 +0100
+@@ -12,6 +12,9 @@
+ /* Define to 1 if you have the <dev/usb/usbhid.h> header file. */
+ #undef HAVE_DEV_USB_USBHID_H
+ 
++/* Define to 1 if you have the <dev/hid/hid.h> header file. */
++#undef HAVE_DEV_HID_HID_H
++
+ /* Define to 1 if you have the <dev/usb/usb.h> header file. */
+ #undef HAVE_DEV_USB_USB_H
+ 
