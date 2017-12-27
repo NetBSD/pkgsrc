@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.25 2017/12/20 19:13:03 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q3,v 1.1.2.26 2017/12/27 18:35:11 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q3 branch:
 
@@ -292,3 +292,5 @@ x11/libXfont2: security update
 Pullup ticket #5662 - requested by bsiegert
 x11/libXcursor: security update
 
+Pullup ticket #5657 - requested by he
+www/curl: security update
