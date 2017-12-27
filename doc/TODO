@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17967 2017/12/26 12:43:57 wiz Exp $
+$NetBSD: TODO,v 1.17968 2017/12/27 21:13:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -454,6 +454,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o blur6ex-0.3.462
 	o bmkdep-20140112
 	o bochs-2.6.9
+	o boehm-gc-7.6.2
 	o boolean-7.1
 	o boost-1.66.0
 	o bos-2.5
@@ -537,6 +538,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dap-3.10
 	o dar-2.4.14
 	o darcs-2.12.0
+	o darktable-2.4
 	o dasher-4.11
 	o dateutils-0.4.2
 	o dconf-0.27.1 [wip]
@@ -944,6 +946,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o leafpad-0.8.18.1
 	o lgeneral-1.3.1
 	o libarchive-3.3.2
+	o libatomic_ops-7.6.2
 	o libbpg-0.9.6
 	o libburn-1.4.0
 	o libcaca-0.99.19
@@ -1075,6 +1078,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mp3splt-2.6.2
 	o mp3splt-gtk-0.9.0
 	o mpdas-0.4.1
+	o mpv-0.28
 	o mserv-devel-0.41
 	o multitail-6.4.2
 	o munin-doc-1.4.6
@@ -1309,7 +1313,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.4
-	o ruby-2.4.0
+	o ruby-2.5.0
 	o ruby-actionmailer-4.2.7.1
 	o ruby-actionpack-4.2.7.1
 	o ruby-activemodel-4.2.7.1
@@ -1364,7 +1368,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o slurm-14.11.2
 	o smokeping-2.6.11
 	o smproxy-1.0.3
-	o snes9x-1.53
+	o snes9x-1.55
 	o snobol-2.0
 	o snow-20130616
 	o softhsm-2.0.0
@@ -1410,7 +1414,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o swi-prolog-packages-7.1.37
 	o swt-4.5
 	o sympa-6.2.14
-	o syncthing-0.14.41
+	o syncthing-0.14.42
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1 [needs polkit|GNOME 2.30]
 	o systrace-1.6e
@@ -1445,7 +1449,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tileworld-1.3.2
-	o tin-2.4.1
+	o tin-2.4.2
 	o tinc-1.0.33
 	o tkhylafax-3.2
 	o tkpasman-2.2b
@@ -1570,6 +1574,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xrn-9.02
 	o xsc-1.6
 	o xscorch-0.2.1
+	o xscreensaver-5.38
 	o xsd-3.3.0
 	o xtraceroute-0.9.1
 	o xtux-20030306
