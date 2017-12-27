@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2017/09/30 13:44:35 adam Exp $
+# $NetBSD: Makefile,v 1.10 2017/12/27 23:32:37 he Exp $
 
 DISTNAME=	cx_Freeze-5.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_F/f/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cx_Freeze/}
 
