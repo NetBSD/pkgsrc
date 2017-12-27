@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5371 2017/12/27 20:47:38 he Exp $
+$NetBSD: CHANGES-2017,v 1.5372 2017/12/27 23:44:47 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7755,3 +7755,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/xf86-input-joystick to 1.6.3nb1 [wiz 2017-12-27]
 	Updated news/nntpcache to 3.0.2nb13 [he 2017-12-27]
 	Updated devel/flatbuffers to 1.8.0nb1 [he 2017-12-27]
+	Updated lang/py-cxfreeze to 5.0.2nb1 [he 2017-12-27]
+	Updated biology/bwa to 0.7.17nb1 [he 2017-12-27]
