@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.4 2016/11/18 08:10:24 wiz Exp $
+$NetBSD: distinfo,v 1.5 2017/12/27 14:13:55 wiz Exp $
 
 SHA1 (xf86-input-joystick-1.6.3.tar.bz2) = b8664249d50ed266556877e15e3782c40614459c
 RMD160 (xf86-input-joystick-1.6.3.tar.bz2) = 9619dfef02eef577c69fe859ca87fd44e6f0eaa1
 SHA512 (xf86-input-joystick-1.6.3.tar.bz2) = 541c993bd37dd74d96d90060407d9fb9ebd3fbca352189a08c6b0c899c84609a1b5a3c1ea3febb4ceb5e2b881b54e45c75b8f9b2e475e16d7cffbbe42a3221e5
 Size (xf86-input-joystick-1.6.3.tar.bz2) = 351846 bytes
+SHA1 (patch-config.h.in) = d1586bb4db52a4498ddad3fc77551a583126fcba
+SHA1 (patch-configure) = 698f6a5611e300dcce385b7d54c34e6fc7178eb5
+SHA1 (patch-src_backend_bsd.c) = 09135fbb638328b77fdf6e1f2a6a5d55ab9a064d
