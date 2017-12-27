@@ -1,13 +1,15 @@
-$NetBSD: patch-configure,v 1.2 2017/07/05 10:34:12 adam Exp $
+$NetBSD: patch-configure,v 1.2.4.1 2017/12/27 18:34:01 spz Exp $
 
 builtin krb5-config in platforms such as solaris do not support
 the gssapi option, and need an explicit -lgss
 
 On Darwin, do not append custom CFLAGS.
 
---- configure.orig	2017-06-14 06:10:57.000000000 +0000
+Do not strip debug flags.
+
+--- configure.orig	2017-10-17 14:31:48.000000000 +0000
 +++ configure
-@@ -4241,6 +4241,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
+@@ -4272,6 +4272,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
          ;;
      esac
    done
@@ -15,7 +17,7 @@ On Darwin, do not append custom CFLAGS.
    if test $xc_bad_var_cflags = yes; then
      { $as_echo "$as_me:${as_lineno-$LINENO}: using CFLAGS: $CFLAGS" >&5
  $as_echo "$as_me: using CFLAGS: $CFLAGS" >&6;}
-@@ -17702,7 +17703,7 @@ squeeze() {
+@@ -17159,7 +17160,7 @@ squeeze() {
  
  
        #
@@ -24,7 +26,21 @@ On Darwin, do not append custom CFLAGS.
      #
      if test "$compiler_id" = "GNU_C" ||
        test "$compiler_id" = "CLANG"; then
-@@ -19639,7 +19640,7 @@ $as_echo "no" >&6; }
+@@ -17482,13 +17483,6 @@ $as_echo_n "checking if compiler accepts
+       tmp_options="$flags_dbg_off"
+     fi
+     #
+-    if test "$flags_prefer_cppflags" = "yes"; then
+-      CPPFLAGS="$tmp_CPPFLAGS $tmp_options"
+-      CFLAGS="$tmp_CFLAGS"
+-    else
+-      CPPFLAGS="$tmp_CPPFLAGS"
+-      CFLAGS="$tmp_CFLAGS $tmp_options"
+-    fi
+     squeeze CPPFLAGS
+     squeeze CFLAGS
+ 
+@@ -19122,7 +19116,7 @@ $as_echo "no" >&6; }
    tst_cflags="no"
    case $host_os in
      darwin*)
@@ -33,7 +49,7 @@ On Darwin, do not append custom CFLAGS.
        ;;
    esac
  
-@@ -22272,7 +22273,11 @@ $as_echo "yes" >&6; }
+@@ -21788,7 +21782,11 @@ $as_echo "yes" >&6; }
       if test -n "$host_alias" -a -f "$GSSAPI_ROOT/bin/$host_alias-krb5-config"; then
          GSSAPI_INCS=`$GSSAPI_ROOT/bin/$host_alias-krb5-config --cflags gssapi`
       elif test -f "$KRB5CONFIG"; then
@@ -46,7 +62,7 @@ On Darwin, do not append custom CFLAGS.
       elif test "$GSSAPI_ROOT" != "yes"; then
          GSSAPI_INCS="-I$GSSAPI_ROOT/include"
       fi
-@@ -22445,7 +22450,7 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
+@@ -21961,7 +21959,7 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
          LIBS="-lgss $LIBS"
          ;;
       *)
