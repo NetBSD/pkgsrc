@@ -1,4 +1,4 @@
-# $NetBSD: cmake.mk,v 1.14 2016/10/21 11:13:35 kamil Exp $
+# $NetBSD: cmake.mk,v 1.15 2017/12/27 18:56:27 wiz Exp $
 #
 # This file handles packages that use CMake as their primary build
 # system. For more information about CMake, see http://www.cmake.org/.
@@ -17,10 +17,10 @@
 #
 # CMAKE_PREFIX_PATH
 #	A list of directories to add the CMAKE_PREFIX_PATH cmake variable.
-#	If a package installs it's contents in ${PREFIX}/package instead of
+#	If a package installs its contents in ${PREFIX}/package instead of
 #	${PREFIX} and it installs cmake modules there 
-#	"CMAKE_PREFIX_PATH += ${PREFIX}/package" should be in it's 
-#	buildlink3.mk so that packages that depend on it can find it's 
+#	"CMAKE_PREFIX_PATH += ${PREFIX}/package" should be in its 
+#	buildlink3.mk so that packages that depend on it can find its 
 #	cmake modules if they use cmake to build.
 #
 # CMAKE_USE_GNU_INSTALL_DIRS
