@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/12/17 14:30:36 bacon Exp $
+# $NetBSD: Makefile,v 1.6 2017/12/27 23:44:01 he Exp $
 
 DISTNAME=	bwa-0.7.17
 CATEGORIES=	biology
+PKGREVISION=	1
 GITHUB_TAG=     v${PKGVERSION_NOREV}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lh3/}
 
