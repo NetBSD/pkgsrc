@@ -1,0 +1,25 @@
+$NetBSD: patch-configure,v 1.1 2017/12/27 14:13:55 wiz Exp $
+
+Adapt for NetBSD-8.99.9.
+
+--- configure.orig	2017-12-27 12:38:30.273523326 +0100
++++ configure	2017-12-27 12:48:39.451130924 +0100
+@@ -18680,6 +18680,18 @@
+ 
+ done
+ 
++for ac_header in dev/hid/hid.h
++do :
++  ac_fn_c_check_header_mongrel "$LINENO" "dev/hid/hid.h" "ac_cv_header_dev_hid_hid_h" "$ac_includes_default"
++if test "x$ac_cv_header_dev_hid_hid_h" = xyes; then :
++  cat >>confdefs.h <<_ACEOF
++#define HAVE_DEV_HID_HID_H 1
++_ACEOF
++
++fi
++
++done
++
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for hid_get_item in -lusbhid" >&5
+ $as_echo_n "checking for hid_get_item in -lusbhid... " >&6; }
+ if ${ac_cv_lib_usbhid_hid_get_item+:} false; then :
