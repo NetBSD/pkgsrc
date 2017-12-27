@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5369 2017/12/27 14:14:05 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5370 2017/12/27 16:54:19 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7753,3 +7753,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/gnumeric112 to 1.12.36nb1 [wiz 2017-12-26]
 	Updated net/libtorrent to 0.13.6nb2 [he 2017-12-26]
 	Updated x11/xf86-input-joystick to 1.6.3nb1 [wiz 2017-12-27]
+	Updated news/nntpcache to 3.0.2nb13 [he 2017-12-27]
