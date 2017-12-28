@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/11/13 07:49:46 wen Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/12/28 14:03:29 dholland Exp $
 bin/obspy-dataless2resp
 bin/obspy-dataless2xseed
 bin/obspy-flinn-engdahl
@@ -2006,12 +2006,12 @@ ${PYSITELIB}/obspy/io/zmap/tests/test_zmap.py
 ${PYSITELIB}/obspy/lib/__init__.py
 ${PYSITELIB}/obspy/lib/__init__.pyo
 ${PYSITELIB}/obspy/lib/__init__.pyc
-${PYSITELIB}/obspy/lib/libevresp_NetBSD_64bit_py36.so
-${PYSITELIB}/obspy/lib/libgse2_NetBSD_64bit_py36.so
-${PYSITELIB}/obspy/lib/libmseed_NetBSD_64bit_py36.so
-${PYSITELIB}/obspy/lib/libsegy_NetBSD_64bit_py36.so
-${PYSITELIB}/obspy/lib/libsignal_NetBSD_64bit_py36.so
-${PYSITELIB}/obspy/lib/libtau_NetBSD_64bit_py36.so
+${PYSITELIB}/obspy/lib/libevresp_${PYPLATFORM}_${PYPKGPREFIX}.so
+${PYSITELIB}/obspy/lib/libgse2_${PYPLATFORM}_${PYPKGPREFIX}.so
+${PYSITELIB}/obspy/lib/libmseed_${PYPLATFORM}_${PYPKGPREFIX}.so
+${PYSITELIB}/obspy/lib/libsegy_${PYPLATFORM}_${PYPKGPREFIX}.so
+${PYSITELIB}/obspy/lib/libsignal_${PYPLATFORM}_${PYPKGPREFIX}.so
+${PYSITELIB}/obspy/lib/libtau_${PYPLATFORM}_${PYPKGPREFIX}.so
 ${PYSITELIB}/obspy/realtime/README.txt
 ${PYSITELIB}/obspy/realtime/__init__.py
 ${PYSITELIB}/obspy/realtime/__init__.pyo
