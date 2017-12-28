@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/04/13 00:41:02 khorben Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/12/28 13:45:24 dholland Exp $
 bin/configctl
 include/System.h
 include/System/array.h
@@ -29,7 +29,6 @@ share/gtk-doc/html/libSystem/ch01.html
 share/gtk-doc/html/libSystem/deprecated-api-index.html
 share/gtk-doc/html/libSystem/home.png
 share/gtk-doc/html/libSystem/index.html
-share/gtk-doc/html/libSystem/index.sgml
 share/gtk-doc/html/libSystem/left-insensitive.png
 share/gtk-doc/html/libSystem/left.png
 share/gtk-doc/html/libSystem/libSystem-array.html
