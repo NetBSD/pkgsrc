@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2017/12/20 17:28:25 minskim Exp $
+# $NetBSD: Makefile,v 1.61 2017/12/28 02:18:42 minskim Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -11,7 +11,7 @@ PKGREVISION= 3
 INSTALLATION_DIRS+=	lib
 
 BJAM_ARGS+=		--without-python
-PLIST_VARS+=		context fiber log
+PLIST_VARS+=		backtrace context fiber log
 
 .if ${OPSYS} == "NetBSD" && ((${MACHINE_ARCH} == "i386") || (!empty(MACHINE_ARCH:Mearm*) && !empty(PKGSRC_COMPILER:Mgcc)))
 BJAM_ARGS+=		pch=off
@@ -30,6 +30,13 @@ PLIST.context=		yes
 BJAM_ARGS+=		--without-log
 .else
 PLIST.log=		yes
+.endif
+
+# libboost_stacktrace_backtrace requires libbacktrace.
+# FIXME: The condition needs to be refined for non-Debian/Ubuntu
+# platforms shipped with libbacktrace.
+.if ${OPSYS} == "Linux" && exists(/etc/debian_version)
+PLIST.backtrace=	yes
 .endif
 
 # XXX boost1.64 fiber not building even on netbsd7.99 + gcc5.4
