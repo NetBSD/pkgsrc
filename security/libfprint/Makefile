@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2017/11/23 17:20:11 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2017/12/28 07:01:46 plunky Exp $
 
 DISTNAME=	libfprint-0.7.0
 #PKGREVISION=	1
@@ -24,7 +24,7 @@ INSTALLATION_DIRS+=	lib bin
 
 post-install:
 	for pp in enroll img_capture verify verify_live; do \
-		${INSTALL_PROGRAM} ${WRKSRC}/examples/$${pp} \
+		${INSTALL_SCRIPT} ${WRKSRC}/examples/$${pp} \
 			${DESTDIR}${PREFIX}/bin/ ; \
 	done
 
