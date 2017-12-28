@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2017/09/08 16:16:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2017/12/28 13:19:38 dholland Exp $
 
 DISTNAME=	matterircd-0.14.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=42wim/}
 CATEGORIES=	chat
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/42wim/matterircd
