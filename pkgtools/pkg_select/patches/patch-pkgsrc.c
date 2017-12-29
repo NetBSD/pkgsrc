@@ -1,8 +1,8 @@
-$NetBSD: patch-pkgsrc.c,v 1.1 2013/11/29 23:13:56 dholland Exp $
+$NetBSD: patch-pkgsrc.c,v 1.2 2017/12/29 11:59:13 plunky Exp $
 
 Fix const correctness.
 
---- pkgsrc.c~	2009-03-08 14:25:53.000000000 +0000
+--- pkgsrc.c.orig	2009-03-08 14:25:53.000000000 +0000
 +++ pkgsrc.c
 @@ -80,7 +80,7 @@ list_mirrors(const char *method)
  

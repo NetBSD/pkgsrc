@@ -1,8 +1,8 @@
-$NetBSD: patch-listmgt.c,v 1.1 2013/11/29 23:13:56 dholland Exp $
+$NetBSD: patch-listmgt.c,v 1.2 2017/12/29 11:59:13 plunky Exp $
 
 Fix const correctness.
 
---- listmgt.c~	2009-03-08 14:25:53.000000000 +0000
+--- listmgt.c.orig	2009-03-08 14:25:53.000000000 +0000
 +++ listmgt.c
 @@ -90,7 +90,7 @@ entry_search(Etree **etree, int cont)
  }
