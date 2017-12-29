@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2017/12/11 13:37:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.76 2017/12/29 23:06:14 gdt Exp $
 
 DISTNAME=	glibmm-2.54.1
 CATEGORIES=	devel gnome
@@ -10,7 +10,9 @@ HOMEPAGE=	https://www.gtkmm.org/
 COMMENT=	C++ bindings for glib
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-GCC_REQD+=		4.8
+# With 4.8, one gets the following:
+#   error: no matching function for call to 'regex_replace(const char*&, std::regex, const char [3])'
+GCC_REQD+=		4.9
 USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
