@@ -1,21 +1,10 @@
-$NetBSD: patch-ae,v 1.6 2014/12/27 00:13:28 dholland Exp $
+$NetBSD: patch-ae,v 1.7 2017/12/29 03:56:42 dholland Exp $
 
-- add more functions to check for (XXX: why is half the line duplicated?)
 - update for readline API changes
 
---- configure.orig	2011-03-21 18:12:58.000000000 +0000
+--- configure.orig	2013-04-08 05:52:20.000000000 +0000
 +++ configure
-@@ -16069,7 +16069,8 @@ fi
- 
- for ac_func in putenv strdup strerror strsignal mkstemp getpagesize \
- 	getdtablesize strstr ftruncate floorl ceill sqrtl frexpl ldexpl asinl \
--	acosl atanl logl expl tanl sinl cosl powl truncl lrintl truncf lrintf \
-+	acosl atanl logl expl tanl sinl cosl truncl lrintl truncf lrintf \
-+	acosl atanl logl expl tanl sinl cosl powl trunc truncf truncl lrintl strsep strpbrk \
-         lrint trunc strsep strpbrk symlink mkdtemp
- do :
-   as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
-@@ -17737,7 +17738,7 @@ main()
+@@ -19012,7 +19012,7 @@ main()
  {
    rl_bind_key ('\t', rl_insert);
    /* This is missing in BSD libedit!  */
