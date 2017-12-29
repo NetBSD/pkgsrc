@@ -1,11 +1,14 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 00:38:40 agc Exp $
+$NetBSD: distinfo,v 1.11 2017/12/29 11:59:13 plunky Exp $
 
 SHA1 (pkg_select-20090308.tar.gz) = f4a4f40927631d16ee563671ce98e69843382c93
 RMD160 (pkg_select-20090308.tar.gz) = d265f8e18ee4500e2ac34ba2d105acff28cc7e91
 SHA512 (pkg_select-20090308.tar.gz) = 77ebda4cb6032d980682b7c4c9745982cd49d1683476fa8e16e345385651150576b252c0a4c1a6318e263c11ebc13bffa04393687db914011dfafe52d651125c
 Size (pkg_select-20090308.tar.gz) = 54637 bytes
-SHA1 (patch-curses__helpers.c) = 3100f625773543e4e93f8fb25d706d95aac3016b
-SHA1 (patch-extern.h) = 541e1234e88c926d1bdf94334862f0f0bc81bb59
-SHA1 (patch-install__many.c) = 44d9dc440500f9b30b777e109a360bcaafc5f1db
-SHA1 (patch-listmgt.c) = b1b2f5898709d52c72c465899f0e8dbf1e27a5c2
-SHA1 (patch-pkgsrc.c) = 655931c4a61657d951cab795b8e878b41a056f7c
+SHA1 (patch-curses__helpers.c) = fa30914f4a9b147c433fcb32249d2b773a5e2604
+SHA1 (patch-extern.h) = e1248f7180a76ec8f623719037cf5306b8de573b
+SHA1 (patch-install__many.c) = 24a39faaab697a84103311f0fc28c2670e201bbe
+SHA1 (patch-listmgt.c) = d27477fd0ce46a9c8ad6a86818dd9f018557459a
+SHA1 (patch-live.c) = b821986e8da22cd53b6c95975cd36abafbeda453
+SHA1 (patch-more.c) = 0a8c4440a085edfae7f8f4832cdbb7878e3bf85b
+SHA1 (patch-pkg__info.c) = d6c1f93461c91cfe44a9659d7197406c9c47d890
+SHA1 (patch-pkgsrc.c) = df0b6c9633e75bc784ec34e88ec4201426d66464

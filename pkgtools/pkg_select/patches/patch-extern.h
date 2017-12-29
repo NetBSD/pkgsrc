@@ -1,8 +1,8 @@
-$NetBSD: patch-extern.h,v 1.1 2013/11/29 23:13:56 dholland Exp $
+$NetBSD: patch-extern.h,v 1.2 2017/12/29 11:59:13 plunky Exp $
 
 Fix const correctness.
 
---- extern.h~	2009-03-08 14:25:53.000000000 +0000
+--- extern.h.orig	2009-03-08 14:25:53.000000000 +0000
 +++ extern.h
 @@ -50,7 +50,7 @@ extern int entry_search(Etree **, int);
  /* list mgt */

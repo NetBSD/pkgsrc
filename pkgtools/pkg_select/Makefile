@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2017/01/03 18:45:15 roy Exp $
+# $NetBSD: Makefile,v 1.25 2017/12/29 11:59:13 plunky Exp $
 #
 
 DISTNAME=	pkg_select-20090308
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	pkgtools
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/imil/
 
@@ -10,7 +10,7 @@ MAINTAINER=	imil@gcu.info
 COMMENT=	Curses based pkgsrc system browser / manager
 LICENSE=	original-bsd
 
-USE_FEATURES+=		cdefs
+USE_FEATURES=		cdefs
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	${EXAMPLEDIR} share/pkg_select
