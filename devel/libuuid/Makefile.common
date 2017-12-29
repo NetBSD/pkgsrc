@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2017/12/12 20:56:09 maya Exp $
+# $NetBSD: Makefile.common,v 1.3 2017/12/29 06:59:54 maya Exp $
 # used by devel/libblkid/Makefile
 # used by devel/libuuid/Makefile
 # used by x11/mcookie/Makefile
@@ -16,7 +16,9 @@ PATCHDIR=	${.CURDIR}/../../devel/libuuid/patches
 
 USE_GCC_RUNTIME=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config ksh
+# XXX PR pkg/52877 configure is broken on netbsd6
+CONFIG_SHELL=		ksh
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-all-programs
 CONFIGURE_ARGS+=	--disable-bash-completion
