@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2017/12/14 21:12:21 fhajny Exp $
+# $NetBSD: Makefile,v 1.79 2017/12/29 16:16:47 gdt Exp $
 
 DISTNAME=	ejabberd-17.11
 CATEGORIES=	chat
@@ -9,6 +9,9 @@ MAINTAINER=	filip@joyent.com
 HOMEPAGE=	https://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 LICENSE=	gnu-gpl-v2
+
+# Building 17.11 while 17.09 is installed fails.
+# https://github.com/processone/ejabberd/issues/2194
 
 DEPENDS+=	erlang-cache_tab>=1.0.12:../../devel/erlang-cache_tab
 DEPENDS+=	erlang-epam>=1.0.3:../../security/erlang-epam
