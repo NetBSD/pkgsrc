@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2017/12/29 11:59:13 plunky Exp $
+# $NetBSD: Makefile,v 1.26 2017/12/29 17:55:13 maya Exp $
 #
 
 DISTNAME=	pkg_select-20090308
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	pkgtools
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/imil/
 
