@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2017/12/10 21:04:17 leot Exp $
+@comment $NetBSD: PLIST,v 1.55 2017/12/30 10:39:07 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -179,6 +179,9 @@ ${PYSITELIB}/youtube_dl/extractor/audiomack.pyo
 ${PYSITELIB}/youtube_dl/extractor/awaan.py
 ${PYSITELIB}/youtube_dl/extractor/awaan.pyc
 ${PYSITELIB}/youtube_dl/extractor/awaan.pyo
+${PYSITELIB}/youtube_dl/extractor/aws.py
+${PYSITELIB}/youtube_dl/extractor/aws.pyc
+${PYSITELIB}/youtube_dl/extractor/aws.pyo
 ${PYSITELIB}/youtube_dl/extractor/azmedien.py
 ${PYSITELIB}/youtube_dl/extractor/azmedien.pyc
 ${PYSITELIB}/youtube_dl/extractor/azmedien.pyo
@@ -611,6 +614,9 @@ ${PYSITELIB}/youtube_dl/extractor/fczenit.pyo
 ${PYSITELIB}/youtube_dl/extractor/filmon.py
 ${PYSITELIB}/youtube_dl/extractor/filmon.pyc
 ${PYSITELIB}/youtube_dl/extractor/filmon.pyo
+${PYSITELIB}/youtube_dl/extractor/filmweb.py
+${PYSITELIB}/youtube_dl/extractor/filmweb.pyc
+${PYSITELIB}/youtube_dl/extractor/filmweb.pyo
 ${PYSITELIB}/youtube_dl/extractor/firsttv.py
 ${PYSITELIB}/youtube_dl/extractor/firsttv.pyc
 ${PYSITELIB}/youtube_dl/extractor/firsttv.pyo
@@ -845,6 +851,9 @@ ${PYSITELIB}/youtube_dl/extractor/infoq.pyo
 ${PYSITELIB}/youtube_dl/extractor/instagram.py
 ${PYSITELIB}/youtube_dl/extractor/instagram.pyc
 ${PYSITELIB}/youtube_dl/extractor/instagram.pyo
+${PYSITELIB}/youtube_dl/extractor/internazionale.py
+${PYSITELIB}/youtube_dl/extractor/internazionale.pyc
+${PYSITELIB}/youtube_dl/extractor/internazionale.pyo
 ${PYSITELIB}/youtube_dl/extractor/internetvideoarchive.py
 ${PYSITELIB}/youtube_dl/extractor/internetvideoarchive.pyc
 ${PYSITELIB}/youtube_dl/extractor/internetvideoarchive.pyo
@@ -1259,9 +1268,6 @@ ${PYSITELIB}/youtube_dl/extractor/novamov.pyo
 ${PYSITELIB}/youtube_dl/extractor/nowness.py
 ${PYSITELIB}/youtube_dl/extractor/nowness.pyc
 ${PYSITELIB}/youtube_dl/extractor/nowness.pyo
-${PYSITELIB}/youtube_dl/extractor/nowtv.py
-${PYSITELIB}/youtube_dl/extractor/nowtv.pyc
-${PYSITELIB}/youtube_dl/extractor/nowtv.pyo
 ${PYSITELIB}/youtube_dl/extractor/noz.py
 ${PYSITELIB}/youtube_dl/extractor/noz.pyc
 ${PYSITELIB}/youtube_dl/extractor/noz.pyo
@@ -1613,6 +1619,9 @@ ${PYSITELIB}/youtube_dl/extractor/servingsys.pyo
 ${PYSITELIB}/youtube_dl/extractor/servus.py
 ${PYSITELIB}/youtube_dl/extractor/servus.pyc
 ${PYSITELIB}/youtube_dl/extractor/servus.pyo
+${PYSITELIB}/youtube_dl/extractor/sevenplus.py
+${PYSITELIB}/youtube_dl/extractor/sevenplus.pyc
+${PYSITELIB}/youtube_dl/extractor/sevenplus.pyo
 ${PYSITELIB}/youtube_dl/extractor/sexu.py
 ${PYSITELIB}/youtube_dl/extractor/sexu.pyc
 ${PYSITELIB}/youtube_dl/extractor/sexu.pyo
@@ -1940,6 +1949,9 @@ ${PYSITELIB}/youtube_dl/extractor/tvn24.pyo
 ${PYSITELIB}/youtube_dl/extractor/tvnoe.py
 ${PYSITELIB}/youtube_dl/extractor/tvnoe.pyc
 ${PYSITELIB}/youtube_dl/extractor/tvnoe.pyo
+${PYSITELIB}/youtube_dl/extractor/tvnow.py
+${PYSITELIB}/youtube_dl/extractor/tvnow.pyc
+${PYSITELIB}/youtube_dl/extractor/tvnow.pyo
 ${PYSITELIB}/youtube_dl/extractor/tvp.py
 ${PYSITELIB}/youtube_dl/extractor/tvp.pyc
 ${PYSITELIB}/youtube_dl/extractor/tvp.pyo
@@ -1958,6 +1970,9 @@ ${PYSITELIB}/youtube_dl/extractor/twentyfourvideo.pyo
 ${PYSITELIB}/youtube_dl/extractor/twentymin.py
 ${PYSITELIB}/youtube_dl/extractor/twentymin.pyc
 ${PYSITELIB}/youtube_dl/extractor/twentymin.pyo
+${PYSITELIB}/youtube_dl/extractor/twentythreevideo.py
+${PYSITELIB}/youtube_dl/extractor/twentythreevideo.pyc
+${PYSITELIB}/youtube_dl/extractor/twentythreevideo.pyo
 ${PYSITELIB}/youtube_dl/extractor/twitch.py
 ${PYSITELIB}/youtube_dl/extractor/twitch.pyc
 ${PYSITELIB}/youtube_dl/extractor/twitch.pyo
@@ -1973,6 +1988,9 @@ ${PYSITELIB}/youtube_dl/extractor/udn.pyo
 ${PYSITELIB}/youtube_dl/extractor/uktvplay.py
 ${PYSITELIB}/youtube_dl/extractor/uktvplay.pyc
 ${PYSITELIB}/youtube_dl/extractor/uktvplay.pyo
+${PYSITELIB}/youtube_dl/extractor/umg.py
+${PYSITELIB}/youtube_dl/extractor/umg.pyc
+${PYSITELIB}/youtube_dl/extractor/umg.pyo
 ${PYSITELIB}/youtube_dl/extractor/unistra.py
 ${PYSITELIB}/youtube_dl/extractor/unistra.pyc
 ${PYSITELIB}/youtube_dl/extractor/unistra.pyo
