@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1291 2017/12/21 10:22:55 adam Exp $
+# $NetBSD: Makefile,v 1.1292 2017/12/30 13:29:47 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -697,6 +697,7 @@ SUBDIR+=	py-gdata
 SUBDIR+=	py-genshi
 SUBDIR+=	py-google-api-python-client
 SUBDIR+=	py-graphite-web
+SUBDIR+=	py-grappelli_safe
 SUBDIR+=	py-gunicorn
 SUBDIR+=	py-h2
 SUBDIR+=	py-http-parser
