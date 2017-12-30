@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2017/12/01 19:22:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2017/12/30 10:39:24 adam Exp $
 bin/c-index-test
 bin/clang
 bin/clang++
@@ -9,6 +9,7 @@ bin/clang-format
 bin/clang-import-test
 bin/clang-offload-bundler
 bin/clang-rename
+bin/git-clang-format
 include/clang-c/BuildSystem.h
 include/clang-c/CXCompilationDatabase.h
 include/clang-c/CXErrorCode.h
@@ -629,4 +630,3 @@ share/clang/clang-format.el
 share/clang/clang-format.py
 share/clang/clang-rename.el
 share/clang/clang-rename.py
-share/clang/git-clang-format

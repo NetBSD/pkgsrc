@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2017/12/01 19:22:12 adam Exp $
+# $NetBSD: Makefile,v 1.14 2017/12/30 10:39:24 adam Exp $
 
-DISTNAME=	lldb-5.0.0.src
+DISTNAME=	lldb-5.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
@@ -13,20 +13,21 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
 DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../lang/clang
+DEPENDS+=	swig3>=3.0:../../devel/swig3
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
-USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
+USE_LANGUAGES=		c c++11
 GCC_REQD+=		4.8
 PY_PATCHPLIST=		yes
 
 # XXX: some old compilers need this; remove for lldb-5.x
-CFLAGS+=	-Wno-non-pod-varargs
+#CFLAGS+=	-Wno-non-pod-varargs
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # compilation failure in 3.8.1 (3.8.0 worked)
+#PYTHON_VERSIONS_ACCEPTED=	27 # compilation failure in 3.8.1 (3.8.0 worked)
 
 CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
@@ -64,9 +65,9 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=		posix
+PLIST_VARS+=	posix
 .if ${OPSYS} != "Darwin"
-PLIST.posix=		yes
+PLIST.posix=	yes
 .endif
 
 .if ${OPSYS} == "NetBSD"
@@ -82,7 +83,6 @@ post-extract:
 
 #.include "../../devel/googletest/buildlink3.mk" # check-lldb-unit
 .include "../../devel/libatomic_ops/buildlink3.mk"
-.include "../../devel/swig/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
