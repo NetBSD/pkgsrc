@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5420 2017/12/30 14:16:37 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5421 2017/12/30 14:17:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7817,3 +7817,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Task-Weaken to 1.05 [wiz 2017-12-30]
 	Updated devel/p5-Test-Object to 0.08 [wiz 2017-12-30]
 	Updated devel/p5-Test-SubCalls to 1.10 [wiz 2017-12-30]
+	Updated devel/p5-Test2-Suite to 0.000097 [wiz 2017-12-30]
