@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/09/26 14:24:30 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/12/30 13:24:19 wiz Exp $
 
-DISTNAME=	File-Slurper-0.010
+DISTNAME=	File-Slurper-0.011
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
