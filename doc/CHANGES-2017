@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5378 2017/12/30 04:39:01 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.5379 2017/12/30 04:40:40 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7763,3 +7763,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated archivers/libzip to 1.4.0 [wiz 2017-12-30]
 	Added devel/ruby-idn version 0.1.0 [tsutsui 2017-12-30]
 	Added devel/ruby-diva version 0.3.0 [tsutsui 2017-12-30]
+	Updated net/ruby-twitter-text to 2.1.0 [tsutsui 2017-12-30]
