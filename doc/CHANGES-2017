@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5377 2017/12/30 04:36:10 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.5378 2017/12/30 04:39:01 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7762,3 +7762,4 @@ Changes to the packages collection and infrastructure in 2017:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2017Q4 branch [gdt 2017-12-29]
 	Updated archivers/libzip to 1.4.0 [wiz 2017-12-30]
 	Added devel/ruby-idn version 0.1.0 [tsutsui 2017-12-30]
+	Added devel/ruby-diva version 0.3.0 [tsutsui 2017-12-30]
