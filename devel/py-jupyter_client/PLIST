@@ -1,5 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/24 08:17:00 adam Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.3 2017/12/30 11:30:13 adam Exp $
+bin/jupyter-kernel${PYVERSSUFFIX}
+bin/jupyter-kernelspec${PYVERSSUFFIX}
+bin/jupyter-run${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/jupyter_client/__init__.py
 ${PYSITELIB}/jupyter_client/__init__.pyc
 ${PYSITELIB}/jupyter_client/__init__.pyo
@@ -48,6 +56,9 @@ ${PYSITELIB}/jupyter_client/ioloop/restarter.pyo
 ${PYSITELIB}/jupyter_client/jsonutil.py
 ${PYSITELIB}/jupyter_client/jsonutil.pyc
 ${PYSITELIB}/jupyter_client/jsonutil.pyo
+${PYSITELIB}/jupyter_client/kernelapp.py
+${PYSITELIB}/jupyter_client/kernelapp.pyc
+${PYSITELIB}/jupyter_client/kernelapp.pyo
 ${PYSITELIB}/jupyter_client/kernelspec.py
 ${PYSITELIB}/jupyter_client/kernelspec.pyc
 ${PYSITELIB}/jupyter_client/kernelspec.pyo
@@ -96,6 +107,9 @@ ${PYSITELIB}/jupyter_client/tests/test_connect.pyo
 ${PYSITELIB}/jupyter_client/tests/test_jsonutil.py
 ${PYSITELIB}/jupyter_client/tests/test_jsonutil.pyc
 ${PYSITELIB}/jupyter_client/tests/test_jsonutil.pyo
+${PYSITELIB}/jupyter_client/tests/test_kernelapp.py
+${PYSITELIB}/jupyter_client/tests/test_kernelapp.pyc
+${PYSITELIB}/jupyter_client/tests/test_kernelapp.pyo
 ${PYSITELIB}/jupyter_client/tests/test_kernelmanager.py
 ${PYSITELIB}/jupyter_client/tests/test_kernelmanager.pyc
 ${PYSITELIB}/jupyter_client/tests/test_kernelmanager.pyo
