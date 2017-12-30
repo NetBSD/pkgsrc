@@ -1,0 +1,6 @@
+filebrowser_safe is a permanent fork of FileBrowser asset manager for Django,
+to be referenced as a dependency for the Mezzanine CMS for Django.
+
+At the time of filebrowser_safe's creation, FileBrowser was incorrectly
+packaged on PyPI, and had also dropped compatibility with Django 1.1 -
+filebrowser_safe was therefore created to address these specific issues.
