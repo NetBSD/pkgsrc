@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/07/08 03:14:20 tsutsui Exp $
+$NetBSD: distinfo,v 1.6 2017/12/30 04:40:20 tsutsui Exp $
 
-SHA1 (twitter-text-1.14.7.gem) = cbc238cb3d27a49ab684ad3e2bdf688d98a7b0df
-RMD160 (twitter-text-1.14.7.gem) = df993f9bb4a4958dcce2ee8ba9cbeb59280ae438
-SHA512 (twitter-text-1.14.7.gem) = 98addbf8efe7b9f2685f00827194dbb255b31512e8aa5c9dab22ec08b95ccebbcf53790dfc983e71b0644c687b4db98c5d30f74f15b925377403b4d5cf6e5194
-Size (twitter-text-1.14.7.gem) = 48128 bytes
+SHA1 (twitter-text-2.1.0.gem) = a75bf832132c0fabb70fd860b917ed2245b89271
+RMD160 (twitter-text-2.1.0.gem) = 853ba2b46123d368c15d7d2f6997dc74d43ed63e
+SHA512 (twitter-text-2.1.0.gem) = ac23e05f13a008d733a9417d47e633838584b548a41741a28ca399e1548344b39081b0c6677b7be9df1feb6ffcc491718ddfb5cd55cffb63d7bb680f1431907c
+Size (twitter-text-2.1.0.gem) = 54784 bytes
