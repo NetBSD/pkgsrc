@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5403 2017/12/30 13:48:25 wen Exp $
+$NetBSD: CHANGES-2017,v 1.5404 2017/12/30 13:49:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7798,3 +7798,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Future to 0.38 [wiz 2017-12-30]
 	Updated devel/p5-Git-CPAN-Patch to 2.3.2 [wiz 2017-12-30]
 	Updated www/mediawiki to 1.30.0 [wen 2017-12-30]
+	Added www/py-filebrowser_safe version 0.4.7 [adam 2017-12-30]
+	Added www/py-grappelli_safe version 0.4.7 [adam 2017-12-30]
+	Updated www/py-mezzanine to 4.2.3 [adam 2017-12-30]
