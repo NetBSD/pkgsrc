@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/10/22 07:32:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/12/30 10:31:29 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,9 +6,12 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/asyncpg/__init__.py
 ${PYSITELIB}/asyncpg/__init__.pyc
 ${PYSITELIB}/asyncpg/__init__.pyo
-${PYSITELIB}/asyncpg/_testbase.py
-${PYSITELIB}/asyncpg/_testbase.pyc
-${PYSITELIB}/asyncpg/_testbase.pyo
+${PYSITELIB}/asyncpg/_testbase/__init__.py
+${PYSITELIB}/asyncpg/_testbase/__init__.pyc
+${PYSITELIB}/asyncpg/_testbase/__init__.pyo
+${PYSITELIB}/asyncpg/_testbase/fuzzer.py
+${PYSITELIB}/asyncpg/_testbase/fuzzer.pyc
+${PYSITELIB}/asyncpg/_testbase/fuzzer.pyo
 ${PYSITELIB}/asyncpg/cluster.py
 ${PYSITELIB}/asyncpg/cluster.pyc
 ${PYSITELIB}/asyncpg/cluster.pyo
@@ -78,6 +81,7 @@ ${PYSITELIB}/asyncpg/protocol/coreproto.pyx
 ${PYSITELIB}/asyncpg/protocol/debug.h
 ${PYSITELIB}/asyncpg/protocol/debug.pxd
 ${PYSITELIB}/asyncpg/protocol/encodings.pyx
+${PYSITELIB}/asyncpg/protocol/hton.h
 ${PYSITELIB}/asyncpg/protocol/hton.pxd
 ${PYSITELIB}/asyncpg/protocol/pgtypes.pxi
 ${PYSITELIB}/asyncpg/protocol/prepared_stmt.pxd
