@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5448 2017/12/30 15:14:46 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5449 2017/12/30 15:17:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7845,3 +7845,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/p5-Time-Piece to 1.3203 [wiz 2017-12-30]
 	Updated www/p5-HTTP-Message to 6.14 [wiz 2017-12-30]
 	Updated www/p5-Mojolicious to 7.59 [wiz 2017-12-30]
+	Updated www/p5-libwww to 6.31 [wiz 2017-12-30]
