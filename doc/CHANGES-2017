@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5425 2017/12/30 14:21:37 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5426 2017/12/30 14:30:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7822,3 +7822,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Try-Tiny to 0.30 [wiz 2017-12-30]
 	Updated editors/p5-PPIx-EditorTools to 0.21 [wiz 2017-12-30]
 	Updated graphics/p5-SVG to 2.82 [wiz 2017-12-30]
+	Updated mail/p5-Mail-Box to 3.004 [wiz 2017-12-30]
