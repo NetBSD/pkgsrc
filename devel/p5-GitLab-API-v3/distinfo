@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/08/24 23:41:02 markd Exp $
+$NetBSD: distinfo,v 1.2 2017/12/30 13:51:27 wiz Exp $
 
-SHA1 (GitLab-API-v3-1.00.tar.gz) = 56827c1b2c1fe72325f5c5f19967b3a88c6207fa
-RMD160 (GitLab-API-v3-1.00.tar.gz) = c0ff99184316597e880adebbd96e6bffb4620df5
-SHA512 (GitLab-API-v3-1.00.tar.gz) = 81a2c39629d47865da3fadaba1b138c1e6855ec2407d9e3eefdcc127e9fe038e97583178daf50dc3791ad6458dbf204016218dde57c08fc65ad0fc42defad70b
-Size (GitLab-API-v3-1.00.tar.gz) = 27845 bytes
+SHA1 (GitLab-API-v3-1.02.tar.gz) = 34dd7c880366de6c6714a3b6a19a04f719521f15
+RMD160 (GitLab-API-v3-1.02.tar.gz) = 3bccad6a94aed09a733b71f0134cd275dad9d02d
+SHA512 (GitLab-API-v3-1.02.tar.gz) = 4ea17d6c96c0af411098db2e742186974451c4f6966111d46f95d68c6f4609312335284bbe0b526d7e40bcd07720a8ba9b638822b1ff989bca889b0a5f283f0b
+Size (GitLab-API-v3-1.02.tar.gz) = 29333 bytes
