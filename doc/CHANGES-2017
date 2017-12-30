@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5388 2017/12/30 10:39:35 leot Exp $
+$NetBSD: CHANGES-2017,v 1.5389 2017/12/30 10:42:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7777,3 +7777,9 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-test-xdist to 1.21.0 [adam 2017-12-30]
 	Updated databases/py-asyncpg to 0.14.0 [adam 2017-12-30]
 	Updated net/youtube-dl to 20171228 [leot 2017-12-30]
+	Updated lang/llvm to 5.0.1 [adam 2017-12-30]
+	Updated lang/clang to 5.0.1 [adam 2017-12-30]
+	Updated lang/clang-static-analyzer to 5.0.1 [adam 2017-12-30]
+	Updated lang/libunwind to 5.0.1 [adam 2017-12-30]
+	Updated devel/polly to 5.0.1 [adam 2017-12-30]
+	Updated devel/lldb to 5.0.1 [adam 2017-12-30]
