@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5391 2017/12/30 12:50:47 wen Exp $
+$NetBSD: CHANGES-2017,v 1.5392 2017/12/30 12:56:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7786,3 +7786,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-jupyter_client to 5.2.0 [adam 2017-12-30]
 	Updated security/argon2 to 20171227 [adam 2017-12-30]
 	Updated devel/p5-Perl-Tidy to 20171214 [wen 2017-12-30]
+	Updated devel/p5-File-Path-Tiny to 0.9 [wen 2017-12-30]
