@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5395 2017/12/30 13:16:17 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5396 2017/12/30 13:18:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7790,3 +7790,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated archivers/p5-Archive-Zip to 1.60 [wiz 2017-12-30]
 	Updated converters/p5-JSON to 2.97001 [wiz 2017-12-30]
 	Updated converters/p5-JSON-PP to 2.97001 [wiz 2017-12-30]
+	Updated devel/p5-App-perlbrew to 0.82 [wiz 2017-12-30]
