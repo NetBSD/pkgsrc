@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5406 2017/12/30 13:53:16 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5407 2017/12/30 13:54:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7803,3 +7803,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-mezzanine to 4.2.3 [adam 2017-12-30]
 	Updated devel/p5-GitLab-API-v3 to 1.02 [wiz 2017-12-30]
 	Updated devel/p5-List-MoreUtils to 0.428 [wiz 2017-12-30]
+	Updated devel/p5-List-MoreUtils-XS to 0.428 [wiz 2017-12-30]
