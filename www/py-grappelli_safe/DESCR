@@ -1,0 +1,6 @@
+grappelli_safe is a permanent fork of Grappelli admin skin for Django, to be
+referenced as a dependency for the Mezzanine CMS for Django.
+
+At the time of grappelli_safe's creation, Grappelli was incorrectly packaged
+on PyPI, and had also dropped compatibility with Django 1.1 - grappelli_safe
+was therefore created to address these specific issues.
