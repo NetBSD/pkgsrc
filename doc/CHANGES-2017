@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5385 2017/12/30 09:17:13 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5386 2017/12/30 10:31:37 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7772,3 +7772,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated games/scummvm to 2.0.0 [adam 2017-12-30]
 	Removed net/py-suds [adam 2017-12-30]
 	Updated www/py-aiohttp to 2.3.7 [adam 2017-12-30]
+	Updated net/gallery-dl to 1.1.1 [leot 2017-12-30]
