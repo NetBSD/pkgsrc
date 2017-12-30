@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5440 2017/12/30 14:56:49 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5441 2017/12/30 14:59:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7837,3 +7837,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/p5-Digest-SHA3 to 1.03 [wiz 2017-12-30]
 	Updated textproc/p5-Text-Xslate to 3.5.4 [wiz 2017-12-30]
 	Updated textproc/p5-XML-LibXML-Simple to 0.99 [wiz 2017-12-30]
+	Updated textproc/p5-YAML-LibYAML to 0.69 [wiz 2017-12-30]
