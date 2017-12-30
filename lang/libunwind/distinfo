@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/12/01 19:22:12 adam Exp $
+$NetBSD: distinfo,v 1.8 2017/12/30 10:39:25 adam Exp $
 
-SHA1 (libunwind-5.0.0.src.tar.xz) = 6bdb6e1fcaf79c29866b0d62c66a405347dea75b
-RMD160 (libunwind-5.0.0.src.tar.xz) = 87ea51017ddbaed7a3a9f50ed2f1477e288c5296
-SHA512 (libunwind-5.0.0.src.tar.xz) = 20d54d5342d67425f5e36e9c690f1bb67bc2a3b7184b3ad546b689e510728d7c596f178d4f5186daf7480409ed4e455848b4ad1d9d896370fac1db69885fc793
-Size (libunwind-5.0.0.src.tar.xz) = 72236 bytes
+SHA1 (libunwind-5.0.1.src.tar.xz) = 93d878be85f3bebdcd6cef0795cbb90cf42cc7d1
+RMD160 (libunwind-5.0.1.src.tar.xz) = 26d3dac149e2fd355e1b8b367a9bf61e01c38fbf
+SHA512 (libunwind-5.0.1.src.tar.xz) = 6c0f7a286c1ffa46769685ee36604cd90ed40470e1c3d3ef03c46bcc9e5f9e36e68a0a1f67b9b300823170b48c9b8d2db4625afd885f1d024905db1dffd9fc49
+Size (libunwind-5.0.1.src.tar.xz) = 72180 bytes
