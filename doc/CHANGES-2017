@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5435 2017/12/30 14:49:33 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5436 2017/12/30 14:50:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7832,3 +7832,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/p5-SNMP-Info to 3.39 [wiz 2017-12-30]
 	Updated net/p5-SOAP-Lite to 1.24 [wiz 2017-12-30]
 	Updated net/p5-Zabbix-Sender to 0.07 [wiz 2017-12-30]
+	Updated security/p5-CryptX to 0.056 [wiz 2017-12-30]
