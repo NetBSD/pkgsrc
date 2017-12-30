@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.144 2017/12/10 14:04:44 adam Exp $
+# $NetBSD: Makefile,v 1.145 2017/12/30 09:48:54 adam Exp $
 
-DISTNAME=	setuptools-38.2.4
+DISTNAME=	setuptools-38.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
