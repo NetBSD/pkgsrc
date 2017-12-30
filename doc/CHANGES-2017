@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5404 2017/12/30 13:49:01 adam Exp $
+$NetBSD: CHANGES-2017,v 1.5405 2017/12/30 13:51:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7801,3 +7801,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-filebrowser_safe version 0.4.7 [adam 2017-12-30]
 	Added www/py-grappelli_safe version 0.4.7 [adam 2017-12-30]
 	Updated www/py-mezzanine to 4.2.3 [adam 2017-12-30]
+	Updated devel/p5-GitLab-API-v3 to 1.02 [wiz 2017-12-30]
