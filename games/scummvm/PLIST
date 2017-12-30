@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.16 2016/07/21 13:48:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2017/12/30 09:06:42 adam Exp $
 bin/scummvm
 man/man6/scummvm.6
+share/appdata/scummvm.appdata.xml
+share/applications/scummvm.desktop
 share/doc/scummvm/AUTHORS
 share/doc/scummvm/COPYING
 share/doc/scummvm/COPYING.BSD
@@ -24,6 +26,7 @@ share/scummvm/scummclassic.zip
 share/scummvm/scummmodern.zip
 share/scummvm/sky.cpt
 share/scummvm/teenagent.dat
+share/scummvm/titanic.dat
 share/scummvm/tony.dat
 share/scummvm/toon.dat
 share/scummvm/translations.dat
