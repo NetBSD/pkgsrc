@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/10/07 17:27:41 maya Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/12/30 05:59:35 maya Exp $
 bin/streamlink
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -364,6 +364,8 @@ ${PYSITELIB}/streamlink/plugins/srgssr.pyo
 ${PYSITELIB}/streamlink/plugins/srgssr.pyc
 ${PYSITELIB}/streamlink/plugins/ssh101.pyo
 ${PYSITELIB}/streamlink/plugins/ssh101.pyc
+${PYSITELIB}/streamlink/plugins/startv.pyo
+${PYSITELIB}/streamlink/plugins/startv.pyc
 ${PYSITELIB}/streamlink/plugins/streamable.pyo
 ${PYSITELIB}/streamlink/plugins/streamable.pyc
 ${PYSITELIB}/streamlink/plugins/streamboat.pyo
@@ -446,6 +448,8 @@ ${PYSITELIB}/streamlink/plugins/vrtbe.pyo
 ${PYSITELIB}/streamlink/plugins/vrtbe.pyc
 ${PYSITELIB}/streamlink/plugins/wattv.pyo
 ${PYSITELIB}/streamlink/plugins/wattv.pyc
+${PYSITELIB}/streamlink/plugins/webcast_india_gov.pyo
+${PYSITELIB}/streamlink/plugins/webcast_india_gov.pyc
 ${PYSITELIB}/streamlink/plugins/webtv.pyo
 ${PYSITELIB}/streamlink/plugins/webtv.pyc
 ${PYSITELIB}/streamlink/plugins/weeb.pyo
@@ -592,6 +596,7 @@ ${PYSITELIB}/streamlink/plugins/sportal.py
 ${PYSITELIB}/streamlink/plugins/sportschau.py
 ${PYSITELIB}/streamlink/plugins/srgssr.py
 ${PYSITELIB}/streamlink/plugins/ssh101.py
+${PYSITELIB}/streamlink/plugins/startv.py
 ${PYSITELIB}/streamlink/plugins/streamable.py
 ${PYSITELIB}/streamlink/plugins/streamboat.py
 ${PYSITELIB}/streamlink/plugins/streamingvideoprovider.py
@@ -633,6 +638,7 @@ ${PYSITELIB}/streamlink/plugins/vidio.py
 ${PYSITELIB}/streamlink/plugins/vk.py
 ${PYSITELIB}/streamlink/plugins/vrtbe.py
 ${PYSITELIB}/streamlink/plugins/wattv.py
+${PYSITELIB}/streamlink/plugins/webcast_india_gov.py
 ${PYSITELIB}/streamlink/plugins/webtv.py
 ${PYSITELIB}/streamlink/plugins/weeb.py
 ${PYSITELIB}/streamlink/plugins/wwenetwork.py
