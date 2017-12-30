@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2017/12/01 19:22:12 adam Exp $
+# $NetBSD: Makefile,v 1.11 2017/12/30 10:39:25 adam Exp $
 
-DISTNAME=	libunwind-5.0.0.src
+DISTNAME=	libunwind-5.0.1.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
@@ -13,9 +13,9 @@ LICENSE=	modified-bsd
 
 CONFIGURE_DIRS=		${WRKDIR}/build
 
-USE_TOOLS+=		pax
-USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
+USE_LANGUAGES=		c c++11
+USE_TOOLS+=		pax
 GCC_REQD+=		4.8
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
