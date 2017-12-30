@@ -1,10 +1,10 @@
-$NetBSD: patch-core_lib_mikutwitter_api__shortcuts.rb,v 1.1 2017/06/10 09:45:33 tsutsui Exp $
+$NetBSD: patch-core_plugin_twitter_mikutwitter_api__shortcuts.rb,v 1.1 2017/12/30 05:05:14 tsutsui Exp $
 
 - pull upstream fixes for ticket #916
   https://dev.mikutter.hachune.net/issues/916
 
---- core/lib/mikutwitter/api_shortcuts.rb.orig	2017-06-10 01:11:51.000000000 +0000
-+++ core/lib/mikutwitter/api_shortcuts.rb
+--- core/plugin/twitter/mikutwitter/api_shortcuts.rb.orig	2017-12-22 15:08:27.000000000 +0000
++++ core/plugin/twitter/mikutwitter/api_shortcuts.rb
 @@ -52,10 +52,10 @@ module MikuTwitter::APIShortcuts
    defcursorpager :followers_id, 'followers/ids', :paged_ids, :ids, id: :user_id
  
@@ -18,7 +18,7 @@ $NetBSD: patch-core_lib_mikutwitter_api__shortcuts.rb,v 1.1 2017/06/10 09:45:33 
  
    def direct_messages(args = {})
      (self/:direct_messages).direct_messages({:count => 200}.merge(args)) end
-@@ -258,21 +258,30 @@ module MikuTwitter::APIShortcuts
+@@ -260,21 +260,30 @@ module MikuTwitter::APIShortcuts
          cursor_pager(api, parser, key, args.merge(cursor: res[:next_cursor])).next{ |nex|
            res[key] + nex } end } end
  
@@ -27,7 +27,7 @@ $NetBSD: patch-core_lib_mikutwitter_api__shortcuts.rb,v 1.1 2017/06/10 09:45:33 
 -      promise = Deferred.new(true)
 -      Thread.new{
 -        begin
--          promise.call(User.findbyid(ids))
+-          promise.call(Plugin::Twitter::User.findbyid(ids))
 -        rescue Exception => e
 -          promise.fail(e) end }
 -      promise.next{ |users|
@@ -40,7 +40,7 @@ $NetBSD: patch-core_lib_mikutwitter_api__shortcuts.rb,v 1.1 2017/06/10 09:45:33 
 +      detected = {}           # {id => User}
 +      lookups = Set.new       # [id]
 +      ids.each do |id|
-+        user = User.findbyid(id, Retriever::DataSource::USE_LOCAL_ONLY)
++        user = Plugin::Twitter::User.findbyid(id, Diva::DataSource::USE_LOCAL_ONLY)
 +        if user.is_a? User
 +          detected[id] = user
          else
