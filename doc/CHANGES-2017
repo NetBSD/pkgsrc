@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5437 2017/12/30 14:51:41 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5438 2017/12/30 14:52:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7834,3 +7834,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/p5-Zabbix-Sender to 0.07 [wiz 2017-12-30]
 	Updated security/p5-CryptX to 0.056 [wiz 2017-12-30]
 	Updated security/p5-Digest-SHA to 6.01 [wiz 2017-12-30]
+	Updated security/p5-Digest-SHA3 to 1.03 [wiz 2017-12-30]
