@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5392 2017/12/30 12:56:48 wen Exp $
+$NetBSD: CHANGES-2017,v 1.5393 2017/12/30 13:14:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7787,3 +7787,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/argon2 to 20171227 [adam 2017-12-30]
 	Updated devel/p5-Perl-Tidy to 20171214 [wen 2017-12-30]
 	Updated devel/p5-File-Path-Tiny to 0.9 [wen 2017-12-30]
+	Updated archivers/p5-Archive-Zip to 1.60 [wiz 2017-12-30]
