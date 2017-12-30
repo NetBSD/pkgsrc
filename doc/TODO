@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17970 2017/12/30 10:31:37 leot Exp $
+$NetBSD: TODO,v 1.17971 2017/12/30 10:42:48 adam Exp $
 
 Suggested new packages
 ======================
@@ -1004,7 +1004,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
 	o lldpd-0.9.1
-	o llvm-5.0.1
 	o lmbench-3
 	o lohit-fonts-2.4.2
 	o lottanzb-0.6
