@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5433 2017/12/30 14:44:37 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5434 2017/12/30 14:46:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7830,3 +7830,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/p5-Net-DNS-Resolver-Mock to 1.20171219 [wiz 2017-12-30]
 	Updated net/p5-Net-GitHub to 0.91 [wiz 2017-12-30]
 	Updated net/p5-SNMP-Info to 3.39 [wiz 2017-12-30]
+	Updated net/p5-SOAP-Lite to 1.24 [wiz 2017-12-30]
