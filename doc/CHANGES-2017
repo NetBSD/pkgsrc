@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5414 2017/12/30 14:03:13 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5415 2017/12/30 14:05:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7811,3 +7811,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Module-Install to 1.19 [wiz 2017-12-30]
 	Updated devel/p5-Module-Manifest to 1.09 [wiz 2017-12-30]
 	Updated devel/p5-MooX-Cmd to 0.017 [wiz 2017-12-30]
+	Updated devel/p5-PPI-XS to 0.910 [wiz 2017-12-30]
