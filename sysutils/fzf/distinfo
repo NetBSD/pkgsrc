@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/11/06 11:15:32 wiz Exp $
+$NetBSD: distinfo,v 1.3 2017/12/30 04:52:35 maya Exp $
 
-SHA1 (fzf-0.17.1.tar.gz) = cbe14d0996bd798b8472158f004f3c4f6a7ad212
-RMD160 (fzf-0.17.1.tar.gz) = 3154ff71cc39c292a6f38aac662d60f35410d9df
-SHA512 (fzf-0.17.1.tar.gz) = e8a746daa2a75c7ec7ad3a4141c3398b879df192ff52af70878995ebac6731e9949c75ba8d3b05cc67e64a5c731a2310e2a54da21ba762107d8c6a7a55313b81
-Size (fzf-0.17.1.tar.gz) = 133222 bytes
+SHA1 (fzf-0.17.3.tar.gz) = 12926f30355c27761ccec5a721600f83ff693879
+RMD160 (fzf-0.17.3.tar.gz) = ef037e18b01c5825b04720adddac333e4d2c63de
+SHA512 (fzf-0.17.3.tar.gz) = 2713ef7adb0dd278ac0a0c362c5cd23e7b0f1867efdfa964ad1f63f48c7f518e0cf96cc0b2571487585a0271fb0d2398edfebdbe603ec2bb42d3bd87febd2156
+Size (fzf-0.17.3.tar.gz) = 136933 bytes
