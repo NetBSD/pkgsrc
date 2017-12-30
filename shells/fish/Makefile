@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2017/10/30 10:48:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2017/12/30 05:35:54 maya Exp $
 
-DISTNAME=		fish-2.6.0
-PKGREVISION=		3
+DISTNAME=		fish-2.7.1
 CATEGORIES=		shells
-MASTER_SITES=		http://fishshell.com/files/${PKGVERSION_NOREV}/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=fish-shell/}
+GITHUB_PROJECT=		fish-shell
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.fishshell.com/
@@ -11,6 +11,8 @@ COMMENT=		User friendly command line shell for UNIX-like operating systems
 LICENSE=		gnu-gpl-v2
 
 EXTRACT_USING=		gtar
+
+WRKSRC=			${WRKDIR}/fish-shell-${PKGVERSION_NOREV}
 
 USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
@@ -46,6 +48,8 @@ PLIST.open=	yes
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && autoreconf -fiv
+
+BUILD_DEPENDS+=doxygen-[0-9]*:../../devel/doxygen
 
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
