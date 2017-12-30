@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2017/12/30 04:38:12 tsutsui Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/console
+${GEM_LIBDIR}/bin/setup
+${GEM_LIBDIR}/diva.gemspec
+${GEM_LIBDIR}/lib/diva.rb
+${GEM_LIBDIR}/lib/diva/combinator.rb
+${GEM_LIBDIR}/lib/diva/datasource.rb
+${GEM_LIBDIR}/lib/diva/error.rb
+${GEM_LIBDIR}/lib/diva/field.rb
+${GEM_LIBDIR}/lib/diva/field_generator.rb
+${GEM_LIBDIR}/lib/diva/model.rb
+${GEM_LIBDIR}/lib/diva/model_extend.rb
+${GEM_LIBDIR}/lib/diva/spec.rb
+${GEM_LIBDIR}/lib/diva/type.rb
+${GEM_LIBDIR}/lib/diva/uri.rb
+${GEM_LIBDIR}/lib/diva/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
