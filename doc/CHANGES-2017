@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5386 2017/12/30 10:31:37 leot Exp $
+$NetBSD: CHANGES-2017,v 1.5387 2017/12/30 10:34:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7773,3 +7773,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed net/py-suds [adam 2017-12-30]
 	Updated www/py-aiohttp to 2.3.7 [adam 2017-12-30]
 	Updated net/gallery-dl to 1.1.1 [leot 2017-12-30]
+	Updated devel/py-setuptools to 38.2.5 [adam 2017-12-30]
+	Updated devel/py-test-xdist to 1.21.0 [adam 2017-12-30]
+	Updated databases/py-asyncpg to 0.14.0 [adam 2017-12-30]
