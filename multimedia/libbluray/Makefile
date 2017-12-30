@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/06/15 22:14:39 adam Exp $
+# $NetBSD: Makefile,v 1.9 2017/12/30 08:45:54 adam Exp $
 
-DISTNAME=	libbluray-1.0.1
+DISTNAME=	libbluray-1.0.2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.videolan.org/pub/videolan/libbluray/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
