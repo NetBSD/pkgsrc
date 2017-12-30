@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/07/08 03:14:20 tsutsui Exp $
+# $NetBSD: Makefile,v 1.6 2017/12/30 04:40:20 tsutsui Exp $
 
-DISTNAME=	twitter-text-1.14.7
+DISTNAME=	twitter-text-2.1.0
 CATEGORIES=	net
 
 MAINTAINER=	tsutsui@NetBSD.org
@@ -9,6 +9,7 @@ COMMENT=	Library that provides text handling for Twitter
 LICENSE=	apache-2.0
 
 DEPENDS+=	${RUBY_PKGPREFIX}-unf-[0-9]*:../../converters/ruby-unf
+DEPENDS+=	${RUBY_PKGPREFIX}-idn-[0-9]*:../../devel/ruby-idn
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
