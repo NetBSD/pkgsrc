@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5379 2017/12/30 04:40:40 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.5380 2017/12/30 04:54:08 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7764,3 +7764,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/ruby-idn version 0.1.0 [tsutsui 2017-12-30]
 	Added devel/ruby-diva version 0.3.0 [tsutsui 2017-12-30]
 	Updated net/ruby-twitter-text to 2.1.0 [tsutsui 2017-12-30]
+	Updated sysutils/fzf to 0.17.3 [maya 2017-12-30]
