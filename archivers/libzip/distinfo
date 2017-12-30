@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.27 2017/12/18 16:48:20 jperkin Exp $
+$NetBSD: distinfo,v 1.28 2017/12/30 00:19:56 wiz Exp $
 
-SHA1 (libzip-1.3.2.tar.xz) = 5a940f2132066b258e42c60530599fec579be082
-RMD160 (libzip-1.3.2.tar.xz) = ade49a6cfddc190bd2613d3e06714b124c9bd938
-SHA512 (libzip-1.3.2.tar.xz) = d7b678c4a39f7bc33f90febac1b42230eac4d414e835dab7d3458a81f047482cee9ee65b6374bdf8abbf5a33c23725e8771da51300ba92ddc6728b570caec255
-Size (libzip-1.3.2.tar.xz) = 942756 bytes
-SHA1 (patch-regress_nonrandomopen.c) = fd569d7dc8725adb16127cebefd16b196162e406
+SHA1 (libzip-1.4.0.tar.xz) = 6dded3edf48eeb10b97fa0fb8f7aa661d3137823
+RMD160 (libzip-1.4.0.tar.xz) = 3dfdceb7432996f691622a189a165756b5ef3b3f
+SHA512 (libzip-1.4.0.tar.xz) = 125e4de8b02781023f9bed450747b9c36942cbf41de7a863402786d1c7b848e19b425f4b0c26ab3857c6bbfd8571bcd9cb1434df355c59148db54f1b951f5c56
+Size (libzip-1.4.0.tar.xz) = 713912 bytes
