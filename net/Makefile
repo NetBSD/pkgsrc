@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1195 2017/12/30 09:10:11 adam Exp $
+# $NetBSD: Makefile,v 1.1196 2017/12/31 15:23:24 bsiegert Exp $
 #
 
 COMMENT=	Networking tools
@@ -771,7 +771,6 @@ SUBDIR+=	sniffit
 SUBDIR+=	sniproxy
 SUBDIR+=	snmptt
 SUBDIR+=	snort
-SUBDIR+=	snort-rules
 SUBDIR+=	socat
 SUBDIR+=	socket++
 SUBDIR+=	socks4
