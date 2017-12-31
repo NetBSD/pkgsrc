@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2017/09/27 06:37:47 adam Exp $
+# $NetBSD: Makefile,v 1.47 2017/12/31 17:16:43 gdt Exp $
 
 .include "../../devel/git/Makefile.common"
 
@@ -35,6 +35,8 @@ CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--without-tcltk
 
 BUILD_TARGET=		all
+
+TEST_TARGET=		test
 
 REPLACE_SH+=		contrib/hooks/post-receive-email
 REPLACE_SH+=		contrib/hooks/pre-auto-gc-battery
