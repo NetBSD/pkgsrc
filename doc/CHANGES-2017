@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5458 2017/12/31 13:38:32 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5459 2017/12/31 13:39:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7856,3 +7856,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Test-ClassAPI to 1.07 [wiz 2017-12-31]
 	Updated net/p5-SOAP-Lite to 1.26 [wiz 2017-12-31]
 	Added devel/p5-Path-Iter version 0.2 [wiz 2017-12-31]
+	Updated sysutils/p5-File-Copy-Recursive to 0.39 [wiz 2017-12-31]
