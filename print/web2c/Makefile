@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2017/09/09 17:06:51 tnn Exp $
+# $NetBSD: Makefile,v 1.65 2017/12/31 00:44:32 markd Exp $
 
 DISTNAME=	texlive-20170524-source
 PKGNAME=	web2c-2017
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print
 MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2017/
 EXTRACT_SUFX=	.tar.xz
@@ -15,8 +15,6 @@ DEPENDS+=	kpathsea>=6.2.1:../../print/kpathsea
 DEPENDS+=	ptexenc>=1.3.4:../../print/ptexenc
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
-			${DISTNAME}/libs/poppler \
-			${DISTNAME}/libs/xpdf \
 			${DISTNAME}/texk/web2c
 
 GNU_CONFIGURE=	yes
@@ -47,8 +45,8 @@ CONFIGURE_ARGS+=	--with-system-mpfr \
 			--with-mpfr-includes=${BUILDLINK_PREFIX.mpfr}/include \
 			--with-mpfr-libdir=${BUILDLINK_PREFIX.mpfr}/lib
 CONFIGURE_ARGS+=	--with-system-pixman
-#CONFIGURE_ARGS+=	--with-system-poppler
-#CONFIGURE_ARGS+=	--with-system-xpdf
+CONFIGURE_ARGS+=	--with-system-poppler
+CONFIGURE_ARGS+=	--with-system-xpdf
 CONFIGURE_ARGS+=	--with-system-ptexenc
 CONFIGURE_ARGS+=	--with-system-zlib \
 			--with-zlib-includes=${BUILDLINK_PREFIX.zlib}/include \
@@ -56,8 +54,6 @@ CONFIGURE_ARGS+=	--with-system-zlib \
 LIBTOOL_OVERRIDE=	../*/libtool */libtool
 
 CONFIGURE_DIRS=		${WRKDIR}/${DISTNAME}/texk/web2c
-CONFIGURE_DIRS+=	${WRKDIR}/${DISTNAME}/libs/poppler
-CONFIGURE_DIRS+=	${WRKDIR}/${DISTNAME}/libs/xpdf
 INSTALL_DIRS=	${WRKDIR}/${DISTNAME}/texk/web2c
 
 .include "../../devel/zlib/buildlink3.mk"
@@ -65,8 +61,8 @@ INSTALL_DIRS=	${WRKDIR}/${DISTNAME}/texk/web2c
 .include "../../graphics/png/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../print/kpathsea/buildlink3.mk"
-#.include "../../print/poppler/buildlink3.mk"
-#.include "../../print/poppler-includes/buildlink3.mk"
+.include "../../print/poppler/buildlink3.mk"
+.include "../../print/poppler-includes/buildlink3.mk"
 .include "../../print/ptexenc/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
