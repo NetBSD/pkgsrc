@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.105 2017/11/10 06:59:16 spz Exp $
+# $NetBSD: Makefile,v 1.106 2017/12/31 20:55:43 snj Exp $
 
 DISTNAME=	rsync-3.1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://rsync.samba.org/ftp/rsync/
 MASTER_SITES+=	http://rsync.samba.org/ftp/rsync/old-versions/
