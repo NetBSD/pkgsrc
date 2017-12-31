@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5456 2017/12/31 13:30:39 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5457 2017/12/31 13:32:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7854,3 +7854,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/p5-DBI to 1.639 [wiz 2017-12-31]
 	Updated devel/p5-B-Keywords to 1.16 [wiz 2017-12-31]
 	Updated devel/p5-Test-ClassAPI to 1.07 [wiz 2017-12-31]
+	Updated net/p5-SOAP-Lite to 1.26 [wiz 2017-12-31]
