@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5462 2017/12/31 15:24:46 bsiegert Exp $
+$NetBSD: CHANGES-2017,v 1.5463 2017/12/31 18:49:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7860,3 +7860,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-XML-Compile to 1.59 [wiz 2017-12-31]
 	Updated time/p5-DateTime to 1.4500 [wiz 2017-12-31]
 	Removed net/snort-rules [bsiegert 2017-12-31]
+	Added devel/py-deprecation version 1.0.1 [adam 2017-12-31]
+	Updated archivers/py-lz4 to 0.17.0 [adam 2017-12-31]
