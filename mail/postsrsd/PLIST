@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/25 15:29:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/12/31 13:22:46 wiz Exp $
+man/man8/postsrsd.8
 sbin/postsrsd
 share/doc/postsrsd/README.md
 share/doc/postsrsd/README_UPGRADE.md
