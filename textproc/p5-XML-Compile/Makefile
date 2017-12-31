@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/07/09 15:21:58 wen Exp $
+# $NetBSD: Makefile,v 1.5 2017/12/31 13:41:15 wiz Exp $
 
-DISTNAME=	XML-Compile-1.58
+DISTNAME=	XML-Compile-1.59
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MARKOV/}
@@ -18,6 +18,7 @@ DEPENDS+=	p5-Types-Serialiser>=0:../../devel/p5-Types-Serialiser
 # TEST_DEPENDS
 BUILD_DEPENDS+=	p5-XML-Compile-Tester>=0.90:../../textproc/p5-XML-Compile-Tester
 BUILD_DEPENDS+=	p5-Test-Deep>=0.095:../../devel/p5-Test-Deep
+BUILD_DEPENDS+=	p5-common-sense-[0-9]*:../../devel/p5-common-sense
 
 PERL5_PACKLIST=	auto/XML/Compile/.packlist
 
