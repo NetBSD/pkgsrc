@@ -1,4 +1,4 @@
-#	$NetBSD: gnustep.mk,v 1.25 2015/03/04 16:51:57 tnn Exp $
+#	$NetBSD: gnustep.mk,v 1.26 2017/12/31 16:39:41 gdt Exp $
 
 .if !defined(GNUSTEP_MK)
 GNUSTEP_MK=		#defined
@@ -9,8 +9,19 @@ PKG_SUPPORTED_OPTIONS+=	fragile
 .include "../../mk/bsd.options.mk"
 
 .if empty(PKG_OPTIONS:Mfragile)
+# It is necessary to use clang to build gnustep packages.
+# PKGSRC_COMPILER is a user-settable variable and may not be set by
+# packages, but there is not a package-settable way to force a
+# different compiler.  For now, abuse it, realizing that this will
+# also drop any ccache or distcc set by the user.
+# \todo Stop abusing PKGSRC_COMPILER.
 PKGSRC_COMPILER=	clang
+
+# \todo Explain.
 ONLY_FOR_COMPILER=	clang
+
+# \todo Explain.  Is this about forcing clang as the compiler, or
+# about using libraries in the clang package, or ?
 BUILDLINK_API_DEPENDS.clang+=   clang>=3.1
 DEPENDS+=		clang-[0-9]*:../../lang/clang
 .endif
