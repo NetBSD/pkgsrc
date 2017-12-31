@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2017/12/31 00:36:04 markd Exp $
+# $NetBSD: Makefile,v 1.64 2017/12/31 00:41:19 markd Exp $
 
 DISTNAME=	texlive-20170524-source
 PKGNAME=	luatex-1.0.4
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	print
 MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2017/
 EXTRACT_SUFX=	.tar.xz
@@ -15,13 +15,12 @@ LICENSE=	gnu-gpl-v2
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/libs/lua52 \
 			${DISTNAME}/libs/luajit \
-			${DISTNAME}/libs/poppler \
 			${DISTNAME}/texk/web2c
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++11
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake lex perl pkg-config yacc
+USE_TOOLS+=	gmake gsed lex perl pkg-config yacc
 CONFIGURE_ARGS+=	--disable-aleph --disable-etex --disable-pdftex \
 			--enable-luatex --disable-mf --disable-mf-nowin \
 			--with-x=no \
@@ -30,8 +29,7 @@ CONFIGURE_ARGS+=	--disable-aleph --disable-etex --disable-pdftex \
 			--disable-ptex --disable-eptex --disable-uptex --disable-euptex \
 			--disable-web-progs \
 			--enable-web2c --disable-xetex
-#CONFIGURE_ARGS+=	--with-system-poppler
-#CONFIGURE_ARGS+=	--with-system-xpdf
+CONFIGURE_ARGS+=	--with-system-poppler
 CONFIGURE_ARGS+= \
 	--with-fontconfig-includes=${BUILDLINK_PREFIX.fontconfig}/include \
 	--with-fontconfig-libdir=${BUILDLINK_PREFIX.fontconfig}/lib
@@ -52,7 +50,6 @@ CONFIGURE_ARGS+=	--with-system-gmp \
 			--with-gmp-libdir=${BUILDLINK_PREFIX.gmp}/lib
 
 CONFIGURE_DIRS=		libs/lua52
-CONFIGURE_DIRS+=	libs/poppler
 CONFIGURE_DIRS+=	texk/web2c
 
 INSTALLATION_DIRS+=	bin lib
@@ -71,8 +68,8 @@ CFLAGS.SunOS+= -std=gnu99 -D_XOPEN_SOURCE_EXTENDED=0
 .include "../../math/mpfr/buildlink3.mk"
 BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.2.1
 .include "../../print/kpathsea/buildlink3.mk"
-#.include "../../print/poppler/buildlink3.mk"
-#.include "../../print/poppler-includes/buildlink3.mk"
+.include "../../print/poppler/buildlink3.mk"
+.include "../../print/poppler-includes/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 
 pre-configure:
