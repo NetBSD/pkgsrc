@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2586 2017/12/30 04:38:40 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2587 2017/12/31 13:38:18 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1442,6 +1442,7 @@ SUBDIR+=	p5-Path-Dispatcher
 SUBDIR+=	p5-Path-Dispatcher-Declarative
 SUBDIR+=	p5-Path-FindDev
 SUBDIR+=	p5-Path-IsDev
+SUBDIR+=	p5-Path-Iter
 SUBDIR+=	p5-PathTools
 SUBDIR+=	p5-Pegex
 SUBDIR+=	p5-Perl-APIReference
