@@ -1,0 +1,2 @@
+Perl module to iterate through the contents of a given path without
+having to build the entire list first.
