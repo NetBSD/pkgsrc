@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2017/12/30 14:45:50 wiz Exp $
+$NetBSD: distinfo,v 1.21 2017/12/31 13:31:54 wiz Exp $
 
-SHA1 (SOAP-Lite-1.24.tar.gz) = 56a05d55b2cbf95afd8d22e5015f7b63e286a9bc
-RMD160 (SOAP-Lite-1.24.tar.gz) = 0f68cb46192783ae0ef9b52001c053cd20aacd5c
-SHA512 (SOAP-Lite-1.24.tar.gz) = fcd15c341e8c31478bedf56085a0e8e4ca0403f7ad1939daf4900660043450382871fd8aa00dba18b23efc36e75284944dc332f24c47f04a09c9c4cba80f6375
-Size (SOAP-Lite-1.24.tar.gz) = 272028 bytes
+SHA1 (SOAP-Lite-1.26.tar.gz) = 85c1b2384b1e5e20ecb995f0898a4de728c0d138
+RMD160 (SOAP-Lite-1.26.tar.gz) = c2ee0e24f6abd7a3bfba4ff7f44bf77d26d17bfa
+SHA512 (SOAP-Lite-1.26.tar.gz) = b09e320cecbb4859f49dcb144a446af878219f6ba3d2f7999f8656f40989d3ead0707960f561d17a9f800706fcb53020327f9c85313f6dcca34f9699a4c74143
+Size (SOAP-Lite-1.26.tar.gz) = 272187 bytes
