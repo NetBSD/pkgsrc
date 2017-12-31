@@ -1,0 +1,3 @@
+bin/jupyter-kernel @PREFIX@/bin/jupyter-kernel@PYVERSSUFFIX@
+bin/jupyter-kernelspec @PREFIX@/bin/jupyter-kernelspec@PYVERSSUFFIX@
+bin/jupyter-run @PREFIX@/bin/jupyter-run@PYVERSSUFFIX@
