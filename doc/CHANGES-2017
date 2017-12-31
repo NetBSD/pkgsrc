@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5452 2017/12/31 11:21:31 he Exp $
+$NetBSD: CHANGES-2017,v 1.5453 2017/12/31 13:22:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7850,3 +7850,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed www/py-django-mezzanine-grappelli successor www/py-grappelli_safe [adam 2017-12-30]
 	Updated editors/nano to 2.9.1 [schwarz 2017-12-30]
 	Updated devel/gnustep-objc to 1.6.1nb3 [he 2017-12-31]
+	Updated mail/postsrsd to 1.4nb1 [wiz 2017-12-31]
