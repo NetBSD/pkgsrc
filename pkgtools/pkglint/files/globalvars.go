@@ -3,7 +3,6 @@ package main
 import (
 	"io"
 	"netbsd.org/pkglint/histogram"
-	"netbsd.org/pkglint/line"
 )
 
 type GlobalVars struct {
@@ -20,7 +19,7 @@ type GlobalVars struct {
 	Testing         bool     // Is pkglint in self-testing mode (only during development)?
 	CurrentUsername string   // For checking against OWNER and MAINTAINER
 	CvsEntriesDir   string   // Cached to avoid I/O
-	CvsEntriesLines []line.Line
+	CvsEntriesLines []Line
 
 	Hash         map[string]*Hash // Maps "alg:fname" => hash (inter-package check).
 	UsedLicenses map[string]bool  // Maps "license name" => true (inter-package check).
@@ -82,7 +81,7 @@ type CmdOpts struct {
 
 type Hash struct {
 	hash string
-	line line.Line
+	line Line
 }
 
 var G GlobalVars

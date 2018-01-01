@@ -1,7 +1,6 @@
 package main
 
 import (
-	"netbsd.org/pkglint/line"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
 	"strings"
@@ -11,7 +10,7 @@ type MkParser struct {
 	*Parser
 }
 
-func NewMkParser(line line.Line, text string, emitWarnings bool) *MkParser {
+func NewMkParser(line Line, text string, emitWarnings bool) *MkParser {
 	return &MkParser{NewParser(line, text, emitWarnings)}
 }
 

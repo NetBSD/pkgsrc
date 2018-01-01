@@ -1,8 +1,6 @@
 package main
 
 import (
-	"netbsd.org/pkglint/line"
-	"netbsd.org/pkglint/linechecks"
 	"netbsd.org/pkglint/trace"
 	"path"
 	"strings"
@@ -11,7 +9,7 @@ import (
 // MkLines contains data for the Makefile (or *.mk) that is currently checked.
 type MkLines struct {
 	mklines        []MkLine
-	lines          []line.Line
+	lines          []Line
 	forVars        map[string]bool   // The variables currently used in .for loops
 	target         string            // Current make(1) target
 	vardef         map[string]MkLine // varname => line; for all variables that are defined in the current file
@@ -24,7 +22,7 @@ type MkLines struct {
 	indentation    Indentation // Indentation depth of preprocessing directives
 }
 
-func NewMkLines(lines []line.Line) *MkLines {
+func NewMkLines(lines []Line) *MkLines {
 	mklines := make([]MkLine, len(lines))
 	for i, line := range lines {
 		mklines[i] = NewMkLine(line)
@@ -80,7 +78,7 @@ func (mklines *MkLines) VarValue(varname string) (value string, found bool) {
 
 func (mklines *MkLines) Check() {
 	if trace.Tracing {
-		defer trace.Call1(mklines.lines[0].Filename())()
+		defer trace.Call1(mklines.lines[0].Filename)()
 	}
 
 	G.Mk = mklines
@@ -102,7 +100,7 @@ func (mklines *MkLines) Check() {
 
 	// In the second pass, the actual checks are done.
 
-	linechecks.CheckRcsid(mklines.lines[0], `#\s+`, "# ")
+	CheckLineRcsid(mklines.lines[0], `#\s+`, "# ")
 
 	var substcontext SubstContext
 	var varalign VaralignBlock
@@ -212,7 +210,7 @@ func (mklines *MkLines) DetermineDefinedVariables() {
 			}
 		}
 
-		mklines.toolRegistry.ParseToolLine(mkline)
+		mklines.toolRegistry.ParseToolLine(mkline.Line)
 	}
 }
 

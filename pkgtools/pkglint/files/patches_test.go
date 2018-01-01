@@ -109,7 +109,7 @@ func (s *Suite) Test_checklineOtherAbsolutePathname(c *check.C) {
 	s.Init(c)
 	line := NewLine("patch-ag", 1, "+$install -s -c ./bin/rosegarden ${DESTDIR}$BINDIR", nil)
 
-	checklineOtherAbsolutePathname(line, line.Text())
+	checklineOtherAbsolutePathname(line, line.Text)
 
 	s.CheckOutputEmpty()
 }
