@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2017/08/24 20:03:33 adam Exp $
+# $NetBSD: Makefile,v 1.63 2018/01/01 21:18:45 adam Exp $
 #
 
 DISTNAME=	kaffeine-1.3.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kaffeine/}
 
