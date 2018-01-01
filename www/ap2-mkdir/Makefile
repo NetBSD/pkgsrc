@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/08/30 12:47:49 manu Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/01 10:23:07 wiz Exp $
 
 DISTNAME=		mod_mkdir-0.3
 EXTRACT_SUFX=		.tgz
@@ -9,8 +9,6 @@ MASTER_SITES=		ftp://ftp.espci.fr/pub/mod_mkdir/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Home directory autocreation module
 LICENSE=		original-bsd
-
-PKG_APACHE_ACCEPTED=	apache22 apache24
 
 APACHE_MODULE_NAME=	${DISTNAME:C/-.*//}.la
 
