@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.95 2017/11/30 16:45:25 adam Exp $
+# $NetBSD: Makefile,v 1.96 2018/01/01 21:18:08 adam Exp $
 
 DISTNAME=	gdal-2.0.3
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	geography
 MASTER_SITES=	http://download.osgeo.org/gdal/${PKGVERSION_NOREV}/
 

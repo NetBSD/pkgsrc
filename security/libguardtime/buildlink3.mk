@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2017/08/24 20:03:01 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2018/01/01 21:18:10 adam Exp $
 
 BUILDLINK_TREE+=	libguardtime
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libguardtime
 LIBGUARDTIME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libguardtime+=	libguardtime>=0.3.11
-BUILDLINK_ABI_DEPENDS.libguardtime+=	libguardtime>=0.3.13nb5
+BUILDLINK_ABI_DEPENDS.libguardtime+=	libguardtime>=0.3.13nb6
 BUILDLINK_PKGSRCDIR.libguardtime?=	../../security/libguardtime
 
 .include "../../security/openssl/buildlink3.mk"

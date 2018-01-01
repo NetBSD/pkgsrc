@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2017/08/24 20:03:21 adam Exp $
+# $NetBSD: Makefile,v 1.35 2018/01/01 21:18:32 adam Exp $
 
 DISTNAME=	kcolorchooser-15.12.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 COMMENT=	KDE color chooser
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2017/08/24 20:03:12 adam Exp $
+# $NetBSD: Makefile,v 1.39 2018/01/01 21:18:23 adam Exp $
 
 DISTNAME=	kate-${_KDE_VERSION}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	editors
 COMMENT=	KDE advanced text editor
 
