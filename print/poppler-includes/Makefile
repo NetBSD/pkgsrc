@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/12/08 08:52:56 maya Exp $
+# $NetBSD: Makefile,v 1.21 2018/01/01 18:16:38 rillig Exp $
 
 PKGREVISION= 1
 .include "../../print/poppler/Makefile.common"
@@ -21,7 +21,7 @@ INCDIR=${DESTDIR}${PREFIX}/include
 do-install:
 	${INSTALL_DATA_DIR} ${INCDIR}
 	${INSTALL_DATA_DIR} ${INCDIR}/poppler
-	sed -n -f $(FILESDIR)/extract.sed ${WRKSRC}/CMakeLists.txt       \
+	sed -n -f ${FILESDIR}/extract.sed ${WRKSRC}/CMakeLists.txt       \
 	  | grep ^poppler/ | { while read f;                             \
 	do                                                               \
 	    ${INSTALL_DATA} ${WRKSRC}/"$$f" ${INCDIR}/poppler;           \
@@ -29,12 +29,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/poppler/poppler-config.h ${INCDIR}/poppler
 	for d in goo fofi splash; do                                     \
 	    ${INSTALL_DATA_DIR} ${INCDIR}/poppler/"$$d";                 \
-	    sed -n -f $(FILESDIR)/extract.sed ${WRKSRC}/CMakeLists.txt   \
+	    sed -n -f ${FILESDIR}/extract.sed ${WRKSRC}/CMakeLists.txt   \
 	      | grep "^$$d/" | { while read f;                           \
 	    do                                                           \
 		${INSTALL_DATA} ${WRKSRC}/"$$f" ${INCDIR}/poppler/"$$d"; \
 	    done };                                                      \
-	done                                                             
+	done
 	# do these actually belong here?
 	${INSTALL_DATA} ${WRKSRC}/poppler/SignatureInfo.h ${INCDIR}/poppler
 	${INSTALL_DATA} ${WRKSRC}/goo/NetPBMWriter.h ${INCDIR}/poppler/goo
