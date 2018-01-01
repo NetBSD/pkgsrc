@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 18:33:33 rillig Exp $
 include/ini_file_manager/config.adb
 include/ini_file_manager/config.ads
 lib/gnat/ini_file_manager.gpr

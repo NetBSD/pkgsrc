@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.unicorn,v 1.6 2018/01/01 18:33:32 rillig Exp $
 share/${RUBY_PKGPREFIX}-redmine/gems/cache/kgio-2.11.0.gem
 ${GEM_EXTSDIR}/kgio-2.11.0/kgio_ext.${RUBY_DLEXT}
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/kgio-2.11.0/.document
