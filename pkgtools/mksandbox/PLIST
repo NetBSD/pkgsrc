@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2012/08/26 10:31:23 wiz Exp $
-sbin/mksandbox
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:52 rillig Exp $
 man/man8/mksandbox.8
+sbin/mksandbox

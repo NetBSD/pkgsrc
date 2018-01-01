@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2014/06/10 13:17:42 joerg Exp $
-include/security/openpam_attr.h
+@comment $NetBSD: PLIST,v 1.8 2018/01/01 22:29:54 rillig Exp $
 include/security/openpam.h
+include/security/openpam_attr.h
 include/security/openpam_version.h
 include/security/pam_appl.h
 include/security/pam_constants.h
@@ -37,18 +37,18 @@ man/man3/pam_end.3
 man/man3/pam_error.3
 man/man3/pam_get_authtok.3
 man/man3/pam_get_data.3
-man/man3/pam_getenv.3
-man/man3/pam_getenvlist.3
 man/man3/pam_get_item.3
 man/man3/pam_get_user.3
+man/man3/pam_getenv.3
+man/man3/pam_getenvlist.3
 man/man3/pam_info.3
 man/man3/pam_open_session.3
 man/man3/pam_prompt.3
 man/man3/pam_putenv.3
-man/man3/pam_setcred.3
 man/man3/pam_set_data.3
-man/man3/pam_setenv.3
 man/man3/pam_set_item.3
+man/man3/pam_setcred.3
+man/man3/pam_setenv.3
 man/man3/pam_sm_acct_mgmt.3
 man/man3/pam_sm_authenticate.3
 man/man3/pam_sm_chauthtok.3

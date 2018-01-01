@@ -1,11 +1,8 @@
-@comment $NetBSD: PLIST.solaris-sparc,v 1.2 2009/06/14 18:09:24 joerg Exp $
+@comment $NetBSD: PLIST.solaris-sparc,v 1.3 2018/01/01 22:29:46 rillig Exp $
 lib/ICAClient/.config/appsrv.ini
 lib/ICAClient/.config/keyboard.ini
 lib/ICAClient/.config/module.ini
 lib/ICAClient/.config/wfclient.ini
-lib/ICAClient/icons/citrix16.xpm
-lib/ICAClient/icons/citrix32.xpm
-lib/ICAClient/icons/citrix48.xpm
 lib/ICAClient/Wfcmgr
 lib/ICAClient/Wfcmgr.ad
 lib/ICAClient/Wfica
@@ -56,6 +53,9 @@ lib/ICAClient/dt/appconfig/types/C/Citrix_ica_visio32.dt
 lib/ICAClient/dt/appconfig/types/C/Citrix_ica_winproj.dt
 lib/ICAClient/dt/appconfig/types/C/Citrix_ica_winword.dt
 lib/ICAClient/dt/appconfig/types/C/Citrix_ica_winzip32.dt
+lib/ICAClient/icons/citrix16.xpm
+lib/ICAClient/icons/citrix32.xpm
+lib/ICAClient/icons/citrix48.xpm
 lib/ICAClient/keystore/cacerts/GTECTRoot.crt
 lib/ICAClient/pkginf/F.core.solaris
 lib/ICAClient/pkginf/Ver.core.solaris

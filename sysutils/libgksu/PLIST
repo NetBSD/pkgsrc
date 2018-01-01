@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/02/24 16:11:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:57 rillig Exp $
 bin/gksu-properties
 include/libgksu/gksu.h
 include/libgksu/libgksu.h
@@ -11,14 +11,14 @@ share/gconf/schemas/gksu.schemas
 share/gtk-doc/html/libgksu/home.png
 share/gtk-doc/html/libgksu/index.html
 share/gtk-doc/html/libgksu/index.sgml
-share/gtk-doc/html/libgksu/left.png
 share/gtk-doc/html/libgksu/left-insensitive.png
+share/gtk-doc/html/libgksu/left.png
 share/gtk-doc/html/libgksu/libgksu-API-Reference.html
 share/gtk-doc/html/libgksu/libgksu.devhelp2
-share/gtk-doc/html/libgksu/right.png
 share/gtk-doc/html/libgksu/right-insensitive.png
+share/gtk-doc/html/libgksu/right.png
 share/gtk-doc/html/libgksu/style.css
-share/gtk-doc/html/libgksu/up.png
 share/gtk-doc/html/libgksu/up-insensitive.png
+share/gtk-doc/html/libgksu/up.png
 share/libgksu/gksu-properties.ui
 share/pixmaps/gksu.png

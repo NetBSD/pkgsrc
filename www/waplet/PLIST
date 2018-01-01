@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:40 joerg Exp $
-share/httpd/htdocs/waplet/waplet.jar
-share/doc/waplet/README
+@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:30:03 rillig Exp $
 share/doc/waplet/COPYING
 share/doc/waplet/Parser.java
+share/doc/waplet/README
 share/doc/waplet/Tag.java
 share/doc/waplet/waplet.java
 share/examples/waplet/sample.html
 share/examples/waplet/wap_content.wml
+share/httpd/htdocs/waplet/waplet.jar

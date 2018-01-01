@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/07/20 14:38:51 marino Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/01/01 22:29:26 rillig Exp $
 bin/vile
 bin/vile-pager
 bin/vileget
@@ -147,9 +147,9 @@ share/vile/mcrl.keywords
 share/vile/midl.keywords
 share/vile/modes.rc
 share/vile/mvn.keywords
-share/vile/objc.keywords
 share/vile/nr.keywords
 share/vile/nsis.keywords
+share/vile/objc.keywords
 share/vile/palettes.rc
 share/vile/pas.keywords
 share/vile/pc.keywords

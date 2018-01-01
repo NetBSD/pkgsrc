@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.2 2016/12/16 00:01:53 wiedi Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.3 2018/01/01 22:29:23 rillig Exp $
 lib/libDOM.so.4.9
 lib/libEOControl.so.4.9
 lib/libGDLAccess.so.4.9
@@ -7,8 +7,8 @@ lib/libNGLdap.so.4.9
 lib/libNGMime.so.4.9
 lib/libNGObjWeb.so.4.9
 lib/libNGStreams.so.4.9
+lib/libSBJson.so.2
 lib/libSaxObjC.so.4.9
 lib/libWEExtensions.so.4.9
 lib/libWOExtensions.so.4.9
 lib/libXmlRpc.so.4.9
-lib/libSBJson.so.2

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:18 rillig Exp $
 bin/wmsmixer
-share/examples/wmsmixer/home.wmsmixer
 share/doc/wmsmixer/README.wmsmixer
+share/examples/wmsmixer/home.wmsmixer

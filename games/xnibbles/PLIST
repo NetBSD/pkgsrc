@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:57:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:36 rillig Exp $
 bin/xnibbles
 bin/xnleditor
 man/man6/xnibbles.6
+share/xnibbles/levels/LEVELS
+share/xnibbles/levels/README
 share/xnibbles/levels/level001.xnl
 share/xnibbles/levels/level002.xnl
 share/xnibbles/levels/level003.xnl
@@ -23,8 +25,6 @@ share/xnibbles/levels/level018.xnl
 share/xnibbles/levels/level019.xnl
 share/xnibbles/levels/level020.xnl
 share/xnibbles/levels/template.xnl
-share/xnibbles/levels/README
-share/xnibbles/levels/LEVELS
 share/xnibbles/sounds/appear.ub
 share/xnibbles/sounds/break.ub
 share/xnibbles/sounds/destroy.ub

@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 21:28:48 joerg Exp $
-rtty/bin/ttysrv
-rtty/bin/rtty
-rtty/bin/locbrok
+@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:58 rillig Exp $
 rtty/bin/Startup
-rtty/bin/console
-rtty/bin/startsrv
-rtty/bin/agelogs
 rtty/bin/agelog
+rtty/bin/agelogs
+rtty/bin/console
+rtty/bin/locbrok
+rtty/bin/rtty
+rtty/bin/startsrv
+rtty/bin/ttysrv
 share/doc/rtty/README
 @comment rtty/bin created above
 @pkgdir rtty/dev

@@ -1,6 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:35:53 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:19 rillig Exp $
 bin/fasthenry
 bin/zbuf
+share/doc/fasthenry/README
+share/doc/fasthenry/manual_001.ps
+share/doc/fasthenry/manual_002.ps
+share/doc/fasthenry/manual_003.ps
+share/doc/fasthenry/nonuniform_manual_1.ps
+share/doc/fasthenry/nonuniform_manual_2.ps
 share/examples/fasthenry/30pin.inp
 share/examples/fasthenry/3d_example2.inp
 share/examples/fasthenry/3d_example2_coarse.inp
@@ -28,9 +34,3 @@ share/examples/fasthenry/trace_over_mesh_new.inp
 share/examples/fasthenry/tree_sample.hier
 share/examples/fasthenry/tree_sample.inp
 share/examples/fasthenry/vias.inp
-share/doc/fasthenry/README
-share/doc/fasthenry/manual_001.ps
-share/doc/fasthenry/manual_002.ps
-share/doc/fasthenry/manual_003.ps
-share/doc/fasthenry/nonuniform_manual_1.ps
-share/doc/fasthenry/nonuniform_manual_2.ps

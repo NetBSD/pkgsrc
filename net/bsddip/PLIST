@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:23 joerg Exp $
-sbin/dip
-sbin/diplogin
-lib/dip/dialout.dip.sample
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:46 rillig Exp $
+lib/dip/ReadMe
 lib/dip/ReadMe.HowTo
-lib/dip/sample2.dip
+lib/dip/dialout.dip.sample
 lib/dip/diphosts
 lib/dip/sample.dip
-lib/dip/setup.sh.sample
-lib/dip/ReadMe
 lib/dip/sample1.dip
+lib/dip/sample2.dip
+lib/dip/setup.sh.sample
 lib/dip/startup.sh.sample
 man/cat8/dip.0
 man/cat8/diplogin.0
 man/man8/dip.8
 man/man8/diplogin.8
+sbin/dip
+sbin/diplogin
