@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2017/09/04 18:00:50 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2018/01/01 18:16:35 rillig Exp $
 #
 
 DISTNAME=	skampi
@@ -20,7 +20,7 @@ INSTALLATION_DIRS=	bin
 
 # Force file regeneration:
 post-extract:
-	rm $(WRKSRC)/Makefile.dep
+	rm ${WRKSRC}/Makefile.dep
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/skampi ${DESTDIR}${PREFIX}/bin/skampi

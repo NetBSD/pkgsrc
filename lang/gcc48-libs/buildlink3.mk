@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2015/02/04 14:16:24 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2018/01/01 18:16:37 rillig Exp $
 
 BUILDLINK_TREE+=	gcc48-libs
 
@@ -30,7 +30,7 @@ GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 # XXX: Using %M requires patched version of gcc (e.g. lang/gcc48)
 ${SPECS_LIBGCC}:
 	@${ECHO} "*link_libgcc:" >${SPECS_LIBGCC}
-	@${ECHO} "%D $(LINKER_RPATH_FLAG)${LIBGCC_PREFIX}/${GCC_TARGET_MACHINE}/lib/%M" >>${SPECS_LIBGCC}
+	@${ECHO} "%D ${LINKER_RPATH_FLAG}${LIBGCC_PREFIX}/${GCC_TARGET_MACHINE}/lib/%M" >>${SPECS_LIBGCC}
 
 _WRAP_EXTRA_ARGS.CC+=	-specs=${SPECS_LIBGCC}
 _WRAP_EXTRA_ARGS.CXX+=	-specs=${SPECS_LIBGCC}
