@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/13 17:34:16 adrianp Exp $
-lib/httpd/mod_auth_xradius.so

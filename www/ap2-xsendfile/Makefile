@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/08/01 14:59:06 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.4 2018/01/01 10:23:08 wiz Exp $
 
 DISTNAME=		mod_xsendfile-0.12
 PKGNAME=		${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
@@ -15,8 +14,6 @@ APACHE_MODULE=		YES
 APACHE_MODULE_NAME=	${DISTNAME:C|-.*||}.so
 APACHE_MODULE_SRC=	${DISTNAME:C|-.*||}.c
 APACHE_MODULE_LA=	${DISTNAME:C|-.*||}.la
-
-PKG_APACHE_ACCEPTED=	apache22 apache24
 
 do-build:
 	cd ${WRKSRC} && ${APXS} ${CPPFLAGS} ${LDFLAGS} -c -o ${APACHE_MODULE_NAME} ${APACHE_MODULE_SRC}
