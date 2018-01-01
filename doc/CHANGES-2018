@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.7 2018/01/01 08:16:03 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.8 2018/01/01 10:23:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -8,3 +8,24 @@ Changes to the packages collection and infrastructure in 2018:
 	Added graphics/icoutils version 0.32.2 [ryoon 2018-01-01]
 	Updated net/nsd to 4.1.19 [ryoon 2018-01-01]
 	Updated graphics/libwebp to 0.6.1 [ryoon 2018-01-01]
+	Removed www/apache22 [wiz 2018-01-01]
+	Removed security/otptool [wiz 2018-01-01]
+	Removed www/ap-auth-mysql [wiz 2018-01-01]
+	Removed www/ap-fastcgi [wiz 2018-01-01]
+	Removed www/ap-geoip2 [wiz 2018-01-01]
+	Removed www/ap-scgi [wiz 2018-01-01]
+	Removed www/ap2-auth-external [wiz 2018-01-01]
+	Removed www/ap2-auth-mysql [wiz 2018-01-01]
+	Removed www/ap2-auth-ntlm [wiz 2018-01-01]
+	Removed www/ap2-auth-pgsql [wiz 2018-01-01]
+	Removed www/ap2-auth-radius [wiz 2018-01-01]
+	Removed www/ap2-auth-xradius [wiz 2018-01-01]
+	Removed www/ap2-authn-otp [wiz 2018-01-01]
+	Removed www/ap2-bw [wiz 2018-01-01]
+	Removed www/ap2-cband [wiz 2018-01-01]
+	Removed www/ap2-suphp [wiz 2018-01-01]
+	Removed www/ap2-transform [wiz 2018-01-01]
+	Removed www/ap22-authn-sasl [wiz 2018-01-01]
+	Removed www/ap22-authnz-external [wiz 2018-01-01]
+	Removed www/ap22-limitipconn [wiz 2018-01-01]
+	Removed www/ap22-vhost-ldap [wiz 2018-01-01]
