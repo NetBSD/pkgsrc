@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.Darwin,v 1.2 2018/01/01 18:33:33 rillig Exp $
 include/gstreamer-1.0/gst/gl/cocoa/gstglcaopengllayer.h
 include/gstreamer-1.0/gst/gl/cocoa/gstglcontext_cocoa.h
 include/gstreamer-1.0/gst/gl/gl.h
