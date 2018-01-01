@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.8 2018/01/01 10:23:47 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.9 2018/01/01 10:28:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -29,3 +29,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed www/ap22-authnz-external [wiz 2018-01-01]
 	Removed www/ap22-limitipconn [wiz 2018-01-01]
 	Removed www/ap22-vhost-ldap [wiz 2018-01-01]
+	Updated net/syncthing to 0.14.42 [wiz 2018-01-01]
