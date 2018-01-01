@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.663 2017/12/21 07:12:39 jnemeth Exp $
+# $NetBSD: Makefile,v 1.664 2018/01/01 10:23:04 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -231,7 +231,6 @@ SUBDIR+=	openvas-libraries
 SUBDIR+=	openvas-plugins
 SUBDIR+=	openvas-server
 SUBDIR+=	otpCalc
-SUBDIR+=	otptool
 SUBDIR+=	p0f
 SUBDIR+=	p11-kit
 SUBDIR+=	p5-AuthCAS

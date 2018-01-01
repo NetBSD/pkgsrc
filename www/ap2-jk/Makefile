@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/02/28 23:47:25 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2018/01/01 10:23:07 wiz Exp $
 
 DISTNAME=	tomcat-connectors-${JK_VERSION}-src
 PKGNAME=	${APACHE_PKG_PREFIX}-jk-${JK_VERSION}
@@ -9,14 +9,12 @@ MASTER_SITES=	${MASTER_SITE_APACHE:=tomcat/tomcat-connectors/jk/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tomcat.apache.org/connectors-doc/
 COMMENT=	Apache connector for accessing Jakarta Tomcat
-LICENSE=    apache-2.0
+LICENSE=	apache-2.0
 
 CONFLICTS=	ap-jk-[0-9]*
 
 MAKE_PARAMS+=		USE_APXS=1
 MAKE_PARAMS+=		WITH_APXS=${APXS}
-
-PKG_APACHE_ACCEPTED=	apache22 apache24
 
 INSTALLATION_DIRS+=	lib/httpd
 

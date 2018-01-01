@@ -1,4 +1,0 @@
-This is the Apache 2.x RADIUS authentication module. It allows any Apache 2.x
-web-server to become a RADIUS client for authentication and accounting
-requests. You will, however, need to supply your own RADIUS server to
-perform the actual authentication.

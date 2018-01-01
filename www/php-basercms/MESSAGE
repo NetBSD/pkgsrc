@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2014/11/29 12:26:16 ryoon Exp $
+$NetBSD: MESSAGE,v 1.3 2018/01/01 10:23:09 wiz Exp $
 
 To use baserCMS, you will need to perform the following steps.
 
@@ -12,7 +12,7 @@ To use baserCMS, you will need to perform the following steps.
 	mysql> create database basercms character set utf8 ;
 	mysql> grant all privileges on basercms.* to baser@localhost identified by 'baser-password';
 
-2. Install apache httpd server, for example www/apache22 and www/ap-php.
+2. Install apache httpd server, for example www/apache24 and www/ap-php.
 
 3. Be sure to have the following lines in ${PREFIX}/etc/httpd/httpd.conf
 

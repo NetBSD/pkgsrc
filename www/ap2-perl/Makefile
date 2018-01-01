@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2017/09/22 09:59:30 maya Exp $
+# $NetBSD: Makefile,v 1.55 2018/01/01 10:23:07 wiz Exp $
 
 DISTNAME=	mod_perl-2.0.10
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
@@ -12,8 +12,6 @@ COMMENT=	Module that embeds a Perl interpreter into Apache
 LICENSE=	apache-2.0
 
 CONFLICTS=	ap-perl-[0-9]* p5-Apache-Reload-[0-9]* p5-Apache-Test-[0-9]*
-
-PKG_APACHE_ACCEPTED=	apache22 apache24
 
 APACHE_MODULE=		yes
 PERL5_PACKLIST=		auto/mod_perl2/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1294 2017/12/30 21:37:44 adam Exp $
+# $NetBSD: Makefile,v 1.1295 2018/01/01 10:23:04 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -15,24 +15,11 @@ SUBDIR+=	amaya
 SUBDIR+=	analog
 SUBDIR+=	ap-auth-kerb
 SUBDIR+=	ap-auth-mellon
-SUBDIR+=	ap-auth-mysql
 SUBDIR+=	ap-authnz-crowd
-SUBDIR+=	ap-fastcgi
-SUBDIR+=	ap-geoip2
 SUBDIR+=	ap-mono
 SUBDIR+=	ap-php
 SUBDIR+=	ap-rpaf
-SUBDIR+=	ap-scgi
-SUBDIR+=	ap2-auth-external
 SUBDIR+=	ap2-auth-mellon
-SUBDIR+=	ap2-auth-mysql
-SUBDIR+=	ap2-auth-ntlm
-SUBDIR+=	ap2-auth-pgsql
-SUBDIR+=	ap2-auth-radius
-SUBDIR+=	ap2-auth-xradius
-SUBDIR+=	ap2-authn-otp
-SUBDIR+=	ap2-bw
-SUBDIR+=	ap2-cband
 SUBDIR+=	ap2-encoding
 SUBDIR+=	ap2-fcgid
 SUBDIR+=	ap2-jk
@@ -41,17 +28,11 @@ SUBDIR+=	ap2-mkdir
 SUBDIR+=	ap2-perl
 SUBDIR+=	ap2-python
 SUBDIR+=	ap2-subversion
-SUBDIR+=	ap2-suphp
-SUBDIR+=	ap2-transform
 SUBDIR+=	ap2-upload
 SUBDIR+=	ap2-xsendfile
 SUBDIR+=	ap22-auth-ofba
-SUBDIR+=	ap22-authn-sasl
-SUBDIR+=	ap22-authnz-external
 SUBDIR+=	ap22-authz-ldap
 SUBDIR+=	ap22-dnssd
-SUBDIR+=	ap22-limitipconn
-SUBDIR+=	ap22-vhost-ldap
 SUBDIR+=	ap24-authnz-external
 SUBDIR+=	apache-roller
 SUBDIR+=	apache-tomcat55
@@ -59,7 +40,6 @@ SUBDIR+=	apache-tomcat6
 SUBDIR+=	apache-tomcat7
 SUBDIR+=	apache-tomcat8
 SUBDIR+=	apache-tomcat85
-SUBDIR+=	apache22
 SUBDIR+=	apache24
 SUBDIR+=	apachetop
 SUBDIR+=	asp2php

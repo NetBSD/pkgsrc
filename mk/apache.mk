@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.30 2017/03/11 18:29:24 maya Exp $
+# $NetBSD: apache.mk,v 1.31 2018/01/01 10:23:09 wiz Exp $
 #
 # This file is meant to be included by packages that require an apache
 # web server.
@@ -9,7 +9,7 @@
 #	The default apache server to use and install. If there already
 #	is an apache installed, this will have no effect.
 #
-#	Possible values: apache22 apache24
+#	Possible values: apache24
 #
 # Package-settable variables:
 #
@@ -55,11 +55,7 @@ PKG_APACHE_ACCEPTED?=		${_PKG_APACHES}
 USE_APR?=			no
 
 # The available apache packages:
-_PKG_APACHES=			apache22 apache24
-
-_APACHE_PKGBASE.apache22=	apache-2.[23]*
-_APACHE_PKG_PREFIX.apache22=	ap22
-_APACHE_PKGSRCDIR.apache22=	../../www/apache22
+_PKG_APACHES=			apache24
 
 _APACHE_PKGBASE.apache24=	apache-2.[456789]*
 _APACHE_PKG_PREFIX.apache24=	ap24
@@ -72,7 +68,7 @@ _APACHE_PKGSRCDIR.apache24=	../../www/apache24
 .if empty(_PKG_APACHES:M${PKG_APACHE_DEFAULT})
 _PKG_APACHE_MESSAGE:=		"[apache.mk] Invalid apache package \""${PKG_APACHE_DEFAULT:Q}"\" in PKG_APACHE_DEFAULT."
 PKG_FAIL_REASON+=		${_PKG_APACHE_MESSAGE}
-PKG_APACHE_DEFAULT=		apache22
+PKG_APACHE_DEFAULT=		apache24
 .endif
 
 .for _ap_ in ${PKG_APACHE_ACCEPTED}
