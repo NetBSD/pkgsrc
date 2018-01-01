@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:45 joerg Exp $
-lib/libffm.a
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:42 rillig Exp $
 include/libffm.h
+lib/libffm.a
 share/doc/libffm/README

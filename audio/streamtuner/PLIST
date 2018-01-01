@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:32:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/01/01 22:29:18 rillig Exp $
 bin/streamtuner
 include/streamtuner/st-action-api.h
 include/streamtuner/st-category-api.h
@@ -84,8 +84,8 @@ share/streamtuner/ui/local.png
 share/streamtuner/ui/logo.png
 share/streamtuner/ui/main-category-running.png
 share/streamtuner/ui/main-category.png
-${PLIST.python}share/streamtuner/ui/python.png
 share/streamtuner/ui/preselections.png
+${PLIST.python}share/streamtuner/ui/python.png
 share/streamtuner/ui/record.png
 share/streamtuner/ui/search-category-running.png
 share/streamtuner/ui/search-category.png

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.wine64,v 1.2 2016/09/18 17:53:41 maya Exp $
+@comment $NetBSD: PLIST.wine64,v 1.3 2018/01/01 22:29:28 rillig Exp $
 bin/function_grep.pl
 bin/msiexec
 bin/notepad
@@ -1742,6 +1742,7 @@ lib/wine/fakedlls/winemsibuilder.exe
 lib/wine/fakedlls/wineoss.drv
 lib/wine/fakedlls/winepath.exe
 lib/wine/fakedlls/wineps.drv
+${PLIST.pulseaudio}lib/wine/fakedlls/winepulse.drv
 lib/wine/fakedlls/winex11.drv
 lib/wine/fakedlls/wing32.dll
 lib/wine/fakedlls/winhlp32.exe
@@ -2282,6 +2283,7 @@ lib/wine/winemsibuilder.exe.so
 lib/wine/wineoss.drv.so
 lib/wine/winepath.exe.so
 lib/wine/wineps.drv.so
+${PLIST.pulseaudio}lib/wine/winepulse.drv.so
 lib/wine/winex11.drv.so
 lib/wine/wing32.dll.so
 lib/wine/winhlp32.exe.so
@@ -2411,5 +2413,3 @@ share/wine/fonts/vgasyst.fon
 share/wine/fonts/wingding.ttf
 share/wine/l_intl.nls
 share/wine/wine.inf
-${PLIST.pulseaudio}lib/wine/fakedlls/winepulse.drv
-${PLIST.pulseaudio}lib/wine/winepulse.drv.so

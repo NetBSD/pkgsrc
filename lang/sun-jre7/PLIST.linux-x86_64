@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.9 2016/05/08 17:23:29 christos Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.10 2018/01/01 22:29:39 rillig Exp $
 bin/sun7-java
 bin/sun7-javaws
 bin/sun7-keytool
@@ -45,8 +45,6 @@ ${PLIST.native}java/sun-7/lib/amd64/libXi.so.6
 ${PLIST.native}java/sun-7/lib/amd64/libXt.so.6
 ${PLIST.native}java/sun-7/lib/amd64/libXtst.so.6
 ${PLIST.native}java/sun-7/lib/amd64/libasound.so.2
-${PLIST.native}java/sun-7/lib/amd64/libodbc.so
-${PLIST.native}java/sun-7/lib/amd64/libodbcinst.so
 java/sun-7/lib/amd64/libawt.so
 java/sun-7/lib/amd64/libdcpr.so
 java/sun-7/lib/amd64/libdeploy.so
@@ -83,6 +81,8 @@ java/sun-7/lib/amd64/libnet.so
 java/sun-7/lib/amd64/libnio.so
 java/sun-7/lib/amd64/libnpjp2.so
 java/sun-7/lib/amd64/libnpt.so
+${PLIST.native}java/sun-7/lib/amd64/libodbc.so
+${PLIST.native}java/sun-7/lib/amd64/libodbcinst.so
 java/sun-7/lib/amd64/libprism-es2.so
 java/sun-7/lib/amd64/libsctp.so
 java/sun-7/lib/amd64/libsplashscreen.so

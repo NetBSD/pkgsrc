@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:17 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:37 rillig Exp $
 include/gtkimageview/cursors.h
 include/gtkimageview/gdkpixbufdrawcache.h
 include/gtkimageview/gtkanimview.h
@@ -8,8 +8,8 @@ include/gtkimageview/gtkimagescrollwin.h
 include/gtkimageview/gtkimagetooldragger.h
 include/gtkimageview/gtkimagetoolpainter.h
 include/gtkimageview/gtkimagetoolselector.h
-include/gtkimageview/gtkimageview.h
 include/gtkimageview/gtkimageview-typebuiltins.h
+include/gtkimageview/gtkimageview.h
 include/gtkimageview/gtkzooms.h
 include/gtkimageview/mouse_handler.h
 include/gtkimageview/utils.h

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:39:53 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/01/01 22:29:21 rillig Exp $
 bin/h8300-hms-addr2line
 bin/h8300-hms-ar
 bin/h8300-hms-as
@@ -16,13 +16,6 @@ bin/h8300-hms-srconv
 bin/h8300-hms-strings
 bin/h8300-hms-strip
 bin/h8300-hms-sysdump
-libexec/cross-h8300-hms/binutils/as.info
-libexec/cross-h8300-hms/binutils/bfd.info
-libexec/cross-h8300-hms/binutils/binutils.info
-libexec/cross-h8300-hms/binutils/configure.info
-libexec/cross-h8300-hms/binutils/gasp.info
-libexec/cross-h8300-hms/binutils/ld.info
-libexec/cross-h8300-hms/binutils/standards.info
 libexec/cross-h8300-hms/bin/h8300-hms-addr2line
 libexec/cross-h8300-hms/bin/h8300-hms-ar
 libexec/cross-h8300-hms/bin/h8300-hms-as
@@ -40,6 +33,13 @@ libexec/cross-h8300-hms/bin/h8300-hms-srconv
 libexec/cross-h8300-hms/bin/h8300-hms-strings
 libexec/cross-h8300-hms/bin/h8300-hms-strip
 libexec/cross-h8300-hms/bin/h8300-hms-sysdump
+libexec/cross-h8300-hms/binutils/as.info
+libexec/cross-h8300-hms/binutils/bfd.info
+libexec/cross-h8300-hms/binutils/binutils.info
+libexec/cross-h8300-hms/binutils/configure.info
+libexec/cross-h8300-hms/binutils/gasp.info
+libexec/cross-h8300-hms/binutils/ld.info
+libexec/cross-h8300-hms/binutils/standards.info
 libexec/cross-h8300-hms/h8300-hms/bin/ar
 libexec/cross-h8300-hms/h8300-hms/bin/as
 libexec/cross-h8300-hms/h8300-hms/bin/ld

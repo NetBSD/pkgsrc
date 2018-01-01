@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:50:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:26 rillig Exp $
 bin/xcoral
 lib/xcoral/DEPEND
 lib/xcoral/README
@@ -35,6 +35,25 @@ lib/xcoral/version.sc
 lib/xcoral/window-utilities.sc
 lib/xcoral/xcoralrc.lf
 share/doc/xcoral/HTML/footnode.html
+share/doc/xcoral/HTML/icons/blueball.gif
+share/doc/xcoral/HTML/icons/contents_motif.gif
+share/doc/xcoral/HTML/icons/cross_ref_motif.gif
+share/doc/xcoral/HTML/icons/foot_motif.gif
+share/doc/xcoral/HTML/icons/greenball.gif
+share/doc/xcoral/HTML/icons/index_motif.gif
+share/doc/xcoral/HTML/icons/mybg.jpg
+share/doc/xcoral/HTML/icons/next_motif.gif
+share/doc/xcoral/HTML/icons/next_motif_gr.gif
+share/doc/xcoral/HTML/icons/orangeball.gif
+share/doc/xcoral/HTML/icons/pinkball.gif
+share/doc/xcoral/HTML/icons/previous_motif.gif
+share/doc/xcoral/HTML/icons/previous_motif_gr.gif
+share/doc/xcoral/HTML/icons/purpleball.gif
+share/doc/xcoral/HTML/icons/redball.gif
+share/doc/xcoral/HTML/icons/up_motif.gif
+share/doc/xcoral/HTML/icons/up_motif_gr.gif
+share/doc/xcoral/HTML/icons/whiteball.gif
+share/doc/xcoral/HTML/icons/yellowball.gif
 share/doc/xcoral/HTML/img1.gif
 share/doc/xcoral/HTML/img10.gif
 share/doc/xcoral/HTML/img100.gif
@@ -156,9 +175,9 @@ share/doc/xcoral/HTML/node104.html
 share/doc/xcoral/HTML/node105.html
 share/doc/xcoral/HTML/node106.html
 share/doc/xcoral/HTML/node107.html
-share/doc/xcoral/HTML/node11.html
 share/doc/xcoral/HTML/node108.html
 share/doc/xcoral/HTML/node109.html
+share/doc/xcoral/HTML/node11.html
 share/doc/xcoral/HTML/node110.html
 share/doc/xcoral/HTML/node111.html
 share/doc/xcoral/HTML/node112.html
@@ -199,25 +218,6 @@ share/doc/xcoral/HTML/node143.html
 share/doc/xcoral/HTML/node144.html
 share/doc/xcoral/HTML/node145.html
 share/doc/xcoral/HTML/node146.html
-share/doc/xcoral/HTML/icons/blueball.gif
-share/doc/xcoral/HTML/icons/greenball.gif
-share/doc/xcoral/HTML/icons/orangeball.gif
-share/doc/xcoral/HTML/icons/pinkball.gif
-share/doc/xcoral/HTML/icons/purpleball.gif
-share/doc/xcoral/HTML/icons/redball.gif
-share/doc/xcoral/HTML/icons/whiteball.gif
-share/doc/xcoral/HTML/icons/yellowball.gif
-share/doc/xcoral/HTML/icons/contents_motif.gif
-share/doc/xcoral/HTML/icons/cross_ref_motif.gif
-share/doc/xcoral/HTML/icons/foot_motif.gif
-share/doc/xcoral/HTML/icons/index_motif.gif
-share/doc/xcoral/HTML/icons/next_motif.gif
-share/doc/xcoral/HTML/icons/next_motif_gr.gif
-share/doc/xcoral/HTML/icons/previous_motif.gif
-share/doc/xcoral/HTML/icons/previous_motif_gr.gif
-share/doc/xcoral/HTML/icons/up_motif.gif
-share/doc/xcoral/HTML/icons/up_motif_gr.gif
-share/doc/xcoral/HTML/icons/mybg.jpg
 share/doc/xcoral/HTML/node147.html
 share/doc/xcoral/HTML/node148.html
 share/doc/xcoral/HTML/node149.html
@@ -281,7 +281,6 @@ share/doc/xcoral/HTML/node20.html
 share/doc/xcoral/HTML/node200.html
 share/doc/xcoral/HTML/node201.html
 share/doc/xcoral/HTML/node202.html
-share/doc/xcoral/HTML/node21.html
 share/doc/xcoral/HTML/node203.html
 share/doc/xcoral/HTML/node204.html
 share/doc/xcoral/HTML/node205.html
@@ -289,6 +288,7 @@ share/doc/xcoral/HTML/node206.html
 share/doc/xcoral/HTML/node207.html
 share/doc/xcoral/HTML/node208.html
 share/doc/xcoral/HTML/node209.html
+share/doc/xcoral/HTML/node21.html
 share/doc/xcoral/HTML/node210.html
 share/doc/xcoral/HTML/node211.html
 share/doc/xcoral/HTML/node212.html
@@ -474,7 +474,7 @@ share/doc/xcoral/HTML/node98.html
 share/doc/xcoral/HTML/node99.html
 share/doc/xcoral/HTML/xcoral.css
 share/doc/xcoral/HTML/xcoral.html
-share/doc/xcoral/xcoral-card.ps
-share/doc/xcoral/xcoral-session.gif
 share/doc/xcoral/README
 share/doc/xcoral/xcoral-3.2.ps
+share/doc/xcoral/xcoral-card.ps
+share/doc/xcoral/xcoral-session.gif

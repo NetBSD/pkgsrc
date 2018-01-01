@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/09/13 11:44:44 shattered Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:36 rillig Exp $
 include/GUI/GUI.h
 include/GUI/GUI_C.h
 include/GUI/GUI_area.h
@@ -16,4 +16,3 @@ include/GUI/GUI_termwin.h
 include/GUI/GUI_widget.h
 include/GUI/GUI_widgets.h
 lib/libGUI.la
-

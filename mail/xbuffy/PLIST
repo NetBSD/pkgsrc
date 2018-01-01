@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:01:44 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:42 rillig Exp $
 bin/xbuffy
-man/man1/xbuffy.1
 lib/X11/app-defaults/XBuffy
+man/man1/xbuffy.1

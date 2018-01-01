@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:23 joerg Exp $
-share/doc/quicklist/gtksheet/AUTHORS
-share/doc/quicklist/gtksheet/ChangeLog
-share/doc/quicklist/gtksheet/TODO
-share/doc/quicklist/gtksheet/BUGS
-share/doc/quicklist/gtksheet/CONTRIB
-share/doc/quicklist/gtksheet/COPYING
-share/doc/quicklist/gtksheet/README
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:23 rillig Exp $
+bin/quicklist
 share/doc/quicklist/file_format
 share/doc/quicklist/functionality
 share/doc/quicklist/functions
-bin/quicklist
+share/doc/quicklist/gtksheet/AUTHORS
+share/doc/quicklist/gtksheet/BUGS
+share/doc/quicklist/gtksheet/CONTRIB
+share/doc/quicklist/gtksheet/COPYING
+share/doc/quicklist/gtksheet/ChangeLog
+share/doc/quicklist/gtksheet/README
+share/doc/quicklist/gtksheet/TODO

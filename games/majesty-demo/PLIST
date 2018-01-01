@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 19:10:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:34 rillig Exp $
 bin/maj_demo
-lib/lgp/maj_demo/maj_demo
 lib/lgp/maj_demo/README
 lib/lgp/maj_demo/README.licenses
 lib/lgp/maj_demo/data/action.cam
 lib/lgp/maj_demo/data/bytecode.bcd
+lib/lgp/maj_demo/data/cinedata1.cam
 lib/lgp/maj_demo/data/company.cam
 lib/lgp/maj_demo/data/constants.rgs
 lib/lgp/maj_demo/data/gpltext.cam
@@ -14,6 +14,7 @@ lib/lgp/maj_demo/data/miscdata.cam
 lib/lgp/maj_demo/data/promo01.bmp
 lib/lgp/maj_demo/data/promo02.bmp
 lib/lgp/maj_demo/data/promo03.bmp
+lib/lgp/maj_demo/data/promo04.bmp
 lib/lgp/maj_demo/data/sounddesc.cam
 lib/lgp/maj_demo/data/soundfx.cam
 lib/lgp/maj_demo/data/terrtype.cam
@@ -22,10 +23,9 @@ lib/lgp/maj_demo/data/tilesetdata.cam
 lib/lgp/maj_demo/data/titlepage.bmp
 lib/lgp/maj_demo/data/unittype.cam
 lib/lgp/maj_demo/data/voices.cam
-lib/lgp/maj_demo/data/cinedata1.cam
-lib/lgp/maj_demo/data/promo04.bmp
+lib/lgp/maj_demo/maj_demo
 lib/lgp/maj_demo/majesty.bmp
 lib/lgp/maj_demo/majesty.xpm
 lib/lgp/maj_demo/majestysite.url
-lib/lgp/maj_demo/quests/vampiric_revenge.qdd
 lib/lgp/maj_demo/quests/vampiric_revenge.q
+lib/lgp/maj_demo/quests/vampiric_revenge.qdd

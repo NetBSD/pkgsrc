@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:26 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:44 rillig Exp $
 bin/latin-words
-libexec/latin-words
 libdata/latin-words/ADDONS.LAT
 libdata/latin-words/DICTFILE.GEN
 libdata/latin-words/INDXFILE.GEN
 libdata/latin-words/INFLECTS.SEC
 libdata/latin-words/STEMFILE.GEN
 libdata/latin-words/UNIQUES.LAT
+libexec/latin-words
 share/doc/latin-words/README
 share/doc/latin-words/wordsdoc.html
 share/doc/latin-words/wordsdoc.txt

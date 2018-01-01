@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2017/10/04 11:29:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/01/01 22:29:16 rillig Exp $
 lib/audacious/Container/asx.so
 lib/audacious/Container/asx3.so
 lib/audacious/Container/audpl.so
@@ -43,8 +43,8 @@ lib/audacious/Input/tonegen.so
 lib/audacious/Input/vorbis.so
 lib/audacious/Input/vtx.so
 lib/audacious/Input/wavpack.so
-${PLIST.oss4}lib/audacious/Output/OSS4.so
 lib/audacious/Input/xsf.so
+${PLIST.oss4}lib/audacious/Output/OSS4.so
 lib/audacious/Output/filewriter.so
 ${PLIST.jack}lib/audacious/Output/jackout.so
 ${PLIST.pulse}lib/audacious/Output/pulse_audio.so

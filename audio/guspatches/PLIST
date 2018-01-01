@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:32:11 joerg Exp $
-share/guspatches/timidity.cfg
-share/guspatches/gravis.cfg
-share/guspatches/midia.cfg
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:17 rillig Exp $
 share/guspatches/acbass.pat
 share/guspatches/accordn.pat
 share/guspatches/acguitar.pat
@@ -38,6 +35,7 @@ share/guspatches/cello.pat
 share/guspatches/charang.pat
 share/guspatches/chiflead.pat
 share/guspatches/choir.pat
+share/guspatches/chris6.cfg
 share/guspatches/church.pat
 share/guspatches/claps.pat
 share/guspatches/clarinet.pat
@@ -60,6 +58,7 @@ share/guspatches/cymcrsh2.pat
 share/guspatches/cymride1.pat
 share/guspatches/cymride2.pat
 share/guspatches/cymsplsh.pat
+share/guspatches/default.cfg
 share/guspatches/distgtr.pat
 share/guspatches/doo.pat
 share/guspatches/echovox.pat
@@ -77,6 +76,7 @@ share/guspatches/fx-blow.pat
 share/guspatches/fx-fret.pat
 share/guspatches/ghostie.pat
 share/guspatches/glocken.pat
+share/guspatches/gravis.cfg
 share/guspatches/gtrharm.pat
 share/guspatches/guiro1.pat
 share/guspatches/guiro2.pat
@@ -100,12 +100,14 @@ share/guspatches/kick1.pat
 share/guspatches/kick2.pat
 share/guspatches/koto.pat
 share/guspatches/lead5th.pat
+share/guspatches/maplerag.cfg
 share/guspatches/maracas.pat
 share/guspatches/marcato.pat
 share/guspatches/marimba.pat
 share/guspatches/metalpad.pat
 share/guspatches/metbell.pat
 share/guspatches/metclick.pat
+share/guspatches/midia.cfg
 share/guspatches/musicbox.pat
 share/guspatches/mutegtr.pat
 share/guspatches/mutetrum.pat
@@ -166,6 +168,7 @@ share/guspatches/telephon.pat
 share/guspatches/tenorsax.pat
 share/guspatches/timbaleh.pat
 share/guspatches/timbalel.pat
+share/guspatches/timidity.cfg
 share/guspatches/timpani.pat
 share/guspatches/tomhi1.pat
 share/guspatches/tomhi2.pat
@@ -181,6 +184,7 @@ share/guspatches/trombone.pat
 share/guspatches/trumpet.pat
 share/guspatches/tuba.pat
 share/guspatches/tubebell.pat
+share/guspatches/ultramid.ini
 share/guspatches/unicorn.pat
 share/guspatches/vibes.pat
 share/guspatches/vibslap.pat
@@ -197,7 +201,3 @@ share/guspatches/woodblk1.pat
 share/guspatches/woodblk2.pat
 share/guspatches/woodflut.pat
 share/guspatches/xylophon.pat
-share/guspatches/chris6.cfg
-share/guspatches/default.cfg
-share/guspatches/maplerag.cfg
-share/guspatches/ultramid.ini
