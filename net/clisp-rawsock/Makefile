@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/12/22 22:09:35 marino Exp $
+# $NetBSD: Makefile,v 1.3 2018/01/01 18:16:38 rillig Exp $
 #
 
 CLISP_MODULE=	rawsock
 
-PKGNAME=	clisp-$(CLISP_MODULE)-$(CLISP_VERSION)
+PKGNAME=	clisp-${CLISP_MODULE}-${CLISP_VERSION}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clisp/}
 

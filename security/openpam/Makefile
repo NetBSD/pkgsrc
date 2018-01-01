@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/09/03 08:53:14 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2018/01/01 18:16:39 rillig Exp $
 
 DISTNAME=	openpam-20140912
 PKGREVISION=	2
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--without-pam-su
 CONFIGURE_ARGS+=	--with-pam-unix
 CONFIGURE_ARGS+=	--with-modules-dir=${PREFIX}/lib/security
 
-CPPFLAGS+=		-DSYSCONFDIR=\"$(PKG_SYSCONFDIR)\"
+CPPFLAGS+=		-DSYSCONFDIR=\"${PKG_SYSCONFDIR}\"
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/pam.d
 

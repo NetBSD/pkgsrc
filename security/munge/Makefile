@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/09/03 09:22:58 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2018/01/01 18:16:39 rillig Exp $
 
 DISTNAME=	munge-0.5.11
 PKGREVISION=	7
@@ -13,10 +13,10 @@ COMMENT=	Authentication service for creating and validating credentials
 USE_TOOLS=	perl pkg-config
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-CONFIGURE_ARGS+=	--localstatedir=$(VARBASE)
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 INSTALLATION_DIRS+=	lib/pkgconfig
 
-OWN_DIRS=	$(VARBASE)/lib/munge $(VARBASE)/log/munge $(VARBASE)/run/munge
+OWN_DIRS=	${VARBASE}/lib/munge ${VARBASE}/log/munge ${VARBASE}/run/munge
 
 RCD_SCRIPTS+=	munge
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/12/19 16:01:19 asau Exp $
+# $NetBSD: Makefile,v 1.4 2018/01/01 18:16:39 rillig Exp $
 
 DISTNAME=	projectlibre-1.6.1
 CATEGORIES=	time
-MASTER_SITES=	$(MASTER_SITE_SOURCEFORGE:=projectlibre/)
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=projectlibre/}
 
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.projectlibre.org/
@@ -18,20 +18,20 @@ SUBST_CLASSES+=			set-java set-base
 SUBST_STAGE.set-java=		post-configure
 SUBST_MESSAGE.set-java=		Setting Java path.
 SUBST_FILES.set-java=		projectlibre.sh
-SUBST_SED.set-java=		-e '/^JAVA_EXE=/s,java,$(PKG_JAVA_HOME)/bin/java,'
+SUBST_SED.set-java=		-e '/^JAVA_EXE=/s,java,${PKG_JAVA_HOME}/bin/java,'
 
 SUBST_STAGE.set-base=		post-configure
 SUBST_MESSAGE.set-base=		Setting package base path.
 SUBST_FILES.set-base=		projectlibre.sh
-SUBST_SED.set-base=		-e '/^OPENPROJ_HOME0=/s,^.*$$,OPENPROJ_HOME0=$(PREFIX)/share/$(PKGBASE),'
+SUBST_SED.set-base=		-e '/^OPENPROJ_HOME0=/s,^.*$$,OPENPROJ_HOME0=${PREFIX}/share/${PKGBASE},'
 
 NO_BUILD=	yes
 
-INSTALLATION_DIRS=	bin share/$(PKGBASE)
+INSTALLATION_DIRS=	bin share/${PKGBASE}
 
 do-install:
-	cd $(WRKSRC) && pax -rwpm . $(DESTDIR)$(PREFIX)/share/$(PKGBASE)
-	$(LN) -sf $(PREFIX)/share/$(PKGBASE)/projectlibre.sh $(DESTDIR)$(PREFIX)/bin/projectlibre
+	cd ${WRKSRC} && pax -rwpm . ${DESTDIR}${PREFIX}/share/${PKGBASE}
+	${LN} -sf ${PREFIX}/share/${PKGBASE}/projectlibre.sh ${DESTDIR}${PREFIX}/bin/projectlibre
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

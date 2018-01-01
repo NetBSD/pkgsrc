@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/09/04 18:01:01 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/01/01 18:16:39 rillig Exp $
 
 DISTNAME=		tacshell-0.91
 PKGREVISION=		1
@@ -10,7 +10,7 @@ MAINTAINER=		sekiya@NetBSD.org
 COMMENT=		RSA ACE/Server sdshell workalike, using TACACS+
 
 GNU_CONFIGURE=		YES
-CONF_FILES+=		$(PREFIX)/share/examples/tacshell/tacshell.conf \
+CONF_FILES+=		${PREFIX}/share/examples/tacshell/tacshell.conf \
 			${PKG_SYSCONFDIR}/tacshell.conf
 
 INSTALLATION_DIRS+=	bin share/examples/tacshell

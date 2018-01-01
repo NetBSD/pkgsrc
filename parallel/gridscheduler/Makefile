@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/07/09 06:38:47 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2018/01/01 18:16:38 rillig Exp $
 
 PKGNAME=	gridscheduler-2011.11.1
 PKGREVISION=	2
@@ -87,7 +87,7 @@ PKG_FAIL_REASON+=	"SGE_ARCH and SGE_BUILDARCH need to be configured for your OS"
 SGE_BUILDARCH?=		${SGE_BUILDARCH_cmd:sh}
 
 # Some hacks to get it properly linked:
-MAKE_ENV+=	SGE_ARCH=$(SGE_ARCH) SGE_ROOT=$(SGE_ROOT)
+MAKE_ENV+=	SGE_ARCH=${SGE_ARCH} SGE_ROOT=${SGE_ROOT}
 
 LDFLAGS+=	-R${SGE_ROOT}/lib/${SGE_ARCH}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${SGE_ROOT}/lib/${SGE_ARCH}
