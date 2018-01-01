@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2017/08/24 20:03:00 adam Exp $
+# $NetBSD: Makefile,v 1.36 2018/01/01 21:18:10 adam Exp $
 #
 
 PKGNAME=	libkgeomap-4.13.0
-PKGREVISION=	5
+PKGREVISION=	6
 DISTNAME=	digikam-4.13.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/}

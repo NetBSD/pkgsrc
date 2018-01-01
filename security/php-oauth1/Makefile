@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2017/08/24 20:03:39 adam Exp $
+# $NetBSD: Makefile,v 1.7 2018/01/01 21:18:51 adam Exp $
 
 MODNAME=		oauth
-PKGREVISION=		6
+PKGREVISION=		7
 PECL_VERSION=		1.2.3
 CATEGORIES+=		security
 

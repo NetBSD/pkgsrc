@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2017/08/24 20:03:31 adam Exp $
+# $NetBSD: Makefile,v 1.35 2018/01/01 21:18:42 adam Exp $
 
 DISTNAME=	klettres-${_KDE_VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	misc
 COMMENT=	KDE app to teach the alphabet and read some syllables in languages
 
