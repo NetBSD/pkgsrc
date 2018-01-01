@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.30 2016/02/26 10:24:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2018/01/01 17:43:06 rillig Exp $
 #
 
-DISTNAME=	checkperms-1.11
-PKGREVISION=	1
+DISTNAME=	checkperms-1.12
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.roland-illig.de/checkperms/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rillig/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.roland-illig.de/checkperms/
+HOMEPAGE=	https://github.com/rillig/checkperms/
 COMMENT=	Check and correct file permissions
 LICENSE=	modified-bsd
+
+GITHUB_PROJECT=		checkperms
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 AUTO_MKDIRS=		yes
 
