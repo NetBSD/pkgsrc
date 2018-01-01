@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/05/03 22:29:20 snj Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:30:02 rillig Exp $
 bin/firefox52
 lib/firefox52/application.ini
 lib/firefox52/browser/blocklist.xml
@@ -3513,9 +3513,9 @@ lib/firefox52/hyphenation/hyph_sv.dic
 lib/firefox52/hyphenation/hyph_tr.dic
 lib/firefox52/hyphenation/hyph_uk.dic
 lib/firefox52/liblgpllibs.so
-${PLIST.gtk3}lib/firefox52/libmozgtk.so
 ${PLIST.avx86}lib/firefox52/libmozavcodec.so
 ${PLIST.avx86}lib/firefox52/libmozavutil.so
+${PLIST.gtk3}lib/firefox52/libmozgtk.so
 lib/firefox52/libmozsqlite3.so
 lib/firefox52/libxul.so
 lib/firefox52/modules/AboutReader.jsm

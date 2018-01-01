@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/06/01 16:35:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:32 rillig Exp $
+share/doc/motoya-fonts/NOTICE
 share/fonts/X11/TTF/MTLc3m.ttf
 share/fonts/X11/TTF/MTLmr3m.ttf
-share/doc/motoya-fonts/NOTICE

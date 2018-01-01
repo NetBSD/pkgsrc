@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:56 rillig Exp $
 man/man8/extipl.8
 sbin/extipl
 share/doc/extipl/English/extipl.txt
-share/doc/extipl/English/techical.txt
 share/doc/extipl/English/scorpius.txt
+share/doc/extipl/English/techical.txt
 share/doc/extipl/Japanese/extipl.txt
-share/doc/extipl/Japanese/techical.txt
 share/doc/extipl/Japanese/scorpius.txt
+share/doc/extipl/Japanese/techical.txt

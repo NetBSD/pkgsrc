@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/07/24 21:21:13 rillig Exp $
-share/doc/sewer/index.html
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:19 rillig Exp $
 share/doc/sewer/align.htm
 share/doc/sewer/bookmarklet.htm
 share/doc/sewer/copyright.htm
@@ -52,6 +51,7 @@ share/doc/sewer/images/submit.png
 share/doc/sewer/images/tools.png
 share/doc/sewer/images/tools1.png
 share/doc/sewer/images/toolshead.png
+share/doc/sewer/index.html
 share/doc/sewer/mirror.htm
 share/doc/sewer/nav.htm
 share/doc/sewer/nucleicacid.htm

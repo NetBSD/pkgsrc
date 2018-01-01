@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:37:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:19 rillig Exp $
 share/cgiirc/client-perl.cgi
 share/cgiirc/formats/dark
 share/cgiirc/formats/default
@@ -72,14 +72,14 @@ share/cgiirc/images/tongue.gif
 share/cgiirc/images/unhappy.gif
 share/cgiirc/images/what.gif
 share/cgiirc/images/wink.gif
+share/cgiirc/interfaces/default.pm
+share/cgiirc/interfaces/ie.pm
 share/cgiirc/interfaces/interface-make/fform.pm
 share/cgiirc/interfaces/interface-make/fmain.pm
 share/cgiirc/interfaces/interface-make/fuserlist.pm
 share/cgiirc/interfaces/interface-make/fwindowlist.pm
 share/cgiirc/interfaces/interface-make/main.pm
 share/cgiirc/interfaces/interface-make/make-js-interfaces.pl
-share/cgiirc/interfaces/default.pm
-share/cgiirc/interfaces/ie.pm
 share/cgiirc/interfaces/konqueror.pm
 share/cgiirc/interfaces/mozilla.pm
 share/cgiirc/interfaces/nonjs.pm
@@ -103,8 +103,8 @@ share/cgiirc/modules/Timer.pm
 share/cgiirc/modules/parse.pl
 share/cgiirc/nph-irc.cgi
 share/doc/cgiirc/README
-share/examples/cgiirc/cgiirc.config
 share/examples/cgiirc/cgiirc.conf
+share/examples/cgiirc/cgiirc.config
 share/examples/cgiirc/cgiirc.config.full
 share/examples/cgiirc/client.c
 share/examples/cgiirc/decode.pl

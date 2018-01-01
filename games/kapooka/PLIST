@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:49 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:34 rillig Exp $
 bin/kapooka
-share/kapooka/level.dat
 share/kapooka/interface/company_logo.png
 share/kapooka/interface/title.png
 share/kapooka/interface/title_bg.png
+share/kapooka/level.dat
 share/kapooka/levelDummy/layer0.png
 share/kapooka/music/dummy.xm
 share/kapooka/sound/weak_shot.wav

@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/12/01 13:58:15 gdt Exp $
-${PLIST.mysql}lib/mopher/sakila.so
-${PLIST.spf}lib/mopher/spf.so
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:41 rillig Exp $
 lib/mopher/bdb.so
 lib/mopher/cast.so
 lib/mopher/counter.so
@@ -8,7 +6,9 @@ lib/mopher/dblog.so
 lib/mopher/dnsbl.so
 lib/mopher/memdb.so
 lib/mopher/random.so
+${PLIST.mysql}lib/mopher/sakila.so
 lib/mopher/spamd.so
+${PLIST.spf}lib/mopher/spf.so
 lib/mopher/string.so
 man/man5/mopherd.acl.5
 man/man5/mopherd.conf.5

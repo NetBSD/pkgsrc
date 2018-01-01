@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:56 joerg Exp $
-lib/libtokenscan.a
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:25 rillig Exp $
 include/tokenscan.h
+lib/libtokenscan.a
 share/doc/libts/tokenscan.txt

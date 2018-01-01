@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2014/06/01 16:35:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:32 rillig Exp $
+share/doc/liberation-ttf/AUTHORS
+share/doc/liberation-ttf/ChangeLog
+share/doc/liberation-ttf/LICENSE
+share/doc/liberation-ttf/README
+share/doc/liberation-ttf/TODO
 share/fonts/X11/TTF/LiberationMono-Bold.ttf
 share/fonts/X11/TTF/LiberationMono-BoldItalic.ttf
 share/fonts/X11/TTF/LiberationMono-Italic.ttf
@@ -11,8 +16,3 @@ share/fonts/X11/TTF/LiberationSerif-Bold.ttf
 share/fonts/X11/TTF/LiberationSerif-BoldItalic.ttf
 share/fonts/X11/TTF/LiberationSerif-Italic.ttf
 share/fonts/X11/TTF/LiberationSerif-Regular.ttf
-share/doc/liberation-ttf/AUTHORS
-share/doc/liberation-ttf/ChangeLog
-share/doc/liberation-ttf/LICENSE
-share/doc/liberation-ttf/README
-share/doc/liberation-ttf/TODO

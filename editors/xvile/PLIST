@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/08/07 09:42:35 marino Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/01/01 22:29:26 rillig Exp $
 bin/lxvile
 bin/lxvile-fonts
 bin/uxvile
@@ -154,9 +154,9 @@ share/xvile/mcrl.keywords
 share/xvile/midl.keywords
 share/xvile/modes.rc
 share/xvile/mvn.keywords
-share/xvile/objc.keywords
 share/xvile/nr.keywords
 share/xvile/nsis.keywords
+share/xvile/objc.keywords
 share/xvile/palettes.rc
 share/xvile/pas.keywords
 share/xvile/pc.keywords

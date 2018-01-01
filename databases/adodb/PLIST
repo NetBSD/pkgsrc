@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:43:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/01/01 22:29:21 rillig Exp $
 share/adodb/adodb-active-record.inc.php
 share/adodb/adodb-csvlib.inc.php
 share/adodb/adodb-datadict.inc.php
@@ -99,8 +99,8 @@ share/adodb/lang/adodb-pt-br.inc.php
 share/adodb/lang/adodb-ro.inc.php
 share/adodb/lang/adodb-ru1251.inc.php
 share/adodb/lang/adodb-sv.inc.php
-share/adodb/lang/adodb_th.inc.php
 share/adodb/lang/adodb-uk1251.inc.php
+share/adodb/lang/adodb_th.inc.php
 share/adodb/perf/perf-db2.inc.php
 share/adodb/perf/perf-informix.inc.php
 share/adodb/perf/perf-mssql.inc.php
@@ -126,9 +126,9 @@ share/adodb/session/adodb-session2.php
 share/adodb/session/adodb-sessions.mysql.sql
 share/adodb/session/adodb-sessions.oracle.clob.sql
 share/adodb/session/adodb-sessions.oracle.sql
+share/adodb/session/crypt.inc.php
 share/adodb/session/session_schema.xml
 share/adodb/session/session_schema2.xml
-share/adodb/session/crypt.inc.php
 share/adodb/tests/benchmark.php
 share/adodb/tests/client.php
 share/adodb/tests/pdo.php

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/31 12:23:14 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:30:01 rillig Exp $
 share/doc/mrbs/AUTHENTICATION
 share/doc/mrbs/COPYING
 share/doc/mrbs/ChangeLog
@@ -1216,5 +1216,4 @@ share/mrbs/upgrade/local/1/pgsql.sql
 share/mrbs/version.inc
 share/mrbs/view_entry.php
 share/mrbs/week.php
-
 @pkgdir share/mrbs

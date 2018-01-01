@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/26 02:01:58 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:40 rillig Exp $
 bin/ezmlm-accept
 bin/ezmlm-archive
 bin/ezmlm-check
@@ -52,7 +52,6 @@ man/man5/ezmlmglrc.5
 man/man5/ezmlmrc.5
 man/man5/ezmlmsubrc.5
 share/doc/ezmlm-idx/BLURB
-share/doc/ezmlm-idx/CHANGES
 share/doc/ezmlm-idx/CHANGES
 share/doc/ezmlm-idx/DOWNGRADE
 share/doc/ezmlm-idx/FAQ

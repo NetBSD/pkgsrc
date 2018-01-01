@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/20 08:18:00 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:39 rillig Exp $
 bin/im-ja-conf
 ${PLIST.xim}bin/im-ja-xim-server
 ${PLIST.gnome}lib/bonobo/servers/GNOME_ImJaApplet.server
@@ -9,8 +9,8 @@ libexec/im-ja/kpengine
 man/man1/im-ja-conf.1
 ${PLIST.xim}man/man1/im-ja-xim-server.1
 share/applications/im-ja.desktop
-${PLIST.gnome}share/gnome-2.0/ui/GNOME_ImJaApplet.xml
 share/gconf/schemas/im-ja.schemas
+${PLIST.gnome}share/gnome-2.0/ui/GNOME_ImJaApplet.xml
 share/im-ja/01.unistrok
 share/im-ja/02.unistrok
 share/im-ja/03.unistrok

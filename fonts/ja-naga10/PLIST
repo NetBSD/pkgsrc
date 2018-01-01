@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2014/06/01 16:35:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:31 rillig Exp $
+share/doc/README.6x12
+share/doc/README.naga10
 share/fonts/X11/local/5x10B.pcf.gz
 share/fonts/X11/local/5x10a.pcf.gz
 share/fonts/X11/local/5x10rk.pcf.gz
@@ -9,5 +11,3 @@ share/fonts/X11/local/knj10.pcf.gz
 share/fonts/X11/local/knj10B.pcf.gz
 share/fonts/X11/local/maru10.pcf.gz
 share/fonts/X11/local/min10.pcf.gz
-share/doc/README.6x12
-share/doc/README.naga10

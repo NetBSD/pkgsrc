@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/03/13 16:07:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:16 rillig Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/lib/archive-tar-minitar.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-

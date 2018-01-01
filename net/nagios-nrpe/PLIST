@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:09 jperkin Exp $
-sbin/nrpe
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:48 rillig Exp $
 libexec/nagios/check_nrpe
+sbin/nrpe
 share/examples/nagios/nrpe.cfg

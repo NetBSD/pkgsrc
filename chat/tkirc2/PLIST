@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:37:50 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:20 rillig Exp $
 bin/tkirc2
 share/doc/tkirc2/CHANGES
 share/doc/tkirc2/COPYING
 share/doc/tkirc2/README
 share/examples/tkirc2/netscape.sh
-share/examples/tkirc2/tkircrc-example
 share/examples/tkirc2/scripts/crazy1.tcl
 share/examples/tkirc2/scripts/crazy2.tcl
 share/examples/tkirc2/scripts/crazy3.tcl
 share/examples/tkirc2/scripts/examples.tcl
 share/examples/tkirc2/scripts/hilo.tcl
 share/examples/tkirc2/scripts/sound.tcl
+share/examples/tkirc2/tkircrc-example

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/09/10 16:14:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/01/01 22:30:03 rillig Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yard/templates_custom/default/class/html/selectors.erb
 ${GEM_LIBDIR}/.yard/templates_custom/default/class/html/setup.rb
@@ -202,4 +202,3 @@ ${GEM_LIBDIR}/spec/session_spec.rb
 ${GEM_LIBDIR}/spec/shared_selenium_session.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-

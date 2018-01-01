@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/22 10:42:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:53 rillig Exp $
 share/texmf-dist/tex/latex/datetime/datetime-defaults.sty
 share/texmf-dist/tex/latex/datetime/datetime.sty
 share/texmf-dist/tex/latex/datetime/dt-UKenglish.def
 share/texmf-dist/tex/latex/datetime/dt-USenglish.def
 share/texmf-dist/tex/latex/datetime/dt-american.def
-share/texmf-dist/tex/latex/datetime/dt-austrian.def
 share/texmf-dist/tex/latex/datetime/dt-australian.def
+share/texmf-dist/tex/latex/datetime/dt-austrian.def
 share/texmf-dist/tex/latex/datetime/dt-bahasa.def
 share/texmf-dist/tex/latex/datetime/dt-basque.def
 share/texmf-dist/tex/latex/datetime/dt-breton.def

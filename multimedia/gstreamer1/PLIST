@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2017/09/12 09:32:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/01/01 22:29:45 rillig Exp $
 bin/gst-inspect-1.0
 bin/gst-launch-1.0
 bin/gst-stats-1.0
@@ -18,15 +18,6 @@ include/gstreamer-1.0/gst/base/gstflowcombiner.h
 include/gstreamer-1.0/gst/base/gstpushsrc.h
 include/gstreamer-1.0/gst/base/gstqueuearray.h
 include/gstreamer-1.0/gst/base/gsttypefindhelper.h
-include/gstreamer-1.0/gst/controller/controller-enumtypes.h
-include/gstreamer-1.0/gst/controller/gstproxycontrolbinding.h
-include/gstreamer-1.0/gst/gstconfig.h
-include/gstreamer-1.0/gst/gstdynamictypefactory.h
-include/gstreamer-1.0/gst/gststreamcollection.h
-include/gstreamer-1.0/gst/gststreams.h
-include/gstreamer-1.0/gst/gsttracer.h
-include/gstreamer-1.0/gst/gsttracerfactory.h
-include/gstreamer-1.0/gst/gsttracerrecord.h
 ${PLIST.gstcheck}include/gstreamer-1.0/gst/check/check.h
 ${PLIST.gstcheck}include/gstreamer-1.0/gst/check/gstbufferstraw.h
 ${PLIST.gstcheck}include/gstreamer-1.0/gst/check/gstcheck.h
@@ -34,11 +25,13 @@ ${PLIST.gstcheck}include/gstreamer-1.0/gst/check/gstconsistencychecker.h
 ${PLIST.gstcheck}include/gstreamer-1.0/gst/check/gstharness.h
 ${PLIST.gstcheck}include/gstreamer-1.0/gst/check/gsttestclock.h
 ${PLIST.gstcheck}include/gstreamer-1.0/gst/check/internal-check.h
+include/gstreamer-1.0/gst/controller/controller-enumtypes.h
 include/gstreamer-1.0/gst/controller/controller.h
 include/gstreamer-1.0/gst/controller/gstargbcontrolbinding.h
 include/gstreamer-1.0/gst/controller/gstdirectcontrolbinding.h
 include/gstreamer-1.0/gst/controller/gstinterpolationcontrolsource.h
 include/gstreamer-1.0/gst/controller/gstlfocontrolsource.h
+include/gstreamer-1.0/gst/controller/gstproxycontrolbinding.h
 include/gstreamer-1.0/gst/controller/gsttimedvaluecontrolsource.h
 include/gstreamer-1.0/gst/controller/gsttriggercontrolsource.h
 include/gstreamer-1.0/gst/glib-compat.h
@@ -55,6 +48,7 @@ include/gstreamer-1.0/gst/gstcapsfeatures.h
 include/gstreamer-1.0/gst/gstchildproxy.h
 include/gstreamer-1.0/gst/gstclock.h
 include/gstreamer-1.0/gst/gstcompat.h
+include/gstreamer-1.0/gst/gstconfig.h
 include/gstreamer-1.0/gst/gstcontext.h
 include/gstreamer-1.0/gst/gstcontrolbinding.h
 include/gstreamer-1.0/gst/gstcontrolsource.h
@@ -64,6 +58,7 @@ include/gstreamer-1.0/gst/gstdevice.h
 include/gstreamer-1.0/gst/gstdevicemonitor.h
 include/gstreamer-1.0/gst/gstdeviceprovider.h
 include/gstreamer-1.0/gst/gstdeviceproviderfactory.h
+include/gstreamer-1.0/gst/gstdynamictypefactory.h
 include/gstreamer-1.0/gst/gstelement.h
 include/gstreamer-1.0/gst/gstelementfactory.h
 include/gstreamer-1.0/gst/gstelementmetadata.h
@@ -94,6 +89,8 @@ include/gstreamer-1.0/gst/gstquery.h
 include/gstreamer-1.0/gst/gstregistry.h
 include/gstreamer-1.0/gst/gstsample.h
 include/gstreamer-1.0/gst/gstsegment.h
+include/gstreamer-1.0/gst/gststreamcollection.h
+include/gstreamer-1.0/gst/gststreams.h
 include/gstreamer-1.0/gst/gststructure.h
 include/gstreamer-1.0/gst/gstsystemclock.h
 include/gstreamer-1.0/gst/gsttaglist.h
@@ -102,6 +99,9 @@ include/gstreamer-1.0/gst/gsttask.h
 include/gstreamer-1.0/gst/gsttaskpool.h
 include/gstreamer-1.0/gst/gsttoc.h
 include/gstreamer-1.0/gst/gsttocsetter.h
+include/gstreamer-1.0/gst/gsttracer.h
+include/gstreamer-1.0/gst/gsttracerfactory.h
+include/gstreamer-1.0/gst/gsttracerrecord.h
 include/gstreamer-1.0/gst/gsttypefind.h
 include/gstreamer-1.0/gst/gsttypefindfactory.h
 include/gstreamer-1.0/gst/gsturi.h

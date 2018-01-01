@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2014/03/11 14:05:15 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/01/01 22:29:57 rillig Exp $
 lib/munin/plugins/acpi
 lib/munin/plugins/amavis
 lib/munin/plugins/apache_accesses
@@ -22,7 +22,6 @@ ${PLIST.linux}lib/munin/plugins/df_abs
 lib/munin/plugins/df_inode
 lib/munin/plugins/dhcpd3
 ${PLIST.linux}lib/munin/plugins/entropy
-${PLIST.netbsd}lib/munin/plugins/entropy
 lib/munin/plugins/exim_mailqueue
 lib/munin/plugins/exim_mailqueue_alt
 lib/munin/plugins/exim_mailstats
@@ -46,11 +45,11 @@ lib/munin/plugins/if_
 ${PLIST.linux}lib/munin/plugins/if_err_
 ${PLIST.not-linux}lib/munin/plugins/if_errcoll_
 ${PLIST.not-sunos}lib/munin/plugins/interrupts
-${PLIST.not-sunos}lib/munin/plugins/iostat
-${PLIST.linux}lib/munin/plugins/iostat_ios
 ${PLIST.sunos}lib/munin/plugins/io_busy_
 ${PLIST.sunos}lib/munin/plugins/io_bytes_
 ${PLIST.sunos}lib/munin/plugins/io_ops_
+${PLIST.not-sunos}lib/munin/plugins/iostat
+${PLIST.linux}lib/munin/plugins/iostat_ios
 ${PLIST.netbsd}lib/munin/plugins/iostat_ops
 ${PLIST.linux}lib/munin/plugins/ip_
 lib/munin/plugins/ipac-ng

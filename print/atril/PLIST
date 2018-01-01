@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/07/07 12:45:54 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:52 rillig Exp $
 bin/atril
 bin/atril-previewer
 bin/atril-thumbnailer
@@ -51,9 +51,9 @@ include/atril/1.5.0/libview/ev-view-type-builtins.h
 include/atril/1.5.0/libview/ev-view.h
 include/atril/1.5.0/libview/ev-web-view.h
 lib/atril/3/backends/comicsdocument.atril-backend
-lib/atril/3/backends/libcomicsdocument.la
 ${PLIST.djvu}lib/atril/3/backends/djvudocument.atril-backend
 ${PLIST.dvi}lib/atril/3/backends/dvidocument.atril-backend
+lib/atril/3/backends/libcomicsdocument.la
 ${PLIST.djvu}lib/atril/3/backends/libdjvudocument.la
 ${PLIST.dvi}lib/atril/3/backends/libdvidocument.la
 ${PLIST.pdf}lib/atril/3/backends/libpdfdocument.la

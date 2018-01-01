@@ -1,14 +1,13 @@
-@comment $NetBSD: PLIST,v 1.8 2014/03/11 14:04:59 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/01/01 22:29:20 rillig Exp $
+bin/uconvert-conf
+bin/umkpasswd
 man/man8/ircd.8
 sbin/ircd
-bin/umkpasswd
-bin/uconvert-conf
+share/doc/ircd/INSTALL
 share/doc/ircd/README
 share/doc/ircd/RELEASE.NOTES
-share/doc/ircd/INSTALL
 share/doc/ircd/iso-time.html
 share/doc/ircd/p10.html
-share/doc/ircd/snomask.html
 share/doc/ircd/readme.asll
 share/doc/ircd/readme.chroot
 share/doc/ircd/readme.crules
@@ -21,4 +20,5 @@ share/doc/ircd/readme.jupe
 share/doc/ircd/readme.log
 share/doc/ircd/readme.who
 share/doc/ircd/readme.www
+share/doc/ircd/snomask.html
 share/examples/ircd/example.conf

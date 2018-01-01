@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:12:00 joerg Exp $
-sbin/lpstyl
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:53 rillig Exp $
 libexec/stylewriter/direct_stylpbm
 libexec/stylewriter/direct_stylps
 libexec/stylewriter/stylascii
@@ -8,6 +7,7 @@ libexec/stylewriter/stylps
 libexec/stylewriter/stylps-color
 libexec/stylewriter/stylps-color.a4
 libexec/stylewriter/stylps.a4
+sbin/lpstyl
 share/doc/stylewriter/README
 share/doc/stylewriter/README.protocol
 share/doc/stylewriter/README.troubleshooting

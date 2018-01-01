@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:51:59 joerg Exp $
-bin/chironfs
+@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:28 rillig Exp $
 bin/chirctl
+bin/chironfs
 man/man8/chironfs.8
-share/doc/chironfs/README
 share/doc/chironfs/AUTHORS
-share/doc/chironfs/changelog.Debian
 share/doc/chironfs/HOWTO.html
 share/doc/chironfs/NEWS
+share/doc/chironfs/README
 share/doc/chironfs/TODO
-share/doc/chironfs/copyright
 share/doc/chironfs/changelog
+share/doc/chironfs/changelog.Debian
 share/doc/chironfs/chironfs.css
+share/doc/chironfs/copyright
 share/doc/chironfs/large.gif
 share/doc/chironfs/med.gif
 share/doc/chironfs/small.gif

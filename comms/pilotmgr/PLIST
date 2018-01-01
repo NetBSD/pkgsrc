@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:38:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:21 rillig Exp $
 bin/PilotManager
 lib/pilotmgr/Backup.pm
 lib/pilotmgr/Installer.pm
-lib/pilotmgr/PilotMgr.pm
 lib/pilotmgr/PilotManager
+lib/pilotmgr/PilotMgr.pm
 lib/pilotmgr/SendMail.pm
 lib/pilotmgr/SyncAB.pm
 lib/pilotmgr/SyncFood.pm

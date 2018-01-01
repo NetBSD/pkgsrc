@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2010/06/27 19:16:03 joerg Exp $
-bin/mkstrip
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:30:03 rillig Exp $
 bin/extdgts
+bin/mkstrip
 libdata/wwwcount/digits/A/peng.gif
 libdata/wwwcount/digits/A/strip.gif
 libdata/wwwcount/digits/A/yeehaw.gif
@@ -17,24 +17,9 @@ libdata/wwwcount/digits/cdr/strip.gif
 libdata/wwwcount/digits/mkstrip.sh
 libdata/wwwcount/rgb.txt
 libexec/cgi-bin/Count.cgi
-share/doc/wwwcount/blues.gif
-share/doc/wwwcount/index.html
+man/man1/mkstrip.1
 share/doc/wwwcount/Count.html
-share/doc/wwwcount/Count2_5-ex.html
-share/doc/wwwcount/Count_Changelog.html
-share/doc/wwwcount/Count_FAQ.html
-share/doc/wwwcount/Count_download.html
-share/doc/wwwcount/Count_mirrors.html
 share/doc/wwwcount/Count2.5/c-c.txt
-share/doc/wwwcount/Count2.5/gen-c.txt
-share/doc/wwwcount/Count2.5/images/styleA.gif
-share/doc/wwwcount/Count2.5/images/styleB.gif
-share/doc/wwwcount/Count2.5/images/styleC.gif
-share/doc/wwwcount/Count2.5/images/styleD.gif
-share/doc/wwwcount/Count2.5/images/styleE.gif
-share/doc/wwwcount/Count2.5/images/stylecd.gif
-share/doc/wwwcount/Count2.5/images/stylecdd.gif
-share/doc/wwwcount/Count2.5/images/stylecdr.gif
 share/doc/wwwcount/Count2.5/eximages/ex2_5102576.gif
 share/doc/wwwcount/Count2.5/eximages/ex2_5106850.gif
 share/doc/wwwcount/Count2.5/eximages/ex2_5111124.gif
@@ -81,5 +66,20 @@ share/doc/wwwcount/Count2.5/eximages/ex2_585480.gif
 share/doc/wwwcount/Count2.5/eximages/ex2_589754.gif
 share/doc/wwwcount/Count2.5/eximages/ex2_594028.gif
 share/doc/wwwcount/Count2.5/eximages/ex2_598302.gif
+share/doc/wwwcount/Count2.5/gen-c.txt
+share/doc/wwwcount/Count2.5/images/styleA.gif
+share/doc/wwwcount/Count2.5/images/styleB.gif
+share/doc/wwwcount/Count2.5/images/styleC.gif
+share/doc/wwwcount/Count2.5/images/styleD.gif
+share/doc/wwwcount/Count2.5/images/styleE.gif
+share/doc/wwwcount/Count2.5/images/stylecd.gif
+share/doc/wwwcount/Count2.5/images/stylecdd.gif
+share/doc/wwwcount/Count2.5/images/stylecdr.gif
+share/doc/wwwcount/Count2_5-ex.html
+share/doc/wwwcount/Count_Changelog.html
+share/doc/wwwcount/Count_FAQ.html
+share/doc/wwwcount/Count_download.html
+share/doc/wwwcount/Count_mirrors.html
+share/doc/wwwcount/blues.gif
+share/doc/wwwcount/index.html
 share/examples/wwwcount.conf
-man/man1/mkstrip.1

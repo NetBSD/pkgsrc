@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/06/01 16:35:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:29 rillig Exp $
 share/fonts/X11/Xg/big5.4e00.16.pcf.gz
 share/fonts/X11/Xg/big5.5000.16.pcf.gz
 share/fonts/X11/Xg/big5.5200.16.pcf.gz
@@ -49,7 +49,6 @@ share/fonts/X11/Xg/jis.jis4e00.24.pcf.gz
 share/fonts/X11/Xg/jis.jis5000.16.pcf.gz
 share/fonts/X11/Xg/jis.jis5000.24.pcf.gz
 share/fonts/X11/Xg/jis.jis5200.16.pcf.gz
-share/fonts/X11/Xg/lucm.greek.9.pcf.gz
 share/fonts/X11/Xg/jis.jis5200.24.pcf.gz
 share/fonts/X11/Xg/jis.jis5400.16.pcf.gz
 share/fonts/X11/Xg/jis.jis5400.24.pcf.gz
@@ -131,6 +130,7 @@ share/fonts/X11/Xg/jis.katakana.16.pcf.gz
 share/fonts/X11/Xg/jis.katakana.24.pcf.gz
 share/fonts/X11/Xg/lucm.currency.9.pcf.gz
 share/fonts/X11/Xg/lucm.genpunc.9.pcf.gz
+share/fonts/X11/Xg/lucm.greek.9.pcf.gz
 share/fonts/X11/Xg/lucm.ipa.9.pcf.gz
 share/fonts/X11/Xg/lucm.latin1.9.pcf.gz
 share/fonts/X11/Xg/lucm.latineur.9.pcf.gz
@@ -138,12 +138,12 @@ share/fonts/X11/Xg/lucm.supsub.9.pcf.gz
 share/fonts/X11/Xg/matty.blocks.pcf.gz
 share/fonts/X11/Xg/matty.chart.pcf.gz
 share/fonts/X11/Xg/matty.geometric.pcf.gz
-share/fonts/X11/Xg/matty.hebrew.9.pcf.gz
-share/fonts/X11/Xg/matty.latin1.9.pcf.gz
 share/fonts/X11/Xg/matty.hebrew.9.orig.pcf.gz
-share/fonts/X11/Xg/matty.math1.pcf.gz
+share/fonts/X11/Xg/matty.hebrew.9.pcf.gz
 share/fonts/X11/Xg/matty.hebrew.9.short.pcf.gz
+share/fonts/X11/Xg/matty.latin1.9.pcf.gz
 share/fonts/X11/Xg/matty.letterlike.9.pcf.gz
+share/fonts/X11/Xg/matty.math1.pcf.gz
 share/fonts/X11/Xg/matty.math2.pcf.gz
 share/fonts/X11/Xg/matty.tech.pcf.gz
 share/fonts/X11/Xg/matty.tengwar.9.24.pcf.gz
@@ -163,7 +163,6 @@ share/fonts/X11/Xg/misc.zapf.pcf.gz
 share/fonts/X11/Xg/pelm.ascii.10.pcf.gz
 share/fonts/X11/Xg/pelm.ascii.12.pcf.gz
 share/fonts/X11/Xg/pelm.ascii.16.pcf.gz
-share/fonts/X11/Xg/smiley.0.pcf.gz
 share/fonts/X11/Xg/pelm.currency.9.pcf.gz
 share/fonts/X11/Xg/pelm.fffd.9.pcf.gz
 share/fonts/X11/Xg/pelm.latin1.8.pcf.gz
@@ -172,4 +171,5 @@ share/fonts/X11/Xg/pelm.latineur.8.pcf.gz
 share/fonts/X11/Xg/pelm.latineur.9.pcf.gz
 share/fonts/X11/Xg/pelm.supsub.8.pcf.gz
 share/fonts/X11/Xg/pelm.supsub.9.pcf.gz
+share/fonts/X11/Xg/smiley.0.pcf.gz
 share/fonts/X11/Xg/unicode.9.font

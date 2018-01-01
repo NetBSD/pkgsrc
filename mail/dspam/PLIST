@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.21 2014/03/11 14:05:03 jperkin Exp $
-${PLIST.hash}bin/cssstat
-${PLIST.hash}bin/csscompress
+@comment $NetBSD: PLIST,v 1.22 2018/01/01 22:29:40 rillig Exp $
 ${PLIST.hash}bin/cssclean
+${PLIST.hash}bin/csscompress
 ${PLIST.hash}bin/cssconvert
+${PLIST.hash}bin/cssstat
 bin/dspam
 bin/dspam_2sql
 bin/dspam_admin
@@ -12,10 +12,10 @@ bin/dspam_dump
 bin/dspam_logrotate
 bin/dspam_merge
 bin/dspam_notify
+${PLIST.pgsql}bin/dspam_pg2int8
 bin/dspam_stats
 bin/dspam_train
 bin/dspamc
-${PLIST.pgsql}bin/dspam_pg2int8
 include/dspam/buffer.h
 include/dspam/config.h
 include/dspam/config_shared.h
@@ -71,10 +71,10 @@ share/doc/dspam/tests.txt
 ${PLIST.mysql}share/dspam/mysql/mysql_objects-4.1.sql
 ${PLIST.mysql}share/dspam/mysql/mysql_objects-space.sql
 ${PLIST.mysql}share/dspam/mysql/mysql_objects-speed.sql
-${PLIST.mysql}share/dspam/mysql/purge.sql
 ${PLIST.mysql}share/dspam/mysql/purge-4.1.sql
-${PLIST.mysql}share/dspam/mysql/virtual_users.sql
+${PLIST.mysql}share/dspam/mysql/purge.sql
 ${PLIST.mysql}share/dspam/mysql/virtual_user_aliases.sql
+${PLIST.mysql}share/dspam/mysql/virtual_users.sql
 ${PLIST.pgsql}share/dspam/pgsql/pgsql_objects.sql
 ${PLIST.pgsql}share/dspam/pgsql/purge-pe.sql
 ${PLIST.pgsql}share/dspam/pgsql/purge.sql

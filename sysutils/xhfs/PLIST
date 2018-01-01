@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:54:21 zuntum Exp $
-bin/hfssh
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:58 rillig Exp $
 bin/hfs
+bin/hfssh
 bin/xhfs
-man/man1/hfssh.1
 man/man1/hfs.1
+man/man1/hfssh.1
 man/man1/xhfs.1

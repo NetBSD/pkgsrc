@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2016/12/18 23:30:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.23 2018/01/01 22:29:25 rillig Exp $
 bin/captoinfo
 bin/clear
 bin/infocmp
@@ -32,9 +32,9 @@ include/ncurses/tic.h
 include/ncurses/unctrl.h
 lib/libgnuform.la
 lib/libgnumenu.la
+lib/libgnupanel.la
 lib/libncurses++.la
 lib/libncurses.la
-lib/libgnupanel.la
 man/man1/captoinfo.1
 man/man1/clear.1
 man/man1/infocmp.1

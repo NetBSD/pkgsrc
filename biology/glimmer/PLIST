@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:34:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:18 rillig Exp $
 bin/adjust
 bin/anomaly
 bin/build-icm
 bin/check
 bin/codon-usage
 bin/compare-lists
-bin/glextract
 bin/generate
 bin/get-len
 bin/get-putative
+bin/glextract
 bin/glimmer2
 bin/long-orfs
 share/doc/glimmer/build-icm.readme

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:37 rillig Exp $
 bin/circos
 bin/gddiag
 share/circos/data/2/karyotype.all.txt
@@ -138,14 +138,14 @@ share/circos/data/8/text.bands.txt
 share/circos/data/karyotype.human.colorbychr.txt
 share/circos/data/karyotype.human.txt
 share/circos/data/text.bands.txt
-share/circos/fonts/frutiger55.ttf
-share/circos/fonts/frutiger57.ttf
-share/circos/fonts/frutiger65.ttf
-share/circos/fonts/frutiger67.ttf
 share/circos/fonts/LTe50046.ttf
 share/circos/fonts/LTe50048.ttf
 share/circos/fonts/LTe50050.ttf
 share/circos/fonts/LTe50054.ttf
+share/circos/fonts/frutiger55.ttf
+share/circos/fonts/frutiger57.ttf
+share/circos/fonts/frutiger65.ttf
+share/circos/fonts/frutiger67.ttf
 share/circos/fonts/lucon.svg
 share/circos/fonts/lucon.ttf
 share/circos/fonts/pragmata.ttf

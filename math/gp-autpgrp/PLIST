@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:44 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:42 rillig Exp $
+lib/gap4.3/pkg/autpgrp/PkgInfo.g
+lib/gap4.3/pkg/autpgrp/README
 lib/gap4.3/pkg/autpgrp/doc/autpgrp.tex
 lib/gap4.3/pkg/autpgrp/doc/influen.tex
+lib/gap4.3/pkg/autpgrp/doc/manual.dvi
+lib/gap4.3/pkg/autpgrp/doc/manual.mst
+lib/gap4.3/pkg/autpgrp/doc/manual.pdf
 lib/gap4.3/pkg/autpgrp/doc/manual.six
 lib/gap4.3/pkg/autpgrp/doc/manual.tex
 lib/gap4.3/pkg/autpgrp/doc/method.tex
 lib/gap4.3/pkg/autpgrp/doc/underl.tex
-lib/gap4.3/pkg/autpgrp/doc/manual.dvi
-lib/gap4.3/pkg/autpgrp/doc/manual.pdf
-lib/gap4.3/pkg/autpgrp/doc/manual.mst
-lib/gap4.3/pkg/autpgrp/init.g
-lib/gap4.3/pkg/autpgrp/read.g
 lib/gap4.3/pkg/autpgrp/gap/autoops.gi
 lib/gap4.3/pkg/autpgrp/gap/autos.gd
 lib/gap4.3/pkg/autpgrp/gap/autos.gi
@@ -26,15 +26,15 @@ lib/gap4.3/pkg/autpgrp/htm/CHAP001.htm
 lib/gap4.3/pkg/autpgrp/htm/CHAP002.htm
 lib/gap4.3/pkg/autpgrp/htm/CHAP003.htm
 lib/gap4.3/pkg/autpgrp/htm/CHAP004.htm
+lib/gap4.3/pkg/autpgrp/htm/biblio.htm
 lib/gap4.3/pkg/autpgrp/htm/chapters.htm
-lib/gap4.3/pkg/autpgrp/htm/theindex.htm
 lib/gap4.3/pkg/autpgrp/htm/indxA.htm
 lib/gap4.3/pkg/autpgrp/htm/indxC.htm
 lib/gap4.3/pkg/autpgrp/htm/indxI.htm
+lib/gap4.3/pkg/autpgrp/htm/indxN.htm
 lib/gap4.3/pkg/autpgrp/htm/indxO.htm
 lib/gap4.3/pkg/autpgrp/htm/indxS.htm
 lib/gap4.3/pkg/autpgrp/htm/indxT.htm
-lib/gap4.3/pkg/autpgrp/htm/biblio.htm
-lib/gap4.3/pkg/autpgrp/htm/indxN.htm
-lib/gap4.3/pkg/autpgrp/PkgInfo.g
-lib/gap4.3/pkg/autpgrp/README
+lib/gap4.3/pkg/autpgrp/htm/theindex.htm
+lib/gap4.3/pkg/autpgrp/init.g
+lib/gap4.3/pkg/autpgrp/read.g

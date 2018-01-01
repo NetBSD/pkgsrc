@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.7 2017/11/28 05:15:27 ryoon Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.8 2018/01/01 22:29:39 rillig Exp $
 bin/oracle8-java
 bin/oracle8-javaws
 bin/oracle8-keytool
@@ -132,10 +132,10 @@ java/oracle-8/lib/deploy/messages_zh_CN.properties.default
 java/oracle-8/lib/deploy/messages_zh_HK.properties.default
 java/oracle-8/lib/deploy/messages_zh_TW.properties.default
 java/oracle-8/lib/deploy/mixcode_s.png
-java/oracle-8/lib/deploy/splash_11-lic.gif
-java/oracle-8/lib/deploy/splash_11@2x-lic.gif
 java/oracle-8/lib/deploy/splash.gif
 java/oracle-8/lib/deploy/splash@2x.gif
+java/oracle-8/lib/deploy/splash_11-lic.gif
+java/oracle-8/lib/deploy/splash_11@2x-lic.gif
 java/oracle-8/lib/desktop/applications/sun-java.desktop
 java/oracle-8/lib/desktop/applications/sun-javaws.desktop
 java/oracle-8/lib/desktop/applications/sun_java.desktop
@@ -286,10 +286,10 @@ java/oracle-8/lib/security/java.policy
 java/oracle-8/lib/security/java.security.default
 java/oracle-8/lib/security/javaws.policy
 ${PLIST.jce}java/oracle-8/lib/security/local_policy.jar
-java/oracle-8/lib/security/policy/limited/local_policy.jar
 java/oracle-8/lib/security/policy/limited/US_export_policy.jar
-java/oracle-8/lib/security/policy/unlimited/local_policy.jar
+java/oracle-8/lib/security/policy/limited/local_policy.jar
 java/oracle-8/lib/security/policy/unlimited/US_export_policy.jar
+java/oracle-8/lib/security/policy/unlimited/local_policy.jar
 java/oracle-8/lib/security/trusted.libraries
 java/oracle-8/lib/sound.properties.default
 java/oracle-8/lib/tzdb.dat

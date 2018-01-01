@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2014/06/01 16:35:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:30 rillig Exp $
+share/doc/droid-ttf/NOTICE
 share/fonts/X11/TTF/DroidKufi-Bold.ttf
 share/fonts/X11/TTF/DroidKufi-Regular.ttf
 share/fonts/X11/TTF/DroidNaskh-Bold.ttf
@@ -21,4 +22,3 @@ share/fonts/X11/TTF/DroidSerif-Bold.ttf
 share/fonts/X11/TTF/DroidSerif-BoldItalic.ttf
 share/fonts/X11/TTF/DroidSerif-Italic.ttf
 share/fonts/X11/TTF/DroidSerif-Regular.ttf
-share/doc/droid-ttf/NOTICE

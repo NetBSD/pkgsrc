@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2013/05/26 16:55:53 spz Exp $
+@comment $NetBSD: PLIST,v 1.24 2018/01/01 22:29:25 rillig Exp $
 bin/mason_handler.fcgi
 ${PLIST.speedycgi}bin/mason_handler.scgi
 bin/mason_handler.svc
@@ -323,6 +323,10 @@ share/rt3/etc/upgrade/3.7.86/content
 share/rt3/etc/upgrade/3.7.87/content
 share/rt3/etc/upgrade/3.8.0/content
 share/rt3/etc/upgrade/3.8.1/content
+share/rt3/etc/upgrade/3.8.12/content
+share/rt3/etc/upgrade/3.8.17/schema.Oracle
+share/rt3/etc/upgrade/3.8.17/schema.Pg
+share/rt3/etc/upgrade/3.8.17/schema.mysql
 share/rt3/etc/upgrade/3.8.2/content
 share/rt3/etc/upgrade/3.8.3/content
 share/rt3/etc/upgrade/3.8.3/schema.Pg
@@ -330,10 +334,6 @@ share/rt3/etc/upgrade/3.8.4/content
 share/rt3/etc/upgrade/3.8.6/content
 share/rt3/etc/upgrade/3.8.8/content
 share/rt3/etc/upgrade/3.8.9/content
-share/rt3/etc/upgrade/3.8.12/content
-share/rt3/etc/upgrade/3.8.17/schema.Oracle
-share/rt3/etc/upgrade/3.8.17/schema.Pg
-share/rt3/etc/upgrade/3.8.17/schema.mysql
 share/rt3/etc/vulnerable-passwords
 share/rt3/html/Admin/CustomFields/GroupRights.html
 share/rt3/html/Admin/CustomFields/Modify.html

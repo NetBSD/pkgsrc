@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:57 rillig Exp $
 man/man5/munin-node.conf.5
 man/man5/munin.conf.5
 man/man8/munin-cron.8
 man/man8/munin-graph.8
 man/man8/munin-html.8
 man/man8/munin-limits.8
-man/man8/munin-node.8
 man/man8/munin-node-configure-snmp.8
 man/man8/munin-node-configure.8
+man/man8/munin-node.8
 man/man8/munin-run.8
 man/man8/munin-update.8
 share/doc/munin/COPYING

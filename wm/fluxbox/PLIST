@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2017/04/13 04:29:05 pho Exp $
+@comment $NetBSD: PLIST,v 1.24 2018/01/01 22:30:01 rillig Exp $
 bin/fbrun
 bin/fbsetbg
 bin/fbsetroot
@@ -21,7 +21,6 @@ share/fluxbox/apps
 share/fluxbox/init
 share/fluxbox/keys
 share/fluxbox/menu
-share/fluxbox/overlay
 ${PLIST.nls}share/fluxbox/nls/C/fluxbox.cat
 ${PLIST.nls}share/fluxbox/nls/be_BY.CP1251/fluxbox.cat
 ${PLIST.nls}share/fluxbox/nls/be_BY.UTF-8/fluxbox.cat
@@ -94,6 +93,7 @@ ${PLIST.nls}share/fluxbox/nls/zh_CN.GB2312/fluxbox.cat
 ${PLIST.nls}share/fluxbox/nls/zh_CN.GBK/fluxbox.cat
 ${PLIST.nls}share/fluxbox/nls/zh_CN.UTF-8/fluxbox.cat
 ${PLIST.nls}share/fluxbox/nls/zh_TW.UTF-8/fluxbox.cat
+share/fluxbox/overlay
 share/fluxbox/styles/Artwiz
 share/fluxbox/styles/BlueFlux/pixmaps/button_close_active.xpm
 share/fluxbox/styles/BlueFlux/pixmaps/button_close_pressed.xpm

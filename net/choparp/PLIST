@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:54:59 zuntum Exp $
-sbin/choparp
-man/man8/choparp.8
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:46 rillig Exp $
 man/cat8/choparp.0
+man/man8/choparp.8
+sbin/choparp

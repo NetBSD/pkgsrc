@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/06/05 15:27:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/01/01 22:30:00 rillig Exp $
 bin/yard${RUBY_SUFFIX}
 bin/yardoc${RUBY_SUFFIX}
 bin/yri${RUBY_SUFFIX}
@@ -581,4 +581,3 @@ ${GEM_LIBDIR}/templates/guide/onefile/html/toc.erb
 ${GEM_LIBDIR}/templates/guide/tags/html/setup.rb
 ${GEM_LIBDIR}/yard.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-

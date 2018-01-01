@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2014/06/01 16:35:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/01/01 22:29:29 rillig Exp $
+share/doc/baekmuk-ttf/COPYRIGHT
+share/doc/baekmuk-ttf/COPYRIGHT.ks
 share/fonts/X11/TTF/batang.ttf
 share/fonts/X11/TTF/dotum.ttf
 share/fonts/X11/TTF/gulim.ttf
 share/fonts/X11/TTF/hline.ttf
-share/doc/baekmuk-ttf/COPYRIGHT
-share/doc/baekmuk-ttf/COPYRIGHT.ks

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:54:49 zuntum Exp $
-sbin/arpd
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:46 rillig Exp $
 etc/arpd.conf.example
+sbin/arpd
 share/doc/arpd.README

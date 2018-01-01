@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/05/31 08:10:48 obache Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/01/01 22:29:23 rillig Exp $
 bin/cut-diff
 bin/cutter
 include/cutter/cppcutter.h
@@ -109,10 +109,10 @@ lib/cutter/module/factory/ui/console_factory.la
 ${PLIST.gtk}lib/cutter/module/factory/ui/gtk_factory.la
 lib/cutter/module/loader-customizer/cpp-integration.la
 ${PLIST.pdf}lib/cutter/module/report/pdf.la
-${PLIST.gtk}lib/cutter/module/ui/gtk.la
 lib/cutter/module/report/xml.la
 lib/cutter/module/stream/xml.la
 lib/cutter/module/ui/console.la
+${PLIST.gtk}lib/cutter/module/ui/gtk.la
 ${PLIST.gst}lib/gstreamer-0.10/libgstcuttertest.la
 lib/libcppcutter.la
 lib/libcutter.la

@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:50 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:43 rillig Exp $
 bin/xldlas
 man/man1/xldlas.1
 share/xldlas/help/.directory
+share/xldlas/help/analysis.help
 share/xldlas/help/data.help
 share/xldlas/help/file.help
+share/xldlas/help/filter.help
 share/xldlas/help/general.help
 share/xldlas/help/graph.help
 share/xldlas/help/license.help
 share/xldlas/help/log.help
+share/xldlas/help/test.help
 share/xldlas/help/tutorial.help
 share/xldlas/help/tutorial_data.lda
-share/xldlas/help/test.help
-share/xldlas/help/filter.help
-share/xldlas/help/analysis.help

@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:59:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:38 rillig Exp $
+share/doc/php-jpgraph/QPL.txt
+share/doc/php-jpgraph/README
 share/doc/php-jpgraph/html/JpGraph_Logo.png
 share/doc/php-jpgraph/html/html/exframes/JpGraph_Logo.html
 share/doc/php-jpgraph/html/html/exframes/alphabarex1.html
@@ -921,8 +923,6 @@ share/doc/php-jpgraph/html/ref/class_toc.html
 share/doc/php-jpgraph/html/ref/index.html
 share/doc/php-jpgraph/html/ref/projinfo.html
 share/doc/php-jpgraph/html/reference.png
-share/doc/php-jpgraph/QPL.txt
-share/doc/php-jpgraph/README
 share/examples/php-jpgraph/accbarex1.php
 share/examples/php-jpgraph/alphabarex1.php
 share/examples/php-jpgraph/antispamex01.php

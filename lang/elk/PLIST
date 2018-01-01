@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/04/13 05:43:26 dholland Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/01/01 22:29:39 rillig Exp $
 bin/elk
 bin/scheme-elk
 include/elk/compat.h
@@ -24,17 +24,17 @@ lib/elk/debug.la
 lib/elk/elk-eval.la
 lib/elk/gdbm.la
 lib/elk/hack.la
+${PLIST.motif}lib/elk/motif.la
 lib/elk/newhandler.la
 lib/elk/record.la
 lib/elk/regexp.la
 lib/elk/struct.la
 lib/elk/unix.la
-${PLIST.motif}lib/elk/motif.la
 ${PLIST.xaw}lib/elk/xaw.la
 ${PLIST.x11}lib/elk/xlib.la
-lib/libelk.la
 ${PLIST.x11}lib/libelk-xlib.la
 ${PLIST.x11}lib/libelk-xt.la
+lib/libelk.la
 man/man1/elk.1
 man/man1/scheme-elk.1
 share/doc/elk/examples/c++/class.cpp
@@ -125,6 +125,7 @@ share/elk/debug.scm
 share/elk/describe.scm
 share/elk/gdbmtest.scm
 share/elk/initscheme.scm
+${PLIST.motif}share/elk/motif.scm
 share/elk/oops.scm
 share/elk/parse.scm
 share/elk/pp.scm
@@ -142,4 +143,3 @@ share/elk/unix.scm
 ${PLIST.xaw}share/elk/xaw.scm
 ${PLIST.x11}share/elk/xlib.scm
 ${PLIST.x11}share/elk/xwidgets.scm
-${PLIST.motif}share/elk/motif.scm

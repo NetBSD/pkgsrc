@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2014/12/05 01:42:15 mef Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:30:01 rillig Exp $
 bin/fet
 bin/fet-cl
-man/man1/fet.1
 man/man1/fet-cl.1
+man/man1/fet.1
 share/doc/fet/README

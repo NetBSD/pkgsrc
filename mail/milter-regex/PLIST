@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:04 jperkin Exp $
-sbin/milter-regex
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:41 rillig Exp $
 man/cat8/milter-regex.0
 man/man8/milter-regex.8
+sbin/milter-regex

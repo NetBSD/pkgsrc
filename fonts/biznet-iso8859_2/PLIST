@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/06/01 16:35:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:29 rillig Exp $
 share/fonts/X11/biznet/100dpi/UTI___10.pcf.gz
 share/fonts/X11/biznet/100dpi/UTI___12.pcf.gz
 share/fonts/X11/biznet/100dpi/UTI___14.pcf.gz
@@ -236,6 +236,7 @@ share/fonts/X11/biznet/75dpi/courR12.pcf.gz
 share/fonts/X11/biznet/75dpi/courR14.pcf.gz
 share/fonts/X11/biznet/75dpi/courR18.pcf.gz
 share/fonts/X11/biznet/75dpi/courR24.pcf.gz
+share/fonts/X11/biznet/75dpi/fonts.alias
 share/fonts/X11/biznet/75dpi/helvB08.pcf.gz
 share/fonts/X11/biznet/75dpi/helvB10.pcf.gz
 share/fonts/X11/biznet/75dpi/helvB12.pcf.gz
@@ -260,7 +261,6 @@ share/fonts/X11/biznet/75dpi/helvR12.pcf.gz
 share/fonts/X11/biznet/75dpi/helvR14.pcf.gz
 share/fonts/X11/biznet/75dpi/helvR18.pcf.gz
 share/fonts/X11/biznet/75dpi/helvR24.pcf.gz
-share/fonts/X11/biznet/75dpi/fonts.alias
 share/fonts/X11/biznet/75dpi/luBIS08.pcf.gz
 share/fonts/X11/biznet/75dpi/luBIS10.pcf.gz
 share/fonts/X11/biznet/75dpi/luBIS12.pcf.gz

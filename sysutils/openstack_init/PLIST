@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/10 16:38:03 manu Exp $
-sbin/xen_network.py
-share/examples/rc.d/xen_network
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:57 rillig Exp $
 sbin/openstack_init.py
+sbin/xen_network.py
 share/examples/rc.d/openstack_init
+share/examples/rc.d/xen_network

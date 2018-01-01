@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:38:41 joerg Exp $
-sbin/modemd
-sbin/mpoold
-man/man8/modemd.8
-man/man8/mpoold.8
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:21 rillig Exp $
+man/cat5/modemcap.0
 man/cat8/modemd.0
 man/cat8/mpoold.0
 man/man5/modemcap.5
-man/cat5/modemcap.0
+man/man8/modemd.8
+man/man8/mpoold.8
+sbin/modemd
+sbin/mpoold
 share/examples/modemd/modemcap

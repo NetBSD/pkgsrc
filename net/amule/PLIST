@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2013/06/15 02:34:19 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/01/01 22:29:45 rillig Exp $
 ${PLIST.alc}bin/alc
 ${PLIST.alcc}bin/alcc
 ${PLIST.amule}bin/amule
@@ -6,10 +6,10 @@ ${PLIST.cmd}bin/amulecmd
 ${PLIST.daemon}bin/amuled
 ${PLIST.gui}bin/amulegui
 ${PLIST.web}bin/amuleweb
-${PLIST.cas}bin/cas
-${PLIST.wxcas}bin/wxcas
 bin/autostart-xas
+${PLIST.cas}bin/cas
 ${PLIST.ed2k}bin/ed2k
+${PLIST.wxcas}bin/wxcas
 lib/xchat/plugins/xas.pl
 ${PLIST.alc}man/de/man1/alc.1
 ${PLIST.alcc}man/de/man1/alcc.1
@@ -32,10 +32,8 @@ ${PLIST.web}man/es/man1/amuleweb.1
 ${PLIST.cas}man/es/man1/cas.1
 ${PLIST.ed2k}man/es/man1/ed2k.1
 ${PLIST.wxcas}man/es/man1/wxcas.1
-${PLIST.ed2k}man/es/man1/ed2k.1
 man/es/man1/xas.1
 ${PLIST.alc}man/fr/man1/alc.1
-${PLIST.alcc}man/fr/man1/alcc.1
 ${PLIST.alcc}man/fr/man1/alcc.1
 ${PLIST.amule}man/fr/man1/amule.1
 ${PLIST.cmd}man/fr/man1/amulecmd.1
@@ -45,6 +43,7 @@ ${PLIST.web}man/fr/man1/amuleweb.1
 ${PLIST.cas}man/fr/man1/cas.1
 ${PLIST.ed2k}man/fr/man1/ed2k.1
 ${PLIST.wxcas}man/fr/man1/wxcas.1
+man/fr/man1/xas.1
 ${PLIST.alc}man/hu/man1/alc.1
 ${PLIST.alcc}man/hu/man1/alcc.1
 ${PLIST.amule}man/hu/man1/amule.1
@@ -66,6 +65,18 @@ ${PLIST.web}man/it/man1/amuleweb.1
 ${PLIST.cas}man/it/man1/cas.1
 ${PLIST.ed2k}man/it/man1/ed2k.1
 ${PLIST.wxcas}man/it/man1/wxcas.1
+man/it/man1/xas.1
+${PLIST.alc}man/man1/alc.1
+${PLIST.alcc}man/man1/alcc.1
+${PLIST.amule}man/man1/amule.1
+${PLIST.cmd}man/man1/amulecmd.1
+${PLIST.daemon}man/man1/amuled.1
+${PLIST.gui}man/man1/amulegui.1
+${PLIST.web}man/man1/amuleweb.1
+${PLIST.cas}man/man1/cas.1
+${PLIST.ed2k}man/man1/ed2k.1
+${PLIST.wxcas}man/man1/wxcas.1
+man/man1/xas.1
 ${PLIST.alc}man/ru/man1/alc.1
 ${PLIST.alcc}man/ru/man1/alcc.1
 ${PLIST.amule}man/ru/man1/amule.1
@@ -75,6 +86,7 @@ ${PLIST.gui}man/ru/man1/amulegui.1
 ${PLIST.cas}man/ru/man1/cas.1
 ${PLIST.ed2k}man/ru/man1/ed2k.1
 ${PLIST.wxcas}man/ru/man1/wxcas.1
+man/ru/man1/xas.1
 ${PLIST.alc}man/tr/man1/alc.1
 ${PLIST.alcc}man/tr/man1/alcc.1
 ${PLIST.amule}man/tr/man1/amule.1
@@ -84,20 +96,6 @@ ${PLIST.gui}man/tr/man1/amulegui.1
 ${PLIST.cas}man/tr/man1/cas.1
 ${PLIST.ed2k}man/tr/man1/ed2k.1
 ${PLIST.wxcas}man/tr/man1/wxcas.1
-${PLIST.alc}man/man1/alc.1
-${PLIST.alcc}man/man1/alcc.1
-${PLIST.amule}man/man1/amule.1
-${PLIST.cmd}man/man1/amulecmd.1
-${PLIST.daemon}man/man1/amuled.1
-${PLIST.gui}man/man1/amulegui.1
-${PLIST.web}man/man1/amuleweb.1
-${PLIST.cas}man/man1/cas.1
-${PLIST.wxcas}man/man1/wxcas.1
-${PLIST.ed2k}man/man1/ed2k.1
-man/man1/xas.1
-man/fr/man1/xas.1
-man/it/man1/xas.1
-man/ru/man1/xas.1
 man/tr/man1/xas.1
 ${PLIST.skins}share/amule/skins/Mac_Gray.zip
 ${PLIST.skins}share/amule/skins/gnome.zip

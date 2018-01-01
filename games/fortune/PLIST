@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/07 11:10:32 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:34 rillig Exp $
 bin/fortune
+man/man6/fortune.6
 share/games/fortune/art
 share/games/fortune/art.dat
 share/games/fortune/ascii-art
@@ -106,4 +107,3 @@ share/games/fortune/work
 share/games/fortune/work.dat
 share/games/fortune/zippy
 share/games/fortune/zippy.dat
-man/man6/fortune.6

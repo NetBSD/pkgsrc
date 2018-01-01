@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2014/06/01 16:35:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:29 rillig Exp $
+share/doc/EBGaramond/Specimen.pdf
 share/fonts/X11/OTF/EBGaramond-Initials.otf
 share/fonts/X11/OTF/EBGaramond-InitialsF1.otf
 share/fonts/X11/OTF/EBGaramond-InitialsF2.otf
@@ -9,4 +10,3 @@ share/fonts/X11/OTF/EBGaramond12-Italic.otf
 share/fonts/X11/OTF/EBGaramond12-Regular.otf
 share/fonts/X11/OTF/EBGaramondSC08-Regular.otf
 share/fonts/X11/OTF/EBGaramondSC12-Regular.otf
-share/doc/EBGaramond/Specimen.pdf

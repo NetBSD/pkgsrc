@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:01 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:26 rillig Exp $
 bin/arnold
 share/arnold/roms/amsdose/amsdos.rom
 share/arnold/roms/amsdose/file_id.diz
@@ -15,5 +15,5 @@ share/arnold/roms/cpcplus/out.tmp
 share/arnold/roms/cpcplus/system.cpr
 share/arnold/roms/kcc/kccbas.rom
 share/arnold/roms/kcc/kccos.rom
-share/doc/arnold/readme.txt
 share/doc/arnold/readme.linux
+share/doc/arnold/readme.txt

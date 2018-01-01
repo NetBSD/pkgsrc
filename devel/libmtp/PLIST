@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/08/14 21:00:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:24 rillig Exp $
 bin/mtp-albumart
 bin/mtp-albums
 bin/mtp-connect
@@ -14,9 +14,9 @@ bin/mtp-getplaylist
 bin/mtp-newfolder
 bin/mtp-newplaylist
 bin/mtp-playlists
+bin/mtp-reset
 bin/mtp-sendfile
 bin/mtp-sendtr
-bin/mtp-reset
 bin/mtp-thumb
 bin/mtp-tracks
 bin/mtp-trexist

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/09/30 02:03:56 manu Exp $
-sbin/syncffsd
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:50 rillig Exp $
 libexec/nagios/check_syncffsd
 man/man8/syncffsd.8
+sbin/syncffsd

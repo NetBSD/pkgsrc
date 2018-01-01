@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:08 joerg Exp $
-bin/tuxnes
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:28 rillig Exp $
 bin/romfixer
+bin/tuxnes
 share/doc/tuxnes/AUTHORS
 share/doc/tuxnes/BUGS
 share/doc/tuxnes/COPYING

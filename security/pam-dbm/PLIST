@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/18 14:02:12 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:54 rillig Exp $
 lib/security/pam_dbm.so.1
 man/man5/pam_dbm.5
 man/man8/mkpwdbm.8
-sbin/pam_dbm-authtest
 sbin/mkpwdbm
+sbin/pam_dbm-authtest

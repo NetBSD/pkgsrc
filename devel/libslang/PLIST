@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:48:56 joerg Exp $
-include/slcurses.h
+@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:24 rillig Exp $
 include/slang.h
+include/slcurses.h
 lib/libslang.la
 share/doc/slang/COPYING
 share/doc/slang/COPYING.ART

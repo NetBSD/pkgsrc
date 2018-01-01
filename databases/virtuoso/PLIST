@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:01 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:23 rillig Exp $
 bin/inifile
-bin/isql-vt
 bin/isql-iodbc
-bin/isqlw-vt
+bin/isql-vt
 bin/isqlw-iodbc
+bin/isqlw-vt
 bin/odbc_mail
 bin/virt_mail
 bin/virtuoso-iodbc-t
@@ -30,6 +30,7 @@ lib/virtuoso/hosting/creolewiki.la
 ${PLIST.im}lib/virtuoso/hosting/im.la
 lib/virtuoso/hosting/mediawiki.la
 lib/virtuoso/hosting/wikiv.la
+share/virtuoso/db/virtuoso.ini
 share/virtuoso/doc/AUTHORS
 share/virtuoso/doc/COPYING
 share/virtuoso/doc/CREDITS
@@ -47,7 +48,6 @@ share/virtuoso/doc/README.jsse
 share/virtuoso/doc/README.php5
 share/virtuoso/doc/README.sesame2
 share/virtuoso/doc/README.sesame3
-share/virtuoso/db/virtuoso.ini
 share/virtuoso/vad/bpel_dav.vad
 share/virtuoso/vad/conductor_dav.vad
 share/virtuoso/vad/dbpedia_dav.vad

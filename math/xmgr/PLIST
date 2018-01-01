@@ -1,14 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:50 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:43 rillig Exp $
 bin/fdf2fit
 bin/grbatch
 bin/grconvert
 bin/xmgr
 include/acegr_np.h
 lib/libacegr_np.a
-share/xmgr/README
-share/xmgr/greg2jul.c
-share/xmgr/jul2greg.c
-share/xmgr/magic.xmgr
 share/doc/xmgr/CHANGES.html
 share/doc/xmgr/FAQ.html
 share/doc/xmgr/acegr_np.html
@@ -78,3 +74,7 @@ share/examples/xmgr/tmc.c
 share/examples/xmgr/tpipe.d
 share/examples/xmgr/tstack.dat
 share/examples/xmgr/txyr.dat
+share/xmgr/README
+share/xmgr/greg2jul.c
+share/xmgr/jul2greg.c
+share/xmgr/magic.xmgr

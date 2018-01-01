@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:38:39 joerg Exp $
-bin/xestic
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:21 rillig Exp $
 bin/estic.res
+bin/xestic
 share/doc/estic/estic.doc
 share/examples/estic/alias.dat
 share/examples/estic/cron.dat

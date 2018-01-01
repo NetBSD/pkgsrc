@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/31 13:28:36 cube Exp $
-bin/newsx
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:51 rillig Exp $
 bin/newsq
+bin/newsx
 man/man1/newsq.1
-man/man5/newsx.conf.5
 man/man5/in.hosts.5
+man/man5/newsx.conf.5
 man/man8/newsx.8

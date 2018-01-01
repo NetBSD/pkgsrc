@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:05 joerg Exp $
-share/data/hercules/mftipl.txt
-share/data/hercules/os360.cnf
-share/data/hercules/sysgen.txt
-share/data/hercules/listvtoc.prn
-share/data/hercules/nucmap.prn
-share/data/hercules/mftr33.plf
-share/data/hercules/mftr33.lst
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:27 rillig Exp $
+share/data/hercules/dlib01.plf
 share/data/hercules/ibcdasdi.rdr
 share/data/hercules/ibcdmprs.rdr
 share/data/hercules/ieaipl00.rdr
-share/data/hercules/dlib01.plf
-share/data/hercules/init3330.txt
 share/data/hercules/init2311.txt
+share/data/hercules/init3330.txt
+share/data/hercules/listvtoc.prn
+share/data/hercules/mftipl.txt
 share/data/hercules/mftr33.150
+share/data/hercules/mftr33.lst
+share/data/hercules/mftr33.plf
+share/data/hercules/nucmap.prn
+share/data/hercules/os360.cnf
+share/data/hercules/sysgen.txt
 share/data/hercules/work01.151
 share/data/hercules/work02.192

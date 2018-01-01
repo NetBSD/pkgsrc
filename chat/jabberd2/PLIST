@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2016/02/09 00:21:59 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.20 2018/01/01 22:29:20 rillig Exp $
 bin/bdbdump.pl
 bin/c2s
 bin/jabberd
@@ -13,8 +13,8 @@ ${PLIST.ldap}lib/jabberd/authreg_ldapfull.la
 ${PLIST.mysql}lib/jabberd/authreg_mysql.la
 ${PLIST.pam}lib/jabberd/authreg_pam.la
 ${PLIST.pgsql}lib/jabberd/authreg_pgsql.la
-${PLIST.sqlite}lib/jabberd/authreg_sqlite.la
 lib/jabberd/authreg_pipe.la
+${PLIST.sqlite}lib/jabberd/authreg_sqlite.la
 lib/jabberd/libstorage.la
 lib/jabberd/mod_active.la
 lib/jabberd/mod_amp.la
@@ -41,8 +41,8 @@ lib/jabberd/mod_template-roster.la
 lib/jabberd/mod_vacation.la
 lib/jabberd/mod_validate.la
 lib/jabberd/mod_verify.la
-lib/jabberd/storage_fs.la
 ${PLIST.db}lib/jabberd/storage_db.la
+lib/jabberd/storage_fs.la
 ${PLIST.ldap}lib/jabberd/storage_ldapvcard.la
 ${PLIST.mysql}lib/jabberd/storage_mysql.la
 ${PLIST.pgsql}lib/jabberd/storage_pgsql.la

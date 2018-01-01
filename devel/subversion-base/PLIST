@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2015/08/14 06:40:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2018/01/01 22:29:26 rillig Exp $
 bin/svn
 bin/svnadmin
 bin/svnbench
@@ -59,8 +59,8 @@ lib/libsvn_client-1.la
 lib/libsvn_delta-1.la
 lib/libsvn_diff-1.la
 lib/libsvn_fs-1.la
-lib/libsvn_fs_fs-1.la
 ${PLIST.db4}lib/libsvn_fs_base-1.la
+lib/libsvn_fs_fs-1.la
 lib/libsvn_fs_util-1.la
 lib/libsvn_fs_x-1.la
 lib/libsvn_ra-1.la

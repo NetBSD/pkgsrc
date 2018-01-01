@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:17:19 joerg Exp $
-bin/jgrep
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:59 rillig Exp $
 bin/jegrep
 bin/jfgrep
+bin/jgrep
 info/grep.info
-man/man1/jgrep.1
 man/man1/jegrep.1
 man/man1/jfgrep.1
+man/man1/jgrep.1
 share/doc/ja-grep/README.MB
 share/locale/cs/LC_MESSAGES/grep.mo
 share/locale/de/LC_MESSAGES/grep.mo
