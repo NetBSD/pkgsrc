@@ -118,39 +118,48 @@ func (s *Suite) Test_PlistLineSorter_Sort(c *check.C) {
 		"lib/${UNKNOWN}.la",
 		"C",
 		"ddd",
-		"@exec echo \"after ddd\"",
+		"@exec echo \"after ddd\"", // Makes the PLIST unsortable
 		"sbin/program",
 		"${PLIST.one}bin/program",
-		"${PKGMANDIR}/man1/program.1",
+		"man/man1/program.1",
 		"${PLIST.two}bin/program2",
 		"lib/before.la",
+		"${PLIST.linux}${PLIST.x86_64}lib/lib-linux-x86_64.so", // Double conditional, see graphics/graphviz
 		"lib/after.la",
 		"@exec echo \"after lib/after.la\"")
 	ck := &PlistChecker{nil, nil, "", false}
 	plines := ck.NewLines(lines)
 
-	NewPlistLineSorter(plines).Sort()
+	sorter1 := NewPlistLineSorter(plines)
+	c.Check(sorter1.unsortable, equals, lines[5])
+
+	cleanedLines := append(append(lines[0:5], lines[6:8]...), lines[9:]...) // Remove ${UNKNOWN} and @exec
+
+	sorter2 := NewPlistLineSorter((&PlistChecker{nil, nil, "", false}).NewLines(cleanedLines))
+
+	c.Check(sorter2.unsortable, check.IsNil)
+
+	sorter2.Sort()
 
 	s.CheckOutputLines(
-		"AUTOFIX: ~/PLIST:1: Sorting the whole file.",
+		"AUTOFIX: ~/PLIST:3: Sorting the whole file.",
 		"AUTOFIX: ~/PLIST: Has been auto-fixed. Please re-run pkglint.")
 	c.Check(s.LoadTmpFile("PLIST"), equals, ""+
 		"@comment $"+"NetBSD$\n"+
-		"@comment Do not remove\n"+
+		"@comment Do not remove\n"+ // The header ends here
 		"A\n"+
 		"C\n"+
 		"CCC\n"+
-		"lib/${UNKNOWN}.la\n"+ // Stays below the previous line
 		"b\n"+
 		"${PLIST.one}bin/program\n"+ // Conditionals are ignored while sorting
-		"${PKGMANDIR}/man1/program.1\n"+ // Stays below the previous line
 		"${PLIST.two}bin/program2\n"+
 		"ddd\n"+
-		"@exec echo \"after ddd\"\n"+ // Stays below the previous line
 		"lib/after.la\n"+
-		"@exec echo \"after lib/after.la\"\n"+
 		"lib/before.la\n"+
-		"sbin/program\n")
+		"${PLIST.linux}${PLIST.x86_64}lib/lib-linux-x86_64.so\n"+
+		"man/man1/program.1\n"+
+		"sbin/program\n"+
+		"@exec echo \"after lib/after.la\"\n") // The footer starts here
 }
 
 func (s *Suite) Test_PlistChecker_checkpathShare_Desktop(c *check.C) {
@@ -217,11 +226,11 @@ func (s *Suite) Test_PlistChecker__autofix(c *check.C) {
 		"lib/libvirt/lock-driver/lockd.la",
 		"${PKGMANDIR}/man1/sh.1",
 		"share/augeas/lenses/virtlockd.aug",
-		"share/doc/${PKGNAME}/html/32favicon.png",
-		"share/doc/${PKGNAME}/html/404.html",
-		"share/doc/${PKGNAME}/html/acl.html",
-		"share/doc/${PKGNAME}/html/aclpolkit.html",
-		"share/doc/${PKGNAME}/html/windows.html",
+		"share/doc/pkgname-1.0/html/32favicon.png",
+		"share/doc/pkgname-1.0/html/404.html",
+		"share/doc/pkgname-1.0/html/acl.html",
+		"share/doc/pkgname-1.0/html/aclpolkit.html",
+		"share/doc/pkgname-1.0/html/windows.html",
 		"share/examples/libvirt/libvirt.conf",
 		"share/locale/zh_CN/LC_MESSAGES/libvirt.mo",
 		"share/locale/zh_TW/LC_MESSAGES/libvirt.mo",
@@ -245,7 +254,7 @@ func (s *Suite) Test_PlistChecker__autofix(c *check.C) {
 
 	s.CheckOutputLines(
 		"AUTOFIX: ~/PLIST:6: Replacing \"${PKGMANDIR}/\" with \"man/\".",
-		"AUTOFIX: ~/PLIST:1: Sorting the whole file.",
+		"AUTOFIX: ~/PLIST:2: Sorting the whole file.",
 		"AUTOFIX: ~/PLIST: Has been auto-fixed. Please re-run pkglint.")
 	c.Check(len(lines), equals, len(fixedLines))
 	c.Check(s.LoadTmpFile("PLIST"), equals, ""+
@@ -256,11 +265,11 @@ func (s *Suite) Test_PlistChecker__autofix(c *check.C) {
 		"lib/libvirt/lock-driver/lockd.la\n"+
 		"man/man1/sh.1\n"+
 		"share/augeas/lenses/virtlockd.aug\n"+
-		"share/doc/${PKGNAME}/html/32favicon.png\n"+
-		"share/doc/${PKGNAME}/html/404.html\n"+
-		"share/doc/${PKGNAME}/html/acl.html\n"+
-		"share/doc/${PKGNAME}/html/aclpolkit.html\n"+
-		"share/doc/${PKGNAME}/html/windows.html\n"+
+		"share/doc/pkgname-1.0/html/32favicon.png\n"+
+		"share/doc/pkgname-1.0/html/404.html\n"+
+		"share/doc/pkgname-1.0/html/acl.html\n"+
+		"share/doc/pkgname-1.0/html/aclpolkit.html\n"+
+		"share/doc/pkgname-1.0/html/windows.html\n"+
 		"share/examples/libvirt/libvirt.conf\n"+
 		"share/locale/zh_CN/LC_MESSAGES/libvirt.mo\n"+
 		"share/locale/zh_TW/LC_MESSAGES/libvirt.mo\n"+

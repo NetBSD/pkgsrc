@@ -65,6 +65,7 @@ func NewLineWhole(fname string) Line {
 	return NewLine(fname, 0, "", nil)
 }
 
+// modifiedLines returns the text after the fixes, including line breaks and newly inserted lines
 func (line *LineImpl) modifiedLines() []string {
 	var result []string
 	result = append(result, line.before...)
