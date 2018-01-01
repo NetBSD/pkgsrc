@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2016/10/23 14:02:28 asau Exp $
+# $NetBSD: Makefile,v 1.37 2018/01/01 18:16:38 rillig Exp $
 
 DISTNAME=	openmpi-1.10.4
 CATEGORIES=	parallel
@@ -20,8 +20,8 @@ SHLIBTOOL_OVERRIDE=	${WRKSRC}/config/libtool.m4
 
 CONFIGURE_ARGS+=	--without-slurm
 CONFIGURE_ARGS+=	--enable-contrib-no-build=vt # in separate package
-CONFIGURE_ARGS+=	--with-libltdl=$(BUILDLINK_PREFIX.libltdl:Q) # use our libltdl
-CONFIGURE_ARGS+=	--with-hwloc=$(BUILDLINK_PREFIX.hwloc:Q) #external
+CONFIGURE_ARGS+=	--with-libltdl=${BUILDLINK_PREFIX.libltdl:Q} # use our libltdl
+CONFIGURE_ARGS+=	--with-hwloc=${BUILDLINK_PREFIX.hwloc:Q} #external
 CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib"
 CONFIGURE_ENV+=		ompi_cv_f77_have_INTEGERp8=no	# no "INTEGER*8"??
 CONFIGURE_ARGS+=	OPAL_HAVE_LTDL_ADVISE=0
