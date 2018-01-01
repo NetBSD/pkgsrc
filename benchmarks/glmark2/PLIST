@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/28 23:09:27 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:18 rillig Exp $
 bin/glmark2
+man/man1/glmark2.1
 share/glmark2/models/asteroid-high.3ds
 share/glmark2/models/asteroid-low.3ds
 share/glmark2/models/bunny.obj
@@ -134,4 +135,3 @@ share/glmark2/textures/nasa3.png
 share/glmark2/textures/terrain-backgrounddetailed6.jpg
 share/glmark2/textures/terrain-grasslight-512-nm.jpg
 share/glmark2/textures/terrain-grasslight-512.jpg
-man/man1/glmark2.1

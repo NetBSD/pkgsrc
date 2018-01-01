@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:35:53 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:19 rillig Exp $
 bin/busgen
 bin/capgen
 bin/cubegen
 bin/fastcap
 bin/pipedgen
 bin/pyragen
+share/doc/fastcap/README.docs
+share/doc/fastcap/mtt.ps
+share/doc/fastcap/tcad.ps
+share/doc/fastcap/ug.ps
 share/examples/fastcap/1x1bus.lst
 share/examples/fastcap/1x1coarse.neu
 share/examples/fastcap/1x1fine.neu
@@ -39,7 +43,3 @@ share/examples/fastcap/sphere3.neu
 share/examples/fastcap/testgen.sh
 share/examples/fastcap/testrun.sh
 share/examples/fastcap/via.neu
-share/doc/fastcap/mtt.ps
-share/doc/fastcap/tcad.ps
-share/doc/fastcap/ug.ps
-share/doc/fastcap/README.docs

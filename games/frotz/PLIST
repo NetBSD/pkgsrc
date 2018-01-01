@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:34 rillig Exp $
 bin/frotz
 man/man6/frotz.6
-share/doc/frotz/README
-share/doc/frotz/INSTALL
 share/doc/frotz/HOW_TO_PLAY
+share/doc/frotz/INSTALL
+share/doc/frotz/README
 share/examples/frotz/frotz.conf

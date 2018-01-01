@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST-freewnn,v 1.2 2009/06/14 18:01:31 joerg Exp $
+@comment $NetBSD: PLIST-freewnn,v 1.3 2018/01/01 22:29:39 rillig Exp $
 lib/X11/ccdef/ccdef.kinput2
+lib/X11/ccdef/ccdef.kinput2.egg
 lib/X11/ccdef/rule.eggfunc
 lib/X11/ccdef/rule.func
 lib/X11/ccdef/rule.greek
+lib/X11/ccdef/rule.hiragana.egg
 lib/X11/ccdef/rule.kana
 lib/X11/ccdef/rule.kana2
+lib/X11/ccdef/rule.katakana.egg
+lib/X11/ccdef/rule.kigou.egg
 lib/X11/ccdef/rule.roma
 lib/X11/ccdef/rule.wnnroma
 lib/X11/ccdef/rule.zascii
-lib/X11/ccdef/ccdef.kinput2.egg
-lib/X11/ccdef/rule.hiragana.egg
-lib/X11/ccdef/rule.katakana.egg
-lib/X11/ccdef/rule.kigou.egg

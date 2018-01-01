@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/12/14 13:05:30 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:30:03 rillig Exp $
 share/jetty/README.TXT
 share/jetty/VERSION.txt
 share/jetty/bin/jetty.sh
@@ -250,7 +250,7 @@ share/jetty/modules/websocket.mod
 share/jetty/modules/xinetd.mod
 share/jetty/notice.html
 share/jetty/resources/log4j.properties
+share/jetty/start-example.ini
 share/jetty/start.ini
 share/jetty/start.jar
-share/jetty/start-example.ini
 share/jetty/webapps/README.TXT
