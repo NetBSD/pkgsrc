@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/10/09 14:06:31 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2018/01/01 18:16:36 rillig Exp $
 
 DISTNAME=	tclcl-src-1.20
 PKGNAME=	tcl-${DISTNAME:S/-src//}
@@ -27,8 +27,8 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../lang/tcl/Makefile.version"
 .include "../../x11/tk/Makefile.version"
 
-CONFIGURE_ARGS+=--with-tcl-ver=$(TCL_VERSION)
-CONFIGURE_ARGS+=--with-tk-ver=$(TK_VERSION)
+CONFIGURE_ARGS+=--with-tcl-ver=${TCL_VERSION}
+CONFIGURE_ARGS+=--with-tk-ver=${TK_VERSION}
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../lang/tcl-otcl/buildlink3.mk"

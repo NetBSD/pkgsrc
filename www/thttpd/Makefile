@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2015/03/12 01:00:26 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.47 2018/01/01 18:16:39 rillig Exp $
 
 DISTNAME=	thttpd-2.26
 CATEGORIES=	www
@@ -29,7 +29,7 @@ EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/thttpd.conf ${PKG_SYSCONFDIR}/thttpd.conf
 RCD_SCRIPTS=	thttpd
 
-INSTALLATION_DIRS=	$(PKGMANDIR)/man1 share/thttpd ${EGDIR}
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/thttpd ${EGDIR}
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	thttpd.conf

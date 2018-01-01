@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2015/08/18 07:31:12 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2018/01/01 18:16:37 rillig Exp $
 #
 
 DISTNAME=		mathomatic-16.0.4
@@ -15,7 +15,7 @@ LICENSE=		gnu-lgpl-v2.1
 NO_CONFIGURE=		yes
 MAKE_FILE=		makefile
 USE_TOOLS+=		gmake
-INSTALL_ENV+=		prefix=$(PREFIX) mandir=$(DESTDIR)$(PREFIX)/$(PKGMANDIR)
+INSTALL_ENV+=		prefix=${PREFIX} mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 CFLAGS.SunOS+=		-DSOLARIS
 

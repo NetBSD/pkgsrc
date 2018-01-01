@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.57 2017/01/19 18:52:13 agc Exp $
+# $NetBSD: Makefile,v 1.58 2018/01/01 18:16:36 rillig Exp $
 
 DISTNAME=	chicken-4.11.0
 CATEGORIES=	lang
-MASTER_SITES=	http://code.call-cc.org/releases/$(PKGVERSION_NOREV)/
-MASTER_SITES+=	http://code.call-cc.org/releases/$(PKGVERSION_NOREV:R)/
+MASTER_SITES=	http://code.call-cc.org/releases/${PKGVERSION_NOREV}/
+MASTER_SITES+=	http://code.call-cc.org/releases/${PKGVERSION_NOREV:R}/
 
 MAINTAINER=	asau@inbox.ru #, airhead@users.sourceforge.net
 HOMEPAGE=	http://www.call-cc.org/
@@ -41,7 +41,7 @@ PKG_SKIP_REASON+=	"${OPSYS} is not supported"
 .endif
 
 MAKE_FILE=	GNUmakefile
-MAKE_ENV+=	C_COMPILER=$(CC:Q)
+MAKE_ENV+=	C_COMPILER=${CC:Q}
 MAKE_ENV+=	HOST=	# fix ${HOST} prepending ${CC}
 # Need to have these in MAKE_FLAGS, MAKE_ENV is not enough due to the
 # way the build system overrides them.
