@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.12 2018/01/01 18:05:37 rillig Exp $
+$NetBSD: CHANGES-2018,v 1.13 2018/01/01 21:19:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -33,3 +33,14 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/dhcpcd to 7.0.0 [roy 2018-01-01]
 	Updated sysutils/checkperms to 1.12 [rillig 2018-01-01]
 	Updated pkgtools/pkglint to 5.4.22 [rillig 2018-01-01]
+	Updated devel/libatomic_ops to 7.6.2 [adam 2018-01-01]
+	Updated devel/boost-jam to 1.66.0 [adam 2018-01-01]
+	Updated devel/boost-headers to 1.66.0 [adam 2018-01-01]
+	Updated devel/boost-libs to 1.66.0 [adam 2018-01-01]
+	Updated devel/boost-docs to 1.66.0 [adam 2018-01-01]
+	Updated devel/boost-build to 1.66.0 [adam 2018-01-01]
+	Updated devel/boost-mpi to 1.66.0 [adam 2018-01-01]
+	Updated devel/py-boost to 1.66.0 [adam 2018-01-01]
+	Updated meta-pkgs/boost to 1.66.0 [adam 2018-01-01]
+	Updated devel/py-attrs to 17.4.0 [adam 2018-01-01]
+	Updated devel/py-hypothesis to 3.44.4 [adam 2018-01-01]
