@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.303 2017/12/10 00:45:09 ryoon Exp $
+$NetBSD: distinfo,v 1.304 2018/01/01 07:02:17 ryoon Exp $
 
-SHA1 (firefox-57.0.2.source.tar.xz) = 2edcb2fade6cc4ed9339825bad1bdad381da7824
-RMD160 (firefox-57.0.2.source.tar.xz) = 798fad0cecceac45db490dd79fb25b0ecb1ec83b
-SHA512 (firefox-57.0.2.source.tar.xz) = e66402c182fae579dc645de1570a2eba4f95953f608de668da07a1ee4f371041cbdb3e01ce6e4708d8fa3b6b3ebe5b79e03e48ced3605f66cb09ac49abf3bbcd
-Size (firefox-57.0.2.source.tar.xz) = 248772480 bytes
+SHA1 (firefox-57.0.3.source.tar.xz) = 09b3dac606ae6185079bc4d47bf543545f7cff94
+RMD160 (firefox-57.0.3.source.tar.xz) = 1b7de9c541546e0f0c61a975b46a8c22e99d8ca7
+SHA512 (firefox-57.0.3.source.tar.xz) = 1f887ab6bb16ef69bce56b689e761b3e09fc106b4bee7842be2c8e7eac05981f9922e9c3a8bd22b4935545cbbc10bf0a0c79df7800cd3c80fd4137070c9bfd09
+Size (firefox-57.0.3.source.tar.xz) = 250607452 bytes
 SHA1 (patch-aa) = a2b7c767773f462452701237b2b06c9a4f01d1b5
 SHA1 (patch-build_gyp.mozbuild) = bb3a2f8c1cad0e9cfdaefa721c5992cba2e2bf50
 SHA1 (patch-build_moz.configure_init.configure) = 5ec8da6b5aad7682a88b010a99e19f5d4403e6db
