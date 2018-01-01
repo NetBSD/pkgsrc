@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.44 2017/08/24 19:31:32 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.45 2018/01/01 20:36:09 adam Exp $
 
 BUILDLINK_TREE+=	boost-libs
 
@@ -6,8 +6,8 @@ BUILDLINK_TREE+=	boost-libs
 BOOST_LIBS_BUILDLINK3_MK:=
 
 # Use a dependency pattern that guarantees the proper ABI.
-BUILDLINK_API_DEPENDS.boost-libs+=	boost-libs-1.65.*
-BUILDLINK_ABI_DEPENDS.boost-libs?=	boost-libs>=1.65.0
+BUILDLINK_API_DEPENDS.boost-libs+=	boost-libs-1.66.*
+BUILDLINK_ABI_DEPENDS.boost-libs?=	boost-libs>=1.66.0
 BUILDLINK_PKGSRCDIR.boost-libs?=	../../devel/boost-libs
 
 .include "../../mk/bsd.fast.prefs.mk"
