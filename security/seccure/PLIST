@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/14 08:00:05 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 18:33:33 rillig Exp $
 bin/seccure-decrypt
 bin/seccure-dh
 bin/seccure-encrypt
@@ -7,4 +7,4 @@ bin/seccure-sign
 bin/seccure-signcrypt
 bin/seccure-veridec
 bin/seccure-verify
-${PKGMANDIR}/man1/seccure.1
+man/man1/seccure.1
