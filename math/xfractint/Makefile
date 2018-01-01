@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/11/06 13:40:29 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2018/01/01 18:16:38 rillig Exp $
 
 DISTNAME=		xfrac310
 PKGNAME=		xfractint-3.10
@@ -19,7 +19,7 @@ MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}/man1
 MAKE_FLAGS+=		SRCDIR=${PREFIX}/share/xfractint
 BUILD_TARGET=		xfractint
 
-INSTALLATION_DIRS=	bin $(PKGMANDIR)/man1 share/xfractint
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/xfractint
 
 MAKE_ENV+=	X11_LDFLAGS=${X11_LDFLAGS:Q}
 

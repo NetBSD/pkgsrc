@@ -24,7 +24,7 @@ Major features
      + Contours (colorcoded), Planes colorcoded, Dipole. XYZ axes
        and the principal axes of the molecule.
      + Animation of the normal modes corresponding to vibrational
-       frequencies. 
+       frequencies.
      + Animation of the rotation of geometry, surfaces, contours,
        planes colorcoded, xyz and the principal axes of the molecule.
      + Animation of contours, Animation of planes colorcoded.

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2011/12/02 20:47:04 marino Exp $
+# $NetBSD: Makefile,v 1.5 2018/01/01 18:16:35 rillig Exp $
 #
 
 CLISP_MODULE=	syscalls
 
-PKGNAME=	clisp-$(CLISP_MODULE)-$(CLISP_VERSION)
+PKGNAME=	clisp-${CLISP_MODULE}-${CLISP_VERSION}
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clisp/}

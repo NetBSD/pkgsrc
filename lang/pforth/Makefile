@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/09/17 15:04:23 asau Exp $
+# $NetBSD: Makefile,v 1.27 2018/01/01 18:16:37 rillig Exp $
 
 DISTNAME=		pforth_v27_20101121
 PKGNAME=		pforth-27
@@ -11,10 +11,10 @@ HOMEPAGE=		http://www.softsynth.com/pforth/
 COMMENT=		Portable ANS-like Forth
 LICENSE=		mit
 
-WRKSRC=			$(WRKDIR)/pforth_v27
+WRKSRC=			${WRKDIR}/pforth_v27
 MAKE_FILE=		build/unix/Makefile
 MAKE_FLAGS=		SRCDIR=.
-CPPFLAGS=		-DPF_DEFAULT_DICTIONARY='"$(PREFIX)/lib/pforth/pforth.dic"'
+CPPFLAGS=		-DPF_DEFAULT_DICTIONARY='"${PREFIX}/lib/pforth/pforth.dic"'
 
 INSTALLATION_DIRS=	bin lib/pforth share/doc/pforth share/pforth share/pforth/utils
 

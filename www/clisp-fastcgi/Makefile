@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/01/28 11:32:09 marino Exp $
+# $NetBSD: Makefile,v 1.3 2018/01/01 18:16:39 rillig Exp $
 #
 
 CLISP_MODULE=	fastcgi
 
-PKGNAME=	clisp-$(CLISP_MODULE)-$(CLISP_VERSION)
+PKGNAME=	clisp-${CLISP_MODULE}-${CLISP_VERSION}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clisp/}
 
