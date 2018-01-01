@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2017/08/24 20:03:02 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2018/01/01 21:18:12 adam Exp $
 
 BUILDLINK_TREE+=	nghttp2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	nghttp2
 NGHTTP2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.nghttp2+=	nghttp2>=1.0.0
-BUILDLINK_ABI_DEPENDS.nghttp2+=	nghttp2>=1.25.0nb1
+BUILDLINK_ABI_DEPENDS.nghttp2+=	nghttp2>=1.29.0nb1
 BUILDLINK_PKGSRCDIR.nghttp2?=	../../www/nghttp2
 
 pkgbase := nghttp2
