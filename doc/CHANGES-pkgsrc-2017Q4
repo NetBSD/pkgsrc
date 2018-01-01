@@ -1,4 +1,10 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.1 2017/12/30 00:10:35 gdt Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.2 2018/01/01 19:22:18 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
+
+Pullup ticket #5664 - requested by he
+devel/gnustep-objc: build fix
+
+Pullup ticket #5665 - requested by tsutsui
+inputmethod/mozc-server: build fix
 
