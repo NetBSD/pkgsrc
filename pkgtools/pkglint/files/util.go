@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
-	"netbsd.org/pkglint/line"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
 	"os"
@@ -101,7 +100,7 @@ func isCommitted(fname string) bool {
 	lines := loadCvsEntries(fname)
 	needle := "/" + path.Base(fname) + "/"
 	for _, line := range lines {
-		if hasPrefix(line.Text(), needle) {
+		if hasPrefix(line.Text, needle) {
 			return true
 		}
 	}
@@ -112,8 +111,8 @@ func isLocallyModified(fname string) bool {
 	lines := loadCvsEntries(fname)
 	needle := "/" + path.Base(fname) + "/"
 	for _, line := range lines {
-		if hasPrefix(line.Text(), needle) {
-			cvsModTime, err := time.Parse(time.ANSIC, strings.Split(line.Text(), "/")[3])
+		if hasPrefix(line.Text, needle) {
+			cvsModTime, err := time.Parse(time.ANSIC, strings.Split(line.Text, "/")[3])
 			if err != nil {
 				return false
 			}
@@ -134,7 +133,7 @@ func isLocallyModified(fname string) bool {
 	return false
 }
 
-func loadCvsEntries(fname string) []line.Line {
+func loadCvsEntries(fname string) []Line {
 	dir := path.Dir(fname)
 	if dir == G.CvsEntriesDir {
 		return G.CvsEntriesLines

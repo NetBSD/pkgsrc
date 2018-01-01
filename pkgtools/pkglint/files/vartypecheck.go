@@ -1,8 +1,6 @@
 package main
 
 import (
-	"netbsd.org/pkglint/line"
-	"netbsd.org/pkglint/linechecks"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
 	"path"
@@ -12,7 +10,7 @@ import (
 
 type VartypeCheck struct {
 	MkLine     MkLine
-	Line       line.Line
+	Line       Line
 	Varname    string
 	Op         MkOperator
 	Value      string
@@ -211,7 +209,7 @@ func (cv *VartypeCheck) Comment() {
 }
 
 func (cv *VartypeCheck) ConfFiles() {
-	words, _ := splitIntoMkWords(cv.MkLine, cv.Value)
+	words, _ := splitIntoMkWords(cv.MkLine.Line, cv.Value)
 	if len(words)%2 != 0 {
 		cv.Line.Warnf("Values for %s should always be pairs of paths.", cv.Varname)
 	}
@@ -677,7 +675,7 @@ func (cv *VartypeCheck) Pathmask() {
 	if !matches(cv.ValueNoVar, `^[#\-0-9A-Za-z._~+%*?/\[\]]*`) {
 		cv.Line.Warnf("%q is not a valid pathname mask.", cv.Value)
 	}
-	linechecks.CheckAbsolutePathname(cv.Line, cv.Value)
+	CheckLineAbsolutePathname(cv.Line, cv.Value)
 }
 
 // Like Filename, but including slashes
@@ -689,7 +687,7 @@ func (cv *VartypeCheck) Pathname() {
 	if !matches(cv.ValueNoVar, `^[#\-0-9A-Za-z._~+%/]*$`) {
 		cv.Line.Warnf("%q is not a valid pathname.", cv.Value)
 	}
-	linechecks.CheckAbsolutePathname(cv.Line, cv.Value)
+	CheckLineAbsolutePathname(cv.Line, cv.Value)
 }
 
 func (cv *VartypeCheck) Perl5Packlist() {
@@ -737,7 +735,7 @@ func (cv *VartypeCheck) PkgRevision() {
 	if !matches(cv.Value, `^[1-9]\d*$`) {
 		cv.Line.Warnf("%s must be a positive integer number.", cv.Varname)
 	}
-	if path.Base(cv.Line.Filename()) != "Makefile" {
+	if path.Base(cv.Line.Filename) != "Makefile" {
 		cv.Line.Errorf("%s only makes sense directly in the package Makefile.", cv.Varname)
 		Explain(
 			"Usually, different packages using the same Makefile.common have",
@@ -852,7 +850,7 @@ func (cv *VartypeCheck) SedCommands() {
 
 	tokens, rest := splitIntoShellTokens(line, cv.Value)
 	if rest != "" {
-		if strings.Contains(line.Text(), "#") {
+		if strings.Contains(line.Text, "#") {
 			line.Errorf("Invalid shell words %q in sed commands.", rest)
 			Explain(
 				"When sed commands have embedded \"#\" characters, they need to be",

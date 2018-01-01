@@ -11,7 +11,6 @@ import (
 	"testing"
 
 	check "gopkg.in/check.v1"
-	"netbsd.org/pkglint/line"
 	"netbsd.org/pkglint/textproc"
 	"netbsd.org/pkglint/trace"
 )
@@ -37,7 +36,7 @@ func (s *Suite) Init(c *check.C) {
 
 func (s *Suite) c() *check.C {
 	if s.checkC == nil {
-		panic("Must call Suite.Init before accessing check.C.")
+		panic("Suite.Init must be called before accessing check.C.")
 	}
 	return s.checkC
 }
@@ -94,8 +93,8 @@ func (s *Suite) NewRawLines(args ...interface{}) []*RawLine {
 	return rawlines[:j]
 }
 
-func (s *Suite) NewLines(fname string, texts ...string) []line.Line {
-	result := make([]line.Line, len(texts))
+func (s *Suite) NewLines(fname string, texts ...string) []Line {
+	result := make([]Line, len(texts))
 	for i, text := range texts {
 		textnl := text + "\n"
 		result[i] = NewLine(fname, i+1, text, s.NewRawLines(i+1, textnl))

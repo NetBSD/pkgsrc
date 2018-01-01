@@ -4,59 +4,15 @@ package main
 
 import (
 	"fmt"
-	"netbsd.org/pkglint/line"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
 	"strings"
 )
 
-type MkLine interface {
-	line.Line
-
-	IsVarassign() bool
-	Varname() string
-	Varcanon() string
-	Varparam() string
-	Op() MkOperator
-	ValueAlign() string
-	Value() string
-	VarassignComment() string
-
-	IsShellcmd() bool
-	Shellcmd() string
-
-	IsComment() bool
-
-	IsEmpty() bool
-
-	IsCond() bool
-	Indent() string
-	Directive() string
-	Args() string
-
-	IsInclude() bool
-	IsSysinclude() bool
-	// Indent() works here, too.
-	MustExist() bool
-	Includefile() string
-	ConditionVars() string
-	SetConditionVars(varnames string) // Initialized lazily
-
-	IsDependency() bool
-	Targets() string
-	Sources() string
-
-	VariableType(varname string) *Vartype
-	ResolveVarsInRelativePath(relpath string, adjustDepth bool) string
-	ExtractUsedVariables(value string) []string
-	WithoutMakeVariables(value string) string
-	VariableNeedsQuoting(varname string, vartype *Vartype, vuc *VarUseContext) NeedsQuoting
-	DetermineUsedVariables() []string
-	ExplainRelativeDirs()
-}
+type MkLine = *MkLineImpl
 
 type MkLineImpl struct {
-	line.Line
+	Line
 	data interface{} // One of the following mkLine* types
 }
 type mkLineAssign struct {
@@ -90,10 +46,10 @@ type mkLineDependency struct {
 	sources string
 }
 
-func NewMkLine(line line.Line) (mkline *MkLineImpl) {
+func NewMkLine(line Line) (mkline *MkLineImpl) {
 	mkline = &MkLineImpl{Line: line}
 
-	text := line.Text()
+	text := line.Text
 
 	if hasPrefix(text, " ") {
 		mkline.Warnf("Makefile lines should not start with space characters.")
@@ -188,7 +144,7 @@ func NewMkLine(line line.Line) (mkline *MkLineImpl) {
 }
 
 func (mkline *MkLineImpl) String() string {
-	return fmt.Sprintf("%s:%s", mkline.Filename(), mkline.Linenos())
+	return fmt.Sprintf("%s:%s", mkline.Filename, mkline.Linenos())
 }
 func (mkline *MkLineImpl) IsVarassign() bool { _, ok := mkline.data.(mkLineAssign); return ok }
 func (mkline *MkLineImpl) IsShellcmd() bool  { _, ok := mkline.data.(mkLineShell); return ok }
@@ -226,6 +182,7 @@ func (mkline *MkLineImpl) Includefile() string { return mkline.data.(mkLineInclu
 func (mkline *MkLineImpl) Targets() string     { return mkline.data.(mkLineDependency).targets }
 func (mkline *MkLineImpl) Sources() string     { return mkline.data.(mkLineDependency).sources }
 
+// Initialized step by step, when parsing other lines
 func (mkline *MkLineImpl) ConditionVars() string { return mkline.data.(mkLineInclude).conditionVars }
 func (mkline *MkLineImpl) SetConditionVars(varnames string) {
 	include := mkline.data.(mkLineInclude)
@@ -238,7 +195,7 @@ func (mkline *MkLineImpl) Tokenize(s string) []*MkToken {
 		defer trace.Call(mkline, s)()
 	}
 
-	p := NewMkParser(mkline, s, true)
+	p := NewMkParser(mkline.Line, s, true)
 	tokens := p.MkTokens()
 	if p.Rest() != "" {
 		mkline.Warnf("Pkglint parse error in MkLine.Tokenize at %q.", p.Rest())
@@ -593,7 +550,7 @@ func (mkline *MkLineImpl) ExtractUsedVariables(text string) []string {
 }
 
 func (mkline *MkLineImpl) DetermineUsedVariables() (varnames []string) {
-	rest := mkline.Text()
+	rest := mkline.Text
 
 	if strings.HasPrefix(rest, "#") {
 		return

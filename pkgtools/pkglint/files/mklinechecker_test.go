@@ -243,7 +243,7 @@ func (s *Suite) Test_MkLineChecker_CheckVartype__CFLAGS_with_backticks(c *check.
 		"CFLAGS+=\t`pkg-config pidgin --cflags`")
 	mkline := G.Mk.mklines[1]
 
-	words, rest := splitIntoMkWords(mkline, mkline.Value())
+	words, rest := splitIntoMkWords(mkline.Line, mkline.Value())
 
 	c.Check(words, deepEquals, []string{"`pkg-config pidgin --cflags`"})
 	c.Check(rest, equals, "")
