@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.18 2014/08/17 16:28:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2018/01/01 22:29:16 rillig Exp $
 bin/gtar
 gnu/bin/tar
-gnu/man/man1/tar.1
 ${PLIST.rmt}gnu/libexec/rmt
+gnu/man/man1/tar.1
 ${PLIST.rmt}libexec/grmt
 man/man1/gtar.1
 share/locale/bg/LC_MESSAGES/tar.mo

@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.17 2016/01/28 15:51:34 prlw1 Exp $
-${PLIST.cgi}libexec/cgi-bin/upsstats.cgi
-${PLIST.cgi}libexec/cgi-bin/upsfstats.cgi
+@comment $NetBSD: PLIST,v 1.18 2018/01/01 22:29:55 rillig Exp $
 ${PLIST.cgi}libexec/cgi-bin/apcupsimage.cgi
 ${PLIST.cgi}libexec/cgi-bin/multimon.cgi
+${PLIST.cgi}libexec/cgi-bin/upsfstats.cgi
+${PLIST.cgi}libexec/cgi-bin/upsstats.cgi
 man/man5/apcupsd.conf.5
 man/man8/apcaccess.8
 man/man8/apccontrol.8

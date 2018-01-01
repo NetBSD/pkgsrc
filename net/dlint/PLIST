@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:16 zuntum Exp $
-bin/dlint
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:47 rillig Exp $
 bin/digparse
+bin/dlint
 man/man1/dlint.1

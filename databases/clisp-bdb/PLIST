@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/08 11:17:10 rodent Exp $
-lib/clisp/dynmod/bdb.lisp
-lib/clisp/dynmod/lib-bdb.so
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:21 rillig Exp $
 lib/clisp/berkeley-db/Makefile
 lib/clisp/berkeley-db/bdb.o
 lib/clisp/berkeley-db/dbi.fas
 lib/clisp/berkeley-db/dbi.lisp
 lib/clisp/berkeley-db/link.sh
 lib/clisp/berkeley-db/preload.lisp
+lib/clisp/dynmod/bdb.lisp
+lib/clisp/dynmod/lib-bdb.so

@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2015/09/28 16:59:51 richard Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:59 rillig Exp $
 bin/createfp
 include/libexttextcat/common.h
 include/libexttextcat/constants.h
 include/libexttextcat/exttextcat-version.h
 include/libexttextcat/fingerprint.h
-include/libexttextcat/textcat_properties.h
 include/libexttextcat/textcat.h
+include/libexttextcat/textcat_properties.h
 include/libexttextcat/utf8misc.h
 lib/libexttextcat-2.0.la
 lib/pkgconfig/libexttextcat.pc

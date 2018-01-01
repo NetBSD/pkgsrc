@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/27 13:38:18 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:42 rillig Exp $
 bin/thunderbird45
 lib/thunderbird45/application.ini
 lib/thunderbird45/blocklist.xml
@@ -640,11 +640,11 @@ lib/thunderbird45/chrome/devtools/modules/devtools/shared/worker/loader.js
 lib/thunderbird45/chrome/devtools/modules/devtools/shared/worker/worker.js
 ${PLIST.nobranding}lib/thunderbird45/chrome/en-US/locale/branding/brand.dtd
 ${PLIST.nobranding}lib/thunderbird45/chrome/en-US/locale/branding/brand.properties
-${PLIST.branding}lib/thunderbird45/chrome/en-US/locale/en-US/branding/brand.dtd
-${PLIST.branding}lib/thunderbird45/chrome/en-US/locale/en-US/branding/brand.properties
 lib/thunderbird45/chrome/en-US/locale/en-US/alerts/alert.dtd
 lib/thunderbird45/chrome/en-US/locale/en-US/alerts/alert.properties
 lib/thunderbird45/chrome/en-US/locale/en-US/autoconfig/autoconfig.properties
+${PLIST.branding}lib/thunderbird45/chrome/en-US/locale/en-US/branding/brand.dtd
+${PLIST.branding}lib/thunderbird45/chrome/en-US/locale/en-US/branding/brand.properties
 lib/thunderbird45/chrome/en-US/locale/en-US/chat/accounts.properties
 lib/thunderbird45/chrome/en-US/locale/en-US/chat/commands.properties
 lib/thunderbird45/chrome/en-US/locale/en-US/chat/contacts.properties

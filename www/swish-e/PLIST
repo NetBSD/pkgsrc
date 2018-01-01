@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 22:00:36 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/01/01 22:30:03 rillig Exp $
 bin/swish-config
 bin/swish-e
 bin/swish-filter-test
@@ -77,11 +77,11 @@ share/examples/swish-e/example7.config
 share/examples/swish-e/example8.config
 share/examples/swish-e/example9.config
 share/examples/swish-e/example9.pl
-share/examples/swish-e/filters/README
 share/examples/swish-e/filter-bin/README
 share/examples/swish-e/filter-bin/_binfilter.sh
 share/examples/swish-e/filter-bin/_pdf2html.pl
 share/examples/swish-e/filter-bin/swish_filter.pl
+share/examples/swish-e/filters/README
 share/examples/swish-e/prog-bin/MySQL.pl
 share/examples/swish-e/prog-bin/README
 share/examples/swish-e/prog-bin/SwishSpiderConfig.pl

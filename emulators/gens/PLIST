@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:27 rillig Exp $
 bin/gens
 share/doc/gens/gens.txt
+share/gens/2rightarrow.png
 share/gens/Gens2.ico
+share/gens/Modem.png
+share/gens/binary.png
 share/gens/bitmap1.png
 share/gens/bmp00000.png
 share/gens/bmp00001.png
@@ -10,19 +13,14 @@ share/gens/bmp00003.png
 share/gens/bmp00004.png
 share/gens/bmp00005.png
 share/gens/bmp00006.png
+share/gens/cdrom2_unmount.png
+share/gens/editcopy.png
+share/gens/file_text.png
+share/gens/filleclose.png
+share/gens/folder_slin_open.png
 share/gens/gens.ico
 share/gens/gens_big.bmp
 share/gens/gens_small.png
-share/gens/sonic.ico
-share/gens/sonic2.ico
-share/gens/file_text.png
-share/gens/2rightarrow.png
-share/gens/Modem.png
-share/gens/binary.png
-share/gens/cdrom2_unmount.png
-share/gens/editcopy.png
-share/gens/filleclose.png
-share/gens/folder_slin_open.png
 share/gens/history.png
 share/gens/kmix.png
 share/gens/ksysguard.png
@@ -32,6 +30,8 @@ share/gens/package_settings.png
 share/gens/password.png
 share/gens/reload.png
 share/gens/resource.png
+share/gens/sonic.ico
+share/gens/sonic2.ico
 share/gens/viewmag.png
 share/gens/viewmag1.png
 share/gens/xpaint.png

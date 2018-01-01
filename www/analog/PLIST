@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 22:00:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/01/01 22:30:02 rillig Exp $
 bin/analog
-share/examples/analog.cfg
 lib/analog/images/analogo.gif
 lib/analog/images/analogo.png
 lib/analog/images/bara1.gif
@@ -252,11 +251,11 @@ lib/analog/lang/ptdom.tab
 lib/analog/lang/ro.lng
 lib/analog/lang/rodom.tab
 lib/analog/lang/ru.lng
-lib/analog/lang/rudom.tab
 lib/analog/lang/ru1.lng
 lib/analog/lang/ru1desc.txt
 lib/analog/lang/ru1dom.tab
 lib/analog/lang/rudesc.txt
+lib/analog/lang/rudom.tab
 lib/analog/lang/ruform.html
 lib/analog/lang/se.lng
 lib/analog/lang/se2.lng
@@ -369,3 +368,4 @@ share/doc/analog/wasnew4.html
 share/doc/analog/wasnew5.html
 share/doc/analog/webworks.html
 share/doc/analog/whatsnew.html
+share/examples/analog.cfg

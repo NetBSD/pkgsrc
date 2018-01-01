@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:17 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:37 rillig Exp $
 include/guile-cairo/guile-cairo-enum-types.h
 include/guile-cairo/guile-cairo-smob-types.h
 include/guile-cairo/guile-cairo-vector-types.h
 include/guile-cairo/guile-cairo.h
+info/guile-cairo.info
 lib/libguile-cairo.la
 lib/pkgconfig/guile-cairo.pc
 share/guile/site/cairo.scm
 share/guile/site/cairo/cairo-procedures.txt
 share/guile/site/cairo/config.scm
 share/guile/site/cairo/vector-types.scm
-info/guile-cairo.info
