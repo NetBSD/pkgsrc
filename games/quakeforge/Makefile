@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/04/25 14:23:03 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2018/01/01 23:47:44 rillig Exp $
 
 DISTNAME=		quakeforge-0.5.5
 PKGREVISION=		15
@@ -9,7 +9,7 @@ MAINTAINER=		snj@NetBSD.org
 HOMEPAGE=		http://www.quakeforge.net/
 COMMENT=		Improved Quake engine
 
-CONFIGURE_ARGS+=	--with-cpp="${CPP} %d %i %o"
+CONFIGURE_ARGS+=	--with-cpp=${CPP:Q}" %d %i %o"
 CONFIGURE_ARGS+=	--disable-ogg
 CONFIGURE_ARGS+=	--disable-xmms
 GNU_CONFIGURE=		YES
