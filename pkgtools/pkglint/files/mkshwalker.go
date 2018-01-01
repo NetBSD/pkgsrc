@@ -3,6 +3,8 @@ package main
 type MkShWalker struct {
 }
 
+// Walk calls the given callback for each node of the parsed shell program.
+// See the types in mkshtypes.go for possible node types.
 func (w *MkShWalker) Walk(list *MkShList, callback func(node interface{})) {
 	for element := range w.iterate(list) {
 		callback(element)

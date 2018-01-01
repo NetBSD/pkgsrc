@@ -70,7 +70,7 @@ func (s *Suite) Test_show_autofix(c *check.C) {
 	}
 	SaveAutofixChanges(lines)
 
-	c.Check(lines[1].(*LineImpl).raw[0].textnl, equals, "XXXXX\n")
+	c.Check(lines[1].raw[0].textnl, equals, "XXXXX\n")
 	c.Check(s.LoadTmpFile("Makefile"), equals, "line1\nline2\nline3\n")
 	s.CheckOutputLines(
 		"WARN: ~/Makefile:2: Something's wrong here.",
@@ -92,6 +92,32 @@ func (s *Suite) Test_autofix(c *check.C) {
 	SaveAutofixChanges(lines)
 
 	c.Check(s.LoadTmpFile("Makefile"), equals, "line1\nXXXXX\nline3\n")
+	s.CheckOutputLines(
+		"AUTOFIX: ~/Makefile:2: Replacing regular expression \".\" with \"X\".",
+		"AUTOFIX: ~/Makefile: Has been auto-fixed. Please re-run pkglint.")
+}
+
+func (s *Suite) Test_autofix_MkLines(c *check.C) {
+	s.Init(c)
+	s.UseCommandLine("--autofix")
+	fname := s.CreateTmpFile("Makefile", ""+
+		"line1 := value1\n"+
+		"line2 := value2\n"+
+		"line3 := value3\n")
+	pkg := NewPackage("category/basename")
+	G.Pkg = pkg
+	mklines := pkg.loadPackageMakefile(fname)
+	G.Pkg = nil
+
+	if !mklines.mklines[1].AutofixReplaceRegexp(`.`, "X") {
+		mklines.mklines[1].Warnf("Something's wrong here.") // Prints the autofix NOTE afterwards
+	}
+	SaveAutofixChanges(mklines.lines)
+
+	c.Check(s.LoadTmpFile("Makefile"), equals, ""+
+		"line1 := value1\n"+
+		"XXXXXXXXXXXXXXX\n"+
+		"line3 := value3\n")
 	s.CheckOutputLines(
 		"AUTOFIX: ~/Makefile:2: Replacing regular expression \".\" with \"X\".",
 		"AUTOFIX: ~/Makefile: Has been auto-fixed. Please re-run pkglint.")

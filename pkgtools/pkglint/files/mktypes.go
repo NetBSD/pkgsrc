@@ -1,9 +1,13 @@
 package main
 
+// Example (3 tokens): /usr/share/${PKGNAME}/data
 type MkToken struct {
 	Text   string // Used for both literals and varuses.
 	Varuse *MkVarUse
 }
+
+// Example: ${PKGNAME}
+// Example: ${PKGNAME:S/from/to/}
 type MkVarUse struct {
 	varname   string
 	modifiers []string // E.g. "Q", "S/from/to/"
