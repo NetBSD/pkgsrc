@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2018/01/01 18:16:36 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2018/01/01 21:18:21 adam Exp $
 
 DISTNAME=	libftdi1-1.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 MASTER_SITES=	https://www.intra2net.com/en/developer/libftdi/download/
 EXTRACT_SUFX=	.tar.bz2

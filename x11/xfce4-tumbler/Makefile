@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/12/08 08:53:00 maya Exp $
+# $NetBSD: Makefile,v 1.34 2018/01/01 21:18:57 adam Exp $
 #
 #
 
@@ -7,7 +7,7 @@
 VERSION=	0.1.32
 DISTNAME=	tumbler-${VERSION}
 PKGNAME=	xfce4-tumbler-${VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	http://archive.xfce.org/src/xfce/tumbler/0.1/
 

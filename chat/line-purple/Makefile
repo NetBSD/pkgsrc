@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/11/07 17:15:16 scole Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/01 21:18:17 adam Exp $
 
 VERSION=	0.1
 PKGNAME=	line-purple-${VERSION}
+PKGREVISION=	1
 
 CATEGORIES=	chat
 
