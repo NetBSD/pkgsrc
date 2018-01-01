@@ -1,15 +1,15 @@
-$NetBSD: patch-lib_include_vm__basic__types.h,v 1.1 2017/07/02 09:17:56 taca Exp $
+$NetBSD: patch-lib_include_vm__basic__types.h,v 1.2 2018/01/01 06:56:01 ryoon Exp $
 
 Fix build on NetBSD 6.
 
---- lib/include/vm_basic_types.h.orig	2017-02-11 10:06:44.000000000 +0000
+--- lib/include/vm_basic_types.h.orig	2017-12-15 19:09:51.000000000 +0000
 +++ lib/include/vm_basic_types.h
-@@ -79,7 +79,7 @@
- 
+@@ -80,7 +80,7 @@
  /* STRICT ANSI means the Xserver build and X defines Bool differently. */
  #if !defined(_XTYPEDEF_BOOL) && \
--    (!defined(__STRICT_ANSI__) || defined(__FreeBSD__) || defined(__MINGW32__))
-+    (!defined(__STRICT_ANSI__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__MINGW32__))
+     (!defined(__STRICT_ANSI__) || defined(__FreeBSD__) || \
+-      defined(__MINGW32__) || defined(__APPLE__))
++      defined(__MINGW32__) || defined(__APPLE__) || defined(__NetBSD__))
  #define _XTYPEDEF_BOOL
  typedef char           Bool;
  #endif
