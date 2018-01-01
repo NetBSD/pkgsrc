@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_include_sigPosixRegs.h,v 1.1 2016/10/09 03:41:56 ryoon Exp $
+$NetBSD: patch-lib_include_sigPosixRegs.h,v 1.2 2018/01/01 06:56:01 ryoon Exp $
 
---- lib/include/sigPosixRegs.h.orig	2016-02-16 20:06:46.000000000 +0000
+--- lib/include/sigPosixRegs.h.orig	2017-12-15 19:09:51.000000000 +0000
 +++ lib/include/sigPosixRegs.h
-@@ -224,6 +224,36 @@
+@@ -230,6 +230,36 @@ extern "C" {
  #define SC_ESP(uc) ((unsigned long) (uc)->uc_mcontext.gregs[ESP])
  #define SC_EIP(uc) ((unsigned long) (uc)->uc_mcontext.gregs[EIP])
  #endif
@@ -37,5 +37,5 @@ $NetBSD: patch-lib_include_sigPosixRegs.h,v 1.1 2016/10/09 03:41:56 ryoon Exp $
 +#define SC_EIP(uc) ((unsigned long) (uc)->uc_mcontext.__gregs[_REG_EIP])
 +#endif
  #elif defined(ANDROID_X86)
- #define SC_EAX(uc) ((unsigned long) (uc)->uc_mcontext.eax)
- #define SC_EBX(uc) ((unsigned long) (uc)->uc_mcontext.ebx)
+ #define SC_EAX(uc) ((unsigned long) (uc)->uc_mcontext.gregs[REG_EAX])
+ #define SC_EBX(uc) ((unsigned long) (uc)->uc_mcontext.gregs[REG_EBX])
