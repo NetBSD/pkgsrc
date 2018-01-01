@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17977 2018/01/01 10:28:15 wiz Exp $
+$NetBSD: TODO,v 1.17978 2018/01/01 20:38:00 adam Exp $
 
 Suggested new packages
 ======================
@@ -456,7 +456,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bochs-2.6.9
 	o boehm-gc-7.6.2
 	o boolean-7.1
-	o boost-1.66.0
 	o bos-2.5
 	o boson-0.13
 	o bottlerocket-0.05b3
@@ -947,7 +946,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o leafpad-0.8.18.1
 	o lgeneral-1.3.1
 	o libarchive-3.3.2
-	o libatomic_ops-7.6.2
 	o libbpg-0.9.6
 	o libburn-1.4.0
 	o libcaca-0.99.19
