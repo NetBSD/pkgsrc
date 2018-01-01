@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2015/09/08 18:52:56 joerg Exp $
+# $NetBSD: Makefile,v 1.53 2018/01/01 18:16:36 rillig Exp $
 
 DISTNAME=	gif2png-2.5.11
 PKGREVISION=	1
@@ -18,7 +18,7 @@ INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 post-install:
-	${MV} ${DESTDIR}$(PREFIX)/share/man/man1/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/application.mk"
