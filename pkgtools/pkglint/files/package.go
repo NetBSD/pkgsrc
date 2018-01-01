@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"netbsd.org/pkglint/line"
 	"netbsd.org/pkglint/pkgver"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
@@ -27,13 +26,13 @@ type Package struct {
 	EffectivePkgnameLine MkLine // The origin of the three effective_* values
 	SeenBsdPrefsMk       bool   // Has bsd.prefs.mk already been included?
 
-	vardef                map[string]MkLine    // (varname, varcanon) => line
-	varuse                map[string]MkLine    // (varname, varcanon) => line
-	bl3                   map[string]line.Line // buildlink3.mk name => line; contains only buildlink3.mk files that are directly included.
-	plistSubstCond        map[string]bool      // varname => true; list of all variables that are used as conditionals (@comment or nothing) in PLISTs.
-	included              map[string]line.Line // fname => line
-	seenMakefileCommon    bool                 // Does the package have any .includes?
-	loadTimeTools         map[string]bool      // true=ok, false=not ok, absent=not mentioned in USE_TOOLS.
+	vardef                map[string]MkLine // (varname, varcanon) => line
+	varuse                map[string]MkLine // (varname, varcanon) => line
+	bl3                   map[string]Line   // buildlink3.mk name => line; contains only buildlink3.mk files that are directly included.
+	plistSubstCond        map[string]bool   // varname => true; list of all variables that are used as conditionals (@comment or nothing) in PLISTs.
+	included              map[string]Line   // fname => line
+	seenMakefileCommon    bool              // Does the package have any .includes?
+	loadTimeTools         map[string]bool   // true=ok, false=not ok, absent=not mentioned in USE_TOOLS.
 	conditionalIncludes   map[string]MkLine
 	unconditionalIncludes map[string]MkLine
 }
@@ -43,9 +42,9 @@ func NewPackage(pkgpath string) *Package {
 		Pkgpath:               pkgpath,
 		vardef:                make(map[string]MkLine),
 		varuse:                make(map[string]MkLine),
-		bl3:                   make(map[string]line.Line),
+		bl3:                   make(map[string]Line),
 		plistSubstCond:        make(map[string]bool),
-		included:              make(map[string]line.Line),
+		included:              make(map[string]Line),
 		loadTimeTools:         make(map[string]bool),
 		conditionalIncludes:   make(map[string]MkLine),
 		unconditionalIncludes: make(map[string]MkLine),
@@ -111,7 +110,7 @@ func (pkg *Package) checkPossibleDowngrade() {
 	if change.Action == "Updated" {
 		changeVersion := regex.Compile(`nb\d+$`).ReplaceAllString(change.Version, "")
 		if pkgver.Compare(pkgversion, changeVersion) < 0 {
-			mkline.Warnf("The package is being downgraded from %s (see %s) to %s", change.Version, change.Line.ReferenceFrom(mkline), pkgversion)
+			mkline.Warnf("The package is being downgraded from %s (see %s) to %s", change.Version, change.Line.ReferenceFrom(mkline.Line), pkgversion)
 			Explain(
 				"The files in doc/CHANGES-*, in which all version changes are",
 				"recorded, have a higher version number than what the package says.",
@@ -280,10 +279,10 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 
 		if isMainMakefile {
 			mainLines.mklines = append(mainLines.mklines, mkline)
-			mainLines.lines = append(mainLines.lines, mkline)
+			mainLines.lines = append(mainLines.lines, mkline.Line)
 		}
 		allLines.mklines = append(allLines.mklines, mkline)
-		allLines.lines = append(allLines.lines, mkline)
+		allLines.lines = append(allLines.lines, mkline.Line)
 
 		var includeFile, incDir, incBase string
 		if mkline.IsInclude() {
@@ -301,7 +300,7 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 		if includeFile != "" {
 			if path.Base(fname) != "buildlink3.mk" {
 				if m, bl3File := match1(includeFile, `^\.\./\.\./(.*)/buildlink3\.mk$`); m {
-					G.Pkg.bl3[bl3File] = mkline
+					G.Pkg.bl3[bl3File] = mkline.Line
 					if trace.Tracing {
 						trace.Step1("Buildlink3 file in package: %q", bl3File)
 					}
@@ -310,7 +309,7 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 		}
 
 		if includeFile != "" && G.Pkg.included[includeFile] == nil {
-			G.Pkg.included[includeFile] = mkline
+			G.Pkg.included[includeFile] = mkline.Line
 
 			if matches(includeFile, `^\.\./[^./][^/]*/[^/]+`) {
 				mkline.Warnf("References to other packages should look like \"../../category/package\", not \"../package\".")
@@ -396,7 +395,7 @@ func (pkg *Package) checkfilePackageMakefile(fname string, mklines *MkLines) {
 	}
 
 	if perlLine, noconfLine := vardef["REPLACE_PERL"], vardef["NO_CONFIGURE"]; perlLine != nil && noconfLine != nil {
-		perlLine.Warnf("REPLACE_PERL is ignored when NO_CONFIGURE is set (in %s)", noconfLine.ReferenceFrom(perlLine))
+		perlLine.Warnf("REPLACE_PERL is ignored when NO_CONFIGURE is set (in %s)", noconfLine.ReferenceFrom(perlLine.Line))
 	}
 
 	if vardef["LICENSE"] == nil && vardef["META_PACKAGE"] == nil {
@@ -411,7 +410,7 @@ func (pkg *Package) checkfilePackageMakefile(fname string, mklines *MkLines) {
 
 		} else if !matches(useLine.Value(), `(?:^|\s+)(?:c|c99|objc)(?:\s+|$)`) {
 			gnuLine.Warnf("GNU_CONFIGURE almost always needs a C compiler, but \"c\" is not added to USE_LANGUAGES in %s.",
-				useLine.ReferenceFrom(gnuLine))
+				useLine.ReferenceFrom(gnuLine.Line))
 		}
 	}
 
@@ -423,8 +422,8 @@ func (pkg *Package) checkfilePackageMakefile(fname string, mklines *MkLines) {
 	}
 
 	if imake, x11 := vardef["USE_IMAKE"], vardef["USE_X11"]; imake != nil && x11 != nil {
-		if !hasSuffix(x11.Filename(), "/mk/x11.buildlink3.mk") {
-			imake.Notef("USE_IMAKE makes USE_X11 in %s superfluous.", x11.ReferenceFrom(imake))
+		if !hasSuffix(x11.Filename, "/mk/x11.buildlink3.mk") {
+			imake.Notef("USE_IMAKE makes USE_X11 in %s superfluous.", x11.ReferenceFrom(imake.Line))
 		}
 	}
 
@@ -694,7 +693,7 @@ func (pkg *Package) ChecklinesPackageMakefileVarorder(mklines *MkLines) {
 	for lineno < len(mklines.lines) {
 		mkline := mklines.mklines[lineno]
 		line := mklines.lines[lineno]
-		text := line.Text()
+		text := line.Text
 
 		if trace.Tracing {
 			trace.Stepf("[varorder] section %d variable %d vars %v", sectindex, varindex, vars)
@@ -786,13 +785,13 @@ func (mklines *MkLines) checkForUsedComment(relativeName string) {
 
 	expected := "# used by " + relativeName
 	for _, line := range lines {
-		if line.Text() == expected {
+		if line.Text == expected {
 			return
 		}
 	}
 
 	i := 0
-	for i < 2 && hasPrefix(lines[i].Text(), "#") {
+	for i < 2 && hasPrefix(lines[i].Text, "#") {
 		i++
 	}
 
@@ -863,20 +862,20 @@ func (pkg *Package) CheckInclude(mkline MkLine, indentation *Indentation) {
 		mkline.SetConditionVars(conditionVars)
 	}
 
-	if path.Dir(abspath(mkline.Filename())) == abspath(G.CurrentDir) {
+	if path.Dir(abspath(mkline.Filename)) == abspath(G.CurrentDir) {
 		includefile := mkline.Includefile()
 
 		if indentation.IsConditional() {
 			pkg.conditionalIncludes[includefile] = mkline
 			if other := pkg.unconditionalIncludes[includefile]; other != nil {
 				mkline.Warnf("%q is included conditionally here (depending on %s) and unconditionally in %s.",
-					cleanpath(includefile), mkline.ConditionVars(), other.ReferenceFrom(mkline))
+					cleanpath(includefile), mkline.ConditionVars(), other.ReferenceFrom(mkline.Line))
 			}
 		} else {
 			pkg.unconditionalIncludes[includefile] = mkline
 			if other := pkg.conditionalIncludes[includefile]; other != nil {
 				mkline.Warnf("%q is included unconditionally here and conditionally in %s (depending on %s).",
-					cleanpath(includefile), other.ReferenceFrom(mkline), other.ConditionVars())
+					cleanpath(includefile), other.ReferenceFrom(mkline.Line), other.ConditionVars())
 			}
 		}
 	}
