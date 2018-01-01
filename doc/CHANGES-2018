@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.9 2018/01/01 10:28:14 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.10 2018/01/01 11:57:37 roy Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -30,3 +30,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed www/ap22-limitipconn [wiz 2018-01-01]
 	Removed www/ap22-vhost-ldap [wiz 2018-01-01]
 	Updated net/syncthing to 0.14.42 [wiz 2018-01-01]
+	Updated net/dhcpcd to 7.0.0 [roy 2018-01-01]
