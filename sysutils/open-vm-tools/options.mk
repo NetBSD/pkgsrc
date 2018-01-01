@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2017/10/08 16:01:30 adam Exp $
+# $NetBSD: options.mk,v 1.7 2018/01/01 06:56:01 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.open-vm-tools
 PKG_SUPPORTED_OPTIONS=	icu x11
@@ -19,7 +19,7 @@ PLIST.x11=	yes
 MESSAGE_SRC+=	MESSAGE.x11
 .  include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
 .  include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.  include "../../x11/gtkmm/buildlink3.mk"
+.  include "../../x11/gtkmm3/buildlink3.mk"
 .  include "../../x11/libXtst/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=		--without-x

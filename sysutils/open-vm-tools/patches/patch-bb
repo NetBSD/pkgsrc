@@ -1,6 +1,6 @@
-$NetBSD: patch-bb,v 1.3 2016/10/09 03:41:56 ryoon Exp $
+$NetBSD: patch-bb,v 1.4 2018/01/01 06:56:01 ryoon Exp $
 
---- lib/misc/idLinux.c.orig	2016-02-16 20:06:46.000000000 +0000
+--- lib/misc/idLinux.c.orig	2017-12-15 19:09:51.000000000 +0000
 +++ lib/misc/idLinux.c
 @@ -119,7 +119,7 @@ static AuthorizationRef IdAuthCreateWith
  int
@@ -9,7 +9,7 @@ $NetBSD: patch-bb,v 1.3 2016/10/09 03:41:56 ryoon Exp $
 -#if defined(__FreeBSD__) || defined(sun)
 +#if defined(__FreeBSD__) || defined(sun) || defined(__NetBSD__)
     return setuid(euid);
- #elif defined(linux) || defined __ANDROID__
+ #elif defined(__linux__) || defined __ANDROID__
     if (uid32) {
 @@ -162,7 +162,7 @@ Id_SetGid(gid_t egid)		// IN: new egid
     Warning("XXXMACOS: implement %s\n", __func__);

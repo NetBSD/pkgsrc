@@ -1,8 +1,8 @@
-$NetBSD: patch-configure.ac,v 1.3 2016/11/21 00:14:16 pho Exp $
+$NetBSD: patch-configure.ac,v 1.4 2018/01/01 06:56:01 ryoon Exp $
 
---- configure.ac.orig	2016-02-16 20:06:45.000000000 +0000
+--- configure.ac.orig	2017-12-15 19:09:51.000000000 +0000
 +++ configure.ac
-@@ -136,6 +136,9 @@ case "$host_os" in
+@@ -126,6 +126,9 @@ case "$host_os" in
     [solaris*])
        os="solaris"
        ;;
@@ -12,7 +12,7 @@ $NetBSD: patch-configure.ac,v 1.3 2016/11/21 00:14:16 pho Exp $
     [*])
        AC_MSG_WARN([This is an untested and unsupported Operating System. Proceed at your own peril.])
        ;;
-@@ -374,7 +377,7 @@ AC_VMW_CHECK_LIB([fuse],
+@@ -470,7 +473,7 @@ AC_VMW_CHECK_LIB([fuse],
                   [],
                   [],
                   [fuse.h],
@@ -21,8 +21,8 @@ $NetBSD: patch-configure.ac,v 1.3 2016/11/21 00:14:16 pho Exp $
                   [have_fuse=yes],
                   [have_fuse=no;
                    AC_MSG_WARN([Fuse is missing, vmblock-fuse/vmhgfs-fuse will be disabled.])])
-@@ -1064,6 +1067,15 @@ if test "$os" = "linux"; then
-    buildHgfsmounter=yes
+@@ -1263,6 +1266,15 @@ if test "$os" = "linux"; then
+    fi
  fi
  
 +if test "$os" = "netbsd"; then
@@ -37,7 +37,7 @@ $NetBSD: patch-configure.ac,v 1.3 2016/11/21 00:14:16 pho Exp $
  if test "$os" = "freebsd" || test "$os" = "kfreebsd-gnu"; then
     LIBVMTOOLS_LIBADD="$LIBVMTOOLS_LIBADD -lkvm"
     MODULES_DIR="/boot/modules"
-@@ -1132,6 +1144,7 @@ fi
+@@ -1360,6 +1372,7 @@ fi
  AM_CONDITIONAL(BUILD_HGFSMOUNTER, test "$buildHgfsmounter" = "yes")
  AM_CONDITIONAL(LINUX, test "$os" = "linux")
  AM_CONDITIONAL(SOLARIS, test "$os" = "solaris")

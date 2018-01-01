@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_include_vmblock__user.h,v 1.1 2016/10/09 03:41:56 ryoon Exp $
+$NetBSD: patch-lib_include_vmblock__user.h,v 1.2 2018/01/01 06:56:01 ryoon Exp $
 
---- lib/include/vmblock_user.h.orig	2016-02-16 20:06:46.000000000 +0000
+--- lib/include/vmblock_user.h.orig	2017-12-15 19:09:51.000000000 +0000
 +++ lib/include/vmblock_user.h
-@@ -68,6 +68,10 @@
- #include "vm_basic_types.h"
- #include "vmblock.h"
+@@ -72,6 +72,10 @@
+ extern "C" {
+ #endif
  
 +#if defined(__NetBSD__)
 +#include <sys/ioctl.h>
@@ -13,7 +13,7 @@ $NetBSD: patch-lib_include_vmblock__user.h,v 1.1 2016/10/09 03:41:56 ryoon Exp $
  static INLINE int
  VMBLOCK_CONTROL_FUSE(int fd,            // IN
                       char op,           // IN
-@@ -125,7 +129,7 @@ VMBLOCK_CONTROL(int fd, int op, const ch
+@@ -129,7 +133,7 @@ VMBLOCK_CONTROL(int fd, int op, const ch
     return write(fd, path, op);
  }
  
