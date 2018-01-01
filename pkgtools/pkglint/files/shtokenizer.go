@@ -1,7 +1,6 @@
 package main
 
 import (
-	"netbsd.org/pkglint/line"
 	"netbsd.org/pkglint/textproc"
 )
 
@@ -10,7 +9,7 @@ type ShTokenizer struct {
 	mkp    *MkParser
 }
 
-func NewShTokenizer(line line.Line, text string, emitWarnings bool) *ShTokenizer {
+func NewShTokenizer(line Line, text string, emitWarnings bool) *ShTokenizer {
 	p := NewParser(line, text, emitWarnings)
 	mkp := &MkParser{p}
 	return &ShTokenizer{p, mkp}
