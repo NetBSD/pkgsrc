@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/26 23:27:37 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:57 rillig Exp $
 bin/mesure
-share/doc/mesure/mesure.txt
 man/man1/mesure.1
+share/doc/mesure/mesure.txt

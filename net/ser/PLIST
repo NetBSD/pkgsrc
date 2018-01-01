@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/12/25 02:50:27 obache Exp $
-sbin/ser
-sbin/serctl
-sbin/ser_mysql.sh
-sbin/gen_ha1
-share/examples/ser/ser.cfg
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:49 rillig Exp $
 lib/ser/modules/acc.so
 lib/ser/modules/auth.so
 lib/ser/modules/auth_db.so
@@ -35,11 +30,17 @@ lib/ser/modules/uri.so
 lib/ser/modules/usrloc.so
 lib/ser/modules/vm.so
 lib/ser/modules/xlog.so
+man/man5/ser.cfg.5
+man/man8/ser.8
+sbin/gen_ha1
+sbin/ser
+sbin/ser_mysql.sh
+sbin/serctl
+share/doc/ser/AUTHORS
+share/doc/ser/INSTALL
 share/doc/ser/NEWS
 share/doc/ser/README
-share/doc/ser/INSTALL
 share/doc/ser/README-MODULES
-share/doc/ser/AUTHORS
 share/doc/ser/README.acc
 share/doc/ser/README.auth
 share/doc/ser/README.auth_db
@@ -51,8 +52,8 @@ share/doc/ser/README.exec
 share/doc/ser/README.ext
 share/doc/ser/README.group
 share/doc/ser/README.mangler
-share/doc/ser/README.mediaproxy
 share/doc/ser/README.maxfwd
+share/doc/ser/README.mediaproxy
 share/doc/ser/README.msilo
 share/doc/ser/README.nathelper
 share/doc/ser/README.pa
@@ -70,5 +71,4 @@ share/doc/ser/README.uri
 share/doc/ser/README.usrloc
 share/doc/ser/README.vm
 share/doc/ser/README.xlog
-man/man8/ser.8
-man/man5/ser.cfg.5
+share/examples/ser/ser.cfg

@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:59 rillig Exp $
 bin/bzip.xnc
 bin/groups.xnc
 bin/gzip.xnc
-bin/ives
 bin/iedit
+bin/ives
 bin/iview
 bin/rpm.xnc
 bin/users.xnc
@@ -11,9 +11,9 @@ bin/view.xnc
 bin/xjpegroot
 bin/xnc
 bin/xnc-en
-bin/xncsetup-en
 bin/xncloader
 bin/xncsetup
+bin/xncsetup-en
 bin/xnlaunch
 bin/zips.xnc
 lib/xnc/libxncaqua.so
@@ -45,5 +45,5 @@ share/locale/ro/LC_MESSAGES/xnc.mo
 share/locale/ru/LC_MESSAGES/xnc.mo
 share/locale/sp/LC_MESSAGES/xnc.mo
 share/locale/sr/LC_MESSAGES/xnc.mo
-share/pixmaps/xnc.xpm
 share/pixmaps/xnc.png
+share/pixmaps/xnc.xpm

@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2014/06/01 16:35:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:29 rillig Exp $
+share/doc/arphic-ttf/ARPHICPL.TXT
+share/doc/arphic-ttf/logo.gif
+share/doc/arphic-ttf/release.txt
 share/fonts/X11/TTF/bkai00mp.ttf
 share/fonts/X11/TTF/bsmi00lp.ttf
 share/fonts/X11/TTF/gbsn00lp.ttf
 share/fonts/X11/TTF/gkai00mp.ttf
-share/doc/arphic-ttf/ARPHICPL.TXT
-share/doc/arphic-ttf/logo.gif
-share/doc/arphic-ttf/release.txt

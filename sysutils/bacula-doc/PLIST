@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2012/10/20 13:39:38 christos Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/01/01 22:29:55 rillig Exp $
 share/doc/bacula/console/About_this_document.html
 share/doc/bacula/console/Bacula_Console.html
 share/doc/bacula/console/Bacula_Console_Operators_Gu.html
@@ -118,6 +118,7 @@ share/doc/bacula/developers/img2.png
 share/doc/bacula/developers/img3.png
 share/doc/bacula/developers/img4.png
 share/doc/bacula/developers/img5.png
+share/doc/bacula/developers/img6.png
 share/doc/bacula/developers/index.html
 share/doc/bacula/developers/index.png
 share/doc/bacula/developers/loadPlugin.html
@@ -127,7 +128,6 @@ share/doc/bacula/developers/prev.png
 share/doc/bacula/developers/prev_g.png
 share/doc/bacula/developers/up.png
 share/doc/bacula/developers/up_g.png
-share/doc/bacula/developers/img6.png
 share/doc/bacula/main/ANSI_IBM_Tape_Labels.html
 share/doc/bacula/main/About_this_document.html
 share/doc/bacula/main/Autochanger_Resource.html

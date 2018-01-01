@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:51:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:27 rillig Exp $
 bin/pcemu
+lib/pcemu/C/config.sys
+lib/pcemu/C/dumpdisk.exe
+lib/pcemu/C/emufs.sys
+lib/pcemu/C/lredir.exe
+lib/pcemu/C/vga50.com
+lib/pcemu/DriveA
 lib/pcemu/doc/BUGS
 lib/pcemu/doc/CHANGES
 lib/pcemu/doc/README
-lib/pcemu/doc/TODO
 lib/pcemu/doc/README.BSD
+lib/pcemu/doc/TODO
 lib/pcemu/doc/lredir.readme
 lib/pcemu/doc/report.ps.gz
 lib/pcemu/font/vga.pcf.Z
-lib/pcemu/C/vga50.com
-lib/pcemu/C/config.sys
-lib/pcemu/C/dumpdisk.exe
-lib/pcemu/C/lredir.exe
-lib/pcemu/C/emufs.sys
-lib/pcemu/DriveA

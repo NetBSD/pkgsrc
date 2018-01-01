@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.88 2015/12/30 10:15:07 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.89 2018/01/01 22:30:04 rillig Exp $
 bin/gtk-builder-convert
 bin/gtk-demo
 bin/gtk-query-immodules-2.0
@@ -292,9 +292,9 @@ ${PLIST.x11}lib/libgtk-x11-2.0.la
 lib/pkgconfig/gail.pc
 lib/pkgconfig/gdk-2.0.pc
 ${PLIST.quartz}lib/pkgconfig/gdk-quartz-2.0.pc
-${PLIST.quartz}lib/pkgconfig/gtk+-quartz-2.0.pc
 ${PLIST.x11}lib/pkgconfig/gdk-x11-2.0.pc
 lib/pkgconfig/gtk+-2.0.pc
+${PLIST.quartz}lib/pkgconfig/gtk+-quartz-2.0.pc
 lib/pkgconfig/gtk+-unix-print-2.0.pc
 ${PLIST.x11}lib/pkgconfig/gtk+-x11-2.0.pc
 libdata/gtk-2.0/im-multipress.conf

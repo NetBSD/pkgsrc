@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:57 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:25 rillig Exp $
+libdata/libwhisker2/LW2.pm
 share/doc/libwhisker2/FAQ.txt
-share/doc/libwhisker2/TESTED.txt
-share/doc/libwhisker2/cookies.txt
 share/doc/libwhisker2/KNOWNBUGS
 share/doc/libwhisker2/README
+share/doc/libwhisker2/TESTED.txt
+share/doc/libwhisker2/cookies.txt
 share/doc/libwhisker2/crawler.txt
 share/doc/libwhisker2/forms_walkthrough.txt
 share/doc/libwhisker2/logo-builton.gif
@@ -16,4 +17,3 @@ share/examples/libwhisker2/form_demo1.pl
 share/examples/libwhisker2/form_demo2.pl
 share/examples/libwhisker2/prox.pl
 share/examples/libwhisker2/simple_demo.pl
-libdata/libwhisker2/LW2.pm

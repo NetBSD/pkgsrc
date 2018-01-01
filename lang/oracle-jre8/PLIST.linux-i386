@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.7 2017/11/28 05:15:27 ryoon Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.8 2018/01/01 22:29:39 rillig Exp $
 bin/oracle8-java
 bin/oracle8-javaws
 bin/oracle8-keytool
@@ -30,15 +30,6 @@ java/oracle-8/bin/rmiregistry
 java/oracle-8/bin/servertool
 java/oracle-8/bin/tnameserv
 java/oracle-8/bin/unpack200
-${PLIST.native}java/oracle-8/lib/i386/jli/libX11.so.6
-${PLIST.native}java/oracle-8/lib/i386/libasound.so.2
-${PLIST.native}java/oracle-8/lib/i386/libodbcinst.so
-${PLIST.native}java/oracle-8/lib/i386/libodbc.so
-${PLIST.native}java/oracle-8/lib/i386/libX11.so.6
-${PLIST.native}java/oracle-8/lib/i386/libXext.so.6
-${PLIST.native}java/oracle-8/lib/i386/libXi.so.6
-${PLIST.native}java/oracle-8/lib/i386/libXt.so.6
-${PLIST.native}java/oracle-8/lib/i386/libXtst.so.6
 java/oracle-8/lib/calendars.properties.default
 java/oracle-8/lib/charsets.jar
 java/oracle-8/lib/classlist
@@ -162,8 +153,15 @@ java/oracle-8/lib/hijrah-config-umalqura.properties.default
 java/oracle-8/lib/i386/client/Xusage.txt
 java/oracle-8/lib/i386/client/libjsig.so
 java/oracle-8/lib/i386/client/libjvm.so
+${PLIST.native}java/oracle-8/lib/i386/jli/libX11.so.6
 java/oracle-8/lib/i386/jli/libjli.so
 java/oracle-8/lib/i386/jvm.cfg.default
+${PLIST.native}java/oracle-8/lib/i386/libX11.so.6
+${PLIST.native}java/oracle-8/lib/i386/libXext.so.6
+${PLIST.native}java/oracle-8/lib/i386/libXi.so.6
+${PLIST.native}java/oracle-8/lib/i386/libXt.so.6
+${PLIST.native}java/oracle-8/lib/i386/libXtst.so.6
+${PLIST.native}java/oracle-8/lib/i386/libasound.so.2
 java/oracle-8/lib/i386/libavplugin-53.so
 java/oracle-8/lib/i386/libavplugin-54.so
 java/oracle-8/lib/i386/libavplugin-55.so
@@ -212,6 +210,8 @@ java/oracle-8/lib/i386/libnet.so
 java/oracle-8/lib/i386/libnio.so
 java/oracle-8/lib/i386/libnpjp2.so
 java/oracle-8/lib/i386/libnpt.so
+${PLIST.native}java/oracle-8/lib/i386/libodbc.so
+${PLIST.native}java/oracle-8/lib/i386/libodbcinst.so
 java/oracle-8/lib/i386/libprism_common.so
 java/oracle-8/lib/i386/libprism_es2.so
 java/oracle-8/lib/i386/libprism_sw.so
@@ -289,10 +289,10 @@ java/oracle-8/lib/security/java.policy
 java/oracle-8/lib/security/java.security.default
 java/oracle-8/lib/security/javaws.policy
 ${PLIST.jce}java/oracle-8/lib/security/local_policy.jar
-java/oracle-8/lib/security/policy/limited/local_policy.jar
 java/oracle-8/lib/security/policy/limited/US_export_policy.jar
-java/oracle-8/lib/security/policy/unlimited/local_policy.jar
+java/oracle-8/lib/security/policy/limited/local_policy.jar
 java/oracle-8/lib/security/policy/unlimited/US_export_policy.jar
+java/oracle-8/lib/security/policy/unlimited/local_policy.jar
 java/oracle-8/lib/security/trusted.libraries
 java/oracle-8/lib/sound.properties.default
 java/oracle-8/lib/tzdb.dat

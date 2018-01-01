@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2013/10/19 20:43:39 markd Exp $
-bin/mltex
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:53 rillig Exp $
 bin/mllatex
+bin/mltex
 share/texmf-dist/tex/latex/mltex/lo1enc.def
 share/texmf-dist/tex/latex/mltex/mlltxchg.def
 share/texmf-dist/tex/latex/mltex/mltex.sty

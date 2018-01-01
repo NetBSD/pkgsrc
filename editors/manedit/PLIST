@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:50:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:26 rillig Exp $
 bin/manedit
 bin/manview
 bin/manwrap
+man/man1/manedit.1
 man/man7/manpage_writing_procedures.7
 man/man7/manpage_xml_reference.7
-man/man1/manedit.1
 share/manedit/icons/manedit.xpm
 share/manedit/templates/api.mpt
 share/manedit/templates/config.mpt

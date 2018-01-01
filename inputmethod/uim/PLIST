@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2017/09/26 09:42:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2018/01/01 22:29:39 rillig Exp $
 ${PLIST.qt}bin/uim-chardict-qt4
 ${PLIST.uim-dict-gtk}bin/uim-dict-gtk
 ${PLIST.uim-dict-gtk3}bin/uim-dict-gtk3
@@ -41,8 +41,8 @@ lib/libuim-custom.la
 lib/libuim-scm.la
 lib/libuim.la
 lib/pkgconfig/uim.pc
-${PLIST.anthy}lib/uim/plugin/libuim-anthy.la
 ${PLIST.anthy}lib/uim/plugin/libuim-anthy-utf8.la
+${PLIST.anthy}lib/uim/plugin/libuim-anthy.la
 ${PLIST.curl}lib/uim/plugin/libuim-curl.la
 lib/uim/plugin/libuim-custom-enabler.la
 ${PLIST.eb}lib/uim/plugin/libuim-eb.la
@@ -54,10 +54,10 @@ lib/uim/plugin/libuim-lolevel.la
 lib/uim/plugin/libuim-look.la
 ${PLIST.m17nlib}lib/uim/plugin/libuim-m17nlib.la
 ${PLIST.openssl}lib/uim/plugin/libuim-openssl.la
-${PLIST.sqlite}lib/uim/plugin/libuim-sqlite3.la
 lib/uim/plugin/libuim-process.la
 lib/uim/plugin/libuim-skk.la
 lib/uim/plugin/libuim-socket.la
+${PLIST.sqlite}lib/uim/plugin/libuim-sqlite3.la
 ${PLIST.wnn}lib/uim/plugin/libuim-wnn.la
 ${PLIST.gtk}libexec/uim-candwin-gtk
 ${PLIST.gtk3}libexec/uim-candwin-gtk3
@@ -84,6 +84,8 @@ share/doc/uim/UIM-SCM
 share/doc/uim/UIM-SH
 ${PLIST.fep}share/doc/uim/uim-fep/README
 ${PLIST.fep}share/doc/uim/uim-fep/README.ja
+share/examples/uim/installed-modules.scm
+share/examples/uim/loader.scm
 ${PLIST.kde}share/kde4/services/plasma-applet-uim.desktop
 share/locale/fr/LC_MESSAGES/uim.mo
 share/locale/ja/LC_MESSAGES/uim.mo
@@ -151,7 +153,6 @@ share/uim/im-switcher.scm
 share/uim/im.scm
 share/uim/init.scm
 share/uim/input-parse.scm
-share/examples/uim/installed-modules.scm
 share/uim/ipa-x-sampa.scm
 share/uim/iso-639-1.scm
 share/uim/japanese-act.scm
@@ -176,7 +177,6 @@ share/uim/lib/srfi-95.scm
 share/uim/lib/unittest.scm
 share/uim/light-record.scm
 share/uim/load-action.scm
-share/examples/uim/loader.scm
 share/uim/lolevel.scm
 share/uim/look-custom.scm
 share/uim/look.scm
@@ -193,8 +193,8 @@ share/uim/packrat.scm
 share/uim/pinyin-big5.scm
 share/uim/pixmaps/ajax-ime.png
 share/uim/pixmaps/ajax-ime.svg
-share/uim/pixmaps/anthy.png
 ${PLIST.anthy}share/uim/pixmaps/anthy-utf8.png
+share/uim/pixmaps/anthy.png
 share/uim/pixmaps/baidu-olime-jp.png
 share/uim/pixmaps/baidu-olime-jp.svg
 share/uim/pixmaps/byeoru.png

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/09 05:52:36 agc Exp $
-bin/ssss-split
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:55 rillig Exp $
 bin/ssss-combine
+bin/ssss-split
 man/man1/ssss.1

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2014/03/11 14:05:11 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/01/01 22:29:49 rillig Exp $
 bin/smokeinfo
 bin/smokeping
 bin/smokeping_cgi
@@ -147,8 +147,8 @@ share/examples/smokeping/config.simple
 share/examples/smokeping/config.targetvars-with-Curl
 share/examples/smokeping/config.template
 share/examples/smokeping/smokemail.dist
-share/examples/smokeping/smokeping_secrets.dist
 share/examples/smokeping/smokeping.conf
+share/examples/smokeping/smokeping_secrets.dist
 share/examples/smokeping/tmail.dist
 share/httpd/htdocs/cropper/cropper.css
 share/httpd/htdocs/cropper/cropper.js

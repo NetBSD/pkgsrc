@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.27 2016/02/03 18:40:18 jperkin Exp $
+@comment $NetBSD: PLIST.common,v 1.28 2018/01/01 22:29:23 rillig Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
@@ -34,7 +34,6 @@ gnu/bin/ar
 gnu/bin/as
 gnu/bin/c++filt
 ${PLIST.gold}gnu/bin/dwp
-${PLIST.gprof}gnu/bin/gprof
 gnu/bin/elfedit
 ${PLIST.ld}gnu/bin/ld
 gnu/bin/ld.bfd

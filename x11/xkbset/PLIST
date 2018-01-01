@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/11/25 21:37:50 shattered Exp $
-bin/xkbset-gui
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:30:04 rillig Exp $
 bin/xkbset
+bin/xkbset-gui
 man/man1/xkbset.1

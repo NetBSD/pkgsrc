@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:35 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:54 rillig Exp $
 bin/polkit-action
 bin/polkit-auth
 bin/polkit-config-file-validate
@@ -49,6 +49,6 @@ share/PolicyKit/policy/org.freedesktop.policykit.policy
 share/dbus-1/interfaces/org.freedesktop.PolicyKit.AuthenticationAgent.xml
 share/dbus-1/system-services/org.freedesktop.PolicyKit.service
 share/examples/policykit/PolicyKit.conf
-share/examples/policykit/polkit
 share/examples/policykit/org.freedesktop.PolicyKit.conf
+share/examples/policykit/polkit
 share/examples/policykit/polkit-bash-completion.sh

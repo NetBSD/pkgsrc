@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:03 joerg Exp $
-sbin/dirvish
-sbin/dirvish-runall
-sbin/dirvish-expire
-sbin/dirvish-locate
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:56 rillig Exp $
 man/man5/dirvish.conf.5
-man/man8/dirvish.8
-man/man8/dirvish-runall.8
 man/man8/dirvish-expire.8
 man/man8/dirvish-locate.8
+man/man8/dirvish-runall.8
+man/man8/dirvish.8
+sbin/dirvish
+sbin/dirvish-expire
+sbin/dirvish-locate
+sbin/dirvish-runall
 share/doc/dirvish/COPYING
 share/doc/dirvish/FAQ.html
 share/doc/dirvish/INSTALL

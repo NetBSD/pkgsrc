@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:39 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:30:03 rillig Exp $
 bin/visitors
 share/doc/visitors/doc.html
-share/visitors/visitors.png
 share/visitors/powered-by-visitors.png
+share/visitors/visitors.png

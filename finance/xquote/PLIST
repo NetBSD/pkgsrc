@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:01:15 zuntum Exp $
-lib/X11/app-defaults/Xquote
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:28 rillig Exp $
 bin/Xquote
+lib/X11/app-defaults/Xquote

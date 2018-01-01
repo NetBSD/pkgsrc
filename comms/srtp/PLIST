@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2015/09/06 14:02:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:21 rillig Exp $
+include/srtp/aes.h
 include/srtp/aes_cbc.h
 include/srtp/aes_icm.h
-include/srtp/aes.h
 include/srtp/alloc.h
 include/srtp/auth.h
 include/srtp/cipher.h
 include/srtp/config.h
+include/srtp/crypto.h
 include/srtp/crypto_kernel.h
 include/srtp/crypto_math.h
 include/srtp/crypto_types.h
-include/srtp/crypto.h
 include/srtp/cryptoalg.h
 include/srtp/datatypes.h
 include/srtp/err.h
@@ -25,11 +25,11 @@ include/srtp/prng.h
 include/srtp/rand_source.h
 include/srtp/rdb.h
 include/srtp/rdbx.h
-include/srtp/rtp_priv.h
 include/srtp/rtp.h
+include/srtp/rtp_priv.h
 include/srtp/sha1.h
-include/srtp/srtp_priv.h
 include/srtp/srtp.h
+include/srtp/srtp_priv.h
 include/srtp/stat.h
 include/srtp/ut_sim.h
 include/srtp/xfm.h

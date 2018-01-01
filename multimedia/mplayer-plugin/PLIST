@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/14 08:56:08 tnn Exp $
-lib/netscape/plugins/mplayerplug-in.so
-lib/netscape/plugins/mplayerplug-in.xpt
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:45 rillig Exp $
 lib/netscape/plugins/mplayerplug-in-dvx.so
 lib/netscape/plugins/mplayerplug-in-dvx.xpt
 lib/netscape/plugins/mplayerplug-in-gmp.so
@@ -11,5 +9,7 @@ lib/netscape/plugins/mplayerplug-in-rm.so
 lib/netscape/plugins/mplayerplug-in-rm.xpt
 lib/netscape/plugins/mplayerplug-in-wmp.so
 lib/netscape/plugins/mplayerplug-in-wmp.xpt
+lib/netscape/plugins/mplayerplug-in.so
+lib/netscape/plugins/mplayerplug-in.xpt
 share/examples/mplayer-plugin/mplayerplug-in.conf
 share/examples/mplayer-plugin/mplayerplug-in.types

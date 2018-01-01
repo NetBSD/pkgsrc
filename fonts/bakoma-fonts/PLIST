@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:54:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:29 rillig Exp $
 share/tex-contrib/BaKoMa/BaKoMa-AMS.Fonts
 share/tex-contrib/BaKoMa/BaKoMa-CM.Fonts
 share/tex-contrib/BaKoMa/README.news
-share/tex-contrib/BaKoMa/fontmap.map
 share/tex-contrib/BaKoMa/afm/cmb10.afm
 share/tex-contrib/BaKoMa/afm/cmbsy10.afm
 share/tex-contrib/BaKoMa/afm/cmbsy6.afm
@@ -149,6 +148,7 @@ share/tex-contrib/BaKoMa/etc/amsfonts.map
 share/tex-contrib/BaKoMa/etc/amsfonts.ref
 share/tex-contrib/BaKoMa/etc/cmfonts.map
 share/tex-contrib/BaKoMa/etc/cmfonts.ref
+share/tex-contrib/BaKoMa/fontmap.map
 share/tex-contrib/BaKoMa/pfb/cmb10.pfb
 share/tex-contrib/BaKoMa/pfb/cmbsy10.pfb
 share/tex-contrib/BaKoMa/pfb/cmbsy6.pfb
