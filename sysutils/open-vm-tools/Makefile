@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2017/11/30 16:45:38 adam Exp $
+# $NetBSD: Makefile,v 1.79 2018/01/01 06:56:01 ryoon Exp $
 
-DISTNAME=	open-vm-tools-10.1.15
-PKGREVISION=	1
+OVTVER=		10.2.0
+DISTNAME=	open-vm-tools-${OVTVER}-7253323
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vmware/}
 
@@ -10,8 +10,9 @@ HOMEPAGE=	https://github.com/vmware/open-vm-tools
 COMMENT=	Open source VMware tools
 LICENSE=	gnu-lgpl-v2.1
 
-GITHUB_TAG=	stable-${PKGVERSION_NOREV}
-WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}/${GITHUB_PROJECT}
+GITHUB_PROJECT=	open-vm-tools
+GITHUB_RELEASE=	stable-${OVTVER}
+#WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}/${GITHUB_PROJECT}
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
 
