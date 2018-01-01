@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/08/30 12:34:39 manu Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/01 10:23:07 wiz Exp $
 
 DISTNAME=		mod_encoding-20021209
 PKGNAME=		${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://webdav.todo.gr.jp/
 COMMENT=		Non-ascii filename interoperability
 #LICENSE=		# Pending change from Internet Initiative Japan, Inc.
-
-PKG_APACHE_ACCEPTED=	apache22 apache24
 
 APACHE_MODULE_NAME=	${DISTNAME:C/-.*//}.la
 GNU_CONFIGURE=		yes

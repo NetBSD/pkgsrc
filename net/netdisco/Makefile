@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2017/03/12 07:20:51 maya Exp $
+# $NetBSD: Makefile,v 1.42 2018/01/01 10:23:04 wiz Exp $
 
 DISTNAME=		netdisco-${PKGVERSION}_with_mibs
 PKGNAME=		netdisco-${PKGVERSION}
@@ -122,14 +122,12 @@ RCD_SCRIPT_SRC.netdisco=	${WRKSRC:Q}/bin/netdisco_daemon
 
 .include "../../mk/apache.mk"
 
-.if ${PKG_APACHE} != "apache22"
 SUBST_STAGE.apachevers=		pre-configure
 SUBST_FILES.apachevers=		html/admin_user.html html/change_pw.html html/login.html
 SUBST_FILES.apachevers+=	html/logout.html html/portcontrol.html
 SUBST_FILES.apachevers+=	html/public_debugging.html
 SUBST_SED.apachevers=		-e "s|connection->remote_ip|connection->client_ip|g"
 SUBST_MESSAGE.apachevers= 	Fixing perl files for apache > 2.2.
-.endif
 
 do-build:
 	${RM} -f ${WRKSRC:Q}/html/doc/ChangeLog.txt
