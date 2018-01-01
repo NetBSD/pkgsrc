@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2017/08/24 20:03:31 adam Exp $
+# $NetBSD: Makefile,v 1.35 2018/01/01 21:18:43 adam Exp $
 
 DISTNAME=	ktouch-${_KDE_VERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	misc
 COMMENT=	KDE touch typing tutor
 
