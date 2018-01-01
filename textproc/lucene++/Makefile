@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2017/08/24 20:03:40 adam Exp $
+# $NetBSD: Makefile,v 1.8 2018/01/01 21:18:53 adam Exp $
 
 DISTNAME=	LucenePlusPlus-rel_3.0.7
 PKGNAME=	${DISTNAME:S/LucenePlusPlus-rel_/lucene++-/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=luceneplusplus/LucenePlusPlus/archive/rel_${PKGVERSION_NOREV}/}
 

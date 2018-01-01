@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2017/08/24 20:03:13 adam Exp $
+# $NetBSD: Makefile,v 1.33 2018/01/01 21:18:24 adam Exp $
 
 DISTNAME=	amor-15.08.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	games
 COMMENT=	KDE creature for your desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
