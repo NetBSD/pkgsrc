@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.mysql,v 1.5 2018/01/01 18:33:32 rillig Exp $
 share/${RUBY_PKGPREFIX}-redmine/gems/cache/mysql2-0.3.21.gem
 ${GEM_EXTSDIR}/mysql2-0.3.21/mysql2/mysql2.${RUBY_DLEXT}
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/mysql2-0.3.21/LICENSE

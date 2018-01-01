@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/21 07:57:21 dbj Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 18:33:33 rillig Exp $
 bin/chirpw
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/chirp/__init__.py
@@ -328,7 +328,7 @@ ${PYSITELIB}/chirpui/settingsedit.pyo
 ${PYSITELIB}/chirpui/shiftdialog.py
 ${PYSITELIB}/chirpui/shiftdialog.pyc
 ${PYSITELIB}/chirpui/shiftdialog.pyo
-${PKGMANDIR}/man1/chirpw.1
+man/man1/chirpw.1
 share/applications/chirp.desktop
 share/chirp/chirp.xsd
 share/chirp/chirp_banks.xsd
