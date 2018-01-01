@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2017/06/05 10:41:28 maya Exp $
-bin/gdbserver
+@comment $NetBSD: PLIST.Linux,v 1.2 2018/01/01 22:29:24 rillig Exp $
 bin/gcore
+bin/gdbserver
 lib/libinproctrace.so
 man/man1/gcore.1

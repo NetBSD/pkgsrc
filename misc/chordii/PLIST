@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/29 08:54:02 darcy Exp $
-bin/chordii
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:43 rillig Exp $
 bin/a2crd
-man/man1/chordii.1
+bin/chordii
 man/man1/a2crd.1
+man/man1/chordii.1

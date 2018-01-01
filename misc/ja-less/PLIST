@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/31 13:00:24 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:44 rillig Exp $
 bin/jless
-bin/jlesskey
 bin/jlessecho
+bin/jlesskey
 man/man1/jless.1
 man/man1/jlesskey.1

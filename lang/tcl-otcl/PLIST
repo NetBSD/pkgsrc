@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 20:34:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/01/01 22:29:40 rillig Exp $
 bin/otclsh
 bin/owish
 include/otcl.h
@@ -8,5 +8,5 @@ share/doc/tcl/otcl/autoload.html
 share/doc/tcl/otcl/capi.html
 share/doc/tcl/otcl/class.html
 share/doc/tcl/otcl/object.html
-share/doc/tcl/otcl/tutorial.html
 share/doc/tcl/otcl/otcl-paper.ps.gz
+share/doc/tcl/otcl/tutorial.html

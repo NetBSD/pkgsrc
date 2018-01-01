@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:56 joerg Exp $
-include/libstash/libstash.h
-include/libstash/libstash_defs.h
-include/libstash/libstash_incs.h
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:24 rillig Exp $
 include/libstash/bhp.h
 include/libstash/buf.h
 include/libstash/dbg.h
+include/libstash/libstash.h
+include/libstash/libstash_defs.h
+include/libstash/libstash_incs.h
 include/libstash/list.h
 include/libstash/log.h
 include/libstash/matrix.h
@@ -16,8 +16,8 @@ include/libstash/pezz.h
 include/libstash/res.h
 include/libstash/ring.h
 include/libstash/treen.h
-lib/libstash_d.a
 lib/libstash.a
+lib/libstash_d.a
 lib/libstash_p.a
 man/man3/libstash.3
 man/man3/libstash_buf.3

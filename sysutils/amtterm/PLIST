@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2016/02/12 14:11:24 mef Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:55 rillig Exp $
 bin/amtterm
-${PLIST.gamt}bin/gamt
 bin/amttool
+${PLIST.gamt}bin/gamt
 man/man1/amtterm.1
 man/man1/amttool.1
 man/man1/gamt.1

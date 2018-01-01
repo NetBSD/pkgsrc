@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:21 joerg Exp $
-bin/rio
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:17 rillig Exp $
 bin/find-lpt-port
+bin/rio
 share/rio/README

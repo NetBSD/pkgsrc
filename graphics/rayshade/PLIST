@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:38 rillig Exp $
 bin/rayshade
 lib/libray.a
 lib/libshade.a
@@ -12,11 +12,11 @@ share/doc/rayshade/lights.tex
 share/doc/rayshade/objects.tex
 share/doc/rayshade/options.tex
 share/doc/rayshade/preface.tex
+share/doc/rayshade/quickref.txt
 share/doc/rayshade/running.tex
 share/doc/rayshade/surfaces.tex
 share/doc/rayshade/texture.tex
 share/doc/rayshade/transform.tex
-share/doc/rayshade/quickref.txt
 share/examples/rayshade/ashtray.def.ray
 share/examples/rayshade/ashtray.ray
 share/examples/rayshade/balls.ray

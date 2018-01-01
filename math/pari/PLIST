@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2016/03/03 13:28:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/01/01 22:29:43 rillig Exp $
 bin/gp-2.7
 include/pari/genpari.h
 include/pari/mpinl.h
@@ -10,18 +10,18 @@ include/pari/paridecl.h
 include/pari/parierr.h
 include/pari/parigen.h
 include/pari/pariinl.h
-include/pari/parinf.h
 include/pari/parimt.h
+include/pari/parinf.h
 include/pari/pariold.h
 include/pari/paripriv.h
 include/pari/paristio.h
 include/pari/parisys.h
 include/pari/paritune.h
-${PLIST.nogmp}lib/libpari.la
 ${PLIST.gmp}lib/libpari-gmp.la
+${PLIST.nogmp}lib/libpari.la
 lib/pari/pari.cfg
-man/man1/gp.1
 man/man1/gp-2.7.1
+man/man1/gp.1
 man/man1/pari.1
 share/pari/PARI/822.pm
 ${PLIST.doc}share/pari/doc/appa.tex
