@@ -2,7 +2,6 @@ package main
 
 import (
 	"io/ioutil"
-	"netbsd.org/pkglint/line"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
 	"path"
@@ -29,7 +28,7 @@ type GlobalData struct {
 
 // Change is a change entry from the `doc/CHANGES-*` files.
 type Change struct {
-	Line    line.Line
+	Line    Line
 	Action  string
 	Pkgpath string
 	Version string
@@ -39,7 +38,7 @@ type Change struct {
 
 // SuggestedUpdate is from the `doc/TODO` file.
 type SuggestedUpdate struct {
-	Line    line.Line
+	Line    Line
 	Pkgname string
 	Version string
 	Comment string
@@ -109,7 +108,7 @@ func (gd *GlobalData) loadDistSites() {
 	name2url := make(map[string]string)
 	url2name := make(map[string]string)
 	for _, line := range lines {
-		if m, varname, _, _, _, urls, _, _ := MatchVarassign(line.Text()); m {
+		if m, varname, _, _, _, urls, _, _ := MatchVarassign(line.Text); m {
 			if hasPrefix(varname, "MASTER_SITE_") && varname != "MASTER_SITE_BACKUP" {
 				for _, url := range splitOnSpace(urls) {
 					if matches(url, `^(?:http://|https://|ftp://)`) {
@@ -139,7 +138,7 @@ func (gd *GlobalData) loadPkgOptions() {
 
 	gd.PkgOptions = make(map[string]string)
 	for _, line := range lines {
-		if m, optname, optdescr := match2(line.Text(), `^([-0-9a-z_+]+)(?:\s+(.*))?$`); m {
+		if m, optname, optdescr := match2(line.Text, `^([-0-9a-z_+]+)(?:\s+(.*))?$`); m {
 			gd.PkgOptions[optname] = optdescr
 		} else {
 			line.Fatalf("Unknown line format.")
@@ -153,7 +152,7 @@ func (gd *GlobalData) loadTools() {
 		fname := G.globalData.Pkgsrcdir + "/mk/tools/bsd.tools.mk"
 		lines := LoadExistingLines(fname, true)
 		for _, line := range lines {
-			if m, _, _, includefile := MatchMkInclude(line.Text()); m {
+			if m, _, _, includefile := MatchMkInclude(line.Text); m {
 				if !contains(includefile, "/") {
 					toolFiles = append(toolFiles, includefile)
 				}
@@ -187,7 +186,7 @@ func (gd *GlobalData) loadTools() {
 
 		lines := LoadExistingLines(fname, true)
 		for _, line := range lines {
-			text := line.Text()
+			text := line.Text
 
 			if m, varname, _, _, _, value, _, _ := MatchVarassign(text); m {
 				if varname == "USE_TOOLS" {
@@ -254,11 +253,11 @@ func loadSuggestedUpdates(fname string) []SuggestedUpdate {
 	return parselinesSuggestedUpdates(lines)
 }
 
-func parselinesSuggestedUpdates(lines []line.Line) []SuggestedUpdate {
+func parselinesSuggestedUpdates(lines []Line) []SuggestedUpdate {
 	var updates []SuggestedUpdate
 	state := 0
 	for _, line := range lines {
-		text := line.Text()
+		text := line.Text
 
 		if state == 0 && text == "Suggested package updates" {
 			state = 1
@@ -295,8 +294,8 @@ func (gd *GlobalData) loadSuggestedUpdates() {
 func (gd *GlobalData) loadDocChangesFromFile(fname string) []*Change {
 	lines := LoadExistingLines(fname, false)
 
-	parseChange := func(line line.Line) *Change {
-		text := line.Text()
+	parseChange := func(line Line) *Change {
+		text := line.Text
 		if !hasPrefix(text, "\t") {
 			return nil
 		}
@@ -330,7 +329,7 @@ func (gd *GlobalData) loadDocChangesFromFile(fname string) []*Change {
 	for _, line := range lines {
 		if change := parseChange(line); change != nil {
 			changes = append(changes, change)
-		} else if text := line.Text(); len(text) >= 2 && text[0] == '\t' && 'A' <= text[1] && text[1] <= 'Z' {
+		} else if text := line.Text; len(text) >= 2 && text[0] == '\t' && 'A' <= text[1] && text[1] <= 'Z' {
 			line.Warnf("Unknown doc/CHANGES line: %q", text)
 			Explain("See mk/misc/developer.mk for the rules.")
 		}
@@ -604,8 +603,8 @@ func (tr *ToolRegistry) Trace() {
 	}
 }
 
-func (tr *ToolRegistry) ParseToolLine(line line.Line) {
-	if m, varname, _, _, _, value, _, _ := MatchVarassign(line.Text()); m {
+func (tr *ToolRegistry) ParseToolLine(line Line) {
+	if m, varname, _, _, _, value, _, _ := MatchVarassign(line.Text); m {
 		if varname == "TOOLS_CREATE" && (value == "[" || matches(value, `^?[-\w.]+$`)) {
 			tr.Register(value)
 
