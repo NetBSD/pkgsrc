@@ -780,9 +780,9 @@ func (gd *GlobalData) InitVartypes() {
 	sys("PKGVERSION", lkNone, BtVersion)
 	sys("PKGWILDCARD", lkNone, BtFilemask)
 	sys("PKG_ADMIN", lkNone, BtShellCommand)
-	sys("PKG_APACHE", lkNone, enum("apache22 apache24"))
-	pkg("PKG_APACHE_ACCEPTED", lkShell, enum("apache22 apache24"))
-	usr("PKG_APACHE_DEFAULT", lkNone, enum("apache22 apache24"))
+	sys("PKG_APACHE", lkNone, enum("apache24"))
+	pkg("PKG_APACHE_ACCEPTED", lkShell, enum("apache24"))
+	usr("PKG_APACHE_DEFAULT", lkNone, enum("apache24"))
 	usr("PKG_CONFIG", lkNone, BtYes)
 	// ^^ No, this is not the popular command from GNOME, but the setting
 	// whether the pkgsrc user wants configuration files automatically
