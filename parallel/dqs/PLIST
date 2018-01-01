@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:10:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:51 rillig Exp $
 bin/PVM_CLEAN
-bin/dqs_times332
 bin/dqs_execd332
 bin/dqs_options332
 bin/dqs_random332
+bin/dqs_times332
 bin/dsh332
 bin/qalter332
 bin/qconf332

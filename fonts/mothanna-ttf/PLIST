@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2014/06/01 16:35:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:32 rillig Exp $
+share/doc/mothanna-ttf/README
 share/fonts/X11/TTF/Mothanna-Bold-Oblique.ttf
 share/fonts/X11/TTF/Mothanna-Bold.ttf
 share/fonts/X11/TTF/Mothanna-Oblique.ttf
 share/fonts/X11/TTF/Mothanna.ttf
-share/doc/mothanna-ttf/README

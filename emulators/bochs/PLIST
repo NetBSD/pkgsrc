@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2015/07/01 13:39:17 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.19 2018/01/01 22:29:26 rillig Exp $
 bin/bochs
 bin/bximage
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_acpi.la
@@ -25,19 +25,20 @@ ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_serial.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_soundmod.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_speaker.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_svga_cirrus.la
+${PLIST.notiny}${PLIST.plugins}${PLIST.nox11}lib/bochs/plugins/libbx_term.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_unmapped.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_usb_common.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_usb_ohci.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_usb_uhci.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_vga.la
 ${PLIST.notiny}${PLIST.plugins}${PLIST.x11}lib/bochs/plugins/libbx_x.la
-${PLIST.notiny}${PLIST.plugins}${PLIST.nox11}lib/bochs/plugins/libbx_term.la
 man/man1/bochs-dlx.1
 man/man1/bochs.1
 man/man1/bximage.1
 man/man5/bochsrc.5
 share/bochs/BIOS-bochs-latest
 share/bochs/BIOS-bochs-legacy
+share/bochs/SeaBIOS-README
 share/bochs/VGABIOS-elpin-2.40
 share/bochs/VGABIOS-elpin-LICENSE
 share/bochs/VGABIOS-lgpl-README
@@ -45,8 +46,11 @@ share/bochs/VGABIOS-lgpl-latest
 share/bochs/VGABIOS-lgpl-latest-cirrus
 share/bochs/VGABIOS-lgpl-latest-cirrus-debug
 share/bochs/VGABIOS-lgpl-latest-debug
+share/bochs/bios.bin-1.7.5
 share/bochs/keymaps/sdl-pc-de.map
 share/bochs/keymaps/sdl-pc-us.map
+share/bochs/keymaps/sdl2-pc-de.map
+share/bochs/keymaps/sdl2-pc-us.map
 share/bochs/keymaps/x11-pc-be.map
 share/bochs/keymaps/x11-pc-da.map
 share/bochs/keymaps/x11-pc-de.map
@@ -65,7 +69,3 @@ share/doc/bochs/README
 share/doc/bochs/TODO
 share/doc/bochs/bochsrc-sample.txt
 share/doc/bochs/slirp.conf
-share/bochs/SeaBIOS-README
-share/bochs/bios.bin-1.7.5
-share/bochs/keymaps/sdl2-pc-de.map
-share/bochs/keymaps/sdl2-pc-us.map

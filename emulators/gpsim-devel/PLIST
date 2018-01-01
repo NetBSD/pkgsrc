@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:51:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:27 rillig Exp $
 bin/gpsim
 include/eXdbm/eXdbm.h
 include/eXdbm/eXdbmErrors.h
@@ -25,12 +25,12 @@ include/gpsim/eeprom.h
 include/gpsim/errors.h
 include/gpsim/exports.h
 include/gpsim/expr.h
+include/gpsim/fopen-path.h
 include/gpsim/gpsim_classes.h
 include/gpsim/gpsim_def.h
 include/gpsim/gpsim_interface.h
 include/gpsim/gpsim_object.h
 include/gpsim/gpsim_time.h
-include/gpsim/fopen-path.h
 include/gpsim/i2c-ee.h
 include/gpsim/icd.h
 include/gpsim/intcon.h
@@ -40,12 +40,12 @@ include/gpsim/lxt_write.h
 include/gpsim/modules.h
 include/gpsim/operator.h
 include/gpsim/p12x.h
-include/gpsim/p16x5x.h
 include/gpsim/p16f62x.h
+include/gpsim/p16f87x.h
+include/gpsim/p16x5x.h
 include/gpsim/p16x6x.h
 include/gpsim/p16x7x.h
 include/gpsim/p16x8x.h
-include/gpsim/p16f87x.h
 include/gpsim/p17c75x.h
 include/gpsim/p18x.h
 include/gpsim/packages.h
@@ -75,8 +75,8 @@ include/gpsim/ttoken.h
 include/gpsim/uart.h
 include/gpsim/value.h
 include/gpsim/xref.h
-lib/libgpsim_eXdbm.la
 lib/libgpsim.la
-lib/libgpsimcli.la
+lib/libgpsim_eXdbm.la
 lib/libgpsim_modules.la
+lib/libgpsimcli.la
 lib/libgpsimgui.la

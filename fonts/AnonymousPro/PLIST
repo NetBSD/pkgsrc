@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2014/06/01 16:35:31 wiz Exp $
-share/fonts/X11/TTF/AnonymousProB.ttf
-share/fonts/X11/TTF/AnonymousProBI.ttf
-share/fonts/X11/TTF/AnonymousProI.ttf
-share/fonts/X11/TTF/AnonymousPro.ttf
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:29 rillig Exp $
 share/doc/AnonymousPro/FONTLOG.txt
 share/doc/AnonymousPro/OFL-FAQ.txt
 share/doc/AnonymousPro/OFL.txt
 share/doc/AnonymousPro/README.txt
+share/fonts/X11/TTF/AnonymousPro.ttf
+share/fonts/X11/TTF/AnonymousProB.ttf
+share/fonts/X11/TTF/AnonymousProBI.ttf
+share/fonts/X11/TTF/AnonymousProI.ttf

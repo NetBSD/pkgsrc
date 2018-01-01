@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2014/03/11 14:05:17 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/01/01 22:29:59 rillig Exp $
 info/ndtpd-ja.info
 info/ndtpd.info
 libexec/ndtpstat
-share/examples/ndtpd/ndtpd.conf.default
-sbin/ndtpd
 sbin/ndtpcheck
 sbin/ndtpcontrol
+sbin/ndtpd
 sbin/ndtpdaily
 sbin/ndtpupgrade
+share/examples/ndtpd/ndtpd.conf.default

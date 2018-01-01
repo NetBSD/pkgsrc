@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:50:26 joerg Exp $
-bin/sam
-bin/samterm
-bin/samsave
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:26 rillig Exp $
 bin/B
-include/sam/u.h
+bin/sam
+bin/samsave
+bin/samterm
+include/sam/frame.h
 include/sam/libc.h
 include/sam/libg.h
-include/sam/frame.h
+include/sam/u.h
+lib/X11/app-defaults/Sam
 lib/libXg.a
 lib/libframe.a
-lib/X11/app-defaults/Sam
 man/man1/sam.1
 man/man3/add.3
 man/man3/balloc.3

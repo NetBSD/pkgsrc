@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:51:03 joerg Exp $
-bin/cygwin1.dll
+@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:26 rillig Exp $
 bin/cygwin-cygpath
 bin/cygwin-ipcrm
 bin/cygwin-ipcs
@@ -8,6 +7,7 @@ bin/cygwin-mount
 bin/cygwin-ps
 bin/cygwin-regtool
 bin/cygwin-umount
+bin/cygwin1.dll
 emul/cygwin/bin/cygcheck
 emul/cygwin/bin/cygpath
 emul/cygwin/bin/dumper

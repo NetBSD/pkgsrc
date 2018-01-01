@@ -1,4 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:49 rillig Exp $
+include/radiusclient-ng.h
+lib/libradiusclient-ng.la
+sbin/login.radius
+sbin/radacct
+sbin/radexample
+sbin/radiusclient
+sbin/radlogin
+sbin/radstatus
 share/examples/radiusclient-ng/dictionary
 share/examples/radiusclient-ng/dictionary.ascend
 share/examples/radiusclient-ng/dictionary.compat
@@ -8,11 +16,3 @@ share/examples/radiusclient-ng/issue
 share/examples/radiusclient-ng/port-id-map
 share/examples/radiusclient-ng/radiusclient.conf
 share/examples/radiusclient-ng/servers
-include/radiusclient-ng.h
-lib/libradiusclient-ng.la
-sbin/login.radius
-sbin/radacct
-sbin/radexample
-sbin/radiusclient
-sbin/radlogin
-sbin/radstatus

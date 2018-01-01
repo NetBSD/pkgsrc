@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:52 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:34 rillig Exp $
 bin/Omega
 man/man6/omega.6
-share/omega/omega.hi
-share/omega/omega.log
-share/omega/omegahi.bak
 share/doc/omega/buglist.txt
 share/doc/omega/compile.all
 share/doc/omega/omega.txt
@@ -43,6 +40,9 @@ share/omega/maze3.dat
 share/omega/maze4.dat
 share/omega/misle.dat
 share/omega/motd.txt
+share/omega/omega.hi
+share/omega/omega.log
+share/omega/omegahi.bak
 share/omega/scroll1.txt
 share/omega/scroll2.txt
 share/omega/scroll3.txt

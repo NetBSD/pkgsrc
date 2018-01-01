@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2017/05/15 11:10:00 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.61 2018/01/01 22:29:45 rillig Exp $
 bin/cvlc
 ${PLIST.x11}bin/qvlc
 bin/rvlc
@@ -331,8 +331,8 @@ lib/vlc/plugins/stream_out/libstream_out_standard_plugin.la
 lib/vlc/plugins/stream_out/libstream_out_stats_plugin.la
 lib/vlc/plugins/stream_out/libstream_out_transcode_plugin.la
 ${PLIST.x11}lib/vlc/plugins/text_renderer/libfreetype_plugin.la
-lib/vlc/plugins/text_renderer/libtdummy_plugin.la
 lib/vlc/plugins/text_renderer/libsvg_plugin.la
+lib/vlc/plugins/text_renderer/libtdummy_plugin.la
 lib/vlc/plugins/video_chroma/libchain_plugin.la
 lib/vlc/plugins/video_chroma/libgrey_yuv_plugin.la
 lib/vlc/plugins/video_chroma/libi420_rgb_mmx_plugin.la

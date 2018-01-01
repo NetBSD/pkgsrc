@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:49 rillig Exp $
 bin/rfinger
-bin/rwhois
 bin/rftp
 bin/rtelnet
+bin/rwhois
 lib/libsocks4.a
 libexec/sockd
 man/man1/rfinger.1

@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:47 joerg Exp $
-bin/gnuchess4
-bin/gnuchessr4
-bin/gnuchessn4
-bin/gnuchessx4
-bin/gnuchessc4
-bin/postprint
-bin/gnuan
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:34 rillig Exp $
 bin/game
-share/gnuchess4/gnuchess.lang
-share/gnuchess4/eco.pgn
-share/gnuchess4/gnuchess.data
-share/gnuchess4/gnuchess.eco
+bin/gnuan
+bin/gnuchess4
+bin/gnuchessc4
+bin/gnuchessn4
+bin/gnuchessr4
+bin/gnuchessx4
+bin/postprint
+man/man6/game.6
+man/man6/gnuan.6
+man/man6/gnuchess4.6
+man/man6/postprint.6
 share/doc/gnuchess4/ARTICLE
 share/doc/gnuchess4/ARTICLE.2
 share/doc/gnuchess4/CHESSTOOL
@@ -19,7 +19,7 @@ share/doc/gnuchess4/HEURISTICS
 share/doc/gnuchess4/MOVE-GEN
 share/doc/gnuchess4/README.font
 share/doc/gnuchess4/README.output
-man/man6/game.6
-man/man6/gnuan.6
-man/man6/gnuchess4.6
-man/man6/postprint.6
+share/gnuchess4/eco.pgn
+share/gnuchess4/gnuchess.data
+share/gnuchess4/gnuchess.eco
+share/gnuchess4/gnuchess.lang

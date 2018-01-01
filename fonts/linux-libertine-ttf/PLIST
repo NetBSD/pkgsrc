@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2014/06/01 16:35:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:32 rillig Exp $
+share/doc/linux-libertine-ttf/GPL.txt
+share/doc/linux-libertine-ttf/LICENCE.txt
+share/doc/linux-libertine-ttf/OFL.txt
+share/doc/linux-libertine-ttf/README
 share/fonts/X11/TTF/LinBiolinum_K.ttf
 share/fonts/X11/TTF/LinBiolinum_R.ttf
 share/fonts/X11/TTF/LinBiolinum_RB.ttf
@@ -30,7 +34,3 @@ share/fonts/X11/TTF/LinLibertine_aS.ttf
 share/fonts/X11/TTF/LinLibertine_aSI.ttf
 share/fonts/X11/TTF/LinLibertine_aSZI.ttf
 share/fonts/X11/TTF/LinLibertine_aZL.ttf
-share/doc/linux-libertine-ttf/GPL.txt
-share/doc/linux-libertine-ttf/LICENCE.txt
-share/doc/linux-libertine-ttf/OFL.txt
-share/doc/linux-libertine-ttf/README

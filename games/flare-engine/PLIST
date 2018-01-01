@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/02 23:19:51 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:33 rillig Exp $
 bin/flare
+man/man1/flare.1
 share/flare/default/mods/default/cutscenes/credits.txt
 share/flare/default/mods/default/cutscenes/intro_example.txt
 share/flare/default/mods/default/engine/combat.txt
@@ -60,4 +61,3 @@ share/flare/default/mods/default/menus/gameload.txt
 share/flare/default/mods/default/menus/gamenew.txt
 share/flare/default/mods/default/menus/menus.txt
 share/flare/default/mods/mods.txt
-man/man1/flare.1

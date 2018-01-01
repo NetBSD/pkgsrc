@@ -1,13 +1,9 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.2 2009/06/14 18:09:24 joerg Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.3 2018/01/01 22:29:46 rillig Exp $
 lib/ICAClient/CHARICONV.DLL
-lib/ICAClient/pkginf/F.core.linuxx86
-lib/ICAClient/pkginf/Ver.core.linuxx86
 lib/ICAClient/NDS.DLL
 lib/ICAClient/TW1.DLL
 lib/ICAClient/VDEUEM.DLL
 lib/ICAClient/VDSPMIKE.DLL
-lib/ICAClient/util/pacexec
-lib/ICAClient/util/pac.js
 lib/ICAClient/config/All_Regions.ini
 lib/ICAClient/config/Trusted_Region.ini
 lib/ICAClient/config/Unknown_Region.ini
@@ -25,3 +21,7 @@ lib/ICAClient/nls/en/UTF-8/Wfica
 lib/ICAClient/nls/en/UTF-8/pna.nls
 lib/ICAClient/nls/en/Wfcmgr
 lib/ICAClient/nls/en/Wfica
+lib/ICAClient/pkginf/F.core.linuxx86
+lib/ICAClient/pkginf/Ver.core.linuxx86
+lib/ICAClient/util/pac.js
+lib/ICAClient/util/pacexec

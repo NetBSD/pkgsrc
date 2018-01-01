@@ -1,19 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:10:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:51 rillig Exp $
 bin/Pnews
 bin/Rnmail
 bin/nntplist
 bin/rn
 bin/trn
 bin/trn-artchk
-share/trn/INIT
-share/trn/Pnews.header
-share/trn/Speller
-share/trn/filexp
-share/trn/makedir
-share/trn/mbox.saver
-share/trn/newsnews
-share/trn/norm.saver
-share/trn/access.def
+man/man1/Pnews.1
+man/man1/Rnmail.1
+man/man1/rn.1
+man/man1/trn.1
 share/trn/HelpFiles/changelog
 share/trn/HelpFiles/config/environment
 share/trn/HelpFiles/config/index
@@ -21,11 +16,16 @@ share/trn/HelpFiles/config/macros
 share/trn/HelpFiles/config/options
 share/trn/HelpFiles/hints
 share/trn/HelpFiles/quickstart
-share/trn/HelpFiles/top
 share/trn/HelpFiles/samples/access
 share/trn/HelpFiles/samples/index
 share/trn/HelpFiles/samples/trnrc
-man/man1/Pnews.1
-man/man1/Rnmail.1
-man/man1/rn.1
-man/man1/trn.1
+share/trn/HelpFiles/top
+share/trn/INIT
+share/trn/Pnews.header
+share/trn/Speller
+share/trn/access.def
+share/trn/filexp
+share/trn/makedir
+share/trn/mbox.saver
+share/trn/newsnews
+share/trn/norm.saver

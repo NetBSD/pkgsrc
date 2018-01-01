@@ -1,18 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2010/01/31 23:45:58 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:34 rillig Exp $
 bin/galaxa
 share/doc/galaxa/README.txt
 share/examples/galaxa/galaxa-highs.dat
-share/galaxa/sounds/buzz.au
-share/galaxa/sounds/capture.au
-share/galaxa/sounds/fireworks.au
-share/galaxa/sounds/flash.au
-share/galaxa/sounds/hurt.au
-share/galaxa/sounds/intro.au
-share/galaxa/sounds/kill.au
-share/galaxa/sounds/nextlevel.au
-share/galaxa/sounds/shot.au
-share/galaxa/sounds/tractorbeam.au
-share/galaxa/sounds/welcome.au
 share/galaxa/images/0.ppm
 share/galaxa/images/1.ppm
 share/galaxa/images/2.ppm
@@ -36,7 +25,6 @@ share/galaxa/images/alien_1_0.ppm
 share/galaxa/images/alien_1_0b.ppm
 share/galaxa/images/alien_1_1.ppm
 share/galaxa/images/alien_1_2.ppm
-share/galaxa/images/convert
 share/galaxa/images/alien_1_3.ppm
 share/galaxa/images/alien_1_4.ppm
 share/galaxa/images/alien_1_5.ppm
@@ -92,6 +80,7 @@ share/galaxa/images/asteroid_b4.ppm
 share/galaxa/images/bonus.ppm
 share/galaxa/images/bullet.ppm
 share/galaxa/images/captured.ppm
+share/galaxa/images/convert
 share/galaxa/images/credits.ppm
 share/galaxa/images/explode0.ppm
 share/galaxa/images/explode1.ppm
@@ -131,3 +120,14 @@ share/galaxa/images/ship_1_5.ppm
 share/galaxa/images/ship_1_6.ppm
 share/galaxa/images/ship_1_7.ppm
 share/galaxa/images/tractorbeam.ppm
+share/galaxa/sounds/buzz.au
+share/galaxa/sounds/capture.au
+share/galaxa/sounds/fireworks.au
+share/galaxa/sounds/flash.au
+share/galaxa/sounds/hurt.au
+share/galaxa/sounds/intro.au
+share/galaxa/sounds/kill.au
+share/galaxa/sounds/nextlevel.au
+share/galaxa/sounds/shot.au
+share/galaxa/sounds/tractorbeam.au
+share/galaxa/sounds/welcome.au

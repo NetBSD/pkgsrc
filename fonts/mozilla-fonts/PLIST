@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2014/06/01 16:35:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:32 rillig Exp $
+share/doc/mozilla-fonts/README
 share/fonts/X11/Mozilla/cour1.pcf.gz
 share/fonts/X11/Mozilla/cour2.pcf.gz
 share/fonts/X11/Mozilla/cour3.pcf.gz
@@ -85,4 +86,3 @@ share/fonts/X11/Mozilla/timesi4.pcf.gz
 share/fonts/X11/Mozilla/timesi5.pcf.gz
 share/fonts/X11/Mozilla/timesi6.pcf.gz
 share/fonts/X11/Mozilla/timesi7.pcf.gz
-share/doc/mozilla-fonts/README

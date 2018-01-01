@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2012/03/31 21:52:56 shattered Exp $
+@comment $NetBSD: PLIST,v 1.15 2018/01/01 22:29:19 rillig Exp $
 bin/eggdrop
 ${PLIST.dynamic}lib/eggdrop/assoc.so
 ${PLIST.dynamic}lib/eggdrop/blowfish.so
@@ -25,7 +25,6 @@ share/doc/eggdrop/PARTYLINE
 share/doc/eggdrop/TEXT-SUBSTITUTIONS
 share/doc/eggdrop/TRICKS
 share/doc/eggdrop/USERS
-share/doc/eggdrop/tcl-commands.doc
 share/doc/eggdrop/html/about.html
 share/doc/eggdrop/html/app-problems.html
 share/doc/eggdrop/html/app-textsub.html
@@ -63,6 +62,7 @@ share/doc/eggdrop/html/readme.html
 share/doc/eggdrop/html/starting.html
 share/doc/eggdrop/html/tcl-commands.html
 share/doc/eggdrop/html/users.html
+share/doc/eggdrop/tcl-commands.doc
 share/eggdrop/help/cmds1.help
 share/eggdrop/help/cmds2.help
 share/eggdrop/help/core.help

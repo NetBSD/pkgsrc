@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:30:00 rillig Exp $
 bin/xml2doc
+man/man1/xml2doc.1
 share/doc/xml2doc/BUGS
 share/doc/xml2doc/README
 share/doc/xml2doc/TODO
@@ -7,7 +8,6 @@ share/doc/xml2doc/examples/align.xml
 share/doc/xml2doc/examples/colors.xml
 share/doc/xml2doc/examples/font.xml
 share/doc/xml2doc/examples/images.xml
+share/doc/xml2doc/examples/list.xml
 share/doc/xml2doc/examples/manpage.xml
 share/doc/xml2doc/examples/sep.xml
-share/doc/xml2doc/examples/list.xml
-man/man1/xml2doc.1

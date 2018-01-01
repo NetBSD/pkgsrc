@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:13:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:54 rillig Exp $
 bin/libcrack_mkdict
 bin/libcrack_packer
 bin/libcrack_testlib
@@ -8,6 +8,6 @@ bin/libcrack_unpacker
 include/cracklib/crack.h
 include/cracklib/packer.h
 lib/libcrack.la
+libdata/pw_dict.hwm
 libdata/pw_dict.pwd
 libdata/pw_dict.pwi
-libdata/pw_dict.hwm

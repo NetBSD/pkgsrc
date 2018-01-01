@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:05:49 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:43 rillig Exp $
 include/VU.h
 include/VUX.h
 include/vsip.h
@@ -6,14 +6,14 @@ lib/libVU.a
 lib/libVU.so
 lib/libVU.so.0
 lib/libVU.so.0.0
-lib/libVU_p.a
-lib/libVU_pic.a
 lib/libVUX.a
 lib/libVUX.so
 lib/libVUX.so.0
 lib/libVUX.so.0.0
 lib/libVUX_p.a
 lib/libVUX_pic.a
+lib/libVU_p.a
+lib/libVU_pic.a
 lib/libvsip.a
 lib/libvsip.so
 lib/libvsip.so.0
@@ -21,7 +21,7 @@ lib/libvsip.so.0.0
 lib/libvsip_p.a
 lib/libvsip_pic.a
 share/doc/tasp-vsipl/Copyright
-share/doc/tasp-vsipl/README_FIRST
 share/doc/tasp-vsipl/Copyright.pdf
+share/doc/tasp-vsipl/README_FIRST
 share/doc/tasp-vsipl/VU_functions.pdf
 share/doc/tasp-vsipl/tasp_core_plus_book.pdf

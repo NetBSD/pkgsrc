@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.4 2009/09/01 16:44:26 hasso Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:23 rillig Exp $
 bin/ilur
 include/IL/devil_cpp_wrapper.hpp
 include/IL/il.h
 include/IL/ilu.h
 include/IL/ilu_region.h
 include/IL/ilut.h
+info/DevIL_manual.info
 lib/libIL.la
 lib/libILU.la
 lib/libILUT.la
 lib/pkgconfig/IL.pc
 lib/pkgconfig/ILU.pc
 lib/pkgconfig/ILUT.pc
-info/DevIL_manual.info

@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:32 joerg Exp $
-lib/tcl/TclDOM/pkgIndex.tcl
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:30:00 rillig Exp $
 lib/tcl/TclDOM/dom.tcl
 lib/tcl/TclDOM/dommap.tcl
-share/doc/tcl/TclDOM/reference.html
+lib/tcl/TclDOM/pkgIndex.tcl
 share/doc/tcl/TclDOM/changes
+share/doc/tcl/TclDOM/reference.html

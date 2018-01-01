@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2016/08/21 09:53:55 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.18 2018/01/01 22:30:03 rillig Exp $
 bin/wwwoffle
 bin/wwwoffle-fsck
 bin/wwwoffle-gunzip
@@ -14,8 +14,8 @@ libdata/wwwoffle-spool.tar.gz
 man/man1/wwwoffle.1
 man/man5/wwwoffle.conf.5
 man/man8/wwwoffled.8
-sbin/wwwoffle-upgrade-config.pl
 sbin/wwwoffle-upgrade-config-2.0-2.5.pl
+sbin/wwwoffle-upgrade-config.pl
 sbin/wwwoffled
 share/doc/wwwoffle/CHANGES.CONF
 share/doc/wwwoffle/COPYING

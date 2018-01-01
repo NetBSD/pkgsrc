@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2014/06/01 16:35:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:33 rillig Exp $
+share/doc/terminus-font/AUTHORS
+share/doc/terminus-font/CHANGES
+share/doc/terminus-font/OFL.TXT
+share/doc/terminus-font/README
+share/doc/terminus-font/README-BG
+share/examples/terminus-font/75-yes-terminus.conf
 share/fonts/X11/misc/ter-112b.pcf.gz
 share/fonts/X11/misc/ter-112n.pcf.gz
 share/fonts/X11/misc/ter-114b.pcf.gz
@@ -233,9 +239,3 @@ share/fonts/X11/misc/ter-x28b.pcf.gz
 share/fonts/X11/misc/ter-x28n.pcf.gz
 share/fonts/X11/misc/ter-x32b.pcf.gz
 share/fonts/X11/misc/ter-x32n.pcf.gz
-share/doc/terminus-font/AUTHORS
-share/doc/terminus-font/CHANGES
-share/doc/terminus-font/OFL.TXT
-share/doc/terminus-font/README
-share/doc/terminus-font/README-BG
-share/examples/terminus-font/75-yes-terminus.conf

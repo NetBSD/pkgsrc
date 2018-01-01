@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/01/11 10:52:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/01/01 22:29:24 rillig Exp $
 share/aclocal/codeset.m4
 share/aclocal/exported.m4
 share/aclocal/extern-inline.m4
@@ -15,10 +15,10 @@ share/aclocal/intlmacosx.m4
 share/aclocal/intmax.m4
 share/aclocal/inttypes-pri.m4
 share/aclocal/inttypes_h.m4
+share/aclocal/lcmessage.m4
 share/aclocal/lib-ld.m4
 share/aclocal/lib-link.m4
 share/aclocal/lib-prefix.m4
-share/aclocal/lcmessage.m4
 share/aclocal/lock.m4
 share/aclocal/longlong.m4
 share/aclocal/nls.m4

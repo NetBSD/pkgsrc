@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.33 2017/03/20 18:42:50 khorben Exp $
+@comment $NetBSD: PLIST,v 1.34 2018/01/01 22:29:20 rillig Exp $
+${PLIST.dbus}bin/purple-client-example
+${PLIST.dbus}bin/purple-remote
+${PLIST.dbus}bin/purple-send
+${PLIST.dbus}bin/purple-send-async
+${PLIST.dbus}bin/purple-url-handler
 include/libpurple/account.h
 include/libpurple/accountopt.h
 include/libpurple/blist.h
@@ -10,7 +15,13 @@ include/libpurple/cmds.h
 include/libpurple/connection.h
 include/libpurple/conversation.h
 include/libpurple/core.h
+${PLIST.dbus}include/libpurple/dbus-bindings.h
+${PLIST.dbus}include/libpurple/dbus-define-api.h
 include/libpurple/dbus-maybe.h
+${PLIST.dbus}include/libpurple/dbus-purple.h
+${PLIST.dbus}include/libpurple/dbus-server.h
+${PLIST.dbus}include/libpurple/dbus-types.h
+${PLIST.dbus}include/libpurple/dbus-useful.h
 include/libpurple/debug.h
 include/libpurple/desktopitem.h
 include/libpurple/dnsquery.h
@@ -64,10 +75,12 @@ include/libpurple/value.h
 include/libpurple/version.h
 include/libpurple/whiteboard.h
 include/libpurple/xmlnode.h
+${PLIST.dbus}lib/libpurple-client.la
 lib/libpurple.la
 lib/pkgconfig/purple.pc
 lib/purple-2/autoaccept.la
 lib/purple-2/buddynote.la
+${PLIST.dbus}lib/purple-2/dbus-example.la
 lib/purple-2/idle.la
 lib/purple-2/joinpart.la
 lib/purple-2/libaim.la
@@ -83,9 +96,10 @@ lib/purple-2/libxmpp.la
 lib/purple-2/libzephyr.la
 lib/purple-2/log_reader.la
 lib/purple-2/newline.la
-lib/purple-2/offlinemsg.la
-lib/purple-2/psychic.la
 ${PLIST.nss}lib/purple-2/nss-prefs.la
+lib/purple-2/offlinemsg.la
+${PLIST.perl}lib/purple-2/perl.la
+lib/purple-2/psychic.la
 ${PLIST.gnutls}lib/purple-2/ssl-gnutls.la
 ${PLIST.nss}lib/purple-2/ssl-nss.la
 lib/purple-2/ssl.la
@@ -195,17 +209,3 @@ share/sounds/purple/login.wav
 share/sounds/purple/logout.wav
 share/sounds/purple/receive.wav
 share/sounds/purple/send.wav
-${PLIST.dbus}bin/purple-client-example
-${PLIST.dbus}bin/purple-remote
-${PLIST.dbus}bin/purple-send
-${PLIST.dbus}bin/purple-send-async
-${PLIST.dbus}bin/purple-url-handler
-${PLIST.dbus}include/libpurple/dbus-bindings.h
-${PLIST.dbus}include/libpurple/dbus-define-api.h
-${PLIST.dbus}include/libpurple/dbus-purple.h
-${PLIST.dbus}include/libpurple/dbus-server.h
-${PLIST.dbus}include/libpurple/dbus-types.h
-${PLIST.dbus}include/libpurple/dbus-useful.h
-${PLIST.dbus}lib/libpurple-client.la
-${PLIST.dbus}lib/purple-2/dbus-example.la
-${PLIST.perl}lib/purple-2/perl.la

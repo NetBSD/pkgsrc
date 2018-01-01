@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/09/19 13:20:43 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:30:02 rillig Exp $
 man/man8/dansguardian.8
 sbin/dansguardian
 share/dansguardian/blockedflash.swf
@@ -100,8 +100,8 @@ share/examples/dansguardian/authplugins/ident.conf
 share/examples/dansguardian/authplugins/ip.conf
 share/examples/dansguardian/authplugins/proxy-basic.conf
 share/examples/dansguardian/authplugins/proxy-digest.conf
-${PLIST.cli}share/examples/dansguardian/contentscanners/commandlinescan.conf
 ${PLIST.clamd}share/examples/dansguardian/contentscanners/clamdscan.conf
+${PLIST.cli}share/examples/dansguardian/contentscanners/commandlinescan.conf
 share/examples/dansguardian/dansguardian.conf
 share/examples/dansguardian/dansguardianf1.conf
 share/examples/dansguardian/downloadmanagers/default.conf

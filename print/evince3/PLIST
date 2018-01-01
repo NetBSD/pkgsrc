@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2016/12/12 15:16:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/01/01 22:29:52 rillig Exp $
 bin/evince
 bin/evince-previewer
 bin/evince-thumbnailer
@@ -76,10 +76,10 @@ share/GConf/gsettings/evince.convert
 share/appdata/evince-comicsdocument.metainfo.xml
 ${PLIST.djvu}share/appdata/evince-djvudocument.metainfo.xml
 ${PLIST.dvi}share/appdata/evince-dvidocument.metainfo.xml
-${PLIST.xps}share/appdata/evince-xpsdocument.metainfo.xml
 share/appdata/evince-pdfdocument.metainfo.xml
 share/appdata/evince-psdocument.metainfo.xml
 share/appdata/evince-tiffdocument.metainfo.xml
+${PLIST.xps}share/appdata/evince-xpsdocument.metainfo.xml
 share/appdata/evince.appdata.xml
 share/applications/evince-previewer.desktop
 share/applications/evince.desktop

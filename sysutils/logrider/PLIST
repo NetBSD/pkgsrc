@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/07 08:49:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:57 rillig Exp $
 bin/logrider.sh
 bin/logtail.sh
-share/examples/logrider/ignore
 share/examples/logrider/hacking
-share/examples/logrider/violations
+share/examples/logrider/ignore
 share/examples/logrider/logrider.conf
+share/examples/logrider/violations
 share/examples/logrider/violations_ignore/cvspserver
 share/examples/logrider/violations_ignore/drweb-postfix
 share/examples/logrider/violations_ignore/ftp

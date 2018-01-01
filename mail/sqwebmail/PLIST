@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.12 2014/03/11 14:05:05 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/01/01 22:29:41 rillig Exp $
 bin/mimegpg
 libexec/courier/pcpd
 libexec/courier/sqwebmaild
 libexec/courier/sqwebpasswd
 libexec/courier/webmail/webmail
 man/man1/mimegpg.1
-sbin/webmaild.rc
 sbin/webgpg
+sbin/webmaild.rc
 share/courier/sqwebmail/cleancache.pl
 share/courier/sqwebmail/html/en
 share/courier/sqwebmail/html/en-us/CHARSET

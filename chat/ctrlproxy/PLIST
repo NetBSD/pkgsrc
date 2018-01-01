@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:37:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:19 rillig Exp $
 bin/ctrlproxy
 include/ctrlproxy-3.0/admin.h
 include/ctrlproxy-3.0/cache.h
@@ -18,8 +18,8 @@ include/ctrlproxy-3.0/repl.h
 include/ctrlproxy-3.0/settings.h
 include/ctrlproxy-3.0/ssl.h
 include/ctrlproxy-3.0/state.h
-include/ctrlproxy-3.0/util.h
 include/ctrlproxy-3.0/url.h
+include/ctrlproxy-3.0/util.h
 lib/pkgconfig/ctrlproxy.pc
 man/man1/ctrlproxy-admin.1
 man/man1/ctrlproxy.1

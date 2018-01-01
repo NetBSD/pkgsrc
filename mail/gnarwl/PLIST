@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/22 08:25:54 manu Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:40 rillig Exp $
 bin/gnarwl
-sbin/damnit
-man/man8/gnarwl.8
 man/man8/damnit.8
+man/man8/gnarwl.8
+sbin/damnit
 share/examples/gnarwl/badheaders.txt
 share/examples/gnarwl/blacklist.txt
-share/examples/gnarwl/header.txt
 share/examples/gnarwl/footer.txt
 share/examples/gnarwl/gnarwl.cfg
+share/examples/gnarwl/header.txt

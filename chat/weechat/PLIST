@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2017/09/25 17:53:18 maya Exp $
+@comment $NetBSD: PLIST,v 1.26 2018/01/01 22:29:20 rillig Exp $
 bin/weechat
 include/weechat/weechat-plugin.h
 lib/pkgconfig/weechat.pc
@@ -9,7 +9,11 @@ lib/weechat/plugins/exec.so
 lib/weechat/plugins/fifo.so
 lib/weechat/plugins/irc.so
 lib/weechat/plugins/logger.so
+${PLIST.lua}lib/weechat/plugins/lua.so
+${PLIST.perl}lib/weechat/plugins/perl.so
+${PLIST.python}lib/weechat/plugins/python.so
 lib/weechat/plugins/relay.so
+${PLIST.ruby}lib/weechat/plugins/ruby.so
 lib/weechat/plugins/script.so
 lib/weechat/plugins/trigger.so
 lib/weechat/plugins/xfer.so
@@ -26,7 +30,3 @@ share/locale/pt/LC_MESSAGES/weechat.mo
 share/locale/pt_BR/LC_MESSAGES/weechat.mo
 share/locale/ru/LC_MESSAGES/weechat.mo
 share/locale/tr/LC_MESSAGES/weechat.mo
-${PLIST.lua}lib/weechat/plugins/lua.so
-${PLIST.perl}lib/weechat/plugins/perl.so
-${PLIST.python}lib/weechat/plugins/python.so
-${PLIST.ruby}lib/weechat/plugins/ruby.so

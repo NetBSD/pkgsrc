@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2013/01/27 16:35:06 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:41 rillig Exp $
 share/doc/mimp/CHANGES
 share/doc/mimp/COPYING
 share/doc/mimp/CREDITS
@@ -14,7 +14,6 @@ share/horde/mimp/config/mime_drivers.php.dist
 share/horde/mimp/config/prefs.php.dist
 share/horde/mimp/folders.php
 share/horde/mimp/index.php
-share/horde/mimp/lib/MIMP.php
 share/horde/mimp/lib/MIME/Contents.php
 share/horde/mimp/lib/MIME/Viewer/alternative.php
 share/horde/mimp/lib/MIME/Viewer/html.php
@@ -22,6 +21,7 @@ share/horde/mimp/lib/MIME/Viewer/multipart.php
 share/horde/mimp/lib/MIME/Viewer/plain.php
 share/horde/mimp/lib/MIME/Viewer/related.php
 share/horde/mimp/lib/MIME/Viewer/status.php
+share/horde/mimp/lib/MIMP.php
 share/horde/mimp/lib/api.php
 share/horde/mimp/lib/base.php
 share/horde/mimp/lib/version.php
@@ -59,10 +59,10 @@ share/horde/mimp/po/fi_FI.po
 share/horde/mimp/po/fr_FR.po
 share/horde/mimp/po/hr_HR.po
 share/horde/mimp/po/hu_HU.po
-share/horde/mimp/po/mimp.pot
 share/horde/mimp/po/it_IT.po
 share/horde/mimp/po/ja_JP.po
 share/horde/mimp/po/lt_LT.po
+share/horde/mimp/po/mimp.pot
 share/horde/mimp/po/nl_NL.po
 share/horde/mimp/po/pl_PL.po
 share/horde/mimp/po/pt_BR.po
