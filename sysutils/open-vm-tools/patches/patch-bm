@@ -1,6 +1,6 @@
-$NetBSD: patch-bm,v 1.2 2016/10/09 03:41:56 ryoon Exp $
+$NetBSD: patch-bm,v 1.3 2018/01/01 06:56:01 ryoon Exp $
 
---- lib/wiper/wiperPosix.c.orig	2016-02-16 20:06:46.000000000 +0000
+--- lib/wiper/wiperPosix.c.orig	2017-12-15 19:09:51.000000000 +0000
 +++ lib/wiper/wiperPosix.c
 @@ -23,7 +23,7 @@
   *
@@ -11,7 +11,7 @@ $NetBSD: patch-bm,v 1.2 2016/10/09 03:41:56 ryoon Exp $
  #error This file should not be compiled on this platform.
  #endif
  
-@@ -70,7 +70,7 @@
+@@ -72,7 +72,7 @@
  /* Number of device numbers to store for device-mapper */
  #define WIPER_MAX_DM_NUMBERS 8
  
@@ -20,7 +20,7 @@ $NetBSD: patch-bm,v 1.2 2016/10/09 03:41:56 ryoon Exp $
  # define PROCFS "proc"
  #elif defined(__FreeBSD__) || defined(__APPLE__)
  # define PROCFS "procfs"
-@@ -158,6 +158,16 @@ static unsigned char *WiperGetSpace(Wipe
+@@ -159,6 +159,16 @@ static unsigned char *WiperGetSpace(Wipe
  static void WiperClean(WiperState *state);
  
  
@@ -37,7 +37,7 @@ $NetBSD: patch-bm,v 1.2 2016/10/09 03:41:56 ryoon Exp $
  #if defined(__linux__)
  
  #define MAX_DISK_MAJORS       256   /* should be enough for now */
-@@ -310,7 +320,7 @@ WiperIsDiskDevice(MNTINFO *mnt,         
+@@ -311,7 +321,7 @@ WiperIsDiskDevice(MNTINFO *mnt,         
     return FALSE;
  }
  
@@ -46,16 +46,16 @@ $NetBSD: patch-bm,v 1.2 2016/10/09 03:41:56 ryoon Exp $
  
  static Bool
  WiperIsDiskDevice(MNTINFO *mnt,         // IN: file system being considered
-@@ -571,7 +581,7 @@ WiperSinglePartition_GetSpace(const Wipe
-                               uint64 *free,       // OUT
-                               uint64 *total)      // OUT
+@@ -573,7 +583,7 @@ WiperSinglePartition_GetSpace(const Wipe
+                               uint64 *free,            // OUT/OPT
+                               uint64 *total)           // OUT
  {
 -#ifdef sun
 +#if defined(sun) || defined(__NetBSD__)
     struct statvfs statfsbuf;
  #else
     struct statfs statfsbuf;
-@@ -580,7 +590,7 @@ WiperSinglePartition_GetSpace(const Wipe
+@@ -582,7 +592,7 @@ WiperSinglePartition_GetSpace(const Wipe
  
     ASSERT(p);
  
@@ -64,7 +64,7 @@ $NetBSD: patch-bm,v 1.2 2016/10/09 03:41:56 ryoon Exp $
     if (statvfs(p->mountPoint, &statfsbuf) < 0) {
  #else
     if (Posix_Statfs(p->mountPoint, &statfsbuf) < 0) {
-@@ -588,7 +598,7 @@ WiperSinglePartition_GetSpace(const Wipe
+@@ -590,7 +600,7 @@ WiperSinglePartition_GetSpace(const Wipe
        return "Unable to statfs() the mount point";
     }
  

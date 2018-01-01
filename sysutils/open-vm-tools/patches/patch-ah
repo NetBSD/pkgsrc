@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.3 2016/10/09 03:41:56 ryoon Exp $
+$NetBSD: patch-ah,v 1.4 2018/01/01 06:56:01 ryoon Exp $
 
---- lib/file/fileIO.c.orig	2016-02-16 20:06:45.000000000 +0000
+--- lib/file/fileIO.c.orig	2017-12-15 19:09:51.000000000 +0000
 +++ lib/file/fileIO.c
 @@ -325,7 +325,7 @@ FileIO_Lock(FileIODescriptor *file,  // 
     FileIOResolveLockBits(&access);
@@ -13,7 +13,7 @@ $NetBSD: patch-ah,v 1.3 2016/10/09 03:41:56 ryoon Exp $
        ret = FILEIO_LOCK_FAILED;
 @@ -394,7 +394,7 @@ FileIO_Unlock(FileIODescriptor *file)  /
  
-    ASSERT(file);
+    ASSERT(file != NULL);
  
 -#if !defined(__FreeBSD__) && !defined(sun)
 +#if !defined(__FreeBSD__) && !defined(sun) && !defined(__NetBSD__)

@@ -1,17 +1,17 @@
-$NetBSD: patch-bc,v 1.3 2016/10/09 03:41:56 ryoon Exp $
+$NetBSD: patch-bc,v 1.4 2018/01/01 06:56:01 ryoon Exp $
 
---- lib/misc/posixPosix.c.orig	2016-02-16 20:06:46.000000000 +0000
+--- lib/misc/posixPosix.c.orig	2017-12-15 19:09:51.000000000 +0000
 +++ lib/misc/posixPosix.c
-@@ -47,7 +47,7 @@
- #include <sys/param.h>
- #include <sys/mount.h>
- #include <CoreFoundation/CoreFoundation.h>
+@@ -52,7 +52,7 @@
+ #include <spawn.h>
+ extern char **environ;
+ #endif
 -#elif defined(__FreeBSD__)
 +#elif defined(__FreeBSD__) || defined(__NetBSD__)
  #include <sys/param.h>
  #include <sys/mount.h>
  #elif defined(sun)
-@@ -65,7 +65,7 @@
+@@ -70,7 +70,7 @@ extern char **environ;
  #define VM_SYSTEM_HAS_GETGRNAM_R 1
  #endif
  
@@ -20,7 +20,7 @@ $NetBSD: patch-bc,v 1.3 2016/10/09 03:41:56 ryoon Exp $
  #  include <sys/syslimits.h>  // PATH_MAX
  # else
  #  include <limits.h>  // PATH_MAX
-@@ -1585,7 +1585,7 @@ Posix_Putenv(char *name)  // IN:
+@@ -1635,7 +1635,7 @@ Posix_Putenv(char *name)  // IN:
  }
  
  
@@ -29,7 +29,7 @@ $NetBSD: patch-bc,v 1.3 2016/10/09 03:41:56 ryoon Exp $
  
  /*
   *----------------------------------------------------------------------
-@@ -1746,7 +1746,7 @@ Posix_Unsetenv(const char *name)  // IN:
+@@ -1806,7 +1806,7 @@ Posix_Unsetenv(const char *name)  // IN:
  
  #if !defined(sun) // {
  
