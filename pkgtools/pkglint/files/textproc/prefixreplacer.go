@@ -127,6 +127,7 @@ func (pr *PrefixReplacer) SkipSpace() {
 	pr.rest = strings.TrimLeft(pr.rest, " \t")
 }
 
+// Since returns the substring between the mark and the current position.
 func (pr *PrefixReplacer) Since(mark PrefixReplacerMark) string {
 	return string(mark[:len(mark)-len(pr.rest)])
 }
