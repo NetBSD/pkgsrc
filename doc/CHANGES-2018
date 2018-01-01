@@ -1,4 +1,5 @@
-$NetBSD: CHANGES-2018,v 1.1 2018/01/01 01:26:07 jakllsch Exp $
+$NetBSD: CHANGES-2018,v 1.2 2018/01/01 06:57:47 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
+	Updated sysutils/open-vm-tools to 10.2.0 [ryoon 2018-01-01]
