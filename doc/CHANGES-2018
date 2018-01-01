@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.14 2018/01/01 21:29:27 adam Exp $
+$NetBSD: CHANGES-2018,v 1.15 2018/01/01 21:55:45 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -46,3 +46,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-hypothesis to 3.44.4 [adam 2018-01-01]
 	Updated devel/py-flake8-polyfill to 1.0.2 [adam 2018-01-01]
 	Updated textproc/py-cssselect to 1.0.3 [adam 2018-01-01]
+	Updated pkgtools/pkglint to 5.4.23 [rillig 2018-01-01]
