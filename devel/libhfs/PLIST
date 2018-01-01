@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:53 joerg Exp $
-lib/libhfs.la
-lib/librsrc.la
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:24 rillig Exp $
 include/libhfs/apple.h
 include/libhfs/data.h
 include/libhfs/hfs.h
 include/libhfs/libhfs.h
 include/libhfs/librsrc.h
 include/libhfs/rsrc.h
+lib/libhfs.la
+lib/librsrc.la
 share/doc/libhfs/charset.txt
 share/doc/libhfs/libhfs.txt
 share/doc/libhfs/librsrc.txt

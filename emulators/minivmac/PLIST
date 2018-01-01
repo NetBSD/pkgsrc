@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:51:06 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:27 rillig Exp $
 bin/minivmac
 share/doc/html/minivmac/about.html
-share/doc/html/minivmac/build.html
-share/doc/html/minivmac/credits.html
-share/doc/html/minivmac/license.html
-share/doc/html/minivmac/todo.html
 share/doc/html/minivmac/autoquit.html
+share/doc/html/minivmac/build.html
 share/doc/html/minivmac/contents.html
+share/doc/html/minivmac/credits.html
 share/doc/html/minivmac/default.html
+share/doc/html/minivmac/license.html
 share/doc/html/minivmac/manual.html
+share/doc/html/minivmac/todo.html

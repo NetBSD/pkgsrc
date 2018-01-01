@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:47 joerg Exp $
-bin/golddig
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:34 rillig Exp $
 bin/gdedit
-man/man6/golddig.6
+bin/golddig
 man/man6/gdedit.6
+man/man6/golddig.6
+share/golddig/default
 share/golddig/goldlev001
 share/golddig/goldlev002
 share/golddig/goldlev003
@@ -29,4 +30,3 @@ share/golddig/goldlev023
 share/golddig/goldlev024
 share/golddig/goldlev025
 share/golddig/goldlev026
-share/golddig/default
