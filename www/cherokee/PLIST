@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:17 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:30:02 rillig Exp $
 bin/CTK-run
 bin/cget
 bin/cherokee-admin-launcher
@@ -71,8 +71,8 @@ lib/cherokee/libplugin_fcgi.la
 lib/cherokee/libplugin_file.la
 lib/cherokee/libplugin_from.la
 lib/cherokee/libplugin_fullpath.la
-lib/cherokee/libplugin_gzip.la
 ${PLIST.geoip}lib/cherokee/libplugin_geoip.la
+lib/cherokee/libplugin_gzip.la
 lib/cherokee/libplugin_header.la
 lib/cherokee/libplugin_htdigest.la
 lib/cherokee/libplugin_htpasswd.la

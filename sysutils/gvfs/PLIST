@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2010/11/16 13:57:28 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/01/01 22:29:56 rillig Exp $
 bin/gvfs-cat
 bin/gvfs-copy
 bin/gvfs-info
@@ -74,8 +74,8 @@ share/locale/cs/LC_MESSAGES/gvfs.mo
 share/locale/da/LC_MESSAGES/gvfs.mo
 share/locale/de/LC_MESSAGES/gvfs.mo
 share/locale/el/LC_MESSAGES/gvfs.mo
-share/locale/en_GB/LC_MESSAGES/gvfs.mo
 share/locale/en@shaw/LC_MESSAGES/gvfs.mo
+share/locale/en_GB/LC_MESSAGES/gvfs.mo
 share/locale/es/LC_MESSAGES/gvfs.mo
 share/locale/et/LC_MESSAGES/gvfs.mo
 share/locale/eu/LC_MESSAGES/gvfs.mo

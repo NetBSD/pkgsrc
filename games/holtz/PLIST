@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/08/26 21:38:33 shattered Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:34 rillig Exp $
 bin/holtz
 bin/relax
 share/holtz/help/help_en.zip
@@ -21,4 +21,3 @@ share/holtz/skins/zertz80.zip
 share/holtz/sounds/beep.wav
 share/locale/de/LC_MESSAGES/holtz-hotkey.mo
 share/locale/de/LC_MESSAGES/holtz.mo
-

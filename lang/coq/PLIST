@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2017/11/03 11:20:28 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.23 2018/01/01 22:29:39 rillig Exp $
 bin/coq-tex
 bin/coq_makefile
 bin/coqc
@@ -27,7 +27,6 @@ lib/coq/engine/proofview_monad.cmi
 lib/coq/engine/termops.cmi
 lib/coq/engine/uState.cmi
 lib/coq/engine/universes.cmi
-lib/coq/config/coq_config.cmi
 lib/coq/grammar/grammar.cma
 lib/coq/grammar/q_util.cmi
 ${PLIST.coqide}lib/coq/ide/config_lexer.cmi
@@ -442,14 +441,14 @@ lib/coq/plugins/fourier/Fourier_util.v
 lib/coq/plugins/fourier/Fourier_util.vo
 lib/coq/plugins/fourier/fourier_plugin.cmi
 ${PLIST.natdynlink}lib/coq/plugins/fourier/fourier_plugin.cmxs
-${PLIST.native}lib/coq/plugins/funind/.coq-native/NCoq_funind_Recdef.cmi
-${PLIST.native}${PLIST.ocaml-opt}lib/coq/plugins/funind/.coq-native/NCoq_funind_Recdef.cmx
-${PLIST.native}${PLIST.natdynlink}lib/coq/plugins/funind/.coq-native/NCoq_funind_Recdef.cmxs
-${PLIST.native}${PLIST.ocaml-opt}lib/coq/plugins/funind/.coq-native/NCoq_funind_Recdef.o
 ${PLIST.native}lib/coq/plugins/funind/.coq-native/NCoq_funind_FunInd.cmi
 ${PLIST.native}${PLIST.ocaml-opt}lib/coq/plugins/funind/.coq-native/NCoq_funind_FunInd.cmx
 ${PLIST.native}${PLIST.natdynlink}lib/coq/plugins/funind/.coq-native/NCoq_funind_FunInd.cmxs
 ${PLIST.native}${PLIST.ocaml-opt}lib/coq/plugins/funind/.coq-native/NCoq_funind_FunInd.o
+${PLIST.native}lib/coq/plugins/funind/.coq-native/NCoq_funind_Recdef.cmi
+${PLIST.native}${PLIST.ocaml-opt}lib/coq/plugins/funind/.coq-native/NCoq_funind_Recdef.cmx
+${PLIST.native}${PLIST.natdynlink}lib/coq/plugins/funind/.coq-native/NCoq_funind_Recdef.cmxs
+${PLIST.native}${PLIST.ocaml-opt}lib/coq/plugins/funind/.coq-native/NCoq_funind_Recdef.o
 lib/coq/plugins/funind/FunInd.glob
 lib/coq/plugins/funind/FunInd.v
 lib/coq/plugins/funind/FunInd.vo
@@ -465,12 +464,6 @@ lib/coq/plugins/funind/indfun_common.cmi
 lib/coq/plugins/funind/recdef.cmi
 lib/coq/plugins/funind/recdef_plugin.cmi
 ${PLIST.natdynlink}lib/coq/plugins/funind/recdef_plugin.cmxs
-${PLIST.native}lib/coq/plugins/micromega/.coq-native/NCoq_micromega_Env.cmi
-${PLIST.native}${PLIST.ocaml-opt}lib/coq/plugins/micromega/.coq-native/NCoq_micromega_Env.cmx
-${PLIST.native}${PLIST.natdynlink}lib/coq/plugins/micromega/.coq-native/NCoq_micromega_Env.cmxs
-${PLIST.native}${PLIST.ocaml-opt}lib/coq/plugins/micromega/.coq-native/NCoq_micromega_Env.o
-lib/coq/plugins/ltac/ltac_plugin.cmi
-${PLIST.natdynlink}lib/coq/plugins/ltac/ltac_plugin.cmxs
 ${PLIST.native}lib/coq/plugins/ltac/.coq-native/NCoq_ltac_Ltac.cmi
 ${PLIST.native}${PLIST.ocaml-opt}lib/coq/plugins/ltac/.coq-native/NCoq_ltac_Ltac.cmx
 ${PLIST.native}${PLIST.natdynlink}lib/coq/plugins/ltac/.coq-native/NCoq_ltac_Ltac.cmxs
@@ -481,6 +474,8 @@ lib/coq/plugins/ltac/Ltac.vo
 lib/coq/plugins/ltac/evar_tactics.cmi
 lib/coq/plugins/ltac/extraargs.cmi
 lib/coq/plugins/ltac/extratactics.cmi
+lib/coq/plugins/ltac/ltac_plugin.cmi
+${PLIST.natdynlink}lib/coq/plugins/ltac/ltac_plugin.cmxs
 lib/coq/plugins/ltac/pltac.cmi
 lib/coq/plugins/ltac/pptactic.cmi
 lib/coq/plugins/ltac/profile_ltac.cmi
@@ -499,6 +494,10 @@ lib/coq/plugins/ltac/tactic_option.cmi
 lib/coq/plugins/ltac/tauto.cmi
 lib/coq/plugins/ltac/tauto_plugin.cmi
 ${PLIST.natdynlink}lib/coq/plugins/ltac/tauto_plugin.cmxs
+${PLIST.native}lib/coq/plugins/micromega/.coq-native/NCoq_micromega_Env.cmi
+${PLIST.native}${PLIST.ocaml-opt}lib/coq/plugins/micromega/.coq-native/NCoq_micromega_Env.cmx
+${PLIST.native}${PLIST.natdynlink}lib/coq/plugins/micromega/.coq-native/NCoq_micromega_Env.cmxs
+${PLIST.native}${PLIST.ocaml-opt}lib/coq/plugins/micromega/.coq-native/NCoq_micromega_Env.o
 ${PLIST.native}lib/coq/plugins/micromega/.coq-native/NCoq_micromega_EnvRing.cmi
 ${PLIST.native}${PLIST.ocaml-opt}lib/coq/plugins/micromega/.coq-native/NCoq_micromega_EnvRing.cmx
 ${PLIST.native}${PLIST.natdynlink}lib/coq/plugins/micromega/.coq-native/NCoq_micromega_EnvRing.cmxs
@@ -998,11 +997,11 @@ lib/coq/proofs/tacmach.cmi
 lib/coq/stm/asyncTaskQueue.cmi
 lib/coq/stm/coqworkmgrApi.cmi
 lib/coq/stm/dag.cmi
+lib/coq/stm/proofBlockDelimiter.cmi
 lib/coq/stm/spawned.cmi
 ${PLIST.ocaml-opt}lib/coq/stm/stm.a
 lib/coq/stm/stm.cmi
 ${PLIST.ocaml-opt}lib/coq/stm/stm.cmxa
-lib/coq/stm/proofBlockDelimiter.cmi
 lib/coq/stm/tQueue.cmi
 lib/coq/stm/vcs.cmi
 lib/coq/stm/vernac_classifier.cmi
@@ -1340,7 +1339,6 @@ lib/coq/theories/Classes/SetoidDec.vo
 lib/coq/theories/Classes/SetoidTactics.glob
 lib/coq/theories/Classes/SetoidTactics.v
 lib/coq/theories/Classes/SetoidTactics.vo
-${PLIST.native}lib/coq/theories/Compat/.coq-native/NCoq_Compat_Coq86.cmi
 ${PLIST.native}lib/coq/theories/Compat/.coq-native/NCoq_Compat_AdmitAxiom.cmi
 ${PLIST.native}${PLIST.ocaml-opt}lib/coq/theories/Compat/.coq-native/NCoq_Compat_AdmitAxiom.cmx
 ${PLIST.native}${PLIST.natdynlink}lib/coq/theories/Compat/.coq-native/NCoq_Compat_AdmitAxiom.cmxs
@@ -1349,11 +1347,10 @@ ${PLIST.native}lib/coq/theories/Compat/.coq-native/NCoq_Compat_Coq85.cmi
 ${PLIST.native}${PLIST.ocaml-opt}lib/coq/theories/Compat/.coq-native/NCoq_Compat_Coq85.cmx
 ${PLIST.native}${PLIST.natdynlink}lib/coq/theories/Compat/.coq-native/NCoq_Compat_Coq85.cmxs
 ${PLIST.native}${PLIST.ocaml-opt}lib/coq/theories/Compat/.coq-native/NCoq_Compat_Coq85.o
+${PLIST.native}lib/coq/theories/Compat/.coq-native/NCoq_Compat_Coq86.cmi
 ${PLIST.native}${PLIST.ocaml-opt}lib/coq/theories/Compat/.coq-native/NCoq_Compat_Coq86.cmx
 ${PLIST.native}${PLIST.natdynlink}lib/coq/theories/Compat/.coq-native/NCoq_Compat_Coq86.cmxs
 ${PLIST.native}${PLIST.ocaml-opt}lib/coq/theories/Compat/.coq-native/NCoq_Compat_Coq86.o
-lib/coq/theories/Compat/AdmitAxiom.glob
-lib/coq/theories/Compat/AdmitAxiom.v
 lib/coq/theories/Compat/AdmitAxiom.glob
 lib/coq/theories/Compat/AdmitAxiom.v
 lib/coq/theories/Compat/AdmitAxiom.vo
@@ -2212,12 +2209,12 @@ lib/coq/theories/Numbers/Integer/Abstract/ZDivTrunc.vo
 lib/coq/theories/Numbers/Integer/Abstract/ZGcd.glob
 lib/coq/theories/Numbers/Integer/Abstract/ZGcd.v
 lib/coq/theories/Numbers/Integer/Abstract/ZGcd.vo
-lib/coq/theories/Numbers/Integer/Abstract/ZLt.glob
-lib/coq/theories/Numbers/Integer/Abstract/ZLt.v
-lib/coq/theories/Numbers/Integer/Abstract/ZLt.vo
 lib/coq/theories/Numbers/Integer/Abstract/ZLcm.glob
 lib/coq/theories/Numbers/Integer/Abstract/ZLcm.v
 lib/coq/theories/Numbers/Integer/Abstract/ZLcm.vo
+lib/coq/theories/Numbers/Integer/Abstract/ZLt.glob
+lib/coq/theories/Numbers/Integer/Abstract/ZLt.v
+lib/coq/theories/Numbers/Integer/Abstract/ZLt.vo
 lib/coq/theories/Numbers/Integer/Abstract/ZMaxMin.glob
 lib/coq/theories/Numbers/Integer/Abstract/ZMaxMin.v
 lib/coq/theories/Numbers/Integer/Abstract/ZMaxMin.vo
@@ -2992,12 +2989,12 @@ lib/coq/theories/Reals/Exp_prop.vo
 lib/coq/theories/Reals/Integration.glob
 lib/coq/theories/Reals/Integration.v
 lib/coq/theories/Reals/Integration.vo
-lib/coq/theories/Reals/Machin.glob
-lib/coq/theories/Reals/Machin.v
-lib/coq/theories/Reals/Machin.vo
 lib/coq/theories/Reals/MVT.glob
 lib/coq/theories/Reals/MVT.v
 lib/coq/theories/Reals/MVT.vo
+lib/coq/theories/Reals/Machin.glob
+lib/coq/theories/Reals/Machin.v
+lib/coq/theories/Reals/Machin.vo
 lib/coq/theories/Reals/NewtonInt.glob
 lib/coq/theories/Reals/NewtonInt.v
 lib/coq/theories/Reals/NewtonInt.vo
@@ -3855,6 +3852,10 @@ ${PLIST.ocaml-opt}lib/coq/toplevel/toplevel.a
 ${PLIST.ocaml-opt}lib/coq/toplevel/toplevel.cmxa
 lib/coq/toplevel/usage.cmi
 lib/coq/toplevel/vernac.cmi
+${PLIST.natdynlink}${PLIST.coqide}lib/coq/toploop/coqidetop.cmxs
+${PLIST.natdynlink}lib/coq/toploop/proofworkertop.cmxs
+${PLIST.natdynlink}lib/coq/toploop/queryworkertop.cmxs
+${PLIST.natdynlink}lib/coq/toploop/tacworkertop.cmxs
 lib/coq/vernac/assumptions.cmi
 lib/coq/vernac/auto_ind_decl.cmi
 lib/coq/vernac/class.cmi
@@ -3878,10 +3879,6 @@ ${PLIST.ocaml-opt}lib/coq/vernac/vernac.cmxa
 lib/coq/vernac/vernacentries.cmi
 lib/coq/vernac/vernacinterp.cmi
 lib/coq/vernac/vernacprop.cmi
-${PLIST.natdynlink}${PLIST.coqide}lib/coq/toploop/coqidetop.cmxs
-${PLIST.natdynlink}lib/coq/toploop/proofworkertop.cmxs
-${PLIST.natdynlink}lib/coq/toploop/queryworkertop.cmxs
-${PLIST.natdynlink}lib/coq/toploop/tacworkertop.cmxs
 man/man1/coq-tex.1
 man/man1/coq_makefile.1
 man/man1/coqc.1

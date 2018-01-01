@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 21:00:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:48 rillig Exp $
 bin/owcimindicationlistener
 bin/owcreatenamespace
 bin/owdeletenamespace
@@ -9,9 +9,6 @@ bin/owenumqualifiers
 bin/owexecwql
 bin/owgetclass
 bin/owmofc
-share/examples/openwbem/openwbem.conf
-share/examples/openwbem/owgencert
-share/examples/openwbem/ssleay.cnf
 include/openwbem/CmpiArgs.h
 include/openwbem/CmpiArray.h
 include/openwbem/CmpiAssociationMI.h
@@ -476,6 +473,9 @@ sbin/owdigestgenpass
 sbin/owprovideragent
 sbin/owrepositorydump
 share/aclocal/openwbem.m4
+share/examples/openwbem/openwbem.conf
+share/examples/openwbem/owgencert
+share/examples/openwbem/ssleay.cnf
 share/openwbem/OpenWBEM_Acl1.0.mof
 share/openwbem/OpenWBEM_Interop.mof
 @pkgdir var/openwbem

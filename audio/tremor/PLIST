@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:32:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:18 rillig Exp $
+include/tremor/config_types.h
 include/tremor/ivorbiscodec.h
 include/tremor/ivorbisfile.h
 include/tremor/ogg.h
 include/tremor/os_types.h
-include/tremor/config_types.h
 lib/libvorbisidec.la

@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2014/06/01 16:35:34 wiz Exp $
-share/fonts/X11/local/elisat10.pcf.gz
-share/fonts/X11/local/jpnhn4-iso.pcf.gz
-share/fonts/X11/local/jpnhn4-jis.pcf.gz
+@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:31 rillig Exp $
 share/doc/elisat/elisa100.doc
 share/doc/elisat/elisat10.doc
 share/doc/elisat/elisat10.html
+share/fonts/X11/local/elisat10.pcf.gz
+share/fonts/X11/local/jpnhn4-iso.pcf.gz
+share/fonts/X11/local/jpnhn4-jis.pcf.gz
