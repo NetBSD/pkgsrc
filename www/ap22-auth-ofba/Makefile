@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/12/21 03:50:43 manu Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/01 10:23:08 wiz Exp $
 
 DISTNAME=	mod_auth_ofba-0.6
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/g}
@@ -15,7 +15,6 @@ USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	yes
 USE_APR=	yes
 
-PKG_APACHE_ACCEPTED=	apache22 apache24
 .include "../../mk/apache.mk"
 
 APACHE_MODULE_NAME=     mod_auth_ofba.${MODULE_EXT}

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/30 13:27:16 xtraeme Exp $
-include/httpd/mod_transform.h
-lib/httpd/mod_transform.so

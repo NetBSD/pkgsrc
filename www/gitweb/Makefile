@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2016/07/21 13:12:25 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2018/01/01 10:23:09 wiz Exp $
 
 .include "../../devel/git/Makefile.common"
 
@@ -7,7 +7,7 @@ CATEGORIES=	www
 
 COMMENT=	Web interface for GIT repositories
 
-#DEPENDS+=	apache{,2,22}-[0-9]*:../../www/apache22
+#DEPENDS+=	apache-[0-9]*:../../www/apache24
 DEPENDS+=	git-base>=${GIT_VERSION}:../../devel/git-base
 #DEPENDS+=	{perl>=5.15.8,p5-Time-HiRes>=1.9725}:../../time/p5-Time-HiRes
 DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
