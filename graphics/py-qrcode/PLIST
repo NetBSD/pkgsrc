@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/08/13 07:08:17 wen Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/01/01 18:33:33 rillig Exp $
 bin/qr${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -58,4 +58,4 @@ ${PYSITELIB}/qrcode/tests/test_script.pyo
 ${PYSITELIB}/qrcode/util.py
 ${PYSITELIB}/qrcode/util.pyc
 ${PYSITELIB}/qrcode/util.pyo
-${PKGMANDIR}/man1/qr${PYVERSSUFFIX}.1
+man/man1/qr${PYVERSSUFFIX}.1

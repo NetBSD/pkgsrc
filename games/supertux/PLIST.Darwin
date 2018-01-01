@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.Darwin,v 1.2 2018/01/01 18:33:33 rillig Exp $
 MacOS/libjpeg.dylib
 MacOS/libpng.dylib
 MacOS/libz.dylib
