@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2017/02/12 06:25:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2018/01/01 01:15:25 rillig Exp $
 
 PKGNAME=	gabedit-2.4.8
 PKGREVISION=	3
 DISTNAME=	GabeditSrc248
 CATEGORIES=	biology
-MASTER_SITES=	$(MASTER_SITE_SOURCEFORGE:=gabedit/)
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gabedit/}
 
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://gabedit.sourceforge.net/
-COMMENT=	A Graphical User Interface to computational chemistry packages
+COMMENT=	Graphical User Interface to computational chemistry packages
 
 USE_TOOLS=	gmake pkg-config
 
@@ -21,10 +21,10 @@ CHECK_PORTABILITY_SKIP=	utils/Dalton/SGE/submitDalton \
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 do-configure:
-	cd $(WRKSRC) && cp platforms/CONFIG.unix CONFIG
+	cd ${WRKSRC} && cp platforms/CONFIG.unix CONFIG
 
 do-install:
-	$(INSTALL_PROGRAM) $(WRKSRC)/gabedit $(DESTDIR)$(PREFIX)/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/gabedit ${DESTDIR}${PREFIX}/bin
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../graphics/gtkglext/buildlink3.mk"

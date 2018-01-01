@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/07/09 06:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2018/01/01 01:16:43 rillig Exp $
 
 DISTNAME=	mpqc-2.3.1
 PKGREVISION=	6
@@ -13,9 +13,9 @@ COMMENT=	The Massively Parallel Quantum Chemistry Program
 USE_LANGUAGES=	c c++ fortran77
 PKGSRC_FORTRAN=	f2c # XXX force f2c for now
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--with-libdirs="-L${PREFIX}/lib $(COMPILER_RPATH_FLAG)$(PREFIX)/lib"	# fixme
+CONFIGURE_ARGS+=	--with-libdirs="-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib"	# fixme
 #CONFIGURE_ARGS=	-without-f77	# this doesn't work out of the box
-CONFIGURE_ENV=	ac_cv_prog_WISH=$(REPLACE.wish.new)
+CONFIGURE_ENV=	ac_cv_prog_WISH=${REPLACE.wish.new}
 USE_TOOLS+=	perl:run
 USE_LIBTOOL=	yes
 
@@ -23,7 +23,7 @@ USE_TOOLS+=	gmake
 BUILD_TARGET=	default
 
 # This is strange, yet...
-INSTALL_MAKE_FLAGS=	installroot=$(DESTDIR)
+INSTALL_MAKE_FLAGS=	installroot=${DESTDIR}
 
 REPLACE_PERL=	src/bin/mpqc/ccarun.in src/bin/mpqc/mpqcrun.in
 
