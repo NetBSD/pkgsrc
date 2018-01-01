@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2016/03/11 20:32:30 asau Exp $
+# $NetBSD: Makefile,v 1.23 2018/01/01 18:16:36 rillig Exp $
 
 DISTNAME=		ecl-16.1.2
 CATEGORIES=		lang
-MASTER_SITES=		https://common-lisp.net/project/ecl/files/release/$(PKGVERSION_NOREV)/
+MASTER_SITES=		https://common-lisp.net/project/ecl/files/release/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		asau@inbox.ru

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/09/04 18:00:49 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2018/01/01 18:16:35 rillig Exp $
 #
 
 DISTNAME=	rio007
@@ -17,7 +17,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
 WRKSRC=		${WRKDIR}/rio107
 MAKE_FILE=	makefile
 USE_LANGUAGES=	c++
-LIBS.NetBSD=	-l$(MACHINE_ARCH)
+LIBS.NetBSD=	-l${MACHINE_ARCH}
 
 INSTALLATION_DIRS=	bin
 SPECIAL_PERMS=		bin/rio ${SETUID_ROOT_PERMS}
