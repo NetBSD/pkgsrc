@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/12/10 14:50:09 fhajny Exp $
-lib/pdns/pdns/libldapbackend.la
+@comment $NetBSD: PLIST,v 1.5 2018/01/02 12:18:15 fhajny Exp $
+lib/pdns/libldapbackend.la
+share/doc/pdns/dnsdomain2.schema
+share/doc/pdns/pdns-domaininfo.schema
