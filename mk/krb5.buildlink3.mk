@@ -1,4 +1,4 @@
-# $NetBSD: krb5.buildlink3.mk,v 1.13 2016/04/11 04:22:34 dbj Exp $
+# $NetBSD: krb5.buildlink3.mk,v 1.14 2018/01/02 05:39:00 maya Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Kerberos 5 implementation.  krb5.buildlink3.mk will:
@@ -50,11 +50,6 @@ KRB5BASE=	${BUILDLINK_PREFIX.${KRB5_TYPE}}
 
 BUILD_DEFS+=		KRB5_DEFAULT
 BUILD_DEFS_EFFECTS+=	KRB5BASE KRB5_TYPE
-
-# Packages that use Kerberos are automatically categorized as restricted
-# packages.
-#
-CRYPTO+=	uses Kerberos encryption code
 
 .endif	# KRB5_BUILDLINK3_MK
 
