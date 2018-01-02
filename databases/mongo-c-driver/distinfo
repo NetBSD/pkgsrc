@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.28 2017/11/20 16:06:11 fhajny Exp $
+$NetBSD: distinfo,v 1.29 2018/01/02 10:47:52 fhajny Exp $
 
-SHA1 (mongo-c-driver-1.8.2.tar.gz) = 17f9a31eb42059c090e0ddd743e812f76f038fb0
-RMD160 (mongo-c-driver-1.8.2.tar.gz) = 8d8954a9d35986c5b6508fff90416d8e76cf2f2c
-SHA512 (mongo-c-driver-1.8.2.tar.gz) = af23601ba33694d80acdb890c1b85a354fda966491c4bbfb341a884bcd6314886e405efa3a09e47398adf8dbfdeb1b05ae8b022a72f04a66265bfaeddb661f76
-Size (mongo-c-driver-1.8.2.tar.gz) = 7308675 bytes
-SHA1 (patch-src_mongoc_mongoc-cursor.c) = 9e0ada19f237972c9671bd90ff656ab9249f694f
+SHA1 (mongo-c-driver-1.9.0.tar.gz) = bb1c4fde8306c474f4971c34cc9955c0843c7ed6
+RMD160 (mongo-c-driver-1.9.0.tar.gz) = 6a7c3d55c9ae2dcf1e825cb462266d2eb6820c9e
+SHA512 (mongo-c-driver-1.9.0.tar.gz) = 9bbada2c03f3f283f66bd67e11b2cd556a721bc98ddbb9aed2d200780992990326dbf97aa9b1636175cf6ac0a6da13874787fc881f3750b07b0e5e622dc8a606
+Size (mongo-c-driver-1.9.0.tar.gz) = 7492996 bytes
+SHA1 (patch-src_mongoc_mongoc-cursor.c) = 0ecd4681b2d6c2e7848e251d6256d79e3ba86209
 SHA1 (patch-tests_test-mongoc-stream-tls-error.c) = 457bf0c4692e39955c7cb2988324d386b7975cb5
