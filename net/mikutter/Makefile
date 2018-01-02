@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.150 2017/12/30 05:05:14 tsutsui Exp $
+# $NetBSD: Makefile,v 1.151 2018/01/02 02:43:59 tsutsui Exp $
 #
 
 DISTNAME=	mikutter.3.6.0
+PKGREVISION=	1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
@@ -10,6 +11,8 @@ MAINTAINER=	tsutsui@NetBSD.org
 HOMEPAGE=	http://mikutter.hachune.net/
 COMMENT=	Simple, powerful, and moeful twitter client
 LICENSE=	mit AND cc-by-sa-v3.0
+
+RUBY_VERSIONS_ACCEPTED=	23 24
 
 .include "../../lang/ruby/rubyversion.mk"
 
