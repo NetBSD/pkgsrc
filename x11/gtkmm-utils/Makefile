@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2017/08/16 21:22:14 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2018/01/02 22:54:26 rillig Exp $
 #
 
 DISTNAME=	gtkmm-utils-0.4.1
@@ -9,6 +9,7 @@ MASTER_SITES=	http://gtkmm-utils.googlecode.com/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/markoa/gtkmm-utils
 COMMENT=	C++ utility and widget library based on glibmm and gtkmm
+LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++11

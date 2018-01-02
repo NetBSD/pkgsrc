@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/05/05 00:47:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2018/01/02 23:33:44 rillig Exp $
 #
 
 DISTNAME=	geoclue-0.12.0
@@ -9,7 +9,7 @@ MASTER_SITES=	http://folks.o-hand.com/jku/geoclue-releases/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/wiki/Software/GeoClue
 COMMENT=	Geoinformation service API and base providers
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
