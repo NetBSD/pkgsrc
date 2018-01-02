@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2017/11/15 20:28:27 minskim Exp $
+$NetBSD: distinfo,v 1.40 2018/01/02 09:58:47 jperkin Exp $
 
 SHA1 (hdf5-1.10.1.tar.bz2) = 22edee1f4ed603ea9544daec3492874fa3028bbb
 RMD160 (hdf5-1.10.1.tar.bz2) = 759e63ead405740dcf3260bdc9644b97480f3b8b
@@ -13,4 +13,5 @@ SHA1 (patch-hl_c++_examples_Makefile.in) = a65d0461a6e1ac464e089703f9f5ab6c1dcf1
 SHA1 (patch-hl_c++_examples_run-hlc++-ex.sh.in) = 166d7c570e93948e68308d9e0584df8d19bdfec9
 SHA1 (patch-hl_examples_Makefile.in) = df3650c121152471a045e1fec169eedeea757377
 SHA1 (patch-hl_examples_run-hlc-ex.sh.in) = 43bf6c28fb667f3ae39145be08e0a3a75f370b47
+SHA1 (patch-src_H5private.h) = dbf7e44248b653274fbe1e0f7429d723107c6cdd
 SHA1 (patch-tools_test_h5jam_testh5jam.sh.in) = c23e66454bf817b68120d360c63329ebed6ac2aa
