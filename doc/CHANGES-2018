@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.17 2018/01/02 08:40:40 adam Exp $
+$NetBSD: CHANGES-2018,v 1.18 2018/01/02 09:24:19 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -50,3 +50,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/pkglint to 5.4.24 [maya 2018-01-02]
 	Updated www/py-websocket-client to 0.46.0 [adam 2018-01-02]
 	Updated archivers/py-lz4 to 0.18.1 [adam 2018-01-02]
+	Updated archivers/pigz to 2.4 [fhajny 2018-01-02]
