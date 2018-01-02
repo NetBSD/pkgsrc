@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2017/08/16 20:45:47 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2018/01/02 22:56:02 rillig Exp $
 
 DISTNAME=	hot-babe-0.2.2
 PKGREVISION=	26
@@ -8,6 +8,7 @@ CATEGORIES=	x11
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://dindinx.net/hotbabe/
 COMMENT=	System load monitor
+LICENSE=	artistic
 
 USE_TOOLS+=	pkg-config
 
