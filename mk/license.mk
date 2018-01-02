@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.80 2017/05/11 12:56:21 jperkin Exp $
+# $NetBSD: license.mk,v 1.81 2018/01/02 22:40:32 rillig Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -97,10 +97,10 @@
 
 # This list is not complete.  Free and Open Source licenses should be
 # added to the list as they are added to pkgsrc.
-
+#
 # The convention is that Free or Open Source licenses do not have a
 # -license suffix, and nonfree licenses end in -license.
-
+#
 DEFAULT_ACCEPTABLE_LICENSES= \
 	apache-1.1 apache-2.0 \
 	arphic-public \
@@ -236,3 +236,51 @@ PKG_FAIL_REASON+= \
 .endif
 
 .endif
+
+# guess-license:
+#	Extracts the current package and tries to guess its license.
+#	This is useful for package developers.
+#
+# Keywords: license
+
+guess-license:
+	${RUN} ${MAKE} extract
+	${RUN} \
+	type wdiff > /dev/null 2>&1 || ${FAIL_MSG} "To guess the license, textproc/wdiff must be installed."; \
+	\
+	printf "%8s   %s\n" "Wdiff" "License"; \
+	bestsize=1000000; \
+	bestlicense=; \
+	for pkglicense in ${WRKSRC}/COPYING ${WRKSRC}/LICENSE; do \
+	    for license in ${PKGSRCDIR}/licenses/*; do \
+	      if [ -f "$$pkglicense" ] && [ -f "$$license" ]; then \
+	        size=`{ wdiff -3 "$$pkglicense" "$$license" || true; } | wc -c`; \
+	        if [ "$$size" -lt "$$bestsize" ]; then \
+	          printf "%8d   %s\n" "$$size" "$${license##*/}"; \
+	          bestsize="$$size"; \
+	          bestlicense="$$license"; \
+	        fi \
+	      fi \
+	    done; \
+	  if [ "$$bestlicense" ]; then \
+	    break; \
+	  fi \
+	done; \
+	\
+	if [ "$$bestlicense" ]; then \
+	  if [ "$$bestsize" -lt 3000 ]; then \
+	    echo ""; \
+	    echo "Line differences in license texts:"; \
+	    echo ""; \
+	    diff -wu "$$pkglicense" "$$bestlicense" || true; \
+	    echo ""; \
+	    echo "Word differences in license texts:"; \
+	    echo ""; \
+	    wdiff -3 "$$pkglicense" "$$bestlicense" || true; \
+	  else \
+	    echo ""; \
+	    echo "No similar enough license found."; \
+	  fi \
+	else \
+	  echo "No license file found in ${WRKSRC}."; \
+	fi
