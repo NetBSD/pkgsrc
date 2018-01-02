@@ -1,12 +1,12 @@
-$NetBSD: patch-kqueuemplexer.cc,v 1.3 2017/03/09 13:43:49 fhajny Exp $
+$NetBSD: patch-kqueuemplexer.cc,v 1.4 2018/01/02 12:23:55 fhajny Exp $
 
 kqueue systems normally have sys/event.h
 
---- kqueuemplexer.cc.orig	2017-01-13 08:55:55.000000000 +0000
+--- kqueuemplexer.cc.orig	2017-12-04 12:51:03.000000000 +0000
 +++ kqueuemplexer.cc
-@@ -29,9 +29,7 @@
+@@ -28,9 +28,7 @@
+ #include <unistd.h>
  #include "misc.hh"
- #include "syncres.hh"
  #include <sys/types.h>
 -#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
  #include <sys/event.h>
