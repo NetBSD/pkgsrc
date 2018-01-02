@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2013/06/17 11:46:28 joerg Exp $
+# $NetBSD: Makefile,v 1.42 2018/01/02 05:37:24 maya Exp $
 
 DISTNAME=		srp-1.4.4
 PKGNAME=		srp-client-1.4.4
@@ -15,7 +15,6 @@ RESTRICTED=		Licensor makes vague patent claims.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-CRYPTO=			yes
 GNU_CONFIGURE=		yes
 
 CPPFLAGS+=		-Dunix=1
