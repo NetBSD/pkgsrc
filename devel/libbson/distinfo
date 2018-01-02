@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2017/11/20 16:05:04 fhajny Exp $
+$NetBSD: distinfo,v 1.29 2018/01/02 10:42:30 fhajny Exp $
 
-SHA1 (libbson-1.8.2.tar.gz) = af9503cbb9e011ca3bff612881995eec73fe7dc0
-RMD160 (libbson-1.8.2.tar.gz) = 1cdfa049b9d16963cdd0001e5871e8975ec693f1
-SHA512 (libbson-1.8.2.tar.gz) = a0d9e0e3acdeb03f2de4507330cda36b2bcdeb2420ab4a0b342fe666799113f4384859af70d02d3c01ef1e4e0b8f2a06732ed14f86b386452508c680acb9b94d
-Size (libbson-1.8.2.tar.gz) = 4885188 bytes
+SHA1 (libbson-1.9.0.tar.gz) = 7f6de865e982f583c32067b6239792f0dee3cfb5
+RMD160 (libbson-1.9.0.tar.gz) = 598c186e7ac043683c23c51a715232f7cc7ba564
+SHA512 (libbson-1.9.0.tar.gz) = 0ce74334953e74881584521041fac6cffc9d2fcac8a77e42e137418e33fba09048f14ec264024253897191a1de20b37b24d89968e9f8e5ffe7b4f8fc6991b23c
+Size (libbson-1.9.0.tar.gz) = 4923026 bytes
