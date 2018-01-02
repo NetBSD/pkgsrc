@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/23 18:16:56 asau Exp $
+# $NetBSD: Makefile,v 1.22 2018/01/02 05:37:24 maya Exp $
 #
 
 DISTNAME=		rc5-mlg-004
@@ -24,7 +24,6 @@ EMUL_REQD=		netbsd>=1.2
 EMUL_REQD=		netbsd>=1.3
 .endif
 
-CRYPTO=			yes
 NO_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/RC5
 
