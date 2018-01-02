@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2017/03/17 16:26:30 mef Exp $
+# $NetBSD: Makefile,v 1.46 2018/01/02 00:08:42 rillig Exp $
 
 DISTNAME=	bugzilla-5.0.3
 CATEGORIES=	www devel
@@ -105,7 +105,7 @@ SUBST_CLASSES+=		diff
 SUBST_STAGE.diff=	post-configure
 SUBST_MESSAGE.diff=	Fixing diff path used for Patch Viewer (Ignore depending on OS)
 SUBST_FILES.diff=	localconfig
-SUBST_SED.diff=		-e "s|\$diffpath = .*|\$diffpath = \'${DIFF}\';|" -e "s|/diff||"
+SUBST_SED.diff=		-e "s|\$$diffpath = .*|\$$diffpath = \'${DIFF:C,/[^/]+$,,}\';|"
 
 INSTALLATION_DIRS+=	${DOCDIR} ${DOCDIR}/en ${EGDIR} ${BZDIR} ${BZDIR}/Bugzilla
 INSTALLATION_DIRS+=	${BZDIR}/js ${BZDIR}/lib ${BZDIR}/template ${BZDIR}/skins
@@ -120,7 +120,7 @@ FILES_SUBST+=   WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
                 BZDIR=${BZDIR}
 
 do-configure:
-	(cd ${WRKSRC}; ./checksetup.pl)
+	cd ${WRKSRC} && ./checksetup.pl
 
 post-extract:
 	${CP} ${FILESDIR}/bugzilla.conf	${WRKSRC}
