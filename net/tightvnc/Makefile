@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2017/08/22 09:05:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.52 2018/01/02 05:37:22 maya Exp $
 
 DISTNAME=		tightvnc-1.3.10
 PKGREVISION=		15
@@ -13,7 +13,6 @@ COMMENT=		Display X and Win32 desktops on remote X/Win32/Java displays
 CONFLICTS=		vnc-[0-9]* vncviewer-[0-9]*
 
 WRKSRC=			${WRKDIR}/vnc_unixsrc
-CRYPTO=			yes
 USE_IMAKE=		yes
 USE_TOOLS+=		perl:run
 MAKE_JOBS_SAFE=		no

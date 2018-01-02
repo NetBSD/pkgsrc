@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2017/02/24 19:08:30 tsutsui Exp $
+# $NetBSD: Makefile,v 1.67 2018/01/02 05:37:22 maya Exp $
 
 DISTNAME=		fp_${FLASH_VERSION}_archive
 PKGNAME=		adobe-flash-plugin-${FLASH_VERSION}
@@ -24,8 +24,6 @@ WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty
 EXTRACT_SUFX=		.zip
 USE_TOOLS+=		tar
-
-CRYPTO=			yes
 
 EMUL_PLATFORMS=		linux-i386 linux-x86_64
 EMUL_MODULES.linux=	gtk2 x11 krb5 alsa curl nss nspr
