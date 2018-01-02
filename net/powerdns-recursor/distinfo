@@ -1,14 +1,15 @@
-$NetBSD: distinfo,v 1.21 2017/08/02 20:15:42 fhajny Exp $
+$NetBSD: distinfo,v 1.22 2018/01/02 12:23:55 fhajny Exp $
 
-SHA1 (pdns-recursor-4.0.6.tar.bz2) = 70c27e604841f833000416e9f06835ee92fd3616
-RMD160 (pdns-recursor-4.0.6.tar.bz2) = 93aeaaa2b26834f0a2cbea7421b6fe01a82d048e
-SHA512 (pdns-recursor-4.0.6.tar.bz2) = 2203fd96469deded1da677344485da221eec036b1ad9fb418a89cd4477d73f2a6fcf984a39b574561df6946f440ddf1982de20cd39d7204da9c27e74216d1159
-Size (pdns-recursor-4.0.6.tar.bz2) = 1105423 bytes
-SHA1 (patch-configure) = aba2ac9f8e28dc16e9f94b2d91ff0d81be07b287
+SHA1 (pdns-recursor-4.1.0.tar.bz2) = b7a5ed70f55c9269b65b2403d1d56a2ee43d0c28
+RMD160 (pdns-recursor-4.1.0.tar.bz2) = a8b8c0f7e46cf2841ae25f6ac406bf555260c583
+SHA512 (pdns-recursor-4.1.0.tar.bz2) = 1e4d70f3794005c3f45b2ec0ab580c3697e7de3096f3378b9b9d1cd53f10f95e577522ca9f634eb235b166f007e8a2bfa99f312ddf19f266ad4bb0965167fd7c
+Size (pdns-recursor-4.1.0.tar.bz2) = 1222751 bytes
+SHA1 (patch-configure) = 5c91dcbc43a51bf30af200e234f18eb9b7458e6f
 SHA1 (patch-dns.hh) = 7e9c1b10a066a605b74ebdbee2d894aed50f6c68
 SHA1 (patch-ext_json11_json11.cpp) = 2de8ea8b51556bd3e3c1a88f681697eff239ab1a
 SHA1 (patch-iputils.hh) = 9de7c58db7468da9fd2a175464becdbe339fac9d
-SHA1 (patch-kqueuemplexer.cc) = 87b3b6670393ee60fc96cf91c5acf575adfd06c0
-SHA1 (patch-m4_pdns__check__os.m4) = fd84d61d71ec6eed7c9570a2d62c49646a0a4f4a
+SHA1 (patch-kqueuemplexer.cc) = ff1685111c98c085e74bd64f27dfaae6fbe1e8b3
+SHA1 (patch-m4_pdns__check__os.m4) = 0e23d942944ad752fbbc0029745789ce47744628
+SHA1 (patch-portsmplexer.cc) = b4d447d88d9f2a4e9c0dffb40a41a0e5fde7255a
 SHA1 (patch-qtype.hh) = f14eb9ad7efc7dd4a0ce220c1f93044ef69e99c2
 SHA1 (patch-version.cc) = 117d440f16c9095c03e28b305b85e03ea6e65c8a

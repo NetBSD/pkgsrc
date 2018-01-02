@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2017/09/03 08:53:13 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2018/01/02 12:23:55 fhajny Exp $
 #
 
-DISTNAME=		pdns-recursor-4.0.6
+DISTNAME=		pdns-recursor-4.1.0
 CATEGORIES=		net
 MASTER_SITES=		http://downloads.powerdns.com/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -31,9 +31,8 @@ CONF_FILES+=		${EGDIR}/recursor.conf-dist \
 CXXFLAGS+=	-Wno-c++11-narrowing
 .endif
 
-.include "options.mk"
-
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
