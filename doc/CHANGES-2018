@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.27 2018/01/02 12:24:05 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.28 2018/01/02 15:55:12 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -66,3 +66,9 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/powerdns-odbc to 4.1.0 [fhajny 2018-01-02]
 	Updated net/powerdns-pgsql to 4.1.0 [fhajny 2018-01-02]
 	Updated net/powerdns-recursor to 4.1.0 [fhajny 2018-01-02]
+	Updated mail/dovecot2 to 2.3.0 [fhajny 2018-01-02]
+	Updated mail/dovecot2-gssapi to 2.3.0 [fhajny 2018-01-02]
+	Updated mail/dovecot2-ldap to 2.3.0 [fhajny 2018-01-02]
+	Updated mail/dovecot2-mysql to 2.3.0 [fhajny 2018-01-02]
+	Updated mail/dovecot2-pgsql to 2.3.0 [fhajny 2018-01-02]
+	Updated mail/dovecot2-sqlite to 2.3.0 [fhajny 2018-01-02]
