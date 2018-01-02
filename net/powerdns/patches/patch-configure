@@ -1,15 +1,15 @@
-$NetBSD: patch-configure,v 1.6 2017/08/24 20:59:22 he Exp $
+$NetBSD: patch-configure,v 1.7 2018/01/02 12:18:15 fhajny Exp $
 
 Regen after excluding -latomic test on NetBSD.
 
---- configure.orig	2017-08-24 16:29:40.591346034 +0000
+--- configure.orig	2017-11-30 09:43:31.000000000 +0000
 +++ configure
-@@ -5567,9 +5567,14 @@ else
+@@ -5569,9 +5569,14 @@ else
  fi
  
  
 -  case "$host" in
--  mips* | powerpc* )
+-  mips* | powerpc-* )
 -    { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether the linker accepts -latomic" >&5
 +  case "$host_os" in
 +  netbsd*)
@@ -17,19 +17,37 @@ Regen after excluding -latomic test on NetBSD.
 +    ;;
 +  *)
 +    case "$host" in
-+    mips* | powerpc* )
++    mips* | powerpc-* )
 +      { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether the linker accepts -latomic" >&5
  $as_echo_n "checking whether the linker accepts -latomic... " >&6; }
- if ${ax_cv_check_ldflags___latomic+:} false; then :
-   $as_echo_n "(cached) " >&6
-@@ -5606,7 +5611,9 @@ else
+     LDFLAGS="-latomic $LDFLAGS"
+     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+@@ -5593,7 +5598,9 @@ else
  
  fi
- 
--    LDFLAGS="-latomic $LDFLAGS"
-+      LDFLAGS="-latomic $LDFLAGS"
+ rm -f core conftest.err conftest.$ac_objext \
+-    conftest$ac_exeext conftest.$ac_ext
++      conftest$ac_exeext conftest.$ac_ext
 +      ;;
 +    esac
      ;;
    esac
+ 
+@@ -20586,7 +20593,7 @@ fi
+ 
+   if test "x$PG_CONFIG" != "x" -o "x$PGSQL_LIBS" = "x"; then :
+ 
+-        if test "x$PG_CONFIG" == "x"; then :
++        if test "x$PG_CONFIG" = "x"; then :
+ 
+       # Extract the first word of "pg_config", so it can be a program name with args.
+ set dummy pg_config; ac_word=$2
+@@ -20630,7 +20637,7 @@ fi
+ 
+ 
+ fi
+-    if test "x$PG_CONFIG" == "x"; then :
++    if test "x$PG_CONFIG" = "x"; then :
+ 
+       as_fn_error $? "Can not find pg_config, use --with-pg-config to specify the path to pg_config" "$LINENO" 5
  
