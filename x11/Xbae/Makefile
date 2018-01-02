@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/29 05:06:06 asau Exp $
+# $NetBSD: Makefile,v 1.30 2018/01/02 21:11:10 rillig Exp $
 #
 
 DISTNAME=	xbae-4.51.01
@@ -18,6 +18,15 @@ CONFIGURE_ARGS+=	--with-motif-includes=${MOTIFBASE}/include
 CONFIGURE_ARGS+=	--with-motif-libraries=${MOTIFBASE}/lib
 
 INSTALLATION_DIRS=	share/aclocal
+
+SUBST_CLASSES+=		dirs
+SUBST_STAGE.dirs=	post-patch
+SUBST_FILES.dirs=	Makefile.in doc/Makefile.in doc/images/Makefile.in src/Makefile.in
+SUBST_SED.dirs=		-e '/^mandir =/         s,=.*,= @mandir@,'
+SUBST_SED.dirs+=	-e '/^SUBDIRS =/        s,examples,,'
+SUBST_SED.dirs+=	-e '/^docdir =/         s,=.*,= $$(datadir)/doc/Xbae,'
+SUBST_SED.dirs+=	-e '/^imagedir =/       s,=.*,= $$(datadir)/doc/Xbae/images,'
+SUBST_SED.dirs+=	-e '/^install-data-am:/ s,install-htmlDATA,,'
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/ac_find_xbae.m4 ${DESTDIR}${PREFIX}/share/aclocal
