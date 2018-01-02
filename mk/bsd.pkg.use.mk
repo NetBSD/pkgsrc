@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.66 2017/03/05 10:38:37 kamil Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.67 2018/01/02 05:49:44 maya Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -62,7 +62,6 @@ PREFIX=			${LOCALBASE}
 ### PKG_USE_KERBEROS
 
 .if defined(PKG_USE_KERBEROS)
-CRYPTO?=		uses Kerberos encryption code
 BUILD_DEFS+=		KERBEROS
 .endif
 
