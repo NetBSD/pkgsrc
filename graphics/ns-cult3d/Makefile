@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/09/03 08:36:55 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2018/01/02 05:37:22 maya Exp $
 #
 
 DISTNAME=	Cult3D_NS4_5.2b1
@@ -23,7 +23,6 @@ NO_CONFIGURE=		yes
 NO_BUILD=		yes
 USE_TOOLS+=		pax
 CHECK_SHLIBS_SUPPORTED=	no
-CRYPTO=			yes
 
 INSTALLATION_DIRS=	lib/netscape/plugins share/doc
 

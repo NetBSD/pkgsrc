@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/23 18:16:22 asau Exp $
+# $NetBSD: Makefile,v 1.34 2018/01/02 05:37:22 maya Exp $
 
 DISTNAME=		cfs-1.4.1
 PKGREVISION=		6
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.crypto.com/software/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.crypto.com/software/
 COMMENT=		Encrypting file system, using NFS as its interface
-
-CRYPTO=			# defined
 
 BUILD_TARGET=		cfs
 INSTALL_TARGET=		install_cfs

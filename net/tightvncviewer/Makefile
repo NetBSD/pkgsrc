@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2016/03/16 17:21:45 khorben Exp $
+# $NetBSD: Makefile,v 1.35 2018/01/02 05:37:22 maya Exp $
 
 DISTNAME=		tightvnc-1.3.10
 PKGNAME=		${DISTNAME:S/tightvnc/tightvncviewer/}
@@ -14,7 +14,6 @@ COMMENT=		Viewer for remote X and Win32 VNC servers
 CONFLICTS=		vncviewer-[0-9]*
 
 WRKSRC=			${WRKDIR}/vnc_unixsrc
-CRYPTO=			yes
 USE_IMAKE=		yes
 
 MAKE_FLAGS+=		CCOPTIONS=${CFLAGS:Q}
