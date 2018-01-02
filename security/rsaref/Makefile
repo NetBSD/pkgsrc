@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2014/10/09 14:06:56 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2018/01/02 05:37:24 maya Exp $
 #
 
 DISTNAME=		rsaref
@@ -17,7 +17,6 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/install
-CRYPTO=			yes
 
 USE_FEATURES+=		cdefs
 USE_LIBTOOL=		yes
