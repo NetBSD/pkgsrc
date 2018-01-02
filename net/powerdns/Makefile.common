@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.19 2017/09/03 08:53:13 wiz Exp $
+# $NetBSD: Makefile.common,v 1.20 2018/01/02 12:18:15 fhajny Exp $
 
-PDNS_VERSION=		4.0.4
+PDNS_VERSION=		4.1.0
 DISTNAME=		pdns-${PDNS_VERSION}
 CATEGORIES=		net
 MASTER_SITES=		http://downloads.powerdns.com/releases/
@@ -17,12 +17,8 @@ GNU_CONFIGURE=		yes
 
 BUILD_DEPENDS+=		ragel-[0-9]*:../../devel/ragel
 
-GNU_CONFIGURE_LIBSUBDIR=pdns
-
 CONFIGURE_ARGS+=	--without-lua
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
-
-BUILDLINK_TRANSFORM+=	rm:-fstack-protector
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"

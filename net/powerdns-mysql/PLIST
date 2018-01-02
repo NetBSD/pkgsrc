@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2014/12/10 14:50:09 fhajny Exp $
-lib/pdns/pdns/libgmysqlbackend.la
+@comment $NetBSD: PLIST,v 1.6 2018/01/02 12:18:15 fhajny Exp $
+lib/pdns/libgmysqlbackend.la
+share/doc/pdns/3.4.0_to_4.1.0_schema.mysql.sql
 share/doc/pdns/dnssec-3.x_to_3.4.0_schema.mysql.sql
 share/doc/pdns/nodnssec-3.x_to_3.4.0_schema.mysql.sql
 share/doc/pdns/schema.mysql.sql

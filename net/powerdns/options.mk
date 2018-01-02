@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2017/03/09 13:32:54 fhajny Exp $
+# $NetBSD: options.mk,v 1.6 2018/01/02 12:18:15 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.powerdns
 PKG_SUPPORTED_OPTIONS=	bind botan pipe random remote sqlite tools zeromq
@@ -14,9 +14,8 @@ PLIST.bind=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mbotan)
-CONFIGURE_ARGS+=	--enable-botan1.10
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../security/botan/buildlink3.mk"
+.include "../../security/botan-devel/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mpipe)
