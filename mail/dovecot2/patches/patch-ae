@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1.1.1 2010/11/05 12:00:39 adam Exp $
+$NetBSD: patch-ae,v 1.2 2018/01/02 15:52:44 fhajny Exp $
 
---- doc/example-config/conf.d/auth-system.conf.ext.orig	2010-11-04 13:34:46.000000000 +0000
+--- doc/example-config/conf.d/auth-system.conf.ext.orig	2017-12-22 13:53:36.000000000 +0000
 +++ doc/example-config/conf.d/auth-system.conf.ext
 @@ -7,21 +7,21 @@
  # PAM is typically used with either userdb passwd or userdb static.
@@ -16,7 +16,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2010/11/05 12:00:39 adam Exp $
 -}
 +#}
  
- # System users (NSS, /etc/passwd, or similiar).
+ # System users (NSS, /etc/passwd, or similar).
  # In many systems nowadays this uses Name Service Switch, which is
  # configured in /etc/nsswitch.conf. <doc/wiki/AuthDatabase.Passwd.txt>
 -#passdb {
@@ -28,5 +28,5 @@ $NetBSD: patch-ae,v 1.1.1.1 2010/11/05 12:00:39 adam Exp $
 -#}
 +}
  
- # Shadow passwords for system users (NSS, /etc/shadow or similiar).
+ # Shadow passwords for system users (NSS, /etc/shadow or similar).
  # Deprecated by PAM nowadays.

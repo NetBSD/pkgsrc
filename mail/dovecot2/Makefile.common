@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2017/10/22 07:07:34 adam Exp $
+# $NetBSD: Makefile.common,v 1.16 2018/01/02 15:52:44 fhajny Exp $
 #
 # when updating to a new release, update ABI depends in
 # the buildlink3.mk file as well, since the plugins' version
@@ -7,9 +7,9 @@
 # used by mail/dovecot2/Makefile
 # used by mail/dovecot2/Makefile.plugin
 
-DISTNAME=	dovecot-2.2.33.2
+DISTNAME=	dovecot-2.3.0
 CATEGORIES=	mail
-MASTER_SITES=	https://www.dovecot.org/releases/${PKGVERSION_NOREV:R:R}/
+MASTER_SITES=	https://www.dovecot.org/releases/${PKGVERSION_NOREV:R}/
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.dovecot.org/
@@ -18,6 +18,7 @@ LICENSE=	mit AND gnu-lgpl-v2.1 AND modified-bsd
 
 DISTINFO_FILE=	${.CURDIR}/../../mail/dovecot2/distinfo
 PATCHDIR=	${.CURDIR}/../../mail/dovecot2/patches
+WRKSRC=		${WRKDIR}/${DISTNAME:S/dovecot/dovecot-ce/}
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config rpcgen

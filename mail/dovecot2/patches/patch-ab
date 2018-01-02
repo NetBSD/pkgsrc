@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2014/10/20 10:15:16 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2018/01/02 15:52:44 fhajny Exp $
 
---- doc/example-config/dovecot.conf.orig	2014-09-10 10:38:57.000000000 +0000
+--- doc/example-config/dovecot.conf.orig	2017-12-22 13:53:36.000000000 +0000
 +++ doc/example-config/dovecot.conf
 @@ -16,12 +16,9 @@
  # Default values are shown for each setting, it's not required to uncomment
@@ -11,8 +11,8 @@ $NetBSD: patch-ab,v 1.4 2014/10/20 10:15:16 wiz Exp $
 -# --sysconfdir=/etc --localstatedir=/var
  
  # Protocols we want to be serving.
--#protocols = imap pop3 lmtp
-+protocols = imap pop3 lmtp
+-#protocols = imap pop3 lmtp submission
++protocols = imap pop3 lmtp submission
  
  # A comma separated list of IPs or hosts where to listen in for connections. 
  # "*" listens in all IPv4 interfaces, "::" listens in all IPv6 interfaces.
