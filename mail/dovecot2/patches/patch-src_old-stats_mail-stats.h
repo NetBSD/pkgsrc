@@ -1,9 +1,9 @@
-$NetBSD: patch-src_stats_mail-stats.h,v 1.2 2016/12/14 15:48:09 adam Exp $
+$NetBSD: patch-src_old-stats_mail-stats.h,v 1.1 2018/01/02 15:52:44 fhajny Exp $
 
 Fix build under NetBSD (at least amd64 7.0_BETA).
 
---- src/stats/mail-stats.h.orig	2016-12-03 17:13:21.000000000 +0000
-+++ src/stats/mail-stats.h
+--- src/old-stats/mail-stats.h.orig	2016-12-03 17:13:21.000000000 +0000
++++ src/old-stats/mail-stats.h
 @@ -9,6 +9,10 @@
  
  struct stats_send_ctx;
