@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2017/09/16 19:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/01/02 10:27:30 adam Exp $
 
-DISTNAME=	macholib-1.8
+DISTNAME=	macholib-1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/macholib/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://bitbucket.org/ronaldoussoren/macholib
 COMMENT=	Mach-O header analysis and editing
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-altgraph>=0.13:../../graphics/py-altgraph
+DEPENDS+=	${PYPKGPREFIX}-altgraph>=0.15:../../graphics/py-altgraph
 
 USE_LANGUAGES=	# none
 
