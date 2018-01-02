@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.20 2018/01/02 09:38:16 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.21 2018/01/02 10:37:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -53,3 +53,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/pigz to 2.4 [fhajny 2018-01-02]
 	Updated security/vault to 0.9.1 [fhajny 2018-01-02]
 	Updated devel/gradle to 4.4.1 [fhajny 2018-01-02]
+	Updated devel/kbuild to 0.1.9998.8.r3127 [wiz 2018-01-02]
