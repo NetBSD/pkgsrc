@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/29 05:06:20 asau Exp $
+# $NetBSD: Makefile,v 1.29 2018/01/02 22:51:36 rillig Exp $
 
 DISTNAME=		gtkstep-1.10
 PKGREVISION=		7
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		# gone AWOL in 2001 or so
 COMMENT=		GTK theme-engine to yield a NEXTSTEP(tm) look and feel
+LICENSE=		gnu-lgpl-v2
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
