@@ -1,4 +1,9 @@
-$NetBSD: patch-ab,v 1.3 2005/02/20 13:53:02 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2018/01/02 21:11:10 rillig Exp $
+
+C90 compilers do not accept declarations after the first statement.
+
+Xbae-4.60.4 doesn't need this patch anymore since the code looks entirely
+different.
 
 --- src/Matrix.c.orig	Wed Dec  8 20:11:39 2004
 +++ src/Matrix.c
