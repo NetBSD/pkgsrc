@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.26 2018/01/02 12:20:03 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.27 2018/01/02 12:24:05 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -65,3 +65,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/powerdns-mysql to 4.1.0 [fhajny 2018-01-02]
 	Updated net/powerdns-odbc to 4.1.0 [fhajny 2018-01-02]
 	Updated net/powerdns-pgsql to 4.1.0 [fhajny 2018-01-02]
+	Updated net/powerdns-recursor to 4.1.0 [fhajny 2018-01-02]
