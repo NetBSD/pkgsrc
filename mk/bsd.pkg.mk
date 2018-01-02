@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2028 2017/11/12 13:34:14 khorben Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2029 2018/01/02 05:49:44 maya Exp $
 #
 # This file is in the public domain.
 #
@@ -79,8 +79,6 @@ PKG_FAIL_REASON+=	"Circular dependency detected"
 ############################################################################
 # Transform package Makefile variables and set defaults
 ############################################################################
-
-MKCRYPTO?=		YES	# build crypto packages by default
 
 ##### Others
 
@@ -451,9 +449,6 @@ PATH=	${_PATH_COMPONENTS:ts:}
 # Don't build a package if it's restricted and we don't want to
 # get into that.
 #
-# Don't build any package that utilizes strong cryptography, for
-# when the law of the land forbids it.
-#
 # Don't attempt to build packages against X if we don't have X.
 #
 # Don't build a package if it's broken.
@@ -477,11 +472,6 @@ PKG_SKIP_REASON+= "${PKGNAME} may not be placed in source form on a CDROM:" \
 .  if (defined(RESTRICTED) && defined(NO_RESTRICTED))
 PKG_SKIP_REASON+= "${PKGNAME} is restricted:" \
 	 "    "${RESTRICTED:Q}
-.  endif
-.  if !(${MKCRYPTO} == "YES" || ${MKCRYPTO} == yes)
-.    if defined(CRYPTO)
-PKG_SKIP_REASON+= "${PKGNAME} may not be built, because it utilizes strong cryptography"
-.    endif
 .  endif
 .  if defined(USE_X11) && (${X11_TYPE} == "native") && !exists(${X11BASE})
 PKG_FAIL_REASON+= "${PKGNAME} uses X11, but ${X11BASE} not found"
