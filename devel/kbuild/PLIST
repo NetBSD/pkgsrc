@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/08 09:42:53 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/02 10:37:29 wiz Exp $
 bin/kDepIDB
 bin/kDepObj
 bin/kDepPre
@@ -26,6 +26,7 @@ bin/kmk_sed
 bin/kmk_sleep
 bin/kmk_test
 bin/kmk_time
+bin/kmk_touch
 share/doc/kBuild-0.1.9998/QuickReference-kBuild.txt
 share/doc/kBuild-0.1.9998/QuickReference-kmk.html
 share/doc/kBuild-0.1.9998/QuickReference-kmk.txt
@@ -120,6 +121,9 @@ share/kBuild/tools/VAC308.kmk
 share/kBuild/tools/VCC100.kmk
 share/kBuild/tools/VCC100AMD64.kmk
 share/kBuild/tools/VCC100X86.kmk
+share/kBuild/tools/VCC120.kmk
+share/kBuild/tools/VCC120AMD64.kmk
+share/kBuild/tools/VCC120X86.kmk
 share/kBuild/tools/VCC70.kmk
 share/kBuild/tools/VCC80.kmk
 share/kBuild/tools/VCC80AMD64.kmk
@@ -137,5 +141,6 @@ share/kBuild/units/lex.kmk
 share/kBuild/units/qt3.kmk
 share/kBuild/units/qt4.kmk
 share/kBuild/units/qt5.kmk
+share/kBuild/units/vccprecomp.kmk
 share/kBuild/units/yacc.kmk
 share/kBuild/up.kmk
