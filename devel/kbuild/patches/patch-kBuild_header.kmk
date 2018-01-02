@@ -1,24 +1,24 @@
-$NetBSD: patch-kBuild_header.kmk,v 1.1 2016/07/08 09:42:54 kamil Exp $
+$NetBSD: patch-kBuild_header.kmk,v 1.2 2018/01/02 10:37:29 wiz Exp $
 
 Add NetBSD support.
 
---- kBuild/header.kmk.orig	2016-04-29 00:52:38.000000000 +0000
-+++ kBuild/header.kmk
-@@ -610,10 +610,11 @@ SUFF_OBJ    := .o
+--- kBuild/header.kmk.orig	2017-10-31 19:58:59.266699000 +0900
++++ kBuild/header.kmk	2017-12-01 23:26:50.457456974 +0900
+@@ -648,10 +648,10 @@
  SUFF_LIB    := .a
  SUFF_DLL    := .so
  SUFF_EXE    :=
-- if1of ($(KBUILD_TARGET), dragonfly freebsd linux netbsd openbsd) ## @todo check netbsd and openbsd.
-+ if1of ($(KBUILD_TARGET), dragonfly freebsd linux)
+- if1of ($(KBUILD_TARGET), dragonfly freebsd gnukfbsd gnuknbsd linux netbsd openbsd) ## @todo check netbsd, gnuknbsd and openbsd.
++ if1of ($(KBUILD_TARGET), dragonfly freebsd gnukfbsd gnuknbsd linux openbsd) ## @todo check netbsd, gnuknbsd and openbsd.
  SUFF_SYS    := .ko
-+else ifeq ($(KBUILD_TARGET),netbsd)
-  else
+- else
 -SUFF_SYS    :=
++ else ifeq ($(KBUILD_TARGET),netbsd)
 +SUFF_SYS    := .kmod
   endif
  SUFF_RES    :=
  endif
-@@ -1337,8 +1338,7 @@ else
+@@ -1443,8 +1443,7 @@
   KBUILD_LIB_SEARCH_SUBS  :=
   KBUILD_LIB_SEARCH_ROOTS :=
  endif
@@ -28,7 +28,7 @@ Add NetBSD support.
  
  #
  # This is how we find the closest config.kmk.
-@@ -1617,4 +1617,3 @@ endif
+@@ -1744,4 +1743,3 @@
  # end-of-file-content
  __header_kmk__ := 1
  endif # !__header_kmk__
