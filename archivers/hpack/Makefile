@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2016/01/23 05:56:39 zafer Exp $
+# $NetBSD: Makefile,v 1.40 2018/01/02 05:37:22 maya Exp $
 
 DISTNAME=	hpack79src
 PKGNAME=	hpack-0.79
@@ -8,8 +8,6 @@ MASTER_SITES=	ftp://ftp.csc.fi/index/crypt/archive/idea.sec.dsi.unimi.it/code/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Multi-System Archiver with open keys PGP-based security
-
-CRYPTO=		yes
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}
