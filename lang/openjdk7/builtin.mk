@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2018/01/01 18:16:37 rillig Exp $
+# $NetBSD: builtin.mk,v 1.3 2018/01/02 00:15:08 rillig Exp $
 
 BUILTIN_PKG:=	openjdk7
 
@@ -27,7 +27,7 @@ MAKEVARS+=	IS_BUILTIN.openjdk7
 ###
 .if !defined(BUILTIN_PKG.openjdk7) && \
     !empty(IS_BUILTIN.openjdk7:M[yY][eE][sS])
-BUILTIN_VERSION.openjdk7!=	${OJDK7} -version 2>&1 | ${SED} -Ee 's:^[^0-9]*([0-9._]+)$:\1:' -e 's/_/./g' -e 's/([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)/\1.\2.\4/'
+BUILTIN_VERSION.openjdk7!=	${OJDK7} -version 2>&1 | ${SED} -Ee 's:^[^0-9]*([0-9._]+)$$:\1:' -e 's/_/./g' -e 's/([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)/\1.\2.\4/'
 BUILTIN_PKG.openjdk7=	openjdk7-${BUILTIN_VERSION.openjdk7}
 .endif
 MAKEVARS+=	BUILTIN_PKG.openjdk7
