@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2017/09/20 19:49:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2018/01/03 11:09:41 ryoon Exp $
 bin/capinfos
 bin/captype
 bin/dftest
@@ -9,6 +9,7 @@ bin/mergecap
 bin/randpkt
 bin/rawshark
 bin/reordercap
+bin/sharkd
 bin/text2pcap
 bin/tshark
 ${PLIST.gtk3}bin/wireshark-gtk
@@ -20,6 +21,7 @@ lib/libwsutil.la
 lib/pkgconfig/wireshark.pc
 lib/wireshark/extcap/androiddump
 lib/wireshark/extcap/randpktdump
+lib/wireshark/extcap/udpdump
 lib/wireshark/plugins/${PKGVERSION}/docsis.la
 lib/wireshark/plugins/${PKGVERSION}/ethercat.la
 lib/wireshark/plugins/${PKGVERSION}/gryphon.la
@@ -29,6 +31,7 @@ lib/wireshark/plugins/${PKGVERSION}/mate.la
 lib/wireshark/plugins/${PKGVERSION}/opcua.la
 lib/wireshark/plugins/${PKGVERSION}/profinet.la
 lib/wireshark/plugins/${PKGVERSION}/stats_tree.la
+lib/wireshark/plugins/${PKGVERSION}/transum.la
 lib/wireshark/plugins/${PKGVERSION}/unistim.la
 lib/wireshark/plugins/${PKGVERSION}/wimax.la
 lib/wireshark/plugins/${PKGVERSION}/wimaxasncp.la
@@ -45,6 +48,7 @@ man/man1/rawshark.1
 man/man1/reordercap.1
 man/man1/text2pcap.1
 man/man1/tshark.1
+man/man1/udpdump.1
 ${PLIST.mans}man/man1/wireshark.1
 man/man4/extcap.4
 man/man4/wireshark-filter.4
@@ -93,6 +97,8 @@ share/wireshark/diameter/CiscoSystems.xml
 share/wireshark/diameter/Custom.xml
 share/wireshark/diameter/Ericsson.xml
 share/wireshark/diameter/HP.xml
+share/wireshark/diameter/Inovar.xml
+share/wireshark/diameter/Juniper.xml
 share/wireshark/diameter/Nokia.xml
 share/wireshark/diameter/NokiaSolutionsAndNetworks.xml
 share/wireshark/diameter/Oracle.xml
@@ -187,12 +193,14 @@ share/wireshark/radius/dictionary.cisco.vpn3000
 share/wireshark/radius/dictionary.cisco.vpn5000
 share/wireshark/radius/dictionary.citrix
 share/wireshark/radius/dictionary.clavister
+share/wireshark/radius/dictionary.cnergee
 share/wireshark/radius/dictionary.colubris
 share/wireshark/radius/dictionary.columbia_university
 share/wireshark/radius/dictionary.compat
 share/wireshark/radius/dictionary.compatible
 share/wireshark/radius/dictionary.cosine
 share/wireshark/radius/dictionary.dante
+share/wireshark/radius/dictionary.dellemc
 share/wireshark/radius/dictionary.dhcp
 share/wireshark/radius/dictionary.digium
 share/wireshark/radius/dictionary.dlink
@@ -204,7 +212,6 @@ share/wireshark/radius/dictionary.equallogic
 share/wireshark/radius/dictionary.ericsson
 share/wireshark/radius/dictionary.ericsson.ab
 share/wireshark/radius/dictionary.ericsson.packet.core.networks
-share/wireshark/radius/dictionary.erx
 share/wireshark/radius/dictionary.extreme
 share/wireshark/radius/dictionary.f5
 share/wireshark/radius/dictionary.fdxtended
@@ -239,6 +246,7 @@ share/wireshark/radius/dictionary.manzara
 share/wireshark/radius/dictionary.meinberg
 share/wireshark/radius/dictionary.merit
 share/wireshark/radius/dictionary.meru
+share/wireshark/radius/dictionary.microsemi
 share/wireshark/radius/dictionary.microsoft
 share/wireshark/radius/dictionary.mikrotik
 share/wireshark/radius/dictionary.motorola
@@ -295,6 +303,7 @@ share/wireshark/radius/dictionary.rfc7055
 share/wireshark/radius/dictionary.rfc7155
 share/wireshark/radius/dictionary.rfc7268
 share/wireshark/radius/dictionary.rfc7499
+share/wireshark/radius/dictionary.rfc7930
 share/wireshark/radius/dictionary.riverbed
 share/wireshark/radius/dictionary.riverstone
 share/wireshark/radius/dictionary.roaringpenguin
@@ -321,6 +330,7 @@ share/wireshark/radius/dictionary.trapeze
 share/wireshark/radius/dictionary.travelping
 share/wireshark/radius/dictionary.tropos
 share/wireshark/radius/dictionary.ukerna
+share/wireshark/radius/dictionary.unisphere
 share/wireshark/radius/dictionary.unix
 share/wireshark/radius/dictionary.usr
 share/wireshark/radius/dictionary.utstarcom
@@ -350,6 +360,7 @@ share/wireshark/sshdump.html
 share/wireshark/text2pcap.html
 share/wireshark/tpncp/tpncp.dat
 share/wireshark/tshark.html
+share/wireshark/udpdump.html
 share/wireshark/wimaxasncp/dictionary.dtd
 share/wireshark/wimaxasncp/dictionary.xml
 share/wireshark/wireshark-filter.html
