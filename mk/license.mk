@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.81 2018/01/02 22:40:32 rillig Exp $
+# $NetBSD: license.mk,v 1.82 2018/01/03 00:41:37 rillig Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -242,16 +242,17 @@ PKG_FAIL_REASON+= \
 #	This is useful for package developers.
 #
 # Keywords: license
-
 guess-license:
-	${RUN} ${MAKE} extract
+	${RUN} [ -d ${WRKSRC} ] || ALLOW_VULNERABLE_PACKAGES=yes ${MAKE} fetch pre-extract do-extract
 	${RUN} \
+	${PHASE_MSG} "Guessing package license"; \
 	type wdiff > /dev/null 2>&1 || ${FAIL_MSG} "To guess the license, textproc/wdiff must be installed."; \
 	\
+	{ \
 	printf "%8s   %s\n" "Wdiff" "License"; \
 	bestsize=1000000; \
 	bestlicense=; \
-	for pkglicense in ${WRKSRC}/COPYING ${WRKSRC}/LICENSE; do \
+	for pkglicense in ${WRKSRC}/COPYING ${WRKSRC}/LICENSE ${WRKSRC}/COPYRIGHT; do \
 	    for license in ${PKGSRCDIR}/licenses/*; do \
 	      if [ -f "$$pkglicense" ] && [ -f "$$license" ]; then \
 	        size=`{ wdiff -3 "$$pkglicense" "$$license" || true; } | wc -c`; \
@@ -268,19 +269,16 @@ guess-license:
 	done; \
 	\
 	if [ "$$bestlicense" ]; then \
-	  if [ "$$bestsize" -lt 3000 ]; then \
-	    echo ""; \
-	    echo "Line differences in license texts:"; \
-	    echo ""; \
-	    diff -wu "$$pkglicense" "$$bestlicense" || true; \
-	    echo ""; \
-	    echo "Word differences in license texts:"; \
-	    echo ""; \
-	    wdiff -3 "$$pkglicense" "$$bestlicense" || true; \
-	  else \
-	    echo ""; \
-	    echo "No similar enough license found."; \
-	  fi \
+	  echo ""; \
+	  echo "Line differences in license texts:"; \
+	  echo ""; \
+	  diff -wu "$$bestlicense" "$$pkglicense" || true; \
+	  echo ""; \
+	  echo "Word differences in license texts:"; \
+	  echo ""; \
+	  wdiff -3 "$$bestlicense" "$$pkglicense" || true; \
 	else \
-	  echo "No license file found in ${WRKSRC}."; \
-	fi
+	  echo "No license file found in ${WRKSRC}:"; \
+	  ls -l ${WRKSRC}; \
+	fi \
+	} | $${PAGER:-less}
