@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.38 2018/01/03 20:48:37 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.39 2018/01/03 20:50:01 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -83,3 +83,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added lang/elixir version 1.5.2 [fhajny 2018-01-03]
 	Updated net/rabbitmq to 3.7.2 [fhajny 2018-01-03]
 	Updated security/erlang-fast_tls to 1.0.18 [fhajny 2018-01-03]
+	Updated textproc/erlang-fast_xml to 1.1.26 [fhajny 2018-01-03]
