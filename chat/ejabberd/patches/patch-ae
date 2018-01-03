@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.18 2017/10/17 14:55:36 fhajny Exp $
+$NetBSD: patch-ae,v 1.19 2018/01/03 22:51:30 fhajny Exp $
 
 - Default locations.
 - Use 'su -' instead of just 'su'. Fixes priv delegation on SunOS
@@ -7,9 +7,9 @@ $NetBSD: patch-ae,v 1.18 2017/10/17 14:55:36 fhajny Exp $
 - At least SunOS has not wheel group.
 - Portable grep calls.
 
---- ejabberdctl.template.orig	2017-09-28 13:21:11.000000000 +0000
+--- ejabberdctl.template.orig	2017-12-28 18:37:19.000000000 +0000
 +++ ejabberdctl.template
-@@ -57,8 +57,8 @@ done
+@@ -58,8 +58,8 @@ done
  
  # define ejabberd variables if not already defined from the command line
  : "${ETC_DIR:="{{sysconfdir}}/ejabberd"}"
@@ -20,16 +20,16 @@ $NetBSD: patch-ae,v 1.18 2017/10/17 14:55:36 fhajny Exp $
  : "${EJABBERD_CONFIG_PATH:="$ETC_DIR/ejabberd.yml"}"
  : "${EJABBERDCTL_CONFIG_PATH:="$ETC_DIR/ejabberdctl.cfg"}"
  [ -f "$EJABBERDCTL_CONFIG_PATH" ] && . "$EJABBERDCTL_CONFIG_PATH"
-@@ -109,7 +109,7 @@ export ERL_LIBS
+@@ -110,7 +110,7 @@ export ERL_LIBS
  exec_cmd()
  {
      case $EXEC_CMD in
--        as_install_user) su -c '"$0" "$@"' "$INSTALLUSER" -- "$@" ;;
+-        as_install_user) su -s /bin/sh -c '"$0" "$@"' "$INSTALLUSER" -- "$@" ;;
 +        as_install_user) su - "$INSTALLUSER" -c '"$@"' -- "$@" ;;
          as_current_user) "$@" ;;
      esac
  }
-@@ -208,14 +208,14 @@ uid()
+@@ -209,14 +209,14 @@ uid()
  # stop epmd if there is no other running node
  stop_epmd()
  {
