@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.31 2018/01/03 07:50:21 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.32 2018/01/03 07:51:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -75,3 +75,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/dovecot2-pigeonhole to 0.5.0 [fhajny 2018-01-02]
 	Updated time/p5-Time-HiRes to 1.9751 [wiz 2018-01-03]
 	Updated www/p5-Plack to 1.0045 [wiz 2018-01-03]
+	Updated devel/p5-Perl-Tidy to 20180101 [wiz 2018-01-03]
