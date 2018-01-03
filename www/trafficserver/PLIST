@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/17 14:57:09 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/03 15:55:36 fhajny Exp $
 bin/traffic_cop
 bin/traffic_crashlog
 bin/traffic_ctl
@@ -67,7 +67,7 @@ libexec/trafficserver/esi.la
 libexec/trafficserver/generator.la
 libexec/trafficserver/gzip.la
 libexec/trafficserver/header_rewrite.la
-libexec/trafficserver/healthchecks.la
+${PLIST.inotify}libexec/trafficserver/healthchecks.la
 libexec/trafficserver/libloader.la
 libexec/trafficserver/regex_remap.la
 libexec/trafficserver/regex_revalidate.la
