@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2017/08/01 14:58:59 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2018/01/03 00:29:23 rillig Exp $
 
 DISTNAME=	mesa-demos-8.2.0
 PKGNAME=	${DISTNAME:S/mesa-demos/MesaDemos/}
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://cgit.freedesktop.org/mesa/demos/
 COMMENT=	OpenGL examples and Demos
-#LICENSE=	# Similar to mit but with SGI advertising clause.
+#LICENSE=	# Each source file has a different license
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
