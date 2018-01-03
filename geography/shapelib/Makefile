@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/04 09:19:21 asau Exp $
+# $NetBSD: Makefile,v 1.7 2018/01/03 00:21:01 rillig Exp $
 #
 
 DISTNAME=		shapelib-1.2.10
@@ -9,6 +9,7 @@ MASTER_SITES=		http://shapelib.maptools.org/dl/
 MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://shapelib.maptools.org/
 COMMENT=		Library for reading, writing and updating (limited) ESRI Shapefiles
+LICENSE=		gnu-lgpl-v2 OR mit
 
 USE_LIBTOOL=		YES
 
