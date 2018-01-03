@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2018/01/01 21:18:31 adam Exp $
+# $NetBSD: Makefile,v 1.51 2018/01/03 00:25:17 rillig Exp $
 
 DISTNAME=	GMT4.1.4
 PKGNAME=	GMT-4.1.4
@@ -16,6 +16,7 @@ DISTFILES=	GMT4.1.4_man.tar.bz2 GMT4.1.4_pdf.tar.bz2	\
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gmt.soest.hawaii.edu/
 COMMENT=	Generic Mapping Tools
+LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
 
