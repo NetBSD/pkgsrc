@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.33 2018/01/03 08:08:33 adam Exp $
+$NetBSD: CHANGES-2018,v 1.34 2018/01/03 10:20:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -78,3 +78,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Perl-Tidy to 20180101 [wiz 2018-01-03]
 	Updated www/py-django to 1.11.9 [adam 2018-01-03]
 	Updated www/py-flask-limiter to 1.0.1 [adam 2018-01-03]
+	Updated www/php-nextcloud to 12.0.4 [ryoon 2018-01-03]
