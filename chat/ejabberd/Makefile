@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2017/12/29 16:16:47 gdt Exp $
+# $NetBSD: Makefile,v 1.80 2018/01/03 22:51:30 fhajny Exp $
 
-DISTNAME=	ejabberd-17.11
+DISTNAME=	ejabberd-17.12
 CATEGORIES=	chat
 MASTER_SITES=	https://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -17,10 +17,10 @@ DEPENDS+=	erlang-cache_tab>=1.0.12:../../devel/erlang-cache_tab
 DEPENDS+=	erlang-epam>=1.0.3:../../security/erlang-epam
 DEPENDS+=	erlang-eredis>=1.0.8.20150910:../../databases/erlang-eredis
 DEPENDS+=	erlang-eimp>=1.0.2:../../graphics/erlang-eimp
-DEPENDS+=	erlang-esip>=1.0.17:../../net/erlang-esip
+DEPENDS+=	erlang-esip>=1.0.18:../../net/erlang-esip
 DEPENDS+=	erlang-ezlib>=1.0.3:../../devel/erlang-ezlib
-DEPENDS+=	erlang-fast_tls>=1.0.17:../../security/erlang-fast_tls
-DEPENDS+=	erlang-fast_xml>=1.1.25:../../textproc/erlang-fast_xml
+DEPENDS+=	erlang-fast_tls>=1.0.18:../../security/erlang-fast_tls
+DEPENDS+=	erlang-fast_xml>=1.1.26:../../textproc/erlang-fast_xml
 DEPENDS+=	erlang-fast_yaml>=1.0.12:../../textproc/erlang-fast_yaml
 DEPENDS+=	erlang-fs>=2.12.0:../../devel/erlang-fs
 DEPENDS+=	erlang-iconv>=1.0.6:../../converters/erlang-iconv
@@ -33,8 +33,8 @@ DEPENDS+=	erlang-p1_oauth2>=0.6.2:../../security/erlang-p1_oauth2
 DEPENDS+=	erlang-p1_pgsql>=1.1.4:../../databases/erlang-p1_pgsql
 DEPENDS+=	erlang-p1_utils>=1.0.10:../../misc/erlang-p1_utils
 DEPENDS+=	erlang-stringprep>=1.0.10:../../textproc/erlang-stringprep
-DEPENDS+=	erlang-stun>=1.0.16:../../net/erlang-stun
-DEPENDS+=	erlang-xmpp>=1.1.16:../../net/erlang-xmpp
+DEPENDS+=	erlang-stun>=1.0.17:../../net/erlang-stun
+DEPENDS+=	erlang-xmpp>=1.1.17:../../net/erlang-xmpp
 
 GNU_CONFIGURE=		yes
 USE_GCC_RUNTIME=	yes
@@ -87,7 +87,7 @@ PKG_SHELL.${EJABBERD_USER}=	${SH}
 EGDIR=			share/examples/ejabberd
 
 INSTALLATION_DIRS+=	share/doc/${PKGBASE} ${EGDIR} share/bash-completion.d
-INSTALLATION_DIRS+=	lib/erlang/lib/${DISTNAME}/priv/sql
+INSTALLATION_DIRS+=	lib/${DISTNAME}/priv/sql
 
 CONF_FILES_PERMS=	${EGDIR}/ejabberd.yml ${PKG_SYSCONFDIR}/ejabberd.yml \
 			${REAL_ROOT_USER} ${EJABBERD_GROUP} 0640
@@ -114,7 +114,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/tools/ejabberdctl.bc			\
 		${DESTDIR}${PREFIX}/share/bash-completion.d/ejabberd
 	cd ${WRKSRC}/sql && ${INSTALL_DATA} *.sql			\
-		${DESTDIR}${PREFIX}/lib/erlang/lib/${PKGNAME_NOREV}/priv/sql
+		${DESTDIR}${PREFIX}/lib/${PKGNAME_NOREV}/priv/sql
 
 .include "../../lang/erlang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
