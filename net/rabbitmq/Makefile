@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.33 2017/11/07 15:48:06 fhajny Exp $
+# $NetBSD: Makefile,v 1.34 2018/01/03 13:16:58 fhajny Exp $
 
-DISTNAME=		rabbitmq-server-3.6.14
+DISTNAME=		rabbitmq-server-3.7.2
 PKGNAME=		${DISTNAME:S/-server//}
 CATEGORIES=		net
-MASTER_SITES=		http://www.rabbitmq.com/releases/rabbitmq-server/v${PKGVERSION_NOREV}/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=rabbitmq/}
 EXTRACT_SUFX=		.tar.xz
+GITHUB_PROJECT=		rabbitmq-server
+GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://www.rabbitmq.com/server.html
@@ -13,6 +15,7 @@ LICENSE=		mpl-1.1
 
 USE_TOOLS+=		bash:run gmake unzip zip
 
+BUILD_DEPENDS+=		elixir-[0-9]*:../../lang/elixir
 BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 BUILD_DEPENDS+=		rsync-[0-9]*:../../net/rsync
@@ -48,7 +51,7 @@ FILES_SUBST+=		RMQ_USER=${RMQ_USER}
 FILES_SUBST+=		RMQ_GROUP=${RMQ_GROUP}
 FILES_SUBST+=		RMQ_DIR=${RMQ_DIR}
 
-RABBITMQ_HOME=		${PREFIX}/lib/erlang/lib/rabbitmq_server-${PKGVERSION_NOREV}
+RABBITMQ_HOME=		lib/erlang/lib/rabbitmq_server-${PKGVERSION_NOREV}
 
 INSTALLATION_DIRS+=	share/examples/rabbitmq
 
@@ -64,13 +67,19 @@ SUBST_SED.paths=	-e 's|/etc/rabbitmq|${PKG_SYSCONFDIR}|g'
 SUBST_SED.paths+=	-e 's|/var/lib|${VARBASE}/db|g'
 SUBST_SED.paths+=	-e 's|/var/log|${VARBASE}/log|g'
 SUBST_SED.paths+=	-e 's|erl|${PREFIX}/bin/erl|g'
-SUBST_VARS.paths=	RABBITMQ_HOME
+SUBST_SED.paths+=	-e 's|@RABBITMQ_HOME@|${PREFIX}/${RABBITMQ_HOME}|g'
 
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmqctl
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-defaults
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-env
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-plugins
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-server
+
+# Too much effort to replace the shebang on generated files
+CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmq-diagnostics
+CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmq-plugins
+CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmqctl
+CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/sbin/cuttlefish
 
 MAKE_ENV+=		MANDIR="${PREFIX}/${PKGMANDIR}"
 MAKE_ENV+=		RMQ_BINDIR="${PREFIX}/sbin"
