@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2017/09/20 19:49:38 adam Exp $
+# $NetBSD: options.mk,v 1.16 2018/01/03 11:09:41 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wireshark
 PKG_SUPPORTED_OPTIONS=		gtk3 lua
@@ -33,9 +33,9 @@ PLIST.qt=		yes
 .endif
 
 .if empty(PKG_OPTIONS:Mgtk3)
-CONFIGURE_ARGS+=	--without-gtk3
+CONFIGURE_ARGS+=	--without-gtk
 .else
-CONFIGURE_ARGS+=	--with-gtk3
+CONFIGURE_ARGS+=	--with-gtk=3
 PLIST.gtk3=		yes
 POST_INSTALL_TARGETS+=	install-gtk-desktop
 .include "../../x11/gtk3/buildlink3.mk"
