@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.29 2018/01/02 15:55:25 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.30 2018/01/03 07:48:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -73,3 +73,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/dovecot2-pgsql to 2.3.0 [fhajny 2018-01-02]
 	Updated mail/dovecot2-sqlite to 2.3.0 [fhajny 2018-01-02]
 	Updated mail/dovecot2-pigeonhole to 0.5.0 [fhajny 2018-01-02]
+	Updated time/p5-Time-HiRes to 1.9751 [wiz 2018-01-03]
