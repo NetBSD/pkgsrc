@@ -1,27 +1,29 @@
-# $NetBSD: Makefile,v 1.9 2017/09/24 21:07:17 wiedi Exp $
+# $NetBSD: Makefile,v 1.10 2018/01/03 00:42:46 rillig Exp $
 
 DISTNAME=		gcc-7.2.0
 PKGNAME=		cross-arm-none-eabi-${DISTNAME}
 CATEGORIES=		cross
+NEWLIBVER=		2.5.0
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
-NEWLIBVER=              2.5.0
-SITES.newlib-${NEWLIBVER}.tar.gz=ftp://sources.redhat.com/pub/newlib/
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
+DISTFILES=		${DEFAULT_DISTFILES} \
 			newlib-${NEWLIBVER}.tar.gz
+SITES.newlib-${NEWLIBVER}.tar.gz= ftp://sources.redhat.com/pub/newlib/
+
 
 MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		# none
 COMMENT=		GCC for bare metal ARM EABI
-EXTRACT_SUFX=		.tar.gz
+LICENSE=		gnu-gpl-v2
 
 EXTRACT_USING=		bsdtar
 
+
 # for http://gcc.gnu.org/bugzilla/show_bug.cgi?id=33549
 # use makeinfo from pkgsrc/devel/gtexinfo.
-TOOL_DEPENDS+=		gtexinfo>=5.1:../../devel/gtexinfo
-_TOOLS_USE_PKGSRC.makeinfo=yes
+TOOL_DEPENDS+=			gtexinfo>=5.1:../../devel/gtexinfo
+_TOOLS_USE_PKGSRC.makeinfo=	yes
 
-DEPENDS+=	cross-arm-none-eabi-binutils-[0-9]*:../../cross/arm-none-eabi-binutils
+DEPENDS+=		cross-arm-none-eabi-binutils-[0-9]*:../../cross/arm-none-eabi-binutils
 
 USE_LANGUAGES+=		c c++
 
@@ -51,7 +53,7 @@ INFO_FILES=		yes
 
 CONFIGURE_ARGS+=	--enable-${PLUGIN_NAME}-plugin
 
-PLIST_VARS+= 		libcpp
+PLIST_VARS+=		libcpp
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
@@ -62,7 +64,7 @@ CFLAGS+=	-fbracket-depth=1024
 .endif
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
-PLIST.libcpp= 		yes
+PLIST.libcpp=	yes
 .endif
 
 post-extract:
