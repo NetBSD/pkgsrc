@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.32 2018/01/03 07:51:31 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.33 2018/01/03 08:08:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -76,3 +76,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/p5-Time-HiRes to 1.9751 [wiz 2018-01-03]
 	Updated www/p5-Plack to 1.0045 [wiz 2018-01-03]
 	Updated devel/p5-Perl-Tidy to 20180101 [wiz 2018-01-03]
+	Updated www/py-django to 1.11.9 [adam 2018-01-03]
+	Updated www/py-flask-limiter to 1.0.1 [adam 2018-01-03]
