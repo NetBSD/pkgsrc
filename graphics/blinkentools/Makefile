@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2017/02/12 06:25:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2018/01/03 00:34:18 rillig Exp $
 #
 
 DISTNAME=		blinkentools-2.2
@@ -9,6 +9,7 @@ MASTER_SITES=		http://sven.gimp.org/blinkenlights/old/
 MAINTAINER=		salo@NetBSD.org
 HOMEPAGE=		http://www.blinkenlights.de/
 COMMENT=		Blinkenlights movies tools collection
+LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		YES
