@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/01/03 00:42:46 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2018/01/03 22:43:23 rillig Exp $
 
 DISTNAME=		gcc-7.2.0
 PKGNAME=		cross-arm-none-eabi-${DISTNAME}
@@ -13,7 +13,6 @@ SITES.newlib-${NEWLIBVER}.tar.gz= ftp://sources.redhat.com/pub/newlib/
 MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		# none
 COMMENT=		GCC for bare metal ARM EABI
-LICENSE=		gnu-gpl-v2
 
 EXTRACT_USING=		bsdtar
 
