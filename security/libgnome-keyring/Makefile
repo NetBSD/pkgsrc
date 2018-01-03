@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/07/30 22:47:55 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2018/01/03 01:04:54 rillig Exp $
 
 DISTNAME=	libgnome-keyring-3.12.0
 CATEGORIES=	security gnome
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnome.org/
 COMMENT=	GNOME password and secret manager
+LICENSE=	gnu-lgpl-v2
 
 CONFLICTS+=	gnome-keyring<2.30
 
