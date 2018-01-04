@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/05/20 06:25:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/04 21:31:41 adam Exp $
 bin/scrapy${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -729,6 +729,9 @@ ${PYSITELIB}/scrapy/utils/trackref.pyo
 ${PYSITELIB}/scrapy/utils/url.py
 ${PYSITELIB}/scrapy/utils/url.pyc
 ${PYSITELIB}/scrapy/utils/url.pyo
+${PYSITELIB}/scrapy/utils/versions.py
+${PYSITELIB}/scrapy/utils/versions.pyc
+${PYSITELIB}/scrapy/utils/versions.pyo
 ${PYSITELIB}/scrapy/xlib/__init__.py
 ${PYSITELIB}/scrapy/xlib/__init__.pyc
 ${PYSITELIB}/scrapy/xlib/__init__.pyo
