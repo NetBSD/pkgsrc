@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/06/22 09:22:03 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/01/04 21:09:29 adam Exp $
 
-DISTNAME=	requests-file-1.4.2
+DISTNAME=	requests-file-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests-file/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,6 +12,8 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-requests>=1.0.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
