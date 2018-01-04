@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/06/21 13:12:20 taca Exp $
+# $NetBSD: Makefile,v 1.3 2018/01/04 13:15:19 taca Exp $
 
 DISTNAME=	activesupport-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-activesupport${RUBY_RAILS}-${RAILS_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
@@ -10,9 +11,10 @@ COMMENT=	Toolkit of support libraries (part of Rails 4.2)
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=0.7:../../devel/ruby-i18n
-DEPENDS+=	${RUBY_PKGPREFIX}-minitest>=5.1:../../devel/ruby-minitest
 DEPENDS+=	${RUBY_PKGPREFIX}-thread_safe>=0.3.4:../../misc/ruby-thread_safe
 DEPENDS+=	${RUBY_PKGPREFIX}-tzinfo>=1.1:../../time/ruby-tzinfo
+# minitest 5.4.3 is bundlerd with Ruby 2.2 and later.
+#DEPENDS+=	${RUBY_PKGPREFIX}-minitest>=5.1:../../devel/ruby-minitest
 
 RUBY_RAILS_SUPPORTED=	42
 RUBY_RAILS_STRICT_DEP=	yes
