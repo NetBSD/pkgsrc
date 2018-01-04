@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.46 2018/01/04 13:16:51 taca Exp $
+$NetBSD: CHANGES-2018,v 1.47 2018/01/04 13:23:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -91,3 +91,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/boost-headers to 1.66.0nb1 [maya 2018-01-04]
 	Updated devel/ruby-activesupport42 to 4.2.8nb1 [taca 2018-01-04]
 	Updated devel/ruby-minitest to 5.11.1 [taca 2018-01-04]
+	Updated www/contao44 to 4.4.12 [taca 2018-01-04]
