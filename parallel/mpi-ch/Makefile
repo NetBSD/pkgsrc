@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2017/04/29 18:18:52 adam Exp $
+# $NetBSD: Makefile,v 1.84 2018/01/04 20:32:19 adam Exp $
 
 DISTNAME=	mpich-3.2
 CATEGORIES=	parallel
@@ -8,6 +8,7 @@ MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.mpich.org/
 COMMENT=	Open source MPI, MPI-2, and MPI-3 implementation from Univ. of Chicago
 
+CONFLICTS+=	openmpi-[0-9]*
 DEPENDS+=	bash-[0-9]*:../../shells/bash
 
 #MPI_SUBPREFIX=		mpich
@@ -38,13 +39,6 @@ LDFLAGS+=		-lm
 PKG_SYSCONFSUBDIR=	mpich
 
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${MPI_PREFIX}/lib
-
-#CONF_FILES+=		share/${PKGBASE}/examples/mpicc.conf \
-			${PKG_SYSCONFDIR}/mpicc.conf
-#CONF_FILES+=		share/${PKGBASE}/examples/mpicxx.conf \
-			${PKG_SYSCONFDIR}/mpicxx.conf
-#CONF_FILES+=		share/${PKGBASE}/examples/mpif77.conf \
-			${PKG_SYSCONFDIR}/mpif77.conf
 
 # FreeBSD 6 hack:
 .include "../../mk/bsd.prefs.mk"
