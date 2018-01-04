@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.50 2018/01/04 16:49:55 gson Exp $
+$NetBSD: CHANGES-2018,v 1.51 2018/01/04 20:48:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -95,3 +95,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/contao45 version 4.5.1 [taca 2018-01-04]
 	Updated lang/sbcl to 1.4.3 [jperkin 2018-01-04]
 	Updated emulators/qemu to 2.11.0nb2 [gson 2018-01-04]
+	Updated parallel/openmpi to 1.10.7 [adam 2018-01-04]
+	Updated fonts/py-fonttools to 3.21.1 [adam 2018-01-04]
+	Updated misc/py-stdnum to 1.8 [adam 2018-01-04]
+	Updated www/py-selenium to 3.8.1 [adam 2018-01-04]
