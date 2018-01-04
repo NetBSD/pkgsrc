@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.43 2018/01/03 22:51:46 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.44 2018/01/04 10:25:55 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -88,3 +88,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/erlang-stun to 1.0.17 [fhajny 2018-01-03]
 	Updated net/erlang-esip to 1.0.18 [fhajny 2018-01-03]
 	Updated chat/ejabberd to 17.12 [fhajny 2018-01-03]
+	Updated devel/boost-headers to 1.66.0nb1 [maya 2018-01-04]
