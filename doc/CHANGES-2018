@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.49 2018/01/04 14:47:25 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.50 2018/01/04 16:49:55 gson Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -94,3 +94,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/contao44 to 4.4.12 [taca 2018-01-04]
 	Added www/contao45 version 4.5.1 [taca 2018-01-04]
 	Updated lang/sbcl to 1.4.3 [jperkin 2018-01-04]
+	Updated emulators/qemu to 2.11.0nb2 [gson 2018-01-04]
