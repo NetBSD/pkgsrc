@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2017/10/04 13:25:43 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/01/04 20:44:09 adam Exp $
 
-SHA1 (python-stdnum-1.7.tar.gz) = 5f70a40792f36f225c545ba80af3642280886f6f
-RMD160 (python-stdnum-1.7.tar.gz) = 6400d03a8aef6bb87ee87fdcadb720bdf59044e1
-SHA512 (python-stdnum-1.7.tar.gz) = 323f5e37087e95143eb59345c4ddb5fb1529a136c234c8e9c957cf9914984e758b256facbfbc5de379000b8939460ea25e8105428d67f7052a23676c334a002a
-Size (python-stdnum-1.7.tar.gz) = 411134 bytes
+SHA1 (python-stdnum-1.8.tar.gz) = c769b65d1de63fdc926277d7a98456a004dafe51
+RMD160 (python-stdnum-1.8.tar.gz) = 075b3baf1862d1dc7c8ed9fcbbdc290c9d2bdfc5
+SHA512 (python-stdnum-1.8.tar.gz) = af3ab7a035ff99dd719540246b148f13727799cc2728819c14ca6d7e25157bfc840f4696d74dbfafc956be6c5a33ea02f4028289193db5919c660c72b2a8e781
+Size (python-stdnum-1.8.tar.gz) = 421547 bytes
+SHA1 (patch-setup.py) = 2fdf51a8d5702f7dbb50afe1f7d2e2874124e955
