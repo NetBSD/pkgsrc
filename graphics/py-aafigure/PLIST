@@ -1,12 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2012/04/08 20:21:48 wiz Exp $
-bin/aafigure
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.3 2018/01/04 21:07:12 adam Exp $
+bin/aafigure${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/aafigure/PILhelper.py
 ${PYSITELIB}/aafigure/PILhelper.pyc
 ${PYSITELIB}/aafigure/PILhelper.pyo
 ${PYSITELIB}/aafigure/__init__.py
 ${PYSITELIB}/aafigure/__init__.pyc
 ${PYSITELIB}/aafigure/__init__.pyo
+${PYSITELIB}/aafigure/__main__.py
+${PYSITELIB}/aafigure/__main__.pyc
+${PYSITELIB}/aafigure/__main__.pyo
 ${PYSITELIB}/aafigure/aa.py
 ${PYSITELIB}/aafigure/aa.pyc
 ${PYSITELIB}/aafigure/aa.pyo
@@ -25,6 +31,9 @@ ${PYSITELIB}/aafigure/pil.pyo
 ${PYSITELIB}/aafigure/shapes.py
 ${PYSITELIB}/aafigure/shapes.pyc
 ${PYSITELIB}/aafigure/shapes.pyo
+${PYSITELIB}/aafigure/sphinxext.py
+${PYSITELIB}/aafigure/sphinxext.pyc
+${PYSITELIB}/aafigure/sphinxext.pyo
 ${PYSITELIB}/aafigure/svg.py
 ${PYSITELIB}/aafigure/svg.pyc
 ${PYSITELIB}/aafigure/svg.pyo
