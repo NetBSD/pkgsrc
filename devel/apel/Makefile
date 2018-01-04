@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2017/09/29 12:40:26 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2018/01/04 16:36:42 jperkin Exp $
 
 DISTNAME=	apel-10.8
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -23,7 +23,7 @@ MAKE_FLAGS+=	VERSION_SPECIFIC_LISPDIR=${EMACS_LISPPREFIX:Q}
 MAKE_FLAGS+=	${MAKE_FLAGS.${EMACS_FLAVOR}}
 
 # apel is included in xemacs-packages
-EMACS_VERSIONS_ACCEPTED=	emacs25 emacs21 emacs21nox emacs20
+EMACS_VERSIONS_ACCEPTED=	emacs25 emacs25nox emacs21 emacs21nox emacs20
 
 BUILD_TARGET.emacs=	elc
 BUILD_TARGET.xemacs=	package
