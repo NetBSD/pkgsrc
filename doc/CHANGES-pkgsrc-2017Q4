@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.3 2018/01/02 05:45:09 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.4 2018/01/04 22:20:47 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
 
@@ -10,4 +10,13 @@ inputmethod/mozc-server: build fix
 
 Pullup ticket #5666 - requested by tsutsui
 net/sayaka: build fix
+
+Pullup ticket #5667 - requested by bacon
+devel/netcdf: build fix
+
+Pullup ticket #5668 - requested by bsiegert
+math/nickle: build fix
+
+Pullup ticket #5669 - requested by bsiegert
+net/go-net: build fix
 
