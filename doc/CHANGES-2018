@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.48 2018/01/04 13:40:52 taca Exp $
+$NetBSD: CHANGES-2018,v 1.49 2018/01/04 14:47:25 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -93,3 +93,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-minitest to 5.11.1 [taca 2018-01-04]
 	Updated www/contao44 to 4.4.12 [taca 2018-01-04]
 	Added www/contao45 version 4.5.1 [taca 2018-01-04]
+	Updated lang/sbcl to 1.4.3 [jperkin 2018-01-04]
