@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.am,v 1.2 2017/11/21 15:18:23 fhajny Exp $
+$NetBSD: patch-Makefile.am,v 1.3 2018/01/04 15:42:42 jperkin Exp $
 
 Use other data directory.
 
@@ -26,7 +26,16 @@ Use other data directory.
  if BUILD_PLUGIN_NETWORK
  pkglib_LTLIBRARIES += network.la
  network_la_SOURCES = \
-@@ -1964,7 +1970,7 @@ endif
+@@ -1942,6 +1948,8 @@ endif
+ if BUILD_PLUGIN_WRITE_PROMETHEUS
+ BUILT_SOURCES += prometheus.pb-c.c prometheus.pb-c.h
+ 
++src/write_prometheus.c: prometheus.pb-c.h
++
+ prometheus.pb-c.c prometheus.pb-c.h: $(srcdir)/proto/prometheus.proto
+ 	$(AM_V_PROTOC_C)$(PROTOC_C) -I$(srcdir)/proto --c_out=$(builddir) $(srcdir)/proto/prometheus.proto
+ endif
+@@ -1964,7 +1972,7 @@ endif
  
  install-exec-hook:
  	$(mkinstalldirs) $(DESTDIR)$(localstatedir)/run
