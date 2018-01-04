@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2017/11/29 18:29:35 minskim Exp $
+# $NetBSD: Makefile,v 1.45.2.1 2018/01/04 21:05:09 spz Exp $
 
 DISTNAME=	netcdf-4.4.1.1
 CATEGORIES=	devel
@@ -8,6 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.unidata.ucar.edu/software/netcdf/index.html
 COMMENT=	Library for array-oriented data access
 
+USE_TOOLS+=		m4
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
