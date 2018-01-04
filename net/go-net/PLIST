@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2017/03/16 19:14:19 bsiegert Exp $
-${PLIST.notsunos}bin/h2i
+@comment $NetBSD: PLIST,v 1.5.10.1 2018/01/04 21:13:18 spz Exp $
+${PLIST.h2i}bin/h2i
 gopkg/pkg/${GO_PLATFORM}/golang.org/x/net/bpf.a
 gopkg/pkg/${GO_PLATFORM}/golang.org/x/net/context.a
 gopkg/pkg/${GO_PLATFORM}/golang.org/x/net/context/ctxhttp.a
@@ -23,7 +23,7 @@ gopkg/pkg/${GO_PLATFORM}/golang.org/x/net/nettest.a
 gopkg/pkg/${GO_PLATFORM}/golang.org/x/net/netutil.a
 gopkg/pkg/${GO_PLATFORM}/golang.org/x/net/proxy.a
 gopkg/pkg/${GO_PLATFORM}/golang.org/x/net/publicsuffix.a
-${PLIST.notsunos}gopkg/pkg/${GO_PLATFORM}/golang.org/x/net/route.a
+${PLIST.route}gopkg/pkg/${GO_PLATFORM}/golang.org/x/net/route.a
 gopkg/pkg/${GO_PLATFORM}/golang.org/x/net/trace.a
 gopkg/pkg/${GO_PLATFORM}/golang.org/x/net/webdav.a
 gopkg/pkg/${GO_PLATFORM}/golang.org/x/net/webdav/internal/xml.a
