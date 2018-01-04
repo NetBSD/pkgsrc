@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2017/12/22 06:07:42 adam Exp $
+# $NetBSD: Makefile,v 1.35 2018/01/04 20:40:36 adam Exp $
 
-DISTNAME=	fonttools-3.21.0
+DISTNAME=	fonttools-3.21.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	fonts python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/FontTools/}
@@ -17,10 +17,10 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 USE_LANGUAGES=	# none
 
 SUBST_CLASSES+=		man
-SUBST_SED.man+=		-e "s,share/man,${PKGMANDIR},"
-SUBST_FILES.man+=	setup.py
 SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fixing man page installation path.
+SUBST_FILES.man+=	setup.py
+SUBST_SED.man+=		-e "s,share/man,${PKGMANDIR},"
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
