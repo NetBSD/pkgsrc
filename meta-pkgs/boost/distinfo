@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.110 2018/01/02 06:39:49 ryoon Exp $
+$NetBSD: distinfo,v 1.111 2018/01/04 10:25:35 maya Exp $
 
 SHA1 (boost_1_66_0.tar.bz2) = b6b284acde2ad7ed49b44e856955d7b1ea4e9459
 RMD160 (boost_1_66_0.tar.bz2) = ee5dafdfa49adf50a5333cef1f55dac4f70b4c14
 SHA512 (boost_1_66_0.tar.bz2) = 0f34075d35391d66876e5189a01a11880a79428e1b267456348ee148dba9dc3abdc74d568f1853be631d20b584b1c804b42443c266f7622164acfc10be3dab8b
 Size (boost_1_66_0.tar.bz2) = 85995778 bytes
 SHA1 (patch-boost_archive_basic__archive.hpp) = 7e7c88cfc00fbf524c70dedd8b9c3c889f8b684f
-SHA1 (patch-boost_asio_detail_config.hpp) = 2495833a0621a90c2c8cb0e5325b50a812f631c4
+SHA1 (patch-boost_asio_detail_config.hpp) = 53a34546638e1264b4d098dfe189abd3b0901027
 SHA1 (patch-boost_atomic_detail_ops_gcc_sparc.hpp) = 6cd1b6fbb8659d7af8ecff63d4558f365f28c12b
 SHA1 (patch-boost_config_detail_posix__features.hpp) = 7d310574e7020c79c8bfa87cff4db0a2edc5b0bc
 SHA1 (patch-boost_config_detail_suffix.hpp) = 12e22085e7c292b2451ea8bc581beaddcb936252
