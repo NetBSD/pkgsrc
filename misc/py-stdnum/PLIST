@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/10/04 13:25:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/04 20:44:09 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -61,6 +61,9 @@ ${PYSITELIB}/stdnum/bg/pnf.pyo
 ${PYSITELIB}/stdnum/bg/vat.py
 ${PYSITELIB}/stdnum/bg/vat.pyc
 ${PYSITELIB}/stdnum/bg/vat.pyo
+${PYSITELIB}/stdnum/bic.py
+${PYSITELIB}/stdnum/bic.pyc
+${PYSITELIB}/stdnum/bic.pyo
 ${PYSITELIB}/stdnum/br/__init__.py
 ${PYSITELIB}/stdnum/br/__init__.pyc
 ${PYSITELIB}/stdnum/br/__init__.pyo
@@ -79,6 +82,9 @@ ${PYSITELIB}/stdnum/ca/bn.pyo
 ${PYSITELIB}/stdnum/ca/sin.py
 ${PYSITELIB}/stdnum/ca/sin.pyc
 ${PYSITELIB}/stdnum/ca/sin.pyo
+${PYSITELIB}/stdnum/casrn.py
+${PYSITELIB}/stdnum/casrn.pyc
+${PYSITELIB}/stdnum/casrn.pyo
 ${PYSITELIB}/stdnum/ch/__init__.py
 ${PYSITELIB}/stdnum/ch/__init__.pyc
 ${PYSITELIB}/stdnum/ch/__init__.pyo
@@ -158,6 +164,9 @@ ${PYSITELIB}/stdnum/do/__init__.pyo
 ${PYSITELIB}/stdnum/do/cedula.py
 ${PYSITELIB}/stdnum/do/cedula.pyc
 ${PYSITELIB}/stdnum/do/cedula.pyo
+${PYSITELIB}/stdnum/do/ncf.py
+${PYSITELIB}/stdnum/do/ncf.pyc
+${PYSITELIB}/stdnum/do/ncf.pyo
 ${PYSITELIB}/stdnum/do/rnc.py
 ${PYSITELIB}/stdnum/do/rnc.pyc
 ${PYSITELIB}/stdnum/do/rnc.pyo
@@ -218,6 +227,9 @@ ${PYSITELIB}/stdnum/eu/__init__.pyo
 ${PYSITELIB}/stdnum/eu/at_02.py
 ${PYSITELIB}/stdnum/eu/at_02.pyc
 ${PYSITELIB}/stdnum/eu/at_02.pyo
+${PYSITELIB}/stdnum/eu/banknote.py
+${PYSITELIB}/stdnum/eu/banknote.pyc
+${PYSITELIB}/stdnum/eu/banknote.pyo
 ${PYSITELIB}/stdnum/eu/eic.py
 ${PYSITELIB}/stdnum/eu/eic.pyc
 ${PYSITELIB}/stdnum/eu/eic.pyo
@@ -326,6 +338,15 @@ ${PYSITELIB}/stdnum/imsi.dat
 ${PYSITELIB}/stdnum/imsi.py
 ${PYSITELIB}/stdnum/imsi.pyc
 ${PYSITELIB}/stdnum/imsi.pyo
+${PYSITELIB}/stdnum/in_/__init__.py
+${PYSITELIB}/stdnum/in_/__init__.pyc
+${PYSITELIB}/stdnum/in_/__init__.pyo
+${PYSITELIB}/stdnum/in_/aadhaar.py
+${PYSITELIB}/stdnum/in_/aadhaar.pyc
+${PYSITELIB}/stdnum/in_/aadhaar.pyo
+${PYSITELIB}/stdnum/in_/pan.py
+${PYSITELIB}/stdnum/in_/pan.pyc
+${PYSITELIB}/stdnum/in_/pan.pyo
 ${PYSITELIB}/stdnum/is_/__init__.py
 ${PYSITELIB}/stdnum/is_/__init__.pyc
 ${PYSITELIB}/stdnum/is_/__init__.pyo
