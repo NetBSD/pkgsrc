@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/01/01 22:29:51 rillig Exp $
+@comment $NetBSD: PLIST,v 1.19 2018/01/04 20:31:28 adam Exp $
 bin/mpiCC
 bin/mpic++
 bin/mpicc
@@ -36,14 +36,14 @@ ${PLIST.oshmem}bin/shmemrun
 include/mpi-ext.h
 include/mpi.h
 include/mpi_portable_platform.h
-include/mpif-config.h
-include/mpif-constants.h
+${PLIST.f90}include/mpif-config.h
+${PLIST.f90}include/mpif-constants.h
 include/mpif-ext.h
-include/mpif-externals.h
-include/mpif-handles.h
-include/mpif-io-constants.h
-include/mpif-io-handles.h
-include/mpif-sentinels.h
+${PLIST.f90}include/mpif-externals.h
+${PLIST.f90}include/mpif-handles.h
+${PLIST.f90}include/mpif-io-constants.h
+${PLIST.f90}include/mpif-io-handles.h
+${PLIST.f90}include/mpif-sentinels.h
 include/mpif-sizeof.h
 include/mpif.h
 ${PLIST.oshmem}include/mpp/shmem.fh
@@ -95,8 +95,8 @@ lib/libmca_common_sm.la
 lib/libmpi.la
 lib/libmpi_cxx.la
 ${PLIST.java}lib/libmpi_java.la
-lib/libmpi_mpifh.la
-${PLIST.noignoretkr}lib/libmpi_usempi.la
+${PLIST.f90}lib/libmpi_mpifh.la
+${PLIST.f90}${PLIST.noignoretkr}lib/libmpi_usempi.la
 ${PLIST.ignoretkr}lib/libmpi_usempi_ignore_tkr.la
 ${PLIST.f08}lib/libmpi_usempif08.la
 lib/libompitrace.la
@@ -104,8 +104,8 @@ lib/libopen-pal.la
 lib/libopen-rte.la
 ${PLIST.oshmem}lib/liboshmem.la
 ${PLIST.java}lib/mpi.jar
-lib/mpi.mod
-${PLIST.ignoretkr}lib/mpi_ext.mod
+${PLIST.f90}lib/mpi.mod
+${PLIST.f90}${PLIST.ignoretkr}lib/mpi_ext.mod
 ${PLIST.f08}lib/mpi_f08.mod
 ${PLIST.f08}lib/mpi_f08_callbacks.mod
 ${PLIST.f08}lib/mpi_f08_ext.mod
@@ -863,6 +863,7 @@ share/openmpi/help-dash-host.txt
 share/openmpi/help-db-base.txt
 share/openmpi/help-errmgr-base.txt
 share/openmpi/help-ess-base.txt
+share/openmpi/help-ess-hnp.txt
 share/openmpi/help-hostfile.txt
 share/openmpi/help-mca-base.txt
 share/openmpi/help-mca-bml-r2.txt
