@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/11/23 17:20:21 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/01/04 16:29:36 jperkin Exp $
 #
 
 PKGREVISION= 1
@@ -10,6 +10,8 @@ MASTER_SITES=	http://archive.xfce.org/src/apps/xfce4-notifyd/0.3/
 
 HOMEPAGE=	http://goodies.xfce.org/projects/applications/xfce4-notifyd
 COMMENT=	XFCE Notify daemon
+
+TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
