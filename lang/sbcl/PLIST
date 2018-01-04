@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2015/03/10 20:50:37 asau Exp $
+@comment $NetBSD: PLIST,v 1.22 2018/01/04 14:47:17 jperkin Exp $
 bin/sbcl
 lib/sbcl/contrib/asdf.fasl
 lib/sbcl/contrib/sb-aclrepl.asd
@@ -37,6 +37,7 @@ lib/sbcl/contrib/sb-sprof.asd
 lib/sbcl/contrib/sb-sprof.fasl
 lib/sbcl/contrib/uiop.fasl
 lib/sbcl/sbcl.core
+lib/sbcl/sbcl.mk
 man/man1/sbcl.1
 share/doc/sbcl/BUGS
 share/doc/sbcl/COPYING
