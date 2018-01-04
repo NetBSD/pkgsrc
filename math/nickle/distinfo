@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.12 2017/11/23 16:15:23 wiz Exp $
+$NetBSD: distinfo,v 1.12.2.1 2018/01/04 21:07:13 spz Exp $
 
 SHA1 (nickle-2.81.tar.gz) = ef9c6de7ad2a544a3245657fbfd46dbfa9675476
 RMD160 (nickle-2.81.tar.gz) = 03c8ffbebfd0104b3cd54f748f702de7e6f999f5
 SHA512 (nickle-2.81.tar.gz) = b11755f824b3abf74f104db7bfaf58f52fef0b76e194ffd8c562693d5497f9de69121f9ce98777fb0366a7e02be7b32e7d800a31be03f5a5921b9d8bc3502aca
 Size (nickle-2.81.tar.gz) = 579140 bytes
 SHA1 (patch-aa) = 4cbb563244883f6c9f7a3594875052f8d9a9e9b3
+SHA1 (patch-builtin-date.c) = ca55181a501cfbe3437d38728398852e96b0111a
 SHA1 (patch-lex.c) = f9d5f3f282f97a94195730062525e9f6310bb316
