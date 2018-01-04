@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2017/11/20 04:53:56 taca Exp $
+# $NetBSD: Makefile,v 1.13 2018/01/04 13:23:03 taca Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
 PKGNAME=	${PHP_PKG_PREFIX}-contao${CT_VER}-${CT_VERSION}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=contao/}
 GITHUB_PROJECT=	managed-edition
 GITHUB_RELEASE=	${CT_VERSION}
-DIST_SUBDIR=	contao448-20171116
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	https://contao.org/
@@ -24,7 +22,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.6:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.6:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.6:../../archivers/php-zlib
 
-CT_VERSION=	4.4.8
+CT_VERSION=	4.4.12
 USE_TOOLS=	bash:run pax
 NO_BUILD=	yes
 
@@ -67,7 +65,7 @@ REPLACE_FILES.php= \
 	vendor/ua-parser/uap-php/bin/uaparser \
 	vendor/sensio/distribution-bundle/Resources/bin/build_bootstrap.php \
 	vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php \
-	vendor/symfony/symfony/phpunit \
+	vendor/symfony/symfony/link vendor/symfony/symfony/phpunit \
 	vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/bin/simple-phpunit \
 	vendor/tecnickcom/tcpdf/tools/tcpdf_addfont.php
 
