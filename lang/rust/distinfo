@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2017/12/20 05:38:21 maya Exp $
+$NetBSD: distinfo,v 1.15 2018/01/04 15:18:50 jperkin Exp $
 
 SHA1 (rust-1.21.0-i686-apple-darwin.tar.gz) = 9e01c8800419db1de2c31dee06494194ab843b7d
 RMD160 (rust-1.21.0-i686-apple-darwin.tar.gz) = 0f5f73fb5dfca510afd9acaf755893901a3180ca
@@ -16,6 +16,10 @@ SHA1 (rust-1.21.0-x86_64-apple-darwin.tar.gz) = a605caf3f2f15259291fcc101c964d17
 RMD160 (rust-1.21.0-x86_64-apple-darwin.tar.gz) = c1fb237215d34059041065c0508308eea767f7b3
 SHA512 (rust-1.21.0-x86_64-apple-darwin.tar.gz) = dd19ec67b22c43d219ee88319312ab82964d40d0996931eb1c7df12defebc17827fbdbb4f7096aff6cee6772c8f6b6f1614a487b8b2a0ab3b5f3cb66417aaf8a
 Size (rust-1.21.0-x86_64-apple-darwin.tar.gz) = 133932530 bytes
+SHA1 (rust-1.21.0-x86_64-sun-solaris.tar.gz) = 5da64aa97e4aba82d02f7547dbdd44a9305005fc
+RMD160 (rust-1.21.0-x86_64-sun-solaris.tar.gz) = b0c1aa3734faf03d2b02fa301562b79ec145aa66
+SHA512 (rust-1.21.0-x86_64-sun-solaris.tar.gz) = 952280e446c86091340202caa206ea7f31295d82cc65da95a4e78fa691bdf837ded587d916ff3226adc639f7483db8ab12a99ef7e233cdac46c33e9edcc738ad
+Size (rust-1.21.0-x86_64-sun-solaris.tar.gz) = 146676219 bytes
 SHA1 (rust-1.21.0-x86_64-unknown-linux-gnu.tar.gz) = a725a3cdaf937b30788d55363f962a1da1a6e2e2
 RMD160 (rust-1.21.0-x86_64-unknown-linux-gnu.tar.gz) = 5d4feca3675ec279868e52b7bdb84349be9c9e83
 SHA512 (rust-1.21.0-x86_64-unknown-linux-gnu.tar.gz) = 8ffee69e895eba1564eecff769a105c8069cc66ce85f4ae6d1316eef5483185d8b4180595a1d67b2f08802b74e349c7677398203d89e3b131b56b2ea7ce0e980
@@ -58,3 +62,5 @@ SHA1 (patch-src_libbacktrace_configure) = b2c1e9b93a99408aad42ab9f1af27704cc81bd
 SHA1 (patch-src_libstd_build.rs) = 32dad8a474300f9f37bce8b92acca762cf8cc4ab
 SHA1 (patch-src_llvm_cmake_modules_AddLLVM.cmake) = 282d97cce8d01cfefe565185d4999c2db9ccc13f
 SHA1 (patch-src_llvm_lib_CodeGen_MachineDominanceFrontier.cpp) = 2899771b1a23be840b9305eff7e5e5f957239ccb
+SHA1 (patch-src_vendor_filetime_.cargo-checksum.json) = 7cdd486b65ad780c3a472bc1846d55270dcbcdeb
+SHA1 (patch-src_vendor_filetime_src_unix.rs) = e31011cdc146897b6530c51d76929b8ac194f6a2
