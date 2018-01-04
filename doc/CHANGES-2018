@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.44 2018/01/04 10:25:55 maya Exp $
+$NetBSD: CHANGES-2018,v 1.45 2018/01/04 13:15:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -89,3 +89,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/erlang-esip to 1.0.18 [fhajny 2018-01-03]
 	Updated chat/ejabberd to 17.12 [fhajny 2018-01-03]
 	Updated devel/boost-headers to 1.66.0nb1 [maya 2018-01-04]
+	Updated devel/ruby-activesupport42 to 4.2.8nb1 [taca 2018-01-04]
