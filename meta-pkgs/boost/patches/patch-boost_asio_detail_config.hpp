@@ -1,6 +1,6 @@
-$NetBSD: patch-boost_asio_detail_config.hpp,v 1.3 2018/01/02 06:39:49 ryoon Exp $
+$NetBSD: patch-boost_asio_detail_config.hpp,v 1.4 2018/01/04 10:25:35 maya Exp $
 
-* NetBSD has no string_view header files
+Need C++17 for string view.
 
 --- boost/asio/detail/config.hpp.orig	2017-12-13 23:56:41.000000000 +0000
 +++ boost/asio/detail/config.hpp
@@ -8,7 +8,7 @@ $NetBSD: patch-boost_asio_detail_config.hpp,v 1.3 2018/01/02 06:39:49 ryoon Exp 
  #  if defined(__GNUC__)
  #   if ((__GNUC__ == 4) && (__GNUC_MINOR__ >= 9)) || (__GNUC__ > 4)
  #    if (__cplusplus >= 201402)
-+#if !defined(__NetBSD__)
++#if __cplusplus >= 201703L
  #     define BOOST_ASIO_HAS_STD_STRING_VIEW 1
  #     define BOOST_ASIO_HAS_STD_EXPERIMENTAL_STRING_VIEW 1
 +#endif
