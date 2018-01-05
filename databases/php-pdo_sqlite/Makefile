@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2017/11/30 16:45:18 adam Exp $
+# $NetBSD: Makefile,v 1.29 2018/01/05 03:14:52 taca Exp $
 
 MODNAME=		pdo_sqlite
 CATEGORIES+=		databases
 COMMENT=		PHP extension for PHP Data Objects (SQLite v3)
-PKGREVISION=		1
 
 USE_PHP_EXT_PATCHES=	yes
 
