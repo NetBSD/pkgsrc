@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/01/14 23:13:49 kleink Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/05 11:35:06 adam Exp $
 bin/weasyprint${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -141,6 +141,9 @@ ${PYSITELIB}/weasyprint/tests/test_api.pyo
 ${PYSITELIB}/weasyprint/tests/test_boxes.py
 ${PYSITELIB}/weasyprint/tests/test_boxes.pyc
 ${PYSITELIB}/weasyprint/tests/test_boxes.pyo
+${PYSITELIB}/weasyprint/tests/test_columns.py
+${PYSITELIB}/weasyprint/tests/test_columns.pyc
+${PYSITELIB}/weasyprint/tests/test_columns.pyo
 ${PYSITELIB}/weasyprint/tests/test_css.py
 ${PYSITELIB}/weasyprint/tests/test_css.pyc
 ${PYSITELIB}/weasyprint/tests/test_css.pyo
@@ -153,6 +156,9 @@ ${PYSITELIB}/weasyprint/tests/test_css_validation.pyo
 ${PYSITELIB}/weasyprint/tests/test_draw.py
 ${PYSITELIB}/weasyprint/tests/test_draw.pyc
 ${PYSITELIB}/weasyprint/tests/test_draw.pyo
+${PYSITELIB}/weasyprint/tests/test_float.py
+${PYSITELIB}/weasyprint/tests/test_float.pyc
+${PYSITELIB}/weasyprint/tests/test_float.pyo
 ${PYSITELIB}/weasyprint/tests/test_fonts.py
 ${PYSITELIB}/weasyprint/tests/test_fonts.pyc
 ${PYSITELIB}/weasyprint/tests/test_fonts.pyo
