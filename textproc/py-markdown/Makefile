@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2017/12/10 08:53:16 adam Exp $
+# $NetBSD: Makefile,v 1.17 2018/01/05 15:20:58 adam Exp $
 
-DISTNAME=	Markdown-2.6.10
+DISTNAME=	Markdown-2.6.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Markdown/}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	https://Python-Markdown.github.io/
@@ -16,11 +15,11 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-post-extract:
-	${MV} ${WRKSRC}/bin/markdown_py ${WRKSRC}/bin/markdown_py${PYVERSSUFFIX}
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} markdown_py markdown_py${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} run-tests.py
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
