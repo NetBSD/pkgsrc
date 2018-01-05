@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2588 2017/12/31 18:47:08 adam Exp $
+# $NetBSD: Makefile,v 1.2589 2018/01/05 11:59:06 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -1868,6 +1868,7 @@ SUBDIR+=	py-cachetools
 SUBDIR+=	py-capstone
 SUBDIR+=	py-case
 SUBDIR+=	py-cffi
+SUBDIR+=	py-chai
 SUBDIR+=	py-characteristic
 SUBDIR+=	py-checker
 SUBDIR+=	py-cheetah
