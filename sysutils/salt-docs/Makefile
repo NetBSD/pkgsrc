@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2017/01/01 14:43:58 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/01/05 16:33:48 adam Exp $
 
-DISTNAME=	salt-2015.8.5
+DISTNAME=	salt-2017.7.2
 PKGNAME=	${DISTNAME:S/-/-docs-/}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/salt/}
@@ -10,9 +10,9 @@ HOMEPAGE=	http://saltstack.org/
 COMMENT=	Documentation for salt
 LICENSE=	apache-2.0
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pax
 
-BUILD_DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.3nb1*:../../textproc/py-sphinx
 
 NO_CONFIGURE=	yes
 BUILD_DIRS=	doc
@@ -26,16 +26,11 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 INSTALLATION_DIRS=	${HTMLDIR}
 
 do-install:
-	( cd ${WRKSRC}/doc/_build/html \
-	  && pax -rw -pe . ${DESTDIR}${PREFIX}/${HTMLDIR} )
-	( cd ${DESTDIR}${PREFIX} \
-	  && ${FIND} ${HTMLDIR} -type f -print ) >>${PLIST_SRC}
+	cd ${WRKSRC}/doc/_build/html && pax -rw -pe . ${DESTDIR}${PREFIX}/${HTMLDIR}
+	cd ${DESTDIR}${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
 
-# problem in sphinx config file?
-PYTHON_VERSIONS_INCOMPATIBLE=  34 35 36 # not yet ported as of 0.10.5
+# problem building due to some mocking
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
 
-# The upstream salt project does not say what version of sphinx is required.
 .include "../../lang/python/pyversion.mk"
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.3nb1*:../../textproc/py-sphinx
-
 .include "../../mk/bsd.pkg.mk"
