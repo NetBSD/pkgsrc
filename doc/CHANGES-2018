@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.53 2018/01/05 03:16:10 taca Exp $
+$NetBSD: CHANGES-2018,v 1.54 2018/01/05 08:23:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -108,3 +108,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/php70 to 7.0.27 [taca 2018-01-05]
 	Updated lang/php71 to 7.1.13 [taca 2018-01-05]
 	Updated lang/php72 to 7.2.1 [taca 2018-01-05]
+	Updated www/py-yarl to 0.17.0 [adam 2018-01-05]
+	Updated www/py-flask-testing to 0.7.1 [adam 2018-01-05]
