@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/12/05 09:54:18 adam Exp $
+# $NetBSD: Makefile,v 1.8 2018/01/06 08:55:46 adam Exp $
 
-DISTNAME=	dtc-1.4.5
+DISTNAME=	dtc-1.4.6
 CATEGORIES=	sysutils devel
 MASTER_SITES=	https://www.kernel.org/pub/software/utils/dtc/
 EXTRACT_SUFX=	.tar.xz
