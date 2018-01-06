@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.4 2018/01/04 22:20:47 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.5 2018/01/06 23:14:09 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
 
@@ -19,4 +19,10 @@ math/nickle: build fix
 
 Pullup ticket #5669 - requested by bsiegert
 net/go-net: build fix
+
+Pullup ticket #5671 - requested by snj
+net/rsync: security patch
+
+Pullup ticket #5672 - requested by dholland
+lang/micropython: build fix
 
