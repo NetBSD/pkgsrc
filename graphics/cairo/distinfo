@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.86 2017/09/28 00:57:25 spz Exp $
+$NetBSD: distinfo,v 1.87 2018/01/06 11:30:56 adam Exp $
 
-SHA1 (cairo-1.14.10.tar.xz) = 28c59d85d6b790c21b8b59ece73a6a1dda28d69a
-RMD160 (cairo-1.14.10.tar.xz) = c50d540033688e7371b2bffbe116ea70c4d2ffc2
-SHA512 (cairo-1.14.10.tar.xz) = a381d97e6046da0012eb5595118efb95ff02e3e84310682e458b503ebf22d6b2663bcc1391980768bb9cd02ae809b8df2e11d6200b48745dc5ec824c342b5852
-Size (cairo-1.14.10.tar.xz) = 36251788 bytes
+SHA1 (cairo-1.14.12.tar.xz) = 490025a0ba0622a853010f49fb6343f29fb70b9b
+RMD160 (cairo-1.14.12.tar.xz) = 7c2868a64b146bf5663b7586f59f865cc8c2bf31
+SHA512 (cairo-1.14.12.tar.xz) = ede6e75ae95605bf5c4b3859b1824cf125c4a2a35a67d38244cc70951ca44b1d4fd7cf622953d3a7cb868fb5b00856ef6d68ee615276b76eec437641290b01e1
+Size (cairo-1.14.12.tar.xz) = 36251896 bytes
 SHA1 (patch-CVE-2016-9082) = b5020e37e7c5e589a47d053a9d51e26137986c12
 SHA1 (patch-CVE-2017-7475) = 0d4d8eea7cc63b959960a37fcdb0fd3ce31342e1
-SHA1 (patch-CVE-2017-9814) = 8679fb7820998a46089f1cc0e65ef5fba6b510c6
+SHA1 (patch-CVE-2017-9814) = 3f135b58fe5aa5ac121f990757d26cf12bfd7d68
 SHA1 (patch-aa) = b01bc60f77a7122b0c0d0d9b25ad512bac7c190c
 SHA1 (patch-ab) = 11f7e0e59bd5c51a8fdacb48dcf2f2fefdf3b768
 SHA1 (patch-ac) = 1785bbef6bcab4781bf89e1b986a7eb96e5f2b64
