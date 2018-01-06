@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.60 2018/01/06 09:00:04 adam Exp $
+$NetBSD: CHANGES-2018,v 1.61 2018/01/06 11:32:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -121,3 +121,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-pandas to 0.22.0 [adam 2018-01-05]
 	Updated sysutils/salt-docs to 2017.7.2 [adam 2018-01-05]
 	Updated sysutils/dtc to 1.4.6 [adam 2018-01-06]
+	Updated graphics/cairo to 1.14.12 [adam 2018-01-06]
+	Updated graphics/cairo-gobject to 1.14.12 [adam 2018-01-06]
