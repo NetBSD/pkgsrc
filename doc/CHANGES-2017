@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5464 2017/12/31 20:56:01 snj Exp $
+$NetBSD: CHANGES-2017,v 1.5465 2018/01/06 21:41:08 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -7758,6 +7758,9 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/py-cxfreeze to 5.0.2nb1 [he 2017-12-27]
 	Updated biology/bwa to 0.7.17nb1 [he 2017-12-27]
 	Updated lang/pfe to 0.33.71nb10 [dholland 2017-12-28]
+	Updated devel/deforaos-libsystem to 0.3.1nb1 [dholland 2017-12-28]
+	Updated geography/py-obspy to 1.1.0nb1 [dholland 2017-12-28]
+	Updated lang/smalltalk to 3.2.5 [dholland 2017-12-29]
 	Updated pkgtools/pkg_select to 20090308nb8 [maya 2017-12-29]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2017Q4 branch [gdt 2017-12-29]
 	Updated archivers/libzip to 1.4.0 [wiz 2017-12-30]
