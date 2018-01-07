@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:32:02 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/01/07 19:53:16 rillig Exp $
 bin/bladeenc
 man/man1/bladeenc.1
-share/doc/html/bladeenc/bladeenc.html
+share/doc/bladeenc/bladeenc.html
