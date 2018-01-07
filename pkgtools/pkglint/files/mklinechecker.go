@@ -92,12 +92,11 @@ func (ck MkLineChecker) checkInclude() {
 	}
 }
 
-func (ck MkLineChecker) checkCond(forVars map[string]bool) {
+func (ck MkLineChecker) checkCond(forVars map[string]bool, indentation *Indentation) {
 	mkline := ck.MkLine
 
 	directive := mkline.Directive()
 	args := mkline.Args()
-	indentation := &G.Mk.indentation
 
 	switch directive {
 	case "endif", "endfor":

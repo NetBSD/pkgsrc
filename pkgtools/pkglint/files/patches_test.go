@@ -27,11 +27,9 @@ func (s *Suite) Test_ChecklinesPatch__with_comment(c *check.C) {
 	s.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_ChecklinesPatch__without_empty_line(c *check.C) {
+func (s *Suite) Test_ChecklinesPatch__without_empty_line__autofix(c *check.C) {
 	s.Init(c)
-	fname := s.CreateTmpFile("patch-WithoutEmptyLines", "dummy")
-	s.UseCommandLine("-Wall", "--autofix")
-	lines := s.NewLines(fname,
+	patchFilename := s.CreateTmpFileLines("patch-WithoutEmptyLines",
 		"$"+"NetBSD$",
 		"Text",
 		"--- file.orig",
@@ -41,15 +39,27 @@ func (s *Suite) Test_ChecklinesPatch__without_empty_line(c *check.C) {
 		"-old line",
 		"+old line",
 		" context after")
+	distinfoFilename := s.CreateTmpFileLines("distinfo",
+		"$"+"NetBSD$",
+		"",
+		"SHA1 (some patch) = 87ffcaaa0b0677ec679fff612b44df1af05f04df") // Taken from breakpoint at AutofixDistinfo
+
+	s.UseCommandLine("-Wall", "--autofix")
+	lines := LoadExistingLines(patchFilename, false)
+	G.CurrentDir = s.TmpDir()
+	G.Pkg = &Package{DistinfoFile: "distinfo"}
 
 	ChecklinesPatch(lines)
 
 	s.CheckOutputLines(
 		"AUTOFIX: ~/patch-WithoutEmptyLines:2: Inserting a line \"\" before this line.",
 		"AUTOFIX: ~/patch-WithoutEmptyLines:3: Inserting a line \"\" before this line.",
-		"AUTOFIX: ~/patch-WithoutEmptyLines: Has been auto-fixed. Please re-run pkglint.")
+		"AUTOFIX: ~/patch-WithoutEmptyLines: Has been auto-fixed. Please re-run pkglint.",
+		"AUTOFIX: ~/distinfo:3: Replacing \"87ffcaaa0b0677ec679fff612b44df1af05f04df\" "+
+			"with \"a7c35294b3853da0acedf8a972cb266baa9582a3\".",
+		"AUTOFIX: ~/distinfo: Has been auto-fixed. Please re-run pkglint.")
 
-	fixed, err := ioutil.ReadFile(fname)
+	fixed, err := ioutil.ReadFile(patchFilename)
 	c.Assert(err, check.IsNil)
 	c.Check(string(fixed), equals, ""+
 		"$"+"NetBSD$\n"+
@@ -63,6 +73,12 @@ func (s *Suite) Test_ChecklinesPatch__without_empty_line(c *check.C) {
 		"-old line\n"+
 		"+old line\n"+
 		" context after\n")
+	fixedDistinfo, err := ioutil.ReadFile(distinfoFilename)
+	c.Assert(err, check.IsNil)
+	c.Check(string(fixedDistinfo), equals, ""+
+		"$"+"NetBSD$\n"+
+		"\n"+
+		"SHA1 (some patch) = a7c35294b3853da0acedf8a972cb266baa9582a3\n")
 }
 
 func (s *Suite) Test_ChecklinesPatch__without_comment(c *check.C) {

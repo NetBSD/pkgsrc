@@ -130,7 +130,7 @@ func (mklines *MkLines) Check() {
 			}
 
 		case mkline.IsCond():
-			ck.checkCond(mklines.forVars)
+			ck.checkCond(mklines.forVars, indentation)
 
 		case mkline.IsDependency():
 			ck.checkDependencyRule(allowedTargets)

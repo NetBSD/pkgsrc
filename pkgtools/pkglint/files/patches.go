@@ -90,7 +90,13 @@ func (ck *PatchChecker) Check() {
 	}
 
 	ChecklinesTrailingEmptyLines(ck.lines)
-	SaveAutofixChanges(ck.lines)
+	sha1Before, err := computePatchSha1Hex(ck.lines[0].Filename)
+	if SaveAutofixChanges(ck.lines) && G.Pkg != nil && err == nil {
+		sha1After, err := computePatchSha1Hex(ck.lines[0].Filename)
+		if err == nil {
+			AutofixDistinfo(sha1Before, sha1After)
+		}
+	}
 }
 
 // See http://www.gnu.org/software/diffutils/manual/html_node/Detailed-Unified.html
