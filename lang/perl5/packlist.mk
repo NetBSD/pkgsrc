@@ -1,4 +1,4 @@
-# $NetBSD: packlist.mk,v 1.19 2014/11/13 17:48:59 tron Exp $
+# $NetBSD: packlist.mk,v 1.20 2018/01/07 11:40:57 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # create packlist files.  This file is automatically included by
@@ -11,12 +11,16 @@
 #	When set to "yes" (the default), automatically generates the
 #	PLIST for the pkgsrc package from the Perl packlist.
 #
-# PERL5_PACKLIST_DIR	"install*arch" directory under which packlist
-#			files are installed; defaults to
-#			${PERL5_INSTALLVENDORARCH}.
+# PERL5_PACKLIST_DIR
+#	The "install*arch" directory under which packlist files are
+#	installed. Only needs to be overridden in very special cases.
 #
-# PERL5_PACKLIST	list of packlist files relative to
-#			${PERL5_PACKLIST_DIR}.
+#	Default: ${PERL5_INSTALLVENDORARCH}
+#
+# PERL5_PACKLIST
+#	The list of packlist files relative to ${PERL5_PACKLIST_DIR}.
+#
+#	Example: .auto/Text/Trim/.packlist
 
 .if !defined(_PERL5_PACKLIST_MK)
 _PERL5_PACKLIST_MK=	# defined
