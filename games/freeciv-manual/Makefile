@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/01/01 23:12:09 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2018/01/07 21:00:23 joerg Exp $
 #
 
 DISTNAME=	manual-1.8.1-2
@@ -13,7 +13,8 @@ COMMENT=	Manuals for old Freeciv version (game, client, and server)
 
 WRKSRC=		${WRKDIR}/manual
 NO_BUILD=	yes
-AUTO_MKDIRS=	yes
+
+INSTALLATION_DIRS+=	share/doc/freeciv-manual/img
 
 do-install:
 	cd ${WRKSRC} && \
