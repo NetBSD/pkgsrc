@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.19 2017/11/30 10:58:14 gson Exp $
+# $NetBSD: Makefile,v 1.20 2018/01/07 21:37:55 rillig Exp $
 #
 
 DISTNAME=	st-1.9
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=state-threads/}
 
 MAINTAINER=	gson@NetBSD.org
 HOMEPAGE=	http://state-threads.sourceforge.net/
 COMMENT=	Non-preemptive thread library for Internet applications
+LICENSE=	mpl-1.1
 
 MAKE_JOBS_SAFE=		no
 
@@ -15,10 +17,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 MAKE_ENV+=	CONFIG_GUESS_PATH=.
 BUILD_TARGET=	default
-
-HTMLDIR=	${PREFIX}/share/doc/html/st
-
-INSTALLATION_DIRS=	bin include lib
+AUTO_MKDIRS=	yes
 
 post-extract:
 	${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/
@@ -33,7 +32,7 @@ do-install:
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
 		${WRKSRC}/examples/server ${DESTDIR}${PREFIX}/bin/st-server
 	${INSTALL_DATA} ${WRKSRC}/public.h ${DESTDIR}${PREFIX}/include/st.h
-	${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}
-	cd ${WRKSRC}/docs; ${INSTALL_DATA} *.html *.gif ${DESTDIR}${HTMLDIR}
+	cd ${WRKSRC}/docs && ${INSTALL_DATA} *.html *.gif \
+		${DESTDIR}${PREFIX}/share/doc/st
 
 .include "../../mk/bsd.pkg.mk"

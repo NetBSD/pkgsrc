@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:48:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/07 21:37:55 rillig Exp $
 bin/st-lookupdns
 bin/st-proxy
 bin/st-server
 include/st.h
 lib/libst.la
-share/doc/html/st/fig.gif
-share/doc/html/st/notes.html
-share/doc/html/st/reference.html
-share/doc/html/st/st.html
-@pkgdir include/st
+share/doc/st/fig.gif
+share/doc/st/notes.html
+share/doc/st/reference.html
+share/doc/st/st.html
