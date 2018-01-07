@@ -106,11 +106,10 @@ func (ck *distinfoLinesChecker) onFilenameChange(line Line, nextFname string) {
 	ck.algorithms = nil
 }
 
-func (ck *distinfoLinesChecker) checkPatchSha1(line Line, patchFname, distinfoSha1Hex string) {
-	patchBytes, err := ioutil.ReadFile(G.CurrentDir + "/" + patchFname)
+func computePatchSha1Hex(patchFilename string) (string, error) {
+	patchBytes, err := ioutil.ReadFile(patchFilename)
 	if err != nil {
-		line.Errorf("%s does not exist.", patchFname)
-		return
+		return "", err
 	}
 
 	h := sha1.New()
@@ -120,7 +119,15 @@ func (ck *distinfoLinesChecker) checkPatchSha1(line Line, patchFname, distinfoSh
 			h.Write(patchLine)
 		}
 	}
-	fileSha1Hex := fmt.Sprintf("%x", h.Sum(nil))
+	return fmt.Sprintf("%x", h.Sum(nil)), nil
+}
+
+func (ck *distinfoLinesChecker) checkPatchSha1(line Line, patchFname, distinfoSha1Hex string) {
+	fileSha1Hex, err := computePatchSha1Hex(G.CurrentDir + "/" + patchFname)
+	if err != nil {
+		line.Errorf("%s does not exist.", patchFname)
+		return
+	}
 	if distinfoSha1Hex != fileSha1Hex {
 		if !line.AutofixReplace(distinfoSha1Hex, fileSha1Hex) {
 			line.Errorf("%s hash of %s differs (distinfo has %s, patch file has %s). Run \"%s makepatchsum\".", "SHA1", patchFname, distinfoSha1Hex, fileSha1Hex, confMake)
@@ -169,5 +176,15 @@ func (ck *distinfoLinesChecker) checkUncommittedPatch(line Line, patchName, sha1
 		}
 		ck.checkPatchSha1(line, patchFname, sha1Hash)
 		ck.patches[patchName] = true
+	}
+}
+
+func AutofixDistinfo(oldSha1, newSha1 string) {
+	distinfoFilename := G.CurrentDir + "/" + G.Pkg.DistinfoFile
+	if lines, err := readLines(distinfoFilename, false); err == nil {
+		for _, line := range lines {
+			line.AutofixReplace(oldSha1, newSha1)
+		}
+		SaveAutofixChanges(lines)
 	}
 }
