@@ -55,6 +55,14 @@ func (token *ShAtom) String() string {
 	return fmt.Sprintf("ShAtom(%v, %q, %s)", token.Type, token.MkText, token.Quoting)
 }
 
+// Returns nil for plain shell tokens.
+func (atom *ShAtom) VarUse() *MkVarUse {
+	if atom.Type == shtVaruse {
+		return atom.Data.(*MkVarUse)
+	}
+	return nil
+}
+
 // ShQuoting describes the context in which a string appears
 // and how it must be unescaped to get its literal value.
 type ShQuoting uint8
