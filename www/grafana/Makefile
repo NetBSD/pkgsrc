@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/12/03 11:06:24 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/01/07 19:05:02 tnn Exp $
 
 GITHUB_PROJECT=	grafana
 DISTNAME=	grafana-4.6.2
@@ -14,7 +14,7 @@ LICENSE=	apache-2.0
 GR_DISTNAME=			${DISTNAME}${EXTRACT_SUFX}
 DISTFILES=			${GR_DISTNAME}
 EXTRACT_ONLY=			${GR_DISTNAME}
-EXTRACT_DIR.${GR_DISTNAME}=	${WRKDIR}/src/github.com/grafana
+EXTRACT_DIR.grafana-4.6.2.tar.gz=	${WRKDIR}/src/github.com/grafana
 WRKSRC=				${WRKDIR}/src/github.com/grafana/grafana
 
 # We don't have suitable infrastructure in pkgsrc for generating frontend
@@ -23,7 +23,7 @@ FE_DISTNAME=			${DISTNAME}.linux-x64${EXTRACT_SUFX}
 SITES.grafana-4.6.2.linux-x64.tar.gz=		https://s3-us-west-2.amazonaws.com/grafana-releases/release/
 DISTFILES+=			${FE_DISTNAME}
 EXTRACT_ONLY+=			${FE_DISTNAME}
-EXTRACT_DIR.${FE_DISTNAME}=	${WRKDIR}/frontend_assets
+EXTRACT_DIR.grafana-4.6.2.linux-x64.tar.gz=	${WRKDIR}/frontend_assets
 
 BUILD_DEPENDS+=			go-[0-9]*:../../lang/go
 
