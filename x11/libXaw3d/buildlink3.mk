@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2016/01/23 03:04:00 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2018/01/07 13:04:39 rillig Exp $
 
 BUILDLINK_TREE+=	libXaw3d
 
@@ -6,16 +6,16 @@ BUILDLINK_TREE+=	libXaw3d
 LIBXAW3D_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libXaw3d+=	libXaw3d>=1.6.2
-BUILDLINK_PKGSRCDIR.libXaw3d?=	../../x11/libXaw3d
+BUILDLINK_PKGSRCDIR.libXaw3d?=		../../x11/libXaw3d
 
 BUILDLINK_TRANSFORM+=	l:Xaw:Xaw3d
- 
+
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${X11_TYPE} == "modular"
 .PHONY: buildlink-libXaw3d-inc-hack
 buildlink-libXaw3d-cookie: buildlink-libXaw3d-inc-hack
- 
+
 buildlink-libXaw3d-inc-hack: buildlink-directories
 	[ ! -h ${BUILDLINK_DIR}/include/X11/Xaw ] && \
 		${MKDIR} ${BUILDLINK_DIR}/include/X11 && \

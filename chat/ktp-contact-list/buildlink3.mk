@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2016/01/17 15:03:14 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:03:57 rillig Exp $
 
 BUILDLINK_TREE+=	ktp-contact-list
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ktp-contact-list
 KTP_CONTACT_LIST_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ktp-contact-list+=	ktp-contact-list>=0.9.0
-BUILDLINK_PKGSRCDIR.ktp-contact-list?=	../../chat/ktp-contact-list
+BUILDLINK_PKGSRCDIR.ktp-contact-list?=		../../chat/ktp-contact-list
 
 .endif	# KTP_CONTACT_LIST_BUILDLINK3_MK
 

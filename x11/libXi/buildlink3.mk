@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2014/04/23 12:22:48 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2018/01/07 13:04:39 rillig Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -9,7 +9,7 @@
 
 BUILDLINK_TREE+=	libXi
 
-.if !defined(LIBXI_BUILDLINK3_MK)
+.  if !defined(LIBXI_BUILDLINK3_MK)
 LIBXI_BUILDLINK3_MK:=
 
 .  if !defined(USE_BUILTIN.libXi)
@@ -33,7 +33,7 @@ BUILDLINK_API_DEPENDS.xproto+=		xproto>=7.0.13
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
-.endif # LIBXI_BUILDLINK3_MK
+.  endif # LIBXI_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libXi
 

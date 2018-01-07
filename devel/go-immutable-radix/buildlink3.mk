@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2017/08/25 16:49:13 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2018/01/07 13:04:01 rillig Exp $
 
 BUILDLINK_TREE+=	go-immutable-radix
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	go-immutable-radix
 GO_IMMUTABLE_RADIX_BUILDLINK3_MK:=
 
 BUILDLINK_CONTENTS_FILTER.go-immutable-radix=	${EGREP} gopkg/
-BUILDLINK_DEPMETHOD.go-immutable-radix?=		build
+BUILDLINK_DEPMETHOD.go-immutable-radix?=	build
 
 BUILDLINK_API_DEPENDS.go-immutable-radix+=		go-immutable-radix>=0.0
 BUILDLINK_PKGSRCDIR.go-immutable-radix?=		../../devel/go-immutable-radix
