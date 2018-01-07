@@ -1,6 +1,7 @@
-# $NetBSD: category.mk,v 1.2 2007/10/13 11:04:18 dsl Exp $
+# $NetBSD: category.mk,v 1.3 2018/01/07 11:23:37 rillig Exp $
 #
-# This file contains the variables and targets for category Makefiles.
+# This file contains the variables and targets for category Makefiles,
+# e.g. x11/Makefile.
 #
 
 .include "common.mk"

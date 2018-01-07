@@ -1,4 +1,4 @@
-# $NetBSD: bsd.checksum-vars.mk,v 1.2 2008/05/22 16:27:22 joerg Exp $
+# $NetBSD: bsd.checksum-vars.mk,v 1.3 2018/01/07 11:23:37 rillig Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -8,6 +8,7 @@
 #
 #    DISTINFO_FILE is the path to file containing the checksums.
 #
+# Keywords: distinfo
 
 DISTINFO_FILE?=		${PKGDIR}/distinfo
 
