@@ -50,14 +50,13 @@ BEGIN {
 	use Exporter;
 	use vars qw(@ISA @EXPORT);
 	@ISA = qw(Exporter);
-	@EXPORT = qw(WriteMakefile prompt);
 }
 
 # From lib/perl5/5.18.0/ExtUtils/MakeMaker.pm
 our $VERSION = '6.66';
 
 our $Verbose	= 0;	# exported
-our @EXPORT	= qw($Verbose $version);
+our @EXPORT	= qw(&WriteMakefile &prompt $Verbose $version);
 our @EXPORT_OK	= qw(&neatvalue);
 
 # Finds and returns the category a given package lies in.
