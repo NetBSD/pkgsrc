@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17985 2018/01/07 12:57:24 leot Exp $
+$NetBSD: TODO,v 1.17986 2018/01/07 12:58:12 leot Exp $
 
 Suggested new packages
 ======================
@@ -1579,7 +1579,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o yorick-2.1.05
 	o yudit-2.9.6
 	o z26-2.14
-	o zathura-0.3.8 [leot]
 	o zathura-cb-0.1.7 [leot]
 	o zathura-djvu-0.2.7 [leot]
 	o zathura-pdf-mupdf-0.3.2 [leot]
