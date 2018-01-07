@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2017/02/12 06:24:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.39 2018/01/07 21:01:55 joerg Exp $
 
 DISTNAME=	libgksu-2.0.12
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	sysutils
 MASTER_SITES=	http://people.debian.org/~kov/gksu/
 
@@ -12,6 +12,7 @@ LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=	yes
 
+CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 MAKE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 
@@ -28,8 +29,6 @@ SUBST_STAGE.xauth=	post-extract
 SUBST_FILES.xauth=	libgksu/gksu-run-helper.c libgksu/libgksu.c
 
 .include "../../devel/GConf/schemas.mk"
-BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.20
-.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../security/libgnome-keyring/buildlink3.mk"
 .include "../../sysutils/libgtop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
