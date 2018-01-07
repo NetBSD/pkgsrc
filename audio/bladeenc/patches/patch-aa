@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2002/12/14 00:39:58 jschauma Exp $
+$NetBSD: patch-aa,v 1.6 2018/01/07 19:53:16 rillig Exp $
+
+This man page has been offered to the upstream author, but the package
+is discontinued, so it will probably not be integrated.
 
 --- /dev/null	Fri Dec 13 19:19:07 2002
 +++ bladeenc.1	Fri Dec 13 19:31:00 2002
