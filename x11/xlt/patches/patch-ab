@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2016/04/01 16:08:36 jperkin Exp $
+$NetBSD: patch-ab,v 1.3 2018/01/07 19:27:56 rillig Exp $
 
 Honour --mandir.
 
@@ -18,7 +18,7 @@ Honour --mandir.
  html_DATA = $(html_HTML)
  
 -htmldir = $(prefix)/Xlt/doc/html
-+htmldir = $(prefix)/share/doc/html/Xlt
++htmldir = $(prefix)/share/doc/Xlt
  subdir = doc
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
