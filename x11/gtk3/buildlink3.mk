@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2017/11/23 17:19:45 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2018/01/07 13:04:38 rillig Exp $
 
 BUILDLINK_TREE+=	gtk3
 
@@ -26,7 +26,7 @@ pkgbase := gtk3
 .include "../../graphics/libepoxy/buildlink3.mk"
 .if !empty(PKG_BUILD_OPTIONS.gtk3:Mx11)
 .  if !empty(PKG_BUILD_OPTIONS.gtk3:Mgtk3-atk-bridge)
-.  include "../../devel/at-spi2-atk/buildlink3.mk"
+.    include "../../devel/at-spi2-atk/buildlink3.mk"
 .  endif
 .include "../../x11/libXcursor/buildlink3.mk"
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2nb2

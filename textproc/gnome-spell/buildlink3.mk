@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.55 2017/11/23 17:19:44 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.56 2018/01/07 13:04:33 rillig Exp $
 
 BUILDLINK_TREE+=	gnome-spell
 
 .if !defined(GNOME_SPELL_BUILDLINK3_MK)
 GNOME_SPELL_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gnome-spell+=		gnome-spell>=1.0.5
+BUILDLINK_API_DEPENDS.gnome-spell+=	gnome-spell>=1.0.5
 BUILDLINK_ABI_DEPENDS.gnome-spell+=	gnome-spell>=1.0.8nb37
 BUILDLINK_PKGSRCDIR.gnome-spell?=	../../textproc/gnome-spell
 

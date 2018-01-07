@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2017/08/13 14:21:03 taca Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2018/01/07 13:04:26 rillig Exp $
 
 BUILDLINK_TREE+=	isc-dhcp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	isc-dhcp
 ISC_DHCP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.isc-dhcp+=	isc-dhcp>=4.3.0
-BUILDLINK_PKGSRCDIR.isc-dhcp?=	../../net/isc-dhcp4
+BUILDLINK_PKGSRCDIR.isc-dhcp?=		../../net/isc-dhcp4
 .endif # ISC_DHCP_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-isc-dhcp
