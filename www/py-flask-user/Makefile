@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/12/12 10:28:20 adam Exp $
+# $NetBSD: Makefile,v 1.15 2018/01/07 21:02:49 joerg Exp $
 
 DISTNAME=	Flask-User-0.6.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/lingthio/Flask-User
 COMMENT=	Customizable user account management for Flask
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-bcrypt-[0-9]*:../../security/py-py-bcrypt
+DEPENDS+=	${PYPKGPREFIX}-bcrypt-[0-9]*:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-flask-babel-[0-9]*:../../www/py-flask-babel
