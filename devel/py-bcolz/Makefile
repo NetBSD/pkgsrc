@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/10/08 09:24:43 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/01/07 20:57:37 joerg Exp $
 
 DISTNAME=	bcolz-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/Blosc/bcolz
 COMMENT=	Columnar and compressed data containers
 LICENSE=	modified-bsd
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	c
 
