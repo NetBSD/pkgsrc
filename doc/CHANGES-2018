@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.79 2018/01/07 17:08:24 rillig Exp $
+$NetBSD: CHANGES-2018,v 1.80 2018/01/07 18:14:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -141,3 +141,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/py-borgbackup to 1.1.4 [bsiegert 2018-01-07]
 	Updated www/privoxy to 3.0.26 [leot 2018-01-07]
 	Updated pkgtools/pkglint to 5.4.26 [rillig 2018-01-07]
+	Removed databases/py-bdb-xml [wiz 2018-01-07]
+	Removed databases/bdb-xml [wiz 2018-01-07]
