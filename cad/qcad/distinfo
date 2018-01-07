@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2017/12/18 21:21:44 plunky Exp $
+$NetBSD: distinfo,v 1.29 2018/01/07 21:23:39 plunky Exp $
 
 SHA1 (qcad-3.19.1.0.zip) = df550d3b2347b5426efc12d01328a0721c129c3d
 RMD160 (qcad-3.19.1.0.zip) = 9a4f26aebe5b12ebe70ea9e66dc3cece71bd8612
@@ -15,7 +15,7 @@ SHA1 (patch-src_3rdparty_dxflib_src_dl__writer.h) = 28d515063c5d410083a2ab582e9d
 SHA1 (patch-src_3rdparty_opennurbs_opennurbs.pro) = d96e1ce129d32703fc474aea71afdae1d4b537ed
 SHA1 (patch-src_3rdparty_opennurbs_opennurbs__zlib.cpp) = 26385c45b2132909470aba79181c242c785614a7
 SHA1 (patch-src_3rdparty_opennurbs_opennurbs__zlib.h) = 333fe1510cc5ea2457eefd7d07ccaf034ee5d22f
-SHA1 (patch-src_3rdparty_opennurbs_opennurbs_opennurbs.pro) = ee026d1c6124a8a01fdbb483446f18ce35191295
+SHA1 (patch-src_3rdparty_opennurbs_opennurbs_opennurbs.pro) = 7120c49027d4a50c23b1e9e60c44a1e0a239d6ac
 SHA1 (patch-src_3rdparty_qtscript.pro) = c4ea2ca8884a24e0abc4e7231b4a474d21035280
 SHA1 (patch-src_3rdparty_quazip_quazip.pro) = b59c24acc4171c7ef9ab21a5220dd57bf870b38b
 SHA1 (patch-src_3rdparty_spatialindexnavel_spatialindexnavel.pro) = 64bf1fb27be358e707fe5476d7deaa9bf2d09230
