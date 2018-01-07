@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.62 2018/01/06 15:49:51 jdolecek Exp $
+$NetBSD: CHANGES-2018,v 1.63 2018/01/07 01:13:31 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -124,3 +124,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/cairo to 1.14.12 [adam 2018-01-06]
 	Updated graphics/cairo-gobject to 1.14.12 [adam 2018-01-06]
 	Updated devel/php-xdebug-devel to 2.6.0beta1 [jdolecek 2018-01-06]
+	Updated pkgtools/pkglint to 5.4.25 [rillig 2018-01-07]
