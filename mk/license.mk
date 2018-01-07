@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.83 2018/01/05 07:54:39 rillig Exp $
+# $NetBSD: license.mk,v 1.84 2018/01/07 19:44:31 rillig Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -242,10 +242,20 @@ PKG_FAIL_REASON+= \
 #	This is useful for package developers.
 #
 # Keywords: license
-guess-license:
-	${RUN} [ -d ${WRKSRC} ] || ALLOW_VULNERABLE_PACKAGES=yes ${MAKE} fetch pre-extract do-extract
+guess-license: .PHONY
+	${RUN} [ -d ${WRKSRC} ] || ALLOW_VULNERABLE_PACKAGES=yes ${MAKE} makedirs fetch pre-extract do-extract
 	${RUN} \
 	${PHASE_MSG} "Guessing package license"; \
+	\
+	if type ninka > /dev/null 2>&1; then \
+	  (cd ${WRKDIR} && ${FIND} ./* -type f -print \
+	  | ${XARGS} ninka \
+	  | ${AWK} -F ';' '{ print $$2 }' \
+	  | LC_ALL=C ${SORT} | uniq -c | LC_ALL=C ${SORT} -nr \
+	  | ${AWK} 'BEGIN { printf("%5s   %s\n", "Files", "License") } { printf("%5d   %s\n", $$1, $$2); }'); \
+	  exit 0; \
+	fi; \
+	\
 	type wdiff > /dev/null 2>&1 || ${FAIL_MSG} "To guess the license, textproc/wdiff must be installed."; \
 	\
 	pkgfiles=`find ${WRKSRC} -type f -print | ${EGREP} '/COPYING|/LICEN[CS]E|/COPYRIGHT' | LC_ALL=C ${SORT}`; \
