@@ -179,7 +179,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	shline.CheckShellCommandLine("${RUN} subdir=\"`unzip -c \"$$e\" install.rdf | awk '/re/ { print \"hello\" }'`\"")
 
 	s.CheckOutputLines(
-		"WARN: fname:1: The exitcode of the left-hand-side command of the pipe operator is ignored.",
+		"WARN: fname:1: The exitcode of \"unzip\" at the left of the | operator is ignored.",
 		"WARN: fname:1: Unknown shell command \"unzip\".",
 		"WARN: fname:1: Unknown shell command \"awk\".")
 
@@ -194,7 +194,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 
 	s.CheckOutputLines(
 		"WARN: fname:1: XPI_FILES is used but not defined. Spelling mistake?",
-		"WARN: fname:1: The exitcode of the left-hand-side command of the pipe operator is ignored.",
+		"WARN: fname:1: The exitcode of \"${UNZIP_CMD}\" at the left of the | operator is ignored.",
 		"WARN: fname:1: UNZIP_CMD is used but not defined. Spelling mistake?",
 		"WARN: fname:1: Unknown shell command \"awk\".",
 		"WARN: fname:1: Unknown shell command \"${MKDIR}\".",
@@ -261,6 +261,39 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__show_autofix(c *check.C) {
 	s.CheckOutputLines(
 		"NOTE: Makefile:1: The :Q operator isn't necessary for ${PKGNAME} here.",
 		"AUTOFIX: Makefile:1: Replacing \"${PKGNAME:Q}\" with \"${PKGNAME}\".")
+}
+
+// Simple commands like echo(1) or printf(1) are assumed to never fail.
+func (s *Suite) Test_ShellLine_CheckShellCommandLine__exitcode(c *check.C) {
+	s.Init(c)
+	s.UseCommandLine("-Wall")
+	G.globalData.InitVartypes()
+	s.RegisterTool(&Tool{Name: "cat", Predefined: true})
+	s.RegisterTool(&Tool{Name: "echo", Predefined: true})
+	s.RegisterTool(&Tool{Name: "printf", Predefined: true})
+	s.RegisterTool(&Tool{Name: "sed", Predefined: true})
+	s.RegisterTool(&Tool{Name: "right-side", Predefined: true})
+	G.Mk = s.NewMkLines("Makefile",
+		"\t echo | right-side",
+		"\t sed s,s,s, | right-side",
+		"\t printf | sed s,s,s, | right-side ",
+		"\t cat | right-side",
+		"\t cat | echo | right-side",
+		"\t echo | cat | right-side",
+		"\t sed s,s,s, filename | right-side",
+		"\t sed s,s,s < input | right-side")
+
+	for _, mkline := range G.Mk.mklines {
+		shline := NewShellLine(mkline)
+		shline.CheckShellCommandLine(mkline.Shellcmd())
+	}
+
+	s.CheckOutputLines(
+		"WARN: Makefile:4: The exitcode of \"cat\" at the left of the | operator is ignored.",
+		"WARN: Makefile:5: The exitcode of \"cat\" at the left of the | operator is ignored.",
+		"WARN: Makefile:6: The exitcode of \"cat\" at the left of the | operator is ignored.",
+		"WARN: Makefile:7: The exitcode of \"sed\" at the left of the | operator is ignored.",
+		"WARN: Makefile:8: The exitcode of \"sed\" at the left of the | operator is ignored.")
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__autofix(c *check.C) {
