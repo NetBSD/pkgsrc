@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2013/07/02 08:59:03 sno Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2018/01/07 13:04:07 rillig Exp $
 
 BUILDLINK_TREE+=	log4cplus
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	log4cplus
 LOG4CPLUS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.log4cplus+=	log4cplus>=1.1.0
-BUILDLINK_PKGSRCDIR.log4cplus?=	../../devel/log4cplus
+BUILDLINK_PKGSRCDIR.log4cplus?=		../../devel/log4cplus
 .endif	# LOG4CPLUS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-log4cplus

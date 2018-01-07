@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.51 2016/03/05 11:27:55 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.52 2018/01/07 13:04:30 rillig Exp $
 
 BUILDLINK_TREE+=	openssl
 
 .if !defined(OPENSSL_BUILDLINK3_MK)
 OPENSSL_BUILDLINK3_MK:=
 
-.  include "../../mk/bsd.fast.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0.1c
 BUILDLINK_ABI_DEPENDS.openssl+=	openssl>=1.0.2gnb1

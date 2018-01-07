@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2017/07/21 13:45:42 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2018/01/07 13:04:08 rillig Exp $
 
 BUILDLINK_TREE+=	ocaml-ppx_driver
 
@@ -7,7 +7,7 @@ OCAML_PPX_DRIVER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-ppx_driver+=	ocaml-ppx_driver>=0.9.0
 BUILDLINK_ABI_DEPENDS.ocaml-ppx_driver+=	ocaml-ppx_driver>=0.9.0
-BUILDLINK_PKGSRCDIR.ocaml-ppx_driver?=	../../devel/ocaml-ppx_driver
+BUILDLINK_PKGSRCDIR.ocaml-ppx_driver?=		../../devel/ocaml-ppx_driver
 
 #.include "../../devel/ocaml-ppx_optcomp/buildlink3.mk"
 .endif	# OCAML_PPX_DRIVER_BUILDLINK3_MK

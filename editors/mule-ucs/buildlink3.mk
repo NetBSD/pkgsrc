@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2011/04/14 18:23:40 hans Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2018/01/07 13:04:11 rillig Exp $
 #
 
 #
@@ -11,15 +11,15 @@
 
 BUILDLINK_TREE+=	mule-ucs
 
-.if !defined(MULE_UCS_BUILDLINK3_MK)
+.  if !defined(MULE_UCS_BUILDLINK3_MK)
 MULE_UCS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mule-ucs+=	${EMACS_PKGNAME_PREFIX}Mule-UCS>=0.84
-BUILDLINK_PKGSRCDIR.mule-ucs?=	../../editors/mule-ucs
+BUILDLINK_PKGSRCDIR.mule-ucs?=		../../editors/mule-ucs
 
 BUILDLINK_CONTENTS_FILTER.mule-ucs=	${EGREP} '.*\.el$$|.*\.elc$$'
 
-.endif # MULE_UCS_BUILDLINK3_MK
+.  endif # MULE_UCS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-mule-ucs
 .endif
