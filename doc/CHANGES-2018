@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.68 2018/01/07 12:20:06 wen Exp $
+$NetBSD: CHANGES-2018,v 1.69 2018/01/07 12:57:24 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -130,3 +130,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated cad/gerbv to 2.6.2 [wen 2018-01-08]
 	Updated editors/nano to 2.9.2 [wen 2018-01-08]
 	Updated math/R-sp to 1.2.6 [wen 2018-01-08]
+	Updated graphics/girara to 0.2.8 [leot 2018-01-07]
