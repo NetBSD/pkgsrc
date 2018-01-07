@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.19 2011/04/22 13:42:06 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2018/01/07 13:04:38 rillig Exp $
 
 BUILDLINK_TREE+=	gtk
 
 .if !defined(GTK_BUILDLINK3_MK)
 GTK_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gtk+=		gtk+>=1.2.10
+BUILDLINK_API_DEPENDS.gtk+=	gtk+>=1.2.10
 BUILDLINK_ABI_DEPENDS.gtk+=	gtk+>=1.2.10nb10
 BUILDLINK_PKGSRCDIR.gtk?=	../../x11/gtk
 

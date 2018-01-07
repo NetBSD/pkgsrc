@@ -1,6 +1,6 @@
-# $NetBSD: buildlink3.mk,v 1.2 2012/07/08 20:03:08 marino Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2018/01/07 13:04:35 rillig Exp $
 
-BUILDLINK_TREE+= xmlada
+BUILDLINK_TREE+=	xmlada
 
 .if !defined(XMLADA_BUILDLINK3_MK)
 XMLADA_BUILDLINK3_MK:=
@@ -10,4 +10,4 @@ BUILDLINK_PKGSRCDIR.xmlada?=	../../textproc/xmlada
 
 .endif	# XMLADA_BUILDLINK3_MK
 
-BUILDLINK_TREE+= -xmlada
+BUILDLINK_TREE+=	-xmlada

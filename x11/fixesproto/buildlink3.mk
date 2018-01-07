@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2015/06/18 21:48:52 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2018/01/07 13:04:38 rillig Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -13,7 +13,7 @@ BUILDLINK_DEPMETHOD.fixesproto?=	build
 
 BUILDLINK_TREE+=	fixesproto
 
-.if !defined(FIXESPROTO_BUILDLINK3_MK)
+.  if !defined(FIXESPROTO_BUILDLINK3_MK)
 FIXESPROTO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=4.0.0
@@ -31,7 +31,7 @@ BUILDLINK_API_DEPENDS.xextproto+=	xextproto>=7.0.99.1
 
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
-.endif # FIXESPROTO_BUILDLINK3_MK
+.  endif # FIXESPROTO_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-fixesproto
 

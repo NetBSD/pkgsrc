@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2009/03/20 19:24:07 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2018/01/07 13:03:59 rillig Exp $
 
 BUILDLINK_TREE+=	qdbm
 
@@ -11,11 +11,11 @@ BUILDLINK_PKGSRCDIR.qdbm?=	../../databases/qdbm
 
 .include "../../mk/pthread.buildlink3.mk"
 
-.  if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "none"
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "none"
 CONFIGURE_ARGS+=	--enable-pthread
 BUILDLINK_CFLAGS.qdbm+=	${PTHREAD_CFLAGS}
 BUILDLINK_LDFLAGS.qdbm+=${PTHREAD_LDFLAGS}
-.  endif
+.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"

@@ -1,6 +1,6 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/05/09 00:40:12 rodent Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:04:25 rillig Exp $
 
-BUILDLINK_TREE+=      liboggz
+BUILDLINK_TREE+=	liboggz
 
 .if !defined(LIBOGGZ_BUILDLINK3_MK)
 LIBOGGZ_BUILDLINK3_MK:=
