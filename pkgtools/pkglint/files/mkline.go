@@ -102,12 +102,13 @@ func NewMkLine(line Line) (mkline *MkLineImpl) {
 		return
 	}
 
-	if index := strings.IndexByte(text, '#'); index != -1 && strings.TrimSpace(text[:index]) == "" {
+	trimmedText := strings.TrimSpace(text)
+	if strings.HasPrefix(trimmedText, "#") {
 		mkline.data = mkLineComment{}
 		return
 	}
 
-	if strings.TrimSpace(text) == "" {
+	if trimmedText == "" {
 		mkline.data = mkLineEmpty{}
 		return
 	}
@@ -312,7 +313,7 @@ func matchMkCond(text string) (m bool, indent, directive, args string) {
 	}
 
 	argsStart := i
-	for i < n && text[i] != '#' {
+	for i < n && (text[i] != '#' || text[i-1] == '\\') {
 		i++
 	}
 	for i > argsStart && (text[i-1] == ' ' || text[i-1] == '\t') {
@@ -322,7 +323,7 @@ func matchMkCond(text string) (m bool, indent, directive, args string) {
 
 	m = true
 	indent = text[indentStart:indentEnd]
-	args = text[argsStart:argsEnd]
+	args = strings.Replace(text[argsStart:argsEnd], "\\#", "#", -1)
 	return
 }
 

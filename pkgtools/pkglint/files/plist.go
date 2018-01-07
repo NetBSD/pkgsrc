@@ -175,8 +175,6 @@ func (ck *PlistChecker) checkpath(pline *PlistLine) {
 		ck.checkpathLib(pline, dirname, basename)
 	case "man":
 		ck.checkpathMan(pline)
-	case "sbin":
-		ck.checkpathSbin(pline)
 	case "share":
 		ck.checkpathShare(pline)
 	}
@@ -225,19 +223,6 @@ func (ck *PlistChecker) checkpathBin(pline *PlistLine, dirname, basename string)
 	if contains(dirname, "/") {
 		pline.line.Warnf("The bin/ directory should not have subdirectories.")
 		return
-	}
-
-	if G.opts.WarnExtra &&
-		ck.allFiles["man/man1/"+basename+".1"] == nil &&
-		ck.allFiles["man/man6/"+basename+".6"] == nil &&
-		ck.allFiles["${IMAKE_MAN_DIR}/"+basename+".${IMAKE_MANNEWSUFFIX}"] == nil {
-		pline.line.Warnf("Manual page missing for bin/%s.", basename)
-		Explain(
-			"All programs that can be run directly by the user should have a",
-			"manual page for quick reference.  The programs in the bin/ directory",
-			"should have corresponding manual pages in section 1 (filename",
-			"program.1), while the programs in the sbin/ directory have their",
-			"manual pages in section 8.")
 	}
 }
 
@@ -324,27 +309,13 @@ func (ck *PlistChecker) checkpathMan(pline *PlistLine) {
 		}
 	}
 
-	if gz != "" {
+	if gz != "" && !line.AutofixReplaceRegexp(`\.gz$`, "") {
 		line.Notef("The .gz extension is unnecessary for manual pages.")
 		Explain(
 			"Whether the manual pages are installed in compressed form or not is",
 			"configured by the pkgsrc user.  Compression and decompression takes",
 			"place automatically, no matter if the .gz extension is mentioned in",
 			"the PLIST or not.")
-	}
-}
-
-func (ck *PlistChecker) checkpathSbin(pline *PlistLine) {
-	binname := pline.text[5:]
-
-	if ck.allFiles["man/man8/"+binname+".8"] == nil && G.opts.WarnExtra {
-		pline.line.Warnf("Manual page missing for sbin/%s.", binname)
-		Explain(
-			"All programs that can be run directly by the user should have a",
-			"manual page for quick reference.  The programs in the sbin/",
-			"directory should have corresponding manual pages in section 8",
-			"(filename program.8), while the programs in the bin/ directory",
-			"have their manual pages in section 1.")
 	}
 }
 

@@ -295,3 +295,42 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_PKGBASE_with_unknown_variable(c *che
 		"WARN: buildlink3.mk:3: Please replace \"${LICENSE}\" with a simple string (also in other variables in this file).",
 		"WARN: buildlink3.mk:13: This line should contain the following text: BUILDLINK_TREE+=\t-${LICENSE}-wxWidgets")
 }
+
+// Those .include lines that are not indented at all may stay as-is.
+// This special exception might have been for backwards-compatibility,
+// but ideally should be handled like everywhere else.
+// See MkLineChecker.checkInclude.
+func (s *Suite) Test_ChecklinesBuildlink3Mk_indentation(c *check.C) {
+	s.Init(c)
+	s.UseCommandLine("-Wall")
+	G.globalData.InitVartypes()
+	mklines := s.NewMkLines("buildlink3.mk",
+		mkrcsid,
+		"",
+		".if ${VAAPI_AVAILABLE} == \"yes\"",
+		"",
+		"BUILDLINK_TREE+=	libva",
+		"",
+		".  if !defined(LIBVA_BUILDLINK3_MK)",
+		"LIBVA_BUILDLINK3_MK:=",
+		"",
+		"BUILDLINK_API_DEPENDS.libva+=	libva>=1.0.6",
+		"BUILDLINK_PKGSRCDIR.libva?=	../../multimedia/libva",
+		"",
+		".include \"../../x11/libX11/buildlink3.mk\"",
+		"",
+		".  endif	# LIBVA_BUILDLINK3_MK",
+		"",
+		"BUILDLINK_TREE+=	-libva",
+		"",
+		".endif # VAAPI_AVAILABLE")
+
+	ChecklinesBuildlink3Mk(mklines)
+
+	// No warning about the indentation of the .include lines.
+	s.CheckOutputLines(
+		"ERROR: buildlink3.mk:11: \"/multimedia/libva\" does not exist.",
+		"ERROR: buildlink3.mk:11: There is no package in \"multimedia/libva\".",
+		"ERROR: buildlink3.mk:13: \"/x11/libX11/buildlink3.mk\" does not exist.",
+		"WARN: buildlink3.mk:3: Expected a BUILDLINK_TREE line.")
+}
