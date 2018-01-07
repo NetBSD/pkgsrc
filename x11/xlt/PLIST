@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:25:17 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/07 19:27:56 rillig Exp $
 include/Xlt/AnimatedButton.h
 include/Xlt/AnimatedButtonP.h
 include/Xlt/AppShell.h
@@ -76,16 +76,16 @@ man/man3/XltToolBarConfigure.3
 man/man3/XltWaitTillMapped.3
 man/man3/XltWorking.3
 man/man3/XltYesNo.3
-share/doc/html/Xlt/ListTree.gif
-share/doc/html/Xlt/ListTree.html
-share/doc/html/Xlt/ListTreeProg.html
-share/doc/html/Xlt/ListTreeTitle.gif
-share/doc/html/Xlt/LiteClue.html
-share/doc/html/Xlt/SciPlot.html
-share/doc/html/Xlt/SciPlotDemo.gif
-share/doc/html/Xlt/SciPlotDemo.html
-share/doc/html/Xlt/SciPlotExample.gif
-share/doc/html/Xlt/SciPlotProg.html
-share/doc/html/Xlt/SciPlotTitle.gif
-share/doc/html/Xlt/TreeFSel.gif
-share/doc/html/Xlt/new.gif
+share/doc/Xlt/ListTree.gif
+share/doc/Xlt/ListTree.html
+share/doc/Xlt/ListTreeProg.html
+share/doc/Xlt/ListTreeTitle.gif
+share/doc/Xlt/LiteClue.html
+share/doc/Xlt/SciPlot.html
+share/doc/Xlt/SciPlotDemo.gif
+share/doc/Xlt/SciPlotDemo.html
+share/doc/Xlt/SciPlotExample.gif
+share/doc/Xlt/SciPlotProg.html
+share/doc/Xlt/SciPlotTitle.gif
+share/doc/Xlt/TreeFSel.gif
+share/doc/Xlt/new.gif
