@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.17 2015/01/04 06:58:44 dholland Exp $
+# $NetBSD: Makefile,v 1.18 2018/01/07 22:21:04 rillig Exp $
 #
 
 DISTNAME=	tads23-unix
 PKGNAME=	tads-3.0.8
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	http://www.tads.org/t3dl/
+DIST_SUBDIR=	${PKGNAME_NOREV}-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tads.org/
 COMMENT=	TADS compiler and interpreter
 
-DIST_SUBDIR=	${PKGNAME_NOREV}-1
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 NO_CONFIGURE=	yes
 BUILD_DIRS=	tads2 tads3
