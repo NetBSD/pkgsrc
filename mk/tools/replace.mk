@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.280 2017/08/01 15:09:52 wiz Exp $
+# $NetBSD: replace.mk,v 1.281 2018/01/07 11:23:37 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -78,6 +78,7 @@
 #
 #	USE_TOOLS+=	perl:run
 #
+# Keywords: USE_TOOLS tool tools
 
 # bison implies "bison-yacc"
 .if !empty(USE_TOOLS:Mbison) || !empty(USE_TOOLS:Mbison\:*)
