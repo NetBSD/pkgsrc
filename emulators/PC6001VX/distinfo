@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2017/09/16 17:10:19 tsutsui Exp $
+$NetBSD: distinfo,v 1.5 2018/01/07 20:58:56 joerg Exp $
 
 SHA1 (PC6001VX_2.31.1_src.tar.gz) = 4e53d3b10ccc6bb8d92c0e7939c61e9df0271c26
 RMD160 (PC6001VX_2.31.1_src.tar.gz) = 82e853e4d395354759c25c0721c22cf2bc11f001
 SHA512 (PC6001VX_2.31.1_src.tar.gz) = eeb882357710053fc175ae763d3cea4b959a71d2a2fb6cf51a5424ffa0be95026b78d1d71b6f362e255de234a5061acbe2f86800de044cc20629579b3d1c666a
 Size (PC6001VX_2.31.1_src.tar.gz) = 2053290 bytes
+SHA1 (patch-PC6001VX.pro) = 8ffb35ececbdd3b2d0cc9a10243f8458a46310eb
