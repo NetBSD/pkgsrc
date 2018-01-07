@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.64 2018/01/07 01:31:31 wen Exp $
+$NetBSD: CHANGES-2018,v 1.65 2018/01/07 10:27:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -126,3 +126,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/php-xdebug-devel to 2.6.0beta1 [jdolecek 2018-01-06]
 	Updated pkgtools/pkglint to 5.4.25 [rillig 2018-01-07]
 	Updated devel/p5-Tree-Simple to 1.33 [wen 2018-01-07]
+	Updated textproc/p5-Text-Xslate to 3.5.5 [wen 2018-01-07]
