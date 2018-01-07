@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2017/08/16 20:45:32 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2018/01/07 19:57:48 rillig Exp $
 #
 
 DISTNAME=	ircservices-5.0.64
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	chat
 #MASTER_SITES=	http://www.ircservices.za.net/download/old/
 MASTER_SITES+=	ftp://ftp.esper.net/ircservices/old/
@@ -67,7 +67,7 @@ CONF_FILES_PERMS+=	${PREFIX}/share/examples/ircservices/modules.conf \
 				${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0640
 
 INSTALLATION_DIRS=	lib/services ${PKGMANDIR}/man8 sbin \
-			share/doc/html/ircservices share/examples/ircservices
+			share/doc/ircservices share/examples/ircservices
 
 INSTALL_MAKE_FLAGS+=	BINDEST=${DESTDIR}${PREFIX}/sbin \
 			DATDEST=${DESTDIR}${PREFIX}/lib/services
@@ -90,7 +90,7 @@ pre-install:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/*.html \
-		${DESTDIR}${PREFIX}/share/doc/html/ircservices
+		${DESTDIR}${PREFIX}/share/doc/ircservices
 	${INSTALL_MAN} ${WRKSRC}/docs/*.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/lib/services/helpfiles
 	${INSTALL_DATA} ${WRKSRC}/data/example-ircservices.conf \
