@@ -587,6 +587,20 @@ func (tr *ToolRegistry) RegisterTool(tool *Tool) {
 	}
 }
 
+func (tr *ToolRegistry) FindByCommand(cmd *ShToken) *Tool {
+	if tool := tr.byName[cmd.MkText]; tool != nil {
+		return tool
+	}
+	if len(cmd.Atoms) == 1 {
+		if varuse := cmd.Atoms[0].VarUse(); varuse != nil {
+			if tool := tr.byVarname[varuse.varname]; tool != nil {
+				return tool
+			}
+		}
+	}
+	return nil
+}
+
 func (tr *ToolRegistry) Trace() {
 	if trace.Tracing {
 		defer trace.Call0()()

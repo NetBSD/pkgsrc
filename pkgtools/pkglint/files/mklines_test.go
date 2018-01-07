@@ -1,7 +1,7 @@
 package main
 
 import (
-	check "gopkg.in/check.v1"
+	"gopkg.in/check.v1"
 )
 
 const mkrcsid = "# $" + "NetBSD$"
@@ -188,7 +188,7 @@ func (s *Suite) Test_MkLines__for_loop_multiple_variables(c *check.C) {
 	s.CheckOutputLines(
 		"WARN: audio/squeezeboxserver/Makefile:3: Variable names starting with an underscore (_list_) are reserved for internal pkgsrc use.",
 		"WARN: audio/squeezeboxserver/Makefile:3: Variable names starting with an underscore (_dir_) are reserved for internal pkgsrc use.",
-		"WARN: audio/squeezeboxserver/Makefile:4: The exitcode of the left-hand-side command of the pipe operator is ignored.")
+		"WARN: audio/squeezeboxserver/Makefile:4: The exitcode of \"${FIND}\" at the left of the | operator is ignored.")
 }
 
 func (s *Suite) Test_MkLines__comparing_YesNo_variable_to_string(c *check.C) {
@@ -478,4 +478,32 @@ func (s *Suite) Test_MkLines_Check_indentation(c *check.C) {
 		"NOTE: options.mk:14: This directive should be indented by 0 spaces.\n"+
 		"ERROR: options.mk:15: Unmatched .endif.\n"+
 		"NOTE: options.mk:15: This directive should be indented by 0 spaces.\n")
+}
+
+// Demonstrates how to define your own make(1) targets.
+func (s *Suite) Test_MkLines_wip_category_Makefile(c *check.C) {
+	s.Init(c)
+	s.UseCommandLine("-Wall")
+	G.globalData.InitVartypes()
+	s.RegisterTool(&Tool{Name: "rm", Varname: "RM", Predefined: true})
+	mklines := s.NewMkLines("Makefile",
+		mkrcsid,
+		"",
+		"COMMENT=\tWIP pkgsrc packages",
+		"",
+		"SUBDIR+=\taaa",
+		"SUBDIR+=\tzzz",
+		"",
+		"${.CURDIR}/PKGDB:",
+		"\t${RM} -f ${.CURDIR}/PKGDB",
+		"",
+		"${.CURDIR}/INDEX:",
+		"\t${RM} -f ${.CURDIR}/INDEX",
+		"",
+		".include \"../../mk/misc/category.mk\"")
+
+	mklines.Check()
+
+	c.Check(s.Output(), equals, ""+
+		"ERROR: Makefile:14: \"/mk/misc/category.mk\" does not exist.\n")
 }

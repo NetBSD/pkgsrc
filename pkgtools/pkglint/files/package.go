@@ -35,6 +35,7 @@ type Package struct {
 	loadTimeTools         map[string]bool   // true=ok, false=not ok, absent=not mentioned in USE_TOOLS.
 	conditionalIncludes   map[string]MkLine
 	unconditionalIncludes map[string]MkLine
+	once                  Once
 }
 
 func NewPackage(pkgpath string) *Package {
@@ -398,7 +399,7 @@ func (pkg *Package) checkfilePackageMakefile(fname string, mklines *MkLines) {
 		perlLine.Warnf("REPLACE_PERL is ignored when NO_CONFIGURE is set (in %s)", noconfLine.ReferenceFrom(perlLine.Line))
 	}
 
-	if vardef["LICENSE"] == nil && vardef["META_PACKAGE"] == nil {
+	if vardef["LICENSE"] == nil && vardef["META_PACKAGE"] == nil && pkg.once.FirstTime("LICENSE") {
 		NewLineWhole(fname).Errorf("Each package must define its LICENSE.")
 	}
 
@@ -756,16 +757,19 @@ func (pkg *Package) ChecklinesPackageMakefileVarorder(mklines *MkLines) {
 
 		default:
 			for varindex < len(vars) {
+				varname := vars[varindex].varname
 				if vars[varindex].count == once && !maySkipSection {
-					line.Warnf("The canonical position for the required variable %s is here.", vars[varindex].varname)
-					Explain(
-						"In simple package Makefiles, some common variables should be",
-						"arranged in a specific order.",
-						"",
-						"See doc/Makefile-example or the pkgsrc guide, section",
-						"\"Package components\", subsection \"Makefile\" for more information.")
+					if varname != "LICENSE" || pkg.once.FirstTime("LICENSE") {
+						line.Warnf("The canonical position for the required variable %s is here.", varname)
+						Explain(
+							"In simple package Makefiles, some common variables should be",
+							"arranged in a specific order.",
+							"",
+							"See doc/Makefile-example or the pkgsrc guide, section",
+							"\"Package components\", subsection \"Makefile\" for more information.")
+					}
 				}
-				below[vars[varindex].varname] = belowWhat
+				below[varname] = belowWhat
 				varindex++
 			}
 			nextSection = true

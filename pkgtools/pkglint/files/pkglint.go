@@ -384,7 +384,7 @@ func Checkfile(fname string) {
 	switch {
 	case st.Mode().IsDir():
 		switch {
-		case basename == "files" || basename == "patches" || basename == "CVS":
+		case basename == "files" || basename == "patches" || isIgnoredFilename(basename):
 			// Ok
 		case matches(fname, `(?:^|/)files/[^/]*$`):
 			// Ok

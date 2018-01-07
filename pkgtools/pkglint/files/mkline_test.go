@@ -383,7 +383,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__command_in_command(c *check.C)
 	MkLineChecker{G.Mk.mklines[1]}.Check()
 
 	s.CheckOutputLines(
-		"WARN: Makefile:2: The exitcode of the left-hand-side command of the pipe operator is ignored.")
+		"WARN: Makefile:2: The exitcode of \"${FIND}\" at the left of the | operator is ignored.")
 }
 
 func (s *Suite) Test_MkLine_variableNeedsQuoting__word_as_part_of_word(c *check.C) {
@@ -420,8 +420,8 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__command_as_command_argument(c 
 	MkLineChecker{G.Mk.mklines[2]}.Check()
 
 	s.CheckOutputLines(
-		"WARN: Makefile:2: The exitcode of the left-hand-side command of the pipe operator is ignored.",
-		"WARN: Makefile:3: The exitcode of the left-hand-side command of the pipe operator is ignored.")
+		"WARN: Makefile:2: The exitcode of the command at the left of the | operator is ignored.",
+		"WARN: Makefile:3: The exitcode of the command at the left of the | operator is ignored.")
 }
 
 // Based on mail/mailfront/Makefile.

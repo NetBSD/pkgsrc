@@ -767,14 +767,53 @@ func (scc *ShellProgramChecker) checkPipeExitcode(line Line, pipeline *MkShPipel
 		defer trace.Call()()
 	}
 
+	oneOf := func(s string, others ...string) bool {
+		for _, other := range others {
+			if s == other {
+				return true
+			}
+		}
+		return false
+	}
+
+	canFail := func() (bool, string) {
+		for _, cmd := range pipeline.Cmds[:len(pipeline.Cmds)-1] {
+			simple := cmd.Simple
+			if simple == nil {
+				return true, ""
+			}
+			if len(simple.Redirections) != 0 {
+				return true, simple.Name.MkText
+			}
+			tool := G.globalData.Tools.FindByCommand(simple.Name)
+			switch {
+			case tool == nil:
+				return true, simple.Name.MkText
+			case oneOf(tool.Name, "echo", "printf"):
+			case oneOf(tool.Name, "sed", "gsed", "grep", "ggrep") && len(simple.Args) == 1:
+				break
+			default:
+				return true, simple.Name.MkText
+			}
+		}
+		return false, ""
+	}
+
 	if G.opts.WarnExtra && len(pipeline.Cmds) > 1 {
-		line.Warnf("The exitcode of the left-hand-side command of the pipe operator is ignored.")
-		Explain(
-			"In a shell command like \"cat *.txt | grep keyword\", if the command",
-			"on the left side of the \"|\" fails, this failure is ignored.",
-			"",
-			"If you need to detect the failure of the left-hand-side command, use",
-			"temporary files to save the output of the command.")
+		if canFail, cmd := canFail(); canFail {
+			if cmd != "" {
+				line.Warnf("The exitcode of %q at the left of the | operator is ignored.", cmd)
+			} else {
+				line.Warnf("The exitcode of the command at the left of the | operator is ignored.")
+			}
+			Explain(
+				"In a shell command like \"cat *.txt | grep keyword\", if the command",
+				"on the left side of the \"|\" fails, this failure is ignored.",
+				"",
+				"If you need to detect the failure of the left-hand-side command, use",
+				"temporary files to save the output of the command.  A good place to",
+				"create those files is in ${WRKDIR}.")
+		}
 	}
 }
 
