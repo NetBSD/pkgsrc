@@ -133,7 +133,7 @@ func (s *Suite) Test_NewMkLine(c *check.C) {
 		"\tshell command # shell comment",
 		"# whole line comment",
 		"",
-		".  if !empty(PKGNAME:M*-*) # cond comment",
+		".  if !empty(PKGNAME:M*-*) && ${RUBY_RAILS_SUPPORTED:[\\#]} == 1 # cond comment",
 		".    include \"../../mk/bsd.prefs.mk\" # include comment",
 		".    include <subdir.mk> # sysinclude comment",
 		"target1 target2: source1 source2",
@@ -159,7 +159,7 @@ func (s *Suite) Test_NewMkLine(c *check.C) {
 	c.Check(ln[4].IsCond(), equals, true)
 	c.Check(ln[4].Indent(), equals, "  ")
 	c.Check(ln[4].Directive(), equals, "if")
-	c.Check(ln[4].Args(), equals, "!empty(PKGNAME:M*-*)")
+	c.Check(ln[4].Args(), equals, "!empty(PKGNAME:M*-*) && ${RUBY_RAILS_SUPPORTED:[#]} == 1")
 
 	c.Check(ln[5].IsInclude(), equals, true)
 	c.Check(ln[5].Indent(), equals, "    ")
@@ -478,6 +478,25 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__LDFLAGS_in_single_quotes(c *ch
 
 	s.CheckOutputLines(
 		"WARN: x11/mlterm/Makefile:2: Please move ${LDFLAGS:M*:Q} outside of any quoting characters.")
+}
+
+// No quoting is necessary here.
+// PKG_OPTIONS are declared as "lkShell" although they are processed
+// using make's .for loop, which splits them at whitespace and usually
+// requires the variable to be declared as "lkSpace".
+// In this case it doesn't matter though since each option is an identifier,
+// and these do not pose any quoting problems.
+func (s *Suite) Test_MkLine_variableNeedsQuoting__package_options(c *check.C) {
+	s.Init(c)
+	s.UseCommandLine("-Wall")
+	G.globalData.InitVartypes()
+	G.Mk = s.NewMkLines("Makefile",
+		mkrcsid,
+		"PKG_SUGGESTED_OPTIONS+=\t${PKG_DEFAULT_OPTIONS:Mcdecimal} ${PKG_OPTIONS.py-trytond:Mcdecimal}")
+
+	MkLineChecker{G.Mk.mklines[1]}.Check()
+
+	s.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_MkLines_Check__MASTER_SITE_in_HOMEPAGE(c *check.C) {
