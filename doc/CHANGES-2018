@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.66 2018/01/07 11:26:04 wen Exp $
+$NetBSD: CHANGES-2018,v 1.67 2018/01/07 11:50:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -128,3 +128,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Tree-Simple to 1.33 [wen 2018-01-07]
 	Updated textproc/p5-Text-Xslate to 3.5.5 [wen 2018-01-07]
 	Updated cad/gerbv to 2.6.2 [wen 2018-01-08]
+	Updated editors/nano to 2.9.2 [wen 2018-01-08]
