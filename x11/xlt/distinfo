@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2016/04/01 16:08:36 jperkin Exp $
+$NetBSD: distinfo,v 1.6 2018/01/07 19:27:56 rillig Exp $
 
 SHA1 (Xlt-13.0.13.tar.gz) = 5329c345f9d815c9f76d409a25100a7174acd8da
 RMD160 (Xlt-13.0.13.tar.gz) = d67fa86f502f195ffe7b61e80010f95fa7d4747a
 SHA512 (Xlt-13.0.13.tar.gz) = 2a57a413c2fb5c93d8ff81bd197167d8561aad2a737bb83f0684318badc8100d89845429a45d51f49b638629501c50bf58ee7067355e1898470fc2ba7cc0d2ab
 Size (Xlt-13.0.13.tar.gz) = 599909 bytes
-SHA1 (patch-aa) = ac78a9db02b6c79c64738952b978bd5b56fba5cc
-SHA1 (patch-ab) = 5fb6e6df36d3075f53fef5cb1d25c4d384f8e19f
+SHA1 (patch-aa) = a0401ca3720f41d5473a80ba0c6ba916355775c5
+SHA1 (patch-ab) = 50bcbb0182106272d1f7a607a84d7754e19be624
