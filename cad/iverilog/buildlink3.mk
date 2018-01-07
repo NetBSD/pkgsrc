@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2016/10/08 23:01:45 kamil Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:03:56 rillig Exp $
 
 BUILDLINK_TREE+=	iverilog
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	iverilog
 IVERILOG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.iverilog+=	iverilog>=10.1.1
-BUILDLINK_PKGSRCDIR.iverilog?=	../../cad/iverilog
+BUILDLINK_PKGSRCDIR.iverilog?=		../../cad/iverilog
 
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

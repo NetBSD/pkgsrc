@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2017/05/05 00:05:40 mef Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:04:17 rillig Exp $
 
 BUILDLINK_TREE+=	flxmlrpc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	flxmlrpc
 FLXMLRPC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.flxmlrpc+=	flxmlrpc>=0.1.4
-BUILDLINK_PKGSRCDIR.flxmlrpc?=	../../ham/flxmlrpc
+BUILDLINK_PKGSRCDIR.flxmlrpc?=		../../ham/flxmlrpc
 
 .endif # FLXMLRPC_BUILDLINK3_MK
 

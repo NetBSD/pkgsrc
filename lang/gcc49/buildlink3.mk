@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2015/11/25 12:51:17 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2018/01/07 13:04:18 rillig Exp $
 
 BUILDLINK_TREE+=	gcc49
 
@@ -29,4 +29,5 @@ pkgbase := gcc49
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .endif # GCC49_BUILDLINK3_MK
+
 BUILDLINK_TREE+=	-gcc49

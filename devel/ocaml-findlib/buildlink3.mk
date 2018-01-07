@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.7 2017/07/11 09:57:11 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2018/01/07 13:04:08 rillig Exp $
 
 BUILDLINK_TREE+=	ocaml-findlib
 
 .if !defined(OCAML_FINDLIB_BUILDLINK3_MK)
 OCAML_FINDLIB_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.ocaml-findlib+=ocaml-findlib>=1.2
-BUILDLINK_ABI_DEPENDS.ocaml-findlib+=ocaml-findlib>=1.7.3
+BUILDLINK_API_DEPENDS.ocaml-findlib+=	ocaml-findlib>=1.2
+BUILDLINK_ABI_DEPENDS.ocaml-findlib+=	ocaml-findlib>=1.7.3
 BUILDLINK_PKGSRCDIR.ocaml-findlib?=	../../devel/ocaml-findlib
 
 BUILDLINK_TARGETS+=	ocaml-findlib-wrappers ocaml-findlib-ldconf

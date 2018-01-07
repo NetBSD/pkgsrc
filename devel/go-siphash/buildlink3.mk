@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2017/09/29 06:14:39 alnsn Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:04:02 rillig Exp $
 
 BUILDLINK_TREE+=	go-siphash
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	go-siphash
 GO_SIPHASH_BUILDLINK3_MK:=
 
 BUILDLINK_CONTENTS_FILTER.go-siphash=	${EGREP} gopkg/
-BUILDLINK_DEPMETHOD.go-siphash?=		build
+BUILDLINK_DEPMETHOD.go-siphash?=	build
 
 BUILDLINK_API_DEPENDS.go-siphash+=	go-siphash>=1.0.0
 BUILDLINK_PKGSRCDIR.go-siphash?=	../../devel/go-siphash

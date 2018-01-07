@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2009/03/20 19:25:18 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2018/01/07 13:04:29 rillig Exp $
 
 BUILDLINK_TREE+=	libcrack
 
@@ -7,7 +7,7 @@ LIBCRACK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libcrack+=	libcrack>=2.7
 BUILDLINK_ABI_DEPENDS.libcrack+=	libcrack>=2.7nb1
-BUILDLINK_PKGSRCDIR.libcrack?=	../../security/libcrack
+BUILDLINK_PKGSRCDIR.libcrack?=		../../security/libcrack
 .endif # LIBCRACK_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libcrack

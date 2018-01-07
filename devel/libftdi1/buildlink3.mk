@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/12/03 01:40:14 mef Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:04:05 rillig Exp $
 
 BUILDLINK_TREE+=	libftdi1
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libftdi1
 LIBFTDI1_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libftdi1+=	libftdi1>=1.0
-BUILDLINK_PKGSRCDIR.libftdi1?=	../../devel/libftdi1
+BUILDLINK_PKGSRCDIR.libftdi1?=		../../devel/libftdi1
 
 .include "../../devel/libusb/buildlink3.mk"
 .endif	# LIBFTDI1_BUILDLINK3_MK

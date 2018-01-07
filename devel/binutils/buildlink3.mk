@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2012/07/23 12:24:34 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2018/01/07 13:04:00 rillig Exp $
 
 BUILDLINK_TREE+=	binutils
 
@@ -6,8 +6,8 @@ BUILDLINK_TREE+=	binutils
 BINUTILS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.binutils+=	binutils>=2.22
-BUILDLINK_PKGSRCDIR.binutils?=	../../devel/binutils
-BUILDLINK_DEPMETHOD.binutils?=	build
+BUILDLINK_PKGSRCDIR.binutils?=		../../devel/binutils
+BUILDLINK_DEPMETHOD.binutils?=		build
 .endif # BINUTILS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-binutils

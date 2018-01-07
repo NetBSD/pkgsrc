@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2017/09/08 02:27:44 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2018/01/07 13:03:56 rillig Exp $
 
 BUILDLINK_TREE+=	pulseaudio
 
@@ -21,7 +21,7 @@ BUILDLINK_RPATHDIRS.pulseaudio+=	lib/pulseaudio
 _WRAP_EXTRA_ARGS.LIBTOOL+=	-L${PREFIX}/lib/pulseaudio
 
 pkgbase:= pulseaudio
-.  include "../../mk/pkg-build-options.mk"
+.include "../../mk/pkg-build-options.mk"
 
 .include "../../mk/bsd.fast.prefs.mk"
 

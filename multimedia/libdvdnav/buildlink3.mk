@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2014/10/04 12:49:05 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2018/01/07 13:04:24 rillig Exp $
 
 BUILDLINK_TREE+=	libdvdnav
 
@@ -7,7 +7,7 @@ LIBDVDNAV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libdvdnav+=	libdvdnav>=4.1.3
 BUILDLINK_ABI_DEPENDS.libdvdnav+=	libdvdnav>=5.0
-BUILDLINK_PKGSRCDIR.libdvdnav?=	../../multimedia/libdvdnav
+BUILDLINK_PKGSRCDIR.libdvdnav?=		../../multimedia/libdvdnav
 
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .endif # LIBDVDNAV_BUILDLINK3_MK

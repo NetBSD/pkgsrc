@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2016/03/05 11:27:48 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2018/01/07 13:04:12 rillig Exp $
 
 BUILDLINK_TREE+=	evas-edb
 
@@ -7,7 +7,7 @@ EVAS_EDB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.evas-edb+=	evas-edb>=1.7.7
 BUILDLINK_ABI_DEPENDS.evas-edb?=	evas-edb>=1.7.7nb2
-BUILDLINK_PKGSRCDIR.evas-edb?=	../../graphics/evas-edb
+BUILDLINK_PKGSRCDIR.evas-edb?=		../../graphics/evas-edb
 
 .include "../../databases/edb/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"

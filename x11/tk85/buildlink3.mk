@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2015/11/25 12:54:23 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2018/01/07 13:04:43 rillig Exp $
 
 BUILDLINK_TREE+=	tk
 
@@ -27,7 +27,7 @@ pkgbase := tk
 .include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.tk:Mxft2)
-. include "../../x11/libXft/buildlink3.mk"
+.  include "../../x11/libXft/buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.fast.prefs.mk"

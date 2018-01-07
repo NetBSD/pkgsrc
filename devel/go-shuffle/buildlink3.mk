@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2017/08/25 16:49:14 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2018/01/07 13:04:02 rillig Exp $
 
 BUILDLINK_TREE+=	go-shuffle
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	go-shuffle
 GO_SHUFFLE_BUILDLINK3_MK:=
 
 BUILDLINK_CONTENTS_FILTER.go-shuffle=	${EGREP} gopkg/
-BUILDLINK_DEPMETHOD.go-shuffle?=		build
+BUILDLINK_DEPMETHOD.go-shuffle?=	build
 
 BUILDLINK_API_DEPENDS.go-shuffle+=		go-shuffle>=0.0
 BUILDLINK_PKGSRCDIR.go-shuffle?=		../../devel/go-shuffle

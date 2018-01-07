@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2017/04/21 13:14:04 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2018/01/07 13:04:21 rillig Exp $
 
 BUILDLINK_TREE+=	R
 
@@ -7,7 +7,7 @@ R_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.R+=	R>=1.7.0
 BUILDLINK_ABI_DEPENDS.R+=	R>=2.2.1nb2
-BUILDLINK_PKGSRCDIR.R?=	../../math/R
+BUILDLINK_PKGSRCDIR.R?=		../../math/R
 .endif # R_BUILDLINK3_MK
 
 .include "../../archivers/bzip2/buildlink3.mk"

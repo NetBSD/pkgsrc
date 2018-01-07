@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2017/01/16 23:45:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2018/01/07 13:04:23 rillig Exp $
 
 BUILDLINK_TREE+=	ffmpeg010
 
@@ -7,14 +7,14 @@ FFMPEG010_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ffmpeg010+=	ffmpeg010>=20120609.0.10.4
 BUILDLINK_ABI_DEPENDS.ffmpeg010?=	ffmpeg010>=20150312.0.10.16nb5
-BUILDLINK_PKGSRCDIR.ffmpeg010?=	../../multimedia/ffmpeg010
+BUILDLINK_PKGSRCDIR.ffmpeg010?=		../../multimedia/ffmpeg010
 
 BUILDLINK_INCDIRS.ffmpeg010+=		include/ffmpeg010
 BUILDLINK_LIBDIRS.ffmpeg010+=		lib/ffmpeg010
-BUILDLINK_FNAME_TRANSFORM.ffmpeg010+=   -e 's|lib/ffmpeg010/pkgconfig/|lib/pkgconfig/|'
+BUILDLINK_FNAME_TRANSFORM.ffmpeg010+=	-e 's|lib/ffmpeg010/pkgconfig/|lib/pkgconfig/|'
 
 pkgbase := ffmpeg010
-.  include "../../mk/pkg-build-options.mk"
+.include "../../mk/pkg-build-options.mk"
 
 .include "../../mk/bsd.fast.prefs.mk"
 

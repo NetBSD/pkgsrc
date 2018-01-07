@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2017/02/12 06:24:45 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2018/01/07 13:04:15 rillig Exp $
 
 BUILDLINK_TREE+=	p5-Gnome2-Canvas
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	p5-Gnome2-Canvas
 P5_GNOME2_CANVAS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.p5-Gnome2-Canvas+=	p5-Gnome2-Canvas>=1.002
-BUILDLINK_ABI_DEPENDS.p5-Gnome2-Canvas+=		p5-Gnome2-Canvas>=1.002nb29
+BUILDLINK_ABI_DEPENDS.p5-Gnome2-Canvas+=	p5-Gnome2-Canvas>=1.002nb29
 BUILDLINK_PKGSRCDIR.p5-Gnome2-Canvas?=		../../graphics/p5-Gnome2-Canvas
 
 .include "../../graphics/libgnomecanvas/buildlink3.mk"

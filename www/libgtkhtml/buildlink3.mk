@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.47 2017/02/12 06:24:52 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.48 2018/01/07 13:04:37 rillig Exp $
 
 BUILDLINK_TREE+=	libgtkhtml
 
 .if !defined(LIBGTKHTML_BUILDLINK3_MK)
 LIBGTKHTML_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libgtkhtml+=		libgtkhtml>=2.6.0
+BUILDLINK_API_DEPENDS.libgtkhtml+=	libgtkhtml>=2.6.0
 BUILDLINK_ABI_DEPENDS.libgtkhtml+=	libgtkhtml>=2.6.3nb36
 BUILDLINK_PKGSRCDIR.libgtkhtml?=	../../www/libgtkhtml
 

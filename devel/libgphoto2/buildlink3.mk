@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.19 2015/10/05 04:47:02 richard Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2018/01/07 13:04:06 rillig Exp $
 
 BUILDLINK_TREE+=	libgphoto2
 
 .if !defined(LIBGPHOTO2_BUILDLINK3_MK)
 LIBGPHOTO2_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libgphoto2+=		libgphoto2>=2.1.2
+BUILDLINK_API_DEPENDS.libgphoto2+=	libgphoto2>=2.1.2
 BUILDLINK_ABI_DEPENDS.libgphoto2+=	libgphoto2>=2.4.7nb3
 BUILDLINK_PKGSRCDIR.libgphoto2?=	../../devel/libgphoto2
 

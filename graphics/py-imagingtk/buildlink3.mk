@@ -1,9 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.6 2013/06/04 22:16:25 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2018/01/07 13:04:16 rillig Exp $
 
 BUILDLINK_TREE+=	py-imagingtk
 
 .if !defined(PY_IMAGINGTK_BUILDLINK3_MK)
 PY_IMAGINGTK_BUILDLINK3_MK:=
+
 .include "../../lang/python/pyversion.mk"
 
 # guesstimate

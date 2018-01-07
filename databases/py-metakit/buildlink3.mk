@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:24:07 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2018/01/07 13:03:59 rillig Exp $
 
 BUILDLINK_TREE+=	pymetakit
 
@@ -9,7 +9,7 @@ PY_METAKIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pymetakit+=	${PYPKGPREFIX}-metakit-[0-9]*
 BUILDLINK_ABI_DEPENDS.pymetakit+=	${PYPKGPREFIX}-metakit>=2.4.9.3nb2
-BUILDLINK_PKGSRCDIR.pymetakit?=	../../databases/py-metakit
+BUILDLINK_PKGSRCDIR.pymetakit?=		../../databases/py-metakit
 .endif # PY_METAKIT_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-pymetakit

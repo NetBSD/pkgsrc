@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2013/10/16 16:47:29 richard Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2018/01/07 13:04:20 rillig Exp $
 
 BUILDLINK_TREE+=	sun-jre7
 
 .if !defined(SUN_JRE7_BUILDLINK3_MK)
 SUN_JRE7_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.sun-jre7+=		sun-jre7-[0-9]*
-BUILDLINK_ABI_DEPENDS.sun-jre7+=		sun-jre7>=7.0.9
+BUILDLINK_API_DEPENDS.sun-jre7+=	sun-jre7-[0-9]*
+BUILDLINK_ABI_DEPENDS.sun-jre7+=	sun-jre7>=7.0.9
 BUILDLINK_PKGSRCDIR.sun-jre7?=		../../lang/sun-jre7
 
 CHECK_BUILTIN.sun-jre7:=	yes

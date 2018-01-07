@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 19:25:28 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2018/01/07 13:04:32 rillig Exp $
 
 BUILDLINK_TREE+=	aiksaurus
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	aiksaurus
 AIKSAURUS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.aiksaurus+=	aiksaurus>=1.2.1
-BUILDLINK_PKGSRCDIR.aiksaurus?=	../../textproc/aiksaurus
+BUILDLINK_PKGSRCDIR.aiksaurus?=		../../textproc/aiksaurus
 .endif # AIKSAURUS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-aiksaurus

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2016/03/05 11:27:57 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2018/01/07 13:04:36 rillig Exp $
 
 BUILDLINK_TREE+=	apache
 
@@ -19,10 +19,10 @@ ${BUILDLINK_DIR}/bin/apxs: buildlink-directories
 
 buildlink-apache-cookie: ${BUILDLINK_DIR}/bin/apxs
 
-USE_TOOLS+=	perl			# for "apxs"
-CONFIGURE_ENV+=	APR_LIBTOOL=${LIBTOOL:Q}	# make apxs use the libtool we specify
-MAKE_ENV+=	APR_LIBTOOL=${LIBTOOL:Q}
-APXS?=		${BUILDLINK_PREFIX.apache}/bin/apxs
+USE_TOOLS+=		perl			# for "apxs"
+CONFIGURE_ENV+=		APR_LIBTOOL=${LIBTOOL:Q}	# make apxs use the libtool we specify
+MAKE_ENV+=		APR_LIBTOOL=${LIBTOOL:Q}
+APXS?=			${BUILDLINK_PREFIX.apache}/bin/apxs
 .if defined(GNU_CONFIGURE)
 CONFIGURE_ARGS+=	--with-apxs2=${APXS:Q}
 .endif

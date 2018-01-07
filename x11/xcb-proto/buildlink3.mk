@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2012/05/07 02:45:47 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2018/01/07 13:04:43 rillig Exp $
 
 BUILDLINK_TREE+=	xcb-proto
 
@@ -6,8 +6,8 @@ BUILDLINK_TREE+=	xcb-proto
 XCB_PROTO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xcb-proto+=	xcb-proto>=1.4
-BUILDLINK_PKGSRCDIR.xcb-proto?=	../../x11/xcb-proto
-BUILDLINK_DEPMETHOD.xcb-proto?=	build
+BUILDLINK_PKGSRCDIR.xcb-proto?=		../../x11/xcb-proto
+BUILDLINK_DEPMETHOD.xcb-proto?=		build
 .endif # XCB_PROTO_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-xcb-proto

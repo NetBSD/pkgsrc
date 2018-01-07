@@ -1,4 +1,5 @@
-# $NetBSD: buildlink3.mk,v 1.1 2014/12/30 15:03:32 bsiegert Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:04:31 rillig Exp $
+
 BUILDLINK_TREE+=	augeas
 
 .if !defined(AUGEAS_BUILDLINK3_MK)

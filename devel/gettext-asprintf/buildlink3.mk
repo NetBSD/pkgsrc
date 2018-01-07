@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2011/04/12 17:41:28 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2018/01/07 13:04:01 rillig Exp $
 
 BUILDLINK_TREE+=	gettext-asprintf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gettext-asprintf
 GETTEXT_ASPRINTF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gettext-asprintf+=	gettext-asprintf>=0.18
-BUILDLINK_PKGSRCDIR.gettext-asprintf?=	../../devel/gettext-asprintf
+BUILDLINK_PKGSRCDIR.gettext-asprintf?=		../../devel/gettext-asprintf
 .endif # GETTEXT_ASPRINTF_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gettext-asprintf

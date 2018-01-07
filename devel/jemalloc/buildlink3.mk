@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2016/02/18 15:51:59 gson Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:04:04 rillig Exp $
 
 BUILDLINK_TREE+=	jemalloc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	jemalloc
 JEMALLOC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.jemalloc+=	jemalloc>=4.0.0
-BUILDLINK_PKGSRCDIR.jemalloc?=	../../devel/jemalloc
+BUILDLINK_PKGSRCDIR.jemalloc?=		../../devel/jemalloc
 .endif	# JEMALLOC_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-jemalloc
