@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2015/01/15 19:39:15 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/01/07 15:08:50 leot Exp $
 man/man1/privoxy.1
 sbin/privoxy
 share/doc/privoxy/AUTHORS
@@ -47,6 +47,7 @@ share/examples/privoxy/config
 share/examples/privoxy/default.action
 share/examples/privoxy/default.filter
 share/examples/privoxy/match-all.action
+share/examples/privoxy/regression-tests.action
 share/examples/privoxy/templates/blocked
 share/examples/privoxy/templates/cgi-error-404
 share/examples/privoxy/templates/cgi-error-bad-param
@@ -56,6 +57,7 @@ share/examples/privoxy/templates/cgi-error-file-read-only
 share/examples/privoxy/templates/cgi-error-modified
 share/examples/privoxy/templates/cgi-error-parse
 share/examples/privoxy/templates/cgi-style.css
+share/examples/privoxy/templates/client-tags
 share/examples/privoxy/templates/connect-failed
 share/examples/privoxy/templates/connection-timeout
 share/examples/privoxy/templates/default
