@@ -33,7 +33,6 @@ func (s *Suite) Test_ChecklinesPlist(c *check.C) {
 	s.CheckOutputLines(
 		"ERROR: PLIST:1: Expected \"@comment $"+"NetBSD$\".",
 		"WARN: PLIST:1: The bin/ directory should not have subdirectories.",
-		"WARN: PLIST:2: Manual page missing for bin/program.",
 		"ERROR: PLIST:3: Configuration files must not be registered in the PLIST. Please use the CONF_FILES framework, which is described in mk/pkginstall/bsd.pkginstall.mk.",
 		"ERROR: PLIST:4: RCD_SCRIPTS must not be registered in the PLIST. Please use the RCD_SCRIPTS framework.",
 		"ERROR: PLIST:6: \"info/dir\" must not be listed. Use install-info to add/remove an entry.",
@@ -44,7 +43,6 @@ func (s *Suite) Test_ChecklinesPlist(c *check.C) {
 		"WARN: PLIST:10: Preformatted manual pages should end in \".0\".",
 		"WARN: PLIST:11: IMAKE_MANNEWSUFFIX is not meant to appear in PLISTs.",
 		"WARN: PLIST:12: Please remove this line. It is no longer necessary.",
-		"WARN: PLIST:13: Manual page missing for sbin/clockctl.",
 		"ERROR: PLIST:14: The package Makefile must include \"../../graphics/gnome-icon-theme/buildlink3.mk\".",
 		"WARN: PLIST:14: Packages that install icon theme files should set ICON_THEMES.",
 		"ERROR: PLIST:15: Packages that install hicolor icons must include \"../../graphics/hicolor-icon-theme/buildlink3.mk\" in the Makefile.",
