@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2015/01/04 06:58:44 dholland Exp $
+$NetBSD: patch-ac,v 1.7 2018/01/07 22:21:04 rillig Exp $
 
 - configure for pkgsrc
 - destdir support
@@ -13,7 +13,7 @@ $NetBSD: patch-ac,v 1.6 2015/01/04 06:58:44 dholland Exp $
 +#PREFIX  = /usr/local
  BINDIR  = $(PREFIX)/bin
 -DOCDIR  = $(PREFIX)/doc/tads3
-+DOCDIR  = $(PREFIX)/share/doc/html/tads3
++DOCDIR  = $(PREFIX)/share/doc/tads3
  DATADIR = $(PREFIX)/share/tads3
  LIBDIR  = $(DATADIR)/libraries
  INCDIR  = $(DATADIR)/includes
