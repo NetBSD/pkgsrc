@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.76 2018/01/07 14:20:24 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.77 2018/01/07 14:42:53 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -138,3 +138,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/zathura-pdf-poppler to 0.2.8 [leot 2018-01-07]
 	Updated print/zathura-pdf-mupdf to 0.3.2 [leot 2018-01-07]
 	Updated devel/ruby-diva to 0.3.1 [tsutsui 2018-01-07]
+	Updated sysutils/py-borgbackup to 1.1.4 [bsiegert 2018-01-07]
