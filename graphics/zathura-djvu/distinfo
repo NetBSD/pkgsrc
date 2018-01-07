@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/01/31 10:14:23 leot Exp $
+$NetBSD: distinfo,v 1.3 2018/01/07 12:59:27 leot Exp $
 
-SHA1 (zathura-djvu-0.2.6.tar.gz) = 8fd8ff2ac19d1deea90b737f2bd8b6de415ff502
-RMD160 (zathura-djvu-0.2.6.tar.gz) = 1c46f4fd9480a7a2a036a6566b7efc4a7f1ba381
-SHA512 (zathura-djvu-0.2.6.tar.gz) = 8534faa0de896ffea8d8d6f2d0c22697f2fd6ae3f73e955f5077e0a0656c13fd8823580f1b89c4b5aebb5189c69642ef690fc9167be178ce9533e9bb5d483dac
-Size (zathura-djvu-0.2.6.tar.gz) = 11137 bytes
+SHA1 (zathura-djvu-0.2.7.tar.gz) = 90f39016a5de8623ea5e31aa56ed7c38a2f11919
+RMD160 (zathura-djvu-0.2.7.tar.gz) = 3ae49631aaff096ad8ae113e64b12857ee309a49
+SHA512 (zathura-djvu-0.2.7.tar.gz) = f0a33f53caced4cb90354e431d180a3b357db300ba5a376051e45f5409e8476105640e92768c2a31bdbbb0b37dea05df24a6489799c556e30336013f807b28b6
+Size (zathura-djvu-0.2.7.tar.gz) = 10909 bytes
