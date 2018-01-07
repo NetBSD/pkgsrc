@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.41 2017/09/08 09:12:44 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.42 2018/01/07 13:04:20 rillig Exp $
 
 BUILDLINK_TREE+=	ocaml
 
@@ -10,7 +10,7 @@ BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=4.05.0
 BUILDLINK_PKGSRCDIR.ocaml?=	../../lang/ocaml
 #BUILDLINK_DEPMETHOD.ocaml?=	build
 
-BUILDLINK_PASSTHRU_DIRS+=     ${BUILDLINK_PREFIX.ocaml}/lib/ocaml
+BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_PREFIX.ocaml}/lib/ocaml
 
 BUILDLINK_TARGETS+=	ocaml-wrappers
 OCAML_WRAPPERS=		ocamlc ocamlc.opt ocamlcp ocamlmklib ocamlmktop \
@@ -23,8 +23,8 @@ ocaml-wrappers:
 	for w in ${OCAML_WRAPPERS}; do					\
 		${SED}	-e 's|@SH@|'${SH:Q}'|g'				\
 			-e 's|@OCAML_PREFIX@|${BUILDLINK_PREFIX.ocaml}|g' \
-			-e 's|@CFLAGS@|'${CFLAGS:Q}'|g'			\
-			-e 's|@LDFLAGS@|'${LDFLAGS:Q}'|g'		\
+			-e 's|@CFLAGS@|'${CFLAGS:M*:Q}'|g'			\
+			-e 's|@LDFLAGS@|'${LDFLAGS:M*:Q}'|g'		\
 			-e 's|@WRAPPEE@|'$$w'|g'			\
 			< ${.CURDIR}/../../lang/ocaml/files/wrapper.sh	\
 			> ${BUILDLINK_DIR}/bin/"$$w";			\

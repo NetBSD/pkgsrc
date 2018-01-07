@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:25:23 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2018/01/07 13:04:31 rillig Exp $
 
 BUILDLINK_TREE+=	desktop-file-utils
 
@@ -7,7 +7,7 @@ DESKTOP_FILE_UTILS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.desktop-file-utils+=	desktop-file-utils>=0.8
 BUILDLINK_ABI_DEPENDS.desktop-file-utils+=	desktop-file-utils>=0.10nb1
-BUILDLINK_PKGSRCDIR.desktop-file-utils?=../../sysutils/desktop-file-utils
+BUILDLINK_PKGSRCDIR.desktop-file-utils?=	../../sysutils/desktop-file-utils
 
 BUILDLINK_TARGETS+=	desktop-file-utils-buildlink-fake
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2015/12/29 21:47:48 bsiegert Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:04:02 rillig Exp $
 
 BUILDLINK_TREE+=	go-nbreader
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	go-nbreader
 GO_NBREADER_BUILDLINK3_MK:=
 
 BUILDLINK_CONTENTS_FILTER.go-nbreader=	${EGREP} gopkg/
-BUILDLINK_DEPMETHOD.go-nbreader?=		build
+BUILDLINK_DEPMETHOD.go-nbreader?=	build
 
 BUILDLINK_API_DEPENDS.go-nbreader+=	go-nbreader>=0.0.20150201
 BUILDLINK_PKGSRCDIR.go-nbreader?=	../../devel/go-nbreader

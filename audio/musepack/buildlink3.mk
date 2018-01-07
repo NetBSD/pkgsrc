@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2014/04/18 12:43:42 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:03:56 rillig Exp $
 
 BUILDLINK_TREE+=	musepack
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	musepack
 MUSEPACK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.musepack+=	musepack>=0rc475
-BUILDLINK_PKGSRCDIR.musepack?=	../../audio/musepack
+BUILDLINK_PKGSRCDIR.musepack?=		../../audio/musepack
 
 .endif	# MUSEPACK_BUILDLINK3_MK
 

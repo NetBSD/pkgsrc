@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2017/06/14 16:23:09 prlw1 Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2018/01/07 13:04:14 rillig Exp $
 
 BUILDLINK_TREE+=	hicolor-icon-theme
 
@@ -7,7 +7,7 @@ HICOLOR_ICON_THEME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hicolor-icon-theme+=	hicolor-icon-theme>=0.4
 BUILDLINK_ABI_DEPENDS.hicolor-icon-theme+=	hicolor-icon-theme>=0.9nb1
-BUILDLINK_PKGSRCDIR.hicolor-icon-theme?=../../graphics/hicolor-icon-theme
+BUILDLINK_PKGSRCDIR.hicolor-icon-theme?=	../../graphics/hicolor-icon-theme
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -15,10 +15,10 @@ BUILDLINK_PKGSRCDIR.hicolor-icon-theme?=../../graphics/hicolor-icon-theme
 
 ICON_THEMES=	yes
 
-.if !defined(NOOP_GTK_UPDATE_ICON_CACHE)
+.  if !defined(NOOP_GTK_UPDATE_ICON_CACHE)
 NOOP_GTK_UPDATE_ICON_CACHE=
-TOOLS_NOOP+=		gtk-update-icon-cache
-.endif
+TOOLS_NOOP+=			gtk-update-icon-cache
+.  endif
 
 .endif	# HICOLOR_ICON_THEME_DEPEND_ONLY
 .endif # HICOLOR_ICON_THEME_BUILDLINK3_MK

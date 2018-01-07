@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:23:57 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2018/01/07 13:03:55 rillig Exp $
 
 BUILDLINK_TREE+=	libspiff
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libspiff
 LIBSPIFF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libspiff+=	libspiff>=1.0.0
-BUILDLINK_PKGSRCDIR.libspiff?=	../../audio/libspiff
+BUILDLINK_PKGSRCDIR.libspiff?=		../../audio/libspiff
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/uriparser/buildlink3.mk"

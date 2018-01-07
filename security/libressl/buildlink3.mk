@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2016/07/26 11:53:24 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2018/01/07 13:04:29 rillig Exp $
 
 BUILDLINK_TREE+=	libressl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libressl
 LIBRESSL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libressl+=	libressl>=2.2.6
-BUILDLINK_PKGSRCDIR.libressl?=	../../security/libressl
+BUILDLINK_PKGSRCDIR.libressl?=		../../security/libressl
 
 BUILDLINK_PASSTHRU_DIRS+=	${LOCALBASE}/libressl/include
 BUILDLINK_PASSTHRU_DIRS+=	${LOCALBASE}/libressl/lib
