@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/10/14 10:23:01 adam Exp $
+# $NetBSD: Makefile,v 1.7 2018/01/07 21:01:28 joerg Exp $
 
 DISTNAME=	tweepy-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.4.3:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib>=0.4.1:../../security/py-requests-oauthlib
 DEPENDS+=	${PYPKGPREFIX}-six>=1.7.3:../../lang/py-six
+BUILD_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 
 USE_LANGUAGES=	# none
 
