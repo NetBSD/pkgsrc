@@ -1,4 +1,4 @@
-# $NetBSD: help.mk,v 1.13 2017/10/31 16:24:42 rillig Exp $
+# $NetBSD: help.mk,v 1.14 2018/01/07 11:23:37 rillig Exp $
 #
 
 # This is the integrated pkgsrc online help system. To query for the
@@ -25,9 +25,10 @@ TOPIC?=		${VARNAME}
 TOPIC?=		${topic}
 .endif
 
+.if !target(help)
 .PHONY: help
 help:
-.if !defined(TOPIC)
+.  if !defined(TOPIC)
 	@${ECHO} "usage: "${MAKE:Q}" help topic=<topic>"
 	@${ECHO} ""
 	@${ECHO} "	<topic> may be a variable name or a make target,"
@@ -38,7 +39,8 @@ help:
 	@${ECHO} ""
 	@${ECHO} "	The special topic :index lists all available topics."
 	@${ECHO} ""
-.else
+.  else
 	${RUN} cd ${PKGSRCDIR};						\
 	env TOPIC=${TOPIC:Q} ${AWK} -f ${PKGSRCDIR}/mk/help/help.awk ${_HELP_FILES}
+.  endif
 .endif
