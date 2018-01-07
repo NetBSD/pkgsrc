@@ -171,7 +171,7 @@ func (p *MkParser) VarUseModifiers(varname, closing string) []string {
 			}
 
 		case '[':
-			if repl.AdvanceRegexp(`^\[[-.\d]+\]`) {
+			if repl.AdvanceRegexp(`^\[(?:[-.\d]+|#)\]`) {
 				modifiers = append(modifiers, repl.Since(modifierMark))
 				continue
 			}

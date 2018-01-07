@@ -13,6 +13,7 @@ func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
 		for i, expectedToken := range expectedTokens {
 			if i < len(actualTokens) {
 				c.Check(*actualTokens[i], deepEquals, *expectedToken)
+				c.Check(actualTokens[i].Varuse, deepEquals, expectedToken.Varuse)
 			}
 		}
 		c.Check(p.Rest(), equals, expectedRest)
@@ -80,6 +81,7 @@ func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
 	check("${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}", varuse("ALT_GCC_RTS", "S%${LOCALBASE}%%", "S%/%%"))
 	check("${PREFIX:C;///*;/;g:C;/$;;}", varuse("PREFIX", "C;///*;/;g", "C;/$;;"))
 	check("${GZIP_CMD:[1]:Q}", varuse("GZIP_CMD", "[1]", "Q"))
+	check("${RUBY_RAILS_SUPPORTED:[#]}", varuse("RUBY_RAILS_SUPPORTED", "[#]"))
 	check("${DISTNAME:C/-[0-9]+$$//:C/_/-/}", varuse("DISTNAME", "C/-[0-9]+$$//", "C/_/-/"))
 	check("${DISTNAME:slang%=slang2%}", varuse("DISTNAME", "slang%=slang2%"))
 	check("${OSMAP_SUBSTVARS:@v@-e 's,\\@${v}\\@,${${v}},g' @}", varuse("OSMAP_SUBSTVARS", "@v@-e 's,\\@${v}\\@,${${v}},g' @"))
