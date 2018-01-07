@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2015/04/25 14:23:04 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2018/01/07 22:23:46 rillig Exp $
 #
 
 DISTNAME=	tuxracer-0.61
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxracer/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -14,20 +14,20 @@ COMMENT=	3D penguin racing game using OpenGL
 
 GNU_CONFIGURE=	YES
 
-CFLAGS+=	-DGLX_GLXEXT_PROTOTYPES
+CFLAGS+=		-DGLX_GLXEXT_PROTOTYPES
 CONFIGURE_ARGS+=	--with-data-dir=${PREFIX}/share/tuxracer
 CONFIGURE_ARGS+=	--with-tcl-libs=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:Q}
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
 
 USE_TOOLS+=	pax
 
-INSTALLATION_DIRS=	share/doc/html/tuxracer share/examples/tuxracer \
+INSTALLATION_DIRS=	share/doc/tuxracer share/examples/tuxracer \
 			share/tuxracer
 
 post-install:
 	cd ${WRKSRC}/html && \
-		pax -rw .  ${DESTDIR}${PREFIX}/share/doc/html/tuxracer/
+		pax -rw .  ${DESTDIR}${PREFIX}/share/doc/tuxracer/
 	cd ${WRKSRC}/contrib && \
 		pax -rw .  ${DESTDIR}${PREFIX}/share/examples/tuxracer/
 	cd ${WRKDIR}/${PKGBASE}-data-${PKGVERSION:C/nb[0-9]*$//} && \
