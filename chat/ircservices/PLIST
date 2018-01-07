@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/01/01 22:29:19 rillig Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/01/07 19:57:48 rillig Exp $
 lib/services/convert-db
 lib/services/helpfiles/help
 lib/services/languages/de
@@ -17,21 +17,21 @@ man/man8/convert-db.8
 man/man8/ircservices.8
 sbin/ircservices
 sbin/ircservices-chk
-share/doc/html/ircservices/0.html
-share/doc/html/ircservices/1.html
-share/doc/html/ircservices/2.html
-share/doc/html/ircservices/3.html
-share/doc/html/ircservices/4.html
-share/doc/html/ircservices/5.html
-share/doc/html/ircservices/6.html
-share/doc/html/ircservices/7.html
-share/doc/html/ircservices/COPYING.html
-share/doc/html/ircservices/a.html
-share/doc/html/ircservices/b.html
-share/doc/html/ircservices/c.html
-share/doc/html/ircservices/copyright.html
-share/doc/html/ircservices/faq.html
-share/doc/html/ircservices/index.html
-share/doc/html/ircservices/upgrade.html
+share/doc/ircservices/0.html
+share/doc/ircservices/1.html
+share/doc/ircservices/2.html
+share/doc/ircservices/3.html
+share/doc/ircservices/4.html
+share/doc/ircservices/5.html
+share/doc/ircservices/6.html
+share/doc/ircservices/7.html
+share/doc/ircservices/COPYING.html
+share/doc/ircservices/a.html
+share/doc/ircservices/b.html
+share/doc/ircservices/c.html
+share/doc/ircservices/copyright.html
+share/doc/ircservices/faq.html
+share/doc/ircservices/index.html
+share/doc/ircservices/upgrade.html
 share/examples/ircservices/ircservices.conf
 share/examples/ircservices/modules.conf
