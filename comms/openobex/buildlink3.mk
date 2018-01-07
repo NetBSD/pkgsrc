@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2013/03/15 08:10:04 plunky Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2018/01/07 13:03:58 rillig Exp $
 
 BUILDLINK_TREE+=	openobex
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	openobex
 OPENOBEX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openobex+=	openobex>=1.7
-BUILDLINK_PKGSRCDIR.openobex?=	../../comms/openobex
+BUILDLINK_PKGSRCDIR.openobex?=		../../comms/openobex
 
 .include "../../devel/libusb/buildlink3.mk"
 .endif # OPENOBEX_BUILDLINK3_MK

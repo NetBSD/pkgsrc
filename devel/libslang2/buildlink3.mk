@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2013/02/16 11:17:57 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2018/01/07 13:04:07 rillig Exp $
 
 BUILDLINK_TREE+=	libslang2
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.libslang2?=	../../devel/libslang2
 BUILDLINK_FNAME_TRANSFORM.libslang2+=	-e 's|include/slang2/|include/|g'
 BUILDLINK_TRANSFORM+=		l:slang:slang2
 pkgbase:=	libslang2
-.  include "../../mk/pkg-build-options.mk"
+.include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.libslang2:Mpng)
 .  include "../../graphics/png/buildlink3.mk"
