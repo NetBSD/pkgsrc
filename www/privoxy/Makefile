@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2016/07/09 06:39:14 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2018/01/07 15:08:50 leot Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
-PKGNAME=	privoxy-3.0.23
-PKGREVISION=	2
+PKGNAME=	privoxy-3.0.26
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ijbswa/}
 
@@ -51,7 +50,7 @@ CONFIGURE_ARGS+=	--enable-compression
 USER_GROUP=		${PRIVOXY_USER} ${PRIVOXY_GROUP}
 
 .for i in \
-    config trust default.action user.action default.filter match-all.action
+    config trust default.action user.action user.filter default.filter match-all.action
 CONF_FILES_PERMS+=	${EGDIR}/${i} ${PKG_SYSCONFDIR}/${i} ${USER_GROUP} 0660
 .endfor
 
