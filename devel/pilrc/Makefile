@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/10/31 11:19:25 asau Exp $
+# $NetBSD: Makefile,v 1.35 2018/01/07 21:31:10 rillig Exp $
 #
 
 DISTNAME=	pilrc-3.2
@@ -13,8 +13,6 @@ COMMENT=	Generate resources for PalmOS applications from textual description
 
 GNU_CONFIGURE=	YES
 CONFIGURE_SCRIPT=unix/configure
-
-DOCDIR=		${PREFIX}/share/doc/html/pilrc
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -34,12 +32,12 @@ PLIST.pilrcui=		yes
 CONFIGURE_ARGS+=	--enable-pilrcui
 .endif
 
-INSTALLATION_DIRS=	${DOCDIR}/images
+AUTO_MKDIRS=		yes
 
 post-install:
-	cd ${WRKSRC}/doc &&						\
-		${INSTALL_DATA} archive.html download.html index.html	\
-		contrib.html history.html manual.html ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/images/download.gif ${DESTDIR}${DOCDIR}/images
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} *.html \
+		${DESTDIR}${PREFIX}/share/doc/pilrc
+	cd ${WRKSRC}/doc/images && ${INSTALL_DATA} download.gif \
+		${DESTDIR}${PREFIX}/share/doc/pilrc/images
 
 .include "../../mk/bsd.pkg.mk"
