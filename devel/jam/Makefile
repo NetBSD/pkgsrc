@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2017/07/27 08:48:13 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2018/01/07 21:24:11 rillig Exp $
 #
 
+DISTNAME=	ft${PKGNAME_NOREV}
 PKGNAME=	jam-2.5.2
-DISTNAME=	ft${PKGNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/}
 #MASTER_SITES=	ftp://ftp.perforce.com/pub/jam/
@@ -18,27 +19,13 @@ CONFLICTS=	acunia-jam-[0-9]*
 GNU_CONFIGURE=	yes
 
 USE_TOOLS+=	yacc gmake
-MAKEFLAGS+=	LINKFLAGS=${LDFLAGS:Q}
-
-DOCDIR=		share/doc/${PKGBASE}
-HTMLDIR=	share/doc/html/${PKGBASE}
-
-INSTALLATION_DIRS=	bin ${DOCDIR} ${HTMLDIR}
+MAKEFLAGS+=	LINKFLAGS=${LDFLAGS:M*:Q}
+AUTO_MKDIRS=	yes
 
 do-install:
-	for f in jam mkjambase; do \
-		${INSTALL_PROGRAM} ${WRKSRC}/bin.*/$${f} \
-			${DESTDIR}${PREFIX}/bin; \
-	done
-
-	for f in Porting README RELNOTES; do \
-		${INSTALL_DATA} ${WRKSRC}/$${f} \
-			${DESTDIR}${PREFIX}/${DOCDIR}; \
-	done
-
-	for f in *.html; do \
-		${INSTALL_DATA} ${WRKSRC}/$${f} \
-			${DESTDIR}${PREFIX}/${HTMLDIR}; \
-	done
+	cd ${WRKSRC}/bin.* \
+	&& ${INSTALL_PROGRAM} jam mkjambase ${DESTDIR}${PREFIX}/bin
+	cd ${WRKSRC} && ${INSTALL_DATA} Porting README RELNOTES *.html \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"
