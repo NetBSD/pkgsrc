@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/12/24 09:43:56 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/01/07 11:39:36 rillig Exp $
 
 COMPAT_PKG=		compat30	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		3.0
@@ -45,8 +45,10 @@ DEPENDS+=	netbsd32_compat40>=4.0:../../emulators/netbsd32_compat40
 # compat30-extras package to supply shared libraries missing from compat30.
 #
 .elif (${EMUL_ARCH} == "vax") && \
-      (!empty(OS_VERSION:M3.99.*) || !empty(OS_VERSION:M4.[0-9]) || \
-       !empty(OS_VERSION:M4.[1-8][0-9].*) || empty(NetBSD-4.9[0-8].*))
+      (!empty(OS_VERSION:M3.99.*) || \
+       !empty(OS_VERSION:M4.[0-9]) || \
+       !empty(OS_VERSION:M4.[1-8][0-9].*) || \
+       !empty(OS_VERSION:M4.9[0-8].*))
 DEPENDS+=	compat30-extras-${COMPAT_VERSION}{,nb*}:../../emulators/compat30-extras
 #
 # We need to depend on the compat40 package to supply shared libraries
