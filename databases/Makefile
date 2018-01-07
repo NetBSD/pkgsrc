@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.554 2017/12/08 15:28:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.555 2018/01/07 18:13:34 wiz Exp $
 
 COMMENT=	Databases
 
@@ -8,7 +8,6 @@ SUBDIR+=	abook
 SUBDIR+=	adodb
 SUBDIR+=	apache-cassandra
 SUBDIR+=	apache-cassandra2
-SUBDIR+=	bdb-xml
 SUBDIR+=	cdb
 SUBDIR+=	clisp-bdb
 SUBDIR+=	clisp-gdbm
@@ -337,7 +336,6 @@ SUBDIR+=	py-alembic
 SUBDIR+=	py-apsw
 SUBDIR+=	py-asyncpg
 SUBDIR+=	py-barman
-SUBDIR+=	py-bdb-xml
 SUBDIR+=	py-bsddb3
 SUBDIR+=	py-carbon
 SUBDIR+=	py-cassa
