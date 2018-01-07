@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2016/07/09 06:38:04 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2018/01/07 21:08:10 rillig Exp $
 #
 
 DISTNAME=	adocman-0.10
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sitedocs/}
 
@@ -16,22 +16,18 @@ DEPENDS+=	p5-Crypt-SSLeay>=0.47:../../security/p5-Crypt-SSLeay
 NO_BUILD=		yes
 PERL5_CONFIGURE=	no
 REPLACE_PERL=		adocman xml_export
-
-INSTALLATION_DIRS=	bin
+AUTO_MKDIRS=		yes
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/adocman ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/xml_export ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT_DIR} ${DESTDIR}${PERL5_INSTALLVENDORLIB}/Alexandria
-.for f in Client.pm Docman.pm
-	${INSTALL_SCRIPT} ${WRKSRC}/Alexandria/${f} \
+	cd ${WRKSRC}/Alexandria && ${INSTALL_SCRIPT} \
+		Client.pm Docman.pm \
 		${DESTDIR}${PERL5_INSTALLVENDORLIB}/Alexandria
-.endfor
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/html/adocman
-.for f in LICENSE README TODO adocman.html xml_export.html
-	${INSTALL_DATA} ${WRKSRC}/${f} \
-		${DESTDIR}${PREFIX}/share/doc/html/adocman
-.endfor
+	cd ${WRKSRC} && ${INSTALL_DATA} \
+		LICENSE README TODO adocman.html xml_export.html \
+		${DESTDIR}${PREFIX}/share/doc/adocman
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

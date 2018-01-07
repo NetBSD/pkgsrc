@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2012/10/31 11:16:51 asau Exp $
+# $NetBSD: Makefile,v 1.10 2018/01/07 21:16:05 rillig Exp $
 
 DISTNAME=	darts-0.32
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://chasen.org/~taku/software/darts/src/
 
@@ -12,26 +12,15 @@ LICENSE=	gnu-lgpl-v2.1 OR modified-bsd
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
-
-DOCDIR=		share/doc/darts
-EXAMPLESDIR=	share/examples/darts
-HTMLDOCDIR=	share/doc/html/darts
-DOCS=		AUTHORS ChangeLog README
-EXAMPLES=	darts.cpp mkdarts.cpp
-HTMLDOCS=	darts.css index.html
-
-INSTALLATION_DIRS=	${DOCDIR} ${EXAMPLESDIR} ${HTMLDOCDIR}
+AUTO_MKDIRS=	yes
 
 post-install:
-.for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${DOCDIR}
-.endfor
-.for f in ${HTMLDOCS}
-	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DESTDIR}${PREFIX}/${HTMLDOCDIR}
-.endfor
-.for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${EXAMPLESDIR}
-.endfor
+	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS ChangeLog README \
+		${DESTDIR}${PREFIX}/share/doc/darts
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} darts.css index.html \
+		${DESTDIR}${PREFIX}/share/doc/darts
+	cd ${WRKSRC} && ${INSTALL_DATA} darts.cpp mkdarts.cpp \
+		${DESTDIR}${PREFIX}/share/examples/darts
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

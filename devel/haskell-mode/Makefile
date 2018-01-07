@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2015/01/19 13:36:12 mef Exp $
+# $NetBSD: Makefile,v 1.23 2018/01/07 21:17:50 rillig Exp $
 
 DISTNAME=		haskell-mode-1.44
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		devel editors
 MASTER_SITES=		http://www.haskell.org/haskell-mode/
 
@@ -11,7 +11,7 @@ HOMEPAGE=		https://www.haskell.org/haskellwiki/Haskell_mode_for_Emacs
 COMMENT=		Haskell mode for Emacs
 
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/haskell-mode \
-			share/doc/html/haskell-mode
+			share/doc/haskell-mode
 
 HTML=	.emacs fontlock.hs indent.hs index.html installation-guide.html
 SRCS=	haskell-decl-scan.el haskell-doc.el haskell-font-lock.el	\
@@ -28,7 +28,7 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} 	\
 			${DESTDIR}${EMACS_LISPPREFIX}/haskell-mode
 	cd ${WRKSRC} && ${INSTALL_DATA} ${HTML}				\
-			${DESTDIR}${PREFIX}/share/doc/html/haskell-mode
+			${DESTDIR}${PREFIX}/share/doc/haskell-mode
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
