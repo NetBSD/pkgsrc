@@ -48,6 +48,35 @@ func (s *Suite) Test_Package_ChecklinesPackageMakefileVarorder(c *check.C) {
 		"WARN: Makefile:6: The canonical position for the required variable LICENSE is here.")
 }
 
+func (s *Suite) Test_Package_varorder_license(c *check.C) {
+	s.Init(c)
+	s.UseCommandLine("-Worder")
+
+	s.CreateTmpFileLines("mk/bsd.pkg.mk", "# dummy")
+	s.CreateTmpFileLines("x11/Makefile", mkrcsid)
+	s.CreateTmpFileLines("x11/9term/PLIST", "@comment $"+"NetBSD$", "bin/9term")
+	s.CreateTmpFileLines("x11/9term/distinfo", "$"+"NetBSD$")
+	s.CreateTmpFileLines("x11/9term/Makefile",
+		mkrcsid,
+		"",
+		"DISTNAME=9term-1.0",
+		"CATEGORIES=x11",
+		"",
+		"COMMENT=Terminal",
+		"",
+		".include \"../../mk/bsd.pkg.mk\"")
+
+	G.globalData.InitVartypes()
+	G.globalData.Pkgsrcdir = s.TmpDir()
+	G.CurrentDir = s.TmpDir()
+
+	(&Pkglint{}).CheckDirent(s.TmpDir() + "/x11/9term")
+
+	// Since the error is grave enough, the warning about the correct position is suppressed.
+	s.CheckOutputLines(
+		"ERROR: ~/x11/9term/Makefile: Each package must define its LICENSE.")
+}
+
 // https://mail-index.netbsd.org/tech-pkg/2017/01/18/msg017698.html
 func (s *Suite) Test_Package_ChecklinesPackageMakefileVarorder__MASTER_SITES(c *check.C) {
 	s.Init(c)

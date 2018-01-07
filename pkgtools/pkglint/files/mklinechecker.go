@@ -218,12 +218,20 @@ func (ck MkLineChecker) checkDependencyRule(allowedTargets map[string]bool) {
 		} else if target == ".ORDER" {
 			// TODO: Check for spelling mistakes.
 
+		} else if hasPrefix(target, "${.CURDIR}/") {
+			// OK, this is intentional
+
 		} else if !allowedTargets[target] {
 			mkline.Warnf("Unusual target %q.", target)
 			Explain(
-				"If you want to define your own targets, you can \"declare\"",
-				"them by inserting a \".PHONY: my-target\" line before this line.  This",
-				"will tell make(1) to not interpret this target's name as a filename.")
+				"If you want to define your own target, declare it like this:",
+				"",
+				"\t.PHONY: my-target",
+				"",
+				"In the rare case that you actually want a file-based make(1)",
+				"target, write it like this:",
+				"",
+				"\t${.CURDIR}/my-filename:")
 		}
 	}
 }
