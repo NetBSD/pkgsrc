@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2016/03/05 11:27:55 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2018/01/07 13:04:30 rillig Exp $
 
 BUILDLINK_TREE+=	polkit-qt
 
@@ -7,7 +7,7 @@ POLKIT_QT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.polkit-qt+=	polkit-qt>=0.9.2
 BUILDLINK_ABI_DEPENDS.polkit-qt+=	polkit-qt>=0.9.4nb19
-BUILDLINK_PKGSRCDIR.polkit-qt?=	../../security/polkit-qt
+BUILDLINK_PKGSRCDIR.polkit-qt?=		../../security/polkit-qt
 
 .include "../../security/policykit/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"

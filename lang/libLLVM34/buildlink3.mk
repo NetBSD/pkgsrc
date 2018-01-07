@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2015/04/06 17:25:05 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2018/01/07 13:04:19 rillig Exp $
 
 BUILDLINK_TREE+=	libLLVM34
 
@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.libLLVM34+=	libLLVM34>=3.4.2nb1
 BUILDLINK_PKGSRCDIR.libLLVM34?=		../../lang/libLLVM34
 BUILDLINK_INCDIRS.libLLVM34?=		include/libLLVM34
 BUILDLINK_LIBDIRS.libLLVM34?=		lib/libLLVM34
-LLVM_CONFIG_PATH?=	${BUILDLINK_PREFIX.libLLVM34}/libexec/libLLVM34/llvm-config
+LLVM_CONFIG_PATH?=			${BUILDLINK_PREFIX.libLLVM34}/libexec/libLLVM34/llvm-config
 
 .endif	# LIBLLVM34_BUILDLINK3_MK
 

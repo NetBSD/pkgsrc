@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2018/01/01 18:16:37 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2018/01/07 13:04:19 rillig Exp $
 
 BUILDLINK_TREE+=	gcc6-libs
 
@@ -11,7 +11,7 @@ BUILDLINK_API_DEPENDS.gcc6-libs+=	gcc6-libs>=6.1.0
 BUILDLINK_API_DEPENDS.gcc6-libs+=	{gcc6,gcc6-libs}>=6.1.0
 .endif
 BUILDLINK_PKGSRCDIR.gcc6-libs=		../../lang/gcc6-libs
-BUILDLINK_DEPMETHOD.gcc6-libs?=	full
+BUILDLINK_DEPMETHOD.gcc6-libs?=		full
 
 BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_PREFIX.gcc6-libs}/gcc6
 

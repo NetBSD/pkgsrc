@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.54 2015/09/27 21:58:03 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.55 2018/01/07 13:04:12 rillig Exp $
 
 BUILDLINK_TREE+=	MesaLib
 
@@ -14,9 +14,9 @@ BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
 .if ${X11_TYPE} == "modular"
 BUILDLINK_ABI_DEPENDS.MesaLib+=	MesaLib>=10.5.3
 # This is needed to avoid linking conflicting libstdc++ versions
-.if defined(USE_LANGUAGES) && !empty(USE_LANGUAGES:Mc++)
-GCC_REQD+=	4.2
-.endif
+.  if defined(USE_LANGUAGES) && !empty(USE_LANGUAGES:Mc++)
+GCC_REQD+=			4.2
+.  endif
 .endif
 
 # See <http://developer.apple.com/qa/qa2007/qa1567.html>.

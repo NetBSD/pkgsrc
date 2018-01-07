@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2018/01/01 18:16:37 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2018/01/07 13:04:19 rillig Exp $
 
 BUILDLINK_TREE+=	gcc5-libs
 
@@ -11,7 +11,7 @@ BUILDLINK_API_DEPENDS.gcc5-libs+=	gcc5-libs>=5.1.0
 BUILDLINK_API_DEPENDS.gcc5-libs+=	{gcc5,gcc5-libs}>=5.1.0
 .endif
 BUILDLINK_PKGSRCDIR.gcc5-libs=		../../lang/gcc5-libs
-BUILDLINK_DEPMETHOD.gcc5-libs?=	full
+BUILDLINK_DEPMETHOD.gcc5-libs?=		full
 
 BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_PREFIX.gcc5-libs}/gcc5
 
