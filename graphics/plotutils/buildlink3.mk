@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2013/02/16 11:17:56 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2018/01/07 13:04:16 rillig Exp $
 
 BUILDLINK_TREE+=	plotutils
 
@@ -7,7 +7,7 @@ PLOTUTILS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plotutils+=	plotutils>=2.4.1nb2
 BUILDLINK_ABI_DEPENDS.plotutils+=	plotutils>=2.6nb4
-BUILDLINK_PKGSRCDIR.plotutils?=	../../graphics/plotutils
+BUILDLINK_PKGSRCDIR.plotutils?=		../../graphics/plotutils
 
 pkgbase := plotutils
 .include "../../mk/pkg-build-options.mk"

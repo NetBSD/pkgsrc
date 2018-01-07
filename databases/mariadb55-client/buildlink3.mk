@@ -1,6 +1,6 @@
-# $NetBSD: buildlink3.mk,v 1.5 2016/03/05 11:27:41 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2018/01/07 13:03:59 rillig Exp $
 
-# This buildlink file uses mysql-client and not mariadb-client, 
+# This buildlink file uses mysql-client and not mariadb-client,
 # because some packages depending on it expect BUILDLINK_*.mysql-client
 # to be set and will fail build if they get BUILDLINK_*.mariadb-client
 # instead.

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/04/24 12:18:09 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2018/01/07 13:04:39 rillig Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -10,15 +10,15 @@
 
 BUILDLINK_TREE+=	libXfixes
 
-.if !defined(LIBXFIXES_BUILDLINK3_MK)
+.  if !defined(LIBXFIXES_BUILDLINK3_MK)
 LIBXFIXES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libXfixes+=	libXfixes>=4.0.1
-BUILDLINK_PKGSRCDIR.libXfixes?=	../../x11/libXfixes
+BUILDLINK_PKGSRCDIR.libXfixes?=		../../x11/libXfixes
 
 .include "../../x11/fixesproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.endif # LIBXFIXES_BUILDLINK3_MK
+.  endif # LIBXFIXES_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libXfixes
 

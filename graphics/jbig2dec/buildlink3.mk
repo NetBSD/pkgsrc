@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2010/09/09 02:13:50 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:04:14 rillig Exp $
 
 BUILDLINK_TREE+=	jbig2dec
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	jbig2dec
 JBIG2DEC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.jbig2dec+=	jbig2dec>=0.11
-BUILDLINK_PKGSRCDIR.jbig2dec?=	../../graphics/jbig2dec
+BUILDLINK_PKGSRCDIR.jbig2dec?=		../../graphics/jbig2dec
 .endif	# JBIG2DEC_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-jbig2dec

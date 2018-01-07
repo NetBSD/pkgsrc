@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2015/12/01 12:59:52 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:03:57 rillig Exp $
 
 BUILDLINK_TREE+=	farstream
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	farstream
 FARSTREAM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.farstream+=	farstream>=0.2.7
-BUILDLINK_PKGSRCDIR.farstream?=	../../chat/farstream
+BUILDLINK_PKGSRCDIR.farstream?=		../../chat/farstream
 
 .endif	# FARSTREAM_BUILDLINK3_MK
 

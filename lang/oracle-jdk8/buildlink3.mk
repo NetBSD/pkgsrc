@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2015/05/30 09:51:11 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:04:20 rillig Exp $
 
 BUILDLINK_TREE+=	oracle-jdk8
 
@@ -8,7 +8,7 @@ ORACLE_JDK8_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.oracle-jdk8+=	oracle-jdk8-[0-9]*
 BUILDLINK_ABI_DEPENDS.oracle-jdk8+=	oracle-jdk8>=8.0.45
 BUILDLINK_PKGSRCDIR.oracle-jdk8?=	../../lang/oracle-jdk8
-BUILDLINK_DEPMETHOD.oracle-jdk8?= build
+BUILDLINK_DEPMETHOD.oracle-jdk8?=	build
 
 BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_JAVA_PREFIX.oracle-jre8}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2015/05/23 09:01:20 kefren Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:04:13 rillig Exp $
 
 BUILDLINK_TREE+=	flickrnet
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	flickrnet
 FLICKRNET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.flickrnet+=	flickrnet>=3.16
-BUILDLINK_PKGSRCDIR.flickrnet?=	../../graphics/flickrnet
+BUILDLINK_PKGSRCDIR.flickrnet?=		../../graphics/flickrnet
 BUILDLINK_CONTENTS_FILTER.flickrnet=	${EGREP} '(^lib/)'
 
 .endif	# FLICKRNET_BUILDLINK3_MK

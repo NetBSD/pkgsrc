@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2015/04/25 10:32:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:04:18 rillig Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -15,11 +15,11 @@ BUILDLINK_LIBDIRS.gcc2?=		\
 	${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc2}\///}
 
 # Packages that link against shared libraries need a full dependency.
-.  if defined(_USE_GCC_SHLIB)
+.if defined(_USE_GCC_SHLIB)
 BUILDLINK_DEPMETHOD.gcc2+=	full
-.  else
+.else
 BUILDLINK_DEPMETHOD.gcc2?=	build
-.  endif
+.endif
 .endif # GCC2_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gcc2

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2012/11/03 14:18:06 imil Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:04:27 rillig Exp $
 
 BUILDLINK_TREE+=	py-irclib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	py-irclib
 PY_IRCLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.py-irclib+=	${PYPKGPREFIX}-irclib>=3.4.2
-BUILDLINK_PKGSRCDIR.py-irclib?=	../../net/py-irclib
+BUILDLINK_PKGSRCDIR.py-irclib?=		../../net/py-irclib
 
 .endif	# PY_IRCLIB_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2014/01/29 13:01:53 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2018/01/07 13:04:31 rillig Exp $
 
 BUILDLINK_TREE+=	dbus
 
@@ -10,7 +10,7 @@ BUILDLINK_PKGSRCDIR.dbus?=	../../sysutils/dbus
 
 .if defined(USE_DBUS-ARCH-DEPS_H)
 .  if !empty(USE_DBUS-ARCH-DEPS_H:M[yY][eE][sS])
-BUILDLINK_INCDIRS.dbus+=	lib/dbus-1.0/include/dbus
+BUILDLINK_INCDIRS.dbus+=		lib/dbus-1.0/include/dbus
 BUILDLINK_FNAME_TRANSFORM.dbus+=	-e "s|lib/dbus-1.0/||"
 .  endif
 .endif

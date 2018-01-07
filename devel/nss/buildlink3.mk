@@ -1,4 +1,5 @@
-# $NetBSD: buildlink3.mk,v 1.20 2013/09/14 10:29:22 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2018/01/07 13:04:08 rillig Exp $
+
 BUILDLINK_TREE+=	nss
 
 .if !defined(NSS_BUILDLINK3_MK)

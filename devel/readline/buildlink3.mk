@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2011/02/23 11:00:17 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2018/01/07 13:04:10 rillig Exp $
 
 BUILDLINK_TREE+=	readline
 
@@ -18,7 +18,7 @@ BUILDLINK_FNAME_TRANSFORM.readline+=	-e 's|include/readline\.h|include/readline/
 # Many GNU configure scripts don't check for the correct terminal library
 # when testing for -lreadline.  If BROKEN_READLINE_DETECTION is set to
 # "yes", then automatically add the right one.
-.  include "../../mk/bsd.fast.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 BROKEN_READLINE_DETECTION?=	no
 .if !empty(BROKEN_READLINE_DETECTION:M[yY][eE][sS])
 BUILDLINK_TRANSFORM+=		l:readline:readline:${BUILDLINK_LIBNAME.termcap}
