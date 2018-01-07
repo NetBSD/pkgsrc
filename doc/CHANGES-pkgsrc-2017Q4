@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.5 2018/01/06 23:14:09 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.6 2018/01/07 19:19:22 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
 
@@ -25,4 +25,22 @@ net/rsync: security patch
 
 Pullup ticket #5672 - requested by dholland
 lang/micropython: build fix
+
+Pullup ticket #5673 - requested by taca
+lang/php56: security fix
+
+Pullup ticket #5674 - requested by taca
+lang/php70: security fix
+
+Pullup ticket #5675 - requested by taca
+lang/php71: security fix
+
+Pullup ticket #5676 - requested by taca
+lang/php72: security fix
+
+Pullup ticket #5677 - requested by taca
+converters/php-iconv: reset PKGREVISION
+databases/php-pdo_sqlite: reset PKGREVISION
+textproc/php-intl: reset PKGREVISION
+textproc/php-json: reset PKGREVISION
 
