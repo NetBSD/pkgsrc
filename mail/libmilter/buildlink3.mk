@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 19:24:55 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2018/01/07 13:04:21 rillig Exp $
 
 BUILDLINK_TREE+=	libmilter
 
@@ -6,8 +6,8 @@ BUILDLINK_TREE+=	libmilter
 LIBMILTER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmilter+=	libmilter>=8.14
-BUILDLINK_PKGSRCDIR.libmilter?=	../../mail/libmilter
-BUILDLINK_DEPMETHOD.libmilter?=	build
+BUILDLINK_PKGSRCDIR.libmilter?=		../../mail/libmilter
+BUILDLINK_DEPMETHOD.libmilter?=		build
 
 PTHREAD_OPTS+=		require
 

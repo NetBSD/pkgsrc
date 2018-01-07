@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2017/11/23 17:19:41 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2018/01/07 13:04:11 rillig Exp $
 
 BUILDLINK_TREE+=	xulrunner192
 
@@ -17,8 +17,8 @@ BUILDLINK_PKGSRCDIR.xulrunner192?=	../../devel/xulrunner192
 pkgbase := xulrunner192
 .include "../../mk/pkg-build-options.mk"
 .if !empty(PKG_BUILD_OPTIONS.xulrunner192:Mgnome)
-. include "../../devel/libgnomeui/buildlink3.mk"
-. include "../../sysutils/gnome-vfs/buildlink3.mk"
+.  include "../../devel/libgnomeui/buildlink3.mk"
+.  include "../../sysutils/gnome-vfs/buildlink3.mk"
 .endif
 .endif # XULRUNNER192_BUILDLINK3_MK
 

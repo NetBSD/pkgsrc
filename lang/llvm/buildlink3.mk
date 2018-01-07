@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2017/07/11 19:47:37 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2018/01/07 13:04:19 rillig Exp $
 
 BUILDLINK_TREE+=	llvm
 
@@ -12,9 +12,9 @@ LLVM_CONFIG_PATH?=		${BUILDLINK_PREFIX.llvm}/bin/llvm-config
 
 pkgbase := llvm
 .include "../../mk/pkg-build-options.mk"
-.  if !empty(PKG_BUILD_OPTIONS.llvm:Mterminfo)
+.if !empty(PKG_BUILD_OPTIONS.llvm:Mterminfo)
 .include "../../mk/terminfo.buildlink3.mk"
-.  endif
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .endif	# LLVM_BUILDLINK3_MK
