@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:48:48 joerg Exp $
-share/doc/html/haskell-mode/.emacs
-share/doc/html/haskell-mode/fontlock.hs
-share/doc/html/haskell-mode/indent.hs
-share/doc/html/haskell-mode/index.html
-share/doc/html/haskell-mode/installation-guide.html
+@comment $NetBSD: PLIST,v 1.6 2018/01/07 21:17:50 rillig Exp $
+share/doc/haskell-mode/.emacs
+share/doc/haskell-mode/fontlock.hs
+share/doc/haskell-mode/indent.hs
+share/doc/haskell-mode/index.html
+share/doc/haskell-mode/installation-guide.html
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-decl-scan.el
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-decl-scan.elc
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-doc.el
