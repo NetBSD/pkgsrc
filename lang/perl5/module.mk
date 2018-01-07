@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.72 2016/02/06 00:46:11 mef Exp $
+# $NetBSD: module.mk,v 1.73 2018/01/07 11:40:57 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -30,6 +30,11 @@
 #			"Module::Build::Tiny", "Module::Install", or
 #			"Module::Install::Bundled" depending on which framework
 #			is used to build/install the module.
+#
+# See also:
+#	PERL5_PACKLIST
+#
+# Keywords: perl perl5
 
 .include "../../lang/perl5/license.mk"
 
