@@ -68,7 +68,7 @@ func isEmptyDir(fname string) bool {
 	}
 	for _, dirent := range dirents {
 		name := dirent.Name()
-		if name == "." || name == ".." || name == "CVS" {
+		if isIgnoredFilename(name) {
 			continue
 		}
 		if dirent.IsDir() && isEmptyDir(fname+"/"+name) {
@@ -88,11 +88,19 @@ func getSubdirs(fname string) []string {
 	var subdirs []string
 	for _, dirent := range dirents {
 		name := dirent.Name()
-		if name != "." && name != ".." && name != "CVS" && dirent.IsDir() && !isEmptyDir(fname+"/"+name) {
+		if dirent.IsDir() && !isIgnoredFilename(name) && !isEmptyDir(fname+"/"+name) {
 			subdirs = append(subdirs, name)
 		}
 	}
 	return subdirs
+}
+
+func isIgnoredFilename(fileName string) bool {
+	switch fileName {
+	case ".", "..", "CVS", ".svn", ".git", ".hg":
+		return true
+	}
+	return false
 }
 
 // Checks whether a file is already committed to the CVS repository.
@@ -332,4 +340,21 @@ func hasAlnumPrefix(s string) bool {
 	}
 	b := s[0]
 	return '0' <= b && b <= '9' || 'A' <= b && b <= 'Z' || b == '_' || 'a' <= b && b <= 'z'
+}
+
+// Once remembers with which arguments its FirstTime method has been called
+// and only returns true on each first call.
+type Once struct {
+	seen map[string]bool
+}
+
+func (o *Once) FirstTime(what string) bool {
+	if o.seen == nil {
+		o.seen = make(map[string]bool)
+	}
+	if _, ok := o.seen[what]; ok {
+		return false
+	}
+	o.seen[what] = true
+	return true
 }

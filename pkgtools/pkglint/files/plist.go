@@ -33,15 +33,15 @@ func ChecklinesPlist(lines []Line) {
 		make(map[string]*PlistLine),
 		make(map[string]*PlistLine),
 		"",
-		false}
+		Once{}}
 	ck.Check(lines)
 }
 
 type PlistChecker struct {
-	allFiles              map[string]*PlistLine
-	allDirs               map[string]*PlistLine
-	lastFname             string
-	warnedAboutIconThemes bool
+	allFiles  map[string]*PlistLine
+	allDirs   map[string]*PlistLine
+	lastFname string
+	once      Once
 }
 
 type PlistLine struct {
@@ -365,7 +365,7 @@ func (ck *PlistChecker) checkpathShare(pline *PlistLine) {
 	case hasPrefix(text, "share/icons/") && G.Pkg != nil:
 		if hasPrefix(text, "share/icons/hicolor/") && G.Pkg.Pkgpath != "graphics/hicolor-icon-theme" {
 			f := "../../graphics/hicolor-icon-theme/buildlink3.mk"
-			if G.Pkg.included[f] == nil {
+			if G.Pkg.included[f] == nil && ck.once.FirstTime("hicolor-icon-theme") {
 				line.Errorf("Packages that install hicolor icons must include %q in the Makefile.", f)
 			}
 		}
@@ -380,9 +380,8 @@ func (ck *PlistChecker) checkpathShare(pline *PlistLine) {
 			}
 		}
 
-		if !ck.warnedAboutIconThemes && contains(text[12:], "/") && G.Pkg.vardef["ICON_THEMES"] == nil {
+		if contains(text[12:], "/") && G.Pkg.vardef["ICON_THEMES"] == nil && ck.once.FirstTime("ICON_THEMES") {
 			line.Warnf("Packages that install icon theme files should set ICON_THEMES.")
-			ck.warnedAboutIconThemes = true
 		}
 
 	case hasPrefix(text, "share/doc/html/"):
