@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:36 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/07 19:17:57 rillig Exp $
 bin/zoom
-share/doc/html/zoom/colours.png
-share/doc/html/zoom/configXwin.html
-share/doc/html/zoom/configmac.html
-share/doc/html/zoom/fonts.png
-share/doc/html/zoom/game.png
-share/doc/html/zoom/generalset.png
-share/doc/html/zoom/idx
-share/doc/html/zoom/index.html
-share/doc/html/zoom/intro.html
-share/doc/html/zoom/resources.png
-share/doc/html/zoom/troubleshooting.html
-share/doc/html/zoom/ui.png
-share/doc/html/zoom/zicon.gif
-share/doc/html/zoom/zoom-icon.png
-share/doc/html/zoom/zoom.html
-share/doc/html/zoom/ztitle.html
+share/doc/zoom/colours.png
+share/doc/zoom/configXwin.html
+share/doc/zoom/configmac.html
+share/doc/zoom/fonts.png
+share/doc/zoom/game.png
+share/doc/zoom/generalset.png
+share/doc/zoom/idx
+share/doc/zoom/index.html
+share/doc/zoom/intro.html
+share/doc/zoom/resources.png
+share/doc/zoom/troubleshooting.html
+share/doc/zoom/ui.png
+share/doc/zoom/zicon.gif
+share/doc/zoom/zoom-icon.png
+share/doc/zoom/zoom.html
+share/doc/zoom/ztitle.html
 share/zoom/zoomrc
