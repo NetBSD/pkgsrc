@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.34 2016/09/27 17:10:09 wiz Exp $
+# $NetBSD: url2pkg.pl,v 1.35 2018/01/07 11:20:18 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -89,32 +89,40 @@ sub print_section($$) {
 	printf $f ("\n");
 }
 
-#
-# Introduction to the magic_* subroutines.
-#
-# The following routines are called after the distfiles have been
-# downloaded and extracted. They may inspect the extracted files
+# The following magic_* subroutines are called after the distfiles have
+# been downloaded and extracted. They inspect the extracted files
 # to automatically define some variables in the package Makefile.
 #
 # The following variables may be used in the magic_* subroutines:
-# $distname contains the package name, including the version number.
-# $abs_wrkdir is an absolute pathname to the working directory, which
-# contains the extracted distfiles. $abs_wrksrc is the absolute pathname
-# to a subdirectory of $abs_wrkdir, in which you can usually find the
-# package-provided Makefiles or configure scripts.
+#
+# $distname
+#	contains the package name, including the version number.
+# $abs_wrkdir
+#	the absolute pathname to the working directory, containing
+#	the extracted distfiles.
+# $abs_wrksrc
+#	the absolute pathname to a subdirectory of $abs_wrkdir,
+#	typically containing package-provided Makefiles or configure
+#	scripts.
 #
 # The following lists may be extended by the magic_* routines and
-# will later appear in the package Makefile: @depends and @build_depends
-# contain the dependencies of the package, in the form
-# "package>=version". @includes is a list of pathnames relative to the
-# package path. All these files will be included at the bottom of the
-# Makefile. @build_vars is a list of [varname, value] items that contain
-# variables that will be defined in the fourth paragraph of the package
-# Makefile, where the build configuration takes place. The @extra_vars
-# are similar to the @build_vars, but separated by an empty line in the
-# Makefile. The @todo items are inserted below the second paragraph in
-# the Makefile.
+# will later appear in the package Makefile:
 #
+# @depends
+# @build_depends
+#	the dependencies of the package, in the form "package>=version".
+# @includes
+#	a list of pathnames relative to the package path.
+#	All these files will be included at the bottom of the Makefile.
+# @build_vars
+#	a list of [varname, value] items that contain variables that
+#	will be defined in the fourth paragraph of the package Makefile,
+#	where the build configuration takes place.
+# @extra_vars
+#	similar to the @build_vars, but separated by an empty line in
+#	the Makefile, therefore forming the fifth paragraph.
+# @todo
+#	these are inserted below the second paragraph in the Makefile.
 
 my ($distname, $abs_wrkdir, $abs_wrksrc);
 my (@wrksrc_files, @wrksrc_dirs);
