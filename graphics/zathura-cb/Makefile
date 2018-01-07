@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2017/11/23 17:19:58 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/01/07 12:58:43 leot Exp $
 #
 
-DISTNAME=	zathura-cb-0.1.6
-PKGREVISION=	4
+DISTNAME=	zathura-cb-0.1.7
 CATEGORIES=	graphics
 MASTER_SITES=	https://pwmt.org/projects/zathura-cb/download/
 
@@ -13,6 +12,9 @@ LICENSE=	zlib
 
 USE_TOOLS+=	pkg-config gmake
 USE_LIBTOOL=	yes
+
+MAKE_FLAGS+=	LIBARCHIVE_INC="-I${BUILDLINK_PREFIX.libarchive}/include"
+MAKE_FLAGS+=	LIBARCHIVE_LIB="-L${BUILDLINK_PREFIX.libarchive}/lib -larchive"
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
