@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.81 2018/01/08 01:23:20 wen Exp $
+$NetBSD: CHANGES-2018,v 1.82 2018/01/08 07:34:38 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -144,3 +144,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed databases/py-bdb-xml [wiz 2018-01-07]
 	Removed databases/bdb-xml [wiz 2018-01-07]
 	Updated devel/p5-Mouse to 2.5.1 [wen 2018-01-08]
+	Updated www/p5-HTML-Lint to 2.30 [wen 2018-01-08]
