@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.46 2017/11/29 13:43:03 wiz Exp $
+$NetBSD: distinfo,v 1.47 2018/01/08 01:21:26 wen Exp $
 
-SHA1 (Mouse-v2.5.0.tar.gz) = 334972ffe080550475e86629781e073e60b33bec
-RMD160 (Mouse-v2.5.0.tar.gz) = f6054f1ae66dd9c46f3c4ba45fc64ea2f5281b02
-SHA512 (Mouse-v2.5.0.tar.gz) = fa09dea1254d2666831bb284eae659cb1b852a73fdecadeb0f79cff5ba790f7fe9916fb7cfb3ae5ce702e2eb65fee866d41df92a16fceac8b09a2ea5aa0e4df8
-Size (Mouse-v2.5.0.tar.gz) = 221276 bytes
+SHA1 (Mouse-v2.5.1.tar.gz) = 1990e9970818d80b7822293775ea9ba8184d5fbc
+RMD160 (Mouse-v2.5.1.tar.gz) = afd70aa3cefefe7cdf90144e2775acaf78019397
+SHA512 (Mouse-v2.5.1.tar.gz) = 9f147c3ae5cc4edb72a42e2d0f9a916d55c293a6c615833a9f9380c202dc046c4458fbf74e4897e76b267f4c8530a6470fab630bf8350e048c985750ab1b6c14
+Size (Mouse-v2.5.1.tar.gz) = 219245 bytes
