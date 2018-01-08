@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2018/01/01 22:30:02 rillig Exp $
+@comment $NetBSD: PLIST,v 1.48 2018/01/08 14:04:18 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
 bin/ikiwiki-comment
@@ -356,12 +356,7 @@ ${PLIST.l10n}share/ikiwiki/locale/fr/directives/ikiwiki/directive/toc.mdwn
 ${PLIST.l10n}share/ikiwiki/locale/fr/directives/ikiwiki/directive/toggle.mdwn
 ${PLIST.l10n}share/ikiwiki/locale/fr/directives/ikiwiki/directive/version.mdwn
 ${PLIST.l10n}share/ikiwiki/locale/fr/smiley/smileys.mdwn
-share/ikiwiki/login-selector/ikiwiki/login-selector/aol.png
-share/ikiwiki/login-selector/ikiwiki/login-selector/goa-account-flickr.png
-share/ikiwiki/login-selector/ikiwiki/login-selector/goa-account-yahoo.png
 share/ikiwiki/login-selector/ikiwiki/login-selector/login-selector.js
-share/ikiwiki/login-selector/ikiwiki/login-selector/verisign.png
-share/ikiwiki/login-selector/ikiwiki/login-selector/wordpress.png
 share/ikiwiki/osm/ikiwiki/images/osm.png
 share/ikiwiki/osm/ikiwiki/osm.js
 share/ikiwiki/po/cs/basewiki/ikiwiki.cs.po
@@ -679,3 +674,4 @@ share/locale/pl/LC_MESSAGES/ikiwiki.mo
 share/locale/sv/LC_MESSAGES/ikiwiki.mo
 share/locale/tr/LC_MESSAGES/ikiwiki.mo
 share/locale/vi/LC_MESSAGES/ikiwiki.mo
+
