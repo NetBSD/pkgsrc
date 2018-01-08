@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.187 2017/12/15 03:26:03 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.188 2018/01/08 14:17:04 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -10,7 +10,7 @@
 # RUBY_VERSION_DEFAULT
 #	The preferered Ruby version to use.
 #
-#		Possible values: 22 23 24
+#		Possible values: 22 23 24 25
 #		Default: 23
 #
 # RUBY_BUILD_RDOC
@@ -41,8 +41,8 @@
 # RUBY_VERSIONS_ACCEPTED
 #	The Ruby versions that are acceptable for the package.
 #
-#		Possible values: 22 23 24
-#		Default: 23 22 24
+#		Possible values: 22 23 24 25
+#		Default: 23 22 24 25
 #
 # RUBY_NOVERSION
 #	If "Yes", the package dosen't depend on any version of Ruby, such
@@ -78,7 +78,7 @@
 #	use RUBY_PKGPREFIX with ruby related packages since you can supply
 #	different binary packages as each version of Ruby.
 #
-#		Example values: ruby22 ruby23 ruby24
+#		Example values: ruby22 ruby23 ruby24 ruby25
 #
 # RUBY_ABI_VERSION
 #	Ruby's ABI version.
@@ -107,7 +107,7 @@
 # RUBY_SUFFIX
 #	Extra string for each ruby commands; ruby, irb and so on.
 #
-#		Possible values: 22 23 24
+#		Possible values: 22 23 24 25
 #
 # RUBY_VERSION
 #	Version of Ruby's version.
@@ -217,19 +217,21 @@ RUBY_VERSION_REQD?= ${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
 RUBY22_VERSION=		2.2.9
 RUBY23_VERSION=		2.3.6
 RUBY24_VERSION=		2.4.3
+RUBY25_VERSION=		2.5.0
 
 # current API compatible version; used for version of shared library
 RUBY22_API_VERSION=	2.2.0
 RUBY23_API_VERSION=	2.3.0
 RUBY24_API_VERSION=	2.4.0
+RUBY25_API_VERSION=	2.5.0
 
 #
 RUBY_VERSION_DEFAULT?=	23
 
 # supported Ruby's version
-RUBY_VERSIONS_SUPPORTED= 23 22 24
+RUBY_VERSIONS_SUPPORTED= 23 22 24 25
 
-RUBY_VERSIONS_ACCEPTED?= 23 22 24
+RUBY_VERSIONS_ACCEPTED?= 23 22 24 25
 RUBY_VERSIONS_INCOMPATIBLE?=
 
 .if empty(RUBY_VERSIONS_SUPPORTED:M${RUBY_VERSION_DEFAULT})
@@ -328,6 +330,29 @@ RUBY_XML_RPC_VERSION=		0.2.1
 
 RUBY_SUFFIX=	${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
 
+.elif ${RUBY_VER} == "25"
+RUBY_VERSION=		${RUBY25_VERSION}
+RUBY_ABI_VERSION=	${RUBY_VERSION}
+
+RUBY_GEMS_VERSION=	2.7.3
+RUBY_RDOC_VERSION=	6.0.1
+
+RUBY_DID_YOU_MEAN_VERSION=	1.2.0
+RUBY_MINITEST_VERSION=		5.10.3
+RUBY_NET_TELNET_VERSION=	0.1.1
+RUBY_POWER_ASSERT_VERSION=	1.1.1
+RUBY_RAKE_VERSION=		12.3.0
+RUBY_TEST_UNIT_VERSION=		3.2.7
+RUBY_XML_RPC_VERSION=		0.3.0
+
+RUBY_BIGDECIMAL_VERSION=	1.3.4
+RUBY_JSON_VERSION=		2.1.0
+RUBY_IO_CONSOLE_VERSION=	0.4.6
+RUBY_OPENSSL_VERSION=		2.1.0
+RUBY_PSYCH_VERSION=		3.0.2
+
+RUBY_SUFFIX=	${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
+
 .else
 PKG_FAIL_REASON+= "Unknown Ruby version specified: ${RUBY_VER}."
 .endif
@@ -386,7 +411,7 @@ RUBY_MAJOR_MINOR=	${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
 #
 # Ruby shared and static library version handling.
 #
-.if ${RUBY_VER} != "24"
+.if ${RUBY_VER} == "22" || ${RUBY_VER} == "23"
 RUBY_SHLIBVER?=		${RUBY_API_VERSION}
 .else
 RUBY_SHLIBVER?=		${RUBY_VERSION}
