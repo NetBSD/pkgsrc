@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.87 2018/01/08 11:30:13 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.88 2018/01/08 14:04:34 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -150,3 +150,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/firefox to 57.0.4 [ryoon 2018-01-08]
 	Updated lang/llvm to 5.0.1nb1 [jperkin 2018-01-08]
 	Updated lang/guile22 to 2.2.3nb1 [wiz 2018-01-08]
+	Updated www/ikiwiki to 3.20180105 [schmonz 2018-01-08]
