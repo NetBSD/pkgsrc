@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.91 2018/01/08 15:12:13 he Exp $
+$NetBSD: CHANGES-2018,v 1.92 2018/01/08 17:58:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -155,3 +155,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added lang/ruby25 version 2.5.0 [taca 2018-01-08]
 	Updated mail/dovecot2-pigeonhole to 0.5.0.1 [taca 2018-01-08]
 	Updated graphics/ImageMagick to 7.0.7.21 [he 2018-01-08]
+	Updated multimedia/libquicktime to 1.2.4nb14 [adam 2018-01-08]
