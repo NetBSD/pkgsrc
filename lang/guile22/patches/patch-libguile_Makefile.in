@@ -1,0 +1,15 @@
+$NetBSD: patch-libguile_Makefile.in,v 1.1 2018/01/08 10:39:45 wiz Exp $
+
+Fix build on NetBSD>=8.
+
+--- libguile/Makefile.in.orig	2017-11-06 09:12:56.000000000 +0000
++++ libguile/Makefile.in
+@@ -2444,6 +2444,8 @@ clean-noinstPROGRAMS:
+ guile$(EXEEXT): $(guile_OBJECTS) $(guile_DEPENDENCIES) $(EXTRA_guile_DEPENDENCIES) 
+ 	@rm -f guile$(EXEEXT)
+ 	$(AM_V_CCLD)$(guile_LINK) $(guile_OBJECTS) $(guile_LDADD) $(LIBS)
++	if [ `uname -s` = "NetBSD" ]; then paxctl +m .libs/guile$(EXEEXT); fi
++
+ install-binSCRIPTS: $(bin_SCRIPTS)
+ 	@$(NORMAL_INSTALL)
+ 	@list='$(bin_SCRIPTS)'; test -n "$(bindir)" || list=; \
