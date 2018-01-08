@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.98 2017/10/10 19:47:50 tez Exp $
+@comment $NetBSD: PLIST,v 1.99 2018/01/08 15:11:43 he Exp $
 bin/Magick++-config
 bin/MagickCore-config
 bin/MagickWand-config
@@ -322,6 +322,7 @@ share/doc/ImageMagick-7/www/Magick++/Montage.html
 share/doc/ImageMagick-7/www/Magick++/NEWS.html
 share/doc/ImageMagick-7/www/Magick++/PixelPacket.html
 share/doc/ImageMagick-7/www/Magick++/Pixels.html
+share/doc/ImageMagick-7/www/Magick++/Quantum.html
 share/doc/ImageMagick-7/www/Magick++/README.txt
 share/doc/ImageMagick-7/www/Magick++/STL.html
 share/doc/ImageMagick-7/www/Magick++/TypeMetric.html
@@ -1171,6 +1172,8 @@ share/doc/ImageMagick-7/www/api/version.php
 share/doc/ImageMagick-7/www/api/wand-view.html
 share/doc/ImageMagick-7/www/api/wand-view.php
 share/doc/ImageMagick-7/www/architecture.html
+share/doc/ImageMagick-7/www/assets/magick.css
+share/doc/ImageMagick-7/www/assets/magick.js
 share/doc/ImageMagick-7/www/binary-releases.html
 share/doc/ImageMagick-7/www/changelog.html
 share/doc/ImageMagick-7/www/cipher.html
@@ -1186,8 +1189,6 @@ share/doc/ImageMagick-7/www/conjure.html
 share/doc/ImageMagick-7/www/connected-components.html
 share/doc/ImageMagick-7/www/contact.html
 share/doc/ImageMagick-7/www/convert.html
-share/doc/ImageMagick-7/www/css/README.txt
-share/doc/ImageMagick-7/www/css/magick.css
 share/doc/ImageMagick-7/www/develop.html
 share/doc/ImageMagick-7/www/display.html
 share/doc/ImageMagick-7/www/distribute-pixel-cache.html
@@ -1207,8 +1208,6 @@ share/doc/ImageMagick-7/www/import.html
 share/doc/ImageMagick-7/www/index.html
 share/doc/ImageMagick-7/www/install-source.html
 share/doc/ImageMagick-7/www/jp2.html
-share/doc/ImageMagick-7/www/js/README.txt
-share/doc/ImageMagick-7/www/js/magick.js
 share/doc/ImageMagick-7/www/license.html
 share/doc/ImageMagick-7/www/links.html
 share/doc/ImageMagick-7/www/magick++.html
@@ -1250,8 +1249,12 @@ share/doc/ImageMagick-7/www/source/mime.xml
 share/doc/ImageMagick-7/www/source/piechart.mvg
 share/doc/ImageMagick-7/www/source/piechart.svg
 share/doc/ImageMagick-7/www/source/policy.xml
+share/doc/ImageMagick-7/www/source/quantization-table.xml
 share/doc/ImageMagick-7/www/source/thresholds.xml
+share/doc/ImageMagick-7/www/source/type-apple.xml
+share/doc/ImageMagick-7/www/source/type-dejavu.xml
 share/doc/ImageMagick-7/www/source/type-ghostscript.xml
+share/doc/ImageMagick-7/www/source/type-urw-base35.xml
 share/doc/ImageMagick-7/www/source/type-windows.xml
 share/doc/ImageMagick-7/www/source/type.xml
 share/doc/ImageMagick-7/www/source/wand.c
