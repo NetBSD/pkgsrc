@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/01/01 21:18:47 adam Exp $
+# $NetBSD: Makefile,v 1.21 2018/01/08 18:37:49 jakllsch Exp $
 
 DISTNAME=	flickcurl-1.26
 PKGREVISION=	6
@@ -13,6 +13,13 @@ LICENSE=	gnu-lgpl-v2.1 OR gnu-gpl-v2 OR apache-2.0
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+# XXX: Kludge to avoid uncoditionally pick up some gtkdoc-* tools if gtk-doc
+# XXX: package is installed and then fails in the installation phase.
+CONFIGURE_ENV+=		ac_cv_prog_GTKDOC_CHECK= \
+			ac_cv_path_GTKDOC_CHECK_PATH= \
+			ac_cv_path_GTKDOC_REBASE= \
+			ac_cv_path_GTKDOC_MKPDF=
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
