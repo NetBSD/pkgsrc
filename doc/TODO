@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17995 2018/01/07 18:19:23 wiz Exp $
+$NetBSD: TODO,v 1.17996 2018/01/08 14:23:01 taca Exp $
 
 Suggested new packages
 ======================
@@ -1310,7 +1310,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.4
-	o ruby-2.5.0
 	o ruby-actionmailer-4.2.10
 	o ruby-actionpack-4.2.10
 	o ruby-activemodel-4.2.10
