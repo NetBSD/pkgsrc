@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.102 2017/12/10 00:45:09 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.103 2018/01/08 09:37:56 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -191,7 +191,7 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 .include "../../graphics/cairo/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
-BUILDLINK_API_DEPENDS.rust+=	rust>=1.20.0
+BUILDLINK_API_DEPENDS.rust+=	rust>=1.23.0
 BUILDLINK_DEPMETHOD.rust=	build
 .include "../../lang/rust/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
