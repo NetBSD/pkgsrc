@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.88 2018/01/08 14:04:34 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.89 2018/01/08 14:22:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -151,3 +151,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/llvm to 5.0.1nb1 [jperkin 2018-01-08]
 	Updated lang/guile22 to 2.2.3nb1 [wiz 2018-01-08]
 	Updated www/ikiwiki to 3.20180105 [schmonz 2018-01-08]
+	Added lang/ruby25-base version 2.5.0 [taca 2018-01-08]
+	Added lang/ruby25 version 2.5.0 [taca 2018-01-08]
