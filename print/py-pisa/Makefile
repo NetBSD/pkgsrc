@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2017/09/30 07:52:18 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2018/01/08 22:11:06 joerg Exp $
 
 DISTNAME=	pisa-3.0.33
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc print www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pisa/}
 
@@ -19,10 +19,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not ported as of 3.0.33
 
 # remove CRs: fixes patching on Darwin and stops pkglint from complaining
 pre-patch:
-.for f in css.py cssDOMElementInterface.py
-	${TR} -d '\r' < ${WRKSRC}/sx/w3c/${f} > ${WRKSRC}/sx/w3c/${f}.new
-	${MV} ${WRKSRC}/sx/w3c/${f}.new ${WRKSRC}/sx/w3c/${f}
-.endfor
+	cd ${WRKSRC} && for f in sx/*/*.py; do \
+		${TR} -d '\r' < $$f > $${f}.new && ${MV} $${f}.new $$f; \
+	done
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
