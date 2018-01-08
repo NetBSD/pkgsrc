@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.80 2018/01/07 18:14:16 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.81 2018/01/08 01:23:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -127,9 +127,9 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/pkglint to 5.4.25 [rillig 2018-01-07]
 	Updated devel/p5-Tree-Simple to 1.33 [wen 2018-01-07]
 	Updated textproc/p5-Text-Xslate to 3.5.5 [wen 2018-01-07]
-	Updated cad/gerbv to 2.6.2 [wen 2018-01-08]
-	Updated editors/nano to 2.9.2 [wen 2018-01-08]
-	Updated math/R-sp to 1.2.6 [wen 2018-01-08]
+	Updated cad/gerbv to 2.6.2 [wen 2018-01-07]
+	Updated editors/nano to 2.9.2 [wen 2018-01-07]
+	Updated math/R-sp to 1.2.6 [wen 2018-01-07]
 	Updated graphics/girara to 0.2.8 [leot 2018-01-07]
 	Updated print/zathura to 0.3.8 [leot 2018-01-07]
 	Updated graphics/zathura-cb to 0.1.7 [leot 2018-01-07]
@@ -143,3 +143,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/pkglint to 5.4.26 [rillig 2018-01-07]
 	Removed databases/py-bdb-xml [wiz 2018-01-07]
 	Removed databases/bdb-xml [wiz 2018-01-07]
+	Updated devel/p5-Mouse to 2.5.1 [wen 2018-01-08]
