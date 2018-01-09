@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2017/10/24 07:42:12 adam Exp $
+$NetBSD: distinfo,v 1.26 2018/01/09 20:05:45 adam Exp $
 
-SHA1 (Sphinx-1.6.5.tar.gz) = d374d466a6d6b4fcf1df997ae580d66480134ea8
-RMD160 (Sphinx-1.6.5.tar.gz) = c12479cc788f4d39b743a8efb4074d9da42aa5d9
-SHA512 (Sphinx-1.6.5.tar.gz) = c6ba7ba639f9814867d9abaaac48d58daa9d0ea9ceae4495bdbd311856833314eade2d9df7213c0357d5eea53d525c5a1235bc977a07cc7ef82e1ff0ecb51f3d
-Size (Sphinx-1.6.5.tar.gz) = 4680974 bytes
+SHA1 (Sphinx-1.6.6.tar.gz) = ec4e98330a41b3f1c8bd55e28f0d3054f16a2dc8
+RMD160 (Sphinx-1.6.6.tar.gz) = ef2062a1b736391d437e33356c7af3daba4f9210
+SHA512 (Sphinx-1.6.6.tar.gz) = 5f6a88805b2a032302c70ef59f4ed65fc149feef94ed303d579af67de7297ebd6867481d966d668f5ab00a30238bbfbc09d715582fd74993af230c8e5eede30f
+Size (Sphinx-1.6.6.tar.gz) = 4686465 bytes
