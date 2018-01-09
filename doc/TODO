@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17996 2018/01/08 14:23:01 taca Exp $
+$NetBSD: TODO,v 1.17997 2018/01/09 15:35:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -341,7 +341,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
-	o ImageMagick-7.0.7.21
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o Mesa-17.3.1
@@ -472,7 +471,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-3.14.0
+	o calibre-3.15.0
 	o calibre-3.7 [wip]
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -957,6 +956,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libflash-0.4.13
 	o libfolks-0.10.1 [wip]
 	o libgdiplus-4.2
+	o libgee-0.20.0
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
@@ -1050,6 +1050,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mg-20160118
 	o mgetty+sendfax-1.1.35
 	o micro_httpd-20140814
+	o miller-5.3.0
 	o milter-greylist-4.6
 	o milter-regex-2.0
 	o mime-construct-1.11
@@ -1183,6 +1184,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o phpmyadmin-4.7.0
 	o phraseanet-3.8.6
 	o phraseanet-indexer-3.8.6
+	o picocom-3.0
 	o picp-0.6.8
 	o picprg-3.01
 	o pidgin-icb-20100207
@@ -1231,7 +1233,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-Unidecode-1.0.22
 	o py-augeas-1.0.3
-	o py-borg-1.1.4
 	o py-cassa-1.11.0
 	o py-cssselect2-0.2.1
 	o py-django-2.0
@@ -1266,6 +1267,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-spf-2.0.12t
 	o py-suds-0.4.1
 	o py-sybase-0.37
+	o py-tornado-4.5.3
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1514,7 +1516,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o whohas-0.29.1
 	o whowatch-1.8.5
 	o windowlab-1.40
-	o wine-2.0.3
+	o wine-2.0.4
 	o wine-devel-2.22
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
