@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.95 2018/01/09 05:26:34 adam Exp $
+$NetBSD: CHANGES-2018,v 1.96 2018/01/09 06:31:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -160,3 +160,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added net/py-gsutil version 4.28 [bsiegert 2018-01-08]
 	Updated devel/py-msgpack to 0.5.0 [adam 2018-01-09]
 	Updated misc/py-stdnum to 1.8.1 [adam 2018-01-09]
+	Updated net/p5-WebService-MusicBrainz to 1.0.3 [wiz 2018-01-09]
