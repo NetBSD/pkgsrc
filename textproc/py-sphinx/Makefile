@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2017/11/16 07:46:12 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2018/01/09 20:05:45 adam Exp $
 
-DISTNAME=	Sphinx-1.6.5
+DISTNAME=	Sphinx-1.6.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
@@ -11,17 +11,17 @@ COMMENT=	Python documentation generator
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-alabaster>=0.7:../../textproc/py-alabaster
-DEPENDS+=	${PYPKGPREFIX}-babel-[0-9]*:../../devel/py-babel
+DEPENDS+=	${PYPKGPREFIX}-babel>=1.3:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.8.1:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-imagesize-[0-9]*:../../graphics/py-imagesize
-DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.2:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-pygments>=0.8:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.3:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-pygments>=2.0:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-snowballstemmer-[0-9]*:../../textproc/py-snowballstemmer
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.0.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-snowballstemmer>=1.1:../../textproc/py-snowballstemmer
 DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-websupport-[0-9]*:../../textproc/py-sphinxcontrib-websupport
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-six>=1.5:../../lang/py-six
 
 .include "../../lang/python/pyversion.mk"
 .if "${PYPKGPREFIX}" == "py27" || "${PYPKGPREFIX}" == "py34"
