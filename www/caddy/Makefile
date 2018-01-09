@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2017/09/04 17:56:18 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2018/01/09 20:55:12 bsiegert Exp $
 
 DISTNAME=	caddy-${GITHUB_TAG:S/v//}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mholt/}
-GITHUB_TAG=	v0.10.7
+GITHUB_TAG=	v0.10.10
 
 MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_GITHUB:=mholt/caddy/}
@@ -22,9 +22,6 @@ INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/bin/caddy ${DESTDIR}${PREFIX}/bin
-
-.include "../../net/go-net/buildlink3.mk"
-.include "../../security/go-crypto/buildlink3.mk"
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
