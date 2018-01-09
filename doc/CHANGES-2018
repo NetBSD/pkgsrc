@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.97 2018/01/09 13:18:25 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.98 2018/01/09 15:13:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -162,3 +162,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/py-stdnum to 1.8.1 [adam 2018-01-09]
 	Updated net/p5-WebService-MusicBrainz to 1.0.3 [wiz 2018-01-09]
 	Added devel/py-pygit2 version 0.26.3 [fhajny 2018-01-09]
+	Updated net/tor to 0.3.2.9 [wiz 2018-01-09]
