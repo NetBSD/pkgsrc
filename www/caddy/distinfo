@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/09/04 17:56:18 bsiegert Exp $
+$NetBSD: distinfo,v 1.3 2018/01/09 20:55:12 bsiegert Exp $
 
-SHA1 (caddy-0.10.7.tar.gz) = 4825e9811bf2254c57873f211b72e1552291bc08
-RMD160 (caddy-0.10.7.tar.gz) = 4a098f1122b15e4f7dda917b91b4f773731f7e15
-SHA512 (caddy-0.10.7.tar.gz) = ef580c3e5e04cb42a05aef037e70b670abcb484fa9b82f2fb84a0bbdb059af7c5cdb99349f6d728e43ce2562c1f8eccf16e00d7552e45dce52c75ef1c62dad16
-Size (caddy-0.10.7.tar.gz) = 2680089 bytes
+SHA1 (caddy-0.10.10.tar.gz) = 4a1e94085150657ba1961b69a96ad78ef0f2d8ac
+RMD160 (caddy-0.10.10.tar.gz) = 7dfc270c990d32caff02351bdd2cef1260e19704
+SHA512 (caddy-0.10.10.tar.gz) = 78152e01739ffbe6d36f5d10cab92ad0d112242d679064199c271c20fd22c24f8d51ed884ddef6d80291d15d41d4620d6431e9a6fb0e8c0eab66cc50d57d5b0d
+Size (caddy-0.10.10.tar.gz) = 2706112 bytes
