@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.179 2018/01/10 22:57:25 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.180 2018/01/10 23:07:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -249,3 +249,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed print/diffpdf [wiz 2018-01-10]
 	Updated lang/vala to 0.38.4 [wiz 2018-01-10]
 	Updated textproc/gtk-doc to 1.27 [wiz 2018-01-10]
+	Updated databases/unixodbc to 2.3.5 [wiz 2018-01-10]
