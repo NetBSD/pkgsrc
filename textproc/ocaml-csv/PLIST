@@ -1,5 +1,24 @@
-@comment $NetBSD: PLIST,v 1.4 2017/10/10 09:47:25 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/01/10 16:46:03 jaapb Exp $
 bin/csvtool
+${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/META
+${PLIST.lwt}${PLIST.ocaml-opt}${OCAML_SITELIB}/csv-lwt/csv_lwt.a
+${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_lwt.cma
+${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_lwt.cmi
+${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_lwt.cmt
+${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_lwt.cmti
+${PLIST.lwt}${PLIST.ocaml-opt}${OCAML_SITELIB}/csv-lwt/csv_lwt.cmx
+${PLIST.lwt}${PLIST.ocaml-opt}${OCAML_SITELIB}/csv-lwt/csv_lwt.cmxa
+${PLIST.lwt}${PLIST.ocaml-opt}${OCAML_SITELIB}/csv-lwt/csv_lwt.cmxs
+${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_lwt.mli
+${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_lwt__.cmi
+${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_lwt__.cmt
+${PLIST.lwt}${PLIST.ocaml-opt}${OCAML_SITELIB}/csv-lwt/csv_lwt__.cmx
+${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_lwt__.ml-gen
+${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_lwt__Csv_utils.cmi
+${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_lwt__Csv_utils.cmt
+${PLIST.lwt}${PLIST.ocaml-opt}${OCAML_SITELIB}/csv-lwt/csv_lwt__Csv_utils.cmx
+${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_utils.ml
+${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/opam
 ${OCAML_SITELIB}/csv/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/csv/csv.a
 ${OCAML_SITELIB}/csv/csv.cma
@@ -23,6 +42,9 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/csv/csv__Csv_utils.cmx
 ${OCAML_SITELIB}/csv/csv_row.ml
 ${OCAML_SITELIB}/csv/csv_utils.ml
 ${OCAML_SITELIB}/csv/opam
+${PLIST.lwt}share/doc/csv-lwt/CHANGES.md
+${PLIST.lwt}share/doc/csv-lwt/LICENSE.md
+${PLIST.lwt}share/doc/csv-lwt/README.md
 share/doc/csv/CHANGES.md
 share/doc/csv/LICENSE.md
 share/doc/csv/README.md
