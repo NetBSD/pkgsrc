@@ -256,9 +256,11 @@ func dirglob(dirname string) []string {
 	if err != nil {
 		return nil
 	}
-	fnames := make([]string, len(fis))
-	for i, fi := range fis {
-		fnames[i] = dirname + "/" + fi.Name()
+	var fnames []string
+	for _, fi := range fis {
+		if !(isIgnoredFilename(fi.Name())) {
+			fnames = append(fnames, dirname+"/"+fi.Name())
+		}
 	}
 	return fnames
 }
