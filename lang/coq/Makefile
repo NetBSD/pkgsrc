@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.103 2017/11/30 16:45:28 adam Exp $
+# $NetBSD: Makefile,v 1.104 2018/01/10 16:26:53 jaapb Exp $
 #
 
-DISTNAME=	coq-8.7.0
-PKGREVISION=	2
+DISTNAME=	coq-8.7.1
 CATEGORIES=	lang math
 MASTER_SITES=	http://coq.inria.fr/distrib/V${PKGVERSION_NOREV}/files/
 
@@ -75,7 +74,7 @@ SUBST_MESSAGE.fix-paths=	Remove buildlink references from Coq_config module
 SUBST_FILES.fix-paths=	config/coq_config.ml
 SUBST_SED.fix-paths=	-e "s,${BUILDLINK_DIR},${PREFIX},g"
 
-
 .include "../../lang/camlp5/buildlink3.mk"
+.include "../../math/ocaml-num/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
