@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/09/04 18:08:22 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2018/01/10 09:13:57 adam Exp $
 
-DISTNAME=	wheel-0.29.0
+DISTNAME=	wheel-0.30.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wheel/}
@@ -13,8 +13,7 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/wheel \
-	      ${DESTDIR}${PREFIX}/bin/wheel-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} wheel wheel-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
