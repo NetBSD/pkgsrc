@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.125 2018/01/10 10:06:48 jdolecek Exp $
+$NetBSD: CHANGES-2018,v 1.126 2018/01/10 10:07:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -195,3 +195,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/gtksourceview3 to 3.24.6 [wiz 2018-01-10]
 	Updated net/gupnp-igd to 0.2.5 [wiz 2018-01-10]
 	Updated www/php-apcu to 5.1.9 [jdolecek 2018-01-10]
+	Updated fonts/harfbuzz to 1.7.4 [wiz 2018-01-10]
