@@ -1,8 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2017/09/08 16:50:46 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/01/10 16:33:23 jaapb Exp $
 bin/opam
 bin/opam-installer
+${OCAML_SITELIB}/opam-installer/META
+${OCAML_SITELIB}/opam-installer/opam
 ${OCAML_SITELIB}/opam/META
 ${OCAML_SITELIB}/opam/opam
+share/doc/opam-installer/CHANGES
+share/doc/opam-installer/LICENSE
+share/doc/opam-installer/README.md
 share/doc/opam/CHANGES
 share/doc/opam/LICENSE
 share/doc/opam/README.md
