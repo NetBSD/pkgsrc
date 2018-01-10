@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.151 2018/01/10 15:54:15 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.152 2018/01/10 16:04:04 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -221,3 +221,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/syncthing to 0.14.43 [wiz 2018-01-10]
 	Updated devel/ocaml-optcomp to 1.6nb8 [jaapb 2018-01-10]
 	Updated devel/ocaml-ppx_ast to 0.9.2 [jaapb 2018-01-10]
+	Updated devel/ocaml-ppx_core to 0.9.2 [jaapb 2018-01-10]
