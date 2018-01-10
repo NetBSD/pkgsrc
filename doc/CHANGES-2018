@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.105 2018/01/10 08:37:34 adam Exp $
+$NetBSD: CHANGES-2018,v 1.106 2018/01/10 08:43:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -173,3 +173,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-numpy to 1.14.0 [adam 2018-01-10]
 	Updated www/py-autobahn to 17.10.1 [adam 2018-01-10]
 	Updated www/py-daphne to 1.4.2 [adam 2018-01-10]
+	Updated databases/p5-SQL-Translator to 0.11024 [wiz 2018-01-10]
