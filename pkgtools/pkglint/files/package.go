@@ -15,16 +15,17 @@ const rePkgname = `^([\w\-.+]+)-(\d(?:\w|\.\d)*)$`
 
 // Package contains data for the pkgsrc package that is currently checked.
 type Package struct {
-	Pkgpath              string // e.g. "category/pkgdir"
-	Pkgdir               string // PKGDIR from the package Makefile
-	Filesdir             string // FILESDIR from the package Makefile
-	Patchdir             string // PATCHDIR from the package Makefile
-	DistinfoFile         string // DISTINFO_FILE from the package Makefile
-	EffectivePkgname     string // PKGNAME or DISTNAME from the package Makefile, including nb13
-	EffectivePkgbase     string // The effective PKGNAME without the version
-	EffectivePkgversion  string // The version part of the effective PKGNAME, excluding nb13
-	EffectivePkgnameLine MkLine // The origin of the three effective_* values
-	SeenBsdPrefsMk       bool   // Has bsd.prefs.mk already been included?
+	Pkgpath              string          // e.g. "category/pkgdir"
+	Pkgdir               string          // PKGDIR from the package Makefile
+	Filesdir             string          // FILESDIR from the package Makefile
+	Patchdir             string          // PATCHDIR from the package Makefile
+	DistinfoFile         string          // DISTINFO_FILE from the package Makefile
+	EffectivePkgname     string          // PKGNAME or DISTNAME from the package Makefile, including nb13
+	EffectivePkgbase     string          // The effective PKGNAME without the version
+	EffectivePkgversion  string          // The version part of the effective PKGNAME, excluding nb13
+	EffectivePkgnameLine MkLine          // The origin of the three effective_* values
+	SeenBsdPrefsMk       bool            // Has bsd.prefs.mk already been included?
+	PlistDirs            map[string]bool // Directories mentioned in the PLIST files
 
 	vardef                map[string]MkLine // (varname, varcanon) => line
 	varuse                map[string]MkLine // (varname, varcanon) => line
@@ -41,6 +42,7 @@ type Package struct {
 func NewPackage(pkgpath string) *Package {
 	pkg := &Package{
 		Pkgpath:               pkgpath,
+		PlistDirs:             make(map[string]bool),
 		vardef:                make(map[string]MkLine),
 		varuse:                make(map[string]MkLine),
 		bl3:                   make(map[string]Line),
@@ -178,7 +180,7 @@ func checkdirPackage(pkgpath string) {
 	haveDistinfo := false
 	havePatches := false
 
-	// Determine the used variables before checking any of the Makefile fragments.
+	// Determine the used variables and PLIST directories before checking any of the Makefile fragments.
 	for _, fname := range files {
 		if (hasPrefix(path.Base(fname), "Makefile.") || hasSuffix(fname, ".mk")) &&
 			!matches(fname, `patch-`) &&
@@ -187,6 +189,9 @@ func checkdirPackage(pkgpath string) {
 			if lines, err := readLines(fname, true); err == nil && lines != nil {
 				NewMkLines(lines).DetermineUsedVariables()
 			}
+		}
+		if hasPrefix(path.Base(fname), "PLIST") {
+			pkg.loadPlistDirs(fname)
 		}
 	}
 
@@ -880,6 +885,23 @@ func (pkg *Package) CheckInclude(mkline MkLine, indentation *Indentation) {
 			if other := pkg.conditionalIncludes[includefile]; other != nil {
 				mkline.Warnf("%q is included unconditionally here and conditionally in %s (depending on %s).",
 					cleanpath(includefile), other.ReferenceFrom(mkline.Line), other.ConditionVars())
+			}
+		}
+	}
+}
+
+func (pkg *Package) loadPlistDirs(plistFilename string) {
+	lines, err := readLines(plistFilename, false)
+	if err != nil {
+		return
+	}
+
+	for _, line := range lines {
+		text := line.Text
+		// Keep in sync with PlistChecker.collectFilesAndDirs
+		if !contains(text, "$") && !contains(text, "@") {
+			for dir := path.Dir(text); dir != "."; dir = path.Dir(dir) {
+				pkg.PlistDirs[dir] = true
 			}
 		}
 	}

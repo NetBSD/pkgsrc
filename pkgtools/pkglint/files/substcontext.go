@@ -1,20 +1,54 @@
 package main
 
+import "netbsd.org/pkglint/trace"
+
 // SubstContext records the state of a block of variable assignments
 // that make up a SUBST class (see `mk/subst.mk`).
 type SubstContext struct {
-	id        string
-	stage     string
-	message   string
-	files     []string
-	sed       []string
-	vars      []string
-	filterCmd string
+	id            string
+	stage         string
+	message       string
+	curr          *SubstContextStats
+	inAllBranches SubstContextStats
+	filterCmd     string
+}
+
+func NewSubstContext() *SubstContext {
+	return &SubstContext{curr: &SubstContextStats{}}
+}
+
+type SubstContextStats struct {
+	seenFiles     bool
+	seenSed       bool
+	seenVars      bool
+	seenTransform bool
+	prev          *SubstContextStats
+}
+
+func (st *SubstContextStats) Copy() *SubstContextStats {
+	return &SubstContextStats{st.seenFiles, st.seenSed, st.seenVars, st.seenTransform, st}
+}
+
+func (st *SubstContextStats) And(other *SubstContextStats) {
+	st.seenFiles = st.seenFiles && other.seenFiles
+	st.seenSed = st.seenSed && other.seenSed
+	st.seenVars = st.seenVars && other.seenVars
+	st.seenTransform = st.seenTransform && other.seenTransform
+}
+
+func (st *SubstContextStats) Or(other SubstContextStats) {
+	st.seenFiles = st.seenFiles || other.seenFiles
+	st.seenSed = st.seenSed || other.seenSed
+	st.seenVars = st.seenVars || other.seenVars
+	st.seenTransform = st.seenTransform || other.seenTransform
 }
 
 func (ctx *SubstContext) Varassign(mkline MkLine) {
 	if !G.opts.WarnExtra {
 		return
+	}
+	if trace.Tracing {
+		trace.Stepf("SubstContext.Varassign %#v %v#", ctx.curr, ctx.inAllBranches)
 	}
 
 	varname := mkline.Varname()
@@ -62,27 +96,59 @@ func (ctx *SubstContext) Varassign(mkline MkLine) {
 
 	switch varbase {
 	case "SUBST_STAGE":
-		ctx.dup(mkline, &ctx.stage, varname, value)
+		ctx.dupString(mkline, &ctx.stage, varname, value)
 	case "SUBST_MESSAGE":
-		ctx.dup(mkline, &ctx.message, varname, value)
+		ctx.dupString(mkline, &ctx.message, varname, value)
 	case "SUBST_FILES":
-		ctx.duplist(mkline, &ctx.files, varname, op, value)
+		ctx.dupBool(mkline, &ctx.curr.seenFiles, varname, op, value)
 	case "SUBST_SED":
-		ctx.duplist(mkline, &ctx.sed, varname, op, value)
-	case "SUBST_FILTER_CMD":
-		ctx.dup(mkline, &ctx.filterCmd, varname, value)
+		ctx.dupBool(mkline, &ctx.curr.seenSed, varname, op, value)
+		ctx.curr.seenTransform = true
 	case "SUBST_VARS":
-		ctx.duplist(mkline, &ctx.vars, varname, op, value)
+		ctx.dupBool(mkline, &ctx.curr.seenVars, varname, op, value)
+		ctx.curr.seenTransform = true
+	case "SUBST_FILTER_CMD":
+		ctx.dupString(mkline, &ctx.filterCmd, varname, value)
+		ctx.curr.seenTransform = true
 	default:
 		mkline.Warnf("Foreign variable %q in SUBST block.", varname)
+	}
+}
+
+func (ctx *SubstContext) Conditional(mkline MkLine) {
+	if ctx.id == "" || !G.opts.WarnExtra {
+		return
+	}
+
+	if trace.Tracing {
+		trace.Stepf("+ SubstContext.Conditional %#v %v#", ctx.curr, ctx.inAllBranches)
+	}
+	dir := mkline.Directive()
+	if dir == "if" {
+		ctx.inAllBranches = SubstContextStats{true, true, true, true, nil}
+	}
+	if dir == "elif" || dir == "else" || dir == "endif" {
+		if ctx.curr.prev != nil { // Don't crash on malformed input
+			ctx.inAllBranches.And(ctx.curr)
+			ctx.curr = ctx.curr.prev
+		}
+	}
+	if dir == "if" || dir == "elif" || dir == "else" {
+		ctx.curr = ctx.curr.Copy()
+	}
+	if dir == "endif" {
+		ctx.curr.Or(ctx.inAllBranches)
+	}
+	if trace.Tracing {
+		trace.Stepf("- SubstContext.Conditional %#v %v#", ctx.curr, ctx.inAllBranches)
 	}
 }
 
 func (ctx *SubstContext) IsComplete() bool {
 	return ctx.id != "" &&
 		ctx.stage != "" &&
-		len(ctx.files) != 0 &&
-		(len(ctx.sed) != 0 || len(ctx.vars) != 0 || ctx.filterCmd != "")
+		ctx.curr.seenFiles &&
+		ctx.curr.seenTransform
 }
 
 func (ctx *SubstContext) Finish(mkline MkLine) {
@@ -92,19 +158,17 @@ func (ctx *SubstContext) Finish(mkline MkLine) {
 	if ctx.stage == "" {
 		mkline.Warnf("Incomplete SUBST block: %s missing.", ctx.varname("SUBST_STAGE"))
 	}
-	if len(ctx.files) == 0 {
+	if !ctx.curr.seenFiles {
 		mkline.Warnf("Incomplete SUBST block: %s missing.", ctx.varname("SUBST_FILES"))
 	}
-	if len(ctx.sed) == 0 && len(ctx.vars) == 0 && ctx.filterCmd == "" {
+	if !ctx.curr.seenTransform {
 		mkline.Warnf("Incomplete SUBST block: %s, %s or %s missing.",
 			ctx.varname("SUBST_SED"), ctx.varname("SUBST_VARS"), ctx.varname("SUBST_FILTER_CMD"))
 	}
 	ctx.id = ""
 	ctx.stage = ""
 	ctx.message = ""
-	ctx.files = nil
-	ctx.sed = nil
-	ctx.vars = nil
+	ctx.curr = &SubstContextStats{}
 	ctx.filterCmd = ""
 }
 
@@ -116,16 +180,16 @@ func (ctx *SubstContext) varname(varbase string) string {
 	}
 }
 
-func (ctx *SubstContext) dup(mkline MkLine, pstr *string, varname, value string) {
+func (ctx *SubstContext) dupString(mkline MkLine, pstr *string, varname, value string) {
 	if *pstr != "" {
 		mkline.Warnf("Duplicate definition of %q.", varname)
 	}
 	*pstr = value
 }
 
-func (ctx *SubstContext) duplist(mkline MkLine, plist *[]string, varname string, op MkOperator, value string) {
-	if len(*plist) > 0 && op != opAssignAppend {
+func (ctx *SubstContext) dupBool(mkline MkLine, flag *bool, varname string, op MkOperator, value string) {
+	if *flag && op != opAssignAppend {
 		mkline.Warnf("All but the first %q lines should use the \"+=\" operator.", varname)
 	}
-	*plist = append(*plist, value)
+	*flag = true
 }

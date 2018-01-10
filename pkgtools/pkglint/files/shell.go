@@ -628,18 +628,28 @@ func (scc *SimpleCommandChecker) checkAutoMkdirs() {
 	for _, arg := range scc.strcmd.Args {
 		if !contains(arg, "$$") && !matches(arg, `\$\{[_.]*[a-z]`) {
 			if m, dirname := match1(arg, `^(?:\$\{DESTDIR\})?\$\{PREFIX(?:|:Q)\}/(.*)`); m {
-				scc.shline.mkline.Notef("You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= %s\" instead of %q.", dirname, cmdname)
-				Explain(
-					"Many packages include a list of all needed directories in their",
-					"PLIST file.  In such a case, you can just set AUTO_MKDIRS=yes and",
-					"be done.  The pkgsrc infrastructure will then create all directories",
-					"in advance.",
-					"",
-					"To create directories that are not mentioned in the PLIST file, it",
-					"is easier to just list them in INSTALLATION_DIRS than to execute the",
-					"commands explicitly.  That way, you don't have to think about which",
-					"of the many INSTALL_*_DIR variables is appropriate, since",
-					"INSTALLATION_DIRS takes care of that.")
+				if G.Pkg != nil && G.Pkg.PlistDirs[dirname] {
+					scc.shline.mkline.Notef("You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= %s\" instead of %q.", dirname, cmdname)
+					Explain(
+						"Many packages include a list of all needed directories in their",
+						"PLIST file.  In such a case, you can just set AUTO_MKDIRS=yes and",
+						"be done.  The pkgsrc infrastructure will then create all directories",
+						"in advance.",
+						"",
+						"To create directories that are not mentioned in the PLIST file, it",
+						"is easier to just list them in INSTALLATION_DIRS than to execute the",
+						"commands explicitly.  That way, you don't have to think about which",
+						"of the many INSTALL_*_DIR variables is appropriate, since",
+						"INSTALLATION_DIRS takes care of that.")
+				} else {
+					scc.shline.mkline.Notef("You can use \"INSTALLATION_DIRS+= %s\" instead of %q.", dirname, cmdname)
+					Explain(
+						"To create directories during installation, it is easier to just",
+						"list them in INSTALLATION_DIRS than to execute the commands",
+						"explicitly.  That way, you don't have to think about which",
+						"of the many INSTALL_*_DIR variables is appropriate, since",
+						"INSTALLATION_DIRS takes care of that.")
+				}
 			}
 		}
 	}
