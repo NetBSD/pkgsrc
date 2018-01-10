@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.167 2018/01/10 16:35:01 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.168 2018/01/10 16:37:58 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -237,3 +237,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/dose3 to 5.0.1nb2 [jaapb 2018-01-10]
 	Updated misc/ocaml-opam to 2.0.0_beta5 [jaapb 2018-01-10]
 	Updated misc/ocaml-topkg to 0.9.1 [jaapb 2018-01-10]
+	Updated net/ocamlnet to 4.1.5 [jaapb 2018-01-10]
