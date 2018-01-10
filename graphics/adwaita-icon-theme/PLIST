@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/10/02 14:23:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/01/10 09:13:49 wiz Exp $
 share/icons/Adwaita/16x16/actions/action-unavailable-symbolic.symbolic.png
 share/icons/Adwaita/16x16/actions/address-book-new-symbolic.symbolic.png
 share/icons/Adwaita/16x16/actions/address-book-new.png
@@ -3949,7 +3949,6 @@ share/icons/Adwaita/512x512/emblems/emblem-package.png
 share/icons/Adwaita/512x512/emblems/emblem-readonly.png
 share/icons/Adwaita/512x512/emblems/emblem-shared.png
 share/icons/Adwaita/512x512/emblems/emblem-symbolic-link.png
-share/icons/Adwaita/512x512/emblems/emblem-synchronizing.png
 share/icons/Adwaita/512x512/emblems/emblem-unreadable.png
 share/icons/Adwaita/512x512/mimetypes/application-x-executable.png
 share/icons/Adwaita/512x512/mimetypes/audio-x-generic.png
