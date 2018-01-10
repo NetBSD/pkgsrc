@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2017/09/16 08:50:30 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/01/10 08:32:33 adam Exp $
 
-DISTNAME=	autobahn-17.9.2
+DISTNAME=	autobahn-17.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/autobahn/}
@@ -12,8 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-txaio>=2.7.0:../../devel/py-txaio
-
-# actually TEST_DEPENDS
+# TEST_DEPENDS
 BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 BUILD_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
