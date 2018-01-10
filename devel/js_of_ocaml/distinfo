@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2017/09/08 13:19:34 jaapb Exp $
+$NetBSD: distinfo,v 1.13 2018/01/10 14:37:29 jaapb Exp $
 
 SHA1 (js_of_ocaml-3.0.0.tar.gz) = fe20efe864b2e52303ff71073b782ce203cae999
 RMD160 (js_of_ocaml-3.0.0.tar.gz) = 8863a224b6211a23d77d8c73a9461966779e65ce
@@ -6,3 +6,4 @@ SHA512 (js_of_ocaml-3.0.0.tar.gz) = dc4bbbfdacb43338aa7f97b7012b6de8a2eac5d7c5f5
 Size (js_of_ocaml-3.0.0.tar.gz) = 1433377 bytes
 SHA1 (patch-lib_generate_stubs.sh) = 120c972aa6aa30bd778134ce88d275e98067f4ca
 SHA1 (patch-lib_lwt_log_jbuild) = 414e17fc6ee78db2ec87e244259b939009b04336
+SHA1 (patch-ppx_ppx__deriving__json_lib_ppx__deriving__json.cppo.ml) = 38ff24c8490fefc97bd447059183a6e110c2b6e0
