@@ -1,0 +1,2 @@
+The legacy Num library for arbitrary-precision integer and rational
+arithmetic that used to be part of the OCaml core distribution.
