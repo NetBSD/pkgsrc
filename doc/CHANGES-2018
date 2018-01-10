@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.102 2018/01/10 00:40:02 rillig Exp $
+$NetBSD: CHANGES-2018,v 1.103 2018/01/10 00:56:44 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -167,3 +167,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/caddy to 0.10.10 [bsiegert 2018-01-09]
 	Updated devel/bzr to 2.6.0nb1 [tez 2018-01-09]
 	Updated pkgtools/pkglint to 5.5 [rillig 2018-01-10]
+	Added sysutils/u-boot-nanopi-neo-plus2 version 2017.11nb1 [jakllsch 2018-01-10]
