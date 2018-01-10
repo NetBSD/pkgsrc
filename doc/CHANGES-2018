@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.149 2018/01/10 15:43:19 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.150 2018/01/10 15:47:42 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -219,3 +219,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ocaml-jbuilder to 1.0_beta16 [jaapb 2018-01-10]
 	Updated devel/ocaml-migrate-parsetree to 1.0.7 [jaapb 2018-01-10]
 	Updated net/syncthing to 0.14.43 [wiz 2018-01-10]
+	Updated devel/ocaml-optcomp to 1.6nb8 [jaapb 2018-01-10]
