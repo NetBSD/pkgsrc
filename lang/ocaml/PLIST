@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.44 2017/10/10 12:10:05 he Exp $
+@comment $NetBSD: PLIST,v 1.45 2018/01/10 14:30:34 jaapb Exp $
 bin/ocaml
 bin/ocamlc
 bin/ocamlc.byte
 ${PLIST.ocaml-opt}bin/ocamlc.opt
+bin/ocamlcmt
 bin/ocamlcp
 bin/ocamlcp.byte
 ${PLIST.ocaml-opt}bin/ocamlcp.opt
@@ -45,11 +46,6 @@ lib/ocaml/arg.ml
 lib/ocaml/arg.mli
 ${PLIST.ocaml-prof}lib/ocaml/arg.p.cmt
 ${PLIST.ocaml-prof}${PLIST.ocaml-opt}lib/ocaml/arg.p.cmx
-${PLIST.ocaml-opt}lib/ocaml/arith_flags.cmx
-lib/ocaml/arith_status.cmi
-lib/ocaml/arith_status.cmti
-${PLIST.ocaml-opt}lib/ocaml/arith_status.cmx
-lib/ocaml/arith_status.mli
 lib/ocaml/array.cmi
 lib/ocaml/array.cmt
 lib/ocaml/array.cmti
@@ -66,10 +62,6 @@ lib/ocaml/arrayLabels.ml
 lib/ocaml/arrayLabels.mli
 ${PLIST.ocaml-prof}lib/ocaml/arrayLabels.p.cmt
 ${PLIST.ocaml-prof}${PLIST.ocaml-opt}lib/ocaml/arrayLabels.p.cmx
-lib/ocaml/big_int.cmi
-lib/ocaml/big_int.cmti
-${PLIST.ocaml-opt}lib/ocaml/big_int.cmx
-lib/ocaml/big_int.mli
 ${PLIST.ocaml-opt}lib/ocaml/bigarray.a
 lib/ocaml/bigarray.cma
 lib/ocaml/bigarray.cmi
@@ -142,6 +134,7 @@ lib/ocaml/caml/interp.h
 lib/ocaml/caml/intext.h
 lib/ocaml/caml/io.h
 lib/ocaml/caml/jumptbl.h
+lib/ocaml/caml/m.h
 lib/ocaml/caml/major_gc.h
 lib/ocaml/caml/md5.h
 lib/ocaml/caml/memory.h
@@ -153,6 +146,7 @@ lib/ocaml/caml/prims.h
 lib/ocaml/caml/printexc.h
 lib/ocaml/caml/reverse.h
 lib/ocaml/caml/roots.h
+lib/ocaml/caml/s.h
 lib/ocaml/caml/signals.h
 lib/ocaml/caml/signals_machdep.h
 lib/ocaml/caml/socketaddr.h
@@ -169,6 +163,13 @@ lib/ocaml/caml/version.h
 lib/ocaml/caml/weak.h
 lib/ocaml/camlheader
 lib/ocaml/camlheader_ur
+lib/ocaml/camlinternalBigarray.cmi
+lib/ocaml/camlinternalBigarray.cmt
+${PLIST.ocaml-opt}lib/ocaml/camlinternalBigarray.cmx
+lib/ocaml/camlinternalBigarray.ml
+${PLIST.ocaml-prof}lib/ocaml/camlinternalBigarray.p.cmi
+${PLIST.ocaml-prof}lib/ocaml/camlinternalBigarray.p.cmt
+${PLIST.ocaml-prof}${PLIST.ocaml-opt}lib/ocaml/camlinternalBigarray.p.cmx
 lib/ocaml/camlinternalFormat.cmi
 lib/ocaml/camlinternalFormat.cmt
 lib/ocaml/camlinternalFormat.cmti
@@ -677,6 +678,11 @@ lib/ocaml/compiler-libs/interf.cmt
 lib/ocaml/compiler-libs/interf.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/interf.cmx
 lib/ocaml/compiler-libs/interf.mli
+lib/ocaml/compiler-libs/interval.cmi
+lib/ocaml/compiler-libs/interval.cmt
+lib/ocaml/compiler-libs/interval.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/interval.cmx
+lib/ocaml/compiler-libs/interval.mli
 lib/ocaml/compiler-libs/invariant_params.cmi
 lib/ocaml/compiler-libs/invariant_params.cmt
 lib/ocaml/compiler-libs/invariant_params.cmti
@@ -712,6 +718,11 @@ lib/ocaml/compiler-libs/linkage_name.cmi
 lib/ocaml/compiler-libs/linkage_name.cmt
 lib/ocaml/compiler-libs/linkage_name.cmti
 lib/ocaml/compiler-libs/linkage_name.mli
+lib/ocaml/compiler-libs/linscan.cmi
+lib/ocaml/compiler-libs/linscan.cmt
+lib/ocaml/compiler-libs/linscan.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/linscan.cmx
+lib/ocaml/compiler-libs/linscan.mli
 lib/ocaml/compiler-libs/liveness.cmi
 lib/ocaml/compiler-libs/liveness.cmt
 lib/ocaml/compiler-libs/liveness.cmti
@@ -744,6 +755,11 @@ lib/ocaml/compiler-libs/main_args.cmt
 lib/ocaml/compiler-libs/main_args.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/main_args.cmx
 lib/ocaml/compiler-libs/main_args.mli
+lib/ocaml/compiler-libs/makedepend.cmi
+lib/ocaml/compiler-libs/makedepend.cmt
+lib/ocaml/compiler-libs/makedepend.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/makedepend.cmx
+lib/ocaml/compiler-libs/makedepend.mli
 lib/ocaml/compiler-libs/matching.cmi
 lib/ocaml/compiler-libs/matching.cmt
 lib/ocaml/compiler-libs/matching.cmti
@@ -818,6 +834,10 @@ lib/ocaml/compiler-libs/opttopmain.mli
 lib/ocaml/compiler-libs/outcometree.cmi
 lib/ocaml/compiler-libs/outcometree.cmti
 lib/ocaml/compiler-libs/outcometree.mli
+lib/ocaml/compiler-libs/parameter.cmi
+lib/ocaml/compiler-libs/parameter.cmt
+lib/ocaml/compiler-libs/parameter.cmti
+lib/ocaml/compiler-libs/parameter.mli
 lib/ocaml/compiler-libs/parmatch.cmi
 lib/ocaml/compiler-libs/parmatch.cmt
 lib/ocaml/compiler-libs/parmatch.cmti
@@ -915,6 +935,11 @@ lib/ocaml/compiler-libs/proc.cmt
 lib/ocaml/compiler-libs/proc.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/proc.cmx
 lib/ocaml/compiler-libs/proc.mli
+lib/ocaml/compiler-libs/profile.cmi
+lib/ocaml/compiler-libs/profile.cmt
+lib/ocaml/compiler-libs/profile.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/profile.cmx
+lib/ocaml/compiler-libs/profile.mli
 lib/ocaml/compiler-libs/projection.cmi
 lib/ocaml/compiler-libs/projection.cmt
 lib/ocaml/compiler-libs/projection.cmti
@@ -1102,11 +1127,6 @@ lib/ocaml/compiler-libs/terminfo.cmt
 lib/ocaml/compiler-libs/terminfo.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/terminfo.cmx
 lib/ocaml/compiler-libs/terminfo.mli
-lib/ocaml/compiler-libs/timings.cmi
-lib/ocaml/compiler-libs/timings.cmt
-lib/ocaml/compiler-libs/timings.cmti
-${PLIST.ocaml-opt}lib/ocaml/compiler-libs/timings.cmx
-lib/ocaml/compiler-libs/timings.mli
 lib/ocaml/compiler-libs/topdirs.cmi
 lib/ocaml/compiler-libs/topdirs.cmt
 lib/ocaml/compiler-libs/topdirs.cmti
@@ -1350,7 +1370,6 @@ lib/ocaml/int64.ml
 lib/ocaml/int64.mli
 ${PLIST.ocaml-prof}lib/ocaml/int64.p.cmt
 ${PLIST.ocaml-prof}${PLIST.ocaml-opt}lib/ocaml/int64.p.cmx
-${PLIST.ocaml-opt}lib/ocaml/int_misc.cmx
 lib/ocaml/lazy.cmi
 lib/ocaml/lazy.cmt
 lib/ocaml/lazy.cmti
@@ -1377,7 +1396,6 @@ ${PLIST.ocaml-opt}lib/ocaml/libcamlrun.a
 ${PLIST.ocaml-opt}lib/ocaml/libcamlrun_pic.a
 lib/ocaml/libcamlrun_shared.so
 ${PLIST.ocaml-opt}lib/ocaml/libcamlstr.a
-${PLIST.ocaml-opt}lib/ocaml/libnums.a
 ${PLIST.ocaml-opt}lib/ocaml/libthreads.a
 ${PLIST.ocaml-opt}lib/ocaml/libthreadsnat.a
 ${PLIST.ocaml-opt}lib/ocaml/libunix.a
@@ -1524,7 +1542,6 @@ lib/ocaml/${PKGMANDIR}/man3/MoreLabels.Set.Make.3
 lib/ocaml/${PKGMANDIR}/man3/MoreLabels.Set.OrderedType.3
 lib/ocaml/${PKGMANDIR}/man3/MoreLabels.Set.S.3
 lib/ocaml/${PKGMANDIR}/man3/Nativeint.3
-lib/ocaml/${PKGMANDIR}/man3/Num.3
 lib/ocaml/${PKGMANDIR}/man3/Obj.3
 lib/ocaml/${PKGMANDIR}/man3/Obj.Ephemeron.3
 lib/ocaml/${PKGMANDIR}/man3/Oo.3
@@ -1595,10 +1612,6 @@ lib/ocaml/moreLabels.mli
 ${PLIST.ocaml-prof}lib/ocaml/moreLabels.p.cmt
 ${PLIST.ocaml-prof}${PLIST.ocaml-opt}lib/ocaml/moreLabels.p.cmx
 lib/ocaml/mutex.mli
-lib/ocaml/nat.cmi
-lib/ocaml/nat.cmti
-${PLIST.ocaml-opt}lib/ocaml/nat.cmx
-lib/ocaml/nat.mli
 lib/ocaml/nativeint.cmi
 lib/ocaml/nativeint.cmt
 lib/ocaml/nativeint.cmti
@@ -1607,14 +1620,6 @@ lib/ocaml/nativeint.ml
 lib/ocaml/nativeint.mli
 ${PLIST.ocaml-prof}lib/ocaml/nativeint.p.cmt
 ${PLIST.ocaml-prof}${PLIST.ocaml-opt}lib/ocaml/nativeint.p.cmx
-lib/ocaml/num.cmi
-lib/ocaml/num.cmti
-${PLIST.ocaml-opt}lib/ocaml/num.cmx
-lib/ocaml/num.mli
-${PLIST.ocaml-opt}lib/ocaml/nums.a
-lib/ocaml/nums.cma
-${PLIST.ocaml-opt}lib/ocaml/nums.cmxa
-${PLIST.ocaml-nat}lib/ocaml/nums.cmxs
 lib/ocaml/obj.cmi
 lib/ocaml/obj.cmt
 lib/ocaml/obj.cmti
@@ -1788,10 +1793,6 @@ lib/ocaml/random.ml
 lib/ocaml/random.mli
 ${PLIST.ocaml-prof}lib/ocaml/random.p.cmt
 ${PLIST.ocaml-prof}${PLIST.ocaml-opt}lib/ocaml/random.p.cmx
-lib/ocaml/ratio.cmi
-lib/ocaml/ratio.cmti
-${PLIST.ocaml-opt}lib/ocaml/ratio.cmx
-lib/ocaml/ratio.mli
 ${PLIST.ocaml-spacetime}${PLIST.ocaml-opt}lib/ocaml/raw_spacetime_lib.a
 ${PLIST.ocaml-spacetime}lib/ocaml/raw_spacetime_lib.cma
 ${PLIST.ocaml-spacetime}lib/ocaml/raw_spacetime_lib.cmi
@@ -1895,7 +1896,6 @@ ${PLIST.ocaml-prof}lib/ocaml/stringLabels.p.cmt
 ${PLIST.ocaml-prof}${PLIST.ocaml-opt}lib/ocaml/stringLabels.p.cmx
 ${PLIST.ocaml-stub}lib/ocaml/stublibs/dllbigarray.so
 ${PLIST.ocaml-stub}lib/ocaml/stublibs/dllcamlstr.so
-${PLIST.ocaml-stub}lib/ocaml/stublibs/dllnums.so
 ${PLIST.ocaml-stub}lib/ocaml/stublibs/dllthreads.so
 ${PLIST.ocaml-stub}lib/ocaml/stublibs/dllunix.so
 ${PLIST.ocaml-stub}lib/ocaml/stublibs/dllvmthreads.so
