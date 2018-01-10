@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2017/12/08 08:52:56 maya Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2018/01/10 22:16:24 wiz Exp $
 
 BUILDLINK_TREE+=	poppler-cpp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	poppler-cpp
 POPPLER_CPP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.poppler-cpp+=	poppler-cpp>=0.16.7
-BUILDLINK_ABI_DEPENDS.poppler-cpp+=	poppler-cpp>=0.61.1nb1
+BUILDLINK_ABI_DEPENDS.poppler-cpp+=	poppler-cpp>=0.62.0
 BUILDLINK_PKGSRCDIR.poppler-cpp?=	../../print/poppler-cpp
 
 .include "../../print/poppler/buildlink3.mk"
