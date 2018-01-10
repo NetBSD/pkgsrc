@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 01:43:50 agc Exp $
+$NetBSD: distinfo,v 1.6 2018/01/10 10:17:05 wiz Exp $
 
-SHA1 (libmspub-0.1.2.tar.xz) = e1bab3a4be9215b69700dcdb81cf27e194097776
-RMD160 (libmspub-0.1.2.tar.xz) = d7b57b74503fab484d694042af109febaec57bb4
-SHA512 (libmspub-0.1.2.tar.xz) = c19025a2b887c33f5966b0972204ab2a8ae841b82df38eaf53c0cdc8f99d93cccab5e1c78143a79d5aef9c7a7387bd6f2cf34833a00861058e0e4687f48be714
-Size (libmspub-0.1.2.tar.xz) = 345556 bytes
-SHA1 (patch-configure) = 6e06700444a6dbde7a34de9df96b37291a9a6830
-SHA1 (patch-src_lib_MSPUBMetaData.cpp) = bdc6f44f44a2cc059b6918d742d8d184c707571f
+SHA1 (libmspub-0.1.3.tar.xz) = 7bfeb84b75142a180a0ababf946c760e122cd5f4
+RMD160 (libmspub-0.1.3.tar.xz) = 0a5f13ee67c10fced4cb76147faaad245f43624e
+SHA512 (libmspub-0.1.3.tar.xz) = 3d3680a732c84f7817cf079ae458f56e1eac14663014d48c29f54a6b4dfee887c2cc296a6d6e00d2e05329126414e6513cd7d1187c760ce952c72c27a7ccda46
+Size (libmspub-0.1.3.tar.xz) = 377716 bytes
