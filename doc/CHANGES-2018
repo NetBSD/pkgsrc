@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.109 2018/01/10 08:53:07 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.110 2018/01/10 08:54:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -177,3 +177,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Class-Base to 0.09 [wiz 2018-01-10]
 	Updated devel/p5-MetaCPAN-Client to 2.022000 [wiz 2018-01-10]
 	Updated devel/p5-Set-Object to 1.39 [wiz 2018-01-10]
+	Updated math/p5-Spreadsheet-Read to 0.76 [wiz 2018-01-10]
