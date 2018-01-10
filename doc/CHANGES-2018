@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.104 2018/01/10 06:45:26 jklos Exp $
+$NetBSD: CHANGES-2018,v 1.105 2018/01/10 08:37:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -169,3 +169,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/pkglint to 5.5 [rillig 2018-01-10]
 	Added sysutils/u-boot-nanopi-neo-plus2 version 2017.11nb1 [jakllsch 2018-01-10]
 	Updated sysutils/intel-microcode-netbsd to 20180108 [jklos 2018-01-10]
+	Updated fonts/py-fonttools to 3.21.2 [adam 2018-01-10]
+	Updated math/py-numpy to 1.14.0 [adam 2018-01-10]
+	Updated www/py-autobahn to 17.10.1 [adam 2018-01-10]
+	Updated www/py-daphne to 1.4.2 [adam 2018-01-10]
