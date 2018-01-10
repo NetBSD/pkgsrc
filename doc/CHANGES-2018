@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.170 2018/01/10 16:46:15 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.171 2018/01/10 16:48:33 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -240,3 +240,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/ocamlnet to 4.1.5 [jaapb 2018-01-10]
 	Updated security/ocaml-ssl to 0.5.5 [jaapb 2018-01-10]
 	Updated textproc/ocaml-csv to 2.0nb2 [jaapb 2018-01-10]
+	Updated textproc/ocaml-tyxml to 4.1.0nb2 [jaapb 2018-01-10]
