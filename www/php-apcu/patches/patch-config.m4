@@ -1,6 +1,6 @@
-$NetBSD: patch-config.m4,v 1.2 2016/07/26 09:22:40 jdolecek Exp $
+$NetBSD: patch-config.m4,v 1.3 2018/01/10 10:05:17 jdolecek Exp $
 
-Fix bashism
+Fix bashism. Reported upstream as #75791.
 
 --- config.m4.orig	2016-06-07 12:41:02.000000000 +0000
 +++ config.m4
