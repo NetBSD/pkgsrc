@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/09/08 13:02:53 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/10 16:53:09 jaapb Exp $
 
+PKGREVISION= 1
 .include "../../devel/ocaml-lwt/Makefile.common"
 
 PKGNAME=	ocaml-lwt_ssl-1.1.0
