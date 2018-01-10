@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2017/12/08 08:52:58 maya Exp $
+# $NetBSD: Makefile,v 1.19 2018/01/10 22:16:25 wiz Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	atril-${VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	print
 
 COMMENT=	Simple multi-page document viewer for the MATE environment

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2018/01/07 13:04:28 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2018/01/10 22:16:24 wiz Exp $
 
 BUILDLINK_TREE+=	poppler-includes
 
@@ -8,7 +8,7 @@ POPPLER_INCLUDES_BUILDLINK3_MK:=
 BUILDLINK_DEPMETHOD.poppler-includes?=	build
 
 BUILDLINK_API_DEPENDS.poppler-includes+=	poppler-includes>=0.22.2
-BUILDLINK_ABI_DEPENDS.poppler-includes?=	poppler-includes>=0.61.1nb1
+BUILDLINK_ABI_DEPENDS.poppler-includes?=	poppler-includes>=0.62.0
 BUILDLINK_PKGSRCDIR.poppler-includes?=		../../print/poppler-includes
 .endif # POPPLER_INCLUDES_BUILDLINK3_MK
 
