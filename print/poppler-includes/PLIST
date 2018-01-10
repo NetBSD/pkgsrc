@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2017/12/08 07:48:12 spz Exp $
+@comment $NetBSD: PLIST,v 1.15 2018/01/10 22:20:20 wiz Exp $
 include/poppler/Annot.h
 include/poppler/Array.h
 include/poppler/BuiltinFont.h
@@ -68,11 +68,11 @@ include/poppler/StructElement.h
 include/poppler/StructTreeRoot.h
 include/poppler/TextOutputDev.h
 include/poppler/UTF.h
-include/poppler/UTF8.h
 include/poppler/UnicodeCClassTables.h
 include/poppler/UnicodeCompTables.h
 include/poppler/UnicodeDecompTables.h
 include/poppler/UnicodeMap.h
+include/poppler/UnicodeMapFuncs.h
 include/poppler/UnicodeMapTables.h
 include/poppler/UnicodeTypeTable.h
 include/poppler/ViewerPreferences.h
