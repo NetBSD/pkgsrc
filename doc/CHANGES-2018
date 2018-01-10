@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.152 2018/01/10 16:04:04 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.153 2018/01/10 16:05:08 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -222,3 +222,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ocaml-optcomp to 1.6nb8 [jaapb 2018-01-10]
 	Updated devel/ocaml-ppx_ast to 0.9.2 [jaapb 2018-01-10]
 	Updated devel/ocaml-ppx_core to 0.9.2 [jaapb 2018-01-10]
+	Updated devel/ocaml-ppx_deriving to 4.2.1 [jaapb 2018-01-10]
