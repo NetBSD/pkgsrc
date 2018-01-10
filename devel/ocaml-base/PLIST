@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/09/08 16:50:05 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/10 14:41:10 jaapb Exp $
 ${OCAML_SITELIB}/base/META
 ${OCAML_SITELIB}/base/applicative.mli
 ${OCAML_SITELIB}/base/applicative_intf.ml
@@ -25,7 +25,7 @@ ${OCAML_SITELIB}/base/base__Applicative.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__Applicative.cmx
 ${OCAML_SITELIB}/base/base__Applicative_intf.cmi
 ${OCAML_SITELIB}/base/base__Applicative_intf.cmt
-${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__Applicative_intf.cmx
+${OCAML_SITELIB}/base/base__Applicative_intf.cmx
 ${OCAML_SITELIB}/base/base__Array.cmi
 ${OCAML_SITELIB}/base/base__Array.cmt
 ${OCAML_SITELIB}/base/base__Array.cmti
@@ -73,6 +73,16 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__Buffer.cmx
 ${OCAML_SITELIB}/base/base__Buffer_intf.cmi
 ${OCAML_SITELIB}/base/base__Buffer_intf.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__Buffer_intf.cmx
+${OCAML_SITELIB}/base/base__Bytes.cmi
+${OCAML_SITELIB}/base/base__Bytes.cmt
+${OCAML_SITELIB}/base/base__Bytes.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__Bytes.cmx
+${OCAML_SITELIB}/base/base__Bytes0.cmi
+${OCAML_SITELIB}/base/base__Bytes0.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__Bytes0.cmx
+${OCAML_SITELIB}/base/base__Bytes_set_primitives.cmi
+${OCAML_SITELIB}/base/base__Bytes_set_primitives.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__Bytes_set_primitives.cmx
 ${OCAML_SITELIB}/base/base__Char.cmi
 ${OCAML_SITELIB}/base/base__Char.cmt
 ${OCAML_SITELIB}/base/base__Char.cmti
@@ -94,6 +104,9 @@ ${OCAML_SITELIB}/base/base__Comparator.cmi
 ${OCAML_SITELIB}/base/base__Comparator.cmt
 ${OCAML_SITELIB}/base/base__Comparator.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__Comparator.cmx
+${OCAML_SITELIB}/base/base__Comparisons.cmi
+${OCAML_SITELIB}/base/base__Comparisons.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__Comparisons.cmx
 ${OCAML_SITELIB}/base/base__Container.cmi
 ${OCAML_SITELIB}/base/base__Container.cmt
 ${OCAML_SITELIB}/base/base__Container.cmti
@@ -264,6 +277,9 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__List.cmx
 ${OCAML_SITELIB}/base/base__List0.cmi
 ${OCAML_SITELIB}/base/base__List0.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__List0.cmx
+${OCAML_SITELIB}/base/base__List1.cmi
+${OCAML_SITELIB}/base/base__List1.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__List1.cmx
 ${OCAML_SITELIB}/base/base__Map.cmi
 ${OCAML_SITELIB}/base/base__Map.cmt
 ${OCAML_SITELIB}/base/base__Map.cmti
@@ -286,6 +302,10 @@ ${OCAML_SITELIB}/base/base__Nativeint.cmi
 ${OCAML_SITELIB}/base/base__Nativeint.cmt
 ${OCAML_SITELIB}/base/base__Nativeint.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__Nativeint.cmx
+${OCAML_SITELIB}/base/base__Obj_array.cmi
+${OCAML_SITELIB}/base/base__Obj_array.cmt
+${OCAML_SITELIB}/base/base__Obj_array.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__Obj_array.cmx
 ${OCAML_SITELIB}/base/base__Option.cmi
 ${OCAML_SITELIB}/base/base__Option.cmt
 ${OCAML_SITELIB}/base/base__Option.cmti
@@ -309,9 +329,6 @@ ${OCAML_SITELIB}/base/base__Polymorphic_compare.cmi
 ${OCAML_SITELIB}/base/base__Polymorphic_compare.cmt
 ${OCAML_SITELIB}/base/base__Polymorphic_compare.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__Polymorphic_compare.cmx
-${OCAML_SITELIB}/base/base__Polymorphic_compare_intf.cmi
-${OCAML_SITELIB}/base/base__Polymorphic_compare_intf.cmt
-${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__Polymorphic_compare_intf.cmx
 ${OCAML_SITELIB}/base/base__Popcount.cmi
 ${OCAML_SITELIB}/base/base__Popcount.cmt
 ${OCAML_SITELIB}/base/base__Popcount.cmti
@@ -364,6 +381,13 @@ ${OCAML_SITELIB}/base/base__Sexp.cmi
 ${OCAML_SITELIB}/base/base__Sexp.cmt
 ${OCAML_SITELIB}/base/base__Sexp.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__Sexp.cmx
+${OCAML_SITELIB}/base/base__Sexp_conv.cmi
+${OCAML_SITELIB}/base/base__Sexp_conv.cmt
+${OCAML_SITELIB}/base/base__Sexp_conv.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__Sexp_conv.cmx
+${OCAML_SITELIB}/base/base__Sexp_conv_error.cmi
+${OCAML_SITELIB}/base/base__Sexp_conv_error.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__Sexp_conv_error.cmx
 ${OCAML_SITELIB}/base/base__Sexp_with_comparable.cmi
 ${OCAML_SITELIB}/base/base__Sexp_with_comparable.cmt
 ${OCAML_SITELIB}/base/base__Sexp_with_comparable.cmti
@@ -404,9 +428,6 @@ ${OCAML_SITELIB}/base/base__String_dict.cmi
 ${OCAML_SITELIB}/base/base__String_dict.cmt
 ${OCAML_SITELIB}/base/base__String_dict.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__String_dict.cmx
-${OCAML_SITELIB}/base/base__String_set_primitives.cmi
-${OCAML_SITELIB}/base/base__String_set_primitives.cmt
-${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__String_set_primitives.cmx
 ${OCAML_SITELIB}/base/base__Stringable.cmi
 ${OCAML_SITELIB}/base/base__Stringable.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base/base__Stringable.cmx
@@ -462,6 +483,9 @@ ${OCAML_SITELIB}/base/blit_intf.ml
 ${OCAML_SITELIB}/base/bool.mli
 ${OCAML_SITELIB}/base/buffer.mli
 ${OCAML_SITELIB}/base/buffer_intf.ml
+${OCAML_SITELIB}/base/bytes.mli
+${OCAML_SITELIB}/base/bytes0.ml
+${OCAML_SITELIB}/base/bytes_set_primitives.ml
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base/caml/caml.a
 ${OCAML_SITELIB}/base/caml/caml.cma
 ${OCAML_SITELIB}/base/caml/caml.cmi
@@ -476,6 +500,7 @@ ${OCAML_SITELIB}/base/commutative_group.ml
 ${OCAML_SITELIB}/base/comparable.mli
 ${OCAML_SITELIB}/base/comparable_intf.ml
 ${OCAML_SITELIB}/base/comparator.mli
+${OCAML_SITELIB}/base/comparisons.ml
 ${OCAML_SITELIB}/base/container.mli
 ${OCAML_SITELIB}/base/container_intf.ml
 ${OCAML_SITELIB}/base/either.mli
@@ -526,12 +551,23 @@ ${OCAML_SITELIB}/base/linked_queue.mli
 ${OCAML_SITELIB}/base/linked_queue0.ml
 ${OCAML_SITELIB}/base/list.mli
 ${OCAML_SITELIB}/base/list0.ml
+${OCAML_SITELIB}/base/list1.ml
 ${OCAML_SITELIB}/base/map.mli
 ${OCAML_SITELIB}/base/map_intf.ml
 ${OCAML_SITELIB}/base/maybe_bound.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base/md5/md5_lib.a
+${OCAML_SITELIB}/base/md5/md5_lib.cma
+${OCAML_SITELIB}/base/md5/md5_lib.cmi
+${OCAML_SITELIB}/base/md5/md5_lib.cmt
+${OCAML_SITELIB}/base/md5/md5_lib.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base/md5/md5_lib.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base/md5/md5_lib.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base/md5/md5_lib.cmxs
+${OCAML_SITELIB}/base/md5/md5_lib.mli
 ${OCAML_SITELIB}/base/monad.mli
 ${OCAML_SITELIB}/base/monad_intf.ml
 ${OCAML_SITELIB}/base/nativeint.mli
+${OCAML_SITELIB}/base/obj_array.mli
 ${OCAML_SITELIB}/base/opam
 ${OCAML_SITELIB}/base/option.mli
 ${OCAML_SITELIB}/base/or_error.mli
@@ -539,7 +575,6 @@ ${OCAML_SITELIB}/base/ordered_collection_common.mli
 ${OCAML_SITELIB}/base/ordering.mli
 ${OCAML_SITELIB}/base/poly.ml
 ${OCAML_SITELIB}/base/polymorphic_compare.mli
-${OCAML_SITELIB}/base/polymorphic_compare_intf.ml
 ${OCAML_SITELIB}/base/popcount.mli
 ${OCAML_SITELIB}/base/pow_overflow_bounds.ml
 ${OCAML_SITELIB}/base/ppx_compare_lib.mli
@@ -555,6 +590,8 @@ ${OCAML_SITELIB}/base/sequence.mli
 ${OCAML_SITELIB}/base/set.mli
 ${OCAML_SITELIB}/base/set_intf.ml
 ${OCAML_SITELIB}/base/sexp.mli
+${OCAML_SITELIB}/base/sexp_conv.mli
+${OCAML_SITELIB}/base/sexp_conv_error.ml
 ${OCAML_SITELIB}/base/sexp_with_comparable.mli
 ${OCAML_SITELIB}/base/sexpable.mli
 ${OCAML_SITELIB}/base/sexplib.ml
@@ -575,7 +612,6 @@ ${OCAML_SITELIB}/base/staged.mli
 ${OCAML_SITELIB}/base/string.mli
 ${OCAML_SITELIB}/base/string0.ml
 ${OCAML_SITELIB}/base/string_dict.mli
-${OCAML_SITELIB}/base/string_set_primitives.ml
 ${OCAML_SITELIB}/base/stringable.ml
 ${OCAML_SITELIB}/base/sys.mli
 ${OCAML_SITELIB}/base/sys0.ml
@@ -590,6 +626,5 @@ ${OCAML_SITELIB}/base/variantslib.ml
 ${OCAML_SITELIB}/base/with_return.mli
 ${OCAML_SITELIB}/base/word_size.mli
 ${OCAML_SITELIB}/stublibs/dllbase_stubs.so
-share/doc/base/CHANGES.md
 share/doc/base/LICENSE.txt
 share/doc/base/README.org
