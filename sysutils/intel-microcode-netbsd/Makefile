@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.16 2017/11/23 08:42:49 jklos Exp $
+# $NetBSD: Makefile,v 1.17 2018/01/10 06:03:57 jklos Exp $
 #
 
-DISTNAME=	microcode-20171117
-PKGNAME=	intel-microcode-netbsd-20171117
+DISTNAME=	microcode-20180108
+PKGNAME=	intel-microcode-netbsd-20180108
 CATEGORIES=	sysutils
-MASTER_SITES=	https://downloadmirror.intel.com/27337/eng/
+MASTER_SITES=	https://downloadmirror.intel.com/27431/eng/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	drochner@NetBSD.org
-HOMEPAGE=	https://downloadcenter.intel.com/download/27337/Linux-Processor-Microcode-Data-File
+HOMEPAGE=	https://downloadcenter.intel.com/download/27431/
 COMMENT=	Firmware updates for Intel x86 processors
 #LICENSE=	# TODO: (see mk/license.mk)
 
