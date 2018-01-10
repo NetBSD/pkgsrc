@@ -1,9 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2017/07/11 10:20:03 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/10 14:48:49 jaapb Exp $
 bin/cppo
+${OCAML_SITELIB}/cppo
 ${OCAML_SITELIB}/cppo_ocamlbuild/META
-${PLIST.ocaml-opt}${OCAML_SITELIB}/cppo_ocamlbuild/ocamlbuild_cppo.a
-${OCAML_SITELIB}/cppo_ocamlbuild/ocamlbuild_cppo.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cppo_ocamlbuild/cppo_ocamlbuild.a
+${OCAML_SITELIB}/cppo_ocamlbuild/cppo_ocamlbuild.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cppo_ocamlbuild/cppo_ocamlbuild.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cppo_ocamlbuild/cppo_ocamlbuild.cmxs
 ${OCAML_SITELIB}/cppo_ocamlbuild/ocamlbuild_cppo.cmi
+${OCAML_SITELIB}/cppo_ocamlbuild/ocamlbuild_cppo.cmt
+${OCAML_SITELIB}/cppo_ocamlbuild/ocamlbuild_cppo.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cppo_ocamlbuild/ocamlbuild_cppo.cmx
-${PLIST.ocaml-opt}${OCAML_SITELIB}/cppo_ocamlbuild/ocamlbuild_cppo.cmxa
-${PLIST.ocaml-opt}${OCAML_SITELIB}/cppo_ocamlbuild/ocamlbuild_cppo.cmxs
+${OCAML_SITELIB}/cppo_ocamlbuild/ocamlbuild_cppo.mli
+${OCAML_SITELIB}/cppo_ocamlbuild/opam
+share/doc/ocaml-cppo/LICENSE.md
+share/doc/ocaml-cppo/README.md
+share/doc/ocaml-cppo_ocamlbuild/LICENSE.md
+share/doc/ocaml-cppo_ocamlbuild/README.md
