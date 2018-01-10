@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2017/10/02 15:46:43 wiz Exp $
+$NetBSD: distinfo,v 1.12 2018/01/10 10:04:35 wiz Exp $
 
-SHA1 (gupnp-igd-0.2.4.tar.xz) = 3a4b2c283d5757cd04594cd827b820fce8c10cfc
-RMD160 (gupnp-igd-0.2.4.tar.xz) = 5ad9970458dab6695006854677256e3c0a5e5794
-SHA512 (gupnp-igd-0.2.4.tar.xz) = 4da8d401935c4237661310aec0acb38e9c9fe54aeb6b2ef1c9533a8576dbd2d9f9db3b50c4e86b7efc81c80059a10ea52f73517dab23f3cdc0f91a5c0944dab8
-Size (gupnp-igd-0.2.4.tar.xz) = 272004 bytes
+SHA1 (gupnp-igd-0.2.5.tar.xz) = 8650df82fff054bc703a0a8662d117761c3b5aea
+RMD160 (gupnp-igd-0.2.5.tar.xz) = 5c4ac056b1ddbcc0a2c831c99d2f9b7d410fc3ba
+SHA512 (gupnp-igd-0.2.5.tar.xz) = 3d2af29d10c2939a81c8745a50d9cc20be53f97a2112cec6e45bf05373d807d86404b61c776fea34b15ac341f9b7bfff2f3c48901dd241e64e18b5bc7e614cc8
+Size (gupnp-igd-0.2.5.tar.xz) = 287964 bytes
