@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2017/09/08 09:51:20 jaapb Exp $
+# $NetBSD: Makefile,v 1.15 2018/01/10 14:44:52 jaapb Exp $
 
-VERSION=	2.7.0
+VERSION=	2.8.0
 GITHUB_PROJECT=	batteries-included
 GITHUB_TAG=	v${VERSION}
 DISTNAME=	batteries-${VERSION}
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml-batteries-team/}
 
@@ -22,4 +21,5 @@ MAKE_ENV=	DESTDIR="${DESTDIR}" PREFIX="${PREFIX}"
 .include "../../mk/ocaml.mk"
 .include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../math/ocaml-num/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
