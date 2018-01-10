@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.115 2018/01/10 09:02:46 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.116 2018/01/10 09:14:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -183,3 +183,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-Mojolicious to 7.60 [wiz 2018-01-10]
 	Updated www/p5-URI to 1.73 [wiz 2018-01-10]
 	Updated textproc/p5-Text-Xslate to 3.5.6 [wiz 2018-01-10]
+	Updated graphics/adwaita-icon-theme to 3.26.1 [wiz 2018-01-10]
