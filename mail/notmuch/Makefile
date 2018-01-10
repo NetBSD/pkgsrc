@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2017/11/23 15:43:15 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2018/01/10 12:17:14 wiz Exp $
 
-DISTNAME=	notmuch-0.25.2
+DISTNAME=	notmuch-0.25.3
 CATEGORIES=	mail
 MASTER_SITES=	https://notmuchmail.org/releases/
 
@@ -37,6 +37,7 @@ SUBST_MESSAGE.sphinx=	Fix sphinx command names.
 LDFLAGS.SunOS+=	-lnsl
 
 .include "../../lang/python/application.mk"
+BUILDLINK_API_DEPENDS.gmime3+=	gmime3>=3.0.3
 .include "../../mail/gmime3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.xapian+=	xapian>=1.2.6
 .include "../../textproc/xapian/buildlink3.mk"
