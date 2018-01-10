@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.162 2018/01/10 16:24:25 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.163 2018/01/10 16:27:05 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -232,3 +232,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/pcre-ocaml to 7.3.4nb1 [jaapb 2018-01-10]
 	Updated lang/camlp4 to 4.06+1 [jaapb 2018-01-10]
 	Updated lang/camlp5 to 7.03 [jaapb 2018-01-10]
+	Updated lang/coq to 8.7.1 [jaapb 2018-01-10]
