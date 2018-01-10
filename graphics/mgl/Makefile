@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2014/05/31 15:56:27 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2018/01/10 00:06:26 rillig Exp $
 #
 
 DISTNAME=	mgl2-alpha-020
@@ -47,9 +47,10 @@ SUBST_VARS.prefix=	PREFIX
 SUBST_CLASSES+=		flex
 SUBST_STAGE.flex=	pre-configure
 SUBST_FILES.flex=	conf/config.mk-netbsd-i386-x
-SUBST_SED.flex=		-e 's,@PATCH_YY_BUF_SIZE_FLAG@,PATCH_YY_BUF_SIZE=y,'
 .if !empty(MACHINE_PLATFORM:MNetBSD-5.99*)
 SUBST_SED.flex=		-e 's,@PATCH_YY_BUF_SIZE_FLAG@,,'
+.else
+SUBST_SED.flex=		-e 's,@PATCH_YY_BUF_SIZE_FLAG@,PATCH_YY_BUF_SIZE=y,'
 .endif
 
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
