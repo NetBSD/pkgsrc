@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.177 2018/01/10 22:30:30 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.178 2018/01/10 22:35:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -247,3 +247,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated editors/texmaker to 4.5nb27 [wiz 2018-01-10]
 	Removed misc/calibre1 [wiz 2018-01-10]
 	Removed print/diffpdf [wiz 2018-01-10]
+	Updated lang/vala to 0.38.4 [wiz 2018-01-10]
