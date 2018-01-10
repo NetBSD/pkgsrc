@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2017/11/24 14:10:25 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2018/01/10 08:50:50 wiz Exp $
 
-DISTNAME=	MetaCPAN-Client-2.021000
+DISTNAME=	MetaCPAN-Client-2.022000
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MI/MICKEY/
