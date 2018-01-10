@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.65 2017/11/30 16:45:26 adam Exp $
+# $NetBSD: Makefile,v 1.66 2018/01/10 09:38:32 wiz Exp $
 
-DISTNAME=	geeqie-1.3
-EXTRACT_SUFX=	.tar.xz
-PKGREVISION=	7
+DISTNAME=	geeqie-1.4
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.geeqie.org/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.geeqie.org/
@@ -22,6 +21,7 @@ USE_TOOLS=		bash:run gmake intltool msgfmt pkg-config automake autoconf autoreco
 REPLACE_BASH=		plugins/rotate/geeqie-rotate
 REPLACE_BASH+=		plugins/ufraw/geeqie-ufraw
 REPLACE_BASH+=		plugins/import/geeqie-import
+REPLACE_BASH+=		gen_changelog.sh
 
 pre-configure:
 	cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh
