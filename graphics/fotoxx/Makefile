@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2017/11/23 17:19:56 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2018/01/10 00:04:29 rillig Exp $
 #
 
 DISTNAME=	fotoxx-16.02.1
@@ -39,7 +39,6 @@ SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		desktop
-SUBST_SED.fix-paths=		-e 's,=/usr,=${PREFIX},g'
 SUBST_SED.fix-paths=		-e 's,=/usr,=${PREFIX},g'
 
 # XXX work around misc/xdg-utils being completely broken
