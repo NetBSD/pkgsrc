@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.135 2018/01/10 12:17:25 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.136 2018/01/10 12:19:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -205,3 +205,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/libxkbcommon to 0.8.0 [wiz 2018-01-10]
 	Updated graphics/librsvg to 2.40.20 [wiz 2018-01-10]
 	Updated mail/notmuch to 0.25.3 [wiz 2018-01-10]
+	Updated archivers/par2 to 0.8.0 [wiz 2018-01-10]
