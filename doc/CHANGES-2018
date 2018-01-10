@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.103 2018/01/10 00:56:44 jakllsch Exp $
+$NetBSD: CHANGES-2018,v 1.104 2018/01/10 06:45:26 jklos Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -168,3 +168,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/bzr to 2.6.0nb1 [tez 2018-01-09]
 	Updated pkgtools/pkglint to 5.5 [rillig 2018-01-10]
 	Added sysutils/u-boot-nanopi-neo-plus2 version 2017.11nb1 [jakllsch 2018-01-10]
+	Updated sysutils/intel-microcode-netbsd to 20180108 [jklos 2018-01-10]
