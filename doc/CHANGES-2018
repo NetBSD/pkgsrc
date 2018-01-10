@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.173 2018/01/10 21:57:10 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.174 2018/01/10 22:01:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -242,5 +242,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/ocaml-csv to 2.0nb2 [jaapb 2018-01-10]
 	Updated textproc/ocaml-tyxml to 4.1.0nb2 [jaapb 2018-01-10]
 	Updated devel/py-mercurial to 4.4.2 [wiz 2018-01-10]
+	Removed print/poppler-qt4 [wiz 2018-01-10]
 	Removed print/poppler-qt4 [wiz 2018-01-10]
 	Updated print/poppler to 0.62.0 [wiz 2018-01-10]
