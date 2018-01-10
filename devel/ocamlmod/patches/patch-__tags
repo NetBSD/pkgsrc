@@ -1,0 +1,30 @@
+$NetBSD: patch-__tags,v 1.1 2018/01/10 16:19:01 jaapb Exp $
+
+Regenerated Oasis files (don't compile with 4.06)
+--- _tags.orig	2015-09-02 21:53:11.000000000 +0000
++++ _tags
+@@ -1,8 +1,9 @@
+ # OASIS_START
+-# DO NOT EDIT (digest: 624081c4aa54babe89f7a49402b5f68d)
++# DO NOT EDIT (digest: 7bfc612a7f85fad7a10e2cc4e4d0a0cc)
+ # Ignore VCS directories, you can use the same kind of rule outside
+ # OASIS_START/STOP if you want to exclude directories that contains
+ # useless stuff for the build process
++true: annot, bin_annot
+ <**/.svn>: -traverse
+ <**/.svn>: not_hygienic
+ ".bzr": -traverse
+@@ -15,10 +16,10 @@
+ "_darcs": not_hygienic
+ # Executable ocamlmod
+ "src/ocamlmod.byte": pkg_str
+-<src/*.ml{,i}>: pkg_str
++<src/*.ml{,i,y}>: pkg_str
+ # Executable test
+ "test/test.byte": pkg_oUnit
+ "test/test.byte": pkg_str
+-<test/*.ml{,i}>: pkg_oUnit
+-<test/*.ml{,i}>: pkg_str
++<test/*.ml{,i,y}>: pkg_oUnit
++<test/*.ml{,i,y}>: pkg_str
+ # OASIS_STOP
