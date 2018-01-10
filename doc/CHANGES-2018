@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.138 2018/01/10 12:30:11 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.139 2018/01/10 14:30:48 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -208,3 +208,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/par2 to 0.8.0 [wiz 2018-01-10]
 	Updated security/pinentry to 1.1.0 [wiz 2018-01-10]
 	Updated security/pinentry-gtk2 to 1.1.0 [wiz 2018-01-10]
+	Updated lang/ocaml to 4.06.0nb1 [jaapb 2018-01-10]
