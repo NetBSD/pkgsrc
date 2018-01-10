@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/09/08 09:51:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2018/01/10 16:10:33 jaapb Exp $
 
-VERSION=	0.9.0
+VERSION=	0.10.0
 GITHUB_PROJECT=	stdio
 GITHUB_TAG=	v${VERSION}
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
@@ -20,4 +20,5 @@ OCAML_USE_JBUILDER=	yes
 
 .include "../../mk/ocaml.mk"
 .include "../../devel/ocaml-base/buildlink3.mk"
+.include "../../devel/ocaml-sexplib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
