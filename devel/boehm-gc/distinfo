@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.57 2016/12/03 03:09:26 marino Exp $
+$NetBSD: distinfo,v 1.58 2018/01/10 09:16:20 wiz Exp $
 
-SHA1 (gc-7.6.0.tar.gz) = bae6b3754ff8d3845b5171346bf924e13be6c693
-RMD160 (gc-7.6.0.tar.gz) = f69b900fed7ae844d355cfccad90cd25214da98e
-SHA512 (gc-7.6.0.tar.gz) = 511e8c01287b1ee9dbec87f0573377de77038b7af053a3f33afed9b3ffa30e2402d6a9bb0ca4f4b81cd808209b47b5718d498cff3de6632a057fe03fad51fc43
-Size (gc-7.6.0.tar.gz) = 1111751 bytes
+SHA1 (gc-7.6.2.tar.gz) = 55fc1fe8e0d81acdf6cc29455b151ab74c77c4f2
+RMD160 (gc-7.6.2.tar.gz) = 4058142315c17c7ab758e5425ff89bab7ef25bde
+SHA512 (gc-7.6.2.tar.gz) = 7b54812903929b0d5d1d696beac54629a7667997b41ef45299373bc18b2153d5755286b25e11cc90ffc572239e52a02900927bc60b0ad3593162b8c8e259fd50
+Size (gc-7.6.2.tar.gz) = 1119725 bytes
 SHA1 (patch-configure) = f3bb73ee9535fa2d313bab5d4afa961457c8762c
-SHA1 (patch-dyn__load.c) = 5869f863853a80bb290c8224c4f861a92553e278
-SHA1 (patch-include_private_gc__priv.h) = d9fc570f2ef9d57afe92e63db1f9c5f48b1c0514
-SHA1 (patch-include_private_gcconfig.h) = 23621c34483899df0b3d3dd9f982a1d601c716a0
+SHA1 (patch-dyn__load.c) = abc0d7010a57027c50acc8a8bdf2c85271e84c61
 SHA1 (patch-tools_threadlibs.c) = 5dd3e8bdbba8806cafcbaa5aa5c0a0778243c8ab
