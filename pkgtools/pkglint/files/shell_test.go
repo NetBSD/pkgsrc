@@ -220,11 +220,23 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 		"WARN: fname:1: The shell command \"cp\" should not be hidden.",
 		"WARN: fname:1: Unknown shell command \"cp\".")
 
+	G.Pkg = NewPackage("category/pkgbase")
+	G.Pkg.PlistDirs["share/pkgbase"] = true
+
+	// A directory that is found in the PLIST.
 	shline.CheckShellCommandLine("${RUN} ${INSTALL_DATA_DIR} share/pkgbase ${PREFIX}/share/pkgbase")
 
 	s.CheckOutputLines(
 		"NOTE: fname:1: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= share/pkgbase\" instead of \"${INSTALL_DATA_DIR}\".",
 		"WARN: fname:1: The INSTALL_*_DIR commands can only handle one directory at a time.")
+
+	// A directory that is not found in the PLIST.
+	shline.CheckShellCommandLine("${RUN} ${INSTALL_DATA_DIR} ${PREFIX}/share/other")
+
+	s.CheckOutputLines(
+		"NOTE: fname:1: You can use \"INSTALLATION_DIRS+= share/other\" instead of \"${INSTALL_DATA_DIR}\".")
+
+	G.Pkg = nil
 
 	// See PR 46570, item "1. It does not"
 	shline.CheckShellCommandLine("for x in 1 2 3; do echo \"$$x\" || exit 1; done")
@@ -514,21 +526,21 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__install_dir(c *check.C) {
 	shline.CheckShellCommandLine(shline.mkline.Shellcmd())
 
 	s.CheckOutputLines(
-		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir1\" instead of \"${INSTALL_DATA_DIR}\".",
-		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir2\" instead of \"${INSTALL_DATA_DIR}\".",
+		"NOTE: Makefile:85: You can use \"INSTALLATION_DIRS+= dir1\" instead of \"${INSTALL_DATA_DIR}\".",
+		"NOTE: Makefile:85: You can use \"INSTALLATION_DIRS+= dir2\" instead of \"${INSTALL_DATA_DIR}\".",
 		"WARN: Makefile:85: The INSTALL_*_DIR commands can only handle one directory at a time.")
 
 	shline.CheckShellCommandLine("${INSTALL_DATA_DIR} -d -m 0755 ${DESTDIR}${PREFIX}/share/examples/gdchart")
 
 	// No warning about multiple directories, since 0755 is an option, not an argument.
 	s.CheckOutputLines(
-		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= share/examples/gdchart\" instead of \"${INSTALL_DATA_DIR}\".")
+		"NOTE: Makefile:85: You can use \"INSTALLATION_DIRS+= share/examples/gdchart\" instead of \"${INSTALL_DATA_DIR}\".")
 
 	shline.CheckShellCommandLine("${INSTALL_DATA_DIR} -d -m 0755 ${DESTDIR}${PREFIX}/dir1 ${PREFIX}/dir2")
 
 	s.CheckOutputLines(
-		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir1\" instead of \"${INSTALL_DATA_DIR}\".",
-		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir2\" instead of \"${INSTALL_DATA_DIR}\".",
+		"NOTE: Makefile:85: You can use \"INSTALLATION_DIRS+= dir1\" instead of \"${INSTALL_DATA_DIR}\".",
+		"NOTE: Makefile:85: You can use \"INSTALLATION_DIRS+= dir2\" instead of \"${INSTALL_DATA_DIR}\".",
 		"WARN: Makefile:85: The INSTALL_*_DIR commands can only handle one directory at a time.")
 }
 
@@ -539,8 +551,8 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__install_option_d(c *check.
 	shline.CheckShellCommandLine(shline.mkline.Shellcmd())
 
 	s.CheckOutputLines(
-		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir1\" instead of \"${INSTALL} -d\".",
-		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir2\" instead of \"${INSTALL} -d\".")
+		"NOTE: Makefile:85: You can use \"INSTALLATION_DIRS+= dir1\" instead of \"${INSTALL} -d\".",
+		"NOTE: Makefile:85: You can use \"INSTALLATION_DIRS+= dir2\" instead of \"${INSTALL} -d\".")
 }
 
 func (s *Suite) Test_ShellLine__shell_comment_with_line_continuation(c *check.C) {
