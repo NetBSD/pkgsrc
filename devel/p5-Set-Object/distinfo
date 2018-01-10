@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2017/11/13 13:59:08 wiz Exp $
+$NetBSD: distinfo,v 1.11 2018/01/10 08:52:58 wiz Exp $
 
-SHA1 (Set-Object-1.38.tar.gz) = eb8c323660c9783a6e56fe6f8a4f8fa340030380
-RMD160 (Set-Object-1.38.tar.gz) = 90be574f3a9a5f70520f3aae0faf28d6d29cffde
-SHA512 (Set-Object-1.38.tar.gz) = fa0411f543fe1837d7c07a07a99d3b8a3735162fb7b665060870cec8edd40ab39eed74791ce2aa96b9ca04a8e773d810ba979508b03f8d4698e8d844f62bee1a
-Size (Set-Object-1.38.tar.gz) = 80719 bytes
+SHA1 (Set-Object-1.39.tar.gz) = 958da69bfa1ff14656aca21722a39eefd260b840
+RMD160 (Set-Object-1.39.tar.gz) = ef4cb5086024fe8880132554523cd3f8399e84a8
+SHA512 (Set-Object-1.39.tar.gz) = eb2db2750ec4e4cdc985fed7961dde0806c0396227476ddd88cdef2a89976ca19a0a254d097f67f6dc7bf894217752ac0830e0f978857204299f03bd8190c0b0
+Size (Set-Object-1.39.tar.gz) = 80902 bytes
