@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.56 2017/11/23 20:44:47 wiz Exp $
+$NetBSD: distinfo,v 1.57 2018/01/10 19:32:13 wiz Exp $
 
-SHA1 (mercurial-4.4.1.tar.gz) = 99fedcebccdb53f67aefaba5cdade9e84d79cf7e
-RMD160 (mercurial-4.4.1.tar.gz) = 7f7affb0e86e096f60a8cdec1fd16ac2037e9087
-SHA512 (mercurial-4.4.1.tar.gz) = 4c87adb6d3d30f7f9211eee64df727aefdac246be3ca9e3af412b76c32b76d701b19e00ca339168446ee5e20fad2ffc24f0c87438b6bda954560108235ab14a8
-Size (mercurial-4.4.1.tar.gz) = 5636532 bytes
+SHA1 (mercurial-4.4.2.tar.gz) = df543ee5bfef9ac224e2b3c108d3d2df234b043f
+RMD160 (mercurial-4.4.2.tar.gz) = 34c671ff1f2034c548c65a293fa563013a79482e
+SHA512 (mercurial-4.4.2.tar.gz) = 3d1d103689eac4f50cc1005be44144b37d75ebfac3ff3b4fc90d6f41fbee46e107a168d04f2c366ce7cca2733ea4e5b5127df462af8e253f61a72f8938833993
+Size (mercurial-4.4.2.tar.gz) = 5647013 bytes
+SHA1 (patch-tests_list-tree.py) = be9749aa09490efa28cb7cc9231fa3acf85afc7d
+SHA1 (patch-tests_test-largefiles-misc.t) = f05ab87c76b51fe2a784a86d872d8e19bde30193
