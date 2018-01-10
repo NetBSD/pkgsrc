@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.116 2017/11/15 12:52:15 gdt Exp $
+# $NetBSD: Makefile,v 1.117 2018/01/10 14:30:34 jaapb Exp $
 
+PKGREVISION= 1
 .include "Makefile.common"
-
-PKGREVISION=		2
 
 CONFIGURE_ENV+=		disable_x11=yes
 
