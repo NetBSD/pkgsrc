@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.348 2017/11/22 11:15:50 markd Exp $
+# $NetBSD: Makefile,v 1.349 2018/01/10 16:30:40 jaapb Exp $
 
 COMMENT=	Mathematics
 
@@ -171,6 +171,7 @@ SUBDIR+=	newmat
 SUBDIR+=	nickle
 SUBDIR+=	nlopt
 SUBDIR+=	ntl
+SUBDIR+=	ocaml-num
 SUBDIR+=	ocaml-zarith
 SUBDIR+=	octave
 SUBDIR+=	odepack
