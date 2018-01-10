@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.117 2018/01/10 09:15:24 adam Exp $
+$NetBSD: CHANGES-2018,v 1.118 2018/01/10 09:16:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -186,3 +186,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/adwaita-icon-theme to 3.26.1 [wiz 2018-01-10]
 	Updated devel/py-msgpack to 0.5.1 [adam 2018-01-10]
 	Updated devel/py-wheel to 0.30.0 [adam 2018-01-10]
+	Updated devel/boehm-gc to 7.6.2 [wiz 2018-01-10]
