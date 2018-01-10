@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/09/08 09:51:24 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2018/01/10 16:53:12 jaapb Exp $
 
 DISTNAME=	z3-4.4.1
 GITHUB_TAG=	${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Z3Prover/}
 PATCHFILES+=	z3-jumbo-patch-20151123.gz
