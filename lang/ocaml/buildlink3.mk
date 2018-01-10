@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.42 2018/01/07 13:04:20 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2018/01/10 14:30:34 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml
 
 .if !defined(OCAML_BUILDLINK3_MK)
 OCAML_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=4.05.0
-BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=4.05.0
+BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=4.06.0
+BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=4.06.0nb1
 BUILDLINK_PKGSRCDIR.ocaml?=	../../lang/ocaml
 #BUILDLINK_DEPMETHOD.ocaml?=	build
 
