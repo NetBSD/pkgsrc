@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/07/11 11:34:25 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/10 14:44:52 jaapb Exp $
 ${OCAML_SITELIB}/batteries/META
 ${OCAML_SITELIB}/batteries/batArray.cmi
 ${OCAML_SITELIB}/batteries/batArray.cmt
@@ -49,6 +49,9 @@ ${OCAML_SITELIB}/batteries/batBytes.cmi
 ${OCAML_SITELIB}/batteries/batBytes.cmt
 ${OCAML_SITELIB}/batteries/batBytes.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batBytes.cmx
+${OCAML_SITELIB}/batteries/batBytesCompat.cmi
+${OCAML_SITELIB}/batteries/batBytesCompat.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batBytesCompat.cmx
 ${OCAML_SITELIB}/batteries/batBytes.mli
 ${OCAML_SITELIB}/batteries/batCache.cmi
 ${OCAML_SITELIB}/batteries/batCache.cmt
