@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/02/21 15:50:29 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2018/01/10 00:19:48 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.courier-imap
 PKG_SUPPORTED_OPTIONS=		courier-gnutls fam
@@ -10,17 +10,20 @@ PKG_SUGGESTED_OPTIONS=		# empty
 ### Support using the GNU TLS tools for creating certificates; otherwise
 ### default to using OpenSSL.
 ###
-SUBST_CLASSES+=		tls
-SUBST_FILES.tls=	imap/mkimapdcert.in imap/mkpop3dcert.in
-SUBST_STAGE.tls=	pre-configure
 COURIER_CERTTOOL=	${PREFIX}/bin/certtool
-COURIER_OPENSSL=	${PREFIX}/bin/openssl
-
 .if !empty(PKG_OPTIONS:Mcourier-gnutls)
-SUBST_SED.tls=		-e "s|@ssllib@|gnutls|g"
+COURIER_OPENSSL=	${PREFIX}/bin/openssl
 .else
 USE_TOOLS+=		openssl:run
 COURIER_OPENSSL=	${TOOLS_OPENSSL}
+.endif
+
+SUBST_CLASSES+=		tls
+SUBST_FILES.tls=	imap/mkimapdcert.in imap/mkpop3dcert.in
+SUBST_STAGE.tls=	pre-configure
+.if !empty(PKG_OPTIONS:Mcourier-gnutls)
+SUBST_SED.tls=		-e "s|@ssllib@|gnutls|g"
+.else
 SUBST_SED.tls=		-e "s|@ssllib@|openssl|g"
 .endif
 
