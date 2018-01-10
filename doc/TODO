@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18026 2018/01/10 22:57:25 wiz Exp $
+$NetBSD: TODO,v 1.18027 2018/01/10 23:07:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -800,7 +800,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hexchat-2.12.4
 	o heyu-2.9.0
 	o hiawatha-10.7
-	o highlight-3.33
+	o highlight-3.41
 	o honeyd-1.5c
 	o horde-5.2.9
 	o howm-1.4.3 [pkg/51101]
@@ -1347,7 +1347,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sope-4.6
 	o sord-0.14.0
 	o sound-juicer-3.16.1
-	o source-highlight-3.23
 	o sparse-0.5.0
 	o spcaview-20060501
 	o spectrwm-2.7.2
@@ -1446,7 +1445,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o unicap-0.9.8
 	o unison-2.48.15v4
 	o units-2.12
-	o unixodbc-2.3.5
 	o unrealircd-4.0.6
 	o uriparser-0.8.2
 	o urlgrabber-3.10.1
