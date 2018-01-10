@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.164 2018/01/10 16:30:15 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.165 2018/01/10 16:31:45 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -234,3 +234,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/camlp5 to 7.03 [jaapb 2018-01-10]
 	Updated lang/coq to 8.7.1 [jaapb 2018-01-10]
 	Added math/ocaml-num version 1.1 [jaapb 2018-01-10]
+	Updated misc/dose3 to 5.0.1nb2 [jaapb 2018-01-10]
