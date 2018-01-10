@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.137 2018/01/10 12:29:47 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.138 2018/01/10 12:30:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -207,3 +207,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/notmuch to 0.25.3 [wiz 2018-01-10]
 	Updated archivers/par2 to 0.8.0 [wiz 2018-01-10]
 	Updated security/pinentry to 1.1.0 [wiz 2018-01-10]
+	Updated security/pinentry-gtk2 to 1.1.0 [wiz 2018-01-10]
