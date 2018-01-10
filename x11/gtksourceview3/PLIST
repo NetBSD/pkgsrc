@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2017/11/23 20:07:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/01/10 10:01:52 wiz Exp $
 include/gtksourceview-3.0/gtksourceview/completion-providers/words/gtksourcecompletionwords.h
 include/gtksourceview-3.0/gtksourceview/gtksource.h
 include/gtksourceview-3.0/gtksourceview/gtksourceautocleanups.h
@@ -181,6 +181,7 @@ share/gtksourceview-3.0/language-specs/latex.lang
 share/gtksourceview-3.0/language-specs/lex.lang
 share/gtksourceview-3.0/language-specs/libtool.lang
 share/gtksourceview-3.0/language-specs/llvm.lang
+share/gtksourceview-3.0/language-specs/logcat.lang
 share/gtksourceview-3.0/language-specs/lua.lang
 share/gtksourceview-3.0/language-specs/m4.lang
 share/gtksourceview-3.0/language-specs/makefile.lang
