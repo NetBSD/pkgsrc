@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/12/08 20:38:59 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2018/01/10 08:36:54 adam Exp $
 
-DISTNAME=	daphne-1.3.0
+DISTNAME=	daphne-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/daphne/}
@@ -10,11 +10,11 @@ HOMEPAGE=	https://github.com/django/daphne
 COMMENT=	HTTP, HTTP2 and WebSocket protocol server for ASGI
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=		# empty
-
 DEPENDS+=	${PYPKGPREFIX}-asgiref-[0-9]*:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-autobahn>=0.18:../../www/py-autobahn
 DEPENDS+=	${PYPKGPREFIX}-twisted>=17.1:../../net/py-twisted
+
+USE_LANGUAGES=	# none
 
 # py-asgiref
 PYTHON_VERSIONS_INCOMPATIBLE=	27 34
