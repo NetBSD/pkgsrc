@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.139 2018/01/10 14:30:48 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.140 2018/01/10 14:37:41 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -209,3 +209,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/pinentry to 1.1.0 [wiz 2018-01-10]
 	Updated security/pinentry-gtk2 to 1.1.0 [wiz 2018-01-10]
 	Updated lang/ocaml to 4.06.0nb1 [jaapb 2018-01-10]
+	Updated devel/js_of_ocaml to 3.0.0nb2 [jaapb 2018-01-10]
