@@ -102,7 +102,7 @@ func (mklines *MkLines) Check() {
 
 	CheckLineRcsid(mklines.lines[0], `#\s+`, "# ")
 
-	var substcontext SubstContext
+	substcontext := NewSubstContext()
 	var varalign VaralignBlock
 	indentation := &mklines.indentation
 	indentation.Push(0)
@@ -131,6 +131,7 @@ func (mklines *MkLines) Check() {
 
 		case mkline.IsCond():
 			ck.checkCond(mklines.forVars, indentation)
+			substcontext.Conditional(mkline)
 
 		case mkline.IsDependency():
 			ck.checkDependencyRule(allowedTargets)
