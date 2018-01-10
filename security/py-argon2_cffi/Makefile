@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/07/26 08:33:51 adam Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/10 09:39:10 adam Exp $
 
-DISTNAME=	argon2_cffi-16.3.0
+DISTNAME=	argon2_cffi-18.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/argon2_cffi/}
@@ -13,7 +13,8 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.0.0:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-USE_LANGUAGES=		c
+MAKE_ENV+=	ARGON2_CFFI_USE_SYSTEM=1
 
 .include "../../lang/python/egg.mk"
+.include "../../security/argon2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
