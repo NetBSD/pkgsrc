@@ -456,6 +456,7 @@ lsof-less-secure-sockets	If 'lsof-more-secure' is set, allow all sockets to be v
 lsof-more-secure	Only allow root to view all open files with lsof.
 lua			Enable Lua support.
 luit			Enable luit support.
+lwt			Enable Lwt support.	
 lynx			Use and enable support for the lynx browser.
 lz4			Enable LZ4 (de)compression support.
 lzma			Enable LZMA (de)compression support.
