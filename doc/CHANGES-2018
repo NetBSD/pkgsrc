@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.123 2018/01/10 10:02:00 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.124 2018/01/10 10:04:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -193,3 +193,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/global to 6.6.1 [wiz 2018-01-10]
 	Updated mail/gmime3 to 3.0.5 [wiz 2018-01-10]
 	Updated x11/gtksourceview3 to 3.24.6 [wiz 2018-01-10]
+	Updated net/gupnp-igd to 0.2.5 [wiz 2018-01-10]
