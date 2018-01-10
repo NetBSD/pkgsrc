@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/05/05 15:58:58 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/10 16:13:18 jaapb Exp $
 bin/ocamlbuild
 bin/ocamlbuild.byte
 ${PLIST.ocaml-opt}bin/ocamlbuild.native
@@ -20,4 +20,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocamlbuild/ocamlbuild_unix_plugin.o
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocamlbuild/ocamlbuildlib.a
 ${OCAML_SITELIB}/ocamlbuild/ocamlbuildlib.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocamlbuild/ocamlbuildlib.cmxa
+${OCAML_SITELIB}/ocamlbuild/signatures.cmi
+${OCAML_SITELIB}/ocamlbuild/signatures.cmti
 ${OCAML_SITELIB}/ocamlbuild/signatures.mli
