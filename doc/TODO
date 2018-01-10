@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18006 2018/01/10 10:07:26 wiz Exp $
+$NetBSD: TODO,v 1.18007 2018/01/10 10:10:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -861,7 +861,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ices-mp3-2.0.2
 	o icinga-base-2.4.1
 	o ike-2.0.1 [pkg/37032]
-	o ilmbase-2.2.1
 	o imapsync-1.678
 	o imp-6.2.12
 	o ingo-3.2.8
