@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2018/01/07 13:03:53 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2018/01/10 16:53:07 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-zip
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-zip
 OCAML_ZIP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-zip+=	ocaml-zip>=1.05nb6
-BUILDLINK_ABI_DEPENDS.ocaml-zip+=	ocaml-zip>=1.07
+BUILDLINK_ABI_DEPENDS.ocaml-zip+=	ocaml-zip>=1.07nb2
 BUILDLINK_PKGSRCDIR.ocaml-zip?=		../../archivers/ocaml-zip
 
 .include "../../devel/zlib/buildlink3.mk"

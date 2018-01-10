@@ -1,11 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2017/10/10 10:15:28 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2018/01/10 16:53:08 jaapb Exp $
 
 BUILDLINK_TREE+=	pgocaml
 
 .if !defined(PGOCAML_BUILDLINK3_MK)
 PGOCAML_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.pgocaml+=	pgocaml>=2.3nb4
+BUILDLINK_API_DEPENDS.pgocaml+=	pgocaml>=2.3
+BUILDLINK_ABI_DEPENDS.pgocaml+=	pgocaml>=2.3nb5
 BUILDLINK_PKGSRCDIR.pgocaml?=	../../databases/pgocaml
 
 .include "../../devel/ocaml-batteries/buildlink3.mk"
