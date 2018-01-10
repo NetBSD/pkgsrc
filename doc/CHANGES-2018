@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.134 2018/01/10 10:47:52 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.135 2018/01/10 12:17:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -204,3 +204,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/libunistring to 0.9.8 [wiz 2018-01-10]
 	Updated x11/libxkbcommon to 0.8.0 [wiz 2018-01-10]
 	Updated graphics/librsvg to 2.40.20 [wiz 2018-01-10]
+	Updated mail/notmuch to 0.25.3 [wiz 2018-01-10]
