@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.121 2018/01/10 09:52:06 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.122 2018/01/10 09:55:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -191,3 +191,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-argon2_cffi to 18.1.0 [adam 2018-01-10]
 	Updated devel/py-jupyter_client to 5.2.1 [adam 2018-01-10]
 	Updated devel/global to 6.6.1 [wiz 2018-01-10]
+	Updated mail/gmime3 to 3.0.5 [wiz 2018-01-10]
