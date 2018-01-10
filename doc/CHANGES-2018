@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.112 2018/01/10 08:57:43 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.113 2018/01/10 09:00:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -180,3 +180,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/p5-Spreadsheet-Read to 0.76 [wiz 2018-01-10]
 	Updated net/p5-Net-GitHub to 0.93 [wiz 2018-01-10]
 	Updated textproc/p5-Encode to 2.94 [wiz 2018-01-10]
+	Updated www/p5-Mojolicious to 7.60 [wiz 2018-01-10]
