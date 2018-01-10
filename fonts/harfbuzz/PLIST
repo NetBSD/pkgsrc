@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2018/01/01 22:29:31 rillig Exp $
+@comment $NetBSD: PLIST,v 1.25 2018/01/10 10:07:17 wiz Exp $
 bin/hb-ot-shape-closure
 bin/hb-shape
 include/harfbuzz/hb-blob.h
@@ -29,6 +29,7 @@ lib/libharfbuzz.la
 ${PLIST.icu}lib/pkgconfig/harfbuzz-icu.pc
 lib/pkgconfig/harfbuzz.pc
 share/gtk-doc/html/harfbuzz/HarfBuzz.png
+share/gtk-doc/html/harfbuzz/HarfBuzz.svg
 share/gtk-doc/html/harfbuzz/a-clustering-example-for-levels-0-and-1.html
 share/gtk-doc/html/harfbuzz/adding-text-to-the-buffer.html
 share/gtk-doc/html/harfbuzz/annotation-glossary.html
