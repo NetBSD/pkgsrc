@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.187 2018/01/11 12:52:54 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.188 2018/01/11 13:46:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -259,3 +259,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated ham/fldigi to 4.0.13 [mef 2018-01-11]
 	Updated cad/gtkwave to 3.3.87 [mef 2018-01-11]
 	Updated misc/libreoffice to 5.4.4.2nb3 [ryoon 2018-01-11]
+	Added www/py-django-cors-headers version 2.1.0 [adam 2018-01-11]
+	Updated www/py-yarl to 0.18.0 [adam 2018-01-11]
+	Updated www/py-django-admin-sortable2 to 0.6.19 [adam 2018-01-11]
