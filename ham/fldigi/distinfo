@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.61 2017/11/14 12:54:25 mef Exp $
+$NetBSD: distinfo,v 1.62 2018/01/11 12:31:45 mef Exp $
 
-SHA1 (fldigi-4.0.12.tar.gz) = 06cd7f959d5e256a67363dd34342b09738d0434c
-RMD160 (fldigi-4.0.12.tar.gz) = 2d79c00f246688a3c333081316ba02278ef797db
-SHA512 (fldigi-4.0.12.tar.gz) = f8fd5d2d761a963820c08ffd01cf6849309eb0ea47cd07429f8dac43af7490deb0a3d62aba8b8ca122ea2d6f2747f2bcf122fc02c9fce64f0c0e1f81ca5d9344
-Size (fldigi-4.0.12.tar.gz) = 3636531 bytes
+SHA1 (fldigi-4.0.13.tar.gz) = 1804d05a2a5d191d3dd1196e61f95c0cf6ba3c0a
+RMD160 (fldigi-4.0.13.tar.gz) = a427a8931d048e3def644db571b4b289d0a23ad9
+SHA512 (fldigi-4.0.13.tar.gz) = e5a74da404657356663dd5c115572efcf6525fb8851f5b6e9efc49c042d281d9cbf163ac99ee63396cb08737a5ae9223c1c985d72483b7031b5003174ac80d0d
+Size (fldigi-4.0.13.tar.gz) = 3715981 bytes
 SHA1 (patch-src_misc_configuration.cxx) = 4ebf0c46913f73047ad5b858f6d4ae9def82ec60
 SHA1 (patch-src_misc_newinstall.cxx) = 2c215e9423d27dd4f4657221b17cf4ed3f12355c

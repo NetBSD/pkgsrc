@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/05/05 00:11:15 mef Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/01/11 12:31:45 mef Exp $
 bin/flarq
 bin/fldigi
 man/man1/flarq.1
@@ -10,6 +10,7 @@ share/fldigi/ToR-Stats-SHIP.csv
 share/fldigi/nsd_bbsss.txt
 share/fldigi/station_table.txt
 share/locale/de/LC_MESSAGES/fldigi.mo
+share/locale/el/LC_MESSAGES/fldigi.mo
 share/locale/es/LC_MESSAGES/fldigi.mo
 share/locale/fr/LC_MESSAGES/fldigi.mo
 share/locale/it/LC_MESSAGES/fldigi.mo
