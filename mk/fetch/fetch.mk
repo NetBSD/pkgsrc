@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.69 2017/08/01 13:15:32 jperkin Exp $
+# $NetBSD: fetch.mk,v 1.70 2018/01/11 08:54:37 alnsn Exp $
 
 .if empty(INTERACTIVE_STAGE:Mfetch) && empty(FETCH_MESSAGE:U)
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -197,9 +197,23 @@ fetch-check-interactive: .USEBEFORE
 #	connections after the given amount of seconds.
 #       The specific behavior depends on the command used.
 #
+# FETCH_PROXY
+# FETCH_PROXY.ftp
+# FETCH_PROXY.http
+# FETCH_PROXY.https
+#	If defined, will cause the fetch command to connect over
+#	the specified proxy.
+#	The specific behavior depends on the command used.
+#
 # FETCH_USE_IPV4_ONLY, if defined, will cause the fetch command to force
 #	connecting to only IPv4 addresses.
 #
+
+.if defined(FETCH_PROXY)
+FETCH_PROXY.ftp?=	${FETCH_PROXY}
+FETCH_PROXY.http?=	${FETCH_PROXY}
+FETCH_PROXY.https?=	${FETCH_PROXY}
+.endif
 
 # If this host is behind a filtering firewall, use passive ftp(1)
 _FETCH_BEFORE_ARGS.ftp=		${PASSIVE_FETCH:D-p} \
@@ -208,14 +222,22 @@ _FETCH_BEFORE_ARGS.ftp=		${PASSIVE_FETCH:D-p} \
 _FETCH_AFTER_ARGS.ftp=		# empty
 _FETCH_RESUME_ARGS.ftp=		-R
 _FETCH_OUTPUT_ARGS.ftp=		-o
-_FETCH_CMD.ftp=			${TOOLS_PATH.ftp}
+_FETCH_CMD.ftp=			${PKGSRC_SETENV} \
+				${FETCH_PROXY.ftp:Dftp_proxy=${FETCH_PROXY.ftp:Q}} \
+				${FETCH_PROXY.http:Dhttp_proxy=${FETCH_PROXY.http:Q}} \
+				${FETCH_PROXY.https:Dhttps_proxy=${FETCH_PROXY.https:Q}} \
+				${TOOLS_PATH.ftp}
 
 _FETCH_BEFORE_ARGS.fetch=	${FETCH_TIMEOUT:D-T ${FETCH_TIMEOUT}} \
 				${FETCH_USE_IPV4_ONLY:D-4}
 _FETCH_AFTER_ARGS.fetch=	# empty
 _FETCH_RESUME_ARGS.fetch=	-r
 _FETCH_OUTPUT_ARGS.fetch=	-o
-_FETCH_CMD.fetch=		${TOOLS_PATH.fetch}
+_FETCH_CMD.fetch=		${PKGSRC_SETENV} \
+				${FETCH_PROXY.ftp:Dftp_proxy=${FETCH_PROXY.ftp:Q}} \
+				${FETCH_PROXY.http:Dhttp_proxy=${FETCH_PROXY.http:Q}} \
+				${FETCH_PROXY.https:Dhttps_proxy=${FETCH_PROXY.https:Q}} \
+				${TOOLS_PATH.fetch}
 
 _FETCH_BEFORE_ARGS.wget=	${PASSIVE_FETCH:D--passive-ftp} \
 				--no-check-certificate \
@@ -224,17 +246,29 @@ _FETCH_BEFORE_ARGS.wget=	${PASSIVE_FETCH:D--passive-ftp} \
 _FETCH_AFTER_ARGS.wget=		# empty
 _FETCH_RESUME_ARGS.wget=	-c
 _FETCH_OUTPUT_ARGS.wget=	-O
-_FETCH_CMD.wget=		${TOOLS_PATH.wget}
+_FETCH_CMD.wget=		${PKGSRC_SETENV} \
+				${FETCH_PROXY.ftp:Dftp_proxy=${FETCH_PROXY.ftp:Q}} \
+				${FETCH_PROXY.http:Dhttp_proxy=${FETCH_PROXY.http:Q}} \
+				${FETCH_PROXY.https:Dhttps_proxy=${FETCH_PROXY.https:Q}} \
+				${TOOLS_PATH.wget}
 
+# Protocol-specific variables are passed as environment variables.
+# Generic FETCH_PROXY is passed via the --proxy argument to support
+# other protocols like socks4/socks5.
 _FETCH_BEFORE_ARGS.curl=	${PASSIVE_FETCH:D--ftp-pasv} \
 				--fail --insecure --location --remote-time \
 				${FETCH_TIMEOUT:D--connect-timeout ${FETCH_TIMEOUT}} \
 				${FETCH_TIMEOUT:D--speed-time ${FETCH_TIMEOUT}} \
+				${FETCH_PROXY:D--proxy ${FETCH_PROXY:Q}} \
 				${FETCH_USE_IPV4_ONLY:D--ipv4}
 _FETCH_AFTER_ARGS.curl=		-O # must be here to honor -o option
 _FETCH_RESUME_ARGS.curl=	-C -
 _FETCH_OUTPUT_ARGS.curl=	-o
-_FETCH_CMD.curl=		${TOOLS_PATH.curl}
+_FETCH_CMD.curl=		${PKGSRC_SETENV} \
+				${FETCH_PROXY.ftp:Dftp_proxy=${FETCH_PROXY.ftp:Q}} \
+				${FETCH_PROXY.http:Dhttp_proxy=${FETCH_PROXY.http:Q}} \
+				${FETCH_PROXY.https:Dhttps_proxy=${FETCH_PROXY.https:Q}} \
+				${TOOLS_PATH.curl}
 
 _FETCH_CMD.manual=		${TOOLS_PATH.false}
 
