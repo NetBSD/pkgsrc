@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2017/02/16 08:33:13 markd Exp $
+$NetBSD: distinfo,v 1.6 2018/01/11 09:32:01 markd Exp $
 
-SHA1 (texworks-0.6.1.tar.gz) = 28d29f5942fe44c71e10e3938e1984bff0ca1aec
-RMD160 (texworks-0.6.1.tar.gz) = ef7430eadaf158edbcb25dfcd6b84c882d3bfa2f
-SHA512 (texworks-0.6.1.tar.gz) = e322524aee2f5c07279e0e2373d2bc86b6772455aa957bf27b1a869e56f44f3278e85f0ab9f311a979818e7b81b0faed59bed5ed357f20b86a6e73e4ced8c027
-Size (texworks-0.6.1.tar.gz) = 11310546 bytes
-SHA1 (patch-getDefaultBinPaths.sh) = 127f715ce85836be8e76b583ee0e513b142c4e00
+SHA1 (texworks-0.6.2.tar.gz) = 71fd92a08bd1e496e61c9bf6c0ee36e9cff23778
+RMD160 (texworks-0.6.2.tar.gz) = 146ea472276430bc2cd74c682187de5684ea0278
+SHA512 (texworks-0.6.2.tar.gz) = cf81fe9a8db06cde25b67a27c310127b09013fe47cf7fa57bcb7df5d1054dea77cc6ff142af24eae89b216127d34a07db84f0d4ccc92cbdb6bebfc9949b3b148
+Size (texworks-0.6.2.tar.gz) = 11508277 bytes
+SHA1 (patch-getDefaultBinPaths.sh) = 111f4f00170568bb8ff337ff46133abc4b53899b

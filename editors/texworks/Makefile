@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2018/01/11 08:09:38 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2018/01/11 09:32:01 markd Exp $
 
-DISTNAME=	texworks-0.6.1
-PKGREVISION=	5
+DISTNAME=	texworks-0.6.2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TeXworks/}
 GITHUB_PROJECT=	texworks
@@ -11,8 +10,6 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texworks/
 COMMENT=	Simple TeX front-end program
 LICENSE=	gnu-gpl-v2
-
-BROKEN=		Needs poppler with qt4 support.
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config gmake
@@ -28,13 +25,11 @@ DEPENDS+=	poppler-data>=0.4.5:../../print/poppler-data
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
-BUILDLINK_DEPMETHOD.qt4-tools=	full
-
 .include "../../devel/zlib/buildlink3.mk"
-#.include "../../print/poppler-qt4/buildlink3.mk"
+.include "../../print/poppler-qt5/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
-.include "../../x11/qt4-qdbus/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtscript/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
