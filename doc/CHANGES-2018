@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.182 2018/01/11 08:08:52 adam Exp $
+$NetBSD: CHANGES-2018,v 1.183 2018/01/11 08:11:21 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -254,3 +254,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-tornado to 4.5.3 [adam 2018-01-11]
 	Updated math/py-gmpy to 1.17 [adam 2018-01-11]
 	Updated math/py-mpmath to 1.0.0 [adam 2018-01-11]
+	Updated lang/nodejs to 9.4.0 [fhajny 2018-01-11]
