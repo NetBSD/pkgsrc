@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2017/12/08 08:52:57 maya Exp $
+# $NetBSD: Makefile,v 1.47 2018/01/11 08:09:38 wiz Exp $
 
 DISTNAME=	texworks-0.6.1
 PKGREVISION=	5
@@ -11,6 +11,8 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texworks/
 COMMENT=	Simple TeX front-end program
 LICENSE=	gnu-gpl-v2
+
+BROKEN=		Needs poppler with qt4 support.
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config gmake
@@ -29,7 +31,7 @@ pre-configure:
 BUILDLINK_DEPMETHOD.qt4-tools=	full
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../print/poppler-qt4/buildlink3.mk"
+#.include "../../print/poppler-qt4/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
