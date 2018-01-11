@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2018/01/11 08:12:50 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2018/01/11 10:34:32 markd Exp $
 
 DISTNAME=	kfilemetadata-${_KDE_VERSION}
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	sysutils
 COMMENT=	Library for extracting file metadata
 LICENSE=	gnu-gpl-v3
-
-BROKEN=		Needs poppler with qt4 support.
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
