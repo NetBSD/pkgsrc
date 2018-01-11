@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/09/26 17:32:26 adam Exp $
+$NetBSD: distinfo,v 1.6 2018/01/11 14:31:20 adam Exp $
 
-SHA1 (pyephem-3.7.6.0.tar.gz) = 00d016d757d773b4bce4479e699c9b0f9270782a
-RMD160 (pyephem-3.7.6.0.tar.gz) = 1fc99dd1553de160a41545a47eb4e6494ca1c5e1
-SHA512 (pyephem-3.7.6.0.tar.gz) = c3013ef943c0e1e2c30bba6f72912efb100b4c8c45904b7d6d7ba73d8b741564793a6e538117eb88abb824c93c874e2c955de734418ebd2370888718a149c9a8
-Size (pyephem-3.7.6.0.tar.gz) = 739561 bytes
+SHA1 (ephem-3.7.6.0.tar.gz) = 4134799e9fb828c20757870c684facbfcfb16394
+RMD160 (ephem-3.7.6.0.tar.gz) = 32e5fcb0e74936706b68bd811a9dcdf55b97b1f8
+SHA512 (ephem-3.7.6.0.tar.gz) = 64f1ac2529782d5d50668d17aa2af4810e42db29e4dc55354dd6167c4ce052ffcd0b02f6bb06c1557c4ff6da1180131cfc0dfa53a97ff34aaa488fe58e4b41a3
+Size (ephem-3.7.6.0.tar.gz) = 739442 bytes
