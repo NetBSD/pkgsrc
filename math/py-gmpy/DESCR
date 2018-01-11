@@ -1,4 +1,6 @@
-GMPY and GMPY2 are C-coded Python extension modules that support fast
-multiple-precision arithmetic.  GMPY only supports the GMP library and
-provides fast multiple-precision integer and rational arithmetic.  The
-limited mpf type from GMP is also supported.
+GMPY is a C-coded Python extension module that provides access to the GMP (or
+MPIR) multiple-precision arithmetic library.
+
+GMPY allows creation of multiprecision integer (mpz), float (mpf),and rational
+(mpq) numbers, conversion between them and to/from Python numbers/strings,
+arithmetic, bitwise, and some other higher-level mathematical operations999.
