@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.186 2018/01/11 12:38:11 mef Exp $
+$NetBSD: CHANGES-2018,v 1.187 2018/01/11 12:52:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -258,3 +258,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated editors/texworks to 0.6.2 [markd 2018-01-11]
 	Updated ham/fldigi to 4.0.13 [mef 2018-01-11]
 	Updated cad/gtkwave to 3.3.87 [mef 2018-01-11]
+	Updated misc/libreoffice to 5.4.4.2nb3 [ryoon 2018-01-11]
