@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2017/12/08 08:52:59 maya Exp $
+# $NetBSD: Makefile,v 1.51 2018/01/11 08:12:21 wiz Exp $
 
 VER=		0.4.16
 DISTNAME=	qpdfview-${VER}
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	poppler-data-[0-9]*:../../print/poppler-data
 DEPENDS+=	qt4-sqlite3-[0-9]*:../../x11/qt4-sqlite3
+
+BROKEN=		Needs poppler with qt4 support.
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
@@ -29,7 +31,7 @@ do-configure:
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../print/cups-base/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
-.include "../../print/poppler-qt4/buildlink3.mk"
+#.include "../../print/poppler-qt4/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-qdbus/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
