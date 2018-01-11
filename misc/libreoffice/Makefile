@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.136 2018/01/10 22:16:25 wiz Exp $
+# $NetBSD: Makefile,v 1.137 2018/01/11 12:52:05 ryoon Exp $
 
 VERREL=		5.4.4
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -108,8 +108,8 @@ DISTFILES+=		${md}
 SITES.${md}=		http://dev-www.libreoffice.org/src/
 .endfor
 
-DISTFILES+=		harfbuzz-1.7.1.tar.bz2
-SITES.harfbuzz-1.7.1.tar.bz2=	http://www.freedesktop.org/software/harfbuzz/release/
+DISTFILES+=		harfbuzz-1.7.4.tar.bz2
+SITES.harfbuzz-1.7.4.tar.bz2=	http://www.freedesktop.org/software/harfbuzz/release/
 
 .include "options.mk"
 
