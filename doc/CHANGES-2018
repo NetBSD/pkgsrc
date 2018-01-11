@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.183 2018/01/11 08:11:21 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.184 2018/01/11 09:38:33 markd Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -255,3 +255,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-gmpy to 1.17 [adam 2018-01-11]
 	Updated math/py-mpmath to 1.0.0 [adam 2018-01-11]
 	Updated lang/nodejs to 9.4.0 [fhajny 2018-01-11]
+	Updated editors/texworks to 0.6.2 [markd 2018-01-11]
