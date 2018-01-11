@@ -1,0 +1,4 @@
+This extension enables you to store the periodic task schedule in the database.
+
+The periodic tasks can be managed from the Django Admin interface, where you
+can create, edit and delete periodic tasks and how often they should run.
