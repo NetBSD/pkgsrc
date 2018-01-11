@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2018/01/11 08:10:36 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2018/01/11 23:43:06 wiz Exp $
 
 DISTNAME=		qcomicbook-0.9.0
 PKGREVISION=		32
@@ -26,7 +26,6 @@ SUBST_SED.man=		-e "s|share/man|${PKGMANDIR}|1"
 
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-BUILD_DEPENDS+=	poppler-qt4>=0.12.4:../../print/poppler-qt4
 #.include "../../print/poppler-qt4/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 BUILD_DEPENDS+=	qt4-tools>=4.5.0:../../x11/qt4-tools
