@@ -1,0 +1,14 @@
+pytest-django allows you to test your Django project/applications with the
+pytest testing tool.
+
+Running your test suite with pytest-django allows you to tap into the features
+that are already present in pytest. Here are some advantages:
+* Manage test dependencies with pytest fixtures.
+* Less boilerplate tests: no need to import unittest, create a subclass with
+  methods. Write tests as regular functions.
+* Database re-use: no need to re-create the test database for every test run.
+* Run tests in multiple processes for increased speed (with the pytest-xdist
+  plugin).
+* Make use of other pytest plugins.
+* Works with both worlds: Existing unittest-style TestCase's still work
+  without any modifications.
