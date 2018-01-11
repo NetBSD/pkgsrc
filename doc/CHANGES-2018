@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.188 2018/01/11 13:46:09 adam Exp $
+$NetBSD: CHANGES-2018,v 1.189 2018/01/11 14:16:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -262,3 +262,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/py-django-cors-headers version 2.1.0 [adam 2018-01-11]
 	Updated www/py-yarl to 0.18.0 [adam 2018-01-11]
 	Updated www/py-django-admin-sortable2 to 0.6.19 [adam 2018-01-11]
+	Updated www/py-django-easy-thumbnails to 2.5 [adam 2018-01-11]
+	Added www/py-test-django version 3.1.2 [adam 2018-01-11]
