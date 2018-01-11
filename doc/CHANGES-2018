@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.185 2018/01/11 12:31:54 mef Exp $
+$NetBSD: CHANGES-2018,v 1.186 2018/01/11 12:38:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -257,3 +257,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/nodejs to 9.4.0 [fhajny 2018-01-11]
 	Updated editors/texworks to 0.6.2 [markd 2018-01-11]
 	Updated ham/fldigi to 4.0.13 [mef 2018-01-11]
+	Updated cad/gtkwave to 3.3.87 [mef 2018-01-11]
