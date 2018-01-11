@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2017/09/07 15:20:33 adam Exp $
+$NetBSD: distinfo,v 1.17 2018/01/11 07:32:05 adam Exp $
 
-SHA1 (tornado-4.5.2.tar.gz) = da49ba98de0bb4d8b79655bb54ade3240327a165
-RMD160 (tornado-4.5.2.tar.gz) = 1b1cc432002aa2941b10212664268e4537bd46cb
-SHA512 (tornado-4.5.2.tar.gz) = 75a7e94275a0f1cbbc3551a21659383a52fe68b2bb18bc1febf5099fb5fe4154012ba651f789b41f64c47f347757b948e2269f92c83b47325216affcaaa18ffd
-Size (tornado-4.5.2.tar.gz) = 483712 bytes
+SHA1 (tornado-4.5.3.tar.gz) = 2c0edb9d83d0c0fa13b377f3124e561142cdfdef
+RMD160 (tornado-4.5.3.tar.gz) = d571144ccd6c6abb208fc8af57cc787db4da478f
+SHA512 (tornado-4.5.3.tar.gz) = c17dd7a3b541c26950d27c8a399ae4fdff1d99d16ff0c5de9871fe2de4c0f797c96712b23b5ed5efdaee06bb251f7def114c83fe6f7f37f344cdac9996d14448
+Size (tornado-4.5.3.tar.gz) = 484221 bytes
