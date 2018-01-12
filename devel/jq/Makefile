@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2017/08/03 12:38:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2018/01/12 14:41:24 fhajny Exp $
 
 DISTNAME=	jq-1.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stedolan/}
 GITHUB_PROJECT=	jq
@@ -20,4 +20,7 @@ GNU_CONFIGURE=	yes
 
 CFLAGS.SunOS+=	-D_XPG6 -D__EXTENSIONS__
 
+TEST_TARGET=	check
+
+.include "../../textproc/oniguruma/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
