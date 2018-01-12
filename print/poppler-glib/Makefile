@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.68 2018/01/10 21:56:50 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2018/01/12 23:44:05 wiz Exp $
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=	poppler-glib-${POPPLER_VERS}
+PKGREVISION=	1
 
 COMMENT=	PDF rendering library (GLib wrapper)
 MAINTAINER=	reed@reedmedia.net
@@ -21,8 +22,8 @@ CMAKE_ARGS+=	-DENABLE_SPLASH=OFF
 CMAKE_ARGS+=	-DBUILD_GTK_TESTS=OFF
 # Compile GLib wrapper which also needs gtk2
 CMAKE_ARGS+=	-DENABLE_GLIB=ON
-# Generate glib API documentation.
-CMAKE_ARGS+=	-DENABLE_GTK_DOC=ON
+# Do not generate glib API documentation.
+CMAKE_ARGS+=	-DENABLE_GTK_DOC=OFF
 # Don't build and install the tools
 CMAKE_ARGS+=	-DENABLE_UTILS=OFF
 # Don't compile poppler cpp wrapper.
@@ -53,7 +54,7 @@ post-install:
 .include "../../lang/python/tool.mk"
 BUILDLINK_ABI_DEPENDS.glib2+=	glib2>=2.41.0
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../textproc/gtk-doc/buildlink3.mk"
+#.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
