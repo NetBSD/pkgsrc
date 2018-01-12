@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/04/08 12:44:48 mef Exp $
+# $NetBSD: Makefile,v 1.9 2018/01/12 12:55:50 mef Exp $
 
-VERSION=	1.1.2
+VERSION=	1.2.1
 DISTNAME=	gdspy-${VERSION}
 PKGNAME=        ${PYPKGPREFIX}-gds-${VERSION}
 CATEGORIES=	cad
