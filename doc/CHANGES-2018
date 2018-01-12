@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.195 2018/01/12 14:48:52 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.196 2018/01/12 15:22:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -272,3 +272,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-test-xdist to 1.22.0 [adam 2018-01-12]
 	Updated cad/py-gds to 1.2.1 [mef 2018-01-12]
 	Updated multimedia/adobe-flash-player to 28.0.0.137 [tsutsui 2018-01-12]
+	Updated www/contao45 to 4.5.2 [taca 2018-01-12]
