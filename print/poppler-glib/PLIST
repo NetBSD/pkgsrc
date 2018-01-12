@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2017/12/08 07:48:12 spz Exp $
+@comment $NetBSD: PLIST,v 1.23 2018/01/12 23:44:05 wiz Exp $
 include/poppler/glib/poppler-action.h
 include/poppler/glib/poppler-annot.h
 include/poppler/glib/poppler-attachment.h
@@ -18,41 +18,3 @@ lib/libpoppler-glib.so.8
 lib/libpoppler-glib.so.8.9.0
 lib/pkgconfig/poppler-cairo.pc
 lib/pkgconfig/poppler-glib.pc
-share/gtk-doc/html/poppler/PopplerAction.html
-share/gtk-doc/html/poppler/PopplerAnnot.html
-share/gtk-doc/html/poppler/PopplerAttachment.html
-share/gtk-doc/html/poppler/PopplerColor.html
-share/gtk-doc/html/poppler/PopplerDocument.html
-share/gtk-doc/html/poppler/PopplerFormField.html
-share/gtk-doc/html/poppler/PopplerLayer.html
-share/gtk-doc/html/poppler/PopplerMedia.html
-share/gtk-doc/html/poppler/PopplerMovie.html
-share/gtk-doc/html/poppler/PopplerPage.html
-share/gtk-doc/html/poppler/PopplerStructureElement.html
-share/gtk-doc/html/poppler/annotation-glossary.html
-share/gtk-doc/html/poppler/api-index-0-12.html
-share/gtk-doc/html/poppler/api-index-0-14.html
-share/gtk-doc/html/poppler/api-index-0-16.html
-share/gtk-doc/html/poppler/api-index-0-18.html
-share/gtk-doc/html/poppler/api-index-0-20.html
-share/gtk-doc/html/poppler/api-index-0-22.html
-share/gtk-doc/html/poppler/api-index-0-26.html
-share/gtk-doc/html/poppler/api-index-0-33.html
-share/gtk-doc/html/poppler/api-index-0-46.html
-share/gtk-doc/html/poppler/api-index-deprecated.html
-share/gtk-doc/html/poppler/api-index-full.html
-share/gtk-doc/html/poppler/ch01.html
-share/gtk-doc/html/poppler/home.png
-share/gtk-doc/html/poppler/index.html
-share/gtk-doc/html/poppler/left-insensitive.png
-share/gtk-doc/html/poppler/left.png
-share/gtk-doc/html/poppler/poppler-Error-handling.html
-share/gtk-doc/html/poppler/poppler-PDF-Utility-functions.html
-share/gtk-doc/html/poppler/poppler-Version-and-Features-Information.html
-share/gtk-doc/html/poppler/poppler-poppler-features.html
-share/gtk-doc/html/poppler/poppler.devhelp2
-share/gtk-doc/html/poppler/right-insensitive.png
-share/gtk-doc/html/poppler/right.png
-share/gtk-doc/html/poppler/style.css
-share/gtk-doc/html/poppler/up-insensitive.png
-share/gtk-doc/html/poppler/up.png
