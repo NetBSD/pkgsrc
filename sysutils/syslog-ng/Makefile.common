@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2017/12/11 14:45:11 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.9 2018/01/12 20:48:06 fhajny Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/Makefile.module
 
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=	--disable-sun-streams
 CONFIGURE_ARGS+=	--disable-tcp-wrapper
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/db/syslog-ng
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-ivykis=${BUILDLINK_PREFIX.ivykis}
+CONFIGURE_ARGS+=	--with-ivykis=system
 CONFIGURE_ARGS+=	--with-mongoc=no
 CONFIGURE_ARGS+=	--with-librabbitmq-client=no
 CONFIGURE_ARGS+=	--with-pidfile-dir=${VARBASE}/run
