@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.193 2018/01/12 12:51:29 adam Exp $
+$NetBSD: CHANGES-2018,v 1.194 2018/01/12 12:56:08 mef Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -270,3 +270,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/perl5 to 5.26.1nb2 [jperkin 2018-01-12]
 	Updated devel/py-cffi to 1.11.3 [adam 2018-01-12]
 	Updated devel/py-test-xdist to 1.22.0 [adam 2018-01-12]
+	Updated cad/py-gds to 1.2.1 [mef 2018-01-12]
