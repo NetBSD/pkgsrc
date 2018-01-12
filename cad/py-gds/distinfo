@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/04/08 12:44:48 mef Exp $
+$NetBSD: distinfo,v 1.7 2018/01/12 12:55:50 mef Exp $
 
-SHA1 (gdspy-1.1.2.tar.gz) = 2563a8729afd960408b332c49dd075f8457f03ab
-RMD160 (gdspy-1.1.2.tar.gz) = 6127d6d473de8f356f32157542addf7e9f2e9727
-SHA512 (gdspy-1.1.2.tar.gz) = ab3e9d363bd275726fe02c0eaaa1154f0a7b1182be807239b8220983c442000100d3514a9d9596e606dcf443fc95801327cac1d2518c8aff2aca000416c1ae64
-Size (gdspy-1.1.2.tar.gz) = 113919 bytes
+SHA1 (gdspy-1.2.1.tar.gz) = 0f408f600a0b00fc453fc621da29690041b8f063
+RMD160 (gdspy-1.2.1.tar.gz) = f2e5a2331ee2dcc3857162b8e33da1ad6c7d549e
+SHA512 (gdspy-1.2.1.tar.gz) = 3e252f8d723ce533eb5a8b9aa1897e7c03a1059335cffa9f82a2dbad716f501d455c062617f78f6fb12b9770f81ce000ca122a516e73cf054ed8df58b15f07c4
+Size (gdspy-1.2.1.tar.gz) = 112795 bytes
