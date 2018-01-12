@@ -1,0 +1,6 @@
+This module permits to integrate arbitrary external programs into
+rsyslog's logging.  It is similar to the "execute program (^)" action,
+but offers better security and much higher performance. While "execute
+program (^)" can be a useful tool for executing programs if rare events
+occur, omprog can be used to provide massive amounts of log data to a
+program.
