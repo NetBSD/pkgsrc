@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.194 2018/01/12 12:56:08 mef Exp $
+$NetBSD: CHANGES-2018,v 1.195 2018/01/12 14:48:52 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -271,3 +271,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-cffi to 1.11.3 [adam 2018-01-12]
 	Updated devel/py-test-xdist to 1.22.0 [adam 2018-01-12]
 	Updated cad/py-gds to 1.2.1 [mef 2018-01-12]
+	Updated multimedia/adobe-flash-player to 28.0.0.137 [tsutsui 2018-01-12]
