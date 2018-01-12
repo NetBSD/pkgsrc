@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/11/23 17:20:07 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2018/01/12 15:56:23 jperkin Exp $
 
 DISTNAME=	netatalk-3.0.8
 PKGNAME=        ${DISTNAME:C/-/30-/}
@@ -73,6 +73,8 @@ PLIST.ea=		yes
 .endif
 
 CONFIGURE_ARGS.NetBSD+=	--without-dtrace
+
+CHECK_SSP_SKIP+=	libexec/netatalk/uams/*.a
 
 .include "options.mk"
 
