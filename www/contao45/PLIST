@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/01/04 13:39:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/12 15:21:30 taca Exp $
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/README.md
 ${CT_WEBDIR}/assets/ace/composer.json
@@ -2460,9 +2460,9 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Response/InitializeControllerResponse
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Routing/FrontendLoader.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Routing/ScopeMatcher.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Routing/UrlGenerator.php
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Security/Authentication/AuthenticationEntryPoint.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Security/Authentication/AuthenticationFailureHandler.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Security/Authentication/AuthenticationSuccessHandler.php
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Security/Authentication/FrontendAuthenticationSuccessHandler.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Security/Authentication/FrontendPreviewAuthenticator.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Security/Authentication/Provider/AuthenticationProvider.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Security/Authentication/RememberMe/DatabaseTokenProvider.php
@@ -2471,8 +2471,8 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Security/Authentication/Token/Fronten
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Security/Authentication/Token/TokenChecker.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Security/Encoder/Sha1PasswordEncoder.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Security/Exception/LockedException.php
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Security/Logout/FrontendLogoutSuccessHandler.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Security/Logout/LogoutHandler.php
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Security/Logout/LogoutSuccessHandler.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Security/User/ContaoUserProvider.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Security/User/UserChecker.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Session/Attribute/ArrayAttributeBag.php
@@ -2813,6 +2813,7 @@ ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messag
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.pl.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.ru.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.tr.xlf
+${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.zh.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/views/configuration_error.html.twig
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/views/database.html.twig
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/views/initialize.html.twig
@@ -5753,6 +5754,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/Twig/TokenParser/TransDef
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/Twig/TokenParser/TransTokenParser.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Translation/TwigExtractor.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/Twig/TwigEngine.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/Twig/UndefinedCallableHandler.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/Twig/composer.json
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/Twig/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/.gitignore
