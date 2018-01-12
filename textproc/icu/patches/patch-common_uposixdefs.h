@@ -1,6 +1,8 @@
-$NetBSD: patch-common_uposixdefs.h,v 1.3 2017/04/22 20:11:45 adam Exp $
+$NetBSD: patch-common_uposixdefs.h,v 1.4 2018/01/12 12:43:08 jperkin Exp $
 
---- common/uposixdefs.h.orig	2017-03-09 02:12:45.000000000 +0000
+Don't perform _STDC_C99 workaround with clang.
+
+--- common/uposixdefs.h.orig	2017-03-14 21:01:57.000000000 +0000
 +++ common/uposixdefs.h
 @@ -44,8 +44,10 @@
       * and define _XOPEN_SOURCE to different values depending on __STDC_VERSION__.
@@ -25,7 +27,12 @@ $NetBSD: patch-common_uposixdefs.h,v 1.3 2017/04/22 20:11:45 adam Exp $
  
  /**
   * Solaris says:
-@@ -68,4 +72,7 @@
+@@ -64,8 +68,11 @@
+  *   than a c99 or later compiler."
+  * Apparently C++11 is not "or later". Work around this.
+  */
+-#if defined(__cplusplus) && (defined(sun) || defined(__sun)) && !defined (_STDC_C99)
++#if defined(__cplusplus) && (defined(sun) || defined(__sun)) && !defined (_STDC_C99) && !defined(__clang__)
  #   define _STDC_C99
  #endif
  
