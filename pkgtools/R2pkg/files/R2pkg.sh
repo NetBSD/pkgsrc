@@ -1,4 +1,5 @@
 #!/bin/sh
+# $NetBSD: R2pkg.sh,v 1.3 2018/01/13 09:10:33 jperkin Exp $
 # R2pkg
 #
 # Copyright (c) 2014,2015,2016,2017
