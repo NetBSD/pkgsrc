@@ -1,11 +1,13 @@
-# $NetBSD: options.mk,v 1.2 2015/09/30 08:25:37 tnn Exp $
+# $NetBSD: options.mk,v 1.3 2018/01/13 08:53:58 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.scrollz
-PKG_SUPPORTED_OPTIONS=		efence inet6 regexp utf8
-PKG_SUGGESTED_OPTIONS+=		efence inet6
-PKG_OPTIONS_OPTIONAL_GROUPS=	socks ssl
+PKG_SUPPORTED_OPTIONS=		regexp utf8
+PKG_SUGGESTED_OPTIONS+=		inet6
+PKG_OPTIONS_OPTIONAL_GROUPS=	conflict socks ssl
 PKG_OPTIONS_GROUP.socks=	socks4 dante
 PKG_OPTIONS_GROUP.ssl=		gnutls openssl
+# PR 52883: these two options conflict
+PKG_OPTIONS_GROUP.conflict=	efence inet6
 
 .include "../../mk/bsd.options.mk"
 
