@@ -31,6 +31,12 @@ func (o *Options) AddFlagVar(shortName rune, longName string, pflag *bool, defva
 	o.options = append(o.options, opt)
 }
 
+func (o *Options) AddStrList(shortName rune, longName string, plist *[]string, description string) {
+	*plist = []string{}
+	opt := &option{shortName, longName, "", description, plist}
+	o.options = append(o.options, opt)
+}
+
 func (o *Options) Parse(args []string) (remainingArgs []string, err error) {
 	var skip int
 	for i := 1; i < len(args) && err == nil; i++ {
@@ -101,6 +107,16 @@ func (o *Options) handleLongOption(args []string, i int, opt *option, argval *st
 			}
 		}
 		return 0, nil
+	case *[]string:
+		if argval != nil {
+			*data = append(*data, *argval)
+			return 0, nil
+		} else if i+1 < len(args) {
+			*data = append(*data, args[i+1])
+			return 1, nil
+		} else {
+			return 0, optErr("option requires an argument: --" + opt.longName)
+		}
 	case *FlagGroup:
 		if argval == nil {
 			return 1, data.parse("--"+opt.longName+"=", args[i+1])
@@ -120,6 +136,19 @@ optchar:
 				case *bool:
 					*data = true
 					continue optchar
+
+				case *[]string:
+					argarg := optchars[ai+utf8.RuneLen(optchar):]
+					if argarg != "" {
+						*data = append(*data, argarg)
+						return 0, nil
+					} else if i+1 < len(args) {
+						*data = append(*data, argarg)
+						return 1, nil
+					} else {
+						return 0, optErr("option requires an argument: -" + string([]rune{optchar}))
+					}
+
 				case *FlagGroup:
 					argarg := optchars[ai+utf8.RuneLen(optchar):]
 					if argarg != "" {

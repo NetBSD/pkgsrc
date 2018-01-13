@@ -22,17 +22,34 @@ var (
 
 var dummyLine = NewLine("", 0, "", nil)
 
-func shallBeLogged(fname, lineno, msg string) bool {
+func shallBeLogged(msg string) bool {
+	if len(G.opts.LogOnly) > 0 {
+		found := false
+		for _, substr := range G.opts.LogOnly {
+			if contains(msg, substr) {
+				found = true
+				break
+			}
+		}
+		if !found {
+			return false
+		}
+	}
+
+	return true
+}
+
+func loggedAlready(fname, lineno, msg string) bool {
 	uniq := path.Clean(fname) + ":" + lineno + ":" + msg
 	if G.logged[uniq] {
-		return false
+		return true
 	}
 
 	if G.logged == nil {
 		G.logged = make(map[string]bool)
 	}
 	G.logged[uniq] = true
-	return true
+	return false
 }
 
 func logs(level *LogLevel, fname, lineno, format, msg string) bool {
@@ -40,7 +57,7 @@ func logs(level *LogLevel, fname, lineno, format, msg string) bool {
 		fname = cleanpath(fname)
 	}
 
-	if !G.opts.LogVerbose && !shallBeLogged(fname, lineno, msg) {
+	if !G.opts.LogVerbose && loggedAlready(fname, lineno, msg) {
 		return false
 	}
 
@@ -60,7 +77,7 @@ func logs(level *LogLevel, fname, lineno, format, msg string) bool {
 		text += sep + level.GccName + ":"
 		sep = " "
 	}
-	if G.opts.Profiling {
+	if G.opts.Profiling && format != "" {
 		G.loghisto.Add(format, 1)
 	}
 	text += sep + msg + "\n"
@@ -70,7 +87,7 @@ func logs(level *LogLevel, fname, lineno, format, msg string) bool {
 		out = G.logErr
 	}
 
-	io.WriteString(out, text)
+	out.Write(text)
 
 	switch level {
 	case llFatal:
@@ -94,11 +111,11 @@ func Explain(explanation ...string) {
 		}
 		G.explanationsGiven[complete] = true
 
-		io.WriteString(G.logOut, "\n")
+		G.logOut.WriteLine("")
 		for _, explanationLine := range explanation {
-			io.WriteString(G.logOut, "\t"+explanationLine+"\n")
+			G.logOut.WriteLine("\t" + explanationLine)
 		}
-		io.WriteString(G.logOut, "\n")
+		G.logOut.WriteLine("")
 	}
 
 	if G.Testing {
@@ -118,3 +135,39 @@ func Explain(explanation ...string) {
 }
 
 type pkglintFatal struct{}
+
+// SeparatorWriter writes output, occasionally separated by an
+// empty line. This is used for layouting the diagnostics in
+// --source mode combined with --show-autofix, where each
+// log message consists of multiple lines.
+type SeparatorWriter struct {
+	out            io.Writer
+	needSeparator  bool
+	wroteSomething bool
+}
+
+func NewSeparatorWriter(out io.Writer) *SeparatorWriter {
+	return &SeparatorWriter{out, false, false}
+}
+
+func (wr *SeparatorWriter) WriteLine(text string) {
+	wr.Write(text)
+	io.WriteString(wr.out, "\n")
+}
+
+func (wr *SeparatorWriter) Write(text string) {
+	if wr.needSeparator && wr.wroteSomething {
+		io.WriteString(wr.out, "\n")
+		wr.needSeparator = false
+	}
+	io.WriteString(wr.out, text)
+	wr.wroteSomething = true
+}
+
+func (wr *SeparatorWriter) Printf(format string, args ...interface{}) {
+	wr.Write(fmt.Sprintf(format, args...))
+}
+
+func (wr *SeparatorWriter) Separate() {
+	wr.needSeparator = true
+}
