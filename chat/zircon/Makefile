@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/05/30 11:32:22 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2018/01/13 23:18:27 rillig Exp $
 #
 
 DISTNAME=	zircon-1.18.256
@@ -23,7 +23,7 @@ post-extract:
 		>> ${WRKSRC}/installer/pkgIndex.tcl
 
 do-install:
-	@( cd ${WRKSRC} && ${TCLSH} installer/install.tcl -b ${PREFIX}/bin -l ${PREFIX}/share/zircon -p ${DESTDIR:Q} -w ${WISH} -g)
+	@( cd ${WRKSRC} && ${TCLSH} installer/install.tcl -b ${PREFIX}/bin -l ${PREFIX}/share/zircon -p ${DESTDIR} -w ${WISH} -g)
 	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/zircon
 .for file in BUGS COPYRIGHT FAQ MANUAL MIRRORS README.ONS README.load README.look README.prefs TODO
 	@${INSTALL_DATA} ${WRKSRC}/doc/${file} ${DESTDIR}${PREFIX}/share/doc/zircon
