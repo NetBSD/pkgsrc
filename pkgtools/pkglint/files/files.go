@@ -2,8 +2,6 @@ package main
 
 import (
 	"io/ioutil"
-	"netbsd.org/pkglint/trace"
-	"os"
 	"strings"
 )
 
@@ -137,51 +135,4 @@ func convertToLogicalLines(fname string, rawText string, joinBackslashLines bool
 	}
 
 	return loglines
-}
-
-func SaveAutofixChanges(lines []Line) (autofixed bool) {
-	if trace.Tracing {
-		defer trace.Call0()()
-	}
-
-	if !G.opts.Autofix {
-		for _, line := range lines {
-			if line.Changed {
-				G.autofixAvailable = true
-			}
-		}
-		return
-	}
-
-	changes := make(map[string][]string)
-	changed := make(map[string]bool)
-	for _, line := range lines {
-		if line.Changed {
-			changed[line.Filename] = true
-		}
-		changes[line.Filename] = append(changes[line.Filename], line.modifiedLines()...)
-	}
-
-	for fname := range changed {
-		changedLines := changes[fname]
-		tmpname := fname + ".pkglint.tmp"
-		text := ""
-		for _, changedLine := range changedLines {
-			text += changedLine
-		}
-		err := ioutil.WriteFile(tmpname, []byte(text), 0666)
-		if err != nil {
-			NewLineWhole(tmpname).Errorf("Cannot write.")
-			continue
-		}
-		err = os.Rename(tmpname, fname)
-		if err != nil {
-			NewLineWhole(fname).Errorf("Cannot overwrite with auto-fixed content.")
-			continue
-		}
-		msg := "Has been auto-fixed. Please re-run pkglint."
-		logs(llAutofix, fname, "", msg, msg)
-		autofixed = true
-	}
-	return
 }

@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.51 2016/06/05 11:24:32 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.52 2018/01/13 23:56:14 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -6,9 +6,9 @@
 .\"
 .\" Roland Illig <roland.illig@gmx.de>, 2004, 2005.
 .\" Thomas Klausner <wiz@NetBSD.org>, 2012.
-.\" Roland Illig <rillig@NetBSD.org>, 2015, 2016.
+.\" Roland Illig <rillig@NetBSD.org>, 2015-2018.
 .\"
-.Dd June 5, 2016
+.Dd January 14, 2018
 .Dt PKGLINT 1
 .Os
 .Sh NAME
@@ -29,8 +29,17 @@ to be bugs, or that are simply deprecated.
 .It Fl C{[no-]check,...}
 Enable or disable specific checks.
 For a list of checks, see below.
+.It Fl d Ns | Ns Fl -debug
+Enable or disable verbose log for debugging pkglint.
+.It Fl e Ns | Ns Fl -explain
+Print verbose explanations for diagnostics.
 .It Fl F Ns | Ns Fl -autofix
-Repair trivial things automatically.
+Repair some of the warnings automatically.
+.It Fl g Ns | Ns Fl -gcc-output-format
+Use a format for the diagnostics that is understood by most programs,
+especially editors, so they can provide a point-and-goto interface.
+.It Fl h Ns | Ns Fl -help
+Show the summary of command line options, then exit.
 .It Fl I
 Show the
 .Pa Makefile
@@ -39,25 +48,18 @@ are slurped in via
 .Ql .include
 directives.
 This flag is mainly for debugging.
-.It Fl V Ns | Ns Fl -version
-Print the current
-.Nm
-version number and exit.
-.It Fl W{[no-]warn,...}
-Enable or disable specific warnings.
-For a list of warnings, see below.
-.It Fl d Ns | Ns Fl -debug
-Enable or disable verbose log for debugging pkglint.
-.It Fl e Ns | Ns Fl -explain
-Print verbose explanations for diagnostics.
-.It Fl g Ns | Ns Fl -gcc-output-format
-Use a format for the diagnostics that is understood by most programs,
-especially editors, so they can provide a point-and-goto interface.
-.It Fl h Ns | Ns Fl -help
-Show the summary of command line options, then exit.
 .It Fl i Ns | Ns Fl -import
 Check if a package is ready to be imported into pkgsrc.
 This is especially useful for packages from the pkgsrc-wip project.
+.It Fl o Ns | Ns Fl -only Ar substring
+Only handle those diagnostics that have
+.Ar substring
+in their text.
+This is useful in combination with
+.Fl -autofix
+and
+.Fl -recursive,
+to fix only a single kind of warning in a large number of files.
 .It Fl q Ns | Ns Fl -quiet
 Don't print the errors and warnings summary before terminating.
 .It Fl r Ns | Ns Fl -recursive
@@ -71,6 +73,13 @@ source code along with the diagnostics.
 This is especially useful together with the
 .Fl f Ns | Ns Fl -show-autofix
 option.
+.It Fl V Ns | Ns Fl -version
+Print the current
+.Nm
+version number and exit.
+.It Fl W{[no-]warn,...}
+Enable or disable specific warnings.
+For a list of warnings, see below.
 .El
 .\" =======================================================================
 .Ss Checks
@@ -176,6 +185,7 @@ errors.
 .Sh AUTHORS
 .An Roland Illig Aq Mt rillig@NetBSD.org
 .Sh BUGS
-If you don't understand the messages, feel free to ask on the
-.Aq tech-pkg@NetBSD.org
+If you don't understand the messages, feel free to ask the author or
+on the
+.Aq pkgsrc-users@pkgsrc.org
 mailing list.
