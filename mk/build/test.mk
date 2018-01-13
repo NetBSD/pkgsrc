@@ -1,4 +1,4 @@
-# $NetBSD: test.mk,v 1.18 2012/05/27 14:32:29 cheusov Exp $
+# $NetBSD: test.mk,v 1.19 2018/01/13 12:48:56 joerg Exp $
 #
 # After the "build" phase, many packages provide some sort of self-test
 # that can be run on the not-yet installed package. To enable these
@@ -58,6 +58,7 @@ TEST_MAKE_CMD= \
 ###
 _TEST_TARGETS+=	check-vulnerable
 _TEST_TARGETS+=	build
+_TEST_TARGETS+=	test-depends
 _TEST_TARGETS+=	acquire-test-lock
 _TEST_TARGETS+=	${_COOKIE.test}
 _TEST_TARGETS+=	release-test-lock
