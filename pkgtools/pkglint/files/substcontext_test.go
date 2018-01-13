@@ -186,5 +186,5 @@ func simulateSubstLines(texts ...string) {
 }
 
 func newSubstLine(lineno int, text string) MkLine {
-	return NewMkLine(NewLine("Makefile", lineno, text, nil))
+	return T.NewMkLine("Makefile", lineno, text)
 }
