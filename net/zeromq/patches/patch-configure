@@ -1,10 +1,19 @@
-$NetBSD: patch-configure,v 1.5 2017/02/02 10:09:53 fhajny Exp $
+$NetBSD: patch-configure,v 1.6 2018/01/13 18:22:42 adam Exp $
 
-Portability.
+Portability fixes.
 
---- configure.orig	2016-11-04 10:30:55.000000000 +0000
+--- configure.orig	2017-12-13 13:37:25.000000000 +0000
 +++ configure
-@@ -20286,12 +20286,12 @@ if test "${with_poller+set}" = set; then
+@@ -19007,7 +19007,7 @@ if test "${enable_address_sanitizer+set}
+ fi
+ 
+ 
+-if test "x${ZMQ_ASAN}" == "xyes"; then
++if test "x${ZMQ_ASAN}" = "xyes"; then
+     CFLAGS="${CFLAGS} -fsanitize=address"
+     CXXFLAGS="${CXXFLAGS} -fsanitize=address"
+ 
+@@ -20448,12 +20448,12 @@ if test "${with_poller+set}" = set; then
  fi
  
  
