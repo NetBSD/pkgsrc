@@ -67,9 +67,10 @@ func NewMkLine(line Line) (mkline *MkLineImpl) {
 			case matches(varname, `^[a-z]`) && op == ":=":
 				break
 			default:
-				if !line.AutofixReplace(varname+spaceAfterVarname+op, varname+op) {
-					line.Warnf("Unnecessary space after variable name %q.", varname)
-				}
+				fix := line.Autofix()
+				fix.Warnf("Unnecessary space after variable name %q.", varname)
+				fix.Replace(varname+spaceAfterVarname+op, varname+op)
+				fix.Apply()
 			}
 		}
 

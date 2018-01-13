@@ -8,7 +8,7 @@ import (
 func (s *Suite) Test_ChecklinesPatch__with_comment(c *check.C) {
 	s.Init(c)
 	s.UseCommandLine("-Wall")
-	lines := s.NewLines("patch-WithComment",
+	lines := T.NewLines("patch-WithComment",
 		"$"+"NetBSD$",
 		"",
 		"Text",
@@ -84,7 +84,7 @@ func (s *Suite) Test_ChecklinesPatch__without_empty_line__autofix(c *check.C) {
 func (s *Suite) Test_ChecklinesPatch__without_comment(c *check.C) {
 	s.Init(c)
 	s.UseCommandLine("-Wall")
-	lines := s.NewLines("patch-WithoutComment",
+	lines := T.NewLines("patch-WithoutComment",
 		"$"+"NetBSD$",
 		"",
 		"--- file.orig",
@@ -104,7 +104,7 @@ func (s *Suite) Test_ChecklinesPatch__without_comment(c *check.C) {
 func (s *Suite) Test_ChecklinesPatch__git_without_comment(c *check.C) {
 	s.Init(c)
 	s.UseCommandLine("-Wall")
-	lines := s.NewLines("patch-aa",
+	lines := T.NewLines("patch-aa",
 		"$"+"NetBSD$",
 		"",
 		"diff --git a/aa b/aa",
@@ -123,7 +123,7 @@ func (s *Suite) Test_ChecklinesPatch__git_without_comment(c *check.C) {
 
 func (s *Suite) Test_checklineOtherAbsolutePathname(c *check.C) {
 	s.Init(c)
-	line := NewLine("patch-ag", 1, "+$install -s -c ./bin/rosegarden ${DESTDIR}$BINDIR", nil)
+	line := T.NewLine("patch-ag", 1, "+$install -s -c ./bin/rosegarden ${DESTDIR}$BINDIR")
 
 	checklineOtherAbsolutePathname(line, line.Text)
 
@@ -133,7 +133,7 @@ func (s *Suite) Test_checklineOtherAbsolutePathname(c *check.C) {
 func (s *Suite) Test_ChecklinesPatch__error_code(c *check.C) {
 	s.Init(c)
 	s.UseCommandLine("-Wall")
-	lines := s.NewLines("patch-ErrorCode",
+	lines := T.NewLines("patch-ErrorCode",
 		"$"+"NetBSD$",
 		"",
 		"*** Error code 1", // Looks like a context diff, but isn't.
@@ -154,7 +154,7 @@ func (s *Suite) Test_ChecklinesPatch__error_code(c *check.C) {
 func (s *Suite) Test_ChecklinesPatch__wrong_header_order(c *check.C) {
 	s.Init(c)
 	s.UseCommandLine("-Wall")
-	lines := s.NewLines("patch-WrongOrder",
+	lines := T.NewLines("patch-WrongOrder",
 		"$"+"NetBSD$",
 		"",
 		"Text",
@@ -177,7 +177,7 @@ func (s *Suite) Test_ChecklinesPatch__wrong_header_order(c *check.C) {
 func (s *Suite) Test_ChecklinesPatch__context_diff(c *check.C) {
 	s.Init(c)
 	s.UseCommandLine("-Wall")
-	lines := s.NewLines("patch-ctx",
+	lines := T.NewLines("patch-ctx",
 		"$"+"NetBSD$",
 		"",
 		"diff -cr history.c.orig history.c",
@@ -193,7 +193,7 @@ func (s *Suite) Test_ChecklinesPatch__context_diff(c *check.C) {
 
 func (s *Suite) Test_ChecklinesPatch__no_patch(c *check.C) {
 	s.Init(c)
-	lines := s.NewLines("patch-aa",
+	lines := T.NewLines("patch-aa",
 		"$"+"NetBSD$",
 		"",
 		"-- oldfile",
@@ -207,7 +207,7 @@ func (s *Suite) Test_ChecklinesPatch__no_patch(c *check.C) {
 
 func (s *Suite) Test_ChecklinesPatch__two_patched_files(c *check.C) {
 	s.Init(c)
-	lines := s.NewLines("patch-aa",
+	lines := T.NewLines("patch-aa",
 		"$"+"NetBSD$",
 		"",
 		"--- oldfile",
@@ -230,7 +230,7 @@ func (s *Suite) Test_ChecklinesPatch__two_patched_files(c *check.C) {
 
 func (s *Suite) Test_ChecklinesPatch__documentation_that_looks_like_patch_lines(c *check.C) {
 	s.Init(c)
-	lines := s.NewLines("patch-aa",
+	lines := T.NewLines("patch-aa",
 		"$"+"NetBSD$",
 		"",
 		"--- oldfile",
@@ -247,7 +247,7 @@ func (s *Suite) Test_ChecklinesPatch__documentation_that_looks_like_patch_lines(
 
 func (s *Suite) Test_ChecklinesPatch__only_unified_header_but_no_content(c *check.C) {
 	s.Init(c)
-	lines := s.NewLines("patch-unified",
+	lines := T.NewLines("patch-unified",
 		"$"+"NetBSD$",
 		"",
 		"Documentation for the patch",
@@ -263,7 +263,7 @@ func (s *Suite) Test_ChecklinesPatch__only_unified_header_but_no_content(c *chec
 
 func (s *Suite) Test_ChecklinesPatch__only_context_header_but_no_content(c *check.C) {
 	s.Init(c)
-	lines := s.NewLines("patch-context",
+	lines := T.NewLines("patch-context",
 		"$"+"NetBSD$",
 		"",
 		"Documentation for the patch",
@@ -281,7 +281,7 @@ func (s *Suite) Test_ChecklinesPatch__only_context_header_but_no_content(c *chec
 
 func (s *Suite) Test_ChecklinesPatch__Makefile_with_absolute_pathnames(c *check.C) {
 	s.Init(c)
-	lines := s.NewLines("patch-unified",
+	lines := T.NewLines("patch-unified",
 		"$"+"NetBSD$",
 		"",
 		"Documentation for the patch",
@@ -317,7 +317,7 @@ func (s *Suite) Test_ChecklinesPatch__Makefile_with_absolute_pathnames(c *check.
 
 func (s *Suite) Test_ChecklinesPatch__no_newline_with_text_following(c *check.C) {
 	s.Init(c)
-	lines := s.NewLines("patch-aa",
+	lines := T.NewLines("patch-aa",
 		"$"+"NetBSD$",
 		"",
 		"comment",
@@ -339,7 +339,7 @@ func (s *Suite) Test_ChecklinesPatch__no_newline_with_text_following(c *check.C)
 
 func (s *Suite) Test_ChecklinesPatch__no_newline(c *check.C) {
 	s.Init(c)
-	lines := s.NewLines("patch-aa",
+	lines := T.NewLines("patch-aa",
 		"$"+"NetBSD$",
 		"",
 		"comment",
@@ -359,7 +359,7 @@ func (s *Suite) Test_ChecklinesPatch__no_newline(c *check.C) {
 
 func (s *Suite) Test_ChecklinesPatch__empty_lines_left_out_at_eof(c *check.C) {
 	s.Init(c)
-	lines := s.NewLines("patch-aa",
+	lines := T.NewLines("patch-aa",
 		"$"+"NetBSD$",
 		"",
 		"comment",
@@ -383,7 +383,7 @@ func (s *Suite) Test_ChecklinesPatch__empty_lines_left_out_at_eof(c *check.C) {
 // Since this is no problem for patch(1), pkglint also doesn't complain.
 func (s *Suite) Test_ChecklinesPatch__context_lines_with_tab_instead_of_space(c *check.C) {
 	s.Init(c)
-	lines := s.NewLines("patch-aa",
+	lines := T.NewLines("patch-aa",
 		"$"+"NetBSD$",
 		"",
 		"comment",
