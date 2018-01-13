@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.178 2018/01/12 22:25:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.179 2018/01/13 22:32:53 rillig Exp $
 
 DISTNAME=	wireshark-2.4.4
 CATEGORIES=	net
@@ -31,23 +31,23 @@ CONFIGURE_ENV+=		ac_cv_path_LEXDUMMY=${TOOLS_PATH.lex}
 
 PTHREAD_OPTS+=		require
 
-PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_FOR_BUILD_ONLY=		yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.10.5
-REPLACE_PYTHON+=	help/faq.py
-REPLACE_PYTHON+=	tools/asn2deb
-REPLACE_PYTHON+=	tools/asn2wrs.py
-REPLACE_PYTHON+=	tools/dfilter-test.py
-REPLACE_PYTHON+=	tools/ftsanity.py
-REPLACE_PYTHON+=	tools/html2text.py
-REPLACE_PYTHON+=	tools/idl2deb
-REPLACE_PYTHON+=	tools/indexcap.py
-REPLACE_PYTHON+=	tools/make-dissector-reg.py
-REPLACE_PYTHON+=	tools/make-tap-reg.py
-REPLACE_PYTHON+=	tools/msnchat
-REPLACE_PYTHON+=	tools/ncp2222.py
-REPLACE_PYTHON+=	tools/netscreen2dump.py
-REPLACE_PYTHON+=	tools/pkt-from-core.py
-REPLACE_PYTHON+=	tools/rdps.py
+REPLACE_PYTHON+=		help/faq.py
+REPLACE_PYTHON+=		tools/asn2deb
+REPLACE_PYTHON+=		tools/asn2wrs.py
+REPLACE_PYTHON+=		tools/dfilter-test.py
+REPLACE_PYTHON+=		tools/ftsanity.py
+REPLACE_PYTHON+=		tools/html2text.py
+REPLACE_PYTHON+=		tools/idl2deb
+REPLACE_PYTHON+=		tools/indexcap.py
+REPLACE_PYTHON+=		tools/make-dissector-reg.py
+REPLACE_PYTHON+=		tools/make-tap-reg.py
+REPLACE_PYTHON+=		tools/msnchat
+REPLACE_PYTHON+=		tools/ncp2222.py
+REPLACE_PYTHON+=		tools/netscreen2dump.py
+REPLACE_PYTHON+=		tools/pkt-from-core.py
+REPLACE_PYTHON+=		tools/rdps.py
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -62,7 +62,7 @@ CONFIGURE_ARGS.Darwin+=	--disable-osx-deploy-target
 post-install: ${POST_INSTALL_TARGETS}
 
 # wireshark no longer builds with NetBSD 3.x provided zlib
-BUILDLINK_API_DEPENDS.zlib=zlib>=1.2.1
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.1
 
 # wireshark uses gdk_pixbuf_new_from_inline which is deprecated, but asks
 # to hide deprecated prototypes. This leads to pointer truncation.
