@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/08/01 16:58:17 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2018/01/13 23:18:25 rillig Exp $
 
 DISTNAME=	dircproxy-1.2.0-beta2
 PKGNAME=	${DISTNAME:S/-beta/beta/}
@@ -20,11 +20,11 @@ CONFLICTS=		dircproxy<=1.1.0
 
 REPLACE_PERL+=		contrib/log.pl contrib/privmsg-log.pl
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 EGDIR=			${PREFIX}/share/examples/dircproxy
-CONF_FILES=		${EGDIR:Q}/dircproxyrc.sample \
-			${PKG_SYSCONFDIR:Q}/dircproxyrc
+CONF_FILES=		${EGDIR}/dircproxyrc.sample \
+			${PKG_SYSCONFDIR}/dircproxyrc
 RCD_SCRIPTS=		dircproxy
 
 .include "../../mk/bsd.pkg.mk"
