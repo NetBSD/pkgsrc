@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2018/01/07 19:57:48 rillig Exp $
+# $NetBSD: Makefile,v 1.51 2018/01/13 23:18:26 rillig Exp $
 #
 
 DISTNAME=	ircservices-5.0.64
@@ -25,7 +25,7 @@ RCD_SCRIPTS=	ircservices
 PKG_GROUPS=	services
 BUILD_DEFS=	VARBASE
 
-CONFIGURE_ARGS+=	-prefix ${PREFIX:Q}
+CONFIGURE_ARGS+=	-prefix ${PREFIX}
 CONFIGURE_ARGS+=	-cc ${CC:Q}
 CONFIGURE_ARGS+=	${empty(CFLAGS):?:-cflags ${CFLAGS:Q}}
 CONFIGURE_ARGS+=	${empty(LDFLAGS):?:-lflags ${LDFLAGS:Q}}
