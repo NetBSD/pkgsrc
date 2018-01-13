@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_Makefile,v 1.6 2017/08/19 14:54:25 adam Exp $
+$NetBSD: patch-lib_Makefile,v 1.7 2018/01/13 19:00:09 adam Exp $
 
 Make portable. Unlock install target. Use pkgsrc install scripts.
 
@@ -24,7 +24,7 @@ Make portable. Unlock install target. Use pkgsrc install scripts.
 -ifneq (,$(filter $(shell uname),Linux Darwin GNU/kFreeBSD GNU OpenBSD FreeBSD NetBSD DragonFly SunOS))
  
  DESTDIR     ?=
- # directory variables : GNU convention prefers lowercase
+ # directory variables : GNU conventions prefer lowercase
 @@ -126,11 +125,7 @@ LIBDIR      ?= $(libdir)
  includedir  ?= $(PREFIX)/include
  INCLUDEDIR  ?= $(includedir)
