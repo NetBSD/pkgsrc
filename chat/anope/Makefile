@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/07/09 06:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/01/13 23:18:25 rillig Exp $
 
 DISTNAME=	anope-1.7.21
 PKGREVISION=	8
@@ -17,8 +17,8 @@ USE_TOOLS+=	gmake perl:run
 ANOPE_USER=	anope
 ANOPE_GROUP=	anope
 RCD_SCRIPTS=	anope
-FILES_SUBST+=	ANOPE_USER=${ANOPE_USER:Q}
-FILES_SUBST+=	ANOPE_GROUP=${ANOPE_GROUP:Q}
+FILES_SUBST+=	ANOPE_USER=${ANOPE_USER}
+FILES_SUBST+=	ANOPE_GROUP=${ANOPE_GROUP}
 
 USERGROUP_PHASE=	pre-install
 PKG_USERS_VARS+=	ANOPE_USER
@@ -29,11 +29,11 @@ PKG_GROUPS_VARS+=	ANOPE_GROUP
 PKG_USERS=	${ANOPE_USER}:${ANOPE_GROUP}
 PKG_HOME.${ANOPE_USER}=		${PREFIX}/lib/anope
 PKG_GROUPS=	${ANOPE_GROUP}
-MAKE_ENV+=	RUNGROUP=${ANOPE_GROUP:Q}
+MAKE_ENV+=	RUNGROUP=${ANOPE_GROUP}
 OWN_DIRS_PERMS+=	${PREFIX}/lib/anope/logs \
-			${ANOPE_USER:Q} ${ANOPE_GROUP:Q} 2755
+			${ANOPE_USER} ${ANOPE_GROUP} 2755
 OWN_DIRS_PERMS+=	${PREFIX}/lib/anope/modules/runtime \
-			${ANOPE_USER:Q} ${ANOPE_GROUP:Q} 2755
+			${ANOPE_USER} ${ANOPE_GROUP} 2755
 
 CONF_FILES_PERMS+=	${PREFIX}/share/examples/anope/example.conf \
 			${PREFIX}/lib/anope/services.conf \
@@ -42,7 +42,7 @@ CONF_FILES_PERMS+=	${PREFIX}/share/examples/anope/example.conf \
 CONFIGURE_ARGS+=	--with-permissions=077
 CONFIGURE_ARGS+=	--with-bindir=${PREFIX}/lib/anope
 CONFIGURE_ARGS+=	--with-datadir=${PREFIX}/lib/anope
-CONFIGURE_ARGS+=	--with-rungroup=${ANOPE_GROUP:Q}
+CONFIGURE_ARGS+=	--with-rungroup=${ANOPE_GROUP}
 
 .include "options.mk"
 
