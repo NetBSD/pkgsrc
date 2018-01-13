@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.199 2018/01/12 23:44:15 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.200 2018/01/13 08:48:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -276,3 +276,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/wireshark to 2.4.4 [ryoon 2018-01-12]
 	Updated graphics/icoutils to 0.32.2nb1 [ryoon 2018-01-12]
 	Updated print/poppler-glib to 0.62.0nb1 [wiz 2018-01-12]
+	Updated print/qpdfview to 0.4.16nb18 [wiz 2018-01-13]
