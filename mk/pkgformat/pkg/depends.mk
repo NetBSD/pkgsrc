@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.5 2016/07/18 09:57:10 leot Exp $
+# $NetBSD: depends.mk,v 1.6 2018/01/13 12:48:57 joerg Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -11,7 +11,7 @@
 #
 #	<depends_type>	<pattern>	<directory>
 #
-# Valid dependency types are "bootstrap", "build" and "full".
+# Valid dependency types are "bootstrap", "build", "test" and "full".
 #
 # ${_RDEPENDS_FILE} contains the resolved dependency information
 # for the package.  For each line in ${_DEPENDS_FILE}
@@ -52,6 +52,7 @@ _REDUCE_RESOLVED_DEPENDS_CMD=${PKGSRC_SETENV} CAT=${CAT:Q}		\
 _pkgformat-show-depends: .PHONY
 	@case ${VARNAME:Q}"" in						\
 	BUILD_DEPENDS)	${_REDUCE_DEPENDS_CMD} ${BUILD_DEPENDS:Q} ;;	\
+	TEST_DEPENDS)	${_HOST_REDUCE_DEPENDS_CMD} ${TEST_DEPENDS:Q} ;;\
 	TOOL_DEPENDS)	${_HOST_REDUCE_DEPENDS_CMD} ${TOOL_DEPENDS:Q} ;;\
 	DEPENDS|*)	${_REDUCE_DEPENDS_CMD} ${DEPENDS:Q} ;;		\
 	esac
@@ -61,6 +62,7 @@ _LIST_DEPENDS_CMD=	\
 		PKGSRCDIR=${PKGSRCDIR:Q} PWD_CMD=${PWD_CMD:Q} SED=${SED:Q} \
 		${SH} ${PKGSRCDIR}/mk/pkgformat/pkg/list-dependencies \
 			" "${BOOTSTRAP_DEPENDS:Q} \
+			" "${TEST_DEPENDS:Q} \
 			" "${TOOL_DEPENDS:Q} \
 			" "${BUILD_DEPENDS:Q} \
 			" "${DEPENDS:Q}
@@ -71,12 +73,19 @@ _LIST_DEPENDS_CMD.bootstrap=	\
 		${SH} ${PKGSRCDIR}/mk/pkgformat/pkg/list-dependencies \
 			" "${BOOTSTRAP_DEPENDS:Q} " " " " " "
 
+_LIST_DEPENDS_CMD.test=	\
+	${PKGSRC_SETENV} AWK=${AWK:Q} PKG_ADMIN=${PKG_ADMIN:Q} \
+		PKGSRCDIR=${PKGSRCDIR:Q} PWD_CMD=${PWD_CMD:Q} SED=${SED:Q} \
+		${SH} ${PKGSRCDIR}/mk/pkgformat/pkg/list-dependencies \
+			" " " "${TEST_DEPENDS:Q} " " " " " "
+
 _RESOLVE_DEPENDS_CMD=	\
 	${PKGSRC_SETENV} _PKG_DBDIR=${_PKG_DBDIR:Q} PKG_INFO=${PKG_INFO:Q} \
 		HOST_PKG_INFO=${HOST_PKG_INFO:Q} \
 		_DEPENDS_FILE=${_DEPENDS_FILE:Q} \
 		${SH} ${PKGSRCDIR}/mk/pkgformat/pkg/resolve-dependencies \
 			" "${BOOTSTRAP_DEPENDS:Q} \
+			" " \
 			" "${TOOL_DEPENDS:Q} \
 			" "${BUILD_DEPENDS:Q} \
 			" "${DEPENDS:Q}
@@ -91,7 +100,13 @@ _RESOLVE_DEPENDS_CMD=	\
 #		build, full.
 #
 _DEPENDS_INSTALL_CMD=							\
-	case $$type in bootstrap) Type=Bootstrap;; tool) Type=Tool;; build) Type=Build;; full) Type=Full;; esac; \
+	case $$type in							\
+	bootstrap)	Type=Bootstrap;;				\
+	tool)		Type=Tool;;					\
+	build)		Type=Build;;					\
+	test)		Type=Test;;					\
+	full)		Type=Full;;					\
+	esac;								\
 	case $$type in							\
 	bootstrap|tool)							\
 		if expr "${USE_CROSS_COMPILE:Uno}" : '[yY][eE][sS]' >/dev/null; then \
@@ -103,7 +118,7 @@ _DEPENDS_INSTALL_CMD=							\
 		archopt=TARGET_ARCH=${MACHINE_ARCH};			\
 		pkg=`${_HOST_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;	\
 		;;							\
-	build|full)							\
+	build|test|full)							\
 		extradep=" ${PKGNAME}";					\
 		cross=${USE_CROSS_COMPILE:Uno};				\
 		archopt=;						\
@@ -126,7 +141,7 @@ _DEPENDS_INSTALL_CMD=							\
 		case $$type in						\
 		bootstrap|tool)						\
 			pkg=`${_HOST_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;; \
-		build|full)						\
+		build|test|full)					\
 			pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;; \
 		esac;							\
 		case "$$pkg" in						\
@@ -141,7 +156,7 @@ _DEPENDS_INSTALL_CMD=							\
 		case $$type in						\
 		bootstrap|tool)						\
 			objfmt=`${HOST_PKG_INFO} -Q OBJECT_FMT "$$pkg"`;; \
-		build|full)						\
+		build|test|full)					\
 			objfmt=`${PKG_INFO} -Q OBJECT_FMT "$$pkg"`;;	\
 		esac;							\
 		case "$$objfmt" in					\
@@ -235,3 +250,28 @@ _pkgformat-bootstrap-depends:
 .PHONY:
 acquire-bootstrap-depends-lock: acquire-lock
 release-bootstrap-depends-lock: release-lock
+
+######################################################################
+### test-depends (PUBLIC, pkgsrc/mk/depends/depends.mk)
+######################################################################
+### test-depends is a public target to install any missing
+### dependencies needed for the "test" stage.
+### These dependencies are listed in TEST_DEPENDS.
+###
+.PHONY: test-depends
+_TEST_DEPENDS_TARGETS+=	acquire-test-depends-lock
+_TEST_DEPENDS_TARGETS+=	_pkgformat-test-depends
+_TEST_DEPENDS_TARGETS+=	release-test-depends-lock
+
+test-depends: ${_TEST_DEPENDS_TARGETS}
+
+_pkgformat-test-depends:
+	${RUN}${_LIST_DEPENDS_CMD.test} | 				\
+	while read type pattern dir; do					\
+		${TEST} "$$type" = "test" || continue;		\
+		${_DEPENDS_INSTALL_CMD};				\
+	done
+
+.PHONY:
+acquire-test-depends-lock: acquire-lock
+release-test-depends-lock: release-lock
