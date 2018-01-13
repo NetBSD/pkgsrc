@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/02/02 10:09:53 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/01/13 18:22:42 adam Exp $
 bin/curve_keygen
 include/zmq.h
 include/zmq_utils.h
@@ -58,6 +58,7 @@ man/man3/zmq_z85_decode.3
 man/man3/zmq_z85_encode.3
 man/man7/zmq.7
 man/man7/zmq_curve.7
+man/man7/zmq_gssapi.7
 man/man7/zmq_inproc.7
 man/man7/zmq_ipc.7
 man/man7/zmq_null.7
