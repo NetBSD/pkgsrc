@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2029 2018/01/02 05:49:44 maya Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2030 2018/01/13 12:48:56 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -93,6 +93,7 @@ MAINTAINER=${OWNER}
 MAINTAINER?=		pkgsrc-users@NetBSD.org
 .endif
 PKGWILDCARD?=		${PKGBASE}-[0-9]*
+TEST_DEPENDS?=		# empty
 TOOL_DEPENDS?=		# empty
 .if defined(GITHUB_TAG)
 WRKSRC?=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG:C/^v//}

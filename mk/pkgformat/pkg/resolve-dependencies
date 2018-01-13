@@ -40,6 +40,7 @@ find_best() {
 
 ${CAT} ${DEPENDS_FILE} | while read type pattern dir; do
 	pkg=`find_best "$type" "$pattern"`
+	[ "$type" != test ] || continue
 	case "$pkg" in
 	"")
 		error_msg "[resolve-dependencies] A package matching \`\`$pattern'' should"
