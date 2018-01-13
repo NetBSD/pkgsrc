@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2017/08/07 07:56:58 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2018/01/13 23:18:25 rillig Exp $
 
 DISTNAME=	gale-0.99fruit
 PKGNAME=	gale-0.99f
@@ -15,7 +15,7 @@ MAKE_JOBS_SAFE=	no
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		PROG_GLIB_CONFIG=${GLIB_CONFIG:Q}
 
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.boehm-gc}/include/gc

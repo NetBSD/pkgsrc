@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/04/06 03:45:07 rodent Exp $
+# $NetBSD: Makefile,v 1.23 2018/01/13 23:18:26 rillig Exp $
 #
 
 DISTNAME=	irssi-icb-0.14
@@ -21,7 +21,7 @@ USE_LIBTOOL=	yes
 
 IRSSI_DIR=	${WRKDIR}/${SILC_CLIENT_DISTNAME}/apps/irssi
 
-CONFIGURE_ARGS+=	--with-irssi=${IRSSI_DIR:Q}
+CONFIGURE_ARGS+=	--with-irssi=${IRSSI_DIR}
 
 INSTALLATION_DIRS+=	share/doc/silc-client
 
