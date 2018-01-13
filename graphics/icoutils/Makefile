@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/01/12 23:12:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2018/01/13 00:07:42 ryoon Exp $
 
 DISTNAME=	icoutils-0.32.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://savannah.nongnu.org/download/icoutils/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +15,7 @@ DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		perl
+USE_TOOLS+=		perl:run
 
 REPLACE_PERL+=		extresso/extresso.in
 REPLACE_PERL+=		extresso/genresscript.in
