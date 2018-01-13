@@ -104,3 +104,34 @@ func (s *Suite) Test_Options_Parse_mixed_args_and_options(c *check.C) {
 	c.Check(aflag, check.Equals, true)
 	c.Check(bflag, check.Equals, false)
 }
+
+func (s *Suite) Test_Options_Parse_string_list(c *check.C) {
+	opts := NewOptions()
+	var verbose bool
+	var includes []string
+	var excludes []string
+	opts.AddStrList('e', "exclude", &excludes, "")
+	opts.AddStrList('i', "include", &includes, "")
+	opts.AddFlagVar('v', "verbose", &verbose, false, "")
+
+	args, err := opts.Parse([]string{"progname",
+		"-viincluded1",
+		"--include=included2",
+		"--include", "included3",
+		"-eexcluded1",
+		"--exclude=excluded2",
+		"--exclude", "excluded3"})
+
+	c.Check(args, check.IsNil)
+	c.Check(err, check.IsNil)
+	c.Check(includes, check.DeepEquals, []string{"included1", "included2", "included3"})
+	c.Check(excludes, check.DeepEquals, []string{"excluded1", "excluded2", "excluded3"})
+
+	args, err = opts.Parse([]string{"progname", "-i"})
+
+	c.Check(err.Error(), check.Equals, "progname: option requires an argument: -i")
+
+	args, err = opts.Parse([]string{"progname", "--include"})
+
+	c.Check(err.Error(), check.Equals, "progname: option requires an argument: --include")
+}
