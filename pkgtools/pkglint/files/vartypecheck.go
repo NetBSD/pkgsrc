@@ -448,25 +448,21 @@ func (cv *VartypeCheck) Homepage() {
 			}
 		}
 		fixedURL := baseURL + subdir
-		explain := false
+		fix := cv.Line.Autofix()
 		if baseURL != "" {
-			if !cv.Line.AutofixReplace(wrong, fixedURL) {
-				cv.Line.Warnf("HOMEPAGE should not be defined in terms of MASTER_SITEs. Use %s directly.", fixedURL)
-				explain = true
-			}
+			fix.Warnf("HOMEPAGE should not be defined in terms of MASTER_SITEs. Use %s directly.", fixedURL)
 		} else {
-			cv.Line.Warnf("HOMEPAGE should not be defined in terms of MASTER_SITEs.")
-			explain = true
+			fix.Warnf("HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 		}
-		if explain {
-			Explain(
-				"The HOMEPAGE is a single URL, while MASTER_SITES is a list of URLs.",
-				"As long as this list has exactly one element, this works, but as",
-				"soon as another site is added, the HOMEPAGE would not be a valid",
-				"URL anymore.",
-				"",
-				"Defining MASTER_SITES=${HOMEPAGE} is ok, though.")
-		}
+		fix.Explain(
+			"The HOMEPAGE is a single URL, while MASTER_SITES is a list of URLs.",
+			"As long as this list has exactly one element, this works, but as",
+			"soon as another site is added, the HOMEPAGE would not be a valid",
+			"URL anymore.",
+			"",
+			"Defining MASTER_SITES=${HOMEPAGE} is ok, though.")
+		fix.Replace(wrong, fixedURL)
+		fix.Apply()
 	}
 }
 

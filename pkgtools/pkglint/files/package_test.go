@@ -1,13 +1,11 @@
 package main
 
-import (
-	check "gopkg.in/check.v1"
-)
+import "gopkg.in/check.v1"
 
 func (s *Suite) Test_Package_pkgnameFromDistname(c *check.C) {
 	s.Init(c)
 	pkg := NewPackage("dummy")
-	pkg.vardef["PKGNAME"] = NewMkLine(NewLine("Makefile", 5, "PKGNAME=dummy", nil))
+	pkg.vardef["PKGNAME"] = T.NewMkLine("Makefile", 5, "PKGNAME=dummy")
 
 	c.Check(pkg.pkgnameFromDistname("pkgname-1.0", "whatever"), equals, "pkgname-1.0")
 	c.Check(pkg.pkgnameFromDistname("${DISTNAME}", "distname-1.0"), equals, "distname-1.0")
@@ -27,7 +25,7 @@ func (s *Suite) Test_Package_ChecklinesPackageMakefileVarorder(c *check.C) {
 	s.UseCommandLine("-Worder")
 	pkg := NewPackage("x11/9term")
 
-	pkg.ChecklinesPackageMakefileVarorder(s.NewMkLines("Makefile",
+	pkg.ChecklinesPackageMakefileVarorder(T.NewMkLines("Makefile",
 		mkrcsid,
 		"",
 		"DISTNAME=9term",
@@ -35,7 +33,7 @@ func (s *Suite) Test_Package_ChecklinesPackageMakefileVarorder(c *check.C) {
 
 	s.CheckOutputEmpty()
 
-	pkg.ChecklinesPackageMakefileVarorder(s.NewMkLines("Makefile",
+	pkg.ChecklinesPackageMakefileVarorder(T.NewMkLines("Makefile",
 		mkrcsid,
 		"",
 		"DISTNAME=9term",
@@ -83,7 +81,7 @@ func (s *Suite) Test_Package_ChecklinesPackageMakefileVarorder__MASTER_SITES(c *
 	s.UseCommandLine("-Worder")
 	pkg := NewPackage("category/package")
 
-	pkg.ChecklinesPackageMakefileVarorder(s.NewMkLines("Makefile",
+	pkg.ChecklinesPackageMakefileVarorder(T.NewMkLines("Makefile",
 		mkrcsid,
 		"",
 		"PKGNAME=\tpackage-1.0",
@@ -96,20 +94,20 @@ func (s *Suite) Test_Package_ChecklinesPackageMakefileVarorder__MASTER_SITES(c *
 
 func (s *Suite) Test_Package_getNbpart(c *check.C) {
 	pkg := NewPackage("category/pkgbase")
-	pkg.vardef["PKGREVISION"] = NewMkLine(NewLine("Makefile", 1, "PKGREVISION=14", nil))
+	pkg.vardef["PKGREVISION"] = T.NewMkLine("Makefile", 1, "PKGREVISION=14")
 
 	c.Check(pkg.getNbpart(), equals, "nb14")
 
-	pkg.vardef["PKGREVISION"] = NewMkLine(NewLine("Makefile", 1, "PKGREVISION=asdf", nil))
+	pkg.vardef["PKGREVISION"] = T.NewMkLine("Makefile", 1, "PKGREVISION=asdf")
 
 	c.Check(pkg.getNbpart(), equals, "")
 }
 
 func (s *Suite) Test_Package_determineEffectivePkgVars__precedence(c *check.C) {
 	pkg := NewPackage("category/pkgbase")
-	pkgnameLine := NewMkLine(NewLine("Makefile", 3, "PKGNAME=pkgname-1.0", nil))
-	distnameLine := NewMkLine(NewLine("Makefile", 4, "DISTNAME=distname-1.0", nil))
-	pkgrevisionLine := NewMkLine(NewLine("Makefile", 5, "PKGREVISION=13", nil))
+	pkgnameLine := T.NewMkLine("Makefile", 3, "PKGNAME=pkgname-1.0")
+	distnameLine := T.NewMkLine("Makefile", 4, "DISTNAME=distname-1.0")
+	pkgrevisionLine := T.NewMkLine("Makefile", 5, "PKGREVISION=13")
 
 	pkg.defineVar(pkgnameLine, pkgnameLine.Varname())
 	pkg.defineVar(distnameLine, distnameLine.Varname())
@@ -127,12 +125,12 @@ func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
 	G.Pkg = NewPackage("category/pkgbase")
 	G.CurPkgsrcdir = "../.."
 	G.Pkg.EffectivePkgname = "package-1.0nb15"
-	G.Pkg.EffectivePkgnameLine = NewMkLine(NewLine("category/pkgbase/Makefile", 5, "PKGNAME=dummy", nil))
+	G.Pkg.EffectivePkgnameLine = T.NewMkLine("category/pkgbase/Makefile", 5, "PKGNAME=dummy")
 	G.globalData.LastChange = map[string]*Change{
-		"category/pkgbase": &Change{
+		"category/pkgbase": {
 			Action:  "Updated",
 			Version: "1.8",
-			Line:    NewLine("doc/CHANGES", 116, "dummy", nil),
+			Line:    T.NewLine("doc/CHANGES", 116, "dummy"),
 		},
 	}
 

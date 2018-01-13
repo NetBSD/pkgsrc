@@ -183,15 +183,16 @@ func (ck MkLineChecker) checkCond(forVars map[string]bool, indentation *Indentat
 }
 
 func (ck MkLineChecker) checkDirectiveIndentation(expectedDepth int) {
-	if G.Mk == nil {
+	if G.Mk == nil || !G.opts.WarnSpace {
 		return
 	}
 	mkline := ck.MkLine
 	indent := mkline.Indent()
 	if expected := strings.Repeat(" ", expectedDepth); indent != expected {
-		if G.opts.WarnSpace && !mkline.AutofixReplace("."+indent, "."+expected) {
-			mkline.Notef("This directive should be indented by %d spaces.", expectedDepth)
-		}
+		fix := mkline.Line.Autofix()
+		fix.Notef("This directive should be indented by %d spaces.", expectedDepth)
+		fix.Replace("."+indent, "."+expected)
+		fix.Apply()
 	}
 }
 
@@ -547,9 +548,10 @@ func (ck MkLineChecker) CheckVaruseShellword(varname string, vartype *Vartype, v
 
 		} else if mod != correctMod {
 			if vuc.quoting == vucQuotPlain {
-				if !mkline.AutofixReplace("${"+varname+mod+"}", "${"+varname+correctMod+"}") {
-					mkline.Warnf("Please use ${%s%s} instead of ${%s%s}.", varname, correctMod, varname, mod)
-				}
+				fix := mkline.Line.Autofix()
+				fix.Warnf("Please use ${%s%s} instead of ${%s%s}.", varname, correctMod, varname, mod)
+				fix.Replace("${"+varname+mod+"}", "${"+varname+correctMod+"}")
+				fix.Apply()
 			} else {
 				mkline.Warnf("Please use ${%s%s} instead of ${%s%s} and make sure"+
 					" the variable appears outside of any quoting characters.", varname, correctMod, varname, mod)
@@ -574,28 +576,26 @@ func (ck MkLineChecker) CheckVaruseShellword(varname string, vartype *Vartype, v
 	if hasSuffix(mod, ":Q") && (needsQuoting == nqNo || needsQuoting == nqDoesntMatter) {
 		bad := "${" + varname + mod + "}"
 		good := "${" + varname + strings.TrimSuffix(mod, ":Q") + "}"
-		needExplain := false
-		if needsQuoting == nqNo && !mkline.AutofixReplace(bad, good) {
-			needExplain = true
-			mkline.Warnf("The :Q operator should not be used for ${%s} here.", varname)
+
+		fix := mkline.Line.Autofix()
+		if needsQuoting == nqNo {
+			fix.Warnf("The :Q operator should not be used for ${%s} here.", varname)
+		} else {
+			fix.Notef("The :Q operator isn't necessary for ${%s} here.", varname)
 		}
-		if needsQuoting == nqDoesntMatter && !mkline.AutofixReplace(bad, good) {
-			needExplain = true
-			mkline.Notef("The :Q operator isn't necessary for ${%s} here.", varname)
-		}
-		if needExplain {
-			Explain(
-				"Many variables in pkgsrc do not need the :Q operator, since they",
-				"are not expected to contain white-space or other special characters.",
-				"Examples for these \"safe\" variables are:",
-				"",
-				"\t* filenames",
-				"\t* directory names",
-				"\t* user and group names",
-				"\t* tool names and tool paths",
-				"\t* variable names",
-				"\t* PKGNAME")
-		}
+		fix.Explain(
+			"Many variables in pkgsrc do not need the :Q operator, since they",
+			"are not expected to contain white-space or other special characters.",
+			"Examples for these \"safe\" variables are:",
+			"",
+			"\t* filenames",
+			"\t* directory names",
+			"\t* user and group names",
+			"\t* tool names and tool paths",
+			"\t* variable names",
+			"\t* PKGNAME")
+		fix.Replace(bad, good)
+		fix.Apply()
 	}
 }
 

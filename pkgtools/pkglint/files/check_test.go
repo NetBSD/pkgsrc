@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	check "gopkg.in/check.v1"
+	"gopkg.in/check.v1"
 	"netbsd.org/pkglint/textproc"
 	"netbsd.org/pkglint/trace"
 )
@@ -73,54 +73,24 @@ func (s *Suite) CheckOutputLines(expectedLines ...string) {
 	s.c().Check(s.Output(), equals, expectedOutput)
 }
 
-// Arguments are either (lineno, orignl) or (lineno, orignl, textnl).
-func (s *Suite) NewRawLines(args ...interface{}) []*RawLine {
-	rawlines := make([]*RawLine, len(args)/2)
-	j := 0
-	for i := 0; i < len(args); i += 2 {
-		lineno := args[i].(int)
-		orignl := args[i+1].(string)
-		textnl := orignl
-		if i+2 < len(args) {
-			if s, ok := args[i+2].(string); ok {
-				textnl = s
-				i++
-			}
-		}
-		rawlines[j] = &RawLine{lineno, orignl, textnl}
-		j++
-	}
-	return rawlines[:j]
-}
-
-func (s *Suite) NewLines(fname string, texts ...string) []Line {
-	result := make([]Line, len(texts))
-	for i, text := range texts {
-		textnl := text + "\n"
-		result[i] = NewLine(fname, i+1, text, s.NewRawLines(i+1, textnl))
-	}
-	return result
-}
-
-func (s *Suite) NewMkLines(fname string, lines ...string) *MkLines {
-	return NewMkLines(s.NewLines(fname, lines...))
-}
-
 func (s *Suite) BeginDebugToStdout() {
-	G.logOut = os.Stdout
+	G.logOut = NewSeparatorWriter(os.Stdout)
 	trace.Out = os.Stdout
 	trace.Tracing = true
 }
 
 func (s *Suite) EndDebugToStdout() {
-	G.logOut = &s.stdout
+	G.logOut = NewSeparatorWriter(&s.stdout)
 	trace.Out = &s.stdout
 	trace.Tracing = false
 }
 
+// UseCommandLine simulates a command line for the remainder of the test.
+// See Pkglint.ParseCommandLine
 func (s *Suite) UseCommandLine(args ...string) {
 	exitcode := new(Pkglint).ParseCommandLine(append([]string{"pkglint"}, args...))
 	if exitcode != nil && *exitcode != 0 {
+		s.CheckOutputEmpty()
 		s.c().Fatalf("Cannot parse command line: %#v", args)
 	}
 	G.opts.LogVerbose = true // See SetUpTest
@@ -200,7 +170,7 @@ func (s *Suite) ExpectFatalError(action func()) {
 func (s *Suite) SetUpTest(c *check.C) {
 	G = GlobalVars{Testing: true}
 	textproc.Testing = true
-	G.logOut, G.logErr, trace.Out = &s.stdout, &s.stderr, &s.stdout
+	G.logOut, G.logErr, trace.Out = NewSeparatorWriter(&s.stdout), NewSeparatorWriter(&s.stderr), &s.stdout
 	s.checkC = c
 	s.UseCommandLine( /* no arguments */ )
 	s.checkC = nil
@@ -219,3 +189,66 @@ func (s *Suite) TearDownTest(c *check.C) {
 var _ = check.Suite(new(Suite))
 
 func Test(t *testing.T) { check.TestingT(t) }
+
+var T TestObjectCreator
+
+type TestObjectCreator struct{}
+
+// Arguments are either (lineno, orignl) or (lineno, orignl, textnl).
+func (t TestObjectCreator) NewRawLines(args ...interface{}) []*RawLine {
+	rawlines := make([]*RawLine, len(args)/2)
+	j := 0
+	for i := 0; i < len(args); i += 2 {
+		lineno := args[i].(int)
+		orignl := args[i+1].(string)
+		textnl := orignl
+		if i+2 < len(args) {
+			if s, ok := args[i+2].(string); ok {
+				textnl = s
+				i++
+			}
+		}
+		rawlines[j] = &RawLine{lineno, orignl, textnl}
+		j++
+	}
+	return rawlines[:j]
+}
+
+func (t TestObjectCreator) NewLine(filename string, lineno int, text string) Line {
+	textnl := text + "\n"
+	rawLine := RawLine{lineno, textnl, textnl}
+	return NewLine(filename, lineno, text, []*RawLine{&rawLine})
+}
+
+func (t TestObjectCreator) NewMkLine(fileName string, lineno int, text string) MkLine {
+	return NewMkLine(t.NewLine(fileName, lineno, text))
+}
+
+func (t TestObjectCreator) NewShellLine(fileName string, lineno int, text string) *ShellLine {
+	return NewShellLine(t.NewMkLine(fileName, lineno, text))
+}
+
+// NewLines generates a slice of simple lines,
+// i.e. each logical line has exactly one physical line.
+// To work with line continuations like in Makefiles,
+// use Suite.CreateTmpFileLines together with Suite.LoadExistingLines.
+func (t TestObjectCreator) NewLines(fname string, texts ...string) []Line {
+	return t.NewLinesAt(fname, 1, texts...)
+}
+
+func (t TestObjectCreator) NewMkLines(fname string, lines ...string) *MkLines {
+	return NewMkLines(t.NewLines(fname, lines...))
+}
+
+// NewLinesAt generates a slice of simple lines,
+// i.e. each logical line has exactly one physical line.
+// To work with line continuations like in Makefiles,
+// use Suite.CreateTmpFileLines together with Suite.LoadExistingLines.
+func (t TestObjectCreator) NewLinesAt(fname string, firstLine int, texts ...string) []Line {
+	result := make([]Line, len(texts))
+	for i, text := range texts {
+		textnl := text + "\n"
+		result[i] = NewLine(fname, i+firstLine, text, t.NewRawLines(i+firstLine, textnl))
+	}
+	return result
+}

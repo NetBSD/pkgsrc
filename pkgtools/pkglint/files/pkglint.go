@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"io"
 	"netbsd.org/pkglint/getopt"
 	"netbsd.org/pkglint/histogram"
 	"netbsd.org/pkglint/regex"
@@ -19,7 +18,7 @@ const confMake = "@BMAKE@"
 const confVersion = "@VERSION@"
 
 func main() {
-	G.logOut, G.logErr, trace.Out = os.Stdout, os.Stderr, os.Stdout
+	G.logOut, G.logErr, trace.Out = NewSeparatorWriter(os.Stdout), NewSeparatorWriter(os.Stderr), os.Stdout
 	os.Exit(new(Pkglint).Main(os.Args...))
 }
 
@@ -51,7 +50,8 @@ func (pkglint *Pkglint) Main(args ...string) (exitcode int) {
 		regex.Profiling = true
 		G.loghisto = histogram.New()
 		defer func() {
-			G.loghisto.PrintStats("loghisto", G.logOut, 0)
+			G.logOut.Write("")
+			G.loghisto.PrintStats("loghisto", G.logOut.out, 0)
 			regex.PrintStats()
 		}()
 	}
@@ -99,6 +99,7 @@ func (pkglint *Pkglint) ParseCommandLine(args []string) *int {
 	opts.AddFlagVar('I', "dumpmakefile", &gopts.DumpMakefile, false, "dump the Makefile after parsing")
 	opts.AddFlagVar('i', "import", &gopts.Import, false, "prepare the import of a wip package")
 	opts.AddFlagVar('m', "log-verbose", &gopts.LogVerbose, false, "allow the same log message more than once")
+	opts.AddStrList('o', "only", &gopts.LogOnly, "only log messages containing the given text")
 	opts.AddFlagVar('p', "profiling", &gopts.Profiling, false, "profile the executing program")
 	opts.AddFlagVar('q', "quiet", &gopts.Quiet, false, "don't print a summary line when finishing")
 	opts.AddFlagVar('r', "recursive", &gopts.Recursive, false, "check subdirectories, too")
@@ -133,21 +134,21 @@ func (pkglint *Pkglint) ParseCommandLine(args []string) *int {
 
 	remainingArgs, err := opts.Parse(args)
 	if err != nil {
-		fmt.Fprintf(G.logErr, "%s\n\n", err)
-		opts.Help(G.logErr, "pkglint [options] dir...")
+		fmt.Fprintf(G.logErr.out, "%s\n\n", err)
+		opts.Help(G.logErr.out, "pkglint [options] dir...")
 		exitcode := 1
 		return &exitcode
 	}
 	gopts.args = remainingArgs
 
 	if gopts.PrintHelp {
-		opts.Help(G.logOut, "pkglint [options] dir...")
+		opts.Help(G.logOut.out, "pkglint [options] dir...")
 		exitcode := 0
 		return &exitcode
 	}
 
 	if G.opts.PrintVersion {
-		fmt.Fprintf(G.logOut, "%s\n", confVersion)
+		fmt.Fprintf(G.logOut.out, "%s\n", confVersion)
 		exitcode := 0
 		return &exitcode
 	}
@@ -158,20 +159,20 @@ func (pkglint *Pkglint) ParseCommandLine(args []string) *int {
 func (pkglint *Pkglint) PrintSummary() {
 	if !G.opts.Quiet {
 		if G.errors != 0 || G.warnings != 0 {
-			fmt.Fprintf(G.logOut, "%d %s and %d %s found.\n",
+			G.logOut.Printf("%d %s and %d %s found.\n",
 				G.errors, ifelseStr(G.errors == 1, "error", "errors"),
 				G.warnings, ifelseStr(G.warnings == 1, "warning", "warnings"))
 		} else {
-			io.WriteString(G.logOut, "Looks fine.\n")
+			G.logOut.WriteLine("Looks fine.")
 		}
 		if G.explanationsAvailable && !G.opts.Explain {
-			fmt.Fprint(G.logOut, "(Run \"pkglint -e\" to show explanations.)\n")
+			G.logOut.WriteLine("(Run \"pkglint -e\" to show explanations.)")
 		}
 		if G.autofixAvailable && !G.opts.PrintAutofix && !G.opts.Autofix {
-			fmt.Fprint(G.logOut, "(Run \"pkglint -fs\" to show what can be fixed automatically.)\n")
+			G.logOut.WriteLine("(Run \"pkglint -fs\" to show what can be fixed automatically.)")
 		}
 		if G.autofixAvailable && !G.opts.Autofix {
-			fmt.Fprint(G.logOut, "(Run \"pkglint -F\" to automatically fix some issues.)\n")
+			G.logOut.WriteLine("(Run \"pkglint -F\" to automatically fix some issues.)")
 		}
 	}
 }

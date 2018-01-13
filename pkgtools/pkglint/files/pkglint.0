@@ -14,20 +14,11 @@ DDEESSCCRRIIPPTTIIOONN
      --CC{{[[nnoo--]]cchheecckk,,......}}  Enable or disable specific checks.  For a list of
                          checks, see below.
 
-     --FF|----aauuttooffiixx        Repair trivial things automatically.
-
-     --II                  Show the _M_a_k_e_f_i_l_e that is constructed by including
-                         all the files that are slurped in via `.include'
-                         directives.  This flag is mainly for debugging.
-
-     --VV|----vveerrssiioonn        Print the current ppkkgglliinntt version number and exit.
-
-     --WW{{[[nnoo--]]wwaarrnn,,......}}   Enable or disable specific warnings.  For a list of
-                         warnings, see below.
-
      --dd|----ddeebbuugg          Enable or disable verbose log for debugging pkglint.
 
      --ee|----eexxppllaaiinn        Print verbose explanations for diagnostics.
+
+     --FF|----aauuttooffiixx        Repair some of the warnings automatically.
 
      --gg|----ggcccc--oouuttppuutt--ffoorrmmaatt
                          Use a format for the diagnostics that is understood
@@ -36,9 +27,19 @@ DDEESSCCRRIIPPTTIIOONN
 
      --hh|----hheellpp           Show the summary of command line options, then exit.
 
+     --II                  Show the _M_a_k_e_f_i_l_e that is constructed by including
+                         all the files that are slurped in via `.include'
+                         directives.  This flag is mainly for debugging.
+
      --ii|----iimmppoorrtt         Check if a package is ready to be imported into
                          pkgsrc.  This is especially useful for packages from
                          the pkgsrc-wip project.
+
+     --oo|----oonnllyy _s_u_b_s_t_r_i_n_g
+                         Only handle those diagnostics that have _s_u_b_s_t_r_i_n_g in
+                         their text.  This is useful in combination with
+                         ----aauuttooffiixx and ----rreeccuurrssiivvee,, to fix only a single kind
+                         of warning in a large number of files.
 
      --qq|----qquuiieett          Don't print the errors and warnings summary before
                          terminating.
@@ -50,6 +51,11 @@ DDEESSCCRRIIPPTTIIOONN
                          information, show the source code along with the
                          diagnostics.  This is especially useful together with
                          the --ff|----sshhooww--aauuttooffiixx option.
+
+     --VV|----vveerrssiioonn        Print the current ppkkgglliinntt version number and exit.
+
+     --WW{{[[nnoo--]]wwaarrnn,,......}}   Enable or disable specific warnings.  For a list of
+                         warnings, see below.
 
    CChheecckkss
      aallll                 Enable all checks.
@@ -146,7 +152,7 @@ AAUUTTHHOORRSS
      Roland Illig <_r_i_l_l_i_g_@_N_e_t_B_S_D_._o_r_g>
 
 BBUUGGSS
-     If you don't understand the messages, feel free to ask on the
-     <tech-pkg@NetBSD.org> mailing list.
+     If you don't understand the messages, feel free to ask the author or on
+     the <pkgsrc-users@pkgsrc.org> mailing list.
 
-NetBSD 7.0                       June 5, 2016                       NetBSD 7.0
+NetBSD 7.0.2                   January 14, 2018                   NetBSD 7.0.2

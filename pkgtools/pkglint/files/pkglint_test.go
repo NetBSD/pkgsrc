@@ -36,7 +36,7 @@ func (s *Suite) Test_Pkglint_Main_no_args(c *check.C) {
 func (s *Suite) Test_Pkglint_coverage(c *check.C) {
 	cmdline := os.Getenv("PKGLINT_TESTCMDLINE")
 	if cmdline != "" {
-		G.logOut, G.logErr, trace.Out = os.Stdout, os.Stderr, os.Stdout
+		G.logOut, G.logErr, trace.Out = NewSeparatorWriter(os.Stdout), NewSeparatorWriter(os.Stderr), os.Stdout
 		new(Pkglint).Main(append([]string{"pkglint"}, splitOnSpace(cmdline)...)...)
 	}
 }
@@ -82,7 +82,7 @@ func (s *Suite) Test_Pkglint_CheckDirent(c *check.C) {
 }
 
 func (s *Suite) Test_resolveVariableRefs__circular_reference(c *check.C) {
-	mkline := NewMkLine(NewLine("fname", 1, "GCC_VERSION=${GCC_VERSION}", nil))
+	mkline := T.NewMkLine("fname", 1, "GCC_VERSION=${GCC_VERSION}")
 	G.Pkg = NewPackage(".")
 	G.Pkg.vardef["GCC_VERSION"] = mkline
 
@@ -92,9 +92,9 @@ func (s *Suite) Test_resolveVariableRefs__circular_reference(c *check.C) {
 }
 
 func (s *Suite) Test_resolveVariableRefs__multilevel(c *check.C) {
-	mkline1 := NewMkLine(NewLine("fname", 10, "_=${SECOND}", nil))
-	mkline2 := NewMkLine(NewLine("fname", 11, "_=${THIRD}", nil))
-	mkline3 := NewMkLine(NewLine("fname", 12, "_=got it", nil))
+	mkline1 := T.NewMkLine("fname", 10, "_=${SECOND}")
+	mkline2 := T.NewMkLine("fname", 11, "_=${THIRD}")
+	mkline3 := T.NewMkLine("fname", 12, "_=got it")
 	G.Pkg = NewPackage(".")
 	defineVar(mkline1, "FIRST")
 	defineVar(mkline2, "SECOND")
@@ -106,7 +106,7 @@ func (s *Suite) Test_resolveVariableRefs__multilevel(c *check.C) {
 }
 
 func (s *Suite) Test_resolveVariableRefs__special_chars(c *check.C) {
-	mkline := NewMkLine(NewLine("fname", 10, "_=x11", nil))
+	mkline := T.NewMkLine("fname", 10, "_=x11")
 	G.Pkg = NewPackage("category/pkg")
 	G.Pkg.vardef["GST_PLUGINS0.10_TYPE"] = mkline
 
@@ -117,7 +117,7 @@ func (s *Suite) Test_resolveVariableRefs__special_chars(c *check.C) {
 
 func (s *Suite) Test_ChecklinesDescr(c *check.C) {
 	s.Init(c)
-	lines := s.NewLines("DESCR",
+	lines := T.NewLines("DESCR",
 		strings.Repeat("X", 90),
 		"", "", "", "", "", "", "", "", "10",
 		"Try ${PREFIX}",
@@ -134,7 +134,7 @@ func (s *Suite) Test_ChecklinesDescr(c *check.C) {
 
 func (s *Suite) Test_ChecklinesMessage__short(c *check.C) {
 	s.Init(c)
-	lines := s.NewLines("MESSAGE",
+	lines := T.NewLines("MESSAGE",
 		"one line")
 
 	ChecklinesMessage(lines)
@@ -145,7 +145,7 @@ func (s *Suite) Test_ChecklinesMessage__short(c *check.C) {
 
 func (s *Suite) Test_ChecklinesMessage__malformed(c *check.C) {
 	s.Init(c)
-	lines := s.NewLines("MESSAGE",
+	lines := T.NewLines("MESSAGE",
 		"1",
 		"2",
 		"3",

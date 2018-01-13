@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	check "gopkg.in/check.v1"
+	"gopkg.in/check.v1"
 )
 
 func (s *Suite) Test_VartypeCheck_AwkCommand(c *check.C) {
@@ -535,7 +535,7 @@ func runVartypeChecks(varname string, op MkOperator, checker func(*VartypeCheck)
 		panic("runVartypeChecks needs an assignment operator")
 	}
 	for i, value := range values {
-		mkline := NewMkLine(NewLine("fname", i+1, varname+op.String()+value, nil))
+		mkline := T.NewMkLine("fname", i+1, varname+op.String()+value)
 		valueNovar := mkline.WithoutMakeVariables(mkline.Value())
 		vc := &VartypeCheck{mkline, mkline.Line, mkline.Varname(), mkline.Op(), mkline.Value(), valueNovar, "", false}
 		checker(vc)
@@ -545,7 +545,7 @@ func runVartypeChecks(varname string, op MkOperator, checker func(*VartypeCheck)
 func runVartypeMatchChecks(varname string, checker func(*VartypeCheck), values ...string) {
 	for i, value := range values {
 		text := fmt.Sprintf(".if ${%s:M%s} == \"\"", varname, value)
-		mkline := NewMkLine(NewLine("fname", i+1, text, nil))
+		mkline := T.NewMkLine("fname", i+1, text)
 		valueNovar := mkline.WithoutMakeVariables(value)
 		vc := &VartypeCheck{mkline, mkline.Line, varname, opUseMatch, value, valueNovar, "", false}
 		checker(vc)
@@ -554,7 +554,7 @@ func runVartypeMatchChecks(varname string, checker func(*VartypeCheck), values .
 
 func runVartypeChecksFname(fname, varname string, op MkOperator, checker func(*VartypeCheck), values ...string) {
 	for i, value := range values {
-		mkline := NewMkLine(NewLine(fname, i+1, varname+op.String()+value, nil))
+		mkline := T.NewMkLine(fname, i+1, varname+op.String()+value)
 		valueNovar := mkline.WithoutMakeVariables(value)
 		vc := &VartypeCheck{mkline, mkline.Line, varname, op, value, valueNovar, "", false}
 		checker(vc)

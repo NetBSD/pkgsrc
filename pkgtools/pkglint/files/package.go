@@ -414,6 +414,9 @@ func (pkg *Package) checkfilePackageMakefile(fname string, mklines *MkLines) {
 			// probably contains a statement that C is
 			// really not needed.
 
+		} else if !G.Infrastructure && useLine.Filename == "../../mk/compiler.mk" {
+			// Ignore this one
+
 		} else if !matches(useLine.Value(), `(?:^|\s+)(?:c|c99|objc)(?:\s+|$)`) {
 			gnuLine.Warnf("GNU_CONFIGURE almost always needs a C compiler, but \"c\" is not added to USE_LANGUAGES in %s.",
 				useLine.ReferenceFrom(gnuLine.Line))
@@ -804,19 +807,20 @@ func (mklines *MkLines) checkForUsedComment(relativeName string) {
 		i++
 	}
 
-	insertLine := lines[i]
-	if !insertLine.AutofixInsertBefore(expected) {
-		insertLine.Warnf("Please add a line %q here.", expected)
-		Explain(
-			"Since Makefile.common files usually don't have any comments and",
-			"therefore not a clearly defined interface, they should at least",
-			"contain references to all files that include them, so that it is",
-			"easier to see what effects future changes may have.",
-			"",
-			"If there are more than five packages that use a Makefile.common,",
-			"you should think about giving it a proper name (maybe plugin.mk) and",
-			"documenting its interface.")
-	}
+	fix := lines[i].Autofix()
+	fix.Warnf("Please add a line %q here.", expected)
+	fix.Explain(
+		"Since Makefile.common files usually don't have any comments and",
+		"therefore not a clearly defined interface, they should at least",
+		"contain references to all files that include them, so that it is",
+		"easier to see what effects future changes may have.",
+		"",
+		"If there are more than five packages that use a Makefile.common,",
+		"you should think about giving it a proper name (maybe plugin.mk) and",
+		"documenting its interface.")
+	fix.InsertBefore(expected)
+	fix.Apply()
+
 	SaveAutofixChanges(lines)
 }
 

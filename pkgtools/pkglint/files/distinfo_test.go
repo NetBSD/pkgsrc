@@ -1,8 +1,6 @@
 package main
 
-import (
-	check "gopkg.in/check.v1"
-)
+import "gopkg.in/check.v1"
 
 func (s *Suite) Test_ChecklinesDistinfo(c *check.C) {
 	s.Init(c)
@@ -13,7 +11,7 @@ func (s *Suite) Test_ChecklinesDistinfo(c *check.C) {
 		"patch contents\n")
 	G.CurrentDir = s.tmpdir
 
-	ChecklinesDistinfo(s.NewLines("distinfo",
+	ChecklinesDistinfo(T.NewLines("distinfo",
 		"should be the RCS ID",
 		"should be empty",
 		"MD5 (distfile.tar.gz) = 12345678901234567890123456789012",
@@ -31,11 +29,11 @@ func (s *Suite) Test_ChecklinesDistinfo(c *check.C) {
 
 func (s *Suite) Test_ChecklinesDistinfo_global_hash_mismatch(c *check.C) {
 	s.Init(c)
-	otherLine := NewLine("other/distinfo", 7, "dummy", nil)
+	otherLine := T.NewLine("other/distinfo", 7, "dummy")
 	G.Hash = make(map[string]*Hash)
 	G.Hash["SHA512:pkgname-1.0.tar.gz"] = &Hash{"asdfasdf", otherLine}
 
-	ChecklinesDistinfo(s.NewLines("distinfo",
+	ChecklinesDistinfo(T.NewLines("distinfo",
 		"$"+"NetBSD$",
 		"",
 		"SHA512 (pkgname-1.0.tar.gz) = 12341234"))
@@ -59,7 +57,7 @@ func (s *Suite) Test_ChecklinesDistinfo_uncommitted_patch(c *check.C) {
 		"/distinfo/...\n")
 	G.CurrentDir = s.tmpdir
 
-	ChecklinesDistinfo(s.NewLines(s.tmpdir+"/distinfo",
+	ChecklinesDistinfo(T.NewLines(s.tmpdir+"/distinfo",
 		"$"+"NetBSD$",
 		"",
 		"SHA1 (patch-aa) = 5ad1fb9b3c328fff5caa1a23e8f330e707dd50c0"))
@@ -75,7 +73,7 @@ func (s *Suite) Test_ChecklinesDistinfo_unrecorded_patches(c *check.C) {
 	s.CreateTmpFile("patches/patch-src-Makefile", "")
 	G.CurrentDir = s.tmpdir
 
-	ChecklinesDistinfo(s.NewLines(s.tmpdir+"/distinfo",
+	ChecklinesDistinfo(T.NewLines(s.tmpdir+"/distinfo",
 		"$"+"NetBSD$",
 		"",
 		"SHA1 (distfile.tar.gz) = ...",
@@ -93,7 +91,7 @@ func (s *Suite) Test_ChecklinesDistinfo_manual_patches(c *check.C) {
 	s.CreateTmpFile("patches/manual-libtool.m4", "")
 	G.CurrentDir = s.tmpdir
 
-	ChecklinesDistinfo(s.NewLines(s.tmpdir+"/distinfo",
+	ChecklinesDistinfo(T.NewLines(s.tmpdir+"/distinfo",
 		"$"+"NetBSD$",
 		"",
 		"SHA1 (patch-aa) = ..."))
