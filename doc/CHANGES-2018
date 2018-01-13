@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.202 2018/01/13 16:12:32 leot Exp $
+$NetBSD: CHANGES-2018,v 1.203 2018/01/13 19:00:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -279,3 +279,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/qpdfview to 0.4.16nb18 [wiz 2018-01-13]
 	Updated chat/scrollz to 2.2.3nb4 [wiz 2018-01-13]
 	Updated net/gallery-dl to 1.1.2 [leot 2018-01-13]
+	Updated net/zeromq to 4.2.3 [adam 2018-01-13]
+	Updated archivers/lz4 to 1.8.1 [adam 2018-01-13]
