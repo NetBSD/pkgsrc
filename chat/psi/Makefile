@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2016/03/05 11:28:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.84 2018/01/13 23:18:26 rillig Exp $
 
 DISTNAME=	psi-0.15
 PKGREVISION=	9
@@ -23,8 +23,8 @@ HAS_CONFIGURE=	yes
 
 CONFIG_SHELL=	${SH}
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
-CONFIGURE_ARGS+=	--qtdir=${QTDIR:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--qtdir=${QTDIR}
 CONFIGURE_ARGS+=	--with-zlib-inc=${BUILDLINK_PREFIX.zlib}/include
 CONFIGURE_ARGS+=	--with-zlib-lib=${BUILDLINK_PREFIX.zlib}/lib
 CONFIGURE_ARGS+=	--with-qca-lib=${BUILDLINK_PREFIX.qca2}/lib
