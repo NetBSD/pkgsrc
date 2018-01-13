@@ -1,4 +1,4 @@
-$NetBSD
+$NetBSD: patch-aa,v 1.2 2018/01/13 08:59:44 jperkin Exp $
 
 - Build fix for apache 2.4
 - Add HTTP method in environement
