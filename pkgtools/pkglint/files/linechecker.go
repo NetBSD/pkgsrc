@@ -49,12 +49,13 @@ func CheckLineValidCharacters(line Line, reChar regex.Pattern) {
 
 func CheckLineTrailingWhitespace(line Line) {
 	if strings.HasSuffix(line.Text, " ") || strings.HasSuffix(line.Text, "\t") {
-		if !line.AutofixReplaceRegexp(`\s+\n$`, "\n") {
-			line.Notef("Trailing white-space.")
-			Explain(
-				"When a line ends with some white-space, that space is in most cases",
-				"irrelevant and can be removed.")
-		}
+		fix := line.Autofix()
+		fix.Notef("Trailing white-space.")
+		fix.Explain(
+			"When a line ends with some white-space, that space is in most cases",
+			"irrelevant and can be removed.")
+		fix.ReplaceRegex(`\s+\n$`, "\n")
+		fix.Apply()
 	}
 }
 
@@ -67,13 +68,15 @@ func CheckLineRcsid(line Line, prefixRe regex.Pattern, suggestedPrefix string) b
 		return true
 	}
 
-	if !line.AutofixInsertBefore(suggestedPrefix + "$" + "NetBSD$") {
-		line.Errorf("Expected %q.", suggestedPrefix+"$"+"NetBSD$")
-		Explain(
-			"Several files in pkgsrc must contain the CVS Id, so that their",
-			"current version can be traced back later from a binary package.",
-			"This is to ensure reproducible builds, for example for finding bugs.")
-	}
+	fix := line.Autofix()
+	fix.Errorf("Expected %q.", suggestedPrefix+"$"+"NetBSD$")
+	fix.Explain(
+		"Several files in pkgsrc must contain the CVS Id, so that their",
+		"current version can be traced back later from a binary package.",
+		"This is to ensure reproducible builds, for example for finding bugs.")
+	fix.InsertBefore(suggestedPrefix + "$" + "NetBSD$")
+	fix.Apply()
+
 	return false
 }
 

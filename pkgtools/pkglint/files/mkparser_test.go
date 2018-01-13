@@ -7,7 +7,8 @@ import (
 func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
 	s.Init(c)
 	checkRest := func(input string, expectedTokens []*MkToken, expectedRest string) {
-		p := NewMkParser(dummyLine, input, true)
+		line := T.NewLines("Test_MkParser_MkTokens.mk", input)[0]
+		p := NewMkParser(line, input, true)
 		actualTokens := p.MkTokens()
 		c.Check(actualTokens, deepEquals, expectedTokens)
 		for i, expectedToken := range expectedTokens {
@@ -110,7 +111,7 @@ func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
 
 	check("$(GNUSTEP_USER_ROOT)", varuseText("$(GNUSTEP_USER_ROOT)", "GNUSTEP_USER_ROOT"))
 	s.CheckOutputLines(
-		"WARN: Please use curly braces {} instead of round parentheses () for GNUSTEP_USER_ROOT.")
+		"WARN: Test_MkParser_MkTokens.mk:1: Please use curly braces {} instead of round parentheses () for GNUSTEP_USER_ROOT.")
 
 	checkRest("${VAR)", nil, "${VAR)") // Opening brace, closing parenthesis
 	checkRest("$(VAR}", nil, "$(VAR}") // Opening parenthesis, closing brace
@@ -119,7 +120,7 @@ func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
 	check("${PLIST_SUBST_VARS:@var@${var}=${${var}:Q}@}", varuse("PLIST_SUBST_VARS", "@var@${var}=${${var}:Q}@"))
 	check("${PLIST_SUBST_VARS:@var@${var}=${${var}:Q}}", varuse("PLIST_SUBST_VARS", "@var@${var}=${${var}:Q}")) // Missing @ at the end
 	s.CheckOutputLines(
-		"WARN: Modifier ${PLIST_SUBST_VARS:@var@...@} is missing the final \"@\".")
+		"WARN: Test_MkParser_MkTokens.mk:1: Modifier ${PLIST_SUBST_VARS:@var@...@} is missing the final \"@\".")
 
 	checkRest("hello, ${W:L:tl}orld", []*MkToken{
 		literal("hello, "),
@@ -220,7 +221,7 @@ func (s *Suite) Test_MkParser__varuse_parentheses_autofix(c *check.C) {
 	s.UseCommandLine("--autofix")
 	G.globalData.InitVartypes()
 	filename := s.CreateTmpFile("Makefile", "")
-	mklines := s.NewMkLines(filename,
+	mklines := T.NewMkLines(filename,
 		mkrcsid,
 		"COMMENT=$(P1) $(P2)) $(P3:Q) ${BRACES}")
 

@@ -6,7 +6,7 @@ import (
 
 func (s *Suite) Test_LineChecker_CheckAbsolutePathname(c *check.C) {
 	s.Init(c)
-	line := NewLine("Makefile", 1, "# dummy", nil)
+	line := T.NewLine("Makefile", 1, "# dummy")
 
 	CheckLineAbsolutePathname(line, "bindir=/bin")
 	CheckLineAbsolutePathname(line, "bindir=/../lib")
@@ -17,7 +17,7 @@ func (s *Suite) Test_LineChecker_CheckAbsolutePathname(c *check.C) {
 
 func (s *Suite) Test_LineChecker_CheckTrailingWhitespace(c *check.C) {
 	s.Init(c)
-	line := NewLine("Makefile", 32, "The line must go on   ", nil)
+	line := T.NewLine("Makefile", 32, "The line must go on   ")
 
 	CheckLineTrailingWhitespace(line)
 
@@ -27,7 +27,7 @@ func (s *Suite) Test_LineChecker_CheckTrailingWhitespace(c *check.C) {
 
 func (s *Suite) Test_LineChecker_CheckRcsid(c *check.C) {
 	s.Init(c)
-	lines := s.NewLines("fname",
+	lines := T.NewLines("fname",
 		"$"+"NetBSD: dummy $",
 		"$"+"NetBSD$",
 		"$"+"Id: dummy $",

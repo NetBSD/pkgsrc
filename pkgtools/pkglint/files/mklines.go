@@ -336,30 +336,31 @@ func (va *VaralignBlock) fixalign(mkline MkLine, prefix, oldalign string) {
 		return
 	}
 
-	if !mkline.AutofixReplace(prefix+oldalign, prefix+newalign) {
-		wrongColumn := tabLength(prefix+oldalign) != tabLength(prefix+newalign)
-		switch {
-		case hasSpace && wrongColumn:
-			mkline.Notef("This variable value should be aligned with tabs, not spaces, to column %d.", goodWidth+1)
-		case hasSpace:
-			mkline.Notef("Variable values should be aligned with tabs, not spaces.")
-		case wrongColumn:
-			mkline.Notef("This variable value should be aligned to column %d.", goodWidth+1)
-		}
-		if wrongColumn {
-			Explain(
-				"Normally, all variable values in a block should start at the same",
-				"column.  There are some exceptions to this rule:",
-				"",
-				"Definitions for long variable names may be indented with a single",
-				"space instead of tabs, but only if they appear in a block that is",
-				"otherwise indented using tabs.",
-				"",
-				"Variable definitions that span multiple lines are not checked for",
-				"alignment at all.",
-				"",
-				"When the block contains something else than variable definitions,",
-				"it is not checked at all.")
-		}
+	fix := mkline.Line.Autofix()
+	wrongColumn := tabLength(prefix+oldalign) != tabLength(prefix+newalign)
+	switch {
+	case hasSpace && wrongColumn:
+		fix.Notef("This variable value should be aligned with tabs, not spaces, to column %d.", goodWidth+1)
+	case hasSpace:
+		fix.Notef("Variable values should be aligned with tabs, not spaces.")
+	case wrongColumn:
+		fix.Notef("This variable value should be aligned to column %d.", goodWidth+1)
 	}
+	if wrongColumn {
+		fix.Explain(
+			"Normally, all variable values in a block should start at the same",
+			"column.  There are some exceptions to this rule:",
+			"",
+			"Definitions for long variable names may be indented with a single",
+			"space instead of tabs, but only if they appear in a block that is",
+			"otherwise indented using tabs.",
+			"",
+			"Variable definitions that span multiple lines are not checked for",
+			"alignment at all.",
+			"",
+			"When the block contains something else than variable definitions,",
+			"it is not checked at all.")
+	}
+	fix.Replace(prefix+oldalign, prefix+newalign)
+	fix.Apply()
 }

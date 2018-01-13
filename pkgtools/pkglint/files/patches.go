@@ -181,9 +181,10 @@ func (ck *PatchChecker) checkBeginDiff(line Line, patchedFiles int) {
 			"be mentioned in this file, to prevent duplicate work.")
 	}
 	if G.opts.WarnSpace && !ck.previousLineEmpty {
-		if !line.AutofixInsertBefore("") {
-			line.Notef("Empty line expected.")
-		}
+		fix := line.Autofix()
+		fix.Notef("Empty line expected.")
+		fix.InsertBefore("")
+		fix.Apply()
 	}
 }
 
@@ -235,11 +236,12 @@ func (ck *PatchChecker) checktextUniHunkCr() {
 
 	line := ck.exp.PreviousLine()
 	if hasSuffix(line.Text, "\r") {
-		if !line.AutofixReplace("\r\n", "\n") {
-			line.Errorf("The hunk header must not end with a CR character.")
-			Explain(
-				"The MacOS X patch utility cannot handle these.")
-		}
+		fix := line.Autofix()
+		fix.Errorf("The hunk header must not end with a CR character.")
+		fix.Explain(
+			"The MacOS X patch utility cannot handle these.")
+		fix.Replace("\r\n", "\n")
+		fix.Apply()
 	}
 }
 
