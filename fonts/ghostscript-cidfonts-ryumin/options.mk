@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2012/10/07 14:22:52 mef Exp $
+# $NetBSD: options.mk,v 1.2 2018/01/13 01:09:16 ryoon Exp $
 
 # gcr = ghostscript-cidfonts-ryumin
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcr_type
@@ -20,14 +20,14 @@ GCR_INSTALL_TYPE= adobe
 # -------- motoya-fonts (TTF) requested -------------
 .if !empty(PKG_OPTIONS:Mmotoya)
 GS_CIDFMAP=	cidfmap-motoya
-DEPENDS+=	ipafont-[0-9]*:../../fonts/motoya-fonts
+DEPENDS+=	motoya-fonts-[0-9]*:../../fonts/motoya-fonts
 GCR_INSTALL_TYPE= ttf
 .endif
 
 # -------- umefont (TTF) requested -------------
 .if !empty(PKG_OPTIONS:Mumefont)
 GS_CIDFMAP=	cidfmap-umefont
-DEPENDS+=	ipafont-[0-9]*:../../fonts/umefont-ttf
+DEPENDS+=	umefont-ttf-[0-9]*:../../fonts/umefont-ttf
 GCR_INSTALL_TYPE= ttf
 .endif
 
