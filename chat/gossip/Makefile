@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2017/11/23 17:19:49 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2018/01/13 23:18:26 rillig Exp $
 #
 
 DISTNAME=	gossip-0.10.2
@@ -18,7 +18,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 GCONF_SCHEMAS=		gossip.schemas
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/01/11 14:42:01 adam Exp $
+# $NetBSD: Makefile,v 1.37 2018/01/13 23:18:25 rillig Exp $
 
 DISTNAME=	eggdrop1.6.21
 PKGNAME=	eggdrop-1.6.21
@@ -16,7 +16,7 @@ MAKE_JOBS_SAFE=	no
 
 PLIST_VARS=		dynamic
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		TCLLIB="${PREFIX}/lib" TCLINC="${PREFIX}/include"
 
 .include "../../mk/bsd.prefs.mk"
