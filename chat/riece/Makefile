@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/01/04 16:36:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2018/01/13 23:18:26 rillig Exp $
 #
 
 DISTNAME=	riece-9.0.0
@@ -24,11 +24,11 @@ GNU_CONFIGURE=	YES
 INFO_FILES=	yes
 
 # --with-emacs=... or --with-xemacs=...
-CONFIGURE_ARGS+=	--with-${EMACS_FLAVOR}=${EMACS_BIN:Q}
+CONFIGURE_ARGS+=	--with-${EMACS_FLAVOR}=${EMACS_BIN}
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${EMACS_FLAVOR}}
 
 # Riece digs sub directory.
-CONFIGURE_ARGS.emacs=	--with-lispdir=${EMACS_LISPPREFIX:Q}
+CONFIGURE_ARGS.emacs=	--with-lispdir=${EMACS_LISPPREFIX}
 CONFIGURE_ARGS.xemacs=	--with-packagedir=${EMACS_LISPPREFIX:C|/lisp\$||}
 
 do-install: plist

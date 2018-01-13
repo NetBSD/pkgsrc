@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/02/17 19:17:57 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2018/01/13 23:18:27 rillig Exp $
 #
 
 DISTNAME=	zenirc-2.112
@@ -19,6 +19,6 @@ CONFIGURE_HAS_MANDIR=	NO
 .if ${EMACS_FLAVOR} == "xemacs"
 MAKE_FLAGS+=	EMACS=xemacs
 .endif
-MAKE_FLAGS+=	elispdir=${DESTDIR:Q}${EMACS_LISPPREFIX:Q}/zenirc
+MAKE_FLAGS+=	elispdir=${DESTDIR}${EMACS_LISPPREFIX}/zenirc
 
 .include "../../mk/bsd.pkg.mk"
