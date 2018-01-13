@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2017/12/01 21:43:15 sevan Exp $
+# $NetBSD: Makefile,v 1.26 2018/01/13 04:56:43 tsutsui Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg3/}
+PKGREVISION=	1
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
 COMMENT=	Decoding, encoding and streaming software (v3.x)
@@ -8,6 +9,7 @@ COMMENT=	Decoding, encoding and streaming software (v3.x)
 CONFIGURE_ARGS+=	--enable-avfilter
 CONFIGURE_ARGS+=	--enable-avresample
 CONFIGURE_ARGS+=	--enable-postproc
+CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--disable-ffplay
 
 INSTALLATION_DIRS=	lib/ffmpeg3 share/doc/ffmpeg3 share/examples/ffmpeg3
