@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/12/30 10:31:19 leot Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/13 16:12:19 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -144,6 +144,9 @@ ${PYSITELIB}/gallery_dl/extractor/hentaihere.pyo
 ${PYSITELIB}/gallery_dl/extractor/hitomi.py
 ${PYSITELIB}/gallery_dl/extractor/hitomi.pyc
 ${PYSITELIB}/gallery_dl/extractor/hitomi.pyo
+${PYSITELIB}/gallery_dl/extractor/idolcomplex.py
+${PYSITELIB}/gallery_dl/extractor/idolcomplex.pyc
+${PYSITELIB}/gallery_dl/extractor/idolcomplex.pyo
 ${PYSITELIB}/gallery_dl/extractor/imagebam.py
 ${PYSITELIB}/gallery_dl/extractor/imagebam.pyc
 ${PYSITELIB}/gallery_dl/extractor/imagebam.pyo
@@ -231,6 +234,9 @@ ${PYSITELIB}/gallery_dl/extractor/pixiv.pyo
 ${PYSITELIB}/gallery_dl/extractor/powermanga.py
 ${PYSITELIB}/gallery_dl/extractor/powermanga.pyc
 ${PYSITELIB}/gallery_dl/extractor/powermanga.pyo
+${PYSITELIB}/gallery_dl/extractor/puremashiro.py
+${PYSITELIB}/gallery_dl/extractor/puremashiro.pyc
+${PYSITELIB}/gallery_dl/extractor/puremashiro.pyo
 ${PYSITELIB}/gallery_dl/extractor/readcomiconline.py
 ${PYSITELIB}/gallery_dl/extractor/readcomiconline.pyc
 ${PYSITELIB}/gallery_dl/extractor/readcomiconline.pyo
