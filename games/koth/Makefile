@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/01/14 15:26:47 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2018/01/14 17:33:59 rillig Exp $
 #
 
 DISTNAME=	koth-0.8.0
@@ -12,8 +12,8 @@ HOMEPAGE=	http://www.nongnu.org/koth/
 COMMENT=	The classic "shoot the other tank" artillery game, networked
 
 PTHREAD_AUTO_VARS=	yes
-GNU_CONFIGURE=	YES
-CPPFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
+GNU_CONFIGURE=		YES
+CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 EGDIR=		${PREFIX}/share/examples/koth
 CONF_FILES=	${EGDIR}/koth.cfg ${PKG_SYSCONFDIR}/koth.cfg

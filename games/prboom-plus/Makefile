@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/25 14:23:02 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2018/01/14 17:34:01 rillig Exp $
 
 DISTNAME=	prboom-plus-2.5.1.3
 PKGREVISION=	1
@@ -17,7 +17,7 @@ SUBST_CLASSES+=		gamesdir
 SUBST_STAGE.gamesdir=	post-patch
 SUBST_MESSAGE.gamesdir=	Fixing hard-coded gamesdir
 SUBST_FILES.gamesdir=	src/Makefile.in
-SUBST_SED.gamesdir+=-e '/^gamesdir =/ s;/games;/bin;g'
+SUBST_SED.gamesdir+=	-e '/^gamesdir =/ s;/games;/bin;g'
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../net/SDL_net/buildlink3.mk"

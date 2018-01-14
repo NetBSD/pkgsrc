@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/09/06 10:40:28 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2018/01/14 17:34:02 rillig Exp $
 #
 
 DISTNAME=	urban-1.5.3
@@ -14,7 +14,7 @@ COMMENT=	U.R.B.A.N The Cyborg Project
 PTHREAD_AUTO_VARS=	yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=	pax
+USE_TOOLS+=		pax
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 INSTALLATION_DIRS=	share/urban

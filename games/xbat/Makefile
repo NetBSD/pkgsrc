@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/09/06 10:40:28 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2018/01/14 17:34:02 rillig Exp $
 
 DISTNAME=	xev111
 PKGNAME=	xbat-1.11
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.nemoto.ecei.tohoku.ac.jp/~wai/index_e.html
 COMMENT=	XEVIOUS like shooting game
 
-RESTRICTED=	Possible copyright infringement
+RESTRICTED=		Possible copyright infringement
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
@@ -47,7 +47,7 @@ MAKE_FLAGS+=	UNION=0
 .elif ${MACHINE_ENDIAN} == "little"
 MAKE_FLAGS+=	UNION=1
 .else
-BROKEN=	Unknown endianness
+BROKEN=		Unknown endianness
 .endif
 
 post-install:

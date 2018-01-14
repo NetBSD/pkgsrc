@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/06 11:55:04 asau Exp $
+# $NetBSD: Makefile,v 1.18 2018/01/14 17:34:02 rillig Exp $
 
 DISTNAME=	xvier
 PKGNAME=	xvier-1.0
@@ -11,8 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=
 COMMENT=	Four-in-a-row game
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-USE_IMAKE=	YES
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+USE_IMAKE=		YES
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
 INSTALLATION_DIRS+=	bin libexec ${PKGMANDIR}/man6

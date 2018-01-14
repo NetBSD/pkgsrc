@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/01/14 15:26:47 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2018/01/14 17:34:00 rillig Exp $
 
 DISTNAME=		monsterz-0.7.1
 PKGREVISION=		4
@@ -12,7 +12,7 @@ COMMENT=		Puzzle game similar to the famous Bejeweled or Zookeeper
 DEPENDS+=		${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
 DEPENDS+=		${PYPKGPREFIX}-Numeric-[0-9]*:../../math/py-Numeric
 
-REPLACE_PYTHON=	monsterz.py
+REPLACE_PYTHON=			monsterz.py
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-Numeric
 
 MAKE_ENV+=		GAMEOWN=${GAMEOWN:Q}

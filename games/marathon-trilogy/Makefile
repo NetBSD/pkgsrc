@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/06 11:54:47 asau Exp $
+# $NetBSD: Makefile,v 1.3 2018/01/14 17:34:00 rillig Exp $
 #
 
 # This number is rather arbitrary and only for pkgsrc's benefit.
@@ -20,7 +20,7 @@ LICENSE=	generic-nonlicense
 
 SCENARIO_BASE=		share/AlephOne/Scenarios
 .for scenario in 1 2 Infinity
-INSTALLATION_DIRS+= ${SCENARIO_BASE}/${scenario} ${SCENARIO_BASE}/${scenario}/Physics\ Models ${SCENARIO_BASE}/${scenario}/Scripts ${SCENARIO_BASE}/${scenario}/Themes ${SCENARIO_BASE}/${scenario}/Tracks
+INSTALLATION_DIRS+=	${SCENARIO_BASE}/${scenario} ${SCENARIO_BASE}/${scenario}/Physics\ Models ${SCENARIO_BASE}/${scenario}/Scripts ${SCENARIO_BASE}/${scenario}/Themes ${SCENARIO_BASE}/${scenario}/Tracks
 .endfor
 
 NO_CONFIGURE=	yes
