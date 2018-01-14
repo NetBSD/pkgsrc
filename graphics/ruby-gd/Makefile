@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2017/06/02 04:16:35 taca Exp $
+# $NetBSD: Makefile,v 1.50 2018/01/14 14:58:40 rillig Exp $
 
 DISTNAME=	ruby-gd-0.8.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -12,11 +12,11 @@ LICENSE=	ruby-license
 
 GEM_CLEANBUILD=	Makefile *.o GD.${RUBY_DLEXT} mkmf.log .*.time
 
-CONFIGURE_ARGS+=	--with-gd-dir=${BUILDLINK_PREFIX.gd:Q}
+CONFIGURE_ARGS+=	--with-gd-dir=${BUILDLINK_PREFIX.gd}
 CONFIGURE_ARGS+=	--with-jpeg
 CONFIGURE_ARGS+=	--with-jpeg-dir=${JPEGBASE:Q}
 CONFIGURE_ARGS+=	--with-freetype
-CONFIGURE_ARGS+=	--with-freetype-dir=${BUILDLINK_PREFIX.freetype2:Q}
+CONFIGURE_ARGS+=	--with-freetype-dir=${BUILDLINK_PREFIX.freetype2}
 CONFIGURE_ARGS+=	--enable-gd2_0
 CONFIGURE_ARGS+=	--with-ldflags=${COMPILER_RPATH_FLAG}${X11BASE}/lib
 
