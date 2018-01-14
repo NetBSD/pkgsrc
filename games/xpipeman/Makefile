@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/04/07 23:34:40 pgoyette Exp $
+# $NetBSD: Makefile,v 1.23 2018/01/14 17:34:02 rillig Exp $
 #
 
 DISTNAME=	xpipeman-1.5
@@ -22,7 +22,7 @@ REQD_DIRS_PERMS=	share/xpipeman ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6 share/xpipeman
 
-NOT_PAX_MPROTECT_SAFE+=   bin/xpipeman
+NOT_PAX_MPROTECT_SAFE+=	bin/xpipeman
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xpipeman ${DESTDIR}${PREFIX}/bin/xpipeman

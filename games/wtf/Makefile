@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/04/23 17:16:29 agc Exp $
+# $NetBSD: Makefile,v 1.4 2018/01/14 17:34:02 rillig Exp $
 #
 
 DISTNAME=	wtf-20150206
@@ -20,7 +20,7 @@ SUBST_STAGE.paths=	pre-configure
 
 REPLACE_SH=		wtf
 
-INSTALLATION_DIRS+= 	bin share/wtf ${PKGMANDIR}/man6
+INSTALLATION_DIRS+=	bin share/wtf ${PKGMANDIR}/man6
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/wtf ${DESTDIR}${PREFIX}/bin
