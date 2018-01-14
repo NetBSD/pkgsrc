@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.213 2018/01/14 15:30:00 maya Exp $
+$NetBSD: CHANGES-2018,v 1.214 2018/01/14 16:00:45 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -293,3 +293,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-blessings to 1.6.1 [adam 2018-01-14]
 	Updated graphics/py-dot to 1.2.4 [adam 2018-01-14]
 	Updated security/sudo to 1.8.21p2nb1 [maya 2018-01-14]
+	Updated chat/py-hangups to 0.4.4 [leot 2018-01-14]
