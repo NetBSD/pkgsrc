@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.31 2018/01/12 12:26:00 adam Exp $
+# $NetBSD: Makefile,v 1.32 2018/01/14 11:09:17 adam Exp $
 
-DISTNAME=	cffi-1.11.3
+DISTNAME=	cffi-1.11.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cffi/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/cffi/
+HOMEPAGE=	http://cffi.readthedocs.io/en/latest/
 COMMENT=	Foreign Function Interface for Python calling C code
 LICENSE=	mit
 
@@ -22,7 +22,7 @@ TEST_ENV+=	TMPDIR=${WRKDIR}/tmp
 
 do-test:
 	${MKDIR} ${WRKDIR}/tmp
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${TEST_ENV} ${PREFIX}/bin/py.test-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} py.test-${PYVERSSUFFIX}
 
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../lang/python/egg.mk"
