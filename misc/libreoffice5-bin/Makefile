@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2017/01/24 01:21:51 kamil Exp $
+# $NetBSD: Makefile,v 1.6 2018/01/14 10:16:29 wiz Exp $
 
 DISTNAME=		libreoffice5-bin	# overridden below
 PKGNAME=		libreoffice5-bin-${OO_RELEASE}
 CATEGORIES=		misc
 
 MAINTAINER=		ryoon@NetBSD.org
-HOMEPAGE=		http://www.libreoffice.org/
+HOMEPAGE=		https://www.libreoffice.org/
 COMMENT=		Integrated office productivity suite (binary pkg)
 LICENSE=		gnu-lgpl-v3
 
