@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/01/01 14:43:40 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2018/01/14 15:26:47 rillig Exp $
 
 DISTNAME=		monsterz-0.7.1
 PKGREVISION=		4
@@ -17,7 +17,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-Numeric
 
 MAKE_ENV+=		GAMEOWN=${GAMEOWN:Q}
 MAKE_ENV+=		GAMEGRP=${GAMEGRP:Q}
-MAKE_ENV+=		VARBASE=${VARBASE:Q}
+MAKE_ENV+=		VARBASE=${VARBASE}
 
 SETGIDGAME=		yes
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/monsterz \
