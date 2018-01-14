@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/09/06 10:40:28 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/01/14 15:26:49 rillig Exp $
 
 DISTNAME=		xjump_2.7.5.orig
 PKGNAME=		xjump-2.7.5
@@ -14,7 +14,7 @@ COMMENT=		Jumping game for X
 WRKSRC=			${WRKDIR}/xjump-2.7.5.orig
 BUILD_TARGET=		xjump
 INSTALLATION_DIRS=	bin
-MAKE_ENV+=		VARBASE=${VARBASE:Q}
+MAKE_ENV+=		VARBASE=${VARBASE}
 
 SETGIDGAME=		yes
 SPECIAL_PERMS=		bin/xjump ${SETGID_GAMES_PERMS}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/04/25 14:23:01 tnn Exp $
+# $NetBSD: Makefile,v 1.26 2018/01/14 15:26:47 rillig Exp $
 
 DISTNAME=	Maelstrom-3.0.6
 PKGNAME=	maelstrom-sdl-3.0.6
@@ -37,7 +37,7 @@ SCOREDIR=		${VARBASE}/games
 SCOREFILE=		${SCOREDIR}/Maelstrom-Scores
 ORIGSCOREFILE=		${PREFIX}/share/Maelstrom/Maelstrom-Scores
 REQD_FILES_PERMS+=	${ORIGSCOREFILE} ${SCOREFILE} ${SCOREFILE_PERMS}
-CFLAGS+=		-DMAELSTROM_SCOREDIR=\"${SCOREDIR:Q}\"
+CFLAGS+=		-DMAELSTROM_SCOREDIR=\"${SCOREDIR}\"
 BUILD_DEFS+=		VARBASE SCOREFILE
 
 post-install:

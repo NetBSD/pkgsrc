@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/10/06 11:54:59 asau Exp $
+# $NetBSD: Makefile,v 1.35 2018/01/14 15:26:48 rillig Exp $
 #
 
 DISTNAME=		xbill-2.0
@@ -25,7 +25,7 @@ PKG_GROUPS=		${GAMEGRP}
 MAKE_DIRS_PERMS+=	${VARBASE}/games ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 MAKE_ENV+=		GAMEOWN=${GAMEOWN:Q}
 MAKE_ENV+=		GAMEGRP=${GAMEGRP:Q}
-MAKE_ENV+=		GAMEMODE=${GAMEMODE:Q}
+MAKE_ENV+=		GAMEMODE=${GAMEMODE}
 CONF_FILES_PERMS+=	${PREFIX}/share/examples/xbill.scores \
 			${VARBASE}/games/xbill.scores \
 			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}

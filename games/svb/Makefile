@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/06 11:54:56 asau Exp $
+# $NetBSD: Makefile,v 1.18 2018/01/14 15:26:48 rillig Exp $
 
 DISTNAME=		svb
 PKGNAME=		svb-1.0
@@ -15,7 +15,7 @@ USE_IMAKE=		yes
 NO_INSTALL_MANPAGES=	yes
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
-MAKE_ENV+=	VARBASE=${VARBASE:Q}
+MAKE_ENV+=	VARBASE=${VARBASE}
 
 SETGIDGAME=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/01/04 06:11:03 dholland Exp $
+# $NetBSD: Makefile,v 1.19 2018/01/14 15:26:47 rillig Exp $
 
 DISTNAME=		new_brain
 PKGNAME=		knightcap-brain-19980616
@@ -42,14 +42,14 @@ EGDIR=			${PREFIX}/share/examples/knightcap
 INSTALLATION_DIRS=	bin
 
 do-build:
-	${SED} -e "s,@PREFIX@,${PREFIX},g" < ${FILESDIR:Q}/newbrain.sh \
-		> ${WRKSRC:Q}/newbrain.sh
+	${SED} -e "s,@PREFIX@,${PREFIX},g" < ${FILESDIR}/newbrain.sh \
+		> ${WRKSRC}/newbrain.sh
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC:Q}/newbrain.sh \
-		${DESTDIR}${PREFIX:Q}/bin/newbrain
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR:Q}
-	${INSTALL_DATA} ${DISTDIR:Q}/${DIST_SUBDIR:Q}/new_brain.dat \
-		${DESTDIR}${EGDIR:Q}/brain.dat
+	${INSTALL_SCRIPT} ${WRKSRC}/newbrain.sh \
+		${DESTDIR}${PREFIX}/bin/newbrain
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/new_brain.dat \
+		${DESTDIR}${EGDIR}/brain.dat
 
 .include "../../mk/bsd.pkg.mk"

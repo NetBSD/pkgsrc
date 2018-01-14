@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/09/19 13:04:18 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2018/01/14 15:26:47 rillig Exp $
 #
 
 DISTNAME=	ggz-client-libs-0.0.14.1
@@ -15,7 +15,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	msgfmt
 
 CONFIGURE_ARGS+=	--enable-debug-gdb
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/menus ${PKG_SYSCONFDIR}/xdg/menus/applications-merged
 CONF_FILES+=	${PREFIX}/share/examples/ggz-client-libs/ggz.menu \

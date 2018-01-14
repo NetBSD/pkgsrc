@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2017/12/14 16:13:31 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.34 2018/01/14 15:26:48 rillig Exp $
 #
 # used by games/nethack/Makefile
 # used by games/nethack-lib/Makefile
@@ -61,8 +61,8 @@ GAMEPERM=		${NETHACK_USER} ${NETHACK_GROUP} 2555
 
 GAMEDIR=		${PREFIX}/share/${NETHACK_DIR}
 VARDIR=			/var/games/nethack340
-MAKE_ENV+=		GAMEDIR=${GAMEDIR:Q}
-MAKE_ENV+=		VARDIR=${VARDIR:Q}
+MAKE_ENV+=		GAMEDIR=${GAMEDIR}
+MAKE_ENV+=		VARDIR=${VARDIR}
 
 pre-configure:
 	@${CHMOD} 755 ${WRKSRC}/sys/unix/setup.sh

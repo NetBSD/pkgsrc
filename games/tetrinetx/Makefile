@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/01/29 09:53:29 mef Exp $
+# $NetBSD: Makefile,v 1.9 2018/01/14 15:26:48 rillig Exp $
 
 DISTNAME=	tetrinetx-1.13.16+qirc-1.40c
 PKGNAME=	tetrinetx-1.13.16
@@ -20,22 +20,22 @@ LIBS.SunOS+=	-lsocket -lnsl -lresolv
 INSTALLATION_DIRS=	bin ${SHAREDIR}
 
 do-build:
-	cd ${WRKSRC:Q}/src && \
+	cd ${WRKSRC}/src && \
 	${CC} \
-		${CPPFLAGS} -I${PREFIX:Q}/include			\
-		-DSHAREDIR=\"${SHAREDIR:Q}\" -DPREFIX=\"${PREFIX:Q}\"	\
+		${CPPFLAGS} -I${PREFIX}/include			\
+		-DSHAREDIR=\"${SHAREDIR}\" -DPREFIX=\"${PREFIX}\"	\
 		${CFLAGS} -fno-strength-reduce -Wall			\
-		${LDFLAGS} -L${PREFIX:Q}/lib -ladns ${LIBS}		\
-		-o ../bin/${BINARY:Q} -Wl,-R${PREFIX:Q}/lib		\
+		${LDFLAGS} -L${PREFIX}/lib -ladns ${LIBS}		\
+		-o ../bin/${BINARY:Q} -Wl,-R${PREFIX}/lib		\
 		main.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/bin/${BINARY:Q} \
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/${BINARY:Q} \
 		${DESTDIR}${PREFIX}/bin/tetrix
-	${INSTALL_DATA} ${WRKSRC:Q}/bin/game.conf ${DESTDIR}${SHAREDIR:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/bin/game.secure ${DESTDIR}${SHAREDIR:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/bin/game.motd ${DESTDIR}${SHAREDIR:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/bin/game.pmotd ${DESTDIR}${SHAREDIR:Q}
+	${INSTALL_DATA} ${WRKSRC}/bin/game.conf ${DESTDIR}${SHAREDIR}
+	${INSTALL_DATA} ${WRKSRC}/bin/game.secure ${DESTDIR}${SHAREDIR}
+	${INSTALL_DATA} ${WRKSRC}/bin/game.motd ${DESTDIR}${SHAREDIR}
+	${INSTALL_DATA} ${WRKSRC}/bin/game.pmotd ${DESTDIR}${SHAREDIR}
 
 .include "../../net/adns/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

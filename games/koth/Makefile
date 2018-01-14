@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2015/08/17 17:11:23 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2018/01/14 15:26:47 rillig Exp $
 #
 
 DISTNAME=	koth-0.8.0
@@ -13,7 +13,7 @@ COMMENT=	The classic "shoot the other tank" artillery game, networked
 
 PTHREAD_AUTO_VARS=	yes
 GNU_CONFIGURE=	YES
-CPPFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR:Q}\""
+CPPFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 EGDIR=		${PREFIX}/share/examples/koth
 CONF_FILES=	${EGDIR}/koth.cfg ${PKG_SYSCONFDIR}/koth.cfg

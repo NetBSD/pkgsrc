@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2017/08/16 20:21:09 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2018/01/14 15:26:47 rillig Exp $
 #
 
 DISTNAME=	icebreaker-1.9.7
@@ -13,7 +13,7 @@ COMMENT=	Penguin capturing simulation
 
 USE_TOOLS+=	gmake
 MAKE_ENV+=	mandir="${PREFIX}/man" highscoredir="/var/games"
-MAKE_ENV+=	prefix=${PREFIX:Q}
+MAKE_ENV+=	prefix=${PREFIX}
 
 SETGIDGAME=	yes
 SPECIAL_PERMS=	bin/icebreaker ${SETGID_GAMES_PERMS}

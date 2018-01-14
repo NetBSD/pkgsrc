@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/10/06 11:55:01 asau Exp $
+# $NetBSD: Makefile,v 1.36 2018/01/14 15:26:49 rillig Exp $
 
 DISTNAME=		xgalaga-2.0.34
 PKGREVISION=		4
@@ -15,7 +15,7 @@ GNU_CONFIGURE_PREFIX=	${PREFIX}/share/xgalaga
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/bin
 SETGIDGAME=		yes
 MAKE_ENV+=		GAMEOWN=${GAMEOWN:Q} GAMEGRP=${GAMEGRP:Q} \
-			GAMEMODE=${GAMEMODE:Q} GAMEDATAMODE=${GAMEDATAMODE:Q}
+			GAMEMODE=${GAMEMODE} GAMEDATAMODE=${GAMEDATAMODE}
 
 .include "../../mk/bsd.prefs.mk"
 
