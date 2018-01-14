@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.206 2018/01/14 05:15:40 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.207 2018/01/14 08:13:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -284,3 +284,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/pkglint to 5.5.1 [rillig 2018-01-13]
 	Added fonts/gnome-font-viewer version 3.27.0 [ryoon 2018-01-14]
 	Updated net/mikutter to 3.6.1 [tsutsui 2018-01-14]
+	Updated mail/p5-Mail-DKIM to 0.52 [wiz 2018-01-14]
