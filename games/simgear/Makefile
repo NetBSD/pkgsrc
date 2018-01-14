@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2018/01/01 21:18:30 adam Exp $
+# $NetBSD: Makefile,v 1.66 2018/01/14 17:34:01 rillig Exp $
 
 DISTNAME=	simgear-2.8.0
 PKGREVISION=	37
@@ -20,7 +20,7 @@ CMAKE_ARGS+=		-DENABLE_LIBSVN:BOOL=OFF
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
-BUILDLINK_API_DEPENDS.plib+= plib>=1.8.5
+BUILDLINK_API_DEPENDS.plib+=	plib>=1.8.5
 
 .include "../../audio/freealut/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2016/12/15 23:52:43 joerg Exp $
+# $NetBSD: Makefile.common,v 1.3 2018/01/14 17:33:57 rillig Exp $
 #
 # used by games/armagetronad/Makefile
 # used by games/armagetronad-server/Makefile
@@ -15,9 +15,9 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/.src//}
 DISTINFO_FILE=	${.CURDIR}/../../games/armagetronad/distinfo
 PATCHDIR=	${.CURDIR}/../../games/armagetronad/patches
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	bash gmake
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		bash gmake
 REPLACE_PYTHON+=	language/update.py
 
 SUBST_CLASSES+=		bash

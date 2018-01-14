@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/09/04 18:08:23 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2018/01/14 17:33:58 rillig Exp $
 
 DISTNAME=	doom-1.8.wad
 PKGNAME=	doom1-1.8
@@ -16,7 +16,7 @@ CONFLICTS+=	xdoom<1.10nb4
 WRKSRC=		${WRKDIR}
 
 INSTALLATION_DIRS=	share/doom
-NO_BUILD=	YES
+NO_BUILD=		YES
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/doom-1.8.wad \

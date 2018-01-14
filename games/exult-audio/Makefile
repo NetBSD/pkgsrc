@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/19 19:35:53 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/14 17:33:58 rillig Exp $
 
 DISTNAME=	exult_audio
 PKGNAME=	exultaudio-1.0
@@ -11,7 +11,7 @@ HOMEPAGE=	http://exult.sourceforge.net/
 COMMENT=	Digital music and digital wave sound effects data for Exult
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=       exult>=1.4.9rc1:../../games/exult
+DEPENDS+=	exult>=1.4.9rc1:../../games/exult
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 

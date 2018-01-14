@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/08/16 20:45:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2018/01/14 17:33:57 rillig Exp $
 #
 
 DISTNAME=	amaze
@@ -6,7 +6,7 @@ PKGNAME=	amaze-0pre0
 PKGREVISION=	1
 CATEGORIES=	games
 #MASTER_SITES=	http://adaptive-enterprises.com/~d/software/amaze/
-DIST_SUBDIR=    ${PKGNAME_NOREV}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://adaptive-enterprises.com/~d/software/amaze/

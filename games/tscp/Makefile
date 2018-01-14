@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/03/14 17:53:55 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2018/01/14 17:34:01 rillig Exp $
 #
 
 DISTNAME=	tscp181
@@ -13,11 +13,11 @@ HOMEPAGE=	http://www.tckerrigan.com/
 COMMENT=	Tom Kerrigan's Simple Chess Program
 LICENSE=	generic-nonlicense
 
-RESTRICTED=	No distribution without authorisation from Tom Kerrigan
-NO_BIN_ON_CDROM= ${RESTRICTED}
-NO_BIN_ON_FTP= ${RESTRICTED}
-NO_SRC_ON_CDROM= ${RESTRICTED}
-NO_SRC_ON_FTP= ${RESTRICTED}
+RESTRICTED=		No distribution without authorisation from Tom Kerrigan
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 INSTALLATION_DIRS=	bin share/doc
 

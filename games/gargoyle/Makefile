@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/07/29 06:25:39 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/14 17:33:59 rillig Exp $
 
 DISTNAME=	gargoyle-2011.1
 CATEGORIES=	games
@@ -13,7 +13,7 @@ COMMENT=	Graphical player for Interactive Fiction games
 
 WRKSRC=		${WRKDIR}/garglk-stable-2011.1
 
-BUILD_DEPENDS+= jam-[0-9]*:../../devel/jam
+BUILD_DEPENDS+=	jam-[0-9]*:../../devel/jam
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES+=	c c++

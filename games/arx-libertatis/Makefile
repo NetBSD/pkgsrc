@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/09/02 16:46:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/14 17:33:57 rillig Exp $
 
 DISTNAME=	arx-libertatis-1.1.2
 CATEGORIES=	games
@@ -22,7 +22,7 @@ CMAKE_ARGS+=	-D USE_QT5:BOOL=OFF
 PLIST_VARS+=	NotDarwin
 
 .if ${OPSYS} != "Darwin"
-PLIST.NotDarwin= yes
+PLIST.NotDarwin=	yes
 .endif
 
 .include "../../audio/openal-soft/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/02/12 06:25:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2018/01/14 17:34:02 rillig Exp $
 #
 
 DISTNAME=	xcowsay-1.3
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=			pkg-config
+USE_TOOLS+=		pkg-config
 
 .include "options.mk"
 

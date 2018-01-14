@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/12/03 22:30:00 wiedi Exp $
+# $NetBSD: Makefile,v 1.25 2018/01/14 17:33:58 rillig Exp $
 
 DISTNAME=	exult-1.4.9rc1
 PKGREVISION=	2
@@ -14,8 +14,8 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	yacc flex
 
-CFLAGS+=	-fpermissive
-LDFLAGS+=	-lz
+CFLAGS+=		-fpermissive
+LDFLAGS+=		-lz
 CONFIGURE_ARGS+=	--disable-sdltest --disable-oggtest --disable-vorbistest
 
 .include "../../devel/zlib/buildlink3.mk"

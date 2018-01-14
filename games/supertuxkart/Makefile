@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/01/01 21:18:30 adam Exp $
+# $NetBSD: Makefile,v 1.20 2018/01/14 17:34:01 rillig Exp $
 #
 
 DISTNAME=	supertuxkart-0.8.1-src
@@ -30,13 +30,13 @@ NOT_PAX_MPROTECT_SAFE+=	bin/supertuxkart
 # Debug nob for STK
 #CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 
-SUBST_CLASSES+=		dos_eol
-SUBST_MESSAGE.dos_eol=	Removing DOS line-ends
-SUBST_STAGE.dos_eol=	post-extract
-SUBST_FILES.dos_eol=	lib/irrlicht/source/Irrlicht/Makefile
-SUBST_FILES.dos_eol+=	lib/irrlicht/source/Irrlicht/os.cpp
-SUBST_FILES.dos_eol+=	lib/irrlicht/source/Irrlicht/COSOperator.cpp
-SUBST_FILES.dos_eol+=	lib/irrlicht/source/Irrlicht/CIrrDeviceLinux.cpp
+SUBST_CLASSES+=			dos_eol
+SUBST_MESSAGE.dos_eol=		Removing DOS line-ends
+SUBST_STAGE.dos_eol=		post-extract
+SUBST_FILES.dos_eol=		lib/irrlicht/source/Irrlicht/Makefile
+SUBST_FILES.dos_eol+=		lib/irrlicht/source/Irrlicht/os.cpp
+SUBST_FILES.dos_eol+=		lib/irrlicht/source/Irrlicht/COSOperator.cpp
+SUBST_FILES.dos_eol+=		lib/irrlicht/source/Irrlicht/CIrrDeviceLinux.cpp
 SUBST_FILTER_CMD.dos_eol=	${TR} -d '\r'
 
 CMAKE_ARGS+=	-DUSE_WIIUSE=OFF

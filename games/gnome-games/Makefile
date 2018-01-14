@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2018/01/14 15:26:47 rillig Exp $
+# $NetBSD: Makefile,v 1.159 2018/01/14 17:33:59 rillig Exp $
 
 DISTNAME=		gnome-games-2.32.1
 PKGREVISION=		34
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--enable-omitgames=lightsoff
 
 FILES_SUBST+=		INSTALL=${INSTALL:Q}
 
-GCONF_SCHEMAS=		aisleriot.schemas
+GCONF_SCHEMAS=	aisleriot.schemas
 GCONF_SCHEMAS+=	glchess.schemas
 GCONF_SCHEMAS+=	glines.schemas
 GCONF_SCHEMAS+=	gnect.schemas

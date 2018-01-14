@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/25 14:22:57 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2018/01/14 17:33:59 rillig Exp $
 
 DISTNAME=	ioquake3-raspberrypi-20150118
 PKGREVISION=	1
@@ -18,7 +18,7 @@ BUILD_TARGET=	release
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*arm*
 
-INSTALLATION_DIRS+= lib/ioquake3
+INSTALLATION_DIRS+=	lib/ioquake3
 
 WRKSRC=	${WRKDIR}/quake3-master
 

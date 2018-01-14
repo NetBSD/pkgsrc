@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/09/30 07:45:03 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2018/01/14 17:34:00 rillig Exp $
 
 DISTNAME=	neverball-1.6.0
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Puzzle/action game similar to Super Monkey Ball
 USE_TOOLS+=	gmake pax
 
 # Avoiding multiples patches...
-BUILDLINK_FNAME_TRANSFORM.SDL+=	-e "s|/SDL/|/|g"
+BUILDLINK_FNAME_TRANSFORM.SDL+=		-e "s|/SDL/|/|g"
 BUILDLINK_FNAME_TRANSFORM.SDL_ttf+=	-e "s|/SDL/|/|g"
 
 MAKE_ENV+=	ENABLE_NLS=0
