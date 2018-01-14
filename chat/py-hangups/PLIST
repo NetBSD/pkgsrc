@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/04 13:58:24 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/14 16:00:35 leot Exp $
 bin/hangups
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -54,9 +54,9 @@ ${PYSITELIB}/hangups/ui/__main__.pyo
 ${PYSITELIB}/hangups/ui/emoticon.py
 ${PYSITELIB}/hangups/ui/emoticon.pyc
 ${PYSITELIB}/hangups/ui/emoticon.pyo
-${PYSITELIB}/hangups/ui/notify.py
-${PYSITELIB}/hangups/ui/notify.pyc
-${PYSITELIB}/hangups/ui/notify.pyo
+${PYSITELIB}/hangups/ui/notifier.py
+${PYSITELIB}/hangups/ui/notifier.pyc
+${PYSITELIB}/hangups/ui/notifier.pyo
 ${PYSITELIB}/hangups/ui/utils.py
 ${PYSITELIB}/hangups/ui/utils.pyc
 ${PYSITELIB}/hangups/ui/utils.pyo
