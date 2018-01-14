@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2013/07/12 10:45:04 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.5 2018/01/14 10:19:38 wiz Exp $
 
 DISTNAME=	soycms_1.4.0c_mysql
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/_/-/:S/_mysql//}
 PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://ryo-on.users.sourceforge.net/distrib/
-# http://www.soycms.net/download
+# https://www.soycms.net/download
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.soycms.net/
+HOMEPAGE=	https://www.soycms.net/
 COMMENT=	Flexible and pluggable CMS
 LICENSE=	gnu-gpl-v2
 
