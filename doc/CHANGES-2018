@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.209 2018/01/14 08:19:41 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.210 2018/01/14 08:29:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -287,3 +287,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/p5-Mail-DKIM to 0.52 [wiz 2018-01-14]
 	Updated textproc/p5-Syntax-Highlight-Engine-Kate to 0.14 [wiz 2018-01-14]
 	Updated time/p5-Time-HiRes to 1.9753 [wiz 2018-01-14]
+	Updated devel/py-radon to 2.2.0 [adam 2018-01-14]
+	Updated sysutils/py-magic to 0.4.15 [adam 2018-01-14]
