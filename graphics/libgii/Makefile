@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2017/01/19 18:52:12 agc Exp $
+# $NetBSD: Makefile,v 1.36 2018/01/14 14:58:39 rillig Exp $
 
 DISTNAME=	libgii-1.0.2.src
 PKGREVISION=	1
@@ -18,7 +18,7 @@ TEST_TARGET=		check
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-x
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 PKG_SYSCONFSUBDIR=	ggi
 EGDIR=			${PREFIX}/share/examples/ggi

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/09/04 18:00:56 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2018/01/14 14:58:40 rillig Exp $
 #
 
 DISTNAME=	s10sh-0.2.0
@@ -11,7 +11,7 @@ MAINTAINER=	drochner@NetBSD.org
 COMMENT=	USB/serial userspace driver for Canon PowerShot cameras
 
 HAS_CONFIGURE=	yes
-CONFIGURE_ENV+=	LOCALBASE=${LOCALBASE:Q}
+CONFIGURE_ENV+=	LOCALBASE=${LOCALBASE}
 
 INSTALLATION_DIRS=	bin
 

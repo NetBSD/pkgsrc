@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/01/03 00:36:10 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2018/01/14 14:58:38 rillig Exp $
 #
 
 PKGNAME=		cal3d-examples-${CAL3D_VERSION}
@@ -14,8 +14,8 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=		automake pax
 
-CONFIGURE_ARGS+=	--with-cal3d=${PREFIX:Q}
-CONFIGURE_ARGS+=	--with-glut=${BUILDLINK_PREFIX.glut:Q}
+CONFIGURE_ARGS+=	--with-cal3d=${PREFIX}
+CONFIGURE_ARGS+=	--with-glut=${BUILDLINK_PREFIX.glut}
 CONFIGURE_DIRS=		examples/cally \
 			examples/miniviewer_gl \
 			tools/converter

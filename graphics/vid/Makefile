@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2017/09/06 10:40:30 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2018/01/14 14:58:40 rillig Exp $
 #
 
 DISTNAME=	vid-1.0.1
@@ -13,7 +13,7 @@ COMMENT=	Simple-minded image capture program for some USB webcams
 BUILD_TARGET=	vid
 
 DOCDIR=		share/doc/${PKGBASE}
-PLIST_SUBST+=	DOCDIR=${DOCDIR:Q}
+PLIST_SUBST+=	DOCDIR=${DOCDIR}
 
 INSTALLATION_DIRS=	bin
 

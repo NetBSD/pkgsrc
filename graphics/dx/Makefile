@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2018/01/01 21:18:31 adam Exp $
+# $NetBSD: Makefile,v 1.89 2018/01/14 14:58:38 rillig Exp $
 
 DISTNAME=	dx-4.4.4
 PKGREVISION=	39
@@ -15,7 +15,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake lex yacc sh
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-javadx
-CONFIGURE_ENV+=		bsh_path=${TOOLS_SH:Q}
+CONFIGURE_ENV+=		bsh_path=${TOOLS_SH}
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
