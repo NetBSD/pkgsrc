@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2013/10/25 21:48:16 joerg Exp $
+# $NetBSD: Makefile.common,v 1.7 2018/01/14 10:16:45 wiz Exp $
 #
 # used by multimedia/libtheora-docs/Makefile
 
@@ -8,7 +8,7 @@ MASTER_SITES=	http://downloads.xiph.org/releases/theora/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.theora.org/
+HOMEPAGE=	https://www.theora.org/
 COMMENT=	Video codec for Ogg multimedia streaming
 LICENSE=	modified-bsd
 
