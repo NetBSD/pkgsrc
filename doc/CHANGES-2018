@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.210 2018/01/14 08:29:37 adam Exp $
+$NetBSD: CHANGES-2018,v 1.211 2018/01/14 11:19:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -289,3 +289,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/p5-Time-HiRes to 1.9753 [wiz 2018-01-14]
 	Updated devel/py-radon to 2.2.0 [adam 2018-01-14]
 	Updated sysutils/py-magic to 0.4.15 [adam 2018-01-14]
+	Updated devel/py-cffi to 1.11.4 [adam 2018-01-14]
+	Updated devel/py-blessings to 1.6.1 [adam 2018-01-14]
