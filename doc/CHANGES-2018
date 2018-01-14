@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.214 2018/01/14 16:00:45 leot Exp $
+$NetBSD: CHANGES-2018,v 1.215 2018/01/14 16:12:08 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -294,3 +294,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/py-dot to 1.2.4 [adam 2018-01-14]
 	Updated security/sudo to 1.8.21p2nb1 [maya 2018-01-14]
 	Updated chat/py-hangups to 0.4.4 [leot 2018-01-14]
+	Updated net/youtube-dl to 20180114 [leot 2018-01-14]
