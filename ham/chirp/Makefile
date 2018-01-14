@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2017/02/12 06:25:32 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.8 2018/01/14 10:05:37 wiz Exp $
 
 DISTNAME=	chirp-0.4.1
 PKGREVISION=	4
 CATEGORIES=	ham
-MASTER_SITES=	http://chirp.danplanet.com/download/${PKGVERSION}/
+MASTER_SITES=	https://chirp.danplanet.com/download/${PKGVERSION}/
 
 MAINTAINER=	dbj@NetBSD.org
-HOMEPAGE=	http://chirp.danplanet.com/
+HOMEPAGE=	https://chirp.danplanet.com/projects/chirp/wiki/Home
 COMMENT=	Tool for programming Amateur Radio HTs
 LICENSE=	gnu-gpl-v3
 
