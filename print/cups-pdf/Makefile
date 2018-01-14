@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/11/12 16:03:36 khorben Exp $
+# $NetBSD: Makefile,v 1.16 2018/01/14 10:08:31 wiz Exp $
 
 COMMENT=		PDF backend for CUPS
 
@@ -6,7 +6,7 @@ DISTNAME=		cups-pdf-2.6.1
 PKGREVISION=		9
 CATEGORIES=		print
 
-HOMEPAGE=		http://www.cups-pdf.de/
+HOMEPAGE=		https://www.cups-pdf.de/
 MASTER_SITES=		${HOMEPAGE}src/
 DISTFILES=		${DISTNAME:S/pdf-/pdf_/}.tar.gz
 LICENSE=		gnu-gpl-v2
