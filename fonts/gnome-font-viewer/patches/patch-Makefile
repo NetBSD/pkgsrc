@@ -1,0 +1,75 @@
+$NetBSD: patch-Makefile,v 1.1 2018/01/14 03:35:30 ryoon Exp $
+
+* Do not use meson build mechanism
+
+--- Makefile.orig	2018-01-14 03:12:40.049142772 +0000
++++ Makefile
+@@ -0,0 +1,68 @@
++# Makefile for NetBSD make
++# based on meson build scripts
++
++CFLAGS+=	-I./
++CFLAGS+=	`pkg-config --cflags glib-2.0`
++CFLAGS+=	`pkg-config --cflags gtk+-3.0`
++CFLAGS+=	`pkg-config --cflags gnome-desktop-3.0`
++
++LDFLAGS+=	`pkg-config --libs glib-2.0`
++LDFLAGS+=	`pkg-config --libs gtk+-3.0`
++LDFLAGS+=	`pkg-config --libs gnome-desktop-3.0`
++
++TNOBJS=		src/font-thumbnailer.o src/totem-resources.o \
++		src/sushi-font-loader.o src/sushi-font-widget.o
++
++VWOBJS=		src/font-model.o \
++		src/font-utils.o src/font-view.o \
++		src/sushi-font-loader.o src/sushi-font-widget.o
++
++.SUFFIXES: .c .o
++
++.c.o:
++	${CC} -c ${CFLAGS} -o ${.TARGET} ${.IMPSRC}
++
++MOS=	po/af.mo po/am.mo po/an.mo po/ar.mo po/as.mo po/ast.mo \
++	po/az.mo po/be.po po/be@latin.mo po/bg.mo po/bn.mo po/bn_IN.mo \
++	po/br.mo po/bs.mo po/ca.mo po/ca@valencia.mo po/crh.mo po/cs.mo \
++	po/cy.mo po/da.mo po/de.mo po/dz.mo po/el.mo po/en_CA.mo po/en_GB.mo \
++	po/eo.mo po/es.mo po/et.mo po/eu.mo po/fa.mo po/fi.mo po/fr.mo \
++	po/fur.mo po/ga.mo po/gd.mo po/gl.mo po/gu.mo po/he.mo po/hi.mo \
++	po/hr.mo po/hu.mo po/id.mo po/is.mo po/it.mo po/ja.mo po/ka.mo \
++	po/kk.mo po/km.mo po/kn.mo po/ko.mo po/ku.mo po/ky.mo po/lt.mo \
++	po/lv.mo po/mai.mo po/mg.mo po/mk.mo po/ml.mo po/mn.mo po/mr.mo \
++	po/ms.mo po/nb.mo po/nds.mo po/ne.mo po/nl.mo po/nn.mo po/oc.mo \
++	po/or.mo po/pa.mo po/pl.mo po/ps.mo po/pt.mo po/pt_BR.mo po/ro.mo \
++	po/ru.mo po/rw.mo po/si.mo po/sk.mo po/sl.mo po/sq.mo po/sr.mo \
++	po/sr@latin.mo po/sv.mo po/ta.mo po/te.mo po/tg.mo po/th.mo \
++	po/tr.mo po/ug.mo po/uk.mo po/uz@cyrillic.mo po/vi.mo po/wa.mo \
++	po/xh.mo po/zh_CN.mo po/zh_HK.mo po/zh_TW.mo
++
++.SUFFIXES: .po .mo
++
++.po.mo:
++	msgfmt --output-file=${.TARGET} ${.IMPSRC}
++
++all: gnome-font-viewer gnome-thumbnail-font ${MOS}
++
++config.h:
++	echo '#define VERSION "${PKGVERSION_NOREV}"' >> ${WRKSRC}/config.h
++	echo '#define GETTEXT_PACKAGE "gnome-font-viewer"' >> ${WRKSRC}/config.h
++	echo '#define GNOMELOCALEDIR "${PREFIX}/${PKGLOCALEDIR}/locale"' >> ${WRKSRC}/config.h
++
++gnome-font-viewer: config.h ${VWOBJS}
++	${CC} ${LDFLAGS} -o ${.TARGET} ${VWOBJS}
++
++gnome-thumbnail-font: config.h ${TNOBJS}
++	${CC} ${LDFLAGS} -o ${.TARGET} ${TNOBJS}
++
++install-locale: ${MOS}
++.for f in ${MOS}
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/locale/${f:S/po\///:S/.mo//}/LC_MESSAGES
++	${BSD_INSTALL_DATA} ${f} ${DESTDIR}${PREFIX}/share/locale/${f:S/po\///:S/.mo//}/LC_MESSAGES/gnome-font-viewer.mo
++.endfor
++
++install: install-locale all
++	${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
++	${BSD_INSTALL_PROGRAM} gnome-font-viewer ${DESTDIR}${PREFIX}/bin
++	${BSD_INSTALL_PROGRAM} gnome-thumbnail-font ${DESTDIR}${PREFIX}/bin
