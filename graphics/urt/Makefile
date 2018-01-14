@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2014/09/08 21:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2018/01/14 14:58:40 rillig Exp $
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
@@ -37,11 +37,11 @@ SUBST_FILES.man=	config/urt
 SUBST_SED.man=		-e 's,^\(\#defpath MAN_DEST\).*,\1 ${PREFIX}/${PKGMANDIR},'
 
 post-install:
-	cd ${DESTDIR:Q}${PREFIX:Q}/share/doc/urt && \
+	cd ${DESTDIR}${PREFIX}/share/doc/urt && \
 	    pax -z -r -p m -s '/doc/./' -f ${DISTDIR}/urt-doc.tar.Z
-	cd ${DESTDIR:Q}${PREFIX:Q}/share/examples/urt && \
+	cd ${DESTDIR}${PREFIX}/share/examples/urt && \
 	    pax -z -r -p m -f ${DISTDIR}/urt-img.tar.Z
-	cd ${DESTDIR:Q}${PREFIX:Q} && \
+	cd ${DESTDIR}${PREFIX} && \
 	    chown -R ${ROOT_USER}:${ROOT_GROUP} share/doc/urt share/examples/urt && \
 	    find share/doc/urt share/examples/urt -type d -print | xargs chmod 755 && \
 	    find share/doc/urt share/examples/urt -type f -print | xargs chmod 444
