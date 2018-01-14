@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.211 2018/01/14 11:19:35 adam Exp $
+$NetBSD: CHANGES-2018,v 1.212 2018/01/14 11:31:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -291,3 +291,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/py-magic to 0.4.15 [adam 2018-01-14]
 	Updated devel/py-cffi to 1.11.4 [adam 2018-01-14]
 	Updated devel/py-blessings to 1.6.1 [adam 2018-01-14]
+	Updated graphics/py-dot to 1.2.4 [adam 2018-01-14]
