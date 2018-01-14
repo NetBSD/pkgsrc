@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/09/11 16:59:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2018/01/14 15:26:46 rillig Exp $
 
 DISTNAME=		EXchess_v7.31beta
 PKGNAME=		exchess-7.31beta
@@ -18,7 +18,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME:C/beta//}
 LIBDIR=			${PREFIX}/lib/exchess
 DOCDIR=			${PREFIX}/share/doc/exchess
 
-CFLAGS+=		-DEXCHESS_DIR=${LIBDIR:Q}
+CFLAGS+=		-DEXCHESS_DIR=${LIBDIR}
 LDFLAGS+=		${PTHREAD_LDFLAGS}
 LIBS+=			${PTHREAD_LIBS}
 
