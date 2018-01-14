@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2018/01/11 12:52:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.138 2018/01/14 10:16:16 wiz Exp $
 
 VERREL=		5.4.4
 VERRC=		2
@@ -10,7 +10,7 @@ MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.libreoffice.org/
+HOMEPAGE=	https://www.libreoffice.org/
 COMMENT=	Office productivity suite from The Document Foundation
 LICENSE=	gnu-lgpl-v3
 
