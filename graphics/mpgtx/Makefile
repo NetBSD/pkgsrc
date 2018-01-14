@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/06 14:11:07 asau Exp $
+# $NetBSD: Makefile,v 1.17 2018/01/14 14:58:39 rillig Exp $
 #
 
 DISTNAME=	mpgtx-1.3.1
@@ -10,8 +10,8 @@ HOMEPAGE=	http://mpgtx.sourceforge.net/
 COMMENT=	Split and join MPEG files in various ways
 
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}	\
-			--manprefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}	\
+			--manprefix=${PREFIX}
 USE_LANGUAGES=	c c++
 
 BUILD_TARGET=	mpgtx
@@ -21,18 +21,18 @@ MLINKS=		mpgcat.1 mpgjoin.1 mpginfo.1 mpgsplit.1 mpgdemux.1
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/mpgtx ${DESTDIR:Q}${PREFIX:Q}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/mpgtx ${DESTDIR}${PREFIX}/bin
 .for f in ${PLINKS}
-	${LN} -f ${DESTDIR:Q}${PREFIX:Q}/bin/mpgtx \
-		${DESTDIR:Q}${PREFIX:Q}/bin/${f}
+	${LN} -f ${DESTDIR}${PREFIX}/bin/mpgtx \
+		${DESTDIR}${PREFIX}/bin/${f}
 .endfor
-	${INSTALL_MAN} ${WRKSRC:Q}/man/mpgtx.1 \
-		${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man/mpgtx.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .for f in ${MLINKS}
-	${LN} -f ${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1/mpgtx.1 \
-		${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1/${f}
+	${LN} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/mpgtx.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${f}
 .endfor
-	${INSTALL_MAN} ${WRKSRC:Q}/man/tagmp3.1 \
-		${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man/tagmp3.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

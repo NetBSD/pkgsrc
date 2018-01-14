@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2017/12/17 05:01:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.58 2018/01/14 14:58:39 rillig Exp $
 #
 
 DISTNAME=	libggi-2.2.2.src
@@ -21,7 +21,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--with-x
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 PKG_SYSCONFSUBDIR=	ggi
 EGDIR=			${PREFIX}/share/examples/ggi

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2017/11/23 17:19:58 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2018/01/14 14:58:41 rillig Exp $
 #
 
 DISTNAME=	zphoto-1.2
@@ -18,8 +18,8 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c c++
 
-CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.libiconv:Q}
-CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext-lib:Q}
+CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.libiconv}
+CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext-lib}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.16 2016/04/07 10:02:13 adam Exp $
+# $NetBSD: builtin.mk,v 1.17 2018/01/14 14:58:38 rillig Exp $
 
 BUILTIN_PKG:=	freetype2
 
@@ -57,7 +57,7 @@ USE_BUILTIN.freetype2=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.freetype2}
 .        if !empty(USE_BUILTIN.freetype2:M[yY][eE][sS])
 USE_BUILTIN.freetype2!=							\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.freetype2:Q}; then \
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.freetype2}; then \
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
