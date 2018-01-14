@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/10/15 03:16:07 maya Exp $
+# $NetBSD: Makefile,v 1.21 2018/01/14 17:34:00 rillig Exp $
 
 DISTNAME=		um5.5.2
 PKGNAME=		moria-5.5.2
@@ -28,7 +28,7 @@ do-configure:
 	@${RM} -f ${WRKSRC}/*.[ch] ${WRKSRC}/Makefile
 	@cd ${WRKSRC}; ${LN} -s source/* unix/* .
 
-PKGSRC_USE_FORTIFY=no
+PKGSRC_USE_FORTIFY=	no
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
