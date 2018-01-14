@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.204 2018/01/13 23:56:45 rillig Exp $
+$NetBSD: CHANGES-2018,v 1.205 2018/01/14 03:36:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -282,3 +282,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/zeromq to 4.2.3 [adam 2018-01-13]
 	Updated archivers/lz4 to 1.8.1 [adam 2018-01-13]
 	Updated pkgtools/pkglint to 5.5.1 [rillig 2018-01-13]
+	Added fonts/gnome-font-viewer version 3.27.0 [ryoon 2018-01-14]
