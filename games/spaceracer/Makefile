@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/04/25 14:23:04 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2018/01/14 15:26:48 rillig Exp $
 #
 
 DISTNAME=		spaceracer-0.2.4
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		automake autoconf
 
 pre-configure:
-	cd ${WRKSRC:Q} && autoreconf -i
+	cd ${WRKSRC} && autoreconf -i
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
