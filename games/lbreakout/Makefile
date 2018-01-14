@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/04/25 14:23:00 tnn Exp $
+# $NetBSD: Makefile,v 1.36 2018/01/14 15:26:47 rillig Exp $
 
 DISTNAME=	lbreakout-010315
 PKGREVISION=	12
@@ -10,7 +10,7 @@ HOMEPAGE=	http://lgames.sourceforge.net/
 COMMENT=	Breakout-style arcade game
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ENV+=		VARBASE=${VARBASE:Q}
+CONFIGURE_ENV+=		VARBASE=${VARBASE}
 CONFIGURE_ARGS+=	--disable-sound
 
 USE_LANGUAGES=	c c++

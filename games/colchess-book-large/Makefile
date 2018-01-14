@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/06 11:54:33 asau Exp $
+# $NetBSD: Makefile,v 1.15 2018/01/14 15:26:46 rillig Exp $
 
 DISTNAME=		book_large
 PKGNAME=		${CHESS_ENGINE}-book-large-20000512
@@ -19,7 +19,7 @@ DIST_SUBDIR=		chessbooks
 NO_CONFIGURE=		yes
 
 PLIST_SUBST+=		CHESS_ENGINE=${CHESS_ENGINE:Q}
-PLIST_SUBST+=		BOOK_FILE=${BOOK_FILE:Q}
+PLIST_SUBST+=		BOOK_FILE=${BOOK_FILE}
 
 BOOKDIR=		${PREFIX}/share/${CHESS_ENGINE}
 BOOK_FILE=		book.dat
