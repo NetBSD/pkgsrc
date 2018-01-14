@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2017/11/23 17:19:54 wiz Exp $
+# $NetBSD: Makefile,v 1.158 2018/01/14 15:26:47 rillig Exp $
 
 DISTNAME=		gnome-games-2.32.1
 PKGREVISION=		34
@@ -23,9 +23,9 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
+CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ENV+=		ac_cv_path_MSGFMT=msgfmt
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--enable-omitgames=lightsoff
 
 FILES_SUBST+=		INSTALL=${INSTALL:Q}
