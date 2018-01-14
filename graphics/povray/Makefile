@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2017/01/19 18:52:13 agc Exp $
+# $NetBSD: Makefile,v 1.56 2018/01/14 14:58:39 rillig Exp $
 
 DISTNAME=	povray-3.6.1
 PKGREVISION=	15
@@ -18,7 +18,7 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-optimiz
 CONFIGURE_ARGS+=	--enable-strip
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ENV+=		COMPILED_BY="The NetBSD Packages Collection"
 
 .include "../../mk/bsd.prefs.mk"

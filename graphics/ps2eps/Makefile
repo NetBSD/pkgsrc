@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/07/12 09:02:04 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/01/14 14:58:40 rillig Exp $
 
 DISTNAME=	ps2eps-1.68
 PKGREVISION=	5
@@ -19,12 +19,12 @@ REPLACE_PERL+=	bin/ps2eps
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 do-build:
-	cd ${WRKSRC:Q}/src/C && ${CC} ${CFLAGS} ${LDFLAGS} -o bbox bbox.c
+	cd ${WRKSRC}/src/C && ${CC} ${CFLAGS} ${LDFLAGS} -o bbox bbox.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/src/C/bbox ${DESTDIR:Q}${PREFIX:Q}/bin
-	${INSTALL_SCRIPT} ${WRKSRC:Q}/bin/ps2eps ${DESTDIR:Q}${PREFIX:Q}/bin
-	${INSTALL_MAN} ${WRKSRC:Q}/doc/man/man1/*.1 \
-		${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR:Q}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/src/C/bbox ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/ps2eps ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/doc/man/man1/*.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

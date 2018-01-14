@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/08/01 16:47:39 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2018/01/14 14:58:38 rillig Exp $
 #
 
 DISTNAME=		cambevao-2.2
@@ -11,7 +11,7 @@ MAINTAINER=		abs@NetBSD.org
 COMMENT=		Grabs jpg images from bktr and ov511+ based USB webcams
 LICENSE=		modified-bsd AND original-bsd
 
-MAKE_ENV+=		prefix=${PREFIX:Q}
+MAKE_ENV+=		prefix=${PREFIX}
 MAKE_FLAGS+=		INSTALL=${INSTALL_PROGRAM:Q}
 RCD_SCRIPTS=		cambevao
 RCD_SCRIPT_SRC.cambevao=	${WRKSRC}/cambevao.rc.d

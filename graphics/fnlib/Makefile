@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2014/09/08 21:24:44 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2018/01/14 14:58:38 rillig Exp $
 
 DISTNAME=		fnlib-0.5
 PKGREVISION=		23
@@ -16,7 +16,7 @@ DIST_SUBDIR=		fnlib
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 EGDIR=			${PREFIX}/share/examples/fnlib
 CONF_FILES=		${EGDIR}/fnrc ${PKG_SYSCONFDIR}/fnrc
 

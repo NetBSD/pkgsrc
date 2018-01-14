@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/06 14:11:24 asau Exp $
+# $NetBSD: Makefile,v 1.8 2018/01/14 14:58:40 rillig Exp $
 #
 
 DISTNAME=	VTKDocHtml-4.2
@@ -11,10 +11,10 @@ NO_BUILD=	yes
 HTML_DIR=	share/doc/${PKGNAME}
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/${HTML_DIR:Q}
-	${FIND} ${WRKSRC:Q} -type f -print | \
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${HTML_DIR}
+	${FIND} ${WRKSRC} -type f -print | \
 	while read f; do \
-		${INSTALL_DATA} $$f ${DESTDIR}${PREFIX:Q}/${HTML_DIR:Q}; \
+		${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/${HTML_DIR}; \
 	done
 
 .include "../../graphics/vtk/Makefile.common"
