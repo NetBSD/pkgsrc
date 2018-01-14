@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/01/14 15:26:48 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2018/01/14 17:34:01 rillig Exp $
 #
 
 DISTNAME=		sudoku-1.0.1
@@ -33,11 +33,11 @@ MAKE_FLAGS+=		SUDOKUNAME=sudoku-cli
 CFLAGS+=		-DTEMPLATE="${SHARE_DIR}/template"
 CFLAGS+=		-DPRECANNED="${SHARE_DIR}/precanned"
 
-SUBST_CLASSES+=		sudoku-cli
-SUBST_STAGE.sudoku-cli=	pre-build
-SUBST_MESSAGE.sudoku-cli=Correcting path names in man page
-SUBST_FILES.sudoku-cli+=sudoku.6
-SUBST_SED.sudoku-cli+=	-e s,/usr/lib/sudoku,${SHARE_DIR},
+SUBST_CLASSES+=			sudoku-cli
+SUBST_STAGE.sudoku-cli=		pre-build
+SUBST_MESSAGE.sudoku-cli=	Correcting path names in man page
+SUBST_FILES.sudoku-cli+=	sudoku.6
+SUBST_SED.sudoku-cli+=		-e s,/usr/lib/sudoku,${SHARE_DIR},
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
