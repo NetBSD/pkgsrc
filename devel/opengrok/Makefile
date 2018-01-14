@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2017/11/30 16:45:22 adam Exp $
+# $NetBSD: Makefile,v 1.49 2018/01/14 10:17:06 wiz Exp $
 
 DISTNAME=	OpenGrok-0.12.1.5
 PKGNAME=	${DISTNAME:tl:S/-rc/rc/}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenGrok/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://opengrok.github.io/OpenGrok/
+HOMEPAGE=	https://opengrok.github.io/OpenGrok/
 COMMENT=	Fast and usable source code search and cross reference engine
 LICENSE=	cddl-1.0
 
