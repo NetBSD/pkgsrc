@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2015/04/25 14:23:01 tnn Exp $
+# $NetBSD: Makefile,v 1.27 2018/01/14 17:34:00 rillig Exp $
 #
 
 DISTNAME=	newvox-1.0
@@ -12,7 +12,7 @@ COMMENT=	Voxel-style landscape rendering fly-by
 
 GNU_CONFIGURE=	YES
 
-LIBS.SunOS+=	-lm
+LIBS.SunOS+=		-lm
 LDFLAGS.DragonFly=	-lm
 
 .include "../../devel/SDL/buildlink3.mk"

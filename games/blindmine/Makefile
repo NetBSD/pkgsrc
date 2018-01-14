@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2017/01/01 14:43:40 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2018/01/14 17:33:58 rillig Exp $
 
 DISTNAME=	blindmine-0.3-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -21,7 +21,7 @@ SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	blindmine.py sdl_ui.py
 SUBST_SED.path=		-e 's,/usr/bin/env python,${PYTHONBIN},g'
 
-PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
+PYCOMPILEALL=			${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.3
 
 INSTALLATION_DIRS=	bin share/doc/blindmine share/blindmine/data
