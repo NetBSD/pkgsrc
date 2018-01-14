@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2017/12/30 10:39:07 leot Exp $
+@comment $NetBSD: PLIST,v 1.56 2018/01/14 16:11:53 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -377,9 +377,6 @@ ${PYSITELIB}/youtube_dl/extractor/cnbc.pyo
 ${PYSITELIB}/youtube_dl/extractor/cnn.py
 ${PYSITELIB}/youtube_dl/extractor/cnn.pyc
 ${PYSITELIB}/youtube_dl/extractor/cnn.pyo
-${PYSITELIB}/youtube_dl/extractor/collegerama.py
-${PYSITELIB}/youtube_dl/extractor/collegerama.pyc
-${PYSITELIB}/youtube_dl/extractor/collegerama.pyo
 ${PYSITELIB}/youtube_dl/extractor/comcarcoff.py
 ${PYSITELIB}/youtube_dl/extractor/comcarcoff.pyc
 ${PYSITELIB}/youtube_dl/extractor/comcarcoff.pyo
@@ -470,6 +467,9 @@ ${PYSITELIB}/youtube_dl/extractor/dfb.pyo
 ${PYSITELIB}/youtube_dl/extractor/dhm.py
 ${PYSITELIB}/youtube_dl/extractor/dhm.pyc
 ${PYSITELIB}/youtube_dl/extractor/dhm.pyo
+${PYSITELIB}/youtube_dl/extractor/digg.py
+${PYSITELIB}/youtube_dl/extractor/digg.pyc
+${PYSITELIB}/youtube_dl/extractor/digg.pyo
 ${PYSITELIB}/youtube_dl/extractor/digiteka.py
 ${PYSITELIB}/youtube_dl/extractor/digiteka.pyc
 ${PYSITELIB}/youtube_dl/extractor/digiteka.pyo
@@ -1052,6 +1052,9 @@ ${PYSITELIB}/youtube_dl/extractor/medialaan.pyo
 ${PYSITELIB}/youtube_dl/extractor/mediaset.py
 ${PYSITELIB}/youtube_dl/extractor/mediaset.pyc
 ${PYSITELIB}/youtube_dl/extractor/mediaset.pyo
+${PYSITELIB}/youtube_dl/extractor/mediasite.py
+${PYSITELIB}/youtube_dl/extractor/mediasite.pyc
+${PYSITELIB}/youtube_dl/extractor/mediasite.pyo
 ${PYSITELIB}/youtube_dl/extractor/medici.py
 ${PYSITELIB}/youtube_dl/extractor/medici.pyc
 ${PYSITELIB}/youtube_dl/extractor/medici.pyo
@@ -1583,9 +1586,6 @@ ${PYSITELIB}/youtube_dl/extractor/ruv.pyo
 ${PYSITELIB}/youtube_dl/extractor/safari.py
 ${PYSITELIB}/youtube_dl/extractor/safari.pyc
 ${PYSITELIB}/youtube_dl/extractor/safari.pyo
-${PYSITELIB}/youtube_dl/extractor/sandia.py
-${PYSITELIB}/youtube_dl/extractor/sandia.pyc
-${PYSITELIB}/youtube_dl/extractor/sandia.pyo
 ${PYSITELIB}/youtube_dl/extractor/sapo.py
 ${PYSITELIB}/youtube_dl/extractor/sapo.pyc
 ${PYSITELIB}/youtube_dl/extractor/sapo.pyo
@@ -1703,9 +1703,6 @@ ${PYSITELIB}/youtube_dl/extractor/sportbox.pyo
 ${PYSITELIB}/youtube_dl/extractor/sportdeutschland.py
 ${PYSITELIB}/youtube_dl/extractor/sportdeutschland.pyc
 ${PYSITELIB}/youtube_dl/extractor/sportdeutschland.pyo
-${PYSITELIB}/youtube_dl/extractor/sportschau.py
-${PYSITELIB}/youtube_dl/extractor/sportschau.pyc
-${PYSITELIB}/youtube_dl/extractor/sportschau.pyo
 ${PYSITELIB}/youtube_dl/extractor/sprout.py
 ${PYSITELIB}/youtube_dl/extractor/sprout.pyc
 ${PYSITELIB}/youtube_dl/extractor/sprout.pyo
@@ -1985,6 +1982,9 @@ ${PYSITELIB}/youtube_dl/extractor/udemy.pyo
 ${PYSITELIB}/youtube_dl/extractor/udn.py
 ${PYSITELIB}/youtube_dl/extractor/udn.pyc
 ${PYSITELIB}/youtube_dl/extractor/udn.pyo
+${PYSITELIB}/youtube_dl/extractor/ufctv.py
+${PYSITELIB}/youtube_dl/extractor/ufctv.pyc
+${PYSITELIB}/youtube_dl/extractor/ufctv.pyo
 ${PYSITELIB}/youtube_dl/extractor/uktvplay.py
 ${PYSITELIB}/youtube_dl/extractor/uktvplay.pyc
 ${PYSITELIB}/youtube_dl/extractor/uktvplay.pyo
@@ -2198,6 +2198,9 @@ ${PYSITELIB}/youtube_dl/extractor/webcaster.pyo
 ${PYSITELIB}/youtube_dl/extractor/webofstories.py
 ${PYSITELIB}/youtube_dl/extractor/webofstories.pyc
 ${PYSITELIB}/youtube_dl/extractor/webofstories.pyo
+${PYSITELIB}/youtube_dl/extractor/weibo.py
+${PYSITELIB}/youtube_dl/extractor/weibo.pyc
+${PYSITELIB}/youtube_dl/extractor/weibo.pyo
 ${PYSITELIB}/youtube_dl/extractor/weiqitv.py
 ${PYSITELIB}/youtube_dl/extractor/weiqitv.pyc
 ${PYSITELIB}/youtube_dl/extractor/weiqitv.pyo
@@ -2231,6 +2234,9 @@ ${PYSITELIB}/youtube_dl/extractor/xhamster.pyo
 ${PYSITELIB}/youtube_dl/extractor/xiami.py
 ${PYSITELIB}/youtube_dl/extractor/xiami.pyc
 ${PYSITELIB}/youtube_dl/extractor/xiami.pyo
+${PYSITELIB}/youtube_dl/extractor/ximalaya.py
+${PYSITELIB}/youtube_dl/extractor/ximalaya.pyc
+${PYSITELIB}/youtube_dl/extractor/ximalaya.pyo
 ${PYSITELIB}/youtube_dl/extractor/xminus.py
 ${PYSITELIB}/youtube_dl/extractor/xminus.pyc
 ${PYSITELIB}/youtube_dl/extractor/xminus.pyo
