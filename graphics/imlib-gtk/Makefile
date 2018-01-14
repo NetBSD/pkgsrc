@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/09/26 10:27:03 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2018/01/14 14:58:39 rillig Exp $
 
 DISTNAME=	imlib-1.9.15
 PKGNAME=	imlib-gtk-1.9.15
@@ -26,7 +26,7 @@ UNLIMIT_RESOURCES=	datasize
 CPPFLAGS+=		-DENABLE_NLS
 CONFIGURE_ENV+=		ac_cv_path_CONVERT_PROG="${LOCALBASE}/bin/convert"
 CONFIGURE_ENV+=		X_LDFLAGS=${X_LDFLAGS:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-shm
 
 PKG_SYSCONFSUBDIR=	imlib
