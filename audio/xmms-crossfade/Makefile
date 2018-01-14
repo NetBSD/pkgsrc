@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.37 2016/04/20 12:10:34 nros Exp $
-#
+# $NetBSD: Makefile,v 1.38 2018/01/14 10:42:23 wiz Exp $
 
 DISTNAME=		xmms-crossfade-0.2.9
 PKGREVISION=		10
 CATEGORIES=		audio
-MASTER_SITES=		http://www.eisenlohr.org/xmms-crossfade/
+MASTER_SITES=		https://www.eisenlohr.org/xmms-crossfade/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.eisenlohr.org/xmms-crossfade/
+HOMEPAGE=		https://www.eisenlohr.org/xmms-crossfade/
 COMMENT=		Crossfading/Gapless Plugin for XMMS
 LICENSE=		gnu-gpl-v2
 
