@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2018/01/01 21:18:24 adam Exp $
+# $NetBSD: Makefile,v 1.60 2018/01/14 17:33:58 rillig Exp $
 
 DISTNAME=	bzflag-2.4.2
 PKGREVISION=	14
@@ -20,11 +20,11 @@ USE_CURSES=	resizeterm
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} !=  "Linux"
-SUBST_CLASSES+=	    fixme
-SUBST_STAGE.fixme=  post-patch
-SUBST_FILES.fixme=  src/platform/Makefile.in
-SUBST_SED.fixme=    -e "s|@LINUX_TRUE@||g"
-SUBST_SED.fixme+=   -e "s|@LINUX_FALSE@|\#|g"
+SUBST_CLASSES+=		fixme
+SUBST_STAGE.fixme=	post-patch
+SUBST_FILES.fixme=	src/platform/Makefile.in
+SUBST_SED.fixme=	-e "s|@LINUX_TRUE@||g"
+SUBST_SED.fixme+=	-e "s|@LINUX_FALSE@|\#|g"
 .endif
 
 CONFIGURE_ARGS+=	--with-ncurses

@@ -1,8 +1,8 @@
-# $NetBSD: ggz-client.mk,v 1.1 2009/07/28 18:47:14 drochner Exp $
+# $NetBSD: ggz-client.mk,v 1.2 2018/01/14 17:33:59 rillig Exp $
 
-REALGGZCONFIG= ${PREFIX}/bin/ggz-config
+REALGGZCONFIG=	${PREFIX}/bin/ggz-config
 
-CONFIGURE_ARGS+= --with-ggzconfig=${WRAPPER_DIR}/bin
+CONFIGURE_ARGS+=	--with-ggzconfig=${WRAPPER_DIR}/bin
 
 pre-configure: ${WRAPPER_DIR}/bin/ggz-config
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/06 11:54:39 asau Exp $
+# $NetBSD: Makefile,v 1.5 2018/01/14 17:33:59 rillig Exp $
 #
 
 DISTNAME=	Gate88_Mar19_05
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.queasygames.com/gate88/
 COMMENT=	Deep space intergalactic battle
 LICENSE=	gate88-license
 
-RESTRICTED=	${LICENSE}
+RESTRICTED=		${LICENSE}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}

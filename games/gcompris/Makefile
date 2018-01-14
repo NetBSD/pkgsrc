@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2017/11/30 16:45:24 adam Exp $
+# $NetBSD: Makefile,v 1.78 2018/01/14 17:33:59 rillig Exp $
 
 DISTNAME=	gcompris-12.11
 PKGREVISION=	29
@@ -19,7 +19,7 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 CHECK_PORTABILITY_SKIP+= macosx/build-gtk.sh
-INFO_FILES=	yes
+INFO_FILES=		yes
 
 PTHREAD_AUTO_VARS=	yes
 
