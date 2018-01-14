@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2018/01/01 21:18:30 adam Exp $
+# $NetBSD: Makefile,v 1.130 2018/01/14 17:34:02 rillig Exp $
 
 DISTNAME=	wesnoth-1.12.6
 PKGREVISION=	8
@@ -32,25 +32,25 @@ SUBST_MESSAGE.prefix=	Fixing search path.
 SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},'
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.10.6
-REPLACE_PYTHON+=	data/tools/GUI.pyw
-REPLACE_PYTHON+=	data/tools/*.py
-REPLACE_PYTHON+=	data/tools/wesnoth/*.py
-REPLACE_PYTHON+=	data/tools/wml*
-REPLACE_PYTHON+=	data/tools/about_cfg_to_wiki
-REPLACE_PYTHON+=	data/tools/addon_manager/html.py
-REPLACE_PYTHON+=	data/tools/extractbindings
-REPLACE_PYTHON+=	data/tools/imgcheck
-REPLACE_PYTHON+=	data/tools/journeylifter
-REPLACE_PYTHON+=	data/tools/rmtrans/rmtrans.py
-REPLACE_PYTHON+=	data/tools/trackplacer
-REPLACE_PYTHON+=	data/tools/unit_tree/helpers.py
-REPLACE_PYTHON+=	data/tools/wesnoth_addon_manager
-REPLACE_PYTHON+=	data/tools/wesnoth_addon_manager/html.py
-REPLACE_PYTHON+=	data/tools/wesnoth/campaignserver_client.py
-REPLACE_PYTHON+=	data/tools/unit_tree/TeamColorizer
-REPLACE_PYTHON+=	data/tools/unit_tree/overview.py
-REPLACE_PYTHON+=	utils/ai_test/*.py
-REPLACE_PYTHON+=	utils/*.py
+REPLACE_PYTHON+=		data/tools/GUI.pyw
+REPLACE_PYTHON+=		data/tools/*.py
+REPLACE_PYTHON+=		data/tools/wesnoth/*.py
+REPLACE_PYTHON+=		data/tools/wml*
+REPLACE_PYTHON+=		data/tools/about_cfg_to_wiki
+REPLACE_PYTHON+=		data/tools/addon_manager/html.py
+REPLACE_PYTHON+=		data/tools/extractbindings
+REPLACE_PYTHON+=		data/tools/imgcheck
+REPLACE_PYTHON+=		data/tools/journeylifter
+REPLACE_PYTHON+=		data/tools/rmtrans/rmtrans.py
+REPLACE_PYTHON+=		data/tools/trackplacer
+REPLACE_PYTHON+=		data/tools/unit_tree/helpers.py
+REPLACE_PYTHON+=		data/tools/wesnoth_addon_manager
+REPLACE_PYTHON+=		data/tools/wesnoth_addon_manager/html.py
+REPLACE_PYTHON+=		data/tools/wesnoth/campaignserver_client.py
+REPLACE_PYTHON+=		data/tools/unit_tree/TeamColorizer
+REPLACE_PYTHON+=		data/tools/unit_tree/overview.py
+REPLACE_PYTHON+=		utils/ai_test/*.py
+REPLACE_PYTHON+=		utils/*.py
 
 REPLACE_BASH+=		data/tools/castle-cutter/mk-all-castles.sh
 REPLACE_BASH+=		data/tools/castle-cutter/mk-castle.sh

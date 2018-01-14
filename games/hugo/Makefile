@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/08/16 20:45:37 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2018/01/14 17:33:59 rillig Exp $
 #
 
 DISTNAME=	hugov31_unix_source
@@ -12,7 +12,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.generalcoffee.com/hugo.html
 COMMENT=	Interactive fiction design system and interpreter
 
-SITES.hugolib.zip=${MASTER_SITE_IFARCHIVE:=programming/hugo/library/}
+SITES.hugolib.zip=	${MASTER_SITE_IFARCHIVE:=programming/hugo/library/}
 
 USE_TOOLS+=	gmake
 FAKE_NCURSES=	yes

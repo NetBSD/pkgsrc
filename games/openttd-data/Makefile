@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2015/07/03 12:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/01/14 17:34:00 rillig Exp $
 
-GFXVER=		0.5.2
-PKGNAME=	openttd-data-${GFXVER}
-CATEGORIES=	games x11
-MASTER_SITES=	http://binaries.openttd.org/extra
-DISTFILES=	opengfx-${GFXVER}-all.zip
-DISTFILES+=	openmsx-0.3.1-all.zip
-DISTFILES+=	opensfx-0.2.3-all.zip
+GFXVER=					0.5.2
+PKGNAME=				openttd-data-${GFXVER}
+CATEGORIES=				games x11
+MASTER_SITES=				http://binaries.openttd.org/extra
+DISTFILES=				opengfx-${GFXVER}-all.zip
+DISTFILES+=				openmsx-0.3.1-all.zip
+DISTFILES+=				opensfx-0.2.3-all.zip
 SITES.opengfx-${GFXVER}-all.zip=	${MASTER_SITES:Q}/opengfx/${GFXVER}/
-SITES.openmsx-0.3.1-all.zip=	${MASTER_SITES:Q}/openmsx/0.3.1/
-SITES.opensfx-0.2.3-all.zip=	${MASTER_SITES:Q}/opensfx/0.2.3/
+SITES.openmsx-0.3.1-all.zip=		${MASTER_SITES:Q}/openmsx/0.3.1/
+SITES.opensfx-0.2.3-all.zip=		${MASTER_SITES:Q}/opensfx/0.2.3/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openttd.org/
