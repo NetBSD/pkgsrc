@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2016/02/26 10:24:13 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.29 2018/01/14 10:39:30 wiz Exp $
 
 DISTNAME=	skill-4.1.4
 CATEGORIES=	sysutils
@@ -7,7 +6,7 @@ MASTER_SITES=	ftp://ftp.flux.utah.edu/pub/skill/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	kim@tac.nyc.ny.us
-HOMEPAGE=	http://mysite.verizon.net/jforys/jeffware.html
+HOMEPAGE=	http://www.marjum.com/jeffware.html
 COMMENT=	Signal processes given user names, ttys, commands, or pids
 
 BROKEN_ON_PLATFORM+= Interix-*-* # currently no machdep support
