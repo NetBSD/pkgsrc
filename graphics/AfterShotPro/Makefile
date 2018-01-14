@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/03/13 18:05:59 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2018/01/14 14:58:38 rillig Exp $
 
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.corel.com/akdlm/6763/downloads/AfterShotPro/1/PF/
@@ -49,7 +49,7 @@ BROKEN=		Not supported for this emulation
 .endif
 
 do-extract: ${WRKDIR}
-	${RUN} cd ${WRKDIR} && ${AR} x ${_DISTDIR:Q}/${DISTNAME}${EXTRACT_SUFX} data.tar.gz
+	${RUN} cd ${WRKDIR} && ${AR} x ${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX} data.tar.gz
 	cd ${WRKSRC} && ${TAR} -xzpf data.tar.gz
 	chmod go-w ${WRKSRC}
 

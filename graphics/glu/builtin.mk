@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.14 2013/06/17 05:27:50 dholland Exp $
+# $NetBSD: builtin.mk,v 1.15 2018/01/14 14:58:39 rillig Exp $
 
 BUILTIN_PKG:=	glu
 
@@ -56,7 +56,7 @@ USE_BUILTIN.glu=	yes
 .      for dep in ${BUILDLINK_API_DEPENDS.glu}
 .        if !empty(USE_BUILTIN.glu:M[yY][eE][sS])
 USE_BUILTIN.glu!=							\
-	if ${PKG_ADMIN} pmatch ${dep:Q} ${BUILTIN_PKG.glu:Q}; then	\
+	if ${PKG_ADMIN} pmatch ${dep:Q} ${BUILTIN_PKG.glu}; then	\
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
