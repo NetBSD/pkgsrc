@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2017/08/16 20:45:38 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2018/01/14 17:34:00 rillig Exp $
 
 DISTNAME=		kye-1.0
 PKGREVISION=		23
@@ -9,7 +9,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://games.moria.org.uk/kye/pygtk
 COMMENT=		Puzzle game
 
-PYDISTUTILSPKG=	yes
+PYDISTUTILSPKG=		yes
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	kye/common.py

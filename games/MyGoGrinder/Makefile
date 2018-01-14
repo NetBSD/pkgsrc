@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/09/03 08:53:09 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/01/14 17:33:57 rillig Exp $
 
 DISTNAME=	MyGoGrinder-2.3.0
 CATEGORIES=	games
@@ -13,8 +13,8 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${WRKDIR}/MyGoGrinder
 USE_LANGUAGES=	# none
 
-USE_JAVA=       run
-USE_JAVA2=      yes
+USE_JAVA=	run
+USE_JAVA2=	yes
 USE_TOOLS+=	pax
 
 INSTALLATION_DIRS+=	bin

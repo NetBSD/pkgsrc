@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2018/01/01 21:18:29 adam Exp $
+# $NetBSD: Makefile,v 1.42 2018/01/14 17:34:01 rillig Exp $
 #
 
 DISTNAME=		scummvm-tools-1.4.0
@@ -12,9 +12,9 @@ HOMEPAGE=		http://scummvm.sourceforge.net/
 COMMENT=		Conversion and compression tools for ScummVM
 LICENSE=		gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
-HAS_CONFIGURE=	yes
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
+HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 INSTALLATION_DIRS=	bin
