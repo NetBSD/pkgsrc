@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2017/09/04 18:08:24 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2018/01/14 15:26:49 rillig Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
@@ -18,7 +18,7 @@ DEPENDS+=	doom1-[0-9]*:../../games/doom1
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	gmake gunzip tar unzip
-MAKE_ENV+=	X11BASE=${X11BASE:Q} INSTALL_PREFIX=${PREFIX:Q}
+MAKE_ENV+=	X11BASE=${X11BASE} INSTALL_PREFIX=${PREFIX}
 
 BROKEN_ON_PLATFORM=	${LP64PLATFORMS}
 
