@@ -1,0 +1,92 @@
+$NetBSD: patch-lynis,v 1.1 2018/01/15 12:38:37 sborrill Exp $
+
+Remove hardwired paths to allow installation in a separate dir to the
+main script.
+
+--- lynis.orig	2018-01-12 00:00:00.000000000 +0000
++++ lynis	2018-01-15 11:32:35.000000000 +0000
+@@ -72,15 +72,7 @@
+ 
+     # Test from which directories we can use all functions and tests
+ 
+-        INCLUDEDIR=""  # Set default include directory to none
+-        tINCLUDE_TARGETS="/usr/local/include/lynis /usr/local/lynis/include /usr/share/lynis/include ./include"  # Default paths to check (CWD as last option, in case we run from standalone)
+-        for I in ${tINCLUDE_TARGETS}; do
+-            if [ "${I}" = "./include" ]; then
+-                if [ -d ${WORKDIR}/include ]; then INCLUDEDIR="${WORKDIR}/include"; fi
+-            elif [ -d ${I} -a -z "${INCLUDEDIR}" ]; then
+-                INCLUDEDIR=${I}
+-            fi
+-        done
++        INCLUDEDIR="@PREFIX@/lib/lynis/include"
+ 
+     # Drop out if our include directory can't be found
+         if [ -z "${INCLUDEDIR}" ]; then
+@@ -92,14 +84,7 @@
+ 
+     # Test for database directory
+ 
+-        DBDIR=""; tDB_TARGETS="/usr/local/share/lynis/db /usr/local/lynis/db /usr/share/lynis/db ./db"
+-        for I in ${tDB_TARGETS}; do
+-            if [ "${I}" = "./db" ]; then
+-                if [ -d ${WORKDIR}/db ]; then DBDIR="${WORKDIR}/db"; fi
+-            elif [ -d ${I} -a -z "${DBDIR}" ]; then
+-                DBDIR="${I}"
+-            fi
+-        done
++        DBDIR="@PREFIX@/lib/lynis/db"
+ 
+     # Import translations. First import English to prefill all texts
+     if [ ! -f ${DBDIR}/languages/en ]; then
+@@ -303,7 +288,7 @@
+     DiscoverProfiles
+ 
+     # Initialize and check profile file, auditor name, log file and report file
+-    if [ -z "${LOGDIR}" ];            then LOGDIR="/var/log"; fi
++    if [ -z "${LOGDIR}" ];            then LOGDIR="@VARBASE@/log"; fi
+     if [ -z "${AUDITORNAME}" ];       then AUDITORNAME="[Not Specified]"; fi
+     if [ -z "${LOGFILE}" ];           then LOGFILE="${LOGDIR}/lynis.log"; fi
+     if [ -z "${REPORTFILE}" ];        then REPORTFILE="${LOGDIR}/lynis-report.dat"; fi
+@@ -321,14 +306,14 @@
+ 
+     if [ ${PRIVILEGED} -eq 0 ]; then
+         PIDFILE="${MYHOMEDIR}/lynis.pid"
+-    elif [ -d /var/run ]; then
+-        PIDFILE="/var/run/lynis.pid"
++    elif [ -d @VARBASE@/run ]; then
++        PIDFILE="@VARBASE@/run/lynis.pid"
+     else
+         PIDFILE="./lynis.pid"
+     fi
+ 
+     # Check if there is already a PID file in any of the locations (incorrect termination of previous instance)
+-    if [ -f "${MYHOMEDIR}/lynis.pid" -o -f "./lynis.pid" -o -f "/var/run/lynis.pid" ]; then
++    if [ -f "${MYHOMEDIR}/lynis.pid" -o -f "./lynis.pid" -o -f "@VARBASE@/run/lynis.pid" ]; then
+         printf "%s" "
+ 
+ ${WARNING}Warning${NORMAL}: ${WHITE}PID file exists, probably another Lynis process is running.${NORMAL}
+@@ -354,7 +339,7 @@
+         # Deleting any stale PID files that might exist. Note: Display function does not work yet at this point
+         if [ -f "${MYHOMEDIR}/lynis.pid" ]; then rm -f "${MYHOMEDIR}/lynis.pid"; fi
+         if [ -f "./lynis.pid" ]; then rm -f "./lynis.pid"; fi
+-        if [ -f "/var/run/lynis.pid" ]; then rm -f "/var/run/lynis.pid"; fi
++        if [ -f "@VARBASE@/run/lynis.pid" ]; then rm -f "@VARBASE@/run/lynis.pid"; fi
+     fi
+ 
+     # Ensure symlink attack is not possible, by confirming there is no symlink of the file already
+@@ -577,14 +562,7 @@
+ #
+     # Plugin directory test
+     if [ -z "${PLUGINDIR}" ]; then
+-        #LogText "Result: Searching for plugindir"
+-        tPLUGIN_TARGETS="/usr/local/lynis/plugins /usr/local/share/lynis/plugins /usr/share/lynis/plugins /etc/lynis/plugins ./plugins"
+-        for DIR in ${tPLUGIN_TARGETS}; do
+-            if [ -d ${DIR} -a -z "${PLUGINDIR}" ]; then
+-                PLUGINDIR=${DIR}
+-                Debug "Result: found plugindir ${PLUGINDIR}"
+-            fi
+-        done
++	PLUGINDIR="@PREFIX@/lib/lynis/plugins"
+     else
+         Debug "Plugin was already set before to ${PLUGINDIR} (most likely via program argument or profile)"
+     fi
