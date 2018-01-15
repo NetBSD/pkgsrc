@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.225 2018/01/15 18:13:12 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.226 2018/01/15 21:36:26 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -319,3 +319,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/mongo-c-driver to 1.9.1 [fhajny 2018-01-15]
 	Added security/lynis version 2.5.9 [sborrill 2018-01-15]
 	Updated devel/cmake to 3.10.1nb2 [minskim 2018-01-15]
+	Added www/php-phalcon version 3.3.1 [fhajny 2018-01-15]
