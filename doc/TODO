@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18031 2018/01/14 10:03:14 wiz Exp $
+$NetBSD: TODO,v 1.18032 2018/01/15 08:52:25 adam Exp $
 
 Suggested new packages
 ======================
@@ -1107,7 +1107,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ocrad-0.25
 	o odbc-postgresql-09.03.0400
 	o olvwm-4.5
-	o oniguruma-5.9.6
 	o oo2c-2.1.7
 	o opal-3.16.2
 	o opencsg-1.4.0
