@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/09 17:33:22 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/15 08:49:04 adam Exp $
 bin/onig-config
 include/oniggnu.h
 include/onigposix.h
 include/oniguruma.h
 lib/libonig.la
+lib/pkgconfig/oniguruma.pc
