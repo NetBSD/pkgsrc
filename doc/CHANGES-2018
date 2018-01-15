@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.218 2018/01/15 09:00:01 he Exp $
+$NetBSD: CHANGES-2018,v 1.219 2018/01/15 09:45:18 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -299,3 +299,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/mp4v2 to 3.0.3.0 [adam 2018-01-15]
 	Updated textproc/oniguruma to 6.7.0 [adam 2018-01-15]
 	Updated fonts/fontconfig to 2.12.6nb1 [he 2018-01-15]
+	Updated security/easy-rsa to 3.0.3nb1 [jnemeth 2018-01-15]
