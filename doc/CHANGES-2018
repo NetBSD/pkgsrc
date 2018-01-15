@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.216 2018/01/15 08:08:55 adam Exp $
+$NetBSD: CHANGES-2018,v 1.217 2018/01/15 08:52:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -297,3 +297,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/youtube-dl to 20180114 [leot 2018-01-14]
 	Updated devel/ccache to 3.3.5 [adam 2018-01-15]
 	Updated multimedia/mp4v2 to 3.0.3.0 [adam 2018-01-15]
+	Updated textproc/oniguruma to 6.7.0 [adam 2018-01-15]
