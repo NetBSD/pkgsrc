@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.395 2017/11/12 13:34:14 khorben Exp $
+# $NetBSD: bsd.prefs.mk,v 1.396 2018/01/15 09:35:45 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -700,38 +700,44 @@ _BUILD_DEFS+=		INIT_SYSTEM
 .endif
 
 _PKGSRC_MKPIE=	no
-.if (${PKGSRC_MKPIE:tl} == "yes") && \
-    (${_OPSYS_SUPPORTS_MKPIE:Uno} == "yes")
+.if ${PKGSRC_MKPIE:tl} == "yes" && \
+    ${MKPIE_SUPPORTED:Uyes:tl} == "yes" && \
+    ${_OPSYS_SUPPORTS_MKPIE:Uno} == "yes"
 _PKGSRC_MKPIE=	yes
 .endif
 
 _PKGSRC_MKREPRO=	no
-.if (${PKGSRC_MKREPRO:tl} == "yes") && \
-    (${_OPSYS_SUPPORTS_MKREPRO:Uno} == "yes")
+.if ${PKGSRC_MKREPRO:tl} == "yes" && \
+    ${MKREPRO_SUPPORTED:Uyes:tl} == "yes" && \
+    ${_OPSYS_SUPPORTS_MKREPRO:Uno} == "yes"
 _PKGSRC_MKREPRO=	yes
 .endif
 
 _PKGSRC_USE_FORTIFY=	no
-.if (${PKGSRC_USE_FORTIFY:tl} != "no") && \
-    (${_OPSYS_SUPPORTS_FORTIFY:Uno} == "yes")
+.if ${PKGSRC_USE_FORTIFY:tl} != "no" && \
+    ${FORTIFY_SUPPORTED:Uyes:tl} == "yes" && \
+    ${_OPSYS_SUPPORTS_FORTIFY:Uno} == "yes"
 _PKGSRC_USE_FORTIFY=	yes
 .endif
 
 _PKGSRC_USE_RELRO=	no
-.if (${PKGSRC_USE_RELRO:tl} != "no") && \
-    (${_OPSYS_SUPPORTS_RELRO:Uno} == "yes")
+.if ${PKGSRC_USE_RELRO:tl} != "no" && \
+    ${RELRO_SUPPORTED:Uyes:tl} == "yes" && \
+    ${_OPSYS_SUPPORTS_RELRO:Uno} == "yes"
 _PKGSRC_USE_RELRO=	yes
 .endif
 
 _PKGSRC_USE_SSP=	no
-.if (${PKGSRC_USE_SSP:tl} != "no") && \
-    (${_OPSYS_SUPPORTS_SSP:Uno} == "yes")
+.if ${PKGSRC_USE_SSP:tl} != "no" && \
+    ${SSP_SUPPORTED:Uyes:tl} == "yes" && \
+    ${_OPSYS_SUPPORTS_SSP:Uno} == "yes"
 _PKGSRC_USE_SSP=	yes
 .endif
 
 _PKGSRC_USE_STACK_CHECK=no
-.if (${PKGSRC_USE_STACK_CHECK:tl} != "no") && \
-    (${_OPSYS_SUPPORTS_STACK_CHECK:Uno} == "yes")
+.if ${PKGSRC_USE_STACK_CHECK:tl} != "no" && \
+    ${STACK_CHECK_SUPPORTED:Uyes:tl} == "yes" && \
+    ${_OPSYS_SUPPORTS_STACK_CHECK:Uno} == "yes"
 _PKGSRC_USE_STACK_CHECK=yes
 .endif
 
