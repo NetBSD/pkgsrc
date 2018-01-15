@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/10/23 14:42:45 maya Exp $
+# $NetBSD: Makefile,v 1.3 2018/01/15 09:49:03 jperkin Exp $
 
 GITHUB_PROJECT=	edk2
 PKGNAME=	OVMF-0.0.2017624
@@ -18,6 +18,8 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 USE_TOOLS+=	gmake bash
 USE_LANGUAGES=	c c++
 
+SSP_SUPPORTED=	no
+
 PYTHON_VERSIONS_ACCEPTED=	27
 SUBST_CLASSES+=			python
 SUBST_STAGE.python=		pre-configure
@@ -25,8 +27,6 @@ SUBST_MESSAGE.python=		Fix python binary
 SUBST_FILES.python=		BaseTools/Tests/GNUmakefile
 SUBST_FILES.python+=		BaseTools/BinWrappers/PosixLike/*
 SUBST_SED.python=		-e 's,python2,${PYTHONBIN},g'
-
-PKGSRC_USE_SSP=		no
 
 do-build:
 	cd ${WRKSRC}/OvmfPkg && \
