@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/01/10 16:53:13 jaapb Exp $
+# $NetBSD: Makefile,v 1.27 2018/01/15 09:47:55 jperkin Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
@@ -30,7 +30,7 @@ PKG_SYSCONFSUBDIR=	xen
 ONLY_FOR_PLATFORM=	Linux-2.6*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64
 
-PKGSRC_USE_SSP=		no
+SSP_SUPPORTED=		no
 
 CONFLICTS+=		libxen-[0-9]*
 CONFLICTS+=		xenstoretools-[0-9]*
