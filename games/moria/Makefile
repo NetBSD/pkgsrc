@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/01/14 17:34:00 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2018/01/15 09:54:21 jperkin Exp $
 
 DISTNAME=		um5.5.2
 PKGNAME=		moria-5.5.2
@@ -17,6 +17,8 @@ COMMENT=		Rogue-like game with a different sense of scale than Rogue
 WRKSRC=			${WRKDIR}/umoria
 MAKE_FLAGS+=		CURSES=-l${BUILDLINK_LIBNAME.curses} VARBASE=${VARBASE}
 
+FORTIFY_SUPPORTED=	no
+
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 SETGIDGAME=		yes
@@ -27,8 +29,6 @@ SPECIAL_PERMS=		bin/moria ${SETGID_GAMES_PERMS}
 do-configure:
 	@${RM} -f ${WRKSRC}/*.[ch] ${WRKSRC}/Makefile
 	@cd ${WRKSRC}; ${LN} -s source/* unix/* .
-
-PKGSRC_USE_FORTIFY=	no
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
