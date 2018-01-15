@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2017/12/04 07:19:55 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/01/15 09:26:23 jnemeth Exp $
 
 DISTNAME=	easy-rsa-3.0.3
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenVPN/}
 
@@ -31,6 +32,11 @@ REQD_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
+
+SUBST_CLASSES+=		sysconf
+SUBST_STAGE.sysconf=	post-patch
+SUBST_FILES.sysconf=	easyrsa3/easyrsa
+SUBST_SED.sysconf=	-e "s|@@@SYSCONF@@@|${PKG_SYSCONFDIR}|"
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/easyrsa3/easyrsa ${DESTDIR}${BINDIR}/easyrsa
