@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2017/07/24 08:53:45 maya Exp $
+# $NetBSD: Makefile,v 1.32 2018/01/15 09:47:54 jperkin Exp $
 
 VERSION=	4.5.5
 DISTNAME=	xen-${VERSION}
@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v2
 ONLY_FOR_PLATFORM=	Linux-2.6*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64
 
-PKGSRC_USE_SSP=	no
+SSP_SUPPORTED=	no
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
