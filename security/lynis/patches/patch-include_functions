@@ -1,0 +1,33 @@
+$NetBSD: patch-include_functions,v 1.1 2018/01/15 12:38:37 sborrill Exp $
+
+Set location of default profiles.
+Remove bash comparisons.
+
+--- /usr/obj/pkgsrc/security/lynis/work.builder7/lynis/include/functions.orig	2018-01-12 00:00:00.000000000 +0000
++++ /usr/obj/pkgsrc/security/lynis/work.builder7/lynis/include/functions	2018-01-15 11:38:48.000000000 +0000
+@@ -426,7 +426,7 @@
+             DEFAULT_PROFILE=""
+             PROFILEDIR=""
+             tPROFILE_NAMES="default.prf custom.prf"
+-            tPROFILE_TARGETS="/usr/local/etc/lynis /etc/lynis /usr/local/lynis ."
++            tPROFILE_TARGETS="@CONFDIR@ ."
+             for PNAME in ${tPROFILE_NAMES}; do
+                 for PLOC in ${tPROFILE_TARGETS}; do
+                     # Only use one default.prf
+@@ -3010,14 +3010,14 @@
+ 
+             LogText "${FUNCNAME}: check if ${1} is equal to ${2}"
+ 
+-            if [ "$1" == "$2" ]; then
++            if [ "$1" = "$2" ]; then
+                 LogText "${FUNCNAME}: ${1} is equal to ${2}"
+                 RETVAL=0
+             fi
+ 
+             if ! [ -z ${3+x} ]; then
+                 LogText "${FUNCNAME}: ${1} is equal to ${3}"
+-                if [ "$2" == "$3" ]; then
++                if [ "$2" = "$3" ]; then
+                     LogText "${FUNCNAME}: ${OPTION} is equal to ${3}"
+                     RETVAL=1
+                 fi
