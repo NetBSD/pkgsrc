@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.111 2018/01/04 10:25:35 maya Exp $
+$NetBSD: distinfo,v 1.112 2018/01/15 12:21:35 jperkin Exp $
 
 SHA1 (boost_1_66_0.tar.bz2) = b6b284acde2ad7ed49b44e856955d7b1ea4e9459
 RMD160 (boost_1_66_0.tar.bz2) = ee5dafdfa49adf50a5333cef1f55dac4f70b4c14
@@ -31,3 +31,4 @@ SHA1 (patch-libs_context_src_asm_ontop_arm_aapcs_elf_gas.S) = 2ae88227308ee9332f
 SHA1 (patch-libs_fiber_build_Jamfile.v2) = 28c1aba2d074f2db7104e37cd900d33f5fcffb09
 SHA1 (patch-tools_build_src_engine_build.jam) = dc59422ade217aa49eb5d6928f02f7bc4734aa43
 SHA1 (patch-tools_build_src_engine_build.sh) = ed5e29d049f04e8a1e055844e66c549e5cd4bb01
+SHA1 (patch-tools_build_src_tools_gcc.jam) = 7a3b990ea321413f1d4d9220407a1bad557c820e
