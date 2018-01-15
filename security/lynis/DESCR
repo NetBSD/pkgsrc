@@ -1,0 +1,5 @@
+Lynis is an open source security auditing tool. Used by system
+administrators, security professionals, and auditors, to evaluate
+the security defenses of their Linux and Unix-based systems. It
+runs on the host itself, so it performs more extensive security
+scans than vulnerability scanners.
