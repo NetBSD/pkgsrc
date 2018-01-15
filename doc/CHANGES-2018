@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.220 2018/01/15 10:40:33 adam Exp $
+$NetBSD: CHANGES-2018,v 1.221 2018/01/15 11:06:28 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -302,3 +302,16 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/easy-rsa to 3.0.3nb1 [jnemeth 2018-01-15]
 	Updated devel/py-faker to 0.8.9 [adam 2018-01-15]
 	Updated devel/py-decorator to 4.2.1 [adam 2018-01-15]
+	Updated sysutils/rsyslog to 8.32.0 [fhajny 2018-01-15]
+	Updated sysutils/rsyslog-dbi to 8.32.0 [fhajny 2018-01-15]
+	Updated sysutils/rsyslog-elasticsearch to 8.32.0 [fhajny 2018-01-15]
+	Updated sysutils/rsyslog-gnutls to 8.32.0 [fhajny 2018-01-15]
+	Updated sysutils/rsyslog-gssapi to 8.32.0 [fhajny 2018-01-15]
+	Updated sysutils/rsyslog-kafka to 8.32.0 [fhajny 2018-01-15]
+	Updated sysutils/rsyslog-libgcrypt to 8.32.0 [fhajny 2018-01-15]
+	Updated sysutils/rsyslog-mysql to 8.32.0 [fhajny 2018-01-15]
+	Updated sysutils/rsyslog-omprog to 8.32.0 [fhajny 2018-01-15]
+	Updated sysutils/rsyslog-pgsql to 8.32.0 [fhajny 2018-01-15]
+	Updated sysutils/rsyslog-rabbitmq to 8.32.0 [fhajny 2018-01-15]
+	Updated sysutils/rsyslog-relp to 8.32.0 [fhajny 2018-01-15]
+	Updated sysutils/rsyslog-snmp to 8.32.0 [fhajny 2018-01-15]
