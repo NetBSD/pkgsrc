@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/07/07 22:44:26 pgoyette Exp $
+# $NetBSD: Makefile,v 1.22 2018/01/15 09:50:47 jperkin Exp $
 #
 
 # Note -- version number also in the do-install rule
@@ -18,8 +18,8 @@ LICENSE=		gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386 NetBSD-*-x86_64 Linux-*-x86_64
 
-PKGSRC_USE_FORTIFY=no
-PKGSRC_USE_SSP=no
+FORTIFY_SUPPORTED=	no
+SSP_SUPPORTED=		no
 
 .include "../../mk/bsd.prefs.mk"
 .if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
