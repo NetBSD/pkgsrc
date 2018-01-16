@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.229 2018/01/16 09:37:13 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.230 2018/01/16 09:37:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -323,3 +323,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated chat/irssi to 1.1.0 [maya 2018-01-16]
 	Updated archivers/lz4 to 1.8.1.2 [adam 2018-01-16]
 	Updated net/transmission to 2.92nb6 [wiz 2018-01-16]
+	Updated net/transmission-gtk to 2.92nb10 [wiz 2018-01-16]
