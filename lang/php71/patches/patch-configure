@@ -1,8 +1,20 @@
-$NetBSD: patch-configure,v 1.3 2017/05/03 11:45:25 maya Exp $
+$NetBSD: patch-configure,v 1.4 2018/01/16 11:04:54 jperkin Exp $
 
---- configure.orig	2016-04-28 18:12:26.000000000 +0000
+Don't automatically add libgcc on SunOS.
+
+--- configure.orig	2018-01-03 02:32:21.000000000 +0000
 +++ configure
-@@ -6930,27 +6930,6 @@ EOF
+@@ -5436,9 +5436,6 @@ fi
+ case $host_alias in
+   *solaris*)
+     CPPFLAGS="$CPPFLAGS -D_POSIX_PTHREAD_SEMANTICS"
+-    if test "${enable_libgcc+set}" != "set" && test "$GCC" = "yes"; then
+-      enable_libgcc=yes
+-    fi
+     ;;
+   *dgux*)
+     CPPFLAGS="$CPPFLAGS -D_BSD_TIMEOFDAY_FLAVOR"
+@@ -6909,27 +6906,6 @@ EOF
      ;;
    esac
  
@@ -30,7 +42,7 @@ $NetBSD: patch-configure,v 1.3 2017/05/03 11:45:25 maya Exp $
    { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
  $as_echo "yes" >&6; }
  
-@@ -18408,7 +18387,7 @@ fi
+@@ -18391,7 +18367,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -39,7 +51,7 @@ $NetBSD: patch-configure,v 1.3 2017/05/03 11:45:25 maya Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -20572,7 +20551,7 @@ $as_echo "yes" >&6; }
+@@ -20745,7 +20721,7 @@ $as_echo "#define HAVE_SQLITE3_ERRSTR 1"
      PHP_SQLITE3_CFLAGS="-I@ext_srcdir@/libsqlite $other_flags $threadsafe_flags $debug_flags"
  
  
@@ -48,7 +60,7 @@ $NetBSD: patch-configure,v 1.3 2017/05/03 11:45:25 maya Exp $
  
  
    unique=`echo $header_file|$SED 's/[^a-zA-Z0-9]/_/g'`
-@@ -31742,7 +31721,7 @@ fi
+@@ -31966,7 +31942,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -57,7 +69,7 @@ $NetBSD: patch-configure,v 1.3 2017/05/03 11:45:25 maya Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -42631,7 +42610,7 @@ fi
+@@ -42858,7 +42834,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -66,7 +78,7 @@ $NetBSD: patch-configure,v 1.3 2017/05/03 11:45:25 maya Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -92806,7 +92785,7 @@ fi
+@@ -93979,7 +93955,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -75,7 +87,7 @@ $NetBSD: patch-configure,v 1.3 2017/05/03 11:45:25 maya Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -96439,12 +96418,7 @@ old_CC=$CC
+@@ -97605,12 +97581,7 @@ old_CC=$CC
  if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
    CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
    INLINE_CFLAGS="$INLINE_CFLAGS $ac_cv_pthreads_cflags"
