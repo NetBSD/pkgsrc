@@ -1,4 +1,4 @@
-$NetBSD: patch-ext_standard_uniqid.c,v 1.2 2017/07/19 02:44:45 manu Exp $
+$NetBSD: patch-ext_standard_uniqid.c,v 1.3 2018/01/16 11:04:54 jperkin Exp $
 
 PHP uniqid() relies on microsecond-precise system clock to produce an
 unique identifier. In order to avoid  using the same value, it first
@@ -17,10 +17,9 @@ in increased 10000 fold without changing its behavior.
 
 Submitted upstream as https://bugs.php.net/bug.php?id=74851
 
---- ext/standard/uniqid.c.orig	2017-06-07 10:09:31.000000000 +0200
-+++ ext/standard/uniqid.c	2017-07-08 08:24:24.000000000 +0200
-@@ -52,25 +52,31 @@
- 	zend_string *uniqid;
+--- ext/standard/uniqid.c.orig	2018-01-03 02:32:25.000000000 +0000
++++ ext/standard/uniqid.c
+@@ -53,23 +53,29 @@ PHP_FUNCTION(uniqid)
  	int sec, usec;
  	size_t prefix_len = 0;
  	struct timeval tv;
@@ -59,4 +58,3 @@ Submitted upstream as https://bugs.php.net/bug.php?id=74851
  	sec = (int) tv.tv_sec;
  	usec = (int) (tv.tv_usec % 0x100000);
  
- 	/* The max value usec can have is 0xF423F, so we use only five hex
