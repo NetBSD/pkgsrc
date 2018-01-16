@@ -1,8 +1,8 @@
-$NetBSD: patch-client_CMakeLists.txt,v 1.1 2016/09/16 06:49:11 adam Exp $
+$NetBSD: patch-client_CMakeLists.txt,v 1.2 2018/01/16 16:29:42 adam Exp $
 
 Split configuration between mysql-client and mysql-server.
 
---- client/CMakeLists.txt.orig	2016-03-28 18:06:12.000000000 +0000
+--- client/CMakeLists.txt.orig	2017-12-28 03:46:26.000000000 +0000
 +++ client/CMakeLists.txt
 @@ -32,8 +32,10 @@ INCLUDE(${MYSQL_CMAKE_SCRIPT_DIR}/compil
  
@@ -29,7 +29,7 @@ Split configuration between mysql-client and mysql-server.
  
  IF(NOT WITHOUT_SERVER)
    MYSQL_ADD_EXECUTABLE(mysql_upgrade
-@@ -58,16 +62,18 @@ TARGET_LINK_LIBRARIES(mysql_upgrade mysq
+@@ -58,14 +62,17 @@ TARGET_LINK_LIBRARIES(mysql_upgrade mysq
  ADD_DEPENDENCIES(mysql_upgrade GenFixPrivs GenSysSchema)
  ENDIF()
  
@@ -37,6 +37,7 @@ Split configuration between mysql-client and mysql-server.
  MYSQL_ADD_EXECUTABLE(mysqltest mysqltest.cc COMPONENT Test)
  SET_SOURCE_FILES_PROPERTIES(mysqltest.cc PROPERTIES COMPILE_FLAGS "-DTHREADS")
  TARGET_LINK_LIBRARIES(mysqltest mysqlclient regex)
+ ADD_DEPENDENCIES(mysqltest GenError)
 +ENDIF()
  
  ADD_CONVENIENCE_LIBRARY(mysqlcheck_core check/mysqlcheck_core.cc)
@@ -45,11 +46,8 @@ Split configuration between mysql-client and mysql-server.
 +IF(WITHOUT_SERVER)
  MYSQL_ADD_EXECUTABLE(mysqlcheck check/mysqlcheck.cc)
  TARGET_LINK_LIBRARIES(mysqlcheck mysqlcheck_core)
--
- MYSQL_ADD_EXECUTABLE(mysqldump mysqldump.c ../sql-common/my_user.c)
- TARGET_LINK_LIBRARIES(mysqldump mysqlclient)
  
-@@ -77,10 +83,14 @@ TARGET_LINK_LIBRARIES(mysqlimport mysqlc
+@@ -78,10 +85,14 @@ TARGET_LINK_LIBRARIES(mysqlimport mysqlc
  
  MYSQL_ADD_EXECUTABLE(mysqlshow mysqlshow.c)
  TARGET_LINK_LIBRARIES(mysqlshow mysqlclient)
@@ -64,7 +62,7 @@ Split configuration between mysql-client and mysql-server.
  MYSQL_ADD_EXECUTABLE(mysqlbinlog mysqlbinlog.cc)
  ADD_COMPILE_FLAGS(
    mysqlbinlog.cc
-@@ -97,9 +107,12 @@ TARGET_LINK_LIBRARIES(mysqlslap mysqlcli
+@@ -98,9 +109,12 @@ TARGET_LINK_LIBRARIES(mysqlslap mysqlcli
  
  MYSQL_ADD_EXECUTABLE(mysql_config_editor mysql_config_editor.cc)
  TARGET_LINK_LIBRARIES(mysql_config_editor mysqlclient)
@@ -77,7 +75,7 @@ Split configuration between mysql-client and mysql-server.
  
  IF(UNIX AND NOT WITHOUT_SERVER)
    MYSQL_ADD_EXECUTABLE(mysql_install_db
-@@ -112,23 +125,30 @@ IF(UNIX AND NOT WITHOUT_SERVER)
+@@ -113,23 +127,30 @@ IF(UNIX AND NOT WITHOUT_SERVER)
    ADD_DEPENDENCIES(mysql_install_db GenBootstrapPriv GenSysSchema)
  ENDIF()
  

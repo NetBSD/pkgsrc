@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.8 2017/10/22 20:20:57 adam Exp $
+# $NetBSD: Makefile.common,v 1.9 2018/01/16 16:29:41 adam Exp $
 #
 # used by databases/mysql57-client/Makefile
 # used by databases/mysql57-server/Makefile
 
-DISTNAME=	mysql-5.7.20
+DISTNAME=	mysql-5.7.21
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-5.7/}
 
@@ -11,8 +11,8 @@ MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mysql.com/
 LICENSE=	gnu-gpl-v2
 
-DISTINFO_FILE?=		${.CURDIR}/../../databases/mysql57-client/distinfo
-PATCHDIR?=		${.CURDIR}/../../databases/mysql57-client/patches
+DISTINFO_FILE?=	${.CURDIR}/../../databases/mysql57-client/distinfo
+PATCHDIR?=	${.CURDIR}/../../databases/mysql57-client/patches
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
