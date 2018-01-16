@@ -1,8 +1,20 @@
-$NetBSD: patch-configure,v 1.3 2016/05/02 13:08:00 taca Exp $
+$NetBSD: patch-configure,v 1.4 2018/01/16 11:28:09 jperkin Exp $
 
---- configure.orig	2016-04-28 00:53:20.000000000 +0000
+Don't automatically add libgcc on SunOS.
+
+--- configure.orig	2018-01-03 00:28:11.000000000 +0000
 +++ configure
-@@ -8315,27 +8315,6 @@ EOF
+@@ -5459,9 +5459,6 @@ fi
+ case $host_alias in
+   *solaris*)
+     CPPFLAGS="$CPPFLAGS -D_POSIX_PTHREAD_SEMANTICS"
+-    if test "${enable_libgcc+set}" != "set" && test "$GCC" = "yes"; then
+-      enable_libgcc=yes
+-    fi
+     ;;
+   *dgux*)
+     CPPFLAGS="$CPPFLAGS -D_BSD_TIMEOFDAY_FLAVOR"
+@@ -8315,27 +8312,6 @@ EOF
      ;;
    esac
  
@@ -30,7 +42,7 @@ $NetBSD: patch-configure,v 1.3 2016/05/02 13:08:00 taca Exp $
    { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
  $as_echo "yes" >&6; }
  
-@@ -9139,27 +9118,6 @@ EOF
+@@ -9139,27 +9115,6 @@ EOF
      ;;
    esac
  
@@ -58,7 +70,7 @@ $NetBSD: patch-configure,v 1.3 2016/05/02 13:08:00 taca Exp $
    { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
  $as_echo "yes" >&6; }
  
-@@ -24712,7 +24670,7 @@ fi
+@@ -24712,7 +24667,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -67,7 +79,7 @@ $NetBSD: patch-configure,v 1.3 2016/05/02 13:08:00 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -26868,7 +26826,7 @@ $as_echo "yes" >&6; }
+@@ -26868,7 +26823,7 @@ $as_echo "yes" >&6; }
      PHP_SQLITE3_CFLAGS="-I@ext_srcdir@/libsqlite $other_flags $threadsafe_flags $debug_flags"
  
  
@@ -76,7 +88,7 @@ $NetBSD: patch-configure,v 1.3 2016/05/02 13:08:00 taca Exp $
  
  
    unique=`echo $header_file|$SED 's/[^a-zA-Z0-9]/_/g'`
-@@ -37985,7 +37943,7 @@ fi
+@@ -37985,7 +37940,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -85,7 +97,7 @@ $NetBSD: patch-configure,v 1.3 2016/05/02 13:08:00 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -49597,7 +49555,7 @@ fi
+@@ -49597,7 +49552,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -94,7 +106,7 @@ $NetBSD: patch-configure,v 1.3 2016/05/02 13:08:00 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -107117,12 +107075,7 @@ old_CC=$CC
+@@ -107120,12 +107075,7 @@ old_CC=$CC
  if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
    CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
    INLINE_CFLAGS="$INLINE_CFLAGS $ac_cv_pthreads_cflags"
