@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.38 2017/11/12 15:36:58 khorben Exp $
+# $NetBSD: options.mk,v 1.39 2018/01/16 07:48:47 maya Exp $
 
 # Recommended package options for various setups:
 #
@@ -117,6 +117,9 @@ samba-pam-smbpass-install:
 		${INSTALL_DATA} $${f} \
 			${DESTDIR}${PREFIX}/${EGDIR}/pam_smbpass/$${f};	\
 	done
+.else
+CONFIGURE_ARGS+=	--without-pam
+CONFIGURE_ARGS+=	--without-pam_smbpass
 .endif
 
 ###
