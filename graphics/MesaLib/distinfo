@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.120 2017/03/22 20:22:31 markd Exp $
+$NetBSD: distinfo,v 1.121 2018/01/16 15:49:47 jperkin Exp $
 
 SHA1 (mesa-11.2.2.tar.xz) = c3805020be6fef77d3b96a5ddf4ddc256dee16ff
 RMD160 (mesa-11.2.2.tar.xz) = 14bca7cc76015e53db2fafcebb8540f451be5aab
@@ -22,6 +22,7 @@ SHA1 (patch-src_gallium_auxiliary_util_u__network.h) = c6106d67b4fa9db0d79047418
 SHA1 (patch-src_gallium_drivers_llvmpipe_lp__state__fs.c) = b14ca18ae1dc03901b197c86e67052bbb154a81f
 SHA1 (patch-src_gallium_drivers_llvmpipe_lp__state__setup.c) = 1d6c24bc598da9945ce75c1cc6a2334228d66b41
 SHA1 (patch-src_gallium_drivers_nouveau_codegen_nv50__ir__peephole.cpp) = 5fc2ef7eafac3006896af96bac8176c79b17cfdc
+SHA1 (patch-src_gallium_drivers_nouveau_nouveau__debug.h) = dd60605a9d89e573ad2cdeb67b11450b0eedeebf
 SHA1 (patch-src_gallium_drivers_nouveau_nouveau__vp3__video.c) = ae1b6eb4df3e4db0f37e44118cdf69b16f3c471e
 SHA1 (patch-src_gallium_drivers_nouveau_nv50_nv84__video.c) = 1b4239fe053523835ecac006894bdb0cde0ee626
 SHA1 (patch-src_gallium_drivers_r600_r600__llvm.c) = 37ffa4df519df4b7a35b686448e823200d5144ae
