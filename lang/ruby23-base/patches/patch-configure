@@ -1,10 +1,11 @@
-$NetBSD: patch-configure,v 1.4 2017/09/15 00:36:17 taca Exp $
+$NetBSD: patch-configure,v 1.5 2018/01/16 14:53:27 jperkin Exp $
 
 * Adding Interix support.
 * Ignore doxygen.
 * Pass LDFLAGS to LIBRUBY_DLDFLAGS via DLDFLAGS as Ruby 2.4 dose.
+* Handle SSP in pkgsrc.
 
---- configure.orig	2017-09-14 12:09:29.000000000 +0000
+--- configure.orig	2017-12-14 14:57:48.000000000 +0000
 +++ configure
 @@ -5678,7 +5678,7 @@ esac
  else
@@ -24,7 +25,15 @@ $NetBSD: patch-configure,v 1.4 2017/09/15 00:36:17 taca Exp $
  case $RUBY_PATCHLEVEL in #(
    -*) :
      particular_werror_flags=yes ;; #(
-@@ -9319,6 +9321,10 @@ esac
+@@ -8024,6 +8026,7 @@ esac
+ 	stack_protector=no
+      ;; #(
+   *) :
++	stack_protector=no
+      ;;
+ esac
+     if test -z "${stack_protector+set}"; then
+@@ -9319,6 +9322,10 @@ esac
      	LIBS="-lm $LIBS"
  		ac_cv_func_round=no
  		 ;; #(
@@ -35,7 +44,7 @@ $NetBSD: patch-configure,v 1.4 2017/09/15 00:36:17 taca Exp $
    nacl) :
  
    LIBS="-lm $LIBS"
-@@ -18065,6 +18071,8 @@ else
+@@ -18067,6 +18074,8 @@ else
  # ifdef _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
@@ -44,7 +53,7 @@ $NetBSD: patch-configure,v 1.4 2017/09/15 00:36:17 taca Exp $
  # else
  #  ifdef HAVE_ALLOCA_H
  #   include <alloca.h>
-@@ -22561,7 +22569,9 @@ esac ;; #(
+@@ -22563,7 +22572,9 @@ esac ;; #(
    interix*) :
      	: ${LDSHARED='$(CC) -shared'}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
@@ -54,7 +63,7 @@ $NetBSD: patch-configure,v 1.4 2017/09/15 00:36:17 taca Exp $
  			rb_cv_dlopen=yes ;; #(
    freebsd*|dragonfly*) :
  
-@@ -23667,7 +23677,17 @@ esac
+@@ -23669,7 +23680,17 @@ esac
  	 ;; #(
    linux* | gnu* | k*bsd*-gnu | atheos* | kopensolaris*-gnu | haiku*) :
  
@@ -73,7 +82,7 @@ $NetBSD: patch-configure,v 1.4 2017/09/15 00:36:17 taca Exp $
  	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR).$(MINOR) lib$(RUBY_SO_NAME).so'
  	if test "$load_relative" = yes; then
  	    libprefix="'\$\${ORIGIN}/../${libdir_basename}'"
-@@ -23678,7 +23698,7 @@ esac
+@@ -23680,7 +23701,7 @@ esac
    freebsd*|dragonfly*) :
  
  	SOLIBS='$(LIBS)'
@@ -82,7 +91,7 @@ $NetBSD: patch-configure,v 1.4 2017/09/15 00:36:17 taca Exp $
  	if test "$rb_cv_binary_elf" != "yes" ; then
  	    LIBRUBY_SO="$LIBRUBY_SO.\$(TEENY)"
  	    LIBRUBY_ALIASES=''
-@@ -23688,7 +23708,17 @@ esac
+@@ -23690,7 +23711,17 @@ esac
  
  	SOLIBS='$(LIBS)'
  	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR).$(TEENY)'
@@ -101,7 +110,7 @@ $NetBSD: patch-configure,v 1.4 2017/09/15 00:36:17 taca Exp $
  	if test "$rb_cv_binary_elf" = yes; then # ELF platforms
  	   LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR) lib$(RUBY_SO_NAME).so'
  	else	# a.out platforms
-@@ -23720,7 +23750,17 @@ esac
+@@ -23722,7 +23753,17 @@ esac
  	 ;; #(
    aix*) :
  
@@ -120,7 +129,7 @@ $NetBSD: patch-configure,v 1.4 2017/09/15 00:36:17 taca Exp $
  	LIBRUBYARG_SHARED='-L${libdir} -l${RUBY_SO_NAME}'
  	SOLIBS='-lm -lc'
  	 ;; #(
-@@ -23747,7 +23787,12 @@ esac
+@@ -23749,7 +23790,12 @@ esac
  	 ;; #(
    interix*) :
  
@@ -134,7 +143,7 @@ $NetBSD: patch-configure,v 1.4 2017/09/15 00:36:17 taca Exp $
  	 ;; #(
    mingw*|cygwin*|mswin*) :
  
-@@ -23915,7 +23960,7 @@ if test "$enable_rpath" = yes; then
+@@ -23917,7 +23963,7 @@ if test "$enable_rpath" = yes; then
  esac
      rpathflag=`IFS="$PATH_SEPARATOR"
          echo x "$rpathflag" |
@@ -143,7 +152,7 @@ $NetBSD: patch-configure,v 1.4 2017/09/15 00:36:17 taca Exp $
      `
      LIBRUBY_RPATHFLAGS="$LIBRUBY_RPATHFLAGS${rpathflag}"
      LIBRUBYARG_SHARED="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_SHARED"
-@@ -24306,11 +24351,7 @@ if test "$install_doc" != no; then
+@@ -24308,11 +24354,7 @@ if test "$install_doc" != no; then
      else
  	RDOCTARGET="nodoc"
      fi
@@ -156,7 +165,7 @@ $NetBSD: patch-configure,v 1.4 2017/09/15 00:36:17 taca Exp $
  else
      RDOCTARGET="nodoc"
      CAPITARGET="nodoc"
-@@ -26329,17 +26370,7 @@ which seems to be undefined.  Please mak
+@@ -26331,17 +26373,7 @@ which seems to be undefined.  Please mak
      "Makefile":F)
      tmpmk=confmk$$.tmp
      {
