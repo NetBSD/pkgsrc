@@ -1,11 +1,27 @@
-$NetBSD: patch-Makefile.shared,v 1.5 2016/01/28 16:30:43 jperkin Exp $
+$NetBSD: patch-Makefile.shared,v 1.6 2018/01/16 09:48:46 jperkin Exp $
 
 Adjust build procedure.
 Fix SunOS -h linker argument.
 
---- Makefile.shared.orig	2016-01-28 13:38:30.000000000 +0000
+--- Makefile.shared.orig	2017-12-07 13:16:38.000000000 +0000
 +++ Makefile.shared
-@@ -315,6 +315,11 @@ link_o.alpha-osf1:
+@@ -95,7 +95,6 @@ LINK_APP=	\
+     LDCMD="$${LDCMD:-$(CC)}"; LDFLAGS="$${LDFLAGS:-$(CFLAGS)}"; \
+     LIBPATH=`for x in $$LIBDEPS; do echo $$x; done | sed -e 's/^ *-L//;t' -e d | uniq`; \
+     LIBPATH=`echo $$LIBPATH | sed -e 's/ /:/g'`; \
+-    LD_LIBRARY_PATH=$$LIBPATH:$$LD_LIBRARY_PATH \
+     $${LDCMD} $${LDFLAGS} -o $${APPNAME:=$(APPNAME)} $(OBJECTS) $${LIBDEPS} )
+ 
+ LINK_SO=	\
+@@ -105,7 +104,6 @@ LINK_SO=	\
+     SHAREDFLAGS="$${SHAREDFLAGS:-$(CFLAGS) $(SHARED_LDFLAGS)}"; \
+     LIBPATH=`for x in $$LIBDEPS; do echo $$x; done | sed -e 's/^ *-L//;t' -e d | uniq`; \
+     LIBPATH=`echo $$LIBPATH | sed -e 's/ /:/g'`; \
+-    LD_LIBRARY_PATH=$$LIBPATH:$$LD_LIBRARY_PATH \
+     $${SHAREDCMD} $${SHAREDFLAGS} \
+ 	-o $$SHLIB$$SHLIB_SOVER$$SHLIB_SUFFIX \
+ 	$$ALLSYMSFLAGS $$SHOBJECTS $$NOALLSYMSFLAGS $$LIBDEPS \
+@@ -315,6 +313,11 @@ link_o.alpha-osf1:
  	@ if $(DETECT_GNU_LD); then \
  		$(DO_GNU_SO); \
  	else \
@@ -17,7 +33,7 @@ Fix SunOS -h linker argument.
  		SHLIB=lib$(LIBNAME).so; \
  		SHLIB_SUFFIX=; \
  		SHLIB_HIST=`echo "$(LIBCOMPATVERSIONS)" | cut -d';' -f2 | sed -e 's/ */:/'`; \
-@@ -324,11 +329,11 @@ link_o.alpha-osf1:
+@@ -324,11 +327,11 @@ link_o.alpha-osf1:
  			SHLIB_HIST="$(LIBVERSION)"; \
  		fi; \
  		SHLIB_SOVER=; \
@@ -32,7 +48,7 @@ Fix SunOS -h linker argument.
  		fi; \
  	fi; \
  	$(LINK_SO_O)
-@@ -336,6 +341,11 @@ link_a.alpha-osf1:
+@@ -336,6 +339,11 @@ link_a.alpha-osf1:
  	@ if $(DETECT_GNU_LD); then \
  		$(DO_GNU_SO); \
  	else \
@@ -44,7 +60,7 @@ Fix SunOS -h linker argument.
  		SHLIB=lib$(LIBNAME).so; \
  		SHLIB_SUFFIX=; \
  		SHLIB_HIST=`echo "$(LIBCOMPATVERSIONS)" | cut -d';' -f2 | sed -e 's/ */:/'`; \
-@@ -345,11 +355,11 @@ link_a.alpha-osf1:
+@@ -345,11 +353,11 @@ link_a.alpha-osf1:
  			SHLIB_HIST="$(LIBVERSION)"; \
  		fi; \
  		SHLIB_SOVER=; \
@@ -59,7 +75,7 @@ Fix SunOS -h linker argument.
  		fi; \
  	fi; \
  	$(LINK_SO_A)
-@@ -372,7 +382,7 @@ link_o.solaris:
+@@ -372,7 +380,7 @@ link_o.solaris:
  		SHLIB_SUFFIX=; \
  		ALLSYMSFLAGS="$${MINUSZ}allextract"; \
  		NOALLSYMSFLAGS="$${MINUSZ}defaultextract"; \
@@ -68,7 +84,7 @@ Fix SunOS -h linker argument.
  	fi; \
  	$(LINK_SO_O)
  link_a.solaris:
-@@ -386,7 +396,7 @@ link_a.solaris:
+@@ -386,7 +394,7 @@ link_a.solaris:
  		SHLIB_SUFFIX=;\
  		ALLSYMSFLAGS="$${MINUSZ}allextract"; \
  		NOALLSYMSFLAGS="$${MINUSZ}defaultextract"; \
@@ -77,7 +93,7 @@ Fix SunOS -h linker argument.
  	fi; \
  	$(LINK_SO_A)
  link_app.solaris:
-@@ -484,7 +494,7 @@ link_a.irix:
+@@ -484,7 +492,7 @@ link_a.irix:
  		($(CC) -v 2>&1 | grep gcc) > /dev/null && MINUSWL="-Wl,"; \
  		ALLSYMSFLAGS="$${MINUSWL}-all"; \
  		NOALLSYMSFLAGS="$${MINUSWL}-none"; \
