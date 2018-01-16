@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2018/01/16 13:33:32 wiz Exp $
+share/guile/2.2/slibcat
+share/guile/site/slib
