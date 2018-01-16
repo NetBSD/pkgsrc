@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.242 2018/01/16 14:22:30 mef Exp $
+$NetBSD: CHANGES-2018,v 1.243 2018/01/16 16:30:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -336,3 +336,9 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/mysqltuner to 1.7.2 [mef 2018-01-16]
 	Added devel/guile22-slib version 3.2.5 [wiz 2018-01-16]
 	Updated devel/protobuf to 3.5.1 [mef 2018-01-16]
+	Updated databases/mysql55-client to 5.5.59 [adam 2018-01-16]
+	Updated databases/mysql55-server to 5.5.59 [adam 2018-01-16]
+	Updated databases/mysql56-client to 5.6.39 [adam 2018-01-16]
+	Updated databases/mysql56-server to 5.6.39 [adam 2018-01-16]
+	Updated databases/mysql57-client to 5.7.21 [adam 2018-01-16]
+	Updated databases/mysql57-server to 5.7.21 [adam 2018-01-16]
