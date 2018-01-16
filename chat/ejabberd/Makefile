@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2018/01/03 22:53:51 fhajny Exp $
+# $NetBSD: Makefile,v 1.82 2018/01/16 12:28:56 fhajny Exp $
 
-DISTNAME=	ejabberd-17.12
+DISTNAME=	ejabberd-18.01
 CATEGORIES=	chat
 MASTER_SITES=	https://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -14,10 +14,10 @@ DEPENDS+=	erlang-cache_tab>=1.0.12:../../devel/erlang-cache_tab
 DEPENDS+=	erlang-epam>=1.0.3:../../security/erlang-epam
 DEPENDS+=	erlang-eredis>=1.0.8.20150910:../../databases/erlang-eredis
 DEPENDS+=	erlang-eimp>=1.0.2:../../graphics/erlang-eimp
-DEPENDS+=	erlang-esip>=1.0.18:../../net/erlang-esip
+DEPENDS+=	erlang-esip>=1.0.21:../../net/erlang-esip
 DEPENDS+=	erlang-ezlib>=1.0.3:../../devel/erlang-ezlib
-DEPENDS+=	erlang-fast_tls>=1.0.18:../../security/erlang-fast_tls
-DEPENDS+=	erlang-fast_xml>=1.1.26:../../textproc/erlang-fast_xml
+DEPENDS+=	erlang-fast_tls>=1.0.20:../../security/erlang-fast_tls
+DEPENDS+=	erlang-fast_xml>=1.1.28:../../textproc/erlang-fast_xml
 DEPENDS+=	erlang-fast_yaml>=1.0.12:../../textproc/erlang-fast_yaml
 DEPENDS+=	erlang-fs>=2.12.0:../../devel/erlang-fs
 DEPENDS+=	erlang-iconv>=1.0.6:../../converters/erlang-iconv
@@ -30,8 +30,8 @@ DEPENDS+=	erlang-p1_oauth2>=0.6.2:../../security/erlang-p1_oauth2
 DEPENDS+=	erlang-p1_pgsql>=1.1.4:../../databases/erlang-p1_pgsql
 DEPENDS+=	erlang-p1_utils>=1.0.10:../../misc/erlang-p1_utils
 DEPENDS+=	erlang-stringprep>=1.0.10:../../textproc/erlang-stringprep
-DEPENDS+=	erlang-stun>=1.0.17:../../net/erlang-stun
-DEPENDS+=	erlang-xmpp>=1.1.17:../../net/erlang-xmpp
+DEPENDS+=	erlang-stun>=1.0.20:../../net/erlang-stun
+DEPENDS+=	erlang-xmpp>=1.1.19:../../net/erlang-xmpp
 
 GNU_CONFIGURE=		yes
 USE_GCC_RUNTIME=	yes
