@@ -1,8 +1,20 @@
-$NetBSD: patch-configure,v 1.4 2017/12/03 12:54:34 jdolecek Exp $
+$NetBSD: patch-configure,v 1.5 2018/01/16 10:49:57 jperkin Exp $
 
---- configure.orig	2017-11-07 11:57:02.000000000 +0000
+Don't automatically add libgcc on SunOS.
+
+--- configure.orig	2018-01-02 22:35:52.000000000 +0000
 +++ configure
-@@ -7007,27 +7007,6 @@ EOF
+@@ -5461,9 +5461,6 @@ fi
+ case $host_alias in
+   *solaris*)
+     CPPFLAGS="$CPPFLAGS -D_POSIX_PTHREAD_SEMANTICS"
+-    if test "${enable_libgcc+set}" != "set" && test "$GCC" = "yes"; then
+-      enable_libgcc=yes
+-    fi
+     ;;
+   *dgux*)
+     CPPFLAGS="$CPPFLAGS -D_BSD_TIMEOFDAY_FLAVOR"
+@@ -7007,27 +7004,6 @@ EOF
      ;;
    esac
  
@@ -30,7 +42,7 @@ $NetBSD: patch-configure,v 1.4 2017/12/03 12:54:34 jdolecek Exp $
    { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
  $as_echo "yes" >&6; }
  
-@@ -21090,7 +21069,7 @@ $as_echo "#define HAVE_SQLITE3_ERRSTR 1"
+@@ -21090,7 +21066,7 @@ $as_echo "#define HAVE_SQLITE3_ERRSTR 1"
      PHP_SQLITE3_CFLAGS="-I@ext_srcdir@/libsqlite $other_flags $threadsafe_flags $debug_flags"
  
  
@@ -39,7 +51,7 @@ $NetBSD: patch-configure,v 1.4 2017/12/03 12:54:34 jdolecek Exp $
  
  
    unique=`echo $header_file|$SED 's/[^a-zA-Z0-9]/_/g'`
-@@ -23626,7 +23605,7 @@ fi
+@@ -23626,7 +23602,7 @@ fi
  
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for libcurl.pc" >&5
  $as_echo_n "checking for libcurl.pc... " >&6; }
@@ -48,7 +60,7 @@ $NetBSD: patch-configure,v 1.4 2017/12/03 12:54:34 jdolecek Exp $
        PKNAME=libcurl
        { $as_echo "$as_me:${as_lineno-$LINENO}: result: using default path" >&5
  $as_echo "using default path" >&6; }
-@@ -95975,12 +95954,7 @@ old_CC=$CC
+@@ -95975,12 +95951,7 @@ old_CC=$CC
  if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
    CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
    INLINE_CFLAGS="$INLINE_CFLAGS $ac_cv_pthreads_cflags"
