@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.226 2018/01/15 21:36:26 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.227 2018/01/16 07:19:23 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -320,3 +320,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added security/lynis version 2.5.9 [sborrill 2018-01-15]
 	Updated devel/cmake to 3.10.1nb2 [minskim 2018-01-15]
 	Added www/php-phalcon version 3.3.1 [fhajny 2018-01-15]
+	Updated chat/irssi to 1.1.0 [maya 2018-01-16]
