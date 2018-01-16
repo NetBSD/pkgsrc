@@ -1,6 +1,6 @@
-$NetBSD: patch-common_uposixdefs.h,v 1.4 2018/01/12 12:43:08 jperkin Exp $
+$NetBSD: patch-common_uposixdefs.h,v 1.5 2018/01/16 13:28:12 jperkin Exp $
 
-Don't perform _STDC_C99 workaround with clang.
+C99 and related define overrides.
 
 --- common/uposixdefs.h.orig	2017-03-14 21:01:57.000000000 +0000
 +++ common/uposixdefs.h
@@ -27,12 +27,7 @@ Don't perform _STDC_C99 workaround with clang.
  
  /**
   * Solaris says:
-@@ -64,8 +68,11 @@
-  *   than a c99 or later compiler."
-  * Apparently C++11 is not "or later". Work around this.
-  */
--#if defined(__cplusplus) && (defined(sun) || defined(__sun)) && !defined (_STDC_C99)
-+#if defined(__cplusplus) && (defined(sun) || defined(__sun)) && !defined (_STDC_C99) && !defined(__clang__)
+@@ -68,4 +72,7 @@
  #   define _STDC_C99
  #endif
  
