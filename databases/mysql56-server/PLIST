@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2017/07/19 18:48:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2018/01/16 16:27:12 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -3709,6 +3709,7 @@ share/mysql/test/suite/innodb/r/monitor_debug.result
 share/mysql/test/suite/innodb/r/sp_temp_table.result
 share/mysql/test/suite/innodb/r/strict_checksum.result
 share/mysql/test/suite/innodb/r/strict_mode.result
+share/mysql/test/suite/innodb/r/timestamp.result
 share/mysql/test/suite/innodb/r/tmpdir.result
 share/mysql/test/suite/innodb/r/undo_space_id.result
 share/mysql/test/suite/innodb/r/xa_recovery.result
@@ -3953,6 +3954,7 @@ share/mysql/test/suite/innodb/t/portability_wl5980_windows.zip
 share/mysql/test/suite/innodb/t/sp_temp_table.test
 share/mysql/test/suite/innodb/t/strict_checksum.test
 share/mysql/test/suite/innodb/t/strict_mode.test
+share/mysql/test/suite/innodb/t/timestamp.test
 share/mysql/test/suite/innodb/t/tmpdir.test
 share/mysql/test/suite/innodb/t/undo_space_id.test
 share/mysql/test/suite/innodb/t/xa_recovery.test
@@ -6402,6 +6404,7 @@ share/mysql/test/suite/rpl/r/rpl_do_db_filter.result
 share/mysql/test/suite/rpl/r/rpl_do_grant.result
 share/mysql/test/suite/rpl/r/rpl_do_table_filter_insensitive.result
 share/mysql/test/suite/rpl/r/rpl_do_table_filter_sensitive.result
+share/mysql/test/suite/rpl/r/rpl_double_free_bug.result
 share/mysql/test/suite/rpl/r/rpl_drop.result
 share/mysql/test/suite/rpl/r/rpl_drop_db.result
 share/mysql/test/suite/rpl/r/rpl_drop_db_fail.result
@@ -6909,6 +6912,7 @@ share/mysql/test/suite/rpl/t/rpl_do_table_filter_insensitive-slave.opt
 share/mysql/test/suite/rpl/t/rpl_do_table_filter_insensitive.test
 share/mysql/test/suite/rpl/t/rpl_do_table_filter_sensitive-slave.opt
 share/mysql/test/suite/rpl/t/rpl_do_table_filter_sensitive.test
+share/mysql/test/suite/rpl/t/rpl_double_free_bug.test
 share/mysql/test/suite/rpl/t/rpl_drop.test
 share/mysql/test/suite/rpl/t/rpl_drop_db.test
 share/mysql/test/suite/rpl/t/rpl_drop_db_fail.test

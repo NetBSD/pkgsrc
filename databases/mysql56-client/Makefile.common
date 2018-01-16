@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.43 2017/10/22 20:18:04 adam Exp $
+# $NetBSD: Makefile.common,v 1.44 2018/01/16 16:27:12 adam Exp $
 #
 # used by databases/mysql56-client/Makefile
 # used by databases/mysql56-server/Makefile
 
-DISTNAME=	mysql-5.6.38
+DISTNAME=	mysql-5.6.39
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-5.6/}
 
@@ -11,8 +11,8 @@ MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mysql.com/
 LICENSE=	gnu-gpl-v2
 
-DISTINFO_FILE?=		${.CURDIR}/../../databases/mysql56-client/distinfo
-PATCHDIR?=		${.CURDIR}/../../databases/mysql56-client/patches
+DISTINFO_FILE?=	${.CURDIR}/../../databases/mysql56-client/distinfo
+PATCHDIR?=	${.CURDIR}/../../databases/mysql56-client/patches
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
