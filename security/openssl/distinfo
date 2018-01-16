@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.130 2017/12/09 18:02:02 fhajny Exp $
+$NetBSD: distinfo,v 1.131 2018/01/16 09:48:46 jperkin Exp $
 
 SHA1 (openssl-1.0.2n.tar.gz) = 0ca2957869206de193603eca6d89f532f61680b1
 RMD160 (openssl-1.0.2n.tar.gz) = 90fbf1df8986e04921e14e4c6e408458b5b31f6c
@@ -6,7 +6,7 @@ SHA512 (openssl-1.0.2n.tar.gz) = 144bf0d6aa27b4af01df0b7b734c39962649e1711554247
 Size (openssl-1.0.2n.tar.gz) = 5375802 bytes
 SHA1 (patch-Configure) = 2d963d781314276a0ee1bc531df6bc50f0f6b32b
 SHA1 (patch-Makefile.org) = d2a9295003a8b88718a328b01ff6bcbbc102ec0b
-SHA1 (patch-Makefile.shared) = d317004d6ade167fc3b6e533bb8a1e93657188b2
+SHA1 (patch-Makefile.shared) = 273154600c6cf0cf4de4ae16d56c5555bca5f9ad
 SHA1 (patch-apps_Makefile) = 60113291f2a25f5f1c1dba35e8173087bcd4cc30
 SHA1 (patch-config) = 345cadece3bdf0ef0a273a6c9ba6d0cbb1026a31
 SHA1 (patch-crypto_bn_bn__prime.pl) = a516f3709a862d85e659d466e895419b1e0a94c8
