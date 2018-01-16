@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.232 2018/01/16 12:09:23 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.233 2018/01/16 12:10:00 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -326,3 +326,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/transmission-gtk to 2.92nb10 [wiz 2018-01-16]
 	Updated net/transmission-qt to 2.92nb13 [wiz 2018-01-16]
 	Updated devel/libbson to 1.9.2 [fhajny 2018-01-16]
+	Updated databases/mongo-c-driver to 1.9.2 [fhajny 2018-01-16]
