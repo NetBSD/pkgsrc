@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/09/16 19:26:44 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/01/16 12:43:17 mef Exp $
 
 GITHUB_PROJECT=	MySQLTuner-perl
-DISTNAME=	1.6.0
+DISTNAME=	1.7.2
 PKGNAME=	mysqltuner-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=major/}
 DIST_SUBDIR=	${PKGBASE}

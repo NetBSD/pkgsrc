@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:22 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/16 12:43:17 mef Exp $
 bin/mysqltuner.pl
+share/doc/mysqltuner/CODE_OF_CONDUCT.md
 share/doc/mysqltuner/CONTRIBUTING.md
 share/doc/mysqltuner/INTERNALS.md
+share/doc/mysqltuner/README.fr.md
+share/doc/mysqltuner/README.it.md
 share/doc/mysqltuner/README.md
 share/doc/mysqltuner/README.ru.md
 share/doc/mysqltuner/USAGE.md
