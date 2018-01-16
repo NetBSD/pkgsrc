@@ -1,8 +1,9 @@
-$NetBSD: patch-configure,v 1.1 2018/01/08 14:19:06 taca Exp $
+$NetBSD: patch-configure,v 1.2 2018/01/16 14:53:28 jperkin Exp $
 
 * Adding Interix support.
 * Ignore doxygen.
 * Ignore VCS.
+* Handle SSP in pkgsrc.
 
 --- configure.orig	2017-12-25 07:00:28.000000000 +0000
 +++ configure
@@ -15,7 +16,15 @@ $NetBSD: patch-configure,v 1.1 2018/01/08 14:19:06 taca Exp $
  
  	    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for real target cpu" >&5
  $as_echo_n "checking for real target cpu... " >&6; }
-@@ -9295,7 +9295,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -7873,6 +7873,7 @@ fi
+ 	stack_protector=no
+      ;; #(
+   *) :
++	stack_protector=no
+      ;;
+ esac
+     if test -z "${stack_protector+set}"; then :
+@@ -9295,7 +9296,7 @@ rm -f core conftest.err conftest.$ac_obj
  		  # is often also needed in CPPFLAGS, because some feature
  		  # definitions vary depending on such standards options.
  		  case "${ansi_options}" in #(
@@ -24,7 +33,7 @@ $NetBSD: patch-configure,v 1.1 2018/01/08 14:19:06 taca Exp $
  
  		    # RUBY_APPEND_OPTIONS(CPPFLAGS)
  	for rb_opt in ${ansi_options}; do
-@@ -9536,6 +9536,10 @@ esac
+@@ -9536,6 +9537,10 @@ esac
      	LIBS="-lm $LIBS"
  		ac_cv_func_round=no
  		 ;; #(
@@ -35,7 +44,7 @@ $NetBSD: patch-configure,v 1.1 2018/01/08 14:19:06 taca Exp $
    *) :
      	LIBS="-lm $LIBS" ;;
  esac
-@@ -20224,6 +20228,8 @@ else
+@@ -20224,6 +20229,8 @@ else
  # ifdef _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
@@ -44,7 +53,7 @@ $NetBSD: patch-configure,v 1.1 2018/01/08 14:19:06 taca Exp $
  # else
  #  ifdef HAVE_ALLOCA_H
  #   include <alloca.h>
-@@ -24996,7 +25002,9 @@ fi
+@@ -24996,7 +25003,9 @@ fi
    interix*) :
      	: ${LDSHARED='$(CC) -shared'}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
@@ -54,7 +63,7 @@ $NetBSD: patch-configure,v 1.1 2018/01/08 14:19:06 taca Exp $
  			rb_cv_dlopen=yes ;; #(
    freebsd*|dragonfly*) :
  
-@@ -26229,7 +26237,7 @@ fi
+@@ -26229,7 +26238,7 @@ fi
    freebsd*|dragonfly*) :
  
  	SOLIBS='$(LIBS)'
@@ -63,7 +72,7 @@ $NetBSD: patch-configure,v 1.1 2018/01/08 14:19:06 taca Exp $
  	LIBRUBY_SONAME='$(LIBRUBY_SO)'
  	if test "$rb_cv_binary_elf" != "yes" ; then :
  
-@@ -26334,7 +26342,12 @@ fi
+@@ -26334,7 +26343,12 @@ fi
  	 ;; #(
    interix*) :
  
@@ -77,7 +86,7 @@ $NetBSD: patch-configure,v 1.1 2018/01/08 14:19:06 taca Exp $
  	 ;; #(
    mingw*|cygwin*|mswin*) :
  
-@@ -26516,7 +26529,7 @@ if test "$enable_rpath" = yes; then :
+@@ -26516,7 +26530,7 @@ if test "$enable_rpath" = yes; then :
  esac
      rpathflag=`IFS="$PATH_SEPARATOR"
          echo x "$rpathflag" |
@@ -86,7 +95,7 @@ $NetBSD: patch-configure,v 1.1 2018/01/08 14:19:06 taca Exp $
      `
      LIBRUBY_RPATHFLAGS="$LIBRUBY_RPATHFLAGS${rpathflag}"
      LIBRUBYARG_SHARED="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_SHARED"
-@@ -27058,15 +27071,7 @@ fi
+@@ -27058,15 +27072,7 @@ fi
  
  if test "$install_doc" != no; then :
  
@@ -103,7 +112,7 @@ $NetBSD: patch-configure,v 1.1 2018/01/08 14:19:06 taca Exp $
      if test "$install_capi" != no -a -n "$DOXYGEN"; then :
  
  	CAPITARGET="capi"
-@@ -29143,31 +29148,7 @@ which seems to be undefined.  Please mak
+@@ -29143,31 +29149,7 @@ which seems to be undefined.  Please mak
      "Makefile":F)
      tmpmk=confmk$$.tmp
      {

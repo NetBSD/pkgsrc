@@ -1,10 +1,11 @@
-$NetBSD: patch-configure,v 1.5 2017/07/06 16:35:05 taca Exp $
+$NetBSD: patch-configure,v 1.6 2018/01/16 14:53:27 jperkin Exp $
 
 * Adding Interix support.
 * Ignore doxygen.
 * Pass LDFLAGS to LIBRUBY_DLDFLAGS via DLDFLAGS as Ruby 2.4 dose.
+* Handle SSP in pkgsrc.
 
---- configure.orig	2017-03-28 07:53:45.000000000 +0000
+--- configure.orig	2017-12-14 16:00:13.000000000 +0000
 +++ configure
 @@ -5581,7 +5581,7 @@ esac
  else
@@ -23,7 +24,15 @@ $NetBSD: patch-configure,v 1.5 2017/07/06 16:35:05 taca Exp $
  
  case $RUBY_PATCHLEVEL in #(
    -*) :
-@@ -8909,6 +8910,10 @@ esac
+@@ -7796,6 +7797,7 @@ esac
+ 	stack_protector=no
+      ;; #(
+   *) :
++	stack_protector=no
+      ;;
+ esac
+     if test -z "${stack_protector+set}"; then
+@@ -8909,6 +8911,10 @@ esac
      	LIBS="-lm $LIBS"
  		ac_cv_func_round=no
  		 ;; #(
@@ -34,7 +43,7 @@ $NetBSD: patch-configure,v 1.5 2017/07/06 16:35:05 taca Exp $
    nacl) :
  
    LIBS="-lm $LIBS"
-@@ -17004,6 +17009,8 @@ else
+@@ -17004,6 +17010,8 @@ else
  # ifdef _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
@@ -43,7 +52,7 @@ $NetBSD: patch-configure,v 1.5 2017/07/06 16:35:05 taca Exp $
  # else
  #  ifdef HAVE_ALLOCA_H
  #   include <alloca.h>
-@@ -21293,7 +21300,9 @@ esac ;; #(
+@@ -21293,7 +21301,9 @@ esac ;; #(
    interix*) :
      	: ${LDSHARED='$(CC) -shared'}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
@@ -53,7 +62,7 @@ $NetBSD: patch-configure,v 1.5 2017/07/06 16:35:05 taca Exp $
  			rb_cv_dlopen=yes ;; #(
    freebsd*|dragonfly*) :
  
-@@ -22503,7 +22512,17 @@ esac
+@@ -22503,7 +22513,17 @@ esac
  	 ;; #(
    linux* | gnu* | k*bsd*-gnu | atheos* | kopensolaris*-gnu) :
  
@@ -72,7 +81,7 @@ $NetBSD: patch-configure,v 1.5 2017/07/06 16:35:05 taca Exp $
  	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR).$(MINOR) lib$(RUBY_SO_NAME).so'
  	if test "$load_relative" = yes; then
  	    libprefix="'\$\${ORIGIN}/../${libdir_basename}'"
-@@ -22514,7 +22533,7 @@ esac
+@@ -22514,7 +22534,7 @@ esac
    freebsd*|dragonfly*) :
  
  	SOLIBS='$(LIBS)'
@@ -81,7 +90,7 @@ $NetBSD: patch-configure,v 1.5 2017/07/06 16:35:05 taca Exp $
  	if test "$rb_cv_binary_elf" != "yes" ; then
  	    LIBRUBY_SO="$LIBRUBY_SO.\$(TEENY)"
  	    LIBRUBY_ALIASES=''
-@@ -22524,7 +22543,17 @@ esac
+@@ -22524,7 +22544,17 @@ esac
  
  	SOLIBS='$(LIBS)'
  	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR).$(TEENY)'
@@ -100,7 +109,7 @@ $NetBSD: patch-configure,v 1.5 2017/07/06 16:35:05 taca Exp $
  	if test "$rb_cv_binary_elf" = yes; then # ELF platforms
  	   LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR) lib$(RUBY_SO_NAME).so'
  	else	# a.out platforms
-@@ -22556,7 +22585,17 @@ esac
+@@ -22556,7 +22586,17 @@ esac
  	 ;; #(
    aix*) :
  
@@ -119,7 +128,7 @@ $NetBSD: patch-configure,v 1.5 2017/07/06 16:35:05 taca Exp $
  	LIBRUBYARG_SHARED='-L${libdir} -l${RUBY_SO_NAME}'
  	SOLIBS='-lm -lc'
  	 ;; #(
-@@ -22565,7 +22604,7 @@ esac
+@@ -22565,7 +22605,7 @@ esac
  	case "$target_cpu" in #(
    powerpc*) :
  
@@ -128,7 +137,7 @@ $NetBSD: patch-configure,v 1.5 2017/07/06 16:35:05 taca Exp $
  	     ;; #(
    *) :
       ;;
-@@ -22593,7 +22632,12 @@ esac
+@@ -22593,7 +22633,12 @@ esac
  	 ;; #(
    interix*) :
  
@@ -142,7 +151,7 @@ $NetBSD: patch-configure,v 1.5 2017/07/06 16:35:05 taca Exp $
  	 ;; #(
    mingw*|cygwin*|mswin*) :
  
-@@ -22766,7 +22810,7 @@ if test "$enable_rpath" = yes; then
+@@ -22766,7 +22811,7 @@ if test "$enable_rpath" = yes; then
  esac
      rpathflag=`IFS="$PATH_SEPARATOR"
          echo x "$rpathflag" |
@@ -151,7 +160,7 @@ $NetBSD: patch-configure,v 1.5 2017/07/06 16:35:05 taca Exp $
      `
      LIBRUBY_RPATHFLAGS="$LIBRUBY_RPATHFLAGS${rpathflag}"
      LIBRUBYARG_SHARED="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_SHARED"
-@@ -23085,11 +23129,7 @@ if test "$install_doc" != no; then
+@@ -23085,11 +23130,7 @@ if test "$install_doc" != no; then
      else
  	RDOCTARGET="nodoc"
      fi
@@ -164,7 +173,7 @@ $NetBSD: patch-configure,v 1.5 2017/07/06 16:35:05 taca Exp $
  else
      RDOCTARGET="nodoc"
      CAPITARGET="nodoc"
-@@ -25195,17 +25235,7 @@ which seems to be undefined.  Please mak
+@@ -25195,17 +25236,7 @@ which seems to be undefined.  Please mak
      "Makefile":F)
      tmpmk=confmk$$.tmp
      {
