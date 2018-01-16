@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2017/01/18 21:10:42 wiz Exp $
+# $NetBSD: Makefile.common,v 1.17 2018/01/16 10:10:00 jperkin Exp $
 #
 # used by sysutils/coreutils/Makefile
 # used by misc/gnuls/Makefile
@@ -44,6 +44,12 @@ CONFIGURE_ENV.DragonFly+= 	gl_cv_search_pthread_join=-lpthread
 # without it we run into undefined symbol issues.
 .if ${OPSYS} == "Darwin" && ${PKGSRC_COMPILER:Mgcc}
 CFLAGS+=		-O2
+.endif
+
+# clang on SunOS parses -errwarn as an -e entry point argument to the linker,
+# which ignores it as it's a duplicate argument.  Turn it off explicitly.
+.if ${PKGSRC_COMPILER} == "clang"
+CONFIGURE_ENV.SunOS+=	gl_cv_warn_c__errwarn=no
 .endif
 
 # Explicitly disable inotify support whilst it is Linux-specific.
