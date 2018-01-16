@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/01/13 18:22:42 adam Exp $
+# $NetBSD: Makefile,v 1.28 2018/01/16 09:15:28 jperkin Exp $
 
 DISTNAME=	zeromq-4.2.3
 CATEGORIES=	net devel
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v3
 GITHUB_PROJECT=	libzmq
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-USE_LANGUAGES=		c gnu++11
+USE_LANGUAGES=		c c99 gnu++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
