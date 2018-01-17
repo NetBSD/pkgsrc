@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/01/01 12:03:03 wen Exp $
+$NetBSD: distinfo,v 1.7 2018/01/17 18:43:10 minskim Exp $
 
-SHA1 (R/e1071_1.6-7.tar.gz) = 5c495353a4cb4a557d92d824e4aa2ad608ac5c37
-RMD160 (R/e1071_1.6-7.tar.gz) = 36274a1d3bcd896f1885f4b45de9ed7a580c5e68
-SHA512 (R/e1071_1.6-7.tar.gz) = 08c11ffddc46ea500320ee30cb800be4da96ea4bc174d82a6cc1c42a11a1e37534b1607367fa776024f559b648ca72af55e11b500f418feae7ace2f059c47e72
-Size (R/e1071_1.6-7.tar.gz) = 600498 bytes
+SHA1 (R/e1071_1.6-8.tar.gz) = 97fa0397f4cff9371511a537614524c3ce248fb4
+RMD160 (R/e1071_1.6-8.tar.gz) = 852385b7d28ee88ce6749f5d2de286230f7ba92d
+SHA512 (R/e1071_1.6-8.tar.gz) = 302f1a5eea1ebaf10c764ae9dda55063199aa97ef2d0e18c413b37666e28b2481b2dcf1d6a78a284455aefe0cd48e43ad695de65caa09293f66ae93ec02a8d6d
+Size (R/e1071_1.6-8.tar.gz) = 581513 bytes
