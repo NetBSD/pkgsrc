@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.244 2018/01/17 00:34:07 taca Exp $
+$NetBSD: CHANGES-2018,v 1.245 2018/01/17 08:38:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -344,3 +344,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/mysql57-server to 5.7.21 [adam 2018-01-16]
 	Updated net/bind910 to 9.10.6pl1 [taca 2018-01-17]
 	Updated net/bind99 to 9.9.11pl1 [taca 2018-01-17]
+	Updated www/py-yarl to 1.0.0 [adam 2018-01-17]
+	Updated www/py-aiohttp to 2.3.8 [adam 2018-01-17]
