@@ -1,15 +1,15 @@
-$NetBSD: patch-Source_JavaScriptCore_tools_CodeProfiling.cpp,v 1.3 2016/03/18 07:37:38 dbj Exp $
+$NetBSD: patch-Source_JavaScriptCore_tools_CodeProfiling.cpp,v 1.4 2018/01/17 19:37:33 markd Exp $
 
 * Add NetBSD support
 
---- Source/JavaScriptCore/tools/CodeProfiling.cpp.orig	2015-10-13 04:37:12.000000000 +0000
+--- Source/JavaScriptCore/tools/CodeProfiling.cpp.orig	2017-06-04 20:16:06.000000000 +0000
 +++ Source/JavaScriptCore/tools/CodeProfiling.cpp
 @@ -33,7 +33,7 @@
  #include <signal.h>
  #endif
  
--#if OS(LINUX)
-+#if OS(LINUX) || OS(NETBSD)
+-#if OS(LINUX) || OS(DARWIN)
++#if OS(LINUX) || OS(DARWIN) || OS(NETBSD)
  #include <sys/time.h>
  #endif
  
@@ -17,8 +17,8 @@ $NetBSD: patch-Source_JavaScriptCore_tools_CodeProfiling.cpp,v 1.3 2016/03/18 07
  #pragma clang diagnostic ignored "-Wmissing-noreturn"
  #endif
  
--#if (PLATFORM(MAC) && CPU(X86_64)) || (OS(LINUX) && CPU(X86) && !OS(ANDROID))
-+#if (PLATFORM(MAC) && CPU(X86_64)) || ((OS(LINUX) || OS(NETBSD)) && CPU(X86) && !OS(ANDROID))
+-#if (OS(DARWIN) && !PLATFORM(EFL) && !PLATFORM(GTK) && CPU(X86_64)) || (OS(LINUX) && CPU(X86))
++#if (OS(DARWIN) && !PLATFORM(EFL) && !PLATFORM(GTK) && CPU(X86_64)) || ((OS(LINUX) || OS(NETBSD)) && CPU(X86))
  // Helper function to start & stop the timer.
  // Presently we're using the wall-clock timer, since this seems to give the best results.
  static void setProfileTimer(unsigned usec)
@@ -36,12 +36,12 @@ $NetBSD: patch-Source_JavaScriptCore_tools_CodeProfiling.cpp,v 1.3 2016/03/18 07
  #endif
  
  // Callback triggered when the timer is fired.
-@@ -143,7 +150,7 @@ void CodeProfiling::begin(const SourceCo
+@@ -141,7 +148,7 @@ void CodeProfiling::begin(const SourceCo
      if (alreadyProfiling)
          return;
  
--#if (PLATFORM(MAC) && CPU(X86_64)) || (OS(LINUX) && CPU(X86) && !OS(ANDROID))
-+#if (PLATFORM(MAC) && CPU(X86_64)) || ((OS(LINUX) || OS(NETBSD)) && CPU(X86) && !OS(ANDROID))
+-#if (OS(DARWIN) && !PLATFORM(EFL) && !PLATFORM(GTK) && CPU(X86_64)) || (OS(LINUX) && CPU(X86))
++#if (OS(DARWIN) && !PLATFORM(EFL) && !PLATFORM(GTK) && CPU(X86_64)) || ((OS(LINUX) || OS(NETBSD)) && CPU(X86))
      // Regsiter a signal handler & itimer.
      struct sigaction action;
      action.sa_sigaction = reinterpret_cast<void (*)(int, siginfo_t *, void *)>(profilingTimer);
