@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2014/12/30 17:23:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/17 19:30:48 markd Exp $
 lib/pkgconfig/Qt5Svg.pc
 qt5/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgfont_p.h
-qt5/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgfunctions_wince_p.h
 qt5/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvggraphics_p.h
 qt5/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvghandler_p.h
 qt5/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgnode_p.h
@@ -26,10 +25,13 @@ qt5/lib/cmake/Qt5Svg/Qt5SvgConfig.cmake
 qt5/lib/cmake/Qt5Svg/Qt5SvgConfigVersion.cmake
 qt5/lib/cmake/Qt5Svg/Qt5Svg_QSvgIconPlugin.cmake
 qt5/lib/cmake/Qt5Svg/Qt5Svg_QSvgPlugin.cmake
-qt5/lib/libQt5Svg.la
 qt5/lib/libQt5Svg.prl
+qt5/lib/libQt5Svg.so
+qt5/lib/libQt5Svg.so.${PKGVERSION}
+qt5/lib/libQt5Svg.so.5
+qt5/lib/libQt5Svg.so.5.10
 qt5/lib/pkgconfig/Qt5Svg.pc
 qt5/mkspecs/modules/qt_lib_svg.pri
 qt5/mkspecs/modules/qt_lib_svg_private.pri
-qt5/plugins/iconengines/libqsvgicon.la
-qt5/plugins/imageformats/libqsvg.la
+qt5/plugins/iconengines/libqsvgicon.so
+qt5/plugins/imageformats/libqsvg.so
