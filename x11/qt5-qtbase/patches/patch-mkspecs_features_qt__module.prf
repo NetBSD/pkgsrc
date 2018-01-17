@@ -1,0 +1,14 @@
+$NetBSD: patch-mkspecs_features_qt__module.prf,v 1.1 2018/01/17 19:30:47 markd Exp $
+
+Do not create .la files.
+
+--- mkspecs/features/qt_module.prf.orig	2017-06-08 18:57:48.000000000 +0000
++++ mkspecs/features/qt_module.prf
+@@ -286,7 +286,6 @@ load(qt_targets)
+     QMAKE_PKGCONFIG_INSTALL_REPLACE += pclib_replace
+ }
+ !lib_bundle:unix {
+-    CONFIG += create_libtool
+     host_build: \
+         QMAKE_LIBTOOL_LIBDIR = $$[QT_HOST_LIBS]
+     else: \
