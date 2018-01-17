@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2018/01/01 21:18:37 adam Exp $
+# $NetBSD: Makefile,v 1.19 2018/01/17 12:10:37 jperkin Exp $
 
 PKGNAME=	${DISTNAME:S/mozc-/mozc-renderer-/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 CONFLICTS+=	ibus-mozc<=1.13.1651.102
 
