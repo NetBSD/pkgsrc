@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/04/22 08:04:23 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/01/17 19:07:37 markd Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -263,7 +263,7 @@ lib/libmolletnetwork.so.4
 lib/libmolletnetwork.so.${KDELIBSVER}
 man/man1/kdesu.1
 man/man1/plasmapkg.1
-${PLIST.polkit}share/PolicyKit/policy/org.kde.kcontrol.kcmremotewidgets.policy
+${PLIST.polkit}share/polkit-1/actions/org.kde.kcontrol.kcmremotewidgets.policy
 share/applications/kde4/Help.desktop
 share/applications/kde4/knetattach.desktop
 share/dbus-1/interfaces/org.kde.KTimeZoned.xml
