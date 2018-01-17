@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/08 14:10:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/17 19:16:05 markd Exp $
 bin/sip${PYVERSSUFFIX}
 ${PYINC}/sip.h
+${PYSITELIB}/sip.pyi
 ${PYSITELIB}/sip.so
 ${PYSITELIB}/sipconfig.py
 ${PYSITELIB}/sipconfig.pyc
