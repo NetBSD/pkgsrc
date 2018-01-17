@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2016/04/07 14:24:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2018/01/17 20:22:36 markd Exp $
 
-DISTNAME=	dynamips-0.2.16
+DISTNAME=	dynamips-0.2.17
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNS3/}
 GITHUB_PROJECT=	dynamips
