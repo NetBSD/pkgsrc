@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.971 2017/12/18 11:09:14 adam Exp $
+# $NetBSD: Makefile,v 1.972 2018/01/17 20:12:30 markd Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -933,6 +933,7 @@ SUBDIR+=	sublib
 SUBDIR+=	subliminal
 SUBDIR+=	subtitleripper
 SUBDIR+=	swath
+SUBDIR+=	syntax-highlighting
 SUBDIR+=	tcl-dom
 SUBDIR+=	tcl-expat
 SUBDIR+=	tcl-tDOM
