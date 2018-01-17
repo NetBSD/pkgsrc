@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/10/26 19:04:01 adam Exp $
+$NetBSD: distinfo,v 1.3 2018/01/17 19:30:48 markd Exp $
 
-SHA1 (qttranslations-opensource-src-5.5.1.tar.xz) = 0385274c9f77217f2cefbb11a56ce49e385854b3
-RMD160 (qttranslations-opensource-src-5.5.1.tar.xz) = f9c956935768cea5c935a10493963f7e411dc255
-SHA512 (qttranslations-opensource-src-5.5.1.tar.xz) = 026ee89aadd8acac609fb7e7813f8a1e9cad06912fb3e7b73ec28662b37cd353515f5d66c6ed1839d7c18006b41c88c315ac9a9001eb08637242a73753349be7
-Size (qttranslations-opensource-src-5.5.1.tar.xz) = 1153132 bytes
+SHA1 (qttranslations-everywhere-src-5.10.0.tar.xz) = 37d088d1c74f34ad731a296e370956fa22bce7e0
+RMD160 (qttranslations-everywhere-src-5.10.0.tar.xz) = b1241f6cef22688f73a10548dd956090e6b7ede5
+SHA512 (qttranslations-everywhere-src-5.10.0.tar.xz) = 5e6b674da52da4d0e38b2001bf0f70f764e6c096554d1724ba0f4bae8eca53f71168e374a0249d31e6ed72a1ebf1c3f745e8cb913b49cdcb3e98116edceb5257
+Size (qttranslations-everywhere-src-5.10.0.tar.xz) = 1444932 bytes
