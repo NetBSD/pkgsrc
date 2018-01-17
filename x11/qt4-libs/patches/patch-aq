@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.18 2017/05/26 12:09:11 jperkin Exp $
+$NetBSD: patch-aq,v 1.19 2018/01/17 18:37:34 markd Exp $
 
 --- configure.orig	2015-05-07 14:14:56.000000000 +0000
 +++ configure
@@ -88,7 +88,7 @@ $NetBSD: patch-aq,v 1.18 2017/05/26 12:09:11 jperkin Exp $
  	# Check gcc's version
  	case "$(${QMAKE_CONF_COMPILER} -dumpversion)" in
 -	    4*)
-+	    5*|4*)
++	    6*|5*|4*)
  		;;
  	    3.4*)
  		canBuildQtXmlPatterns="no"
@@ -108,6 +108,15 @@ $NetBSD: patch-aq,v 1.18 2017/05/26 12:09:11 jperkin Exp $
 -    *macx-clang-libc++)
 +    *macx-llvm)
          # Avoid overriding the default settings when building clang/libc++.
+         ;;
+     *)
+@@ -8050,7 +8063,7 @@ g++*)
+     3.*)
+         COMPILER_VERSION="3.*"
+         ;;
+-    5*|4.*)
++    6*|5*|4.*)
+         COMPILER_VERSION="4"
          ;;
      *)
 @@ -8485,7 +8498,7 @@ QMakeVar set sql-plugins "$SQL_PLUGINS"
