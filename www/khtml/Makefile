@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2017/11/30 16:45:09 adam Exp $
+# $NetBSD: Makefile,v 1.14 2018/01/17 20:13:38 markd Exp $
 
 DISTNAME=	khtml-${KF5VER}
-PKGREVISION=	11
 CATEGORIES=	www
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -9,7 +8,7 @@ COMMENT=	HTML rendering engine
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kf5/Makefile.common"
-MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.25/portingAids/}
+MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.41/portingAids/}
 
 USE_TOOLS+=	perl msgfmt
 
@@ -17,8 +16,9 @@ USE_TOOLS+=	perl msgfmt
 SUBST_CLASSES+=	fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
-SUBST_FILES.fix-moc=	_KDE_build/src/CMakeFiles/khtmlpart_automoc.dir/AutogenInfo.cmake 
-SUBST_FILES.fix-moc+=	_KDE_build/src/kmultipart/CMakeFiles/kmultipart_automoc.dir/AutogenInfo.cmake 
+SUBST_FILES.fix-moc=	_KDE_build/src/CMakeFiles/khtmlpart_autogen.dir/AutogenInfo.cmake 
+SUBST_FILES.fix-moc+=	_KDE_build/src/CMakeFiles/khtmlimagepart_autogen.dir/AutogenInfo.cmake 
+SUBST_FILES.fix-moc+=	_KDE_build/src/kmultipart/CMakeFiles/kmultipart_autogen.dir/AutogenInfo.cmake 
 SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
