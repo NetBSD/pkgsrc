@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2018/01/01 21:18:13 adam Exp $
+# $NetBSD: Makefile,v 1.65 2018/01/17 19:10:23 markd Exp $
 
 DISTNAME=	kde-workspace-4.11.22
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	x11
 COMMENT=	Base workspace for the KDE 4 integrated X11 desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.0/src/}
@@ -161,7 +161,7 @@ PLIST.gles=	yes
 .include "../../misc/kdepimlibs4/buildlink3.mk"
 #.include "../../misc/nepomuk-core/buildlink3.mk"
 .include "../../multimedia/phonon/buildlink3.mk"
-.include "../../x11/py-kde4/buildlink3.mk"
+#.include "../../x11/py-kde4/buildlink3.mk"
 .include "../../x11/libkactivities4/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
