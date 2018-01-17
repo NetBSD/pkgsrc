@@ -1,28 +1,28 @@
-$NetBSD: patch-Source_WTF_wtf_Assertions.cpp,v 1.1 2014/12/30 17:23:47 adam Exp $
+$NetBSD: patch-Source_WTF_wtf_Assertions.cpp,v 1.2 2018/01/17 19:37:33 markd Exp $
 
 * Add NetBSD support
 
---- Source/WTF/wtf/Assertions.cpp.orig	2013-11-27 01:01:21.000000000 +0000
+--- Source/WTF/wtf/Assertions.cpp.orig	2017-06-04 20:16:06.000000000 +0000
 +++ Source/WTF/wtf/Assertions.cpp
-@@ -61,7 +61,7 @@
- #include <windows.h>
+@@ -68,7 +68,7 @@
+ #include <unistd.h>
  #endif
  
--#if (OS(DARWIN) || (OS(LINUX) && !defined(__UCLIBC__))) && !OS(ANDROID)
-+#if (OS(DARWIN) || OS(NETBSD) || (OS(LINUX) && !defined(__UCLIBC__))) && !OS(ANDROID)
+-#if OS(DARWIN) || (OS(LINUX) && defined(__GLIBC__) && !defined(__UCLIBC__))
++#if OS(DARWIN) || OS(NETBSD) || (OS(LINUX) && defined(__GLIBC__) && !defined(__UCLIBC__))
  #include <cxxabi.h>
  #include <dlfcn.h>
  #include <execinfo.h>
-@@ -245,7 +245,7 @@ void WTFReportArgumentAssertionFailure(c
+@@ -225,7 +225,7 @@ void WTFReportArgumentAssertionFailure(c
  
  void WTFGetBacktrace(void** stack, int* size)
  {
--#if (OS(DARWIN) || (OS(LINUX) && !defined(__UCLIBC__))) && !OS(ANDROID)
-+#if (OS(DARWIN) || (OS_NETBSD) || (OS(LINUX) && !defined(__UCLIBC__))) && !OS(ANDROID)
+-#if OS(DARWIN) || (OS(LINUX) && defined(__GLIBC__) && !defined(__UCLIBC__))
++#if OS(DARWIN) || OS(NETBSD) || (OS(LINUX) && defined(__GLIBC__) && !defined(__UCLIBC__))
      *size = backtrace(stack, *size);
- #elif OS(WINDOWS) && !OS(WINCE)
+ #elif OS(WINDOWS)
      // The CaptureStackBackTrace function is available in XP, but it is not defined
-@@ -279,7 +279,7 @@ void WTFReportBacktrace()
+@@ -259,7 +259,7 @@ void WTFReportBacktrace()
      WTFPrintBacktrace(samples + framesToSkip, frames - framesToSkip);
  }
  
@@ -30,4 +30,4 @@ $NetBSD: patch-Source_WTF_wtf_Assertions.cpp,v 1.1 2014/12/30 17:23:47 adam Exp 
 +#if OS(DARWIN) || OS(LINUX) || OS(NETBSD)
  #  if PLATFORM(QT) || PLATFORM(GTK)
  #    if defined(__GLIBC__) && !defined(__UCLIBC__)
- #      define WTF_USE_BACKTRACE_SYMBOLS 1
+ #      define USE_BACKTRACE_SYMBOLS 1
