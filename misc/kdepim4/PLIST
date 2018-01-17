@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2016/02/14 04:18:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/01/17 18:57:37 markd Exp $
 bin/akonadi_archivemail_agent
 bin/akonadi_followupreminder_agent
 bin/akonadi_mailfilter_agent
@@ -230,7 +230,7 @@ lib/libtemplateparser.so
 lib/libtemplateparser.so.4
 lib/libtemplateparser.so.${KDELIBSVER}
 man/man1/kabcclient.1
-share/PolicyKit/policy/org.kde.kalarmrtcwake.policy
+share/polkit-1/actions/org.kde.kalarmrtcwake.policy
 share/akonadi/agents/archivemailagent.desktop
 share/akonadi/agents/folderarchiveagent.desktop
 share/akonadi/agents/followupreminder.desktop
