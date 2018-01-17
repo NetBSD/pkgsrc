@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/08/21 22:27:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/17 20:13:38 markd Exp $
 bin/kjs5
 include/KF5/kjs/CommonIdentifiers.h
 include/KF5/kjs/CompileState.h
@@ -103,7 +103,16 @@ lib/libKF5JS.so.${PKGVERSION}
 lib/libKF5JSApi.so
 lib/libKF5JSApi.so.5
 lib/libKF5JSApi.so.${PKGVERSION}
+man/ca/man1/kjs5.1
+man/de/man1/kjs5.1
+man/es/man1/kjs5.1
+man/it/man1/kjs5.1
 man/man1/kjs5.1
+man/nl/man1/kjs5.1
+man/pt/man1/kjs5.1
+man/pt_BR/man1/kjs5.1
+man/sv/man1/kjs5.1
+man/uk/man1/kjs5.1
 qt5/mkspecs/modules/qt_KJS.pri
 qt5/mkspecs/modules/qt_KJSApi.pri
 share/kf5/kjs/create_hash_table

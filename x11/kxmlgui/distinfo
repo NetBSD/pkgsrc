@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2016/08/21 21:29:46 markd Exp $
+$NetBSD: distinfo,v 1.3 2018/01/17 20:16:58 markd Exp $
 
-SHA1 (kxmlgui-5.25.0.tar.xz) = 7a515deb63a229eb0597dce9cb225fc9f0408496
-RMD160 (kxmlgui-5.25.0.tar.xz) = 02717cfa16a567dee3d86f21b6326c56d9946baa
-SHA512 (kxmlgui-5.25.0.tar.xz) = f83c7c7f839804a3a9bb1515d8e5ae916be0bfe07197a7f21b9d8ee9fecf9d3dd257431ce465232e184ab98e7d3201e75e35a311dd9e4a3172a7142dee2cef27
-Size (kxmlgui-5.25.0.tar.xz) = 873280 bytes
-SHA1 (patch-src_CMakeLists.txt) = 6641d488b9cd8b7d000d7488eb27a5fb1fe9ca79
+SHA1 (kxmlgui-5.41.0.tar.xz) = 7992b037e952940a975edef107e6a47415c08c8b
+RMD160 (kxmlgui-5.41.0.tar.xz) = a641f5f61bb416ed3544f33e42a89bb16a766468
+SHA512 (kxmlgui-5.41.0.tar.xz) = c8e7d39ebf8e0cb887f7b8bde7fb1a9a5f35e24972df26b1ba9ff5bb444fc905bd9380e6daf3b52a6bfe97d022029f9c00f55b0062d24de51dc0b0ccd255f1a1
+Size (kxmlgui-5.41.0.tar.xz) = 884016 bytes
+SHA1 (patch-src_CMakeLists.txt) = 415ba3e83db7aea0c960a776e06ab9bb7665f4af
