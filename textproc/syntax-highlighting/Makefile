@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.14 2018/01/17 20:11:05 markd Exp $
+# $NetBSD: Makefile,v 1.1 2018/01/17 20:11:06 markd Exp $
 
-DISTNAME=	kcodecs-${KF5VER}
+DISTNAME=	syntax-highlighting-${KF5VER}
 CATEGORIES=	textproc
 
 HOMEPAGE=	https://community.kde.org/Frameworks
-COMMENT=	Provide a collection of methods to manipulate strings using various encodings
-LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
+COMMENT=	Syntax highlighting engine for structured text and code
+LICENSE=	gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kf5/Makefile.common"
+
+USE_TOOLS+=	perl
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 BUILDLINK_DEPMETHOD.qt5-qttools= build

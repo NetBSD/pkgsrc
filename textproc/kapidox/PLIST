@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/08/21 21:26:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/17 20:11:05 markd Exp $
 bin/depdiagram-generate
 bin/depdiagram-generate-all
 bin/depdiagram-prepare
@@ -10,26 +10,28 @@ ${PYSITELIB}/kapidox/argparserutils.py
 ${PYSITELIB}/kapidox/argparserutils.pyc
 ${PYSITELIB}/kapidox/argparserutils.pyo
 ${PYSITELIB}/kapidox/data/Doxyfile.global
+${PYSITELIB}/kapidox/data/DoxygenLayout.xml
 ${PYSITELIB}/kapidox/data/dependencies.md.tmpl
 ${PYSITELIB}/kapidox/data/footer.html
 ${PYSITELIB}/kapidox/data/header.html
 ${PYSITELIB}/kapidox/data/htmlresource/default_product.png
 ${PYSITELIB}/kapidox/data/htmlresource/favicon.ico
 ${PYSITELIB}/kapidox/data/htmlresource/frameworks.css
-${PYSITELIB}/kapidox/data/htmlresource/frameworks.js
 ${PYSITELIB}/kapidox/data/htmlresource/icons/bad.png
 ${PYSITELIB}/kapidox/data/htmlresource/icons/ok.png
 ${PYSITELIB}/kapidox/data/htmlresource/icons/warning.png
-${PYSITELIB}/kapidox/data/htmlresource/jquery-2.1.0.min.js
 ${PYSITELIB}/kapidox/data/htmlresource/kde-white.svg
 ${PYSITELIB}/kapidox/data/htmlresource/kde.css
-${PYSITELIB}/kapidox/data/htmlresource/notetip.js
 ${PYSITELIB}/kapidox/data/templates/base.html
-${PYSITELIB}/kapidox/data/templates/comments.html
-${PYSITELIB}/kapidox/data/templates/doxygen.html
+${PYSITELIB}/kapidox/data/templates/footer.html
+${PYSITELIB}/kapidox/data/templates/frontpage-sidebar.html
 ${PYSITELIB}/kapidox/data/templates/frontpage.html
 ${PYSITELIB}/kapidox/data/templates/libinfo.html
+${PYSITELIB}/kapidox/data/templates/library-sidebar.html
+${PYSITELIB}/kapidox/data/templates/library.html
 ${PYSITELIB}/kapidox/data/templates/maintainers.html
+${PYSITELIB}/kapidox/data/templates/search.html
+${PYSITELIB}/kapidox/data/templates/subgroup-sidebar.html
 ${PYSITELIB}/kapidox/data/templates/subgroup.html
 ${PYSITELIB}/kapidox/depdiagram/__init__.py
 ${PYSITELIB}/kapidox/depdiagram/__init__.pyc
@@ -55,6 +57,9 @@ ${PYSITELIB}/kapidox/doxyfilewriter.pyo
 ${PYSITELIB}/kapidox/generator.py
 ${PYSITELIB}/kapidox/generator.pyc
 ${PYSITELIB}/kapidox/generator.pyo
+${PYSITELIB}/kapidox/hlfunctions.py
+${PYSITELIB}/kapidox/hlfunctions.pyc
+${PYSITELIB}/kapidox/hlfunctions.pyo
 ${PYSITELIB}/kapidox/models.py
 ${PYSITELIB}/kapidox/models.pyc
 ${PYSITELIB}/kapidox/models.pyo
