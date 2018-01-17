@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2016/08/28 15:48:37 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2018/01/17 19:18:47 markd Exp $
 
 PKGNAME=	${PYPKGPREFIX}-qt4-${PYQT_VERSION}
-PYQT_VERSION=	4.11.4
-PKGREVISION=	3
+PYQT_VERSION=	4.12.1
 CATEGORIES=	x11 python
 #MASTER_SITES=	http://www.riverbankcomputing.com/static/Downloads/PyQt4/
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
@@ -18,10 +17,11 @@ USE_LANGUAGES=		c c++
 
 CONFIGURE_ARGS+=	-b ${PREFIX}/bin
 CONFIGURE_ARGS+=	-d ${PREFIX}/${PYSITELIB}
-CONFIGURE_ARGS+=	-v ${PREFIX}/share/sip${PYVERSSUFFIX}
+CONFIGURE_ARGS+=	--sipdir ${PREFIX}/share/sip${PYVERSSUFFIX}
 CONFIGURE_ARGS+=	-q ${QTDIR}/bin/qmake
 CONFIGURE_ARGS+=	--confirm-license
 CONFIGURE_ARGS+=	--qsci-api
+#CONFIGURE_ARGS+=	--sip ${BUILDLINK_PREFIX.py-sip}/bin/sip${PYVERSSUFFIX}
 
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 
@@ -54,9 +54,9 @@ SUBST_MESSAGE.PIC=	Adding -fPIC to CXXFLAGS.
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
-DISTNAME=		PyQt-mac-gpl-${PYQT_VERSION}
+DISTNAME=		PyQt4_gpl_mac-${PYQT_VERSION}
 .else
-DISTNAME=		PyQt-x11-gpl-${PYQT_VERSION}
+DISTNAME=		PyQt4_gpl_x11-${PYQT_VERSION}
 .endif
 
 .include "../../lang/python/extension.mk"
@@ -94,6 +94,7 @@ post-install:
 # needs the QtXmlPatterns fix
 BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.6.1nb3
 .include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-qdbus/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.4.0nb1
 BUILDLINK_DEPMETHOD.qt4-tools=		full
 .include "../../x11/qt4-tools/buildlink3.mk"

@@ -1,10 +1,10 @@
-$NetBSD: patch-sip_QtCore_qlist.sip,v 1.1 2013/06/10 15:37:36 jperkin Exp $
+$NetBSD: patch-sip_QtCore_qlist.sip,v 1.2 2018/01/17 19:18:47 markd Exp $
 
 Implement QList<long> for SunOS 32-bit pid_t.
 
---- sip/QtCore/qlist.sip.orig	2013-04-21 12:02:19.000000000 +0000
+--- sip/QtCore/qlist.sip.orig	2017-06-30 08:44:43.000000000 +0000
 +++ sip/QtCore/qlist.sip
-@@ -683,6 +683,68 @@ template<qreal, TYPE>
+@@ -682,6 +682,68 @@ template<qreal, TYPE>
      return sipGetState(sipTransferObj);
  %End
  };
@@ -71,5 +71,5 @@ Implement QList<long> for SunOS 32-bit pid_t.
 +%End
 +};
  // QList<unsigned> is implemented as a Python list of unsigned longs.
- %MappedType QList<unsigned> /DocType="list-of-int"/
+ %MappedType QList<unsigned> /TypeHintIn="Sequence[int]", TypeHintOut="List[int]", TypeHintValue="[]"/
  {
