@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2017/11/30 16:45:02 adam Exp $
+# $NetBSD: Makefile,v 1.16 2018/01/17 20:00:21 markd Exp $
 
 DISTNAME=	kio-${KF5VER}
-PKGREVISION=	11
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -22,11 +21,11 @@ CONF_FILES+=	${PREFIX}/share/examples/kio/kshorturifilterrc \
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
-SUBST_FILES.fix-moc=	_KDE_build/src/ioslaves/http/kcookiejar/CMakeFiles/kded_kcookiejar_automoc.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/src/ioslaves/trash/CMakeFiles/kcm_trash_automoc.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/src/urifilters/ikws/CMakeFiles/kurisearchfilter_automoc.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/autotests/CMakeFiles/jobremotetest_automoc.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/src/kcms/kio/CMakeFiles/kcm_kio_automoc.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc=	_KDE_build/src/ioslaves/http/kcookiejar/CMakeFiles/kded_kcookiejar_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/src/ioslaves/trash/CMakeFiles/kcm_trash_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/src/urifilters/ikws/CMakeFiles/kurisearchfilter_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/autotests/CMakeFiles/jobremotetest_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/src/kcms/kio/CMakeFiles/kcm_kio_autogen.dir/AutogenInfo.cmake
 SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
 #.include "../../lang/python/tool.mk"

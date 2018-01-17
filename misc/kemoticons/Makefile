@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/11/30 16:45:05 adam Exp $
+# $NetBSD: Makefile,v 1.9 2018/01/17 20:04:45 markd Exp $
 
 DISTNAME=	kemoticons-${KF5VER}
-PKGREVISION=	6
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -11,10 +10,10 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
-SUBST_FILES.fix-moc=	_KDE_build/src/providers/xmpp/CMakeFiles/emoticonstheme_xmpp_automoc.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/src/providers/kde/CMakeFiles/emoticonstheme_kde_automoc.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/src/providers/adium/CMakeFiles/emoticonstheme_adium_automoc.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/src/providers/pidgin/CMakeFiles/emoticonstheme_pidgin_automoc.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc=	_KDE_build/src/providers/xmpp/CMakeFiles/emoticonstheme_xmpp_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/src/providers/kde/CMakeFiles/emoticonstheme_kde_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/src/providers/adium/CMakeFiles/emoticonstheme_adium_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/src/providers/pidgin/CMakeFiles/emoticonstheme_pidgin_autogen.dir/AutogenInfo.cmake
 SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
 .include "../../meta-pkgs/kf5/Makefile.common"

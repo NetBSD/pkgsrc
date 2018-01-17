@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2016/08/21 21:17:58 markd Exp $
+$NetBSD: distinfo,v 1.3 2018/01/17 20:00:21 markd Exp $
 
-SHA1 (knotifyconfig-5.25.0.tar.xz) = 68ab598a4747729b41db1c002253f2d1b21724ee
-RMD160 (knotifyconfig-5.25.0.tar.xz) = 3ee5f3fb274a97ee2fd377abd4730dda23126a75
-SHA512 (knotifyconfig-5.25.0.tar.xz) = 066e8af130b94083342ae4db708bc4ab5b0291dab044e34ddfbc3f3828d4d63303e32e0acd06e4705cccbde1606784943fd498522b9c1002cbf51f505d03d1d5
-Size (knotifyconfig-5.25.0.tar.xz) = 83112 bytes
+SHA1 (knotifyconfig-5.41.0.tar.xz) = 7526d93adeff4423bba04abbe0b09440efde4652
+RMD160 (knotifyconfig-5.41.0.tar.xz) = f23c7ab930a3350e20f38671caba219b7f2a5b4f
+SHA512 (knotifyconfig-5.41.0.tar.xz) = c5a14f6bd65272c0742df82526d526a352be02c71608b8812fc584a9c1378f40d5abc681a3ecc881c03ef873d00b355fa4ae5dbd7a0cd2204fcc718fd2c79d94
+Size (knotifyconfig-5.41.0.tar.xz) = 83676 bytes
