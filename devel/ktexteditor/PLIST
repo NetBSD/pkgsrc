@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/26 08:29:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/17 20:00:22 markd Exp $
 include/KF5/KTextEditor/KTextEditor/AnnotationInterface
 include/KF5/KTextEditor/KTextEditor/Application
 include/KF5/KTextEditor/KTextEditor/Attribute
@@ -60,10 +60,12 @@ lib/cmake/KF5TextEditor/KF5TextEditorTargets.cmake
 lib/libKF5TextEditor.so
 lib/libKF5TextEditor.so.5
 lib/libKF5TextEditor.so.${PKGVERSION}
+libexec/kauth/kauth_ktexteditor_helper
 qt5/mkspecs/modules/qt_KTextEditor.pri
 qt5/plugins/kf5/parts/katepart.so
+share/dbus-1/system-services/org.kde.ktexteditor.katetextbuffer.service
 share/katepart5/script/README.md
-share/katepart5/syntax/README.md
+share/kdevappwizard/templates/ktexteditor-plugin.tar.bz2
 share/kservices5/katepart.desktop
 share/kservicetypes5/ktexteditor.desktop
 share/kservicetypes5/ktexteditorplugin.desktop
@@ -151,3 +153,4 @@ share/locale/wa/LC_MESSAGES/ktexteditor5.mo
 share/locale/xh/LC_MESSAGES/ktexteditor5.mo
 share/locale/zh_CN/LC_MESSAGES/ktexteditor5.mo
 share/locale/zh_TW/LC_MESSAGES/ktexteditor5.mo
+share/polkit-1/actions/org.kde.ktexteditor.katetextbuffer.policy

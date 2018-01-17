@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2017/11/30 16:45:08 adam Exp $
+# $NetBSD: Makefile,v 1.35 2018/01/17 20:06:50 markd Exp $
 
 DISTNAME=	kwallet-${KF5VER}
-PKGREVISION=	7
 CATEGORIES=	security
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -18,7 +17,7 @@ USE_TOOLS+=	msgmerge
 .include "../../devel/knotifications/buildlink3.mk"
 .include "../../devel/kservice/buildlink3.mk"
 .include "../../graphics/kiconthemes/buildlink3.mk"
-.include "../../security/gpgmepp/buildlink3.mk"
+.include "../../security/gpgme/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

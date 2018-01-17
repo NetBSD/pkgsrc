@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/26 08:29:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/17 20:00:21 markd Exp $
 include/KF5/KParts/KParts/BrowserArguments
 include/KF5/KParts/KParts/BrowserExtension
 include/KF5/KParts/KParts/BrowserHostExtension
@@ -74,6 +74,7 @@ lib/libKF5Parts.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KParts.pri
 qt5/plugins/notepadpart.so
 qt5/plugins/spellcheckplugin.so
+share/kdevappwizard/templates/kpartsapp.tar.bz2
 share/kservicetypes5/browserview.desktop
 share/kservicetypes5/kpart.desktop
 share/kservicetypes5/krop.desktop
