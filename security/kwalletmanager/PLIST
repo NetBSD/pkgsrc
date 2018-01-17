@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/13 11:29:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/17 18:59:53 markd Exp $
 bin/kwalletmanager
 lib/kde4/kcm_kwallet.so
 lib/kde4/libexec/kcm_kwallet_helper
-share/PolicyKit/policy/org.kde.kcontrol.kcmkwallet.policy
+share/polkit-1/actions/org.kde.kcontrol.kcmkwallet.policy
 share/applications/kde4/kwalletmanager-kwalletd.desktop
 share/applications/kde4/kwalletmanager.desktop
 share/dbus-1/system-services/org.kde.kcontrol.kcmkwallet.service
