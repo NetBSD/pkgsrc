@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2017/05/03 08:38:46 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.22 2018/01/17 19:30:46 markd Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -32,7 +32,6 @@
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
 USE_LANGUAGES=		c c++11
-USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:build pkg-config
 
 # wcstof(3) etc. is used in C++ code.
@@ -46,19 +45,22 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${PREFIX}/qt5/lib
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${WRKSRC}/lib
 
 MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
-PLIST_VARS+=		mac unix
+PLIST_VARS+=		jit mac unix
 .if ${OPSYS} == "Darwin"
 PLIST.mac=		yes
 .else
 PLIST.unix=		yes
 .endif
+.if ${OPSYS} != "NetBSD"
+PLIST.jit=		yes
+.endif
 
 # avoid creating a .qt directory in the users home directory
 SCRIPTS_ENV+=		HOME=${WRKDIR}
 
-.if empty(PKGPATH:Mx11/qt5-qtbase) \
-	&& empty(PKGPATH:Mx11/qt5-odbc) && empty(PKGPATH:Mx11/qt5-mysql) \
-	&& empty(PKGPATH:Mx11/qt5-psql) && empty(PKGPATH:Mx11/qt5-sqlite3)
+.if empty(PKGPATH:Mwip/qt5-qtbase) \
+	&& empty(PKGPATH:Mwip/qt5-odbc) && empty(PKGPATH:Mwip/qt5-mysql) \
+	&& empty(PKGPATH:Mwip/qt5-psql) && empty(PKGPATH:Mwip/qt5-sqlite3)
 do-configure:
 	cd ${WRKSRC} && ${QTPREFIX}/bin/qmake -o Makefile
 .endif

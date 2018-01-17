@@ -1,11 +1,11 @@
-$NetBSD: patch-src_corelib_codecs_qiconvcodec.cpp,v 1.1 2014/12/30 17:23:46 adam Exp $
+$NetBSD: patch-src_corelib_codecs_qiconvcodec.cpp,v 1.2 2018/01/17 19:30:47 markd Exp $
 
 * Add DragonFly support
 * Add NetBSD support
 
---- src/corelib/codecs/qiconvcodec.cpp.orig	2013-11-27 01:01:15.000000000 +0000
+--- src/corelib/codecs/qiconvcodec.cpp.orig	2017-01-18 14:20:58.000000000 +0000
 +++ src/corelib/codecs/qiconvcodec.cpp
-@@ -52,9 +52,14 @@
+@@ -52,9 +52,14 @@ QT_REQUIRE_CONFIG(iconv);
  #include <stdio.h>
  #include <dlfcn.h>
  
@@ -21,7 +21,7 @@ $NetBSD: patch-src_corelib_codecs_qiconvcodec.cpp,v 1.1 2014/12/30 17:23:46 adam
  #  include <langinfo.h>
  #endif
  
-@@ -71,6 +76,9 @@
+@@ -71,6 +76,9 @@ QT_REQUIRE_CONFIG(iconv);
  #  else
  #    define UTF16 "UTF-16LE"
  #  endif
@@ -31,34 +31,7 @@ $NetBSD: patch-src_corelib_codecs_qiconvcodec.cpp,v 1.1 2014/12/30 17:23:46 adam
  #else
  #  define UTF16 "UTF-16"
  #endif
-@@ -223,7 +231,7 @@ QString QIconvCodec::convertToUnicode(co
-     IconvState *state = *pstate;
-     size_t inBytesLeft = len;
-     // best case assumption, each byte is converted into one UTF-16 character, plus 2 bytes for the BOM
--#ifdef GNU_LIBICONV
-+#if defined(GNU_LIBICONV) || defined(__NetBSD__)
-     // GNU doesn't disagree with POSIX :/
-     const char *inBytes = chars;
- #else
-@@ -322,7 +330,7 @@ static bool setByteOrder(iconv_t cd)
-     size_t outBytesLeft = sizeof buf;
-     size_t inBytesLeft = sizeof bom;
- 
--#if defined(GNU_LIBICONV)
-+#if defined(GNU_LIBICONV) || defined(__NetBSD__)
-     const char **inBytesPtr = const_cast<const char **>(&inBytes);
- #else
-     char **inBytesPtr = &inBytes;
-@@ -342,7 +350,7 @@ QByteArray QIconvCodec::convertFromUnico
-     char *outBytes;
-     size_t inBytesLeft;
- 
--#if defined(GNU_LIBICONV)
-+#if defined(GNU_LIBICONV) || defined(__NetBSD__)
-     const char **inBytesPtr = const_cast<const char **>(&inBytes);
- #else
-     char **inBytesPtr = &inBytes;
-@@ -482,11 +490,13 @@ iconv_t QIconvCodec::createIconv_t(const
+@@ -444,11 +452,13 @@ iconv_t QIconvCodec::createIconv_t(const
  #endif
      const char *codeset = empty_codeset;
      cd = iconv_open(to ? to : codeset, from ? from : codeset);

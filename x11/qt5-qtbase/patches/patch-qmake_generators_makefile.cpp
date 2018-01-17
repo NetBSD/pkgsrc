@@ -1,11 +1,11 @@
-$NetBSD: patch-qmake_generators_makefile.cpp,v 1.2 2015/10/26 19:03:59 adam Exp $
+$NetBSD: patch-qmake_generators_makefile.cpp,v 1.3 2018/01/17 19:30:47 markd Exp $
 
-* Libtoolized
+Pass library path to linker.
 
---- qmake/generators/makefile.cpp.orig	2015-06-29 20:03:22.000000000 +0000
+--- qmake/generators/makefile.cpp.orig	2016-06-10 06:48:56.000000000 +0000
 +++ qmake/generators/makefile.cpp
-@@ -3256,7 +3256,7 @@ MakefileGenerator::writePkgConfigFile()
-         pkgConfiglibName = "-framework " + bundle + " ";
+@@ -3297,7 +3297,7 @@ MakefileGenerator::writePkgConfigFile()
+         pkgConfiglibName = bundle.toQString();
      } else {
          if (!project->values("QMAKE_DEFAULT_LIBDIRS").contains(libDir))
 -            t << "-L${libdir} ";

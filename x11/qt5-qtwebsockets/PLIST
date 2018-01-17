@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/05/03 07:32:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/17 19:30:48 markd Exp $
 lib/pkgconfig/Qt5WebSockets.pc
 qt5/include/QtWebSockets/${PKGVERSION}/QtWebSockets/private/qdefaultmaskgenerator_p.h
 qt5/include/QtWebSockets/${PKGVERSION}/QtWebSockets/private/qsslserver_p.h
@@ -13,6 +13,7 @@ qt5/include/QtWebSockets/${PKGVERSION}/QtWebSockets/private/qwebsocketserver_p.h
 qt5/include/QtWebSockets/QMaskGenerator
 qt5/include/QtWebSockets/QWebSocket
 qt5/include/QtWebSockets/QWebSocketCorsAuthenticator
+qt5/include/QtWebSockets/QWebSocketProtocol
 qt5/include/QtWebSockets/QWebSocketServer
 qt5/include/QtWebSockets/QtWebSockets
 qt5/include/QtWebSockets/QtWebSocketsDepends
@@ -26,12 +27,15 @@ qt5/include/QtWebSockets/qwebsockets_global.h
 qt5/include/QtWebSockets/qwebsocketserver.h
 qt5/lib/cmake/Qt5WebSockets/Qt5WebSocketsConfig.cmake
 qt5/lib/cmake/Qt5WebSockets/Qt5WebSocketsConfigVersion.cmake
-qt5/lib/libQt5WebSockets.la
 qt5/lib/libQt5WebSockets.prl
+qt5/lib/libQt5WebSockets.so
+qt5/lib/libQt5WebSockets.so.${PKGVERSION}
+qt5/lib/libQt5WebSockets.so.5
+qt5/lib/libQt5WebSockets.so.5.10
 qt5/lib/pkgconfig/Qt5WebSockets.pc
 qt5/mkspecs/modules/qt_lib_websockets.pri
 qt5/mkspecs/modules/qt_lib_websockets_private.pri
 qt5/qml/Qt/WebSockets/qmldir
-qt5/qml/QtWebSockets/libdeclarative_qmlwebsockets.la
+qt5/qml/QtWebSockets/libdeclarative_qmlwebsockets.so
 qt5/qml/QtWebSockets/plugins.qmltypes
 qt5/qml/QtWebSockets/qmldir
