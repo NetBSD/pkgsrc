@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/10/13 11:03:13 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/17 12:10:38 jperkin Exp $
 
 DISTNAME=	riemann-c-client-1.9.1
 PKGNAME=	${DISTNAME:S/c-//}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=algernon/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2017/08/30 11:05:05 wiedi Exp $
+# $NetBSD: Makefile,v 1.4 2018/01/17 12:10:37 jperkin Exp $
 
 DISTNAME=	protobuf-c-1.3.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=protobuf-c/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

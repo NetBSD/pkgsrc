@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2017/11/17 22:09:11 he Exp $
+# $NetBSD: Makefile,v 1.15 2018/01/17 12:10:37 jperkin Exp $
 
+PKGREVISION= 1
 .include "Makefile.common"
 
 DISTNAME=	protobuf-cpp-${PROTOBUFVER}
