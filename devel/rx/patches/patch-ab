@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2009/09/09 17:03:11 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2018/01/17 12:01:48 wiz Exp $
 
 --- rx/Makefile.in.orig	Fri Nov 22 13:47:49 1996
 +++ rx/Makefile.in
@@ -44,7 +44,7 @@ $NetBSD: patch-ab,v 1.4 2009/09/09 17:03:11 joerg Exp $
 -	$(AR) $(AR_FLAGS) librx.a $(libobjs) $(opt_objs)
 -	$(RANLIB) librx.a
 +librx.la: $(libobjs) $(opt_objs)
-+	$(LIBTOOL) --mode=link $(CC) -o $@ $(libobjs:.o=.lo) $(opt_objs:.o=.lo) \
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ $(libobjs:.o=.lo) $(opt_objs:.o=.lo) \
 +		-rpath $(libdir) -version-info $(RX_MAJOR):$(RX_MINOR)
  
  
