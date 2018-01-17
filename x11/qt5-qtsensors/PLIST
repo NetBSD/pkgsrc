@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/10/26 19:04:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/01/17 19:30:48 markd Exp $
 lib/pkgconfig/Qt5Sensors.pc
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qaccelerometer_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qaltimeter_p.h
@@ -8,7 +8,9 @@ qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qcompass_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qdistancesensor_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qgyroscope_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qholstersensor_p.h
+qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qhumiditysensor_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qirproximitysensor_p.h
+qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qlidsensor_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qlightsensor_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qmagnetometer_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qorientationsensor_p.h
@@ -21,6 +23,7 @@ qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qsensorgesture_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qsensorgesturemanagerprivate_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qtapsensor_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qtiltsensor_p.h
+qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/qtsensors-config_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/sensorlog_p.h
 qt5/include/QtSensors/${PKGVERSION}/QtSensors/private/simulatorgesturescommon_p.h
 qt5/include/QtSensors/QAccelerometer
@@ -47,9 +50,15 @@ qt5/include/QtSensors/QGyroscopeReading
 qt5/include/QtSensors/QHolsterFilter
 qt5/include/QtSensors/QHolsterReading
 qt5/include/QtSensors/QHolsterSensor
+qt5/include/QtSensors/QHumidityFilter
+qt5/include/QtSensors/QHumidityReading
+qt5/include/QtSensors/QHumiditySensor
 qt5/include/QtSensors/QIRProximityFilter
 qt5/include/QtSensors/QIRProximityReading
 qt5/include/QtSensors/QIRProximitySensor
+qt5/include/QtSensors/QLidFilter
+qt5/include/QtSensors/QLidReading
+qt5/include/QtSensors/QLidSensor
 qt5/include/QtSensors/QLightFilter
 qt5/include/QtSensors/QLightReading
 qt5/include/QtSensors/QLightSensor
@@ -97,7 +106,9 @@ qt5/include/QtSensors/qcompass.h
 qt5/include/QtSensors/qdistancesensor.h
 qt5/include/QtSensors/qgyroscope.h
 qt5/include/QtSensors/qholstersensor.h
+qt5/include/QtSensors/qhumiditysensor.h
 qt5/include/QtSensors/qirproximitysensor.h
+qt5/include/QtSensors/qlidsensor.h
 qt5/include/QtSensors/qlightsensor.h
 qt5/include/QtSensors/qmagnetometer.h
 qt5/include/QtSensors/qorientationsensor.h
@@ -115,20 +126,24 @@ qt5/include/QtSensors/qsensorplugin.h
 qt5/include/QtSensors/qsensorsglobal.h
 qt5/include/QtSensors/qtapsensor.h
 qt5/include/QtSensors/qtiltsensor.h
+qt5/include/QtSensors/qtsensors-config.h
 qt5/include/QtSensors/qtsensorsversion.h
 qt5/lib/cmake/Qt5Sensors/Qt5SensorsConfig.cmake
 qt5/lib/cmake/Qt5Sensors/Qt5SensorsConfigVersion.cmake
 qt5/lib/cmake/Qt5Sensors/Qt5Sensors_QShakeSensorGesturePlugin.cmake
 qt5/lib/cmake/Qt5Sensors/Qt5Sensors_QtSensorGesturePlugin.cmake
 qt5/lib/cmake/Qt5Sensors/Qt5Sensors_genericSensorPlugin.cmake
-qt5/lib/libQt5Sensors.la
 qt5/lib/libQt5Sensors.prl
+qt5/lib/libQt5Sensors.so
+qt5/lib/libQt5Sensors.so.5
+qt5/lib/libQt5Sensors.so.5.10
+qt5/lib/libQt5Sensors.so.${PKGVERSION}
 qt5/lib/pkgconfig/Qt5Sensors.pc
 qt5/mkspecs/modules/qt_lib_sensors.pri
 qt5/mkspecs/modules/qt_lib_sensors_private.pri
-qt5/plugins/sensorgestures/libqtsensorgestures_plugin.la
-qt5/plugins/sensorgestures/libqtsensorgestures_shakeplugin.la
-qt5/plugins/sensors/libqtsensors_generic.la
-qt5/qml/QtSensors/libdeclarative_sensors.la
+qt5/plugins/sensorgestures/libqtsensorgestures_plugin.so
+qt5/plugins/sensorgestures/libqtsensorgestures_shakeplugin.so
+qt5/plugins/sensors/libqtsensors_generic.so
+qt5/qml/QtSensors/libdeclarative_sensors.so
 qt5/qml/QtSensors/plugins.qmltypes
 qt5/qml/QtSensors/qmldir
