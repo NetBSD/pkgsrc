@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2017/12/08 16:47:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/17 12:10:38 jperkin Exp $
 
 COLLECTD_PACKAGE=	write_prometheus
 
 COMMENT=		Statistics collection daemon - write_prometheus plugin
+PKGREVISION=		1
 
 .include "../../sysutils/collectd/Makefile.common"
 
