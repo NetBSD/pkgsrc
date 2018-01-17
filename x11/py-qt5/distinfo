@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.4 2016/04/23 07:38:38 wiz Exp $
+$NetBSD: distinfo,v 1.5 2018/01/17 19:39:57 markd Exp $
 
-SHA1 (PyQt-gpl-5.5.1.tar.gz) = d54cd7cf26b10f0b59fddce4a6a742f9697a94ff
-RMD160 (PyQt-gpl-5.5.1.tar.gz) = f0027899d9cef20d40dbcad01560edd25c6f7e4e
-SHA512 (PyQt-gpl-5.5.1.tar.gz) = ed9a4f30a50c0879f25b6a0841247f3f0de86942b55c1de9efea963bfbf64ee963a9e5c09be036ff2dec76164863b3b6235e45e8662776425f15378fa0abeab4
-Size (PyQt-gpl-5.5.1.tar.gz) = 3705749 bytes
-SHA1 (patch-configure.py) = 5b447f906b05dace1068fc5126b3c40a2e6c9452
+SHA1 (PyQt5_gpl-5.9.1.tar.gz) = b74f7410aefa21f077eca63fa11928f0bcadb99f
+RMD160 (PyQt5_gpl-5.9.1.tar.gz) = 96f05042a3f09491652827afb542e99ffa6375a8
+SHA512 (PyQt5_gpl-5.9.1.tar.gz) = 1c7d00dac5329296dd205eddeeecfd29495c4746791730056d143438871eb64a5d9827dcb1e28a78e8746218908e0e72374bd686a21b631b9aa1aa1c67e61eac
+Size (PyQt5_gpl-5.9.1.tar.gz) = 3101819 bytes
 SHA1 (patch-designer_designer.pro-in) = 8b7d885c4a5c5336dbdbead2bd88a4da02026ee2
-SHA1 (patch-qmlscene_qmlscene.pro-in) = fbc19d909b9174b26c9b81898e3843c8a3521492
+SHA1 (patch-qmlscene_qmlscene.pro-in) = 055ad9670d9d67dd8fca2f293a0b8b8c71512a4d
