@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2017/11/30 16:45:42 adam Exp $
+# $NetBSD: Makefile,v 1.15 2018/01/17 20:16:58 markd Exp $
 
 DISTNAME=	kdesignerplugin-${KF5VER}
-PKGREVISION=	11
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks

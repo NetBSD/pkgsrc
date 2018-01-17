@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/08/21 21:29:44 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/17 20:16:57 markd Exp $
 include/KF5/KStyle/KStyle
 include/KF5/KStyle/kstyle.h
 include/KF5/KStyle/kstyle_export.h
@@ -10,6 +10,7 @@ lib/cmake/KF5FrameworkIntegration/KF5FrameworkIntegrationTargets.cmake
 lib/libKF5Style.so
 lib/libKF5Style.so.5
 lib/libKF5Style.so.${PKGVERSION}
+libexec/kf5/kpackagehandlers/knshandler
 qt5/plugins/kf5/FrameworkIntegrationPlugin.so
 share/kf5/infopage/bar-bottom-left.png
 share/kf5/infopage/bar-bottom-middle.png
