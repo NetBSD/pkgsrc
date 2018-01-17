@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/08/21 21:11:57 markd Exp $
+# $NetBSD: Makefile,v 1.3 2018/01/17 19:53:45 markd Exp $
 
 DISTNAME=	kf5-${KF5VER}
 CATEGORIES=	meta-pkgs x11 kde
@@ -9,7 +9,7 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	"meta-package" for the KDE Frameworks 5
 
-KF5VER=		5.25.0
+KF5VER=		5.41.0
 
 DEPENDS+=	attica-qt5-${KF5VER}{,nb[0-9]*}:../../misc/attica-qt5
 DEPENDS+=	baloo5-${KF5VER}{,nb[0-9]*}:../../sysutils/baloo5
