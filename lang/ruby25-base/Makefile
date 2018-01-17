@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/01/08 14:19:06 taca Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/17 11:19:46 jperkin Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
@@ -27,6 +27,8 @@ CONFIGURE_ARGS+= --with-soname=${RUBY_NAME}
 CONFIGURE_ARGS+= --with-ruby-version=${RUBY_VER_DIR}
 CONFIGURE_ARGS+= --with-ruby-pc="ruby-${RUBY_VERSION}.pc"
 .endif
+
+CONFIGURE_ENV.Darwin+=	ac_cv_prog_dsymutil=
 
 DOCS=	BSDL COPYING COPYING.ja ChangeLog LEGAL NEWS README.EXT README.EXT.ja \
 	README.ja.md README.md doc/ChangeLog-1.8.0 doc/ChangeLog-1.9.3 \
