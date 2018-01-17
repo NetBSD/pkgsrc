@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.113 2017/05/26 12:09:11 jperkin Exp $
+$NetBSD: distinfo,v 1.114 2018/01/17 18:37:34 markd Exp $
 
 SHA1 (qt-everywhere-opensource-src-4.8.7.tar.gz) = 76aef40335c0701e5be7bb3a9101df5d22fe3666
 RMD160 (qt-everywhere-opensource-src-4.8.7.tar.gz) = afb5e5a99388e6429faca59cb5000054feffd166
@@ -20,7 +20,7 @@ SHA1 (patch-am) = 018a5982834737ca8ceb6460dc696b6e3a70ec54
 SHA1 (patch-an) = 8aa6ceffb9acab4771d22b3184a1360227a81409
 SHA1 (patch-ao) = a63839ae22e0bf13ff40f5377df2bc36ca052d91
 SHA1 (patch-ap) = 86a2f5cce47607c8c453c63c6213d5efb48c8569
-SHA1 (patch-aq) = b861cbfacc5f91339fc5f56cd7eeaad90d25c5d9
+SHA1 (patch-aq) = 7533741c81086cd1992d3e96a47c28d9ade27cbc
 SHA1 (patch-ar) = ba839210b42532b1797604722442841e43acbae1
 SHA1 (patch-as) = b0962c535fc2e8da08bb78b9ebcb5cd678565058
 SHA1 (patch-au) = 397a18f84299026e21aee0079784f56698fc9c6b
@@ -44,8 +44,10 @@ SHA1 (patch-src_3rdparty_clucene_src_CLucene_util_Arrays.h) = 41c2cf95b81157f380
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_runtime_Collector.cpp) = 93d5de2e9aff4dcc2e8317296801fac7e16ec613
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_runtime_Structure.cpp) = 156e99fa8594470be4e89e212408258824044e41
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_runtime_Structure.h) = b822a84aae7e125cb56b01bffdcfec07060d88f6
+SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_wtf_HashTable.h) = a6c8fec7d1919a1fed3cb77b7b4ce9a0f496153f
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_wtf_RefCountedLeakCounter.h) = 3b70ecb3a95944a3dd4a26c7b5c53e44aa89de1a
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_wtf_TypeTraits.h) = f23437f6e4b47f999d4fc2c576c5e7a63446b9da
+SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_yarr_RegexCompiler.cpp) = f02b0174b6cf4093b210bcd32ef21d06a369b61f
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_yarr_RegexJIT.h) = b625c9edd3b3febc1338240549c32fb50ed0a5f4
 SHA1 (patch-src_3rdparty_sqlite_sqlite3.c) = 29685d814c8b2b0514987340a09871c719fc4a3f
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_heap_MachineStackMarker.cpp) = cbce2e10307d26163a76266c0ceee315a609d63d
@@ -75,8 +77,12 @@ SHA1 (patch-src_corelib_io_io.pri) = cde98927b524c92fae1e053c2359e77bde2c240a
 SHA1 (patch-src_corelib_io_qfilesystemwatcher.cpp) = bb16b95d20286b1aa069dc25843d7e0067cc0268
 SHA1 (patch-src_corelib_thread_qthread__unix.cpp) = 67fbdc29d6da0aa7309a7aeb653a5abf10bd4d78
 SHA1 (patch-src_gui_painting_qpaintengine__mac.cpp) = dc44116d5d138020e5d525ec5b7fd0f1b44ebeca
-SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols.cpp) = 3ad682b86d2e9bd2b282caa298508dc3e9dd8566
-SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols__p.h) = 417846ba9edab8638cafa41a54ef60029467ef80
+SHA1 (patch-src_network_ssl_qsslcertificate.cpp) = 92d6a3cd5deacd75ada210bed56f4d4ba749d2ba
+SHA1 (patch-src_network_ssl_qsslkey.cpp) = f17f52ba3aa37c9b2211dfcf1c7c2c12aa5d6473
+SHA1 (patch-src_network_ssl_qsslsocket__openssl.cpp) = 145fb594ba1e5153b0811ff37eb2a4bb1c41b4ba
+SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols.cpp) = f990be585d06082c5febc26f954901801fbd39f8
+SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols__p.h) = da87bd6f685f19d50e239787309bf73ce6ad08df
 SHA1 (patch-src_plugins_accessible_widgets_itemviews.cpp) = 1456fbaacef33f3b2422158d758d02990845048a
 SHA1 (patch-src_tools_bootstrap_bootstrap.pro) = ba6f4facabb621388f38ee95f31e8d6f797ae12a
+SHA1 (patch-src_tools_moc_main.cpp) = 66d6f58944e8c504a02ab91623700a852f930704
 SHA1 (patch-tools_linguist_linguist_messagemodel.cpp) = 7bb6982389a65724fd18dff0c56d72e792e13c11
