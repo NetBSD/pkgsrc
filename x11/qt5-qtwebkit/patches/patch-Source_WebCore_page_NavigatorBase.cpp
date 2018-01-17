@@ -1,11 +1,11 @@
-$NetBSD: patch-Source_WebCore_page_NavigatorBase.cpp,v 1.1 2014/12/30 17:23:48 adam Exp $
+$NetBSD: patch-Source_WebCore_page_NavigatorBase.cpp,v 1.2 2018/01/17 19:37:33 markd Exp $
 
 * Treat *BSD like Linux
 
---- Source/WebCore/page/NavigatorBase.cpp.orig	2013-11-27 01:01:47.000000000 +0000
+--- Source/WebCore/page/NavigatorBase.cpp.orig	2017-06-04 20:16:06.000000000 +0000
 +++ Source/WebCore/page/NavigatorBase.cpp
-@@ -30,7 +30,7 @@
- #include "NetworkStateNotifier.h"
+@@ -31,7 +31,7 @@
+ #include <wtf/NeverDestroyed.h>
  #include <wtf/text/WTFString.h>
  
 -#if OS(LINUX)
@@ -13,7 +13,7 @@ $NetBSD: patch-Source_WebCore_page_NavigatorBase.cpp,v 1.1 2014/12/30 17:23:48 a
  #include "sys/utsname.h"
  #include <wtf/StdLibExtras.h>
  #endif
-@@ -86,7 +86,7 @@ String NavigatorBase::appVersion() const
+@@ -90,7 +90,7 @@ String NavigatorBase::appVersion() const
  
  String NavigatorBase::platform() const
  {
