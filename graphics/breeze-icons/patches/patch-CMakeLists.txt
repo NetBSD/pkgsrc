@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2018/01/17 20:03:37 markd Exp $
+
+Don't find xmllint if it happens to be around.
+
+--- CMakeLists.txt.orig	2017-12-02 09:52:51.000000000 +0000
++++ CMakeLists.txt
+@@ -73,7 +73,7 @@ endif()
+ 
+ if(NOT WIN32)
+     find_program(SH_EXE sh)
+-    find_program(XMLLINT_EXE xmllint)
++#    find_program(XMLLINT_EXE xmllint)
+     if(SH_EXE AND XMLLINT_EXE)
+         file(GLOB_RECURSE SVGS "*.svg")
+         add_custom_target(breeze-validate-svg ALL
