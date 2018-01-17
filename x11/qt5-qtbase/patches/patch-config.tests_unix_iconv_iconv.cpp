@@ -1,10 +1,10 @@
-$NetBSD: patch-config.tests_unix_iconv_iconv.cpp,v 1.1 2014/12/30 17:23:46 adam Exp $
+$NetBSD: patch-config.tests_unix_iconv_iconv.cpp,v 1.2 2018/01/17 19:30:47 markd Exp $
 
-* Fix for NetBSD iconv(3)
+Fix for NetBSD iconv(3)
 
---- config.tests/unix/iconv/iconv.cpp.orig	2013-11-27 01:01:17.000000000 +0000
-+++ config.tests/unix/iconv/iconv.cpp
-@@ -48,7 +48,11 @@ int main(int, char **)
+--- config.tests/iconv/iconv.cpp.orig	2017-10-02 08:43:38.000000000 +0000
++++ config.tests/iconv/iconv.cpp
+@@ -43,7 +43,11 @@ int main(int, char **)
  {
      iconv_t x = iconv_open("", "");
  
