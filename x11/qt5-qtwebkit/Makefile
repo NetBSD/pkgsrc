@@ -1,20 +1,74 @@
-# $NetBSD: Makefile,v 1.46 2017/11/30 16:45:13 adam Exp $
+# $NetBSD: Makefile,v 1.47 2018/01/17 19:37:33 markd Exp $
 
-DISTNAME=	qtwebkit-opensource-src-${QTVERSION}
-PKGNAME=	qt5-qtwebkit-${QTVERSION}
-PKGREVISION=	15
+DISTNAME=	qtwebkit-${QTWKVERSION}
+PKGNAME=	qt5-qtwebkit-${QTWKVERSION:S/-/./}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=annulen/}
+GITHUB_PROJECT=	webkit
+GITHUB_RELEASE=	${DISTNAME}
+#MASTER_SITES=	https://github.com/annulen/webkit/releases/download/qtwebkit-${QTWKVERSION}/
+CATEGORIES=	x11
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://qt-project.org/
 COMMENT=	Qt5 WebView module
+LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v3
+EXTRACT_SUFX=	.tar.xz
+
+QTWKVERSION=	5.212.0-alpha2
+
+.include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+
+USE_LANGUAGES=          c c++11
+USE_TOOLS+=             gmake perl:build pkg-config bison flex sed
+USE_CMAKE=		yes
+CMAKE_ARG_PATH=		..
+CONFIGURE_DIRS=		_build
+CMAKE_INSTALL_PREFIX=	${PREFIX}/qt5
+
+CMAKE_ARGS+=		-DPORT=Qt
+CMAKE_ARGS+=		-DENABLE_TOOLS=OFF
+CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=		-DSHARED_CORE:BOOL=ON
+CMAKE_ARGS+=		-DUSE_SYSTEM_MALLOC:BOOL=ON
+CMAKE_ARGS+=		-DUSE_LD_GOLD:BOOL=OFF
+## requires gcc >= 4.9
+#CMAKE_ARGS+=		-DENABLE_FTL_JIT:BOOL=OFF
+#CMAKE_ARGS+=		-DENABLE_INDEXED_DATABASE:BOOL=OFF
+## needs JIT and ASSEMBLER
+CMAKE_ARGS+=		-DENABLE_SAMPLING_PROFILER:BOOL=OFF
+
+CMAKE_ARGS+=		-DKDE_INSTALL_LIBEXECDIR=${CMAKE_INSTALL_PREFIX}/libexec
+#CMAKE_ARGS+=		-DLIBEXEC_INSTALL_DIR=${CMAKE_INSTALL_PREFIX}/libexec
+
+GCC_REQD+=	4.9
+
+pre-configure:
+	${MKDIR} ${WRKSRC}/_build
+
+# wcstof(3) etc. is used in C++ code.
+CFLAGS.NetBSD+=         -D_NETBSD_SOURCE
+
+## for GL_GLEXT_LEGACY with GL/gl.h error, GL_ARB_shader_objects is not defined.
+#BUILDLINK_TRANSFORM+=   rm:-Wundef
+
+PLIST_VARS+=		mac unix
+.if ${OPSYS} == "Darwin"
+PLIST.mac=		yes
+.else
+PLIST.unix=		yes
+.endif
+
+# avoid creating a .qt directory in the users home directory
+SCRIPTS_ENV+=           HOME=${WRKDIR}
 
 BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
 
-USE_TOOLS+=		bison flex pkg-config sed
 REPLACE_PERL+=		Source/WebKit2/Scripts/generate-forwarding-headers.pl
 
-MAKE_ENV+=		QTDIR=${QTDIR}
+#MAKE_ENV+=		QTDIR=${QTDIR}
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig
-
-.include "../../x11/qt5-qtbase/Makefile.common"
 
 .if ${_USE_CWRAPPERS} == "yes"
 BUILDLINK_TRANSFORM+=	R:${WRKSRC}/lib:${QTDIR}/lib
@@ -38,6 +92,7 @@ post-install:
 .endif
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
+.include "../../textproc/hyphen/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .if ${OPSYS} != "Darwin"

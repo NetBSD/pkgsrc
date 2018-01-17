@@ -1,11 +1,11 @@
-$NetBSD: patch-Source_JavaScriptCore_dfg_DFGNode.h,v 1.1 2014/12/30 17:23:47 adam Exp $
+$NetBSD: patch-Source_JavaScriptCore_dfg_DFGNode.h,v 1.2 2018/01/17 19:37:33 markd Exp $
 
 * Add NetBSD support
 
---- Source/JavaScriptCore/dfg/DFGNode.h.orig	2013-11-27 01:01:48.000000000 +0000
+--- Source/JavaScriptCore/dfg/DFGNode.h.orig	2017-06-04 20:16:05.000000000 +0000
 +++ Source/JavaScriptCore/dfg/DFGNode.h
-@@ -73,7 +73,7 @@ struct NewArrayBufferData {
- struct OpInfo {
+@@ -226,7 +226,7 @@ struct OpInfo {
+     OpInfo() : m_value(0) { }
      explicit OpInfo(int32_t value) : m_value(static_cast<uintptr_t>(value)) { }
      explicit OpInfo(uint32_t value) : m_value(static_cast<uintptr_t>(value)) { }
 -#if OS(DARWIN) || USE(JSVALUE64)
