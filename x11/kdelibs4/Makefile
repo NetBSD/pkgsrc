@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.92 2018/01/01 21:18:13 adam Exp $
+# $NetBSD: Makefile,v 1.93 2018/01/17 18:53:25 markd Exp $
 
-DISTNAME=	kdelibs-4.14.27
+DISTNAME=	kdelibs-4.14.38
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	3
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
-MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.12.0/src/}
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/17.08.3/src/}
 
 #PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/ \
 #		http://mirrors.isc.org/pub/kde/security_patches/
