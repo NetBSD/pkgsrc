@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.2 2018/01/16 14:53:28 jperkin Exp $
+$NetBSD: patch-configure,v 1.3 2018/01/17 11:19:46 jperkin Exp $
 
 * Adding Interix support.
 * Ignore doxygen.
@@ -72,7 +72,15 @@ $NetBSD: patch-configure,v 1.2 2018/01/16 14:53:28 jperkin Exp $
  	LIBRUBY_SONAME='$(LIBRUBY_SO)'
  	if test "$rb_cv_binary_elf" != "yes" ; then :
  
-@@ -26334,7 +26343,12 @@ fi
+@@ -26326,6 +26335,7 @@ fi
+ 	    LIBRUBY_DLDFLAGS="$LIBRUBY_DLDFLAGS "'-Wl,-unexported_symbol,*_threadptr_*'
+ 
+ fi
++	RUBY_SO_NAME="${RUBY_SO_NAME}"'.$(RUBY_PROGRAM_VERSION)'
+ 	LIBRUBY_DLDFLAGS="$LIBRUBY_DLDFLAGS "' $(XLDFLAGS)'
+ 	LIBRUBY_SO='lib$(RUBY_SO_NAME).$(SOEXT)'
+ 	LIBRUBY_SONAME='lib$(RUBY_BASE_NAME).$(RUBY_API_VERSION).$(SOEXT)'
+@@ -26334,7 +26344,12 @@ fi
  	 ;; #(
    interix*) :
  
@@ -86,7 +94,7 @@ $NetBSD: patch-configure,v 1.2 2018/01/16 14:53:28 jperkin Exp $
  	 ;; #(
    mingw*|cygwin*|mswin*) :
  
-@@ -26516,7 +26530,7 @@ if test "$enable_rpath" = yes; then :
+@@ -26516,7 +26531,7 @@ if test "$enable_rpath" = yes; then :
  esac
      rpathflag=`IFS="$PATH_SEPARATOR"
          echo x "$rpathflag" |
@@ -95,7 +103,7 @@ $NetBSD: patch-configure,v 1.2 2018/01/16 14:53:28 jperkin Exp $
      `
      LIBRUBY_RPATHFLAGS="$LIBRUBY_RPATHFLAGS${rpathflag}"
      LIBRUBYARG_SHARED="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_SHARED"
-@@ -27058,15 +27072,7 @@ fi
+@@ -27058,15 +27073,7 @@ fi
  
  if test "$install_doc" != no; then :
  
@@ -112,7 +120,7 @@ $NetBSD: patch-configure,v 1.2 2018/01/16 14:53:28 jperkin Exp $
      if test "$install_capi" != no -a -n "$DOXYGEN"; then :
  
  	CAPITARGET="capi"
-@@ -29143,31 +29149,7 @@ which seems to be undefined.  Please mak
+@@ -29143,31 +29152,7 @@ which seems to be undefined.  Please mak
      "Makefile":F)
      tmpmk=confmk$$.tmp
      {
