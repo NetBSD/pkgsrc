@@ -1,0 +1,8 @@
+Set of functions for drawing some special plots: stem.leaf plots a
+stem and leaf plot, stem.leaf.backback plots back-to-back versions of
+stem and leafs, bagplot plots a bagplot, skyline.hist plots several
+histgramm in one plot of a one dimensional data set, plotsummary plots
+a graphical summary of a data set with one or more variables,
+plothulls plots sequentially hulls of a bivariate data set, faces
+plots chernoff faces, spin3R for an inspection of a 3-dim point cloud,
+slider functions for interactive graphics.
