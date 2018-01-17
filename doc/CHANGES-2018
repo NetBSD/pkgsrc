@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.250 2018/01/17 18:43:31 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.251 2018/01/17 19:10:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -352,3 +352,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-alembic to 0.9.7 [adam 2018-01-17]
 	Updated math/py-patsy to 0.5.0 [adam 2018-01-17]
 	Updated math/R-e1071 to 1.6.8 [minskim 2018-01-17]
+	Added math/R-aplpack version 1.3.0 [minskim 2018-01-17]
