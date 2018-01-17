@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.246 2018/01/17 08:52:59 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.247 2018/01/17 08:57:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -347,3 +347,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-yarl to 1.0.0 [adam 2018-01-17]
 	Updated www/py-aiohttp to 2.3.8 [adam 2018-01-17]
 	Updated security/p5-Net-SSLeay to 1.84 [wiz 2018-01-17]
+	Updated sysutils/p5-File-Copy-Recursive to 0.40 [wiz 2018-01-17]
