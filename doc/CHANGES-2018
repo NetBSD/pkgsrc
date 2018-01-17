@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.248 2018/01/17 09:06:18 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.249 2018/01/17 12:07:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -349,3 +349,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/p5-Net-SSLeay to 1.84 [wiz 2018-01-17]
 	Updated sysutils/p5-File-Copy-Recursive to 0.40 [wiz 2018-01-17]
 	Updated www/p5-Mojolicious to 7.61 [wiz 2018-01-17]
+	Updated databases/py-alembic to 0.9.7 [adam 2018-01-17]
+	Updated math/py-patsy to 0.5.0 [adam 2018-01-17]
