@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/10/26 19:04:01 adam Exp $
+$NetBSD: distinfo,v 1.3 2018/01/17 19:30:48 markd Exp $
 
-SHA1 (qtwebchannel-opensource-src-5.5.1.tar.xz) = 37f2cdf7d289b2d48d3f35d4181908acd8f353eb
-RMD160 (qtwebchannel-opensource-src-5.5.1.tar.xz) = fca861f785f9d718aa17853bf7a3c072efcd53b7
-SHA512 (qtwebchannel-opensource-src-5.5.1.tar.xz) = 018b36b150adb18ac681e76cf52c120e1873c10ac937a311397025e556b74800db3b7d472d2373ddeaa2f9527beeac5c1ca6f57a808aa3f5c19a558cdb2ac699
-Size (qtwebchannel-opensource-src-5.5.1.tar.xz) = 96684 bytes
+SHA1 (qtwebchannel-everywhere-src-5.10.0.tar.xz) = 87a2b19e060bfa7d06a02ddf663b81cd7643ca9e
+RMD160 (qtwebchannel-everywhere-src-5.10.0.tar.xz) = 676da446eef3fd240b00a962cdde0fa077ba8a37
+SHA512 (qtwebchannel-everywhere-src-5.10.0.tar.xz) = 2641d70afd797b8860177301805ec255b026605059d4dc95ced5041c56ec3875fb6369e7e4d1a84e6ee50557a0b41c21dfb5020636c16aac61a3f0ea62208acb
+Size (qtwebchannel-everywhere-src-5.10.0.tar.xz) = 167800 bytes

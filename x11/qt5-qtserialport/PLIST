@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2015/10/26 19:04:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/01/17 19:30:48 markd Exp $
 lib/pkgconfig/Qt5SerialPort.pc
 qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialport_p.h
 qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialportinfo_p.h
 qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qtudev_p.h
+qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qwinoverlappedionotifier_p.h
 qt5/include/QtSerialPort/QSerialPort
 qt5/include/QtSerialPort/QSerialPortInfo
 qt5/include/QtSerialPort/QtSerialPort
@@ -14,8 +15,11 @@ qt5/include/QtSerialPort/qserialportinfo.h
 qt5/include/QtSerialPort/qtserialportversion.h
 qt5/lib/cmake/Qt5SerialPort/Qt5SerialPortConfig.cmake
 qt5/lib/cmake/Qt5SerialPort/Qt5SerialPortConfigVersion.cmake
-qt5/lib/libQt5SerialPort.la
 qt5/lib/libQt5SerialPort.prl
+qt5/lib/libQt5SerialPort.so
+qt5/lib/libQt5SerialPort.so.${PKGVERSION}
+qt5/lib/libQt5SerialPort.so.5
+qt5/lib/libQt5SerialPort.so.5.10
 qt5/lib/pkgconfig/Qt5SerialPort.pc
 qt5/mkspecs/modules/qt_lib_serialport.pri
 qt5/mkspecs/modules/qt_lib_serialport_private.pri

@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2018/01/17 19:30:46 markd Exp $
+qt5/include/QtClipboardSupport/${PKGVERSION}/QtClipboardSupport/private/qmacmime_p.h
+qt5/include/QtClipboardSupport/QtClipboardSupport
+qt5/include/QtClipboardSupport/QtClipboardSupportDepends
+qt5/include/QtClipboardSupport/QtClipboardSupportVersion
+qt5/include/QtClipboardSupport/qtclipboardsupportversion.h
+qt5/include/QtGraphicsSupport/${PKGVERSION}/QtGraphicsSupport/private/qrasterbackingstore_p.h
+qt5/include/QtGraphicsSupport/QtGraphicsSupport
+qt5/include/QtGraphicsSupport/QtGraphicsSupportDepends
+qt5/include/QtGraphicsSupport/QtGraphicsSupportVersion
+qt5/include/QtGraphicsSupport/qtgraphicssupportversion.h
+qt5/lib/cmake/Qt5Gui/Qt5Gui_QCocoaIntegrationPlugin.cmake
+qt5/lib/cmake/Qt5Network/Qt5Network_QCoreWlanEnginePlugin.cmake
+qt5/lib/cmake/Qt5PrintSupport/Qt5PrintSupport_QCocoaPrinterSupportPlugin.cmake
+qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QMacStylePlugin.cmake
+qt5/lib/libQt5ClipboardSupport.a
+qt5/lib/libQt5ClipboardSupport.prl
+qt5/lib/libQt5GraphicsSupport.a
+qt5/lib/libQt5GraphicsSupport.prl
+qt5/mkspecs/modules/qt_lib_clipboard_support_private.pri
+qt5/mkspecs/modules/qt_lib_graphics_support_private.pri
+qt5/plugins/bearer/libqcorewlanbearer.so
+qt5/plugins/platforms/libqcocoa.so
+qt5/plugins/printsupport/libcocoaprintersupport.so
+qt5/plugins/styles/libqmacstyle.so
