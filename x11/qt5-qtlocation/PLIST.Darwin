@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2018/01/17 19:30:47 markd Exp $
+qt5/lib/cmake/Qt5Positioning/Qt5Positioning_QGeoPositionInfoSourceFactoryCL.cmake
+qt5/plugins/position/libqtposition_cl.so
