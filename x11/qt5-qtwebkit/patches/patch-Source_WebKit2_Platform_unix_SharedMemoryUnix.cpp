@@ -1,11 +1,11 @@
-$NetBSD: patch-Source_WebKit2_Platform_unix_SharedMemoryUnix.cpp,v 1.1 2014/12/30 17:23:48 adam Exp $
+$NetBSD: patch-Source_WebKit2_Platform_unix_SharedMemoryUnix.cpp,v 1.2 2018/01/17 19:37:33 markd Exp $
 
 * Try to use /tmp/* file like shared memory, I am not sure.
 
---- Source/WebKit2/Platform/unix/SharedMemoryUnix.cpp.orig	2013-11-27 01:01:51.000000000 +0000
+--- Source/WebKit2/Platform/unix/SharedMemoryUnix.cpp.orig	2017-06-04 20:16:07.000000000 +0000
 +++ Source/WebKit2/Platform/unix/SharedMemoryUnix.cpp
-@@ -139,14 +139,25 @@ PassRefPtr<SharedMemory> SharedMemory::c
- PassRefPtr<SharedMemory> SharedMemory::create(size_t size)
+@@ -96,14 +96,25 @@ void SharedMemory::Handle::adoptAttachme
+ RefPtr<SharedMemory> SharedMemory::allocate(size_t size)
  {
      CString tempName;
 +    CString buf;
@@ -19,7 +19,7 @@ $NetBSD: patch-Source_WebKit2_Platform_unix_SharedMemoryUnix.cpp,v 1.1 2014/12/3
  
          do {
 +#if !defined(__NetBSD__)
-             fileDescriptor = shm_open(tempName.data(), O_CREAT | O_CLOEXEC | O_RDWR, S_IRUSR | S_IWUSR);
+             fileDescriptor = shm_open(tempName.data(), O_CREAT | O_RDWR, S_IRUSR | S_IWUSR);
 +#else
 +            fileDescriptor = open(buf.data(), O_CREAT | O_CLOEXEC | O_RDWR, S_IRUSR | S_IWUSR);
 +            if (fileDescriptor == -1 && errno == EEXIST) {
@@ -30,7 +30,7 @@ $NetBSD: patch-Source_WebKit2_Platform_unix_SharedMemoryUnix.cpp,v 1.1 2014/12/3
          } while (fileDescriptor == -1 && errno == EINTR);
      }
      if (fileDescriptor == -1) {
-@@ -157,7 +168,12 @@ PassRefPtr<SharedMemory> SharedMemory::c
+@@ -114,7 +125,12 @@ RefPtr<SharedMemory> SharedMemory::alloc
      while (ftruncate(fileDescriptor, size) == -1) {
          if (errno != EINTR) {
              closeWithRetry(fileDescriptor);
@@ -43,7 +43,7 @@ $NetBSD: patch-Source_WebKit2_Platform_unix_SharedMemoryUnix.cpp,v 1.1 2014/12/3
              return 0;
          }
      }
-@@ -165,11 +181,21 @@ PassRefPtr<SharedMemory> SharedMemory::c
+@@ -122,11 +138,21 @@ RefPtr<SharedMemory> SharedMemory::alloc
      void* data = mmap(0, size, PROT_READ | PROT_WRITE, MAP_SHARED, fileDescriptor, 0);
      if (data == MAP_FAILED) {
          closeWithRetry(fileDescriptor);

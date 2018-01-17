@@ -1,90 +1,78 @@
-$NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.1 2014/12/30 17:23:47 adam Exp $
+$NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.2 2018/01/17 19:37:33 markd Exp $
 
-* Add Solaris/SunOS support
+Support NetBSD
 
---- Source/JavaScriptCore/heap/MachineStackMarker.cpp.orig	2013-11-27 01:01:49.000000000 +0000
+XXXX - currently only did CPU(X86_64) and guessed those values.
+    rest are currently jsut copied from FreeBSD
+
+--- Source/JavaScriptCore/heap/MachineStackMarker.cpp.orig	2017-06-04 20:16:05.000000000 +0000
 +++ Source/JavaScriptCore/heap/MachineStackMarker.cpp
-@@ -20,6 +20,9 @@
-  */
- 
- #include "config.h"
-+#if OS(SOLARIS)
-+#undef _FILE_OFFSET_BITS
-+#endif
- #include "MachineStackMarker.h"
- 
- #include "ConservativeRoots.h"
-@@ -49,6 +52,10 @@
- #include <unistd.h>
- 
- #if OS(SOLARIS)
-+#include <sys/types.h>
-+#include <sys/stat.h>
-+#include <fcntl.h>
-+#include <procfs.h>
- #include <thread.h>
- #else
- #include <pthread.h>
-@@ -317,6 +324,7 @@ typedef pthread_attr_t PlatformThreadReg
- #error Need a thread register struct for this platform
+@@ -665,6 +665,22 @@ void* MachineThreads::Thread::Registers:
+ #error Unknown Architecture
  #endif
  
-+#if !OS(SOLARIS)
- static size_t getPlatformThreadRegisters(const PlatformThread& platformThread, PlatformThreadRegisters& regs)
- {
- #if OS(DARWIN)
-@@ -383,6 +391,7 @@ static size_t getPlatformThreadRegisters
- #error Need a way to get thread registers on this platform
- #endif
- }
-+#endif
- 
- static inline void* otherThreadStackPointer(const PlatformThreadRegisters& regs)
- {
-@@ -446,6 +455,7 @@ static inline void* otherThreadStackPoin
- #endif
- }
- 
-+#if !OS(SOLARIS)
- static void freePlatformThreadRegisters(PlatformThreadRegisters& regs)
- {
- #if USE(PTHREADS) && !OS(WINDOWS) && !OS(DARWIN) && !OS(QNX)
-@@ -454,20 +464,36 @@ static void freePlatformThreadRegisters(
-     UNUSED_PARAM(regs);
- #endif
- }
-+#endif
- 
- void MachineThreads::gatherFromOtherThread(ConservativeRoots& conservativeRoots, Thread* thread)
- {
-+#if OS(SOLARIS)
-+    struct lwpstatus lwp;
-+    char procfile[64];
-+    int fd;
-+    snprintf(procfile, 64, "/proc/self/lwp/%u/lwpstatus", thread->platformThread);
-+    fd = open(procfile, O_RDONLY, 0);
-+    if (fd == -1) {
-+        fprintf(stderr, "%s: %s\n", procfile, strerror(errno));
-+        abort();
-+    }
-+    pread(fd, &lwp, sizeof(lwp), 0);
-+    close(fd);
-+    void* stackPointer = (void*)lwp.pr_reg[REG_SP];
-+#else
-     PlatformThreadRegisters regs;
-     size_t regSize = getPlatformThreadRegisters(thread->platformThread, regs);
- 
-     conservativeRoots.add(static_cast<void*>(&regs), static_cast<void*>(reinterpret_cast<char*>(&regs) + regSize));
- 
-     void* stackPointer = otherThreadStackPointer(regs);
++#elif OS(NETBSD)
 +
-+    freePlatformThreadRegisters(regs);
++#if CPU(X86)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.mc_ebp);
++#elif CPU(X86_64)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_RBP]);
++#elif CPU(ARM)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_FP]);
++#elif CPU(ARM64)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.mc_gpregs.gp_x[29]);
++#elif CPU(MIPS)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.mc_regs[30]);
++#else
++#error Unknown Architecture
 +#endif
-     void* stackBase = thread->stackBase;
-     swapIfBackwards(stackPointer, stackBase);
-     conservativeRoots.add(stackPointer, stackBase);
--
--    freePlatformThreadRegisters(regs);
- }
++
+ #elif defined(__GLIBC__)
  
- void MachineThreads::gatherConservativeRoots(ConservativeRoots& conservativeRoots, void* stackCurrent)
+ // The following sequence depends on glibc's sys/ucontext.h.
+@@ -747,6 +763,22 @@ void* MachineThreads::Thread::Registers:
+ #error Unknown Architecture
+ #endif
+ 
++#elif OS(NETBSD)
++
++#if CPU(X86)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.mc_eip);
++#elif CPU(X86_64)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_RIP]);
++#elif CPU(ARM)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_PC]);
++#elif CPU(ARM64)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.mc_gpregs.gp_elr);
++#elif CPU(MIPS)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.mc_pc);
++#else
++#error Unknown Architecture
++#endif
++
+ #elif defined(__GLIBC__)
+ 
+ // The following sequence depends on glibc's sys/ucontext.h.
+@@ -838,6 +870,22 @@ void* MachineThreads::Thread::Registers:
+ #error Unknown Architecture
+ #endif
+ 
++#elif OS(NETBSD)
++
++#if CPU(X86)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.mc_esi);
++#elif CPU(X86_64)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_R8]);
++#elif CPU(ARM)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_R8]);
++#elif CPU(ARM64)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.mc_gpregs.gp_x[4]);
++#elif CPU(MIPS)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.mc_regs[12]);
++#else
++#error Unknown Architecture
++#endif
++
+ #elif defined(__GLIBC__)
+ 
+ // The following sequence depends on glibc's sys/ucontext.h.
