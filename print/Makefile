@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.707 2018/01/10 22:30:18 wiz Exp $
+# $NetBSD: Makefile,v 1.708 2018/01/18 09:53:37 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1198,6 +1198,8 @@ SUBDIR+=	tex-tex-ini-files
 SUBDIR+=	tex-tex-ini-files-doc
 SUBDIR+=	tex-tex-overview-doc
 SUBDIR+=	tex-tex-refs-doc
+SUBDIR+=	tex-tex4ebook
+SUBDIR+=	tex-tex4ebook-doc
 SUBDIR+=	tex-tex4ht
 SUBDIR+=	tex-tex4ht-doc
 SUBDIR+=	tex-texbytopic-doc
