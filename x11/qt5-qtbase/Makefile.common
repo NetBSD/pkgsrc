@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2018/01/18 08:02:55 adam Exp $
+# $NetBSD: Makefile.common,v 1.24 2018/01/18 09:15:29 markd Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -10,7 +10,6 @@
 # used by x11/qt5-qtlocation/Makefile
 # used by x11/qt5-qtmacextras/Makefile
 # used by x11/qt5-qtmultimedia/Makefile
-# used by x11/qt5-qtquick1/Makefile
 # used by x11/qt5-qtquickcontrols/Makefile
 # used by x11/qt5-qtscript/Makefile
 # used by x11/qt5-qtsensors/Makefile
@@ -23,7 +22,6 @@
 # used by x11/qt5-qtwebsockets/Makefile
 # used by x11/qt5-qtx11extras/Makefile
 # used by x11/qt5-qtxmlpatterns/Makefile
-# used by x11/qt5-sqlite3/Makefile
 
 .include "../../x11/qt5/Makefile.common"
 .include "options.mk"
@@ -60,7 +58,7 @@ SCRIPTS_ENV+=		HOME=${WRKDIR}
 
 .if empty(PKGPATH:Mx11/qt5-qtbase) \
 	&& empty(PKGPATH:Mx11/qt5-odbc) && empty(PKGPATH:Mx11/qt5-mysql) \
-	&& empty(PKGPATH:Mx11/qt5-psql) && empty(PKGPATH:Mx11/qt5-sqlite3)
+	&& empty(PKGPATH:Mx11/qt5-psql)
 do-configure:
 	cd ${WRKSRC} && ${QTPREFIX}/bin/qmake -o Makefile
 .endif
