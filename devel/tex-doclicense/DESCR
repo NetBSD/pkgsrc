@@ -1,0 +1,5 @@
+This package allows you to put your document under a license
+and include a link to read about the license or include an icon
+or image of the license. Currently, only Creative Commons is
+supported, but this package is designed to handle all kinds of
+licenses.

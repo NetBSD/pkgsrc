@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2018/01/18 10:55:04 markd Exp $
+share/texmf-dist/doc/latex/doclicense/README
+share/texmf-dist/doc/latex/doclicense/doclicense.pdf
