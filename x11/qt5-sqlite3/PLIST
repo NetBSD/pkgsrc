@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2014/12/25 13:51:15 wiz Exp $
-qt5/lib/cmake/Qt5Sql/Qt5Sql_QSQLiteDriverPlugin.cmake
-qt5/plugins/sqldrivers/libqsqlite.la
