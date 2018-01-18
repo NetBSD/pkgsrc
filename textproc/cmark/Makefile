@@ -1,26 +1,24 @@
-# $NetBSD: Makefile,v 1.5 2017/05/23 10:37:20 mef Exp $
+# $NetBSD: Makefile,v 1.6 2018/01/18 17:11:38 adam Exp $
 
-DISTNAME=	cmark-0.27.1
+DISTNAME=	cmark-0.28.3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jgm/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/jgm/cmark/
+HOMEPAGE=	https://github.com/commonmark/cmark
 COMMENT=	CommonMark parsing and rendering library and program in C
 LICENSE=	2-clause-bsd
 
-USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+USE_CMAKE=		yes
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
+CONFIGURE_DIRS=		build
+CMAKE_ARG_PATH=		${WRKSRC}
+PKGCONFIG_OVERRIDE+=	src/libcmark.pc.in
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	27
-
-PKGCONFIG_OVERRIDE+=	src/libcmark.pc.in
-
-CONFIGURE_DIRS=		build
-CMAKE_ARG_PATH=		${WRKSRC}
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/build/src
 TEST_TARGET=	test
