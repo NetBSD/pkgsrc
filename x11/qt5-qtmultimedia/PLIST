@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/01/17 19:30:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/01/18 12:18:41 adam Exp $
 lib/pkgconfig/Qt5Multimedia.pc
 lib/pkgconfig/Qt5MultimediaQuick_p.pc
 lib/pkgconfig/Qt5MultimediaWidgets.pc
@@ -250,10 +250,10 @@ qt5/include/QtMultimedia/qvideoprobe.h
 qt5/include/QtMultimedia/qvideorenderercontrol.h
 qt5/include/QtMultimedia/qvideosurfaceformat.h
 qt5/include/QtMultimedia/qvideowindowcontrol.h
-qt5/include/QtMultimediaGstTools/QtMultimediaGstTools
-qt5/include/QtMultimediaGstTools/QtMultimediaGstToolsDepends
-qt5/include/QtMultimediaGstTools/QtMultimediaGstToolsVersion
-qt5/include/QtMultimediaGstTools/qtmultimediagsttoolsversion.h
+${PLIST.unix}qt5/include/QtMultimediaGstTools/QtMultimediaGstTools
+${PLIST.unix}qt5/include/QtMultimediaGstTools/QtMultimediaGstToolsDepends
+${PLIST.unix}qt5/include/QtMultimediaGstTools/QtMultimediaGstToolsVersion
+${PLIST.unix}qt5/include/QtMultimediaGstTools/qtmultimediagsttoolsversion.h
 qt5/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qdeclarativevideooutput_render_p.h
 qt5/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qdeclarativevideooutput_window_p.h
 qt5/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qsgvideonode_rgb_p.h
@@ -298,11 +298,11 @@ qt5/lib/libQt5Multimedia.so
 qt5/lib/libQt5Multimedia.so.${PKGVERSION}
 qt5/lib/libQt5Multimedia.so.5
 qt5/lib/libQt5Multimedia.so.5.10
-qt5/lib/libQt5MultimediaGstTools.prl
-qt5/lib/libQt5MultimediaGstTools.so
-qt5/lib/libQt5MultimediaGstTools.so.${PKGVERSION}
-qt5/lib/libQt5MultimediaGstTools.so.5
-qt5/lib/libQt5MultimediaGstTools.so.5.10
+${PLIST.unix}qt5/lib/libQt5MultimediaGstTools.prl
+${PLIST.unix}qt5/lib/libQt5MultimediaGstTools.so
+${PLIST.unix}qt5/lib/libQt5MultimediaGstTools.so.${PKGVERSION}
+${PLIST.unix}qt5/lib/libQt5MultimediaGstTools.so.5
+${PLIST.unix}qt5/lib/libQt5MultimediaGstTools.so.5.10
 qt5/lib/libQt5MultimediaQuick.prl
 qt5/lib/libQt5MultimediaQuick.so
 qt5/lib/libQt5MultimediaQuick.so.${PKGVERSION}
@@ -317,7 +317,7 @@ qt5/lib/pkgconfig/Qt5Multimedia.pc
 qt5/lib/pkgconfig/Qt5MultimediaWidgets.pc
 qt5/mkspecs/modules/qt_lib_multimedia.pri
 qt5/mkspecs/modules/qt_lib_multimedia_private.pri
-qt5/mkspecs/modules/qt_lib_multimediagsttools_private.pri
+${PLIST.unix}qt5/mkspecs/modules/qt_lib_multimediagsttools_private.pri
 qt5/mkspecs/modules/qt_lib_multimediawidgets.pri
 qt5/mkspecs/modules/qt_lib_multimediawidgets_private.pri
 qt5/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri
