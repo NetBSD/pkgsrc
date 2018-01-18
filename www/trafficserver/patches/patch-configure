@@ -1,10 +1,11 @@
-$NetBSD: patch-configure,v 1.1 2017/08/17 14:57:09 fhajny Exp $
+$NetBSD: patch-configure,v 1.2 2018/01/18 19:19:41 fhajny Exp $
 
 Portability.
+Fix incorrect docs build arg.
 
---- configure.orig	2017-07-18 06:25:04.000000000 +0000
+--- configure.orig	2017-12-19 02:57:35.000000000 +0000
 +++ configure
-@@ -4742,14 +4742,14 @@ fi
+@@ -4741,14 +4741,14 @@ fi
  done
  test -n "$CURL_CONFIG" || CURL_CONFIG="no"
  
@@ -21,7 +22,7 @@ Portability.
  
  	CURL_CFLAGS="`$CURL_CONFIG $curl_config_args --cflags`"
  
-@@ -4759,7 +4759,7 @@ else
+@@ -4758,7 +4758,7 @@ else
  
  fi
  
@@ -30,7 +31,25 @@ Portability.
  
  	CURL_LIBS="`$CURL_CONFIG $curl_config_args --libs`"
  
-@@ -22312,7 +22312,7 @@ cat >>confdefs.h <<_ACEOF
+@@ -4931,13 +4931,13 @@ $as_echo_n "checking whether to build do
+ if test "${enable_docs+set}" = set; then :
+   enableval=$enable_docs;
+ else
+-  enable_doc_build=no
++  enable_docs=no
+ 
+ fi
+ 
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $enable_doc_build" >&5
+-$as_echo "$enable_doc_build" >&6; }
+- if test "xyes" = "x$enable_doc_build"; then
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $enable_docs" >&5
++$as_echo "$enable_docs" >&6; }
++ if test "xyes" = "x$enable_docs"; then
+   BUILD_DOCS_TRUE=
+   BUILD_DOCS_FALSE='#'
+ else
+@@ -21352,7 +21352,7 @@ cat >>confdefs.h <<_ACEOF
  _ACEOF
  
  
@@ -39,7 +58,7 @@ Portability.
    as_fn_error $? "Cannot determine size of void*" "$LINENO" 5
  fi
  
-@@ -26018,7 +26018,7 @@ $as_echo "could not find ${TCL_BIN_DIR}/
+@@ -25058,7 +25058,7 @@ $as_echo "could not find ${TCL_BIN_DIR}/
  
  
  # expect tclConfig.sh to populate TCL_LIB_FLAG and TCL_INCLUDE_SPEC
@@ -48,7 +67,7 @@ Portability.
      TCL_LIB_SPEC="-ltcl" # OSX fails to populate this variable
  fi
  LIBTCL=$TCL_LIB_SPEC
-@@ -27003,7 +27003,7 @@ if test "x$ac_cv_lib_cap_cap_set_proc" =
+@@ -26111,7 +26111,7 @@ if test "x$ac_cv_lib_cap_cap_set_proc" =
  
  else
  
