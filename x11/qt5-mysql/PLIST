@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2014/12/25 13:51:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/18 09:00:17 markd Exp $
 qt5/lib/cmake/Qt5Sql/Qt5Sql_QMYSQLDriverPlugin.cmake
-qt5/plugins/sqldrivers/libqsqlmysql.la
+qt5/plugins/sqldrivers/libqsqlmysql.so
