@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/01/15 12:38:37 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/18 16:42:40 sborrill Exp $
 bin/lynis
 lib/lynis/db/fileperms.db
 lib/lynis/db/hints.db
@@ -12,6 +12,7 @@ lib/lynis/db/languages/en-US
 lib/lynis/db/languages/es
 lib/lynis/db/languages/fi
 lib/lynis/db/languages/fr
+lib/lynis/db/languages/gr
 lib/lynis/db/languages/he
 lib/lynis/db/languages/hu
 lib/lynis/db/languages/it
