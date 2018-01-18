@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2017/10/23 10:34:25 markd Exp $
+# $NetBSD: Makefile,v 1.33 2018/01/18 11:19:03 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2017pre6
+PKGNAME=	texlive-${DISTNAME}-2017pre7
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	45509
@@ -292,7 +292,7 @@ DEPENDS+=	tex-dinbrief-[0-9]*:../../print/tex-dinbrief
 # depend dirtytalk
 # depend dlfltxb
 # depend dnaseq
-# depend doclicense
+DEPENDS+=	tex-doclicense-[0-9]*:../../devel/tex-doclicense
 # depend docmfp
 # depend docmute
 # depend doctools
@@ -463,7 +463,7 @@ DEPENDS+=	tex-ftcap-[0-9]*:../../print/tex-ftcap
 # depend fundus-calligra
 # depend fundus-cyr
 # depend fundus-sueterlin
-# depend fvextra
+DEPENDS+=	tex-fvextra-[0-9]*:../../print/tex-fvextra
 DEPENDS+=	tex-fwlw-[0-9]*:../../print/tex-fwlw
 DEPENDS+=	tex-g-brief-[0-9]*:../../print/tex-g-brief
 # depend gauss
