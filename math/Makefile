@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.350 2018/01/17 19:09:42 minskim Exp $
+# $NetBSD: Makefile,v 1.351 2018/01/18 11:02:07 markd Exp $
 
 COMMENT=	Mathematics
 
@@ -306,6 +306,8 @@ SUBDIR+=	tex-fp
 SUBDIR+=	tex-fp-doc
 SUBDIR+=	tex-kastrup
 SUBDIR+=	tex-kastrup-doc
+SUBDIR+=	tex-mathpartir
+SUBDIR+=	tex-mathpartir-doc
 SUBDIR+=	tex-mathspec
 SUBDIR+=	tex-mathspec-doc
 SUBDIR+=	tex-unicode-math
