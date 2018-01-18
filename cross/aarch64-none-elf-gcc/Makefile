@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/09/01 20:56:43 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/18 14:39:59 ryoon Exp $
 
 DISTNAME=		gcc-7.2.0
 PKGNAME=		cross-aarch64-none-elf-${DISTNAME}
@@ -46,8 +46,6 @@ CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 
 INFO_FILES=		yes
-
-CONFIGURE_ARGS+=	--enable-${PLUGIN_NAME}-plugin
 
 .include "../../mk/compiler.mk"
 
