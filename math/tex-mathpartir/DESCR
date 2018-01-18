@@ -1,0 +1,11 @@
+The package provides macros for typesetting math formulas in
+mixed horizontal and vertical mode, automatically as best fit.
+It provides an environment mathpar that behaves much as a loose
+centered paragraph where words are math formulas, and spaces
+between them are larger and adjustable. It also provides a
+macro \inferrule for typeseting fractions where both the
+numerator and denominator may be sequences of formulas that
+will be also typeset in a similar way. It can typically be used
+for typeseting sets of type inference rules or typing
+derivations. A macro inferrule for typesetting type inference
+rules.
