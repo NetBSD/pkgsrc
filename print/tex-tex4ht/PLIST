@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2017/10/21 04:09:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/18 09:44:17 markd Exp $
+share/texmf-dist/scripts/tex4ht/htcopy.pl
+share/texmf-dist/scripts/tex4ht/htmove.pl
 share/texmf-dist/tex/generic/tex4ht/2up.4ht
 share/texmf-dist/tex/generic/tex4ht/8859-6.4ht
 share/texmf-dist/tex/generic/tex4ht/CJK.4ht
@@ -2499,8 +2501,11 @@ share/texmf-dist/tex4ht/ht-fonts/alias/kurier/texnansi/texnansi-kurierrcap.htf
 share/texmf-dist/tex4ht/ht-fonts/alias/kurier/texnansi/texnansi-kurierricap.htf
 share/texmf-dist/tex4ht/ht-fonts/alias/kurier/wncy-iwona/wncy-kurier.htf
 share/texmf-dist/tex4ht/ht-fonts/alias/latex/lcmss.htf
+share/texmf-dist/tex4ht/ht-fonts/alias/lh/lh-t2a/labi.htf
 share/texmf-dist/tex4ht/ht-fonts/alias/lh/lh-t2a/labx.htf
+share/texmf-dist/tex4ht/ht-fonts/alias/lh/lh-t2a/lait.htf
 share/texmf-dist/tex4ht/ht-fonts/alias/lh/lh-t2a/lass.htf
+share/texmf-dist/tex4ht/ht-fonts/alias/lh/lh-t2a/latc.htf
 share/texmf-dist/tex4ht/ht-fonts/alias/lh/lh-t2a/lati.htf
 share/texmf-dist/tex4ht/ht-fonts/alias/lh/lh-t2a/latt.htf
 share/texmf-dist/tex4ht/ht-fonts/alias/lh/lh-t2a/lbbx.htf
