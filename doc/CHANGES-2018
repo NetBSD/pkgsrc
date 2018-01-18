@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.260 2018/01/18 09:50:23 adam Exp $
+$NetBSD: CHANGES-2018,v 1.261 2018/01/18 09:56:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -463,3 +463,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-alembic to 0.9.7nb1 [adam 2018-01-18]
 	Updated net/p5-Net-Twitter to 4.01043 [wen 2018-01-18]
 	Updated graphics/freetype2 to 2.9 [adam 2018-01-18]
+	Added mail/py-ukpostcodeparser version 1.1.2 [adam 2018-01-18]
+	Updated devel/py-faker to 0.8.10 [adam 2018-01-18]
