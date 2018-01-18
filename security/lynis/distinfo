@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2018/01/15 12:38:37 sborrill Exp $
+$NetBSD: distinfo,v 1.2 2018/01/18 13:22:18 sborrill Exp $
 
 SHA1 (lynis-2.5.9.tar.gz) = 71733fa3de9894ca140333070de2843018b02d80
 RMD160 (lynis-2.5.9.tar.gz) = 1915a0f6cd7ad598c73d575259f801845dff3a1c
 SHA512 (lynis-2.5.9.tar.gz) = 655942b6546183396a416df6b7a365918aab1a19b55e2b1d34da4a5fe7fe865aee59aae6de2467b8e5393cae9bb80f97c48a85f1e3606951d88ea21cb624c45a
 Size (lynis-2.5.9.tar.gz) = 269067 bytes
-SHA1 (patch-include_functions) = 2d4f9c50ceb320c5d257ab79eda6581a2d634ca0
+SHA1 (patch-include_functions) = ceea3edbbf47bc8d41cffebaaefd9152592f66d7
 SHA1 (patch-lynis) = f35b682d9c30afdd6bc4e35ca684a4bd7209f63d
