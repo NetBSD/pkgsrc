@@ -1,0 +1,1 @@
+bin/alembic @PREFIX@/bin/alembic@PYVERSSUFFIX@
