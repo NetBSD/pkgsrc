@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.common,v 1.6 2018/01/17 19:30:46 markd Exp $
-# used by wip/qt5-qtbase/Makefile.common
+# $NetBSD: Makefile.common,v 1.7 2018/01/18 08:03:48 adam Exp $
+# used by x11/qt5-qtbase/Makefile.common
 # used by inputmethod/qt5-uim/Makefile
 
 QTVERSION=	5.10.0
