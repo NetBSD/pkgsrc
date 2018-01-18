@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2018/01/15 10:35:26 adam Exp $
+# $NetBSD: Makefile,v 1.14 2018/01/18 09:55:52 adam Exp $
 
-DISTNAME=	Faker-0.8.9
+DISTNAME=	Faker-0.8.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Faker/}
@@ -18,6 +18,11 @@ DEPENDS+=	${PYPKGPREFIX}-text-unidecode-[0-9]*:../../textproc/py-text-unidecode
 .if "${PYPKGPREFIX}" == "py27"
 DEPENDS+=	${PYPKGPREFIX}-ipaddress-[0-9]*:../../net/py-ipaddress
 .endif
+
+# TEST_DEPENDS
+BUILD_DEPENDS+=	${PYPKGPREFIX}-email_validator>=1.0.0:../../mail/py-email_validator
+BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+BUILD_DEPENDS+=	${PYPKGPREFIX}-ukpostcodeparser>=1.1.1:../../mail/py-ukpostcodeparser
 
 USE_LANGUAGES=	# none
 
