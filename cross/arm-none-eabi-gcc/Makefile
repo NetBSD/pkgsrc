@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/01/03 22:43:23 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2018/01/18 14:39:59 ryoon Exp $
 
 DISTNAME=		gcc-7.2.0
 PKGNAME=		cross-arm-none-eabi-${DISTNAME}
@@ -49,8 +49,6 @@ CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 
 INFO_FILES=		yes
-
-CONFIGURE_ARGS+=	--enable-${PLUGIN_NAME}-plugin
 
 PLIST_VARS+=		libcpp
 
