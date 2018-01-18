@@ -1,7 +1,6 @@
-$NetBSD: patch-include_functions,v 1.2 2018/01/18 13:22:19 sborrill Exp $
+$NetBSD: patch-include_functions,v 1.3 2018/01/18 16:42:40 sborrill Exp $
 
 Set location of default profiles.
-Remove bash comparisons.
 
 --- include/functions.orig	2018-01-12 00:00:00.000000000 +0000
 +++ include/functions	2018-01-15 11:38:48.000000000 +0000
@@ -14,20 +13,3 @@ Remove bash comparisons.
              for PNAME in ${tPROFILE_NAMES}; do
                  for PLOC in ${tPROFILE_TARGETS}; do
                      # Only use one default.prf
-@@ -3010,14 +3010,14 @@
- 
-             LogText "${FUNCNAME}: check if ${1} is equal to ${2}"
- 
--            if [ "$1" == "$2" ]; then
-+            if [ "$1" = "$2" ]; then
-                 LogText "${FUNCNAME}: ${1} is equal to ${2}"
-                 RETVAL=0
-             fi
- 
-             if ! [ -z ${3+x} ]; then
-                 LogText "${FUNCNAME}: ${1} is equal to ${3}"
--                if [ "$2" == "$3" ]; then
-+                if [ "$2" = "$3" ]; then
-                     LogText "${FUNCNAME}: ${OPTION} is equal to ${3}"
-                     RETVAL=1
-                 fi
