@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.267 2018/01/18 13:39:47 adam Exp $
+$NetBSD: CHANGES-2018,v 1.268 2018/01/18 16:14:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -482,3 +482,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-more-itertools to 4.0.1 [adam 2018-01-18]
 	Updated devel/py-babel to 2.5.3 [adam 2018-01-18]
 	Updated www/py-django-import-export to 0.7.0 [adam 2018-01-18]
+	Updated www/contao35 to 3.5.32 [taca 2018-01-18]
