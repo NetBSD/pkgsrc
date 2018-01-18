@@ -1,10 +1,10 @@
-$NetBSD: patch-include_functions,v 1.1 2018/01/15 12:38:37 sborrill Exp $
+$NetBSD: patch-include_functions,v 1.2 2018/01/18 13:22:19 sborrill Exp $
 
 Set location of default profiles.
 Remove bash comparisons.
 
---- /usr/obj/pkgsrc/security/lynis/work.builder7/lynis/include/functions.orig	2018-01-12 00:00:00.000000000 +0000
-+++ /usr/obj/pkgsrc/security/lynis/work.builder7/lynis/include/functions	2018-01-15 11:38:48.000000000 +0000
+--- include/functions.orig	2018-01-12 00:00:00.000000000 +0000
++++ include/functions	2018-01-15 11:38:48.000000000 +0000
 @@ -426,7 +426,7 @@
              DEFAULT_PROFILE=""
              PROFILEDIR=""
