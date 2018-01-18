@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/01/18 08:35:48 adam Exp $
+
+SHA1 (email_validator-1.0.2.tar.gz) = b4e31ac08bf447aa061ec547306986d6fb15619e
+RMD160 (email_validator-1.0.2.tar.gz) = 29ace7e4f668a3355ba9d2eadc57278df19f1350
+SHA512 (email_validator-1.0.2.tar.gz) = 9d68287ec1af46d17e65aeefcbb1a32ac53542f60ae79be6be6abc9a55bf85a0ec1a569cd2a9d7c67b8a1f1d94cfc69d48f52d911d677cee8dcca4b9c8dbe29e
+Size (email_validator-1.0.2.tar.gz) = 18607 bytes
