@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2018/01/18 09:52:00 markd Exp $
+bin/tex4ebook
+share/texmf-dist/scripts/tex4ebook/config-t4e.lua
+share/texmf-dist/scripts/tex4ebook/exec_epub.lua
+share/texmf-dist/scripts/tex4ebook/exec_epub3.lua
+share/texmf-dist/scripts/tex4ebook/exec_mobi.lua
+share/texmf-dist/scripts/tex4ebook/list-fonts.lua
+share/texmf-dist/scripts/tex4ebook/tex4ebook
+share/texmf-dist/tex/latex/tex4ebook/tex4ebook-epub3.4ht
+share/texmf-dist/tex/latex/tex4ebook/tex4ebook.4ht
+share/texmf-dist/tex/latex/tex4ebook/tex4ebook.sty
