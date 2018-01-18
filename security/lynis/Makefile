@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/01/15 12:38:37 sborrill Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/18 16:26:05 sborrill Exp $
 #
 
 DISTNAME=	lynis-2.5.9
@@ -11,7 +11,7 @@ COMMENT=	Perform security health scans for Linux, macOS, and Unix
 LICENSE=	gnu-gpl-v3
 
 NO_BUILD=	yes
-USE_TOOLS+=	pax
+USE_TOOLS+=	pax rm
 
 SUBST_CLASSES+=		libdir
 SUBST_STAGE.libdir=	pre-install
@@ -41,7 +41,7 @@ EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
 BUILD_DEFS+=	PKG_SYSCONFBASE
 BUILD_DEFS+=	VARBASE
-AUTO_MKDIRS=			yes
+AUTO_MKDIRS=	yes
 
 PKG_SYSCONFSUBDIR=	lynis
 CONF_FILES+=	share/examples/lynis/default.prf \
@@ -62,6 +62,8 @@ do-install:
 		${PAX} -wr * ${DESTDIR}${PREFIX}/lib/lynis/db
 	cd ${WRKSRC}/extras && 					\
 		${PAX} -wr * ${DESTDIR}${PREFIX}/lib/lynis/extras
+	cd ${WRKSRC}/include && 				\
+		${RM} *.orig
 	cd ${WRKSRC}/include && 				\
 		${PAX} -wr * ${DESTDIR}${PREFIX}/lib/lynis/include
 	cd ${WRKSRC}/plugins && 				\
