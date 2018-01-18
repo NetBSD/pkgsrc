@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.255 2018/01/18 08:52:06 adam Exp $
+$NetBSD: CHANGES-2018,v 1.256 2018/01/18 09:11:02 markd Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -455,3 +455,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed x11/qt5-sqlite3 [markd 2018-01-18]
 	Removed x11/qt5-qtquick1 [markd 2018-01-18]
 	Added mail/py-email_validator version 1.0.2 [adam 2018-01-18]
+	Updated x11/qt5-mysql to 5.10.0 [markd 2018-01-18]
+	Updated x11/qt5-psql to 5.10.0 [markd 2018-01-18]
+	Updated x11/qt5-odbc to 5.10.0 [markd 2018-01-18]
