@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.256 2018/01/18 09:11:02 markd Exp $
+$NetBSD: CHANGES-2018,v 1.257 2018/01/18 09:18:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -458,3 +458,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/qt5-mysql to 5.10.0 [markd 2018-01-18]
 	Updated x11/qt5-psql to 5.10.0 [markd 2018-01-18]
 	Updated x11/qt5-odbc to 5.10.0 [markd 2018-01-18]
+	Updated devel/p5-Log-Any to 1.705 [wen 2018-01-18]
