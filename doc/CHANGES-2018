@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.262 2018/01/18 10:29:08 bouyer Exp $
+$NetBSD: CHANGES-2018,v 1.263 2018/01/18 10:30:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -466,3 +466,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added mail/py-ukpostcodeparser version 1.1.2 [adam 2018-01-18]
 	Updated devel/py-faker to 0.8.10 [adam 2018-01-18]
 	Updated sysutils/xenkernel48 to 4.8.2nb3 [bouyer 2018-01-18]
+	Updated lang/py-execjs to 1.5.1 [adam 2018-01-18]
+	Updated www/py-aiohttp to 2.3.9 [adam 2018-01-18]
