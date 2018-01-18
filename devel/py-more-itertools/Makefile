@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/10/13 07:58:57 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/01/18 12:38:16 adam Exp $
 
-DISTNAME=	more-itertools-3.2.0
+DISTNAME=	more-itertools-4.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/more-itertools/}
