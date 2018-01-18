@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2017/11/30 16:45:12 adam Exp $
+# $NetBSD: Makefile,v 1.24 2018/01/18 09:06:59 markd Exp $
 
-DISTNAME=	qtbase-opensource-src-${QTVERSION}
+DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-odbc-${QTVERSION}
-PKGREVISION=	9
 COMMENT=	Qt5 odbc plugin
 
 BUILD_DIRS=		src/plugins/sqldrivers
@@ -16,7 +15,11 @@ LIBS+=			-lltdl
 do-configure:
 	${RM} -f -r ${WRKSRC}/mkspecs
 	cd ${WRKSRC}/${BUILD_DIRS} && \
-	${QTDIR}/bin/qmake "sql-plugins=odbc" -o Makefile
+	${QTDIR}/bin/qmake -o Makefile "QT.sql.enabled_features+=sql-odbc" "QMAKE_LIBS_ODBC=-lodbc"
+
+post-install:
+	rm -f ${DESTDIR}${PREFIX}/qt5/lib/cmake/Qt5Sql/Qt5Sql_QSQLiteDriverPlugin.cmake
+	rm -f ${DESTDIR}${PREFIX}/qt5/plugins/sqldrivers/libqsqlite.*
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"
