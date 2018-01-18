@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/11/09 08:34:12 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/01/18 10:13:27 adam Exp $
 
-DISTNAME=	PyExecJS-1.5.0
+DISTNAME=	PyExecJS-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl:S/^py//}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyExecJS/}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 
-USE_LANGUAGES=		# empty
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
