@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/01/17 19:30:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/01/18 12:39:14 ryoon Exp $
 lib/pkgconfig/Qt5Concurrent.pc
 lib/pkgconfig/Qt5Core.pc
 lib/pkgconfig/Qt5DBus.pc
@@ -3152,7 +3152,7 @@ ${PLIST.unix}qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplu
 ${PLIST.unix}qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so
 ${PLIST.egl}qt5/plugins/platforms/libqeglfs.so
 qt5/plugins/platforms/libqminimal.so
-qt5/plugins/platforms/libqminimalegl.so
+${PLIST.egl}qt5/plugins/platforms/libqminimalegl.so
 qt5/plugins/platforms/libqoffscreen.so
 ${PLIST.unix}qt5/plugins/platforms/libqvnc.so
 ${PLIST.unix}qt5/plugins/platforms/libqxcb.so
