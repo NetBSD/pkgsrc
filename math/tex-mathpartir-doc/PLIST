@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2018/01/18 11:00:44 markd Exp $
+share/texmf-dist/doc/latex/mathpartir/COPYING
+share/texmf-dist/doc/latex/mathpartir/README
+share/texmf-dist/doc/latex/mathpartir/mathpartir.pdf
