@@ -1,0 +1,4 @@
+fvextra provides several extensions to fancyvrb, including
+automatic line breaking and improved math mode. It also patches
+some fancyvrb internals. Parts of fvextra were originally
+developed as part of pythontex and minted.
