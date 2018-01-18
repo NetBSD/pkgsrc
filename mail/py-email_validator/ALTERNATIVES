@@ -1,0 +1,1 @@
+bin/email_validator @PREFIX@/bin/email_validator@PYVERSSUFFIX@
