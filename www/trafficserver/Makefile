@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/01/03 15:55:36 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2018/01/18 19:19:41 fhajny Exp $
 
-DISTNAME=	trafficserver-7.1.1
-PKGREVISION=	1
+DISTNAME=	trafficserver-7.1.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=trafficserver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -80,14 +79,11 @@ PKG_SHELL.${TS_USER}=	${NOLOGIN}
 PERL5_CONFIGURE=	no
 PERL5_PACKLIST=		auto/Apache/TS/.packlist
 
-CONFIGURE_ARGS+=	--enable-cppapi
-CONFIGURE_ARGS+=	--enable-luajit
+CONFIGURE_ARGS+=	--enable-docs
 CONFIGURE_ARGS+=	--disable-silent-rules
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}
 CONFIGURE_ARGS+=	--with-group=${TS_GROUP}
 CONFIGURE_ARGS+=	--with-user=${TS_USER}
-CONFIGURE_ARGS+=	--with-xml=expat
 
 CONFIGURE_ENV.SunOS+=	ac_cv_func_epoll_ctl=no
 CONFIGURE_ENV.SunOS+=	ac_cv_func_inotify_init=no
