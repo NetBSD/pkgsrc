@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2017/11/30 16:45:12 adam Exp $
+# $NetBSD: Makefile,v 1.25 2018/01/18 09:04:17 markd Exp $
 
-DISTNAME=	qtbase-opensource-src-${QTVERSION}
+DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-psql-${QTVERSION}
-PKGREVISION=	10
 COMMENT=	Qt5 PostgreSQL plugin
 
 BUILD_QT5=		yes
@@ -16,7 +15,11 @@ INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 do-configure:
 	${RM} -f -r ${WRKSRC}/mkspecs
 	cd ${WRKSRC}/${BUILD_DIRS} && \
-	${QTDIR}/bin/qmake "sql-plugins=psql" -o Makefile
+	${QTDIR}/bin/qmake -o Makefile "QT.sql.enabled_features+=sql-psql" "QMAKE_LIBS_PSQL=-lpq"
+
+post-install:
+	rm -f ${DESTDIR}${PREFIX}/qt5/lib/cmake/Qt5Sql/Qt5Sql_QSQLiteDriverPlugin.cmake
+	rm -f ${DESTDIR}${PREFIX}/qt5/plugins/sqldrivers/libqsqlite.*
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
