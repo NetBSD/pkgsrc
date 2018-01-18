@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.258 2018/01/18 09:19:44 adam Exp $
+$NetBSD: CHANGES-2018,v 1.259 2018/01/18 09:44:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -461,3 +461,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Log-Any to 1.705 [wen 2018-01-18]
 	Updated databases/py-sqlalchemy to 1.2.1 [adam 2018-01-18]
 	Updated databases/py-alembic to 0.9.7nb1 [adam 2018-01-18]
+	Updated net/p5-Net-Twitter to 4.01043 [wen 2018-01-18]
