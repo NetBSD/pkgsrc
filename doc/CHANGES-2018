@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.270 2018/01/18 17:15:09 adam Exp $
+$NetBSD: CHANGES-2018,v 1.271 2018/01/18 19:19:51 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -486,3 +486,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/lynis to 2.6.0 [sborrill 2018-01-18]
 	Updated textproc/cmark to 0.28.3 [adam 2018-01-18]
 	Updated multimedia/mkvtoolnix to 20.0.0 [adam 2018-01-18]
+	Updated www/trafficserver to 7.1.2 [fhajny 2018-01-18]
