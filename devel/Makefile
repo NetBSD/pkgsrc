@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2591 2018/01/16 13:34:06 wiz Exp $
+# $NetBSD: Makefile,v 1.2592 2018/01/18 10:56:54 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -2464,6 +2464,8 @@ SUBDIR+=	tcllib
 SUBDIR+=	tclreadline
 SUBDIR+=	teem
 SUBDIR+=	tet3
+SUBDIR+=	tex-doclicense
+SUBDIR+=	tex-doclicense-doc
 SUBDIR+=	tex-etoolbox
 SUBDIR+=	tex-etoolbox-doc
 SUBDIR+=	tex-l3experimental
