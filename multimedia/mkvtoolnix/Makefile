@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.99 2018/01/01 21:18:46 adam Exp $
+# $NetBSD: Makefile,v 1.100 2018/01/18 17:14:41 adam Exp $
 
-DISTNAME=	mkvtoolnix-18.0.0
-PKGREVISION=	1
+DISTNAME=	mkvtoolnix-20.0.0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://mkvtoolnix.download/sources/
 EXTRACT_SUFX=	.tar.xz
@@ -65,5 +64,6 @@ BUILDLINK_ABI_DEPENDS.libebml+= libebml>=1.3.5
 .include "../../multimedia/libmatroska/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../sysutils/file/buildlink3.mk"
+.include "../../textproc/cmark/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
