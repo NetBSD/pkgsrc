@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/12/30 17:23:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/18 11:35:48 markd Exp $
 lib/pkgconfig/Qt5MacExtras.pc
 qt5/include/QtMacExtras/${PKGVERSION}/QtMacExtras/private/qmacfunctions_p.h
 qt5/include/QtMacExtras/${PKGVERSION}/QtMacExtras/private/qmactoolbar_p.h
@@ -20,8 +20,11 @@ qt5/include/QtMacExtras/qmactoolbaritem.h
 qt5/include/QtMacExtras/qtmacextrasversion.h
 qt5/lib/cmake/Qt5MacExtras/Qt5MacExtrasConfig.cmake
 qt5/lib/cmake/Qt5MacExtras/Qt5MacExtrasConfigVersion.cmake
-qt5/lib/libQt5MacExtras.la
 qt5/lib/libQt5MacExtras.prl
+qt5/lib/libQt5MacExtras.so
+qt5/lib/libQt5MacExtras.so.5
+qt5/lib/libQt5MacExtras.so.5.10
+qt5/lib/libQt5MacExtras.so.${PKGVERSION}
 qt5/lib/pkgconfig/Qt5MacExtras.pc
 qt5/mkspecs/modules/qt_lib_macextras.pri
 qt5/mkspecs/modules/qt_lib_macextras_private.pri
