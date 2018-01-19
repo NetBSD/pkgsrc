@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.272 2018/01/19 07:49:45 adam Exp $
+$NetBSD: CHANGES-2018,v 1.273 2018/01/19 09:10:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -490,3 +490,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/libimagequant to 2.11.7 [adam 2018-01-19]
 	Updated devel/libuv to 1.19.0 [adam 2018-01-19]
 	Updated devel/cmake to 3.10.2 [adam 2018-01-19]
+	Updated devel/py-hypothesis to 3.44.16 [adam 2018-01-19]
+	Updated security/py-requests-kerberos to 0.12.0 [adam 2018-01-19]
