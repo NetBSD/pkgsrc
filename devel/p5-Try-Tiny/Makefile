@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/12/30 14:19:22 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2018/01/19 11:26:20 wiz Exp $
 
 DISTNAME=	Try-Tiny-0.30
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://metacpan.org/release/Try-Tiny
 COMMENT=	Minimal try/catch with proper preservation of $$@
 LICENSE=	mit
 
-# recommended modules ...
+# TEST_DEPENDS
 BUILD_DEPENDS+=	p5-Capture-Tiny>=0.12:../../devel/p5-Capture-Tiny
 
 USE_LANGUAGES=	# empty
