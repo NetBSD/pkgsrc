@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2017/11/29 14:09:55 adam Exp $
+# $NetBSD: Makefile,v 1.23 2018/01/19 09:56:27 adam Exp $
 
-DISTNAME=	CherryPy-12.0.1
+DISTNAME=	CherryPy-13.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CherryPy/}
@@ -11,7 +11,6 @@ COMMENT=	CherryPy is a pythonic, object-oriented HTTP framework
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-cheroot>=5.9.1:../../www/py-cheroot
-DEPENDS+=	${PYPKGPREFIX}-jaraco.classes-[0-9]*:../../devel/py-jaraco.classes
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-portend>=2.1.1:../../net/py-portend
