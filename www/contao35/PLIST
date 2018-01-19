@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2017/11/15 14:07:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.17.2.1 2018/01/19 22:11:35 spz Exp $
 ${CT_WEBDIR}/.htaccess.default
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/1.1.9/ace.js
@@ -3329,6 +3329,7 @@ ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/composer.json
 ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/src/Converter.php
 ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/src/ConverterInterface.php
 ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/src/NoConverter.php
+${CT_WEBDIR}/vendor/michelf/php-markdown/.gitignore
 ${CT_WEBDIR}/vendor/michelf/php-markdown/License.md
 ${CT_WEBDIR}/vendor/michelf/php-markdown/Michelf/Markdown.inc.php
 ${CT_WEBDIR}/vendor/michelf/php-markdown/Michelf/Markdown.php
