@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2017/12/01 09:13:45 adam Exp $
+# $NetBSD: Makefile,v 1.29 2018/01/19 07:42:25 adam Exp $
 
-DISTNAME=	libuv-1.18.0
+DISTNAME=	libuv-1.19.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libuv/}
 
@@ -16,7 +16,7 @@ USE_TOOLS+=	autoconf automake pkg-config
 GNU_CONFIGURE=	yes
 TEST_TARGET=	check
 
-HEADERS=	uv-aix.h uv-bsd.h uv-darwin.h uv-linux.h uv-sunos.h	\
+HEADERS=	uv-aix.h uv-bsd.h uv-darwin.h uv-linux.h uv-sunos.h \
 		uv-unix.h uv-win.h pthread-barrier.h
 
 .include "../../mk/bsd.prefs.mk"
