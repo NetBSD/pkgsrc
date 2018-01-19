@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2017/10/02 14:42:44 wiz Exp $
+# $NetBSD: Makefile,v 1.102.2.1 2018/01/19 20:25:01 spz Exp $
 
 DISTNAME=	fontconfig-2.12.6
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	https://www.fontconfig.org/release/
 EXTRACT_SUFX=	.tar.bz2
