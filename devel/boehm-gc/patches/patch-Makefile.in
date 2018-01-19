@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2018/01/19 11:43:45 wiz Exp $
+
+https://github.com/ivmai/bdwgc/commit/4eeead98433bbf5bd9a6ba5cafd578fdaa2f3b12
+
+--- Makefile.in.orig	2017-12-23 08:48:38.000000000 +0000
++++ Makefile.in
+@@ -935,7 +935,7 @@ top_srcdir = @top_srcdir@
+ # Info (current:revision:age) for the Libtool versioning system.
+ # These numbers should be updated at most once just before the release,
+ # and, optionally, at most once during the development (after the release).
+-LIBGC_VER_INFO = 4:1:2
++LIBGC_VER_INFO = 5:0:4
+ LIBGCCPP_VER_INFO = 4:0:3
+ 
+ # We currently use the source files directly from libatomic_ops, if we
