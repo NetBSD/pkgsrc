@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.6 2018/01/07 19:19:22 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.7 2018/01/19 22:15:22 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
 
@@ -43,4 +43,34 @@ converters/php-iconv: reset PKGREVISION
 databases/php-pdo_sqlite: reset PKGREVISION
 textproc/php-intl: reset PKGREVISION
 textproc/php-json: reset PKGREVISION
+
+chat/irssi: security update
+chat/irssi-icb: dependent update
+chat/irssi-xmpp: dependent update
+
+Pullup ticket #5679 - requested by wiz
+devel/global: security update
+
+Pullup ticket #5680 - requested by maya
+security/sudo: function fix
+
+Pullup ticket #5681 - requested by he
+fonts/fontconfig: build fix
+
+Pullup ticket #5682 - requested by maya
+cross/cross-libtool-base: build fix
+
+Pullup ticket #5683 - requested by wiz
+net/transmission: security update
+net/transmission-qt: security update
+net/transmission-gtk: security update
+
+Pullup ticket #5684 - requested by taca
+net/bind910: security update
+
+Pullup ticket #5685 - requested by taca
+net/bind99: security update
+
+Pullup ticket #5686 - requested by taca
+www/contao35: security update
 
