@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.275 2018/01/19 09:56:59 adam Exp $
+$NetBSD: CHANGES-2018,v 1.276 2018/01/19 10:04:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -496,3 +496,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-multidict to 4.0.0 [adam 2018-01-19]
 	Updated www/py-cheroot to 6.0.0 [adam 2018-01-19]
 	Updated www/py-cherrypy to 13.1.0 [adam 2018-01-19]
+	Updated devel/py-construct to 2.8.22 [adam 2018-01-19]
+	Updated devel/py-setuptools_scm to 1.15.7 [adam 2018-01-19]
