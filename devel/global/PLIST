@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2016/12/30 00:39:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25.10.1 2018/01/19 20:20:44 spz Exp $
 bin/global
 bin/globash
 bin/gozilla
@@ -93,6 +93,7 @@ share/gtags/script/global-client
 share/gtags/script/gtags-client
 share/gtags/script/htags-client
 share/gtags/script/less-global
+share/gtags/script/maps2conf.pl
 share/gtags/script/pygments_parser.py
 share/gtags/style.css
 share/gtags/vim74-gtags-cscope.patch
