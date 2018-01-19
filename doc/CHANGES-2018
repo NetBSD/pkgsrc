@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.273 2018/01/19 09:10:46 adam Exp $
+$NetBSD: CHANGES-2018,v 1.274 2018/01/19 09:20:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -492,3 +492,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/cmake to 3.10.2 [adam 2018-01-19]
 	Updated devel/py-hypothesis to 3.44.16 [adam 2018-01-19]
 	Updated security/py-requests-kerberos to 0.12.0 [adam 2018-01-19]
+	Updated lang/py-asttokens to 1.1.8 [adam 2018-01-19]
+	Updated databases/py-multidict to 4.0.0 [adam 2018-01-19]
