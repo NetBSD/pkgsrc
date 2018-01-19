@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2017/11/29 14:07:50 adam Exp $
+# $NetBSD: Makefile,v 1.10 2018/01/19 09:55:38 adam Exp $
 
-DISTNAME=	cheroot-5.9.2
+DISTNAME=	cheroot-6.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cheroot/}
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.cherrypy.org/
 COMMENT=	High-performance, pure-Python HTTP server used by CherryPy
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-more-itertools>=2.6:../../devel/py-more-itertools
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11.0:../../lang/py-six
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 # TEST
@@ -21,7 +22,6 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-test-sugar-[0-9]*:../../devel/py-test-sugar
 
 USE_LANGUAGES=	# none
 
-# Testing fails, see https://github.com/cherrypy/cheroot/issues/6
 do-test:
 	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
 
