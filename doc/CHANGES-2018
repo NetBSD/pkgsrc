@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.271 2018/01/18 19:19:51 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.272 2018/01/19 07:49:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -487,3 +487,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/cmark to 0.28.3 [adam 2018-01-18]
 	Updated multimedia/mkvtoolnix to 20.0.0 [adam 2018-01-18]
 	Updated www/trafficserver to 7.1.2 [fhajny 2018-01-18]
+	Updated graphics/libimagequant to 2.11.7 [adam 2018-01-19]
+	Updated devel/libuv to 1.19.0 [adam 2018-01-19]
+	Updated devel/cmake to 3.10.2 [adam 2018-01-19]
