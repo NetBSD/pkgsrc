@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/01/17 08:56:56 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/01/19 09:45:11 wiz Exp $
 
 DISTNAME=	File-Copy-Recursive-0.40
 PKGNAME=	p5-${DISTNAME}
@@ -15,11 +15,12 @@ PERL5_PACKLIST=	auto/File/Copy/Recursive/.packlist
 
 DEPENDS+=	p5-Path-Iter-[0-9]*:../../devel/p5-Path-Iter
 
-TEST_DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
-TEST_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-TEST_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-TEST_DEPENDS+=	p5-Test-File-[0-9]*:../../devel/p5-Test-File
-TEST_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+# TEST_DEPENDS
+BUILD_DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
+BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=	p5-Test-File-[0-9]*:../../devel/p5-Test-File
+BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
