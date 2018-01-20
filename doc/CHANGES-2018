@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.278 2018/01/19 11:43:55 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.279 2018/01/20 11:30:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -500,3 +500,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-setuptools_scm to 1.15.7 [adam 2018-01-19]
 	Updated net/unbound to 1.6.8 [he 2018-01-19]
 	Updated devel/boehm-gc to 7.6.2nb1 [wiz 2018-01-19]
+	Updated ham/fldigi to 4.0.15 [mef 2018-01-20]
