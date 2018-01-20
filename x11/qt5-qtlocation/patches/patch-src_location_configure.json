@@ -1,0 +1,15 @@
+$NetBSD: patch-src_location_configure.json,v 1.1 2018/01/20 11:00:38 markd Exp $
+
+Only try building mapboxgl on linux
+
+--- src/location/configure.json.orig	2017-12-27 21:34:22.148504065 +0000
++++ src/location/configure.json
+@@ -37,7 +37,7 @@
+             "condition": [
+                 "features.opengl",
+                 "features.c++14",
+-                "!config.qnx && (!config.win32 || config.mingw)"
++                "config.linux && !config.qnx && (!config.win32 || config.mingw)"
+             ],
+             "output": [ "privateFeature" ]
+         },
