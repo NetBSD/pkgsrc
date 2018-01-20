@@ -1,7 +1,7 @@
-$NetBSD: patch-src_cmd_link_internal_ld_elf.go,v 1.1 2018/01/20 16:55:05 christos Exp $
+$NetBSD: patch-src_cmd_link_internal_ld_elf.go,v 1.2 2018/01/20 18:13:25 christos Exp $
 
---- elf.go.orig	2017-10-25 14:30:21.000000000 -0400
-+++ elf.go	2018-01-20 11:49:02.046813855 -0500
+--- src/cmd/link/internal/ld/elf.go.orig	2017-10-25 14:30:21.000000000 -0400
++++ src/cmd/link/internal/ld/elf.go	2018-01-20 11:49:02.046813855 -0500
 @@ -1263,6 +1263,8 @@
  	ELF_NOTE_NETBSD_DESCSZ  = 4
  	ELF_NOTE_NETBSD_TAG     = 1
