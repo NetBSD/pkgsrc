@@ -1,19 +1,16 @@
-# $NetBSD: Makefile,v 1.23 2016/06/08 17:43:27 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2018/01/20 21:16:27 adam Exp $
 
-DISTNAME=	urwid-1.3.1
+DISTNAME=	urwid-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urwid/}
 
 MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://urwid.org/
 COMMENT=	Curses-based Python user interface library
-LICENSE=	gnu-lgpl-v2.1 # or later
+LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 
-REPLACE_PYTHON=	*.py */*.py
-
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
