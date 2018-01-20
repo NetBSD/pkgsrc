@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2017/12/03 17:49:14 morr Exp $
+@comment $NetBSD: PLIST,v 1.38 2018/01/20 12:19:09 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -303,6 +303,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/cdrdaoconf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/ch.vim
 share/vim/${VIM_SUBDIR}/ftplugin/changelog.vim
 share/vim/${VIM_SUBDIR}/ftplugin/clojure.vim
+share/vim/${VIM_SUBDIR}/ftplugin/cmake.vim
 share/vim/${VIM_SUBDIR}/ftplugin/cobol.vim
 share/vim/${VIM_SUBDIR}/ftplugin/conf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/config.vim
