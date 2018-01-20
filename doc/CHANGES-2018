@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.280 2018/01/20 11:31:19 adam Exp $
+$NetBSD: CHANGES-2018,v 1.281 2018/01/20 17:23:33 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -502,3 +502,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/boehm-gc to 7.6.2nb1 [wiz 2018-01-19]
 	Updated ham/fldigi to 4.0.15 [mef 2018-01-20]
 	Updated devel/libuv to 1.19.1 [adam 2018-01-20]
+	Updated chat/weechat to 2.0.1 [tonio 2018-01-20]
