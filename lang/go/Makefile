@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.58 2017/11/14 09:53:53 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2018/01/20 16:55:05 christos Exp $
 
 .include "version.mk"
 
 DISTNAME=	go${GO_VERSION}.src
 PKGNAME=	go-${GO_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
 EXTRACT_USING=	bsdtar
@@ -37,6 +38,7 @@ REPLACE_BASH+=	misc/cgo/testcshared/test.bash
 REPLACE_BASH+=	misc/cgo/testgodefs/test.bash
 REPLACE_BASH+=	misc/cgo/testplugin/test.bash
 REPLACE_BASH+=	misc/cgo/testsanitizers/test.bash
+REPLACE_BASH+=	misc/cgo/testplugin/test.bash
 REPLACE_BASH+=	misc/nacl/go_nacl_386_exec
 REPLACE_BASH+=	misc/nacl/go_nacl_amd64p32_exec
 REPLACE_BASH+=	misc/nacl/go_nacl_arm_exec
@@ -92,9 +94,9 @@ PLIST.route=	yes
 .endif
 
 do-build:
-	cd ${WRKSRC}/src && env GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} GOROOT_FINAL=${GOROOT_FINAL:Q} ${BASH} ./make.bash
+	cd ${WRKSRC}/src && env GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} GOROOT_FINAL=${GOROOT_FINAL:Q} ${GOOPT} ${BASH} ./make.bash
 # for RELRO build:
-#	cd ${WRKSRC}/src && env GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} GOROOT_FINAL=${GOROOT_FINAL:Q} GO_LDFLAGS="-buildmode=pie" ${BASH} ./make.bash
+#	cd ${WRKSRC}/src && env GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} GOROOT_FINAL=${GOROOT_FINAL:Q} GO_LDFLAGS="-buildmode=pie" ${GOOPT} ${BASH} ./make.bash
 
 do-install:
 	cd ${WRKSRC} && rm -rf .hgignore .hgtags pkg/obj
@@ -105,6 +107,6 @@ do-install:
 .endfor
 
 do-test:
-	cd ${WRKSRC}/src && GOROOT=${WRKSRC} PATH=${WRKSRC}/bin:${PATH} ${BASH} run.bash --no-rebuild --banner ""
+	cd ${WRKSRC}/src && GOROOT=${WRKSRC} PATH=${WRKSRC}/bin:${PATH} ${GOOPT} ${BASH} run.bash --no-rebuild --banner ""
 
 .include "../../mk/bsd.pkg.mk"
