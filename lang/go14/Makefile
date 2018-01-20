@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2017/10/04 10:03:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2018/01/20 16:55:25 christos Exp $
 
 .include "../../lang/go/version.mk"
 
 DISTNAME=	go${GO14_VERSION}.src
 PKGNAME=	go14-${GO14_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
 PATCH_SITES=	https://codereview.appspot.com/download/
@@ -81,7 +81,7 @@ CHECK_INTERPRETER_SKIP+=	go14/src/make.rc
 CHECK_INTERPRETER_SKIP+=	go14/src/run.rc
 
 do-build:
-	cd ${WRKSRC}/src && ${PKGSRC_SETENV} ${MAKE_ENV} ${BASH} ./make.bash
+	cd ${WRKSRC}/src && ${PKGSRC_SETENV} ${MAKE_ENV}  ${GOOPT} ${BASH} ./make.bash
 
 do-install:
 	cd ${WRKSRC} && rm -rf .hgignore .hgtags pkg/obj
