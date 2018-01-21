@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.287 2018/01/21 04:19:36 markd Exp $
+$NetBSD: CHANGES-2018,v 1.288 2018/01/21 12:17:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -510,3 +510,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07048 [wen 2018-01-21]
 	Updated audio/kid3 to 3.5.1 [markd 2018-01-21]
 	Added x11/qt5-qtquickcontrols2 version 5.10.0 [markd 2018-01-21]
+	Updated www/py-google-api-python-client to 1.6.5 [adam 2018-01-21]
+	Updated www/py-yarl to 1.1.0 [adam 2018-01-21]
+	Updated www/py-pylint-django to 0.8.0 [adam 2018-01-21]
+	Updated finance/py-braintree to 3.40.0 [adam 2018-01-21]
