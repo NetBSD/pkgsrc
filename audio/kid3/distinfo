@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.13 2017/01/01 14:01:49 wiz Exp $
+$NetBSD: distinfo,v 1.14 2018/01/21 04:10:44 markd Exp $
 
-SHA1 (kid3-3.4.3.tar.gz) = 29436bfe5ce6d080d962766392171f1f8e6035c5
-RMD160 (kid3-3.4.3.tar.gz) = 6a2706cc9d970e29ec804b25f70a4394f2a1922c
-SHA512 (kid3-3.4.3.tar.gz) = 4df64bd23cca7ca58d62f046c885df859c7e27fbfb6da5121df78d5123314d45ae59619cfb4bf629143414f103a240c89a5d557614b2899a6cf373fb0755acbe
-Size (kid3-3.4.3.tar.gz) = 1360042 bytes
-SHA1 (patch-CMakeLists.txt) = a52261fd6c043969afcf7dbc2e71a52c0dc33716
-SHA1 (patch-src_plugins_acoustidimport_fingerprintcalculator.cpp) = 8ef550096f4a89c6074b94bb467832dfb2f1c98f
-SHA1 (patch-src_plugins_acoustidimport_fingerprintcalculator.h) = 9b9815db812d38eac65cc6c153c58ca86acd8dec
+SHA1 (kid3-3.5.1.tar.gz) = efaf95e5b057bc8d3414321bf643fe24a98111a2
+RMD160 (kid3-3.5.1.tar.gz) = 14f203dcc105766bb94fe6318a5346089ecb0888
+SHA512 (kid3-3.5.1.tar.gz) = 7f1fbd6d1d576d23f9b57baaaa35101fb2e9ea23dec5b5506e25ec5a94dc8516d25b69b4dddb4a9b4835b2502d0a07087c245380483571a68e5972f98ca8ca58
+Size (kid3-3.5.1.tar.gz) = 1414829 bytes
+SHA1 (patch-CMakeLists.txt) = f3057fe24031a73d28c0031a7d1f0241b05d94f6

@@ -1,8 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2017/01/01 14:01:49 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2018/01/21 04:10:44 markd Exp $
 
 On Darwin, avoid app bundle creation.
 
---- CMakeLists.txt.orig	2016-10-26 18:44:43.000000000 +0000
+--- CMakeLists.txt.orig	2017-10-30 17:12:24.000000000 +0000
 +++ CMakeLists.txt
 @@ -58,16 +58,16 @@ else (ANDROID)
    set(WITH_CHROMAPRINT ON CACHE BOOL "build with Chromaprint")
@@ -25,7 +25,7 @@ On Darwin, avoid app bundle creation.
    set(WITH_READLINE OFF CACHE BOOL "build with readline")
  else (WIN32)
 @@ -123,7 +123,7 @@ set(CPACK_PACKAGE_VERSION ${KID3_VERSION
- set(RELEASE_YEAR 2016)
+ set(RELEASE_YEAR 2017)
  
  # Platform specific default installation paths
 -if (APPLE)
@@ -36,7 +36,7 @@ On Darwin, avoid app bundle creation.
 @@ -149,7 +149,7 @@ elseif (ANDROID)
    set(WITH_PLUGINSDIR_DEFAULT ".")
    set(QT_ANDROID_APP_VERSION ${KID3_VERSION})
-   set(QT_ANDROID_APP_VERSION_CODE 6)
+   set(QT_ANDROID_APP_VERSION_CODE 10)
 -else (APPLE)
 +else (ELPPA)
    set(WITH_DATAROOTDIR_DEFAULT "share")
@@ -91,7 +91,19 @@ On Darwin, avoid app bundle creation.
      get_target_property(QT_LUPDATE_EXECUTABLE Qt5::lupdate LOCATION)
      get_target_property(QT_PLUGINS_DIR Qt5::QJpegPlugin LOCATION)
      if (QT_PLUGINS_DIR)
-@@ -493,7 +493,7 @@ if (MSVC)
+@@ -399,9 +399,9 @@ endif (NOT DOCBOOK_XSL_DIR)
+ set(BASIC_LIBRARIES ${QT_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
+ 
+ 
+-if (APPLE)
++if (ELPPA)
+   set(BASIC_LIBRARIES ${BASIC_LIBRARIES} "-framework CoreServices")
+-endif (APPLE)
++endif (ELPPA)
+ 
+ if (WIN32)
+   link_directories($ENV{LIB})
+@@ -497,7 +497,7 @@ if (MSVC)
    # Treat wchar_t as built-in type, else QString::fromWCharArray is unresolved
    add_definitions("/Zc:wchar_t-")
  endif (MSVC)
@@ -100,7 +112,7 @@ On Darwin, avoid app bundle creation.
    exec_program(sw_vers ARGS -productVersion OUTPUT_VARIABLE _osxVersion)
    if (_osxVersion VERSION_LESS "10.10")
      set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mmacosx-version-min=10.5")
-@@ -503,7 +503,7 @@ if (APPLE)
+@@ -507,7 +507,7 @@ if (APPLE)
      set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mmacosx-version-min=10.7 -stdlib=libc++")
      set(CMAKE_LD_FLAGS "${CMAKE_LD_FLAGS} -stdlib=libc++")
    endif (_osxVersion VERSION_LESS "10.10")
@@ -109,7 +121,7 @@ On Darwin, avoid app bundle creation.
  add_definitions(${QT_DEFINITIONS} -DHAVE_CONFIG_H=1 -DQT_NO_EXCEPTIONS -DQT_NO_STL)
  include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${QT_INCLUDES} ${PHONON_INCLUDE_DIR})
  
-@@ -515,11 +515,11 @@ if (NOT WIN32)
+@@ -519,11 +519,11 @@ if (NOT WIN32)
    endif (_HAVE_GCC_VISIBILITY)
  endif (NOT WIN32)
  
@@ -124,7 +136,7 @@ On Darwin, avoid app bundle creation.
  
  if (BUILD_KDE_APP)
    if (NOT HAVE_QT5)
-@@ -541,18 +541,18 @@ endif (ANDROID)
+@@ -545,18 +545,18 @@ endif (ANDROID)
  
  
  # To create a package, run cpack
