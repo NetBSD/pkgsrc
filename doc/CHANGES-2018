@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.284 2018/01/21 03:43:02 wen Exp $
+$NetBSD: CHANGES-2018,v 1.285 2018/01/21 03:45:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -507,3 +507,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-urwid to 2.0.0 [adam 2018-01-20]
 	Updated www/firefox-l10n to 57.0.4 [ryoon 2018-01-21]
 	Added devel/p5-curry version 1.001000 [wen 2018-01-21]
+	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07048 [wen 2018-01-21]
