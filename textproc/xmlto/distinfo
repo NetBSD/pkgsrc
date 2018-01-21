@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2015/12/11 23:31:09 joerg Exp $
+$NetBSD: distinfo,v 1.14 2018/01/21 18:45:27 roy Exp $
 
 SHA1 (xmlto-0.0.28.tar.bz2) = aa63af9a86ab6ed0c92ea8b177dc808c18902c73
 RMD160 (xmlto-0.0.28.tar.bz2) = acba3cc9ff46505ae49b91108c611646aeac2b5d
@@ -9,3 +9,4 @@ SHA1 (patch-format_docbook_txt) = 8d450200270b86efdea3b773fc5392db3b9c21b1
 SHA1 (patch-format_fo_dvi) = 4f47dc2e0b3b94ed2ddf2701d27c8813d0d38465
 SHA1 (patch-format_fo_pdf) = 301b96bf0f8b711cc115306d1b47f04cc6cd2d79
 SHA1 (patch-format_xhtml1_txt) = 6025023e7700375adbabee96dab99e6260b6e707
+SHA1 (patch-xmlto_in) = 4064e13bd53ddfc9a18f618d171d8b26bf182943
