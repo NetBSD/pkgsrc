@@ -1,9 +1,11 @@
-$NetBSD: patch-aj,v 1.6 2014/05/07 18:44:28 wiz Exp $
+$NetBSD: patch-aj,v 1.7 2018/01/21 18:44:59 wiz Exp $
 
 Support NetBSD and DragonFlyBSD.
 https://bugs.xine-project.org/show_bug.cgi?id=515
 
---- src/xitk/session.c.orig	2010-03-11 09:40:12.000000000 +0000
+Fix buffer overflow
+
+--- src/xitk/session.c.orig	2014-02-25 16:52:58.000000000 +0000
 +++ src/xitk/session.c
 @@ -21,7 +21,7 @@
  /* Largely inspired of xmms control socket stuff */
@@ -14,3 +16,12 @@ https://bugs.xine-project.org/show_bug.cgi?id=515
  #define _XOPEN_SOURCE 500
  #endif
  
+@@ -453,7 +453,7 @@ int init_session(void) {
+     for(i = 0;; i++)	{
+       saddr.un.sun_family = AF_UNIX;
+       
+-      snprintf(saddr.un.sun_path, 108, "%s%s%d", (xine_get_homedir()), "/.xine/session.", i);
++      snprintf(saddr.un.sun_path, sizeof(saddr.un.sun_path), "%s%s%d", (xine_get_homedir()), "/.xine/session.", i);
+       if(!is_remote_running(i)) {
+ 	if((unlink(saddr.un.sun_path) == -1) && errno != ENOENT) {
+ 	  fprintf(stderr, "setup_ctrlsocket(): Failed to unlink %s (Error: %s)", 
