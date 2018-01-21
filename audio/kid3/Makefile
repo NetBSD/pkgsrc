@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.83 2017/11/30 16:45:14 adam Exp $
+# $NetBSD: Makefile,v 1.84 2018/01/21 04:10:44 markd Exp $
 
-DISTNAME=	kid3-3.4.3
-PKGREVISION=	11
+DISTNAME=	kid3-3.5.1
 CATEGORIES=	kde audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kid3/}
 
@@ -24,6 +23,8 @@ CMAKE_ARGS+=		-DWITH_MANDIR:STRING=${PKGMANDIR}
 # program-specific rpath is ignored since pkgsrc passes
 # -DCMAKE_SKIP_RPATH:BOOL=TRUE, so re-add it manually
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/kid3
+
+BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
 
 SUBST_CLASSES+=		apple
 SUBST_MESSAGE.apple=	Avoiding Mac OS X application bundles
