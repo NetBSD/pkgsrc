@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2017/11/06 13:27:21 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2018/01/21 16:03:29 roy Exp $
 
-DISTNAME=	keychain-2.8.3
-PKGREVISION=	1
+DISTNAME=	keychain-2.8.4
 CATEGORIES=	security
 MASTER_SITES=	https://www.funtoo.org/archive/keychain/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,11 +14,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	openssh-[0-9]*:../../security/openssh
 .endif
 
-USE_TOOLS+=	bash:run
 NO_BUILD=	yes
-
-# Uses the "local" keyword which is not supported by ksh.
-REPLACE_BASH+=	keychain
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/${PKGBASE}
 
