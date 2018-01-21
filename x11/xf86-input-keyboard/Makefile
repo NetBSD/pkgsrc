@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2018/01/21 10:43:51 triaxx Exp $
+# $NetBSD: Makefile,v 1.25 2018/01/21 13:42:26 triaxx Exp $
 
 DISTNAME=	xf86-input-keyboard-1.9.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
