@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/11/17 08:06:52 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2018/01/21 10:47:47 triaxx Exp $
 
 DISTNAME=	xf86-input-mouse-1.9.2
 CATEGORIES=	x11
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg mouse driver
+LICENSE=	mit
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
