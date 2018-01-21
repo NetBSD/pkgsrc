@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2017/12/03 17:06:37 morr Exp $
+@comment $NetBSD: PLIST,v 1.36.2.1 2018/01/21 16:02:43 spz Exp $
 share/doc/wordpress/license.txt
 share/doc/wordpress/readme.html
 share/examples/wordpress/wordpress.conf
@@ -1212,34 +1212,8 @@ share/wordpress/wp-includes/js/media-models.js
 share/wordpress/wp-includes/js/media-models.min.js
 share/wordpress/wp-includes/js/media-views.js
 share/wordpress/wp-includes/js/media-views.min.js
-share/wordpress/wp-includes/js/mediaelement/lang/ca.js
-share/wordpress/wp-includes/js/mediaelement/lang/cs.js
-share/wordpress/wp-includes/js/mediaelement/lang/de.js
-share/wordpress/wp-includes/js/mediaelement/lang/es.js
-share/wordpress/wp-includes/js/mediaelement/lang/fa.js
-share/wordpress/wp-includes/js/mediaelement/lang/fr.js
-share/wordpress/wp-includes/js/mediaelement/lang/hr.js
-share/wordpress/wp-includes/js/mediaelement/lang/hu.js
-share/wordpress/wp-includes/js/mediaelement/lang/it.js
-share/wordpress/wp-includes/js/mediaelement/lang/ja.js
-share/wordpress/wp-includes/js/mediaelement/lang/ko.js
-share/wordpress/wp-includes/js/mediaelement/lang/nl.js
-share/wordpress/wp-includes/js/mediaelement/lang/pl.js
-share/wordpress/wp-includes/js/mediaelement/lang/pt.js
-share/wordpress/wp-includes/js/mediaelement/lang/ro.js
-share/wordpress/wp-includes/js/mediaelement/lang/ru.js
-share/wordpress/wp-includes/js/mediaelement/lang/sk.js
-share/wordpress/wp-includes/js/mediaelement/lang/sv.js
-share/wordpress/wp-includes/js/mediaelement/lang/uk.js
-share/wordpress/wp-includes/js/mediaelement/lang/zh-cn.js
-share/wordpress/wp-includes/js/mediaelement/lang/zh.js
 share/wordpress/wp-includes/js/mediaelement/mediaelement-and-player.js
 share/wordpress/wp-includes/js/mediaelement/mediaelement-and-player.min.js
-share/wordpress/wp-includes/js/mediaelement/mediaelement-flash-audio-ogg.swf
-share/wordpress/wp-includes/js/mediaelement/mediaelement-flash-audio.swf
-share/wordpress/wp-includes/js/mediaelement/mediaelement-flash-video-hls.swf
-share/wordpress/wp-includes/js/mediaelement/mediaelement-flash-video-mdash.swf
-share/wordpress/wp-includes/js/mediaelement/mediaelement-flash-video.swf
 share/wordpress/wp-includes/js/mediaelement/mediaelement-migrate.js
 share/wordpress/wp-includes/js/mediaelement/mediaelement-migrate.min.js
 share/wordpress/wp-includes/js/mediaelement/mediaelement.js
@@ -1250,14 +1224,6 @@ share/wordpress/wp-includes/js/mediaelement/mediaelementplayer.css
 share/wordpress/wp-includes/js/mediaelement/mediaelementplayer.min.css
 share/wordpress/wp-includes/js/mediaelement/mejs-controls.png
 share/wordpress/wp-includes/js/mediaelement/mejs-controls.svg
-share/wordpress/wp-includes/js/mediaelement/renderers/dailymotion.js
-share/wordpress/wp-includes/js/mediaelement/renderers/dailymotion.min.js
-share/wordpress/wp-includes/js/mediaelement/renderers/facebook.js
-share/wordpress/wp-includes/js/mediaelement/renderers/facebook.min.js
-share/wordpress/wp-includes/js/mediaelement/renderers/soundcloud.js
-share/wordpress/wp-includes/js/mediaelement/renderers/soundcloud.min.js
-share/wordpress/wp-includes/js/mediaelement/renderers/twitch.js
-share/wordpress/wp-includes/js/mediaelement/renderers/twitch.min.js
 share/wordpress/wp-includes/js/mediaelement/renderers/vimeo.js
 share/wordpress/wp-includes/js/mediaelement/renderers/vimeo.min.js
 share/wordpress/wp-includes/js/mediaelement/wp-mediaelement.css
