@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.7 2018/01/19 22:15:22 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.8 2018/01/21 16:03:34 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
 
@@ -73,4 +73,7 @@ net/bind99: security update
 
 Pullup ticket #5686 - requested by taca
 www/contao35: security update
+
+Pullup ticket #5687 - requested by morr
+www/wordpress: security update
 
