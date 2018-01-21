@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2017/10/11 09:40:28 sborrill Exp $
+# $NetBSD: Makefile,v 1.56 2018/01/21 13:28:07 bsiegert Exp $
 
 DISTNAME=	salt-2017.7.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/salt/}
 
@@ -68,6 +69,10 @@ SUBST_SED.fix-paths+=	-e 's,/etc/munin,${PKG_SYSCONFBASEDIR}/munin,g'
 SUBST_SED.fix-paths+=	-e 's,share/man,${PKGMANDIR},g'
 SUBST_SED.fix-paths+=	-e 's,/opt/local/lib,${PREFIX}/lib,g'
 SUBST_SED.fix-paths+=	-e 's,/opt/local/etc,${PKG_SYSCONFBASEDIR},g'
+SUBST_SED.fix-paths+=	-e 's,/var/run,${VARBASE}/run,g'
+SUBST_SED.fix-paths+=	-e 's,/var/cache,${VARBASE}/cache,g'
+SUBST_SED.fix-paths+=	-e 's,/var/log,${VARBASE}/log,g'
+
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/conf/master ${DESTDIR}${EGDIR}/
