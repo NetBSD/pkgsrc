@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.290 2018/01/21 16:06:15 roy Exp $
+$NetBSD: CHANGES-2018,v 1.291 2018/01/21 16:25:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -516,3 +516,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated finance/py-braintree to 3.40.0 [adam 2018-01-21]
 	Updated shells/mksh to 56c [bsiegert 2018-01-21]
 	Updated security/keychain to 2.8.4 [roy 2018-01-21]
+	Updated multimedia/libdvdcss to 1.4.1 [adam 2018-01-21]
+	Updated multimedia/libdvdread to 6.0.0 [adam 2018-01-21]
+	Updated multimedia/libdvdnav to 6.0.0 [adam 2018-01-21]
