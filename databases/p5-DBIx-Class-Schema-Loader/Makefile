@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2017/06/14 13:33:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2018/01/21 03:44:43 wen Exp $
 
-DISTNAME=	DBIx-Class-Schema-Loader-0.07047
+DISTNAME=	DBIx-Class-Schema-Loader-0.07048
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
@@ -33,6 +33,7 @@ DEPENDS+=	p5-Class-Accessor-Grouped>=0.10008:../../devel/p5-Class-Accessor-Group
 DEPENDS+=	p5-Class-C3-Componentised>=1.0008:../../devel/p5-Class-C3-Componentised
 DEPENDS+=	p5-Class-Inspector>=1.27:../../devel/p5-Class-Inspector
 DEPENDS+=	p5-Class-Unload>=0.07:../../devel/p5-Class-Unload
+DEPENDS+=	p5-curry>=1.000000:../../devel/p5-curry
 DEPENDS+=	p5-DBIx-Class>=0.08127:../../databases/p5-DBIx-Class
 DEPENDS+=	p5-Data-Dump>=1.06:../../devel/p5-Data-Dump
 #DEPENDS+=	{perl>=5.8.8,p5-Digest-MD5>=2.36}:../../security/p5-Digest-MD5
