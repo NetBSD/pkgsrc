@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2018/01/17 19:37:33 markd Exp $
+# $NetBSD: Makefile,v 1.48 2018/01/21 08:11:11 wiz Exp $
 
 DISTNAME=	qtwebkit-${QTWKVERSION}
 PKGNAME=	qt5-qtwebkit-${QTWKVERSION:S/-/./}
@@ -15,6 +15,8 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v3
 EXTRACT_SUFX=	.tar.xz
 
 QTWKVERSION=	5.212.0-alpha2
+
+PYTHON_VERSIONS_ACCEPTED=	27 # as if 5.212.0-alpha2
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:M*}
