@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2017/11/01 06:41:23 maya Exp $
+# $NetBSD: Makefile,v 1.32 2018/01/21 18:45:27 roy Exp $
 
 DISTNAME=	xmlto-0.0.28
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	https://releases.pagure.org/xmlto/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,10 +16,10 @@ DEPENDS+=		docbook-xsl>=1.67.0nb1:../../textproc/docbook-xsl
 DEPENDS+=		libxml2>=2.6.2:../../textproc/libxml2
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		bash:run mktemp
+USE_TOOLS+=		mktemp
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		GETOPT=${PREFIX}/bin/getopt
-CONFIGURE_ENV+=		BASH=${TOOLS_PATH.bash}
+CONFIGURE_ENV+=		BASH=${TOOLS_PATH.sh}
 CONFIGURE_ENV+=		GCP=${TOOLS_PATH.cp}
 CONFIGURE_ENV+=		TAIL=${TOOLS_PATH.tail}
 
