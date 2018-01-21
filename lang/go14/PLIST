@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/09/02 17:15:00 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/21 01:28:08 ryoon Exp $
 go14/AUTHORS
 go14/CONTRIBUTORS
 go14/LICENSE
@@ -2569,6 +2569,7 @@ go14/src/runtime/cpuprof.go
 go14/src/runtime/crash_cgo_test.go
 go14/src/runtime/crash_test.go
 go14/src/runtime/debug.go
+go14/src/runtime/debug_netbsd.go
 go14/src/runtime/debug/debug.s
 go14/src/runtime/debug/garbage.go
 go14/src/runtime/debug/garbage_test.go
