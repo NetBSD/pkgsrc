@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.291 2018/01/21 16:25:54 adam Exp $
+$NetBSD: CHANGES-2018,v 1.292 2018/01/21 16:49:45 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -519,3 +519,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/libdvdcss to 1.4.1 [adam 2018-01-21]
 	Updated multimedia/libdvdread to 6.0.0 [adam 2018-01-21]
 	Updated multimedia/libdvdnav to 6.0.0 [adam 2018-01-21]
+	Updated x11/deforaos-libdesktop to 0.2.2nb1 [he 2018-01-21]
