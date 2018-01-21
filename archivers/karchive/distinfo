@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2018/01/17 19:54:56 markd Exp $
+$NetBSD: distinfo,v 1.4 2018/01/21 21:34:03 markd Exp $
 
 SHA1 (karchive-5.41.0.tar.xz) = d945571a3e23e41073c93ed1e00af68a8277a9a5
 RMD160 (karchive-5.41.0.tar.xz) = 6f19b98126de9cec0768477a49b0904b279fffc7
 SHA512 (karchive-5.41.0.tar.xz) = fd28292b0076ef516ee695c057b026c3601386f1f4733f4ddc6ad21e416c27e891ffb2339f31100105834a84dc9adf4cef518d110e84f9f2d56ac92abe440f05
 Size (karchive-5.41.0.tar.xz) = 113596 bytes
+SHA1 (patch-CMakeLists.txt) = 0dc0dbc325fa6e6256dffed6817eea08de4db288

@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2018/01/21 21:34:03 markd Exp $
+
+Install via examples dir
+
+--- CMakeLists.txt.orig	2018-01-21 21:13:20.336090799 +0000
++++ CMakeLists.txt
+@@ -102,6 +102,6 @@ install(EXPORT KF5ArchiveTargets
+         FILE KF5ArchiveTargets.cmake
+         NAMESPACE KF5::)
+ 
+-install(FILES karchive.categories DESTINATION ${KDE_INSTALL_CONFDIR})
++install(FILES karchive.categories DESTINATION ${KDE_INSTALL_DATAROOTDIR}/examples/kde-xdg)
+ 
+ feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
