@@ -1,0 +1,35 @@
+$NetBSD: patch-xmlto_in,v 1.1 2018/01/21 18:45:27 roy Exp $
+
+Avoid pointless bashisms.
+Avoid use of non POSIX local builtin.
+
+--- xmlto.in.orig	2015-11-16 14:07:10.000000000 +0000
++++ xmlto.in
+@@ -78,13 +78,15 @@ EOF
+ #  * Remembers the temporary file's name so it can be deleted on exit
+ #  * If the failure message is empty or missing, exits on failure
+ make_temp () {
+-  local dirflag="" prefix="@PACKAGE@"
++  dirflag="" prefix="@PACKAGE@"
+   [ "$1" = "-d" ] && { dirflag="-d"; shift; }
+   [ -n "$1" ] && prefix="@PACKAGE@-$1"
+ 
+-  if eval $2='$(${MKTEMP} $dirflag "${TMPDIR:-/tmp}/${prefix}.XXXXXX")'
++  tmpnam=$(${MKTEMP} $dirflag "${TMPDIR:-/tmp}/${prefix}.XXXXXX")
++  if [ $? = 0 ]
+   then
+-    CLEANFILES="$CLEANFILES ${!2}"
++    eval $2="$tmpnam"
++    CLEANFILES="$CLEANFILES $tmpnam"
+     return 0
+   elif [ -z "$3" ]
+   then
+@@ -97,7 +99,7 @@ make_temp () {
+ }
+ 
+ compute_searchpath () {
+-  local oldIFS="${IFS}"
++  oldIFS="${IFS}"
+   IFS=":"
+   for asearchpath in "$1"; do
+     # wrangle relative paths into absolute ones so that the user
