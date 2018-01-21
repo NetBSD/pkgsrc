@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.288 2018/01/21 12:17:55 adam Exp $
+$NetBSD: CHANGES-2018,v 1.289 2018/01/21 13:05:21 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -514,3 +514,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-yarl to 1.1.0 [adam 2018-01-21]
 	Updated www/py-pylint-django to 0.8.0 [adam 2018-01-21]
 	Updated finance/py-braintree to 3.40.0 [adam 2018-01-21]
+	Updated shells/mksh to 56c [bsiegert 2018-01-21]
