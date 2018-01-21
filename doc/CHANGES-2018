@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.285 2018/01/21 03:45:44 wen Exp $
+$NetBSD: CHANGES-2018,v 1.286 2018/01/21 04:12:21 markd Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -508,3 +508,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/firefox-l10n to 57.0.4 [ryoon 2018-01-21]
 	Added devel/p5-curry version 1.001000 [wen 2018-01-21]
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07048 [wen 2018-01-21]
+	Updatedaudio/kid3 to 3.5.1 [markd 2018-01-21]
