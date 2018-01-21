@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/12/27 12:16:33 adam Exp $
+$NetBSD: distinfo,v 1.11 2018/01/21 16:22:13 adam Exp $
 
-SHA1 (libdvdcss-1.4.0.tar.bz2) = 4872a7c7e5c170c6c1787573b2f900b36a1ba974
-RMD160 (libdvdcss-1.4.0.tar.bz2) = a90a9b40bf1313fe8d3561b39183a34f1ff3844d
-SHA512 (libdvdcss-1.4.0.tar.bz2) = ad4503a37f47a9563da0b9e387ca3e812f6cdfbf109b8d92f8eccdd879b4270e5b0ee79041d7fb4c86698d72748f7bbf0257db8da6bb1c889dd4f78645e3371b
-Size (libdvdcss-1.4.0.tar.bz2) = 364373 bytes
+SHA1 (libdvdcss-1.4.1.tar.bz2) = e8e687fb12ab98e404240265b978a106011ad45f
+RMD160 (libdvdcss-1.4.1.tar.bz2) = b7b69b1715d65f26fbc883d60ebfe283375ff1d5
+SHA512 (libdvdcss-1.4.1.tar.bz2) = 4456ebcf8b53a8aaee97643261a14a05c929e9e9120cbe5fc6839ddf62be3dcfe7313fca3ee57c00bea43ddf623dc3d61fff7c2f6316338495df95c9c422f39e
+Size (libdvdcss-1.4.1.tar.bz2) = 366169 bytes
