@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.293 2018/01/21 18:45:08 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.294 2018/01/21 21:46:45 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -521,3 +521,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/libdvdnav to 6.0.0 [adam 2018-01-21]
 	Updated x11/deforaos-libdesktop to 0.2.2nb1 [he 2018-01-21]
 	Updated multimedia/xine-ui to 0.99.8nb15 [wiz 2018-01-21]
+	Updated security/sqlmap to 1.2 [leot 2018-01-21]
