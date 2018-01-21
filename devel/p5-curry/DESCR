@@ -1,0 +1,2 @@
+Perl module to create automatic curried method call closures for
+any class or object.
