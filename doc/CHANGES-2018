@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.318 2018/01/22 19:27:30 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.319 2018/01/22 19:55:04 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -547,3 +547,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/powerdns-recursor to 4.1.1 [fhajny 2018-01-22]
 	Added math/R-VGAM version 1.0.4 [minskim 2018-01-22]
 	Updated databases/elasticsearch to 6.1.2 [fhajny 2018-01-22]
+	Updated sysutils/beats to 6.1.2 [fhajny 2018-01-22]
