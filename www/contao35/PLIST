@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/01/18 16:13:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2018/01/22 16:11:29 taca Exp $
 ${CT_WEBDIR}/.htaccess.default
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/1.1.9/ace.js
@@ -3275,6 +3275,10 @@ ${CT_WEBDIR}/vendor/contao-components/compass/css/compass/utilities/tables/_scaf
 ${CT_WEBDIR}/vendor/contao-components/compass/css/compass/utilities/text/_ellipsis.scss
 ${CT_WEBDIR}/vendor/contao-components/compass/css/compass/utilities/text/_nowrap.scss
 ${CT_WEBDIR}/vendor/contao-components/compass/css/compass/utilities/text/_replacement.scss
+${CT_WEBDIR}/vendor/ircmaxell/password-compat/LICENSE.md
+${CT_WEBDIR}/vendor/ircmaxell/password-compat/composer.json
+${CT_WEBDIR}/vendor/ircmaxell/password-compat/lib/password.php
+${CT_WEBDIR}/vendor/ircmaxell/password-compat/version-test.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/LICENSE.md
 ${CT_WEBDIR}/vendor/leafo/scssphp/README.md
 ${CT_WEBDIR}/vendor/leafo/scssphp/bin/pscss
