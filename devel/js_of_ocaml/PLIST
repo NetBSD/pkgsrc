@@ -1,12 +1,18 @@
-@comment $NetBSD: PLIST,v 1.14 2018/01/10 14:37:29 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.15 2018/01/22 11:50:24 jaapb Exp $
 bin/js_of_ocaml
-bin/js_of_ocaml.exe
 bin/jsoo_link
-bin/jsoo_link.exe
 bin/jsoo_minify
-bin/jsoo_minify.exe
 ${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/META
 ${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/opam
+${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.a
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cma
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cmi
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cmt
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cmti
+${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cmx
+${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cmxa
+${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.cmxs
+${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/deriving/pa_deriving_Json.mli
 ${PLIST.camlp4}${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.a
 ${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.cma
 ${PLIST.camlp4}${OCAML_SITELIB}/js_of_ocaml-camlp4/pa_js.cmi
