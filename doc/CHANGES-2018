@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.295 2018/01/22 01:05:50 markd Exp $
+$NetBSD: CHANGES-2018,v 1.296 2018/01/22 02:28:03 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -523,3 +523,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/xine-ui to 0.99.8nb15 [wiz 2018-01-21]
 	Updated security/sqlmap to 1.2 [leot 2018-01-21]
 	Added x11/kirigami2 version 5.41.0 [markd 2018-01-22]
+	Updated math/R-RcppEigen to 0.3.3.3.1 [wen 2018-01-22]
