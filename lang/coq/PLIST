@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2018/01/10 16:26:53 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.25 2018/01/22 11:54:43 jaapb Exp $
 bin/coq-tex
 bin/coq_makefile
 bin/coqc
@@ -4319,8 +4319,7 @@ ${PLIST.coqide}share/coq/coq-ssreflect.lang
 ${PLIST.coqide}share/coq/coq.lang
 ${PLIST.coqide}share/coq/coq.png
 ${PLIST.coqide}share/coq/coq_style.xml
-share/coq/index_urls.txt
-${PLIST.doc}share/doc/coq/FAQ-CoqIde
+${PLIST.coqide}share/doc/coq/FAQ-CoqIde
 ${PLIST.doc}share/doc/coq/LICENSE.doc
 ${PLIST.doc}share/doc/coq/html/RecTutorial.html
 ${PLIST.doc}share/doc/coq/html/Tutorial.html
