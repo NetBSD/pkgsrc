@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/01/22 03:16:11 wen Exp $
+
+SHA1 (R/lme4_1.1-15.tar.gz) = 6e32d8f42a4372d01e6b684f0b630b5d38120e92
+RMD160 (R/lme4_1.1-15.tar.gz) = f14c00b40d1a72495b388503c91bd8e1300a959b
+SHA512 (R/lme4_1.1-15.tar.gz) = c3e58e9cb2ec04ae21a767e3d344d8215fd267952a06dab9c8a3de1f0aa888b024548605725cd783457a13c2b01b7e7552ddbc90bd091161fcd4915b3349ad24
+Size (R/lme4_1.1-15.tar.gz) = 3610706 bytes
