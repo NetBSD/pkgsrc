@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2018/01/10 16:53:09 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2018/01/22 11:58:02 jaapb Exp $
 
-PKGREVISION= 1
 .include "../../devel/ocaml-lwt/Makefile.common"
 
-PKGNAME=	ocaml-lwt_ssl-1.1.0
-CATEGORIES=	devel
+PKGNAME=	ocaml-lwt_ssl-1.1.1
+CATEGORIES=	devel security
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://github.com/ocsigen/lwt/
