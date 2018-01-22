@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.317 2018/01/22 19:24:20 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.318 2018/01/22 19:27:30 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -546,3 +546,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/contao35 to 3.5.33 [taca 2018-01-22]
 	Updated net/powerdns-recursor to 4.1.1 [fhajny 2018-01-22]
 	Added math/R-VGAM version 1.0.4 [minskim 2018-01-22]
+	Updated databases/elasticsearch to 6.1.2 [fhajny 2018-01-22]
