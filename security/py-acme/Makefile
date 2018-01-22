@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/12/09 16:39:03 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2018/01/22 13:37:25 fhajny Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/certbot/acme/}
 CATEGORIES=	security
@@ -9,6 +9,7 @@ LICENSE=	apache-2.0
 
 .include "../../security/py-certbot/Makefile.common"
 
+DEPENDS+=	${PYPKGPREFIX}-josepy>=1.0.0:../../security/py-josepy
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=0.8:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.15:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
@@ -19,14 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-six>1.9.0:../../lang/py-six
 
 EGG_NAME=	${DISTNAME:S/certbot/acme/}
 
-# TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
-
 PYSETUPSUBDIR=	acme
-
-post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/jws \
-		${DESTDIR}${PREFIX}/bin/jws${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
