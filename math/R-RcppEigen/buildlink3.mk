@@ -1,0 +1,12 @@
+# $NetBSD: buildlink3.mk,v 1.1 2018/01/22 03:00:45 wen Exp $
+
+BUILDLINK_TREE+=	R-RcppEigen
+
+.if !defined(R_RCPPEIGEN_BUILDLINK3_MK)
+R_RCPPEIGEN_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.R-RcppEigen+=	R-RcppEigen>=0.3.3.3.1
+BUILDLINK_PKGSRCDIR.R-RcppEigen?=	../../math/R-RcppEigen
+.endif	# R_RCPPEIGEN_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-R-RcppEigen
