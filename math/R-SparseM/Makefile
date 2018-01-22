@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/01/01 05:23:13 wen Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/22 07:21:29 wen Exp $
 #
 
 CATEGORIES=	math
@@ -10,7 +10,7 @@ COMMENT=	Sparse Linear Algebra
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 R_PKGNAME=	SparseM
-R_PKGVER=	1.7
+R_PKGVER=	1.77
 
 USE_LANGUAGES=	c fortran
 
