@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.306 2018/01/22 11:50:33 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.307 2018/01/22 11:53:32 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -534,3 +534,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ocaml-findlib to 1.7.3nb3 [jaapb 2018-01-22]
 	Updated devel/ocaml-optcomp to 1.6nb9 [jaapb 2018-01-22]
 	Updated devel/js_of_ocaml to 3.0.2 [jaapb 2018-01-22]
+	Updated devel/ocaml-lwt to 3.2.0 [jaapb 2018-01-22]
