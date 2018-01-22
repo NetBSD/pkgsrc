@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/01/21 23:32:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/01/22 04:36:08 dbj Exp $
 bin/pylupdate5
 bin/pyrcc5
 bin/pyuic5
@@ -43,10 +43,6 @@ ${PLIST.py3x}${PYSITELIB}/PyQt5/QtTest.pyi
 ${PYSITELIB}/PyQt5/QtTest.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtWebChannel.pyi
 ${PYSITELIB}/PyQt5/QtWebChannel.so
-${PLIST.py3x}${PYSITELIB}/PyQt5/QtWebKit.pyi
-${PYSITELIB}/PyQt5/QtWebKit.so
-${PLIST.py3x}${PYSITELIB}/PyQt5/QtWebKitWidgets.pyi
-${PYSITELIB}/PyQt5/QtWebKitWidgets.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtWebSockets.pyi
 ${PYSITELIB}/PyQt5/QtWebSockets.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtWidgets.pyi
