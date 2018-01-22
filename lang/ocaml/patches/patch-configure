@@ -1,6 +1,8 @@
-$NetBSD: patch-configure,v 1.29 2018/01/15 12:56:08 jperkin Exp $
+$NetBSD: patch-configure,v 1.30 2018/01/22 10:22:30 wiz Exp $
 
 All kinds of OS-specific changes to configure
+Honor LDFLAGS.
+
 --- configure.orig	2017-11-03 13:52:13.000000000 +0000
 +++ configure
 @@ -791,7 +791,7 @@ sharedcccompopts=''
@@ -166,3 +168,12 @@ All kinds of OS-specific changes to configure
  if test "x11_include" != "not found"; then
    if test "$x11_include" = "-I/usr/include"; then
      x11_include=""
+@@ -2056,7 +2065,7 @@ config CFLAGS "$common_cflags $internal_
+ config CPPFLAGS "$common_cppflags $internal_cppflags"
+ config OCAMLC_CFLAGS "$common_cflags $sharedcccompopts"
+ config OCAMLC_CPPFLAGS "$common_cppflags"
+-config LDFLAGS "$ldflags"
++config LDFLAGS "$ldflags $LDFLAGS"
+ config BYTECCLIBS "$cclibs $dllib $curseslibs $pthread_link \
+                  $instrumented_runtime_libs"
+ config RPATH "$rpath"
