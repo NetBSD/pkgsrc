@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2017/09/08 12:45:33 jaapb Exp $
+$NetBSD: distinfo,v 1.14 2018/01/22 11:53:24 jaapb Exp $
 
-SHA1 (lwt-3.1.0.tar.gz) = 5579bf45f8d13409fb0b0d161e7bf4c1a5a64688
-RMD160 (lwt-3.1.0.tar.gz) = cc767e4a0d33621b78838f3864151ea9cc7d9158
-SHA512 (lwt-3.1.0.tar.gz) = 0b2269e53f2e8a57e1ffd6f237c6b22de39a3b6b0d57276c7cb9371392aabc9fb6364b2617a6408ed0049ed64f71de0c540209cf83ce43899fd025295342eb0d
-Size (lwt-3.1.0.tar.gz) = 285309 bytes
-SHA1 (patch-META.lwt) = 175936461e06bcb94fbb931cde3b5148b1f4871d
+SHA1 (lwt-3.2.0.tar.gz) = fe821da0bf8e6f38d59d29932b1e5404a745304e
+RMD160 (lwt-3.2.0.tar.gz) = b079c2dbc26f05f02a06d73b877d6178289fff0d
+SHA512 (lwt-3.2.0.tar.gz) = 59e4dc53b81b9673c490b20cd3dd362ed8262d32b07e2656b5de801bd204df6050fec02a461c64533ea6c8863d160ddaf9d0050bccbebe82fa696c923486f0c8
+Size (lwt-3.2.0.tar.gz) = 310769 bytes
+SHA1 (patch-META.lwt) = ddfaf4ebd6c90a7022d0779a4e65ded8feb0864f
