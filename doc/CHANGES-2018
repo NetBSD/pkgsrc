@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.311 2018/01/22 13:30:21 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.312 2018/01/22 13:37:45 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -539,3 +539,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ocaml-lwt_ssl to 1.1.1 [jaapb 2018-01-22]
 	Updated graphics/py-mcomix to 1.2.1nb4 [wiz 2018-01-22]
 	Added security/py-josepy version 1.0.1 [fhajny 2018-01-22]
+	Updated security/py-acme to 0.21.0 [fhajny 2018-01-22]
+	Updated security/py-certbot to 0.21.0 [fhajny 2018-01-22]
