@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.1 2017/09/08 12:45:33 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.2 2018/01/22 11:53:24 jaapb Exp $
 
 # used by devel/ocaml-lwt_glib/Makefile
 # used by devel/ocaml-lwt_react/Makefile
 # used by devel/ocaml-lwt_ssl/Makefile
 
-LWT_VERSION=	3.1.0
+LWT_VERSION=	3.2.0
 DISTNAME=	lwt-${LWT_VERSION}
 
 LICENSE=	gnu-lgpl-v2.1
