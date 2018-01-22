@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2017/11/02 06:18:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2018/01/22 14:17:24 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -198,6 +198,7 @@ share/examples/git/git-prompt.sh
 share/examples/git/templates/description
 share/examples/git/templates/hooks/applypatch-msg.sample
 share/examples/git/templates/hooks/commit-msg.sample
+share/examples/git/templates/hooks/fsmonitor-watchman.sample
 share/examples/git/templates/hooks/post-update.sample
 share/examples/git/templates/hooks/pre-applypatch.sample
 share/examples/git/templates/hooks/pre-commit.sample
