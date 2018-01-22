@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.314 2018/01/22 15:00:03 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.315 2018/01/22 16:12:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -543,3 +543,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-certbot to 0.21.0 [fhajny 2018-01-22]
 	Updated devel/git to 2.16.0 [adam 2018-01-22]
 	Updated lang/elixir to 1.6.0 [fhajny 2018-01-22]
+	Updated www/contao35 to 3.5.33 [taca 2018-01-22]
