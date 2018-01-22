@@ -1,0 +1,14 @@
+$NetBSD: patch-__tags,v 1.1 2018/01/22 12:00:02 jaapb Exp $
+
+Lwt needs threaded compilation now
+--- _tags.orig	2017-06-14 00:18:16.000000000 +0000
++++ _tags
+@@ -3,7 +3,7 @@
+ 
+ <src/*> or <test/**>: package(uutf)
+ <src/markup_lwt*>: package(lwt)
+-<src/markup_lwt_unix*>: package(lwt.unix)
++<src/markup_lwt_unix*>: package(lwt.unix), thread
+ 
+ <src/translate_entities.*>: package(yojson)
+ 
