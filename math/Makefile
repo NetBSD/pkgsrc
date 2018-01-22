@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.353 2018/01/22 06:21:00 wen Exp $
+# $NetBSD: Makefile,v 1.354 2018/01/22 19:23:46 minskim Exp $
 
 COMMENT=	Mathematics
 
@@ -19,6 +19,7 @@ SUBDIR+=	R-RandomFields
 SUBDIR+=	R-Rcmdr
 SUBDIR+=	R-RcppEigen
 SUBDIR+=	R-SparseM
+SUBDIR+=	R-VGAM
 SUBDIR+=	R-XML
 SUBDIR+=	R-abind
 SUBDIR+=	R-akima
