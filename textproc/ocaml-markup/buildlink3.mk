@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2017/07/11 11:11:00 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2018/01/22 12:00:02 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-markup
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-markup
 OCAML_MARKUP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-markup+=	ocaml-markup>=0.7.2
-BUILDLINK_ABI_DEPENDS.ocaml-markup+=	ocaml-markup>=0.7.5
+BUILDLINK_ABI_DEPENDS.ocaml-markup+=	ocaml-markup>=0.7.5nb2
 BUILDLINK_PKGSRCDIR.ocaml-markup?=	../../textproc/ocaml-markup
 
 .endif	# OCAML_MARKUP_BUILDLINK3_MK
