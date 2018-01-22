@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.665 2018/01/18 04:57:22 jnemeth Exp $
+# $NetBSD: Makefile,v 1.666 2018/01/22 13:30:08 fhajny Exp $
 #
 
 COMMENT=	Security tools
@@ -409,6 +409,7 @@ SUBDIR+=	py-gnupg
 SUBDIR+=	py-gssapi
 SUBDIR+=	py-hsm
 SUBDIR+=	py-itsdangerous
+SUBDIR+=	py-josepy
 SUBDIR+=	py-kerberos
 SUBDIR+=	py-keyring
 SUBDIR+=	py-keyrings.alt
