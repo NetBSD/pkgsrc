@@ -1,6 +1,7 @@
-$NetBSD: patch-src_Makefile.OCaml,v 1.1 2017/11/14 13:03:35 jaapb Exp $
+$NetBSD: patch-src_Makefile.OCaml,v 1.2 2018/01/22 10:35:45 wiz Exp $
 
 Correct lablgtk paths for 2.16, and use ocamlopt.opt for compilation
+Add -unsafe-string for OCaml >= 4.06.
 
 --- src/Makefile.OCaml.orig	2015-10-05 18:14:23.000000000 +0000
 +++ src/Makefile.OCaml
@@ -15,6 +16,15 @@ Correct lablgtk paths for 2.16, and use ocamlopt.opt for compilation
  ##BCP [3/2007]: Removed temporarily, since the OSX UI is not working well 
  ## at the moment and we don't want to confuse people by building it by default
  ifeq ($(OSARCH),osx)
+@@ -95,7 +95,7 @@ buildexecutable::
+ ### Default parameters
+ 
+ # Generate backtrace information for exceptions
+-CAMLFLAGS+=-g
++CAMLFLAGS+=-g -unsafe-string
+ 
+ INCLFLAGS=-I lwt -I ubase -I system
+ CAMLFLAGS+=$(INCLFLAGS)
 @@ -292,14 +292,14 @@ endif
  
  # Gtk GUI
