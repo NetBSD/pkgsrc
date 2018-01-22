@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2017/09/08 16:54:31 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/01/22 11:53:24 jaapb Exp $
 ${OCAML_SITELIB}/lwt/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/log/lwt_log.a
 ${OCAML_SITELIB}/lwt/log/lwt_log.cma
@@ -84,15 +84,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/ppx/ppx_lwt.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/ppx/ppx_lwt.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/ppx/ppx_lwt.cmxs
 ${OCAML_SITELIB}/lwt/ppx/ppx_lwt.mli
-${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/preemptive/lwt_preemptive.a
-${OCAML_SITELIB}/lwt/preemptive/lwt_preemptive.cma
-${OCAML_SITELIB}/lwt/preemptive/lwt_preemptive.cmi
-${OCAML_SITELIB}/lwt/preemptive/lwt_preemptive.cmt
-${OCAML_SITELIB}/lwt/preemptive/lwt_preemptive.cmti
-${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/preemptive/lwt_preemptive.cmx
-${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/preemptive/lwt_preemptive.cmxa
-${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/preemptive/lwt_preemptive.cmxs
-${OCAML_SITELIB}/lwt/preemptive/lwt_preemptive.mli
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/simple-top/lwt_simple_top.a
 ${OCAML_SITELIB}/lwt/simple-top/lwt_simple_top.cma
 ${OCAML_SITELIB}/lwt/simple-top/lwt_simple_top.cmi
@@ -173,6 +164,11 @@ ${OCAML_SITELIB}/lwt/unix/lwt_main.cmt
 ${OCAML_SITELIB}/lwt/unix/lwt_main.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/unix/lwt_main.cmx
 ${OCAML_SITELIB}/lwt/unix/lwt_main.mli
+${OCAML_SITELIB}/lwt/unix/lwt_preemptive.cmi
+${OCAML_SITELIB}/lwt/unix/lwt_preemptive.cmt
+${OCAML_SITELIB}/lwt/unix/lwt_preemptive.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/unix/lwt_preemptive.cmx
+${OCAML_SITELIB}/lwt/unix/lwt_preemptive.mli
 ${OCAML_SITELIB}/lwt/unix/lwt_process.cmi
 ${OCAML_SITELIB}/lwt/unix/lwt_process.cmt
 ${OCAML_SITELIB}/lwt/unix/lwt_process.cmti
