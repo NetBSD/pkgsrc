@@ -1,0 +1,5 @@
+Vector generalized linear and additive models, and associated models
+(Reduced-Rank VGLMs, Quadratic RR-VGLMs, Reduced-Rank VGAMs). This
+package fits many models and distribution by maximum likelihood
+estimation (MLE) or penalized MLE. Also fits constrained ordination
+models in ecology.

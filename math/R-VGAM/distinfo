@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/01/22 19:22:44 minskim Exp $
+
+SHA1 (R/VGAM_1.0-4.tar.gz) = f52f70a01e37042f82a7272d8198e1a80fecb88d
+RMD160 (R/VGAM_1.0-4.tar.gz) = b5448508408504b8fed0d1763cfe102b5c7e6a24
+SHA512 (R/VGAM_1.0-4.tar.gz) = ccbcb9273de4ff4150577d4ab5eff751ccc350dd1e6d109fed4b37d3f55c641aee6b4e5fda1b0e6df41d94fadf50a886cca7f67daab6b49d919f666b408cf74e
+Size (R/VGAM_1.0-4.tar.gz) = 1374748 bytes
