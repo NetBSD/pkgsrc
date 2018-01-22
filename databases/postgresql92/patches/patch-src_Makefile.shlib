@@ -1,6 +1,8 @@
-$NetBSD: patch-src_Makefile.shlib,v 1.1 2012/10/05 21:03:10 adam Exp $
+$NetBSD: patch-src_Makefile.shlib,v 1.2 2018/01/22 11:05:29 jperkin Exp $
 
---- src/Makefile.shlib.orig	2012-09-19 21:47:58.000000000 +0000
+Use correct linker flags.
+
+--- src/Makefile.shlib.orig	2017-11-06 22:17:39.000000000 +0000
 +++ src/Makefile.shlib
 @@ -159,17 +159,11 @@ endif
  
@@ -38,3 +40,12 @@ $NetBSD: patch-src_Makefile.shlib,v 1.1 2012/10/05 21:03:10 adam Exp $
  ifeq ($(PORTNAME), hpux)
    ifdef SO_MAJOR_VERSION
      shlib			= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)
+@@ -250,7 +255,7 @@ ifeq ($(PORTNAME), solaris)
+     ifeq ($(with_gnu_ld), yes)
+       LINK.shared	+= -Wl,-soname,$(soname)
+     else
+-      LINK.shared	+= -h $(soname)
++      LINK.shared	+= -Wl,-h,$(soname)
+     endif
+   endif
+ endif
