@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.8 2017/10/04 13:08:20 jaapb Exp $
+# $NetBSD: options.mk,v 1.9 2018/01/22 11:17:52 jaapb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocamlnet
-PKG_SUPPORTED_OPTIONS=	gtk gtk2 gnutls cmxs
+PKG_SUPPORTED_OPTIONS=	gtk gtk2 gnutls
 PKG_SUGGESTED_OPTIONS=	gnutls
 
 PLIST_VARS+=		gnutls cmxs
@@ -40,14 +40,4 @@ OCAML_FINDLIB_DIRS+=	nettls-gnutls
 CONFIGURE_ARGS+=	-enable-gnutls
 .else
 CONFIGURE_ARGS+=	-disable-gnutls
-.endif
-
-###
-### cmxs support
-###
-.if !empty(PKG_OPTIONS:Mcmxs)
-PLIST.cmxs=	yes
-MAKE_ENV+=	HAVE_SHARED=1
-.else
-MAKE_ENV+=	HAVE_SHARED=0
 .endif
