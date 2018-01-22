@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2017/12/18 14:27:37 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.26 2018/01/22 19:27:21 fhajny Exp $
 bin/elasticsearch
 bin/elasticsearch-plugin
 lib/elasticsearch/bin/elasticsearch-env
@@ -69,7 +69,6 @@ lib/elasticsearch/modules/mapper-extras/mapper-extras-${PKGVERSION}.jar
 lib/elasticsearch/modules/mapper-extras/plugin-descriptor.properties
 lib/elasticsearch/modules/parent-join/parent-join-${PKGVERSION}.jar
 lib/elasticsearch/modules/parent-join/plugin-descriptor.properties
-lib/elasticsearch/modules/percolator/mapper-extras-${PKGVERSION}.jar
 lib/elasticsearch/modules/percolator/percolator-${PKGVERSION}.jar
 lib/elasticsearch/modules/percolator/plugin-descriptor.properties
 lib/elasticsearch/modules/reindex/commons-codec-1.10.jar
