@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/01/18 14:39:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2018/01/22 04:38:42 dbj Exp $
 
 DISTNAME=		gcc-7.2.0
 PKGNAME=		cross-arm-none-eabi-${DISTNAME}
@@ -60,7 +60,7 @@ PLIST_VARS+=		libcpp
 CFLAGS+=	-fbracket-depth=1024
 .endif
 
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin"
 PLIST.libcpp=	yes
 .endif
 
