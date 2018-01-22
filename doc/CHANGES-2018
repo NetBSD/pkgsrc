@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.299 2018/01/22 06:23:27 wen Exp $
+$NetBSD: CHANGES-2018,v 1.300 2018/01/22 07:23:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -527,3 +527,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/R-Rcpp to 0.12.15 [wen 2018-01-22]
 	Added math/R-lme4 version 1.1.15 [wen 2018-01-22]
 	Added math/R-pbkrtest version 0.4.7 [wen 2018-01-22]
+	Updated math/R-SparseM to 1.77 [wen 2018-01-22]
