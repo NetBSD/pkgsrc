@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/01/22 03:16:11 wen Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/22 03:27:45 wen Exp $
 #
 
 CATEGORIES=	math
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 R_PKGNAME=	lme4
 R_PKGVER=	1.1-15
 
-WRKSRC=		${WRKDIR}/pbkrtest
 USE_LANGUAGES=	c c++
 
 DEPENDS+=	R-minqa>=1.1.15:../../math/R-minqa
