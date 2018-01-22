@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2018/01/17 19:53:45 markd Exp $
+# $NetBSD: Makefile,v 1.4 2018/01/22 01:08:15 markd Exp $
 
 DISTNAME=	kf5-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -47,6 +48,7 @@ DEPENDS+=	kidletime-${KF5VER}{,nb[0-9]*}:../../devel/kidletime
 DEPENDS+=	kimageformats-${KF5VER}{,nb[0-9]*}:../../graphics/kimageformats
 DEPENDS+=	kinit-${KF5VER}{,nb[0-9]*}:../../x11/kinit
 DEPENDS+=	kio-${KF5VER}{,nb[0-9]*}:../../devel/kio
+DEPENDS+=	kirigami2-${KF5VER}{,nb[0-9]*}:../../x11/kirigami2
 DEPENDS+=	kitemmodels-${KF5VER}{,nb[0-9]*}:../../devel/kitemmodels
 DEPENDS+=	kitemviews-${KF5VER}{,nb[0-9]*}:../../x11/kitemviews
 DEPENDS+=	kjobwidgets-${KF5VER}{,nb[0-9]*}:../../x11/kjobwidgets
