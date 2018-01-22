@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.303 2018/01/22 07:50:40 wen Exp $
+$NetBSD: CHANGES-2018,v 1.304 2018/01/22 11:15:36 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -531,3 +531,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/R-quantreg to 5.34 [wen 2018-01-22]
 	Updated math/R-car to 2.1.6 [wen 2018-01-22]
 	Updated devel/p5-Getopt-Long-Descriptive to 0.101 [wen 2018-01-22]
+	Updated devel/ocaml-findlib to 1.7.3nb3 [jaapb 2018-01-22]
