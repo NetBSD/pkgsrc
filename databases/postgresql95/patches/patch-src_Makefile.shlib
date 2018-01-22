@@ -1,6 +1,8 @@
-$NetBSD: patch-src_Makefile.shlib,v 1.1 2016/02/25 21:37:35 tnn Exp $
+$NetBSD: patch-src_Makefile.shlib,v 1.2 2018/01/22 11:05:30 jperkin Exp $
 
---- src/Makefile.shlib.orig	2016-02-08 21:12:28.000000000 +0000
+Use correct linker flags.
+
+--- src/Makefile.shlib.orig	2017-11-06 22:11:00.000000000 +0000
 +++ src/Makefile.shlib
 @@ -151,17 +151,11 @@ endif
  
@@ -38,7 +40,16 @@ $NetBSD: patch-src_Makefile.shlib,v 1.1 2016/02/25 21:37:35 tnn Exp $
  ifeq ($(PORTNAME), hpux)
    ifdef SO_MAJOR_VERSION
      shlib			= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)
-@@ -474,8 +479,10 @@ ifdef soname
+@@ -232,7 +237,7 @@ ifeq ($(PORTNAME), solaris)
+     ifeq ($(with_gnu_ld), yes)
+       LINK.shared	+= -Wl,-soname,$(soname)
+     else
+-      LINK.shared	+= -h $(soname)
++      LINK.shared	+= -Wl,-h,$(soname)
+     endif
+   endif
+ endif
+@@ -483,8 +488,10 @@ ifdef soname
  # we don't install $(shlib) on AIX
  # (see http://archives.postgresql.org/message-id/52EF20B2E3209443BC37736D00C3C1380A6E79FE@EXADV1.host.magwien.gv.at)
  ifneq ($(PORTNAME), aix)
@@ -50,7 +61,7 @@ $NetBSD: patch-src_Makefile.shlib,v 1.1 2016/02/25 21:37:35 tnn Exp $
  ifneq ($(PORTNAME), win32)
  ifneq ($(shlib), $(shlib_major))
  	cd '$(DESTDIR)$(libdir)' && \
-@@ -488,7 +495,7 @@ ifneq ($(shlib), $(shlib_bare))
+@@ -497,7 +504,7 @@ ifneq ($(shlib), $(shlib_bare))
  	$(LN_S) $(shlib) $(shlib_bare)
  endif
  endif # not win32
