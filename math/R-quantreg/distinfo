@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/02/10 23:11:05 mef Exp $
+$NetBSD: distinfo,v 1.4 2018/01/22 07:35:38 wen Exp $
 
-SHA1 (R/quantreg_5.29.tar.gz) = da341b177a0f094c3bb82917f35d59e8b5d1bd2a
-RMD160 (R/quantreg_5.29.tar.gz) = 6dfd07e3b496af718cb8cd12d1f4a06a3857f5ed
-SHA512 (R/quantreg_5.29.tar.gz) = 8ea0c1073ce361dbf31deff18b2b3d2c9ebb1326713ba461d29e1ec931f331f714f69234d74b4260b9c19aff5d8449f8b3223e706817643595c492b878f036cd
-Size (R/quantreg_5.29.tar.gz) = 1722772 bytes
+SHA1 (R/quantreg_5.34.tar.gz) = 4f27031591733b7d9070d6d7e3bec70ad9415d66
+RMD160 (R/quantreg_5.34.tar.gz) = aa1ee0056381e84cd9bfc3f1b66cc192b380f8b1
+SHA512 (R/quantreg_5.34.tar.gz) = 7c45be7a7ed8722c40d6d78fe95d0ff687a420ad802c13bb16cfe92b2ea316ce7397c04b93597a5abb88ddaa260074537c39e02819fec70b809886f163aa394c
+Size (R/quantreg_5.34.tar.gz) = 1640231 bytes
