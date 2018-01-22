@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2017/01/01 14:43:43 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2018/01/22 12:50:59 wiz Exp $
 
 DISTNAME=	mcomix-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcomix/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +13,7 @@ COMMENT=	GTK2 comic book viewer
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.12.0:../../x11/py-gtk2
-DEPENDS+=	{${PYPKGPREFIX}-imaging>=1.1.5,${PYPKGPREFIX}-Pillow-[0-9]*}:../../graphics/py-imaging
+DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-subprocess32-[0-9]*:../../devel/py-subprocess32
 DEPENDS+=	${PYPKGPREFIX}-czipfile-[0-9]*:../../archivers/py-czipfile
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
