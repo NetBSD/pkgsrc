@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.294 2018/01/21 21:46:45 leot Exp $
+$NetBSD: CHANGES-2018,v 1.295 2018/01/22 01:05:50 markd Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -522,3 +522,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/deforaos-libdesktop to 0.2.2nb1 [he 2018-01-21]
 	Updated multimedia/xine-ui to 0.99.8nb15 [wiz 2018-01-21]
 	Updated security/sqlmap to 1.2 [leot 2018-01-21]
+	Added x11/kirigami2 version 5.41.0 [markd 2018-01-22]
