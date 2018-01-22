@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.313 2018/01/22 14:18:11 adam Exp $
+$NetBSD: CHANGES-2018,v 1.314 2018/01/22 15:00:03 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -542,3 +542,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-acme to 0.21.0 [fhajny 2018-01-22]
 	Updated security/py-certbot to 0.21.0 [fhajny 2018-01-22]
 	Updated devel/git to 2.16.0 [adam 2018-01-22]
+	Updated lang/elixir to 1.6.0 [fhajny 2018-01-22]
