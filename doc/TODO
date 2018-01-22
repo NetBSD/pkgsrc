@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18035 2018/01/22 01:40:56 wen Exp $
+$NetBSD: TODO,v 1.18036 2018/01/22 07:43:14 wen Exp $
 
 Suggested new packages
 ======================
@@ -355,7 +355,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o R-RPostgreSQL-0.4
 	o R-RandomFields-3.1.8
 	o R-akima-11
-	o R-car-2.1.6
 	o R-gdata-2.17.0
 	o R-httpRequest-0.0.10
 	o R-mapproj-3
