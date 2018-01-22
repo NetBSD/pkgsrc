@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.310 2018/01/22 12:51:09 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.311 2018/01/22 13:30:21 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -538,3 +538,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/qpdfview to 0.4.16nb19 [wiz 2018-01-22]
 	Updated devel/ocaml-lwt_ssl to 1.1.1 [jaapb 2018-01-22]
 	Updated graphics/py-mcomix to 1.2.1nb4 [wiz 2018-01-22]
+	Added security/py-josepy version 1.0.1 [fhajny 2018-01-22]
