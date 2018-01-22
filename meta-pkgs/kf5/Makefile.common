@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2018/01/17 19:53:45 markd Exp $
+# $NetBSD: Makefile.common,v 1.5 2018/01/22 01:08:15 markd Exp $
 # used by misc/attica-qt5/Makefile
 # used by sysutils/baloo5/Makefile
 # used by x11/frameworkintegration/Makefile
@@ -56,6 +56,7 @@
 # used by sysutils/solid/Makefile
 # used by textproc/sonnet/Makefile
 # used by devel/threadweaver/Makefile
+# used by x11/kirigami2/Makefile
 
 KF5VER=		5.41.0
 CATEGORIES+=	kde
