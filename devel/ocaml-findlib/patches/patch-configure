@@ -1,9 +1,9 @@
-$NetBSD: patch-configure,v 1.3 2017/07/11 09:57:11 jaapb Exp $
+$NetBSD: patch-configure,v 1.4 2018/01/22 11:14:43 jaapb Exp $
 
-Do not install dbm META file even if dbm is present
---- configure.orig	2017-05-21 14:26:16.000000000 +0000
+Do not install META files for libraries that were split off
+--- configure.orig	2017-06-05 14:32:28.000000000 +0000
 +++ configure
-@@ -514,13 +514,13 @@ fi
+@@ -514,25 +514,25 @@ fi
  
  # dbm?
  
@@ -22,4 +22,22 @@ Do not install dbm META file even if dbm is present
 +#fi
  
  # num?
+ 
+-if [ -f "${ocaml_core_stdlib}/num.cmi" ]; then
+-    echo "num: found"
+-    lnum="num num-top"
+-    numtop="num-top"
+-else
++#if [ -f "${ocaml_core_stdlib}/num.cmi" ]; then
++#   echo "num: found"
++#   lnum="num num-top"
++#   numtop="num-top"
++#else
+     echo "num: not present (normal since OCaml-4.06)"
+     lnum=""
+     numtop=""
+-fi
++#fi
+ 
+ # bytes?
  
