@@ -1,0 +1,1 @@
+bin/tensorboard @PREFIX@/bin/tensorboard@PYVERSSUFFIX@
