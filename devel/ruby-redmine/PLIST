@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/01/10 22:54:47 rodent Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/01/23 14:24:02 jperkin Exp $
 bin/redmine_fix_gems${RUBY_SUFFIX}.sh
 bin/redmine_generate_secret${RUBY_SUFFIX}.sh
 bin/redmine_migrate_db${RUBY_SUFFIX}.sh
@@ -7334,8 +7334,8 @@ share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/extension/prefs.json
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/extension/webdriver.xpi
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/launcher.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/native/linux/amd64/x_ignore_nofocus.${RUBY_DLEXT}
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/native/linux/x86/x_ignore_nofocus.${RUBY_DLEXT}
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/native/linux/amd64/x_ignore_nofocus.so
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/native/linux/x86/x_ignore_nofocus.so
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/profile.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/profiles_ini.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/service.rb
