@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2018/01/21 08:11:11 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2018/01/23 10:27:33 markd Exp $
 
 DISTNAME=	qtwebkit-${QTWKVERSION}
 PKGNAME=	qt5-qtwebkit-${QTWKVERSION:S/-/./}
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=annulen/}
 GITHUB_PROJECT=	webkit
 GITHUB_RELEASE=	${DISTNAME}
@@ -85,7 +86,7 @@ LDFLAGS+=	-Wl,-no-keep-memory -Wl-reduce-memory
 post-install:
 .for i in Qt5WebKit.pc Qt5WebKitWidgets.pc
 	cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
-	ln -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
+	ln -f -s ${QTDIR}/lib/pkgconfig/${i} ${i}
 .endfor
 
 .include "../../databases/sqlite3/buildlink3.mk"
