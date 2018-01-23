@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.39 2015/04/25 14:20:39 tnn Exp $
+# $NetBSD: Makefile,v 1.40 2018/01/23 11:23:12 adam Exp $
 
-PKGNAME=		py-gobject-shared-2.28.6
-PKGREVISION=		13
+PKGNAME=	py-${DISTNAME:S/^py//:S/-/-shared-/1}
 
 .include "../../devel/py-gobject/Makefile.common"
 
+NO_BUILD=		yes
 PYTHON_FOR_BUILD_ONLY=	yes
 INSTALLATION_DIRS=	include/pygtk-2.0 lib/pkgconfig
 # we do not really need py-cairo's pkg-config flags
@@ -13,22 +13,22 @@ INSTALLATION_DIRS=	include/pygtk-2.0 lib/pkgconfig
 CONFIGURE_ARGS+=	PYCAIRO_CFLAGS="`pkg-config --cflags cairo`"
 CONFIGURE_ARGS+=	PYCAIRO_LIBS="`pkg-config --libs cairo`"
 
-do-build:
-
+#	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/pygtk-2.0
+#	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/pkgconfig
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR:Q}${PREFIX:Q}/include/pygtk-2.0
+	${INSTALL_DATA} ${WRKSRC}/glib/pyglib.h \
+		${DESTDIR}${PREFIX}/include/pygtk-2.0
 	${INSTALL_DATA} ${WRKSRC}/gobject/pygobject.h \
-		${DESTDIR:Q}${PREFIX:Q}/include/pygtk-2.0
-	${INSTALL_DATA_DIR} ${DESTDIR:Q}${PREFIX:Q}/lib/pkgconfig
+		${DESTDIR}${PREFIX}/include/pygtk-2.0
 	${INSTALL_DATA} ${WRKSRC}/pygobject-2.0.pc \
-		${DESTDIR:Q}${PREFIX:Q}/lib/pkgconfig
+		${DESTDIR}${PREFIX}/lib/pkgconfig
 
-.include "../../lang/python/application.mk"
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gobject-introspection=	gobject-introspection>=0.9.5
 BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 BUILDLINK_DEPMETHOD.cairo=	build
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../devel/libffi/buildlink3.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
