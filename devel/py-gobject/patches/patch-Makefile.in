@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2018/01/23 11:23:13 adam Exp $
+
+Do not install pkgconfig; installed in devel/py-gobject-shared.
+
+--- Makefile.in.orig	2017-10-13 10:58:19.000000000 +0000
++++ Makefile.in
+@@ -1032,7 +1032,7 @@ info: info-recursive
+ 
+ info-am:
+ 
+-install-data-am: install-data-local install-pkgconfigDATA
++install-data-am: install-data-local
+ 
+ install-dvi: install-dvi-recursive
+ 
