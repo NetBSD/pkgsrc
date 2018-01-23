@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.329 2018/01/23 10:54:30 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.330 2018/01/23 11:24:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -559,3 +559,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-awscli to 1.14.30 [adam 2018-01-23]
 	Updated devel/git to 2.16.1 [adam 2018-01-23]
 	Updated net/py-lexicon to 2.1.17 [fhajny 2018-01-23]
+	Updated devel/py-gobject-shared to 2.28.7 [adam 2018-01-23]
+	Updated devel/py-gobject to 2.28.7 [adam 2018-01-23]
