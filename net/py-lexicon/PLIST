@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.13 2017/12/09 18:06:45 fhajny Exp $
-bin/lexicon
+@comment $NetBSD: PLIST,v 1.14 2018/01/23 10:54:20 fhajny Exp $
+bin/lexicon${PYVERSSUFFIX}
 ${PYSITELIB}/dns_${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/dns_${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/dns_${EGG_INFODIR}/dependency_links.txt
@@ -56,6 +56,8 @@ ${PYSITELIB}/lexicon/providers/luadns.pyo
 ${PYSITELIB}/lexicon/providers/luadns.pyc
 ${PYSITELIB}/lexicon/providers/memset.pyo
 ${PYSITELIB}/lexicon/providers/memset.pyc
+${PYSITELIB}/lexicon/providers/namecheap.pyo
+${PYSITELIB}/lexicon/providers/namecheap.pyc
 ${PYSITELIB}/lexicon/providers/namesilo.pyo
 ${PYSITELIB}/lexicon/providers/namesilo.pyc
 ${PYSITELIB}/lexicon/providers/nsone.pyo
@@ -96,6 +98,7 @@ ${PYSITELIB}/lexicon/providers/godaddy.py
 ${PYSITELIB}/lexicon/providers/linode.py
 ${PYSITELIB}/lexicon/providers/luadns.py
 ${PYSITELIB}/lexicon/providers/memset.py
+${PYSITELIB}/lexicon/providers/namecheap.py
 ${PYSITELIB}/lexicon/providers/namesilo.py
 ${PYSITELIB}/lexicon/providers/nsone.py
 ${PYSITELIB}/lexicon/providers/ovh.py
