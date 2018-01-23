@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.2 2011/04/08 14:30:16 drochner Exp $
+$NetBSD: patch-dsextras.py,v 1.1 2018/01/23 11:23:13 adam Exp $
+
+Append custom path.
 
 --- dsextras.py.orig	2011-01-26 17:49:56.000000000 +0000
 +++ dsextras.py
