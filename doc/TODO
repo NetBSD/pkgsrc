@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18038 2018/01/23 08:58:11 fhajny Exp $
+$NetBSD: TODO,v 1.18039 2018/01/23 11:24:15 adam Exp $
 
 Suggested new packages
 ======================
@@ -1232,8 +1232,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-doctor-15.1.0
 	o py-ephem3-3.7.6.0
 	o py-gnome-menus-3.8.0
-	o py-gobject-2.28.7
-	o py-gobject-shared-2.28.7
 	o py-gstreamer1-1.12.4
 	o py-hsm-1.1.1
 	o py-input-pad-1.4.2
