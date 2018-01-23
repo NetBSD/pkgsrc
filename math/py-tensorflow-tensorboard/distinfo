@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/01/23 01:52:12 minskim Exp $
+
+SHA1 (tensorflow-tensorboard-0.4.0.tar.gz) = fce7ecd0e05f50bed6edf628595ea4906fe99174
+RMD160 (tensorflow-tensorboard-0.4.0.tar.gz) = c3e240b7333405db59a6f0b57122047bddb68d54
+SHA512 (tensorflow-tensorboard-0.4.0.tar.gz) = 0bf2b077b21d859ab3ee52c268d4a013d22e7d5ed16475976821268dfcf86556a3031cd61ffc02ae93ec746444da4da6c45636b64eff68b09852983f1ff549ef
+Size (tensorflow-tensorboard-0.4.0.tar.gz) = 735170 bytes
