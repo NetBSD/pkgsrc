@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.325 2018/01/23 09:33:36 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.326 2018/01/23 09:48:35 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -554,3 +554,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-softlayer to 5.4.0 [fhajny 2018-01-23]
 	Updated net/py-botocore to 1.8.34 [fhajny 2018-01-23]
 	Updated net/py-boto3 to 1.5.20 [fhajny 2018-01-23]
+	Added net/py-namecheap version 0.0.2 [fhajny 2018-01-23]
