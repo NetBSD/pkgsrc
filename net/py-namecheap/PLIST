@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2018/01/23 09:48:23 fhajny Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/namecheap.pyo
+${PYSITELIB}/namecheap.pyc
+${PYSITELIB}/namecheap.py
