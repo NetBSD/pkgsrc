@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2017/09/09 22:46:57 joerg Exp $
+# $NetBSD: Makefile,v 1.93 2018/01/23 15:31:23 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -41,6 +41,11 @@ OWN_DIRS_PERMS+=	${VARBASE}/run/radiusd \
 			${RADIUS_USER} ${RADIUS_GROUP} 0750
 
 PKG_SYSCONFSUBDIR=	raddb
+
+OPSYSVARS+=		SOEXT
+SOEXT.Darwin=		dylib
+SOEXT.*=		so
+PLIST_SUBST+=		SOEXT=${SOEXT}
 
 FILES_SUBST+=		RADIUS_USER=${RADIUS_USER} RADIUS_GROUP=${RADIUS_GROUP}
 MESSAGE_SUBST+=		BOOTSTRAP=${PKG_SYSCONFDIR:Q}/certs/bootstrap
