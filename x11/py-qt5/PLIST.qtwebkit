@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.qtwebkit,v 1.1 2018/01/22 04:36:08 dbj Exp $
-${PLIST.py3x}${PYSITELIB}/PyQt5/QtWebKit.pyi
-${PYSITELIB}/PyQt5/QtWebKit.so
-${PLIST.py3x}${PYSITELIB}/PyQt5/QtWebKitWidgets.pyi
-${PYSITELIB}/PyQt5/QtWebKitWidgets.so
