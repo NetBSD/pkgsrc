@@ -1,0 +1,15 @@
+$NetBSD: patch-glib_Makefile.in,v 1.1 2018/01/23 11:23:13 adam Exp $
+
+Do not install headers; installed in devel/py-gobject-shared.
+
+--- glib/Makefile.in.orig	2018-01-23 11:11:23.000000000 +0000
++++ glib/Makefile.in
+@@ -775,7 +775,7 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-pkgincludeHEADERS install-pyglibLTLIBRARIES \
++install-data-am: install-pyglibLTLIBRARIES \
+ 	install-pyglibPYTHON
+ 
+ install-dvi: install-dvi-am
