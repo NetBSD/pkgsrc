@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/01/22 12:04:04 jaapb Exp $
+# $NetBSD: Makefile,v 1.15 2018/01/23 09:54:04 wiz Exp $
 
 DISTNAME=	cppo-1.6.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -54,7 +54,7 @@ do-install:
 	done
 .endif
 
-+.include "../../devel/ocamlbuild/buildlink3.mk"
-+BUILDLINK_DEPMETHOD.ocamlbuild?=        full
+.include "../../devel/ocamlbuild/buildlink3.mk"
+BUILDLINK_DEPMETHOD.ocamlbuild?=        full
 .include "../../lang/camlp4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
