@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.322 2018/01/23 08:28:46 jnemeth Exp $
+$NetBSD: CHANGES-2018,v 1.323 2018/01/23 08:58:11 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -551,3 +551,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/py-tensorflow-tensorboard version 0.4.0 [minskim 2018-01-23]
 	Updated www/squid3 to 3.5.27nb2 [taca 2018-01-23]
 	Updated comms/asterisk13 to 13.19.0 [jnemeth 2018-01-23]
+	Updated net/py-softlayer to 5.4.0 [fhajny 2018-01-23]
