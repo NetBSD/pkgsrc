@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.328 2018/01/23 10:29:27 adam Exp $
+$NetBSD: CHANGES-2018,v 1.329 2018/01/23 10:54:30 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -558,3 +558,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/py-borgbackup to 1.1.4nb1 [wiz 2018-01-23]
 	Updated net/py-awscli to 1.14.30 [adam 2018-01-23]
 	Updated devel/git to 2.16.1 [adam 2018-01-23]
+	Updated net/py-lexicon to 2.1.17 [fhajny 2018-01-23]
