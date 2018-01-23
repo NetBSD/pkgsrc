@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2017/09/17 14:41:22 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2018/01/23 14:19:54 jperkin Exp $
 
 DISTNAME=	Wx-0.9932
 PKGNAME=	p5-${DISTNAME}
@@ -21,8 +21,6 @@ BUILD_DEPENDS+=	p5-ExtUtils-XSpp>=0.16.02:../../devel/p5-ExtUtils-XSpp
 USE_TOOLS+=		perl
 USE_LANGUAGES+=		c c++
 PERL5_PACKLIST=		auto/Wx/.packlist
-
-MAKE_PARAMS+=		--wx-toolkit=gtk2
 
 .include "../../lang/perl5/module.mk"
 BUILDLINK_API_DEPENDS.wxGTK30+= wxGTK30>=3.0.3.1
