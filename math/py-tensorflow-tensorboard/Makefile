@@ -1,0 +1,40 @@
+# $NetBSD: Makefile,v 1.1 2018/01/23 01:52:12 minskim Exp $
+
+DISTNAME=	tensorflow-tensorboard-${GITHUB_TAG:S/-//}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	math python
+MASTER_SITES=	${MASTER_SITE_GITHUB:=tensorflow/}
+GITHUB_PROJECT=	tensorboard
+GITHUB_TAG=	0.4.0
+
+MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	https://github.com/tensorflow/tensorboard
+COMMENT=	Web applications for inspecting TensorFlow runs and graphs
+LICENSE=	apache-2.0
+
+DEPENDS+=	${PYPKGPREFIX}-bleach>=1.5.0:../../www/py-bleach
+DEPENDS+=	${PYPKGPREFIX}-markdown>=2.6.8:../../textproc/py-markdown
+DEPENDS+=	${PYPKGPREFIX}-html5lib>=0.9999999:../../textproc/py-html5lib
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.12.0:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.3.0:../../devel/py-protobuf
+DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-werkzeug>=0.11.10:../../www/py-werkzeug
+
+USE_LANGUAGES=	# none
+
+.include "../../lang/python/pyversion.mk"
+.if "${PYPKGPREFIX}" == "py27"
+DEPENDS+=	${PYPKGPREFIX}-futures>=3.1.1:../../devel/py-futures
+.endif
+
+.include "../../lang/python/egg.mk"
+
+post-extract:
+.for f in MANIFEST.in setup.cfg setup.py
+	${CP} ${WRKSRC}/tensorboard/pip_package/${f} ${WRKSRC}
+.endfor
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} tensorboard tensorboard${PYVERSSUFFIX}
+
+.include "../../mk/bsd.pkg.mk"
