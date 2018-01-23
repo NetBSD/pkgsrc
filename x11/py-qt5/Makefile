@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/01/23 16:42:02 dbj Exp $
+# $NetBSD: Makefile,v 1.29 2018/01/23 19:36:35 markd Exp $
 
 DISTNAME=	PyQt5_gpl-${PYQT_VERSION}
 PKGNAME=	${PYPKGPREFIX}-qt5-${PYQT_VERSION}
@@ -28,34 +28,6 @@ INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 PY_PATCHPLIST=		yes
 
 SUBST_CLASSES+=		x11lib
-#SUBST_CLASSES+=		install x11lib
-#SUBST_STAGE.install=	post-configure
-#SUBST_SED.install+=	-e 's,INSTALL_FILE  = ,INSTALL_FILE  = libtool --mode=install ,'
-#SUBST_SED.install+=	-e 's,\(TARGET[A-Z ]*\)= lib,\1= ,'
-#SUBST_MESSAGE.install=	Fixing installation target and file name.
-#SUBST_FILES.install+=	Qt/Makefile
-#SUBST_FILES.install+=	QtCore/Makefile
-#SUBST_FILES.install+=	QtDBus/Makefile
-#SUBST_FILES.install+=	QtDesigner/Makefile
-#SUBST_FILES.install+=	QtGui/Makefile
-#SUBST_FILES.install+=	QtHelp/Makefile
-#SUBST_FILES.install+=	QtMultimedia/Makefile
-#SUBST_FILES.install+=	QtMultimediaWidgets/Makefile
-#SUBST_FILES.install+=	QtNetwork/Makefile
-#SUBST_FILES.install+=	QtOpenGL/Makefile
-#SUBST_FILES.install+=	QtPositioning/Makefile
-#SUBST_FILES.install+=	QtPrintSupport/Makefile
-#SUBST_FILES.install+=	QtQml/Makefile
-#SUBST_FILES.install+=	QtQuick/Makefile
-#SUBST_FILES.install+=	QtSensors/Makefile
-#SUBST_FILES.install+=	QtSql/Makefile
-#SUBST_FILES.install+=	QtSvg/Makefile
-#SUBST_FILES.install+=	QtTest/Makefile
-#SUBST_FILES.install+=	QtWebKit/Makefile
-#SUBST_FILES.install+=	QtWebKitWidgets/Makefile
-#SUBST_FILES.install+=	QtWidgets/Makefile
-#SUBST_FILES.install+=	QtXmlPatterns/Makefile
-#SUBST_FILES.install+=	_QOpenGLFunctions_2_0/Makefile
 
 SUBST_STAGE.x11lib=     post-patch
 SUBST_SED.x11lib+=      -e 's,@X11LIB@,${X11BASE}/lib,'
