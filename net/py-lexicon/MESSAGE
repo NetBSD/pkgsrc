@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2018/01/23 10:54:20 fhajny Exp $
+
+Optional support for the following DNS providers can be enabled
+by installing extra packages:
+
+- Namecheap: ${PYPKGPREFIX}-namecheap (net/py-namecheap)
+- SoftLayer: ${PYPKGPREFIX}-softlayer (net/py-softlayer)
+- Amazon Route 53: ${PYPKGPREFIX}-boto3 (net/py-boto3)
+
+===========================================================================
