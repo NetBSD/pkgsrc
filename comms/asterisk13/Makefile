@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2018/01/01 21:18:17 adam Exp $
+# $NetBSD: Makefile,v 1.33 2018/01/23 08:26:08 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 
-DISTNAME=	asterisk-13.16.0
+DISTNAME=	asterisk-13.19.0
 #PKGREVISION=	4
-PKGREVISION=	4
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -30,15 +29,15 @@ CONFLICTS+=	asterisk-sounds-extra-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=		bison gmake perl:run pkg-config tar bash:run
-USE_LANGUAGES=		c c++
-REPLACE_BASH+=		contrib/scripts/ast_coredumper
-REPLACE_BASH+=		contrib/scripts/ast_logescalator
-REPLACE_BASH+=		contrib/scripts/ast_loggrabber
-REPLACE_BASH+=		contrib/scripts/astversion
-REPLACE_PERL+=		agi/DialAnMp3.agi agi/agi-test.agi
-REPLACE_PERL+=		agi/fastagi-test agi/jukebox.agi agi/numeralize
-REPLACE_PERL+=		contrib/scripts/vmail.cgi
+USE_TOOLS+=			bison gmake perl:run pkg-config tar bash:run
+USE_LANGUAGES=			c c++
+REPLACE_BASH+=			contrib/scripts/ast_coredumper
+REPLACE_BASH+=			contrib/scripts/ast_logescalator
+REPLACE_BASH+=			contrib/scripts/ast_loggrabber
+REPLACE_BASH+=			contrib/scripts/astversion
+REPLACE_PERL+=			agi/DialAnMp3.agi agi/agi-test.agi
+REPLACE_PERL+=			agi/fastagi-test agi/jukebox.agi agi/numeralize
+REPLACE_PERL+=			contrib/scripts/vmail.cgi
 CHECK_INTERPRETER_SKIP+=	libdata/asterisk/scripts/refcounter.py
 
 GNU_CONFIGURE=		yes
@@ -132,7 +131,7 @@ PLIST.mgcp=	yes
 .include "options.mk"
 
 # check sounds/Makefile for current version when upgrading package
-DISTFILES+=	asterisk-extra-sounds-en-gsm-1.5.tar.gz
+DISTFILES+=	asterisk-extra-sounds-en-gsm-1.5.1.tar.gz
 
 # Override default paths in config files
 SUBST_CLASSES+=		configs
@@ -241,17 +240,17 @@ post-patch:
 
 post-install:
 # check sounds directory for current versions when upgrading package
-	${TAR} xzf ${WRKSRC}/sounds/asterisk-core-sounds-en-gsm-1.5.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
+	${TAR} xzf ${WRKSRC}/sounds/asterisk-core-sounds-en-gsm-1.6.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
 	${TAR} xzf ${WRKSRC}/sounds/asterisk-moh-opsound-wav-2.03.tar.gz -C ${DESTDIR}${ASTDATADIR}/moh
-	${TAR} xzf ${DISTDIR}/${DIST_SUBDIR}/asterisk-extra-sounds-en-gsm-1.5.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
+	${TAR} xzf ${DISTDIR}/${DIST_SUBDIR}/asterisk-extra-sounds-en-gsm-1.5.1.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
 	${INSTALL_DATA} ${WRKSRC}/BUGS ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/CHANGES ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/CREDITS ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/README-SERIOUSLY.bestpractices.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/README-SERIOUSLY.bestpractices.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/UPGRADE-1.2.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/UPGRADE-1.4.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/UPGRADE-1.6.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
