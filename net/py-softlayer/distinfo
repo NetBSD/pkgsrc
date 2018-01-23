@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 00:35:32 agc Exp $
+$NetBSD: distinfo,v 1.4 2018/01/23 08:58:01 fhajny Exp $
 
-SHA1 (SoftLayer-3.0.2.tar.gz) = 55d4bbcd8618b4e124d84e6d6a7e2f26dfb5d10f
-RMD160 (SoftLayer-3.0.2.tar.gz) = 9593e18c5f306b0b02363efecd323d08da142897
-SHA512 (SoftLayer-3.0.2.tar.gz) = 02497504752df21defa17c00f9d6fa6477644a85b32afa2826fb2c747ea943c1a8693365a717df658033f956298e1bc84991491ef0fa89cb8264f67a6c21b2c6
-Size (SoftLayer-3.0.2.tar.gz) = 99747 bytes
-SHA1 (patch-README.rst) = 24c79958fab4ebad570a97bb37c84bcb82d6f171
+SHA1 (SoftLayer-5.4.0.tar.gz) = cbd29990a71b7503eac280ad6d6c6449fc694e53
+RMD160 (SoftLayer-5.4.0.tar.gz) = 482fc691257e322f20531108622a29acf1ee6bbf
+SHA512 (SoftLayer-5.4.0.tar.gz) = b41aa4f8bdd511b46910b0362ab56fdc9dff726a1691ccf4ecb9ff7e31c336360e9d84feb9241d3698b86be6ccc6bbd4be2c1f8598a22ae79e60b9ba27f06ea2
+Size (SoftLayer-5.4.0.tar.gz) = 250363 bytes
+SHA1 (patch-setup.py) = 195435ad071cfd97e1fc97a714396a3e3c4d9436
