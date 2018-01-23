@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2018/01/10 15:43:10 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2018/01/23 13:58:46 jperkin Exp $
 
 # Upstream regularly breaks protocol compatibility.  While users of
 # pkgsrc syncthing on multiple systems can update synchronously, an
@@ -31,7 +31,8 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 BUILD_DEPENDS+=		go-[0-9]*:../../lang/go
 
-USE_LANGUAGES=		# go
+# The 'zillode' dependency calls the compiler on certain archs.
+USE_LANGUAGES=		c
 NO_CONFIGURE=		yes
 
 INSTALLATION_DIRS=	bin
@@ -82,10 +83,10 @@ post-extract:
 	${LN} -s ${WRKPLACE} ${WRKSRC}
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/go run build.go
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/go run build.go build syncthing
 
 # Binaries other than syncthing proper should perhaps be installed.
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/syncthing ${DESTDIR}/${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/syncthing ${DESTDIR}/${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
