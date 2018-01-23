@@ -49,7 +49,7 @@ OS_CFLAGS+=	-DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE # -DHAVE_LOCALTIME_R
 INTERP_CFLAGS+=	`pkg-config --cflags-only-I nspr`
 
 RANLIB = echo
-MKSHLIB = $(LD) -lm `pkg-config --libs nspr` -shared $(LDFLAGS) $(XMKSHLIBOPTS)
+MKSHLIB = $(CC) -lm `pkg-config --libs nspr` -shared $(LDFLAGS) $(XMKSHLIBOPTS)
 
 #.c.o:
 #      $(CC) -c -MD $*.d $(CFLAGS) $<
