@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.327 2018/01/23 09:50:26 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.328 2018/01/23 10:29:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -556,3 +556,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-boto3 to 1.5.20 [fhajny 2018-01-23]
 	Added net/py-namecheap version 0.0.2 [fhajny 2018-01-23]
 	Updated sysutils/py-borgbackup to 1.1.4nb1 [wiz 2018-01-23]
+	Updated net/py-awscli to 1.14.30 [adam 2018-01-23]
+	Updated devel/git to 2.16.1 [adam 2018-01-23]
