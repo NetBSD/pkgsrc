@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST.Darwin,v 1.2 2018/01/01 18:33:33 rillig Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.3 2018/01/23 14:56:35 jperkin Exp $
 include/gstreamer-1.0/gst/gl/cocoa/gstglcaopengllayer.h
-include/gstreamer-1.0/gst/gl/cocoa/gstglcontext_cocoa.h
+include/gstreamer-1.0/gst/gl/cocoa/gstgldisplay_cocoa.h
 include/gstreamer-1.0/gst/gl/gl.h
 include/gstreamer-1.0/gst/gl/glprototypes/all_functions.h
 include/gstreamer-1.0/gst/gl/glprototypes/base.h
@@ -27,7 +27,6 @@ include/gstreamer-1.0/gst/gl/gstglbuffer.h
 include/gstreamer-1.0/gst/gl/gstglbufferpool.h
 include/gstreamer-1.0/gst/gl/gstglcolorconvert.h
 include/gstreamer-1.0/gst/gl/gstglcontext.h
-include/gstreamer-1.0/gst/gl/gstglcontrolbindingproxy.h
 include/gstreamer-1.0/gst/gl/gstgldebug.h
 include/gstreamer-1.0/gst/gl/gstgldisplay.h
 include/gstreamer-1.0/gst/gl/gstglfeature.h
