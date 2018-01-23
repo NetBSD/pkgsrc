@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.26 2015/11/03 03:29:08 agc Exp $
+$NetBSD: distinfo,v 1.27 2018/01/23 11:23:13 adam Exp $
 
-SHA1 (pygobject-2.28.6.tar.xz) = b1749ba806499f4c2780dbd1cbb363aaf1f41e78
-RMD160 (pygobject-2.28.6.tar.xz) = 4bc5e8546a5029d3d6b154629ab3fa4023d96bef
-SHA512 (pygobject-2.28.6.tar.xz) = 37544ea2377258758169b25a2969d5ee1c9ffb9b6e63e05bc7a0471a49ac9169c51ec587d4489172c7d256f53df878a81c1992a08059aa7e43dbbb69f799545c
-Size (pygobject-2.28.6.tar.xz) = 747248 bytes
-SHA1 (patch-aa) = a706cc4cd48121f21d12027c315dfe92d34157ed
-SHA1 (patch-ab) = f9ec40fcac11fe9d6625b6028dba2e316d9ce59e
-SHA1 (patch-ac) = 083e691cb13dbefeece505a7b6596c69ec8491f7
-SHA1 (patch-ad) = 1fa6c9ec6c3926d2915b7fa0391245bf7ca2daf4
-SHA1 (patch-configure) = 0ba83de34c3205ee6e3cbba9436bac05cc1bfd33
-SHA1 (patch-gio_gio-types.defs) = 16bbafacb14a3583369c31bc7b786b200f117ac6
+SHA1 (pygobject-2.28.7.tar.xz) = 8e3cb8621c2e1d8dbeba5c3c007c7421b936a36c
+RMD160 (pygobject-2.28.7.tar.xz) = e9fea538da79ad27c42434d4a2173b3eb636408b
+SHA512 (pygobject-2.28.7.tar.xz) = a5f3ae39f8156bd6234fb6d0ea31eba782fbdd4c292656c31b33e098abe3dcf0774d492cf602a4637cb679af9ecd511b24263349fbfd25708ca70f16cb052dfb
+Size (pygobject-2.28.7.tar.xz) = 744584 bytes
+SHA1 (patch-Makefile.in) = 338e157934b1aee08e87de91e93b220e8cd21ec8
+SHA1 (patch-configure) = bb69993ce23b2782fa3cff69c4b8c64cc6a16b78
+SHA1 (patch-dsextras.py) = 9ebb5b418ef902acea227d6d84691285ce2d1863
+SHA1 (patch-glib_Makefile.in) = 859360e5f5df3095236b002129feb4ad85546373
+SHA1 (patch-gobject_Makefile.in) = fa97ba35a52b890a4e7e0c16fc0cac1b215c91c2
 SHA1 (patch-pygi_info.c) = cd2d0f0b16a84c05b805edec89d4508507811c49
