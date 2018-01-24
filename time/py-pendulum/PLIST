@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/11/17 11:18:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/24 11:52:29 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -14,7 +14,6 @@ ${PYSITELIB}/pendulum/_compat.pyo
 ${PYSITELIB}/pendulum/_extensions/__init__.py
 ${PYSITELIB}/pendulum/_extensions/__init__.pyc
 ${PYSITELIB}/pendulum/_extensions/__init__.pyo
-${PYSITELIB}/pendulum/_extensions/_datetime.c
 ${PYSITELIB}/pendulum/_extensions/_helpers.c
 ${PYSITELIB}/pendulum/_extensions/_helpers.so
 ${PYSITELIB}/pendulum/_extensions/helpers.py
