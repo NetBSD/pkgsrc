@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.9 2018/01/23 07:48:56 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.10 2018/01/24 19:43:34 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
 
@@ -79,4 +79,7 @@ www/wordpress: security update
 
 Pullup ticket #5688 - requested by he
 x11/deforaos-libdesktop: build fix
+
+Pullup ticket #5689 - requested by wiz
+www/curl: security fix
 
