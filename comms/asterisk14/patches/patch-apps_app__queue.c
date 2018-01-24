@@ -1,8 +1,8 @@
-$NetBSD: patch-apps_app__queue.c,v 1.2 2017/06/21 13:33:48 jnemeth Exp $
+$NetBSD: patch-apps_app__queue.c,v 1.3 2018/01/24 05:51:40 jnemeth Exp $
 
---- apps/app_queue.c.orig	2017-05-30 17:50:46.000000000 +0000
+--- apps/app_queue.c.orig	2017-12-22 22:26:07.000000000 +0000
 +++ apps/app_queue.c
-@@ -5447,7 +5447,7 @@ static int wait_our_turn(struct queue_en
+@@ -5439,7 +5439,7 @@ static int wait_our_turn(struct queue_en
  
  			if ((status = get_member_status(qe->parent, qe->max_penalty, qe->min_penalty, qe->parent->leavewhenempty, 0))) {
  				*reason = QUEUE_LEAVEEMPTY;
@@ -11,29 +11,29 @@ $NetBSD: patch-apps_app__queue.c,v 1.2 2017/06/21 13:33:48 jnemeth Exp $
  				res = -1;
  				qe->handled = -1;
  				break;
-@@ -6824,8 +6824,8 @@ static int try_calling(struct queue_ent 
+@@ -6819,8 +6819,8 @@ static int try_calling(struct queue_ent 
  		/* if setinterfacevar is defined, make member variables available to the channel */
  		/* use  pbx_builtin_setvar to set a load of variables with one call */
- 		if (qe->parent->setinterfacevar) {
--			snprintf(interfacevar, sizeof(interfacevar), "MEMBERINTERFACE=%s,MEMBERNAME=%s,MEMBERCALLS=%d,MEMBERLASTCALL=%ld,MEMBERPENALTY=%d,MEMBERDYNAMIC=%d,MEMBERREALTIME=%d",
+ 		if (qe->parent->setinterfacevar && interfacevar) {
+-			ast_str_set(&interfacevar, 0, "MEMBERINTERFACE=%s,MEMBERNAME=%s,MEMBERCALLS=%d,MEMBERLASTCALL=%ld,MEMBERPENALTY=%d,MEMBERDYNAMIC=%d,MEMBERREALTIME=%d",
 -				member->interface, member->membername, member->calls, (long)member->lastcall, member->penalty, member->dynamic, member->realtime);
-+			snprintf(interfacevar, sizeof(interfacevar), "MEMBERINTERFACE=%s,MEMBERNAME=%s,MEMBERCALLS=%d,MEMBERLASTCALL=%jd,MEMBERPENALTY=%d,MEMBERDYNAMIC=%d,MEMBERREALTIME=%d",
++			ast_str_set(&interfacevar, 0, "MEMBERINTERFACE=%s,MEMBERNAME=%s,MEMBERCALLS=%d,MEMBERLASTCALL=%jd,MEMBERPENALTY=%d,MEMBERDYNAMIC=%d,MEMBERREALTIME=%d",
 +				member->interface, member->membername, member->calls, (intmax_t)member->lastcall, member->penalty, member->dynamic, member->realtime);
- 		 	pbx_builtin_setvar_multiple(qe->chan, interfacevar);
- 			pbx_builtin_setvar_multiple(peer, interfacevar);
+ 			pbx_builtin_setvar_multiple(qe->chan, ast_str_buffer(interfacevar));
+ 			pbx_builtin_setvar_multiple(peer, ast_str_buffer(interfacevar));
  		}
-@@ -6833,8 +6833,8 @@ static int try_calling(struct queue_ent 
+@@ -6828,8 +6828,8 @@ static int try_calling(struct queue_ent 
  		/* if setqueueentryvar is defined, make queue entry (i.e. the caller) variables available to the channel */
  		/* use  pbx_builtin_setvar to set a load of variables with one call */
- 		if (qe->parent->setqueueentryvar) {
--			snprintf(interfacevar, sizeof(interfacevar), "QEHOLDTIME=%ld,QEORIGINALPOS=%d",
+ 		if (qe->parent->setqueueentryvar && interfacevar) {
+-			ast_str_set(&interfacevar, 0, "QEHOLDTIME=%ld,QEORIGINALPOS=%d",
 -				(long) (time(NULL) - qe->start), qe->opos);
-+			snprintf(interfacevar, sizeof(interfacevar), "QEHOLDTIME=%jd,QEORIGINALPOS=%d",
++			ast_str_set(&interfacevar, 0, "QEHOLDTIME=%jd,QEORIGINALPOS=%d",
 +				(intmax_t) (time(NULL) - qe->start), qe->opos);
- 			pbx_builtin_setvar_multiple(qe->chan, interfacevar);
- 			pbx_builtin_setvar_multiple(peer, interfacevar);
+ 			pbx_builtin_setvar_multiple(qe->chan, ast_str_buffer(interfacevar));
+ 			pbx_builtin_setvar_multiple(peer, ast_str_buffer(interfacevar));
  		}
-@@ -8063,8 +8063,8 @@ static int queue_exec(struct ast_channel
+@@ -8043,8 +8043,8 @@ static int queue_exec(struct ast_channel
  		}
  	}
  
@@ -44,7 +44,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.2 2017/06/21 13:33:48 jnemeth Exp $
  
  	qe.chan = chan;
  	qe.prio = prio;
-@@ -8114,8 +8114,8 @@ check_turns:
+@@ -8094,8 +8094,8 @@ check_turns:
  			record_abandoned(&qe);
  			reason = QUEUE_TIMEOUT;
  			res = 0;
@@ -55,7 +55,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.2 2017/06/21 13:33:48 jnemeth Exp $
  			break;
  		}
  
-@@ -8160,7 +8160,7 @@ check_turns:
+@@ -8142,7 +8142,7 @@ check_turns:
  			if ((status = get_member_status(qe.parent, qe.max_penalty, qe.min_penalty, qe.parent->leavewhenempty, 0))) {
  				record_abandoned(&qe);
  				reason = QUEUE_LEAVEEMPTY;
@@ -64,7 +64,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.2 2017/06/21 13:33:48 jnemeth Exp $
  				res = 0;
  				break;
  			}
-@@ -8183,7 +8183,7 @@ check_turns:
+@@ -8165,7 +8165,7 @@ check_turns:
  			record_abandoned(&qe);
  			reason = QUEUE_TIMEOUT;
  			res = 0;
@@ -73,7 +73,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.2 2017/06/21 13:33:48 jnemeth Exp $
  			break;
  		}
  
-@@ -8211,8 +8211,8 @@ stop:
+@@ -8193,8 +8193,8 @@ stop:
  			if (!qe.handled) {
  				record_abandoned(&qe);
  				ast_queue_log(args.queuename, ast_channel_uniqueid(chan), "NONE", "ABANDON",
@@ -84,7 +84,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.2 2017/06/21 13:33:48 jnemeth Exp $
  				res = -1;
  			} else if (qcontinue) {
  				reason = QUEUE_CONTINUE;
-@@ -8220,7 +8220,7 @@ stop:
+@@ -8205,7 +8205,7 @@ stop:
  			}
  		} else if (qe.valid_digits) {
  			ast_queue_log(args.queuename, ast_channel_uniqueid(chan), "NONE", "EXITWITHKEY",
@@ -93,7 +93,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.2 2017/06/21 13:33:48 jnemeth Exp $
  		}
  	}
  
-@@ -9465,9 +9465,9 @@ static char *__queues_show(struct manses
+@@ -9445,9 +9445,9 @@ static char *__queues_show(struct manses
  
  			do_print(s, fd, "   Callers: ");
  			for (qe = q->head; qe; qe = qe->next) {
@@ -106,12 +106,21 @@ $NetBSD: patch-apps_app__queue.c,v 1.2 2017/06/21 13:33:48 jnemeth Exp $
  				do_print(s, fd, ast_str_buffer(out));
  			}
  		}
-@@ -9837,7 +9837,7 @@ static int manager_queues_status(struct 
+@@ -9817,7 +9817,7 @@ static int manager_queues_status(struct 
  					"CallerIDName: %s\r\n"
  					"ConnectedLineNum: %s\r\n"
  					"ConnectedLineName: %s\r\n"
 -					"Wait: %ld\r\n"
 +					"Wait: %jd\r\n"
+ 					"Priority: %d\r\n"
  					"%s"
  					"\r\n",
- 					q->name, pos++, ast_channel_name(qe->chan), ast_channel_uniqueid(qe->chan),
+@@ -9826,7 +9826,7 @@ static int manager_queues_status(struct 
+ 					S_COR(ast_channel_caller(qe->chan)->id.name.valid, ast_channel_caller(qe->chan)->id.name.str, "unknown"),
+ 					S_COR(ast_channel_connected(qe->chan)->id.number.valid, ast_channel_connected(qe->chan)->id.number.str, "unknown"),
+ 					S_COR(ast_channel_connected(qe->chan)->id.name.valid, ast_channel_connected(qe->chan)->id.name.str, "unknown"),
+-					(long) (now - qe->start), qe->prio, idText);
++					(intmax_t) (now - qe->start), qe->prio, idText);
+ 				++q_items;
+ 			}
+ 		}
