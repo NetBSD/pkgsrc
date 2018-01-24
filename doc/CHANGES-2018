@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.333 2018/01/24 07:57:28 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.334 2018/01/24 10:21:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -564,3 +564,8 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/py-powerlaw version 1.4.3 [minskim 2018-01-24]
 	Updated comms/asterisk14 to 14.7.5 [jnemeth 2018-01-24]
 	Updated www/curl to 7.58.0 [wiz 2018-01-24]
+	Updated devel/py-pylint to 1.8.2 [adam 2018-01-24]
+	Updated time/py-arrow to 0.12.1 [adam 2018-01-24]
+	Updated devel/py-urwid to 2.0.1 [adam 2018-01-24]
+	Updated devel/py-zconfig to 3.2.0nb1 [adam 2018-01-24]
+	Updated www/py-raven to 6.5.0 [adam 2018-01-24]
