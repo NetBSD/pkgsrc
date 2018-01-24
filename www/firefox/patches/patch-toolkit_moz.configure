@@ -1,37 +1,10 @@
-$NetBSD: patch-toolkit_moz.configure,v 1.8 2017/12/10 00:45:09 ryoon Exp $
+$NetBSD: patch-toolkit_moz.configure,v 1.9 2018/01/24 16:52:08 ryoon Exp $
 
 * skia part: support bigendian architectures
 
---- toolkit/moz.configure.orig	2017-11-02 16:16:34.000000000 +0000
+--- toolkit/moz.configure.orig	2018-01-11 20:17:05.000000000 +0000
 +++ toolkit/moz.configure
-@@ -317,6 +317,26 @@ def freetype2_combined_info(fontconfig_i
- add_old_configure_assignment('_HAVE_FREETYPE2',
-                              depends_if(freetype2_info)(lambda _: True))
- 
-+# Graphite2
-+# ==============================================================
-+option('--with-system-graphite2',
-+       help="Use system graphite2 (located with pkgconfig)")
-+
-+system_graphite2 = pkg_check_modules('MOZ_GRAPHITE2', 'graphite2',
-+                                     when='--with-system-graphite2')
-+
-+set_config('MOZ_SYSTEM_GRAPHITE2', depends_if(system_graphite2)(lambda _: True))
-+
-+# HarfBuzz
-+# ==============================================================
-+option('--with-system-harfbuzz',
-+       help="Use system harfbuzz (located with pkgconfig)")
-+
-+system_harfbuzz = pkg_check_modules('MOZ_HARFBUZZ', 'harfbuzz >= 1.4.7',
-+                                    when='--with-system-harfbuzz')
-+
-+set_config('MOZ_SYSTEM_HARFBUZZ', depends_if(system_harfbuzz)(lambda _: True))
-+
- # Apple platform decoder support
- # ==============================================================
- @depends(toolkit)
-@@ -418,7 +438,7 @@ option('--enable-eme',
+@@ -418,7 +418,7 @@ option('--enable-eme',
  def enable_eme(value, target):
      # Widevine EME by default enabled on desktop Windows, MacOS and Linux,
      # x86 and x64 builds.
@@ -40,7 +13,18 @@ $NetBSD: patch-toolkit_moz.configure,v 1.8 2017/12/10 00:45:09 ryoon Exp $
          target.os not in ('Android', 'iOS') and
          target.cpu in ('x86', 'x86_64')):
          return value
-@@ -940,11 +960,11 @@ include('nss.configure')
+@@ -829,8 +829,8 @@ def webrender(value, milestone):
+     enable_webrender = None
+ 
+     if value.origin == 'default':
+-        # if nothing is specified, default to just building on Nightly
+-        build_webrender = milestone.is_nightly
++        # build by default downstream
++        build_webrender = True
+     elif len(value) and value[0] == 'build':
+         # if explicitly set to 'build', then we build but don't enable
+         build_webrender = True
+@@ -938,11 +938,11 @@ include('nss.configure')
  # ==============================================================
  option('--disable-skia', help='Disable use of Skia')
  
@@ -57,3 +41,30 @@ $NetBSD: patch-toolkit_moz.configure,v 1.8 2017/12/10 00:45:09 ryoon Exp $
          return True
  
  set_config('MOZ_ENABLE_SKIA', skia)
+@@ -1065,6 +1065,26 @@ add_old_configure_assignment('FT2_LIBS',
+ add_old_configure_assignment('FT2_CFLAGS',
+                              ft2_info.cflags)
+ 
++# Graphite2
++# ==============================================================
++option('--with-system-graphite2',
++       help="Use system graphite2 (located with pkgconfig)")
++
++system_graphite2 = pkg_check_modules('MOZ_GRAPHITE2', 'graphite2',
++                                     when='--with-system-graphite2')
++
++set_config('MOZ_SYSTEM_GRAPHITE2', depends_if(system_graphite2)(lambda _: True))
++
++# HarfBuzz
++# ==============================================================
++option('--with-system-harfbuzz',
++       help="Use system harfbuzz (located with pkgconfig)")
++
++system_harfbuzz = pkg_check_modules('MOZ_HARFBUZZ', 'harfbuzz >= 1.7.2',
++                                    when='--with-system-harfbuzz')
++
++set_config('MOZ_SYSTEM_HARFBUZZ', depends_if(system_harfbuzz)(lambda _: True))
++
+ # Mortar
+ # ==============================================================
+ option('--enable-mortar', help='Enable mortar extension')
