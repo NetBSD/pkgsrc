@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/01/24 23:48:03 minskim Exp $
+
+SHA1 (R/gss_2.1-7.tar.gz) = a6be55a8f9f4f77d7625ebbbcbf5d5d03e90a469
+RMD160 (R/gss_2.1-7.tar.gz) = 69e5f6658fd363eabd2ed16e044fad6f1e5450d7
+SHA512 (R/gss_2.1-7.tar.gz) = 37ea6b72fefa10a2c79a87f6ce01f9bc610db5034809df4e45afd4b9bfed8b038904dd2108956f29abdebce999f7e8b1d5d55720aa0141bad8cfc2757203ba8a
+Size (R/gss_2.1-7.tar.gz) = 485790 bytes
