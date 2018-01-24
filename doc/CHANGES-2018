@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.349 2018/01/24 20:54:22 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.350 2018/01/24 23:30:52 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -587,3 +587,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/firefox-l10n to 58.0 [ryoon 2018-01-24]
 	Updated devel/pkgconf to 1.4.1 [ryoon 2018-01-24]
 	Added net/py-socksipy-branch version 1.01 [bsiegert 2018-01-24]
+	Updated sysutils/xenkernel48 to 4.8.3 [bouyer 2018-01-25]
+	Updated sysutils/xentools48 to 4.8.3 [bouyer 2018-01-25]
