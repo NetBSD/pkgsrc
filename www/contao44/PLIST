@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/01/04 13:23:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/01/24 13:54:50 taca Exp $
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/README.md
 ${CT_WEBDIR}/assets/ace/composer.json
@@ -4454,6 +4454,7 @@ ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/composer.json
 ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/src/Converter.php
 ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/src/ConverterInterface.php
 ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/src/NoConverter.php
+${CT_WEBDIR}/vendor/michelf/php-markdown/.gitignore
 ${CT_WEBDIR}/vendor/michelf/php-markdown/License.md
 ${CT_WEBDIR}/vendor/michelf/php-markdown/Michelf/Markdown.inc.php
 ${CT_WEBDIR}/vendor/michelf/php-markdown/Michelf/Markdown.php
@@ -5236,6 +5237,8 @@ ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/Source.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/XML/Declaration/Parser.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/gzdecode.php
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.gitattributes
+${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.github/ISSUE_TEMPLATE.md
+${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.github/PULL_REQUEST_TEMPLATE.md
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.gitignore
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.php_cs.dist
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.travis.yml
@@ -5667,6 +5670,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/Twig/TokenParser/TransDef
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/Twig/TokenParser/TransTokenParser.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Translation/TwigExtractor.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/Twig/TwigEngine.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/Twig/UndefinedCallableHandler.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/Twig/composer.json
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bridge/Twig/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/.gitignore
