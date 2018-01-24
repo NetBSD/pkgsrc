@@ -1,10 +1,10 @@
-$NetBSD: patch-dom_media_moz.build,v 1.7 2017/01/25 13:24:51 ryoon Exp $
+$NetBSD: patch-dom_media_moz.build,v 1.8 2018/01/24 16:52:08 ryoon Exp $
 
 * Support system libraries
 
---- dom/media/moz.build.orig	2017-01-16 16:16:53.000000000 +0000
+--- dom/media/moz.build.orig	2018-01-11 20:17:02.000000000 +0000
 +++ dom/media/moz.build
-@@ -316,6 +316,21 @@ if CONFIG['MOZ_WEBRTC']:
+@@ -318,6 +318,21 @@ if CONFIG['MOZ_WEBRTC']:
  
  DEFINES['MOZILLA_INTERNAL_API'] = True
  
@@ -23,6 +23,6 @@ $NetBSD: patch-dom_media_moz.build,v 1.7 2017/01/25 13:24:51 ryoon Exp $
 +if CONFIG['MOZ_SYSTEM_SOUNDTOUCH']:
 +    CXXFLAGS += CONFIG['MOZ_SOUNDTOUCH_CFLAGS']
 +
- if CONFIG['OS_TARGET'] == 'WINNT':
-     DEFINES['WEBRTC_WIN'] = True
- else:
+ if CONFIG['MOZ_ANDROID_HLS_SUPPORT']:
+     DEFINES['MOZ_ANDROID_HLS_SUPPORT'] = True
+ 
