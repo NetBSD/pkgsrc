@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.103 2018/01/08 09:37:56 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.104 2018/01/24 16:52:08 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -16,6 +16,9 @@ BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+# For rustc/cargo detection
+CONFIGURE_ARGS+=	--target=${MACHINE_GNU_PLATFORM:Q}
+CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
 USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize
