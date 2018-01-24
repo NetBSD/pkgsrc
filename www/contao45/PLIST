@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/01/12 15:21:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/24 13:55:20 taca Exp $
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/README.md
 ${CT_WEBDIR}/assets/ace/composer.json
@@ -2477,6 +2477,7 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Security/User/ContaoUserProvider.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Security/User/UserChecker.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Session/Attribute/ArrayAttributeBag.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Session/LazySessionAccess.php
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Session/MockNativeSessionStorage.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Slug/ValidCharacters.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Translation/Translator.php
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Twig/Extension/ContaoTemplateExtension.php
@@ -2808,6 +2809,7 @@ ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/config/routing.yml
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/config/services.yml
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.de.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.en.xlf
+${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.es.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.ja.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.nl.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.pl.xlf
@@ -4542,6 +4544,7 @@ ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/composer.json
 ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/src/Converter.php
 ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/src/ConverterInterface.php
 ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/src/NoConverter.php
+${CT_WEBDIR}/vendor/michelf/php-markdown/.gitignore
 ${CT_WEBDIR}/vendor/michelf/php-markdown/License.md
 ${CT_WEBDIR}/vendor/michelf/php-markdown/Michelf/Markdown.inc.php
 ${CT_WEBDIR}/vendor/michelf/php-markdown/Michelf/Markdown.php
