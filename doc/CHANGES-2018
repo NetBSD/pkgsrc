@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.338 2018/01/24 13:56:08 taca Exp $
+$NetBSD: CHANGES-2018,v 1.339 2018/01/24 14:20:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -576,3 +576,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/sqlite3 to 3.22.0 [adam 2018-01-24]
 	Updated www/contao44 to 4.4.13 [taca 2018-01-24]
 	Updated www/contao45 to 4.5.3 [taca 2018-01-24]
+	Updated databases/py-pymysql to 0.8.0 [adam 2018-01-24]
