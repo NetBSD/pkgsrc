@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/12/14 13:18:07 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/01/24 10:20:32 adam Exp $
 
-DISTNAME=	raven-6.4.0
+DISTNAME=	raven-6.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/raven/}
