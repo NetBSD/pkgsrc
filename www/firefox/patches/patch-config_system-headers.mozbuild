@@ -1,0 +1,54 @@
+$NetBSD: patch-config_system-headers.mozbuild,v 1.1 2018/01/24 16:52:08 ryoon Exp $
+
+--- config/system-headers.mozbuild.orig	2018-01-11 20:16:54.000000000 +0000
++++ config/system-headers.mozbuild
+@@ -428,6 +428,7 @@ system_headers = [
+     'libgnomeui/gnome-icon-theme.h',
+     'libgnomeui/gnome-ui-init.h',
+     'libutil.h',
++    'libv4l2.h',
+     'limits.h',
+     'link.h',
+     'linux/ioprio.h',
+@@ -1311,6 +1312,41 @@ if not CONFIG['MOZ_TREE_PIXMAN']:
+         'pixman.h',
+     ]
+ 
++if CONFIG['MOZ_SYSTEM_GRAPHITE2']:
++    system_headers += [
++        'graphite2/Font.h',
++        'graphite2/Segment.h',
++    ]
++
++if CONFIG['MOZ_SYSTEM_HARFBUZZ']:
++    system_headers += [
++        'harfbuzz/hb-glib.h',
++        'harfbuzz/hb-ot.h',
++        'harfbuzz/hb.h',
++    ]
++
++if CONFIG['MOZ_SYSTEM_OGG']:
++    system_headers += [
++        'ogg/ogg.h',
++        'ogg/os_types.h',
++    ]
++
++if CONFIG['MOZ_SYSTEM_THEORA']:
++    system_headers += [
++        'theora/theoradec.h',
++    ]
++
++if CONFIG['MOZ_SYSTEM_VORBIS']:
++    system_headers += [
++        'vorbis/codec.h',
++        'vorbis/vorbisenc.h',
++    ]
++
++if CONFIG['MOZ_SYSTEM_TREMOR']:
++    system_headers += [
++        'tremor/ivorbiscodec.h',
++    ]
++
+ if CONFIG['MOZ_SYSTEM_LIBVPX']:
+     system_headers += [
+         'vpx_mem/vpx_mem.h',
