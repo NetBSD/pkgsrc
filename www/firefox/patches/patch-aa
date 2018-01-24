@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.54 2017/09/30 05:34:11 ryoon Exp $
+$NetBSD: patch-aa,v 1.55 2018/01/24 16:52:08 ryoon Exp $
 
 * Disable libjpeg-turbo check
 * Add system libraries option
 * Add OSS audio support
 
---- old-configure.in.orig	2017-09-14 20:15:53.000000000 +0000
+--- old-configure.in.orig	2018-01-11 20:17:05.000000000 +0000
 +++ old-configure.in
-@@ -1963,11 +1963,7 @@ if test "$MOZ_SYSTEM_JPEG" = 1; then
+@@ -1959,11 +1959,7 @@ if test "$MOZ_SYSTEM_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -19,17 +19,17 @@ $NetBSD: patch-aa,v 1.54 2017/09/30 05:34:11 ryoon Exp $
                     MOZ_SYSTEM_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -2606,6 +2602,9 @@ if test -n "$MOZ_WEBRTC"; then
-     AC_DEFINE(MOZ_WEBRTC_ASSERT_ALWAYS)
-     MOZ_RAW=1
- 
+@@ -2552,6 +2548,9 @@ if test -n "$MOZ_WEBRTC"; then
+     if test -n "$MOZ_X11"; then
+       MOZ_WEBRTC_X11_LIBS="-lXext -lXdamage -lXfixes -lXcomposite"
+     fi
++
 +    dnl with libv4l2 we can support more cameras
 +    PKG_CHECK_MODULES(MOZ_LIBV4L2, libv4l2)
-+
- dnl enable once Signaling lands
-     MOZ_WEBRTC_SIGNALING=1
-     AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -2648,7 +2647,7 @@ dnl Use integers over floats for audio o
+ else
+     MOZ_SYNTH_PICO=
+ fi
+@@ -2577,7 +2576,7 @@ dnl Use integers over floats for audio o
  dnl (regarless of the CPU architecture, because audio
  dnl backends for those platforms don't support floats. We also
  dnl use integers on ARM with other OS, because it's more efficient.
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.54 2017/09/30 05:34:11 ryoon Exp $
      MOZ_SAMPLE_TYPE_S16=1
      AC_DEFINE(MOZ_SAMPLE_TYPE_S16)
      AC_SUBST(MOZ_SAMPLE_TYPE_S16)
-@@ -2686,6 +2685,111 @@ if test -n "$MOZ_APPLEMEDIA"; then
+@@ -2615,6 +2614,111 @@ if test -n "$MOZ_APPLEMEDIA"; then
  fi
  fi # COMPILE_ENVIRONMENT
  
@@ -150,7 +150,7 @@ $NetBSD: patch-aa,v 1.54 2017/09/30 05:34:11 ryoon Exp $
  dnl system libvpx Support
  dnl ========================================================
  MOZ_ARG_WITH_BOOL(system-libvpx,
-@@ -2846,6 +2950,67 @@ AC_DEFINE(MOZ_WEBM_ENCODER)
+@@ -2775,6 +2879,67 @@ AC_DEFINE(MOZ_WEBM_ENCODER)
  AC_SUBST(MOZ_WEBM_ENCODER)
  
  dnl ==================================
@@ -218,7 +218,7 @@ $NetBSD: patch-aa,v 1.54 2017/09/30 05:34:11 ryoon Exp $
  dnl = Check alsa availability on Linux
  dnl ==================================
  
-@@ -4396,6 +4561,27 @@ dnl ====================================
+@@ -4260,6 +4425,27 @@ dnl ====================================
  AC_SUBST(MOZ_LINUX_32_SSE2_STARTUP_ERROR)
  
  dnl ========================================================
