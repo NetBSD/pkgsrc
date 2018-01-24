@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2017/05/29 13:23:41 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/01/24 17:00:09 ryoon Exp $
 
-DISTNAME=	pkgconf-1.3.5
+DISTNAME=	pkgconf-1.4.1
 CATEGORIES=	devel
-MASTER_SITES=	http://rabbit.dereferenced.org/~nenolod/distfiles/
+MASTER_SITES=	https://distfiles.dereferenced.org/pkgconf/
 
 MAINTAINER=	nico@orgrim.net
 HOMEPAGE=	https://github.com/pkgconf/pkgconf
