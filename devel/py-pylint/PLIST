@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/12/17 16:32:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/01/24 08:37:46 adam Exp $
 bin/epylint${PYVERSSUFFIX}
 bin/pylint${PYVERSSUFFIX}
 bin/pyreverse${PYVERSSUFFIX}
@@ -421,6 +421,7 @@ ${PYSITELIB}/pylint/test/functional/import_error.txt
 ${PYSITELIB}/pylint/test/functional/inconsistent_mro.py
 ${PYSITELIB}/pylint/test/functional/inconsistent_mro.txt
 ${PYSITELIB}/pylint/test/functional/inconsistent_returns.py
+${PYSITELIB}/pylint/test/functional/inconsistent_returns.rc
 ${PYSITELIB}/pylint/test/functional/inconsistent_returns.txt
 ${PYSITELIB}/pylint/test/functional/indexing_exception.py
 ${PYSITELIB}/pylint/test/functional/indexing_exception.rc
