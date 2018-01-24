@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2018/01/24 00:45:21 minskim Exp $
+${PYSITELIB}/powerlaw.py
+${PYSITELIB}/powerlaw.pyc
+${PYSITELIB}/powerlaw.pyo
