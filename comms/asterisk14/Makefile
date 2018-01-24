@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2018/01/01 21:18:17 adam Exp $
+# $NetBSD: Makefile,v 1.18 2018/01/24 05:51:40 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 
-DISTNAME=	asterisk-14.5.0
+DISTNAME=	asterisk-14.7.5
 #PKGREVISION=	6
-PKGREVISION=	4
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -142,7 +141,7 @@ PLIST.unbound=	yes
 .include "options.mk"
 
 # check sounds/Makefile for current version when upgrading package
-DISTFILES+=	asterisk-extra-sounds-en-gsm-1.5.tar.gz
+DISTFILES+=	asterisk-extra-sounds-en-gsm-1.5.1.tar.gz
 
 # Override default paths in config files
 SUBST_CLASSES+=		configs
@@ -252,9 +251,9 @@ post-patch:
 
 post-install:
 # check sounds directory for current versions when upgrading package
-	${TAR} xzf ${WRKSRC}/sounds/asterisk-core-sounds-en-gsm-1.5.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
+	${TAR} xzf ${WRKSRC}/sounds/asterisk-core-sounds-en-gsm-1.6.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
 	${TAR} xzf ${WRKSRC}/sounds/asterisk-moh-opsound-wav-2.03.tar.gz -C ${DESTDIR}${ASTDATADIR}/moh
-	${TAR} xzf ${DISTDIR}/${DIST_SUBDIR}/asterisk-extra-sounds-en-gsm-1.5.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
+	${TAR} xzf ${DISTDIR}/${DIST_SUBDIR}/asterisk-extra-sounds-en-gsm-1.5.1.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
 	${INSTALL_DATA} ${WRKSRC}/BUGS ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/CHANGES ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
