@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/06/21 13:33:47 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/01/24 05:51:40 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -517,15 +517,15 @@ libdata/asterisk/scripts/ast_coredumper
 libdata/asterisk/scripts/ast_logescalator
 libdata/asterisk/scripts/ast_loggrabber
 libdata/asterisk/scripts/refcounter.py
-libdata/asterisk/sounds/en/.asterisk-core-sounds-en-gsm-1.5
+libdata/asterisk/sounds/en/.asterisk-core-sounds-en-gsm-1.6
 libdata/asterisk/sounds/en/1-for-am-2-for-pm.gsm
 libdata/asterisk/sounds/en/1-yes-2-no.gsm
-libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.5
-libdata/asterisk/sounds/en/CHANGES-asterisk-extra-en-1.5
-libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.5
-libdata/asterisk/sounds/en/CREDITS-asterisk-extra-en-1.5
-libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.5
-libdata/asterisk/sounds/en/LICENSE-asterisk-extra-en-1.5
+libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.6
+libdata/asterisk/sounds/en/CHANGES-asterisk-extra-en-1.5.1
+libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.6
+libdata/asterisk/sounds/en/CREDITS-asterisk-extra-en-1.5.1
+libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.6
+libdata/asterisk/sounds/en/LICENSE-asterisk-extra-en-1.5.1
 libdata/asterisk/sounds/en/OfficeSpace.gsm
 libdata/asterisk/sounds/en/Randulo-allison.gsm
 libdata/asterisk/sounds/en/SIP_Test_Failure.gsm
@@ -791,6 +791,8 @@ libdata/asterisk/sounds/en/confbridge-begin-glorious-a.gsm
 libdata/asterisk/sounds/en/confbridge-begin-glorious-b.gsm
 libdata/asterisk/sounds/en/confbridge-begin-glorious-c.gsm
 libdata/asterisk/sounds/en/confbridge-begin-leader.gsm
+libdata/asterisk/sounds/en/confbridge-binaural-off.gsm
+libdata/asterisk/sounds/en/confbridge-binaural-on.gsm
 libdata/asterisk/sounds/en/confbridge-conf-begin.gsm
 libdata/asterisk/sounds/en/confbridge-conf-end.gsm
 libdata/asterisk/sounds/en/confbridge-dec-list-vol-in.gsm
