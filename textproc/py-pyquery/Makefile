@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/10/22 20:39:23 adam Exp $
+# $NetBSD: Makefile,v 1.8 2018/01/24 11:51:06 adam Exp $
 
-DISTNAME=	pyquery-1.3.0
+DISTNAME=	pyquery-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyquery/}

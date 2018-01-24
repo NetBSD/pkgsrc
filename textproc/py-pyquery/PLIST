@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/10/22 20:39:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/24 11:51:06 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -18,3 +18,6 @@ ${PYSITELIB}/pyquery/openers.pyo
 ${PYSITELIB}/pyquery/pyquery.py
 ${PYSITELIB}/pyquery/pyquery.pyc
 ${PYSITELIB}/pyquery/pyquery.pyo
+${PYSITELIB}/pyquery/text.py
+${PYSITELIB}/pyquery/text.pyc
+${PYSITELIB}/pyquery/text.pyo
