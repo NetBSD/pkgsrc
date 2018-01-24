@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.330 2018/01/23 11:24:15 adam Exp $
+$NetBSD: CHANGES-2018,v 1.331 2018/01/24 00:46:30 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -561,3 +561,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-lexicon to 2.1.17 [fhajny 2018-01-23]
 	Updated devel/py-gobject-shared to 2.28.7 [adam 2018-01-23]
 	Updated devel/py-gobject to 2.28.7 [adam 2018-01-23]
+	Added math/py-powerlaw version 1.4.3 [minskim 2018-01-24]
