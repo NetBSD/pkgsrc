@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.73 2017/10/30 18:36:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.74 2018/01/24 13:44:14 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -188,8 +188,10 @@ share/doc/sqlite3/c3ref/value_subtype.html
 share/doc/sqlite3/c3ref/vfs.html
 share/doc/sqlite3/c3ref/vfs_find.html
 share/doc/sqlite3/c3ref/vtab.html
+share/doc/sqlite3/c3ref/vtab_collation.html
 share/doc/sqlite3/c3ref/vtab_config.html
 share/doc/sqlite3/c3ref/vtab_cursor.html
+share/doc/sqlite3/c3ref/vtab_nochange.html
 share/doc/sqlite3/c3ref/vtab_on_conflict.html
 share/doc/sqlite3/c3ref/wal_autocheckpoint.html
 share/doc/sqlite3/c3ref/wal_checkpoint.html
@@ -533,6 +535,7 @@ share/doc/sqlite3/lang_transaction.html
 share/doc/sqlite3/lang_update.html
 share/doc/sqlite3/lang_vacuum.html
 share/doc/sqlite3/lang_with.html
+share/doc/sqlite3/lemon.html
 share/doc/sqlite3/limits.html
 share/doc/sqlite3/loadext.html
 share/doc/sqlite3/lockingv3.html
@@ -605,6 +608,7 @@ share/doc/sqlite3/releaselog/3_1_6.html
 share/doc/sqlite3/releaselog/3_20_0.html
 share/doc/sqlite3/releaselog/3_20_1.html
 share/doc/sqlite3/releaselog/3_21_0.html
+share/doc/sqlite3/releaselog/3_22_0.html
 share/doc/sqlite3/releaselog/3_2_0.html
 share/doc/sqlite3/releaselog/3_2_1.html
 share/doc/sqlite3/releaselog/3_2_2.html
@@ -796,6 +800,7 @@ share/doc/sqlite3/sqlite.css~
 share/doc/sqlite3/sqlite.html
 share/doc/sqlite3/stmt.html
 share/doc/sqlite3/support.html
+share/doc/sqlite3/swarmvtab.html
 share/doc/sqlite3/syntax.html
 share/doc/sqlite3/syntax/alter-table-stmt.html
 share/doc/sqlite3/syntax/analyze-stmt.html
@@ -875,7 +880,9 @@ share/doc/sqlite3/versionnumbers.html
 share/doc/sqlite3/vfs.html
 share/doc/sqlite3/vtab.html
 share/doc/sqlite3/wal.html
+share/doc/sqlite3/walformat.html
 share/doc/sqlite3/whentouse.html
 share/doc/sqlite3/whyc.html
 share/doc/sqlite3/withoutrowid.html
 share/doc/sqlite3/zeroconf.html
+share/doc/sqlite3/zipfile.html
