@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/01/17 20:16:58 markd Exp $
+# $NetBSD: Makefile,v 1.16 2018/01/24 19:06:11 markd Exp $
 
 DISTNAME=	kinit-${KF5VER}
 CATEGORIES=	x11
@@ -12,8 +12,6 @@ LICENSE=	gnu-lgpl-v2.1
 BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
-
-BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
 
 .include "../../devel/kio/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
