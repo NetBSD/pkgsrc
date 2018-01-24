@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.281 2018/01/07 11:23:37 rillig Exp $
+# $NetBSD: replace.mk,v 1.282 2018/01/24 13:30:04 leot Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -131,6 +131,7 @@ PKG_FAIL_REASON+=	"\`\`bison'' and \`\`byacc'' conflict in USE_TOOLS."
 #    BOOTSTRAP_DEPENDS:	:bootstrap
 #    TOOL_DEPENDS:	:build (default), :pkgsrc
 #    DEPENDS:		:run
+#    TEST_DEPENDS:	:test
 #
 .for _t_ in ${USE_TOOLS:N*\:*} ${USE_TOOLS:M*\:bootstrap}
 _TOOLS_DEPMETHOD.${_t_:C/:.*//}=	BOOTSTRAP_DEPENDS
@@ -140,6 +141,9 @@ _TOOLS_DEPMETHOD.${_t_:C/:.*//}=	TOOL_DEPENDS
 .endfor
 .for _t_ in ${USE_TOOLS:M*\:run}
 _TOOLS_DEPMETHOD.${_t_:C/:.*//}=	DEPENDS
+.endfor
+.for _t_ in ${USE_TOOLS:M*\:test}
+_TOOLS_DEPMETHOD.${_t_:C/:.*//}=	TEST_DEPENDS
 .endfor
 
 .if !empty(_USE_TOOLS:Mbison-yacc)	# bison-yacc > yacc
