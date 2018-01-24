@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.332 2018/01/24 05:54:24 jnemeth Exp $
+$NetBSD: CHANGES-2018,v 1.333 2018/01/24 07:57:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -563,3 +563,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-gobject to 2.28.7 [adam 2018-01-23]
 	Added math/py-powerlaw version 1.4.3 [minskim 2018-01-24]
 	Updated comms/asterisk14 to 14.7.5 [jnemeth 2018-01-24]
+	Updated www/curl to 7.58.0 [wiz 2018-01-24]
