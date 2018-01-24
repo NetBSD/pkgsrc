@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.342 2018/01/24 16:31:54 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.343 2018/01/24 16:36:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -580,3 +580,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/nspr to 4.18 [ryoon 2018-01-24]
 	Updated devel/nss to 3.35 [ryoon 2018-01-24]
 	Updated www/firefox52 to 52.6.0 [ryoon 2018-01-24]
+	Updated www/firefox52-l10n to 52.6.0 [ryoon 2018-01-24]
