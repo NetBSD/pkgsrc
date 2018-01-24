@@ -1,10 +1,10 @@
-$NetBSD: patch-intl_unicharutil_util_moz.build,v 1.6 2017/06/14 11:28:44 ryoon Exp $
+$NetBSD: patch-intl_unicharutil_util_moz.build,v 1.7 2018/01/24 16:52:08 ryoon Exp $
 
---- intl/unicharutil/util/moz.build.orig	2017-06-05 20:45:20.000000000 +0000
+--- intl/unicharutil/util/moz.build.orig	2018-01-11 20:17:05.000000000 +0000
 +++ intl/unicharutil/util/moz.build
-@@ -29,4 +29,7 @@ if CONFIG['ENABLE_INTL_API']:
-         'ICUUtils.cpp',
-     ]
+@@ -25,4 +25,7 @@ UNIFIED_SOURCES += [
+     'nsUnicodeProperties.cpp',
+ ]
  
 +if CONFIG['MOZ_SYSTEM_HARFBUZZ']:
 +    CXXFLAGS += CONFIG['MOZ_HARFBUZZ_CFLAGS']
