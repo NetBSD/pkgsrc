@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2018/01/24 12:40:07 jperkin Exp $
+bin/yarn
+bin/yarnpkg
+libexec/yarn/bin/yarn.js
+libexec/yarn/lib/cli.js
+libexec/yarn/lib/v8-compile-cache.js
