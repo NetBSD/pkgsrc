@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2017/11/25 12:39:16 wiz Exp $
-bin/zconfig
-bin/zconfig_schema2html
+@comment $NetBSD: PLIST,v 1.6 2018/01/24 10:17:03 adam Exp $
+bin/zconfig${PYVERSSUFFIX}
+bin/zconfig_schema2html${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
