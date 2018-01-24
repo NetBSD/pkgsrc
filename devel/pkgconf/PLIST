@@ -1,13 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2017/05/05 01:55:56 mef Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/24 17:00:09 ryoon Exp $
 bin/pkg-config
 bin/pkgconf
 include/pkgconf/libpkgconf/bsdstubs.h
 include/pkgconf/libpkgconf/iter.h
+include/pkgconf/libpkgconf/libpkgconf-api.h
 include/pkgconf/libpkgconf/libpkgconf.h
 include/pkgconf/libpkgconf/stdinc.h
 lib/libpkgconf.la
 lib/pkgconfig/libpkgconf.pc
 man/man1/pkgconf.1
+man/man5/pc.5
+man/man7/pkg.m4.7
 share/aclocal/pkg.m4
 share/doc/pkgconf/AUTHORS
 share/doc/pkgconf/README.md
