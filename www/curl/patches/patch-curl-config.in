@@ -1,10 +1,10 @@
-$NetBSD: patch-curl-config.in,v 1.7 2015/08/08 02:44:16 spz Exp $
+$NetBSD: patch-curl-config.in,v 1.7.22.1 2018/01/24 19:43:13 bsiegert Exp $
 
 - make "curl-config --libs" return proper ldflags for shared libraries
 
---- curl-config.in.orig	2015-06-03 07:38:20.000000000 +0000
+--- curl-config.in.orig	2018-01-22 08:55:10.000000000 +0000
 +++ curl-config.in
-@@ -148,9 +148,9 @@ while test $# -gt 0; do
+@@ -149,9 +149,9 @@ while test $# -gt 0; do
             CURLLIBDIR=""
          fi
          if test "X@REQUIRE_LIB_DEPS@" = "Xyes"; then
@@ -15,4 +15,4 @@ $NetBSD: patch-curl-config.in,v 1.7 2015/08/08 02:44:16 spz Exp $
 +          echo @LDFLAGS@ ${CURLLIBDIR}-lcurl
          fi
          ;;
- 
+     --ssl-backends)
