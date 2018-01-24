@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.192 2018/01/24 07:57:19 wiz Exp $
+# $NetBSD: Makefile,v 1.193 2018/01/24 12:17:43 leot Exp $
 
 DISTNAME=	curl-7.58.0
 CATEGORIES=	www
@@ -26,10 +26,7 @@ INSTALLATION_DIRS=	share/doc/curl
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
 TEST_TARGET=		check
-USE_TOOLS+=		perl
-.endif
 
 .include "options.mk"
 
