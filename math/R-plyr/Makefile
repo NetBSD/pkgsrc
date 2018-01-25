@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/04/09 08:30:36 wen Exp $
+# $NetBSD: Makefile,v 1.6 2018/01/25 18:14:36 minskim Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,7 @@ COMMENT=	Tools for splitting, applying and combining data
 LICENSE=	mit
 
 R_PKGNAME=	plyr
-R_PKGVER=	1.8.3
+R_PKGVER=	1.8.4
 
 USE_LANGUAGES+=	c c++
 
