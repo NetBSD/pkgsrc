@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.353 2018/01/25 05:47:47 adam Exp $
+$NetBSD: CHANGES-2018,v 1.354 2018/01/25 09:52:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -592,3 +592,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/R-gss version 2.1.7 [minskim 2018-01-24]
 	Updated math/R-mvtnorm to 1.0.6 [minskim 2018-01-25]
 	Updated textproc/hyphen to 2.8.8 [adam 2018-01-25]
+	Updated devel/py-ipython to 6.2.1nb4 [adam 2018-01-25]
+	Updated devel/py-jupyter_client to 5.2.2 [adam 2018-01-25]
+	Updated devel/py-ipykernel to 4.8.0 [adam 2018-01-25]
