@@ -1,19 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2017/09/29 13:32:01 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2018/01/25 15:51:24 jperkin Exp $
 
-DISTNAME=	TECkit_2.5.3
-PKGNAME=	${DISTNAME:S/_/-/}
+DISTNAME=	TECkit-2.5.7
 CATEGORIES=	converters
-#
-# scripts.sil.org is using ViewVC to dynamically generate a new .tar.gz.
-# each .tar.gz has a new gzip timestamp, so its different each download.
-# this makes it impossible to match checksum in distinfo, so we pull it
-# from a static file on MASTER_SITE_BACKUP instead.
-#
-#MASTER_SITES=	http://scripts.sil.org/svn-view/teckit/TAGS/
-MASTER_SITES=	${MASTER_SITE_BACKUP}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=silnrsi/}
+GITHUB_PROJECT=	teckit
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&cat_id=TECkit
+HOMEPAGE=	https://github.com/silnrsi/teckit/
 COMMENT=	Low-level toolkit to perform encoding conversions
 LICENSE=	gnu-lgpl-v2.1 OR cpl-1.0
 
@@ -24,14 +18,8 @@ USE_TOOLS+=	autoconf automake
 
 PKGCONFIG_OVERRIDE=	teckit.pc.in
 
-.include "../../mk/compiler.mk"
-
-.if !empty(CC_VERSION:Mgcc-[5-9]*)
-CFLAGS+=	-Wno-narrowing
-.endif
-
 pre-configure:
-		(cd ${WRKSRC}; ./autogen.sh)
+	(cd ${WRKSRC}; ./autogen.sh)
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
