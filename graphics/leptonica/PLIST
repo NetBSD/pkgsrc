@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/03/17 12:44:58 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/25 11:27:35 adam Exp $
 bin/convertfilestopdf
 bin/convertfilestops
 bin/convertformat
@@ -7,10 +7,6 @@ bin/convertsegfilestops
 bin/converttopdf
 bin/converttops
 bin/fileinfo
-bin/printimage
-bin/printsplitimage
-bin/printtiff
-bin/splitimage2pdf
 bin/xtractprotos
 include/leptonica/allheaders.h
 include/leptonica/alltypes.h
