@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2017/11/26 10:42:46 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2018/01/25 10:41:37 jperkin Exp $
 
 DISTNAME=		fam-2.7.0
 PKGREVISION=		9
@@ -76,6 +76,11 @@ SUBST_SED.dirent=	-e 's,sys/dir.h,dirent.h,g'
 SUBST_SED.dirent+=	-e 's/struct direct/struct dirent/g'
 
 .include "../../mk/compiler.mk"
+
+# type 'unsigned long' to 'rpcprog_t' (aka 'unsigned int')
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS.SunOS+=	-Wno-c++11-narrowing
+.endif
 
 .if !empty(PKGSRC_COMPILER:Msunpro)
 BUILDLINK_TRANSFORM+=	rm:-lstdc++
