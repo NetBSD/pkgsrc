@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/12/13 08:59:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/25 09:51:57 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/ipykernel/__init__.py
 ${PYSITELIB}/ipykernel/__init__.pyc
@@ -6,6 +6,9 @@ ${PYSITELIB}/ipykernel/__init__.pyo
 ${PYSITELIB}/ipykernel/__main__.py
 ${PYSITELIB}/ipykernel/__main__.pyc
 ${PYSITELIB}/ipykernel/__main__.pyo
+${PYSITELIB}/ipykernel/_eventloop_macos.py
+${PYSITELIB}/ipykernel/_eventloop_macos.pyc
+${PYSITELIB}/ipykernel/_eventloop_macos.pyo
 ${PYSITELIB}/ipykernel/_version.py
 ${PYSITELIB}/ipykernel/_version.pyc
 ${PYSITELIB}/ipykernel/_version.pyo
