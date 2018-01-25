@@ -1,0 +1,2 @@
+retry_decorator is a Python module that exposes a decorator that retries the
+decorated function with exponential backoff.
