@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.7 2018/01/14 10:47:43 joerg Exp $
+# $NetBSD: depends.mk,v 1.8 2018/01/25 00:34:27 joerg Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -62,7 +62,7 @@ _LIST_DEPENDS_CMD=	\
 		PKGSRCDIR=${PKGSRCDIR:Q} PWD_CMD=${PWD_CMD:Q} SED=${SED:Q} \
 		${SH} ${PKGSRCDIR}/mk/pkgformat/pkg/list-dependencies \
 			" "${BOOTSTRAP_DEPENDS:Q} \
-			" "${TEST_DEPENDS:Q} \
+			" " \
 			" "${TOOL_DEPENDS:Q} \
 			" "${BUILD_DEPENDS:Q} \
 			" "${DEPENDS:Q}
