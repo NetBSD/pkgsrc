@@ -1,4 +1,6 @@
-$NetBSD: patch-viewer_scrollview.cpp,v 1.1 2013/04/29 21:31:12 joerg Exp $
+$NetBSD: patch-viewer_scrollview.cpp,v 1.2 2018/01/25 11:30:34 adam Exp $
+
+Add missing include.
 
 --- viewer/scrollview.cpp.orig	2013-04-29 19:49:57.000000000 +0000
 +++ viewer/scrollview.cpp
