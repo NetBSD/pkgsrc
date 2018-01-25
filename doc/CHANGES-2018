@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.354 2018/01/25 09:52:48 adam Exp $
+$NetBSD: CHANGES-2018,v 1.355 2018/01/25 11:30:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -595,3 +595,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-ipython to 6.2.1nb4 [adam 2018-01-25]
 	Updated devel/py-jupyter_client to 5.2.2 [adam 2018-01-25]
 	Updated devel/py-ipykernel to 4.8.0 [adam 2018-01-25]
+	Updated graphics/leptonica to 1.75.0 [adam 2018-01-25]
+	Updated graphics/tesseract to 3.05.01nb3 [adam 2018-01-25]
