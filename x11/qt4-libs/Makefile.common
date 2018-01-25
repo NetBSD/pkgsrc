@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.46 2017/09/20 19:19:58 adam Exp $
+# $NetBSD: Makefile.common,v 1.47 2018/01/25 13:31:51 jperkin Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -80,7 +80,7 @@ CXXFLAGS+=	-std=c++98
 .endif
 
 .if ${OPSYS} == "SunOS"
-.  if !empty(CC_VERSION:Mgcc*)
+.  if !empty(PKGSRC_COMPILER:Mgcc) || !empty(PKGSRC_COMPILER:Mclang)
 .    if ${ABI:U} == "64"
 CONFIGURE_ARGS+=	-platform solaris-g++-64
 .    else
