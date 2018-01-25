@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.112 2018/01/15 12:21:35 jperkin Exp $
+$NetBSD: distinfo,v 1.113 2018/01/25 12:33:49 jperkin Exp $
 
 SHA1 (boost_1_66_0.tar.bz2) = b6b284acde2ad7ed49b44e856955d7b1ea4e9459
 RMD160 (boost_1_66_0.tar.bz2) = ee5dafdfa49adf50a5333cef1f55dac4f70b4c14
@@ -10,6 +10,7 @@ SHA1 (patch-boost_atomic_detail_ops_gcc_sparc.hpp) = 6cd1b6fbb8659d7af8ecff63d45
 SHA1 (patch-boost_config_detail_posix__features.hpp) = 7d310574e7020c79c8bfa87cff4db0a2edc5b0bc
 SHA1 (patch-boost_config_detail_suffix.hpp) = 12e22085e7c292b2451ea8bc581beaddcb936252
 SHA1 (patch-boost_config_platform_bsd.hpp) = 234dfd1582dd62f0b149ee12aabcc1f1f602af97
+SHA1 (patch-boost_config_platform_solaris.hpp) = fae270ced994e8c343f75ea222706a02b1b81422
 SHA1 (patch-boost_config_stdlib_libcpp.hpp) = d57ee228c9dfa43665d261e7423fd10122dfd1a7
 SHA1 (patch-boost_config_stdlib_libstdcpp3.hpp) = 52ebedd5e80b3a8c257eccb28cd2db76cb1ca01e
 SHA1 (patch-boost_core_noncopyable.hpp) = a693e5eda7fc303e1bd86ecfab40321d771af6fe
