@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2018/01/10 09:47:46 adam Exp $
+# $NetBSD: Makefile,v 1.7 2018/01/25 09:47:35 adam Exp $
 
-DISTNAME=	jupyter_client-5.2.1
+DISTNAME=	jupyter_client-5.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_client/}
@@ -12,6 +12,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.1:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-jupyter_core-[0-9]*:../../devel/py-jupyter_core
+DEPENDS+=	${PYPKGPREFIX}-tornado>=4.1:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.1.0:../../devel/py-traitlets
 DEPENDS+=	${PYPKGPREFIX}-zmq>=13.0.0:../../net/py-zmq
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
