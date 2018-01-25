@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2018/01/17 19:16:05 markd Exp $
+# $NetBSD: Makefile,v 1.50 2018/01/25 14:08:59 jperkin Exp $
 
 DISTNAME=	sip-4.19.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -34,7 +34,8 @@ CONFIGURE_ARGS+=	LFLAGS_PLUGIN="-bundle -flat_namespace -undefined suppress"
 .else
 CONFIGURE_ARGS+=	CFLAGS_SHLIB=-fPIC
 CONFIGURE_ARGS+=	CXXFLAGS_SHLIB=-fPIC
-.  if ${OPSYS} == "SunOS" && !empty(CC_VERSION:Mgcc*)
+.  if ${OPSYS} == "SunOS" && \
+      (!empty(CC_VERSION:Mgcc*) || !empty(PKGSRC_COMPILER:Mclang))
 CONFIGURE_ARGS+=	-p solaris-g++
 # gcc3 uses -mimpure-text to not pass -assert pure-text to the linker
 CONFIGURE_ARGS+=	LFLAGS_SHLIB="-shared -mimpure-text"
