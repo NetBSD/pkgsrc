@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.351 2018/01/24 23:49:16 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.352 2018/01/25 00:20:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -590,3 +590,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/xenkernel48 to 4.8.3 [bouyer 2018-01-25]
 	Updated sysutils/xentools48 to 4.8.3 [bouyer 2018-01-25]
 	Added math/R-gss version 2.1.7 [minskim 2018-01-24]
+	Updated math/R-mvtnorm to 1.0.6 [minskim 2018-01-25]
