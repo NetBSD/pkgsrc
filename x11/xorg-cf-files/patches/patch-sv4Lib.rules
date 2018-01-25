@@ -1,7 +1,7 @@
-$NetBSD: patch-sv4Lib.rules,v 1.1 2012/02/15 15:25:15 hans Exp $
+$NetBSD: patch-sv4Lib.rules,v 1.2 2018/01/25 13:01:23 jperkin Exp $
 
---- sv4Lib.rules.orig	2009-10-16 23:45:42.000000000 +0200
-+++ sv4Lib.rules	2012-01-15 22:45:33.359398571 +0100
+--- sv4Lib.rules.orig	2015-12-22 01:28:02.000000000 +0000
++++ sv4Lib.rules
 @@ -63,26 +63,50 @@ XCOMM $XFree86: xc/config/cf/sv4Lib.rule
  /*
   * InstallSharedLibrary - generate rules to install the shared library.
@@ -61,3 +61,24 @@ $NetBSD: patch-sv4Lib.rules,v 1.1 2012/02/15 15:25:15 hans Exp $
  #endif
  
  #endif /* InstallSharedLibrary */
+@@ -97,17 +121,17 @@ install:: Concat(lib,libname.so.rev)
+ #ifndef LinkWithExports
+ # if UseExportLists
+ #  define LinkWithExports(libname,rev,solist,down,up) \
+-	(cd down; $(CCENVSETUP) SharedLibraryLdCmd -o up/$@~ $(SHLIBLDFLAGS) -h $@ solist $(REQUIREDLIBS))	@@\
++	(cd down; $(CCENVSETUP) SharedLibraryLdCmd -o up/$@~ $(SHLIBLDFLAGS) -Wl,-h,$@ solist $(REQUIREDLIBS))	@@\
+ 	if [ -f Concat(lib,libname.elist) ]; then \			@@\
+ 	    $(RM) down/$@.exports $@.list; \				@@\
+ 	    $(CPP) $(ALLINCLUDES) $(EXTRA_DEFINES) $(PROTO_DEFINES) $(THREADS_DEFINES) $(DEFINES) Concat(lib,libname.elist) | CppSedMagic >$@.list; \	@@\
+ 	    $(EXPORTLISTGEN) $@~ $@.list > down/$@.exports; \		@@\
+-	    (cd down; $(CCENVSETUP) SharedLibraryLdCmd -o up/$@~ $(SHLIBLDFLAGS) -h $@ ShlibExportListOpt($@.exports) solist $(REQUIREDLIBS)); \	@@\
++	    (cd down; $(CCENVSETUP) SharedLibraryLdCmd -o up/$@~ $(SHLIBLDFLAGS) -Wl,-h,$@ ShlibExportListOpt($@.exports) solist $(REQUIREDLIBS)); \	@@\
+ 	    $(RM) down/$@.exports $@.list; \				@@\
+ 	fi;
+ # else
+ #  define LinkWithExports(libname,rev,solist,down,up) \
+-	(cd down; $(CCENVSETUP) SharedLibraryLdCmd -o up/$@~ $(SHLIBLDFLAGS) -h $@ solist $(REQUIREDLIBS))
++	(cd down; $(CCENVSETUP) SharedLibraryLdCmd -o up/$@~ $(SHLIBLDFLAGS) -Wl,-h,$@ solist $(REQUIREDLIBS))
+ # endif
+ #endif
+ 
