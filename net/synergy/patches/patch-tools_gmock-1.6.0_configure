@@ -1,9 +1,9 @@
-$NetBSD: patch-tools_gmock-1.6.0_configure,v 1.2 2015/02/03 18:49:34 tnn Exp $
+$NetBSD: patch-tools_gmock-1.6.0_configure,v 1.3 2018/01/25 14:13:22 tnn Exp $
 
 Fix wrong usage of test(1).
 
---- ext/gmock-1.6.0/configure.orig	2011-05-07 02:25:30.000000000 +0000
-+++ ext/gmock-1.6.0/configure
+--- ext/gmock/configure.orig	2011-05-07 02:25:30.000000000 +0000
++++ ext/gmock/configure
 @@ -14896,7 +14896,7 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
  
         have_pthreads="$acx_pthread_ok"
