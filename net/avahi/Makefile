@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2017/11/30 16:45:33 adam Exp $
+# $NetBSD: Makefile,v 1.76 2018/01/25 10:24:50 jperkin Exp $
 
 DISTNAME=		avahi-0.6.32
 PKGREVISION=		9
@@ -38,7 +38,7 @@ RCD_SCRIPTS=		avahidaemon
 BUILD_DEFS+=		VARBASE PKG_SYSCONFBASE
 PLIST_SRC=		${PKGDIR}/PLIST
 PKG_SYSCONFSUBDIR=	avahi
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c99 c++
 
 PKG_USERS=		${AVAHI_USER}:${AVAHI_GROUP}
 PKG_GROUPS=		${AVAHI_GROUP}
@@ -47,7 +47,7 @@ PKG_GECOS.${AVAHI_USER}=	Avahi user
 .include "options.mk"
 
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
-CPPFLAGS.SunOS+=	--std=c99 -D_XOPEN_SOURCE=600
+CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 # Not yet reported upstream.
 CPPFLAGS.Darwin+=	-D__APPLE_USE_RFC_3542
 
