@@ -1,20 +1,19 @@
-$NetBSD: distinfo,v 1.7 2017/09/26 06:10:27 maya Exp $
+$NetBSD: distinfo,v 1.8 2018/01/25 23:27:30 maya Exp $
 
-SHA1 (gcc-7.2.0.tar.xz) = 08a88199ed94fdf4940d118ba3c07028245cd5b7
-RMD160 (gcc-7.2.0.tar.xz) = fa8eed36c78cf135f9cc88e60845996b5cfaba52
-SHA512 (gcc-7.2.0.tar.xz) = f853cd6530b4055d8d8289da74687cb4c6d5f363598d386332d31852b581bac76c3adb7d61889edec3b779f63d8646f0122840f12965ce4a4389ba535dbbb6e1
-Size (gcc-7.2.0.tar.xz) = 62312628 bytes
+SHA1 (gcc-7.3.0.tar.xz) = 9689b9cae7b2886fdaa08449a26701f095c04e48
+RMD160 (gcc-7.3.0.tar.xz) = 31f6934a0e0c0ca84b6668110f9afdb91c1f9023
+SHA512 (gcc-7.3.0.tar.xz) = ad41a7e4584e40e92cdf860bc0288500fbaf5dfb7e8c3fcabe9eba809c87bcfa85b46c19c19921b0cdf6d05483faede8287bb9ea120c0d1559449a70e602c8d4
+Size (gcc-7.3.0.tar.xz) = 62462388 bytes
 SHA1 (isl-0.16.1.tar.bz2) = c5a2b201bf05229647e73203c0bf2d9679d4d21f
 RMD160 (isl-0.16.1.tar.bz2) = 5a99db3fe0d0a1f6bbac1ed4448f2403495c55b2
 SHA512 (isl-0.16.1.tar.bz2) = c188667a84dc5bdddb4ab7c35f89c91bf15a8171f4fcaf41301cf285fb7328846d9a367c096012fec4cc69d244f0bc9e95d84c09ec097394cd4093076f2a041b
 Size (isl-0.16.1.tar.bz2) = 1626446 bytes
 SHA1 (patch-contrib_download__prerequisites) = 86c6c16e0e3e3a0bcb38579a8b4004f603fac1ca
 SHA1 (patch-gcc_Makefile.in) = c0f97c75ba1d37eae894141edd58bb36b734f651
-SHA1 (patch-gcc_config.gcc) = fea8288c22bb2c4dd44a5e77c8f92dee8f8f6b18
+SHA1 (patch-gcc_config.gcc) = 943797cbbdbf25885b4f16a1a027d137ef68357e
 SHA1 (patch-gcc_config_arm_arm.h) = 92c8bff1063e153fec4454e6dea5334a42b0dad6
 SHA1 (patch-gcc_config_netbsd-protos.h) = 6d28864b4ccc8c1a63fe28e43601b84b63a00633
-SHA1 (patch-gcc_config_netbsd.c) = 85f786bce881ef2fc348f98ef81fdbc001076183
-SHA1 (patch-gcc_config_netbsd.h) = 81891a83bb17b99fdb2c9381b8e8a1767391c695
+SHA1 (patch-gcc_config_netbsd.h) = 8861abb345b3ad72574fbe7afca2ea78b81d9632
 SHA1 (patch-gcc_config_t-netbsd) = 802ad5706aa7ca9629f8e237f08fbb1569d28846
 SHA1 (patch-gcc_config_x-netbsd) = 6dc3d78e26df62054ea29f98ca51592858e671e3
 SHA1 (patch-gcc_configure) = 15fb7af267b79965f83bc64ce8aad1279b0ea52d
