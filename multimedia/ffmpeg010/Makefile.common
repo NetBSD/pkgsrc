@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2015/03/14 16:14:43 tnn Exp $
+# $NetBSD: Makefile.common,v 1.12 2018/01/25 14:15:25 jperkin Exp $
 # used by multimedia/ffmpeg010/Makefile
 
 DISTNAME=	ffmpeg-${DISTVERSION:S/-//g}
@@ -16,7 +16,7 @@ USE_TOOLS+=	gmake texi2html pod2man
 
 .include "../../mk/compiler.mk"
 
-.if ${OPSYS} == "SunOS" && empty(CC_VERSION:Mgcc*)
+.if !empty(PKGSRC_COMPILER:Msunpro)
 SUBST_CLASSES+=		sunwspro
 SUBST_MESSAGE.sunwspro=	Fixing compiler options for SunStudio C compiler.
 SUBST_STAGE.sunwspro=	post-configure
