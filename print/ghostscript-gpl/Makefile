@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2017/11/23 17:19:43 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2018/01/25 10:34:25 jperkin Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-gpl/}
@@ -76,8 +76,9 @@ CONFIGURE_ENV.HPUX+=	ac_cv_func_fopen64=no
 CFLAGS+=		-fPIC
 .endif
 
-.if ${OPSYS} == "SunOS" && !empty(CC_VERSION:Mgcc-[6-9]*)
-CPPFLAGS+=		-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
+# Not ideal but too many files hardcode _XOPEN_SOURCE=500.
+.if !empty(CC_VERSION:Mgcc-[6-9]*) || !empty(PKGSRC_COMPILER:Mclang)
+CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 .endif
 
 # Interim IRIX build fix, the real problem is that fontconfig.pc doesn't
