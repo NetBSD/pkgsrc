@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.53 2017/10/03 12:20:08 wiz Exp $
+# $NetBSD: Makefile.common,v 1.54 2018/01/25 14:15:26 jperkin Exp $
 # used by multimedia/ffmpeg2/Makefile
 # used by multimedia/ffplay2/Makefile
 
@@ -58,7 +58,7 @@ CONFIGURE_ENV+=		TMPDIR=${WRKSRC}/tmp
 
 .include "../../mk/compiler.mk"
 
-.if ${OPSYS} == "SunOS" && empty(CC_VERSION:Mgcc*)
+.if !empty(PKGSRC_COMPILER:Msunpro)
 SUBST_CLASSES+=		sunwspro
 SUBST_MESSAGE.sunwspro=	Fixing compiler options for SunStudio C compiler.
 SUBST_STAGE.sunwspro=	post-configure
