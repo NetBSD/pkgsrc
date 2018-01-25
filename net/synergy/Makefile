@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.46 2018/01/01 21:18:49 adam Exp $
+# $NetBSD: Makefile,v 1.47 2018/01/25 14:13:22 tnn Exp $
 
-DISTNAME=		synergy-1.8.8
-PKGREVISION=		2
+DISTNAME=		synergy-core-2.0.0
+PKGNAME=		${DISTNAME:S/-core//}
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_GITHUB:=symless/}
+GITHUB_PROJECT=		synergy-core
 GITHUB_TAG=		v${PKGVERSION_NOREV}-stable
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -12,7 +13,6 @@ COMMENT=		Let a user share a mouse and keyboard among computers
 LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c c++11
-USE_TOOLS+=		unzip
 # Main configuration is CMake, but subdirectories are GNU configure.
 # We need to set GNU_CONFIGURE=yes for config.{guess,sub} overrides to kick in.
 # We override the do-configure target to prevent pkgsrc from running both
@@ -20,10 +20,12 @@ USE_TOOLS+=		unzip
 USE_CMAKE=		yes
 GNU_CONFIGURE=		yes
 
-CONFIG_SUB_OVERRIDE+=	ext/gmock-1.6.0/build-aux/config.sub
-CONFIG_SUB_OVERRIDE+=	ext/gtest-1.6.0/build-aux/config.sub
-CONFIG_GUESS_OVERRIDE+=	ext/gmock-1.6.0/build-aux/config.guess
-CONFIG_GUESS_OVERRIDE+=	ext/gtest-1.6.0/build-aux/config.guess
+CONFIG_SUB_OVERRIDE+=	ext/gmock/build-aux/config.sub
+CONFIG_SUB_OVERRIDE+=	ext/gtest/build-aux/config.sub
+CONFIG_GUESS_OVERRIDE+=	ext/gmock/build-aux/config.guess
+CONFIG_GUESS_OVERRIDE+=	ext/gtest/build-aux/config.guess
+
+CONFIGURE_ENV+=		GIT_COMMIT=0bd448d5
 
 EXAMPLES=	MacReadme.txt org.synergy-foss.org.synergyc.plist \
 		org.synergy-foss.org.synergys.plist synergy.conf.example \
@@ -38,12 +40,6 @@ SUBST_SED.fix-paths=		-e 's,"/etc,"${PKG_SYSCONFDIR},g'
 
 BUILDLINK_TRANSFORM+=		rm:-march=native
 
-post-extract:
-	${MKDIR} ${WRKSRC}/ext/gmock-1.6.0
-	cd ${WRKSRC}/ext/gmock-1.6.0 && unzip -aqo ../gmock-1.6.0.zip
-	${MKDIR} ${WRKSRC}/ext/gtest-1.6.0
-	cd ${WRKSRC}/ext/gtest-1.6.0 && unzip -aqo ../gtest-1.6.0.zip
-
 .PHONY: do-configure
 do-configure: do-configure-cmake
 
@@ -54,6 +50,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${p} ${DESTDIR}${PREFIX}/bin/${p}
 	${INSTALL_MAN} ${WRKSRC}/doc/${p}.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${p}.1
 .endfor
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/synergy-core ${DESTDIR}${PREFIX}/bin/synergy-core
 .for f in ${EXAMPLES}
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
 .endfor
