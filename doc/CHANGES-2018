@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.358 2018/01/25 15:51:32 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.359 2018/01/25 18:14:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -600,3 +600,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xorg-cf-files to 1.0.6nb4 [jperkin 2018-01-25]
 	Updated net/synergy to 2.0.0 [tnn 2018-01-25]
 	Updated converters/TECkit to 2.5.7 [jperkin 2018-01-25]
+	Updated math/R-plyr to 1.8.4 [minskim 2018-01-25]
