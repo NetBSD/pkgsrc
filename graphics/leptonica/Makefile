@@ -1,18 +1,21 @@
-# $NetBSD: Makefile,v 1.9 2017/06/14 14:26:24 fhajny Exp $
+# $NetBSD: Makefile,v 1.10 2018/01/25 11:27:35 adam Exp $
 
-DISTNAME=	leptonica-1.74.4
+DISTNAME=	leptonica-1.75.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=danbloomberg/}
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.leptonica.org/
 COMMENT=	Software for image processing and image analysis applications
 LICENSE=	2-clause-bsd
 
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
+
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
+TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
