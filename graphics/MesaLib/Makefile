@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2017/09/03 08:53:09 wiz Exp $
+# $NetBSD: Makefile,v 1.140 2018/01/25 10:44:51 jperkin Exp $
 
 DISTNAME=	mesa-11.2.2
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -56,6 +56,9 @@ SUBST_STAGE.drirc=		pre-configure
 SUBST_MESSAGE.drirc=		Fixing hardcoded /etc/drirc references
 SUBST_FILES.drirc+=		src/mesa/drivers/dri/common/xmlconfig.c
 SUBST_SED.drirc+=		 -e 's|/etc/|${PREFIX}/etc/|g'
+
+# Required due to clang defaulting to strict C standard by default (no strdup).
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
