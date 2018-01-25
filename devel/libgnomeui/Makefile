@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2017/11/23 17:19:41 wiz Exp $
+# $NetBSD: Makefile,v 1.139 2018/01/25 13:55:43 jperkin Exp $
 #
 
 DISTNAME=	libgnomeui-2.24.5
@@ -24,8 +24,8 @@ PKGCONFIG_OVERRIDE=	${PKGCONFIG_BASE}.in
 
 .include "../../mk/compiler.mk"
 
-.if ${OPSYS} == "SunOS" && !empty(CC_VERSION:Mgcc-[6-9]*)
-SUBST_CLASSES+=		xopen
+.if !empty(CC_VERSION:Mgcc-[6-9]*) || !empty(PKGSRC_COMPILER:Mclang)
+SUBST_CLASSES.SunOS+=	xopen
 SUBST_STAGE.xopen=	pre-configure
 SUBST_FILES.xopen=	libgnomeui/gnome-file-entry.c libgnomeui/gnome-client.c
 SUBST_FILES.xopen+=	libgnomeui/gnome-dateedit.c
