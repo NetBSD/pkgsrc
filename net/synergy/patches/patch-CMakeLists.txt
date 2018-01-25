@@ -1,0 +1,16 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2018/01/25 14:13:22 tnn Exp $
+
+--- CMakeLists.txt.orig	2017-09-18 11:05:03.000000000 +0000
++++ CMakeLists.txt
+@@ -299,10 +299,8 @@ elseif (${CMAKE_SYSTEM_NAME} MATCHES "Da
+         ${OPENSSL_ROOT}/lib/libssl.a
+         ${OPENSSL_ROOT}/lib/libcrypto.a
+     )
+-elseif (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
++else()
+     set (OPENSSL_LIBS ssl crypto)
+-else()
+-    message (FATAL_ERROR "Couldn't find OpenSSL")
+ endif()
+ 
+ #
