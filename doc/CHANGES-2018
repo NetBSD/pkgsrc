@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.363 2018/01/26 08:10:56 adam Exp $
+$NetBSD: CHANGES-2018,v 1.364 2018/01/26 10:52:47 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -606,3 +606,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/gcc7 to 7.3.0 [maya 2018-01-25]
 	Updated www/py-w3lib to 1.19.0 [adam 2018-01-26]
 	Updated devel/py-autopep8 to 1.3.4 [adam 2018-01-26]
+	Updated net/packit to 1.0nb4 [maya 2018-01-26]
