@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/09/23 10:33:01 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2018/01/26 13:35:36 jperkin Exp $
 
 DISTNAME=	libsigc++-1.2.7
 PKGNAME=	libsigc++1-1.2.7
@@ -13,7 +13,7 @@ COMMENT=	Type-safe callback system for C++ programs
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gm4 gmake
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 
 CONFLICTS+=		libsigc++-1.*
 
