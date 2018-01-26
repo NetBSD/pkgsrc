@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.372 2018/01/26 14:54:10 triaxx Exp $
+$NetBSD: CHANGES-2018,v 1.373 2018/01/26 15:47:27 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -616,3 +616,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/py-cloudfiles version 1.7.11 [triaxx 2018-01-26]
 	Added www/py-swiftclient version 3.4.0 [triaxx 2018-01-26]
 	Updated sysutils/duplicity to 0.7.16 [triaxx 2018-01-26]
+	Updated x11/py-sip to 4.19.5nb1 [jperkin 2018-01-26]
