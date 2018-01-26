@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2016/03/29 22:05:47 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2018/01/26 13:40:17 jperkin Exp $
 
 DISTNAME=	postal-0.70
 PKGREVISION=	4
@@ -12,7 +12,7 @@ COMMENT=	Tool for benchmarking SMTP/POP servers
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_TOOLS+=	gmake
 
 .include "../../security/openssl/buildlink3.mk"
