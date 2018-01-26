@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.366 2018/01/26 12:21:06 bouyer Exp $
+$NetBSD: CHANGES-2018,v 1.367 2018/01/26 12:45:59 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -610,3 +610,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/ruby23-base to 2.3.6nb1 [jperkin 2018-01-26]
 	Updated security/clamav to 0.99.3 [bouyer 2018-01-26]
 	Updated security/clamav-doc to 0.99.3 [bouyer 2018-01-26]
+	Updated audio/rplay to 3.3.2nb8 [he 2018-01-26]
