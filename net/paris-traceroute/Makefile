@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/09/03 08:53:13 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/01/26 13:39:02 jperkin Exp $
 #
 
 DISTNAME=	paris-traceroute-0.92-dev
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=			${WRKDIR}/paris-traceroute-current
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
