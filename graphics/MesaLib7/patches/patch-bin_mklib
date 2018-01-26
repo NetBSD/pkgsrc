@@ -1,4 +1,4 @@
-$NetBSD: patch-bin_mklib,v 1.1 2015/04/05 17:01:37 tnn Exp $
+$NetBSD: patch-bin_mklib,v 1.2 2018/01/26 09:41:53 jperkin Exp $
 
 Solaris ld seemingly has a hard time swallowing nested archives,
 so flatten them out as is done for linux.
@@ -68,7 +68,7 @@ for SunOS.
 -		${LINK} ${OPTS} ${LDFLAGS} -o ${LIBNAME}.${MAJOR} -h ${LIBNAME}.${MAJOR} ${OBJECTS} ${DEPS}
 +        # rm any old libs
 +		rm -f ${LIBNAME}.${VERSION} ${LIBNAME}.${MAJOR} ${LIBNAME}
-+		${LINK} ${OPTS} ${LDFLAGS} -o ${LIBNAME}.${VERSION} -h ${LIBNAME}.${VERSION} ${OBJECTS} ${DEPS}
++		${LINK} ${OPTS} ${LDFLAGS} -o ${LIBNAME}.${VERSION} -Wl,-h,${LIBNAME}.${VERSION} ${OBJECTS} ${DEPS}
 +
 +        ln -s ${LIBNAME}.${VERSION} ${LIBNAME}.${MAJOR}
  		ln -s ${LIBNAME}.${MAJOR} ${LIBNAME}
