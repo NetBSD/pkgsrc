@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.373 2018/01/26 15:47:27 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.374 2018/01/26 16:27:36 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -617,3 +617,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/py-swiftclient version 3.4.0 [triaxx 2018-01-26]
 	Updated sysutils/duplicity to 0.7.16 [triaxx 2018-01-26]
 	Updated x11/py-sip to 4.19.5nb1 [jperkin 2018-01-26]
+	Updated security/clamav to 0.99.3nb1 [bouyer 2018-01-26]
