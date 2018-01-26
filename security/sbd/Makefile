@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/09/04 18:08:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2018/01/26 13:36:43 jperkin Exp $
 #
 
 DISTNAME=	sbd-0.5
@@ -11,7 +11,7 @@ COMMENT=	HMAC & one-time pad-based remote login program
 
 WRKSRC=		${WRKDIR}/sbd
 
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES+=	c c++03
 
 EGDIR=		${PREFIX}/share/sbd
 CONF_FILES=	${EGDIR}/deckey.bits ${PKG_SYSCONFDIR}/sbd/deckey.bits
