@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2017/12/24 10:15:53 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2018/01/26 12:45:27 he Exp $
 
 DISTNAME=	rplay-3.3.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	audio
 #MASTER_SITES=	http://rplay.doit.org/dist/
 
