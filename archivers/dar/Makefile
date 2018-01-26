@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2016/07/09 06:37:46 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2018/01/26 13:38:17 jperkin Exp $
 
 DISTNAME=	dar-2.4.13
 PKGREVISION=	1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://dar.linux.free.fr/
 COMMENT=	Disk archiver
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake groff gsed pkg-config bash:run
