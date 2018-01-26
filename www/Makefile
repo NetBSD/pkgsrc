@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1302 2018/01/15 21:36:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.1303 2018/01/26 14:38:27 triaxx Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -598,6 +598,7 @@ SUBDIR+=	py-channels
 SUBDIR+=	py-cheroot
 SUBDIR+=	py-cherrypy
 SUBDIR+=	py-clearsilver
+SUBDIR+=	py-cloudfiles
 SUBDIR+=	py-cookies
 SUBDIR+=	py-curl
 SUBDIR+=	py-daphne
@@ -727,6 +728,7 @@ SUBDIR+=	py-selenium
 SUBDIR+=	py-simpletal
 SUBDIR+=	py-sparqlwrapper
 SUBDIR+=	py-static
+SUBDIR+=	py-swiftclient
 SUBDIR+=	py-swish-e
 SUBDIR+=	py-terminado
 SUBDIR+=	py-test-django
