@@ -1,9 +1,10 @@
-$NetBSD: patch-configure,v 1.3 2018/01/17 11:19:46 jperkin Exp $
+$NetBSD: patch-configure,v 1.4 2018/01/26 13:25:29 jperkin Exp $
 
 * Adding Interix support.
 * Ignore doxygen.
 * Ignore VCS.
 * Handle SSP in pkgsrc.
+* Put -std= in CFLAGS not CPPFLAGS.
 
 --- configure.orig	2017-12-25 07:00:28.000000000 +0000
 +++ configure
@@ -33,6 +34,18 @@ $NetBSD: patch-configure,v 1.3 2018/01/17 11:19:46 jperkin Exp $
  
  		    # RUBY_APPEND_OPTIONS(CPPFLAGS)
  	for rb_opt in ${ansi_options}; do
+@@ -9303,9 +9304,9 @@ rm -f core conftest.err conftest.$ac_obj
+   *" ${rb_opt} "*) :
+      ;; #(
+   '  ') :
+-     CPPFLAGS="${rb_opt}" ;; #(
++     CFLAGS="${rb_opt}" ;; #(
+   *) :
+-     CPPFLAGS="$CPPFLAGS ${rb_opt}" ;;
++     CFLAGS="$CFLAGS ${rb_opt}" ;;
+ esac
+ 	done
+ 		   ;; #(
 @@ -9536,6 +9537,10 @@ esac
      	LIBS="-lm $LIBS"
  		ac_cv_func_round=no
@@ -120,7 +133,7 @@ $NetBSD: patch-configure,v 1.3 2018/01/17 11:19:46 jperkin Exp $
      if test "$install_capi" != no -a -n "$DOXYGEN"; then :
  
  	CAPITARGET="capi"
-@@ -29143,31 +29152,7 @@ which seems to be undefined.  Please mak
+@@ -29143,31 +29150,7 @@ which seems to be undefined.  Please mak
      "Makefile":F)
      tmpmk=confmk$$.tmp
      {
