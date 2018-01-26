@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.364 2018/01/26 10:52:47 maya Exp $
+$NetBSD: CHANGES-2018,v 1.365 2018/01/26 10:54:24 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -607,3 +607,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-w3lib to 1.19.0 [adam 2018-01-26]
 	Updated devel/py-autopep8 to 1.3.4 [adam 2018-01-26]
 	Updated net/packit to 1.0nb4 [maya 2018-01-26]
+	Updated lang/ruby23-base to 2.3.6nb1 [jperkin 2018-01-26]
