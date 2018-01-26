@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2016/05/24 19:10:46 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/01/26 14:53:05 triaxx Exp $
 bin/duplicity
 bin/rdiffdir
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -46,9 +46,6 @@ ${PYSITELIB}/duplicity/backends/botobackend.pyo
 ${PYSITELIB}/duplicity/backends/cfbackend.py
 ${PYSITELIB}/duplicity/backends/cfbackend.pyc
 ${PYSITELIB}/duplicity/backends/cfbackend.pyo
-${PYSITELIB}/duplicity/backends/copycombackend.py
-${PYSITELIB}/duplicity/backends/copycombackend.pyc
-${PYSITELIB}/duplicity/backends/copycombackend.pyo
 ${PYSITELIB}/duplicity/backends/dpbxbackend.py
 ${PYSITELIB}/duplicity/backends/dpbxbackend.pyc
 ${PYSITELIB}/duplicity/backends/dpbxbackend.pyo
