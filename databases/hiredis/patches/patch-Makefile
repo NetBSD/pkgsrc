@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile,v 1.4 2017/07/07 11:21:12 wiz Exp $
+$NetBSD: patch-Makefile,v 1.5 2018/01/26 09:33:31 jperkin Exp $
 
 use libtool
 
---- Makefile.orig	2015-08-25 12:16:20.000000000 +0000
+--- Makefile.orig	2015-09-16 10:25:02.000000000 +0000
 +++ Makefile
-@@ -51,6 +51,7 @@ DYLIB_MAJOR_NAME=$(LIBNAME).$(DYLIBSUFFI
+@@ -51,13 +51,14 @@ DYLIB_MAJOR_NAME=$(LIBNAME).$(DYLIBSUFFI
  DYLIBNAME=$(LIBNAME).$(DYLIBSUFFIX)
  DYLIB_MAKE_CMD=$(CC) -shared -Wl,-soname,$(DYLIB_MINOR_NAME) -o $(DYLIBNAME) $(LDFLAGS)
  STLIBNAME=$(LIBNAME).$(STLIBSUFFIX)
@@ -12,6 +12,14 @@ use libtool
  STLIB_MAKE_CMD=ar rcs $(STLIBNAME)
  
  # Platform-specific overrides
+ uname_S := $(shell sh -c 'uname -s 2>/dev/null || echo not')
+ ifeq ($(uname_S),SunOS)
+   REAL_LDFLAGS+= -ldl -lnsl -lsocket
+-  DYLIB_MAKE_CMD=$(CC) -G -o $(DYLIBNAME) -h $(DYLIB_MINOR_NAME) $(LDFLAGS)
++  DYLIB_MAKE_CMD=$(CC) -shared -o $(DYLIBNAME) -Wl,-h,$(DYLIB_MINOR_NAME) $(LDFLAGS)
+   INSTALL= cp -r
+ endif
+ ifeq ($(uname_S),Darwin)
 @@ -66,7 +67,7 @@ ifeq ($(uname_S),Darwin)
    DYLIB_MAKE_CMD=$(CC) -shared -Wl,-install_name,$(DYLIB_MINOR_NAME) -o $(DYLIBNAME) $(LDFLAGS)
  endif
