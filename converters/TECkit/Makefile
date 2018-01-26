@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/01/25 15:51:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2018/01/26 16:40:50 jperkin Exp $
 
 DISTNAME=	TECkit-2.5.7
 CATEGORIES=	converters
@@ -14,12 +14,13 @@ LICENSE=	gnu-lgpl-v2.1 OR cpl-1.0
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	autoconf automake
+USE_TOOLS+=	aclocal autoconf automake gmake
 
 PKGCONFIG_OVERRIDE=	teckit.pc.in
 
 pre-configure:
-	(cd ${WRKSRC}; ./autogen.sh)
+	cd ${WRKSRC} && libtoolize -c && aclocal && \
+	    autoheader && autoconf && automake -a
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
