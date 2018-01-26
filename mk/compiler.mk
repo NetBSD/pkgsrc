@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.87 2017/07/04 14:35:55 gdt Exp $
+# $NetBSD: compiler.mk,v 1.88 2018/01/26 13:14:35 jperkin Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -45,9 +45,9 @@
 #	This is used to determine the correct compilers to make
 #	visible to the build environment, installing them if
 #	necessary.  Flags such as --std=c++99 are also added.
-#	Valid values are: c, c99, c++, c++0x, gnu++0x, c++11, gnu++11,
-#	c++14, gnu++14, fortran, fortran77, java, objc, obj-c++, and
-#	ada.  The default is "c".
+#	Valid values are: c, c99, c++, c++03, gnu++03, c++0x, gnu++0x,
+#	c++11, gnu++11, c++14, gnu++14, fortran, fortran77, java, objc,
+#	obj-c++, and ada.  The default is "c".
 #
 #       The above is partly aspirational.  As an example c++11 does
 #       not force a new enough version of gcc.
@@ -84,7 +84,7 @@ USE_LANGUAGES?=	c
 USE_LANGUAGES+=	c
 .endif
 
-.for _version_ in gnu++14 c++14 gnu++11 c++11 gnu++0x c++0x
+.for _version_ in gnu++14 c++14 gnu++11 c++11 gnu++0x c++0x gnu++03 c++03
 .  if !empty(USE_LANGUAGES:M${_version_})
 USE_LANGUAGES+=		c++
 .  endif
@@ -178,7 +178,7 @@ ${_var_}:=	${${_var_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//:T} ${${_var_}:C/^/_asdf_
 # the respective mk/compiler/*.mk files.
 #
 _CXX_VERSION_REQD=
-.for _version_ in gnu++14 c++14 gnu++11 c++11 gnu++0x c++0x
+.for _version_ in gnu++14 c++14 gnu++11 c++11 gnu++0x c++0x gnu++03 c++03
 .  if empty(_CXX_VERSION_REQD) && !empty(USE_LANGUAGES:M${_version_})
 _CXX_VERSION_REQD=	${_version_}
 _WRAP_EXTRA_ARGS.CXX+=	-std=${_CXX_VERSION_REQD}
