@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/02/12 06:24:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2018/01/26 09:25:10 jperkin Exp $
 
 DISTNAME=	gegl-0.2.0
 PKGREVISION=	22
@@ -11,7 +11,7 @@ HOMEPAGE=	http://gegl.org/
 COMMENT=	Graph based image processing framework (0.2 version)
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c99 c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config intltool msgfmt
 GNU_CONFIGURE=		yes
@@ -30,8 +30,6 @@ PLIST_VARS+=	v4l
 .if ${OPSYS} == "Linux" && exists(/usr/include/linux/videodev.h)
 PLIST.v4l=	yes
 .endif
-
-CFLAGS.SunOS+=		-std=c99
 
 .include "options.mk"
 
