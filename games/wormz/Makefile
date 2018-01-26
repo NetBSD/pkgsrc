@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2017/09/06 10:40:28 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2018/01/26 13:42:29 jperkin Exp $
 #
 
 DISTNAME=		Wormz-1.0b5
@@ -16,7 +16,7 @@ LICENSE=		gnu-gpl-v2
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/Wormz
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake
 
 post-extract:
