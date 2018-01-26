@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2016/04/20 12:10:27 nros Exp $
+# $NetBSD: Makefile,v 1.34 2018/01/26 10:32:36 jperkin Exp $
 #
 
 DISTNAME=	id3lib-3.8.3
@@ -25,5 +25,6 @@ CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -std=c99
 .  endif
 .endif
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
