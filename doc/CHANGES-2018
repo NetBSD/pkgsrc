@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.371 2018/01/26 14:36:38 triaxx Exp $
+$NetBSD: CHANGES-2018,v 1.372 2018/01/26 14:54:10 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -615,3 +615,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/ruby25-base to 2.5.0nb1 [jperkin 2018-01-26]
 	Added www/py-cloudfiles version 1.7.11 [triaxx 2018-01-26]
 	Added www/py-swiftclient version 3.4.0 [triaxx 2018-01-26]
+	Updated sysutils/duplicity to 0.7.16 [triaxx 2018-01-26]
