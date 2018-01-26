@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.362 2018/01/25 23:27:50 maya Exp $
+$NetBSD: CHANGES-2018,v 1.363 2018/01/26 08:10:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -604,3 +604,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-retry_decorator version 1.1.0 [bsiegert 2018-01-25]
 	Updated graphics/imlib2 to 1.4.10 [leot 2018-01-25]
 	Updated lang/gcc7 to 7.3.0 [maya 2018-01-25]
+	Updated www/py-w3lib to 1.19.0 [adam 2018-01-26]
+	Updated devel/py-autopep8 to 1.3.4 [adam 2018-01-26]
