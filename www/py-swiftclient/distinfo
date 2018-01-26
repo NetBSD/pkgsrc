@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2018/01/26 14:35:31 triaxx Exp $
+$NetBSD: distinfo,v 1.2 2018/01/26 17:20:08 triaxx Exp $
 
 SHA1 (python-swiftclient-3.4.0.tar.gz) = 99806d83a5cd12a663b41ce87c98643f9c4c58d7
 RMD160 (python-swiftclient-3.4.0.tar.gz) = f954bcd88b58774b3e88f89c3f63ee620cb77d97
 SHA512 (python-swiftclient-3.4.0.tar.gz) = c7def24f22ced03316ccb74fcd7426b071597a3c7576c14f98fd6d864d6ee3e8a7666966ca2d07b6d996546bfcc2497ab654a67ab0228705f078985a35b97457
 Size (python-swiftclient-3.4.0.tar.gz) = 175823 bytes
+SHA1 (patch-setup.cfg) = d1c8b80afbbda1d2c37a0a88bc4f55c3180d4980
