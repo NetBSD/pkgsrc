@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2017/11/30 16:45:15 adam Exp $
+# $NetBSD: Makefile,v 1.55 2018/01/26 13:41:21 jperkin Exp $
 #
 
 DISTNAME=	InspIRCd-1.1.23
@@ -18,7 +18,7 @@ REPLACE_PERL+=		.inspircd.inc configure
 WRKSRC=			${WRKDIR}/${DISTNAME:S/InspIRCd/inspircd/}
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${PERL5}
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c++03
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 RCD_SCRIPTS+=		inspircd
 PKG_SYSCONFSUBDIR=	inspircd
