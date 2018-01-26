@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.369 2018/01/26 13:25:37 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.370 2018/01/26 14:33:34 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -613,3 +613,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/rplay to 3.3.2nb8 [he 2018-01-26]
 	Updated lang/ruby24-base to 2.4.3nb1 [jperkin 2018-01-26]
 	Updated lang/ruby25-base to 2.5.0nb1 [jperkin 2018-01-26]
+	Added www/py-cloudfiles version 1.7.11 [triaxx 2018-01-26]
