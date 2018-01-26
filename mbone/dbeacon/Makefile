@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/09/07 12:02:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2018/01/26 13:37:40 jperkin Exp $
 #
 
 DISTNAME=	dbeacon-0.3.9.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://fivebits.net/proj/dbeacon/
 COMMENT=	Distributed IPv4/IPv6 multicast beacon
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_TOOLS+=	gmake
 NO_CONFIGURE=	yes
 BUILD_DEFS+=	IPV6_READY
