@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2018/01/26 12:20:16 bouyer Exp $
+$NetBSD: distinfo,v 1.25 2018/01/26 16:26:57 bouyer Exp $
 
 SHA1 (clamav-0.99.3.tar.gz) = 13b37de9bcd1c7c092cd3148db9886c556f12c8f
 RMD160 (clamav-0.99.3.tar.gz) = 0c999f266b496edc3ac3a59768262d9973363287
@@ -15,3 +15,4 @@ SHA1 (patch-etc_clamd.conf.sample) = 74c995c7df2d5b083bb4465d2ab4cb0cab8670b6
 SHA1 (patch-etc_freshclam.conf.sample) = 520ffbca5421ef2dc270e3c5a13cfb36a469e676
 SHA1 (patch-libclamav_fmap.c) = a4c08f96e3d3aae57533e8e8294358fcb26a6db4
 SHA1 (patch-libclamav_fmap.h) = c486e4fd957f2cc9811c5a0422db69c85f0f9e0f
+SHA1 (patch-libclamav_scanners.c) = cf118cd70100c2176738d06c01feb03b4c44a598
