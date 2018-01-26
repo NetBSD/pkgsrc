@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2018/01/26 14:53:05 triaxx Exp $
+# $NetBSD: Makefile,v 1.42 2018/01/26 17:21:46 triaxx Exp $
 
 DISTNAME=	duplicity-0.7.16
 CATEGORIES=	sysutils net
@@ -21,11 +21,11 @@ DEPENDS+=	${PYPKGPREFIX}-dropbox-[0-9]*:../../net/py-dropbox
 DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 DEPENDS+=	${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
 DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib-[0-9]*:../../security/py-requests-oauthlib
-.include "../../devel/py-fasteners/buildlink3.mk"
+DEPENDS+=	${PYPKGPREFIX}-fasteners-[0-9]*:../../devel/py-fasteners
+DEPENDS+=	${PYPKGPREFIX}-cloudfiles-[0-9]*:../../www/py-cloudfiles
+DEPENDS+=	${PYPKGPREFIX}-swiftclient-[0-9]*:../../www/py-swiftclient
+DEPENDS+=	${PYPKGPREFIX}-gdata-[0-9]*:../../www/py-gdata
 .include "../../net/librsync/buildlink3.mk"
-.include "../../www/py-cloudfiles/buildlink3.mk"
-.include "../../www/py-gdata/buildlink3.mk"
-.include "../../www/py-swiftclient/buildlink3.mk"
 
 REPLACE_PYTHON+=	bin/duplicity \
 			bin/rdiffdir
