@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2017/11/23 17:19:52 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2018/01/26 13:34:39 jperkin Exp $
 
 DISTNAME=	dasher-4.10.1
 PKGREVISION=	37
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.inference.phy.cam.ac.uk/dasher/
 COMMENT=	Easy typing without using keyboard
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
