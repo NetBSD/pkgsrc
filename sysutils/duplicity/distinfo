@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.23 2016/08/18 11:29:06 mef Exp $
+$NetBSD: distinfo,v 1.24 2018/01/26 14:53:05 triaxx Exp $
 
-SHA1 (duplicity-0.7.09.tar.gz) = f2422b195b6d58b9a136d5745f81c3a54a77298e
-RMD160 (duplicity-0.7.09.tar.gz) = 043d6fc4c7964676ca1a88e4f240523d1f48bea5
-SHA512 (duplicity-0.7.09.tar.gz) = da53b95d5a24b8c696c22dcf7e8a8e576bb8b00b62e56ee7f1e39bf4ca2be301ed87414f196f195f32bce0d15a6d289137b493a2c305ce969cf22e9205634e51
-Size (duplicity-0.7.09.tar.gz) = 1542198 bytes
+SHA1 (duplicity-0.7.16.tar.gz) = 78df19c3d50de57080563a326589c467193ea0d1
+RMD160 (duplicity-0.7.16.tar.gz) = 8242a0476591fdd814ddb3e2740e96e6dd8e452c
+SHA512 (duplicity-0.7.16.tar.gz) = 552f63848ce90ccd8481136df6c0918bbf2463dde00d4e54f0af3693dc5439551ac086dc43b7b7191d1dcf0b710d7391b6c627ce0effd14a59beb0b5fa06a804
+Size (duplicity-0.7.16.tar.gz) = 1563676 bytes
 SHA1 (patch-aa) = f1210f703dccf759f234846a3139ce98063011cb
