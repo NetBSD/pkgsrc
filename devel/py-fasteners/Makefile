@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/12/06 22:01:51 triaxx Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/26 14:44:35 triaxx Exp $
 
 DISTNAME=	fasteners-0.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://fasteners.readthedocs.io/
 COMMENT=	Python package providing useful locks
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-monotonic>=0.1:../../time/py-monotonic
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+.include "../../time/py-monotonic/buildlink3.mk"
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
