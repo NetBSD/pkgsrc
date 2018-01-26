@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.13 2018/01/26 10:54:15 jperkin Exp $
+$NetBSD: distinfo,v 1.14 2018/01/26 11:53:09 jperkin Exp $
 
 SHA1 (ruby-2.3.6.tar.bz2) = 07c3b66d544dd22c22fbae3f16cfb3eeb88b7b1e
 RMD160 (ruby-2.3.6.tar.bz2) = 664e027a6f172212ac8ebff3aa9b99df4e99906b
 SHA512 (ruby-2.3.6.tar.bz2) = bc3c7a115745a38e44bd91eb5637b1e412011c471d9749db7960185ef75737b944dd0e524f22432809649952ca7d93f46d458990e9cd2b0db5ca8abf4bc8ea99
 Size (ruby-2.3.6.tar.bz2) = 14429114 bytes
-SHA1 (patch-configure) = 0088c4794a65ee1131b3060b09b82851bba43f28
+SHA1 (patch-configure) = 3737bf52082288b02e7382d71a322f4822c5abe4
 SHA1 (patch-ext_dbm_extconf.rb) = c998f8735db54b1ae2bc8b6caa359ce88bc7a45b
 SHA1 (patch-ext_openssl_ossl__ssl.c) = 24e794aae278da6204e29212d9e2add0b0119ea4
 SHA1 (patch-lib_mkmf.rb) = d01302bac014ec1d72bbf19df64bc2c93c07ec5e
