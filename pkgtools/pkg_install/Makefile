@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.222 2017/07/27 18:54:44 tnn Exp $
+# $NetBSD: Makefile,v 1.223 2018/01/27 19:07:47 rillig Exp $
 
 # Notes to package maintainers:
 #
@@ -14,7 +14,7 @@ HOMEPAGE=		http://www.pkgsrc.org/
 COMMENT=		Package management and administration tools for pkgsrc
 LICENSE=		modified-bsd
 
-BOOTSTRAP_PKG=	yes
+BOOTSTRAP_PKG=		yes
 SKIP_LICENSE_CHECK=	yes
 
 CONFLICTS+=		audit-packages-[0-9]*
@@ -145,8 +145,8 @@ LIBARCHIVE_CONFIGURE_ARGS+=	--without-lzma
 .  endif
 
 LIBARCHIVE_LIBS=	${SED} -n -e 's/^Libs.private://p' \
-    ${WRKDIR}/libarchive/build/pkgconfig/libarchive.pc 2>/dev/null || echo
-LIBS+=		${LIBARCHIVE_LIBS:sh}
+	${WRKDIR}/libarchive/build/pkgconfig/libarchive.pc 2>/dev/null || echo
+LIBS+=			${LIBARCHIVE_LIBS:sh}
 
 CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.guess \
 			${WRKSRC}/config.guess

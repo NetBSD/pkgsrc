@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2014/03/03 03:30:54 obache Exp $
+# $NetBSD: Makefile,v 1.42 2018/01/27 19:07:47 rillig Exp $
 
 PKGNAME=	pkg_tarup-1.9.1
 CATEGORIES=	pkgtools
@@ -12,7 +12,7 @@ USE_LANGUAGES=	# none
 AUTO_MKDIRS=	yes
 
 # Set SCRIPT_SUBST to substitute "@VARIABLE@" with "value"
-SUBST_CLASSES+=	tarup
+SUBST_CLASSES+=		tarup
 SUBST_STAGE.tarup=	do-configure
 SUBST_FILES.tarup=	pkg_tarup pkg_tarup_all pkg_tarup.1
 SUBST_VARS.tarup=	ECHO ECHO_N GREP HEAD ID PKG_DBDIR PKG_SUFX PKG_TOOLS_BIN PREFIX SED SH SU_CMD XARGS
