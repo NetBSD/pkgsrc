@@ -1,6 +1,39 @@
-# $NetBSD: go-package.mk,v 1.10 2017/03/20 22:33:21 bsiegert Exp $
+# $NetBSD: go-package.mk,v 1.11 2018/01/27 15:49:30 rillig Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
+#
+# === Package-settable variables ===
+#
+# GO_SRCPATH (required)
+#	The patch that can be used with "go get" to import the current
+#	package. This is usually the URL without the leading protocol.
+#
+#	Examples:
+#		github.com/username/repository
+#		gopkg.in/check.v1
+#
+# GO_DIST_BASE (optional)
+#	Path this package extracts to.
+#
+#	Default:
+#		The last path component of ${GO_SRCPATH}
+#	Examples:
+#		${GITHUB_PROJECT}-${GITHUB_TAG}*
+#		${GITHUB_PROJECT}-${GITHUB_TAG:S/v//}
+#		${DISTNAME}
+#
+# GO_BUILD_PATTERN (optional)
+#	Argument used for 'go install'.
+#	In most cases, the default is fine.
+#
+#	Default:
+#		"${GO_SRCPATH}/...", which means all files below GO_SRCPATH.
+#
+# Keywords: go golang
+#
+
+# Implementation notes
+#
 # The compiled Go code is tied to a specific compiler version, and the
 # compilation is fast. So the plan is:
 #
@@ -14,25 +47,6 @@
 #
 # All packages build-depend on the "master" Go release. Go packages
 # need to be revbumped when lang/go is updated.
-#
-# Packages using this should set GO_SRCPATH to the path that could
-# be used with "go get" (usually the URL without the leading protocol).
-#
-# === Package-settable variables ===
-#
-# GO_SRCPATH
-#	Path used for go 'import' lines in source code.
-#
-# GO_DIST_BASE
-#	Path this package extracts to; only set it if it's not the same
-#	as GO_SRCPATH.
-#
-# GO_BUILD_PATTERN
-#	Argument used for 'go install'
-#	Defaults to "${GO_SRCPATH}/..." which means all files
-#	below GO_SRCPATH.
-#
-# Keywords: go
 #
 
 .include "../../lang/go/version.mk"
