@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/01/17 20:11:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/01/27 04:09:12 markd Exp $
 bin/kate-syntax-highlighter
 include/KF5/KSyntaxHighlighting/AbstractHighlighter
 include/KF5/KSyntaxHighlighting/Definition
@@ -26,6 +26,7 @@ lib/libKF5SyntaxHighlighting.so
 lib/libKF5SyntaxHighlighting.so.5
 lib/libKF5SyntaxHighlighting.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KSyntaxHighlighting.pri
+share/examples/kde-xdg/org_kde_ksyntaxhighlighting.categories
 share/locale/af/LC_MESSAGES/syntaxhighlighting5_qt.qm
 share/locale/ar/LC_MESSAGES/syntaxhighlighting5_qt.qm
 share/locale/ast/LC_MESSAGES/syntaxhighlighting5_qt.qm
