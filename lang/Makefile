@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.472 2018/01/08 14:20:48 taca Exp $
+# $NetBSD: Makefile,v 1.473 2018/01/27 11:00:51 kamil Exp $
 #
 
 COMMENT=	Programming languages
@@ -51,6 +51,7 @@ SUBDIR+=	f2c
 SUBDIR+=	ficl
 SUBDIR+=	focal
 SUBDIR+=	fort77
+SUBDIR+=	forth-retro
 SUBDIR+=	g95
 SUBDIR+=	gambc
 SUBDIR+=	gauche
