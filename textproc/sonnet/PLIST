@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/01/17 20:11:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/27 03:56:52 markd Exp $
 bin/gentrigrams
 bin/parsetrigrams
 include/KF5/SonnetCore/Sonnet/BackgroundChecker
@@ -36,6 +36,7 @@ qt5/mkspecs/modules/qt_SonnetCore.pri
 qt5/mkspecs/modules/qt_SonnetUi.pri
 qt5/plugins/kf5/sonnet/aspell.so
 qt5/plugins/kf5/sonnet/hunspell.so
+share/examples/kde-xdg/sonnet.categories
 share/kf5/sonnet/trigrams.map
 share/locale/af/LC_MESSAGES/sonnet5_qt.qm
 share/locale/ar/LC_MESSAGES/sonnet5_qt.qm
