@@ -1,7 +1,7 @@
 package main
 
 import (
-	check "gopkg.in/check.v1"
+	"gopkg.in/check.v1"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/textproc"
 	"testing"
@@ -43,11 +43,11 @@ func (s *Suite) Test_replaceFirst(c *check.C) {
 }
 
 func (s *Suite) Test_tabLength(c *check.C) {
-	c.Check(tabLength("12345"), equals, 5)
-	c.Check(tabLength("\t"), equals, 8)
-	c.Check(tabLength("123\t"), equals, 8)
-	c.Check(tabLength("1234567\t"), equals, 8)
-	c.Check(tabLength("12345678\t"), equals, 16)
+	c.Check(tabWidth("12345"), equals, 5)
+	c.Check(tabWidth("\t"), equals, 8)
+	c.Check(tabWidth("123\t"), equals, 8)
+	c.Check(tabWidth("1234567\t"), equals, 8)
+	c.Check(tabWidth("12345678\t"), equals, 16)
 }
 
 func (s *Suite) Test_cleanpath(c *check.C) {
@@ -63,21 +63,23 @@ func (s *Suite) Test_cleanpath(c *check.C) {
 }
 
 func (s *Suite) Test_isEmptyDir_and_getSubdirs(c *check.C) {
-	s.Init(c)
-	s.CreateTmpFile("CVS/Entries", "dummy\n")
+	t := s.Init(c)
 
-	c.Check(isEmptyDir(s.tmpdir), equals, true)
-	c.Check(getSubdirs(s.tmpdir), check.DeepEquals, []string(nil))
+	t.SetupFileLines("CVS/Entries",
+		"dummy")
 
-	s.CreateTmpFile("somedir/file", "")
+	c.Check(isEmptyDir(t.TmpDir()), equals, true)
+	c.Check(getSubdirs(t.TmpDir()), check.DeepEquals, []string(nil))
 
-	c.Check(isEmptyDir(s.tmpdir), equals, false)
-	c.Check(getSubdirs(s.tmpdir), check.DeepEquals, []string{"somedir"})
+	t.SetupFileLines("somedir/file")
 
-	if nodir := s.tmpdir + "/nonexistent"; true {
+	c.Check(isEmptyDir(t.TmpDir()), equals, false)
+	c.Check(getSubdirs(t.TmpDir()), check.DeepEquals, []string{"somedir"})
+
+	if nodir := t.TmpDir() + "/nonexistent"; true {
 		c.Check(isEmptyDir(nodir), equals, true) // Counts as empty.
-		defer s.ExpectFatalError(func() {
-			c.Check(s.Output(), check.Matches, `FATAL: (.+): Cannot be read: open (.+): (.+)\n`)
+		defer t.ExpectFatalError(func() {
+			c.Check(t.Output(), check.Matches, `FATAL: (.+): Cannot be read: open (.+): (.+)\n`)
 		})
 		c.Check(getSubdirs(nodir), check.DeepEquals, []string(nil))
 		c.FailNow()
@@ -89,6 +91,14 @@ func (s *Suite) Test_PrefixReplacer_Since(c *check.C) {
 	mark := repl.Mark()
 	repl.AdvanceRegexp(`^\w+`)
 	c.Check(repl.Since(mark), equals, "hello")
+}
+
+func (s *Suite) Test_detab(c *check.C) {
+	c.Check(detab(""), equals, "")
+	c.Check(detab("\t"), equals, "        ")
+	c.Check(detab("1234\t9"), equals, "1234    9")
+	c.Check(detab("1234567\t"), equals, "1234567 ")
+	c.Check(detab("12345678\t"), equals, "12345678        ")
 }
 
 const reMkIncludeBenchmark = `^\.(\s*)(s?include)\s+\"([^\"]+)\"\s*(?:#.*)?$`
@@ -146,4 +156,11 @@ func Benchmark_match3_explicit(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		MatchMkInclude(".include \"../../mk/bsd.pkg.mk\"          # infrastructure     ")
 	}
+}
+
+func emptyToNil(slice []string) []string {
+	if len(slice) == 0 {
+		return nil
+	}
+	return slice
 }

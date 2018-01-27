@@ -120,7 +120,7 @@ func Explain(explanation ...string) {
 
 	if G.Testing {
 		for _, s := range explanation {
-			if l := tabLength(s); l > 68 && contains(s, " ") {
+			if l := tabWidth(s); l > 68 && contains(s, " ") {
 				lastSpace := strings.LastIndexByte(s[:68], ' ')
 				print(fmt.Sprintf("Long explanation line: %s\nBreak after: %s\n", s, s[:lastSpace]))
 			}
