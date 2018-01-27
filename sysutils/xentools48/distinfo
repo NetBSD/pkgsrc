@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2018/01/24 23:29:32 bouyer Exp $
+$NetBSD: distinfo,v 1.8 2018/01/27 16:44:40 bouyer Exp $
 
 SHA1 (xen48/gmp-4.3.2.tar.bz2) = c011e8feaf1bb89158bd55eaabd7ef8fdd101a2c
 RMD160 (xen48/gmp-4.3.2.tar.bz2) = a8f3f41501ece290c348aeb4444bbea40bc53e71
@@ -50,8 +50,6 @@ SHA1 (patch-.._newlib-1.16.0_newlib_libc_include_sys__types.h) = 65ff526aa26832b
 SHA1 (patch-._stubdom_vtpmmgr_tpm2_marshal.h) = 30c747a53e848387e4c8d6f4dcbcab7d1b46ed12
 SHA1 (patch-Config.mk) = 7976ce94c553c2fc6badc6d41e9cb8334fea40c8
 SHA1 (patch-Makefile) = fdcd5fbb22613e55ac1b000a46b1ecbbd99eef59
-SHA1 (patch-XSA233) = e6a7230035966d7d292ef3ca477f2eb3458ae12f
-SHA1 (patch-XSA240) = 754bbe5080a81e1526b7938fed01ba435e65e50b
 SHA1 (patch-docs_man_xl.cfg.pod.5.in) = e1ee6f2d48f6ce001c44c7ac688ea179b625b584
 SHA1 (patch-docs_man_xl.conf.pod.5) = d77e3313750db315d540d7713c95cd54d6f02938
 SHA1 (patch-docs_man_xl.pod.1.in) = 9b37ef724f2827bc05110e5456a8668257509cab
