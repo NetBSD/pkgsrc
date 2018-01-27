@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.378 2018/01/27 07:54:47 wen Exp $
+$NetBSD: CHANGES-2018,v 1.379 2018/01/27 08:00:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -622,3 +622,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/p5-MIME-Types to 2.17 [wen 2018-01-27]
 	Updated databases/p5-DBIx-Class-Helpers to 2.033004 [wen 2018-01-27]
 	Updated net/p5-NetAddr-MAC to 0.96 [wen 2018-01-27]
+	Updated devel/p5-Tree-DAG_Node to 1.30 [wen 2018-01-27]
