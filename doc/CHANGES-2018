@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.382 2018/01/27 08:36:25 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.383 2018/01/27 08:42:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -626,3 +626,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/py-mutagen to 1.40.0 [wen 2018-01-27]
 	Updated devel/p5-Module-CoreList to 5.20180120 [wen 2018-01-27]
 	Updated textproc/py-openpyxl to 2.4.9nb1 [wiz 2018-01-27]
+	Updated mail/p5-Mail-Message to 3.006 [wen 2018-01-27]
