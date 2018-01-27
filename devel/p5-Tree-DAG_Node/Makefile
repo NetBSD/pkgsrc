@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2017/06/05 14:23:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2018/01/27 07:59:48 wen Exp $
 
-DISTNAME=	Tree-DAG_Node-1.29
+DISTNAME=	Tree-DAG_Node-1.30
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tree/}
 EXTRACT_SUFX=	.tgz
