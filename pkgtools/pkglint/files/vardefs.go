@@ -14,6 +14,9 @@ import (
 //
 // See vartypecheck.go for how these types are checked.
 
+// InitVartypes initializes the long list of predefined pkgsrc variables.
+// After this is done, ${PKGNAME}, ${MAKE_ENV} and all the other variables
+// can be used in Makefiles without triggering warnings about typos.
 func (gd *GlobalData) InitVartypes() {
 
 	// A package-defined variable may be set in all Makefiles except buildlink3.mk and builtin.mk.

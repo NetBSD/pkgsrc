@@ -3,13 +3,13 @@ package main
 import "gopkg.in/check.v1"
 
 func (s *Suite) Test_Autofix_ReplaceRegex(c *check.C) {
-	s.Init(c)
-	s.UseCommandLine("--show-autofix")
-	fname := s.CreateTmpFile("Makefile", ""+
-		"line1\n"+
-		"line2\n"+
-		"line3\n")
-	lines := LoadExistingLines(fname, true)
+	t := s.Init(c)
+
+	t.SetupCommandLine("--show-autofix")
+	lines := t.SetupFileLines("Makefile",
+		"line1",
+		"line2",
+		"line3")
 
 	fix := lines[1].Autofix()
 	fix.Warnf("Something's wrong here.")
@@ -18,20 +18,23 @@ func (s *Suite) Test_Autofix_ReplaceRegex(c *check.C) {
 	SaveAutofixChanges(lines)
 
 	c.Check(lines[1].raw[0].textnl, equals, "XXXXX\n")
-	c.Check(s.LoadTmpFile("Makefile"), equals, "line1\nline2\nline3\n")
-	s.CheckOutputLines(
+	t.CheckFileLines("Makefile",
+		"line1",
+		"line2",
+		"line3")
+	t.CheckOutputLines(
 		"WARN: ~/Makefile:2: Something's wrong here.",
 		"AUTOFIX: ~/Makefile:2: Replacing regular expression \".\" with \"X\".")
 }
 
 func (s *Suite) Test_Autofix_ReplaceRegex_with_autofix(c *check.C) {
-	s.Init(c)
-	s.UseCommandLine("--autofix", "--source")
-	fname := s.CreateTmpFile("Makefile", ""+
-		"line1\n"+
-		"line2\n"+
-		"line3\n")
-	lines := LoadExistingLines(fname, true)
+	t := s.Init(c)
+
+	t.SetupCommandLine("--autofix", "--source")
+	lines := t.SetupFileLines("Makefile",
+		"line1",
+		"line2",
+		"line3")
 
 	fix := lines[1].Autofix()
 	fix.Warnf("Something's wrong here.")
@@ -44,30 +47,28 @@ func (s *Suite) Test_Autofix_ReplaceRegex_with_autofix(c *check.C) {
 
 	SaveAutofixChanges(lines)
 
-	c.Check(s.LoadTmpFile("Makefile"), equals, ""+
-		"line1\n"+
-		"YXXXX\n"+
-		"line3\n")
-	s.CheckOutputLines(
+	t.CheckFileLines("Makefile",
+		"line1",
+		"YXXXX",
+		"line3")
+	t.CheckOutputLines(
 		"AUTOFIX: ~/Makefile:2: Replacing regular expression \".\" with \"X\".",
-		"- line2",
-		"+ XXXXX",
+		"-\tline2",
+		"+\tXXXXX",
 		"",
 		"AUTOFIX: ~/Makefile:2: Replacing \"X\" with \"Y\".",
-		"- line2",
-		"+ YXXXX",
-		"",
-		"AUTOFIX: ~/Makefile: Has been auto-fixed. Please re-run pkglint.")
+		"-\tline2",
+		"+\tYXXXX")
 }
 
 func (s *Suite) Test_Autofix_ReplaceRegex_with_show_autofix(c *check.C) {
-	s.Init(c)
-	s.UseCommandLine("--show-autofix", "--source")
-	fname := s.CreateTmpFile("Makefile", ""+
-		"line1\n"+
-		"line2\n"+
-		"line3\n")
-	lines := LoadExistingLines(fname, true)
+	t := s.Init(c)
+
+	t.SetupCommandLine("--show-autofix", "--source")
+	lines := t.SetupFileLines("Makefile",
+		"line1",
+		"line2",
+		"line3")
 
 	fix := lines[1].Autofix()
 	fix.Warnf("Something's wrong here.")
@@ -80,53 +81,55 @@ func (s *Suite) Test_Autofix_ReplaceRegex_with_show_autofix(c *check.C) {
 
 	SaveAutofixChanges(lines)
 
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"WARN: ~/Makefile:2: Something's wrong here.",
 		"AUTOFIX: ~/Makefile:2: Replacing regular expression \".\" with \"X\".",
-		"- line2",
-		"+ XXXXX",
+		"-\tline2",
+		"+\tXXXXX",
 		"",
 		"WARN: ~/Makefile:2: Use Y instead of X.",
 		"AUTOFIX: ~/Makefile:2: Replacing \"X\" with \"Y\".",
-		"- line2",
-		"+ YXXXX")
+		"-\tline2",
+		"+\tYXXXX")
 }
 
 func (s *Suite) Test_autofix_MkLines(c *check.C) {
-	s.Init(c)
-	s.UseCommandLine("--autofix")
-	fname := s.CreateTmpFile("Makefile", ""+
-		"line1 := value1\n"+
-		"line2 := value2\n"+
-		"line3 := value3\n")
+	t := s.Init(c)
+
+	t.SetupCommandLine("--autofix")
+	t.SetupFileLines("Makefile",
+		"line1 := value1",
+		"line2 := value2",
+		"line3 := value3")
 	pkg := NewPackage("category/basename")
 	G.Pkg = pkg
-	mklines := pkg.loadPackageMakefile(fname)
+	mklines := pkg.loadPackageMakefile(t.TempFilename("Makefile"))
 	G.Pkg = nil
 
 	fix := mklines.mklines[1].Autofix()
 	fix.Warnf("Something's wrong here.")
 	fix.ReplaceRegex(`.`, "X")
 	fix.Apply()
+
 	SaveAutofixChanges(mklines.lines)
 
-	c.Check(s.LoadTmpFile("Makefile"), equals, ""+
-		"line1 := value1\n"+
-		"XXXXXXXXXXXXXXX\n"+
-		"line3 := value3\n")
-	s.CheckOutputLines(
-		"AUTOFIX: ~/Makefile:2: Replacing regular expression \".\" with \"X\".",
-		"AUTOFIX: ~/Makefile: Has been auto-fixed. Please re-run pkglint.")
+	t.CheckFileLines("Makefile",
+		"line1 := value1",
+		"XXXXXXXXXXXXXXX",
+		"line3 := value3")
+	t.CheckOutputLines(
+		"AUTOFIX: ~/Makefile:2: Replacing regular expression \".\" with \"X\".")
 }
 
 func (s *Suite) Test_Autofix_multiple_modifications(c *check.C) {
-	s.Init(c)
-	s.UseCommandLine("--show-autofix", "--explain")
+	t := s.Init(c)
 
-	line := NewLine("fname", 1, "dummy", T.NewRawLines(1, "original\n"))
+	t.SetupCommandLine("--show-autofix", "--explain")
+
+	line := t.NewLine("fname", 1, "original")
 
 	c.Check(line.autofix, check.IsNil)
-	c.Check(line.raw, check.DeepEquals, T.NewRawLines(1, "original\n"))
+	c.Check(line.raw, check.DeepEquals, t.NewRawLines(1, "original\n"))
 
 	{
 		fix := line.Autofix()
@@ -136,8 +139,8 @@ func (s *Suite) Test_Autofix_multiple_modifications(c *check.C) {
 	}
 
 	c.Check(line.autofix, check.NotNil)
-	c.Check(line.raw, check.DeepEquals, T.NewRawLines(1, "original\n", "lriginao\n"))
-	s.CheckOutputLines(
+	c.Check(line.raw, check.DeepEquals, t.NewRawLines(1, "original\n", "lriginao\n"))
+	t.CheckOutputLines(
 		"AUTOFIX: fname:1: Replacing regular expression \"(.)(.*)(.)\" with \"$3$2$1\".")
 
 	{
@@ -148,9 +151,9 @@ func (s *Suite) Test_Autofix_multiple_modifications(c *check.C) {
 	}
 
 	c.Check(line.autofix, check.NotNil)
-	c.Check(line.raw, check.DeepEquals, T.NewRawLines(1, "original\n", "lruginao\n"))
+	c.Check(line.raw, check.DeepEquals, t.NewRawLines(1, "original\n", "lruginao\n"))
 	c.Check(line.raw[0].textnl, equals, "lruginao\n")
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"AUTOFIX: fname:1: Replacing \"i\" with \"u\".")
 
 	{
@@ -161,9 +164,9 @@ func (s *Suite) Test_Autofix_multiple_modifications(c *check.C) {
 	}
 
 	c.Check(line.autofix, check.NotNil)
-	c.Check(line.raw, check.DeepEquals, T.NewRawLines(1, "original\n", "middle\n"))
+	c.Check(line.raw, check.DeepEquals, t.NewRawLines(1, "original\n", "middle\n"))
 	c.Check(line.raw[0].textnl, equals, "middle\n")
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"AUTOFIX: fname:1: Replacing \"lruginao\" with \"middle\".")
 
 	{
@@ -195,7 +198,7 @@ func (s *Suite) Test_Autofix_multiple_modifications(c *check.C) {
 	c.Check(line.autofix.linesAfter, deepEquals, []string{
 		"between middle and after\n",
 		"after\n"})
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"AUTOFIX: fname:1: Inserting a line \"before\" before this line.",
 		"AUTOFIX: fname:1: Inserting a line \"between before and middle\" before this line.",
 		"AUTOFIX: fname:1: Inserting a line \"between middle and after\" after this line.",
@@ -220,17 +223,20 @@ func (s *Suite) Test_Autofix_multiple_modifications(c *check.C) {
 	c.Check(line.autofix.linesAfter, deepEquals, []string{
 		"between middle and after\n",
 		"after\n"})
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"AUTOFIX: fname:1: Deleting this line.")
 }
 
 func (s *Suite) Test_Autofix_show_source_code(c *check.C) {
-	s.Init(c)
-	s.UseCommandLine("--show-autofix", "--source")
-	line := NewLineMulti("Makefile", 27, 29, "# old", T.NewRawLines(
-		27, "before\n",
-		28, "The old song\n",
-		29, "after\n"))
+	t := s.Init(c)
+
+	t.SetupCommandLine("--show-autofix", "--source")
+	lines := t.SetupFileLinesContinuation("Makefile",
+		MkRcsId,
+		"before \\",
+		"The old song \\",
+		"after")
+	line := lines[1]
 
 	{
 		fix := line.Autofix()
@@ -239,54 +245,57 @@ func (s *Suite) Test_Autofix_show_source_code(c *check.C) {
 		fix.Apply()
 	}
 
-	s.CheckOutputLines(
-		"WARN: Makefile:27--29: Using \"old\" is deprecated.",
-		"AUTOFIX: Makefile:27--29: Replacing \"old\" with \"new\".",
-		"> before",
-		"- The old song",
-		"+ The new song",
-		"> after")
+	t.CheckOutputLines(
+		"WARN: ~/Makefile:2--4: Using \"old\" is deprecated.",
+		"AUTOFIX: ~/Makefile:3: Replacing \"old\" with \"new\".",
+		">\tbefore \\",
+		"-\tThe old song \\",
+		"+\tThe new song \\",
+		">\tafter")
 }
 
 func (s *Suite) Test_Autofix_InsertBefore(c *check.C) {
-	s.Init(c)
-	s.UseCommandLine("--show-autofix", "--source")
-	line := NewLine("Makefile", 30, "original", T.NewRawLines(30, "original\n"))
+	t := s.Init(c)
+
+	t.SetupCommandLine("--show-autofix", "--source")
+	line := t.NewLine("Makefile", 30, "original")
 
 	fix := line.Autofix()
 	fix.Warnf("Dummy")
 	fix.InsertBefore("inserted")
 	fix.Apply()
 
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"WARN: Makefile:30: Dummy",
 		"AUTOFIX: Makefile:30: Inserting a line \"inserted\" before this line.",
-		"+ inserted",
-		"> original")
+		"+\tinserted",
+		">\toriginal")
 }
 
 func (s *Suite) Test_Autofix_Delete(c *check.C) {
-	s.Init(c)
-	s.UseCommandLine("--show-autofix", "--source")
-	line := NewLine("Makefile", 30, "to be deleted", T.NewRawLines(30, "to be deleted\n"))
+	t := s.Init(c)
+
+	t.SetupCommandLine("--show-autofix", "--source")
+	line := t.NewLine("Makefile", 30, "to be deleted")
 
 	fix := line.Autofix()
 	fix.Warnf("Dummy")
 	fix.Delete()
 	fix.Apply()
 
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"WARN: Makefile:30: Dummy",
 		"AUTOFIX: Makefile:30: Deleting this line.",
-		"- to be deleted")
+		"-\tto be deleted")
 }
 
 // Demonstrates that the --show-autofix option only shows those diagnostics
 // that would be fixed.
 func (s *Suite) Test_Autofix_suppress_unfixable_warnings(c *check.C) {
-	s.Init(c)
-	s.UseCommandLine("--show-autofix", "--source")
-	lines := T.NewLines("Makefile",
+	t := s.Init(c)
+
+	t.SetupCommandLine("--show-autofix", "--source")
+	lines := t.NewLines("Makefile",
 		"line1",
 		"line2",
 		"line3")
@@ -304,25 +313,40 @@ func (s *Suite) Test_Autofix_suppress_unfixable_warnings(c *check.C) {
 
 	lines[2].Warnf("Neither is this warning shown.")
 
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"WARN: Makefile:2: Something's wrong here.",
 		"AUTOFIX: Makefile:2: Replacing regular expression \".\" with \"X\".",
-		"- line2",
-		"+ XXXXX",
+		"-\tline2",
+		"+\tXXXXX",
 		"",
 		"WARN: Makefile:2: The XXX marks are usually not fixed, use TODO instead.",
 		"AUTOFIX: Makefile:2: Replacing \"XXX\" with \"TODO\".",
-		"- line2",
-		"+ TODOXX")
+		"-\tline2",
+		"+\tTODOXX")
+}
+
+// If an Autofix doesn't do anything it must not log any diagnostics.
+func (s *Suite) Test_Autofix_failed_replace(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("Makefile", 14, "Original text")
+
+	fix := line.Autofix()
+	fix.Warnf("All-uppercase words should not be used at all.")
+	fix.ReplaceRegex(`\b[A-Z]{3,}\b`, "---censored---")
+	fix.Apply()
+
+	// No output since there was no all-uppercase word in the text.
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_SaveAutofixChanges(c *check.C) {
-	s.Init(c)
-	s.UseCommandLine("--autofix")
-	filename := s.CreateTmpFileLines("DESCR",
+	t := s.Init(c)
+
+	t.SetupCommandLine("--autofix")
+	lines := t.SetupFileLines("DESCR",
 		"Line 1",
 		"Line 2")
-	lines := LoadExistingLines(filename, false)
 
 	fix := lines[0].Autofix()
 	fix.Warnf("Dummy warning.")
@@ -334,5 +358,5 @@ func (s *Suite) Test_SaveAutofixChanges(c *check.C) {
 	SaveAutofixChanges(lines)
 
 	// And therefore, no AUTOFIX action must appear in the log.
-	s.CheckOutputEmpty()
+	t.CheckOutputEmpty()
 }
