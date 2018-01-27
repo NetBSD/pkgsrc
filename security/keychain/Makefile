@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.38 2018/01/21 16:03:29 roy Exp $
+# $NetBSD: Makefile,v 1.39 2018/01/27 10:00:15 roy Exp $
 
-DISTNAME=	keychain-2.8.4
+DISTVERS=	2.8.5
+PKGNAME=	keychain-${DISTVERS}
 CATEGORIES=	security
-MASTER_SITES=	https://www.funtoo.org/archive/keychain/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://github.com/funtoo/keychain/archive/
+DISTNAME=	${DISTVERS}
+EXTRACT_SUFX=	.tar.gz
+WRKSRC=		${WRKDIR}/keychain-${DISTVERS}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.funtoo.org/Keychain
