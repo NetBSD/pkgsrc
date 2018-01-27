@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.375 2018/01/27 04:21:38 snj Exp $
+$NetBSD: CHANGES-2018,v 1.376 2018/01/27 07:41:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -619,3 +619,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/py-sip to 4.19.5nb1 [jperkin 2018-01-26]
 	Updated security/clamav to 0.99.3nb1 [bouyer 2018-01-26]
 	Updated net/rsync to 3.1.2nb3 [snj 2018-01-27]
+	Updated mail/p5-MIME-Types to 2.17 [wen 2018-01-27]
