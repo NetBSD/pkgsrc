@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.386 2018/01/27 12:38:31 mef Exp $
+$NetBSD: CHANGES-2018,v 1.387 2018/01/27 18:14:18 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -630,3 +630,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/keychain to 2.8.5 [roy 2018-01-27]
 	Added lang/forth-retro version 12.0.2018.1 [kamil 2018-01-27]
 	Updated archivers/brotli to 1.0.2 [mef 2018-01-27]
+	Updated net/youtube-dl to 20180127 [leot 2018-01-27]
