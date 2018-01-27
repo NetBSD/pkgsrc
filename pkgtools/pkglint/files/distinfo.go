@@ -106,20 +106,21 @@ func (ck *distinfoLinesChecker) onFilenameChange(line Line, nextFname string) {
 	ck.algorithms = nil
 }
 
+// Same as in mk/checksum/distinfo.awk:/function patchsum/
 func computePatchSha1Hex(patchFilename string) (string, error) {
 	patchBytes, err := ioutil.ReadFile(patchFilename)
 	if err != nil {
 		return "", err
 	}
 
-	h := sha1.New()
+	hash := sha1.New()
 	netbsd := []byte("$" + "NetBSD")
 	for _, patchLine := range bytes.SplitAfter(patchBytes, []byte("\n")) {
 		if !bytes.Contains(patchLine, netbsd) {
-			h.Write(patchLine)
+			hash.Write(patchLine)
 		}
 	}
-	return fmt.Sprintf("%x", h.Sum(nil)), nil
+	return fmt.Sprintf("%x", hash.Sum(nil)), nil
 }
 
 func (ck *distinfoLinesChecker) checkPatchSha1(line Line, patchFname, distinfoSha1Hex string) {

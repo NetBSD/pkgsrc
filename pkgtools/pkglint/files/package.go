@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"netbsd.org/pkglint/pkgver"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
@@ -236,9 +235,9 @@ func (pkg *Package) loadPackageMakefile(fname string) *MkLines {
 	}
 
 	if G.opts.DumpMakefile {
-		fmt.Printf("Whole Makefile (with all included files) follows:\n")
+		G.logOut.WriteLine("Whole Makefile (with all included files) follows:")
 		for _, line := range allLines.lines {
-			fmt.Printf("%s\n", line.String())
+			G.logOut.WriteLine(line.String())
 		}
 	}
 

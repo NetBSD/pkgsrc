@@ -16,12 +16,12 @@ type MkLineImpl struct {
 	data interface{} // One of the following mkLine* types
 }
 type mkLineAssign struct {
-	varname    string
-	varcanon   string
-	varparam   string
-	op         MkOperator
-	valueAlign string
-	value      string
+	varname    string     // e.g. "HOMEPAGE", "SUBST_SED.perl"
+	varcanon   string     // e.g. "HOMEPAGE", "SUBST_SED.*"
+	varparam   string     // e.g. "", "perl"
+	op         MkOperator //
+	valueAlign string     // The text up to and including the assignment operator, e.g. VARNAME+=\t
+	value      string     // The trimmed value
 	comment    string
 }
 type mkLineShell struct {
@@ -152,7 +152,9 @@ func (mkline *MkLineImpl) IsVarassign() bool { _, ok := mkline.data.(mkLineAssig
 func (mkline *MkLineImpl) IsShellcmd() bool  { _, ok := mkline.data.(mkLineShell); return ok }
 func (mkline *MkLineImpl) IsComment() bool   { _, ok := mkline.data.(mkLineComment); return ok }
 func (mkline *MkLineImpl) IsEmpty() bool     { _, ok := mkline.data.(mkLineEmpty); return ok }
-func (mkline *MkLineImpl) IsCond() bool      { _, ok := mkline.data.(mkLineConditional); return ok }
+
+// IsCond checks whether the line is a conditional (.if/.ifelse/.else/.if) or a loop (.for/.endfor).
+func (mkline *MkLineImpl) IsCond() bool { _, ok := mkline.data.(mkLineConditional); return ok }
 func (mkline *MkLineImpl) IsInclude() bool {
 	incl, ok := mkline.data.(mkLineInclude)
 	return ok && !incl.sys
@@ -161,11 +163,13 @@ func (mkline *MkLineImpl) IsSysinclude() bool {
 	incl, ok := mkline.data.(mkLineInclude)
 	return ok && incl.sys
 }
-func (mkline *MkLineImpl) IsDependency() bool       { _, ok := mkline.data.(mkLineDependency); return ok }
-func (mkline *MkLineImpl) Varname() string          { return mkline.data.(mkLineAssign).varname }
-func (mkline *MkLineImpl) Varcanon() string         { return mkline.data.(mkLineAssign).varcanon }
-func (mkline *MkLineImpl) Varparam() string         { return mkline.data.(mkLineAssign).varparam }
-func (mkline *MkLineImpl) Op() MkOperator           { return mkline.data.(mkLineAssign).op }
+func (mkline *MkLineImpl) IsDependency() bool { _, ok := mkline.data.(mkLineDependency); return ok }
+func (mkline *MkLineImpl) Varname() string    { return mkline.data.(mkLineAssign).varname }
+func (mkline *MkLineImpl) Varcanon() string   { return mkline.data.(mkLineAssign).varcanon }
+func (mkline *MkLineImpl) Varparam() string   { return mkline.data.(mkLineAssign).varparam }
+func (mkline *MkLineImpl) Op() MkOperator     { return mkline.data.(mkLineAssign).op }
+
+// For a variable assignment, the text up to and including the assignment operator, e.g. VARNAME+=\t
 func (mkline *MkLineImpl) ValueAlign() string       { return mkline.data.(mkLineAssign).valueAlign }
 func (mkline *MkLineImpl) Value() string            { return mkline.data.(mkLineAssign).value }
 func (mkline *MkLineImpl) VarassignComment() string { return mkline.data.(mkLineAssign).comment }
@@ -448,7 +452,7 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype,
 	return nqDontKnow
 }
 
-// Returns the type of the variable (maybe guessed based on the variable name),
+// Returns the type of the variable (possibly guessed based on the variable name),
 // or nil if the type cannot even be guessed.
 func (mkline *MkLineImpl) VariableType(varname string) *Vartype {
 	if trace.Tracing {
@@ -596,14 +600,16 @@ func (mkline *MkLineImpl) DetermineUsedVariables() (varnames []string) {
 // or used. Whether that is allowed depends on:
 //
 // * The variable's data type, as defined in vardefs.go.
+//
 // * When used on the right-hand side of an assigment, the variable can
-//   represent a list of words, a single word or even only part of a
-//   word. This distinction decides upon the correct use of the :Q
-//   operator.
+// represent a list of words, a single word or even only part of a
+// word. This distinction decides upon the correct use of the :Q
+// operator.
+//
 // * When used in preprocessing statements like .if or .for, the other
-//   operands of that statement should fit to the variable and are
-//   checked against the variable type. For example, comparing OPSYS to
-//   x86_64 doesn't make sense.
+// operands of that statement should fit to the variable and are
+// checked against the variable type. For example, comparing OPSYS to
+// x86_64 doesn't make sense.
 type VarUseContext struct {
 	vartype    *Vartype
 	time       vucTime

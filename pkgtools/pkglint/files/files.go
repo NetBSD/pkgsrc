@@ -23,9 +23,6 @@ func LoadExistingLines(fname string, joinBackslashLines bool) []Line {
 	if err != nil {
 		NewLineWhole(fname).Fatalf("Cannot be read.")
 	}
-	if lines == nil {
-		NewLineWhole(fname).Fatalf("Must not be empty.")
-	}
 	return lines
 }
 
