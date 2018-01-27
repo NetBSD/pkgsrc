@@ -30,6 +30,8 @@ func (s *Suite) Test_convertToLogicalLines_continuation(c *check.C) {
 }
 
 func (s *Suite) Test_convertToLogicalLines_continuationInLastLine(c *check.C) {
+	t := s.Init(c)
+
 	rawText := "" +
 		"last line\\"
 
@@ -37,7 +39,8 @@ func (s *Suite) Test_convertToLogicalLines_continuationInLastLine(c *check.C) {
 
 	c.Check(lines, check.HasLen, 1)
 	c.Check(lines[0].String(), equals, "fname_contlast:1: last line\\")
-	c.Check(s.Stdout(), equals, "ERROR: fname_contlast:EOF: File must end with a newline.\n")
+	t.CheckOutputLines(
+		"ERROR: fname_contlast:EOF: File must end with a newline.")
 }
 
 func (s *Suite) Test_splitRawLine(c *check.C) {

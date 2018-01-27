@@ -143,7 +143,7 @@ optchar:
 						*data = append(*data, argarg)
 						return 0, nil
 					} else if i+1 < len(args) {
-						*data = append(*data, argarg)
+						*data = append(*data, args[i+1])
 						return 1, nil
 					} else {
 						return 0, optErr("option requires an argument: -" + string([]rune{optchar}))

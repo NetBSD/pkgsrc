@@ -12,6 +12,7 @@ func (s *Suite) Test_MkShWalker_Walk(c *check.C) {
 		"  [ \"$${lang}\" = \"wxstd.po\" ] && continue; "+
 		"  ${TOOLS_PATH.msgfmt} -c -o \"$${lang%.po}.mo\" \"$${lang}\"; "+
 		"done")
+
 	if c.Check(err, check.IsNil) && c.Check(list, check.NotNil) {
 		var commands []string
 		(*MkShWalker).Walk(nil, list, func(node interface{}) {

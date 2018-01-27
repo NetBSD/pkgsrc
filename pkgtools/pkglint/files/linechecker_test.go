@@ -5,29 +5,32 @@ import (
 )
 
 func (s *Suite) Test_LineChecker_CheckAbsolutePathname(c *check.C) {
-	s.Init(c)
-	line := T.NewLine("Makefile", 1, "# dummy")
+	t := s.Init(c)
+
+	line := t.NewLine("Makefile", 1, "# dummy")
 
 	CheckLineAbsolutePathname(line, "bindir=/bin")
 	CheckLineAbsolutePathname(line, "bindir=/../lib")
 
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"WARN: Makefile:1: Found absolute pathname: /bin")
 }
 
-func (s *Suite) Test_LineChecker_CheckTrailingWhitespace(c *check.C) {
-	s.Init(c)
-	line := T.NewLine("Makefile", 32, "The line must go on   ")
+func (s *Suite) Test_CheckLineTrailingWhitespace(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("Makefile", 32, "The line must go on   ")
 
 	CheckLineTrailingWhitespace(line)
 
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"NOTE: Makefile:32: Trailing white-space.")
 }
 
-func (s *Suite) Test_LineChecker_CheckRcsid(c *check.C) {
-	s.Init(c)
-	lines := T.NewLines("fname",
+func (s *Suite) Test_CheckLineRcsid(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("fname",
 		"$"+"NetBSD: dummy $",
 		"$"+"NetBSD$",
 		"$"+"Id: dummy $",
@@ -38,7 +41,7 @@ func (s *Suite) Test_LineChecker_CheckRcsid(c *check.C) {
 		CheckLineRcsid(line, ``, "")
 	}
 
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"ERROR: fname:3: Expected \"$"+"NetBSD$\".",
 		"ERROR: fname:4: Expected \"$"+"NetBSD$\".",
 		"ERROR: fname:5: Expected \"$"+"NetBSD$\".")

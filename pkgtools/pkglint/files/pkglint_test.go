@@ -3,30 +3,49 @@ package main
 import (
 	"strings"
 
-	check "gopkg.in/check.v1"
+	"gopkg.in/check.v1"
 	"netbsd.org/pkglint/trace"
 	"os"
 )
 
 func (s *Suite) Test_Pkglint_Main_help(c *check.C) {
+	t := s.Init(c)
+
 	exitcode := new(Pkglint).Main("pkglint", "-h")
 
 	c.Check(exitcode, equals, 0)
-	c.Check(s.Output(), check.Matches, `^\Qusage: pkglint [options] dir...\E\n(?s).+`)
+	c.Check(t.Output(), check.Matches, `^\Qusage: pkglint [options] dir...\E\n(?s).+`)
 }
 
 func (s *Suite) Test_Pkglint_Main_version(c *check.C) {
+	t := s.Init(c)
+
 	exitcode := new(Pkglint).Main("pkglint", "--version")
 
 	c.Check(exitcode, equals, 0)
-	c.Check(s.Output(), equals, confVersion+"\n")
+	t.CheckOutputLines(
+		confVersion)
 }
 
 func (s *Suite) Test_Pkglint_Main_no_args(c *check.C) {
+	t := s.Init(c)
+
 	exitcode := new(Pkglint).Main("pkglint")
 
 	c.Check(exitcode, equals, 1)
-	c.Check(s.Stderr(), equals, "FATAL: \".\" is not inside a pkgsrc tree.\n")
+	t.CheckOutputLines(
+		"FATAL: \".\" is not inside a pkgsrc tree.")
+}
+
+func (s *Suite) Test_Pkglint_Main__only(c *check.C) {
+	t := s.Init(c)
+
+	exitcode := new(Pkglint).ParseCommandLine([]string{"pkglint", "-Wall", "-o", ":Q", "--version"})
+
+	c.Check(exitcode, deepEquals, new(int))
+	c.Check(G.opts.LogOnly, deepEquals, []string{":Q"})
+	t.CheckOutputLines(
+		"@VERSION@")
 }
 
 // go test -c -covermode count
@@ -42,47 +61,51 @@ func (s *Suite) Test_Pkglint_coverage(c *check.C) {
 }
 
 func (s *Suite) Test_Pkglint_CheckDirent__outside(c *check.C) {
-	s.Init(c)
-	s.CreateTmpFile("empty", "")
+	t := s.Init(c)
 
-	new(Pkglint).CheckDirent(s.tmpdir)
+	t.SetupFileLines("empty")
 
-	s.CheckOutputLines(
+	new(Pkglint).CheckDirent(t.TmpDir())
+
+	t.CheckOutputLines(
 		"ERROR: ~: Cannot determine the pkgsrc root directory for \"~\".")
 }
 
 func (s *Suite) Test_Pkglint_CheckDirent(c *check.C) {
-	s.Init(c)
-	s.CreateTmpFile("mk/bsd.pkg.mk", "")
-	s.CreateTmpFile("category/package/Makefile", "")
-	s.CreateTmpFile("category/Makefile", "")
-	s.CreateTmpFile("Makefile", "")
-	G.globalData.Pkgsrcdir = s.tmpdir
+	t := s.Init(c)
+
+	t.SetupFileLines("mk/bsd.pkg.mk")
+	t.SetupFileLines("category/package/Makefile")
+	t.SetupFileLines("category/Makefile")
+	t.SetupFileLines("Makefile")
+	G.globalData.Pkgsrcdir = t.TmpDir()
 	pkglint := new(Pkglint)
 
-	pkglint.CheckDirent(s.tmpdir)
+	pkglint.CheckDirent(t.TmpDir())
 
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"ERROR: ~/Makefile: Must not be empty.")
 
-	pkglint.CheckDirent(s.tmpdir + "/category")
+	pkglint.CheckDirent(t.TempFilename("category"))
 
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"ERROR: ~/category/Makefile: Must not be empty.")
 
-	pkglint.CheckDirent(s.tmpdir + "/category/package")
+	pkglint.CheckDirent(t.TempFilename("category/package"))
 
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"ERROR: ~/category/package/Makefile: Must not be empty.")
 
-	pkglint.CheckDirent(s.tmpdir + "/category/package/nonexistent")
+	pkglint.CheckDirent(t.TempFilename("category/package/nonexistent"))
 
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"ERROR: ~/category/package/nonexistent: No such file or directory.")
 }
 
 func (s *Suite) Test_resolveVariableRefs__circular_reference(c *check.C) {
-	mkline := T.NewMkLine("fname", 1, "GCC_VERSION=${GCC_VERSION}")
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("fname", 1, "GCC_VERSION=${GCC_VERSION}")
 	G.Pkg = NewPackage(".")
 	G.Pkg.vardef["GCC_VERSION"] = mkline
 
@@ -92,9 +115,11 @@ func (s *Suite) Test_resolveVariableRefs__circular_reference(c *check.C) {
 }
 
 func (s *Suite) Test_resolveVariableRefs__multilevel(c *check.C) {
-	mkline1 := T.NewMkLine("fname", 10, "_=${SECOND}")
-	mkline2 := T.NewMkLine("fname", 11, "_=${THIRD}")
-	mkline3 := T.NewMkLine("fname", 12, "_=got it")
+	t := s.Init(c)
+
+	mkline1 := t.NewMkLine("fname", 10, "_=${SECOND}")
+	mkline2 := t.NewMkLine("fname", 11, "_=${THIRD}")
+	mkline3 := t.NewMkLine("fname", 12, "_=got it")
 	G.Pkg = NewPackage(".")
 	defineVar(mkline1, "FIRST")
 	defineVar(mkline2, "SECOND")
@@ -106,7 +131,9 @@ func (s *Suite) Test_resolveVariableRefs__multilevel(c *check.C) {
 }
 
 func (s *Suite) Test_resolveVariableRefs__special_chars(c *check.C) {
-	mkline := T.NewMkLine("fname", 10, "_=x11")
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("fname", 10, "_=x11")
 	G.Pkg = NewPackage("category/pkg")
 	G.Pkg.vardef["GST_PLUGINS0.10_TYPE"] = mkline
 
@@ -116,8 +143,9 @@ func (s *Suite) Test_resolveVariableRefs__special_chars(c *check.C) {
 }
 
 func (s *Suite) Test_ChecklinesDescr(c *check.C) {
-	s.Init(c)
-	lines := T.NewLines("DESCR",
+	t := s.Init(c)
+
+	lines := t.NewLines("DESCR",
 		strings.Repeat("X", 90),
 		"", "", "", "", "", "", "", "", "10",
 		"Try ${PREFIX}",
@@ -126,26 +154,28 @@ func (s *Suite) Test_ChecklinesDescr(c *check.C) {
 
 	ChecklinesDescr(lines)
 
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"WARN: DESCR:1: Line too long (should be no more than 80 characters).",
 		"NOTE: DESCR:11: Variables are not expanded in the DESCR file.",
 		"WARN: DESCR:25: File too long (should be no more than 24 lines).")
 }
 
 func (s *Suite) Test_ChecklinesMessage__short(c *check.C) {
-	s.Init(c)
-	lines := T.NewLines("MESSAGE",
+	t := s.Init(c)
+
+	lines := t.NewLines("MESSAGE",
 		"one line")
 
 	ChecklinesMessage(lines)
 
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"WARN: MESSAGE:1: File too short.")
 }
 
 func (s *Suite) Test_ChecklinesMessage__malformed(c *check.C) {
-	s.Init(c)
-	lines := T.NewLines("MESSAGE",
+	t := s.Init(c)
+
+	lines := t.NewLines("MESSAGE",
 		"1",
 		"2",
 		"3",
@@ -154,44 +184,45 @@ func (s *Suite) Test_ChecklinesMessage__malformed(c *check.C) {
 
 	ChecklinesMessage(lines)
 
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"WARN: MESSAGE:1: Expected a line of exactly 75 \"=\" characters.",
 		"ERROR: MESSAGE:2: Expected \"$"+"NetBSD$\".",
 		"WARN: MESSAGE:5: Expected a line of exactly 75 \"=\" characters.")
 }
 
 func (s *Suite) Test_GlobalData_Latest(c *check.C) {
-	s.Init(c)
-	G.globalData.Pkgsrcdir = s.TmpDir()
+	t := s.Init(c)
+
+	G.globalData.Pkgsrcdir = t.TmpDir()
 
 	latest1 := G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
 	c.Check(latest1, equals, "")
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~\".")
 
-	s.CreateTmpFile("lang/Makefile", "")
+	t.SetupFileLines("lang/Makefile")
 	G.globalData.latest = nil
 
 	latest2 := G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
 	c.Check(latest2, equals, "")
-	s.CheckOutputLines(
+	t.CheckOutputLines(
 		"ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~\".")
 
-	s.CreateTmpFile("lang/python27/Makefile", "")
+	t.SetupFileLines("lang/python27/Makefile")
 	G.globalData.latest = nil
 
 	latest3 := G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
 	c.Check(latest3, equals, "../../lang/python27")
-	s.CheckOutputEmpty()
+	t.CheckOutputEmpty()
 
-	s.CreateTmpFile("lang/python35/Makefile", "")
+	t.SetupFileLines("lang/python35/Makefile")
 	G.globalData.latest = nil
 
 	latest4 := G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
 	c.Check(latest4, equals, "../../lang/python35")
-	s.CheckOutputEmpty()
+	t.CheckOutputEmpty()
 }

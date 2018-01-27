@@ -116,16 +116,18 @@ func (s *Suite) Test_Options_Parse_string_list(c *check.C) {
 
 	args, err := opts.Parse([]string{"progname",
 		"-viincluded1",
-		"--include=included2",
-		"--include", "included3",
+		"-i", "included2",
+		"--include=included3",
+		"--include", "included4",
 		"-eexcluded1",
-		"--exclude=excluded2",
-		"--exclude", "excluded3"})
+		"-e", "excluded2",
+		"--exclude=excluded3",
+		"--exclude", "excluded4"})
 
 	c.Check(args, check.IsNil)
 	c.Check(err, check.IsNil)
-	c.Check(includes, check.DeepEquals, []string{"included1", "included2", "included3"})
-	c.Check(excludes, check.DeepEquals, []string{"excluded1", "excluded2", "excluded3"})
+	c.Check(includes, check.DeepEquals, []string{"included1", "included2", "included3", "included4"})
+	c.Check(excludes, check.DeepEquals, []string{"excluded1", "excluded2", "excluded3", "excluded4"})
 
 	args, err = opts.Parse([]string{"progname", "-i"})
 

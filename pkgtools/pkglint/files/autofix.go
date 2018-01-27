@@ -6,6 +6,7 @@ import (
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
 	"os"
+	"strconv"
 	"strings"
 )
 
@@ -15,16 +16,20 @@ import (
 // until they are written to disk by SaveAutofixChanges.
 type Autofix struct {
 	line        Line
-	linesBefore []string      // Newly inserted lines, including \n
-	lines       []*RawLine    // Original lines, available for diff
-	linesAfter  []string      // Newly inserted lines, including \n
-	modified    bool          // Modified in memory, but not necessarily written back to disk
-	descrFormat string        // Human-readable description of the latest modification
-	descrArgs   []interface{} //
-	level       *LogLevel     //
-	diagFormat  string        // Is printed only if it couldn't be fixed automatically
-	diagArgs    []interface{} //
-	explanation []string      // Is printed together with the diagnostic
+	linesBefore []string        // Newly inserted lines, including \n
+	lines       []*RawLine      // Original lines, available for diff
+	linesAfter  []string        // Newly inserted lines, including \n
+	modified    bool            // Modified in memory, but not necessarily written back to disk
+	actions     []autofixAction // Human-readable description of the actual autofix actions
+	level       *LogLevel       //
+	diagFormat  string          // Is printed only if it couldn't be fixed automatically
+	diagArgs    []interface{}   //
+	explanation []string        // Is printed together with the diagnostic
+}
+
+type autofixAction struct {
+	description string
+	lineno      int
 }
 
 func NewAutofix(line Line) *Autofix {
@@ -34,17 +39,24 @@ func NewAutofix(line Line) *Autofix {
 }
 
 func (fix *Autofix) Replace(from string, to string) {
+	fix.ReplaceAfter("", from, to)
+}
+
+// ReplaceAfter replaces the text "prefix+from" with "prefix+to",
+// but in the diagnostic, only the replacement of "from" with "to"
+// is mentioned.
+func (fix *Autofix) ReplaceAfter(prefix, from string, to string) {
 	if fix.skip() {
 		return
 	}
 
 	for _, rawLine := range fix.lines {
 		if rawLine.Lineno != 0 {
-			if replaced := strings.Replace(rawLine.textnl, from, to, 1); replaced != rawLine.textnl {
+			if replaced := strings.Replace(rawLine.textnl, prefix+from, prefix+to, 1); replaced != rawLine.textnl {
 				if G.opts.PrintAutofix || G.opts.Autofix {
 					rawLine.textnl = replaced
 				}
-				fix.Describef("Replacing %q with %q.", from, to)
+				fix.Describef(rawLine.Lineno, "Replacing %q with %q.", from, to)
 			}
 		}
 	}
@@ -61,8 +73,60 @@ func (fix *Autofix) ReplaceRegex(from regex.Pattern, to string) {
 				if G.opts.PrintAutofix || G.opts.Autofix {
 					rawLine.textnl = replaced
 				}
-				fix.Describef("Replacing regular expression %q with %q.", from, to)
+				fix.Describef(rawLine.Lineno, "Replacing regular expression %q with %q.", from, to)
 			}
+		}
+	}
+}
+
+func (fix *Autofix) Realign(mkline MkLine, newWidth int) {
+	if fix.skip() || !mkline.IsMultiline() || !mkline.IsVarassign() {
+		return
+	}
+
+	normalized := true // Whether all indentation is tabs, followed by spaces.
+	oldWidth := 0      // The minimum required indentation in the original lines.
+
+	{
+		// Interpreting the continuation marker as variable value
+		// is cheating, but works well.
+		m, _, _, _, valueAlign, value, _, _ := MatchVarassign(mkline.raw[0].orignl)
+		if m && value != "\\" {
+			oldWidth = tabWidth(valueAlign)
+		}
+	}
+
+	for _, rawLine := range fix.lines[1:] {
+		_, space := regex.Match1(rawLine.textnl, `^(\s*)`)
+		width := tabWidth(space)
+		if oldWidth == 0 || width < oldWidth {
+			oldWidth = width
+		}
+		if !regex.Matches(space, `^\t*\s{0,7}`) {
+			normalized = false
+		}
+	}
+
+	if normalized && newWidth == oldWidth {
+		return
+	}
+
+	// Continuation lines with the minimal unambiguous indentation
+	// attempt to keep the indentation as small as possible, so don't
+	// realign them.
+	if oldWidth == 8 {
+		return
+	}
+
+	for _, rawLine := range fix.lines[1:] {
+		_, oldSpace := regex.Match1(rawLine.textnl, `^(\s*)`)
+		newWidth := tabWidth(oldSpace) - oldWidth + newWidth
+		newSpace := strings.Repeat("\t", newWidth/8) + strings.Repeat(" ", newWidth%8)
+		if replaced := strings.Replace(rawLine.textnl, oldSpace, newSpace, 1); replaced != rawLine.textnl {
+			if G.opts.PrintAutofix || G.opts.Autofix {
+				rawLine.textnl = replaced
+			}
+			fix.Describef(rawLine.Lineno, "Replacing indentation %q with %q.", oldSpace, newSpace)
 		}
 	}
 }
@@ -73,7 +137,7 @@ func (fix *Autofix) InsertBefore(text string) {
 	}
 
 	fix.linesBefore = append(fix.linesBefore, text+"\n")
-	fix.Describef("Inserting a line %q before this line.", text)
+	fix.Describef(fix.lines[0].Lineno, "Inserting a line %q before this line.", text)
 }
 
 func (fix *Autofix) InsertAfter(text string) {
@@ -82,7 +146,7 @@ func (fix *Autofix) InsertAfter(text string) {
 	}
 
 	fix.linesAfter = append(fix.linesAfter, text+"\n")
-	fix.Describef("Inserting a line %q after this line.", text)
+	fix.Describef(fix.lines[len(fix.lines)-1].Lineno, "Inserting a line %q after this line.", text)
 }
 
 func (fix *Autofix) Delete() {
@@ -91,34 +155,40 @@ func (fix *Autofix) Delete() {
 	}
 
 	for _, line := range fix.lines {
+		fix.Describef(line.Lineno, "Deleting this line.")
 		line.textnl = ""
 	}
-	fix.Describef("Deleting this line.")
 }
 
-func (fix *Autofix) Describef(format string, args ...interface{}) {
-	fix.descrFormat = format
-	fix.descrArgs = args
+// Describef remembers a description of the actual fix
+// for logging it later when Apply is called.
+// There may be multiple fixes in one pass.
+func (fix *Autofix) Describef(lineno int, format string, args ...interface{}) {
+	fix.actions = append(fix.actions, autofixAction{fmt.Sprintf(format, args...), lineno})
 }
 
+// Notef remembers the note for logging it later when Apply is called.
 func (fix *Autofix) Notef(format string, args ...interface{}) {
 	fix.level = llNote
 	fix.diagFormat = format
 	fix.diagArgs = args
 }
 
+// Notef remembers the warning for logging it later when Apply is called.
 func (fix *Autofix) Warnf(format string, args ...interface{}) {
 	fix.level = llWarn
 	fix.diagFormat = format
 	fix.diagArgs = args
 }
 
+// Notef remembers the error for logging it later when Apply is called.
 func (fix *Autofix) Errorf(format string, args ...interface{}) {
 	fix.level = llError
 	fix.diagFormat = format
 	fix.diagArgs = args
 }
 
+// Explain remembers the explanation for logging it later when Apply is called.
 func (fix *Autofix) Explain(explanation ...string) {
 	fix.explanation = explanation
 }
@@ -134,17 +204,19 @@ func (fix *Autofix) Apply() {
 		return
 	}
 
-	if shallBeLogged(fix.diagFormat) && fix.descrFormat != "" {
-		logDiagnostic := fix.level != nil && fix.diagFormat != "Silent-Magic-Diagnostic" && !G.opts.Autofix
+	if shallBeLogged(fix.diagFormat) {
+		logDiagnostic := fix.level != nil && fix.diagFormat != "Silent-Magic-Diagnostic" &&
+			!(G.opts.Autofix && !G.opts.PrintAutofix) && len(fix.actions) > 0
 		if logDiagnostic {
 			msg := fmt.Sprintf(fix.diagFormat, fix.diagArgs...)
 			logs(fix.level, line.Filename, line.Linenos(), fix.diagFormat, msg)
 		}
 
-		logRepair := G.opts.Autofix || G.opts.PrintAutofix
+		logRepair := len(fix.actions) > 0 && (G.opts.Autofix || G.opts.PrintAutofix)
 		if logRepair {
-			msg := fmt.Sprintf(fix.descrFormat, fix.descrArgs...)
-			logs(llAutofix, line.Filename, line.Linenos(), "", msg)
+			for _, action := range fix.actions {
+				logs(llAutofix, line.Filename, strconv.Itoa(action.lineno), "", action.description)
+			}
 		}
 
 		if logDiagnostic || logRepair {
@@ -157,10 +229,9 @@ func (fix *Autofix) Apply() {
 		}
 	}
 
-	fix.modified = fix.modified || fix.descrFormat != ""
+	fix.modified = fix.modified || len(fix.actions) > 0
 
-	fix.descrFormat = ""
-	fix.descrArgs = nil
+	fix.actions = nil
 	fix.level = nil
 	fix.diagFormat = ""
 	fix.diagArgs = nil
@@ -168,6 +239,7 @@ func (fix *Autofix) Apply() {
 }
 
 func (fix *Autofix) skip() bool {
+	// This check is necessary for the --only command line option.
 	if fix.diagFormat == "" {
 		panic("Autofix: The diagnostic must be given before the action.")
 	}
@@ -230,8 +302,6 @@ func SaveAutofixChanges(lines []Line) (autofixed bool) {
 			NewLineWhole(fname).Errorf("Cannot overwrite with auto-fixed content.")
 			continue
 		}
-		msg := "Has been auto-fixed. Please re-run pkglint."
-		logs(llAutofix, fname, "", msg, msg)
 		autofixed = true
 	}
 	return

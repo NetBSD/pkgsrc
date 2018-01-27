@@ -18,7 +18,9 @@ const confMake = "@BMAKE@"
 const confVersion = "@VERSION@"
 
 func main() {
-	G.logOut, G.logErr, trace.Out = NewSeparatorWriter(os.Stdout), NewSeparatorWriter(os.Stderr), os.Stdout
+	G.logOut = NewSeparatorWriter(os.Stdout)
+	G.logErr = NewSeparatorWriter(os.Stderr)
+	trace.Out = os.Stdout
 	os.Exit(new(Pkglint).Main(os.Args...))
 }
 
@@ -157,7 +159,7 @@ func (pkglint *Pkglint) ParseCommandLine(args []string) *int {
 }
 
 func (pkglint *Pkglint) PrintSummary() {
-	if !G.opts.Quiet {
+	if !G.opts.Quiet && !G.opts.Autofix {
 		if G.errors != 0 || G.warnings != 0 {
 			G.logOut.Printf("%d %s and %d %s found.\n",
 				G.errors, ifelseStr(G.errors == 1, "error", "errors"),
@@ -168,7 +170,7 @@ func (pkglint *Pkglint) PrintSummary() {
 		if G.explanationsAvailable && !G.opts.Explain {
 			G.logOut.WriteLine("(Run \"pkglint -e\" to show explanations.)")
 		}
-		if G.autofixAvailable && !G.opts.PrintAutofix && !G.opts.Autofix {
+		if G.autofixAvailable && !G.opts.PrintAutofix {
 			G.logOut.WriteLine("(Run \"pkglint -fs\" to show what can be fixed automatically.)")
 		}
 		if G.autofixAvailable && !G.opts.Autofix {
