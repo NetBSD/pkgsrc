@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.385 2018/01/27 10:59:57 kamil Exp $
+$NetBSD: CHANGES-2018,v 1.386 2018/01/27 12:38:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -629,3 +629,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/p5-Mail-Message to 3.006 [wen 2018-01-27]
 	Updated security/keychain to 2.8.5 [roy 2018-01-27]
 	Added lang/forth-retro version 12.0.2018.1 [kamil 2018-01-27]
+	Updated archivers/brotli to 1.0.2 [mef 2018-01-27]
