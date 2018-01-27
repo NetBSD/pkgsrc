@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2017/11/30 16:45:07 adam Exp $
+# $NetBSD: Makefile,v 1.62 2018/01/27 19:07:47 rillig Exp $
 
 DISTNAME=	PackageKit-0.4.0
 PKGREVISION=	44
@@ -35,8 +35,8 @@ CONF_FILES+=	${EGDIR}/org.freedesktop.PackageKit.conf \
 CONF_FILES+=	${EGDIR}/org.freedesktop.PackageKitTestBackend.conf \
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.freedesktop.PackageKitTestBackend.conf
 
-CHECK_INTERPRETER_SKIP+= lib/pm-utils/sleep.d/95packagekit \
-			 share/PackageKit/helpers/test_spawn/search-name.sh
+CHECK_INTERPRETER_SKIP+=	lib/pm-utils/sleep.d/95packagekit \
+				share/PackageKit/helpers/test_spawn/search-name.sh
 
 CONFIGURE_ARGS+=	--disable-qt
 CONFIGURE_ARGS+=	--with-security-framework=polkit

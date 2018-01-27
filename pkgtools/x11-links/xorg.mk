@@ -1,4 +1,4 @@
-# $NetBSD: xorg.mk,v 1.28 2017/01/24 14:25:00 mrg Exp $
+# $NetBSD: xorg.mk,v 1.29 2018/01/27 19:07:48 rillig Exp $
 #
 # This is for X.org, but use "xfree" files also.
 
@@ -94,9 +94,9 @@ IGNORE_PKG.${pkg}=	yes
 .  if defined(USE_BUILTIN.${pkg}) && \
       !empty(USE_BUILTIN.${pkg}:M[yY][eE][sS])
 .    if exists(${FILESDIR}/xorg.${pkg})
-FILES_LIST+=	${FILESDIR}/xorg.${pkg}
+FILES_LIST+=		${FILESDIR}/xorg.${pkg}
 .    elif exists(${FILESDIR}/xfree.${pkg})
-FILES_LIST+=	${FILESDIR}/xfree.${pkg}
+FILES_LIST+=		${FILESDIR}/xfree.${pkg}
 .    endif
 .  endif
 .endfor

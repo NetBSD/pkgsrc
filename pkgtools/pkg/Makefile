@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/08/19 00:24:13 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2018/01/27 19:07:47 rillig Exp $
 
 DISTNAME=	pkg-1.9.99.4
 PKGREVISION=	1
@@ -22,7 +22,7 @@ CPPFLAGS+=	-DDEFAULT_VULNXML_URL="\"http://muscles.dragonflybsd.org/pkgsrc-vuxml
 CFLAGS+=	-DSYSCONFDIR=\"${PKG_SYSCONFDIR}\"
 
 .if defined(DEBUG_PKGNG)
-CFLAGS:=	${CFLAGS:N-O2} -ggdb -O0
+CFLAGS:=		${CFLAGS:N-O2} -ggdb -O0
 _STRIPFLAG_INSTALL=	# don't strip
 .endif
 
@@ -50,7 +50,7 @@ OWN_DIRS=	${PKG_SYSCONFDIR}/bash_completion.d \
 		${PKG_SYSCONFDIR}/periodic/security \
 		${PKG_SYSCONFDIR}/periodic/weekly
 
-SUBST_CLASSES+=	manpages-prefix
+SUBST_CLASSES+=			manpages-prefix
 SUBST_STAGE.manpages-prefix=	pre-install
 SUBST_FILES.manpages-prefix=	docs/pkg-install.8 docs/pkg-repo.8
 SUBST_FILES.manpages-prefix+=	docs/pkg-search.8 docs/pkg-update.8
@@ -59,7 +59,7 @@ SUBST_FILES.manpages-prefix+=	docs/pkg.conf.5
 SUBST_SED.manpages-prefix+=	-e "s|/usr/local|${PREFIX}|g"
 SUBST_MESSAGE.manpages-prefix=	Correct the installation prefix in manual pages.
 
-SUBST_CLASSES+=	pkgconf-prefix
+SUBST_CLASSES+=			pkgconf-prefix
 SUBST_STAGE.pkgconf-prefix=	pre-install
 SUBST_FILES.pkgconf-prefix=	src/pkg.conf.sample
 SUBST_SED.pkgconf-prefix+=	-e "s|/usr/local|${PREFIX}|g"
