@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/09/17 20:58:41 wiz Exp $
+$NetBSD: distinfo,v 1.3 2018/01/27 07:54:04 wen Exp $
 
-SHA1 (NetAddr-MAC-0.95.tar.gz) = a54e13830533ac89f9df9361f511bdcbf76129e4
-RMD160 (NetAddr-MAC-0.95.tar.gz) = c142d6530212498db412297ee5a4f7f1feed7e03
-SHA512 (NetAddr-MAC-0.95.tar.gz) = 130a56997eb8b702398412aac29cfcec91931922de7f5feb8978aa88679b61a83f45f37bb7c61070ef2b9fc3134de77c5e6d009d14bb859bec14460f63426f8d
-Size (NetAddr-MAC-0.95.tar.gz) = 24574 bytes
+SHA1 (NetAddr-MAC-0.96.tar.gz) = 3f88bf4a95dd126fe96a88f896c6170e24314e62
+RMD160 (NetAddr-MAC-0.96.tar.gz) = d3b7af972f460d65646e3840252b50aca731a2e3
+SHA512 (NetAddr-MAC-0.96.tar.gz) = c2bd45cda42c9fe354354a8a2fb7ce3a528d49d0aaf48bb67059d047e139ed84118f8766f9c0c233296670584172e9ef6f0c34f7036845dbf5ec8d2fab119512
+Size (NetAddr-MAC-0.96.tar.gz) = 27538 bytes
