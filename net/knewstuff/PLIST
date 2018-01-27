@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/01/17 20:05:44 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/27 03:45:38 markd Exp $
 include/KF5/KNewStuff3/KNS3/Button
 include/KF5/KNewStuff3/KNS3/DownloadDialog
 include/KF5/KNewStuff3/KNS3/DownloadManager
@@ -73,6 +73,7 @@ qt5/qml/org/kde/newstuff/libnewstuffqmlplugin.so
 qt5/qml/org/kde/newstuff/qml/NewStuffItem.qml
 qt5/qml/org/kde/newstuff/qml/NewStuffList.qml
 qt5/qml/org/kde/newstuff/qmldir
+share/examples/kde-xdg/knewstuff.categories
 share/kf5/kmoretools/presets-kmoretools/_INFO
 share/kf5/kmoretools/presets-kmoretools/angrysearch.desktop
 share/kf5/kmoretools/presets-kmoretools/catfish.desktop
