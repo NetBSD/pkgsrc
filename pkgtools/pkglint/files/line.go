@@ -92,24 +92,24 @@ func (line *LineImpl) printSource(out *SeparatorWriter) {
 		for _, rawLine := range rawLines {
 			if rawLine.textnl != rawLine.orignl {
 				if rawLine.orignl != "" {
-					out.Write("- " + rawLine.orignl)
+					out.Write("-\t" + rawLine.orignl)
 				}
 				if rawLine.textnl != "" {
-					out.Write("+ " + rawLine.textnl)
+					out.Write("+\t" + rawLine.textnl)
 				}
 			} else {
-				out.Write("> " + rawLine.orignl)
+				out.Write(">\t" + rawLine.orignl)
 			}
 		}
 	}
 
 	if line.autofix != nil {
 		for _, before := range line.autofix.linesBefore {
-			out.Write("+ " + before)
+			out.Write("+\t" + before)
 		}
 		printDiff(line.autofix.lines)
 		for _, after := range line.autofix.linesAfter {
-			out.Write("+ " + after)
+			out.Write("+\t" + after)
 		}
 	} else {
 		printDiff(line.raw)
@@ -159,12 +159,6 @@ func (line *LineImpl) String() string {
 	return line.Filename + ":" + line.Linenos() + ": " + line.Text
 }
 
-// Autofix returns a builder object for automatically fixing the line.
-// After building the object, call Apply to actually apply the changes to the line.
-//
-// The changed lines are not written back to disk immediately.
-// This is done by SaveAutofixChanges.
-//
 func (line *LineImpl) Autofix() *Autofix {
 	if line.autofix == nil {
 		line.autofix = NewAutofix(line)
