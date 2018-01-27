@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.388 2018/01/27 18:51:17 rillig Exp $
+$NetBSD: CHANGES-2018,v 1.389 2018/01/27 23:17:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -632,3 +632,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/brotli to 1.0.2 [mef 2018-01-27]
 	Updated net/youtube-dl to 20180127 [leot 2018-01-27]
 	Updated pkgtools/pkglint to 5.5.2 [rillig 2018-01-27]
+	Updated pkgtools/pkg_chk to 2.0.9 [wiz 2018-01-27]
