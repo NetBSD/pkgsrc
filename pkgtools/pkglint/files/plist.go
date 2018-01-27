@@ -523,7 +523,7 @@ func (s *plistLineSorter) Sort() {
 	}
 
 	fix := firstLine.Autofix()
-	fix.Describef("Sorting the whole file.")
+	fix.Describef(int(firstLine.firstLine), "Sorting the whole file.")
 	fix.Apply()
 
 	var lines []Line
