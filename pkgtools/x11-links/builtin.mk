@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2005/06/01 18:03:08 jlam Exp $
+# $NetBSD: builtin.mk,v 1.8 2018/01/27 19:07:48 rillig Exp $
 
 BUILTIN_PKG:=	x11-links
 .include "../../mk/buildlink3/bsd.builtin.mk"
@@ -6,4 +6,4 @@ BUILTIN_PKG:=	x11-links
 .if !defined(USE_BUILTIN.x11-links)
 USE_BUILTIN.x11-links=	no
 .endif
-MAKEVARS+=	USE_BUILTIN.x11-links
+MAKEVARS+=		USE_BUILTIN.x11-links

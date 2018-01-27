@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/07/09 06:38:49 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2018/01/27 19:07:47 rillig Exp $
 #
 
 DISTNAME=	pkgse-0.3
@@ -17,7 +17,7 @@ NO_BUILD=	yes
 USE_TOOLS+=	perl:run
 
 INSTALLATION_DIRS=	bin
-REPLACE_PERL=	pkgse
+REPLACE_PERL=		pkgse
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkgse ${DESTDIR}${PREFIX}/bin

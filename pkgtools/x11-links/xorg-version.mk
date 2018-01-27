@@ -1,4 +1,4 @@
-# $NetBSD: xorg-version.mk,v 1.3 2013/01/23 15:25:04 tron Exp $
+# $NetBSD: xorg-version.mk,v 1.4 2018/01/27 19:07:48 rillig Exp $
 #
 # This Makefile fragment is included by Makefiles that need to access
 # the X11_TYPE and version number of an X.org distribution.
@@ -28,7 +28,7 @@ BUILTIN_XORG_VERSION_FILE=	${CF_XORG_VERSION}
 BUILTIN_XORG_VERSION_FILE=	${CF_VERSION_OLD}
 .  endif
 .endif
-MAKEVARS+=	BUILTIN_XORG_VERSION_FILE
+MAKEVARS+=			BUILTIN_XORG_VERSION_FILE
 
 .if !defined(BUILTIN_X11_VERSION.xorg)
 .  if exists(${BUILTIN_XORG_VERSION_FILE})

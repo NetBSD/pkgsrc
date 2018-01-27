@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/10/14 12:50:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2018/01/27 19:07:46 rillig Exp $
 
 PKGNAME=	mksandbox-1.7
 CATEGORIES=	pkgtools
@@ -8,10 +8,10 @@ HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/bulk.html#setting-up-a-sandbox
 COMMENT=	Tool for creating sandboxes
 LICENSE=	2-clause-bsd
 
-WRKSRC=		${WRKDIR}
-NO_BUILD=	yes
-NO_CHECKSUM=	yes
-USE_LANGUAGES=	# none
+WRKSRC=			${WRKDIR}
+NO_BUILD=		yes
+NO_CHECKSUM=		yes
+USE_LANGUAGES=		# none
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 
 do-extract:
