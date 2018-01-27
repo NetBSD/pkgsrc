@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2018/01/27 03:56:52 markd Exp $
+
+Install via examples dir
+
+--- CMakeLists.txt.orig	2018-01-27 03:47:45.549155864 +0000
++++ CMakeLists.txt
+@@ -85,6 +85,6 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR
+         DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel )
+ 
+ # contains list of debug categories, for kdebugsettings
+-install(FILES sonnet.categories DESTINATION ${KDE_INSTALL_CONFDIR})
++install(FILES sonnet.categories DESTINATION ${KDE_INSTALL_DATAROOTDIR}/examples/kde-xdg)
+ 
+ feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
