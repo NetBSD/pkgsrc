@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/03/03 04:47:04 obache Exp $
+# $NetBSD: Makefile,v 1.8 2018/01/27 19:07:47 rillig Exp $
 
 PKGNAME=	pkg_leaves-1.2
 CATEGORIES=	pkgtools
@@ -12,7 +12,7 @@ NO_BUILD=	yes
 USE_LANGUAGES=	# none
 
 # Set SCRIPT_SUBST to substitute "@VARIABLE@" with "value"
-SUBST_CLASSES+=	vars
+SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	do-configure
 SUBST_FILES.vars=	pkg_leaves
 SUBST_VARS.vars=	PKG_INFO_CMD PKG_DBDIR SH
