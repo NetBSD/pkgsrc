@@ -13,6 +13,7 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++11
+GCC_REQD+=		4.8
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	bootstrap
 
