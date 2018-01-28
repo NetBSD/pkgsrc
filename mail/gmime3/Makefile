@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2018/01/10 09:54:53 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/01/28 15:30:07 wiz Exp $
 
-DISTNAME=	gmime-3.0.5
+DISTNAME=	gmime-3.2.0
 PKGNAME=	${DISTNAME:S/gmime/gmime3/}
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gmime/3.0/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gmime/3.2/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
