@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2016/08/24 09:59:31 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2018/01/28 15:52:16 wiz Exp $
 
---- Makefile.orig	2016-08-13 22:39:26.000000000 +0000
+--- Makefile.orig	2018-01-08 11:01:17.000000000 +0000
 +++ Makefile
 @@ -27,9 +27,9 @@ INSTALL ?= /usr/bin/install -c
  STRIP ?= -s
@@ -19,9 +19,9 @@ $NetBSD: patch-aa,v 1.4 2016/08/24 09:59:31 wiz Exp $
  
  install: $(PRODUCT)
 -	$(INSTALL) -d -m 755 $(bindir)
--	$(INSTALL) $(STRIP) -m 755 -o 0 $(PRODUCT) $(bindir)
+-	$(INSTALL) $(STRIP) -m 755 $(PRODUCT) $(bindir)
 -	$(INSTALL) -d -m 755 $(mandir)
--	$(INSTALL) -m 644 -o 0 $(PRODUCT).1 $(mandir)
+-	$(INSTALL) -m 644 $(PRODUCT).1 $(mandir)
 +	$(BSD_INSTALL_PROGRAM_DIR) $(bindir)
 +	$(BSD_INSTALL_PROGRAM) $(PRODUCT) $(bindir)
 +	$(BSD_INSTALL_MAN_DIR) $(mandir)
