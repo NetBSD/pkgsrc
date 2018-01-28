@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.227 2017/11/22 08:45:59 wiz Exp $
+$NetBSD: distinfo,v 1.228 2018/01/28 16:51:50 wiz Exp $
 
-SHA1 (glib-2.54.2.tar.xz) = 85b5d649fc3d18f8d8197bd971dfbebd94b5f96d
-RMD160 (glib-2.54.2.tar.xz) = 6804848c49bc882da563d8c3e025f1e37518bbc5
-SHA512 (glib-2.54.2.tar.xz) = 09ee6fa3a6f3f15af229bd789bef536e3570f36d1e4ce624a57e97c4040577f6baccd6ab5746257863ccf7173b558cfa753951d562a278f854e52604104ba7ee
-Size (glib-2.54.2.tar.xz) = 7830724 bytes
+SHA1 (glib-2.54.3.tar.xz) = 12d7466550156ac8a765f603b0df7604cdf34cfd
+RMD160 (glib-2.54.3.tar.xz) = 7439dbf9d661352e7f2c1beae84b76e401798675
+SHA512 (glib-2.54.3.tar.xz) = 23eb4458684624f80c17aa784eab42a38eec87bb5979fcfe56f0bc63b5c7bcf8251a0d4ea916fe2c8109ff5b14a4b60c6260755d079ff984c0d8e6a2871d307d
+Size (glib-2.54.3.tar.xz) = 7836536 bytes
 SHA1 (patch-Makefile.in) = 4d587eb9ff27ff2b3489c59388319142e2fb6ced
 SHA1 (patch-aa) = 938e6fb29a2190eaa65b929b986c2f73c46d15ae
 SHA1 (patch-ab) = 04bde955a2a588011a8c77ada4923d5464a0d544
@@ -35,4 +35,4 @@ SHA1 (patch-glib_gtimezone.c) = d9686da52f171a073d80cfd9f80aa490088a00a3
 SHA1 (patch-gobject_Makefile.am) = 6eed6b57f5ff0aa0dfb623110b23a3ff78aa4e75
 SHA1 (patch-gobject_Makefile.in) = a4768ff7b0607a8a4dfbb2cff087a987b451fd18
 SHA1 (patch-gobject_glib-genmarshal.in) = f21ca416d4eb4ad5a8ce3ffa053f8bcd2be8953a
-SHA1 (patch-gobject_glib-mkenums.in) = 7468c428ca33de20571d0199d17a0dcc6ea9d624
+SHA1 (patch-gobject_glib-mkenums.in) = 22676989e47dfd13583d89469810af6ce7d01ab7
