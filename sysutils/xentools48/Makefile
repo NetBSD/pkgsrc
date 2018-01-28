@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2017/11/20 08:34:17 maya Exp $
+# $NetBSD: Makefile,v 1.13.2.1 2018/01/28 15:23:24 bsiegert Exp $
 #
-VERSION=	4.8.2
+VERSION=	4.8.3
 VERSION_IPXE=	827dd1bfee67daa683935ce65316f7e0f057fe1c
 DIST_IPXE=	ipxe-git-${VERSION_IPXE}.tar.gz
 DIST_NEWLIB=	newlib-1.16.0.tar.gz
@@ -16,7 +16,6 @@ DIST_LIBPCI=	pciutils-2.2.9.tar.bz2
 DIST_SUBDIR=		xen48
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools48-${VERSION}
-PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
 
