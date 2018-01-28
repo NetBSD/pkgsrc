@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.15 2017/04/05 16:05:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/01/28 15:40:10 wiz Exp $
 bin/sigil
-lib/sigil/libhunspell.${RUBY_DLEXT}
-lib/sigil/libsigilgumbo.${RUBY_DLEXT}
+lib/sigil/libhunspell.so
+lib/sigil/libsigilgumbo.so
 lib/sigil/sigil
 share/applications/sigil.desktop
 share/pixmaps/sigil.png
@@ -82,6 +82,7 @@ share/sigil/python3lib/sanitycheck.py
 share/sigil/python3lib/updatechecker.py
 share/sigil/python3lib/xmlprocessor.py
 share/sigil/python3lib/xmlsanitycheck.py
+share/sigil/translations/sigil_af.qm
 share/sigil/translations/sigil_ca.qm
 share/sigil/translations/sigil_cs.qm
 share/sigil/translations/sigil_da_DK.qm
@@ -103,7 +104,6 @@ share/sigil/translations/sigil_pt_BR.qm
 share/sigil/translations/sigil_ru.qm
 share/sigil/translations/sigil_sr.qm
 share/sigil/translations/sigil_tr.qm
-share/sigil/translations/sigil_tr_TR.qm
 share/sigil/translations/sigil_zh.qm
 share/sigil/translations/sigil_zh_CN.qm
 share/sigil/translations/sigil_zh_TW.qm
