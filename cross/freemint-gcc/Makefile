@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2015/11/25 12:49:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2018/01/28 16:24:12 wiz Exp $
 
 DISTNAME=		gcc-4.6.4
 PKGNAME=		cross-freemint-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-4.6.4/}
 
