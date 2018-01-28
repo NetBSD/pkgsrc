@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.411 2018/01/28 16:37:07 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.412 2018/01/28 16:38:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -658,3 +658,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/mpfr to 4.0.0 [wiz 2018-01-28]
 	Updated textproc/oniguruma to 6.7.1 [wiz 2018-01-28]
 	Updated textproc/py-Unidecode to 1.0.22 [wiz 2018-01-28]
+	Updated security/py-certifi to 2018.1.18 [wiz 2018-01-28]
