@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.419 2018/01/28 17:09:40 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.420 2018/01/28 17:19:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -666,3 +666,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/gtk2 to 2.24.32 [wiz 2018-01-28]
 	Updated converters/libpagemaker to 0.0.4 [wiz 2018-01-28]
 	Updated misc/goffice0.10 to 0.10.38 [wiz 2018-01-28]
+	Updated math/gnumeric112 to 1.12.38 [wiz 2018-01-28]
