@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.401 2018/01/28 15:50:22 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.402 2018/01/28 15:52:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -648,3 +648,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated editors/Sigil to 0.9.9 [wiz 2018-01-28]
 	Updated audio/chromaprint to 1.4.3 [wiz 2018-01-28]
 	Updated net/filezilla to 3.30.0 [wiz 2018-01-28]
+	Updated audio/id3 to 1.0.1 [wiz 2018-01-28]
