@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18047 2018/01/28 15:30:16 wiz Exp $
+$NetBSD: TODO,v 1.18048 2018/01/28 15:33:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1101,7 +1101,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o netramet-50
 	o newmail-1.0.2
 	o ng-spice-26
-	o notmuch-0.26
 	o nqp-2016.02
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
