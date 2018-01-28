@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2018/01/28 23:31:16 wiedi Exp $
+# $NetBSD: Makefile,v 1.43 2018/01/28 23:39:36 wiedi Exp $
 
 DISTNAME=		nullmailer-2.1
 PKGREVISION=		1
@@ -10,7 +10,10 @@ HOMEPAGE=		http://untroubled.org/nullmailer/
 COMMENT=		Simple relay-only mail transport agent
 LICENSE=		gnu-gpl-v2
 
+.include "../../mk/bsd.prefs.mk"
+.if ${INIT_SYSTEM} == "rc.d"
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
+.endif
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
