@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2016/08/24 10:01:21 wiz Exp $
+$NetBSD: distinfo,v 1.8 2018/01/28 15:52:16 wiz Exp $
 
-SHA1 (id3-1.0.0.tar.xz) = 26bf0cd599f4754adb453189598df9ce68cce2ec
-RMD160 (id3-1.0.0.tar.xz) = 6616235d06c815357369cd339bb2f50579d9776e
-SHA512 (id3-1.0.0.tar.xz) = 94e88c3a47118bdd2778cc64f5ea009d1a3a872431be945f0dab2f5cbd4b5c82dc61d39049ff1f528ab0f013ccd0e938a856d33d1bda5bc96ecfb9c4284a6e55
-Size (id3-1.0.0.tar.xz) = 13596 bytes
-SHA1 (patch-aa) = 48ded9b7447c8d10f56500ef20a52c5a4a587376
+SHA1 (id3-1.0.1.tar.xz) = 7c85a181fdbe3786582a3616ef89d1530bad5248
+RMD160 (id3-1.0.1.tar.xz) = e8796a56be94d33ed6b565b2f88fe54ce3c4d344
+SHA512 (id3-1.0.1.tar.xz) = b60ed46a36f8ed6e1a2384fcb9babf57c20861fd19693a908e810e17197105506d93a449a2c8348b373a2ef24bf84c7b786ff00e31b56d1594fecfc1d883eceb
+Size (id3-1.0.1.tar.xz) = 13684 bytes
+SHA1 (patch-aa) = a75251bde75266785cf6e1a2466d339d2739c60a
 SHA1 (patch-ab) = 85f3a012d044b7844adb9cfe6300a948ea30ff78
