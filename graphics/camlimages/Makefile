@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.99 2018/01/10 16:53:11 jaapb Exp $
+# $NetBSD: Makefile,v 1.100 2018/01/28 20:10:51 wiz Exp $
 
 VERSION=		4.0.1
 PKGNAME=		camlimages-${VERSION}
-PKGREVISION=		62
+PKGREVISION=		63
 CATEGORIES=		graphics
 MASTER_SITES=		https://bitbucket.org/camlspotter/camlimages/get/
 DISTNAME=		v${VERSION}

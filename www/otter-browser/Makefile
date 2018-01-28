@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2017/11/30 16:45:41 adam Exp $
+# $NetBSD: Makefile,v 1.18 2018/01/28 20:11:07 wiz Exp $
 
 DISTNAME=	otter-browser-0.9.10
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OtterBrowser/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

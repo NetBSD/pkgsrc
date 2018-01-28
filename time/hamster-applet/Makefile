@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2017/11/23 17:20:15 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2018/01/28 20:11:06 wiz Exp $
 
 DISTNAME=	hamster-applet-2.28.1
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/hamster-applet/2.28/}
 

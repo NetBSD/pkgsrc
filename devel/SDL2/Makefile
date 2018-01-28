@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2017/10/23 20:48:43 adam Exp $
+# $NetBSD: Makefile,v 1.26 2018/01/28 20:10:45 wiz Exp $
 
 DISTNAME=	SDL2-2.0.7
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.libsdl.org/release/
 
