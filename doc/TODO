@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18062 2018/01/28 16:38:26 wiz Exp $
+$NetBSD: TODO,v 1.18063 2018/01/28 16:40:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1212,7 +1212,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-augeas-1.0.3
 	o py-cassa-1.11.0
-	o py-cffi-1.11.4
 	o py-cssselect2-0.2.1
 	o py-django-2.0
 	o py-django-photologue-2.7
@@ -1230,7 +1229,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.6.4
 	o py-pendrell-0.3.7
-	o py-polib-1.1.0
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
 	o py-quixote-2.9
