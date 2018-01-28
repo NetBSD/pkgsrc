@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2017/08/01 14:58:52 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2018/01/28 15:43:03 wiz Exp $
 
-DISTNAME=	chromaprint-1.4.2
-PKGREVISION=	2
+DISTNAME=	chromaprint-1.4.3
 CATEGORIES=	audio
-MASTER_SITES=	https://bitbucket.org/acoustid/chromaprint/downloads/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=acoustid/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://acoustid.org/chromaprint
