@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.399 2018/01/28 15:40:18 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.400 2018/01/28 15:43:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -646,3 +646,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/gmime3 to 3.2.0 [wiz 2018-01-28]
 	Updated mail/notmuch to 0.26 [wiz 2018-01-28]
 	Updated editors/Sigil to 0.9.9 [wiz 2018-01-28]
+	Updated audio/chromaprint to 1.4.3 [wiz 2018-01-28]
