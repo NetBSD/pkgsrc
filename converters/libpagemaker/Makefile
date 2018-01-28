@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2018/01/01 21:18:07 adam Exp $
+# $NetBSD: Makefile,v 1.11 2018/01/28 17:05:20 wiz Exp $
 
-DISTNAME=	libpagemaker-0.0.3
-PKGREVISION=	5
+DISTNAME=	libpagemaker-0.0.4
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/libpagemaker/
 
@@ -13,7 +12,7 @@ LICENSE=	mpl-2.0
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 
 CONFIGURE_ARGS+=	--without-docs
 
