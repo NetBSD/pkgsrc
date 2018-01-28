@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.393 2018/01/28 12:01:59 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.394 2018/01/28 15:09:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -640,3 +640,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-txrequests to 0.9.6 [adam 2018-01-28]
 	Updated lang/go to 1.9.3 [bsiegert 2018-01-28]
 	Updated net/py-namecheap to 0.0.3 [wiz 2018-01-28]
+	Updated devel/waf to 2.0.4 [wiz 2018-01-28]
