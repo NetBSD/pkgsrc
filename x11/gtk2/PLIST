@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.89 2018/01/01 22:30:04 rillig Exp $
+@comment $NetBSD: PLIST,v 1.90 2018/01/28 17:02:43 wiz Exp $
 bin/gtk-builder-convert
 bin/gtk-demo
 bin/gtk-query-immodules-2.0
@@ -373,18 +373,6 @@ share/gtk-doc/html/gdk2/GdkDisplayManager.html
 share/gtk-doc/html/gdk2/GdkScreen.html
 share/gtk-doc/html/gdk2/X_cursor.png
 share/gtk-doc/html/gdk2/annotation-glossary.html
-share/gtk-doc/html/gdk2/api-index-2-10.html
-share/gtk-doc/html/gdk2/api-index-2-12.html
-share/gtk-doc/html/gdk2/api-index-2-14.html
-share/gtk-doc/html/gdk2/api-index-2-16.html
-share/gtk-doc/html/gdk2/api-index-2-18.html
-share/gtk-doc/html/gdk2/api-index-2-2.html
-share/gtk-doc/html/gdk2/api-index-2-20.html
-share/gtk-doc/html/gdk2/api-index-2-22.html
-share/gtk-doc/html/gdk2/api-index-2-4.html
-share/gtk-doc/html/gdk2/api-index-2-6.html
-share/gtk-doc/html/gdk2/api-index-2-8.html
-share/gtk-doc/html/gdk2/api-index-deprecated.html
 share/gtk-doc/html/gdk2/api-index-full.html
 share/gtk-doc/html/gdk2/arrow.png
 share/gtk-doc/html/gdk2/based_arrow_down.png
@@ -713,19 +701,6 @@ share/gtk-doc/html/gtk2/WindowWidgets.html
 share/gtk-doc/html/gtk2/aboutdialog.png
 share/gtk-doc/html/gtk2/accel-label.png
 share/gtk-doc/html/gtk2/annotation-glossary.html
-share/gtk-doc/html/gtk2/api-index-2-10.html
-share/gtk-doc/html/gtk2/api-index-2-12.html
-share/gtk-doc/html/gtk2/api-index-2-14.html
-share/gtk-doc/html/gtk2/api-index-2-16.html
-share/gtk-doc/html/gtk2/api-index-2-18.html
-share/gtk-doc/html/gtk2/api-index-2-2.html
-share/gtk-doc/html/gtk2/api-index-2-20.html
-share/gtk-doc/html/gtk2/api-index-2-22.html
-share/gtk-doc/html/gtk2/api-index-2-24.html
-share/gtk-doc/html/gtk2/api-index-2-4.html
-share/gtk-doc/html/gtk2/api-index-2-6.html
-share/gtk-doc/html/gtk2/api-index-2-8.html
-share/gtk-doc/html/gtk2/api-index-deprecated.html
 share/gtk-doc/html/gtk2/api-index-full.html
 share/gtk-doc/html/gtk2/application-exit.png
 share/gtk-doc/html/gtk2/assistant.png
