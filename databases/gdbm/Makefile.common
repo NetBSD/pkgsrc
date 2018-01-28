@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.5 2017/03/20 06:02:26 adam Exp $
+# $NetBSD: Makefile.common,v 1.6 2018/01/28 19:40:22 wiz Exp $
 #
 # used by databases/gdbm/Makefile
 # used by databases/gdbm_compat/Makefile
 
-DISTNAME=	gdbm-1.13
+DISTNAME=	gdbm-1.14.1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GNU:=gdbm/}
 
