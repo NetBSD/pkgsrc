@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/08/14 20:17:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/01/28 15:33:00 wiz Exp $
 bin/notmuch
 include/notmuch.h
 lib/libnotmuch.so
@@ -12,6 +12,7 @@ man/man1/notmuch-dump.1
 man/man1/notmuch-emacs-mua.1
 man/man1/notmuch-insert.1
 man/man1/notmuch-new.1
+man/man1/notmuch-reindex.1
 man/man1/notmuch-reply.1
 man/man1/notmuch-restore.1
 man/man1/notmuch-search.1
@@ -20,6 +21,7 @@ man/man1/notmuch-show.1
 man/man1/notmuch-tag.1
 man/man1/notmuch.1
 man/man5/notmuch-hooks.5
+man/man7/notmuch-properties.7
 man/man7/notmuch-search-terms.7
 ${PLIST.emacs}share/emacs/site-lisp/coolj.el
 ${PLIST.emacs}share/emacs/site-lisp/coolj.elc
