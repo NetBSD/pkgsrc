@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.3 2018/01/23 14:56:35 jperkin Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.4 2018/01/28 19:33:09 wiz Exp $
 include/gstreamer-1.0/gst/gl/cocoa/gstglcaopengllayer.h
 include/gstreamer-1.0/gst/gl/cocoa/gstgldisplay_cocoa.h
 include/gstreamer-1.0/gst/gl/gl.h
@@ -49,11 +49,8 @@ include/gstreamer-1.0/gst/gl/gstglviewconvert.h
 include/gstreamer-1.0/gst/gl/gstglwindow.h
 lib/gstreamer-1.0/include/gst/gl/gstglconfig.h
 lib/gstreamer-1.0/libgstapplemedia.la
-lib/gstreamer-1.0/libgstapplemedia.so
 lib/gstreamer-1.0/libgstdecklink.la
-lib/gstreamer-1.0/libgstdecklink.so
 lib/gstreamer-1.0/libgstopengl.la
-lib/gstreamer-1.0/libgstopengl.so
 lib/libgstgl-1.0.0.dylib
 lib/libgstgl-1.0.a
 lib/libgstgl-1.0.dylib
