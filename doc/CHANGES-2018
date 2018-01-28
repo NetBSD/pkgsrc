@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.389 2018/01/27 23:17:30 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.390 2018/01/28 08:37:49 tron Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -633,3 +633,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/youtube-dl to 20180127 [leot 2018-01-27]
 	Updated pkgtools/pkglint to 5.5.2 [rillig 2018-01-27]
 	Updated pkgtools/pkg_chk to 2.0.9 [wiz 2018-01-27]
+	Updated mail/mutt to 1.9.3 [tron 2018-01-28]
