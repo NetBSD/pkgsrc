@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.424 2018/01/28 19:58:34 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.425 2018/01/28 23:21:29 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -671,3 +671,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/py-gstreamer1 to 1.12.4 [wiz 2018-01-28]
 	Updated databases/gdbm to 1.14.1 [wiz 2018-01-28]
 	Updated graphics/openexr to 2.2.1 [wiz 2018-01-28]
+	Updated pkgtools/pkglint to 5.5.3 [rillig 2018-01-28]
