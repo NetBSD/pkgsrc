@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/01/23 09:48:23 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/28 12:01:49 wiz Exp $
 
-DISTNAME=	PyNamecheap-0.0.2
+DISTNAME=	PyNamecheap-0.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//:tl}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyNamecheap/}
