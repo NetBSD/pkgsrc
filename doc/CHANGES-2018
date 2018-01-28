@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.407 2018/01/28 16:01:33 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.408 2018/01/28 16:04:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -654,3 +654,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/latexmk to 455 [wiz 2018-01-28]
 	Updated devel/libsigsegv to 2.12 [wiz 2018-01-28]
 	Updated net/libsoup to 2.60.3 [wiz 2018-01-28]
+	Updated multimedia/libvpx to 1.7.0 [wiz 2018-01-28]
