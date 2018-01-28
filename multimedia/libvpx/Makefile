@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2017/06/28 15:35:48 he Exp $
+# $NetBSD: Makefile,v 1.72 2018/01/28 16:04:11 wiz Exp $
 
-DISTNAME=	libvpx-1.6.1
-PKGREVISION=	1
+DISTNAME=	libvpx-1.7.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=webmproject/}
 GITHUB_PROJECT=	libvpx
