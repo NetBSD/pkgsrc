@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.421 2018/01/28 19:33:36 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.422 2018/01/28 19:37:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -668,3 +668,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/goffice0.10 to 0.10.38 [wiz 2018-01-28]
 	Updated math/gnumeric112 to 1.12.38 [wiz 2018-01-28]
 	Updated multimedia/gstreamer1 to 1.12.4 [wiz 2018-01-28]
+	Updated multimedia/py-gstreamer1 to 1.12.4 [wiz 2018-01-28]
