@@ -260,28 +260,42 @@ func (va *VaralignBlock) Check(mkline MkLine) {
 	case !G.opts.WarnSpace:
 		return
 
+	case mkline.IsEmpty():
+		va.Finish()
+		return
+
+	case mkline.IsCommentedVarassign():
+		break
+
 	case mkline.IsComment():
 		return
 
 	case mkline.IsCond():
 		return
 
-	case mkline.IsEmpty():
-		va.Finish()
-		return
-
 	case !mkline.IsVarassign():
 		trace.Stepf("Skipping")
 		va.skip = true
 		return
+	}
 
+	switch {
 	case mkline.Op() == opAssignEval && matches(mkline.Varname(), `^[a-z]`):
 		// Arguments to procedures do not take part in block alignment.
+		//
+		// Example:
+		// pkgpath := ${PKGPATH}
 		return
 
 	case mkline.Value() == "" && mkline.VarassignComment() == "":
 		// Multiple-inclusion guards usually appear in a block of
 		// their own and therefore do not need alignment.
+		//
+		// Example:
+		// .if !defined(INCLUSION_GUARD_MK)
+		// INCLUSION_GUARD_MK:=
+		// # ...
+		// .endif
 		return
 	}
 
@@ -289,7 +303,7 @@ func (va *VaralignBlock) Check(mkline MkLine) {
 	if mkline.IsMultiline() {
 		// Interpreting the continuation marker as variable value
 		// is cheating, but works well.
-		m, _, _, _, _, value, _, _ := MatchVarassign(mkline.raw[0].orignl)
+		m, _, _, _, _, _, value, _, _ := MatchVarassign(mkline.raw[0].orignl)
 		continuation = m && value == "\\"
 	}
 
@@ -330,8 +344,8 @@ func (va *VaralignBlock) Finish() {
 // variable from forcing the rest of the paragraph to be indented too
 // far to the right.
 func (va *VaralignBlock) optimalWidth(infos []*varalignBlockInfo) int {
-	longest := 0
-	secondLongest := 0
+	longest := 0       // The longest seen varnameOpWidth
+	secondLongest := 0 // The second-longest seen varnameOpWidth
 	for _, info := range infos {
 		if info.continuation {
 			continue
