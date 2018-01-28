@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2012/10/02 21:25:17 asau Exp $
+# $NetBSD: Makefile,v 1.22 2018/01/28 20:10:44 wiz Exp $
 #
 
 DISTNAME=	gdbm-prim-1.15
 PKGNAME=	${DISTNAME:S/-prim/_primitive/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.gz-link.gz

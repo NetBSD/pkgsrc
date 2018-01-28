@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.99 2017/11/23 17:20:17 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2018/01/28 20:11:08 wiz Exp $
 #
 
 DISTNAME=		gnopernicus-1.1.1
-PKGREVISION=		44
+PKGREVISION=		45
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnopernicus/1.1/}
 EXTRACT_SUFX=		.tar.bz2
