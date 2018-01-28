@@ -54,7 +54,7 @@ func CheckLineTrailingWhitespace(line Line) {
 		fix.Explain(
 			"When a line ends with some white-space, that space is in most cases",
 			"irrelevant and can be removed.")
-		fix.ReplaceRegex(`\s+\n$`, "\n")
+		fix.ReplaceRegex(`[ \t\r]+\n$`, "\n", 1)
 		fix.Apply()
 	}
 }
