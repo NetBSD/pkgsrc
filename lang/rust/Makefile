@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2017/12/17 01:00:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.24.2.1 2018/01/28 18:24:02 bsiegert Exp $
 
-DISTNAME=	rustc-1.22.1-src
+DISTNAME=	rustc-1.23.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
-PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
 
@@ -75,7 +74,7 @@ CONFIGURE_ARGS+=	--disable-jemalloc
 # own bootstrap.  See the stage0-bootstrap below for more details.
 #
 DISTFILES:=		${DEFAULT_DISTFILES}
-RUST_STAGE0_VER=	1.21.0
+RUST_STAGE0_VER=	1.22.1
 #
 .if !empty(MACHINE_PLATFORM:MDarwin-*-i386) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH:=		i686-apple-darwin
@@ -101,13 +100,13 @@ RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
-#.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-#RUST_ARCH:=		x86_64-sun-solaris
-#RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
-#SITES.${RUST_STAGE0}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
-#DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
-#RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}
-#.endif
+.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+RUST_ARCH:=		x86_64-sun-solaris
+RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+SITES.${RUST_STAGE0}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
+DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
+RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}
+.endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=		i686-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -116,7 +115,9 @@ RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 SITES.${RUST_STAGE0}=	https://deuterium.ryoon.net/pub/rust/
 SITES.${RUST_STD_STAGE0}=	https://deuterium.ryoon.net/pub/rust/
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
-DIST_SUBDIR=		${PKGNAME}
+# Setting this changes it for every distfile, which doesn't match what is
+# currently in distinfo.
+#DIST_SUBDIR=		${PKGNAME}
 # For atomic ops
 CFLAGS+=		-march=i586
 pre-build:
@@ -211,30 +212,41 @@ fix-darwin-install-name:
 # Create a relocatable stage2 bootstrap from the bits we just built that can be
 # used to build the next version of rust.  Currently only tested on SmartOS.
 #
-BOOTSTRAP_TMPDIR=	${WRKDIR}/${PKGNAME}-${RUST_ARCH}
+BOOTSTRAP_TMPDIR=	${WRKDIR}/${PKGNAME_NOREV}-${RUST_ARCH}
 USE_TOOLS+=		gtar
 
 stage0-bootstrap: install
+	${RM} -rf ${BOOTSTRAP_TMPDIR}
 	${MKDIR} ${BOOTSTRAP_TMPDIR}
 	${CP} -R ${DESTDIR}/${PREFIX}/bin ${BOOTSTRAP_TMPDIR}/
 	${CP} -R ${DESTDIR}/${PREFIX}/lib ${BOOTSTRAP_TMPDIR}/
 .if ${OS_VARIANT} == "SmartOS"
+	${MKDIR} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc
 	for lib in libgcc_s.so.1 libssp.so.0 libstdc++.so.6; do \
 		${CP} `${PKG_CC} -print-file-name=$${lib}` \
-		    ${BOOTSTRAP_TMPDIR}/lib/; \
+		    ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done
-	for f in ${BOOTSTRAP_TMPDIR}/bin/rust{c,doc}; do \
-		/usr/bin/elfedit -e 'dyn:runpath $$ORIGIN/../lib' $$f; \
+	for lib in libcrypto.so.1.0.0 libcurl.so.4 libhttp_parser.so.2 \
+		   libiconv.so.2 libidn2.so.0 libintl.so.8 liblber-2.4.so.2 \
+		   libldap-2.4.so.2 libnghttp2.so.14 libsasl2.so.3 \
+		   libssh2.so.1 libssl.so.1.0.0 libunistring.so.2 libz.so.1; do \
+		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done
-	for f in ${BOOTSTRAP_TMPDIR}/lib/*.so*; do \
+	for f in ${BOOTSTRAP_TMPDIR}/bin/{cargo,rls,rustc,rustdoc}; do \
+		/usr/bin/elfedit -e 'dyn:runpath $$ORIGIN/../lib:$$ORIGIN/../lib/pkgsrc' $$f; \
+	done
+	for f in ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/*.so*; do \
 		/usr/bin/elfedit -e 'dyn:runpath $$ORIGIN' $$f; \
 	done
+	for f in ${BOOTSTRAP_TMPDIR}/lib/*.so*; do \
+		/usr/bin/elfedit -e 'dyn:runpath $$ORIGIN:$$ORIGIN/pkgsrc' $$f; \
+	done
 	for f in ${BOOTSTRAP_TMPDIR}/lib/rustlib/${RUST_ARCH}/lib/*.so*; do \
-		/usr/bin/elfedit -e 'dyn:runpath $$ORIGIN:$$ORIGIN/../../..' $$f; \
+		/usr/bin/elfedit -e 'dyn:runpath $$ORIGIN:$$ORIGIN/../../..:$$ORIGIN/../../../pkgsrc' $$f; \
 	done
 .endif
 	(cd ${WRKDIR}; \
-	 ${GTAR} -zcf ${PKGNAME}-${RUST_ARCH}.tar.gz ${PKGNAME}-${RUST_ARCH})
+	 ${GTAR} -zcf ${PKGNAME_NOREV}-${RUST_ARCH}.tar.gz ${PKGNAME_NOREV}-${RUST_ARCH})
 
 .include "../../devel/cmake/buildlink3.mk"
 .include "../../devel/libgit2/buildlink3.mk"
