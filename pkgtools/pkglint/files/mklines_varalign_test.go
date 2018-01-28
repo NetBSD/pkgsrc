@@ -850,8 +850,8 @@ func (s *Suite) Test_Varalign__indented_continuation_line_in_paragraph(c *check.
 }
 
 // Up to 2018-01-27, it could happen that some source code was logged
-// without a corresponding diagnostic. This was unintented and confusing.
-func (s *Suite) Test_Varalign__bla(c *check.C) {
+// without a corresponding diagnostic. This was unintended and confusing.
+func (s *Suite) Test_Varalign__fix_without_diagnostic(c *check.C) {
 	vt := NewVaralignTester(s, c)
 	vt.Input(
 		"MESSAGE_SUBST+=\t\tRUBY_DISTNAME=${RUBY_DISTNAME}",
@@ -868,5 +868,116 @@ func (s *Suite) Test_Varalign__bla(c *check.C) {
 		"                        RUBY_NOSHLIBMAJOR=${RUBY_NOSHLIBMAJOR} \\",
 		"                        RUBY_NAME=${RUBY_NAME:Q}")
 	vt.source = true
+	vt.Run()
+}
+
+// The two variables look like they were in two separate paragraphs, but
+// they aren't. This is because the continuation line from the DISTFILES
+// eats up the empty line that would otherwise separate the paragraphs.
+func (s *Suite) Test_Varalign__continuation_line_last_empty(c *check.C) {
+	vt := NewVaralignTester(s, c)
+	vt.Input(
+		"DISTFILES= \\",
+		"\ta \\",
+		"\tb \\",
+		"\tc \\",
+		"",
+		"NEXT_VAR=\tmust not be indented")
+	vt.Diagnostics(
+		"NOTE: ~/Makefile:1--5: This variable value should be aligned with tabs, not spaces, to column 17.")
+	vt.Autofixes(
+		"AUTOFIX: ~/Makefile:1: Replacing \" \" with \"\\t\".")
+	vt.Fixed(
+		"DISTFILES=      \\",
+		"        a \\",
+		"        b \\",
+		"        c \\",
+		"",
+		"NEXT_VAR=       must not be indented")
+	vt.Run()
+}
+
+// Commented-out variables take part in the realignment.
+// The TZ=UTC below is part of the two-line comment since make(1)
+// interprets it in the same way.
+func (s *Suite) Test_Varalign__realign_commented_single_lines(c *check.C) {
+	vt := NewVaralignTester(s, c)
+	vt.Input(
+		"SHORT=\tvalue",
+		"#DISTFILES=\tdistfile-1.0.0.tar.gz",
+		"#CONTINUATION= \\",
+		"#\t\tcontinued",
+		"#CONFIGURE_ENV+= \\",
+		"#TZ=UTC",
+		"SHORT=\tvalue")
+	vt.Diagnostics(
+		"NOTE: ~/Makefile:1: This variable value should be aligned to column 17.",
+		"NOTE: ~/Makefile:3--4: This variable value should be aligned with tabs, not spaces, to column 17.",
+		"NOTE: ~/Makefile:5--6: This line should be aligned with \"\\t\\t\".",
+		"NOTE: ~/Makefile:7: This variable value should be aligned to column 17.")
+	vt.Autofixes(
+		"AUTOFIX: ~/Makefile:1: Replacing \"\\t\" with \"\\t\\t\".",
+		"AUTOFIX: ~/Makefile:3: Replacing \" \" with \"\\t\".",
+		"AUTOFIX: ~/Makefile:6: Replacing indentation \"\" with \"\\t\\t\".",
+		"AUTOFIX: ~/Makefile:7: Replacing \"\\t\" with \"\\t\\t\".")
+	vt.Fixed(
+		"SHORT=          value",
+		"#DISTFILES=     distfile-1.0.0.tar.gz",
+		"#CONTINUATION=  \\",
+		"#               continued",
+		"#CONFIGURE_ENV+= \\",
+		"#               TZ=UTC",
+		"SHORT=          value")
+	vt.Run()
+}
+
+func (s *Suite) Test_Varalign__realign_commented_continuation_line(c *check.C) {
+	vt := NewVaralignTester(s, c)
+	vt.Input(
+		"BEFORE=\tvalue",
+		"#COMMENTED= \\",
+		"#\tvalue1 \\",
+		"#\tvalue2 \\",
+		"#\tvalue3 \\",
+		"AFTER=\tafter") // This line continues the comment.
+	vt.Diagnostics()
+	vt.Autofixes()
+	vt.Fixed(
+		"BEFORE= value",
+		"#COMMENTED= \\",
+		"#       value1 \\",
+		"#       value2 \\",
+		"#       value3 \\",
+		"AFTER=  after")
+	vt.Run()
+}
+
+// The HOMEPAGE is completely ignored. Since its value is empty it doesn't
+// need any alignment. Whether it is commented out doesn't matter.
+func (s *Suite) Test_Varalign__realign_variable_without_value(c *check.C) {
+	vt := NewVaralignTester(s, c)
+	vt.Input(
+		"COMMENT=\t\tShort description of the package",
+		"#HOMEPAGE=")
+	vt.Diagnostics()
+	vt.Autofixes()
+	vt.Fixed(
+		"COMMENT=                Short description of the package",
+		"#HOMEPAGE=")
+	vt.Run()
+}
+
+// This commented multiline variable is already perfectly aligned.
+// Nothing needs to be fixed.
+func (s *Suite) Test_Varalign__realign_commented_multiline(c *check.C) {
+	vt := NewVaralignTester(s, c)
+	vt.Input(
+		"#CONF_FILES+=\t\tfile1 \\",
+		"#\t\t\tfile2")
+	vt.Diagnostics()
+	vt.Autofixes()
+	vt.Fixed(
+		"#CONF_FILES+=           file1 \\",
+		"#                       file2")
 	vt.Run()
 }

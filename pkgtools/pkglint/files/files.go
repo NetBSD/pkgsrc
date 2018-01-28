@@ -26,7 +26,7 @@ func LoadExistingLines(fname string, joinBackslashLines bool) []Line {
 	return lines
 }
 
-func getLogicalLine(fname string, rawLines []*RawLine, pindex *int) Line {
+func nextLogicalLine(fname string, rawLines []*RawLine, pindex *int) Line {
 	{ // Handle the common case efficiently
 		index := *pindex
 		rawLine := rawLines[index]
@@ -68,26 +68,30 @@ func getLogicalLine(fname string, rawLines []*RawLine, pindex *int) Line {
 }
 
 func splitRawLine(textnl string) (leadingWhitespace, text, trailingWhitespace, cont string) {
-	i, m := 0, len(textnl)
+	end := len(textnl)
 
-	if m > i && textnl[m-1] == '\n' {
-		m--
+	if end-1 >= 0 && textnl[end-1] == '\n' {
+		end--
 	}
 
-	if m > i && textnl[m-1] == '\\' {
-		m--
-		cont = textnl[m : m+1]
+	backslashes := 0
+	for end-1 >= 0 && textnl[end-1] == '\\' {
+		end--
+		backslashes++
 	}
+	cont = textnl[end : end+backslashes%2]
+	end += backslashes / 2
 
-	trailingEnd := m
-	for m > i && (textnl[m-1] == ' ' || textnl[m-1] == '\t') {
-		m--
+	trailingEnd := end
+	for end-1 >= 0 && (textnl[end-1] == ' ' || textnl[end-1] == '\t') {
+		end--
 	}
-	trailingStart := m
+	trailingStart := end
 	trailingWhitespace = textnl[trailingStart:trailingEnd]
 
+	i := 0
 	leadingStart := i
-	for i < m && (textnl[i] == ' ' || textnl[i] == '\t') {
+	for i < end && (textnl[i] == ' ' || textnl[i] == '\t') {
 		i++
 	}
 	leadingEnd := i
@@ -117,7 +121,7 @@ func convertToLogicalLines(fname string, rawText string, joinBackslashLines bool
 	var loglines []Line
 	if joinBackslashLines {
 		for lineno := 0; lineno < len(rawLines); {
-			loglines = append(loglines, getLogicalLine(fname, rawLines, &lineno))
+			loglines = append(loglines, nextLogicalLine(fname, rawLines, &lineno))
 		}
 	} else {
 		for _, rawLine := range rawLines {

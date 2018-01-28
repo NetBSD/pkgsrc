@@ -1,7 +1,7 @@
 package main
 
 import (
-	check "gopkg.in/check.v1"
+	"gopkg.in/check.v1"
 )
 
 func (s *Suite) Test_convertToLogicalLines_no_continuation(c *check.C) {
@@ -27,6 +27,92 @@ func (s *Suite) Test_convertToLogicalLines_continuation(c *check.C) {
 	c.Check(lines, check.HasLen, 2)
 	c.Check(lines[0].String(), equals, "fname_cont:1--2: first line second line")
 	c.Check(lines[1].String(), equals, "fname_cont:3: third")
+}
+
+// In Makefiles, comment lines can also have continuations.
+// See devel/bmake/files/unit-tests/comment.mk
+func (s *Suite) Test_convertToLogicalLines__comments(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.SetupFileLinesContinuation("comment.mk",
+		"# This is a comment",
+		"",
+		"#\\",
+		"\tMultiline comment",
+		"# Another escaped comment \\",
+		"that \\",
+		"goes \\",
+		"on",
+		"# This is NOT an escaped comment due to the double backslashes \\\\",
+		"VAR=\tThis is not a comment",
+		"",
+		"#\\",
+		"This is a comment",
+		"#\\\\",
+		"This is no comment",
+		"#\\\\\\",
+		"This is a comment",
+		"#\\\\\\\\",
+		"This is no comment",
+		"#\\\\\\\\\\",
+		"This is a comment",
+		"#\\\\\\\\\\\\",
+		"This is no comment")
+
+	var texts []string
+	for _, line := range lines {
+		texts = append(texts, line.Text)
+	}
+
+	c.Check(texts, deepEquals, []string{
+		"# This is a comment",
+		"",
+		"# Multiline comment",
+		"# Another escaped comment that goes on",
+		"# This is NOT an escaped comment due to the double backslashes \\",
+		"VAR=\tThis is not a comment",
+		"",
+		"# This is a comment",
+		"#\\",
+		"This is no comment",
+		"#\\ This is a comment",
+		"#\\\\",
+		"This is no comment",
+		"#\\\\ This is a comment",
+		"#\\\\\\",
+		"This is no comment"})
+
+	var rawTexts []string
+	for _, line := range lines {
+		for _, rawLine := range line.raw {
+			rawTexts = append(rawTexts, rawLine.textnl)
+		}
+	}
+
+	c.Check(rawTexts, deepEquals, []string{
+		"# This is a comment\n",
+		"\n",
+		"#\\\n",
+		"\tMultiline comment\n",
+		"# Another escaped comment \\\n",
+		"that \\\n",
+		"goes \\\n",
+		"on\n",
+		"# This is NOT an escaped comment due to the double backslashes \\\\\n",
+		"VAR=\tThis is not a comment\n",
+		"\n",
+		"#\\\n",
+		"This is a comment\n",
+		"#\\\\\n",
+		"This is no comment\n",
+		"#\\\\\\\n",
+		"This is a comment\n",
+		"#\\\\\\\\\n",
+		"This is no comment\n",
+		"#\\\\\\\\\\\n",
+		"This is a comment\n",
+		"#\\\\\\\\\\\\\n",
+		"This is no comment\n"})
 }
 
 func (s *Suite) Test_convertToLogicalLines_continuationInLastLine(c *check.C) {

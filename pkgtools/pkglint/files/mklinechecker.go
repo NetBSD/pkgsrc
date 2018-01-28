@@ -191,7 +191,7 @@ func (ck MkLineChecker) checkDirectiveIndentation(expectedDepth int) {
 	if expected := strings.Repeat(" ", expectedDepth); indent != expected {
 		fix := mkline.Line.Autofix()
 		fix.Notef("This directive should be indented by %d spaces.", expectedDepth)
-		fix.Replace("."+indent, "."+expected)
+		fix.ReplaceRegex(regex.Pattern(`^\.`+indent), "."+expected, 1)
 		fix.Apply()
 	}
 }

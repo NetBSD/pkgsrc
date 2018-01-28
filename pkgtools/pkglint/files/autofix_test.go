@@ -13,7 +13,7 @@ func (s *Suite) Test_Autofix_ReplaceRegex(c *check.C) {
 
 	fix := lines[1].Autofix()
 	fix.Warnf("Something's wrong here.")
-	fix.ReplaceRegex(`.`, "X")
+	fix.ReplaceRegex(`.`, "X", -1)
 	fix.Apply()
 	SaveAutofixChanges(lines)
 
@@ -24,7 +24,11 @@ func (s *Suite) Test_Autofix_ReplaceRegex(c *check.C) {
 		"line3")
 	t.CheckOutputLines(
 		"WARN: ~/Makefile:2: Something's wrong here.",
-		"AUTOFIX: ~/Makefile:2: Replacing regular expression \".\" with \"X\".")
+		"AUTOFIX: ~/Makefile:2: Replacing \"l\" with \"X\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"i\" with \"X\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"n\" with \"X\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"e\" with \"X\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"2\" with \"X\".")
 }
 
 func (s *Suite) Test_Autofix_ReplaceRegex_with_autofix(c *check.C) {
@@ -38,27 +42,32 @@ func (s *Suite) Test_Autofix_ReplaceRegex_with_autofix(c *check.C) {
 
 	fix := lines[1].Autofix()
 	fix.Warnf("Something's wrong here.")
-	fix.ReplaceRegex(`.`, "X")
+	fix.ReplaceRegex(`.`, "X", 3)
 	fix.Apply()
+
+	t.CheckOutputLines(
+		"AUTOFIX: ~/Makefile:2: Replacing \"l\" with \"X\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"i\" with \"X\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"n\" with \"X\".",
+		"-\tline2",
+		"+\tXXXe2")
 
 	fix.Warnf("Use Y instead of X.")
 	fix.Replace("X", "Y")
 	fix.Apply()
 
+	t.CheckOutputLines(
+		"",
+		"AUTOFIX: ~/Makefile:2: Replacing \"X\" with \"Y\".",
+		"-\tline2",
+		"+\tYXXe2")
+
 	SaveAutofixChanges(lines)
 
 	t.CheckFileLines("Makefile",
 		"line1",
-		"YXXXX",
+		"YXXe2",
 		"line3")
-	t.CheckOutputLines(
-		"AUTOFIX: ~/Makefile:2: Replacing regular expression \".\" with \"X\".",
-		"-\tline2",
-		"+\tXXXXX",
-		"",
-		"AUTOFIX: ~/Makefile:2: Replacing \"X\" with \"Y\".",
-		"-\tline2",
-		"+\tYXXXX")
 }
 
 func (s *Suite) Test_Autofix_ReplaceRegex_with_show_autofix(c *check.C) {
@@ -72,7 +81,7 @@ func (s *Suite) Test_Autofix_ReplaceRegex_with_show_autofix(c *check.C) {
 
 	fix := lines[1].Autofix()
 	fix.Warnf("Something's wrong here.")
-	fix.ReplaceRegex(`.`, "X")
+	fix.ReplaceRegex(`.`, "X", -1)
 	fix.Apply()
 
 	fix.Warnf("Use Y instead of X.")
@@ -83,7 +92,11 @@ func (s *Suite) Test_Autofix_ReplaceRegex_with_show_autofix(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: ~/Makefile:2: Something's wrong here.",
-		"AUTOFIX: ~/Makefile:2: Replacing regular expression \".\" with \"X\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"l\" with \"X\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"i\" with \"X\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"n\" with \"X\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"e\" with \"X\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"2\" with \"X\".",
 		"-\tline2",
 		"+\tXXXXX",
 		"",
@@ -108,17 +121,27 @@ func (s *Suite) Test_autofix_MkLines(c *check.C) {
 
 	fix := mklines.mklines[1].Autofix()
 	fix.Warnf("Something's wrong here.")
-	fix.ReplaceRegex(`.`, "X")
+	fix.ReplaceRegex(`...`, "XXX", -1)
+	fix.Apply()
+
+	fix = mklines.mklines[2].Autofix()
+	fix.Warnf("Something's wrong here.")
+	fix.ReplaceRegex(`...`, "XXX", 1)
 	fix.Apply()
 
 	SaveAutofixChanges(mklines.lines)
 
+	t.CheckOutputLines(
+		"AUTOFIX: ~/Makefile:2: Replacing \"lin\" with \"XXX\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"e2 \" with \"XXX\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \":= \" with \"XXX\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"val\" with \"XXX\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"ue2\" with \"XXX\".",
+		"AUTOFIX: ~/Makefile:3: Replacing \"lin\" with \"XXX\".")
 	t.CheckFileLines("Makefile",
 		"line1 := value1",
 		"XXXXXXXXXXXXXXX",
-		"line3 := value3")
-	t.CheckOutputLines(
-		"AUTOFIX: ~/Makefile:2: Replacing regular expression \".\" with \"X\".")
+		"XXXe3 := value3")
 }
 
 func (s *Suite) Test_Autofix_multiple_modifications(c *check.C) {
@@ -134,14 +157,14 @@ func (s *Suite) Test_Autofix_multiple_modifications(c *check.C) {
 	{
 		fix := line.Autofix()
 		fix.Warnf("Silent-Magic-Diagnostic")
-		fix.ReplaceRegex(`(.)(.*)(.)`, "$3$2$1")
+		fix.ReplaceRegex(`(.)(.*)(.)`, "lriginao", 1) // XXX: the replacement should be "$3$2$1"
 		fix.Apply()
 	}
 
 	c.Check(line.autofix, check.NotNil)
 	c.Check(line.raw, check.DeepEquals, t.NewRawLines(1, "original\n", "lriginao\n"))
 	t.CheckOutputLines(
-		"AUTOFIX: fname:1: Replacing regular expression \"(.)(.*)(.)\" with \"$3$2$1\".")
+		"AUTOFIX: fname:1: Replacing \"original\" with \"lriginao\".")
 
 	{
 		fix := line.Autofix()
@@ -304,7 +327,7 @@ func (s *Suite) Test_Autofix_suppress_unfixable_warnings(c *check.C) {
 
 	fix := lines[1].Autofix()
 	fix.Warnf("Something's wrong here.")
-	fix.ReplaceRegex(`.`, "X")
+	fix.ReplaceRegex(`.`, "X", -1)
 	fix.Apply()
 
 	fix.Warnf("The XXX marks are usually not fixed, use TODO instead.")
@@ -315,7 +338,11 @@ func (s *Suite) Test_Autofix_suppress_unfixable_warnings(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: Makefile:2: Something's wrong here.",
-		"AUTOFIX: Makefile:2: Replacing regular expression \".\" with \"X\".",
+		"AUTOFIX: Makefile:2: Replacing \"l\" with \"X\".",
+		"AUTOFIX: Makefile:2: Replacing \"i\" with \"X\".",
+		"AUTOFIX: Makefile:2: Replacing \"n\" with \"X\".",
+		"AUTOFIX: Makefile:2: Replacing \"e\" with \"X\".",
+		"AUTOFIX: Makefile:2: Replacing \"2\" with \"X\".",
 		"-\tline2",
 		"+\tXXXXX",
 		"",
@@ -333,7 +360,7 @@ func (s *Suite) Test_Autofix_failed_replace(c *check.C) {
 
 	fix := line.Autofix()
 	fix.Warnf("All-uppercase words should not be used at all.")
-	fix.ReplaceRegex(`\b[A-Z]{3,}\b`, "---censored---")
+	fix.ReplaceRegex(`\b[A-Z]{3,}\b`, "---censored---", -1)
 	fix.Apply()
 
 	// No output since there was no all-uppercase word in the text.

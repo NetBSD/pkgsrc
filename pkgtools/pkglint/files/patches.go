@@ -37,6 +37,11 @@ func (ck *PatchChecker) Check() {
 	if CheckLineRcsid(ck.lines[0], ``, "") {
 		ck.exp.Advance()
 	}
+	if ck.exp.EOF() {
+		ck.lines[0].Errorf("Patch files must not be empty.")
+		return
+	}
+
 	ck.previousLineEmpty = ck.exp.ExpectEmptyLine(G.opts.WarnSpace)
 
 	patchedFiles := 0
