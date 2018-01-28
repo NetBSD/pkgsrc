@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/04/06 13:09:25 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2018/01/28 16:24:14 wiz Exp $
 
 DISTNAME=	harminv-1.3.1
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://ab-initio.mit.edu/harminv/
 

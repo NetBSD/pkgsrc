@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/09/09 15:17:12 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2018/01/28 16:24:12 wiz Exp $
 
 DISTNAME=		gcc-6.2.0
 PKGNAME=		cross-h8300-elf-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=		.tar.bz2

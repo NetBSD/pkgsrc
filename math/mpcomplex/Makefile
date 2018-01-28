@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2017/01/19 18:52:17 agc Exp $
+# $NetBSD: Makefile,v 1.10 2018/01/28 16:24:11 wiz Exp $
 
 DISTNAME=	mpc-1.0.3
 PKGNAME=	${DISTNAME:S/mpc/mpcomplex/}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.multiprecision.org/mpc/download/
 MASTER_SITES+=	${MASTER_SITE_GNU:=mpc/}
