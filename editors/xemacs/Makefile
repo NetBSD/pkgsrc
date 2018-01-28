@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.118 2017/02/23 10:46:34 hauke Exp $
+# $NetBSD: Makefile,v 1.119 2018/01/28 20:10:49 wiz Exp $
 
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 COMMENT=	XEmacs text editor version 21
 
 PKG_SUPPORTED_OPTIONS+=		x11 xface
