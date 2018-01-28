@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/09/26 10:12:25 wiz Exp $
+$NetBSD: distinfo,v 1.4 2018/01/28 16:39:54 wiz Exp $
 
-SHA1 (polib-1.0.8.tar.gz) = 82c930079c2c5ce9735e9c42ee24f22449a5137d
-RMD160 (polib-1.0.8.tar.gz) = 149ef515509eafb75768707b0373f62700ade640
-SHA512 (polib-1.0.8.tar.gz) = 6bcb8404a06e4e41e827ff947d13ea3165b7dbf0cd3f3f58c74ac1b49718a5d81f1a0ca0e59180928610b5eaefcc248aad9b8ca033978f580c141cd52405dc3f
-Size (polib-1.0.8.tar.gz) = 160670 bytes
+SHA1 (polib-1.1.0.tar.gz) = 25ad40db9e89085b5823268110594ade57ffda4c
+RMD160 (polib-1.1.0.tar.gz) = 895760cb1cce0469666f5cb349fd21db57e9ed5b
+SHA512 (polib-1.1.0.tar.gz) = 74681585b4d7252e107acd7d73f49f7e91c90adcd180722d39d35c40ec158434798af0124a16788cf564c73b84f52a040aefeb58355a1a3cd85848c3f6a5e67f
+Size (polib-1.1.0.tar.gz) = 158484 bytes
