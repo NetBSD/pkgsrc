@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.409 2018/01/28 16:24:31 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.410 2018/01/28 16:25:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -656,3 +656,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/libsoup to 2.60.3 [wiz 2018-01-28]
 	Updated multimedia/libvpx to 1.7.0 [wiz 2018-01-28]
 	Updated math/mpfr to 4.0.0 [wiz 2018-01-28]
+	Updated textproc/oniguruma to 6.7.1 [wiz 2018-01-28]
