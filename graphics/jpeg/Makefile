@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2016/02/01 09:22:53 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2018/01/28 15:55:28 wiz Exp $
 
-DISTNAME=	jpegsrc.v9b
+DISTNAME=	jpegsrc.v9c
 PKGNAME=	${DISTNAME:S/src.v/-/}
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ijg.org/files/
@@ -17,6 +17,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-ld-version-script
 
 INSTALLATION_DIRS=	bin include share/doc/jpeg
+
+PKGCONFIG_OVERRIDE=	libjpeg.pc.in
 
 TEST_TARGET=		test
 
