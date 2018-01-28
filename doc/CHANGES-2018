@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.415 2018/01/28 16:44:03 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.416 2018/01/28 16:52:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -662,3 +662,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-polib to 1.1.0 [wiz 2018-01-28]
 	Updated devel/talloc to 2.1.11 [wiz 2018-01-28]
 	Updated misc/todoman to 3.3.0 [wiz 2018-01-28]
+	Updated devel/glib2 to 2.54.3 [wiz 2018-01-28]
