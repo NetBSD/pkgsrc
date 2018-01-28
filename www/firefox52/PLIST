@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/05/03 22:29:20 snj Exp $
+@comment $NetBSD: PLIST,v 1.2.8.1 2018/01/28 12:36:21 bsiegert Exp $
 bin/firefox52
 lib/firefox52/application.ini
 lib/firefox52/browser/blocklist.xml
@@ -1939,7 +1939,7 @@ lib/firefox52/browser/chrome/en-US/locale/browser/searchbar.dtd
 lib/firefox52/browser/chrome/en-US/locale/browser/searchplugins/amazondotcom.xml
 lib/firefox52/browser/chrome/en-US/locale/browser/searchplugins/bing.xml
 lib/firefox52/browser/chrome/en-US/locale/browser/searchplugins/ddg.xml
-lib/firefox52/browser/chrome/en-US/locale/browser/searchplugins/google-nocodes.xml
+lib/firefox52/browser/chrome/en-US/locale/browser/searchplugins/google-2018.xml
 lib/firefox52/browser/chrome/en-US/locale/browser/searchplugins/google.xml
 lib/firefox52/browser/chrome/en-US/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/chrome/en-US/locale/browser/searchplugins/list.json

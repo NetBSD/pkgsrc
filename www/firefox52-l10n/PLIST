@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/27 01:58:37 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.1.8.1 2018/01/28 12:36:21 bsiegert Exp $
 lib/firefox52/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome.manifest
 lib/firefox52/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome/ach.manifest
 lib/firefox52/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome/ach/locale/ach/devtools/client/VariablesView.dtd
@@ -28706,7 +28706,6 @@ lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chro
 lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/searchbar.dtd
 lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/searchplugins/ddg.xml
 lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/searchplugins/findbook-zh-TW.xml
-lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/searchplugins/google-nocodes.xml
 lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/searchplugins/google.xml
 lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/searchplugins/list.json
