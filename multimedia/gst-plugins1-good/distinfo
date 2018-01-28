@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.33 2017/11/10 09:26:48 prlw1 Exp $
+$NetBSD: distinfo,v 1.34 2018/01/28 19:33:09 wiz Exp $
 
-SHA1 (gst-plugins-good-1.12.3.tar.xz) = e29b0f765b445c8742a31cfd7d43c4d318aedea7
-RMD160 (gst-plugins-good-1.12.3.tar.xz) = c76a557b82911e2308522c578db18064619d418e
-SHA512 (gst-plugins-good-1.12.3.tar.xz) = 8ed96d2b2c8724659cf8163be5246ec30c8a92d70fc6632e207ad258cff5624d6fc03576e6e674011bb88a4825c8ce225545bc7e60cdf66a173d9e1d4bfbbaa4
-Size (gst-plugins-good-1.12.3.tar.xz) = 3487448 bytes
-SHA1 (patch-configure) = c8c87d95a361743a04c6902982bda209efe80c1b
+SHA1 (gst-plugins-good-1.12.4.tar.xz) = 8758fde4b937551776773f89f7e50eb3027aea69
+RMD160 (gst-plugins-good-1.12.4.tar.xz) = 9ec4a9709d62b4ac156547674fbfef6da8d9e6c1
+SHA512 (gst-plugins-good-1.12.4.tar.xz) = 18f270c01be80fe5b026e2c26db3ec200117ffd99c1dca55a8a78f0bd6dcc4701126836e52a410f179779e363f11218413c7b4d13e96ef5ee1bfa82e79a81178
+Size (gst-plugins-good-1.12.4.tar.xz) = 3489992 bytes
