@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.417 2018/01/28 17:03:03 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.418 2018/01/28 17:05:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -664,3 +664,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/todoman to 3.3.0 [wiz 2018-01-28]
 	Updated devel/glib2 to 2.54.3 [wiz 2018-01-28]
 	Updated x11/gtk2 to 2.24.32 [wiz 2018-01-28]
+	Updated converters/libpagemaker to 0.0.4 [wiz 2018-01-28]
