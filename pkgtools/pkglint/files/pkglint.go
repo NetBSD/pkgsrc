@@ -308,37 +308,45 @@ func ChecklinesMessage(lines []Line) {
 		defer trace.Call1(lines[0].Filename)()
 	}
 
-	explainMessage := func() {
-		Explain(
-			"A MESSAGE file should consist of a header line, having 75 \"=\"",
-			"characters, followed by a line containing only the RCS Id, then an",
-			"empty line, your text and finally the footer line, which is the",
-			"same as the header line.")
-	}
+	explanation := []string{
+		"A MESSAGE file should consist of a header line, having 75 \"=\"",
+		"characters, followed by a line containing only the RCS Id, then an",
+		"empty line, your text and finally the footer line, which is the",
+		"same as the header line."}
 
 	if len(lines) < 3 {
 		lastLine := lines[len(lines)-1]
 		lastLine.Warnf("File too short.")
-		explainMessage()
+		Explain(explanation...)
 		return
 	}
 
 	hline := strings.Repeat("=", 75)
 	if line := lines[0]; line.Text != hline {
-		line.Warnf("Expected a line of exactly 75 \"=\" characters.")
-		explainMessage()
+		fix := line.Autofix()
+		fix.Warnf("Expected a line of exactly 75 \"=\" characters.")
+		fix.Explain(explanation...)
+		fix.InsertBefore(hline)
+		fix.Apply()
+		CheckLineRcsid(lines[0], ``, "")
+	} else if 1 < len(lines) {
+		CheckLineRcsid(lines[1], ``, "")
 	}
-	CheckLineRcsid(lines[1], ``, "")
 	for _, line := range lines {
 		CheckLineLength(line, 80)
 		CheckLineTrailingWhitespace(line)
 		CheckLineValidCharacters(line, `[\t -~]`)
 	}
 	if lastLine := lines[len(lines)-1]; lastLine.Text != hline {
-		lastLine.Warnf("Expected a line of exactly 75 \"=\" characters.")
-		explainMessage()
+		fix := lastLine.Autofix()
+		fix.Warnf("Expected a line of exactly 75 \"=\" characters.")
+		fix.Explain(explanation...)
+		fix.InsertAfter(hline)
+		fix.Apply()
 	}
 	ChecklinesTrailingEmptyLines(lines)
+
+	SaveAutofixChanges(lines)
 }
 
 func CheckfileMk(fname string) {

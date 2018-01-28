@@ -108,8 +108,8 @@ func (gd *GlobalData) loadDistSites() {
 	name2url := make(map[string]string)
 	url2name := make(map[string]string)
 	for _, line := range lines {
-		if m, varname, _, _, _, urls, _, _ := MatchVarassign(line.Text); m {
-			if hasPrefix(varname, "MASTER_SITE_") && varname != "MASTER_SITE_BACKUP" {
+		if m, commented, varname, _, _, _, urls, _, _ := MatchVarassign(line.Text); m {
+			if !commented && hasPrefix(varname, "MASTER_SITE_") && varname != "MASTER_SITE_BACKUP" {
 				for _, url := range splitOnSpace(urls) {
 					if matches(url, `^(?:http://|https://|ftp://)`) {
 						if name2url[varname] == "" {
@@ -187,8 +187,11 @@ func (gd *GlobalData) loadTools() {
 		lines := LoadExistingLines(fname, true)
 		for _, line := range lines {
 			text := line.Text
+			if hasPrefix(text, "#") {
+				continue
+			}
 
-			if m, varname, _, _, _, value, _, _ := MatchVarassign(text); m {
+			if m, _, varname, _, _, _, value, _, _ := MatchVarassign(text); m {
 				if varname == "USE_TOOLS" {
 					if trace.Tracing {
 						trace.Stepf("[condDepth=%d] %s", condDepth, value)
@@ -618,7 +621,10 @@ func (tr *ToolRegistry) Trace() {
 }
 
 func (tr *ToolRegistry) ParseToolLine(line Line) {
-	if m, varname, _, _, _, value, _, _ := MatchVarassign(line.Text); m {
+	if m, commented, varname, _, _, _, value, _, _ := MatchVarassign(line.Text); m {
+		if commented {
+			return
+		}
 		if varname == "TOOLS_CREATE" && (value == "[" || matches(value, `^?[-\w.]+$`)) {
 			tr.Register(value)
 
