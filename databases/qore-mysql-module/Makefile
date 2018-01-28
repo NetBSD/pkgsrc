@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2017/10/12 18:21:23 nros Exp $
+# $NetBSD: Makefile,v 1.6 2018/01/28 16:24:10 wiz Exp $
 
 DISTNAME=	qore-mysql-module-2.0.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=	.tar.bz2
