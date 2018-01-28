@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/03/20 06:02:27 adam Exp $
+# $NetBSD: Makefile,v 1.9 2018/01/28 20:10:34 wiz Exp $
 
+PKGREVISION= 1
 .include "../../databases/gdbm/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/_compat-/}

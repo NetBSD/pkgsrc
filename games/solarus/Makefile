@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2017/11/30 16:45:25 adam Exp $
+# $NetBSD: Makefile,v 1.32 2018/01/28 20:10:51 wiz Exp $
 
 VERSION=	1.5.1
 DISTNAME=	solarus-${VERSION}-src
 PKGNAME=	${DISTNAME:S/-src//1}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	games
 MASTER_SITES=	http://www.solarus-games.org/downloads/solarus/
 
