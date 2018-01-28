@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2017/10/28 04:08:46 khorben Exp $
+$NetBSD: distinfo,v 1.6.2.1 2018/01/28 15:23:24 bsiegert Exp $
 
 SHA1 (xen48/gmp-4.3.2.tar.bz2) = c011e8feaf1bb89158bd55eaabd7ef8fdd101a2c
 RMD160 (xen48/gmp-4.3.2.tar.bz2) = a8f3f41501ece290c348aeb4444bbea40bc53e71
@@ -36,10 +36,10 @@ SHA1 (xen48/tpm_emulator-0.7.4.tar.gz) = ffa3aafcd833fdcd7483bbdb4ff862f30ffde57
 RMD160 (xen48/tpm_emulator-0.7.4.tar.gz) = ded71632d316126138f2db4a5f2051b2489ae5ff
 SHA512 (xen48/tpm_emulator-0.7.4.tar.gz) = 4928b5b82f57645be9408362706ff2c4d9baa635b21b0d41b1c82930e8c60a759b1ea4fa74d7e6c7cae1b7692d006aa5cb72df0c3b88bf049779aa2b566f9d35
 Size (xen48/tpm_emulator-0.7.4.tar.gz) = 214145 bytes
-SHA1 (xen48/xen-4.8.2.tar.gz) = 184c57ce9e71e34b3cbdd318524021f44946efbe
-RMD160 (xen48/xen-4.8.2.tar.gz) = f4126cb0f7ff427ed7d20ce399dcd1077c599343
-SHA512 (xen48/xen-4.8.2.tar.gz) = 7805531f73d23ecfff3439770e62d387f4254a444875670d53a0a739323e5d4d8f8fcc478f8936ee1ae8aff3e0229549e47c01c606365a8ce060dd5c503e87da
-Size (xen48/xen-4.8.2.tar.gz) = 22522336 bytes
+SHA1 (xen48/xen-4.8.3.tar.gz) = ee55e8dc1e79d16d2f85fbe1f8bbd27a2db8422f
+RMD160 (xen48/xen-4.8.3.tar.gz) = 54b7ba828d8198c2a4629eabf7acfba2e9c6561c
+SHA512 (xen48/xen-4.8.3.tar.gz) = 584d8ee6e432e291a70e8f727da6d0a71afff7509fbf2e32eeb9cfe58b8279a80770c2c5f7759dcb5c0b08ed4644039e770e280ab534673215753d598f3f6508
+Size (xen48/xen-4.8.3.tar.gz) = 22529092 bytes
 SHA1 (xen48/zlib-1.2.3.tar.gz) = 60faeaaf250642db5c0ea36cd6dcc9f99c8f3902
 RMD160 (xen48/zlib-1.2.3.tar.gz) = 89a57e336c24f7f6eebda3a1724e14b71187e117
 SHA512 (xen48/zlib-1.2.3.tar.gz) = 021b958fcd0d346c4ba761bcf0cc40f3522de6186cf5a0a6ea34a70504ce9622b1c2626fce40675bc8282cf5f5ade18473656abc38050f72f5d6480507a2106e
@@ -50,8 +50,6 @@ SHA1 (patch-.._newlib-1.16.0_newlib_libc_include_sys__types.h) = 65ff526aa26832b
 SHA1 (patch-._stubdom_vtpmmgr_tpm2_marshal.h) = 30c747a53e848387e4c8d6f4dcbcab7d1b46ed12
 SHA1 (patch-Config.mk) = 7976ce94c553c2fc6badc6d41e9cb8334fea40c8
 SHA1 (patch-Makefile) = fdcd5fbb22613e55ac1b000a46b1ecbbd99eef59
-SHA1 (patch-XSA233) = e6a7230035966d7d292ef3ca477f2eb3458ae12f
-SHA1 (patch-XSA240) = 754bbe5080a81e1526b7938fed01ba435e65e50b
 SHA1 (patch-docs_man_xl.cfg.pod.5.in) = e1ee6f2d48f6ce001c44c7ac688ea179b625b584
 SHA1 (patch-docs_man_xl.conf.pod.5) = d77e3313750db315d540d7713c95cd54d6f02938
 SHA1 (patch-docs_man_xl.pod.1.in) = 9b37ef724f2827bc05110e5456a8668257509cab
