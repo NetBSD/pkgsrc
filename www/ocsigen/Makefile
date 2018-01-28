@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2018/01/10 16:53:14 jaapb Exp $
+# $NetBSD: Makefile,v 1.29 2018/01/28 20:11:07 wiz Exp $
 #
 
 VERSION=	2.8
 GITHUB_PROJECT=	ocsigenserver
-PKGREVISION=	4
+PKGREVISION=	5
 PKGNAME=	ocsigen-${VERSION}
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=	www
