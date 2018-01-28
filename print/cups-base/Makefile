@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/01/26 17:22:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2018/01/28 20:10:37 wiz Exp $
 
+PKGREVISION= 1
 .include "../../print/cups/Makefile.common"
 
 DISTNAME=	cups-${CUPS_VERS}-source
