@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.391 2018/01/28 08:57:39 adam Exp $
+$NetBSD: CHANGES-2018,v 1.392 2018/01/28 11:33:04 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -638,3 +638,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-multidict to 4.1.0 [adam 2018-01-28]
 	Updated archivers/py-lz4 to 0.19.1 [adam 2018-01-28]
 	Updated devel/py-txrequests to 0.9.6 [adam 2018-01-28]
+	Updated lang/go to 1.9.3 [bsiegert 2018-01-28]
