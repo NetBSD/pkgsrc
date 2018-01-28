@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18056 2018/01/28 15:59:48 wiz Exp $
+$NetBSD: TODO,v 1.18057 2018/01/28 16:01:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -976,7 +976,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libressl-2.6.3
 	o librsvg-2.42.0 [needs rust+cargo]
-	o libsoup-2.60.3
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libtecla-1.6.3
