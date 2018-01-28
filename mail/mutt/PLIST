@@ -1,15 +1,11 @@
-@comment $NetBSD: PLIST,v 1.22 2017/03/08 10:05:34 wiz Exp $
-bin/flea
+@comment $NetBSD: PLIST,v 1.23 2018/01/28 08:37:31 tron Exp $
 bin/mutt
 bin/mutt_dotlock
-bin/muttbug
 bin/pgpewrap
 bin/pgpring
 ${PLIST.smime}bin/smime_keys
-man/man1/flea.1
 man/man1/mutt.1
 man/man1/mutt_dotlock.1
-man/man1/muttbug.1
 man/man1/pgpewrap.1
 man/man1/pgpring.1
 man/man1/smime_keys.1
