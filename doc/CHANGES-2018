@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.405 2018/01/28 15:58:56 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.406 2018/01/28 15:59:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -652,3 +652,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/jpeg to 9c [wiz 2018-01-28]
 	Updated misc/khard to 0.12.2 [wiz 2018-01-28]
 	Updated print/latexmk to 455 [wiz 2018-01-28]
+	Updated devel/libsigsegv to 2.12 [wiz 2018-01-28]
