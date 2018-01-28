@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/09/26 10:12:25 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2018/01/28 16:39:54 wiz Exp $
 
-DISTNAME=	polib-1.0.8
+DISTNAME=	polib-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/polib/}
