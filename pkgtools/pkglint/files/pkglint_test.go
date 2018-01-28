@@ -186,8 +186,38 @@ func (s *Suite) Test_ChecklinesMessage__malformed(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: MESSAGE:1: Expected a line of exactly 75 \"=\" characters.",
-		"ERROR: MESSAGE:2: Expected \"$"+"NetBSD$\".",
+		"ERROR: MESSAGE:1: Expected \"$"+"NetBSD$\".",
 		"WARN: MESSAGE:5: Expected a line of exactly 75 \"=\" characters.")
+}
+
+func (s *Suite) Test_ChecklinesMessage__autofix(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall", "--autofix")
+	lines := t.SetupFileLines("MESSAGE",
+		"1",
+		"2",
+		"3",
+		"4",
+		"5")
+
+	ChecklinesMessage(lines)
+
+	t.CheckOutputLines(
+		"AUTOFIX: ~/MESSAGE:1: Inserting a line \"===================================="+
+			"=======================================\" before this line.",
+		"AUTOFIX: ~/MESSAGE:1: Inserting a line \"$NetBSD: pkglint_test.go,v 1.14 2018/01/28 23:21:16 rillig Exp $\" before this line.",
+		"AUTOFIX: ~/MESSAGE:5: Inserting a line \"===================================="+
+			"=======================================\" after this line.")
+	t.CheckFileLines("MESSAGE",
+		"===========================================================================",
+		"$NetBSD: pkglint_test.go,v 1.14 2018/01/28 23:21:16 rillig Exp $",
+		"1",
+		"2",
+		"3",
+		"4",
+		"5",
+		"===========================================================================")
 }
 
 func (s *Suite) Test_GlobalData_Latest(c *check.C) {
