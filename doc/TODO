@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18040 2018/01/26 14:54:10 triaxx Exp $
+$NetBSD: TODO,v 1.18041 2018/01/28 08:09:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -452,6 +452,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o blur6ex-0.3.462
 	o bmkdep-20140112
 	o bochs-2.6.9
+	o boehm-gc-7.6.4
 	o boolean-7.1
 	o bos-2.5
 	o boson-0.13
@@ -546,7 +547,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o desklaunch-1.1.7
 	o deskmenu-1.4.5
 	o dhcpcd-dbus-0.6.1
-	o digikam-5.7
+	o digikam-5.8
 	o dikt-2s1
 	o dinotrace-9.4d
 	o discount-2.2.0
@@ -1083,6 +1084,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-node-1.4.6
 	o munin-server-1.4.6
 	o muse-0.9.2
+	o mutt-1.9.3
 	o myodbc-5.3.4
 	o mysql-workbench-6.3
 	o nagios-base-4.3.1
@@ -1361,6 +1363,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o spcaview-20060501
 	o spectrwm-2.7.2
 	o spl-1.0pre6
+	o sqlite3-3.22
 	o squeak-5.0
 	o squeak-vm-4.10.2.2765
 	o squidview-0.81
@@ -1437,7 +1440,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
-	o tor-browser-7.0.11
+	o tor-browser-7.5
 	o totem-3.14.1
 	o totem-pl-parser-3.10.3
 	o tripwire-2.3.1 [see also pkg/22362]
