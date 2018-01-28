@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2017/01/14 01:03:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.65 2018/01/28 16:24:13 wiz Exp $
 
 DISTNAME=	gawk-4.1.4
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gawk/}
 EXTRACT_SUFX=	.tar.xz
