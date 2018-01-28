@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.394 2018/01/28 15:09:28 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.395 2018/01/28 15:14:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -641,3 +641,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/go to 1.9.3 [bsiegert 2018-01-28]
 	Updated net/py-namecheap to 0.0.3 [wiz 2018-01-28]
 	Updated devel/waf to 2.0.4 [wiz 2018-01-28]
+	Updated graphics/ImageMagick to 7.0.7.22 [wiz 2018-01-28]
