@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/03/08 14:45:36 wiz Exp $
+$NetBSD: distinfo,v 1.4 2018/01/28 17:05:20 wiz Exp $
 
-SHA1 (libpagemaker-0.0.3.tar.gz) = a46c54588d76f2bcddfddd3c46cf2bda97b95327
-RMD160 (libpagemaker-0.0.3.tar.gz) = a8c3a2ac60d3a2aa45e0fd5d6ff4dfa4d5071efa
-SHA512 (libpagemaker-0.0.3.tar.gz) = 23b82082a2b66ac5ec10c3fa0eb6ac550735e17b92fe366087add36c5f0304c082b1ad7b95e9b108c19d962156dc166ddb6a07874be74930d03b9090b3a02d19
-Size (libpagemaker-0.0.3.tar.gz) = 475460 bytes
+SHA1 (libpagemaker-0.0.4.tar.gz) = d863ddcde4ad9a8d89dff3b0e53ff1ecaf91236d
+RMD160 (libpagemaker-0.0.4.tar.gz) = a45531b37e02785c436cb7f61f876c61c637025c
+SHA512 (libpagemaker-0.0.4.tar.gz) = b9fdcec30ad64a3f402e38ae493a12a855365ced24dd81de1349438fdeca4298086116477c2402b90012831af8f8daaaa10b2174dfdb1d7396fba5af9daa4c60
+Size (libpagemaker-0.0.4.tar.gz) = 494113 bytes
