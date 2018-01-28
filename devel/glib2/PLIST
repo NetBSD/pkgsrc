@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.95 2017/11/07 12:04:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.96 2018/01/28 16:51:50 wiz Exp $
 bin/gapplication
 bin/gdbus
 bin/gio
@@ -290,8 +290,8 @@ lib/pkgconfig/gthread-2.0.pc
 share/aclocal/glib-2.0.m4
 share/aclocal/glib-gettext.m4
 share/aclocal/gsettings.m4
-share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.5400.2-gdb.py
-share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.5400.2-gdb.py
+share/gdb/auto-load/usr/pkg/lib/libglib-2.0.so.0.5400.3-gdb.py
+share/gdb/auto-load/usr/pkg/lib/libgobject-2.0.so.0.5400.3-gdb.py
 share/gettext/its/gschema.its
 share/gettext/its/gschema.loc
 share/glib-2.0/gdb/glib_gdb.py
@@ -380,6 +380,7 @@ share/gtk-doc/html/gio/GPollableOutputStream.html
 share/gtk-doc/html/gio/GPropertyAction.html
 share/gtk-doc/html/gio/GProxy.html
 share/gtk-doc/html/gio/GProxyAddress.html
+share/gtk-doc/html/gio/GProxyAddressEnumerator.html
 share/gtk-doc/html/gio/GProxyResolver.html
 share/gtk-doc/html/gio/GRemoteActionGroup.html
 share/gtk-doc/html/gio/GResolver.html
@@ -395,6 +396,7 @@ share/gtk-doc/html/gio/GSimplePermission.html
 share/gtk-doc/html/gio/GSimpleProxyResolver.html
 share/gtk-doc/html/gio/GSocket.html
 share/gtk-doc/html/gio/GSocketAddress.html
+share/gtk-doc/html/gio/GSocketAddressEnumerator.html
 share/gtk-doc/html/gio/GSocketClient.html
 share/gtk-doc/html/gio/GSocketConnectable.html
 share/gtk-doc/html/gio/GSocketConnection.html
