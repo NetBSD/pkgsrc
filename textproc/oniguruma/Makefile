@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2018/01/15 08:49:04 adam Exp $
+# $NetBSD: Makefile,v 1.7 2018/01/28 16:25:36 wiz Exp $
 
-DISTNAME=	onig-6.7.0
+DISTNAME=	onig-6.7.1
 PKGNAME=	${DISTNAME:S/onig/oniguruma/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kkos/}
