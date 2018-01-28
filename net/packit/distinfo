@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 00:35:26 agc Exp $
+$NetBSD: distinfo,v 1.4.20.1 2018/01/28 11:12:35 bsiegert Exp $
 
 SHA1 (packit-1.0.tgz) = 21e1540c55879123d6bcca92c64d371b734893b1
 RMD160 (packit-1.0.tgz) = 02b2ec56ccac5f8d755c0d84f1360b1cea698fce
@@ -6,3 +6,4 @@ SHA512 (packit-1.0.tgz) = cc7e957d2149edbc92d4d914c9f29aecb7945bab43f2df7435bc4c
 Size (packit-1.0.tgz) = 138367 bytes
 SHA1 (patch-aa) = 01dbe7c947682016aa302c9963bf227d15c39c55
 SHA1 (patch-ab) = 1c3139bdd9c73435acee53bcf49278899b386a17
+SHA1 (patch-src_utils.c) = 1e361d1671c29c3cfe80d0d22aa0a426501c03e9
