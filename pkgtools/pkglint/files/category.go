@@ -41,7 +41,7 @@ func CheckdirCategory() {
 	// collect the SUBDIRs in the Makefile and in the file system.
 
 	fSubdirs := getSubdirs(G.CurrentDir)
-	sort.Sort(sort.StringSlice(fSubdirs))
+	sort.Strings(fSubdirs)
 	var mSubdirs []subdir
 
 	prevSubdir := ""

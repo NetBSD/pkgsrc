@@ -322,3 +322,34 @@ func (s *Suite) Test_MkLineChecker_CheckVartype_CFLAGS(c *check.C) {
 		"WARN: Makefile:2: Unknown compiler flag \"-bs\".",
 		"WARN: Makefile:2: Compiler flag \"%s\\\\\\\"\" should start with a hyphen.")
 }
+
+// Up to 2018-01-28, pkglint applied the autofix also to the continuation
+// lines, which is incorrect. It replaced the dot in "4.*" with spaces.
+func (s *Suite) Test_MkLineChecker_checkDirectiveIndentation_autofix(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall", "--autofix")
+	G.globalData.InitVartypes()
+	lines := t.SetupFileLinesContinuation("options.mk",
+		MkRcsId,
+		".if ${PKGNAME} == pkgname",
+		".if \\",
+		"   ${PLATFORM:MNetBSD-4.*}",
+		".endif",
+		".endif")
+	mklines := NewMkLines(lines)
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"AUTOFIX: ~/options.mk:3: Replacing \".\" with \".  \".",
+		"AUTOFIX: ~/options.mk:5: Replacing \".\" with \".  \".")
+
+	t.CheckFileLines("options.mk",
+		MkRcsId,
+		".if ${PKGNAME} == pkgname",
+		".  if \\",
+		"   ${PLATFORM:MNetBSD-4.*}",
+		".  endif",
+		".endif")
+}

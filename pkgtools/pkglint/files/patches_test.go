@@ -408,3 +408,30 @@ func (s *Suite) Test_ChecklinesPatch__context_lines_with_tab_instead_of_space(c 
 
 	t.CheckOutputEmpty()
 }
+
+// Must not panic.
+func (s *Suite) Test_ChecklinesPatch__autofix_empty_patch(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall", "--autofix")
+	lines := t.NewLines("patch-aa",
+		RcsId)
+
+	ChecklinesPatch(lines)
+
+	t.CheckOutputEmpty()
+}
+
+// Must not panic.
+func (s *Suite) Test_ChecklinesPatch__autofix_long_empty_patch(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall", "--autofix")
+	lines := t.NewLines("patch-aa",
+		RcsId,
+		"")
+
+	ChecklinesPatch(lines)
+
+	t.CheckOutputEmpty()
+}

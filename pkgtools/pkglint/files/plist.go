@@ -101,7 +101,7 @@ func (ck *PlistChecker) collectFilesAndDirs(plines []*PlistLine) {
 				first == '$',
 				'A' <= first && first <= 'Z',
 				'0' <= first && first <= '9':
-				if ck.allFiles[text] == nil {
+				if prev := ck.allFiles[text]; prev == nil || pline.conditional < prev.conditional {
 					ck.allFiles[text] = pline
 				}
 				for dir := path.Dir(text); dir != "."; dir = path.Dir(dir) {
@@ -143,6 +143,7 @@ func (ck *PlistChecker) checkpath(pline *PlistLine) {
 	dirname := strings.TrimSuffix(sdirname, "/")
 
 	ck.checkSorted(pline)
+	ck.checkDuplicate(pline)
 
 	if contains(basename, "${IMAKE_MANNEWSUFFIX}") {
 		pline.warnImakeMannewsuffix()
@@ -211,15 +212,27 @@ func (ck *PlistChecker) checkSorted(pline *PlistLine) {
 					"The files in the PLIST should be sorted alphabetically.",
 					"To fix this, run \"pkglint -F PLIST\".")
 			}
-			if prev := ck.allFiles[text]; prev != nil && prev != pline {
-				fix := pline.line.Autofix()
-				fix.Errorf("Duplicate filename %q, already appeared in %s.", text, prev.line.ReferenceFrom(pline.line))
-				fix.Delete()
-				fix.Apply()
-			}
 		}
 		ck.lastFname = text
 	}
+}
+
+func (ck *PlistChecker) checkDuplicate(pline *PlistLine) {
+	text := pline.text
+	if !hasAlnumPrefix(text) || containsVarRef(text) {
+		return
+	}
+
+	prev := ck.allFiles[text]
+	if prev == pline || prev.conditional != "" {
+		return
+	}
+
+	fix := pline.line.Autofix()
+	fix.Errorf("Duplicate filename %q, already appeared in %s.",
+		text, prev.line.ReferenceFrom(pline.line))
+	fix.Delete()
+	fix.Apply()
 }
 
 func (ck *PlistChecker) checkpathBin(pline *PlistLine, dirname, basename string) {
@@ -279,7 +292,8 @@ func (ck *PlistChecker) checkpathLib(pline *PlistLine, dirname, basename string)
 	if contains(basename, ".a") || contains(basename, ".so") {
 		if m, noext := match1(pline.text, `^(.*)(?:\.a|\.so[0-9.]*)$`); m {
 			if laLine := ck.allFiles[noext+".la"]; laLine != nil {
-				pline.line.Warnf("Redundant library found. The libtool library is in %s.", laLine.line.ReferenceFrom(pline.line))
+				pline.line.Warnf("Redundant library found. The libtool library is in %s.",
+					laLine.line.ReferenceFrom(pline.line))
 			}
 		}
 	}
@@ -320,7 +334,7 @@ func (ck *PlistChecker) checkpathMan(pline *PlistLine) {
 			"configured by the pkgsrc user.  Compression and decompression takes",
 			"place automatically, no matter if the .gz extension is mentioned in",
 			"the PLIST or not.")
-		fix.ReplaceRegex(`\.gz\n`, "\n")
+		fix.ReplaceRegex(`\.gz\n`, "\n", 1)
 		fix.Apply()
 	}
 }
@@ -493,17 +507,6 @@ func NewPlistLineSorter(plines []*PlistLine) *plistLineSorter {
 	return &plistLineSorter{header, middle, footer, unsortable, false, false}
 }
 
-func (s *plistLineSorter) Len() int {
-	return len(s.middle)
-}
-func (s *plistLineSorter) Less(i, j int) bool {
-	return s.middle[i].text < s.middle[j].text
-}
-func (s *plistLineSorter) Swap(i, j int) {
-	s.changed = true
-	s.middle[i], s.middle[j] = s.middle[j], s.middle[i]
-}
-
 func (s *plistLineSorter) Sort() {
 	if line := s.unsortable; line != nil {
 		if G.opts.PrintAutofix || G.opts.Autofix {
@@ -516,7 +519,17 @@ func (s *plistLineSorter) Sort() {
 		return
 	}
 	firstLine := s.middle[0].line
-	sort.Stable(s)
+
+	sort.SliceStable(s.middle, func(i, j int) bool {
+		mi := s.middle[i]
+		mj := s.middle[j]
+		less := mi.text < mj.text || (mi.text == mj.text &&
+			mi.conditional < mj.conditional)
+		if (i < j) != less {
+			s.changed = true
+		}
+		return less
+	})
 
 	if !s.changed {
 		return
