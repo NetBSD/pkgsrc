@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2018/01/07 13:04:30 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2018/01/28 16:24:11 wiz Exp $
 
 BUILDLINK_TREE+=	qore-ssh2-module
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qore-ssh2-module
 QORE_SSH2_MODULE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qore-ssh2-module+=	qore-ssh2-module>=0.9.9
-BUILDLINK_ABI_DEPENDS.qore-ssh2-module?=	qore-ssh2-module>=1.0
+BUILDLINK_ABI_DEPENDS.qore-ssh2-module?=	qore-ssh2-module>=1.0nb2
 BUILDLINK_PKGSRCDIR.qore-ssh2-module?=		../../security/qore-ssh2-module
 
 .include "../../lang/qore/buildlink3.mk"
