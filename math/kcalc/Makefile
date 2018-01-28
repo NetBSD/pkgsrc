@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2018/01/01 21:18:40 adam Exp $
+# $NetBSD: Makefile,v 1.35 2018/01/28 16:24:14 wiz Exp $
 
 DISTNAME=	kcalc-${_KDE_VERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	math
 COMMENT=	KDE scientific calculator
 
