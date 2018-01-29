@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.435 2018/01/29 21:20:08 alnsn Exp $
+$NetBSD: CHANGES-2018,v 1.436 2018/01/29 21:38:20 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -682,3 +682,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated cross/arm-none-eabi-gcc to 7.3.0 [ryoon 2018-01-29]
 	Updated www/firefox-l10n to 58.0nb1 [ryoon 2018-01-29]
 	Updated devel/lua-rocks to 2.4.3 [alnsn 2018-01-29]
+	Updated devel/py-lupa to 1.6 [alnsn 2018-01-29]
