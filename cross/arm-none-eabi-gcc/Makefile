@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2018/01/28 16:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2018/01/29 14:56:49 ryoon Exp $
 
-DISTNAME=		gcc-7.2.0
+DISTNAME=		gcc-7.3.0
 PKGNAME=		cross-arm-none-eabi-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		cross
-NEWLIBVER=		2.5.0
+NEWLIBVER=		3.0.0
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
 DISTFILES=		${DEFAULT_DISTFILES} \
 			newlib-${NEWLIBVER}.tar.gz
