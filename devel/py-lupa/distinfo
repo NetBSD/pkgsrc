@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/09/17 10:50:19 adam Exp $
+$NetBSD: distinfo,v 1.6 2018/01/29 21:37:31 alnsn Exp $
 
-SHA1 (lupa-1.5.tar.gz) = 4d77de7f4fa1975eeec26975d436e59f19a6d661
-RMD160 (lupa-1.5.tar.gz) = 27d68a9f2094dd5f9ae724c6463e2f18b553850d
-SHA512 (lupa-1.5.tar.gz) = b2d1a987e09d1fee2568117c73179faae413944b0549cd727ee1ff15715363e9cf902ce1b5d371a4ed71e6b7c1aa5dca0c90ada716598bb2eb7479814b9c5539
-Size (lupa-1.5.tar.gz) = 427626 bytes
+SHA1 (lupa-1.6.tar.gz) = 6ca2fb8adb8cfabba7e79cd32d08d5108f6a14ac
+RMD160 (lupa-1.6.tar.gz) = 18957dbbea002bffbf3be6ac1c1f4290171a00c9
+SHA512 (lupa-1.6.tar.gz) = 5f2f78ca6511da66f27d2abcf1db5a468d9bcca8107700fad8e9f5e50dd3b293a65807c1ff05d6bd57693722f0c40c4b848913ec178a23c9e1f636ae4c578d3a
+Size (lupa-1.6.tar.gz) = 435201 bytes
