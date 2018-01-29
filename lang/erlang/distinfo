@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.55 2017/12/13 14:45:20 fhajny Exp $
+$NetBSD: distinfo,v 1.56 2018/01/29 16:54:38 jperkin Exp $
 
 SHA1 (erlang/otp_src_20.2.tar.gz) = afcd19e56cb41907b1b53de2fe25dab7be34d66a
 RMD160 (erlang/otp_src_20.2.tar.gz) = f2d34e6d40214cc470ad7c0190d2c1bda18ccde1
@@ -9,5 +9,7 @@ SHA1 (patch-ay) = f5f1accdb11e404ba4779b056228431e3080e4cd
 SHA1 (patch-erts_configure) = dba8d72974e8c493cf2bb90e6b149a84dd9073da
 SHA1 (patch-erts_emulator_drivers_common_inet__drv.c) = b7784e5e8e025ca75d5279a63e0cb3f74c54bd6a
 SHA1 (patch-erts_emulator_sys_common_erl__poll.c) = b2068ed4f1994407cb2ec3cd10220bebae85b01d
+SHA1 (patch-erts_emulator_sys_unix_sys__uds.h) = 9b8cd1531f175a50a457ade054a3a1eb8349f2d0
+SHA1 (patch-erts_etc_unix_run__erl.c) = 9e2377ceba5021eaa2f0c729600df499954d134e
 SHA1 (patch-lib_crypto_c__src_Makefile.in) = 0ab1db36c03999524e933d60f913ff5608b0622e
 SHA1 (patch-make_output.mk.in) = d7b3da58bfb471d52c41242e2a03d1598ce24e62
