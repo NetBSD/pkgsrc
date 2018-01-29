@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.433 2018/01/29 14:57:16 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.434 2018/01/29 15:23:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -680,3 +680,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/lzop to 1.04 [mef 2018-01-29]
 	Updated math/mpcomplex to 1.1.0 [ryoon 2018-01-29]
 	Updated cross/arm-none-eabi-gcc to 7.3.0 [ryoon 2018-01-29]
+	Updated www/firefox-l10n to 58.0nb1 [ryoon 2018-01-29]
