@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2016/07/09 06:39:07 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2018/01/29 15:44:09 jperkin Exp $
 #
 
 DISTNAME=	OpenSP-1.5.2
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 CONFLICTS+=	sp-[0-9]*
 
 USE_TOOLS+=		gmake msgfmt perl
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_LIBTOOL=		yes
 PTHREAD_OPTS+=		require
 USE_PKGLOCALEDIR=	yes
