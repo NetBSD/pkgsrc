@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/08/12 10:52:48 adam Exp $
+# $NetBSD: Makefile,v 1.21 2018/01/29 12:58:44 jperkin Exp $
 
 DISTNAME=	glew-1.13.0
 CATEGORIES=	graphics
@@ -19,8 +19,8 @@ INSTALLATION_DIRS+=	lib/pkgconfig
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS" && !empty(CC:M*gcc*)
-MAKEFLAGS+=	SYSTEM=solaris-gcc
+.if !empty(PKGSRC_COMPILER:Mgcc) || !empty(PKGSRC_COMPILER:Mclang)
+MAKE_ENV.SunOS+=	SYSTEM=solaris-gcc
 .endif
 
 .if ${OPSYS} != "Darwin"
