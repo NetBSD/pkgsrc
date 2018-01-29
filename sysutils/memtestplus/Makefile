@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/01/15 09:50:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2018/01/29 11:52:10 maya Exp $
 #
 
 # Note -- version number also in the do-install rule
@@ -7,7 +7,7 @@ MINVER=01
 
 DISTNAME=		memtest86+-${MAJVER}.${MINVER}
 PKGNAME=		memtestplus-${MAJVER}.${MINVER}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.memtest.org/download/${MAJVER}.${MINVER}/
 
