@@ -1,10 +1,16 @@
-$NetBSD: patch-ab,v 1.7 2011/07/21 17:05:36 joerg Exp $
+$NetBSD: patch-ab,v 1.8 2018/01/29 12:47:08 jperkin Exp $
 
 For localtime_r, safer than adjusting the _XOPEN_SOURCE earlier in the file.
 
---- libedataserver/e-time-utils.c.orig	2011-07-20 12:30:18.000000000 +0000
+--- libedataserver/e-time-utils.c.orig	2011-04-21 19:35:37.000000000 +0000
 +++ libedataserver/e-time-utils.c
-@@ -13,6 +13,7 @@
+@@ -9,10 +9,13 @@
+  */
+ 
+ #include <config.h>
++#if !defined(__sun) || (!defined(_XOPEN_SOURCE) && (__STDC_VERSION__-0 < 199901L))
+ #define _XOPEN_SOURCE
++#endif
  
  /* For tm_gmtoff */
  #define _BSD_SOURCE
