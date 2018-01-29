@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2017/12/07 12:35:41 adam Exp $
+# $NetBSD: Makefile,v 1.45 2018/01/29 11:17:46 adam Exp $
 
 DISTNAME=	dpkg_1.18.24
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -27,7 +27,6 @@ CONFIGURE_ARGS+=	--with-admindir=${VARBASE}/db/dpkg
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/dpkg
 CONFIGURE_ARGS.Darwin+=	--enable-linker-optimizations=no
 CONFIGURE_ENV+=		PATCH=${PREFIX}/bin/gpatch
-CONFIGURE_ENV+=		TAR=${TOOLS_PLATFORM.gtar:Q}
 TEST_TARGET=		check
 INCOMPAT_CURSES+=	NetBSD-[0-5].*-*
 
@@ -42,3 +41,5 @@ PERL5_CONFIGURE=	no
 .include "../../lang/perl5/module.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+# override the default
+CONFIGURE_ENV+=		TAR=${GTAR:Q}
