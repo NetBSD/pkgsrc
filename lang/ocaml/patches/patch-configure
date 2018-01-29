@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.30 2018/01/22 10:22:30 wiz Exp $
+$NetBSD: patch-configure,v 1.31 2018/01/29 14:15:58 jperkin Exp $
 
 All kinds of OS-specific changes to configure
 Honor LDFLAGS.
@@ -14,11 +14,16 @@ Honor LDFLAGS.
  
  if $with_sharedlibs; then
    case "$target" in
-@@ -823,7 +823,10 @@ if $with_sharedlibs; then
-         *gcc*)
+@@ -820,10 +820,13 @@ if $with_sharedlibs; then
+       esac;;
+     *-*-solaris2*)
+       case "$cc" in
+-        *gcc*)
++        *clang*|*gcc*)
            sharedcccompopts="-fPIC"
-           if sh ./solaris-ld; then
+-          if sh ./solaris-ld; then
 -            mksharedlib="ld -G"
++          if true; then
 +            case "$target" in
 +            x86_64*) mksharedlib="$cc -shared" ;;
 +            *)       mksharedlib="$cc -G" ;;
