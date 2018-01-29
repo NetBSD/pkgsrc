@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.431 2018/01/29 14:48:02 mef Exp $
+$NetBSD: CHANGES-2018,v 1.432 2018/01/29 14:50:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -678,3 +678,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/memtestplus to 5.01nb2 [maya 2018-01-29]
 	Updated databases/py-sqlalchemy to 1.2.2 [adam 2018-01-29]
 	Updated archivers/lzop to 1.04 [mef 2018-01-29]
+	Updated math/mpcomplex to 1.1.0 [ryoon 2018-01-29]
