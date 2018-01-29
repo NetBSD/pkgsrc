@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2018/01/10 22:16:26 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2018/01/29 11:44:27 jperkin Exp $
 
 DISTNAME=	texlive-20170524-source
 PKGNAME=	xetex-0.99997
@@ -21,7 +21,7 @@ EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/web2c
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c99 c++11
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake lex perl pkg-config yacc
 CONFIGURE_ARGS+=	--disable-aleph --disable-etex --disable-pdftex \
@@ -59,7 +59,7 @@ SUBST_SED.paths=	-e 's,@XDVIPDFMX@,${LOCALBASE}/bin/xdvipdfmx,g'
 
 INSTALLATION_DIRS+=	bin
 
-CFLAGS.SunOS+= -std=gnu99 -D_XOPEN_SOURCE_EXTENDED=0
+CFLAGS.SunOS+=		-D_XOPEN_SOURCE_EXTENDED=0
 
 .include "../../converters/TECkit/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
