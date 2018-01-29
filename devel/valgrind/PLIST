@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/12/05 20:17:56 wiedi Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/01/29 22:35:06 alnsn Exp $
 bin/callgrind_annotate
 bin/callgrind_control
 bin/cg_annotate
@@ -25,7 +25,6 @@ include/valgrind/libvex_guest_ppc32.h
 include/valgrind/libvex_guest_ppc64.h
 include/valgrind/libvex_guest_s390x.h
 include/valgrind/libvex_guest_x86.h
-include/valgrind/libvex_guest_tilegx.h
 include/valgrind/libvex.h
 include/valgrind/libvex_ir.h
 include/valgrind/libvex_s390x_common.h
