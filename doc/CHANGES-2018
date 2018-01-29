@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.427 2018/01/29 11:16:43 roy Exp $
+$NetBSD: CHANGES-2018,v 1.428 2018/01/29 11:37:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -674,3 +674,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/pkglint to 5.5.3 [rillig 2018-01-28]
 	Updated security/ap-modsecurity2 to 2.7.7nb10 [he 2018-01-29]
 	Updated net/dhcpcd to 7.0.1 [roy 2018-01-29]
+	Updated net/rsync to 3.1.3 [adam 2018-01-29]
