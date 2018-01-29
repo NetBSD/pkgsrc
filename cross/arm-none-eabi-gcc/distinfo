@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.4 2017/08/16 14:41:12 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2018/01/29 14:56:49 ryoon Exp $
 
-SHA1 (gcc-7.2.0.tar.gz) = dec3effe9f73bf2216a88804ac805a05f9b33ea8
-RMD160 (gcc-7.2.0.tar.gz) = fa4eb09ea8c3fc388c6918096f134e188cce4c2d
-SHA512 (gcc-7.2.0.tar.gz) = ae287b4696e78764136a60457dc147b2ef2cc108b2721c5c81d02467f47f08470a1be72b9576dd9af7c86838bc8543eabfe7a1c4ca7bd3166c40929ff5abd3ab
-Size (gcc-7.2.0.tar.gz) = 111997123 bytes
-SHA1 (newlib-2.5.0.tar.gz) = be1f1960bce564130a0cf9598e388fcc437169dc
-RMD160 (newlib-2.5.0.tar.gz) = fc2beafe309701e02da3d2dff737236f67c0de4d
-SHA512 (newlib-2.5.0.tar.gz) = 4c99e8dfcb4a7ad0769b9e173ff06628d82e4993ef87d3adf9d6b5578626b14de81b4b3c5f0673ddbb49dc9f3d3628f9f8d4432dcded91f5cd3d27b7d44343cd
-Size (newlib-2.5.0.tar.gz) = 17912392 bytes
+SHA1 (gcc-7.3.0.tar.gz) = 8f11c52db81c30a1780c590bb7ab9a6e326ccea4
+RMD160 (gcc-7.3.0.tar.gz) = e29c328b772e5df4b93c2f700abf69bcfd106fc1
+SHA512 (gcc-7.3.0.tar.gz) = 4e203f4ea5e8713e7b0e3d2a269f7a54f6d1074d572b93d39ed6961c82b3c310f389d7f78494f58309b7436d1e0744eba06c22a24747000dfd84e2b4376cbf73
+Size (gcc-7.3.0.tar.gz) = 112201917 bytes
+SHA1 (newlib-3.0.0.tar.gz) = 641e4d4a50e31016ca90e0d3ea095aabae34c4a7
+RMD160 (newlib-3.0.0.tar.gz) = 505d486c9c658d10ed3b1af13459b2f289680b1f
+SHA512 (newlib-3.0.0.tar.gz) = d4730ce9a4fc4e62052e89d20d4a3855a103b3d1a2818e94c7a68626db285aa8db8e56a684103731916bfba3e581db88e3a93264034ea0f2880ee8976283c04f
+Size (newlib-3.0.0.tar.gz) = 18168046 bytes
 SHA1 (patch-contrib_download__prerequisites) = be9b02068b3d4d783e92bee66d480bb2bfe35a84
 SHA1 (patch-gcc_system.h) = 72a75ff773b9b5f3d2f16f4ec7d29e032aba5f53
 SHA1 (patch-libcc1_configure) = 0368733ddf79b109fcc7146b0baeb37ab31e634a
