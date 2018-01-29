@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2014/10/09 14:05:53 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2018/01/29 14:47:53 mef Exp $
 
-DISTNAME=	lzop-1.03
+DISTNAME=	lzop-1.04
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.lzop.org/download/
 
