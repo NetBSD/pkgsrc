@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2018/01/18 09:12:17 adam Exp $
+$NetBSD: distinfo,v 1.29 2018/01/29 13:44:32 adam Exp $
 
-SHA1 (SQLAlchemy-1.2.1.tar.gz) = 518772a8f77f6d294c5bf3d123fc54284b20caa7
-RMD160 (SQLAlchemy-1.2.1.tar.gz) = b136b58ce7d567705e8cde0617b55f1e9f599c89
-SHA512 (SQLAlchemy-1.2.1.tar.gz) = 1f958ed2b06a7cb34665b34cd844bfdda72f197f966928ee02389f56eabd05ef68973caeccf17e7f5485b67c899cd5fe67d3ac55981481c13a5368bc9b7c238e
-Size (SQLAlchemy-1.2.1.tar.gz) = 5457455 bytes
+SHA1 (SQLAlchemy-1.2.2.tar.gz) = 9888f6102baa2315bebf1c75449cbeb3c2f3b22b
+RMD160 (SQLAlchemy-1.2.2.tar.gz) = f029d60552bcfe535d3cfa694c1e6905e0813abe
+SHA512 (SQLAlchemy-1.2.2.tar.gz) = 060ce803b8b621d51aa69100c598c424c36f051bdce1e2df3f4d837815f91cb55c4e089db5375b01832ec28bf42332311009c51c1b5e7aae92aea001ee880db5
+Size (SQLAlchemy-1.2.2.tar.gz) = 5460157 bytes
