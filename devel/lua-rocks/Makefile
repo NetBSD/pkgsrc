@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2017/09/16 19:53:50 alnsn Exp $
+# $NetBSD: Makefile,v 1.6 2018/01/29 21:18:23 alnsn Exp $
 
-DISTNAME=	luarocks-2.4.2
+DISTNAME=	luarocks-2.4.3
 PKGNAME=	${DISTNAME:S/luarocks/${LUA_PKGPREFIX}-rocks/}
 CATEGORIES=	devel
 MASTER_SITES=	https://luarocks.org/releases/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	alnsn@NetBSD.org
 HOMEPAGE=	https://luarocks.org/
 COMMENT=	Deployment and management system for Lua modules
 LICENSE=	mit
