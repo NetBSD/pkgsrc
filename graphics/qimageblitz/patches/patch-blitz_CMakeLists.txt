@@ -1,0 +1,18 @@
+$NetBSD: patch-blitz_CMakeLists.txt,v 1.1 2018/01/29 17:35:31 jperkin Exp $
+
+Fix SunPro detection.
+
+--- blitz/CMakeLists.txt.orig	2010-07-28 18:06:14.000000000 +0000
++++ blitz/CMakeLists.txt
+@@ -49,9 +49,9 @@ endif(COMMAND cmake_policy)
+ add_library(qimageblitz SHARED ${blitz_LIB_SRCS} ${blitz_LIB_EXTRA_SRCS})
+ 
+ target_link_libraries(qimageblitz ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY})
+-if (NOT CMAKE_COMPILER_IS_GNUCXX AND CMAKE_SYSTEM_NAME MATCHES SunOS)
++if (CMAKE_COMPILER_IS_SUNPRO AND CMAKE_SYSTEM_NAME MATCHES SunOS)
+     target_link_libraries(qimageblitz -lm -lsunmath)
+-endif (NOT CMAKE_COMPILER_IS_GNUCXX AND CMAKE_SYSTEM_NAME MATCHES SunOS)
++endif (CMAKE_COMPILER_IS_SUNPRO AND CMAKE_SYSTEM_NAME MATCHES SunOS)
+ 
+ set_target_properties(qimageblitz PROPERTIES
+                             VERSION ${BLITZ_LIB_MAJOR_VERSION}.${BLITZ_LIB_MINOR_VERSION}.${BLITZ_LIB_PATCH_VERSION}
