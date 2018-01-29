@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2016/07/09 06:37:47 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2018/01/29 18:51:58 jperkin Exp $
 
 DISTNAME=	festival-2.1-release
 PKGNAME=	festival-2.1
@@ -14,7 +14,7 @@ COMMENT=	Advanced multi-lingual speech synthesis system
 LICENSE=	original-bsd
 
 WRKSRC=		${WRKDIR}
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_TOOLS+=	gmake pax perl
 MAKE_JOBS_SAFE=	no
 REPLACE_PERL=	festival/examples/festival_client.pl
