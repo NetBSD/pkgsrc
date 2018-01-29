@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2008/10/12 12:50:17 adrianp Exp $
+$NetBSD: MESSAGE,v 1.3 2018/01/29 09:48:45 he Exp $
 
 In order to use this module in your Apache installation, you will need
 to add the following to your httpd.conf file:
@@ -16,7 +16,7 @@ following to your httpd.conf:
 
 Example configuration files for modsecurity are available:
 
-  ${PREFIX}/share/examples/ap-security/
+  ${PREFIX}/share/examples/ap-modsecurity/
 
 In order to use the XML support in your Apache installation, you will need
 to add the following to your httpd.conf file:
