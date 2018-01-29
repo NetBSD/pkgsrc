@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2017/10/27 13:06:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2018/01/29 15:00:48 ryoon Exp $
 
 DISTNAME=	dos2unix-7.4.0
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dos2unix/}
 
@@ -13,7 +14,7 @@ CONFLICTS=	unix2dos-[0-9]*
 
 USE_TOOLS+=	gmake msgfmt xgettext perl
 
-BUILD_MAKE_FLAGS+=	LDFLAGS_EXTRA+="-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -lintl"
+BUILD_MAKE_FLAGS+=	LDFLAGS_EXTRA+="-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -lintl ${LDFLAGS}"
 INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
