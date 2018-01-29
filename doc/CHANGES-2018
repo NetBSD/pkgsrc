@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.425 2018/01/28 23:21:29 rillig Exp $
+$NetBSD: CHANGES-2018,v 1.426 2018/01/29 09:49:18 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -672,3 +672,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/gdbm to 1.14.1 [wiz 2018-01-28]
 	Updated graphics/openexr to 2.2.1 [wiz 2018-01-28]
 	Updated pkgtools/pkglint to 5.5.3 [rillig 2018-01-28]
+	Updated security/ap-modsecurity2 to 2.7.7nb10 [he 2018-01-29]
