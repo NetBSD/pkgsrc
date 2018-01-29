@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/09/03 08:53:15 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2018/01/29 12:16:29 maya Exp $
 #
 
 DISTNAME=		memtest86-4.0
@@ -16,6 +16,9 @@ COMMENT=		Stand alone memory test for x86 arch (no longer maintained)
 LICENSE=		gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386
+
+FORTIFY_SUPPORTED=	no
+SSP_SUPPORTED=		no
 
 USE_TOOLS+=		gmake
 
