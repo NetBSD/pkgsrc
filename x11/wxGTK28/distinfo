@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2017/06/14 13:21:52 jperkin Exp $
+$NetBSD: distinfo,v 1.21 2018/01/29 15:12:54 jperkin Exp $
 
 SHA1 (wxGTK-2.8.12-libtool.diff.bz2) = f2c9b8a06c08101325ffe09ad77f4800f7aa8730
 RMD160 (wxGTK-2.8.12-libtool.diff.bz2) = 05b763aa44a8e8c8ad565af2a188d7c6437f2133
@@ -13,4 +13,12 @@ SHA1 (patch-ab) = 6f6278ec6b92a39abe29ec09053cd7007cd32fef
 SHA1 (patch-ac) = 50cf253797f2dee8b9dab08d138d0070e25e7a8c
 SHA1 (patch-include_wx_convauto.h) = 11f635fa13995daf9815d6e84e936f39206e927a
 SHA1 (patch-include_wx_debug.h) = bc25a486361194d8d70c69bcd833e085fbcbdec3
+SHA1 (patch-include_wx_wxchar.h) = 6ea42fb4dc3745b424d4aee1099628d896605e8c
 SHA1 (patch-setup.h.in) = 4f798bd013dc008644e3f86be89ecb8bf13aef1d
+SHA1 (patch-src_gtk_bdiag.xbm) = 652b15e01a26d06af331d4f8c5dc961fdfdafd64
+SHA1 (patch-src_gtk_cdiag.xbm) = d109106885ab8df5619aafbecf73403d0a5b5d41
+SHA1 (patch-src_gtk_cross.xbm) = 6b23a262e629a1beb751e73ad2e776e8410dd3d5
+SHA1 (patch-src_gtk_dcclient.cpp) = 23d377facda6a1d160f377ac515f175c1cffa570
+SHA1 (patch-src_gtk_fdiag.xbm) = e18acdd76dd6864e5cfcf15b650228e101ec35f9
+SHA1 (patch-src_gtk_horiz.xbm) = e28fe772e50315efb90f09898373906ac557892e
+SHA1 (patch-src_gtk_verti.xbm) = 99fab07759349dfd0f992c8825071b29ca380a49
