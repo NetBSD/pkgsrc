@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.436 2018/01/29 21:38:20 alnsn Exp $
+$NetBSD: CHANGES-2018,v 1.437 2018/01/29 21:54:35 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -683,3 +683,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/firefox-l10n to 58.0nb1 [ryoon 2018-01-29]
 	Updated devel/lua-rocks to 2.4.3 [alnsn 2018-01-29]
 	Updated devel/py-lupa to 1.6 [alnsn 2018-01-29]
+	Updated multimedia/mpv to 0.27.0nb2 [leot 2018-01-29]
