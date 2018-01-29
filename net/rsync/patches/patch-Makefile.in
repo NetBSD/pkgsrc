@@ -1,10 +1,27 @@
-$NetBSD: patch-Makefile.in,v 1.1 2015/11/13 13:41:39 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2018/01/29 11:32:59 adam Exp $
 
 https://bugzilla.samba.org/show_bug.cgi?id=11594
+Fix installation.
 
---- Makefile.in.orig	2013-06-15 23:40:10.000000000 +0000
+--- Makefile.in.orig	2016-07-20 15:34:26.000000000 +0000
 +++ Makefile.in
-@@ -205,7 +205,7 @@ proto: proto.h-tstamp
+@@ -66,12 +66,9 @@ CHECK_OBJS=tls.o testrun.o getgroups.o g
+ all: Makefile rsync$(EXEEXT) rsync-ssl stunnel-rsync stunnel-rsyncd.conf @MAKE_MAN@
+ 
+ install: all
+-	-${MKDIR_P} ${DESTDIR}${bindir}
+-	${INSTALLCMD} ${INSTALL_STRIP} -m 755 rsync$(EXEEXT) ${DESTDIR}${bindir}
+-	-${MKDIR_P} ${DESTDIR}${mandir}/man1
+-	-${MKDIR_P} ${DESTDIR}${mandir}/man5
+-	if test -f rsync.1; then ${INSTALLMAN} -m 644 rsync.1 ${DESTDIR}${mandir}/man1; fi
+-	if test -f rsyncd.conf.5; then ${INSTALLMAN} -m 644 rsyncd.conf.5 ${DESTDIR}${mandir}/man5; fi
++	${BSD_INSTALL_PROGRAM} rsync$(EXEEXT) ${DESTDIR}${bindir}
++	if test -f rsync.1; then ${BSD_INSTALL_MAN} rsync.1 ${DESTDIR}${mandir}/man1; fi
++	if test -f rsyncd.conf.5; then ${BSD_INSTALL_MAN} rsyncd.conf.5 ${DESTDIR}${mandir}/man5; fi
+ 
+ install-ssl-client: rsync-ssl stunnel-rsync
+ 	-${MKDIR_P} ${DESTDIR}${bindir}
+@@ -209,7 +206,7 @@ proto: proto.h-tstamp
  proto.h: proto.h-tstamp
  	@if test -f proto.h; then :; else cp -p $(srcdir)/proto.h .; fi
  
