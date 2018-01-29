@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2017/11/23 17:19:42 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2018/01/29 18:33:01 jperkin Exp $
 #
 
 DISTNAME=		scim-1.4.15
@@ -16,7 +16,7 @@ SUPERSEDES+=		scim-bridge-[0-9]*
 PKG_SYSCONFSUBDIR=	scim
 
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_LIBTOOL=		yes
 USE_TOOLS+=		msgfmt pkg-config
 USE_TOOLS+=		gmake	# make scim-setup.desktop
