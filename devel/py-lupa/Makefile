@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2017/09/17 10:50:19 adam Exp $
+# $NetBSD: Makefile,v 1.8 2018/01/29 21:37:31 alnsn Exp $
 
-DISTNAME=	lupa-1.5
+DISTNAME=	lupa-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lupa/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	alnsn@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/lupa
 COMMENT=	Python wrapper around Lua and LuaJIT
 LICENSE=	mit
