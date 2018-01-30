@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/01/24 19:06:06 markd Exp $
+# $NetBSD: Makefile,v 1.11 2018/01/30 07:29:55 markd Exp $
 
 DISTNAME=	karchive-${KF5VER}
 PKGREVISION=	2
@@ -9,6 +9,12 @@ COMMENT=	Qt 5 addon providing access to numerous types of archives
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kf5/Makefile.common"
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	post-patch
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_DATAROOTDIR}/examples/kde-xdg:'
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/karchive.categories \
