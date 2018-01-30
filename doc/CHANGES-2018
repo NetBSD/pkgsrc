@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.451 2018/01/30 16:37:44 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.452 2018/01/30 16:40:23 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -702,3 +702,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/easy-rsa to 3.0.5 [mef 2018-01-30]
 	Updated lang/elixir to 1.6.1 [fhajny 2018-01-30]
 	Updated security/vault to 0.9.3 [fhajny 2018-01-30]
+	Updated databases/redis to 4.0.7 [fhajny 2018-01-30]
