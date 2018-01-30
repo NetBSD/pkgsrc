@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.449 2018/01/30 14:34:14 mef Exp $
+$NetBSD: CHANGES-2018,v 1.450 2018/01/30 16:27:20 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -700,3 +700,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/py-beets to 1.4.6 [adam 2018-01-30]
 	Updated time/py-tzdata to 2018.3 [adam 2018-01-30]
 	Updated security/easy-rsa to 3.0.5 [mef 2018-01-30]
+	Updated lang/elixir to 1.6.1 [fhajny 2018-01-30]
