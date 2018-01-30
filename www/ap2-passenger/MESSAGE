@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2018/01/30 12:06:49 fhajny Exp $
+
+The Apache 2 module was successfully installed.
+
+To enable this module, add the following lines to your Apache config file:
+
+LoadModule passenger_module lib/httpd/mod_passenger.so
+<IfModule mod_passenger.c>
+  PassengerRoot ${PREFIX}/${RUBY_VENDORLIB}/phusion_passenger/locations.ini
+  PassengerRuby ${RUBY}
+</IfModule>
+
+Use PassengerPython or PassengerNodejs directives to point to python and
+node commands as appropriate, when deploying Python or Node.js apps.
+
+===========================================================================
