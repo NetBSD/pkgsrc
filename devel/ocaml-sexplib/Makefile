@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/01/10 16:09:33 jaapb Exp $
+# $NetBSD: Makefile,v 1.14 2018/01/30 10:32:44 jaapb Exp $
 
 GITHUB_PROJECT=	sexplib
 GITHUB_TAG=	v${VERS}
@@ -19,5 +19,6 @@ OCAML_USE_OPAM=	yes
 BUILD_TARGET=	default
 
 .include "../../devel/ocaml-jbuilder/buildlink3.mk"
+.include "../../math/ocaml-num/buildlink3.mk"
 .include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
