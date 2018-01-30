@@ -1,16 +1,18 @@
-# $NetBSD: Makefile.common,v 1.26 2017/07/13 17:55:30 hauke Exp $
+# $NetBSD: Makefile.common,v 1.27 2018/01/30 11:52:18 hauke Exp $
 #
 # used by editors/xemacs-nox11/Makefile
 # used by editors/xemacs/Makefile
 
 DISTNAME=	xemacs-21.4.24
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=${DISTNAME:C/[.][^.]*$//}/}
 
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	http://www.xemacs.org/
 LICENSE=	gnu-gpl-v2
+
+.include "../../mk/bsd.prefs.mk"
 
 FILESDIR=		${.CURDIR}/../../editors/xemacs/files
 PATCHDIR=		${.CURDIR}/../../editors/xemacs/patches
@@ -32,8 +34,6 @@ PLIST_SUBST+=		ELSUFX='.gz'
 .else
 PLIST_SUBST+=		ELSUFX=''
 .endif
-
-.include "options.mk"
 
 CONFIGURE_ARGS+=	${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
