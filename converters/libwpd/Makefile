@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2018/01/01 21:18:07 adam Exp $
+# $NetBSD: Makefile,v 1.42 2018/01/30 23:37:10 jperkin Exp $
 
 DISTNAME=	libwpd-0.10.1
 PKGREVISION=	5
@@ -28,6 +28,7 @@ PKGCONFIG_OVERRIDE+=	libwpd.pc.in
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-unused-private-field
 CWRAPPERS_APPEND.cxx+=	-Wno-unused-private-field
+CWRAPPERS_APPEND.cxx+=	-Wno-tautological-type-limit-compare
 .endif
 
 .include "../../mk/bsd.pkg.mk"
