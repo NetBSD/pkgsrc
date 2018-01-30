@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.441 2018/01/30 02:14:25 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.442 2018/01/30 07:23:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -688,3 +688,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated editors/nano to 2.9.3 [wiedi 2018-01-30]
 	Updated devel/p5-Mojo-IOLoop-ForkCall to 0.18 [wiedi 2018-01-30]
 	Added math/R-stabledist version 0.7.1 [minskim 2018-01-30]
+	Updated devel/ccache to 3.3.6 [adam 2018-01-30]
+	Updated textproc/yaml-cpp to 0.6.0 [adam 2018-01-30]
