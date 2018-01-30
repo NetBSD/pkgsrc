@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/01/15 09:26:23 jnemeth Exp $
+# $NetBSD: Makefile,v 1.5 2018/01/30 14:34:06 mef Exp $
 
-DISTNAME=	easy-rsa-3.0.3
-PKGREVISION=	1
+DISTNAME=	easy-rsa-3.0.5
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenVPN/}
 
@@ -17,7 +16,7 @@ USE_LANGUAGES=	# none
 EASYRSA_DOC_FILES=	COPYING.md ChangeLog KNOWN_ISSUES README.md
 EASYRSA_DOC_FILES+=	README.quickstart.md
 
-EASYRSA_CNF_FILES=	openssl-1.0.cnf vars.example x509-types/COMMON
+EASYRSA_CNF_FILES=	openssl-easyrsa.cnf vars.example x509-types/COMMON
 EASYRSA_CNF_FILES+=	x509-types/ca x509-types/client x509-types/server
 
 INSTALLATION_DIRS+=	${BINDIR} ${DOCDIR} ${EGDIR} # ${PKGMANDIR}/man1
