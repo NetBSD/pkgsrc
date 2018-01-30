@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/01/17 20:09:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/30 07:03:48 markd Exp $
 include/KF5/KFileMetaData/KFileMetaData/ExtractionResult
 include/KF5/KFileMetaData/KFileMetaData/Extractor
 include/KF5/KFileMetaData/KFileMetaData/ExtractorCollection
@@ -46,6 +46,7 @@ qt5/plugins/kf5/kfilemetadata/kfilemetadata_poextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_popplerextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_taglibextractor.so
 qt5/plugins/kf5/kfilemetadata/writers/kfilemetadata_taglibwriter.so
+share/examples/kde-xdg/kfilemetadata.categories
 share/locale/ar/LC_MESSAGES/kfilemetadata5.mo
 share/locale/ast/LC_MESSAGES/kfilemetadata5.mo
 share/locale/bg/LC_MESSAGES/kfilemetadata5.mo
