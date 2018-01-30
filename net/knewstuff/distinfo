@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/01/27 03:45:38 markd Exp $
+$NetBSD: distinfo,v 1.5 2018/01/30 07:43:23 markd Exp $
 
 SHA1 (knewstuff-5.41.0.tar.xz) = c5c2c89615bf55f36b220dfd340cc945f5228d3c
 RMD160 (knewstuff-5.41.0.tar.xz) = 50d1f0f3b828c5370b27f8c67f9ca72315c8315b
 SHA512 (knewstuff-5.41.0.tar.xz) = 52001c0283c445eb0d2ea0d9f4a8f5d4dbdba518ae99d6e97fd12fcc522e422adc9d897b564a8adf45259ded9c674ab021d574ce084d9ed7f5242478ffa32ed8
 Size (knewstuff-5.41.0.tar.xz) = 912224 bytes
-SHA1 (patch-CMakeLists.txt) = 03df1e39fe357c26d37618dae384817d2aaad269
