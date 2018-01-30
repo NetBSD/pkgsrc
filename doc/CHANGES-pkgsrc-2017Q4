@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.10 2018/01/24 19:43:34 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.11 2018/01/30 18:51:40 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
 
@@ -82,4 +82,18 @@ x11/deforaos-libdesktop: build fix
 
 Pullup ticket #5689 - requested by wiz
 www/curl: security fix
+
+Pullup ticket #5690 - requested by maya
+net/packit: bugfix
+
+Pullup ticket #5692 - requested by he
+www/firefox52: security fix
+www/firefox52-l10n: dependent update
+
+Pullup ticket #5693 - requested by bouyer
+sysutils/xenkernel48: security fix
+sysutils/xentools48: security fix
+
+Pullup ticket #5694 - requested by he
+lang/rust: dependent update (for www/firefox)
 
