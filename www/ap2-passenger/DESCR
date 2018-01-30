@@ -1,0 +1,5 @@
+Phusion Passenger is a web server and application server,
+designed to be fast, robust and lightweight. It supports Ruby,
+Python, Node.js and Meteor.
+
+This package holds the Apache 2.x module.
