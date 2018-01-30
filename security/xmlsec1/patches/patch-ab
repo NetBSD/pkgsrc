@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.7 2017/02/07 01:19:15 joerg Exp $
+$NetBSD: patch-ab,v 1.8 2018/01/30 13:25:19 mef Exp $
 
 * portability fix
 * DragonFly also not require extra libs for OpenSSL.
 
---- configure.orig	2013-03-24 21:36:30.000000000 +0000
-+++ configure
-@@ -10688,7 +10688,7 @@ darwin* | rhapsody*)
-   soname_spec='${libname}${release}${major}$shared_ext'
+--- configure.orig	2017-09-12 22:21:59.000000000 +0900
++++ configure	2018-01-30 22:12:07.735855706 +0900
+@@ -11373,7 +11373,7 @@ darwin* | rhapsody*)
+   soname_spec='$libname$release$major$shared_ext'
    shlibpath_overrides_runpath=yes
    shlibpath_var=DYLD_LIBRARY_PATH
 -  shrext_cmds='`test .$module = .yes && echo .so || echo .dylib`'
@@ -14,7 +14,7 @@ $NetBSD: patch-ab,v 1.7 2017/02/07 01:19:15 joerg Exp $
  
    sys_lib_search_path_spec="$sys_lib_search_path_spec /usr/local/lib"
    sys_lib_dlsearch_path_spec='/usr/local/lib /lib /usr/lib'
-@@ -11923,7 +11923,7 @@ CC="$lt_save_CC"
+@@ -12661,7 +12661,7 @@ CC=$lt_save_CC
  
  
  
@@ -23,16 +23,16 @@ $NetBSD: patch-ab,v 1.7 2017/02/07 01:19:15 joerg Exp $
      # Extract the first word of "rm", so it can be a program name with args.
  set dummy rm; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
-@@ -12597,7 +12597,7 @@ else
- fi
- 
+@@ -13648,7 +13648,7 @@ case "${host}" in
+         ;;
+ esac
  
 -if test "z$shrext" == "z" ; then
 +if test "z$shrext" = "z" ; then
      shrext=$shrext_cmds
  fi
  
-@@ -13349,15 +13349,13 @@ elif test "z$with_openssl" != "z" ; then
+@@ -14384,15 +14384,13 @@ elif test "z$with_openssl" != "z" ; then
  	*-*-osf5*) openssl_exlibs=;;
  	*-*-openbsd*) openssl_exlibs=;;
  	*-*-netbsd*) openssl_exlibs=;;
@@ -51,7 +51,7 @@ $NetBSD: patch-ab,v 1.7 2017/02/07 01:19:15 joerg Exp $
      OPENSSL_FOUND="yes"
  elif test "z$PKGCONFIG_FOUND" = "zyes" ; then
      if test "z$OPENSSL_VERSION" = "z" ; then
-@@ -13828,7 +13826,7 @@ else
+@@ -14754,7 +14752,7 @@ else
      XMLSEC_CRYPTO_DISABLED_LIST="$XMLSEC_CRYPTO_DISABLED_LIST openssl"
  fi
  

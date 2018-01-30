@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/04/01 12:27:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/01/30 13:25:19 mef Exp $
 bin/xmlsec1
 bin/xmlsec1-config
 include/xmlsec1/xmlsec/app.h
@@ -28,15 +28,12 @@ include/xmlsec1/xmlsec/openssl/symbols.h
 include/xmlsec1/xmlsec/openssl/x509.h
 include/xmlsec1/xmlsec/parser.h
 include/xmlsec1/xmlsec/private.h
-include/xmlsec1/xmlsec/private/xkms.h
 include/xmlsec1/xmlsec/private/xslt.h
-include/xmlsec1/xmlsec/soap.h
 include/xmlsec1/xmlsec/strings.h
 include/xmlsec1/xmlsec/templates.h
 include/xmlsec1/xmlsec/transforms.h
 include/xmlsec1/xmlsec/version.h
 include/xmlsec1/xmlsec/x509.h
-include/xmlsec1/xmlsec/xkms.h
 include/xmlsec1/xmlsec/xmldsig.h
 include/xmlsec1/xmlsec/xmlenc.h
 include/xmlsec1/xmlsec/xmlsec.h
@@ -62,9 +59,11 @@ share/doc/xmlsec1/api/images/transform.png
 share/doc/xmlsec1/api/images/transforms-chain.png
 share/doc/xmlsec1/api/images/verif-dec-model.png
 share/doc/xmlsec1/api/index.html
-share/doc/xmlsec1/api/index.sgml
+share/doc/xmlsec1/api/left-insensitive.png
 share/doc/xmlsec1/api/left.png
+share/doc/xmlsec1/api/right-insensitive.png
 share/doc/xmlsec1/api/right.png
+share/doc/xmlsec1/api/up-insensitive.png
 share/doc/xmlsec1/api/up.png
 share/doc/xmlsec1/api/xmlsec-app.html
 share/doc/xmlsec1/api/xmlsec-base64.html
@@ -86,13 +85,11 @@ share/doc/xmlsec1/api/xmlsec-examples.html
 share/doc/xmlsec1/api/xmlsec-gcrypt-app.html
 share/doc/xmlsec1/api/xmlsec-gcrypt-crypto.html
 share/doc/xmlsec1/api/xmlsec-gcrypt-ref.html
-share/doc/xmlsec1/api/xmlsec-gcrypt.sgml
 share/doc/xmlsec1/api/xmlsec-gnutls-app.html
 share/doc/xmlsec1/api/xmlsec-gnutls-crypto.html
 share/doc/xmlsec1/api/xmlsec-gnutls-ref.html
-share/doc/xmlsec1/api/xmlsec-gnutls.sgml
+share/doc/xmlsec1/api/xmlsec-gnutls-x509.html
 share/doc/xmlsec1/api/xmlsec-index.html
-share/doc/xmlsec1/api/xmlsec-index.sgml
 share/doc/xmlsec1/api/xmlsec-io.html
 share/doc/xmlsec1/api/xmlsec-keyinfo.html
 share/doc/xmlsec1/api/xmlsec-keys.html
@@ -106,7 +103,6 @@ share/doc/xmlsec1/api/xmlsec-mscrypto-crypto.html
 share/doc/xmlsec1/api/xmlsec-mscrypto-keysstore.html
 share/doc/xmlsec1/api/xmlsec-mscrypto-ref.html
 share/doc/xmlsec1/api/xmlsec-mscrypto-x509.html
-share/doc/xmlsec1/api/xmlsec-mscrypto.sgml
 share/doc/xmlsec1/api/xmlsec-nodeset.html
 share/doc/xmlsec1/api/xmlsec-notes-compiling-others.html
 share/doc/xmlsec1/api/xmlsec-notes-compiling-unix.html
@@ -153,14 +149,12 @@ share/doc/xmlsec1/api/xmlsec-nss-keysstore.html
 share/doc/xmlsec1/api/xmlsec-nss-pkikeys.html
 share/doc/xmlsec1/api/xmlsec-nss-ref.html
 share/doc/xmlsec1/api/xmlsec-nss-x509.html
-share/doc/xmlsec1/api/xmlsec-nss.sgml
 share/doc/xmlsec1/api/xmlsec-openssl-app.html
 share/doc/xmlsec1/api/xmlsec-openssl-bn.html
 share/doc/xmlsec1/api/xmlsec-openssl-crypto.html
 share/doc/xmlsec1/api/xmlsec-openssl-evp.html
 share/doc/xmlsec1/api/xmlsec-openssl-ref.html
 share/doc/xmlsec1/api/xmlsec-openssl-x509.html
-share/doc/xmlsec1/api/xmlsec-openssl.sgml
 share/doc/xmlsec1/api/xmlsec-parser.html
 share/doc/xmlsec1/api/xmlsec-ref.html
 share/doc/xmlsec1/api/xmlsec-reference.html
@@ -177,13 +171,13 @@ share/doc/xmlsec1/api/xmlsec-xmldsig.html
 share/doc/xmlsec1/api/xmlsec-xmlenc.html
 share/doc/xmlsec1/api/xmlsec-xmlsec.html
 share/doc/xmlsec1/api/xmlsec-xmltree.html
-share/doc/xmlsec1/api/xmlsec.sgml
 share/doc/xmlsec1/authors.html
 share/doc/xmlsec1/bugs.html
 share/doc/xmlsec1/c14n.html
 share/doc/xmlsec1/documentation.html
 share/doc/xmlsec1/download.html
 share/doc/xmlsec1/faq.html
+share/doc/xmlsec1/favicon.ico
 share/doc/xmlsec1/images/bart.gif
 share/doc/xmlsec1/images/libxml2-logo.png
 share/doc/xmlsec1/images/libxslt-logo.png
