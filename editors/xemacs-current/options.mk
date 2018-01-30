@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2017/11/15 14:46:31 hauke Exp $
+# $NetBSD: options.mk,v 1.16 2018/01/30 11:47:39 hauke Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xemacs
 PKG_SUPPORTED_OPTIONS+=		ldap canna debug
@@ -38,6 +38,9 @@ CONFIGURE_ARGS+=	--with-dialogs=lucid
 CONFIGURE_ARGS+=	--with-widgets=lucid
 CONFIGURE_ARGS+=	--with-athena=xaw
 CONFIGURE_ARGS+=	--with-xim=xlib
+# Explicitely exclude other toolkits
+CONFIGURE_ARGS+=	--without-gtk
+CONFIGURE_ARGS+=	--without-gnome
 .else
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--without-jpeg
@@ -63,7 +66,7 @@ CONFIGURE_ARGS+=	--without-ldap
 .  include "../../x11/libXrender/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-xft=emacs,tabs,menubars,gauges
 .else
-CONFIGURE_ARGS+=	--with-xft=no
+CONFIGURE_ARGS+=	--without-xft
 .endif
 
 .if !empty(PKG_OPTIONS:Mxface)
