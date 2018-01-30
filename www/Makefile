@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1303 2018/01/26 14:38:27 triaxx Exp $
+# $NetBSD: Makefile,v 1.1304 2018/01/30 12:06:48 fhajny Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -25,6 +25,7 @@ SUBDIR+=	ap2-fcgid
 SUBDIR+=	ap2-jk
 SUBDIR+=	ap2-limitipconn
 SUBDIR+=	ap2-mkdir
+SUBDIR+=	ap2-passenger
 SUBDIR+=	ap2-perl
 SUBDIR+=	ap2-python
 SUBDIR+=	ap2-subversion
@@ -538,6 +539,7 @@ SUBDIR+=	p5-libapreq
 SUBDIR+=	p5-libapreq2
 SUBDIR+=	p5-libwww
 SUBDIR+=	paros
+SUBDIR+=	passenger
 SUBDIR+=	pear-HTML_Common
 SUBDIR+=	pear-HTML_Select
 SUBDIR+=	pear-HTML_TreeMenu
