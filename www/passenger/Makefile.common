@@ -1,0 +1,52 @@
+# $NetBSD: Makefile.common,v 1.1 2018/01/30 12:06:48 fhajny Exp $
+# used by www/ap2-passenger/Makefile
+# used by www/passenger/Makefile
+
+DISTNAME=		passenger-5.2.0
+CATEGORIES=		www
+
+MASTER_SITES=		http://s3.amazonaws.com/phusion-passenger/releases/
+MAINTAINER?=		filip@joyent.com
+HOMEPAGE=		http://www.phusionpassenger.com/
+LICENSE=		mit
+
+USE_LANGUAGES=		c c++
+
+PATCHDIR=		${.CURDIR}/../../www/passenger/patches
+DISTINFO_FILE=		${.CURDIR}/../../www/passenger/distinfo
+
+.include "../../mk/bsd.prefs.mk"
+
+PKG_SYSCONFSUBDIR=	passenger
+
+REPLACE_RUBY=		bin/passenger
+REPLACE_RUBY+=		bin/passenger-config
+REPLACE_RUBY+=		bin/passenger-install-apache2-module
+REPLACE_RUBY+=		bin/passenger-install-nginx-module
+REPLACE_RUBY+=		bin/passenger-memory-stats
+REPLACE_RUBY+=		bin/passenger-status
+REPLACE_RUBY+=		src/helper-scripts/*.rb
+REPLACE_RUBY+=		src/helper-scripts/prespawn
+
+CHECK_INTERPRETER_SKIP+=	share/passenger/helper-scripts/wsgi-loader.py
+CHECK_INTERPRETER_SKIP+=	share/passenger/node/vendor-copy/winston/node_modules/async/support/sync-package-managers.js
+
+SUBST_CLASSES+=		dir
+SUBST_STAGE.dir=	pre-configure
+SUBST_MESSAGE.dir=	Fixing installation directories
+SUBST_FILES.dir=	src/ruby_supportlib/phusion_passenger.rb
+SUBST_FILES.dir+=	src/ruby_supportlib/phusion_passenger/platform_info/cxx_portability.rb
+SUBST_VARS.dir=		PKG_SYSCONFDIR PREFIX
+
+MAKE_ENV+=		EXTRA_LDFLAGS=${COMPILER_RPATH_FLAG}${PREFIX}/lib
+
+.if ${OPSYS} == "SunOS"
+MAKE_ENV+=		LIBEV_EXTRA_ARGS=ac_cv_header_sys_inotify_h=no
+.endif
+
+pre-install:
+	${RM} -f ${WRKSRC}/src/ruby_supportlib/phusion_passenger/packaging.rb.orig \
+		 ${WRKSRC}/src/ruby_supportlib/phusion_passenger/platform_info/cxx_portability.rb.orig
+
+.include "../../www/curl/buildlink3.mk"
+.include "../../lang/ruby/modules.mk"
