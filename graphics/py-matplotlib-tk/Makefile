@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2017/05/29 20:59:21 adam Exp $
+# $NetBSD: Makefile,v 1.30 2018/01/30 10:28:51 adam Exp $
 
 .include "../../graphics/py-matplotlib/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-/-tk-/}
 COMMENT=	Tk frontend for matplotlib
 
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 MPL_PACKAGES=	[setupext.Numpy(),setupext.LibAgg(),setupext.BackendTkAgg()]
@@ -32,6 +33,5 @@ do-test:
 	${PYTHONBIN} -c "import matplotlib; matplotlib.test()"
 
 .include "../../lang/python/egg.mk"
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
