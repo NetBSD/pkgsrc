@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2017/08/02 12:13:34 maya Exp $
+# $NetBSD: Makefile,v 1.31 2018/01/30 23:24:29 jperkin Exp $
 
 DISTNAME=	openjade-1.3.2
 PKGREVISION=	12
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 MAKE_JOBS_SAFE=		no
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
