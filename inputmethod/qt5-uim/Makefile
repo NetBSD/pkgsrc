@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2017/11/30 16:45:27 adam Exp $
+# $NetBSD: Makefile,v 1.22 2018/01/30 06:47:01 markd Exp $
 
 .include "../../x11/qt5/Makefile.common"
 
 DISTNAME=	uim-1.8.6
 PKGNAME=	qt5-${DISTNAME}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	x11
 MASTER_SITES=	http://uim.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -25,7 +25,7 @@ USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	uim.pc.in
 
-CONFIGURE_ENV+=		QMAKE5=${QTPREFIX}/bin/qmake
+CONFIGURE_ENV+=		_QMAKE5=${QTPREFIX}/bin/qmake
 CONFIGURE_ENV.SunOS+=	ac_cv_func_strcasecmp=yes
 
 CONFIGURE_ARGS+=	--with-qt5-immodule
@@ -42,6 +42,9 @@ post-extract:
 		${CP} -r ../uim-1.8.7pre1/qt4 .
 	cd ${WRKSRC} && \
 		${CP} ../uim-1.8.7pre1/configure .
+
+post-install:
+	rm ${DESTDIR}${QTPREFIX}/lib/cmake/Qt5Gui/Qt5Gui_.cmake
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
