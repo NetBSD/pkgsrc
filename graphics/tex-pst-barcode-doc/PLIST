@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/06/21 11:45:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/30 06:32:20 markd Exp $
 share/texmf-dist/doc/generic/pst-barcode/Changes
 share/texmf-dist/doc/generic/pst-barcode/README.md
 share/texmf-dist/doc/generic/pst-barcode/images/auspost-1.eps
@@ -9,7 +9,6 @@ share/texmf-dist/doc/generic/pst-barcode/images/aztec-3.eps
 share/texmf-dist/doc/generic/pst-barcode/images/aztec-4.eps
 share/texmf-dist/doc/generic/pst-barcode/images/aztec-5.eps
 share/texmf-dist/doc/generic/pst-barcode/images/aztec-6.eps
-share/texmf-dist/doc/generic/pst-barcode/images/barcode.jpg
 share/texmf-dist/doc/generic/pst-barcode/images/bc412-1.eps
 share/texmf-dist/doc/generic/pst-barcode/images/bc412-2.eps
 share/texmf-dist/doc/generic/pst-barcode/images/bc412-3.eps
