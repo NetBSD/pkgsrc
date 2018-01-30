@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2017/12/22 12:21:54 adam Exp $
+# $NetBSD: Makefile,v 1.62 2018/01/30 10:28:51 adam Exp $
 
 .include "../../graphics/py-matplotlib/Makefile.common"
 
@@ -6,6 +6,8 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-/-gtk-/}
 COMMENT=	GTK frontend for matplotlib
 
 MPL_PACKAGES=	[setupext.Numpy(),setupext.LibAgg(),setupext.BackendGtkAgg(),setupext.BackendGtk()]
+
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
 
@@ -32,6 +34,5 @@ do-test:
 	${PYTHONBIN} -c "import matplotlib; matplotlib.test()"
 
 .include "../../lang/python/egg.mk"
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
