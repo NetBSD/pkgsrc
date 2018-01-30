@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/01/27 03:32:16 markd Exp $
+# $NetBSD: Makefile,v 1.11 2018/01/30 07:52:36 markd Exp $
 
 DISTNAME=	attica-${KF5VER}
 PKGNAME=	${DISTNAME:S/-/-qt5-/}
@@ -12,6 +12,12 @@ LICENSE=	gnu-lgpl-v2.1
 .include "../../meta-pkgs/kf5/Makefile.common"
 
 PKGCONFIG_OVERRIDE+=	src/cmake/libKF5Attica.pc.cmake
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	post-patch
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_DATAROOTDIR}/examples/kde-xdg:'
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/attica.categories \
