@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/09/04 18:08:21 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/01/30 09:09:06 adam Exp $
 
 DISTNAME=	tabular-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,9 +10,10 @@ HOMEPAGE=	https://pypi.python.org/pypi/tabular
 COMMENT=	Tabular data tools for Python
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.1
 
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pynumpy+=	${PYPKGPREFIX}-numpy>=1.6
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/egg.mk"
