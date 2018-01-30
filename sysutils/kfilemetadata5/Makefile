@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2018/01/24 19:06:10 markd Exp $
+# $NetBSD: Makefile,v 1.24 2018/01/30 07:03:48 markd Exp $
 
 DISTNAME=	kfilemetadata-${KF5VER}
 PKGNAME=	${DISTNAME:S/-/5-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -14,6 +14,16 @@ LICENSE=	gnu-lgpl-v2 AND gnu-lgpl-v2.1 AND gnu-lgpl-v3
 USE_TOOLS+=	msgmerge pkg-config
 
 DEPENDS+=	catdoc-[0-9]*:../../textproc/catdoc
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	post-patch
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_DATAROOTDIR}/examples/kde-xdg:'
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kfilemetadata.categories \
+		${PKG_SYSCONFDIR}/xdg/kfilemetadata.categories
 
 .include "../../lang/python/tool.mk"
 .include "../../archivers/karchive/buildlink3.mk"
