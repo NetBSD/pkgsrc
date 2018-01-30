@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2017/05/09 15:29:15 wiedi Exp $
+@comment $NetBSD: PLIST,v 1.24 2018/01/30 01:21:33 wiedi Exp $
 bin/nano
 bin/rnano
 info/nano.info
@@ -30,6 +30,7 @@ share/locale/nb/LC_MESSAGES/nano.mo
 share/locale/nl/LC_MESSAGES/nano.mo
 share/locale/nn/LC_MESSAGES/nano.mo
 share/locale/pl/LC_MESSAGES/nano.mo
+share/locale/pt/LC_MESSAGES/nano.mo
 share/locale/pt_BR/LC_MESSAGES/nano.mo
 share/locale/ro/LC_MESSAGES/nano.mo
 share/locale/ru/LC_MESSAGES/nano.mo
