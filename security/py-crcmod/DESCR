@@ -1,0 +1,10 @@
+The software in this package is a Python module for generating objects that
+compute the Cyclic Redundancy Check (CRC). There is no attempt in this package
+to explain how the CRC works. There are a number of resources on the web that
+give a good explanation of the algorithms.
+
+This package allows the use of any 8, 16, 24, 32, or 64 bit CRC. You can
+generate a Python function for the selected polynomial or an instance of the
+Crc class which provides the same interface as the md5 and sha modules from the
+Python standard library. A Crc class instance can also generate C/C++ source
+code that can be used in another application.

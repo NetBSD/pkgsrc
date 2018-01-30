@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2018/01/30 19:07:48 bsiegert Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/crcmod/__init__.py
+${PYSITELIB}/crcmod/__init__.pyo
+${PYSITELIB}/crcmod/__init__.pyc
+${PYSITELIB}/crcmod/_crcfunpy.pyo
+${PYSITELIB}/crcmod/_crcfunpy.pyc
+${PYSITELIB}/crcmod/crcmod.pyo
+${PYSITELIB}/crcmod/crcmod.pyc
+${PYSITELIB}/crcmod/predefined.pyo
+${PYSITELIB}/crcmod/predefined.pyc
+${PYSITELIB}/crcmod/test.pyo
+${PYSITELIB}/crcmod/test.pyc
+${PYSITELIB}/crcmod/_crcfunext.so
+${PYSITELIB}/crcmod/_crcfunpy.py
+${PYSITELIB}/crcmod/crcmod.py
+${PYSITELIB}/crcmod/predefined.py
+${PYSITELIB}/crcmod/test.py
