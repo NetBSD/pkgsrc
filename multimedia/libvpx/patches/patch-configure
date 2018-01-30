@@ -1,7 +1,8 @@
-$NetBSD: patch-configure,v 1.6 2018/01/28 16:04:11 wiz Exp $
+$NetBSD: patch-configure,v 1.7 2018/01/30 22:56:39 jperkin Exp $
 
 Recognize sparc and powerpc linux (or BSD...) platforms.
 Don't do doxygen.
+Remove bogus diff check.
 
 --- configure.orig	2018-01-24 22:25:44.000000000 +0000
 +++ configure
@@ -20,7 +21,17 @@ Don't do doxygen.
  all_platforms="${all_platforms} mips64-linux-gcc"
  all_platforms="${all_platforms} ppc64-linux-gcc"
  all_platforms="${all_platforms} ppc64le-linux-gcc"
-@@ -185,19 +187,6 @@ if [ "`cd \"${source_path}\" && pwd`" !=
+@@ -170,9 +172,6 @@ for t in ${all_targets}; do
+     [ -f "${source_path}/${t}.mk" ] && enable_feature ${t}
+ done
+ 
+-if ! diff --version >/dev/null; then
+-  die "diff missing: Try installing diffutils via your package manager."
+-fi
+ 
+ if ! perl --version >/dev/null; then
+     die "Perl is required to build"
+@@ -185,19 +184,6 @@ if [ "`cd \"${source_path}\" && pwd`" !=
    fi
  fi
  
