@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.444 2018/01/30 10:29:28 adam Exp $
+$NetBSD: CHANGES-2018,v 1.445 2018/01/30 10:43:29 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -693,3 +693,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/lynis to 2.6.1 [sborrill 2018-01-30]
 	Updated devel/py-typing to 3.6.4 [adam 2018-01-30]
 	Updated graphics/py-matplotlib to 2.1.2 [adam 2018-01-30]
+	Updated devel/pkgconf to 1.4.1nb1 [jperkin 2018-01-30]
