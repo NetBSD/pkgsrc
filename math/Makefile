@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.357 2018/01/24 23:48:50 minskim Exp $
+# $NetBSD: Makefile,v 1.358 2018/01/30 02:14:09 minskim Exp $
 
 COMMENT=	Mathematics
 
@@ -61,6 +61,7 @@ SUBDIR+=	R-shapefiles
 SUBDIR+=	R-sp
 SUBDIR+=	R-spacetime
 SUBDIR+=	R-splancs
+SUBDIR+=	R-stabledist
 SUBDIR+=	R-statmod
 SUBDIR+=	R-wle
 SUBDIR+=	R-xts
