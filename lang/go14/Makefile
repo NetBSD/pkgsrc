@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/01/20 16:55:25 christos Exp $
+# $NetBSD: Makefile,v 1.16 2018/01/30 17:05:22 jperkin Exp $
 
 .include "../../lang/go/version.mk"
 
@@ -70,8 +70,6 @@ REPLACE_PERL+=	test/errchk
 # uses its own linker which does not support relro in 1.4.x
 CHECK_RELRO_SKIP=	go14/bin/go
 CHECK_RELRO_SKIP+=	go14/bin/gofmt
-# also does not support SSP at this time
-CHECK_SSP_SKIP=		${CHECK_RELRO_SKIP}
 
 # uses /bin/rc (for Plan 9)
 CHECK_INTERPRETER_SKIP+=	go14/include/plan9/mklibc.rc
