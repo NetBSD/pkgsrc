@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2017/07/23 19:04:10 adam Exp $
+# $NetBSD: Makefile,v 1.21 2018/01/30 14:10:11 adam Exp $
 
-DISTNAME=	beets-1.4.5
-CATEGORIES=	audio
+DISTNAME=	beets-1.4.6
+CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beets/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} < 34
+.if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 .endif
 
