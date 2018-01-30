@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.445 2018/01/30 10:43:29 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.446 2018/01/30 12:07:45 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -694,3 +694,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-typing to 3.6.4 [adam 2018-01-30]
 	Updated graphics/py-matplotlib to 2.1.2 [adam 2018-01-30]
 	Updated devel/pkgconf to 1.4.1nb1 [jperkin 2018-01-30]
+	Added www/ap2-passenger version 5.2.0 [fhajny 2018-01-30]
+	Added www/passenger version 5.2.0 [fhajny 2018-01-30]
