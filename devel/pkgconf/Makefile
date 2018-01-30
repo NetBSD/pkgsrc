@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2018/01/24 17:00:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2018/01/30 10:43:20 jperkin Exp $
 
 DISTNAME=	pkgconf-1.4.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://distfiles.dereferenced.org/pkgconf/
 
@@ -28,6 +29,9 @@ PKGCONFIG_PATHS+=	${X11BASE}/lib/pkgconfig
 .endif
 
 CONFIGURE_ARGS+=	--with-pkg-config-dir='${PKGCONFIG_PATHS:ts::Q}'
+
+# configure script incorrectly sets only _FILE_OFFSET_BITS=64
+CPPFLAGS.SunOS+=	-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
 post-install:
 	${LN} -s ${DESTDIR}${PREFIX}/bin/pkgconf ${DESTDIR}${PREFIX}/bin/pkg-config
