@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.17 2017/02/07 01:19:15 joerg Exp $
+$NetBSD: distinfo,v 1.18 2018/01/30 13:25:19 mef Exp $
 
-SHA1 (xmlsec1-1.2.19.tar.gz) = 9f24f84bf6f4a61fc55637f016b56c0f44c048ba
-RMD160 (xmlsec1-1.2.19.tar.gz) = 55a16d4ffec20d375cc72ed13c228fcecedd5c29
-SHA512 (xmlsec1-1.2.19.tar.gz) = 9d391658902e163261a61474fc0415ee0f25732dc4a98d2012459294674f7984212607febc10cdf5f5b6255932c4ad51a23d0a7b868990439812f5e276fd1a89
-Size (xmlsec1-1.2.19.tar.gz) = 1766298 bytes
-SHA1 (patch-ab) = 4c2673375fc5e97c5da47b498507f7e939532a83
+SHA1 (xmlsec1-1.2.25.tar.gz) = 0ef1117b8d11da475fd8d842a1341c675e627ab9
+RMD160 (xmlsec1-1.2.25.tar.gz) = f81aed97a5cc7de1a71ea32de02b73c32f7bdbf5
+SHA512 (xmlsec1-1.2.25.tar.gz) = ac61547a1cbf9016d7f75be3dc5249d6bc8a526bc51715e53ede13f056c1c72c57433a6be200c886000a25826c3e473954ded3ae988f25d37ac4ef4d777c66a6
+Size (xmlsec1-1.2.25.tar.gz) = 1839160 bytes
+SHA1 (patch-ab) = 917f2ffa1968994e6cc23e797c2d03e3ccbe3a81
 SHA1 (patch-ac) = eac6b9be709e316ea635109a0c366546a83cb1f6
