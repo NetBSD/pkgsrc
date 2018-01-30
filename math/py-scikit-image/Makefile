@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/11/22 11:14:52 markd Exp $
+# $NetBSD: Makefile,v 1.2 2018/01/30 10:20:11 adam Exp $
 
 DISTNAME=	scikit-image-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,16 +11,16 @@ COMMENT=	Image processing routines for SciPy
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=2.9.0:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-PyWavelets>=0.5.2:../../math/py-pywavelets
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.9:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-PyWavelets>=0.5.2:../../math/py-pywavelets
+DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} skivi skivi${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../devel/py-cython/buildlink3.mk"
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
