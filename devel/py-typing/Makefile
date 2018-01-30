@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2017/11/15 23:07:47 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2018/01/30 08:44:31 adam Exp $
 
-DISTNAME=	typing-3.6.2
+DISTNAME=	typing-3.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typing/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
