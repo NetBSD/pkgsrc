@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.438 2018/01/29 22:37:47 alnsn Exp $
+$NetBSD: CHANGES-2018,v 1.439 2018/01/30 01:22:27 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -685,3 +685,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-lupa to 1.6 [alnsn 2018-01-29]
 	Updated multimedia/mpv to 0.27.0nb2 [leot 2018-01-29]
 	Updated devel/valgrind to 3.13.0 [alnsn 2018-01-29]
+	Updated editors/nano to 2.9.3 [wiedi 2018-01-30]
