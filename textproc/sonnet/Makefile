@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/01/28 20:11:05 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2018/01/30 08:04:59 markd Exp $
 
 DISTNAME=	sonnet-${KF5VER}
 PKGREVISION=	3
@@ -9,6 +9,12 @@ COMMENT=	Spelling framework for Qt5
 LICENSE=	gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kf5/Makefile.common"
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	post-patch
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_DATAROOTDIR}/examples/kde-xdg:'
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/sonnet.categories \
