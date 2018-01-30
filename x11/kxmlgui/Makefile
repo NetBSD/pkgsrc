@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/01/24 19:06:12 markd Exp $
+# $NetBSD: Makefile,v 1.10 2018/01/30 08:17:10 markd Exp $
 
 DISTNAME=	kxmlgui-${KF5VER}
 PKGREVISION=	1
@@ -11,6 +11,12 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 .include "../../meta-pkgs/kf5/Makefile.common"
 
 USE_TOOLS+=	msgmerge
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	post-patch
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	src/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}/ui:{KDE_INSTALL_DATAROOTDIR}/examples/kxmlgui:'
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/ui
 CONF_FILES+=	${PREFIX}/share/examples/kxmlgui/ui_standards.rc \
