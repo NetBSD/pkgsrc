@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/01/05 16:13:51 adam Exp $
+# $NetBSD: Makefile,v 1.21 2018/01/30 09:21:44 adam Exp $
 
 DISTNAME=	pandas-0.22.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-bottleneck-[0-9]*:../../math/py-bottleneck
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-numexpr-[0-9]*:../../math/py-numexpr
 DEPENDS+=	${PYPKGPREFIX}-pytables>=2.2:../../math/py-pytables
 DEPENDS+=	${PYPKGPREFIX}-pytz>=1.5:../../time/py-pytz
@@ -26,7 +27,6 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 USE_LANGUAGES=	c c++
 
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 BUILDLINK_API_DEPENDS.pynumpy+= ${PYPKGPREFIX}-numpy>=1.7.0
 .include "../../math/py-numpy/buildlink3.mk"
