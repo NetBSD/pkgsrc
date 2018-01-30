@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2017/01/16 13:13:13 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.15 2018/01/30 23:14:45 jperkin Exp $
 # used by databases/p5-sqlrelay/Makefile
 # used by databases/php-sqlrelay/Makefile
 # used by databases/py-sqlrelay/Makefile
@@ -22,7 +22,7 @@ LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 BUILD_DEFS+=		VARBASE
