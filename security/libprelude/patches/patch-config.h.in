@@ -1,0 +1,16 @@
+$NetBSD: patch-config.h.in,v 1.1 2018/01/31 12:55:29 jperkin Exp $
+
+Don't break std::mktime.
+
+--- config.h.in.orig	2009-08-11 15:05:50.000000000 +0000
++++ config.h.in
+@@ -957,7 +957,9 @@
+ #undef mbstate_t
+ 
+ /* Define to rpl_mktime if the replacement function should be used. */
++#if !defined(__cplusplus)
+ #undef mktime
++#endif
+ 
+ /* Define to the type of st_nlink in struct stat, or a supertype. */
+ #undef nlink_t
