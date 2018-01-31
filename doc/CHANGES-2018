@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.458 2018/01/31 11:38:52 markd Exp $
+$NetBSD: CHANGES-2018,v 1.459 2018/01/31 11:44:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -715,3 +715,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added textproc/py-html5-parser version 0.4.4 [wiz 2018-01-31]
 	Updated devel/chmlib to 0.40nb1 [wiz 2018-01-31]
 	Added security/qgpgme version 1.10.0 [markd 2018-01-31]
+	Updated net/py-zeep to 2.5.0 [adam 2018-01-31]
+	Updated www/py-asgiref to 2.1.0 [adam 2018-01-31]
