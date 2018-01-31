@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/05/20 23:45:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/31 23:10:39 zafer Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -191,6 +191,7 @@ share/tomcat/webapps/docs/logging.html
 share/tomcat/webapps/docs/manager-howto.html
 share/tomcat/webapps/docs/maven-jars.html
 share/tomcat/webapps/docs/mbeans-descriptors-howto.html
+share/tomcat/webapps/docs/mbeans-descriptors.dtd
 share/tomcat/webapps/docs/monitoring.html
 share/tomcat/webapps/docs/proxy-howto.html
 share/tomcat/webapps/docs/realm-howto.html
@@ -244,6 +245,8 @@ share/tomcat/webapps/examples/WEB-INF/classes/async/Async2.class
 share/tomcat/webapps/examples/WEB-INF/classes/async/Async2.java
 share/tomcat/webapps/examples/WEB-INF/classes/async/Async3.class
 share/tomcat/webapps/examples/WEB-INF/classes/async/Async3.java
+share/tomcat/webapps/examples/WEB-INF/classes/async/AsyncStockContextListener.class
+share/tomcat/webapps/examples/WEB-INF/classes/async/AsyncStockContextListener.java
 share/tomcat/webapps/examples/WEB-INF/classes/async/AsyncStockServlet.class
 share/tomcat/webapps/examples/WEB-INF/classes/async/AsyncStockServlet.java
 share/tomcat/webapps/examples/WEB-INF/classes/async/Stockticker$Stock.class
@@ -288,8 +291,6 @@ share/tomcat/webapps/examples/WEB-INF/classes/examples/ValuesTag.class
 share/tomcat/webapps/examples/WEB-INF/classes/examples/ValuesTag.java
 share/tomcat/webapps/examples/WEB-INF/classes/filters/ExampleFilter.class
 share/tomcat/webapps/examples/WEB-INF/classes/filters/ExampleFilter.java
-share/tomcat/webapps/examples/WEB-INF/classes/http2/SimpleImagePush.class
-share/tomcat/webapps/examples/WEB-INF/classes/http2/SimpleImagePush.java
 share/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/BookBean.class
 share/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/BookBean.java
 share/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/FooBean.class
@@ -610,7 +611,9 @@ share/tomcat/webapps/manager/META-INF/context.xml
 share/tomcat/webapps/manager/WEB-INF/jsp/401.jsp
 share/tomcat/webapps/manager/WEB-INF/jsp/403.jsp
 share/tomcat/webapps/manager/WEB-INF/jsp/404.jsp
+share/tomcat/webapps/manager/WEB-INF/jsp/connectorCerts.jsp
 share/tomcat/webapps/manager/WEB-INF/jsp/connectorCiphers.jsp
+share/tomcat/webapps/manager/WEB-INF/jsp/connectorTrustedCerts.jsp
 share/tomcat/webapps/manager/WEB-INF/jsp/sessionDetail.jsp
 share/tomcat/webapps/manager/WEB-INF/jsp/sessionsList.jsp
 share/tomcat/webapps/manager/WEB-INF/web.xml
