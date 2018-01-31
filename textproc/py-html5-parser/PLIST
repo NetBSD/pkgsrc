@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2018/01/31 09:23:30 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/html5_parser/__init__.py
+${PYSITELIB}/html5_parser/__init__.pyc
+${PYSITELIB}/html5_parser/__init__.pyo
+${PYSITELIB}/html5_parser/dom.py
+${PYSITELIB}/html5_parser/dom.pyc
+${PYSITELIB}/html5_parser/dom.pyo
+${PYSITELIB}/html5_parser/encoding_names.py
+${PYSITELIB}/html5_parser/encoding_names.pyc
+${PYSITELIB}/html5_parser/encoding_names.pyo
+${PYSITELIB}/html5_parser/encoding_parser.py
+${PYSITELIB}/html5_parser/encoding_parser.pyc
+${PYSITELIB}/html5_parser/encoding_parser.pyo
+${PYSITELIB}/html5_parser/html_parser.so
+${PYSITELIB}/html5_parser/soup.py
+${PYSITELIB}/html5_parser/soup.pyc
+${PYSITELIB}/html5_parser/soup.pyo
+${PYSITELIB}/html5_parser/stdlib_etree.py
+${PYSITELIB}/html5_parser/stdlib_etree.pyc
+${PYSITELIB}/html5_parser/stdlib_etree.pyo
