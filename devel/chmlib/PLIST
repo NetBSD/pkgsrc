@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2006/06/23 12:56:26 salo Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/31 10:31:34 wiz Exp $
+bin/chm_http
+bin/enum_chmLib
+bin/enumdir_chmLib
+bin/extract_chmLib
+bin/test_chmLib
 include/chm_lib.h
 include/lzx.h
 lib/libchm.la
