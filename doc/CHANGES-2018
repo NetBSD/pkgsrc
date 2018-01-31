@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.468 2018/01/31 21:14:46 jdolecek Exp $
+$NetBSD: CHANGES-2018,v 1.469 2018/01/31 22:31:53 zafer Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -728,3 +728,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/bitstream to 1.3 [adam 2018-01-31]
 	Updated devel/gdb to 8.1 [maya 2018-01-31]
 	Updated devel/php-xdebug-devel to 2.6.0 [jdolecek 2018-01-31]
+	Updated www/apache-tomcat8 to 8.0.49 [zafer 2018-01-31]
