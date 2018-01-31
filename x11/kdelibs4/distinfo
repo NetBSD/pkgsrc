@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.51 2018/01/17 18:53:25 markd Exp $
+$NetBSD: distinfo,v 1.52 2018/01/31 11:33:22 jperkin Exp $
 
 SHA1 (kdelibs-4.14.38.tar.xz) = 2271f8b38cd5b6b55fa31c567271e3ca37ef641a
 RMD160 (kdelibs-4.14.38.tar.xz) = edf16e14842237950655bf44c073070c5bb7d74b
@@ -31,6 +31,7 @@ SHA1 (patch-kio_kssl_ksslcertchain.cpp) = f26c2d4ac8a3a107ad5a06b71df4fd9a244fdf
 SHA1 (patch-kio_kssl_ksslcertificate.cpp) = 177546af1bf2a770d7bb6650f7a4a1dca6f8f716
 SHA1 (patch-kio_kssl_ksslutils.cpp) = 359075855a8582693e5e4fab9aa5ad5afbe7b4a1
 SHA1 (patch-kjs_JSImmediate.h) = ecc761c7c82f711f41cf47d706c1c22d22c2980a
+SHA1 (patch-kjs_date__object.h) = adc33e9cb8317cb07929bec4d153fc58efa550ea
 SHA1 (patch-kjs_interpreter.cpp) = 9d400daf7d96674b8d66e1cde46dcb3615635241
 SHA1 (patch-kjs_wtf_DisallowCType.h) = 6305dd274f1478ba0fe0a6f1717451ab8e3e50d2
 SHA1 (patch-kpty_kpty.cpp) = e8fd2e7c88b8926cf5bf12deea9e6af08e0739d8
