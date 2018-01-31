@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2017/11/20 03:14:42 msaitoh Exp $
+$NetBSD: distinfo,v 1.28 2018/01/31 13:21:55 jperkin Exp $
 
 SHA1 (pciutils-3.5.6.tar.gz) = 9f22fe9fccf1c5089167dc534409df8bd724f43d
 RMD160 (pciutils-3.5.6.tar.gz) = d4c89bdcff620646de5cc847f93d598822799168
@@ -7,3 +7,4 @@ Size (pciutils-3.5.6.tar.gz) = 436463 bytes
 SHA1 (patch-aa) = d8caa8b69987d14397fd863d776a533e4c19b26e
 SHA1 (patch-ab) = 881db39792c9d72f527438e2b475ac2ea842b536
 SHA1 (patch-ac) = 4b90e99c051391b9cd3a6c1f5781f41b4a855c29
+SHA1 (patch-lib_i386-io-sunos.h) = afb666796a6b220d868a41e4fb9fd9e42152faed
