@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.36 2018/01/31 12:36:57 jperkin Exp $
+$NetBSD: distinfo,v 1.37 2018/01/31 14:08:25 adam Exp $
 
 SHA1 (qtbase-everywhere-src-5.10.0.tar.xz) = 34fa3d4e7bb2b1545247a616190efaf74804db49
 RMD160 (qtbase-everywhere-src-5.10.0.tar.xz) = d6f9ab8526ebe50791b9b948930806dc8b3be73b
@@ -20,6 +20,7 @@ SHA1 (patch-src_corelib_thread_qwaitcondition__unix.cpp) = 37f61c305335ca6a690b0
 SHA1 (patch-src_network_kernel_qhostinfo__unix.cpp) = 3131d74a547abdcca7594b49b739cc1c0eed68f5
 SHA1 (patch-src_network_kernel_qnetworkinterface__unix.cpp) = 2c5569eb2ba19999eb62e4fdb54f347c88f6e6a5
 SHA1 (patch-src_openglextensions_openglextensions.pro) = 575d31c3a48f36d82dc1f342078e636f4c25e33f
+SHA1 (patch-src_platformsupport_fontdatabases_mac_qfontengine_coretext.mm) = 062b9e38ee6223281a6ae851aa5cb8ecae4c7874
 SHA1 (patch-src_plugins_platforminputcontexts_compose_compose.pro) = 1655b2320b250defcfa406c95e58a1b728c0f2d9
 SHA1 (patch-src_plugins_platforminputcontexts_compose_generator_qtablegenerator.cpp) = 655ca6601ddd1768b92758cfdfd8d1c3514fba94
 SHA1 (patch-src_tools_moc_main.cpp) = ebdddd657ba1c24657a9ca5624907e31a5d0c8bb
