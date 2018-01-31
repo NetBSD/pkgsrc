@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2018/01/31 11:36:14 markd Exp $
+
+SHA1 (gpgme-1.10.0.tar.bz2) = 77d3390887da25ed70b7ac04392360efbdca501f
+RMD160 (gpgme-1.10.0.tar.bz2) = 9e6d0cef086b47f697a17384082f0c9f2f95c412
+SHA512 (gpgme-1.10.0.tar.bz2) = 8ffa348ef4775ed3209486444d54411e28c9a0ff1d7a4315feb0b2856ccd5d110b219100ea41262ca0016af69a1936d79fee0eadf2599c7c5bbeed05d11f7ab5
+Size (gpgme-1.10.0.tar.bz2) = 1370162 bytes
+SHA1 (patch-lang_qt_src_Makefile.in) = 1487a7d404241f9cbf8771716da934f783847e5c
