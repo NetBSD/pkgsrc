@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2018/01/28 20:11:10 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2018/01/31 12:36:57 jperkin Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -64,7 +64,7 @@ PLIST_VARS+=		egl
 .include "../../mk/compiler.mk"
 
 .if ${OPSYS} == "SunOS"
-.  if !empty(CC_VERSION:Mgcc*)
+.  if !empty(PKGSRC_COMPILER:Mgcc) || !empty(PKGSRC_COMPILER:Mclang)
 .    if ${ABI:U} == "64"
 CONFIGURE_ARGS+=	-platform solaris-g++-64
 .    else
@@ -77,7 +77,7 @@ CONFIGURE_ARGS+=	-platform solaris-cc-64
 CONFIGURE_ARGS+=	-platform solaris-cc
 .    endif
 .  endif
-SYS_LIBS=		-lresolv -lsocket -lnsl -lrt
+NETWORK_LIBS=		-lsocket -lnsl
 .elif ${OPSYS} == "Interix"
 CONFIGURE_ARGS+=	-platform interix-g++
 CFLAGS+=		-I/usr/local/include/bind
@@ -104,7 +104,7 @@ LDFLAGS.FreeBSD+=	-lutil
 
 REPLACE_PERL+=		bin/fixqt4headers.pl
 REPLACE_PERL+=		bin/syncqt.pl
-REPLACE_PERL+=		mkspecs/features/uikit/devices.pl
+REPLACE_PERL+=		mkspecs/features/data/unix/findclasslist.pl
 
 PTHREAD_OPTS+=		require
 UNLIMIT_RESOURCES=	datasize
@@ -133,6 +133,11 @@ SUBST_FILES.opt=	mkspecs/common/gcc-base.conf
 SUBST_SED.opt=		-e 's,-O[s23],,'
 SUBST_SED.opt+=		-e 's,-fvisibility=hidden,,'
 
+SUBST_CLASSES.SunOS+=	vscript
+SUBST_STAGE.vscript=	pre-configure
+SUBST_FILES.vscript=	mkspecs/common/gcc-base-unix.conf
+SUBST_SED.vscript=	-e '/QMAKE_LFLAGS_VERSION_SCRIPT/d'
+
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Add to default XDG path.
@@ -156,6 +161,7 @@ pre-configure:
 		-e 's:@LDFLAGS@:${LDFLAGS:Q}:g' \
 		-e 's:@CFLAGS@:${CFLAGS:Q}:g' \
 		-e 's:@CXXFLAGS@:${CXXFLAGS:Q}:g' \
+		-e 's:@NETWORK_LIBS@:${NETWORK_LIBS:Q}:g' \
 		-e 's:@SYS_LIBS@:${SYS_LIBS:Q}:g' \
 		-e 's:@LEX@:${LEX}:g' \
 		-e 's:@YACC@:${TOOLS_CMDLINE_YACC:Q}:g' \
