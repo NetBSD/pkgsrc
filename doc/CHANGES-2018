@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.465 2018/01/31 19:33:05 markd Exp $
+$NetBSD: CHANGES-2018,v 1.466 2018/01/31 20:18:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -725,3 +725,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/firefox-l10n to 58.0.1 [ryoon 2018-01-31]
 	Added finance/py-alpha_vantage version 1.8.0 [minskim 2018-01-31]
 	Added x11/qqc2-desktop-style version 5.41.0 [markd 2018-01-31]
+	Updated multimedia/bitstream to 1.3 [adam 2018-01-31]
