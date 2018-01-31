@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2017/09/30 15:34:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/01/31 11:37:29 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/zeep/__init__.py
@@ -16,11 +15,11 @@ ${PYSITELIB}/zeep/asyncio/__init__.py
 ${PYSITELIB}/zeep/asyncio/__init__.pyc
 ${PYSITELIB}/zeep/asyncio/__init__.pyo
 ${PYSITELIB}/zeep/asyncio/bindings.py
-${PYSITELIB}/zeep/asyncio/bindings.pyc
-${PYSITELIB}/zeep/asyncio/bindings.pyo
+${PLIST.aio}${PYSITELIB}/zeep/asyncio/bindings.pyc
+${PLIST.aio}${PYSITELIB}/zeep/asyncio/bindings.pyo
 ${PYSITELIB}/zeep/asyncio/transport.py
-${PYSITELIB}/zeep/asyncio/transport.pyc
-${PYSITELIB}/zeep/asyncio/transport.pyo
+${PLIST.aio}${PYSITELIB}/zeep/asyncio/transport.pyc
+${PLIST.aio}${PYSITELIB}/zeep/asyncio/transport.pyo
 ${PYSITELIB}/zeep/cache.py
 ${PYSITELIB}/zeep/cache.pyc
 ${PYSITELIB}/zeep/cache.pyo
