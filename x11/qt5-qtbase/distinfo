@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2018/01/31 14:08:25 adam Exp $
+$NetBSD: distinfo,v 1.38 2018/01/31 19:35:23 adam Exp $
 
 SHA1 (qtbase-everywhere-src-5.10.0.tar.xz) = 34fa3d4e7bb2b1545247a616190efaf74804db49
 RMD160 (qtbase-everywhere-src-5.10.0.tar.xz) = d6f9ab8526ebe50791b9b948930806dc8b3be73b
@@ -6,7 +6,7 @@ SHA512 (qtbase-everywhere-src-5.10.0.tar.xz) = 8f832fb7bc5087df4b897cd23145e5350
 Size (qtbase-everywhere-src-5.10.0.tar.xz) = 45851596 bytes
 SHA1 (patch-config.tests_unix_iconv_iconv.cpp) = ffd0107d57e308aa83a780818756c9a538efc591
 SHA1 (patch-configure) = f5019131cc4e6cd4e35242cc7b598fbf8f5f766b
-SHA1 (patch-mkspecs_features_create__cmake.prf) = 3f6b3a592e29f5529e5c87dbac036c165470eac4
+SHA1 (patch-mkspecs_features_create__cmake.prf) = a28f711c27c412092a5414dfff3e941a0bbb1a25
 SHA1 (patch-mkspecs_features_qt__module.prf) = a04c4b1fe80250b6b3591f5486ac0fd3b5056c26
 SHA1 (patch-qmake_Makefile.unix) = ec1af3d76dc5bd0b7b1d375ceeebbd016b6f555f
 SHA1 (patch-qmake_generators_makefile.cpp) = 26366f21108534a321d9d7c7f87066e9acf7d981
