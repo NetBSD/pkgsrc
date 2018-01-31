@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.1 2017/11/15 08:56:12 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.2 2018/01/31 21:10:18 jdolecek Exp $
 # used by lang/php72/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -45,7 +45,7 @@ CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 .include "../../textproc/libxml2/buildlink3.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PHP_PKG_PREFIX}
-PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline
+PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline argon2
 PKG_SUGGESTED_OPTIONS+=	inet6 ssl readline
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD"
@@ -90,6 +90,11 @@ CONFIGURE_ARGS+=	--enable-dtrace
 
 # See https://bugs.php.net/bug.php?id=61268
 INSTALL_MAKE_FLAGS+=	-r
+.endif
+
+.if !empty(PKG_OPTIONS:Margon2)
+CONFIGURE_ARGS+=	--with-password-argon2=${BUILDLINK_PREFIX.argon2}
+.include "../../security/argon2/buildlink3.mk"
 .endif
 
 DL_AUTO_VARS=		yes
