@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2018/01/31 19:13:17 minskim Exp $
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/alpha_vantage/__init__.py
+${PYSITELIB}/alpha_vantage/__init__.pyc
+${PYSITELIB}/alpha_vantage/__init__.pyo
+${PYSITELIB}/alpha_vantage/alphavantage.py
+${PYSITELIB}/alpha_vantage/alphavantage.pyc
+${PYSITELIB}/alpha_vantage/alphavantage.pyo
+${PYSITELIB}/alpha_vantage/cryptocurrencies.py
+${PYSITELIB}/alpha_vantage/cryptocurrencies.pyc
+${PYSITELIB}/alpha_vantage/cryptocurrencies.pyo
+${PYSITELIB}/alpha_vantage/foreignexchange.py
+${PYSITELIB}/alpha_vantage/foreignexchange.pyc
+${PYSITELIB}/alpha_vantage/foreignexchange.pyo
+${PYSITELIB}/alpha_vantage/sectorperformance.py
+${PYSITELIB}/alpha_vantage/sectorperformance.pyc
+${PYSITELIB}/alpha_vantage/sectorperformance.pyo
+${PYSITELIB}/alpha_vantage/techindicators.py
+${PYSITELIB}/alpha_vantage/techindicators.pyc
+${PYSITELIB}/alpha_vantage/techindicators.pyo
+${PYSITELIB}/alpha_vantage/timeseries.py
+${PYSITELIB}/alpha_vantage/timeseries.pyc
+${PYSITELIB}/alpha_vantage/timeseries.pyo
