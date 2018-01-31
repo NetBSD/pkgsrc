@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.459 2018/01/31 11:44:41 adam Exp $
+$NetBSD: CHANGES-2018,v 1.460 2018/01/31 12:04:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -717,3 +717,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Added security/qgpgme version 1.10.0 [markd 2018-01-31]
 	Updated net/py-zeep to 2.5.0 [adam 2018-01-31]
 	Updated www/py-asgiref to 2.1.0 [adam 2018-01-31]
+	Updated devel/py-astroid to 1.6.1 [adam 2018-01-31]
+	Updated www/py-cfscrape to 1.9.2 [adam 2018-01-31]
+	Updated www/py-pylint-django to 0.9.0 [adam 2018-01-31]
