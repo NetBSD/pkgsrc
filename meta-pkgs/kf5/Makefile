@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2018/01/22 01:08:15 markd Exp $
+# $NetBSD: Makefile,v 1.5 2018/01/31 19:37:49 markd Exp $
 
 DISTNAME=	kf5-${KF5VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -66,6 +66,7 @@ DEPENDS+=	ktexteditor-${KF5VER}{,nb[0-9]*}:../../devel/ktexteditor
 DEPENDS+=	ktextwidgets-${KF5VER}{,nb[0-9]*}:../../x11/ktextwidgets
 DEPENDS+=	kunitconversion-${KF5VER}{,nb[0-9]*}:../../misc/kunitconversion
 DEPENDS+=	kwallet-${KF5VER}{,nb[0-9]*}:../../security/kwallet
+# kwayland
 DEPENDS+=	kwidgetsaddons-${KF5VER}{,nb[0-9]*}:../../x11/kwidgetsaddons
 DEPENDS+=	kwindowsystem-${KF5VER}{,nb[0-9]*}:../../x11/kwindowsystem
 DEPENDS+=	kxmlgui-${KF5VER}{,nb[0-9]*}:../../x11/kxmlgui
@@ -74,6 +75,8 @@ DEPENDS+=	kxmlrpcclient-${KF5VER}{,nb[0-9]*}:../../net/kxmlrpcclient
 # networkmanager-qt
 DEPENDS+=	oxygen-icons-${KF5VER}{,nb[0-9]*}:../../graphics/oxygen-icons
 DEPENDS+=	plasma-framework-${KF5VER}{,nb[0-9]*}:../../x11/plasma-framework
+# prison
+DEPENDS+=	qqc2-desktop-style-${KF5VER}{,nb[0-9]*}:../../x11/qqc2-desktop-style
 DEPENDS+=	solid-${KF5VER}{,nb[0-9]*}:../../sysutils/solid
 DEPENDS+=	sonnet-${KF5VER}{,nb[0-9]*}:../../textproc/sonnet
 DEPENDS+=	threadweaver-${KF5VER}{,nb[0-9]*}:../../devel/threadweaver
