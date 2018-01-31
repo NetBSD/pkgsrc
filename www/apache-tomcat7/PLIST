@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2017/04/10 10:32:47 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.18 2018/01/31 23:27:43 zafer Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -171,6 +171,7 @@ share/tomcat/webapps/docs/logging.html
 share/tomcat/webapps/docs/manager-howto.html
 share/tomcat/webapps/docs/maven-jars.html
 share/tomcat/webapps/docs/mbeans-descriptors-howto.html
+share/tomcat/webapps/docs/mbeans-descriptors.dtd
 share/tomcat/webapps/docs/monitoring.html
 share/tomcat/webapps/docs/proxy-howto.html
 share/tomcat/webapps/docs/realm-howto.html
@@ -223,6 +224,8 @@ share/tomcat/webapps/examples/WEB-INF/classes/async/Async2.class
 share/tomcat/webapps/examples/WEB-INF/classes/async/Async2.java
 share/tomcat/webapps/examples/WEB-INF/classes/async/Async3.class
 share/tomcat/webapps/examples/WEB-INF/classes/async/Async3.java
+share/tomcat/webapps/examples/WEB-INF/classes/async/AsyncStockContextListener.class
+share/tomcat/webapps/examples/WEB-INF/classes/async/AsyncStockContextListener.java
 share/tomcat/webapps/examples/WEB-INF/classes/async/AsyncStockServlet.class
 share/tomcat/webapps/examples/WEB-INF/classes/async/AsyncStockServlet.java
 share/tomcat/webapps/examples/WEB-INF/classes/async/Stockticker$Stock.class
