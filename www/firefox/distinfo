@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.306 2018/01/24 16:52:08 ryoon Exp $
+$NetBSD: distinfo,v 1.307 2018/01/31 14:02:17 ryoon Exp $
 
-SHA1 (firefox-58.0.source.tar.xz) = 253d1bcd2256fa013eadac40f04b5ddacc2b5e74
-RMD160 (firefox-58.0.source.tar.xz) = 0d8c5018f7d6ef90f480068555635547290c1430
-SHA512 (firefox-58.0.source.tar.xz) = 17a2c520973c68c5dd130bcb27407b1c20b03f74c97aeb486e86d422ab5c012e549787ae53275d6840b9d324f261ae282b98f61764ee5e0a6df1cc3e3c9e2632
-Size (firefox-58.0.source.tar.xz) = 247185892 bytes
+SHA1 (firefox-58.0.1.source.tar.xz) = 33dde117cef998eadb8fe53e2d045ae8dd27c8bf
+RMD160 (firefox-58.0.1.source.tar.xz) = d5ace7da909ae48110ea96781ab3a93da8994702
+SHA512 (firefox-58.0.1.source.tar.xz) = 65a6a68f95dac93fc68c4e240742b172a6417e7fafca2671ab13f398329ba0ef3195bbaaecea2d9f8b2992217cfaa7912af6c0351a1efe4cf2d2bba838ecd711
+Size (firefox-58.0.1.source.tar.xz) = 248933088 bytes
 SHA1 (patch-aa) = b4a6359c2c22617fed31636250b3ff12a03aafa8
 SHA1 (patch-build_gyp.mozbuild) = bb3a2f8c1cad0e9cfdaefa721c5992cba2e2bf50
 SHA1 (patch-build_moz.configure_init.configure) = 5ec8da6b5aad7682a88b010a99e19f5d4403e6db
@@ -83,6 +83,7 @@ SHA1 (patch-toolkit_mozapps_installer_packager.mk) = 6f557fb732f0b9dabf059ffac04
 SHA1 (patch-toolkit_xre_glxtest.cpp) = cf048491778610454b914400e53072afedd96e7b
 SHA1 (patch-toolkit_xre_nsEmbedFunctions.cpp) = 4a6ae13adfdfc63d50c1a53ee71aad1ee82e6131
 SHA1 (patch-xpcom_base_nscore.h) = d7c96eda884d7f370442749c43caba50da61bbe4
+SHA1 (patch-xpcom_build_BinaryPath.h) = 02989461bb7d2a17cf9f1c2b21652f3cf64fb386
 SHA1 (patch-xpcom_build_XPCOMInit.cpp) = 1e7cc3a7fd9515b10307fafa2b01ed689320bd54
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_moz.build) = 528f7254966d883c18e33744e28780a93055d560
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__sparc64__netbsd.cpp) = 0792c2c626d906e71c5183994cb32bf8cdb3e239
