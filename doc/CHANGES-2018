@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.463 2018/01/31 14:03:52 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.464 2018/01/31 19:14:16 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -723,3 +723,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-line_profiler to 2.1.2 [adam 2018-01-31]
 	Updated www/firefox to 58.0.1 [ryoon 2018-01-31]
 	Updated www/firefox-l10n to 58.0.1 [ryoon 2018-01-31]
+	Added finance/py-alpha_vantage version 1.8.0 [minskim 2018-01-31]
