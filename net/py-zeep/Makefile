@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/09/30 15:34:03 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/01/31 11:37:29 adam Exp $
 
-DISTNAME=	zeep-2.4.0
+DISTNAME=	zeep-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zeep/}
@@ -19,6 +19,14 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=2.7.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.7.1:../../devel/py-requests-toolbelt
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+
+.include "../../lang/python/pyversion.mk"
+
+PLIST_VARS+=	aio
+.if "${PYPKGPREFIX}" != "py27" && "${PYPKGPREFIX}" != "py34"
+DEPENDS+=	${PYPKGPREFIX}-aiohttp>=1.0:../../www/py-aiohttp
+PLIST.aio=	yes
+.endif
 
 USE_LANGUAGES=	# none
 
