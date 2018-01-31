@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.460 2018/01/31 12:04:38 adam Exp $
+$NetBSD: CHANGES-2018,v 1.461 2018/01/31 13:43:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -720,3 +720,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-astroid to 1.6.1 [adam 2018-01-31]
 	Updated www/py-cfscrape to 1.9.2 [adam 2018-01-31]
 	Updated www/py-pylint-django to 0.9.0 [adam 2018-01-31]
+	Updated devel/py-line_profiler to 2.1.2 [adam 2018-01-31]
