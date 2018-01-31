@@ -1,31 +1,21 @@
-# $NetBSD: Makefile,v 1.38 2016/03/05 11:27:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.39 2018/01/31 09:14:55 markd Exp $
 
-DISTNAME=	qca-2.0.3
 PKGNAME=	qca2-${DISTNAME:C/.*-//}
-PKGREVISION=	20
-CATEGORIES=	security
-MASTER_SITES=	http://delta.affinix.com/download/qca/2.0/
-EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://delta.affinix.com/qca/
 COMMENT=	Cross-platform crypto API for QT
-LICENSE=	gnu-lgpl-v2.1
 
-USE_TOOLS+=	gmake
-USE_LIBTOOL=	yes
-HAS_CONFIGURE=	yes
-USE_LANGUAGES=	c++
-INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR:Q}
+.include "Makefile.common"
 
-INSTALLATION_DIRS=	qt4/include qt4/lib qt4/plugins/crypto lib/pkgconfig
+DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
-# install under qt4 prefix to not clash with qca 1.x
-CONFIGURE_ARGS+=	--prefix=${QTDIR}
-CONFIGURE_ARGS+=	--qtdir=${QTDIR}
-CONFIGURE_ARGS+=	--disable-tests
-CONFIGURE_ARGS+=	--certstore-internal
-CONFIGURE_ARGS+=	--no-framework
+INSTALLATION_DIRS=	lib/pkgconfig
+
+CMAKE_ARGS+=	-DBUILD_PLUGINS=none
+CMAKE_ARGS+=	-DQT4_BUILD=ON
+CMAKE_ARGS+=	-DQCA_MAN_INSTALL_DIR=${PREFIX}/${PKGMANDIR} 
+
+PKGCONFIG_OVERRIDE=		lib/pkgconfig/qca2.pc 
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 post-install:
 	${INSTALL_DATA} ${DESTDIR}${QTDIR}/lib/pkgconfig/qca2.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/qca2.pc
