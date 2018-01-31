@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.12 2017/06/05 11:38:51 maya Exp $
+@comment $NetBSD: PLIST.common,v 1.13 2018/01/31 20:33:11 maya Exp $
 bin/gdb
 include/gdb/jit-reader.h
 info/annotate.info
@@ -47,3 +47,4 @@ share/gdb/syscalls/sparc-linux.xml
 share/gdb/syscalls/sparc64-linux.xml
 share/gdb/system-gdbinit/elinos.py
 share/gdb/system-gdbinit/wrs-linux.py
+${PLIST.gcore}bin/gcore
