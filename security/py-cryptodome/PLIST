@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2017/03/07 16:28:17 maya Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/01/31 07:57:25 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/Crypto/Cipher/AES.py
 ${PYSITELIB}/Crypto/Cipher/AES.pyc
 ${PYSITELIB}/Crypto/Cipher/AES.pyo
@@ -181,6 +186,9 @@ ${PYSITELIB}/Crypto/Math/Numbers.pyo
 ${PYSITELIB}/Crypto/Math/Primality.py
 ${PYSITELIB}/Crypto/Math/Primality.pyc
 ${PYSITELIB}/Crypto/Math/Primality.pyo
+${PYSITELIB}/Crypto/Math/_Numbers_custom.py
+${PYSITELIB}/Crypto/Math/_Numbers_custom.pyc
+${PYSITELIB}/Crypto/Math/_Numbers_custom.pyo
 ${PYSITELIB}/Crypto/Math/_Numbers_gmp.py
 ${PYSITELIB}/Crypto/Math/_Numbers_gmp.pyc
 ${PYSITELIB}/Crypto/Math/_Numbers_gmp.pyo
@@ -190,6 +198,7 @@ ${PYSITELIB}/Crypto/Math/_Numbers_int.pyo
 ${PYSITELIB}/Crypto/Math/__init__.py
 ${PYSITELIB}/Crypto/Math/__init__.pyc
 ${PYSITELIB}/Crypto/Math/__init__.pyo
+${PYSITELIB}/Crypto/Math/_montgomery.so
 ${PYSITELIB}/Crypto/Protocol/KDF.py
 ${PYSITELIB}/Crypto/Protocol/KDF.pyc
 ${PYSITELIB}/Crypto/Protocol/KDF.pyo
@@ -497,6 +506,9 @@ ${PYSITELIB}/Crypto/SelfTest/Math/test_Numbers.pyo
 ${PYSITELIB}/Crypto/SelfTest/Math/test_Primality.py
 ${PYSITELIB}/Crypto/SelfTest/Math/test_Primality.pyc
 ${PYSITELIB}/Crypto/SelfTest/Math/test_Primality.pyo
+${PYSITELIB}/Crypto/SelfTest/Math/test_modexp.py
+${PYSITELIB}/Crypto/SelfTest/Math/test_modexp.pyc
+${PYSITELIB}/Crypto/SelfTest/Math/test_modexp.pyo
 ${PYSITELIB}/Crypto/SelfTest/Protocol/__init__.py
 ${PYSITELIB}/Crypto/SelfTest/Protocol/__init__.pyc
 ${PYSITELIB}/Crypto/SelfTest/Protocol/__init__.pyo
@@ -668,7 +680,3 @@ ${PYSITELIB}/Crypto/Util/strxor.pyo
 ${PYSITELIB}/Crypto/__init__.py
 ${PYSITELIB}/Crypto/__init__.pyc
 ${PYSITELIB}/Crypto/__init__.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
