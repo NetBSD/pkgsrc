@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2018/01/31 09:14:55 markd Exp $
+
+Add mozilla-rootcerts certstore to list
+
+--- CMakeLists.txt.orig	2018-01-31 20:15:27.000000000 +0000
++++ CMakeLists.txt
+@@ -304,6 +304,7 @@ else ( WIN32 )
+       "/etc/pki/tls/cert.pem"
+       "/etc/ssl/ca-bundle.pem"
+       "/usr/share/curl/curl-ca-bundle.crt"
++      "@PREFIX@/share/mozilla-rootcerts/cacert.pem"
+     )
+     foreach (_current_try ${toTry})
+       if(EXISTS ${_current_try})
