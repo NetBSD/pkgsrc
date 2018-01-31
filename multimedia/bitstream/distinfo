@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/02/11 14:24:37 adam Exp $
+$NetBSD: distinfo,v 1.4 2018/01/31 20:17:41 adam Exp $
 
-SHA1 (bitstream-1.2.tar.bz2) = 55fc02b14005102f89414b06c6e419c4ecbc6adf
-RMD160 (bitstream-1.2.tar.bz2) = 3b83c240563b12c4f2939a977983e7001906bbc6
-SHA512 (bitstream-1.2.tar.bz2) = a286a6d6f5b26bd7e037a2130a0b1105a79ceb180ea5db9a4ef8bc652cce686bf4cf38e3cd79336b34ef40fffc3bc79b132a2ee6c7508c5abe2e964c3e9a1c8c
-Size (bitstream-1.2.tar.bz2) = 115009 bytes
+SHA1 (bitstream-1.3.tar.bz2) = 7e612e28fb3bfd97415b801bfd811c1b7840a789
+RMD160 (bitstream-1.3.tar.bz2) = 42808ab03c52528d571c86074cb4a5cc4beb33b0
+SHA512 (bitstream-1.3.tar.bz2) = d0e0eda8a431e7607a40d6c0bc1ad45f8eb5c66e629459945396269433338fcac8dcbaca59ec9c06aa7d7249eff33476cb152f3a115fbf62c5af9b3170ea3f5c
+Size (bitstream-1.3.tar.bz2) = 118047 bytes
