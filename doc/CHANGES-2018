@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.455 2018/01/31 09:20:17 markd Exp $
+$NetBSD: CHANGES-2018,v 1.456 2018/01/31 09:24:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -712,3 +712,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added security/qca2-qt5 version 2.1.3 [markd 2018-01-31]
 	Added security/qca2-qt5-gnupg version 2.1.3 [markd 2018-01-31]
 	Added security/qca2-qt5-ossl version 2.1.3 [markd 2018-01-31]
+	Added textproc/py-html5-parser version 0.4.4 [wiz 2018-01-31]
