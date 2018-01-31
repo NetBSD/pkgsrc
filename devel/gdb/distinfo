@@ -1,13 +1,9 @@
-$NetBSD: distinfo,v 1.31 2017/09/07 17:11:47 kamil Exp $
+$NetBSD: distinfo,v 1.32 2018/01/31 20:33:11 maya Exp $
 
-SHA1 (gdb-8.0.1.tar.gz) = abb30c4fd7f66c830d879715cce5732bcf84f0f6
-RMD160 (gdb-8.0.1.tar.gz) = 5ad7e7417dea2f4c7cc4795b74a58b948d8d93b2
-SHA512 (gdb-8.0.1.tar.gz) = 58eb6150c908d67e6aed01d04bd321c7914e3e82fbb81a31e3050c4470e24e67cbe023b3f3edfb981225802441cf8b0d3d042195e96b6530058966cfdcd53c8d
-Size (gdb-8.0.1.tar.gz) = 36359351 bytes
+SHA1 (gdb-8.1.tar.gz) = b28d9349ccd45c0aa208cda3a1ecf7e17eca0552
+RMD160 (gdb-8.1.tar.gz) = 71bbfb22a924f5aa88af7ba8ed11f763a8666ad1
+SHA512 (gdb-8.1.tar.gz) = 4a51e491061f97708ec1cebf9973ea451f9b9499ee2b898fa1631dbe78ffecec9c09e8a95f04c888dee4664957583b1982efd468088878b203a125bbcf9ee516
+Size (gdb-8.1.tar.gz) = 37334207 bytes
 SHA1 (patch-Makefile.in) = 48f65798f96fdda2a35eb8b18a7cc2993023bcc7
-SHA1 (patch-ao) = fe55dc7245f438fccb7965ceb220be951f85a535
-SHA1 (patch-gdb_bsd-kvm.c) = 45d0436f7c451de326afaffd3ebc5a4c3689d6f8
-SHA1 (patch-gdb_config_i386_nbsd64.mh) = 5dd8cfc89d3de5d8df3f57d3c798a1fe292d4dfe
-SHA1 (patch-gdb_x86-bsd-nat.c) = 82bfdd27ab88bf21421ad9209bbe5821f36ac854
 SHA1 (patch-opcodes_i386-dis_c) = 57b2b2ce85567faf112ec9f435b9aed0ffc943fb
 SHA1 (patch-sim_ppc_emul_netbsd.c) = 34fcb884c3c82e8eae6cd6f8c87ce42e9354c347
