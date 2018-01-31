@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/02/11 14:24:37 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/01/31 20:17:41 adam Exp $
 
-DISTNAME=	bitstream-1.2
+DISTNAME=	bitstream-1.3
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.videolan.org/pub/videolan/bitstream/${PKGVERSION}/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,6 +11,7 @@ COMMENT=	C headers allowing a simpler access to binary structures
 LICENSE=	mit
 
 USE_TOOLS+=	gmake
+NO_BUILD=	yes
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 
 .include "../../mk/bsd.pkg.mk"
