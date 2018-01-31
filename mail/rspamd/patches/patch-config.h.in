@@ -1,0 +1,20 @@
+$NetBSD: patch-config.h.in,v 1.1 2018/01/31 20:09:20 fhajny Exp $
+
+Add endianness support for earlier SunOS platforms.
+
+--- config.h.in.orig	2017-06-14 14:45:41.000000000 +0000
++++ config.h.in
+@@ -151,6 +151,13 @@
+  #include <sys/endian.h>
+ #elif defined(HAVE_MACHINE_ENDIAN_H)
+  #include <machine/endian.h>
++#elif defined(__sun)
++ #include <sys/byteorder.h>
++ #ifdef _LITTLE_ENDIAN
++  #define BYTE_ORDER LITTLE_ENDIAN
++ #else
++  #define BYTE_ORDER BIG_ENDIAN
++ #endif
+ #endif
+ 
+ #ifndef BYTE_ORDER
