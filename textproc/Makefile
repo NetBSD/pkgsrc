@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.972 2018/01/17 20:12:30 markd Exp $
+# $NetBSD: Makefile,v 1.973 2018/01/31 09:24:06 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -748,6 +748,7 @@ SUBDIR+=	py-generateDS
 SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-guessit
 SUBDIR+=	py-html2text
+SUBDIR+=	py-html5-parser
 SUBDIR+=	py-html5lib
 SUBDIR+=	py-humanize
 SUBDIR+=	py-inflection
