@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.667 2018/01/30 19:07:48 bsiegert Exp $
+# $NetBSD: Makefile,v 1.668 2018/01/31 09:16:33 markd Exp $
 #
 
 COMMENT=	Security tools
@@ -453,6 +453,9 @@ SUBDIR+=	pyca
 SUBDIR+=	qca2
 SUBDIR+=	qca2-gnupg
 SUBDIR+=	qca2-ossl
+SUBDIR+=	qca2-qt5
+SUBDIR+=	qca2-qt5-gnupg
+SUBDIR+=	qca2-qt5-ossl
 SUBDIR+=	qident
 SUBDIR+=	qoauth
 SUBDIR+=	qore-asn1-module
