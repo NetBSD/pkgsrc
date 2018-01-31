@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2018/01/17 19:30:46 markd Exp $
+$NetBSD: distinfo,v 1.36 2018/01/31 12:36:57 jperkin Exp $
 
 SHA1 (qtbase-everywhere-src-5.10.0.tar.xz) = 34fa3d4e7bb2b1545247a616190efaf74804db49
 RMD160 (qtbase-everywhere-src-5.10.0.tar.xz) = d6f9ab8526ebe50791b9b948930806dc8b3be73b
@@ -12,11 +12,13 @@ SHA1 (patch-qmake_Makefile.unix) = ec1af3d76dc5bd0b7b1d375ceeebbd016b6f555f
 SHA1 (patch-qmake_generators_makefile.cpp) = 26366f21108534a321d9d7c7f87066e9acf7d981
 SHA1 (patch-qmake_generators_unix_unixmake2.cpp) = f0a4fdd304af2ee6c1b63022ccfcebd2640f0fcb
 SHA1 (patch-src_corelib_codecs_qiconvcodec.cpp) = 4387447f0f23f0f8c623c0c019ab632bc1cb5617
+SHA1 (patch-src_corelib_global_qconfig-bootstrapped.h) = ec5487cc27518b2588d40e7ad59eeee89e93b055
 SHA1 (patch-src_corelib_io_io.pri) = fd2f93b5af4dda729b274dd0d8f82ca29b3cb62a
 SHA1 (patch-src_corelib_io_qstandardpaths_unix.cpp) = de4b6c6be89524763e40698bcf5e8f413abdb938
 SHA1 (patch-src_corelib_io_qstorageinfo_unix.cpp) = 9919194e9f6b47f1f311b8f8223a6a7519152073
 SHA1 (patch-src_corelib_thread_qwaitcondition__unix.cpp) = 37f61c305335ca6a690b0491220ca8de508bfdb6
 SHA1 (patch-src_network_kernel_qhostinfo__unix.cpp) = 3131d74a547abdcca7594b49b739cc1c0eed68f5
+SHA1 (patch-src_network_kernel_qnetworkinterface__unix.cpp) = 2c5569eb2ba19999eb62e4fdb54f347c88f6e6a5
 SHA1 (patch-src_openglextensions_openglextensions.pro) = 575d31c3a48f36d82dc1f342078e636f4c25e33f
 SHA1 (patch-src_plugins_platforminputcontexts_compose_compose.pro) = 1655b2320b250defcfa406c95e58a1b728c0f2d9
 SHA1 (patch-src_plugins_platforminputcontexts_compose_generator_qtablegenerator.cpp) = 655ca6601ddd1768b92758cfdfd8d1c3514fba94
