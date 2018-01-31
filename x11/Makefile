@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.814 2018/01/22 01:04:07 markd Exp $
+# $NetBSD: Makefile,v 1.815 2018/01/31 19:31:26 markd Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -358,6 +358,7 @@ SUBDIR+=	py-terminator-plugins
 SUBDIR+=	py-vte
 SUBDIR+=	py-wxWidgets
 SUBDIR+=	py-xcbgen
+SUBDIR+=	qqc2-desktop-style
 SUBDIR+=	qt4
 SUBDIR+=	qt4-creator
 SUBDIR+=	qt4-docs
