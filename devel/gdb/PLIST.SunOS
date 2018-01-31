@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.SunOS,v 1.2 2016/04/06 09:34:20 fhajny Exp $
-bin/gcore
-man/man1/gcore.1
