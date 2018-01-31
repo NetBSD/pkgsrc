@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2016/02/04 11:58:00 wiz Exp $
+$NetBSD: distinfo,v 1.29 2018/01/31 10:53:40 jperkin Exp $
 
 SHA1 (libgphoto2-2.5.8.tar.bz2) = 976feb07d51026e6ca647f9fa333c500c5e0c041
 RMD160 (libgphoto2-2.5.8.tar.bz2) = bbb57fdace9783f9829bafbd89818949f6d0fce3
@@ -9,5 +9,12 @@ SHA1 (patch-an) = 60d109d29834c01cdae29bcebde153e35af17884
 SHA1 (patch-ao) = 01e7eea353ef12b97b54aeb34f00abfd1f50c3ff
 SHA1 (patch-camlibs_ax203_jpeg__memsrcdest.c) = 763f39f07023aa82de6e91014a3fbf19e9e79afa
 SHA1 (patch-camlibs_ax203_jpeg__memsrcdest.h) = a78c6fd04f1fb72863ce609ac3ad25ebe12dc51c
+SHA1 (patch-camlibs_barbie_barbie.c) = 0dc3d60155ce221b356d59c173d5842b9b2cc98d
 SHA1 (patch-camlibs_jl2005c_jpeg__memsrcdest.c) = 0b178dc031b0b051a230eff6cc6c322596d1a8ee
 SHA1 (patch-camlibs_jl2005c_jpeg__memsrcdest.h) = 49bff8c0523d9cf87be92856cef3dd9127b983a0
+SHA1 (patch-camlibs_kodak_dc120_dc120.c) = 5b009334d954fcfa7b852281fa0bcc73b7355bbc
+SHA1 (patch-camlibs_kodak_dc120_library.c) = da5842b447e5cf2627c52b2fed64ec9b12d427d5
+SHA1 (patch-camlibs_panasonic_coolshot_library.c) = bb476c660d8ef011f11da119a718357d9672aadf
+SHA1 (patch-camlibs_st2205_st2205.c) = 2269a9d6d143bd74c49e21fafb706c6ee528748e
+SHA1 (patch-libgphoto2__port_gphoto2_gphoto2-port-portability.h) = 9f62a7c4213f8be273b6da7b2cbbd1f68e697631
+SHA1 (patch-libgphoto2_gphoto2-file.c) = 2b63f2e3bb3b6ef73c8d860efdda5e342f093eb8
