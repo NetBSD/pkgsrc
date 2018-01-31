@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2018/01/01 21:18:20 adam Exp $
+# $NetBSD: Makefile,v 1.30 2018/01/31 13:12:46 jperkin Exp $
 
 DISTNAME=	exempi-2.3.0
 PKGREVISION=	5
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	ac_cv_tls=none
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 CONFIGURE_ARGS+=	LIBS=${BUILDLINK_LDADD.iconv:Q}
 
