@@ -1,27 +1,23 @@
-# $NetBSD: Makefile,v 1.34 2016/03/29 23:04:01 khorben Exp $
+# $NetBSD: Makefile,v 1.35 2018/01/31 09:14:56 markd Exp $
 
-DISTNAME=	qca-ossl-2.0.0-beta3
-PKGNAME=	qca2-ossl-${DISTNAME:S/-beta/beta/:C/.*-//}
-PKGREVISION=	30
-CATEGORIES=	security
-MASTER_SITES=	http://delta.affinix.com/download/qca/2.0/plugins/
-EXTRACT_SUFX=	.tar.bz2
+PKGNAME=	qca2-ossl-${DISTNAME:C/.*-//}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://delta.affinix.com/qca/
 COMMENT=	Cross-platform crypto API for QT - OpenSSL plugin
 
-USE_TOOLS+=	gmake
-USE_LIBTOOL=	yes
-HAS_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+.include "../../security/qca2/Makefile.common"
 
-CONFIGURE_ARGS+=	--qtdir=${QTDIR}
-CONFIGURE_ARGS+=	--with-qca=${QTDIR}
-CONFIGURE_ARGS+=	--with-openssl-inc=${SSLBASE}/include
-CONFIGURE_ARGS+=	--with-openssl-lib=${SSLBASE}/lib
+BUILD_DIRS=	plugins/qca-ossl
 
-INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
+CMAKE_ARGS+=	-DQT4_BUILD=ON
+CMAKE_ARGS+=	-DBUILD_PLUGINS=ossl
+CMAKE_ARGS+=	-DBUILD_TOOLS=OFF
+CMAKE_ARGS+=	-DINST_QCA_LIB_NAME=-lqca
+
+SUBST_CLASSES+=		libname
+SUBST_STAGE.libname=	post-patch
+SUBST_MESSAGE.libname=	Use installed lib.
+SUBST_FILES.libname=	plugins/qca-ossl/CMakeLists.txt
+SUBST_SED.libname=	-e 's:{QCA_LIB_NAME}:{INST_QCA_LIB_NAME}:'
 
 .include "../../security/qca2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

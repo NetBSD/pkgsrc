@@ -1,29 +1,25 @@
-# $NetBSD: Makefile,v 1.21 2017/08/29 12:23:25 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2018/01/31 09:14:55 markd Exp $
 
-DISTNAME=	qca-gnupg-2.0.0-beta3
-PKGNAME=	qca2-gnupg-${DISTNAME:S/-beta/beta/:C/.*-//}
-PKGREVISION=	18
-CATEGORIES=	security
-MASTER_SITES=	http://delta.affinix.com/download/qca/2.0/plugins/
-EXTRACT_SUFX=	.tar.bz2
+PKGNAME=	qca2-gnupg-${DISTNAME:C/.*-//}
 
-MAINTAINER=	jfranz@bsdprojects.net
-HOMEPAGE=	http://delta.affinix.com/qca/
 COMMENT=	Cross-platform crypto API for QT - GnuPG plugin
-LICENSE=	gnu-lgpl-v2.1
+
+.include "../../security/qca2/Makefile.common"
 
 DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
 
-USE_TOOLS+=	gmake
-USE_LIBTOOL=	yes
-HAS_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+BUILD_DIRS=	plugins/qca-gnupg
 
-CONFIGURE_ARGS+=	--qtdir=${QTDIR}
-CONFIGURE_ARGS+=	--with-qca=${QTDIR}
-CONFIGURE_ARGS+=	--plugins-path=${DESTDIR}${QTDIR}/plugins
-#CONFIGURE_ARGS+=	--with-openssl-inc=${SSLBASE}/include
-#CONFIGURE_ARGS+=	--with-openssl-lib=${SSLBASE}/lib
+CMAKE_ARGS+=	-DQT4_BUILD=ON
+CMAKE_ARGS+=	-DBUILD_PLUGINS=gnupg
+CMAKE_ARGS+=	-DBUILD_TOOLS=OFF
+CMAKE_ARGS+=	-DINST_QCA_LIB_NAME=-lqca
+
+SUBST_CLASSES+=		libname
+SUBST_STAGE.libname=	post-patch
+SUBST_MESSAGE.libname=	Use installed lib.
+SUBST_FILES.libname=	plugins/qca-gnupg/CMakeLists.txt
+SUBST_SED.libname=	-e 's:{QCA_LIB_NAME}:{INST_QCA_LIB_NAME}:'
 
 .include "../../security/qca2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
