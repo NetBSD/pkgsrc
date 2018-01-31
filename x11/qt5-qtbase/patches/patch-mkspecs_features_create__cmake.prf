@@ -1,18 +1,9 @@
-$NetBSD: patch-mkspecs_features_create__cmake.prf,v 1.2 2015/10/29 14:48:04 adam Exp $
+$NetBSD: patch-mkspecs_features_create__cmake.prf,v 1.3 2018/01/31 19:35:23 adam Exp $
 
 Fix for shared libraries naming on Darwin.
 
 --- mkspecs/features/create_cmake.prf.orig	2015-10-13 04:35:32.000000000 +0000
 +++ mkspecs/features/create_cmake.prf
-@@ -147,7 +147,7 @@ contains(CONFIG, plugin) {
-         }
-     } else {
-         mac {
--            isEmpty(CMAKE_STATIC_TYPE): CMAKE_PlUGIN_EXT = .dylib
-+            isEmpty(CMAKE_STATIC_TYPE): CMAKE_PlUGIN_EXT = .so
-             else: CMAKE_PlUGIN_EXT = .a
- 
-             CMAKE_PLUGIN_LOCATION_RELEASE = $$PLUGIN_TYPE/lib$${TARGET}$${CMAKE_PlUGIN_EXT}
 @@ -213,8 +213,8 @@ mac {
              CMAKE_LIB_FILE_LOCATION_RELEASE = Qt$${CMAKE_MODULE_NAME}$${QT_LIBINFIX}.framework/Qt$${CMAKE_MODULE_NAME}$${QT_LIBINFIX}
              CMAKE_BUILD_IS_FRAMEWORK = "true"
