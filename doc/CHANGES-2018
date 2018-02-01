@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.476 2018/02/01 16:46:35 he Exp $
+$NetBSD: CHANGES-2018,v 1.477 2018/02/01 16:58:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -736,3 +736,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xkeyboard-config to 2.23.1 [wiz 2018-02-01]
 	Updated misc/calibre to 3.16.0 [wiz 2018-02-01]
 	Updated graphics/exiv2 to 0.26 [he 2018-02-01]
+	Added math/R-ISLR version 1.2 [minskim 2018-02-01]
