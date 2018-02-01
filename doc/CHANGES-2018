@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.477 2018/02/01 16:58:52 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.478 2018/02/01 18:55:16 markd Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -737,3 +737,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/calibre to 3.16.0 [wiz 2018-02-01]
 	Updated graphics/exiv2 to 0.26 [he 2018-02-01]
 	Added math/R-ISLR version 1.2 [minskim 2018-02-01]
+	Added graphics/libdmtx version 0.7.4 [markd 2018-02-01]
+	Added graphics/prison version 5.41.0 [markd 2018-02-01]
