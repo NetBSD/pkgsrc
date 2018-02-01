@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/01/23 19:35:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/02/01 21:09:29 adam Exp $
 bin/pylupdate5
 bin/pyrcc5
 bin/pyuic5
@@ -43,10 +43,10 @@ ${PLIST.py3x}${PYSITELIB}/PyQt5/QtTest.pyi
 ${PYSITELIB}/PyQt5/QtTest.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtWebChannel.pyi
 ${PYSITELIB}/PyQt5/QtWebChannel.so
-${PLIST.py3x}${PYSITELIB}/PyQt5/QtWebKit.pyi
-${PYSITELIB}/PyQt5/QtWebKit.so
-${PLIST.py3x}${PYSITELIB}/PyQt5/QtWebKitWidgets.pyi
-${PYSITELIB}/PyQt5/QtWebKitWidgets.so
+${PLIST.webkit}${PLIST.py3x}${PYSITELIB}/PyQt5/QtWebKit.pyi
+${PLIST.webkit}${PYSITELIB}/PyQt5/QtWebKit.so
+${PLIST.webkit}${PLIST.py3x}${PYSITELIB}/PyQt5/QtWebKitWidgets.pyi
+${PLIST.webkit}${PYSITELIB}/PyQt5/QtWebKitWidgets.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtWebSockets.pyi
 ${PYSITELIB}/PyQt5/QtWebSockets.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtWidgets.pyi
@@ -114,6 +114,9 @@ share/sip/PyQt5/QAxContainer/QAxContainermod.sip
 share/sip/PyQt5/QAxContainer/qaxbase.sip
 share/sip/PyQt5/QAxContainer/qaxobject.sip
 share/sip/PyQt5/QAxContainer/qaxwidget.sip
+share/sip/PyQt5/QtAndroidExtras/QtAndroidExtrasmod.sip
+share/sip/PyQt5/QtAndroidExtras/qandroidjniobject.sip
+share/sip/PyQt5/QtAndroidExtras/qtandroid.sip
 share/sip/PyQt5/QtBluetooth/QtBluetoothmod.sip
 share/sip/PyQt5/QtBluetooth/qbluetooth.sip
 share/sip/PyQt5/QtBluetooth/qbluetoothaddress.sip
@@ -219,6 +222,7 @@ share/sip/PyQt5/QtCore/qpycore_qpair.sip
 share/sip/PyQt5/QtCore/qpycore_qset.sip
 share/sip/PyQt5/QtCore/qpycore_qvector.sip
 share/sip/PyQt5/QtCore/qpycore_virtual_error_handler.sip
+share/sip/PyQt5/QtCore/qrandom.sip
 share/sip/PyQt5/QtCore/qreadwritelock.sip
 share/sip/PyQt5/QtCore/qrect.sip
 share/sip/PyQt5/QtCore/qregexp.sip
@@ -535,6 +539,15 @@ share/sip/PyQt5/QtNetwork/qsslsocket.sip
 share/sip/PyQt5/QtNetwork/qtcpserver.sip
 share/sip/PyQt5/QtNetwork/qtcpsocket.sip
 share/sip/PyQt5/QtNetwork/qudpsocket.sip
+share/sip/PyQt5/QtNetworkAuth/QtNetworkAuthmod.sip
+share/sip/PyQt5/QtNetworkAuth/qabstractoauth.sip
+share/sip/PyQt5/QtNetworkAuth/qabstractoauth2.sip
+share/sip/PyQt5/QtNetworkAuth/qabstractoauthreplyhandler.sip
+share/sip/PyQt5/QtNetworkAuth/qoauth1.sip
+share/sip/PyQt5/QtNetworkAuth/qoauth1signature.sip
+share/sip/PyQt5/QtNetworkAuth/qoauth2authorizationcodeflow.sip
+share/sip/PyQt5/QtNetworkAuth/qoauthhttpserverreplyhandler.sip
+share/sip/PyQt5/QtNetworkAuth/qoauthoobreplyhandler.sip
 share/sip/PyQt5/QtNfc/QtNfcmod.sip
 share/sip/PyQt5/QtNfc/qndeffilter.sip
 share/sip/PyQt5/QtNfc/qndefmessage.sip
@@ -557,6 +570,7 @@ share/sip/PyQt5/QtPositioning/qgeocircle.sip
 share/sip/PyQt5/QtPositioning/qgeocoordinate.sip
 share/sip/PyQt5/QtPositioning/qgeolocation.sip
 share/sip/PyQt5/QtPositioning/qgeopath.sip
+share/sip/PyQt5/QtPositioning/qgeopolygon.sip
 share/sip/PyQt5/QtPositioning/qgeopositioninfo.sip
 share/sip/PyQt5/QtPositioning/qgeopositioninfosource.sip
 share/sip/PyQt5/QtPositioning/qgeorectangle.sip
