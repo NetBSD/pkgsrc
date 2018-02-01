@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/01 18:49:59 markd Exp $
+include/KF5/prison/AbstractBarcode
+include/KF5/prison/Prison
+include/KF5/prison/abstractbarcode.h
+include/KF5/prison/prison.h
+include/KF5/prison/prison_export.h
+include/KF5/prison_version.h
+lib/cmake/KF5Prison/KF5PrisonConfig.cmake
+lib/cmake/KF5Prison/KF5PrisonConfigVersion.cmake
+lib/cmake/KF5Prison/KF5PrisonTargets-noconfig.cmake
+lib/cmake/KF5Prison/KF5PrisonTargets.cmake
+lib/libKF5Prison.so
+lib/libKF5Prison.so.5
+lib/libKF5Prison.so.${PKGVERSION}
+qt5/mkspecs/modules/qt_Prison.pri
