@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2018/01/31 19:37:49 markd Exp $
+# $NetBSD: Makefile,v 1.6 2018/02/01 19:01:59 markd Exp $
 
 DISTNAME=	kf5-${KF5VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -75,7 +75,7 @@ DEPENDS+=	kxmlrpcclient-${KF5VER}{,nb[0-9]*}:../../net/kxmlrpcclient
 # networkmanager-qt
 DEPENDS+=	oxygen-icons-${KF5VER}{,nb[0-9]*}:../../graphics/oxygen-icons
 DEPENDS+=	plasma-framework-${KF5VER}{,nb[0-9]*}:../../x11/plasma-framework
-# prison
+DEPENDS+=	prison-${KF5VER}{,nb[0-9]*}:../../graphics/prison
 DEPENDS+=	qqc2-desktop-style-${KF5VER}{,nb[0-9]*}:../../x11/qqc2-desktop-style
 DEPENDS+=	solid-${KF5VER}{,nb[0-9]*}:../../sysutils/solid
 DEPENDS+=	sonnet-${KF5VER}{,nb[0-9]*}:../../textproc/sonnet
