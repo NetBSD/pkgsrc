@@ -1,0 +1,2 @@
+MySQL database connector for Python.
+This is a fork of MySQLdb1. This project adds Python 3 support and bug fixes.
