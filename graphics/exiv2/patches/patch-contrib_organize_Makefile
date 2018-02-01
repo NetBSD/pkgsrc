@@ -1,4 +1,6 @@
-$NetBSD: patch-contrib_organize_Makefile,v 1.1 2014/06/05 07:12:53 adam Exp $
+$NetBSD: patch-contrib_organize_Makefile,v 1.2 2018/02/01 16:45:57 he Exp $
+
+Adjust for pkgsrc build.
 
 --- contrib/organize/Makefile.orig	2011-02-28 20:05:59.000000000 +0000
 +++ contrib/organize/Makefile
