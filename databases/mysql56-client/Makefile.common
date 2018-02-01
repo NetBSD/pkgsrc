@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2018/01/16 16:27:12 adam Exp $
+# $NetBSD: Makefile.common,v 1.45 2018/02/01 23:01:19 jperkin Exp $
 #
 # used by databases/mysql56-client/Makefile
 # used by databases/mysql56-server/Makefile
@@ -84,6 +84,8 @@ CFLAGS+=		-D__STDC_FORMAT_MACROS=1 # always defined too late
 CFLAGS+=		-fPIC -DPIC
 CXXFLAGS+=		-fPIC -DPIC
 .endif
+
+CMAKE_ARGS.SunOS+=	-DFORCE_UNSUPPORTED_COMPILER=YES
 
 # Force HAVE_CURSES_H on Solaris since the configure script is broken
 # and does not properly detect this, breaking the build later on.  Also
