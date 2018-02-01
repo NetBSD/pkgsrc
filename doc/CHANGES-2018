@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.471 2018/01/31 23:30:21 zafer Exp $
+$NetBSD: CHANGES-2018,v 1.472 2018/02/01 04:11:17 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -731,3 +731,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/apache-tomcat8 to 8.0.49 [zafer 2018-01-31]
 	Updated www/apache-tomcat85 to 8.5.27 [zafer 2018-01-31]
 	Updated www/apache-tomcat7 to 7.0.84 [zafer 2018-01-31]
+	Updated sysutils/dmidecode to 3.1nb1 [msaitoh 2018-02-01]
