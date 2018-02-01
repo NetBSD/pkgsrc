@@ -1,6 +1,7 @@
-$NetBSD: patch-src_lua_lua__util.c,v 1.1 2018/01/31 20:09:20 fhajny Exp $
+$NetBSD: patch-src_lua_lua__util.c,v 1.2 2018/02/01 13:42:31 fhajny Exp $
 
 Add fcntl support (namely for SunOS).
+https://github.com/vstakhov/rspamd/pull/2009
 
 --- src/lua/lua_util.c.orig	2017-06-14 14:45:41.000000000 +0000
 +++ src/lua/lua_util.c
