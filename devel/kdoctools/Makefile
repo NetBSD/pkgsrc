@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/01/24 19:06:07 markd Exp $
+# $NetBSD: Makefile,v 1.12 2018/02/01 09:34:13 jperkin Exp $
 
 DISTNAME=	kdoctools-${KF5VER}
 PKGREVISION=	1
@@ -10,7 +10,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kf5/Makefile.common"
 
-USE_TOOLS+=	perl
+USE_TOOLS+=	msgmerge perl
 
 BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
