@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.28 2018/01/29 09:58:34 jperkin Exp $
+$NetBSD: distinfo,v 1.29 2018/02/01 16:45:57 he Exp $
 
-SHA1 (exiv2-0.25.tar.gz) = adb8ffe63916e7c27bda9792e690d1330ec7273d
-RMD160 (exiv2-0.25.tar.gz) = 2f43f8737dad9ffd7d5759ef4dd9688658125794
-SHA512 (exiv2-0.25.tar.gz) = 08d4e655ffdde715e0214f4bef01d55aba9b8ba517456a60e254a0f8541c20479e407545db28ca90a69dee8def6941fdd88f9a557fb382ebebe49e363aca8e8e
-Size (exiv2-0.25.tar.gz) = 5434325 bytes
+SHA1 (exiv2-0.26-trunk.tar.gz) = e68404958ebfbee39354f5aaaa895ac6abf127a2
+RMD160 (exiv2-0.26-trunk.tar.gz) = 5cec04536df26797c56eceef7ac8d5937b811473
+SHA512 (exiv2-0.26-trunk.tar.gz) = d1e9cab886e279b045768dd9ec781f07d2d36d573119403d0b76dc571442173aae6972f86ec55c3ea53fb3ee9ca3571eb8fd63a2a6643a970852813e88634a86
+Size (exiv2-0.26-trunk.tar.gz) = 5677925 bytes
 SHA1 (patch-aa) = 947061d168d5db0d9969fa91ef837b364c641fcb
-SHA1 (patch-configure) = 39d6589dc82315d7a2bffeb332c21b6f54d69cf1
-SHA1 (patch-contrib_organize_Makefile) = de74227211b79e49126178f27391831507c2948f
+SHA1 (patch-contrib_organize_Makefile) = 27348fdb0f80092b6e16f27e3ac1dca988eefe70
 SHA1 (patch-contrib_organize_helpers.cpp) = ec003c826d463b3e7e571ab4c41baffaca1240e9
 SHA1 (patch-include_exiv2_types.hpp) = 829e101c1c5f06de0a497b8c6a052b0a4e667d25
-SHA1 (patch-src_Makefile) = 09c51b7da85584aece0147b446bff27ebc7f549f
+SHA1 (patch-src_Makefile) = d0f145ac851eed22ff3a7ad263fac0af42fd1318
+SHA1 (patch-src_actions.cpp) = b796cafb028eb921803617a617344a81e9124bb6
 SHA1 (patch-src_http.cpp) = 75a64b80c37c54c0f65cc8455bd730ae01df0bae
-SHA1 (patch-src_svn_version.sh) = a80e142ab14ba4f5aad62936c5b5375d2a9b4b58
+SHA1 (patch-src_svn_version.sh) = 41ac5ce78b6b7e78c489ab9ffeaa953e93299e5e
