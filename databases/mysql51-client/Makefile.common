@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2017/09/03 08:53:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.37 2018/02/01 23:14:55 jperkin Exp $
 #
 # used by databases/mysql51-client/Makefile
 # used by databases/mysql51-server/Makefile
@@ -102,7 +102,7 @@ CONFIGURE_ENV+=		ac_cv_func_pthread_setschedparam=no
 CONFIGURE_ENV+=		ac_cv_func_pthread_attr_setschedparam=no
 .endif
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		autoconf bash autoheader gmake perl:run
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 
