@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.479 2018/02/01 19:09:12 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.480 2018/02/01 21:10:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -740,3 +740,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Added graphics/libdmtx version 0.7.4 [markd 2018-02-01]
 	Added graphics/prison version 5.41.0 [markd 2018-02-01]
 	Updated lang/nodejs to 9.5.0 [fhajny 2018-02-01]
+	Updated math/py-networkx to 2.1 [adam 2018-02-01]
+	Updated x11/py-sip to 4.19.7 [adam 2018-02-01]
+	Updated x11/py-qt5 to 5.10 [adam 2018-02-01]
