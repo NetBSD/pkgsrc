@@ -1,7 +1,9 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/02/26 18:00:34 hasso Exp $
+$NetBSD: patch-ac,v 1.2 2018/02/01 10:25:13 jperkin Exp $
 
---- configure.orig	2007-04-06 16:23:22 +0300
-+++ configure	2009-02-20 20:04:46 +0200
+Remove bogus Solaris/GCC test.
+
+--- configure.orig	2007-04-06 13:23:22.000000000 +0000
++++ configure
 @@ -913,6 +913,8 @@ VORBIS_LIBS
  VORBISFILE_LIBS
  include_xiph_decoder_TRUE
@@ -19,6 +21,15 @@ $NetBSD: patch-ac,v 1.1.1.1 2009/02/26 18:00:34 hasso Exp $
    --with-flac             Enable FLAC support [default=check]
    --with-speex            Enable speex support [default=check]
    --with-libmad           Enable libmad support [default=check]
+@@ -7053,7 +7056,7 @@ fi
+       *-*-irix*)  test "$GXX" = yes && CXXFLAGS="-D_LANGUAGE_C_PLUS_PLUS -D__LANGUAGE_C_PLUS_PLUS $CXXFLAGS" ;;
+       *-*-sysv4.2uw*) CXXFLAGS="-D_UNIXWARE $CXXFLAGS";;
+       *-*-sysv5uw7*) CXXFLAGS="-D_UNIXWARE7 $CXXFLAGS";;
+-      *-*-solaris*)
++      *-*-notsolaris*)
+         if test "$GXX" = yes; then
+           libstdcpp=`$CXX -print-file-name=libstdc++.so`
+           if test ! -f $libstdcpp; then
 @@ -23630,6 +23633,12 @@ ac_config_headers="$ac_config_headers ak
  
  
@@ -122,7 +133,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2009/02/26 18:00:34 hasso Exp $
  if test -z "${include_xiph_decoder_TRUE}" && test -z "${include_xiph_decoder_FALSE}"; then
    { { echo "$as_me:$LINENO: error: conditional \"include_xiph_decoder\" was never defined.
  Usually this means the macro was only invoked conditionally." >&5
-@@ -30094,7 +30120,7 @@ if test "x$have_libOggFLAC" = "xno"; the
+@@ -30094,7 +30124,7 @@ if test "x$have_libOggFLAC" = "xno"; the
          echo ">"
  fi
  
