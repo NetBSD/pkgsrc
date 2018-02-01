@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.192 2018/01/10 22:16:25 wiz Exp $
+# $NetBSD: Makefile,v 1.193 2018/02/01 16:05:56 wiz Exp $
 
-DISTNAME=	calibre-2.85.1
-PKGREVISION=	8
+DISTNAME=	calibre-3.16.0
 CATEGORIES=	misc
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
 MASTER_SITES=	http://download.calibre-ebook.com/${PKGVERSION_NOREV}/
@@ -13,36 +12,29 @@ HOMEPAGE=	http://www.calibre-ebook.com/
 COMMENT=	E-book library management application
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=2.7.0:../../graphics/py-Pillow
-#DEPENDS+=	help2man>=1.36.4:../../converters/help2man
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
-#DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
-DEPENDS+=	${PYPKGPREFIX}-lxml>=3.2.1:../../textproc/py-lxml
-DEPENDS+=	${PYPKGPREFIX}-beautifulsoup>=3.0.5:../../www/py-beautifulsoup
+DEPENDS+=	${PYPKGPREFIX}-apsw>=3.7.17:../../databases/py-apsw
+DEPENDS+=	${PYPKGPREFIX}-cssutils>=0.9.9:../../textproc/py-cssutils
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.4.1:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-dns>=1.6.0:../../net/py-dns
+DEPENDS+=	${PYPKGPREFIX}-elementtree-[0-9]*:../../textproc/py-elementtree
+DEPENDS+=	${PYPKGPREFIX}-html5-parser-[0-9]*:../../textproc/py-html5-parser
 DEPENDS+=	${PYPKGPREFIX}-mechanize>=0.1.11nb1:../../www/py-mechanize
-DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.7.1:../../textproc/py-cssselect
-DEPENDS+=	${PYPKGPREFIX}-cssutils>=0.9.9:../../textproc/py-cssutils
-DEPENDS+=	${PYPKGPREFIX}-psutil>=0.6.1:../../sysutils/py-psutil
-# Let's depend on the ones we have in pkgsrc instead of the bundled ones.
-DEPENDS+=	${PYPKGPREFIX}-cherrypy-[0-9]*:../../www/py-cherrypy
-# not sure if pkgsrc version would be ok or not
-#DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
-# includes own, modified copy of html5lib
-#DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
+DEPENDS+=	${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-netifaces>=0.8:../../net/py-netifaces
-DEPENDS+=	${PYPKGPREFIX}-apsw>=3.7.17:../../databases/py-apsw
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=2.7.0:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-psutil>=0.6.1:../../sysutils/py-psutil
+DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+# for installation
+BUILD_DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
 
 EXTRACT_USING=	bsdtar
+
+PYTHON_VERSIONS_ACCEPTED=	27 # as of 3.16.0
 
 USE_LANGUAGES=			c c++
 USE_LIBTOOL=			yes
 USE_TOOLS+=			pkg-config pax
-PYTHON_VERSIONS_ACCEPTED=	27
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not ported as of 2.1.0; also: py-mechanize, py-beautifulsoup
-PYDISTUTILSPKG=			yes
 PYSETUPOPTARGS=			# empty
 PYSETUPINSTALLARGS=		--prefix=${PREFIX} --root=${DESTDIR:Q}${PREFIX}
 
@@ -90,11 +82,6 @@ MAKE_ENV+=		PODOFO_INC_DIR=${BUILDLINK_PREFIX.podofo}/include/podofo
 MAKE_ENV+=		PODOFO_LIB_DIR=${BUILDLINK_PREFIX.podofo}/lib
 MAKE_ENV+=		SIP_BIN=${BUILDLINK_PREFIX.py-sip}/bin/sip${PYVERSSUFFIX}
 MAKE_ENV+=		LFLAGS=${LDFLAGS:Q}
-#MAKE_ENV+=		WITH_USB=no
-
-# Let's depend on the ones we have in pkgsrc instead of the bundled ones.
-pre-configure:
-	cd ${WRKSRC} && rm -rf src/cherrypy
 
 # Turn off x bits on non-executable files.
 post-extract:
@@ -103,15 +90,12 @@ post-extract:
 	chmod a-x ${WRKSRC}/src/calibre/utils/Zeroconf.py
 	chmod a-x ${WRKSRC}/src/calibre/utils/smtplib.py
 
-# not sure why libheadless installed into wrong directory
-# side effect of patch-setup_extensions.py?
 post-install:
 	cd ${WRKSRC}/recipes && pax -wr -pma *.recipe \
 	    ${DESTDIR}${PREFIX}/share/calibre/recipes
 	cd ${WRKSRC} && pax -wr -pma Changelog* README.md \
 	    COPYRIGHT INSTALL LICENSE.* \
 	    ${DESTDIR}${PREFIX}/share/doc/calibre
-	cd ${DESTDIR}${PREFIX} && ${MV} lib/calibre/calibre/plugins/.libs/libheadless.so lib/calibre/calibre/plugins/libheadless.so
 	${RM} ${DESTDIR}${PREFIX}/bin/calibre-uninstall
 
 .include "../../lang/python/application.mk"
@@ -130,7 +114,6 @@ _PYSETUPTOOLSINSTALLARGS=	# empty
 # Get rid of --root=${DESTDIR}, use our own version from above instead.
 # because the setup.py is not the standard one and behaves differently.
 _PYSETUPINSTALLARGS=	${PYSETUPINSTALLARGS} ${PYSETUPOPTARGS} ${_PYSETUPTOOLSINSTALLARGS}
-#.include "../../lang/python/extension.mk"
 BUILDLINK_API_DEPENDS.podofo+=	podofo>=0.8.2
 .include "../../print/podofo/buildlink3.mk"
 BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.20.2
@@ -143,9 +126,7 @@ BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.82.2
 .include "../../sysutils/py-dbus/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../textproc/py-elementtree/buildlink3.mk"
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-BUILDLINK_API_DEPENDS.py-qt5+=	${PYPKGPREFIX}-qt5>=5.4
 .include "../../x11/py-qt5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
