@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2018/01/30 15:42:02 fhajny Exp $
+$NetBSD: distinfo,v 1.3 2018/02/01 19:18:51 fhajny Exp $
 
 SHA1 (passenger-5.2.0.tar.gz) = b9fc47e7dd782cfe3afcca594a6c71876c776bab
 RMD160 (passenger-5.2.0.tar.gz) = 111db9610d9dd0cbbc6658d5bdf15ed3be97e65a
@@ -7,6 +7,7 @@ Size (passenger-5.2.0.tar.gz) = 4978059 bytes
 SHA1 (patch-build_common__library.rb) = fc019cb2774245400e74741d34b43b87b4b8b0c8
 SHA1 (patch-build_packaging.rb) = b50c291c8e3989bbd8d128dab98c06f5e6a30e51
 SHA1 (patch-src_cxx__supportlib_Hooks.h) = 52aa3e3852d27de420cc890a52592ba4290c3320
+SHA1 (patch-src_cxx__supportlib_LoggingKit_Context.h) = 26da0a8d0571c978adf0858d4be7b4bed641184e
 SHA1 (patch-src_ruby__supportlib_phusion__passenger.rb) = b5bf22b8ef94f9c64e0f02ed97e4c104eddf7cb6
 SHA1 (patch-src_ruby__supportlib_phusion__passenger_packaging.rb) = 74134ef6c360bc65ffb4f74e7ebcc36bf7b6e9f7
 SHA1 (patch-src_ruby__supportlib_phusion__passenger_platform__info_cxx__portability.rb) = a3ad34fe1b5917c1971b49c8831d8aea9dbb090a
