@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.358 2018/01/30 02:14:09 minskim Exp $
+# $NetBSD: Makefile,v 1.359 2018/02/01 16:58:03 minskim Exp $
 
 COMMENT=	Mathematics
 
@@ -8,6 +8,7 @@ SUBDIR+=	R-DAAG
 SUBDIR+=	R-DBI
 SUBDIR+=	R-FNN
 SUBDIR+=	R-GRASS
+SUBDIR+=	R-ISLR
 SUBDIR+=	R-ISwR
 SUBDIR+=	R-MatrixModels
 SUBDIR+=	R-PHYLOGR
