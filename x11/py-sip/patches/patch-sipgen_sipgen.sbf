@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2018/01/17 19:16:05 markd Exp $
+$NetBSD: patch-sipgen_sipgen.sbf,v 1.1 2018/02/01 21:03:09 adam Exp $
 
 --- sipgen/sipgen.sbf.orig	2017-02-15 12:37:11.000000000 +0000
 +++ sipgen/sipgen.sbf
