@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/01 18:38:11 markd Exp $
+include/dmtx.h
+lib/libdmtx.la
+lib/pkgconfig/libdmtx.pc
+man/man3/libdmtx.3
