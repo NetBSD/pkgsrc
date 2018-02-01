@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18075 2018/01/30 13:25:29 mef Exp $
+$NetBSD: TODO,v 1.18076 2018/02/01 10:44:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -476,7 +476,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cddbd-1.5.2
 	o cdk-5.0.20120323
 	o cdrkit-1.1.10
-	o cdrtools-3.02a08
 	o cfengine3-3.10.2
 	o cflow-mode-1.4
 	o cgal-4.6.1
@@ -644,6 +643,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o foomatic4-db-20160305
 	o fop-2.1
 	o fortunes-calvin-0.3
+	o fox-1.6.56 [pkg/52967]
 	o fox-1.7.61
 	o freedv-1.2.2
 	o freenet-0.7
@@ -1481,7 +1481,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o worker-3.12.0
 	o wxGTK-3.1.0
 	o wxRemind-101
-	o x264-devel-20171223
+	o x264-devel-20180127
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xaric-0.13.7
@@ -1495,6 +1495,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xfce4-notifyd-0.4
 	o xfce4-panel-4.13.1
 	o xfce4-settings-4.13.1
+	o xfe-1.42 [pkg/52968]
 	o xforms-1.2.4
 	o xfractint-20.04pl4
 	o xfs-1.1.1 [wip]
