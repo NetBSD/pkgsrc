@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: rspamd.sh,v 1.1 2017/03/20 14:15:16 wiz Exp $
+# $NetBSD: rspamd.sh,v 1.2 2018/02/01 09:07:23 fhajny Exp $
 #
 # PROVIDE: rspamd
 # REQUIRE: DAEMON
@@ -14,7 +14,7 @@ name="rspamd"
 rcvar=$name
 command="@PREFIX@/bin/rspamd"
 pidfile="@VARBASE@/run/rspamd/${name}.pid"
-command_args="-c @PKG_SYSCONFDIR@/rspamd.conf"
+command_args="-u @RSPAMD_USER@ -g @RSPAMD_GROUP@ -c @PKG_SYSCONFDIR@/rspamd.conf"
 required_files="@PKG_SYSCONFDIR@/rspamd.conf"
 start_precmd="rspamd_precmd"
 

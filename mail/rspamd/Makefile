@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2017/11/30 16:45:30 adam Exp $
+# $NetBSD: Makefile,v 1.33 2018/02/01 09:07:23 fhajny Exp $
 
 DISTNAME=	rspamd-1.6.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vstakhov/}
 
@@ -41,6 +41,9 @@ EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 LOGDIR=		${VARBASE}/log/rspamd
 DBDIR=		${VARBASE}/db/rspamd
 RUNDIR=		${VARBASE}/run/rspamd
+
+FILES_SUBST+=	RSPAMD_USER=${RSPAMD_USER}
+FILES_SUBST+=	RSPAMD_GROUP=${RSPAMD_GROUP}
 
 RCD_SCRIPTS=	rspamd
 
