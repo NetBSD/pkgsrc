@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.778 2018/01/01 07:10:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.779 2018/02/01 18:52:44 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -280,6 +280,7 @@ SUBDIR+=	lib3ds
 SUBDIR+=	libart
 SUBDIR+=	libbpg
 SUBDIR+=	libcaca
+SUBDIR+=	libdmtx
 SUBDIR+=	libepoxy
 SUBDIR+=	libexif
 SUBDIR+=	libexif-gtk
@@ -411,6 +412,7 @@ SUBDIR+=	pngcrush
 SUBDIR+=	potrace
 SUBDIR+=	povray
 SUBDIR+=	prag
+SUBDIR+=	prison
 SUBDIR+=	ps2eps
 SUBDIR+=	pstoedit
 SUBDIR+=	ptex
