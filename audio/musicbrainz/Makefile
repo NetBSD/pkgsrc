@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/04/20 12:10:30 nros Exp $
+# $NetBSD: Makefile,v 1.28 2018/02/01 10:04:38 jperkin Exp $
 
 DISTNAME=	libmusicbrainz-2.1.5
 PKGNAME=	${DISTNAME:S/lib//}
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		YES
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libmusicbrainz.pc.in
 
