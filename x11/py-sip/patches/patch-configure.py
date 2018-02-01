@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2014/08/21 21:32:39 wiz Exp $
+$NetBSD: patch-configure.py,v 1.1 2018/02/01 21:03:09 adam Exp $
 
 --- configure.py.orig	2014-07-03 10:08:46.000000000 +0000
 +++ configure.py
