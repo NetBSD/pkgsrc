@@ -1,0 +1,7 @@
+libdmtx is a software library that enables programs to read and
+write Data Matrix barcodes of the modern ECC200 variety. The
+library runs natively on several platforms and can be accessed by
+multiple languages using the libdmtx language wrappers. The
+utility programs dmtxread and dmtxwrite also provide a command
+line interface for libdmtx, and serve as a good reference for
+developers writing their own libdmtx-enabled programs.
