@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/07/27 00:11:35 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2018/02/02 21:16:19 minskim Exp $
 
-DISTNAME=	pandas-datareader-0.5.0
+DISTNAME=	pandas-datareader-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandas-datareader/}
