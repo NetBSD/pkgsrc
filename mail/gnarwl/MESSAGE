@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2014/07/22 08:25:54 manu Exp $
+$NetBSD: MESSAGE,v 1.2 2018/02/02 00:20:45 rillig Exp $
 
-To use gnarwl, first edit ${PKG_SYSCONFDIR}/gnarwl.cfg 
+To use gnarwl, first edit ${PKG_SYSCONFDIR}/gnarwl.cfg
 Then add the line below in /etc/mail/aliases and run newaliases
 autoreply:      "|LDAPCONF=~gnarwl/ldaprc ${PREFIX}/bin/gnarwl"
 
