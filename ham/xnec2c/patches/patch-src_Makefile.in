@@ -1,0 +1,16 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2018/02/02 10:37:44 jperkin Exp $
+
+Leave pkgsrc to handle security features.
+
+--- src/Makefile.in.orig	2016-11-10 04:56:58.000000000 +0000
++++ src/Makefile.in
+@@ -296,8 +296,7 @@ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ AM_LDFLAGS = -Wl,--as-needed
+-AM_CFLAGS = --pedantic -Wall -std=gnu99 -O2 -D_FORTIFY_SOURCE=2 \
+-		 -fstack-protector -Wformat -Werror=format-security -fpie
++AM_CFLAGS = 
+ 
+ AM_CPPFLAGS = \
+ 	-DPROGRAMNAME_LOCALEDIR=\""$(PROGRAMNAME_LOCALEDIR)"\" \
