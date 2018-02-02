@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/01/14 10:40:46 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2018/02/02 14:08:27 jperkin Exp $
 
 DISTNAME=		testdisk-7.0
 CATEGORIES=		sysutils
@@ -19,6 +19,7 @@ GNU_CONFIGURE=		yes
 .endif
 
 CONFIGURE_ARGS+=	--disable-qt
+CONFIGURE_ARGS+=	--disable-stack-protector
 
 # testdisk uses either ntfsprogs or fuse-ntfs-3g, but not both, and prefers
 # fuse-ntfs-3g.  Ignore configure-time warnings that the ntfs library is
