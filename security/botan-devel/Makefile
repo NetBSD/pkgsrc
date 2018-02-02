@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/01/01 21:18:10 adam Exp $
+# $NetBSD: Makefile,v 1.25 2018/02/02 13:56:35 jperkin Exp $
 
 DISTNAME=	Botan-2.1.0
 PKGNAME=	${DISTNAME:tl}
@@ -46,7 +46,7 @@ USE_TOOLS+=	gmake
 
 PY_PATCHPLIST=	yes
 
-MAKE_FLAGS.SunOS+=	USER_APP_LINKS_TO=-lnsl
+LDFLAGS.SunOS+=	-lnsl -lsocket
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
