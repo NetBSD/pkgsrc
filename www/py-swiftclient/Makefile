@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/02/02 08:36:10 adam Exp $
+# $NetBSD: Makefile,v 1.5 2018/02/02 10:59:51 adam Exp $
 
 DISTNAME=	python-swiftclient-3.5.0
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -9,8 +9,6 @@ MAINTAINER=	triaxx@NetBSD.org
 HOMEPAGE=	https://github.com/openstack/python-swiftclient
 COMMENT=	Python bindings to the OpenStack Object Storage API
 LICENSE=	apache-2.0
-
-#PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
 
 DEPENDS+=	${PYPKGPREFIX}-keystone>=0.7.0:../../emulators/py-keystone
 DEPENDS+=	${PYPKGPREFIX}-requests>=1.1:../../devel/py-requests
@@ -33,6 +31,5 @@ post-install:
 	${MV} bin/swift bin/swift${PYVERSSUFFIX} && \
 	${MV} man/man1/swift.1 man/man1/swift${PYVERSSUFFIX}.1 || ${TRUE}
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
