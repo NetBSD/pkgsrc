@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.507 2018/02/02 20:18:37 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.508 2018/02/02 21:16:42 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -777,3 +777,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ncurses to 6.0nb5 [jperkin 2018-02-02]
 	Updated devel/ncursesw to 6.0nb4 [jperkin 2018-02-02]
 	Updated finance/py-alphalens to 0.2.1 [minskim 2018-02-02]
+	Updated math/py-pandas-datareader to 0.6.0 [minskim 2018-02-02]
