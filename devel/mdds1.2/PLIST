@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/18 11:48:45 wiz Exp $
-include/mdds-1.2/mdds/default_deleter.hpp
+@comment $NetBSD: PLIST,v 1.2 2018/02/02 23:53:26 ryoon Exp $
 include/mdds-1.2/mdds/flat_segment_tree.hpp
 include/mdds-1.2/mdds/flat_segment_tree_def.inl
 include/mdds-1.2/mdds/flat_segment_tree_itr.hpp
