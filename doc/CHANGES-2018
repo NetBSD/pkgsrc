@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.505 2018/02/02 17:33:06 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.506 2018/02/02 17:33:44 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -775,3 +775,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-peewee to 3.0.9 [fhajny 2018-02-02]
 	Updated net/rabbitmq to 3.7.3 [fhajny 2018-02-02]
 	Updated devel/ncurses to 6.0nb5 [jperkin 2018-02-02]
+	Updated devel/ncursesw to 6.0nb4 [jperkin 2018-02-02]
