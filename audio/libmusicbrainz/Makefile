@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/03/05 11:27:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2018/02/02 17:55:39 jperkin Exp $
 
 DISTNAME=	libmusicbrainz-3.0.3
 PKGREVISION=	5
@@ -11,7 +11,7 @@ COMMENT=	MusicBrainz (user-maintained community music metadatabase) library v3
 LICENSE=	gnu-lgpl-v2.1
 
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 PKGCONFIG_OVERRIDE=	libmusicbrainz3.pc.cmake
 
 CMAKE_ARGS+=	-DNEON_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.neon}/include/neon
