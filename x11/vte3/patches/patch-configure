@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2018/02/02 09:48:17 jperkin Exp $
+
+Leave pkgsrc to handle security features.
+
+--- configure.orig	2015-10-12 14:36:52.000000000 +0000
++++ configure
+@@ -13550,8 +13550,6 @@ _ACEOF
+   -fno-common \
+   -fdiagnostics-show-option \
+   -fno-strict-aliasing \
+-  -fstack-protector \
+-  -fstack-protector-strong \
+   -Wno-deprecated-declarations \
+ ; do
+ 
