@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2017/08/01 14:59:01 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2018/02/02 00:20:45 rillig Exp $
 
 DISTNAME=	dk-milter-1.0.2
 PKGREVISION=	1
@@ -66,7 +66,7 @@ do-install:
 	cd ${WRKSRC} ;\
 	for f in FEATURES INSTALL KNOWNBUGS LICENSE README RELEASE_NOTES rfc4870.txt; do\
 	  ${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/share/doc/dk-milter ;\
-	done 
+	done
 	cd ${WRKSRC}/libdk/docs; for file in *.html; do \
 	${INSTALL_DATA} $$file ${DESTDIR}${PREFIX}/share/doc/dk-milter/libdk; done
 
