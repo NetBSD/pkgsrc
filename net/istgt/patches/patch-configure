@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2018/02/02 10:19:31 jperkin Exp $
+
+Leave pkgsrc to handle security features.
+
+--- configure.orig	2014-11-24 15:20:44.000000000 +0000
++++ configure
+@@ -4792,7 +4792,7 @@ main ()
+ _ACEOF
+ if ac_fn_c_try_compile "$LINENO"; then :
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+-$as_echo "yes" >&6; }; saved_CFLAGS="$CFLAGS"
++$as_echo "yes" >&6; }
+ else
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ $as_echo "no" >&6; }
