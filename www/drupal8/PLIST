@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/11/04 14:30:39 wen Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/02/02 03:08:38 wen Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -1669,6 +1669,7 @@ share/drupal/core/lib/Drupal/Core/Field/FieldUpdateActionBase.php
 share/drupal/core/lib/Drupal/Core/Field/FormatterBase.php
 share/drupal/core/lib/Drupal/Core/Field/FormatterInterface.php
 share/drupal/core/lib/Drupal/Core/Field/FormatterPluginManager.php
+share/drupal/core/lib/Drupal/Core/Field/MapFieldItemList.php
 share/drupal/core/lib/Drupal/Core/Field/Plugin/DataType/Deriver/FieldItemDeriver.php
 share/drupal/core/lib/Drupal/Core/Field/Plugin/DataType/FieldItem.php
 share/drupal/core/lib/Drupal/Core/Field/Plugin/Field/FieldFormatter/BasicStringFormatter.php
@@ -1801,6 +1802,7 @@ share/drupal/core/lib/Drupal/Core/ImageToolkit/ImageToolkitOperationBase.php
 share/drupal/core/lib/Drupal/Core/ImageToolkit/ImageToolkitOperationInterface.php
 share/drupal/core/lib/Drupal/Core/ImageToolkit/ImageToolkitOperationManager.php
 share/drupal/core/lib/Drupal/Core/ImageToolkit/ImageToolkitOperationManagerInterface.php
+share/drupal/core/lib/Drupal/Core/Installer/ConfigOverride.php
 share/drupal/core/lib/Drupal/Core/Installer/Exception/AlreadyInstalledException.php
 share/drupal/core/lib/Drupal/Core/Installer/Exception/InstallProfileMismatchException.php
 share/drupal/core/lib/Drupal/Core/Installer/Exception/InstallerException.php
@@ -2262,6 +2264,7 @@ share/drupal/core/lib/Drupal/Core/TypedData/Annotation/DataType.php
 share/drupal/core/lib/Drupal/Core/TypedData/ComplexDataDefinitionBase.php
 share/drupal/core/lib/Drupal/Core/TypedData/ComplexDataDefinitionInterface.php
 share/drupal/core/lib/Drupal/Core/TypedData/ComplexDataInterface.php
+share/drupal/core/lib/Drupal/Core/TypedData/ComputedItemListTrait.php
 share/drupal/core/lib/Drupal/Core/TypedData/DataDefinition.php
 share/drupal/core/lib/Drupal/Core/TypedData/DataDefinitionInterface.php
 share/drupal/core/lib/Drupal/Core/TypedData/DataReferenceBase.php
@@ -3120,8 +3123,6 @@ share/drupal/core/modules/ckeditor/tests/modules/css/test.css
 share/drupal/core/modules/ckeditor/tests/modules/js/ajax-css.es6.js
 share/drupal/core/modules/ckeditor/tests/modules/js/ajax-css.js
 share/drupal/core/modules/ckeditor/tests/modules/src/Form/AjaxCssForm.php
-share/drupal/core/modules/ckeditor/tests/modules/src/Kernel/CKEditorPluginManagerTest.php
-share/drupal/core/modules/ckeditor/tests/modules/src/Kernel/CKEditorTest.php
 share/drupal/core/modules/ckeditor/tests/modules/src/Plugin/CKEditorPlugin/Llama.php
 share/drupal/core/modules/ckeditor/tests/modules/src/Plugin/CKEditorPlugin/LlamaButton.php
 share/drupal/core/modules/ckeditor/tests/modules/src/Plugin/CKEditorPlugin/LlamaContextual.php
@@ -3134,6 +3135,8 @@ share/drupal/core/modules/ckeditor/tests/src/Functional/CKEditorStylesComboAdmin
 share/drupal/core/modules/ckeditor/tests/src/Functional/CKEditorToolbarButtonTest.php
 share/drupal/core/modules/ckeditor/tests/src/FunctionalJavascript/AjaxCssTest.php
 share/drupal/core/modules/ckeditor/tests/src/FunctionalJavascript/CKEditorIntegrationTest.php
+share/drupal/core/modules/ckeditor/tests/src/Kernel/CKEditorPluginManagerTest.php
+share/drupal/core/modules/ckeditor/tests/src/Kernel/CKEditorTest.php
 share/drupal/core/modules/ckeditor/tests/src/Kernel/Plugin/CKEditorPlugin/InternalTest.php
 share/drupal/core/modules/ckeditor/tests/src/Unit/CKEditorPluginManagerTest.php
 share/drupal/core/modules/ckeditor/tests/src/Unit/Plugin/CKEditorPlugin/LanguageTest.php
@@ -3384,7 +3387,6 @@ share/drupal/core/modules/comment/tests/src/Unit/CommentStatisticsUnitTest.php
 share/drupal/core/modules/comment/tests/src/Unit/Entity/CommentLockTest.php
 share/drupal/core/modules/comment/tests/src/Unit/Plugin/views/field/CommentBulkFormTest.php
 share/drupal/core/modules/config/config.info.yml
-share/drupal/core/modules/config/config.install
 share/drupal/core/modules/config/config.links.menu.yml
 share/drupal/core/modules/config/config.links.task.yml
 share/drupal/core/modules/config/config.module
@@ -3750,8 +3752,10 @@ share/drupal/core/modules/content_moderation/tests/src/Kernel/EntityRevisionConv
 share/drupal/core/modules/content_moderation/tests/src/Kernel/EntityStateChangeValidationTest.php
 share/drupal/core/modules/content_moderation/tests/src/Kernel/EntityTypeInfoTest.php
 share/drupal/core/modules/content_moderation/tests/src/Kernel/InitialStateTest.php
+share/drupal/core/modules/content_moderation/tests/src/Kernel/ModerationInformationTest.php
 share/drupal/core/modules/content_moderation/tests/src/Kernel/ModerationStateFieldItemListTest.php
 share/drupal/core/modules/content_moderation/tests/src/Kernel/ModerationStateWidgetTest.php
+share/drupal/core/modules/content_moderation/tests/src/Kernel/NodeAccessTest.php
 share/drupal/core/modules/content_moderation/tests/src/Kernel/StateFormatterTest.php
 share/drupal/core/modules/content_moderation/tests/src/Kernel/ViewsDataIntegrationTest.php
 share/drupal/core/modules/content_moderation/tests/src/Unit/ContentPreprocessTest.php
@@ -3772,6 +3776,7 @@ share/drupal/core/modules/content_translation/content_translation.module
 share/drupal/core/modules/content_translation/content_translation.permissions.yml
 share/drupal/core/modules/content_translation/content_translation.services.yml
 share/drupal/core/modules/content_translation/css/content_translation.admin.css
+share/drupal/core/modules/content_translation/migration_templates/d6_taxonomy_term_translation.yml
 share/drupal/core/modules/content_translation/src/Access/ContentTranslationManageAccessCheck.php
 share/drupal/core/modules/content_translation/src/Access/ContentTranslationOverviewAccess.php
 share/drupal/core/modules/content_translation/src/ContentTranslationHandler.php
@@ -3821,6 +3826,7 @@ share/drupal/core/modules/content_translation/tests/src/FunctionalJavascript/Con
 share/drupal/core/modules/content_translation/tests/src/Kernel/ContentTranslationConfigImportTest.php
 share/drupal/core/modules/content_translation/tests/src/Kernel/ContentTranslationSettingsApiTest.php
 share/drupal/core/modules/content_translation/tests/src/Kernel/ContentTranslationSyncUnitTest.php
+share/drupal/core/modules/content_translation/tests/src/Kernel/Migrate/d6/MigrateTaxonomyTermTranslationTest.php
 share/drupal/core/modules/content_translation/tests/src/Unit/Access/ContentTranslationManageAccessCheckTest.php
 share/drupal/core/modules/content_translation/tests/src/Unit/Menu/ContentTranslationLocalTasksTest.php
 share/drupal/core/modules/contextual/config/schema/contextual.views.schema.yml
@@ -3959,13 +3965,13 @@ share/drupal/core/modules/dblog/src/Plugin/views/field/DblogMessage.php
 share/drupal/core/modules/dblog/src/Plugin/views/field/DblogOperations.php
 share/drupal/core/modules/dblog/src/Plugin/views/filter/DblogTypes.php
 share/drupal/core/modules/dblog/src/Plugin/views/wizard/Watchdog.php
-share/drupal/core/modules/dblog/src/Tests/Rest/DbLogResourceTest.php
 share/drupal/core/modules/dblog/tests/fixtures/update/dblog-2851293.php
 share/drupal/core/modules/dblog/tests/modules/dblog_test_views/dblog_test_views.info.yml
 share/drupal/core/modules/dblog/tests/modules/dblog_test_views/test_views/views.view.dblog_2851293.yml
 share/drupal/core/modules/dblog/tests/modules/dblog_test_views/test_views/views.view.dblog_integration_test.yml
 share/drupal/core/modules/dblog/tests/modules/dblog_test_views/test_views/views.view.test_dblog.yml
 share/drupal/core/modules/dblog/tests/src/Functional/ConnectionFailureTest.php
+share/drupal/core/modules/dblog/tests/src/Functional/DbLogResourceTest.php
 share/drupal/core/modules/dblog/tests/src/Functional/DbLogTest.php
 share/drupal/core/modules/dblog/tests/src/Functional/DbLogViewsTest.php
 share/drupal/core/modules/dblog/tests/src/Functional/Update/DblogFiltersAndFieldsUpgradeTest.php
@@ -4454,16 +4460,19 @@ share/drupal/core/modules/file/tests/file_test/src/StreamWrapper/DummyStreamWrap
 share/drupal/core/modules/file/tests/modules/file_test_views/file_test_views.info.yml
 share/drupal/core/modules/file/tests/modules/file_test_views/test_views/views.view.file_extension_view.yml
 share/drupal/core/modules/file/tests/modules/file_test_views/test_views/views.view.test_file_user_file_data.yml
+share/drupal/core/modules/file/tests/src/Functional/FileFieldCreationTrait.php
 share/drupal/core/modules/file/tests/src/Functional/FileFieldTestBase.php
 share/drupal/core/modules/file/tests/src/Functional/FileManagedAccessTest.php
 share/drupal/core/modules/file/tests/src/Functional/FileManagedTestBase.php
 share/drupal/core/modules/file/tests/src/Functional/Update/FileUsageTemporaryDeletionConfigurationUpdateTest.php
+share/drupal/core/modules/file/tests/src/FunctionalJavascript/MaximumFileSizeExceededUploadTest.php
 share/drupal/core/modules/file/tests/src/Kernel/AccessTest.php
 share/drupal/core/modules/file/tests/src/Kernel/CopyTest.php
 share/drupal/core/modules/file/tests/src/Kernel/DeleteTest.php
 share/drupal/core/modules/file/tests/src/Kernel/FileItemTest.php
 share/drupal/core/modules/file/tests/src/Kernel/FileItemValidationTest.php
 share/drupal/core/modules/file/tests/src/Kernel/FileManagedUnitTestBase.php
+share/drupal/core/modules/file/tests/src/Kernel/FileUrlTest.php
 share/drupal/core/modules/file/tests/src/Kernel/Formatter/FileEntityFormatterTest.php
 share/drupal/core/modules/file/tests/src/Kernel/LoadTest.php
 share/drupal/core/modules/file/tests/src/Kernel/Migrate/MigrateFileStubTest.php
@@ -5282,6 +5291,7 @@ share/drupal/core/modules/locale/locale.links.task.yml
 share/drupal/core/modules/locale/locale.module
 share/drupal/core/modules/locale/locale.pages.inc
 share/drupal/core/modules/locale/locale.permissions.yml
+share/drupal/core/modules/locale/locale.post_update.php
 share/drupal/core/modules/locale/locale.routing.yml
 share/drupal/core/modules/locale/locale.services.yml
 share/drupal/core/modules/locale/locale.translation.inc
@@ -7322,13 +7332,7 @@ share/drupal/core/modules/system/src/Tests/Installer/StandardInstallerTest.php
 share/drupal/core/modules/system/src/Tests/Menu/AssertBreadcrumbTrait.php
 share/drupal/core/modules/system/src/Tests/Menu/AssertMenuActiveTrailTrait.php
 share/drupal/core/modules/system/src/Tests/Menu/MenuTestBase.php
-share/drupal/core/modules/system/src/Tests/Module/DependencyTest.php
-share/drupal/core/modules/system/src/Tests/Module/HookRequirementsTest.php
-share/drupal/core/modules/system/src/Tests/Module/InstallUninstallTest.php
 share/drupal/core/modules/system/src/Tests/Module/ModuleTestBase.php
-share/drupal/core/modules/system/src/Tests/Module/PrepareUninstallTest.php
-share/drupal/core/modules/system/src/Tests/Module/RequiredTest.php
-share/drupal/core/modules/system/src/Tests/Module/VersionTest.php
 share/drupal/core/modules/system/src/Tests/Page/DefaultMetatagsTest.php
 share/drupal/core/modules/system/src/Tests/Pager/PagerTest.php
 share/drupal/core/modules/system/src/Tests/Path/UrlAliasFixtures.php
@@ -7505,6 +7509,7 @@ share/drupal/core/modules/system/tests/fixtures/update/drupal-8.broken_routing.p
 share/drupal/core/modules/system/tests/fixtures/update/drupal-8.config-override-fix.php
 share/drupal/core/modules/system/tests/fixtures/update/drupal-8.editor-editor_update_8001.php
 share/drupal/core/modules/system/tests/fixtures/update/drupal-8.entity-data-revision-metadata-fields-2248983.php
+share/drupal/core/modules/system/tests/fixtures/update/drupal-8.entity-test-initial.php
 share/drupal/core/modules/system/tests/fixtures/update/drupal-8.entity-test-schema-converter-enabled.php
 share/drupal/core/modules/system/tests/fixtures/update/drupal-8.field-schema-data-uninstall-2573667.php
 share/drupal/core/modules/system/tests/fixtures/update/drupal-8.filled.standard.php.gz
@@ -7871,6 +7876,10 @@ share/drupal/core/modules/system/tests/modules/layout_test/src/Plugin/Layout/Lay
 share/drupal/core/modules/system/tests/modules/layout_test/templates/layout-test-1col.html.twig
 share/drupal/core/modules/system/tests/modules/layout_test/templates/layout-test-2col.html.twig
 share/drupal/core/modules/system/tests/modules/layout_test/templates/layout-test-plugin.html.twig
+share/drupal/core/modules/system/tests/modules/lazy_route_provider_install_test/lazy_route_provider_install_test.info.yml
+share/drupal/core/modules/system/tests/modules/lazy_route_provider_install_test/lazy_route_provider_install_test.module
+share/drupal/core/modules/system/tests/modules/lazy_route_provider_install_test/lazy_route_provider_install_test.services.yml
+share/drupal/core/modules/system/tests/modules/lazy_route_provider_install_test/src/PluginManager.php
 share/drupal/core/modules/system/tests/modules/link_generation_test/link_generation_test.info.yml
 share/drupal/core/modules/system/tests/modules/link_generation_test/link_generation_test.module
 share/drupal/core/modules/system/tests/modules/menu_test/config/install/language/nl/menu_test.menu_item.yml
@@ -7904,6 +7913,8 @@ share/drupal/core/modules/system/tests/modules/menu_test/src/TestControllers.php
 share/drupal/core/modules/system/tests/modules/menu_test/src/Theme/TestThemeNegotiator.php
 share/drupal/core/modules/system/tests/modules/module_autoload_test/module_autoload_test.info.yml
 share/drupal/core/modules/system/tests/modules/module_autoload_test/src/SomeClass.php
+share/drupal/core/modules/system/tests/modules/module_cachebin/module_cachebin.info.yml
+share/drupal/core/modules/system/tests/modules/module_cachebin/module_cachebin.services.yml
 share/drupal/core/modules/system/tests/modules/module_handler_test_multiple/module_handler_test_multiple.info.yml
 share/drupal/core/modules/system/tests/modules/module_handler_test_multiple/module_handler_test_multiple.install
 share/drupal/core/modules/system/tests/modules/module_handler_test_multiple/module_handler_test_multiple_child/module_handler_test_multiple_child.info.yml
@@ -7987,6 +7998,7 @@ share/drupal/core/modules/system/tests/modules/requirements1_test/requirements1_
 share/drupal/core/modules/system/tests/modules/requirements1_test/requirements1_test.install
 share/drupal/core/modules/system/tests/modules/requirements2_test/requirements2_test.info.yml
 share/drupal/core/modules/system/tests/modules/router_test_directory/router_test.info.yml
+share/drupal/core/modules/system/tests/modules/router_test_directory/router_test.install
 share/drupal/core/modules/system/tests/modules/router_test_directory/router_test.permissions.yml
 share/drupal/core/modules/system/tests/modules/router_test_directory/router_test.routing.yml
 share/drupal/core/modules/system/tests/modules/router_test_directory/src/Access/DefinedTestAccessCheck.php
@@ -8207,10 +8219,16 @@ share/drupal/core/modules/system/tests/src/Functional/Menu/MenuAccessTest.php
 share/drupal/core/modules/system/tests/src/Functional/Menu/MenuLinkSecurityTest.php
 share/drupal/core/modules/system/tests/src/Functional/Menu/MenuRouterTest.php
 share/drupal/core/modules/system/tests/src/Functional/Module/ClassLoaderTest.php
+share/drupal/core/modules/system/tests/src/Functional/Module/DependencyTest.php
 share/drupal/core/modules/system/tests/src/Functional/Module/ExperimentalModuleTest.php
+share/drupal/core/modules/system/tests/src/Functional/Module/HookRequirementsTest.php
 share/drupal/core/modules/system/tests/src/Functional/Module/InstallTest.php
+share/drupal/core/modules/system/tests/src/Functional/Module/InstallUninstallTest.php
 share/drupal/core/modules/system/tests/src/Functional/Module/ModuleTestBase.php
+share/drupal/core/modules/system/tests/src/Functional/Module/PrepareUninstallTest.php
+share/drupal/core/modules/system/tests/src/Functional/Module/RequiredTest.php
 share/drupal/core/modules/system/tests/src/Functional/Module/UninstallTest.php
+share/drupal/core/modules/system/tests/src/Functional/Module/VersionTest.php
 share/drupal/core/modules/system/tests/src/Functional/ParamConverter/UpcastingTest.php
 share/drupal/core/modules/system/tests/src/Functional/Path/UrlAlterFunctionalTest.php
 share/drupal/core/modules/system/tests/src/Functional/Render/AjaxPageStateTest.php
@@ -8249,6 +8267,7 @@ share/drupal/core/modules/system/tests/src/Functional/Update/DependencyHookInvoc
 share/drupal/core/modules/system/tests/src/Functional/Update/DependencyMissingTest.php
 share/drupal/core/modules/system/tests/src/Functional/Update/DependencyOrderingTest.php
 share/drupal/core/modules/system/tests/src/Functional/Update/EntityUpdateAddRevisionTranslationAffectedTest.php
+share/drupal/core/modules/system/tests/src/Functional/Update/EntityUpdateInitialTest.php
 share/drupal/core/modules/system/tests/src/Functional/Update/EntityUpdateToRevisionableAndPublishableTest.php
 share/drupal/core/modules/system/tests/src/Functional/Update/FieldSchemaDataUninstallUpdateTest.php
 share/drupal/core/modules/system/tests/src/Functional/Update/FilterHtmlUpdateTest.php
@@ -8395,7 +8414,6 @@ share/drupal/core/modules/taxonomy/config/schema/taxonomy.schema.yml
 share/drupal/core/modules/taxonomy/config/schema/taxonomy.views.schema.yml
 share/drupal/core/modules/taxonomy/css/taxonomy.theme.css
 share/drupal/core/modules/taxonomy/migration_templates/d6_taxonomy_term.yml
-share/drupal/core/modules/taxonomy/migration_templates/d6_taxonomy_term_translation.yml
 share/drupal/core/modules/taxonomy/migration_templates/d6_taxonomy_vocabulary.yml
 share/drupal/core/modules/taxonomy/migration_templates/d6_taxonomy_vocabulary_translation.yml
 share/drupal/core/modules/taxonomy/migration_templates/d6_term_node.yml
@@ -8552,7 +8570,6 @@ share/drupal/core/modules/taxonomy/tests/src/Functional/VocabularyUiTest.php
 share/drupal/core/modules/taxonomy/tests/src/Kernel/Migrate/MigrateTaxonomyConfigsTest.php
 share/drupal/core/modules/taxonomy/tests/src/Kernel/Migrate/MigrateTaxonomyTermStubTest.php
 share/drupal/core/modules/taxonomy/tests/src/Kernel/Migrate/d6/MigrateTaxonomyTermTest.php
-share/drupal/core/modules/taxonomy/tests/src/Kernel/Migrate/d6/MigrateTaxonomyTermTranslationTest.php
 share/drupal/core/modules/taxonomy/tests/src/Kernel/Migrate/d6/MigrateTaxonomyVocabularyTest.php
 share/drupal/core/modules/taxonomy/tests/src/Kernel/Migrate/d6/MigrateTaxonomyVocabularyTranslationTest.php
 share/drupal/core/modules/taxonomy/tests/src/Kernel/Migrate/d6/MigrateTermNodeRevisionTest.php
@@ -10221,6 +10238,7 @@ share/drupal/core/tests/Drupal/FunctionalTests/Image/ToolkitSetupFormTest.php
 share/drupal/core/tests/Drupal/FunctionalTests/Image/ToolkitTest.php
 share/drupal/core/tests/Drupal/FunctionalTests/Image/ToolkitTestBase.php
 share/drupal/core/tests/Drupal/FunctionalTests/Routing/CaseInsensitivePathTest.php
+share/drupal/core/tests/Drupal/FunctionalTests/Routing/LazyRouteProviderInstallTest.php
 share/drupal/core/tests/Drupal/FunctionalTests/Routing/PathEncodedTest.php
 share/drupal/core/tests/Drupal/FunctionalTests/Theme/BartikTest.php
 share/drupal/core/tests/Drupal/FunctionalTests/Theme/ClassyTest.php
@@ -10953,6 +10971,8 @@ share/drupal/core/tests/Drupal/Tests/Listeners/DrupalComponentTestListener.php
 share/drupal/core/tests/Drupal/Tests/Listeners/DrupalStandardsListener.php
 share/drupal/core/tests/Drupal/Tests/Listeners/HtmlOutputPrinter.php
 share/drupal/core/tests/Drupal/Tests/Listeners/SimpletestUiPrinter.php
+share/drupal/core/tests/Drupal/Tests/PhpunitCompatibilityTrait.php
+share/drupal/core/tests/Drupal/Tests/PhpunitCompatibilityTraitTest.php
 share/drupal/core/tests/Drupal/Tests/RandomGeneratorTrait.php
 share/drupal/core/tests/Drupal/Tests/SchemaCheckTestTrait.php
 share/drupal/core/tests/Drupal/Tests/SessionTestTrait.php
