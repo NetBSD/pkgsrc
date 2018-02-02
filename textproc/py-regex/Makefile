@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/12/13 08:31:16 adam Exp $
+# $NetBSD: Makefile,v 1.8 2018/02/02 12:49:58 adam Exp $
 
-DISTNAME=	regex-2017.12.12
+DISTNAME=	regex-2018.01.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/regex/}
@@ -13,14 +13,13 @@ LICENSE=	python-software-foundation
 .include "../../lang/python/pyversion.mk"
 
 .if !empty(_PYTHON_VERSION:M3*)
-TESTDIR=${WRKSRC}/regex_3
+TESTDIR=	${WRKSRC}/regex_3
 .else
-TESTDIR=${WRKSRC}/regex_2
+TESTDIR=	${WRKSRC}/regex_2
 .endif
 
 EGG_NAME=	${DISTNAME:S/.0/./g}
 
-# needs 'make install' first
 do-test:
 	cd ${TESTDIR} && ${PYTHONBIN} test_regex.py
 
