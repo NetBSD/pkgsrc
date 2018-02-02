@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/06/05 14:24:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2018/02/02 13:55:04 jperkin Exp $
 
 DISTNAME=		lldpd-0.7.15
 PKGREVISION=		4
@@ -20,6 +20,8 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-privsep-chroot=${PKG_HOME._lldpd}
+# Leave pkgsrc to handle security features.
+CONFIGURE_ARGS+=	--disable-hardening
 # run/lldpd.socket is created under this directory
 # (the default is ${PRERIX}/var, changed since 0.7.9)
 CONFIGURE_ARGS+=       --localstatedir=${VARBASE}
