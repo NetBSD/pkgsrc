@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.491 2018/02/02 10:20:25 wen Exp $
+$NetBSD: CHANGES-2018,v 1.492 2018/02/02 10:41:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -758,3 +758,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-django-admin-rangefilter to 0.3.1 [adam 2018-02-02]
 	Updated www/py-cfscrape to 1.9.3 [adam 2018-02-02]
 	Updated databases/p5-SQL-Abstract to 1.85 [wen 2018-02-02]
+	Updated net/haproxy to 1.8.3 [adam 2018-02-02]
+	Updated print/py-weasyprint to 0.42.1 [adam 2018-02-02]
