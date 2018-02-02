@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.7 2018/01/02 12:18:15 fhajny Exp $
+$NetBSD: patch-configure,v 1.8 2018/02/02 10:03:05 jperkin Exp $
 
 Regen after excluding -latomic test on NetBSD.
+Leave pkgsrc to handle security features.
 
 --- configure.orig	2017-11-30 09:43:31.000000000 +0000
 +++ configure
@@ -33,6 +34,15 @@ Regen after excluding -latomic test on NetBSD.
      ;;
    esac
  
+@@ -6797,7 +6804,7 @@ rm -f core conftest.err conftest.$ac_obj
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $gl_cv_warn_cxx__fstack_protector" >&5
+ $as_echo "$gl_cv_warn_cxx__fstack_protector" >&6; }
+-if test "x$gl_cv_warn_cxx__fstack_protector" = xyes; then :
++if test "x$gl_cv_warn_cxx__fstack_protector" = xDISABLED; then :
+ 
+         CFLAGS="-fstack-protector $CFLAGS"
+         CXXFLAGS="-fstack-protector $CXXFLAGS"
 @@ -20586,7 +20593,7 @@ fi
  
    if test "x$PG_CONFIG" != "x" -o "x$PGSQL_LIBS" = "x"; then :
