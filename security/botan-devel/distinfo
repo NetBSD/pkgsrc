@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.13 2017/04/10 21:14:45 joerg Exp $
+$NetBSD: distinfo,v 1.14 2018/02/02 13:56:35 jperkin Exp $
 
 SHA1 (Botan-2.1.0.tgz) = a754303f0fc5dc6e187dc80d1316f9fdb20cde1f
 RMD160 (Botan-2.1.0.tgz) = b736e1820aa4315095248ebdf119a5c6b493616d
 SHA512 (Botan-2.1.0.tgz) = af9ea35baf431500d380a360525e20e67dd17fdeaa442726019d544e9e423c301196cc17b09a3831f956ca9e62d7e99797f129b26fac10a653dd04e3ad1f4f4f
 Size (Botan-2.1.0.tgz) = 5073684 bytes
+SHA1 (patch-configure.py) = 188c466dc1427b65ef1790eabda04995442df6ed
 SHA1 (patch-src_build-data_os_openbsd.txt) = 4b187abcca4652a780386a6817033e4b6cdeafa8
 SHA1 (patch-src_build-data_os_solaris.txt) = de351e82e261c1f9e8668ecca606f3776cfa9eb2
 SHA1 (patch-src_lib_utils_locking__allocator_info.txt) = 30dd9043e1fa7befdf6933778e5c729fcb88263d
