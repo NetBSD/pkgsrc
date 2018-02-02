@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.492 2018/02/02 10:41:00 adam Exp $
+$NetBSD: CHANGES-2018,v 1.493 2018/02/02 11:53:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -760,3 +760,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/p5-SQL-Abstract to 1.85 [wen 2018-02-02]
 	Updated net/haproxy to 1.8.3 [adam 2018-02-02]
 	Updated print/py-weasyprint to 0.42.1 [adam 2018-02-02]
+	Updated devel/py-test to 3.4.0 [adam 2018-02-02]
+	Updated devel/py-isort to 4.3.0 [adam 2018-02-02]
