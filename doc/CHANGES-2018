@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.495 2018/02/02 12:20:36 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.496 2018/02/02 12:50:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -764,3 +764,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-isort to 4.3.0 [adam 2018-02-02]
 	Updated graphics/leptonica to 1.75.1 [adam 2018-02-02]
 	Updated sysutils/consul to 1.0.3 [fhajny 2018-02-02]
+	Updated www/py-django-filter to 1.1.0 [adam 2018-02-02]
+	Updated textproc/py-regex to 2018.01.10 [adam 2018-02-02]
