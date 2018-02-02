@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/10/09 22:38:12 brook Exp $
+$NetBSD: distinfo,v 1.2 2018/02/02 00:25:41 minskim Exp $
 
-SHA1 (R/curl_3.0.tar.gz) = 8caefb774c13b095f4454e45e0fee65dce786b75
-RMD160 (R/curl_3.0.tar.gz) = 646b85310b489035729640fdec5ff8ac5c012ed1
-SHA512 (R/curl_3.0.tar.gz) = 3271053b5a84006b93e9463e209830055d76c5c3074d045b340f14cde40242e289e29822952550ce6ef34d4c341666ae58832b0b3f7f58718931b36ca998a1df
-Size (R/curl_3.0.tar.gz) = 412212 bytes
+SHA1 (R/curl_3.1.tar.gz) = 40e08eefd357af1644693919e86214b81085eee2
+RMD160 (R/curl_3.1.tar.gz) = d8103fb1ac8ec0b9a2c45586de37ffc274162224
+SHA512 (R/curl_3.1.tar.gz) = de6f3539d112f49dfa587c11e72c2a9b6cbf3957451ce0cb49255fd4625cc57f9a6587acad82b95a28cd1a04dc81b565c3960a30c1323fc92003a94a916b8ded
+Size (R/curl_3.1.tar.gz) = 366086 bytes
