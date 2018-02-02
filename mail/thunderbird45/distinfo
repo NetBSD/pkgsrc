@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2017/04/27 13:38:18 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2018/02/02 00:20:45 rillig Exp $
 
 SHA1 (thunderbird-45.8.0.source.tar.xz) = 36fc106885d612966ec3be047f4e7d3fa06dc04a
 RMD160 (thunderbird-45.8.0.source.tar.xz) = 8d4ab2feabee0402fbfe38168c51187b1f26221d
@@ -110,7 +110,7 @@ SHA1 (patch-mozilla_media_webrtc_trunk_webrtc_modules_desktop__capture_screen__c
 SHA1 (patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc) = 24455230e1a857824584af86b988036321f8c0aa
 SHA1 (patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc) = 8187760eeaa2c466b629b21cd8d3d460e532497f
 SHA1 (patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_video__capture.gypi) = 7dcd8e86e18bb39bb07864483927e89f0199e629
-SHA1 (patch-mozilla_media_webrtc_trunk_webrtc_system__wrappers_source_spreadsortlib_spreadsort.hpp) = 8bc15ea9afab20f004275522e060e70f699f0862
+SHA1 (patch-mozilla_media_webrtc_trunk_webrtc_system__wrappers_source_spreadsortlib_spreadsort.hpp) = 16917ed4d0a4d5a7f6e42e13908eadd312f8dc18
 SHA1 (patch-mozilla_memory_build_mozjemalloc__compat.c) = aad27fb03be2d1fcc543f4f38ac5deb4f8e962f7
 SHA1 (patch-mozilla_memory_mozalloc_mozalloc__abort.cpp) = 2c2169296c3388fa49f57f55193ebc94892b2c91
 SHA1 (patch-mozilla_memory_volatile_VolatileBufferOSX.cpp) = 87a53581e32009c124437a277a26abef52d8b197
