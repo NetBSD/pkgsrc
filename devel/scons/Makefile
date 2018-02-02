@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2017/11/29 09:09:03 adam Exp $
+# $NetBSD: Makefile,v 1.42 2018/02/02 15:34:38 jperkin Exp $
 
 DISTNAME=	scons-3.0.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scons/}
 MASTER_SITES+=	${MASTER_SITE_PYPI:=S/SCons/}
@@ -18,6 +19,11 @@ REPLACE_PYTHON+=	script/sconsign
 # scons-3.0.0 works with python-3.x, but not the many packages
 # that have SConstruct files that only work with python-2.x
 PYTHON_VERSIONS_ACCEPTED=	27
+
+SUBST_CLASSES+=		rflag
+SUBST_STAGE.rflag=	pre-configure
+SUBST_FILES.rflag=	engine/SCons/Tool/gnulink.py
+SUBST_SED.rflag=	-e 's|-Wl,-rpath=|${COMPILER_RPATH_FLAG}|g'
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
