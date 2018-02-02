@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.485 2018/02/02 04:15:18 wen Exp $
+$NetBSD: CHANGES-2018,v 1.486 2018/02/02 06:54:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -748,3 +748,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/p5-DBI to 1.640 [wen 2018-02-02]
 	Updated www/drupal8 to 8.4.4 [wen 2018-02-02]
 	Updated lang/yabasic to 2.78.3 [wen 2018-02-02]
+	Updated devel/p5-Devel-CheckOS to 1.81 [wen 2018-02-02]
