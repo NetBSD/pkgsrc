@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/08/06 15:03:30 mef Exp $
+# $NetBSD: Makefile,v 1.5 2018/02/02 10:31:07 jperkin Exp $
 
 DISTNAME=	cmocka-1.0.1
 CATEGORIES=	devel
@@ -11,11 +11,11 @@ COMMENT=	Unit testing framework for C supporing mock objects
 LICENSE=	apache-2.0
 
 USE_CMAKE=	yes
-WRKSRC=		${WRKDIR}/${DISTNAME}/build
-CMAKE_ARG_PATH=	${WRKDIR}/${DISTNAME}
+
+CONFIGURE_DIRS=	${WRKDIR}/build
+CMAKE_ARG_PATH=	${WRKSRC}
 
 post-extract:
-		mkdir -p ${WRKSRC}
-		rm -f ${WRKDIR}/${DISTNAME}/CMakeCache.txt
+	${MKDIR} ${WRKDIR}/build
 
 .include "../../mk/bsd.pkg.mk"
