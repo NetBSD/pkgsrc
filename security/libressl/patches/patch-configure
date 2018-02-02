@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2018/02/02 13:46:00 jperkin Exp $
+
+Leave pkgsrc to handle security features.
+
+--- configure.orig	2017-05-01 04:09:13.000000000 +0000
++++ configure
+@@ -12758,8 +12758,6 @@ fi
+ 	CC="$saved_CC"
+ 	LD="$saved_LD"
+ 
+-	CFLAGS="$CFLAGS $HARDEN_CFLAGS"
+-	LDFLAGS="$LDFLAGS $HARDEN_LDFLAGS"
+ 
+ 
+ 
