@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/11/28 15:50:56 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2018/02/02 10:10:34 jperkin Exp $
 
 DISTNAME=	di-4.44
 CATEGORIES=	sysutils
@@ -18,6 +18,9 @@ MAKE_ENV+=	prefix=${PREFIX} \
 		INSTALL_DIR=${DESTDIR}${PREFIX} \
 		INST_LOCALEDIR=${DESTDIR}${PREFIX}/${PKGLOCALEDIR}/locale \
 		DI_MANINSTDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
+
+# Leave pkgsrc to handle security features.
+MAKE_ENV+=	NO_PIE=yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
