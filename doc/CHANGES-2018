@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.497 2018/02/02 12:52:34 jdolecek Exp $
+$NetBSD: CHANGES-2018,v 1.498 2018/02/02 12:54:01 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -767,3 +767,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-django-filter to 1.1.0 [adam 2018-02-02]
 	Updated textproc/py-regex to 2018.01.10 [adam 2018-02-02]
 	Updated lang/php72 to 7.2.2 [jdolecek 2018-02-02]
+	Updated lang/php71 to 7.1.14 [jdolecek 2018-02-02]
