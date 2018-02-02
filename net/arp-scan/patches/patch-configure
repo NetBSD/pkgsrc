@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.3 2018/02/02 10:33:15 jperkin Exp $
+
+Leave pkgsrc to handle security features.
+
+--- configure.orig	2013-07-24 09:05:11.000000000 +0000
++++ configure
+@@ -3830,7 +3830,7 @@ else
+ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+     echo $ssp_cc
+-    if test "X$ssp_cc" = "Xno"; then
++    if true; then
+       CFLAGS="$ssp_old_cflags"
+     else
+ 
