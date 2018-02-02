@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/05/22 22:28:48 joerg Exp $
+$NetBSD: distinfo,v 1.2 2018/02/02 12:41:30 adam Exp $
 
-SHA1 (django-filter-1.0.4.tar.gz) = 5115f0f8e91ab32fdcedb473bfa874d48507ea17
-RMD160 (django-filter-1.0.4.tar.gz) = 52ad603fd3fd1156cedd50afecc9b8f2b7879a7f
-SHA512 (django-filter-1.0.4.tar.gz) = 69dcd906921f8d7bdd57959899942c7c388b63fec276d6155db825873464d5fc5596c700064f80246d794626cc6e4f299fcd8b38a3bf5c1887fd5997a2acfd6f
-Size (django-filter-1.0.4.tar.gz) = 123337 bytes
+SHA1 (django-filter-1.1.0.tar.gz) = 468dc426a935466b37fd454a87220dc4ae4f93d1
+RMD160 (django-filter-1.1.0.tar.gz) = 3c6df0f4b957e85cc7083f623e26f8d5b06b93cc
+SHA512 (django-filter-1.1.0.tar.gz) = edc9d8f9379acfe56cd5170a8a881553d3d1591bba75d12bbc10fb6535165213a90abb8a492facf85b72e81f55c02c3a0dc205d1a84b65ed132f58436f227ae7
+Size (django-filter-1.1.0.tar.gz) = 127831 bytes
