@@ -1,7 +1,9 @@
-$NetBSD: patch-.._include_cmocka.h,v 1.1 2015/03/31 15:13:06 joerg Exp $
+$NetBSD: patch-include_cmocka.h,v 1.1 2018/02/02 10:31:07 jperkin Exp $
 
---- ../include/cmocka.h.orig	2015-03-25 16:04:39.000000000 +0000
-+++ ../include/cmocka.h
+C99 fix.
+
+--- include/cmocka.h.orig	2015-03-25 16:04:39.000000000 +0000
++++ include/cmocka.h
 @@ -100,6 +100,11 @@ typedef uintmax_t LargestIntegralType;
      ((LargestIntegralType)(value))
  

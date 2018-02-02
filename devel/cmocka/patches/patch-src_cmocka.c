@@ -1,7 +1,9 @@
-$NetBSD: patch-.._src_cmocka.c,v 1.1 2015/06/08 13:38:50 joerg Exp $
+$NetBSD: patch-src_cmocka.c,v 1.1 2018/02/02 10:31:07 jperkin Exp $
 
---- ../src/cmocka.c.orig	2015-06-08 12:54:44.000000000 +0000
-+++ ../src/cmocka.c
+C99 fix.
+
+--- src/cmocka.c.orig	2015-06-08 12:54:44.000000000 +0000
++++ src/cmocka.c
 @@ -960,7 +960,7 @@ static int memory_equal_display_error(co
      }
      if (differences) {
