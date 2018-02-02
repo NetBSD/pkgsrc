@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.5 2018/01/16 10:49:57 jperkin Exp $
+$NetBSD: patch-configure,v 1.6 2018/02/02 12:50:38 jdolecek Exp $
 
 Don't automatically add libgcc on SunOS.
 
---- configure.orig	2018-01-02 22:35:52.000000000 +0000
+--- configure.orig	2018-01-30 10:33:52.000000000 +0000
 +++ configure
 @@ -5461,9 +5461,6 @@ fi
  case $host_alias in
@@ -51,16 +51,7 @@ Don't automatically add libgcc on SunOS.
  
  
    unique=`echo $header_file|$SED 's/[^a-zA-Z0-9]/_/g'`
-@@ -23626,7 +23602,7 @@ fi
- 
-     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for libcurl.pc" >&5
- $as_echo_n "checking for libcurl.pc... " >&6; }
--    if test "$PHP_CURL" == "yes" -o "$PHP_CURL" == "/usr"; then
-+    if test "$PHP_CURL" = "yes" -o "$PHP_CURL" = "/usr"; then
-       PKNAME=libcurl
-       { $as_echo "$as_me:${as_lineno-$LINENO}: result: using default path" >&5
- $as_echo "using default path" >&6; }
-@@ -95975,12 +95951,7 @@ old_CC=$CC
+@@ -96116,12 +96092,7 @@ old_CC=$CC
  if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
    CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
    INLINE_CFLAGS="$INLINE_CFLAGS $ac_cv_pthreads_cflags"
