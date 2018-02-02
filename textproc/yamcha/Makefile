@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/07/09 06:39:08 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/02/02 15:40:48 jperkin Exp $
 #
 
 .include "Makefile.common"
@@ -10,7 +10,7 @@ COMMENT=	Yet Another Multipurpose CHunk Annotator
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 USE_TOOLS+=	perl:run gzip:run
 
 CONFIGURE_ENV+=		ac_cv_path_GZIP=${TOOLS_PATH.gzip:Q}
