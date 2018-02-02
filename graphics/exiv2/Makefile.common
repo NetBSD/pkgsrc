@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2018/02/02 09:45:02 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2018/02/02 17:43:51 jperkin Exp $
 #
 # used by graphics/exiv2/Makefile
 # used by graphics/exiv2-organize/Makefile
@@ -14,7 +14,7 @@ HOMEPAGE=	http://www.exiv2.org/
 COMMENT=	Image metadata manipulation
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${.CURDIR}/work/${DISTNAME:S/${VER}-//}
+WRKSRC=		${WRKDIR}/${DISTNAME:S/${VER}-//}
 DISTINFO_FILE=	${.CURDIR}/../../graphics/exiv2/distinfo
 PATCHDIR=	${.CURDIR}/../../graphics/exiv2/patches
 
