@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2018/01/29 21:54:22 leot Exp $
+# $NetBSD: Makefile,v 1.64 2018/02/02 16:46:49 khorben Exp $
 
 DISTNAME=	mpv-0.27.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mpv-player/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -21,6 +21,8 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 BUILD_DEPENDS+=	waf>=1.8.12:../../devel/waf
 
 WAF_CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
+WAF_CONFIGURE_ARGS+=	--enable-dvdnav
+WAF_CONFIGURE_ARGS+=	--enable-dvdread
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
@@ -62,6 +64,7 @@ post-install:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/waf/waf.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
