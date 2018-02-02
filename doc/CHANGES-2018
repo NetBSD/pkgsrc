@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.489 2018/02/02 08:39:33 adam Exp $
+$NetBSD: CHANGES-2018,v 1.490 2018/02/02 08:52:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -755,3 +755,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-hypothesis to 3.44.24 [adam 2018-02-02]
 	Updated www/py-swiftclient to 3.5.0 [adam 2018-02-02]
 	Updated archivers/py-lz4 to 0.19.2 [adam 2018-02-02]
+	Updated www/py-django-admin-rangefilter to 0.3.1 [adam 2018-02-02]
+	Updated www/py-cfscrape to 1.9.3 [adam 2018-02-02]
