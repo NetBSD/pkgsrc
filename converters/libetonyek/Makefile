@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2018/01/01 21:18:06 adam Exp $
+# $NetBSD: Makefile,v 1.18 2018/02/02 23:55:20 ryoon Exp $
 
-DISTNAME=	libetonyek-0.1.6
-PKGREVISION=	5
+DISTNAME=	libetonyek-0.1.7
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://wiki.documentfoundation.org/DLP/Libraries/libetonyek
@@ -27,7 +26,7 @@ PKGCONFIG_OVERRIDE+=	libetonyek.pc.in
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/librevenge/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/mdds/buildlink3.mk"
+.include "../../devel/mdds1.2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/glm/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
