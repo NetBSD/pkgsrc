@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2018/02/01 16:45:57 he Exp $
+# $NetBSD: Makefile.common,v 1.8 2018/02/02 09:45:02 wiz Exp $
 #
 # used by graphics/exiv2/Makefile
 # used by graphics/exiv2-organize/Makefile
@@ -17,6 +17,9 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${.CURDIR}/work/${DISTNAME:S/${VER}-//}
 DISTINFO_FILE=	${.CURDIR}/../../graphics/exiv2/distinfo
 PATCHDIR=	${.CURDIR}/../../graphics/exiv2/patches
+
+# for msgfilter
+BUILD_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
 
 GCC_REQD+=		3.3
 USE_LANGUAGES=		c c++
