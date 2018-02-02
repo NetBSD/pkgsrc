@@ -1,22 +1,18 @@
-$NetBSD: distinfo,v 1.12 2018/01/16 10:49:56 jperkin Exp $
+$NetBSD: distinfo,v 1.13 2018/02/02 12:50:38 jdolecek Exp $
 
-SHA1 (php-7.2.1.tar.bz2) = 3e5ad89b44fb83b9c356ba11c1c62b9ff3fad633
-RMD160 (php-7.2.1.tar.bz2) = 1959cd1fff0b222d20afd0aaf57f4c557ce72b51
-SHA512 (php-7.2.1.tar.bz2) = e9b6c013a06a771c2fa7581e49e6d6e019fe8fc6f8881a43905f7e87df5fc05420559fe40fb663d272ffc5cc188c4ef7c3ca835f5c542a28ca8de1cd42782865
-Size (php-7.2.1.tar.bz2) = 14980278 bytes
-SHA1 (patch-configure) = 277e60446932fabb5ad1c696052de1c0a6248dc8
-SHA1 (patch-ext_curl_config.m4) = 86a293d57aafcd42d1feab4a6d0d4f88dbcfb5c8
+SHA1 (php-7.2.2.tar.bz2) = 69903dabf7ceb4a84620683092e235b29d2d1066
+RMD160 (php-7.2.2.tar.bz2) = c7193e0298ae8e709ad19129023ff213085f50ca
+SHA512 (php-7.2.2.tar.bz2) = d2bc3725b51c61ded552cfde276bbe0f9e4cce3401303219d3784497d7f989e4a23c673fd2d2a827b7823664f922eededed0d242dc70a6f4863ce4f89573d211
+Size (php-7.2.2.tar.bz2) = 14618006 bytes
+SHA1 (patch-configure) = 5dad0ba760f5fb6aa55dc3136655b78c29e23bca
 SHA1 (patch-ext_gd_config.m4) = 67730ccc13410adaf8829f77a6b044f16e412489
 SHA1 (patch-ext_imap_config.m4) = f4e10ab81697b72019313f63bc630627a08efd92
 SHA1 (patch-ext_pcre_pcrelib_config.h) = c5fba95856628f68639fe63feeef04a5f83d3916
-SHA1 (patch-ext_pdo__mysql_config.m4) = f7026001b9c40ae92f13400bd8002e59d4c17311
-SHA1 (patch-ext_pdo_config.m4) = 95f3c1ccf696f6686da320e309b48cfcaadb5e43
 SHA1 (patch-ext_phar_Makefile.frag) = 558869b60f8ed6674a3ba1d595a65f010df4c426
 SHA1 (patch-ext_phar_phar_phar.php) = f630e3946b21b76d4fe857a43e00e25c9445f2c8
 SHA1 (patch-ext_recode_recode.c) = 639bf762302c7a30c88d3f3fa862494e0f847bdb
 SHA1 (patch-ext_sqlite3_libsqlite_sqlite3.c) = 8a529a1b3f7c97731f2e719d006f67c3a7259bb5
 SHA1 (patch-ext_xsl_php__xsl.h) = a9877bff7bacc77926a4541a0ac171c00ad1a627
-SHA1 (patch-makedist) = 3e796ab59bece3f762f41fd0c6f142c88c2d88a8
 SHA1 (patch-php.ini-development) = dd65962000ec06439fae3c9bf252fa46be4e33fd
 SHA1 (patch-php.ini-production) = ae61dffedf574b688fe576b0b2af748b7a28cd89
 SHA1 (patch-run-tests.php) = 86c4d3f03eb8e31b5a35820f426533c9478571fb
