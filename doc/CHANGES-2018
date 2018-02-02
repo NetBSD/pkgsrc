@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.501 2018/02/02 15:36:18 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.502 2018/02/02 15:41:03 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -771,3 +771,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/tcl-scotty to 2.1.11nb14 [he 2018-02-02]
 	Updated devel/scons to 3.0.1nb1 [jperkin 2018-02-02]
 	Updated security/py-certbot to 0.21.1 [fhajny 2018-02-02]
+	Updated net/py-lexicon to 2.1.19 [fhajny 2018-02-02]
