@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2017/06/05 14:24:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.67 2018/02/02 00:20:45 rillig Exp $
 
 DISTNAME=	sympa-6.2.16
 #PKGREVISION=	3
@@ -161,7 +161,7 @@ CONF_FILES=	${PREFIX}/share/examples/sympa/sympa.conf \
     folder.png h.png image2.png junk.png left.png link.png locked.png \
     logo-s-lock.png logo-s.png logo_sympa.png movie.png new_list.png \
     position.png right.png search.png sound1.png spinner.gif subscribe.png \
-    sv.png text.png top.png unknown.png 
+    sv.png text.png top.png unknown.png
 CONF_FILES+=	${PREFIX}/sympa/static_content/icons/${f} \
 		${SYMPA_VARBASE}/list_data/static_content/icons/${f}
 .endfor

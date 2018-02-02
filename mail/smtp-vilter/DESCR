@@ -23,6 +23,6 @@ dynamically when smtp-vilter starts.  All backends have their own configuration
 file.
 
 smtp-vilter is documented in the following manpages:
-	
+
 	smtp-vilter(8)			Running the smtp-vilter
 	smtp-vilter.conf(5)		The smtp-vilter config file
