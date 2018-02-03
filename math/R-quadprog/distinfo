@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/03 01:48:14 minskim Exp $
+
+SHA1 (R/quadprog_1.5-5.tar.gz) = 7b6f356d4d720131389356b0c8927a5af3bda06a
+RMD160 (R/quadprog_1.5-5.tar.gz) = 21b35982b8957c07f56a2643b651752f1f22dabd
+SHA512 (R/quadprog_1.5-5.tar.gz) = aee3e1ca5e298c5136a101ca47f00f0d1945eb32c3b0e14dd8a4c98a8d621ee4dba04a1b4119c1aab07e9f45c6ee98a02c132e1cb9e19001c9502876ac55a2dc
+Size (R/quadprog_1.5-5.tar.gz) = 33651 bytes
