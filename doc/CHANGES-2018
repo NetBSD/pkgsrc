@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.521 2018/02/03 15:23:32 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.522 2018/02/03 17:32:32 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -792,3 +792,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/mpfr to 4.0.0nb1 [gson 2018-02-03]
 	Added devel/py-mox version 0.5.3 [bsiegert 2018-02-03]
 	Added net/py-gcs-oauth2-boto-plugin version 1.14 [bsiegert 2018-02-03]
+	Added lang/zenlisp version 0.0.20131122 [kamil 2018-02-03]
