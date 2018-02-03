@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/03 00:06:29 ryoon Exp $
+bin/qxp2raw
+bin/qxp2svg
+bin/qxp2text
+include/libqxp-0.0/libqxp/QXPDocument.h
+include/libqxp-0.0/libqxp/QXPPathResolver.h
+include/libqxp-0.0/libqxp/libqxp.h
+include/libqxp-0.0/libqxp/libqxp_api.h
+lib/libqxp-0.0.la
+lib/pkgconfig/libqxp-0.0.pc
