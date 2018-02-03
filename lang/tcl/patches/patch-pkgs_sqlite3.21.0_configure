@@ -1,13 +1,13 @@
-$NetBSD: patch-pkgs_thread2.8.1_configure,v 1.1 2017/08/25 11:05:33 adam Exp $
+$NetBSD: patch-pkgs_sqlite3.21.0_configure,v 1.1 2018/02/03 17:51:19 adam Exp $
 
 Add support for DragonFly.
 
 Honor LDFLAGS on NetBSD.
 https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
 
---- pkgs/thread2.8.1/configure.orig	2017-05-23 13:17:07.000000000 +0000
-+++ pkgs/thread2.8.1/configure
-@@ -7514,7 +7514,7 @@ fi
+--- pkgs/sqlite3.21.0/configure.orig	2017-12-21 13:58:19.000000000 +0000
++++ pkgs/sqlite3.21.0/configure
+@@ -7399,7 +7399,7 @@ fi
  fi
  	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
  	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so${SHLIB_VERSION}'
@@ -16,7 +16,7 @@ https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
  	    CFLAGS_OPTIMIZE="-O2"
  	    if test "${TCL_THREADS}" = "1"; then :
  
-@@ -7525,13 +7525,11 @@ fi
+@@ -7410,13 +7410,11 @@ fi
  
  fi
  	    # OpenBSD doesn't do version numbers with dots.
@@ -26,12 +26,12 @@ https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
  	NetBSD-*)
  	    # NetBSD has ELF and can use 'cc -shared' to build shared libs
  	    SHLIB_CFLAGS="-fPIC"
--	    SHLIB_LD='${CC} -shared ${SHLIB_CFLAGS}'
-+	    SHLIB_LD='${CC} -shared ${SHLIB_CFLAGS} ${LDFLAGS_DEFAULT}'
+-	    SHLIB_LD='${CC} ${SHLIB_CFLAGS} -shared'
++	    SHLIB_LD='${CC} ${SHLIB_CFLAGS} -shared ${LDFLAGS_DEFAULT}'
  	    SHLIB_SUFFIX=".so"
  	    LDFLAGS="$LDFLAGS -export-dynamic"
  	    if test $doRpath = yes; then :
-@@ -7548,7 +7546,7 @@ fi
+@@ -7433,7 +7431,7 @@ fi
  
  fi
  	    ;;
@@ -40,7 +40,7 @@ https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
  	    # This configuration from FreeBSD Ports.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="${CC} -shared"
-@@ -7570,10 +7568,6 @@ fi
+@@ -7455,10 +7453,6 @@ fi
  	    case $system in
  	    FreeBSD-3.*)
  		# Version numbers are dot-stripped by system policy.
@@ -51,7 +51,7 @@ https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
  		;;
  	    esac
  	    ;;
-@@ -8184,7 +8178,7 @@ fi
+@@ -8069,7 +8063,7 @@ fi
  	    BSD/OS*) ;;
  	    CYGWIN_*|MINGW32_*) ;;
  	    IRIX*) ;;
