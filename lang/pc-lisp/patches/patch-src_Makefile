@@ -1,0 +1,21 @@
+$NetBSD: patch-src_Makefile,v 1.1 2018/02/03 20:26:31 kamil Exp $
+
+Pass CFLAGS and LDFLAGS.
+
+--- src/Makefile.orig	2015-07-22 00:49:58.000000000 +0000
++++ src/Makefile
+@@ -31,12 +31,12 @@ buuntrac.c buwhile.c buzaplin.c buzerop.
+ lierror.c lieval.c liinst.c limain.c limkstak.c limman.c liscan.c \
+ lithrow.c litrace.c liutils.c
+ 
+-CFLAGS = -Wall -Wno-parentheses -O3
++CFLAGS ?= -Wall -Wno-parentheses -O3
+ 
+ OBJ = $(SRC:.c=.o)
+ 
+ pc-lisp : $(OBJ)
+-	gcc -o $@ $^ -lm
++	gcc $(CFLAGS) $(LDFLAGS) -o $@ $^ -lm
+ 
+ 
+ $(OBJ) : lisp.h
