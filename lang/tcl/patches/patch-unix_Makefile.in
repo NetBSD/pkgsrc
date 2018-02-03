@@ -1,8 +1,8 @@
-$NetBSD: patch-unix_Makefile.in,v 1.13 2017/08/25 11:05:33 adam Exp $
+$NetBSD: patch-unix_Makefile.in,v 1.14 2018/02/03 17:51:19 adam Exp $
 
 Honour LDFLAGS.
 
---- unix/Makefile.in.orig	2016-07-26 14:07:18.000000000 +0000
+--- unix/Makefile.in.orig	2017-12-21 18:16:25.000000000 +0000
 +++ unix/Makefile.in
 @@ -8,6 +8,7 @@ VERSION 		= @TCL_VERSION@
  MAJOR_VERSION		= @TCL_MAJOR_VERSION@
@@ -106,8 +106,8 @@ Honour LDFLAGS.
  		echo "Making directory $(SCRIPT_INSTALL_DIR)/$$i"; \
 @@ -842,6 +858,8 @@ install-libraries: libraries
  	    done;
- 	@echo "Installing package http 2.8.11 as a Tcl Module";
- 	@$(INSTALL_DATA) $(TOP_DIR)/library/http/http.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.6/http-2.8.11.tm;
+ 	@echo "Installing package http 2.8.12 as a Tcl Module";
+ 	@$(INSTALL_DATA) $(TOP_DIR)/library/http/http.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.6/http-2.8.12.tm;
 +	@$(INSTALL_DATA) $(TOP_DIR)/library/http/http.tcl "$(SCRIPT_INSTALL_DIR)"/http/http.tcl;
 +	@$(INSTALL_DATA) $(TOP_DIR)/library/http/pkgIndex.tcl "$(SCRIPT_INSTALL_DIR)"/http/pkgIndex.tcl;
  	@echo "Installing package opt0.4 files to $(SCRIPT_INSTALL_DIR)/opt0.4/";
