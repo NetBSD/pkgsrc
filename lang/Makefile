@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.473 2018/01/27 11:00:51 kamil Exp $
+# $NetBSD: Makefile,v 1.474 2018/02/03 17:31:45 kamil Exp $
 #
 
 COMMENT=	Programming languages
@@ -269,5 +269,6 @@ SUBDIR+=	vslisp
 SUBDIR+=	wsbasic
 SUBDIR+=	yabasic
 SUBDIR+=	yap
+SUBDIR+=	zenlisp
 
 .include "../mk/misc/category.mk"
