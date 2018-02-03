@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.523 2018/02/03 17:53:49 adam Exp $
+$NetBSD: CHANGES-2018,v 1.524 2018/02/03 20:29:06 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -795,3 +795,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added lang/zenlisp version 0.0.20131122 [kamil 2018-02-03]
 	Updated lang/tcl to 8.6.8 [adam 2018-02-03]
 	Updated x11/tk to 8.6.8 [adam 2018-02-03]
+	Added lang/pc-lisp version 6.0 [kamil 2018-02-03]
