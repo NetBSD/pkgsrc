@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/03 15:10:06 bsiegert Exp $
+
+SHA1 (gcs-oauth2-boto-plugin-1.14.tar.gz) = eb66f7f0d023730160bb713372a4adc3f348ee0a
+RMD160 (gcs-oauth2-boto-plugin-1.14.tar.gz) = eac83cdb23fcf9a4fbcf47318cc79477da1116a9
+SHA512 (gcs-oauth2-boto-plugin-1.14.tar.gz) = 86804a599c969c63587387df21a2396a27509981cc13a3f92bc98a645757362e77c63b68956ebd2663a721bb51993c9e61679db85a67de48d017ddad7de044b7
+Size (gcs-oauth2-boto-plugin-1.14.tar.gz) = 14980 bytes
