@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/03 00:06:29 ryoon Exp $
+
+SHA1 (libqxp-0.0.1.tar.xz) = a5963474afcc8e7b0eb352754325c21e1a1f5e18
+RMD160 (libqxp-0.0.1.tar.xz) = c1d8d8ecd06445ec5ad9f8d18ec86e31d485879b
+SHA512 (libqxp-0.0.1.tar.xz) = a03a9ada658a92f4d985cad91d467b3916334c74dc26c1e4de89e3929e0135ca0e9c7e7e18ce616ef56a67863ec19c2638494400785849017f9a4776df07c607
+Size (libqxp-0.0.1.tar.xz) = 340184 bytes
