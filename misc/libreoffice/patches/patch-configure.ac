@@ -1,8 +1,8 @@
-$NetBSD: patch-configure.ac,v 1.8 2017/09/10 11:30:15 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.9 2018/02/03 00:39:50 ryoon Exp $
 
---- configure.ac.orig	2017-08-24 21:39:40.000000000 +0000
+--- configure.ac.orig	2018-01-24 20:31:03.000000000 +0000
 +++ configure.ac
-@@ -6026,14 +6026,14 @@ if test "$GCC" = "yes" -o "$COM_IS_CLANG
+@@ -5852,14 +5852,14 @@ if test "$GCC" = "yes" -o "$COM_IS_CLANG
          ], [AC_MSG_RESULT([no])])
      AC_LANG_POP([C++])
  
@@ -20,16 +20,16 @@ $NetBSD: patch-configure.ac,v 1.8 2017/09/10 11:30:15 ryoon Exp $
              AC_MSG_RESULT([yes])
          ], [AC_MSG_RESULT([no])])
      AC_LANG_POP([C++])
-@@ -7603,7 +7603,7 @@ else
+@@ -7423,7 +7423,7 @@ else
      if test "$COM" = "MSC"; then
-         LIBJPEG_LIBS="${WORKDIR}/UnpackedTarball/jpeg-turbo/.libs/libjpeg.lib"
+         LIBJPEG_LIBS="${WORKDIR}/UnpackedTarball/libjpeg-turbo/.libs/libjpeg.lib"
      else
--        LIBJPEG_LIBS="-L${WORKDIR}/UnpackedTarball/jpeg-turbo/.libs -ljpeg"
-+        LIBJPEG_LIBS="${WORKDIR}/UnpackedTarball/jpeg-turbo/.libs/libjpeg.a"
+-        LIBJPEG_LIBS="-L${WORKDIR}/UnpackedTarball/libjpeg-turbo/.libs -ljpeg"
++        LIBJPEG_LIBS="${WORKDIR}/UnpackedTarball/libjpeg-turbo/.libs/libjpeg.a"
      fi
  
      case "$host_cpu" in
-@@ -9175,11 +9175,11 @@ dnl HarfBuzz
+@@ -8996,11 +8996,11 @@ dnl HarfBuzz
  dnl ===================================================================
  libo_CHECK_SYSTEM_MODULE([graphite],[GRAPHITE],[graphite2 >= 0.9.3],
                           ["-I${WORKDIR}/UnpackedTarball/graphite/include -DGRAPHITE2_STATIC"],
@@ -43,16 +43,16 @@ $NetBSD: patch-configure.ac,v 1.8 2017/09/10 11:30:15 ryoon Exp $
  
  if test "$COM" = "MSC"; then # override the above
      GRAPHITE_LIBS="${WORKDIR}/LinkTarget/StaticLibrary/graphite.lib"
-@@ -10409,7 +10409,7 @@ fi
+@@ -10120,7 +10120,7 @@ fi
  AC_SUBST(ENABLE_PDFIUM)
  
  SYSTEM_GPGMEPP=
--if test "$_os" = "Linux"; then
-+if test "$_os" = "Linux" -o "$_os" = "NetBSD"; then
+-if test "$_os" = "Linux" -o "$_os" = "Darwin" \
++if test "$_os" = "Linux" -o "$_os" = "Darwin" -o "$_os" = "NetBSD" \
+    -o \( "$_os" = "WINNT" -a "$host_cpu" = "x86_64" \) \
+    -o \( "$_os" = "WINNT" -a "$host_cpu" = "i686" -a "$WINDOWS_SDK_ARCH" = "x86" \) ; then
      dnl ===================================================================
-     dnl Check for system gpgme
-     dnl ===================================================================
-@@ -10419,7 +10419,7 @@ if test "$_os" = "Linux"; then
+@@ -10132,7 +10132,7 @@ if test "$_os" = "Linux" -o "$_os" = "Da
          SYSTEM_GPGMEPP=TRUE
  
          # C++ library doesn't come with fancy gpgmepp-config, check for headers the old-fashioned way
@@ -61,7 +61,7 @@ $NetBSD: patch-configure.ac,v 1.8 2017/09/10 11:30:15 ryoon Exp $
              [AC_MSG_ERROR([gpgmepp headers not found, install gpgmepp development package])], [])
          # progress_callback is the only func with plain C linkage
          # checking for it also filters out older, KDE-dependent libgpgmepp versions
-@@ -11678,8 +11678,8 @@ EOF
+@@ -11518,8 +11518,8 @@ EOF
      dnl Checking for ant.jar
      if test "$ANT_HOME" != "NO_ANT_HOME"; then
          AC_MSG_CHECKING([Ant lib directory])
