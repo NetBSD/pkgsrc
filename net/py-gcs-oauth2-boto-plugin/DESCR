@@ -1,0 +1,6 @@
+gcs-oauth2-boto-plugin is a Python application whose purpose is to behave as an
+auth plugin for the boto auth plugin framework for use with OAuth 2.0
+credentials for the Google Cloud Platform. This plugin is compatible with both
+user accounts and service accounts, and its functionality is essentially a
+wrapper around oauth2client with the addition of automatically caching tokens
+for the machine in a thread- and process-safe fashion.
