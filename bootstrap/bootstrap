@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.246 2018/02/02 15:53:44 bsiegert Exp $
+# $NetBSD: bootstrap,v 1.247 2018/02/03 09:53:03 bsiegert Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -707,7 +707,6 @@ Linux)
 		root_group=root
 	fi
 	need_bsd_install=no
-	CHROMEOS_RELEASE_NAME!=	awk -F = '$$1 == "CHROMEOS_RELEASE_NAME" { print $$2 }' /etc/lsb-release
 	# Debian/Ubuntu's awk is mawk, and mawk does not understand
 	# some regexp used in pkgsrc/mk.
 	if [ -f /etc/debian_version ]; then
