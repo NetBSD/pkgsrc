@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2018/02/03 00:08:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.161 2018/02/03 00:11:02 ryoon Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -37,6 +37,7 @@ SUBDIR+=	latex2rtf
 SUBDIR+=	libabw
 SUBDIR+=	libcdr
 SUBDIR+=	libe-book
+SUBDIR+=	libepubgen
 SUBDIR+=	libetonyek
 SUBDIR+=	libfreehand
 SUBDIR+=	libiconv
