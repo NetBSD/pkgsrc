@@ -1,5 +1,5 @@
 PC-LISP is a small implementation of LISP for just about any machine with a
-good C compiler. This manual is biased towards the UNIX and MS-DOS versions.
+good C compiler.
 
 While small, it is capable of running a pretty good subset of Franz LISP.
 The functions are supposed to perform in the same way as Franz with a few
