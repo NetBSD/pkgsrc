@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2010/12/08 17:47:50 adam Exp $
+$NetBSD: MESSAGE,v 1.5 2018/02/03 11:32:33 khorben Exp $
 
 To run openttd you need data files provided by the original Transport
-Tycoon Deluxe, or free data files avaialable in games/openttd-data package.
+Tycoon Deluxe, or free data files available in games/openttd-data package.
 
 In order to play, the following files should be copied from the original TTD
 to ${PREFIX}/share/openttd/data:
