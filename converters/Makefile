@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.159 2018/02/03 00:07:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.160 2018/02/03 00:08:32 ryoon Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -44,6 +44,7 @@ SUBDIR+=	libkkc
 SUBDIR+=	libmspub
 SUBDIR+=	libmwaw
 SUBDIR+=	libpagemaker
+SUBDIR+=	libqxp
 SUBDIR+=	librevenge
 SUBDIR+=	libstaroffice
 SUBDIR+=	libvisio
