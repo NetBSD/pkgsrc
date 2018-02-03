@@ -1,0 +1,10 @@
+libepubgen is a library for generating documents in (surprise!) EPUB format,
+implementing librevenge document interfaces. It supports conversion of text
+documents, presentations and vector drawings. Spreadsheets are not supported,
+because conversion of a spreadsheet to EPUB does not (IMHO) make much sense. As
+these interfaces are used by multiple libraries, libepubgen can be used to
+generate EPUB from many sources.
+
+libepubgen requires boost and librevenge to build. It also needs doxygen to
+generate API documentation (can be disabled by passing --without-docs to
+configure).
