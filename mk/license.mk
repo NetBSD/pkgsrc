@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.84 2018/01/07 19:44:31 rillig Exp $
+# $NetBSD: license.mk,v 1.85 2018/02/03 17:38:13 kamil Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -157,6 +157,9 @@ DEFAULT_ACCEPTABLE_LICENSES+=	info-zip
 # not approved by OSI, in line with Free Software principles but with rename
 # restrictions and typefaces can not be sold by itself.
 DEFAULT_ACCEPTABLE_LICENSES+=	vera-ttf-license
+
+# DFSG, not evaluated by OSI/FSF
+DEFAULT_ACCEPTABLE_LICENSES+=	happy
 
 ##### Variant spellings
 
