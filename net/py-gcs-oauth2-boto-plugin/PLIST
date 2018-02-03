@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/03 15:10:06 bsiegert Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/gcs_oauth2_boto_plugin/__init__.py
+${PYSITELIB}/gcs_oauth2_boto_plugin/__init__.pyc
+${PYSITELIB}/gcs_oauth2_boto_plugin/__init__.pyo
+${PYSITELIB}/gcs_oauth2_boto_plugin/oauth2_client.py
+${PYSITELIB}/gcs_oauth2_boto_plugin/oauth2_client.pyc
+${PYSITELIB}/gcs_oauth2_boto_plugin/oauth2_client.pyo
+${PYSITELIB}/gcs_oauth2_boto_plugin/oauth2_helper.py
+${PYSITELIB}/gcs_oauth2_boto_plugin/oauth2_helper.pyc
+${PYSITELIB}/gcs_oauth2_boto_plugin/oauth2_helper.pyo
+${PYSITELIB}/gcs_oauth2_boto_plugin/oauth2_plugin.py
+${PYSITELIB}/gcs_oauth2_boto_plugin/oauth2_plugin.pyc
+${PYSITELIB}/gcs_oauth2_boto_plugin/oauth2_plugin.pyo
+${PYSITELIB}/gcs_oauth2_boto_plugin/test_oauth2_client.py
+${PYSITELIB}/gcs_oauth2_boto_plugin/test_oauth2_client.pyc
+${PYSITELIB}/gcs_oauth2_boto_plugin/test_oauth2_client.pyo
