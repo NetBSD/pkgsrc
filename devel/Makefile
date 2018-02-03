@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2595 2018/01/25 19:03:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2596 2018/02/03 14:59:20 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -2016,6 +2016,7 @@ SUBDIR+=	py-mixbox
 SUBDIR+=	py-mock
 SUBDIR+=	py-modulegraph
 SUBDIR+=	py-more-itertools
+SUBDIR+=	py-mox
 SUBDIR+=	py-msgpack
 SUBDIR+=	py-multipledispatch
 SUBDIR+=	py-newt
