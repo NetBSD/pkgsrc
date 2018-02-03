@@ -1,7 +1,7 @@
-$NetBSD: patch-external_libmariadb_mariadb-netbsd.patch,v 1.1 2016/12/06 15:21:00 ryoon Exp $
+$NetBSD: patch-external_mariadb-connector-c_netbsd.patch,v 1.1 2018/02/03 00:39:50 ryoon Exp $
 
---- external/libmariadb/mariadb-netbsd.patch.orig	2016-08-12 02:11:42.265441950 +0000
-+++ external/libmariadb/mariadb-netbsd.patch
+--- external/mariadb-connector-c/netbsd.patch.orig	2018-02-01 04:59:29.711564554 +0000
++++ external/mariadb-connector-c/netbsd.patch
 @@ -0,0 +1,11 @@
 +--- mariadb/include/my_global.h.orig	2014-04-04 10:21:01.000000000 +0000
 ++++ mariadb/include/my_global.h
