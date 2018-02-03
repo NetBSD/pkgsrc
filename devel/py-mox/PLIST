@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/03 14:59:20 bsiegert Exp $
+${PYSITELIB}/mox.py
+${PYSITELIB}/mox.pyc
+${PYSITELIB}/mox.pyo
+${PYSITELIB}/stubout.py
+${PYSITELIB}/stubout.pyc
+${PYSITELIB}/stubout.pyo
