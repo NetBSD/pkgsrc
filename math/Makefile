@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.359 2018/02/01 16:58:03 minskim Exp $
+# $NetBSD: Makefile,v 1.360 2018/02/03 01:48:57 minskim Exp $
 
 COMMENT=	Mathematics
 
@@ -55,6 +55,7 @@ SUBDIR+=	R-nloptr
 SUBDIR+=	R-pbkrtest
 SUBDIR+=	R-pixmap
 SUBDIR+=	R-plyr
+SUBDIR+=	R-quadprog
 SUBDIR+=	R-quantreg
 SUBDIR+=	R-randomForest
 SUBDIR+=	R-sgeostat
