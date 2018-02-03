@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.513 2018/02/03 00:07:02 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.514 2018/02/03 00:10:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -783,3 +783,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated converters/libe-book to 0.1.3 [ryoon 2018-02-02]
 	Added converters/orcus version 0.13.2 [ryoon 2018-02-03]
 	Added converters/libqxp version 0.0.1 [ryoon 2018-02-03]
+	Added converters/libepubgen version 0.1.0 [ryoon 2018-02-03]
