@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.474 2018/02/03 17:31:45 kamil Exp $
+# $NetBSD: Makefile,v 1.475 2018/02/03 20:28:28 kamil Exp $
 #
 
 COMMENT=	Programming languages
@@ -163,6 +163,7 @@ SUBDIR+=	owl-lisp
 SUBDIR+=	p2c
 SUBDIR+=	p5-Switch
 SUBDIR+=	parrot
+SUBDIR+=	pc-lisp
 SUBDIR+=	pcc
 SUBDIR+=	pcc-current
 SUBDIR+=	pear
