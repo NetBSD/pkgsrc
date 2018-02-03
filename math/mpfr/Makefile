@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2018/01/28 16:18:23 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2018/02/03 10:49:48 gson Exp $
 
 DISTNAME=		mpfr-4.0.0
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		http://www.mpfr.org/${DISTNAME}/
 EXTRACT_SUFX=		.tar.bz2
@@ -10,7 +11,11 @@ HOMEPAGE=		http://www.mpfr.org/
 COMMENT=		GMP-based library for multiple-precision floating-point computations
 LICENSE=		gnu-lgpl-v3
 
+.include "../../mk/bsd.prefs.mk"
 GNU_CONFIGURE=		yes
+.if !empty(MACHINE_PLATFORM:MNetBSD-[0-7]*-x86_64)
+CONFIGURE_ARGS+=        --disable-float128
+.endif
 USE_LIBTOOL=		yes
 TEST_TARGET=		check
 INFO_FILES=		yes
