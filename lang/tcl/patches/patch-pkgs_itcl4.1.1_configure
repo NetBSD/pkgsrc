@@ -1,23 +1,22 @@
-$NetBSD: patch-pkgs_tdbc1.0.5_configure,v 1.1 2017/08/25 11:05:33 adam Exp $
+$NetBSD: patch-pkgs_itcl4.1.1_configure,v 1.1 2018/02/03 17:51:19 adam Exp $
 
 Add support for DragonFly.
 
 Honor LDFLAGS on NetBSD.
 https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
 
---- pkgs/tdbc1.0.5/configure.orig	2017-05-04 18:55:32.000000000 +0000
-+++ pkgs/tdbc1.0.5/configure
-@@ -7559,8 +7559,7 @@ fi
- 		    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+--- pkgs/itcl4.1.1/configure.orig	2017-12-15 18:00:37.000000000 +0000
++++ pkgs/itcl4.1.1/configure
+@@ -7428,7 +7428,7 @@ fi
  fi
- 		LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
--		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so${SHLIB_VERSION}'
--		LDFLAGS="-Wl,-export-dynamic"
-+		LDFLAGS="-Wl,--export-dynamic"
- 		;;
- 	    esac
- 	    case "$arch" in
-@@ -7580,13 +7579,11 @@ fi
+ 	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
+ 	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so${SHLIB_VERSION}'
+-	    LDFLAGS="-Wl,-export-dynamic"
++	    LDFLAGS="-Wl,--export-dynamic"
+ 	    CFLAGS_OPTIMIZE="-O2"
+ 	    if test "${TCL_THREADS}" = "1"; then :
+ 
+@@ -7439,13 +7439,11 @@ fi
  
  fi
  	    # OpenBSD doesn't do version numbers with dots.
@@ -27,12 +26,12 @@ https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
  	NetBSD-*)
  	    # NetBSD has ELF and can use 'cc -shared' to build shared libs
  	    SHLIB_CFLAGS="-fPIC"
--	    SHLIB_LD='${CC} -shared ${SHLIB_CFLAGS}'
-+	    SHLIB_LD='${CC} -shared ${SHLIB_CFLAGS} ${LDFLAGS_DEFAULT}'
+-	    SHLIB_LD='${CC} ${SHLIB_CFLAGS} -shared'
++	    SHLIB_LD='${CC} ${SHLIB_CFLAGS} -shared ${LDFLAGS_DEFAULT}'
  	    SHLIB_SUFFIX=".so"
  	    LDFLAGS="$LDFLAGS -export-dynamic"
  	    if test $doRpath = yes; then :
-@@ -7603,7 +7600,7 @@ fi
+@@ -7462,7 +7460,7 @@ fi
  
  fi
  	    ;;
@@ -41,7 +40,7 @@ https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
  	    # This configuration from FreeBSD Ports.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="${CC} -shared"
-@@ -7625,10 +7622,6 @@ fi
+@@ -7484,10 +7482,6 @@ fi
  	    case $system in
  	    FreeBSD-3.*)
  		# Version numbers are dot-stripped by system policy.
@@ -52,7 +51,7 @@ https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
  		;;
  	    esac
  	    ;;
-@@ -8239,7 +8232,7 @@ fi
+@@ -8098,7 +8092,7 @@ fi
  	    BSD/OS*) ;;
  	    CYGWIN_*|MINGW32_*) ;;
  	    IRIX*) ;;
