@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.522 2018/02/03 17:32:32 kamil Exp $
+$NetBSD: CHANGES-2018,v 1.523 2018/02/03 17:53:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -793,3 +793,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-mox version 0.5.3 [bsiegert 2018-02-03]
 	Added net/py-gcs-oauth2-boto-plugin version 1.14 [bsiegert 2018-02-03]
 	Added lang/zenlisp version 0.0.20131122 [kamil 2018-02-03]
+	Updated lang/tcl to 8.6.8 [adam 2018-02-03]
+	Updated x11/tk to 8.6.8 [adam 2018-02-03]
