@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2018/02/03 00:39:50 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.26 2018/02/03 05:28:49 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -103,7 +103,9 @@ ${PKGNAME}/lib/libreoffice/program/libdrawinglayerlo.so
 ${PKGNAME}/lib/libreoffice/program/libeditenglo.so
 ${PKGNAME}/lib/libreoffice/program/libembobj.so
 ${PKGNAME}/lib/libreoffice/program/libemboleobj.so
+${PLIST.kde4}${PKGNAME}/lib/libreoffice/program/libkde4be1lo.so
 ${PKGNAME}/lib/libreoffice/program/libemfiolo.so
+${PLIST.gtk3}${PKGNAME}/lib/libreoffice/program/liblibreofficekitgtk.so
 ${PKGNAME}/lib/libreoffice/program/libevtattlo.so
 ${PKGNAME}/lib/libreoffice/program/libexpwraplo.so
 ${PKGNAME}/lib/libreoffice/program/libfilelo.so
@@ -260,7 +262,9 @@ ${PKGNAME}/lib/libreoffice/program/libvbaswobjlo.so
 ${PKGNAME}/lib/libreoffice/program/libvclcanvaslo.so
 ${PKGNAME}/lib/libreoffice/program/libvcllo.so
 ${PKGNAME}/lib/libreoffice/program/libvclplug_genlo.so
+${PLIST.gtk3}${PKGNAME}/lib/libreoffice/program/libvclplug_gtk3lo.so
 ${PKGNAME}/lib/libreoffice/program/libvclplug_gtklo.so
+${PLIST.kde4}${PKGNAME}/lib/libreoffice/program/libvclplug_kde4lo.so
 ${PKGNAME}/lib/libreoffice/program/libwpftcalclo.so
 ${PKGNAME}/lib/libreoffice/program/libwpftdrawlo.so
 ${PKGNAME}/lib/libreoffice/program/libwpftimpresslo.so
@@ -8336,6 +8340,9 @@ ${PKGNAME}/lib/libreoffice/share/gallery/www-graf/ylwright.gif
 ${PKGNAME}/lib/libreoffice/share/gallery/www-graf/ylwup.gif
 ${PKGNAME}/lib/libreoffice/share/glade/libreoffice-catalog.xml
 ${PKGNAME}/lib/libreoffice/share/labels/labels.xml
+${PLIST.gtk3}${PKGNAME}/lib/libreoffice/share/libreofficekit/handle_image_end.png
+${PLIST.gtk3}${PKGNAME}/lib/libreoffice/share/libreofficekit/handle_image_middle.png
+${PLIST.gtk3}${PKGNAME}/lib/libreoffice/share/libreofficekit/handle_image_start.png
 ${PKGNAME}/lib/libreoffice/share/palette/arrowhd.soe
 ${PKGNAME}/lib/libreoffice/share/palette/chart-palettes.soc
 ${PKGNAME}/lib/libreoffice/share/palette/classic.sog
