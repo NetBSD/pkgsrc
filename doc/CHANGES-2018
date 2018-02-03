@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.520 2018/02/03 10:50:47 gson Exp $
+$NetBSD: CHANGES-2018,v 1.521 2018/02/03 15:23:32 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -790,3 +790,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/R-xts to 0.10.1 [minskim 2018-02-03]
 	Added math/R-quadprog version 1.5.5 [minskim 2018-02-03]
 	Updated math/mpfr to 4.0.0nb1 [gson 2018-02-03]
+	Added devel/py-mox version 0.5.3 [bsiegert 2018-02-03]
+	Added net/py-gcs-oauth2-boto-plugin version 1.14 [bsiegert 2018-02-03]
