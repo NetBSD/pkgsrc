@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.10 2018/02/03 00:04:10 ryoon Exp $
+
+SHA1 (liborcus-0.13.2.tar.xz) = 2aca559bb16d76f0bc4d1ee39b30d7635a9e5aff
+RMD160 (liborcus-0.13.2.tar.xz) = 2a15919577d2f366e94ce11649ea8784601bdf80
+SHA512 (liborcus-0.13.2.tar.xz) = 3f79787a62ee0ab59ee61d5b46e1e777b27529e20d6dde9a98db75c8b6c54a11f5f78fa46d018bb31a9ef9df19a60535936e645e5fa43e71bd4e25d9f3a802b7
+Size (liborcus-0.13.2.tar.xz) = 1816884 bytes
+SHA1 (patch-configure) = e5c68af9939a198cc63ec9bf5e6acf2aad4f893a
