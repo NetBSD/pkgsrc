@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/03 20:26:31 kamil Exp $
+bin/pc-lisp
+share/doc/pc-lisp/Franz_Lisp_July_1983.pdf
+share/doc/pc-lisp/README.md
+share/doc/pc-lisp/pc-lisp.doc
+share/pc-lisp/diff.l
+share/pc-lisp/dragon.l
+share/pc-lisp/hanoi.l
+share/pc-lisp/if.l
+share/pc-lisp/match.l
+share/pc-lisp/pc-lisp.l
+share/pc-lisp/qanda.l
+share/pc-lisp/queens.l
+share/pc-lisp/turtle.l
