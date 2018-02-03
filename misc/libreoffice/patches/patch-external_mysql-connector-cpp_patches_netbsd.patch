@@ -1,0 +1,16 @@
+$NetBSD: patch-external_mysql-connector-cpp_patches_netbsd.patch,v 1.1 2018/02/03 00:39:50 ryoon Exp $
+
+--- external/mysql-connector-cpp/patches/netbsd.patch.orig	2018-02-01 02:39:56.558112089 +0000
++++ external/mysql-connector-cpp/patches/netbsd.patch
+@@ -0,0 +1,11 @@
++--- include/my_global.h.orig	2014-04-04 10:21:01.000000000 +0000
+++++ include/my_global.h
++@@ -190,7 +190,7 @@ double my_ulonglong2double(unsigned long
++ #ifdef HAVE_UNISTD_H
++ #include <unistd.h>
++ #endif
++-#if defined(__cplusplus) && defined(NO_CPLUSPLUS_ALLOCA)
+++#if (defined(__cplusplus) && defined(NO_CPLUSPLUS_ALLOCA)) || defined(__NetBSD__)
++ #undef HAVE_ALLOCA
++ #undef HAVE_ALLOCA_H
++ #endif
