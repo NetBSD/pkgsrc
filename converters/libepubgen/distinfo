@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/03 00:09:41 ryoon Exp $
+
+SHA1 (libepubgen-0.1.0.tar.bz2) = c50ef2486200b4d9be95f8d3ce73ed5ace07adba
+RMD160 (libepubgen-0.1.0.tar.bz2) = 47a90882b4f8155f68f374f760c521656a49b494
+SHA512 (libepubgen-0.1.0.tar.bz2) = 568afc817965ffa0360bd58cce23916a8dabe97c7bc7a53fc9f146b98ef7b2c8d8ee958145fff7abc0bfae33c56e620225031814356b893130e04b00e7cf0851
+Size (libepubgen-0.1.0.tar.bz2) = 398811 bytes
