@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.530 2018/02/04 10:16:51 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.531 2018/02/04 12:00:56 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -802,3 +802,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/p5-MailTools to 2.20 [wen 2018-02-04]
 	Updated math/p5-Spreadsheet-Read to 0.78 [wen 2018-02-04]
 	Updated devel/py-gflags to 3.1.2 [bsiegert 2018-02-04]
+	Updated devel/php-xdebug to 2.6.0 [jdolecek 2018-02-04]
