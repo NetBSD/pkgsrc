@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.524 2018/02/03 20:29:06 kamil Exp $
+$NetBSD: CHANGES-2018,v 1.525 2018/02/04 04:13:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -796,3 +796,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/tcl to 8.6.8 [adam 2018-02-03]
 	Updated x11/tk to 8.6.8 [adam 2018-02-03]
 	Added lang/pc-lisp version 6.0 [kamil 2018-02-03]
+	Updated devel/p5-PPIx-Regexp to 0.054 [wen 2018-02-04]
