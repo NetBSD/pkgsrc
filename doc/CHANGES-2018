@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.536 2018/02/04 17:07:26 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.537 2018/02/04 17:13:15 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -807,3 +807,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/py-google-apitools version 0.5.21 [bsiegert 2018-02-04]
 	Updated textproc/yaml-cpp to 0.6.1 [fhajny 2018-02-04]
 	Updated databases/py-peewee to 3.0.10 [fhajny 2018-02-04]
+	Updated databases/redis to 4.0.8 [fhajny 2018-02-04]
