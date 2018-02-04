@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.534 2018/02/04 15:04:41 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.535 2018/02/04 17:05:26 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -805,3 +805,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/php-xdebug to 2.6.0 [jdolecek 2018-02-04]
 	Removed devel/php-xdebug-devel [jdolecek 2018-02-04]
 	Added www/py-google-apitools version 0.5.21 [bsiegert 2018-02-04]
+	Updated textproc/yaml-cpp to 0.6.1 [fhajny 2018-02-04]
