@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/04 23:41:34 minskim Exp $
+
+SHA1 (R/quantmod_0.4-12.tar.gz) = 64ae76c31037e98a8967943f5d9adb59478b5772
+RMD160 (R/quantmod_0.4-12.tar.gz) = 043172605ffcf061ca41ad5ba2f29d0b7807e6ab
+SHA512 (R/quantmod_0.4-12.tar.gz) = 6df59e2cd84399f68ce3304ebb13e1eca78ffa0b4bad0e88f71aa5187e6d78bcb08d4debbbe18898fc69f57e4abbdca1279c857e658ff4d735d338298a34eaac
+Size (R/quantmod_0.4-12.tar.gz) = 140216 bytes
