@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.527 2018/02/04 05:23:50 wen Exp $
+$NetBSD: CHANGES-2018,v 1.528 2018/02/04 06:07:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -799,3 +799,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-PPIx-Regexp to 0.054 [wen 2018-02-04]
 	Updated time/p5-DateTime-TimeZone to 2.17 [wen 2018-02-04]
 	Added www/py-django2 version 2.0.2 [wen 2018-02-04]
+	Updated mail/p5-MailTools to 2.20 [wen 2018-02-04]
