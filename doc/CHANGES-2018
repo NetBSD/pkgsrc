@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.532 2018/02/04 12:02:13 jdolecek Exp $
+$NetBSD: CHANGES-2018,v 1.533 2018/02/04 12:02:59 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -803,4 +803,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/p5-Spreadsheet-Read to 0.78 [wen 2018-02-04]
 	Updated devel/py-gflags to 3.1.2 [bsiegert 2018-02-04]
 	Updated devel/php-xdebug to 2.6.0 [jdolecek 2018-02-04]
-	Removed devel/x [jdolecek 2018-02-04]
+	Removed devel/php-xdebug-devel [jdolecek 2018-02-04]
