@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2018/01/30 19:07:48 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2018/02/04 16:21:19 wiz Exp $
 
 DISTNAME=	crcmod-1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
-MASTER_SITES=	${MASYER_SITE_PYPI:=c/crcmod/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/crcmod/}
 
 MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	https://crcmod.sourceforge.net/
