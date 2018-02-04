@@ -14,3 +14,4 @@ Xdebug also provides:
     * profiling information for PHP scripts
     * code coverage analysis
     * capabilities to debug your scripts interactively with a debug client
+    * garbage collection statistics
