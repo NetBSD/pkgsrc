@@ -1,4 +1,8 @@
-$NetBSD: patch-sapi_fpm_fpm_events_port.c,v 1.1 2017/11/15 08:56:12 jdolecek Exp $
+$NetBSD: patch-sapi_fpm_fpm_events_port.c,v 1.2 2018/02/04 15:38:41 jdolecek Exp $
+
+Similar to upstream bug #65800. We should resubmit this patch and
+get that bugfix intergrated, by changing port_associate() call to
+use the wrapper fpm_event_port_add().
 
 --- sapi/fpm/fpm/events/port.c.orig	2015-06-23 17:33:33.000000000 +0000
 +++ sapi/fpm/fpm/events/port.c
