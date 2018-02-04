@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2018/02/02 12:50:38 jdolecek Exp $
+$NetBSD: distinfo,v 1.14 2018/02/04 15:38:41 jdolecek Exp $
 
 SHA1 (php-7.2.2.tar.bz2) = 69903dabf7ceb4a84620683092e235b29d2d1066
 RMD160 (php-7.2.2.tar.bz2) = c7193e0298ae8e709ad19129023ff213085f50ca
@@ -6,7 +6,7 @@ SHA512 (php-7.2.2.tar.bz2) = d2bc3725b51c61ded552cfde276bbe0f9e4cce3401303219d37
 Size (php-7.2.2.tar.bz2) = 14618006 bytes
 SHA1 (patch-configure) = 5dad0ba760f5fb6aa55dc3136655b78c29e23bca
 SHA1 (patch-ext_gd_config.m4) = 67730ccc13410adaf8829f77a6b044f16e412489
-SHA1 (patch-ext_imap_config.m4) = f4e10ab81697b72019313f63bc630627a08efd92
+SHA1 (patch-ext_imap_config.m4) = 6a667b2580901dccfd0174aec56dad629689d7bd
 SHA1 (patch-ext_pcre_pcrelib_config.h) = c5fba95856628f68639fe63feeef04a5f83d3916
 SHA1 (patch-ext_phar_Makefile.frag) = 558869b60f8ed6674a3ba1d595a65f010df4c426
 SHA1 (patch-ext_phar_phar_phar.php) = f630e3946b21b76d4fe857a43e00e25c9445f2c8
@@ -18,5 +18,5 @@ SHA1 (patch-php.ini-production) = ae61dffedf574b688fe576b0b2af748b7a28cd89
 SHA1 (patch-run-tests.php) = 86c4d3f03eb8e31b5a35820f426533c9478571fb
 SHA1 (patch-sapi_cgi_Makefile.frag) = 18769900f588ff81cc34474542afa1d65c070e65
 SHA1 (patch-sapi_cli_Makefile.frag) = 1cd29d09042863acbf5330e406410fdcf75d06b3
-SHA1 (patch-sapi_fpm_fpm_events_port.c) = 0f10fdb32fb7cab58e2abda49fb1fc658c410150
+SHA1 (patch-sapi_fpm_fpm_events_port.c) = b82b7caffffde1343190fae430a68eb411b5cf8a
 SHA1 (patch-sapi_fpm_php-fpm.conf.in) = b3c4fd499cbfd2dffd9176abb54e298ea542a5d7
