@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.6 2017/09/04 18:55:08 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/02/04 10:16:17 bsiegert Exp $
 
-DISTNAME=	python-gflags-2.0
+DISTNAME=	python-gflags-3.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	devel python
-MASTER_SITES=	http://python-gflags.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-gflags/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/google/python-gflags
 COMMENT=	Python equivalent of gflags, a commandline flag implementation
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 2.0
-
 REPLACE_PYTHON+=	*.py
+PYDISTUTILSPKG=	yes
+
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
