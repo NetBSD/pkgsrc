@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/01/10 16:53:11 jaapb Exp $
+# $NetBSD: Makefile,v 1.18 2018/02/04 08:06:22 dholland Exp $
 #
 
 DISTNAME=	omake-${VERSION}-0.rc1
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://omake.metaprl.org/index.html
 COMMENT=	Build system designed for scalability and portability
 LICENSE=	gnu-gpl-v2 AND mit AND gnu-lgpl-v2.1
+
+BROKEN=		Does not build with ocaml 4.06.
 
 MAKE_JOBS_SAFE=	no
 
