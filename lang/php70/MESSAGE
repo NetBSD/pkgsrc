@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2018/02/04 11:35:39 jdolecek Exp $
+$NetBSD: MESSAGE,v 1.3 2018/02/04 11:37:53 jdolecek Exp $
 
-NOTE: This PHP version is on extended Security fixes only support,
-with End of Live planned on December 3 2018. For details, see
+NOTE: This PHP version is on Security fixes only support, with End
+of Live planned on December 3 2018. For details, see
 
         http://php.net/supported-versions.php
 
