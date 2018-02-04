@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1305 2018/02/04 05:22:12 wen Exp $
+# $NetBSD: Makefile,v 1.1306 2018/02/04 15:04:00 bsiegert Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -683,6 +683,7 @@ SUBDIR+=	py-furl
 SUBDIR+=	py-gdata
 SUBDIR+=	py-genshi
 SUBDIR+=	py-google-api-python-client
+SUBDIR+=	py-google-apitools
 SUBDIR+=	py-graphite-web
 SUBDIR+=	py-grappelli_safe
 SUBDIR+=	py-gunicorn
