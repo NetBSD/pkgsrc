@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.538 2018/02/04 23:40:40 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.539 2018/02/04 23:42:09 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -809,3 +809,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-peewee to 3.0.10 [fhajny 2018-02-04]
 	Updated databases/redis to 4.0.8 [fhajny 2018-02-04]
 	Added finance/R-TTR version 0.23.3 [minskim 2018-02-04]
+	Added finance/R-quantmod version 0.4.12 [minskim 2018-02-04]
