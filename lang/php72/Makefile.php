@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.2 2018/01/31 21:10:18 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.3 2018/02/04 16:19:00 jdolecek Exp $
 # used by lang/php72/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -45,8 +45,8 @@ CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 .include "../../textproc/libxml2/buildlink3.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PHP_PKG_PREFIX}
-PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline argon2
-PKG_SUGGESTED_OPTIONS+=	inet6 ssl readline
+PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline argon2 sqlite3
+PKG_SUGGESTED_OPTIONS+=	inet6 ssl readline sqlite3
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD"
 PKG_SUPPORTED_OPTIONS+=	dtrace
@@ -95,6 +95,13 @@ INSTALL_MAKE_FLAGS+=	-r
 .if !empty(PKG_OPTIONS:Margon2)
 CONFIGURE_ARGS+=	--with-password-argon2=${BUILDLINK_PREFIX.argon2}
 .include "../../security/argon2/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Msqlite3)
+CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
+.include "../../databases/sqlite3/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=    --without-sqlite3
 .endif
 
 DL_AUTO_VARS=		yes
