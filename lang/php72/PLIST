@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/11/15 08:56:12 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/02/05 08:51:25 jdolecek Exp $
 bin/phar
 bin/phar.phar
 bin/php
@@ -131,11 +131,6 @@ include/php/ext/mysqlnd/mysqlnd_structs.h
 include/php/ext/mysqlnd/mysqlnd_vio.h
 include/php/ext/mysqlnd/mysqlnd_wireprotocol.h
 include/php/ext/mysqlnd/php_mysqlnd.h
-include/php/ext/pcre/pcrelib/config.h
-include/php/ext/pcre/pcrelib/pcre.h
-include/php/ext/pcre/pcrelib/pcre_internal.h
-include/php/ext/pcre/pcrelib/pcreposix.h
-include/php/ext/pcre/pcrelib/ucp.h
 include/php/ext/pcre/php_pcre.h
 include/php/ext/phar/php_phar.h
 include/php/ext/session/mod_files.h

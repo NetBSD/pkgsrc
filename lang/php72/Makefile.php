@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.3 2018/02/04 16:19:00 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.4 2018/02/05 08:51:25 jdolecek Exp $
 # used by lang/php72/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -7,6 +7,9 @@
 .if ${MACHINE_ARCH} == "i386"
 GCC_REQD+=              4.9
 .endif
+
+# the binary actually needs full dep on PCRE
+BUILDLINK_DEPMETHOD.pcre=	full
 
 .include "../../lang/php72/Makefile.common"
 
@@ -43,6 +46,8 @@ CONFIGURE_ARGS+=	--enable-mysqlnd
 CONFIGURE_ARGS+=	--enable-xml
 CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 .include "../../textproc/libxml2/buildlink3.mk"
+
+CONFIGURE_ARGS+=	--with-pcre-regex=${BUILDLINK_PREFIX.pcre}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PHP_PKG_PREFIX}
 PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline argon2 sqlite3
