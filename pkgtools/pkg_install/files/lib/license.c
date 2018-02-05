@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.50 2017/05/11 15:15:21 jperkin Exp $	*/
+/*	$NetBSD: license.c,v 1.51 2018/02/05 00:07:56 kamil Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -62,6 +62,7 @@ const char *default_acceptable_licenses =
     "gnu-gpl-v1 "
     "gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1 "
     "gnu-gpl-v3 gnu-lgpl-v3 "
+    "happy "
     "hpnd "
     "info-zip "
     "ipafont "
