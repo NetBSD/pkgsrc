@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2017/09/28 11:18:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2018/02/05 13:10:59 adam Exp $
 bin/sphinx-apidoc${PYVERSSUFFIX}
 bin/sphinx-autogen${PYVERSSUFFIX}
 bin/sphinx-build${PYVERSSUFFIX}
@@ -594,7 +594,7 @@ ${PYSITELIB}/sphinx/themes/basic/static/doctools.js_t
 ${PYSITELIB}/sphinx/themes/basic/static/down-pressed.png
 ${PYSITELIB}/sphinx/themes/basic/static/down.png
 ${PYSITELIB}/sphinx/themes/basic/static/file.png
-${PYSITELIB}/sphinx/themes/basic/static/jquery-3.1.0.js
+${PYSITELIB}/sphinx/themes/basic/static/jquery-3.2.1.js
 ${PYSITELIB}/sphinx/themes/basic/static/jquery.js
 ${PYSITELIB}/sphinx/themes/basic/static/minus.png
 ${PYSITELIB}/sphinx/themes/basic/static/plus.png
