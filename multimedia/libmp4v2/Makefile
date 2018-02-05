@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/12/30 11:12:01 he Exp $
+# $NetBSD: Makefile,v 1.21 2018/02/05 18:37:21 jperkin Exp $
 
 DISTNAME=		mpeg4ip-1.6.1
 PKGNAME=		libmp4v2-1.6.1
@@ -12,7 +12,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mpeg4ip.sourceforge.net/
 COMMENT=		Library for reading and modifying mp4 files
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
