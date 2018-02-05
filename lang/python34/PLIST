@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/12/13 12:54:57 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/02/05 17:35:12 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -317,6 +317,8 @@ lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/install-sh
 lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/libpython${PY_VER_SUFFIX}.a
 lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/makesetup
 lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/python-config.py
+lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/python-config.pyc
+lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/python-config.pyo
 lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/python.o
 lib/python${PY_VER_SUFFIX}/configparser.py
 lib/python${PY_VER_SUFFIX}/configparser.pyc
@@ -1575,10 +1577,10 @@ lib/python${PY_VER_SUFFIX}/idlelib/dynOptionMenuWidget.py
 lib/python${PY_VER_SUFFIX}/idlelib/dynOptionMenuWidget.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/dynOptionMenuWidget.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/extend.txt
-lib/python${PY_VER_SUFFIX}/idlelib/help.pyc
-lib/python${PY_VER_SUFFIX}/idlelib/help.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/help.html
 lib/python${PY_VER_SUFFIX}/idlelib/help.py
+lib/python${PY_VER_SUFFIX}/idlelib/help.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/help.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/help.txt
 lib/python${PY_VER_SUFFIX}/idlelib/idle.bat
 lib/python${PY_VER_SUFFIX}/idlelib/idle.py
@@ -1616,6 +1618,7 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_configdialog.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_delegator.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_delegator.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_delegator.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_editor.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_editor.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_editor.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_formatparagraph.py
@@ -1630,10 +1633,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_hyperparser.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_idlehistory.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_idlehistory.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_idlehistory.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_io.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_io.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_io.pyo
-lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_editor.py
-lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_io.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_parenmatch.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_parenmatch.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_parenmatch.pyo
@@ -2646,6 +2648,7 @@ lib/python${PY_VER_SUFFIX}/test/decimaltestdata/testall.decTest
 lib/python${PY_VER_SUFFIX}/test/decimaltestdata/tointegral.decTest
 lib/python${PY_VER_SUFFIX}/test/decimaltestdata/tointegralx.decTest
 lib/python${PY_VER_SUFFIX}/test/decimaltestdata/xor.decTest
+lib/python${PY_VER_SUFFIX}/test/dh1024.pem
 lib/python${PY_VER_SUFFIX}/test/dis_module.py
 lib/python${PY_VER_SUFFIX}/test/dis_module.pyc
 lib/python${PY_VER_SUFFIX}/test/dis_module.pyo
@@ -3882,10 +3885,9 @@ lib/python${PY_VER_SUFFIX}/test/test_operator.pyo
 lib/python${PY_VER_SUFFIX}/test/test_optparse.py
 lib/python${PY_VER_SUFFIX}/test/test_optparse.pyc
 lib/python${PY_VER_SUFFIX}/test/test_optparse.pyo
+lib/python${PY_VER_SUFFIX}/test/test_ordered_dict.py
 lib/python${PY_VER_SUFFIX}/test/test_ordered_dict.pyc
 lib/python${PY_VER_SUFFIX}/test/test_ordered_dict.pyo
-lib/python${PY_VER_SUFFIX}/test/dh1024.pem
-lib/python${PY_VER_SUFFIX}/test/test_ordered_dict.py
 lib/python${PY_VER_SUFFIX}/test/test_os.py
 lib/python${PY_VER_SUFFIX}/test/test_os.pyc
 lib/python${PY_VER_SUFFIX}/test/test_os.pyo
