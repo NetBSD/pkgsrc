@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2017/11/15 08:56:12 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.2 2018/02/05 08:51:25 jdolecek Exp $
 # used by lang/php72/Makefile.php
 # used by lang/php/ext.mk
 # used by meta-pkgs/php72-extensions/Makefile
@@ -18,3 +18,10 @@ CONFIGURE_ENV+=		PHP_LIBXML_SHARED="1"
 # configure test gets confused by wrappers dropping -R /usr/lib
 CONFIGURE_ARGS+=	php_cv_cc_dashr=no
 .endif
+
+# not every extension actually depend on PCRE, and those which do
+# don't use internal pcre structures, so default to build-time
+# dependency only
+BUILDLINK_DEPMETHOD.pcre?=	build
+CONFIGURE_ARGS+=	--with-pcre-dir=${BUILDLINK_PREFIX.pcre}
+.include "../../devel/pcre/buildlink3.mk"
