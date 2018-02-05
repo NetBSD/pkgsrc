@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/12/18 02:33:18 wen Exp $
+$NetBSD: distinfo,v 1.5 2018/02/05 18:58:56 minskim Exp $
 
-SHA1 (R/stringr_1.1.0.tar.gz) = d20cd31e6f0bea3267c9cb70dd457cf4702e6170
-RMD160 (R/stringr_1.1.0.tar.gz) = 972a684e6cf2b18bc5fe13fa82deb19e30711869
-SHA512 (R/stringr_1.1.0.tar.gz) = 68a1a0695a776f6a23c0801a80ed96db05ef1bd8821b6cb23baba56a6896cdaa279b53b61a17fe1827159f9a86243137d5f7e6a9594fb0ba5054496576bf8e3d
-Size (R/stringr_1.1.0.tar.gz) = 63174 bytes
+SHA1 (R/stringr_1.2.0.tar.gz) = c53001e1eb12e18935939a54ab721b042d71b27e
+RMD160 (R/stringr_1.2.0.tar.gz) = 0e23d2643037c9a53df18f4204c47e5ced694460
+SHA512 (R/stringr_1.2.0.tar.gz) = 4c8284a45d382de0d8147c07c05f49817e78c2c34de398ec0129d4028fcb1f8efc12453344b7c117343dc9d01ff4e2cdf757e34b96bd18d79ee084436db1e350
+Size (R/stringr_1.2.0.tar.gz) = 94095 bytes
