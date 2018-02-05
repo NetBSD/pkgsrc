@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2016/12/18 02:18:39 wen Exp $
+$NetBSD: distinfo,v 1.3 2018/02/05 18:52:05 minskim Exp $
 
-SHA1 (R/stringi_1.1.2.tar.gz) = 983c527ef51ca441def25438b7a4829de563deaa
-RMD160 (R/stringi_1.1.2.tar.gz) = 56745cd4bec327c42e6bbbde085b7a10acc1c676
-SHA512 (R/stringi_1.1.2.tar.gz) = 8145fa8c08146ca9a1d7d64cc4f0b5f4803231c860c5363f155826996c1f739964cd3b92d655335413508d56771c6debc14261b801c99d2f30c8d8b325bec253
-Size (R/stringi_1.1.2.tar.gz) = 3644855 bytes
-SHA1 (patch-configure) = 25897b9a905b9761f1d23a1a0b0177d61a3a1ab9
+SHA1 (R/stringi_1.1.6.tar.gz) = 1393f38caee1430fa56718d33b25b3c909cc587d
+RMD160 (R/stringi_1.1.6.tar.gz) = a839d214d3fd9a7a76e7f1441e20125ad7d5c567
+SHA512 (R/stringi_1.1.6.tar.gz) = b79390533b94aab79e9f696d6ef85e5c4da92244e586ec5edc3eb6dccf0f584d5f9bc9f9514b00926f1abf4e83e0d174a17e241b2894af3e3fc17f2251f24f2f
+Size (R/stringi_1.1.6.tar.gz) = 3647049 bytes
+SHA1 (patch-configure) = 987246cf48481166846d042772ca79eca4115f57
