@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.541 2018/02/05 13:18:35 adam Exp $
+$NetBSD: CHANGES-2018,v 1.542 2018/02/05 13:40:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -814,3 +814,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-msgpack to 0.5.4 [adam 2018-02-05]
 	Updated textproc/py-sphinx to 1.6.7 [adam 2018-02-05]
 	Updated devel/py-deprecation to 1.1 [adam 2018-02-05]
+	Updated print/qpdf to 7.1.0 [ryoon 2018-02-05]
