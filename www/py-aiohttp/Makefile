@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2018/01/18 10:29:54 adam Exp $
+# $NetBSD: Makefile,v 1.12 2018/02/05 16:39:47 adam Exp $
 
-DISTNAME=	aiohttp-2.3.9
+DISTNAME=	aiohttp-2.3.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
@@ -10,9 +10,10 @@ HOMEPAGE=	https://github.com/aio-libs/aiohttp/
 COMMENT=	Async http client/server framework
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
-DEPENDS+=	${PYPKGPREFIX}-multidict>=3.0.0:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-async-timeout>=1.2.0:../../devel/py-async-timeout
+DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
+DEPENDS+=	${PYPKGPREFIX}-idna_ssl>=1.0.0:../../www/py-idna_ssl
+DEPENDS+=	${PYPKGPREFIX}-multidict>=3.0.0:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-yarl>=0.11:../../www/py-yarl
 BUILD_DEPENDS+=	${PYPKGPREFIX}-gunicorn-[0-9]*:../../www/py-gunicorn
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
