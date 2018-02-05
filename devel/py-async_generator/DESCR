@@ -1,0 +1,3 @@
+Python 3.6 added async generators. Python 3.7 adds some more tools to make them
+usable, like contextlib.asynccontextmanager. This library gives you all that
+back to Python 3.5.
