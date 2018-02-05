@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/05 16:38:56 adam Exp $
+
+SHA1 (idna_ssl-1.0.0.tar.gz) = e1badfad6800dad768f8f71f9c9d135c42371c70
+RMD160 (idna_ssl-1.0.0.tar.gz) = 9dd2fcd4fbf70139964696c0e51c420e500d1cd4
+SHA512 (idna_ssl-1.0.0.tar.gz) = d1f7479cc3edff164bb26deb05af757906ba91241bc668f1b087560087a89f741a0b36e166bfb8142128ceed6008621ab36a2556ed2304ea6374c19982bc663a
+Size (idna_ssl-1.0.0.tar.gz) = 3375 bytes
