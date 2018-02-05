@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/12/13 12:55:32 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/02/05 17:34:18 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -326,7 +326,11 @@ lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/install-sh
 lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/libpython${PY_VER_SUFFIX}.a
 lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/makesetup
 lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/python-config.py
+lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/python-config.pyc
+lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/python-config.pyo
 lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/python.o
+lib/python${PY_VER_SUFFIX}/config-3.5/python-config.pyc
+lib/python${PY_VER_SUFFIX}/config-3.5/python-config.pyo
 lib/python${PY_VER_SUFFIX}/configparser.py
 lib/python${PY_VER_SUFFIX}/configparser.pyc
 lib/python${PY_VER_SUFFIX}/configparser.pyo
@@ -3597,6 +3601,12 @@ lib/python${PY_VER_SUFFIX}/test/test_import/data/circular_imports/subpkg/util.py
 lib/python${PY_VER_SUFFIX}/test/test_import/data/circular_imports/util.py
 lib/python${PY_VER_SUFFIX}/test/test_import/data/circular_imports/util.pyc
 lib/python${PY_VER_SUFFIX}/test/test_import/data/circular_imports/util.pyo
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package2/submodule1.py
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package2/submodule1.pyc
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package2/submodule1.pyo
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package2/submodule2.py
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package2/submodule2.pyc
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package2/submodule2.pyo
 lib/python${PY_VER_SUFFIX}/test/test_importlib/__init__.py
 lib/python${PY_VER_SUFFIX}/test/test_importlib/__init__.pyc
 lib/python${PY_VER_SUFFIX}/test/test_importlib/__init__.pyo
