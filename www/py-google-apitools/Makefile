@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/02/04 15:04:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2018/02/05 15:05:02 jperkin Exp $
 
 DISTNAME=	google-apitools-0.5.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,6 +21,8 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-mock>=1.0.1:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-unittest2>=0.5.1:../../devel/py-unittest2
+
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-google-apputils
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR}/requires.txt.orig
