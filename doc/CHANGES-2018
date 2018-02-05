@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.545 2018/02/05 17:36:28 adam Exp $
+$NetBSD: CHANGES-2018,v 1.546 2018/02/05 18:52:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -824,3 +824,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-aiohttp to 2.3.10 [adam 2018-02-05]
 	Updated lang/python35 to 3.5.5 [adam 2018-02-05]
 	Updated lang/python34 to 3.4.8 [adam 2018-02-05]
+	Updated textproc/R-stringi to 1.1.6 [minskim 2018-02-05]
