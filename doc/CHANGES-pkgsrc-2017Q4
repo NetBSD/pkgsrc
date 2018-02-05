@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.11 2018/01/30 18:51:40 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.12 2018/02/05 09:40:23 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
 
@@ -96,4 +96,10 @@ sysutils/xentools48: security fix
 
 Pullup ticket #5694 - requested by he
 lang/rust: dependent update (for www/firefox)
+
+Pullup ticket #5699 - requested by taca
+net/unbound: security update
+
+Pullup ticket #5700 - requested by taca
+www/squid3: security update
 
