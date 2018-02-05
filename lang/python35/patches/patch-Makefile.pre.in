@@ -1,8 +1,9 @@
-$NetBSD: patch-Makefile.pre.in,v 1.5 2017/12/13 12:55:32 jperkin Exp $
+$NetBSD: patch-Makefile.pre.in,v 1.6 2018/02/05 17:34:18 adam Exp $
 
 Do not build/install libpython3.so.
+Swap targets libinstall and libainstall, to byte-compile python-config.py.
 
---- Makefile.pre.in.orig	2017-08-07 07:59:11.000000000 +0000
+--- Makefile.pre.in.orig	2018-02-04 23:40:56.000000000 +0000
 +++ Makefile.pre.in
 @@ -92,7 +92,7 @@ PY_CFLAGS_NODIST=$(CONFIGURE_CFLAGS_NODI
  # be able to build extension modules using the directories specified in the
@@ -22,16 +23,24 @@ Do not build/install libpython3.so.
  DLLLIBRARY=	@DLLLIBRARY@
  LDLIBRARYDIR=   @LDLIBRARYDIR@
  INSTSONAME=	@INSTSONAME@
-@@ -864,7 +864,7 @@ regen-opcode-targets:
+@@ -864,7 +864,6 @@ regen-opcode-targets:
  	$(PYTHON_FOR_REGEN) $(srcdir)/Python/makeopcodetargets.py \
  		$(srcdir)/Python/opcode_targets.h
  
 -Python/ceval.o: $(srcdir)/Python/opcode_targets.h $(srcdir)/Python/ceval_gil.h
-+#Python/ceval.o: $(srcdir)/Python/opcode_targets.h $(srcdir)/Python/ceval_gil.h
  
  Python/frozen.o: $(srcdir)/Python/importlib.h $(srcdir)/Python/importlib_external.h
  
-@@ -1110,7 +1110,8 @@ altbininstall: $(BUILDPYTHON) @FRAMEWORK
+@@ -1051,7 +1050,7 @@ altinstall: commoninstall
+ 	fi
+ 
+ commoninstall:  @FRAMEWORKALTINSTALLFIRST@ \
+-		altbininstall libinstall inclinstall libainstall \
++		altbininstall libainstall inclinstall libinstall \
+ 		sharedinstall oldsharedinstall altmaninstall \
+ 		@FRAMEWORKALTINSTALLLAST@
+ 
+@@ -1110,7 +1109,8 @@ altbininstall: $(BUILDPYTHON) @FRAMEWORK
  		if test -n "$(PY3LIBRARY)"; then \
  			$(INSTALL_SHARED) $(PY3LIBRARY) $(DESTDIR)$(LIBDIR)/$(PY3LIBRARY); \
  		fi; \
@@ -41,7 +50,7 @@ Do not build/install libpython3.so.
  	fi
  	if test "x$(LIPO_32BIT_FLAGS)" != "x" ; then \
  		rm -f $(DESTDIR)$(BINDIR)python$(VERSION)-32$(EXE); \
-@@ -1301,11 +1302,6 @@ libinstall:	build_all $(srcdir)/Lib/$(PL
+@@ -1302,11 +1302,6 @@ libinstall:	build_all $(srcdir)/Lib/$(PL
  		-x 'bad_coding|badsyntax|site-packages|lib2to3/tests/data' \
  		$(DESTDIR)$(LIBDEST)
  	-PYTHONPATH=$(DESTDIR)$(LIBDEST) $(RUNSHARED) \
@@ -53,7 +62,7 @@ Do not build/install libpython3.so.
  		$(PYTHON_FOR_BUILD) -Wi $(DESTDIR)$(LIBDEST)/compileall.py \
  		-d $(LIBDEST)/site-packages -f \
  		-x badsyntax $(DESTDIR)$(LIBDEST)/site-packages
-@@ -1314,10 +1310,6 @@ libinstall:	build_all $(srcdir)/Lib/$(PL
+@@ -1315,10 +1310,6 @@ libinstall:	build_all $(srcdir)/Lib/$(PL
  		-d $(LIBDEST)/site-packages -f \
  		-x badsyntax $(DESTDIR)$(LIBDEST)/site-packages
  	-PYTHONPATH=$(DESTDIR)$(LIBDEST) $(RUNSHARED) \
