@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.9 2017/11/30 16:45:39 adam Exp $
+# $NetBSD: Makefile,v 1.10 2018/02/05 18:52:05 minskim Exp $
 
-PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
@@ -10,11 +9,12 @@ COMMENT=	Character String Processing Facilities
 LICENSE=	modified-bsd
 
 R_PKGNAME=	stringi
-R_PKGVER=	1.1.2
+R_PKGVER=	1.1.6
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 .include "../../textproc/icu/buildlink3.mk"
+BUILDLINK_API_DEPENDS.R+=	R>=2.14
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
