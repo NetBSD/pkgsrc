@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/05 16:22:42 adam Exp $
+
+SHA1 (async_generator-1.9.tar.gz) = 6ed4d199dfd1ade5ceb6dcd90e564856cecde92c
+RMD160 (async_generator-1.9.tar.gz) = f913f1edd73207c46f3bf4638dbd764175bfdd0c
+SHA512 (async_generator-1.9.tar.gz) = c4e3295cf51e2d06ea240f9cefd135984f9e61ab6cff28f76a3a83321f7c2d811f51f8909d17d901331b55f304683b4e072d16262f5311622402568009b2d1cb
+Size (async_generator-1.9.tar.gz) = 15711 bytes

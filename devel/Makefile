@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2598 2018/02/05 16:12:04 adam Exp $
+# $NetBSD: Makefile,v 1.2599 2018/02/05 16:22:42 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -1839,6 +1839,7 @@ SUBDIR+=	py-args
 SUBDIR+=	py-astor
 SUBDIR+=	py-astroid
 SUBDIR+=	py-async-timeout
+SUBDIR+=	py-async_generator
 SUBDIR+=	py-at-spi
 SUBDIR+=	py-at-spi2
 SUBDIR+=	py-atomicwrites
