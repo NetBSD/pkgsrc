@@ -1,0 +1,16 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.8 2018/02/06 12:55:52 jperkin Exp $
+
+Don't link with the C compiler, CMake's CXXABI detection may insert
+C++ libraries into LIBS.
+
+--- src/CMakeLists.txt.orig	2017-05-28 14:22:21.000000000 +0000
++++ src/CMakeLists.txt
+@@ -684,7 +684,7 @@ if(APPLE)
+   set_target_properties(lib_darktable PROPERTIES MACOSX_RPATH TRUE)
+ endif(APPLE)
+ set_target_properties(lib_darktable PROPERTIES OUTPUT_NAME darktable)
+-set_target_properties(lib_darktable PROPERTIES LINKER_LANGUAGE C)
++#set_target_properties(lib_darktable PROPERTIES LINKER_LANGUAGE C)
+ 
+ #
+ # Link external libs

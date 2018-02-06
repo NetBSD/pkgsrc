@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2018/01/28 20:10:51 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2018/02/06 12:55:52 jperkin Exp $
 
 DISTNAME=	darktable-2.2.5
 PKGREVISION=	7
@@ -46,6 +46,7 @@ CFLAGS+=	-mstackrealign -msse2 -march=i686
 .endif
 
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+CFLAGS.SunOS+=	-D__SUNOS__=1
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mgcc)
@@ -65,7 +66,9 @@ BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.7.14.1nb1
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.if ${OPSYS} != "SunOS"
 .include "../../devel/libinotify/buildlink3.mk"
+.endif
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/GraphicsMagick/buildlink3.mk"
