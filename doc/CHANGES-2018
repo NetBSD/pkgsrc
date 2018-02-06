@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.550 2018/02/06 01:41:16 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.551 2018/02/06 08:09:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -829,3 +829,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/R-evaluate to 0.10.1 [minskim 2018-02-05]
 	Updated devel/p5-FindBin-libs to 2.1502 [schmonz 2018-02-05]
 	Updated devel/py-jupyter_core to 4.4.0nb1 [minskim 2018-02-06]
+	Updated www/py-selenium to 3.9.0 [adam 2018-02-06]
+	Updated devel/py-hypothesis to 3.44.26 [adam 2018-02-06]
+	Updated devel/py-isort to 4.3.3 [adam 2018-02-06]
+	Updated sysutils/py-structlog to 18.1.0 [adam 2018-02-06]
