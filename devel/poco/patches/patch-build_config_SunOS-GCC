@@ -1,4 +1,4 @@
-$NetBSD: patch-build_config_SunOS-GCC,v 1.5 2016/01/18 20:46:52 joerg Exp $
+$NetBSD: patch-build_config_SunOS-GCC,v 1.6 2018/02/06 11:41:14 jperkin Exp $
 
 Resolve a conflict on SunOS, where GCC>=4.6 will force C99 with C++
 and require _XOPEN_SOURCE=600, whereas GCC<4.6 will reject C99 with C++.
@@ -18,7 +18,7 @@ and require _XOPEN_SOURCE=600, whereas GCC<4.6 will reject C99 with C++.
  # Compiler and Linker Flags
  #
 -CFLAGS          = 
-+CFLAGS          = -D_XOPEN_SOURCE=500
++CFLAGS          = -D_XOPEN_SOURCE=$(XOPEN_SOURCE)
  CFLAGS32        =
  CFLAGS64        =
 -CXXFLAGS        = -Wall -Wno-sign-compare
