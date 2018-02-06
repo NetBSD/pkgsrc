@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.555 2018/02/06 15:44:10 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.556 2018/02/06 16:25:39 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -838,3 +838,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated chat/irssi to 1.1.0nb1 [maya 2018-02-06]
 	Updated lang/py34-html-docs to 3.4.8 [leot 2018-02-06]
 	Updated devel/gobject-introspection to 1.54.1nb1 [jperkin 2018-02-06]
+	Updated textproc/rapidjson to 1.1.0nb1 [maya 2018-02-06]
