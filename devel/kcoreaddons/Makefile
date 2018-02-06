@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/01/28 20:10:46 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2018/02/06 12:12:56 jperkin Exp $
 
 DISTNAME=	kcoreaddons-${KF5VER}
 PKGREVISION=	2
@@ -10,7 +10,10 @@ LICENSE=	gnu-lgpl-v2 AND gnu-lgpl-v2.1 AND modified-bsd
 
 .include "../../meta-pkgs/kf5/Makefile.common"
 
+.if ${OPSYS} != "SunOS"
 .include "../../devel/libinotify/buildlink3.mk"
+.endif
+
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../mk/fam.buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
