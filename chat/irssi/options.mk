@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2017/08/24 14:05:21 khorben Exp $
+# $NetBSD: options.mk,v 1.19 2018/02/06 10:06:34 maya Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.irssi
 PKG_SUPPORTED_OPTIONS=		ssl perl truecolor
@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=	--with-perl=no
 .endif
 
 .if !empty(PKG_OPTIONS:Mssl)
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0.2
 .include "../../security/openssl/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-ssl
