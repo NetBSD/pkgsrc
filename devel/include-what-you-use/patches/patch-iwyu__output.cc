@@ -1,10 +1,10 @@
-$NetBSD: patch-iwyu__output.cc,v 1.1 2015/12/30 16:16:13 bsiegert Exp $
+$NetBSD: patch-iwyu__output.cc,v 1.2 2018/02/06 10:01:36 adam Exp $
 
 Remove use of std::to_string, which is problematic in gcc48.
 
---- iwyu_output.cc.orig	2015-12-11 05:45:54.000000000 +0000
+--- iwyu_output.cc.orig	2017-12-02 09:16:38.000000000 +0000
 +++ iwyu_output.cc
-@@ -61,7 +61,6 @@ using std::map;
+@@ -60,7 +60,6 @@ using std::map;
  using std::multimap;
  using std::pair;
  using std::sort;
@@ -12,7 +12,7 @@ Remove use of std::to_string, which is problematic in gcc48.
  using std::vector;
  
  namespace internal {
-@@ -555,7 +554,7 @@ void IwyuFileInfo::AddUsingDecl(const Us
+@@ -546,7 +545,7 @@ void IwyuFileInfo::AddUsingDecl(const Us
    int end_linenum = GetLineNumber(GetInstantiationLoc(decl_lines.getEnd()));
    VERRS(6) << "Found using-decl: "
             << GetFilePath(file_) << ":" 
