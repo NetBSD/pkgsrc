@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2018/01/31 10:31:34 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2018/02/06 13:33:36 jperkin Exp $
 
 DISTNAME=	chmlib-0.40
 PKGREVISION=	1
@@ -18,6 +18,8 @@ USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--disable-io64
 CONFIGURE_ARGS+=	--enable-examples
+
+LIBS.SunOS+=	-lnsl -lsocket
 
 .include "../../mk/pthread.buildlink3.mk"
 
