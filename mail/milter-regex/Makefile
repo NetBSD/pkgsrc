@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/09/03 08:36:55 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2018/02/06 13:38:11 jperkin Exp $
 
 DISTNAME=	milter-regex-1.7
 PKGREVISION=	2
@@ -27,6 +27,8 @@ SUBST_CLASSES+=		var
 SUBST_STAGE.var=	do-configure
 SUBST_FILES.var=	milter-regex.8 milter-regex.c
 SUBST_SED.var=		-e 's|/var/spool|${VARBASE}|g'
+
+LDFLAGS.SunOS+=		-lnsl -lsocket
 
 .include "../../mk/bsd.prefs.mk"
 
