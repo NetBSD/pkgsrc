@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.553 2018/02/06 10:06:50 maya Exp $
+$NetBSD: CHANGES-2018,v 1.554 2018/02/06 10:13:13 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -836,3 +836,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/include-what-you-use to 0.9 [adam 2018-02-06]
 	Updated graphics/libimagequant to 2.11.9 [adam 2018-02-06]
 	Updated chat/irssi to 1.1.0nb1 [maya 2018-02-06]
+	Updated lang/py34-html-docs to 3.4.8 [leot 2018-02-06]
