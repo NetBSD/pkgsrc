@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.552 2018/02/06 10:03:04 adam Exp $
+$NetBSD: CHANGES-2018,v 1.553 2018/02/06 10:06:50 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -835,3 +835,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/py-structlog to 18.1.0 [adam 2018-02-06]
 	Updated devel/include-what-you-use to 0.9 [adam 2018-02-06]
 	Updated graphics/libimagequant to 2.11.9 [adam 2018-02-06]
+	Updated chat/irssi to 1.1.0nb1 [maya 2018-02-06]
