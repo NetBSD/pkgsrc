@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2015/12/27 12:31:53 adam Exp $
+# $NetBSD: Makefile,v 1.32 2018/02/06 12:18:13 jperkin Exp $
 
 DISTNAME=	lensfun-0.3.2
 CATEGORIES=	graphics
@@ -10,7 +10,7 @@ COMMENT=	Library for rectifying defects introduced by photographic equipment
 LICENSE=	gnu-lgpl-v3
 
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake pkg-config gsed
 
 REPLACE_SH=		apps/g-lensfun-update-data
