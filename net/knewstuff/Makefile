@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/01/30 07:43:23 markd Exp $
+# $NetBSD: Makefile,v 1.20 2018/02/07 15:35:09 jperkin Exp $
 
 DISTNAME=	knewstuff-${KF5VER}
 PKGREVISION=	3
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 USE_TOOLS+=	msgmerge
 
 SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	post-patch
+SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	CMakeLists.txt
 SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_DATAROOTDIR}/examples/kde-xdg:'
