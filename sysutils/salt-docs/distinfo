@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/01/05 16:33:48 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/02/07 11:11:23 adam Exp $
 
-SHA1 (salt-2017.7.2.tar.gz) = c0e7db44328e5400b17c8cd15033991855c6fe2e
-RMD160 (salt-2017.7.2.tar.gz) = 1030d0e9fcd2de0ffe4604b550135413faab9fe9
-SHA512 (salt-2017.7.2.tar.gz) = 959cec404f0fa7c00f78427cba902b8b9c2c0d95016fc70925d8da6d0b97a0284fc034ac92a5c5c313763db4fdcbd1b0391318596b77fe8e0cd1c7e4b3fa928b
-Size (salt-2017.7.2.tar.gz) = 11471191 bytes
+SHA1 (salt-2017.7.3.tar.gz) = b573b6f5dd8204481e69302f559a90cd93e17fba
+RMD160 (salt-2017.7.3.tar.gz) = 00af188230fa05148e408659968b276f5fcf0610
+SHA512 (salt-2017.7.3.tar.gz) = 0452ad6cf2a9bcecd0056f0a6f4871e36bf2abe8c207c93f79e1e9ace608b7ba2158e958a71121f230969ff0b32ffd26f048e369003f844eaf3f4f9dd4b4a19a
+Size (salt-2017.7.3.tar.gz) = 36461646 bytes
