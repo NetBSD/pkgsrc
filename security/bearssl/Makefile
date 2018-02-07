@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/09/22 22:00:57 wiedi Exp $
+# $NetBSD: Makefile,v 1.5 2018/02/07 11:52:56 maya Exp $
 
-DISTNAME=	bearssl-0.4
+DISTNAME=	bearssl-0.5
 CATEGORIES=	security
 MASTER_SITES=	https://bearssl.org/
 
