@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/07 20:48:49 minskim Exp $
+
+SHA1 (R/gtable_0.2.0.tar.gz) = 60fb0214fa0a94f864c7400c689159769c6e9880
+RMD160 (R/gtable_0.2.0.tar.gz) = 96063bb4a672f220b5bbe816d52b4b5fa162f82a
+SHA512 (R/gtable_0.2.0.tar.gz) = e65493bb82a2d7467cec1ec87ff961c45c45fbf666d00c58b51c9ae434b59534b0764aea2b5e834370acb9f8cb106ef83fb44a5dd7a27dbb874ab1aa5d3303bd
+Size (R/gtable_0.2.0.tar.gz) = 24157 bytes
