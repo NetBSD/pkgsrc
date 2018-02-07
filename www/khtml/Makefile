@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/01/30 09:24:25 markd Exp $
+# $NetBSD: Makefile,v 1.18 2018/02/07 15:35:09 jperkin Exp $
 
 DISTNAME=	khtml-${KF5VER}
 PKGREVISION=	2
@@ -23,7 +23,7 @@ SUBST_FILES.fix-moc+=	_KDE_build/src/kmultipart/CMakeFiles/kmultipart_autogen.di
 SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
 SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	post-patch
+SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	src/CMakeLists.txt
 SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_DATAROOTDIR}/examples/kde-xdg:'
