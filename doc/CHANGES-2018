@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.565 2018/02/07 16:14:47 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.566 2018/02/07 16:26:25 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -851,3 +851,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated cad/xcircuit to 3.9.72 [hauke 2018-02-07]
 	Updated databases/py-peewee to 3.0.13 [fhajny 2018-02-07]
 	Updated sysutils/consul to 1.0.4 [fhajny 2018-02-07]
+	Updated databases/elasticsearch to 6.2.0 [fhajny 2018-02-07]
