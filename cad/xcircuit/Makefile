@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2014/12/17 06:35:13 obache Exp $
+# $NetBSD: Makefile,v 1.45 2018/02/07 11:58:31 hauke Exp $
 
-DISTNAME=	xcircuit-3.7.50
-PKGREVISION=	2
+DISTNAME=	xcircuit-3.9.72
+#PKGREVISION=	1
 CATEGORIES=	cad graphics
 MASTER_SITES=	http://opencircuitdesign.com/xcircuit/archive/
 EXTRACT_SUFX=	.tgz
@@ -12,8 +12,10 @@ COMMENT=	Drawing program for X11 (especially for circuits)
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_TOOLS+=	gmake gs:run
+USE_TOOLS+=	gmake pkg-config gs:run
 GNU_CONFIGURE=	yes
+
+EGDIR=		share/examples/xcircuit
 
 .include "../../lang/tcl/Makefile.version"
 .include "../../x11/tk/Makefile.version"
@@ -28,17 +30,18 @@ CONFIGURE_ARGS+=--with-tklibs=${BUILDLINK_PREFIX.tk}/lib
 
 BUILD_TARGET=	tcl
 INSTALL_TARGET= install-tcl
-INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/examples/xcircuit
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${EGDIR}
 
 post-extract:
 	${MV} -f ${WRKSRC}/examples/.xcircuitrc ${WRKSRC}/examples/xcircuitrc
 	${TOUCH} ${WRKSRC}/menudep.h
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/examples/*.* ${DESTDIR}${PREFIX}/share/examples/xcircuit/
-	${INSTALL_DATA} ${WRKSRC}/examples/xcircuitrc ${DESTDIR}${PREFIX}/share/examples/xcircuit/
+	${INSTALL_DATA} ${WRKSRC}/examples/*.* ${DESTDIR}${PREFIX}/${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/xcircuitrc ${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../lang/tcl/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
