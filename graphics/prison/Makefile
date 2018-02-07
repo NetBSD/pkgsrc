@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/02/01 18:49:59 markd Exp $
+# $NetBSD: Makefile,v 1.2 2018/02/07 15:35:10 jperkin Exp $
 
 DISTNAME=	prison-${KF5VER}
 CATEGORIES=	graphics
@@ -14,7 +14,7 @@ BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 USE_TOOLS+=	pkg-config
 
 #SUBST_CLASSES+=		xdg
-#SUBST_STAGE.xdg=	post-patch
+#SUBST_STAGE.xdg=	pre-configure
 #SUBST_MESSAGE.xdg=	Install via examples dir.
 #SUBST_FILES.xdg=	CMakeLists.txt
 #SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_DATAROOTDIR}/examples/kde-xdg:'

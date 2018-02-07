@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/01/30 09:10:59 markd Exp $
+# $NetBSD: Makefile,v 1.20 2018/02/07 15:35:10 jperkin Exp $
 
 DISTNAME=	kdelibs4support-${KF5VER}
 PKGREVISION=	2
@@ -21,7 +21,7 @@ USE_TOOLS+=	perl:run pkg-config msgfmt
 REPLACE_PERL+= src/kio/fileshareset
 
 SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	post-patch
+SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	src/CMakeLists.txt
 SUBST_FILES.xdg+=	src/kssl/kssl/CMakeLists.txt
