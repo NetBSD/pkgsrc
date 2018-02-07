@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2017/08/01 12:09:57 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.23 2018/02/07 11:11:23 adam Exp $
 bin/salt
 bin/salt-api
 bin/salt-call
@@ -533,6 +533,9 @@ ${PYSITELIB}/salt/executors/sudo.pyo
 ${PYSITELIB}/salt/ext/__init__.py
 ${PYSITELIB}/salt/ext/__init__.pyc
 ${PYSITELIB}/salt/ext/__init__.pyo
+${PYSITELIB}/salt/ext/backports_abc.py
+${PYSITELIB}/salt/ext/backports_abc.pyc
+${PYSITELIB}/salt/ext/backports_abc.pyo
 ${PYSITELIB}/salt/ext/ipaddress.py
 ${PYSITELIB}/salt/ext/ipaddress.pyc
 ${PYSITELIB}/salt/ext/ipaddress.pyo
