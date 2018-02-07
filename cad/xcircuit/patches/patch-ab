@@ -1,17 +1,19 @@
-$NetBSD: patch-ab,v 1.13 2014/12/15 09:00:32 obache Exp $
+$NetBSD: patch-ab,v 1.14 2018/02/07 11:58:31 hauke Exp $
 
---- configure.orig	2012-08-15 11:45:19.000000000 +0000
+Hunt down, stomp out and eradicate bashisms.
+
+--- configure.orig	2016-07-21 15:18:45.000000000 +0000
 +++ configure
-@@ -6006,7 +6006,7 @@ if test "${enable_double_buffer+set}" = 
-   enableval=$enable_double_buffer;
- else
+@@ -6371,7 +6371,7 @@ xc_with_cairo="yes"
+ if test "${with_cairo+set}" = set; then :
+   withval=$with_cairo;
+     xc_with_cairo=$withval
+-    if test "$withval" == "no" -o "$withval" == "NO"; then
++    if test "$withval" = "no" -o "$withval" = "NO"; then
+         xc_with_cairo=""
+     fi
  
--  if test "x$xc_with_GL" == "x" ; then
-+  if test "x$xc_with_GL" = "x" ; then
-     $as_echo "#define DOUBLEBUFFER 1" >>confdefs.h
- 
-   else
-@@ -6223,7 +6223,7 @@ xc_with_tk_libraries=""
+@@ -6715,7 +6715,7 @@ fi
  if test "${with_tcl+set}" = set; then :
    withval=$with_tcl;
    xc_with_tcl=$withval
@@ -20,7 +22,7 @@ $NetBSD: patch-ab,v 1.13 2014/12/15 09:00:32 obache Exp $
        xc_with_tcl=""
    fi
  
-@@ -6625,12 +6625,12 @@ if test "x$xc_with_tcl" != "x" ; then
+@@ -6982,12 +6982,12 @@ if test "x$xc_with_tcl" != "x" ; then
    if test "x${xc_with_tcl_includes}" != "x" ; then
      if test -r "${xc_with_tcl_includes}/tcl.h" ; then
        TCL_INC_DIR=${xc_with_tcl_includes}
@@ -35,14 +37,100 @@ $NetBSD: patch-ab,v 1.13 2014/12/15 09:00:32 obache Exp $
      for dir in \
       ${TCL_PREFIX}/include/tcl${TCL_MAJOR_VERSION}.${TCL_MINOR_VERSION} \
       ${TCL_PREFIX}/include \
-@@ -6689,8 +6689,8 @@ if test "x$xc_with_tcl" != "x" ; then
-       TK_LIB_NAME="tk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
-       ;;
-     *)
--      TCL_LIB_NAME="tcl${TCL_MAJOR_VERSION}.${TCL_MINOR_VERSION}"
--      TK_LIB_NAME="tk${TK_MAJOR_VERSION}.${TK_MINOR_VERSION}"
-+      TCL_LIB_NAME="tcl${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}"
-+      TK_LIB_NAME="tk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
-       ;;
-   esac
+@@ -7019,12 +7019,12 @@ if test "x$xc_with_tcl" != "x" ; then
+   if test "x${xc_with_tk_includes}" != "x" ; then
+     if test -r "${xc_with_tk_includes}/tk.h" ; then
+       TK_INC_DIR=${xc_with_tk_includes}
+-    elif test "x${TK_INCLUDE_SPEC}" == "x" ; then
++    elif test "x${TK_INCLUDE_SPEC}" = "x" ; then
+       echo "Can't find tk.h in \"${xc_with_tk_includes}\""
+       echo "Reverting to non-Tcl compilation"
+       xc_with_tcl=""
+     fi
+-  elif test "x${TK_INCLUDE_SPEC}" == "x" ; then
++  elif test "x${TK_INCLUDE_SPEC}" = "x" ; then
+     for dir in \
+      ${TK_PREFIX}/include/tcl${TCL_MAJOR_VERSION}.${TCL_MINOR_VERSION} \
+      ${TK_PREFIX}/include/tk${TK_MAJOR_VERSION}.${TK_MINOR_VERSION} \
+@@ -7064,12 +7064,12 @@ if test "x$xc_with_tcl" != "x" ; then
+         break
+       fi
+     done
+-    if test "x${TCL_LIB_DIR}" == "x" ; then
++    if test "x${TCL_LIB_DIR}" = "x" ; then
+       echo "Can't find tcl library in \"${xc_with_tcl_libraries}\""
+       echo "Reverting to non-Tcl compile"
+       xc_with_tcl=""
+     fi
+-  elif test "x${TCL_LIB_SPEC}" == "x" ; then
++  elif test "x${TCL_LIB_SPEC}" = "x" ; then
+     for libpfix in "lib64" "lib"
+     do
+       libname="${TCL_EXEC_PREFIX}/${libpfix}/lib${TCL_LIB_NAME}${SHDLIB_EXT}"
+@@ -7104,12 +7104,12 @@ if test "x$xc_with_tcl" != "x" ; then
+         break
+       fi
+     done
+-    if test "x${TK_LIB_DIR}" == "x" ; then
++    if test "x${TK_LIB_DIR}" = "x" ; then
+       echo "Can't find tk library in \"${xc_with_tk_libraries}\""
+       echo "Reverting to non-Tcl compile"
+       xc_with_tcl=""
+     fi
+-  elif test "x${TK_LIB_SPEC}" == "x" ; then
++  elif test "x${TK_LIB_SPEC}" = "x" ; then
+     for libpfix in "lib64" "lib"
+     do
+       libname="${TK_EXEC_PREFIX}/${libpfix}/lib${TK_LIB_NAME}${SHDLIB_EXT}"
+@@ -7133,7 +7133,7 @@ fi
+ #--------------------------------------------------------------------
  
+ if test "x$xc_with_tcl" != "x" ; then
+-  if test "x${TCL_LIB_SPEC}" == "x" ; then
++  if test "x${TCL_LIB_SPEC}" = "x" ; then
+     case $target in
+       *-sunos4*|*-*-netbsd|NetBSD-*|FreeBSD-*|*-*-openbsd*|OpenBSD-*)
+         TCL_LIB_NAME="tcl${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}"
+@@ -7145,7 +7145,7 @@ if test "x$xc_with_tcl" != "x" ; then
+     TCL_LIB_SPEC="-L${TCL_LIB_DIR} -l${TCL_LIB_NAME}"
+   fi
+ 
+-  if test "x${TK_LIB_SPEC}" == "x" ; then
++  if test "x${TK_LIB_SPEC}" = "x" ; then
+     case $target in
+       *-sunos4*|*-*-netbsd|NetBSD-*|FreeBSD-*|*-*-openbsd*|OpenBSD-*)
+         TK_LIB_NAME="tk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
+@@ -7239,13 +7239,13 @@ if test "x$xc_with_tcl" != "x" ; then
+ 
+   # Initialize shared library build variables
+ 
+-  if test "x${TCL_SHLIB_SUFFIX}" == "x" ; then
++  if test "x${TCL_SHLIB_SUFFIX}" = "x" ; then
+     SHDLIB_EXT=".so"
+   else
+     SHDLIB_EXT="${TCL_SHLIB_SUFFIX}"
+   fi
+ 
+-  if test "x${TCL_SHLIB_LD}" == "x" ; then
++  if test "x${TCL_SHLIB_LD}" = "x" ; then
+ 
+     # Construct shared library build arguments the painful way
+     # This is not expected to be necessary, so the number of
+@@ -9046,7 +9048,7 @@ echo "Configuration results:"
+ echo "----------------------------------------------------"
+ echo ""
+ 
+-if test "x$xc_with_tcl" == "x" ; then
++if test "x$xc_with_tcl" = "x" ; then
+    if test "x$PYTHON" != x; then
+       echo "Using Python interface (not recommended)"
+    else
+@@ -9059,7 +9061,7 @@ else
+ fi
+ echo ""
+ 
+-if test "x$xc_with_cairo" == "x" ; then
++if test "x$xc_with_cairo" = "x" ; then
+    echo "No Cairo graphics."
+    echo "If that is not what you wanted, then make sure"
+    echo "you have libcairo and fontconfig installed."
