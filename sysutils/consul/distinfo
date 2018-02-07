@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2018/02/02 12:20:27 fhajny Exp $
+$NetBSD: distinfo,v 1.21 2018/02/07 16:14:38 fhajny Exp $
 
-SHA1 (consul-1.0.3.tar.gz) = 83f5893c0f04bfac75faedc963a3bbc3b4f8fe8c
-RMD160 (consul-1.0.3.tar.gz) = c2d1cf4575c91c1f24f8c407b8fce730e8e545d7
-SHA512 (consul-1.0.3.tar.gz) = edf2f2b70a00c923bee1844d1a14e72f3fad8e576fdf1fe24896b20b72a0c53cb222e3fdba413684ecd9031b00f1df321c7ed07a0fa6310a9d8e05fc70c5cb3a
-Size (consul-1.0.3.tar.gz) = 7983520 bytes
+SHA1 (consul-1.0.4.tar.gz) = a5de2838b07121ae851522b35c91b734d068392b
+RMD160 (consul-1.0.4.tar.gz) = 67d848163968b21cb9ca5c14878d0cc135b3df1b
+SHA512 (consul-1.0.4.tar.gz) = 8c3265d23933181201752952b7c470046202b3e0afd1c6f56e2e9937e2712fed67e0764908afc1a193b7554f2b74723529580130e78765beb21f48b7c0199c3b
+Size (consul-1.0.4.tar.gz) = 8204445 bytes
