@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.557 2018/02/06 20:35:47 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.558 2018/02/07 01:03:40 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -840,3 +840,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/gobject-introspection to 1.54.1nb1 [jperkin 2018-02-06]
 	Updated textproc/rapidjson to 1.1.0nb1 [maya 2018-02-06]
 	Added devel/R-uuid version 0.1.2 [minskim 2018-02-06]
+	Updated sysutils/memtestplus to 5.01nb5 [maya 2018-02-07]
