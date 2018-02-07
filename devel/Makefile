@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2602 2018/02/07 17:04:34 minskim Exp $
+# $NetBSD: Makefile,v 1.2603 2018/02/07 20:52:25 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -16,6 +16,7 @@ SUBDIR+=	R-crayon
 SUBDIR+=	R-evaluate
 SUBDIR+=	R-magrittr
 SUBDIR+=	R-proto
+SUBDIR+=	R-repr
 SUBDIR+=	R-uuid
 SUBDIR+=	RBTools
 SUBDIR+=	RTFM
