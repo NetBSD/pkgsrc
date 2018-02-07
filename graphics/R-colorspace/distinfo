@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/07 20:40:58 minskim Exp $
+
+SHA1 (R/colorspace_1.3-2.tar.gz) = 40ed8aad9e2e622fa2a2f083ff3b3e123f4254e2
+RMD160 (R/colorspace_1.3-2.tar.gz) = 07c621091287fe414812e4aa2c3a823e5f377c16
+SHA512 (R/colorspace_1.3-2.tar.gz) = 02ee4e2c1bf6aa32ce2a02d2f21251b0d1656a2fb2bcd925be33d155a804c7ca1aefb0ab407dab0995ec5902cb3ba5e7c7343b17ea3088ced6e94fd1527e99bd
+Size (R/colorspace_1.3-2.tar.gz) = 293433 bytes
