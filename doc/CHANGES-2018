@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.558 2018/02/07 01:03:40 maya Exp $
+$NetBSD: CHANGES-2018,v 1.559 2018/02/07 01:12:15 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -841,3 +841,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/rapidjson to 1.1.0nb1 [maya 2018-02-06]
 	Added devel/R-uuid version 0.1.2 [minskim 2018-02-06]
 	Updated sysutils/memtestplus to 5.01nb5 [maya 2018-02-07]
+	Added math/R-fracdiff version 1.4.2 [minskim 2018-02-07]
