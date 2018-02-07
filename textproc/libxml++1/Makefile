@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/25 06:56:04 asau Exp $
+# $NetBSD: Makefile,v 1.6 2018/02/07 16:47:14 jperkin Exp $
 #
 
 DISTNAME=		libxml++-1.0.5
@@ -14,7 +14,7 @@ COMMENT=		C++ wrapper for the libxml XML parser library
 LICENSE=		gnu-lgpl-v2.1
 
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
