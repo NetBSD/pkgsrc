@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/01/29 14:23:26 maya Exp $
+# $NetBSD: Makefile,v 1.26 2018/02/07 00:59:18 maya Exp $
 #
 
 # Note -- version number also in the do-install rule
@@ -7,7 +7,7 @@ MINVER=01
 
 DISTNAME=		memtest86+-${MAJVER}.${MINVER}
 PKGNAME=		memtestplus-${MAJVER}.${MINVER}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.memtest.org/download/${MAJVER}.${MINVER}/
 
@@ -46,6 +46,9 @@ BUILDLINK_TRANSFORM+=	rm:-fno-stack-protector
 .if !empty(PKGSRC_COMPILER:Mclang)
 BROKEN+=	${PKGNAME} does not produce a working binary with clang
 .endif
+
+pre-configure:
+	${CP} ${FILESDIR}/io.h ${WRKSRC}
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/mdec
