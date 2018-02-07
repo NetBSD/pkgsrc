@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.560 2018/02/07 08:01:21 adam Exp $
+$NetBSD: CHANGES-2018,v 1.561 2018/02/07 11:12:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -844,3 +844,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/R-fracdiff version 1.4.2 [minskim 2018-02-07]
 	Updated devel/py-test-sugar to 0.9.1 [adam 2018-02-07]
 	Updated textproc/py-regex to 2018.02.03 [adam 2018-02-07]
+	Updated security/py-cryptodome to 3.4.11 [adam 2018-02-07]
+	Updated sysutils/salt to 2017.7.3 [adam 2018-02-07]
+	Updated sysutils/salt-docs to 2017.7.3 [adam 2018-02-07]
