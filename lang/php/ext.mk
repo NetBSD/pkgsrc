@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.44 2016/12/10 07:08:39 taca Exp $
+# $NetBSD: ext.mk,v 1.45 2018/02/07 16:14:36 jperkin Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -72,7 +72,6 @@ CONFIGURE_ARGS+=	--with-php-config=${PHP_CONFIG}
 
 USE_CONFIG_WRAPPER=	YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	YES
 USE_TOOLS+=		automake
 
 # Ensure we export symbols in the linked shared object.
