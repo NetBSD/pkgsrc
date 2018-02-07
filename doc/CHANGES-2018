@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.561 2018/02/07 11:12:05 adam Exp $
+$NetBSD: CHANGES-2018,v 1.562 2018/02/07 11:53:12 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -847,3 +847,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-cryptodome to 3.4.11 [adam 2018-02-07]
 	Updated sysutils/salt to 2017.7.3 [adam 2018-02-07]
 	Updated sysutils/salt-docs to 2017.7.3 [adam 2018-02-07]
+	Updated security/bearssl to 0.5 [maya 2018-02-07]
