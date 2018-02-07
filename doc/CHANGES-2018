@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.559 2018/02/07 01:12:15 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.560 2018/02/07 08:01:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -842,3 +842,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/R-uuid version 0.1.2 [minskim 2018-02-06]
 	Updated sysutils/memtestplus to 5.01nb5 [maya 2018-02-07]
 	Added math/R-fracdiff version 1.4.2 [minskim 2018-02-07]
+	Updated devel/py-test-sugar to 0.9.1 [adam 2018-02-07]
+	Updated textproc/py-regex to 2018.02.03 [adam 2018-02-07]
