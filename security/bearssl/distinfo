@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2017/09/22 22:00:57 wiedi Exp $
+$NetBSD: distinfo,v 1.4 2018/02/07 11:52:56 maya Exp $
 
-SHA1 (bearssl-0.4.tar.gz) = 3246db6d5949a86b1889c1921ae9496d7b962c47
-RMD160 (bearssl-0.4.tar.gz) = e0f40ea16bfa3fc729407ddb3e176fa4ea8c259e
-SHA512 (bearssl-0.4.tar.gz) = ff197c36a9e1a3e6b2e5b29c880f408518600ddc2a106522d097d6f4c824f3c5206c320194d8cfcc658eebb9a14e8175387e71d8a1d428562e028caa38c717ef
-Size (bearssl-0.4.tar.gz) = 633401 bytes
+SHA1 (bearssl-0.5.tar.gz) = c2c202803454c35a4a271d9f5e518295b8d76e01
+RMD160 (bearssl-0.5.tar.gz) = 5974baced77d83aace5a5eea31a3810d93a26e28
+SHA512 (bearssl-0.5.tar.gz) = 1bd510f62f36620cda5317509e72bd0c6f3538c30aca2695e80c26d1ea7270d174ed3fbb6d690b3ced5d51ce3f6bfc776d78a196492900296a452bc4c8185e45
+Size (bearssl-0.5.tar.gz) = 666905 bytes
 SHA1 (patch-conf_Unix.mk) = 452629d96619ddd63a726b2ae933610187d31a68
