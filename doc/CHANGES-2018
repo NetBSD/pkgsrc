@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.563 2018/02/07 11:58:59 hauke Exp $
+$NetBSD: CHANGES-2018,v 1.564 2018/02/07 16:12:17 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -849,3 +849,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/salt-docs to 2017.7.3 [adam 2018-02-07]
 	Updated security/bearssl to 0.5 [maya 2018-02-07]
 	Updated cad/xcircuit to 3.9.72 [hauke 2018-02-07]
+	Updated databases/py-peewee to 3.0.13 [fhajny 2018-02-07]
