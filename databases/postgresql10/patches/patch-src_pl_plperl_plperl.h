@@ -1,9 +1,9 @@
-$NetBSD: patch-src_pl_plperl_plperl.h,v 1.1 2017/10/23 20:33:49 adam Exp $
+$NetBSD: patch-src_pl_plperl_plperl.h,v 1.2 2018/02/08 20:53:56 adam Exp $
 
---- src/pl/plperl/plperl.h.orig	2017-08-07 21:19:50.000000000 +0000
+--- src/pl/plperl/plperl.h.orig	2018-02-05 21:01:02.000000000 +0000
 +++ src/pl/plperl/plperl.h
-@@ -44,6 +44,10 @@
- #undef vsnprintf
+@@ -50,6 +50,10 @@
+ #define __inline__ inline
  #endif
  
 +#ifdef __sun
@@ -13,7 +13,7 @@ $NetBSD: patch-src_pl_plperl_plperl.h,v 1.1 2017/10/23 20:33:49 adam Exp $
  
  /*
   * Get the basic Perl API.  We use PERL_NO_GET_CONTEXT mode so that our code
-@@ -62,6 +66,11 @@
+@@ -68,6 +72,11 @@
  #include "XSUB.h"
  #endif
  
