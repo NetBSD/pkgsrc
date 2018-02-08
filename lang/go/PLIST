@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2018/01/28 11:31:03 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.38 2018/02/08 19:32:17 bsiegert Exp $
 bin/go
 bin/gofmt
 go/AUTHORS
@@ -1789,6 +1789,8 @@ go/src/cmd/go/internal/web/http.go
 go/src/cmd/go/internal/web/security.go
 go/src/cmd/go/internal/work/build.go
 go/src/cmd/go/internal/work/build_test.go
+go/src/cmd/go/internal/work/security.go
+go/src/cmd/go/internal/work/security_test.go
 go/src/cmd/go/internal/work/testgo.go
 go/src/cmd/go/main.go
 go/src/cmd/go/mkalldocs.sh
