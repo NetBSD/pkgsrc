@@ -1,7 +1,18 @@
-$NetBSD: patch-ae,v 1.8 2015/04/15 07:31:15 spz Exp $
+$NetBSD: patch-modes_Makefile.in,v 1.1 2018/02/08 16:03:12 jaapb Exp $
 
+Honour LDFLAGS.
+Use INSTALL properly.
 --- modes/Makefile.in.orig	2015-02-13 04:24:37.000000000 +0000
 +++ modes/Makefile.in
+@@ -334,7 +334,7 @@ CFLAGS = @CFLAGS@
+ CXXFLAGS = @CXXFLAGS@
+ #CFLAGS = -O
+ #CFLAGS = -g
+-XLOCKLDFLAGS = @XLOCKLDFLAGS@ $(CHECKLDFLAG)
++XLOCKLDFLAGS = @XLOCKLDFLAGS@ $(CHECKLDFLAG) @LDFLAGS@
+ XLIBS = @XLIBS@
+ XLOCKLIBS = $(MODULELIB) @XLOCKLIBS@ -lcrypt
+ 
 @@ -600,21 +600,22 @@ install : install-program install-man in
  	@ $(ECHO) ""
  
