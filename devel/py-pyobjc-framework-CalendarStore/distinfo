@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:13 agc Exp $
+$NetBSD: distinfo,v 1.3 2018/02/08 19:54:20 adam Exp $
 
-SHA1 (pyobjc-framework-CalendarStore-3.0.4.tar.gz) = 2f6bd5bc45a779e6d194fbbf88543af4eebe81ea
-RMD160 (pyobjc-framework-CalendarStore-3.0.4.tar.gz) = c8d0c0121c98662433169d27d977cbffa679f1b3
-SHA512 (pyobjc-framework-CalendarStore-3.0.4.tar.gz) = 9059cb9507da6d43bf2d1dd46f8353d50a726413cfcbec717c03785f0cfd9ce769be099d2f583385473f629b71512f6dedd2a605ec70eec23b0bd0dcf7a90e0e
-Size (pyobjc-framework-CalendarStore-3.0.4.tar.gz) = 47593 bytes
+SHA1 (pyobjc-framework-CalendarStore-4.1.tar.gz) = 1777ef0497450014b2b0282e056a3eb5b42526e3
+RMD160 (pyobjc-framework-CalendarStore-4.1.tar.gz) = 19a3ae65fe043e565e127355ad9f0248118afbb2
+SHA512 (pyobjc-framework-CalendarStore-4.1.tar.gz) = 7c66d230d1fe5c2c30642d75a1784a692bb5bb6e5d8d61833b19556ec5b263fde1da46e6631ea0ef84c3509e4275215dc8754cb2fe49d43a439e49ec45d93a42
+Size (pyobjc-framework-CalendarStore-4.1.tar.gz) = 53496 bytes

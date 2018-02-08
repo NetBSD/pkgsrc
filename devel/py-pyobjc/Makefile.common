@@ -1,9 +1,49 @@
-# $NetBSD: Makefile.common,v 1.1 2015/04/25 10:40:48 adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2018/02/08 19:54:19 adam Exp $
 # used by devel/py-pyobjc-core/Makefile
+# used by devel/py-pyobjc-framework-SceneKit/Makefile
+# used by devel/py-pyobjc-framework-GameCenter/Makefile
+# used by devel/py-pyobjc-framework-FinderSync/Makefile
+# used by devel/py-pyobjc-framework-Vision/Makefile
+# used by devel/py-pyobjc-framework-SecurityInterface/Makefile
+# used by devel/py-pyobjc-framework-PhotosUI/Makefile
+# used by devel/py-pyobjc-framework-Photos/Makefile
+# used by devel/py-pyobjc-framework-NotificationCenter/Makefile
+# used by devel/py-pyobjc-framework-NetworkExtension/Makefile
+# used by devel/py-pyobjc-framework-NetFS/Makefile
+# used by devel/py-pyobjc-framework-MultipeerConnectivity/Makefile
+# used by devel/py-pyobjc-framework-ModelIO/Makefile
+# used by devel/py-pyobjc-framework-MediaPlayer/Makefile
+# used by devel/py-pyobjc-framework-MediaLibrary/Makefile
+# used by devel/py-pyobjc-framework-MediaAccessibility/Makefile
+# used by devel/py-pyobjc-framework-MapKit/Makefile
+# used by devel/py-pyobjc-framework-LocalAuthentication/Makefile
+# used by devel/py-pyobjc-framework-libdispatch/Makefile
+# used by devel/py-pyobjc-framework-iTunesLibrary/Makefile
+# used by devel/py-pyobjc-framework-IOSurface/Makefile
+# used by devel/py-pyobjc-framework-Intents/Makefile
+# used by devel/py-pyobjc-framework-GameController/Makefile
+# used by devel/py-pyobjc-framework-Security/Makefile
+# used by devel/py-pyobjc-framework-ImageCaptureCore/Makefile
+# used by devel/py-pyobjc-framework-GameplayKit/Makefile
+# used by devel/py-pyobjc-framework-SpriteKit/Makefile
+# used by devel/py-pyobjc-framework-GameKit/Makefile
+# used by devel/py-pyobjc-framework-SafariServices/Makefile
+# used by devel/py-pyobjc-framework-ExternalAccessory/Makefile
+# used by devel/py-pyobjc-framework-CryptoTokenKit/Makefile
+# used by devel/py-pyobjc-framework-CoreSpotlight/Makefile
+# used by devel/py-pyobjc-framework-CoreBluetooth/Makefile
+# used by devel/py-pyobjc-framework-CoreML/Makefile
+# used by devel/py-pyobjc-framework-ContactsUI/Makefile
+# used by devel/py-pyobjc-framework-Contacts/Makefile
+# used by devel/py-pyobjc-framework-ColorSync/Makefile
+# used by devel/py-pyobjc-framework-CloudKit/Makefile
+# used by devel/py-pyobjc-framework-AVKit/Makefile
+# used by devel/py-pyobjc-framework-AVFoundation/Makefile
 # used by devel/py-pyobjc-framework-Accounts/Makefile
 # used by devel/py-pyobjc-framework-AddressBook/Makefile
 # used by devel/py-pyobjc-framework-AppleScriptKit/Makefile
 # used by devel/py-pyobjc-framework-AppleScriptObjC/Makefile
+# used by devel/py-pyobjc-framework-ApplicationServices/Makefile
 # used by devel/py-pyobjc-framework-Automator/Makefile
 # used by devel/py-pyobjc-framework-CalendarStore/Makefile
 # used by devel/py-pyobjc-framework-CFNetwork/Makefile
@@ -38,12 +78,17 @@
 # used by devel/py-pyobjc-framework-SystemConfiguration/Makefile
 # used by devel/py-pyobjc-framework-WebKit/Makefile
 
-PYOBJC_VERS=	3.0.4
+PYOBJC_VERS=	4.1
+
+MAINTAINER?=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://pythonhosted.org/pyobjc/
+LICENSE=	mit
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
 
-SUBST_CLASSES+=		fix-setup
-SUBST_STAGE.fix-setup=	pre-configure
-SUBST_MESSAGE.fix-setup=Avoiding a hack in pyobjc_setup.py.
-SUBST_FILES.fix-setup=	pyobjc_setup.py
-SUBST_SED.fix-setup=	-e 's,[a-z]*flags.extend.*-isysroot.*,pass,'
+SUBST_CLASSES+=		pysetup
+SUBST_STAGE.pysetup=	pre-configure
+SUBST_MESSAGE.pysetup=	Avoiding a hacks in pyobjc_setup.py.
+SUBST_FILES.pysetup=	pyobjc_setup.py
+SUBST_SED.pysetup=	-e 's,[a-z]*flags.extend.*-isysroot.*,pass,'
+SUBST_SED.pysetup+=	-e "s,del sys.modules\['PyObjCTools'\],pass,"

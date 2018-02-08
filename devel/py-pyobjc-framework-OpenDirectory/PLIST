@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/25 10:40:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/02/08 19:54:24 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,9 +8,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/CFOpenDirectory/__init__.py
 ${PYSITELIB}/CFOpenDirectory/__init__.pyc
 ${PYSITELIB}/CFOpenDirectory/__init__.pyo
+${PYSITELIB}/CFOpenDirectory/_metadata.py
 ${PYSITELIB}/CFOpenDirectory/_metadata.pyc
 ${PYSITELIB}/CFOpenDirectory/_metadata.pyo
-${PYSITELIB}/CFOpenDirectory/_metadata.py
 ${PYSITELIB}/OpenDirectory/__init__.py
 ${PYSITELIB}/OpenDirectory/__init__.pyc
 ${PYSITELIB}/OpenDirectory/__init__.pyo
