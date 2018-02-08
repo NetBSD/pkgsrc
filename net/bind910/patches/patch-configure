@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.5 2017/11/07 02:16:45 kamil Exp $
+$NetBSD: patch-configure,v 1.6 2018/02/08 14:43:07 fhajny Exp $
 
 * Add DragonFly support.
 * Link proper postgresql library.
 * Avoid using "==" for argument of test(1).
 
---- configure.orig	2017-07-24 05:31:21.000000000 +0000
+--- configure.orig	2018-01-04 05:35:08.000000000 +0000
 +++ configure
 @@ -14657,6 +14657,8 @@ case $host in
  	use_threads=false ;;
@@ -41,7 +41,7 @@ $NetBSD: patch-configure,v 1.5 2017/11/07 02:16:45 kamil Exp $
 -			fi
 -		done
 +		libjson_cflags="`pkg-config --cflags json-c`"
-+		LIBS="`pkg-config --libs json-c`"
++		LIBS="$LIBS `pkg-config --libs json-c`"
 +		have_libjson="yes"
 +		have_libjson_c="yes"
  		;;
