@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2017/11/28 08:59:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/02/08 08:28:56 adam Exp $
 bin/fonttools${PYVERSSUFFIX}
 bin/pyftinspect${PYVERSSUFFIX}
 bin/pyftmerge${PYVERSSUFFIX}
@@ -27,6 +27,9 @@ ${PYSITELIB}/fontTools/cffLib/__init__.pyo
 ${PYSITELIB}/fontTools/cffLib/specializer.py
 ${PYSITELIB}/fontTools/cffLib/specializer.pyc
 ${PYSITELIB}/fontTools/cffLib/specializer.pyo
+${PYSITELIB}/fontTools/designspaceLib/__init__.py
+${PYSITELIB}/fontTools/designspaceLib/__init__.pyc
+${PYSITELIB}/fontTools/designspaceLib/__init__.pyo
 ${PYSITELIB}/fontTools/encodings/MacRoman.py
 ${PYSITELIB}/fontTools/encodings/MacRoman.pyc
 ${PYSITELIB}/fontTools/encodings/MacRoman.pyo
@@ -520,6 +523,12 @@ ${PYSITELIB}/fontTools/ttLib/tables/table_API_readme.txt
 ${PYSITELIB}/fontTools/ttLib/tables/ttProgram.py
 ${PYSITELIB}/fontTools/ttLib/tables/ttProgram.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/ttProgram.pyo
+${PYSITELIB}/fontTools/ttLib/ttCollection.py
+${PYSITELIB}/fontTools/ttLib/ttCollection.pyc
+${PYSITELIB}/fontTools/ttLib/ttCollection.pyo
+${PYSITELIB}/fontTools/ttLib/ttFont.py
+${PYSITELIB}/fontTools/ttLib/ttFont.pyc
+${PYSITELIB}/fontTools/ttLib/ttFont.pyo
 ${PYSITELIB}/fontTools/ttLib/woff2.py
 ${PYSITELIB}/fontTools/ttLib/woff2.pyc
 ${PYSITELIB}/fontTools/ttLib/woff2.pyo
@@ -532,6 +541,9 @@ ${PYSITELIB}/fontTools/unicode.pyo
 ${PYSITELIB}/fontTools/unicodedata/Blocks.py
 ${PYSITELIB}/fontTools/unicodedata/Blocks.pyc
 ${PYSITELIB}/fontTools/unicodedata/Blocks.pyo
+${PYSITELIB}/fontTools/unicodedata/OTTags.py
+${PYSITELIB}/fontTools/unicodedata/OTTags.pyc
+${PYSITELIB}/fontTools/unicodedata/OTTags.pyo
 ${PYSITELIB}/fontTools/unicodedata/ScriptExtensions.py
 ${PYSITELIB}/fontTools/unicodedata/ScriptExtensions.pyc
 ${PYSITELIB}/fontTools/unicodedata/ScriptExtensions.pyo
