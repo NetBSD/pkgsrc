@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.580 2018/02/08 16:43:03 adam Exp $
+$NetBSD: CHANGES-2018,v 1.581 2018/02/08 17:37:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -869,3 +869,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xlockmore to 5.46nb10 [jaapb 2018-02-08]
 	Updated archivers/py-lhafile to 0.2.2 [adam 2018-02-08]
 	Updated time/py-pendulum to 1.4.1 [adam 2018-02-08]
+	Added textproc/R-jsonlite version 1.5 [minskim 2018-02-08]
