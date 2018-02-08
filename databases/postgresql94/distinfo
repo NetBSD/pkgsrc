@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.19 2018/01/22 11:05:29 jperkin Exp $
+$NetBSD: distinfo,v 1.20 2018/02/08 20:53:57 adam Exp $
 
-SHA1 (postgresql-9.4.15.tar.bz2) = 5e50e5c0a66c676c584a41b25f18e326781aecdb
-RMD160 (postgresql-9.4.15.tar.bz2) = 04dc5296bca61d8d1e32fa95b2002f36f9effc8f
-SHA512 (postgresql-9.4.15.tar.bz2) = be69f184cf18fb4c611d31a128f3593dc537551606f1db84a3ce9899b72f546876f05b29792435c3780c6c2b571759f4db2c172d62b2c012bd58574df80b4eb1
-Size (postgresql-9.4.15.tar.bz2) = 17921677 bytes
+SHA1 (postgresql-9.4.16.tar.bz2) = a5a1b327ae8a6a8ef598addf59bf697496cd5f29
+RMD160 (postgresql-9.4.16.tar.bz2) = ac5621449c04f2328c099967133c30a6a93746d7
+SHA512 (postgresql-9.4.16.tar.bz2) = 2e2bf14e2e63dec7254813e3c3a902a39cbd0aae89d8b3da5f75c6dead5d413a4f260fda6e87c9f84e4378df350c6531e67d972201f731a848b60bacef5b2bc8
+Size (postgresql-9.4.16.tar.bz2) = 17778763 bytes
 SHA1 (patch-config_missing) = c2d7d742922ba6861e7660c75b7b53f09e564813
-SHA1 (patch-config_perl.m4) = e035132b1c281a75752d570ac5e29a11176c25c5
-SHA1 (patch-configure) = 59fe9a768caf8a5d308acac60c28bc6bb2c40632
+SHA1 (patch-config_perl.m4) = 14c9564577d0df6f82ae0027aeada2f3a6a8f07c
+SHA1 (patch-configure) = 1c0fee3fb270863eb39118a65769ce170391cfec
 SHA1 (patch-contrib_dblink_dblink.c) = a6f87ab9f2c28a72608d70267b71bd77437b0921
 SHA1 (patch-contrib_uuid-ossp_uuid-ossp.c) = b18da04850bc7c14f8fc80e0c86429ed1cc075c8
 SHA1 (patch-src_Makefile.global.in) = 2ab3affedc77b202f6749964287438d6179ca23a
@@ -17,5 +17,5 @@ SHA1 (patch-src_interfaces_ecpg_pgtypeslib_interval.c) = af0971de415b6b44ae3520c
 SHA1 (patch-src_interfaces_libpq_Makefile) = 0066301bc8b31b9e26c79153427537bc3865ef4d
 SHA1 (patch-src_makefiles_Makefile.solaris) = 0168f5bc105ffc89d5db40907a08966d8465f5a0
 SHA1 (patch-src_pl_plperl_GNUmakefile) = 6ee3e431f46ce5c2a94df499504b2b8bd458bbef
-SHA1 (patch-src_pl_plperl_plperl.h) = 0e7daec79a00d7378326e56525e50cfe61cfc174
+SHA1 (patch-src_pl_plperl_plperl.h) = 7b2549a487907994a7de898dca6a8691621dcc73
 SHA1 (patch-src_timezone_localtime.c) = 9b5748ef94b11b8798121ac85d2bb18cb99b3812
