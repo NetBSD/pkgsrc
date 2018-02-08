@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/01/30 10:28:51 adam Exp $
+# $NetBSD: Makefile,v 1.31 2018/02/08 21:37:14 adam Exp $
 
 .include "../../graphics/py-matplotlib/Makefile.common"
 
@@ -33,5 +33,6 @@ do-test:
 	${PYTHONBIN} -c "import matplotlib; matplotlib.test()"
 
 .include "../../lang/python/egg.mk"
+.include "../../math/py-numpy/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
