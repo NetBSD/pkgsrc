@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2017/01/31 14:04:02 leot Exp $
-${PYSITELIB}/OleFileIO_PL.py
-${PYSITELIB}/OleFileIO_PL.pyc
-${PYSITELIB}/OleFileIO_PL.pyo
-${PYSITELIB}/${EGG_FILE}
-${PYSITELIB}/olefile/CONTRIBUTORS.txt
-${PYSITELIB}/olefile/LICENSE.txt
-${PYSITELIB}/olefile/README.html
-${PYSITELIB}/olefile/README.rst
+@comment $NetBSD: PLIST,v 1.2 2018/02/08 08:17:26 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/olefile/__init__.py
 ${PYSITELIB}/olefile/__init__.pyc
 ${PYSITELIB}/olefile/__init__.pyo
