@@ -1,0 +1,3 @@
+An interface to the rich display capabilities of 'Jupyter' front-ends
+(e.g. 'Jupyter Notebook'). Designed to be used from a running
+'IRkernel' session.
