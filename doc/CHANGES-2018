@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.579 2018/02/08 16:03:38 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.580 2018/02/08 16:43:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -867,3 +867,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/adobe-flash-player to 28.0.0.161 [tsutsui 2018-02-08]
 	Updated net/mikutter to 3.6.2 [tsutsui 2018-02-08]
 	Updated x11/xlockmore to 5.46nb10 [jaapb 2018-02-08]
+	Updated archivers/py-lhafile to 0.2.2 [adam 2018-02-08]
+	Updated time/py-pendulum to 1.4.1 [adam 2018-02-08]
