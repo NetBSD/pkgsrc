@@ -1,7 +1,18 @@
-$NetBSD: patch-ac,v 1.13 2015/04/15 07:31:15 spz Exp $
+$NetBSD: patch-xglock_Makefile.in,v 1.1 2018/02/08 16:03:12 jaapb Exp $
 
+Honour LDFLAGS.
+Use INSTALL properly.
 --- xglock/Makefile.in.orig	2010-04-19 13:34:35.000000000 +0000
 +++ xglock/Makefile.in
+@@ -92,7 +92,7 @@ XGLOCKINC = @XGLOCKINC@ -I.. -I$(top_src
+ CFLAGS = @GTK_CFLAGS@ @CFLAGS@
+ #CFLAGS = -O
+ #CFLAGS = -g
+-XGLOCKLDFLAGS = @XGLOCKLDFLAGS@
++XGLOCKLDFLAGS = @XGLOCKLDFLAGS@ @LDFLAGS@
+ XLIBS = @XLIBS@
+ XGLOCKLIBS = @XGLOCKLIBS@
+ #If you have purify, and want to use it, uncomment this definition or
 @@ -117,14 +117,14 @@ install_xglock : install-program install
  	@ $(ECHO) ""
  
