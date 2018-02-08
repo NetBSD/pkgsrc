@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/08 19:54:21 adam Exp $
+
+SHA1 (pyobjc-framework-CoreBluetooth-4.1.tar.gz) = 9a666e09afe13f190ef38cf4124494b4e9f32063
+RMD160 (pyobjc-framework-CoreBluetooth-4.1.tar.gz) = 3f27789b99bbfe66ff5559ee3901be663c9f93fb
+SHA512 (pyobjc-framework-CoreBluetooth-4.1.tar.gz) = cab8407883843ef36b5db7bf6cb18f5f629ef021a977c4fc6aabe79a6facaa25c68c49597c3d12aee043548abbd40815d9da50e32188b7f202302946aa499393
+Size (pyobjc-framework-CoreBluetooth-4.1.tar.gz) = 26314 bytes

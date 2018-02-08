@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/08 19:54:22 adam Exp $
+
+SHA1 (pyobjc-framework-ImageCaptureCore-4.1.tar.gz) = 6ad3f1e79656dfcdf75abbffd94d7c0eec782872
+RMD160 (pyobjc-framework-ImageCaptureCore-4.1.tar.gz) = b5e21fd12ef137c723c0311c8fcdea41e26c47fb
+SHA512 (pyobjc-framework-ImageCaptureCore-4.1.tar.gz) = a38f6029472d12358c25c2677d0679fa79ec00881637a2165422eefd1ef82e22ebeb5ec77bf08345e58fab2f8a5e5a7359fbe6847ec22a176c8cd937ebe80e67
+Size (pyobjc-framework-ImageCaptureCore-4.1.tar.gz) = 33237 bytes
