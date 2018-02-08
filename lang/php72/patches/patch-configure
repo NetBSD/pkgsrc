@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.6 2018/02/02 12:50:38 jdolecek Exp $
+$NetBSD: patch-configure,v 1.7 2018/02/08 20:55:42 jdolecek Exp $
 
 Don't automatically add libgcc on SunOS.
 
@@ -42,15 +42,6 @@ Don't automatically add libgcc on SunOS.
    { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
  $as_echo "yes" >&6; }
  
-@@ -21090,7 +21066,7 @@ $as_echo "#define HAVE_SQLITE3_ERRSTR 1"
-     PHP_SQLITE3_CFLAGS="-I@ext_srcdir@/libsqlite $other_flags $threadsafe_flags $debug_flags"
- 
- 
--    for header_file in ext/sqlite3/libsqlite/sqlite3.h; do
-+    for header_file; do
- 
- 
-   unique=`echo $header_file|$SED 's/[^a-zA-Z0-9]/_/g'`
 @@ -96116,12 +96092,7 @@ old_CC=$CC
  if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
    CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
