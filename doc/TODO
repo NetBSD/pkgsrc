@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18081 2018/02/07 11:58:59 hauke Exp $
+$NetBSD: TODO,v 1.18082 2018/02/08 21:00:40 adam Exp $
 
 Suggested new packages
 ======================
@@ -655,7 +655,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o freewais-sf-2.2.14
 	o frink-2.3.1a2
 	o frotz-2.44
-	o fs-uae-2.8.2 [pkg/51895]
 	o ftplibpp-2.0.2
 	o fuse-archivemount-0.8.7
 	o fuse-bindfs-1.13.7

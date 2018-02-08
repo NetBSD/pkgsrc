@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.583 2018/02/08 19:32:54 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.584 2018/02/08 21:00:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -872,3 +872,12 @@ Changes to the packages collection and infrastructure in 2018:
 	Added textproc/R-jsonlite version 1.5 [minskim 2018-02-08]
 	Added devel/R-IRdisplay version 0.4.4 [minskim 2018-02-08]
 	Updated lang/go to 1.9.4 [bsiegert 2018-02-08]
+	Updated devel/py-pyobjc to 4.1 [adam 2018-02-08]
+	Updated databases/postgresql93 to 9.3.21 [adam 2018-02-08]
+	Updated databases/postgresql94 to 9.4.16 [adam 2018-02-08]
+	Updated databases/postgresql95 to 9.5.11 [adam 2018-02-08]
+	Updated databases/postgresql96 to 9.6.7 [adam 2018-02-08]
+	Updated databases/postgresql10 to 10.2nb1 [adam 2018-02-08]
+	Updated emulators/fs-uae to 2.8.3 [adam 2018-02-08]
+	Updated emulators/fs-uae-launcher to 2.8.3 [adam 2018-02-08]
+	Added emulators/fs-uae-arcade version 2.8.3 [adam 2018-02-08]
