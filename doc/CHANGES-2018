@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.572 2018/02/08 08:29:21 adam Exp $
+$NetBSD: CHANGES-2018,v 1.573 2018/02/08 09:03:32 martin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -860,3 +860,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-olefile to 0.45.1 [adam 2018-02-08]
 	Updated security/py-asyncssh to 1.12.0 [adam 2018-02-08]
 	Updated fonts/py-fonttools to 3.22.0 [adam 2018-02-08]
+	Added sysutils/u-boot-jetson-tx2 version 2017.11 [martin 2018-02-08]
