@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.12 2018/02/05 09:40:23 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.13 2018/02/08 22:26:21 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
 
@@ -103,3 +103,5 @@ net/unbound: security update
 Pullup ticket #5700 - requested by taca
 www/squid3: security update
 
+Pullup ticket #5698 - requested by maya
+sysutils/memtestplus: build fix
