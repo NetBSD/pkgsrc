@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/08 19:54:25 adam Exp $
+
+SHA1 (pyobjc-framework-SceneKit-4.1.tar.gz) = 7525757b819df50c2345e2c2c78936347902dc43
+RMD160 (pyobjc-framework-SceneKit-4.1.tar.gz) = 1f2ef0bb71b6ca088b62cb2881773eb0b85e0282
+SHA512 (pyobjc-framework-SceneKit-4.1.tar.gz) = 99b28af0b41b54d7c8c257fa21ddec6ece9a28ed7c3e2eea88a9610c927e7ac435b60d0fed53605b4057bb02413da524ae4fa5d457ca49182193c3415d5c9f7d
+Size (pyobjc-framework-SceneKit-4.1.tar.gz) = 69992 bytes

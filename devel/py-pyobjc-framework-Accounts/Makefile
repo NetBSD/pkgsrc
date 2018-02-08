@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/02/08 19:54:19 adam Exp $
 
 .include "../../devel/py-pyobjc/Makefile.common"
 
 DISTNAME=	pyobjc-framework-Accounts-${PYOBJC_VERS}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-Accounts/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pythonhosted.org/pyobjc/
 COMMENT=	Bridge between Python and Objective-C (Accounts framework)
-LICENSE=	mit
 
 USE_LANGUAGES=	c objc
 
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-core>=${PYOBJC_VERS}:../../devel/py-pyobjc-core
+DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-Cocoa>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-Cocoa
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
