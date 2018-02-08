@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.250 2017/04/22 17:29:02 taca Exp $
+# $NetBSD: Makefile,v 1.251 2018/02/08 20:58:50 adam Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -61,6 +61,7 @@ SUBDIR+=	fmsx
 SUBDIR+=	free42
 SUBDIR+=	freebsd_lib
 SUBDIR+=	fs-uae
+SUBDIR+=	fs-uae-arcade
 SUBDIR+=	fs-uae-launcher
 SUBDIR+=	fuse-emulator
 SUBDIR+=	fuse-emulator-utils
