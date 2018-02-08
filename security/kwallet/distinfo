@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2018/01/17 20:06:50 markd Exp $
+$NetBSD: distinfo,v 1.13 2018/02/08 13:49:03 jperkin Exp $
 
 SHA1 (kwallet-5.41.0.tar.xz) = 6c6eee6baa6a1733d383bb06e1b4163065a9dc8e
 RMD160 (kwallet-5.41.0.tar.xz) = e60000156ec099870c4367dcb3a3a05242292b6f
 SHA512 (kwallet-5.41.0.tar.xz) = 572b1d145f7092ed8ca581a00ced425f6a6fa4d153853ec591bbe6f91c5851c8476356b907ea1808e93f881a9e24797e894e7621f5627eadaf086a7f92e89e74
 Size (kwallet-5.41.0.tar.xz) = 306496 bytes
+SHA1 (patch-src_runtime_kwalletd_backend_blowfish.h) = c36149fb54391d3023f37f13d3617a6a3efd6518
