@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/01/31 14:04:02 leot Exp $
+# $NetBSD: Makefile,v 1.2 2018/02/08 08:17:26 adam Exp $
 
-DISTNAME=	olefile-0.44
+DISTNAME=	olefile-0.45.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/olefile/}
 EXTRACT_SUFX=	.zip
 
@@ -13,5 +13,5 @@ LICENSE=	2-clause-bsd AND hpnd
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
