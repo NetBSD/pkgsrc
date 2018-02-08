@@ -1,4 +1,6 @@
-$NetBSD: patch-main.c,v 1.1 2015/03/21 02:18:39 tnn Exp $
+$NetBSD: patch-main.c,v 1.1.26.1 2018/02/08 22:00:59 spz Exp $
+
+Clang fix.
 
 --- main.c.orig	2013-08-10 02:01:58.000000000 +0000
 +++ main.c
