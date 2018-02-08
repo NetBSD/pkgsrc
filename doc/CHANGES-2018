@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.574 2018/02/08 11:28:56 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.575 2018/02/08 12:56:19 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -862,3 +862,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated fonts/py-fonttools to 3.22.0 [adam 2018-02-08]
 	Added sysutils/u-boot-jetson-tx2 version 2017.11 [martin 2018-02-08]
 	Updated devel/git-base to 2.16.1nb1 [jperkin 2018-02-08]
+	Updated databases/py-peewee to 3.0.15 [fhajny 2018-02-08]
