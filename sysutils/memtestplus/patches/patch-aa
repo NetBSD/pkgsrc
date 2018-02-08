@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2015/03/21 02:18:39 tnn Exp $
+$NetBSD: patch-aa,v 1.6.26.1 2018/02/08 22:00:59 spz Exp $
 
 --- Makefile.orig	2013-08-10 02:01:58.000000000 +0000
 +++ Makefile
-@@ -7,7 +7,7 @@
+@@ -7,12 +7,12 @@
  #
  # Path for the floppy disk device
  #
@@ -11,6 +11,12 @@ $NetBSD: patch-aa,v 1.6 2015/03/21 02:18:39 tnn Exp $
  
  AS=as -32
  CC=gcc
+ 
+-CFLAGS= -Wall -march=i486 -m32 -O1 -fomit-frame-pointer -fno-builtin \
++CFLAGS= -Wall -march=i486 -m32 -O0 -fomit-frame-pointer -fno-builtin \
+ 	-ffreestanding -fPIC $(SMP_FL) -fno-stack-protector 
+ 	
+ OBJS= head.o reloc.o main.o test.o init.o lib.o patn.o screen_buffer.o \
 @@ -20,22 +20,24 @@ OBJS= head.o reloc.o main.o test.o init.
        smp.o vmem.o random.o
        
