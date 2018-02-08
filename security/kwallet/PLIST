@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/01/17 20:06:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/02/08 13:49:03 jperkin Exp $
 bin/kwallet-query
 bin/kwalletd5
 include/KF5/KWallet/KWallet
@@ -20,6 +20,7 @@ qt5/mkspecs/modules/qt_KWallet.pri
 share/dbus-1/interfaces/kf5_org.kde.KWallet.xml
 share/dbus-1/services/org.kde.kwalletd.service
 share/dbus-1/services/org.kde.kwalletd5.service
+share/examples/kde-xdg/kwallet.categories
 share/knotifications5/kwalletd.notifyrc
 share/kservices5/kwalletd5.desktop
 share/locale/ar/LC_MESSAGES/kwalletd5.mo
