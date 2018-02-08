@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.973 2018/01/31 09:24:06 wiz Exp $
+# $NetBSD: Makefile,v 1.974 2018/02/08 17:36:15 minskim Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -14,6 +14,7 @@ SUBDIR+=	OdfConverter
 SUBDIR+=	R-formatR
 SUBDIR+=	R-gsubfn
 SUBDIR+=	R-highr
+SUBDIR+=	R-jsonlite
 SUBDIR+=	R-markdown
 SUBDIR+=	R-stringi
 SUBDIR+=	R-stringr
