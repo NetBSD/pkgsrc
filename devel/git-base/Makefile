@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2018/01/22 14:17:24 adam Exp $
+# $NetBSD: Makefile,v 1.50 2018/02/08 11:28:46 jperkin Exp $
 
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	git-base-${GIT_VERSION}
+PKGREVISION=	1
 COMMENT=	GIT Tree History Storage Tool (base package)
 
 CONFLICTS+=		scmgit-base-[0-9]*
@@ -99,6 +100,10 @@ LDFLAGS.SunOS+=		-lintl -lnsl
 # configure test gets confused by wrappers dropping -R /
 CONFIGURE_ARGS+=	git_cv_ld_dashr=no
 .endif
+
+# Prefer to install symlinks.
+INSTALL_ENV+=		NO_CROSS_DIRECTORY_HARDLINKS=1
+INSTALL_ENV+=		NO_INSTALL_HARDLINKS=1
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
