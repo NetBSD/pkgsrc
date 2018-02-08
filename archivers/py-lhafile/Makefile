@@ -1,20 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2017/08/01 14:58:51 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/02/08 16:38:43 adam Exp $
 
-DISTNAME=	python-lhafile
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}-0.2.1
+DISTNAME=	lhafile-0.2.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=FrodeSolheim/}
-GITHUB_PROJECT=	${DISTNAME}
-GITHUB_TAG=	a7341c16a2028bce547b6c06df8d455af29fcab6
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/lhafile/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	https://fs-uae.net/
+HOMEPAGE=	https://github.com/FrodeSolheim/python-lhafile
 COMMENT=	LHA(.lzh) file extract interface
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=		c
 PYDISTUTILSPKG=		yes
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
