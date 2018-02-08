@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/08 19:54:22 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/ExternalAccessory/_ExternalAccessory.so
+${PYSITELIB}/ExternalAccessory/__init__.py
+${PYSITELIB}/ExternalAccessory/__init__.pyc
+${PYSITELIB}/ExternalAccessory/__init__.pyo
+${PYSITELIB}/ExternalAccessory/_metadata.py
+${PYSITELIB}/ExternalAccessory/_metadata.pyc
+${PYSITELIB}/ExternalAccessory/_metadata.pyo

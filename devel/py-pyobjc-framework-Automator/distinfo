@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:12 agc Exp $
+$NetBSD: distinfo,v 1.3 2018/02/08 19:54:19 adam Exp $
 
-SHA1 (pyobjc-framework-Automator-3.0.4.tar.gz) = 963849fd1669d475b34aa5989d505d1de6ae58bb
-RMD160 (pyobjc-framework-Automator-3.0.4.tar.gz) = dce6ae05f7ab9ec84be25aa21498c7343b4685c8
-SHA512 (pyobjc-framework-Automator-3.0.4.tar.gz) = 4e3a38f68dc812088081fbcc0dc1feba85d339e7e3b44c9f9f5b5f4276cd8d64bdf0f472bf86944497bf4dcdd1193dda663d59ba77108cf3b69e598cf5f8bfcb
-Size (pyobjc-framework-Automator-3.0.4.tar.gz) = 174160 bytes
+SHA1 (pyobjc-framework-Automator-4.1.tar.gz) = 4c28fd8af796fe13ea8c002a04ace99ef6e91440
+RMD160 (pyobjc-framework-Automator-4.1.tar.gz) = b878bed9a3afcc7497b09d7f6437bd0506f50a8b
+SHA512 (pyobjc-framework-Automator-4.1.tar.gz) = 60a59907393cc2794d2cddb412431185e2cd66b6cdc2b9a8ffd0307fd57f31a4780edc9b25029a7f20af47be8a5859abe75c633ef447d252d0561d86cbe7d79a
+Size (pyobjc-framework-Automator-4.1.tar.gz) = 177946 bytes

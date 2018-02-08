@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/08 19:54:25 adam Exp $
+
+SHA1 (pyobjc-framework-SafariServices-4.1.tar.gz) = 8d98977d02640fa93f388216b38fade469457c20
+RMD160 (pyobjc-framework-SafariServices-4.1.tar.gz) = 65bd891a3ba7cf420c72381a410d3932af6f0f3b
+SHA512 (pyobjc-framework-SafariServices-4.1.tar.gz) = 90aa6d1f3f52743c3401dfbbfdfd964d1699b487567b5543b68229c0ee3db919bd832229cde58e1fb1cd8cb46f8cd7a9ec66b55bc436bd0e130a88e0240c86d8
+Size (pyobjc-framework-SafariServices-4.1.tar.gz) = 16601 bytes

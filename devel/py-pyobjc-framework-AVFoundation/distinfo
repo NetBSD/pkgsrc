@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/08 19:54:19 adam Exp $
+
+SHA1 (pyobjc-framework-AVFoundation-4.1.tar.gz) = 8356a345eed4c03a8a40b4a2da4faa65c246d85e
+RMD160 (pyobjc-framework-AVFoundation-4.1.tar.gz) = 5eb768b4605ea3729182582aa8e77698226a51c0
+SHA512 (pyobjc-framework-AVFoundation-4.1.tar.gz) = 7518c3b5b5a3a87d148483e726a034b90a307525f7d87d8b85b23ab7fb7e92d9d3335a04854b330a9eb73ac92de868e84d830f30997eb1f5fd8321dfce47a71d
+Size (pyobjc-framework-AVFoundation-4.1.tar.gz) = 118283 bytes

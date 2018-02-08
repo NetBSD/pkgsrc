@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/08 19:54:24 adam Exp $
+
+SHA1 (pyobjc-framework-NetFS-4.1.tar.gz) = e27a936eccc67ae66d65434b61cf3e15d67b0a71
+RMD160 (pyobjc-framework-NetFS-4.1.tar.gz) = 9e9e22c9e5d8c24bc1187184fbf11f1314494e69
+SHA512 (pyobjc-framework-NetFS-4.1.tar.gz) = 86ad0720508ae8bd7132478475b2bdd24a6ff30c9c9e1ced81a226e0674db969e60656bf75dea84a3a5d896511b3b8a439a56fe718fd5a3751500335fafcbd32
+Size (pyobjc-framework-NetFS-4.1.tar.gz) = 11007 bytes

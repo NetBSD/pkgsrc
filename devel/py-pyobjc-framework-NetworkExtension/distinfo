@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/08 19:54:24 adam Exp $
+
+SHA1 (pyobjc-framework-NetworkExtension-4.1.tar.gz) = e8e20691e4cb3dbb113e70603fa7635a882e5b4c
+RMD160 (pyobjc-framework-NetworkExtension-4.1.tar.gz) = b577126c79858c78bf83ac28f19fe4c08b25b188
+SHA512 (pyobjc-framework-NetworkExtension-4.1.tar.gz) = 3eda26831a527247f2ea089f946143d5a53e830fadbd6762ffe2944d00ece28ffb888738e84d7f83a090e1ec69e3d5c38dbd70f2659cfe2e3ad04c0b061a6c5d
+Size (pyobjc-framework-NetworkExtension-4.1.tar.gz) = 22865 bytes
