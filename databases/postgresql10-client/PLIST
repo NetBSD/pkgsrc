@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/23 20:33:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/02/08 20:53:56 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createuser
@@ -654,6 +654,7 @@ include/postgresql/server/utils/freepage.h
 include/postgresql/server/utils/geo_decls.h
 include/postgresql/server/utils/guc.h
 include/postgresql/server/utils/guc_tables.h
+include/postgresql/server/utils/hashutils.h
 include/postgresql/server/utils/help_config.h
 include/postgresql/server/utils/hsearch.h
 include/postgresql/server/utils/index_selfuncs.h
@@ -923,7 +924,14 @@ share/locale/sv/LC_MESSAGES/psql-10.mo
 share/locale/ta/LC_MESSAGES/pg_config-10.mo
 share/locale/tr/LC_MESSAGES/ecpg-10.mo
 share/locale/tr/LC_MESSAGES/ecpglib6-10.mo
+share/locale/tr/LC_MESSAGES/libpq5-10.mo
+share/locale/tr/LC_MESSAGES/pg_archivecleanup-10.mo
+share/locale/tr/LC_MESSAGES/pg_basebackup-10.mo
 share/locale/tr/LC_MESSAGES/pg_config-10.mo
+share/locale/tr/LC_MESSAGES/pg_dump-10.mo
+share/locale/tr/LC_MESSAGES/pg_test_fsync-10.mo
+share/locale/tr/LC_MESSAGES/pg_upgrade-10.mo
+share/locale/tr/LC_MESSAGES/pg_waldump-10.mo
 share/locale/zh_CN/LC_MESSAGES/ecpg-10.mo
 share/locale/zh_CN/LC_MESSAGES/ecpglib6-10.mo
 share/locale/zh_CN/LC_MESSAGES/initdb-10.mo
