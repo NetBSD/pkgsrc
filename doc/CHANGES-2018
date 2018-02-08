@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.582 2018/02/08 17:45:22 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.583 2018/02/08 19:32:54 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -871,3 +871,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/py-pendulum to 1.4.1 [adam 2018-02-08]
 	Added textproc/R-jsonlite version 1.5 [minskim 2018-02-08]
 	Added devel/R-IRdisplay version 0.4.4 [minskim 2018-02-08]
+	Updated lang/go to 1.9.4 [bsiegert 2018-02-08]
