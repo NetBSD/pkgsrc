@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/08 19:54:21 adam Exp $
+
+SHA1 (pyobjc-framework-CoreSpotlight-4.1.tar.gz) = c4cdac3d3b607764282c9d35ae05803870076ac0
+RMD160 (pyobjc-framework-CoreSpotlight-4.1.tar.gz) = 519a6579be1aab17f53e817a7925c31f8e38f982
+SHA512 (pyobjc-framework-CoreSpotlight-4.1.tar.gz) = 02e3eaf5e7d85a97d39c1299860b39d8137468093fb1b51cbc21a6ee96f1fc58f9fcb24bcdab4cf4b52b7e125507fe952bad7f233bce36fed487efd2e7e4c14b
+Size (pyobjc-framework-CoreSpotlight-4.1.tar.gz) = 16681 bytes

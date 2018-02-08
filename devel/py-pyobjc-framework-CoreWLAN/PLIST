@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/25 10:40:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/02/08 19:54:21 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/CoreWLAN/_CoreWLAN.so
 ${PYSITELIB}/CoreWLAN/__init__.py
 ${PYSITELIB}/CoreWLAN/__init__.pyc
 ${PYSITELIB}/CoreWLAN/__init__.pyo

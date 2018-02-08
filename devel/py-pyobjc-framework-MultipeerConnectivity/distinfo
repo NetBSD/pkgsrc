@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/08 19:54:24 adam Exp $
+
+SHA1 (pyobjc-framework-MultipeerConnectivity-4.1.tar.gz) = 6cedee99299b5831dd4a46ba3ca3bd44074549eb
+RMD160 (pyobjc-framework-MultipeerConnectivity-4.1.tar.gz) = 81270644a438e30e22f1a53364ac5e7bd28f080c
+SHA512 (pyobjc-framework-MultipeerConnectivity-4.1.tar.gz) = dcee2235c877ccaca3115eaa44e9e7b75babe720f99a206a6c815da6a2a448ce7414cee745f85dfdc1c02196a3ac179ac44b9b7a080e2eecfb35e7558c5826b2
+Size (pyobjc-framework-MultipeerConnectivity-4.1.tar.gz) = 19083 bytes

@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/08 19:54:22 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/GameplayKit/_GameplayKit.so
+${PYSITELIB}/GameplayKit/__init__.py
+${PYSITELIB}/GameplayKit/__init__.pyc
+${PYSITELIB}/GameplayKit/__init__.pyo
+${PYSITELIB}/GameplayKit/_metadata.py
+${PYSITELIB}/GameplayKit/_metadata.pyc
+${PYSITELIB}/GameplayKit/_metadata.pyo

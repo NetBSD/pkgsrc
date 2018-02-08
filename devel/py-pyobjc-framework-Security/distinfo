@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/08 19:54:25 adam Exp $
+
+SHA1 (pyobjc-framework-Security-4.1.tar.gz) = 72dbdfa6ce930964bb6ff08bf0d8ebab1ef4b7ad
+RMD160 (pyobjc-framework-Security-4.1.tar.gz) = 442bab4be890dd56cb6e17891b0fb54b85d01120
+SHA512 (pyobjc-framework-Security-4.1.tar.gz) = bec6461e90177f6540e5ec60685e0c8e88c4f08ba4875fe330d7ef6e15a59268ef0791521743d28ecfde6768a0a9cef8621881cd198c963ed5a52c23f8c0d95d
+Size (pyobjc-framework-Security-4.1.tar.gz) = 101872 bytes
