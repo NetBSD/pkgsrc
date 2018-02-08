@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.576 2018/02/08 12:58:41 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.577 2018/02/08 14:48:55 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -864,3 +864,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/git-base to 2.16.1nb1 [jperkin 2018-02-08]
 	Updated databases/py-peewee to 3.0.15 [fhajny 2018-02-08]
 	Updated sysutils/consul to 1.0.5 [fhajny 2018-02-08]
+	Updated multimedia/adobe-flash-player to 28.0.0.161 [tsutsui 2018-02-08]
