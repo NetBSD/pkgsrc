@@ -1,10 +1,10 @@
-$NetBSD: patch-libstreamanalyzer_cmake_MacroCheckGccVisibility.cmake,v 1.2 2018/02/08 07:28:58 mrg Exp $
+$NetBSD: patch-libstreams_cmake_MacroCheckGccVisibility.cmake,v 1.1 2018/02/08 07:28:58 mrg Exp $
 
-Support gcc6/7/8/9
+support netbsd 6, 7, 8, and 9.
 
---- libstreamanalyzer/cmake/MacroCheckGccVisibility.cmake.orig	2013-02-05 21:34:52.000000000 +0000
-+++ libstreamanalyzer/cmake/MacroCheckGccVisibility.cmake
-@@ -15,7 +15,7 @@ macro(MACRO_CHECK_GCC_VISIBILITY GccVisi
+--- libstreams/cmake/MacroCheckGccVisibility.cmake.orig	2013-02-05 13:34:57.000000000 -0800
++++ libstreams/cmake/MacroCheckGccVisibility.cmake	2018-02-07 22:38:19.000000000 -0800
+@@ -15,7 +15,7 @@
     # get the gcc version
     exec_program(${CMAKE_C_COMPILER} ARGS ${CMAKE_C_COMPILER_ARG1} --version OUTPUT_VARIABLE _gcc_version_info)
  
