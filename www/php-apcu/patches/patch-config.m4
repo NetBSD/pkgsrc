@@ -1,6 +1,8 @@
-$NetBSD: patch-config.m4,v 1.3 2018/01/10 10:05:17 jdolecek Exp $
+$NetBSD: patch-config.m4,v 1.4 2018/02/08 22:15:12 jdolecek Exp $
 
 Fix bashism. Reported upstream as #75791.
+
+Reported also as GH#274 - https://github.com/krakjoe/apcu/issues/274
 
 --- config.m4.orig	2016-06-07 12:41:02.000000000 +0000
 +++ config.m4
