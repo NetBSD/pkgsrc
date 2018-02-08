@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:14 agc Exp $
+$NetBSD: distinfo,v 1.3 2018/02/08 19:54:25 adam Exp $
 
-SHA1 (pyobjc-framework-Social-3.0.4.tar.gz) = 0e49ee516bf65c887814d99a4c04824729d2b902
-RMD160 (pyobjc-framework-Social-3.0.4.tar.gz) = 7420c109d35715f5d8a2cafe359d49b9a453e0e4
-SHA512 (pyobjc-framework-Social-3.0.4.tar.gz) = e53a6efd8c2c5458442863ef02b2329304deffa6b3b6081001fe40c202ec89fdda75f151836e92d55e973bff04bd93bad0ef62a06cd530c7bb0df2c4e880a512
-Size (pyobjc-framework-Social-3.0.4.tar.gz) = 9052 bytes
+SHA1 (pyobjc-framework-Social-4.1.tar.gz) = 4c3e1c24bf3e79e9895b97606f00b1f67f77f8ba
+RMD160 (pyobjc-framework-Social-4.1.tar.gz) = 29711787019f6a4536f8bbbbfb798bb449b08d41
+SHA512 (pyobjc-framework-Social-4.1.tar.gz) = a3987b5c1e9c9d71daade68ea553ba9944a3c6d0b382b33a05305d13067fb750d9320df9bdaa149906a54b7ddbbaf028085738bc9dbad6d0413e82c29a39c269
+Size (pyobjc-framework-Social-4.1.tar.gz) = 10071 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:13 agc Exp $
+$NetBSD: distinfo,v 1.3 2018/02/08 19:54:21 adam Exp $
 
-SHA1 (pyobjc-framework-DiskArbitration-3.0.4.tar.gz) = dc89e459babd5ce1aa8398395157ddeb0b5fe058
-RMD160 (pyobjc-framework-DiskArbitration-3.0.4.tar.gz) = 98270223b10251a0a02978f5dacca1b54c7a35cb
-SHA512 (pyobjc-framework-DiskArbitration-3.0.4.tar.gz) = 62d085a31fa7d783789e25af4c6b0a7c08080a72d529207a55c5acce704fc77a0e81a23845d3ef756343f00605120898ed19e99e4fc7c35e67c03e571f821a0f
-Size (pyobjc-framework-DiskArbitration-3.0.4.tar.gz) = 13826 bytes
+SHA1 (pyobjc-framework-DiskArbitration-4.1.tar.gz) = 99b0612b697726e172baa6232233ad23c136765e
+RMD160 (pyobjc-framework-DiskArbitration-4.1.tar.gz) = 7b580db0ab7f647e979fc5c29cecf03f7aad3334
+SHA512 (pyobjc-framework-DiskArbitration-4.1.tar.gz) = 03673d09be3d6c7a7aeaee4cbe5704779f35a5c18c879690998f006cbc43244b47ee716498f8f8ce5cf393a39539b8887d604c5d27de985723f6eb669b16dd5b
+Size (pyobjc-framework-DiskArbitration-4.1.tar.gz) = 14655 bytes

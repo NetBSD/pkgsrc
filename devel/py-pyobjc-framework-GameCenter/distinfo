@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/08 19:54:22 adam Exp $
+
+SHA1 (pyobjc-framework-GameCenter-4.1.tar.gz) = eb7d1c060f6677e69cf6c98760341dfc6be8de79
+RMD160 (pyobjc-framework-GameCenter-4.1.tar.gz) = 94f3cad0ac147d817df941b6706d41383e8f020c
+SHA512 (pyobjc-framework-GameCenter-4.1.tar.gz) = 351381772ff91adfc9ca8b5fffc4c14d72246db4e1de7323531d2e8898f63e4a322a33a61f86d8813b2a0abd530185c0ab82e9f679ac8fdab478bab58e7658cb
+Size (pyobjc-framework-GameCenter-4.1.tar.gz) = 27002 bytes
