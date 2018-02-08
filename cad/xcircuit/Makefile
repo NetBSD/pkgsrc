@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2018/02/07 11:58:31 hauke Exp $
+# $NetBSD: Makefile,v 1.46 2018/02/08 09:43:32 hauke Exp $
 
 DISTNAME=	xcircuit-3.9.72
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	cad graphics
 MASTER_SITES=	http://opencircuitdesign.com/xcircuit/archive/
 EXTRACT_SUFX=	.tgz
@@ -37,6 +37,7 @@ post-extract:
 	${TOUCH} ${WRKSRC}/menudep.h
 
 post-install:
+	${INSTALL_DATA} ${WRKSRC}/lib/xcircuit.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/examples/*.* ${DESTDIR}${PREFIX}/${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/xcircuitrc ${DESTDIR}${PREFIX}/${EGDIR}
 
