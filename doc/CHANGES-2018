@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.578 2018/02/08 14:55:50 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.579 2018/02/08 16:03:38 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -866,3 +866,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/consul to 1.0.5 [fhajny 2018-02-08]
 	Updated multimedia/adobe-flash-player to 28.0.0.161 [tsutsui 2018-02-08]
 	Updated net/mikutter to 3.6.2 [tsutsui 2018-02-08]
+	Updated x11/xlockmore to 5.46nb10 [jaapb 2018-02-08]
