@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/08 08:57:32 martin Exp $
+share/u-boot/jetson-tx2/u-boot
+share/u-boot/jetson-tx2/u-boot-dtb.bin
