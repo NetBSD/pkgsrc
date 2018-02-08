@@ -1,16 +1,16 @@
-$NetBSD: patch-setup.py,v 1.1 2015/11/04 21:24:14 adam Exp $
+$NetBSD: patch-setup.py,v 1.2 2018/02/08 20:57:27 adam Exp $
 
 Fix installation on Darwin.
 
---- setup.py.orig	2015-10-27 20:54:58.000000000 +0000
+--- setup.py.orig	2017-01-08 19:48:56.000000000 +0000
 +++ setup.py
-@@ -170,10 +170,6 @@ if sys.argv[1] == "build_exe":
+@@ -174,10 +174,6 @@ if sys.argv[1] == "build_exe":
  if sys.platform == "win32" and False:
      setup_kwargs["windows"] = scripts
  
 -if sys.platform == "darwin":
 -    setup_kwargs["name"] = title
--    setup_kwargs["version"] = "2.6.2"
+-    setup_kwargs["version"] = "2.8.3"
 -else:
 -    setup_kwargs["scripts"] = scripts
 +setup_kwargs["scripts"] = scripts
