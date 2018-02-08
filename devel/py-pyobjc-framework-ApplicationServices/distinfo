@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/08 19:54:19 adam Exp $
+
+SHA1 (pyobjc-framework-ApplicationServices-4.1.tar.gz) = e76266a9d60ca9bb6005067fd00d3d12b7f8df16
+RMD160 (pyobjc-framework-ApplicationServices-4.1.tar.gz) = 040d2a39433eff19e8a7a0e4c466e26aafb2b4f3
+SHA512 (pyobjc-framework-ApplicationServices-4.1.tar.gz) = 2c1de602587f99a09c9f99c560801ddde4fcb8a1cb1001e1e113d838a511c05f4d6ea63595e55905b0fd591d808eef0c4be73b6f02ef2ffd70e8e1a3ce42dff6
+Size (pyobjc-framework-ApplicationServices-4.1.tar.gz) = 50720 bytes
