@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.584 2018/02/08 21:00:40 adam Exp $
+$NetBSD: CHANGES-2018,v 1.585 2018/02/09 00:19:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -881,3 +881,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/fs-uae to 2.8.3 [adam 2018-02-08]
 	Updated emulators/fs-uae-launcher to 2.8.3 [adam 2018-02-08]
 	Added emulators/fs-uae-arcade version 2.8.3 [adam 2018-02-08]
+	Updated math/R-XML to 3.98.1.9 [minskim 2018-02-09]
