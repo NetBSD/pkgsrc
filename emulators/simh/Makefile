@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2017/12/31 08:50:00 tsutsui Exp $
+# $NetBSD: Makefile,v 1.49 2018/02/09 17:35:05 gson Exp $
 
 DISTNAME=	simh-4.0.0
 PKGNAME=	simh-4.0.0.20170406
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=simh/}
 GITHUB_PROJECT=	simh
@@ -71,7 +71,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/VAX/ka655x.bin ${DESTDIR}${PREFIX}/share/simh
 	${INSTALL_DATA} ${WRKSRC}/VAX/vmb.exe ${DESTDIR}${PREFIX}/share/simh
 	(cd ${WRKSRC} && for TXT in *.txt */*.txt; do			\
-		${INSTALL_DATA} $$TXT ${DESTDIR}${PREFIX}/share/doc/simh;		\
+		${INSTALL_DATA} "$$TXT" ${DESTDIR}${PREFIX}/share/doc/simh;		\
 	done)
 
 .include "../../devel/SDL2/buildlink3.mk"
