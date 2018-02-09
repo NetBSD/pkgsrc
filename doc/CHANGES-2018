@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.586 2018/02/09 08:10:33 adam Exp $
+$NetBSD: CHANGES-2018,v 1.587 2018/02/09 08:56:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -883,3 +883,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added emulators/fs-uae-arcade version 2.8.3 [adam 2018-02-08]
 	Updated math/R-XML to 3.98.1.9 [minskim 2018-02-09]
 	Updated lang/py-cxfreeze to 5.1.1 [adam 2018-02-09]
+	Updated security/py-m2crypto to 0.28.2 [adam 2018-02-09]
+	Updated textproc/py-regex to 2018.02.08 [adam 2018-02-09]
