@@ -1,19 +1,23 @@
-$NetBSD: patch-aa,v 1.5 2010/11/08 17:10:55 abs Exp $
+$NetBSD: patch-aa,v 1.6 2018/02/09 16:46:42 triaxx Exp $
 
 Remove unconditional Makefile variable definitions
 
---- Makefile.orig	2009-05-22 19:44:52.000000000 +0000
+--- Makefile.orig	2012-09-16 07:27:35.000000000 +0000
 +++ Makefile
-@@ -1,12 +1,6 @@
+@@ -1,16 +1,6 @@
  # Makefile for systems with GNU tools
 -CC 	=	gcc
  INSTALL	=	install
  IFLAGS  = -idirafter dummyinc
 -#CFLAGS = -g
--CFLAGS	=	-O2 -Wall -W -Wshadow #-pedantic -Werror -Wconversion
+-CFLAGS	=	-O2 -fPIE -fstack-protector --param=ssp-buffer-size=4 \
+-	-Wall -W -Wshadow -Werror -Wformat-security \
+-	-D_FORTIFY_SOURCE=2 \
+-	#-pedantic -Wconversion
 -
 -LIBS	=	`./vsf_findlibs.sh`
 -LINK	=	-Wl,-s
+-LDFLAGS	=	-fPIE -pie -Wl,-z,relro -Wl,-z,now
  
  OBJS	=	main.o utility.o prelogin.o ftpcmdio.o postlogin.o privsock.o \
  		tunables.o ftpdataio.o secbuf.o ls.o \
