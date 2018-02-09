@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.590 2018/02/09 16:54:14 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.591 2018/02/09 17:36:55 gson Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -889,3 +889,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/py-dateparser to 0.7.0 [adam 2018-02-09]
 	Updated net/vsftpd to 3.0.3 [triaxx 2018-02-09]
 	Added time/R-timeDate version 3042.101 [minskim 2018-02-09]
+	Updated emulators/simh to 4.0.0.20170406nb2 [gson 2018-02-09]
