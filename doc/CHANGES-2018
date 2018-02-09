@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.589 2018/02/09 16:47:42 triaxx Exp $
+$NetBSD: CHANGES-2018,v 1.590 2018/02/09 16:54:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -888,3 +888,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-parameterized version 0.6.1 [adam 2018-02-09]
 	Updated time/py-dateparser to 0.7.0 [adam 2018-02-09]
 	Updated net/vsftpd to 3.0.3 [triaxx 2018-02-09]
+	Added time/R-timeDate version 3042.101 [minskim 2018-02-09]
