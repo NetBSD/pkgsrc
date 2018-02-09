@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.6 2010/11/08 17:10:55 abs Exp $
+$NetBSD: patch-af,v 1.7 2018/02/09 16:46:42 triaxx Exp $
 
 Use PKG_SYSCONFDIR instead of hardcoding /etc
 
@@ -9,7 +9,7 @@ Use PKG_SYSCONFDIR instead of hardcoding /etc
  vsftpd.conf may be used to control various aspects of vsftpd's behaviour. By
  default, vsftpd looks for this file at the location
 -.BR /etc/vsftpd.conf .
-+.BR @PKG_SYSCONFDIR@/vsftpd.conf .
++.BR @PKG_SYSCONFDIR@/vsftpd/vsftpd.conf .
  However, you may override this by specifying a command line argument to
  vsftpd. The command line argument is the pathname of the configuration file
  for vsftpd. This behaviour is useful because you may wish to use an advanced
@@ -18,7 +18,7 @@ Use PKG_SYSCONFDIR instead of hardcoding /etc
  a list of users which are NOT to be placed in a chroot() jail.
  By default, the file containing this list is
 -/etc/vsftpd.chroot_list, but you may override this with the
-+@PKG_SYSCONFDIR@/vsftpd.chroot_list, but you may override this with the
++@PKG_SYSCONFDIR@/vsftpd/vsftpd.chroot_list, but you may override this with the
  .BR chroot_list_file
  setting.
  
@@ -27,7 +27,7 @@ Use PKG_SYSCONFDIR instead of hardcoding /etc
  If activated, you may provide a list of anonymous password e-mail responses
  which cause login to be denied. By default, the file containing this list is
 -/etc/vsftpd.banned_emails, but you may override this with the
-+@PKG_SYSCONFDIR@/vsftpd.banned_emails, but you may override this with the
++@PKG_SYSCONFDIR@/vsftpd/vsftpd.banned_emails, but you may override this with the
  .BR banned_email_file
  setting.
  
@@ -36,7 +36,7 @@ Use PKG_SYSCONFDIR instead of hardcoding /etc
  .BR email_password_file
  setting. The file format is one password per line, no extra whitespace. The
 -default filename is /etc/vsftpd.email_passwords.
-+default filename is @PKG_SYSCONFDIR@/vsftpd.email_passwords.
++default filename is @PKG_SYSCONFDIR@/vsftpd/vsftpd.email_passwords.
  
  Default: NO
  .TP
@@ -45,7 +45,7 @@ Use PKG_SYSCONFDIR instead of hardcoding /etc
  is enabled.
  
 -Default: /etc/vsftpd.banned_emails
-+Default: @PKG_SYSCONFDIR@/vsftpd.banned_emails
++Default: @PKG_SYSCONFDIR@/vsftpd/vsftpd.banned_emails
  .TP
  .B banner_file
  This option is the name of a file containing text to display when someone
@@ -54,7 +54,7 @@ Use PKG_SYSCONFDIR instead of hardcoding /etc
  chroot() jail.
  
 -Default: /etc/vsftpd.chroot_list
-+Default: @PKG_SYSCONFDIR@/vsftpd.chroot_list
++Default: @PKG_SYSCONFDIR@/vsftpd/vsftpd.chroot_list
  .TP
  .B cmds_allowed
  This options specifies a comma separated list of allowed FTP commands (post
@@ -63,7 +63,7 @@ Use PKG_SYSCONFDIR instead of hardcoding /etc
  setting.
  
 -Default: /etc/vsftpd.email_passwords
-+Default: @PKG_SYSCONFDIR@/vsftpd.email_passwords
++Default: @PKG_SYSCONFDIR@/vsftpd/vsftpd.email_passwords
  .TP
  .B ftp_username
  This is the name of the user we use for handling anonymous FTP. The home
@@ -72,7 +72,7 @@ Use PKG_SYSCONFDIR instead of hardcoding /etc
  as a secure chroot() jail at times vsftpd does not require filesystem access.
  
 -Default: /usr/share/empty
-+Default: /var/chroot/vsftpd
++Default: @VARBASE@/chroot/vsftpd
  .TP
  .B ssl_ciphers
  This option can be used to select which SSL ciphers vsftpd will allow for
@@ -81,11 +81,11 @@ Use PKG_SYSCONFDIR instead of hardcoding /etc
  .BR user_config_dir
  to be
 -.BR /etc/vsftpd_user_conf
-+.BR @PKG_SYSCONFDIR@/vsftpd_user_conf
++.BR @PKG_SYSCONFDIR@/vsftpd/vsftpd_user_conf
  and then log on as the user "chris", then vsftpd will apply the settings in
  the file
 -.BR /etc/vsftpd_user_conf/chris
-+.BR @PKG_SYSCONFDIR@/vsftpd_user_conf/chris
++.BR @PKG_SYSCONFDIR@/vsftpd/vsftpd_user_conf/chris
  for the duration of the session. The format of this file is as detailed in
  this manual page! PLEASE NOTE that not all settings are effective on a
  per-user basis. For example, many settings only prior to the user's session
@@ -94,7 +94,7 @@ Use PKG_SYSCONFDIR instead of hardcoding /etc
  option is active.
  
 -Default: /etc/vsftpd.user_list
-+Default: @PKG_SYSCONFDIR@/vsftpd.user_list
++Default: @PKG_SYSCONFDIR@/vsftpd/vsftpd.user_list
  .TP
  .B vsftpd_log_file
  This option is the name of the file to which we write the vsftpd style
