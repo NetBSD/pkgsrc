@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2017/12/27 23:32:37 he Exp $
+# $NetBSD: Makefile,v 1.11 2018/02/09 08:04:41 adam Exp $
 
-DISTNAME=	cx_Freeze-5.0.2
+DISTNAME=	cx_Freeze-5.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_F/f/}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cx_Freeze/}
 
@@ -11,11 +10,12 @@ HOMEPAGE=	http://cx-freeze.sourceforge.net/
 COMMENT=	Freezing python scripts into executables
 LICENSE=	python-software-foundation
 
-USE_LANGUAGES=	c c++
+REPLACE_PYTHON=	cx_Freeze/samples/PyQt5/PyQt5app.py
 
 post-extract:
 	${MV} ${WRKSRC}/cxfreeze ${WRKSRC}/cxfreeze${PYVERSSUFFIX}
 	${MV} ${WRKSRC}/cxfreeze-quickstart ${WRKSRC}/cxfreeze-quickstart${PYVERSSUFFIX}
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
