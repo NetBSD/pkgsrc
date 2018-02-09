@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/09 16:53:08 minskim Exp $
+
+SHA1 (R/timeDate_3042.101.tar.gz) = bdc27e3822a323e0507399b92e990bb5c1f8101d
+RMD160 (R/timeDate_3042.101.tar.gz) = 1711783c200a69ea330839c511eec70a02f6ada6
+SHA512 (R/timeDate_3042.101.tar.gz) = fd777d246eb2a3bf68f706b7b642ca14ab4eaa98598f4cefcc48cf0b7d7977af5917ad06e14c2c6adc9b0ac93c806e0e36982ef9d7503a759a677ee2bf1f1205
+Size (R/timeDate_3042.101.tar.gz) = 314661 bytes
