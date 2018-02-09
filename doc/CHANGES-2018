@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.588 2018/02/09 09:17:56 adam Exp $
+$NetBSD: CHANGES-2018,v 1.589 2018/02/09 16:47:42 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -887,3 +887,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-regex to 2018.02.08 [adam 2018-02-09]
 	Added devel/py-parameterized version 0.6.1 [adam 2018-02-09]
 	Updated time/py-dateparser to 0.7.0 [adam 2018-02-09]
+	Updated net/vsftpd to 3.0.3 [triaxx 2018-02-09]
