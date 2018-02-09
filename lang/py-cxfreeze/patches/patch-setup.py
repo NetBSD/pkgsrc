@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2017/12/27 23:32:37 he Exp $
+$NetBSD: patch-setup.py,v 1.1 2018/02/09 08:04:41 adam Exp $
 
 Link with proper run-time library path,
 link with -lpthread on NetBSD.
