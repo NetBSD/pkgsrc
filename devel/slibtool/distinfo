@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/08/30 10:26:47 wiedi Exp $
+$NetBSD: distinfo,v 1.4 2018/02/09 21:49:45 wiedi Exp $
 
-SHA1 (slibtool-0.5.17.tar.gz) = aedd16393eb0c36ada66c6b79f1ca95d8a622bdb
-RMD160 (slibtool-0.5.17.tar.gz) = f4bc62e493e4a62703282a1af05c1d55c09122e1
-SHA512 (slibtool-0.5.17.tar.gz) = 77eb43337124959f8374b0803704d49526e992c721e084b6d97a539bc9f5c6057178a537dcb4d10593144b39065b31fccf0a35bfa08f7c411d3d84ec8121af5d
-Size (slibtool-0.5.17.tar.gz) = 62738 bytes
+SHA1 (slibtool-0.5.18.tar.gz) = fc47094560fd7a5aee7c1e9565f253ed0f5ddc2e
+RMD160 (slibtool-0.5.18.tar.gz) = eadc0aab9adcb10a7feee850902ef865d0d6d3ef
+SHA512 (slibtool-0.5.18.tar.gz) = 947a5fcb6dd2611ed077553997cdfbce2ad0ae4748831811ffc6615ff112e103018916760689dd907daf3f81e58c283881875246f753d0aa3ee026623a32a114
+Size (slibtool-0.5.18.tar.gz) = 63693 bytes
