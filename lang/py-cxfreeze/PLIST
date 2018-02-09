@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/09/30 13:44:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/02/09 08:04:41 adam Exp $
 bin/cxfreeze${PYVERSSUFFIX}
 bin/cxfreeze-quickstart${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -51,6 +51,12 @@ ${PYSITELIB}/cx_Freeze/samples/PyQt4/PyQt4app.pyo
 ${PYSITELIB}/cx_Freeze/samples/PyQt4/setup.py
 ${PYSITELIB}/cx_Freeze/samples/PyQt4/setup.pyc
 ${PYSITELIB}/cx_Freeze/samples/PyQt4/setup.pyo
+${PYSITELIB}/cx_Freeze/samples/PyQt5/PyQt5app.py
+${PYSITELIB}/cx_Freeze/samples/PyQt5/PyQt5app.pyc
+${PYSITELIB}/cx_Freeze/samples/PyQt5/PyQt5app.pyo
+${PYSITELIB}/cx_Freeze/samples/PyQt5/setup.py
+${PYSITELIB}/cx_Freeze/samples/PyQt5/setup.pyc
+${PYSITELIB}/cx_Freeze/samples/PyQt5/setup.pyo
 ${PYSITELIB}/cx_Freeze/samples/Tkinter/SimpleTkApp.py
 ${PYSITELIB}/cx_Freeze/samples/Tkinter/SimpleTkApp.pyc
 ${PYSITELIB}/cx_Freeze/samples/Tkinter/SimpleTkApp.pyo
