@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.9 2018/02/08 21:50:55 jdolecek Exp $
+$NetBSD: patch-configure,v 1.10 2018/02/09 00:01:13 jdolecek Exp $
 
-Don't automatically add libgcc on SunOS.
+Don't automatically add libgcc on SunOS. Reported upstream as #75941.
 
 The meta_ccld removal reported upstream as #75940.
 
