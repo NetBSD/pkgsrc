@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2017/04/07 13:30:01 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.17 2018/02/09 17:35:05 gson Exp $
 bin/simh-altair
 bin/simh-altairz80
 bin/simh-b5500
@@ -45,6 +45,7 @@ bin/simh-vax730
 bin/simh-vax750
 bin/simh-vax780
 bin/simh-vax8600
+share/doc/simh/0ReadMe_Projects.txt
 share/doc/simh/0readmeAsynchIO.txt
 share/doc/simh/0readme_39.txt
 share/doc/simh/0readme_ethernet.txt
