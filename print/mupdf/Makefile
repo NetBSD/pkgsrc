@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2018/01/21 08:21:37 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2018/02/09 16:03:04 hauke Exp $
 
 DISTNAME=	mupdf-1.12.0-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	https://mupdf.com/downloads/archive/
 
@@ -49,7 +49,7 @@ post-build:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/mupdf.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 
-BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.7
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
