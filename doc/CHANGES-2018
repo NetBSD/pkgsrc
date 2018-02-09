@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.587 2018/02/09 08:56:25 adam Exp $
+$NetBSD: CHANGES-2018,v 1.588 2018/02/09 09:17:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -885,3 +885,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/py-cxfreeze to 5.1.1 [adam 2018-02-09]
 	Updated security/py-m2crypto to 0.28.2 [adam 2018-02-09]
 	Updated textproc/py-regex to 2018.02.08 [adam 2018-02-09]
+	Added devel/py-parameterized version 0.6.1 [adam 2018-02-09]
+	Updated time/py-dateparser to 0.7.0 [adam 2018-02-09]
