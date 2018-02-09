@@ -1,15 +1,15 @@
-$NetBSD: patch-ad,v 1.5 2010/11/08 17:10:55 abs Exp $
+$NetBSD: patch-ad,v 1.6 2018/02/09 16:46:42 triaxx Exp $
 
 Use PKG_SYSCONFDIR instead of hardcoding /etc
 
---- tunables.c.orig	2010-03-17 02:44:31.000000000 +0000
+--- tunables.c.orig	2015-07-23 04:13:07.000000000 +0000
 +++ tunables.c
-@@ -250,19 +250,19 @@ tunables_load_defaults()
+@@ -254,19 +254,19 @@ tunables_load_defaults()
    /* -rw------- */
    tunable_chown_upload_mode = 0600;
  
 -  install_str_setting("/usr/share/empty", &tunable_secure_chroot_dir);
-+  install_str_setting("/var/chroot/vsftpd", &tunable_secure_chroot_dir);
++  install_str_setting(VARBASE"/chroot/vsftpd", &tunable_secure_chroot_dir);
    install_str_setting("ftp", &tunable_ftp_username);
    install_str_setting("root", &tunable_chown_username);
    install_str_setting("/var/log/xferlog", &tunable_xferlog_file);
@@ -29,7 +29,7 @@ Use PKG_SYSCONFDIR instead of hardcoding /etc
    install_str_setting(0, &tunable_anon_root);
    install_str_setting(0, &tunable_local_root);
    install_str_setting(0, &tunable_banner_file);
-@@ -275,9 +275,9 @@ tunables_load_defaults()
+@@ -279,9 +279,9 @@ tunables_load_defaults()
    install_str_setting(0, &tunable_hide_file);
    install_str_setting(0, &tunable_deny_file);
    install_str_setting(0, &tunable_user_sub_token);
@@ -40,4 +40,4 @@ Use PKG_SYSCONFDIR instead of hardcoding /etc
 +  install_str_setting(PKG_SYSCONFDIR"/vsftpd.pem",
                        &tunable_rsa_cert_file);
    install_str_setting(0, &tunable_dsa_cert_file);
-   install_str_setting("DES-CBC3-SHA", &tunable_ssl_ciphers);
+   install_str_setting("ECDHE-RSA-AES256-GCM-SHA384", &tunable_ssl_ciphers);
