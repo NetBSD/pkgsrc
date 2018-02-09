@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2016/04/12 08:07:50 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2018/02/09 16:46:42 triaxx Exp $
 
-DISTNAME=	vsftpd-2.3.4
-PKGREVISION=	5
+DISTNAME=	vsftpd-3.0.3
 CATEGORIES=	net
 MASTER_SITES=	http://security.appspot.com/downloads/
 
@@ -32,6 +31,7 @@ INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 \
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	vsftpd.8 vsftpd.conf.5 vsftpd.conf
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,@VARBASE@,${VARBASE},g'
 SUBST_STAGE.paths=	post-patch
 
 MAKE_ENV+=		LIBS=${LIBS:Q}
@@ -44,6 +44,13 @@ SUBST_STAGE.dirfd=	pre-build
 SUBST_FILES.dirfd=	port/solaris_bogons.h
 SUBST_SED.dirfd=	-e '/dirfd_extras/d'
 .endif
+.if ${OPSYS} == "FreeBSD"
+SUBST_CLASSES+=		idirafter
+SUBST_MESSAGE.idirafter=Fix buggy -idirafter for clang
+SUBST_STAGE.idirafter=	pre-build
+SUBST_FILES.idirafter=	Makefile
+SUBST_SED.idirafter=	-e 's,-idirafter ,-I,'
+.endif
 
 VSFTPD_USER?=	vsftpd
 VSFTPD_GROUP?=	vsftpd
@@ -53,7 +60,7 @@ PKG_USERS=	${VSFTPD_USER}:${VSFTPD_GROUP}
 PKG_GROUPS_VARS+=	VSFTPD_GROUP
 PKG_USERS_VARS+=	VSFTPD_USER
 
-CFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
+CFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\"" -DVARBASE="\"${VARBASE}\""
 LIBS.SunOS=	-lsocket -lnsl -lrt -lsendfile -lresolv
 
 .include "options.mk"
