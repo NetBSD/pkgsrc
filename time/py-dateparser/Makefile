@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/09/29 21:21:52 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2018/02/09 09:17:23 adam Exp $
 
-DISTNAME=	dateparser-0.6.0
+DISTNAME=	dateparser-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	python time
+CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dateparser/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,13 +10,16 @@ HOMEPAGE=	https://github.com/scrapinghub/dateparser
 COMMENT=	Date parsing library designed to parse dates from HTML pages
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.10.12:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
 DEPENDS+=	${PYPKGPREFIX}-tzlocal-[0-9]*:../../time/py-tzlocal
-
-# XXX Test needs nose.parameterized
+# TEST_DEPENDS
+BUILD_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+BUILD_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
+BUILD_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
