@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2015/04/04 00:26:42 rodent Exp $
+# $NetBSD: options.mk,v 1.2 2018/02/10 13:53:47 khorben Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openocd
 PKG_SUPPORTED_OPTIONS=	libhidapi libusb libusb1
@@ -16,7 +16,7 @@ CONFIGURE_ENV+=		HIDAPI_LIBS=${HIDAPI_LIBS:Q}
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibusb)
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibusb1)
