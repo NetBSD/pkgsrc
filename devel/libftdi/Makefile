@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/08/16 20:21:07 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/02/10 13:53:47 khorben Exp $
 
 DISTNAME=	libftdi-0.20
 CATEGORIES=	devel
@@ -20,5 +20,5 @@ CONFIGURE_ARGS+=	--without-docs
 PKGCONFIG_OVERRIDE+=	libftdi.pc.in
 PKGCONFIG_OVERRIDE+=	libftdipp.pc.in
 
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2017/09/03 08:36:51 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2018/02/10 13:53:47 khorben Exp $
 
 DISTNAME=	openobex-1.7.1-Source
 PKGNAME=	${DISTNAME:C/-Source//}
@@ -35,5 +35,5 @@ post-install:
 	      ${DESTDIR}${PREFIX}/${EGDIR}/60-openobex.rules
 .endif
 
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
