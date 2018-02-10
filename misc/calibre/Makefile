@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2018/02/01 16:05:56 wiz Exp $
+# $NetBSD: Makefile,v 1.194 2018/02/10 13:53:48 khorben Exp $
 
 DISTNAME=	calibre-3.16.0
 CATEGORIES=	misc
@@ -105,7 +105,7 @@ BUILDLINK_API_DEPENDS.chmlib+=	chmlib>=0.40
 BUILDLINK_API_DEPENDS.libmtp+=	libmtp>=1.1.5
 .include "../../devel/libmtp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libusb+=	libusb>=0.1.12
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libwmf+=	libwmf>=0.2.8
 .include "../../graphics/libwmf/buildlink3.mk"

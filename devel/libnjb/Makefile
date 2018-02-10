@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/08/18 07:31:04 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/02/10 13:53:47 khorben Exp $
 #
 
 DISTNAME=		libnjb-2.2.6
@@ -20,5 +20,5 @@ PKGCONFIG_OVERRIDE+=	libnjb.pc.in
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

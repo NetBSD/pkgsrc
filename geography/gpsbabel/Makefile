@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/03/05 11:28:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2018/02/10 13:53:48 khorben Exp $
 #
 
 DISTNAME=	gpsbabel-1.5.2
@@ -23,7 +23,7 @@ LIBS.Darwin+=	-lexpat
 
 GNU_CONFIGURE=	yes
 
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"

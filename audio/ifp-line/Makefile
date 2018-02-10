@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/04/20 12:10:27 nros Exp $
+# $NetBSD: Makefile,v 1.16 2018/02/10 13:53:46 khorben Exp $
 
 DISTNAME=		ifp-line-0.3
 CATEGORIES=		audio
@@ -17,5 +17,5 @@ GNU_CONFIGURE=		yes
 USE_FEATURES+=		fts_open
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
