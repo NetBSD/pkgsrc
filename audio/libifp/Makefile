@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/05/12 11:49:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2018/02/10 13:53:46 khorben Exp $
 #
 
 DISTNAME=	libifp-1.0.0.2
@@ -20,5 +20,5 @@ CFLAGS.SunOS+=	-fPIC
 LIBS.SunOS+=	-liconv
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

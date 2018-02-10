@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/09/03 08:36:51 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2018/02/10 13:53:47 khorben Exp $
 #
 
 DISTNAME=	obexftp-0.24-Source
@@ -26,6 +26,6 @@ BUILD_TARGET=	all doc
 
 .include "../../comms/openobex/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
