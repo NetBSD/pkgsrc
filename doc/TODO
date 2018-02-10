@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18082 2018/02/08 21:00:40 adam Exp $
+$NetBSD: TODO,v 1.18083 2018/02/10 17:40:52 zafer Exp $
 
 Suggested new packages
 ======================
@@ -1461,6 +1461,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o virtinst-0.600.4
 	o virtuoso-7.2.0p1
 	o visual-regexp-3.1
+	o vlc-3.0.0
 	o vm-8.0.7.522 [pkg/37707]
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vnstat-1.15
