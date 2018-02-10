@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/02/10 00:33:26 khorben Exp $
+# $NetBSD: Makefile,v 1.18 2018/02/10 13:53:48 khorben Exp $
 #
 
 DISTNAME=	s10sh-0.2.0
@@ -22,5 +22,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/s10sh
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/s10sh
 
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
