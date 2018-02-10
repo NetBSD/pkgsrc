@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18083 2018/02/10 17:40:52 zafer Exp $
+$NetBSD: TODO,v 1.18084 2018/02/10 17:52:08 zafer Exp $
 
 Suggested new packages
 ======================
@@ -424,7 +424,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o aubio-0.4.2
 	o audacious-3.7.1
 	o audacious-plugins-3.7.1
-	o audacity-2.2.0
+	o audacity-2.2.1
 	o autoconvert-0.3.16
 	o avant-window-navigator-0.4.2
 	o avidemux-2.6.16
@@ -1277,6 +1277,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.4
+	o ruby-2.5.0
 	o ruby-actionmailer-4.2.10
 	o ruby-actionpack-4.2.10
 	o ruby-activemodel-4.2.10
