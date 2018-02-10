@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2018/01/07 13:04:06 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2018/02/10 13:53:47 khorben Exp $
 
 BUILDLINK_TREE+=	libgphoto2
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.libgphoto2?=	../../devel/libgphoto2
 
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} != "SunOS"
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .endif
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
