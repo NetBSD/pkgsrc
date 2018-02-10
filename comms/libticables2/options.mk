@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/05/26 22:57:53 rodent Exp $
+# $NetBSD: options.mk,v 1.2 2018/02/10 13:53:46 khorben Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libticables2
 PKG_SUPPORTED_OPTIONS=	libusb libusb1 nls
@@ -9,7 +9,7 @@ PLIST_VARS+=		nls
 
 .if !empty(PKG_OPTIONS:Mlibusb)
 BUILDLINK_ABI_DEPENDS.libusb+=	libusb>=0.1.12
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibusb1)

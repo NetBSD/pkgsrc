@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/04/11 04:22:33 dbj Exp $
+# $NetBSD: Makefile,v 1.6 2018/02/10 13:53:46 khorben Exp $
 #
 
 DISTNAME=	lirc-0.9.0
@@ -43,5 +43,5 @@ PKG_SKIP_REASON+=	"lirc is not available for this platform"
 
 .include "options.mk"
 
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
