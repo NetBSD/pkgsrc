@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/02/26 10:07:49 hasso Exp $
+# $NetBSD: options.mk,v 1.2 2018/02/10 13:53:48 khorben Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openct
 PKG_SUPPORTED_OPTIONS=	pcsc-lite libusb
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--disable-pcsc
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibusb)
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 CONFIGURE_ARGS+=        --enable-usb
 .else
 CONFIGURE_ARGS+=        --disable-usb
