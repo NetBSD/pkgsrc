@@ -1,12 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/03/28 16:52:42 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2018/02/10 00:33:27 khorben Exp $
 
---- Makefile.in.orig	Tue Mar 13 14:46:18 2001
-+++ Makefile.in	Wed Mar 28 18:12:35 2001
-@@ -4,12 +4,13 @@
+--- Makefile.in.orig	2001-03-13 13:46:18.000000000 +0000
++++ Makefile.in
+@@ -3,13 +3,16 @@
+ OPTIONS=@HAVE_READLINE@ @HAVE_USB_SUPPORT@
  LIBS=@LIBREADLINE@ @LIBTERMCAP@
  CC=gcc
- CCOPT=-O2 -Wall -g @LIBUSBHEADER@
+-CCOPT=-O2 -Wall -g @LIBUSBHEADER@
 -OBJECTS=main.o crc.o usb.o serial.o common.o bar.o @LIBUSB@
++CFLAGS=-O2
++CCOPT=$(CFLAGS) -Wall -g @LIBUSBHEADER@
++LDFLAGS=
 +OBJECTS=main.o crc.o usb.o serial.o common.o bar.o
 +LOBJECTS= $(OBJECTS) @LIBUSB@
  
@@ -14,7 +18,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/03/28 16:52:42 drochner Exp $
  
  s10sh: $(OBJECTS)
 -	$(CC) $(CCOPT) -o s10sh $(OBJECTS) $(LIBS)
-+	$(CC) $(CCOPT) -o s10sh $(LOBJECTS) $(LIBS)
++	$(CC) $(CCOPT) -o s10sh $(LDFLAGS) $(LOBJECTS) $(LIBS)
  
  .c.o:
  	$(CC) $(CCOPT) -c $< $(OPTIONS)
