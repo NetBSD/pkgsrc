@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/12/16 08:11:55 manu Exp $
+# $NetBSD: Makefile,v 1.2 2018/02/10 13:53:47 khorben Exp $
 
 DISTNAME=	libnfc-1.7.1
 CATEGORIES=	net
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=--enable-doc
 
 BUILD_DEPENDS+=	doxygen>=1.8.11:../../devel/doxygen
 
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../security/pcsc-lite/buildlink3.mk"
 
