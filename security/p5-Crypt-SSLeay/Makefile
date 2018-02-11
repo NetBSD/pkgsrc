@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/06/05 14:24:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2018/02/11 03:37:22 schmonz Exp $
 
 DISTNAME=	Crypt-SSLeay-0.72
 PKGNAME=	p5-${DISTNAME}
@@ -20,6 +20,7 @@ PERL5_PACKLIST=		auto/Crypt/SSLeay/.packlist
 
 MAKE_ENV+=		PERL_MM_USE_DEFAULT=1
 MAKE_PARAMS+=		--lib=${SSLBASE}
+MAKE_PARAMS+=		--libpath=${SSLBASE}/lib
 
 post-extract:
 	chmod a-x ${WRKSRC}/lib/Net/SSL.pm
