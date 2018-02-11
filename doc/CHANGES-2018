@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.603 2018/02/11 16:11:51 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.604 2018/02/11 16:17:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -902,3 +902,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/caff to 2.7 [wiz 2018-02-11]
 	Updated fonts/harfbuzz to 1.7.5 [wiz 2018-02-11]
 	Updated sysutils/dbus to 1.12.4 [wiz 2018-02-11]
+	Updated graphics/libotf to 0.9.16 [wiz 2018-02-11]
