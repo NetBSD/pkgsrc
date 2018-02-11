@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.600 2018/02/11 16:04:30 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.601 2018/02/11 16:06:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -899,3 +899,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/youtube-dl to 20180208 [leot 2018-02-11]
 	Added www/nostromo version 1.9.6 [ast 2018-02-11]
 	Updated devel/py-mercurial to 4.5 [wiz 2018-02-11]
+	Updated security/caff to 2.7 [wiz 2018-02-11]
