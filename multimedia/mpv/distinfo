@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.38 2018/01/29 21:54:22 leot Exp $
+$NetBSD: distinfo,v 1.39 2018/02/11 11:15:59 leot Exp $
 
-SHA1 (mpv-0.27.0.tar.gz) = d4bddb88cf7a112a295a130a091181acbe25605b
-RMD160 (mpv-0.27.0.tar.gz) = d2edbdfdc6fdf3a0c210536ac3966e99113c83ad
-SHA512 (mpv-0.27.0.tar.gz) = 22738f907d84d362095773972f685e3b03ab4c8172a22ddede290fc221a83ab9135b96f8b18191dabe842b2963f68983929cf065097287fc1a054a7d5f1d0ae4
-Size (mpv-0.27.0.tar.gz) = 2956816 bytes
+SHA1 (mpv-0.27.1.tar.gz) = 403d77f6377e8731bc16b020450f021da19728ea
+RMD160 (mpv-0.27.1.tar.gz) = da47f006331d46cdd102e748f8c82b83614d3c2c
+SHA512 (mpv-0.27.1.tar.gz) = 3b8e12edb20b6ffdbbb02aba9cc64ad25e4fb583efc72248549641a46cc840827c1b6b017e7efc323d8a8299b7b094a676525bd978b8c3c9ecccca32fe39149a
+Size (mpv-0.27.1.tar.gz) = 2957202 bytes
 SHA1 (patch-audio_out_ao__oss.c) = d7f3a75ab43efe396ce536fb54e6207a7ded3510
-SHA1 (patch-player_lua_ytdl__hook.lua) = 450a6f2640c76b5db0c0cd585674ccd689712f78
 SHA1 (patch-player_main.c) = 842432e448526a9d170e7efd2b01276e36072e16
