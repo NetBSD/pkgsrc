@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2012/11/01 19:28:26 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.7 2018/02/11 15:54:10 wiz Exp $
 
 DISTNAME=		wmzcalock-0.1
 PKGREVISION=		1
 CATEGORIES=		time x11
-MASTER_SITES=		http://zapatopi.net/zapatoware/
+MASTER_SITES=		https://zapatopi.net/zapatoware/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://zapatopi.net/zapatoware/wmzcalock.html
+HOMEPAGE=		https://zapatopi.net/zapatoware/wmzcalock.html
 COMMENT=		Dockapp calendar clock
 LICENSE=		gnu-gpl-v2
 
