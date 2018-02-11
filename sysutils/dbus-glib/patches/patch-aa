@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2014/02/20 10:17:45 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2018/02/11 17:06:31 wiz Exp $
 
 Install bash completion files to example dir.
 
---- dbus/Makefile.in.orig	2009-02-02 20:41:21.000000000 +0000
+--- dbus/Makefile.in.orig	2018-01-29 12:42:37.000000000 +0000
 +++ dbus/Makefile.in
-@@ -384,7 +384,7 @@ dbus_binding_tool_SOURCES = \
+@@ -690,7 +690,7 @@ dbus_binding_tool_SOURCES = \
  	dbus-glib-tool.c
  
- dbus_binding_tool_LDADD = $(builddir)/libdbus-gtool.la $(builddir)/libdbus-glib-1.la $(DBUS_LIBS) $(DBUS_GLIB_LIBS) -lexpat
+ dbus_binding_tool_LDADD = $(builddir)/libdbus-gtool.la $(builddir)/libdbus-glib-1.la $(DBUS_LIBS) $(GLIB_LIBS) -lexpat
 -completiondir = $(sysconfdir)/bash_completion.d
 +completiondir = $(prefix)/share/examples/dbus-glib
  @DBUS_BASH_COMPLETION_TRUE@completion_SCRIPTS = dbus-bash-completion.sh
