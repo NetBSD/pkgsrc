@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 00:20:19 asau Exp $
-#
+# $NetBSD: Makefile,v 1.9 2018/02/11 15:55:25 wiz Exp $
 
 DISTNAME=	xlreader-0.9.0
 PKGREVISION=	1
@@ -8,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xlreader/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.giffin.org/xlreader.php
+HOMEPAGE=	https://sourceforge.net/projects/xlreader/
 COMMENT=	Converts the cells in a MS Excel file to text
 
 INSTALLATION_DIRS=	bin
