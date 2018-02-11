@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.599 2018/02/11 14:14:48 ast Exp $
+$NetBSD: CHANGES-2018,v 1.600 2018/02/11 16:04:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -898,3 +898,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/mpv to 0.27.1 [leot 2018-02-11]
 	Updated net/youtube-dl to 20180208 [leot 2018-02-11]
 	Added www/nostromo version 1.9.6 [ast 2018-02-11]
+	Updated devel/py-mercurial to 4.5 [wiz 2018-02-11]
