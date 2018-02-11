@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/11 13:56:21 ast Exp $
+sbin/crypt
+sbin/nhttpd
+man/man8/nhttpd.8
+share/examples/rc.d/nostromo
+share/examples/nostromo/conf/mimes
+share/examples/nostromo/conf/nhttpd.conf-dist
+share/examples/nostromo/htdocs/cgi-bin/printenv
+share/examples/nostromo/htdocs/index.html
+share/examples/nostromo/htdocs/nostromo.gif
+share/examples/nostromo/icons/dir.gif
+share/examples/nostromo/icons/file.gif
