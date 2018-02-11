@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/03/05 11:28:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2018/02/11 15:47:25 wiz Exp $
 
 DISTNAME=	apache-log4cxx-0.10.0
 PKGNAME=	${DISTNAME:S/apache-//}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=logging/log4cxx/0.10.0/}
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	http://logging.apache.org/log4cxx/
+HOMEPAGE=	https://logging.apache.org/log4cxx/
 COMMENT=	Logging framework for C++
 
 GNU_CONFIGURE=	yes
