@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.611 2018/02/11 16:53:08 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.612 2018/02/11 16:53:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -910,3 +910,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/py-cairo to 1.16.2 [wiz 2018-02-11]
 	Updated www/surfraw to 2.3.0 [wiz 2018-02-11]
 	Updated sysutils/dbus-python-common to 1.2.6 [wiz 2018-02-11]
+	Updated sysutils/py-dbus to 1.2.6 [wiz 2018-02-11]
