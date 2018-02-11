@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2017/01/01 14:43:57 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2018/02/11 16:52:54 wiz Exp $
 
-DISTNAME=	dbus-python-1.2.4
+DISTNAME=	dbus-python-1.2.6
 PKGNAME=	${DISTNAME:S/python/python-common/}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-python/
@@ -34,6 +34,5 @@ do-install:
 .include "../../lang/python/application.mk"
 BUILDLINK_API_DEPENDS.dbus+=	dbus>=1.0
 .include "../../sysutils/dbus/buildlink3.mk"
-BUILDLINK_DEPMETHOD.dbus-glib=	build
-.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
