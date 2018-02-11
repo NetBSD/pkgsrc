@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.602 2018/02/11 16:08:46 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.603 2018/02/11 16:11:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -901,3 +901,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-mercurial to 4.5 [wiz 2018-02-11]
 	Updated security/caff to 2.7 [wiz 2018-02-11]
 	Updated fonts/harfbuzz to 1.7.5 [wiz 2018-02-11]
+	Updated sysutils/dbus to 1.12.4 [wiz 2018-02-11]
