@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2018/01/28 20:10:40 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2018/02/11 15:37:18 wiz Exp $
 
 DISTNAME=	audacious-plugins-3.5.2
 PKGREVISION=	19
@@ -7,7 +7,7 @@ MASTER_SITES=	http://distfiles.audacious-media-player.org/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://audacious-media-player.org/
+HOMEPAGE=	https://audacious-media-player.org/
 COMMENT=	Plugins for Audacious media player
 LICENSE=	2-clause-bsd
 
