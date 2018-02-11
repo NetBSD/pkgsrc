@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18084 2018/02/10 17:52:08 zafer Exp $
+$NetBSD: TODO,v 1.18085 2018/02/11 10:07:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -431,6 +431,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o baci-20040415
 	o base-1.4.5
+	o bash-4.4.18
 	o basket-2.11b
 	o bbcim-1.0
 	o bbkeys-0.9.0
@@ -532,6 +533,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o darktable-2.4
 	o dasher-4.11
 	o dateutils-0.4.2
+	o dbus-1.12.4
 	o dbus-glib-0.110
 	o dbus-python-common-1.2.6
 	o dconf-0.27.1 [wip]
@@ -847,6 +849,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hs-zlib-0.6.1.1
 	o html2wml-0.4.11
 	o htmldoc-1.8.28
+	o http-parser-2.8.0
 	o http_load-20140814
 	o hugo-0.32
 	o icbirc-2.0
@@ -962,6 +965,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmtag-0.3.6
 	o liboobs-2.32.0 [GNOME 2.32]
 	o liboop-1.0.1
+	o libotf-0.9.16
 	o libpgm-5.2.122
 	o libprelude-3.1.0
 	o libpreludedb-3.1.0
@@ -1059,7 +1063,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mp3splt-2.6.2
 	o mp3splt-gtk-0.9.0
 	o mpdas-0.4.1
+	o mpfr-4.0.1
 	o mpv-0.28 [leot, needs a not-yet-released ffmpeg3]
+	o mpv-0.28.1
 	o mserv-devel-0.41
 	o multitail-6.4.2
 	o munin-doc-1.4.6
@@ -1074,6 +1080,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nap-1.5.3
 	o nas-auscope-1.9.4
 	o nautilus-actions-2.30.3 [GNOME 2.30]
+	o ncurses-6.1
 	o ncview-2.1.6
 	o nessus-4.4.1
 	o nestopia-1.46.2 [http://0ldsk00l.ca/nestopia/]
@@ -1203,6 +1210,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-augeas-1.0.3
+	o py-cairo-1.16.2
 	o py-cassa-1.11.0
 	o py-cssselect2-0.2.1
 	o py-dbus-1.2.6
@@ -1215,6 +1223,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-input-pad-1.4.2
 	o py-jaraco_util-11.0
 	o py-keybinder-0.3.1
+	o py-lz4-0.22.1
 	o py-mercurial-4.5
 	o py-musicbrainz-0.7.4
 	o py-ncclient-0.5.3
@@ -1222,17 +1231,19 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.6.4
 	o py-pendrell-0.3.7
+	o py-pkgconfig-1.3.1
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
 	o py-quixote-2.9
 	o py-radare2-1.0.1
 	o py-scgi-1.15
-	o py-setuptools-38.4.1
+	o py-setuptools-38.5.1
 	o py-simpletal-5.1
 	o py-smb-1.1.17
 	o py-spf-2.0.12t
 	o py-suds-0.4.1
 	o py-sybase-0.37
+	o py-vdirsyncer-0.16.4
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1443,7 +1454,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o userppp-030706
 	o userspace-rcu-0.9.1
 	o utilisp-1.14
-	o vala-0.38.6
+	o vala-0.38.7
 	o valgrind-3.13
 	o varnish-4.1.8
 	o varnish-5.1.3
@@ -1454,8 +1465,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vfu-4.09
 	o vicq-0.4.2
 	o vile-9.8q
-	o vim-8.0.1465
-	o vim-share-8.0.1465
+	o vim-8.0.1497
+	o vim-share-8.0.1497
 	o vinagre-3.16.1
 	o vino-3.16.0
 	o virt-manager-1.3.2
@@ -1483,6 +1494,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowlab-1.40
 	o wine-3.0
 	o wine-devel-2.22
+	o wireshark-2.5.0
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wmx-8
@@ -1490,7 +1502,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o worker-3.12.0
 	o wxGTK-3.1.0
 	o wxRemind-101
-	o x264-devel-20180203
+	o x264-devel-20180210
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xaric-0.13.7
