@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2018/01/02 05:37:22 maya Exp $
+# $NetBSD: Makefile,v 1.68 2018/02/11 15:36:27 wiz Exp $
 
 DISTNAME=		fp_${FLASH_VERSION}_archive
 PKGNAME=		adobe-flash-plugin-${FLASH_VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=		multimedia www
 MASTER_SITES=		http://fpdownload.macromedia.com/pub/flashplayer/installers/archive/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.adobe.com/products/flashplayer.html
+HOMEPAGE=		https://www.adobe.com/products/flashplayer.html
 COMMENT=		Adobe Flash Player Browser plugin
 LICENSE=		flash-license
 
