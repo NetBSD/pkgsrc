@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.595 2018/02/10 14:53:05 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.596 2018/02/11 00:56:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -894,3 +894,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/firefox to 58.0.2 [ryoon 2018-02-10]
 	Updated www/firefox-l10n to 58.0.2 [ryoon 2018-02-10]
 	Updated net/mikutter to 3.6.3 [tsutsui 2018-02-10]
+	Updated devel/openocd to 0.10.0 [ryoon 2018-02-11]
