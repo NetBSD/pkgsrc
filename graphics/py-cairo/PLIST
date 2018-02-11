@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2017/11/25 09:16:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/02/11 16:40:48 wiz Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/cairo/__init__.py
 ${PYSITELIB}/cairo/__init__.pyc
 ${PYSITELIB}/cairo/__init__.pyo
 ${PYSITELIB}/cairo/_cairo.so
+${PLIST.py2x}${PYSITELIB}/cairo/include/pycairo.h
+${PLIST.py3x}${PYSITELIB}/cairo/include/py3cairo.h
 ${PLIST.py2x}include/pycairo/pycairo.h
 ${PLIST.py3x}include/pycairo/py3cairo.h
 ${PLIST.py2x}lib/pkgconfig/pycairo.pc
