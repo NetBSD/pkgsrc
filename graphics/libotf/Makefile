@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2015/10/14 20:17:26 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.16 2018/02/11 16:16:54 wiz Exp $
 
-DISTNAME=	libotf-0.9.13
-PKGREVISION=	3
+DISTNAME=	libotf-0.9.16
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.savannah.gnu.org/releases/m17n/
 
