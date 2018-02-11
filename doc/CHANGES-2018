@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.598 2018/02/11 12:24:40 leot Exp $
+$NetBSD: CHANGES-2018,v 1.599 2018/02/11 14:14:48 ast Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -897,3 +897,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/openocd to 0.10.0 [ryoon 2018-02-11]
 	Updated multimedia/mpv to 0.27.1 [leot 2018-02-11]
 	Updated net/youtube-dl to 20180208 [leot 2018-02-11]
+	Added www/nostromo version 1.9.6 [ast 2018-02-11]
