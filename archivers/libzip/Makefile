@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2018/02/03 12:04:03 jdolecek Exp $
+# $NetBSD: Makefile,v 1.34 2018/02/11 15:46:58 wiz Exp $
 
 DISTNAME=		libzip-1.4.0
 CATEGORIES=		archivers devel
@@ -6,7 +6,7 @@ MASTER_SITES=		https://libzip.org/download/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		wiz@NetBSD.org
-HOMEPAGE=		http://www.libzip.org/
+HOMEPAGE=		https://www.libzip.org/
 COMMENT=		C library to manipulate zip archives
 LICENSE=		modified-bsd
 
