@@ -1,4 +1,4 @@
-/*	$NetBSD: make.h,v 1.8 2015/05/19 22:01:19 joerg Exp $	*/
+/*	$NetBSD: make.h,v 1.9 2018/02/11 17:34:54 khorben Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -92,7 +92,8 @@
 #include <stdlib.h>
 #ifdef HAVE_STRING_H
 #include <string.h>
-#else
+#endif
+#ifdef HAVE_STRINGS_H
 #include <strings.h>
 #endif
 #include <unistd.h>
