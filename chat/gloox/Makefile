@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2016/09/19 13:04:19 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2018/02/11 15:41:19 wiz Exp $
 
 DISTNAME=		gloox-1.0.17
 PKGREVISION=		1
 CATEGORIES=		chat
-MASTER_SITES=		http://camaya.net/download/
+MASTER_SITES=		https://camaya.net/download/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		schnoebe@cirr.com
-HOMEPAGE=		http://camaya.net/gloox/
+HOMEPAGE=		https://camaya.net/gloox/
 COMMENT=		Jabber/XMPP client library
 LICENSE=		gnu-gpl-v3
 
