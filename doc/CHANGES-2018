@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.597 2018/02/11 11:21:28 leot Exp $
+$NetBSD: CHANGES-2018,v 1.598 2018/02/11 12:24:40 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -896,3 +896,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/mikutter to 3.6.3 [tsutsui 2018-02-10]
 	Updated devel/openocd to 0.10.0 [ryoon 2018-02-11]
 	Updated multimedia/mpv to 0.27.1 [leot 2018-02-11]
+	Updated net/youtube-dl to 20180208 [leot 2018-02-11]
