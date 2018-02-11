@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2016/04/15 10:15:15 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2018/02/11 16:52:54 wiz Exp $
 
-DISTNAME=	dbus-python-1.2.4
+DISTNAME=	dbus-python-1.2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-python/
@@ -25,6 +25,5 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-std=c9x
 .include "../../lang/python/extension.mk"
 BUILDLINK_API_DEPENDS.dbus+=	dbus>=1.6
 .include "../../sysutils/dbus/buildlink3.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/dbus-python-common/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
