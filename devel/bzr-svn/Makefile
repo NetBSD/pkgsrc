@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/01/01 14:43:29 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2018/02/11 15:38:51 wiz Exp $
 
 DISTNAME=	bzr-svn-${VER}
 CATEGORIES=	devel scm
@@ -7,7 +7,7 @@ MASTER_SITES+=	http://samba.org/~jelmer/bzr/
 VER=		1.2.1
 
 MAINTAINER=	ddeus.pkgsrc@mailnull.com
-HOMEPAGE=	http://bazaar-vcs.org/BzrForeignBranches/Subversion
+HOMEPAGE=	http://wiki.bazaar.canonical.com/ForeignBranches/Subversion
 COMMENT=	Foreign Subversion repository support for Bazaar
 LICENSE=	gnu-gpl-v2
 
