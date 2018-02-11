@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.612 2018/02/11 16:53:18 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.613 2018/02/11 17:00:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -911,3 +911,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/surfraw to 2.3.0 [wiz 2018-02-11]
 	Updated sysutils/dbus-python-common to 1.2.6 [wiz 2018-02-11]
 	Updated sysutils/py-dbus to 1.2.6 [wiz 2018-02-11]
+	Updated shells/bash to 4.4.18 [wiz 2018-02-11]
