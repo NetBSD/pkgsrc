@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/02/08 14:48:28 tsutsui Exp $
+# $NetBSD: Makefile,v 1.18 2018/02/11 15:36:08 wiz Exp $
 
 FLASH_VERSION=		28.0.0.161
 DISTNAME=		flash_player_npapi_linux.${FLASH_ARCH}
@@ -8,7 +8,7 @@ CATEGORIES=		multimedia www
 MASTER_SITES=		https://fpdownload.macromedia.com/get/flashplayer/pdc/${FLASH_VERSION}/
 
 MAINTAINER=		tsutsui@NetBSD.org
-HOMEPAGE=		http://www.adobe.com/products/flashplayer.html
+HOMEPAGE=		https://www.adobe.com/products/flashplayer.html
 COMMENT=		Adobe Flash Player Browser NPAPI plugin
 LICENSE=		flash-license
 
