@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.815 2018/01/31 19:31:26 markd Exp $
+# $NetBSD: Makefile,v 1.816 2018/02/11 20:16:07 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -659,6 +659,7 @@ SUBDIR+=	xmx
 SUBDIR+=	xneko
 SUBDIR+=	xnodecor
 SUBDIR+=	xorg-cf-files
+SUBDIR+=	xorgproto
 SUBDIR+=	xosd
 SUBDIR+=	xp
 SUBDIR+=	xpad
