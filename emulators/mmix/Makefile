@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.30 2012/10/03 12:55:15 asau Exp $
+# $NetBSD: Makefile,v 1.31 2018/02/11 15:47:44 wiz Exp $
 
 DISTNAME=	mmix-20060918
 PKGREVISION=	1
 CATEGORIES=	emulators devel lang
-MASTER_SITES=	http://www-cs-faculty.stanford.edu/~knuth/programs/
+MASTER_SITES=	https://www-cs-faculty.stanford.edu/~knuth/programs/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www-cs-faculty.stanford.edu/~knuth/mmix.html
+HOMEPAGE=	https://www-cs-faculty.stanford.edu/~knuth/mmix.html
 COMMENT=	Simulators for Knuth's MMIX RISC architecture
 
 BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
