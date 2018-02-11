@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2016/10/09 22:07:58 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2018/02/11 15:46:23 wiz Exp $
 
 DISTNAME=	LaTeXML-0.8.2
 CATEGORIES=	textproc www
-MASTER_SITES=	http://dlmf.nist.gov/LaTeXML/releases/
+MASTER_SITES=	https://dlmf.nist.gov/LaTeXML/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dlmf.nist.gov/LaTeXML/
+HOMEPAGE=	https://dlmf.nist.gov/LaTeXML/
 COMMENT=	LaTeX to XML/HTML/MathML Converter
 LICENSE=	public-domain
 
