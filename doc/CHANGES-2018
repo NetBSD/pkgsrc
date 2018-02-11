@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.614 2018/02/11 17:06:39 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.615 2018/02/11 18:45:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -913,3 +913,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/py-dbus to 1.2.6 [wiz 2018-02-11]
 	Updated shells/bash to 4.4.18 [wiz 2018-02-11]
 	Updated sysutils/dbus-glib to 0.110 [wiz 2018-02-11]
+	Updated archivers/py-lz4 to 0.23.1 [wiz 2018-02-11]
