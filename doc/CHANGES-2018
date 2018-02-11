@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.609 2018/02/11 16:41:06 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.610 2018/02/11 16:46:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -908,3 +908,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/musicpd to 0.20.16 [wiz 2018-02-11]
 	Updated math/mpfr to 4.0.1 [wiz 2018-02-11]
 	Updated graphics/py-cairo to 1.16.2 [wiz 2018-02-11]
+	Updated www/surfraw to 2.3.0 [wiz 2018-02-11]
