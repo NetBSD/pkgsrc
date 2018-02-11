@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/01/11 14:42:02 adam Exp $
-#
+# $NetBSD: Makefile,v 1.28 2018/02/11 15:43:18 wiz Exp $
 
 DISTNAME=	i2cb-6.0_ALPHA
 PKGREVISION=	7
@@ -7,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.draga.com/~jwise/i2cb/
+HOMEPAGE=	https://www.draga.com/~jwise/i2cb/
 COMMENT=	Next generation Internet Citicen's Band chat client
 
 WRKSRC=		${WRKDIR}/icb
