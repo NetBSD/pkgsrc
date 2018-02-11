@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2014/05/17 16:10:47 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.3 2018/02/11 15:45:50 wiz Exp $
 
 DISTNAME=		labelnation-1.212
 PKGREVISION=		1
 CATEGORIES=		misc
-MASTER_SITES=		http://www.red-bean.com/labelnation/
+MASTER_SITES=		https://www.red-bean.com/labelnation/
 
 MAINTAINER=		solevis@solevis.net
-HOMEPAGE=		http://www.red-bean.com/labelnation/
+HOMEPAGE=		https://www.red-bean.com/labelnation/
 COMMENT=		Command-line label, business card printing program
 LICENSE=		gnu-gpl-v3
 
