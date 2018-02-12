@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.622 2018/02/12 08:37:43 adam Exp $
+$NetBSD: CHANGES-2018,v 1.623 2018/02/12 11:03:53 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -926,3 +926,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ccache to 3.4.1 [adam 2018-02-12]
 	Updated finance/py-braintree to 3.41.0 [adam 2018-02-12]
 	Updated www/py-asgiref to 2.1.4 [adam 2018-02-12]
+	Updated devel/omake to 0.10.3 [dholland 2018-02-12]
