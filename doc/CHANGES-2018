@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.627 2018/02/12 19:45:39 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.628 2018/02/12 19:50:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -931,3 +931,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xorgproto to 2018.2 [wiz 2018-02-12]
 	Added net/R-pbdZMQ version 0.3.2 [minskim 2018-02-12]
 	Added devel/R-IRkernel version 0.8.11 [minskim 2018-02-12]
+	Added math/R-reshape2 version 1.4.3 [minskim 2018-02-12]
