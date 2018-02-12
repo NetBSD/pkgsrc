@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/02/02 08:52:00 adam Exp $
+# $NetBSD: Makefile,v 1.9 2018/02/12 08:20:01 adam Exp $
 
-DISTNAME=	cfscrape-1.9.3
+DISTNAME=	cfscrape-1.9.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cfscrape/}
