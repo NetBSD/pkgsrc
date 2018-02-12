@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.619 2018/02/11 20:16:16 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.620 2018/02/12 08:20:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -918,3 +918,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-setuptools to 38.5.1 [wiz 2018-02-11]
 	Updated time/py-vdirsyncer to 0.16.4 [wiz 2018-02-11]
 	Added x11/xorgproto version 2018.1 [wiz 2018-02-11]
+	Updated devel/py-coverage to 4.5.1 [adam 2018-02-12]
+	Updated print/py-weasyprint to 0.42.2 [adam 2018-02-12]
+	Updated databases/py-psycopg2 to 2.7.4 [adam 2018-02-12]
+	Updated www/py-cfscrape to 1.9.4 [adam 2018-02-12]
