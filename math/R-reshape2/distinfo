@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/12 19:49:56 minskim Exp $
+
+SHA1 (R/reshape2_1.4.3.tar.gz) = 14189819c2ef3c4461805c4aa6fcd4aa1851ac67
+RMD160 (R/reshape2_1.4.3.tar.gz) = 12c56d9756777d030b341a8702f8d041bf41846c
+SHA512 (R/reshape2_1.4.3.tar.gz) = 938eae07c52393f05c68810af1621b2f2a79ce6e2b7b16deb02a810e5cbe07f2079753a3d849def3ae88f849884199fcd28978214268008b6a705d9404847ddb
+Size (R/reshape2_1.4.3.tar.gz) = 36405 bytes
