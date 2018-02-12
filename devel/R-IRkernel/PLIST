@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/12 19:44:46 minskim Exp $
+share/jupyter/kernels/ir/kernel.js
+share/jupyter/kernels/ir/kernel.json
+share/jupyter/kernels/ir/logo-64x64.png
