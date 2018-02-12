@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.621 2018/02/12 08:34:56 jklos Exp $
+$NetBSD: CHANGES-2018,v 1.622 2018/02/12 08:37:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -923,3 +923,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-psycopg2 to 2.7.4 [adam 2018-02-12]
 	Updated www/py-cfscrape to 1.9.4 [adam 2018-02-12]
 	Updated www/wordpress to 4.9.4 [jklos 2018-02012]
+	Updated devel/ccache to 3.4.1 [adam 2018-02-12]
+	Updated finance/py-braintree to 3.41.0 [adam 2018-02-12]
+	Updated www/py-asgiref to 2.1.4 [adam 2018-02-12]
