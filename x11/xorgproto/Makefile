@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/02/11 20:13:08 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2018/02/12 16:33:54 wiz Exp $
 
-DISTNAME=		xorgproto-2018.1
+DISTNAME=		xorgproto-2018.2
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
