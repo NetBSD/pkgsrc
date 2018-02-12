@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/04/01 13:51:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.11 2018/02/12 17:06:58 jperkin Exp $
 #
 
 DISTNAME=	libmemcached-1.0.18
@@ -16,6 +16,12 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	support/libmemcached.pc.in
+
+# Let pkgsrc handle security options.
+CONFIGURE_ENV+=	ax_cv_check_cflags__Werror__fPIE=no
+CONFIGURE_ENV+=	ax_cv_check_cflags__Werror__pie=no
+CONFIGURE_ENV+=	ax_cv_check_cxxflags__Werror__fPIE=no
+CONFIGURE_ENV+=	ax_cv_check_cxxflags__Werror__pie=no
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
