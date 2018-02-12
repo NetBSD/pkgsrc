@@ -1,0 +1,4 @@
+This package provides high level R wrapper functions to easily utilize
+ZeroMQ. We mainly focus on interactive client/server programming
+frameworks. A few wrapper functions compatible with 'rzmq' are also
+provided.
