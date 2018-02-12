@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/12/17 09:40:14 wiz Exp $
-bin/cvs_realclean
+@comment $NetBSD: PLIST,v 1.3 2018/02/12 11:03:34 dholland Exp $
 bin/omake
 bin/osh
 lib/omake/OMakefile.default
@@ -15,7 +14,9 @@ lib/omake/configure/Configure.om
 lib/omake/configure/X.om
 lib/omake/configure/fam.om
 lib/omake/configure/fs_case_sensitive.om
+lib/omake/configure/moncontrol.om
 lib/omake/configure/ncurses.om
+lib/omake/configure/posix_spawn.om
 lib/omake/configure/readline.om
 lib/omake/configure/snprintf.om
 lib/omake/parse/C/Lex.om

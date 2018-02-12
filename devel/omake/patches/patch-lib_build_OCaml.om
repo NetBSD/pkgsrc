@@ -1,19 +1,16 @@
-$NetBSD: patch-lib_build_OCaml.om,v 1.1 2012/11/23 22:55:22 marino Exp $
+$NetBSD: patch-lib_build_OCaml.om,v 1.2 2018/02/12 11:03:35 dholland Exp $
 
-Omake will break in over a dozen places on gcc 4.7.x if warnings are
-treated as errors.  All valid but unreferenced functions and constants
-are warned about in gcc 4.7, and the alternative to removing the
-warn-error flag is to remove all these unreferenced functions and
-constants via patches.
+Fix build failure. Apparently $(c_comp) is an array and it needs
+to be a string.
 
---- lib/build/OCaml.om.orig	2008-03-05 01:07:25.000000000 +0000
+--- lib/build/OCaml.om~	2017-10-29 11:36:41.000000000 +0000
 +++ lib/build/OCaml.om
-@@ -176,7 +176,7 @@ public.PREFIXED_OCAMLPACKS =\
- #
- declare OCAMLDEPFLAGS
- public.OCAMLPPFLAGS  =
--public.OCAMLFLAGS    = -warn-error A
-+public.OCAMLFLAGS    =
- public.OCAMLCFLAGS   = -g
- public.OCAMLOPTFLAGS =
- public.OCAMLCPPFLAGS =
+@@ -181,7 +181,7 @@ private.get_bytecomp_c_comp() =
+     # Figure out the params for the C compiler
+     #
+     private.c_comp = $(get_c_comp)
+-    if $(equal X$(c_comp)X, XX)
++    if $(equal X$(string $(c_comp))X, XX)
+         private.bytecomp_c_comp = $(get_bytecomp_c_comp)
+         OCAML_CC = $(nth-hd 1, $(bytecomp_c_comp))
+         OCAML_CFLAGS = $(nth-tl 1, $(bytecomp_c_comp))
