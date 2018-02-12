@@ -1,0 +1,2 @@
+Flexibly restructure and aggregate data using just two functions: melt
+and 'dcast' (or 'acast').
