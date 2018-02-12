@@ -1,7 +1,7 @@
-$NetBSD: patch-tnm_snmp_tnmAsn1.c,v 1.2 2018/02/02 13:55:29 he Exp $
+$NetBSD: patch-tnm_snmp_tnmAsn1.c,v 1.3 2018/02/12 14:52:14 he Exp $
 
 Constify.
-Provide minimal robustness against mis-coded OIDs.
+Provide some robustness against mis-coded OIDs.
 
 --- tnm/snmp/tnmAsn1.c.orig	1996-07-29 21:33:44.000000000 +0000
 +++ tnm/snmp/tnmAsn1.c
@@ -61,3 +61,21 @@ Provide minimal robustness against mis-coded OIDs.
      
      if (asnlen == 1 && (*packet % 40 == *packet)) {
  	*oid       = *packet++;
+@@ -939,12 +945,16 @@ Tnm_BerDecOID(packet, packetlen, oid, oi
+ 
+     while (asnlen > 0) {
+ 	memset((char *) op, 0, sizeof(oid));
+-	while (*packet > 0x7F) {
++	while (*packet > 0x7F && asnlen > 0) {
+ 	    /* hansb@aie.nl (Hans Bayle) had problems with SCO. */
+ 	    *op = ( *op << 7 ) + ( *packet++ & 0x7F );
+ 	    asnlen     -= 1;
+ 	    *packetlen += 1;
+ 	}
++	if (asnlen == 0) {
++	    strcpy(error, "OID decode: miscoded, ran out of data");
++	    return NULL;
++	}
+ 
+ 	*op = ( *op << 7 ) + ( *packet++ );
+ 	op         += 1;
