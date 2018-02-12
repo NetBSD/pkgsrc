@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.623 2018/02/12 11:03:53 dholland Exp $
+$NetBSD: CHANGES-2018,v 1.624 2018/02/12 14:52:47 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -927,3 +927,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated finance/py-braintree to 3.41.0 [adam 2018-02-12]
 	Updated www/py-asgiref to 2.1.4 [adam 2018-02-12]
 	Updated devel/omake to 0.10.3 [dholland 2018-02-12]
+	Updated net/tcl-scotty to 2.1.11nb15 [he 2018-02-12]
