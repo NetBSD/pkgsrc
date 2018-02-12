@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/08/11 04:28:52 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/02/12 15:16:24 abs Exp $
 bin/xulrunner45
 include/xulrunner45/ADTSDecoder.h
 include/xulrunner45/ADTSDemuxer.h
@@ -152,10 +152,6 @@ include/xulrunner45/GMPVideoEncoderProxy.h
 include/xulrunner45/GMPVideoHost.h
 include/xulrunner45/GMPVideoPlaneImpl.h
 include/xulrunner45/GMPVideoi420FrameImpl.h
-include/xulrunner45/GStreamerDecoder.h
-include/xulrunner45/GStreamerFormatHelper.h
-include/xulrunner45/GStreamerLoader.h
-include/xulrunner45/GStreamerReader.h
 include/xulrunner45/GeckoProfiler.h
 include/xulrunner45/GfxDriverInfo.h
 include/xulrunner45/GfxInfoBase.h
