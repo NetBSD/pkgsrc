@@ -1,26 +1,24 @@
-# $NetBSD: Makefile,v 1.18 2018/02/04 08:06:22 dholland Exp $
+# $NetBSD: Makefile,v 1.19 2018/02/12 11:03:34 dholland Exp $
 #
 
-DISTNAME=	omake-${VERSION}-0.rc1
-PKGNAME=	omake-${VERSION}.0rc1
-PKGREVISION=	13
+DISTNAME=	omake-0.10.3
 CATEGORIES=	devel
-MASTER_SITES=	http://omake.metaprl.org/downloads/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml-omake/}
+GITHUB_TAG=	${PKGNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://omake.metaprl.org/index.html
+HOMEPAGE=	http://projects.camlcity.org/projects/omake.html
 COMMENT=	Build system designed for scalability and portability
 LICENSE=	gnu-gpl-v2 AND mit AND gnu-lgpl-v2.1
 
-BROKEN=		Does not build with ocaml 4.06.
-
+HAS_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	no
 
-WRKSRC=		${WRKDIR}/omake-${VERSION}
+WRKSRC=		${WRKDIR}/omake-${DISTNAME}
 
-MAKE_ENV+=	INSTALL_ROOT=${DESTDIR}
-
-VERSION=	0.9.8.6
+CONFIGURE_ARGS+=	-prefix=${PREFIX}
+BUILD_TARGET=		force-bootstrap
+MAKE_ENV+=		INSTALL_ROOT=${DESTDIR}
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
