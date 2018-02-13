@@ -1,6 +1,6 @@
-$NetBSD: patch-parse.c,v 1.1 2018/02/13 14:59:15 he Exp $
+$NetBSD: patch-parse.c,v 1.2 2018/02/13 15:08:11 he Exp $
 
-Apply fix for CVE-2017-10002, via
+Apply fix for CVE-2017-1000231, via
 https://git.nlnetlabs.nl/ldns/commit/?id=c8391790
 
 --- parse.c.orig	2014-01-10 21:04:41.000000000 +0000
