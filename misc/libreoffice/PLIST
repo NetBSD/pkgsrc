@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2018/02/03 05:28:49 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.27 2018/02/13 13:03:06 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -8999,6 +8999,7 @@ ${PKGNAME}/lib/libreoffice/share/wizards/resources_zh_TW.properties
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_zu.properties
 ${PKGNAME}/lib/libreoffice/share/wordbook/en-GB.dic
 ${PKGNAME}/lib/libreoffice/share/wordbook/en-US.dic
+${PKGNAME}/lib/libreoffice/share/wordbook/hu_AkH11.dic
 ${PKGNAME}/lib/libreoffice/share/wordbook/sl.dic
 ${PKGNAME}/lib/libreoffice/share/wordbook/technical.dic
 ${PKGNAME}/lib/libreoffice/share/xdg/base.desktop
