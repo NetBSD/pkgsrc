@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2018/01/28 20:10:54 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2018/02/13 12:57:44 ryoon Exp $
 
-DISTNAME=	openjdk-1.8.152-20171128
-PKGNAME=	openjdk8-1.8.152
-PKGREVISION=	2
+DISTNAME=	openjdk-1.8.162-20180212
+PKGNAME=	openjdk8-1.8.162
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.xz
@@ -102,10 +101,17 @@ CXXFLAGS+=	-D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
 CONFIGURE_ENV+=	CFLAGS_JDK=${CFLAGS:Q}
 CONFIGURE_ENV+=	CXXFLAGS_JDK=${CXXFLAGS:Q}
 
+# Fix segfault under NetBSD/amd64 8.99 with GCC 6.4.0
+.if !empty(CC_VERSION:Mgcc-6.*)
+CFLAGS+=	-fno-lifetime-dse
+.endif
+
 .if ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Mgcc)
 MAKE_ENV+=	USE_GCC=1
 MAKE_ENV+=	ARCH_DATA_MODEL=${ABI:Q}
 .endif
+
+BUILDLINK_TRANSFORM+=	rm:-O2
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CC+=	-Wno-return-type
