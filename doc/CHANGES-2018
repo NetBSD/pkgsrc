@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.635 2018/02/13 13:03:39 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.636 2018/02/13 13:32:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -942,3 +942,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xplanet to 1.3.0 [ryoon 2018-02-13]
 	Updated lang/openjdk8 to 1.8.162 [ryoon 2018-02-13]
 	Updated misc/libreoffice to 6.0.1.1 [ryoon 2018-02-13]
+	Updated devel/py-test-runner to 4.0 [adam 2018-02-13]
