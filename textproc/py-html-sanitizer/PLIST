@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/13 21:00:03 joerg Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/html_sanitizer/__init__.py
+${PYSITELIB}/html_sanitizer/__init__.pyc
+${PYSITELIB}/html_sanitizer/__init__.pyo
+${PYSITELIB}/html_sanitizer/__main__.py
+${PYSITELIB}/html_sanitizer/__main__.pyc
+${PYSITELIB}/html_sanitizer/__main__.pyo
+${PYSITELIB}/html_sanitizer/django.py
+${PYSITELIB}/html_sanitizer/django.pyc
+${PYSITELIB}/html_sanitizer/django.pyo
+${PYSITELIB}/html_sanitizer/sanitizer.py
+${PYSITELIB}/html_sanitizer/sanitizer.pyc
+${PYSITELIB}/html_sanitizer/sanitizer.pyo
+${PYSITELIB}/html_sanitizer/tests.py
+${PYSITELIB}/html_sanitizer/tests.pyc
+${PYSITELIB}/html_sanitizer/tests.pyo

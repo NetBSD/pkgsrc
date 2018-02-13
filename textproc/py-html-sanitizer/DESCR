@@ -1,0 +1,8 @@
+html-sanitizer is a whitelist-based and very opinionated HTML sanitizer
+that can be used both for untrusted and trusted sources. It attempts to
+clean up the mess made by various rich text editors and or copy-pasting
+to make styling of webpages simpler and more consistent. It builds on the
+excellent HTML cleaner in lxml to make the result both valid and safe.
+
+It goes further than pure tag filtering by transforming the HTML
+fragments to normalize formatting and drop redundant or pointless tags.
