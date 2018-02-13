@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.14 2015/08/29 17:41:07 jperkin Exp $
+$NetBSD: patch-aa,v 1.15 2018/02/13 13:49:45 ryoon Exp $
 
 Find libpthread.so when not on the default rpath.
 Allow custom CC and CFLAGS.
@@ -8,19 +8,23 @@ Fix -install_name on OSX.
 
 --- mDNSPosix/Makefile.orig	2009-08-11 01:13:47.000000000 +0000
 +++ mDNSPosix/Makefile
-@@ -54,7 +54,6 @@ COREDIR = ../mDNSCore
+@@ -54,17 +54,16 @@ COREDIR = ../mDNSCore
  SHAREDDIR ?= ../mDNSShared
  JDK = /usr/jdk
  
 -CC = @cc
  BISON = @bison
  FLEX = @flex
- LD = ld -shared
-@@ -64,7 +63,7 @@ LN = ln -s -f
+-LD = ld -shared
++LD = cc -shared
+ CP = cp
+ RM = rm
+ LN = ln -s -f
  CFLAGS_COMMON = -I$(COREDIR) -I$(SHAREDDIR) -I$(OBJDIR) -fwrapv -W -Wall -DPID_FILE=\"/var/run/mdnsd.pid\" -DMDNS_UDS_SERVERPATH=\"/var/run/mdnsd\"
  CFLAGS_PTHREAD =
- LINKOPTS =
+-LINKOPTS =
 -LINKOPTS_PTHREAD = -lpthread
++LINKOPTS = ${LDFLAGS}
 +LINKOPTS_PTHREAD = $(LIBFLAGS) ${COMPILER_RPATH_FLAG}${PTHREADBASE}/lib ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} ${EXTRA_LIBS}
  LDSUFFIX = so
  JAVACFLAGS_OS = -fPIC -shared -ldns_sd
