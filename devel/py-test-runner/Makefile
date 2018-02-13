@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2017/11/02 13:18:23 adam Exp $
+# $NetBSD: Makefile,v 1.12 2018/02/13 13:30:41 adam Exp $
 
-DISTNAME=	pytest-runner-3.0
+DISTNAME=	pytest-runner-4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-runner/}
@@ -10,8 +10,10 @@ HOMEPAGE=	https://github.com/pytest-dev/pytest-runner
 COMMENT=	Invoke py.test as distutils command with dependency resolution
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-test>=2.8:../../devel/py-test
 DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+DEPENDS+=	${PYPKGPREFIX}-test>=2.8:../../devel/py-test
+# TEST_DEPENDS
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-virtualenv-[0-9]*:../../devel/py-test-virtualenv
 
 USE_LANGUAGES=	# none
 
