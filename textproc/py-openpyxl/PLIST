@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/10/30 10:10:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/02/13 11:49:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -77,6 +77,9 @@ ${PYSITELIB}/openpyxl/chart/picture.pyo
 ${PYSITELIB}/openpyxl/chart/pie_chart.py
 ${PYSITELIB}/openpyxl/chart/pie_chart.pyc
 ${PYSITELIB}/openpyxl/chart/pie_chart.pyo
+${PYSITELIB}/openpyxl/chart/plotarea.py
+${PYSITELIB}/openpyxl/chart/plotarea.pyc
+${PYSITELIB}/openpyxl/chart/plotarea.pyo
 ${PYSITELIB}/openpyxl/chart/print_settings.py
 ${PYSITELIB}/openpyxl/chart/print_settings.pyc
 ${PYSITELIB}/openpyxl/chart/print_settings.pyo
@@ -167,9 +170,6 @@ ${PYSITELIB}/openpyxl/compat/abc.pyo
 ${PYSITELIB}/openpyxl/compat/numbers.py
 ${PYSITELIB}/openpyxl/compat/numbers.pyc
 ${PYSITELIB}/openpyxl/compat/numbers.pyo
-${PYSITELIB}/openpyxl/compat/odict.py
-${PYSITELIB}/openpyxl/compat/odict.pyc
-${PYSITELIB}/openpyxl/compat/odict.pyo
 ${PYSITELIB}/openpyxl/compat/singleton.py
 ${PYSITELIB}/openpyxl/compat/singleton.pyc
 ${PYSITELIB}/openpyxl/compat/singleton.pyo
@@ -278,6 +278,21 @@ ${PYSITELIB}/openpyxl/packaging/relationship.pyo
 ${PYSITELIB}/openpyxl/packaging/workbook.py
 ${PYSITELIB}/openpyxl/packaging/workbook.pyc
 ${PYSITELIB}/openpyxl/packaging/workbook.pyo
+${PYSITELIB}/openpyxl/pivot/__init__.py
+${PYSITELIB}/openpyxl/pivot/__init__.pyc
+${PYSITELIB}/openpyxl/pivot/__init__.pyo
+${PYSITELIB}/openpyxl/pivot/cache.py
+${PYSITELIB}/openpyxl/pivot/cache.pyc
+${PYSITELIB}/openpyxl/pivot/cache.pyo
+${PYSITELIB}/openpyxl/pivot/fields.py
+${PYSITELIB}/openpyxl/pivot/fields.pyc
+${PYSITELIB}/openpyxl/pivot/fields.pyo
+${PYSITELIB}/openpyxl/pivot/record.py
+${PYSITELIB}/openpyxl/pivot/record.pyc
+${PYSITELIB}/openpyxl/pivot/record.pyo
+${PYSITELIB}/openpyxl/pivot/table.py
+${PYSITELIB}/openpyxl/pivot/table.pyc
+${PYSITELIB}/openpyxl/pivot/table.pyo
 ${PYSITELIB}/openpyxl/reader/__init__.py
 ${PYSITELIB}/openpyxl/reader/__init__.pyc
 ${PYSITELIB}/openpyxl/reader/__init__.pyo
@@ -398,9 +413,6 @@ ${PYSITELIB}/openpyxl/workbook/interface.pyo
 ${PYSITELIB}/openpyxl/workbook/parser.py
 ${PYSITELIB}/openpyxl/workbook/parser.pyc
 ${PYSITELIB}/openpyxl/workbook/parser.pyo
-${PYSITELIB}/openpyxl/workbook/pivot.py
-${PYSITELIB}/openpyxl/workbook/pivot.pyc
-${PYSITELIB}/openpyxl/workbook/pivot.pyo
 ${PYSITELIB}/openpyxl/workbook/properties.py
 ${PYSITELIB}/openpyxl/workbook/properties.pyc
 ${PYSITELIB}/openpyxl/workbook/properties.pyo
@@ -425,6 +437,9 @@ ${PYSITELIB}/openpyxl/workbook/workbook.pyo
 ${PYSITELIB}/openpyxl/worksheet/__init__.py
 ${PYSITELIB}/openpyxl/worksheet/__init__.pyc
 ${PYSITELIB}/openpyxl/worksheet/__init__.pyo
+${PYSITELIB}/openpyxl/worksheet/cell_range.py
+${PYSITELIB}/openpyxl/worksheet/cell_range.pyc
+${PYSITELIB}/openpyxl/worksheet/cell_range.pyo
 ${PYSITELIB}/openpyxl/worksheet/copier.py
 ${PYSITELIB}/openpyxl/worksheet/copier.pyc
 ${PYSITELIB}/openpyxl/worksheet/copier.pyo
@@ -455,9 +470,6 @@ ${PYSITELIB}/openpyxl/worksheet/page.pyo
 ${PYSITELIB}/openpyxl/worksheet/pagebreak.py
 ${PYSITELIB}/openpyxl/worksheet/pagebreak.pyc
 ${PYSITELIB}/openpyxl/worksheet/pagebreak.pyo
-${PYSITELIB}/openpyxl/worksheet/pivot.py
-${PYSITELIB}/openpyxl/worksheet/pivot.pyc
-${PYSITELIB}/openpyxl/worksheet/pivot.pyo
 ${PYSITELIB}/openpyxl/worksheet/properties.py
 ${PYSITELIB}/openpyxl/worksheet/properties.pyc
 ${PYSITELIB}/openpyxl/worksheet/properties.pyo
@@ -479,12 +491,12 @@ ${PYSITELIB}/openpyxl/worksheet/views.pyo
 ${PYSITELIB}/openpyxl/worksheet/worksheet.py
 ${PYSITELIB}/openpyxl/worksheet/worksheet.pyc
 ${PYSITELIB}/openpyxl/worksheet/worksheet.pyo
+${PYSITELIB}/openpyxl/worksheet/write_only.py
+${PYSITELIB}/openpyxl/worksheet/write_only.pyc
+${PYSITELIB}/openpyxl/worksheet/write_only.pyo
 ${PYSITELIB}/openpyxl/writer/__init__.py
 ${PYSITELIB}/openpyxl/writer/__init__.pyc
 ${PYSITELIB}/openpyxl/writer/__init__.pyo
-${PYSITELIB}/openpyxl/writer/dump_worksheet.py
-${PYSITELIB}/openpyxl/writer/dump_worksheet.pyc
-${PYSITELIB}/openpyxl/writer/dump_worksheet.pyo
 ${PYSITELIB}/openpyxl/writer/etree_worksheet.py
 ${PYSITELIB}/openpyxl/writer/etree_worksheet.pyc
 ${PYSITELIB}/openpyxl/writer/etree_worksheet.pyo
@@ -503,9 +515,6 @@ ${PYSITELIB}/openpyxl/writer/workbook.pyo
 ${PYSITELIB}/openpyxl/writer/worksheet.py
 ${PYSITELIB}/openpyxl/writer/worksheet.pyc
 ${PYSITELIB}/openpyxl/writer/worksheet.pyo
-${PYSITELIB}/openpyxl/writer/write_only.py
-${PYSITELIB}/openpyxl/writer/write_only.pyc
-${PYSITELIB}/openpyxl/writer/write_only.pyo
 ${PYSITELIB}/openpyxl/xml/__init__.py
 ${PYSITELIB}/openpyxl/xml/__init__.pyc
 ${PYSITELIB}/openpyxl/xml/__init__.pyo
@@ -515,6 +524,3 @@ ${PYSITELIB}/openpyxl/xml/constants.pyo
 ${PYSITELIB}/openpyxl/xml/functions.py
 ${PYSITELIB}/openpyxl/xml/functions.pyc
 ${PYSITELIB}/openpyxl/xml/functions.pyo
-${PYSITELIB}/openpyxl/xml/namespace.py
-${PYSITELIB}/openpyxl/xml/namespace.pyc
-${PYSITELIB}/openpyxl/xml/namespace.pyo
