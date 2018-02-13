@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.631 2018/02/13 09:26:40 adam Exp $
+$NetBSD: CHANGES-2018,v 1.632 2018/02/13 11:57:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -937,3 +937,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/py-pytz to 2018.3 [adam 2018-02-13]
 	Updated www/nghttp2 to 1.30.0 [adam 2018-02-13]
 	Updated www/nginx-devel to 1.13.8 [adam 2018-02-13]
+	Updated textproc/py-openpyxl to 2.5.0 [adam 2018-02-13]
+	Updated devel/py-faker to 0.8.11 [adam 2018-02-13]
