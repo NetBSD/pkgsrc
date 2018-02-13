@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.52 2017/12/15 14:27:52 jperkin Exp $
+$NetBSD: distinfo,v 1.53 2018/02/13 12:57:44 ryoon Exp $
 
 SHA1 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 7408f52d3bbe35c2b14bbd3215cbf60f1335d334
 RMD160 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 24f1577b5fc86d137f070aedb4610c8c89e45815
@@ -44,10 +44,10 @@ SHA1 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 29b
 RMD160 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = b13d0e42839fb746d41f9001e488162b47803140
 SHA512 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 1403e582dacd0474e57d9aa8f1333060c50d099ef5d2c5a992ff7f63dcde2e538ff1e7fb78e45d12fd5aea6daf0704672e7f326399d415ee0d6bb53b6f925e9f
 Size (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 37883700 bytes
-SHA1 (openjdk7/openjdk-1.8.152-20171128.tar.xz) = e4937fd9af8c1a111358a3a8d64fc6765509cd23
-RMD160 (openjdk7/openjdk-1.8.152-20171128.tar.xz) = db7f212a789ab2265d802e51c6c5274a97151c65
-SHA512 (openjdk7/openjdk-1.8.152-20171128.tar.xz) = 4e3e3c1c4049071df292b317ab4d7ec2fe0c98b3d1f628a61997f8a564936dba1380691a8ef04fb84b2759fd9db34fe0646f4fb7959084acd6ffba022d69597a
-Size (openjdk7/openjdk-1.8.152-20171128.tar.xz) = 55518112 bytes
+SHA1 (openjdk7/openjdk-1.8.162-20180212.tar.xz) = ba15be3f88dc2159490e0f3c4d23fbf312c42fc2
+RMD160 (openjdk7/openjdk-1.8.162-20180212.tar.xz) = a0c5c8a1e8938facab48a9acdfde86ab7073a3fb
+SHA512 (openjdk7/openjdk-1.8.162-20180212.tar.xz) = dbc9ba7cfb4b01d43ea73ea345e733ce650c6b0169a4d70650c39e87e67c316f390b71b9de27df6e620ea82951f953c59929a5c70afcfab5be53c5f24cf8ed1c
+Size (openjdk7/openjdk-1.8.162-20180212.tar.xz) = 55660604 bytes
 SHA1 (patch-aa) = 512a42ff1a0d6c4a0672ec32e9396cc0c5c8c9fb
 SHA1 (patch-al) = f65f739805c2ef471a4de10d6da42e86c5561b8c
 SHA1 (patch-an) = fce4da00762770c1c0592bd225bf73e875252178
