@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/13 21:00:03 joerg Exp $
+
+SHA1 (html-sanitizer-1.3.0.tar.gz) = 67ffae88b696cfb623d6778d4ae6bd6ac792d250
+RMD160 (html-sanitizer-1.3.0.tar.gz) = 17dd857a28bea1a1af2540e5c7267810d07dcd51
+SHA512 (html-sanitizer-1.3.0.tar.gz) = cc231f2257300962cda3dea29dc37943bafb72a07b157cc3e47222594e4b01d6d3a5e0688696277d6617a4f160987f5d13220dca1a6c5528d1b472ccdd392483
+Size (html-sanitizer-1.3.0.tar.gz) = 10953 bytes
