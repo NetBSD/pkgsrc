@@ -1,7 +1,13 @@
-$NetBSD: distinfo,v 1.20 2015/11/04 03:29:10 agc Exp $
+$NetBSD: distinfo,v 1.21 2018/02/13 12:45:02 ryoon Exp $
 
-SHA1 (xplanet-1.2.2.tar.gz) = 3c9cc4be7cd87121884162204eff376af2fc03e3
-RMD160 (xplanet-1.2.2.tar.gz) = 431c9223b2b122599a8c4bdca18c17fea0dcd5ab
-SHA512 (xplanet-1.2.2.tar.gz) = 1a5dbad62b79adce28239615e3a2fd00300fca085f9400f2735c5dc015f06c63e182ed0d78399324bf6049374f2c034e6026a4054f26c34e11024b956695a53f
-Size (xplanet-1.2.2.tar.gz) = 1217169 bytes
+SHA1 (xplanet-1.3.0.tar.gz) = 7c5208b501b441a0184cbb334a5658d0309d7dac
+RMD160 (xplanet-1.3.0.tar.gz) = b5ba6239019669668aeb7f63391aa850cc3dd8b7
+SHA512 (xplanet-1.3.0.tar.gz) = c9f0db21c457d0702f8b1fb6d632838f45e80ea45b9cade80d6ab0ae956fdca03cfeed9582548c69b349a354afc27308309656d7e06ac46bc416c3e1038f8efd
+Size (xplanet-1.3.0.tar.gz) = 1227385 bytes
+SHA1 (patch-src_libannotate_addArcs.cpp) = 5d2ba7c0df6989e0b0b838fccbc73fe7a17ba91c
+SHA1 (patch-src_libannotate_addMarkers.cpp) = 9c05d3b308b6a957b8af7f8a05ba49a608f5120e
+SHA1 (patch-src_libannotate_addSatellites.cpp) = 7c8976a3e88ebac7e4d9b59a38f98f87b9d04f57
 SHA1 (patch-src_libimage_gif.c) = 6c107bd1f733fe82f2b88af8ad778e0fe5aea5bd
+SHA1 (patch-src_libmultiple_RayleighScattering.cpp) = 3a64033dc0c6915c9cd2eed2e506dd4c802138c9
+SHA1 (patch-src_libmultiple_drawStars.cpp) = b6a3f3995f4f1ac77660fdad64524ef6a48c4d50
+SHA1 (patch-src_readConfig.cpp) = c1a46209dfcbb6a37b6c7ff90f633a6450fbd5d9

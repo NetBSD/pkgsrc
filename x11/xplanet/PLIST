@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/04/04 11:41:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/02/13 12:45:02 ryoon Exp $
 bin/xplanet
 man/man1/xplanet.1
 share/xplanet/arcs/README
@@ -35,6 +35,8 @@ share/xplanet/rgb.txt
 share/xplanet/satellites/README
 share/xplanet/satellites/iss
 share/xplanet/satellites/iss.tle
+share/xplanet/scattering/README
+share/xplanet/scattering/earthRayleigh
 share/xplanet/spice/README
 share/xplanet/spice/asteroids
 share/xplanet/spice/asteroids.krn
