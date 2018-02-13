@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/02/13 13:30:41 adam Exp $
+# $NetBSD: Makefile,v 1.13 2018/02/13 21:20:23 adam Exp $
 
 DISTNAME=	pytest-runner-4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,8 +12,6 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-test>=2.8:../../devel/py-test
-# TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-virtualenv-[0-9]*:../../devel/py-test-virtualenv
 
 USE_LANGUAGES=	# none
 
