@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2017/10/30 18:31:28 adam Exp $
+# $NetBSD: Makefile,v 1.39 2018/02/13 08:37:14 adam Exp $
 
-DISTNAME=	pytz-2017.3
+DISTNAME=	pytz-2018.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytz/}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://pythonhosted.org/pytz/
