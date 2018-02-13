@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/11/25 15:48:49 bsiegert Exp $
+# $NetBSD: Makefile,v 1.25 2018/02/13 12:50:40 ryoon Exp $
 
 .include "../../archivers/libarchive/Makefile.common"
 .include "../../mk/bsd.prefs.mk"
@@ -33,6 +33,8 @@ LDFLAGS+=	-L${WRKDIR}/zlib
 .endif
 .if empty(USE_BUILTIN.openssl:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--without-openssl
+.else
+LDFLAGS+=	-lcrypto
 .endif
 .if empty(USE_BUILTIN.xz:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--without-lzma
