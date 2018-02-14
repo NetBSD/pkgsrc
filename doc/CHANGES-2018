@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.646 2018/02/14 13:16:40 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.647 2018/02/14 14:12:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -960,3 +960,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/haproxy to 1.8.4 [adam 2018-02-14]
 	Updated www/py-cherrypy to 14.0.0 [adam 2018-02-14]
 	Updated cad/oce to 0.18.3 [fhajny 2018-02-14]
+	Updated devel/py-backports.functools_lru_cache to 1.5 [adam 2018-02-14]
+	Updated devel/py-greenlet to 0.4.13 [adam 2018-02-14]
