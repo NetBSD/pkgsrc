@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2018/02/05 16:39:47 adam Exp $
+# $NetBSD: Makefile,v 1.13 2018/02/14 11:31:04 adam Exp $
 
-DISTNAME=	aiohttp-2.3.10
+DISTNAME=	aiohttp-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
@@ -11,15 +11,16 @@ COMMENT=	Async http client/server framework
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-async-timeout>=1.2.0:../../devel/py-async-timeout
-DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
-DEPENDS+=	${PYPKGPREFIX}-idna_ssl>=1.0.0:../../www/py-idna_ssl
-DEPENDS+=	${PYPKGPREFIX}-multidict>=3.0.0:../../databases/py-multidict
-DEPENDS+=	${PYPKGPREFIX}-yarl>=0.11:../../www/py-yarl
+DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-chardet>=2.0:../../converters/py-chardet
+DEPENDS+=	${PYPKGPREFIX}-idna_ssl>=1.0:../../www/py-idna_ssl
+DEPENDS+=	${PYPKGPREFIX}-multidict>=4.0:../../databases/py-multidict
+DEPENDS+=	${PYPKGPREFIX}-yarl>=1.0:../../www/py-yarl
 BUILD_DEPENDS+=	${PYPKGPREFIX}-gunicorn-[0-9]*:../../www/py-gunicorn
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 34
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
