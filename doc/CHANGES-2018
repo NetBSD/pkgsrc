@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.647 2018/02/14 14:12:03 adam Exp $
+$NetBSD: CHANGES-2018,v 1.648 2018/02/14 14:23:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -962,3 +962,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated cad/oce to 0.18.3 [fhajny 2018-02-14]
 	Updated devel/py-backports.functools_lru_cache to 1.5 [adam 2018-02-14]
 	Updated devel/py-greenlet to 0.4.13 [adam 2018-02-14]
+	Updated www/py-daphne to 2.0.3 [adam 2018-02-14]
+	Updated www/py-channels to 2.0.2 [adam 2018-02-14]
