@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/11/02 13:13:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/02/14 11:31:04 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -20,9 +20,6 @@ ${PYSITELIB}/aiohttp/_websocket.so
 ${PYSITELIB}/aiohttp/abc.py
 ${PYSITELIB}/aiohttp/abc.pyc
 ${PYSITELIB}/aiohttp/abc.pyo
-${PYSITELIB}/aiohttp/backport_cookies.py
-${PYSITELIB}/aiohttp/backport_cookies.pyc
-${PYSITELIB}/aiohttp/backport_cookies.pyo
 ${PYSITELIB}/aiohttp/client.py
 ${PYSITELIB}/aiohttp/client.pyc
 ${PYSITELIB}/aiohttp/client.pyo
@@ -98,12 +95,21 @@ ${PYSITELIB}/aiohttp/signals.pyo
 ${PYSITELIB}/aiohttp/streams.py
 ${PYSITELIB}/aiohttp/streams.pyc
 ${PYSITELIB}/aiohttp/streams.pyo
+${PYSITELIB}/aiohttp/tcp_helpers.py
+${PYSITELIB}/aiohttp/tcp_helpers.pyc
+${PYSITELIB}/aiohttp/tcp_helpers.pyo
 ${PYSITELIB}/aiohttp/test_utils.py
 ${PYSITELIB}/aiohttp/test_utils.pyc
 ${PYSITELIB}/aiohttp/test_utils.pyo
+${PYSITELIB}/aiohttp/tracing.py
+${PYSITELIB}/aiohttp/tracing.pyc
+${PYSITELIB}/aiohttp/tracing.pyo
 ${PYSITELIB}/aiohttp/web.py
 ${PYSITELIB}/aiohttp/web.pyc
 ${PYSITELIB}/aiohttp/web.pyo
+${PYSITELIB}/aiohttp/web_app.py
+${PYSITELIB}/aiohttp/web_app.pyc
+${PYSITELIB}/aiohttp/web_app.pyo
 ${PYSITELIB}/aiohttp/web_exceptions.py
 ${PYSITELIB}/aiohttp/web_exceptions.pyc
 ${PYSITELIB}/aiohttp/web_exceptions.pyo
@@ -122,6 +128,9 @@ ${PYSITELIB}/aiohttp/web_request.pyo
 ${PYSITELIB}/aiohttp/web_response.py
 ${PYSITELIB}/aiohttp/web_response.pyc
 ${PYSITELIB}/aiohttp/web_response.pyo
+${PYSITELIB}/aiohttp/web_runner.py
+${PYSITELIB}/aiohttp/web_runner.pyc
+${PYSITELIB}/aiohttp/web_runner.pyo
 ${PYSITELIB}/aiohttp/web_server.py
 ${PYSITELIB}/aiohttp/web_server.pyc
 ${PYSITELIB}/aiohttp/web_server.pyo
