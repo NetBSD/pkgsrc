@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2017/11/22 10:54:33 markd Exp $
+# $NetBSD: Makefile,v 1.5 2018/02/14 14:06:02 adam Exp $
 
-DISTNAME=	backports.functools_lru_cache-1.4
+DISTNAME=	backports.functools_lru_cache-1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/backports.functools_lru_cache/}
 
@@ -11,8 +10,8 @@ HOMEPAGE=	https://github.com/jaraco/backports.functools_lru_cache/
 COMMENT=	Backport of functools.lru_cache from Python 3.3
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=2.8:../../devel/py-test
 DEPENDS+=	${PYPKGPREFIX}-backports-[0-9]*:../../devel/py-backports
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=2.8:../../devel/py-test
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
