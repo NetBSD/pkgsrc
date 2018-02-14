@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/11/28 09:24:35 adam Exp $
+# $NetBSD: Makefile,v 1.9 2018/02/14 11:20:28 adam Exp $
 
-DISTNAME=	flake8-import-order-0.16
+DISTNAME=	flake8-import-order-0.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flake8-import-order/}
@@ -12,7 +12,6 @@ LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-asttokens-[0-9]*:../../lang/py-asttokens
 DEPENDS+=	${PYPKGPREFIX}-codestyle-[0-9]*:../../devel/py-codestyle
-
 # TEST_DEPENDS
 BUILD_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 BUILD_DEPENDS+=	${PYPKGPREFIX}-lama-[0-9]*:../../devel/py-lama
