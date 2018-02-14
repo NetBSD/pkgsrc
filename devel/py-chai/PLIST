@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/01/05 11:59:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/02/14 01:44:32 minskim Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -25,6 +25,8 @@ ${PYSITELIB}/chai/mock.py
 ${PYSITELIB}/chai/mock.pyc
 ${PYSITELIB}/chai/mock.pyo
 ${PYSITELIB}/chai/python2.py
+${PLIST.py2x}${PYSITELIB}/chai/python2.pyc
+${PLIST.py2x}${PYSITELIB}/chai/python2.pyo
 ${PYSITELIB}/chai/spy.py
 ${PYSITELIB}/chai/spy.pyc
 ${PYSITELIB}/chai/spy.pyo
