@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.643 2018/02/14 11:41:16 leot Exp $
+$NetBSD: CHANGES-2018,v 1.644 2018/02/14 12:20:15 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -956,3 +956,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-jsonpickle to 0.9.6 [adam 2018-02-14]
 	Updated www/py-aiohttp to 3.0.1 [adam 2018-02-14]
 	Updated multimedia/mpv to 0.27.2 [leot 2018-02-14]
+	Updated devel/py-argcomplete to 1.9.4 [fhajny 2018-02-14]
