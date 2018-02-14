@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.645 2018/02/14 13:00:06 adam Exp $
+$NetBSD: CHANGES-2018,v 1.646 2018/02/14 13:16:40 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -959,3 +959,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-argcomplete to 1.9.4 [fhajny 2018-02-14]
 	Updated net/haproxy to 1.8.4 [adam 2018-02-14]
 	Updated www/py-cherrypy to 14.0.0 [adam 2018-02-14]
+	Updated cad/oce to 0.18.3 [fhajny 2018-02-14]
