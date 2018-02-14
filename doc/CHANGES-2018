@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.642 2018/02/14 11:31:27 adam Exp $
+$NetBSD: CHANGES-2018,v 1.643 2018/02/14 11:41:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -955,3 +955,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-flake8-import-order to 0.17 [adam 2018-02-14]
 	Updated textproc/py-jsonpickle to 0.9.6 [adam 2018-02-14]
 	Updated www/py-aiohttp to 3.0.1 [adam 2018-02-14]
+	Updated multimedia/mpv to 0.27.2 [leot 2018-02-14]
