@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/14 16:54:24 minskim Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/poyo/__init__.py
+${PYSITELIB}/poyo/__init__.pyc
+${PYSITELIB}/poyo/__init__.pyo
+${PYSITELIB}/poyo/_nodes.py
+${PYSITELIB}/poyo/_nodes.pyc
+${PYSITELIB}/poyo/_nodes.pyo
+${PYSITELIB}/poyo/exceptions.py
+${PYSITELIB}/poyo/exceptions.pyc
+${PYSITELIB}/poyo/exceptions.pyo
+${PYSITELIB}/poyo/parser.py
+${PYSITELIB}/poyo/parser.pyc
+${PYSITELIB}/poyo/parser.pyo
+${PYSITELIB}/poyo/patterns.py
+${PYSITELIB}/poyo/patterns.pyc
+${PYSITELIB}/poyo/patterns.pyo
+${PYSITELIB}/poyo/utils.py
+${PYSITELIB}/poyo/utils.pyc
+${PYSITELIB}/poyo/utils.pyo

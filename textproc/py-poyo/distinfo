@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/14 16:54:24 minskim Exp $
+
+SHA1 (poyo-0.4.0.tar.gz) = 28e72f8495b76c1ea37c2fb1e89848f923ec6b05
+RMD160 (poyo-0.4.0.tar.gz) = 14c4a60920906ad9b39319871ce0f010d38ca271
+SHA512 (poyo-0.4.0.tar.gz) = 93991b9d0f7983e99ef10ef9cc1ac62acbbf2cd24ef78480debf4eb3f4b64744c9e6bbb3fa83bee38fd58a9c1a373369e5eb60c185c0ebe67d7a1475c5b1996e
+Size (poyo-0.4.0.tar.gz) = 10797 bytes
