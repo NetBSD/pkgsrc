@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2017/07/11 17:31:16 he Exp $
+# $NetBSD: Makefile,v 1.6 2018/02/14 14:09:52 adam Exp $
 
-DISTNAME=	greenlet-0.4.12
+DISTNAME=	greenlet-0.4.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/greenlet/}
 
@@ -12,13 +11,6 @@ COMMENT=	Lightweight in-process concurrent programming
 LICENSE=	mit
 
 USE_LANGUAGES=	c c++
-
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-
-#do-test:
-#	cd ${WRKSRC} && tox
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
