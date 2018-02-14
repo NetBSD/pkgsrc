@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/04/14 13:04:08 leot Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/02/14 08:06:40 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -84,9 +84,9 @@ ${PYSITELIB}/construct/lib/binary.pyo
 ${PYSITELIB}/construct/lib/bitstream.py
 ${PYSITELIB}/construct/lib/bitstream.pyc
 ${PYSITELIB}/construct/lib/bitstream.pyo
-${PYSITELIB}/construct/lib/container.py
-${PYSITELIB}/construct/lib/container.pyc
-${PYSITELIB}/construct/lib/container.pyo
+${PYSITELIB}/construct/lib/containers.py
+${PYSITELIB}/construct/lib/containers.pyc
+${PYSITELIB}/construct/lib/containers.pyo
 ${PYSITELIB}/construct/lib/hex.py
 ${PYSITELIB}/construct/lib/hex.pyc
 ${PYSITELIB}/construct/lib/hex.pyo
