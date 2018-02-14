@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.648 2018/02/14 14:23:10 adam Exp $
+$NetBSD: CHANGES-2018,v 1.649 2018/02/14 16:56:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -964,3 +964,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-greenlet to 0.4.13 [adam 2018-02-14]
 	Updated www/py-daphne to 2.0.3 [adam 2018-02-14]
 	Updated www/py-channels to 2.0.2 [adam 2018-02-14]
+	Added textproc/py-poyo version 0.4.0 [minskim 2018-02-14]
