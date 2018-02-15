@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/15 16:44:30 minskim Exp $
+
+SHA1 (restructuredtext-lint-1.1.2.tar.gz) = 54ed7c119e5f79b224a2da9f6e3e190ea87606c9
+RMD160 (restructuredtext-lint-1.1.2.tar.gz) = cccc3ac6ffa593f9a01753788ad24072d3d73284
+SHA512 (restructuredtext-lint-1.1.2.tar.gz) = 25aa22a452de3274dc09b9bfe013f2e3b6e1077076b582d4f155662487ac1494dd5a62e0a5e6a160a554a83dbed1ca099fc8595afb461e65e95878bd857f7ebb
+Size (restructuredtext-lint-1.1.2.tar.gz) = 11864 bytes
