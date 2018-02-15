@@ -1,0 +1,2 @@
+bin/restructuredtext-lint @PREFIX@/bin/restructuredtext-lint@PYVERSSUFFIX@
+bin/rst-lint @PREFIX@/bin/rst-lint@PYVERSSUFFIX@
