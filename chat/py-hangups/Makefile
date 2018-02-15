@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/01/14 16:00:35 leot Exp $
+# $NetBSD: Makefile,v 1.3 2018/02/15 07:45:42 adam Exp $
 
 DISTNAME=	hangups-0.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,9 +20,9 @@ DEPENDS+=	${PYPKGPREFIX}-reparser>=1.4.3:../../devel/py-reparser
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.6.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-urwid>=1.3.1:../../devel/py-urwid
 
-USE_LANGUAGES=			# none
+USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 34
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
