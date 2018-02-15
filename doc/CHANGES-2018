@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.654 2018/02/15 16:45:46 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.655 2018/02/15 21:27:30 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -970,3 +970,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/fzf to 0.17.3nb1 [leot 2018-02-15]
 	Updated security/liboauth to 1.0.3nb7 [wiz 2018-02-15]
 	Added devel/py-restructuredtext_lint version 1.1.2 [minskim 2018-02-15]
+	Updated chat/irssi to 1.1.1 [maya 2018-02-15]
