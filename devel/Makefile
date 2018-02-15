@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2607 2018/02/12 19:45:15 minskim Exp $
+# $NetBSD: Makefile,v 1.2608 2018/02/15 16:45:18 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -2159,6 +2159,7 @@ SUBDIR+=	py-requests-ftp
 SUBDIR+=	py-requests-futures
 SUBDIR+=	py-requests-mock
 SUBDIR+=	py-requests-toolbelt
+SUBDIR+=	py-restructuredtext_lint
 SUBDIR+=	py-retry_decorator
 SUBDIR+=	py-rope
 SUBDIR+=	py-rply
