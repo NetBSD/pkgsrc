@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2017/12/30 04:52:35 maya Exp $
+# $NetBSD: Makefile,v 1.5 2018/02/15 15:05:55 leot Exp $
 
 DISTNAME=	fzf-0.17.3
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=junegunn/}
 
@@ -15,10 +16,21 @@ GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/junegunn/fzf
 
 REPLACE_BASH+=	bin/fzf-tmux
-REPLACE_BASH+=	install
-REPLACE_BASH+=	uninstall
 
-CHECK_INTERPRETER_SKIP+=	gopkg/src/github.com/junegunn/fzf/src/update_assets.rb
+FZF_SHELL_FILES+=	completion.bash completion.zsh
+FZF_SHELL_FILES+=	key-bindings.bash key-bindings.fish key-bindings.zsh
+
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/fzf/plugin share/fzf/shell
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKDIR}/bin/fzf ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/fzf-tmux ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/man/man1/fzf.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man/man1/fzf-tmux.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/plugin/fzf.vim ${DESTDIR}${PREFIX}/share/fzf/plugin
+.for f in ${FZF_SHELL_FILES}
+	${INSTALL_DATA} ${WRKSRC}/shell/${f} ${DESTDIR}${PREFIX}/share/fzf/shell
+.endfor
 
 .include "../../devel/go-isatty/buildlink3.mk"
 .include "../../devel/go-shellwords/buildlink3.mk"
