@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.651 2018/02/15 08:32:37 adam Exp $
+$NetBSD: CHANGES-2018,v 1.652 2018/02/15 15:06:12 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -967,3 +967,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added textproc/py-poyo version 0.4.0 [minskim 2018-02-14]
 	Updated graphics/gexiv2 to 0.10.8 [bsiegert 2018-02-15]
 	Updated emulators/qemu to 2.11.1 [adam 2018-02-15]
+	Updated sysutils/fzf to 0.17.3nb1 [leot 2018-02-15]
