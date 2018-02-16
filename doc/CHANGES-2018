@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.655 2018/02/15 21:27:30 maya Exp $
+$NetBSD: CHANGES-2018,v 1.656 2018/02/16 06:59:34 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -971,3 +971,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/liboauth to 1.0.3nb7 [wiz 2018-02-15]
 	Added devel/py-restructuredtext_lint version 1.1.2 [minskim 2018-02-15]
 	Updated chat/irssi to 1.1.1 [maya 2018-02-15]
+	Updated www/php-apcu to 5.1.10 [jdolecek 2018-02-16]
