@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2017/11/15 22:16:47 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2018/02/16 17:13:58 wiz Exp $
 
 DISTNAME=	opencv-2.4.11
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencvlibrary/}
 EXTRACT_SUFX=	.zip
@@ -36,7 +36,7 @@ CHECK_WRKREF_SKIP=	${PREFIX}/lib/libopencv_core.*
 .include "options.mk"
 
 CMAKE_ARGS+=		-DZLIB_ROOT=${BUILDLINK_PREFIX.zlib}
-CMAKE_ARGS.SunOS+=	-DENABLE_PRECOMPILED_HEADERS=NO
+CMAKE_ARGS+=		-DENABLE_PRECOMPILED_HEADERS=NO
 
 PLIST_VARS+=	opencl
 
