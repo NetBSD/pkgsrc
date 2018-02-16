@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/26 11:22:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/02/16 12:43:52 wiz Exp $
 bin/dupeguru
 share/applications/dupeguru.desktop
 share/dupeguru/core/__init__.py
@@ -185,7 +185,7 @@ share/dupeguru/help/_static/down-pressed.png
 share/dupeguru/help/_static/down.png
 share/dupeguru/help/_static/file.png
 share/dupeguru/help/_static/haiku.css
-share/dupeguru/help/_static/jquery-3.1.0.js
+share/dupeguru/help/_static/jquery-3.2.1.js
 share/dupeguru/help/_static/jquery.js
 share/dupeguru/help/_static/minus.png
 share/dupeguru/help/_static/plus.png
