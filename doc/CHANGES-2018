@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.657 2018/02/16 07:17:18 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.658 2018/02/16 07:21:12 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -973,3 +973,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated chat/irssi to 1.1.1 [maya 2018-02-15]
 	Updated www/php-apcu to 5.1.10 [jdolecek 2018-02-16]
 	Updated www/lynx to 2.8.8.2nb8 [wiz 2018-02-16]
+	Added security/duo-unix version 1.10.1 [fhajny 2018-02-16]
