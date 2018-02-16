@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.663 2018/02/16 12:44:02 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.664 2018/02/16 13:18:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -982,3 +982,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-awscli to 1.14.40 [adam 2018-02-16]
 	Updated net/transmission to 2.92nb7 [wiz 2018-02-16]
 	Updated sysutils/dupeguru to 4.0.3nb1 [wiz 2018-02-16]
+	Updated sysutils/gnome-vfs to 2.24.4nb34 [wiz 2018-02-16]
