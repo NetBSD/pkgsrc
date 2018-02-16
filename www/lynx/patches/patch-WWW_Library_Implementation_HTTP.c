@@ -1,4 +1,4 @@
-$NetBSD: patch-WWW_Library_Implementation_HTTP.c,v 1.1 2016/12/21 11:25:25 sevan Exp $
+$NetBSD: patch-WWW_Library_Implementation_HTTP.c,v 1.2 2018/02/16 07:17:09 wiz Exp $
 
 Mitigate POODLE vulnerability
 https://hg.java.net/hg/solaris-userland~gate/file/bc5351dcb9ac/components/lynx/patches/02-init-openssl.patch
@@ -49,6 +49,15 @@ https://hg.java.net/hg/solaris-userland~gate/file/0a979060f73b/components/lynx/p
  	    FREE(msg);
  	}
  	while ((*p1++ = *p2++) != '\0') {
+@@ -720,7 +728,7 @@ static int HTLoadHTTP(const char *arg,
+ #elif SSLEAY_VERSION_NUMBER >= 0x0900
+ #ifndef USE_NSS_COMPAT_INCL
+ 	if (!try_tls) {
+-	    handle->options |= SSL_OP_NO_TLSv1;
++	    SSL_CTX_set_options(handle, SSL_OP_NO_TLSv1);
+ #if OPENSSL_VERSION_NUMBER >= 0x0090806fL && !defined(OPENSSL_NO_TLSEXT)
+ 	} else {
+ 	    int ret = (int) SSL_set_tlsext_host_name(handle, ssl_host);
 @@ -1074,7 +1082,7 @@ static int HTLoadHTTP(const char *arg,
  	char *host = NULL;
  

@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.35 2016/12/22 17:30:51 sevan Exp $
+$NetBSD: distinfo,v 1.36 2018/02/16 07:17:09 wiz Exp $
 
 SHA1 (lynx2.8.8rel.2.tar.bz2) = 65bbf95627c88723bbb5880155e5fe01c2753d0c
 RMD160 (lynx2.8.8rel.2.tar.bz2) = a683f9c163a6c343bde53ffde99dbecce4e41b02
 SHA512 (lynx2.8.8rel.2.tar.bz2) = a475fb7b79641ddd7c20861e16d3d71ccb1a5ae33247cce0b9e73690dd664ebf129964c026bc33b0f082a7585e5a6acae9afc9a65f308e19b49fa0a8bebc0362
 Size (lynx2.8.8rel.2.tar.bz2) = 2587120 bytes
 SHA1 (patch-WWW_Library_Implementation_HTTCP.c) = 7449ad250c5971483aba8bd3c233080deafe7837
-SHA1 (patch-WWW_Library_Implementation_HTTP.c) = 3249d46c1494f7913da71c8d1f689d9f3523d0f3
+SHA1 (patch-WWW_Library_Implementation_HTTP.c) = 0ae567e2c7622ba4ce43f48d717f4a5a6b4d01b1
 SHA1 (patch-WWW_Library_Implementation_HTTP.h) = 4ad3a9cf309c7ef32d0a53df6f5840ed57c25a31
 SHA1 (patch-WWW_Library_Implementation_HTUTILS.h) = 654c4bd1be5e2d8c74efb44e2a5e996957bf7622
 SHA1 (patch-aa) = 85e76c4b2708e01dd1abdc1af764a067bd83bcb9
