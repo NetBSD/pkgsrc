@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/16 07:20:56 fhajny Exp $
+include/duo.h
+include/shell.h
+include/util.h
+lib/pkgconfig/libduo.pc
+${PLIST.pam}lib/security/pam_duo.la
+man/man3/duo.3
+man/man8/login_duo.8
+${PLIST.pam}man/man8/pam_duo.8
+sbin/login_duo
+share/doc/duo_unix/AUTHORS
+share/doc/duo_unix/CHANGES
+share/doc/duo_unix/LICENSE
+share/doc/duo_unix/README
+share/examples/duo-unix/login_duo.conf
+${PLIST.pam}share/examples/duo-unix/pam_duo.conf
