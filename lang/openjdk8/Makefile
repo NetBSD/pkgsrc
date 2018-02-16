@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2018/02/13 12:57:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.60 2018/02/16 22:31:01 wiz Exp $
 
 DISTNAME=	openjdk-1.8.162-20180212
 PKGNAME=	openjdk8-1.8.162
@@ -40,6 +40,8 @@ CHECK_SHLIBS_SKIP+=	java/openjdk8/jre/lib/${LIBDIR_ARCH}/libinstrument.so
 
 BUILDLINK_PASSTHRU_DIRS+=	${ALT_BOOTDIR}
 PREPEND_PATH+=			${ALT_BOOTDIR}/bin
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 CONFIGURE_ARGS+=	--disable-option-checking # for --with-libiconv-prefix
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
