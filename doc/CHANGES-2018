@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.661 2018/02/16 12:16:57 adam Exp $
+$NetBSD: CHANGES-2018,v 1.662 2018/02/16 12:33:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -980,3 +980,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-s3transfer to 0.1.13 [adam 2018-02-16]
 	Updated net/py-boto3 to 1.5.30 [adam 2018-02-16]
 	Updated net/py-awscli to 1.14.40 [adam 2018-02-16]
+	Updated net/transmission to 2.92nb7 [wiz 2018-02-16]
