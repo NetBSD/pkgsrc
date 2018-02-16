@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/02/12 08:36:52 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/02/16 14:42:55 adam Exp $
 
-DISTNAME=	asgiref-2.1.4
+DISTNAME=	asgiref-2.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asgiref/}
