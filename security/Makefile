@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.669 2018/01/31 11:37:16 markd Exp $
+# $NetBSD: Makefile,v 1.670 2018/02/16 07:20:56 fhajny Exp $
 #
 
 COMMENT=	Security tools
@@ -70,6 +70,7 @@ SUBDIR+=	dnssec-tools
 SUBDIR+=	dropbear
 SUBDIR+=	dsniff
 SUBDIR+=	dsniff-nox11
+SUBDIR+=	duo-unix
 SUBDIR+=	easy-rsa
 SUBDIR+=	ecap_clamav_adapter
 SUBDIR+=	egd
