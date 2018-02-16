@@ -1,0 +1,15 @@
+$NetBSD: patch-login__duo_Makefile.in,v 1.1 2018/02/16 07:20:56 fhajny Exp $
+
+Secure a setuid binary.
+
+--- login_duo/Makefile.in.orig	2017-08-15 19:31:47.000000000 +0000
++++ login_duo/Makefile.in
+@@ -712,7 +712,7 @@ uninstall-man: uninstall-man8
+ 
+ install-exec-hook:
+ 	-chown root $(DESTDIR)$(sbindir)/login_duo && \
+-	 chmod 4755 $(DESTDIR)$(sbindir)/login_duo
++	 chmod 4555 $(DESTDIR)$(sbindir)/login_duo
+ 
+ install-data-local:
+ 	$(MKDIR_P) $(DESTDIR)$(sysconfdir)
