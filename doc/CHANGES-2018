@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.659 2018/02/16 07:25:23 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.660 2018/02/16 12:00:09 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -975,3 +975,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/lynx to 2.8.8.2nb8 [wiz 2018-02-16]
 	Added security/duo-unix version 1.10.1 [fhajny 2018-02-16]
 	Updated x11/xf86-video-vesa to 2.4.0 [wiz 2018-02-16]
+	Updated lang/nodejs6 to 6.13.0 [fhajny 2018-02-16]
