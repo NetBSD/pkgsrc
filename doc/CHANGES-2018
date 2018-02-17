@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.666 2018/02/16 17:14:07 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.667 2018/02/17 13:04:17 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -986,3 +986,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-asgiref to 2.1.5 [adam 2018-02-16]
 	Updated archivers/py-lz4 to 0.23.2 [adam 2018-02-16]
 	Updated graphics/opencv2 to 2.4.11nb7 [wiz 2018-02-16]
+	Updated emulators/PC6001VX to 2.32.0 [tsutsui 2018-02-17]
