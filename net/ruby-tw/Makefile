@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2017/12/09 19:41:17 tsutsui Exp $
+# $NetBSD: Makefile,v 1.21 2018/02/17 13:22:13 tsutsui Exp $
 
-DISTNAME=	tw-1.2.1
+DISTNAME=	tw-1.3.0
 CATEGORIES=	net
 
 MAINTAINER=	tsutsui@NetBSD.org
