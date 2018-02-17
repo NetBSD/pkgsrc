@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/01/13 16:12:19 leot Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/02/17 15:52:43 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -69,9 +69,6 @@ ${PYSITELIB}/gallery_dl/extractor/archiveofsins.pyo
 ${PYSITELIB}/gallery_dl/extractor/b4k.py
 ${PYSITELIB}/gallery_dl/extractor/b4k.pyc
 ${PYSITELIB}/gallery_dl/extractor/b4k.pyo
-${PYSITELIB}/gallery_dl/extractor/batoto.py
-${PYSITELIB}/gallery_dl/extractor/batoto.pyc
-${PYSITELIB}/gallery_dl/extractor/batoto.pyo
 ${PYSITELIB}/gallery_dl/extractor/booru.py
 ${PYSITELIB}/gallery_dl/extractor/booru.pyc
 ${PYSITELIB}/gallery_dl/extractor/booru.pyo
@@ -132,9 +129,6 @@ ${PYSITELIB}/gallery_dl/extractor/hbrowse.pyo
 ${PYSITELIB}/gallery_dl/extractor/hentai2read.py
 ${PYSITELIB}/gallery_dl/extractor/hentai2read.pyc
 ${PYSITELIB}/gallery_dl/extractor/hentai2read.pyo
-${PYSITELIB}/gallery_dl/extractor/hentaicdn.py
-${PYSITELIB}/gallery_dl/extractor/hentaicdn.pyc
-${PYSITELIB}/gallery_dl/extractor/hentaicdn.pyo
 ${PYSITELIB}/gallery_dl/extractor/hentaifoundry.py
 ${PYSITELIB}/gallery_dl/extractor/hentaifoundry.pyc
 ${PYSITELIB}/gallery_dl/extractor/hentaifoundry.pyo
@@ -180,6 +174,9 @@ ${PYSITELIB}/gallery_dl/extractor/kireicake.pyo
 ${PYSITELIB}/gallery_dl/extractor/kissmanga.py
 ${PYSITELIB}/gallery_dl/extractor/kissmanga.pyc
 ${PYSITELIB}/gallery_dl/extractor/kissmanga.pyo
+${PYSITELIB}/gallery_dl/extractor/komikcast.py
+${PYSITELIB}/gallery_dl/extractor/komikcast.pyc
+${PYSITELIB}/gallery_dl/extractor/komikcast.pyo
 ${PYSITELIB}/gallery_dl/extractor/konachan.py
 ${PYSITELIB}/gallery_dl/extractor/konachan.pyc
 ${PYSITELIB}/gallery_dl/extractor/konachan.pyo
@@ -222,6 +219,9 @@ ${PYSITELIB}/gallery_dl/extractor/nyafuu.pyo
 ${PYSITELIB}/gallery_dl/extractor/oauth.py
 ${PYSITELIB}/gallery_dl/extractor/oauth.pyc
 ${PYSITELIB}/gallery_dl/extractor/oauth.pyo
+${PYSITELIB}/gallery_dl/extractor/paheal.py
+${PYSITELIB}/gallery_dl/extractor/paheal.pyc
+${PYSITELIB}/gallery_dl/extractor/paheal.pyo
 ${PYSITELIB}/gallery_dl/extractor/pawoo.py
 ${PYSITELIB}/gallery_dl/extractor/pawoo.pyc
 ${PYSITELIB}/gallery_dl/extractor/pawoo.pyo
@@ -276,6 +276,9 @@ ${PYSITELIB}/gallery_dl/extractor/slideshare.pyo
 ${PYSITELIB}/gallery_dl/extractor/spectrumnexus.py
 ${PYSITELIB}/gallery_dl/extractor/spectrumnexus.pyc
 ${PYSITELIB}/gallery_dl/extractor/spectrumnexus.pyo
+${PYSITELIB}/gallery_dl/extractor/subapics.py
+${PYSITELIB}/gallery_dl/extractor/subapics.pyc
+${PYSITELIB}/gallery_dl/extractor/subapics.pyo
 ${PYSITELIB}/gallery_dl/extractor/test.py
 ${PYSITELIB}/gallery_dl/extractor/test.pyc
 ${PYSITELIB}/gallery_dl/extractor/test.pyo
