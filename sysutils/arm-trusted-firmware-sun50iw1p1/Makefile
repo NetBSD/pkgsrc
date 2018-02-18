@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/09/01 21:02:39 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2018/02/18 11:33:53 jmcneill Exp $
 
-VERSION=	20170831
+VERSION=	20180111
 GITHUB_PROJECT=	arm-trusted-firmware
-GITHUB_TAG=	aa75c8da415158a94b82a430b2b40000778e851f
+GITHUB_TAG=	ae78724247a01560164d607ed66db111c74d8df0
 
 PKGNAME=	${GITHUB_PROJECT}-sun50iw1p1-${VERSION}
 DISTNAME=	${PKGNAME}
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	port-arm@NetBSD.org
 HOMEPAGE=	https://github.com/apritzel/arm-trusted-firmware/
-COMMENT=	ARM Trusted Firmware for Allwinner sun50iw1p1 SoCs
+COMMENT=	ARM Trusted Firmware for Allwinner A64/H5 SoCs
 LICENSE=	modified-bsd
 
 USE_TOOLS+=	gmake
