@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2017/09/02 22:02:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/02/18 17:36:58 kamil Exp $
 
-PKGREVISION= 2
 .include "Makefile.common"
 
 DISTNAME=	radare2-${RADARE2_VERSION}
 CATEGORIES=	devel
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=radare/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Reverse engineering framework
@@ -17,7 +16,7 @@ CONFIGURE_ARGS+=	--with-sysmagic
 CONFIGURE_ARGS+=	--with-syscapstone
 CONFIGURE_ARGS+=	--with-syszip
 PKGCONFIG_OVERRIDE+=	pkgcfg/*.pc*
-USE_TOOLS+=	gmake patch pkg-config
+USE_TOOLS+=	gmake patch pkg-config perl
 
 # node
 CHECK_INTERPRETER_SKIP+=	share/radare2/${RADARE2_VERSION}/www/m/fonts/iconjar-map.js
