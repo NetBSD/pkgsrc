@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/12/18 23:31:20 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2018/02/18 16:25:45 jmcneill Exp $
 
-PKGREVISION=		1
+PKGREVISION=		2
 
 UBOOT_TARGET=		nanopi-neo2
 UBOOT_CONFIG=		nanopi_neo2_defconfig
@@ -12,9 +12,8 @@ PKG_DEFAULT_OPTIONS+=	el1
 post-extract:
 	${CP} ${PREFIX}/share/arm-trusted-firmware/sun50iw1p1/bl31.bin ${WRKSRC}
 
-BUILD_DEPENDS+=		arm-trusted-firmware-sun50iw1p1-[0-9]*:../../sysutils/arm-trusted-firmware-sun50iw1p1
-
 post-build:
 	${CAT} ${WRKSRC}/spl/sunxi-spl.bin ${WRKSRC}/u-boot.itb > ${WRKSRC}/u-boot-sunxi-with-spl.bin
 
+.include "../../sysutils/arm-trusted-firmware-sun50iw1p1/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
