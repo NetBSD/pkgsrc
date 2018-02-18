@@ -1,12 +1,9 @@
-$NetBSD: distinfo,v 1.2 2017/11/19 16:50:35 jmcneill Exp $
+$NetBSD: distinfo,v 1.3 2018/02/18 12:27:20 jmcneill Exp $
 
-SHA1 (u-boot-pinebook-2017.09-0e9350e3ff11c91eb6959d0d4589a4cc5e576e35.tar.gz) = aa152afc2ba083fdb7a9f86519489c59d84e2e47
-RMD160 (u-boot-pinebook-2017.09-0e9350e3ff11c91eb6959d0d4589a4cc5e576e35.tar.gz) = 7de7b4fd529a2e29f6d2b9848a5a7a34e4b4d754
-SHA512 (u-boot-pinebook-2017.09-0e9350e3ff11c91eb6959d0d4589a4cc5e576e35.tar.gz) = 40329433d72cd86f6d2a74fe83555f12316ea583b9b2ebafdaf7fe4149fd5f72ab36ee9a03a975980dddd62c28a8c09d71a59fb18ea482bb47acf3a4a69f768b
-Size (u-boot-pinebook-2017.09-0e9350e3ff11c91eb6959d0d4589a4cc5e576e35.tar.gz) = 14828817 bytes
-SHA1 (patch-Kconfig) = 80318752f7e06220120c7bea2687b7c412cfe2e8
-SHA1 (patch-arch_arm_cpu_armv8_Kconfig) = 63cbbf2e3cebd46793fc03cc8e62297f6dc01aa9
-SHA1 (patch-drivers_video_sunxi_sunxi__de2.c) = a64bd9d6fbe075d9d01d196cfca8658d9ecd4bd2
-SHA1 (patch-include_configs_sunxi-common.h) = b71c28480cc084860d63e95af33bc7eead8ac6ac
-SHA1 (patch-lib_bch.c) = 264366742bcb364a017dfb1709a711492904a4e3
-SHA1 (patch-tools_Makefile) = 5b3d6d377a4bc1629fe76d458f266e19f63fd5d8
+SHA1 (u-boot-pinebook-2018.01-98b74f94efc0bfa40ff78785f99a8f0a1fb0110a.tar.gz) = e2fc6b456b88acd23e9b70d92fb520602d2242c9
+RMD160 (u-boot-pinebook-2018.01-98b74f94efc0bfa40ff78785f99a8f0a1fb0110a.tar.gz) = 6057d6237829bca77269ce1cbf0a2ca86721545b
+SHA512 (u-boot-pinebook-2018.01-98b74f94efc0bfa40ff78785f99a8f0a1fb0110a.tar.gz) = 14fa032f26f36ff96c0237be63785087b2dfb8ea4c6b0c90c3baa962ca2f03a6eb8403d503dda72544b7a464f3b7d50fb889e313a6d98ae9e7243596a55bee6a
+Size (u-boot-pinebook-2018.01-98b74f94efc0bfa40ff78785f99a8f0a1fb0110a.tar.gz) = 15350995 bytes
+SHA1 (patch-arch_arm_cpu_armv8_Kconfig) = 82dee7f627ba721ba3548b49569ee2491764d86a
+SHA1 (patch-include_configs_sunxi-common.h) = 175027c9d7c96104e52ef1833cff4c26e8ed2ac3
+SHA1 (patch-lib_bch.c) = 00a80689266d3ab8d2af862327e7c852220a0713

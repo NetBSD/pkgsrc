@@ -1,6 +1,6 @@
-$NetBSD: patch-lib_bch.c,v 1.2 2017/11/19 16:50:35 jmcneill Exp $
+$NetBSD: patch-lib_bch.c,v 1.3 2018/02/18 12:27:20 jmcneill Exp $
 
---- lib/bch.c.orig	2017-09-21 06:16:57.000000000 +0000
+--- lib/bch.c.orig	2018-01-23 06:50:34.000000000 +0000
 +++ lib/bch.c
 @@ -61,8 +61,11 @@
  #include <linux/bitops.h>
