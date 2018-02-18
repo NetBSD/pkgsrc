@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.680 2018/02/18 14:58:08 mef Exp $
+$NetBSD: CHANGES-2018,v 1.681 2018/02/18 20:06:16 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1000,3 +1000,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/rust to 1.24.0 [ryoon 2018-02-18]
 	Updated sysutils/u-boot-pinebook to 2018.01 [jmcneill 2018-02-18]
 	Updated ham/fldigi to 4.0.16 [mef 2018-02-18]
+	Updated time/ical to 3.0.2nb5 [he 2018-02-18]
