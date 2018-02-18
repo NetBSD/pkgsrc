@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.674 2018/02/18 05:46:26 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.675 2018/02/18 05:47:15 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -994,3 +994,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/ruby-parallel to 1.12.1 [tsutsui 2018-02-18]
 	Updated converters/ruby-unf_ext to 0.0.7.5 [tsutsui 2018-02-18]
 	Updated net/ruby-slack-api to 1.6.1 [tsutsui 2018-02-18]
+	Updated www/ruby-websocket-extensions to 0.1.3 [tsutsui 2018-02-18]
