@@ -6,5 +6,4 @@ like eq. However, comparing any two differing strings will take a fixed
 amount of time, unlike eq.
 
 NOTE: If the lengths of the strings are different, equals will return
-false right away. Also, comparing two identical strings will take a
-different amount of time than comparing two differing strings.
+false right away.
