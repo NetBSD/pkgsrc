@@ -1,23 +1,10 @@
-Usage: cdif [-Bvn] [-A #] [-C #] [-D #] [-I #] [-[bwcu]] file1 file2
-       cdif [-rcs] [-q] [-rrev1 [-rrev2]] [cdif options] file
-       cdif [cdif options] [diff-output-file]
-Options:
-	-B	byte compare
-	-v	use video standout (default for tty)
-	-n	use nroff style overstrike (default for non-tty)
-	-b	ignore trailing blank
-	-w	ignore whitespace
-	-c[#]	context diff
-	-u[#]	unified diff (if diff has -u option)
-	-e #	expression of `word' (default is '\w+')
-	-A, -C, -D (Append, Change, Delete) takes one of
-		vso: video standout	vul: video underline
-		vbd: video bold		bd:  nroff style overstrike
-		ul:  nroff style underline
-		or any sequence or sequences separated by comma
-	-I	specify string to be shown on insertion point
-		Following strings have special meanings.
-		vbar:	print vertical bar at the point
-		caret:	print caret under the point
-	-diff=command
-		specify any diff command
+cdif is a post-processor of the Unix diff command. It highlights
+deleted, changed and added words based on word context.
+
+To compare character-by-character rather than word-by-word, use the -B
+option.
+
+If only one file is specified, cdif reads that file (stdin if no file)
+as a output from diff command.
+
+Lines that don't look like diff output are simply ignored and printed.
