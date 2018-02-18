@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2018/02/18 04:16:59 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2018/02/18 04:34:20 rillig Exp $
 
-DISTNAME=	astyle_2.05.1_linux
+DISTNAME=	astyle_3.1_linux
 PKGNAME=	${DISTNAME:S/_linux//:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=astyle/}
 
