@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/02/20 13:15:41 khorben Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/02/18 05:24:35 rillig Exp $
 bin/locker
 bin/lockerctl
 include/Desktop/Locker.h
@@ -19,7 +19,7 @@ lib/Locker/plugins/systray.so
 man/man1/locker.1
 man/man1/lockerctl.1
 share/applications/deforaos-locker-settings.desktop
-share/doc/html/Locker/locker.html
-share/doc/html/Locker/lockerctl.html
+share/doc/deforaos-locker/locker.html
+share/doc/deforaos-locker/lockerctl.html
 share/locale/es/LC_MESSAGES/Locker.mo
 share/locale/fr/LC_MESSAGES/Locker.mo
