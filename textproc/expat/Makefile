@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2017/09/08 07:55:17 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2018/02/18 05:09:21 rillig Exp $
 
 DISTNAME=	expat-2.2.4
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=expat/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,7 +22,7 @@ USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE+=	expat.pc.in
 
-DOCDIR=	${PREFIX}/share/doc/html/expat
+DOCDIR=	${PREFIX}/share/doc/expat
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
