@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:28 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/02/18 05:46:58 tsutsui Exp $
 
-DISTNAME=	websocket-extensions-0.1.2
+DISTNAME=	websocket-extensions-0.1.3
 CATEGORIES=	www
 
 MAINTAINER=	tsutsui@NetBSD.org
