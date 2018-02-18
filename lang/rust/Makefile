@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2018/01/09 11:47:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2018/02/18 12:12:54 ryoon Exp $
 
-DISTNAME=	rustc-1.23.0-src
+DISTNAME=	rustc-1.24.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
@@ -74,7 +74,7 @@ CONFIGURE_ARGS+=	--disable-jemalloc
 # own bootstrap.  See the stage0-bootstrap below for more details.
 #
 DISTFILES:=		${DEFAULT_DISTFILES}
-RUST_STAGE0_VER=	1.22.1
+RUST_STAGE0_VER=	1.23.0
 #
 .if !empty(MACHINE_PLATFORM:MDarwin-*-i386) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH:=		i686-apple-darwin
@@ -100,13 +100,13 @@ RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
-.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_ARCH:=		x86_64-sun-solaris
-RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
-SITES.${RUST_STAGE0}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
-DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
-RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}
-.endif
+#.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+#RUST_ARCH:=		x86_64-sun-solaris
+#RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+#SITES.${RUST_STAGE0}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
+#DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
+#RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}
+#.endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=		i686-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
