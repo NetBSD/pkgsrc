@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2015/01/04 19:37:02 asau Exp $
+@comment $NetBSD: PLIST,v 1.15 2018/02/18 05:30:55 rillig Exp $
 bin/c2init
 bin/canonical_grade
 bin/info_to_mdb
@@ -4535,13 +4535,13 @@ man/man1/mmc.1
 man/man1/mprof.1
 man/man1/mprof_merge_runs.1
 man/man1/mtags.1
-share/doc/html/mercury/mercury.html
-share/doc/html/mercury/mercury_faq.html
-share/doc/html/mercury/mercury_library.html
-share/doc/html/mercury/mercury_ref.html
-share/doc/html/mercury/mercury_trans_guide.html
-share/doc/html/mercury/mercury_user_guide.html
 share/doc/mercury/faq.dvi
+share/doc/mercury/html/mercury.html
+share/doc/mercury/html/mercury_faq.html
+share/doc/mercury/html/mercury_library.html
+share/doc/mercury/html/mercury_ref.html
+share/doc/mercury/html/mercury_trans_guide.html
+share/doc/mercury/html/mercury_user_guide.html
 share/doc/mercury/library.dvi
 share/doc/mercury/reference_manual.dvi
 share/doc/mercury/transition_guide.dvi
