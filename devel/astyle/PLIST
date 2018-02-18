@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2018/02/18 04:16:59 rillig Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/02/18 04:34:20 rillig Exp $
 bin/astyle
 share/doc/astyle/astyle.html
 share/doc/astyle/install.html
-share/doc/astyle/license.html
 share/doc/astyle/news.html
 share/doc/astyle/notes.html
 share/doc/astyle/styles.css
