@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2608 2018/02/15 16:45:18 minskim Exp $
+# $NetBSD: Makefile,v 1.2609 2018/02/18 21:28:00 kamil Exp $
 #
 
 COMMENT=	Development utilities
@@ -95,7 +95,6 @@ SUBDIR+=	bmake
 SUBDIR+=	bmkdep
 SUBDIR+=	boa-constructor
 SUBDIR+=	boehm-gc
-SUBDIR+=	bokken
 SUBDIR+=	boost-build
 SUBDIR+=	boost-docs
 SUBDIR+=	boost-headers
