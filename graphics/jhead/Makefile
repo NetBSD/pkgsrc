@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2015/02/08 16:12:22 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2018/02/18 05:01:02 rillig Exp $
 
 DISTNAME=	jhead-3.00
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.sentex.net/~mwandel/jhead/
 
@@ -11,12 +12,12 @@ LICENSE=	public-domain
 
 MAKE_FILE=	makefile
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/html/jhead
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/jhead
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/jhead ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/jhead.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/usage.html \
-		${DESTDIR}${PREFIX}/share/doc/html/jhead
+	${INSTALL_DATA} ${WRKSRC}/usage.html \
+		${DESTDIR}${PREFIX}/share/doc/jhead
 
 .include "../../mk/bsd.pkg.mk"
