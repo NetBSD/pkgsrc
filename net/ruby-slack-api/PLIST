@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/03/20 16:21:42 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/02/18 05:46:09 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.gitignore
@@ -24,10 +24,13 @@ ${GEM_LIBDIR}/lib/slack/configuration.rb
 ${GEM_LIBDIR}/lib/slack/connection.rb
 ${GEM_LIBDIR}/lib/slack/endpoint.rb
 ${GEM_LIBDIR}/lib/slack/endpoint/api.rb
+${GEM_LIBDIR}/lib/slack/endpoint/apps.rb
 ${GEM_LIBDIR}/lib/slack/endpoint/auth.rb
 ${GEM_LIBDIR}/lib/slack/endpoint/bots.rb
 ${GEM_LIBDIR}/lib/slack/endpoint/channels.rb
 ${GEM_LIBDIR}/lib/slack/endpoint/chat.rb
+${GEM_LIBDIR}/lib/slack/endpoint/conversations.rb
+${GEM_LIBDIR}/lib/slack/endpoint/dialog.rb
 ${GEM_LIBDIR}/lib/slack/endpoint/discovery.rb
 ${GEM_LIBDIR}/lib/slack/endpoint/dnd.rb
 ${GEM_LIBDIR}/lib/slack/endpoint/emoji.rb
@@ -35,6 +38,7 @@ ${GEM_LIBDIR}/lib/slack/endpoint/files.rb
 ${GEM_LIBDIR}/lib/slack/endpoint/groups.rb
 ${GEM_LIBDIR}/lib/slack/endpoint/idpgroups.rb
 ${GEM_LIBDIR}/lib/slack/endpoint/im.rb
+${GEM_LIBDIR}/lib/slack/endpoint/migration.rb
 ${GEM_LIBDIR}/lib/slack/endpoint/mpim.rb
 ${GEM_LIBDIR}/lib/slack/endpoint/oauth.rb
 ${GEM_LIBDIR}/lib/slack/endpoint/pins.rb
