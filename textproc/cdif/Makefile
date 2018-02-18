@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2016/07/09 06:39:04 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2018/02/18 10:07:37 rillig Exp $
 #
 
 DISTNAME=		cdif-2.14
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=kaz-utashiro/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -10,7 +10,7 @@ GITHUB_TAG=		v${PKGVERSION_NOREV}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/kaz-utashiro/cdif
 COMMENT=		Word context diff
-#LICENSE=		cdif-license # 1.19 can be used for any porpose
+LICENSE=		cdif-license
 
 USE_TOOLS+=		perl:run
 
