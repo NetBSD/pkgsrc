@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.681 2018/02/18 20:06:16 he Exp $
+$NetBSD: CHANGES-2018,v 1.682 2018/02/18 21:32:35 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1001,3 +1001,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/u-boot-pinebook to 2018.01 [jmcneill 2018-02-18]
 	Updated ham/fldigi to 4.0.16 [mef 2018-02-18]
 	Updated time/ical to 3.0.2nb5 [he 2018-02-18]
+	Updated devel/radare2 to 2.3.0 [kamil 2018-02-18]
