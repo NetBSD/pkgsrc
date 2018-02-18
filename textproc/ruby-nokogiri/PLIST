@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2017/10/20 15:56:58 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.25 2018/02/18 05:45:37 tsutsui Exp $
 bin/nokogiri${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -131,6 +131,7 @@ ${GEM_LIBDIR}/lib/nokogiri/xml/dtd.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/element_content.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/element_decl.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/entity_decl.rb
+${GEM_LIBDIR}/lib/nokogiri/xml/entity_reference.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/namespace.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/node.rb
 ${GEM_LIBDIR}/lib/nokogiri/xml/node/save_options.rb
@@ -207,6 +208,7 @@ ${GEM_LIBDIR}/test/files/xinclude.xml
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/html/sax/test_parser.rb
 ${GEM_LIBDIR}/test/html/sax/test_parser_context.rb
+${GEM_LIBDIR}/test/html/sax/test_parser_text.rb
 ${GEM_LIBDIR}/test/html/sax/test_push_parser.rb
 ${GEM_LIBDIR}/test/html/test_builder.rb
 ${GEM_LIBDIR}/test/html/test_document.rb
@@ -234,6 +236,7 @@ ${GEM_LIBDIR}/test/xml/node/test_save_options.rb
 ${GEM_LIBDIR}/test/xml/node/test_subclass.rb
 ${GEM_LIBDIR}/test/xml/sax/test_parser.rb
 ${GEM_LIBDIR}/test/xml/sax/test_parser_context.rb
+${GEM_LIBDIR}/test/xml/sax/test_parser_text.rb
 ${GEM_LIBDIR}/test/xml/sax/test_push_parser.rb
 ${GEM_LIBDIR}/test/xml/test_attr.rb
 ${GEM_LIBDIR}/test/xml/test_attribute_decl.rb
