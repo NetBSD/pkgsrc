@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2015/12/29 23:34:51 dholland Exp $
+$NetBSD: patch-ab,v 1.6 2018/02/18 05:30:55 rillig Exp $
 
 Install docs in the right place.
 
@@ -18,7 +18,7 @@ Install docs in the right place.
 +INSTALL_PDF_DIR		= $(INSTALL_PREFIX)/share/doc/mercury
  INSTALL_MAN_DIR		= $(INSTALL_PREFIX)/man
 -INSTALL_HTML_DIR	= $(INSTALL_PREFIX)/lib/mercury/html
-+INSTALL_HTML_DIR	= $(INSTALL_PREFIX)/share/doc/html/mercury
++INSTALL_HTML_DIR	= $(INSTALL_PREFIX)/share/doc/mercury/html
  INSTALL_MDB_DOC_DIR	= $(INSTALL_PREFIX)/lib/mercury/mdb
 -INSTALL_ELISP_DIR	= $(INSTALL_PREFIX)/lib/mercury/elisp
 +INSTALL_ELISP_DIR	= $(INSTALL_PREFIX)/share/emacs/site-lisp/mercury
