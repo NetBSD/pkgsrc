@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2017/08/16 20:45:46 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2018/02/18 03:37:15 rillig Exp $
 
 DISTNAME=	bins-1.1.29
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	www graphics
 MASTER_SITES=	http://zubro.chez.tiscali.fr/BINS/
 EXTRACT_SUFX=	.tar.bz2
@@ -37,7 +37,7 @@ USE_TOOLS+=	perl:run
 REPLACE_PERL=	bins bins_edit bins-edit-gui tools/bins_addtext \
 		tools/bins_cleanupgallery tools/bins_txt2xml
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/html/bins \
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/bins \
 			share/examples/bins
 
 post-patch:
@@ -55,7 +55,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/bins.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/bins_edit.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	# HTML documentation
-	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${DESTDIR}${PREFIX}/share/doc/html/bins/
+	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${DESTDIR}${PREFIX}/share/doc/bins/
 	# Example configuration file
 	${INSTALL_DATA} ${WRKSRC}/binsrc ${DESTDIR}${PREFIX}/share/examples/bins/
 .for template in swigs
