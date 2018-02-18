@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2016/06/13 12:26:11 wiz Exp $
+$NetBSD: distinfo,v 1.3 2018/02/18 18:09:36 kamil Exp $
 
-SHA1 (radare2-bindings-0.10.3.tar.xz) = ccc0bffa8af61175ac8221e173c49cbf850d6236
-RMD160 (radare2-bindings-0.10.3.tar.xz) = 2c6bcab6807c7fbc0be465d9fa0c6537867ba854
-SHA512 (radare2-bindings-0.10.3.tar.xz) = 4c3852b8d16a5ab95149927612b644c868ba747256d7d8cfb73f3e7286a0493d4cb1019ba29068c9f83e28eb47a679521f3adcd89133c885a2495f41c0d1c9a6
-Size (radare2-bindings-0.10.3.tar.xz) = 639900 bytes
+SHA1 (radare2-bindings-2.3.0.tar.gz) = 8f2b6ce5969c9aa73246d7b7ec9a24a925c7648f
+RMD160 (radare2-bindings-2.3.0.tar.gz) = 94ffaf3f5e19264d348fd9c150a6d6f2021c5994
+SHA512 (radare2-bindings-2.3.0.tar.gz) = bd017a6abb3605be32d37ff87a08c7ed236501db3280e50b2005b45691ea2c2a28533829e3583a867d893e5bcab7719abf1c909894f466d582744a667718c1d2
+Size (radare2-bindings-2.3.0.tar.gz) = 1216890 bytes
 SHA1 (patch-do-swig.sh) = 0ece481530346ece7516a5415256310a12b9a0da
 SHA1 (patch-python_Makefile) = 91c46c5c3805d347a07bda7a3acda5f7550be545

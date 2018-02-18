@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2015/11/19 14:37:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/02/18 18:09:36 kamil Exp $
 
 .include "../../devel/radare2/Makefile.common"
 
+BROKEN=		Incompatible vala version
+
+GITHUB_PROJECT=	radare2-bindings
 DISTNAME=	radare2-bindings-${RADARE2_VERSION}
 PKGNAME=	${PYPKGPREFIX}-radare2-${RADARE2_VERSION}
 CATEGORIES=	devel
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	khorben@defora.org
 COMMENT=	Reverse engineering framework (Python bindings)
