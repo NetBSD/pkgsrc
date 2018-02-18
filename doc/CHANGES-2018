@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.671 2018/02/18 05:43:07 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.672 2018/02/18 05:44:13 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -991,3 +991,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/gallery-dl to 1.2.0 [leot 2018-02-17]
 	Updated devel/astyle to 3.1 [rillig 2018-02-18]
 	Updated net/ruby-public_suffix to 3.0.2 [tsutsui 2018-02-18]
+	Updated misc/ruby-parallel to 1.12.1 [tsutsui 2018-02-18]
