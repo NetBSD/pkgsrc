@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.686 2018/02/18 23:18:56 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.687 2018/02/18 23:51:11 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1006,3 +1006,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/radare2-valabind to 1.5.0 [kamil 2018-02-18]
 	Removed devel/bokken [kamil 2018-02-18]
 	Updated x11/libdrm to 2.4.90 [wiz 2018-02-18]
+	Updated time/ical to 3.0.2nb6 [he 2018-02-18]
