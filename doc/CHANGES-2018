@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.685 2018/02/18 21:36:51 kamil Exp $
+$NetBSD: CHANGES-2018,v 1.686 2018/02/18 23:18:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1005,3 +1005,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-radare2 to 2.3.0 [kamil 2018-02-18]
 	Updated devel/radare2-valabind to 1.5.0 [kamil 2018-02-18]
 	Removed devel/bokken [kamil 2018-02-18]
+	Updated x11/libdrm to 2.4.90 [wiz 2018-02-18]
