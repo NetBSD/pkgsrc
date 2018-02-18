@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.5 2018/02/18 17:36:58 kamil Exp $
+# $NetBSD: Makefile.common,v 1.6 2018/02/18 18:00:22 kamil Exp $
 # used by devel/py-radare2/Makefile
 # used by devel/radare2-valabind/Makefile
 
 RADARE2_VERSION=2.3.0
 
 HOMEPAGE=	http://www.radare.org/
-MASTER_SITES=	http://www.radare.org/get/
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=radare/}
