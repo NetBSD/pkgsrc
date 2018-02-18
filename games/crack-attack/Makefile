@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2018/01/26 13:45:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.44 2018/02/18 04:49:48 rillig Exp $
 
 DISTNAME=	crack-attack-1.1.14
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	games
 MASTER_SITES=	http://savannah.nongnu.org/download/crack-attack/
 
@@ -16,9 +16,9 @@ USE_LANGUAGES=		c c++03
 USE_TOOLS+=		pkg-config
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/html/${PKGBASE}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${WRKSRC}/doc/*.jpg	\
-	    ${DESTDIR}${PREFIX}/share/doc/html/${PKGBASE}
+	    ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
