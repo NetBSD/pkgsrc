@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2017/10/03 12:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/02/18 18:04:16 kamil Exp $
 
-PKGREVISION= 2
 .include "../../devel/radare2/Makefile.common"
 
+BROKEN=		Incompatible vala version
+
+GITHUB_PROJECT=	valabind
 PKGNAME=	radare2-${DISTNAME}
-DISTNAME=	valabind-0.10.0
+DISTNAME=	valabind-1.5.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
