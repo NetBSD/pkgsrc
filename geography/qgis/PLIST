@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/01/26 13:49:19 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/02/19 12:51:56 ryoon Exp $
 bin/qbrowser
 bin/qgis
 bin/qgis_bench
@@ -392,8 +392,10 @@ include/qgis/qgsmaplayercombobox.h
 include/qgis/qgsmaplayerconfigwidget.h
 include/qgis/qgsmaplayerconfigwidgetfactory.h
 include/qgis/qgsmaplayerlegend.h
+include/qgis/qgsmaplayerlistutils.h
 include/qgis/qgsmaplayermodel.h
 include/qgis/qgsmaplayerproxymodel.h
+include/qgis/qgsmaplayerref.h
 include/qgis/qgsmaplayerregistry.h
 include/qgis/qgsmaplayerrenderer.h
 include/qgis/qgsmaplayerstylemanager.h
@@ -676,6 +678,7 @@ include/qgis/qgsvectorlayerfeatureiterator.h
 include/qgis/qgsvectorlayerimport.h
 include/qgis/qgsvectorlayerjoinbuffer.h
 include/qgis/qgsvectorlayerlabelprovider.h
+include/qgis/qgsvectorlayerref.h
 include/qgis/qgsvectorlayerrenderer.h
 include/qgis/qgsvectorlayerselectionmanager.h
 include/qgis/qgsvectorlayertools.h
@@ -687,15 +690,31 @@ include/qgis/qgsvisibilitypresetcollection.h
 include/qgis/qgswebframe.h
 include/qgis/qgswebpage.h
 include/qgis/qgswebview.h
-include/qgis/qgswebviewconfigdlg.h
-include/qgis/qgswebviewwidgetfactory.h
-include/qgis/qgswebviewwidgetwrapper.h
 include/qgis/qgswidgetwrapper.h
 include/qgis/qgswkbptr.h
 include/qgis/qgswkbsimplifierptr.h
 include/qgis/qgswkbtypes.h
 include/qgis/qgsxmlutils.h
 include/qgis/qgszonalstatistics.h
+include/qgis/ui_qgsauthauthoritieseditor.h
+include/qgis/ui_qgsauthcertificateinfo.h
+include/qgis/ui_qgsauthcertificatemanager.h
+include/qgis/ui_qgsauthconfigedit.h
+include/qgis/ui_qgsauthconfigeditor.h
+include/qgis/ui_qgsauthconfigidedit.h
+include/qgis/ui_qgsauthconfigselect.h
+include/qgis/ui_qgsauthconfiguriedit.h
+include/qgis/ui_qgsautheditorwidgets.h
+include/qgis/ui_qgsauthidentitieseditor.h
+include/qgis/ui_qgsauthimportcertdialog.h
+include/qgis/ui_qgsauthimportidentitydialog.h
+include/qgis/ui_qgsauthmethodplugins.h
+include/qgis/ui_qgsauthserverseditor.h
+include/qgis/ui_qgsauthsslconfigwidget.h
+include/qgis/ui_qgsauthsslerrorsdialog.h
+include/qgis/ui_qgsauthsslimportdialog.h
+include/qgis/ui_qgsauthsslimporterrors.h
+include/qgis/ui_qgsauthtrustedcasdialog.h
 include/qgis/ui_qgscredentialdialog.h
 include/qgis/ui_qgsdetaileditemwidgetbase.h
 include/qgis/ui_qgsexpressionbuilder.h
@@ -806,7 +825,6 @@ share/qgis/doc/images/projects/thumbnails/f6379f3083e612fd47917e1f948d795b6951dd
 share/qgis/doc/images/qgis-icon-60x60.png
 share/qgis/doc/index.html
 share/qgis/doc/news.html
-share/qgis/doc/release-sponsors.html
 share/qgis/doc/style.css
 share/qgis/i18n/qgis_ar.qm
 share/qgis/i18n/qgis_bg.qm
@@ -853,6 +871,7 @@ share/qgis/images/icons/qgis-icon-16x16.png
 share/qgis/images/icons/qgis-icon-16x16_xmas.png
 share/qgis/images/icons/qgis-icon-60x60.png
 share/qgis/images/icons/qgis-icon-60x60_xmas.png
+share/qgis/images/icons/qgis-icon-macos.png
 share/qgis/images/icons/qgis-icon.png
 share/qgis/images/icons/qgis-mime-icon.png
 share/qgis/resources/cpt-city-qgis-min/README-qgis.txt
