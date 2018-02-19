@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.688 2018/02/19 00:40:05 kamil Exp $
+$NetBSD: CHANGES-2018,v 1.689 2018/02/19 00:52:43 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1008,3 +1008,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/libdrm to 2.4.90 [wiz 2018-02-18]
 	Updated time/ical to 3.0.2nb6 [he 2018-02-18]
 	Updated emulators/unicorn to 1.0.1 [kamil 2018-02-19]
+	Updated emulators/keystone to 0.9.1 [kamil 2018-02-19]
