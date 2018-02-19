@@ -1,10 +1,13 @@
-$NetBSD: patch-ad,v 1.2 2015/04/06 02:26:53 rodent Exp $
+$NetBSD: patch-ad,v 1.3 2018/02/19 21:25:46 triaxx Exp $
 
---- src/common.c.orig	2015-02-17 13:07:20.000000000 +0000
+Calling usleep for 1000000 microseconds or more is not allowed, so add a
+myusleep() wrapper to DTRT.
+
+--- src/common.c.orig	2017-10-19 14:31:30.000000000 +0000
 +++ src/common.c
-@@ -719,3 +719,21 @@ unsigned long getip(unsigned char *name)
+@@ -881,3 +881,21 @@ unsigned long getip46(int family, unsign
+ 	return 0;
  #endif
- 	return retval;
  }
 +
 +/*

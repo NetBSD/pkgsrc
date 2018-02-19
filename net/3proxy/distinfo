@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.5 2016/07/08 15:55:24 rillig Exp $
+$NetBSD: distinfo,v 1.6 2018/02/19 21:25:46 triaxx Exp $
 
-SHA1 (3proxy-0.7.1.2.tgz) = 58d92a3b61767c83a16f2cfd784458972083c63b
-RMD160 (3proxy-0.7.1.2.tgz) = a3be3d2c786cc52bfde46b7f9630a79eaf7b983c
-SHA512 (3proxy-0.7.1.2.tgz) = c7f4e25d2630e8c6c25bbc09a5f9f201448d57a85d404cd1f6304946d9a31083845bd8d481f610fe1cd1f56be349eb774cdae135430efcfdd1952a0403d01735
-Size (3proxy-0.7.1.2.tgz) = 478532 bytes
-SHA1 (patch-aa) = ac13f04cff2fa0b0adea6306d9f645ff26452daa
-SHA1 (patch-ab) = de12687ae56ed8107259a4bc3ca04705b97b7bc8
-SHA1 (patch-ac) = 3b8479dd2cf736a87e618128e91f402611178236
-SHA1 (patch-ad) = bce24c6e2e071196d8fd0715e11f4c68144150c5
-SHA1 (patch-ae) = 1f3b07a3c2a1d9729043bcee7b359c98644e8257
+SHA1 (3proxy-0.8.11.tgz) = 0bef5462e558db2d86cce92f8dc916b494dd7bde
+RMD160 (3proxy-0.8.11.tgz) = 19f0d2903dcad680f5442a49d962cac1f874cae4
+SHA512 (3proxy-0.8.11.tgz) = 4160684892292a0c4666f8b8f3bdba0c0846842816ef4f6d0ce7286b520a3cda2ceee76580d2e61942afb9404a8ad93aa0260043acd4ffbfc1c38b3e31857c67
+Size (3proxy-0.8.11.tgz) = 511157 bytes
+SHA1 (patch-ab) = 3ad025c8577f1494d6949efcd5bf104672027a0d
+SHA1 (patch-ac) = e4e4a005e815c7cd353103bbcbbfdb849d637517
+SHA1 (patch-ad) = 8081f363dbf0232e5d1db1bc5e09f93ac7cfe95b
+SHA1 (patch-ae) = 467ad84a16ee806da1bbc3d297434bd31a25bb27
+SHA1 (patch-cfg_3proxy.cfg.sample) = c8db82b11704547ec26c67059e71231c5b667135
+SHA1 (patch-Makefile.unix) = bcaf278e55d954ecc758a0f01c7e35f8d7a7fca2
