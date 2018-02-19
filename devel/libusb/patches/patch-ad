@@ -1,7 +1,10 @@
-$NetBSD: patch-ad,v 1.10 2015/10/25 10:18:34 wiz Exp $
+$NetBSD: patch-ad,v 1.11 2018/02/19 17:59:23 mrg Exp $
 
---- bsd.c.orig	2006-03-04 02:52:46.000000000 +0000
-+++ bsd.c
+Fix build on some platforms.
+Eat EAGAIN returns.
+
+--- bsd.c.orig	2006-03-03 18:52:46.000000000 -0800
++++ bsd.c	2016-10-21 01:20:19.000000000 -0700
 @@ -25,8 +25,8 @@
   * 	for both read and write.
   */
@@ -33,7 +36,7 @@ $NetBSD: patch-ad,v 1.10 2015/10/25 10:18:34 wiz Exp $
  /*
   * It appears some of the BSD's (OpenBSD atleast) have switched over to a
   * new naming convention, so we setup some macro's for backward
-@@ -146,7 +150,7 @@ int usb_os_open(usb_dev_handle *dev)
+@@ -146,7 +150,7 @@
      USB_ERROR(-ENOMEM);
    dev->impl_info = info;
  
@@ -42,7 +45,7 @@ $NetBSD: patch-ad,v 1.10 2015/10/25 10:18:34 wiz Exp $
    snprintf(ctlpath, PATH_MAX, "%s", dev->device->filename);
  #else
    snprintf(ctlpath, PATH_MAX, "%s.00", dev->device->filename);
-@@ -259,7 +263,7 @@ static int ensure_ep_open(usb_dev_handle
+@@ -259,7 +263,7 @@
    ep = UE_GET_ADDR(ep);
  
    if (info->ep_fd[ep] < 0) {
@@ -51,7 +54,7 @@ $NetBSD: patch-ad,v 1.10 2015/10/25 10:18:34 wiz Exp $
      snprintf(buf, sizeof(buf) - 1, "%s.%d", dev->device->filename, ep);
  #else
      snprintf(buf, sizeof(buf) - 1, "%s.%02d", dev->device->filename, ep);
-@@ -290,7 +294,7 @@ int usb_bulk_write(usb_dev_handle *dev, 
+@@ -290,7 +294,7 @@
    fd = ensure_ep_open(dev, ep, O_WRONLY);
    if (fd < 0) {
      if (usb_debug >= 2) {
@@ -60,7 +63,7 @@ $NetBSD: patch-ad,v 1.10 2015/10/25 10:18:34 wiz Exp $
        fprintf (stderr, "usb_bulk_write: got negative open file descriptor for endpoint %d\n", UE_GET_ADDR(ep));
  #else
        fprintf (stderr, "usb_bulk_write: got negative open file descriptor for endpoint %02d\n", UE_GET_ADDR(ep));
-@@ -306,7 +310,7 @@ int usb_bulk_write(usb_dev_handle *dev, 
+@@ -306,7 +310,7 @@
  
    ret = write(fd, bytes, size);
    if (ret < 0)
@@ -69,7 +72,7 @@ $NetBSD: patch-ad,v 1.10 2015/10/25 10:18:34 wiz Exp $
      USB_ERROR_STR(-errno, "error writing to bulk endpoint %s.%d: %s",
                    dev->device->filename, UE_GET_ADDR(ep), strerror(errno));
  #else
-@@ -328,7 +332,7 @@ int usb_bulk_read(usb_dev_handle *dev, i
+@@ -328,7 +332,7 @@
    fd = ensure_ep_open(dev, ep, O_RDONLY);
    if (fd < 0) {
      if (usb_debug >= 2) {
@@ -78,7 +81,7 @@ $NetBSD: patch-ad,v 1.10 2015/10/25 10:18:34 wiz Exp $
        fprintf (stderr, "usb_bulk_read: got negative open file descriptor for endpoint %d\n", UE_GET_ADDR(ep));
  #else
        fprintf (stderr, "usb_bulk_read: got negative open file descriptor for endpoint %02d\n", UE_GET_ADDR(ep));
-@@ -347,7 +351,7 @@ int usb_bulk_read(usb_dev_handle *dev, i
+@@ -347,7 +351,7 @@
  
    ret = read(fd, bytes, size);
    if (ret < 0)
@@ -87,7 +90,7 @@ $NetBSD: patch-ad,v 1.10 2015/10/25 10:18:34 wiz Exp $
      USB_ERROR_STR(-errno, "error reading from bulk endpoint %s.%d: %s",
                    dev->device->filename, UE_GET_ADDR(ep), strerror(errno));
  #else
-@@ -369,7 +373,7 @@ int usb_interrupt_write(usb_dev_handle *
+@@ -369,7 +373,7 @@
    fd = ensure_ep_open(dev, ep, O_WRONLY);
    if (fd < 0) {
      if (usb_debug >= 2) {
@@ -96,7 +99,7 @@ $NetBSD: patch-ad,v 1.10 2015/10/25 10:18:34 wiz Exp $
        fprintf (stderr, "usb_interrupt_write: got negative open file descriptor for endpoint %d\n", UE_GET_ADDR(ep));
  #else
        fprintf (stderr, "usb_interrupt_write: got negative open file descriptor for endpoint %02d\n", UE_GET_ADDR(ep));
-@@ -386,7 +390,7 @@ int usb_interrupt_write(usb_dev_handle *
+@@ -386,7 +390,7 @@
    do {
      ret = write(fd, bytes+sent, size-sent);
      if (ret < 0)
@@ -105,7 +108,7 @@ $NetBSD: patch-ad,v 1.10 2015/10/25 10:18:34 wiz Exp $
        USB_ERROR_STR(-errno, "error writing to interrupt endpoint %s.%d: %s",
                      dev->device->filename, UE_GET_ADDR(ep), strerror(errno));
  #else
-@@ -403,7 +407,7 @@ int usb_interrupt_write(usb_dev_handle *
+@@ -403,7 +407,7 @@
  int usb_interrupt_read(usb_dev_handle *dev, int ep, char *bytes, int size,
                         int timeout)
  {
@@ -114,7 +117,7 @@ $NetBSD: patch-ad,v 1.10 2015/10/25 10:18:34 wiz Exp $
  
    /* Ensure the endpoint address is correct */
    ep |= USB_ENDPOINT_IN;
-@@ -411,7 +415,7 @@ int usb_interrupt_read(usb_dev_handle *d
+@@ -411,7 +415,7 @@
    fd = ensure_ep_open(dev, ep, O_RDONLY);
    if (fd < 0) {
      if (usb_debug >= 2) {
@@ -123,31 +126,40 @@ $NetBSD: patch-ad,v 1.10 2015/10/25 10:18:34 wiz Exp $
        fprintf (stderr, "usb_interrupt_read: got negative open file descriptor for endpoint %d\n", UE_GET_ADDR(ep));
  #else
        fprintf (stderr, "usb_interrupt_read: got negative open file descriptor for endpoint %02d\n", UE_GET_ADDR(ep));
-@@ -429,17 +433,19 @@ int usb_interrupt_read(usb_dev_handle *d
+@@ -429,17 +433,21 @@
      USB_ERROR_STR(-errno, "error setting short xfer: %s", strerror(errno));
  
    do {
 -    ret = read(fd, bytes+retrieved, size-retrieved);
-+    requested = size - retrieved;
-+    ret = read(fd, bytes+retrieved, requested);
-     if (ret < 0)
+-    if (ret < 0)
 -#ifdef __FreeBSD_kernel__
-+#ifdef FreeBSD_like_device_names
-       USB_ERROR_STR(-errno, "error reading from interrupt endpoint %s.%d: %s",
-                     dev->device->filename, UE_GET_ADDR(ep), strerror(errno));
- #else
-       USB_ERROR_STR(-errno, "error reading from interrupt endpoint %s.%02d: %s",
-                   dev->device->filename, UE_GET_ADDR(ep), strerror(errno));
- #endif
+-      USB_ERROR_STR(-errno, "error reading from interrupt endpoint %s.%d: %s",
+-                    dev->device->filename, UE_GET_ADDR(ep), strerror(errno));
+-#else
+-      USB_ERROR_STR(-errno, "error reading from interrupt endpoint %s.%02d: %s",
+-                  dev->device->filename, UE_GET_ADDR(ep), strerror(errno));
+-#endif
 -    retrieved += ret;
 -  } while (ret > 0 && retrieved < size);
-+    else
++    requested = size - retrieved;
++    ret = read(fd, bytes+retrieved, requested);
++    if (ret < 0) {
++      if (errno != EAGAIN) {
++#ifdef FreeBSD_like_device_names
++        USB_ERROR_STR(-errno, "error reading from interrupt endpoint %s.%d: %s",
++                      dev->device->filename, UE_GET_ADDR(ep), strerror(errno));
++#else
++        USB_ERROR_STR(-errno, "error reading from interrupt endpoint %s.%02d: %s",
++                      dev->device->filename, UE_GET_ADDR(ep), strerror(errno));
++#endif
++      }
++    } else
 +      retrieved += ret;
 +  } while (ret > 0 && retrieved < size && ret != requested);
  
    return retrieved;
  }
-@@ -477,7 +483,7 @@ int usb_control_msg(usb_dev_handle *dev,
+@@ -477,7 +485,7 @@
      USB_ERROR_STR(-errno, "error sending control message: %s",
                    strerror(errno));
  
@@ -156,7 +168,7 @@ $NetBSD: patch-ad,v 1.10 2015/10/25 10:18:34 wiz Exp $
  }
  
  int usb_os_find_busses(struct usb_bus **busses)
-@@ -548,7 +554,7 @@ int usb_os_find_devices(struct usb_bus *
+@@ -548,7 +556,7 @@
        /* best not to play with things we don't understand */
        continue;
  
@@ -165,7 +177,7 @@ $NetBSD: patch-ad,v 1.10 2015/10/25 10:18:34 wiz Exp $
      snprintf(buf, sizeof(buf) - 1, "/dev/%s", di.udi_devnames[0]);
  #else
      snprintf(buf, sizeof(buf) - 1, "/dev/%s.00", di.udi_devnames[0]);
-@@ -574,7 +580,7 @@ int usb_os_find_devices(struct usb_bus *
+@@ -574,7 +582,7 @@
      /* we need to report the device name as /dev/ugenx NOT /dev/ugenx.00
       * This seemed easier than having 2 variables...
       */
