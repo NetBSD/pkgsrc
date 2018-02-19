@@ -1,0 +1,28 @@
+# $NetBSD: Makefile.common,v 1.1 2018/02/19 12:05:17 ryoon Exp $
+#
+# used by geography/gdal-lib/Makefile
+# used by geography/py-gdal/Makefile
+
+DISTNAME=	gdal-2.2.3
+CATEGORIES=	geography
+MASTER_SITES=	http://download.osgeo.org/gdal/${PKGVERSION_NOREV}/
+
+PATCHDIR=	${.CURDIR}/../../geography/gdal-lib/patches
+DISTINFO_FILE=	${.CURDIR}/../../geography/gdal-lib/distinfo
+
+CHECK_PORTABILITY_SKIP+=	mkbindist.sh
+
+USE_TOOLS+=		gmake
+USE_LANGUAGES=		c99 c++
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-geos
+CONFIGURE_ARGS+=	--with-libjson-c=internal
+CONFIGURE_ARGS+=	--with-libtiff=${BUILDLINK_PREFIX.tiff}
+CONFIGURE_ARGS+=	--with-libz=${BUILDLINK_PREFIX.zlib}/include
+CONFIGURE_ARGS+=	--with-netcdf=${BUILDLINK_PREFIX.netcdf}
+CONFIGURE_ARGS+=	--with-webp=${BUILDLINK_PREFIX.libwebp}
+CONFIGURE_ARGS+=	--with-xerces
+CONFIGURE_ARGS+=	--with-xerces-inc=${BUILDLINK_PREFIX.xerces-c}/include
+CONFIGURE_ARGS+=	--with-xerces-lib=-L${BUILDLINK_PREFIX.xerces-c}/lib\ -lxerces-c

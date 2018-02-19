@@ -1,15 +1,17 @@
-$NetBSD: patch-ogr_ogrsf__frmts_geojson_libjson_GNUmakefile,v 1.1 2017/03/27 13:52:27 fhajny Exp $
+$NetBSD: patch-ogr_ogrsf__frmts_geojson_libjson_GNUmakefile,v 1.2 2018/02/19 12:05:17 ryoon Exp $
 
 Raise _XOPEN_SOURCE to 600 (for SunOS).
 
---- ogr/ogrsf_frmts/geojson/libjson/GNUmakefile.orig	2016-07-01 10:22:06.000000000 +0000
+--- ogr/ogrsf_frmts/geojson/libjson/GNUmakefile.orig	2017-11-20 10:45:35.000000000 +0000
 +++ ogr/ogrsf_frmts/geojson/libjson/GNUmakefile
-@@ -23,7 +23,7 @@ default:	$(O_OBJ:.o=.$(OBJ_EXT))
+@@ -21,8 +21,8 @@ CPPFLAGS := $(CPPFLAGS)
  
- # -D_XOPEN_SOURCE=500 to enable strdup() definition in C11 mode
+ default:	$(O_OBJ:.o=.$(OBJ_EXT))
+ 
+-# -D_XOPEN_SOURCE=500 to enable strdup() definition in C11 mode
+-CPPFLAGS := -D_XOPEN_SOURCE=500 $(CPPFLAGS)
++# -D_XOPEN_SOURCE=600 to enable strdup() definition in C11 mode
++CPPFLAGS := -D_XOPEN_SOURCE=600 $(CPPFLAGS)
+ 
  ../../o/%.$(OBJ_EXT):	%.c
--	$(CC) $(CFLAGS) $(CPPFLAGS) -D_XOPEN_SOURCE=500 -c -o $@ $<
-+	$(CC) $(CFLAGS) $(CPPFLAGS) -D_XOPEN_SOURCE=600 -c -o $@ $<
- 
- clean:
- 	rm -f *.o $(O_OBJ)
+ 	$(CC) $(CFLAGS) $(CPPFLAGS) -c -o $@ $<
