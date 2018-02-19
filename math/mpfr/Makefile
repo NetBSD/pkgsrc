@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2018/02/11 16:35:01 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2018/02/19 11:52:56 ryoon Exp $
 
 DISTNAME=		mpfr-4.0.1
 CATEGORIES=		math
@@ -12,7 +12,7 @@ LICENSE=		gnu-lgpl-v3
 
 .include "../../mk/bsd.prefs.mk"
 GNU_CONFIGURE=		yes
-.if !empty(MACHINE_PLATFORM:MNetBSD-[0-7]*-x86_64)
+.if !empty(MACHINE_PLATFORM:MNetBSD-[0-7]*-*)
 CONFIGURE_ARGS+=        --disable-float128
 .endif
 USE_LIBTOOL=		yes
