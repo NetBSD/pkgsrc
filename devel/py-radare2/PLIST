@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2015/11/18 20:19:15 khorben Exp $
-${PYSITELIB}/r2/__init__.py
-${PYSITELIB}/r2/_r_asm.so
-${PYSITELIB}/r2/_r_bin.so
-${PYSITELIB}/r2/_r_core.so
-${PYSITELIB}/r2/r_asm.py
-${PYSITELIB}/r2/r_bin.py
-${PYSITELIB}/r2/r_core.py
