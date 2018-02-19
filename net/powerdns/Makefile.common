@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.20 2018/01/02 12:18:15 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.21 2018/02/19 12:59:40 fhajny Exp $
 
-PDNS_VERSION=		4.1.0
+PDNS_VERSION=		4.1.1
 DISTNAME=		pdns-${PDNS_VERSION}
 CATEGORIES=		net
 MASTER_SITES=		http://downloads.powerdns.com/releases/
