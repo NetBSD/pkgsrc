@@ -1,4 +1,4 @@
-# $NetBSD: locking.mk,v 1.9 2007/03/16 20:41:44 rillig Exp $
+# $NetBSD: locking.mk,v 1.10 2018/02/19 13:00:10 rillig Exp $
 #
 # User-settable variables:
 #
@@ -17,7 +17,7 @@
 #	Recommended: sleep
 #
 # See also: PKGSRC_LOCKTYPE.
-#
+# Keywords: lock locking parallel
 
 # This file provides the following .USE targets:
 #
