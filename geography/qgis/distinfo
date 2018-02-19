@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.11 2017/01/26 13:49:19 ryoon Exp $
+$NetBSD: distinfo,v 1.12 2018/02/19 12:51:56 ryoon Exp $
 
-SHA1 (qgis-2.18.3.tar.bz2) = 86f530286a69ca9eb308647fce58c9038f1de3e2
-RMD160 (qgis-2.18.3.tar.bz2) = c9aaad0c4d9c93827037ffdf3dd1dd0f15d2941d
-SHA512 (qgis-2.18.3.tar.bz2) = 6d2256cf85ebc1f1ddd3636f8a48284de95c42e3adb26e780b4847208c5ead80dd6a44c1a11d263bcc15bfbd7337d62d10b738ad8a7076382dbe4c4a011ff6fc
-Size (qgis-2.18.3.tar.bz2) = 83508061 bytes
+SHA1 (qgis-2.18.16.tar.bz2) = 67700b1c6efb2b91a474650d925c5aa75a8e53ff
+RMD160 (qgis-2.18.16.tar.bz2) = 1cfa929b232363d7883344cca744474bb9079f3a
+SHA512 (qgis-2.18.16.tar.bz2) = 1fe060c1d392f304eea10a211815e14081299a865e34114625f3a5f2a1b365f571bb30878a21cbf25bc32285ffc689d37cb7dbcab129ce5f03ccd6fa0781876d
+Size (qgis-2.18.16.tar.bz2) = 84976777 bytes
 SHA1 (patch-CMakeLists.txt) = d9f670b121f508ac6565668e2f57975b19edde76
 SHA1 (patch-cmake_FindGDAL.cmake) = aad87704be813306d2727bac748c3df826ed709e
 SHA1 (patch-cmake_FindGEOS.cmake) = f11f1bead1e31aba3f6167dd8eaf1ad10cf7d6ab
