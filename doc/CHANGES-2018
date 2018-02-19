@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.701 2018/02/19 13:18:32 wen Exp $
+$NetBSD: CHANGES-2018,v 1.702 2018/02/19 13:32:38 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1023,3 +1023,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/powerdns to 4.1.1 [fhajny 2018-02-19]
 	Updated databases/py-peewee to 3.0.18 [fhajny 2018-02-19]
 	Updated devel/p5-Devel-OverloadInfo to 0.005 [wen 2018-02-19]
+	Updated devel/p5-Moose to 2.2010 [wen 2018-02-19]
