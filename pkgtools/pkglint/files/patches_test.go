@@ -7,7 +7,7 @@ func (s *Suite) Test_ChecklinesPatch__with_comment(c *check.C) {
 
 	t.SetupCommandLine("-Wall")
 	lines := t.NewLines("patch-WithComment",
-		RcsId,
+		RcsID,
 		"",
 		"Text",
 		"Text",
@@ -29,7 +29,7 @@ func (s *Suite) Test_ChecklinesPatch__without_empty_line__autofix(c *check.C) {
 	t := s.Init(c)
 
 	patchLines := t.SetupFileLines("patch-WithoutEmptyLines",
-		RcsId,
+		RcsID,
 		"Text",
 		"--- file.orig",
 		"+++ file",
@@ -39,7 +39,7 @@ func (s *Suite) Test_ChecklinesPatch__without_empty_line__autofix(c *check.C) {
 		"+old line",
 		" context after")
 	t.SetupFileLines("distinfo",
-		RcsId,
+		RcsID,
 		"",
 		"SHA1 (some patch) = 87ffcaaa0b0677ec679fff612b44df1af05f04df") // Taken from breakpoint at AutofixDistinfo
 
@@ -56,7 +56,7 @@ func (s *Suite) Test_ChecklinesPatch__without_empty_line__autofix(c *check.C) {
 			"with \"a7c35294b3853da0acedf8a972cb266baa9582a3\".")
 
 	t.CheckFileLines("patch-WithoutEmptyLines",
-		RcsId,
+		RcsID,
 		"",
 		"Text",
 		"",
@@ -68,7 +68,7 @@ func (s *Suite) Test_ChecklinesPatch__without_empty_line__autofix(c *check.C) {
 		"+old line",
 		" context after")
 	t.CheckFileLines("distinfo",
-		RcsId,
+		RcsID,
 		"",
 		"SHA1 (some patch) = a7c35294b3853da0acedf8a972cb266baa9582a3")
 }
@@ -78,7 +78,7 @@ func (s *Suite) Test_ChecklinesPatch__without_comment(c *check.C) {
 
 	t.SetupCommandLine("-Wall")
 	lines := t.NewLines("patch-WithoutComment",
-		RcsId,
+		RcsID,
 		"",
 		"--- file.orig",
 		"+++ file",
@@ -99,7 +99,7 @@ func (s *Suite) Test_ChecklinesPatch__git_without_comment(c *check.C) {
 
 	t.SetupCommandLine("-Wall")
 	lines := t.NewLines("patch-aa",
-		RcsId,
+		RcsID,
 		"",
 		"diff --git a/aa b/aa",
 		"index 1234567..1234567 100644",
@@ -130,7 +130,7 @@ func (s *Suite) Test_ChecklinesPatch__error_code(c *check.C) {
 
 	t.SetupCommandLine("-Wall")
 	lines := t.NewLines("patch-ErrorCode",
-		RcsId,
+		RcsID,
 		"",
 		"*** Error code 1", // Looks like a context diff, but isn't.
 		"",
@@ -152,7 +152,7 @@ func (s *Suite) Test_ChecklinesPatch__wrong_header_order(c *check.C) {
 
 	t.SetupCommandLine("-Wall")
 	lines := t.NewLines("patch-WrongOrder",
-		RcsId,
+		RcsID,
 		"",
 		"Text",
 		"Text",
@@ -176,7 +176,7 @@ func (s *Suite) Test_ChecklinesPatch__context_diff(c *check.C) {
 
 	t.SetupCommandLine("-Wall")
 	lines := t.NewLines("patch-ctx",
-		RcsId,
+		RcsID,
 		"",
 		"diff -cr history.c.orig history.c",
 		"*** history.c.orig",
@@ -193,7 +193,7 @@ func (s *Suite) Test_ChecklinesPatch__no_patch(c *check.C) {
 	t := s.Init(c)
 
 	lines := t.NewLines("patch-aa",
-		RcsId,
+		RcsID,
 		"",
 		"-- oldfile",
 		"++ newfile")
@@ -208,7 +208,7 @@ func (s *Suite) Test_ChecklinesPatch__two_patched_files(c *check.C) {
 	t := s.Init(c)
 
 	lines := t.NewLines("patch-aa",
-		RcsId,
+		RcsID,
 		"",
 		"--- oldfile",
 		"+++ newfile",
@@ -232,7 +232,7 @@ func (s *Suite) Test_ChecklinesPatch__documentation_that_looks_like_patch_lines(
 	t := s.Init(c)
 
 	lines := t.NewLines("patch-aa",
-		RcsId,
+		RcsID,
 		"",
 		"--- oldfile",
 		"",
@@ -250,7 +250,7 @@ func (s *Suite) Test_ChecklinesPatch__only_unified_header_but_no_content(c *chec
 	t := s.Init(c)
 
 	lines := t.NewLines("patch-unified",
-		RcsId,
+		RcsID,
 		"",
 		"Documentation for the patch",
 		"",
@@ -267,7 +267,7 @@ func (s *Suite) Test_ChecklinesPatch__only_context_header_but_no_content(c *chec
 	t := s.Init(c)
 
 	lines := t.NewLines("patch-context",
-		RcsId,
+		RcsID,
 		"",
 		"Documentation for the patch",
 		"",
@@ -286,7 +286,7 @@ func (s *Suite) Test_ChecklinesPatch__Makefile_with_absolute_pathnames(c *check.
 	t := s.Init(c)
 
 	lines := t.NewLines("patch-unified",
-		RcsId,
+		RcsID,
 		"",
 		"Documentation for the patch",
 		"",
@@ -323,7 +323,7 @@ func (s *Suite) Test_ChecklinesPatch__no_newline_with_text_following(c *check.C)
 	t := s.Init(c)
 
 	lines := t.NewLines("patch-aa",
-		RcsId,
+		RcsID,
 		"",
 		"comment",
 		"",
@@ -346,7 +346,7 @@ func (s *Suite) Test_ChecklinesPatch__no_newline(c *check.C) {
 	t := s.Init(c)
 
 	lines := t.NewLines("patch-aa",
-		RcsId,
+		RcsID,
 		"",
 		"comment",
 		"",
@@ -367,7 +367,7 @@ func (s *Suite) Test_ChecklinesPatch__empty_lines_left_out_at_eof(c *check.C) {
 	t := s.Init(c)
 
 	lines := t.NewLines("patch-aa",
-		RcsId,
+		RcsID,
 		"",
 		"comment",
 		"",
@@ -392,7 +392,7 @@ func (s *Suite) Test_ChecklinesPatch__context_lines_with_tab_instead_of_space(c 
 	t := s.Init(c)
 
 	lines := t.NewLines("patch-aa",
-		RcsId,
+		RcsID,
 		"",
 		"comment",
 		"",
@@ -415,7 +415,7 @@ func (s *Suite) Test_ChecklinesPatch__autofix_empty_patch(c *check.C) {
 
 	t.SetupCommandLine("-Wall", "--autofix")
 	lines := t.NewLines("patch-aa",
-		RcsId)
+		RcsID)
 
 	ChecklinesPatch(lines)
 
@@ -428,7 +428,7 @@ func (s *Suite) Test_ChecklinesPatch__autofix_long_empty_patch(c *check.C) {
 
 	t.SetupCommandLine("-Wall", "--autofix")
 	lines := t.NewLines("patch-aa",
-		RcsId,
+		RcsID,
 		"")
 
 	ChecklinesPatch(lines)

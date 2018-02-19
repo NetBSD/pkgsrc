@@ -20,7 +20,7 @@ type GlobalData struct {
 	suggestedUpdates    []SuggestedUpdate   //
 	suggestedWipUpdates []SuggestedUpdate   //
 	LastChange          map[string]*Change  //
-	UserDefinedVars     map[string]MkLine   // varname => line
+	UserDefinedVars     map[string]MkLine   // varname => line; used for checking BUILD_DEFS
 	Deprecated          map[string]string   //
 	vartypes            map[string]*Vartype // varcanon => type
 	latest              map[string]string   // "lang/php[0-9]*" => "lang/php70"
@@ -105,17 +105,17 @@ func (gd *GlobalData) loadDistSites() {
 	fname := gd.Pkgsrcdir + "/mk/fetch/sites.mk"
 	lines := LoadExistingLines(fname, true)
 
-	name2url := make(map[string]string)
-	url2name := make(map[string]string)
+	nameToUrl := make(map[string]string)
+	urlToName := make(map[string]string)
 	for _, line := range lines {
 		if m, commented, varname, _, _, _, urls, _, _ := MatchVarassign(line.Text); m {
 			if !commented && hasPrefix(varname, "MASTER_SITE_") && varname != "MASTER_SITE_BACKUP" {
 				for _, url := range splitOnSpace(urls) {
 					if matches(url, `^(?:http://|https://|ftp://)`) {
-						if name2url[varname] == "" {
-							name2url[varname] = url
+						if nameToUrl[varname] == "" {
+							nameToUrl[varname] = url
 						}
-						url2name[url] = varname
+						urlToName[url] = varname
 					}
 				}
 			}
@@ -123,13 +123,13 @@ func (gd *GlobalData) loadDistSites() {
 	}
 
 	// Explicitly allowed, although not defined in mk/fetch/sites.mk.
-	name2url["MASTER_SITE_LOCAL"] = "ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/"
+	nameToUrl["MASTER_SITE_LOCAL"] = "ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/"
 
 	if trace.Tracing {
-		trace.Stepf("Loaded %d MASTER_SITE_* URLs.", len(url2name))
+		trace.Stepf("Loaded %d MASTER_SITE_* URLs.", len(urlToName))
 	}
-	gd.MasterSiteURLToVar = url2name
-	gd.MasterSiteVarToURL = name2url
+	gd.MasterSiteURLToVar = urlToName
+	gd.MasterSiteVarToURL = nameToUrl
 }
 
 func (gd *GlobalData) loadPkgOptions() {
@@ -180,8 +180,8 @@ func (gd *GlobalData) loadTools() {
 		}
 	}
 
-	for _, basename := range [...]string{"bsd.prefs.mk", "bsd.pkg.mk"} {
-		fname := G.globalData.Pkgsrcdir + "/mk/" + basename
+	for _, relativeName := range [...]string{"mk/bsd.prefs.mk", "mk/bsd.pkg.mk"} {
+		fname := G.globalData.Pkgsrcdir + "/" + relativeName
 		condDepth := 0
 
 		lines := LoadExistingLines(fname, true)
@@ -196,12 +196,12 @@ func (gd *GlobalData) loadTools() {
 					if trace.Tracing {
 						trace.Stepf("[condDepth=%d] %s", condDepth, value)
 					}
-					if condDepth == 0 || condDepth == 1 && basename == "bsd.prefs.mk" {
+					if condDepth == 0 || condDepth == 1 && relativeName == "mk/bsd.prefs.mk" {
 						for _, toolname := range splitOnSpace(value) {
 							if !containsVarRef(toolname) {
 								for _, tool := range [...]*Tool{reg.Register(toolname), reg.Register("TOOLS_" + toolname)} {
 									tool.Predefined = true
-									if basename == "bsd.prefs.mk" {
+									if relativeName == "mk/bsd.prefs.mk" {
 										tool.UsableAtLoadtime = true
 									}
 								}

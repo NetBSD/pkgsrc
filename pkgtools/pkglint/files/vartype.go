@@ -10,7 +10,7 @@ import (
 type Vartype struct {
 	kindOfList KindOfList
 	basicType  *BasicType
-	aclEntries []AclEntry
+	aclEntries []ACLEntry
 	guessed    bool
 }
 
@@ -22,31 +22,31 @@ const (
 	lkShell                   // List entries are shell words; used in the :M, :S modifiers.
 )
 
-type AclEntry struct {
+type ACLEntry struct {
 	glob        string // Examples: "Makefile", "*.mk"
-	permissions AclPermissions
+	permissions ACLPermissions
 }
 
-type AclPermissions uint8
+type ACLPermissions uint8
 
 const (
-	aclpSet         AclPermissions = 1 << iota // VAR = value
+	aclpSet         ACLPermissions = 1 << iota // VAR = value
 	aclpSetDefault                             // VAR ?= value
 	aclpAppend                                 // VAR += value
 	aclpUseLoadtime                            // OTHER := ${VAR}, OTHER != ${VAR}
 	aclpUse                                    // OTHER = ${VAR}
 	aclpUnknown
-	aclpAll        AclPermissions = aclpAppend | aclpSetDefault | aclpSet | aclpUseLoadtime | aclpUse
-	aclpAllRuntime AclPermissions = aclpAppend | aclpSetDefault | aclpSet | aclpUse
-	aclpAllWrite   AclPermissions = aclpSet | aclpSetDefault | aclpAppend
-	aclpAllRead    AclPermissions = aclpUseLoadtime | aclpUse
+	aclpAll        = aclpAppend | aclpSetDefault | aclpSet | aclpUseLoadtime | aclpUse
+	aclpAllRuntime = aclpAppend | aclpSetDefault | aclpSet | aclpUse
+	aclpAllWrite   = aclpSet | aclpSetDefault | aclpAppend
+	aclpAllRead    = aclpUseLoadtime | aclpUse
 )
 
-func (perms AclPermissions) Contains(subset AclPermissions) bool {
+func (perms ACLPermissions) Contains(subset ACLPermissions) bool {
 	return perms&subset == subset
 }
 
-func (perms AclPermissions) String() string {
+func (perms ACLPermissions) String() string {
 	if perms == 0 {
 		return "none"
 	}
@@ -60,7 +60,7 @@ func (perms AclPermissions) String() string {
 	return strings.TrimRight(result, ", ")
 }
 
-func (perms AclPermissions) HumanString() string {
+func (perms ACLPermissions) HumanString() string {
 	result := "" +
 		ifelseStr(perms.Contains(aclpSet), "set, ", "") +
 		ifelseStr(perms.Contains(aclpSetDefault), "given a default value, ", "") +
@@ -70,7 +70,7 @@ func (perms AclPermissions) HumanString() string {
 	return strings.TrimRight(result, ", ")
 }
 
-func (vt *Vartype) EffectivePermissions(fname string) AclPermissions {
+func (vt *Vartype) EffectivePermissions(fname string) ACLPermissions {
 	for _, aclEntry := range vt.aclEntries {
 		if m, _ := path.Match(aclEntry.glob, path.Base(fname)); m {
 			return aclEntry.permissions
@@ -82,15 +82,15 @@ func (vt *Vartype) EffectivePermissions(fname string) AclPermissions {
 // Returns the union of all possible permissions. This can be used to
 // check whether a variable may be defined or used at all, or if it is
 // read-only.
-func (vt *Vartype) Union() AclPermissions {
-	var permissions AclPermissions
+func (vt *Vartype) Union() ACLPermissions {
+	var permissions ACLPermissions
 	for _, aclEntry := range vt.aclEntries {
 		permissions |= aclEntry.permissions
 	}
 	return permissions
 }
 
-func (vt *Vartype) AllowedFiles(perms AclPermissions) string {
+func (vt *Vartype) AllowedFiles(perms ACLPermissions) string {
 	files := make([]string, 0, len(vt.aclEntries))
 	for _, aclEntry := range vt.aclEntries {
 		if aclEntry.permissions.Contains(perms) {
