@@ -136,7 +136,7 @@ func (s *Suite) Test_MkLineChecker_checkVarassign(c *check.C) {
 	G.globalData.InitVartypes()
 
 	G.Mk = t.NewMkLines("Makefile",
-		MkRcsId,
+		MkRcsID,
 		"ac_cv_libpari_libs+=\t-L${BUILDLINK_PREFIX.pari}/lib") // From math/clisp-pari/Makefile, rev. 1.8
 
 	MkLineChecker{G.Mk.mklines[1]}.checkVarassign()
@@ -164,7 +164,7 @@ func (s *Suite) Test_MkLineChecker_CheckVarusePermissions(c *check.C) {
 	t.SetupCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	mklines := t.NewMkLines("options.mk",
-		MkRcsId,
+		MkRcsID,
 		"COMMENT=\t${GAMES_USER}",
 		"COMMENT:=\t${PKGBASE}",
 		"PYPKGPREFIX=${PKGBASE}")
@@ -188,7 +188,7 @@ func (s *Suite) Test_MkLineChecker_CheckVarusePermissions__load_time(c *check.C)
 	t.SetupCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	mklines := t.NewMkLines("options.mk",
-		MkRcsId,
+		MkRcsID,
 		"WRKSRC:=${.CURDIR}")
 
 	mklines.Check()
@@ -257,7 +257,7 @@ func (s *Suite) Test_MkLineChecker_CheckCond__comparison_with_shell_command(c *c
 	t.SetupCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = t.NewMkLines("security/openssl/Makefile",
-		MkRcsId,
+		MkRcsID,
 		".if ${PKGSRC_COMPILER} == \"gcc\" && ${CC} == \"cc\"",
 		".endif")
 
@@ -274,7 +274,7 @@ func (s *Suite) Test_MkLine_CheckCond_comparing_PKGSRC_COMPILER_with_eqeq(c *che
 	t.SetupCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = t.NewMkLines("audio/pulseaudio/Makefile",
-		MkRcsId,
+		MkRcsID,
 		".if ${OPSYS} == \"Darwin\" && ${PKGSRC_COMPILER} == \"clang\"",
 		".endif")
 
@@ -290,7 +290,7 @@ func (s *Suite) Test_MkLineChecker_CheckVartype__CFLAGS_with_backticks(c *check.
 	t.SetupCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = t.NewMkLines("chat/pidgin-icb/Makefile",
-		MkRcsId,
+		MkRcsID,
 		"CFLAGS+=\t`pkg-config pidgin --cflags`")
 	mkline := G.Mk.mklines[1]
 
@@ -313,7 +313,7 @@ func (s *Suite) Test_MkLineChecker_CheckVartype_CFLAGS(c *check.C) {
 
 	G.globalData.InitVartypes()
 	mklines := t.NewMkLines("Makefile",
-		MkRcsId,
+		MkRcsID,
 		"CPPFLAGS.SunOS+=\t-DPIPECOMMAND=\\\"/usr/sbin/sendmail -bs %s\\\"")
 
 	mklines.Check()
@@ -331,7 +331,7 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveIndentation_autofix(c *check.C)
 	t.SetupCommandLine("-Wall", "--autofix")
 	G.globalData.InitVartypes()
 	lines := t.SetupFileLinesContinuation("options.mk",
-		MkRcsId,
+		MkRcsID,
 		".if ${PKGNAME} == pkgname",
 		".if \\",
 		"   ${PLATFORM:MNetBSD-4.*}",
@@ -346,10 +346,35 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveIndentation_autofix(c *check.C)
 		"AUTOFIX: ~/options.mk:5: Replacing \".\" with \".  \".")
 
 	t.CheckFileLines("options.mk",
-		MkRcsId,
+		MkRcsID,
 		".if ${PKGNAME} == pkgname",
 		".  if \\",
 		"   ${PLATFORM:MNetBSD-4.*}",
 		".  endif",
 		".endif")
+}
+
+func (s *Suite) Test_MkLineChecker_CheckVaruseShellword(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall")
+	G.globalData.InitVartypes()
+	lines := t.SetupFileLinesContinuation("options.mk",
+		MkRcsID,
+		"GOPATH=\t${WRKDIR}",
+		"do-build:",
+		"\tcd ${WRKSRC} && GOPATH=${GOPATH} PATH=${PATH} :")
+	mklines := NewMkLines(lines)
+
+	mklines.Check()
+
+	// For WRKSRC and GOPATH, no quoting is necessary since pkgsrc directories by
+	// definition don't contain special characters. Therefore they don't need the
+	// :Q, not even when used as part of a shell word.
+
+	// For PATH, the quoting is necessary because it may contain directories outside
+	// of pkgsrc, and these may contain special characters.
+
+	t.CheckOutputLines(
+		"WARN: ~/options.mk:4: The variable PATH should be quoted as part of a shell word.")
 }

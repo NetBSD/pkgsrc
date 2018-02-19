@@ -179,7 +179,7 @@ func (s *Suite) Test_NewMkLine__autofix_space_after_varname(c *check.C) {
 
 	t.SetupCommandLine("-Wspace")
 	fname := t.CreateFileLines("Makefile",
-		MkRcsId,
+		MkRcsID,
 		"VARNAME +=\t${VARNAME}",
 		"VARNAME+ =\t${VARNAME+}",
 		"VARNAME+ +=\t${VARNAME+}",
@@ -199,7 +199,7 @@ func (s *Suite) Test_NewMkLine__autofix_space_after_varname(c *check.C) {
 		"AUTOFIX: ~/Makefile:2: Replacing \"VARNAME +=\" with \"VARNAME+=\".",
 		"AUTOFIX: ~/Makefile:4: Replacing \"VARNAME+ +=\" with \"VARNAME++=\".")
 	t.CheckFileLines("Makefile",
-		MkRcsId+"",
+		MkRcsID+"",
 		"VARNAME+=\t${VARNAME}",
 		"VARNAME+ =\t${VARNAME+}",
 		"VARNAME++=\t${VARNAME+}",
@@ -278,7 +278,7 @@ func (s *Suite) Test_MkLines_Check__extra(c *check.C) {
 	G.globalData.InitVartypes()
 	G.Pkg = NewPackage("category/pkgbase")
 	G.Mk = t.NewMkLines("options.mk",
-		MkRcsId,
+		MkRcsID,
 		".for word in ${PKG_FAIL_REASON}",
 		"PYTHON_VERSIONS_ACCEPTED=\t27 35 30",
 		"CONFIGURE_ARGS+=\t--sharedir=${PREFIX}/share/kde",
@@ -379,7 +379,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__command_in_command(c *check.C)
 	t.SetupTool(&Tool{Name: "sort", Varname: "SORT", Predefined: true})
 	G.Pkg = NewPackage("category/pkgbase")
 	G.Mk = t.NewMkLines("Makefile",
-		MkRcsId,
+		MkRcsID,
 		"GENERATE_PLIST= cd ${DESTDIR}${PREFIX}; ${FIND} * \\( -type f -or -type l \\) | ${SORT};")
 
 	G.Mk.DetermineDefinedVariables()
@@ -395,7 +395,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__word_as_part_of_word(c *check.
 	t.SetupCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = t.NewMkLines("Makefile",
-		MkRcsId,
+		MkRcsID,
 		"EGDIR=\t${EGDIR}/${MACHINE_GNU_PLATFORM}")
 
 	MkLineChecker{G.Mk.mklines[1]}.Check()
@@ -417,7 +417,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__command_as_command_argument(c 
 	t.SetupTool(&Tool{Name: "bash", Varname: "BASH", Predefined: true})
 	G.globalData.InitVartypes()
 	G.Mk = t.NewMkLines("Makefile",
-		MkRcsId,
+		MkRcsID,
 		"\t${RUN} cd ${WRKSRC} && ( ${ECHO} ${PERL5:Q} ; ${ECHO} ) | ${BASH} ./install",
 		"\t${RUN} cd ${WRKSRC} && ( ${ECHO} ${PERL5} ; ${ECHO} ) | ${BASH} ./install")
 
@@ -436,7 +436,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__URL_as_part_of_word_in_list(c 
 	t.SetupCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = t.NewMkLines("Makefile",
-		MkRcsId,
+		MkRcsID,
 		"MASTER_SITES=${HOMEPAGE}archive/")
 
 	MkLineChecker{G.Mk.mklines[1]}.Check()
@@ -457,7 +457,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__command_in_subshell(c *check.C
 	t.SetupTool(&Tool{Name: "awk", Varname: "AWK", Predefined: true})
 	t.SetupTool(&Tool{Name: "echo", Varname: "ECHO", Predefined: true})
 	G.Mk = t.NewMkLines("xpi.mk",
-		MkRcsId,
+		MkRcsID,
 		"\t id=$$(${AWK} '{print}' < ${WRKSRC}/idfile) && echo \"$$id\"",
 		"\t id=`${AWK} '{print}' < ${WRKSRC}/idfile` && echo \"$$id\"")
 
@@ -478,7 +478,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__LDFLAGS_in_single_quotes(c *ch
 	t.SetupCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = t.NewMkLines("x11/mlterm/Makefile",
-		MkRcsId,
+		MkRcsID,
 		"SUBST_SED.link=-e 's|(LIBTOOL_LINK).*(LIBS)|& ${LDFLAGS:M*:Q}|g'",
 		"SUBST_SED.link=-e 's|(LIBTOOL_LINK).*(LIBS)|& '${LDFLAGS:M*:Q}'|g'")
 
@@ -501,7 +501,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__package_options(c *check.C) {
 	t.SetupCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = t.NewMkLines("Makefile",
-		MkRcsId,
+		MkRcsID,
 		"PKG_SUGGESTED_OPTIONS+=\t${PKG_DEFAULT_OPTIONS:Mcdecimal} ${PKG_OPTIONS.py-trytond:Mcdecimal}")
 
 	MkLineChecker{G.Mk.mklines[1]}.Check()
@@ -516,7 +516,7 @@ func (s *Suite) Test_MkLines_Check__MASTER_SITE_in_HOMEPAGE(c *check.C) {
 	t.SetupMasterSite("MASTER_SITE_GITHUB", "https://github.com/")
 	G.globalData.InitVartypes()
 	G.Mk = t.NewMkLines("devel/catch/Makefile",
-		MkRcsId,
+		MkRcsID,
 		"HOMEPAGE=\t${MASTER_SITE_GITHUB:=philsquared/Catch/}",
 		"HOMEPAGE=\t${MASTER_SITE_GITHUB}",
 		"HOMEPAGE=\t${MASTER_SITES}",
@@ -539,7 +539,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__tool_in_quotes_in_subshell_in_
 	t.SetupTool(&Tool{Name: "sh", Varname: "SH", Predefined: true})
 	G.globalData.InitVartypes()
 	G.Mk = t.NewMkLines("x11/labltk/Makefile",
-		MkRcsId,
+		MkRcsID,
 		"CONFIGURE_ARGS+=\t-tklibs \"`${SH} -c '${ECHO} $$TK_LD_FLAGS'`\"")
 
 	MkLineChecker{G.Mk.mklines[1]}.Check()
@@ -583,14 +583,14 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__guessed_list_variable_in_quote
 	t.SetupCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = t.NewMkLines("audio/jack-rack/Makefile",
-		MkRcsId,
+		MkRcsID,
 		"LADSPA_PLUGIN_PATH?=\t${PREFIX}/lib/ladspa",
 		"CPPFLAGS+=\t\t-DLADSPA_PATH=\"\\\"${LADSPA_PLUGIN_PATH}\\\"\"")
 
 	G.Mk.Check()
 
 	t.CheckOutputLines(
-		"WARN: audio/jack-rack/Makefile:3: The list variable LADSPA_PLUGIN_PATH should not be embedded in a word.")
+		"WARN: audio/jack-rack/Makefile:3: The variable LADSPA_PLUGIN_PATH should be quoted as part of a shell word.")
 }
 
 func (s *Suite) Test_MkLine_variableNeedsQuoting__list_in_list(c *check.C) {
@@ -599,7 +599,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__list_in_list(c *check.C) {
 	t.SetupCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = t.NewMkLines("x11/eterm/Makefile",
-		MkRcsId,
+		MkRcsID,
 		"DISTFILES=\t${DEFAULT_DISTFILES} ${PIXMAP_FILES}")
 
 	G.Mk.Check()
@@ -614,7 +614,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__PKGNAME_and_URL_list_in_URL_li
 	t.SetupMasterSite("MASTER_SITE_GNOME", "http://ftp.gnome.org/")
 	G.globalData.InitVartypes()
 	G.Mk = t.NewMkLines("x11/gtk3/Makefile",
-		MkRcsId,
+		MkRcsID,
 		"MASTER_SITES=\tftp://ftp.gtk.org/${PKGNAME}/ ${MASTER_SITE_GNOME:=subdir/}")
 
 	MkLineChecker{G.Mk.mklines[1]}.checkVarassignVaruse()
@@ -630,7 +630,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__tool_in_CONFIGURE_ENV(c *check
 	G.globalData.Tools = NewToolRegistry()
 	G.globalData.Tools.RegisterVarname("tar", "TAR")
 	mklines := t.NewMkLines("Makefile",
-		MkRcsId,
+		MkRcsID,
 		"",
 		"CONFIGURE_ENV+=\tSYS_TAR_COMMAND_PATH=${TOOLS_TAR:Q}")
 
@@ -644,6 +644,31 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__tool_in_CONFIGURE_ENV(c *check
 		"NOTE: Makefile:3: The :Q operator isn't necessary for ${TOOLS_TAR} here.")
 }
 
+func (s *Suite) Test_MkLine_variableNeedsQuoting__backticks(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall")
+	G.globalData.InitVartypes()
+	G.globalData.Tools = NewToolRegistry()
+	G.globalData.Tools.RegisterVarname("cat", "CAT")
+	mklines := t.NewMkLines("Makefile",
+		MkRcsID,
+		"",
+		"COMPILE_CMD=\tcc `${CAT} ${WRKDIR}/compileflags`",
+		"COMMENT_CMD=\techo `echo ${COMMENT}`")
+
+	MkLineChecker{mklines.mklines[2]}.checkVarassignVaruse()
+	MkLineChecker{mklines.mklines[3]}.checkVarassignVaruse()
+
+	// Both CAT and WRKDIR are safe from quoting, therefore no warnings.
+	// But COMMENT may contain arbitrary characters and therefore must
+	// only appear completely unquoted. There is no practical way of
+	// using it inside backticks, and luckily there is no need for it.
+	t.CheckOutputLines(
+		"WARN: Makefile:4: COMMENT may not be used in any file; it is a write-only variable.",
+		"WARN: Makefile:4: The variable COMMENT should be quoted as part of a shell word.")
+}
+
 // For some well-known directory variables like WRKDIR, PREFIX, LOCALBASE,
 // the :Q modifier can be safely removed since pkgsrc will never support
 // having special characters in these directory names.
@@ -655,7 +680,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__only_remove_known(c *check.C) 
 	G.globalData.InitVartypes()
 
 	lines := t.SetupFileLinesContinuation("Makefile",
-		MkRcsId,
+		MkRcsID,
 		"",
 		"demo: .PHONY",
 		"\t${ECHO} ${WRKSRC:Q}",
@@ -667,7 +692,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__only_remove_known(c *check.C) 
 	t.CheckOutputLines(
 		"AUTOFIX: ~/Makefile:4: Replacing \"${WRKSRC:Q}\" with \"${WRKSRC}\".")
 	t.CheckFileLines("Makefile",
-		MkRcsId,
+		MkRcsID,
 		"",
 		"demo: .PHONY",
 		"\t${ECHO} ${WRKSRC}",
@@ -680,7 +705,7 @@ func (s *Suite) Test_MkLine_Pkgmandir(c *check.C) {
 	t.SetupCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = t.NewMkLines("chat/ircII/Makefile",
-		MkRcsId,
+		MkRcsID,
 		"CONFIGURE_ARGS+=--mandir=${DESTDIR}${PREFIX}/man",
 		"CONFIGURE_ARGS+=--mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}")
 
@@ -698,7 +723,7 @@ func (s *Suite) Test_MkLines_Check__VERSION_as_wordpart_in_MASTER_SITES(c *check
 	t.SetupCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	mklines := t.NewMkLines("geography/viking/Makefile",
-		MkRcsId,
+		MkRcsID,
 		"MASTER_SITES=\t${MASTER_SITE_SOURCEFORGE:=viking/}${VERSION}/")
 
 	mklines.Check()
@@ -714,7 +739,7 @@ func (s *Suite) Test_MkLines_Check__shell_command_as_wordpart_in_ENV_list(c *che
 	t.SetupCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	mklines := t.NewMkLines("x11/lablgtk1/Makefile",
-		MkRcsId,
+		MkRcsID,
 		"CONFIGURE_ENV+=\tCC=${CC}")
 
 	mklines.Check()
@@ -730,7 +755,7 @@ func (s *Suite) Test_MkLine_shell_varuse_in_backt_dquot(c *check.C) {
 	t.SetupCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	mklines := t.NewMkLines("x11/motif/Makefile",
-		MkRcsId,
+		MkRcsID,
 		"post-patch:",
 		"\tfiles=`${GREP} -l \".fB$${name}.fP(3)\" *.3`")
 
@@ -756,7 +781,7 @@ func (s *Suite) Test_MkLine__comment_in_comment(c *check.C) {
 
 	G.globalData.InitVartypes()
 	mklines := t.NewMkLines("Makefile",
-		MkRcsId,
+		MkRcsID,
 		"COMMENT=\tPKCS#5 v2.0 PBKDF2 Module")
 
 	mklines.Check()

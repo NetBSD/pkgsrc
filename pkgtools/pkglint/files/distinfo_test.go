@@ -34,7 +34,7 @@ func (s *Suite) Test_ChecklinesDistinfo_global_hash_mismatch(c *check.C) {
 	otherLine := t.NewLine("other/distinfo", 7, "dummy")
 	G.Hash = map[string]*Hash{"SHA512:pkgname-1.0.tar.gz": {"Some-512-bit-hash", otherLine}}
 	lines := t.NewLines("distinfo",
-		RcsId,
+		RcsID,
 		"",
 		"SHA512 (pkgname-1.0.tar.gz) = 12341234")
 
@@ -49,7 +49,7 @@ func (s *Suite) Test_ChecklinesDistinfo_uncommitted_patch(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupFileLines("patches/patch-aa",
-		RcsId,
+		RcsID,
 		"",
 		"--- oldfile",
 		"+++ newfile",
@@ -59,7 +59,7 @@ func (s *Suite) Test_ChecklinesDistinfo_uncommitted_patch(c *check.C) {
 	t.SetupFileLines("CVS/Entries",
 		"/distinfo/...")
 	lines := t.SetupFileLines("distinfo",
-		RcsId,
+		RcsID,
 		"",
 		"SHA1 (patch-aa) = 5ad1fb9b3c328fff5caa1a23e8f330e707dd50c0")
 	G.CurrentDir = t.TmpDir()
@@ -77,7 +77,7 @@ func (s *Suite) Test_ChecklinesDistinfo_unrecorded_patches(c *check.C) {
 	t.SetupFileLines("patches/patch-aa")
 	t.SetupFileLines("patches/patch-src-Makefile")
 	lines := t.SetupFileLines("distinfo",
-		RcsId,
+		RcsID,
 		"",
 		"SHA1 (distfile.tar.gz) = ...",
 		"RMD160 (distfile.tar.gz) = ...",
@@ -97,7 +97,7 @@ func (s *Suite) Test_ChecklinesDistinfo_manual_patches(c *check.C) {
 
 	t.SetupFileLines("patches/manual-libtool.m4")
 	lines := t.SetupFileLines("distinfo",
-		RcsId,
+		RcsID,
 		"",
 		"SHA1 (patch-aa) = ...")
 	G.CurrentDir = t.TmpDir()
