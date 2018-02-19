@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.85 2018/02/03 17:38:13 kamil Exp $
+# $NetBSD: license.mk,v 1.86 2018/02/19 12:58:51 rillig Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -246,51 +246,20 @@ PKG_FAIL_REASON+= \
 #
 # Keywords: license
 guess-license: .PHONY
-	${RUN} [ -d ${WRKSRC} ] || ALLOW_VULNERABLE_PACKAGES=yes ${MAKE} makedirs fetch pre-extract do-extract
+	@# Running "make extract" would fetch and build the dependencies
+	${RUN} [ -d ${WRKSRC} ] \
+	|| ALLOW_VULNERABLE_PACKAGES=yes ${MAKE} makedirs fetch pre-extract do-extract
+
 	${RUN} \
-	${PHASE_MSG} "Guessing package license"; \
 	\
-	if type ninka > /dev/null 2>&1; then \
-	  (cd ${WRKDIR} && ${FIND} ./* -type f -print \
-	  | ${XARGS} ninka \
-	  | ${AWK} -F ';' '{ print $$2 }' \
-	  | LC_ALL=C ${SORT} | uniq -c | LC_ALL=C ${SORT} -nr \
-	  | ${AWK} 'BEGIN { printf("%5s   %s\n", "Files", "License") } { printf("%5d   %s\n", $$1, $$2); }'); \
-	  exit 0; \
-	fi; \
+	type ninka > /dev/null 2>&1 || ${FAIL_MSG} "To guess the license, wip/ninka must be installed."; \
 	\
-	type wdiff > /dev/null 2>&1 || ${FAIL_MSG} "To guess the license, textproc/wdiff must be installed."; \
+	${PHASE_MSG} "Guessing licenses for ${PKGNAME}"; \
 	\
-	pkgfiles=`find ${WRKSRC} -type f -print | ${EGREP} '/COPYING|/LICEN[CS]E|/COPYRIGHT' | LC_ALL=C ${SORT}`; \
-	case $$pkgfiles in *'${.newline}'*) printf "The package has more than one license file:\n\n%s\n" "$$pkgfiles"; exit; esac; \
-	\
-	{ \
-	bestsize=1000000; \
-	bestlicense=; \
-	pkglicense="$$pkgfiles"; \
-	${PRINTF} "%8s   %s\n" "Wdiff" "License"; \
-	for license in ${PKGSRCDIR}/licenses/*; do \
-	  if [ -f "$$pkglicense" ] && [ -f "$$license" ]; then \
-	    size=`{ wdiff -3 "$$pkglicense" "$$license" || true; } | wc -c`; \
-	    if [ "$$size" -lt "$$bestsize" ]; then \
-	      ${PRINTF} "%8d   %s\n" "$$size" "$${license##*/}"; \
-	      bestsize="$$size"; \
-	      bestlicense="$$license"; \
-	    fi \
-	  fi \
-	done; \
-	\
-	if [ "$$bestlicense" ]; then \
-	  echo ""; \
-	  echo "Line differences in license texts:"; \
-	  echo ""; \
-	  diff -wu "$$bestlicense" "$$pkglicense" || true; \
-	  echo ""; \
-	  echo "Word differences in license texts:"; \
-	  echo ""; \
-	  wdiff -3 "$$bestlicense" "$$pkglicense" || true; \
-	else \
-	  echo "No license file found in ${WRKSRC}:"; \
-	  ls -l ${WRKSRC}; \
-	fi \
-	} | $${PAGER:-less}
+	: "Note that ninka can only handle one file at a time; therefore the slow loop below."; \
+	cd ${WRKDIR} \
+	&& ${FIND} ./* -type f -print \
+	| while read fname; do ninka "$$fname"; done \
+	| ${AWK} -F ';' '{ print $$2 }' \
+	| LC_ALL=C ${SORT} | uniq -c | LC_ALL=C ${SORT} -nr \
+	| ${AWK} 'BEGIN { printf("%5s   %s\n", "Files", "License") } { printf("%5d   %s\n", $$1, $$2); }'
