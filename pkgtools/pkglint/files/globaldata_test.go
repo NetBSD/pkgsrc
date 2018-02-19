@@ -124,7 +124,7 @@ func (s *Suite) Test_GlobalData_loadDistSites(c *check.C) {
 
 	G.globalData.Pkgsrcdir = t.TmpDir()
 	t.CreateFileLines("mk/fetch/sites.mk",
-		MkRcsId,
+		MkRcsID,
 		"",
 		"MASTER_SITE_A+= https://example.org/distfiles/",
 		"MASTER_SITE_B+= https://b.example.org/distfiles/ \\",

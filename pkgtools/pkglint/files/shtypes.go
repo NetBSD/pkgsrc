@@ -9,12 +9,12 @@ import (
 type ShAtomType uint8
 
 const (
-	shtSpace  ShAtomType = iota
-	shtVaruse            // ${PREFIX}
-	shtWord              //
-	shtOperator
-	shtComment  // # ...
-	shtSubshell // $$(
+	shtSpace    ShAtomType = iota
+	shtVaruse              // ${PREFIX}
+	shtWord                // while, cat, ENV=value
+	shtOperator            // (, ;, |
+	shtComment             // # ...
+	shtSubshell            // $$(
 )
 
 func (t ShAtomType) String() string {
@@ -56,9 +56,9 @@ func (token *ShAtom) String() string {
 }
 
 // Returns nil for plain shell tokens.
-func (atom *ShAtom) VarUse() *MkVarUse {
-	if atom.Type == shtVaruse {
-		return atom.Data.(*MkVarUse)
+func (token *ShAtom) VarUse() *MkVarUse {
+	if token.Type == shtVaruse {
+		return token.Data.(*MkVarUse)
 	}
 	return nil
 }
@@ -116,12 +116,4 @@ func NewShToken(mkText string, atoms ...*ShAtom) *ShToken {
 
 func (token *ShToken) String() string {
 	return fmt.Sprintf("ShToken(%v)", token.Atoms)
-}
-
-func (token *ShToken) IsAssignment() bool {
-	return matches(token.MkText, `^[A-Za-z_]\w*=`)
-}
-
-func (token *ShToken) IsWord() bool {
-	return token.Atoms[0].Type.IsWord()
 }

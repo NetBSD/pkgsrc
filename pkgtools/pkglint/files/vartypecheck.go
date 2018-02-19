@@ -674,7 +674,8 @@ func (cv *VartypeCheck) Pathmask() {
 	CheckLineAbsolutePathname(cv.Line, cv.Value)
 }
 
-// Like Filename, but including slashes
+// Like Filename, but including slashes.
+//
 // See http://www.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap03.html#tag_03_266
 func (cv *VartypeCheck) Pathname() {
 	if cv.Op == opUseMatch {

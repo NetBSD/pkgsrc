@@ -125,7 +125,7 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 		}
 		ck.checktextUniHunkCr()
 
-		for linesToDel > 0 || linesToAdd > 0 || hasPrefix(ck.exp.CurrentLine().Text, "\\") {
+		for !ck.exp.EOF() && (linesToDel > 0 || linesToAdd > 0 || hasPrefix(ck.exp.CurrentLine().Text, "\\")) {
 			line := ck.exp.CurrentLine()
 			ck.exp.Advance()
 			text := line.Text
@@ -148,6 +148,16 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 				line.Errorf("Invalid line in unified patch hunk")
 				return
 			}
+		}
+
+		// When these two counts are equal, they may refer to context
+		// lines that consist only of whitespace and have therefore
+		// been lost during transmission. There is no way to detect
+		// this by looking only at the patch file.
+		if linesToAdd != linesToDel {
+			line := ck.exp.PreviousLine()
+			line.Warnf("Premature end of patch hunk (expected %d lines to be deleted and %d lines to be added)",
+				linesToDel, linesToAdd)
 		}
 	}
 	if !hasHunks {

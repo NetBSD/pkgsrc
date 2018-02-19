@@ -6,7 +6,7 @@ func (s *Suite) Test_CheckdirToplevel(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupFileLines("Makefile",
-		MkRcsId,
+		MkRcsID,
 		"",
 		"SUBDIR+= x11",
 		"SUBDIR+=\tarchivers",

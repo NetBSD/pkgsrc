@@ -18,16 +18,20 @@ import (
 var equals = check.Equals
 var deepEquals = check.DeepEquals
 
-const RcsId = "$" + "NetBSD$"
-const MkRcsId = "# $" + "NetBSD$"
-const PlistRcsId = "@comment $" + "NetBSD$"
+const RcsID = "$" + "NetBSD$"
+const MkRcsID = "# $" + "NetBSD$"
+const PlistRcsID = "@comment $" + "NetBSD$"
 
 type Suite struct {
 	Tester *Tester
 }
 
 // Init initializes the suite with the check.C instance for the actual
-// test run. See https://github.com/go-check/check/issues/22
+// test run.
+// The returned tester can be used to easily setup the test environment
+// and check the results using a high-level API.
+//
+// See https://github.com/go-check/check/issues/22
 func (s *Suite) Init(c *check.C) *Tester {
 	t := s.Tester // Has been initialized by SetUpTest
 	if t.checkC != nil {
@@ -276,18 +280,18 @@ func (t *Tester) CheckOutputLines(expectedLines ...string) {
 	t.c().Check(emptyToNil(actualLines), deepEquals, emptyToNil(expectedLines))
 }
 
-// BeginDebugToStdout redirects all logging output to stdout instead of
+// EnableTracing redirects all logging output to stdout instead of
 // the buffer. This is useful when stepping through the code, especially
 // in combination with SetupCommandLine("--debug").
-func (t *Tester) BeginDebugToStdout() {
+func (t *Tester) EnableTracing() {
 	G.logOut = NewSeparatorWriter(os.Stdout)
 	trace.Out = os.Stdout
 	trace.Tracing = true
 }
 
-// EndDebugToStdout logs the output to the buffers again, ready to be
+// DisableTracing logs the output to the buffers again, ready to be
 // checked with CheckOutputLines.
-func (t *Tester) EndDebugToStdout() {
+func (t *Tester) DisableTracing() {
 	G.logOut = NewSeparatorWriter(&t.stdout)
 	trace.Out = &t.stdout
 	trace.Tracing = false

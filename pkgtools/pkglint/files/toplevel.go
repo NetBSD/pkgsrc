@@ -35,7 +35,7 @@ func CheckdirToplevel() {
 			G.UsedLicenses = make(map[string]bool)
 			G.Hash = make(map[string]*Hash)
 		}
-		G.Todo = append(G.Todo, ctx.subdirs...)
+		G.Todo = append(append([]string(nil), ctx.subdirs...), G.Todo...)
 	}
 }
 

@@ -589,7 +589,7 @@ func (s *Suite) Test_ShellLine__shell_comment_with_line_continuation(c *check.C)
 	t := s.Init(c)
 
 	lines := t.SetupFileLinesContinuation("Makefile",
-		MkRcsId,
+		MkRcsID,
 		"pre-install:",
 		"\t"+"# comment\\",
 		"\t"+"echo \"hello\"")
@@ -622,7 +622,7 @@ func (s *Suite) Test_ShellLine__variable_outside_quotes(c *check.C) {
 	t.SetupCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	mklines := t.NewMkLines("dummy.mk",
-		MkRcsId,
+		MkRcsID,
 		"GZIP=\t${ECHO} $$comment")
 
 	mklines.Check()

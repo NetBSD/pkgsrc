@@ -31,12 +31,12 @@ func (pr *PrefixReplacer) Rest() string {
 	return pr.rest
 }
 
-// Match returns a matching group from the last matched AdvanceRegexp.
+// Group returns a matching group from the last matched AdvanceRegexp.
 func (pr *PrefixReplacer) Group(index int) string {
 	return pr.m[index]
 }
 
-// Rest returns the last match from AdvanceStr, AdvanceBytesFunc or AdvanceHspace.
+// Str returns the last match from AdvanceStr, AdvanceBytesFunc or AdvanceHspace.
 func (pr *PrefixReplacer) Str() string {
 	return pr.s
 }

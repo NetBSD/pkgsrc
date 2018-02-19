@@ -5,6 +5,10 @@ import (
 	"strings"
 )
 
+// LoadNonemptyLines loads the given file.
+// If the file doesn't exist or is empty, an error is logged.
+//
+// See [LoadExistingLines].
 func LoadNonemptyLines(fname string, joinBackslashLines bool) []Line {
 	lines, err := readLines(fname, joinBackslashLines)
 	if err != nil {
