@@ -1,0 +1,50 @@
+$NetBSD: patch-cfg_3proxy.cfg.sample,v 1.1 2018/02/19 21:25:46 triaxx Exp $
+
+Adjust PATH according to pkgsrc defined directories.
+
+--- cfg/3proxy.cfg.sample.orig	2017-10-19 14:53:32.000000000 +0000
++++ cfg/3proxy.cfg.sample
+@@ -1,7 +1,7 @@
+-#!/usr/local/bin/3proxy
++#!@PREFIX@/bin/3proxy
+ # Yes, 3proxy.cfg can be executable, in this case you should place
+ # something like
+-#config /usr/local/3proxy/3proxy.cfg
++#config @PKG_SYSCONFDIR@/3proxy/3proxy.cfg
+ # to show which configuration 3proxy should re-read on realod.
+ 
+ #system "echo Hello world!"
+@@ -26,19 +26,19 @@ timeouts 1 5 30 60 180 1800 15 60
+ users 3APA3A:CL:3apa3a "test:CR:$1$qwer$CHFTUFGqkjue9HyhcMHEe1"
+ # note that "" required, overvise $... is treated as include file name.
+ # $1$qwer$CHFTUFGqkjue9HyhcMHEe1 is 'test' in MD5 crypt format.
+-#users $/usr/local/etc/3proxy/passwd
++#users $@PKG_SYSCONFDIR@/etc/3proxy/passwd
+ # this example shows you how to include passwd file. For included files
+ # <CR> and <LF> are treated as field separators.
+ 
+-#daemon
++daemon
+ # now we will not depend on any console (daemonize). daemon must be given
+ # before any significant command on *nix.
+ 
+-service
++#service
+ # service is required under NT if you want 3proxy to start as service
+ 
+-#log /var/log/3proxy/log D
+-log c:\3proxy\logs\3proxy.log D
++log @VARBASE@/log/3proxy/log D
++#log c:\3proxy\logs\3proxy.log D
+ # log allows to specify log file location and rotation, D means logfile
+ # is created daily
+ 
+@@ -193,7 +193,7 @@ admin
+ #tcppm 443 websrv 443
+ 
+ 
+-#chroot /usr/local/jail
++#chroot @VARBASE@/chroot/3proxy
+ #setgid 65535
+ #setuid 65535
+ # now we needn't any root rights. We can chroot and setgid/setuid.
