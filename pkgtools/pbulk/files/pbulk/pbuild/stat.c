@@ -1,4 +1,4 @@
-/* $NetBSD: stat.c,v 1.4 2015/12/07 16:52:39 joerg Exp $ */
+/* $NetBSD: stat.c,v 1.5 2018/02/19 12:03:00 wiz Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -104,7 +104,7 @@ stat_mode(const char *client_port)
 	    (unsigned long)st.failed);
 	(void)printf("  Broken due to a broken dependency: %lu\n",
 	    (unsigned long)st.indirect_failed);
-	(void)printf("  Not build as explicitly marked broken: %lu\n",
+	(void)printf("  Not built as explicitly marked broken: %lu\n",
 	    (unsigned long)st.prefailed);
 	(void)printf("  Broken due to an explicitly broken dependency: %lu\n",
 	    (unsigned long)st.indirect_prefailed);
