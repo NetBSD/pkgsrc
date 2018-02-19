@@ -54,7 +54,7 @@ func (s *Suite) Test_ChecklinesPlist__empty(c *check.C) {
 	t := s.Init(c)
 
 	lines := t.NewLines("PLIST",
-		PlistRcsId)
+		PlistRcsID)
 
 	ChecklinesPlist(lines)
 
@@ -66,10 +66,10 @@ func (s *Suite) Test_ChecklinesPlist__commonEnd(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupFileLines("PLIST.common",
-		PlistRcsId,
+		PlistRcsID,
 		"bin/common")
 	lines := t.SetupFileLines("PLIST.common_end",
-		PlistRcsId,
+		PlistRcsID,
 		"sbin/common_end")
 
 	ChecklinesPlist(lines)
@@ -83,7 +83,7 @@ func (s *Suite) Test_ChecklinesPlist__conditional(c *check.C) {
 	G.Pkg = NewPackage("category/pkgbase")
 	G.Pkg.plistSubstCond["PLIST.bincmds"] = true
 	lines := t.NewLines("PLIST",
-		PlistRcsId,
+		PlistRcsID,
 		"${PLIST.bincmds}bin/subdir/command")
 
 	ChecklinesPlist(lines)
@@ -97,7 +97,7 @@ func (s *Suite) Test_ChecklinesPlist__sorting(c *check.C) {
 
 	t.SetupCommandLine("-Wplist-sort")
 	lines := t.NewLines("PLIST",
-		PlistRcsId,
+		PlistRcsID,
 		"@comment Do not remove",
 		"sbin/i386/6c",
 		"sbin/program",
@@ -116,7 +116,7 @@ func (s *Suite) Test_PlistLineSorter_Sort(c *check.C) {
 
 	t.SetupCommandLine("--autofix")
 	lines := t.SetupFileLines("PLIST",
-		PlistRcsId,
+		PlistRcsID,
 		"@comment Do not remove",
 		"A",
 		"b",
@@ -150,7 +150,7 @@ func (s *Suite) Test_PlistLineSorter_Sort(c *check.C) {
 	t.CheckOutputLines(
 		"AUTOFIX: ~/PLIST:3: Sorting the whole file.")
 	t.CheckFileLines("PLIST",
-		PlistRcsId,
+		PlistRcsID,
 		"@comment Do not remove", // The header ends here
 		"A",
 		"C",
@@ -167,30 +167,12 @@ func (s *Suite) Test_PlistLineSorter_Sort(c *check.C) {
 		"@exec echo \"after lib/after.la\"") // The footer starts here
 }
 
-func (s *Suite) Test_PlistChecker_checkpathShare_Desktop(c *check.C) {
-	// Disabled due to PR 46570, item "10. It should stop".
-	return
-
-	t := s.Init(c)
-
-	t.SetupCommandLine("-Wextra")
-	G.Pkg = NewPackage("category/pkgpath")
-
-	ChecklinesPlist(t.NewLines("PLIST",
-		PlistRcsId,
-		"share/applications/pkgbase.desktop"))
-
-	t.CheckOutputLines(
-		"WARN: PLIST:2: Packages that install a .desktop entry " +
-			"should .include \"../../sysutils/desktop-file-utils/desktopdb.mk\".")
-}
-
 func (s *Suite) Test_PlistChecker_checkpathMan_gz(c *check.C) {
 	t := s.Init(c)
 
 	G.Pkg = NewPackage("category/pkgbase")
 	lines := t.NewLines("PLIST",
-		PlistRcsId,
+		PlistRcsID,
 		"man/man3/strerror.3.gz")
 
 	ChecklinesPlist(lines)
@@ -203,7 +185,7 @@ func (s *Suite) TestPlistChecker_checkpath__PKGMANDIR(c *check.C) {
 	t := s.Init(c)
 
 	lines := t.NewLines("PLIST",
-		PlistRcsId,
+		PlistRcsID,
 		"${PKGMANDIR}/man1/sh.1")
 
 	ChecklinesPlist(lines)
@@ -216,7 +198,7 @@ func (s *Suite) TestPlistChecker_checkpath__python_egg(c *check.C) {
 	t := s.Init(c)
 
 	lines := t.NewLines("PLIST",
-		PlistRcsId,
+		PlistRcsID,
 		"${PYSITELIB}/gdspy-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO")
 
 	ChecklinesPlist(lines)
@@ -231,7 +213,7 @@ func (s *Suite) Test_PlistChecker__autofix(c *check.C) {
 	t.SetupCommandLine("-Wall")
 
 	fname := t.CreateFileLines("PLIST",
-		PlistRcsId,
+		PlistRcsID,
 		"lib/libvirt/connection-driver/libvirt_driver_storage.la",
 		"${PLIST.hal}lib/libvirt/connection-driver/libvirt_driver_nodedev.la",
 		"${PLIST.xen}lib/libvirt/connection-driver/libvirt_driver_libxl.la",
@@ -271,7 +253,7 @@ func (s *Suite) Test_PlistChecker__autofix(c *check.C) {
 		"AUTOFIX: ~/PLIST:2: Sorting the whole file.")
 	c.Check(len(lines), equals, len(fixedLines))
 	t.CheckFileLines("PLIST",
-		PlistRcsId,
+		PlistRcsID,
 		"${PLIST.xen}lib/libvirt/connection-driver/libvirt_driver_libxl.la",
 		"${PLIST.hal}lib/libvirt/connection-driver/libvirt_driver_nodedev.la",
 		"lib/libvirt/connection-driver/libvirt_driver_storage.la",
@@ -302,7 +284,7 @@ func (s *Suite) Test_PlistChecker__remove_same_entries(c *check.C) {
 
 	t.SetupCommandLine("-Wall")
 	lines := t.SetupFileLines("PLIST",
-		PlistRcsId,
+		PlistRcsID,
 		"${PLIST.option1}bin/true",
 		"bin/true",
 		"${PLIST.option1}bin/true",
@@ -331,7 +313,7 @@ func (s *Suite) Test_PlistChecker__remove_same_entries(c *check.C) {
 		"AUTOFIX: ~/PLIST:8: Deleting this line.",
 		"AUTOFIX: ~/PLIST:2: Sorting the whole file.")
 	t.CheckFileLines("PLIST",
-		PlistRcsId,
+		PlistRcsID,
 		"${PLIST.option2}bin/false",
 		"${PLIST.option3}bin/false",
 		"bin/true")
