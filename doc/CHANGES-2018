@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.698 2018/02/19 12:52:37 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.699 2018/02/19 12:59:49 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1020,3 +1020,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated geography/py-gdal to 2.2.3 [ryoon 2018-02-19]
 	Updated pkgtools/pkglint to 5.5.5 [rillig 2018-02-19]
 	Updated geography/qgis to 2.18.16 [ryoon 2018-02-19]
+	Updated net/powerdns to 4.1.1 [fhajny 2018-02-19]
