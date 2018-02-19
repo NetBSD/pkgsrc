@@ -585,6 +585,7 @@ func (gd *GlobalData) InitVartypes() {
 	pkg("GNU_CONFIGURE_LIBSUBDIR", lkNone, BtPathname)
 	acl("GNU_CONFIGURE_MANDIR", lkNone, BtPathname, "Makefile, Makefile.common: set")
 	acl("GNU_CONFIGURE_PREFIX", lkNone, BtPathname, "Makefile: set")
+	pkg("GOPATH", lkNone, BtPathname)
 	acl("HAS_CONFIGURE", lkNone, BtYes, "Makefile, Makefile.common: set")
 	pkglist("HEADER_TEMPLATES", lkShell, BtPathname)
 	pkg("HOMEPAGE", lkNone, BtHomepage)
@@ -1015,7 +1016,7 @@ func acl(varname string, kindOfList KindOfList, checker *BasicType, aclentries s
 	m := mustMatch(varname, `^([A-Z_.][A-Z0-9_]*)(|\*|\.\*)$`)
 	varbase, varparam := m[1], m[2]
 
-	vtype := &Vartype{kindOfList, checker, parseAclEntries(varname, aclentries), false}
+	vtype := &Vartype{kindOfList, checker, parseACLEntries(varname, aclentries), false}
 
 	if G.globalData.vartypes == nil {
 		G.globalData.vartypes = make(map[string]*Vartype)
@@ -1028,11 +1029,11 @@ func acl(varname string, kindOfList KindOfList, checker *BasicType, aclentries s
 	}
 }
 
-func parseAclEntries(varname string, aclentries string) []AclEntry {
+func parseACLEntries(varname string, aclentries string) []ACLEntry {
 	if aclentries == "" {
 		return nil
 	}
-	var result []AclEntry
+	var result []ACLEntry
 	prevperms := "(first)"
 	for _, arg := range strings.Split(aclentries, "; ") {
 		var globs, perms string
@@ -1045,7 +1046,7 @@ func parseAclEntries(varname string, aclentries string) []AclEntry {
 			fmt.Printf("Repeated permissions for %s: %s\n", varname, perms)
 		}
 		prevperms = perms
-		var permissions AclPermissions
+		var permissions ACLPermissions
 		for _, perm := range strings.Split(perms, ", ") {
 			switch perm {
 			case "append":
@@ -1079,7 +1080,7 @@ func parseAclEntries(varname string, aclentries string) []AclEntry {
 					print(fmt.Sprintf("Ineffective ACL glob %q for varname %q.\n", glob, varname))
 				}
 			}
-			result = append(result, AclEntry{glob, permissions})
+			result = append(result, ACLEntry{glob, permissions})
 		}
 	}
 	return result

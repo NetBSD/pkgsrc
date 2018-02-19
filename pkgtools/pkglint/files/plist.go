@@ -342,17 +342,6 @@ func (ck *PlistChecker) checkpathMan(pline *PlistLine) {
 func (ck *PlistChecker) checkpathShare(pline *PlistLine) {
 	line, text := pline.line, pline.text
 	switch {
-	// Disabled due to PR 46570, item "10. It should stop".
-	case false && hasPrefix(text, "share/applications/") && hasSuffix(text, ".desktop"):
-		f := "../../sysutils/desktop-file-utils/desktopdb.mk"
-		if G.opts.WarnExtra && G.Pkg != nil && G.Pkg.included[f] == nil {
-			line.Warnf("Packages that install a .desktop entry should .include %q.", f)
-			Explain(
-				"If *.desktop files contain MimeType keys, the global MIME type",
-				"registry must be updated by desktop-file-utils.  Otherwise, this",
-				"warning is harmless.")
-		}
-
 	case hasPrefix(text, "share/icons/") && G.Pkg != nil:
 		if hasPrefix(text, "share/icons/hicolor/") && G.Pkg.Pkgpath != "graphics/hicolor-icon-theme" {
 			f := "../../graphics/hicolor-icon-theme/buildlink3.mk"

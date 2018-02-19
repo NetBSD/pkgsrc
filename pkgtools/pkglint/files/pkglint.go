@@ -26,6 +26,8 @@ func main() {
 
 type Pkglint struct{}
 
+// Main runs the main program with the given arguments.
+// args[0] is the program name.
 func (pkglint *Pkglint) Main(args ...string) (exitcode int) {
 	defer func() {
 		if r := recover(); r != nil {
@@ -481,7 +483,7 @@ func Checkfile(fname string) {
 
 	case hasPrefix(basename, "CHANGES-"):
 		// This only checks the file, but doesn't register the changes globally.
-		G.globalData.loadDocChangesFromFile(fname)
+		_ = G.globalData.loadDocChangesFromFile(fname)
 
 	case matches(fname, `(?:^|/)files/[^/]*$`):
 		// Skip

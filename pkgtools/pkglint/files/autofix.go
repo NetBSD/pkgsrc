@@ -160,7 +160,7 @@ func (fix *Autofix) InsertBefore(text string) {
 	fix.Describef(fix.lines[0].Lineno, "Inserting a line %q before this line.", text)
 }
 
-// InsertBefore appends a line after the current line.
+// InsertAfter appends a line after the current line.
 // The newline is added internally.
 func (fix *Autofix) InsertAfter(text string) {
 	if fix.skip() {
@@ -196,14 +196,14 @@ func (fix *Autofix) Notef(format string, args ...interface{}) {
 	fix.diagArgs = args
 }
 
-// Notef remembers the warning for logging it later when Apply is called.
+// Warnf remembers the warning for logging it later when Apply is called.
 func (fix *Autofix) Warnf(format string, args ...interface{}) {
 	fix.level = llWarn
 	fix.diagFormat = format
 	fix.diagArgs = args
 }
 
-// Notef remembers the error for logging it later when Apply is called.
+// Errorf remembers the error for logging it later when Apply is called.
 func (fix *Autofix) Errorf(format string, args ...interface{}) {
 	fix.level = llError
 	fix.diagFormat = format
@@ -215,7 +215,8 @@ func (fix *Autofix) Explain(explanation ...string) {
 	fix.explanation = explanation
 }
 
-// Depending on the pkglint mode, either:
+// Apply does the actual work.
+// Depending on the pkglint mode, it either:
 //
 // * logs the associated message (default)
 // * logs what would be fixed (--show-autofix)
