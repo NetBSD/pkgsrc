@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2017/08/11 22:17:34 maya Exp $
+# $NetBSD: Makefile,v 1.41 2018/02/19 17:59:23 mrg Exp $
 
 DISTNAME=	libusb-0.1.12
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libusb/}
 
