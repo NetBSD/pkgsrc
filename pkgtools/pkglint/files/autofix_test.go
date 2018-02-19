@@ -255,7 +255,7 @@ func (s *Suite) Test_Autofix_show_source_code(c *check.C) {
 
 	t.SetupCommandLine("--show-autofix", "--source")
 	lines := t.SetupFileLinesContinuation("Makefile",
-		MkRcsId,
+		MkRcsID,
 		"before \\",
 		"The old song \\",
 		"after")
