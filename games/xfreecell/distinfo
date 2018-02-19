@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 20:57:08 agc Exp $
+$NetBSD: distinfo,v 1.11 2018/02/19 09:51:48 he Exp $
 
 SHA1 (xfreecell-1.0.5b.tgz) = b0453b09ea2211822a5f03f532097c9eb14db2a6
 RMD160 (xfreecell-1.0.5b.tgz) = 2629217bf29734bb25b30ca8aaec62ae19d0ff6f
@@ -7,11 +7,20 @@ Size (xfreecell-1.0.5b.tgz) = 49367 bytes
 SHA1 (patch-aa) = d5235b5a34df4ea12c249d680cc6e674f1c50626
 SHA1 (patch-ab) = a34285fa7e8564d18d91cdb23affd1afb5cd8938
 SHA1 (patch-ac) = f2fb8f2db71c4051eb28352f02a0fed09f69f97f
-SHA1 (patch-ad) = cfdf8f50b5bba32ea8a1bc048e89e0594e85c072
 SHA1 (patch-ae) = cbdf88cf997d8f4dfd683dc0e0d10a46d3ec848b
-SHA1 (patch-card.cpp) = 7a1f8f07d1a9cdba4427771ab3e7553ae667d7df
+SHA1 (patch-boundingMask.bm) = 80f3632ea2774fdd176c3e8d424cc318f3d104ff
+SHA1 (patch-card.cpp) = 38396dcd23e72ffab6590caab15a98f3fd3b8fce
+SHA1 (patch-clipMask.bm) = e2ca037417396eb5c0c458ce868a7bb0f10d5b6c
+SHA1 (patch-face.bm) = b30e39dc9490f14fe574c2b455ec6767953cfb21
 SHA1 (patch-freecell.cpp) = 298cc7c3c65b9371ed65a1e987a5d5c790e2ee73
 SHA1 (patch-option.cpp) = 31cc65ae105f5fa3885717a4ff99341a864978dc
+SHA1 (patch-rank.bm) = a36d86bbc6e177de61132b552dcc17671031a338
+SHA1 (patch-spade_lg.bm) = 1f491a350c426739fdb2035782c4be4523b37bbb
+SHA1 (patch-stack.cpp) = ec918200d3e3a1b866671cc41b7f416ff5b113a1
+SHA1 (patch-suit.bm) = 3ee476c43436d8ac25ef48ed5c650f32846dc7a5
+SHA1 (patch-util.cpp) = 319924dbb57de58b2815367ad0f3e28e053f049b
+SHA1 (patch-util.h) = c4c00600f8bab887fc6291b6d44218f8780dc697
 SHA1 (patch-widget_font.cpp) = 968f4142220d7470819e8ead79e00195ba2837dd
 SHA1 (patch-widget_scrollbar.cpp) = 006e69e6dcb96448fd04d21d049f113fde756cc3
-SHA1 (patch-widget_util.cpp) = 5ea757fee16555cec98b6ba0d983fde22c2345c1
+SHA1 (patch-widget_util.cpp) = 9f84e3268238b58c17315b08764b9dcddbd7a348
+SHA1 (patch-widget_widget.h) = da99f6b9cb99b708c7547f30dada2b5cbaa2732c
