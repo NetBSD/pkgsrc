@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.691 2018/02/19 01:01:57 kamil Exp $
+$NetBSD: CHANGES-2018,v 1.692 2018/02/19 01:57:17 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1011,3 +1011,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/keystone to 0.9.1 [kamil 2018-02-19]
 	Updated emulators/py-keystone to 0.9.1 [kamil 2018-02-19]
 	Updated devel/ropper to 1.11.6 [kamil 2018-02-19]
+	Added devel/radare2-cutter version 1.2 [kamil 2018-02-19]
+	Removed devel/radare2-valabind [kamil 2018-02-19]
+	Removed devel/py-radare2 [kamil 2018-02-19]
