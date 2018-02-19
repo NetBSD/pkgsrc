@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/02/11 01:35:27 mef Exp $
+# $NetBSD: Makefile,v 1.4 2018/02/19 01:01:46 kamil Exp $
 
-DISTNAME=	Ropper-1.10.10
+DISTNAME=	Ropper-1.11.6
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sashs/}
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-capstone-[0-9]*:../../devel/py-capstone
 DEPENDS+=	${PYPKGPREFIX}-filebytes-[0-9]*:../../devel/py-filebytes
 DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
-# Optional but needed for extra features
-# The keystone software is now public so this will be likely be mandatory soon
 DEPENDS+=	${PYPKGPREFIX}-keystone-[0-9]*:../../emulators/py-keystone
 
 USE_LANGUAGES=	# none
