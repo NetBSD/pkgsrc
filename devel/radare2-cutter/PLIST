@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/19 01:48:57 kamil Exp $
+bin/cutter
+share/applications/cutter.desktop
+share/doc/radare2-cutter/Common-errors.md
+share/doc/radare2-cutter/Compiling-on-Windows.md
+share/doc/radare2-cutter/Compiling-with-CMake.md
+share/doc/radare2-cutter/screenshot.png
+share/icons/hicolor/scalable/apps/cutter.svg
