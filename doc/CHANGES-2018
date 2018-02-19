@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.692 2018/02/19 01:57:17 kamil Exp $
+$NetBSD: CHANGES-2018,v 1.693 2018/02/19 09:52:24 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1014,3 +1014,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/radare2-cutter version 1.2 [kamil 2018-02-19]
 	Removed devel/radare2-valabind [kamil 2018-02-19]
 	Removed devel/py-radare2 [kamil 2018-02-19]
+	Updated games/xfreecell to 1.0.5bnb3 [he 2018-02-19]
