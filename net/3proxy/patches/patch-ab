@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2015/04/06 02:26:53 rodent Exp $
+$NetBSD: patch-ab,v 1.3 2018/02/19 21:25:46 triaxx Exp $
+
+Compliance with toupper() documentation.
 
 --- src/ntlm.c.orig	2015-02-17 13:07:21.000000000 +0000
 +++ src/ntlm.c
