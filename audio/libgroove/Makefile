@@ -1,32 +1,50 @@
-# $NetBSD: Makefile,v 1.17 2017/02/24 21:54:51 maya Exp $
+# $NetBSD: Makefile,v 1.18 2018/02/20 05:17:31 kamil Exp $
 
-DISTNAME=	3.1.1
-PKGNAME=	libgroove-${DISTNAME}
-PKGREVISION=	14
+DISTNAME=	libgroove-4.3.0
 CATEGORIES=	audio
-MASTER_SITES=	https://github.com/andrewrk/libgroove/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=andrewrk/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/andrewrk/libgroove/
 COMMENT=	Audio dispatching library
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-
 USE_CMAKE=	yes
 USE_TOOLS+=	gmake pkg-config perl:build
 USE_LANGUAGES=	c c++
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+SOEXT=	dylib
+.else
+SOEXT=	so
+.endif
+
+CMAKE_ARGS+=	-DAVFILTER_INCLUDE_DIRS:PATH=${BUILDLINK_PREFIX.ffmpeg3}/include/ffmpeg3
+CMAKE_ARGS+=	-DAVFILTER_LIBRARIES:PATH=${BUILDLINK_PREFIX.ffmpeg3}/lib/ffmpeg3/libavfilter.${SOEXT}
+
+CMAKE_ARGS+=	-DAVFORMAT_INCLUDE_DIRS:PATH=${BUILDLINK_PREFIX.ffmpeg3}/include/ffmpeg3
+CMAKE_ARGS+=	-DAVFORMAT_LIBRARIES:PATH=${BUILDLINK_PREFIX.ffmpeg3}/lib/ffmpeg3/libavformat.${SOEXT}
+
+CMAKE_ARGS+=	-DAVCODEC_INCLUDE_DIRS:PATH=${BUILDLINK_PREFIX.ffmpeg3}/include/ffmpeg3
+CMAKE_ARGS+=	-DAVCODEC_LIBRARIES:PATH=${BUILDLINK_PREFIX.ffmpeg3}/lib/ffmpeg3/libavcodec.${SOEXT}
+
+CMAKE_ARGS+=	-DAVUTIL_INCLUDE_DIRS:PATH=${BUILDLINK_PREFIX.ffmpeg3}/include/ffmpeg3
+CMAKE_ARGS+=	-DAVUTIL_LIBRARIES:PATH=${BUILDLINK_PREFIX.ffmpeg3}/lib/ffmpeg3/libavutil.${SOEXT}
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 .endif
 
-DIST_SUBDIR=	libgroove
+BUILDLINK_TRANSFORM+=	rm:-Werror
+
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 .include "../../audio/chromaprint/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libebur128/buildlink3.mk"
 .include "../../audio/speexdsp/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
-.include "../../multimedia/ffmpeg2/buildlink3.mk"
+.include "../../multimedia/ffmpeg3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
