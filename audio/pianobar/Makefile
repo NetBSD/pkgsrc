@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2018/01/01 21:18:15 adam Exp $
+# $NetBSD: Makefile,v 1.10 2018/02/20 02:59:38 kamil Exp $
 
-DISTNAME=	pianobar-2015.11.22
-PKGREVISION=	8
+DISTNAME=	pianobar-2017.08.30
 CATEGORIES=	audio net
-MASTER_SITES=	https://6xq.net/pianobar/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=PromyLOPh/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://6xq.net/pianobar/
@@ -16,10 +14,12 @@ USE_LANGUAGES=	c99
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+
 .include "../../audio/libao/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
-.include "../../multimedia/ffmpeg2/buildlink3.mk"
+.include "../../multimedia/ffmpeg3/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
