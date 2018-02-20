@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.706 2018/02/19 21:29:29 triaxx Exp $
+$NetBSD: CHANGES-2018,v 1.707 2018/02/20 02:55:55 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1032,3 +1032,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/percona-toolkit to 3.0.6 [fhajny 2018-02-19]
 	Updated net/3proxy to 0.8.11 [triaxx 2018-02-19]
 	Updated net/3proxy to 0.8.11 [triaxx 2018-02-19]
+	Updated pkgtools/verifypc to 1.7 [dholland 2018-02-20]
