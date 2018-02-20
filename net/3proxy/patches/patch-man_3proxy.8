@@ -1,0 +1,24 @@
+$NetBSD: patch-man_3proxy.8,v 1.1 2018/02/20 13:01:30 triaxx Exp $
+
+Fix hardcoded PATH.
+
+--- man/3proxy.8.orig	2016-01-23 16:09:23.000000000 +0000
++++ man/3proxy.8
+@@ -84,7 +84,7 @@ directory). Under Unix, if no config fil
+ configuration from stdin. It makes it possible to use 3proxy.cfg file as
+ executable script just by setting +x mode and adding
+ .br
+-#!/usr/local/3proxy/3proxy
++#!@PREFIX@/bin/3proxy
+ .br
+ as a first line in 3proxy.cfg
+ .TP
+@@ -133,7 +133,7 @@ Web admin service can also be used to re
+ wget to automate this task.
+ .SH FILES
+ .TP
+-.I "/usr/local/3proxy/3proxy.cfg (3proxy.cfg)"
++.I "@PKG_SYSCONFDIR@/3proxy/3proxy.cfg (3proxy.cfg)"
+ .BR 3proxy
+ configuration file
+ .SH BUGS
