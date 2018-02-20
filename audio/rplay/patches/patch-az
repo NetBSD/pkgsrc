@@ -1,4 +1,6 @@
-$NetBSD: patch-az,v 1.1 2008/04/03 11:03:21 joerg Exp $
+$NetBSD: patch-az,v 1.2 2018/02/20 08:35:52 dholland Exp $
+
+Use standard headers.
 
 --- rplayd/rplayd.c.orig	2008-04-03 12:49:24.000000000 +0200
 +++ rplayd/rplayd.c

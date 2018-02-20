@@ -1,4 +1,6 @@
-$NetBSD: patch-devrplay_devrplay.c,v 1.1 2012/02/06 02:40:29 sbd Exp $
+$NetBSD: patch-devrplay_devrplay.c,v 1.2 2018/02/20 08:35:52 dholland Exp $
+
+Fix Linux build.
 
 --- devrplay/devrplay.c.orig	1999-03-21 00:44:48.000000000 +0000
 +++ devrplay/devrplay.c

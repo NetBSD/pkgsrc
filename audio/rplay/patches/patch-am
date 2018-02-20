@@ -1,4 +1,6 @@
-$NetBSD: patch-am,v 1.1 2000/01/26 22:11:37 jlam Exp $
+$NetBSD: patch-am,v 1.2 2018/02/20 08:35:52 dholland Exp $
+
+Fix compilation.
 
 --- rplayd/sound.h.orig	Wed Jun  9 02:27:44 1999
 +++ rplayd/sound.h	Tue Jan 18 16:15:33 2000
