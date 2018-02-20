@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.712 2018/02/20 08:44:12 dholland Exp $
+$NetBSD: CHANGES-2018,v 1.713 2018/02/20 09:38:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1038,3 +1038,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/p5-Time-HiRes to 1.9754 [wen 2018-02-20]
 	Updated audio/libgroove to 4.3.0 [kamil 2018-02-20]
 	Updated audio/rplay to 3.3.2nb9 [dholland 2018-02-20]
+	Updated devel/git to 2.16.2 [adam 2018-02-20]
+	Updated www/py-yarl to 1.1.1 [adam 2018-02-20]
+	Updated textproc/py-natsort to 5.2.0 [adam 2018-02-20]
+	Updated graphics/leptonica to 1.75.3 [adam 2018-02-20]
