@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.714 2018/02/20 10:00:06 wen Exp $
+$NetBSD: CHANGES-2018,v 1.715 2018/02/20 10:08:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1043,3 +1043,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-natsort to 5.2.0 [adam 2018-02-20]
 	Updated graphics/leptonica to 1.75.3 [adam 2018-02-20]
 	Updated textproc/p5-XML-SAX to 1.00 [wen 2018-02-20]
+	Updated textproc/p5-Text-Template to 1.50 [wen 2018-02-20]
+
