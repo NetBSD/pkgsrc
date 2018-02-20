@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.363 2018/02/12 19:50:30 minskim Exp $
+# $NetBSD: Makefile,v 1.364 2018/02/20 14:04:23 fhajny Exp $
 
 COMMENT=	Mathematics
 
@@ -208,6 +208,7 @@ SUBDIR+=	p5-Math-Complex
 SUBDIR+=	p5-Math-Derivative
 SUBDIR+=	p5-Math-FFT
 SUBDIR+=	p5-Math-GMP
+SUBDIR+=	p5-Math-Int64
 SUBDIR+=	p5-Math-Interpolate
 SUBDIR+=	p5-Math-MatrixReal
 SUBDIR+=	p5-Math-Pari
