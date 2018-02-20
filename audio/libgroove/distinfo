@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 01:12:36 agc Exp $
+$NetBSD: distinfo,v 1.4 2018/02/20 05:17:31 kamil Exp $
 
-SHA1 (libgroove/3.1.1.tar.gz) = e73b091eb9e6d81c5a223c216967f2344606a25c
-RMD160 (libgroove/3.1.1.tar.gz) = d494f8010188472dd0716920de760dae2b1fe7e5
-SHA512 (libgroove/3.1.1.tar.gz) = f4bcc53b0a6ce7c9a90bb0ac7bab8fadade9d510c2d49f94f4082c96c2c32cecd0be3c3944578fce659e7794a3d15b20d09263a2e419d5d0472a82d96533dda2
-Size (libgroove/3.1.1.tar.gz) = 8584469 bytes
+SHA1 (libgroove-4.3.0.tar.gz) = 3d64b6bb5ba14043ae1924b8e8f96bb0716f469d
+RMD160 (libgroove-4.3.0.tar.gz) = af4b30b7fbc887bc030d3bb18f34576ce7a0a16f
+SHA512 (libgroove-4.3.0.tar.gz) = 30d75a3b1b3efa9b33687bb146648b66f8f4c718551c0db2c24c0259f09cf355a7c7bbac40d60d7a97bbbd7f83401d09464c6ac2b18cdfcd6198220cefc8a705
+Size (libgroove-4.3.0.tar.gz) = 48857 bytes
