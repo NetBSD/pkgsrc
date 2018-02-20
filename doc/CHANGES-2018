@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.718 2018/02/20 12:44:18 wen Exp $
+$NetBSD: CHANGES-2018,v 1.719 2018/02/20 13:19:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1047,3 +1047,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-PathTools to 3.74 [wen 2018-02-20]
 	Updated devel/p5-Object-Realize-Later to 0.21 [wen 2018-02-20]
 	Updated devel/p5-Module-ExtractUse to 0.342 [wen 2018-02-20]
+	Updated mail/fetchmail to 6.3.22nb4 [wiz 2018-02-20]
