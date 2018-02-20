@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/02/19 21:25:46 triaxx Exp $
+# $NetBSD: Makefile,v 1.12 2018/02/20 13:01:30 triaxx Exp $
 #
 
 DISTNAME=	3proxy-0.8.11
@@ -30,10 +30,10 @@ INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 ${EGDIR}
 SUBST_CLASSES+=		cfg
 SUBST_STAGE.cfg=	pre-install
 SUBST_MESSAGE.cfg=	Adjusting config sample file.
-SUBST_FILES.cfg=	cfg/3proxy.cfg.sample
-SUBST_SED.cfg=		-e "s|@PREFIX@|${PREFIX}|g"
-SUBST_SED.cfg+=		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
-SUBST_SED.cfg+=		-e "s|@VARBASE@|${VARBASE}|g"
+SUBST_FILES.cfg=	cfg/3proxy.cfg.sample man/3proxy.8 man/3proxy.cfg.3
+SUBST_VARS.cfg+=	PREFIX
+SUBST_VARS.cfg+=	PKG_SYSCONFDIR
+SUBST_VARS.cfg+=	VARBASE
 
 # We install only 3proxy and its man pages.  There are several other
 # binaries which we don't install, because the 3proxy executable
