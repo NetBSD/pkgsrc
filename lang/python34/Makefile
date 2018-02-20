@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/02/05 17:35:12 adam Exp $
+# $NetBSD: Makefile,v 1.25 2018/02/20 06:42:32 wiz Exp $
 
 .include "dist.mk"
 
@@ -35,6 +35,10 @@ PTHREAD_OPTS+=	require
 .include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-8.99.[1-9][0-9]-*)
+BROKEN=		python-3.4 does not support OpenSSL-1.1
+.endif
 
 # http://bugs.python.org/issue13241
 .if !empty(MACHINE_PLATFORM:MDarwin-10.*)
