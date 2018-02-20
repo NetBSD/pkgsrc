@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.724 2018/02/20 14:11:21 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.725 2018/02/20 22:22:55 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1053,3 +1053,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/p5-Math-Int64 version 0.54 [fhajny 2018-02-20]
 	Added security/p5-Net-SFTP version 0.11 [fhajny 2018-02-20]
 	Added net/p5-Net-Stomp version 0.57 [fhajny 2018-02-20]
+	Added devel/goyacc version 0.20170314 [rillig 2018-02-20]
