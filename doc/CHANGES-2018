@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.723 2018/02/20 14:08:48 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.724 2018/02/20 14:11:21 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1052,3 +1052,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/p5-Data-UUID-Base64URLSafe version 0.35 [fhajny 2018-02-20]
 	Added math/p5-Math-Int64 version 0.54 [fhajny 2018-02-20]
 	Added security/p5-Net-SFTP version 0.11 [fhajny 2018-02-20]
+	Added net/p5-Net-Stomp version 0.57 [fhajny 2018-02-20]
