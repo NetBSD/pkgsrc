@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.721 2018/02/20 14:01:32 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.722 2018/02/20 14:04:42 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1050,3 +1050,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/fetchmail to 6.3.22nb4 [wiz 2018-02-20]
 	Added devel/p5-Cache-Memcached-Fast version 0.25 [fhajny 2018-02-20]
 	Added devel/p5-Data-UUID-Base64URLSafe version 0.35 [fhajny 2018-02-20]
+	Added math/p5-Math-Int64 version 0.54 [fhajny 2018-02-20]
