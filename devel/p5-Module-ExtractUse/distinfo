@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/05/03 12:39:35 mef Exp $
+$NetBSD: distinfo,v 1.6 2018/02/20 12:42:55 wen Exp $
 
-SHA1 (Module-ExtractUse-0.341.tar.gz) = ae5926b6b7f965f17d7fb133637a61e0afe9ed4a
-RMD160 (Module-ExtractUse-0.341.tar.gz) = 9ea55a28af60bf88db640461f399224747d2b411
-SHA512 (Module-ExtractUse-0.341.tar.gz) = bacabcf37bdfa0683ec661527f2e5d2c185fb7a97bac3b93bc5a24d0a01f5a3f0bca039a98e58377f12dc01173ba18afbf56b2221e3d819ceb843c32487347d7
-Size (Module-ExtractUse-0.341.tar.gz) = 47225 bytes
+SHA1 (Module-ExtractUse-0.342.tar.gz) = 2d81799a9be6259ebdd752031dedfffecd9bfac0
+RMD160 (Module-ExtractUse-0.342.tar.gz) = 1a63de7fe0dd568716e047d93c20f72ea3e0537a
+SHA512 (Module-ExtractUse-0.342.tar.gz) = aed259d7b777ed44ef029b8b79d5b6fb4c9f7be046f471637cfe7850912bd38ca85115a06cb6a5ed63decbf08d0c4fa1e65d2de25cf39ca62442f9e05a079eaf
+Size (Module-ExtractUse-0.342.tar.gz) = 47941 bytes
