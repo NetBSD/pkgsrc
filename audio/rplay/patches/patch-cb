@@ -1,7 +1,10 @@
-$NetBSD: patch-cb,v 1.1 2004/12/22 16:19:34 ben Exp $
---- rplayd/audio/audio_NetBSD.c.orig	Sat Dec 18 17:40:37 2004
-+++ rplayd/audio/audio_NetBSD.c	Sat Dec 18 18:19:18 2004
-@@ -0,0 +1,598 @@
+$NetBSD: patch-cb,v 1.2 2018/02/20 08:35:52 dholland Exp $
+
+Backend for NetBSD.
+
+--- rplayd/audio/audio_NetBSD.c.orig	2018-02-20 08:02:48.586673776 +0000
++++ rplayd/audio/audio_NetBSD.c
+@@ -0,0 +1,599 @@
 +/* #Id: audio_NetBSD  0.02  2004/12/18  OHt # */
 +
 +/*
@@ -37,6 +40,7 @@ $NetBSD: patch-cb,v 1.1 2004/12/22 16:19:34 ben Exp $
 +#include <sys/fcntl.h>
 +#include <sys/errno.h>
 +#include <sys/audioio.h>
++#include <unistd.h>
 +#include <errno.h>
 +
 +/*
