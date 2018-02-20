@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/01/16 11:28:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2018/02/20 06:42:20 wiz Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -45,6 +45,10 @@ INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
 # and lacks the zone memory allocator
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
 CFLAGS+=	-DSQLITE_ENABLE_LOCKING_STYLE=0 -DSQLITE_WITHOUT_ZONEMALLOC
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-8.99.[1-9][0-9]-*)
+BROKEN=		php-5.6 does not support OpenSSL-1.1
 .endif
 
 post-install:
