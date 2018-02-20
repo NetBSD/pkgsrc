@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.711 2018/02/20 05:17:43 kamil Exp $
+$NetBSD: CHANGES-2018,v 1.712 2018/02/20 08:44:12 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1037,3 +1037,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/p5-DateTime to 1.46 [wen 2018-02-20]
 	Updated time/p5-Time-HiRes to 1.9754 [wen 2018-02-20]
 	Updated audio/libgroove to 4.3.0 [kamil 2018-02-20]
+	Updated audio/rplay to 3.3.2nb9 [dholland 2018-02-20]
