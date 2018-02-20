@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2015/11/04 03:28:44 agc Exp $
+$NetBSD: distinfo,v 1.19 2018/02/20 10:53:30 dholland Exp $
 
 SHA1 (lesstif-0.95.2.tar.bz2) = b894e544d529a235a6a665d48ca94a465f44a4e5
 RMD160 (lesstif-0.95.2.tar.bz2) = 643fd81b70b6e8617803ddc4350272ca89b4a71f
@@ -13,3 +13,4 @@ SHA1 (patch-aq) = a238d0be4d69d16e964651a112c4fcf421b06f2a
 SHA1 (patch-ar) = e4aefbc8c31bece408185d6bd9266f11d6852f7c
 SHA1 (patch-bm) = b32febe539b375a0ea8adfddeec01588927f9046
 SHA1 (patch-bn) = f96d95358a76db1a371bfc3ea7a3ba6b9d1d536f
+SHA1 (patch-include_Motif-2.1_Xm_XmAll.h) = c1d6ba9b36151ab01f6751916f38357c8f1929e6
