@@ -6,5 +6,5 @@ Python versions. I hope that this will provide two benefits:
    Package Index.
 2. When you are ready to port a Python application to a new version of Python,
    you can search the code for any import statements that name a backports
-   package, and remove the backports for features that have now “arrived” in
+   package, and remove the backports for features that have now "arrived" in
    the version of Python to which you are upgrading.
