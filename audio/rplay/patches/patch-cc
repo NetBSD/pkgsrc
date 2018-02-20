@@ -1,4 +1,6 @@
-$NetBSD: patch-cc,v 1.1 2004/12/22 16:19:34 ben Exp $
+$NetBSD: patch-cc,v 1.2 2018/02/20 08:35:52 dholland Exp $
+
+Avoid defining own magic numbers.
 
 --- adpcm/g72x.h.orig	Tue Jul 14 15:35:23 1998
 +++ adpcm/g72x.h

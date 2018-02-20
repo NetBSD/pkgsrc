@@ -1,4 +1,6 @@
-$NetBSD: patch-devrplay_Makefile.in,v 1.1 2012/02/06 02:40:29 sbd Exp $
+$NetBSD: patch-devrplay_Makefile.in,v 1.2 2018/02/20 08:35:52 dholland Exp $
+
+libtoolize.
 
 --- devrplay/Makefile.in.orig	1999-03-23 02:36:30.000000000 +0000
 +++ devrplay/Makefile.in
