@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/01/16 16:29:42 adam Exp $
+# $NetBSD: Makefile,v 1.14 2018/02/20 12:57:32 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 COMMENT=	MySQL 5, a free SQL database (server)
@@ -65,8 +65,7 @@ REPLACE_SH+=		mysql-test/t/long_tmpdir-master.sh
 REPLACE_SH+=		mysql-test/t/lowercase_mixed_tmpdir-master.sh
 REPLACE_SH+=		mysql-test/t/lowercase_mixed_tmpdir_innodb-master.sh
 
-CHECK_INTERPRETER_SKIP+=share/mysql/test/std_data/dtrace.d \
-			share/mysql/test/suite/opt_trace/validate_json.py
+CHECK_INTERPRETER_SKIP+=share/mysql/test/std_data/dtrace.d
 
 SUBST_CLASSES+=		perlpath
 SUBST_STAGE.perlpath=	pre-configure
@@ -75,14 +74,6 @@ SUBST_FILES.perlpath=	scripts/mysql_config.pl.in
 SUBST_FILES.perlpath+=	scripts/mysqld_multi.sh
 SUBST_FILES.perlpath+=	scripts/mysqldumpslow.sh
 SUBST_SED.perlpath=	-e 's,@PERL_PATH@,${PERL5},g'
-
-# Replace interpreter without pulling in Python dependecy
-# Update when PYTHON_VERSION_DEFAULT changes!
-SUBST_CLASSES+=		python
-SUBST_MESSAGE.python=	Fixing Python path.
-SUBST_STAGE.python=	pre-configure
-SUBST_FILES.python+=	mysql-test/suite/opt_trace/validate_json.py
-SUBST_SED.python+=	-e 's,/usr/bin/python,${PREFIX}/bin/python2.7,'
 
 INSTALLATION_DIRS+=	bin
 
