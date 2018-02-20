@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.216 2018/01/25 10:29:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.217 2018/02/20 07:04:54 dholland Exp $
 
 DISTNAME=	netpbm-10.79.04
 CATEGORIES=	graphics
@@ -36,6 +36,7 @@ REPLACE_PERL+=	editor/ppmquant
 REPLACE_PERL+=	editor/ppmshadow
 REPLACE_PERL+=	generator/ppmrainbow
 REPLACE_PERL+=	manweb
+REPLACE_SH+=	buildtools/stamp-date
 STAGEDIR=	${WRKDIR}/staging
 WRKSRC=		${WRKDIR}/netpbm
 
