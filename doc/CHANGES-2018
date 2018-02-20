@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.707 2018/02/20 02:55:55 dholland Exp $
+$NetBSD: CHANGES-2018,v 1.708 2018/02/20 02:59:49 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1033,3 +1033,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/3proxy to 0.8.11 [triaxx 2018-02-19]
 	Updated net/3proxy to 0.8.11 [triaxx 2018-02-19]
 	Updated pkgtools/verifypc to 1.7 [dholland 2018-02-20]
+	Updated audio/pianobar to 2017.08.30 [kamil 2018-02-20]
