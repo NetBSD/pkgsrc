@@ -1,0 +1,15 @@
+$NetBSD: patch-man_3proxy.cfg.3,v 1.1 2018/02/20 13:01:30 triaxx Exp $
+
+Fix hardcoded PATH.
+
+--- man/3proxy.cfg.3.orig	2017-10-19 14:25:42.000000000 +0000
++++ man/3proxy.cfg.3
+@@ -32,7 +32,7 @@ Good practice is to quote any argument y
+  File inclusion:
+ .br
+  You can include file by using $FILENAME macro (replace FILENAME with a path
+-to file, for example $/usr/local/etc/3proxy/conf.incl or 
++to file, for example $@PKG_SYSCONFDIR@/3proxy/conf.incl or 
+  $"c:\\Program Files\\3proxy\\include.cfg" Quotation is
+ required in last example because path contains space character. 
+ For included file <CR> (end of line characters) is treated as space character
