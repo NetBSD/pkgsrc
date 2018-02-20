@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.719 2018/02/20 13:19:49 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.720 2018/02/20 13:58:11 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1048,3 +1048,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Object-Realize-Later to 0.21 [wen 2018-02-20]
 	Updated devel/p5-Module-ExtractUse to 0.342 [wen 2018-02-20]
 	Updated mail/fetchmail to 6.3.22nb4 [wiz 2018-02-20]
+	Added devel/p5-Cache-Memcached-Fast version 0.25 [fhajny 2018-02-20]
