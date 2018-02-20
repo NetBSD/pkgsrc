@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: verifypc.sh,v 1.7 2011/10/26 08:03:35 sbd Exp $
+# $NetBSD: verifypc.sh,v 1.8 2018/02/20 02:55:15 dholland Exp $
 #
 # verifypc - Sanity check package dependencies according to pkg-config
 # Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -131,12 +131,21 @@ main() {
     SORTED_DEPS=$(awk -f ../../mk/pkgformat/pkg/reduce-depends.awk \
 	"$(${MAKE} show-vars VARNAMES='BUILD_DEPENDS DEPENDS')")
 
+    if grep @ ${log} >/dev/null 2>&1; then
+	err "pkg-config log contains unexpected @-characters"
+    fi
+
     error=0
-    lines=$(cat ${log} | sort | uniq | tr ' ' '¬')
+    lines=$(sort < ${log} | uniq | awk '
+	NF==2 {
+	    # make current syntax resemble old syntax
+	    print $1, "(any)", "_", $2;
+	}
+    ' | tr ' ' '@')
     for l in ${lines}; do
-        pcname=$(echo ${l} | cut -d '¬' -f 1)
-        pcop=$(echo ${l} | cut -d '¬' -f 2)
-        pcver=$(echo ${l} | cut -d '¬' -f 3)
+        pcname=$(echo ${l} | cut -d '@' -f 1)
+        pcop=$(echo ${l} | cut -d '@' -f 2)
+        pcver=$(echo ${l} | cut -d '@' -f 3)
 
         dep=$(search_file_in_depends pkgconfig/${pcname}.pc)
         if [ -n "${dep}" -a "${pcop}" != "NOT-FOUND" ]; then
