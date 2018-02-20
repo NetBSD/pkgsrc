@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.709 2018/02/20 03:01:28 wen Exp $
+$NetBSD: CHANGES-2018,v 1.710 2018/02/20 03:06:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1035,3 +1035,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/verifypc to 1.7 [dholland 2018-02-20]
 	Updated audio/pianobar to 2017.08.30 [kamil 2018-02-20]
 	Updated time/p5-DateTime to 1.46 [wen 2018-02-20]
+	Updated time/p5-Time-HiRes to 1.9754 [wen 2018-02-20]
