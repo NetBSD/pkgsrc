@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/02/20 13:01:30 triaxx Exp $
+# $NetBSD: Makefile,v 1.13 2018/02/21 15:20:04 triaxx Exp $
 #
 
 DISTNAME=	3proxy-0.8.11
@@ -25,6 +25,7 @@ WRKSRC=			${WRKDIR}/${PKGBASE}
 MAKE_FILE=		Makefile.unix
 MAKE_FLAGS+=		LIBS=${BUILDLINK_LDADD.dl:Q}
 
+BUILD_DEFS+=		VARBASE
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 ${EGDIR}
 
 SUBST_CLASSES+=		cfg

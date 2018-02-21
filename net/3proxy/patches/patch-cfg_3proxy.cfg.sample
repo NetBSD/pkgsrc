@@ -1,4 +1,4 @@
-$NetBSD: patch-cfg_3proxy.cfg.sample,v 1.1 2018/02/19 21:25:46 triaxx Exp $
+$NetBSD: patch-cfg_3proxy.cfg.sample,v 1.2 2018/02/21 15:20:04 triaxx Exp $
 
 Adjust PATH according to pkgsrc defined directories.
 
