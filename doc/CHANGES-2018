@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.730 2018/02/21 10:44:08 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.731 2018/02/21 14:04:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1057,3 +1057,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Perl-Tidy to 20180220 [wen 2018-02-21]
 	Updated devel/p5-Perl6-Export-Attrs to 0.000006 [wen 2018-02-21]
 	Updated archivers/zziplib to 0.13.68 [ryoon 2018-02-21]
+	Updated x11/xorgproto to 2018.3 [wiz 2018-02-21]
