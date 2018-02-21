@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/06/11 05:51:40 tsutsui Exp $
+# $NetBSD: Makefile,v 1.7 2018/02/21 16:59:59 jperkin Exp $
 #
 
 DISTNAME=		gobject-introspection-${VERSION}
@@ -9,7 +9,6 @@ CATEGORIES=		devel
 MAINTAINER=		tsutsui@NetBSD.org
 
 CONFLICTS+=		ruby-gnome2-gobject-introspection-[0-9]*
-CONFLICTS+=		ruby[0-9][0-9]-gnome2-gobject-introspection-[0-9]*
 
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}:../../devel/ruby-gnome2-glib
 
