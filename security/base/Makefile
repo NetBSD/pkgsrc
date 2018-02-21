@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2017/03/12 07:20:51 maya Exp $
-#
+# $NetBSD: Makefile,v 1.42 2018/02/21 12:25:23 wiz Exp $
 
 DISTNAME=	base-1.4.3.1
 PKGREVISION=	12
@@ -11,6 +10,8 @@ HOMEPAGE=	http://secureideas.sourceforge.net/
 COMMENT=	Analysis engine to process a database of security events
 
 PKG_DESTDIR_SUPPORT=	destdir
+
+PHP_VERSIONS_ACCEPTED=	56
 
 .include "../../mk/apache.mk"
 .include "../../lang/php/phpversion.mk"
@@ -27,8 +28,6 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pear-Image_Graph-[0-9]*:../../graphics/pear-Image_Gr
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail-[0-9]*:../../mail/pear-Mail
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime-[0-9]*:../../mail/pear-Mail_Mime
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.0.4:../../www/ap-php
-
-PHP_VERSIONS_ACCEPTED=	56
 
 NO_BUILD=	YES
 #WRKSRC=		${WRKDIR}/base-php4
