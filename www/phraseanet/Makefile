@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/04/05 12:33:49 fhajny Exp $
-#
+# $NetBSD: Makefile,v 1.21 2018/02/21 12:06:12 wiz Exp $
 
 .include "../../www/phraseanet/Makefile.common"
 PKGNAME=	phraseanet-${VERS}
@@ -10,11 +9,7 @@ USE_TOOLS+=	pax
 .include "../../lang/php/phpversion.mk"
 
 DEPENDS+=	${PHP_PKG_PREFIX}-phrasea2-[0-9]*:../../www/php-phrasea2
-.if ${PKG_PHP_VERSION} >= 55
 DEPENDS+=	${PHP_PKG_PREFIX}-opcache-[0-9]*:../../devel/php-opcache
-.else
-DEPENDS+=	${PHP_PKG_PREFIX}-apc-[0-9]*:../../www/php-apc
-.endif
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext-[0-9]*:../../devel/php-gettext
 DEPENDS+=	${PHP_PKG_PREFIX}-exif-[0-9]*:../../graphics/php-exif
