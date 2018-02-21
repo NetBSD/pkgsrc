@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2018/02/12 20:45:27 adam Exp $
+# $NetBSD: Makefile.common,v 1.26 2018/02/21 13:48:39 fhajny Exp $
 # used by multimedia/ffmpeg3/Makefile
 # used by multimedia/ffplay3/Makefile
 
@@ -73,11 +73,11 @@ SUBST_SED.sunwspro+=	-e "s/-Wl,-rpath-link,/-L /g"
 BUILD_DEPENDS+=	nasm>=2.13:../../devel/nasm
 
 REPLACE_PERL+=	doc/texi2pod.pl
-REPLACE_SH+=	configure version.sh
+REPLACE_SH+=	configure ffbuild/version.sh
 
 SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
-SUBST_FILES.conf=	ffserver.c
+SUBST_STAGE.conf=	pre-configure
+SUBST_FILES.conf=	fftools/ffserver.c
 SUBST_SED.conf=		-e 's,/etc/ffserver.conf,${PKG_SYSCONFDIR}/ffserver.conf,g'
 SUBST_MESSAGE.conf=	Fixing configuration path.
 
