@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2018/01/01 20:32:55 adam Exp $
+# $NetBSD: Makefile,v 1.15 2018/02/21 23:59:33 maya Exp $
 
 DISTNAME=	libatomic_ops-7.6.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ivmai/}
 
