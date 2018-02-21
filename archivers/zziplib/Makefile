@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2017/07/04 09:27:23 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2018/02/21 10:43:45 ryoon Exp $
 
-DISTNAME=	zziplib-0.13.67
+DISTNAME=	zziplib-0.13.68
 CATEGORIES=	archivers
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=gdraheim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
