@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/07/24 07:09:25 wen Exp $
+$NetBSD: distinfo,v 1.4 2018/02/21 07:53:38 wen Exp $
 
-SHA1 (Perl6-Export-Attrs-0.000005.tar.gz) = 619ba0c75d9fb92c076f30d6b1047f305d7e4a5e
-RMD160 (Perl6-Export-Attrs-0.000005.tar.gz) = 300555e2af579666f16da5600e6557ab7532e258
-SHA512 (Perl6-Export-Attrs-0.000005.tar.gz) = 4b9bf7949f630b8dcf5096fbbdd641811e694222a962ce97513ecbe618a1512b8fddbadcae4069a4c7e5a1dc96fa441ca3ad0c88cb2ddfb2a54e23d141833edc
-Size (Perl6-Export-Attrs-0.000005.tar.gz) = 6778 bytes
+SHA1 (Perl6-Export-Attrs-0.000006.tar.gz) = 7c855d5385ea6b643a213430883548603395b5f0
+RMD160 (Perl6-Export-Attrs-0.000006.tar.gz) = da40f8aac4e891803f59bf1352d37a111f966771
+SHA512 (Perl6-Export-Attrs-0.000006.tar.gz) = 98c2467e1e0e820e7f0744b20caf61e31ce7b41a9bdbf7f92bd7711aaa0f41799f641a2c443cf755d4719d8325368d2387e3a58be258f9e4f4e280e2a0f8fd0c
+Size (Perl6-Export-Attrs-0.000006.tar.gz) = 6992 bytes
