@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2003/06/04 08:50:13 agc Exp $
+$NetBSD: patch-aa,v 1.3 2018/02/21 15:12:00 triaxx Exp $
+
+Adjust compilation and linking flags to pkgsrc.
 
 --- Makefile.noimake	2003/06/04 08:23:07	1.1
 +++ Makefile.noimake	2003/06/04 08:37:56
