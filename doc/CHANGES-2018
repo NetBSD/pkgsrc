@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.726 2018/02/21 02:06:35 rillig Exp $
+$NetBSD: CHANGES-2018,v 1.727 2018/02/21 07:31:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1053,3 +1053,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/p5-Math-Int64 version 0.54 [fhajny 2018-02-20]
 	Added security/p5-Net-SFTP version 0.11 [fhajny 2018-02-20]
 	Added net/p5-Net-Stomp version 0.57 [fhajny 2018-02-20]
+	Updated www/p5-libwww to 6.32 [wen 2018-02-21]
