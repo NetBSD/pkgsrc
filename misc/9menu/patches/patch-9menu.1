@@ -1,0 +1,16 @@
+$NetBSD: patch-9menu.1,v 1.1 2018/02/21 15:12:00 triaxx Exp $
+
+Allow '-file -' to cause stdin to be read as the file.
+From Debian
+
+--- 9menu.1.orig	2015-06-25 20:15:02.000000000 +0000
++++ 9menu.1
+@@ -98,7 +98,7 @@ Read items to display from
+ in addition to any other command line arguments.  This is intended for use
+ with
+ .B #!
+-in scripts.
++in scripts.  If the filename is "-" read from stdin.
+ A
+ .I filename
+ of

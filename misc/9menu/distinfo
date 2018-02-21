@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 23:49:31 agc Exp $
+$NetBSD: distinfo,v 1.9 2018/02/21 15:12:00 triaxx Exp $
 
-SHA1 (9menu-1.8.shar.gz) = 8eed85ccf211d967fcf9100beaf6bfc2a3330ea5
-RMD160 (9menu-1.8.shar.gz) = e91eaa901c9f7db3860be49f977a9460bbafd01e
-SHA512 (9menu-1.8.shar.gz) = eb41094365993329add0faa39a319236836a2c13bd8730299a069aa7d40fb646434f4070bbd9807f124a6e3c0c3f5e3e7e9d955c58100950097c3f2e24781100
-Size (9menu-1.8.shar.gz) = 8990 bytes
-SHA1 (patch-aa) = 381ea9092583fc0e91a9cc619ea1ee0d32c49abb
+SHA1 (9menu-1.9.tar.gz) = c121ac0bdec798e7340063e48e0cf33ac3319ca9
+RMD160 (9menu-1.9.tar.gz) = b69942cea4e839ffafcec16e96eebcc8ef35ec35
+SHA512 (9menu-1.9.tar.gz) = c08ad77d11857bef78d7275ba1dbed27603188a8786b81b28fa3cdb85bd6445717b5b79b2b4a1eca917e0eedec7a3f9e1b12b5ccfd51198197a6889b466ca521
+Size (9menu-1.9.tar.gz) = 16620 bytes
+SHA1 (patch-9menu.1) = 443b69fa07aca82f4a03810d99b0099298e53f74
+SHA1 (patch-9menu.c) = f9471be52bc3367c096593a82cb60f5a04250582
+SHA1 (patch-aa) = d03504dc3d17c4b10e38cc6f1253d30885669749
