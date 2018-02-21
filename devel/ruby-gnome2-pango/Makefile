@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2017/06/11 05:51:40 tsutsui Exp $
+# $NetBSD: Makefile,v 1.56 2018/02/21 16:59:59 jperkin Exp $
 #
 
 DISTNAME=		pango-${VERSION}
@@ -9,7 +9,6 @@ CATEGORIES=		devel fonts
 MAINTAINER=		tsutsui@NetBSD.org
 
 CONFLICTS+=		ruby-gnome2-pango-[0-9]*
-CONFLICTS+=		ruby[0-9][0-9]-gnome2-pango-[0-9]*
 
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}:../../devel/ruby-gnome2-glib
 DEPENDS+=		${RUBY_PKGPREFIX}-cairo>=1.14.3:../../graphics/ruby-cairo
