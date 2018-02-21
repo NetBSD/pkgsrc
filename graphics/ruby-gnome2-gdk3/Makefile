@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/11/23 17:19:42 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2018/02/21 16:59:59 jperkin Exp $
 #
 
 DISTNAME=		gdk3-${VERSION}
@@ -8,8 +8,6 @@ COMMENT=		Ruby binding of GDK3
 CATEGORIES=		graphics
 
 MAINTAINER=		tsutsui@NetBSD.org
-
-CONFLICTS+=		ruby[0-9][0-9]-gnome2-gdk3-[0-9]*
 
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-gobject-introspection>=${VERSION}:../../devel/ruby-gnome2-gobject-introspection
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-cairo-gobject>=${VERSION}:../../graphics/ruby-gnome2-cairo-gobject

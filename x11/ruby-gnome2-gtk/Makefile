@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2017/06/11 05:51:41 tsutsui Exp $
+# $NetBSD: Makefile,v 1.64 2018/02/21 17:00:00 jperkin Exp $
 #
 
 DISTNAME=		gtk2-${VERSION}
@@ -9,7 +9,6 @@ CATEGORIES=		x11
 MAINTAINER=		tsutsui@NetBSD.org
 
 CONFLICTS+=		ruby-gnome2-gtk-[0-9]*
-CONFLICTS+=		ruby[0-9][0-9]-gnome2-gtk-[0-9]*
 
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-atk>=${VERSION}:../../devel/ruby-gnome2-atk
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-pango>=${VERSION}:../../devel/ruby-gnome2-pango

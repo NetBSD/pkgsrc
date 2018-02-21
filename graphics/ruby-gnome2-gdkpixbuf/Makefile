@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2017/06/11 05:51:40 tsutsui Exp $
+# $NetBSD: Makefile,v 1.44 2018/02/21 16:59:59 jperkin Exp $
 #
 
 DISTNAME=		gdk_pixbuf2-${VERSION}
@@ -9,7 +9,6 @@ CATEGORIES=		graphics devel
 MAINTAINER=		tsutsui@NetBSD.org
 
 CONFLICTS+=		ruby-gnome2-gdkpixbuf-[0-9]*
-CONFLICTS+=		ruby[0-9][0-9]-gnome2-gdkpixbuf-[0-9]*
 
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-gio>=${VERSION}:../../devel/ruby-gnome2-gio
 DEPENDS+=		gdk-pixbuf2>=2.36.4:../../graphics/gdk-pixbuf2

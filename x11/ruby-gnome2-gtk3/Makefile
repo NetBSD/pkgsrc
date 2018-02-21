@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2017/11/23 17:19:46 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2018/02/21 17:00:00 jperkin Exp $
 #
 
 DISTNAME=		gtk3-${VERSION}
@@ -8,8 +8,6 @@ COMMENT=		Ruby binding of GTK+-3.x
 CATEGORIES=		x11
 
 MAINTAINER=		tsutsui@NetBSD.org
-
-CONFLICTS+=		ruby[0-9][0-9]-gnome2-gtk3-[0-9]*
 
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-atk>=${VERSION}:../../devel/ruby-gnome2-atk
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-gio>=${VERSION}:../../devel/ruby-gnome2-gio
