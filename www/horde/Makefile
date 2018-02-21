@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2017/08/16 20:21:16 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2018/02/21 12:26:45 wiz Exp $
 
 DISTNAME=	horde-3.3.13
 PKGREVISION=	4
@@ -12,6 +12,8 @@ COMMENT=	PHP application framework
 LICENSE=	gnu-lgpl-v2
 
 CONFLICTS+=	horde-2.*
+
+PHP_VERSIONS_ACCEPTED=	56 # php-mysql, default-on option
 
 .include "../../lang/php/phpversion.mk"
 
