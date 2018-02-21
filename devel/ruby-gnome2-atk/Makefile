@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/06/11 05:51:40 tsutsui Exp $
+# $NetBSD: Makefile,v 1.23 2018/02/21 16:59:59 jperkin Exp $
 #
 
 DISTNAME=		atk-${VERSION}
@@ -9,7 +9,6 @@ CATEGORIES=		devel
 MAINTAINER=		tsutsui@NetBSD.org
 
 CONFLICTS+=		ruby-gnome2-atk-[0-9]*
-CONFLICTS+=		ruby[0-9][0-9]-gnome2-atk-[0-9]*
 
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}:../../devel/ruby-gnome2-glib
 
