@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/02/25 17:43:39 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/02/22 10:27:00 adam Exp $
 
-VERSION=	2.0.1
-DISTNAME=	pypolicyd-spf-${VERSION}
-PKGNAME=	${PYPKGPREFIX}-policyd-spf-${VERSION}
+DISTNAME=	pypolicyd-spf-2.0.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypolicyd-spf/}
 
@@ -30,7 +29,7 @@ INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 CONF_FILES=		${EGDIR}/policyd-spf.conf ${PKG_SYSCONFDIR}/policyd-spf.conf
 
-PLIST_SUBST+=		DOCDIR=${DOCDIR:Q} PKGBASE=${PKGBASE:Q}
+PLIST_SUBST+=		DOCDIR=${DOCDIR:Q} PKGBASE=${PKGBASE}
 PRINT_PLIST_AWK+=	{ gsub(/${DOCDIR:S|/|\\/|g}/, "$${DOCDIR}"); }
 PRINT_PLIST_AWK+=	{ gsub(/${PKGBASE}/, "$${PKGBASE}"); }
 
