@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/11/30 08:07:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/02/22 09:11:18 adam Exp $
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
@@ -34,6 +34,7 @@ ${PYSITELIB}/gssapi/raw/exceptions.so
 ${PYSITELIB}/gssapi/raw/ext_cred_imp_exp.so
 ${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_cred_store.so
 ${PLIST.posix}${PYSITELIB}/gssapi/raw/ext_dce.so
+${PYSITELIB}/gssapi/raw/ext_ggf.so
 ${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_iov_mic.so
 ${PYSITELIB}/gssapi/raw/ext_password.so
 ${PLIST.posix}${PYSITELIB}/gssapi/raw/ext_password_add.so
