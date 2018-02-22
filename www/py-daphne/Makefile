@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/02/14 14:21:33 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/02/22 08:54:28 adam Exp $
 
-DISTNAME=	daphne-2.0.3
+DISTNAME=	daphne-2.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/daphne/}

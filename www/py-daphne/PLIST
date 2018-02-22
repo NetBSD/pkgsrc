@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/02/14 14:21:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/02/22 08:54:28 adam Exp $
 bin/daphne-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -25,9 +25,9 @@ ${PYSITELIB}/daphne/http_protocol.pyo
 ${PYSITELIB}/daphne/server.py
 ${PYSITELIB}/daphne/server.pyc
 ${PYSITELIB}/daphne/server.pyo
-${PYSITELIB}/daphne/test_application.py
-${PYSITELIB}/daphne/test_application.pyc
-${PYSITELIB}/daphne/test_application.pyo
+${PYSITELIB}/daphne/testing.py
+${PYSITELIB}/daphne/testing.pyc
+${PYSITELIB}/daphne/testing.pyo
 ${PYSITELIB}/daphne/utils.py
 ${PYSITELIB}/daphne/utils.pyc
 ${PYSITELIB}/daphne/utils.pyo
