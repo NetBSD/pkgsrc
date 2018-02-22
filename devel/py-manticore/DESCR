@@ -1,0 +1,11 @@
+Manticore is a symbolic execution tool for analysis of binaries and smart
+contracts.
+
+Manticore features Input Generation (automatically generates inputs that trigger
+unique code paths), Crash Discovery (discovers inputs that crash programs via
+memory safety violations), Execution Tracing (records an instruction-level trace
+of execution for each generated input), and Programmatic Interface (exposes
+programmatic access to its analysis engine via a Python API).
+
+Manticore can analyze Linux ELF binaries (x86, x86_64 and ARMv7) and Ethereum
+smart contracts (EVM bytecode).
