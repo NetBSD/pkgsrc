@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2017/09/18 17:01:25 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/02/22 09:49:46 adam Exp $
 
-DISTNAME=	pytest-mock-1.6.3
+DISTNAME=	pytest-mock-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-mock/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/pytest-mock
+HOMEPAGE=	https://github.com/pytest-dev/pytest-mock
 COMMENT=	Thin-wrapper around the mock package for easier use with py.test
 LICENSE=	mit
 
