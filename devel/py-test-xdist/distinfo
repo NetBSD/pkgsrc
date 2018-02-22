@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/01/12 12:38:32 adam Exp $
+$NetBSD: distinfo,v 1.9 2018/02/22 09:36:36 adam Exp $
 
-SHA1 (pytest-xdist-1.22.0.tar.gz) = 3ca36124ea596828c59a330bcdf7533d42172274
-RMD160 (pytest-xdist-1.22.0.tar.gz) = 94eac7caff9499585eb0b6721ea1fd3fc3cec29f
-SHA512 (pytest-xdist-1.22.0.tar.gz) = 452d54f2aedddaa9512de3748707709b190e84fffc87ebe3b16e3416efdc2caee849cd65393ea7c9aeeceac4a8115190e92f90a136bfca706b55fd717ce4ef9a
-Size (pytest-xdist-1.22.0.tar.gz) = 58565 bytes
+SHA1 (pytest-xdist-1.22.1.tar.gz) = dea5aaad7d882e081556a9750950256cca4a3f00
+RMD160 (pytest-xdist-1.22.1.tar.gz) = a9983247ee5d9c8d8cc85d07efb1be8441346abb
+SHA512 (pytest-xdist-1.22.1.tar.gz) = b8bce1a3f69720382107d3a9b2b8d0281f442ee76e9faa2c4bc0d884260b542c0375604dfb1535ba70099e6d44d610dad0ba2901ae91d939e7e569c306d0e71b
+Size (pytest-xdist-1.22.1.tar.gz) = 57820 bytes
