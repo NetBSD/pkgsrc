@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.732 2018/02/21 15:14:36 triaxx Exp $
+$NetBSD: CHANGES-2018,v 1.733 2018/02/22 00:00:12 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1059,3 +1059,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/zziplib to 0.13.68 [ryoon 2018-02-21]
 	Updated x11/xorgproto to 2018.3 [wiz 2018-02-21]
 	Updated misc/9menu to 1.9 [triaxx 2018-02-21]
+	Updated devel/libatomic_ops to 7.6.2nb1 [maya 2018-02-21]
