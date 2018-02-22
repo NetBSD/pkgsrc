@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2615 2018/02/21 02:05:41 rillig Exp $
+# $NetBSD: Makefile,v 1.2616 2018/02/22 22:35:43 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -2012,6 +2012,7 @@ SUBDIR+=	py-lupa
 SUBDIR+=	py-macholib
 SUBDIR+=	py-mako
 SUBDIR+=	py-mando
+SUBDIR+=	py-manticore
 SUBDIR+=	py-mccabe
 SUBDIR+=	py-memcached
 SUBDIR+=	py-memory-profiler
