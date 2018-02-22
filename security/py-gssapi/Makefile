@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2017/12/06 12:19:43 adam Exp $
+# $NetBSD: Makefile,v 1.8 2018/02/22 09:11:18 adam Exp $
 
-DISTNAME=	gssapi-1.3.0
+DISTNAME=	gssapi-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gssapi/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/gssapi
+HOMEPAGE=	https://github.com/pythongssapi/python-gssapi
 COMMENT=	Low-level and high-level wrappers around GSSAPI C libraries
 LICENSE=	modified-bsd
 
