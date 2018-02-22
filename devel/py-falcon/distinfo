@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/12/22 05:53:05 adam Exp $
+$NetBSD: distinfo,v 1.4 2018/02/22 11:14:19 adam Exp $
 
-SHA1 (falcon-1.3.0.tar.gz) = d3c2b2ac1c535d77e00a5a3c95088c3897f7970c
-RMD160 (falcon-1.3.0.tar.gz) = e7f177be5026cb59e5cf43446735a9780abd9cda
-SHA512 (falcon-1.3.0.tar.gz) = a47abcb3c30690e1db4a282658b0a66d3cc188caefd2acac0ead55b5822c99c4b56643ba5fc18e2d89a12973e695e4c6bd1f1ee56ddc62c1f4c169198cc45387
-Size (falcon-1.3.0.tar.gz) = 349059 bytes
+SHA1 (falcon-1.4.1.tar.gz) = c29979a1fcb1b3149f1e54cc587d9582a61c947d
+RMD160 (falcon-1.4.1.tar.gz) = 7362c91cc2253d2b6b7a3a1bd44dd62de52ce2df
+SHA512 (falcon-1.4.1.tar.gz) = ac509dd1f6ddb48bff2364d47cea31ee83182104969a330265398c82331ae2c3b9e7602f83472f6de28cde89509b444103cdd40e89ccb868f702c6fbe6a2515c
+Size (falcon-1.4.1.tar.gz) = 354158 bytes
