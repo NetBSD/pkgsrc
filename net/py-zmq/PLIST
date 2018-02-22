@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.9 2017/02/02 19:05:01 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/02/22 10:03:25 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/zmq/__init__.py
 ${PYSITELIB}/zmq/__init__.pyc
 ${PYSITELIB}/zmq/__init__.pyo
+${PYSITELIB}/zmq/_future.py
+${PYSITELIB}/zmq/_future.pyc
+${PYSITELIB}/zmq/_future.pyo
 ${PLIST.py3x}${PYSITELIB}/zmq/asyncio/__init__.py
 ${PLIST.py3x}${PYSITELIB}/zmq/asyncio/__init__.pyc
 ${PLIST.py3x}${PYSITELIB}/zmq/asyncio/__init__.pyo
@@ -107,6 +110,9 @@ ${PYSITELIB}/zmq/error.pyo
 ${PYSITELIB}/zmq/eventloop/__init__.py
 ${PYSITELIB}/zmq/eventloop/__init__.pyc
 ${PYSITELIB}/zmq/eventloop/__init__.pyo
+${PYSITELIB}/zmq/eventloop/_deprecated.py
+${PYSITELIB}/zmq/eventloop/_deprecated.pyc
+${PYSITELIB}/zmq/eventloop/_deprecated.pyo
 ${PYSITELIB}/zmq/eventloop/future.py
 ${PYSITELIB}/zmq/eventloop/future.pyc
 ${PYSITELIB}/zmq/eventloop/future.pyo
@@ -248,6 +254,9 @@ ${PYSITELIB}/zmq/tests/test_decorators.pyo
 ${PYSITELIB}/zmq/tests/test_device.py
 ${PYSITELIB}/zmq/tests/test_device.pyc
 ${PYSITELIB}/zmq/tests/test_device.pyo
+${PYSITELIB}/zmq/tests/test_draft.py
+${PYSITELIB}/zmq/tests/test_draft.pyc
+${PYSITELIB}/zmq/tests/test_draft.pyo
 ${PYSITELIB}/zmq/tests/test_error.py
 ${PYSITELIB}/zmq/tests/test_error.pyc
 ${PYSITELIB}/zmq/tests/test_error.pyo
@@ -340,6 +349,7 @@ ${PYSITELIB}/zmq/utils/jsonapi.pyo
 ${PYSITELIB}/zmq/utils/monitor.py
 ${PYSITELIB}/zmq/utils/monitor.pyc
 ${PYSITELIB}/zmq/utils/monitor.pyo
+${PYSITELIB}/zmq/utils/mutex.h
 ${PYSITELIB}/zmq/utils/pyversion_compat.h
 ${PYSITELIB}/zmq/utils/sixcerpt.py
 ${PYSITELIB}/zmq/utils/sixcerpt.pyc
