@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/12/22 05:53:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/02/22 11:14:19 adam Exp $
 bin/falcon-bench-${PYVERSSUFFIX}
 bin/falcon-print-routes-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -138,6 +138,10 @@ ${PYSITELIB}/falcon/errors.py
 ${PYSITELIB}/falcon/errors.pyc
 ${PYSITELIB}/falcon/errors.pyo
 ${PYSITELIB}/falcon/errors.so
+${PYSITELIB}/falcon/forwarded.py
+${PYSITELIB}/falcon/forwarded.pyc
+${PYSITELIB}/falcon/forwarded.pyo
+${PYSITELIB}/falcon/forwarded.so
 ${PYSITELIB}/falcon/hooks.py
 ${PYSITELIB}/falcon/hooks.pyc
 ${PYSITELIB}/falcon/hooks.pyo
@@ -156,15 +160,19 @@ ${PYSITELIB}/falcon/media/__init__.pyo
 ${PYSITELIB}/falcon/media/base.py
 ${PYSITELIB}/falcon/media/base.pyc
 ${PYSITELIB}/falcon/media/base.pyo
+${PYSITELIB}/falcon/media/base.so
 ${PYSITELIB}/falcon/media/handlers.py
 ${PYSITELIB}/falcon/media/handlers.pyc
 ${PYSITELIB}/falcon/media/handlers.pyo
+${PYSITELIB}/falcon/media/handlers.so
 ${PYSITELIB}/falcon/media/json.py
 ${PYSITELIB}/falcon/media/json.pyc
 ${PYSITELIB}/falcon/media/json.pyo
+${PYSITELIB}/falcon/media/json.so
 ${PYSITELIB}/falcon/media/msgpack.py
 ${PYSITELIB}/falcon/media/msgpack.pyc
 ${PYSITELIB}/falcon/media/msgpack.pyo
+${PYSITELIB}/falcon/media/msgpack.so
 ${PYSITELIB}/falcon/media/validators/__init__.py
 ${PYSITELIB}/falcon/media/validators/__init__.pyc
 ${PYSITELIB}/falcon/media/validators/__init__.pyo
@@ -206,6 +214,10 @@ ${PYSITELIB}/falcon/routing/converters.py
 ${PYSITELIB}/falcon/routing/converters.pyc
 ${PYSITELIB}/falcon/routing/converters.pyo
 ${PYSITELIB}/falcon/routing/converters.so
+${PYSITELIB}/falcon/routing/static.py
+${PYSITELIB}/falcon/routing/static.pyc
+${PYSITELIB}/falcon/routing/static.pyo
+${PYSITELIB}/falcon/routing/static.so
 ${PYSITELIB}/falcon/routing/util.py
 ${PYSITELIB}/falcon/routing/util.pyc
 ${PYSITELIB}/falcon/routing/util.pyo
