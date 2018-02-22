@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/10/11 12:18:42 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/02/22 10:23:54 adam Exp $
 
-DISTNAME=	authres-1.0.1
+DISTNAME=	authres-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/authres/}
