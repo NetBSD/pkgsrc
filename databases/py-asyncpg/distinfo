@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/12/30 10:31:29 adam Exp $
+$NetBSD: distinfo,v 1.4 2018/02/22 09:24:16 adam Exp $
 
-SHA1 (asyncpg-0.14.0.tar.gz) = 9d9b45f36240ac95c8efcd824615301c5f31fd27
-RMD160 (asyncpg-0.14.0.tar.gz) = e64ff6fa977d7c48fb1c2c267b0a3b722460a1c1
-SHA512 (asyncpg-0.14.0.tar.gz) = 92af44ea84f46006714ff0e6c1565011731a3272e7a1743d1106ab348854d8a80bd6588f55b0e602c5005e9c3c710a32b85feaa05debfb4fd6123f995d1d6fa6
-Size (asyncpg-0.14.0.tar.gz) = 589277 bytes
+SHA1 (asyncpg-0.15.0.tar.gz) = 70f75912baa2a2f3c0b98037873dea6186c4b11b
+RMD160 (asyncpg-0.15.0.tar.gz) = 69e0321592a71395c51fae0cc65bec0c4354d8c0
+SHA512 (asyncpg-0.15.0.tar.gz) = 19583b4d0eec16c743348b09e68b83951784951279751500215962bf91d8330f7cdfd0e0a4c0efaeab44d5021419b9e87e04d0fa8dea1169f2bffbf6b3df4837
+Size (asyncpg-0.15.0.tar.gz) = 591010 bytes
