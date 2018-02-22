@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/01/11 14:35:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/02/22 10:30:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -30,6 +30,12 @@ ${PYSITELIB}/django_celery_beat/migrations/0003_auto_20161209_0049.pyo
 ${PYSITELIB}/django_celery_beat/migrations/0004_auto_20170221_0000.py
 ${PYSITELIB}/django_celery_beat/migrations/0004_auto_20170221_0000.pyc
 ${PYSITELIB}/django_celery_beat/migrations/0004_auto_20170221_0000.pyo
+${PYSITELIB}/django_celery_beat/migrations/0005_add_solarschedule_events_choices.py
+${PYSITELIB}/django_celery_beat/migrations/0005_add_solarschedule_events_choices.pyc
+${PYSITELIB}/django_celery_beat/migrations/0005_add_solarschedule_events_choices.pyo
+${PYSITELIB}/django_celery_beat/migrations/0006_auto_20180210_1226.py
+${PYSITELIB}/django_celery_beat/migrations/0006_auto_20180210_1226.pyc
+${PYSITELIB}/django_celery_beat/migrations/0006_auto_20180210_1226.pyo
 ${PYSITELIB}/django_celery_beat/migrations/__init__.py
 ${PYSITELIB}/django_celery_beat/migrations/__init__.pyc
 ${PYSITELIB}/django_celery_beat/migrations/__init__.pyo
