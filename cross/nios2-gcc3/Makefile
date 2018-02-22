@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/09/09 17:17:51 dholland Exp $
+# $NetBSD: Makefile,v 1.10 2018/02/22 00:09:44 maya Exp $
 
 PKG_VERSION=		3.4.6
 # PKGNAME will have option name only when explictly selected
@@ -13,7 +13,7 @@ MASTER_SITES=		ftp://ftp.altera.com/outgoing/download/support/ip/processors/nios
 DISTNAME=		nios2_gnu_gcc3_10.0
 #			nios2_gnu_gcc3_10.1.tgz are the exactly same, see MD5
 
-NOT_FOR_BULK_PLATFORM=	SunOS-*-*
+NOT_FOR_BULK_PLATFORM=	SunOS-*-* NetBSD-*-*
 
 EXTRACT_ELEMENTS=	gcc
 WRKSRC=			${WRKDIR}/gcc
