@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.738 2018/02/22 11:15:22 adam Exp $
+$NetBSD: CHANGES-2018,v 1.739 2018/02/22 22:38:06 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1081,3 +1081,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-numpy to 1.14.1 [adam 2018-02-22]
 	Updated www/py-django-import-export to 1.0.0 [adam 2018-02-22]
 	Updated devel/py-falcon to 1.4.1 [adam 2018-02-22]
+	Added devel/py-manticore version 0.1.6 [khorben 2018-02-22]
