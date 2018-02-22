@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2018/02/16 14:42:55 adam Exp $
+# $NetBSD: Makefile,v 1.7 2018/02/22 08:50:47 adam Exp $
 
-DISTNAME=	asgiref-2.1.5
+DISTNAME=	asgiref-2.1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asgiref/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	https://github.com/django/asgiref/
+HOMEPAGE=	https://github.com/django/asgiref
 COMMENT=	Contains various reference ASGI implementations
 LICENSE=	modified-bsd
 
