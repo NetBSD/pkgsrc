@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.733 2018/02/22 00:00:12 maya Exp $
+$NetBSD: CHANGES-2018,v 1.734 2018/02/22 08:57:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1060,3 +1060,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xorgproto to 2018.3 [wiz 2018-02-21]
 	Updated misc/9menu to 1.9 [triaxx 2018-02-21]
 	Updated devel/libatomic_ops to 7.6.2nb1 [maya 2018-02-21]
+	Updated devel/libuv to 1.19.2 [adam 2018-02-22]
+	Updated www/py-asgiref to 2.1.6 [adam 2018-02-22]
+	Updated www/py-daphne to 2.0.4 [adam 2018-02-22]
+	Updated www/py-websocket-client to 0.47.0 [adam 2018-02-22]
