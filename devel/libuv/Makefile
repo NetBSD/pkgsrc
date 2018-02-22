@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2018/01/20 11:30:28 adam Exp $
+# $NetBSD: Makefile,v 1.31 2018/02/22 08:44:14 adam Exp $
 
-DISTNAME=	libuv-1.19.1
+DISTNAME=	libuv-1.19.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libuv/}
 
 MAINTAINER=	agc@pkgsrc.org
-HOMEPAGE=	https://github.com/libuv/libuv/
+HOMEPAGE=	https://github.com/libuv/libuv
 COMMENT=	Cross-platform asychronous I/O
 LICENSE=	mit AND 2-clause-bsd AND isc AND modified-bsd
 
