@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/07/25 11:03:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/02/22 09:56:12 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -51,6 +51,9 @@ ${PYSITELIB}/sqlalchemy_utils/i18n.pyo
 ${PYSITELIB}/sqlalchemy_utils/listeners.py
 ${PYSITELIB}/sqlalchemy_utils/listeners.pyc
 ${PYSITELIB}/sqlalchemy_utils/listeners.pyo
+${PYSITELIB}/sqlalchemy_utils/materialized_view.py
+${PYSITELIB}/sqlalchemy_utils/materialized_view.pyc
+${PYSITELIB}/sqlalchemy_utils/materialized_view.pyo
 ${PYSITELIB}/sqlalchemy_utils/models.py
 ${PYSITELIB}/sqlalchemy_utils/models.pyc
 ${PYSITELIB}/sqlalchemy_utils/models.pyo
@@ -117,9 +120,15 @@ ${PYSITELIB}/sqlalchemy_utils/types/currency.pyo
 ${PYSITELIB}/sqlalchemy_utils/types/email.py
 ${PYSITELIB}/sqlalchemy_utils/types/email.pyc
 ${PYSITELIB}/sqlalchemy_utils/types/email.pyo
-${PYSITELIB}/sqlalchemy_utils/types/encrypted.py
-${PYSITELIB}/sqlalchemy_utils/types/encrypted.pyc
-${PYSITELIB}/sqlalchemy_utils/types/encrypted.pyo
+${PYSITELIB}/sqlalchemy_utils/types/encrypted/__init__.py
+${PYSITELIB}/sqlalchemy_utils/types/encrypted/__init__.pyc
+${PYSITELIB}/sqlalchemy_utils/types/encrypted/__init__.pyo
+${PYSITELIB}/sqlalchemy_utils/types/encrypted/encrypted_type.py
+${PYSITELIB}/sqlalchemy_utils/types/encrypted/encrypted_type.pyc
+${PYSITELIB}/sqlalchemy_utils/types/encrypted/encrypted_type.pyo
+${PYSITELIB}/sqlalchemy_utils/types/encrypted/padding.py
+${PYSITELIB}/sqlalchemy_utils/types/encrypted/padding.pyc
+${PYSITELIB}/sqlalchemy_utils/types/encrypted/padding.pyo
 ${PYSITELIB}/sqlalchemy_utils/types/ip_address.py
 ${PYSITELIB}/sqlalchemy_utils/types/ip_address.pyc
 ${PYSITELIB}/sqlalchemy_utils/types/ip_address.pyo
