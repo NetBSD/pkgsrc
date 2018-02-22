@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.735 2018/02/22 09:51:05 adam Exp $
+$NetBSD: CHANGES-2018,v 1.736 2018/02/22 10:08:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1070,3 +1070,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-test to 3.4.1 [adam 2018-02-22]
 	Updated devel/py-test-xdist to 1.22.1 [adam 2018-02-22]
 	Updated devel/py-test-mock to 1.7.0 [adam 2018-02-22]
+	Updated databases/py-sqlalchemy to 1.2.3 [adam 2018-02-22]
+	Updated databases/py-sqlalchemy-utils to 0.33.0 [adam 2018-02-22]
+	Updated net/py-zmq to 17.0.0 [adam 2018-02-22]
+	Updated lang/py-asttokens to 1.1.10 [adam 2018-02-22]
