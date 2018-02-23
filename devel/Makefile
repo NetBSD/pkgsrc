@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2616 2018/02/22 22:35:43 khorben Exp $
+# $NetBSD: Makefile,v 1.2617 2018/02/23 17:26:37 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -2050,6 +2050,7 @@ SUBDIR+=	py-pluggy
 SUBDIR+=	py-ply
 SUBDIR+=	py-polib
 SUBDIR+=	py-pqueue
+SUBDIR+=	py-prefixspan
 SUBDIR+=	py-pretend
 SUBDIR+=	py-prompt_toolkit
 SUBDIR+=	py-proteus
