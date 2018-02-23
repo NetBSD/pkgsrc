@@ -1,22 +1,23 @@
-# $NetBSD: Makefile,v 1.7 2012/10/25 06:57:05 asau Exp $
-#
+# $NetBSD: Makefile,v 1.8 2018/02/23 16:41:34 wiz Exp $
 
-DISTNAME=	uriparser-0.7.7
+DISTNAME=	uriparser-0.8.5
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=uriparser/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=uriparser/}
+GITHUB_RELEASE=	${DISTNAME}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://uriparser.sourceforge.net/
+HOMEPAGE=	https://uriparser.github.io/
 COMMENT=	URI parsing library
 LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --disable-doc
 USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake
 USE_FEATURES=	snprintf
 PKGCONFIG_OVERRIDE+= liburiparser.pc.in
-#TEST_TARGET=	check
+TEST_TARGET=	check
 
 .include "../../mk/bsd.fast.prefs.mk"
 
