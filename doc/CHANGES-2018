@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.742 2018/02/23 07:04:51 adam Exp $
+$NetBSD: CHANGES-2018,v 1.743 2018/02/23 11:18:19 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1087,3 +1087,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/qpdf to 7.1.1 [adam 2018-02-23]
 	Updated pkgtools/plist-utils to 20180222 [adam 2018-02-23]
 	Updated lang/py-hy to 0.14.0 [adam 2018-02-23]
+	Updated sysutils/rsyslog to 8.33.0 [fhajny 2018-02-23]
