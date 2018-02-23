@@ -1,0 +1,55 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2018/02/23 11:29:39 adam Exp $
+
+Do not use ccache.
+Do not use application bundle on Darwin.
+
+--- CMakeLists.txt.orig	2017-12-21 10:39:44.000000000 +0000
++++ CMakeLists.txt
+@@ -72,12 +72,6 @@ IF(OPENGL_DEBUG_LOGGING)
+      ADD_DEFINITIONS(-DQ_ENABLE_OPENGL_FUNCTIONS_DEBUG)
+ ENDIF()
+ 
+-# Use ccache if possible
+-FIND_PROGRAM(CCACHE_PROGRAM ccache)
+-IF(CCACHE_PROGRAM)
+-     MESSAGE(STATUS "Found ccache ${CCACHE_PROGRAM}")
+-     SET_PROPERTY(GLOBAL PROPERTY RULE_LAUNCH_COMPILE "${CCACHE_PROGRAM}")
+-ENDIF()
+ 
+ # Add gprof build options if necessary.  Note gmon.out will be created in working directory when Stellarium is executed
+ IF(${CMAKE_BUILD_TYPE} MATCHES "GProf")
+@@ -93,7 +87,6 @@ IF(${CMAKE_BUILD_TYPE} MATCHES "Valgrind
+ ENDIF()
+ 
+ IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+-     SET(APPLE 1)
+      SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
+ ENDIF()
+ 
+@@ -179,7 +172,7 @@ IF(${CMAKE_SYSTEM_NAME} STREQUAL "FreeBS
+ ENDIF()
+ 
+ # best way to get to APPLE?
+-IF(APPLE)
++IF(ELPPA)
+      SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-common -Wall -Wextra")
+      # using regular Clang or AppleClang
+      IF("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
+@@ -500,7 +493,7 @@ ENDIF()
+ 
+ ########### Set some global variables ###########
+ IF(UNIX AND NOT WIN32)
+-     IF(APPLE)
++     IF(ELPPA)
+           SET(CMAKE_INSTALL_PREFIX "${PROJECT_BINARY_DIR}/Stellarium.app/Contents")
+      ELSE()
+           ADD_DEFINITIONS(-DINSTALL_DATADIR="${CMAKE_INSTALL_PREFIX}/share/stellarium")
+@@ -747,7 +740,7 @@ IF(GENERATE_PACKAGE_TARGET)
+ ENDIF()
+ 
+ ########### OS X Bundling ###############
+-IF(APPLE)
++IF(ELPPA)
+      CONFIGURE_FILE(${CMAKE_SOURCE_DIR}/cmake/Info.plist.cmake ${CMAKE_SOURCE_DIR}/data/Info.plist @ONLY)
+ 
+      # ${Qt5Core_INCLUDE_DIRS} is a list; I'm expecting the first entry to always be QtCore.framework.
