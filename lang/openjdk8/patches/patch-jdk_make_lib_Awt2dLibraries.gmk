@@ -1,8 +1,9 @@
-$NetBSD: patch-jdk_make_lib_Awt2dLibraries.gmk,v 1.3 2017/05/10 14:01:58 ryoon Exp $
+$NetBSD: patch-jdk_make_lib_Awt2dLibraries.gmk,v 1.4 2018/02/23 14:43:49 fhajny Exp $
 
 GCC support.
+Proper libiconv link (and SunOS needs it too).
 
---- jdk/make/lib/Awt2dLibraries.gmk.orig	2017-04-27 09:44:53.000000000 +0000
+--- jdk/make/lib/Awt2dLibraries.gmk.orig	2017-11-28 00:13:34.000000000 +0000
 +++ jdk/make/lib/Awt2dLibraries.gmk
 @@ -48,6 +48,8 @@ ifneq ($(OPENJDK_TARGET_OS), windows)
    BUILD_LIBMLIB_LDLIBS += $(LIBM) $(LIBDL)
@@ -30,9 +31,13 @@ GCC support.
      else
        JAWT_LIBS += -lawt_headless
        HEADLESS_CFLAG += -DHEADLESS
-@@ -1276,7 +1277,7 @@ ifndef BUILD_HEADLESS_ONLY
-     # Solaris still uses OPENWIN_LIB ..
-     LIBSPLASHSCREEN_LDFLAGS_SUFFIX += -L$(OPENWIN_LIB)$(OPENJDK_TARGET_CPU_ISADIR) -lX11 -lXext $(LIBM) -lpthread
+@@ -1273,10 +1274,9 @@ ifndef BUILD_HEADLESS_ONLY
+   else ifeq ($(OPENJDK_TARGET_OS), windows)
+     LIBSPLASHSCREEN_LDFLAGS_SUFFIX += kernel32.lib user32.lib gdi32.lib delayimp.lib -DELAYLOAD:user32.dll
+   else ifeq ($(OPENJDK_TARGET_OS), solaris)
+-    # Solaris still uses OPENWIN_LIB ..
+-    LIBSPLASHSCREEN_LDFLAGS_SUFFIX += -L$(OPENWIN_LIB)$(OPENJDK_TARGET_CPU_ISADIR) -lX11 -lXext $(LIBM) -lpthread
++    LIBSPLASHSCREEN_LDFLAGS_SUFFIX += $(X_LIBS) -lX11 -lXext $(LIBM) -L$(PACKAGE_PATH)/lib $(LIBICONV) -pthread
    else ifeq ($(OPENJDK_TARGET_OS), bsd)
 -    LIBSPLASHSCREEN_LDFLAGS_SUFFIX += $(X_LIBS) -lX11 -lXext $(LIBM) -L$(PACKAGE_PATH)/lib -liconv -pthread
 +    LIBSPLASHSCREEN_LDFLAGS_SUFFIX += $(X_LIBS) -lX11 -lXext $(LIBM) -L$(PACKAGE_PATH)/lib $(LIBICONV) -pthread
