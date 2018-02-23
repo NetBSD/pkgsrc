@@ -1,4 +1,4 @@
-/* $NetBSD: sort.c,v 1.1 2016/10/01 18:37:15 kamil Exp $ */
+/* $NetBSD: sort.c,v 1.2 2018/02/23 06:31:34 adam Exp $ */
 
 /*-
  * Copyright (c) 2016 The NetBSD Foundation, Inc.
@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__RCSID("$NetBSD: sort.c,v 1.1 2016/10/01 18:37:15 kamil Exp $");
+__RCSID("$NetBSD: sort.c,v 1.2 2018/02/23 06:31:34 adam Exp $");
 
 #include <err.h>
 #include <fcntl.h>
@@ -50,7 +50,6 @@ main(int argc, char **argv)
 	int iflag = 0;
 	char *buffer;
 	FILE *stream;
-	char *firstline;
 
 	setprogname(argv[0]);
 
@@ -84,10 +83,6 @@ main(int argc, char **argv)
 	}
 
 	/* Read entries and put into tree */
-	/* The first line is special */
-	if ((buffer = plist_getline(stream)) != NULL) {
-		firstline = buffer;
-	}
 
 	while ((buffer = plist_getline(stream)) != NULL) {
 		plist_tree_insert(buffer);
@@ -107,7 +102,6 @@ main(int argc, char **argv)
 		stream = stdout;
 	}
 
-	fprintf(stream, "%s\n", firstline);
 	plist_tree_dump(stream);
 
 	return EXIT_SUCCESS;
