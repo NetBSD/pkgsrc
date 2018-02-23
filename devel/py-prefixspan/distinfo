@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/23 17:25:51 minskim Exp $
+
+SHA1 (prefixspan-0.1.1.tar.gz) = 4cb3ef3c7891bf18d461c5e439e02cc336da4011
+RMD160 (prefixspan-0.1.1.tar.gz) = 9c5caecae9b04cc3931a12d39a6d7164f5ff7e56
+SHA512 (prefixspan-0.1.1.tar.gz) = 49d255be1ac42a973bc657142aa45fe1bc5f01e1e2f1ab3667438d49f5042000b555222d5ca85c1e9c683c05a638e277773615318b45ea76eeb1e5fd1109ea19
+Size (prefixspan-0.1.1.tar.gz) = 3032 bytes
