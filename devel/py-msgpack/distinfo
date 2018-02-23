@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2018/02/05 09:01:05 adam Exp $
+$NetBSD: distinfo,v 1.13 2018/02/23 14:20:55 adam Exp $
 
-SHA1 (msgpack-0.5.4.tar.gz) = 7061ea9323b77c9237f51e26532af950c43d5a27
-RMD160 (msgpack-0.5.4.tar.gz) = cf5691b3cb18fadea4b773c9447ff9ac9c66d977
-SHA512 (msgpack-0.5.4.tar.gz) = 6669ff1672c28f9961b1e29a60957dc581eeaa12c19f20358f8f2e86224f70ba50dbdd830bc6d02d3ed54ef6d8f6ca9600dcec4e2759f519ccb65916d0a8a22f
-Size (msgpack-0.5.4.tar.gz) = 142763 bytes
+SHA1 (msgpack-0.5.6.tar.gz) = 916c234864a5eaae179982dcd4b20efaa3677a30
+RMD160 (msgpack-0.5.6.tar.gz) = 48818b2ea891871e70754fc3720a15d04a12c28c
+SHA512 (msgpack-0.5.6.tar.gz) = bdbd193bd3bd02e78d9c6e8d9d8fa687d13583dff2813bc77c5e6cbbe0d180765da3c9a80d176f9993589e35f548ad04973e3d523d0b6d41ef7916ecd86195aa
+Size (msgpack-0.5.6.tar.gz) = 138292 bytes
