@@ -1,6 +1,7 @@
-$NetBSD: patch-jdk_make_lib_CoreLibraries.gmk,v 1.4 2017/11/28 05:07:25 ryoon Exp $
+$NetBSD: patch-jdk_make_lib_CoreLibraries.gmk,v 1.5 2018/02/23 14:43:49 fhajny Exp $
 
 Ensure we can find zlib.
+Proper libiconv link (and SunOS needs it too).
 
 --- jdk/make/lib/CoreLibraries.gmk.orig	2017-11-28 00:13:34.000000000 +0000
 +++ jdk/make/lib/CoreLibraries.gmk
@@ -20,12 +21,13 @@ Ensure we can find zlib.
  BUILD_LIBZIP_REORDER :=
  ifeq ($(OPENJDK_TARGET_OS), solaris)
    ifneq ($(OPENJDK_TARGET_CPU), x86_64)
-@@ -550,7 +552,7 @@ $(eval $(call SetupNativeCompilation,BUI
+@@ -550,7 +552,8 @@ $(eval $(call SetupNativeCompilation,BUI
      MAPFILE := $(JDK_TOPDIR)/make/mapfiles/libnpt/mapfile-vers, \
      LDFLAGS := $(LDFLAGS_JDKLIB) \
          $(call SET_SHARED_LIBRARY_ORIGIN), \
 -    LDFLAGS_bsd := -L$(PACKAGE_PATH)/lib -liconv, \
 +    LDFLAGS_bsd := $(LIBICONV), \
++    LDFLAGS_solaris := $(LIBICONV), \
      LDFLAGS_macosx := -liconv, \
      LDFLAGS_SUFFIX_windows := -export:nptInitialize -export:nptTerminate, \
      LDFLAGS_SUFFIX_solaris := -lc, \
