@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.749 2018/02/23 16:41:44 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.750 2018/02/23 17:27:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1098,3 +1098,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/libthai to 0.1.27 [adam 2018-02-23]
 	Updated inputmethod/ibus-libthai to 0.1.4 [adam 2018-02-23]
 	Updated textproc/uriparser to 0.8.5 [wiz 2018-02-23]
+	Added devel/py-prefixspan version 0.1.1 [minskim 2018-02-23]
