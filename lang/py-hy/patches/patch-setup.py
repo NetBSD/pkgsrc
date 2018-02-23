@@ -1,8 +1,8 @@
-$NetBSD: patch-setup.py,v 1.1 2017/12/18 12:48:46 adam Exp $
+$NetBSD: patch-setup.py,v 1.2 2018/02/23 07:03:09 adam Exp $
 
 Do not install get_version.py; it is needed only for setup.py.
 
---- setup.py.orig	2017-12-18 08:29:33.000000000 +0000
+--- setup.py.orig	2018-02-08 22:05:16.000000000 +0000
 +++ setup.py
 @@ -57,9 +57,6 @@ setup(
          'hy.core': ['*.hy', '__pycache__/*'],
