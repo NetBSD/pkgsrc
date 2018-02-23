@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.748 2018/02/23 15:43:01 adam Exp $
+$NetBSD: CHANGES-2018,v 1.749 2018/02/23 16:41:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1097,3 +1097,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/libdatrie to 0.2.10 [adam 2018-02-23]
 	Updated devel/libthai to 0.1.27 [adam 2018-02-23]
 	Updated inputmethod/ibus-libthai to 0.1.4 [adam 2018-02-23]
+	Updated textproc/uriparser to 0.8.5 [wiz 2018-02-23]
