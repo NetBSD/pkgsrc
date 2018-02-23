@@ -1,4 +1,4 @@
-/* $NetBSD: plist_tree.c,v 1.3 2017/09/30 13:23:06 adam Exp $ */
+/* $NetBSD: plist_tree.c,v 1.4 2018/02/23 06:31:34 adam Exp $ */
 
 /*-
  * Copyright (c) 2016 The NetBSD Foundation, Inc.
@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__RCSID("$NetBSD: plist_tree.c,v 1.3 2017/09/30 13:23:06 adam Exp $");
+__RCSID("$NetBSD: plist_tree.c,v 1.4 2018/02/23 06:31:34 adam Exp $");
 
 #include <sys/param.h>
 #include <sys/types.h>
@@ -128,7 +128,7 @@ plist_tree_init(void)
 char *
 get_key(const char *entry)
 {
-	char *copy, *s;
+	char *copy;
 	size_t n = 0;
 	regmatch_t rm[10];
 	int ret;
