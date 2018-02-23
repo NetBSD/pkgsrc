@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/23 17:25:51 minskim Exp $
+bin/prefixspan-cli${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/prefixspan/__init__.py
+${PYSITELIB}/prefixspan/__init__.pyo
+${PYSITELIB}/prefixspan/__init__.pyc
+${PYSITELIB}/prefixspan/api.pyo
+${PYSITELIB}/prefixspan/api.pyc
+${PYSITELIB}/prefixspan/api.py
