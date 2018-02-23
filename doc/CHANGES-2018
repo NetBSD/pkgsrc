@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.743 2018/02/23 11:18:19 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.744 2018/02/23 11:30:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1088,3 +1088,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/plist-utils to 20180222 [adam 2018-02-23]
 	Updated lang/py-hy to 0.14.0 [adam 2018-02-23]
 	Updated sysutils/rsyslog to 8.33.0 [fhajny 2018-02-23]
+	Updated misc/stellarium to 0.17.0 [adam 2018-02-23]
