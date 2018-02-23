@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/09/13 06:23:28 adam Exp $
+$NetBSD: distinfo,v 1.8 2018/02/23 14:16:43 adam Exp $
 
-SHA1 (m2r-0.1.12.tar.gz) = 20a101a85250c2e8c1cbdc7295c9176c8cff5ab0
-RMD160 (m2r-0.1.12.tar.gz) = 792c29a6dee1d4a1b3d4225bb7ed78624d76ecfc
-SHA512 (m2r-0.1.12.tar.gz) = 5579f993c9a8aa72195e97ba6ea2a317f97587f2f8fdab6d7cc16ced6ccc169960a99c712b9ab1251cd021b03f1c5566139bfe6c314bdad43b9bf138a921f0f1
-Size (m2r-0.1.12.tar.gz) = 15358 bytes
+SHA1 (m2r-0.1.13.tar.gz) = e0c28daa918115d43c92bebd67e50231cec274b6
+RMD160 (m2r-0.1.13.tar.gz) = 00b218c2a35a03c38f2a764d1bd094318f85efb4
+SHA512 (m2r-0.1.13.tar.gz) = 73c493b31e4408985e3404e43f71c1612343bfb96c10504ccb86d4992659205eb7aa2318ba11e066eb28a758a3578f2e9c2e4d4a0a612ded169704e20f113582
+Size (m2r-0.1.13.tar.gz) = 15882 bytes
