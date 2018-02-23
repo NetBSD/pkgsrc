@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/02/20 06:43:14 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2018/02/23 15:26:14 wiz Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
@@ -28,10 +28,6 @@ CHECK_INTERPRETER_SKIP+= ${GEM_HOME}/gems/test-unit-3.0.8/test/run-test.rb
 
 .include "options.mk"
 .include "../../lang/ruby/platform.mk"
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-8.99.[1-9][0-9]-*)
-BROKEN=		ruby-2.2 does not support OpenSSL-1.1
-.endif
 
 .if !empty(RUBY_SUFFIX)
 CONFIGURE_ARGS+= --program-suffix=${RUBY_SUFFIX}

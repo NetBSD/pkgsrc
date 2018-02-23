@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/02/20 06:43:32 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2018/02/23 15:26:14 wiz Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
@@ -25,10 +25,6 @@ WRKSRC=			${RUBY_WRKSRC}
 
 .include "options.mk"
 .include "../../lang/ruby/platform.mk"
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-8.99.[1-9][0-9]-*)
-BROKEN=		ruby-2.3 does not support OpenSSL-1.1
-.endif
 
 .if !empty(RUBY_SUFFIX)
 CONFIGURE_ARGS+= --program-suffix=${RUBY_SUFFIX}
