@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.1 2016/06/13 01:51:04 kamil Exp $
+# $NetBSD: Makefile.common,v 1.2 2018/02/23 02:42:06 khorben Exp $
 #
 # used by devel/py-capstone/Makefile
 
-DISTNAME=	capstone-3.0.4
+DISTNAME=	capstone-3.0.5rc2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aquynh/}
+GITHUB_TAG=	3.0.5-rc2
 
 HOMEPAGE=	http://www.capstone-engine.org/
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/capstone/distinfo
-PATCHDIR=	${.CURDIR}/../../devel/capstone/patches
