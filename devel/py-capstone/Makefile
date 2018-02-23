@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2016/06/14 06:54:19 kamil Exp $
+# $NetBSD: Makefile,v 1.4 2018/02/23 02:42:06 khorben Exp $
 
 .include "../../devel/capstone/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES+=	python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Python bindings for capstone
 LICENSE=	modified-bsd
 
+WRKSRC=		${WRKDIR}/capstone-${GITHUB_TAG}
 PYSETUPSUBDIR=	bindings/python
 
 .include "../../devel/capstone/buildlink3.mk"
