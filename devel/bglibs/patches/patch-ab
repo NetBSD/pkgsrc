@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.9 2017/01/02 14:13:32 schmonz Exp $
+$NetBSD: patch-ab,v 1.10 2018/02/24 01:03:53 schmonz Exp $
 
 Avoid "echo -n" in subshells and unsupported linker flags to fix OS X build.
 
---- Makefile.orig	2015-02-06 23:57:34.000000000 +0000
+--- Makefile.orig	2018-02-23 16:24:54.000000000 +0000
 +++ Makefile
 @@ -69,7 +69,7 @@ adt/hashb.lo adt/hashb.o: ltcompile adt/
  adt/hashs.lo adt/hashs.o: ltcompile adt/hashs.c include/bglibs/adt_common.h
@@ -31,15 +31,6 @@ Avoid "echo -n" in subshells and unsupported linker flags to fix OS X build.
  
  crc-gentab.o: compile crc-gentab.c sysdeps.h include/bglibs/iobuf.h include/bglibs/iobuf_common.h include/bglibs/ibuf.h include/iobuf_common.h include/bglibs/obuf.h sysdeps.h include/bglibs/msg.h sysdeps.h include/bglibs/debug.h
  	./compile crc-gentab.c
-@@ -293,7 +293,7 @@ dl.lib: compile load
- 	@echo 'main() { ; }' >trylib-ldl.c
- 	@{ ./compile trylib-ldl.c && ./load trylib-ldl -ldl; } >/dev/null 2>&1 \
- 	  && { echo -ldl >dl.lib; echo yes; } \
--	  || { echo -n >dl.lib; echo no; }
-+	  || { : >dl.lib; echo no; }
- 	@rm -f trylib-ldl.c trylib-ldl.o trylib-ldl
- 
- fmt/char.lo fmt/char.o: ltcompile fmt/char.c include/bglibs/fmt.h
 @@ -863,9 +863,7 @@ path/mktemp.lo path/mktemp.o: ltcompile 
  	./ltcompile path/mktemp.c
  
@@ -51,12 +42,3 @@ Avoid "echo -n" in subshells and unsupported linker flags to fix OS X build.
  	  echo "# WARNING: This file was auto-generated. Do not edit!"; \
  	  echo ) >perl-head.pl
  
-@@ -885,7 +883,7 @@ rt.lib: compile load
- 	@echo 'main() { ; }' >trylib-lrt.c
- 	@{ ./compile trylib-lrt.c && ./load trylib-lrt -lrt; } >/dev/null 2>&1 \
- 	  && { echo -lrt >rt.lib; echo yes; } \
--	  || { echo -n >rt.lib; echo no; }
-+	  || { : >rt.lib; echo no; }
- 	@rm -f trylib-lrt.c trylib-lrt.o trylib-lrt
- 
- selftest-cmp: selftest-cmp.o ltload libbg.la
