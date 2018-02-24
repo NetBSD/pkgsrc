@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.757 2018/02/24 10:14:06 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.758 2018/02/24 11:37:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1106,3 +1106,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/p5-Time-Piece to 1.3204 [wen 2018-02-24]
 	Updated textproc/p5-Lingua-EN-Inflect-Phrase to 0.19 [wen 2018-02-24]
 	Updated mail/neomutt to 20180223 [wiz 2018-02-24]
+	Updated devel/nss to 3.35nb1 [ryoon 2018-02-24]
