@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.14 2018/02/24 20:27:05 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.15 2018/02/24 22:45:53 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
 
@@ -119,3 +119,7 @@ chat/irssi-xmpp: security update
 
 Pullup ticket #5705 - requested by maya
 print/py-reportlab: build fix
+
+Pullup ticket #5702 - requested by khorben and leot
+multimedia/mpv: security update
+
