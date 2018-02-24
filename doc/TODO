@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18127 2018/02/23 16:41:44 wiz Exp $
+$NetBSD: TODO,v 1.18128 2018/02/24 05:32:53 taca Exp $
 
 Suggested new packages
 ======================
@@ -1144,6 +1144,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o phoronix-7.0
 	o phoronix-test-suite-7.4
 	o php-basercms-4.0.0
+	o php-concrete5-8.3.2
 	o php-excel-1.8.1
 	o php-jpgraph-3.5.0b1
 	o php-memcache-3.0.8
@@ -1159,7 +1160,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-tiki6-6.14
 	o php-tt-rss-1.15.3
 	o php-tt-rss-fever-plugin-1.4.7
-	o phpmyadmin-4.7.0
+	o phpmyadmin-4.7.8
 	o phraseanet-3.8.6
 	o phraseanet-indexer-3.8.6
 	o picocom-3.0
