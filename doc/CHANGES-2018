@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.752 2018/02/24 01:03:59 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.753 2018/02/24 01:08:36 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1101,3 +1101,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-prefixspan version 0.1.1 [minskim 2018-02-23]
 	Updated lang/nodejs to 9.6.1 [fhajny 2018-02-23]
 	Updated devel/bglibs to 2.04 [schmonz 2018-02-24]
+	Updated mail/mailfront to 2.13 [schmonz 2018-02-24]
