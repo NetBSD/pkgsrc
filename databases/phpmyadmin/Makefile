@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2017/09/03 08:53:06 wiz Exp $
+# $NetBSD: Makefile,v 1.153 2018/02/24 05:34:19 taca Exp $
 
 DISTNAME=	phpMyAdmin-4.6.5.2-all-languages
 PKGNAME=	${DISTNAME:S/-all-languages//:tl}
@@ -18,7 +18,6 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.3.0:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=5.3.0:../../devel/php-gettext
 DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.3.0:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.0:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.3.0:../../security/php-mcrypt
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3.0:../../textproc/php-json
 
 USE_TOOLS+=	pax
@@ -31,7 +30,13 @@ CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
 DOC_FILES=	CONTRIBUTING.md ChangeLog DCO LICENSE README \
 		RELEASE-DATE-${PKGVERSION_NOREV}
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../lang/php/phpversion.mk"
+
+.if ${PKG_PHP_VERSION} < 71
+DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.3.0:../../security/php-mcrypt
+.else
+DEPENDS+=	${PHP_PKG_PREFIX}-pecl-mcrypt>=1.0.1:../../security/php-pecl-mcrypt
+.endif
 
 APACHE_USER?=	www
 APACHE_GROUP?=	www
