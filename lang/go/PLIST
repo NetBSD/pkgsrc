@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2017/10/28 18:20:14 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.34.2.1 2018/02/24 11:16:59 spz Exp $
 bin/go
 bin/gofmt
 go/AUTHORS
@@ -1789,6 +1789,8 @@ go/src/cmd/go/internal/web/http.go
 go/src/cmd/go/internal/web/security.go
 go/src/cmd/go/internal/work/build.go
 go/src/cmd/go/internal/work/build_test.go
+go/src/cmd/go/internal/work/security.go
+go/src/cmd/go/internal/work/security_test.go
 go/src/cmd/go/internal/work/testgo.go
 go/src/cmd/go/main.go
 go/src/cmd/go/mkalldocs.sh
@@ -5127,6 +5129,7 @@ go/src/runtime/testdata/testprogcgo/numgoroutine.go
 go/src/runtime/testdata/testprogcgo/pprof.go
 go/src/runtime/testdata/testprogcgo/raceprof.go
 go/src/runtime/testdata/testprogcgo/racesig.go
+go/src/runtime/testdata/testprogcgo/sigstack.go
 go/src/runtime/testdata/testprogcgo/threadpanic.go
 go/src/runtime/testdata/testprogcgo/threadpanic_unix.c
 go/src/runtime/testdata/testprogcgo/threadpanic_windows.c
@@ -6857,6 +6860,11 @@ go/test/fixedbugs/issue21120.go
 go/test/fixedbugs/issue21655.go
 go/test/fixedbugs/issue21963.go
 go/test/fixedbugs/issue22083.go
+go/test/fixedbugs/issue22429.go
+go/test/fixedbugs/issue22458.go
+go/test/fixedbugs/issue22683.go
+go/test/fixedbugs/issue22683.out
+go/test/fixedbugs/issue22781.go
 go/test/fixedbugs/issue2615.go
 go/test/fixedbugs/issue3552.dir/one.go
 go/test/fixedbugs/issue3552.dir/two.go
