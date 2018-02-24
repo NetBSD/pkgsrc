@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.13 2018/02/08 22:26:21 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.14 2018/02/24 20:27:05 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
 
@@ -105,3 +105,17 @@ www/squid3: security update
 
 Pullup ticket #5698 - requested by maya
 sysutils/memtestplus: build fix
+
+Pullup ticket #5703 - requested by bsiegert
+lang/go: security update
+
+Pullup ticket #5701 - requested by maya
+textproc/rapidjson: build fix
+
+Pullup ticket #5704 - requested by maya
+chat/irssi: security update
+chat/irssi-icb: security update
+chat/irssi-xmpp: security update
+
+Pullup ticket #5705 - requested by maya
+print/py-reportlab: build fix
