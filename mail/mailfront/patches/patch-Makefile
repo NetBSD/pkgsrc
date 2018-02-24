@@ -1,19 +1,10 @@
-$NetBSD: patch-Makefile,v 1.1 2017/01/02 02:19:47 schmonz Exp $
+$NetBSD: patch-Makefile,v 1.2 2018/02/24 01:08:29 schmonz Exp $
 
 Libtoolize and avoid "echo -n" in subshells to fix build on OS X.
 
---- Makefile.orig	2015-02-12 14:10:37.000000000 +0000
+--- Makefile.orig	2018-02-24 00:14:38.000000000 +0000
 +++ Makefile
-@@ -56,7 +56,7 @@ dl.lib: compile load
- 	@echo 'main() { ; }' >trylib-ldl.c
- 	@{ ./compile trylib-ldl.c && ./load trylib-ldl -ldl; } >/dev/null 2>&1 \
- 	  && { echo -ldl >dl.lib; echo yes; } \
--	  || { echo -n >dl.lib; echo no; }
-+	  || { : >dl.lib; echo no; }
- 	@rm -f trylib-ldl.c trylib-ldl.o trylib-ldl
- 
- docs: 
-@@ -103,11 +103,25 @@ makelib: 
+@@ -109,11 +109,25 @@ makelib: 
  	) >makelib
  	chmod 755 makelib
  
