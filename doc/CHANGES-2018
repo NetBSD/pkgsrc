@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.761 2018/02/25 01:09:34 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.762 2018/02/25 01:15:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1110,3 +1110,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-unittest2pytest version 0.3 [minskim 2018-02-25]
 	Added time/py-jinja2-time version 0.2.0 [minskim 2018-02-25]
 	Updated devel/py-whichcraft to 0.4.1 [minskim 2018-02-25]
+	Updated devel/py-cookiecutter to 1.6.0 [minskim 2018-02-25]
