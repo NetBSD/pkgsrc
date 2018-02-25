@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.851 2018/02/25 20:41:22 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.852 2018/02/25 20:43:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1207,3 +1207,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/mpc to 0.29 [wiz 2018-02-25]
 	Updated multimedia/ffmpeg2 to 2.8.14 [adam 2018-02-25]
 	Updated net/filezilla to 3.31.0 [wiz 2018-02-25]
+	Updated devel/global to 6.6.2 [wiz 2018-02-25]
