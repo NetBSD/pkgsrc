@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2012/09/11 20:36:18 asau Exp $
+# $NetBSD: Makefile,v 1.64 2018/02/25 16:12:52 wiz Exp $
 
 DISTNAME=	pvm3.4.6
 PKGNAME=	pvm-3.4.6
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_NETLIB:=pvm3/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.csm.ornl.gov/pvm/pvm_home.html
+HOMEPAGE=	https://www.csm.ornl.gov/pvm/pvm_home.html
 COMMENT=	Parallel Virtual Machine libraries and environment
 
 .include "../../mk/bsd.prefs.mk"
