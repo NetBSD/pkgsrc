@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.782 2018/02/25 16:42:28 adam Exp $
+$NetBSD: CHANGES-2018,v 1.783 2018/02/25 16:42:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1138,3 +1138,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/p5-Fsdb to 2.65 [wiz 2018-02-25]
 	Updated devel/p5-Alien-Build to 1.37 [wiz 2018-02-25]
 	Updated devel/nasm to 2.13.03 [adam 2018-02-25]
+	Updated devel/p5-Async-Interrupt to 1.22 [wiz 2018-02-25]
