@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/06/14 13:35:23 wiz Exp $
+$NetBSD: distinfo,v 1.3 2018/02/25 17:33:14 wiz Exp $
 
-SHA1 (Sub-Quote-2.004000.tar.gz) = b85fdb88b34ee1e320346ebab7e951cc5f589c90
-RMD160 (Sub-Quote-2.004000.tar.gz) = fb4c056706850a2b53fffefda6a48d6ea2970fad
-SHA512 (Sub-Quote-2.004000.tar.gz) = 222354896728154da7bfc6ef9d4562430ab250b1e1169330f63b43eef01527785c1c8559c5eb77a8d42484187be74a9ff97b325bb2404a205a6d4b990f8656c5
-Size (Sub-Quote-2.004000.tar.gz) = 20363 bytes
+SHA1 (Sub-Quote-2.005000.tar.gz) = 1fbf8d755b10cef7ed7261bc30768166a227809b
+RMD160 (Sub-Quote-2.005000.tar.gz) = 82e0a30b1e6bdc0bdac9a57f5ae5e68fb78489f4
+SHA512 (Sub-Quote-2.005000.tar.gz) = b92053ceba81783d2f9175ededc2095b5bd0fd92b4734d23dff88d02ae4583cc290867962b2ea513e412120faf6ca4add932ed16cc830da9d074f961c7140140
+Size (Sub-Quote-2.005000.tar.gz) = 20780 bytes
