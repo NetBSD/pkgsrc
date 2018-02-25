@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/25 00:22:53 minskim Exp $
+
+SHA1 (unittest2pytest-0.3.tar.gz) = 4d28e60e8a9818d2e4b6c90810a99fc9a9ca8da6
+RMD160 (unittest2pytest-0.3.tar.gz) = 8f623c10d5418c6ec8dea9190919583d48f49c30
+SHA512 (unittest2pytest-0.3.tar.gz) = 169ab92551007fccd369005f59e89b6cd20e2722031ae8dc51604c9131774a006465d350daad90fbce69828cfacae2d0b0d4a27f483ff992da94c3360517dc70
+Size (unittest2pytest-0.3.tar.gz) = 30389 bytes
