@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2017/09/17 10:18:34 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2018/02/25 16:55:30 wiz Exp $
 
-DISTNAME=	Dist-Zilla-6.010
+DISTNAME=	Dist-Zilla-6.011
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Dist/}
