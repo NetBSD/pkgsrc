@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.1 2016/05/16 15:05:48 nils Exp $
+$NetBSD: distinfo,v 1.2 2018/02/25 01:15:03 minskim Exp $
 
-SHA1 (cookiecutter-1.3.0.zip) = 621a7f8f3ad0bd543917ca9c57cb70d7a80ed18f
-RMD160 (cookiecutter-1.3.0.zip) = 0f402dee6e5dd85b689dcc8c473fc755cd7d029b
-SHA512 (cookiecutter-1.3.0.zip) = 540300e917b1f91c9936d799e2ac3afd61ff8eb95639dc31dc61fd9aece6f9f283dd688a3ac780c5cb6eae299a85fbb89e1cf78cdefdd14501a9debff83eddfe
-Size (cookiecutter-1.3.0.zip) = 274125 bytes
+SHA1 (cookiecutter-1.6.0.tar.gz) = d4d2bfe2d7cc3d31e9ae9f81158ae9812b1fbf9f
+RMD160 (cookiecutter-1.6.0.tar.gz) = 371e4c4a53cbdd9cdfd043066e38e6538a634e9e
+SHA512 (cookiecutter-1.6.0.tar.gz) = 0a06ae8fe7aceeeb0bcb98b5981d743b2e2e5d5f121c2e0703bb76399b0433816beaddb64c92f28d50f1781737db25907a10ec7b59f6c02c17171cfb56fb12f4
+Size (cookiecutter-1.6.0.tar.gz) = 255579 bytes
 SHA1 (patch-docs_Makefile) = c0451b26ea79a8ebd7ca0f733264806fea84857d
-SHA1 (patch-setup.py) = 1dd484db3ebb1202ead6a2bf48746751c5e1ab2b
