@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2018/02/03 00:04:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2018/02/25 04:44:51 ryoon Exp $
 
-DISTNAME=	liborcus-0.13.2
+DISTNAME=	liborcus-0.13.3
 PKGNAME=	${DISTNAME:S/liborcus/orcus/}
 CATEGORIES=	converters
 MASTER_SITES=	http://kohei.us/files/orcus/src/
