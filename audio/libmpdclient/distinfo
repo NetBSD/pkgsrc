@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2017/08/14 21:14:49 wiz Exp $
+$NetBSD: distinfo,v 1.11 2018/02/25 20:56:05 wiz Exp $
 
-SHA1 (libmpdclient-2.13.tar.xz) = 83a960131149215b39b907f549f54460aa083257
-RMD160 (libmpdclient-2.13.tar.xz) = 992bd4604dca73ac3a6cf4e9a7bc0733146e45b6
-SHA512 (libmpdclient-2.13.tar.xz) = a2aa4e1e4fcb4ab390a0a38e745e59a9764c40bfcd07d449fdc7fef7b0c5fc0c2e795ef545b6fa6d62c00861d306cab41ea43011510ad1e3a60603873a3c1b28
-Size (libmpdclient-2.13.tar.xz) = 56964 bytes
+SHA1 (libmpdclient-2.14.tar.xz) = d09370c11fbfbedbe4162c743ee70e149d727ef6
+RMD160 (libmpdclient-2.14.tar.xz) = 0617ef3512cbec954e8ea79e44cf9ae59d3552b6
+SHA512 (libmpdclient-2.14.tar.xz) = 50bf27a739ca784d5f182cc90b24fad4dbc35752e455c1ce7c2fcda78342bac5480927af199c7f790feff136dc1fe16e4eb19803ba5760ec508ba65c9737e13a
+Size (libmpdclient-2.14.tar.xz) = 58268 bytes
