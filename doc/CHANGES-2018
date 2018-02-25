@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.765 2018/02/25 04:48:27 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.766 2018/02/25 04:52:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1114,3 +1114,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/mikutter to 3.6.4 [tsutsui 2018-02-25]
 	Updated converters/orcus to 0.13.3 [ryoon 2018-02-25]
 	Updated net/nsd to 4.1.20 [ryoon 2018-02-25]
+	Updated www/php-nextcloud to 13.0.0 [ryoon 2018-02-25]
