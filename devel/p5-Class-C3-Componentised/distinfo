@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/06/07 14:42:24 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2018/02/25 16:48:30 wiz Exp $
 
-SHA1 (Class-C3-Componentised-1.001000.tar.gz) = 7865738314ba3a5cbe0df8b5114be4f71e52f7f9
-RMD160 (Class-C3-Componentised-1.001000.tar.gz) = 3515628dc29b83846e8ac0a24d3b566b61ffa05f
-SHA512 (Class-C3-Componentised-1.001000.tar.gz) = 860b7cd09b1add6f252fddc0934e9f542231be90a57cf36afcab55684aca2fdb667777248c3583ad955ce0b76db44297515f56194ed2ec444dd8c801a01b5713
-Size (Class-C3-Componentised-1.001000.tar.gz) = 24335 bytes
-SHA1 (patch-Makefile.PL) = b392b36a8ce8daff355e2143fbc0f1b6514f55c8
+SHA1 (Class-C3-Componentised-1.001002.tar.gz) = 79bb404c60035076949ffb956f27af6d9160e8e4
+RMD160 (Class-C3-Componentised-1.001002.tar.gz) = 522637d512c17584be7e36d01386d0106e5e6c28
+SHA512 (Class-C3-Componentised-1.001002.tar.gz) = 11f7d752fec271e0e1274fcfe56dadece07e79b0986bbad86fff569e74900d9fb2e68a3aeb1e465073f01e3e4dda3f4644117084880321f8213ef05ec7e2bdc0
+Size (Class-C3-Componentised-1.001002.tar.gz) = 9742 bytes
