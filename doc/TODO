@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18130 2018/02/24 17:05:29 leot Exp $
+$NetBSD: TODO,v 1.18131 2018/02/25 12:30:45 taca Exp $
 
 Suggested new packages
 ======================
@@ -1032,6 +1032,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o micro_httpd-20140814
 	o miller-5.3.0
 	o milter-greylist-4.6
+	o milter-manager-2.1.1
 	o milter-regex-2.0
 	o mime-construct-1.11
 	o mined-2015.25
