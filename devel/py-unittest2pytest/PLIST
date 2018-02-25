@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/25 00:22:53 minskim Exp $
+bin/unittest2pytest${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/unittest2pytest/__init__.py
+${PYSITELIB}/unittest2pytest/__init__.pyc
+${PYSITELIB}/unittest2pytest/__init__.pyo
+${PYSITELIB}/unittest2pytest/__main__.py
+${PYSITELIB}/unittest2pytest/__main__.pyc
+${PYSITELIB}/unittest2pytest/__main__.pyo
+${PYSITELIB}/unittest2pytest/fixes/__init__.py
+${PYSITELIB}/unittest2pytest/fixes/__init__.pyc
+${PYSITELIB}/unittest2pytest/fixes/__init__.pyo
+${PYSITELIB}/unittest2pytest/fixes/fix_remove_class.py
+${PYSITELIB}/unittest2pytest/fixes/fix_remove_class.pyc
+${PYSITELIB}/unittest2pytest/fixes/fix_remove_class.pyo
+${PYSITELIB}/unittest2pytest/fixes/fix_self_assert.py
+${PYSITELIB}/unittest2pytest/fixes/fix_self_assert.pyc
+${PYSITELIB}/unittest2pytest/fixes/fix_self_assert.pyo
+${PYSITELIB}/unittest2pytest/utils.py
+${PYSITELIB}/unittest2pytest/utils.pyc
+${PYSITELIB}/unittest2pytest/utils.pyo

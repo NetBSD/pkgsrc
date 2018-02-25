@@ -1,0 +1,1 @@
+bin/unittest2pytest @PREFIX@/bin/unittest2pytest@PYVERSSUFFIX@
