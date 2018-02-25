@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.32 2018/01/10 08:57:35 wiz Exp $
+$NetBSD: distinfo,v 1.33 2018/02/25 19:01:19 wiz Exp $
 
-SHA1 (Encode-2.94.tar.gz) = 8056141671bf5be3947a3d95cc6b614dea8c4d0f
-RMD160 (Encode-2.94.tar.gz) = a3f4b3fb5a39b76666b663d4b4397f0a888f9159
-SHA512 (Encode-2.94.tar.gz) = 50abb8bf8bbeb3317f3473316f71255ecfacfceeab5acc58b95e572add1cefffab0cc77253ed1cfe224e01c10e356482c90174f41658dbb3318dfd2aa150b9ca
-Size (Encode-2.94.tar.gz) = 2043173 bytes
+SHA1 (Encode-2.97.tar.gz) = aec88d0b09cac6dfa032e2bdb9264038f0b273c7
+RMD160 (Encode-2.97.tar.gz) = fba9fe00d3aba86dfdaeb6c3cfa9b071f46539ee
+SHA512 (Encode-2.97.tar.gz) = 26815069bc726fa1f990547dc40d5eacbd03edf49b409c5cacc5fcb4aa60838714654da502afc6f0465490a5d518548f670fdcdfa2da33958b6c38cdd6293a2d
+Size (Encode-2.97.tar.gz) = 2045186 bytes
