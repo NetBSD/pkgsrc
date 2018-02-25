@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/16 15:05:48 nils Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/02/25 01:15:03 minskim Exp $
 bin/cookiecutter
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -10,15 +10,24 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/cookiecutter/__init__.py
 ${PYSITELIB}/cookiecutter/__init__.pyc
 ${PYSITELIB}/cookiecutter/__init__.pyo
+${PYSITELIB}/cookiecutter/__main__.py
+${PYSITELIB}/cookiecutter/__main__.pyc
+${PYSITELIB}/cookiecutter/__main__.pyo
 ${PYSITELIB}/cookiecutter/cli.py
 ${PYSITELIB}/cookiecutter/cli.pyc
 ${PYSITELIB}/cookiecutter/cli.pyo
 ${PYSITELIB}/cookiecutter/config.py
 ${PYSITELIB}/cookiecutter/config.pyc
 ${PYSITELIB}/cookiecutter/config.pyo
+${PYSITELIB}/cookiecutter/environment.py
+${PYSITELIB}/cookiecutter/environment.pyc
+${PYSITELIB}/cookiecutter/environment.pyo
 ${PYSITELIB}/cookiecutter/exceptions.py
 ${PYSITELIB}/cookiecutter/exceptions.pyc
 ${PYSITELIB}/cookiecutter/exceptions.pyo
+${PYSITELIB}/cookiecutter/extensions.py
+${PYSITELIB}/cookiecutter/extensions.pyc
+${PYSITELIB}/cookiecutter/extensions.pyo
 ${PYSITELIB}/cookiecutter/find.py
 ${PYSITELIB}/cookiecutter/find.pyc
 ${PYSITELIB}/cookiecutter/find.pyo
@@ -28,6 +37,9 @@ ${PYSITELIB}/cookiecutter/generate.pyo
 ${PYSITELIB}/cookiecutter/hooks.py
 ${PYSITELIB}/cookiecutter/hooks.pyc
 ${PYSITELIB}/cookiecutter/hooks.pyo
+${PYSITELIB}/cookiecutter/log.py
+${PYSITELIB}/cookiecutter/log.pyc
+${PYSITELIB}/cookiecutter/log.pyo
 ${PYSITELIB}/cookiecutter/main.py
 ${PYSITELIB}/cookiecutter/main.pyc
 ${PYSITELIB}/cookiecutter/main.pyo
@@ -37,10 +49,16 @@ ${PYSITELIB}/cookiecutter/prompt.pyo
 ${PYSITELIB}/cookiecutter/replay.py
 ${PYSITELIB}/cookiecutter/replay.pyc
 ${PYSITELIB}/cookiecutter/replay.pyo
+${PYSITELIB}/cookiecutter/repository.py
+${PYSITELIB}/cookiecutter/repository.pyc
+${PYSITELIB}/cookiecutter/repository.pyo
 ${PYSITELIB}/cookiecutter/utils.py
 ${PYSITELIB}/cookiecutter/utils.pyc
 ${PYSITELIB}/cookiecutter/utils.pyo
 ${PYSITELIB}/cookiecutter/vcs.py
 ${PYSITELIB}/cookiecutter/vcs.pyc
 ${PYSITELIB}/cookiecutter/vcs.pyo
+${PYSITELIB}/cookiecutter/zipfile.py
+${PYSITELIB}/cookiecutter/zipfile.pyc
+${PYSITELIB}/cookiecutter/zipfile.pyo
 man/man1/cookiecutter.1
