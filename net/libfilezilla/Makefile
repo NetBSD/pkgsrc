@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2018/01/10 10:12:35 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2018/02/25 19:53:30 wiz Exp $
 
-DISTNAME=	libfilezilla-0.11.2
+DISTNAME=	libfilezilla-0.12.1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.filezilla-project.org/libfilezilla/
 EXTRACT_SUFX=	.tar.bz2
