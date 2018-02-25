@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.838 2018/02/25 19:29:27 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.839 2018/02/25 19:35:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1194,3 +1194,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/p5-DateTime-Format-Flexible to 0.29 [wiz 2018-02-25]
 	Updated time/p5-Test-MockTime to 0.16 [wiz 2018-02-25]
 	Updated www/p5-Catalyst-Runtime to 5.90117 [wiz 2018-02-25]
+	Updated www/p5-Dancer-Session-Cookie to 0.29 [wiz 2018-02-25]
