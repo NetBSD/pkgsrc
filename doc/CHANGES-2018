@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.776 2018/02/25 16:17:52 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.777 2018/02/25 16:20:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1132,3 +1132,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated converters/p5-Sereal-Encoder to 4.005 [wiz 2018-02-25]
 	Updated converters/p5-Sereal to 4.005 [wiz 2018-02-25]
 	Updated databases/p5-BDB to 1.92 [wiz 2018-02-25]
+	Updated databases/p5-DBD-mysql to 4.046 [wiz 2018-02-25]
