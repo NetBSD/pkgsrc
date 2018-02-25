@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.829 2018/02/25 18:56:27 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.830 2018/02/25 18:57:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1185,3 +1185,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/p5-IO-Socket-SSL to 2.056 [wiz 2018-02-25]
 	Updated security/p5-Crypt-OpenSSL-RSA to 0.28nb10 [wiz 2018-02-25]
 	Updated security/p5-Net-DNS-SEC to 1.04 [wiz 2018-02-25]
+	Updated security/p5-Net-OpenSSH to 0.77 [wiz 2018-02-25]
