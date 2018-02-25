@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2017/11/13 14:17:25 wiz Exp $
+$NetBSD: distinfo,v 1.10 2018/02/25 17:57:01 wiz Exp $
 
-SHA1 (User-Identity-0.98.tar.gz) = 8de86caf888ab0cde5380a0ee63cc69e6d8051ca
-RMD160 (User-Identity-0.98.tar.gz) = 804ad962f2b51e75e01305eaae5e0a4e61e04810
-SHA512 (User-Identity-0.98.tar.gz) = 137440946d15db9a057c3caf132c95e5950e265e624842e491e1999932eeb34d96a3e44e5553caa098298e82a9f7fefae65a0d516cbe3ce67e71f649af5110a3
-Size (User-Identity-0.98.tar.gz) = 27642 bytes
+SHA1 (User-Identity-0.99.tar.gz) = e12d9419aa896c817d31fabe3d0b8578bd1ab1db
+RMD160 (User-Identity-0.99.tar.gz) = a7f3f2f0753368723bea7c6995e6e083cd681b1d
+SHA512 (User-Identity-0.99.tar.gz) = b0706cb5aed372b384229459c5b1a9e46968cd8d58f713754cd1a65a7caad0931839bf9d1540ce7a849f94a3d37f580120940364eb29684d3a84a009fb702cbb
+Size (User-Identity-0.99.tar.gz) = 28657 bytes
