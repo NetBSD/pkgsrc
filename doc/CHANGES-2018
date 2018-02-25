@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.786 2018/02/25 16:48:39 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.787 2018/02/25 16:55:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1142,3 +1142,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-B-Keywords to 1.18 [wiz 2018-02-25]
 	Updated devel/p5-CPAN-Perl-Releases to 3.48 [wiz 2018-02-25]
 	Updated devel/p5-Class-C3-Componentised to 1.001002 [wiz 2018-02-25]
+	Updated devel/p5-Dist-Zilla to 6.011 [wiz 2018-02-25]
