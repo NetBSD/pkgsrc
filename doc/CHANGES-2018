@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.792 2018/02/25 17:08:11 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.793 2018/02/25 17:09:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1148,3 +1148,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-File-Slurper to 0.012 [wiz 2018-02-25]
 	Updated devel/p5-Getopt-Long-Descriptive to 0.102 [wiz 2018-02-25]
 	Updated devel/p5-Hash-Case to 1.030 [wiz 2018-02-25]
+	Updated devel/p5-IO-AIO to 4.4 [wiz 2018-02-25]
