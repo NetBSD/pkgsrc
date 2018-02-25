@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2015/04/25 14:23:39 tnn Exp $
-#
+# $NetBSD: Makefile,v 1.20 2018/02/25 16:06:56 wiz Exp $
 
 DISTNAME=		goggles-0.9.1
 PKGREVISION=		14
 CATEGORIES=		multimedia
-MASTER_SITES=		http://www.fifthplanet.net/files/
+#MASTER_SITES=		http://www.fifthplanet.net/files/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.fifthplanet.net/goggles.html
+#HOMEPAGE=		http://www.fifthplanet.net/goggles.html
 COMMENT=		Easy to use frontend for Ogle DVD Player
 
 USE_LANGUAGES+=		c c++ # c for configure script
