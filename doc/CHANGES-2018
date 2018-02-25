@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.849 2018/02/25 20:30:31 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.850 2018/02/25 20:36:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1205,3 +1205,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-meson to 0.44.1 [wiz 2018-02-25]
 	Updated devel/py-meson to 0.44.1nb1 [wiz 2018-02-25]
 	Updated audio/mpc to 0.29 [wiz 2018-02-25]
+	Updated multimedia/ffmpeg2 to 2.8.14 [adam 2018-02-25]
