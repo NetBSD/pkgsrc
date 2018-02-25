@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2017/11/15 09:51:44 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2018/02/25 15:56:23 wiz Exp $
 
-DISTNAME=	Sereal-Decoder-4.004
+DISTNAME=	Sereal-Decoder-4.005
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	security perl5 converters
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../CPAN/authors/id/Y/YV/YVES/}
@@ -12,6 +12,8 @@ LICENSE=	${PERL5_LICENSE}
 
 BUILD_DEPENDS+=	p5-Test-LongString-[0-9]*:../../devel/p5-Test-LongString
 BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+BUILD_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
 
 PERL5_PACKLIST=		auto/Sereal/Decoder/.packlist
 
