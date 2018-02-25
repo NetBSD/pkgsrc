@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2015/03/15 19:51:08 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.3 2018/02/25 16:10:41 wiz Exp $
 
 DISTNAME=	libkkc-data-0.2.7
 CATEGORIES=	misc japanese
-MASTER_SITES=	https://bitbucket.org/libkkc/libkkc-data/downloads/
+#MASTER_SITES=	https://bitbucket.org/libkkc/libkkc-data/downloads/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/libkkc/libkkc-data/
+HOMEPAGE=	https://github.com/ueno/libkkc
 COMMENT=	Language model data for libkkc
 LICENSE=	gnu-gpl-v3
 
