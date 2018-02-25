@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.804 2018/02/25 17:30:04 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.805 2018/02/25 17:31:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1160,3 +1160,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Params-ValidationCompiler to 0.27 [wiz 2018-02-25]
 	Updated devel/p5-Proc-ProcessTable to 0.55 [wiz 2018-02-25]
 	Updated devel/p5-Ref-Util-XS to 0.117 [wiz 2018-02-25]
+	Updated devel/p5-Scalar-List-Utils to 1.50 [wiz 2018-02-25]
