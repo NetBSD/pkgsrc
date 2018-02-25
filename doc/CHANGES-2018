@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.810 2018/02/25 17:39:32 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.811 2018/02/25 17:41:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1166,3 +1166,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Term-Size-Perl to 0.031 [wiz 2018-02-25]
 	Updated devel/p5-Test-API to 0.010 [wiz 2018-02-25]
 	Updated devel/p5-Test-CheckManifest to 1.33 [wiz 2018-02-25]
+	Updated devel/p5-Test-Simple to 1.302125 [wiz 2018-02-25]
