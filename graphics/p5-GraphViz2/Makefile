@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2017/09/17 15:52:21 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2018/02/25 17:52:10 wiz Exp $
 
-DISTNAME=	GraphViz2-2.46
+DISTNAME=	GraphViz2-2.47
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GraphViz2/}
@@ -40,6 +40,8 @@ DEPENDS+=	p5-XML-Tiny>=2.06:../../textproc/p5-XML-Tiny
 
 PERL5_PACKLIST=		auto/GraphViz2/.packlist
 USE_LANGUAGES=		# none
+
+# 2 test failures as of 2.47
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
