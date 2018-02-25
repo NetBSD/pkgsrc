@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.814 2018/02/25 17:45:01 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.815 2018/02/25 17:46:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1170,3 +1170,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Test-Version to 2.07 [wiz 2018-02-25]
 	Updated devel/p5-Test2-Suite to 0.000100 [wiz 2018-02-25]
 	Updated devel/p5-Tree-DAG_Node to 1.31 [wiz 2018-02-25]
+	Updated graphics/p5-GD to 2.68 [wiz 2018-02-25]
