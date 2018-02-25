@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.26 2018/02/11 16:27:27 wiz Exp $
+$NetBSD: distinfo,v 1.27 2018/02/25 21:26:09 wiz Exp $
 
-SHA1 (vala-0.38.7.tar.xz) = d82f532383d53c6ec6f873cf6c05d4516a068dd0
-RMD160 (vala-0.38.7.tar.xz) = 30e781f6a24d1a21e6a027178987971c22c4706c
-SHA512 (vala-0.38.7.tar.xz) = e1e8496ac890001b6baa9d59fc0207c47a1f073ce39deda9a5fd3e8deed437c4b99be0bcfc1f28a4361ee9b15cd8e1ebcb8e2360a6c4a862ec4e831f352f26f0
-Size (vala-0.38.7.tar.xz) = 3402848 bytes
+SHA1 (vala-0.38.8.tar.xz) = e5fc24d392c29ddd031188fbe9cf6f4e445151a2
+RMD160 (vala-0.38.8.tar.xz) = 7c93b290297ba23a46ddd009cf5459af0e243ee8
+SHA512 (vala-0.38.8.tar.xz) = de4e2d3d5fbe610a6ff4c42ab006ace803d2d90fe55a9c73262c4cda4e8bd352e010c6dcc8652bf439ae220b3090a8792eab55f70e296f62992cdb8ea23a6212
+Size (vala-0.38.8.tar.xz) = 3405060 bytes
 SHA1 (patch-ac) = c1f2f101821db89a30512e275f0b8c6d6f7bb315
