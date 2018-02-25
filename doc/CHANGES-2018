@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.822 2018/02/25 18:00:11 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.823 2018/02/25 18:35:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1178,3 +1178,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/p5-User-Identity to 0.99 [wiz 2018-02-25]
 	Updated net/p5-Net-DNS to 1.15 [wiz 2018-02-25]
 	Updated net/p5-Net-GitHub to 0.94 [wiz 2018-02-25]
+	Updated net/net-snmp to 5.7.3nb9 [wiz 2018-02-25]
