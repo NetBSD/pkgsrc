@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.806 2018/02/25 17:32:29 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.807 2018/02/25 17:33:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1162,3 +1162,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Ref-Util-XS to 0.117 [wiz 2018-02-25]
 	Updated devel/p5-Scalar-List-Utils to 1.50 [wiz 2018-02-25]
 	Updated devel/p5-String-Print to 0.93 [wiz 2018-02-25]
+	Updated devel/p5-Sub-Quote to 2.005000 [wiz 2018-02-25]
