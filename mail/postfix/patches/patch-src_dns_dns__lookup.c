@@ -1,8 +1,8 @@
-$NetBSD: patch-src_dns_dns__lookup.c,v 1.4 2016/09/18 17:10:28 taca Exp $
+$NetBSD: patch-src_dns_dns__lookup.c,v 1.5 2018/02/25 12:27:50 taca Exp $
 
 Fix runtime problem when mysql PKG_OPTIONS is enabled.
 
---- src/dns/dns_lookup.c.orig	2015-07-12 14:10:57.000000000 +0000
+--- src/dns/dns_lookup.c.orig	2017-12-21 01:53:15.000000000 +0000
 +++ src/dns/dns_lookup.c
 @@ -245,6 +245,8 @@
  
@@ -54,10 +54,10 @@ Fix runtime problem when mysql PKG_OPTIONS is enabled.
  	memset(answer, 0, anslen);
 -    len = res_query(name, class, type, answer, anslen);
 +    len = res_nquery(statp, name, class, type, answer, anslen);
-     if (len > 0) {
- 	SET_H_ERRNO(0);
-     } else if (keep_notfound && NOT_FOUND_H_ERRNO(h_errno)) {
-@@ -427,7 +429,7 @@ static int dns_query(const char *name, i
+     /* Begin API creep workaround. */
+     if (len < 0 && h_errno == 0) {
+ 	SET_H_ERRNO(TRY_AGAIN);
+@@ -435,7 +437,7 @@ static int dns_query(const char *name, i
      /*
       * Initialize the name service.
       */
@@ -66,7 +66,7 @@ Fix runtime problem when mysql PKG_OPTIONS is enabled.
  	if (why)
  	    vstring_strcpy(why, "Name service initialization failure");
  	return (DNS_FAIL);
-@@ -456,24 +458,24 @@ static int dns_query(const char *name, i
+@@ -464,24 +466,24 @@ static int dns_query(const char *name, i
       */
  #define SAVE_FLAGS (USER_FLAGS | XTRA_FLAGS)
  
