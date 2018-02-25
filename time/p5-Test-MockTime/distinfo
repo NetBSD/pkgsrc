@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/23 11:44:34 mef Exp $
+$NetBSD: distinfo,v 1.5 2018/02/25 19:08:28 wiz Exp $
 
-SHA1 (Test-MockTime-0.15.tar.gz) = 3dc99906de38a9ff79b58f792e7f5d5905a93611
-RMD160 (Test-MockTime-0.15.tar.gz) = 7043ca0455cc73938c3c4f51db26d68e930c44e6
-SHA512 (Test-MockTime-0.15.tar.gz) = 8a91eb39e7ff68d6ac1cbd149ee8acdbdc2bf6c99bcd71decc38fb2c71f5ed6bdb32336c4e07a922e7d8dd1b2d084306a232e008a0a8587720fff60a3ba325d0
-Size (Test-MockTime-0.15.tar.gz) = 5658 bytes
+SHA1 (Test-MockTime-0.16.tar.gz) = 39e3123346fe39cccff73c089176b2fdebf03c2d
+RMD160 (Test-MockTime-0.16.tar.gz) = a06e48a4a0d8f15e76d2213f5d7f6397a0da58c3
+SHA512 (Test-MockTime-0.16.tar.gz) = 158026f9b1590131b51a004c0b8ecc7e190d0bd90da13ae56f645909e30ce6830deae1821874d71a1ad4d0dee84cd9e2b50aeacf7ef1d9cd465332823da0f927
+Size (Test-MockTime-0.16.tar.gz) = 5804 bytes
