@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.795 2018/02/25 17:13:57 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.796 2018/02/25 17:14:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1151,3 +1151,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-IO-AIO to 4.4 [wiz 2018-02-25]
 	Updated devel/p5-IPC-Cmd to 1.00 [wiz 2018-02-25]
 	Updated devel/p5-Importer to 0.025 [wiz 2018-02-25]
+	Updated devel/p5-List-UtilsBy to 0.11 [wiz 2018-02-25]
