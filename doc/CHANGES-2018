@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.817 2018/02/25 17:54:14 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.818 2018/02/25 17:55:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1173,3 +1173,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/p5-GD to 2.68 [wiz 2018-02-25]
 	Updated graphics/p5-GraphViz2 to 2.47 [wiz 2018-02-25]
 	Updated graphics/p5-Image-ExifTool to 10.80 [wiz 2018-02-25]
+	Updated graphics/p5-SVG to 2.84 [wiz 2018-02-25]
