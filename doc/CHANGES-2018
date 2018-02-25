@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.824 2018/02/25 18:41:29 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.825 2018/02/25 18:43:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1180,3 +1180,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/p5-Net-GitHub to 0.94 [wiz 2018-02-25]
 	Updated net/net-snmp to 5.7.3nb9 [wiz 2018-02-25]
 	Updated net/p5-SNMP-Info to 3.46 [wiz 2018-02-25]
+	Updated net/p5-WebService-MusicBrainz to 1.0.4 [wiz 2018-02-25]
