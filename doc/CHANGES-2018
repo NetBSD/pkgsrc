@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.768 2018/02/25 14:04:21 taca Exp $
+$NetBSD: CHANGES-2018,v 1.769 2018/02/25 14:08:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1124,3 +1124,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/postfix-pgsql to 3.2.5 [taca 2018-02-25]
 	Updated mail/postfix-sqlite to 3.2.5 [taca 2018-02-25]
 	Updated converters/ruby-Ascii85 to 1.0.3 [taca 2018-02-25]
+	Updated databases/ruby-mysql2 to 0.4.10 [taca 2018-02-25]
