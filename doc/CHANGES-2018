@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.759 2018/02/25 00:26:52 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.760 2018/02/25 00:53:24 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1108,3 +1108,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/neomutt to 20180223 [wiz 2018-02-24]
 	Updated devel/nss to 3.35nb1 [ryoon 2018-02-24]
 	Added devel/py-unittest2pytest version 0.3 [minskim 2018-02-25]
+	Added time/py-jinja2-time version 0.2.0 [minskim 2018-02-25]
