@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.772 2018/02/25 15:52:19 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.773 2018/02/25 15:56:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1128,3 +1128,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/ruby-pg to 1.0.0 [taca 2018-02-25]
 	Updated databases/ruby-sequel to 5.5.0 [taca 2018-02-25]
 	Updated converters/p5-JSON-MaybeXS to 1.003010 [wiz 2018-02-25]
+	Updated converters/p5-Sereal-Decoder to 4.005 [wiz 2018-02-25]
