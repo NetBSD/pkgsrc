@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.827 2018/02/25 18:47:42 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.828 2018/02/25 18:53:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1183,3 +1183,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/p5-WebService-MusicBrainz to 1.0.4 [wiz 2018-02-25]
 	Updated security/p5-CryptX to 0.057 [wiz 2018-02-25]
 	Updated security/p5-IO-Socket-SSL to 2.056 [wiz 2018-02-25]
+	Updated security/p5-Crypt-OpenSSL-RSA to 0.28nb10 [wiz 2018-02-25]
