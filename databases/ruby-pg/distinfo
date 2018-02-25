@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.22 2017/06/18 15:31:10 taca Exp $
+$NetBSD: distinfo,v 1.23 2018/02/25 14:19:24 taca Exp $
 
-SHA1 (pg-0.21.0.gem) = a0e124a761fc0c9cb0e1518d91370f867faadb42
-RMD160 (pg-0.21.0.gem) = e181b489cfd466e2ec5d16a37e732d325ef3ea12
-SHA512 (pg-0.21.0.gem) = 590a8c34487d2cf030082cfff87b2cc83b636df06a931e394acfb098ecb5728e793d777f125b036ee9953bbd21ec5facf91c932930acccb507d3394f2fc4cc5b
-Size (pg-0.21.0.gem) = 214016 bytes
+SHA1 (pg-1.0.0.gem) = ef2bbde400a47744aea9b32948331d0ad318c3d2
+RMD160 (pg-1.0.0.gem) = bef8ef8f340435b932028bf569e7ddb81e5e094a
+SHA512 (pg-1.0.0.gem) = 1cac025ab8a95b4429534b98377eedeb1e3f8b2c4a859363c4174d477577caf39557b002cde4e745189fa9a29e9181ff9d564d822f15ff5c4f03f7389b0d0398
+Size (pg-1.0.0.gem) = 213504 bytes
 SHA1 (patch-ext_extconf.rb) = 161b826521c4e3b5a5c6aaa88dae572e36257b9c
