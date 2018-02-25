@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.846 2018/02/25 20:00:12 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.847 2018/02/25 20:17:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1202,3 +1202,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-WWW-Mechanize to 1.87 [wiz 2018-02-25]
 	Updated net/libfilezilla to 0.12.1 [wiz 2018-02-25]
 	Updated devel/py-scandir to 1.7 [wiz 2018-02-25]
+	Updated devel/py-meson to 0.44.1 [wiz 2018-02-25]
