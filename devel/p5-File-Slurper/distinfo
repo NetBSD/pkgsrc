@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/12/30 13:24:19 wiz Exp $
+$NetBSD: distinfo,v 1.6 2018/02/25 17:03:22 wiz Exp $
 
-SHA1 (File-Slurper-0.011.tar.gz) = 0bd7f610519a297b169fe87456d09d2b6f481c86
-RMD160 (File-Slurper-0.011.tar.gz) = 83cf12614485194b24cb0cb1ed389ea25dc172e1
-SHA512 (File-Slurper-0.011.tar.gz) = 67b1e9a95a21e866b7701a9891b618adab7efec86d98e5ac84021d14f9603fac8fa653560f80642e8832ce1bd3dd12f72720f8f2d22647cdb83b103545529bf3
-Size (File-Slurper-0.011.tar.gz) = 15460 bytes
+SHA1 (File-Slurper-0.012.tar.gz) = 9bae724ae9f9e9f79522186564b4cbe2697d1709
+RMD160 (File-Slurper-0.012.tar.gz) = ab16d3b48ed72ce83cdf29ccc6460d8c19a2862c
+SHA512 (File-Slurper-0.012.tar.gz) = 276b510c85b4e28fff4b8bd77c81031367b073426138743efb5d54fe01fa9825409f86090788779e96625b43207d1f864f348cc11554c51d36868dfed568f2bb
+Size (File-Slurper-0.012.tar.gz) = 15517 bytes
