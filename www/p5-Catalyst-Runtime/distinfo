@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.28 2017/09/27 14:10:51 wiz Exp $
+$NetBSD: distinfo,v 1.29 2018/02/25 19:29:15 wiz Exp $
 
-SHA1 (Catalyst-Runtime-5.90115.tar.gz) = 3a1067a6e996cb2ae3b2859f45683e1c1913e852
-RMD160 (Catalyst-Runtime-5.90115.tar.gz) = 17ac87220c3f2f0953854a2c8b79dc39702da6dd
-SHA512 (Catalyst-Runtime-5.90115.tar.gz) = 572e43f49cdd36a23782058de2acc2877558d164010651692ef6e050a8f4089661cd44a64c9a4bceb6da62ae4b53d3bb1dee43f00d31764a1f2baece29189c0c
-Size (Catalyst-Runtime-5.90115.tar.gz) = 392032 bytes
-SHA1 (patch-Makefile.PL) = a1349133540339015c3abbde8e50f32a8fa2f837
+SHA1 (Catalyst-Runtime-5.90117.tar.gz) = faeafb062c470b95a815cee50e15341a16d3c7dd
+RMD160 (Catalyst-Runtime-5.90117.tar.gz) = 0568e42a204f89218056dd333eda001e775e4804
+SHA512 (Catalyst-Runtime-5.90117.tar.gz) = f845844d12e4a87db6923a874593f6e0cd4e501f802a26a97ebf265cba05ccb8dccd90d186bc8229126db7c2fd8f0226b5a814ff9321b26f1615f87a7c367248
+Size (Catalyst-Runtime-5.90117.tar.gz) = 394823 bytes
