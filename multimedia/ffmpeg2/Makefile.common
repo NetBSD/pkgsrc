@@ -1,15 +1,14 @@
-# $NetBSD: Makefile.common,v 1.54 2018/01/25 14:15:26 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.55 2018/02/25 20:35:44 adam Exp $
 # used by multimedia/ffmpeg2/Makefile
 # used by multimedia/ffplay2/Makefile
 
-DISTNAME=	ffmpeg-2.8.13
+DISTNAME=	ffmpeg-2.8.14
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.ffmpeg.org/releases/
 EXTRACT_SUFX=	.tar.xz
 
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
-PREV_PKGPATH=	multimedia/ffmpeg-devel
 PATCHDIR=	${.CURDIR}/../../multimedia/ffmpeg2/patches
 
 USE_LANGUAGES=		c99
@@ -20,9 +19,10 @@ CONFIGURE_ARGS+=	--cc=${CC:Q}
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-optimizations
 CONFIGURE_ARGS+=	--disable-stripping
-CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ARGS+=	--enable-pthreads
 CONFIGURE_ARGS+=	--enable-gpl
+CONFIGURE_ARGS+=	--enable-libbluray
+CONFIGURE_ARGS+=	--enable-pthreads
+CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
@@ -69,7 +69,8 @@ SUBST_SED.sunwspro+=	-e "s/-std=c99/-xc99=all/"
 SUBST_SED.sunwspro+=	-e "s/-Wl,-rpath-link,/-L /g"
 .endif
 
-BUILD_DEPENDS+=	yasm>=0.7.2:../../devel/yasm
+#BUILD_DEPENDS+=	yasm>=0.7.2:../../devel/yasm
+BUILD_DEPENDS+=	nasm>=2.13:../../devel/nasm
 
 REPLACE_PERL+=	doc/texi2pod.pl
 REPLACE_SH+=	configure version.sh
@@ -91,5 +92,7 @@ pre-configure:
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../multimedia/libbluray/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
