@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.802 2018/02/25 17:27:14 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.803 2018/02/25 17:28:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1158,3 +1158,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Module-CoreList to 5.20180220 [wiz 2018-02-25]
 	Updated devel/p5-PPIx-Regexp to 0.055 [wiz 2018-02-25]
 	Updated devel/p5-Params-ValidationCompiler to 0.27 [wiz 2018-02-25]
+	Updated devel/p5-Proc-ProcessTable to 0.55 [wiz 2018-02-25]
