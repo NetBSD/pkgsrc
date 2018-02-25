@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.863 2018/02/25 21:27:09 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.864 2018/02/25 21:35:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1219,3 +1219,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/sane-backends to 1.0.27 [wiz 2018-02-25]
 	Updated lang/vala to 0.38.8 [wiz 2018-02-25]
 	Updated devel/waf to 2.0.6 [wiz 2018-02-25]
+	Updated net/wireshark to 2.4.5 [wiz 2018-02-25]
