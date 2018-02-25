@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2017/12/09 02:26:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.56 2018/02/25 15:22:31 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -148,6 +148,8 @@ ${GEM_LIBDIR}/doc/release_notes/5.0.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.1.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.2.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.3.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.4.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.5.0.txt
 ${GEM_LIBDIR}/doc/schema_modification.rdoc
 ${GEM_LIBDIR}/doc/security.rdoc
 ${GEM_LIBDIR}/doc/sharding.rdoc
@@ -251,6 +253,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/core_refinements.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/current_datetime_timestamp.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/dataset_source_alias.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/date_arithmetic.rb
+${GEM_LIBDIR}/lib/sequel/extensions/datetime_parse_to_time.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/duplicate_columns_handler.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/empty_array_consider_nulls.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/error_sql.rb
@@ -260,6 +263,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/from_block.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/graph_each.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/identifier_mangling.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/implicit_subquery.rb
+${GEM_LIBDIR}/lib/sequel/extensions/index_caching.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/inflector.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/looser_typecasting.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/migration.rb
@@ -285,6 +289,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/pg_range_ops.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_row.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_row_ops.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_static_cache_updater.rb
+${GEM_LIBDIR}/lib/sequel/extensions/pg_timestamptz.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pretty_table.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/query.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/round_timestamps.rb
@@ -451,6 +456,7 @@ ${GEM_LIBDIR}/spec/extensions/current_datetime_timestamp_spec.rb
 ${GEM_LIBDIR}/spec/extensions/dataset_associations_spec.rb
 ${GEM_LIBDIR}/spec/extensions/dataset_source_alias_spec.rb
 ${GEM_LIBDIR}/spec/extensions/date_arithmetic_spec.rb
+${GEM_LIBDIR}/spec/extensions/datetime_parse_to_time_spec.rb
 ${GEM_LIBDIR}/spec/extensions/def_dataset_method_spec.rb
 ${GEM_LIBDIR}/spec/extensions/defaults_setter_spec.rb
 ${GEM_LIBDIR}/spec/extensions/delay_add_association_spec.rb
@@ -468,6 +474,7 @@ ${GEM_LIBDIR}/spec/extensions/graph_each_spec.rb
 ${GEM_LIBDIR}/spec/extensions/hook_class_methods_spec.rb
 ${GEM_LIBDIR}/spec/extensions/identifier_mangling_spec.rb
 ${GEM_LIBDIR}/spec/extensions/implicit_subquery_spec.rb
+${GEM_LIBDIR}/spec/extensions/index_caching_spec.rb
 ${GEM_LIBDIR}/spec/extensions/inflector_spec.rb
 ${GEM_LIBDIR}/spec/extensions/input_transformer_spec.rb
 ${GEM_LIBDIR}/spec/extensions/insert_returning_select_spec.rb
@@ -506,6 +513,7 @@ ${GEM_LIBDIR}/spec/extensions/pg_row_ops_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pg_row_plugin_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pg_row_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pg_static_cache_updater_spec.rb
+${GEM_LIBDIR}/spec/extensions/pg_timestamptz_spec.rb
 ${GEM_LIBDIR}/spec/extensions/prepared_statements_safe_spec.rb
 ${GEM_LIBDIR}/spec/extensions/prepared_statements_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pretty_table_spec.rb
