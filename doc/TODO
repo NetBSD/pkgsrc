@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18142 2018/02/25 20:56:13 wiz Exp $
+$NetBSD: TODO,v 1.18143 2018/02/25 21:08:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -993,7 +993,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lv2-5.4
 	o lwm-1.2.4
 	o lyx-2.2.3
-	o lzip-1.20
 	o lzma-9.18
 	o mDNSResponder-576.30.4
 	o mDNSResponder-nss-576.30.4
