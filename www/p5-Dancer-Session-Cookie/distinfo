@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/01/09 04:06:02 wen Exp $
+$NetBSD: distinfo,v 1.5 2018/02/25 19:34:54 wiz Exp $
 
-SHA1 (Dancer-Session-Cookie-0.27.tar.gz) = 58dedfa99903f0099ca1e1508e6d02d583595ae7
-RMD160 (Dancer-Session-Cookie-0.27.tar.gz) = c7ce52faee583989f30bb94a1a8d1642ad2b0973
-SHA512 (Dancer-Session-Cookie-0.27.tar.gz) = 397256cd3c649d2b2bbaa89b482d65fe4ad0aca84a0b4d765274976f12eb7a7367b839d5fa1800b7d12ccc6945e08e9236b386650a4b6257eaed02d6d6216309
-Size (Dancer-Session-Cookie-0.27.tar.gz) = 23845 bytes
+SHA1 (Dancer-Session-Cookie-0.29.tar.gz) = 7f45a50bc49719cd930d09a80338ea0fa1a5807b
+RMD160 (Dancer-Session-Cookie-0.29.tar.gz) = 17e8f0a964b2e92f54d9d03d3811f49aa9210fc8
+SHA512 (Dancer-Session-Cookie-0.29.tar.gz) = f948ffbc5138a6bb0b63ee54e9571d4ca56c1412590c7c1b241f613beff41adbb3301c7a9d3fc45ffff47e143355208eb825b724a394297fc12109fcefd64189
+Size (Dancer-Session-Cookie-0.29.tar.gz) = 25396 bytes
