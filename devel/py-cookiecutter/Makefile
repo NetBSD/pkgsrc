@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2016/08/28 15:48:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/02/25 01:15:03 minskim Exp $
 
-DISTNAME=			cookiecutter-1.3.0
+DISTNAME=			cookiecutter-1.6.0
 GITHUB_PROJECT=			cookiecutter
 PKGNAME=			${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=			devel
 MASTER_SITES=			${MASTER_SITE_GITHUB:=audreyr/}
-EXTRACT_SUFX=			.zip
 
 MAINTAINER=			gde@llew.me
 HOMEPAGE=			https://github.com/audreyr/cookiecutter/
@@ -23,10 +22,11 @@ BUILD_DEPENDS+=			${PYPKGPREFIX}-test>=2.3.0:../../devel/py-test
 DEPENDS+=			${PYPKGPREFIX}-future>=0.15.2:../../devel/py-future
 DEPENDS+=			${PYPKGPREFIX}-binaryornot>=0.2.0:../../devel/py-binaryornot
 DEPENDS+=			${PYPKGPREFIX}-jinja2>=2.7:../../textproc/py-jinja2
+DEPENDS+=			${PYPKGPREFIX}-jinja2-time>=0.1:../../time/py-jinja2-time
 DEPENDS+=			${PYPKGPREFIX}-click>=6.3:../../devel/py-click
-DEPENDS+=			${PYPKGPREFIX}-whichcraft>=0.1.1:../../devel/py-whichcraft
-DEPENDS+=			${PYPKGPREFIX}-ruamel-yaml>=0.10.12:../../devel/py-ruamel-yaml
-DEPENDS+=			${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
+DEPENDS+=			${PYPKGPREFIX}-whichcraft>=0.4.0:../../devel/py-whichcraft
+DEPENDS+=			${PYPKGPREFIX}-poyo>=0.1.0:../../textproc/py-poyo
+DEPENDS+=			${PYPKGPREFIX}-requests>=2.18.0:../../devel/py-requests
 
 # for python < 3.0
 .include "../../lang/python/pyversion.mk"
