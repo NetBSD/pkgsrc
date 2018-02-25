@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.834 2018/02/25 19:03:33 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.835 2018/02/25 19:04:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1190,3 +1190,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-Encode to 2.97 [wiz 2018-02-25]
 	Updated textproc/p5-XML-LibXSLT to 1.96 [wiz 2018-02-25]
 	Updated textproc/p5-YAML-Tiny to 1.73 [wiz 2018-02-25]
+	Updated time/p5-Calendar-Simple to 1.23 [wiz 2018-02-25]
