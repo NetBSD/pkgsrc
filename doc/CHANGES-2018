@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.856 2018/02/25 20:56:13 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.857 2018/02/25 21:07:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1212,3 +1212,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/musicpd to 0.20.18 [wiz 2018-02-25]
 	Updated graphics/ImageMagick to 7.0.7.23 [wiz 2018-02-25]
 	Updated audio/libmpdclient to 2.14 [wiz 2018-02-25]
+	Updated x11/gtk3 to 3.22.28 [wiz 2018-02-25]
