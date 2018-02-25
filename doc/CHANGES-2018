@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.854 2018/02/25 20:48:24 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.855 2018/02/25 20:55:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1210,3 +1210,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/global to 6.6.2 [wiz 2018-02-25]
 	Updated devel/apache-ant to 1.10.2 [wiz 2018-02-25]
 	Updated audio/musicpd to 0.20.18 [wiz 2018-02-25]
+	Updated graphics/ImageMagick to 7.0.7.23 [wiz 2018-02-25]
