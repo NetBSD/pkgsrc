@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2017/06/18 15:31:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/02/25 14:19:24 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -51,7 +51,6 @@ ${GEM_LIBDIR}/lib/pg/basic_type_mapping.rb
 ${GEM_LIBDIR}/lib/pg/coder.rb
 ${GEM_LIBDIR}/lib/pg/connection.rb
 ${GEM_LIBDIR}/lib/pg/constants.rb
-${GEM_LIBDIR}/lib/pg/deprecated_constants.rb
 ${GEM_LIBDIR}/lib/pg/exceptions.rb
 ${GEM_LIBDIR}/lib/pg/result.rb
 ${GEM_LIBDIR}/lib/pg/text_decoder.rb
