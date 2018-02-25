@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2016/03/05 11:28:21 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.97 2018/02/25 16:04:01 wiz Exp $
 
 DISTNAME=	cvsync-0.24.19
 PKGREVISION=	9
@@ -7,7 +6,7 @@ CATEGORIES=	devel scm
 MASTER_SITES=	ftp://ftp.cvsync.org/pub/cvsync/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cvsync.org/
+HOMEPAGE=	https://www.cvsync.org/
 COMMENT=	Portable incremental cvs repository syncer
 
 USE_TOOLS+=	gmake
