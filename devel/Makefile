@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2617 2018/02/23 17:26:37 minskim Exp $
+# $NetBSD: Makefile,v 1.2618 2018/02/25 00:23:37 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -2226,6 +2226,7 @@ SUBDIR+=	py-unit
 SUBDIR+=	py-unitgui
 SUBDIR+=	py-unittest-mixins
 SUBDIR+=	py-unittest2
+SUBDIR+=	py-unittest2pytest
 SUBDIR+=	py-urwid
 SUBDIR+=	py-usb
 SUBDIR+=	py-uuid
