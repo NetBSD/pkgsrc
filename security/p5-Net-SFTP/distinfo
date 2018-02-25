@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/02/20 14:08:29 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2018/02/25 18:59:56 wiz Exp $
 
-SHA1 (Net-SFTP-0.11.tar.gz) = 03e52412b59b8d35449d731e22a2b408662de692
-RMD160 (Net-SFTP-0.11.tar.gz) = 2e8c6b66af745ed3d3c94d3a5de49a3bec045770
-SHA512 (Net-SFTP-0.11.tar.gz) = 97c0412bc31e423bd5d87d18cb2c32e02ab1aea7362b9fe718f018428bccc19f5c7565ab0e1aaa9a625b535805f06757353092e41988dbba56cd90d409514b2b
-Size (Net-SFTP-0.11.tar.gz) = 26939 bytes
+SHA1 (Net-SFTP-0.12.tar.gz) = c698df5d9a632da0c530dddfaeefd6ddc6b77f50
+RMD160 (Net-SFTP-0.12.tar.gz) = fe7d95b632a347c32f82afcf0b52fd599bd7f514
+SHA512 (Net-SFTP-0.12.tar.gz) = 1b24366ba49ed8d54297ae6752536959256365a601e0c10842f1d1308f0fb47d6ddf576dc7c6d6aff3910299203d5a82e97104016d0202eef3cfc62a24a78dfa
+Size (Net-SFTP-0.12.tar.gz) = 27017 bytes
