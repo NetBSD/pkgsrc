@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.780 2018/02/25 16:39:33 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.781 2018/02/25 16:41:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1136,3 +1136,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/p5-DBD-postgresql to 3.7.4 [wiz 2018-02-25]
 	Updated databases/p5-DBIx-Class to 0.082841 [wiz 2018-02-25]
 	Updated databases/p5-Fsdb to 2.65 [wiz 2018-02-25]
+	Updated devel/p5-Alien-Build to 1.37 [wiz 2018-02-25]
