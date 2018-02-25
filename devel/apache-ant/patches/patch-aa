@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2014/09/03 19:36:52 tonio Exp $
+$NetBSD: patch-aa,v 1.6 2018/02/25 20:44:59 wiz Exp $
 
 Initialize paths to appropriate defaults for pkgsrc.
 
---- bin/ant.orig	2010-02-02 01:35:22.000000000 +0100
-+++ bin/ant	2010-04-13 22:52:56.000000000 +0200
-@@ -91,6 +91,15 @@
-   MINGW*) mingw=true ;;
- esac
+--- bin/ant.orig	2018-02-03 16:51:21.000000000 +0000
++++ bin/ant
+@@ -91,6 +91,15 @@ else
  
+   # load user ant configuration
+   if [ -f "$HOME/.ant/ant.conf" ]; then
 +if [ "$ANT_HOME" = "" ] ; then
 +  # try to find ANT
 +  ANT_HOME=@PREFIX@
@@ -17,10 +17,10 @@ Initialize paths to appropriate defaults for pkgsrc.
 +  JAVA_HOME='@JAVA_HOME@'
 +fi
 +
- if [ -z "$ANT_HOME" -o ! -d "$ANT_HOME" ] ; then
-   ## resolve links - $0 may be a link to ant's home
-   PRG="$0"
-@@ -129,7 +138,12 @@
+     . $HOME/.ant/ant.conf
+   fi
+   if [ -f "$HOME/.antrc" ]; then
+@@ -172,7 +181,12 @@ if $mingw; then
  fi
  
  # set ANT_LIB location
@@ -32,5 +32,5 @@ Initialize paths to appropriate defaults for pkgsrc.
 +  JAVACMD=@PREFIX@/bin/java
 +fi
  
- if [ -z "$JAVACMD" ] ; then
-   if [ -n "$JAVA_HOME"  ] ; then
+ if [ -z "$JAVACMD" ]; then
+   if [ -n "$JAVA_HOME" ]; then
