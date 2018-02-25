@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.864 2018/02/25 21:35:54 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.865 2018/02/25 21:40:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1220,3 +1220,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/vala to 0.38.8 [wiz 2018-02-25]
 	Updated devel/waf to 2.0.6 [wiz 2018-02-25]
 	Updated net/wireshark to 2.4.5 [wiz 2018-02-25]
+	Updated time/py-pendulum to 1.4.2 [adam 2018-02-25]
+	Updated graphics/py-imagesize to 1.0.0 [adam 2018-02-25]
+	Updated textproc/py-sphinx to 1.7.1 [adam 2018-02-25]
