@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.790 2018/02/25 17:03:31 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.791 2018/02/25 17:06:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1146,3 +1146,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-ExtUtils-MakeMaker to 7.32 [wiz 2018-02-25]
 	Updated devel/p5-File-ChangeNotify to 0.28 [wiz 2018-02-25]
 	Updated devel/p5-File-Slurper to 0.012 [wiz 2018-02-25]
+	Updated devel/p5-Getopt-Long-Descriptive to 0.102 [wiz 2018-02-25]
