@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.190 2018/02/19 13:48:11 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.191 2018/02/25 12:24:15 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -11,7 +11,7 @@
 #	The preferered Ruby version to use.
 #
 #		Possible values: 22 23 24 25
-#		Default: 23
+#		Default: 24
 #
 # RUBY_BUILD_RDOC
 #	Build rdoc of this package and so that install formated
@@ -69,7 +69,7 @@
 # RUBY_VER
 #	Really selected version of ruby.
 #
-#		Possible values: 22 23
+#		Possible values: 22 23 24 25
 #
 #	Use this variable in pkgsrc's Makefile
 #
@@ -226,12 +226,12 @@ RUBY24_API_VERSION=	2.4.0
 RUBY25_API_VERSION=	2.5.0
 
 #
-RUBY_VERSION_DEFAULT?=	23
+RUBY_VERSION_DEFAULT?=	24
 
 # supported Ruby's version
-RUBY_VERSIONS_SUPPORTED= 23 22 24 25
+RUBY_VERSIONS_SUPPORTED= 24 25 23 22
 
-RUBY_VERSIONS_ACCEPTED?= 23 22 24 25
+RUBY_VERSIONS_ACCEPTED?= 24 25 23 22
 RUBY_VERSIONS_INCOMPATIBLE?=
 
 .if empty(RUBY_VERSIONS_SUPPORTED:M${RUBY_VERSION_DEFAULT})
@@ -365,7 +365,7 @@ MULTI+=	RUBY_VER=${RUBY_VERS:U${RUBY_VERSION_DEFAULT}}
 #	any specific version of ruby command.  In this case, package's
 #	name begin with "ruby-".
 #	If RUBY_NOVERSION is "No" (default), the package's name is begin
-#	with ${RUBY_NAME}; "ruby22", "ruby23",  and so on.
+#	with ${RUBY_NAME}; "ruby23", "ruby24",  and so on.
 #
 #	It also affects to RUBY_DOC, RUBY_EG...
 #
