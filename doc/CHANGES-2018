@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.862 2018/02/25 21:26:18 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.863 2018/02/25 21:27:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1218,3 +1218,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/py-Send2Trash to 1.5.0 [wiz 2018-02-25]
 	Updated graphics/sane-backends to 1.0.27 [wiz 2018-02-25]
 	Updated lang/vala to 0.38.8 [wiz 2018-02-25]
+	Updated devel/waf to 2.0.6 [wiz 2018-02-25]
