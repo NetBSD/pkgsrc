@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/10/23 12:50:53 wiz Exp $
+$NetBSD: distinfo,v 1.3 2018/02/25 17:55:45 wiz Exp $
 
-SHA1 (Email-Address-XS-1.01.tar.gz) = 2fc63c6fd016934288cee53f948bb11204f79ad9
-RMD160 (Email-Address-XS-1.01.tar.gz) = 1216fe6ca440835b71e5322255fc5a2fe9c278eb
-SHA512 (Email-Address-XS-1.01.tar.gz) = 399d8365f2d9d642f482b5fcb4400cb66923f99938180ed1e68c3c7729d44eb53159889780ce6bb97857ab8ef3bc0c4f2dbe74ee453ab250e003761f66c28449
-Size (Email-Address-XS-1.01.tar.gz) = 26805 bytes
+SHA1 (Email-Address-XS-1.02.tar.gz) = 4c6b7e03490602534e94c5b4923dc51db0b13fb4
+RMD160 (Email-Address-XS-1.02.tar.gz) = 4a210c6cd4959752463719d0829d65669948440c
+SHA512 (Email-Address-XS-1.02.tar.gz) = d7e84453d0441a40431a3ea068b221f8c187dde6d10edd2b04c348814fe92a5cda512a3679fb5acdb6d97c97d594e1cb7a55d6867d41f58a6241d4b0f76779ea
+Size (Email-Address-XS-1.02.tar.gz) = 28464 bytes
