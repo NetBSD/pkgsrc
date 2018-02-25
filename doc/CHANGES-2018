@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.797 2018/02/25 17:17:47 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.798 2018/02/25 17:18:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1153,3 +1153,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Importer to 0.025 [wiz 2018-02-25]
 	Updated devel/p5-List-UtilsBy to 0.11 [wiz 2018-02-25]
 	Updated devel/p5-Log-Dispatchouli to 2.016 [wiz 2018-02-25]
+	Updated devel/p5-Log-Report-Optional to 1.06 [wiz 2018-02-25]
