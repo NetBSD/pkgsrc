@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.874 2018/02/26 09:48:12 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.875 2018/02/26 09:52:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1240,3 +1240,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-limits to 1.3 [adam 2018-02-26]
 	Updated sysutils/py-supervisor to 3.3.4 [adam 2018-02-26]
 	Updated graphics/ImageMagick to 7.0.7.24 [ryoon 2018-02-26]
+	Updated multimedia/mkvtoolnix to 21.0.0 [adam 2018-02-26]
