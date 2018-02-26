@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/26 12:09:18 leot Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/wsproto/__init__.py
+${PYSITELIB}/wsproto/__init__.pyc
+${PYSITELIB}/wsproto/__init__.pyo
+${PYSITELIB}/wsproto/compat.py
+${PYSITELIB}/wsproto/compat.pyc
+${PYSITELIB}/wsproto/compat.pyo
+${PYSITELIB}/wsproto/connection.py
+${PYSITELIB}/wsproto/connection.pyc
+${PYSITELIB}/wsproto/connection.pyo
+${PYSITELIB}/wsproto/events.py
+${PYSITELIB}/wsproto/events.pyc
+${PYSITELIB}/wsproto/events.pyo
+${PYSITELIB}/wsproto/extensions.py
+${PYSITELIB}/wsproto/extensions.pyc
+${PYSITELIB}/wsproto/extensions.pyo
+${PYSITELIB}/wsproto/frame_protocol.py
+${PYSITELIB}/wsproto/frame_protocol.pyc
+${PYSITELIB}/wsproto/frame_protocol.pyo
+${PYSITELIB}/wsproto/utf8validator.py
+${PYSITELIB}/wsproto/utf8validator.pyc
+${PYSITELIB}/wsproto/utf8validator.pyo
