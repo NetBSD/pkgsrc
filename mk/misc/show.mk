@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.12 2015/01/30 16:45:33 jperkin Exp $
+# $NetBSD: show.mk,v 1.13 2018/02/26 22:51:42 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -87,6 +87,10 @@ show-build-defs: .PHONY
 #		* "usr" for user-settable variables,
 #		* "pkg" for package-settable variables,
 #		* "sys" for system-defined variables.
+#
+#	For each of the variable groups (e.g. "build", "extract"), a
+#	specialized target show-all-${group} is defined, so that
+#	show-all-extract only shows that group.
 #
 #	CAVEAT: Some few variable values that are shown here may be
 #	misleading. For example, make(1)'s := operator leaves references
