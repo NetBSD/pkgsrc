@@ -1,0 +1,3 @@
+sacc is a terminal gopher client. Gopher is a simple protocol to
+retreive hierarchical information. The protocol is defined in
+RFC 1436 (Gopher).
