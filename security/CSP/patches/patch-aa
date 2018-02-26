@@ -1,20 +1,20 @@
-$NetBSD: patch-aa,v 1.2 2018/02/26 08:00:08 triaxx Exp $
+$NetBSD: patch-aa,v 1.3 2018/02/26 12:32:41 triaxx Exp $
 
 Add variables for SUBST.
 
---- csp.orig	2005-06-02 18:40:20.000000000 +0200
+--- csp.orig	2007-03-10 22:28:34.000000000 +0000
 +++ csp
 @@ -167,14 +167,16 @@ die $usage{_nocmd_} unless @ARGV > 0;
  
  my $name = shift @ARGV;
  
-+my $home = $ENV{CSPHOME} || '@@CSPHOME@@';
++my $home = $ENV{CSPHOME} || '@CSPHOME@';
 +
  warn "Warning: \$CSPHOME unset. This may prevent CSP from working properly.\n"
 -  unless $ENV{CSPHOME};
 +  unless -d $home;
 +
-+$ENV{OPENSSL} = '@@OPENSSL@@' unless defined($ENV{OPENSSL});
++$ENV{OPENSSL} = '@OPENSSL@' unless defined($ENV{OPENSSL});
  
  die "Panic: \$OPENSSL does not point to a executable.\n"
    unless -x $ENV{OPENSSL};
