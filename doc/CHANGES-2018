@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.876 2018/02/26 11:38:13 leot Exp $
+$NetBSD: CHANGES-2018,v 1.877 2018/02/26 12:07:17 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1242,3 +1242,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/ImageMagick to 7.0.7.24 [ryoon 2018-02-26]
 	Updated multimedia/mkvtoolnix to 21.0.0 [adam 2018-02-26]
 	Updated x11/py-pyperclip to 1.6.0 [leot 2018-02-26]
+	Added www/py-h11 version 0.7.0 [leot 2018-02-26]
