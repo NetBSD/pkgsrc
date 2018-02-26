@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2017/01/11 17:42:23 kleink Exp $
+$NetBSD: distinfo,v 1.9 2018/02/26 08:24:42 adam Exp $
 
-SHA1 (html5lib-python-0.999999999.tar.gz) = 3a38a57f6e255a59bc8f41cc8163d502a09cc7ee
-RMD160 (html5lib-python-0.999999999.tar.gz) = bc1528bd7dfa0813f5a48f9a005ff52687b8994f
-SHA512 (html5lib-python-0.999999999.tar.gz) = 74205c25ea38a1a0690181d56bdf4560ef36cf0d39acbb1ab16e2199e3657f87636508ba128d522970876c9a0ba2ac8df877053ff0179403668a2f0300af7877
-Size (html5lib-python-0.999999999.tar.gz) = 143354 bytes
+SHA1 (html5lib-1.0.1.tar.gz) = 5e1a2c7e18de7d1d0883e223f1733dc6dc796ee2
+RMD160 (html5lib-1.0.1.tar.gz) = aba1f653b8ac0f8748de4408343eeb80c3589f90
+SHA512 (html5lib-1.0.1.tar.gz) = 35939b4450893864da04e735ee5e0addacf1dd34bae6a6909c76572abf6bfded446a78a713dfde91c1485ba45867d7abeb6a45cf0545c16ea968707be7de5dd2
+Size (html5lib-1.0.1.tar.gz) = 252959 bytes
