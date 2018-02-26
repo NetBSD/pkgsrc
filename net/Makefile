@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1203 2018/02/26 13:20:59 leot Exp $
+# $NetBSD: Makefile,v 1.1204 2018/02/26 16:52:47 leot Exp $
 #
 
 COMMENT=	Networking tools
@@ -756,6 +756,7 @@ SUBDIR+=	ruby-twitter
 SUBDIR+=	ruby-twitter-stream
 SUBDIR+=	ruby-twitter-text
 SUBDIR+=	ruby-xdr
+SUBDIR+=	sacc
 SUBDIR+=	samba
 SUBDIR+=	samba4
 SUBDIR+=	sayaka
