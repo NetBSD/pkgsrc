@@ -1,6 +1,6 @@
-$NetBSD: patch-xmlsecurity_source_gpg_xmlsignature__gpgimpl.cxx,v 1.1 2017/08/01 11:57:37 ryoon Exp $
+$NetBSD: patch-xmlsecurity_source_gpg_xmlsignature__gpgimpl.cxx,v 1.2 2018/02/26 18:04:31 ryoon Exp $
 
-* Do not confuse wth key.h from gpgmepp and nss
+* Do not confuse with key.h from gpgmepp and nss
 
 --- xmlsecurity/source/gpg/xmlsignature_gpgimpl.cxx.orig	2017-07-25 20:26:39.000000000 +0000
 +++ xmlsecurity/source/gpg/xmlsignature_gpgimpl.cxx
