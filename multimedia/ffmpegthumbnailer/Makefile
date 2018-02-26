@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2017/08/01 17:01:23 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2018/02/26 08:19:28 adam Exp $
 
 DISTNAME=	ffmpegthumbnailer-2.0.8
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	multimedia
 MASTER_SITES=	http://ffmpegthumbnailer.googlecode.com/files/
 
