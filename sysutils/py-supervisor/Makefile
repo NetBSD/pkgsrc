@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/07/25 08:17:08 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/02/26 09:11:47 adam Exp $
 
-DISTNAME=	supervisor-3.3.3
+DISTNAME=	supervisor-3.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	sysutils
+CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/supervisor/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
