@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.881 2018/02/26 15:35:24 leot Exp $
+$NetBSD: CHANGES-2018,v 1.882 2018/02/26 16:12:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1247,3 +1247,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/mitmproxy to 3.0.3 [leot 2018-02-26]
 	Added net/torsocks version 2.2.0 [leot 2018-02-26]
 	Updated net/youtube-dl to 20180226 [leot 2018-02-26]
+	Updated devel/py-kaitaistruct to 0.8 [adam 2018-02-26]
+	Updated lang/py-js2py to 0.59 [adam 2018-02-26]
