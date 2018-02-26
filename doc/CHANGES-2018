@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.867 2018/02/25 22:05:35 adam Exp $
+$NetBSD: CHANGES-2018,v 1.868 2018/02/26 02:25:57 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1226,3 +1226,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-manticore to 0.1.7 [khorben 2018-02-25]
 	Updated multimedia/x264-devel to 20180224 [adam 2018-02-25]
 	Updated www/py-aiohttp to 3.0.3 [adam 2018-02-25]
+	Added emulators/py-unicorn version 1.0.1 [khorben 2018-02-26]
