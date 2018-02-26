@@ -1,12 +1,12 @@
-$NetBSD: patch-src_units.hpp,v 1.1 2017/06/13 12:44:07 fhajny Exp $
+$NetBSD: patch-src_units.hpp,v 1.2 2018/02/26 08:09:27 adam Exp $
 
 Avoid macro conflict on SunOS.
 
---- src/units.hpp.orig	2017-03-05 04:57:36.000000000 +0000
+--- src/units.hpp.orig	2018-02-05 23:14:08.000000000 +0000
 +++ src/units.hpp
-@@ -5,6 +5,10 @@
- #include <string>
+@@ -6,6 +6,10 @@
  #include <sstream>
+ #include <vector>
  
 +#if defined(SEC)
 +#undef SEC
