@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.11 2017/01/14 23:04:16 kleink Exp $
+# $NetBSD: Makefile,v 1.12 2018/02/26 08:24:42 adam Exp $
 
-H5LVER=		0.999999999
-DISTNAME=	html5lib-python-${H5LVER}
-PKGNAME=	${PYPKGPREFIX}-html5lib-${H5LVER}
-PKGREVISION=	1
+DISTNAME=	html5lib-1.0.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc www python
-MASTER_SITES=	-https://github.com/html5lib/html5lib-python/archive/${H5LVER}${EXTRACT_SUFX}
+MASTER_SITES=	${MASTER_SITE_PYPI:=h/html5lib/}
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	https://github.com/html5lib/html5lib-python
 COMMENT=	HTML5 parser and tokenizer
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-six>=1.9:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-webencodings-[0-9]*:../../textproc/py-webencodings
 
-EGG_NAME=	html5lib-${PKGVERSION_NOREV}
+USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
