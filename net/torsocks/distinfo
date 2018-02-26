@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2018/02/26 13:19:55 leot Exp $
+
+SHA1 (torsocks_2.2.0.orig.tar.xz) = 53d8cb45b487571d39ab226e25cb538976a195a1
+RMD160 (torsocks_2.2.0.orig.tar.xz) = a16adc2120da9c846d4801ece60a43758a25f2e6
+SHA512 (torsocks_2.2.0.orig.tar.xz) = 89eb1263bfb0079ca5cb7fcc3a6fa1ecde1327df9ea98de48babfff1f8947b1e9db8407ead747fef0190671e7fff502025dcfcd9b6cba97abbaf25b5a575c62a
+Size (torsocks_2.2.0.orig.tar.xz) = 309916 bytes
+SHA1 (patch-src_bin_torsocks.in) = 724a4a3f1e72347907c887d4a00a9308beeb2803
