@@ -1,0 +1,11 @@
+# $NetBSD: Makefile.common,v 1.1 2018/02/26 02:25:28 khorben Exp $
+#
+# used by emulators/py-unicorn/Makefile
+
+DISTNAME=	unicorn-1.0.1
+CATEGORIES=	emulators
+MASTER_SITES=	${MASTER_SITE_GITHUB:=unicorn-engine/}
+
+HOMEPAGE=	http://www.unicorn-engine.org/
+
+DISTINFO_FILE=	${.CURDIR}/../../emulators/unicorn/distinfo

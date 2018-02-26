@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2018/02/19 00:39:52 kamil Exp $
+# $NetBSD: Makefile,v 1.6 2018/02/26 02:25:28 khorben Exp $
 
-DISTNAME=	unicorn-1.0.1
-CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=unicorn-engine/}
+.include "Makefile.common"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.unicorn-engine.org/
 COMMENT=	CPU emulator engine framework based on QEMU
 LICENSE=	gnu-gpl-v2
 
