@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2018/02/13 13:03:06 ryoon Exp $
+$NetBSD: distinfo,v 1.49 2018/02/26 18:04:31 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -219,9 +219,8 @@ SHA1 (patch-external_postgresql_ExternalProject__postgresql.mk) = 7c94155221025f
 SHA1 (patch-external_postgresql_UnpackedTarball__postgresql.mk) = d0b94e20d9e1aa89adac0f4a91c7b684850c78bc
 SHA1 (patch-external_postgresql_postgresql-9.2.1-openssl-1.1.patch) = de2b5d8e657e9721867f9c72a402cc30fd093218
 SHA1 (patch-mysqlc_Library__mysqlc.mk) = b040cfdb25f41896c77df3acafd4c31dc41dd590
-SHA1 (patch-sdext_source_pdfimport_xpdfwrapper_pdfioutdev__gpl.cxx) = f21567d7ba021acb697a7fe6b650d41980b6cc54
 SHA1 (patch-solenv_gbuild_Module.mk) = cbd6ca3acae187458e49fe76d973e6475ed5fe1d
 SHA1 (patch-vcl_Executable__visualbackendtest.mk) = 2db5f3e7daabb2a79181de5e136de019d5264b58
 SHA1 (patch-xmloff_source_draw_ximp3dscene.cxx) = bdd0b2563e54424dd468c2334e17ab23057a69fb
-SHA1 (patch-xmlsecurity_source_gpg_CertificateImpl.hxx) = 51372020a640f9f1ccd8ebd8694e33c4fdedff47
-SHA1 (patch-xmlsecurity_source_gpg_xmlsignature__gpgimpl.cxx) = 50dac45907c8d0651e9fc4a0df3f74affc940931
+SHA1 (patch-xmlsecurity_source_gpg_CertificateImpl.hxx) = 8b744a450175b4e432d41fb6cea0ee6df72ee307
+SHA1 (patch-xmlsecurity_source_gpg_xmlsignature__gpgimpl.cxx) = 68e869e1c83b911765bab27f185bbad44636ea0a
