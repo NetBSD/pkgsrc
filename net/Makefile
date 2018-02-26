@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1202 2018/02/20 14:11:06 fhajny Exp $
+# $NetBSD: Makefile,v 1.1203 2018/02/26 13:20:59 leot Exp $
 #
 
 COMMENT=	Networking tools
@@ -826,6 +826,7 @@ SUBDIR+=	tnftp
 SUBDIR+=	tnftpd
 SUBDIR+=	tor
 SUBDIR+=	torrentutils
+SUBDIR+=	torsocks
 SUBDIR+=	totd
 SUBDIR+=	traceroute-as
 SUBDIR+=	traceroute-nanog
