@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2018/01/30 08:43:02 sborrill Exp $
+# $NetBSD: Makefile,v 1.5 2018/02/26 17:42:54 sborrill Exp $
 #
 
-DISTNAME=	lynis-2.6.1
+DISTNAME=	lynis-2.6.2
 CATEGORIES=	security
 MASTER_SITES=	https://cisofy.com/files/
 
