@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/26 16:52:21 leot Exp $
+bin/sacc
+man/man1/sacc.1
