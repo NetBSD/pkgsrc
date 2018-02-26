@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2618 2018/02/25 00:23:37 minskim Exp $
+# $NetBSD: Makefile,v 1.2619 2018/02/26 17:32:05 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -14,6 +14,7 @@ SUBDIR+=	ProjectCenter
 SUBDIR+=	R-IRdisplay
 SUBDIR+=	R-IRkernel
 SUBDIR+=	R-Rcpp
+SUBDIR+=	R-assertthat
 SUBDIR+=	R-crayon
 SUBDIR+=	R-evaluate
 SUBDIR+=	R-magrittr
