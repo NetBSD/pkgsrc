@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.883 2018/02/26 16:53:15 leot Exp $
+$NetBSD: CHANGES-2018,v 1.884 2018/02/26 17:17:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1250,3 +1250,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-kaitaistruct to 0.8 [adam 2018-02-26]
 	Updated lang/py-js2py to 0.59 [adam 2018-02-26]
 	Added net/sacc version 1.00 [leot 2018-02-26]
+	Added finance/R-timeSeries version 3042.102 [minskim 2018-02-26]
