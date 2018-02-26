@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2014/08/08 21:31:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/02/26 08:19:29 adam Exp $
 
 GST_PLUGINS1_NAME=	x264
 GST_PLUGINS1_DIRS=	ext/x264
 
+PKGREVISION= 1
 .include "../../multimedia/gst-plugins1-ugly/Makefile.common"
 
 # need shared lib
