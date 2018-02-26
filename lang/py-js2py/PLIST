@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/12/18 19:29:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/02/26 16:12:32 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -113,6 +113,9 @@ ${PYSITELIB}/js2py/internals/constructors/jsarray.pyo
 ${PYSITELIB}/js2py/internals/constructors/jsboolean.py
 ${PYSITELIB}/js2py/internals/constructors/jsboolean.pyc
 ${PYSITELIB}/js2py/internals/constructors/jsboolean.pyo
+${PYSITELIB}/js2py/internals/constructors/jsconsole.py
+${PYSITELIB}/js2py/internals/constructors/jsconsole.pyc
+${PYSITELIB}/js2py/internals/constructors/jsconsole.pyo
 ${PYSITELIB}/js2py/internals/constructors/jsdate.py
 ${PYSITELIB}/js2py/internals/constructors/jsdate.pyc
 ${PYSITELIB}/js2py/internals/constructors/jsdate.pyo
@@ -151,6 +154,8 @@ ${PYSITELIB}/js2py/internals/gen.py
 ${PYSITELIB}/js2py/internals/gen.pyc
 ${PYSITELIB}/js2py/internals/gen.pyo
 ${PYSITELIB}/js2py/internals/opcodes.py
+${PYSITELIB}/js2py/internals/opcodes.pyc
+${PYSITELIB}/js2py/internals/opcodes.pyo
 ${PYSITELIB}/js2py/internals/operations.py
 ${PYSITELIB}/js2py/internals/operations.pyc
 ${PYSITELIB}/js2py/internals/operations.pyo
