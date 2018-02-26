@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.885 2018/02/26 17:22:34 adam Exp $
+$NetBSD: CHANGES-2018,v 1.886 2018/02/26 17:32:24 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1253,3 +1253,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added finance/R-timeSeries version 3042.102 [minskim 2018-02-26]
 	Updated www/py-django-polymorphic to 2.0.2 [adam 2018-02-26]
 	Updated textproc/py-regex to 2018.02.21 [adam 2018-02-26]
+	Added devel/R-assertthat version 0.2.0 [minskim 2018-02-26]
