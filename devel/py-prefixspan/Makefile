@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/02/23 17:25:51 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/02/26 08:51:43 adam Exp $
 
 DISTNAME=	prefixspan-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,10 +14,11 @@ DEPENDS+=	${PYPKGPREFIX}-docopt>=0.6.2:../../devel/py-docopt
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/prefixspan-cli \
 		${DESTDIR}${PREFIX}/bin/prefixspan-cli${PYVERSSUFFIX}
 
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
