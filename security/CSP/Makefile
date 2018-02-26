@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2017/09/04 05:44:21 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2018/02/26 08:00:08 triaxx Exp $
 
-DISTNAME=	CSP-0.32
-PKGREVISION=	13
+DISTNAME=	CSP-0.34
 CATEGORIES=	security
 #MASTER_SITES=	ftp://ftp.su.se/pub/users/leifj/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${CSPGUIDE}
@@ -15,6 +14,7 @@ DEPENDS+=	p5-IPC-Run>=0.79:../../devel/p5-IPC-Run
 DEPENDS+=	p5-Term-Prompt>=1.03:../../devel/p5-Term-Prompt
 
 USE_TOOLS+=	pax
+BUILD_DEFS+=	VARBASE
 
 CSPGUIDE=	cspguide.pdf
 #SITES.${CSPGUIDE}=	http://devel.it.su.se/content/1/c4/32/90/
