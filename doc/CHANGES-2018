@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.879 2018/02/26 12:29:00 leot Exp $
+$NetBSD: CHANGES-2018,v 1.880 2018/02/26 13:21:34 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1245,3 +1245,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/py-h11 version 0.7.0 [leot 2018-02-26]
 	Added www/py-wsproto version 0.11.0 [leot 2018-02-26]
 	Updated net/mitmproxy to 3.0.3 [leot 2018-02-26]
+	Added net/torsocks version 2.2.0 [leot 2018-02-26]
