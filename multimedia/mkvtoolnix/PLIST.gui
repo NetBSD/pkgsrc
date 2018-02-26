@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST.gui,v 1.2 2017/09/17 12:00:41 adam Exp $
-bin/mkvinfo-gui
+@comment $NetBSD: PLIST.gui,v 1.3 2018/02/26 09:52:03 adam Exp $
 bin/mkvtoolnix-gui
 man/ca/man1/mkvtoolnix-gui.1
 man/de/man1/mkvtoolnix-gui.1
@@ -11,7 +10,6 @@ man/nl/man1/mkvtoolnix-gui.1
 man/pl/man1/mkvtoolnix-gui.1
 man/uk/man1/mkvtoolnix-gui.1
 man/zh_CN/man1/mkvtoolnix-gui.1
-share/applications/org.bunkus.mkvinfo.desktop
 share/applications/org.bunkus.mkvtoolnix-gui.desktop
 share/icons/hicolor/128x128/apps/mkvextract.png
 share/icons/hicolor/128x128/apps/mkvinfo.png
