@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/26 13:19:55 leot Exp $
+bin/torsocks
+lib/torsocks/libtorsocks.la
+man/man1/torsocks.1
+man/man5/torsocks.conf.5
+man/man8/torsocks.8
+share/examples/torsocks/torsocks.conf
