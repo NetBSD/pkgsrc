@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/26 16:52:21 leot Exp $
+
+SHA1 (sacc-v1.00.tgz) = 8a5fadb5f86a41daddfcedd84b170a6303f9c0ff
+RMD160 (sacc-v1.00.tgz) = 98e8df8c4a864aacba11633a9b57ace70113b590
+SHA512 (sacc-v1.00.tgz) = 9bc45264246f1b3fbc54b621963d8eeec6dd45b3c0e3a329e0755189b69fdafd385689f75bc2ec2ff85960d96cf7bba9816e6dc1aa43c5750d093719806dc2c2
+Size (sacc-v1.00.tgz) = 11164 bytes
