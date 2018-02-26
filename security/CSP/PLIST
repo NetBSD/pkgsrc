@@ -1,2 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/27 20:56:17 cube Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/02/26 08:00:08 triaxx Exp $
+${PERL5_SUB_INSTALLARCHLIB}/perllocal.pod
+${PERL5_SUB_INSTALLVENDORLIB}/CSP.pm
+${PERL5_SUB_INSTALLVENDORLIB}/auto/CSP/autosplit.ix
+${PERL5_SUB_INSTALLVENDORARCH}/auto/CSP/.packlist
+${PERL5_SUB_INSTALLVENDORBIN}/csp
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/CSP.3
 share/doc/csp/cspguide.pdf
+var/csp/etc/aliases.txt
+var/csp/etc/crl_extensions.conf
+var/csp/etc/extensions.conf
+var/csp/etc/oids.conf
+var/csp/etc/public_html/certs/cert.html.mpp
+var/csp/etc/public_html/certs/expired.html.mpp
+var/csp/etc/public_html/certs/index.html.mpp
+var/csp/etc/public_html/certs/revoked.html.mpp
+var/csp/etc/public_html/certs/valid.html.mpp
+var/csp/etc/public_html/index.html.mpp
+var/csp/etc/types.txt
