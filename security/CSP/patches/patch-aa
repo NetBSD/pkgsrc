@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/12/27 20:56:17 cube Exp $
+$NetBSD: patch-aa,v 1.2 2018/02/26 08:00:08 triaxx Exp $
+
+Add variables for SUBST.
 
 --- csp.orig	2005-06-02 18:40:20.000000000 +0200
 +++ csp
