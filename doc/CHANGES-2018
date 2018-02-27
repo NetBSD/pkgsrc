@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.905 2018/02/27 13:09:09 adam Exp $
+$NetBSD: CHANGES-2018,v 1.906 2018/02/27 17:09:49 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1278,3 +1278,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/beats to 6.2.2 [fhajny 2018-02-27]
 	Updated www/py-pylint-django to 0.9.1 [adam 2018-02-27]
 	Updated geography/py-country to 18.2.23 [adam 2018-02-27]
+	Added net/hub version 2.2.9 [leot 2018-02-27]
