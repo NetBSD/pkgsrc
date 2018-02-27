@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2017/07/03 20:48:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/02/27 09:59:36 adam Exp $
 bin/PTBatcherGUI
 bin/align_image_stack
 bin/autooptimiser
@@ -14,6 +14,7 @@ bin/hugin
 bin/hugin_executor
 bin/hugin_hdrmerge
 bin/hugin_lensdb
+bin/hugin_stacker
 bin/hugin_stitch_project
 bin/icpfind
 bin/linefind
@@ -80,10 +81,15 @@ share/applications/pto_gen.desktop
 share/hugin/data/blended_stacks.executor
 share/hugin/data/celeste.model
 share/hugin/data/default.setting
+share/hugin/data/duallens.assistant
+share/hugin/data/expressions.ini
 share/hugin/data/fused_layers.executor
 share/hugin/data/hdr_pano.executor
 share/hugin/data/hugin_exiftool_copy.arg
 share/hugin/data/hugin_exiftool_final_example.arg
+share/hugin/data/median_stack.executor
+share/hugin/data/multirow.assistant
+share/hugin/data/normal.assistant
 share/hugin/data/normal_enblend.executor
 share/hugin/data/normal_enblend_cubic.executor
 share/hugin/data/normal_layered_tiff.executor
@@ -95,6 +101,9 @@ share/hugin/data/plugins/crop_cp.py
 share/hugin/data/plugins/shooting_pattern.py
 share/hugin/data/plugins/top_five.py
 share/hugin/data/plugins/woa.py
+share/hugin/data/scanned.assistant
+share/hugin/data/scanned2.assistant
+share/hugin/data/stacked.assistant
 share/hugin/data/zeronoise.executor
 share/hugin/xrc/about.xrc
 share/hugin/xrc/batch_frame.xrc
@@ -447,7 +456,7 @@ share/hugin/xrc/data/help_en_EN/TIFF.html
 share/hugin/xrc/data/help_en_EN/Tca_correct.html
 share/hugin/xrc/data/help_en_EN/The_General_Panini_Projection.html
 share/hugin/xrc/data/help_en_EN/Tone_mapping.html
-share/hugin/xrc/data/help_en_EN/User_defined_output_sequence.html
+share/hugin/xrc/data/help_en_EN/User_defined_output_sequence_and_user_defined_assistant.html
 share/hugin/xrc/data/help_en_EN/Using_Celeste_with_hugin.html
 share/hugin/xrc/data/help_en_EN/Verdandi.html
 share/hugin/xrc/data/help_en_EN/Vertical-fisheye.jpg
