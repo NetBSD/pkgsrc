@@ -9,4 +9,5 @@ machine code yet has the convenience of garbage collection and the power
 of run-time reflection. It's a fast, statically typed, compiled language
 that feels like a dynamically typed, interpreted language.
 
-This package contains the (legacy) 1.4 release of Go.
+This package contains the (legacy) 1.4 release of Go. On NetBSD, this
+needs the COMPAT_60 option to be present in the kernel.
