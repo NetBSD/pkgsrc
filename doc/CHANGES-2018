@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.899 2018/02/27 11:20:51 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.900 2018/02/27 11:37:54 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1271,3 +1271,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-peewee to 3.1.0 [fhajny 2018-02-27]
 	Updated net/dnsdist to 1.2.1 [fhajny 2018-02-27]
 	Updated security/vault to 0.9.5 [fhajny 2018-02-27]
+	Updated sysutils/consul to 1.0.6 [fhajny 2018-02-27]
