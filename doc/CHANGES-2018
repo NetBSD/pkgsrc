@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.890 2018/02/27 07:01:50 adam Exp $
+$NetBSD: CHANGES-2018,v 1.891 2018/02/27 07:50:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1261,3 +1261,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/duplicity to 0.7.17 [wen 2018-02-27]
 	Updated textproc/freexl to 1.0.5 [adam 2018-02-27]
 	Updated devel/py-ipykernel to 4.8.2 [adam 2018-02-27]
+	Updated www/drupal8 to 8.4.5 [wen 2018-02-27]
