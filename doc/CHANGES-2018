@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.900 2018/02/27 11:37:54 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.901 2018/02/27 12:17:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1272,3 +1272,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/dnsdist to 1.2.1 [fhajny 2018-02-27]
 	Updated security/vault to 0.9.5 [fhajny 2018-02-27]
 	Updated sysutils/consul to 1.0.6 [fhajny 2018-02-27]
+	Updated x11/c++-gtk-utils to 2.2.15 [ryoon 2018-02-27]
