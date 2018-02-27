@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.902 2018/02/27 12:38:06 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.903 2018/02/27 12:39:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1274,3 +1274,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/consul to 1.0.6 [fhajny 2018-02-27]
 	Updated x11/c++-gtk-utils to 2.2.15 [ryoon 2018-02-27]
 	Updated databases/elasticsearch to 6.2.2 [fhajny 2018-02-27]
+	Updated print/qpdf to 8.0.0 [ryoon 2018-02-27]
