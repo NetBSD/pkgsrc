@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2018/02/02 15:40:54 fhajny Exp $
+# $NetBSD: Makefile,v 1.23 2018/02/27 10:45:21 fhajny Exp $
 
-DISTNAME=	lexicon-2.1.19
+DISTNAME=	lexicon-2.1.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AnalogJ/}
