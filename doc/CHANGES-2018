@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.907 2018/02/27 17:47:46 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.908 2018/02/27 17:48:33 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1280,3 +1280,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated geography/py-country to 18.2.23 [adam 2018-02-27]
 	Added net/hub version 2.2.9 [leot 2018-02-27]
 	Added finance/R-fBasics version 3042.89 [minskim 2018-02-27]
+	Updated print/cups-filters to 1.20.1 [leot 2018-02-27]
