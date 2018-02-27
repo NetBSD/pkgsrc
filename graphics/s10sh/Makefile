@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2018/02/10 13:53:48 khorben Exp $
+# $NetBSD: Makefile,v 1.19 2018/02/27 23:56:09 khorben Exp $
 #
 
 DISTNAME=	s10sh-0.2.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.kyuzz.org/antirez/s10sh-src/
 

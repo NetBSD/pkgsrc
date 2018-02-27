@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2018/02/10 13:53:48 khorben Exp $
+# $NetBSD: Makefile,v 1.16 2018/02/27 23:56:09 khorben Exp $
 
 VERSION=	1.0.0
+PKGREVISION=	1
 DISTNAME=	pyusb-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-usb-${VERSION}
 CATEGORIES=	devel
