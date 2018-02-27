@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/01/01 14:43:43 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2018/02/27 14:28:13 adam Exp $
 
 DISTNAME=	sk1libs-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	http://uniconvertor.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sk1project.org/
+HOMEPAGE=	http://sk1project.net/
 COMMENT=	Set of python non-GUI extensions for sK1 Project
 LICENSE=	gnu-lgpl-v2
 
