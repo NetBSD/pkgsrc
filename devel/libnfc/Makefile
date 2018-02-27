@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/02/10 13:53:47 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2018/02/27 23:56:09 khorben Exp $
 
 DISTNAME=	libnfc-1.7.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://dl.bintray.com/nfc-tools/sources/
 EXTRACT_SUFX=	.tar.bz2
