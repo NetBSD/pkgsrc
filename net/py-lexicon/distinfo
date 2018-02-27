@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.22 2018/02/02 15:40:54 fhajny Exp $
+$NetBSD: distinfo,v 1.23 2018/02/27 10:45:21 fhajny Exp $
 
-SHA1 (lexicon-2.1.19.tar.gz) = 023613085a463efde109776909a38259e8f76e94
-RMD160 (lexicon-2.1.19.tar.gz) = e051daf18e987b2af30be7050a3f55bb12edf13f
-SHA512 (lexicon-2.1.19.tar.gz) = fee737ca98131abe0533b2c3fef45dbbaf7a5985581b9a19726f7b6559f173843abcee23e6cf8cc5ca54c00e3885000a999f4e2dc15431eb525f003e61250443
-Size (lexicon-2.1.19.tar.gz) = 268440 bytes
+SHA1 (lexicon-2.1.20.tar.gz) = 81c27513560badc10b092c4aaa3d6d3f984bb6cb
+RMD160 (lexicon-2.1.20.tar.gz) = 3c99b50e8e111a5084d309769781dda4befe9912
+SHA512 (lexicon-2.1.20.tar.gz) = b72813cb249b97b0cc7aaa16d4bbc2eac8d3385cfc073886b5f42e824d6ca8bfec671e16c4625089336853e841b71a37178ae264ae93ad41908136c86dfbbdb0
+Size (lexicon-2.1.20.tar.gz) = 274529 bytes
 SHA1 (patch-setup.py) = 3ac3b6164e79d488a0592af6ec71539246376b70
