@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/10/13 07:01:40 adam Exp $
+# $NetBSD: Makefile,v 1.5 2018/02/27 06:26:49 adam Exp $
 
-DISTNAME=	django-countries-5.0
+DISTNAME=	django-countries-5.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-countries/}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
-USE_LANGUAGES=		# none
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
