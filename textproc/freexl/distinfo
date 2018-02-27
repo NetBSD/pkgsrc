@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/11/27 14:00:26 adam Exp $
+$NetBSD: distinfo,v 1.2 2018/02/27 06:48:22 adam Exp $
 
-SHA1 (freexl-1.0.2.tar.gz) = 9878a2dfb23ba00be34605557ac454539411071d
-RMD160 (freexl-1.0.2.tar.gz) = 8075965c0741a6c3d4daba71c6668b3e1cca41b5
-SHA512 (freexl-1.0.2.tar.gz) = 554ad06905cbac3f88694e798369c1e1c4c64709eb4086b80eb3370dfd3bdc31d1b58441bcbf40b72700f177606ae900f2ab48ead873ac331c82edd718318354
-Size (freexl-1.0.2.tar.gz) = 939064 bytes
+SHA1 (freexl-1.0.5.tar.gz) = a31e06e0b3c322f8b7f1ba732a206cde5c43a8cd
+RMD160 (freexl-1.0.5.tar.gz) = 30052b9e7b146db78684f84d409c816672536a2e
+SHA512 (freexl-1.0.5.tar.gz) = 86d742f58353be1f3ab683899a4d914845250b481acc078c769ef337d0a6ea24d25501a3e7c73b95904c6839ddd35f53e58ad4eee0c3b433caa84db0a8c6462b
+Size (freexl-1.0.5.tar.gz) = 938994 bytes
