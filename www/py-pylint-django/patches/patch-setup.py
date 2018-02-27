@@ -1,15 +1,19 @@
-$NetBSD: patch-setup.py,v 1.2 2018/01/31 12:03:47 adam Exp $
+$NetBSD: patch-setup.py,v 1.3 2018/02/27 12:42:30 adam Exp $
 
 Do not install tests.
 
---- setup.py.orig	2018-01-21 11:57:38.000000000 +0000
+--- setup.py.orig	2018-02-26 21:41:01.000000000 +0000
 +++ setup.py
-@@ -6,7 +6,7 @@ import sys
+@@ -7,10 +7,8 @@ from setuptools import setup, find_packa
  
+ VERSION = '0.9.1'
+ PACKAGES = find_packages(exclude=[
+-    '*.tests',
+-    '*.tests.*',
+-    'tests.*',
+-    'tests',
++    'test.*',
++    'test',
+ ])
  
- _version = '0.9.0'
--_packages = find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"])
-+_packages = find_packages(exclude=["test", "test.*"])
- 
- _short_description = "pylint-django is a Pylint plugin to aid Pylint in recognising and understanding" \
-                      " errors caused when using the Django framework"
+ SHORT_DESCRIPTION = 'A Pylint plugin to help Pylint understand the Django web framework'
