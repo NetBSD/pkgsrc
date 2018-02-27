@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/02/27 11:20:42 fhajny Exp $
+# $NetBSD: Makefile,v 1.23 2018/02/27 12:32:35 fhajny Exp $
 
 DISTNAME=	vault-0.9.5
 CATEGORIES=	security
@@ -16,15 +16,13 @@ GO_SRCPATH=	github.com/hashicorp/vault
 
 USE_TOOLS+=		bash gmake
 
-MAKE_ENV+=		GOPATH=${WRKDIR}:${PREFIX}/gopkg
-
 INSTALLATION_DIRS+=	bin
 
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} go build -o bin/vault
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/vault ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKDIR}/bin/vault ${DESTDIR}${PREFIX}/bin
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg go test -v ./vault
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
