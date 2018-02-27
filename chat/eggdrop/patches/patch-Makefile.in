@@ -1,0 +1,36 @@
+$NetBSD: patch-Makefile.in,v 1.1 2018/02/27 19:08:48 fhajny Exp $
+
+Avoid dependency on coreutils.
+Enable parallel builds by removing vanity binary calls.
+
+--- Makefile.in.orig	2018-02-04 16:08:11.000000000 +0000
++++ Makefile.in
+@@ -9,16 +9,8 @@ VPATH = @srcdir@
+ 
+ @SET_MAKE@
+ prefix = @prefix@
+-DEST = @DEST@
+-# GNU Make < 3.82 ignores these != statements, they are for bsd make and gnu make >= 4.0.
+-# gnu make 3.82 interprets a!= b as setting the variable a!.
+-# it seems to interpret != otherwise and throws an error.
+-DEST_PARENT_DIR!= dirname $(DEST)
+-DEST_PARENT!= readlink -f $(DEST_PARENT_DIR)
+-DEST_DIR!= basename $(DEST)
+-ABSDEST!= echo $(DEST_PARENT)/$(DEST_DIR)
+-# GNU Make
+-ABSDEST ?= $(abspath $(DEST))
++DEST ?= @DEST@
++ABSDEST ?= $(DEST)
+ EGGEXEC = @EGGEXEC@
+ EGG_CROSS_COMPILING = @EGG_CROSS_COMPILING@
+ EGGVERSION = @EGGVERSION@
+@@ -241,8 +233,7 @@ eggdrop: modtest
+ 	rm -f src/mod/mod.xlibs && \
+ 	(cd src && $(MAKE) $(MAKE_MODEGG_ARGS) $(EGGEXEC)) && \
+ 	echo "" && echo "Making modules..." && echo "" && \
+-	(cd src/mod && $(MAKE) $(MAKE_MODULES_ARGS) modules) && \
+-	$(show_test_run) && $(ls_mods) && $(egg_install_msg)
++	(cd src/mod && $(MAKE) $(MAKE_MODULES_ARGS) modules)
+ 
+ debug: modtest
+ 	@echo "" && echo "Making core eggdrop files..." && echo "" && \
