@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.889 2018/02/27 06:48:48 wen Exp $
+$NetBSD: CHANGES-2018,v 1.890 2018/02/27 07:01:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1259,3 +1259,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-aiohttp to 3.0.4 [adam 2018-02-27]
 	Updated math/py-lmfit to 0.9.8 [adam 2018-02-27]
 	Updated sysutils/duplicity to 0.7.17 [wen 2018-02-27]
+	Updated textproc/freexl to 1.0.5 [adam 2018-02-27]
+	Updated devel/py-ipykernel to 4.8.2 [adam 2018-02-27]
