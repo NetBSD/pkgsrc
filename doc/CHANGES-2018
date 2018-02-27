@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.897 2018/02/27 10:49:58 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.898 2018/02/27 11:08:18 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1269,3 +1269,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/hugin to 2018.0.0 [adam 2018-02-27]
 	Updated net/py-lexicon to 2.1.20 [fhajny 2018-02-27]
 	Updated databases/py-peewee to 3.1.0 [fhajny 2018-02-27]
+	Updated net/dnsdist to 1.2.1 [fhajny 2018-02-27]
