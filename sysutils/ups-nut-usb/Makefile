@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2018/02/10 13:53:48 khorben Exp $
+# $NetBSD: Makefile,v 1.7 2018/02/27 23:56:09 khorben Exp $
 
 .include "../../sysutils/ups-nut/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/nut/ups-nut-usb/}
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT=		Network UPS Tools USB drivers
 
 DEPENDS+=		ups-nut-2.*:../../sysutils/ups-nut
