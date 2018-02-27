@@ -1,88 +1,59 @@
-# $NetBSD: Makefile,v 1.37 2018/01/13 23:18:25 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2018/02/27 19:08:48 fhajny Exp $
 
-DISTNAME=	eggdrop1.6.21
-PKGNAME=	eggdrop-1.6.21
-#KGREVISION=	1
-PKGREVISION=	2
+DISTNAME=	eggdrop-1.8.3
 CATEGORIES=	chat
-MASTER_SITES=	ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://ftp.eggheads.org/pub/eggdrop/source/1.8/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.eggheads.org/
+HOMEPAGE=	https://www.eggheads.org/
 COMMENT=	IRC robot with TCL scripting and multi-channel ability
+LICENSE=	gnu-gpl-v2
 
-MAKE_JOBS_SAFE=	no
-
-PLIST_VARS=		dynamic
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ENV+=		TCLLIB="${PREFIX}/lib" TCLINC="${PREFIX}/include"
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	pax
 
 .include "../../mk/bsd.prefs.mk"
-.if !empty(PKGSRC_COMPILER:Msunpro)
-# fix for PR#44382
-CONFIGURE_ENV+=         ac_cv_c_inline=
-.endif
 
 EGDIR=		${PREFIX}/share/examples/eggdrop
 CONF_FILES=	${EGDIR}/eggdrop.conf ${PKG_SYSCONFDIR}/eggdrop.conf
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}
+INSTALLATION_DIRS+=	lib/eggdrop
+INSTALLATION_DIRS+=	share/doc
+INSTALLATION_DIRS+=	share/eggdrop
+INSTALLATION_DIRS+=	share/examples/eggdrop
 
-post-patch:
-	cd ${WRKSRC} && ${SED} -e 's,modules/,${PREFIX}/lib/eggdrop/,' \
-		< eggdrop.conf > eggdrop.conf.dist.new
+SUBST_CLASSES+=		dir
+SUBST_FILES.dir=	eggdrop.conf
+SUBST_STAGE.dir=	pre-configure
+SUBST_SED.dir+=		-e 's,modules/,${PREFIX}/lib/eggdrop/,'
+SUBST_SED.dir+=		-e 's,source scripts/,source ${PREFIX}/share/eggdrop/scripts/,'
+SUBST_SED.dir+=		-e 's,set help-path .*,set help-path "${PREFIX}/share/eggdrop/help/",'
+SUBST_SED.dir+=		-e 's,set text-path .*,set text-path "${PREFIX}/share/eggdrop/text/",'
+SUBST_SED.dir+=		-e 's,set motd .*,set motd "${PREFIX}/share/eggdrop/text/motd",'
+SUBST_SED.dir+=		-e 's,set telnet-banner .*,set telnet-banner "${PREFIX}/share/eggdrop/text/banner",'
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ENV+=		TCLLIB="${PREFIX}/lib" TCLINC="${PREFIX}/include"
+
+CFLAGS+=		-DLANGDIR=\"${PREFIX}/share/eggdrop/language\"
+
+BUILD_TARGET=	eggdrop
 
 post-configure:
 	cd ${WRKSRC} && ${MAKE} config
 
-do-install: do-install-program
-do-install-program:
-	${INSTALL_PROGRAM} ${WRKSRC}/eggdrop ${DESTDIR}${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/doc/man1/eggdrop.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/eggdrop.conf.dist.new \
-		${DESTDIR}${EGDIR}/eggdrop.conf
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/eggdrop/html
-	cd ${WRKSRC}/doc/html && ${INSTALL_DATA} *.html \
-		${DESTDIR}${PREFIX}/share/doc/eggdrop/html
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/eggdrop
-	cd ${WRKSRC}/doc && ${INSTALL_DATA} BANS BOTNET FIRST-SCRIPT MODULES \
-		PARTYLINE USERS TRICKS TEXT-SUBSTITUTIONS tcl-commands.doc \
-		${DESTDIR}${PREFIX}/share/doc/eggdrop
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/eggdrop
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/eggdrop/help
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/eggdrop/language
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/eggdrop/scripts
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/eggdrop/help/msg
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/eggdrop/help/set
-	${INSTALL_DATA} ${WRKSRC}/language/core.*.lang \
-		${DESTDIR}${PREFIX}/share/eggdrop/language/
-	cd ${WRKSRC}/help && ${INSTALL_DATA} cmds1.help cmds2.help core.help \
-		${DESTDIR}${PREFIX}/share/eggdrop/help/
-	cd ${WRKSRC}/help/set && ${INSTALL_DATA} cmds1.help \
-		${DESTDIR}${PREFIX}/share/eggdrop/help/set/
-	cd ${WRKSRC}/scripts && ${INSTALL_DATA} CONTENTS *.tcl autobotchk \
-		 botchk weed ${DESTDIR}${PREFIX}/share/eggdrop/scripts/
-
-.include "../../lang/tcl/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/bsd.pkg.mk"
-
-.if defined(NOPIC)
-BUILD_TARGET=	static
-.else
-BUILD_TARGET=	eggdrop
-PLIST.dynamic=	yes
-do-install: do-install-modules
-do-install-modules:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/eggdrop
-	cd ${WRKSRC} && ${INSTALL_DATA} assoc.so blowfish.so channels.so \
-		compress.so console.so ctcp.so dns.so filesys.so irc.so notes.so \
-		seen.so server.so share.so transfer.so uptime.so wire.so \
+do-install:
+	cd "${WRKSRC}" && ${SETENV} ${MAKE_ENV} ${MAKE} DEST=${WRKDIR}/eggdrop install
+	${INSTALL_PROGRAM} ${WRKDIR}/eggdrop/${DISTNAME} ${DESTDIR}${PREFIX}/bin/eggdrop
+	cd ${WRKDIR}/eggdrop && ${PAX} -rw -pp help language scripts text \
+		${DESTDIR}${PREFIX}/share/eggdrop/
+	cd ${WRKDIR}/eggdrop/doc && ${PAX} -rw -pp * ${DESTDIR}${PREFIX}/share/doc/eggdrop/
+	mv -f ${DESTDIR}${PREFIX}/share/doc/eggdrop/man1 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/
+	${INSTALL_DATA} ${WRKSRC}/eggdrop.conf ${DESTDIR}${EGDIR}/eggdrop.conf
+	${INSTALL_LIB} ${WRKDIR}/eggdrop/modules/* \
 		${DESTDIR}${PREFIX}/lib/eggdrop
-	cd ${WRKSRC}/src/mod && ${FIND} . -name "*.lang" -exec ${INSTALL_DATA} "{}" \
-		${DESTDIR}${PREFIX}/share/eggdrop/language ";"
-.endif
+
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
