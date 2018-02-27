@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1 2014/06/07 10:44:30 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/02/27 12:37:20 ryoon Exp $
 
 BUILDLINK_TREE+=	qpdf
 
 .if !defined(QPDF_BUILDLINK3_MK)
 QPDF_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.qpdf+=	qpdf>=5.0.1nb2
+BUILDLINK_API_DEPENDS.qpdf+=	qpdf>=8.0.0
 BUILDLINK_PKGSRCDIR.qpdf?=	../../print/qpdf
 
 .endif	# QPDF_BUILDLINK3_MK
