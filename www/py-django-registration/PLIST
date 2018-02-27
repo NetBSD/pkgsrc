@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/12/10 16:36:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/02/27 07:40:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -159,6 +159,9 @@ ${PYSITELIB}/registration/tests/templates/registration/activation_email_subject.
 ${PYSITELIB}/registration/tests/templates/registration/registration_closed.html
 ${PYSITELIB}/registration/tests/templates/registration/registration_complete.html
 ${PYSITELIB}/registration/tests/templates/registration/registration_form.html
+${PYSITELIB}/registration/tests/test_django_auth_integration.py
+${PYSITELIB}/registration/tests/test_django_auth_integration.pyc
+${PYSITELIB}/registration/tests/test_django_auth_integration.pyo
 ${PYSITELIB}/registration/tests/test_forms.py
 ${PYSITELIB}/registration/tests/test_forms.pyc
 ${PYSITELIB}/registration/tests/test_forms.pyo
