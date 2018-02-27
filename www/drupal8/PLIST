@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/02/02 03:08:38 wen Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/02/27 07:48:29 wen Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -3308,6 +3308,7 @@ share/drupal/core/modules/comment/tests/modules/comment_test_views/test_views/vi
 share/drupal/core/modules/comment/tests/modules/comment_test_views/test_views/views.view.test_comment_user_uid.yml
 share/drupal/core/modules/comment/tests/modules/comment_test_views/test_views/views.view.test_field_filters.yml
 share/drupal/core/modules/comment/tests/modules/comment_test_views/test_views/views.view.test_new_comments.yml
+share/drupal/core/modules/comment/tests/src/Functional/CommentAccessTest.php
 share/drupal/core/modules/comment/tests/src/Functional/CommentActionsTest.php
 share/drupal/core/modules/comment/tests/src/Functional/CommentAdminTest.php
 share/drupal/core/modules/comment/tests/src/Functional/CommentAnonymousTest.php
@@ -6051,6 +6052,7 @@ share/drupal/core/modules/node/tests/src/Functional/NodeAccessFieldTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeAccessGrantsCacheContextTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeAccessLanguageAwareCombinationTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeAccessLanguageAwareTest.php
+share/drupal/core/modules/node/tests/src/Functional/NodeAccessLanguageFallbackTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeAccessLanguageTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeAccessMenuLinkTest.php
 share/drupal/core/modules/node/tests/src/Functional/NodeAccessPagerTest.php
