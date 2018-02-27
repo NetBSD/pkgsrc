@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.904 2018/02/27 12:54:11 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.905 2018/02/27 13:09:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1276,3 +1276,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/elasticsearch to 6.2.2 [fhajny 2018-02-27]
 	Updated print/qpdf to 8.0.0 [ryoon 2018-02-27]
 	Updated sysutils/beats to 6.2.2 [fhajny 2018-02-27]
+	Updated www/py-pylint-django to 0.9.1 [adam 2018-02-27]
+	Updated geography/py-country to 18.2.23 [adam 2018-02-27]
