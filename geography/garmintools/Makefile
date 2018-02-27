@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2018/02/10 13:53:48 khorben Exp $
+# $NetBSD: Makefile,v 1.6 2018/02/27 23:56:09 khorben Exp $
 
 DISTNAME=		garmintools-0.10
+PKGREVISION=		1
 CATEGORIES=		geography
 MASTER_SITES=		http://garmintools.googlecode.com/files/
 

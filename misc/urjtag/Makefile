@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2018/02/10 13:53:48 khorben Exp $
+# $NetBSD: Makefile,v 1.12 2018/02/27 23:56:09 khorben Exp $
 #
 
 DISTNAME=	urjtag-0.10
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=urjtag/urjtag/0.10/}
 
