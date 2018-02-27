@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/02/26 12:06:13 leot Exp $
+# $NetBSD: Makefile,v 1.2 2018/02/27 06:58:28 adam Exp $
 
 DISTNAME=	h11-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	www
+CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/h11/}
 EXTRACT_SUFX=	.zip
 
