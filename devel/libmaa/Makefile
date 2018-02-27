@@ -1,28 +1,18 @@
-# $NetBSD: Makefile,v 1.8 2012/10/31 11:17:17 asau Exp $
+# $NetBSD: Makefile,v 1.9 2018/02/27 19:36:06 cheusov Exp $
 
-DISTNAME=		libmaa-1.3.2
+DISTNAME=		libmaa-1.4.1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dict/}
 
 MAINTAINER=		cheusov@NetBSD.org
 HOMEPAGE=		http://www.dict.org/
 COMMENT=		General purpose data structures and functions
-LICENSE=		gnu-lgpl-v2
+LICENSE=		mit
 
-BUILD_TARGET=		lib
+USE_LANGUAGES=		c
 TEST_TARGET=		test
 
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
+MAKE_ENV+=		MKSTATICLIB=yes
 
-PKGDOCDIR=		${PREFIX}/share/doc/libmaa
-INSTALLATION_DIRS+=	${PKGDOCDIR} lib include
-
-EXTRA_DOC_FILES=	COPYING.LIB README doc/libmaa.600dpi.ps
-
-post-install:
-.for i in ${EXTRA_DOC_FILES}
-	${INSTALL_DATA} ${WRKSRC}/"${i}" ${DESTDIR}${PKGDOCDIR}
-.endfor
-
+.include "../../devel/mk-configure/mk-c.mk"
 .include "../../mk/bsd.pkg.mk"
