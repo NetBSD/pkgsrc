@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/12/10 16:36:31 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/02/27 07:40:08 adam Exp $
 
-SHA1 (django-registration-2.3.tar.gz) = 43c6a2cc9cf623ced29b40105a6151c1db71cb0c
-RMD160 (django-registration-2.3.tar.gz) = c8da6a11b9e97396a06c2110bbae7d2879d07aac
-SHA512 (django-registration-2.3.tar.gz) = 432a22872ef77ddfa309a87ce12236d57a397ab5a860a95ff7d3189dc82a98340bd1b80acc2574c75360320acd003098314b58450b23b1f4d7d4ace372ce60a1
-Size (django-registration-2.3.tar.gz) = 1753181 bytes
-SHA1 (patch-setup.py) = b1e5a48aff2cb7c6975a4b2af5223fea1fdd8290
+SHA1 (django-registration-2.4.1.tar.gz) = f666f3c03486d6eebd2e3d7fba05f73edb26d407
+RMD160 (django-registration-2.4.1.tar.gz) = 988ba17393989358c4e5fb45a2ccfbe06c314cdd
+SHA512 (django-registration-2.4.1.tar.gz) = 07de45d0d0cc9d5255847a366cb590f9d1aa9cf5f368d3798a3b495c8551acd1c0dc02583697b5df02da5d61220288139768755cf4a1f3a43b905733bb191bfd
+Size (django-registration-2.4.1.tar.gz) = 1753993 bytes
