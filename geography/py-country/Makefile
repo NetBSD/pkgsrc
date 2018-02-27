@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/09/28 05:04:35 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/02/27 13:08:03 adam Exp $
 
-DISTNAME=	pycountry-17.9.23
+DISTNAME=	pycountry-18.2.23
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycountry/}
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-USE_LANGUAGES=		# none
+USE_LANGUAGES=	# none
 
 do-test:
 	cd ${WRKSRC}/src/pycountry/tests && pytest-${PYVERSSUFFIX}
