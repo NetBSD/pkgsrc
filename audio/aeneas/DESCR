@@ -1,0 +1,7 @@
+aeneas is a Python/C library and a set of tools to automagically
+synchronize audio and text.
+
+aeneas automatically generates a synchronization map between a list
+of text fragments and an audio file containing the narration of
+the text. In computer science this task is known as (automatically
+computing a) forced alignment.
