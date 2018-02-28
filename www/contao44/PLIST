@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/01/24 13:54:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/02/28 15:57:29 taca Exp $
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/README.md
 ${CT_WEBDIR}/assets/ace/composer.json
@@ -1113,7 +1113,9 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/.php_cs.dist
 ${CT_WEBDIR}/vendor/contao/core-bundle/.travis.yml
 ${CT_WEBDIR}/vendor/contao/core-bundle/.tx/config
 ${CT_WEBDIR}/vendor/contao/core-bundle/CHANGELOG.md
+${CT_WEBDIR}/vendor/contao/core-bundle/CONTRIBUTING.md
 ${CT_WEBDIR}/vendor/contao/core-bundle/DEPRECATED.md
+${CT_WEBDIR}/vendor/contao/core-bundle/LICENSE.md
 ${CT_WEBDIR}/vendor/contao/core-bundle/LIMITATIONS.md
 ${CT_WEBDIR}/vendor/contao/core-bundle/README.md
 ${CT_WEBDIR}/vendor/contao/core-bundle/UPGRADE.md
@@ -5474,8 +5476,10 @@ ${CT_WEBDIR}/vendor/symfony/polyfill-util/Binary.php
 ${CT_WEBDIR}/vendor/symfony/polyfill-util/BinaryNoFuncOverload.php
 ${CT_WEBDIR}/vendor/symfony/polyfill-util/BinaryOnFuncOverload.php
 ${CT_WEBDIR}/vendor/symfony/polyfill-util/LICENSE
+${CT_WEBDIR}/vendor/symfony/polyfill-util/LegacyTestListener.php
 ${CT_WEBDIR}/vendor/symfony/polyfill-util/README.md
 ${CT_WEBDIR}/vendor/symfony/polyfill-util/TestListener.php
+${CT_WEBDIR}/vendor/symfony/polyfill-util/TestListenerTrait.php
 ${CT_WEBDIR}/vendor/symfony/polyfill-util/composer.json
 ${CT_WEBDIR}/vendor/symfony/swiftmailer-bundle/.gitignore
 ${CT_WEBDIR}/vendor/symfony/swiftmailer-bundle/.travis.yml
@@ -6946,7 +6950,9 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/transla
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.lt.xlf
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.lv.xlf
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.mn.xlf
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.nb.xlf
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.nl.xlf
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.nn.xlf
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.no.xlf
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.pl.xlf
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.pt.xlf
@@ -8634,7 +8640,9 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resource
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.lb.xlf
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.lt.xlf
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.lv.xlf
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.nb.xlf
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.nl.xlf
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.nn.xlf
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.no.xlf
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.pl.xlf
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Resources/translations/security.pt_BR.xlf
@@ -9149,6 +9157,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/tr
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.lt.xlf
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.lv.xlf
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.mn.xlf
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.nb.xlf
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.nl.xlf
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.nn.xlf
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.no.xlf
@@ -9766,15 +9775,11 @@ ${CT_WEBDIR}/vendor/ua-parser/uap-php/src/Util/Logfile/ApacheCommonLogFormatRead
 ${CT_WEBDIR}/vendor/ua-parser/uap-php/src/Util/Logfile/ReaderInterface.php
 ${CT_WEBDIR}/vendor/ua-parser/uap-php/update-resources.sh
 ${CT_WEBDIR}/vendor/webmozart/assert/.composer-auth.json
-${CT_WEBDIR}/vendor/webmozart/assert/.gitignore
 ${CT_WEBDIR}/vendor/webmozart/assert/.styleci.yml
-${CT_WEBDIR}/vendor/webmozart/assert/.travis.yml
 ${CT_WEBDIR}/vendor/webmozart/assert/CHANGELOG.md
 ${CT_WEBDIR}/vendor/webmozart/assert/LICENSE
 ${CT_WEBDIR}/vendor/webmozart/assert/README.md
-${CT_WEBDIR}/vendor/webmozart/assert/appveyor.yml
 ${CT_WEBDIR}/vendor/webmozart/assert/composer.json
-${CT_WEBDIR}/vendor/webmozart/assert/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/webmozart/assert/src/Assert.php
 ${CT_WEBDIR}/vendor/webmozart/path-util/.gitignore
 ${CT_WEBDIR}/vendor/webmozart/path-util/.styleci.yml
