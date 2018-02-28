@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.925 2018/02/28 09:20:37 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.926 2018/02/28 09:49:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1299,3 +1299,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-Plack-Middleware-RemoveRedundantBody to 0.07 [wiz 2018-02-28]
 	Updated www/p5-libwww to 6.33 [wiz 2018-02-28]
 	Updated security/munge to 0.5.13 [wiz 2018-02-28]
+	Added sysutils/ioping version 1.0 [wiz 2018-02-28]
