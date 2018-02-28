@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.947 2018/02/28 16:15:44 taca Exp $
+$NetBSD: CHANGES-2018,v 1.948 2018/02/28 16:31:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1323,3 +1323,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/pear-Net_Sieve to 1.4.2 [taca 2018-02-28]
 	Updated textproc/pear-Console_Table to 1.3.1 [taca 2018-02-28]
 	Updated devel/ruby-fast_gettext to 1.6.0 [taca 2018-02-28]
+	Updated devel/ruby-ffi to 1.9.23 [taca 2018-02-28]
