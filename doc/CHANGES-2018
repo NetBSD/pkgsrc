@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.954 2018/02/28 21:47:00 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.955 2018/02/28 21:50:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1330,3 +1330,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/R-DBI to 0.7 [minskim 2018-02-28]
 	Updated security/R-digest to 0.6.15 [minskim 2018-02-28]
 	Updated audio/portaudio to 18.1nb4 [wiz 2018-02-28]
+	Updated audio/espeak to 1.31nb1 [wiz 2018-02-28]
