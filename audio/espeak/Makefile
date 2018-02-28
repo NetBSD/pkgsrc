@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2016/04/20 12:10:25 nros Exp $
-#
+# $NetBSD: Makefile,v 1.11 2018/02/28 21:49:55 wiz Exp $
 
 DISTNAME=	espeak-1.31-source
 PKGNAME=	${DISTNAME:S/-source//}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=espeak/}
 EXTRACT_SUFX=	.zip
