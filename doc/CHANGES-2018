@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.927 2018/02/28 13:26:21 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.928 2018/02/28 13:38:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1301,3 +1301,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/munge to 0.5.13 [wiz 2018-02-28]
 	Added sysutils/ioping version 1.0 [wiz 2018-02-28]
 	Updated sysutils/syslog-ng to 3.14.1 [fhajny 2018-02-28]
+	Updated sysutils/salt to 2017.7.4 [adam 2018-02-28]
+	Updated sysutils/salt-docs to 2017.7.4 [adam 2018-02-28]
+	Updated www/py-aiohttp to 3.0.5 [adam 2018-02-28]
