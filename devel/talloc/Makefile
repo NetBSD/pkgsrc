@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2018/01/28 16:41:33 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2018/02/28 08:00:46 nonaka Exp $
 
 DISTNAME=	talloc-2.1.11
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.samba.org/ftp/talloc/
 
@@ -20,7 +21,7 @@ PY_PATCHPLIST=		yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2.1.0
 
 # include/talloc.h
-CONFLICTS+=	samba-[0-9]*
+CONFLICTS+=	samba<=4.6.8nb3
 
 REPLACE_PYTHON+=	buildtools/bin/waf
 REPLACE_PYTHON+=	buildtools/wafsamba/__init__.py
