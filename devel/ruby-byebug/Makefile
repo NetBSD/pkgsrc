@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/08/31 15:15:13 taca Exp $
+# $NetBSD: Makefile,v 1.4 2018/02/28 15:43:08 taca Exp $
 
-DISTNAME=	byebug-9.1.0
+DISTNAME=	byebug-10.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
