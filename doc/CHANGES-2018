@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.953 2018/02/28 18:12:52 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.954 2018/02/28 21:47:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1329,3 +1329,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-gettext to 3.2.6 [taca 2018-02-28]
 	Updated math/R-DBI to 0.7 [minskim 2018-02-28]
 	Updated security/R-digest to 0.6.15 [minskim 2018-02-28]
+	Updated audio/portaudio to 18.1nb4 [wiz 2018-02-28]
