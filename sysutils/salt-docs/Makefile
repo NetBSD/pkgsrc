@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2018/02/07 11:11:23 adam Exp $
+# $NetBSD: Makefile,v 1.14 2018/02/28 13:37:23 adam Exp $
 
-DISTNAME=	salt-2017.7.3
+DISTNAME=	salt-2017.7.4
 PKGNAME=	${DISTNAME:S/-/-docs-/}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/salt/}
@@ -28,9 +28,6 @@ INSTALLATION_DIRS=	${HTMLDIR}
 do-install:
 	cd ${WRKSRC}/doc/_build/html && pax -rw -pe . ${DESTDIR}${PREFIX}/${HTMLDIR}
 	cd ${DESTDIR}${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
-
-# problem building due to some mocking
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
 
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
