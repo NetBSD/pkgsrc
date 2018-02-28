@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2018/01/12 20:48:06 fhajny Exp $
-
-PKGREVISION=	1
+# $NetBSD: Makefile,v 1.33 2018/02/28 13:26:08 fhajny Exp $
 
 .include "../../sysutils/syslog-ng/Makefile.common"
 
