@@ -1,0 +1,3 @@
+Classy Hash is a schema validator for Ruby Hashes.  You provide a simple
+schema Hash, and Classy Hash will make sure your data matches, providing
+helpful error messages if it doesn't.
