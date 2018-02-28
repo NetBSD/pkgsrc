@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.918 2018/02/28 08:46:13 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.919 2018/02/28 08:53:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1291,3 +1291,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/p5-RT-Client-REST to 0.51 [wiz 2018-02-28]
 	Updated net/p5-SNMP-Info to 3.47 [wiz 2018-02-28]
 	Updated security/p5-CryptX to 0.058 [wiz 2018-02-28]
+	Updated sysutils/p5-Server-Starter to 0.34 [wiz 2018-02-28]
