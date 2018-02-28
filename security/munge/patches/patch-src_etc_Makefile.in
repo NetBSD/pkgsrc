@@ -1,8 +1,8 @@
-$NetBSD: patch-src_etc_Makefile.in,v 1.3 2013/12/08 22:34:10 joerg Exp $
+$NetBSD: patch-src_etc_Makefile.in,v 1.4 2018/02/28 09:20:29 wiz Exp $
 
---- src/etc/Makefile.in.orig	2013-08-27 18:35:31.000000000 +0000
+--- src/etc/Makefile.in.orig	2017-09-26 21:57:53.000000000 +0000
 +++ src/etc/Makefile.in
-@@ -242,6 +242,7 @@ sbindir = @sbindir@
+@@ -298,6 +298,7 @@ sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
  sysconfdir = @sysconfdir@
@@ -10,7 +10,7 @@ $NetBSD: patch-src_etc_Makefile.in,v 1.3 2013/12/08 22:34:10 joerg Exp $
  target_alias = @target_alias@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
-@@ -465,18 +466,18 @@ distclean-local::
+@@ -581,15 +582,15 @@ munge.tmpfiles.conf: munge.tmpfiles.conf
  
  install-data-local:
  	test -d "/etc/rc.d/init.d" \
@@ -21,6 +21,7 @@ $NetBSD: patch-src_etc_Makefile.in,v 1.3 2013/12/08 22:34:10 joerg Exp $
  	  $(INSTALL) -m 0755 -d "$(DESTDIR)$${INITDIR}"; \
  	  $(INSTALL) -m 0755 \
  	    "$(builddir)/munge.init" "$(DESTDIR)$${INITDIR}/munge"
+ 	:
  	test -d "/etc/sysconfig" \
 -	    && CONFDIR="$(sysconfdir)/sysconfig" \
 -	    || CONFDIR="$(sysconfdir)/default"; \
@@ -28,16 +29,11 @@ $NetBSD: patch-src_etc_Makefile.in,v 1.3 2013/12/08 22:34:10 joerg Exp $
 +	    || CONFDIR="$(sysconfexampledir)/default"; \
  	  $(INSTALL) -m 0755 -d "$(DESTDIR)$${CONFDIR}"; \
  	  $(INSTALL) -m 0644 \
- 	    "$(srcdir)/munge.sysconfig" "$(DESTDIR)$${CONFDIR}/munge"
--	if test -d "$(libdir)/pkgconfig"; then \
-+	if test -d "${DESTDIR}$(libdir)/pkgconfig"; then \
- 	  $(INSTALL) -m 0755 \
- 	    -d "$(DESTDIR)$(libdir)/pkgconfig"; \
- 	  $(INSTALL) -m 0644 \
-@@ -500,8 +501,8 @@ install-data-local:
- 	    "$(srcdir)/munge-tmpfiles.conf" \
- 	    "$(DESTDIR)$(prefix)/lib/tmpfiles.d/munge.conf"; \
- 	fi
+ 	    "$(builddir)/munge.sysconfig" "$(DESTDIR)$${CONFDIR}/munge"
+@@ -610,8 +611,8 @@ install-data-local:
+ 	  "$(builddir)/munge.tmpfiles.conf" \
+ 	  "$(DESTDIR)$${TMPFILESDIR}/munge.conf"
+ 	:
 -	$(INSTALL) -m 0755 -d "$(DESTDIR)$(sysconfdir)"
 -	$(INSTALL) -m 0700 -d "$(DESTDIR)$(sysconfdir)/munge"
 +	$(INSTALL) -m 0755 -d "$(DESTDIR)$(sysconfexampledir)"

@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:17:51 agc Exp $
+$NetBSD: distinfo,v 1.5 2018/02/28 09:20:29 wiz Exp $
 
-SHA1 (munge-0.5.11.tar.bz2) = 6939ddabc4bc2b3bacdb8bb2bf24766b666d1c0d
-RMD160 (munge-0.5.11.tar.bz2) = f7908ba980570519dab99f81023201fb0bd3c195
-SHA512 (munge-0.5.11.tar.bz2) = b9d4cd76c4fe605ad67934af48809205de0f0e5fa1a10dd3b6e382da2cb8bc274bd2a8c0d4bc49d1d58155bf008945a584afd0b6e01cc8052aa1d21c8de2815b
-Size (munge-0.5.11.tar.bz2) = 423232 bytes
-SHA1 (patch-src_etc_Makefile.in) = 11a79fd9d5e5b3da76a3c637c3e7cf394acbbe5e
+SHA1 (munge-0.5.13.tar.xz) = bcb0b89e44c5c0ec21f4bcfaacb4493b82aace61
+RMD160 (munge-0.5.13.tar.xz) = 77c6e9df935ddc1ffe6cd481e015f59e2f74e1b7
+SHA512 (munge-0.5.13.tar.xz) = 2e024c0438f9208379a037daabd1c31f206820ab74a410e2bb69870755e99f9c9fbf60c294c96941008bc43425fbb31dd2374e5f088b7978479e7c65816e9002
+Size (munge-0.5.13.tar.xz) = 389952 bytes
+SHA1 (patch-src_etc_Makefile.in) = ca2e4a47a9a6986c962675368eab5e770df99ad3

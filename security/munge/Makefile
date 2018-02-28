@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2018/01/01 18:16:39 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2018/02/28 09:20:29 wiz Exp $
 
-DISTNAME=	munge-0.5.11
-PKGREVISION=	7
+DISTNAME=	munge-0.5.13
 CATEGORIES=	security
-MASTER_SITES=	http://munge.googlecode.com/files/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=dun/}
+GITHUB_RELEASE=	${DISTNAME}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	https://dun.github.io/munge/
