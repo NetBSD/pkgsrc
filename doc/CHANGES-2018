@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.919 2018/02/28 08:53:43 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.920 2018/02/28 08:54:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1292,3 +1292,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/p5-SNMP-Info to 3.47 [wiz 2018-02-28]
 	Updated security/p5-CryptX to 0.058 [wiz 2018-02-28]
 	Updated sysutils/p5-Server-Starter to 0.34 [wiz 2018-02-28]
+	Updated www/nghttp2 to 1.31.0 [adam 2018-02-28]
+	Updated www/nginx-devel to 1.13.9 [adam 2018-02-28]
