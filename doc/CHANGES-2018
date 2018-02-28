@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.913 2018/02/28 08:02:13 nonaka Exp $
+$NetBSD: CHANGES-2018,v 1.914 2018/02/28 08:16:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1286,3 +1286,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/net-snmp to 5.7.3nb10 [maya 2018-02-28]
 	Updated net/samba4 to 4.6.8nb4 [nonaka 2018-02-28]
 	Updated devel/talloc to 2.1.11nb1 [nonaka 2018-02-28]
+	Updated devel/p5-Data-Peek to 0.48 [wiz 2018-02-28]
