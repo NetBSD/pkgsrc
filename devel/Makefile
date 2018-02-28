@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2620 2018/02/28 08:36:50 wiz Exp $
+# $NetBSD: Makefile,v 1.2621 2018/02/28 15:27:47 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2306,6 +2306,7 @@ SUBDIR+=	ruby-celluloid-fsm
 SUBDIR+=	ruby-celluloid-pool
 SUBDIR+=	ruby-celluloid-supervision
 SUBDIR+=	ruby-cmd
+SUBDIR+=	ruby-concurrent-ruby
 SUBDIR+=	ruby-contracts
 SUBDIR+=	ruby-cucumber-core
 SUBDIR+=	ruby-cucumber-wire
