@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2018/02/28 09:48:36 wiz Exp $
+bin/ioping
+man/man1/ioping.1
