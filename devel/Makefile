@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2619 2018/02/26 17:32:05 minskim Exp $
+# $NetBSD: Makefile,v 1.2620 2018/02/28 08:36:50 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1291,6 +1291,7 @@ SUBDIR+=	p5-Module-CoreList
 SUBDIR+=	p5-Module-Dependency
 SUBDIR+=	p5-Module-ExtractUse
 SUBDIR+=	p5-Module-Find
+SUBDIR+=	p5-Module-FromPerlVer
 SUBDIR+=	p5-Module-Implementation
 SUBDIR+=	p5-Module-Install
 SUBDIR+=	p5-Module-Install-AuthorRequires
