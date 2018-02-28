@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.251 2018/02/08 20:58:50 adam Exp $
+# $NetBSD: Makefile,v 1.252 2018/02/28 10:10:45 jperkin Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -126,6 +126,7 @@ SUBDIR+=	palmosemulator
 SUBDIR+=	pcemu
 SUBDIR+=	pearpc
 SUBDIR+=	py-keystone
+SUBDIR+=	py-unicorn
 SUBDIR+=	qemu
 SUBDIR+=	raine
 SUBDIR+=	realboy
