@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.944 2018/02/28 16:02:00 taca Exp $
+$NetBSD: CHANGES-2018,v 1.945 2018/02/28 16:02:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1320,3 +1320,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/contao44 to 4.4.14 [taca 2018-02-28]
 	Updated www/contao45 to 4.5.4 [taca 2018-02-28]
 	Updated math/pear-Numbers_Words to 0.18.2 [taca 2018-02-28]
+	Updated net/pear-Net_Sieve to 1.4.2 [taca 2018-02-28]
