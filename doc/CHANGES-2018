@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.938 2018/02/28 15:39:52 taca Exp $
+$NetBSD: CHANGES-2018,v 1.939 2018/02/28 15:43:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1314,3 +1314,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/ruby-concurrent-ruby version 1.0.5 [taca 2018-02-28]
 	Removed devel/ruby-atomic [taca 2018-02-28]
 	Updated devel/ruby-backports to 3.11.1 [taca 2018-02-28]
+	Updated devel/ruby-byebug to 10.0.0 [taca 2018-02-28]
