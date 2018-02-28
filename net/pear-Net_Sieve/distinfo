@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2017/05/28 11:24:59 taca Exp $
+$NetBSD: distinfo,v 1.11 2018/02/28 16:02:25 taca Exp $
 
-SHA1 (pear/Net_Sieve-1.4.1.tgz) = 0f43ce6796d977d7038f1d5ea3ac7f6354fe493d
-RMD160 (pear/Net_Sieve-1.4.1.tgz) = 7809b6b5502e35a04cfafeba2339caad2e60bd59
-SHA512 (pear/Net_Sieve-1.4.1.tgz) = dea2ea7f1e6da0b4707717312984d0cae1d76b3f48d422a27c09ac6f3648709f7ed6d3375f95c8239762c813c8c455c31d919692b3b866292ca56506249d1af8
-Size (pear/Net_Sieve-1.4.1.tgz) = 15566 bytes
+SHA1 (pear/Net_Sieve-1.4.2.tgz) = 5959ae9805418669829ab0acb8b2e70736ef7d84
+RMD160 (pear/Net_Sieve-1.4.2.tgz) = 8f3b874d8c0c55d3b6aa70a20c8533674ad41d44
+SHA512 (pear/Net_Sieve-1.4.2.tgz) = 7a80b7ef4de3f307e5e30ffbfe7b5b62b8056a46d9f687060eccf717f3d2ebd700f3d61b1a3ec4c65b4e88db5f805f6c28ca44545dc3566498d4880911ab60b8
+Size (pear/Net_Sieve-1.4.2.tgz) = 15620 bytes
