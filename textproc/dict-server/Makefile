@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2013/07/12 10:45:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2018/02/28 21:03:06 cheusov Exp $
 
 .include "../../textproc/dict-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/dictd/dict-server/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 COMMENT=	Dictionary Service Protocol server
 LICENSE=	gnu-gpl-v2
@@ -29,8 +29,8 @@ DICTD_GROUP?=		nogroup
 DICTD_GROUP?=		dictd
 .endif
 
-PKG_GROUPS=		${DICTD_GROUP}
-PKG_USERS=		${DICTD_USER}:${DICTD_GROUP}
+PKG_GROUPS=			${DICTD_GROUP}
+PKG_USERS=			${DICTD_USER}:${DICTD_GROUP}
 PKG_GECOS.${DICTD_USER}=	Dictionary\ protocol\ server\ user
 #PKG_HOME.${DICT_USER}=		/nonexistent
 #PKG_SHELL.${DICT_USER}=		${NOLOGIN}
