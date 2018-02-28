@@ -1,0 +1,7 @@
+Ever have to give up using a new, really useful feature in Perl
+because someone on Centos uses 5.8?
+
+Not sure what will work with PerlBrew if you have five versions of
+Perl installed with your modules?
+
+No longer. Now your Makefile.PL can use the correct Perl Version.
