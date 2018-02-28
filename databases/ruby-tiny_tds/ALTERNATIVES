@@ -1,0 +1,2 @@
+bin/defncopy-ttds @PREFIX@/bin/defncopy-ttds@RUBY_SUFFIX@
+bin/tsql-ttds @PREFIX@/bin/tsql-ttds@RUBY_SUFFIX@
