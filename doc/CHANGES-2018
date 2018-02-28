@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.915 2018/02/28 08:37:02 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.916 2018/02/28 08:41:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1288,3 +1288,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/talloc to 2.1.11nb1 [nonaka 2018-02-28]
 	Updated devel/p5-Data-Peek to 0.48 [wiz 2018-02-28]
 	Added devel/p5-Module-FromPerlVer version 0.0.1 [wiz 2018-02-28]
+	Updated net/p5-RT-Client-REST to 0.51 [wiz 2018-02-28]
