@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.3 2008/02/28 20:16:55 drochner Exp $
+$NetBSD: patch-ac,v 1.4 2018/02/28 21:49:55 wiz Exp $
 
---- Makefile.orig	2008-01-19 22:50:27.000000000 +0100
+--- Makefile.orig	2008-01-19 21:50:27.000000000 +0000
 +++ Makefile
 @@ -1,7 +1,7 @@
  BINDIR=/usr/bin
@@ -34,7 +34,18 @@ $NetBSD: patch-ac,v 1.3 2008/02/28 20:16:55 drochner Exp $
  
  CXXFLAGS=-O2
  
-@@ -58,7 +59,7 @@ $(BIN2_NAME): $(OBJS3) $(LIB_NAME)
+@@ -49,19 +50,19 @@ all: $(BIN_NAME) $(LIB_NAME) $(STATIC_LI
+ 	$(CXX) $(CXXFLAGS) -D PATH_ESPEAK_DATA=\"$(DATADIR)\" -Wall -pedantic -I. -c -fno-exceptions $<
+ 
+ $(BIN_NAME): $(OBJS1)
+-	$(CXX) -o $@ $(OBJS1) $(LIBS1)
++	$(CXX) -o $@ $(OBJS1) $(LIBS1) $(LDFLAGS)
+ 
+ $(BIN2_NAME): $(OBJS3) $(LIB_NAME)
+-	$(CXX) -o $@ $(OBJS3) $(LIBS3)
++	$(CXX) -o $@ $(OBJS3) $(LIBS3) $(LDFLAGS)
+ 
+ 
  
  x_%.o: %.cpp
  	$(CXX) $(CXXFLAGS) -Wall -fpic -fvisibility=hidden -pedantic \
@@ -42,4 +53,8 @@ $NetBSD: patch-ac,v 1.3 2008/02/28 20:16:55 drochner Exp $
 +	-I. -DLIBRARY -DPATH_ESPEAK_DATA=\"$(DATADIR)\" -c -fno-exceptions $<  -o x_$*.o
  
  $(LIB_NAME): $(OBJS2)
- 	$(CXX) -shared -Wl,-soname,$(LIB_NAME).$(LIB_VERSION) -o $@ $(OBJS2) $(LIBS2)
+-	$(CXX) -shared -Wl,-soname,$(LIB_NAME).$(LIB_VERSION) -o $@ $(OBJS2) $(LIBS2)
++	$(CXX) -shared -Wl,-soname,$(LIB_NAME).$(LIB_VERSION) -o $@ $(OBJS2) $(LIBS2) $(LDFLAGS)
+ 
+ $(STATIC_LIB_NAME): $(OBJS2)
+ 	$(AR) cqs $(STATIC_LIB_NAME) $(OBJS2)
