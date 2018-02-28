@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2012/07/22 15:32:50 cheusov Exp $
+# $NetBSD: Makefile,v 1.38 2018/02/28 21:02:17 cheusov Exp $
 
 .include "../../textproc/dict-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/dictd/dict-client/}
+PKGREVISION=	1
 CATEGORIES=	textproc
 COMMENT=	Dictionary Service Protocol client
 
@@ -18,7 +19,6 @@ BUILD_TARGET=		dict
 INSTALL_TARGET=		install.dict
 
 FILESDIR=	${.CURDIR}/../../textproc/dict-server/files
-PATCHDIR=	${.CURDIR}/../../textproc/dict-server/patches
 DISTINFO_FILE=	${.CURDIR}/../../textproc/dict-server/distinfo
 
 .include "../../devel/zlib/buildlink3.mk"
