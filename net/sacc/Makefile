@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/02/26 16:52:21 leot Exp $
+# $NetBSD: Makefile,v 1.2 2018/02/28 16:32:56 leot Exp $
 
 DISTNAME=	sacc-v1.00
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://bitreich.org/releases/sacc/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	https://github.com/jhawthorn/fzy
+HOMEPAGE=	gopher://bitreich.org/1/scm/sacc
 COMMENT=	Console gopher client
 LICENSE=	isc
 
