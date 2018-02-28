@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2017/07/31 14:08:41 taca Exp $
+$NetBSD: distinfo,v 1.20 2018/02/28 15:20:00 taca Exp $
 
-SHA1 (ruby2ruby-2.4.0.gem) = a13661bf5f1d5408637227a2cad6d8df7e0f0f20
-RMD160 (ruby2ruby-2.4.0.gem) = 05511610166841ae85e4cf74018526df5fc222f0
-SHA512 (ruby2ruby-2.4.0.gem) = 1edeb5e90c5d33dabfdf7579d2f24f6daed8b9686ce1f7d746d96b18c23c2d4c505a4807a224536d194426fbd81e740113bba6d659bd2dbd2a84c71e04594300
-Size (ruby2ruby-2.4.0.gem) = 26112 bytes
+SHA1 (ruby2ruby-2.4.1.gem) = 81e12e1402a939e42a29920108caeb749e14e97c
+RMD160 (ruby2ruby-2.4.1.gem) = 76409074909731c3392a1f2f988a31ce43d61c62
+SHA512 (ruby2ruby-2.4.1.gem) = 5c0ee1b3738a5c4f780cea15cdc9ba679e31b9fe26f11b458a881d40b4717e9d07202f4358e9a0ec53a657b275f86ba466bf6ace8111403d35553292bee60c3c
+Size (ruby2ruby-2.4.1.gem) = 26112 bytes
