@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.949 2018/02/28 16:46:19 taca Exp $
+$NetBSD: CHANGES-2018,v 1.950 2018/02/28 16:47:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1325,3 +1325,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-fast_gettext to 1.6.0 [taca 2018-02-28]
 	Updated devel/ruby-ffi to 1.9.23 [taca 2018-02-28]
 	Updated devel/ruby-flexmock to 2.3.6 [taca 2018-02-28]
+	Updated devel/ruby-gettext to 3.2.6 [taca 2018-02-28]
