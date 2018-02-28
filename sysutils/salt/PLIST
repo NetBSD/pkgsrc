@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2018/02/07 11:11:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2018/02/28 13:37:23 adam Exp $
 bin/salt
 bin/salt-api
 bin/salt-call
@@ -4023,6 +4023,9 @@ ${PYSITELIB}/salt/utils/smb.pyo
 ${PYSITELIB}/salt/utils/smtp.py
 ${PYSITELIB}/salt/utils/smtp.pyc
 ${PYSITELIB}/salt/utils/smtp.pyo
+${PYSITELIB}/salt/utils/ssh.py
+${PYSITELIB}/salt/utils/ssh.pyc
+${PYSITELIB}/salt/utils/ssh.pyo
 ${PYSITELIB}/salt/utils/stormpath.py
 ${PYSITELIB}/salt/utils/stormpath.pyc
 ${PYSITELIB}/salt/utils/stormpath.pyo
