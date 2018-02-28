@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2017/12/11 14:45:11 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/02/28 13:26:08 fhajny Exp $
 bin/dqtool
 bin/loggen
 bin/pdbtool
@@ -67,7 +67,6 @@ include/syslog-ng/gsocket.h
 include/syslog-ng/host-id.h
 include/syslog-ng/host-resolve.h
 include/syslog-ng/hostname.h
-include/syslog-ng/libtest/license_module_mock.h
 include/syslog-ng/libtest/mock-transport.h
 include/syslog-ng/libtest/msg_parse_lib.h
 include/syslog-ng/libtest/persist_lib.h
@@ -80,7 +79,9 @@ include/syslog-ng/logmsg/gsockaddr-serialize.h
 include/syslog-ng/logmsg/logmsg-serialize-fixup.h
 include/syslog-ng/logmsg/logmsg-serialize.h
 include/syslog-ng/logmsg/logmsg.h
+include/syslog-ng/logmsg/nvhandle-descriptors.h
 include/syslog-ng/logmsg/nvtable-serialize-endianutils.h
+include/syslog-ng/logmsg/nvtable-serialize-legacy.h
 include/syslog-ng/logmsg/nvtable-serialize.h
 include/syslog-ng/logmsg/nvtable.h
 include/syslog-ng/logmsg/serialization.h
@@ -115,6 +116,7 @@ include/syslog-ng/mainloop-worker.h
 include/syslog-ng/mainloop.h
 include/syslog-ng/memtrace.h
 include/syslog-ng/messages.h
+include/syslog-ng/misc.h
 include/syslog-ng/ml-batched-timer.h
 include/syslog-ng/module-config.h
 include/syslog-ng/modules/add-contextual-data/add-contextual-data-parser.h
@@ -125,6 +127,7 @@ include/syslog-ng/modules/add-contextual-data/context-info-db.h
 include/syslog-ng/modules/add-contextual-data/contextual-data-record-scanner.h
 include/syslog-ng/modules/add-contextual-data/csv-contextual-data-record-scanner.h
 include/syslog-ng/msg-format.h
+include/syslog-ng/nondumpable-allocator.h
 include/syslog-ng/parse-number.h
 include/syslog-ng/parser/parser-expr-parser.h
 include/syslog-ng/parser/parser-expr.h
@@ -155,6 +158,7 @@ include/syslog-ng/scanner/csv-scanner/csv-scanner.h
 include/syslog-ng/scanner/kv-scanner/kv-scanner.h
 include/syslog-ng/scanner/list-scanner/list-scanner.h
 include/syslog-ng/scratch-buffers.h
+include/syslog-ng/secret-storage.h
 include/syslog-ng/seqnum.h
 include/syslog-ng/serialize.h
 include/syslog-ng/service-management.h
@@ -207,6 +211,7 @@ include/syslog-ng/value-pairs/transforms.h
 include/syslog-ng/value-pairs/value-pairs.h
 include/syslog-ng/versioning.h
 lib/libevtlog.la
+lib/libsecret-storage.la
 lib/libsyslog-ng-native-connector.a
 lib/libsyslog-ng.la
 lib/pkgconfig/syslog-ng-add-contextual-data.pc

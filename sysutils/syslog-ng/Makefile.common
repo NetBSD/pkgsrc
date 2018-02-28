@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.9 2018/01/12 20:48:06 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.10 2018/02/28 13:26:08 fhajny Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/Makefile.module
 
-DISTNAME=	syslog-ng-3.13.2
+DISTNAME=	syslog-ng-3.14.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=balabit/}
 
@@ -56,6 +56,12 @@ PYTHON_VERSIONS_ACCEPTED=      27
 
 REPLACE_AWK+=		contrib/syslog2ng
 REPLACE_PYTHON+=	lib/merge-grammar.py
+
+# Kill bundled depedencies, speeds up configure time
+post-extract:
+	${RM} -rf ${WRKSRC}/lib/ivykis
+	${RM} -rf ${WRKSRC}/modules/afamqp/rabbitmq-c
+	${RM} -rf ${WRKSRC}/modules/afmongodb/mongo-c-driver
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
