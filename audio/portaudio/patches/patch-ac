@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.8 2010/10/12 21:50:49 joerg Exp $
+$NetBSD: patch-ac,v 1.9 2018/02/28 21:46:52 wiz Exp $
 
 --- Makefile.in.orig	2003-02-11 14:24:56.000000000 +0000
 +++ Makefile.in
@@ -26,14 +26,14 @@ $NetBSD: patch-ac,v 1.8 2010/10/12 21:50:49 joerg Exp $
  lib/$(PALIB): lib/ $(OBJS) Makefile $(PAINC)
 -	$(AR) ruv lib/$(PALIB) $(OBJS)
 -	$(RANLIB) lib/$(PALIB)
-+	${LIBTOOL} --mode=link @CC@ -o lib/${PALIB:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 0:18:0 $(DLL_LIBS)
++	${LIBTOOL} --mode=link @CC@ -o lib/${PALIB:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 0:18:0 $(LDFLAGS) $(DLL_LIBS)
  
  lib/$(PADLLV): lib/ $(OBJS) Makefile $(PAINC)
 -	$(CC) $(SHARED_FLAGS) -o lib/$(PADLLV) $(OBJS) $(DLL_LIBS)
  
  $(TESTS): bin/%: lib/$(PALIB) Makefile $(PAINC) pa_tests/%.c
 -	$(CC) -o $@ $(CFLAGS) pa_tests/$*.c lib/$(PALIB) $(LIBS)
-+	${LIBTOOL} --mode=link @CC@ -o $@ $(CFLAGS) pa_tests/$*.c lib/${PALIB:.a=.la} $(LIBS)
++	${LIBTOOL} --mode=link @CC@ -o $@ $(LDFLAGS) $(CFLAGS) pa_tests/$*.c lib/${PALIB:.a=.la} $(LIBS)
  
  install: lib/$(PALIB) lib/$(PADLLV)
 -	$(INSTALL) -m 644 lib/$(PADLLV) $(PREFIX)/lib/$(PADLLV)
