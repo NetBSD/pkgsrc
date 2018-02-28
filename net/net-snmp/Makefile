@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.122 2018/02/25 18:35:29 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2018/02/28 01:52:02 maya Exp $
 
 .include "Makefile.common"
 CATEGORIES=	net
-PKGREVISION=	9
+PKGREVISION=	10
 
 MAINTAINER=	adam@NetBSD.org
 COMMENT=	Extensible SNMP implementation
@@ -30,6 +30,7 @@ OSVERSION_SPECIFIC=	YES
 .  if empty(CFLAGS:U:M*-Dnetbsd1*)
 CFLAGS+=		-Dnetbsd1
 .  endif
+CFLAGS+=		-DSOL_IP=IPPROTO_IP
 .endif
 
 .if (${OPSYS} == "NetBSD") || !exists(/usr/bin/lpstat)
