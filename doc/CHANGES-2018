@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.950 2018/02/28 16:47:41 taca Exp $
+$NetBSD: CHANGES-2018,v 1.951 2018/02/28 17:41:19 ginsbach Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1255,6 +1255,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-regex to 2018.02.21 [adam 2018-02-26]
 	Added devel/R-assertthat version 0.2.0 [minskim 2018-02-26]
 	Updated security/lynis to 2.6.2 [sborrill 2018-02-26]
+	Updated pkgtools/pkg_install to 20180226 [ginsbach 2018-02-26]
 	Updated www/py-django-countries to 5.1.1 [adam 2018-02-27]
 	Updated www/py-aiohttp to 3.0.4 [adam 2018-02-27]
 	Updated math/py-lmfit to 0.9.8 [adam 2018-02-27]
