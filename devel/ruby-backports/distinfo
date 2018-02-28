@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2016/02/16 14:47:26 taca Exp $
+$NetBSD: distinfo,v 1.10 2018/02/28 15:39:31 taca Exp $
 
-SHA1 (backports-3.6.8.gem) = 5c9dd0d5552d242ee6bb338a9097e85f0a0a45d5
-RMD160 (backports-3.6.8.gem) = dde35eb52bbcae670eb358ae12d0d6ca8857472d
-SHA512 (backports-3.6.8.gem) = 5b4bebb56623043a4524715292f785b92f4993728deb30ef0268b099372a1835901e596ba33d374f501c45ffe960cc27a7ddd5c061c6fd02fe7bc6cc335b38c0
-Size (backports-3.6.8.gem) = 88064 bytes
+SHA1 (backports-3.11.1.gem) = a703d520583dcd8526efb3f12fb7615fe2827d5d
+RMD160 (backports-3.11.1.gem) = 0462fc15dc02e1e11ab8a96332c36b3f480d0e41
+SHA512 (backports-3.11.1.gem) = 12f8d536c543bfb86c725c3a9d4dd09dc1a545edacfd3507b38a5a149d009c55a181cab3989854f48f1b480e7bc297196265fcee743be13941e760262185ce9e
+Size (backports-3.11.1.gem) = 157696 bytes
