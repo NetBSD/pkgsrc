@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.952 2018/02/28 17:46:18 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.953 2018/02/28 18:12:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1328,3 +1328,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-flexmock to 2.3.6 [taca 2018-02-28]
 	Updated devel/ruby-gettext to 3.2.6 [taca 2018-02-28]
 	Updated math/R-DBI to 0.7 [minskim 2018-02-28]
+	Updated security/R-digest to 0.6.15 [minskim 2018-02-28]
