@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.922 2018/02/28 08:57:08 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.923 2018/02/28 09:07:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1296,3 +1296,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/nginx-devel to 1.13.9 [adam 2018-02-28]
 	Updated textproc/p5-Lingua-EN-Inflect-Phrase to 0.20 [wiz 2018-02-28]
 	Updated textproc/p5-String-ToIdentifier-EN to 0.12 [wiz 2018-02-28]
+	Updated www/p5-Plack-Middleware-RemoveRedundantBody to 0.07 [wiz 2018-02-28]
