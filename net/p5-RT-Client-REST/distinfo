@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/07/20 12:19:03 mef Exp $
+$NetBSD: distinfo,v 1.5 2018/02/28 08:41:29 wiz Exp $
 
-SHA1 (RT-Client-REST-0.50.tar.gz) = b77a5191636c4a9821f55df2bb956ba5202ab700
-RMD160 (RT-Client-REST-0.50.tar.gz) = 6c798f8ee9e0676718d71201608f55480e95caf3
-SHA512 (RT-Client-REST-0.50.tar.gz) = 5b3803ae9bdccb4bbc5e1ea7a809ec6fcaf67db6ed6a774355dac8bdadb90d67ceb53e4136688568d211c883150c22d1285937aeb06012695feeff551674f654
-Size (RT-Client-REST-0.50.tar.gz) = 84846 bytes
+SHA1 (RT-Client-REST-0.51.tar.gz) = 23da39faedfa6ac4cb8980c65fa939e30ca0c7d2
+RMD160 (RT-Client-REST-0.51.tar.gz) = ce942e50e5ebd2792dd697ae72214d336d320d79
+SHA512 (RT-Client-REST-0.51.tar.gz) = fea39dda365bc6c66a1b9b0725af0d9af1eb16ae53f2684289e52efe7375ff8ee713fd5ca2eec4782bdb0156f56da6f3e5368d6f15d98c3aca48e9ddbca553d5
+Size (RT-Client-REST-0.51.tar.gz) = 84790 bytes
