@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/08/31 15:15:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/02/28 15:43:08 taca Exp $
 bin/byebug${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/byebug/byebug.${RUBY_DLEXT}
@@ -8,7 +8,7 @@ ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/GUIDE.md
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/bin/byebug
+${GEM_LIBDIR}/exe/byebug
 ${GEM_LIBDIR}/ext/byebug/breakpoint.c
 ${GEM_LIBDIR}/ext/byebug/byebug.c
 ${GEM_LIBDIR}/ext/byebug/byebug.h
@@ -111,6 +111,8 @@ ${GEM_LIBDIR}/lib/byebug/processors/control_processor.rb
 ${GEM_LIBDIR}/lib/byebug/processors/post_mortem_processor.rb
 ${GEM_LIBDIR}/lib/byebug/processors/script_processor.rb
 ${GEM_LIBDIR}/lib/byebug/remote.rb
+${GEM_LIBDIR}/lib/byebug/remote/client.rb
+${GEM_LIBDIR}/lib/byebug/remote/server.rb
 ${GEM_LIBDIR}/lib/byebug/runner.rb
 ${GEM_LIBDIR}/lib/byebug/setting.rb
 ${GEM_LIBDIR}/lib/byebug/settings/autoirb.rb
@@ -128,6 +130,7 @@ ${GEM_LIBDIR}/lib/byebug/settings/post_mortem.rb
 ${GEM_LIBDIR}/lib/byebug/settings/savefile.rb
 ${GEM_LIBDIR}/lib/byebug/settings/stack_on_error.rb
 ${GEM_LIBDIR}/lib/byebug/settings/width.rb
+${GEM_LIBDIR}/lib/byebug/source_file_formatter.rb
 ${GEM_LIBDIR}/lib/byebug/subcommands.rb
 ${GEM_LIBDIR}/lib/byebug/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
