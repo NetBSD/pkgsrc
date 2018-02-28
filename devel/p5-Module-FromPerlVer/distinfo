@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/02/28 08:36:12 wiz Exp $
+
+SHA1 (Module-FromPerlVer-0.0.1.tar.gz) = ae28d31d3ba3aa70965a17bcbfa605b49c3a38a8
+RMD160 (Module-FromPerlVer-0.0.1.tar.gz) = 137aaff989cef6e55f027d57aded22fc37c61dc6
+SHA512 (Module-FromPerlVer-0.0.1.tar.gz) = 1ce400ca258b2ee8bc8d0b6a5c109596f7b3ece702e1a84881dadd5748f0ff8e52d6c4cca40ed28ba4376f3ee000692e53ac2128cfb7f1deee1031d0032e5e5f
+Size (Module-FromPerlVer-0.0.1.tar.gz) = 8919 bytes
