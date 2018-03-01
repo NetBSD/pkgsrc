@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.7 2016/12/22 21:01:21 joerg Exp $
+$NetBSD: distinfo,v 1.8 2018/03/01 13:59:11 mef Exp $
 
-SHA1 (kicad-4.0.4.tar.xz) = d0a124218f91cd40958ca0d68f8fe1f36d368cc3
-RMD160 (kicad-4.0.4.tar.xz) = 563b5168bd94b8c4a34f720fdb60e677c75f75fe
-SHA512 (kicad-4.0.4.tar.xz) = 230eb10d42e004c51d790db0d21dc08653944ca6cc4b728ad34b506f1a2b009c23369ddae417c8fafd420cb8045900dd4145cd1071867c759ab406dd12be3242
-Size (kicad-4.0.4.tar.xz) = 10672424 bytes
+SHA1 (kicad-4.0.7.tar.xz) = 6e4276edd0761f47008038c5ba8435653b2aee59
+RMD160 (kicad-4.0.7.tar.xz) = 7bd4c81b1bf7ffc4c6d85e37dc5ec710783089d9
+SHA512 (kicad-4.0.7.tar.xz) = 7b2acd9efadf5d48565f71bd0df2474ecc8fc04145953c13ac27363d48dbe6b0de091e311713635f603aed89ce0759a1d623abb37a139e2c87184ca4e717145b
+Size (kicad-4.0.7.tar.xz) = 10678656 bytes
 SHA1 (patch-CMakeLists.txt) = 8b1b7f5fa321958e303dff44bdc2a612085f14b8
 SHA1 (patch-CMakeModules_Functions.cmake) = ef22da244c8ed43aec6c149ae6b05a8e464cf809
-SHA1 (patch-CMakeModules_WriteVersionHeader.cmake) = e442f73b466039ef3b08fd75a2b686377d26258d
+SHA1 (patch-CMakeModules_WriteVersionHeader.cmake) = 3ee7e7b121c8691ae5fa3bee03ec62e3ee1aee2b
 SHA1 (patch-CMakeModules_config.h.cmake) = 3988783a0058ed1b5489bc54d903cab2a724f755
 SHA1 (patch-bitmaps_png_CMakeLists.txt) = 1202783b39af4ddf83b9def91eb72b058f2da5bb
 SHA1 (patch-common_CMakeLists.txt) = 18446b8aa7abbfa8c8598dda0fa7d98216a6f123
