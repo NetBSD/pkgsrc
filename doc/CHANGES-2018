@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.965 2018/03/01 11:13:40 taca Exp $
+$NetBSD: CHANGES-2018,v 1.966 2018/03/01 11:15:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1348,3 +1348,8 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/libcares to 1.14.0 [adam 2018-03-01]
 	Updated fonts/py-fonttools to 3.23.0 [adam 2018-03-01]
 	Updated mail/dovecot2 to 2.3.0.1 [taca 2018-03-01]
+	Updated mail/dovecot2-gssapi to 2.3.0.1 [taca 2018-03-01]
+	Updated mail/dovecot2-ldap to 2.3.0.1 [taca 2018-03-01]
+	Updated mail/dovecot2-mysql to 2.3.0.1 [taca 2018-03-01]
+	Updated mail/dovecot2-pgsql to 2.3.0.1 [taca 2018-03-01]
+	Updated mail/dovecot2-sqlite to 2.3.0.1 [taca 2018-03-01]
