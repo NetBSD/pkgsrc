@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2016/09/08 09:32:29 bouyer Exp $
+# $NetBSD: Makefile,v 1.3 2018/03/01 13:59:11 mef Exp $
 #
 
-V=		4.0.4
+V=		4.0.7
 DISTNAME=	kicad-i18n-${V}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KiCad/}
