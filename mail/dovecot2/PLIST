@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2018/01/02 15:52:44 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.59 2018/03/01 11:13:14 taca Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -765,6 +765,7 @@ share/doc/dovecot/wiki/Design.Dcrypt.txt
 share/doc/dovecot/wiki/Design.DoveadmProtocol.HTTP.txt
 share/doc/dovecot/wiki/Design.DoveadmProtocol.txt
 share/doc/dovecot/wiki/Design.Dsync.txt
+share/doc/dovecot/wiki/Design.Events.txt
 share/doc/dovecot/wiki/Design.Indexes.Cache.txt
 share/doc/dovecot/wiki/Design.Indexes.MailIndexApi.txt
 share/doc/dovecot/wiki/Design.Indexes.MainIndex.txt
@@ -904,6 +905,7 @@ share/doc/dovecot/wiki/Pigeonhole.Sieve.txt
 share/doc/dovecot/wiki/Pigeonhole.txt
 share/doc/dovecot/wiki/Plugins.Apparmor.txt
 share/doc/dovecot/wiki/Plugins.Autocreate.txt
+share/doc/dovecot/wiki/Plugins.CharsetAlias.txt
 share/doc/dovecot/wiki/Plugins.Compress.txt
 share/doc/dovecot/wiki/Plugins.Expire.txt
 share/doc/dovecot/wiki/Plugins.FTS.Lucene.txt
