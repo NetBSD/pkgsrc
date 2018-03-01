@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2018/03/01 23:18:00 pgoyette Exp $
-
-SHA1 (decode-dimms-20171205.tar.gz) = f367ea1e98a93202e49e9dd7e85da3fee12202dc
-RMD160 (decode-dimms-20171205.tar.gz) = 33aca0afc5b4ca83518b5bf20a3e0ca8f482ddde
-SHA512 (decode-dimms-20171205.tar.gz) = ae46746a3e269e49ae1c6a387fe099433d4adedbecc707ddc510515b13356c85f62e7f5b18ca9e10163294f87e50db9694e32d0b667241a5fbe7709a39841f7f
-Size (decode-dimms-20171205.tar.gz) = 27815 bytes
-SHA1 (patch-decode-dimms) = cdc690b20ef0e48ad68aae55e7f80fba068c7425
