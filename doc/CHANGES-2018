@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.961 2018/03/01 01:10:08 gdt Exp $
+$NetBSD: CHANGES-2018,v 1.962 2018/03/01 03:25:41 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1340,3 +1340,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/isc-dhcpd4 to 4.3.6p1 [taca 2018-03-01]
 	Updated net/isc-dhcrelay4 to 4.3.6p1 [taca 2018-03-01]
 	Updated net/quagga to 1.2.4 [gdt 2018-03-01]
+	Updated misc/libreoffice to 6.0.1.1nb1 [ryoon 2018-03-01]
