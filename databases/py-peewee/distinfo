@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2018/02/27 10:49:49 fhajny Exp $
+$NetBSD: distinfo,v 1.26 2018/03/01 11:52:59 fhajny Exp $
 
-SHA1 (peewee-3.1.0.tar.gz) = e4e40e47bf9d0e7c61bb6f6fb433c35a1896c831
-RMD160 (peewee-3.1.0.tar.gz) = 790880abc49003f800e780730259ba70cb0479e9
-SHA512 (peewee-3.1.0.tar.gz) = 628eea27d51017a6ab87aae9ae851d749b0f437fe1806957b23408ad3c97bbb93e5b84c66c5e70bfb7b55c9f29a0c517b84e65adc0f979da450987d670661e84
-Size (peewee-3.1.0.tar.gz) = 705099 bytes
+SHA1 (peewee-3.1.1.tar.gz) = 24b0bac18d01b27014d953eb6b127b3fad886934
+RMD160 (peewee-3.1.1.tar.gz) = f00a5ed3abe41b4f21c0171a9123317f8a94b59d
+SHA512 (peewee-3.1.1.tar.gz) = 8280b87e9e879ab489b02eeddc06f494fd88715c9b4dd0db34a67170745129adaad78b6987427187d9fffffb9b07d72f74e3df85871cf8ea1951d0b648dd8e10
+Size (peewee-3.1.1.tar.gz) = 711178 bytes
