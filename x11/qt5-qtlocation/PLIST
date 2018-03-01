@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/01/17 19:30:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/03/01 20:09:49 adam Exp $
 lib/pkgconfig/Qt5Positioning.pc
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/error_messages_p.h
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/locationvaluetypehelper_p.h
@@ -204,6 +204,7 @@ qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeocircle_p.h
 qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeocoordinate_p.h
 qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeolocation_p.h
 qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeopath_p.h
+qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeopositioninfo_p.h
 qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeopositioninfosource_p.h
 qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeorectangle_p.h
 qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeoshape_p.h
