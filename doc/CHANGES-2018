@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.959 2018/03/01 00:48:24 maya Exp $
+$NetBSD: CHANGES-2018,v 1.960 2018/03/01 00:54:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1335,3 +1335,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Added games/stockfish version 9 [wiz 2018-02-28]
 	Updated devel/ruby-simplecov to 0.15.1nb1 [taca 2018-03-01]
 	Updated net/quagga to 1.2.2nb2 [maya 2018-03-01]
+	Updated net/isc-dhcp4 to 4.3.6p1 [taca 2018-03-01]
+	Updated net/isc-dhclient4 to 4.3.6p1 [taca 2018-03-01]
+	Updated net/isc-dhcpd4 to 4.3.6p1 [taca 2018-03-01]
+	Updated net/isc-dhcrelay4 to 4.3.6p1 [taca 2018-03-01]
