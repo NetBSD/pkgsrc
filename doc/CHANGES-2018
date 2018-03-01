@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.958 2018/03/01 00:21:07 taca Exp $
+$NetBSD: CHANGES-2018,v 1.959 2018/03/01 00:48:24 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1334,3 +1334,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added audio/aeneas version 1.7.3 [wiz 2018-02-28]
 	Added games/stockfish version 9 [wiz 2018-02-28]
 	Updated devel/ruby-simplecov to 0.15.1nb1 [taca 2018-03-01]
+	Updated net/quagga to 1.2.2nb2 [maya 2018-03-01]
