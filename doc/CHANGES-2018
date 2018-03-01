@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.968 2018/03/01 12:16:52 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.969 2018/03/01 12:29:51 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1355,3 +1355,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/dovecot2-sqlite to 2.3.0.1 [taca 2018-03-01]
 	Updated databases/py-peewee to 3.1.1 [fhajny 2018-03-01]
 	Updated www/passenger to 5.2.1 [fhajny 2018-03-01]
+	Updated devel/libbson to 1.9.3 [fhajny 2018-03-01]
