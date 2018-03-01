@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/03 19:41:36 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/01 13:59:11 mef Exp $
 share/kicad/internat/bg/kicad.mo
 share/kicad/internat/ca/kicad.mo
 share/kicad/internat/cs/kicad.mo
@@ -16,6 +16,7 @@ share/kicad/internat/lt/kicad.mo
 share/kicad/internat/nl/kicad.mo
 share/kicad/internat/pl/kicad.mo
 share/kicad/internat/pt/kicad.mo
+share/kicad/internat/ro/kicad.mo
 share/kicad/internat/ru/kicad.mo
 share/kicad/internat/sk/kicad.mo
 share/kicad/internat/sl/kicad.mo
