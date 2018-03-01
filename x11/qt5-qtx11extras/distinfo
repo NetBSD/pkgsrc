@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/01/17 19:30:49 markd Exp $
+$NetBSD: distinfo,v 1.4 2018/03/01 20:09:51 adam Exp $
 
-SHA1 (qtx11extras-everywhere-src-5.10.0.tar.xz) = bb0c324791a0f7f7e806f81904f217c99529f393
-RMD160 (qtx11extras-everywhere-src-5.10.0.tar.xz) = 517171996bea4475061602ebe1d5753ffb2e40e2
-SHA512 (qtx11extras-everywhere-src-5.10.0.tar.xz) = 7173ca61fcff933683a13a0cf6989d49707b95befeb4920e980f90f8f8976a6dcd427d3fb87aa1d2124561b0bc80f3bfddf31fd1777f2213b5243680f1c30760
-Size (qtx11extras-everywhere-src-5.10.0.tar.xz) = 101216 bytes
+SHA1 (qtx11extras-everywhere-src-5.10.1.tar.xz) = 6f3840479053511f40ba1316fbd576fa7f017f44
+RMD160 (qtx11extras-everywhere-src-5.10.1.tar.xz) = f7600f3904b38ef3a07cb081c5cbe86f60362bbf
+SHA512 (qtx11extras-everywhere-src-5.10.1.tar.xz) = b429aa066c49d0f58f88fb774b49643eea21e41aa5ebfb03c2b4ba53c42a07bddc793a228b3a7cbf3bc57bd02879659a3ce7aeff260b77f4b8adc75a0b556778
+Size (qtx11extras-everywhere-src-5.10.1.tar.xz) = 108300 bytes
