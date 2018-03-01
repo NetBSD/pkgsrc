@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/01/17 19:30:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/03/01 20:09:49 adam Exp $
 lib/pkgconfig/Qt5Qml.pc
 lib/pkgconfig/Qt5QmlDevTools.pc
 lib/pkgconfig/Qt5Quick.pc
@@ -710,6 +710,7 @@ qt5/qml/Qt/labs/folderlistmodel/libqmlfolderlistmodelplugin.so
 qt5/qml/Qt/labs/folderlistmodel/plugins.qmltypes
 qt5/qml/Qt/labs/folderlistmodel/qmldir
 qt5/qml/Qt/labs/handlers/libhandlersplugin.so
+qt5/qml/Qt/labs/handlers/plugins.qmltypes
 qt5/qml/Qt/labs/handlers/qmldir
 qt5/qml/Qt/labs/settings/libqmlsettingsplugin.so
 qt5/qml/Qt/labs/settings/plugins.qmltypes
