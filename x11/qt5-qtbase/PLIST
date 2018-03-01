@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2018/01/18 12:39:14 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/03/01 20:09:49 adam Exp $
 lib/pkgconfig/Qt5Concurrent.pc
 lib/pkgconfig/Qt5Core.pc
 lib/pkgconfig/Qt5DBus.pc
@@ -232,6 +232,7 @@ qt5/include/QtCore/${PKGVERSION}/QtCore/private/qnoncontiguousbytedevice_p.h
 qt5/include/QtCore/${PKGVERSION}/QtCore/private/qnumeric_p.h
 qt5/include/QtCore/${PKGVERSION}/QtCore/private/qobject_p.h
 qt5/include/QtCore/${PKGVERSION}/QtCore/private/qoperatingsystemversion_p.h
+qt5/include/QtCore/${PKGVERSION}/QtCore/private/qoperatingsystemversion_win_p.h
 qt5/include/QtCore/${PKGVERSION}/QtCore/private/qorderedmutexlocker_p.h
 qt5/include/QtCore/${PKGVERSION}/QtCore/private/qparallelanimationgroup_p.h
 qt5/include/QtCore/${PKGVERSION}/QtCore/private/qpoll_p.h
@@ -2733,6 +2734,8 @@ qt5/mkspecs/devices/freebsd-rasp-pi-clang/qmake.conf
 qt5/mkspecs/devices/freebsd-rasp-pi-clang/qplatformdefs.h
 qt5/mkspecs/devices/integrity-armv8-drive-cx/qmake.conf
 qt5/mkspecs/devices/integrity-armv8-drive-cx/qplatformdefs.h
+qt5/mkspecs/devices/integrity-armv8-msm8996au/qmake.conf
+qt5/mkspecs/devices/integrity-armv8-msm8996au/qplatformdefs.h
 qt5/mkspecs/devices/linux-archos-gen8-g++/qmake.conf
 qt5/mkspecs/devices/linux-archos-gen8-g++/qplatformdefs.h
 qt5/mkspecs/devices/linux-arm-amlogic-8726M-g++/qeglfshooks_8726m.cpp
@@ -2965,6 +2968,8 @@ qt5/mkspecs/integrity-armv7-imx6/qmake.conf
 qt5/mkspecs/integrity-armv7-imx6/qplatformdefs.h
 qt5/mkspecs/integrity-armv7/qmake.conf
 qt5/mkspecs/integrity-armv7/qplatformdefs.h
+qt5/mkspecs/integrity-armv8-rcar/qmake.conf
+qt5/mkspecs/integrity-armv8-rcar/qplatformdefs.h
 qt5/mkspecs/integrity-x86/qmake.conf
 qt5/mkspecs/integrity-x86/qplatformdefs.h
 qt5/mkspecs/linux-aarch64-gnu-g++/qmake.conf
