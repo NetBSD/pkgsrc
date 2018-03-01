@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2018/02/02 16:00:33 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/03/01 11:52:59 fhajny Exp $
 bin/pwiz${PYVERSSUFFIX}
 ${PYSITELIB}/peewee.py
 ${PYSITELIB}/peewee.pyc
@@ -27,6 +27,9 @@ ${PYSITELIB}/playhouse/flask_utils.pyo
 ${PYSITELIB}/playhouse/hybrid.py
 ${PYSITELIB}/playhouse/hybrid.pyc
 ${PYSITELIB}/playhouse/hybrid.pyo
+${PYSITELIB}/playhouse/kv.py
+${PYSITELIB}/playhouse/kv.pyc
+${PYSITELIB}/playhouse/kv.pyo
 ${PYSITELIB}/playhouse/migrate.py
 ${PYSITELIB}/playhouse/migrate.pyc
 ${PYSITELIB}/playhouse/migrate.pyo
