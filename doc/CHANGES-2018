@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.971 2018/03/01 14:00:39 mef Exp $
+$NetBSD: CHANGES-2018,v 1.972 2018/03/01 20:10:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1358,3 +1358,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/libbson to 1.9.3 [fhajny 2018-03-01]
 	Updated databases/mongo-c-driver to 1.9.3 [fhajny 2018-03-01]
 	Updated cad/kicad to 4.0.7 [mef 2018-03-01]
+	Updated x11/qt5 to 5.10.1 [adam 2018-03-01]
