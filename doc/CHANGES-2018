@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.966 2018/03/01 11:15:41 taca Exp $
+$NetBSD: CHANGES-2018,v 1.967 2018/03/01 11:53:08 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1353,3 +1353,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/dovecot2-mysql to 2.3.0.1 [taca 2018-03-01]
 	Updated mail/dovecot2-pgsql to 2.3.0.1 [taca 2018-03-01]
 	Updated mail/dovecot2-sqlite to 2.3.0.1 [taca 2018-03-01]
+	Updated databases/py-peewee to 3.1.1 [fhajny 2018-03-01]
