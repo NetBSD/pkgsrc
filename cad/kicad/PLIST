@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/02/03 19:34:33 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/03/01 13:59:11 mef Exp $
 bin/_cvpcb.kiface
 bin/_eeschema.kiface
 bin/_gerbview.kiface
@@ -16,9 +16,17 @@ bin/kicad
 bin/pcb_calculator
 bin/pcbnew
 bin/pl_editor
+lib/kicad/plugins/README-bom.txt
 lib/kicad/plugins/bom2csv.xsl
-lib/kicad/plugins/bom_cvs.xsl
+lib/kicad/plugins/bom2grouped_csv.xsl
+lib/kicad/plugins/bom_csv_grouped_by_value.py
+lib/kicad/plugins/bom_csv_grouped_by_value_with_fp.py
+lib/kicad/plugins/bom_csv_sorted_by_ref.py
+lib/kicad/plugins/bom_html_grouped_by_value.py
+lib/kicad/plugins/bom_html_with_advanced_grouping.py
+lib/kicad/plugins/bom_sorted_by_ref.py
 lib/kicad/plugins/bom_with_title_block_2_csv.xsl
+lib/kicad/plugins/kicad_netlist_reader.py
 lib/kicad/plugins/netlist_form_OrcadPcb2.xsl
 lib/kicad/plugins/netlist_form_cadstar-RINF.xsl
 lib/kicad/plugins/netlist_form_cadstar.xsl
@@ -31,17 +39,6 @@ share/applications/kicad.desktop
 share/applications/pcbcalculator.desktop
 share/applications/pcbnew.desktop
 share/doc/kicad/INSTALL.txt
-share/doc/kicad/scripts/bom-in-python/README-bom.txt
-share/doc/kicad/scripts/bom-in-python/bom_csv_grouped_by_value.py
-share/doc/kicad/scripts/bom-in-python/bom_csv_grouped_by_value_with_fp.py
-share/doc/kicad/scripts/bom-in-python/bom_csv_sorted_by_ref.py
-share/doc/kicad/scripts/bom-in-python/bom_html_by_value.py
-share/doc/kicad/scripts/bom-in-python/bom_html_grouped_by_value.py
-share/doc/kicad/scripts/bom-in-python/bom_html_with_advanced_grouping.py
-share/doc/kicad/scripts/bom-in-python/bom_sorted_by_ref.py
-share/doc/kicad/scripts/bom-in-python/kicad_netlist_reader.py
-share/doc/kicad/scripts/bom-in-python/round_robin.py
-share/doc/kicad/scripts/bom-in-python/round_value_robin.py
 share/doc/kicad/scripts/kicad-install.sh
 share/doc/kicad/scripts/lib_convert.py
 share/doc/kicad/scripts/library-repos-install.bat
