@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.750 2018/03/01 22:46:38 pgoyette Exp $
+# $NetBSD: Makefile,v 1.751 2018/03/01 23:47:24 pgoyette Exp $
 #
 
 COMMENT=	System utilities
@@ -109,7 +109,6 @@ SUBDIR+=	dc-tools
 SUBDIR+=	dd_rescue
 SUBDIR+=	dd_rhelp
 SUBDIR+=	ddrescue
-SUBDIR+=	decode-dimms
 SUBDIR+=	deforaos-browser
 SUBDIR+=	deforaos-terminal
 SUBDIR+=	depot
