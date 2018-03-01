@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2017/10/07 07:31:14 adam Exp $
+# $NetBSD: Makefile,v 1.11 2018/03/01 08:10:35 adam Exp $
 
-DISTNAME=	python-creole-1.3.1
+DISTNAME=	python-creole-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-creole/}
