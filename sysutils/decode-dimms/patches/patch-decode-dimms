@@ -1,0 +1,155 @@
+$NetBSD: patch-decode-dimms,v 1.1 2018/03/01 22:45:58 pgoyette Exp $
+
+Patch to implement retrieval of SPD ROM data via 'sysctl -r'
+
+--- decode-dimms.orig	2018-03-01 18:27:01.171106176 +0800
++++ decode-dimms	2018-03-01 18:25:39.257853992 +0800
+@@ -40,12 +40,13 @@
+ use strict;
+ use POSIX qw(ceil);
+ use Fcntl qw(:DEFAULT :seek);
+ use File::Basename;
+ use vars qw($opt_html $opt_bodyonly $opt_side_by_side $opt_merge
+-	    $opt_igncheck $use_sysfs $use_hexdump $sbs_col_width
+-	    @vendors %decode_callback $revision @dimm $current %hexdump_cache);
++	    $opt_igncheck $use_sysfs $use_hexdump $use_sysctl $sbs_col_width
++	    @vendors %decode_callback $revision @dimm $current %hexdump_cache
++	    %sysctl_cache);
+ 
+ use constant LITTLEENDIAN	=> "little-endian";
+ use constant BIGENDIAN		=> "big-endian";
+ 
+ $revision = '$Revision: 1.1 $ ($Date: 2018/03/01 22:45:58 $)';
+@@ -339,10 +340,11 @@
+  "Foxtronn International Corporation", "Bretelon Inc.",
+  "Zbit Semiconductor Inc."]
+ );
+ 
+ $use_sysfs = -d '/sys/bus';
++$use_sysctl = 0;
+ 
+ # We consider that no data was written to this area of the SPD EEPROM if
+ # all bytes read 0x00 or all bytes read 0xff
+ sub spd_written(@)
+ {
+@@ -2250,19 +2252,42 @@
+ 
+ 		return ($size, ($bytes->[0] < 64) ? 64 : $bytes->[0]);
+ 	}
+ }
+ 
++# read data from a NetBSD (or equivalent) sysctl variable
++
++sub read_sysctl($)
++{
++
++	# Look in the cache first
++	return @{$sysctl_cache{$_[0]}} if exists $sysctl_cache{$_[0]};
++
++	my $sysctl_var = sprintf("hw.%s.spd_data", $_[0]);
++	open(PIPE, "-|", "sysctl -r $sysctl_var")
++		or die "Cannot read sysctl variable $sysctl_var";
++	sysread(PIPE, my $eeprom, 512); # XXX Assumed maximum size! XXX
++	close PIPE or die "sysctl returned $?";
++	my @bytes = unpack("C*", $eeprom);
++
++	# Cache the data for later use
++	$hexdump_cache{$_[0]} = \@bytes;
++	return @bytes;
++}
++
+ # Read bytes from SPD-EEPROM
+ # Note: offset must be a multiple of 16!
+ sub readspd($$$)
+ {
+ 	my ($offset, $size, $dimm_i) = @_;
+ 	my @bytes;
+ 	if ($use_hexdump) {
+ 		@bytes = read_hexdump($dimm_i);
+ 		return @bytes[$offset..($offset + $size - 1)];
++	} elsif ($use_sysctl) {
++		@bytes = read_sysctl($dimm_i);
++		return @bytes[$offset..($offset + $size - 1)];
+ 	} elsif ($use_sysfs) {
+ 		# Kernel 2.6 with sysfs
+ 		sysopen(HANDLE, "$dimm_i/eeprom", O_RDONLY)
+ 			or die "Cannot open $dimm_i/eeprom";
+ 		binmode HANDLE;
+@@ -2335,11 +2360,11 @@
+ }
+ 
+ # Parse command-line
+ foreach (@ARGV) {
+ 	if ($_ eq '-h' || $_ eq '--help') {
+-		print "Usage: $0 [-c] [-f [-b]] [-x|-X file [files..]]\n",
++		print "Usage: $0 [-c] [-f [-b]] [-x|-X|-s file [files..]]\n",
+ 			"       $0 -h\n\n",
+ 			"  -f, --format            Print nice html output\n",
+ 			"  -b, --bodyonly          Don't print html header\n",
+ 			"                          (useful for postprocessing the output)\n",
+ 			"      --side-by-side      Display all DIMMs side-by-side if possible\n",
+@@ -2349,10 +2374,12 @@
+ 			"                          (side-by-side output only)\n",
+ 			"  -c, --checksum          Decode completely even if checksum fails\n",
+ 			"  -x,                     Read data from hexdump files\n",
+ 			"  -X,                     Same as -x except treat multibyte hex\n",
+ 			"                          data as little endian\n",
++			"  -s,                     Use NetBSD-compatible sysctl(8) to obtain\n",
++			"                          EEPROM data\n",
+ 			"  -h, --help              Display this usage summary\n";
+ 		print <<"EOF";
+ 
+ Hexdumps can be the output from hexdump, hexdump -C, i2cdump, eeprog and
+ likely many other progams producing hex dumps of one kind or another.  Note
+@@ -2393,17 +2420,24 @@
+ 	}
+ 	if ($_ eq '-X') {
+ 		$use_hexdump = LITTLEENDIAN;
+ 		next;
+ 	}
++	if ($_ eq '-s') {
++		if (-x "/sbin/sysctl") {
++			$use_sysctl = 1;
++		} else { die "No /sbin/sysctl available for -s"; }
++		next;
++	}
+ 
+ 	if (m/^-/) {
+ 		print STDERR "Unrecognized option $_\n";
+ 		exit;
+ 	}
+ 
+-	push @dimm, { eeprom => basename($_), file => $_ } if $use_hexdump;
++	push @dimm, { eeprom => basename($_), file => $_ }
++		if ($use_sysctl || $use_hexdump);
+ }
+ 
+ # Default values
+ $opt_merge = 1 unless defined $opt_merge;
+ 
+@@ -2477,11 +2511,11 @@
+ #  * chk_label: The label to display for the checksum or CRC
+ #  * chk_valid: Whether the checksum or CRC is valid or not (boolean)
+ #  * chk_spd: The checksum or CRC value found in the EEPROM
+ #  * chk_calc: The checksum or CRC computed from the EEPROM data
+ # Keys are added over time.
+-@dimm = get_dimm_list() unless $use_hexdump;
++@dimm = get_dimm_list() unless ($use_sysctl || $use_hexdump);
+ 
+ for my $i (0 .. $#dimm) {
+ 	my @bytes = readspd(0, 128, $dimm[$i]->{file});
+ 	$dimm[$i]->{bytes} = \@bytes;
+ 	$dimm[$i]->{is_rambus} = $bytes[0] < 4;		# Simple heuristic
+@@ -2529,11 +2563,11 @@
+ 
+ 	if ($opt_side_by_side) {
+ 		printl("Decoding EEPROM", $dimm[$current]->{eeprom});
+ 	}
+ 
+-	if (!$use_hexdump) {
++	if (!$use_hexdump && !$use_sysctl) {
+ 		if ($dimm[$current]->{file} =~ /-([\da-f]+)$/i) {
+ 			my $dimm_num = hex($1) - 0x50 + 1;
+ 			if ($dimm_num >= 1 && $dimm_num <= 8) {
+ 				printl("Guessing DIMM is in", "bank $dimm_num");
+ 			}
