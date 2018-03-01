@@ -1,4 +1,6 @@
-$NetBSD: patch-testing_cffi1_test__verify1.py,v 1.1 2017/07/03 18:17:45 joerg Exp $
+$NetBSD: patch-testing_cffi1_test__verify1.py,v 1.2 2018/03/01 07:59:54 adam Exp $
+
+Add NetBSD support.
 
 --- testing/cffi1/test_verify1.py.orig	2017-07-03 17:44:21.313824096 +0000
 +++ testing/cffi1/test_verify1.py
