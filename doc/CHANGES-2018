@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.960 2018/03/01 00:54:29 taca Exp $
+$NetBSD: CHANGES-2018,v 1.961 2018/03/01 01:10:08 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1339,3 +1339,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/isc-dhclient4 to 4.3.6p1 [taca 2018-03-01]
 	Updated net/isc-dhcpd4 to 4.3.6p1 [taca 2018-03-01]
 	Updated net/isc-dhcrelay4 to 4.3.6p1 [taca 2018-03-01]
+	Updated net/quagga to 1.2.4 [gdt 2018-03-01]
