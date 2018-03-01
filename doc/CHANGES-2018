@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.957 2018/02/28 22:21:29 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.958 2018/03/01 00:21:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1333,3 +1333,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/espeak to 1.31nb1 [wiz 2018-02-28]
 	Added audio/aeneas version 1.7.3 [wiz 2018-02-28]
 	Added games/stockfish version 9 [wiz 2018-02-28]
+	Updated devel/ruby-simplecov to 0.15.1nb1 [taca 2018-03-01]
