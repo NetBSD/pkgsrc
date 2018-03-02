@@ -1,0 +1,3 @@
+This package provides a collection of functions to valuate basic
+options. This includes the generalized Black-Scholes option, options
+on futures and options on commodity futures.
