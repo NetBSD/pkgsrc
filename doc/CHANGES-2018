@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.984 2018/03/02 15:11:48 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.985 2018/03/02 15:14:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1379,3 +1379,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/libXfont to 1.5.4nb1 [wiz 2018-03-02]
 	Updated x11/libXfont2 to 2.0.3nb1 [wiz 2018-03-02]
 	Removed fonts/libXfontcache [wiz 2018-03-02]
+	Updated pkgtools/x11-links to 1.07 [wiz 2018-03-02]
