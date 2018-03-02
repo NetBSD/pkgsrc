@@ -1,8 +1,27 @@
-@comment $NetBSD: PLIST,v 1.4 2017/09/04 15:23:49 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/03/02 16:26:21 fhajny Exp $
 include/opencv2/face.hpp
 include/opencv2/face/bif.hpp
+include/opencv2/face/face_alignment.hpp
+include/opencv2/face/facemark.hpp
+include/opencv2/face/facemarkAAM.hpp
+include/opencv2/face/facemarkLBF.hpp
 include/opencv2/face/facerec.hpp
 include/opencv2/face/predict_collector.hpp
+include/opencv2/plot.hpp
+include/opencv2/tracking.hpp
+include/opencv2/tracking/feature.hpp
+include/opencv2/tracking/kalman_filters.hpp
+include/opencv2/tracking/onlineBoosting.hpp
+include/opencv2/tracking/onlineMIL.hpp
+include/opencv2/tracking/tldDataset.hpp
+include/opencv2/tracking/tracker.hpp
+include/opencv2/tracking/tracking.hpp
 lib/libopencv_face.so
-lib/libopencv_face.so.3.3
+lib/libopencv_face.so.3.4
 lib/libopencv_face.so.${PKGVERSION}
+lib/libopencv_plot.so
+lib/libopencv_plot.so.3.4
+lib/libopencv_plot.so.${PKGVERSION}
+lib/libopencv_tracking.so
+lib/libopencv_tracking.so.3.4
+lib/libopencv_tracking.so.${PKGVERSION}

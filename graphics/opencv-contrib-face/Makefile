@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2017/09/30 07:46:40 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2018/03/02 16:26:21 fhajny Exp $
 
-DISTNAME=	opencv_contrib-3.3.0
+DISTNAME=	opencv_contrib-3.4.1
 PKGNAME=	${DISTNAME:S/_contrib/-contrib-face/}
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Itseez/}
@@ -29,7 +29,7 @@ SUBST_MESSAGE.tnn=	Disabling build-time fetch
 SUBST_STAGE.tnn=	pre-configure
 SUBST_SED.tnn=		-e 's,3.2,999,'
 
-INSTALL_DIRS=	build/modules/face
+INSTALL_DIRS=	build/modules/face build/modules/plot build/modules/tracking
 
 WRKSRC=		${WRKDIR}/opencv-${PKGVERSION_NOREV}/
 
@@ -63,15 +63,12 @@ CMAKE_ARGS+=		-DBUILD_opencv_rgbd=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_saliency=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_surface_matching=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_text=OFF
-CMAKE_ARGS+=		-DBUILD_opencv_tracking=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_xfeatures2d=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_ximgproc=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_xobjdetect=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_xphoto=OFF
 
 CMAKE_ARGS+=		-DBUILD_opencv_flann=OFF
-CMAKE_ARGS+=		-DBUILD_opencv_photo=OFF
-CMAKE_ARGS+=		-DBUILD_opencv_video=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_videoio=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_highgui=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_superres=OFF
@@ -81,6 +78,14 @@ CMAKE_ARGS+=		-DBUILD_opencv_calib3d=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_stitching=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_videostab=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_python2=OFF
+
+# At least as of 3.4.1, these are dependencies of the 'face' module
+# and need to be built and installed ('photo' and 'video' are
+# part of the main opencv package already
+#CMAKE_ARGS+=		-DBUILD_opencv_photo=OFF
+#CMAKE_ARGS+=		-DBUILD_opencv_plot=OFF
+#CMAKE_ARGS+=		-DBUILD_opencv_tracking=OFF
+#CMAKE_ARGS+=		-DBUILD_opencv_video=OFF
 
 CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
