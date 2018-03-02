@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.988 2018/03/02 16:16:38 joerg Exp $
+$NetBSD: CHANGES-2018,v 1.989 2018/03/02 16:24:33 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1383,3 +1383,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed x11/fontcacheproto [wiz 2018-03-02]
 	Added devel/py-Pympler version 0.5 [joerg 2018-03-02]
 	Added www/ap-uwsgi version 2.0.16 [joerg 2018-03-02]
+	Updated graphics/opencv to 3.4.1 [fhajny 2018-03-02]
