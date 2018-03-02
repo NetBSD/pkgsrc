@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.15 2018/02/24 22:45:53 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.16 2018/03/02 21:26:41 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
 
@@ -122,4 +122,30 @@ print/py-reportlab: build fix
 
 Pullup ticket #5702 - requested by khorben and leot
 multimedia/mpv: security update
+
+Pullup ticket #5706 - requested by taca
+lang/ruby23-base: security patch
+
+Pullup ticket #5707 - requested by taca
+lang/ruby24-base: security patch
+
+Pullup ticket #5708 - requested by taca
+lang/ruby22-base: security patch
+
+Pullup ticket #5709 - requested by taca
+databases/unixodbc: security update
+
+Pullup ticket #5710 - requested by taca
+www/drupal8: security update
+
+Pullup ticket #5711 - requested by taca
+www/drupal7: security update
+
+Pullup ticket #5712 - requested by taca
+net/isc-dhcp4: security update
+
+Pullup ticket #5713 - requested by taca
+mail/dovecot2-ldap: security update
+mail/dovecot2-sqlite: security update
+mail/dovecot2: security update
 
