@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/09/09 23:40:08 gdt Exp $
+# $NetBSD: Makefile,v 1.18 2018/03/02 01:19:25 gdt Exp $
 
 VERSION=		1.9.4
 PKGNAMEBASE=		pyproj
@@ -6,7 +6,7 @@ DISTNAME=		v${VERSION}rel
 DIST_SUBDIR=		pyproj
 EGG_NAME=		${PKGNAMEBASE}-${VERSION}
 PKGNAME=		${PYPKGPREFIX}-${PKGNAMEBASE:S/pyproj/proj/}-${VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_GITHUB:=jswhit/pyproj/archive/}
 

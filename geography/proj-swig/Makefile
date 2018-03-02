@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2017/09/09 23:52:28 dholland Exp $
+# $NetBSD: Makefile,v 1.29 2018/03/02 01:19:24 gdt Exp $
 
 DISTNAME=		proj-swig-0.02
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		geography
 MASTER_SITES=		# http://acert.ir.bbn.com/downloads/acert-geospatial/
 
