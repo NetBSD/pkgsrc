@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/11/04 14:30:39 wen Exp $
+$NetBSD: distinfo,v 1.1.2.1 2018/03/02 21:23:28 spz Exp $
 
-SHA1 (drupal-8.4.2.tar.gz) = e20fa3ef98e220837b656d9e04ae0ce719e1d507
-RMD160 (drupal-8.4.2.tar.gz) = b0bf4ac797669a7145701a565f5bdb49cc3c28f9
-SHA512 (drupal-8.4.2.tar.gz) = ce4ba105c253669ed18656d50a172d2f0622b1be121895486b2df00dfda0f71c497277cbc3e3a7a9fb426b9fb0828bfcf7ede3ff134304ca136ed689d4f15582
-Size (drupal-8.4.2.tar.gz) = 13393043 bytes
+SHA1 (drupal-8.4.5.tar.gz) = 8d5f7e055f86bf57d40f5c6eaf78acf352500446
+RMD160 (drupal-8.4.5.tar.gz) = f8761e8188acce152c2502cd5d057acd5bb62ba3
+SHA512 (drupal-8.4.5.tar.gz) = 105a6bce140b1f5965d42f46df4a8fa0f8802ae6b4efde5c095004f51beebe5f1c4d3064e3363f59f9a15f739ea598b2e9a03304630731113777b3639b3440d2
+Size (drupal-8.4.5.tar.gz) = 13414036 bytes
