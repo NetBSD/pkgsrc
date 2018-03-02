@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2017/10/07 11:20:50 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/03/02 14:25:18 adam Exp $
 
-DISTNAME=	serpent-1.23
+DISTNAME=	serpent-1.24
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/serpent/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/serpent
+HOMEPAGE=	https://github.com/irmen/Serpent
 COMMENT=	Simple serialization library
 LICENSE=	mit
 
