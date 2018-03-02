@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2018/02/18 12:12:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2018/03/02 05:59:18 triaxx Exp $
 
 DISTNAME=	rustc-1.24.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -107,6 +107,18 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 #DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
 #RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}
 #.endif
+.if !empty(MACHINE_PLATFORM:MFreeBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
+RUST_ARCH:=		i686-unknown-freebsd
+RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
+.endif
+.if !empty(MACHINE_PLATFORM:MFreeBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+RUST_ARCH:=		x86_64-unknown-freebsd
+RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
+.endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=		i686-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -163,6 +175,10 @@ post-extract:
 .if ${OPSYS} != "SunOS"
 LD_LIBRARY_PATH=	${RUST_BOOTSTRAP_PATH}/lib
 PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH:Q}
+.endif
+
+.if ${OPSYS} == "FreeBSD"
+MAKE_ENV+=		OPENSSL_DIR=${SSLBASE}
 .endif
 
 do-build:
