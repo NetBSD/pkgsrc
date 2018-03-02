@@ -1,0 +1,3 @@
+Provides functions for pricing and valuating Asian Options together
+with tools for analyzing and modeling Exponential Brownian Motion
+(EBM).
