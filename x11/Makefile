@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.816 2018/02/11 20:16:07 wiz Exp $
+# $NetBSD: Makefile,v 1.817 2018/03/02 15:15:50 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -66,7 +66,6 @@ SUBDIR+=	fixesproto4
 SUBDIR+=	fltk
 SUBDIR+=	fltk13
 SUBDIR+=	fltk2
-SUBDIR+=	fontcacheproto
 SUBDIR+=	fontsproto
 SUBDIR+=	fox
 SUBDIR+=	frameworkintegration
