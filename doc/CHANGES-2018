@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.994 2018/03/02 19:04:22 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.995 2018/03/02 19:20:28 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1393,3 +1393,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added finance/R-fOptions version 3042.86 [minskim 2018-03-02]
 	Added finance/R-fAsianOptions version 3042.82 [minskim 2018-03-02]
 	Added math/R-prob version 1.0.0 [minskim 2018-03-02]
+	Updated www/ikiwiki to 3.20180228 [schmonz 2018-03-02]
