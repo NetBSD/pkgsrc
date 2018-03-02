@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.977 2018/03/02 10:29:09 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.978 2018/03/02 11:23:46 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1364,3 +1364,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated geography/proj to 5.0.0 [gdt 2018-03-02]
 	Updated devel/SDL2 to 2.0.8 [adam 2018-03-02]
 	Updated devel/gradle to 4.6 [fhajny 2018-03-02]
+	Updated lang/nodejs to 9.7.1 [fhajny 2018-03-02]
