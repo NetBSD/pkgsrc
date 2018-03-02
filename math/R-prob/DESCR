@@ -1,0 +1,8 @@
+A framework for performing elementary probability calculations on
+finite sample spaces, which may be represented by data frames or
+lists.  Functionality includes setting up sample spaces, counting
+tools, defining probability spaces, performing set algebra,
+calculating probability and conditional probability, tools for
+simulation and checking the law of large numbers, adding random
+variables, and finding marginal distributions.  Characteristic
+functions for all base R distributions are included.
