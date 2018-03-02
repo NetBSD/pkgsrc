@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2018/01/08 14:04:18 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.49 2018/03/02 19:20:20 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
 bin/ikiwiki-comment
@@ -674,4 +674,3 @@ share/locale/pl/LC_MESSAGES/ikiwiki.mo
 share/locale/sv/LC_MESSAGES/ikiwiki.mo
 share/locale/tr/LC_MESSAGES/ikiwiki.mo
 share/locale/vi/LC_MESSAGES/ikiwiki.mo
-
