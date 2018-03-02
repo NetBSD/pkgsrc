@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.976 2018/03/02 08:13:45 adam Exp $
+$NetBSD: CHANGES-2018,v 1.977 2018/03/02 10:29:09 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1363,3 +1363,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xkbcomp to 1.4.1 [wiz 2018-03-01]
 	Updated geography/proj to 5.0.0 [gdt 2018-03-02]
 	Updated devel/SDL2 to 2.0.8 [adam 2018-03-02]
+	Updated devel/gradle to 4.6 [fhajny 2018-03-02]
