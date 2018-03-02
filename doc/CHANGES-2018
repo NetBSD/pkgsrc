@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.981 2018/03/02 15:03:27 adam Exp $
+$NetBSD: CHANGES-2018,v 1.982 2018/03/02 15:09:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1376,3 +1376,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-boto3 to 1.6.3 [adam 2018-03-02]
 	Updated net/py-awscli to 1.14.50 [adam 2018-03-02]
 	Updated devel/py-multipledispatch to 0.5.0 [adam 2018-03-02]
+	Updated x11/libXfont to 1.5.4nb1 [wiz 2018-03-02]
