@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/02/22 09:49:46 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/03/02 11:39:17 adam Exp $
 
-SHA1 (pytest-mock-1.7.0.tar.gz) = 55490feb5a6efb7eb4d1d05ed155d21c7b25e1e4
-RMD160 (pytest-mock-1.7.0.tar.gz) = 28f1c08e9725642f6b0232a5f469faacf3f47a48
-SHA512 (pytest-mock-1.7.0.tar.gz) = 519505d862151158caa2514804fbaab1c61fe279bf5a1c11c0d6fe6ad6d5b1217f32ec5d1ecf35224e2cb7cc62c5fc9975f47325b274cda9748686447abebbf6
-Size (pytest-mock-1.7.0.tar.gz) = 20107 bytes
-SHA1 (patch-setup.py) = 6ca411e93e1268e242393852db784abcfab4bb82
+SHA1 (pytest-mock-1.7.1.tar.gz) = dc38f19f8ce4d6131c2e77aa1a1939c2e690ab4e
+RMD160 (pytest-mock-1.7.1.tar.gz) = e08b492c13931e3019af631676bc3ac568ff9b51
+SHA512 (pytest-mock-1.7.1.tar.gz) = d2bd343b5587636f76cf053cfaf629cc53c7505f3e7ec0c2a6d1215d1d9ac3c7efc64150f49d82c25892601947a3b9ff640353ea9b6a1741ae1b04b9a81647e3
+Size (pytest-mock-1.7.1.tar.gz) = 20176 bytes
