@@ -1,4 +1,4 @@
-# $NetBSD: pkgconfig-builtin.mk,v 1.5 2009/07/11 07:56:25 rillig Exp $
+# $NetBSD: pkgconfig-builtin.mk,v 1.6 2018/03/02 15:15:10 wiz Exp $
 
 # This file is used to factor out a common pattern in builtin.mk files
 # backed up by the existence of a pkgconfig file.
@@ -12,7 +12,7 @@
 #	The absolute path where the pkgconfig file of the native
 #	implementation of the package is stored.
 #
-#	Example: ${X11BASE}/lib/pkgconfig/fontcacheproto.pc
+#	Example: ${X11BASE}/lib/pkgconfig/present.pc
 #
 # PKGCONFIG_BASE.<BUILTIN_PKG> (optional)
 #	The base location for a native implementation of the package.
