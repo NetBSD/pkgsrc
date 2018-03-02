@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/07/18 15:03:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.1.14.1 2018/03/02 21:24:18 spz Exp $
 #
 
 .include "../../mail/dovecot2/Makefile.plugin"
@@ -20,7 +20,7 @@ do-install:
 			src/lib-ldap/libdovecot-ldap.la \
 			${DESTDIR}${PREFIX}/lib/dovecot; \
 		${LIBTOOL} --mode=install ${INSTALL_LIB} \
-			src/plugins/dict-ldap/libdict_ldap.la \
+			src/lib-dict-backend/libdict_ldap.la \
 			${DESTDIR}${PREFIX}/lib/dovecot/dict; \
 	)
 	${INSTALL_DATA} ${WRKSRC}/src/lib-ldap/ldap-client.h \
