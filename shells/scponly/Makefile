@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.16 2017/09/04 18:01:01 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2018/03/02 09:02:52 sborrill Exp $
 
 DISTNAME=	scponly-4.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	shells security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scponly/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	snj@NetBSD.org
+MAINTAINER=	sborrill@NetBSD.org
 #HOMEPAGE=	http://sublimation.org/scponly/wiki/
 COMMENT=	Shell that only permits sftp
 
@@ -29,6 +29,8 @@ CONFIGURE_ENV+=		PROG_RM=${TOOLS_RM:Q}
 CONFIGURE_ENV+=		scponly_PROG_RM=${TOOLS_RM:Q}
 CONFIGURE_ENV+=		scponly_PROG_RMDIR=${TOOLS_RMDIR:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--enable-scp-compat
+
 PKG_SHELL=		bin/scponly
 PKG_SYSCONFSUBDIR=	scponly
 
