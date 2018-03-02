@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.993 2018/03/02 18:49:10 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.994 2018/03/02 19:04:22 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1392,3 +1392,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/postgresql10 to 10.3 [adam 2018-03-02]
 	Added finance/R-fOptions version 3042.86 [minskim 2018-03-02]
 	Added finance/R-fAsianOptions version 3042.82 [minskim 2018-03-02]
+	Added math/R-prob version 1.0.0 [minskim 2018-03-02]
