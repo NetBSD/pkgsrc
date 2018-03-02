@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2015/09/13 23:22:23 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/03/02 00:53:24 gdt Exp $
+bin/cct
 bin/cs2cs
 bin/geod
+bin/gie
 bin/invgeod
 bin/invproj
 bin/nad2bin
@@ -8,25 +10,33 @@ bin/proj
 include/geodesic.h
 include/org_proj4_PJ.h
 include/org_proj4_Projections.h
+include/proj.h
 include/proj_api.h
 include/projects.h
 lib/libproj.la
 lib/pkgconfig/proj.pc
+man/man1/cct.1
 man/man1/cs2cs.1
 man/man1/geod.1
+man/man1/gie.1
 man/man1/proj.1
 man/man3/geodesic.3
 man/man3/pj_init.3
+share/proj/BETA2007.gsb
 share/proj/CH
 share/proj/FL
 share/proj/GL27
 share/proj/IGNF
+share/proj/ITRF2000
+share/proj/ITRF2008
+share/proj/ITRF2014
 share/proj/MD
 share/proj/TN
 share/proj/WI
 share/proj/WO
 share/proj/alaska
 share/proj/conus
+share/proj/egm96_15.gtx
 share/proj/epsg
 share/proj/esri
 share/proj/esri.extra
