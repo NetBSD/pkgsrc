@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/02/08 20:53:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/03/02 17:11:12 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createuser
@@ -323,6 +323,7 @@ include/postgresql/server/executor/tablefunc.h
 include/postgresql/server/executor/tqueue.h
 include/postgresql/server/executor/tstoreReceiver.h
 include/postgresql/server/executor/tuptable.h
+include/postgresql/server/fe_utils/connect.h
 include/postgresql/server/fe_utils/mbprint.h
 include/postgresql/server/fe_utils/print.h
 include/postgresql/server/fe_utils/psqlscan.h
@@ -786,6 +787,7 @@ share/locale/es/LC_MESSAGES/pg_resetwal-10.mo
 share/locale/es/LC_MESSAGES/pg_rewind-10.mo
 share/locale/es/LC_MESSAGES/pg_test_fsync-10.mo
 share/locale/es/LC_MESSAGES/pg_test_timing-10.mo
+share/locale/es/LC_MESSAGES/pg_waldump-10.mo
 share/locale/es/LC_MESSAGES/pgscripts-10.mo
 share/locale/es/LC_MESSAGES/psql-10.mo
 share/locale/fr/LC_MESSAGES/ecpg-10.mo
@@ -830,13 +832,20 @@ share/locale/ja/LC_MESSAGES/ecpg-10.mo
 share/locale/ja/LC_MESSAGES/ecpglib6-10.mo
 share/locale/ja/LC_MESSAGES/initdb-10.mo
 share/locale/ja/LC_MESSAGES/libpq5-10.mo
+share/locale/ja/LC_MESSAGES/pg_archivecleanup-10.mo
+share/locale/ja/LC_MESSAGES/pg_basebackup-10.mo
 share/locale/ja/LC_MESSAGES/pg_config-10.mo
 share/locale/ja/LC_MESSAGES/pg_controldata-10.mo
 share/locale/ja/LC_MESSAGES/pg_ctl-10.mo
 share/locale/ja/LC_MESSAGES/pg_dump-10.mo
 share/locale/ja/LC_MESSAGES/pg_resetwal-10.mo
 share/locale/ja/LC_MESSAGES/pg_rewind-10.mo
+share/locale/ja/LC_MESSAGES/pg_test_fsync-10.mo
+share/locale/ja/LC_MESSAGES/pg_test_timing-10.mo
+share/locale/ja/LC_MESSAGES/pg_upgrade-10.mo
+share/locale/ja/LC_MESSAGES/pg_waldump-10.mo
 share/locale/ja/LC_MESSAGES/pgscripts-10.mo
+share/locale/ja/LC_MESSAGES/psql-10.mo
 share/locale/ko/LC_MESSAGES/ecpg-10.mo
 share/locale/ko/LC_MESSAGES/ecpglib6-10.mo
 share/locale/ko/LC_MESSAGES/initdb-10.mo
@@ -924,14 +933,21 @@ share/locale/sv/LC_MESSAGES/psql-10.mo
 share/locale/ta/LC_MESSAGES/pg_config-10.mo
 share/locale/tr/LC_MESSAGES/ecpg-10.mo
 share/locale/tr/LC_MESSAGES/ecpglib6-10.mo
+share/locale/tr/LC_MESSAGES/initdb-10.mo
 share/locale/tr/LC_MESSAGES/libpq5-10.mo
 share/locale/tr/LC_MESSAGES/pg_archivecleanup-10.mo
 share/locale/tr/LC_MESSAGES/pg_basebackup-10.mo
 share/locale/tr/LC_MESSAGES/pg_config-10.mo
+share/locale/tr/LC_MESSAGES/pg_controldata-10.mo
+share/locale/tr/LC_MESSAGES/pg_ctl-10.mo
 share/locale/tr/LC_MESSAGES/pg_dump-10.mo
+share/locale/tr/LC_MESSAGES/pg_resetwal-10.mo
+share/locale/tr/LC_MESSAGES/pg_rewind-10.mo
 share/locale/tr/LC_MESSAGES/pg_test_fsync-10.mo
+share/locale/tr/LC_MESSAGES/pg_test_timing-10.mo
 share/locale/tr/LC_MESSAGES/pg_upgrade-10.mo
 share/locale/tr/LC_MESSAGES/pg_waldump-10.mo
+share/locale/tr/LC_MESSAGES/pgscripts-10.mo
 share/locale/zh_CN/LC_MESSAGES/ecpg-10.mo
 share/locale/zh_CN/LC_MESSAGES/ecpglib6-10.mo
 share/locale/zh_CN/LC_MESSAGES/initdb-10.mo
