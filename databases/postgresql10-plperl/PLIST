@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/23 20:33:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/02 17:11:12 adam Exp $
 include/postgresql/server/plperl.h
 include/postgresql/server/ppport.h
 lib/postgresql/plperl.so
@@ -14,6 +14,7 @@ share/locale/pt_BR/LC_MESSAGES/plperl-10.mo
 share/locale/ro/LC_MESSAGES/plperl-10.mo
 share/locale/ru/LC_MESSAGES/plperl-10.mo
 share/locale/sv/LC_MESSAGES/plperl-10.mo
+share/locale/tr/LC_MESSAGES/plperl-10.mo
 share/locale/zh_CN/LC_MESSAGES/plperl-10.mo
 share/postgresql/extension/plperl--1.0.sql
 share/postgresql/extension/plperl--unpackaged--1.0.sql
