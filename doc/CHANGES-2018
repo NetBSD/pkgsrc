@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.989 2018/03/02 16:24:33 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.990 2018/03/02 16:27:54 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1384,3 +1384,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-Pympler version 0.5 [joerg 2018-03-02]
 	Added www/ap-uwsgi version 2.0.16 [joerg 2018-03-02]
 	Updated graphics/opencv to 3.4.1 [fhajny 2018-03-02]
+	Updated graphics/opencv-contrib-face to 3.4.1 [fhajny 2018-03-02]
