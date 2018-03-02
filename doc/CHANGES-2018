@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.978 2018/03/02 11:23:46 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.979 2018/03/02 11:45:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1365,3 +1365,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/SDL2 to 2.0.8 [adam 2018-03-02]
 	Updated devel/gradle to 4.6 [fhajny 2018-03-02]
 	Updated lang/nodejs to 9.7.1 [fhajny 2018-03-02]
+	Updated www/py-django-cors-headers to 2.2.0 [adam 2018-03-02]
+	Updated fonts/py-fonttools to 3.24.0 [adam 2018-03-02]
+	Updated devel/py-test-mock to 1.7.1 [adam 2018-03-02]
+	Updated devel/py-txaio to 2.9.0 [adam 2018-03-02]
