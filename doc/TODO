@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18158 2018/03/03 22:11:50 ryoon Exp $
+$NetBSD: TODO,v 1.18159 2018/03/03 22:21:49 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1398,7 +1398,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tfmxplay-1.1.6
 	o thaixfonts-1.2.7
 	o thttpd-2.27
-	o thunderbird-52.6.0
 	o tig-2.2
 	o tightvnc-2.7.10
 	o tile-0.7.4
