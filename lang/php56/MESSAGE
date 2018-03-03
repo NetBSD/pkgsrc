@@ -1,5 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2014/11/24 15:37:08 taca Exp $
+$NetBSD: MESSAGE,v 1.1.28.1 2018/03/03 09:23:30 spz Exp $
+
+NOTE: This PHP version is on extended Security fixes only support,
+with End of Live planned on December 31 2018. For details, see
+
+        http://php.net/supported-versions.php
+
+===========================================================================
 
 To process PHP scripts, you will need a PHP-enabled HTTP server.  You may
 either configure the HTTP server to use the PHP CGI binary located in
