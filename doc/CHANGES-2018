@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.996 2018/03/02 22:41:08 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.997 2018/03/03 01:23:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1395,3 +1395,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/R-prob version 1.0.0 [minskim 2018-03-02]
 	Updated www/ikiwiki to 3.20180228 [schmonz 2018-03-02]
 	Updated x11/xf86-video-amdgpu to 18.0.0 [wiz 2018-03-02]
+	Added math/R-poweRlaw version 0.70.1 [minskim 2018-03-03]
