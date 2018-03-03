@@ -1,4 +1,6 @@
-$NetBSD: patch-ext_imap_config.m4,v 1.1 2017/11/15 08:56:12 jdolecek Exp $
+$NetBSD: patch-ext_imap_config.m4,v 1.1.2.1 2018/03/03 09:23:45 spz Exp $
+
+Reported upstream as #26936
 
 --- ext/imap/config.m4.orig	2015-06-23 17:33:33.000000000 +0000
 +++ ext/imap/config.m4
