@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/02/17 15:52:43 leot Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/03/03 12:30:31 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -306,9 +306,6 @@ ${PYSITELIB}/gallery_dl/extractor/xvideos.pyo
 ${PYSITELIB}/gallery_dl/extractor/yandere.py
 ${PYSITELIB}/gallery_dl/extractor/yandere.pyc
 ${PYSITELIB}/gallery_dl/extractor/yandere.pyo
-${PYSITELIB}/gallery_dl/extractor/yeet.py
-${PYSITELIB}/gallery_dl/extractor/yeet.pyc
-${PYSITELIB}/gallery_dl/extractor/yeet.pyo
 ${PYSITELIB}/gallery_dl/job.py
 ${PYSITELIB}/gallery_dl/job.pyc
 ${PYSITELIB}/gallery_dl/job.pyo
