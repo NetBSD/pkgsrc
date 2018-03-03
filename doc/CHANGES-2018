@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.998 2018/03/03 01:31:47 mef Exp $
+$NetBSD: CHANGES-2018,v 1.999 2018/03/03 01:46:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1397,3 +1397,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xf86-video-amdgpu to 18.0.0 [wiz 2018-03-02]
 	Added math/R-poweRlaw version 0.70.1 [minskim 2018-03-03]
 	Updated devel/patch to 2.7.6 [mef 2018-03-03]
+	Updated devel/p5-Date-Manip to 6.70 [mef 2018-03-03]
