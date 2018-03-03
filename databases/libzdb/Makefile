@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/11/30 16:45:01 adam Exp $
+# $NetBSD: Makefile,v 1.13 2018/03/03 20:51:08 tnn Exp $
 
 DISTNAME=	libzdb-3.1
 PKGREVISION=	8
@@ -15,6 +15,12 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 
 PKGCONFIG_OVERRIDE+=	zdb.pc.in
+
+SUBST_CLASSES+=		ossl
+SUBST_STAGE.ossl=	pre-configure
+SUBST_MESSAGE.ossl=	fix openssl configure test usage of deprecated symbol
+SUBST_FILES.ossl=	configure
+SUBST_SED.ossl=		-e 's,SSL_library_init,SSL_CTX_new,g'
 
 .include "options.mk"
 
