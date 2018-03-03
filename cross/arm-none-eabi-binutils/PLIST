@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/03/30 19:21:26 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/03/03 22:35:51 ryoon Exp $
 cross-arm-none-eabi/arm-none-eabi/bin/ar
 cross-arm-none-eabi/arm-none-eabi/bin/as
 cross-arm-none-eabi/arm-none-eabi/bin/ld
@@ -12,16 +12,25 @@ cross-arm-none-eabi/arm-none-eabi/bin/strip
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.x
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xbn
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xc
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xce
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xd
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xdc
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xdce
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xde
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xdw
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xdwe
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xe
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xn
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xr
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xs
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xsc
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xsce
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xse
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xsw
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xswe
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xu
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xw
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xwe
 cross-arm-none-eabi/bin/arm-none-eabi-addr2line
 cross-arm-none-eabi/bin/arm-none-eabi-ar
 cross-arm-none-eabi/bin/arm-none-eabi-as
