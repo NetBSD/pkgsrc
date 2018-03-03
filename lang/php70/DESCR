@@ -21,3 +21,6 @@ and new features such as
 * Return and Scalar Type Declarations
 * Anonymous Classes
 * Zero cost asserts
+
+NOTE: This version is on security support only, with planned End of Live
+on December 3 2018. Update to PHP 7.1.x or 7.2.x is recommended.
