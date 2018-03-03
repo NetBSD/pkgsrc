@@ -1,0 +1,5 @@
+The poweRlaw package is an implementation of maximum likelihood
+estimators for a variety of heavy tailed distributions, including both
+the discrete and continuous power law distributions. Additionally, a
+goodness-of-fit based approach is used to estimate the lower cut-off
+for the scaling region.
