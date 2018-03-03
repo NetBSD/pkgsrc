@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1000 2018/03/03 02:03:57 mef Exp $
+$NetBSD: CHANGES-2018,v 1.1001 2018/03/03 02:17:19 mef Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1399,3 +1399,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/patch to 2.7.6 [mef 2018-03-03]
 	Updated devel/p5-Date-Manip to 6.70 [mef 2018-03-03]
 	Updated devel/p5-Test-Harness to 3.41 [mef 2018-03-03]
+	Updated archivers/brotli to 1.0.3 [mef 2018-03-03]
