@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.16 2018/03/02 21:26:41 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.17 2018/03/03 09:26:00 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
 
@@ -148,4 +148,19 @@ Pullup ticket #5713 - requested by taca
 mail/dovecot2-ldap: security update
 mail/dovecot2-sqlite: security update
 mail/dovecot2: security update
+
+Pullup ticket #5714 - requested by taca
+mail/dovecot2-pigeonhole: compatibility update
+
+Pullup ticket #5715 - requested by taca
+lang/php56: security update
+
+Pullup ticket #5716 - requested by taca
+lang/php70: security update
+
+Pullup ticket #5717 - requested by taca
+lang/php71: security update
+
+Pullup ticket #5718 - requested by taca
+lang/php72: security update
 
