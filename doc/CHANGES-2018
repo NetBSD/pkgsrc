@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1003 2018/03/03 22:11:50 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.1004 2018/03/03 22:15:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1402,3 +1402,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/brotli to 1.0.3 [mef 2018-03-03]
 	Updated net/gallery-dl to 1.3.0 [leot 2018-03-03]
 	Updated lang/rust to 1.24.1 [ryoon 2018-03-03]
+	Updated www/seamonkey to 2.49.2 [ryoon 2018-03-03]
