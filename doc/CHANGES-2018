@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.997 2018/03/03 01:23:38 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.998 2018/03/03 01:31:47 mef Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1396,3 +1396,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ikiwiki to 3.20180228 [schmonz 2018-03-02]
 	Updated x11/xf86-video-amdgpu to 18.0.0 [wiz 2018-03-02]
 	Added math/R-poweRlaw version 0.70.1 [minskim 2018-03-03]
+	Updated devel/patch to 2.7.6 [mef 2018-03-03]
