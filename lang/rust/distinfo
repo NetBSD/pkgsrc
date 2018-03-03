@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2018/03/02 05:59:18 triaxx Exp $
+$NetBSD: distinfo,v 1.20 2018/03/03 22:11:26 ryoon Exp $
 
 SHA1 (rust-1.23.0-i686-apple-darwin.tar.gz) = 3d22c63d17a94beaec6b36866c8919674158c0f7
 RMD160 (rust-1.23.0-i686-apple-darwin.tar.gz) = 53111ab85eab609293a975bb02efa149c4e4cd93
@@ -64,10 +64,10 @@ SHA1 (rust-std-1.23.0-x86_64-unknown-netbsd.tar.gz) = 711070659aeca342ad1880a2fa
 RMD160 (rust-std-1.23.0-x86_64-unknown-netbsd.tar.gz) = eba650afb99d39925466b0d1a5da1995590c29f9
 SHA512 (rust-std-1.23.0-x86_64-unknown-netbsd.tar.gz) = 54e6e5f3ec8e4ff45a44a36efb9caed6e594130bb45b60a05b99f2661372972d8d9313b80f973ad37880e6e09925604ed694927a3cd0cb4a2d80de036dd8649d
 Size (rust-std-1.23.0-x86_64-unknown-netbsd.tar.gz) = 77499668 bytes
-SHA1 (rustc-1.24.0-src.tar.gz) = 067f5a3c39490573adb85caf6af8e7dca7fcba1d
-RMD160 (rustc-1.24.0-src.tar.gz) = 5ba759d3620e5b37ca4d638b6511c8e4e6c3b009
-SHA512 (rustc-1.24.0-src.tar.gz) = c879547bef9cd1b0ed1055cc0198fc79d16689a2ed24e783990b5626863a8e9953403470dfad0a18ea7cddea82f837f3e29cd155b155aa2bf3fd1328fc98e622
-Size (rustc-1.24.0-src.tar.gz) = 67506894 bytes
+SHA1 (rustc-1.24.1-src.tar.gz) = 4750e886df04135b5ce9445d136935ac3f87abb0
+RMD160 (rustc-1.24.1-src.tar.gz) = e4c92648fbd3499dcc54c6efdce53d5cdde010c4
+SHA512 (rustc-1.24.1-src.tar.gz) = 0d99c81b3ca0992af4af0c6a729ada14c24d2563c12a7b0d40c5dfb07e14678b914d4edb003c43d1e53ca68aec199838001ff1652ca6926cbe389a09bcb9c2ed
+Size (rustc-1.24.1-src.tar.gz) = 67512394 bytes
 SHA1 (patch-src_bootstrap_bin_rustc.rs) = e4baa9e42a8d1e55fdf8317f833d5b645dd6e1c2
 SHA1 (patch-src_bootstrap_lib.rs) = d86e173b931099730a4f18d044d7977c89f87b91
 SHA1 (patch-src_libbacktrace_configure) = b2c1e9b93a99408aad42ab9f1af27704cc81bdd8
