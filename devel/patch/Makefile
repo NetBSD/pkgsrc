@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2015/04/23 08:20:45 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2018/03/03 01:31:35 mef Exp $
 
-DISTNAME=	patch-2.7.5
+DISTNAME=	patch-2.7.6
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_GNU:=patch/}
 EXTRACT_SUFX=	.tar.xz
