@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1016 2018/03/04 09:25:45 kamil Exp $
+$NetBSD: CHANGES-2018,v 1.1017 2018/03/04 11:10:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1415,3 +1415,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/tor to 0.3.2.10 [wiz 2018-03-04]
 	Updated mail/mutt to 1.9.4 [tron 2018-03-04]
 	Added benchmarks/flamegraph version 1.0 [kamil 2018-03-04]
+	Updated databases/p5-DBD-ODBC to 1.57 [wiz 2018-03-04]
