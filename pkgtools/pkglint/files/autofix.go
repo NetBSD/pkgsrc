@@ -227,7 +227,8 @@ func (fix *Autofix) Apply() {
 		return
 	}
 
-	if shallBeLogged(fix.diagFormat) {
+	G.explainNext = shallBeLogged(fix.diagFormat)
+	if G.explainNext {
 		logDiagnostic := fix.level != nil && fix.diagFormat != "Silent-Magic-Diagnostic" &&
 			!(G.opts.Autofix && !G.opts.PrintAutofix) && len(fix.actions) > 0
 		if logDiagnostic {
