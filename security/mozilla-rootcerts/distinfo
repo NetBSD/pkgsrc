@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2017/02/03 09:56:49 maya Exp $
+$NetBSD: distinfo,v 1.13 2018/03/04 01:42:31 ryoon Exp $
 
-SHA1 (certdata-20170121.txt) = ab7362991845a1c53126182bca9f3f27adfa3d36
-RMD160 (certdata-20170121.txt) = f95f1c195d02e25a4caba381fde115c166ff0eb5
-SHA512 (certdata-20170121.txt) = 12d18fafad43209777e97ac3f73dc2a2b2bea1b82fe9b10c92320e134011f2349b90ae9c09eab71bf3d62b6b4773ac710705286ad99146c72701cbd937bf24ee
-Size (certdata-20170121.txt) = 1619744 bytes
+SHA1 (certdata-20180111.txt) = fe4c75fd3cba0f9af9fdf64e72727a13512611c7
+RMD160 (certdata-20180111.txt) = 932c4d4b27dc989ed1533c2127c553beabbb29a7
+SHA512 (certdata-20180111.txt) = 59dddb367d4bf01f2d7315dbef9cfd257fd0039e48d8c6c14ed8d77a73f7fa17b19daa18c4d8701aa3091c21c0f0bfe361b5dc175770b6b0df5952c392d0b207
+Size (certdata-20180111.txt) = 1267164 bytes
