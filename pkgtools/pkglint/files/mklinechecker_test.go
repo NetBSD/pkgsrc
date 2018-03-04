@@ -206,7 +206,7 @@ func (s *Suite) Test_MkLineChecker_WarnVaruseLocalbase(c *check.C) {
 	MkLineChecker{mkline}.WarnVaruseLocalbase()
 
 	t.CheckOutputLines(
-		"WARN: options.mk:56: The LOCALBASE variable should not be used by packages.")
+		"WARN: options.mk:56: Please use PREFIX instead of LOCALBASE.")
 }
 
 func (s *Suite) Test_MkLineChecker_CheckRelativePkgdir(c *check.C) {
@@ -225,16 +225,17 @@ func (s *Suite) Test_MkLineChecker_CheckRelativePkgdir(c *check.C) {
 func (s *Suite) Test_MkLineChecker__unclosed_varuse(c *check.C) {
 	t := s.Init(c)
 
-	mkline := t.NewMkLine("Makefile", 93, "EGDIRS=${EGDIR/apparmor.d ${EGDIR/dbus-1/system.d ${EGDIR/pam.d")
+	mklines := t.NewMkLines("Makefile",
+		MkRcsID,
+		"EGDIRS=${EGDIR/apparmor.d ${EGDIR/dbus-1/system.d ${EGDIR/pam.d")
 
-	MkLineChecker{mkline}.checkVarassign()
+	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: Makefile:93: Pkglint parse error in MkLine.Tokenize at "+
-			"\"${EGDIR/apparmor.d ${EGDIR/dbus-1/system.d ${EGDIR/pam.d\".",
-		"WARN: Makefile:93: Pkglint parse error in ShTokenizer.ShAtom at "+
-			"\"${EGDIR/apparmor.d ${EGDIR/dbus-1/system.d ${EGDIR/pam.d\" (quoting=plain)",
-		"WARN: Makefile:93: EGDIRS is defined but not used. Spelling mistake?")
+		"WARN: Makefile:2: Unclosed Make variable starting at \"${EGDIR/apparmor.d $...\"",
+		"WARN: Makefile:2: EGDIRS is defined but not used. Spelling mistake?",
+		"WARN: Makefile:2: Pkglint parse error in MkLine.Tokenize at "+
+			"\"${EGDIR/apparmor.d ${EGDIR/dbus-1/system.d ${EGDIR/pam.d\".")
 }
 
 func (s *Suite) Test_MkLineChecker__Varuse_Modifier_L(c *check.C) {

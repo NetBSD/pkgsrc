@@ -44,6 +44,9 @@ type SuggestedUpdate struct {
 	Comment string
 }
 
+// Initialize reads the pkgsrc infrastructure files to
+// extract information like the tools, packages to update,
+// user-defined variables.
 func (gd *GlobalData) Initialize() {
 	firstArg := G.Todo[0]
 	if fileExists(firstArg) {
