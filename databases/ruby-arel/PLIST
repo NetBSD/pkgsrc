@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2016/02/16 14:21:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/03/04 13:45:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/MIT-LICENSE.txt
-${GEM_LIBDIR}/README.markdown
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/arel.rb
 ${GEM_LIBDIR}/lib/arel/alias_predication.rb
 ${GEM_LIBDIR}/lib/arel/attributes.rb
@@ -13,6 +13,7 @@ ${GEM_LIBDIR}/lib/arel/collectors/sql_string.rb
 ${GEM_LIBDIR}/lib/arel/compatibility/wheres.rb
 ${GEM_LIBDIR}/lib/arel/crud.rb
 ${GEM_LIBDIR}/lib/arel/delete_manager.rb
+${GEM_LIBDIR}/lib/arel/errors.rb
 ${GEM_LIBDIR}/lib/arel/expressions.rb
 ${GEM_LIBDIR}/lib/arel/factory_methods.rb
 ${GEM_LIBDIR}/lib/arel/insert_manager.rb
@@ -22,6 +23,7 @@ ${GEM_LIBDIR}/lib/arel/nodes/and.rb
 ${GEM_LIBDIR}/lib/arel/nodes/ascending.rb
 ${GEM_LIBDIR}/lib/arel/nodes/binary.rb
 ${GEM_LIBDIR}/lib/arel/nodes/bind_param.rb
+${GEM_LIBDIR}/lib/arel/nodes/case.rb
 ${GEM_LIBDIR}/lib/arel/nodes/casted.rb
 ${GEM_LIBDIR}/lib/arel/nodes/count.rb
 ${GEM_LIBDIR}/lib/arel/nodes/delete_statement.rb
@@ -52,6 +54,7 @@ ${GEM_LIBDIR}/lib/arel/nodes/table_alias.rb
 ${GEM_LIBDIR}/lib/arel/nodes/terminal.rb
 ${GEM_LIBDIR}/lib/arel/nodes/true.rb
 ${GEM_LIBDIR}/lib/arel/nodes/unary.rb
+${GEM_LIBDIR}/lib/arel/nodes/unary_operation.rb
 ${GEM_LIBDIR}/lib/arel/nodes/unqualified_column.rb
 ${GEM_LIBDIR}/lib/arel/nodes/update_statement.rb
 ${GEM_LIBDIR}/lib/arel/nodes/values.rb
