@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1038 2018/03/04 16:23:45 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1039 2018/03/04 20:35:21 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1440,3 +1440,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-HTTP-Entity-Parser to 0.21 [wiz 2018-03-04]
 	Updated www/p5-Mojolicious to 7.70 [wiz 2018-03-04]
 	Removed devel/py-pyev [wiz 2018-03-04]
+	Updated pkgtools/pkglint to 5.5.6 [rillig 2018-03-04]
