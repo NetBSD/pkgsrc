@@ -1,17 +1,25 @@
-$NetBSD: patch-src_cmd_link_internal_ld_elf.go,v 1.2 2018/01/20 18:13:25 christos Exp $
+$NetBSD: patch-src_cmd_link_internal_ld_elf.go,v 1.3 2018/03/04 12:54:06 bsiegert Exp $
 
---- src/cmd/link/internal/ld/elf.go.orig	2017-10-25 14:30:21.000000000 -0400
-+++ src/cmd/link/internal/ld/elf.go	2018-01-20 11:49:02.046813855 -0500
-@@ -1263,6 +1263,8 @@
- 	ELF_NOTE_NETBSD_DESCSZ  = 4
- 	ELF_NOTE_NETBSD_TAG     = 1
- 	ELF_NOTE_NETBSD_VERSION = 599000000 /* NetBSD 5.99 */
+--- src/cmd/link/internal/ld/elf.go.orig	2018-02-16 17:12:19.000000000 +0000
++++ src/cmd/link/internal/ld/elf.go
+@@ -821,10 +821,12 @@ func elfwritenotehdr(out *OutBuf, str st
+ 
+ // NetBSD Signature (as per sys/exec_elf.h)
+ const (
+-	ELF_NOTE_NETBSD_NAMESZ  = 7
+-	ELF_NOTE_NETBSD_DESCSZ  = 4
+-	ELF_NOTE_NETBSD_TAG     = 1
+-	ELF_NOTE_NETBSD_VERSION = 599000000 /* NetBSD 5.99 */
++	ELF_NOTE_NETBSD_NAMESZ       = 7
++	ELF_NOTE_NETBSD_DESCSZ       = 4
++	ELF_NOTE_NETBSD_TAG          = 1
++	ELF_NOTE_NETBSD_VERSION      = 599000000 /* NetBSD 5.99 */
 +	ELF_NOTE_NETBSD_MARCH_NAMESZ = 7
 +	ELF_NOTE_NETBSD_MARCH_TAG    = 5
  )
  
  var ELF_NOTE_NETBSD_NAME = []byte("NetBSD\x00")
-@@ -1272,6 +1274,23 @@
+@@ -834,6 +836,23 @@ func elfnetbsdsig(sh *ElfShdr, startva u
  	return elfnote(sh, startva, resoff, n, true)
  }
  
@@ -32,46 +40,47 @@ $NetBSD: patch-src_cmd_link_internal_ld_elf.go,v 1.2 2018/01/20 18:13:25 christo
 +	return elfnote(sh, startva, resoff, n, true)
 +}
 +
- func elfwritenetbsdsig() int {
+ func elfwritenetbsdsig(out *OutBuf) int {
  	// Write Elf_Note header.
- 	sh := elfwritenotehdr(".note.netbsd.ident", ELF_NOTE_NETBSD_NAMESZ, ELF_NOTE_NETBSD_DESCSZ, ELF_NOTE_NETBSD_TAG)
-@@ -1285,7 +1304,20 @@
- 	Cput(0)
- 
- 	Thearch.Lput(ELF_NOTE_NETBSD_VERSION)
--
-+	if SysArch.Family == sys.ARM {
-+		mArch := elfnetbsdarmarch()
-+		descsz := len(mArch)
-+		sh2 := elfwritenotehdr(".note.netbsd.march",
-+			ELF_NOTE_NETBSD_MARCH_NAMESZ, uint32(descsz),
-+			ELF_NOTE_NETBSD_MARCH_TAG)
-+		if sh2 == nil {
-+			return 0
-+		}
-+		Cwrite(ELF_NOTE_NETBSD_NAME)
-+		Cput(0)
-+		Cwrite(mArch)
-+		return int(sh.size) + int(sh2.size)
-+	}
+ 	sh := elfwritenotehdr(out, ".note.netbsd.ident", ELF_NOTE_NETBSD_NAMESZ, ELF_NOTE_NETBSD_DESCSZ, ELF_NOTE_NETBSD_TAG)
+@@ -850,6 +869,22 @@ func elfwritenetbsdsig(out *OutBuf) int
  	return int(sh.size)
  }
  
-@@ -1902,6 +1934,9 @@
++func elfwritenetbsdarmsig(out *OutBuf) int {
++	mArch := elfnetbsdarmarch()
++	descsz := len(mArch)
++	sh := elfwritenotehdr(out, ".note.netbsd.march",
++		ELF_NOTE_NETBSD_MARCH_NAMESZ, uint32(descsz),
++		ELF_NOTE_NETBSD_MARCH_TAG)
++	if sh == nil {
++		return 0
++	}
++	out.Write(ELF_NOTE_NETBSD_NAME)
++	out.Write8(0)
++	out.Write(mArch)
++
++	return int(sh.size)
++}
++
+ // OpenBSD Signature
+ const (
+ 	ELF_NOTE_OPENBSD_NAMESZ  = 8
+@@ -1452,6 +1487,9 @@ func (ctxt *Link) doelf() {
  	}
- 	if Headtype == objabi.Hnetbsd {
+ 	if ctxt.HeadType == objabi.Hnetbsd {
  		Addstring(shstrtab, ".note.netbsd.ident")
-+		if SysArch.Family == sys.ARM {
++		if ctxt.Arch.Family == sys.ARM {
 +			Addstring(shstrtab, ".note.netbsd.march")
 +		}
  	}
- 	if Headtype == objabi.Hopenbsd {
+ 	if ctxt.HeadType == objabi.Hopenbsd {
  		Addstring(shstrtab, ".note.openbsd.ident")
-@@ -2340,6 +2375,15 @@
+@@ -1890,6 +1928,15 @@ func Asmbelf(ctxt *Link, symo int64) {
  		pnote.flags = PF_R
  		phsh(pnote, sh)
  	}
-+	if Headtype == objabi.Hnetbsd && SysArch.Family == sys.ARM {
++	if ctxt.HeadType == objabi.Hnetbsd && ctxt.Arch.Family == sys.ARM {
 +		var sh *ElfShdr
 +		sh = elfshname(".note.netbsd.march")
 +		resoff -= int64(elfnetbsdarmsig(sh, uint64(startva), uint64(resoff)))
@@ -83,3 +92,13 @@ $NetBSD: patch-src_cmd_link_internal_ld_elf.go,v 1.2 2018/01/20 18:13:25 christo
  
  	if len(buildinfo) > 0 {
  		sh := elfshname(".note.gnu.build-id")
+@@ -2232,6 +2279,9 @@ elfobj:
+ 	if ctxt.LinkMode != LinkExternal {
+ 		if ctxt.HeadType == objabi.Hnetbsd {
+ 			a += int64(elfwritenetbsdsig(ctxt.Out))
++			if ctxt.Arch.Family == sys.ARM {
++				a += int64(elfwritenetbsdarmsig(ctxt.Out))
++			}
+ 		}
+ 		if ctxt.HeadType == objabi.Hopenbsd {
+ 			a += int64(elfwriteopenbsdsig(ctxt.Out))
