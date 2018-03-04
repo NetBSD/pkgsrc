@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1034 2018/03/04 16:02:01 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1035 2018/03/04 16:02:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1436,3 +1436,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-PDF-Table to 0.10.0 [wiz 2018-03-04]
 	Updated www/p5-CGI-Application to 4.61 [wiz 2018-03-04]
 	Updated www/p5-CGI-Simple to 1.15 [wiz 2018-03-04]
+	Updated www/p5-Cookie-Baker to 0.09 [wiz 2018-03-04]
