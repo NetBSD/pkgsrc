@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1014 2018/03/04 07:46:15 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1015 2018/03/04 09:22:28 tron Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1413,3 +1413,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/mozilla-rootcerts to 1.0.20180111 [ryoon 2018-03-04]
 	Updated security/mozilla-rootcerts-openssl to 2.1 [ryoon 2018-03-04]
 	Updated net/tor to 0.3.2.10 [wiz 2018-03-04]
+	Updated mail/mutt to 1.9.4 [tron 2018-03-04]
