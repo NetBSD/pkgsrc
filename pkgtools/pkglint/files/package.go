@@ -26,13 +26,12 @@ type Package struct {
 	SeenBsdPrefsMk       bool            // Has bsd.prefs.mk already been included?
 	PlistDirs            map[string]bool // Directories mentioned in the PLIST files
 
-	vardef                map[string]MkLine // (varname, varcanon) => line
-	varuse                map[string]MkLine // (varname, varcanon) => line
-	bl3                   map[string]Line   // buildlink3.mk name => line; contains only buildlink3.mk files that are directly included.
-	plistSubstCond        map[string]bool   // varname => true; list of all variables that are used as conditionals (@comment or nothing) in PLISTs.
-	included              map[string]Line   // fname => line
-	seenMakefileCommon    bool              // Does the package have any .includes?
-	loadTimeTools         map[string]bool   // true=ok, false=not ok, absent=not mentioned in USE_TOOLS.
+	vars                  Scope
+	bl3                   map[string]Line // buildlink3.mk name => line; contains only buildlink3.mk files that are directly included.
+	plistSubstCond        map[string]bool // varname => true; list of all variables that are used as conditionals (@comment or nothing) in PLISTs.
+	included              map[string]Line // fname => line
+	seenMakefileCommon    bool            // Does the package have any .includes?
+	loadTimeTools         map[string]bool // true=ok, false=not ok, absent=not mentioned in USE_TOOLS.
 	conditionalIncludes   map[string]MkLine
 	unconditionalIncludes map[string]MkLine
 	once                  Once
@@ -42,8 +41,7 @@ func NewPackage(pkgpath string) *Package {
 	pkg := &Package{
 		Pkgpath:               pkgpath,
 		PlistDirs:             make(map[string]bool),
-		vardef:                make(map[string]MkLine),
-		varuse:                make(map[string]MkLine),
+		vars:                  NewScope(),
 		bl3:                   make(map[string]Line),
 		plistSubstCond:        make(map[string]bool),
 		included:              make(map[string]Line),
@@ -52,19 +50,9 @@ func NewPackage(pkgpath string) *Package {
 		unconditionalIncludes: make(map[string]MkLine),
 	}
 	for varname, line := range G.globalData.UserDefinedVars {
-		pkg.vardef[varname] = line
+		pkg.vars.Define(varname, line)
 	}
 	return pkg
-}
-
-func (pkg *Package) defineVar(mkline MkLine, varname string) {
-	if pkg.vardef[varname] == nil {
-		pkg.vardef[varname] = mkline
-	}
-	varcanon := varnameCanon(varname)
-	if pkg.vardef[varcanon] == nil {
-		pkg.vardef[varcanon] = mkline
-	}
 }
 
 func (pkg *Package) varValue(varname string) (string, bool) {
@@ -74,7 +62,7 @@ func (pkg *Package) varValue(varname string) (string, bool) {
 	case "PGSQL_VERSION":
 		return "95", true
 	}
-	if mkline := pkg.vardef[varname]; mkline != nil {
+	if mkline := pkg.vars.FirstDefinition(varname); mkline != nil {
 		return mkline.Value(), true
 	}
 	return "", false
@@ -150,7 +138,7 @@ func (pkg *Package) checklinesBuildlink3Inclusion(mklines *MkLines) {
 	}
 }
 
-func checkdirPackage(pkgpath string) {
+func (pkglint *Pkglint) checkdirPackage(pkgpath string) {
 	if trace.Tracing {
 		defer trace.Call1(pkgpath)()
 	}
@@ -203,7 +191,7 @@ func checkdirPackage(pkgpath string) {
 				pkg.checkfilePackageMakefile(fname, lines)
 			}
 		} else {
-			Checkfile(fname)
+			pkglint.Checkfile(fname)
 		}
 		if contains(fname, "/patches/patch-") {
 			havePatches = true
@@ -359,11 +347,11 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 		if mkline.IsVarassign() {
 			varname, op, value := mkline.Varname(), mkline.Op(), mkline.Value()
 
-			if op != opAssignDefault || G.Pkg.vardef[varname] == nil {
+			if op != opAssignDefault || !G.Pkg.vars.Defined(varname) {
 				if trace.Tracing {
 					trace.Stepf("varassign(%q, %q, %q)", varname, op, value)
 				}
-				G.Pkg.vardef[varname] = mkline
+				G.Pkg.vars.Define(varname, mkline)
 			}
 		}
 	}
@@ -380,16 +368,16 @@ func (pkg *Package) checkfilePackageMakefile(fname string, mklines *MkLines) {
 		defer trace.Call1(fname)()
 	}
 
-	vardef := pkg.vardef
-	if vardef["PLIST_SRC"] == nil &&
-		vardef["GENERATE_PLIST"] == nil &&
-		vardef["META_PACKAGE"] == nil &&
+	vars := pkg.vars
+	if !vars.Defined("PLIST_SRC") &&
+		!vars.Defined("GENERATE_PLIST") &&
+		!vars.Defined("META_PACKAGE") &&
 		!fileExists(G.CurrentDir+"/"+pkg.Pkgdir+"/PLIST") &&
 		!fileExists(G.CurrentDir+"/"+pkg.Pkgdir+"/PLIST.common") {
 		NewLineWhole(fname).Warnf("Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset. Are you sure PLIST handling is ok?")
 	}
 
-	if (vardef["NO_CHECKSUM"] != nil || vardef["META_PACKAGE"] != nil) && isEmptyDir(G.CurrentDir+"/"+pkg.Patchdir) {
+	if (vars.Defined("NO_CHECKSUM") || vars.Defined("META_PACKAGE")) && isEmptyDir(G.CurrentDir+"/"+pkg.Patchdir) {
 		if distinfoFile := G.CurrentDir + "/" + pkg.DistinfoFile; fileExists(distinfoFile) {
 			NewLineWhole(distinfoFile).Warnf("This file should not exist if NO_CHECKSUM or META_PACKAGE is set.")
 		}
@@ -399,15 +387,15 @@ func (pkg *Package) checkfilePackageMakefile(fname string, mklines *MkLines) {
 		}
 	}
 
-	if perlLine, noconfLine := vardef["REPLACE_PERL"], vardef["NO_CONFIGURE"]; perlLine != nil && noconfLine != nil {
+	if perlLine, noconfLine := vars.FirstDefinition("REPLACE_PERL"), vars.FirstDefinition("NO_CONFIGURE"); perlLine != nil && noconfLine != nil {
 		perlLine.Warnf("REPLACE_PERL is ignored when NO_CONFIGURE is set (in %s)", noconfLine.ReferenceFrom(perlLine.Line))
 	}
 
-	if vardef["LICENSE"] == nil && vardef["META_PACKAGE"] == nil && pkg.once.FirstTime("LICENSE") {
+	if !vars.Defined("LICENSE") && !vars.Defined("META_PACKAGE") && pkg.once.FirstTime("LICENSE") {
 		NewLineWhole(fname).Errorf("Each package must define its LICENSE.")
 	}
 
-	if gnuLine, useLine := vardef["GNU_CONFIGURE"], vardef["USE_LANGUAGES"]; gnuLine != nil && useLine != nil {
+	if gnuLine, useLine := vars.FirstDefinition("GNU_CONFIGURE"), vars.FirstDefinition("USE_LANGUAGES"); gnuLine != nil && useLine != nil {
 		if matches(useLine.VarassignComment(), `(?-i)\b(?:c|empty|none)\b`) {
 			// Don't emit a warning, since the comment
 			// probably contains a statement that C is
@@ -425,11 +413,11 @@ func (pkg *Package) checkfilePackageMakefile(fname string, mklines *MkLines) {
 	pkg.determineEffectivePkgVars()
 	pkg.checkPossibleDowngrade()
 
-	if vardef["COMMENT"] == nil {
+	if !vars.Defined("COMMENT") {
 		NewLineWhole(fname).Warnf("No COMMENT given.")
 	}
 
-	if imake, x11 := vardef["USE_IMAKE"], vardef["USE_X11"]; imake != nil && x11 != nil {
+	if imake, x11 := vars.FirstDefinition("USE_IMAKE"), vars.FirstDefinition("USE_X11"); imake != nil && x11 != nil {
 		if !hasSuffix(x11.Filename, "/mk/x11.buildlink3.mk") {
 			imake.Notef("USE_IMAKE makes USE_X11 in %s superfluous.", x11.ReferenceFrom(imake.Line))
 		}
@@ -442,7 +430,7 @@ func (pkg *Package) checkfilePackageMakefile(fname string, mklines *MkLines) {
 }
 
 func (pkg *Package) getNbpart() string {
-	line := pkg.vardef["PKGREVISION"]
+	line := pkg.vars.FirstDefinition("PKGREVISION")
 	if line == nil {
 		return ""
 	}
@@ -454,8 +442,8 @@ func (pkg *Package) getNbpart() string {
 }
 
 func (pkg *Package) determineEffectivePkgVars() {
-	distnameLine := pkg.vardef["DISTNAME"]
-	pkgnameLine := pkg.vardef["PKGNAME"]
+	distnameLine := pkg.vars.FirstDefinition("DISTNAME")
+	pkgnameLine := pkg.vars.FirstDefinition("PKGNAME")
 
 	distname := ""
 	if distnameLine != nil {
@@ -543,7 +531,7 @@ func (pkg *Package) pkgnameFromDistname(pkgname, distname string) string {
 }
 
 func (pkg *Package) expandVariableWithDefault(varname, defaultValue string) string {
-	mkline := G.Pkg.vardef[varname]
+	mkline := G.Pkg.vars.FirstDefinition(varname)
 	if mkline == nil {
 		return defaultValue
 	}
@@ -834,8 +822,8 @@ func (pkg *Package) checkLocallyModified(fname string) {
 		defer trace.Call(fname)()
 	}
 
-	ownerLine := pkg.vardef["OWNER"]
-	maintainerLine := pkg.vardef["MAINTAINER"]
+	ownerLine := pkg.vars.FirstDefinition("OWNER")
+	maintainerLine := pkg.vars.FirstDefinition("MAINTAINER")
 	owner := ""
 	maintainer := ""
 	if ownerLine != nil && !containsVarRef(ownerLine.Value()) {

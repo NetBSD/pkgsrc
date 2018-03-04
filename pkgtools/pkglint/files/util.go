@@ -182,6 +182,18 @@ func detab(s string) string {
 	return detabbed
 }
 
+func shorten(s string, maxChars int) string {
+	chars := 0
+	for i := range s {
+		if chars >= maxChars {
+			return s[:i] + "..."
+			break
+		}
+		chars++
+	}
+	return s
+}
+
 func varnameBase(varname string) string {
 	dot := strings.IndexByte(varname, '.')
 	if dot != -1 {
@@ -204,34 +216,30 @@ func varnameParam(varname string) string {
 	return ""
 }
 
+// defineVar marks a variable as defined in both the current package and the current file.
 func defineVar(mkline MkLine, varname string) {
 	if G.Mk != nil {
-		G.Mk.DefineVar(mkline, varname)
+		G.Mk.vars.Define(varname, mkline)
 	}
 	if G.Pkg != nil {
-		G.Pkg.defineVar(mkline, varname)
+		G.Pkg.vars.Define(varname, mkline)
 	}
-}
-func varIsDefined(varname string) bool {
-	varcanon := varnameCanon(varname)
-	if G.Mk != nil && (G.Mk.vardef[varname] != nil || G.Mk.vardef[varcanon] != nil) {
-		return true
-	}
-	if G.Pkg != nil && (G.Pkg.vardef[varname] != nil || G.Pkg.vardef[varcanon] != nil) {
-		return true
-	}
-	return false
 }
 
+// varIsDefined tests whether the variable (or its canonicalized form)
+// is defined in the current package or in the current file.
+// TODO: rename to similar
+func varIsDefined(varname string) bool {
+	return G.Mk != nil && G.Mk.vars.DefinedSimilar(varname) ||
+		G.Pkg != nil && G.Pkg.vars.DefinedSimilar(varname)
+}
+
+// varIsUsed tests whether the variable (or its canonicalized form)
+// is used in the current package or in the current file.
+// TODO: rename to similar
 func varIsUsed(varname string) bool {
-	varcanon := varnameCanon(varname)
-	if G.Mk != nil && (G.Mk.varuse[varname] != nil || G.Mk.varuse[varcanon] != nil) {
-		return true
-	}
-	if G.Pkg != nil && (G.Pkg.varuse[varname] != nil || G.Pkg.varuse[varcanon] != nil) {
-		return true
-	}
-	return false
+	return G.Mk != nil && G.Mk.vars.UsedSimilar(varname) ||
+		G.Pkg != nil && G.Pkg.vars.UsedSimilar(varname)
 }
 
 func splitOnSpace(s string) []string {
@@ -371,4 +379,95 @@ func (o *Once) FirstTime(what string) bool {
 	}
 	o.seen[what] = true
 	return true
+}
+
+// Scope remembers which variables are defined and which are used
+// in a certain scope, such as a package or a file.
+type Scope struct {
+	defined map[string]MkLine
+	used    map[string]MkLine
+}
+
+func NewScope() Scope {
+	return Scope{make(map[string]MkLine), make(map[string]MkLine)}
+}
+
+// Define marks the variable and its canonicalized form as defined.
+func (s *Scope) Define(varname string, line MkLine) {
+	if s.defined[varname] == nil {
+		s.defined[varname] = line
+		if trace.Tracing {
+			trace.Step2("Defining %q in line %s", varname, line.Linenos())
+		}
+	}
+	varcanon := varnameCanon(varname)
+	if varcanon != varname && s.defined[varcanon] == nil {
+		s.defined[varcanon] = line
+		if trace.Tracing {
+			trace.Step2("Defining %q in line %s", varcanon, line.Linenos())
+		}
+	}
+}
+
+// Use marks the variable and its canonicalized form as used.
+func (s *Scope) Use(varname string, line MkLine) {
+	if s.used[varname] == nil {
+		s.used[varname] = line
+		if trace.Tracing {
+			trace.Step2("Using %q in line %s", varname, line.Linenos())
+		}
+	}
+	varcanon := varnameCanon(varname)
+	if varcanon != varname && s.used[varcanon] == nil {
+		s.used[varcanon] = line
+		if trace.Tracing {
+			trace.Step2("Using %q in line %s", varcanon, line.Linenos())
+		}
+	}
+}
+
+// Defined tests whether the variable is defined.
+// It does NOT test the canonicalized variable name.
+func (s *Scope) Defined(varname string) bool {
+	return s.defined[varname] != nil
+}
+
+// DefinedSimilar tests whether the variable or its canonicalized form is defined.
+func (s *Scope) DefinedSimilar(varname string) bool {
+	if s.defined[varname] != nil {
+		if trace.Tracing {
+			trace.Step1("Variable %q is defined", varname)
+		}
+		return true
+	}
+	varcanon := varnameCanon(varname)
+	if s.defined[varcanon] != nil {
+		if trace.Tracing {
+			trace.Step2("Variable %q (similar to %q) is defined", varcanon, varname)
+		}
+		return true
+	}
+	return false
+}
+
+// Used tests whether the variable is used.
+// It does NOT test the canonicalized variable name.
+func (s *Scope) Used(varname string) bool {
+	return s.used[varname] != nil
+}
+
+// UsedSimilar tests whether the variable or its canonicalized form is used.
+func (s *Scope) UsedSimilar(varname string) bool {
+	if s.used[varname] != nil {
+		return true
+	}
+	return s.used[varnameCanon(varname)] != nil
+}
+
+func (s *Scope) FirstDefinition(varname string) MkLine {
+	return s.defined[varname]
+}
+
+func (s *Scope) FirstUse(varname string) MkLine {
+	return s.used[varname]
 }

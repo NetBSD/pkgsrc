@@ -182,7 +182,7 @@ func (ck *PlistChecker) checkpath(pline *PlistLine) {
 		ck.checkpathShare(pline)
 	}
 
-	if contains(text, "${PKGLOCALEDIR}") && G.Pkg != nil && G.Pkg.vardef["USE_PKGLOCALEDIR"] == nil {
+	if contains(text, "${PKGLOCALEDIR}") && G.Pkg != nil && !G.Pkg.vars.Defined("USE_PKGLOCALEDIR") {
 		line.Warnf("PLIST contains ${PKGLOCALEDIR}, but USE_PKGLOCALEDIR was not found.")
 	}
 
@@ -258,7 +258,7 @@ func (ck *PlistChecker) checkpathInfo(pline *PlistLine, dirname, basename string
 		return
 	}
 
-	if G.Pkg != nil && G.Pkg.vardef["INFO_FILES"] == nil {
+	if G.Pkg != nil && !G.Pkg.vars.Defined("INFO_FILES") {
 		pline.line.Warnf("Packages that install info files should set INFO_FILES.")
 	}
 }
@@ -279,11 +279,8 @@ func (ck *PlistChecker) checkpathLib(pline *PlistLine, dirname, basename string)
 
 	switch ext := path.Ext(basename); ext {
 	case ".a", ".la", ".so":
-		if G.opts.WarnExtra && dirname == "lib" && !hasPrefix(basename, "lib") {
-			pline.line.Warnf("Library filename %q should start with \"lib\".", basename)
-		}
 		if ext == "la" {
-			if G.Pkg != nil && G.Pkg.vardef["USE_LIBTOOL"] == nil {
+			if G.Pkg != nil && !G.Pkg.vars.Defined("USE_LIBTOOL") {
 				pline.line.Warnf("Packages that install libtool libraries should define USE_LIBTOOL.")
 			}
 		}
@@ -360,7 +357,7 @@ func (ck *PlistChecker) checkpathShare(pline *PlistLine) {
 			}
 		}
 
-		if contains(text[12:], "/") && G.Pkg.vardef["ICON_THEMES"] == nil && ck.once.FirstTime("ICON_THEMES") {
+		if contains(text[12:], "/") && !G.Pkg.vars.Defined("ICON_THEMES") && ck.once.FirstTime("ICON_THEMES") {
 			line.Warnf("Packages that install icon theme files should set ICON_THEMES.")
 		}
 

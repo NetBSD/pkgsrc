@@ -135,3 +135,47 @@ func (s *Suite) Test_Line_log_only(c *check.C) {
 		"-\tThe old song",
 		"+\tThe new2 song")
 }
+
+func (s *Suite) Test_collect_explanations_with_only(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("--only", "interesting")
+	line := t.NewLine("Makefile", 27, "The old song")
+
+	line.Warnf("Filtered warning.")               // Is not logged.
+	Explain("Explanation for the above warning.") // Neither would this explanation be logged.
+	G.PrintSummary()
+
+	c.Check(G.explanationsAvailable, equals, false)
+	t.CheckOutputLines(
+		"Looks fine.") // "pkglint -e" is not advertised since the above explanation is not relevant.
+
+	line.Warnf("What an interesting line.")
+	Explain("This explanation is available.")
+	G.PrintSummary()
+
+	c.Check(G.explanationsAvailable, equals, true)
+	t.CheckOutputLines(
+		"WARN: Makefile:27: What an interesting line.",
+		"0 errors and 1 warning found.",
+		"(Run \"pkglint -e\" to show explanations.)")
+}
+
+func (s *Suite) Test_explain_with_only(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("--only", "interesting", "--explain")
+	line := t.NewLine("Makefile", 27, "The old song")
+
+	line.Warnf("Filtered warning.")               // Is not logged.
+	Explain("Explanation for the above warning.") // Neither is this explanation logged.
+
+	line.Warnf("What an interesting line.")
+	Explain("This explanation is logged.")
+
+	t.CheckOutputLines(
+		"WARN: Makefile:27: What an interesting line.",
+		"",
+		"\tThis explanation is logged.",
+		"")
+}
