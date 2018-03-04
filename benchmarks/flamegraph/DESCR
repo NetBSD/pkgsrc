@@ -1,0 +1,3 @@
+Flame graphs are a visualization of profiled software, allowing the most
+frequent code-paths to be identified quickly and accurately. They can be
+generated using my open source programs which create interactive SVGs.
