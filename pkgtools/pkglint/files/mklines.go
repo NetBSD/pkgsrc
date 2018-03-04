@@ -10,14 +10,13 @@ import (
 type MkLines struct {
 	mklines        []MkLine
 	lines          []Line
-	forVars        map[string]bool   // The variables currently used in .for loops
-	target         string            // Current make(1) target
-	vardef         map[string]MkLine // varname => line; for all variables that are defined in the current file
-	varuse         map[string]MkLine // varname => line; for all variables that are used in the current file
-	buildDefs      map[string]bool   // Variables that are registered in BUILD_DEFS, to ensure that all user-defined variables are added to it.
-	plistVars      map[string]bool   // Variables that are registered in PLIST_VARS, to ensure that all user-defined variables are added to it.
-	tools          map[string]bool   // Set of tools that are declared to be used.
-	toolRegistry   ToolRegistry      // Tools defined in file scope.
+	forVars        map[string]bool // The variables currently used in .for loops
+	target         string          // Current make(1) target
+	vars           Scope
+	buildDefs      map[string]bool // Variables that are registered in BUILD_DEFS, to ensure that all user-defined variables are added to it.
+	plistVars      map[string]bool // Variables that are registered in PLIST_VARS, to ensure that all user-defined variables are added to it.
+	tools          map[string]bool // Set of tools that are declared to be used.
+	toolRegistry   ToolRegistry    // Tools defined in file scope.
 	SeenBsdPrefsMk bool
 	indentation    Indentation // Indentation depth of preprocessing directives
 }
@@ -39,8 +38,7 @@ func NewMkLines(lines []Line) *MkLines {
 		lines,
 		make(map[string]bool),
 		"",
-		make(map[string]MkLine),
-		make(map[string]MkLine),
+		NewScope(),
 		make(map[string]bool),
 		make(map[string]bool),
 		tools,
@@ -49,28 +47,15 @@ func NewMkLines(lines []Line) *MkLines {
 		Indentation{}}
 }
 
-func (mklines *MkLines) DefineVar(mkline MkLine, varname string) {
-	if mklines.vardef[varname] == nil {
-		mklines.vardef[varname] = mkline
-	}
-	varcanon := varnameCanon(varname)
-	if mklines.vardef[varcanon] == nil {
-		mklines.vardef[varcanon] = mkline
-	}
-}
-
 func (mklines *MkLines) UseVar(mkline MkLine, varname string) {
-	varcanon := varnameCanon(varname)
-	mklines.varuse[varname] = mkline
-	mklines.varuse[varcanon] = mkline
+	mklines.vars.Use(varname, mkline)
 	if G.Pkg != nil {
-		G.Pkg.varuse[varname] = mkline
-		G.Pkg.varuse[varcanon] = mkline
+		G.Pkg.vars.Use(varname, mkline)
 	}
 }
 
 func (mklines *MkLines) VarValue(varname string) (value string, found bool) {
-	if mkline := mklines.vardef[varname]; mkline != nil {
+	if mkline := mklines.vars.FirstDefinition(varname); mkline != nil {
 		return mkline.Value(), true
 	}
 	return "", false
@@ -117,6 +102,7 @@ func (mklines *MkLines) Check() {
 
 		case mkline.IsVarassign():
 			mklines.target = ""
+			mkline.Tokenize(mkline.Value())
 			substcontext.Varassign(mkline)
 
 		case mkline.IsInclude():
@@ -136,6 +122,9 @@ func (mklines *MkLines) Check() {
 		case mkline.IsDependency():
 			ck.checkDependencyRule(allowedTargets)
 			mklines.target = mkline.Targets()
+
+		case mkline.IsShellcmd():
+			mkline.Tokenize(mkline.Shellcmd())
 		}
 	}
 	lastMkline := mklines.mklines[len(mklines.mklines)-1]
@@ -222,6 +211,57 @@ func (mklines *MkLines) DetermineUsedVariables() {
 			mklines.UseVar(mkline, varname)
 		}
 	}
+	mklines.determineDocumentedVariables()
+}
+
+// Loosely based on mk/help/help.awk, revision 1.28
+func (mklines *MkLines) determineDocumentedVariables() {
+	scope := NewScope()
+	commentLines := 0
+	relevant := true
+
+	finish := func() {
+		if commentLines >= 3 && relevant {
+			for varname, mkline := range scope.used {
+				mklines.vars.Use(varname, mkline)
+			}
+		}
+
+		scope = NewScope()
+		commentLines = 0
+		relevant = true
+	}
+
+	for _, mkline := range mklines.mklines {
+		text := mkline.Text
+		words := splitOnSpace(text)
+
+		if 1 < len(words) && words[0] == "#" {
+			commentLines++
+
+			parser := NewMkParser(mkline.Line, words[1], false)
+			varname := parser.Varname()
+			if hasSuffix(varname, ".") && parser.repl.AdvanceRegexp(`^<\w+>`) {
+				varname += "*"
+			}
+			parser.repl.AdvanceStr(":")
+
+			varbase := varnameBase(varname)
+			if varbase == strings.ToUpper(varbase) && matches(varbase, `[A-Z]`) && parser.EOF() {
+				scope.Use(varname, mkline)
+			}
+
+			if 1 < len(words) && words[1] == "Copyright" {
+				relevant = false
+			}
+		}
+
+		if text == "" {
+			finish()
+		}
+	}
+
+	finish()
 }
 
 func (mklines *MkLines) setSeenBsdPrefsMk() {

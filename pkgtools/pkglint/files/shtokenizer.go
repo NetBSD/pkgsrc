@@ -56,7 +56,11 @@ func (p *ShTokenizer) ShAtom(quoting ShQuoting) *ShAtom {
 
 	if atom == nil {
 		repl.Reset(mark)
-		p.parser.Line.Warnf("Pkglint parse error in ShTokenizer.ShAtom at %q (quoting=%s)", repl.Rest(), quoting)
+		if hasPrefix(repl.Rest(), "${") {
+			p.parser.Line.Warnf("Unclosed Make variable starting at %q", shorten(repl.Rest(), 20))
+		} else {
+			p.parser.Line.Warnf("Pkglint parse error in ShTokenizer.ShAtom at %q (quoting=%s)", repl.Rest(), quoting)
+		}
 	}
 	return atom
 }
