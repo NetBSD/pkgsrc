@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/09/27 14:14:15 wiz Exp $
+$NetBSD: distinfo,v 1.7 2018/03/04 16:02:37 wiz Exp $
 
-SHA1 (Cookie-Baker-0.08.tar.gz) = 43fd40764c8161b114fc0b9ffc34d304f92d5ef9
-RMD160 (Cookie-Baker-0.08.tar.gz) = b63ca5f601b7f7d261003faea7d6046b79db0be3
-SHA512 (Cookie-Baker-0.08.tar.gz) = 5beeac6ff3a2d2ae73d5efd49490af240c2580201a87e739882f3c7d8fc20ee77c225349d130752b52ddbabf7bd173015d8d5cedb609c30a748e3d9e41efda51
-Size (Cookie-Baker-0.08.tar.gz) = 11981 bytes
+SHA1 (Cookie-Baker-0.09.tar.gz) = b43fcfd81e74c64d134a5a6c1d59faa3d2ad5a35
+RMD160 (Cookie-Baker-0.09.tar.gz) = b2c634b6d02d6c110fcc36e211d0d05767b57e1e
+SHA512 (Cookie-Baker-0.09.tar.gz) = de3f7ace3e494976a9566f4bfc461fa0a20a11f57b6114a343b1ed73935e6a46563c16999f971b1b2d2ff1d4cdbf27932a31c5788fc2b8039ad6fd4972e981dc
+Size (Cookie-Baker-0.09.tar.gz) = 12028 bytes
