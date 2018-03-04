@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2018/03/02 19:20:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.153 2018/03/04 17:40:28 schmonz Exp $
 #
 
 DISTNAME=		ikiwiki_3.20180228.orig
@@ -37,8 +37,7 @@ USE_LANGUAGES=		c
 USE_TOOLS+=		gmake msgfmt perl:run xgettext
 
 REPLACE_PYTHON+=	plugins/proxy.py plugins/pythondemo plugins/rst
-
-BUILD_TARGET=		extra_build all
+REPLACE_PERL+=		pm_filter
 
 MAKE_FLAGS+=		W3M_CGI_BIN=${PREFIX:Q}/libexec/w3m/cgi-bin
 MAKE_FLAGS+=		SYSCONFDIR=${PKG_SYSCONFDIR:Q}
