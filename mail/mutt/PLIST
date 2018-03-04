@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.23 2018/01/28 08:37:31 tron Exp $
+@comment $NetBSD: PLIST,v 1.24 2018/03/04 09:21:55 tron Exp $
+bin/flea
 bin/mutt
 bin/mutt_dotlock
+bin/muttbug
 bin/pgpewrap
 bin/pgpring
 ${PLIST.smime}bin/smime_keys
