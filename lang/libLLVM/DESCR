@@ -5,3 +5,8 @@ them.
 
 This package contains the LLVM core shared libraries intended to be usable by
 packages built on an otherwise GCC-built system.
+
+This package (lang/libLLVM) is libLLVM 4.0.  While it could be renamed
+to libLLVM4, that has not happened -- but it is intended to be a fixed
+version.  lang/libLLVM provides 3.4, for depending packages that need
+an even older version.
