@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/08/25 17:03:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/04 15:52:20 bsiegert Exp $
 
 DISTNAME=	prose-0.0.20170806
 PKGNAME=	go-${DISTNAME}
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jdkato/}
 CATEGORIES=	textproc
 GITHUB_TAG=	a678fc7b3ceb0f38ff832c337dea083902c349b2

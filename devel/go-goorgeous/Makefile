@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/08/25 17:03:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/04 15:52:14 bsiegert Exp $
 
 DISTNAME=	goorgeous-0.0.20170816
 PKGNAME=	go-${DISTNAME}
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chaseadamsio/}
 CATEGORIES=	devel
 GITHUB_TAG=	16f200711ca25290fa82178ce651f31f0fea17d8
