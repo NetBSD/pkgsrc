@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2018/03/04 09:21:04 kamil Exp $
+bin/flamegraph-aix-perf
+bin/flamegraph-difffolded
+bin/flamegraph-files
+bin/flamegraph-flamegraph
+bin/flamegraph-pkgsplit-perf
+bin/flamegraph-range-perf
+bin/flamegraph-stackcollapse
+bin/flamegraph-stackcollapse-aix
+bin/flamegraph-stackcollapse-elfutils
+bin/flamegraph-stackcollapse-gdb
+bin/flamegraph-stackcollapse-go
+bin/flamegraph-stackcollapse-instruments
+bin/flamegraph-stackcollapse-jstack
+bin/flamegraph-stackcollapse-ljp
+bin/flamegraph-stackcollapse-perf
+bin/flamegraph-stackcollapse-pmc
+bin/flamegraph-stackcollapse-recursive
+bin/flamegraph-stackcollapse-stap
+bin/flamegraph-stackcollapse-vsprof
+bin/flamegraph-stackcollapse-vtune
