@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1028 2018/03/04 15:28:14 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1029 2018/03/04 15:29:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1430,3 +1430,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Test2-Suite to 0.000102 [wiz 2018-03-04]
 	Updated emulators/ucon64 to 2.1.0 [wiz 2018-03-04]
 	Updated misc/p5-Locale-Codes to 3.56 [wiz 2018-03-04]
+	Updated net/p5-Net-FTPSSL to 0.40 [wiz 2018-03-04]
