@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2017/01/16 14:06:43 mef Exp $
+# $NetBSD: Makefile,v 1.27 2018/03/04 16:16:46 wiz Exp $
 
 DISTNAME=	bugzilla-3.6.8
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=webtools/archived/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.bugzilla.org/
+HOMEPAGE=	https://www.bugzilla.org/
 COMMENT=	Web based bug tracking system
 LICENSE=	mpl-1.0
 
