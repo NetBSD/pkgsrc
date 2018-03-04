@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1039 2018/03/04 20:35:21 rillig Exp $
+$NetBSD: CHANGES-2018,v 1.1040 2018/03/04 21:24:42 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1044,6 +1044,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/leptonica to 1.75.3 [adam 2018-02-20]
 	Updated textproc/p5-XML-SAX to 1.00 [wen 2018-02-20]
 	Updated textproc/p5-Text-Template to 1.50 [wen 2018-02-20]
+	Updated x11/lesstif to 0.95.2nb6 [dholland 2018-02-20]
 	Updated devel/p5-PathTools to 3.74 [wen 2018-02-20]
 	Updated devel/p5-Object-Realize-Later to 0.21 [wen 2018-02-20]
 	Updated devel/p5-Module-ExtractUse to 0.342 [wen 2018-02-20]
