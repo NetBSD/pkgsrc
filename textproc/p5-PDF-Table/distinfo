@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2017/11/24 14:37:00 wiz Exp $
+$NetBSD: distinfo,v 1.9 2018/03/04 15:35:17 wiz Exp $
 
-SHA1 (PDF-Table-0.9.14.tar.gz) = 8b28b6a42cca75eab82598a4a2c424c93ccfb682
-RMD160 (PDF-Table-0.9.14.tar.gz) = ddb8baa37dd8b94b8f133a4d5f571cb7e2253b5d
-SHA512 (PDF-Table-0.9.14.tar.gz) = dbc6b9c8dbd7ea3e14e5fad94655abe21a29f741c6ce2d88f6484cbb8340188505d355657a583c3c67b307573bed7208f2aa46c0309553ebd1cba44c2600d4dd
-Size (PDF-Table-0.9.14.tar.gz) = 28069 bytes
+SHA1 (PDF-Table-0.10.0.tar.gz) = 9c041834d869d955f45338ff5bc2bc1687315dd3
+RMD160 (PDF-Table-0.10.0.tar.gz) = f9f85b40f7241faa0a8ff957d1f1e740e446097b
+SHA512 (PDF-Table-0.10.0.tar.gz) = ca375ed6d7e2b342dfa030e2f27b46e76661909b29abfc29e11a099120849c007293c9e2189fe43f94e8f9992fa2e0d693e992d2d1b53bb884eaf3a97b6bfcee
+Size (PDF-Table-0.10.0.tar.gz) = 28360 bytes
