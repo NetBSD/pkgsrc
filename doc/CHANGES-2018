@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1022 2018/03/04 12:12:14 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1023 2018/03/04 12:12:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1424,3 +1424,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Module-FromPerlVer to 0.000004 [wiz 2018-03-04]
 	Updated devel/p5-Module-Install-RTx to 0.40 [wiz 2018-03-04]
 	Updated devel/memcached to 1.5.6 [he 2018-03-04]
+	Updated textproc/ruby-rails-dom-testing to 1.0.9 [taca 2018-03-04]
