@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2017/05/02 17:06:30 fhajny Exp $
-
-#PKGREVISION=	#
+# $NetBSD: Makefile,v 1.12 2018/03/04 15:52:18 bsiegert Exp $
 
 COMMENT=	Go supplementary cryptography libraries
+PKGREVISION=	1
 
 GO_SRCPATH=	golang.org/x/crypto
 GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}*

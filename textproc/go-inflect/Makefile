@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/08/25 17:03:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/04 15:52:19 bsiegert Exp $
 
 DISTNAME=	inflect-0.0.20170411
 PKGNAME=	go-${DISTNAME}
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=markbates/}
 CATEGORIES=	textproc
 GITHUB_TAG=	6cacb66d100482ef7cc366289ccb156020e57e76
