@@ -80,13 +80,20 @@ func (s *Suite) Test_VartypeCheck_CFlag(c *check.C) {
 func (s *Suite) Test_VartypeCheck_Comment(c *check.C) {
 	t := s.Init(c)
 
+	G.Pkg = NewPackage("category/converter")
+	G.Pkg.EffectivePkgbase = "converter"
+
 	runVartypeChecks(t, "COMMENT", opAssign, (*VartypeCheck).Comment,
 		"Versatile Programming Language",
 		"TODO: Short description of the package",
 		"A great package.",
 		"some packages need a very very long comment to explain their basic usefulness",
 		"\"Quoting the comment is wrong\"",
-		"'Quoting the comment is wrong'")
+		"'Quoting the comment is wrong'",
+		"Package is a great package",
+		"Package is an awesome package",
+		"The Big New Package is a great package",
+		"Converter converts between measurement units")
 
 	t.CheckOutputLines(
 		"ERROR: fname:2: COMMENT must be set.",
@@ -95,7 +102,11 @@ func (s *Suite) Test_VartypeCheck_Comment(c *check.C) {
 		"WARN: fname:4: COMMENT should start with a capital letter.",
 		"WARN: fname:4: COMMENT should not be longer than 70 characters.",
 		"WARN: fname:5: COMMENT should not be enclosed in quotes.",
-		"WARN: fname:6: COMMENT should not be enclosed in quotes.")
+		"WARN: fname:6: COMMENT should not be enclosed in quotes.",
+		"WARN: fname:7: COMMENT should not contain \"is a\".",
+		"WARN: fname:8: COMMENT should not contain \"is an\".",
+		"WARN: fname:9: COMMENT should not contain \"is a\".",
+		"WARN: fname:10: COMMENT should not start with the package name.")
 }
 
 func (s *Suite) Test_VartypeCheck_ConfFiles(c *check.C) {
@@ -616,6 +627,7 @@ func runVartypeChecks(t *Tester, varname string, op MkOperator, checker func(*Va
 	}
 	for i, value := range values {
 		mkline := t.NewMkLine("fname", i+1, varname+op.String()+value)
+		mkline.Tokenize(mkline.Value())
 		valueNovar := mkline.WithoutMakeVariables(mkline.Value())
 		vc := &VartypeCheck{mkline, mkline.Line, mkline.Varname(), mkline.Op(), mkline.Value(), valueNovar, "", false}
 		checker(vc)
