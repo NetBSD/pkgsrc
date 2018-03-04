@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1021 2018/03/04 11:46:42 he Exp $
+$NetBSD: CHANGES-2018,v 1.1022 2018/03/04 12:12:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1362,6 +1362,10 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xorgproto to 2018.4 [wiz 2018-03-01]
 	Updated x11/xkbcomp to 1.4.1 [wiz 2018-03-01]
 	Updated geography/proj to 5.0.0 [gdt 2018-03-02]
+	Updated lang/php71 to 7.1.15 [taca 2018-03-02]
+	Updated lang/php72 to 7.2.3 [taca 2018-03-02]
+	Updated lang/php70 to 7.0.28 [taca 2018-03-02]
+	Updated lang/php56 to 5.6.34 [taca 2018-03-02]
 	Updated devel/SDL2 to 2.0.8 [adam 2018-03-02]
 	Updated devel/gradle to 4.6 [fhajny 2018-03-02]
 	Updated lang/nodejs to 9.7.1 [fhajny 2018-03-02]
