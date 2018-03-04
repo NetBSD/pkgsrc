@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/08/25 17:03:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/04 15:52:15 bsiegert Exp $
 
 DISTNAME=	mapstructure-0.0.20160212
 PKGNAME=	go-${DISTNAME}
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mitchellh/}
 CATEGORIES=	devel
 GITHUB_TAG=	d2dd0262208475919e1a362f675cfc0e7c10e905
