@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/03/04 15:20:02 wiz Exp $
 bin/ucon64
 share/doc/ucon64/changes.html
 share/doc/ucon64/developers.html
@@ -6,6 +6,7 @@ share/doc/ucon64/faq.html
 share/doc/ucon64/hardware.html
 share/doc/ucon64/images/bg.jpg
 share/doc/ucon64/images/cameralink.png
+share/doc/ucon64/images/cd64.png
 share/doc/ucon64/images/cd_rw.png
 share/doc/ucon64/images/dexdrive.png
 share/doc/ucon64/images/f2a.png
@@ -13,16 +14,19 @@ share/doc/ucon64/images/fal.png
 share/doc/ucon64/images/fig.png
 share/doc/ucon64/images/gbx.png
 share/doc/ucon64/images/ggpro.png
-share/doc/ucon64/images/hr.png
 share/doc/ucon64/images/icon.png
 share/doc/ucon64/images/logo.png
 share/doc/ucon64/images/mdpro.png
 share/doc/ucon64/images/msg.png
 share/doc/ucon64/images/pcepro.png
+share/doc/ucon64/images/qd16.png
+share/doc/ucon64/images/sc.png
 share/doc/ucon64/images/sf3.png
+share/doc/ucon64/images/sflash.png
 share/doc/ucon64/images/smc.png
 share/doc/ucon64/images/smd.png
 share/doc/ucon64/images/smspro.png
+share/doc/ucon64/images/snesppak.png
 share/doc/ucon64/images/swc.png
 share/doc/ucon64/images/v64.png
 share/doc/ucon64/images/v64jr.png
