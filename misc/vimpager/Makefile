@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2017/10/24 04:24:40 maya Exp $
+# $NetBSD: Makefile,v 1.8 2018/03/04 16:26:51 wiz Exp $
 
 DISTNAME=	vimpager-1.8.9
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rkitover/}
 
 MAINTAINER=	nonakap@gmail.com
-HOMEPAGE=	http://www.vim.org/scripts/script.php?script_id=1723
+HOMEPAGE=	https://www.vim.org/scripts/script.php?script_id=1723
 COMMENT=	Use ViM as PAGER
 LICENSE=	2-clause-bsd
 
