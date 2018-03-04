@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.160 2017/12/08 20:12:43 bsiegert Exp $
+# $NetBSD: Makefile.common,v 1.161 2018/03/04 16:26:24 wiz Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk2/Makefile
@@ -17,7 +17,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=vim/}
 .include "../../mk/bsd.prefs.mk"
 
 MAINTAINER=		morr@NetBSD.org
-HOMEPAGE=		http://www.vim.org/
+HOMEPAGE=		https://www.vim.org/
 LICENSE=		vim-license
 
 CONFLICTS+=		vim-kde-[0-9]*
