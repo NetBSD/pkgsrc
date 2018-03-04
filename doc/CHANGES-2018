@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1024 2018/03/04 12:55:42 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.1025 2018/03/04 13:45:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1426,3 +1426,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/memcached to 1.5.6 [he 2018-03-04]
 	Updated textproc/ruby-rails-dom-testing to 1.0.9 [taca 2018-03-04]
 	Updated lang/go to 1.10 [bsiegert 2018-03-04]
+	Updated databases/ruby-arel to 8.0.0 [taca 2018-03-04]
