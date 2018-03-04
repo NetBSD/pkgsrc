@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1019 2018/03/04 11:15:30 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1020 2018/03/04 11:22:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1418,3 +1418,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/p5-DBD-ODBC to 1.57 [wiz 2018-03-04]
 	Updated databases/p5-DBD-SQLite to 1.56 [wiz 2018-03-04]
 	Updated devel/p5-Module-FromPerlVer to 0.000004 [wiz 2018-03-04]
+	Updated devel/p5-Module-Install-RTx to 0.40 [wiz 2018-03-04]
