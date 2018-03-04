@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2017/02/04 12:50:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.53 2018/03/04 09:24:53 kamil Exp $
 #
 
 COMMENT=	Benchmarking tools
@@ -14,6 +14,7 @@ SUBDIR+=	dnsperf
 SUBDIR+=	fib
 SUBDIR+=	filebench
 SUBDIR+=	fio
+SUBDIR+=	flamegraph
 SUBDIR+=	flops
 SUBDIR+=	forkbomb
 SUBDIR+=	glmark2
