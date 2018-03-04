@@ -101,23 +101,6 @@ func logs(level *LogLevel, fname, lineno, format, msg string) bool {
 }
 
 func Explain(explanation ...string) {
-	if G.opts.Explain {
-		complete := strings.Join(explanation, "\n")
-		if G.explanationsGiven[complete] {
-			return
-		}
-		if G.explanationsGiven == nil {
-			G.explanationsGiven = make(map[string]bool)
-		}
-		G.explanationsGiven[complete] = true
-
-		G.logOut.WriteLine("")
-		for _, explanationLine := range explanation {
-			G.logOut.WriteLine("\t" + explanationLine)
-		}
-		G.logOut.WriteLine("")
-	}
-
 	if G.Testing {
 		for _, s := range explanation {
 			if l := tabWidth(s); l > 68 && contains(s, " ") {
@@ -131,7 +114,30 @@ func Explain(explanation ...string) {
 			}
 		}
 	}
+
+	if !G.explainNext {
+		return
+	}
 	G.explanationsAvailable = true
+	if !G.opts.Explain {
+		return
+	}
+
+	complete := strings.Join(explanation, "\n")
+	if G.explanationsGiven[complete] {
+		return
+	}
+	if G.explanationsGiven == nil {
+		G.explanationsGiven = make(map[string]bool)
+	}
+	G.explanationsGiven[complete] = true
+
+	G.logOut.WriteLine("")
+	for _, explanationLine := range explanation {
+		G.logOut.WriteLine("\t" + explanationLine)
+	}
+	G.logOut.WriteLine("")
+
 }
 
 type pkglintFatal struct{}

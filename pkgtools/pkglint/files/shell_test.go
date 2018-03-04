@@ -109,6 +109,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
+	G.globalData.InitVartypes()
 
 	checkShellCommandLine := func(shellCommand string) {
 		G.Mk = t.NewMkLines("fname",
@@ -122,7 +123,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 
 	t.CheckOutputEmpty()
 
-	checkShellCommandLine("uname=`uname`; echo $$uname; echo")
+	checkShellCommandLine("uname=`uname`; echo $$uname; echo; ${PREFIX}/bin/command")
 
 	t.CheckOutputLines(
 		"WARN: fname:1: Unknown shell command \"uname\".",
@@ -466,6 +467,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__shell_variables(c *check.C
 	text := "\tfor f in *.pl; do ${SED} s,@PREFIX@,${PREFIX}, < $f > $f.tmp && ${MV} $f.tmp $f; done"
 
 	shline := t.NewShellLine("Makefile", 3, text)
+	shline.mkline.Tokenize(shline.mkline.Shellcmd())
 	shline.CheckShellCommandLine(text)
 
 	t.CheckOutputLines(

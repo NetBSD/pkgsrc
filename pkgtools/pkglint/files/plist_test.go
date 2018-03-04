@@ -36,7 +36,6 @@ func (s *Suite) Test_ChecklinesPlist(c *check.C) {
 			"Please use the CONF_FILES framework, which is described in mk/pkginstall/bsd.pkginstall.mk.",
 		"ERROR: PLIST:4: RCD_SCRIPTS must not be registered in the PLIST. Please use the RCD_SCRIPTS framework.",
 		"ERROR: PLIST:6: \"info/dir\" must not be listed. Use install-info to add/remove an entry.",
-		"WARN: PLIST:7: Library filename \"c.so\" should start with \"lib\".",
 		"WARN: PLIST:8: Redundant library found. The libtool library is in line 9.",
 		"WARN: PLIST:9: \"lib/libc.la\" should be sorted before \"lib/libc.so.6\".",
 		"WARN: PLIST:10: Preformatted manual page without unformatted one.",

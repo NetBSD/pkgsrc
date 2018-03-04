@@ -123,7 +123,8 @@ func (line *LineImpl) log(level *LogLevel, format string, args []interface{}) {
 		// These are logged by Autofix.Apply.
 		return
 	}
-	if !shallBeLogged(format) {
+	G.explainNext = shallBeLogged(format)
+	if !G.explainNext {
 		return
 	}
 
