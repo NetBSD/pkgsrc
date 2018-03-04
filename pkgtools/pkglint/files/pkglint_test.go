@@ -11,7 +11,7 @@ import (
 func (s *Suite) Test_Pkglint_Main_help(c *check.C) {
 	t := s.Init(c)
 
-	exitcode := new(Pkglint).Main("pkglint", "-h")
+	exitcode := G.Main("pkglint", "-h")
 
 	c.Check(exitcode, equals, 0)
 	c.Check(t.Output(), check.Matches, `^\Qusage: pkglint [options] dir...\E\n(?s).+`)
@@ -20,7 +20,7 @@ func (s *Suite) Test_Pkglint_Main_help(c *check.C) {
 func (s *Suite) Test_Pkglint_Main_version(c *check.C) {
 	t := s.Init(c)
 
-	exitcode := new(Pkglint).Main("pkglint", "--version")
+	exitcode := G.Main("pkglint", "--version")
 
 	c.Check(exitcode, equals, 0)
 	t.CheckOutputLines(
@@ -30,7 +30,7 @@ func (s *Suite) Test_Pkglint_Main_version(c *check.C) {
 func (s *Suite) Test_Pkglint_Main_no_args(c *check.C) {
 	t := s.Init(c)
 
-	exitcode := new(Pkglint).Main("pkglint")
+	exitcode := G.Main("pkglint")
 
 	c.Check(exitcode, equals, 1)
 	t.CheckOutputLines(
@@ -40,20 +40,20 @@ func (s *Suite) Test_Pkglint_Main_no_args(c *check.C) {
 func (s *Suite) Test_Pkglint_Main__only(c *check.C) {
 	t := s.Init(c)
 
-	exitcode := new(Pkglint).ParseCommandLine([]string{"pkglint", "-Wall", "-o", ":Q", "--version"})
+	exitcode := G.ParseCommandLine([]string{"pkglint", "-Wall", "-o", ":Q", "--version"})
 
 	if c.Check(exitcode, check.NotNil) {
 		c.Check(*exitcode, equals, 0)
 	}
 	c.Check(G.opts.LogOnly, deepEquals, []string{":Q"})
 	t.CheckOutputLines(
-		"@VERSION@")
+		confVersion)
 }
 
 func (s *Suite) Test_Pkglint_Main__unknown_option(c *check.C) {
 	t := s.Init(c)
 
-	exitcode := new(Pkglint).Main("pkglint", "--unknown-option")
+	exitcode := G.Main("pkglint", "--unknown-option")
 
 	c.Check(exitcode, equals, 1)
 	t.CheckOutputLines(
@@ -242,14 +242,14 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"Size (checkperms-1.12.tar.gz) = 6621 bytes",
 		"SHA1 (patch-checkperms.c) = asdfasdf") // Invalid SHA-1 checksum
 
-	new(Pkglint).Main("pkglint", "-Wall", "-Call", t.TempFilename("sysutils/checkperms"))
+	G.Main("pkglint", "-Wall", "-Call", t.TempFilename("sysutils/checkperms"))
 
 	t.CheckOutputLines(
 		"WARN: ~/sysutils/checkperms/Makefile:3: This package should be updated to 1.13 ([supports more file formats]).",
 		"ERROR: ~/sysutils/checkperms/Makefile:4: Invalid category \"tools\".",
 		"ERROR: ~/sysutils/checkperms/distinfo:7: SHA1 hash of patches/patch-checkperms.c differs "+
 			"(distinfo has asdfasdf, patch file has e775969de639ec703866c0336c4c8e0fdd96309c). "+
-			"Run \"@BMAKE@ makepatchsum\".",
+			"Run \""+confMake+" makepatchsum\".",
 		"WARN: ~/sysutils/checkperms/patches/patch-checkperms.c:12: Premature end of patch hunk "+
 			"(expected 1 lines to be deleted and 0 lines to be added)",
 		"2 errors and 2 warnings found.",
@@ -266,7 +266,7 @@ func (s *Suite) Test_Pkglint_coverage(c *check.C) {
 	cmdline := os.Getenv("PKGLINT_TESTCMDLINE")
 	if cmdline != "" {
 		G.logOut, G.logErr, trace.Out = NewSeparatorWriter(os.Stdout), NewSeparatorWriter(os.Stderr), os.Stdout
-		new(Pkglint).Main(append([]string{"pkglint"}, splitOnSpace(cmdline)...)...)
+		G.Main(append([]string{"pkglint"}, splitOnSpace(cmdline)...)...)
 	}
 }
 
@@ -275,7 +275,7 @@ func (s *Suite) Test_Pkglint_CheckDirent__outside(c *check.C) {
 
 	t.SetupFileLines("empty")
 
-	new(Pkglint).CheckDirent(t.TmpDir())
+	G.CheckDirent(t.TmpDir())
 
 	t.CheckOutputLines(
 		"ERROR: ~: Cannot determine the pkgsrc root directory for \"~\".")
@@ -289,24 +289,23 @@ func (s *Suite) Test_Pkglint_CheckDirent(c *check.C) {
 	t.SetupFileLines("category/Makefile")
 	t.SetupFileLines("Makefile")
 	G.globalData.Pkgsrcdir = t.TmpDir()
-	pkglint := new(Pkglint)
 
-	pkglint.CheckDirent(t.TmpDir())
+	G.CheckDirent(t.TmpDir())
 
 	t.CheckOutputLines(
 		"ERROR: ~/Makefile: Must not be empty.")
 
-	pkglint.CheckDirent(t.TempFilename("category"))
+	G.CheckDirent(t.TempFilename("category"))
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/Makefile: Must not be empty.")
 
-	pkglint.CheckDirent(t.TempFilename("category/package"))
+	G.CheckDirent(t.TempFilename("category/package"))
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/Makefile: Must not be empty.")
 
-	pkglint.CheckDirent(t.TempFilename("category/package/nonexistent"))
+	G.CheckDirent(t.TempFilename("category/package/nonexistent"))
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/nonexistent: No such file or directory.")
@@ -317,7 +316,7 @@ func (s *Suite) Test_resolveVariableRefs__circular_reference(c *check.C) {
 
 	mkline := t.NewMkLine("fname", 1, "GCC_VERSION=${GCC_VERSION}")
 	G.Pkg = NewPackage(".")
-	G.Pkg.vardef["GCC_VERSION"] = mkline
+	G.Pkg.vars.Define("GCC_VERSION", mkline)
 
 	resolved := resolveVariableRefs("gcc-${GCC_VERSION}")
 
@@ -340,12 +339,15 @@ func (s *Suite) Test_resolveVariableRefs__multilevel(c *check.C) {
 	c.Check(resolved, equals, "you got it")
 }
 
+// Usually, a dot in a variable name means a parameterized form.
+// In this case, it is part of a version number. Resolving these
+// variables from the scope works nevertheless.
 func (s *Suite) Test_resolveVariableRefs__special_chars(c *check.C) {
 	t := s.Init(c)
 
 	mkline := t.NewMkLine("fname", 10, "_=x11")
 	G.Pkg = NewPackage("category/pkg")
-	G.Pkg.vardef["GST_PLUGINS0.10_TYPE"] = mkline
+	G.Pkg.vars.Define("GST_PLUGINS0.10_TYPE", mkline)
 
 	resolved := resolveVariableRefs("gst-plugins0.10-${GST_PLUGINS0.10_TYPE}/distinfo")
 
