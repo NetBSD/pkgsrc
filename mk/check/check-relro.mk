@@ -1,6 +1,7 @@
-# $NetBSD: check-relro.mk,v 1.2 2017/07/05 15:49:00 khorben Exp $
+# $NetBSD: check-relro.mk,v 1.3 2018/03/04 20:45:19 rillig Exp $
 #
-# This file verifies that RELRO was applied accordingly at build-time.
+# This file verifies that RELRO (read-only relocations) was applied
+# accordingly at build-time.
 #
 # User-settable variables:
 #
