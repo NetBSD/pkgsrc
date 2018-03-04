@@ -9,6 +9,10 @@ import (
 	"strings"
 )
 
+// MkLine is a line from a Makefile fragment.
+// There are several types of lines.
+// The most common types in pkgsrc are variable assignments,
+// shell commands and preprocessor instructions.
 type MkLine = *MkLineImpl
 
 type MkLineImpl struct {
@@ -47,13 +51,11 @@ type mkLineDependency struct {
 	sources string
 }
 
-func NewMkLine(line Line) (mkline *MkLineImpl) {
-	mkline = &MkLineImpl{Line: line}
-
+func NewMkLine(line Line) *MkLineImpl {
 	text := line.Text
 
 	if hasPrefix(text, " ") {
-		mkline.Warnf("Makefile lines should not start with space characters.")
+		line.Warnf("Makefile lines should not start with space characters.")
 		Explain(
 			"If you want this line to contain a shell program, use a tab",
 			"character for indentation.  Otherwise please remove the leading",
@@ -85,7 +87,7 @@ func NewMkLine(line Line) (mkline *MkLineImpl) {
 		value = strings.Replace(value, "\\#", "#", -1)
 		varparam := varnameParam(varname)
 
-		mkline.data = mkLineAssign{
+		return &MkLineImpl{line, mkLineAssign{
 			commented,
 			varname,
 			varnameCanon(varname),
@@ -93,58 +95,48 @@ func NewMkLine(line Line) (mkline *MkLineImpl) {
 			NewMkOperator(op),
 			valueAlign,
 			value,
-			comment}
-		mkline.Tokenize(value)
-		return
+			comment}}
 	}
 
 	if hasPrefix(text, "\t") {
 		shellcmd := text[1:]
-		mkline.data = mkLineShell{shellcmd}
-		mkline.Tokenize(shellcmd)
-		return
+		return &MkLineImpl{line, mkLineShell{shellcmd}}
 	}
 
 	trimmedText := strings.TrimSpace(text)
 	if strings.HasPrefix(trimmedText, "#") {
-		mkline.data = mkLineComment{}
-		return
+		return &MkLineImpl{line, mkLineComment{}}
 	}
 
 	if trimmedText == "" {
-		mkline.data = mkLineEmpty{}
-		return
+		return &MkLineImpl{line, mkLineEmpty{}}
 	}
 
 	if m, indent, directive, args := matchMkCond(text); m {
-		mkline.data = mkLineConditional{indent, directive, args}
-		return
+		return &MkLineImpl{line, mkLineConditional{indent, directive, args}}
 	}
 
 	if m, indent, directive, includefile := MatchMkInclude(text); m {
-		mkline.data = mkLineInclude{directive == "include", false, indent, includefile, ""}
-		return
+		return &MkLineImpl{line, mkLineInclude{directive == "include", false, indent, includefile, ""}}
 	}
 
 	if m, indent, directive, includefile := match3(text, `^\.(\s*)(s?include)\s+<([^>]+)>\s*(?:#.*)?$`); m {
-		mkline.data = mkLineInclude{directive == "include", true, indent, includefile, ""}
-		return
+		return &MkLineImpl{line, mkLineInclude{directive == "include", true, indent, includefile, ""}}
 	}
 
 	if m, targets, whitespace, sources := match3(text, `^([^\s:]+(?:\s*[^\s:]+)*)(\s*):\s*([^#]*?)(?:\s*#.*)?$`); m {
-		mkline.data = mkLineDependency{targets, sources}
 		if whitespace != "" {
 			line.Warnf("Space before colon in dependency line.")
 		}
-		return
+		return &MkLineImpl{line, mkLineDependency{targets, sources}}
 	}
 
 	if matches(text, `^(<<<<<<<|=======|>>>>>>>)`) {
-		return
+		return &MkLineImpl{line, nil}
 	}
 
 	line.Errorf("Unknown Makefile line format.")
-	return mkline
+	return &MkLineImpl{line, nil}
 }
 
 func (mkline *MkLineImpl) String() string {

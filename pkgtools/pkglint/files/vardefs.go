@@ -362,6 +362,7 @@ func (gd *GlobalData) InitVartypes() {
 	sys("BSD_MAKE_ENV", lkShell, BtShellWord)
 	acl("BUILDLINK_ABI_DEPENDS.*", lkSpace, BtDependency, "builtin.mk: append, use-loadtime; *: append")
 	acl("BUILDLINK_API_DEPENDS.*", lkSpace, BtDependency, "builtin.mk: append, use-loadtime; *: append")
+	acl("BUILDLINK_AUTO_DIRS.*", lkNone, BtYesNo, "buildlink3.mk: append")
 	acl("BUILDLINK_CONTENTS_FILTER", lkNone, BtShellCommand, "")
 	sys("BUILDLINK_CFLAGS", lkShell, BtCFlag)
 	bl3list("BUILDLINK_CFLAGS.*", lkShell, BtCFlag)
@@ -579,6 +580,7 @@ func (gd *GlobalData) InitVartypes() {
 	pkg("GITHUB_TYPE", lkNone, enum("tag release"))
 	pkg("GMAKE_REQD", lkNone, BtVersion)
 	acl("GNU_ARCH", lkNone, enum("mips"), "")
+	acl("GNU_ARCH.*", lkNone, BtIdentifier, "buildlink3.mk:; *: set, use")
 	acl("GNU_CONFIGURE", lkNone, BtYes, "Makefile, Makefile.common: set")
 	acl("GNU_CONFIGURE_INFODIR", lkNone, BtPathname, "Makefile, Makefile.common: set")
 	acl("GNU_CONFIGURE_LIBDIR", lkNone, BtPathname, "Makefile, Makefile.common: set")
@@ -969,6 +971,7 @@ func (gd *GlobalData) InitVartypes() {
 	acl("USE_TOOLS", lkShell, BtTool, "*: append")
 	acl("USE_TOOLS.*", lkShell, BtTool, "*: append")
 	pkg("USE_X11", lkNone, BtYes)
+	sys("WARNINGS", lkShell, BtShellWord)
 	sys("WARNING_MSG", lkNone, BtShellCommand)
 	sys("WARNING_CAT", lkNone, BtShellCommand)
 	acl("WRAPPER_REORDER_CMDS", lkShell, BtWrapperReorder, "Makefile, Makefile.common, buildlink3.mk: append")
@@ -980,6 +983,14 @@ func (gd *GlobalData) InitVartypes() {
 	usr("XAW_TYPE", lkNone, enum("3d neXtaw standard xpm"))
 	acl("XMKMF_FLAGS", lkShell, BtShellWord, "")
 	pkglist("_WRAP_EXTRA_ARGS.*", lkShell, BtShellWord)
+
+	// Only for infrastructure files; see mk/misc/show.mk
+	acl("_VARGROUPS", lkSpace, BtIdentifier, "*: append")
+	acl("_USER_VARS.*", lkSpace, BtIdentifier, "*: append")
+	acl("_PKG_VARS.*", lkSpace, BtIdentifier, "*: append")
+	acl("_SYS_VARS.*", lkSpace, BtIdentifier, "*: append")
+	acl("_DEF_VARS.*", lkSpace, BtIdentifier, "*: append")
+	acl("_USE_VARS.*", lkSpace, BtIdentifier, "*: append")
 }
 
 func enum(values string) *BasicType {
