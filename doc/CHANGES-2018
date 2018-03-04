@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1027 2018/03/04 15:20:12 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1028 2018/03/04 15:28:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1429,3 +1429,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/ruby-arel to 8.0.0 [taca 2018-03-04]
 	Updated devel/p5-Test2-Suite to 0.000102 [wiz 2018-03-04]
 	Updated emulators/ucon64 to 2.1.0 [wiz 2018-03-04]
+	Updated misc/p5-Locale-Codes to 3.56 [wiz 2018-03-04]
