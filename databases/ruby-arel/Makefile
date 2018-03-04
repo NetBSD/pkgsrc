@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2017/07/30 22:32:11 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2018/03/04 13:45:21 taca Exp $
 
-DISTNAME=	arel-7.0.0
+DISTNAME=	arel-8.0.0
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
