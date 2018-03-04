@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1010 2018/03/04 01:03:40 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1011 2018/03/04 01:29:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1409,3 +1409,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/libreoffice to 6.0.2.1 [ryoon 2018-03-03]
 	Updated cross/arm-none-eabi-binutils to 2.30 [ryoon 2018-03-03]
 	Added math/R-coda version 0.19.1 [minskim 2018-03-04]
+	Updated databases/postgresql-postgis2 to 2.4.3 [ryoon 2018-03-04]
