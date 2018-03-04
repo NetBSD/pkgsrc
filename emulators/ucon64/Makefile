@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 12:55:20 asau Exp $
-#
+# $NetBSD: Makefile,v 1.11 2018/03/04 15:20:02 wiz Exp $
 
-DISTNAME=		ucon64-2.0.0-src
+DISTNAME=		ucon64-2.1.0-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		2
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ucon64/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ucon64.sourceforge.net/
 COMMENT=		Emulator ROM and disk image converter and inspector
+LICENSE=		gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 
-CONFIGURE_ARGS+=	--disable-discmage # requires some work
 CONFIGURE_ARGS+=	--disable-dload
 CPPFLAGS+=		-D__unix__
 GNU_CONFIGURE=		yes
