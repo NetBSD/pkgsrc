@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.27 2017/12/08 02:14:44 gdt Exp $
+# $NetBSD: Makefile,v 1.28 2018/03/04 01:47:39 gdt Exp $
 
 DISTNAME=	llvm-4.0.1.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
+# This package is 4.0 on purpose, so that depending packages are not
+# broken.  (It could be renamed libLLVM4.)
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://llvm.org/
