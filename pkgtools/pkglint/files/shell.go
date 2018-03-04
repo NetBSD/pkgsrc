@@ -457,7 +457,7 @@ func (scc *SimpleCommandChecker) checkCommandStart() {
 	case scc.handleCommandVariable():
 	case matches(shellword, `^(?::|break|cd|continue|eval|exec|exit|export|read|set|shift|umask|unset)$`):
 	case hasPrefix(shellword, "./"): // All commands from the current directory are fine.
-	case hasPrefix(shellword, "${PKGSRCDIR"): // With or without the :Q modifier
+	case matches(shellword, `\$\{(PKGSRCDIR|PREFIX)(:Q)?\}`):
 	case scc.handleComment():
 	default:
 		if G.opts.WarnExtra && !(G.Mk != nil && G.Mk.indentation.DependsOn("OPSYS")) {
@@ -520,7 +520,9 @@ func (scc *SimpleCommandChecker) handleCommandVariable() bool {
 	}
 
 	shellword := scc.strcmd.Name
-	if m, varname := match1(shellword, `^\$\{([\w_]+)\}$`); m {
+	parser := NewMkParser(scc.shline.mkline.Line, shellword, false)
+	if varuse := parser.VarUse(); varuse != nil && parser.EOF() {
+		varname := varuse.varname
 
 		if tool := G.globalData.Tools.byVarname[varname]; tool != nil {
 			if !G.Mk.tools[tool.Name] {
@@ -537,7 +539,10 @@ func (scc *SimpleCommandChecker) handleCommandVariable() bool {
 
 		// When the package author has explicitly defined a command
 		// variable, assume it to be valid.
-		if G.Pkg != nil && G.Pkg.vardef[varname] != nil {
+		if G.Mk != nil && G.Mk.vars.DefinedSimilar(varname) {
+			return true
+		}
+		if G.Pkg != nil && G.Pkg.vars.DefinedSimilar(varname) {
 			return true
 		}
 	}
