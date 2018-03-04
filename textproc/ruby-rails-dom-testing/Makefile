@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/06/21 15:42:11 taca Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/04 12:06:46 taca Exp $
 
-DISTNAME=	rails-dom-testing-1.0.8
-PKGREVISION=	1
+DISTNAME=	rails-dom-testing-1.0.9
 CATEGORIES=	textproc
 
 MAINTAINER=	minskim@NetBSD.org
