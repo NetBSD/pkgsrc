@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2018/01/30 17:05:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.62 2018/03/04 12:54:06 bsiegert Exp $
 
 .include "version.mk"
 
@@ -23,20 +23,16 @@ USE_TOOLS+=	bash:run perl:run pax
 TMPDIR?=	/tmp
 BUILDLINK_PASSTHRU_DIRS+= ${TMPDIR}
 
-GOROOT_FINAL=	${PREFIX}/go
-INSTALLATION_DIRS= bin
+GOROOT_FINAL=		${PREFIX}/go
+INSTALLATION_DIRS=	bin
 
 REPLACE_BASH+=	doc/articles/wiki/test.bash
 REPLACE_BASH+=	doc/codewalk/run
 REPLACE_BASH+=	lib/time/update.bash
 REPLACE_BASH+=	misc/arm/a
 REPLACE_BASH+=	misc/benchcmp
-REPLACE_BASH+=	misc/cgo/errors/test.bash
 REPLACE_BASH+=	misc/cgo/fortran/test.bash
-REPLACE_BASH+=	misc/cgo/testcshared/test.bash
 REPLACE_BASH+=	misc/cgo/testgodefs/test.bash
-REPLACE_BASH+=	misc/cgo/testplugin/test.bash
-REPLACE_BASH+=	misc/cgo/testsanitizers/test.bash
 REPLACE_BASH+=	misc/cgo/testplugin/test.bash
 REPLACE_BASH+=	misc/nacl/go_nacl_386_exec
 REPLACE_BASH+=	misc/nacl/go_nacl_amd64p32_exec
@@ -46,8 +42,8 @@ REPLACE_BASH+=	src/androidtest.bash
 REPLACE_BASH+=	src/bootstrap.bash
 REPLACE_BASH+=	src/buildall.bash
 REPLACE_BASH+=	src/clean.bash
-REPLACE_BASH+=	src/cmd/dist/mkdeps.bash
 REPLACE_BASH+=	src/cmd/go/mkalldocs.sh
+REPLACE_BASH+=	src/cmd/vendor/github.com/google/pprof/test.sh
 REPLACE_BASH+=	src/internal/trace/mkcanned.bash
 REPLACE_BASH+=	src/iostest.bash
 REPLACE_BASH+=	src/make.bash
@@ -71,6 +67,9 @@ CHECK_RELRO_SKIP+=		go/bin/gofmt
 CHECK_RELRO_SKIP+=		go/pkg/bootstrap/bin/asm
 CHECK_RELRO_SKIP+=		go/pkg/bootstrap/bin/compile
 CHECK_RELRO_SKIP+=		go/pkg/bootstrap/bin/link
+# also does not support SSP at this time
+CHECK_SSP_SKIP=			${CHECK_RELRO_SKIP}
+CHECK_SSP_SKIP+=		go/pkg/bootstrap/bin/cgo
 
 # uses /bin/rc (for Plan 9)
 CHECK_INTERPRETER_SKIP+=	go/include/plan9/mklibc.rc
@@ -84,7 +83,11 @@ GOROOT_BOOTSTRAP=	${PREFIX}/go14
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	route
+PLIST_VARS+=	pty route
+
+.if ${OPSYS} != "SunOS"
+PLIST.pty=	yes
+.endif
 
 .if ${OPSYS} != "Linux" && ${OPSYS} != "SunOS"
 PLIST.route=	yes
