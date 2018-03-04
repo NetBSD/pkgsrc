@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2016/06/08 22:34:29 wiz Exp $
-
-SHA1 (pyev-0.9.0.tar.gz) = a3df00899cf33bfbf108600ef033b86f556e3041
-RMD160 (pyev-0.9.0.tar.gz) = e12c36474aa023fc08c2466f9a422994c13c91c0
-SHA512 (pyev-0.9.0.tar.gz) = 05eafd70b843be8ee84a9a384fea9f222445930de00c5a6ac38c6e798f22165914fab3825be8e98e84fa68fdfe9e477718190a6939737667868b4badeb1eafa8
-Size (pyev-0.9.0.tar.gz) = 223943 bytes
-SHA1 (patch-setup.py) = 03d6a93fe99e493d6ab6d864b3fa95b41044e3cb
