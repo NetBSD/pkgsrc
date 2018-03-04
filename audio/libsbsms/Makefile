@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/09/16 19:26:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/04 18:26:42 rillig Exp $
 
 DISTNAME=	libsbsms-2.0.2
 CATEGORIES=	audio
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 # configure script demands -msse; should be taught to use altivec and
 # whatever else on other platforms. Except where nonexistent.
-BROKEN_EXCEPT_FOR_PLATFORM=	*-*-i386 *-*-x86_64
+BROKEN_EXCEPT_ON_PLATFORM=	*-*-i386 *-*-x86_64
 NOT_FOR_PLATFORM=		*-*-m68k
 
 GNU_CONFIGURE=	yes
