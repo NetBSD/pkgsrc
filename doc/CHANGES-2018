@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1031 2018/03/04 15:32:45 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1032 2018/03/04 15:35:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1433,3 +1433,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/p5-Net-FTPSSL to 0.40 [wiz 2018-03-04]
 	Updated net/p5-SNMP-Info to 3.49 [wiz 2018-03-04]
 	Updated security/p5-Mozilla-CA to 20180117 [wiz 2018-03-04]
+	Updated textproc/p5-PDF-Table to 0.10.0 [wiz 2018-03-04]
