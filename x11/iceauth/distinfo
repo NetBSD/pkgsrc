@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 03:28:33 agc Exp $
+$NetBSD: distinfo,v 1.8 2018/03/05 09:31:00 wiz Exp $
 
-SHA1 (iceauth-1.0.7.tar.bz2) = 83d67e47167de52192c679a0f0a41f4ba51a5b94
-RMD160 (iceauth-1.0.7.tar.bz2) = a5d042212fadfe4c5c96fc197c7789d7a7f517de
-SHA512 (iceauth-1.0.7.tar.bz2) = 4fe08b3137904c99219456716879cbdf5b49ca9bf390011ffb44b1e896f9a6e008b5f761346a533e682f5cfbf18d18a859c74ad4268ec8d40002ffb79c33bcd7
-Size (iceauth-1.0.7.tar.bz2) = 135656 bytes
+SHA1 (iceauth-1.0.8.tar.bz2) = 2ce23c40a17d98badeb8ce70d26e81a5ac0e178c
+RMD160 (iceauth-1.0.8.tar.bz2) = 2f8fa01648478c04c6f0430e02487e2319a3980c
+SHA512 (iceauth-1.0.8.tar.bz2) = 9d4520adf951b16a3e784349dbb70d5d8176b74b956f8adc63abf55d049745c113b03ccfa60a281fc39b487db3742302dc6287c9985ce83a0157bf4674df2af1
+Size (iceauth-1.0.8.tar.bz2) = 137905 bytes
