@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2018/02/25 19:29:15 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2018/03/05 07:20:00 wiz Exp $
 
 DISTNAME=	Catalyst-Runtime-5.90117
 PKGNAME=	p5-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	p5-MooseX-MethodAttributes>=0.24:../../devel/p5-MooseX-MethodAttribute
 DEPENDS+=	p5-MooseX-Role-WithOverloading>=0.09:../../devel/p5-MooseX-Role-WithOverloading
 DEPENDS+=	p5-MooseX-Types-LoadableClass>=0.03:../../devel/p5-MooseX-Types-LoadableClass
 DEPENDS+=	p5-Class-C3-Adopt-NEXT>=0.07:../../devel/p5-Class-C3-Adopt-NEXT
-DEPENDS+=	p5-CGI-Simple>=1.109:../../www/p5-CGI-Simple
+DEPENDS+=	p5-CGI-Simple-[0-9]*:../../www/p5-CGI-Simple
 DEPENDS+=	p5-Data-Dump>=0:../../devel/p5-Data-Dump
 DEPENDS+=	p5-HTML-Parser>=0:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTTP-Body>=1.06:../../www/p5-HTTP-Body
