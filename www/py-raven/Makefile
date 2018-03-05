@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2018/01/24 10:20:32 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/05 09:08:22 adam Exp $
 
-DISTNAME=	raven-6.5.0
+DISTNAME=	raven-6.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/raven/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/getsentry/raven-python
-COMMENT=	Raven is a client for Sentry
+COMMENT=	Client for Sentry
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
