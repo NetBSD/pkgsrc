@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2018/02/26 07:40:28 adam Exp $
+# $NetBSD: Makefile.common,v 1.28 2018/03/05 21:17:07 rjs Exp $
 # used by multimedia/ffmpeg3/Makefile
 # used by multimedia/ffplay3/Makefile
 
@@ -20,7 +20,6 @@ CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-optimizations
 CONFIGURE_ARGS+=	--disable-stripping
 CONFIGURE_ARGS+=	--enable-gpl
-CONFIGURE_ARGS+=	--enable-libbluray
 CONFIGURE_ARGS+=	--enable-libxml2
 CONFIGURE_ARGS+=	--enable-pthreads
 CONFIGURE_ARGS+=	--enable-shared
@@ -92,7 +91,6 @@ pre-configure:
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../multimedia/libbluray/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
