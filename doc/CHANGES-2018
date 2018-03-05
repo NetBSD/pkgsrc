@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1059 2018/03/05 14:13:56 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1060 2018/03/05 16:52:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1464,3 +1464,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/py-django-sortedm2m version 1.5.0 [adam 2018-03-05]
 	Added graphics/py-exifread version 2.1.2 [adam 2018-03-05]
 	Updated www/py-django-photologue to 3.8.1 [adam 2018-03-05]
+	Added math/R-numDeriv version 2016.8.1 [minskim 2018-03-05]
