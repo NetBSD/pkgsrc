@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1049 2018/03/05 10:20:32 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1050 2018/03/05 10:21:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1452,3 +1452,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/iceauth to 1.0.8 [wiz 2018-03-05]
 	Updated x11/xcb-proto to 1.13 [wiz 2018-03-05]
 	Updated x11/py-xcbgen to 1.13 [wiz 2018-03-05]
+	Updated x11/libxcb to 1.13 [wiz 2018-03-05]
