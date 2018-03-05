@@ -1,0 +1,1 @@
+bin/exifread @PREFIX@/bin/exifread-@PYVERSSUFFIX@
