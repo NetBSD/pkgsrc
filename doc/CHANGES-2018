@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1052 2018/03/05 12:51:07 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1053 2018/03/05 13:04:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1455,3 +1455,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/libxcb to 1.13 [wiz 2018-03-05]
 	Updated devel/lua-posix to 34.0.4 [ryoon 2018-03-05]
 	Updated www/py-hyperlink to 18.0.0 [adam 2018-03-05]
+	Updated textproc/py-JWT to 1.6.0 [adam 2018-03-05]
