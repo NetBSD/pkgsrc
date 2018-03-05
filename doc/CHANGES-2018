@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1044 2018/03/05 09:27:20 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1045 2018/03/05 09:29:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1447,3 +1447,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/xorg-util-macros to 1.19.2 [wiz 2018-03-05]
 	Updated x11/editres to 1.0.7 [wiz 2018-03-05]
 	Updated x11/appres to 1.0.5 [wiz 2018-03-05]
+	Updated x11/listres to 1.0.4 [wiz 2018-03-05]
