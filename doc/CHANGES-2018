@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1045 2018/03/05 09:29:06 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1046 2018/03/05 09:30:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1448,3 +1448,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/editres to 1.0.7 [wiz 2018-03-05]
 	Updated x11/appres to 1.0.5 [wiz 2018-03-05]
 	Updated x11/listres to 1.0.4 [wiz 2018-03-05]
+	Updated x11/viewres to 1.0.5 [wiz 2018-03-05]
