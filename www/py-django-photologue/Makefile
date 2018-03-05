@@ -1,22 +1,21 @@
-# $NetBSD: Makefile,v 1.10 2017/01/01 14:44:04 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/03/05 14:13:22 adam Exp $
 
-DISTNAME=	django-photologue-2.5
+DISTNAME=	django-photologue-3.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-photologue/}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/jdriscoll/django-photologue/
+HOMEPAGE=	https://github.com/jdriscoll/django-photologue
 COMMENT=	Plug-in photo management application for the Django framework
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-imaging-[0-9]*:../../graphics/py-imaging
-DEPENDS+=	${PYPKGPREFIX}-django-south-[0-9]*:../../www/py-django-south
-DEPENDS+=	${PYPKGPREFIX}-django-tagging-[0-9]*:../../www/py-django-tagging
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=4.3.0:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-django>=1.11:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django-sortedm2m>=1.5.0:../../www/py-django-sortedm2m
+DEPENDS+=	${PYPKGPREFIX}-exifread>=2.1.2:../../graphics/py-exifread
 
-USE_LANGUAGES=		# none
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-django-tagging, py-imaging
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
