@@ -1,1 +1,5 @@
-A POSIX library (including curses) for lua.
+This is a POSIX binding for LuaJIT, Lua 5.1, 5.2 and 5.3; like most
+libraries it simply binds to C APIs on the underlying system, so
+it won't work on non-POSIX systems. However, it does try to detect
+the level of POSIX conformance of the underlying system and bind
+only available APIs.
