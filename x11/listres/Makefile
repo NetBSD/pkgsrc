@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2012/10/29 05:06:39 asau Exp $
-#
+# $NetBSD: Makefile,v 1.9 2018/03/05 09:28:57 wiz Exp $
 
-DISTNAME=		listres-1.0.3
+DISTNAME=		listres-1.0.4
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
@@ -15,8 +14,6 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
-
-.include "../../meta-pkgs/modular-xorg/hacks.mk"
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
