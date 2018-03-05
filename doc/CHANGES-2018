@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1042 2018/03/05 09:22:46 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1043 2018/03/05 09:26:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1445,3 +1445,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-raven to 6.6.0 [adam 2018-03-05]
 	Updated www/py-aiohttp to 3.0.6 [adam 2018-03-05]
 	Updated devel/xorg-util-macros to 1.19.2 [wiz 2018-03-05]
+	Updated x11/editres to 1.0.7 [wiz 2018-03-05]
