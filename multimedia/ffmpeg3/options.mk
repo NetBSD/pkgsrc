@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.10 2017/10/18 20:25:41 adam Exp $
+# $NetBSD: options.mk,v 1.11 2018/03/05 21:17:07 rjs Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg3
-PKG_SUPPORTED_OPTIONS=	ass doc fdk-aac fontconfig freetype gnutls \
+PKG_SUPPORTED_OPTIONS=	ass bluray doc fdk-aac fontconfig freetype gnutls \
 			lame libvpx opencore-amr openssl opus rpi \
 			rtmp theora vorbis x11 x264 x265 xcb xvid
-PKG_SUGGESTED_OPTIONS=	lame ass freetype fontconfig libvpx openssl \
+PKG_SUGGESTED_OPTIONS=	lame ass bluray freetype fontconfig libvpx openssl \
 			theora vorbis x11 x264 xvid
 
 PLIST_VARS+=		doc
@@ -211,3 +211,12 @@ CONFIGURE_ARGS+=	--enable-libxcb-xfixes
 .else
 CONFIGURE_ARGS+=	--disable-libxcb
 .endif
+
+# Bluray support
+.if !empty(PKG_OPTIONS:Mbluray)
+CONFIGURE_ARGS+=	--enable-libbluray
+.include "../../multimedia/libbluray/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libbluray
+.endif
+
