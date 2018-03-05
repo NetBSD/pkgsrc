@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1050 2018/03/05 10:21:04 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1051 2018/03/05 12:46:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1453,3 +1453,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xcb-proto to 1.13 [wiz 2018-03-05]
 	Updated x11/py-xcbgen to 1.13 [wiz 2018-03-05]
 	Updated x11/libxcb to 1.13 [wiz 2018-03-05]
+	Updated devel/lua-posix to 34.0.4 [ryoon 2018-03-05]
