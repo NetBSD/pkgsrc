@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.3 2017/08/27 13:09:34 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/05 12:31:17 adam Exp $
 
-DISTNAME=	hyperlink-17.3.1
+DISTNAME=	hyperlink-18.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hyperlink/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/python-hyper/hyperlink/
+HOMEPAGE=	https://github.com/python-hyper/hyperlink
 COMMENT=	Featureful, correct URL for Python
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=		# empty
+DEPENDS+=	${PYPKGPREFIX}-idna>=2.5:../../www/py-idna
+
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
