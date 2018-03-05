@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/03/05 16:57:36 minskim Exp $
+
+SHA1 (R/emdbook_1.3.9.tar.gz) = 4093e73bf53fffb41c63226167d131d3fc519fed
+RMD160 (R/emdbook_1.3.9.tar.gz) = f23b7dcb2e2c9cede633a55db7a127040f06a1f7
+SHA512 (R/emdbook_1.3.9.tar.gz) = c5bc1b0ca5dd1b094107198f35e625bba2dbcb32280af8fd9d06bc4ae434fdcad67bea6af9b7462a80f8f6c6d2a66f5a5c849f94c48e0a11172a0d9ffceaba06
+Size (R/emdbook_1.3.9.tar.gz) = 85314 bytes
