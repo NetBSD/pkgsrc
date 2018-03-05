@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1043 2018/03/05 09:26:03 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1044 2018/03/05 09:27:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1446,3 +1446,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-aiohttp to 3.0.6 [adam 2018-03-05]
 	Updated devel/xorg-util-macros to 1.19.2 [wiz 2018-03-05]
 	Updated x11/editres to 1.0.7 [wiz 2018-03-05]
+	Updated x11/appres to 1.0.5 [wiz 2018-03-05]
