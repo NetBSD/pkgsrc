@@ -1,5 +1,5 @@
-This package provides editres, a program to display the widget tree of
-applications with Editres protocol support and dynamically alter the
-resource specification for those.
+Editres is a tool that allows users and application developers to view
+the full widget hierarchy of any Xt Toolkit application that speaks the
+Editres protocol.
 
 This is from the modular X.org X11 project.
