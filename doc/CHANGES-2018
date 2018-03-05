@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1055 2018/03/05 13:10:04 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1056 2018/03/05 13:36:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1458,3 +1458,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-JWT to 1.6.0 [adam 2018-03-05]
 	Updated devel/p5-Module-FromPerlVer to 0.000005 [wiz 2018-03-05]
 	Updated devel/p5-FindBin-libs to 2.16 [wiz 2018-03-05]
+	Updated converters/help2man to 1.47.6 [adam 2018-03-05]
