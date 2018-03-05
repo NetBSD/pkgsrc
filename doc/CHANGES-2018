@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1057 2018/03/05 14:00:22 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1058 2018/03/05 14:05:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1461,3 +1461,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated converters/help2man to 1.47.6 [adam 2018-03-05]
 	Updated www/py-selenium to 3.10.0 [adam 2018-03-05]
 	Updated devel/py-hypothesis to 3.48.0 [adam 2018-03-05]
+	Added www/py-django-sortedm2m version 1.5.0 [adam 2018-03-05]
+	Added graphics/py-exifread version 2.1.2 [adam 2018-03-05]
