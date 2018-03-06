@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.180 2018/01/01 21:18:40 adam Exp $
+# $NetBSD: Makefile,v 1.181 2018/03/06 01:43:44 minskim Exp $
 
 DISTNAME=	R-3.4.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-3/}
 
@@ -63,13 +63,17 @@ CONFIGURE_ARGS+=	--with-x
 PLIST.x11=		yes
 .endif
 
-# Use BLAS (math/blas)
+# Use BLAS
+.if exists(/System/Library/Frameworks/Accelerate.framework)
+CONFIGURE_ARGS+=	--with-blas="-framework Accelerate"
+.else
 CONFIGURE_ARGS+=	--without-atlas
 CONFIGURE_ARGS+=	--disable-BLAS-shlib
 CONFIGURE_ARGS+=	--with-blas
 CONFIGURE_ARGS+=	--without-blas_risc
 CONFIGURE_ARGS+=	--without-dxml
 CONFIGURE_ARGS+=	--without-libmoto
+.endif
 
 # Work around missing MAIN__() definition used in -lF77 by AC_CHECK_LIB.
 # and other failures due to not linking to support libs during testing
@@ -175,8 +179,10 @@ fix-darwin-install-name:
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.if !exists(/System/Library/Frameworks/Accelerate.framework)
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
+.endif
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 
