@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1064 2018/03/06 08:03:53 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1065 2018/03/06 08:34:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1470,3 +1470,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/R to 3.4.3nb2 [minskim 2018-03-06]
 	Updated devel/py-flake8-import-order to 0.17.1 [adam 2018-03-06]
 	Updated devel/py-freezegun to 0.3.10 [adam 2018-03-06]
+	Updated devel/py-test to 3.4.2 [adam 2018-03-06]
+	Updated devel/py-hypothesis to 3.48.1 [adam 2018-03-06]
