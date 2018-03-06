@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1.1.1 2009/11/10 16:19:57 wiz Exp $
---- src/vars_linuxppc.orig	2004-12-06 18:42:47.000000000 -0600
-+++ src/vars_linuxppc	2009-11-05 10:30:39.000000000 -0600
-@@ -2,7 +2,7 @@
+$NetBSD: patch-ad,v 1.2 2018/03/06 15:29:13 wiz Exp $
+--- src/vars_linuxppc.orig	2004-12-07 00:42:47.000000000 +0000
++++ src/vars_linuxppc
+@@ -2,11 +2,10 @@
  TARGET = xkegs
  OBJECTS = $(OBJECTS1) xdriver.o
  CC = cc
@@ -10,7 +10,11 @@ $NetBSD: patch-ad,v 1.1.1.1 2009/11/10 16:19:57 wiz Exp $
  OPTS =  -DNDEBUG
  SUFFIX =
  NAME = xkegs
-@@ -15,6 +15,6 @@
+-LDFLAGS =
+ LDOPTS =
+ LD = $(CC)
+ EXTRA_LIBS = -lXext -lX11 -lc
+@@ -15,6 +14,6 @@ EXTRA_SPECIALS = 
  AS = cc
  PERL = perl
  
