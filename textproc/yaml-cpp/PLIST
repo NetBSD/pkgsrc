@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/02/04 17:05:15 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/03/06 10:05:49 adam Exp $
 include/yaml-cpp/anchor.h
 include/yaml-cpp/binary.h
 include/yaml-cpp/contrib/anchordict.h
@@ -41,6 +41,6 @@ lib/cmake/yaml-cpp/yaml-cpp-config.cmake
 lib/cmake/yaml-cpp/yaml-cpp-targets-release.cmake
 lib/cmake/yaml-cpp/yaml-cpp-targets.cmake
 lib/libyaml-cpp.so
+lib/libyaml-cpp.so.${PKGVERSION}
 lib/libyaml-cpp.so.0.6
-lib/libyaml-cpp.so.0.6.0
 lib/pkgconfig/yaml-cpp.pc
