@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.28 2017/10/31 16:24:42 rillig Exp $
+# $NetBSD: help.awk,v 1.29 2018/03/06 23:49:37 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -9,6 +9,7 @@
 BEGIN {
 	no = 0; yes = 1; always = 1;
 
+	debug = ENVIRON["HELP_DEBUG"] != "";
 	topic = ENVIRON["TOPIC"];
 	uctopic = toupper(topic);
 	lctopic = tolower(topic);
@@ -36,6 +37,11 @@ BEGIN {
 function end_of_topic() {
 
 	if (comment_lines <= 2 || ignore_this_section) {
+		if (comment_lines <= 2) {
+			dprint("Ignoring section because of too small comment.");
+		} else {
+			dprint("Ignoring section because of a previous decision.");
+		}
 		cleanup();
 		return;
 	}
@@ -73,6 +79,12 @@ function cleanup() {
 	ignore_this_section = no;
 }
 
+function dprint(msg) {
+	if (debug) {
+		print(FILENAME ":" FNR ": " msg);
+	}
+}
+
 always {
 	ignore_this_line = (ignore_next_empty_line && $0 == "#") || $0 == "";
 	ignore_next_empty_line = no;
@@ -94,6 +106,7 @@ always {
 		w = ($i == toupper($i)) ? tolower($i) : $i;
 		sub(/,$/, "", w);
 		keywords[w] = yes;
+		dprint("Adding keyword " w);
 	}
 	ignore_this_line = yes;
 	ignore_next_empty_line = yes;
@@ -104,6 +117,7 @@ always {
 }
 
 $1 == "#" && $2 == "Copyright" {
+	dprint("Ignoring the section because it contains \"Copyright\".");
 	ignore_this_section = yes;
 }
 
@@ -123,7 +137,7 @@ $1 ~ /:$/ && $2 == ".PHONY" {
 # be all-lowercase (make targets) or all-uppercase (variable names).
 # Everything else is assumed to belong to the explaining text.
 #
-NF >= 1 && !/^[\t.]/ && !/^#*$/ {
+NF >= 1 && !/^[\t.]/ && !/^#*$/ && !/^#\t\t/ {
 	w = ($1 ~ /^\#[A-Z]/) ? substr($1, 2) : ($1 == "#") ? $2 : $1;
 
 	# Reduce VAR.<param>, VAR.${param} and VAR.* to VAR.
