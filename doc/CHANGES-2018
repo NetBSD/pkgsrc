@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1065 2018/03/06 08:34:07 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1066 2018/03/06 09:03:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1472,3 +1472,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-freezegun to 0.3.10 [adam 2018-03-06]
 	Updated devel/py-test to 3.4.2 [adam 2018-03-06]
 	Updated devel/py-hypothesis to 3.48.1 [adam 2018-03-06]
+	Updated devel/p5-Test-Simple to 1.302128 [wen 2018-03-06]
