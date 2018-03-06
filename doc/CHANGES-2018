@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1073 2018/03/06 15:50:52 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1074 2018/03/06 15:53:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1480,3 +1480,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/fxtv to 1.03nb22 [wiz 2018-03-06]
 	Updated x11/xmx to 2.1a7nb8 [wiz 2018-03-06]
 	Updated emulators/xbeeb to 0.4.1nb3 [wiz 2018-03-06]
+	Updated wm/bbrun to 1.3nb6 [wiz 2018-03-06]
