@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1077 2018/03/06 17:06:37 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1078 2018/03/06 17:08:01 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1484,3 +1484,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/contao35 to 3.5.34 [taca 2018-03-06]
 	Updated www/contao44 to 4.4.15 [taca 2018-03-06]
 	Added devel/R-bit version 1.1.12 [minskim 2018-03-06]
+	Added devel/R-bit64 version 0.9.7 [minskim 2018-03-06]
