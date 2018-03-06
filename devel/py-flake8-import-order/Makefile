@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/02/14 11:20:28 adam Exp $
+# $NetBSD: Makefile,v 1.10 2018/03/06 08:00:23 adam Exp $
 
-DISTNAME=	flake8-import-order-0.17
+DISTNAME=	flake8-import-order-0.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flake8-import-order/}
