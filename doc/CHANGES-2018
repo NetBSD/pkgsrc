@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1070 2018/03/06 15:31:32 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1071 2018/03/06 15:36:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1477,3 +1477,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated chat/libtlen to 20041113nb2 [wiz 2018-03-06]
 	Updated emulators/kegs to 0.91nb6 [wiz 2018-03-06]
 	Updated x11/xcalib to 0.8nb2 [wiz 2018-03-06]
+	Updated multimedia/fxtv to 1.03nb22 [wiz 2018-03-06]
