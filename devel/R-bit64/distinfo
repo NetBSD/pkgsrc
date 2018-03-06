@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/03/06 17:07:52 minskim Exp $
+
+SHA1 (R/bit64_0.9-7.tar.gz) = 0779849a5e5889d37cb009ecb5b331cdf8c2160a
+RMD160 (R/bit64_0.9-7.tar.gz) = c235ba55c2110c357b15cbf4f3e59b27219e5c74
+SHA512 (R/bit64_0.9-7.tar.gz) = 87a9667654b5ed2c0e3ecb5fb0d506ae5ce84763a5e860e8aa8a2ec1b14786c26ffd2d3505ffc430d41c49594c56af140c3ec0cd807c12319bee46581a2b8c96
+Size (R/bit64_0.9-7.tar.gz) = 125539 bytes
