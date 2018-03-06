@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2014/09/12 05:22:09 dholland Exp $
+# $NetBSD: Makefile,v 1.19 2018/03/06 15:48:09 wiz Exp $
 
 DISTNAME=	xmx-2.1alpha.pl7
 PKGNAME=	xmx-2.1a7
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.cs.brown.edu/pub/xmx/
 
@@ -16,8 +16,8 @@ COMMENT=	X11 Protocol Multiplexor
 
 MAKE_JOBS_SAFE=	no
 USE_IMAKE=	yes
-
-.include "../../mk/bsd.prefs.mk"
+MAKE_FLAGS+=	EXTRA_LDOPTIONS=${LDFLAGS:Q}
+MAKE_FLAGS+=	SHLIBGLOBALSFLAGS=${LDFLAGS:Q}
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
