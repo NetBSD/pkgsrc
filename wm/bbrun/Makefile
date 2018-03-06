@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2013/08/15 20:26:51 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2018/03/06 15:53:07 wiz Exp $
 
 DISTNAME=	bbrun-1.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	wm x11
 MASTER_SITES=	http://www.dwave.net/~jking/bbrun/
 
@@ -12,7 +12,8 @@ COMMENT=	Run utility for BlackBox
 WRKSRC=		${WRKDIR}/${DISTNAME}/bbrun
 USE_TOOLS+=	gmake
 BUILD_TARGET=	bbrun
-AUTO_MKDIRS=	yes
+
+INSTALLATION_DIRS=	bin share/doc/bbrun
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bbrun ${DESTDIR}${PREFIX}/bin
@@ -21,5 +22,4 @@ do-install:
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
