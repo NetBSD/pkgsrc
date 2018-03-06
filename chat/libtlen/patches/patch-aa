@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2010/01/28 20:07:26 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2018/03/06 15:17:04 wiz Exp $
 
---- lib/Makefile.in.orig	2003-01-16 04:33:32.000000000 -0600
+--- lib/Makefile.in.orig	2003-01-18 11:55:45.000000000 +0000
 +++ lib/Makefile.in
 @@ -13,7 +13,7 @@ VERSION_MAJOR=1
  VERSION_MINOR=5
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.5 2010/01/28 20:07:26 joerg Exp $
  $(STATIC): $(OBJS)
 -	$(AR) r $(STATIC) $(OBJS)
 -	$(RANLIB) $(STATIC)
-+	${LIBTOOL} --mode=link ${CC} -o ${STATIC:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info ${VERSION_MAJOR}:${VERSION_MINOR}
++	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} -o ${STATIC:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info ${VERSION_MAJOR}:${VERSION_MINOR}
 +
 +.c.o:
 +	${LIBTOOL} --mode=compile ${CC} -c ${CPPFLAGS} ${CFLAGS} $< -o $@
