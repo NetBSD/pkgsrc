@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1068 2018/03/06 15:17:12 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1069 2018/03/06 15:29:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1475,3 +1475,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Test-Simple to 1.302128 [wen 2018-03-06]
 	Updated textproc/yaml-cpp to 0.6.2 [adam 2018-03-06]
 	Updated chat/libtlen to 20041113nb2 [wiz 2018-03-06]
+	Updated emulators/kegs to 0.91nb6 [wiz 2018-03-06]
