@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2018/01/22 16:11:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2018/03/06 16:25:38 taca Exp $
 ${CT_WEBDIR}/.htaccess.default
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/1.1.9/ace.js
@@ -412,8 +412,6 @@ ${CT_WEBDIR}/system/config/default.php
 ${CT_WEBDIR}/system/cron/.htaccess
 ${CT_WEBDIR}/system/cron/cron.php
 ${CT_WEBDIR}/system/docs/CHANGELOG.md
-${CT_WEBDIR}/system/docs/GPL.txt
-${CT_WEBDIR}/system/docs/LGPL.txt
 ${CT_WEBDIR}/system/docs/LIMITATIONS.md
 ${CT_WEBDIR}/system/docs/UPGRADE.md
 ${CT_WEBDIR}/system/helper/exception.php
@@ -3474,6 +3472,8 @@ ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/Source.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/XML/Declaration/Parser.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/gzdecode.php
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.gitattributes
+${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.github/ISSUE_TEMPLATE.md
+${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.github/PULL_REQUEST_TEMPLATE.md
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.gitignore
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.php_cs.dist
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.travis.yml
