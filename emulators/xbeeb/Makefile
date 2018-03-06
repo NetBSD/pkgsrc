@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2014/06/01 16:48:31 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2018/03/06 15:50:44 wiz Exp $
 
 DISTNAME=	xbeeb-0.4.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators x11
 MASTER_SITES=	http://bbc.nvg.org/emul/Xbeeb/
 EXTRACT_SUFX=	.tgz
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.cloud9.co.uk/james/BBCMicro/Xbeeb/
 COMMENT=	Acorn BBC Micro emulator with an X based interface
 
 USE_IMAKE=	yes
+MAKE_FLAGS+=	EXTRA_LDOPTIONS=${LDFLAGS:Q}
 USE_TOOLS+=	bdftopcf xmkmf mkfontdir
 MAN_PAGE=	${WRKDIR}/xbeeb.1
 
