@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1083 2018/03/07 10:08:15 cheusov Exp $
+$NetBSD: CHANGES-2018,v 1.1084 2018/03/07 10:20:27 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1492,3 +1492,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/sudo to 1.8.22 [adam 2018-03-07]
 	Updated inputmethod/librime to 1.0nb8 [wiz 2018-03-07]
 	Updated devel/mk-configure to 0.30.0 [cheusov 2018-03-07]
+	Updated devel/libmaa to 1.4.2 [cheusov 2018-03-07]
