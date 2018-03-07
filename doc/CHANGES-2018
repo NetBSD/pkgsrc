@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1091 2018/03/07 12:14:33 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1092 2018/03/07 12:15:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1529,3 +1529,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed x11/xproxymanagementprotocol successor x11/xorgproto [wiz 2018-03-07]
 	Updated x11/libdrm to 2.4.91 [wiz 2018-03-07]
 	Updated x11/xf86-video-ati to 18.0.0 [wiz 2018-03-07]
+	Updated fonts/mkfontscale to 1.1.3 [wiz 2018-03-07]
