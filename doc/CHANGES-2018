@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1098 2018/03/07 16:46:49 pettai Exp $
+$NetBSD: CHANGES-2018,v 1.1099 2018/03/07 19:23:30 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1536,3 +1536,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/ucon64 to 2.1.0nb1 [wiz 2018-03-07]
 	Updated www/contao45 to 4.5.6 [taca 2018-03-07]
 	Updated net/knot to 2.4.5 [pettai 2018-03-07]
+	Added finance/R-tseries version 0.10.43 [minskim 2018-03-07]
