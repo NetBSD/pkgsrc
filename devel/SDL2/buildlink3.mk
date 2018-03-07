@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2015/04/25 14:20:31 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2018/03/07 11:57:29 wiz Exp $
 
 BUILDLINK_TREE+=	SDL2
 
@@ -24,7 +24,7 @@ pkgbase := SDL2
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.SDL2:Mx11)
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .endif
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2017/01/29 06:26:51 mef Exp $
-#
+# $NetBSD: Makefile,v 1.10 2018/03/07 11:57:40 wiz Exp $
 
 DISTNAME=	unicode-screensaver-0.5
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://www.joachim-breitner.de/archive/unicode-screensaver/
 
@@ -23,5 +23,5 @@ post-install:
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2016/03/14 01:47:44 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2018/03/07 11:57:47 wiz Exp $
 
 DISTNAME=	xrandr-1.5.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,11 +23,8 @@ SUBST_STAGE.nickle=	post-build
 SUBST_MESSAGE.nickle=	Fixing path to nickle.
 
 BUILDLINK_API_DEPENDS.libXrandr+=	libXrandr>=1.5.0
-BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.5.0
-.include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-BUILDLINK_API_DEPENDS.xproto+=	xproto>=7.0.17
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

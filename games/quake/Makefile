@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2018/01/14 15:26:48 rillig Exp $
+# $NetBSD: Makefile,v 1.53 2018/03/07 11:57:30 wiz Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.fu-berlin.de/pc/msdos/games/idgames/idstuff/source/
 MASTER_SITES+=	ftp://ftp.idsoftware.com/idstuff/source/
@@ -56,6 +56,6 @@ do-install:
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../x11/xf86dgaproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/09/16 19:27:31 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.3 2018/03/07 11:57:48 wiz Exp $
 
 DISTNAME=	xrx-1.0.4
+PKGREVISION=	1
 CATEGORIES=	net x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,7 +21,7 @@ USE_TOOLS+=	pkg-config
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
-.include "../../x11/xproxymanagementprotocol/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"

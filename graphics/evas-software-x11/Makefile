@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2016/03/05 11:28:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2018/03/07 11:57:30 wiz Exp $
 
 PKGNAME=	evas-software-x11-${EVAS_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	Evas software X11 engine
 
 EVAS_ENGINES=	software-xlib
@@ -15,15 +15,14 @@ MAKE_FLAGS+=	module_la_LIBADD="\$${EINA_LIBS} \$${evas_engine_software_x11_libs}
 INSTALLATION_DIRS+=	lib/pkgconfig
 PKGCONFIG_OVERRIDE=	evas-software-x11.pc.in
 
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/evas-software-x11.pc \
+		${DESTDIR}${PREFIX}/lib/pkgconfig
+
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/evas/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/evas-software-x11.pc \
-		${DESTDIR}${PREFIX}/lib/pkgconfig
-
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

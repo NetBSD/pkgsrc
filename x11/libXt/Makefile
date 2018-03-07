@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2016/02/26 11:27:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2018/03/07 11:57:37 wiz Exp $
 
 DISTNAME=		libXt-1.1.5
+PKGREVISION=		1
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -36,7 +37,5 @@ CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/kbproto/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
-
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

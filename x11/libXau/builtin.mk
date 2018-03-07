@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2014/03/10 11:56:02 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.6 2018/03/07 11:57:35 wiz Exp $
 
 BUILTIN_PKG:=	libXau
 
@@ -71,7 +71,7 @@ xau-fake-pc:
 	else \
 		req=""; \
 		if ${TEST} -f \
-			${BUILDLINK_PREFIX.xproto}/lib/pkgconfig/xproto.pc; then \
+			${BUILDLINK_PREFIX.xorgproto}/lib/pkgconfig/xproto.pc; then \
 			req="xproto"; \
 		fi; \
 		{ ${ECHO} "Name: Xau"; \
