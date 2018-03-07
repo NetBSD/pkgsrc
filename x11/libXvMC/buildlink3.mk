@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2011/01/19 17:50:48 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2018/03/07 11:57:37 wiz Exp $
 
 BUILDLINK_TREE+=	libXvMC
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.libXvMC?=	../../x11/libXvMC
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
-.include "../../x11/videoproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .endif # LIBXVMC_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libXvMC

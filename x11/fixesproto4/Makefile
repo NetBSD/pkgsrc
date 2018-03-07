@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/29 05:06:12 asau Exp $
+# $NetBSD: Makefile,v 1.3 2018/03/07 11:57:34 wiz Exp $
 #
 # This package is for use with Xfixes only. Do not update to later versions.
 
 DISTNAME=		fixesproto-4.0
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
@@ -24,7 +25,5 @@ PKG_FAIL_REASON+="This package is for native X11 only; use libXfixes instead."
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
-
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

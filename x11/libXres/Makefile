@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2017/10/11 16:45:43 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2018/03/07 11:57:37 wiz Exp $
 
 DISTNAME=		libXres-1.2.0
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -21,7 +22,5 @@ CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/resourceproto/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
-
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
