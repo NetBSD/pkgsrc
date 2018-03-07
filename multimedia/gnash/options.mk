@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2017/09/27 13:37:28 wiz Exp $
+# $NetBSD: options.mk,v 1.23 2018/03/07 11:57:31 wiz Exp $
 #
 
 #
@@ -72,7 +72,7 @@ GNASH_RENDER+=		cairo
 
 .if !empty(PKG_OPTIONS:Mopengl)
 GNASH_RENDER+=		ogl
-.include "../../x11/glproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .  if !empty(PKG_OPTIONS:Mgtk)
 .include "../../graphics/gtkglext/buildlink3.mk"
 .  endif

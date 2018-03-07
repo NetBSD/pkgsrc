@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2016/08/06 15:56:50 richard Exp $
+# $NetBSD: options.mk,v 1.7 2018/03/07 11:57:28 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pulseaudio
 PKG_SUPPORTED_OPTIONS=	avahi fftw x11
@@ -46,7 +46,7 @@ CONFIGURE_ARGS+=	--without-fftw
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 PLIST.x11=		yes
 .else
 CONFIGURE_ARGS+=	--disable-x11

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2015/09/07 12:02:07 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.80 2018/03/07 11:57:29 wiz Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	5
+PKGREVISION=	6
 
 USE_TOOLS+=	msgfmt
 
@@ -22,5 +21,5 @@ REPLACE_SH=		xmms-config.in
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/xf86vidmodeproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
