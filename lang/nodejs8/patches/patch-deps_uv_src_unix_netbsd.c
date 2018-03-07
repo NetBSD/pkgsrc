@@ -1,8 +1,8 @@
-$NetBSD: patch-deps_uv_src_unix_netbsd.c,v 1.1 2017/11/01 12:07:31 fhajny Exp $
+$NetBSD: patch-deps_uv_src_unix_netbsd.c,v 1.2 2018/03/07 11:45:06 fhajny Exp $
 
 Bring back support for NetBSD<8.
 
---- deps/uv/src/unix/netbsd.c.orig	2017-10-24 19:40:12.000000000 +0000
+--- deps/uv/src/unix/netbsd.c.orig	2018-03-06 22:55:45.000000000 +0000
 +++ deps/uv/src/unix/netbsd.c
 @@ -40,6 +40,11 @@
  #include <unistd.h>
@@ -13,10 +13,10 @@ Bring back support for NetBSD<8.
 +# include <sys/param.h>
 +#endif
 +
+ static uv_mutex_t process_title_mutex;
+ static uv_once_t process_title_mutex_once = UV_ONCE_INIT;
  static char *process_title;
- 
- 
-@@ -80,7 +85,11 @@ int uv_exepath(char* buffer, size_t* siz
+@@ -87,7 +92,11 @@ int uv_exepath(char* buffer, size_t* siz
    mib[0] = CTL_KERN;
    mib[1] = KERN_PROC_ARGS;
    mib[2] = -1;
