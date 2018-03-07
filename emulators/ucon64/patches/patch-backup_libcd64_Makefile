@@ -1,0 +1,54 @@
+$NetBSD: patch-backup_libcd64_Makefile,v 1.1 2018/03/07 12:34:55 wiz Exp $
+
+Patch from upstream to improve build on NetBSD.
+
+--- backup/libcd64/Makefile.orig	2016-02-11 00:32:59.000000000 +0000
++++ backup/libcd64/Makefile
+@@ -2,9 +2,9 @@ CC=gcc
+ 
+ ifdef DEBUG
+ # I think we only use gnu99 instead of c99 due to va_args extensions.
+-CFLAGS+=-I. -Wall -W -pg -g -pedantic -ansi -DDEBUG
++CFLAGS+=-I. -Wall -W -std=gnu99 -pg -g -pedantic -ansi -DDEBUG
+ else
+-CFLAGS+=-I. -Wall -W -O6 -funroll-loops -fexpensive-optimizations
++CFLAGS+=-I. -Wall -W -std=gnu99 -O6 -funroll-loops -fexpensive-optimizations
+ endif
+ 
+ ifndef DJGPP
+@@ -40,14 +40,6 @@ LDFLAGS+=-Wl,--out-implib,libcd64dll.a
+ endif
+ endif
+ 
+-# The next check is not really specific to FreeBSD or OpenBSD -- the version of
+-#  gcc I use is just old.
+-ifeq ($(findstring FreeBSD,$(OSTYPE)),)
+-ifeq ($(findstring OpenBSD,$(OSTYPE)),)
+-CFLAGS+=-std=gnu99
+-endif
+-endif
+-
+ 
+ DEFAULT_BUILD=1
+ 
+@@ -90,8 +82,18 @@ endif
+ 
+ ifeq ($(findstring OpenBSD,$(OSTYPE)),OpenBSD)
+ # i386_iopl() is located in libi386.a (note the .a)
+-LIBS+=/usr/lib/libi386.a
+-LDFLAGS+=-L/usr/lib -li386
++#LIBS+=/usr/lib/libi386.a
++#LDFLAGS+=-li386
++LIBS+=/usr/lib/libamd64.a
++LDFLAGS+=-lamd64
++RAWIO=1
++endif
++
++ifeq ($(findstring NetBSD,$(OSTYPE)),NetBSD)
++#LIBS+=/usr/lib/libi386.a
++#LDFLAGS+=-li386
++LIBS+=/usr/lib/libx86_64.a
++LDFLAGS+=-lx86_64
+ RAWIO=1
+ endif
+ 

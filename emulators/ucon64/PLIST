@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2018/03/04 15:20:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/03/07 12:34:55 wiz Exp $
 bin/ucon64
+lib/libdiscmage.so
 share/doc/ucon64/changes.html
 share/doc/ucon64/developers.html
 share/doc/ucon64/faq.html

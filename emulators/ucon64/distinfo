@@ -1,9 +1,16 @@
-$NetBSD: distinfo,v 1.8 2018/03/04 15:20:02 wiz Exp $
+$NetBSD: distinfo,v 1.9 2018/03/07 12:34:55 wiz Exp $
 
 SHA1 (ucon64-2.1.0-src.tar.gz) = 83506c965ba4ab6fa7122c9dcebbabe6c553cbc3
 RMD160 (ucon64-2.1.0-src.tar.gz) = b3b6b95a44cb50ac7e3634d07b1b50960fb971f8
 SHA512 (ucon64-2.1.0-src.tar.gz) = da2dbe8a573e7dc779f69859f4d3508d4818dcfd99b6b397a7b23a2038a1d8c85835fae9e237a1639ec6179e8ceabb95fd0d65f95f963de99bc61024f686580e
 Size (ucon64-2.1.0-src.tar.gz) = 1348408 bytes
-SHA1 (patch-Makefile) = 6e9ad6f6c02d109aee3a71f7abb3b68d43cedf15
-SHA1 (patch-libdiscmage_libdiscmage.h) = 07a52a12091c8220ba5fa50fd7926e77c772208d
-SHA1 (patch-misc_unzip.h) = 25434ddffb3ff1f5d69530ff08d70791bd4ac2ba
+SHA1 (patch-Makefile) = 9cfc3c474562d5073099286a9659e4e5d4cf5d2f
+SHA1 (patch-backup_libcd64_Makefile) = b46127daa77cd9516954365897247c8f33088883
+SHA1 (patch-backup_libcd64_cd64io.c) = b47d14bb41708caa5a582444d5f4ef35cda973ea
+SHA1 (patch-backup_libcd64_cd64io.h) = 026c79ecc577e701b27113d369e6c8d977f01d53
+SHA1 (patch-config.mak.in) = 87db3e62bbd5fa94fa83878b227e3ed3ff8920e1
+SHA1 (patch-configure) = a4b89f6885abe731b75f6277bc563ec992f8d0c9
+SHA1 (patch-configure.in) = 3d5a3ecad1b50499b001eda39ec0100d0ed8ee16
+SHA1 (patch-libdiscmage_libdiscmage.h) = 7a5ced96ae619fd843d3b1acdcd28788937cc79a
+SHA1 (patch-misc_parallel.c) = 164137f352049698a2ff4758bd3dda72ab4dadec
+SHA1 (patch-misc_unzip.h) = 3a065530cd80c74985a997459ee67847b8f75864
