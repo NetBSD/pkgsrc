@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/04/17 04:09:44 wen Exp $
+# $NetBSD: Makefile,v 1.2 2018/03/07 19:18:56 minskim Exp $
 #
 
 CATEGORIES=	math
@@ -13,6 +13,7 @@ R_PKGNAME=	nloptr
 R_PKGVER=	1.0.4
 
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	post-patch
