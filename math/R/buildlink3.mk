@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2018/01/07 13:04:21 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2018/03/07 23:16:03 minskim Exp $
 
 BUILDLINK_TREE+=	R
 
@@ -14,5 +14,9 @@ BUILDLINK_PKGSRCDIR.R?=		../../math/R
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.if !exists(/System/Library/Frameworks/Accelerate.framework)
+.include "../../math/blas/buildlink3.mk"
+.include "../../math/lapack/buildlink3.mk"
+.endif
 
 BUILDLINK_TREE+=	-R
