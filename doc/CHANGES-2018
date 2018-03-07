@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1082 2018/03/07 09:35:16 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1083 2018/03/07 10:08:15 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1491,3 +1491,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/exim-html to 4.90.1 [adam 2018-03-07]
 	Updated security/sudo to 1.8.22 [adam 2018-03-07]
 	Updated inputmethod/librime to 1.0nb8 [wiz 2018-03-07]
+	Updated devel/mk-configure to 0.30.0 [cheusov 2018-03-07]
