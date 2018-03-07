@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2016/03/05 11:29:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2018/03/07 11:57:38 wiz Exp $
 
 DISTNAME=	xorg-server-1.12.4
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -111,27 +111,10 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_header_sys_event_h=no
 INSTALLATION_DIRS+=	lib/xorg/modules/drivers lib/xorg/modules/input
 
 BUILDLINK_API_DEPENDS.MesaLib7+=	MesaLib7>=7.8.0<10
-BUILDLINK_API_DEPENDS.compositeproto+=	compositeproto>=0.4
-BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=5.0
-BUILDLINK_API_DEPENDS.damageproto+=	damageproto>=1.1
-BUILDLINK_API_DEPENDS.xcmiscproto+=	xcmiscproto>=1.2.0
 BUILDLINK_API_DEPENDS.xtrans+=		xtrans>=1.2.2
-BUILDLINK_API_DEPENDS.bigreqsproto+=	bigreqsproto>=1.1.0
-BUILDLINK_API_DEPENDS.xproto+=		xproto>=7.0.22
-BUILDLINK_API_DEPENDS.xextproto+=	xextproto>=7.1.99
-BUILDLINK_API_DEPENDS.recordproto+=	recordproto>=1.13.99.1
-BUILDLINK_API_DEPENDS.scrnsaverproto+=	scrnsaverproto>=1.1
-BUILDLINK_API_DEPENDS.resourceproto+=	resourceproto>=1.2.0
 BUILDLINK_API_DEPENDS.dri+=		dri>=7.8
 BUILDLINK_API_DEPENDS.xfont+=		xfont>=1.4.2
-BUILDLINK_API_DEPENDS.glproto+=		glproto>=1.4.16
-BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=2.1.99.6
-BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
 BUILDLINK_API_DEPENDS.pixman+=		pixman>=0.21.8
-BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.4.0
-BUILDLINK_API_DEPENDS.renderproto+=	renderproto>=0.11
-BUILDLINK_API_DEPENDS.xf86dgaproto+=	xf86dgaproto>=2.0.3
-BUILDLINK_API_DEPENDS.xf86driproto+=	xf86driproto>=2.1.0
 
 BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
@@ -146,15 +129,7 @@ CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 BUILDLINK_API_DEPENDS.libpciaccess+=	libpciaccess>=0.11.0
 BUILDLINK_DEPMETHOD.libpciaccess=	full
 .include "../../sysutils/libpciaccess/buildlink3.mk"
-.include "../../x11/bigreqsproto/buildlink3.mk"
-.include "../../x11/compositeproto/buildlink3.mk"
-.include "../../x11/damageproto/buildlink3.mk"
-.include "../../x11/dri2proto/buildlink3.mk"
 .include "../../x11/evieext/buildlink3.mk"
-.include "../../x11/fixesproto/buildlink3.mk"
-.include "../../x11/fontsproto/buildlink3.mk"
-.include "../../x11/glproto/buildlink3.mk"
-.include "../../x11/inputproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
@@ -170,23 +145,7 @@ BUILDLINK_API_DEPENDS.libXext+=	libXext>=1.1.1
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libxkbui/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
-.include "../../x11/randrproto/buildlink3.mk"
-.include "../../x11/recordproto/buildlink3.mk"
-.include "../../x11/renderproto/buildlink3.mk"
-.include "../../x11/resourceproto/buildlink3.mk"
-.include "../../x11/scrnsaverproto/buildlink3.mk"
-.include "../../x11/trapproto/buildlink3.mk"
-.include "../../x11/videoproto/buildlink3.mk"
-.include "../../x11/xcmiscproto/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
-.include "../../x11/kbproto/buildlink3.mk"
-.include "../../x11/xf86bigfontproto/buildlink3.mk"
-.include "../../x11/xf86dgaproto/buildlink3.mk"
-.include "../../x11/xf86driproto/buildlink3.mk"
-.include "../../x11/xf86miscproto/buildlink3.mk"
-.include "../../x11/xf86vidmodeproto/buildlink3.mk"
-.include "../../x11/xineramaproto/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

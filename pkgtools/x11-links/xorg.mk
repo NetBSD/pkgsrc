@@ -1,4 +1,4 @@
-# $NetBSD: xorg.mk,v 1.30 2018/03/02 15:14:12 wiz Exp $
+# $NetBSD: xorg.mk,v 1.31 2018/03/07 11:57:32 wiz Exp $
 #
 # This is for X.org, but use "xfree" files also.
 
@@ -14,15 +14,7 @@ FILES_LIST=	${FILESDIR}/xorg
 .include "../../graphics/glut/buildlink3.mk"
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../x11/bigreqsproto/buildlink3.mk"
-.include "../../x11/compositeproto/buildlink3.mk"
-.include "../../x11/damageproto/buildlink3.mk"
-.include "../../x11/dri2proto/buildlink3.mk"
 .include "../../x11/evieext/buildlink3.mk"
-.include "../../x11/fixesproto/buildlink3.mk"
-.include "../../x11/fontsproto/buildlink3.mk"
-.include "../../x11/glproto/buildlink3.mk"
-.include "../../x11/inputproto/buildlink3.mk"
 .include "../../x11/libFS/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
@@ -53,27 +45,11 @@ FILES_LIST=	${FILESDIR}/xorg
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
-.include "../../x11/presentproto/buildlink3.mk"
-.include "../../x11/printproto/buildlink3.mk"
-.include "../../x11/randrproto/buildlink3.mk"
-.include "../../x11/recordproto/buildlink3.mk"
-.include "../../x11/renderproto/buildlink3.mk"
-.include "../../x11/resourceproto/buildlink3.mk"
-.include "../../x11/scrnsaverproto/buildlink3.mk"
-.include "../../x11/trapproto/buildlink3.mk"
-.include "../../x11/videoproto/buildlink3.mk"
 .include "../../x11/xbitmaps/buildlink3.mk"
-.include "../../x11/xcmiscproto/buildlink3.mk"
 .include "../../x11/xcb-proto/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
-.include "../../x11/xf86bigfontproto/buildlink3.mk"
-.include "../../x11/xf86dgaproto/buildlink3.mk"
-.include "../../x11/xf86driproto/buildlink3.mk"
-.include "../../x11/xf86miscproto/buildlink3.mk"
-.include "../../x11/xf86vidmodeproto/buildlink3.mk"
 .include "../../x11/xkeyboard-config/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
-.include "../../x11/xproxymanagementprotocol/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
 
 # XXX  what is ${X11_MODULES} ?

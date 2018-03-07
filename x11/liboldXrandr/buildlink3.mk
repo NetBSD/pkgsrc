@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:25:47 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2018/03/07 11:57:38 wiz Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -12,7 +12,7 @@ BUILDLINK_ABI_DEPENDS.Xrandr+=	Xrandr>=1.0.2nb3
 BUILDLINK_PKGSRCDIR.Xrandr?=	../../x11/liboldXrandr
 
 .include "../../x11/libXrender/buildlink3.mk"
-.include "../../x11/randrproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .endif # XRANDR_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-Xrandr

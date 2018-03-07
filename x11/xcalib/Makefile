@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2018/03/06 15:31:13 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/03/07 11:57:40 wiz Exp $
 
 DISTNAME=	xcalib-source-0.8
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	${DISTNAME:C/-source//}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xcalib/}
@@ -31,7 +31,7 @@ do-build:
 do-install:
 	${SETENV} ${MAKE_ENV} ${LIBTOOL} --tag=CC --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/xcalib ${DESTDIR}${PREFIX}/bin/
 
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

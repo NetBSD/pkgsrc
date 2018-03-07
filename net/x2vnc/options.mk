@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2015/04/23 09:17:48 abs Exp $
+# $NetBSD: options.mk,v 1.3 2018/03/07 11:57:32 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.x2vnc
 
@@ -10,5 +10,5 @@ PKG_SUGGESTED_OPTIONS=
 
 .if !empty(PKG_OPTIONS:Mdga)
 . include "../../x11/libXxf86dga/buildlink3.mk"
-. include "../../x11/xf86dgaproto/buildlink3.mk"
+. include "../../x11/xorgproto/buildlink3.mk"
 .endif

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2018/01/02 05:37:22 maya Exp $
+# $NetBSD: Makefile,v 1.32 2018/03/07 11:57:31 wiz Exp $
 
 DISTNAME=		vnc-4_1_2-unixsrc
 PKGNAME=		vncviewer-4.1.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -31,7 +31,7 @@ do-install:
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../x11/inputproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"

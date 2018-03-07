@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2017/09/03 08:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/03/07 11:57:38 wiz Exp $
 
 DISTNAME=	xorg-server-1.17.2
 PKGNAME=	${DISTNAME:S/xorg-server/modular-xorg-xquartz/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://www.x.org/releases/individual/xserver/
 EXTRACT_SUFX=	.tar.bz2
@@ -94,15 +95,8 @@ MESSAGE_SUBST+=		PREFIX=${PREFIX}
 .include "../../graphics/libepoxy/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../wm/libAppleWM/buildlink3.mk"
-.include "../../wm/applewmproto/buildlink3.mk"
-.include "../../x11/bigreqsproto/buildlink3.mk"
-.include "../../x11/compositeproto/buildlink3.mk"
-.include "../../x11/damageproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/evieext/buildlink3.mk"
-.include "../../x11/fixesproto/buildlink3.mk"
-.include "../../x11/fontsproto/buildlink3.mk"
-.include "../../x11/inputproto/buildlink3.mk"
-.include "../../x11/kbproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
@@ -116,27 +110,7 @@ MESSAGE_SUBST+=		PREFIX=${PREFIX}
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libxkbui/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
-.include "../../x11/presentproto/buildlink3.mk"
-.include "../../x11/randrproto/buildlink3.mk"
-.include "../../x11/recordproto/buildlink3.mk"
-.include "../../x11/renderproto/buildlink3.mk"
-.include "../../x11/resourceproto/buildlink3.mk"
-.include "../../x11/scrnsaverproto/buildlink3.mk"
-.include "../../x11/trapproto/buildlink3.mk"
-.include "../../x11/videoproto/buildlink3.mk"
-.include "../../x11/xcmiscproto/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
-.include "../../x11/xf86bigfontproto/buildlink3.mk"
-.include "../../x11/xf86dgaproto/buildlink3.mk"
-.include "../../x11/xf86miscproto/buildlink3.mk"
-.include "../../x11/xf86vidmodeproto/buildlink3.mk"
-.include "../../x11/xineramaproto/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
-.include "../../x11/glproto/buildlink3.mk"
-.include "../../x11/dri2proto/buildlink3.mk"
-.include "../../x11/dri3proto/buildlink3.mk"
 .include "../../x11/libxshmfence/buildlink3.mk"
-.include "../../x11/xf86driproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

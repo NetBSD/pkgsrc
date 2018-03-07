@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2016/12/15 23:02:51 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2018/03/07 11:57:36 wiz Exp $
 
 DISTNAME=		libXpm-3.5.12
+PKGREVISION=		1
 CATEGORIES=		graphics x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -46,6 +47,5 @@ CONFIGURE_ARGS+=	XPM_CFLAGS=${XPM_CFLAGS:Q} \
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
-
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

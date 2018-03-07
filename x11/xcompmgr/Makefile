@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2015/04/17 07:00:35 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2018/03/07 11:57:40 wiz Exp $
 
 DISTNAME=	xcompmgr-1.1.7
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES =	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
@@ -25,7 +26,7 @@ XCOMPMGR_DEFS+=		-DCAN_DO_USABLE=1	# default: 0 (damage notification)
 
 CPPFLAGS+=	${XCOMPMGR_DEFS}
 
-.include "../../x11/compositeproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"

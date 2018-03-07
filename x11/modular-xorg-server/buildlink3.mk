@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2017/01/07 22:34:56 maya Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2018/03/07 11:57:38 wiz Exp $
 
 BUILDLINK_TREE+=	modular-xorg-server
 
@@ -21,30 +21,14 @@ BUILDLINK_DEPMETHOD.libpciaccess=	full
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 
-.include "../../x11/compositeproto/buildlink3.mk"
-.include "../../x11/dri2proto/buildlink3.mk"
-.include "../../x11/dri3proto/buildlink3.mk"
-.include "../../x11/fontsproto/buildlink3.mk"
 .if !empty(USE_OLD_MODULAR_XORG_SERVER:M[yY][eE][sS])
 .include "../../graphics/MesaLib7/buildlink3.mk" # XXX should not be needed for non-dri build
 .include "../../x11/libXfont/buildlink3.mk"
 .else
 .include "../../x11/libXfont2/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk" # XXX should not be needed for non-dri build
-.include "../../x11/resourceproto/buildlink3.mk"
-.include "../../x11/scrnsaverproto/buildlink3.mk"
-.include "../../x11/presentproto/buildlink3.mk"
 .endif
-.include "../../x11/inputproto/buildlink3.mk"
-BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.5.0
-.include "../../x11/randrproto/buildlink3.mk"
-.include "../../x11/renderproto/buildlink3.mk"
-.include "../../x11/videoproto/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
-.include "../../x11/xf86driproto/buildlink3.mk"
-BUILDLINK_API_DEPENDS.xproto+=		xproto>=7.0.31
-.include "../../x11/xproto/buildlink3.mk"
-.include "../../x11/xineramaproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .endif # MODULAR_XORG_SERVER_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-modular-xorg-server

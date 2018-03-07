@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2018/01/07 13:04:40 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2018/03/07 11:57:36 wiz Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -19,7 +19,7 @@ BUILDLINK_PKGSRCDIR.libXmu?=	../../x11/libXmu
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .  endif # LIBXMU_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libXmu

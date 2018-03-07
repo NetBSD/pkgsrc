@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2018/01/07 13:04:40 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2018/03/07 11:57:37 wiz Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -16,7 +16,7 @@ LIBXRENDER_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.libXrender+=	libXrender>=0.9.2
 BUILDLINK_PKGSRCDIR.libXrender?=	../../x11/libXrender
 
-.include "../../x11/renderproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .  endif # LIBXRENDER_BUILDLINK3_MK
 

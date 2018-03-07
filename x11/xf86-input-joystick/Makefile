@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2017/12/27 14:13:55 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/03/07 11:57:41 wiz Exp $
 
 DISTNAME=	xf86-input-joystick-1.6.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -26,8 +26,7 @@ SUBST_FILES.usbhid+=		src/backend_bsd.c
 SUBST_SED.usbhid=		-e 's,dev/usb/,bus/u4b/,g'
 SUBST_MESSAGE.usbhid=		Correct usbhid include paths
 
-.include "../../x11/kbproto/buildlink3.mk"
 .include "../../devel/xorg-util-macros/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

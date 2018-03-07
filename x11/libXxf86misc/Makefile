@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2016/02/26 11:27:15 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.9 2018/03/07 11:57:37 wiz Exp $
 
 DISTNAME=		libXxf86misc-1.0.3
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -19,9 +19,7 @@ CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 
 CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/xf86miscproto/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

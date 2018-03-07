@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2017/09/16 19:27:26 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2018/03/07 11:57:34 wiz Exp $
 
 DISTNAME=	lbxproxy-1.0.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
@@ -24,8 +24,7 @@ INSTALLATION_DIRS+=	share/examples/lbxproxy
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/AtomControl ${DESTDIR}${EGDIR}/
 
-.include "../../x11/bigreqsproto/buildlink3.mk"
-.include "../../x11/xproxymanagementprotocol/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/liblbxutil/buildlink3.mk"

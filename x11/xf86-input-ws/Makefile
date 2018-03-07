@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2016/01/05 13:11:42 tnn Exp $
-#
+# $NetBSD: Makefile,v 1.3 2018/03/07 11:57:42 wiz Exp $
 
 DISTNAME=	xf86-input-ws-1.3.0.20151010
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -17,7 +16,5 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
-.include "../../x11/inputproto/buildlink3.mk"
-
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

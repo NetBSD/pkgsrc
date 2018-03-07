@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2018/01/25 13:01:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2018/03/07 11:57:47 wiz Exp $
 
 DISTNAME=		xorg-cf-files-1.0.6
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.bz2
@@ -54,6 +54,5 @@ pre-configure:
 		${ECHO} '#define RealProjectRoot ${X11BASE}' >> ${WRKSRC}/host.def; \
 	fi
 
-.include "../../x11/xproto/buildlink3.mk"
-
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2018/02/26 08:19:31 adam Exp $
+# $NetBSD: Makefile,v 1.84 2018/03/07 11:57:31 wiz Exp $
 
 DISTNAME=		xine-ui-0.99.8
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 EXTRACT_SUFX=		.tar.xz
@@ -41,7 +41,7 @@ PTHREAD_AUTO_VARS=	yes
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../x11/xf86vidmodeproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

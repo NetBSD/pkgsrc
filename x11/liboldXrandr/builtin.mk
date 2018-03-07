@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2012/03/19 12:34:21 joerg Exp $
+# $NetBSD: builtin.mk,v 1.4 2018/03/07 11:57:38 wiz Exp $
 
 BUILTIN_PKG:=	Xrandr
 
@@ -64,9 +64,6 @@ MAKEVARS+=	BUILTIN_PKG.Xrandr
 .if defined(USE_BUILTIN.Xrender) && !empty(USE_BUILTIN.Xrender:M[nN][oO])
 USE_BUILTIN.Xrender=	no
 .endif
-.if defined(USE_BUILTIN.randrproto) && !empty(USE_BUILTIN.randrproto:M[nN][oO])
-USE_BUILTIN.randrproto=	no
-.endif
 
 .if !defined(USE_BUILTIN.Xrandr)
 .  if ${PREFER.Xrandr} == "pkgsrc"
@@ -109,7 +106,6 @@ BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 .  if !empty(USE_BUILTIN.Xrandr:M[yY][eE][sS])
 BUILDLINK_PREFIX.Xrandr=	${X11BASE}
 USE_BUILTIN.Xrender=		yes
-USE_BUILTIN.randrproto=		yes
 .  endif
 
 .endif	# CHECK_BUILTIN.Xrandr

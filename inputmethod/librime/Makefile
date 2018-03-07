@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2018/03/07 09:34:55 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2018/03/07 11:57:31 wiz Exp $
 
 DISTNAME=	librime-1.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://rimeime.googlecode.com/files/
 #MASTER_SITES=	http://dl.bintray.com/lotem/rime/
@@ -26,5 +26,5 @@ PKGCONFIG_OVERRIDE+=	rime.pc.in
 .include "../../devel/google-glog/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
