@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2016/02/25 12:50:49 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.15 2018/03/07 11:57:29 wiz Exp $
 
 DISTNAME=		tuxnes-0.75
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tuxnes/}
 
@@ -39,6 +38,6 @@ post-install:
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

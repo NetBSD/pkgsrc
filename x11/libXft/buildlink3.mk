@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2018/01/07 13:04:39 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2018/03/07 11:57:36 wiz Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -21,7 +21,7 @@ BUILDLINK_PKGSRCDIR.libXft?=	../../x11/libXft
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .  endif # LIBXFT_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libXft
