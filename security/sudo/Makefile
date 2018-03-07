@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.158 2018/01/14 15:29:38 maya Exp $
+# $NetBSD: Makefile,v 1.159 2018/03/07 09:17:06 adam Exp $
 
-DISTNAME=	sudo-1.8.21p2
-PKGREVISION=	1
+DISTNAME=	sudo-1.8.22
 CATEGORIES=	security
 MASTER_SITES=	https://www.sudo.ws/dist/
 MASTER_SITES+=	ftp://ftp.sudo.ws/pub/sudo/
@@ -45,6 +44,8 @@ CFLAGS+=	-D_OPENBSD_SOURCE=1
 .if !empty(MACHINE_PLATFORM:MNetBSD-[5-6].*-*)
 CFLAGS+=	-D_INCOMPLETE_XOPEN_C063=1
 .endif
+
+TEST_TARGET=		check
 
 .include "options.mk"
 
