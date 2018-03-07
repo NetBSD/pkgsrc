@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.247 2018/02/03 09:53:03 bsiegert Exp $
+# $NetBSD: bootstrap,v 1.248 2018/03/07 07:34:07 rillig Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1381,7 +1381,6 @@ fi
 echo "You can find extensive documentation of the NetBSD Packages Collection"
 echo "in $pkgsrcdir/doc/pkgsrc.txt."
 echo ""
-echo "Hopefully everything is now complete."
 echo "Thank you for using pkgsrc!"
 echo ""
 echo "$hline"
