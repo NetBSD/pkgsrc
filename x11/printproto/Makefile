@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/10/29 05:06:43 asau Exp $
-#
+# $NetBSD: Makefile,v 1.8 2018/03/07 11:57:39 wiz Exp $
 
 DISTNAME=		printproto-1.0.5
+PKGREVISION=		1
 CATEGORIES=		x11 print
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
@@ -17,5 +17,5 @@ PKGCONFIG_OVERRIDE+=	printproto.pc.in
 
 CONFIGURE_ENV+=		MISC_MAN_SUFFIX=7
 
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

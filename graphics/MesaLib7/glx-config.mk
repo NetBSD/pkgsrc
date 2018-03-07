@@ -1,14 +1,9 @@
-# $NetBSD: glx-config.mk,v 1.1 2015/04/05 17:01:37 tnn Exp $
+# $NetBSD: glx-config.mk,v 1.2 2018/03/07 11:57:30 wiz Exp $
 #
 # used by x11/modular-xorg-server112/options.mk
 
 .if !defined(GLX_CONFIG_MK)
 GLX_CONFIG_MK=	# empty
-
-### XXX Older versions of xf86driproto installed dri_interface.h, which
-###	is now installed by Mesa.
-###
-BUILDLINK_API_DEPENDS.xf86driproto+=	xf86driproto>=2.0.4
 
 .  include "../../mk/bsd.fast.prefs.mk"
 
