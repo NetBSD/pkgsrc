@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2015/04/23 09:17:48 abs Exp $
+# $NetBSD: Makefile,v 1.24 2018/03/07 11:57:32 wiz Exp $
 
 DISTNAME=		x2vnc-1.7.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net x11
 MASTER_SITES=		http://fredrik.hubbe.net/x2vnc/
 
@@ -20,7 +20,6 @@ LDFLAGS.SunOS+=		-lresolv -lsocket -lnsl
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/scrnsaverproto/buildlink3.mk"
-.include "../../x11/xineramaproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

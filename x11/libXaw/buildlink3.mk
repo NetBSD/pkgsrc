@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2018/01/07 13:04:39 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2018/03/07 11:57:35 wiz Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -22,7 +22,7 @@ BUILDLINK_TRANSFORM+=		l:Xaw:Xaw7
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .  endif # LIBXAW_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libXaw

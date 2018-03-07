@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/07/24 21:15:54 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2018/03/07 11:57:29 wiz Exp $
 
 DISTNAME=	xhomer-9-16-06
 PKGNAME=	xhomer-9.16.06
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://xhomer.isani.org/xhomer/
 EXTRACT_SUFX=	.tgz
@@ -29,5 +30,5 @@ do-install:
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
-.include "../../x11/xf86dgaproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
