@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.29 2018/03/06 23:49:37 rillig Exp $
+# $NetBSD: help.awk,v 1.30 2018/03/07 00:14:57 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -56,10 +56,7 @@ function end_of_topic() {
 			print "";
 		found_anything = yes;
 
-		kw = "";
-		for (i in keywords)
-			kw = kw " " i;
-		print "===> "last_fname " (keywords:" kw "):";
+		print "===> " last_fname " (keywords:" sorted_keys(keywords) "):";
 
 		for (i = 0; i < nlines; i++) {
 			if (print_noncomment_lines || (lines[i] ~ /^#/))
@@ -67,6 +64,28 @@ function end_of_topic() {
 		}
 	}
 	cleanup();
+}
+
+function sorted_keys(array,   elem, list, listlen, i, j, tmp, joined) {
+	listlen = 0;
+	for (elem in array)
+		list[listlen++] = elem;
+
+	for (i = 0; i < listlen; i++) {
+		for (j = i + 1; j < listlen; j++) {
+			if (list[j] < list[i]) {
+				tmp = list[i];
+				list[i] = list[j];
+				list[j] = tmp;
+			}
+		}
+	}
+
+	joined = "";
+	for (i = 0; i < listlen; i++) {
+		joined = joined " " list[i];
+	}
+	return joined;
 }
 
 function cleanup() {
