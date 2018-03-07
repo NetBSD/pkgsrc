@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/03/07 09:34:09 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2018/03/07 09:34:55 wiz Exp $
 
 DISTNAME=	librime-1.0
 PKGREVISION=	8
@@ -26,5 +26,5 @@ PKGCONFIG_OVERRIDE+=	rime.pc.in
 .include "../../devel/google-glog/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"
-.include "../../x11/xorgproto/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
