@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2018/03/07 12:34:55 wiz Exp $
+
+Patch from upstream to improve build on NetBSD.
+
+--- configure.orig	2017-04-28 17:02:28.000000000 +0000
++++ configure
+@@ -629,7 +629,7 @@ RANLIB
+ LIBOBJS
+ DEFINE_USB_MAKE
+ DEFINE_ZLIB_MAKE
+-LIBI386_MAKE
++LIBIOPL_NETBSD_MAKE
+ DEFINE_LIBCD64_MAKE
+ DEFINE_DISCMAGE_MAKE
+ DEFINE_DLOPEN_MAKE
+@@ -3300,7 +3300,7 @@ $as_echo "#define USE_LIBCD64 1" >>confd
+ 
+   DEFINE_LIBCD64_MAKE="USE_LIBCD64=1"
+ else
+-      LIBI386_MAKE="-li386"
++      LIBIOPL_NETBSD_MAKE="-lx86_64"
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $with_libcd64" >&5
+ $as_echo "$with_libcd64" >&6; }
