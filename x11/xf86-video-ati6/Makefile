@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2016/02/26 11:27:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2018/03/07 11:57:42 wiz Exp $
 
 DISTNAME=	xf86-video-ati-6.14.6
 PKGNAME=	${DISTNAME:S/ati/ati6/}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -30,16 +30,6 @@ pre-configure:
 
 .include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../x11/fontsproto/buildlink3.mk"
-.include "../../x11/glproto/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
-.include "../../x11/randrproto/buildlink3.mk"
-.include "../../x11/renderproto/buildlink3.mk"
-.include "../../x11/videoproto/buildlink3.mk"
-.include "../../x11/xf86driproto/buildlink3.mk"
-.include "../../x11/xf86miscproto/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
-.include "../../x11/xineramaproto/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
-
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

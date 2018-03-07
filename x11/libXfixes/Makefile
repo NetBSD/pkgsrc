@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2016/10/04 21:59:07 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2018/03/07 11:57:36 wiz Exp $
 
 DISTNAME=		libXfixes-5.0.3
+PKGREVISION=		1
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -18,9 +19,7 @@ USE_TOOLS+=		pkg-config
 CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 PKGCONFIG_OVERRIDE+=	xfixes.pc.in
 
-BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=5.0
-.include "../../x11/fixesproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libX11+=		libX11>=1.6
 .include "../../x11/libX11/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

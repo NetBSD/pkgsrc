@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/10/01 11:06:08 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2018/03/07 11:57:33 wiz Exp $
 
 DISTNAME=	quartz-wm-1.3.1
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	http://xquartz.macosforge.org/downloads/src/
 EXTRACT_SUFX=	.tar.xz
@@ -22,5 +23,5 @@ ONLY_FOR_PLATFORM=	Darwin-*-*
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

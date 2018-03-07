@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2018/01/01 23:47:44 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2018/03/07 11:57:30 wiz Exp $
 
 DISTNAME=		quakeforge-0.5.5
-PKGREVISION=		15
+PKGREVISION=		16
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=quake/}
 
@@ -55,7 +55,6 @@ INSTALLATION_DIRS=	include/QF/GL include/QF/plugin include/QF/ruamoko/gui
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../x11/xf86vidmodeproto/buildlink3.mk"
-.include "../../x11/xf86dgaproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
