@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2017/08/16 20:21:13 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2018/03/07 16:42:10 pettai Exp $
 
-DISTNAME=	knot-2.3.3
-PKGREVISION=	1
+DISTNAME=	knot-2.4.5
 CATEGORIES=	net
 MASTER_SITES=	https://secure.nic.cz/files/knot-dns/
 EXTRACT_SUFX=	.tar.xz
@@ -23,6 +22,12 @@ CONFIGURE_ARGS+=	--with-urcu=${BUILDLINK_PREFIX.userspace-rcu}
 CONFIGURE_ARGS+=	--with-libidn=${BUILDLINK_PREFIX.libidn}
 
 CONFIGURE_ARGS.NetBSD+=	--enable-recvmmsg=no
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386" 
+CFLAGS += -march=i586 
+.endif 
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	bison flex gmake pkg-config
