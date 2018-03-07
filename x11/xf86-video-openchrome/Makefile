@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2017/12/24 10:19:02 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2018/03/07 11:57:43 wiz Exp $
 
 DISTNAME=	xf86-video-openchrome-0.6.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/archive/individual/driver/
 EXTRACT_SUFX=	.tar.bz2
@@ -28,8 +29,5 @@ PLIST.XvMC=		yes
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/libXvMC/buildlink3.mk"
-.include "../../x11/randrproto/buildlink3.mk"
-.include "../../x11/renderproto/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

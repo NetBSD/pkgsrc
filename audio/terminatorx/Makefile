@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2017/02/12 06:25:06 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.47 2018/03/07 11:57:28 wiz Exp $
 
 DISTNAME=	terminatorX-3.82
 PKGNAME=	${DISTNAME:S/X/x/}
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	audio
 MASTER_SITES=	http://terminatorx.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -39,7 +38,7 @@ SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
-.include "../../x11/xf86dgaproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

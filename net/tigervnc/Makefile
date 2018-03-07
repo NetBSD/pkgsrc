@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2017/12/04 19:46:34 bouyer Exp $
+# $NetBSD: Makefile,v 1.20 2018/03/07 11:57:31 wiz Exp $
 
 DISTNAME=	tigervnc-1.8.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TigerVNC/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -88,19 +89,8 @@ pre-configure:
 BUILDLINK_API_DEPENDS.fltk+=	fltk>=1.3.3
 .include "../../x11/fltk13/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
-.include "../../x11/xcmiscproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
-.include "../../x11/bigreqsproto/buildlink3.mk"
-.include "../../x11/compositeproto/buildlink3.mk"
-.include "../../x11/damageproto/buildlink3.mk"
-.include "../../x11/dri2proto/buildlink3.mk"
 .include "../../x11/libXfont/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
-.include "../../x11/randrproto/buildlink3.mk"
-.include "../../x11/fontsproto/buildlink3.mk"
-.include "../../x11/glproto/buildlink3.mk"
-.include "../../x11/presentproto/buildlink3.mk"
-.include "../../x11/resourceproto/buildlink3.mk"
-.include "../../x11/scrnsaverproto/buildlink3.mk"
-.include "../../x11/videoproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

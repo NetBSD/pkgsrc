@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2017/01/26 08:40:32 wiz Exp $
-
-SHA1 (presentproto-1.1.tar.bz2) = b1294dbb3a8337f79252142b45aa123ee1aa7602
-RMD160 (presentproto-1.1.tar.bz2) = e382eac1dcabef6cf031f4a12e0badb380ba15df
-SHA512 (presentproto-1.1.tar.bz2) = 2c712136c8b4e99190932928d98e1a628197d0bf25180cac196ab8768720d61f7907006315bc3610e23666a8fbe39cfa9115c5fd72914aee2498776c8b46f7b2
-Size (presentproto-1.1.tar.bz2) = 116156 bytes
