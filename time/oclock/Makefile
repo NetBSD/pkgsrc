@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/09/16 19:27:21 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.5 2018/03/07 12:16:35 wiz Exp $
 
-DISTNAME=	oclock-1.0.3
+DISTNAME=	oclock-1.0.4
 CATEGORIES=	time x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +17,6 @@ USE_TOOLS+=	pkg-config
 
 MAKE_FLAGS+=	appdefaultdir=${PREFIX}/lib/X11/app-defaults
 
-.include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
