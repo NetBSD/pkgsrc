@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1089 2018/03/07 11:57:48 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1090 2018/03/07 12:12:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1527,3 +1527,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed x11/xineramaproto successor x11/xorgproto [wiz 2018-03-07]
 	Removed x11/xproto successor x11/xorgproto [wiz 2018-03-07]
 	Removed x11/xproxymanagementprotocol successor x11/xorgproto [wiz 2018-03-07]
+	Updated x11/libdrm to 2.4.91 [wiz 2018-03-07]
