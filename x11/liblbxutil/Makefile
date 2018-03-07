@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2017/09/16 19:27:27 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.10 2018/03/07 11:57:38 wiz Exp $
 
 DISTNAME=	liblbxutil-1.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,7 +19,5 @@ USE_TOOLS+=	gsed pkg-config
 PKGCONFIG_OVERRIDE+=	lbxutil.pc.in
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
-BUILDLINK_API_DEPENDS.xextproto+=	xextproto>=7.0.99.1
-.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

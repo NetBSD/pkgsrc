@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2017/08/18 10:16:11 triaxx Exp $
-#
+# $NetBSD: Makefile,v 1.61 2018/03/07 11:57:32 wiz Exp $
 
 DISTNAME=	awesome-4.2
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=awesomeWM/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -77,7 +77,7 @@ pre-configure:
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
 .include "../../x11/xcb-util-wm/buildlink3.mk"
 .include "../../x11/xcb-util-xrm/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

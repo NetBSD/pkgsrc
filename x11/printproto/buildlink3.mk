@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2012/05/29 14:18:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2018/03/07 11:57:39 wiz Exp $
 
 BUILDLINK_TREE+=	printproto
 
@@ -10,7 +10,7 @@ BUILDLINK_PKGSRCDIR.printproto?=	../../x11/printproto
 
 BUILDLINK_DEPMETHOD.printproto?=	build
 
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .endif # PRINTPROTO_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-printproto

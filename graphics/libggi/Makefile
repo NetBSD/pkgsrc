@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2018/01/14 14:58:39 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.59 2018/03/07 11:57:31 wiz Exp $
 
 DISTNAME=	libggi-2.2.2.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ggi-project.org/ftp/ggi/v2.2/
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=ggi/}
@@ -51,7 +50,7 @@ PLIST.libvgl=		yes
 	exists(${X11BASE}/include/X11/extensions/xf86dga.h)
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../x11/xf86dgaproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 PLIST.xf86dga=		yes
 .endif
 

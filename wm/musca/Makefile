@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2017/09/03 08:37:01 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.5 2018/03/07 11:57:32 wiz Exp $
 
 DISTNAME=	musca-0.9.24
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm
 MASTER_SITES=	http://aerosuidae.net/
 EXTRACT_SUFX=	.tgz
@@ -30,5 +29,5 @@ do-install:
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

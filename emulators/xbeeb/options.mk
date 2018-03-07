@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2016/12/14 08:51:53 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2018/03/07 11:57:29 wiz Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -21,9 +21,7 @@ SUBST_SED.nomitshm=	-e "s|\#define	*MITSHM|\#undef MITSHM|"
 PLIST_VARS+=		xbeeb-roms
 
 .if !empty(PKG_OPTIONS:Mmitshm)
-
-.include "../../x11/xextproto/buildlink3.mk"
-
+.include "../../x11/xorgproto/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mxbeeb-roms)

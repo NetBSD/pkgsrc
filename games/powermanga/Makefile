@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2018/01/14 15:26:48 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.29 2018/03/07 11:57:30 wiz Exp $
 
 DISTNAME=	powermanga-0.90
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://linux.tlk.fr/games/Powermanga/download/
 
@@ -52,5 +51,5 @@ SUBST_FILES.path+=	texts/Makefile.in
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../x11/xf86dgaproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

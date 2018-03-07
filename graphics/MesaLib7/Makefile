@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2017/09/03 08:53:09 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/03/07 11:57:30 wiz Exp $
 
 DISTNAME?=	${MESA_DISTNAME}
 PKGNAME=	MesaLib7-${MESA_PKGVERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MESA_SITES}
 EXTRACT_SUFX=	.tar.bz2
@@ -129,8 +129,7 @@ pre-install:
 .include "../../lang/python/tool.mk"
 BUILDLINK_DEPMETHOD.libxml2?=	build
 .include "../../textproc/libxml2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glproto+=	glproto>=1.4.11
-.include "../../x11/glproto/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
