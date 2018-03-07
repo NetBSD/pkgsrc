@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/03/07 10:19:53 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2018/03/07 10:41:03 cheusov Exp $
 
 DISTNAME=		libmaa-1.4.2
 CATEGORIES=		devel
@@ -11,6 +11,8 @@ LICENSE=		mit
 
 USE_LANGUAGES=		c
 TEST_TARGET=		test
+
+MAKE_JOBS_SAFE=		no
 
 MAKE_ENV+=		MKSTATICLIB=yes
 
