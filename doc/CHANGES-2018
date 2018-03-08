@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1110 2018/03/08 13:07:29 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1111 2018/03/08 13:09:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1552,3 +1552,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/p5-Mail-Box to 3.005 [wiz 2018-03-08]
 	Updated textproc/p5-Pod-Coverage-TrustPod to 0.100004 [wiz 2018-03-08]
 	Updated textproc/p5-Text-Template to 1.51 [wiz 2018-03-08]
+	Updated textproc/p5-XML-Compile to 1.60 [wiz 2018-03-08]
