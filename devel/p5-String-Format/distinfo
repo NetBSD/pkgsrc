@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 03:28:45 agc Exp $
+$NetBSD: distinfo,v 1.8 2018/03/08 13:00:32 wiz Exp $
 
-SHA1 (String-Format-1.17.tar.gz) = bbfa7aff13c0aefbb4b24cb12ddbba4a54936c99
-RMD160 (String-Format-1.17.tar.gz) = baf50111f08559b92b4b53f68eba474e32999700
-SHA512 (String-Format-1.17.tar.gz) = 9d003483858d1681d6955b8620cbba649fe8b92c318b29c5dd684857d81320cb35fbb50e537545d1dfd1e3abc9f94acf9263b82442759e55fd686bd6e907a9f6
-Size (String-Format-1.17.tar.gz) = 12841 bytes
+SHA1 (String-Format-1.18.tar.gz) = a38c51955e0c472c66d6a3014c7c5c81979a7275
+RMD160 (String-Format-1.18.tar.gz) = 2461060e16667c854a7a0625f73541b512c4a831
+SHA512 (String-Format-1.18.tar.gz) = 34eb3991a9bea931f59ca1683ba72d8b07244ed4c2a9409be0626346526b4eb2ab07acdd5c4eabf44a767867a4991e97d89835eb0e4c3c43b413de75eb3c0d5d
+Size (String-Format-1.18.tar.gz) = 13676 bytes
