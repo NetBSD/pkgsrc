@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1113 2018/03/08 13:12:42 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1114 2018/03/08 13:13:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1555,3 +1555,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-XML-Compile to 1.60 [wiz 2018-03-08]
 	Updated textproc/p5-XML-Compile-Cache to 1.06 [wiz 2018-03-08]
 	Updated devel/p5-Types-Serialiser to 1.0nb5 [wiz 2018-03-08]
+	Updated textproc/p5-XML-Compile-SOAP to 3.24 [wiz 2018-03-08]
