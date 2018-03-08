@@ -1,12 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/04 18:57:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/08 12:45:34 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/ntlm_auth/U32.py
-${PYSITELIB}/ntlm_auth/U32.pyc
-${PYSITELIB}/ntlm_auth/U32.pyo
 ${PYSITELIB}/ntlm_auth/__init__.py
 ${PYSITELIB}/ntlm_auth/__init__.pyc
 ${PYSITELIB}/ntlm_auth/__init__.pyo
@@ -25,12 +22,6 @@ ${PYSITELIB}/ntlm_auth/constants.pyo
 ${PYSITELIB}/ntlm_auth/des.py
 ${PYSITELIB}/ntlm_auth/des.pyc
 ${PYSITELIB}/ntlm_auth/des.pyo
-${PYSITELIB}/ntlm_auth/des_c.py
-${PYSITELIB}/ntlm_auth/des_c.pyc
-${PYSITELIB}/ntlm_auth/des_c.pyo
-${PYSITELIB}/ntlm_auth/des_data.py
-${PYSITELIB}/ntlm_auth/des_data.pyc
-${PYSITELIB}/ntlm_auth/des_data.pyo
 ${PYSITELIB}/ntlm_auth/gss_channel_bindings.py
 ${PYSITELIB}/ntlm_auth/gss_channel_bindings.pyc
 ${PYSITELIB}/ntlm_auth/gss_channel_bindings.pyo
@@ -46,6 +37,3 @@ ${PYSITELIB}/ntlm_auth/rc4.pyo
 ${PYSITELIB}/ntlm_auth/session_security.py
 ${PYSITELIB}/ntlm_auth/session_security.pyc
 ${PYSITELIB}/ntlm_auth/session_security.pyo
-${PYSITELIB}/ntlm_auth/target_info.py
-${PYSITELIB}/ntlm_auth/target_info.pyc
-${PYSITELIB}/ntlm_auth/target_info.pyo
