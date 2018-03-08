@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.781 2018/03/05 14:04:33 adam Exp $
+# $NetBSD: Makefile,v 1.782 2018/03/08 19:33:39 minskim Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -21,6 +21,7 @@ SUBDIR+=	Ngraph
 SUBDIR+=	OpenRM
 SUBDIR+=	PanoTools
 SUBDIR+=	R-colorspace
+SUBDIR+=	R-dichromat
 SUBDIR+=	R-latticeExtra
 SUBDIR+=	SDL2_image
 SUBDIR+=	SDL_image
