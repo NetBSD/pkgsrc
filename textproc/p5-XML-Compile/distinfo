@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/12/31 13:41:15 wiz Exp $
+$NetBSD: distinfo,v 1.5 2018/03/08 13:09:09 wiz Exp $
 
-SHA1 (XML-Compile-1.59.tar.gz) = ac1f7075462e417a68941d937b92c26843ccdd0c
-RMD160 (XML-Compile-1.59.tar.gz) = 19df120e2cd39a75f62ef3b3c20e1f7a5ac6129f
-SHA512 (XML-Compile-1.59.tar.gz) = f180ffe235e71e39174401ab12d37c96ca4e4d8df7f5782bc58db4987f4d7c106a80a69763d4438571ecadb2af9ee2be0e9e6f257c1d75c2a76da498882d553c
-Size (XML-Compile-1.59.tar.gz) = 207825 bytes
+SHA1 (XML-Compile-1.60.tar.gz) = 78618f744bcaeda7309d52d05b23eb8a06bc7278
+RMD160 (XML-Compile-1.60.tar.gz) = 4369b708fa7dd0c6256072786ef179ee76d72dcf
+SHA512 (XML-Compile-1.60.tar.gz) = 361666004b61bbdf07f62421239120256de3cbf5f17da532c7bab5c8fc9c057638dbf2c26604f8ecea3ef1301364dd945ccc9cbddc358096962d4c289009b61b
+Size (XML-Compile-1.60.tar.gz) = 209090 bytes
