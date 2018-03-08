@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2017/06/05 14:23:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2018/03/08 13:12:33 wiz Exp $
 
 DISTNAME=	Types-Serialiser-1.0
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/ML/MLEHMANN/}
 
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Types-Serialiser/
 COMMENT=	Simple data types for common serialisation formats
 
-BUILD_DEPENDS+=	p5-common-sense-[0-9]*:../../devel/p5-common-sense
+DEPENDS+=	p5-common-sense-[0-9]*:../../devel/p5-common-sense
 
 LICENSE=		${PERL5_LICENSE}
 USE_LANGUAGES=		# empty
