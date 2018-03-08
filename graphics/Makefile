@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.782 2018/03/08 19:33:39 minskim Exp $
+# $NetBSD: Makefile,v 1.783 2018/03/08 19:36:17 minskim Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -23,6 +23,7 @@ SUBDIR+=	PanoTools
 SUBDIR+=	R-colorspace
 SUBDIR+=	R-dichromat
 SUBDIR+=	R-latticeExtra
+SUBDIR+=	R-munsell
 SUBDIR+=	SDL2_image
 SUBDIR+=	SDL_image
 SUBDIR+=	aalib
