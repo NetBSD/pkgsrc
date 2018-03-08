@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/07/09 15:25:44 wen Exp $
+# $NetBSD: Makefile,v 1.5 2018/03/08 13:12:54 wiz Exp $
 
-DISTNAME=	XML-Compile-SOAP-3.22
+DISTNAME=	XML-Compile-SOAP-3.24
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MARKOV/}
