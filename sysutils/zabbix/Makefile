@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/01/01 21:18:53 adam Exp $
+# $NetBSD: Makefile,v 1.9 2018/03/08 21:05:27 he Exp $
 
-PKGREVISION= 3
+# PKGREVISION= 3
 .include "Makefile.common"
 
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
@@ -56,4 +56,5 @@ post-install:
 .include "../../textproc/iksemel/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
