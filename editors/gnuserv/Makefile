@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2013/02/17 19:18:02 dholland Exp $
+# $NetBSD: Makefile,v 1.17 2018/03/08 11:20:56 wiz Exp $
 
 DISTNAME=	gnuserv-3.12.7
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=	4
 CATEGORIES=	editors
-MASTER_SITES=	${HOMEPAGE}/src/
+#MASTER_SITES=	${HOMEPAGE}/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://meltin.net/hacks/emacs/
+#HOMEPAGE=	http://meltin.net/hacks/emacs/
 COMMENT=	Improved version of emacsserver for GNU Emacs
 
 CONFLICTS+=	xemacs-[0-9]*
@@ -22,6 +22,8 @@ post-install:
 	cd ${WRKSRC} && for FILE in ${EL_FILES}; do				\
 		${INSTALL_DATA} $${FILE} $${FILE}c ${DESTDIR}${EMACS_LISPPREFIX};		\
 	done
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${X11_TYPE} == "modular"
 CONFIGURE_ARGS+=	--x-includes=${PREFIX}/include
