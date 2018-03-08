@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1127 2018/03/08 19:39:35 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1128 2018/03/08 21:00:46 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1569,3 +1569,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added graphics/R-dichromat version 2.0.0 [minskim 2018-03-08]
 	Added graphics/R-munsell version 0.4.3 [minskim 2018-03-08]
 	Updated math/py-scikit-learn to 0.19.1nb1 [minskim 2018-03-08]
+	Updated devel/gradle to 4.6nb1 [maya 2018-03-08]
