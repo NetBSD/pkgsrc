@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/01/31 07:57:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/03/08 08:15:02 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -156,7 +156,9 @@ ${PYSITELIB}/Crypto/Hash/_BLAKE2b.so
 ${PYSITELIB}/Crypto/Hash/_BLAKE2s.so
 ${PYSITELIB}/Crypto/Hash/_MD2.so
 ${PYSITELIB}/Crypto/Hash/_MD4.so
+${PYSITELIB}/Crypto/Hash/_MD5.so
 ${PYSITELIB}/Crypto/Hash/_RIPEMD160.so
+${PYSITELIB}/Crypto/Hash/_SHA1.so
 ${PYSITELIB}/Crypto/Hash/_SHA224.so
 ${PYSITELIB}/Crypto/Hash/_SHA256.so
 ${PYSITELIB}/Crypto/Hash/_SHA384.so
@@ -469,6 +471,7 @@ ${PYSITELIB}/Crypto/SelfTest/Hash/test_vectors/BLAKE2b/tv2.txt
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_vectors/BLAKE2s/blake2s-test.txt
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_vectors/BLAKE2s/tv1.txt
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_vectors/BLAKE2s/tv2.txt
+${PYSITELIB}/Crypto/SelfTest/Hash/test_vectors/SHA1/SHA1ShortMsg.rsp
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_vectors/SHA3/ShortMsgKAT_SHA3-224.txt
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_vectors/SHA3/ShortMsgKAT_SHA3-256.txt
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_vectors/SHA3/ShortMsgKAT_SHA3-384.txt
@@ -558,6 +561,8 @@ ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_p8_clea
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_private_p8_clear.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_public.der
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_public.pem
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_public_compressed.der
+${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_public_compressed.pem
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_public_openssh.txt
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_x509.der
 ${PYSITELIB}/Crypto/SelfTest/PublicKey/test_vectors/ECC/ecc_p256_x509.pem
