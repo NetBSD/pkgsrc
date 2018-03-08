@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/11/04 01:10:18 leot Exp $
+# $NetBSD: Makefile,v 1.3 2018/03/08 18:17:30 schmonz Exp $
 #
 
-DISTNAME=	discount-2.1.8a
+DISTNAME=	discount-2.2.3a
 CATEGORIES=	textproc
-MASTER_SITES=	http://www.pell.portland.or.us/~orc/Code/discount/
+MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	zecrazytux@zecrazytux.net
