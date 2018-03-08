@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2017/01/19 18:52:16 agc Exp $
+# $NetBSD: Makefile,v 1.51 2018/03/08 15:14:54 maya Exp $
 
 DISTNAME=	exim-3.36
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim3/
 MASTER_SITES+=	http://public.planetmirror.com.au/pub/exim/exim3/
