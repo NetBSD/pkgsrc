@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1117 2018/03/08 13:44:47 cheusov Exp $
+$NetBSD: CHANGES-2018,v 1.1118 2018/03/08 14:11:34 mef Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1559,3 +1559,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-XML-RSS to 1.60 [wiz 2018-03-08]
 	Updated cad/gtkwave to 3.3.88 [mef 2018-03-08]
 	Added sysutils/nbase version 7.0.0.3 [cheusov 2018-03-08]
+	Updated cad/ng-spice to 27 [mef 2018-03-08]
