@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1106 2018/03/08 13:02:33 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1107 2018/03/08 13:03:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1548,3 +1548,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Module-FromPerlVer to 0.001000 [wiz 2018-03-08]
 	Updated devel/p5-String-Format to 1.18 [wiz 2018-03-08]
 	Updated devel/p5-Test2-Suite to 0.000106 [wiz 2018-03-08]
+	Updated mail/p5-Email-Address to 1.909 [wiz 2018-03-08]
