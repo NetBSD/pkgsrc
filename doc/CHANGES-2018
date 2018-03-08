@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1104 2018/03/08 12:59:51 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1105 2018/03/08 13:00:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1546,3 +1546,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-ntlm-auth to 1.1.0 [adam 2018-03-08]
 	Updated fonts/py-fonttools to 3.24.1 [adam 2018-03-08]
 	Updated devel/p5-Module-FromPerlVer to 0.001000 [wiz 2018-03-08]
+	Updated devel/p5-String-Format to 1.18 [wiz 2018-03-08]
