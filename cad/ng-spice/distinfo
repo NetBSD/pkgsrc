@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2015/11/03 00:21:18 agc Exp $
+$NetBSD: distinfo,v 1.17 2018/03/08 14:11:24 mef Exp $
 
-SHA1 (ngspice-23.tar.gz) = 65fa23d1168cb3af7651b990344f763c77bf6132
-RMD160 (ngspice-23.tar.gz) = 34a5bb0a06e67a9ebe21f7abe8067cd8e793ea9e
-SHA512 (ngspice-23.tar.gz) = 576edcf4c61db078ab425664468e60c5feab83b350fa55d21bbda6c4f0b5d12513104d54bcf9de2a65254c9de797c9ad136e355b0b9a64e948bfaeca3df119f8
-Size (ngspice-23.tar.gz) = 6485536 bytes
+SHA1 (ngspice-27.tar.gz) = 544e713d21aeab14d04abff5ece39a17b0c2b050
+RMD160 (ngspice-27.tar.gz) = a500dba09b711c2a1df93e1a55e6431832c61e25
+SHA512 (ngspice-27.tar.gz) = 1714f95ab5716c228a0b39395a742e8b9a823e0e6f7e08625d089541ea786df5fd7b9d2982bcec8431e27ac6ba7603ecc507f9cfcb0a6aacd53f5633f52bd2ea
+Size (ngspice-27.tar.gz) = 7372998 bytes
