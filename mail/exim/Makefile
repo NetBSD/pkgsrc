@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.156 2017/11/30 16:45:30 adam Exp $
+# $NetBSD: Makefile,v 1.156.2.1 2018/03/08 20:22:06 spz Exp $
 
-DISTNAME=	exim-4.89
-PKGREVISION=	3
+DISTNAME=	exim-4.90.1
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/
-MASTER_SITES+=	http://dl.ambiweb.de/mirrors/ftp.exim.org/exim/exim4/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES+=	https://ftp.exim.org/pub/exim/exim4/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.exim.org/
@@ -74,11 +73,10 @@ INSTALL_ENV+=		${INSTALL_ARG:Q}
 .include "options.mk"
 
 post-extract:
+	mv ${WRKSRC}/OS/unsupported/*-* ${WRKSRC}/OS/
 	mkdir ${WRKSRC}/Local
 	cp ${WRKSRC}/src/EDITME ${WRKSRC}/Local/Makefile.pkgsrc
 	cp ${WRKSRC}/exim_monitor/EDITME ${WRKSRC}/Local/eximon.conf.pkgsrc
-	cp ${FILESDIR}/Makefile-DragonFly ${FILESDIR}/os.h-DragonFly \
-		${WRKSRC}/OS/
 
 pre-configure:
 	sed	-e 's:@PREFIX@:${PREFIX}:' \
