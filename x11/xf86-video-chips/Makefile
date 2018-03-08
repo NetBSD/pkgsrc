@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2018/03/07 11:57:42 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2018/03/08 12:58:33 wiz Exp $
 
 DISTNAME=	xf86-video-chips-1.2.7
 PKGREVISION=	1
@@ -15,14 +15,6 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
-
-#
-# it appears the 1.2.5 tarball forgot something
-#
-post-extract:
-.if !exists(${WRKSRC}/util/iopl.h)
-	${CP} ${FILESDIR}/iopl.h ${WRKSRC}/util/
-.endif
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
