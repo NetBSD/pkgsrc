@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2018/02/02 16:20:21 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.30 2018/03/08 16:32:07 fhajny Exp $
 lib/erlang/autocomplete/bash_autocomplete.sh
 lib/erlang/autocomplete/zsh_autocomplete.sh
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/INSTALL
@@ -172,8 +172,8 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/README
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/amqp10_client-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/amqp10_common-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/amqp_client-${PKGVERSION}.ez
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/cowboy-2.0.0.ez
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/cowlib-2.0.0.ez
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/cowboy-2.2.2.ez
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/cowlib-2.1.0.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/goldrush-0.1.9.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/jsx-2.8.2.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/lager-3.5.1.ez
