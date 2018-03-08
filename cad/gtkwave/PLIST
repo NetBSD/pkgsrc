@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/04/16 13:59:24 mef Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/03/08 13:31:31 mef Exp $
 bin/evcd2vcd
 bin/fst2vcd
 bin/fstminer
@@ -40,6 +40,7 @@ share/gtkwave/examples/des.gtkw
 share/gtkwave/examples/des.tcl
 share/gtkwave/examples/des.v
 share/gtkwave/examples/gtkwaverc
+share/gtkwave/examples/sst_exclusion_example.rc
 share/gtkwave/examples/transaction.c
 share/gtkwave/examples/transaction.fst
 share/gtkwave/examples/transaction.gtkw
