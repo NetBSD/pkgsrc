@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2017/07/27 08:26:46 gson Exp $
+# $NetBSD: Makefile,v 1.47 2018/03/08 16:43:40 gson Exp $
 
-DISTNAME=	anita-1.42
+DISTNAME=	anita-1.44
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc
 MASTER_SITES=	http://www.gson.org/netbsd/anita/download/
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-pexpect>=2.1:../../devel/py-pexpect
 
 USE_LANGUAGES=	#none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.34
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.44
 
 SUBST_CLASSES+=		manpath
 SUBST_STAGE.manpath=	pre-configure
