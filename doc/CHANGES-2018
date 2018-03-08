@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1122 2018/03/08 16:44:52 gson Exp $
+$NetBSD: CHANGES-2018,v 1.1123 2018/03/08 18:17:38 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1564,3 +1564,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/exim3 to 3.36nb18 [maya 2018-03-08]
 	Updated net/rabbitmq to 3.7.4 [fhajny 2018-03-08]
 	Updated misc/py-anita to 1.44 [gson 2018-03-08]
+	Updated textproc/discount to 2.2.3a [schmonz 2018-03-08]
