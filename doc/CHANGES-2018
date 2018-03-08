@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1101 2018/03/08 08:26:58 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1102 2018/03/08 08:51:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1541,3 +1541,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-cryptodome to 3.5.0 [adam 2018-03-08]
 	Updated www/py-pylint-django to 0.9.3 [adam 2018-03-08]
 	Updated www/py-asgiref to 2.2.0 [adam 2018-03-08]
+	Updated www/libsass to 3.5.0 [adam 2018-03-08]
+	Updated www/sassc to 3.5.0 [adam 2018-03-08]
