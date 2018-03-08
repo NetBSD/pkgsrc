@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/02/27 12:42:30 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/03/08 08:23:49 adam Exp $
 
-SHA1 (pylint-django-0.9.1.tar.gz) = e0ca1881e94169c2be41b4c759488c9b9d25eca5
-RMD160 (pylint-django-0.9.1.tar.gz) = dc656e5fc1d3a262d53c42050ede376de2de2a96
-SHA512 (pylint-django-0.9.1.tar.gz) = d0a3e32793c7cf509fe7ebcac88c317264390b12668f1800329117e0a001ac13b113a2f8a6e417c0eb67a733ba2133bbd60f30e6bac86edb8c7396e645839d97
-Size (pylint-django-0.9.1.tar.gz) = 26976 bytes
-SHA1 (patch-setup.py) = 20f0f38f6688c0a4729c1021bf62b890f157296b
+SHA1 (pylint-django-0.9.3.tar.gz) = 3c47c40b7f79e6d7c434ba49dbb061eeb5de79d0
+RMD160 (pylint-django-0.9.3.tar.gz) = a828c3446265290a9fb2e21242f8410f389da158
+SHA512 (pylint-django-0.9.3.tar.gz) = 87a2c511b5d560007ef2da0ad2d0ca54160520472cdb94ed98a9de52a7c0c729f180ae90e37eb81e5d86ad1487a093ce99fd10f93f2ef6f8bb0842cfff13e64f
+Size (pylint-django-0.9.3.tar.gz) = 30728 bytes
