@@ -11,7 +11,7 @@ APP_NAME="Gradle"
 APP_BASE_NAME=`basename "$0"`
 APP_HOME="@APP_HOME@"
 APP_LAUNCHER="@APP_LAUNCHER@"
-JAVA_HOME="@JAVA_HOME@"
+JAVA_HOME="${JAVA_HOME:-@JAVA_HOME@}"
 
 # Use the maximum available, or set MAX_FD != -1 to use that value.
 MAX_FD="maximum"
