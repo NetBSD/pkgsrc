@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1119 2018/03/08 14:30:56 pettai Exp $
+$NetBSD: CHANGES-2018,v 1.1120 2018/03/08 15:15:07 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1561,3 +1561,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added sysutils/nbase version 7.0.0.3 [cheusov 2018-03-08]
 	Updated cad/ng-spice to 27 [mef 2018-03-08]
 	Updated net/knot to 2.5.7 [pettai 2018-03-08]
+	Updated mail/exim3 to 3.36nb18 [maya 2018-03-08]
