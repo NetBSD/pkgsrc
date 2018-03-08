@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1099 2018/03/07 19:23:30 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1100 2018/03/08 08:17:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1537,3 +1537,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/contao45 to 4.5.6 [taca 2018-03-07]
 	Updated net/knot to 2.4.5 [pettai 2018-03-07]
 	Added finance/R-tseries version 0.10.43 [minskim 2018-03-07]
+	Added security/py-libnacl version 1.6.1 [adam 2018-03-08]
+	Updated security/py-cryptodome to 3.5.0 [adam 2018-03-08]
