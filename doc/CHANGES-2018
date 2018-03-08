@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1115 2018/03/08 13:15:38 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1116 2018/03/08 13:31:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1557,3 +1557,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Types-Serialiser to 1.0nb5 [wiz 2018-03-08]
 	Updated textproc/p5-XML-Compile-SOAP to 3.24 [wiz 2018-03-08]
 	Updated textproc/p5-XML-RSS to 1.60 [wiz 2018-03-08]
+	Updated cad/gtkwave to 3.3.88 [mef 2018-03-08]
