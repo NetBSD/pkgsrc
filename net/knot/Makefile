@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2018/03/07 16:42:10 pettai Exp $
+# $NetBSD: Makefile,v 1.38 2018/03/08 14:30:37 pettai Exp $
 
-DISTNAME=	knot-2.4.5
+DISTNAME=	knot-2.5.7
 CATEGORIES=	net
 MASTER_SITES=	https://secure.nic.cz/files/knot-dns/
 EXTRACT_SUFX=	.tar.xz
@@ -32,7 +32,13 @@ CFLAGS += -march=i586
 USE_LIBTOOL=	yes
 USE_TOOLS+=	bison flex gmake pkg-config
 
+REPLACE_PYTHON=		src/utils/pykeymgr/pykeymgr.in
+
+.include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
+
 PKGCONFIG_OVERRIDE=	src/dnssec/libdnssec.pc.in
+PKGCONFIG_OVERRIDE+=	src/knotd.pc.in
 PKGCONFIG_OVERRIDE+=	src/libknot.pc.in
 PKGCONFIG_OVERRIDE+=	src/zscanner/libzscanner.pc.in
 

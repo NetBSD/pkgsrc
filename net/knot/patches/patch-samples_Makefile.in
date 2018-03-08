@@ -1,10 +1,10 @@
-$NetBSD: patch-samples_Makefile.in,v 1.5 2016/10/29 09:55:13 pettai Exp $
+$NetBSD: patch-samples_Makefile.in,v 1.6 2018/03/08 14:30:37 pettai Exp $
 
 Install sample config where pkgsrc typically install examples
 
---- samples/Makefile.in.orig	2015-10-26 16:12:16.000000000 +0000
+--- samples/Makefile.in.orig	2018-01-02 11:09:04.000000000 +0100
 +++ samples/Makefile.in
-@@ -264,6 +264,7 @@ sharedstatedir = @sharedstatedir@
+@@ -287,6 +287,7 @@
  srcdir = @srcdir@
  storage_dir = @storage_dir@
  sysconfdir = @sysconfdir@
@@ -12,7 +12,7 @@ Install sample config where pkgsrc typically install examples
  systemd_CFLAGS = @systemd_CFLAGS@
  systemd_LIBS = @systemd_LIBS@
  target_alias = @target_alias@
-@@ -483,9 +484,9 @@ knot.sample.conf: knot.sample.conf.in
+@@ -507,9 +508,9 @@
  	mv $@.tmp $@
  
  @HAVE_DAEMON_TRUE@install-data-local: knot.sample.conf
@@ -23,5 +23,5 @@ Install sample config where pkgsrc typically install examples
 +@HAVE_DAEMON_TRUE@	  $(INSTALL) -d $(DESTDIR)/$(EGDIR); \
 +@HAVE_DAEMON_TRUE@	  $(INSTALL_DATA) knot.sample.conf $(srcdir)/example.com.zone $(DESTDIR)/$(EGDIR); \
  @HAVE_DAEMON_TRUE@	fi
- @HAVE_BASH_COMPLETIONS_TRUE@@HAVE_DAEMON_TRUE@	if [ \! -f $(DESTDIR)/$(bash_completions_dir)/keymgr ]; then \
- @HAVE_BASH_COMPLETIONS_TRUE@@HAVE_DAEMON_TRUE@	  $(INSTALL) -d $(DESTDIR)/$(bash_completions_dir); \
+ @HAVE_DAEMON_TRUE@uninstall-local:
+ @HAVE_DAEMON_TRUE@	-rm -rf $(DESTDIR)/$(config_dir)/knot.sample.conf \
