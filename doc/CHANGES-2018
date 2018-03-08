@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1125 2018/03/08 19:33:44 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1126 2018/03/08 19:36:24 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1567,3 +1567,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/discount to 2.2.3a [schmonz 2018-03-08]
 	Updated games/rocksndiamonds to 4.0.1.3 [adam 2018-03-08]
 	Added graphics/R-dichromat version 2.0.0 [minskim 2018-03-08]
+	Added graphics/R-munsell version 0.4.3 [minskim 2018-03-08]
