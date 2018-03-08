@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1118 2018/03/08 14:11:34 mef Exp $
+$NetBSD: CHANGES-2018,v 1.1119 2018/03/08 14:30:56 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1560,3 +1560,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated cad/gtkwave to 3.3.88 [mef 2018-03-08]
 	Added sysutils/nbase version 7.0.0.3 [cheusov 2018-03-08]
 	Updated cad/ng-spice to 27 [mef 2018-03-08]
+	Updated net/knot to 2.5.7 [pettai 2018-03-08]
