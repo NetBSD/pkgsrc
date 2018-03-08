@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1121 2018/03/08 16:32:19 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1122 2018/03/08 16:44:52 gson Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1563,3 +1563,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/knot to 2.5.7 [pettai 2018-03-08]
 	Updated mail/exim3 to 3.36nb18 [maya 2018-03-08]
 	Updated net/rabbitmq to 3.7.4 [fhajny 2018-03-08]
+	Updated misc/py-anita to 1.44 [gson 2018-03-08]
