@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1132 2018/03/09 12:12:05 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1133 2018/03/09 14:13:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1577,3 +1577,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-django-countries to 5.2 [adam 2018-03-09]
 	Updated mail/nmh to 1.7.1 [leot 2018-03-09]
 	Updated multimedia/x265 to 2.7 [adam 2018-03-09]
+	Updated www/contao44 to 4.4.16 [taca 2018-03-09]
