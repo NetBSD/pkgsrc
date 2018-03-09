@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1137 2018/03/09 16:12:56 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.1138 2018/03/09 17:04:22 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1582,3 +1582,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/mikutter to 3.6.5 [tsutsui 2018-03-09]
 	Updated x11/mlterm to 3.8.5 [tsutsui 2018-03-09]
 	Updated www/ikiwiki to 3.20180228nb1 [schmonz 2018-03-09]
+	Added graphics/R-labeling version 0.3 [minskim 2018-03-09]
