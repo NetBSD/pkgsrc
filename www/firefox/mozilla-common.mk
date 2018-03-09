@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.102 2017/12/10 00:45:09 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.102.2.1 2018/03/09 07:17:29 spz Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -16,6 +16,9 @@ BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+# For rustc/cargo detection
+CONFIGURE_ARGS+=	--target=${MACHINE_GNU_PLATFORM:Q}
+CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
 USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize
@@ -191,7 +194,7 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 .include "../../graphics/cairo/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
-BUILDLINK_API_DEPENDS.rust+=	rust>=1.20.0
+BUILDLINK_API_DEPENDS.rust+=	rust>=1.23.0
 BUILDLINK_DEPMETHOD.rust=	build
 .include "../../lang/rust/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0

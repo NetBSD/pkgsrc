@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.116 2017/12/10 00:46:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.116.2.1 2018/03/09 07:17:29 spz Exp $
 #
 
-FIREFOX_VER=	57.0.2
+FIREFOX_VER=	58.0
 PKGNAME=	firefox-l10n-${FIREFOX_VER:S/esr//}
+PKGREVISION=	1
 DISTNAME=	# empty
 CATEGORIES=	www
 #MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/linux-i686/xpi/}
@@ -17,16 +18,24 @@ DISTFILES=	${XPI_FILES}
 
 NO_BUILD=	yes
 
+INSTALLATION_DIRS=	lib/firefox/browser/extensions
+
 FIREFOX_LOCALES=ach af an ar as ast az be bg bn-BD bn-IN br bs ca cs	\
 		cy da de dsb el en-GB en-ZA eo es-AR es-CL es-ES 	\
 		es-MX et eu fa ff fi fr fy-NL ga-IE gd gl gn gu-IN	\
 		he hi-IN hr hsb hu hy-AM id is it ja ka kab kk km kn ko	\
-		lij lt lv mai mk ml mr ms my nb-NO nl nn-NO or pa-IN pl	\
+		lij lt lv mai mk ml mr ms my nb-NO ne-NP nl nn-NO or	\
+		pa-IN pl	\
 		pt-BR pt-PT rm ro ru si sk sl son sq sr sv-SE ta te th	\
 		tr uk uz vi xh zh-CN zh-TW
 
 EXTENSIONS_DIR=		${PREFIX}/lib/firefox/browser/extensions
 XPI_FILES=		${FIREFOX_LOCALES:=.xpi}
 
-.include "../../www/firefox/xpi.mk"
+do-install:
+.for f in ${FIREFOX_LOCALES}
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${f}.xpi \
+	${DESTDIR}${EXTENSIONS_DIR}/langpack-${f}@firefox.mozilla.org.xpi
+.endfor
+
 .include "../../mk/bsd.pkg.mk"
