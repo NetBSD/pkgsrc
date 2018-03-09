@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.18 2015/11/25 13:05:47 jperkin Exp $
+# $NetBSD: autoconf.mk,v 1.19 2018/03/09 21:51:20 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -64,8 +64,14 @@
 #
 #	AUTOMAKE_OVERRIDE=	no
 #
-# Keywords: autoconf autoreconf
+# Keywords: autoconf
+
+# If a package requires autoreconf, the package Makefile should contain
+# this line:
 #
+#	USE_TOOLS+=	autoreconf autoconf automake
+#
+# Keywords: autoreconf
 
 # Only allow one of "autoconf" and "autoconf213" in USE_TOOLS.
 .if !empty(USE_TOOLS:C/:.*//:Mautoconf) && \
