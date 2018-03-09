@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.125 2018/03/02 19:20:20 schmonz Exp $
+$NetBSD: distinfo,v 1.126 2018/03/09 16:12:50 schmonz Exp $
 
 SHA1 (ikiwiki_3.20180228.orig.tar.xz) = 736abf42a48007ac379bb1243ba120e7ec44a5a3
 RMD160 (ikiwiki_3.20180228.orig.tar.xz) = e8ac97d347228caacec54c5af8206ab457e7d46a
 SHA512 (ikiwiki_3.20180228.orig.tar.xz) = d3b20ff564ece42057ea7c4693a53ff1053874c55163b540d2d9ac184fb9bae2b36ebd0de7335fee7251134768e3bbdcbefc2915a728ef305948e7bf2463b88f
 Size (ikiwiki_3.20180228.orig.tar.xz) = 2637180 bytes
+SHA1 (patch-IkiWiki_Plugin_mdwn.pm) = 881d202ea0a325575c62f80d4432557398675778
 SHA1 (patch-Makefile.PL) = 35f12c579d497d2462d8e0c0f84c2e2144aaec60
 SHA1 (patch-po_Makefile) = 7adc25868a3d36157f7e3af7caedcec67e008397
+SHA1 (patch-t_mdwn.t) = 6c4fb5489cf36755b12825a57c2c7fae6e6dfc36
