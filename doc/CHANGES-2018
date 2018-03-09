@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1135 2018/03/09 14:37:27 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.1136 2018/03/09 14:38:36 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1580,3 +1580,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/contao44 to 4.4.16 [taca 2018-03-09]
 	Updated databases/ruby-sequel to 5.6.0 [taca 2018-03-09]
 	Updated net/mikutter to 3.6.5 [tsutsui 2018-03-09]
+	Updated x11/mlterm to 3.8.5 [tsutsui 2018-03-09]
