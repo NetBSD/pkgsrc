@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2017/11/30 07:38:55 adam Exp $
+# $NetBSD: Makefile,v 1.21 2018/03/09 12:08:08 adam Exp $
 
-DISTNAME=	x265_2.6
+DISTNAME=	x265_2.7
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://bitbucket.org/multicoreware/x265/downloads/
@@ -11,8 +11,8 @@ HOMEPAGE=	http://www.x265.org/
 COMMENT=	High Efficiency Video Coding (HEVC)
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/_/_v/}/source
-BUILD_DEPENDS+=	yasm>=1.0.0:../../devel/yasm
+WRKSRC=		${WRKDIR}/${DISTNAME}/source
+BUILD_DEPENDS+=	nasm>=2.13.0:../../devel/nasm
 
 CMAKE_ARGS+=	-DENABLE_PIC=ON
 
