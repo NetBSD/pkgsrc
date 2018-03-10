@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1146 2018/03/10 10:21:44 wiedi Exp $
+$NetBSD: CHANGES-2018,v 1.1147 2018/03/10 10:35:42 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1592,3 +1592,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xbacklight to 1.2.2 [wiz 2018-03-10]
 	Updated x11/xinit to 1.4.0 [wiz 2018-03-10]
 	Updated editors/nano to 2.9.4 [wiedi 2018-03-10]
+	Updated devel/p5-Mojo-IOLoop-ForkCall to 0.19 [wiedi 2018-03-10]
