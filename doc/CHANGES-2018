@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1154 2018/03/10 22:09:39 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1155 2018/03/10 22:10:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1600,3 +1600,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xlsclients to 1.1.4 [wiz 2018-03-10]
 	Updated x11/xlsfonts to 1.0.6 [wiz 2018-03-10]
 	Updated x11/xmessage to 1.0.5 [wiz 2018-03-10]
+	Updated x11/xpr to 1.0.5 [wiz 2018-03-10]
