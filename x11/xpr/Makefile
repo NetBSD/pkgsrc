@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/03/07 11:57:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/10 22:10:32 wiz Exp $
 
-DISTNAME=	xpr-1.0.4
-PKGREVISION=	1
+DISTNAME=	xpr-1.0.5
 CATEGORIES=	print x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
