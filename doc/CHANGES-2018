@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1139 2018/03/09 20:27:25 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1140 2018/03/10 01:21:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1584,3 +1584,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ikiwiki to 3.20180228nb1 [schmonz 2018-03-09]
 	Added graphics/R-labeling version 0.3 [minskim 2018-03-09]
 	Updated math/R-RcppEigen to 0.3.3.4.0 [minskim 2018-03-09]
+	Added devel/R-R6 version 2.2.2 [minskim 2018-03-10]
