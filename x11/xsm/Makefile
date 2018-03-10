@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2014/10/09 14:07:16 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.12 2018/03/10 22:18:34 wiz Exp $
 
-DISTNAME=		xsm-1.0.3
+DISTNAME=		xsm-1.0.4
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
@@ -28,5 +27,4 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}/X11/xsm
 CONF_FILES+=		share/examples/xsm/system.xsm ${PKG_SYSCONFDIR}/X11/xsm/system.xsm
 
 .include "../../x11/libXaw/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
