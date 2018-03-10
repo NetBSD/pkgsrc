@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 03:28:57 agc Exp $
+$NetBSD: distinfo,v 1.5 2018/03/10 22:25:06 wiz Exp $
 
-SHA1 (xbitmaps-1.1.1.tar.bz2) = 578afff7e4912192b524c25254cf7f54c16e57d8
-RMD160 (xbitmaps-1.1.1.tar.bz2) = c1e4bca755ca22b505501506fe5f40dd9eb66a5a
-SHA512 (xbitmaps-1.1.1.tar.bz2) = 172a74014e699e5f295ae726a77f1669baf4ac00d64a138b77e5502102b2a02c10127f35ccea5b6af5479d17f60a6bb63ac0f943fd071ab8b396d43ef314ae61
-Size (xbitmaps-1.1.1.tar.bz2) = 113346 bytes
+SHA1 (xbitmaps-1.1.2.tar.bz2) = 1cb0e485a66280e9a64b48426140b8a0de9cf169
+RMD160 (xbitmaps-1.1.2.tar.bz2) = 094623c87c9b594d97049561e1d7a4916f50d912
+SHA512 (xbitmaps-1.1.2.tar.bz2) = eed5e2fce9fc6c532984e6ed1262e440591e311ca6c61a7fe7a5c877df84bfc2d7aff388fb9c894fc098785b8e5352f0bd7c918252247a040cf123874847450d
+Size (xbitmaps-1.1.2.tar.bz2) = 129435 bytes
