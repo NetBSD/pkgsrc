@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1160 2018/03/10 22:17:42 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1161 2018/03/10 22:18:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1606,3 +1606,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xrefresh to 1.0.6 [wiz 2018-03-10]
 	Updated x11/xset to 1.2.4 [wiz 2018-03-10]
 	Updated x11/xsetroot to 1.1.2 [wiz 2018-03-10]
+	Updated x11/xsm to 1.0.4 [wiz 2018-03-10]
