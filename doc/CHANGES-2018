@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1141 2018/03/10 05:45:40 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.1142 2018/03/10 08:00:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1587,3 +1587,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/R-R6 version 2.2.2 [minskim 2018-03-10]
 	Updated textproc/discount to 2.2.3anb1 [schmonz 2018-03-10]
 	Updated textproc/p5-Text-Markdown-Discount to 0.11nb5 [schmonz 2018-03-10]
+	Updated x11/xeyes to 1.1.2 [wiz 2018-03-10]
