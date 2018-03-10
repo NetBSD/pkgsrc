@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/01/30 01:33:53 wiedi Exp $
+# $NetBSD: Makefile,v 1.9 2018/03/10 10:34:26 wiedi Exp $
 
-VERSION=	0.18
+VERSION=	0.19
 DISTNAME=	${VERSION}
 PKGNAME=	p5-Mojo-IOLoop-ForkCall-${VERSION}
 CATEGORIES=	devel
