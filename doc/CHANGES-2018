@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1165 2018/03/10 22:23:11 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1166 2018/03/10 22:24:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1611,3 +1611,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xwininfo to 1.1.4 [wiz 2018-03-10]
 	Updated x11/xwud to 1.0.5 [wiz 2018-03-10]
 	Updated x11/transset to 1.0.2 [wiz 2018-03-10]
+	Updated x11/ico to 1.0.5 [wiz 2018-03-10]
