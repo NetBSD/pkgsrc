@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1167 2018/03/10 22:25:15 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1168 2018/03/10 23:15:15 tron Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1613,3 +1613,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/transset to 1.0.2 [wiz 2018-03-10]
 	Updated x11/ico to 1.0.5 [wiz 2018-03-10]
 	Updated x11/xbitmaps to 1.1.2 [wiz 2018-03-10]
+	Updated multimedia/ffmpeg2theora to 0.30nb4 [tron 2018-03-10]
