@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2013/08/09 09:23:13 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2018/03/10 22:16:40 wiz Exp $
 
-DISTNAME=		xset-1.2.3
+DISTNAME=		xset-1.2.4
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
@@ -19,5 +19,4 @@ CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXxf86misc/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
