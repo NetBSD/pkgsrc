@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1148 2018/03/10 16:32:50 he Exp $
+$NetBSD: CHANGES-2018,v 1.1149 2018/03/10 17:18:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1594,3 +1594,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated editors/nano to 2.9.4 [wiedi 2018-03-10]
 	Updated devel/p5-Mojo-IOLoop-ForkCall to 0.19 [wiedi 2018-03-10]
 	Updated net/exabgp to 3.4.23 [he 2018-03-10]
+	Updated security/py-acme-tiny to 0.0.20170214nb1 [schmonz 2018-03-10]
