@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2013/09/09 09:34:49 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/03/10 22:05:12 wiz Exp $
 
-DISTNAME=		xkill-1.0.4
+DISTNAME=		xkill-1.0.5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
