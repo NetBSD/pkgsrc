@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 03:28:34 agc Exp $
+$NetBSD: distinfo,v 1.6 2018/03/10 22:24:02 wiz Exp $
 
-SHA1 (ico-1.0.4.tar.bz2) = 53e7bb52227f2458bf20c7f95f34b19c26cf8885
-RMD160 (ico-1.0.4.tar.bz2) = 4a7caa5c00c5399d9f158e55ce1f6b0c9f7aa5ce
-SHA512 (ico-1.0.4.tar.bz2) = f7200fc04e7d0442215a3fe1f53456fe6bcd14eb2e2fd048cbe7f5700ad28e10ea8ef72ab98d3cd232c801b037fdac5ac4367ba98484f2912de0715a23f82e5d
-Size (ico-1.0.4.tar.bz2) = 127619 bytes
+SHA1 (ico-1.0.5.tar.bz2) = 8759ec954375f3a1b37dc920a12790bfbfb0cad3
+RMD160 (ico-1.0.5.tar.bz2) = 8c4a0258eda8c576827667300a32d6126a284fc8
+SHA512 (ico-1.0.5.tar.bz2) = 93a94a66d4a41b39d4b3657050e58f8269d352dae5d5916c9ecdda1cb14f23b9d159d67c50fdfa654b4b1c2ad11434bed140ace70703c82b05d3fe8686aab8f6
+Size (ico-1.0.5.tar.bz2) = 136727 bytes
