@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2014/10/09 14:07:16 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.7 2018/03/10 22:25:06 wiz Exp $
 
-DISTNAME=		xbitmaps-1.1.1
+DISTNAME=		xbitmaps-1.1.2
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=data/}
 EXTRACT_SUFX=		.tar.bz2
