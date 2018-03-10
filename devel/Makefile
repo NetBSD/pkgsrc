@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2627 2018/03/06 17:07:56 minskim Exp $
+# $NetBSD: Makefile,v 1.2628 2018/03/10 01:21:05 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -13,6 +13,7 @@ SUBDIR+=	ObjectiveLib
 SUBDIR+=	ProjectCenter
 SUBDIR+=	R-IRdisplay
 SUBDIR+=	R-IRkernel
+SUBDIR+=	R-R6
 SUBDIR+=	R-Rcpp
 SUBDIR+=	R-assertthat
 SUBDIR+=	R-bit
