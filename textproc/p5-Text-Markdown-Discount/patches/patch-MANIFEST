@@ -1,15 +1,114 @@
-$NetBSD: patch-MANIFEST,v 1.1 2013/08/30 15:49:49 schmonz Exp $
+$NetBSD: patch-MANIFEST,v 1.2 2018/03/10 05:45:02 schmonz Exp $
 
-Fix build on case-insensitive filesystems (e.g., Darwin's).
+Remove local copy of libdiscount.
 
---- MANIFEST.orig	2013-08-09 20:07:19.000000000 +0000
+--- MANIFEST.orig	2013-11-15 18:30:16.000000000 +0000
 +++ MANIFEST
-@@ -98,7 +98,7 @@ discount/toc.c
- discount/tools/checkbits.sh
- discount/tools/cols.c
- discount/tools/echo.c
+@@ -1,107 +1,5 @@
+ Changes
+ Discount.xs
+-discount/amalloc.c
+-discount/amalloc.h
+-discount/basename.c
+-discount/configure.inc
+-discount/configure.sh
+-discount/COPYRIGHT
+-discount/CREDITS
+-discount/Csio.c
+-discount/css.c
+-discount/cstring.h
+-discount/docheader.c
+-discount/dumptree.c
+-discount/emmatch.c
+-discount/flags.c
+-discount/generate.c
+-discount/github_flavoured.c
+-discount/html5.c
+-discount/INSTALL
+-discount/main.c
+-discount/Makefile.in
+-discount/makepage.1
+-discount/makepage.c
+-discount/markdown.1
+-discount/markdown.3
+-discount/markdown.7
+-discount/markdown.c
+-discount/markdown.h
+-discount/mkd-callbacks.3
+-discount/mkd-extensions.7
+-discount/mkd-functions.3
+-discount/mkd-line.3
+-discount/mkd2html.1
+-discount/mkd2html.c
+-discount/mkdio.c
+-discount/mkdio.h.in
+-discount/mktags.c
+-discount/pgm_options.c
+-discount/pgm_options.h
+-discount/Plan9/markdown.1
+-discount/Plan9/markdown.2
+-discount/Plan9/markdown.6
+-discount/Plan9/mkfile
+-discount/Plan9/README
+-discount/README
+-discount/resource.c
+-discount/setup.c
+-discount/tags.c
+-discount/tags.h
+-discount/tests/autolink.t
+-discount/tests/automatic.t
+-discount/tests/backslash.t
+-discount/tests/callbacks.t
+-discount/tests/chrome.text
+-discount/tests/code.t
+-discount/tests/compat.t
+-discount/tests/crash.t
+-discount/tests/defects.t
+-discount/tests/div.t
+-discount/tests/dl.t
+-discount/tests/embedlinks.text
+-discount/tests/emphasis.t
+-discount/tests/extrafootnotes.t
+-discount/tests/flow.t
+-discount/tests/footnotes.t
+-discount/tests/functions.sh
+-discount/tests/header.t
+-discount/tests/html.t
+-discount/tests/html5.t
+-discount/tests/links.text
+-discount/tests/linkylinky.t
+-discount/tests/linkypix.t
+-discount/tests/list.t
+-discount/tests/list3deep.t
+-discount/tests/misc.t
+-discount/tests/pandoc.t
+-discount/tests/para.t
+-discount/tests/paranoia.t
+-discount/tests/peculiarities.t
+-discount/tests/pseudo.t
+-discount/tests/reddit.t
+-discount/tests/reparse.t
+-discount/tests/schiraldi.t
+-discount/tests/smarty.t
+-discount/tests/snakepit.t
+-discount/tests/strikethrough.t
+-discount/tests/style.t
+-discount/tests/superscript.t
+-discount/tests/syntax.text
+-discount/tests/tables.t
+-discount/tests/tabstop.t
+-discount/tests/toc.t
+-discount/tests/xml.t
+-discount/theme.1
+-discount/theme.c
+-discount/toc.c
+-discount/tools/checkbits.sh
+-discount/tools/cols.c
+-discount/tools/echo.c
 -discount/VERSION
-+discount/MYVERSION
- discount/version.c.in
- discount/xml.c
- discount/xmlpage.c
+-discount/version.c.in
+-discount/xml.c
+-discount/xmlpage.c
+ INSTALL.Discount
+ lib/Text/Markdown/Discount.pm
+ Makefile.PL

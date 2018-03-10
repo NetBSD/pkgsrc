@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2017/06/05 14:24:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2018/03/10 05:45:02 schmonz Exp $
 #
 
 DISTNAME=		Text-Markdown-Discount-0.11
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Text/}
 
@@ -15,16 +15,14 @@ LICENSE=		${PERL5_LICENSE}
 PERL5_PACKLIST=		auto/Text/Markdown/Discount/.packlist
 USE_LANGUAGES=		c
 
-MAKE_JOBS_SAFE=		no
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-PKG_CPP=		/usr/bin/cpp
-.endif
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	Makefile.PL
+SUBST_VARS.paths=	PREFIX
+SUBST_STAGE.paths=	pre-configure
 
 post-extract:
-	cd ${WRKSRC} && mv discount/VERSION discount/MYVERSION
+	cd ${WRKSRC} && rm -rf discount
 
+.include "../../textproc/discount/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
