@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/01/10 16:53:09 jaapb Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/11 03:56:13 dholland Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../devel/ocaml-lwt/Makefile.common"
 
 PKGNAME=	ocaml-lwt_glib-1.1.0
