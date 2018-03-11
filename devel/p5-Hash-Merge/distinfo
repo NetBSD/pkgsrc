@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/11/24 13:52:09 wiz Exp $
+$NetBSD: distinfo,v 1.7 2018/03/11 10:14:27 wiz Exp $
 
-SHA1 (Hash-Merge-0.299.tar.gz) = fd4e587b62d4a8a7954918e566b2e13e02f380e1
-RMD160 (Hash-Merge-0.299.tar.gz) = 22cb329246a437dc9c5fd81d320aba992498d5a1
-SHA512 (Hash-Merge-0.299.tar.gz) = eca30f92d575619e221a3a2fdb3ad4023dca13eb61d3f947b60ae95265f11da9fc3c14d8771c49c9a67cb58ad7761283f4e752032eca8ae027b27188d60bf119
-Size (Hash-Merge-0.299.tar.gz) = 13585 bytes
+SHA1 (Hash-Merge-0.300.tar.gz) = fa0a75514a2869ab520f9d39d852cabfb0035c0a
+RMD160 (Hash-Merge-0.300.tar.gz) = 680a2f265ec5dcc0c26fe497d494c8ad7ef2dbe1
+SHA512 (Hash-Merge-0.300.tar.gz) = a7d988f64ff2487b4d1237d01d424ea49c99fd64b721b331735223b86342f54442007ee371f0a94646f835997446cc99e857b3cd23429639bf47af8fe42bad2e
+Size (Hash-Merge-0.300.tar.gz) = 13944 bytes
