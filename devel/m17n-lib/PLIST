@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/04/09 01:48:25 obache Exp $
-bin/m17n-config
+@comment $NetBSD: PLIST,v 1.4 2018/03/11 19:47:27 wiz Exp $
 bin/m17n-conv
 ${PLIST.x11}bin/m17n-date
 ${PLIST.x11}bin/m17n-dump
