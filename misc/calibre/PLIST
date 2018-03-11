@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.83 2018/02/01 16:05:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.84 2018/03/11 17:40:23 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -699,6 +699,7 @@ lib/calibre/calibre/gui2/actions/toc_edit.py
 lib/calibre/calibre/gui2/actions/tweak_epub.py
 lib/calibre/calibre/gui2/actions/unpack_book.py
 lib/calibre/calibre/gui2/actions/view.py
+lib/calibre/calibre/gui2/actions/virtual_library.py
 lib/calibre/calibre/gui2/add.py
 lib/calibre/calibre/gui2/add_filters.py
 lib/calibre/calibre/gui2/auto_add.py
@@ -905,6 +906,7 @@ lib/calibre/calibre/gui2/metadata/single.py
 lib/calibre/calibre/gui2/metadata/single_download.py
 lib/calibre/calibre/gui2/notify.py
 lib/calibre/calibre/gui2/open_with.py
+lib/calibre/calibre/gui2/pin_columns.py
 lib/calibre/calibre/gui2/preferences/__init__.py
 lib/calibre/calibre/gui2/preferences/adding.py
 lib/calibre/calibre/gui2/preferences/adding_ui.py
@@ -1358,6 +1360,7 @@ lib/calibre/calibre/utils/socket_inheritance.py
 lib/calibre/calibre/utils/soupparser.py
 lib/calibre/calibre/utils/speedups.py
 lib/calibre/calibre/utils/spell/__init__.py
+lib/calibre/calibre/utils/tdir_in_cache.py
 lib/calibre/calibre/utils/terminal.py
 lib/calibre/calibre/utils/test_lock.py
 lib/calibre/calibre/utils/text2int.py
@@ -1732,6 +1735,7 @@ share/calibre/images/view-image.png
 share/calibre/images/view-refresh.png
 share/calibre/images/view.png
 share/calibre/images/viewer.png
+share/calibre/images/vl.png
 share/calibre/images/window-close.png
 share/calibre/images/wizard.png
 share/calibre/jacket/stylesheet.css
@@ -2003,9 +2007,9 @@ share/calibre/recipes/columbusdispatch.recipe
 share/calibre/recipes/common_dreams.recipe
 share/calibre/recipes/computerworld_dk.recipe
 share/calibre/recipes/computerworld_pl.recipe
+share/calibre/recipes/computing_uk.recipe
 share/calibre/recipes/conowego_pl.recipe
 share/calibre/recipes/consortium_news.recipe
-share/calibre/recipes/consumerist.recipe
 share/calibre/recipes/contemporary_argentine_writers.recipe
 share/calibre/recipes/contropiano.recipe
 share/calibre/recipes/corren2.recipe
@@ -2252,8 +2256,6 @@ share/calibre/recipes/fhm_uk.recipe
 share/calibre/recipes/fhmro.recipe
 share/calibre/recipes/film_org_pl.recipe
 share/calibre/recipes/film_web.recipe
-share/calibre/recipes/financial_times_uk.recipe
-share/calibre/recipes/financial_times_us.recipe
 share/calibre/recipes/financialsense.recipe
 share/calibre/recipes/financiarul.recipe
 share/calibre/recipes/financieele_dagblad.recipe
@@ -2353,6 +2355,7 @@ share/calibre/recipes/gosc_niedzielny.recipe
 share/calibre/recipes/gram_pl.recipe
 share/calibre/recipes/grandes_corresponsales_es.recipe
 share/calibre/recipes/granma.recipe
+share/calibre/recipes/granta.recipe
 share/calibre/recipes/grantland.recipe
 share/calibre/recipes/greensboro_news_and_record.recipe
 share/calibre/recipes/grenaalokalavisen_dk.recipe
@@ -2530,7 +2533,6 @@ share/calibre/recipes/karlsruhe.recipe
 share/calibre/recipes/karsi_gazete.recipe
 share/calibre/recipes/kath_net.recipe
 share/calibre/recipes/kathemerini.recipe
-share/calibre/recipes/kellog_faculty.recipe
 share/calibre/recipes/kellog_insight.recipe
 share/calibre/recipes/kerrang.recipe
 share/calibre/recipes/kgsenghavebladet_dk.recipe
@@ -2647,7 +2649,6 @@ share/calibre/recipes/lomza.recipe
 share/calibre/recipes/london_free_press.recipe
 share/calibre/recipes/los_tiempos_bo.recipe
 share/calibre/recipes/losservatoreromano_it.recipe
-share/calibre/recipes/lr21.recipe
 share/calibre/recipes/lrb.recipe
 share/calibre/recipes/lrb_payed.recipe
 share/calibre/recipes/ludwig_mises.recipe
