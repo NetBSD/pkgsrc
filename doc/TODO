@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18184 2018/03/11 19:58:18 wiz Exp $
+$NetBSD: TODO,v 1.18185 2018/03/11 20:25:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -688,7 +688,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.18.3
 	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.5 [wip]
-	o glib-networking-2.56.0
+	o glib-networking-2.56.0 [needs glib2-2.56]
 	o gliv-1.9.7
 	o glom-1.14.2 [GNOME 2.26]
 	o glx-utils-8.3.0
@@ -765,7 +765,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtklevel9-5.1
 	o gtkmagnetic-23
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
-	o gtksourceview3-4.0.0
 	o gtl-3.6
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
