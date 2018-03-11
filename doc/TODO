@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18180 2018/03/11 18:08:37 wiz Exp $
+$NetBSD: TODO,v 1.18181 2018/03/11 19:42:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -761,7 +761,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gst123-0.3.5
-	o gtar-base-1.30
 	o gthumb-3.4.0
 	o gtkglarea-2.1.0
 	o gtklevel9-5.1
@@ -1224,7 +1223,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-pycountry-1.20
 	o py-quixote-2.9
 	o py-scgi-1.15
-	o py-setuptools-38.5.2
 	o py-simpletal-5.1
 	o py-smb-1.1.17
 	o py-spf-2.0.12t
@@ -1466,8 +1464,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o warzone2100-2.3.8
 	o wcalc-2.4
 	o webalizer-2.23.05
-	o webkit-gtk-2.18.4 [wip]
-	o webkit-gtk-2.18.6
+	o webkit-gtk-2.18.6 [wip]
 	o websvn-2.3.3
 	o weewm-0.01
 	o wgetpaste-2.26
