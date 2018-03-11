@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1192 2018/03/11 17:32:53 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1193 2018/03/11 17:35:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1639,3 +1639,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/gtar to 1.30 [wiz 2018-03-11]
 	Updated audio/abcde to 2.9.1 [wiz 2018-03-11]
 	Removed net/p5-WebService-MusicBrainz0 [wiz 2018-03-11]
+	Updated sysutils/dbus to 1.12.6 [wiz 2018-03-11]
