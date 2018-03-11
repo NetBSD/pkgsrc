@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1187 2018/03/11 13:04:50 maya Exp $
+$NetBSD: CHANGES-2018,v 1.1188 2018/03/11 14:43:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1634,3 +1634,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/p5-Algorithm-BloomFilter version 0.02 [maya 2018-03-11]
 	Added security/p5-Data-Password-passwdqc version 0.09 [maya 2018-03-11]
 	Added textproc/p5-MultiMarkdown version 1.000035 [maya 2018-03-11]
+	Updated net/syncthing to 0.14.45 [wiz 2018-03-11]
