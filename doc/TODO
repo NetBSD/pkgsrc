@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18169 2018/03/11 17:31:53 wiz Exp $
+$NetBSD: TODO,v 1.18170 2018/03/11 17:35:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -531,7 +531,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o darktable-2.4
 	o dasher-4.11
 	o dateutils-0.4.2
-	o dbus-1.12.6
 	o dconf-0.27.1 [wip]
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
