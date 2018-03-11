@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/09/11 09:52:41 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/11 20:04:16 bsiegert Exp $
 gopkg/pkg/${GO_PLATFORM}/google.golang.org/grpc.a
 gopkg/pkg/${GO_PLATFORM}/google.golang.org/grpc/codes.a
 gopkg/pkg/${GO_PLATFORM}/google.golang.org/grpc/credentials.a
@@ -7,7 +7,6 @@ gopkg/pkg/${GO_PLATFORM}/google.golang.org/grpc/grpclog.a
 gopkg/pkg/${GO_PLATFORM}/google.golang.org/grpc/grpclog/glogger.a
 gopkg/pkg/${GO_PLATFORM}/google.golang.org/grpc/health.a
 gopkg/pkg/${GO_PLATFORM}/google.golang.org/grpc/health/grpc_health_v1.a
-gopkg/pkg/${GO_PLATFORM}/google.golang.org/grpc/internal.a
 gopkg/pkg/${GO_PLATFORM}/google.golang.org/grpc/metadata.a
 gopkg/pkg/${GO_PLATFORM}/google.golang.org/grpc/naming.a
 gopkg/pkg/${GO_PLATFORM}/google.golang.org/grpc/peer.a

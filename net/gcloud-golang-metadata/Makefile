@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2018/03/04 15:52:17 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2018/03/11 20:00:34 bsiegert Exp $
 #
 
 DISTNAME=		gcloud-golang
 PKGNAME=		gcloud-golang-metadata-20150310
-PKGREVISION=		9
+PKGREVISION=		10
 GITHUB_PROJECT=		${DISTNAME}
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=GoogleCloudPlatform/}
@@ -29,6 +29,9 @@ pre-patch:
 	${RM} -fr ${WRKSRC}/cloud*go
 	${RM} -fr ${WRKSRC}/internal/datastore
 	${RM} -fr ${WRKSRC}/internal/testutil
+
+pre-install:
+	${RM} -f ${WRKDIR}/pkg/${GO_PLATFORM}/google.golang.org/cloud/internal.a
 
 .include "../../net/go-net/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
