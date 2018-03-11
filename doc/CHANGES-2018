@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1206 2018/03/11 19:47:35 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1207 2018/03/11 19:58:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1653,3 +1653,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-setuptools to 38.5.2 [wiz 2018-03-11]
 	Updated misc/m17n-db to 1.8.0 [wiz 2018-03-11]
 	Updated devel/m17n-lib to 1.8.0 [wiz 2018-03-11]
+	Updated graphics/ImageMagick to 7.0.7.25 [wiz 2018-03-11]
