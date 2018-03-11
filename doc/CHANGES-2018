@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1207 2018/03/11 19:58:18 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1208 2018/03/11 20:25:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1654,3 +1654,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/m17n-db to 1.8.0 [wiz 2018-03-11]
 	Updated devel/m17n-lib to 1.8.0 [wiz 2018-03-11]
 	Updated graphics/ImageMagick to 7.0.7.25 [wiz 2018-03-11]
+	Added x11/gtksourceview4 version 4.0.0 [wiz 2018-03-11]
