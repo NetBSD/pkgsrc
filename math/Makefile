@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.370 2018/03/05 16:57:38 minskim Exp $
+# $NetBSD: Makefile,v 1.371 2018/03/11 11:25:34 maya Exp $
 
 COMMENT=	Mathematics
 
@@ -196,6 +196,7 @@ SUBDIR+=	openaxiom
 SUBDIR+=	openfst
 SUBDIR+=	ordCalc
 SUBDIR+=	otter
+SUBDIR+=	p5-Algorithm-BloomFilter
 SUBDIR+=	p5-Algorithm-Cluster
 SUBDIR+=	p5-Algorithm-Munkres
 SUBDIR+=	p5-Excel-Template
