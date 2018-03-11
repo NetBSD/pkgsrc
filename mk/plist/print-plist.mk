@@ -1,16 +1,16 @@
-# $NetBSD: print-plist.mk,v 1.33 2017/06/14 16:23:09 prlw1 Exp $
-
-###
-### Automatic PLIST generation
-###  - files & symlinks first
-###  - empty directories are handled properly
-###  - dirs from mtree files are excluded
-###  - substitute for platform or package specifics substrings
-###
-### Usage:
-###  - make install
-###  - make print-PLIST | brain >PLIST
-###
+# $NetBSD: print-plist.mk,v 1.34 2018/03/11 14:53:10 rillig Exp $
+#
+# Automatic PLIST generation
+#  - files & symlinks first
+#  - empty directories are handled properly
+#  - dirs from mtree files are excluded
+#  - substitute for platform or package specifics substrings
+#
+# Usage:
+#  - make install
+#  - make print-PLIST | brain >PLIST
+#
+# Keywords: plist print-plist
 
 _PRINT_PLIST_AWK_SUBST={
 _PRINT_PLIST_AWK_SUBST+=						\
