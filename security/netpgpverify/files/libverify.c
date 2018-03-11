@@ -53,6 +53,10 @@
 #include "rsa.h"
 #include "verify.h"
 
+#ifndef PRIi64
+#define PRIi64	"lld"
+#endif
+
 /* 64bit key ids */
 #define PGPV_KEYID_LEN		8
 #define PGPV_STR_KEYID_LEN	(PGPV_KEYID_LEN + PGPV_KEYID_LEN + 1)
