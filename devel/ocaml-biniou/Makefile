@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/03/11 03:30:41 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2018/03/11 03:42:50 dholland Exp $
 
 GITHUB_PROJECT=	biniou
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,9 +12,6 @@ HOMEPAGE=	https://github.com/mjambon/biniou/
 COMMENT=	Extensible binary data format, like JSON but faster
 LICENSE=	modified-bsd
 
-MAKE_JOBS_SAFE=	no
-USE_TOOLS+=	gmake
-BUILD_TARGET=	byte doc META
 OCAML_USE_JBUILDER=	yes
 INSTALLATION_DIRS+=	bin
 
