@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2015/11/24 05:45:58 dholland Exp $
+# $NetBSD: options.mk,v 1.2 2018/03/11 06:14:45 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.z3
 PKG_SUPPORTED_OPTIONS=	ocaml java
@@ -8,6 +8,7 @@ PKG_SUGGESTED_OPTIONS=	ocaml
 
 .if !empty(PKG_OPTIONS:Mocaml)
 CONFIGURE_ARGS+=	--ml
+.include "../../math/ocaml-num/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .endif
 
