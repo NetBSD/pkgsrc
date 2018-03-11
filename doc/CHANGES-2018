@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1209 2018/03/11 20:50:12 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.1210 2018/03/11 21:01:14 ginsbach Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1658,3 +1658,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/go-sys to 0.0.20180308 [bsiegert 2018-03-11]
 	Updated security/go-crypto to 0.0.20180308 [bsiegert 2018-03-11]
 	Removed security/go-crypto-acme [bsiegert 2018-03-11]
+	Added textproc/xxdiff version 4.0.1 [ginsbach 2018-03-11]
+	Added textproc/xxdiff-scripts version 4.0.1 [ginsbach 2018-03-11]
