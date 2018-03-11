@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.14 2018/03/09 11:36:40 mef Exp $
+$NetBSD: distinfo,v 1.15 2018/03/11 06:23:54 mef Exp $
 
-SHA1 (uhd-3.9.4.tar.gz) = 1a328a9bef2def019b06b9e8d32dd3c849265aa9
-RMD160 (uhd-3.9.4.tar.gz) = 33d56e442d12c6317e0b5725e92f2c5139b35260
-SHA512 (uhd-3.9.4.tar.gz) = 2ff47e1d7af234e256eaef863f60b94a66764cde567338b84f0df3522d7dd43dfd505b077ff8cbf9ca2f75a19ccc5813c27dbb70e6ea2876e9e439b345fa6acd
-Size (uhd-3.9.4.tar.gz) = 2443355 bytes
-SHA1 (patch-host_examples_network_relay.cpp) = 8762747641ae0609bb0e09bb806e0a7d9126d5be
-SHA1 (patch-host_lib_transport_tcp_zero_copy.cpp) = d1dc166766d5603bea5cd3d85e333d453864daac
-SHA1 (patch-host_lib_transport_udp_simple.cpp) = 2058587726613f5c300eda4cb8fd428052728326
-SHA1 (patch-host_lib_transport_udp_zero_copy.cpp) = 6a39fef6a176cd2de30ec50a07efbea08ac4a60f
+SHA1 (uhd-3.11.0.0.tar.gz) = bd38e67f240a8ee2bf2d76f08358402efefea12d
+RMD160 (uhd-3.11.0.0.tar.gz) = 28c5370e3871cc3e4930143cc8f3902ea3b117fb
+SHA512 (uhd-3.11.0.0.tar.gz) = c2c322401b235f37474baaca29c6e8665cb7c2e004cfa3ba8dc10a6b1c51137b55f2412f725cd686cad4a8f9edd2d33937bd31801c53419266c6805cd101c56d
+Size (uhd-3.11.0.0.tar.gz) = 9278400 bytes
