@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/03/08 12:59:42 wiz Exp $
+$NetBSD: distinfo,v 1.5 2018/03/11 10:18:41 wiz Exp $
 
-SHA1 (Module-FromPerlVer-0.001000.tar.gz) = 04c3a5f76b22a88ff4d1d7dca6cbbca8e264da7e
-RMD160 (Module-FromPerlVer-0.001000.tar.gz) = 110bb4bc68dbec395b4bb82fc842ddb1f16ab766
-SHA512 (Module-FromPerlVer-0.001000.tar.gz) = 4d6289c3b0560415f93c7b8f063aa36b1ea8535f30366711a6717a9754d0698307c2c4041e0ffaf7ec907d2e22a60356bf501784878c6b018ad57826890662a5
-Size (Module-FromPerlVer-0.001000.tar.gz) = 12887 bytes
+SHA1 (Module-FromPerlVer-0.004002.tar.gz) = 20adc6c16c36ff0365bbe72b7be5b102d47a39ad
+RMD160 (Module-FromPerlVer-0.004002.tar.gz) = 3c4d4401a368716564e9d2ba202d824a0965c14d
+SHA512 (Module-FromPerlVer-0.004002.tar.gz) = e3760b8aa72d5182902e1f0c2b92ddf53e1ba3576f1948171d8447f0746a5d920dc8a0ed01587bd6e1db7614a72501fb6ba4dd8a605e311e52649414e97c46dd
+Size (Module-FromPerlVer-0.004002.tar.gz) = 31813 bytes
