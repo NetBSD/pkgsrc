@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1189 2018/03/11 15:42:48 rillig Exp $
+$NetBSD: CHANGES-2018,v 1.1190 2018/03/11 17:28:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1636,3 +1636,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added textproc/p5-MultiMarkdown version 1.000035 [maya 2018-03-11]
 	Updated net/syncthing to 0.14.45 [wiz 2018-03-11]
 	Updated textproc/translate-toolkit to 2.2.5 [rillig 2018-03-11]
+	Updated archivers/gtar to 1.30 [wiz 2018-03-11]
