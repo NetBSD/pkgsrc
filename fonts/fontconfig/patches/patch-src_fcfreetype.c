@@ -1,12 +1,12 @@
-$NetBSD: patch-src_fcfreetype.c,v 1.1 2018/01/15 08:59:15 he Exp $
+$NetBSD: patch-src_fcfreetype.c,v 1.2 2018/03/11 17:54:03 wiz Exp $
 
 Workaround for in-tree freetype2 headers from netbsd-6.
 
---- src/fcfreetype.c.orig	2017-09-21 07:53:35.000000000 +0000
+--- src/fcfreetype.c.orig	2018-03-02 04:27:09.000000000 +0000
 +++ src/fcfreetype.c
-@@ -1267,6 +1267,9 @@ FcFreeTypeQueryFace (const FT_Face  face
- 	}
-     }
+@@ -1338,6 +1338,9 @@ FcFreeTypeQueryFaceInternal (const FT_Fa
+     if (!FcPatternAddBool (pat, FC_VARIABLE, variable))
+ 	goto bail1;
  
 +#if !defined(FT_SFNT_OS2) && !defined(ft_sfnt_os2)
 +# define FT_SFNT_OS2 ft_sfnt_os2
