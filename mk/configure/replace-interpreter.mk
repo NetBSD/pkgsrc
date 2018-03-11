@@ -1,4 +1,4 @@
-# $NetBSD: replace-interpreter.mk,v 1.14 2018/03/11 14:59:14 rillig Exp $
+# $NetBSD: replace-interpreter.mk,v 1.15 2018/03/11 15:07:45 rillig Exp $
 
 # This file provides common templates for replacing #! interpreters
 # in script files.
@@ -117,4 +117,13 @@ replace-interpreter:
 .  else
 	@${WARNING_MSG} "[replace-interpreter] Empty list of files for ${_lang_}."
 .  endif
+.endfor
+
+_VARGROUPS+=		interp
+.for varname in REPLACE_AWK REPLACE_BASH REPLACE_CSH REPLACE_KSH REPLACE_PERL REPLACE_SH
+_PKG_VARS.interp+=	${varname}
+.endfor
+_PKG_VARS.interp+=	REPLACE_INTERPRETER
+.for interp in ${REPLACE_INTERPRETER}
+_DEF_VARS.interp+=	REPLACE.${interp}.old REPLACE.${interp}.new REPLACE_FILES.${interp}
 .endfor
