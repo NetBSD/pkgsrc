@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1208 2018/03/11 20:25:33 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1209 2018/03/11 20:50:12 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1655,3 +1655,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/m17n-lib to 1.8.0 [wiz 2018-03-11]
 	Updated graphics/ImageMagick to 7.0.7.25 [wiz 2018-03-11]
 	Added x11/gtksourceview4 version 4.0.0 [wiz 2018-03-11]
+	Updated devel/go-sys to 0.0.20180308 [bsiegert 2018-03-11]
+	Updated security/go-crypto to 0.0.20180308 [bsiegert 2018-03-11]
+	Removed security/go-crypto-acme [bsiegert 2018-03-11]
