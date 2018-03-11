@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2016/09/11 08:02:30 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/11 19:45:21 bsiegert Exp $
 bin/protoc-gen-go
 gopkg/pkg/${GO_PLATFORM}/github.com/golang/protobuf/jsonpb.a
 gopkg/pkg/${GO_PLATFORM}/github.com/golang/protobuf/jsonpb/jsonpb_test_proto.a
 gopkg/pkg/${GO_PLATFORM}/github.com/golang/protobuf/proto.a
 gopkg/pkg/${GO_PLATFORM}/github.com/golang/protobuf/proto/proto3_proto.a
-gopkg/pkg/${GO_PLATFORM}/github.com/golang/protobuf/proto/testdata.a
 gopkg/pkg/${GO_PLATFORM}/github.com/golang/protobuf/protoc-gen-go/descriptor.a
 gopkg/pkg/${GO_PLATFORM}/github.com/golang/protobuf/protoc-gen-go/generator.a
 gopkg/pkg/${GO_PLATFORM}/github.com/golang/protobuf/protoc-gen-go/grpc.a
