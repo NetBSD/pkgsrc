@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2015/03/15 18:46:55 hiramatsu Exp $
-#
+# $NetBSD: Makefile,v 1.23 2018/03/11 19:44:36 wiz Exp $
 
-DISTNAME=	m17n-db-1.7.0
+DISTNAME=	m17n-db-1.8.0
 CATEGORIES=	misc
 MASTER_SITES=	http://download.savannah.gnu.org/releases/m17n/
 
