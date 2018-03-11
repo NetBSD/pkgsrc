@@ -1,0 +1,23 @@
+xxdiff is a graphical file and directories comparator and merge tool.
+
+Features
+
+ * Comparing two files, three files, or two directories (shallow and
+   recursive);
+ * Horizontal diffs highlighting; Files can be merged interactively and
+ * resulting output visualized and saved;
+ * Has features to assist in performing merge reviews/policing; Can
+ * unmerge CVS conflicts in automatically merged file and display
+   them as two files, to help resolve conflicts;
+ * Uses external diff program to compute differences: works with GNU
+   diff, SGI diff and ClearCase's cleardiff, and any other diff whose
+   output is similar to those;
+ * Fully customizable with a resource file; Look-and-feel similar to
+ * Rudy Wortel's/SGI xdiff, it is desktop agnostic (i.e. will work
+   equally well with KDE or Gnome);
+ * Features and output that ease integration with scripts.
+
+xxdiff does not support comparing files encoded with Unicode. Also, it
+does not support inline editing of the diffed files. If you need these
+features, you could try emacs or Meld (although both of these lack some
+of the most interesting features of xxdiff).
