@@ -1,0 +1,2 @@
+Perl5 module that provides a class for handling S/MIME messages.
+It can sign, verify, encrypt and decrypt messages.
