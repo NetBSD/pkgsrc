@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2017/09/17 10:46:42 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2018/03/11 10:15:52 wiz Exp $
 
-DISTNAME=	Log-Dispatch-FileRotate-1.34
+DISTNAME=	Log-Dispatch-FileRotate-1.35
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Log/}
