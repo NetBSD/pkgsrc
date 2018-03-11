@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/03/11 03:40:12 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2018/03/11 03:41:07 dholland Exp $
 
 GITHUB_PROJECT=	yojson
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,9 +12,9 @@ HOMEPAGE=	https://github.com/mjambon/yojson/
 COMMENT=	JSON parsing and pretty-printing library for OCaml
 LICENSE=	modified-bsd
 
-MAKE_JOBS_SAFE=	no
-USE_TOOLS+=	gmake
-BUILD_TARGET=	META all
+MAKE_JOBS_SAFE=		no
+USE_TOOLS+=		gmake
+BUILD_TARGET=		META all
 OCAML_USE_JBUILDER=	yes
 INSTALLATION_DIRS+=	bin
 
