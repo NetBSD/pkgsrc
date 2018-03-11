@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18175 2018/03/11 17:54:13 wiz Exp $
+$NetBSD: TODO,v 1.18176 2018/03/11 17:59:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -961,8 +961,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libressl-2.6.3
-	o librsvg-2.42.2 [needs rust+cargo]
-	o librsvg-2.42.3
+	o librsvg-2.42.3 [needs rust+cargo]
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libtecla-1.6.3
@@ -1492,7 +1491,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xa65-2.3.7
 	o xaric-0.13.7
 	o xcoral-3.14
-	o xerces-c-3.2.1
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xf86-video-geode-2.11.9 [wip]
