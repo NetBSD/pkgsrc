@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1171 2018/03/11 07:17:33 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1172 2018/03/11 08:58:22 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1616,7 +1616,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/ffmpeg2theora to 0.30nb4 [tron 2018-03-10]
 	Added graphics/R-viridisLite version 0.3.0 [minskim 2018-03-11]
 	Updated ham/uhd to 3.11.0.0 [mef 2018-03-11]
-	Updated devel/ocam-biniou to 1.2.0 [dholland 2018-03-11]
-	Updated devel/ocam-yojson to 1.4.1 [dholland 2018-03-11]
-	Updated devel/ocam-lwt_glib to 1.1.0nb2 [dholland 2018-03-11]
+	Updated devel/ocaml-biniou to 1.2.0 [dholland 2018-03-11]
+	Updated devel/ocaml-yojson to 1.4.1 [dholland 2018-03-11]
+	Updated devel/ocaml-lwt_glib to 1.1.0nb2 [dholland 2018-03-11]
 	Removed devel/ocaml-odn [dholland 2018-03-11]
