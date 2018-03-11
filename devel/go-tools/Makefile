@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2018/03/04 15:52:16 bsiegert Exp $
+# $NetBSD: Makefile,v 1.17 2018/03/11 20:45:19 bsiegert Exp $
 
 DISTNAME=		tools
 PKGNAME=		go-tools-1.8
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		${DISTNAME}
@@ -46,5 +46,5 @@ CHECK_RELRO_SKIP+=	bin/toolstash
 
 .include "../../lang/go/go-package.mk"
 .include "../../devel/google-api-go-client/buildlink3.mk"
-.include "../../security/go-crypto-acme/buildlink3.mk"
+.include "../../security/go-crypto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
