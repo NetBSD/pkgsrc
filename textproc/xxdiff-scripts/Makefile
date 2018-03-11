@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/03/11 20:57:16 ginsbach Exp $
+# $NetBSD: Makefile,v 1.2 2018/03/11 21:23:28 ginsbach Exp $
 
 .include "../../textproc/xxdiff/Makefile.common"
 
@@ -10,7 +10,7 @@ DEPENDS+=	xxdiff-${XXDIFFVERSION}:../../textproc/xxdiff
 USE_TOOLS=	# empty
 
 #PYTHON_VERSIONS_INCOMPATIBLE=	# XXX unknown
-REPLACE_PYTHON+=	bin/svn-foreign bin/termdiff bin/termdiff-test-urwid
+REPLACE_PYTHON+=	bin/svn-foreign
 REPLACE_PYTHON+=	bin/xx-cond-replace bin/xx-cvs-diff bin/xx-cvs-revcmp
 REPLACE_PYTHON+=	bin/xx-diff-proxy bin/xx-encrypted bin/xx-filter
 REPLACE_PYTHON+=	bin/xx-find-grep-sed bin/xx-hg-merge bin/xx-match
