@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2018/01/10 16:53:11 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2018/03/11 03:40:12 dholland Exp $
 
 GITHUB_PROJECT=	yojson
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	${GITHUB_PROJECT}-1.3.3
+DISTNAME=	${GITHUB_PROJECT}-1.4.1
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mjambon/}
 
@@ -16,7 +15,7 @@ LICENSE=	modified-bsd
 MAKE_JOBS_SAFE=	no
 USE_TOOLS+=	gmake
 BUILD_TARGET=	META all
-OCAML_USE_FINDLIB=	yes
+OCAML_USE_JBUILDER=	yes
 INSTALLATION_DIRS+=	bin
 
 .include "../../mk/ocaml.mk"
