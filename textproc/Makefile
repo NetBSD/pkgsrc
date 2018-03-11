@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.976 2018/02/14 16:55:31 minskim Exp $
+# $NetBSD: Makefile,v 1.977 2018/03/11 13:04:15 maya Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -465,6 +465,7 @@ SUBDIR+=	p5-Lingua-Stem-Snowball-Da
 SUBDIR+=	p5-Lingua-Translit
 SUBDIR+=	p5-List-Compare
 SUBDIR+=	p5-Locale-Maketext-Gettext
+SUBDIR+=	p5-MultiMarkdown
 SUBDIR+=	p5-Net-Dict
 SUBDIR+=	p5-Net-IDN-Encode
 SUBDIR+=	p5-Number-Format
