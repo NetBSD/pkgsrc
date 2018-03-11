@@ -1,7 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2016/05/31 15:04:51 mef Exp $
-#
-# Please run 'make files/gtar.1' when updating version of this package
-# to regenerate the man page. converters/help2man is needed.
+# $NetBSD: Makefile,v 1.93 2018/03/11 17:28:08 wiz Exp $
 
 .include "../../archivers/gtar/Makefile.common"
 
