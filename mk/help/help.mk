@@ -1,4 +1,4 @@
-# $NetBSD: help.mk,v 1.14 2018/01/07 11:23:37 rillig Exp $
+# $NetBSD: help.mk,v 1.15 2018/03/11 14:50:49 rillig Exp $
 #
 
 # This is the integrated pkgsrc online help system. To query for the
@@ -41,6 +41,7 @@ help:
 	@${ECHO} ""
 .  else
 	${RUN} cd ${PKGSRCDIR};						\
-	env TOPIC=${TOPIC:Q} ${AWK} -f ${PKGSRCDIR}/mk/help/help.awk ${_HELP_FILES}
+	env TOPIC=${TOPIC:Q} ${AWK} -f ${PKGSRCDIR}/mk/help/help.awk ${_HELP_FILES} \
+	| $${PAGER:-cat}
 .  endif
 .endif
