@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1168 2018/03/10 23:15:15 tron Exp $
+$NetBSD: CHANGES-2018,v 1.1169 2018/03/11 03:43:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1614,3 +1614,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/ico to 1.0.5 [wiz 2018-03-10]
 	Updated x11/xbitmaps to 1.1.2 [wiz 2018-03-10]
 	Updated multimedia/ffmpeg2theora to 0.30nb4 [tron 2018-03-10]
+	Added graphics/R-viridisLite version 0.3.0 [minskim 2018-03-11]
