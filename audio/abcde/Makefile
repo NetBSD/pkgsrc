@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2017/07/28 21:16:37 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2018/03/11 17:31:44 wiz Exp $
 
-DISTNAME=	abcde-2.8.1
-PKGREVISION=	1
+DISTNAME=	abcde-2.9.1
 CATEGORIES=	audio
 MASTER_SITES=	http://abcde.einval.com/download/
 
@@ -15,7 +14,7 @@ DEPENDS+=	eyeD3-[0-9]*:../../audio/eyeD3
 DEPENDS+=	id3-[0-9]*:../../audio/id3
 DEPENDS+=	cdparanoia>=3.0.9.7:../../audio/cdparanoia
 DEPENDS+=	p5-MusicBrainz-DiscID-[0-9]*:../../audio/p5-MusicBrainz-DiscID
-DEPENDS+=	p5-WebService-MusicBrainz0-[0-9]*:../../net/p5-WebService-MusicBrainz0
+DEPENDS+=	p5-WebService-MusicBrainz>=1.0.4:../../net/p5-WebService-MusicBrainz
 # depend on cdrkit for icedax?
 DEPENDS+=	mkcue>=2.1:../../misc/mkcue
 
