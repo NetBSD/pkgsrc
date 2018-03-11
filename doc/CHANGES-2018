@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1199 2018/03/11 17:59:10 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1200 2018/03/11 18:02:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1646,3 +1646,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-libxml2 to 2.9.8 [wiz 2018-03-11]
 	Updated fonts/fontconfig to 2.13.0 [wiz 2018-03-11]
 	Updated textproc/xerces-c to 3.2.1 [wiz 2018-03-11]
+	Updated textproc/libunistring to 0.9.9 [wiz 2018-03-11]
