@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1202 2018/03/11 18:06:22 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1203 2018/03/11 18:08:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1649,3 +1649,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/libunistring to 0.9.9 [wiz 2018-03-11]
 	Updated converters/libmspub to 0.1.4 [wiz 2018-03-11]
 	Updated graphics/py-cairo to 1.16.3 [wiz 2018-03-11]
+	Updated misc/py-anki2 to 2.0.50 [wiz 2018-03-11]
