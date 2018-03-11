@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18167 2018/03/09 11:19:04 zafer Exp $
+$NetBSD: TODO,v 1.18168 2018/03/11 15:22:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -338,6 +338,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-7.0.7.25
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o Mesa-17.3.1
@@ -359,6 +360,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o SOPE-3.0.2
 	o TiffIO-140a
 	o YoSucker-81
+	o abcde-2.9.1
 	o abcmidi-20170416
 	o abook-0.6.1
 	o ack-2.14
@@ -464,7 +466,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-3.18.0
+	o calibre-3.19.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -637,6 +639,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o flpsed-0.7.3
 	o fltk2-2.0pre8323
 	o fmsx-4.4
+	o fontconfig-2.13.0
 	o foomatic4-db-20160305
 	o fop-2.1
 	o fortunes-calvin-0.3
@@ -690,6 +693,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.18.3
 	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.5 [wip]
+	o glib-networking-2.56.0
 	o gliv-1.9.7
 	o glom-1.14.2 [GNOME 2.26]
 	o glx-utils-8.3.0
@@ -767,6 +771,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtklevel9-5.1
 	o gtkmagnetic-23
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
+	o gtksourceview3-4.0.0
 	o gtl-3.6
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
@@ -780,6 +785,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-1.0.0
 	o hanzim-3.5
+	o harfbuzz-1.7.6
 	o harminv-1.4
 	o haskell-mode-13.20
 	o hdevtools-0.1.3.0
@@ -961,6 +967,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libressl-2.6.3
 	o librsvg-2.42.2 [needs rust+cargo]
+	o librsvg-2.42.3
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libtecla-1.6.3
@@ -970,6 +977,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libv4l-0.8.5
 	o libvirt-2.3
 	o libxdg-basedir-1.2.0
+	o libxml2-2.9.8
 	o libykneomgr-0.1.8
 	o libyubikey-1.13
 	o licq-1.3.8
@@ -1203,6 +1211,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
+	o py-anki2-2.0.50
 	o py-augeas-1.0.3
 	o py-cairo-1.16.3
 	o py-cassa-1.11.0
@@ -1215,6 +1224,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-input-pad-1.4.2
 	o py-jaraco_util-11.0
 	o py-keybinder-0.3.1
+	o py-libxml2-2.9.8
+	o py-mercurial-4.5.2
 	o py-musicbrainz-0.7.4
 	o py-ncclient-0.5.3
 	o py-newt-0.52.20
@@ -1225,6 +1236,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-pycountry-1.20
 	o py-quixote-2.9
 	o py-scgi-1.15
+	o py-setuptools-38.5.2
 	o py-simpletal-5.1
 	o py-smb-1.1.17
 	o py-spf-2.0.12t
@@ -1447,8 +1459,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vfu-4.09
 	o vicq-0.4.2
 	o vile-9.8q
-	o vim-8.0.1563
-	o vim-share-8.0.1563
+	o vim-8.0.1594
+	o vim-share-8.0.1594
 	o vinagre-3.16.1
 	o vino-3.16.0
 	o virt-manager-1.3.2
