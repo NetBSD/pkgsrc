@@ -1,1 +1,1 @@
-This is a module that adds SSL support to ocaml-lwt.
+This is a module that adds glib2 bindings to ocaml-lwt.
