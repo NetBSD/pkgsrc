@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2018/01/07 13:04:07 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2018/03/11 19:47:27 wiz Exp $
 
 BUILDLINK_TREE+=	m17n-lib
 
@@ -21,11 +21,7 @@ pkgbase := m17n-lib
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/libotf/buildlink3.mk"
-.include "../../x11/libICE/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.m17n-lib:Mlibthai)
