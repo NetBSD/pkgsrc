@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.672 2018/03/08 08:13:03 adam Exp $
+# $NetBSD: Makefile,v 1.673 2018/03/11 11:09:16 maya Exp $
 #
 
 COMMENT=	Security tools
@@ -281,6 +281,7 @@ SUBDIR+=	p5-Crypt-Random-Seed
 SUBDIR+=	p5-Crypt-Random-TESHA2
 SUBDIR+=	p5-Crypt-Rijndael
 SUBDIR+=	p5-Crypt-SSLeay
+SUBDIR+=	p5-Crypt-SMIME
 SUBDIR+=	p5-Crypt-SmbHash
 SUBDIR+=	p5-Crypt-Twofish
 SUBDIR+=	p5-Crypt-URandom
