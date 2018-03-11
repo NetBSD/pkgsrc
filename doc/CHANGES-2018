@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1194 2018/03/11 17:40:33 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1195 2018/03/11 17:46:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1641,3 +1641,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed net/p5-WebService-MusicBrainz0 [wiz 2018-03-11]
 	Updated sysutils/dbus to 1.12.6 [wiz 2018-03-11]
 	Updated misc/calibre to 3.19.0 [wiz 2018-03-11]
+	Updated fonts/harfbuzz to 1.7.6 [wiz 2018-03-11]
