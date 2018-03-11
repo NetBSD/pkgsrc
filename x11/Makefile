@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.818 2018/03/07 11:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.819 2018/03/11 20:25:22 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -114,6 +114,7 @@ SUBDIR+=	gtksourceview
 SUBDIR+=	gtksourceview-sharp2
 SUBDIR+=	gtksourceview2
 SUBDIR+=	gtksourceview3
+SUBDIR+=	gtksourceview4
 SUBDIR+=	gtksourceviewmm
 SUBDIR+=	gtkstep
 SUBDIR+=	gtkterm2
