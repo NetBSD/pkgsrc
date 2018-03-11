@@ -1,7 +1,15 @@
-$NetBSD: distinfo,v 1.2 2017/07/13 10:41:33 jaapb Exp $
+$NetBSD: distinfo,v 1.3 2018/03/11 02:30:34 dholland Exp $
 
 SHA1 (biniou-1.0.13.tar.gz) = 87d62aeb15437f7ba26654b774b3106f374aad3c
 RMD160 (biniou-1.0.13.tar.gz) = 7b3306894c3407190acb707d53078ebd7118e82d
 SHA512 (biniou-1.0.13.tar.gz) = 2fe109e83260f546181dd26ea175d2c4f63d0f6604c6d26fa44ee31925ba1fdaac0139a436cd0271a31294de9cd8ea65f8dde0981403c652d31de721ef696788
 Size (biniou-1.0.13.tar.gz) = 24327 bytes
 SHA1 (patch-Makefile) = b9cf0685ae977211ebcc45b3f0e67408ae16162c
+SHA1 (patch-bi__inbuf.ml) = 3e62d15239d101323070655545e411a31f2dcda0
+SHA1 (patch-bi__inbuf.mli) = 7d493ce921bab96647117afe8ff554782259d85f
+SHA1 (patch-bi__io.ml) = 1330f33bd377d31f3bdf3d308b86e51ab77705bd
+SHA1 (patch-bi__outbuf.ml) = 7aa79eaccfd22b722b6d81f63c2fb74f6494eaa2
+SHA1 (patch-bi__outbuf.mli) = 21ce049e4133d2420c436e6021de99e0812f3456
+SHA1 (patch-bi__stream.ml) = 4e4d0c25d66bf83de682f353f8becc5fe25bf87f
+SHA1 (patch-bi__util.ml) = 1065354c10392255e1eedf2e5326c6c00bd6b8ff
+SHA1 (patch-bi__vint.ml) = 488d439585b4895174fb5434c6e3f5033e207828
