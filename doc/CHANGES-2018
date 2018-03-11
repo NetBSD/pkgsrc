@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1173 2018/03/11 10:10:38 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1174 2018/03/11 10:12:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1621,3 +1621,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ocaml-lwt_glib to 1.1.0nb2 [dholland 2018-03-11]
 	Removed devel/ocaml-odn [dholland 2018-03-11]
 	Updated time/p5-DateTime-Format-Flexible to 0.30 [wiz 2018-03-11]
+	Updated devel/p5-Alien-Build to 1.39 [wiz 2018-03-11]
