@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2018/01/01 21:18:36 adam Exp $
+# $NetBSD: Makefile,v 1.32 2018/03/11 06:23:54 mef Exp $
 
-DISTNAME=		uhd-3.9.4
-PKGREVISION=		8
+DISTNAME=		uhd-3.11.0.0
 CATEGORIES=		ham
 MASTER_SITES=           ${MASTER_SITE_GITHUB:=EttusResearch/}
-#                                                                     3.9.1 -> 003_009_001
-GITHUB_TAG=		release_${PKGVERSION_NOREV:C/([0-9])\.([0-9])\.([0-9])/00\1_00\2_00\3/}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://code.ettus.com/redmine/ettus/projects/uhd/wiki
@@ -30,7 +28,7 @@ EXTRACT_USING=		gtar
 
 # Please note distribution has many stuff under uhd/, but build itself
 # needs under host/ only.  Those uhd/ stuff will be handled post-{patch,install}:
-WRKSRC=			${WRKDIR}/uhd-${GITHUB_TAG}/host
+WRKSRC=			${WRKDIR}/uhd-${PKGVERSION_NOREV}/host
 
 # The files with their name uhd-xxxx, are moved down from uhd/xxxx for this process.
 REPLACE_PYTHON=	\
@@ -40,7 +38,18 @@ REPLACE_PYTHON=	\
 	utils/usrp2_card_burner.py \
 	utils/usrp2_card_burner_gui.py \
 	utils/usrp_n2xx_net_burner.py \
-	utils/usrp_n2xx_net_burner_gui.py
+	utils/usrp_n2xx_net_burner_gui.py \
+	tests/devtest/benchmark_rate_test.py \
+	tests/devtest/run_testsuite.py \
+	tests/devtest/rx_samples_to_file_test.py \
+	tests/devtest/test_messages_test.py \
+	tests/devtest/test_pps_test.py \
+	tests/devtest/tx_bursts_test.py \
+	tests/devtest/uhd_test_base.py \
+	tests/devtest/usrp_probe.py \
+	tests/devtest/usrp_probe_test.py \
+	utils/converter_benchmark.py \
+
 
 INSTALLATION_DIRS+=	share/uhd
 INSTALLATION_DIRS+=	share/uhd/firmware
