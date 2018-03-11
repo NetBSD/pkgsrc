@@ -1,0 +1,18 @@
+# $NetBSD: Makefile.common,v 1.1 2018/03/11 20:52:38 ginsbach Exp $
+# used by textproc/xxdiff/Makefile
+# used by textproc/xxdiff-scripts/Makefile
+
+
+XXDIFFVERSION=	4.0.1
+DISTNAME=	xxdiff-${XXDIFFVERSION}
+CATEGORIES=	textproc
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xxdiff/}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://furius.ca/xxdiff/
+LICENSE=	gnu-gpl-v2
+
+DISTINFO_FILE=	${.CURDIR}/../../textproc/xxdiff/distinfo
+
+XXDIFFDOCDIR=	share/doc/xxdiff
