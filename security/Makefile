@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.673 2018/03/11 11:09:16 maya Exp $
+# $NetBSD: Makefile,v 1.674 2018/03/11 12:08:18 maya Exp $
 #
 
 COMMENT=	Security tools
@@ -289,6 +289,7 @@ SUBDIR+=	p5-Crypt-X509
 SUBDIR+=	p5-CryptX
 SUBDIR+=	p5-Dancer-Plugin-Auth-RBAC
 SUBDIR+=	p5-Data-SimplePassword
+SUBDIR+=	p5-Data-Password-passwdqc
 SUBDIR+=	p5-Digest
 SUBDIR+=	p5-Digest-BubbleBabble
 SUBDIR+=	p5-Digest-CRC

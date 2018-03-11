@@ -1,0 +1,4 @@
+Data::Password::passwdqc provides an object oriented Perl interface
+to Openwall Project's passwdqc. It allows you to check password
+strength and also lets you generate quality controllable random
+password.
