@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1177 2018/03/11 10:16:00 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1178 2018/03/11 10:18:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1625,3 +1625,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Filesys-Notify-Simple to 0.13 [wiz 2018-03-11]
 	Updated devel/p5-Hash-Merge to 0.300 [wiz 2018-03-11]
 	Updated devel/p5-Log-Dispatch-FileRotate to 1.35 [wiz 2018-03-11]
+	Updated devel/p5-Module-FromPerlVer to 0.004002 [wiz 2018-03-11]
