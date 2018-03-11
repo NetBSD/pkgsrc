@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1190 2018/03/11 17:28:23 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1191 2018/03/11 17:31:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1637,3 +1637,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/syncthing to 0.14.45 [wiz 2018-03-11]
 	Updated textproc/translate-toolkit to 2.2.5 [rillig 2018-03-11]
 	Updated archivers/gtar to 1.30 [wiz 2018-03-11]
+	Updated audio/abcde to 2.9.1 [wiz 2018-03-11]
