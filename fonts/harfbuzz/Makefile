@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.91 2018/02/11 16:08:38 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2018/03/11 17:45:54 wiz Exp $
 
-DISTNAME=	harfbuzz-1.7.5
+DISTNAME=	harfbuzz-1.7.6
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.freedesktop.org/software/harfbuzz/release/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +19,7 @@ CONFIGURE_ARGS+=	--with-graphite2=no
 
 PKGCONFIG_OVERRIDE+=	src/harfbuzz.pc.in
 PKGCONFIG_OVERRIDE+=	src/harfbuzz-icu.pc.in
+PKGCONFIG_OVERRIDE+=	src/harfbuzz-subset.pc.in
 
 LDFLAGS.OpenBSD+=	-lz
 
