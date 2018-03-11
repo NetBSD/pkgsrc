@@ -1,6 +1,6 @@
-$NetBSD: patch-src_fcint.h,v 1.2 2017/06/20 11:36:40 wiz Exp $
+$NetBSD: patch-src_fcint.h,v 1.3 2018/03/11 17:54:03 wiz Exp $
 
---- src/fcint.h.orig	2017-03-01 02:27:14.000000000 +0000
+--- src/fcint.h.orig	2018-02-04 10:20:56.000000000 +0000
 +++ src/fcint.h
 @@ -76,6 +76,17 @@ extern pfnSHGetFolderPathA pSHGetFolderP
  #define FC_PATH_MAX	128
@@ -20,8 +20,8 @@ $NetBSD: patch-src_fcint.h,v 1.2 2017/06/20 11:36:40 wiz Exp $
  #if __GNUC__ >= 4
  #define FC_UNUSED	__attribute__((unused))
  #else
-@@ -104,7 +115,13 @@ extern pfnSHGetFolderPathA pSHGetFolderP
- #define FC_ABS(a)   ((a) < 0 ? -(a) : (a))
+@@ -103,7 +114,13 @@ extern pfnSHGetFolderPathA pSHGetFolderP
+ #define FC_MAX(a,b) ((a) > (b) ? (a) : (b))
  
  /* slim_internal.h */
 -#if (__GNUC__ > 3 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 3)) && defined(__ELF__) && !defined(__sun)
