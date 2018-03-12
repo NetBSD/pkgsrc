@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2018/02/06 10:02:32 adam Exp $
+# $NetBSD: Makefile,v 1.13 2018/03/12 16:47:35 adam Exp $
 
-DISTNAME=	libimagequant-2.11.9
+DISTNAME=	libimagequant-2.11.10
 CATEGORIES=	graphics
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=ImageOptim/}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://pngquant.org/lib/
 COMMENT=	High-quality conversion of RGBA images to 8-bit indexed-color
 LICENSE=	gnu-gpl-v3
-
-GITHUB_TAG=	${PKGVERSION_NOREV}
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bash gmake
