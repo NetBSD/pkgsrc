@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/02/13 11:49:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/03/12 16:29:14 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -407,9 +407,6 @@ ${PYSITELIB}/openpyxl/workbook/external_reference.pyo
 ${PYSITELIB}/openpyxl/workbook/function_group.py
 ${PYSITELIB}/openpyxl/workbook/function_group.pyc
 ${PYSITELIB}/openpyxl/workbook/function_group.pyo
-${PYSITELIB}/openpyxl/workbook/interface.py
-${PYSITELIB}/openpyxl/workbook/interface.pyc
-${PYSITELIB}/openpyxl/workbook/interface.pyo
 ${PYSITELIB}/openpyxl/workbook/parser.py
 ${PYSITELIB}/openpyxl/workbook/parser.pyc
 ${PYSITELIB}/openpyxl/workbook/parser.pyo
@@ -419,9 +416,6 @@ ${PYSITELIB}/openpyxl/workbook/properties.pyo
 ${PYSITELIB}/openpyxl/workbook/protection.py
 ${PYSITELIB}/openpyxl/workbook/protection.pyc
 ${PYSITELIB}/openpyxl/workbook/protection.pyo
-${PYSITELIB}/openpyxl/workbook/read_only.py
-${PYSITELIB}/openpyxl/workbook/read_only.pyc
-${PYSITELIB}/openpyxl/workbook/read_only.pyo
 ${PYSITELIB}/openpyxl/workbook/smart_tags.py
 ${PYSITELIB}/openpyxl/workbook/smart_tags.pyc
 ${PYSITELIB}/openpyxl/workbook/smart_tags.pyo
