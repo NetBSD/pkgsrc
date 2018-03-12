@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1214 2018/03/12 15:47:10 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1215 2018/03/12 15:47:55 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1664,3 +1664,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/libzip to 1.5.0 [wiz 2018-03-12]
 	Updated www/lighttpd to 1.4.49 [wiz 2018-03-12]
 	Updated graphics/ImageMagick6 to 6.9.9.38 [fhajny 2018-03-12]
+	Added graphics/R-scales version 0.5.0 [minskim 2018-03-12]
