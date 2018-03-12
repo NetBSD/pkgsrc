@@ -1,9 +1,9 @@
-$NetBSD: patch-configure,v 1.1 2017/03/06 16:14:07 jperkin Exp $
+$NetBSD: patch-configure,v 1.2 2018/03/12 16:36:44 hans Exp $
 
 Automatically generated using manual-* patches and bootstrap.
 DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
 
---- configure.orig	2017-02-02 10:07:28.000000000 +0000
+--- configure.orig	2018-03-12 10:30:57.156767466 +0000
 +++ configure
 @@ -5903,7 +5903,7 @@ else
      lt_cv_sys_max_cmd_len=8192;
@@ -24,7 +24,7 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
  : ${CP="cp -f"}
  : ${MV="mv -f"}
  : ${RM="rm -f"}
-@@ -6369,12 +6372,19 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
+@@ -6369,12 +6372,19 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -428,14 +428,18 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
  	        archive_cmds_CXX='$CC -shared $pic_flag -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-h $wl$soname -o $lib'
  	        archive_expsym_cmds_CXX='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
                    $CC -shared $pic_flag -nostdlib $wl-M $wl$lib.exp $wl-h $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
-@@ -16131,6 +16239,7 @@ if { { eval echo "\"\$as_me\":${as_linen
+@@ -16130,8 +16238,9 @@ if { { eval echo "\"\$as_me\":${as_linen
+     -L* | -R* | -l*)
         # Some compilers place space between "-{L,R}" and the path.
         # Remove the space.
-        if test x-L = "$p" ||
-+          test x-l = "$p" ||
-           test x-R = "$p"; then
+-       if test x-L = "$p" ||
+-          test x-R = "$p"; then
++       if test x-L = x"$p" ||
++          test x-l = x"$p" ||
++          test x-R = x"$p"; then
  	 prev=$p
  	 continue
+        fi
 @@ -16311,9 +16420,15 @@ lt_prog_compiler_static_CXX=
        esac
        ;;
@@ -834,14 +838,18 @@ DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
-@@ -21450,6 +21674,7 @@ if { { eval echo "\"\$as_me\":${as_linen
+@@ -21449,8 +21673,9 @@ if { { eval echo "\"\$as_me\":${as_linen
+     -L* | -R* | -l*)
         # Some compilers place space between "-{L,R}" and the path.
         # Remove the space.
-        if test x-L = "$p" ||
-+          test x-l = "$p" ||
-           test x-R = "$p"; then
+-       if test x-L = "$p" ||
+-          test x-R = "$p"; then
++       if test x-L = x"$p" ||
++          test x-l = x"$p" ||
++          test x-R = x"$p"; then
  	 prev=$p
  	 continue
+        fi
 @@ -21604,9 +21829,16 @@ lt_prog_compiler_static_FC=
        ;;
  
