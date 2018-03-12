@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/08/16 21:22:11 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/03/12 11:16:42 wiz Exp $
 
 DISTNAME=	gimp-jxr-2.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	# javascript link
 EXTRACT_SUFX=	.zip

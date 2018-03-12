@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2018/01/01 21:18:48 adam Exp $
+# $NetBSD: Makefile,v 1.22 2018/03/12 11:17:20 wiz Exp $
 
 DISTNAME=	krfb-${_KDE_VERSION}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	net
 COMMENT=	KDE desktop sharing
 

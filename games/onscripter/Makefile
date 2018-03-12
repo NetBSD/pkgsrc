@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2017/03/20 13:56:08 tsutsui Exp $
+# $NetBSD: Makefile,v 1.43 2018/03/12 11:16:35 wiz Exp $
 #
 
 DISTNAME=		onscripter-20161102
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		http://onscripter.osdn.jp/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2017/02/12 06:24:52 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2018/03/12 11:15:48 wiz Exp $
 #
 
 BUILDLINK_TREE+=	deforaos-libdesktop
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	deforaos-libdesktop
 DEFORAOS_LIBDESKTOP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.deforaos-libdesktop+=	deforaos-libdesktop>=0.2.1nb1
-BUILDLINK_ABI_DEPENDS.deforaos-libdesktop?=	deforaos-libdesktop>=0.2.1nb4
+BUILDLINK_ABI_DEPENDS.deforaos-libdesktop?=	deforaos-libdesktop>=0.2.2nb2
 BUILDLINK_PKGSRCDIR.deforaos-libdesktop?=	../../x11/deforaos-libdesktop
 
 .include "../../devel/deforaos-libsystem/buildlink3.mk"

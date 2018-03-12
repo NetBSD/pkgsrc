@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2016/04/21 13:15:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2018/03/12 11:16:08 wiz Exp $
 #
 
 DISTNAME=	tkgate-1.8.7
+PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	http://www.tkgate.org/downloads/
 EXTRACT_SUFX=	.tgz

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2017/09/02 22:02:24 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2018/03/12 11:15:24 wiz Exp $
 
 BUILDLINK_TREE+=	libzip
 
@@ -6,13 +6,24 @@ BUILDLINK_TREE+=	libzip
 LIBZIP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libzip+=	libzip>=0.7.1
-BUILDLINK_ABI_DEPENDS.libzip+=	libzip>=1.3.0
+BUILDLINK_ABI_DEPENDS.libzip+=	libzip>=1.5.0
 BUILDLINK_PKGSRCDIR.libzip?=	../../archivers/libzip
 
 BUILDLINK_INCDIRS.libzip=	include lib/libzip/include
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+
+.include "../../mk/bsd.fast.prefs.mk"
+pkgbase := libzip
+.include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.libzip:Mgnutls)
+.include "../../security/gnutls/buildlink3.mk"
+.endif
+.if !empty(PKG_BUILD_OPTIONS.libzip:Mopenssl)
+.include "../../security/openssl/buildlink3.mk"
+.endif
 .endif # LIBZIP_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libzip

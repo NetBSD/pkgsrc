@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.72 2018/01/08 02:33:57 mef Exp $
+# $NetBSD: Makefile,v 1.73 2018/03/12 11:16:07 wiz Exp $
 #
 
 DISTNAME=	boolean_6_99
 # n_6_99 -> n-6.99
 PKGNAME=	${DISTNAME:S/n_/n-/S/_/./}
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	cad graphics
 MASTER_SITES=	http://boolean.klaasholwerda.nl/download/boolzip/
 EXTRACT_SUFX=	.tgz

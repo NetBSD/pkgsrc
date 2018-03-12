@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2016/03/05 11:27:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2018/03/12 11:15:34 wiz Exp $
 
 PKGNAME=	evas-gif-${EVAS_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 COMMENT=	Evas GIF image loader
 
 EVAS_IMAGE_LOADERS=	gif

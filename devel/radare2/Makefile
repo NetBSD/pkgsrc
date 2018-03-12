@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2018/02/19 02:54:59 kamil Exp $
+# $NetBSD: Makefile,v 1.14 2018/03/12 11:15:31 wiz Exp $
 
 DISTNAME=	radare2-2.3.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=radare/}
 

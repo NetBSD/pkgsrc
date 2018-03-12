@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2017/11/30 16:45:40 adam Exp $
+# $NetBSD: Makefile,v 1.43 2018/03/12 11:17:45 wiz Exp $
 
 DISTNAME=	Surfer-0.2.10
 PKGNAME=	deforaos-surfer-0.2.10
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	www
 MASTER_SITES=	https://www.defora.org/os/download/download/4430/
 

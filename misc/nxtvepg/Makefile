@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2017/09/03 08:53:11 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2018/03/12 11:17:09 wiz Exp $
 
 DISTNAME=	nxtvepg-2.7.6
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nxtvepg/}
 

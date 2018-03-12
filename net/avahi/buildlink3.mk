@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2018/01/28 20:10:37 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2018/03/12 11:15:41 wiz Exp $
 
 BUILDLINK_TREE+=	avahi
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	avahi
 AVAHI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.avahi+=	avahi>=0.6.23
-BUILDLINK_ABI_DEPENDS.avahi+=	avahi>=0.6.32nb10
+BUILDLINK_ABI_DEPENDS.avahi+=	avahi>=0.6.32nb11
 BUILDLINK_PKGSRCDIR.avahi?=	../../net/avahi
 
 pkgbase := avahi

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2017/11/23 17:20:02 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/03/12 11:17:04 wiz Exp $
 
 MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 LICENSE=	gnu-gpl-v3
 
 PKGNAME=	mate-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs
 
 COMMENT=	Meta-package for MATE desktop environment
