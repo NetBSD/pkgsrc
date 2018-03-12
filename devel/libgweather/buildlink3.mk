@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.47 2017/11/30 16:45:03 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.48 2018/03/12 11:15:29 wiz Exp $
 
 BUILDLINK_TREE+=	libgweather
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgweather
 LIBGWEATHER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgweather+=	libgweather>=2.22.0
-BUILDLINK_ABI_DEPENDS.libgweather+=	libgweather>=2.30.3nb39
+BUILDLINK_ABI_DEPENDS.libgweather+=	libgweather>=2.30.3nb40
 BUILDLINK_PKGSRCDIR.libgweather?=	../../devel/libgweather
 
 .include "../../net/libsoup/buildlink3.mk"
