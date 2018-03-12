@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.19 2018/03/09 08:10:35 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.20 2018/03/12 12:36:39 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
 
@@ -170,4 +170,7 @@ mail/exim-html: security update
 Pullup ticket #5695 - requested by he and maya
 www/firefox: security update
 www/firefox-l10n: dependent update
+
+Pullup ticket #5720 - requested by wiz
+textproc/xerces-c: security fix
 
