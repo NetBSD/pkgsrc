@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2017/09/10 01:49:40 dholland Exp $
+$NetBSD: distinfo,v 1.9 2018/03/12 00:29:24 dholland Exp $
 
 SHA1 (sfs-0.7.2.tar.gz) = 3619afc9b785e4aa41f7cdf202c5b233a6b5fe08
 RMD160 (sfs-0.7.2.tar.gz) = 30cd5e21c4f63292ef0f5671720f6036d08e5ff1
@@ -53,5 +53,5 @@ SHA1 (patch-br) = 411b894e043d105402ab7d0622fc843703457639
 SHA1 (patch-bs) = a426787d1b2a74a92a091046c1c9fdf7696a87f4
 SHA1 (patch-bt) = 41b1359d716493aadd861818c9a377247191ecec
 SHA1 (patch-bu) = 42924f5d59315b99d3d397eedde977366ec0ad96
-SHA1 (patch-bv) = d77635ff12f3b6324fc76fbad7ad8a314c2cb12e
+SHA1 (patch-bv) = 36e4df6ad019ce5f553ce85924250aed0c6e8023
 SHA1 (patch-rpcc_genheader.C) = c6e7bfc4035bd15568fda3050a63157b372ebf06
