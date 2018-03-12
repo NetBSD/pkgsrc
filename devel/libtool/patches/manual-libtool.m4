@@ -1,4 +1,4 @@
-$NetBSD: manual-libtool.m4,v 1.46 2017/03/06 16:14:07 jperkin Exp $
+$NetBSD: manual-libtool.m4,v 1.47 2018/03/12 16:36:44 hans Exp $
 
 Support mirbsd/midnightbsd.
 Handle pkgsrc wrappers.
@@ -98,7 +98,7 @@ Fixup output on various OS.
    esac
    need_lib_prefix=no
    need_version=no
-@@ -2887,19 +2899,36 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
+@@ -2887,19 +2899,36 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -163,7 +163,7 @@ Fixup output on various OS.
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
-@@ -3546,12 +3575,19 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
+@@ -3546,12 +3575,19 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -384,7 +384,7 @@ Fixup output on various OS.
    AC_PROG_CXXCPP
  else
    _lt_caught_CXX_error=yes
-@@ -7079,6 +7179,22 @@ if test yes != "$_lt_caught_CXX_error"; 
+@@ -7079,6 +7179,22 @@ if test yes != "$_lt_caught_CXX_error";
          _LT_TAGVAR(ld_shlibs, $1)=no
  	;;
  
@@ -407,7 +407,7 @@ Fixup output on various OS.
        mvs*)
          case $cc_basename in
            cxx*)
-@@ -7093,15 +7209,13 @@ if test yes != "$_lt_caught_CXX_error"; 
+@@ -7093,15 +7209,13 @@ if test yes != "$_lt_caught_CXX_error";
  	;;
  
        netbsd*)
@@ -430,7 +430,7 @@ Fixup output on various OS.
  	;;
  
        *nto* | *qnx*)
-@@ -7275,7 +7389,7 @@ if test yes != "$_lt_caught_CXX_error"; 
+@@ -7275,7 +7389,7 @@ if test yes != "$_lt_caught_CXX_error";
  	    # GNU C++ compiler with Solaris linker
  	    if test yes,no = "$GXX,$with_gnu_ld"; then
  	      _LT_TAGVAR(no_undefined_flag, $1)=' $wl-z ${wl}defs'
@@ -439,11 +439,15 @@ Fixup output on various OS.
  	        _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-h $wl$soname -o $lib'
  	        _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
                    $CC -shared $pic_flag -nostdlib $wl-M $wl$lib.exp $wl-h $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
-@@ -7535,6 +7649,7 @@ if AC_TRY_EVAL(ac_compile); then
+@@ -7534,8 +7648,9 @@ if AC_TRY_EVAL(ac_compile); then
+     -L* | -R* | -l*)
         # Some compilers place space between "-{L,R}" and the path.
         # Remove the space.
-        if test x-L = "$p" ||
-+          test x-l = "$p" ||
-           test x-R = "$p"; then
+-       if test x-L = "$p" ||
+-          test x-R = "$p"; then
++       if test x-L = x"$p" ||
++          test x-l = x"$p" ||
++          test x-R = x"$p"; then
  	 prev=$p
  	 continue
+        fi
