@@ -1,8 +1,23 @@
-$NetBSD: patch-configure,v 1.2 2016/06/19 20:48:55 wiz Exp $
+$NetBSD: patch-configure,v 1.3 2018/03/12 11:28:08 adam Exp $
 
---- configure.orig	2016-06-15 11:11:58.000000000 +0000
+Do not look for libuuid on Darwin, it is built-in.
+
+--- configure.orig	2018-03-06 03:31:59.000000000 +0000
 +++ configure
-@@ -13976,6 +13976,10 @@ if ac_fn_c_try_compile "$LINENO"; then :
+@@ -13295,8 +13295,12 @@ case "$host" in
+   *-*-mingw*)
+     os_win32=yes
+     ;;
++  *-*-darwin*)
++    os_darwin=yes
++    ;;
+   *)
+     os_win32=no
++    os_darwin=no
+ esac
+  if test "$os_win32" = "yes"; then
+   OS_WIN32_TRUE=
+@@ -15891,6 +15895,10 @@ if ac_fn_c_try_compile "$LINENO"; then :
  $as_echo "$as_me: WARNING: your GCC compiler has a defunct stdint.h for its default-mode" >&2;}
  fi
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
@@ -13,7 +28,7 @@ $NetBSD: patch-configure,v 1.2 2016/06/19 20:48:55 wiz Exp $
  fi
  CXXFLAGS="$old_CXXFLAGS"
  CPPFLAGS="$old_CPPFLAGS"
-@@ -14004,6 +14008,9 @@ if test "_$ac_cv_header_stdint_t" = "_" 
+@@ -15919,6 +15927,9 @@ if test "_$ac_cv_header_stdint_t" = "_" 
  
  inttype_headers=`echo  | sed -e 's/,/ /g'`
  
@@ -23,3 +38,12 @@ $NetBSD: patch-configure,v 1.2 2016/06/19 20:48:55 wiz Exp $
  ac_cv_stdint_result="(no helpful system typedefs seen)"
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for stdint uintptr_t" >&5
+@@ -17187,7 +17198,7 @@ CFLAGS="$fontconfig_save_cflags"
+ #
+ # Check for uuid
+ #
+-if test "$os_win32" != "yes"; then
++if test "$os_win32" != "yes" -a "$os_darwin" != "yes"; then
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for UUID" >&5
