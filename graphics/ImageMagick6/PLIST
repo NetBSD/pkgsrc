@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/10/30 15:08:13 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/03/12 15:47:00 fhajny Exp $
 bin/Magick++-config6
 bin/Magick-config6
 bin/MagickCore-config6
@@ -112,6 +112,7 @@ include/ImageMagick-6/magick/semaphore.h
 include/ImageMagick-6/magick/shear.h
 include/ImageMagick-6/magick/signature.h
 include/ImageMagick-6/magick/splay-tree.h
+include/ImageMagick-6/magick/static.h
 include/ImageMagick-6/magick/statistic.h
 include/ImageMagick-6/magick/stream.h
 include/ImageMagick-6/magick/string_.h
@@ -1112,6 +1113,8 @@ share/doc/ImageMagick-6/www/api/transform.html
 share/doc/ImageMagick-6/www/api/version.html
 share/doc/ImageMagick-6/www/api/wand-view.html
 share/doc/ImageMagick-6/www/architecture.html
+share/doc/ImageMagick-6/www/assets/magick.css
+share/doc/ImageMagick-6/www/assets/magick.js
 share/doc/ImageMagick-6/www/binary-releases.html
 share/doc/ImageMagick-6/www/changelog.html
 share/doc/ImageMagick-6/www/cipher.html
@@ -1127,8 +1130,6 @@ share/doc/ImageMagick-6/www/conjure.html
 share/doc/ImageMagick-6/www/connected-components.html
 share/doc/ImageMagick-6/www/contact.html
 share/doc/ImageMagick-6/www/convert.html
-share/doc/ImageMagick-6/www/css/README.txt
-share/doc/ImageMagick-6/www/css/magick.css
 share/doc/ImageMagick-6/www/develop.html
 share/doc/ImageMagick-6/www/display.html
 share/doc/ImageMagick-6/www/distribute-pixel-cache.html
@@ -1148,8 +1149,6 @@ share/doc/ImageMagick-6/www/import.html
 share/doc/ImageMagick-6/www/index.html
 share/doc/ImageMagick-6/www/install-source.html
 share/doc/ImageMagick-6/www/jp2.html
-share/doc/ImageMagick-6/www/js/README.txt
-share/doc/ImageMagick-6/www/js/magick.js
 share/doc/ImageMagick-6/www/license.html
 share/doc/ImageMagick-6/www/links.html
 share/doc/ImageMagick-6/www/magick++.html
@@ -1190,8 +1189,12 @@ share/doc/ImageMagick-6/www/source/mime.xml
 share/doc/ImageMagick-6/www/source/piechart.mvg
 share/doc/ImageMagick-6/www/source/piechart.svg
 share/doc/ImageMagick-6/www/source/policy.xml
+share/doc/ImageMagick-6/www/source/quantization-table.xml
 share/doc/ImageMagick-6/www/source/thresholds.xml
+share/doc/ImageMagick-6/www/source/type-apple.xml
+share/doc/ImageMagick-6/www/source/type-dejavu.xml
 share/doc/ImageMagick-6/www/source/type-ghostscript.xml
+share/doc/ImageMagick-6/www/source/type-urw-base35.xml
 share/doc/ImageMagick-6/www/source/type-windows.xml
 share/doc/ImageMagick-6/www/source/type.xml
 share/doc/ImageMagick-6/www/source/wand.c
