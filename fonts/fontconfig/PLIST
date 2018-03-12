@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.28 2017/10/02 14:42:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2018/03/12 08:00:34 wiz Exp $
 bin/fc-cache
 bin/fc-cat
+bin/fc-conflist
 bin/fc-list
 bin/fc-match
 bin/fc-pattern
@@ -14,6 +15,7 @@ lib/libfontconfig.la
 lib/pkgconfig/fontconfig.pc
 man/man1/fc-cache.1
 man/man1/fc-cat.1
+man/man1/fc-conflist.1
 man/man1/fc-list.1
 man/man1/fc-match.1
 man/man1/fc-pattern.1
@@ -64,6 +66,9 @@ man/man3/FcConfigBuildFonts.3
 man/man3/FcConfigCreate.3
 man/man3/FcConfigDestroy.3
 man/man3/FcConfigEnableHome.3
+man/man3/FcConfigFileInfoIterGet.3
+man/man3/FcConfigFileInfoIterInit.3
+man/man3/FcConfigFileInfoIterNext.3
 man/man3/FcConfigFilename.3
 man/man3/FcConfigGetBlanks.3
 man/man3/FcConfigGetCache.3
@@ -87,6 +92,7 @@ man/man3/FcConfigSubstituteWithPat.3
 man/man3/FcConfigUptoDate.3
 man/man3/FcDefaultSubstitute.3
 man/man3/FcDirCacheClean.3
+man/man3/FcDirCacheCreateUUID.3
 man/man3/FcDirCacheLoad.3
 man/man3/FcDirCacheLoadFile.3
 man/man3/FcDirCacheRead.3
@@ -115,6 +121,7 @@ man/man3/FcFreeTypeCharIndex.3
 man/man3/FcFreeTypeCharSet.3
 man/man3/FcFreeTypeCharSetAndSpacing.3
 man/man3/FcFreeTypeQuery.3
+man/man3/FcFreeTypeQueryAll.3
 man/man3/FcFreeTypeQueryFace.3
 man/man3/FcGetDefaultLangs.3
 man/man3/FcGetLangs.3
@@ -218,7 +225,9 @@ man/man3/FcValueEqual.3
 man/man3/FcValuePrint.3
 man/man3/FcValueSave.3
 man/man3/FcWeightFromOpenType.3
+man/man3/FcWeightFromOpenTypeDouble.3
 man/man3/FcWeightToOpenType.3
+man/man3/FcWeightToOpenTypeDouble.3
 man/man5/fonts-conf.5
 share/doc/fontconfig/fontconfig-devel.pdf
 share/doc/fontconfig/fontconfig-devel.txt
@@ -266,6 +275,9 @@ share/doc/fontconfig/fontconfig-devel/fcconfigbuildfonts.html
 share/doc/fontconfig/fontconfig-devel/fcconfigcreate.html
 share/doc/fontconfig/fontconfig-devel/fcconfigdestroy.html
 share/doc/fontconfig/fontconfig-devel/fcconfigenablehome.html
+share/doc/fontconfig/fontconfig-devel/fcconfigfileinfoiterget.html
+share/doc/fontconfig/fontconfig-devel/fcconfigfileinfoiterinit.html
+share/doc/fontconfig/fontconfig-devel/fcconfigfileinfoiternext.html
 share/doc/fontconfig/fontconfig-devel/fcconfigfilename.html
 share/doc/fontconfig/fontconfig-devel/fcconfiggetblanks.html
 share/doc/fontconfig/fontconfig-devel/fcconfiggetcache.html
@@ -289,6 +301,7 @@ share/doc/fontconfig/fontconfig-devel/fcconfigsubstitutewithpat.html
 share/doc/fontconfig/fontconfig-devel/fcconfiguptodate.html
 share/doc/fontconfig/fontconfig-devel/fcdefaultsubstitute.html
 share/doc/fontconfig/fontconfig-devel/fcdircacheclean.html
+share/doc/fontconfig/fontconfig-devel/fcdircachecreateuuid.html
 share/doc/fontconfig/fontconfig-devel/fcdircacheload.html
 share/doc/fontconfig/fontconfig-devel/fcdircacheloadfile.html
 share/doc/fontconfig/fontconfig-devel/fcdircacheread.html
@@ -317,6 +330,7 @@ share/doc/fontconfig/fontconfig-devel/fcfreetypecharindex.html
 share/doc/fontconfig/fontconfig-devel/fcfreetypecharset.html
 share/doc/fontconfig/fontconfig-devel/fcfreetypecharsetandspacing.html
 share/doc/fontconfig/fontconfig-devel/fcfreetypequery.html
+share/doc/fontconfig/fontconfig-devel/fcfreetypequeryall.html
 share/doc/fontconfig/fontconfig-devel/fcfreetypequeryface.html
 share/doc/fontconfig/fontconfig-devel/fcgetdefaultlangs.html
 share/doc/fontconfig/fontconfig-devel/fcgetlangs.html
@@ -420,10 +434,12 @@ share/doc/fontconfig/fontconfig-devel/fcvalueequal.html
 share/doc/fontconfig/fontconfig-devel/fcvalueprint.html
 share/doc/fontconfig/fontconfig-devel/fcvaluesave.html
 share/doc/fontconfig/fontconfig-devel/fcweightfromopentype.html
+share/doc/fontconfig/fontconfig-devel/fcweightfromopentypedouble.html
 share/doc/fontconfig/fontconfig-devel/fcweighttoopentype.html
+share/doc/fontconfig/fontconfig-devel/fcweighttoopentypedouble.html
 share/doc/fontconfig/fontconfig-devel/ln12.html
 share/doc/fontconfig/fontconfig-devel/t1.html
-share/doc/fontconfig/fontconfig-devel/x102.html
+share/doc/fontconfig/fontconfig-devel/x103.html
 share/doc/fontconfig/fontconfig-devel/x19.html
 share/doc/fontconfig/fontconfig-devel/x31.html
 share/doc/fontconfig/fontconfig-user.html
@@ -466,4 +482,6 @@ share/fontconfig/conf.avail/70-no-bitmaps.conf
 share/fontconfig/conf.avail/70-yes-bitmaps.conf
 share/fontconfig/conf.avail/80-delicious.conf
 share/fontconfig/conf.avail/90-synthetic.conf
+share/gettext/its/fontconfig.its
+share/gettext/its/fontconfig.loc
 share/xml/fontconfig/fonts.dtd
