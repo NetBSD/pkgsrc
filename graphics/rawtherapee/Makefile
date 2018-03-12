@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/11/23 17:19:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/03/12 11:16:49 wiz Exp $
 
 DISTNAME=	RawTherapee-5.3
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Beep6581/}
 GITHUB_PROJECT=	RawTherapee

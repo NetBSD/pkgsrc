@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.105 2018/02/20 10:53:30 dholland Exp $
+# $NetBSD: Makefile,v 1.106 2018/03/12 11:15:53 wiz Exp $
 
 DISTNAME=	lesstif-0.95.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lesstif/}
 EXTRACT_SUFX=	.tar.bz2

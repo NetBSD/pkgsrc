@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/01/31 11:36:14 markd Exp $
+# $NetBSD: Makefile,v 1.2 2018/03/12 11:15:44 wiz Exp $
 
 DISTNAME=	gpgme-1.10.0
 PKGNAME=	qgpgme-1.10.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/
 EXTRACT_SUFX=	.tar.bz2

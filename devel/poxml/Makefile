@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2018/01/01 21:18:22 adam Exp $
+# $NetBSD: Makefile,v 1.18 2018/03/12 11:16:20 wiz Exp $
 
 DISTNAME=	poxml-${_KDE_VERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel
 COMMENT=	Translates DocBook XML files using gettext po files
 

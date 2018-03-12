@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2018/01/28 20:10:57 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2018/03/12 11:15:40 wiz Exp $
 
 DISTNAME=	phonon-4.9.1
 PKGNAME=	${DISTNAME:S/-/-qt5-/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT=	Multimedia API for KF5
 
