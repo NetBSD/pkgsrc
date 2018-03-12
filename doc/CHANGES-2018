@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1215 2018/03/12 15:47:55 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1216 2018/03/12 16:32:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1665,3 +1665,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/lighttpd to 1.4.49 [wiz 2018-03-12]
 	Updated graphics/ImageMagick6 to 6.9.9.38 [fhajny 2018-03-12]
 	Added graphics/R-scales version 0.5.0 [minskim 2018-03-12]
+	Updated textproc/py-openpyxl to 2.5.1 [adam 2018-03-12]
+	Updated www/py-selenium to 3.11.0 [adam 2018-03-12]
