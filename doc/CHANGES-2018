@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1212 2018/03/12 08:52:03 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1213 2018/03/12 09:01:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1662,3 +1662,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added textproc/xxdiff-scripts version 4.0.1 [ginsbach 2018-03-11]
 	Updated www/ikiwiki to 3.20180311 [schmonz 2018-03-11]
 	Updated archivers/libzip to 1.5.0 [wiz 2018-03-12]
+	Updated www/lighttpd to 1.4.49 [wiz 2018-03-12]
