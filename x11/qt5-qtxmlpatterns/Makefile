@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2018/01/17 19:30:49 markd Exp $
+# $NetBSD: Makefile,v 1.23 2018/03/12 11:15:57 wiz Exp $
 
 DISTNAME=	qtxmlpatterns-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtxmlpatterns-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt5 module for XML Patterns
 
 BUILD_TARGET=		sub-tools

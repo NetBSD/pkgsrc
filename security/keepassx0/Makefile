@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2017/08/16 20:21:14 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/12 11:17:29 wiz Exp $
 
 DISTNAME=	keepassx-0.4.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	https://www.keepassx.org/releases/${PKGVERSION_NOREV}/
 

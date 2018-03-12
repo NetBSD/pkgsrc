@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2016/03/25 21:02:26 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2018/03/12 11:17:58 wiz Exp $
 #
 
 DISTNAME=	Tix${TIX_VERSION}-src
 TIX_VERSION=	8.4.3
 PKGNAME=	tk-Tix-${TIX_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11 tcl tk
 MASTER_SITES=	http://downloads.sourceforge.net/project/tix/tix/8.4.3/
 

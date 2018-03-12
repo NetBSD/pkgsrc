@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2016/03/05 11:29:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2018/03/12 11:17:30 wiz Exp $
 
 QTKEYCHAINVER=	0.4.0
 DISTNAME=	qtkeychain-${QTKEYCHAINVER}
 PKGNAME=	qt4-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	-https://github.com/frankosterfeld/qtkeychain/archive/v${QTKEYCHAINVER}.tar.gz
 

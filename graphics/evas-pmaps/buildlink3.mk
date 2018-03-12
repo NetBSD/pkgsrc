@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2016/03/05 11:27:48 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2018/03/12 11:15:34 wiz Exp $
 
 BUILDLINK_TREE+=	evas-pmaps
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	evas-pmaps
 EVAS_PMAPS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.evas-pmaps+=	evas-pmaps>=1.7.7
-BUILDLINK_ABI_DEPENDS.evas-pmaps?=	evas-pmaps>=1.7.7nb2
+BUILDLINK_ABI_DEPENDS.evas-pmaps?=	evas-pmaps>=1.7.7nb3
 BUILDLINK_PKGSRCDIR.evas-pmaps?=	../../graphics/evas-pmaps
 
 .include "../../fonts/fontconfig/buildlink3.mk"

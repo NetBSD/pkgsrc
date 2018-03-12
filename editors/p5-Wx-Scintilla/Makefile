@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2017/06/05 14:23:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2018/03/12 11:16:24 wiz Exp $
 
 DISTNAME=	Wx-Scintilla-0.39
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	editors x11 perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Wx/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.40 2017/11/23 17:19:40 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.41 2018/03/12 11:15:26 wiz Exp $
 
 BUILDLINK_TREE+=	gdl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gdl
 GDL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gdl+=	gdl>=3.10
-BUILDLINK_ABI_DEPENDS.gdl?=	gdl>=3.10.0nb11
+BUILDLINK_ABI_DEPENDS.gdl?=	gdl>=3.10.0nb12
 BUILDLINK_PKGSRCDIR.gdl?=	../../devel/gdl
 
 .include "../../x11/gtk3/buildlink3.mk"

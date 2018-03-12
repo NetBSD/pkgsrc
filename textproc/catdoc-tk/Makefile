@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2014/01/11 14:42:05 adam Exp $
+# $NetBSD: Makefile,v 1.18 2018/03/12 11:17:40 wiz Exp $
 
 .include "../../textproc/catdoc/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/catdoc_/catdoc-tk-/:S/.orig//}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Tk interface for MS-Word to plain text converter
 
 DEPENDS+=	catdoc>=0.94.4:../../textproc/catdoc

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2017/08/01 14:59:06 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/03/12 11:17:40 wiz Exp $
 
 DISTNAME=	Todo-0.2.1
 PKGNAME=	deforaos-todo-0.2.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	time
 MASTER_SITES=	https://www.defora.org/os/download/download/4429/
 

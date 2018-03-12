@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2013/09/08 08:24:53 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/03/12 11:17:41 wiz Exp $
 
 DISTNAME=	xclock-1.0.7
+PKGREVISION=	1
 CATEGORIES=	time x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2

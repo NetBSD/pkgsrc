@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2014/12/28 15:17:47 mef Exp $
+# $NetBSD: Makefile,v 1.31 2018/03/12 11:15:30 wiz Exp $
 #
 
 DISTNAME=	libmatchbox-1.9
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 MASTER_SITES=	http://downloads.yoctoproject.org/releases/matchbox/libmatchbox/1.9/
 

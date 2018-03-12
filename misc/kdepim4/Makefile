@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2018/01/17 18:57:37 markd Exp $
+# $NetBSD: Makefile,v 1.86 2018/03/12 11:17:07 wiz Exp $
 
 DISTNAME=	kdepim-4.14.10
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.04.3/src/}

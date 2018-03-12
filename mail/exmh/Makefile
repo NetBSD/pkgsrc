@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2015/09/03 02:45:23 dsainty Exp $
+# $NetBSD: Makefile,v 1.57 2018/03/12 11:17:00 wiz Exp $
 
 DISTNAME=	exmh-2.7.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	mail tk
 MASTER_SITES=	ftp://ftp.tcl.tk/pub/tcl/exmh/
 

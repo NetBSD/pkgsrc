@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2017/08/16 20:21:14 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2018/03/12 11:17:39 wiz Exp $
 #
 
 DISTNAME=	hfsutils-3.2.6
 PKGNAME=	xhfs-3.2.6
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.mars.org/pub/hfs/
 

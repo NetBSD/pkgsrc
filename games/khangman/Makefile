@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2018/01/01 21:18:27 adam Exp $
+# $NetBSD: Makefile,v 1.36 2018/03/12 11:16:32 wiz Exp $
 
 DISTNAME=	khangman-${_KDE_VERSION}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	games
 COMMENT=	KDE hangman game
 

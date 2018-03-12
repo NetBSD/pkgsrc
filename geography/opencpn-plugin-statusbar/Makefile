@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2017/08/24 13:01:33 bouyer Exp $
+# $NetBSD: Makefile,v 1.3 2018/03/12 11:16:38 wiz Exp $
 #
 
 VERSION=	20170414
 DISTNAME=	statusbar_pi-${VERSION}
 PKGNAME=	opencpn-plugin-statusbar-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=seandepagnier/}
 GITHUB_PROJECT=	statusbar_pi

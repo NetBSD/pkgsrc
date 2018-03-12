@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2017/08/16 20:45:47 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2018/03/12 11:17:48 wiz Exp $
 #
 
 DISTNAME=	clipit-1.4.2
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkclipit/}
 

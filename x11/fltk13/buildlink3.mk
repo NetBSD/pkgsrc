@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2016/02/18 10:12:59 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2018/03/12 11:15:49 wiz Exp $
 
 BUILDLINK_TREE+=	fltk
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	fltk
 FLTK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.fltk+=	fltk>=1.3.0
-BUILDLINK_ABI_DEPENDS.fltk?=	fltk>=1.3.3nb1
+BUILDLINK_ABI_DEPENDS.fltk?=	fltk>=1.3.3nb4
 BUILDLINK_PKGSRCDIR.fltk?=	../../x11/fltk13
 BUILDLINK_FILES.fltk+=		include/Fl/*
 

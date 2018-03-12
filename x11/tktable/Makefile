@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2016/05/31 19:35:54 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2018/03/12 11:15:58 wiz Exp $
 #
 
 DISTNAME=	Tktable2.10
 PKGNAME=	${DISTNAME:S/Tktable/tktable-/}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tktable/}
 

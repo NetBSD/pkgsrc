@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2017/02/12 06:25:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2018/03/12 11:16:24 wiz Exp $
 #
 
 DISTNAME=	scite339
 PKGNAME=	scite-3.3.9
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scintilla/}
 EXTRACT_SUFX=	.tgz

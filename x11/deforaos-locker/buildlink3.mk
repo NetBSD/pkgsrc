@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2017/02/12 06:24:52 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2018/03/12 11:15:48 wiz Exp $
 
 BUILDLINK_TREE+=	deforaos-locker
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	deforaos-locker
 DEFORAOS_LOCKER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.deforaos-locker+=	deforaos-locker>=0.1.2
-BUILDLINK_ABI_DEPENDS.deforaos-locker?=	deforaos-locker>=0.4.0nb3
+BUILDLINK_ABI_DEPENDS.deforaos-locker?=	deforaos-locker>=0.4.0nb5
 BUILDLINK_PKGSRCDIR.deforaos-locker?=	../../x11/deforaos-locker
 
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"

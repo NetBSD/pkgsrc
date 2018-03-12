@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2018/01/01 21:18:56 adam Exp $
+# $NetBSD: Makefile,v 1.13 2018/03/12 11:17:47 wiz Exp $
 
 DISTNAME=		rekonq-2.4.2
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		www kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rekonq/2.0/}
 EXTRACT_SUFX=		.tar.xz
