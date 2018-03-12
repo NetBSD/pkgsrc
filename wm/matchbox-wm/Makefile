@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2014/12/28 15:12:22 mef Exp $
+# $NetBSD: Makefile,v 1.20 2018/03/12 11:17:43 wiz Exp $
 #
 
 DISTNAME=		matchbox-window-manager-1.1
 PKGNAME=		${DISTNAME:S/window-manager/wm/}
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		wm x11
 MASTER_SITES=		http://downloads.yoctoproject.org/releases/matchbox/matchbox-window-manager/1.1/
 

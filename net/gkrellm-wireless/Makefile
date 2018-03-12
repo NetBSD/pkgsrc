@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2017/08/01 17:40:15 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2018/03/12 11:17:18 wiz Exp $
 
 DISTNAME=		gkrellmwireless-2.0.3
 PKGNAME=		${DISTNAME:S/gkrellm/gkrellm-/}
-PKGREVISION=		34
+PKGREVISION=		35
 CATEGORIES=		net sysutils
 MASTER_SITES=		http://gkrellm.luon.net/files/
 

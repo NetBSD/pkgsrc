@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2013/12/16 06:24:13 asau Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2018/03/12 11:15:54 wiz Exp $
 
 BUILDLINK_TREE+=	motif
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	motif
 X11MOTIF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.motif+=	motif>=2.3.4
-BUILDLINK_ABI_DEPENDS.motif+=	motif>=2.3.4nb6
+BUILDLINK_ABI_DEPENDS.motif+=	motif>=2.3.4nb8
 BUILDLINK_PKGSRCDIR.motif?=	../../x11/motif
 
 _MOTIFBASE=	${BUILDLINK_PREFIX.motif}

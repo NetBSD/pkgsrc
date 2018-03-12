@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.65 2014/01/11 14:42:04 adam Exp $
+# $NetBSD: Makefile,v 1.66 2018/03/12 11:17:04 wiz Exp $
 #
 
 DISTNAME=		vatsrc-4.0b2
 PKGNAME=		${DISTNAME:S/src//}
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		mbone
 MASTER_SITES=		ftp://ftp.ee.lbl.gov/conferencing/vat/alpha-test/
 

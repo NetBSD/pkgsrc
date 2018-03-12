@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2017/07/30 22:47:55 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2018/03/12 11:17:34 wiz Exp $
 #
 
 DISTNAME=	gnome-system-monitor-2.28.2
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-system-monitor/2.28/}
 EXTRACT_SUFX=	.tar.bz2
