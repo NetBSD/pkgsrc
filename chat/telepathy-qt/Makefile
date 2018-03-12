@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2017/09/04 18:08:18 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/03/12 11:16:11 wiz Exp $
 
 DISTNAME=	telepathy-qt-0.9.6.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-qt/
 

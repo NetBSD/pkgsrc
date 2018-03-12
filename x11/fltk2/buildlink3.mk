@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2015/04/25 14:25:04 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2018/03/12 11:15:49 wiz Exp $
 
 BUILDLINK_TREE+=	fltk2
 
@@ -7,7 +7,7 @@ FLTK2_BUILDLINK3_MK:=
 
 BUILDLINK_DEPMETHOD.fltk2?=	build
 BUILDLINK_API_DEPENDS.fltk2+=	fltk2>=2.0pre6129
-BUILDLINK_ABI_DEPENDS.fltk2+=	fltk2>=2.0pre6129nb13
+BUILDLINK_ABI_DEPENDS.fltk2+=	fltk2>=2.0pre6129nb14
 BUILDLINK_PKGSRCDIR.fltk2?=	../../x11/fltk2
 
 .include "../../graphics/MesaLib/buildlink3.mk"

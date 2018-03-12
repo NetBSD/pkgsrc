@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/11/23 17:19:41 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2018/03/12 11:15:30 wiz Exp $
 
 USE_GTK_VERSION=3
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../devel/libindicator/Makefile.common"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

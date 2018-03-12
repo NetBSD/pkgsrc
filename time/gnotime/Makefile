@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2018/01/28 20:11:06 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2018/03/12 11:17:41 wiz Exp $
 
 DISTNAME=	gnotime-2.4.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	time gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gttr/}
 

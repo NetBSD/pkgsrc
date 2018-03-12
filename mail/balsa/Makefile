@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.133 2018/01/28 20:10:54 wiz Exp $
+# $NetBSD: Makefile,v 1.134 2018/03/12 11:16:58 wiz Exp $
 
 DISTNAME=	balsa-2.4.14
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://pawsa.fedorapeople.org/balsa/
 EXTRACT_SUFX=	.tar.bz2

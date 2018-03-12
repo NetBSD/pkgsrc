@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2013/06/06 12:55:10 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2018/03/12 11:17:45 wiz Exp $
 #
 
 DISTNAME=	wmi-10
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	wm
 MASTER_SITES=	http://www.suckless.org/download/
 
