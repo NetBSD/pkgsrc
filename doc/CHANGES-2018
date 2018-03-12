@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1217 2018/03/12 16:51:12 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1218 2018/03/12 16:54:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1668,3 +1668,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-openpyxl to 2.5.1 [adam 2018-03-12]
 	Updated www/py-selenium to 3.11.0 [adam 2018-03-12]
 	Updated graphics/ImageMagick to 7.0.7.26 [fhajny 2018-03-12]
+	Updated graphics/libimagequant to 2.11.10 [adam 2018-03-12]
+	Updated databases/py-sqlalchemy to 1.2.5 [adam 2018-03-12]
