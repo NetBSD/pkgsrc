@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2018/03/13 21:19:52 bsiegert Exp $
+share/fonts/X11/TTF/Inter-UI-Black.otf
+share/fonts/X11/TTF/Inter-UI-BlackItalic.otf
+share/fonts/X11/TTF/Inter-UI-Bold.otf
+share/fonts/X11/TTF/Inter-UI-BoldItalic.otf
+share/fonts/X11/TTF/Inter-UI-Italic.otf
+share/fonts/X11/TTF/Inter-UI-Medium.otf
+share/fonts/X11/TTF/Inter-UI-MediumItalic.otf
+share/fonts/X11/TTF/Inter-UI-Regular.otf
