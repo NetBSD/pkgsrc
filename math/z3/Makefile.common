@@ -1,0 +1,26 @@
+# $NetBSD: Makefile.common,v 1.1 2018/03/13 00:31:16 khorben Exp $
+#
+# used by wip/py-z3/Makefile
+# used by wip/z3/Makefile
+
+DISTNAME=	z3-4.5.0
+GITHUB_TAG=	${DISTNAME}
+CATEGORIES=	math
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Z3Prover/}
+DISTINFO_FILE=	${.CURDIR}/../../wip/z3/distinfo
+PATCHDIR?=	${.CURDIR}/../../wip/z3/patches
+
+MAINTAINER=	dholland@NetBSD.org
+HOMEPAGE=	https://github.com/Z3Prover/z3/
+LICENSE=	mit
+
+WRKSRC=		${WRKDIR}/z3-${DISTNAME}
+HAS_CONFIGURE=	yes
+USE_LANGUAGES=	c c++
+BUILD_DIRS=	build
+
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
+CONFIGURE_ARGS+=	--destdir=${DESTDIR}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+
+.include "../../lang/python/tool.mk"
