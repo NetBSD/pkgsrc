@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/03/13 05:45:25 dholland Exp $
+# $NetBSD: Makefile,v 1.12 2018/03/13 05:47:25 dholland Exp $
 
 DISTNAME=		verifast-18.02
 CATEGORIES=		devel
@@ -21,8 +21,6 @@ BUILD_DEPENDS+=		camlp4-[0-9]*:../../lang/camlp4
 VF_DIR=			share/verifast
 INSTALLATION_DIRS=	${VF_DIR} bin
 OCAML_USE_FINDLIB=	yes
-BUILD_TARGET=		depend all
-MAKE_JOBS_SAFE=		no
 
 do-configure:
 	${CP} ${FILESDIR}/GNUmakefile.settings ${WRKSRC}/
