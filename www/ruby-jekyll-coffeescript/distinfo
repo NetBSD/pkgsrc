@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/03/20 16:38:33 taca Exp $
+$NetBSD: distinfo,v 1.4 2018/03/13 17:46:30 taca Exp $
 
-SHA1 (jekyll-coffeescript-1.0.2.gem) = 365950099148a3359e4d45f525813f95800f6b42
-RMD160 (jekyll-coffeescript-1.0.2.gem) = 4d7ef6c5b94987d30806810ac7e5791598718a8b
-SHA512 (jekyll-coffeescript-1.0.2.gem) = 846ebe2296a3d45ab98fca7416446d78634146f2f9bfb1ac3b560ddf3743155eb8df898a6f808e087bd0bac2043eb90a3bfee2a215577c35e52f9eeea88f0cb7
-Size (jekyll-coffeescript-1.0.2.gem) = 4608 bytes
+SHA1 (jekyll-coffeescript-1.1.1.gem) = 942c945270e8e40d803d60c95c70433dd79ece1e
+RMD160 (jekyll-coffeescript-1.1.1.gem) = 48a1c535db816f114faf602bf90e4a94c5f0b451
+SHA512 (jekyll-coffeescript-1.1.1.gem) = 6e6f7c21b01a840c30b668b68da2d0ce657bbc6f6394502c32b93f0a2d8881ce50066dc1f8a34496101db24e97da3ea857ae02f8d983b2cbea90a104a4be8ccf
+Size (jekyll-coffeescript-1.1.1.gem) = 4608 bytes
