@@ -1,13 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/16 13:21:41 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/13 17:06:05 bsiegert Exp $
 gopkg/pkg/${GO_PLATFORM}/github.com/stretchr/testify.a
 gopkg/pkg/${GO_PLATFORM}/github.com/stretchr/testify/assert.a
 gopkg/pkg/${GO_PLATFORM}/github.com/stretchr/testify/http.a
 gopkg/pkg/${GO_PLATFORM}/github.com/stretchr/testify/mock.a
 gopkg/pkg/${GO_PLATFORM}/github.com/stretchr/testify/require.a
 gopkg/pkg/${GO_PLATFORM}/github.com/stretchr/testify/suite.a
-gopkg/pkg/${GO_PLATFORM}/github.com/stretchr/testify/vendor/github.com/davecgh/go-spew/spew.a
-gopkg/pkg/${GO_PLATFORM}/github.com/stretchr/testify/vendor/github.com/pmezard/go-difflib/difflib.a
-gopkg/pkg/${GO_PLATFORM}/github.com/stretchr/testify/vendor/github.com/stretchr/objx.a
 gopkg/src/github.com/stretchr/testify/Godeps/Godeps.json
 gopkg/src/github.com/stretchr/testify/Godeps/Readme
 gopkg/src/github.com/stretchr/testify/LICENCE.txt
