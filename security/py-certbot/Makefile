@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/01/22 13:37:25 fhajny Exp $
+# $NetBSD: Makefile,v 1.8 2018/03/13 10:08:51 fhajny Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
@@ -15,6 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-acme-${PKGVERSION_NOREV}{nb*,}:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-configargparse>=0.9.3:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=1.2:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-josepy-[0-9]*:../../security/py-josepy
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-parsedatetime>=2.0:../../time/py-parsedatetime
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
