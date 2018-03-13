@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/10/17 14:23:22 taca Exp $
+$NetBSD: distinfo,v 1.6 2018/03/13 17:14:44 taca Exp $
 
-SHA1 (jekyll-watch-1.5.0.gem) = 2ca6c415ffbc2d802fc2fe811ba0a54e6fba87f2
-RMD160 (jekyll-watch-1.5.0.gem) = cfba154b78c5a8111611b1984442d3cc99d41166
-SHA512 (jekyll-watch-1.5.0.gem) = 8eda8def17883354aa5ecf89f68e8553e664f228dc4b82b0e888c66c6c247592817b8462907d9e69200532a2211d032e3669e5760a3e816f1dd118eea70ca834
-Size (jekyll-watch-1.5.0.gem) = 6144 bytes
+SHA1 (jekyll-watch-2.0.0.gem) = ffd75b6a91c1996934dae7beb3b8aa93c28adfca
+RMD160 (jekyll-watch-2.0.0.gem) = 20c13b6ce6da8fe27bf3cca649bdcdc3068b94fa
+SHA512 (jekyll-watch-2.0.0.gem) = b4057980e41253bf6a91633da5cd23afb34c83d9d01c95cd495ea8a1d389c8e09a464388198c1ba72bd35ed3470a37587787d7bbb3f48f9e60ca9718a9b2b938
+Size (jekyll-watch-2.0.0.gem) = 6144 bytes
