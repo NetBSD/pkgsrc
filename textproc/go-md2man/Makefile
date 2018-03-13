@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2018/03/04 15:52:19 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2018/03/13 17:32:57 bsiegert Exp $
 
 DISTNAME=	go-md2man-1.0.6
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cpuguy83/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
@@ -13,6 +13,9 @@ LICENSE=	mit
 
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/cpuguy83/go-md2man
+
+post-install:
+	${RM} -rf ${DESTDIR}${PREFIX}/gopkg/pkg/${GO_PLATFORM}/${GO_SRCPATH}/vendor
 
 .include "../../devel/go-blackfriday/buildlink3.mk"
 .include "../../devel/go-sanitized_anchor_name/buildlink3.mk"
