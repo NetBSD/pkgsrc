@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1222 2018/03/13 08:18:22 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1223 2018/03/13 09:18:28 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1674,3 +1674,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/py-z3 version 4.5.0 [khorben 2018-03-13]
 	Updated www/py-django-cms to 3.5.1 [wen 2018-03-13]
 	Updated www/py-django-cmsplugin_gallery to 1.0.0 [wen 2018-03-13]
+	Updated lang/elixir to 1.6.3 [fhajny 2018-03-13]
