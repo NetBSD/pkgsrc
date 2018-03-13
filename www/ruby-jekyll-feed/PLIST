@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/22 17:05:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/13 17:32:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -15,9 +15,12 @@ ${GEM_LIBDIR}/lib/jekyll-feed/feed.xml
 ${GEM_LIBDIR}/lib/jekyll-feed/generator.rb
 ${GEM_LIBDIR}/lib/jekyll-feed/meta-tag.rb
 ${GEM_LIBDIR}/lib/jekyll-feed/page-without-a-file.rb
+${GEM_LIBDIR}/lib/jekyll-feed/version.rb
 ${GEM_LIBDIR}/script/bootstrap
 ${GEM_LIBDIR}/script/cibuild
+${GEM_LIBDIR}/script/fmt
 ${GEM_LIBDIR}/script/release
+${GEM_LIBDIR}/script/test
 ${GEM_LIBDIR}/spec/fixtures/_config.yml
 ${GEM_LIBDIR}/spec/fixtures/_data/authors.yml
 ${GEM_LIBDIR}/spec/fixtures/_drafts/2015-01-12-a-draft.md
