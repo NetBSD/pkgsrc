@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1233 2018/03/13 14:30:04 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1234 2018/03/13 15:09:24 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1690,3 +1690,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-aiohttp to 3.0.8 [adam 2018-03-13]
 	Updated textproc/py-pdf-parser to 0.6.8 [wen 2018-03-13]
 	Added devel/ruby-tomlrb version 1.2.6 [taca 2018-03-13]
+	Updated mail/rspamd to 1.7.0 [fhajny 2018-03-13]
