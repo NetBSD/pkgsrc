@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1260 2018/03/13 17:30:46 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1261 2018/03/13 17:33:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1725,3 +1725,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/ruby-kramdown to 1.16.2 [taca 2018-03-13]
 	Updated devel/ruby-pathutil to 0.16.1 [taca 2018-03-13]
 	Updated www/ruby-rouge to 3.1.1 [taca 2018-03-13]
+	Updated www/ruby-jekyll-feed to 0.9.3 [taca 2018-03-13]
