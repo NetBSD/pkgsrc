@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1206 2018/03/11 17:32:53 wiz Exp $
+# $NetBSD: Makefile,v 1.1207 2018/03/13 16:01:50 taca Exp $
 #
 
 COMMENT=	Networking tools
@@ -729,6 +729,7 @@ SUBDIR+=	ruby-addressable
 SUBDIR+=	ruby-amq-client
 SUBDIR+=	ruby-amq-protocol
 SUBDIR+=	ruby-amqp
+SUBDIR+=	ruby-connection_pool
 SUBDIR+=	ruby-dnsruby
 SUBDIR+=	ruby-domain_name
 SUBDIR+=	ruby-em-socksify
