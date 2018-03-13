@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1263 2018/03/13 17:40:10 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1264 2018/03/13 17:44:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1728,3 +1728,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ruby-jekyll-feed to 0.9.3 [taca 2018-03-13]
 	Updated devel/ruby-octokit to 4.8.0 [taca 2018-03-13]
 	Updated www/ruby-jekyll-gist to 1.5.0 [taca 2018-03-13]
+	Updated www/ruby-jekyll-minima to 2.4.0 [taca 2018-03-13]
