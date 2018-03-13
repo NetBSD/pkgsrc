@@ -1,13 +1,9 @@
-$NetBSD: distinfo,v 1.3 2018/02/23 17:04:43 khorben Exp $
+$NetBSD: distinfo,v 1.4 2018/03/13 00:31:16 khorben Exp $
 
-SHA1 (z3-4.4.1.tar.gz) = 60094acaa53459ec694899aca9f17aa830875610
-RMD160 (z3-4.4.1.tar.gz) = 2c891e115a5d097dbbda53c1b322c65bc5b679f7
-SHA512 (z3-4.4.1.tar.gz) = 76991a24f47f2b53ceb8d7a9a6be19913c57994ffb6cf6acfe30f61b2e73959cf02a99f656053594fccb5aaf4d1f44b3ae7e51f1c8953b213d738ceeeaea74f8
-Size (z3-4.4.1.tar.gz) = 3347371 bytes
-SHA1 (z3-jumbo-patch-20151123.gz) = d31b8840575536104680bb624b15cc1c2084a7fb
-RMD160 (z3-jumbo-patch-20151123.gz) = eb74bd41125e1b07a7f873774a2c354e3c8ca378
-SHA512 (z3-jumbo-patch-20151123.gz) = c23d363bf53b40c3ccbfc10d03ef3621d6abfa9cf86375e7e853e85a0971db70992173df04df1a895e16d4a9b533e955953455a7533889963d2920a4b48d0056
-Size (z3-jumbo-patch-20151123.gz) = 4395 bytes
-SHA1 (patch-scripts_mk__util.py) = 84ccd3fa33a3fcffa53af6f838f6caacdfec40a8
-SHA1 (patch-src_util_debug.cpp) = 607ea4e078884920a3034cf00779dce25fc8e623
-SHA1 (patch-src_util_mpz.cpp) = 69988bec1472df14209ae0dbfdc8a94c9e71cc82
+SHA1 (z3-4.5.0.tar.gz) = 6f4e94e025fcc2fa2896524d8fbb9de0b3033854
+RMD160 (z3-4.5.0.tar.gz) = 81121307ac83f42989da49efda31964a94f7f5d5
+SHA512 (z3-4.5.0.tar.gz) = 1ebc2c908d90b6b879f1e819c864ff894613276af47a440f27cf94968c195656952434754c3eb20f4bdbdd8497d227d22e1b4821c0d320b11052b5648d9e2dc7
+Size (z3-4.5.0.tar.gz) = 3573695 bytes
+SHA1 (patch-configure) = 8d5fe787f15fe781c3c23cee27058f898de8c95e
+SHA1 (patch-scripts_mk__util.py) = f0a7cfabdbf9b6c1eb92e75f381d8a3f8a088d35
+SHA1 (patch-src_util_stopwatch.h) = dbeab175ed4f507d5378f1966f8ed173c4c9a9a7
