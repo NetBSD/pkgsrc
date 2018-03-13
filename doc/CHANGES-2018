@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1231 2018/03/13 11:46:36 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1232 2018/03/13 12:07:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1688,3 +1688,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/py-numpy to 1.14.2 [adam 2018-03-13]
 	Updated www/py-idna_ssl to 1.0.1 [adam 2018-03-13]
 	Updated www/py-aiohttp to 3.0.8 [adam 2018-03-13]
+	Updated textproc/py-pdf-parser to 0.6.8 [wen 2018-03-13]
