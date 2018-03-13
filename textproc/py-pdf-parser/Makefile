@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2017/09/04 18:08:28 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/03/13 12:04:45 wen Exp $
 #
 
-DISTNAME=	pdf-parser_V0_3_9
+DISTNAME=	pdf-parser_V0_6_8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_V/-/:S/_/./g}
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.didierstevens.com/files/software/
