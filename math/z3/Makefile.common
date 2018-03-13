@@ -1,14 +1,13 @@
-# $NetBSD: Makefile.common,v 1.1 2018/03/13 00:31:16 khorben Exp $
+# $NetBSD: Makefile.common,v 1.2 2018/03/13 00:34:02 khorben Exp $
 #
-# used by wip/py-z3/Makefile
-# used by wip/z3/Makefile
+# used by math/z3/Makefile
 
 DISTNAME=	z3-4.5.0
 GITHUB_TAG=	${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Z3Prover/}
-DISTINFO_FILE=	${.CURDIR}/../../wip/z3/distinfo
-PATCHDIR?=	${.CURDIR}/../../wip/z3/patches
+DISTINFO_FILE=	${.CURDIR}/../../math/z3/distinfo
+PATCHDIR?=	${.CURDIR}/../../math/z3/patches
 
 MAINTAINER=	dholland@NetBSD.org
 HOMEPAGE=	https://github.com/Z3Prover/z3/
