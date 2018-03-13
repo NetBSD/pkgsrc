@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/03/13 16:10:50 taca Exp $
+
+SHA1 (crass-1.0.2.gem) = 5a855504ff288cd8c36482c26d965d05b370dbbd
+RMD160 (crass-1.0.2.gem) = 5d5bbb9fd630dd7a1b0c14051b893940805774da
+SHA512 (crass-1.0.2.gem) = 28ea16dea1ba8e46589489a60780195711304902b805bff0b362f99e8af9c9d2ecd0c11dcdf3e67e18e0997f37594012a4ceb312df352faf56eeb47d0441d289
+Size (crass-1.0.2.gem) = 92160 bytes
