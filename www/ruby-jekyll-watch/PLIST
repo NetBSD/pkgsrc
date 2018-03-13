@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2015/03/13 16:47:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/13 17:14:44 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/lib/jekyll-watch.rb
+${GEM_LIBDIR}/lib/jekyll-watch/version.rb
 ${GEM_LIBDIR}/lib/jekyll/commands/watch.rb
 ${GEM_LIBDIR}/lib/jekyll/watcher.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
