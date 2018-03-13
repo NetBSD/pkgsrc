@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/03/20 16:40:09 taca Exp $
+$NetBSD: distinfo,v 1.5 2018/03/13 17:08:37 taca Exp $
 
-SHA1 (jekyll-sass-converter-1.5.0.gem) = 5548219bddb449b352e36f44760804d597ba6c08
-RMD160 (jekyll-sass-converter-1.5.0.gem) = 55f6c8610bd5c6b759df8ae1c6cac98ac3826b42
-SHA512 (jekyll-sass-converter-1.5.0.gem) = 20c05bc7e5a91cb06ba08f98b33e8840da022a193faf048249421ff9e175a1ce8d2a2a14671733a21633fbd9c9a516580c7a254cce8c206bb3fe22cab89fd537
-Size (jekyll-sass-converter-1.5.0.gem) = 5632 bytes
+SHA1 (jekyll-sass-converter-1.5.2.gem) = 2951e3f1e69dcb572b41e348d6fdf925bec04618
+RMD160 (jekyll-sass-converter-1.5.2.gem) = afeb9da112ae50cad91bae8980187689a40e838e
+SHA512 (jekyll-sass-converter-1.5.2.gem) = ec49af64b4acb2e516867a35196fa4af8ad2b14735322f9cd71f6de3507069f53b6b1960cc89f692cc9a38546d21af356119f05d8dce0a13e13e25d9464d406a
+Size (jekyll-sass-converter-1.5.2.gem) = 5632 bytes
