@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/01/15 21:36:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2018/03/13 10:43:38 fhajny Exp $
 #
 
 MODNAME=		phalcon
-PECL_VERSION=		3.3.1
+PECL_VERSION=		3.3.2
 PKGNAME=		${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phalcon/}
