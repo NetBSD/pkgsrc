@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1251 2018/03/13 17:01:11 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1252 2018/03/13 17:02:27 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1716,3 +1716,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-globalid to 0.4.1 [taca 2018-03-13]
 	Updated devel/ruby-highline to 1.7.10 [taca 2018-03-13]
 	Updated devel/ruby-kgio to 2.11.2 [taca 2018-03-13]
+	Added devel/R-cli version 1.0.0 [minskim 2018-03-13]
