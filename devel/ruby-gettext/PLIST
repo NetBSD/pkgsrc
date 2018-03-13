@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2017/08/18 10:43:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.24 2018/03/13 16:49:03 taca Exp $
 bin/rmsgcat${RUBY_SUFFIX}
 bin/rmsgfmt${RUBY_SUFFIX}
 bin/rmsginit${RUBY_SUFFIX}
@@ -37,6 +37,7 @@ ${GEM_LIBDIR}/lib/gettext/tools/msginit.rb
 ${GEM_LIBDIR}/lib/gettext/tools/msgmerge.rb
 ${GEM_LIBDIR}/lib/gettext/tools/parser/erb.rb
 ${GEM_LIBDIR}/lib/gettext/tools/parser/glade.rb
+${GEM_LIBDIR}/lib/gettext/tools/parser/haml.rb
 ${GEM_LIBDIR}/lib/gettext/tools/parser/ruby.rb
 ${GEM_LIBDIR}/lib/gettext/tools/task.rb
 ${GEM_LIBDIR}/lib/gettext/tools/xgettext.rb
