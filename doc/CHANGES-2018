@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1241 2018/03/13 16:22:10 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1242 2018/03/13 16:24:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1698,3 +1698,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/ruby-em-websocket version 0.5.1 [taca 2018-03-13]
 	Added textproc/ruby-rails-dom-testing1 version 1.0.9 [taca 2018-03-13]
 	Updated lang/nodejs to 9.8.0 [fhajny 2018-03-13]
+	Updated net/pear-Net_Sieve to 1.4.3 [taca 2018-03-13]
