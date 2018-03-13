@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1228 2018/03/13 10:43:48 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1229 2018/03/13 11:09:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1682,3 +1682,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-certbot to 0.22.0 [fhajny 2018-03-13]
 	Updated databases/py-peewee to 3.1.2 [fhajny 2018-03-13]
 	Updated www/php-phalcon to 3.3.2 [fhajny 2018-03-13]
+	Updated www/py-pylint-django to 0.9.4 [adam 2018-03-13]
+	Updated time/py-dateutil to 2.7.0 [adam 2018-03-13]
