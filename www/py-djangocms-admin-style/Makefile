@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.12 2016/11/06 14:48:35 adam Exp $
+# $NetBSD: Makefile,v 1.13 2018/03/13 09:43:33 adam Exp $
 
-DISTNAME=	djangocms-admin-style-1.2.6
+DISTNAME=	djangocms-admin-style-1.2.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=divio/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangocms-admin-style/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	https://github.com/divio/djangocms-admin-style/
+HOMEPAGE=	https://github.com/divio/djangocms-admin-style
 COMMENT=	Adds pretty CSS styles for the django CMS admin interface
 LICENSE=	modified-bsd
 
-GITHUB_PROJECT=	djangocms-admin-style
-GITHUB_TAG=	${PKGVERSION_NOREV}
-
-USE_LANGUAGES=		# empty
-
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
+
+USE_LANGUAGES=	# none
+
+post-extract:
+	${RM} ${WRKSRC}/djangocms_admin_style/.DS_Store
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
