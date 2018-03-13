@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/01/15 10:35:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/03/13 11:32:23 adam Exp $
 bin/faker${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -44,6 +44,9 @@ ${PYSITELIB}/faker/providers/address/__init__.pyo
 ${PYSITELIB}/faker/providers/address/cs_CZ/__init__.py
 ${PYSITELIB}/faker/providers/address/cs_CZ/__init__.pyc
 ${PYSITELIB}/faker/providers/address/cs_CZ/__init__.pyo
+${PYSITELIB}/faker/providers/address/de_AT/__init__.py
+${PYSITELIB}/faker/providers/address/de_AT/__init__.pyc
+${PYSITELIB}/faker/providers/address/de_AT/__init__.pyo
 ${PYSITELIB}/faker/providers/address/de_DE/__init__.py
 ${PYSITELIB}/faker/providers/address/de_DE/__init__.pyc
 ${PYSITELIB}/faker/providers/address/de_DE/__init__.pyo
@@ -203,6 +206,9 @@ ${PYSITELIB}/faker/providers/bank/fr_FR/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/it_IT/__init__.py
 ${PYSITELIB}/faker/providers/bank/it_IT/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/it_IT/__init__.pyo
+${PYSITELIB}/faker/providers/bank/nl_NL/__init__.py
+${PYSITELIB}/faker/providers/bank/nl_NL/__init__.pyc
+${PYSITELIB}/faker/providers/bank/nl_NL/__init__.pyo
 ${PYSITELIB}/faker/providers/barcode/__init__.py
 ${PYSITELIB}/faker/providers/barcode/__init__.pyc
 ${PYSITELIB}/faker/providers/barcode/__init__.pyo
