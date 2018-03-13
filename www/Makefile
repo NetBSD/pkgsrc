@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1312 2018/03/05 13:59:47 adam Exp $
+# $NetBSD: Makefile,v 1.1313 2018/03/13 16:11:16 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -784,6 +784,7 @@ SUBDIR+=	ruby-compass-core
 SUBDIR+=	ruby-compass-import-once
 SUBDIR+=	ruby-compass-susy-plugin
 SUBDIR+=	ruby-cookiejar
+SUBDIR+=	ruby-crass
 SUBDIR+=	ruby-css-parser
 SUBDIR+=	ruby-cssmin
 SUBDIR+=	ruby-csspool
