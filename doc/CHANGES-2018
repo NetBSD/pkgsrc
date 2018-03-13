@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1239 2018/03/13 16:14:11 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1240 2018/03/13 16:21:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1696,3 +1696,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added textproc/ruby-erubi version 1.7.1 [taca 2018-03-13]
 	Added www/ruby-crass version 1.0.2 [taca 2018-03-13]
 	Added www/ruby-em-websocket version 0.5.1 [taca 2018-03-13]
+	Added textproc/ruby-rails-dom-testing1 version 1.0.9 [taca 2018-03-13]
