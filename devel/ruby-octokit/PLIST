@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/04/22 16:24:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/03/13 17:37:03 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -10,6 +10,7 @@ ${GEM_LIBDIR}/lib/octokit.rb
 ${GEM_LIBDIR}/lib/octokit/arguments.rb
 ${GEM_LIBDIR}/lib/octokit/authentication.rb
 ${GEM_LIBDIR}/lib/octokit/client.rb
+${GEM_LIBDIR}/lib/octokit/client/apps.rb
 ${GEM_LIBDIR}/lib/octokit/client/authorizations.rb
 ${GEM_LIBDIR}/lib/octokit/client/commit_comments.rb
 ${GEM_LIBDIR}/lib/octokit/client/commits.rb
@@ -22,12 +23,12 @@ ${GEM_LIBDIR}/lib/octokit/client/feeds.rb
 ${GEM_LIBDIR}/lib/octokit/client/gists.rb
 ${GEM_LIBDIR}/lib/octokit/client/gitignore.rb
 ${GEM_LIBDIR}/lib/octokit/client/hooks.rb
-${GEM_LIBDIR}/lib/octokit/client/integrations.rb
 ${GEM_LIBDIR}/lib/octokit/client/issues.rb
 ${GEM_LIBDIR}/lib/octokit/client/labels.rb
 ${GEM_LIBDIR}/lib/octokit/client/legacy_search.rb
 ${GEM_LIBDIR}/lib/octokit/client/licenses.rb
 ${GEM_LIBDIR}/lib/octokit/client/markdown.rb
+${GEM_LIBDIR}/lib/octokit/client/marketplace.rb
 ${GEM_LIBDIR}/lib/octokit/client/meta.rb
 ${GEM_LIBDIR}/lib/octokit/client/milestones.rb
 ${GEM_LIBDIR}/lib/octokit/client/notifications.rb
