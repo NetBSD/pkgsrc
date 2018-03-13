@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2017/08/27 19:24:59 wiz Exp $
+# $NetBSD: Makefile,v 1.1 2018/03/13 21:19:52 bsiegert Exp $
 
-DISTNAME=	Interface-1.3
+VERSION=	2.5
+DISTNAME=	Inter-UI-${VERSION}
 CATEGORIES=	fonts
-MASTER_SITES=	${MASTER_SITE_GITHUB:=rsms/}
+MASTER_SITES=	https://github.com/rsms/inter/releases/download/v${VERSION}/
 EXTRACT_SUFX=	.zip
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
-GITHUB_PROJECT=	interface
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://rsms.me/interface/
+HOMEPAGE=	https://rsms.me/inter/
 COMMENT=	Font for highly legible text on computer screens
 LICENSE=	ofl-v1.1
 
@@ -21,6 +20,6 @@ FONTS_DIRS.ttf+=	${PREFIX}/share/fonts/X11/TTF
 INSTALLATION_DIRS=	share/fonts/X11/TTF
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/"Interface (OTF)"/*.otf ${DESTDIR}${FONTS_DIRS.ttf}
+	${INSTALL_DATA} ${WRKSRC}/"Inter UI (OTF)"/*.otf ${DESTDIR}${FONTS_DIRS.ttf}
 
 .include "../../mk/bsd.pkg.mk"
