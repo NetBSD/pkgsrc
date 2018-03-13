@@ -1,0 +1,3 @@
+EventMachine based, async, Ruby WebSocket server. Take a look at examples
+directory, or check out the blog post: [Ruby & Websockets: TCP for the
+Web](http://www.igvita.com/2009/12/22/ruby-websockets-tcp-for-the-browser/).
