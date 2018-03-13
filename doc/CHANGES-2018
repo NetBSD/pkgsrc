@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1220 2018/03/13 00:37:22 khorben Exp $
+$NetBSD: CHANGES-2018,v 1.1221 2018/03/13 02:41:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1672,3 +1672,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-sqlalchemy to 1.2.5 [adam 2018-03-12]
 	Updated math/z3 to 4.5.0 [khorben 2018-03-13]
 	Added math/py-z3 version 4.5.0 [khorben 2018-03-13]
+	Updated www/py-django-cms to 3.5.1 [wen 2018-03-13]
