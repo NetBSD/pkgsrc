@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1245 2018/03/13 16:45:09 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1246 2018/03/13 16:47:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1710,3 +1710,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ruby-rails42 to 4.2.10 [taca 2018-03-13]
 	Added databases/ruby-arel80 version 8.0.0 [taca 2018-03-13]
 	Updated databases/ruby-arel to 9.0.0 [taca 2018-03-13]
+	Updated devel/ruby-bindata to 2.4.3 [taca 2018-03-13]
