@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/10/16 16:29:24 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/03/13 16:47:11 taca Exp $
 
-DISTNAME=	bindata-2.4.1
+DISTNAME=	bindata-2.4.3
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
