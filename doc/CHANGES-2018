@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1266 2018/03/13 17:50:30 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1267 2018/03/13 18:36:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1731,3 +1731,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ruby-jekyll-minima to 2.4.0 [taca 2018-03-13]
 	Updated www/ruby-jekyll-coffeescript to 1.1.1 [taca 2018-03-13]
 	Updated www/ruby-jekyll to 3.7.3 [taca 2018-03-13]
+	Updated net/openvpn to 2.4.5 [adam 2018-03-13]
+	Updated security/py-paramiko to 2.4.1 [adam 2018-03-13]
+	Updated security/py-asyncssh to 1.12.1 [adam 2018-03-13]
