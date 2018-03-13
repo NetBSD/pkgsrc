@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1236 2018/03/13 16:05:38 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1237 2018/03/13 16:08:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1693,3 +1693,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/rspamd to 1.7.0 [fhajny 2018-03-13]
 	Added net/ruby-connection_pool version 2.2.1 [taca 2018-03-13]
 	Added net/ruby-nio4r version 2.2.0 [taca 2018-03-13]
+	Added textproc/ruby-erubi version 1.7.1 [taca 2018-03-13]
