@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1267 2018/03/13 18:36:07 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1268 2018/03/13 20:11:14 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1734,3 +1734,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/openvpn to 2.4.5 [adam 2018-03-13]
 	Updated security/py-paramiko to 2.4.1 [adam 2018-03-13]
 	Updated security/py-asyncssh to 1.12.1 [adam 2018-03-13]
+	Updated devel/go-testify to 1.2.1 [bsiegert 2018-03-13]
+	Updated net/aws-sdk-go to 1.13.13 [bsiegert 2018-03-13]
