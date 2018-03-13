@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1250 2018/03/13 17:00:25 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1251 2018/03/13 17:01:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1715,3 +1715,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-gettext-setup to 0.30 [taca 2018-03-13]
 	Updated devel/ruby-globalid to 0.4.1 [taca 2018-03-13]
 	Updated devel/ruby-highline to 1.7.10 [taca 2018-03-13]
+	Updated devel/ruby-kgio to 2.11.2 [taca 2018-03-13]
