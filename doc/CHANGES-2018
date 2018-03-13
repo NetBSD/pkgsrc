@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1225 2018/03/13 09:53:13 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1226 2018/03/13 10:09:19 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1678,3 +1678,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-lexicon to 2.1.24 [fhajny 2018-03-13]
 	Updated www/py-djangocms-admin-style to 1.2.7 [adam 2018-03-13]
 	Updated www/py-django-treebeard to 4.2.1 [adam 2018-03-13]
+	Updated security/py-acme to 0.22.0 [fhajny 2018-03-13]
+	Updated security/py-certbot to 0.22.0 [fhajny 2018-03-13]
