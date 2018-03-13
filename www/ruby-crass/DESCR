@@ -1,0 +1,21 @@
+Crass is a Ruby CSS parser that's fully compliant with the
+CSS Syntax Level 3 specification.
+
+Features
+--------
+
+* Pure Ruby, with no runtime dependencies other than Ruby 1.9.x or higher.
+
+* Tokenizes and parses CSS according to the rules defined in the 14 November
+  2014 editor's draft of the [CSS Syntax Level 3][css] specification.
+
+* Extremely tolerant of broken or invalid CSS. If a browser can handle it, Crass
+  should be able to handle it too.
+
+* Optionally includes comments in the token stream.
+
+* Optionally preserves certain CSS hacks, such as the IE "*" hack, which would
+  otherwise be discarded according to CSS3 tokenizing rules.
+
+* Capable of serializing the parse tree back to CSS while maintaining all
+  original whitespace, comments, and indentation.
