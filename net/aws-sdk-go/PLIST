@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/08/21 19:54:07 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/13 17:14:28 bsiegert Exp $
 gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/aws.a
 gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/aws/awserr.a
 gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/aws/awsutil.a
@@ -14,19 +14,6 @@ gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/aws/ec2metadata.a
 gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/aws/request.a
 gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/aws/session.a
 gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/aws/signer/v4.a
-gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/private/endpoints.a
-gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/private/protocol.a
-gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/private/protocol/ec2query.a
-gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/private/protocol/json/jsonutil.a
-gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/private/protocol/jsonrpc.a
-gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/private/protocol/query.a
-gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/private/protocol/query/queryutil.a
-gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/private/protocol/rest.a
-gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/private/protocol/restjson.a
-gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/private/protocol/restxml.a
-gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/private/protocol/xml/xmlutil.a
-gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/private/signer/v2.a
-gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/private/waiter.a
 gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/service.a
 gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/service/acm.a
 gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/service/acm/acmiface.a
@@ -179,8 +166,6 @@ gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/service/waf.a
 gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/service/waf/wafiface.a
 gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/service/workspaces.a
 gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/service/workspaces/workspacesiface.a
-gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/vendor/github.com/go-ini/ini.a
-gopkg/pkg/${GO_PLATFORM}/github.com/aws/aws-sdk-go/vendor/github.com/jmespath/go-jmespath.a
 gopkg/src/github.com/aws/aws-sdk-go/Gemfile
 gopkg/src/github.com/aws/aws-sdk-go/LICENSE.txt
 gopkg/src/github.com/aws/aws-sdk-go/Makefile
