@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1257 2018/03/13 17:15:09 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1258 2018/03/13 17:21:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1722,3 +1722,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ruby-jekyll-sass-converter to 1.5.2 [taca 2018-03-13]
 	Added www/ruby-jekyll-seo-tag version 2.4.0 [taca 2018-03-13]
 	Updated www/ruby-jekyll-watch to 2.0.0 [taca 2018-03-13]
+	Updated textproc/ruby-kramdown to 1.16.2 [taca 2018-03-13]
