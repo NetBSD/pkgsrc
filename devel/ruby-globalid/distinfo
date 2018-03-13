@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/04/21 21:07:09 minskim Exp $
+$NetBSD: distinfo,v 1.2 2018/03/13 16:59:02 taca Exp $
 
-SHA1 (globalid-0.4.0.gem) = 14070326d38485285bab9909c96b39aa6b6ddffc
-RMD160 (globalid-0.4.0.gem) = 61741bdb7ed6e09385c49f6a98ba8e7afe140193
-SHA512 (globalid-0.4.0.gem) = 7ec40db55495c374c9051a816a74cabff35aa1f24ec17f19950174b498ddaad60dcd26236d76d340e0b7dd885237bf5a9e71040cafe51dd8ab193eae43d2adc1
-Size (globalid-0.4.0.gem) = 12800 bytes
+SHA1 (globalid-0.4.1.gem) = 79c51c607689deb06fed616ceaba4ddd7608f277
+RMD160 (globalid-0.4.1.gem) = 7275ae8533b8e06829f440e8522fe58d773df2b2
+SHA512 (globalid-0.4.1.gem) = 6d494457bf2cf101816d9c2465b85ad4b7dc3541e94a25af20985568f8b79b3f21360eecb1d6bf7c333844f52c09902fe50fe957f7dceab39d743768d0c44f84
+Size (globalid-0.4.1.gem) = 12800 bytes
