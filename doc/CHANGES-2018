@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1219 2018/03/13 00:32:11 khorben Exp $
+$NetBSD: CHANGES-2018,v 1.1220 2018/03/13 00:37:22 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1671,3 +1671,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/libimagequant to 2.11.10 [adam 2018-03-12]
 	Updated databases/py-sqlalchemy to 1.2.5 [adam 2018-03-12]
 	Updated math/z3 to 4.5.0 [khorben 2018-03-13]
+	Added math/py-z3 version 4.5.0 [khorben 2018-03-13]
