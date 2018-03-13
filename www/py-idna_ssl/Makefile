@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/02/05 16:38:56 adam Exp $
+# $NetBSD: Makefile,v 1.2 2018/03/13 11:44:13 adam Exp $
 
-DISTNAME=	idna_ssl-1.0.0
+DISTNAME=	idna-ssl-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/idna_ssl/}
