@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/06/21 13:12:21 taca Exp $
+# $NetBSD: Makefile,v 1.3 2018/03/13 16:33:39 taca Exp $
 
 DISTNAME=	actionview-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-actionview${RUBY_RAILS}-${RAILS_VERSION}
@@ -12,7 +12,7 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-builder>=3.1:../../textproc/ruby-builder
 DEPENDS+=	${RUBY_PKGPREFIX}-erubis>=2.7.0:../../www/ruby-erubis
-DEPENDS+=	${RUBY_PKGPREFIX}-rails-dom-testing>=1.0.5:../../textproc/ruby-rails-dom-testing
+DEPENDS+=	${RUBY_PKGPREFIX}-rails-dom-testing1>=1.0.5:../../textproc/ruby-rails-dom-testing1
 DEPENDS+=	${RUBY_PKGPREFIX}-rails-html-sanitizer>=1.0.3:../../www/ruby-rails-html-sanitizer
 
 RUBY_RAILS_SUPPORTED=	42
