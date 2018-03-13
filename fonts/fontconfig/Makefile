@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2018/03/12 19:13:53 bsiegert Exp $
+# $NetBSD: Makefile,v 1.108 2018/03/13 21:45:20 ryoon Exp $
 
 DISTNAME=	fontconfig-2.13.0
 CATEGORIES=	fonts
@@ -100,6 +100,7 @@ post-install:
 .include "../../devel/libuuid/buildlink3.mk"
 .endif
 .include "../../devel/zlib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.8.1
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
