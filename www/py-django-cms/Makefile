@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2017/06/16 15:09:13 adam Exp $
+# $NetBSD: Makefile,v 1.46 2018/03/13 02:39:52 wen Exp $
 
-DISTNAME=	django-cms-3.4.4
+DISTNAME=	django-cms-3.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=divio/}
@@ -29,6 +29,9 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 USE_LANGUAGES=		# empty
 
 REPLACE_SH=	cms/static/cms/js/select2/release.sh
+
+pre-configure:
+	find ${WRKSRC} -type f | xargs chmod g-w
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
