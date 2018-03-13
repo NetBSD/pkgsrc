@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1230 2018/03/13 11:34:34 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1231 2018/03/13 11:46:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1686,3 +1686,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/py-dateutil to 2.7.0 [adam 2018-03-13]
 	Updated devel/py-faker to 0.8.12 [adam 2018-03-13]
 	Updated math/py-numpy to 1.14.2 [adam 2018-03-13]
+	Updated www/py-idna_ssl to 1.0.1 [adam 2018-03-13]
+	Updated www/py-aiohttp to 3.0.8 [adam 2018-03-13]
