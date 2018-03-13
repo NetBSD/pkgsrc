@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.46 2018/02/22 10:50:47 adam Exp $
+# $NetBSD: Makefile,v 1.47 2018/03/13 11:34:08 adam Exp $
 
-DISTNAME=	numpy-1.14.1
-GITHUB_PROJECT=	numpy
+DISTNAME=	numpy-1.14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=numpy/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.numpy.org/
