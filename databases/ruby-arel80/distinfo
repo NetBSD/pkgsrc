@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/03/13 16:43:03 taca Exp $
+
+SHA1 (arel-8.0.0.gem) = 8e988e146840c7bdc2edf98fdc460f3fe9ad0c73
+RMD160 (arel-8.0.0.gem) = f8d400426b89a9a54abc92343c80f05f96b3c745
+SHA512 (arel-8.0.0.gem) = b066fc889e04bc416e594deb961914b49e5ecb317bdcb52146224afe4543e781607b11559a4b5668d60c973abbccbeb3d3ac220269860fae8e2f46c2ca944908
+Size (arel-8.0.0.gem) = 32256 bytes
