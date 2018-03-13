@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/03/04 13:45:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/03/13 16:44:47 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/MIT-LICENSE.txt
@@ -8,8 +8,10 @@ ${GEM_LIBDIR}/lib/arel/alias_predication.rb
 ${GEM_LIBDIR}/lib/arel/attributes.rb
 ${GEM_LIBDIR}/lib/arel/attributes/attribute.rb
 ${GEM_LIBDIR}/lib/arel/collectors/bind.rb
+${GEM_LIBDIR}/lib/arel/collectors/composite.rb
 ${GEM_LIBDIR}/lib/arel/collectors/plain_string.rb
 ${GEM_LIBDIR}/lib/arel/collectors/sql_string.rb
+${GEM_LIBDIR}/lib/arel/collectors/substitute_binds.rb
 ${GEM_LIBDIR}/lib/arel/compatibility/wheres.rb
 ${GEM_LIBDIR}/lib/arel/crud.rb
 ${GEM_LIBDIR}/lib/arel/delete_manager.rb
@@ -58,6 +60,7 @@ ${GEM_LIBDIR}/lib/arel/nodes/unary_operation.rb
 ${GEM_LIBDIR}/lib/arel/nodes/unqualified_column.rb
 ${GEM_LIBDIR}/lib/arel/nodes/update_statement.rb
 ${GEM_LIBDIR}/lib/arel/nodes/values.rb
+${GEM_LIBDIR}/lib/arel/nodes/values_list.rb
 ${GEM_LIBDIR}/lib/arel/nodes/window.rb
 ${GEM_LIBDIR}/lib/arel/nodes/with.rb
 ${GEM_LIBDIR}/lib/arel/order_predications.rb
@@ -67,8 +70,6 @@ ${GEM_LIBDIR}/lib/arel/table.rb
 ${GEM_LIBDIR}/lib/arel/tree_manager.rb
 ${GEM_LIBDIR}/lib/arel/update_manager.rb
 ${GEM_LIBDIR}/lib/arel/visitors.rb
-${GEM_LIBDIR}/lib/arel/visitors/bind_substitute.rb
-${GEM_LIBDIR}/lib/arel/visitors/bind_visitor.rb
 ${GEM_LIBDIR}/lib/arel/visitors/depth_first.rb
 ${GEM_LIBDIR}/lib/arel/visitors/dot.rb
 ${GEM_LIBDIR}/lib/arel/visitors/ibm_db.rb
