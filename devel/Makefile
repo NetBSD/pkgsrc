@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2632 2018/03/13 14:29:43 taca Exp $
+# $NetBSD: Makefile,v 1.2633 2018/03/13 17:02:21 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -18,6 +18,7 @@ SUBDIR+=	R-Rcpp
 SUBDIR+=	R-assertthat
 SUBDIR+=	R-bit
 SUBDIR+=	R-bit64
+SUBDIR+=	R-cli
 SUBDIR+=	R-crayon
 SUBDIR+=	R-evaluate
 SUBDIR+=	R-magrittr
