@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/02/27 10:45:21 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.17 2018/03/13 09:35:09 fhajny Exp $
 bin/lexicon${PYVERSSUFFIX}
 ${PYSITELIB}/dns_${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/dns_${EGG_INFODIR}/SOURCES.txt
@@ -48,6 +48,8 @@ ${PYSITELIB}/lexicon/providers/easydns.pyo
 ${PYSITELIB}/lexicon/providers/easydns.pyc
 ${PYSITELIB}/lexicon/providers/gandi.pyo
 ${PYSITELIB}/lexicon/providers/gandi.pyc
+${PYSITELIB}/lexicon/providers/gehirn.pyo
+${PYSITELIB}/lexicon/providers/gehirn.pyc
 ${PYSITELIB}/lexicon/providers/glesys.pyo
 ${PYSITELIB}/lexicon/providers/glesys.pyc
 ${PYSITELIB}/lexicon/providers/godaddy.pyo
@@ -76,6 +78,8 @@ ${PYSITELIB}/lexicon/providers/rage4.pyo
 ${PYSITELIB}/lexicon/providers/rage4.pyc
 ${PYSITELIB}/lexicon/providers/route53.pyo
 ${PYSITELIB}/lexicon/providers/route53.pyc
+${PYSITELIB}/lexicon/providers/sakuracloud.pyo
+${PYSITELIB}/lexicon/providers/sakuracloud.pyc
 ${PYSITELIB}/lexicon/providers/softlayer.pyo
 ${PYSITELIB}/lexicon/providers/softlayer.pyc
 ${PYSITELIB}/lexicon/providers/transip.pyo
@@ -98,6 +102,7 @@ ${PYSITELIB}/lexicon/providers/dnspark.py
 ${PYSITELIB}/lexicon/providers/dnspod.py
 ${PYSITELIB}/lexicon/providers/easydns.py
 ${PYSITELIB}/lexicon/providers/gandi.py
+${PYSITELIB}/lexicon/providers/gehirn.py
 ${PYSITELIB}/lexicon/providers/glesys.py
 ${PYSITELIB}/lexicon/providers/godaddy.py
 ${PYSITELIB}/lexicon/providers/linode.py
@@ -112,6 +117,7 @@ ${PYSITELIB}/lexicon/providers/powerdns.py
 ${PYSITELIB}/lexicon/providers/rackspace.py
 ${PYSITELIB}/lexicon/providers/rage4.py
 ${PYSITELIB}/lexicon/providers/route53.py
+${PYSITELIB}/lexicon/providers/sakuracloud.py
 ${PYSITELIB}/lexicon/providers/softlayer.py
 ${PYSITELIB}/lexicon/providers/transip.py
 ${PYSITELIB}/lexicon/providers/vultr.py
