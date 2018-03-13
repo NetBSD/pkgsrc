@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/03/13 08:17:14 wen Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/03/13 10:04:49 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -44,15 +44,6 @@ ${PYSITELIB}/cmsplugin_gallery/settings.py
 ${PYSITELIB}/cmsplugin_gallery/settings.pyc
 ${PYSITELIB}/cmsplugin_gallery/settings.pyo
 ${PYSITELIB}/cmsplugin_gallery/templates/cmsplugin_gallery/gallery.html
-${PYSITELIB}/cmsplugin_gallery/tests/__init__.py
-${PYSITELIB}/cmsplugin_gallery/tests/__init__.pyc
-${PYSITELIB}/cmsplugin_gallery/tests/__init__.pyo
-${PYSITELIB}/cmsplugin_gallery/tests/settings.py
-${PYSITELIB}/cmsplugin_gallery/tests/settings.pyc
-${PYSITELIB}/cmsplugin_gallery/tests/settings.pyo
-${PYSITELIB}/cmsplugin_gallery/tests/tests_models.py
-${PYSITELIB}/cmsplugin_gallery/tests/tests_models.pyc
-${PYSITELIB}/cmsplugin_gallery/tests/tests_models.pyo
 ${PYSITELIB}/cmsplugin_gallery/utils.py
 ${PYSITELIB}/cmsplugin_gallery/utils.pyc
 ${PYSITELIB}/cmsplugin_gallery/utils.pyo
