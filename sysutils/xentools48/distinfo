@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2018/01/27 17:37:51 abs Exp $
+$NetBSD: distinfo,v 1.10 2018/03/13 15:15:01 bouyer Exp $
 
 SHA1 (xen48/gmp-4.3.2.tar.bz2) = c011e8feaf1bb89158bd55eaabd7ef8fdd101a2c
 RMD160 (xen48/gmp-4.3.2.tar.bz2) = a8f3f41501ece290c348aeb4444bbea40bc53e71
@@ -61,6 +61,7 @@ SHA1 (patch-extras_mini-os_include_fcntl.h) = 4ed18497227c8c327ee3db9d793caa4ac6
 SHA1 (patch-extras_mini-os_include_time.h) = ab3b0794bf892ce6a036aa889c6852d65b508596
 SHA1 (patch-extras_mini-os_lib_sys.c) = 9dd4bcab9deed5132d0fe88a0fe0d33b3fc7d09c
 SHA1 (patch-extras_mini-os_lock.c) = e28753793dee483c1ffad8ea8ed2706353046b50
+SHA1 (patch-m4_paths.m4) = 19250964fd808cad30a2aca3de011650a2788251
 SHA1 (patch-stubdom_Makefile) = 6c52ae9af4003fdc199980b6725265fde5a06545
 SHA1 (patch-stubdom_newlib.patch) = e937cd046db217e45b1de76bd0950f514666bc12
 SHA1 (patch-stubdom_vtpmmgr_marshal.h) = 63bb39894e3c6b81b699966ddfa19cb779e916fc
@@ -90,6 +91,7 @@ SHA1 (patch-tools_libs_foreignmemory_netbsd.c) = ac278e3b7e1077272130bf2b83ef613
 SHA1 (patch-tools_libs_foreignmemory_private.h) = ed97af7fef60ba8752625b19f4e7027a5bc7ac54
 SHA1 (patch-tools_libxl_Makefile) = 6ae383af726e2525c74f5d58b1a8893e55694217
 SHA1 (patch-tools_libxl_libxl__create.c) = 8d4984705fff4a3907cc2a436115c400ef732141
+SHA1 (patch-tools_libxl_libxl_dom.c) = 0c4a96523d13de65aaa71ef705c3579ee8d641f3
 SHA1 (patch-tools_libxl_libxl_event.c) = 8147122d03102eccc45c48a7d6ca1aa5d6286040
 SHA1 (patch-tools_libxl_libxl_internal.h) = 613edc0fa055b23f5dc2a2448456d3d6005337fe
 SHA1 (patch-tools_libxl_libxl_uuid.c) = 1eb8c027dbeb7e67df7475ee6e4d87220140c65b
@@ -120,4 +122,5 @@ SHA1 (patch-tools_qemu-xen_qemu-doc.texi) = e72d480ec29829055f01226eaf020d4cbd10
 SHA1 (patch-tools_qemu-xen_xen-hvm.c) = 8faeba31a6f6452d50437a4564b32eb0f8965333
 SHA1 (patch-tools_xenpaging_xenpaging.c) = 0a154b97f1f452a5f80f7c9a835a1f216f12f7e1
 SHA1 (patch-tools_xenstore_xc.c) = cf49b65cba064667e13bb041d1f0099c76ab6a40
+SHA1 (patch-tools_xenstore_xs_lib.c) = e3a8f6e3b149c3ab0f4ec8dcfa455983f94e6c16
 SHA1 (patch-tools_xentrace_xentrace.c) = f964c7555f454358a39f28a2e75db8ee100a4243
