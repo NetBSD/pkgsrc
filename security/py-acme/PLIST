@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/01/22 13:37:25 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/03/13 10:08:51 fhajny Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -65,6 +65,7 @@ ${PYSITELIB}/acme/test_util.py
 ${PYSITELIB}/acme/testdata/README
 ${PYSITELIB}/acme/testdata/cert-100sans.pem
 ${PYSITELIB}/acme/testdata/cert-idnsans.pem
+${PYSITELIB}/acme/testdata/cert-nocn.der
 ${PYSITELIB}/acme/testdata/cert-san.pem
 ${PYSITELIB}/acme/testdata/cert.der
 ${PYSITELIB}/acme/testdata/cert.pem
