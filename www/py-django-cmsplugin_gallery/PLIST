@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/04/24 20:16:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/03/13 08:17:14 wen Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -16,15 +16,24 @@ ${PYSITELIB}/cmsplugin_gallery/cms_plugins.pyo
 ${PYSITELIB}/cmsplugin_gallery/forms.py
 ${PYSITELIB}/cmsplugin_gallery/forms.pyc
 ${PYSITELIB}/cmsplugin_gallery/forms.pyo
+${PYSITELIB}/cmsplugin_gallery/locale/en/LC_MESSAGES/django.mo
+${PYSITELIB}/cmsplugin_gallery/locale/en/LC_MESSAGES/django.po
+${PYSITELIB}/cmsplugin_gallery/locale/pl/LC_MESSAGES/django.mo
+${PYSITELIB}/cmsplugin_gallery/locale/pl/LC_MESSAGES/django.po
+${PYSITELIB}/cmsplugin_gallery/locale/ru/LC_MESSAGES/django.mo
+${PYSITELIB}/cmsplugin_gallery/locale/ru/LC_MESSAGES/django.po
 ${PYSITELIB}/cmsplugin_gallery/migrations/0001_initial.py
 ${PYSITELIB}/cmsplugin_gallery/migrations/0001_initial.pyc
 ${PYSITELIB}/cmsplugin_gallery/migrations/0001_initial.pyo
-${PYSITELIB}/cmsplugin_gallery/migrations/0002_auto__add_field_galleryplugin_template.py
-${PYSITELIB}/cmsplugin_gallery/migrations/0002_auto__add_field_galleryplugin_template.pyc
-${PYSITELIB}/cmsplugin_gallery/migrations/0002_auto__add_field_galleryplugin_template.pyo
-${PYSITELIB}/cmsplugin_gallery/migrations/0003_move_images_to_media_path.py
-${PYSITELIB}/cmsplugin_gallery/migrations/0003_move_images_to_media_path.pyc
-${PYSITELIB}/cmsplugin_gallery/migrations/0003_move_images_to_media_path.pyo
+${PYSITELIB}/cmsplugin_gallery/migrations/0002_auto_20161223_1005.py
+${PYSITELIB}/cmsplugin_gallery/migrations/0002_auto_20161223_1005.pyc
+${PYSITELIB}/cmsplugin_gallery/migrations/0002_auto_20161223_1005.pyo
+${PYSITELIB}/cmsplugin_gallery/migrations/0003_auto_20170104_1122.py
+${PYSITELIB}/cmsplugin_gallery/migrations/0003_auto_20170104_1122.pyc
+${PYSITELIB}/cmsplugin_gallery/migrations/0003_auto_20170104_1122.pyo
+${PYSITELIB}/cmsplugin_gallery/migrations/0004_auto_20170118_0753.py
+${PYSITELIB}/cmsplugin_gallery/migrations/0004_auto_20170118_0753.pyc
+${PYSITELIB}/cmsplugin_gallery/migrations/0004_auto_20170118_0753.pyo
 ${PYSITELIB}/cmsplugin_gallery/migrations/__init__.py
 ${PYSITELIB}/cmsplugin_gallery/migrations/__init__.pyc
 ${PYSITELIB}/cmsplugin_gallery/migrations/__init__.pyo
@@ -34,6 +43,16 @@ ${PYSITELIB}/cmsplugin_gallery/models.pyo
 ${PYSITELIB}/cmsplugin_gallery/settings.py
 ${PYSITELIB}/cmsplugin_gallery/settings.pyc
 ${PYSITELIB}/cmsplugin_gallery/settings.pyo
+${PYSITELIB}/cmsplugin_gallery/templates/cmsplugin_gallery/gallery.html
+${PYSITELIB}/cmsplugin_gallery/tests/__init__.py
+${PYSITELIB}/cmsplugin_gallery/tests/__init__.pyc
+${PYSITELIB}/cmsplugin_gallery/tests/__init__.pyo
+${PYSITELIB}/cmsplugin_gallery/tests/settings.py
+${PYSITELIB}/cmsplugin_gallery/tests/settings.pyc
+${PYSITELIB}/cmsplugin_gallery/tests/settings.pyo
+${PYSITELIB}/cmsplugin_gallery/tests/tests_models.py
+${PYSITELIB}/cmsplugin_gallery/tests/tests_models.pyc
+${PYSITELIB}/cmsplugin_gallery/tests/tests_models.pyo
 ${PYSITELIB}/cmsplugin_gallery/utils.py
 ${PYSITELIB}/cmsplugin_gallery/utils.pyc
 ${PYSITELIB}/cmsplugin_gallery/utils.pyo
