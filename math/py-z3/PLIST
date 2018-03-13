@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2018/03/13 00:36:05 khorben Exp $
+${PYSITELIB}/z3/__init__.py
+${PYSITELIB}/z3/__init__.pyc
+${PYSITELIB}/z3/lib/libz3.so
+${PYSITELIB}/z3/z3.py
+${PYSITELIB}/z3/z3.pyc
+${PYSITELIB}/z3/z3consts.py
+${PYSITELIB}/z3/z3consts.pyc
+${PYSITELIB}/z3/z3core.py
+${PYSITELIB}/z3/z3core.pyc
+${PYSITELIB}/z3/z3num.py
+${PYSITELIB}/z3/z3num.pyc
+${PYSITELIB}/z3/z3poly.py
+${PYSITELIB}/z3/z3poly.pyc
+${PYSITELIB}/z3/z3printer.py
+${PYSITELIB}/z3/z3printer.pyc
+${PYSITELIB}/z3/z3rcf.py
+${PYSITELIB}/z3/z3rcf.pyc
+${PYSITELIB}/z3/z3types.py
+${PYSITELIB}/z3/z3types.pyc
+${PYSITELIB}/z3/z3util.py
+${PYSITELIB}/z3/z3util.pyc
