@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.61 2017/07/18 13:59:04 taca Exp $
+# $NetBSD: rails.mk,v 1.62 2018/03/13 16:28:48 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -17,6 +17,7 @@ _RUBY_RAILS_MK=	# defined
 #
 # RUBY_RAILS_SUPPORTED
 #	The Ruby on Rails versions that are acceptable for the package.
+#	Currently, only one value is accepted.
 #
 #	Possible values: 32 42
 #	Default: (empty)
@@ -39,7 +40,7 @@ _RUBY_RAILS_MK=	# defined
 # current Ruby on Rails versions.
 #
 RUBY_RAILS32_VERSION?=	3.2.22.5
-RUBY_RAILS42_VERSION?=	4.2.8
+RUBY_RAILS42_VERSION?=	4.2.10
 
 RUBY_RAILS_SUPPORTED?=	# defined
 RUBY_RAILS_DEFAULT?=	32
