@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/04/22 17:05:48 taca Exp $
+# $NetBSD: Makefile,v 1.2 2018/03/13 17:32:46 taca Exp $
 
-DISTNAME=	jekyll-feed-0.9.2
+DISTNAME=	jekyll-feed-0.9.3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
