@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:30:03 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/03/13 17:39:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/History.markdown
@@ -14,6 +15,8 @@ ${GEM_LIBDIR}/lib/jekyll-gist/gist_tag.rb
 ${GEM_LIBDIR}/lib/jekyll-gist/version.rb
 ${GEM_LIBDIR}/script/bootstrap
 ${GEM_LIBDIR}/script/cibuild
+${GEM_LIBDIR}/script/fmt
+${GEM_LIBDIR}/script/release
 ${GEM_LIBDIR}/spec/fixtures/multiple-files.json
 ${GEM_LIBDIR}/spec/fixtures/single-file.json
 ${GEM_LIBDIR}/spec/gist_tag_spec.rb
