@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1261 2018/03/13 17:33:22 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1262 2018/03/13 17:37:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1726,3 +1726,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-pathutil to 0.16.1 [taca 2018-03-13]
 	Updated www/ruby-rouge to 3.1.1 [taca 2018-03-13]
 	Updated www/ruby-jekyll-feed to 0.9.3 [taca 2018-03-13]
+	Updated devel/ruby-octokit to 4.8.0 [taca 2018-03-13]
