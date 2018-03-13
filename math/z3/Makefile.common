@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.2 2018/03/13 00:34:02 khorben Exp $
+# $NetBSD: Makefile.common,v 1.3 2018/03/13 00:36:04 khorben Exp $
 #
+# used by math/py-z3/Makefile
 # used by math/z3/Makefile
 
 DISTNAME=	z3-4.5.0
