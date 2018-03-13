@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2017/09/04 18:00:53 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/03/13 17:26:39 taca Exp $
 
-DISTNAME=	pathutil-0.14.0
+DISTNAME=	pathutil-0.16.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	https://github.com/envygeeks/pathutils
+HOMEPAGE=	https://github.com/envygeeks/pathutil
 COMMENT=	Almost like Pathname but just a little less insane
 LICENSE=	mit
 
