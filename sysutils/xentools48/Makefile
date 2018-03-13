@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/01/27 17:37:51 abs Exp $
+# $NetBSD: Makefile,v 1.18 2018/03/13 15:15:01 bouyer Exp $
 #
 VERSION=	4.8.3
 VERSION_IPXE=	827dd1bfee67daa683935ce65316f7e0f057fe1c
@@ -19,7 +19,7 @@ PKGNAME=		xentools48-${VERSION}
 CATEGORIES=		sysutils
 MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
 
-PKGREVISION=		1
+PKGREVISION=		2
 
 DISTFILES=		${DISTNAME}.tar.gz
 
@@ -187,7 +187,6 @@ CONF_FILES+=		${EGDIR}/xl.conf ${PKG_SYSCONFDIR}/xl.conf
 CONF_FILES+=		${EGDIR}/oxenstored.conf ${PKG_SYSCONFDIR}/oxenstored.conf
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/scripts ${VARBASE}/log/xen
-OWN_DIRS+=		${VARBASE}/lib/xen
 
 .for s in ${XEND_SCRIPTS}
 CONF_FILES_PERMS+=	${EGDIR}/scripts/${s} ${PKG_SYSCONFDIR}/scripts/${s} \
