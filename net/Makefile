@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1207 2018/03/13 16:01:50 taca Exp $
+# $NetBSD: Makefile,v 1.1208 2018/03/13 16:05:18 taca Exp $
 #
 
 COMMENT=	Networking tools
@@ -741,6 +741,7 @@ SUBDIR+=	ruby-net-ping
 SUBDIR+=	ruby-net-telnet
 SUBDIR+=	ruby-netaddr
 SUBDIR+=	ruby-netrc
+SUBDIR+=	ruby-nio4r
 SUBDIR+=	ruby-pcaprub
 SUBDIR+=	ruby-pluggaloid
 SUBDIR+=	ruby-proxifier
