@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/03/13 08:17:14 wen Exp $
+# $NetBSD: Makefile,v 1.9 2018/03/13 10:04:49 adam Exp $
 
 DISTNAME=	cmsplugin_gallery-1.0.0
 PKGNAME=	${PYPKGPREFIX}-django-${DISTNAME}
@@ -12,12 +12,9 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-django-cms-[0-9]*:../../www/py-django-cms
 DEPENDS+=	${PYPKGPREFIX}-django-easy-thumbnails-[0-9]*:../../www/py-django-easy-thumbnails
-DEPENDS+=	${PYPKGPREFIX}-django-inline-ordering-[0-9]*:../../www/py-django-inline-ordering
+DEPENDS+=	${PYPKGPREFIX}-django-inline-ordering>=0.1.1:../../www/py-django-inline-ordering
 
-USE_LANGUAGES=		# none
-
-post-patch:
-	${MV} ${WRKSRC}/tests ${WRKSRC}/cmsplugin_gallery/
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
