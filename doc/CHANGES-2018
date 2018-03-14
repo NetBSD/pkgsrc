@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1283 2018/03/14 14:09:11 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1284 2018/03/14 14:10:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1753,3 +1753,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-minitest to 5.11.3 [taca 2018-03-14]
 	Updated devel/ruby-msgpack to 1.2.4 [taca 2018-03-14]
 	Updated devel/ruby-parser to 3.11.0 [taca 2018-03-14]
+	Updated devel/ruby-parslet to 1.8.2 [taca 2018-03-14]
