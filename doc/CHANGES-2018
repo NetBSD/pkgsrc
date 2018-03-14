@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1271 2018/03/14 07:42:17 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1272 2018/03/14 07:44:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1739,3 +1739,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Renamed fonts/Interface to fonts/Inter-UI [bsiegert 2018-03-13]
 	Updated sysutils/intel-microcode-netbsd to 20180312 [msaitoh 2018-03-14]
 	Updated devel/p5-Alien-Base-ModuleBuild to 1.02 [wiz 2018-03-14]
+	Updated www/curl to 7.59.0 [wiz 2018-03-14]
