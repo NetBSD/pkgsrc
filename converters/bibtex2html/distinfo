@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.16 2015/11/03 01:43:47 agc Exp $
+$NetBSD: distinfo,v 1.17 2018/03/14 08:28:44 dholland Exp $
 
 SHA1 (bibtex2html-1.98.tar.gz) = daaa082885a30dae38263614565298d4862b8331
 RMD160 (bibtex2html-1.98.tar.gz) = f47dda14108c3f53bca64352bfb7455f1b79d964
 SHA512 (bibtex2html-1.98.tar.gz) = 7d8480ed87bef74a1e0c970446fba4d30b103df3e78f127a051efff875032ac7f52d3d6baab0c6a2fc67ca11f3d558d7be4439311934f99067993b5891ff6ad4
 Size (bibtex2html-1.98.tar.gz) = 92719 bytes
+SHA1 (patch-biboutput.ml) = 42d07071fd85fd1be47e522a4f957b53693d5b0d
+SHA1 (patch-bibtex__lexer.mll) = 207d8442dc87465cfed478d2d97445ba3bd90d9f
+SHA1 (patch-condition.ml) = f00078a8a16a6c47416e08b378d51db782f8e7f2
