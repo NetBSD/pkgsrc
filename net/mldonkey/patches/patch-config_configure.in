@@ -1,6 +1,7 @@
-$NetBSD: patch-config_configure.in,v 1.6 2016/08/15 15:48:19 jaapb Exp $
+$NetBSD: patch-config_configure.in,v 1.7 2018/03/14 14:05:37 dholland Exp $
 
 Correct include paths for lablgtk 2.16
+
 --- config/configure.in.orig	2012-08-05 15:49:02.000000000 +0000
 +++ config/configure.in
 @@ -1347,15 +1364,15 @@ if test "$GTK_CONFIG" = "no"; then
