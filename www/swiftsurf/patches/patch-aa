@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/06/29 23:15:08 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2018/03/14 08:59:59 dholland Exp $
+
+Honor PKG_SYSCONFIGDIR.
 
 --- src/conf.ml.orig
 +++ src/conf.ml
