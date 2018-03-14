@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1318 2018/03/14 15:50:22 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1319 2018/03/14 15:51:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1793,3 +1793,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/ruby-libxml to 3.1.0 [taca 2018-03-14]
 	Updated textproc/ruby-markaby to 0.9.0 [taca 2018-03-14]
 	Added meta-pkgs/php72-extensions version 7.2.3 [taca 2018-03-14]
+	Updated textproc/ruby-multi_json to 1.13.1 [taca 2018-03-14]
