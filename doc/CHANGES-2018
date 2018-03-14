@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1292 2018/03/14 14:34:02 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1293 2018/03/14 14:35:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1767,3 +1767,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-tins to 1.16.3 [taca 2018-03-14]
 	Updated misc/ruby-progressbar to 1.9.0 [taca 2018-03-14]
 	Updated games/ruby-squib to 0.14.0 [taca 2018-03-14]
+	Updated graphics/ruby-cairo to 1.15.11 [taca 2018-03-14]
