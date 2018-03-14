@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/03/14 09:03:24 dholland Exp $
+# $NetBSD: Makefile,v 1.31 2018/03/14 09:07:54 dholland Exp $
 
 DISTNAME=		swiftsurf-1.2.5
 PKGREVISION=		15
@@ -11,7 +11,14 @@ COMMENT=		Web proxy that can handle http and https
 
 USE_TOOLS+=		gmake
 
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "sparc")
+SUBST_CLASSES+=		conf
+SUBST_FILES.conf=	src/conf.ml
+SUBST_VARS.conf=	PKG_SYSCONFDIR
+SUBST_STAGE.conf=	pre-configure
+
+.include "../../mk/ocaml.mk"
+
+.if !empty(OCAML_USE_OPT_COMPILER:M[Yy][Ee][Ss])
 BUILD_TARGET=	nat
 SWIFT=		swift.opt
 .else
@@ -21,18 +28,9 @@ SWIFT=		swift
 
 INSTALLATION_DIRS=	bin share/doc/swiftsurf share/examples/swiftsurf
 
-SUBST_CLASSES+=		conf
-SUBST_FILES.conf=	src/conf.ml
-SUBST_VARS.conf=	PKG_SYSCONFDIR
-SUBST_STAGE.conf=	pre-configure
-
-do-build:
-	cd ${WRKSRC}/src && ${GMAKE} ${BUILD_TARGET}
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/${SWIFT} ${DESTDIR}${PREFIX}/bin/swiftsurf
 	${INSTALL_DATA} ${WRKSRC}/swiftsurf.* ${DESTDIR}${PREFIX}/share/examples/swiftsurf
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${DESTDIR}${PREFIX}/share/doc/swiftsurf
 
-.include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
