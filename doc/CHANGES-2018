@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1300 2018/03/14 14:56:04 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1301 2018/03/14 14:57:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1775,3 +1775,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/ruby-bundler to 1.16.1 [taca 2018-03-14]
 	Updated misc/ruby-commander to 4.4.4 [taca 2018-03-14]
 	Updated misc/ruby-daemons to 1.2.6 [taca 2018-03-14]
+	Updated misc/ruby-hashie to 3.5.7 [taca 2018-03-14]
