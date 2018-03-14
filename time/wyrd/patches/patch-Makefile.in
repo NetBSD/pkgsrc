@@ -1,6 +1,7 @@
-$NetBSD: patch-Makefile.in,v 1.1 2012/12/15 16:50:05 jaapb Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2018/03/14 09:16:02 dholland Exp $
 
 Correctly install configuration files
+
 --- Makefile.in.orig	2010-10-23 18:50:07.000000000 +0000
 +++ Makefile.in
 @@ -102,10 +102,10 @@ $(CURSES_CMXA):
