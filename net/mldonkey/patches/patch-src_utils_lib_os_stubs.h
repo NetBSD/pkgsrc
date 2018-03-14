@@ -1,6 +1,7 @@
-$NetBSD: patch-src_utils_lib_os_stubs.h,v 1.1 2016/08/15 15:48:19 jaapb Exp $
+$NetBSD: patch-src_utils_lib_os_stubs.h,v 1.2 2018/03/14 14:05:37 dholland Exp $
 
 Compile with OCaml 4.03
+
 --- src/utils/lib/os_stubs.h.orig	2010-08-01 14:05:29.000000000 +0000
 +++ src/utils/lib/os_stubs.h
 @@ -155,8 +155,8 @@ extern OFF_T os_lseek(OS_FD fd, OFF_T po
