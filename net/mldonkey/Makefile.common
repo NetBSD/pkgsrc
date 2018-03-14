@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.51 2015/09/14 06:03:58 wiz Exp $
+# $NetBSD: Makefile.common,v 1.52 2018/03/14 14:06:59 dholland Exp $
 #
 # used by net/mldonkey/Makefile
 # used by net/mldonkey-gui/Makefile
@@ -40,4 +40,5 @@ pre-configure:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../math/ocaml-num/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
