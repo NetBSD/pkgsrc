@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.10 2014/03/14 17:36:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/03/14 15:10:47 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
-${GEM_LIBDIR}/.ruby-version
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/ChangeLog.md
@@ -10,7 +9,7 @@ ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/amqp.gemspec
-${GEM_LIBDIR}/bin/ci/before_build.sh
+${GEM_LIBDIR}/bin/ci/before_build
 ${GEM_LIBDIR}/bin/cleanify.rb
 ${GEM_LIBDIR}/bin/docup
 ${GEM_LIBDIR}/bin/irb
@@ -233,6 +232,5 @@ ${GEM_LIBDIR}/spec/integration/tx_commit_spec.rb
 ${GEM_LIBDIR}/spec/integration/tx_rollback_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/unit/amqp/channel_id_allocation_spec.rb
-${GEM_LIBDIR}/spec/unit/amqp/client_spec.rb
 ${GEM_LIBDIR}/spec/unit/amqp/connection_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
