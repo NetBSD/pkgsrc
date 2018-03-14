@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/09/08 16:16:58 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2018/03/14 08:39:12 bsiegert Exp $
 
-SHA1 (matterircd-0.14.0.tar.gz) = 832e1be8f962c3355cd5616f1e5fc6ce8b5f7ecd
-RMD160 (matterircd-0.14.0.tar.gz) = e92391e852777b5e314415ffa243d7b060763cc7
-SHA512 (matterircd-0.14.0.tar.gz) = d20a6bf196dc3052382c7d01326771977e11525f170761742155d60fbeabac3ee3bfb8496a369c7af6ead2bc7afbb53379c64fb2f94bde56b17afc2bb98ee741
-Size (matterircd-0.14.0.tar.gz) = 453592 bytes
+SHA1 (matterircd-0.16.5.tar.gz) = 40b376796643a9383f41413fc4ee474cdc8c9019
+RMD160 (matterircd-0.16.5.tar.gz) = 7ba4e1d2b8ae66cfcc8ce8b179b9afa57d27468b
+SHA512 (matterircd-0.16.5.tar.gz) = dded3620f4a98271ab545a408eaa1e7b7ff6b67719c365787da3aad749ce95b49aaaa198c3bd21bfb438e48e6fc59d9d1dfbf182a90dc811209d34d613d3cb39
+Size (matterircd-0.16.5.tar.gz) = 816814 bytes
