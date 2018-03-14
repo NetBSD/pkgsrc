@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/06/03 13:02:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2018/03/14 15:02:25 taca Exp $
 
-DISTNAME=	method_source-0.8.2
+DISTNAME=	method_source-0.9.0
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
