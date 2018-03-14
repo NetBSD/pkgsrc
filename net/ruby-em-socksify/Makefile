@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2015/10/04 13:11:08 taca Exp $
+# $NetBSD: Makefile,v 1.3 2018/03/14 15:13:38 taca Exp $
 
-DISTNAME=	em-socksify-0.3.1
+DISTNAME=	em-socksify-0.3.2
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
