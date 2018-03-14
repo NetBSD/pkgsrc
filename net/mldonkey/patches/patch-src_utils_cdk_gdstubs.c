@@ -1,6 +1,7 @@
-$NetBSD: patch-src_utils_cdk_gdstubs.c,v 1.1 2016/08/15 15:48:19 jaapb Exp $
+$NetBSD: patch-src_utils_cdk_gdstubs.c,v 1.2 2018/03/14 14:05:37 dholland Exp $
 
 Compile with OCaml 4.03
+
 --- src/utils/cdk/gdstubs.c.orig	2012-06-24 07:59:41.000000000 +0000
 +++ src/utils/cdk/gdstubs.c
 @@ -489,7 +489,7 @@ int ml_image_pngversion(void)
