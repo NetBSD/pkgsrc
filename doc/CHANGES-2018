@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1279 2018/03/14 08:05:45 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1280 2018/03/14 08:48:10 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1747,3 +1747,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/p5-PerlX-Maybe version 1.001 [wiz 2018-03-14]
 	Updated www/p5-Dancer-Session-Cookie to 0.30 [wiz 2018-03-14]
 	Updated www/p5-HTTP-Message to 6.15 [wiz 2018-03-14]
+	Updated chat/matterircd to 0.16.5 [bsiegert 2018-03-14]
+	Updated www/caddy to 0.10.11 [bsiegert 2018-03-14]
+	Updated sysutils/lf to 20180302 [bsiegert 2018-03-14]
