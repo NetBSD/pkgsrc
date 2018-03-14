@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1269 2018/03/13 21:23:34 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.1270 2018/03/14 07:30:26 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1737,3 +1737,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/go-testify to 1.2.1 [bsiegert 2018-03-13]
 	Updated net/aws-sdk-go to 1.13.13 [bsiegert 2018-03-13]
 	Renamed fonts/Interface to fonts/Inter-UI [bsiegert 2018-03-13]
+	Updated sysutils/intel-microcode-netbsd to 20180312 [msaitoh 2018-03-14]
