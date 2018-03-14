@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1276 2018/03/14 07:57:45 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1277 2018/03/14 08:03:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1744,3 +1744,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Test2-Suite to 0.000108 [wiz 2018-03-14]
 	Updated security/p5-Net-SSLeay to 1.85 [wiz 2018-03-14]
 	Updated textproc/p5-Pod-Coverage-TrustPod to 0.100005 [wiz 2018-03-14]
+	Added devel/p5-PerlX-Maybe version 1.001 [wiz 2018-03-14]
