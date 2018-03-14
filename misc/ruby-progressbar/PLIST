@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/09/18 00:59:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/03/14 14:32:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
@@ -6,7 +6,6 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/ruby-progressbar.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/base.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/calculators/length.rb
-${GEM_LIBDIR}/lib/ruby-progressbar/calculators/length_spec.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/calculators/running_average.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/components.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/components/bar.rb
@@ -21,8 +20,11 @@ ${GEM_LIBDIR}/lib/ruby-progressbar/format/molecule.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/format/string.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/output.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/outputs/non_tty.rb
+${GEM_LIBDIR}/lib/ruby-progressbar/outputs/null.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/outputs/tty.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/progress.rb
+${GEM_LIBDIR}/lib/ruby-progressbar/refinements.rb
+${GEM_LIBDIR}/lib/ruby-progressbar/refinements/enumerator.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/throttle.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/time.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/timer.rb
