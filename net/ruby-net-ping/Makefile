@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2016/10/17 14:47:42 taca Exp $
+# $NetBSD: Makefile,v 1.12 2018/03/14 15:20:16 taca Exp $
 
-DISTNAME=	net-ping-2.0.1
+DISTNAME=	net-ping-2.0.3
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
