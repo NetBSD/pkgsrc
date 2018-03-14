@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/02/28 13:37:23 adam Exp $
+# $NetBSD: Makefile,v 1.15 2018/03/14 09:59:22 adam Exp $
 
 DISTNAME=	salt-2017.7.4
 PKGNAME=	${DISTNAME:S/-/-docs-/}
@@ -24,6 +24,8 @@ HTMLDIR=	share/doc/salt
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 INSTALLATION_DIRS=	${HTMLDIR}
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 do-install:
 	cd ${WRKSRC}/doc/_build/html && pax -rw -pe . ${DESTDIR}${PREFIX}/${HTMLDIR}
