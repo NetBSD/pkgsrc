@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2018/03/14 09:14:05 dholland Exp $
+$NetBSD: distinfo,v 1.8 2018/03/14 09:16:02 dholland Exp $
 
 SHA1 (wyrd-1.4.6.tar.gz) = aaeca29b844825f45aadcf5207f4d1c875e4dc82
 RMD160 (wyrd-1.4.6.tar.gz) = 47319812942195d4b56f861b7cbb527e94e7495f
 SHA512 (wyrd-1.4.6.tar.gz) = fc09c4567ea8d6225638ee6851ddab716665913b7d7b2f6b5a3cc7f2af9144df617e2a95ca78c74874bec3ff355aba028c7c51eafe1426d9ae803ab77ce84477
 Size (wyrd-1.4.6.tar.gz) = 425829 bytes
-SHA1 (patch-Makefile.in) = 0dbd5042fa40810a76cb89b677ce3a71ececde9e
-SHA1 (patch-curses_Makefile.in) = 26602a2b71bacd37555ad6a1c3966f7b25721f34
+SHA1 (patch-Makefile.in) = 0eb1244df49e201d23e24c4e4c4acdfac76534b0
+SHA1 (patch-curses_Makefile.in) = e99e848199238f9540d5035dec0d2935296b232f
 SHA1 (patch-utility.ml) = 529b15bc306bddf41992a299001966e00f631e69
