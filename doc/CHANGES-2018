@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1297 2018/03/14 14:48:36 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1298 2018/03/14 14:49:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1772,3 +1772,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/ruby-mini_mime to 1.0.0 [taca 2018-03-14]
 	Updated mail/ruby-mail to 2.7.0 [taca 2018-03-14]
 	Updated math/ruby-spreadsheet to 1.1.6 [taca 2018-03-14]
+	Updated misc/ruby-bundler to 1.16.1 [taca 2018-03-14]
