@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2017/09/26 10:27:06 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2018/03/14 15:50:07 taca Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -44,6 +44,7 @@ SUBDIR+=	p5-gnome-bindings
 SUBDIR+=	php56-extensions
 SUBDIR+=	php70-extensions
 SUBDIR+=	php71-extensions
+SUBDIR+=	php72-extensions
 SUBDIR+=	pkg_developer
 SUBDIR+=	pkgsrc-guide-tools
 SUBDIR+=	pulseaudio-tools
