@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1280 2018/03/14 08:48:10 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.1281 2018/03/14 14:06:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1750,3 +1750,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated chat/matterircd to 0.16.5 [bsiegert 2018-03-14]
 	Updated www/caddy to 0.10.11 [bsiegert 2018-03-14]
 	Updated sysutils/lf to 20180302 [bsiegert 2018-03-14]
+	Updated devel/ruby-minitest to 5.11.3 [taca 2018-03-14]
