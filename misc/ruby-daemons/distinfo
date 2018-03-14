@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2016/10/15 15:10:32 taca Exp $
+$NetBSD: distinfo,v 1.17 2018/03/14 14:55:36 taca Exp $
 
-SHA1 (daemons-1.2.4.gem) = 16fb25333360a10a2bcb21baebc764a01c9c6261
-RMD160 (daemons-1.2.4.gem) = cee1cd9c67cb76848110edbe3f01cb37c7f2d058
-SHA512 (daemons-1.2.4.gem) = b070413f343fc9366ec47367c5483fda11384661b363558583a8885ac41a4cce6b608a5f828533e2d55a608a5d949e936b335240da18d97336db8ce4ae7f4785
-Size (daemons-1.2.4.gem) = 28160 bytes
+SHA1 (daemons-1.2.6.gem) = 2060349650ddaa893998680133cd3d89fe4320aa
+RMD160 (daemons-1.2.6.gem) = c18d43d306363efb8c6e8f662d8460affd7818b3
+SHA512 (daemons-1.2.6.gem) = 3b7aecc9575aa0464bc61a2a530ff5a4d7e39d3c0d31e1be2c87a399900adf42feb5115455aa4174da4f9490ae0636b234926f011671b92cc3b8a1069988ffab
+Size (daemons-1.2.6.gem) = 28672 bytes
