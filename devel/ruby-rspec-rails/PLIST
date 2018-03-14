@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2017/06/05 14:08:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2018/03/14 14:23:28 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -56,11 +56,13 @@ ${GEM_LIBDIR}/lib/rspec/rails/example/model_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example/rails_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example/request_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example/routing_example_group.rb
+${GEM_LIBDIR}/lib/rspec/rails/example/system_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example/view_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/rails/extensions.rb
 ${GEM_LIBDIR}/lib/rspec/rails/extensions/active_record/proxy.rb
 ${GEM_LIBDIR}/lib/rspec/rails/feature_check.rb
 ${GEM_LIBDIR}/lib/rspec/rails/file_fixture_support.rb
+${GEM_LIBDIR}/lib/rspec/rails/fixture_file_upload_support.rb
 ${GEM_LIBDIR}/lib/rspec/rails/fixture_support.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/active_job.rb
