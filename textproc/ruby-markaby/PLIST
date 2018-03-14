@@ -1,26 +1,29 @@
-@comment $NetBSD: PLIST,v 1.5 2014/03/14 18:18:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/03/14 15:47:03 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.ruby-version
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Gemfile.lock
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/Markaby.gemspec
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/lib/markaby.rb
 ${GEM_LIBDIR}/lib/markaby/builder.rb
 ${GEM_LIBDIR}/lib/markaby/builder_tags.rb
 ${GEM_LIBDIR}/lib/markaby/cssproxy.rb
 ${GEM_LIBDIR}/lib/markaby/kernel_method.rb
+${GEM_LIBDIR}/lib/markaby/rails.rb
 ${GEM_LIBDIR}/lib/markaby/tags.rb
-${GEM_LIBDIR}/lib/markaby/version.rb
 ${GEM_LIBDIR}/spec/markaby/builder_spec.rb
 ${GEM_LIBDIR}/spec/markaby/css_proxy_spec.rb
 ${GEM_LIBDIR}/spec/markaby/fragment_spec.rb
 ${GEM_LIBDIR}/spec/markaby/html5_spec.rb
 ${GEM_LIBDIR}/spec/markaby/markaby_spec.rb
 ${GEM_LIBDIR}/spec/markaby/markaby_test_unit_spec.rb
+${GEM_LIBDIR}/spec/markaby/rails_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
