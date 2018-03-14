@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/03/08 13:06:01 wiz Exp $
+$NetBSD: distinfo,v 1.3 2018/03/14 07:57:35 wiz Exp $
 
-SHA1 (Pod-Coverage-TrustPod-0.100004.tar.gz) = ad68f2c5dadec710c8d59c3683d216093d61cb5b
-RMD160 (Pod-Coverage-TrustPod-0.100004.tar.gz) = 01ff7eb0d70b8f2c3b4f39a0b9337dde1bef0f8c
-SHA512 (Pod-Coverage-TrustPod-0.100004.tar.gz) = a56d7668b736f7028730c8ce68f247658021060775ec40fc3d8848122a7ca5fd925ff5c6bfe9e477b2420121cac9fb3a5b28c4951df6f5daf91e79c5e60eed0f
-Size (Pod-Coverage-TrustPod-0.100004.tar.gz) = 17644 bytes
+SHA1 (Pod-Coverage-TrustPod-0.100005.tar.gz) = 1437a71ed0fa98798a3dc7066b174a86c0d18029
+RMD160 (Pod-Coverage-TrustPod-0.100005.tar.gz) = c50bc05d095ffd5041ba6f272442b16b0f28961d
+SHA512 (Pod-Coverage-TrustPod-0.100005.tar.gz) = d96b75cbaff8ef4860372bca0a78a3ede20bc303760f1edf6fe5287234561e636ae4f54f670014c6dfc14d1a1c667dc2f8e79955bfca58b34235cef4a3437c21
+Size (Pod-Coverage-TrustPod-0.100005.tar.gz) = 17712 bytes
