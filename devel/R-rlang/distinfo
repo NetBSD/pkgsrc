@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/03/14 23:47:58 minskim Exp $
+
+SHA1 (R/rlang_0.2.0.tar.gz) = 744c52c6ecd0600c7494cb10c79d06fad2077715
+RMD160 (R/rlang_0.2.0.tar.gz) = e9c90bbc6fb618f2b9f8dab88efc091b7da7183a
+SHA512 (R/rlang_0.2.0.tar.gz) = aa093245fb4d13b1b0ba6d951a9a1f3ed75e6568d81ed3130ebadf57b44cad6c3d87175274af9978cb972022828a46c78c44c7c0d44e14c5055baafd287b60ed
+Size (R/rlang_0.2.0.tar.gz) = 323899 bytes
