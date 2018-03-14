@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2018/03/14 10:16:03 dholland Exp $
+# $NetBSD: Makefile,v 1.65 2018/03/14 10:16:57 dholland Exp $
 
 DISTNAME=	unison-2.32.52
 PKGREVISION=	64
-
 CATEGORIES=	net
 MASTER_SITES=	http://www.seas.upenn.edu/~bcpierce/unison/download/releases/stable/
 
@@ -17,7 +16,7 @@ BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.08.2
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=	gmake
 MAKE_FLAGS+=	CFLAGS=""
-MAKE_ENV+=	HOME=${WRKDIR:Q}
+MAKE_ENV+=	HOME=${WRKDIR}
 
 # with -j, runs only about half the build and then stops
 MAKE_JOBS_SAFE=	no
