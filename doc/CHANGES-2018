@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1320 2018/03/14 15:53:15 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1321 2018/03/14 16:41:34 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1795,3 +1795,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added meta-pkgs/php72-extensions version 7.2.3 [taca 2018-03-14]
 	Updated textproc/ruby-multi_json to 1.13.1 [taca 2018-03-14]
 	Updated textproc/ruby-plist to 3.4.0 [taca 2018-03-14]
+	Updated multimedia/adobe-flash-player to 29.0.0.113 [tsutsui 2018-03-14]
