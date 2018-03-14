@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2017/07/31 14:29:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/03/14 14:28:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -86,6 +86,7 @@ ${GEM_LIBDIR}/lib/tins/string_camelize.rb
 ${GEM_LIBDIR}/lib/tins/string_underscore.rb
 ${GEM_LIBDIR}/lib/tins/string_version.rb
 ${GEM_LIBDIR}/lib/tins/subhash.rb
+${GEM_LIBDIR}/lib/tins/temp_io.rb
 ${GEM_LIBDIR}/lib/tins/terminal.rb
 ${GEM_LIBDIR}/lib/tins/thread_local.rb
 ${GEM_LIBDIR}/lib/tins/time_dummy.rb
@@ -137,6 +138,7 @@ ${GEM_LIBDIR}/lib/tins/xt/string_camelize.rb
 ${GEM_LIBDIR}/lib/tins/xt/string_underscore.rb
 ${GEM_LIBDIR}/lib/tins/xt/string_version.rb
 ${GEM_LIBDIR}/lib/tins/xt/subhash.rb
+${GEM_LIBDIR}/lib/tins/xt/temp_io.rb
 ${GEM_LIBDIR}/lib/tins/xt/time_dummy.rb
 ${GEM_LIBDIR}/lib/tins/xt/time_freezer.rb
 ${GEM_LIBDIR}/lib/tins/xt/to.rb
@@ -194,6 +196,7 @@ ${GEM_LIBDIR}/tests/string_camelize_test.rb
 ${GEM_LIBDIR}/tests/string_underscore_test.rb
 ${GEM_LIBDIR}/tests/string_version_test.rb
 ${GEM_LIBDIR}/tests/subhash_test.rb
+${GEM_LIBDIR}/tests/temp_io_test.rb
 ${GEM_LIBDIR}/tests/test_helper.rb
 ${GEM_LIBDIR}/tests/time_dummy_test.rb
 ${GEM_LIBDIR}/tests/time_freezer_test.rb
