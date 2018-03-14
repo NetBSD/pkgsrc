@@ -1,6 +1,7 @@
-$NetBSD: patch-config_Makefile.in,v 1.1 2012/09/14 19:23:31 jaapb Exp $
+$NetBSD: patch-config_Makefile.in,v 1.2 2018/03/14 14:05:37 dholland Exp $
 
 Correct include paths for lablgtk 2.16
+
 --- config/Makefile.in.orig	2012-07-01 17:47:41.000000000 +0000
 +++ config/Makefile.in
 @@ -655,15 +655,18 @@ install:: opt 
