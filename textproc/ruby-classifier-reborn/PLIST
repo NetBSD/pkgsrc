@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2015/12/13 16:55:48 taca Exp $
-bin/bayes.rb${RUBY_SUFFIX}
-bin/summarize.rb${RUBY_SUFFIX}
+@comment $NetBSD: PLIST,v 1.3 2018/03/14 15:40:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.markdown
-${GEM_LIBDIR}/bin/bayes.rb
-${GEM_LIBDIR}/bin/summarize.rb
+${GEM_LIBDIR}/data/stopwords/ar
+${GEM_LIBDIR}/data/stopwords/bn
 ${GEM_LIBDIR}/data/stopwords/ca
 ${GEM_LIBDIR}/data/stopwords/cs
 ${GEM_LIBDIR}/data/stopwords/da
@@ -14,15 +12,23 @@ ${GEM_LIBDIR}/data/stopwords/en
 ${GEM_LIBDIR}/data/stopwords/es
 ${GEM_LIBDIR}/data/stopwords/fi
 ${GEM_LIBDIR}/data/stopwords/fr
+${GEM_LIBDIR}/data/stopwords/hi
 ${GEM_LIBDIR}/data/stopwords/hu
 ${GEM_LIBDIR}/data/stopwords/it
+${GEM_LIBDIR}/data/stopwords/ja
 ${GEM_LIBDIR}/data/stopwords/nl
 ${GEM_LIBDIR}/data/stopwords/no
 ${GEM_LIBDIR}/data/stopwords/pl
 ${GEM_LIBDIR}/data/stopwords/pt
+${GEM_LIBDIR}/data/stopwords/ru
 ${GEM_LIBDIR}/data/stopwords/se
 ${GEM_LIBDIR}/data/stopwords/tr
+${GEM_LIBDIR}/data/stopwords/vi
+${GEM_LIBDIR}/data/stopwords/zh
 ${GEM_LIBDIR}/lib/classifier-reborn.rb
+${GEM_LIBDIR}/lib/classifier-reborn/backends/bayes_memory_backend.rb
+${GEM_LIBDIR}/lib/classifier-reborn/backends/bayes_redis_backend.rb
+${GEM_LIBDIR}/lib/classifier-reborn/backends/no_redis_error.rb
 ${GEM_LIBDIR}/lib/classifier-reborn/bayes.rb
 ${GEM_LIBDIR}/lib/classifier-reborn/category_namer.rb
 ${GEM_LIBDIR}/lib/classifier-reborn/extensions/hasher.rb
@@ -33,5 +39,6 @@ ${GEM_LIBDIR}/lib/classifier-reborn/lsi/cached_content_node.rb
 ${GEM_LIBDIR}/lib/classifier-reborn/lsi/content_node.rb
 ${GEM_LIBDIR}/lib/classifier-reborn/lsi/summarizer.rb
 ${GEM_LIBDIR}/lib/classifier-reborn/lsi/word_list.rb
+${GEM_LIBDIR}/lib/classifier-reborn/validators/classifier_validator.rb
 ${GEM_LIBDIR}/lib/classifier-reborn/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
