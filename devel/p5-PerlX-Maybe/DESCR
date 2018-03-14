@@ -1,0 +1,3 @@
+The Perl maybe function checks that both arguments defined. If they
+are, it returns them both as a list; otherwise it returns the empty
+list.
