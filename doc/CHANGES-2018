@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1315 2018/03/14 15:41:56 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1316 2018/03/14 15:42:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1790,3 +1790,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/capistrano to 3.10.1 [taca 2018-03-14]
 	Updated textproc/ruby-classifier-reborn to 2.2.0 [taca 2018-03-14]
 	Updated textproc/ruby-haml to 5.0.4 [taca 2018-03-14]
+	Updated textproc/ruby-libxml to 3.1.0 [taca 2018-03-14]
