@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1313 2018/03/14 15:36:00 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1314 2018/03/14 15:40:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1788,3 +1788,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/ruby-pdf-reader to 2.1.0 [taca 2018-03-14]
 	Updated security/ruby-sshkit to 1.16.0 [taca 2018-03-14]
 	Updated sysutils/capistrano to 3.10.1 [taca 2018-03-14]
+	Updated textproc/ruby-classifier-reborn to 2.2.0 [taca 2018-03-14]
