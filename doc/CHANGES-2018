@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1322 2018/03/14 17:11:36 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1323 2018/03/14 20:35:35 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1797,3 +1797,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/ruby-plist to 3.4.0 [taca 2018-03-14]
 	Updated multimedia/adobe-flash-player to 29.0.0.113 [tsutsui 2018-03-14]
 	Updated sysutils/dupeguru to 4.0.3nb2 [wiz 2018-03-14]
+	Updated misc/moreutils to 0.60nb1 [leot 2018-03-14]
