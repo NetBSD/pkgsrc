@@ -1,6 +1,7 @@
-$NetBSD: patch-src_utils_net_terminal.ml,v 1.1 2014/10/20 10:12:51 jaapb Exp $
+$NetBSD: patch-src_utils_net_terminal.ml,v 1.2 2018/03/14 14:05:37 dholland Exp $
 
 Unterminated string constant cleaned up
+
 --- src/utils/net/terminal.ml.orig	2005-11-19 17:19:45.000000000 +0000
 +++ src/utils/net/terminal.ml
 @@ -185,7 +185,7 @@ module Output = struct
