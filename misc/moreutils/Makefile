@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/09/07 08:18:44 leot Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/14 20:35:23 leot Exp $
 
 DISTNAME=	moreutils_0.60.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/m/moreutils/}
 EXTRACT_SUFX=	.tar.xz
@@ -38,5 +39,12 @@ MAKE_ENV+=	\
 	INSTALL_BIN=${INSTALL_PROGRAM:Q} \
 	INSTALL_MAN=${INSTALL_MAN:Q} \
 	INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
+
+# Avoid possible conflicts with `parallel' of parallel/parallel
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/parallel \
+	    ${DESTDIR}${PREFIX}/bin/moreutils-parallel
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/parallel.1 \
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/moreutils-parallel.1
 
 .include "../../mk/bsd.pkg.mk"
