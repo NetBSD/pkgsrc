@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1310 2018/03/14 15:28:56 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1311 2018/03/14 15:31:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1785,3 +1785,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/ruby-net-ldap to 0.16.1 [taca 2018-03-14]
 	Updated net/ruby-net-ping to 2.0.3 [taca 2018-03-14]
 	Updated net/ruby-netaddr to 2.0.1 [taca 2018-03-14]
+	Updated print/ruby-pdf-reader to 2.1.0 [taca 2018-03-14]
