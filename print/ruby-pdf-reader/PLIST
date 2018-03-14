@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/03/20 15:05:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/03/14 15:31:31 taca Exp $
 bin/pdf_callbacks${RUBY_SUFFIX}
 bin/pdf_object${RUBY_SUFFIX}
 bin/pdf_text${RUBY_SUFFIX}
@@ -81,6 +81,7 @@ ${GEM_LIBDIR}/lib/pdf/reader/reference.rb
 ${GEM_LIBDIR}/lib/pdf/reader/register_receiver.rb
 ${GEM_LIBDIR}/lib/pdf/reader/resource_methods.rb
 ${GEM_LIBDIR}/lib/pdf/reader/standard_security_handler.rb
+${GEM_LIBDIR}/lib/pdf/reader/standard_security_handler_v5.rb
 ${GEM_LIBDIR}/lib/pdf/reader/stream.rb
 ${GEM_LIBDIR}/lib/pdf/reader/synchronized_cache.rb
 ${GEM_LIBDIR}/lib/pdf/reader/text_run.rb
