@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/08/14 20:44:08 wiz Exp $
+$NetBSD: distinfo,v 1.8 2018/03/14 14:33:35 taca Exp $
 
-SHA1 (squib-0.13.4.gem) = 0b5d165b80485c0d63a0906e397f0718a0633ce0
-RMD160 (squib-0.13.4.gem) = bcba8246b269c9b1e82fbb0394b820c1865e0c4c
-SHA512 (squib-0.13.4.gem) = 4446a345469284b45c2a9ffcd75937c39038392d98a9f9e103bdc6e217aa91f22c657ef3a1628384214ea2c356de5244112bec79e192119cec77add32d4cc2d6
-Size (squib-0.13.4.gem) = 65536 bytes
+SHA1 (squib-0.14.0.gem) = 5ae10d1ef9429680498c03a92b3a8d22024c914b
+RMD160 (squib-0.14.0.gem) = 022aa9031c7bbcc483253d244fba59f92b277fde
+SHA512 (squib-0.14.0.gem) = 129dbe0df993b1d20ef84af88f423c7810d67f44cd0ba2a8061dfefe468060fac566d413cca6f48e6011c331315ac9abda3beb94777776d599dfb27bd82a8491
+Size (squib-0.14.0.gem) = 85504 bytes
