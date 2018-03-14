@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1285 2018/03/14 14:11:17 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1286 2018/03/14 14:14:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1755,3 +1755,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-parser to 3.11.0 [taca 2018-03-14]
 	Updated devel/ruby-parslet to 1.8.2 [taca 2018-03-14]
 	Updated devel/ruby-pkg-config to 1.2.9 [taca 2018-03-14]
+	Updated devel/ruby-power_assert to 1.1.1 [taca 2018-03-14]
