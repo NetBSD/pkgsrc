@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1308 2018/03/14 15:14:55 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1309 2018/03/14 15:23:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1783,3 +1783,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/ruby-amqp to 1.8.0 [taca 2018-03-14]
 	Updated net/ruby-em-socksify to 0.3.2 [taca 2018-03-14]
 	Updated net/ruby-net-ldap to 0.16.1 [taca 2018-03-14]
+	Updated net/ruby-net-ping to 2.0.3 [taca 2018-03-14]
