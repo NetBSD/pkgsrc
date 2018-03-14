@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1305 2018/03/14 15:07:49 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1306 2018/03/14 15:11:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1780,3 +1780,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/ruby-pry to 0.11.3 [taca 2018-03-14]
 	Updated misc/ruby-slop to 4.6.2 [taca 2018-03-14]
 	Updated net/ruby-amq-protocol to 2.3.0 [taca 2018-03-14]
+	Updated net/ruby-amqp to 1.8.0 [taca 2018-03-14]
