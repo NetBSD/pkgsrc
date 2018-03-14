@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2018/01/10 16:53:14 jaapb Exp $
+# $NetBSD: Makefile,v 1.30 2018/03/14 09:03:24 dholland Exp $
 
 DISTNAME=		swiftsurf-1.2.5
 PKGREVISION=		15
@@ -21,11 +21,10 @@ SWIFT=		swift
 
 INSTALLATION_DIRS=	bin share/doc/swiftsurf share/examples/swiftsurf
 
-do-configure:
-	for f in ${WRKSRC}/src/conf.ml; do \
-		${SED} -e 's:@PKG_SYSCONFDIR@:${PKG_SYSCONFDIR}:g' \
-		$$f > $$f.tmp && ${MV} $$f.tmp $$f; \
-	done
+SUBST_CLASSES+=		conf
+SUBST_FILES.conf=	src/conf.ml
+SUBST_VARS.conf=	PKG_SYSCONFDIR
+SUBST_STAGE.conf=	pre-configure
 
 do-build:
 	cd ${WRKSRC}/src && ${GMAKE} ${BUILD_TARGET}
