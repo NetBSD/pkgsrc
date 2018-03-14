@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/03 13:02:36 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/14 15:02:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.travis.yml
@@ -12,7 +12,7 @@ ${GEM_LIBDIR}/lib/method_source/code_helpers.rb
 ${GEM_LIBDIR}/lib/method_source/source_location.rb
 ${GEM_LIBDIR}/lib/method_source/version.rb
 ${GEM_LIBDIR}/method_source.gemspec
-${GEM_LIBDIR}/test/test.rb
-${GEM_LIBDIR}/test/test_code_helpers.rb
-${GEM_LIBDIR}/test/test_helper.rb
+${GEM_LIBDIR}/spec/method_source/code_helpers_spec.rb
+${GEM_LIBDIR}/spec/method_source_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
