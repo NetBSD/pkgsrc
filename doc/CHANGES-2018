@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1281 2018/03/14 14:06:32 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1282 2018/03/14 14:07:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1751,3 +1751,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/caddy to 0.10.11 [bsiegert 2018-03-14]
 	Updated sysutils/lf to 20180302 [bsiegert 2018-03-14]
 	Updated devel/ruby-minitest to 5.11.3 [taca 2018-03-14]
+	Updated devel/ruby-msgpack to 1.2.4 [taca 2018-03-14]
