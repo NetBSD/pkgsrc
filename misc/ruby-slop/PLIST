@@ -1,18 +1,26 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/03 13:58:10 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/14 15:06:22 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
-${GEM_LIBDIR}/CHANGES.md
+${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/slop.rb
-${GEM_LIBDIR}/lib/slop/commands.rb
+${GEM_LIBDIR}/lib/slop/error.rb
 ${GEM_LIBDIR}/lib/slop/option.rb
+${GEM_LIBDIR}/lib/slop/options.rb
+${GEM_LIBDIR}/lib/slop/parser.rb
+${GEM_LIBDIR}/lib/slop/result.rb
+${GEM_LIBDIR}/lib/slop/types.rb
 ${GEM_LIBDIR}/slop.gemspec
-${GEM_LIBDIR}/test/commands_test.rb
-${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/error_test.rb
 ${GEM_LIBDIR}/test/option_test.rb
+${GEM_LIBDIR}/test/options_test.rb
+${GEM_LIBDIR}/test/parser_test.rb
+${GEM_LIBDIR}/test/result_test.rb
 ${GEM_LIBDIR}/test/slop_test.rb
+${GEM_LIBDIR}/test/test_helper.rb
+${GEM_LIBDIR}/test/types_test.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
