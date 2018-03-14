@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2018/02/16 12:43:52 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2018/03/14 17:11:26 wiz Exp $
 
 DISTNAME=	dupeguru-src-4.0.3
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://download.hardcoded.net/
 
@@ -44,6 +44,7 @@ do-install:
 	${LN} -s ${DESTDIR}${PREFIX}/share/dupeguru/run.py ${DESTDIR}${PREFIX}/bin/dupeguru
 	${INSTALL_DATA} ${WRKSRC}/build/dupeguru-arch/dupeguru.desktop ${DESTDIR}${PREFIX}/share/applications
 	${RM} -f ${DESTDIR}${PREFIX}/share/dupeguru/qt/platform.py.orig
+	${RM} -f ${DESTDIR}${PREFIX}/share/dupeguru/hscommon/sphinxgen.py.orig
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
