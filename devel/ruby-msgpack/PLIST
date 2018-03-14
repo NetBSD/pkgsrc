@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/08/10 20:36:12 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/03/14 14:07:38 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/msgpack/msgpack.${RUBY_DLEXT}
@@ -44,8 +44,6 @@ ${GEM_LIBDIR}/ext/msgpack/buffer.h
 ${GEM_LIBDIR}/ext/msgpack/buffer_class.c
 ${GEM_LIBDIR}/ext/msgpack/buffer_class.h
 ${GEM_LIBDIR}/ext/msgpack/compat.h
-${GEM_LIBDIR}/ext/msgpack/core_ext.c
-${GEM_LIBDIR}/ext/msgpack/core_ext.h
 ${GEM_LIBDIR}/ext/msgpack/extconf.rb
 ${GEM_LIBDIR}/ext/msgpack/extension_value_class.c
 ${GEM_LIBDIR}/ext/msgpack/extension_value_class.h
@@ -70,6 +68,7 @@ ${GEM_LIBDIR}/ext/msgpack/unpacker_class.h
 ${GEM_LIBDIR}/ext/msgpack/unpacker_ext_registry.c
 ${GEM_LIBDIR}/ext/msgpack/unpacker_ext_registry.h
 ${GEM_LIBDIR}/lib/msgpack.rb
+${GEM_LIBDIR}/lib/msgpack/core_ext.rb
 ${GEM_LIBDIR}/lib/msgpack/factory.rb
 ${GEM_LIBDIR}/lib/msgpack/msgpack.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/msgpack/packer.rb
@@ -102,4 +101,4 @@ ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/unpack_spec.rb
 ${GEM_LIBDIR}/spec/unpacker_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.2.0/build_info
+
