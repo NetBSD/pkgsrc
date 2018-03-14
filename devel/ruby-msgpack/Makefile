@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2017/11/06 13:36:00 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2018/03/14 14:07:38 taca Exp $
 
-DISTNAME=	msgpack-1.1.0
+DISTNAME=	msgpack-1.2.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
