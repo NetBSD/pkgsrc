@@ -1,6 +1,7 @@
-$NetBSD: patch-src_config_unix_os_stubs.c.c,v 1.1 2016/08/15 15:48:19 jaapb Exp $
+$NetBSD: patch-src_config_unix_os_stubs.c.c,v 1.2 2018/03/14 14:05:37 dholland Exp $
 
 Compile with OCaml 4.03
+
 --- src/config/unix/os_stubs_c.c.orig	2010-07-16 13:56:35.000000000 +0000
 +++ src/config/unix/os_stubs_c.c
 @@ -66,7 +66,7 @@ ssize_t os_read(OS_FD fd, char *buf, siz
