@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2633 2018/03/13 17:02:21 minskim Exp $
+# $NetBSD: Makefile,v 1.2634 2018/03/14 17:41:28 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1476,6 +1476,7 @@ SUBDIR+=	p5-PerlIO-via-Bzip2
 SUBDIR+=	p5-PerlIO-via-Timeout
 SUBDIR+=	p5-PerlIO-via-dynamic
 SUBDIR+=	p5-PerlIO-via-symlink
+SUBDIR+=	p5-PerlX-Maybe
 SUBDIR+=	p5-Pod-Usage
 SUBDIR+=	p5-Probe-Perl
 SUBDIR+=	p5-Proc-Background
