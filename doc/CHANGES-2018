@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1277 2018/03/14 08:03:04 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1278 2018/03/14 08:03:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1745,3 +1745,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/p5-Net-SSLeay to 1.85 [wiz 2018-03-14]
 	Updated textproc/p5-Pod-Coverage-TrustPod to 0.100005 [wiz 2018-03-14]
 	Added devel/p5-PerlX-Maybe version 1.001 [wiz 2018-03-14]
+	Updated www/p5-Dancer-Session-Cookie to 0.30 [wiz 2018-03-14]
