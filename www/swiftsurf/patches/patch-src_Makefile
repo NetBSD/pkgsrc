@@ -1,4 +1,6 @@
-$NetBSD: patch-src_Makefile,v 1.1 2011/10/29 15:38:47 dholland Exp $
+$NetBSD: patch-src_Makefile,v 1.2 2018/03/14 08:59:59 dholland Exp $
+
+Fix build with ocaml circa 2011.
 
 --- src/Makefile~	2002-02-25 18:27:15.000000000 +0000
 +++ src/Makefile
