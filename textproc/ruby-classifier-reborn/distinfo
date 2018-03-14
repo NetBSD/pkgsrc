@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/03/20 15:24:43 taca Exp $
+$NetBSD: distinfo,v 1.5 2018/03/14 15:40:07 taca Exp $
 
-SHA1 (classifier-reborn-2.1.0.gem) = c1de44c24152e2e509c0476bc6407685df37008b
-RMD160 (classifier-reborn-2.1.0.gem) = 1349b3a47dbcd0f2c3e5bb19ca83e007034162d7
-SHA512 (classifier-reborn-2.1.0.gem) = f9a65477c276b5611682e94b8263951a5375cbe3ac56736a58fa0d8395d62650cf9d0c9acdde36cb53cfb6770acf7bf8422a33a19783b8facc96f8693c7dc5d1
-Size (classifier-reborn-2.1.0.gem) = 38912 bytes
+SHA1 (classifier-reborn-2.2.0.gem) = 971c1da590f99a90c92183e3a010c0c948def278
+RMD160 (classifier-reborn-2.2.0.gem) = faba650326f2e6794026d0c59263fe28c7acd603
+SHA512 (classifier-reborn-2.2.0.gem) = f24c64f7b6ee26a41cfc2d9c09dbeb59d0d0a9291a6528088d5802c66f36f950891b7102cfaa62faaf70f3a4a4abb993c0e3db9219e1e504fca6edb40059432d
+Size (classifier-reborn-2.2.0.gem) = 49664 bytes
