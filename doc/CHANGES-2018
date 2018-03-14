@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1273 2018/03/14 07:53:43 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1274 2018/03/14 07:55:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1741,3 +1741,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Alien-Base-ModuleBuild to 1.02 [wiz 2018-03-14]
 	Updated www/curl to 7.59.0 [wiz 2018-03-14]
 	Updated devel/p5-Test-Simple to 1.302133 [wiz 2018-03-14]
+	Updated devel/p5-Test2-Suite to 0.000108 [wiz 2018-03-14]
