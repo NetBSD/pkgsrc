@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.180 2018/03/12 11:16:27 wiz Exp $
+# $NetBSD: Makefile,v 1.181 2018/03/15 22:00:48 jdolecek Exp $
 
 DISTNAME=	qemu-2.11.1
 PKGREVISION=	1
@@ -17,11 +17,6 @@ USE_TOOLS+=		bison flex gmake makeinfo perl:build pkg-config
 FAKE_NCURSES=		yes
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
-
-# XXX u-boot updated in 2.10.0 causes extact problem on case-insensitive
-# XXX filesystems; for now just don't extract it, as it's not actually used
-# XXX see: https://bugs.launchpad.net/qemu/+bug/1714750
-EXTRACT_OPTS+=		-X ${FILESDIR}/uboot-exclude
 
 BUILD_DEPENDS+=		texi2html-[0-9]*:../../textproc/texi2html
 
