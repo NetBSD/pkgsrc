@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1324 2018/03/14 23:48:07 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1325 2018/03/15 02:25:55 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1799,3 +1799,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/dupeguru to 4.0.3nb2 [wiz 2018-03-14]
 	Updated misc/moreutils to 0.60nb1 [leot 2018-03-14]
 	Added devel/R-rlang version 0.2.0 [minskim 2018-03-14]
+	Added math/py-claripy version 7.8.2.21 [khorben 2018-03-15]
