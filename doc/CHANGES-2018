@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1333 2018/03/15 10:53:01 leot Exp $
+$NetBSD: CHANGES-2018,v 1.1334 2018/03/15 10:58:35 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1813,3 +1813,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-cython to 0.28 [adam 2018-03-15]
 	Updated net/unbound to 1.7.0 [he 2018-03-15]
 	Updated x11/st-term to 0.8 [leot 2018-03-15]
+	Updated x11/dmenu to 4.8 [leot 2018-03-15]
