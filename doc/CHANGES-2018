@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1335 2018/03/15 12:35:24 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1336 2018/03/15 18:37:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1816,3 +1816,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/dmenu to 4.8 [leot 2018-03-15]
 	Updated mail/py-authres to 1.1.0 [adam 2018-03-15]
 	Updated time/py-tempora to 1.11 [adam 2018-03-15]
+	Added textproc/R-utf8 version 1.1.3 [minskim 2018-03-15]
