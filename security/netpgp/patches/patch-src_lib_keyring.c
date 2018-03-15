@@ -1,9 +1,10 @@
-$NetBSD: patch-src_lib_keyring.c,v 1.2 2018/03/15 19:37:30 khorben Exp $
+$NetBSD: patch-src_lib_keyring.c,v 1.3 2018/03/15 20:00:43 khorben Exp $
 
 Do not crash when listing keys without a keyring.
+Do not use random data for pass-phrases on EOF.
 Do not ask for a passphrase when empty.
 
---- src/lib/keyring.c.orig	2018-03-15 19:31:30.000000000 +0000
+--- src/lib/keyring.c.orig	2011-06-25 00:37:44.000000000 +0000
 +++ src/lib/keyring.c
 @@ -226,7 +226,7 @@ typedef struct {
  	pgp_seckey_t		*seckey;
@@ -14,7 +15,18 @@ Do not ask for a passphrase when empty.
  decrypt_cb(const pgp_packet_t *pkt, pgp_cbdata_t *cbinfo)
  {
  	const pgp_contents_t	*content = &pkt->u;
-@@ -292,6 +292,20 @@ decrypt_cb(const pgp_packet_t *pkt, pgp_
+@@ -244,7 +244,9 @@ decrypt_cb(const pgp_packet_t *pkt, pgp_
+ 		break;
+ 
+ 	case PGP_GET_PASSPHRASE:
+-		(void) pgp_getpassphrase(decrypt->passfp, pass, sizeof(pass));
++		if (pgp_getpassphrase(decrypt->passfp, pass, sizeof(pass)) == 0) {
++			pass[0] = '\0';
++		}
+ 		*content->skey_passphrase.passphrase = netpgp_strdup(pass);
+ 		pgp_forget(pass, (unsigned)sizeof(pass));
+ 		return PGP_KEEP_MEMORY;
+@@ -292,6 +294,20 @@ decrypt_cb(const pgp_packet_t *pkt, pgp_
  	return PGP_RELEASE_MEMORY;
  }
  
@@ -35,7 +47,7 @@ Do not ask for a passphrase when empty.
  /**
  \ingroup Core_Keys
  \brief Decrypts secret key from given keydata with given passphrase
-@@ -306,8 +320,18 @@ pgp_decrypt_seckey(const pgp_key_t *key,
+@@ -306,8 +322,18 @@ pgp_decrypt_seckey(const pgp_key_t *key,
  	const int	 printerrors = 1;
  	decrypt_t	 decrypt;
  
