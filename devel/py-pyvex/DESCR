@@ -1,0 +1,5 @@
+VEX is an architecture-agnostic, side-effects-free representation of a number
+of target machine languages. It abstracts machine code into a representation
+designed to make program analysis easier.
+
+PyVEX exposes VEX into Python.
