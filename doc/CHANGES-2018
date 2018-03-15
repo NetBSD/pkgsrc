@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1327 2018/03/15 02:50:31 khorben Exp $
+$NetBSD: CHANGES-2018,v 1.1328 2018/03/15 02:57:42 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1802,3 +1802,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/py-claripy version 7.8.2.21 [khorben 2018-03-15]
 	Added devel/py-cle version 7.8.2.21 [khorben 2018-03-15]
 	Added devel/py-pyvex version 7.8.2.21 [khorben 2018-03-15]
+	Added devel/py-archinfo version 7.8.2.21 [khorben 2018-03-15]
