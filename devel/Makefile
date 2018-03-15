@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2635 2018/03/14 23:48:02 minskim Exp $
+# $NetBSD: Makefile,v 1.2636 2018/03/15 02:34:03 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -1890,6 +1890,7 @@ SUBDIR+=	py-chai
 SUBDIR+=	py-characteristic
 SUBDIR+=	py-checker
 SUBDIR+=	py-cheetah
+SUBDIR+=	py-cle
 SUBDIR+=	py-click
 SUBDIR+=	py-click-log
 SUBDIR+=	py-click-threading
