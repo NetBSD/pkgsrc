@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1329 2018/03/15 03:14:27 khorben Exp $
+$NetBSD: CHANGES-2018,v 1.1330 2018/03/15 08:50:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1740,6 +1740,8 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/intel-microcode-netbsd to 20180312 [msaitoh 2018-03-14]
 	Updated devel/p5-Alien-Base-ModuleBuild to 1.02 [wiz 2018-03-14]
 	Updated www/curl to 7.59.0 [wiz 2018-03-14]
+	Updated archivers/unrar to 5.6.1 [adam 2018-03-14]
+	Updated www/py-daphne to 2.1.0 [adam 2018-03-14]
 	Updated devel/p5-Test-Simple to 1.302133 [wiz 2018-03-14]
 	Updated devel/p5-Test2-Suite to 0.000108 [wiz 2018-03-14]
 	Updated security/p5-Net-SSLeay to 1.85 [wiz 2018-03-14]
@@ -1804,3 +1806,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-pyvex version 7.8.2.21 [khorben 2018-03-15]
 	Added devel/py-archinfo version 7.8.2.21 [khorben 2018-03-15]
 	Added devel/py-angr version 7.8.2.21 [khorben 2018-03-15]
+	Updated textproc/py-lxml to 4.2.0 [adam 2018-03-15]
