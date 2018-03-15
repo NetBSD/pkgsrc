@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2639 2018/03/15 03:14:17 khorben Exp $
+# $NetBSD: Makefile,v 1.2640 2018/03/15 05:08:07 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -1568,8 +1568,8 @@ SUBDIR+=	p5-Sys-Syscall
 SUBDIR+=	p5-System-Command
 SUBDIR+=	p5-TAP-Formatter-HTML
 SUBDIR+=	p5-TAP-Harness-Archive
-SUBDIR+=	p5-Task-Weaken
 SUBDIR+=	p5-Taint-Util
+SUBDIR+=	p5-Task-Weaken
 SUBDIR+=	p5-Tee
 SUBDIR+=	p5-Template-Plugin-Handy
 SUBDIR+=	p5-Template-Plugin-HashMerge
