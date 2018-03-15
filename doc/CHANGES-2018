@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1328 2018/03/15 02:57:42 khorben Exp $
+$NetBSD: CHANGES-2018,v 1.1329 2018/03/15 03:14:27 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1803,3 +1803,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-cle version 7.8.2.21 [khorben 2018-03-15]
 	Added devel/py-pyvex version 7.8.2.21 [khorben 2018-03-15]
 	Added devel/py-archinfo version 7.8.2.21 [khorben 2018-03-15]
+	Added devel/py-angr version 7.8.2.21 [khorben 2018-03-15]
