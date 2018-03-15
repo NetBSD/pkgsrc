@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2637 2018/03/15 02:50:18 khorben Exp $
+# $NetBSD: Makefile,v 1.2638 2018/03/15 02:57:15 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -1848,6 +1848,7 @@ SUBDIR+=	py-ZopeSchema
 SUBDIR+=	py-aiofiles
 SUBDIR+=	py-apipkg
 SUBDIR+=	py-appdirs
+SUBDIR+=	py-archinfo
 SUBDIR+=	py-argcomplete
 SUBDIR+=	py-argh
 SUBDIR+=	py-argparse
