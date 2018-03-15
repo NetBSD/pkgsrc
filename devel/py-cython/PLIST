@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2017/09/30 09:53:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2018/03/15 09:30:18 adam Exp $
 bin/cygdb${PYVERSSUFFIX}
 bin/cython${PYVERSSUFFIX}
 bin/cythonize${PYVERSSUFFIX}
@@ -90,6 +90,7 @@ ${PYSITELIB}/Cython/Compiler/FlowControl.so
 ${PYSITELIB}/Cython/Compiler/FusedNode.py
 ${PYSITELIB}/Cython/Compiler/FusedNode.pyc
 ${PYSITELIB}/Cython/Compiler/FusedNode.pyo
+${PYSITELIB}/Cython/Compiler/FusedNode.so
 ${PYSITELIB}/Cython/Compiler/Future.py
 ${PYSITELIB}/Cython/Compiler/Future.pyc
 ${PYSITELIB}/Cython/Compiler/Future.pyo
@@ -445,6 +446,7 @@ ${PYSITELIB}/Cython/Shadow.pyo
 ${PYSITELIB}/Cython/StringIOTree.py
 ${PYSITELIB}/Cython/StringIOTree.pyc
 ${PYSITELIB}/Cython/StringIOTree.pyo
+${PYSITELIB}/Cython/StringIOTree.so
 ${PYSITELIB}/Cython/Tempita/__init__.py
 ${PYSITELIB}/Cython/Tempita/__init__.pyc
 ${PYSITELIB}/Cython/Tempita/__init__.pyo
