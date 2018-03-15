@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2018/03/11 21:23:28 ginsbach Exp $
+# $NetBSD: Makefile,v 1.3 2018/03/15 07:14:50 jperkin Exp $
 
 .include "../../textproc/xxdiff/Makefile.common"
 
 PKGNAME=	xxdiff-scripts-${XXDIFFVERSION}
 COMMENT=	Helper scripts for xxdiff
 
-DEPENDS+=	xxdiff-${XXDIFFVERSION}:../../textproc/xxdiff
+DEPENDS+=	xxdiff-${XXDIFFVERSION}{,nb*}:../../textproc/xxdiff
 
 USE_TOOLS=	# empty
 
