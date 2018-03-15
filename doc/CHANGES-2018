@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1331 2018/03/15 09:31:03 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1332 2018/03/15 10:23:20 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1811,3 +1811,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-hypothesis to 3.49.1 [adam 2018-03-15]
 	Updated www/py-aiohttp to 3.0.9 [adam 2018-03-15]
 	Updated devel/py-cython to 0.28 [adam 2018-03-15]
+	Updated net/unbound to 1.7.0 [he 2018-03-15]
