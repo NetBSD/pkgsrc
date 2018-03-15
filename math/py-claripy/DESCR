@@ -1,0 +1,3 @@
+Claripy is an abstracted constraint-solving wrapper.
+
+General usage is similar to z3.
