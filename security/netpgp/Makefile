@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2018/03/15 20:14:14 khorben Exp $
+# $NetBSD: Makefile,v 1.29 2018/03/15 20:21:52 khorben Exp $
 
 DISTNAME=		netpgp-20140220
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
