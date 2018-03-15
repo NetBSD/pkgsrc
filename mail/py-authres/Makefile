@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/02/22 10:23:54 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/15 12:23:47 adam Exp $
 
-DISTNAME=	authres-1.0.2
+DISTNAME=	authres-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/authres/}
@@ -12,5 +12,5 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
