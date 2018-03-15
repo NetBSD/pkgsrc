@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/03/15 02:56:54 khorben Exp $
+
+SHA1 (archinfo-7.8.2.21-10a0bd3dbdfbea809392d9b999ece727e71fb471.tar.gz) = 49c75927693d9715211cb72636962b90852a791c
+RMD160 (archinfo-7.8.2.21-10a0bd3dbdfbea809392d9b999ece727e71fb471.tar.gz) = af9e88bcc17e26e4475674e82684100e362cb96c
+SHA512 (archinfo-7.8.2.21-10a0bd3dbdfbea809392d9b999ece727e71fb471.tar.gz) = 0ce0c1d4eefc02648c2b77f936370f7698ff38ad1a5824aabab54bec40f993c7e2f1772351c7524acd9c9e65ed8ff07f2f610e8ebc7d302ec78a72a01e061cda
+Size (archinfo-7.8.2.21-10a0bd3dbdfbea809392d9b999ece727e71fb471.tar.gz) = 42735 bytes
