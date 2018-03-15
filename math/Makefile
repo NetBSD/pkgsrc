@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.372 2018/03/13 00:36:57 khorben Exp $
+# $NetBSD: Makefile,v 1.373 2018/03/15 02:25:13 khorben Exp $
 
 COMMENT=	Mathematics
 
@@ -267,6 +267,7 @@ SUBDIR+=	py-almost
 SUBDIR+=	py-autograd
 SUBDIR+=	py-bottleneck
 SUBDIR+=	py-cdecimal
+SUBDIR+=	py-claripy
 SUBDIR+=	py-ephem
 SUBDIR+=	py-fftw
 SUBDIR+=	py-fpconst
