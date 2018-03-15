@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/03/15 18:37:18 minskim Exp $
+
+SHA1 (R/utf8_1.1.3.tar.gz) = edb3ab0800838c2d5312cbf8443d2de4cc718da4
+RMD160 (R/utf8_1.1.3.tar.gz) = b250fd9cfa9c75db177d4d647c578cea2e466830
+SHA512 (R/utf8_1.1.3.tar.gz) = 4460ed3bb1a06912ffc0493ae1242c2bf5ede5c2dbd669138379b3db34462651066ce3e2df2240b4bdfc563604226738ae9172e46a6c834dfeb079f560e3dc75
+Size (R/utf8_1.1.3.tar.gz) = 217735 bytes
