@@ -1,0 +1,28 @@
+$NetBSD: patch-pyvex__c_Makefile,v 1.1 2018/03/15 02:49:25 khorben Exp $
+
+Add support for NetBSD.
+Correct the syntax for GCC in C99 mode.
+
+--- pyvex_c/Makefile.orig	2018-02-21 22:03:16.000000000 +0000
++++ pyvex_c/Makefile
+@@ -9,6 +9,11 @@ ifeq ($(UNAME), Linux)
+ 	STATIC_LIBRARY_FILE=libpyvex.a
+ 	LDFLAGS=-Wl,-soname,$(LIBRARY_FILE)
+ endif
++ifeq ($(UNAME), NetBSD)
++	LIBRARY_FILE=libpyvex.so
++	STATIC_LIBRARY_FILE=libpyvex.a
++	LDFLAGS=-Wl,-soname,$(LIBRARY_FILE)
++endif
+ ifeq ($(findstring MINGW,$(UNAME)), MINGW)
+ 	LIBRARY_FILE=pyvex.dll
+ 	STATIC_LIBRARY_FILE=libpyvex.a
+@@ -18,7 +23,7 @@ endif
+ CC=gcc
+ AR=ar
+ INCFLAGS=-I $(VEX_INCLUDE_PATH)
+-CFLAGS=-g -O2 -shared -fPIC --std=c99 $(INCFLAGS)
++CFLAGS=-g -O2 -shared -fPIC -std=c99 $(INCFLAGS)
+ 
+ OBJECTS=pyvex.o logging.o
+ 
