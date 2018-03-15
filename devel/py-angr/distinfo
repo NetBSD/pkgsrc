@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2018/03/15 03:13:29 khorben Exp $
+
+SHA1 (angr-7.8.2.21-000718deab49cf506f6d26d69c63215cbcf1eb5b.tar.gz) = f310c452e29480a176365bfd86835ba3f7eaba65
+RMD160 (angr-7.8.2.21-000718deab49cf506f6d26d69c63215cbcf1eb5b.tar.gz) = d21469a3b124f78bd6ecd9c2aae5092115eea6b9
+SHA512 (angr-7.8.2.21-000718deab49cf506f6d26d69c63215cbcf1eb5b.tar.gz) = 844fd7571d342d219c8071db01b11ef88188c441460f5bf93ec344383c7151d8fc4d236844ff650dff8127fbc3083ace071c2eacf5343829b5886bc9972d4cc1
+Size (angr-7.8.2.21-000718deab49cf506f6d26d69c63215cbcf1eb5b.tar.gz) = 685068 bytes
+SHA1 (patch-native_Makefile) = bcb95c06bd414deba958a2a061dd25819aba6bbb
+SHA1 (patch-native_log.c) = deee60432d81962919b4060f13e7d5a1da6ad9d8
