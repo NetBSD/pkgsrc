@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1330 2018/03/15 08:50:45 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1331 2018/03/15 09:31:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1807,3 +1807,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-archinfo version 7.8.2.21 [khorben 2018-03-15]
 	Added devel/py-angr version 7.8.2.21 [khorben 2018-03-15]
 	Updated textproc/py-lxml to 4.2.0 [adam 2018-03-15]
+	Updated devel/py-async-timeout to 2.0.1 [adam 2018-03-15]
+	Updated devel/py-hypothesis to 3.49.1 [adam 2018-03-15]
+	Updated www/py-aiohttp to 3.0.9 [adam 2018-03-15]
+	Updated devel/py-cython to 0.28 [adam 2018-03-15]
