@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.36 2017/11/06 10:14:28 adam Exp $
+$NetBSD: distinfo,v 1.37 2018/03/15 08:38:17 adam Exp $
 
-SHA1 (lxml-4.1.1.tar.gz) = 154279bc5939d7099697887ea15c5ca921abeaeb
-RMD160 (lxml-4.1.1.tar.gz) = 9d093324e4dd188f9885f2e4d3c19988e709dbbc
-SHA512 (lxml-4.1.1.tar.gz) = 9542e5206f9b2f9e072c52ef8e6cf44d1aaae8ae3e7ca7e820c1fac12e716503308ccb3cebc52155b4c93799f3ebca247781fc491524d004378bd26f5cddb9d1
-Size (lxml-4.1.1.tar.gz) = 2380804 bytes
+SHA1 (lxml-4.2.0.tar.gz) = a102f55c5f2f13e5be064f5dea7d0699698eaf4d
+RMD160 (lxml-4.2.0.tar.gz) = ed299afee85c0daa39d59e3cdc13bf3e2c44fbbb
+SHA512 (lxml-4.2.0.tar.gz) = 89c7dd5d36e8816008b22b25bb02275a008fcfe26f6fdeff139ac8394bd773035bf423b9d7c4233f19985e5a8c12f936b71096c55e28957e97da0810d88de8d3
+Size (lxml-4.2.0.tar.gz) = 4282112 bytes
