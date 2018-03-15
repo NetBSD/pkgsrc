@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2636 2018/03/15 02:34:03 khorben Exp $
+# $NetBSD: Makefile,v 1.2637 2018/03/15 02:50:18 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -2156,6 +2156,7 @@ SUBDIR+=	py-pyparsing
 SUBDIR+=	py-pysvn
 SUBDIR+=	py-pytemplate
 SUBDIR+=	py-pyutil
+SUBDIR+=	py-pyvex
 SUBDIR+=	py-queuelib
 SUBDIR+=	py-quixote
 SUBDIR+=	py-radon
