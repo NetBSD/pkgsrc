@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2017/04/25 20:37:06 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2018/03/16 13:33:08 adam Exp $
 
-DISTNAME=	ddt-1.1.1
+DISTNAME=	ddt-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/ddt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/txels/ddt/
+HOMEPAGE=	https://github.com/txels/ddt
 COMMENT=	Data-Driven/Decorated Tests
 LICENSE=	mit
 
