@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1341 2018/03/16 09:48:36 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1342 2018/03/16 11:47:05 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1831,3 +1831,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/pict to 4.1nb13 [dholland 2018-03-16]
 	Updated textproc/oniguruma to 6.8.0 [adam 2018-03-16]
 	Updated security/libgpg-error to 1.28 [adam 2018-03-16]
+	Updated lang/erlang-doc to 20.3 [fhajny 2018-03-16]
+	Updated lang/erlang-man to 20.3 [fhajny 2018-03-16]
+	Updated lang/erlang to 20.3 [fhajny 2018-03-16]
