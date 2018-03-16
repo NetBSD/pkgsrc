@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1340 2018/03/16 08:27:58 dholland Exp $
+$NetBSD: CHANGES-2018,v 1.1341 2018/03/16 09:48:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1829,3 +1829,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xf86-video-ati to 18.0.1 [wiz 2018-03-15]
 	Updated textproc/discount to 2.2.3anb2 [schmonz 2018-03-16]
 	Updated lang/pict to 4.1nb13 [dholland 2018-03-16]
+	Updated textproc/oniguruma to 6.8.0 [adam 2018-03-16]
+	Updated security/libgpg-error to 1.28 [adam 2018-03-16]
