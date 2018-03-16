@@ -1,0 +1,103 @@
+$NetBSD: patch-Makefile.in,v 1.1 2018/03/16 03:45:18 schmonz Exp $
+
+Libtoolize for portability across pkgsrc platforms.
+
+--- Makefile.in.orig	2018-03-02 22:52:05.000000000 +0000
++++ Makefile.in
+@@ -1,3 +1,10 @@
++LIBTOOL=libtool --tag=CC
++
++.c.o:
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c -o $@ $<
++.c.lo:
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c -o $@ $<
++
+ CC=@CC@ -I.
+ LFLAGS=-L.
+ CFLAGS=@CFLAGS@
+@@ -19,6 +26,11 @@ OBJS=mkdio.o markdown.o dumptree.o gener
+      xml.o Csio.o xmlpage.o basename.o emmatch.o \
+      github_flavoured.o setup.o tags.o html5.o flags.o \
+      @AMALLOC@ @H1TITLE@
++LOBJS=mkdio.lo markdown.lo dumptree.lo generate.lo \
++     resource.lo docheader.lo version.lo toc.lo css.lo \
++     xml.lo Csio.lo xmlpage.lo basename.lo emmatch.lo \
++     github_flavoured.lo setup.lo tags.lo html5.lo flags.lo \
++     @AMALLOC@ @H1TITLE@
+ TESTFRAMEWORK=echo cols branch
+ 
+ # modules that markdown, makepage, mkd2html, &tc use
+@@ -29,8 +41,10 @@ MAN3PAGES=mkd-callbacks.3 mkd-functions.
+ all: $(PGMS) $(SAMPLE_PGMS) $(TESTFRAMEWORK)
+ 
+ install: $(PGMS) $(DESTDIR)$(BINDIR) $(DESTDIR)$(LIBDIR) $(DESTDIR)$(INCDIR) $(DESTDIR)$(PKGDIR)
+-	@INSTALL_PROGRAM@ $(PGMS) $(DESTDIR)$(BINDIR)
+-	./librarian.sh install libmarkdown VERSION $(DESTDIR)$(LIBDIR)
++	for x in $(PGMS); do \
++	    $(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $$x $(DESTDIR)$(BINDIR)/$$x; \
++	done
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(MKDLIB).la $(DESTDIR)$(LIBDIR)/$(MKDLIB).la
+ 	@INSTALL_DATA@ mkdio.h $(DESTDIR)$(INCDIR)
+ 	@MK_PKGCONFIG@@INSTALL_DATA@ $(MKDLIB).pc $(DESTDIR)$(PKGDIR)
+ 
+@@ -39,7 +53,7 @@ install.everything: install install.samp
+ install.samples: $(SAMPLE_PGMS) install $(DESTDIR)$(BINDIR)
+ 	@INSTALL_DIR@ $(DESTDIR)$(MANDIR)/man1
+ 	for x in $(SAMPLE_PGMS); do \
+-	    @INSTALL_PROGRAM@ $$x $(DESTDIR)$(BINDIR)/$(SAMPLE_PFX)$$x; \
++	    $(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $$x $(DESTDIR)$(BINDIR)/$(SAMPLE_PFX)$$x; \
+ 	    @INSTALL_DATA@ $$x.1 $(DESTDIR)$(MANDIR)/man1/$(SAMPLE_PFX)$$x.1; \
+ 	done
+ 
+@@ -75,7 +89,7 @@ $(DESTDIR)$(LIBDIR):
+ @MK_PKGCONFIG@	@INSTALL_DIR@ $(DESTDIR)$(PKGDIR)
+ 
+ version.o: version.c VERSION branch
+-	$(CC) $(CFLAGS) -DBRANCH=`./branch` -DVERSION=\"`cat VERSION`\" -c version.c
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -DBRANCH=`./branch` -DVERSION=\"`cat VERSION`\" -c version.c
+ 
+ VERSION:
+ 	@true
+@@ -87,20 +101,19 @@ blocktags: mktags
+ 
+ # example programs
+ @THEME@theme:  theme.o $(COMMON) $(MKDLIB) mkdio.h
+-@THEME@	$(CC) $(CFLAGS) $(LFLAGS) -o theme theme.o $(COMMON) -lmarkdown @LIBS@
+-
++@THEME@	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LFLAGS) -o theme theme.o $(COMMON) $(MKDLIB).la @LIBS@
+ 
+-mkd2html:  mkd2html.o $(MKDLIB) mkdio.h gethopt.h $(COMMON)
+-	$(CC) $(CFLAGS) $(LFLAGS) -o mkd2html mkd2html.o $(COMMON) -lmarkdown @LIBS@
++mkd2html:  mkd2html.o $(COMMON) $(MKDLIB)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LFLAGS) -o mkd2html mkd2html.o $(COMMON) $(MKDLIB).la @LIBS@
+ 
+ markdown: main.o $(COMMON) $(MKDLIB)
+-	$(CC) $(CFLAGS) $(LFLAGS) -o markdown main.o $(COMMON) -lmarkdown @LIBS@
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LFLAGS) -o markdown main.o $(COMMON) $(MKDLIB).la @LIBS@
+ 	
+-makepage:  makepage.c $(COMMON) $(MKDLIB) mkdio.h
+-	$(CC) $(CFLAGS) $(LFLAGS) -o makepage makepage.c $(COMMON) -lmarkdown @LIBS@
++makepage:  makepage.o $(COMMON) $(MKDLIB)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LFLAGS) -o makepage makepage.o $(COMMON) $(MKDLIB).la @LIBS@
+ 
+ pgm_options.o: pgm_options.c mkdio.h config.h
+-	$(CC) $(CFLAGS) -I. -c pgm_options.c
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -I. -c pgm_options.c
+ 
+ notspecial.o: notspecial.c
+ 	$(CC) $(CFLAGS) -I. -c notspecial.c
+@@ -111,8 +124,12 @@ gethopt.o: gethopt.c
+ main.o: main.c mkdio.h config.h
+ 	$(CC) $(CFLAGS) -I. -c main.c
+ 
+-$(MKDLIB): $(OBJS)
+-	./librarian.sh make $(MKDLIB) VERSION $(OBJS)
++libtool-version-info: VERSION
++	awk -F. '{ printf "%d:%d:0\n", $$1 - 1, $$2 }' < VERSION > libtool-version-info
++
++$(MKDLIB): $(MKDLIB).so
++$(MKDLIB).so: $(OBJS) libtool-version-info
++	$(LIBTOOL) --mode=link @CC@ $(LDFLAGS) -o $(MKDLIB).la $(LOBJS) -version-info `cat libtool-version-info` -rpath $(LIBDIR)
+ 
+ verify: echo tools/checkbits.sh
+ 	@./echo -n "headers ... "; tools/checkbits.sh && echo "GOOD"

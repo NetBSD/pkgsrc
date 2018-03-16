@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2018/03/10 05:37:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2018/03/16 03:45:18 schmonz Exp $
 #
 
 DISTNAME=	discount-2.2.3a
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,6 +20,8 @@ CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--shared
 CONFIGURE_ARGS+=	--enable-all-features
+
+USE_LIBTOOL=		yes
 
 INSTALL_TARGET=		install.everything
 TEST_TARGET=		test
