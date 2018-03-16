@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2018/02/13 08:34:03 adam Exp $
+# $NetBSD: options.mk,v 1.3 2018/03/16 23:39:54 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-uwsgi
-PKG_SUPPORTED_OPTIONS=	debug uuid yaml
-PKG_SUGGESTED_OPTIONS+=	libxml2
+PKG_SUPPORTED_OPTIONS=	debug openssl pcre uuid yaml
+PKG_SUGGESTED_OPTIONS+=	libxml2 openssl
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=	json xml
 PKG_OPTIONS_GROUP.json=		jansson yajl
@@ -15,7 +15,6 @@ UWSGI_DEBUG=			debug=false
 UWSGI_DEBUG=			debug=true
 .endif
 
-UWSGI_XML=			xml=auto
 .if !empty(PKG_OPTIONS:Mexpat)
 .include "../../textproc/expat/buildlink3.mk"
 UWSGI_XML=			xml=expat
@@ -26,7 +25,6 @@ UWSGI_XML=			xml=libxml2
 UWSGI_XML=			xml=false
 .endif
 
-UWSGI_JSON=			json=auto
 .if !empty(PKG_OPTIONS:Mjansson)
 .include "../../textproc/jansson/buildlink3.mk"
 UWSGI_JSON=			json=jansson
@@ -38,7 +36,20 @@ BROKEN=		The yajl option requires a yajl.pc file which that package doesn't have
 UWSGI_JSON=			json=false
 .endif
 
-UWSGI_UUID=			uuid=auto
+.if !empty(PKG_OPTIONS:Mopenssl)
+.include "../../security/openssl/buildlink3.mk"
+UWSGI_SSL=                     ssl=true
+.else
+UWSGI_SSL=                     ssl=false
+.endif
+
+.if !empty(PKG_OPTIONS:Mpcre)
+.include "../../devel/pcre/buildlink3.mk"
+UWSGI_PCRE=                    pcre=true
+.else
+UWSGI_PCRE=                    pcre=false
+.endif
+
 .if !empty(PKG_OPTIONS:Muuid)
 .include "../../devel/libuuid/buildlink3.mk"
 UWSGI_UUID=			uuid=true
@@ -46,7 +57,6 @@ UWSGI_UUID=			uuid=true
 UWSGI_UUID=			uuid=false
 .endif
 
-UWSGI_YAML=			yaml=auto
 .if !empty(PKG_OPTIONS:Myaml)
 .include "../../textproc/libyaml/buildlink3.mk"
 UWSGI_YAML=			yaml=true
