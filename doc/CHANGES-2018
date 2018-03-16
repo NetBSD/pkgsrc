@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1339 2018/03/16 03:45:25 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.1340 2018/03/16 08:27:58 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1614,7 +1614,12 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/ico to 1.0.5 [wiz 2018-03-10]
 	Updated x11/xbitmaps to 1.1.2 [wiz 2018-03-10]
 	Updated multimedia/ffmpeg2theora to 0.30nb4 [tron 2018-03-10]
+	Updated devel/ocaml-biniou to 1.0.13nb4 [dholland 2018-03-11]
+	Updated devel/ocaml-biniou to 1.2.0 [dholland 2018-03-11]
+	Updated devel/ocaml-yojson to 1.4.1 [dholland 2018-03-11]
 	Added graphics/R-viridisLite version 0.3.0 [minskim 2018-03-11]
+	Updated devel/ocaml-lwt_glib to 1.1.0nb2 [dholland 2018-03-11]
+	Removed devel/ocaml-odn [dholland 2018-03-11]
 	Updated ham/uhd to 3.11.0.0 [mef 2018-03-11]
 	Updated devel/ocaml-biniou to 1.2.0 [dholland 2018-03-11]
 	Updated devel/ocaml-yojson to 1.4.1 [dholland 2018-03-11]
@@ -1673,6 +1678,8 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/z3 to 4.5.0 [khorben 2018-03-13]
 	Added math/py-z3 version 4.5.0 [khorben 2018-03-13]
 	Updated www/py-django-cms to 3.5.1 [wen 2018-03-13]
+	Updated devel/openocd to 0.10.0nb1 [dholland 2018-03-13]
+	Updated devel/verifast to 18.02 [dholland 2018-03-13]
 	Updated www/py-django-cmsplugin_gallery to 1.0.0 [wen 2018-03-13]
 	Updated lang/elixir to 1.6.3 [fhajny 2018-03-13]
 	Updated net/py-lexicon to 2.1.24 [fhajny 2018-03-13]
@@ -1752,6 +1759,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated chat/matterircd to 0.16.5 [bsiegert 2018-03-14]
 	Updated www/caddy to 0.10.11 [bsiegert 2018-03-14]
 	Updated sysutils/lf to 20180302 [bsiegert 2018-03-14]
+	Updated www/swiftsurf to 1.2.5nb16 [dholland 2018-03-14]
 	Updated devel/ruby-minitest to 5.11.3 [taca 2018-03-14]
 	Updated devel/ruby-msgpack to 1.2.4 [taca 2018-03-14]
 	Updated devel/ruby-parser to 3.11.0 [taca 2018-03-14]
@@ -1820,3 +1828,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xf86-video-amdgpu to 18.0.1 [wiz 2018-03-15]
 	Updated x11/xf86-video-ati to 18.0.1 [wiz 2018-03-15]
 	Updated textproc/discount to 2.2.3anb2 [schmonz 2018-03-16]
+	Updated lang/pict to 4.1nb13 [dholland 2018-03-16]
