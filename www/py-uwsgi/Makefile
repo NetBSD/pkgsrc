@@ -1,16 +1,21 @@
-# $NetBSD: Makefile,v 1.39 2018/03/02 16:14:46 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2018/03/16 23:39:54 joerg Exp $
 
 .include  "Makefile.common"
 
+LICENSE=	gnu-gpl-v2 # with linking exception
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 COMMENT=	Feature-rich WSGI server
+
+USE_LANGUAGES=	c
+USE_TOOLS+=	pkg-config
 
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 EGG_NAME=	${DISTNAME:S/uwsgi/uWSGI/}
 
 .include "options.mk"
 
-INSTALL_ENV+=		UWSGI_PROFILE_OVERRIDE="${UWSGI_DEBUG}${UWSGI_JSON}${UWSGI_PCRE}${UWSGI_SSL}${UWSGI_UUID}${UWSGI_XML}${UWSGI_YAML}"
+INSTALL_ENV+=		UWSGI_INCLUDES=${PREFIX}/include
+INSTALL_ENV+=		UWSGI_PROFILE_OVERRIDE="${UWSGI_DEBUG};${UWSGI_JSON};${UWSGI_PCRE};${UWSGI_SSL};${UWSGI_UUID};${UWSGI_XML};${UWSGI_YAML}"
 INSTALLATION_DIRS+=	share/examples/${PYPKGPREFIX}-uwsgi
 
 post-install:
@@ -18,5 +23,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/* \
 		${DESTDIR}${PREFIX}/share/examples/${PYPKGPREFIX}-uwsgi
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
