@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1344 2018/03/16 13:33:59 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1345 2018/03/16 16:19:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1837,3 +1837,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-peewee to 3.1.5 [fhajny 2018-03-16]
 	Updated devel/py-Spans to 1.0.1 [adam 2018-03-16]
 	Updated devel/py-ddt to 1.1.2 [adam 2018-03-16]
+	Added misc/R-pillar version 1.1.0 [minskim 2018-03-16]
