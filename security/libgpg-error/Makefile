@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2017/03/05 12:29:19 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2018/03/16 09:48:00 adam Exp $
 
-DISTNAME=	libgpg-error-1.27
+DISTNAME=	libgpg-error-1.28
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgpg-error/
 MASTER_SITES+=	ftp://ftp.ring.gr.jp/pub/net/gnupg/libgpg-error/
@@ -43,11 +43,11 @@ LIBS+=	-lrt
 # On Dragonfly i386, Pkgsrc libintl segfaults on bindtextdomain function
 # while locking a thread.  Until that's resolved, stop libgpg-error from
 # using NLS which invokes that function during initialization.
-PLIST_VARS+=	nls
+PLIST_VARS+=		nls
 .if ${OPSYS} == "DragonFly" && ${MACHINE} == "i386"
 CONFIGURE_ARGS+=	--disable-nls
 .else
-PLIST.nls=	yes
+PLIST.nls=		yes
 .endif
 
 TEST_TARGET=		check
