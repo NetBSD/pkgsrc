@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/03/16 16:19:05 minskim Exp $
+
+SHA1 (R/pillar_1.1.0.tar.gz) = 1cc0d088feceed3184d87992ce6c8f709248ed8f
+RMD160 (R/pillar_1.1.0.tar.gz) = 7d284069986b56fd0b1e57c2701b9495ef5b236b
+SHA512 (R/pillar_1.1.0.tar.gz) = 8f4ba974e1a2f8c51fced20edf06145b43f3dffbf116fbddd6f4e835cfaf9f5afe1644b70b928d78faeb5dbb647fb7ceda2c443e2a6a6ed7956aff4f7c18e972
+Size (R/pillar_1.1.0.tar.gz) = 71173 bytes
