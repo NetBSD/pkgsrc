@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2018/03/13 10:16:37 fhajny Exp $
+# $NetBSD: Makefile,v 1.29 2018/03/16 12:06:03 fhajny Exp $
 
-DISTNAME=	peewee-3.1.2
+DISTNAME=	peewee-3.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coleifer/}
