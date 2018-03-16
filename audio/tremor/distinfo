@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 01:12:53 agc Exp $
+$NetBSD: distinfo,v 1.8 2018/03/16 21:54:13 maya Exp $
 
-SHA1 (tremor_snapshot_030406.tgz) = f0df8d70e2aad9a345716b551ead826434134f39
-RMD160 (tremor_snapshot_030406.tgz) = 34eebdf9a74f729ae0319c9e8d8b707642f5d002
-SHA512 (tremor_snapshot_030406.tgz) = 8dbf9abea4dfe09f011b292edd32cee8845c95df3d6571bb67e6f72e77742ec8bdb7c8d49c5a57e0e263c31839a065ddd1910eda3321d73f23fca7f8567700cd
-Size (tremor_snapshot_030406.tgz) = 151981 bytes
-SHA1 (patch-misc.h) = ebe129d13d711d238b7f1e7c52e55804b040fa86
+SHA1 (tremor-562307a.tar.gz) = 31f596fe1e55ce67e5c8b03d611bd1b9593272bd
+RMD160 (tremor-562307a.tar.gz) = d04d47d8441ed7f66b3e9be9507af81cb2116fcb
+SHA512 (tremor-562307a.tar.gz) = 19776c9a9e022c14224578eca5b290cd26a9f883ef20567c172491617c929c254d8cd6b844f8419e2e62c88f71e61238f87d82c23c02ab8ad195ab2a3b0f9384
+Size (tremor-562307a.tar.gz) = 148875 bytes
+SHA1 (patch-configure.in) = cf359f27acf93eab341b084b0fb9c007e7f3baed
+SHA1 (patch-misc.h) = 46f83e79562934bce45758254df401d3b551ccfa
