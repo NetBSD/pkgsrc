@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2018/03/16 20:23:53 maya Exp $
+# $NetBSD: Makefile,v 1.61 2018/03/16 20:37:10 maya Exp $
 
 DISTNAME=	libvorbis-1.3.6
 CATEGORIES=	devel audio
@@ -12,6 +12,7 @@ LICENSE=	modified-bsd
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+TEST_TARGET=		check
 
 PKGCONFIG_OVERRIDE+=	vorbis.pc.in
 PKGCONFIG_OVERRIDE+=	vorbisenc.pc.in
