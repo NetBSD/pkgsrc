@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.20 2018/03/12 12:36:39 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.21 2018/03/16 21:44:18 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
 
@@ -173,4 +173,10 @@ www/firefox-l10n: dependent update
 
 Pullup ticket #5720 - requested by wiz
 textproc/xerces-c: security fix
+
+Pullup ticket #5721 - requested by maya
+www/curl: security update
+
+Pullup ticket #5722 - requested by maya
+audio/libvorbis: security update
 
