@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/01/24 16:31:23 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/03/16 22:53:19 maya Exp $
 bin/firefox52
 lib/firefox52/application.ini
 lib/firefox52/browser/blocklist.xml
@@ -1945,8 +1945,6 @@ lib/firefox52/browser/chrome/en-US/locale/browser/searchplugins/images/yandex-en
 lib/firefox52/browser/chrome/en-US/locale/browser/searchplugins/list.json
 lib/firefox52/browser/chrome/en-US/locale/browser/searchplugins/twitter.xml
 lib/firefox52/browser/chrome/en-US/locale/browser/searchplugins/wikipedia.xml
-lib/firefox52/browser/chrome/en-US/locale/browser/searchplugins/yahoo-en-CA.xml
-lib/firefox52/browser/chrome/en-US/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/chrome/en-US/locale/browser/searchplugins/yandex-en.xml
 lib/firefox52/browser/chrome/en-US/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/chrome/en-US/locale/browser/shellservice.properties
