@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.492 2018/01/10 22:09:58 wiz Exp $
+# $NetBSD: Makefile,v 1.493 2018/03/16 16:19:08 minskim Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -7,6 +7,7 @@ SUBDIR+=	9menu
 SUBDIR+=	Addresses
 SUBDIR+=	JBidwatcher
 SUBDIR+=	JMdict
+SUBDIR+=	R-pillar
 SUBDIR+=	ansiweather
 SUBDIR+=	ascii
 SUBDIR+=	asr-manpages
