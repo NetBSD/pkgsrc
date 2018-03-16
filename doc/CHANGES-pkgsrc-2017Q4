@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.21 2018/03/16 21:44:18 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.22 2018/03/16 22:07:20 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
 
@@ -179,4 +179,7 @@ www/curl: security update
 
 Pullup ticket #5722 - requested by maya
 audio/libvorbis: security update
+
+Pullup ticket #5723 - requested by agc
+net/rsync: security update
 
