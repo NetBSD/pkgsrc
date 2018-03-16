@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2018/03/10 05:37:44 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/03/16 03:45:18 schmonz Exp $
 bin/makepage
 bin/markdown
 bin/mkd2html
 bin/theme
 include/mkdio.h
-lib/libmarkdown.so
+lib/libmarkdown.la
 lib/pkgconfig/libmarkdown.pc
 man/man1/makepage.1
 man/man1/markdown.1
