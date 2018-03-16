@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2017/12/13 14:45:20 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.30 2018/03/16 11:45:29 fhajny Exp $
 bin/ct_run
 bin/dialyzer
 bin/epmd
@@ -3970,8 +3970,6 @@ lib/erlang/lib/tools-${VERSION.tools}/emacs/erlang-start.el
 lib/erlang/lib/tools-${VERSION.tools}/emacs/erlang.el
 lib/erlang/lib/tools-${VERSION.tools}/emacs/erlang_appwiz.el
 lib/erlang/lib/tools-${VERSION.tools}/emacs/erldoc.el
-lib/erlang/lib/tools-${VERSION.tools}/emacs/test.erl.indented
-lib/erlang/lib/tools-${VERSION.tools}/emacs/test.erl.orig
 lib/erlang/lib/tools-${VERSION.tools}/examples/xref_examples.erl
 lib/erlang/lib/tools-${VERSION.tools}/src/cover.erl
 lib/erlang/lib/tools-${VERSION.tools}/src/cprof.erl
