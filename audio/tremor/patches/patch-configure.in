@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.in,v 1.1 2018/03/16 21:54:13 maya Exp $
+
+Avoid trying to use a non-existent Version_script file
+
+--- configure.in.orig	2018-03-16 05:15:51.000000000 +0000
++++ configure.in
+@@ -79,7 +79,7 @@ LDFLAGS="$LDFLAGS $ldflags_save"
+ AC_PROG_LD
+ AC_PROG_LD_GNU
+ if test "x$lt_cv_prog_gnu_ld" = "xyes"; then
+-   SHLIB_VERSION_ARG="-Wl,--version-script=Version_script"
++   #SHLIB_VERSION_ARG="-Wl,--version-script=Version_script" # XXX this file doesn't exist?!
+    LDFLAGS="$LDFLAGS $SHLIB_VERSION_ARG"
+ fi
+ 
