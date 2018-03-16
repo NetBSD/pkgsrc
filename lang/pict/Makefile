@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.16 2018/01/10 16:53:11 jaapb Exp $
+# $NetBSD: Makefile,v 1.17 2018/03/16 08:26:28 dholland Exp $
 
 DISTNAME=	pict-4.1
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	lang
 MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/papers/pict/pict-4.1/
+
+PATCH_SITES=	http://www.NetBSD.org/~dholland/patchkits/pict/
+PATCHFILES=	pict-jumbo-patch-20180316.gz
+PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	dholland@NetBSD.org
 HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/papers/pict/Html/Pict.html
 COMMENT=	Concurrent language based on Milner's pi calculus
-
 LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
@@ -21,9 +24,14 @@ MAKE_ENV+=		X11INCLUDE=${X11BASE}/include \
 
 TEST_TARGET=	test
 
+.include "../../mk/ocaml.mk"
+
+.if !empty(OCAML_USE_OPT_COMPILER:Myes)
+MAKE_ENV+=		OCAMLOPT=yes
+.endif
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Doc/*.ps ${DESTDIR}${PREFIX}/share/doc/pict/
 
-.include "../../lang/ocaml/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
