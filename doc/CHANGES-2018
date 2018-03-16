@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1343 2018/03/16 12:06:12 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1344 2018/03/16 13:33:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1835,3 +1835,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/erlang-man to 20.3 [fhajny 2018-03-16]
 	Updated lang/erlang to 20.3 [fhajny 2018-03-16]
 	Updated databases/py-peewee to 3.1.5 [fhajny 2018-03-16]
+	Updated devel/py-Spans to 1.0.1 [adam 2018-03-16]
+	Updated devel/py-ddt to 1.1.2 [adam 2018-03-16]
