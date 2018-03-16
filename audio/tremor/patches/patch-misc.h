@@ -1,10 +1,10 @@
-$NetBSD: patch-misc.h,v 1.1 2012/01/11 20:58:09 hans Exp $
+$NetBSD: patch-misc.h,v 1.2 2018/03/16 23:02:09 maya Exp $
 
---- misc.h.orig	2003-03-31 01:40:56.000000000 +0200
-+++ misc.h	2012-01-02 18:16:15.405713912 +0100
-@@ -30,6 +30,17 @@
- 
+--- misc.h.orig	2018-03-16 05:15:51.000000000 +0000
++++ misc.h
+@@ -41,6 +41,17 @@
  #include <sys/types.h>
+ #endif
  
 +#ifdef __sun
 +#include <sys/byteorder.h>
