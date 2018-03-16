@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2018/01/01 21:18:17 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/03/16 21:06:31 scole Exp $
 
 VERSION=	0.1
 PKGNAME=	line-purple-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 
 CATEGORIES=	chat
 
@@ -13,12 +13,12 @@ COMMENT=	LINE protocol plugin for libpurple (pidgin, finch)
 # XXX archive is at a github-type site, but its name doesn't
 # match "https://github.com/account", couldn't figure out
 # pkgsrc GITHUB* vars to work for fetching
-#ALTREPO_TAG=	b330e2b07372d0aea0100ab5a75ba5a6961b475c
+#ALTREPO_TAG=	51cef1a66f6f4b1a90bd58a3746a2ea27fc74c36
 
 MASTER_SITES=   ${HOMEPAGE:=repository/}
 EXTRACT_SUFX=	.zip
 DISTNAME=	archive
-DIST_SUBDIR=	${PKGNAME_NOREV}
+DIST_SUBDIR=	${PKGNAME_NOREV}-20180221
 
 LICENSE=	mit
 
