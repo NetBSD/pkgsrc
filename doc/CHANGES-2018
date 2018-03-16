@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1349 2018/03/16 21:54:44 maya Exp $
+$NetBSD: CHANGES-2018,v 1.1350 2018/03/16 22:53:37 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1841,3 +1841,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/libvorbis to 1.3.6 [maya 2018-03-16]
 	Updated chat/line-purple to 0.1nb2 [scole 2018-03-16]
 	Updated audio/tremor to 1.0.2.20180316 [maya 2018-03-16]
+	Updated www/firefox52 to 52.7.2 [maya 2018-03-16]
