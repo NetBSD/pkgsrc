@@ -1,29 +1,11 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 22:50:41 agc Exp $
+$NetBSD: distinfo,v 1.5 2018/03/16 08:26:28 dholland Exp $
 
 SHA1 (pict-4.1.tar.gz) = e3d3341d4dc54ed015b0d89eab6760ee7f14c5cd
 RMD160 (pict-4.1.tar.gz) = aea1df3530387c592a1c5eb9e8f464e242109f86
 SHA512 (pict-4.1.tar.gz) = a1d3e74ecbdd664c29f840fb17f49599f3b27975d0f062e708ad1164ac5a2d6398e815bea1db9ac3f50f25e4e492e744554325077bf0239fc799c9af92f2b71d
 Size (pict-4.1.tar.gz) = 1062078 bytes
+SHA1 (pict-jumbo-patch-20180316.gz) = c8777191a5f1ed598f24321fff7e71d4fd13e29f
+RMD160 (pict-jumbo-patch-20180316.gz) = 64ed708666b6d2a377c59537fee2d28cc7e94f68
+SHA512 (pict-jumbo-patch-20180316.gz) = f79caef5ceee50fa905ef8d90a67d8337977dcc6780cd38ed5b5032573383f3098ec86c4558affeddfebc48878f60829ef5aca293ff2026ee498b6831fddc709
+Size (pict-jumbo-patch-20180316.gz) = 12499 bytes
 SHA1 (patch-aa) = 3b7a643d157414683018448a20d9dea8b22ec8f8
-SHA1 (patch-ab) = 95faebd4a9f85d308844f16f0e589a827e8a0fae
-SHA1 (patch-ac) = e6e93f42efc49d6d3a37335b4a40ec5694b2e0d4
-SHA1 (patch-ad) = 5867631186c5973b76d81704306fb142e479b72d
-SHA1 (patch-ae) = 5eaf7be65894e22a7200e8075dfb988722220765
-SHA1 (patch-af) = 38a20d8bf945b3a3662d4c4ebc0d7158eac607ec
-SHA1 (patch-ba) = b7dc6e6b43935e2c87e636cd43ebd9fb9c53c762
-SHA1 (patch-bb) = 172d1f9bf91783c139537a497a622fd1ebd43ad6
-SHA1 (patch-bc) = 81f178d7e48f21afb5fbc1c21f4de839307568c1
-SHA1 (patch-bd) = d1784b7d180c26625205d68aa0143d7796a80c2f
-SHA1 (patch-ya) = d7513a4431ede203217bb39feb42b62c2f9784b0
-SHA1 (patch-yb) = 19c3a5d892f253a450f10ce468b8238653543ee5
-SHA1 (patch-yc) = abc0298eedeb0d459ce067567f96c759df025eb1
-SHA1 (patch-yd) = 4fac383dc8c8fd862f9f3a3ee49585cf51ce87d5
-SHA1 (patch-ye) = e247389fcf286b7121b20f51a4e5d75c3ab7cd47
-SHA1 (patch-yf) = 46c5e4471e647dfa980b6ae11d92f4a6ae7cb163
-SHA1 (patch-yg) = 9874fcadf01644e18667ef048d7045d9b5be9c59
-SHA1 (patch-yh) = dbf12f2a43d740e8f429065bb098654be992c4cc
-SHA1 (patch-yi) = 4cb6d8232c2b9d33478bf4a26bc3b8a705fb15ce
-SHA1 (patch-yj) = ebc56cc20e194238ee18c7b7f35957214d4b7282
-SHA1 (patch-yk) = fd95429fc9670913adce03d23c39a043c40fad3c
-SHA1 (patch-yl) = 65e69f2e8c0e10ab7618532dec14248cb45f85b5
-SHA1 (patch-ym) = f43515051bf75358006e64022b51e7b3eb146ab2
