@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1359 2018/03/17 01:19:53 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.1360 2018/03/17 01:28:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1851,3 +1851,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/nspr to 4.19 [ryoon 2018-03-17]
 	Updated devel/nss to 3.36 [ryoon 2018-03-17]
 	Updated misc/libreoffice to 6.0.2.1nb2 [ryoon 2018-03-17]
+	Updated emulators/pearpc to 0.5 [ryoon 2018-03-17]
