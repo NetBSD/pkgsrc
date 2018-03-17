@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/06 03:10:52 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/17 16:21:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
-${GEM_LIBDIR}/CHANGELOG.rdoc
+${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/MIT-LICENSE.txt
 ${GEM_LIBDIR}/Manifest.txt
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/benchmark/benchmark.rb
 ${GEM_LIBDIR}/benchmark/fragment.html
