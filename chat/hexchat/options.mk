@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.5 2017/03/28 16:18:25 khorben Exp $
+# $NetBSD: options.mk,v 1.6 2018/03/17 11:56:15 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hexchat
-PKG_SUPPORTED_OPTIONS=	dbus gtk2 inet6 libcanberra libnotify libpci libproxy
-PKG_SUPPORTED_OPTIONS+=	libsexy lua ntlm openssl perl python tests themes xft2
-PKG_SUGGESTED_OPTIONS+=	gtk2 inet6 libproxy libsexy openssl xft2
+PKG_SUPPORTED_OPTIONS=	dbus gtk2 libcanberra libnotify libpci libproxy
+PKG_SUPPORTED_OPTIONS+=	libsexy lua openssl perl python
+PKG_SUGGESTED_OPTIONS+=	gtk2 libproxy libsexy openssl
 
-PLIST_VARS+=		dbus gtk2 libpci lua perl python
+PLIST_VARS+=		dbus gtk2 libpci lua perl python fishlim
 
 .include "../../mk/bsd.options.mk"
 
@@ -13,8 +13,9 @@ PLIST_VARS+=		dbus gtk2 libpci lua perl python
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 PLIST.dbus=		yes
+MESON_ARGS+=		-Dwith-dbus=true
 .else
-CONFIGURE_ARGS+=	--disable-dbus
+MESON_ARGS+=		-Dwith-dbus=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk2)
@@ -23,24 +24,23 @@ CONFIGURE_ARGS+=	--disable-dbus
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 PLIST.gtk2=		yes
+MESON_ARGS+=		-Dwith-gtk=true
 .else
-CONFIGURE_ARGS+=	--disable-gtkfe
-.endif
-
-.if empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--disable-ipv6
+MESON_ARGS+=		-Dwith-gtk=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibcanberra)
 .include "../../audio/libcanberra/buildlink3.mk"
+MESON_ARGS+=		-Dwith-libcanberra=true
 .else
-CONFIGURE_ARGS+=	--disable-libcanberra
+MESON_ARGS+=		-Dwith-libcanberra=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibnotify)
 .include "../../sysutils/libnotify/buildlink3.mk"
+MESON_ARGS+=		-Dwith-libnotify=true
 .else
-CONFIGURE_ARGS+=	--disable-libnotify
+MESON_ARGS+=		-Dwith-libnotify=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibpci)
@@ -51,67 +51,52 @@ LIBS+=			-lpciutils
 LIBS+=			-lpci
 .endif
 PLIST.libpci=		yes
+MESON_ARGS+=		-Dwith-sysinfo=true
+.else
+MESON_ARGS+=		-Dwith-sysinfo=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibproxy)
 .include "../../www/libproxy/buildlink3.mk"
+MESON_ARGS+=		-Dwith-libproxy=true
 .else
-CONFIGURE_ARGS+=	--disable-libproxy
+MESON_ARGS+=		-Dwith-libproxy=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mlua)
 .include "../../lang/lua/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-lua
+MESON_ARGS+=		-Dwith-lua=lua
 PLIST.lua=		yes
 .else
-CONFIGURE_ARGS+=	--disable-lua
-.endif
-
-.if !empty(PKG_OPTIONS:Mntlm)
-.include "../../devel/libntlm/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-ntlm=yes
-.else
-CONFIGURE_ARGS+=	--enable-ntlm=no
+MESON_ARGS+=		-Dwith-lua=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mopenssl)
 .include "../../security/openssl/buildlink3.mk"
+MESON_ARGS+=		-Dwith-ssl=true
+MESON_ARGS+=		-Dwith-fishlim=true
+PLIST.fishlim=		yes
 .else
-CONFIGURE_ARGS+=	--enable-openssl=no
+MESON_ARGS+=		-Dwith-ssl=false
+MESON_ARGS+=		-Dwith-fishlim=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mperl)
 .include "../../lang/perl5/buildlink3.mk"
 USE_TOOLS+=		perl
 PLIST.perl=		yes
+MESON_ARGS+=		-Dwith-perl=true
 .else
-CONFIGURE_ARGS+=	--disable-perl
+MESON_ARGS+=		-Dwith-perl=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mpython)
-.include "../../lang/python/pyversion.mk"
 PLIST.python=		yes
+MESON_ARGS+=		-Dwith-python=python-${PYVERSSUFFIX}
 .else
-CONFIGURE_ARGS+=	--enable-python=no
+MESON_ARGS+=		-Dwith-python=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibsexy)
 .include "../../devel/libsexy/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mtests)
-CONFIGURE_ARGS+=	--enable-glibtest
-.else
-CONFIGURE_ARGS+=	--disable-glibtest
-.endif
-
-.if !empty(PKG_OPTIONS:Mthemes)
-#BROKEN=			The themes option does not build at the moment.
-.include "../../devel/monodevelop/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-theme-manager=on
-.endif
-
-.if !empty(PKG_OPTIONS:Mxft2)
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXft/buildlink3.mk"
 .endif

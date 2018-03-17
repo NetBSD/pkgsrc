@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2018/03/12 11:16:09 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2018/03/17 11:56:15 tnn Exp $
 
-DISTNAME=	hexchat-2.12.3
-PKGREVISION=	7
+DISTNAME=	hexchat-2.14.1
 CATEGORIES=	chat
 MASTER_SITES=	http://dl.hexchat.net/hexchat/
 EXTRACT_SUFX=	.tar.xz
@@ -11,27 +10,30 @@ HOMEPAGE=	https://hexchat.github.io/
 COMMENT=	IRC client based on XChat
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit
 
-GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	bison gmake intltool msgfmt msgmerge pkg-config xgettext
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	share/pkgconfig/hexchat-plugin.pc.in
 
+# XXX fails without GNU msgfmt
+_TOOLS_USE_PKGSRC.msgfmt=	yes
+
 .include "options.mk"
 
-CONFIGURE_ARGS+=	--enable-textfe
+MESON_ARGS+=		-Dwith-text=true
 
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--disable-xlib
-.else
-.include "../../x11/libX11/buildlink3.mk"
+# XXX meson
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+.if empty(PKG_OPTIONS:Mpython)
+PYTHON_FOR_BUILD_ONLY=	yes
 .endif
+.include "../../lang/python/pyversion.mk"
+REPLACE_PYTHON+=	plugins/perl/generate_header.py
+REPLACE_PYTHON+=	src/common/make-te.py
+REPLACE_PYTHON+=	meson_post_install.py
 
-.if ${MACHINE_ARCH} == "i386"
-CONFIGURE_ARGS+=	--enable-mmx
-.endif
-
+.include "../../devel/py-meson/build.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
