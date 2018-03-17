@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2015/04/25 14:20:46 tnn Exp $
+# $NetBSD: Makefile,v 1.20 2018/03/17 01:27:55 ryoon Exp $
 
-DISTNAME=		pearpc-0.4
-PKGREVISION=		3
+DISTNAME=		pearpc-0.5
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pearpc/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,7 +10,9 @@ HOMEPAGE=		http://pearpc.sourceforge.net/
 COMMENT=		PowerPC emulator
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
+
+BUILDLINK_TRANSFORM+=	rm:-Wall
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=		${EGDIR}/ppccfg.example ${PKG_SYSCONFDIR}/ppccfg.conf
@@ -26,6 +27,8 @@ CONFIGURE_ARGS+=	--enable-cpu=jitc_x86
 CONFIGURE_ARGS+=	--disable-debug
 
 INSTALLATION_DIRS=	share/${PKGBASE} ${EGDIR} bin
+
+NOT_PAX_MPROTECT_SAFE+=	share/pearpc/ppc
 
 do-install:
 	${SED}	-e "s,@PREFIX@,${PREFIX}," \
