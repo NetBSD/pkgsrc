@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2009/02/11 21:48:39 shattered Exp $
+$NetBSD: patch-ad,v 1.6 2018/03/17 09:09:12 tnn Exp $
 
---- src/wavplay.c.orig	2008-08-20 15:34:02.000000000 +0000
+--- src/wavplay.c.orig	2017-11-15 17:56:45.000000000 +0000
 +++ src/wavplay.c
-@@ -23,6 +23,14 @@
+@@ -39,6 +39,14 @@
  #include <unistd.h>
  #include <fcntl.h>
  #include <string.h>
@@ -17,7 +17,7 @@ $NetBSD: patch-ad,v 1.5 2009/02/11 21:48:39 shattered Exp $
  #if defined(linux) || defined(__CYGWIN32__)
  # include <getopt.h>
  #endif
-@@ -72,8 +80,8 @@ gint read_line(gint fd, gchar *ptr, gint
+@@ -82,8 +90,8 @@ gint read_line(gint fd, gchar *ptr, gint
  off_t is_std_wav_file(int f, off_t *offset);
  
  
@@ -28,25 +28,26 @@ $NetBSD: patch-ad,v 1.5 2009/02/11 21:48:39 shattered Exp $
  #elif defined (aix)
  #define DEFAULT_AUDIO_DEVICE ""
  #elif defined(__sgi)
-@@ -309,7 +317,7 @@ int audio_write( void *buffer, int buf_s
- #endif
+@@ -95,7 +103,7 @@ off_t is_std_wav_file(int f, off_t *offs
+ #define DEFAULT_BUFFER_SIZE 22050 
  
  
 -#if defined(linux) || defined(__FreeBSD__)
 +#if defined(linux) || defined(__FreeBSD__) || (defined(__NetBSD__) && defined(HAVE_OSS))
  
- /* open the sound-device of linux and set cd-quality */
- 
-@@ -360,7 +368,7 @@ gint flags;
+ /*
+  * open the sound-device of linux and set cd-quality
+@@ -147,7 +155,8 @@ gint flags;
  
  #endif
  
 -#if defined(sun) || defined(__OpenBSD__)
 +#if defined(sun) || defined(__OpenBSD__) || (defined(__NetBSD__) && !defined(HAVE_OSS))
++
  
- /* open the sound-device of solaris and set cd-quality */
- 
-@@ -387,7 +395,7 @@ gint flags;
+ /*
+  * open the sound-device of solaris and set cd-quality
+@@ -175,7 +184,7 @@ gint flags;
  	info.play.precision = 16;
  	info.play.encoding = AUDIO_ENCODING_LINEAR;
  	info.play.buffer_size = abuf_size;
@@ -55,7 +56,7 @@ $NetBSD: patch-ad,v 1.5 2009/02/11 21:48:39 shattered Exp $
  	info.output_muted = 0;
  #endif
  
-@@ -787,10 +795,10 @@ gchar keybuffer[MAXLINE];
+@@ -579,10 +588,10 @@ gchar keybuffer[MAXLINE];
  
  	/* the open sets also the global abuf_size-variable */
  
