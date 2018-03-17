@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/03/03 12:30:31 leot Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/03/17 11:07:39 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -66,6 +66,9 @@ ${PYSITELIB}/gallery_dl/extractor/archivedmoe.pyo
 ${PYSITELIB}/gallery_dl/extractor/archiveofsins.py
 ${PYSITELIB}/gallery_dl/extractor/archiveofsins.pyc
 ${PYSITELIB}/gallery_dl/extractor/archiveofsins.pyo
+${PYSITELIB}/gallery_dl/extractor/artstation.py
+${PYSITELIB}/gallery_dl/extractor/artstation.pyc
+${PYSITELIB}/gallery_dl/extractor/artstation.pyo
 ${PYSITELIB}/gallery_dl/extractor/b4k.py
 ${PYSITELIB}/gallery_dl/extractor/b4k.pyc
 ${PYSITELIB}/gallery_dl/extractor/b4k.pyo
@@ -153,9 +156,6 @@ ${PYSITELIB}/gallery_dl/extractor/imagehosts.pyo
 ${PYSITELIB}/gallery_dl/extractor/imgbox.py
 ${PYSITELIB}/gallery_dl/extractor/imgbox.pyc
 ${PYSITELIB}/gallery_dl/extractor/imgbox.pyo
-${PYSITELIB}/gallery_dl/extractor/imgchili.py
-${PYSITELIB}/gallery_dl/extractor/imgchili.pyc
-${PYSITELIB}/gallery_dl/extractor/imgchili.pyo
 ${PYSITELIB}/gallery_dl/extractor/imgth.py
 ${PYSITELIB}/gallery_dl/extractor/imgth.pyc
 ${PYSITELIB}/gallery_dl/extractor/imgth.pyo
@@ -186,6 +186,9 @@ ${PYSITELIB}/gallery_dl/extractor/loveisover.pyo
 ${PYSITELIB}/gallery_dl/extractor/luscious.py
 ${PYSITELIB}/gallery_dl/extractor/luscious.pyc
 ${PYSITELIB}/gallery_dl/extractor/luscious.pyo
+${PYSITELIB}/gallery_dl/extractor/mangadex.py
+${PYSITELIB}/gallery_dl/extractor/mangadex.pyc
+${PYSITELIB}/gallery_dl/extractor/mangadex.pyo
 ${PYSITELIB}/gallery_dl/extractor/mangafox.py
 ${PYSITELIB}/gallery_dl/extractor/mangafox.pyc
 ${PYSITELIB}/gallery_dl/extractor/mangafox.pyo
