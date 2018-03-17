@@ -1,9 +1,9 @@
-$NetBSD: patch-ag,v 1.1 2006/01/12 20:57:25 joerg Exp $
+$NetBSD: patch-ag,v 1.2 2018/03/17 01:27:55 ryoon Exp $
 
---- configure.orig	2006-01-12 20:37:05.000000000 +0000
+--- configure.orig	2011-07-12 21:21:49.000000000 +0000
 +++ configure
-@@ -1934,7 +1934,7 @@ linux* | gnu* | k*bsd*-gnu)
- echo "${ECHO_T}*** GNU, building POSIX version. we need pthread and rt." >&6
+@@ -3154,7 +3154,7 @@ $as_echo "*** GNU, building POSIX versio
+ 	PPC_CXXFLAGS="$PPC_CXXFLAGS -pthread"
  	PPC_LDADD="$PPC_LDADD -lpthread -lrt"
  ;;
 -freebsd*)
