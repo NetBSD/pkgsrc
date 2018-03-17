@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/01/01 22:30:03 rillig Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/03/17 14:26:22 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yard/templates_custom/default/class/html/selectors.erb
 ${GEM_LIBDIR}/.yard/templates_custom/default/class/html/setup.rb
@@ -91,6 +91,7 @@ ${GEM_LIBDIR}/lib/capybara/spec/session/element/assert_match_selector.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/element/match_css_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/element/match_xpath_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/element/matches_selector_spec.rb
+${GEM_LIBDIR}/lib/capybara/spec/session/evaluate_async_script_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/evaluate_script_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/execute_script_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/fill_in_spec.rb
@@ -104,11 +105,13 @@ ${GEM_LIBDIR}/lib/capybara/spec/session/frame/switch_to_frame_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/frame/within_frame_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/go_back_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/go_forward_spec.rb
+${GEM_LIBDIR}/lib/capybara/spec/session/has_all_selectors_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/has_button_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/has_css_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/has_current_path_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/has_field_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/has_link_spec.rb
+${GEM_LIBDIR}/lib/capybara/spec/session/has_none_selectors_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/has_select_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/has_selector_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/has_table_spec.rb
@@ -155,6 +158,7 @@ ${GEM_LIBDIR}/lib/capybara/spec/views/frame_parent.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/frame_two.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/header_links.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/host_links.erb
+${GEM_LIBDIR}/lib/capybara/spec/views/initial_alert.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/path.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/popup_one.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/popup_two.erb
@@ -162,6 +166,7 @@ ${GEM_LIBDIR}/lib/capybara/spec/views/postback.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/tables.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_base_tag.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_count.erb
+${GEM_LIBDIR}/lib/capybara/spec/views/with_fixed_header_footer.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_hover.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_html.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_html_entities.erb
