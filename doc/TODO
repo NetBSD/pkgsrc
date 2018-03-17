@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18189 2018/03/17 07:46:39 wiz Exp $
+$NetBSD: TODO,v 1.18190 2018/03/17 11:56:56 tnn Exp $
 
 Suggested new packages
 ======================
@@ -785,7 +785,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hercules-3.12
 	o hesiod-3.2.1
 	o hevea-2.28
-	o hexchat-2.12.4
 	o heyu-2.9.0
 	o hiawatha-10.7
 	o highlight-3.41
