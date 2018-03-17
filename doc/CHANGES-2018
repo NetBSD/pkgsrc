@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1362 2018/03/17 06:58:07 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1363 2018/03/17 07:46:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1857,3 +1857,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-pip to 9.0.2 [adam 2018-03-17]
 	Updated devel/py-astroid to 1.6.2 [adam 2018-03-17]
 	Updated devel/py-pylint to 1.8.3 [adam 2018-03-17]
+	Updated devel/p5-Module-FromPerlVer to 0.005005 [wiz 2018-03-17]
