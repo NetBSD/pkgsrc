@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1367 2018/03/17 11:07:52 leot Exp $
+$NetBSD: CHANGES-2018,v 1.1368 2018/03/17 11:56:56 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1863,3 +1863,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/xcdroast to 1.18 [tnn 2018-03-17]
 	Updated sysutils/rkflashtool to 20160324 [tnn 2018-03-17]
 	Updated net/gallery-dl to 1.3.1 [leot 2018-03-17]
+	Updated chat/hexchat to 2.14.1 [tnn 2018-03-17]
