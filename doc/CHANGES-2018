@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1380 2018/03/17 14:49:01 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1381 2018/03/17 15:53:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1884,3 +1884,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ruby-puma to 3.11.3 [taca 2018-03-17]
 	Updated www/heel to 3.2.0 [taca 2018-03-17]
 	Updated textproc/ruby-yard to 0.9.12 [taca 2018-03-17]
+	Updated www/ruby-rack-protection to 2.0.1 [taca 2018-03-17]
