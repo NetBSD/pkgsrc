@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1374 2018/03/17 14:26:40 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1375 2018/03/17 14:29:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1871,3 +1871,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/ruby-nio4r to 2.3.0 [taca 2018-03-17]
 	Updated security/ruby-rbnacl to 5.0.0 [taca 2018-03-17]
 	Updated www/ruby-capybara to 2.18.0 [taca 2018-03-17]
+	Updated databases/ruby-moneta to 1.0.0 [taca 2018-03-17]
