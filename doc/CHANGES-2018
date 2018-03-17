@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1378 2018/03/17 14:45:22 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1379 2018/03/17 14:47:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1882,3 +1882,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ruby-padrino to 0.14.3 [taca 2018-03-17]
 	Updated www/ruby-patron to 0.12.1 [taca 2018-03-17]
 	Updated www/ruby-puma to 3.11.3 [taca 2018-03-17]
+	Updated www/heel to 3.2.0 [taca 2018-03-17]
