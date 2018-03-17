@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2018/01/01 21:18:36 adam Exp $
+# $NetBSD: Makefile,v 1.30 2018/03/17 02:45:05 mef Exp $
 
-DISTNAME=		tqsl-2.2.1
-PKGREVISION=		6
+DISTNAME=		tqsl-2.3.1
 CATEGORIES=		ham
 MASTER_SITES=		https://sourceforge.net/projects/trustedqsl/files/TrustedQSL/v${PKGVERSION_NOREV}/
 
@@ -23,6 +22,13 @@ USE_CMAKE=		yes
 # an old version of pixman is found by the pkgsrc cairo.  The root
 # cause (aside from having two pixman versions installed) is ad hoc -L
 # usage in Makefile.am, without matching -R.
+
+# remove the string $(LIB_SUFFIX), tested with NetBSD at least
+SUBST_CLASSES+=		lib-suffix
+SUBST_MESSAGE.lib-suffix= Removing $$(LIB_SUFFIX) from src/CMakeLists.txt
+SUBST_STAGE.lib-suffix= post-patch
+SUBST_FILES.lib-suffix= src/CMakeLists.txt
+SUBST_SED.lib-suffix= 	-e s/\$$\(LIB_SUFFIX\)//
 
 do-configure:
 	(cd ${WRKSRC} ; \
