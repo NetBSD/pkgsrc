@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2018/03/14 14:35:06 taca Exp $
+# $NetBSD: Makefile,v 1.8 2018/03/17 14:16:47 taca Exp $
 
-DISTNAME=		cairo-1.15.11
+DISTNAME=		cairo-1.15.12
 CATEGORIES=		graphics
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
