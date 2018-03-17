@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1365 2018/03/17 09:10:43 tnn Exp $
+$NetBSD: CHANGES-2018,v 1.1366 2018/03/17 10:04:22 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1861,3 +1861,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/rhash to 1.3.6 [adam 2018-03-17]
 	Updated devel/cmake to 3.10.3 [adam 2018-03-17]
 	Updated sysutils/xcdroast to 1.18 [tnn 2018-03-17]
+	Updated sysutils/rkflashtool to 20160324 [tnn 2018-03-17]
