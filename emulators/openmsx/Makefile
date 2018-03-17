@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2017/01/01 14:43:38 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2018/03/17 23:13:25 ryoon Exp $
 
 DISTNAME=		openmsx-0.9.0
 PKGREVISION=		5
@@ -6,7 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openmsx/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://openmsx.sourceforge.net/
+HOMEPAGE=		http://openmsx.org/
 COMMENT=		MSX emulator that aims for perfection
 LICENSE=		gnu-gpl-v2
 
