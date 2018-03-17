@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/12/09 17:48:43 tsutsui Exp $
+# $NetBSD: Makefile,v 1.5 2018/03/17 16:20:25 taca Exp $
 
-DISTNAME=	http-form_data-2.0.0
+DISTNAME=	http-form_data-2.1.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
