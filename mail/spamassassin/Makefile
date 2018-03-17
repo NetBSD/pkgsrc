@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.129 2017/07/09 22:12:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.130 2018/03/17 09:14:35 tnn Exp $
 
 DISTNAME=	Mail-SpamAssassin-3.4.1
 PKGNAME=	spamassassin-3.4.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -67,6 +67,10 @@ PERL5_PACKLIST=		auto/Mail/SpamAssassin/.packlist
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_DIRS=		spamc
+# Fix openssl detection. These methods are deprecated and removed, but
+# still the configure scripts looks for them.
+CONFIGURE_ENV+=		ac_cv_lib_ssl_SSL_CTX_free=yes
+CONFIGURE_ENV+=		ac_cv_lib_crypto_CRYPTO_lock=yes
 BUILD_DIRS=		.  # build at the top-level directory, not in "spamc"
 PERL5_CONFIGURE=	NO # we need the default "do-configure" target
 PERL5_CONFIGURE_DIRS=	${WRKSRC}
