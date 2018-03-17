@@ -1,20 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2014/07/16 07:56:29 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/03/17 16:28:45 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/xpath.rb
 ${GEM_LIBDIR}/lib/xpath/dsl.rb
 ${GEM_LIBDIR}/lib/xpath/expression.rb
-${GEM_LIBDIR}/lib/xpath/html.rb
 ${GEM_LIBDIR}/lib/xpath/literal.rb
-${GEM_LIBDIR}/lib/xpath.rb
 ${GEM_LIBDIR}/lib/xpath/renderer.rb
 ${GEM_LIBDIR}/lib/xpath/union.rb
 ${GEM_LIBDIR}/lib/xpath/version.rb
-${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/spec/fixtures/form.html
 ${GEM_LIBDIR}/spec/fixtures/simple.html
 ${GEM_LIBDIR}/spec/fixtures/stuff.html
-${GEM_LIBDIR}/spec/html_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/union_spec.rb
 ${GEM_LIBDIR}/spec/xpath_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/${PKGVERSION}/build_info
+

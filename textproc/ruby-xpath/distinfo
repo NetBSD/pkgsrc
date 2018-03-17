@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/06/10 16:19:25 taca Exp $
+$NetBSD: distinfo,v 1.4 2018/03/17 16:28:45 taca Exp $
 
-SHA1 (xpath-2.1.0.gem) = 3d35098b9007889154bccf4ba368d0da3a29389a
-RMD160 (xpath-2.1.0.gem) = 00cf999764c777ffbd850f9e5fe7e56049aff8da
-SHA512 (xpath-2.1.0.gem) = 50d80cac3fd65cbd211d3a87b8844a6607b14c841a1a5609e2370c3624daf719b937a61e526bf31aedee13346802d6bbb721d58bda2bef9c564c187b28bb90e2
-Size (xpath-2.1.0.gem) = 16896 bytes
+SHA1 (xpath-3.0.0.gem) = 290e6916e380c882ed46b271a5b76fb5f4b9b2d8
+RMD160 (xpath-3.0.0.gem) = abf25701b8b6dca3951df75d35a5c32889c40966
+SHA512 (xpath-3.0.0.gem) = fd1e8cfff11e8c14efb1ad2cabb9a0a3bc3d79d40b61264c524ff4524c5e7b9ff86de0746f4530fe7501f5e5e1683cb87c4a479f5e67deb7d8f93ed552ec78d6
+Size (xpath-3.0.0.gem) = 13824 bytes
