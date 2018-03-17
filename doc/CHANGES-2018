@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1393 2018/03/17 16:29:06 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1394 2018/03/17 16:31:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1897,3 +1897,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ruby-loofah to 2.2.0 [taca 2018-03-17]
 	Updated textproc/ruby-stringex to 2.8.4 [taca 2018-03-17]
 	Updated textproc/ruby-xpath to 3.0.0 [taca 2018-03-17]
+	Updated textproc/ruby-xslt to 0.9.10 [taca 2018-03-17]
