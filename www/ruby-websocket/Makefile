@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2017/09/16 19:27:26 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/03/17 16:09:03 taca Exp $
 
-DISTNAME=	websocket-1.2.4
+DISTNAME=	websocket-1.2.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	ruby www
 
