@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1387 2018/03/17 16:15:25 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1388 2018/03/17 16:18:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1891,3 +1891,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ruby-websocket to 1.2.5 [taca 2018-03-17]
 	Updated x11/ruby-tk-gem to 0.2.0 [taca 2018-03-17]
 	Updated www/ruby-faraday to 0.14.0 [taca 2018-03-17]
+	Removed www/ruby-mustermann19 [taca 2018-03-17]
