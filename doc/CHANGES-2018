@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1390 2018/03/17 16:20:55 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1391 2018/03/17 16:22:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1894,3 +1894,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed www/ruby-mustermann19 [taca 2018-03-17]
 	Updated www/ruby-mustermann to 1.0.2 [taca 2018-03-17]
 	Updated www/ruby-http-form_data to 2.1.0 [taca 2018-03-17]
+	Updated www/ruby-loofah to 2.2.0 [taca 2018-03-17]
