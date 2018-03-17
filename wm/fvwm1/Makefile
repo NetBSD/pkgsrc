@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2012/10/29 09:46:46 cegger Exp $
+# $NetBSD: Makefile,v 1.22 2018/03/17 23:01:02 jmcneill Exp $
 
 DISTNAME=	fvwm-1.24r
 PKGNAME=	${DISTNAME:S/fvwm/fvwm1/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 wm
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -41,7 +41,7 @@ post-patch:
 	  -e 's#$${X11BASE}#${X11BASE}#g' sample.fvwmrc/system.fvwmrc.old >sample.fvwmrc/system.fvwmrc; \
 	${MV} sample.fvwmrc/mwm.fvwmrc sample.fvwmrc/mwm.fvwmrc.old; \
 	${SED} -e 's#$${PREFIX}#${PREFIX}#g' \
-	  -e 's#$${X11BASE}#${X11BASE}#g' sample.fvwmrc/mwm.fvwmrc.old >sample.fvwmrc/mvm.fvwmrc
+	  -e 's#$${X11BASE}#${X11BASE}#g' sample.fvwmrc/mwm.fvwmrc.old >sample.fvwmrc/mwm.fvwmrc
 
 INSTALLATION_DIRS=	lib/X11/fvwm/pixmaps lib/X11/fvwm/bitmaps
 
