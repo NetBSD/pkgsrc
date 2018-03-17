@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.3 2018/03/07 11:57:29 wiz Exp $
+# $NetBSD: build.mk,v 1.4 2018/03/17 11:39:01 tnn Exp $
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-meson-[0-9]*:../../devel/py-meson
 
@@ -6,7 +6,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-meson-[0-9]*:../../devel/py-meson
 
 do-configure: meson-configure
 meson-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} meson --prefix ${PREFIX} --buildtype=plain ${MESON_ARGS} . output
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} meson --prefix ${PREFIX} --mandir ${PKGMANDIR} --buildtype=plain ${MESON_ARGS} . output
 
 do-build: meson-build
 meson-build:
