@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1315 2018/03/13 17:11:20 taca Exp $
+# $NetBSD: Makefile,v 1.1316 2018/03/17 16:17:37 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -824,7 +824,6 @@ SUBDIR+=	ruby-loofah
 SUBDIR+=	ruby-mechanize
 SUBDIR+=	ruby-multipart-post
 SUBDIR+=	ruby-mustermann
-SUBDIR+=	ruby-mustermann19
 SUBDIR+=	ruby-net-http-digest_auth
 SUBDIR+=	ruby-net-http-persistent
 SUBDIR+=	ruby-ntlm-http
