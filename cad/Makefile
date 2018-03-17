@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2017/09/26 10:26:55 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2018/03/17 22:20:13 mef Exp $
 #
 
 COMMENT=	CAD tools
@@ -53,6 +53,7 @@ SUBDIR+=	p5-gds2
 SUBDIR+=	pcb
 SUBDIR+=	py-MyHDL
 SUBDIR+=	py-gds
+SUBDIR+=	py-gdscad
 SUBDIR+=	py-simpy
 SUBDIR+=	qcad
 SUBDIR+=	qcad-partlibrary
