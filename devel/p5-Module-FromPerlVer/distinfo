@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.5 2018/03/11 10:18:41 wiz Exp $
+$NetBSD: distinfo,v 1.6 2018/03/17 07:46:14 wiz Exp $
 
-SHA1 (Module-FromPerlVer-0.004002.tar.gz) = 20adc6c16c36ff0365bbe72b7be5b102d47a39ad
-RMD160 (Module-FromPerlVer-0.004002.tar.gz) = 3c4d4401a368716564e9d2ba202d824a0965c14d
-SHA512 (Module-FromPerlVer-0.004002.tar.gz) = e3760b8aa72d5182902e1f0c2b92ddf53e1ba3576f1948171d8447f0746a5d920dc8a0ed01587bd6e1db7614a72501fb6ba4dd8a605e311e52649414e97c46dd
-Size (Module-FromPerlVer-0.004002.tar.gz) = 31813 bytes
+SHA1 (Module-FromPerlVer-0.005005.tar.gz) = d886385575e33754a6ab88a37143c2ff37119dd4
+RMD160 (Module-FromPerlVer-0.005005.tar.gz) = 67a8dfdefcb13bf4d2d7dfaf1c0628c872210fc9
+SHA512 (Module-FromPerlVer-0.005005.tar.gz) = d49c926942e8ad9b4b58f4f346da7ee68d323da6e6ab3bed9e67c41ddcc2f9a235aba552da317eb2e017283ea9811c70609c12390e316af737cab3db3b3ccc65
+Size (Module-FromPerlVer-0.005005.tar.gz) = 34162 bytes
+SHA1 (patch-MANIFEST) = cd9b03da38a0449bb6145adb46f0c91bfab0003d
+SHA1 (patch-Makefile.PL) = 50dc79e42d667722546a351df1e8624a18d4fc09
