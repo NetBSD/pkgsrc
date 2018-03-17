@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2017/09/16 19:27:25 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2018/03/17 14:26:22 taca Exp $
 
-DISTNAME=	capybara-2.15.1
+DISTNAME=	capybara-2.18.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel ruby www
 
