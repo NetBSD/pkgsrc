@@ -1,13 +1,10 @@
-$NetBSD: distinfo,v 1.5 2018/02/02 14:01:59 jperkin Exp $
+$NetBSD: distinfo,v 1.6 2018/03/17 11:56:15 tnn Exp $
 
-SHA1 (hexchat-2.12.3.tar.xz) = 69c91e374eed4b869941d55a7d50362c667119bb
-RMD160 (hexchat-2.12.3.tar.xz) = b9340b949012f4f86e6d14b7b8c6e7794967bb0b
-SHA512 (hexchat-2.12.3.tar.xz) = 1ee8348b70ed27786874aebb136e78b9d3b24bc55b7cebb5c6a730970f6aa3ec690f8c7422003d7ace56987ca84c993694c8ab6b830ef39b620e544fc7353b04
-Size (hexchat-2.12.3.tar.xz) = 1577736 bytes
-SHA1 (patch-configure) = 86c76dec0de83f6ac68a596a8fff5d84a94bb04f
+SHA1 (hexchat-2.14.1.tar.xz) = 3cb9c8734eded5d55e08ef801b668ee730374a5a
+RMD160 (hexchat-2.14.1.tar.xz) = 87f0aadaaeb4fd16650b3622a45510bd470c32d1
+SHA512 (hexchat-2.14.1.tar.xz) = 2728d6f084530c1a65ddb7960db6574fef2bca77e726a2155c8b5724256f37b47421e990b1bf7c9fad7987027b2f6de4534a8df28a98cb3d28da726e16ac32dd
+Size (hexchat-2.14.1.tar.xz) = 1281872 bytes
 SHA1 (patch-osx_launcher.sh) = 7493430921809182898aca2ebb8fd1f493dbd9d3
-SHA1 (patch-plugins_sysinfo_Makefile.in) = cd1d3b70a59ecd18b895a1633f59e6ab745c2e42
-SHA1 (patch-plugins_sysinfo_unix_parse.c) = 2639ca0d8cfca47e6e88291ba318db21cb89a234
+SHA1 (patch-plugins_sysinfo_unix_parse.c) = 92b882b7573cfcfc280351353a7bdcb0a7940c06
 SHA1 (patch-plugins_sysinfo_unix_pci.c) = db2d20261419bed6d6c4b716b4416d73b3386053
 SHA1 (patch-plugins_sysinfo_unix_pci.h) = 018b74796143b26d6a1f9ad821f3889b74b09cc8
-SHA1 (patch-src_fe-gtk_Makefile.in) = ea3df3ff0618a0894d8640783e440a7df4d62c74
