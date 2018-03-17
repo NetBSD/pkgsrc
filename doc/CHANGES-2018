@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1373 2018/03/17 14:21:43 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1374 2018/03/17 14:26:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1869,3 +1869,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated games/ruby-squib to 0.14.1 [taca 2018-03-17]
 	Updated math/ruby-spreadsheet to 1.1.7 [taca 2018-03-17]
 	Updated net/ruby-nio4r to 2.3.0 [taca 2018-03-17]
+	Updated security/ruby-rbnacl to 5.0.0 [taca 2018-03-17]
+	Updated www/ruby-capybara to 2.18.0 [taca 2018-03-17]
