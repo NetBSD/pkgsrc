@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2018/03/17 09:09:12 tnn Exp $
+
+Support user destdir.
+
+--- src/Makefile.in.orig	2018-03-17 08:53:29.502672918 +0000
++++ src/Makefile.in
+@@ -1172,7 +1172,7 @@ install-data-local:
+ 
+ # set suid bit on xcdrwrap
+ install-data-hook:
+-	chmod 4711 $(XCDRLIB_PREFIX)/bin/xcdrwrap
++#	chmod 4711 $(XCDRLIB_PREFIX)/bin/xcdrwrap
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
