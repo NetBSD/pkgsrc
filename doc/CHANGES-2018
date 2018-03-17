@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1376 2018/03/17 14:41:36 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1377 2018/03/17 14:43:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1880,3 +1880,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ruby-padrino-gen to 0.14.3 [taca 2018-03-17]
 	Updated www/ruby-padrino-mailer to 0.14.3 [taca 2018-03-17]
 	Updated www/ruby-padrino to 0.14.3 [taca 2018-03-17]
+	Updated www/ruby-patron to 0.12.1 [taca 2018-03-17]
