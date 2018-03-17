@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2017/09/26 10:59:39 ryoon Exp $
-bin/certcgi
+@comment $NetBSD: PLIST,v 1.24 2018/03/17 01:07:15 ryoon Exp $
 bin/certutil
 bin/cmsutil
 bin/crlutil
