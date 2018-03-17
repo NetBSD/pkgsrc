@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2018/01/19 07:49:06 adam Exp $
+# $NetBSD: Makefile,v 1.140 2018/03/17 08:03:09 adam Exp $
 
 .include "Makefile.version"
 
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	--system-libs
 # jsoncpp requires cmake to build, so use the one provided with cmake
 CONFIGURE_ARGS+=	--no-system-jsoncpp
 
+LDFLAGS+=		-lcrypto # for rhash
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../mk/bsd.prefs.mk"
