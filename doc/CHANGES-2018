@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1371 2018/03/17 14:18:34 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1372 2018/03/17 14:19:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1867,3 +1867,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-simplecov to 0.16.1 [taca 2018-03-17]
 	Updated graphics/ruby-cairo to 1.15.12 [taca 2018-03-17]
 	Updated games/ruby-squib to 0.14.1 [taca 2018-03-17]
+	Updated math/ruby-spreadsheet to 1.1.7 [taca 2018-03-17]
