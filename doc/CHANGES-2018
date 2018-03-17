@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1395 2018/03/17 16:34:31 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1396 2018/03/17 20:54:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1899,3 +1899,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/ruby-xpath to 3.0.0 [taca 2018-03-17]
 	Updated textproc/ruby-xslt to 0.9.10 [taca 2018-03-17]
 	Updated textproc/ruby-toml to 0.2.0 [taca 2018-03-17]
+	Updated textproc/discount to 2.2.3anb3 [schmonz 2018-03-17]
