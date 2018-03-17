@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2016/10/18 16:28:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/03/17 16:09:03 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.codeclimate.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.travis.yml
@@ -42,6 +43,7 @@ ${GEM_LIBDIR}/lib/websocket/handshake/handler/server04.rb
 ${GEM_LIBDIR}/lib/websocket/handshake/handler/server75.rb
 ${GEM_LIBDIR}/lib/websocket/handshake/handler/server76.rb
 ${GEM_LIBDIR}/lib/websocket/handshake/server.rb
+${GEM_LIBDIR}/lib/websocket/nice_inspect.rb
 ${GEM_LIBDIR}/lib/websocket/version.rb
 ${GEM_LIBDIR}/spec/frame/incoming_03_spec.rb
 ${GEM_LIBDIR}/spec/frame/incoming_04_spec.rb
