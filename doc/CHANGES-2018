@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1412 2018/03/18 09:14:29 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1413 2018/03/18 10:23:26 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1916,3 +1916,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-Catalyst-Plugin-Static-Simple to 0.36 [wiz 2018-03-18]
 	Updated www/p5-Mojolicious to 7.71 [wiz 2018-03-18]
 	Updated www/p5-Apache-Gallery to 1.0.2 [wiz 2018-03-18]
+	Updated textproc/translate-shell to 0.9.6.7 [leot 2018-03-18]
