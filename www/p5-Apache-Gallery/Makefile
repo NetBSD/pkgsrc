@@ -1,99 +1,39 @@
-# $NetBSD: Makefile,v 1.69 2017/06/05 14:25:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.70 2018/03/18 09:14:19 wiz Exp $
 
-DISTNAME=	Apache-Gallery-0.9.1
-PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	30
-CATEGORIES=	www graphics perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/}
+DISTNAME=	Apache-Gallery-1.0.2-withoutworldwriteables
+PKGNAME=	${DISTNAME:C/-without.*//}
+CATEGORIES=	graphics www
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/L/LE/LEGART/
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://apachegallery.dk/
 COMMENT=	Perl5/Apache module for handling image directories
 LICENSE=	artistic
 
-DEPENDS+=	p5-CGI>=2.93:../../www/p5-CGI
-DEPENDS+=	p5-URI>=1.23:../../www/p5-URI
 DEPENDS+=	p5-Image-Imlib2-[0-9]*:../../graphics/p5-Image-Imlib2
-DEPENDS+=	p5-Image-Info>=1.15:../../graphics/p5-Image-Info
+DEPENDS+=	p5-Image-Info-[0-9]*:../../graphics/p5-Image-Info
 DEPENDS+=	p5-Image-Size-[0-9]*:../../graphics/p5-Image-Size
 DEPENDS+=	p5-Text-Template-[0-9]*:../../textproc/p5-Text-Template
-DEPENDS+=	p5-${APACHE_PKG_PREFIX}-libapreq{,2}-[0-9]*:../../www/${LIBAPREQ}
+DEPENDS+=	p5-HTTP-Date-[0-9]*:../../www/p5-HTTP-Date
+DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
+DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
 
-PERL5_PACKLIST=		auto/Apache/Gallery/.packlist
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-.include "../../mk/bsd.prefs.mk"
+USE_LANGUAGES=	# none
 
-PKG_SYSCONFSUBDIR?=	httpd
-MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+TEST_ENV+=	MOD_PERL_API_VERSION=2
+BUILD_DEFS+=	VARBASE
 
-LIBAPREQ=		p5-libapreq2
+PERL5_PACKLIST=	auto/Apache/Gallery/.packlist
 
-AG=			ag
-AG_DOCDIR=		${PREFIX}/share/doc/${AG}
-AG_EGDIR=		${PREFIX}/share/examples/${AG}
-AG_SHAREDIR=		${PREFIX}/share/${AG}
+SUBST_CLASSES+=		var
+SUBST_FILES.var+=	t/004_cache_dir.t
+SUBST_SED.var+=		-e 's,/var/tmp/Apache-Gallery,${VARBASE}/cache/www,'
+SUBST_STAGE.var=	pre-configure
 
-FILES_SUBST+=		LDFLAGS=${LDFLAGS:M*:Q}
-
-MESSAGE_SUBST+=		AG=${AG}
-MESSAGE_SUBST+=		AG_DOCDIR=${AG_DOCDIR}
-MESSAGE_SUBST+=		AG_SHAREDIR=${AG_SHAREDIR}
-
-PLIST_SUBST+=		AG=${AG:Q}
-PLIST_SUBST+=		AG_DOCDIR=${AG_DOCDIR:S,${PREFIX}/,,}
-PLIST_SUBST+=		AG_EGDIR=${AG_EGDIR:S,${PREFIX}/,,}
-PLIST_SUBST+=		AG_SHAREDIR=${AG_SHAREDIR:S,${PREFIX}/,,}
-
-CONF_FILES=		${AG_EGDIR}/${AG}.conf ${PKG_SYSCONFDIR}/${AG}.conf
-
-SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	ag.conf
-SUBST_SED.paths+=	-e 's,@AG@,${AG},g'
-SUBST_SED.paths+=	-e 's,@AG_SHAREDIR@,${AG_SHAREDIR},g'
-SUBST_STAGE.paths=	post-patch
-
-USE_TOOLS+=	pax
-
-post-extract:
-	${CP} ${FILESDIR}/ag.conf ${WRKSRC}
-
-post-patch:
-	@${MV} -f ${WRKSRC}/templates/default/gallery.css \
-	    ${WRKSRC}/htdocs/gallery-default.css
-	@${MV} -f ${WRKSRC}/templates/new/gallery.css \
-	    ${WRKSRC}/htdocs/gallery-new.css
-
-pre-configure:
-	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM} -f
-
-post-build:
-	@for j in default new; \
-	do \
-	    cd ${WRKSRC}/templates/$$j && \
-	    for i in *.tpl; \
-	    do \
-		${CP} -p $$i $$i.orig && \
-		${SED} -e "s,/icons/,/${AG}/," \
-		       -e "s,/gallery.css,/${AG}/gallery-$$j.css," \
-		    $$i.orig > $$i; \
-		${RM} -f $$i.orig; \
-	    done; \
-	done
-
-INSTALLATION_DIRS=	${AG_SHAREDIR}/htdocs ${AG_SHAREDIR}/templates \
-			${AG_DOCDIR} ${AG_EGDIR}
-
-post-install:
-	cd ${WRKSRC}/htdocs && pax -rw . ${DESTDIR}${AG_SHAREDIR}/htdocs
-	cd ${WRKSRC}/templates && pax -rw . ${DESTDIR}${AG_SHAREDIR}/templates
-	${INSTALL_DATA} ${WRKSRC}/Changes ${DESTDIR}${AG_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${AG_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${AG_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${AG_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/UPGRADE ${DESTDIR}${AG_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/${AG}.conf ${DESTDIR}${AG_EGDIR}
-
-.include "../../graphics/imlib2/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
-.include "../../mk/apache.mk"
+# for make test
+# (still asking for Apache::FakeRequest)
+.include "../../www/ap2-perl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
