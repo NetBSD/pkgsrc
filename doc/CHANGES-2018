@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1409 2018/03/18 09:00:47 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1410 2018/03/18 09:03:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1913,3 +1913,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-XML-Simple to 2.25 [wiz 2018-03-18]
 	Updated time/p5-Time-HiRes to 1.9757 [wiz 2018-03-18]
 	Updated www/p5-Apache-ASP to 2.63 [wiz 2018-03-18]
+	Updated www/p5-Catalyst-Plugin-Static-Simple to 0.36 [wiz 2018-03-18]
