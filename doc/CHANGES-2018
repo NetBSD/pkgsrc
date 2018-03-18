@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1401 2018/03/18 08:44:09 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1402 2018/03/18 08:46:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1905,3 +1905,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/p5-App-Sqitch to 0.9997 [wiz 2018-03-18]
 	Updated devel/p5-Config-IniFiles to 2.95 [wiz 2018-03-18]
 	Updated devel/p5-Module-FromPerlVer to 0.005007 [wiz 2018-03-18]
+	Updated devel/p5-Test-Inter to 1.07 [wiz 2018-03-18]
