@@ -1,11 +1,11 @@
-$NetBSD: patch-Makefile.PL,v 1.1 2018/03/17 07:46:15 wiz Exp $
+$NetBSD: patch-Makefile.PL,v 1.2 2018/03/18 08:44:00 wiz Exp $
 
 Fix path to env(1).
 https://rt.cpan.org/Ticket/Display.html?id=124776
 
---- Makefile.PL.orig	2018-03-16 01:09:46.000000000 +0000
+--- Makefile.PL.orig	2018-03-17 23:15:15.000000000 +0000
 +++ Makefile.PL
-@@ -36,7 +36,7 @@ for my $base 
+@@ -37,7 +37,7 @@ for my $base 
  
      print "Setup: '$path'";
  
