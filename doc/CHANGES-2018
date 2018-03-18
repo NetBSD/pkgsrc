@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1407 2018/03/18 08:53:37 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1408 2018/03/18 08:55:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1911,3 +1911,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/p5-Net-Frame to 1.18 [wiz 2018-03-18]
 	Updated net/p5-SNMP-Info to 3.51 [wiz 2018-03-18]
 	Updated textproc/p5-XML-Simple to 2.25 [wiz 2018-03-18]
+	Updated time/p5-Time-HiRes to 1.9757 [wiz 2018-03-18]
