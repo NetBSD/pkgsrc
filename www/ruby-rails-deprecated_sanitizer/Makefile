@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/06/21 15:42:11 taca Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/18 14:21:22 taca Exp $
 
 DISTNAME=	rails-deprecated_sanitizer-1.0.3
 PKGREVISION=	1
@@ -11,7 +11,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 
-RUBY_RAILS_SUPPORTED=	42
+RUBY_RAILS_ACCEPTED=	42
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

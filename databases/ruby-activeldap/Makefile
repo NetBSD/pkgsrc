@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/06/21 15:42:10 taca Exp $
+# $NetBSD: Makefile,v 1.14 2018/03/18 14:21:19 taca Exp $
 
 DISTNAME=	activeldap-3.2.2
 PKGREVISION=	1
@@ -15,7 +15,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-gettext_i18n_rails>=0:../../devel/ruby-gettext_i18n_
 # gettext_i18n_rails depends on fast_gettext
 #DEPENDS+=	${RUBY_PKGPREFIX}-fast_gettext>=0:../../devel/ruby-fast_gettext
 
-RUBY_RAILS_SUPPORTED=	32
+RUBY_RAILS_ACCEPTED=	32
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
