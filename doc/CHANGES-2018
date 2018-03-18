@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1399 2018/03/18 08:31:23 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1400 2018/03/18 08:40:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1903,3 +1903,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added cad/py-gdscad version 0.4.5 [mef 2018-03-17]
 	Updated emulators/mame to 0.195 [ryoon 2018-03-18]
 	Updated databases/p5-App-Sqitch to 0.9997 [wiz 2018-03-18]
+	Updated devel/p5-Config-IniFiles to 2.95 [wiz 2018-03-18]
