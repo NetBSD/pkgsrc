@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/03/13 16:33:39 taca Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/18 14:21:22 taca Exp $
 
 DISTNAME=	actionview-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-actionview${RUBY_RAILS}-${RAILS_VERSION}
@@ -15,7 +15,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-erubis>=2.7.0:../../www/ruby-erubis
 DEPENDS+=	${RUBY_PKGPREFIX}-rails-dom-testing1>=1.0.5:../../textproc/ruby-rails-dom-testing1
 DEPENDS+=	${RUBY_PKGPREFIX}-rails-html-sanitizer>=1.0.3:../../www/ruby-rails-html-sanitizer
 
-RUBY_RAILS_SUPPORTED=	42
+RUBY_RAILS_ACCEPTED=	42
 RUBY_RAILS_STRICT_DEP=	yes
 
 .include "../../lang/ruby/gem.mk"

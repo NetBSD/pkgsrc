@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/06/21 13:12:20 taca Exp $
+# $NetBSD: Makefile,v 1.3 2018/03/18 14:21:20 taca Exp $
 
 DISTNAME=	activemodel-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-activemodel${RUBY_RAILS}-${RAILS_VERSION}
@@ -12,7 +12,7 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-builder>=3.1:../../textproc/ruby-builder
 
-RUBY_RAILS_SUPPORTED=	42
+RUBY_RAILS_ACCEPTED=	42
 RUBY_RAILS_STRICT_DEP=	yes
 
 .include "../../lang/ruby/gem.mk"

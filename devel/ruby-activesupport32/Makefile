@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/03/13 17:04:19 taca Exp $
+# $NetBSD: Makefile,v 1.5 2018/03/18 14:21:20 taca Exp $
 
 DISTNAME=	activesupport-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-activesupport${RUBY_RAILS}-${RAILS_VERSION}
@@ -13,7 +13,7 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=0.6:../../devel/ruby-i18n
 DEPENDS+=	${RUBY_PKGPREFIX}-multi_json>=1.0<2:../../textproc/ruby-multi_json
 
-RUBY_RAILS_SUPPORTED=	32
+RUBY_RAILS_ACCEPTED=	32
 RUBY_RAILS_STRICT_DEP=	yes
 
 OVERRIDE_GEMSPEC+=	i18n>=0.6

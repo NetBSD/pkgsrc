@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/09/04 18:00:53 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/03/18 14:21:20 taca Exp $
 
 DISTNAME=	gettext_activerecord-2.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
@@ -13,7 +13,7 @@ LICENSE=	ruby-license
 DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=2.1.0:../../devel/ruby-gettext
 DEPENDS+=	${RUBY_ACTIVERECORD_DEPENDS}
 
-RUBY_RAILS_SUPPORTED=	# defined
+RUBY_RAILS_ACCEPTED=	# defined
 
 post-extract:
 	cd ${WRKSRC}; ${FIND} . -xdev -type f -print | ${XARGS} ${CHMOD} g-w

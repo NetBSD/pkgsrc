@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.41 2017/05/30 16:02:00 taca Exp $
+# $NetBSD: modules.mk,v 1.42 2018/03/18 14:21:21 taca Exp $
 #
 #
 # Package-settable variables:
@@ -27,7 +27,7 @@
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
 
-.if defined(RUBY_RAILS_SUPPORTED)
+.if defined(RUBY_RAILS_ACCEPTED)
 USE_TOOLS+=		expr
 .endif
 
@@ -44,7 +44,7 @@ DEPENDS+= ${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 .include "../../lang/ruby/buildlink3.mk"
 .endif
 
-.if defined(RUBY_RAILS_SUPPORTED)
+.if defined(RUBY_RAILS_ACCEPTED)
 .include "../../lang/ruby/rails.mk"
 .endif
 

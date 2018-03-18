@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/03/13 16:36:32 taca Exp $
+# $NetBSD: Makefile,v 1.5 2018/03/18 14:21:21 taca Exp $
 
 DISTNAME=	actionmailer-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-actionmailer${RUBY_RAILS}-${RAILS_VERSION}
@@ -15,7 +15,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-mail>=2.5.4:../../mail/ruby-mail
 # ruby-actionview already depends it.
 #DEPENDS+=	${RUBY_PKGPREFIX}-rails-dom-testing>=1.0.5:../../textproc/ruby-rails-dom-testing
 
-RUBY_RAILS_SUPPORTED=	42
+RUBY_RAILS_ACCEPTED=	42
 RUBY_RAILS_STRICT_DEP=	yes
 
 .include "../../lang/ruby/gem.mk"
