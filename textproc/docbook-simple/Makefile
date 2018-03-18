@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2012/10/25 06:55:47 asau Exp $
-#
+# $NetBSD: Makefile,v 1.20 2018/03/18 08:05:15 wiz Exp $
 
 DISTNAME=	docbook-simple-1.1
 PKGREVISION=	4
 CATEGORIES=	textproc
-MASTER_SITES=	http://docbook.org/xml/simple/1.1/
+MASTER_SITES=	https://docbook.org/xml/simple/1.1/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://docbook.org/xml/simple/
+HOMEPAGE=	https://docbook.org/xml/simple/
 COMMENT=	Simplified DocBook XML DTD
 
 USE_LANGUAGES=	# empty
