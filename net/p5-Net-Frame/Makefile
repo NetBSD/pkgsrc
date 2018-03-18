@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2017/09/17 20:34:59 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2018/03/18 08:51:13 wiz Exp $
 
-DISTNAME=	Net-Frame-1.17
+DISTNAME=	Net-Frame-1.18
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
