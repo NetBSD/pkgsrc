@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.48 2017/06/05 14:25:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.49 2018/03/18 09:00:38 wiz Exp $
 
-DISTNAME=	Apache-ASP-2.62
+DISTNAME=	Apache-ASP-2.63
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.apache-asp.org/
 COMMENT=	Perl5/Apache module of Perl-coded Active Server Pages
+LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Apache-Filter>=1.019:../../www/p5-Apache-Filter
 DEPENDS+=	p5-Apache-SSI>=2.16:../../www/p5-Apache-SSI
