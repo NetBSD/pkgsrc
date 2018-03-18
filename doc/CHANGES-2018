@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1397 2018/03/17 22:20:13 mef Exp $
+$NetBSD: CHANGES-2018,v 1.1398 2018/03/18 00:41:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1901,3 +1901,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/ruby-toml to 0.2.0 [taca 2018-03-17]
 	Updated textproc/discount to 2.2.3anb3 [schmonz 2018-03-17]
 	Added cad/py-gdscad version 0.4.5 [mef 2018-03-17]
+	Updated emulators/mame to 0.195 [ryoon 2018-03-18]
