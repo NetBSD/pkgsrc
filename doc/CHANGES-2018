@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1411 2018/03/18 09:05:06 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1412 2018/03/18 09:14:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1915,3 +1915,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-Apache-ASP to 2.63 [wiz 2018-03-18]
 	Updated www/p5-Catalyst-Plugin-Static-Simple to 0.36 [wiz 2018-03-18]
 	Updated www/p5-Mojolicious to 7.71 [wiz 2018-03-18]
+	Updated www/p5-Apache-Gallery to 1.0.2 [wiz 2018-03-18]
