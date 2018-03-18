@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18192 2018/03/18 07:45:57 wiz Exp $
+$NetBSD: TODO,v 1.18193 2018/03/18 10:13:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -367,6 +367,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adocman-0.13
 	o adodb-5.20.7 [security]
 	o adplug-2.2.1
+	o adwaita-icon-theme-3.28.0
 	o aegis-4.25
 	o aewm++-1.1.5
 	o afbinit-1.0.1
@@ -530,6 +531,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dasher-4.11
 	o dateutils-0.4.2
 	o dconf-0.27.1 [wip]
+	o dconf-0.28.0
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
 	o ddrescue-1.21
@@ -665,6 +667,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gcloud-golang-metadata-0.12.0
 	o gcombust-0.1.55
 	o gcompris-15.02
+	o gdbus-codegen-2.56.0
 	o gdeskcal-1.01
 	o gdl-3.16.0
 	o gdm-2.32.2 [GNOME 2.32]
@@ -689,6 +692,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.5 [wip]
 	o glib-networking-2.56.0 [needs glib2-2.56]
+	o glib2-2.56.0
+	o glib2-tools-2.56.0
 	o gliv-1.9.7
 	o glom-1.14.2 [GNOME 2.26]
 	o glx-utils-8.3.0
@@ -731,6 +736,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-crypto-2.1.0
 	o gnu-pw-mgr-2.0
 	o gnucap-20130423
+	o gnumeric112-1.12.39
 	o gnustep-back-0.24.1
 	o gnustep-base-1.24.8
 	o gnustep-examples-1.4.0
@@ -740,6 +746,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o go-grpc-1.5.2
 	o gob-2.0.19
 	o gobby-0.5.0
+	o goffice0.10-0.10.39
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
 	o goocanvas-2.0.2
@@ -761,10 +768,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gst-plugins1-omx-1.10.0
 	o gst123-0.3.5
 	o gthumb-3.4.0
+	o gtk3-3.22.29
 	o gtkglarea-2.1.0
 	o gtklevel9-5.1
 	o gtkmagnetic-23
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
+	o gtksourceview3-3.24.7
 	o gtl-3.6
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
@@ -957,6 +966,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libressl-2.6.3
 	o librsvg-2.42.3 [needs rust+cargo]
+	o libsoup-2.62.0
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libtecla-1.6.3
@@ -1115,6 +1125,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pam-saml-1.5
 	o pam-yubico-2.21
 	o pan-0.140
+	o pango-1.42.0
 	o paragui-1.1.8
 	o pari-2.9.4
 	o parrot-7.11.0
@@ -1196,11 +1207,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-augeas-1.0.3
+	o py-betamax-0.8.1
 	o py-cassa-1.11.0
 	o py-cssselect2-0.2.1
 	o py-doctor-15.1.0
 	o py-ephem3-3.7.6.0
 	o py-gnome-menus-3.8.0
+	o py-gobject3-3.28.1
+	o py-gobject3-common-3.28.1
 	o py-hgview-1.9.0
 	o py-hsm-1.1.1
 	o py-input-pad-1.4.2
@@ -1212,14 +1226,17 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
 	o py-pendrell-0.3.7
+	o py-pkginfo-1.4.2
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
 	o py-quixote-2.9
 	o py-scgi-1.15
+	o py-setuptools-39.0.0
 	o py-simpletal-5.1
 	o py-smb-1.1.17
 	o py-spf-2.0.12t
 	o py-suds-0.4.1
+	o py-sure-1.4.9
 	o py-sybase-0.37
 	o py-wxWidgets-4.0.0
 	o py-yubiauth-0.3.10
@@ -1407,6 +1424,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tor-browser-7.5
 	o totem-3.14.1
 	o totem-pl-parser-3.10.3
+	o translate-shell-0.9.6.7
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.6
 	o ts-0.7.5
@@ -1438,8 +1456,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vfu-4.09
 	o vicq-0.4.2
 	o vile-9.8q
-	o vim-8.0.1594
-	o vim-share-8.0.1594
+	o vim-8.0.1614
+	o vim-share-8.0.1614
 	o vinagre-3.16.1
 	o vino-3.16.0
 	o virt-manager-1.3.2
@@ -1458,6 +1476,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wcalc-2.4
 	o webalizer-2.23.05
 	o webkit-gtk-2.18.6 [wip]
+	o webkit-gtk-2.20.0
 	o websvn-2.3.3
 	o weewm-0.01
 	o wgetpaste-2.26
@@ -1477,6 +1496,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xa65-2.3.7
 	o xaric-0.13.7
 	o xcoral-3.14
+	o xdg-user-dirs-0.17
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xf86-video-geode-2.11.9 [wip]
