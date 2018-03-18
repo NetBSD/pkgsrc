@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/06/21 13:12:21 taca Exp $
+# $NetBSD: Makefile,v 1.12 2018/03/18 14:21:21 taca Exp $
 
 DISTNAME=	actionpack-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-actionpack${RUBY_RAILS}-${RAILS_VERSION}
@@ -20,7 +20,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-journey>=1.0.4<1.1:../../www/ruby-journey
 DEPENDS+=	${RUBY_PKGPREFIX}-sprockets22>=2.2.1<2.3:../../misc/ruby-sprockets22
 DEPENDS+=	${RUBY_PKGPREFIX}-erubis>=2.7.0<2.8:../../www/ruby-erubis
 
-RUBY_RAILS_SUPPORTED=	32
+RUBY_RAILS_ACCEPTED=	32
 RUBY_RAILS_STRICT_DEP=	yes
 
 .include "../../lang/ruby/gem.mk"
