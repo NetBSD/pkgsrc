@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/03/13 16:35:25 taca Exp $
+# $NetBSD: Makefile,v 1.6 2018/03/18 14:21:22 taca Exp $
 
 DISTNAME=	actionpack-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-actionpack${RUBY_RAILS}-${RAILS_VERSION}
@@ -17,7 +17,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rack-test>=0.6.2<0.7:../../www/ruby-rack-test
 #DEPENDS+=	${RUBY_PKGPREFIX}-rails-dom-testing1>=1.0.5:../../textproc/ruby-rails-dom-testing1
 #DEPENDS+=	${RUBY_PKGPREFIX}-rails-html-sanitizer>=1.0.2:../../www/ruby-rails-html-sanitizer
 
-RUBY_RAILS_SUPPORTED=	42
+RUBY_RAILS_ACCEPTED=	42
 RUBY_RAILS_STRICT_DEP=	yes
 
 .include "../../lang/ruby/gem.mk"

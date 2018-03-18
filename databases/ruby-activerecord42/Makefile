@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/03/13 16:31:55 taca Exp $
+# $NetBSD: Makefile,v 1.5 2018/03/18 14:21:19 taca Exp $
 
 DISTNAME=	activerecord-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-activerecord${RUBY_RAILS}-${RAILS_VERSION}
@@ -13,7 +13,7 @@ DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 DEPENDS+=	${RUBY_ACTIVEMODEL_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-arel60>=6.0<7:../../databases/ruby-arel60
 
-RUBY_RAILS_SUPPORTED=	42
+RUBY_RAILS_ACCEPTED=	42
 RUBY_RAILS_STRICT_DEP=	yes
 
 .include "../../lang/ruby/gem.mk"

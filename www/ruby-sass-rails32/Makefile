@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/06/21 15:42:11 taca Exp $
+# $NetBSD: Makefile,v 1.8 2018/03/18 14:21:22 taca Exp $
 
 DISTNAME=	sass-rails-3.2.6
 PKGREVISION=	3
@@ -13,7 +13,7 @@ DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-sass>=3.1.10:../../www/ruby-sass
 DEPENDS+=	${RUBY_PKGPREFIX}-tilt1>=1.3<2:../../textproc/ruby-tilt1
 
-RUBY_RAILS_SUPPORTED=	32
+RUBY_RAILS_ACCEPTED=	32
 
 OVERRIDE_GEMSPEC+=	tilt>=1.3
 
