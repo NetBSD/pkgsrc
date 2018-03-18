@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2018/02/26 15:35:08 leot Exp $
+@comment $NetBSD: PLIST,v 1.59 2018/03/18 12:50:08 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -788,6 +788,9 @@ ${PYSITELIB}/youtube_dl/extractor/hentaistigma.pyo
 ${PYSITELIB}/youtube_dl/extractor/hgtv.py
 ${PYSITELIB}/youtube_dl/extractor/hgtv.pyc
 ${PYSITELIB}/youtube_dl/extractor/hgtv.pyo
+${PYSITELIB}/youtube_dl/extractor/hidive.py
+${PYSITELIB}/youtube_dl/extractor/hidive.pyc
+${PYSITELIB}/youtube_dl/extractor/hidive.pyo
 ${PYSITELIB}/youtube_dl/extractor/historicfilms.py
 ${PYSITELIB}/youtube_dl/extractor/historicfilms.pyc
 ${PYSITELIB}/youtube_dl/extractor/historicfilms.pyo
@@ -989,6 +992,9 @@ ${PYSITELIB}/youtube_dl/extractor/lifenews.pyo
 ${PYSITELIB}/youtube_dl/extractor/limelight.py
 ${PYSITELIB}/youtube_dl/extractor/limelight.pyc
 ${PYSITELIB}/youtube_dl/extractor/limelight.pyo
+${PYSITELIB}/youtube_dl/extractor/line.py
+${PYSITELIB}/youtube_dl/extractor/line.pyc
+${PYSITELIB}/youtube_dl/extractor/line.pyo
 ${PYSITELIB}/youtube_dl/extractor/litv.py
 ${PYSITELIB}/youtube_dl/extractor/litv.pyc
 ${PYSITELIB}/youtube_dl/extractor/litv.pyo
@@ -1475,6 +1481,9 @@ ${PYSITELIB}/youtube_dl/extractor/radiojavan.pyo
 ${PYSITELIB}/youtube_dl/extractor/rai.py
 ${PYSITELIB}/youtube_dl/extractor/rai.pyc
 ${PYSITELIB}/youtube_dl/extractor/rai.pyo
+${PYSITELIB}/youtube_dl/extractor/raywenderlich.py
+${PYSITELIB}/youtube_dl/extractor/raywenderlich.pyc
+${PYSITELIB}/youtube_dl/extractor/raywenderlich.pyo
 ${PYSITELIB}/youtube_dl/extractor/rbmaradio.py
 ${PYSITELIB}/youtube_dl/extractor/rbmaradio.pyc
 ${PYSITELIB}/youtube_dl/extractor/rbmaradio.pyo
@@ -1811,6 +1820,9 @@ ${PYSITELIB}/youtube_dl/extractor/teletask.pyo
 ${PYSITELIB}/youtube_dl/extractor/telewebion.py
 ${PYSITELIB}/youtube_dl/extractor/telewebion.pyc
 ${PYSITELIB}/youtube_dl/extractor/telewebion.pyo
+${PYSITELIB}/youtube_dl/extractor/tennistv.py
+${PYSITELIB}/youtube_dl/extractor/tennistv.pyc
+${PYSITELIB}/youtube_dl/extractor/tennistv.pyo
 ${PYSITELIB}/youtube_dl/extractor/testurl.py
 ${PYSITELIB}/youtube_dl/extractor/testurl.pyc
 ${PYSITELIB}/youtube_dl/extractor/testurl.pyo
@@ -2054,9 +2066,6 @@ ${PYSITELIB}/youtube_dl/extractor/vh1.pyo
 ${PYSITELIB}/youtube_dl/extractor/vice.py
 ${PYSITELIB}/youtube_dl/extractor/vice.pyc
 ${PYSITELIB}/youtube_dl/extractor/vice.pyo
-${PYSITELIB}/youtube_dl/extractor/viceland.py
-${PYSITELIB}/youtube_dl/extractor/viceland.pyc
-${PYSITELIB}/youtube_dl/extractor/viceland.pyo
 ${PYSITELIB}/youtube_dl/extractor/vidbit.py
 ${PYSITELIB}/youtube_dl/extractor/vidbit.pyc
 ${PYSITELIB}/youtube_dl/extractor/vidbit.pyo
@@ -2270,6 +2279,9 @@ ${PYSITELIB}/youtube_dl/extractor/yandexdisk.pyo
 ${PYSITELIB}/youtube_dl/extractor/yandexmusic.py
 ${PYSITELIB}/youtube_dl/extractor/yandexmusic.pyc
 ${PYSITELIB}/youtube_dl/extractor/yandexmusic.pyo
+${PYSITELIB}/youtube_dl/extractor/yapfiles.py
+${PYSITELIB}/youtube_dl/extractor/yapfiles.pyc
+${PYSITELIB}/youtube_dl/extractor/yapfiles.pyo
 ${PYSITELIB}/youtube_dl/extractor/yesjapan.py
 ${PYSITELIB}/youtube_dl/extractor/yesjapan.pyc
 ${PYSITELIB}/youtube_dl/extractor/yesjapan.pyo
