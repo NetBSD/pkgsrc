@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2017/11/23 22:36:58 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2018/03/19 10:39:25 wiz Exp $
 
 DISTNAME=	glib-networking-2.54.1
+PKGREVISION=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glib-networking/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +12,7 @@ COMMENT=	Network-related giomodules for glib
 LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --with-ca-certificates=/etc/ssl/certs/ca-certificates.crt
+CONFIGURE_ARGS+= --with-ca-certificates=/etc/openssl/certs/ca-certificates.crt
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake gettext
 
