@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2018/03/16 23:39:54 joerg Exp $
+# $NetBSD: options.mk,v 1.4 2018/03/19 09:28:04 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-uwsgi
 PKG_SUPPORTED_OPTIONS=	debug openssl pcre uuid yaml
-PKG_SUGGESTED_OPTIONS+=	libxml2 openssl
+PKG_SUGGESTED_OPTIONS+=	libxml2 openssl pcre
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=	json xml
 PKG_OPTIONS_GROUP.json=		jansson yajl
