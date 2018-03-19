@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/03/05 13:04:05 adam Exp $
+$NetBSD: distinfo,v 1.6 2018/03/19 09:03:25 adam Exp $
 
-SHA1 (PyJWT-1.6.0.tar.gz) = 6685ac904e2bcf5f091b30a14aed8dad64af1ff8
-RMD160 (PyJWT-1.6.0.tar.gz) = 86ee805f13b027a63d9032cce01aa6c73099db5c
-SHA512 (PyJWT-1.6.0.tar.gz) = 434d838092a063d4c60d1f9b2f015995c823b4bd409bc1ae9b0d3e5c0bf4f274f746bb1025094090c3b57a040738d462422c82386f715e802212546c90e7a8e1
-Size (PyJWT-1.6.0.tar.gz) = 40570 bytes
+SHA1 (PyJWT-1.6.1.tar.gz) = df5e901dd50be9c7a5b6b64969ffefcc0005b3dd
+RMD160 (PyJWT-1.6.1.tar.gz) = 1617d494f866bad4cd92169fc6cacc41f67ab260
+SHA512 (PyJWT-1.6.1.tar.gz) = 1bda00d07d713f032a47ca03b8482883446f1bb4876e1089bdacfece0c2164628c97880077fc5f3b008b895d93cda55041a2aacdea60d056e0a3bd5552be29a1
+Size (PyJWT-1.6.1.tar.gz) = 40743 bytes
