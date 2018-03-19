@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1415 2018/03/19 02:31:29 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1416 2018/03/19 08:28:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1919,3 +1919,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/translate-shell to 0.9.6.7 [leot 2018-03-18]
 	Updated net/youtube-dl to 20180314 [leot 2018-03-18]
 	Added devel/R-lazyeval version 0.2.1 [minskim 2018-03-19]
+	Updated devel/py-cython to 0.28.1 [adam 2018-03-19]
+	Updated devel/py-sure to 1.4.9 [adam 2018-03-19]
