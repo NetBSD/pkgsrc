@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1421 2018/03/19 11:49:43 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1422 2018/03/19 15:27:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1929,3 +1929,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-test-runner to 4.2 [adam 2018-03-19]
 	Updated net/glib-networking to 2.54.1nb1 [wiz 2018-03-19]
 	Updated www/moodle to 3.4.2 [wen 2018-03-19]
+	Added math/R-tibble version 1.4.2 [minskim 2018-03-19]
