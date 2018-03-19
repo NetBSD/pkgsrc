@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2018/03/16 23:39:54 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2018/03/19 09:28:04 adam Exp $
 
 .include  "Makefile.common"
 
@@ -6,7 +6,6 @@ LICENSE=	gnu-gpl-v2 # with linking exception
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 COMMENT=	Feature-rich WSGI server
 
-USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
 
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
