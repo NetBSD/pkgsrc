@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.239 2017/08/01 05:48:12 dbj Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.240 2018/03/19 03:53:29 dholland Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -146,18 +146,23 @@ _ignore_:=${IGNORE_PKG.${_pkg_:S/^-//}:M[Yy][Ee][Ss]}
      # leaving a package (in the buildlink tree)
 .    if !empty(_use_)
        # this package is going to use the builtin version
-.      if ${_ok_} == no
+.      if ${_ok_} != yes
          # not ok for it to be builtin; force it to pkgsrc
          USE_BUILTIN.${_pkg_:S/^-//}:=no
          FORCED_PKGSRC+=${_pkg_:S/^-//}
-         #.say "${_stack_:C/.*/  /} ${_pkg_:S/^-//} pkgsrc FORCED"
+         # using += here fails to evaluate ${_ok_} until after the loop
+         FORCED_PKGSRC_REASONS:=${FORCED_PKGSRC_REASONS} ${_pkg_:S/^-//}:${_ok_:S/^no,//}
+         #.say "${_stack_:C/.*/  /} ${_pkg_:S/^-//} pkgsrc FORCED by ${_ok_:S/^no,//}"
 .      else
          #.say "${_stack_:C/.*/  /} ${_pkg_:S/^-//} built-in"
 .      endif
 .    elif empty(_ignore_)
        # no builtin version or not using it
        #.say "${_stack_:C/.*/  /} ${_pkg_:S/^-//} pkgsrc"
-       _ok_:=no
+.      if ${_ok_} == yes
+         _ok_:=no
+.      endif
+       _ok_:=${_ok_},${_pkg_:S/^-//}
 .    endif
      # pop the stack
 .    if ${_ok_} == yes
@@ -168,6 +173,11 @@ _ignore_:=${IGNORE_PKG.${_pkg_:S/^-//}:M[Yy][Ee][Ss]}
 .endfor
 .if ${_stack_} != "bot"
 .error "The above loop through BUILDLINK_TREE failed to balance"
+.endif
+
+# This comes out with a stray leading space currently.
+.if defined(FORCED_PKGSRC_REASONS)
+FORCED_PKGSRC_REASONS:=${FORCED_PKGSRC_REASONS:S/^ //}
 .endif
 
 # Sorted and unified version of BUILDLINK_TREE without recursion
