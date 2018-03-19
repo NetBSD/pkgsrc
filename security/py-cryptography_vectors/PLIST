@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/10/12 08:28:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/03/19 09:01:46 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -16,6 +16,7 @@ ${PYSITELIB}/cryptography_vectors/HMAC/rfc-4231-sha256.txt
 ${PYSITELIB}/cryptography_vectors/HMAC/rfc-4231-sha384.txt
 ${PYSITELIB}/cryptography_vectors/HMAC/rfc-4231-sha512.txt
 ${PYSITELIB}/cryptography_vectors/KDF/ansx963_2001.txt
+${PYSITELIB}/cryptography_vectors/KDF/hkdf-generated.txt
 ${PYSITELIB}/cryptography_vectors/KDF/nist-800-108-KBKDF-CTR.txt
 ${PYSITELIB}/cryptography_vectors/KDF/rfc-5869-HKDF-SHA1.txt
 ${PYSITELIB}/cryptography_vectors/KDF/rfc-5869-HKDF-SHA256.txt
@@ -82,6 +83,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/ECDH/KASValidityTest_ECCStaticUnifi
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDH/KASValidityTest_ECCStaticUnified_KDFConcat_NOKC_resp.fax
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDH/KASValidityTest_ECCStaticUnified_NOKC_ZZOnly_init.fax
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDH/KASValidityTest_ECCStaticUnified_NOKC_ZZOnly_resp.fax
+${PYSITELIB}/cryptography_vectors/asymmetric/ECDH/brainpool.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDSA/FIPS_186-2/KeyPair.rsp
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDSA/FIPS_186-2/PKV.rsp
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDSA/FIPS_186-2/Readme.txt
@@ -461,7 +463,6 @@ ${PYSITELIB}/cryptography_vectors/hashes/SHA2/SHA512ShortMsg.rsp
 ${PYSITELIB}/cryptography_vectors/hashes/blake2/blake2b.txt
 ${PYSITELIB}/cryptography_vectors/hashes/blake2/blake2s.txt
 ${PYSITELIB}/cryptography_vectors/hashes/ripemd160/ripevectors.txt
-${PYSITELIB}/cryptography_vectors/hashes/whirlpool/iso-test-vectors.txt
 ${PYSITELIB}/cryptography_vectors/keywrap/kwtestvectors/KWP_AD_128.txt
 ${PYSITELIB}/cryptography_vectors/keywrap/kwtestvectors/KWP_AD_128_inv.txt
 ${PYSITELIB}/cryptography_vectors/keywrap/kwtestvectors/KWP_AD_192.txt
