@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.7 2017/11/15 22:08:27 jmcneill Exp $
+# $NetBSD: u-boot.mk,v 1.8 2018/03/19 20:49:01 bsiegert Exp $
 
 UBOOT_VERSION?=	2017.11
 PKGNAME=	u-boot-${UBOOT_TARGET}-${UBOOT_VERSION}
@@ -20,6 +20,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake gsed pkg-config
 PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_VERSIONS_ACCEPTED=	27
 
 REPLACE_INTERPRETER+=	python2
 REPLACE.python2.old=	.*/usr/bin/env.*python2*
