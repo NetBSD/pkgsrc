@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1416 2018/03/19 08:28:25 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1417 2018/03/19 09:04:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1921,3 +1921,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/R-lazyeval version 0.2.1 [minskim 2018-03-19]
 	Updated devel/py-cython to 0.28.1 [adam 2018-03-19]
 	Updated devel/py-sure to 1.4.9 [adam 2018-03-19]
+	Updated security/py-cryptography_vectors to 2.2 [adam 2018-03-19]
+	Updated security/py-cryptography to 2.2 [adam 2018-03-19]
+	Updated textproc/py-JWT to 1.6.1 [adam 2018-03-19]
