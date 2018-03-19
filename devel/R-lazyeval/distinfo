@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/03/19 02:31:20 minskim Exp $
+
+SHA1 (R/lazyeval_0.2.1.tar.gz) = 002606abdace20eda0be1004e71a1aab250d0577
+RMD160 (R/lazyeval_0.2.1.tar.gz) = b15b8c2d7948d35feaef8fde0b01af95dc795dab
+SHA512 (R/lazyeval_0.2.1.tar.gz) = 18c559b3948ab4d68c68b60b8a01c3ec49e2e3155bf5cd973438cb4533f6a2d2ea461e2a90edf78ccb7b4db8a1f2b6169cc50e4e65532ebfd295099cdb19977a
+Size (R/lazyeval_0.2.1.tar.gz) = 80150 bytes
