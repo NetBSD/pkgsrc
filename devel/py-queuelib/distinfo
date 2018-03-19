@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/02/13 21:15:41 adam Exp $
+$NetBSD: distinfo,v 1.2 2018/03/19 10:13:40 adam Exp $
 
-SHA1 (queuelib-1.4.2.tar.gz) = 011fb16f531ba09651c99304d14f8d75ac07f3a9
-RMD160 (queuelib-1.4.2.tar.gz) = eba2e8bbc5cddf269562cdb8d9bff3443aa5b562
-SHA512 (queuelib-1.4.2.tar.gz) = 15157aa2586831a509d983731693016335916958aee6079b3b5cc02ce552048f1baeb3d876d9bd016e8bdb735af1ee03aca1750e73503e936e8ddf68bc8d50e0
-Size (queuelib-1.4.2.tar.gz) = 8287 bytes
+SHA1 (queuelib-1.5.0.tar.gz) = ed49b145fbf0afb16eef3bf7b831b00d2677ee7c
+RMD160 (queuelib-1.5.0.tar.gz) = e367483b19572daf098910c3ce97afdf1a5b0ca6
+SHA512 (queuelib-1.5.0.tar.gz) = aafaf8756b00cd84b36a73d9573a8a321a0432648c2e7dfc9de566d339087fcd855eb2d5991694a495e47bbb9c4ca25d655e4de7101552e96ee0040ed31c9e0f
+Size (queuelib-1.5.0.tar.gz) = 9234 bytes
