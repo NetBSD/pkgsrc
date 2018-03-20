@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2018/03/20 15:47:36 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2018/03/20 16:06:44 khorben Exp $
 
 DISTNAME=	z3-solver-4.5.1.0.post2
-PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
+PKGNAME=	${PYPKGPREFIX}-z3solver
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/z3-solver/}
 
