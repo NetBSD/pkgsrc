@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2018/03/20 15:44:06 khorben Exp $
+# $NetBSD: Makefile,v 1.8 2018/03/20 15:50:05 khorben Exp $
 
 DISTNAME=	manticore-${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trailofbits/}
 GITHUB_PROJECT=	manticore
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
 DEPENDS+=	${PYPKGPREFIX}-pyelftools-[0-9]*:../../devel/py-pyelftools
 DEPENDS+=	${PYPKGPREFIX}-pysha3-[0-9]*:../../devel/py-pysha3
 DEPENDS+=	${PYPKGPREFIX}-unicorn-[0-9]*:../../emulators/py-unicorn
-DEPENDS+=	${PYPKGPREFIX}-z3-[0-9]*:../../math/py-z3
+DEPENDS+=	${PYPKGPREFIX}-z3solver-[0-9]*:../../math/py-z3solver
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
