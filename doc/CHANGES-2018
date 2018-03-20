@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1428 2018/03/20 15:42:11 khorben Exp $
+$NetBSD: CHANGES-2018,v 1.1429 2018/03/20 15:48:21 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1936,3 +1936,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added graphics/R-ggplot2 version 2.2.1 [minskim 2018-03-20]
 	Added devel/py-pyelftools version 0.24 [khorben 2018-03-20]
 	Added devel/py-pysha3 version 1.0.2 [khorben 2018-03-20]
+	Added math/py-z3solver version 4.5.1.0.post2 [khorben 2018-03-20]
