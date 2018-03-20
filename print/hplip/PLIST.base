@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.base,v 1.30 2017/12/14 20:24:42 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.31 2018/03/20 20:45:24 schnoebe Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -469,8 +469,10 @@ share/hplip/ppd/HP/hp-designjet_t790ps_24in-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t790ps_44in-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t795ps_44in-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t920-postscript.ppd.gz
+share/hplip/ppd/HP/hp-designjet_z2600_postscript-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z5200_postscript-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z5400-postscript.ppd.gz
+share/hplip/ppd/HP/hp-designjet_z5600_postscript-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z6100ps_42in_photo-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z6100ps_60in_photo-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z6200_42in_photo-ps.ppd.gz
@@ -1233,6 +1235,20 @@ share/hplip/ppd/HP/hp-pagewide_pro_552_printer-ps.ppd.gz
 share/hplip/ppd/HP/hp-pagewide_pro_577_mfp-ps.ppd.gz
 share/hplip/ppd/HP/hp-pagewide_pro_750-ps.ppd.gz
 share/hplip/ppd/HP/hp-pagewide_pro_mfp_772-777-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_xl_4000ps-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_xl_4000ps_mfp-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_xl_4500ps-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_xl_4500ps_mfp-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_xl_5000ps-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_xl_5000ps_blueprinter-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_xl_5000ps_mfp-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_xl_5100ps-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_xl_5100ps_mfp-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_xl_5100ps_mfp_blueprinter-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_xl_6000ps-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_xl_6000ps_mfp-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_xl_8000ps-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_xl_8000ps_blueprinter-ps.ppd.gz
 share/hplip/ppd/HP/hp-photosmart_100.ppd.gz
 share/hplip/ppd/HP/hp-photosmart_1115.ppd.gz
 share/hplip/ppd/HP/hp-photosmart_1215.ppd.gz
