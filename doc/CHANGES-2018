@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1424 2018/03/20 12:39:37 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1425 2018/03/20 12:42:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1932,3 +1932,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/R-tibble version 1.4.2 [minskim 2018-03-19]
 	Updated www/php-nextcloud to 13.0.1 [ryoon 2018-03-19]
 	Updated security/libgpg-error to 1.28nb1 [wiz 2018-03-20]
+	Updated misc/rhash to 1.3.6nb1 [wiz 2018-03-20]
