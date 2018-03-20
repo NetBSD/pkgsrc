@@ -1,0 +1,2 @@
+SHA-3 wrapper (keccak) for Python. The package is a wrapper around the
+optimized Keccak Code Package.
