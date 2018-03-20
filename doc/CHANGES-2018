@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1429 2018/03/20 15:48:21 khorben Exp $
+$NetBSD: CHANGES-2018,v 1.1430 2018/03/20 20:46:42 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1937,3 +1937,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-pyelftools version 0.24 [khorben 2018-03-20]
 	Added devel/py-pysha3 version 1.0.2 [khorben 2018-03-20]
 	Added math/py-z3solver version 4.5.1.0.post2 [khorben 2018-03-20]
+	Updated print/hplip to 3.18.3 [schnoebe 2018-03-20]
