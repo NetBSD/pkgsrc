@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2018/03/20 15:40:48 khorben Exp $
+${PYSITELIB}/_pysha3.so
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/sha3.py
+${PYSITELIB}/sha3.pyc
+${PYSITELIB}/sha3.pyo
