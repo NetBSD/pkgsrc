@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2642 2018/03/20 15:35:11 khorben Exp $
+# $NetBSD: Makefile,v 1.2643 2018/03/20 15:41:38 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -2157,6 +2157,7 @@ SUBDIR+=	py-pyobjc-framework-WebKit
 SUBDIR+=	py-pyobjc-framework-iTunesLibrary
 SUBDIR+=	py-pyobjc-framework-libdispatch
 SUBDIR+=	py-pyparsing
+SUBDIR+=	py-pysha3
 SUBDIR+=	py-pysvn
 SUBDIR+=	py-pytemplate
 SUBDIR+=	py-pyutil
