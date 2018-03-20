@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2641 2018/03/19 02:31:24 minskim Exp $
+# $NetBSD: Makefile,v 1.2642 2018/03/20 15:35:11 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -2072,6 +2072,7 @@ SUBDIR+=	py-protobuf
 SUBDIR+=	py-py
 SUBDIR+=	py-py2app
 SUBDIR+=	py-pydispatcher
+SUBDIR+=	py-pyelftools
 SUBDIR+=	py-pygit2
 SUBDIR+=	py-pylint
 SUBDIR+=	py-pylint-common
