@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2018/03/17 08:02:14 adam Exp $
+# $NetBSD: Makefile,v 1.8 2018/03/20 12:41:53 wiz Exp $
 
 DISTNAME=	rhash-1.3.6
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rhash/}
 GITHUB_PROJECT=	RHash
@@ -18,8 +19,8 @@ CONFIGURE_ARGS+=	--disable-openssl-runtime
 CONFIGURE_ARGS+=	--enable-lib-shared
 CONFIGURE_ARGS+=	--enable-lib-static
 CONFIGURE_ARGS+=	--enable-openssl
-CONFIGURE_ARGS+=	--extra-cflags=-I${PREFIX}/include
-CONFIGURE_ARGS+=	--extra-ldflags=-L${PREFIX}/lib\ -Wl,-R${PREFIX}/lib
+CONFIGURE_ARGS+=	--extra-cflags=-I${PREFIX}/include\ ${CFLAGS:Q}
+CONFIGURE_ARGS+=	--extra-ldflags=-L${PREFIX}/lib\ -Wl,-R${PREFIX}/lib\ ${LDFLAGS:Q}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
