@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1431 2018/03/21 06:56:22 prlw1 Exp $
+$NetBSD: CHANGES-2018,v 1.1432 2018/03/21 07:57:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1939,3 +1939,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/py-z3solver version 4.5.1.0.post2 [khorben 2018-03-20]
 	Updated print/hplip to 3.18.3 [schnoebe 2018-03-20]
 	Updated security/clamav to 0.99.4 [prlw1 2018-03-21]
+	Updated www/nginx-devel to 1.13.10 [adam 2018-03-21]
+	Updated devel/pcre to 8.42 [adam 2018-03-21]
