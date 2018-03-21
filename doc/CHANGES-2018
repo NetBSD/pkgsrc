@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1484 2018/03/21 23:20:27 gdt Exp $
+$NetBSD: CHANGES-2018,v 1.1485 2018/03/21 23:50:58 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2013,3 +2013,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated filesystems/fuse-encfs to 1.9.4 [gdt 2018-03-21]
 	Updated geography/gdal-lib to 2.2.4 [gdt 2018-03-21]
 	Updated geography/py-gdal to 2.2.4 [gdt 2018-03-21]
+	Added textproc/man2html version 3.0.1 [bacon 2018-03-21]
