@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/03/21 15:26:08 minskim Exp $
+
+SHA1 (R/lmtest_0.9-35.tar.gz) = a666ce0abb240596c1b7d847cb34e5de4190bf90
+RMD160 (R/lmtest_0.9-35.tar.gz) = d64b45eed6ec06a43cb6485427eb664ffe9f9179
+SHA512 (R/lmtest_0.9-35.tar.gz) = c9df54073865d24e46d6e8a46dbfbeeef1f76d2a1c9d5518c79bb2e5de727a84d3b8ddfe568f18cd8a5ed94a0a8f9a35adad2c6cdae1f3b5d78392a3bea80769
+Size (R/lmtest_0.9-35.tar.gz) = 183575 bytes
