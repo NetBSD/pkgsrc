@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.982 2018/03/15 18:37:23 minskim Exp $
+# $NetBSD: Makefile,v 1.983 2018/03/21 23:40:30 bacon Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -381,6 +381,7 @@ SUBDIR+=	lua-xapian
 SUBDIR+=	lucene++
 SUBDIR+=	makeindexk
 SUBDIR+=	makeztxt
+SUBDIR+=	man2html
 SUBDIR+=	mandoc
 SUBDIR+=	marisa
 SUBDIR+=	markdown-mode
