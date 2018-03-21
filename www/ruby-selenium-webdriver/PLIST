@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2017/09/11 15:48:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/03/21 12:23:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/selenium-webdriver.rb
@@ -11,6 +10,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/atoms.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/atoms/getAttribute.js
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/chrome/bridge.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome/driver.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome/options.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome/profile.rb
@@ -22,6 +22,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/bridge_helper.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_addons.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_location.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_network_conditions.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_network_connection.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_remote_status.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_session_id.rb
@@ -65,7 +66,6 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/timeouts.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/touch_action_builder.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/touch_screen.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/w3c_action_builder.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/common/w3c_error.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/w3c_options.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/wait.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/window.rb
@@ -93,9 +93,6 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/ie.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/ie/driver.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/ie/options.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/ie/service.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/phantomjs.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/phantomjs/driver.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/phantomjs/service.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/bridge.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/capabilities.rb
