@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1479 2018/03/21 15:30:07 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1480 2018/03/21 17:41:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1980,7 +1980,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/p5-Net-DNS-SEC to 1.05 [wiz 2018-03-21]
 	Updated sysutils/ruby-serverspec to 2.41.3 [taca 2018-03-21]
 	Updated security/ruby-nexpose to 7.2.0 [taca 2018-03-21]
-	Added devel/liblnk 20171101 [manu 2018-03-21]
+	Added devel/liblnk version 20171101 [manu 2018-03-21]
 	Updated security/ruby-rex-text to 0.2.16 [taca 2018-03-21]
 	Updated security/ruby-rex-arch to 0.1.13 [taca 2018-03-21]
 	Updated security/ruby-rex-exploitation to 0.1.17 [taca 2018-03-21]
@@ -2008,3 +2008,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/postfix-pcre to 3.3.0 [taca 2018-03-21]
 	Updated mail/postfix-pgsql to 3.3.0 [taca 2018-03-21]
 	Updated mail/postfix-sqlite to 3.3.0 [taca 2018-03-21]
+	Updated print/ghostscript-agpl to 9.23 [adam 2018-03-21]
