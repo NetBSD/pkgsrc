@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2015/09/13 15:39:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/03/21 12:19:33 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/rack/contrib.rb
-${GEM_LIBDIR}/lib/rack/contrib/accept_format.rb
 ${GEM_LIBDIR}/lib/rack/contrib/access.rb
 ${GEM_LIBDIR}/lib/rack/contrib/backstage.rb
 ${GEM_LIBDIR}/lib/rack/contrib/bounce_favicon.rb
@@ -35,7 +34,6 @@ ${GEM_LIBDIR}/lib/rack/contrib/response_cache.rb
 ${GEM_LIBDIR}/lib/rack/contrib/response_headers.rb
 ${GEM_LIBDIR}/lib/rack/contrib/route_exceptions.rb
 ${GEM_LIBDIR}/lib/rack/contrib/runtime.rb
-${GEM_LIBDIR}/lib/rack/contrib/sendfile.rb
 ${GEM_LIBDIR}/lib/rack/contrib/signals.rb
 ${GEM_LIBDIR}/lib/rack/contrib/simple_endpoint.rb
 ${GEM_LIBDIR}/lib/rack/contrib/static_cache.rb
