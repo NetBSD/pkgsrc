@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2018/03/21 13:16:13 manu Exp $
+bin/lnkinfo
+include/liblnk.h
+include/liblnk/codepage.h
+include/liblnk/definitions.h
+include/liblnk/error.h
+include/liblnk/extern.h
+include/liblnk/features.h
+include/liblnk/types.h
+lib/liblnk.la
+lib/pkgconfig/liblnk.pc
+man/man1/lnkinfo.1
+man/man3/liblnk.3
