@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2017/04/22 17:19:47 taca Exp $
+$NetBSD: distinfo,v 1.9 2018/03/21 12:15:34 taca Exp $
 
-SHA1 (pygments.rb-1.1.2.gem) = fd3f4c7e46d7f2528cef5cbc37453fbf0c950448
-RMD160 (pygments.rb-1.1.2.gem) = d61c04af92e8b6fa70daa4d49551446314616f4b
-SHA512 (pygments.rb-1.1.2.gem) = dee41bf20142b6a63396504b734c183049f84629e7a943bfb361458f6f8d55e9f84ac6c28bac069d839c519eaf562bd73c74e422ebaf750a7430690a8fad043c
-Size (pygments.rb-1.1.2.gem) = 1169920 bytes
+SHA1 (pygments.rb-1.2.1.gem) = d8be827505b80ee6951b0ccf86fcf0bcfdedc01e
+RMD160 (pygments.rb-1.2.1.gem) = 06c1116a8aebc33df8eaf67e60f5caf5a5a2a8fd
+SHA512 (pygments.rb-1.2.1.gem) = f0fc63ec028169872e28e2181c6a10c8a3f5e7f07074ba9f43475a0b5aa403a03d7045abb03433b600ef3d74c460556355b4ee64be598d3b93ddb1e0bb306259
+Size (pygments.rb-1.2.1.gem) = 1176064 bytes
 SHA1 (patch-lib_pygments_popen.rb) = 53cd93ae1d0c9d91b960c62fd0eb7f4473635b3c
 SHA1 (patch-test_test__pygments.rb) = 4074c271645de08112ef5628951029c0e21187a2
