@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.64 2018/03/21 03:40:21 taca Exp $
+# $NetBSD: rails.mk,v 1.65 2018/03/21 09:15:04 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -78,7 +78,11 @@ RUBY_RAILS=	${rr}
 
 .if !defined(RUBY_RAILS)
 .  for rr in ${RUBY_RAILS_ACCEPTED}
+.    if ${rr} == ${RUBY_RAILS_DEFAULT}
+RUBY_RAILS=	${rr}
+.    else
 RUBY_RAILS?=	${rr}
+.    endif
 .  endfor
 .endif
 
@@ -113,10 +117,12 @@ _RAILS_DEP=	${RUBY_RAILS}>=${RAILS_VERSION}<${_RAILS_MAJOR}.${_RAILS_NEXT}
 
 #
 MAKE_ENV+=	RUBY_RAILS_DEFAULT=${RUBY_RAILS} \
-		RUBY_RAILS_ACCEPTED=${RUBY_RAILS}
+		RUBY_RAILS_ACCEPTED=${RUBY_RAILS} \
+		RUBY_RAILS_REQD=${RUBY_RAILS}
 #
-MULTI+=			RUBY_RAILS_DEFAULT=${RUBY_RAILS} \
-			RUBY_RAILS_ACCEPTED=${RUBY_RAILS}
+MULTI+=		RUBY_RAILS_DEFAULT=${RUBY_RAILS} \
+		RUBY_RAILS_ACCEPTED=${RUBY_RAILS}  \
+		RUBY_RAILS_REQD=${RUBY_RAILS}
 
 RUBY_ACTIVESUPPORT_DEPENDS= \
 	${RUBY_PKGPREFIX}-activesupport${_RAILS_DEP}:../../devel/ruby-activesupport${RUBY_RAILS}
