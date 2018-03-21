@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2648 2018/03/21 10:24:36 taca Exp $
+# $NetBSD: Makefile,v 1.2649 2018/03/21 13:16:13 manu Exp $
 #
 
 COMMENT=	Development utilities
@@ -594,6 +594,7 @@ SUBDIR+=	libjudy
 SUBDIR+=	libkgapi
 SUBDIR+=	libkomparediff2
 SUBDIR+=	liblangtag
+SUBDIR+=	liblnk
 SUBDIR+=	libltdl
 SUBDIR+=	libmaa
 SUBDIR+=	libmatchbox
