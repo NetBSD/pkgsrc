@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/03/13 16:19:35 taca Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/21 13:56:43 taca Exp $
 
 DISTNAME=	safe_yaml-1.0.4
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,7 +9,7 @@ HOMEPAGE=	http://dtao.github.com/safe_yaml/
 COMMENT=	Parse YAML safely
 LICENSE=	mit
 
-CONFLICTS+=	ruby-[1-9][0-9]-safe_yaml-* ruby-[1-9][0-9][0-9]-safe_yaml-*
+RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
