@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/10/13 18:22:46 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/03/21 13:32:21 taca Exp $
 
-DISTNAME=	rex-socket-0.1.8
+DISTNAME=	rex-socket-0.1.10
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org
