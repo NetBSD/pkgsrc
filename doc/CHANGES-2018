@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1443 2018/03/21 11:53:20 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1444 2018/03/21 12:08:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1961,3 +1961,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/ruby-recog to 2.1.18 [taca 2018-03-21]
 	Updated net/ruby-ruby_smb to 0.0.23 [taca 2018-03-21]
 	Updated security/ruby-metasploit-payloads to 1.3.31 [taca 2018-03-21]
+	Updated security/ruby-metasploit_payloads-mettle to 0.3.7 [taca 2018-03-21]
