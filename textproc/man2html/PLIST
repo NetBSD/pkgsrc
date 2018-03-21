@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2018/03/21 19:20:20 bacon Exp $
+bin/man2html
+man/man1/man2html.1
