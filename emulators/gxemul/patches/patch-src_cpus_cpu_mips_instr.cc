@@ -1,10 +1,12 @@
-$NetBSD: patch-src_cpus_cpu_mips_instr.cc,v 1.1 2016/03/29 19:03:07 mrg Exp $
+$NetBSD: patch-src_cpus_cpu_mips_instr.cc,v 1.2 2018/03/21 17:39:42 kamil Exp $
 
 implement trap with immediate instructions present in MIPS32.
 
---- src/cpus/cpu_mips_instr.cc.orig	2016-03-28 11:59:41.000000000 -0700
-+++ src/cpus/cpu_mips_instr.cc	2016-03-28 12:04:07.000000000 -0700
-@@ -1461,6 +1461,92 @@
+Fix C++11 literals.
+
+--- src/cpus/cpu_mips_instr.cc.orig	2014-08-17 08:45:15.000000000 +0000
++++ src/cpus/cpu_mips_instr.cc
+@@ -1461,6 +1461,92 @@ X(tne)
  	}
  }
  
@@ -97,7 +99,16 @@ implement trap with immediate instructions present in MIPS32.
  
  /*
   *  3-register arithmetic instructions:
-@@ -4446,6 +4532,37 @@
+@@ -3983,7 +4069,7 @@ X(to_be_translated)
+ 		if (cpu->delay_slot) {
+ 			if (!cpu->translation_readahead)
+ 				fatal("TODO: branch in delay slot (=%i)? (3);"
+-				    " addr=%016"PRIx64" iword=%08"PRIx32"\n",
++				    " addr=%016" PRIx64 " iword=%08" PRIx32 "\n",
+ 				    cpu->delay_slot, (uint64_t)addr, iword);
+ 			goto bad;
+ 		}
+@@ -4446,6 +4532,37 @@ X(to_be_translated)
  			}
  			break;
  
@@ -135,3 +146,17 @@ implement trap with immediate instructions present in MIPS32.
  		default:if (!cpu->translation_readahead)
  				fatal("UNIMPLEMENTED regimm rt=%i\n", rt);
  			goto bad;
+@@ -4753,7 +4870,7 @@ X(to_be_translated)
+ 		if (!has_warned && !cpu->translation_readahead) {
+ 			fatal("[ WARNING/NOTE: attempt to execute a 64-bit"
+ 			    " instruction on an emulated 32-bit processor; "
+-			    "pc=0x%08"PRIx32" ]\n", (uint32_t)cpu->pc);
++			    "pc=0x%08" PRIx32 " ]\n", (uint32_t)cpu->pc);
+ 			has_warned = 1;
+ 		}
+ 		if (cpu->translation_readahead)
+@@ -4770,4 +4887,3 @@ X(to_be_translated)
+ #include "cpu_dyntrans.cc" 
+ #undef	DYNTRANS_TO_BE_TRANSLATED_TAIL
+ }
+-
