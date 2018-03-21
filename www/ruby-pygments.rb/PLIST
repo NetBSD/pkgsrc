@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/03/20 15:54:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/03/21 12:15:34 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -239,6 +239,7 @@ ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/web.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/webmisc.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/whiley.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/x10.py
+${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/xorg.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/modeline.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/plugin.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/regexopt.py
@@ -246,6 +247,7 @@ ${GEM_LIBDIR}/vendor/pygments-main/pygments/scanner.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/sphinxext.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/style.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/__init__.py
+${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/abap.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/algol.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/algol_nu.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/arduino.py
@@ -267,6 +269,7 @@ ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/paraiso_dark.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/paraiso_light.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/pastie.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/perldoc.py
+${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/rainbow_dash.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/rrt.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/sas.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/styles/stata.py
@@ -283,7 +286,6 @@ ${GEM_LIBDIR}/vendor/pygments-main/scripts/check_sources.py
 ${GEM_LIBDIR}/vendor/pygments-main/scripts/debug_lexer.py
 ${GEM_LIBDIR}/vendor/pygments-main/scripts/detect_missing_analyse_text.py
 ${GEM_LIBDIR}/vendor/pygments-main/scripts/epydoc.css
-${GEM_LIBDIR}/vendor/pygments-main/scripts/find_error.py
 ${GEM_LIBDIR}/vendor/pygments-main/scripts/get_vimkw.py
 ${GEM_LIBDIR}/vendor/pygments-main/scripts/pylintrc
 ${GEM_LIBDIR}/vendor/pygments-main/scripts/vim2pygments.py
