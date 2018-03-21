@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2017/10/23 12:50:08 wiz Exp $
+$NetBSD: distinfo,v 1.5 2018/03/21 12:40:48 wiz Exp $
 
-SHA1 (Font-FreeType-0.09.tar.gz) = 525253fdbabe144ee4ea47546df8371a3361002a
-RMD160 (Font-FreeType-0.09.tar.gz) = 1e21d1b46d6d12a2adee4a069c268665e7777f11
-SHA512 (Font-FreeType-0.09.tar.gz) = 3670925d6b61bf01e86e33f3542940192bc73876329f186c852ed4b48a344e334d04e9b69c06f6bd847d0af83cc331536aa2c24c77d14e2b14c5bb5011ae2379
-Size (Font-FreeType-0.09.tar.gz) = 226888 bytes
+SHA1 (Font-FreeType-0.10.tar.gz) = 37fed1fc430ef9fe8bd2646f9a1c8a2143a7c30c
+RMD160 (Font-FreeType-0.10.tar.gz) = 9cd4c88144001c08259bde1b04852b04acf718b7
+SHA512 (Font-FreeType-0.10.tar.gz) = 12d14e44a8062bb7132db7caada935cf3b9c36acf6298f6619517cdf5cd8af5ce8db6374f5f5b7e1b17b0cbb308ddf4e3f3c8d3db877886fd275236f93a5b027
+Size (Font-FreeType-0.10.tar.gz) = 226869 bytes
 SHA1 (patch-Makefile.PL) = 9f3b7b9eb26727837b82535c6a345ff125f18807
