@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1451 2018/03/21 12:34:17 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1452 2018/03/21 12:36:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1969,3 +1969,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/p5-DBD-ODBC to 1.58 [wiz 2018-03-21]
 	Updated databases/p5-DBI to 1.641 [wiz 2018-03-21]
 	Updated devel/p5-CPAN-Perl-Releases to 3.50 [wiz 2018-03-21]
+	Updated devel/p5-ExtUtils-MakeMaker to 7.34 [wiz 2018-03-21]
