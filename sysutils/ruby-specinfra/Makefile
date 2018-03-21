@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/09/11 15:53:36 taca Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/21 12:50:01 taca Exp $
 
-DISTNAME=	specinfra-2.71.2
+DISTNAME=	specinfra-2.73.2
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

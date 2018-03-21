@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/09/11 15:53:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/03/21 12:50:01 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
@@ -57,6 +57,8 @@ ${GEM_LIBDIR}/lib/specinfra/command/alpine/base/process.rb
 ${GEM_LIBDIR}/lib/specinfra/command/alpine/base/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/amazon.rb
 ${GEM_LIBDIR}/lib/specinfra/command/amazon/base.rb
+${GEM_LIBDIR}/lib/specinfra/command/amazon/v2.rb
+${GEM_LIBDIR}/lib/specinfra/command/amazon/v2/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/arch.rb
 ${GEM_LIBDIR}/lib/specinfra/command/arch/base.rb
 ${GEM_LIBDIR}/lib/specinfra/command/arch/base/file.rb
@@ -119,6 +121,9 @@ ${GEM_LIBDIR}/lib/specinfra/command/debian/base/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/debian/v8.rb
 ${GEM_LIBDIR}/lib/specinfra/command/debian/v8/port.rb
 ${GEM_LIBDIR}/lib/specinfra/command/debian/v8/service.rb
+${GEM_LIBDIR}/lib/specinfra/command/devuan.rb
+${GEM_LIBDIR}/lib/specinfra/command/devuan/base.rb
+${GEM_LIBDIR}/lib/specinfra/command/devuan/base/package.rb
 ${GEM_LIBDIR}/lib/specinfra/command/elementary.rb
 ${GEM_LIBDIR}/lib/specinfra/command/elementary/base.rb
 ${GEM_LIBDIR}/lib/specinfra/command/eos.rb
@@ -290,6 +295,7 @@ ${GEM_LIBDIR}/lib/specinfra/command/windows.rb
 ${GEM_LIBDIR}/lib/specinfra/command/windows/base.rb
 ${GEM_LIBDIR}/lib/specinfra/command/windows/base/feature.rb
 ${GEM_LIBDIR}/lib/specinfra/command/windows/base/file.rb
+${GEM_LIBDIR}/lib/specinfra/command/windows/base/firewall.rb
 ${GEM_LIBDIR}/lib/specinfra/command/windows/base/group.rb
 ${GEM_LIBDIR}/lib/specinfra/command/windows/base/host.rb
 ${GEM_LIBDIR}/lib/specinfra/command/windows/base/hot_fix.rb
@@ -319,6 +325,7 @@ ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/arch.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/coreos.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/darwin.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/debian.rb
+${GEM_LIBDIR}/lib/specinfra/helper/detect_os/devuan.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/eos.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/esxi.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/freebsd.rb
@@ -369,6 +376,7 @@ ${GEM_LIBDIR}/spec/command/alpine/service_spec.rb
 ${GEM_LIBDIR}/spec/command/amazon/interface_spec.rb
 ${GEM_LIBDIR}/spec/command/amazon/package_spec.rb
 ${GEM_LIBDIR}/spec/command/amazon/service_spec.rb
+${GEM_LIBDIR}/spec/command/amazon2/service_spec.rb
 ${GEM_LIBDIR}/spec/command/base/file_spec.rb
 ${GEM_LIBDIR}/spec/command/base/group_spec.rb
 ${GEM_LIBDIR}/spec/command/base/host_spec.rb
