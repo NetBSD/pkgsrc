@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/29 17:15:41 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/21 13:42:08 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -9,6 +9,7 @@ ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/data/templates/to_mem_dotnet.ps1.template
+${GEM_LIBDIR}/data/templates/to_mem_msil.ps1.template
 ${GEM_LIBDIR}/data/templates/to_mem_old.ps1.template
 ${GEM_LIBDIR}/data/templates/to_mem_pshreflection.ps1.template
 ${GEM_LIBDIR}/lib/rex/powershell.rb
