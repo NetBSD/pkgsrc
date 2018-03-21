@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.49 2018/02/02 02:11:51 wen Exp $
+$NetBSD: distinfo,v 1.50 2018/03/21 12:33:23 wiz Exp $
 
-SHA1 (DBI-1.640.tar.gz) = 2446ea4e139cd56c66f1dd99c58536fa3f4e97cc
-RMD160 (DBI-1.640.tar.gz) = 018b2bc5b1928b576ca36d679467d19d9134d327
-SHA512 (DBI-1.640.tar.gz) = d2d08d1caa5779d3673ccddd9836fb4edf42909880cdb7c8554d09527bd6d44faf410cb1587a0ad880b0677abf21fd3ef71458b889d5a1bb5cecda020bdb4bb0
-Size (DBI-1.640.tar.gz) = 603787 bytes
+SHA1 (DBI-1.641.tar.gz) = d14c34fac2dd058905b0b8237a4ca8b86eed6f5d
+RMD160 (DBI-1.641.tar.gz) = 5597220770a762a02ad6c1b6772e096a8cc3dd99
+SHA512 (DBI-1.641.tar.gz) = 093eb28526e8290c0599437cd624b3e670cfff0ec149c1e8ad942f9f7facdafd2a8225bbf4efdb0d40ecf5a6088093ff9faec826cd4ec88bd0abd6125812137a
+Size (DBI-1.641.tar.gz) = 603947 bytes
