@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2018/01/26 16:26:57 bouyer Exp $
+# $NetBSD: Makefile,v 1.43 2018/03/21 06:55:57 prlw1 Exp $
 
 .include "Makefile.common"
 
 COMMENT=	Anti-virus toolkit
-PKGREVISION=	1
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
