@@ -1,29 +1,37 @@
-$NetBSD: patch-ae,v 1.4 2015/08/17 13:20:43 fhajny Exp $
+$NetBSD: patch-ae,v 1.5 2018/03/21 15:13:44 taca Exp $
 
 Fix detection of useradd user management under NetBSD.
 
 NetBSD doesn't have chage but can use the -e and -f flags to passwd to
 achieve the same.
 
---- lib/puppet/provider/user/useradd.rb.orig	2015-08-14 08:28:22.481468919 +0000
+--- lib/puppet/provider/user/useradd.rb.orig	2018-02-19 12:04:27.000000000 +0000
 +++ lib/puppet/provider/user/useradd.rb
-@@ -9,13 +9,16 @@ Puppet::Type.type(:user).provide :userad
+@@ -9,14 +9,23 @@ Puppet::Type.type(:user).provide :userad
      install Ruby's shadow password library (often known as `ruby-libshadow`)
      if you wish to manage user passwords."
  
 -  commands :add => "useradd", :delete => "userdel", :modify => "usermod", :password => "chage"
-+  commands :add => "useradd", :delete => "userdel", :modify => "usermod", :password => "chage" unless %w{NetBSD}.include? Facter.value(:operatingsystem)
-+  commands :add => "useradd", :delete => "userdel", :modify => "usermod", :password => "passwd" if %w{NetBSD}.include? Facter.value(:operatingsystem)
++  if %w{NetBSD}.include? Facter.value(:operatingsystem)
++    commands :add => "useradd", :delete => "userdel", :modify => "usermod", :password => "passwd"
++  else
++    commands :add => "useradd", :delete => "userdel", :modify => "usermod", :password => "chage"
++  end
  
    options :home, :flag => "-d", :method => :dir
    options :comment, :method => :gecos
    options :groups, :flag => "-G"
 -  options :password_min_age, :flag => "-m", :method => :sp_min
 -  options :password_max_age, :flag => "-M", :method => :sp_max
-+  options :password_min_age, :flag => "-m", :method => :sp_min unless %w{NetBSD}.include? Facter.value(:operatingsystem)
-+  options :password_max_age, :flag => "-M", :method => :sp_max unless %w{NetBSD}.include? Facter.value(:operatingsystem)
-+  options :password_min_age, :flag => "-e" if %w{NetBSD}.include? Facter.value(:operatingsystem)
-+  options :password_max_age, :flag => "-f" if %w{NetBSD}.include? Facter.value(:operatingsystem)
+-  options :password_warn_days, :flag => "-W", :method => :sp_warn
++  if %w{NetBSD}.include? Facter.value(:operatingsystem)
++    options :password_min_age, :flag => "-e"
++    options :password_max_age, :flag => "-f"
++  else
++    options :password_min_age, :flag => "-m", :method => :sp_min
++    options :password_max_age, :flag => "-M", :method => :sp_max
++    options :password_warn_days, :flag => "-W", :method => :sp_warn
++  end
    options :password, :method => :sp_pwdp
    options :expiry, :method => :sp_expire,
      :munge => proc { |value|
