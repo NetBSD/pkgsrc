@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2017/11/11 03:18:16 gdt Exp $
+# $NetBSD: Makefile,v 1.15 2018/03/21 22:38:57 gdt Exp $
 #
 
-DISTNAME=	encfs-1.9.2
+DISTNAME=	encfs-1.9.4
 PKGNAME=	fuse-${DISTNAME}
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vgough/}
