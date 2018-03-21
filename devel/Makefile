@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2646 2018/03/21 09:51:14 taca Exp $
+# $NetBSD: Makefile,v 1.2647 2018/03/21 10:06:03 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2421,6 +2421,7 @@ SUBDIR+=	ruby-priority-queue
 SUBDIR+=	ruby-racc
 SUBDIR+=	ruby-railties32
 SUBDIR+=	ruby-railties42
+SUBDIR+=	ruby-railties51
 SUBDIR+=	ruby-randexp
 SUBDIR+=	ruby-rb-fsevent
 SUBDIR+=	ruby-rb-kqueue
