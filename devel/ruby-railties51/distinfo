@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/03/21 10:05:08 taca Exp $
+
+SHA1 (railties-5.1.5.gem) = 3d1fa57558f70c2e4c0b3cd2c65f536b7d28e501
+RMD160 (railties-5.1.5.gem) = 64a40a3de7f4487d18df915e38448cb96467c953
+SHA512 (railties-5.1.5.gem) = 17f726c86b040566e39afb898335fdcbca7e2bc284f02cbf04f7ba34058033527c04101f0765665cf38007275e3d7351ee3f29fa3abf8e1e464dbaf99ea1bd13
+Size (railties-5.1.5.gem) = 228352 bytes
