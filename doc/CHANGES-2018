@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1432 2018/03/21 07:57:03 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1433 2018/03/21 09:37:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1941,3 +1941,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/clamav to 0.99.4 [prlw1 2018-03-21]
 	Updated www/nginx-devel to 1.13.10 [adam 2018-03-21]
 	Updated devel/pcre to 8.42 [adam 2018-03-21]
+	Updated textproc/ruby-rails-dom-testing to 2.0.3 [taca 2018-03-21]
