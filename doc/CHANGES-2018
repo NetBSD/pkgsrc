@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1481 2018/03/21 21:32:55 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1482 2018/03/21 22:39:04 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2010,3 +2010,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/postfix-sqlite to 3.3.0 [taca 2018-03-21]
 	Updated print/ghostscript-agpl to 9.23 [adam 2018-03-21]
 	Updated graphics/inkscape to 0.92.2nb5 [wiz 2018-03-21]
+	Updated filesystems/fuse-encfs to 1.9.4 [gdt 2018-03-21]
