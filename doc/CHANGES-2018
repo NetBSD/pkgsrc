@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1441 2018/03/21 11:40:39 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1442 2018/03/21 11:48:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1959,3 +1959,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-mixlib-config to 2.2.5 [taca 2018-03-21]
 	Updated lang/ruby-gherkin to 5.0.0 [taca 2018-03-21]
 	Updated net/ruby-recog to 2.1.18 [taca 2018-03-21]
+	Updated net/ruby-ruby_smb to 0.0.23 [taca 2018-03-21]
