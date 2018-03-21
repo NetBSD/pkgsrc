@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2018/03/18 08:52:01 wiz Exp $
+$NetBSD: distinfo,v 1.19 2018/03/21 12:41:54 wiz Exp $
 
-SHA1 (SNMP-Info-3.51.tar.gz) = eebade818c0134e9f55d7e4c9141f5ce9f977cdc
-RMD160 (SNMP-Info-3.51.tar.gz) = 9c80b5a2be8c2ab1c07fddb1be699eefb9dbb106
-SHA512 (SNMP-Info-3.51.tar.gz) = b4be6888c1f9d09af13ccbd94254261b54959e919e6aba4163ecca06bfcec327312d7193d09e57fbbd932a9ebf3af62d594065e323935131e2b4b4014a01df96
-Size (SNMP-Info-3.51.tar.gz) = 443782 bytes
+SHA1 (SNMP-Info-3.52.tar.gz) = 119b32016456de39293193a6ecde8862645253fb
+RMD160 (SNMP-Info-3.52.tar.gz) = 27533aa7095100faaf7b99becc38c6273ca1541c
+SHA512 (SNMP-Info-3.52.tar.gz) = 06bb9f18b142d286c70333c0b9a61aa31d3c01d32c7813a415cb40fecc0ec72fcb17c57e4a8511bd497220d4d3ca95037933881abab91ff842b5d656db9ac669
+Size (SNMP-Info-3.52.tar.gz) = 443456 bytes
