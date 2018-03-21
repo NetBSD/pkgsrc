@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2017/06/21 14:05:34 taca Exp $
+# $NetBSD: Makefile,v 1.3 2018/03/21 11:33:20 taca Exp $
 
-DISTNAME=	gherkin-4.1.3
+DISTNAME=	gherkin-5.0.0
 CATEGORIES=	lang
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://github.com/cucumber/gherkin
+HOMEPAGE=	https://github.com/cucumber/cucumber/tree/master/gherkin
 COMMENT=	Parser and compiler for the Gherkin language
 LICENSE=	mit
 
