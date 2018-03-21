@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1459 2018/03/21 12:50:30 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1460 2018/03/21 12:50:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1977,3 +1977,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-Text-Template to 1.52 [wiz 2018-03-21]
 	Updated devel/p5-Module-FromPerlVer to 0.008001 [wiz 2018-03-21]
 	Updated sysutils/ruby-specinfra to 2.73.2 [taca 2018-03-21]
+	Updated security/p5-Net-DNS-SEC to 1.05 [wiz 2018-03-21]
