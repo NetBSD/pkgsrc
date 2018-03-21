@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/13 18:22:46 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/21 13:32:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -17,6 +17,7 @@ ${GEM_LIBDIR}/lib/rex/socket/ip.rb
 ${GEM_LIBDIR}/lib/rex/socket/parameters.rb
 ${GEM_LIBDIR}/lib/rex/socket/range_walker.rb
 ${GEM_LIBDIR}/lib/rex/socket/ssh_factory.rb
+${GEM_LIBDIR}/lib/rex/socket/ssl.rb
 ${GEM_LIBDIR}/lib/rex/socket/ssl_tcp.rb
 ${GEM_LIBDIR}/lib/rex/socket/ssl_tcp_server.rb
 ${GEM_LIBDIR}/lib/rex/socket/subnet_walker.rb
