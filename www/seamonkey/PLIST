@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2017/11/10 22:45:27 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.59.2.1 2018/03/21 20:49:56 spz Exp $
 bin/seamonkey
 lib/seamonkey/application.ini
 lib/seamonkey/blocklist.xml
@@ -25,6 +25,7 @@ lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/bookmarksToolba
 lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/editBookmarkOverlay.css
 lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/livemark-folder.png
 lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/query.png
+lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/tag.png
 lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/toolbarDropMarker.png
 lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/unsortedBookmarks.png
 lib/seamonkey/chrome/classic/skin/classic/communicator/brand.css
@@ -115,6 +116,7 @@ lib/seamonkey/chrome/classic/skin/classic/communicator/profile/migrate.gif
 lib/seamonkey/chrome/classic/skin/classic/communicator/profile/profile.css
 lib/seamonkey/chrome/classic/skin/classic/communicator/profile/profileManager.css
 lib/seamonkey/chrome/classic/skin/classic/communicator/profile/profileicon-large.gif
+lib/seamonkey/chrome/classic/skin/classic/communicator/scrollbars.css
 lib/seamonkey/chrome/classic/skin/classic/communicator/search/engineManager.css
 lib/seamonkey/chrome/classic/skin/classic/communicator/search/mainwindow-dropdown-arrow.png
 lib/seamonkey/chrome/classic/skin/classic/communicator/search/search.css
@@ -3899,7 +3901,7 @@ lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/com
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/editBookmarkOverlay.css
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/livemark-folder.png
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/query.png
-lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/tagContainerIcon.png
+lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/tag.png
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/toolbarDropMarker.png
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/unsortedBookmarks.png
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/brand.css
