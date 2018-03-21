@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/06/10 16:40:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/21 12:53:54 taca Exp $
 bin/serverspec-init${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -83,6 +83,7 @@ ${GEM_LIBDIR}/lib/serverspec/type/selinux_module.rb
 ${GEM_LIBDIR}/lib/serverspec/type/service.rb
 ${GEM_LIBDIR}/lib/serverspec/type/user.rb
 ${GEM_LIBDIR}/lib/serverspec/type/windows_feature.rb
+${GEM_LIBDIR}/lib/serverspec/type/windows_firewall.rb
 ${GEM_LIBDIR}/lib/serverspec/type/windows_hot_fix.rb
 ${GEM_LIBDIR}/lib/serverspec/type/windows_registry_key.rb
 ${GEM_LIBDIR}/lib/serverspec/type/windows_scheduled_task.rb
@@ -213,5 +214,3 @@ ${GEM_LIBDIR}/spec/type/windows/service_spec.rb
 ${GEM_LIBDIR}/spec/type/windows/user_spec.rb
 ${GEM_LIBDIR}/wercker.yml
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.3.0/extensions
-@pkgdir lib/ruby/gems/2.3.0/build_info
