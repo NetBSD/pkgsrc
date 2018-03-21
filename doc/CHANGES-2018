@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1461 2018/03/21 12:54:13 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1462 2018/03/21 13:10:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1979,3 +1979,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/ruby-specinfra to 2.73.2 [taca 2018-03-21]
 	Updated security/p5-Net-DNS-SEC to 1.05 [wiz 2018-03-21]
 	Updated sysutils/ruby-serverspec to 2.41.3 [taca 2018-03-21]
+	Updated security/ruby-nexpose to 7.2.0 [taca 2018-03-21]
