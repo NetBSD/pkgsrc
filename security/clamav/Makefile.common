@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.9 2018/01/26 12:20:16 bouyer Exp $
+# $NetBSD: Makefile.common,v 1.10 2018/03/21 06:55:57 prlw1 Exp $
 #
 # used by security/clamav/Makefile
 # used by security/clamav-doc/Makefile
 
-DISTNAME=	clamav-0.99.3
+DISTNAME=	clamav-0.99.4
 CATEGORIES=	security
 MASTER_SITES=	http://www.clamav.net/downloads/production/
 
