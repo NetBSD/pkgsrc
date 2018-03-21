@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.63 2018/03/18 14:21:21 taca Exp $
+# $NetBSD: rails.mk,v 1.64 2018/03/21 03:40:21 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -13,11 +13,19 @@ _RUBY_RAILS_MK=	# defined
 #	Default: 32
 #
 #
+# === Infrastructure variables ===
+#
+# RUBY_RAILS_REQD
+#	Ruby Rails version to use. This variable should not be set in
+#	packages.
+#
+#		Possible values: ${RUBY_RAILS_ACCEPTED}
+#		Default:         ${RUBY_RAILS_DEFAULT}
+#
 # === Package-settable variables ===
 #
 # RUBY_RAILS_ACCEPTED
 #	The Ruby on Rails versions that are acceptable for the package.
-#	Currently, only one value is accepted.
 #
 #	Possible values: 32 42
 #	Default: (empty)
@@ -47,11 +55,34 @@ RUBY_RAILS_DEFAULT?=	32
 
 RUBY_RAILS_STRICT_DEP?=	no
 
-.if !empty(RUBY_RAILS_ACCEPTED) && ${RUBY_RAILS_ACCEPTED:[\#]} == 1
-RUBY_RAILS=			${RUBY_RAILS_ACCEPTED}
+RUBY_RAILS_SUPPORTED=	32 42
+
+.if empty(RUBY_RAILS_SUPPORTED:M${RUBY_RAILS_DEFAULT})
+.error Unsupported RUBY_RAILS_DEFAULT: ${RUBY_RAILS_DEFAULT}
 .endif
 
-RUBY_RAILS?=	${RUBY_RAILS_DEFAULT}
+.if empty(RUBY_RAILS_ACCEPTED)
+RUBY_RAILS_ACCEPTED=	${RUBY_RAILS_SUPPORTED}
+.endif
+
+.if defined(RUBY_RAILS_REQD)
+.  if empty(RUBY_RAILS_ACCEPTED:M${RUBY_RAILS_REQD})
+.    error Unsupported RUBY_RAILS_REQD: ${RUBY_RAILS_REQD}
+.  endif
+.  for rr in ${RUBY_RAILS_ACCEPTED}
+.    if ${rr} == ${RUBY_RAILS_REQD}
+RUBY_RAILS=	${rr}
+.    endif
+.  endfor
+.endif
+
+.if !defined(RUBY_RAILS)
+.  for rr in ${RUBY_RAILS_ACCEPTED}
+RUBY_RAILS?=	${rr}
+.  endfor
+.endif
+
+RUBY_RAILS?=	${RUBY_RAILS_SUPPORTED}
 
 .if ${RUBY_RAILS} == "42"
 RAILS_VERSION:=	${RUBY_RAILS42_VERSION}
