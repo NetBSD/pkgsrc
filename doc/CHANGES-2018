@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1433 2018/03/21 09:37:38 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1434 2018/03/21 10:10:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1942,3 +1942,13 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/nginx-devel to 1.13.10 [adam 2018-03-21]
 	Updated devel/pcre to 8.42 [adam 2018-03-21]
 	Updated textproc/ruby-rails-dom-testing to 2.0.3 [taca 2018-03-21]
+	Added devel/ruby-activesupport51 version 5.1.5 [taca 2018-03-21]
+	Added devel/ruby-activemodel51 version 5.1.5 [taca 2018-03-21]
+	Added devel/ruby-activejob51 version 5.1.5 [taca 2018-03-21]
+	Added www/ruby-actionview51 version 5.1.5 [taca 2018-03-21]
+	Added www/ruby-actionpack51 version 5.1.5 [taca 2018-03-21]
+	Added www/ruby-actioncable51 version 5.1.5 [taca 2018-03-21]
+	Added databases/ruby-activerecord51 version 5.1.5 [taca 2018-03-21]
+	Added mail/ruby-actionmailer51 version 5.1.5 [taca 2018-03-21]
+	Added devel/ruby-railties51 version 5.1.5 [taca 2018-03-21]
+	Added www/ruby-rails51 version 5.1.5 [taca 2018-03-21]
