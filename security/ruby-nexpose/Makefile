@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/10/17 18:15:18 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/03/21 13:10:25 taca Exp $
 
-DISTNAME=	nexpose-7.1.1
+DISTNAME=	nexpose-7.2.0
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org
