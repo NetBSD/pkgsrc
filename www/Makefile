@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1318 2018/03/21 09:55:40 taca Exp $
+# $NetBSD: Makefile,v 1.1319 2018/03/21 09:58:34 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -771,6 +771,7 @@ SUBDIR+=	qDecoder
 SUBDIR+=	raggle
 SUBDIR+=	ramaze
 SUBDIR+=	rekonq
+SUBDIR+=	ruby-actioncable51
 SUBDIR+=	ruby-actionpack32
 SUBDIR+=	ruby-actionpack42
 SUBDIR+=	ruby-actionpack51
