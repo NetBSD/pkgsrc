@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1319 2018/03/21 09:58:34 taca Exp $
+# $NetBSD: Makefile,v 1.1320 2018/03/21 10:08:16 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -856,6 +856,7 @@ SUBDIR+=	ruby-rails-deprecated_sanitizer
 SUBDIR+=	ruby-rails-html-sanitizer
 SUBDIR+=	ruby-rails32
 SUBDIR+=	ruby-rails42
+SUBDIR+=	ruby-rails51
 SUBDIR+=	ruby-raindrops
 SUBDIR+=	ruby-rest-client
 SUBDIR+=	ruby-rouge
