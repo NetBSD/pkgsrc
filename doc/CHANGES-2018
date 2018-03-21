@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1483 2018/03/21 23:20:22 gdt Exp $
+$NetBSD: CHANGES-2018,v 1.1484 2018/03/21 23:20:27 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2012,3 +2012,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/inkscape to 0.92.2nb5 [wiz 2018-03-21]
 	Updated filesystems/fuse-encfs to 1.9.4 [gdt 2018-03-21]
 	Updated geography/gdal-lib to 2.2.4 [gdt 2018-03-21]
+	Updated geography/py-gdal to 2.2.4 [gdt 2018-03-21]
