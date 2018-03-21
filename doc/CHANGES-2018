@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1469 2018/03/21 13:42:41 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1470 2018/03/21 13:51:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1987,3 +1987,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/ruby-rex-core to 0.1.13 [taca 2018-03-21]
 	Updated security/ruby-rex-socket to 0.1.10 [taca 2018-03-21]
 	Updated security/ruby-rex-powershell to 0.1.77 [taca 2018-03-21]
+	Updated devel/hoe to 3.17.0 [taca 2018-03-21]
