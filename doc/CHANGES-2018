@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1448 2018/03/21 12:23:50 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1449 2018/03/21 12:29:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1966,3 +1966,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ruby-pygments.rb to 1.2.1 [taca 2018-03-21]
 	Updated www/ruby-rack-contrib to 2.0.1 [taca 2018-03-21]
 	Updated www/ruby-selenium-webdriver to 3.11.0 [taca 2018-03-21]
+	Updated databases/p5-DBD-ODBC to 1.58 [wiz 2018-03-21]
