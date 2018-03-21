@@ -1,14 +1,13 @@
-$NetBSD: patch-encfs_main.cpp,v 1.2 2017/11/11 03:18:16 gdt Exp $
+$NetBSD: patch-encfs_main.cpp,v 1.3 2018/03/21 22:38:57 gdt Exp $
 
---- encfs/main.cpp.orig	2017-07-25 18:26:45.000000000 +0000
+--- encfs/main.cpp.orig	2018-01-28 21:07:41.000000000 +0000
 +++ encfs/main.cpp
-@@ -488,8 +488,10 @@ static void *idleMonitor(void *);
- void *encfs_init(fuse_conn_info *conn) {
-   EncFS_Context *ctx = (EncFS_Context *)fuse_get_context()->private_data;
+@@ -530,7 +530,9 @@ void *encfs_init(fuse_conn_info *conn) {
+   auto *ctx = (EncFS_Context *)fuse_get_context()->private_data;
  
-+#ifndef __NetBSD__ /* XXX FUSE API too old */
    // set fuse connection options
-   conn->async_read = true;
++#ifndef __NetBSD__ /* XXX FUSE API too old */
+   conn->async_read = 1u;
 +#endif
  
    // if an idle timeout is specified, then setup a thread to monitor the
