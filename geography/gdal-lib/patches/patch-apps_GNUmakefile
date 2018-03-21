@@ -1,0 +1,15 @@
+$NetBSD: patch-apps_GNUmakefile,v 1.1 2018/03/21 22:40:06 gdt Exp $
+
+Avoid setting executable bits on a header file.  Not yet reported
+upstream.
+
+--- apps/GNUmakefile.orig	2017-09-15 10:37:46.000000000 +0000
++++ apps/GNUmakefile
+@@ -216,6 +216,6 @@ gdal-config-inst:	gdal-config.in ../GDAL
+ 
+ install: default
+ 	for f in $(BIN_LIST) ; do $(INSTALL) $$f $(DESTDIR)$(INST_BIN) ; done
+-	$(INSTALL) gdal_utils.h $(DESTDIR)$(INST_INCLUDE)
++	$(INSTALL_DATA) gdal_utils.h $(DESTDIR)$(INST_INCLUDE)
+ 	$(INSTALL) gdal-config-inst $(DESTDIR)$(INST_BIN)/gdal-config
+ 
