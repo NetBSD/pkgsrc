@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.7 2017/11/11 03:18:16 gdt Exp $
+$NetBSD: distinfo,v 1.8 2018/03/21 22:38:57 gdt Exp $
 
-SHA1 (encfs-1.9.2.tar.gz) = 63b065bfd1eedc4ac0dba48573df4f7ca2aa8d5b
-RMD160 (encfs-1.9.2.tar.gz) = b0829b32ca6e78a748ba292cb61ee9e8a29319da
-SHA512 (encfs-1.9.2.tar.gz) = 7664a2f48dddde77cae005aba70962704b002f60afb2da35c4661f7e4e22ce5c003d3b674ce125fcc72e9f0588164c1f7dbf22f2b9061d0736b8c164c1ec70a5
-Size (encfs-1.9.2.tar.gz) = 11043181 bytes
-SHA1 (patch-encfs_DirNode.cpp) = 7c7ddc2a125e8dfb2373c700a2e5d1c5a69fab39
-SHA1 (patch-encfs_main.cpp) = b0d19b93f821b1c6147f59163cc7dad4eec8efb0
-SHA1 (patch-internal_easylogging++.h) = fa13f1fd0b3f6c88356b5ca7af334d701cf9a4cd
+SHA1 (encfs-1.9.4.tar.gz) = bf1e2b7688ee715c487d3d181e810d53c5983a0a
+RMD160 (encfs-1.9.4.tar.gz) = 847f943f6ae7622d54aa9ef25a64344153c23da0
+SHA512 (encfs-1.9.4.tar.gz) = 082e35e6eae4730b5e7827eed729422f9d995ebe9e441c5f9725f39cc2f46f014ac1479c7b0a7ce04e9e7228c1a93ecf5b4228e667fc48e6a7d3b68d2324cd0b
+Size (encfs-1.9.4.tar.gz) = 2794574 bytes
+SHA1 (patch-encfs_DirNode.cpp) = 960480ee442f534357e3325c5001b6056b2338a6
+SHA1 (patch-encfs_main.cpp) = f7f1d9aa6d953aee98b534428e111f38b012d70f

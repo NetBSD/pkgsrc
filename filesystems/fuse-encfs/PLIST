@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/19 18:41:39 maya Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/03/21 22:38:57 gdt Exp $
 bin/encfs
 bin/encfsctl
 bin/encfssh
@@ -54,3 +54,4 @@ share/locale/zh_HK/LC_MESSAGES/encfs.mo
 share/locale/zh_TW/LC_MESSAGES/encfs.mo
 share/man/man1/encfs.1
 share/man/man1/encfsctl.1
+share/man/man1/encfssh.1
