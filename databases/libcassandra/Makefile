@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2018/01/01 21:18:18 adam Exp $
+# $NetBSD: Makefile,v 1.39 2018/03/21 09:23:06 jperkin Exp $
 #
 
 DISTNAME=		libcassandra-20101010
@@ -36,6 +36,7 @@ MAKE_ENV+=		AM_DEFAULT_VERBOSITY=1
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-Wno-unknown-warning-option
 CXXFLAGS+=	-Wno-c++11-extensions -Wno-error=unused-local-typedef
 .endif
 
