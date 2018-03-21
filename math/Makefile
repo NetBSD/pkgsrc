@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.375 2018/03/20 15:50:45 khorben Exp $
+# $NetBSD: Makefile,v 1.376 2018/03/21 15:26:10 minskim Exp $
 
 COMMENT=	Mathematics
 
@@ -51,6 +51,7 @@ SUBDIR+=	R-hwde
 SUBDIR+=	R-intervals
 SUBDIR+=	R-lme4
 SUBDIR+=	R-lmm
+SUBDIR+=	R-lmtest
 SUBDIR+=	R-mapproj
 SUBDIR+=	R-maps
 SUBDIR+=	R-minqa
