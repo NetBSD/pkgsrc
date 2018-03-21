@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/09/16 19:27:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/03/21 12:23:32 taca Exp $
 
-DISTNAME=	selenium-webdriver-3.5.2
+DISTNAME=	selenium-webdriver-3.11.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	ruby www
 
