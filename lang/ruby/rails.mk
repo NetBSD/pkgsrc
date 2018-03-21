@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.65 2018/03/21 09:15:04 taca Exp $
+# $NetBSD: rails.mk,v 1.66 2018/03/21 09:32:48 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -9,7 +9,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS_DEFAULT
 #	Select default Ruby on Rails version.
 #
-#	Possible values: 32 42
+#	Possible values: 32 42 51
 #	Default: 32
 #
 #
@@ -27,7 +27,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS_ACCEPTED
 #	The Ruby on Rails versions that are acceptable for the package.
 #
-#	Possible values: 32 42
+#	Possible values: 32 42 51
 #	Default: (empty)
 #
 # RUBY_RAILS_STRICT_DEP
@@ -41,7 +41,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS
 #	Selected Ruby on Rails version.
 #
-#	Possible values: 32 42
+#	Possible values: 32 42 51
 #
 
 #
@@ -49,13 +49,14 @@ _RUBY_RAILS_MK=	# defined
 #
 RUBY_RAILS32_VERSION?=	3.2.22.5
 RUBY_RAILS42_VERSION?=	4.2.10
+RUBY_RAILS51_VERSION?=	5.1.5
 
 RUBY_RAILS_ACCEPTED?=	# defined
 RUBY_RAILS_DEFAULT?=	32
 
 RUBY_RAILS_STRICT_DEP?=	no
 
-RUBY_RAILS_SUPPORTED=	32 42
+RUBY_RAILS_SUPPORTED=	32 42 51
 
 .if empty(RUBY_RAILS_SUPPORTED:M${RUBY_RAILS_DEFAULT})
 .error Unsupported RUBY_RAILS_DEFAULT: ${RUBY_RAILS_DEFAULT}
@@ -88,7 +89,9 @@ RUBY_RAILS?=	${rr}
 
 RUBY_RAILS?=	${RUBY_RAILS_SUPPORTED}
 
-.if ${RUBY_RAILS} == "42"
+.if ${RUBY_RAILS} == "51"
+RAILS_VERSION:=	${RUBY_RAILS51_VERSION}
+.elif ${RUBY_RAILS} == "42"
 RAILS_VERSION:=	${RUBY_RAILS42_VERSION}
 .else
 RAILS_VERSION:=	${RUBY_RAILS32_VERSION}
@@ -117,19 +120,19 @@ _RAILS_DEP=	${RUBY_RAILS}>=${RAILS_VERSION}<${_RAILS_MAJOR}.${_RAILS_NEXT}
 
 #
 MAKE_ENV+=	RUBY_RAILS_DEFAULT=${RUBY_RAILS} \
-		RUBY_RAILS_ACCEPTED=${RUBY_RAILS} \
-		RUBY_RAILS_REQD=${RUBY_RAILS}
+		RUBY_RAILS_ACCEPTED=${RUBY_RAILS}
 #
-MULTI+=		RUBY_RAILS_DEFAULT=${RUBY_RAILS} \
-		RUBY_RAILS_ACCEPTED=${RUBY_RAILS}  \
-		RUBY_RAILS_REQD=${RUBY_RAILS}
+MULTI+=			RUBY_RAILS_DEFAULT=${RUBY_RAILS} \
+			RUBY_RAILS_ACCEPTED=${RUBY_RAILS}
 
 RUBY_ACTIVESUPPORT_DEPENDS= \
 	${RUBY_PKGPREFIX}-activesupport${_RAILS_DEP}:../../devel/ruby-activesupport${RUBY_RAILS}
 RUBY_ACTIVEMODEL_DEPENDS= \
 	${RUBY_PKGPREFIX}-activemodel${_RAILS_DEP}:../../devel/ruby-activemodel${RUBY_RAILS}
+.if ${RUBY_RAILS} != "51"
 RUBY_ACTIONPACK_DEPENDS= \
 	${RUBY_PKGPREFIX}-actionpack${_RAILS_DEP}:../../www/ruby-actionpack${RUBY_RAILS}
+.endif
 RUBY_ACTIVERECORD_DEPENDS= \
 	${RUBY_PKGPREFIX}-activerecord${_RAILS_DEP}:../../databases/ruby-activerecord${RUBY_RAILS}
 RUBY_ACTIONMAILER_DEPENDS= \
@@ -142,11 +145,15 @@ RUBY_RAILS_DEPENDS= \
 .if ${RUBY_RAILS} == "32"
 RUBY_ACTIVERESOURCE_DEPENDS= \
 	${RUBY_PKGPREFIX}-activeresource${_RAILS_DEP}:../../www/ruby-activeresource${RUBY_RAILS}
-.elif ${RUBY_RAILS} == "42"
+.elif ${RUBY_RAILS} == "42" || ${RUBY_RAILS} == "51"
 RUBY_ACTIONVIEW_DEPENDS= \
 	${RUBY_PKGPREFIX}-actionview${_RAILS_DEP}:../../www/ruby-actionview${RUBY_RAILS}
 RUBY_ACTIVEJOB_DEPENDS= \
 	${RUBY_PKGPREFIX}-activejob${_RAILS_DEP}:../../devel/ruby-activejob${RUBY_RAILS}
+.endif
+.if ${RUBY_RAILS} == "51"
+RUBY_ACTIONCABLE_DEPENDS= \
+	${RUBY_PKGPREFIX}-actioncable${_RAILS_DEP}:../../www/ruby-actioncable${RUBY_RAILS}
 .endif
 
 .endif
