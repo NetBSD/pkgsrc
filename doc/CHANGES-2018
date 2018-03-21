@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1454 2018/03/21 12:40:04 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1455 2018/03/21 12:40:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1972,3 +1972,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-ExtUtils-MakeMaker to 7.34 [wiz 2018-03-21]
 	Updated devel/p5-Module-CoreList to 5.20180221 [wiz 2018-03-21]
 	Updated devel/p5-Test-Harness to 3.42 [wiz 2018-03-21]
+	Updated fonts/p5-Font-FreeType to 0.10 [wiz 2018-03-21]
