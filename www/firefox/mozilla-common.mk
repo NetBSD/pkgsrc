@@ -1,9 +1,15 @@
-# $NetBSD: mozilla-common.mk,v 1.107 2018/03/17 17:55:13 maya Exp $
+# $NetBSD: mozilla-common.mk,v 1.108 2018/03/21 16:06:29 taca Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
 # used by www/firefox/Makefile
 # used by www/seamonkey/Makefile
+
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
+USE_LANGUAGES+=		c99 c++
+UNLIMIT_RESOURCES+=	datasize
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -14,14 +20,9 @@ BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
 #CONFIGURE_ARGS+=	--enable-eme=widevine
 .endif
 
-HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
 # For rustc/cargo detection
 CONFIGURE_ARGS+=	--target=${MACHINE_GNU_PLATFORM:Q}
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
-USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
-USE_LANGUAGES+=		c99 c++
-UNLIMIT_RESOURCES+=	datasize
 
 CONFIGURE_ENV+=		BINDGEN_CFLAGS="-isystem${PREFIX}/include/nspr \
 			-isystem${X11BASE}/include/pixman-1"
