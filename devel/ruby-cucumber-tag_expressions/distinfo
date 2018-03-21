@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/03/21 10:23:48 taca Exp $
+
+SHA1 (cucumber-tag_expressions-1.1.1.gem) = 50330ff370d2674a28bbe5e96b9e33e8af8b1c1b
+RMD160 (cucumber-tag_expressions-1.1.1.gem) = ce6960e43ddaf8e487c25d4ee59b525ba7a7eb3b
+SHA512 (cucumber-tag_expressions-1.1.1.gem) = 9b46d681be78b428c7cd29ca1cae21dbd410f7ca9844ec6f94368170c133f8de662a55e4f4440045704107e5428306ab81d2a90020c64102ef42f647cd8a66a6
+Size (cucumber-tag_expressions-1.1.1.gem) = 7680 bytes
