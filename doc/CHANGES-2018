@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1474 2018/03/21 15:03:43 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1475 2018/03/21 15:06:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1993,3 +1993,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/SOPE to 2.3.23 [taca 2018-03-21]
 	Updated www/SOGo to 2.3.23 [taca 2018-03-21]
 	Updated devel/ruby-mode to 2.5.0 [taca 2018-03-21]
+	Updated net/isc-dhcp4 to 4.4.1 [taca 2018-03-21]
+	Updated net/isc-dhclient4 to 4.4.1 [taca 2018-03-21]
+	Updated net/isc-dhcpd4 to 4.4.1 [taca 2018-03-21]
+	Updated net/isc-dhcrelay4 to 4.4.1 [taca 2018-03-21]
