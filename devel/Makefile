@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2644 2018/03/21 09:40:41 taca Exp $
+# $NetBSD: Makefile,v 1.2645 2018/03/21 09:48:11 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2300,6 +2300,7 @@ SUBDIR+=	ruby-abstract
 SUBDIR+=	ruby-activejob42
 SUBDIR+=	ruby-activemodel32
 SUBDIR+=	ruby-activemodel42
+SUBDIR+=	ruby-activemodel51
 SUBDIR+=	ruby-activesupport32
 SUBDIR+=	ruby-activesupport42
 SUBDIR+=	ruby-activesupport51
