@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2018/01/07 15:08:50 leot Exp $
+# $NetBSD: Makefile,v 1.60 2018/03/21 23:18:09 gdt Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
@@ -64,6 +64,7 @@ SUBST_FILES.paths=	config
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_STAGE.paths=	post-patch
 
+.include "options.mk"
 
 pre-configure:
 	cd ${WRKSRC} && autoheader && autoconf
