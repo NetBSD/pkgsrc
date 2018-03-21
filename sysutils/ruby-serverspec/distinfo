@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/09/11 15:57:00 taca Exp $
+$NetBSD: distinfo,v 1.3 2018/03/21 12:53:54 taca Exp $
 
-SHA1 (serverspec-2.40.0.gem) = bdc695e168716a65c0e271fe431bfbbef39446d8
-RMD160 (serverspec-2.40.0.gem) = 25cd0b27df6835cbc641a437484d165841ae5d3d
-SHA512 (serverspec-2.40.0.gem) = 657875d2b675f92c6981dbaa96ac1e5d48349c8a02f1f39bc98dce3386fe8cfe88fab4253583ebf8c17959b0930510108e40936cb4908a860bbd548b99ddeee9
-Size (serverspec-2.40.0.gem) = 39424 bytes
+SHA1 (serverspec-2.41.3.gem) = 064215bdc48cb18243f5e42c0e1ba3a49c36057a
+RMD160 (serverspec-2.41.3.gem) = 2c5c778bbcc7cfbbde5d3c78c3ded542ab5b98e4
+SHA512 (serverspec-2.41.3.gem) = 314dead8bf3bef1d714ae14d5a13e0da3423aa17bf735ea1524424d7f387cd6cef502a128b4610f77be1b793fd6f6f5c680ad2398522b573b8bea875b0bd1870
+Size (serverspec-2.41.3.gem) = 39424 bytes
