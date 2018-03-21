@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/03/17 16:21:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/03/21 12:09:39 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -7,6 +7,7 @@ ${GEM_LIBDIR}/MIT-LICENSE.txt
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/SECURITY.md
 ${GEM_LIBDIR}/benchmark/benchmark.rb
 ${GEM_LIBDIR}/benchmark/fragment.html
 ${GEM_LIBDIR}/benchmark/helper.rb
@@ -16,6 +17,7 @@ ${GEM_LIBDIR}/lib/loofah/elements.rb
 ${GEM_LIBDIR}/lib/loofah/helpers.rb
 ${GEM_LIBDIR}/lib/loofah/html/document.rb
 ${GEM_LIBDIR}/lib/loofah/html/document_fragment.rb
+${GEM_LIBDIR}/lib/loofah/html5/libxml2_workarounds.rb
 ${GEM_LIBDIR}/lib/loofah/html5/scrub.rb
 ${GEM_LIBDIR}/lib/loofah/html5/whitelist.rb
 ${GEM_LIBDIR}/lib/loofah/instance_methods.rb
