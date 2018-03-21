@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1436 2018/03/21 10:24:51 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1437 2018/03/21 10:26:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1954,3 +1954,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/ruby-rails51 version 5.1.5 [taca 2018-03-21]
 	Updated databases/ruby-arel-helpers to 2.6.1 [taca 2018-03-21]
 	Added devel/ruby-cucumber-tag_expressions version 1.1.1 [taca 2018-03-21]
+	Updated devel/ruby-cucumber-core to 3.1.0 [taca 2018-03-21]
