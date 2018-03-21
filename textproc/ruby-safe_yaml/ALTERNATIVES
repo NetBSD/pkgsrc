@@ -1,0 +1,1 @@
+bin/safe_yaml @PREFIX@/bin/safe_yaml@RUBY_SUFFIX@
