@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1434 2018/03/21 10:10:53 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1435 2018/03/21 10:21:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1952,3 +1952,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added mail/ruby-actionmailer51 version 5.1.5 [taca 2018-03-21]
 	Added devel/ruby-railties51 version 5.1.5 [taca 2018-03-21]
 	Added www/ruby-rails51 version 5.1.5 [taca 2018-03-21]
+	Updated databases/ruby-arel-helpers to 2.6.1 [taca 2018-03-21]
