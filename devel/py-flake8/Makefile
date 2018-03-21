@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/10/23 20:44:27 adam Exp $
+# $NetBSD: Makefile,v 1.12 2018/03/21 12:05:28 joerg Exp $
 
 DISTNAME=	flake8-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,9 +22,9 @@ DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 # TEST_DEPENDS
 # 8 test failures as of 3.0.4, see
 # https://gitlab.com/pycqa/flake8/issues/232
-BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} flake8 flake8-${PYVERSSUFFIX} || ${TRUE}
