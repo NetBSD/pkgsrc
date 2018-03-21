@@ -1,0 +1,28 @@
+# $NetBSD: Makefile,v 1.1 2018/03/21 10:07:41 taca Exp $
+
+DISTNAME=	rails-${RAILS_VERSION}
+PKGNAME=	${RUBY_PKGPREFIX}-rails${RUBY_RAILS}-${RAILS_VERSION}
+CATEGORIES=	www
+
+MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://www.rubyonrails.org/
+COMMENT=	Full-stack web application framework, Rails 5.1
+LICENSE=	mit
+
+DEPENDS+=	${RUBY_ACTIONCABLE_DEPENDS}
+DEPENDS+=	${RUBY_ACTIONMAILER_DEPENDS}
+DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
+DEPENDS+=	${RUBY_ACTIONVIEW_DEPENDS}
+DEPENDS+=	${RUBY_ACTIVEJOB_DEPENDS}
+DEPENDS+=	${RUBY_ACTIVEMODEL_DEPENDS}
+DEPENDS+=	${RUBY_ACTIVERECORD_DEPENDS}
+DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
+DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
+DEPENDS+=	${RUBY_PKGPREFIX}-bundler>=1.3.0:../../misc/ruby-bundler
+DEPENDS+=	${RUBY_PKGPREFIX}-sprockets-rails>2.0.0*:../../misc/ruby-sprockets-rails
+
+RUBY_RAILS_ACCEPTED=	51
+RUBY_RAILS_STRICT_DEP=	yes
+
+.include "../../lang/ruby/gem.mk"
+.include "../../mk/bsd.pkg.mk"
