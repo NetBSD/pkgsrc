@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/07/09 06:38:27 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/21 12:04:30 fhajny Exp $
 
 DISTNAME=	mozjs17.0.0
 PKGNAME=	${DISTNAME:S/mozjs/spidermonkey17-/}
@@ -10,6 +10,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://developer.mozilla.org/en/SpiderMonkey
 COMMENT=	Standalone JavaScript implementation in C
 LICENSE=	mpl-2.0
+
+# Spidermonkey never worked here and unlikely will
+# https://bugzilla.mozilla.org/show_bug.cgi?id=577056
+BROKEN_ON_PLATFORM=	SunOS-*-x86_64
 
 MAKE_JOBS_SAFE=	no
 
