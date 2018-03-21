@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1456 2018/03/21 12:42:03 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1457 2018/03/21 12:43:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1974,3 +1974,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Test-Harness to 3.42 [wiz 2018-03-21]
 	Updated fonts/p5-Font-FreeType to 0.10 [wiz 2018-03-21]
 	Updated net/p5-SNMP-Info to 3.52 [wiz 2018-03-21]
+	Updated textproc/p5-Text-Template to 1.52 [wiz 2018-03-21]
