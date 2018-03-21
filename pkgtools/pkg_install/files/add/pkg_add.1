@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_add.1,v 1.46 2014/12/30 15:13:20 wiz Exp $
+.\" $NetBSD: pkg_add.1,v 1.47 2018/03/21 17:26:58 sevan Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -17,7 +17,7 @@
 .\"
 .\"     @(#)pkg_add.1
 .\"
-.Dd December 27, 2014
+.Dd March 21, 2018
 .Dt PKG_ADD 1
 .Os
 .Sh NAME
@@ -25,7 +25,7 @@
 .Nd a utility for installing and upgrading software package distributions
 .Sh SYNOPSIS
 .Nm
-.Op Fl AfInRUuVv
+.Op Fl AfhInRUuVv
 .Op Fl C Ar config
 .Op Fl K Ar pkg_dbdir
 .Op Fl m Ar machine
@@ -133,6 +133,8 @@ Force updating even if the dependencies of depending packages are not
 satisfied by the new package.
 This is used by "make replace", after which one would typically
 replace the depending packages.
+.It Fl h
+Display help and exit.
 .It Fl I
 If an installation script exists for a given package, do not execute it.
 .It Fl K Ar pkg_dbdir
