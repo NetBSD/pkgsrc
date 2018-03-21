@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2016/11/30 14:29:09 sevan Exp $
+# $NetBSD: Makefile,v 1.65 2018/03/21 18:47:02 kamil Exp $
 
 DISTNAME=	p7zip_16.02_src_all
 PKGNAME=	${DISTNAME:S/_src_all//S/_/-/}
@@ -12,7 +12,7 @@ HOMEPAGE=	http://p7zip.sourceforge.net/
 COMMENT=	File archiver with high compression
 LICENSE=	gnu-lgpl-v2.1 AND unrar-license
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03 # c++11 breaks on Clang 7svn
 USE_TOOLS+=		gmake
 MAKE_FILE=		makefile
 MAKE_JOBS_SAFE=		no # missing header when compiling sfx
