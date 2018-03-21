@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.8.1 2018/01/28 12:36:21 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.1.8.2 2018/03/21 21:56:28 spz Exp $
 lib/firefox52/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome.manifest
 lib/firefox52/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome/ach.manifest
 lib/firefox52/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome/ach/locale/ach/devtools/client/VariablesView.dtd
@@ -143,7 +143,6 @@ lib/firefox52/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome
 lib/firefox52/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome/ach/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome/ach/locale/browser/searchplugins/twitter.xml
 lib/firefox52/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome/ach/locale/browser/searchplugins/wikipedia.xml
-lib/firefox52/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome/ach/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome/ach/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome/ach/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome/ach/locale/browser/sitePermissions.properties
@@ -464,7 +463,6 @@ lib/firefox52/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/searchplugins/wikipedia-af.xml
-lib/firefox52/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/sitePermissions.properties
@@ -785,7 +783,6 @@ lib/firefox52/browser/extensions/langpack-an@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-an@firefox.mozilla.org/browser/chrome/an/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-an@firefox.mozilla.org/browser/chrome/an/locale/browser/searchplugins/twitter.xml
 lib/firefox52/browser/extensions/langpack-an@firefox.mozilla.org/browser/chrome/an/locale/browser/searchplugins/wikipedia-an.xml
-lib/firefox52/browser/extensions/langpack-an@firefox.mozilla.org/browser/chrome/an/locale/browser/searchplugins/yahoo-es.xml
 lib/firefox52/browser/extensions/langpack-an@firefox.mozilla.org/browser/chrome/an/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-an@firefox.mozilla.org/browser/chrome/an/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-an@firefox.mozilla.org/browser/chrome/an/locale/browser/sitePermissions.properties
@@ -1106,7 +1103,6 @@ lib/firefox52/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/searchplugins/wikipedia-ar.xml
-lib/firefox52/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/sitePermissions.properties
@@ -1426,7 +1422,6 @@ lib/firefox52/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/searchplugins/wikipedia-as.xml
-lib/firefox52/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/searchplugins/yahoo-in.xml
 lib/firefox52/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/sitePermissions.properties
@@ -1747,7 +1742,6 @@ lib/firefox52/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome
 lib/firefox52/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/searchplugins/wikipedia-ast.xml
-lib/firefox52/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/searchplugins/yahoo-es.xml
 lib/firefox52/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/sitePermissions.properties
@@ -2710,7 +2704,6 @@ lib/firefox52/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chro
 lib/firefox52/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/searchplugins/wikipedia-bn.xml
-lib/firefox52/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/sitePermissions.properties
@@ -3032,7 +3025,6 @@ lib/firefox52/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chro
 lib/firefox52/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/searchplugins/rediff.xml
 lib/firefox52/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/searchplugins/wikipedia-bn.xml
-lib/firefox52/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/searchplugins/yahoo-in.xml
 lib/firefox52/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/sitePermissions.properties
@@ -3354,7 +3346,6 @@ lib/firefox52/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/searchplugins/klask.xml
 lib/firefox52/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/searchplugins/wikipedia-br.xml
-lib/firefox52/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/searchplugins/yahoo-france.xml
 lib/firefox52/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/sitePermissions.properties
@@ -3614,7 +3605,6 @@ lib/firefox52/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/searchplugins/olx.xml
 lib/firefox52/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/searchplugins/twitter.xml
 lib/firefox52/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/searchplugins/wikipedia-bs.xml
-lib/firefox52/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/sitePermissions.properties
@@ -4578,7 +4568,6 @@ lib/firefox52/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/searchplugins/palasprint.xml
 lib/firefox52/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/searchplugins/termau.xml
 lib/firefox52/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/searchplugins/wikipedia-cy.xml
-lib/firefox52/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/searchplugins/yahoo-en-GB.xml
 lib/firefox52/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/sitePermissions.properties
@@ -5220,7 +5209,6 @@ lib/firefox52/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/searchplugins/leo_ende_de.xml
 lib/firefox52/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/searchplugins/wikipedia-de.xml
-lib/firefox52/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/searchplugins/yahoo-de.xml
 lib/firefox52/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/sitePermissions.properties
@@ -5542,7 +5530,6 @@ lib/firefox52/browser/extensions/langpack-dsb@firefox.mozilla.org/browser/chrome
 lib/firefox52/browser/extensions/langpack-dsb@firefox.mozilla.org/browser/chrome/dsb/locale/browser/searchplugins/leo_ende_de.xml
 lib/firefox52/browser/extensions/langpack-dsb@firefox.mozilla.org/browser/chrome/dsb/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-dsb@firefox.mozilla.org/browser/chrome/dsb/locale/browser/searchplugins/wikipedia-dsb.xml
-lib/firefox52/browser/extensions/langpack-dsb@firefox.mozilla.org/browser/chrome/dsb/locale/browser/searchplugins/yahoo-de.xml
 lib/firefox52/browser/extensions/langpack-dsb@firefox.mozilla.org/browser/chrome/dsb/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-dsb@firefox.mozilla.org/browser/chrome/dsb/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-dsb@firefox.mozilla.org/browser/chrome/dsb/locale/browser/sitePermissions.properties
@@ -5863,7 +5850,6 @@ lib/firefox52/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/searchplugins/wikipedia-el.xml
-lib/firefox52/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/sitePermissions.properties
@@ -6192,7 +6178,6 @@ lib/firefox52/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chro
 lib/firefox52/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/searchplugins/twitter.xml
 lib/firefox52/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/searchplugins/wikipedia.xml
-lib/firefox52/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/searchplugins/yahoo-en-GB.xml
 lib/firefox52/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/searchplugins/yandex-en.xml
 lib/firefox52/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/shellservice.properties
@@ -6836,7 +6821,6 @@ lib/firefox52/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/searchplugins/reta-vortaro.xml
 lib/firefox52/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/searchplugins/wikipedia-eo.xml
-lib/firefox52/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/sitePermissions.properties
@@ -7158,7 +7142,6 @@ lib/firefox52/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chro
 lib/firefox52/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/searchplugins/mercadolibre-ar.xml
 lib/firefox52/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/searchplugins/wikipedia-es.xml
-lib/firefox52/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/searchplugins/yahoo-ar.xml
 lib/firefox52/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/sitePermissions.properties
@@ -7480,7 +7463,6 @@ lib/firefox52/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chro
 lib/firefox52/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/searchplugins/mercadolibre-cl.xml
 lib/firefox52/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/searchplugins/wikipedia-es.xml
-lib/firefox52/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/searchplugins/yahoo-cl.xml
 lib/firefox52/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/sitePermissions.properties
@@ -7802,7 +7784,6 @@ lib/firefox52/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chro
 lib/firefox52/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/searchplugins/twitter.xml
 lib/firefox52/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/searchplugins/wikipedia-es.xml
-lib/firefox52/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/searchplugins/yahoo-es.xml
 lib/firefox52/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/sitePermissions.properties
@@ -8123,7 +8104,6 @@ lib/firefox52/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chro
 lib/firefox52/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/searchplugins/mercadolibre-mx.xml
 lib/firefox52/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/searchplugins/wikipedia-es.xml
-lib/firefox52/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/searchplugins/yahoo-mx.xml
 lib/firefox52/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/sitePermissions.properties
@@ -8767,7 +8747,6 @@ lib/firefox52/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/searchplugins/wikipedia-eu.xml
-lib/firefox52/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/sitePermissions.properties
@@ -9088,7 +9067,6 @@ lib/firefox52/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/searchplugins/wikipedia-fa.xml
-lib/firefox52/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/sitePermissions.properties
@@ -9410,7 +9388,6 @@ lib/firefox52/browser/extensions/langpack-ff@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-ff@firefox.mozilla.org/browser/chrome/ff/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-ff@firefox.mozilla.org/browser/chrome/ff/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-ff@firefox.mozilla.org/browser/chrome/ff/locale/browser/searchplugins/wikipedia-fr.xml
-lib/firefox52/browser/extensions/langpack-ff@firefox.mozilla.org/browser/chrome/ff/locale/browser/searchplugins/yahoo-france.xml
 lib/firefox52/browser/extensions/langpack-ff@firefox.mozilla.org/browser/chrome/ff/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-ff@firefox.mozilla.org/browser/chrome/ff/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-ff@firefox.mozilla.org/browser/chrome/ff/locale/browser/sitePermissions.properties
@@ -9731,7 +9708,6 @@ lib/firefox52/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/searchplugins/wikipedia-fi.xml
-lib/firefox52/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/searchplugins/yahoo-fi.xml
 lib/firefox52/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/sitePermissions.properties
@@ -10053,7 +10029,6 @@ lib/firefox52/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/searchplugins/wikipedia-fr.xml
-lib/firefox52/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/searchplugins/yahoo-france.xml
 lib/firefox52/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/sitePermissions.properties
@@ -10375,7 +10350,6 @@ lib/firefox52/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chro
 lib/firefox52/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/searchplugins/marktplaats-fy-NL.xml
 lib/firefox52/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/searchplugins/wikipedia-fy-NL.xml
-lib/firefox52/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/searchplugins/yahoo-fy-NL.xml
 lib/firefox52/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/sitePermissions.properties
@@ -10697,7 +10671,6 @@ lib/firefox52/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chro
 lib/firefox52/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/searchplugins/tearma.xml
 lib/firefox52/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/searchplugins/twitter.xml
 lib/firefox52/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/searchplugins/wikipedia-ga-IE.xml
-lib/firefox52/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/searchplugins/yahoo-en-GB.xml
 lib/firefox52/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/sitePermissions.properties
@@ -11019,7 +10992,6 @@ lib/firefox52/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/searchplugins/wikipedia-gd.xml
-lib/firefox52/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/searchplugins/yahoo-en-GB.xml
 lib/firefox52/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/sitePermissions.properties
@@ -11339,7 +11311,6 @@ lib/firefox52/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/searchplugins/wikipedia-gl.xml
-lib/firefox52/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/searchplugins/yahoo-es.xml
 lib/firefox52/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/sitePermissions.properties
@@ -11664,7 +11635,6 @@ lib/firefox52/browser/extensions/langpack-gn@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-gn@firefox.mozilla.org/browser/chrome/gn/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-gn@firefox.mozilla.org/browser/chrome/gn/locale/browser/searchplugins/twitter.xml
 lib/firefox52/browser/extensions/langpack-gn@firefox.mozilla.org/browser/chrome/gn/locale/browser/searchplugins/wikipedia-gn.xml
-lib/firefox52/browser/extensions/langpack-gn@firefox.mozilla.org/browser/chrome/gn/locale/browser/searchplugins/yahoo-es.xml
 lib/firefox52/browser/extensions/langpack-gn@firefox.mozilla.org/browser/chrome/gn/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-gn@firefox.mozilla.org/browser/chrome/gn/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-gn@firefox.mozilla.org/browser/chrome/gn/locale/browser/sitePermissions.properties
@@ -11985,7 +11955,6 @@ lib/firefox52/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chro
 lib/firefox52/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/searchplugins/wikipedia-gu.xml
-lib/firefox52/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/searchplugins/yahoo-in.xml
 lib/firefox52/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/sitePermissions.properties
@@ -12305,7 +12274,6 @@ lib/firefox52/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/searchplugins/morfix-dic.xml
 lib/firefox52/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/searchplugins/wikipedia-he.xml
-lib/firefox52/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/sitePermissions.properties
@@ -12625,7 +12593,6 @@ lib/firefox52/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chro
 lib/firefox52/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/searchplugins/wikipedia-hi.xml
-lib/firefox52/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/searchplugins/yahoo-in.xml
 lib/firefox52/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/sitePermissions.properties
@@ -12948,7 +12915,6 @@ lib/firefox52/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/searchplugins/twitter.xml
 lib/firefox52/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/searchplugins/wikipedia-hr.xml
-lib/firefox52/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/sitePermissions.properties
@@ -13270,7 +13236,6 @@ lib/firefox52/browser/extensions/langpack-hsb@firefox.mozilla.org/browser/chrome
 lib/firefox52/browser/extensions/langpack-hsb@firefox.mozilla.org/browser/chrome/hsb/locale/browser/searchplugins/leo_ende_de.xml
 lib/firefox52/browser/extensions/langpack-hsb@firefox.mozilla.org/browser/chrome/hsb/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-hsb@firefox.mozilla.org/browser/chrome/hsb/locale/browser/searchplugins/wikipedia-hsb.xml
-lib/firefox52/browser/extensions/langpack-hsb@firefox.mozilla.org/browser/chrome/hsb/locale/browser/searchplugins/yahoo-de.xml
 lib/firefox52/browser/extensions/langpack-hsb@firefox.mozilla.org/browser/chrome/hsb/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-hsb@firefox.mozilla.org/browser/chrome/hsb/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-hsb@firefox.mozilla.org/browser/chrome/hsb/locale/browser/sitePermissions.properties
@@ -13911,7 +13876,6 @@ lib/firefox52/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chro
 lib/firefox52/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/searchplugins/list-am.xml
 lib/firefox52/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/searchplugins/wikipedia-hy.xml
-lib/firefox52/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/sitePermissions.properties
@@ -14230,7 +14194,6 @@ lib/firefox52/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/searchplugins/wikipedia-id.xml
-lib/firefox52/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/searchplugins/yahoo-id.xml
 lib/firefox52/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/sitePermissions.properties
@@ -14552,7 +14515,6 @@ lib/firefox52/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/searchplugins/leit-is.xml
 lib/firefox52/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/searchplugins/wikipedia-is.xml
-lib/firefox52/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/sitePermissions.properties
@@ -14874,7 +14836,6 @@ lib/firefox52/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/searchplugins/wikipedia-it.xml
-lib/firefox52/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/searchplugins/yahoo-it.xml
 lib/firefox52/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/sitePermissions.properties
@@ -15521,7 +15482,6 @@ lib/firefox52/browser/extensions/langpack-ka@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-ka@firefox.mozilla.org/browser/chrome/ka/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-ka@firefox.mozilla.org/browser/chrome/ka/locale/browser/searchplugins/twitter.xml
 lib/firefox52/browser/extensions/langpack-ka@firefox.mozilla.org/browser/chrome/ka/locale/browser/searchplugins/wikipedia-ka.xml
-lib/firefox52/browser/extensions/langpack-ka@firefox.mozilla.org/browser/chrome/ka/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-ka@firefox.mozilla.org/browser/chrome/ka/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-ka@firefox.mozilla.org/browser/chrome/ka/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-ka@firefox.mozilla.org/browser/chrome/ka/locale/browser/sitePermissions.properties
@@ -15841,7 +15801,6 @@ lib/firefox52/browser/extensions/langpack-kab@firefox.mozilla.org/browser/chrome
 lib/firefox52/browser/extensions/langpack-kab@firefox.mozilla.org/browser/chrome/kab/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-kab@firefox.mozilla.org/browser/chrome/kab/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-kab@firefox.mozilla.org/browser/chrome/kab/locale/browser/searchplugins/wikipedia-kab.xml
-lib/firefox52/browser/extensions/langpack-kab@firefox.mozilla.org/browser/chrome/kab/locale/browser/searchplugins/yahoo-france.xml
 lib/firefox52/browser/extensions/langpack-kab@firefox.mozilla.org/browser/chrome/kab/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-kab@firefox.mozilla.org/browser/chrome/kab/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-kab@firefox.mozilla.org/browser/chrome/kab/locale/browser/sitePermissions.properties
@@ -16486,7 +16445,6 @@ lib/firefox52/browser/extensions/langpack-km@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-km@firefox.mozilla.org/browser/chrome/km/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-km@firefox.mozilla.org/browser/chrome/km/locale/browser/searchplugins/twitter.xml
 lib/firefox52/browser/extensions/langpack-km@firefox.mozilla.org/browser/chrome/km/locale/browser/searchplugins/wikipedia-km.xml
-lib/firefox52/browser/extensions/langpack-km@firefox.mozilla.org/browser/chrome/km/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-km@firefox.mozilla.org/browser/chrome/km/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-km@firefox.mozilla.org/browser/chrome/km/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-km@firefox.mozilla.org/browser/chrome/km/locale/browser/sitePermissions.properties
@@ -16808,7 +16766,6 @@ lib/firefox52/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/searchplugins/kannadastore.xml
 lib/firefox52/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/searchplugins/wikipedia-kn.xml
-lib/firefox52/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/searchplugins/yahoo-in.xml
 lib/firefox52/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/sitePermissions.properties
@@ -17453,7 +17410,6 @@ lib/firefox52/browser/extensions/langpack-lij@firefox.mozilla.org/browser/chrome
 lib/firefox52/browser/extensions/langpack-lij@firefox.mozilla.org/browser/chrome/lij/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-lij@firefox.mozilla.org/browser/chrome/lij/locale/browser/searchplugins/paroledigenova-lij.xml
 lib/firefox52/browser/extensions/langpack-lij@firefox.mozilla.org/browser/chrome/lij/locale/browser/searchplugins/wikipedia-lij.xml
-lib/firefox52/browser/extensions/langpack-lij@firefox.mozilla.org/browser/chrome/lij/locale/browser/searchplugins/yahoo-it.xml
 lib/firefox52/browser/extensions/langpack-lij@firefox.mozilla.org/browser/chrome/lij/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-lij@firefox.mozilla.org/browser/chrome/lij/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-lij@firefox.mozilla.org/browser/chrome/lij/locale/browser/sitePermissions.properties
@@ -18098,7 +18054,6 @@ lib/firefox52/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/searchplugins/salidzinilv.xml
 lib/firefox52/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/searchplugins/sslv.xml
 lib/firefox52/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/searchplugins/wikipedia-lv.xml
-lib/firefox52/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/sitePermissions.properties
@@ -18419,7 +18374,6 @@ lib/firefox52/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome
 lib/firefox52/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/searchplugins/twitter.xml
 lib/firefox52/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/searchplugins/wikipedia-hi.xml
-lib/firefox52/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/searchplugins/yahoo-in.xml
 lib/firefox52/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/sitePermissions.properties
@@ -18740,7 +18694,6 @@ lib/firefox52/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/searchplugins/wikipedia-mk.xml
-lib/firefox52/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/sitePermissions.properties
@@ -19389,7 +19342,6 @@ lib/firefox52/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/searchplugins/rediff.xml
 lib/firefox52/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/searchplugins/wikipedia-mr.xml
-lib/firefox52/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/searchplugins/yahoo-in.xml
 lib/firefox52/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/sitePermissions.properties
@@ -19711,7 +19663,6 @@ lib/firefox52/browser/extensions/langpack-ms@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-ms@firefox.mozilla.org/browser/chrome/ms/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-ms@firefox.mozilla.org/browser/chrome/ms/locale/browser/searchplugins/twitter.xml
 lib/firefox52/browser/extensions/langpack-ms@firefox.mozilla.org/browser/chrome/ms/locale/browser/searchplugins/wikipedia-ms.xml
-lib/firefox52/browser/extensions/langpack-ms@firefox.mozilla.org/browser/chrome/ms/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-ms@firefox.mozilla.org/browser/chrome/ms/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-ms@firefox.mozilla.org/browser/chrome/ms/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-ms@firefox.mozilla.org/browser/chrome/ms/locale/browser/sitePermissions.properties
@@ -20035,7 +19986,6 @@ lib/firefox52/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chro
 lib/firefox52/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/searchplugins/qxl-NO.xml
 lib/firefox52/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/searchplugins/wikipedia-NO.xml
-lib/firefox52/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/searchplugins/yahoo-NO.xml
 lib/firefox52/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/sitePermissions.properties
@@ -21000,7 +20950,6 @@ lib/firefox52/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/searchplugins/wikipedia-or.xml
-lib/firefox52/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/searchplugins/yahoo-in.xml
 lib/firefox52/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/sitePermissions.properties
@@ -21320,7 +21269,6 @@ lib/firefox52/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chro
 lib/firefox52/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/searchplugins/wikipedia-pa.xml
-lib/firefox52/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/searchplugins/yahoo-in.xml
 lib/firefox52/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/sitePermissions.properties
@@ -21964,7 +21912,6 @@ lib/firefox52/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chro
 lib/firefox52/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/searchplugins/mercadolivre.xml
 lib/firefox52/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/searchplugins/twitter.xml
 lib/firefox52/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/searchplugins/wikipedia-pt.xml
-lib/firefox52/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/searchplugins/yahoo-br.xml
 lib/firefox52/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/sitePermissions.properties
@@ -22607,7 +22554,6 @@ lib/firefox52/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/searchplugins/pledarigrond.xml
 lib/firefox52/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/searchplugins/wikipedia-rm.xml
-lib/firefox52/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/searchplugins/yahoo-ch.xml
 lib/firefox52/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/sitePermissions.properties
@@ -22928,7 +22874,6 @@ lib/firefox52/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/searchplugins/wikipediaro.xml
-lib/firefox52/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/sitePermissions.properties
@@ -23571,7 +23516,6 @@ lib/firefox52/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/searchplugins/wikipedia-si.xml
-lib/firefox52/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/sitePermissions.properties
@@ -24538,7 +24482,6 @@ lib/firefox52/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome
 lib/firefox52/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/searchplugins/wikipedia-fr.xml
-lib/firefox52/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/searchplugins/yahoo-france.xml
 lib/firefox52/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/sitePermissions.properties
@@ -24859,7 +24802,6 @@ lib/firefox52/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/searchplugins/wikipedia-sq.xml
-lib/firefox52/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/sitePermissions.properties
@@ -25503,7 +25445,6 @@ lib/firefox52/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chro
 lib/firefox52/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/searchplugins/prisjakt-sv-SE.xml
 lib/firefox52/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/searchplugins/tyda-sv-SE.xml
 lib/firefox52/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/searchplugins/wikipedia-sv-SE.xml
-lib/firefox52/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/searchplugins/yahoo-sv-SE.xml
 lib/firefox52/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/sitePermissions.properties
@@ -25822,7 +25763,6 @@ lib/firefox52/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/searchplugins/wikipedia-ta.xml
-lib/firefox52/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/searchplugins/yahoo-in.xml
 lib/firefox52/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/sitePermissions.properties
@@ -26143,7 +26083,6 @@ lib/firefox52/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/searchplugins/wikipedia-te.xml
 lib/firefox52/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/searchplugins/wiktionary-te.xml
-lib/firefox52/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/searchplugins/yahoo-in.xml
 lib/firefox52/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/sitePermissions.properties
@@ -26465,7 +26404,6 @@ lib/firefox52/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/searchplugins/longdo.xml
 lib/firefox52/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/searchplugins/wikipedia-th.xml
-lib/firefox52/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/sitePermissions.properties
@@ -27430,7 +27368,6 @@ lib/firefox52/browser/extensions/langpack-uz@firefox.mozilla.org/browser/chrome/
 lib/firefox52/browser/extensions/langpack-uz@firefox.mozilla.org/browser/chrome/uz/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-uz@firefox.mozilla.org/browser/chrome/uz/locale/browser/searchplugins/twitter.xml
 lib/firefox52/browser/extensions/langpack-uz@firefox.mozilla.org/browser/chrome/uz/locale/browser/searchplugins/wikipedia-uz.xml
-lib/firefox52/browser/extensions/langpack-uz@firefox.mozilla.org/browser/chrome/uz/locale/browser/searchplugins/yahoo.xml
 lib/firefox52/browser/extensions/langpack-uz@firefox.mozilla.org/browser/chrome/uz/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-uz@firefox.mozilla.org/browser/chrome/uz/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-uz@firefox.mozilla.org/browser/chrome/uz/locale/browser/sitePermissions.properties
@@ -28710,10 +28647,6 @@ lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chro
 lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/searchplugins/images/yandex-en.ico
 lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/searchplugins/list.json
 lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/searchplugins/wikipedia-zh-TW.xml
-lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/searchplugins/yahoo-answer-zh-TW.xml
-lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/searchplugins/yahoo-bid-zh-TW.xml
-lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/searchplugins/yahoo-zh-TW-HK.xml
-lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/searchplugins/yahoo-zh-TW.xml
 lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/setDesktopBackground.dtd
 lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/shellservice.properties
 lib/firefox52/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/sitePermissions.properties
