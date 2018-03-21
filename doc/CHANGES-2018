@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1476 2018/03/21 15:14:06 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1477 2018/03/21 15:15:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1998,3 +1998,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/isc-dhcpd4 to 4.4.1 [taca 2018-03-21]
 	Updated net/isc-dhcrelay4 to 4.4.1 [taca 2018-03-21]
 	Updated sysutils/puppet to 5.4.0 [taca 2018-03-21]
+	Updated sysutils/ruby-childprocess to 0.8.0 [taca 2018-03-21]
