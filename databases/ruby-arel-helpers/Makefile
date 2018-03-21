@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2017/09/16 08:53:47 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/03/21 10:21:20 taca Exp $
 
-DISTNAME=	arel-helpers-2.4.0
+DISTNAME=	arel-helpers-2.6.1
 CATEGORIES=	databases
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://github.com/camertron
+HOMEPAGE=	https://github.com/camertron/arel-helpers
 COMMENT=	Tools to help construct database queries
+LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-activerecord42>=3.1.0<6:../../databases/ruby-activerecord42
+DEPENDS+=	${RUBY_ACTIVERECORD_DEPENDS}
+
+RUBY_RAILS_ACCEPTED=	42 51
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
