@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2647 2018/03/21 10:06:03 taca Exp $
+# $NetBSD: Makefile,v 1.2648 2018/03/21 10:24:36 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2326,6 +2326,7 @@ SUBDIR+=	ruby-cmd
 SUBDIR+=	ruby-concurrent-ruby
 SUBDIR+=	ruby-contracts
 SUBDIR+=	ruby-cucumber-core
+SUBDIR+=	ruby-cucumber-tag_expressions
 SUBDIR+=	ruby-cucumber-wire
 SUBDIR+=	ruby-curses
 SUBDIR+=	ruby-daemon_controller
