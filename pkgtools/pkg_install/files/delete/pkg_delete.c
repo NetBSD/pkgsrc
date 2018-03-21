@@ -34,7 +34,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: pkg_delete.c,v 1.13 2014/12/30 15:13:20 wiz Exp $");
+__RCSID("$NetBSD: pkg_delete.c,v 1.14 2018/03/21 14:35:35 sevan Exp $");
 
 #if HAVE_ERR_H
 #include <err.h>
@@ -60,7 +60,7 @@ static int delete_automatic_leaves;
 static void
 usage(void)
 {
-	fprintf(stderr, "usage: pkg_delete [-DFfkNnORrVv] [-K pkg_dbdir]"
+	fprintf(stderr, "usage: pkg_delete [-ADFfkNnORrVv] [-K pkg_dbdir]"
 	    " [-P destdir] [-p prefix] pkg-name ...\n");
 	exit(1);
 }
