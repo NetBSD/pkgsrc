@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1465 2018/03/21 13:20:25 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1466 2018/03/21 13:24:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -1983,3 +1983,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/liblnk 20171101 [manu 2018-03-21]
 	Updated security/ruby-rex-text to 0.2.16 [taca 2018-03-21]
 	Updated security/ruby-rex-arch to 0.1.13 [taca 2018-03-21]
+	Updated security/ruby-rex-exploitation to 0.1.17 [taca 2018-03-21]
