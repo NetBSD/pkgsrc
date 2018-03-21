@@ -1,12 +1,42 @@
-$NetBSD: patch-ad,v 1.1 2011/07/17 12:49:17 mrg Exp $
+$NetBSD: patch-ad,v 1.2 2018/03/21 17:39:42 kamil Exp $
 
 patch to fix big-endian mips support from matt@netbsd.org
-
+Fix C++11 literals.
 
 diff -rup src/cpus/cpu_mips_coproc.cc src/cpus/cpu_mips_coproc.cc
---- src/cpus/cpu_mips_coproc.cc	2009-06-21 09:03:48.000000000 -0700
-+++ src/cpus/cpu_mips_coproc.cc	2009-11-12 12:22:12.000000000 -0800
-@@ -1987,6 +1987,13 @@ void coproc_function(struct cpu *cpu, st
+--- src/cpus/cpu_mips_coproc.cc.orig	2014-08-17 08:45:15.000000000 +0000
++++ src/cpus/cpu_mips_coproc.cc
+@@ -1628,19 +1628,19 @@ void coproc_tlbwri(struct cpu *cpu, int 
+ 	/*  Debug dump of the previous entry at that index:  */
+ 	fatal("{ old TLB entry at index %02x:", index);
+ 	if (cpu->cd.mips.cpu_type.mmu_model == MMU3K) {
+-		fatal(" hi=%08"PRIx32, (uint32_t)cp->tlbs[index].hi);
+-		fatal(" lo=%08"PRIx32, (uint32_t)cp->tlbs[index].lo0);
++		fatal(" hi=%08" PRIx32, (uint32_t)cp->tlbs[index].hi);
++		fatal(" lo=%08" PRIx32, (uint32_t)cp->tlbs[index].lo0);
+ 	} else {
+ 		if (cpu->is_32bit) {
+-			fatal(" mask=%08"PRIx32,(uint32_t)cp->tlbs[index].mask);
+-			fatal(" hi=%08"PRIx32, (uint32_t)cp->tlbs[index].hi);
+-			fatal(" lo0=%08"PRIx32, (uint32_t)cp->tlbs[index].lo0);
+-			fatal(" lo1=%08"PRIx32, (uint32_t)cp->tlbs[index].lo1);
++			fatal(" mask=%08" PRIx32,(uint32_t)cp->tlbs[index].mask);
++			fatal(" hi=%08" PRIx32, (uint32_t)cp->tlbs[index].hi);
++			fatal(" lo0=%08" PRIx32, (uint32_t)cp->tlbs[index].lo0);
++			fatal(" lo1=%08" PRIx32, (uint32_t)cp->tlbs[index].lo1);
+ 		} else {
+-			fatal(" mask=%016"PRIx64, cp->tlbs[index].mask);
+-			fatal(" hi=%016"PRIx64, cp->tlbs[index].hi);
+-			fatal(" lo0=%016"PRIx64, cp->tlbs[index].lo0);
+-			fatal(" lo1=%016"PRIx64, cp->tlbs[index].lo1);
++			fatal(" mask=%016" PRIx64, cp->tlbs[index].mask);
++			fatal(" hi=%016" PRIx64, cp->tlbs[index].hi);
++			fatal(" lo0=%016" PRIx64, cp->tlbs[index].lo0);
++			fatal(" lo1=%016" PRIx64, cp->tlbs[index].lo1);
+ 		}
+ 	}
+ 	fatal(" }\n");
+@@ -1993,6 +1993,13 @@ void coproc_function(struct cpu *cpu, st
  
  	if (cpnr < 2 && (((function & 0x03e007f8) == (COPz_MTCz << 21))
  	              || ((function & 0x03e007f8) == (COPz_DMTCz << 21)))) {
@@ -20,7 +50,7 @@ diff -rup src/cpus/cpu_mips_coproc.cc src/cpus/cpu_mips_coproc.cc
  		if (unassemble_only) {
  			debug("%s%i\t%s,", copz==COPz_DMTCz? "dmtc" : "mtc",
  			    cpnr, regnames[rt]);
-@@ -1996,16 +2003,10 @@ void coproc_function(struct cpu *cpu, st
+@@ -2002,16 +2009,10 @@ void coproc_function(struct cpu *cpu, st
  				debug("r%i", rd);
  			if (function & 7)
  				debug(",%i", (int)(function & 7));
@@ -38,3 +68,16 @@ diff -rup src/cpus/cpu_mips_coproc.cc src/cpus/cpu_mips_coproc.cc
  		coproc_register_write(cpu, cpu->cd.mips.coproc[cpnr], rd,
  		    &tmpvalue, copz == COPz_DMTCz, function & 7);
  		return;
+@@ -2225,10 +2226,9 @@ void coproc_function(struct cpu *cpu, st
+ 		return;
+ 	}
+ 
+-	fatal("cpu%i: UNIMPLEMENTED coproc%i function %08"PRIx32" "
+-	    "(pc = %016"PRIx64")\n", cpu->cpu_id, cp->coproc_nr,
++	fatal("cpu%i: UNIMPLEMENTED coproc%i function %08" PRIx32 " "
++	    "(pc = %016" PRIx64 ")\n", cpu->cpu_id, cp->coproc_nr,
+ 	    (uint32_t)function, cpu->pc);
+ 
+ 	mips_cpu_exception(cpu, EXCEPTION_CPU, 0, 0, cp->coproc_nr, 0, 0, 0);
+ }
+-

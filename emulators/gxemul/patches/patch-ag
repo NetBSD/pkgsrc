@@ -1,12 +1,31 @@
-$NetBSD: patch-ag,v 1.4 2017/05/11 12:38:30 christos Exp $
+$NetBSD: patch-ag,v 1.5 2018/03/21 17:39:42 kamil Exp $
 
 - enable all CPSR->SPSR copy values, instead of hard coding 3 out of 15.
 - allow immediate to be zero with a non-zero shift. caused by:
 	ebf61a60:  e28fc600     add     ip,pc,#0
+- Fix C++11 literals.
 
---- src/cpus/cpu_arm_instr.cc.orig	2014-08-17 04:45:15.000000000 -0400
-+++ src/cpus/cpu_arm_instr.cc	2017-05-11 08:36:16.634585212 -0400
-@@ -2670,6 +2670,7 @@
+--- src/cpus/cpu_arm_instr.cc.orig	2014-08-17 08:45:15.000000000 +0000
++++ src/cpus/cpu_arm_instr.cc
+@@ -215,7 +215,7 @@ X(invalid) {
+ 
+ 	fatal("FATAL ERROR: An internal error occured in the ARM"
+ 	    " dyntrans code. Please contact the author with detailed"
+-	    " repro steps on how to trigger this bug. pc = 0x%08"PRIx32"\n",
++	    " repro steps on how to trigger this bug. pc = 0x%08" PRIx32 "\n",
+ 	    (uint32_t)cpu->pc);
+ 
+ 	cpu->cd.arm.next_ic = &nothing_call;
+@@ -803,7 +803,7 @@ X(msr_imm_spsr)
+ 			cpu->pc &= ~((ARM_IC_ENTRIES_PER_PAGE-1) << ARM_INSTR_ALIGNMENT_SHIFT);
+ 			cpu->pc += (low_pc << ARM_INSTR_ALIGNMENT_SHIFT);
+ 			old_pc = cpu->pc;
+-			printf("msr_spsr: old pc = 0x%08"PRIx32"\n", old_pc);
++			printf("msr_spsr: old pc = 0x%08" PRIx32 "\n", old_pc);
+ 		}
+ 		exit(1);
+ 	}
+@@ -2670,6 +2670,7 @@ X(to_be_translated)
  					ic->f = cond_instr(bx);
  			}
  			ic->arg[0] = (size_t)(&cpu->cd.arm.r[rm]);
@@ -14,7 +33,7 @@ $NetBSD: patch-ag,v 1.4 2017/05/11 12:38:30 christos Exp $
                          break;
                  }
  		if ((iword & 0x0fb00ff0) == 0x1000090) {
-@@ -2888,7 +2889,7 @@
+@@ -2888,7 +2889,7 @@ X(to_be_translated)
  			while (r8-- > 0)
  				imm = (imm >> 2) | ((imm & 3) << 30);
  
@@ -23,3 +42,8 @@ $NetBSD: patch-ag,v 1.4 2017/05/11 12:38:30 christos Exp $
  				if (!cpu->translation_readahead)
  					fatal("TODO: see cpu_arm_instr_dpi; non-zero steps but still under 256 is not implemented yet\n");
  				goto bad;
+@@ -3205,4 +3206,3 @@ okay:
+ #include "cpu_dyntrans.cc" 
+ #undef	DYNTRANS_TO_BE_TRANSLATED_TAIL
+ }
+-
