@@ -1,8 +1,8 @@
-$NetBSD: patch-modules_pdfium_update.sh,v 1.1 2017/09/30 05:34:12 ryoon Exp $
+$NetBSD: patch-modules_pdfium_update.sh,v 1.1.2.1 2018/03/22 06:56:21 spz Exp $
 
---- modules/pdfium/update.sh.orig	2017-09-14 20:15:53.000000000 +0000
+--- modules/pdfium/update.sh.orig	2018-03-10 02:54:17.000000000 +0000
 +++ modules/pdfium/update.sh
-@@ -124,9 +124,9 @@ update_readme() {
+@@ -132,9 +132,9 @@ update_readme() {
      perl -p -i -e "s/${PREFIX} [0-9A-Fa-f]+ \(.+\)/${PREFIX} ${COMMIT} (${COMMIT_DATE})/" README_MOZILLA
  }
  

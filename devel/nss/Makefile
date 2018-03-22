@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.144 2017/11/30 16:45:21 adam Exp $
+# $NetBSD: Makefile,v 1.144.2.1 2018/03/22 06:56:21 spz Exp $
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
-NSS_RELEASE=		3.34.1
-PKGREVISION=		1
+NSS_RELEASE=		3.36.0
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_DIST_DIR_VERSION:S/_0$//}_RTM/src/}
 
@@ -103,7 +102,7 @@ SUBST_FILES.config+=	nss.pc nss-config
 INSTALLATION_DIRS=	bin include/nss lib/nss lib/pkgconfig
 DIST=	${WRKSRC}/dist
 
-INSTALL_CMDS+=		certcgi certutil cmsutil crlutil derdump makepqg \
+INSTALL_CMDS+=		certutil cmsutil crlutil derdump makepqg \
 			mangle modutil ocspclnt oidcalc p7content p7env p7sign \
 			p7verify pk12util rsaperf shlibsign signtool signver \
 			ssltap strsclnt symkeyutil vfychain vfyserv
@@ -129,7 +128,7 @@ do-install:
 # For consistency of libxul.so link in www/firefox.
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.8.4.2
 .include "../../databases/sqlite3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.17
+BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.19
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
