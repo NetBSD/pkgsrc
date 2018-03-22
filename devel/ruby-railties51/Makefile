@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/03/21 10:05:08 taca Exp $
+# $NetBSD: Makefile,v 1.2 2018/03/22 15:43:11 maya Exp $
 
 DISTNAME=	railties-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-railties${RUBY_RAILS}-${RAILS_VERSION}
@@ -12,7 +12,7 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
 DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-thor>=0.18.1<2.0:../../devel/ruby-thor
-DEPENDS+=	${RUBY_PKGPREFIX}-method_source:../../misc/ruby-method_source
+DEPENDS+=	${RUBY_PKGPREFIX}-method_source-[0-9]*:../../misc/ruby-method_source
 
 RUBY_RAILS_ACCEPTED=	51
 RUBY_RAILS_STRICT_DEP=	yes
