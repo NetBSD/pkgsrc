@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2018/01/22 13:27:41 fhajny Exp $
+# $NetBSD: Makefile,v 1.14 2018/03/22 08:14:52 adam Exp $
 
 DISTNAME=	jq-1.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stedolan/}
 
