@@ -1,0 +1,6 @@
+Armadillo is a templated C++ linear algebra library (by Conrad
+Sanderson) that aims towards a good balance between speed and ease of
+use. Integer, floating point and complex numbers are supported, as
+well as a subset of trigonometric and statistics functions. Various
+matrix decompositions are provided through optional integration with
+LAPACK and ATLAS libraries.
