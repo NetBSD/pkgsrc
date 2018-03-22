@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.24 2018/03/17 23:35:59 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.25 2018/03/22 07:00:00 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
 
@@ -188,3 +188,18 @@ audio/tremor: security update
 
 Pullup ticket #5725 - requested by maya
 www/firefox52: security update
+
+Pullup ticket #5726 - requested by maya
+www/seamonkey-l10n: security patch
+www/seamonkey: security patch
+
+Pullup ticket #5727 - requested by maya
+www/firefox52-l10n: security update
+www/firefox52: security update
+
+Pullup ticket #5728 - requested by maya
+devel/nspr: dependency update
+devel/nss: dependency update
+www/firefox-l10n: dependent update
+www/firefox: security update
+
