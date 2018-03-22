@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2018/03/15 09:29:09 adam Exp $
+# $NetBSD: Makefile,v 1.21 2018/03/22 08:02:35 adam Exp $
 
-DISTNAME=	aiohttp-3.0.9
+DISTNAME=	aiohttp-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
@@ -16,9 +16,9 @@ DEPENDS+=	${PYPKGPREFIX}-chardet>=2.0:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-idna-ssl>=1.0:../../www/py-idna_ssl
 DEPENDS+=	${PYPKGPREFIX}-multidict>=4.0:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-yarl>=1.0:../../www/py-yarl
-BUILD_DEPENDS+=	${PYPKGPREFIX}-gunicorn-[0-9]*:../../www/py-gunicorn
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
+TEST_DEPENDS+=	${PYPKGPREFIX}-gunicorn-[0-9]*:../../www/py-gunicorn
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 34
 
