@@ -1,0 +1,15 @@
+$NetBSD: patch-ikiwiki-mass-rebuild,v 1.1 2018/03/22 17:08:31 schmonz Exp $
+
+Attempt to make su(1) usage more portable.
+
+--- ikiwiki-mass-rebuild.orig	2018-03-11 15:54:34.000000000 +0000
++++ ikiwiki-mass-rebuild
+@@ -32,7 +32,7 @@ sub processuser {
+ 	my $user=shift;
+ 	return if $user=~/^-/ || $users{$user};
+ 	$users{$user}=1;
+-	my $ret=system("su", $user, "-s", "/bin/sh", "-c", "--", "$0 --nonglobal @ARGV");
++	my $ret=system("su", "-", $user, "-c", "/bin/sh -c -- '$0 --nonglobal @ARGV'");
+ 	if ($ret != 0) {
+ 		print STDERR "warning: processing for $user failed with code $ret\n";
+ 	}
