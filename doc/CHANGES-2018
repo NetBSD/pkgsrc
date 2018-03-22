@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1489 2018/03/22 13:29:42 triaxx Exp $
+$NetBSD: CHANGES-2018,v 1.1490 2018/03/22 15:36:16 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2020,3 +2020,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-cryptography_vectors to 2.2.1 [adam 2018-03-22]
 	Updated security/py-cryptography to 2.2.1 [adam 2018-03-22]
 	Updated audio/grip to 3.7.0 [triaxx 2018-03-22]
+	Added math/R-RcppArmadillo version 0.8.300.1.0 [minskim 2018-03-22]
