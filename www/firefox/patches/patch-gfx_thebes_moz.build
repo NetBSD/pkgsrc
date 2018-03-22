@@ -1,8 +1,8 @@
-$NetBSD: patch-gfx_thebes_moz.build,v 1.8 2017/06/14 11:28:44 ryoon Exp $
+$NetBSD: patch-gfx_thebes_moz.build,v 1.8.8.1 2018/03/22 06:56:21 spz Exp $
 
---- gfx/thebes/moz.build.orig	2017-06-05 20:45:20.000000000 +0000
+--- gfx/thebes/moz.build.orig	2018-03-10 02:54:17.000000000 +0000
 +++ gfx/thebes/moz.build
-@@ -274,7 +274,13 @@ if CONFIG['MOZ_WIDGET_TOOLKIT'] in ('gtk
+@@ -273,7 +273,13 @@ if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gtk3
  
  LOCAL_INCLUDES += CONFIG['SKIA_INCLUDES']
  
@@ -15,5 +15,5 @@ $NetBSD: patch-gfx_thebes_moz.build,v 1.8 2017/06/14 11:28:44 ryoon Exp $
 +if CONFIG['MOZ_SYSTEM_HARFBUZZ']:
 +    CXXFLAGS += CONFIG['MOZ_HARFBUZZ_CFLAGS']
  
- if CONFIG['CLANG_CXX']:
+ if CONFIG['CC_TYPE'] == 'clang':
      # Suppress warnings from Skia header files.

@@ -1,8 +1,8 @@
-$NetBSD: patch-media_libtheora_moz.build,v 1.7 2016/08/06 08:46:59 ryoon Exp $
+$NetBSD: patch-media_libtheora_moz.build,v 1.7.14.1 2018/03/22 06:56:21 spz Exp $
 
 * Support system library
 
---- media/libtheora/moz.build.orig	2016-07-25 20:22:04.000000000 +0000
+--- media/libtheora/moz.build.orig	2018-03-10 02:54:17.000000000 +0000
 +++ media/libtheora/moz.build
 @@ -21,6 +21,9 @@ FINAL_LIBRARY = 'gkmedias'
  # The encoder is currently not included.
@@ -12,5 +12,5 @@ $NetBSD: patch-media_libtheora_moz.build,v 1.7 2016/08/06 08:46:59 ryoon Exp $
 +    CFLAGS += CONFIG['MOZ_OGG_CFLAGS']
 +
  # Suppress warnings in third-party code.
- if CONFIG['GNU_CC'] or CONFIG['CLANG_CL']:
+ if CONFIG['CC_TYPE'] in ('clang', 'clang-cl', 'gcc'):
      CFLAGS += ['-Wno-type-limits']

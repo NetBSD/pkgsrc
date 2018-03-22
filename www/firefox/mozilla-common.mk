@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.102.2.1 2018/03/09 07:17:29 spz Exp $
+# $NetBSD: mozilla-common.mk,v 1.102.2.2 2018/03/22 06:56:21 spz Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -54,7 +54,8 @@ CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk3
 CONFIGURE_ARGS+=	--enable-pie
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--with-pthreads
-CONFIGURE_ARGS+=	--enable-system-cairo
+# Mozilla Bug 1432751
+#CONFIGURE_ARGS+=	--enable-system-cairo
 CONFIGURE_ARGS+=	--enable-system-pixman
 CONFIGURE_ARGS+=	--with-system-libvpx
 # textproc/hunspell 1.3 is too old
@@ -72,7 +73,6 @@ CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--enable-chrome-format=flat
 CONFIGURE_ARGS+=	--disable-libjpeg-turbo
 
-CONFIGURE_ARGS+=	--disable-elf-hack
 CONFIGURE_ARGS+=	--disable-gconf
 #CONFIGURE_ARGS+=	--enable-readline
 CONFIGURE_ARGS+=	--disable-icf
@@ -83,6 +83,12 @@ SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths+=		${MOZILLA_DIR}xpcom/io/nsAppFileLocationProvider.cpp
 SUBST_SED.fix-paths+=		-e 's,/usr/lib/mozilla/plugins,${PREFIX}/lib/netscape/plugins,g'
+
+SUBST_CLASSES+=			prefix
+SUBST_STAGE.prefix=		pre-configure
+SUBST_MESSAGE.prefix=		Setting PREFIX
+SUBST_FILES.prefix+=		${MOZILLA_DIR}xpcom/build/BinaryPath.h
+SUBST_VARS.prefix+=		PREFIX
 
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}js/src/build/autoconf/config.guess
@@ -190,8 +196,8 @@ BUILDLINK_API_DEPENDS.nss+=	nss>=3.32.1
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
-.include "../../graphics/cairo/buildlink3.mk"
+#BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
+#.include "../../graphics/cairo/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
 BUILDLINK_API_DEPENDS.rust+=	rust>=1.23.0

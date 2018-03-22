@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.116.2.1 2018/03/09 07:17:29 spz Exp $
+# $NetBSD: Makefile,v 1.116.2.2 2018/03/22 06:56:21 spz Exp $
 #
 
-FIREFOX_VER=	58.0
+FIREFOX_VER=	59.0.1
 PKGNAME=	firefox-l10n-${FIREFOX_VER:S/esr//}
-PKGREVISION=	1
 DISTNAME=	# empty
 CATEGORIES=	www
 #MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/linux-i686/xpi/}

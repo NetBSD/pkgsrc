@@ -1,10 +1,10 @@
-$NetBSD: patch-netwerk_dns_moz.build,v 1.6.12.1 2018/03/09 07:17:30 spz Exp $
+$NetBSD: patch-netwerk_dns_moz.build,v 1.6.12.2 2018/03/22 06:56:21 spz Exp $
 
---- netwerk/dns/moz.build.orig	2018-01-11 20:17:04.000000000 +0000
+--- netwerk/dns/moz.build.orig	2018-03-10 02:54:17.000000000 +0000
 +++ netwerk/dns/moz.build
 @@ -73,3 +73,6 @@ USE_LIBS += ['icu']
  
- if CONFIG['GNU_CXX']:
+ if CONFIG['CC_TYPE'] in ('clang', 'gcc'):
      CXXFLAGS += ['-Wno-error=shadow']
 +
 +if CONFIG['MOZ_SYSTEM_HARFBUZZ']:

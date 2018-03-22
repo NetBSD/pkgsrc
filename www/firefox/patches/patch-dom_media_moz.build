@@ -1,10 +1,10 @@
-$NetBSD: patch-dom_media_moz.build,v 1.7.10.1 2018/03/09 07:17:30 spz Exp $
+$NetBSD: patch-dom_media_moz.build,v 1.7.10.2 2018/03/22 06:56:21 spz Exp $
 
 * Support system libraries
 
---- dom/media/moz.build.orig	2018-01-11 20:17:02.000000000 +0000
+--- dom/media/moz.build.orig	2018-03-10 02:54:17.000000000 +0000
 +++ dom/media/moz.build
-@@ -318,6 +318,21 @@ if CONFIG['MOZ_WEBRTC']:
+@@ -326,6 +326,21 @@ if CONFIG['MOZ_WEBRTC']:
  
  DEFINES['MOZILLA_INTERNAL_API'] = True
  
@@ -23,6 +23,6 @@ $NetBSD: patch-dom_media_moz.build,v 1.7.10.1 2018/03/09 07:17:30 spz Exp $
 +if CONFIG['MOZ_SYSTEM_SOUNDTOUCH']:
 +    CXXFLAGS += CONFIG['MOZ_SOUNDTOUCH_CFLAGS']
 +
- if CONFIG['MOZ_ANDROID_HLS_SUPPORT']:
+ if CONFIG['MOZ_ANDROID_HLS_SUPPORT'] and CONFIG['MOZ_BUILD_MOBILE_ANDROID_WITH_GRADLE']:
      DEFINES['MOZ_ANDROID_HLS_SUPPORT'] = True
  

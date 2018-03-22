@@ -1,10 +1,10 @@
-$NetBSD: patch-toolkit_moz.configure,v 1.8.2.1 2018/03/09 07:17:30 spz Exp $
+$NetBSD: patch-toolkit_moz.configure,v 1.8.2.2 2018/03/22 06:56:21 spz Exp $
 
 * skia part: support bigendian architectures
 
---- toolkit/moz.configure.orig	2018-01-11 20:17:05.000000000 +0000
+--- toolkit/moz.configure.orig	2018-03-10 02:54:17.000000000 +0000
 +++ toolkit/moz.configure
-@@ -418,7 +418,7 @@ option('--enable-eme',
+@@ -414,7 +414,7 @@ option('--enable-eme',
  def enable_eme(value, target):
      # Widevine EME by default enabled on desktop Windows, MacOS and Linux,
      # x86 and x64 builds.
@@ -13,7 +13,7 @@ $NetBSD: patch-toolkit_moz.configure,v 1.8.2.1 2018/03/09 07:17:30 spz Exp $
          target.os not in ('Android', 'iOS') and
          target.cpu in ('x86', 'x86_64')):
          return value
-@@ -829,8 +829,8 @@ def webrender(value, milestone):
+@@ -815,8 +815,8 @@ def webrender(value, milestone):
      enable_webrender = None
  
      if value.origin == 'default':
@@ -24,7 +24,7 @@ $NetBSD: patch-toolkit_moz.configure,v 1.8.2.1 2018/03/09 07:17:30 spz Exp $
      elif len(value) and value[0] == 'build':
          # if explicitly set to 'build', then we build but don't enable
          build_webrender = True
-@@ -938,11 +938,11 @@ include('nss.configure')
+@@ -924,11 +924,11 @@ include('nss.configure')
  # ==============================================================
  option('--disable-skia', help='Disable use of Skia')
  
@@ -41,7 +41,7 @@ $NetBSD: patch-toolkit_moz.configure,v 1.8.2.1 2018/03/09 07:17:30 spz Exp $
          return True
  
  set_config('MOZ_ENABLE_SKIA', skia)
-@@ -1065,6 +1065,26 @@ add_old_configure_assignment('FT2_LIBS',
+@@ -1051,6 +1051,26 @@ add_old_configure_assignment('FT2_LIBS',
  add_old_configure_assignment('FT2_CFLAGS',
                               ft2_info.cflags)
  
@@ -60,7 +60,7 @@ $NetBSD: patch-toolkit_moz.configure,v 1.8.2.1 2018/03/09 07:17:30 spz Exp $
 +option('--with-system-harfbuzz',
 +       help="Use system harfbuzz (located with pkgconfig)")
 +
-+system_harfbuzz = pkg_check_modules('MOZ_HARFBUZZ', 'harfbuzz >= 1.7.2',
++system_harfbuzz = pkg_check_modules('MOZ_HARFBUZZ', 'harfbuzz >= 1.7.4',
 +                                    when='--with-system-harfbuzz')
 +
 +set_config('MOZ_SYSTEM_HARFBUZZ', depends_if(system_harfbuzz)(lambda _: True))
