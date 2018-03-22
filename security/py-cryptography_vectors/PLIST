@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/03/19 09:01:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/03/22 11:49:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -463,6 +463,7 @@ ${PYSITELIB}/cryptography_vectors/hashes/SHA2/SHA512ShortMsg.rsp
 ${PYSITELIB}/cryptography_vectors/hashes/blake2/blake2b.txt
 ${PYSITELIB}/cryptography_vectors/hashes/blake2/blake2s.txt
 ${PYSITELIB}/cryptography_vectors/hashes/ripemd160/ripevectors.txt
+${PYSITELIB}/cryptography_vectors/keywrap/kwp_botan.txt
 ${PYSITELIB}/cryptography_vectors/keywrap/kwtestvectors/KWP_AD_128.txt
 ${PYSITELIB}/cryptography_vectors/keywrap/kwtestvectors/KWP_AD_128_inv.txt
 ${PYSITELIB}/cryptography_vectors/keywrap/kwtestvectors/KWP_AD_192.txt
