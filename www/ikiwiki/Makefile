@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.155 2018/03/11 22:57:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.156 2018/03/22 17:08:31 schmonz Exp $
 #
 
 DISTNAME=		ikiwiki_3.20180311.orig
 PKGNAME=		${DISTNAME:S/_/-/:S/.orig//}
+PKGREVISION=		1
 CATEGORIES=		www textproc
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
 EXTRACT_SUFX=		.tar.xz
@@ -50,8 +51,6 @@ EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 .for f in auto.setup auto-blog.setup wikilist
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
-
-#SPECIAL_PERMS+=		${PREFIX}/bin/ikiwiki-update-wikilist ...
 
 TEST_TARGET=		test
 
