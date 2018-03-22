@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.376 2018/03/21 15:26:10 minskim Exp $
+# $NetBSD: Makefile,v 1.377 2018/03/22 15:36:10 minskim Exp $
 
 COMMENT=	Mathematics
 
@@ -18,6 +18,7 @@ SUBDIR+=	R-RColorBrewer
 SUBDIR+=	R-RPostgreSQL
 SUBDIR+=	R-RandomFields
 SUBDIR+=	R-Rcmdr
+SUBDIR+=	R-RcppArmadillo
 SUBDIR+=	R-RcppEigen
 SUBDIR+=	R-SparseM
 SUBDIR+=	R-VGAM
