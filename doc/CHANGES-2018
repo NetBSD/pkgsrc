@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1486 2018/03/22 08:02:58 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1487 2018/03/22 08:05:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2016,3 +2016,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added textproc/man2html version 3.0.1 [bacon 2018-03-21]
 	Updated textproc/py-lxml to 4.2.1 [adam 2018-03-22]
 	Updated www/py-aiohttp to 3.1.0 [adam 2018-03-22]
+	Updated textproc/oniguruma to 6.8.1 [adam 2018-03-22]
