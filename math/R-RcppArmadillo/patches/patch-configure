@@ -1,0 +1,47 @@
+$NetBSD: patch-configure,v 1.1 2018/03/22 15:38:26 minskim Exp $
+
+Portability fix.
+
+--- configure.orig	2017-12-04 21:30:47.000000000 +0000
++++ configure
+@@ -2754,13 +2754,13 @@ newR=$("${R_HOME}/bin/Rscript" --vanilla
+ ## while this may seem a little unusual we do it to fully reproduce the
+ ## previous bash-based implementation
+ 
+-if test x"${hasRlapack}" == x""; then
++if test x"${hasRlapack}" = x""; then
+     ## We are using a full Lapack and can use zgesdd -- so #undef remains
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: system LAPACK found" >&5
+ $as_echo "system LAPACK found" >&6; }
+     arma_lapack="#undef ARMA_CRIPPLED_LAPACK"
+ else
+-    if test x"${newR}" == x"yes"; then
++    if test x"${newR}" = x"yes"; then
+         ## The R versions are recent enough and has an augmented internal Rlapack
+         { $as_echo "$as_me:${as_lineno-$LINENO}: result: fallback LAPACK from R 3.3.0 or later used" >&5
+ $as_echo "fallback LAPACK from R 3.3.0 or later used" >&6; }
+@@ -2785,7 +2785,7 @@ arma_have_openmp="#define ARMA_DONT_USE_
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for macOS" >&5
+ $as_echo_n "checking for macOS... " >&6; }
+ RSysinfoName=$("${R_HOME}/bin/Rscript" --vanilla -e 'cat(Sys.info()["sysname"])')
+-if test x"${RSysinfoName}" == x"Darwin"; then
++if test x"${RSysinfoName}" = x"Darwin"; then
+    { $as_echo "$as_me:${as_lineno-$LINENO}: result: found" >&5
+ $as_echo "found" >&6; }
+    { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: OpenMP unavailable and turned off." >&5
+@@ -2795,13 +2795,13 @@ else
+    { $as_echo "$as_me:${as_lineno-$LINENO}: result: not found as on ${RSysinfoName}" >&5
+ $as_echo "not found as on ${RSysinfoName}" >&6; }
+    ## Check for OpenMP if and only if we have a suitable compile
+-   if test x"${can_use_openmp}" == x"yes"; then
++   if test x"${can_use_openmp}" = x"yes"; then
+       { $as_echo "$as_me:${as_lineno-$LINENO}: checking for OpenMP" >&5
+ $as_echo_n "checking for OpenMP... " >&6; }
+       ## if R has -fopenmp we should be good
+       allldflags=$(${R_HOME}/bin/R CMD config --ldflags)
+       hasOpenMP=$(echo ${allldflags} | grep -- -fopenmp)
+-      if test x"${hasOpenMP}" == x""; then
++      if test x"${hasOpenMP}" = x""; then
+          { $as_echo "$as_me:${as_lineno-$LINENO}: result: missing" >&5
+ $as_echo "missing" >&6; }
+          arma_have_openmp="#define ARMA_DONT_USE_OPENMP 1"
