@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2018/01/07 13:04:07 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2018/03/22 08:14:51 adam Exp $
 
 BUILDLINK_TREE+=	libslang2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libslang2
 LIBSLANG2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libslang2+=	libslang2>=2.1.3
-BUILDLINK_ABI_DEPENDS.libslang2+=	libslang2>=2.2.4nb2
+BUILDLINK_ABI_DEPENDS.libslang2+=	libslang2>=2.2.4nb3
 BUILDLINK_PKGSRCDIR.libslang2?=	../../devel/libslang2
 BUILDLINK_FNAME_TRANSFORM.libslang2+=	-e 's|include/slang2/|include/|g'
 BUILDLINK_TRANSFORM+=		l:slang:slang2

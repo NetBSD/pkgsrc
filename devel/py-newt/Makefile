@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2017/11/03 19:39:13 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2018/03/22 08:14:52 adam Exp $
 
 DISTNAME=	newt-0.52.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://releases.pagure.org/newt/
 
