@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2017/09/04 18:01:02 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/03/22 08:14:52 adam Exp $
 
 DISTNAME=	oniguruma-1.1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
