@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2017/10/04 12:52:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.93.2.1 2018/03/22 06:56:21 spz Exp $
 
 DISTNAME=	nspr-${NSPR_RELEASE:S/.0$//}
-PKGREVISION=	1
-NSPR_RELEASE=	4.17.0
+NSPR_RELEASE=	4.19.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=nspr/releases/v${NSPR_RELEASE:S/.0$//}/src/}
 
@@ -31,6 +30,8 @@ CONFIGURE_ARGS+=	--with-pthreads
 CONFIGURE_ENV+=		LIBRUNPATH=${PREFIX:Q}/lib/nspr
 
 .include "../../mk/bsd.prefs.mk"
+
+BUILDLINK_TRANSFORM+=	rm:-Wall
 
 SUBST_CLASSES+=			nspr-config
 SUBST_STAGE.nspr-config=	pre-configure
