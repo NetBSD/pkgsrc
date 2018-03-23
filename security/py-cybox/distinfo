@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/11/30 08:16:19 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/03/23 12:51:21 adam Exp $
 
-SHA1 (cybox-2.1.0.16.tar.gz) = 482443d0a5930f40b5bf408fe6831082da7286c4
-RMD160 (cybox-2.1.0.16.tar.gz) = c77c3c52e5250e7911d3dd251d0d709b937db925
-SHA512 (cybox-2.1.0.16.tar.gz) = e22c9c08d0fb1719d359ddd3c3a581cb65af758753b28268c1aff38f82a574bd076594e1cfd299f8261007721d8573a32dc45a639b70d9900dd5110412cf53ea
-Size (cybox-2.1.0.16.tar.gz) = 483677 bytes
+SHA1 (cybox-2.1.0.17.tar.gz) = 6e9111be684205f4f177c83263b8119a0105b7d7
+RMD160 (cybox-2.1.0.17.tar.gz) = f9a8a4d00045f65466a2502ea8b41ba848ecf8a7
+SHA512 (cybox-2.1.0.17.tar.gz) = e9b6cee6bcd7703c758a55a76424882b8d7e14fe4cdcfa8bdfe64e3613a9b02a26714f529e8a42d99c665f2aec7b5adedfe81467535a44c6bbbf1995ea9c7a9d
+Size (cybox-2.1.0.17.tar.gz) = 484688 bytes
