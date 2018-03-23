@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2017/07/22 17:53:16 maya Exp $
+$NetBSD: distinfo,v 1.18 2018/03/23 04:43:36 rin Exp $
 
 SHA1 (Canna37p3.tar.bz2) = e39eece7c70c669dd46dd74b26121a60a2496fde
 RMD160 (Canna37p3.tar.bz2) = 33e5eb9e2dc144835db838612897e652acbc60ed
@@ -16,6 +16,7 @@ SHA1 (patch-canuum_jhlp.c) = 1d15186608f116cc4fb3e6a9691bb1b701d8b0ec
 SHA1 (patch-canuum_printf.c) = c05ef114fae689855989d5d5eded2f734c62e12e
 SHA1 (patch-canuum_termcap.c) = 958015b3bf4e9f89703e198c1ed28d51ae3f8c4e
 SHA1 (patch-canuum_termio.c) = df9e68c8fb564ee4c4367acf6b042c253d17e525
+SHA1 (patch-cmd_catdic_rutil.c) = f9b3d866c089cc6a49d8f90c216fb27cbbc55e19
 SHA1 (patch-cmd_cmd.tmpl) = f6ec97c273aa84eb84bdd24cbe16aaf7e696e041
 SHA1 (patch-dic_phono_Imakefile) = 4e1210517317b57796cad5b350de41e1f0d8157d
 SHA1 (patch-lib_RKC_convert.c) = f196cfa3db3ef163c1869ca6bfd3f22170997aef
