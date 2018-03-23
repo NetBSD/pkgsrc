@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.377 2018/03/22 15:36:10 minskim Exp $
+# $NetBSD: Makefile,v 1.378 2018/03/23 16:43:43 minskim Exp $
 
 COMMENT=	Mathematics
 
@@ -38,6 +38,7 @@ SUBDIR+=	R-combinat
 SUBDIR+=	R-date
 SUBDIR+=	R-e1071
 SUBDIR+=	R-emdbook
+SUBDIR+=	R-forecast
 SUBDIR+=	R-fracdiff
 SUBDIR+=	R-gdata
 SUBDIR+=	R-genetics
