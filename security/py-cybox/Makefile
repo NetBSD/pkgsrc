@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/11/30 08:16:19 adam Exp $
+# $NetBSD: Makefile,v 1.8 2018/03/23 12:51:21 adam Exp $
 
-DISTNAME=	cybox-2.1.0.16
+DISTNAME=	cybox-2.1.0.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CybOXProject/}
