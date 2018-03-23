@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2018/02/25 21:39:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2018/03/23 07:42:07 adam Exp $
 bin/sphinx-apidoc${PYVERSSUFFIX}
 bin/sphinx-autogen${PYVERSSUFFIX}
 bin/sphinx-build${PYVERSSUFFIX}
@@ -524,6 +524,8 @@ ${PYSITELIB}/sphinx/templates/latex/latex.tex_t
 ${PYSITELIB}/sphinx/templates/latex/longtable.tex_t
 ${PYSITELIB}/sphinx/templates/latex/tabular.tex_t
 ${PYSITELIB}/sphinx/templates/latex/tabulary.tex_t
+${PYSITELIB}/sphinx/templates/qthelp/project.qhcp
+${PYSITELIB}/sphinx/templates/qthelp/project.qhp
 ${PYSITELIB}/sphinx/templates/quickstart/Makefile.new_t
 ${PYSITELIB}/sphinx/templates/quickstart/Makefile_t
 ${PYSITELIB}/sphinx/templates/quickstart/conf.py_t
