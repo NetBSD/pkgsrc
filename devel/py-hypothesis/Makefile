@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2018/03/15 09:08:36 adam Exp $
+# $NetBSD: Makefile,v 1.52 2018/03/23 07:51:09 adam Exp $
 
-DISTNAME=	hypothesis-3.49.1
+DISTNAME=	hypothesis-3.50.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hypothesis/}
@@ -22,8 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 
 USE_LANGUAGES=	# none
 
-# actual tests only in github distfile, but that needs py-test and
-# py-test depends on py-hypothesis...
+# actual tests only in github distfile
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
