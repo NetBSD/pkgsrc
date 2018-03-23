@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/10/10 07:27:40 adam Exp $
+$NetBSD: distinfo,v 1.2 2018/03/23 12:13:10 adam Exp $
 
-SHA1 (mixbox-1.0.2.tar.gz) = 7c6a734ed48d31472c2e6a363de0a7490b765048
-RMD160 (mixbox-1.0.2.tar.gz) = ebb61895ff5a676548adc827dd1c591625982916
-SHA512 (mixbox-1.0.2.tar.gz) = cdb54d58eca17408b720e7d192a0a6cc299862cf2a702b221c65966cdf6856d3a0d924ef5e1ab9b8f26adab6d4fe29ca3828df2a367e573c88f6f74e23e87c15
-Size (mixbox-1.0.2.tar.gz) = 39944 bytes
+SHA1 (mixbox-1.0.3.tar.gz) = 2853ea7990e0a416fb275d82face4890bc1afc35
+RMD160 (mixbox-1.0.3.tar.gz) = a810daae94919c471bf6fe5747725abafcad5637
+SHA512 (mixbox-1.0.3.tar.gz) = 4051879fec46df14c518ef37ec679936d4a8c2200ad5c675a93c1343307d981ca4b3895905311f45eb56f2c78482dc206ed406be1f3fb8819519f4019db1141c
+Size (mixbox-1.0.3.tar.gz) = 40933 bytes
