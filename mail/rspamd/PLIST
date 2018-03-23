@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/03/13 15:09:15 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/03/23 12:08:50 fhajny Exp $
 bin/rspamadm
 bin/rspamadm-${PKGVERSION}
 bin/rspamc
@@ -159,6 +159,7 @@ share/rspamd/lib/lua_maps.lua
 share/rspamd/lib/lua_meta.lua
 share/rspamd/lib/lua_nn.lua
 share/rspamd/lib/lua_redis.lua
+share/rspamd/lib/lua_squeeze_rules.lua
 share/rspamd/lib/lua_stat.lua
 share/rspamd/lib/lua_util.lua
 share/rspamd/lib/rspamadm/ansicolors.lua
