@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1503 2018/03/23 12:53:59 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1504 2018/03/23 13:08:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2042,3 +2042,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/librelp to 1.2.15 [fhajny 2018-03-23]
 	Updated security/py-cybox to 2.1.0.17 [adam 2018-03-23]
 	Updated devel/py-construct to 2.9.39 [adam 2018-03-23]
+	Updated net/dnsmasq to 2.79 [adam 2018-03-23]
+	Updated devel/talloc to 2.1.12 [adam 2018-03-23]
