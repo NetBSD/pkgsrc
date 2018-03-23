@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1522 2018/03/23 16:44:12 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1523 2018/03/23 17:55:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2063,3 +2063,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-certbot to 0.22.2 [fhajny 2018-03-23]
 	Updated devel/transifex-client to 0.13.1 [taca 2018-03-23]
 	Added math/R-forecast version 8.2 [minskim 2018-03-23]
+	Updated multimedia/libdvdcss to 1.4.2 [adam 2018-03-23]
