@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1508 2018/03/23 13:42:00 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1509 2018/03/23 13:49:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2048,3 +2048,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/apache-tomcat8 to 8.0.50 [ryoon 2018-03-23]
 	Updated www/apache-tomcat85 to 8.5.29 [ryoon 2018-03-23]
 	Updated databases/ruby-mysql2 to 0.5.0 [taca 2018-03-23]
+	Updated devel/ruby-byebug to 10.0.1 [taca 2018-03-23]
