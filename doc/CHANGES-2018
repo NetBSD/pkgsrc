@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1499 2018/03/23 12:00:21 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1500 2018/03/23 12:08:58 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2036,3 +2036,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-test-flake8 to 1.0.0 [adam 2018-03-23]
 	Updated lang/elixir to 1.6.4 [fhajny 2018-03-23]
 	Updated security/vault to 0.9.6 [fhajny 2018-03-23]
+	Updated mail/rspamd to 1.7.1 [fhajny 2018-03-23]
