@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2017/08/31 15:18:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2018/03/23 13:57:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.yardopts
@@ -78,6 +78,7 @@ ${GEM_LIBDIR}/lib/mocha/is_a.rb
 ${GEM_LIBDIR}/lib/mocha/logger.rb
 ${GEM_LIBDIR}/lib/mocha/method_matcher.rb
 ${GEM_LIBDIR}/lib/mocha/mini_test.rb
+${GEM_LIBDIR}/lib/mocha/minitest.rb
 ${GEM_LIBDIR}/lib/mocha/mock.rb
 ${GEM_LIBDIR}/lib/mocha/mockery.rb
 ${GEM_LIBDIR}/lib/mocha/module_method.rb
