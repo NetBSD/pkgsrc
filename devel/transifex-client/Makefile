@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/01/29 14:57:42 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2018/03/23 15:02:05 taca Exp $
 
 DISTNAME=	${VERS}
 PKGNAME=	transifex-client-${VERS}
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.14:../../www/py-urllib3
 
-VERS=		0.12.1
+VERS=		0.13.1
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../lang/python/egg.mk"
