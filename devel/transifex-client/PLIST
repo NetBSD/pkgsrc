@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/08/11 14:49:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/03/23 15:02:05 taca Exp $
 bin/tx
 ${PYSITELIB}/transifex_client-${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/transifex_client-${EGG_INFODIR}/SOURCES.txt
@@ -13,6 +13,9 @@ ${PYSITELIB}/txclib/__init__.pyo
 ${PYSITELIB}/txclib/__main__.py
 ${PYSITELIB}/txclib/__main__.pyc
 ${PYSITELIB}/txclib/__main__.pyo
+${PYSITELIB}/txclib/api.py
+${PYSITELIB}/txclib/api.pyc
+${PYSITELIB}/txclib/api.pyo
 ${PYSITELIB}/txclib/cacert.pem
 ${PYSITELIB}/txclib/cmdline.py
 ${PYSITELIB}/txclib/cmdline.pyc
@@ -29,6 +32,9 @@ ${PYSITELIB}/txclib/exceptions.pyo
 ${PYSITELIB}/txclib/log.py
 ${PYSITELIB}/txclib/log.pyc
 ${PYSITELIB}/txclib/log.pyo
+${PYSITELIB}/txclib/messages.py
+${PYSITELIB}/txclib/messages.pyc
+${PYSITELIB}/txclib/messages.pyo
 ${PYSITELIB}/txclib/parsers.py
 ${PYSITELIB}/txclib/parsers.pyc
 ${PYSITELIB}/txclib/parsers.pyo
@@ -50,3 +56,6 @@ ${PYSITELIB}/txclib/utils.pyo
 ${PYSITELIB}/txclib/web.py
 ${PYSITELIB}/txclib/web.pyc
 ${PYSITELIB}/txclib/web.pyo
+${PYSITELIB}/txclib/wizard.py
+${PYSITELIB}/txclib/wizard.pyc
+${PYSITELIB}/txclib/wizard.pyo
