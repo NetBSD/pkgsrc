@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.196 2018/03/03 22:20:39 ryoon Exp $
+$NetBSD: distinfo,v 1.197 2018/03/23 05:29:11 rin Exp $
 
 SHA1 (thunderbird-52.6.0.source.tar.xz) = 8965e9ece5feaa8370ebea047e1fcadd00f2cff7
 RMD160 (thunderbird-52.6.0.source.tar.xz) = 4eda8415747174be41dc21f5367c7c89732afab6
@@ -12,6 +12,8 @@ SHA1 (patch-mail_app_nsMailApp.cpp) = 8834e141e4526af4b6a7a65195fd8f13d7c9cdb1
 SHA1 (patch-mail_components_shell_nsMailGNOMEIntegration.cpp) = cbd87d7d7fc8df32b7fd444148d48a92c54c94d9
 SHA1 (patch-mail_installer_package-manifest.in) = 3829a4d1ae7e8da29ae90d8ac31856fe260c2acc
 SHA1 (patch-mail_installer_removed-files.in) = 1a6744cda9842046b9d4b388333678a580d49d43
+SHA1 (patch-mailnews_compose_src_nsMsgCompose.cpp) = f44e66c9985e69904768126649162cc15681c2d0
+SHA1 (patch-mailnews_compose_src_nsMsgSend.cpp) = 6d9f04350a4bf7a33f478af591fa26f990bd999e
 SHA1 (patch-mozilla_browser_branding_unofficial_locales_en-US_brand.dtd) = 1cd7faa6a098e2bc609d941406b46e6f737fbb63
 SHA1 (patch-mozilla_build_gyp.mozbuild) = c7081e530a60af88be428d7779139415483fac56
 SHA1 (patch-mozilla_build_moz.configure_init.configure) = 1d0d8ddb9a4ea7a395067ccc31be1e6f81791271
