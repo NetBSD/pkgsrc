@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/01/31 23:10:39 zafer Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/03/23 13:19:13 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -158,6 +158,8 @@ share/tomcat/webapps/docs/funcspecs/fs-jndi-realm.html
 share/tomcat/webapps/docs/funcspecs/fs-memory-realm.html
 share/tomcat/webapps/docs/funcspecs/index.html
 share/tomcat/webapps/docs/funcspecs/mbean-names.html
+share/tomcat/webapps/docs/host-manager-howto.html
+share/tomcat/webapps/docs/html-host-manager-howto.html
 share/tomcat/webapps/docs/html-manager-howto.html
 share/tomcat/webapps/docs/images/add.gif
 share/tomcat/webapps/docs/images/asf-logo.svg
