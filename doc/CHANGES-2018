@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1501 2018/03/23 12:13:46 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1502 2018/03/23 12:24:41 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2039,3 +2039,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/rspamd to 1.7.1 [fhajny 2018-03-23]
 	Updated textproc/py-m2r to 0.1.14 [adam 2018-03-23]
 	Updated devel/py-mixbox to 1.0.3 [adam 2018-03-23]
+	Updated devel/librelp to 1.2.15 [fhajny 2018-03-23]
