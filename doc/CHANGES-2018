@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1518 2018/03/23 14:32:07 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1519 2018/03/23 14:33:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2058,3 +2058,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-native-package-installer to 1.0.6 [taca 2018-03-23]
 	Updated net/ruby-netaddr to 2.0.3 [taca 2018-03-23]
 	Updated sysutils/puppet to 5.5.0 [taca 2018-03-23]
+	Updated www/ruby-loofah to 2.2.2 [taca 2018-03-23]
