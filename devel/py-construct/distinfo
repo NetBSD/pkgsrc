@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2018/02/14 08:06:40 adam Exp $
+$NetBSD: distinfo,v 1.10 2018/03/23 12:53:34 adam Exp $
 
-SHA1 (construct-2.9.30.tar.gz) = fc38ba42010ccac913e562f459db8d47050bbba6
-RMD160 (construct-2.9.30.tar.gz) = 22ef02577118d0c8ca825b62e9dea429a6f5266b
-SHA512 (construct-2.9.30.tar.gz) = e070ba7c43c7279391d07e24ed7ca52152cfe7c46e2fb969c37a2edbd33eb9102bd892cca5dd6be7e96eb7d0dcd04c17a4565ca2dcaab14795efbcb4ddef03d2
-Size (construct-2.9.30.tar.gz) = 68744 bytes
+SHA1 (construct-2.9.39.tar.gz) = 109ea75fcf1d6a73ef5a7e8410f65a9d40d720c7
+RMD160 (construct-2.9.39.tar.gz) = e13682ea2041f126b52a6cd033e0a3f0b397f153
+SHA512 (construct-2.9.39.tar.gz) = 0657a401cc6d140160aebe6f273da2825f4000a6cf982d5beed4d633f8c240322ce84dd3b30dbd098949238b2d134d8284ce7b21cdc1266e68bd3d308df262b4
+Size (construct-2.9.39.tar.gz) = 51357 bytes
