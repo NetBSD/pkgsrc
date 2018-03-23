@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1511 2018/03/23 13:54:01 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1512 2018/03/23 13:58:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2051,3 +2051,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-byebug to 10.0.1 [taca 2018-03-23]
 	Updated archivers/py-zstandard to 0.8.2 [adam 2018-03-23]
 	Updated devel/ruby-mixlib-config to 2.2.6 [taca 2018-03-23]
+	Updated devel/ruby-mocha to 1.4.0 [taca 2018-03-23]
