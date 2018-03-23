@@ -1,23 +1,24 @@
-# $NetBSD: Makefile,v 1.24 2018/02/28 08:00:46 nonaka Exp $
+# $NetBSD: Makefile,v 1.25 2018/03/23 13:08:20 adam Exp $
 
-DISTNAME=	talloc-2.1.11
-PKGREVISION=	1
+DISTNAME=	talloc-2.1.12
 CATEGORIES=	devel
 MASTER_SITES=	http://www.samba.org/ftp/talloc/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://talloc.samba.org/
+HOMEPAGE=	https://talloc.samba.org/talloc/doc/html/index.html
 COMMENT=	Hierarchical pool based memory allocator with destructors
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
-HAS_CONFIGURE=	yes	# wrapper script around WAF
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=		pkg-config
+HAS_CONFIGURE=		yes	# wrapper script around WAF
+TEST_TARGET=		test
 
 PKGCONFIG_OVERRIDE+=	talloc.pc.in
 PKGCONFIG_OVERRIDE+=	pytalloc-util.pc.in
 PY_PATCHPLIST=		yes
+
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2.1.0
 
 # include/talloc.h
