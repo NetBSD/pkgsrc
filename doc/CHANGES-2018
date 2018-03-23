@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1500 2018/03/23 12:08:58 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1501 2018/03/23 12:13:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2037,3 +2037,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/elixir to 1.6.4 [fhajny 2018-03-23]
 	Updated security/vault to 0.9.6 [fhajny 2018-03-23]
 	Updated mail/rspamd to 1.7.1 [fhajny 2018-03-23]
+	Updated textproc/py-m2r to 0.1.14 [adam 2018-03-23]
+	Updated devel/py-mixbox to 1.0.3 [adam 2018-03-23]
