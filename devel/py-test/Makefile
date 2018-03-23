@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2018/03/06 08:33:36 adam Exp $
+# $NetBSD: Makefile,v 1.46 2018/03/23 08:58:00 adam Exp $
 
-DISTNAME=	pytest-3.4.2
+DISTNAME=	pytest-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
@@ -10,15 +10,15 @@ HOMEPAGE=	http://pytest.org/
 COMMENT=	Python testing tool
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-attrs>=17.2.0:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+DEPENDS+=	${PYPKGPREFIX}-more-itertools>=4.0.0:../../devel/py-more-itertools
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.5:../../devel/py-pluggy
 DEPENDS+=	${PYPKGPREFIX}-py>=1.4.29:../../devel/py-py
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-# TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
-BUILD_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
+TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 .include "../../lang/python/pyversion.mk"
 .if "${PYPKGPREFIX}" == "py27"
