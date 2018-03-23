@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1496 2018/03/23 10:23:12 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1497 2018/03/23 11:06:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2032,3 +2032,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/py-pendulum to 1.4.4 [adam 2018-03-23]
 	Added devel/py-path.py version 11.0 [adam 2018-03-23]
 	Updated www/py-cherrypy to 14.0.1 [adam 2018-03-23]
+	Updated devel/py-pkginfo to 1.4.2 [adam 2018-03-23]
+	Updated devel/py-test-flake8 to 1.0.0 [adam 2018-03-23]
