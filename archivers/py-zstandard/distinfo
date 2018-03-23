@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/10/23 10:24:18 adam Exp $
+$NetBSD: distinfo,v 1.4 2018/03/23 13:42:59 adam Exp $
 
-SHA1 (zstandard-0.8.1.tar.gz) = 879ee10c0d28bb01d8d7e258e86d40a4f59dd50c
-RMD160 (zstandard-0.8.1.tar.gz) = f7811f2282b62d5ef7ff31359f5767f799a4b30d
-SHA512 (zstandard-0.8.1.tar.gz) = 0ddbe22381397443c6c9f84e64f9358160bede104c4f48351119d880ac4f88994739b0b3915454567d2b2b04930c6ead5aa290a40323ba4b0bacf5e97809793c
-Size (zstandard-0.8.1.tar.gz) = 463785 bytes
+SHA1 (zstandard-0.8.2.tar.gz) = 604397105017ca6458c1b135fb42db9f765ac220
+RMD160 (zstandard-0.8.2.tar.gz) = 7ff76e03e65832ad2d3df528009fe7feb6ab3f0a
+SHA512 (zstandard-0.8.2.tar.gz) = a5a7dc9cb562fe00c8ff1f1230d8146d30ec40c5d911ed0d6189703a365da83b733b556a332acbdfd1467bb3bf054c19dc0261820c7d080aab4ba771a3eb3791
+Size (zstandard-0.8.2.tar.gz) = 463526 bytes
