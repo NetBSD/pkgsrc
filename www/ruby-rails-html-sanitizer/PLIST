@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/19 06:48:13 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/23 14:06:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/rails-html-sanitizer.rb
 ${GEM_LIBDIR}/lib/rails/html/sanitizer.rb
