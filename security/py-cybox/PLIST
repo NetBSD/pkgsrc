@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/11/30 08:16:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/03/23 12:51:21 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -325,6 +325,9 @@ ${PYSITELIB}/cybox/common/extracted_string.pyo
 ${PYSITELIB}/cybox/common/hashes.py
 ${PYSITELIB}/cybox/common/hashes.pyc
 ${PYSITELIB}/cybox/common/hashes.pyo
+${PYSITELIB}/cybox/common/location.py
+${PYSITELIB}/cybox/common/location.pyc
+${PYSITELIB}/cybox/common/location.pyo
 ${PYSITELIB}/cybox/common/measuresource.py
 ${PYSITELIB}/cybox/common/measuresource.pyc
 ${PYSITELIB}/cybox/common/measuresource.pyo
@@ -379,6 +382,9 @@ ${PYSITELIB}/cybox/core/observable.pyo
 ${PYSITELIB}/cybox/core/pattern_fidelity.py
 ${PYSITELIB}/cybox/core/pattern_fidelity.pyc
 ${PYSITELIB}/cybox/core/pattern_fidelity.pyo
+${PYSITELIB}/cybox/core/pool.py
+${PYSITELIB}/cybox/core/pool.pyc
+${PYSITELIB}/cybox/core/pool.pyo
 ${PYSITELIB}/cybox/helper.py
 ${PYSITELIB}/cybox/helper.pyc
 ${PYSITELIB}/cybox/helper.pyo
@@ -655,6 +661,9 @@ ${PYSITELIB}/cybox/test/common/extracted_string_test.pyo
 ${PYSITELIB}/cybox/test/common/hash_test.py
 ${PYSITELIB}/cybox/test/common/hash_test.pyc
 ${PYSITELIB}/cybox/test/common/hash_test.pyo
+${PYSITELIB}/cybox/test/common/location_test.py
+${PYSITELIB}/cybox/test/common/location_test.pyc
+${PYSITELIB}/cybox/test/common/location_test.pyo
 ${PYSITELIB}/cybox/test/common/measuresource_test.py
 ${PYSITELIB}/cybox/test/common/measuresource_test.pyc
 ${PYSITELIB}/cybox/test/common/measuresource_test.pyo
