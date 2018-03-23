@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/11/14 14:19:54 wiz Exp $
+$NetBSD: distinfo,v 1.6 2018/03/23 10:56:11 adam Exp $
 
-SHA1 (pkginfo-1.4.1.tar.gz) = 173e13e9f9de61e198b588db19cadf5ccd8c3923
-RMD160 (pkginfo-1.4.1.tar.gz) = 1cdc3a99119f793f92029178b6ff076f6884260f
-SHA512 (pkginfo-1.4.1.tar.gz) = 44d4392094e0d5833eca99dfcd603217acf4a7dcbb23f211457d7f547f415076043f76eef46b31780ae19abc4cf18b2dcd7585e293e2802c0739ad8354708b23
-Size (pkginfo-1.4.1.tar.gz) = 32001 bytes
+SHA1 (pkginfo-1.4.2.tar.gz) = 6c0980cdffaa3a2618e3db731c4487b4647dfb34
+RMD160 (pkginfo-1.4.2.tar.gz) = 65db4ba7d508330ae31741d6fc61e8b26c32b70e
+SHA512 (pkginfo-1.4.2.tar.gz) = 536628a2a2472e999695a115449a76f971453aea7ac3a08f10d9b08dfdf4a7b8e67c6010c6f18d300472a6afc8dff33331c955cc2f7bdb357504cd6a36390da3
+Size (pkginfo-1.4.2.tar.gz) = 33539 bytes
