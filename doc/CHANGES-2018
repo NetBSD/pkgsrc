@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1502 2018/03/23 12:24:41 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1503 2018/03/23 12:53:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2040,3 +2040,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-m2r to 0.1.14 [adam 2018-03-23]
 	Updated devel/py-mixbox to 1.0.3 [adam 2018-03-23]
 	Updated devel/librelp to 1.2.15 [fhajny 2018-03-23]
+	Updated security/py-cybox to 2.1.0.17 [adam 2018-03-23]
+	Updated devel/py-construct to 2.9.39 [adam 2018-03-23]
