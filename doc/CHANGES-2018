@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1493 2018/03/23 05:30:52 rin Exp $
+$NetBSD: CHANGES-2018,v 1.1494 2018/03/23 07:54:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2024,3 +2024,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ikiwiki to 3.20180311nb1 [schmonz 2018-03-22]
 	Updated inputmethod/canna-server to 3.7pl3nb1 [rin 2018-03-23]
 	Updated mail/thunderbird to 52.6.0nb2 [rin 2018-03-23]
+	Updated textproc/py-sphinx to 1.7.2 [adam 2018-03-23]
+	Updated devel/py-py to 1.5.3 [adam 2018-03-23]
+	Updated devel/py-hypothesis to 3.50.2 [adam 2018-03-23]
