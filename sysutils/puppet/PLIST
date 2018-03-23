@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2018/03/21 15:13:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2018/03/23 14:31:46 taca Exp $
 bin/puppet${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COMMITTERS.md
@@ -324,11 +324,13 @@ ${GEM_LIBDIR}/lib/puppet/functions/defined.rb
 ${GEM_LIBDIR}/lib/puppet/functions/dig.rb
 ${GEM_LIBDIR}/lib/puppet/functions/each.rb
 ${GEM_LIBDIR}/lib/puppet/functions/emerg.rb
+${GEM_LIBDIR}/lib/puppet/functions/empty.rb
 ${GEM_LIBDIR}/lib/puppet/functions/epp.rb
 ${GEM_LIBDIR}/lib/puppet/functions/err.rb
 ${GEM_LIBDIR}/lib/puppet/functions/eyaml_lookup_key.rb
 ${GEM_LIBDIR}/lib/puppet/functions/filter.rb
 ${GEM_LIBDIR}/lib/puppet/functions/find_file.rb
+${GEM_LIBDIR}/lib/puppet/functions/flatten.rb
 ${GEM_LIBDIR}/lib/puppet/functions/hiera.rb
 ${GEM_LIBDIR}/lib/puppet/functions/hiera_array.rb
 ${GEM_LIBDIR}/lib/puppet/functions/hiera_hash.rb
@@ -338,7 +340,10 @@ ${GEM_LIBDIR}/lib/puppet/functions/import.rb
 ${GEM_LIBDIR}/lib/puppet/functions/include.rb
 ${GEM_LIBDIR}/lib/puppet/functions/info.rb
 ${GEM_LIBDIR}/lib/puppet/functions/inline_epp.rb
+${GEM_LIBDIR}/lib/puppet/functions/join.rb
 ${GEM_LIBDIR}/lib/puppet/functions/json_data.rb
+${GEM_LIBDIR}/lib/puppet/functions/keys.rb
+${GEM_LIBDIR}/lib/puppet/functions/length.rb
 ${GEM_LIBDIR}/lib/puppet/functions/lest.rb
 ${GEM_LIBDIR}/lib/puppet/functions/lookup.rb
 ${GEM_LIBDIR}/lib/puppet/functions/map.rb
@@ -362,6 +367,7 @@ ${GEM_LIBDIR}/lib/puppet/functions/tree_each.rb
 ${GEM_LIBDIR}/lib/puppet/functions/type.rb
 ${GEM_LIBDIR}/lib/puppet/functions/unique.rb
 ${GEM_LIBDIR}/lib/puppet/functions/unwrap.rb
+${GEM_LIBDIR}/lib/puppet/functions/values.rb
 ${GEM_LIBDIR}/lib/puppet/functions/versioncmp.rb
 ${GEM_LIBDIR}/lib/puppet/functions/warning.rb
 ${GEM_LIBDIR}/lib/puppet/functions/with.rb
@@ -416,6 +422,7 @@ ${GEM_LIBDIR}/lib/puppet/indirector/face.rb
 ${GEM_LIBDIR}/lib/puppet/indirector/facts/facter.rb
 ${GEM_LIBDIR}/lib/puppet/indirector/facts/memory.rb
 ${GEM_LIBDIR}/lib/puppet/indirector/facts/network_device.rb
+${GEM_LIBDIR}/lib/puppet/indirector/facts/rest.rb
 ${GEM_LIBDIR}/lib/puppet/indirector/facts/store_configs.rb
 ${GEM_LIBDIR}/lib/puppet/indirector/facts/yaml.rb
 ${GEM_LIBDIR}/lib/puppet/indirector/file_bucket_file/file.rb
@@ -738,6 +745,7 @@ ${GEM_LIBDIR}/lib/puppet/pops/model/ast_transformer.rb
 ${GEM_LIBDIR}/lib/puppet/pops/model/factory.rb
 ${GEM_LIBDIR}/lib/puppet/pops/model/model_label_provider.rb
 ${GEM_LIBDIR}/lib/puppet/pops/model/model_tree_dumper.rb
+${GEM_LIBDIR}/lib/puppet/pops/model/pn_transformer.rb
 ${GEM_LIBDIR}/lib/puppet/pops/model/tree_dumper.rb
 ${GEM_LIBDIR}/lib/puppet/pops/parser/code_merger.rb
 ${GEM_LIBDIR}/lib/puppet/pops/parser/egrammar.ra
@@ -752,9 +760,11 @@ ${GEM_LIBDIR}/lib/puppet/pops/parser/lexer_support.rb
 ${GEM_LIBDIR}/lib/puppet/pops/parser/locatable.rb
 ${GEM_LIBDIR}/lib/puppet/pops/parser/locator.rb
 ${GEM_LIBDIR}/lib/puppet/pops/parser/parser_support.rb
+${GEM_LIBDIR}/lib/puppet/pops/parser/pn_parser.rb
 ${GEM_LIBDIR}/lib/puppet/pops/parser/slurp_support.rb
 ${GEM_LIBDIR}/lib/puppet/pops/patterns.rb
 ${GEM_LIBDIR}/lib/puppet/pops/pcore.rb
+${GEM_LIBDIR}/lib/puppet/pops/pn.rb
 ${GEM_LIBDIR}/lib/puppet/pops/puppet_stack.rb
 ${GEM_LIBDIR}/lib/puppet/pops/resource/param.rb
 ${GEM_LIBDIR}/lib/puppet/pops/resource/resource_type_impl.rb
@@ -1113,6 +1123,7 @@ ${GEM_LIBDIR}/lib/puppet/util/filetype.rb
 ${GEM_LIBDIR}/lib/puppet/util/http_proxy.rb
 ${GEM_LIBDIR}/lib/puppet/util/inifile.rb
 ${GEM_LIBDIR}/lib/puppet/util/instance_loader.rb
+${GEM_LIBDIR}/lib/puppet/util/json.rb
 ${GEM_LIBDIR}/lib/puppet/util/json_lockfile.rb
 ${GEM_LIBDIR}/lib/puppet/util/ldap.rb
 ${GEM_LIBDIR}/lib/puppet/util/ldap/connection.rb
@@ -1279,6 +1290,7 @@ ${GEM_LIBDIR}/man/man8/puppet-parser.8
 ${GEM_LIBDIR}/man/man8/puppet-plugin.8
 ${GEM_LIBDIR}/man/man8/puppet-report.8
 ${GEM_LIBDIR}/man/man8/puppet-resource.8
+${GEM_LIBDIR}/man/man8/puppet-script.8
 ${GEM_LIBDIR}/man/man8/puppet-status.8
 ${GEM_LIBDIR}/man/man8/puppet.8
 ${GEM_LIBDIR}/spec/fixtures/faulty_face/puppet/face/syntax.rb
@@ -1866,6 +1878,7 @@ ${GEM_LIBDIR}/spec/unit/face/facts_spec.rb
 ${GEM_LIBDIR}/spec/unit/face/generate_spec.rb
 ${GEM_LIBDIR}/spec/unit/face/help_spec.rb
 ${GEM_LIBDIR}/spec/unit/face/key_spec.rb
+${GEM_LIBDIR}/spec/unit/face/man_spec.rb
 ${GEM_LIBDIR}/spec/unit/face/module/build_spec.rb
 ${GEM_LIBDIR}/spec/unit/face/module/install_spec.rb
 ${GEM_LIBDIR}/spec/unit/face/module/list_spec.rb
@@ -1916,12 +1929,17 @@ ${GEM_LIBDIR}/spec/unit/functions/convert_to_spec.rb
 ${GEM_LIBDIR}/spec/unit/functions/defined_spec.rb
 ${GEM_LIBDIR}/spec/unit/functions/dig_spec.rb
 ${GEM_LIBDIR}/spec/unit/functions/each_spec.rb
+${GEM_LIBDIR}/spec/unit/functions/empty_spec.rb
 ${GEM_LIBDIR}/spec/unit/functions/epp_spec.rb
 ${GEM_LIBDIR}/spec/unit/functions/filter_spec.rb
 ${GEM_LIBDIR}/spec/unit/functions/find_file_spec.rb
+${GEM_LIBDIR}/spec/unit/functions/flatten_spec.rb
 ${GEM_LIBDIR}/spec/unit/functions/hiera_spec.rb
 ${GEM_LIBDIR}/spec/unit/functions/include_spec.rb
 ${GEM_LIBDIR}/spec/unit/functions/inline_epp_spec.rb
+${GEM_LIBDIR}/spec/unit/functions/join_spec.rb
+${GEM_LIBDIR}/spec/unit/functions/keys_spec.rb
+${GEM_LIBDIR}/spec/unit/functions/length_spec.rb
 ${GEM_LIBDIR}/spec/unit/functions/lest_spec.rb
 ${GEM_LIBDIR}/spec/unit/functions/logging_spec.rb
 ${GEM_LIBDIR}/spec/unit/functions/lookup_fixture_spec.rb
@@ -1947,6 +1965,7 @@ ${GEM_LIBDIR}/spec/unit/functions/tree_each_spec.rb
 ${GEM_LIBDIR}/spec/unit/functions/type_spec.rb
 ${GEM_LIBDIR}/spec/unit/functions/unique_spec.rb
 ${GEM_LIBDIR}/spec/unit/functions/unwrap_spec.rb
+${GEM_LIBDIR}/spec/unit/functions/values_spec.rb
 ${GEM_LIBDIR}/spec/unit/functions/versioncmp_spec.rb
 ${GEM_LIBDIR}/spec/unit/functions/with_spec.rb
 ${GEM_LIBDIR}/spec/unit/functions4_spec.rb
@@ -1989,6 +2008,7 @@ ${GEM_LIBDIR}/spec/unit/indirector/exec_spec.rb
 ${GEM_LIBDIR}/spec/unit/indirector/face_spec.rb
 ${GEM_LIBDIR}/spec/unit/indirector/facts/facter_spec.rb
 ${GEM_LIBDIR}/spec/unit/indirector/facts/network_device_spec.rb
+${GEM_LIBDIR}/spec/unit/indirector/facts/rest_spec.rb
 ${GEM_LIBDIR}/spec/unit/indirector/facts/store_configs_spec.rb
 ${GEM_LIBDIR}/spec/unit/indirector/facts/yaml_spec.rb
 ${GEM_LIBDIR}/spec/unit/indirector/file_bucket_file/file_spec.rb
@@ -2178,6 +2198,7 @@ ${GEM_LIBDIR}/spec/unit/pops/lookup/lookup_spec.rb
 ${GEM_LIBDIR}/spec/unit/pops/merge_strategy_spec.rb
 ${GEM_LIBDIR}/spec/unit/pops/migration_spec.rb
 ${GEM_LIBDIR}/spec/unit/pops/model/model_spec.rb
+${GEM_LIBDIR}/spec/unit/pops/model/pn_transformer_spec.rb
 ${GEM_LIBDIR}/spec/unit/pops/parser/epp_parser_spec.rb
 ${GEM_LIBDIR}/spec/unit/pops/parser/evaluating_parser_spec.rb
 ${GEM_LIBDIR}/spec/unit/pops/parser/lexer2_spec.rb
@@ -2197,6 +2218,8 @@ ${GEM_LIBDIR}/spec/unit/pops/parser/parse_site_spec.rb
 ${GEM_LIBDIR}/spec/unit/pops/parser/parser_rspec_helper.rb
 ${GEM_LIBDIR}/spec/unit/pops/parser/parser_spec.rb
 ${GEM_LIBDIR}/spec/unit/pops/parser/parsing_typed_parameters_spec.rb
+${GEM_LIBDIR}/spec/unit/pops/parser/pn_parser_spec.rb
+${GEM_LIBDIR}/spec/unit/pops/pn_spec.rb
 ${GEM_LIBDIR}/spec/unit/pops/puppet_stack_spec.rb
 ${GEM_LIBDIR}/spec/unit/pops/resource/resource_type_impl_spec.rb
 ${GEM_LIBDIR}/spec/unit/pops/serialization/packer_spec.rb
