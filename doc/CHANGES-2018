@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1520 2018/03/23 14:37:31 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1521 2018/03/23 15:02:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2061,3 +2061,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/ruby-loofah to 2.2.2 [taca 2018-03-23]
 	Updated security/py-acme to 0.22.2 [fhajny 2018-03-23]
 	Updated security/py-certbot to 0.22.2 [fhajny 2018-03-23]
+	Updated devel/transifex-client to 0.13.1 [taca 2018-03-23]
