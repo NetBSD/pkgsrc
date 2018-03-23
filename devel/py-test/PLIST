@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/11/28 09:04:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/03/23 08:58:00 adam Exp $
 bin/py.test-${PYVERSSUFFIX}
 bin/pytest-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -83,9 +83,18 @@ ${PYSITELIB}/_pytest/logging.pyo
 ${PYSITELIB}/_pytest/main.py
 ${PYSITELIB}/_pytest/main.pyc
 ${PYSITELIB}/_pytest/main.pyo
-${PYSITELIB}/_pytest/mark.py
-${PYSITELIB}/_pytest/mark.pyc
-${PYSITELIB}/_pytest/mark.pyo
+${PYSITELIB}/_pytest/mark/__init__.py
+${PYSITELIB}/_pytest/mark/__init__.pyc
+${PYSITELIB}/_pytest/mark/__init__.pyo
+${PYSITELIB}/_pytest/mark/evaluate.py
+${PYSITELIB}/_pytest/mark/evaluate.pyc
+${PYSITELIB}/_pytest/mark/evaluate.pyo
+${PYSITELIB}/_pytest/mark/legacy.py
+${PYSITELIB}/_pytest/mark/legacy.pyc
+${PYSITELIB}/_pytest/mark/legacy.pyo
+${PYSITELIB}/_pytest/mark/structures.py
+${PYSITELIB}/_pytest/mark/structures.pyc
+${PYSITELIB}/_pytest/mark/structures.pyo
 ${PYSITELIB}/_pytest/monkeypatch.py
 ${PYSITELIB}/_pytest/monkeypatch.pyc
 ${PYSITELIB}/_pytest/monkeypatch.pyo
