@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1515 2018/03/23 14:06:52 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1516 2018/03/23 14:17:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2055,3 +2055,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/ruby-rex-socket to 0.1.12 [taca 2018-03-23]
 	Updated sysutils/ruby-childprocess to 0.9.0 [taca 2018-03-23]
 	Updated www/ruby-rails-html-sanitizer to 1.0.4 [taca 2018-03-23]
+	Updated devel/ruby-native-package-installer to 1.0.6 [taca 2018-03-23]
