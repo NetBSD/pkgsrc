@@ -1,0 +1,14 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2018/03/23 12:24:32 fhajny Exp $
+
+Fix M4 syntax error.
+
+--- src/Makefile.in.orig	2018-03-21 08:43:29.000000000 +0000
++++ src/Makefile.in
+@@ -821,7 +821,6 @@ uninstall-am: uninstall-includeHEADERS u
+ 
+ .PRECIOUS: Makefile
+ 
+-@OS_SOLARIS_TRUE@then
+ @OS_SOLARIS_TRUE@	PTHREADS_CFLAGS = -pthread
+ @OS_AIX_TRUE@@OS_SOLARIS_FALSE@	PTHREADS_CFLAGS = -qthreaded
+ @OS_AIX_FALSE@@OS_SOLARIS_FALSE@	PTHREADS_CFLAGS = -mt
