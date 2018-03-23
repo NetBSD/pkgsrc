@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1491 2018/03/22 17:08:56 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.1492 2018/03/23 04:47:08 rin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2022,3 +2022,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/grip to 3.7.0 [triaxx 2018-03-22]
 	Added math/R-RcppArmadillo version 0.8.300.1.0 [minskim 2018-03-22]
 	Updated www/ikiwiki to 3.20180311nb1 [schmonz 2018-03-22]
+	Updated inputmethod/canna-server to 3.7pl3nb1 [rin 2018-03-23]
