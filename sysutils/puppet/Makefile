@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2018/03/21 15:13:43 taca Exp $
+# $NetBSD: Makefile,v 1.35 2018/03/23 14:31:46 taca Exp $
 
-DISTNAME=		puppet-5.4.0
+DISTNAME=		puppet-5.5.0
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://puppetlabs.com/downloads/puppet/
 
@@ -12,11 +12,9 @@ LICENSE=		apache-2.0
 DEPENDS+=	${RUBY_PKGPREFIX}-facter>=1.7.0<4:../../sysutils/ruby-facter
 DEPENDS+=	${RUBY_PKGPREFIX}-hiera>=1.0.0<4:../../databases/ruby-hiera
 DEPENDS+=	${RUBY_PKGPREFIX}-fast_gettext>=1.1.2:../../devel/ruby-fast_gettext
-DEPENDS+=	${RUBY_PKGPREFIX}-locale>=2.1:../../devel/ruby-locale
+DEPENDS+=	${RUBY_PKGPREFIX}-multi_json>=1.10<2:../../textproc/ruby-multi_json
 
 RUBYGEM_OPTIONS+=	--format-executable
-
-OVERRIDE_GEMSPEC+=	fast_gettext>=1.1.2
 
 PKG_SYSCONFSUBDIR=	puppet
 RCD_SCRIPTS=		puppetd puppetmasterd
