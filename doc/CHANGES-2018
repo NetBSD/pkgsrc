@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1494 2018/03/23 07:54:12 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1495 2018/03/23 09:05:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2027,3 +2027,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-sphinx to 1.7.2 [adam 2018-03-23]
 	Updated devel/py-py to 1.5.3 [adam 2018-03-23]
 	Updated devel/py-hypothesis to 3.50.2 [adam 2018-03-23]
+	Updated devel/py-test to 3.5.0 [adam 2018-03-23]
+	Updated databases/py-alembic to 0.9.9 [adam 2018-03-23]
+	Updated time/py-pendulum to 1.4.4 [adam 2018-03-23]
