@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/03/23 16:43:28 minskim Exp $
+
+SHA1 (R/forecast_8.2.tar.gz) = c84f996b42c316853e7c22cc035de597a31793f3
+RMD160 (R/forecast_8.2.tar.gz) = 343d4a1afbb22d5c49c4203be11afb7c7ad8e0cc
+SHA512 (R/forecast_8.2.tar.gz) = f4285cc01b499afd6e7b10e1124823ecf217ed017623ba7d2f274ee79083b491c62217c29263d06c2676b582ffb76cac43d64e201bebad4af94e34a905470742
+Size (R/forecast_8.2.tar.gz) = 784337 bytes
