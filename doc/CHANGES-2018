@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1492 2018/03/23 04:47:08 rin Exp $
+$NetBSD: CHANGES-2018,v 1.1493 2018/03/23 05:30:52 rin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2023,3 +2023,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/R-RcppArmadillo version 0.8.300.1.0 [minskim 2018-03-22]
 	Updated www/ikiwiki to 3.20180311nb1 [schmonz 2018-03-22]
 	Updated inputmethod/canna-server to 3.7pl3nb1 [rin 2018-03-23]
+	Updated mail/thunderbird to 52.6.0nb2 [rin 2018-03-23]
