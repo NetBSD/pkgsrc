@@ -1,10 +1,10 @@
-$NetBSD: patch-src_tcp.c,v 1.1 2017/02/13 18:33:24 fhajny Exp $
+$NetBSD: patch-src_tcp.c,v 1.2 2018/03/23 12:24:32 fhajny Exp $
 
 Improve portability, fix build on SunOS and BSD.
 
---- src/tcp.c.orig	2016-07-07 11:24:53.000000000 +0000
+--- src/tcp.c.orig	2018-03-21 08:40:38.000000000 +0000
 +++ src/tcp.c
-@@ -653,7 +653,7 @@ EnableKeepAlive(const relpTcp_t *__restr
+@@ -668,7 +668,7 @@ EnableKeepAlive(const relpTcp_t *__restr
  	if(pSrv->iKeepAliveProbes > 0) {
  		optval = pSrv->iKeepAliveProbes;
  		optlen = sizeof(optval);
@@ -13,7 +13,7 @@ Improve portability, fix build on SunOS and BSD.
  	} else {
  		ret = 0;
  	}
-@@ -669,7 +669,7 @@ EnableKeepAlive(const relpTcp_t *__restr
+@@ -684,7 +684,7 @@ EnableKeepAlive(const relpTcp_t *__restr
  	if(pSrv->iKeepAliveTime > 0) {
  		optval = pSrv->iKeepAliveTime;
  		optlen = sizeof(optval);
@@ -22,7 +22,7 @@ Improve portability, fix build on SunOS and BSD.
  	} else {
  		ret = 0;
  	}
-@@ -685,7 +685,7 @@ EnableKeepAlive(const relpTcp_t *__restr
+@@ -700,7 +700,7 @@ EnableKeepAlive(const relpTcp_t *__restr
  	if(pSrv->iKeepAliveIntvl > 0) {
  		optval = pSrv->iKeepAliveIntvl;
  		optlen = sizeof(optval);
@@ -31,8 +31,8 @@ Improve portability, fix build on SunOS and BSD.
  	} else {
  		ret = 0;
  	}
-@@ -1548,7 +1548,7 @@ static inline void
- setCORKopt(int sock, int onOff)
+@@ -1592,7 +1592,7 @@ static inline void
+ setCORKopt(int sock, const int onOff)
  {
  #if defined(TCP_CORK)
 -	setsockopt(sock, SOL_TCP, TCP_CORK, &onOff, sizeof (onOff));
