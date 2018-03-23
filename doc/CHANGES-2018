@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1513 2018/03/23 14:02:41 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1514 2018/03/23 14:03:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2053,3 +2053,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-mixlib-config to 2.2.6 [taca 2018-03-23]
 	Updated devel/ruby-mocha to 1.4.0 [taca 2018-03-23]
 	Updated security/ruby-rex-socket to 0.1.12 [taca 2018-03-23]
+	Updated sysutils/ruby-childprocess to 0.9.0 [taca 2018-03-23]
