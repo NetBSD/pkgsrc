@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1535 2018/03/24 15:04:23 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1536 2018/03/24 15:56:20 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2083,3 +2083,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/erlang-epam to 1.0.4 [fhajny 2018-03-24]
 	Updated net/bind910 to 9.10.7 [taca 2018-03-24]
 	Updated net/bind99 to 9.9.12 [taca 2018-03-24]
+	Updated pkgtools/pkglint to 5.5.7 [rillig 2018-03-24]
