@@ -172,7 +172,6 @@ func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 		"# empty")
 	t.SetupFileLines("category/package/Makefile",
 		"# empty")
-	G.globalData.Pkgsrcdir = t.TmpDir()
 	G.CurrentDir = t.TmpDir() + "/category/package"
 	G.CurPkgsrcdir = "../.."
 
@@ -323,7 +322,7 @@ func (s *Suite) Test_VartypeCheck_License(c *check.C) {
 		"AND mit")
 
 	t.CheckOutputLines(
-		"WARN: fname:1: License file /licenses/gnu-gpl-v2 does not exist.",
+		"WARN: fname:1: License file ~/licenses/gnu-gpl-v2 does not exist.",
 		"ERROR: fname:2: Parse error for license condition \"AND mit\".")
 
 	runVartypeChecks(t, "LICENSE", opAssignAppend, (*VartypeCheck).License,
@@ -332,7 +331,7 @@ func (s *Suite) Test_VartypeCheck_License(c *check.C) {
 
 	t.CheckOutputLines(
 		"ERROR: fname:1: Parse error for appended license condition \"gnu-gpl-v2\".",
-		"WARN: fname:2: License file /licenses/mit does not exist.")
+		"WARN: fname:2: License file ~/licenses/mit does not exist.")
 }
 
 func (s *Suite) Test_VartypeCheck_MachineGnuPlatform(c *check.C) {
@@ -379,10 +378,8 @@ func (s *Suite) Test_VartypeCheck_Message(c *check.C) {
 func (s *Suite) Test_VartypeCheck_Option(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.PkgOptions = map[string]string{
-		"documented":   "Option description",
-		"undocumented": "",
-	}
+	G.Pkgsrc.PkgOptions["documented"] = "Option description"
+	G.Pkgsrc.PkgOptions["undocumented"] = ""
 
 	runVartypeChecks(t, "PKG_OPTIONS.pkgbase", opAssign, (*VartypeCheck).Option,
 		"documented",

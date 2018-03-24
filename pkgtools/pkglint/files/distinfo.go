@@ -18,7 +18,7 @@ func ChecklinesDistinfo(lines []Line) {
 	patchesDir := "patches"
 	patchesDirSet := false
 	if G.Pkg != nil && contains(fname, "lang/php") {
-		phpdir := G.globalData.Latest("lang", `^php[0-9]+$`, "/lang/$0")
+		phpdir := G.Pkgsrc.Latest("lang", `^php[0-9]+$`, "/lang/$0")
 		if hasSuffix(fname, phpdir+"/distinfo") {
 			patchesDir = G.CurPkgsrcdir + phpdir + "/patches"
 			patchesDirSet = true

@@ -151,7 +151,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"# dummy")
 
 	// The MASTER_SITES in the package Makefile are searched here.
-	// See GlobalData.loadDistSites.
+	// See Pkgsrc.loadMasterSites.
 	t.CreateFileLines("mk/fetch/sites.mk",
 		MkRcsID,
 		"",
@@ -288,7 +288,6 @@ func (s *Suite) Test_Pkglint_CheckDirent(c *check.C) {
 	t.SetupFileLines("category/package/Makefile")
 	t.SetupFileLines("category/Makefile")
 	t.SetupFileLines("Makefile")
-	G.globalData.Pkgsrcdir = t.TmpDir()
 
 	G.CheckDirent(t.TmpDir())
 
@@ -434,39 +433,60 @@ func (s *Suite) Test_ChecklinesMessage__autofix(c *check.C) {
 		"===========================================================================")
 }
 
-func (s *Suite) Test_GlobalData_Latest(c *check.C) {
+func (s *Suite) Test_GlobalData_Latest_no_basedir(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.Pkgsrcdir = t.TmpDir()
-
-	latest1 := G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
+	latest1 := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
 	c.Check(latest1, equals, "")
 	t.CheckOutputLines(
-		"ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~\".")
+		"ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~/lang\".")
+}
+
+func (s *Suite) Test_GlobalData_Latest_no_subdirs(c *check.C) {
+	t := s.Init(c)
 
 	t.SetupFileLines("lang/Makefile")
-	G.globalData.latest = nil
 
-	latest2 := G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
+	latest2 := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
 	c.Check(latest2, equals, "")
 	t.CheckOutputLines(
-		"ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~\".")
+		"ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~/lang\".")
+}
 
+func (s *Suite) Test_GlobalData_Latest_single(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupFileLines("lang/Makefile")
 	t.SetupFileLines("lang/python27/Makefile")
-	G.globalData.latest = nil
 
-	latest3 := G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
+	latest3 := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
 	c.Check(latest3, equals, "../../lang/python27")
-	t.CheckOutputEmpty()
+}
 
+func (s *Suite) Test_GlobalData_Latest_multi(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupFileLines("lang/Makefile")
+	t.SetupFileLines("lang/python27/Makefile")
 	t.SetupFileLines("lang/python35/Makefile")
-	G.globalData.latest = nil
 
-	latest4 := G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
+	latest4 := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
 	c.Check(latest4, equals, "../../lang/python35")
-	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_GlobalData_Latest_numeric(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupFileLines("databases/postgresql95/Makefile")
+	t.SetupFileLines("databases/postgresql97/Makefile")
+	t.SetupFileLines("databases/postgresql100/Makefile")
+	t.SetupFileLines("databases/postgresql104/Makefile")
+
+	latest := G.Pkgsrc.Latest("databases", `^postgresql[0-9]+$`, "$0")
+
+	c.Check(latest, equals, "postgresql104")
 }

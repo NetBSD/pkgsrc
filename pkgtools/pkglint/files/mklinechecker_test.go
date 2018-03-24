@@ -6,10 +6,10 @@ func (s *Suite) Test_MkLineChecker_CheckVartype__simple_type(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wtypes")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mkline := t.NewMkLine("fname", 1, "COMMENT=\tA nice package")
 
-	vartype1 := G.globalData.vartypes["COMMENT"]
+	vartype1 := G.Pkgsrc.vartypes["COMMENT"]
 	c.Assert(vartype1, check.NotNil)
 	c.Check(vartype1.guessed, equals, false)
 
@@ -29,7 +29,7 @@ func (s *Suite) Test_MkLineChecker_CheckVartype__simple_type(c *check.C) {
 func (s *Suite) Test_MkLineChecker_CheckVartype(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mkline := t.NewMkLine("fname", 1, "DISTNAME=gcc-${GCC_VERSION}")
 
 	MkLineChecker{mkline}.CheckVartype("DISTNAME", opAssign, "gcc-${GCC_VERSION}", "")
@@ -43,7 +43,7 @@ func (s *Suite) Test_MkLineChecker_checkVarassign__URL_with_shell_special_charac
 	t := s.Init(c)
 
 	G.Pkg = NewPackage("graphics/gimp-fix-ca")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mkline := t.NewMkLine("fname", 10, "MASTER_SITES=http://registry.gimp.org/file/fix-ca.c?action=download&id=9884&file=")
 
 	MkLineChecker{mkline}.checkVarassign()
@@ -55,7 +55,7 @@ func (s *Suite) Test_MkLineChecker_Check__conditions(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wtypes")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 
 	MkLineChecker{t.NewMkLine("fname", 1, ".if !empty(PKGSRC_COMPILER:Mmycc)")}.CheckCond()
 
@@ -133,7 +133,7 @@ func (s *Suite) Test_MkLineChecker_Check__conditions(c *check.C) {
 func (s *Suite) Test_MkLineChecker_checkVarassign(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 
 	G.Mk = t.NewMkLines("Makefile",
 		MkRcsID,
@@ -149,7 +149,7 @@ func (s *Suite) Test_MkLineChecker_checkVarassignDefPermissions(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mkline := t.NewMkLine("options.mk", 2, "PKG_DEVELOPER?=\tyes")
 
 	MkLineChecker{mkline}.checkVarassignDefPermissions()
@@ -162,20 +162,19 @@ func (s *Suite) Test_MkLineChecker_CheckVarusePermissions(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("options.mk",
 		MkRcsID,
 		"COMMENT=\t${GAMES_USER}",
 		"COMMENT:=\t${PKGBASE}",
 		"PYPKGPREFIX=${PKGBASE}")
-	G.globalData.UserDefinedVars = map[string]MkLine{
+	G.Pkgsrc.UserDefinedVars = map[string]MkLine{
 		"GAMES_USER": mklines.mklines[0],
 	}
 
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: options.mk:2: The user-defined variable GAMES_USER is used but not added to BUILD_DEFS.",
 		"WARN: options.mk:3: PKGBASE should not be evaluated at load time.",
 		"WARN: options.mk:4: The variable PYPKGPREFIX may not be set in this file; it would be ok in pyversion.mk.",
 		"WARN: options.mk:4: PKGBASE should not be evaluated indirectly at load time.",
@@ -186,7 +185,7 @@ func (s *Suite) Test_MkLineChecker_CheckVarusePermissions__load_time(c *check.C)
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("options.mk",
 		MkRcsID,
 		"WRKSRC:=${.CURDIR}")
@@ -242,7 +241,7 @@ func (s *Suite) Test_MkLineChecker__Varuse_Modifier_L(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	G.Mk = t.NewMkLines("x11/xkeyboard-config/Makefile",
 		"FILES_SUBST+=XKBCOMP_SYMLINK=${${XKBBASE}/xkbcomp:L:Q}")
 
@@ -256,7 +255,7 @@ func (s *Suite) Test_MkLineChecker_CheckCond__comparison_with_shell_command(c *c
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	G.Mk = t.NewMkLines("security/openssl/Makefile",
 		MkRcsID,
 		".if ${PKGSRC_COMPILER} == \"gcc\" && ${CC} == \"cc\"",
@@ -273,7 +272,7 @@ func (s *Suite) Test_MkLine_CheckCond_comparing_PKGSRC_COMPILER_with_eqeq(c *che
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	G.Mk = t.NewMkLines("audio/pulseaudio/Makefile",
 		MkRcsID,
 		".if ${OPSYS} == \"Darwin\" && ${PKGSRC_COMPILER} == \"clang\"",
@@ -289,7 +288,7 @@ func (s *Suite) Test_MkLineChecker_CheckVartype__CFLAGS_with_backticks(c *check.
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	G.Mk = t.NewMkLines("chat/pidgin-icb/Makefile",
 		MkRcsID,
 		"CFLAGS+=\t`pkg-config pidgin --cflags`")
@@ -312,7 +311,7 @@ func (s *Suite) Test_MkLineChecker_CheckVartype__CFLAGS_with_backticks(c *check.
 func (s *Suite) Test_MkLineChecker_CheckVartype_CFLAGS(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
 		"CPPFLAGS.SunOS+=\t-DPIPECOMMAND=\\\"/usr/sbin/sendmail -bs %s\\\"")
@@ -330,7 +329,7 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveIndentation_autofix(c *check.C)
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall", "--autofix")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	lines := t.SetupFileLinesContinuation("options.mk",
 		MkRcsID,
 		".if ${PKGNAME} == pkgname",
@@ -359,7 +358,7 @@ func (s *Suite) Test_MkLineChecker_CheckVaruseShellword(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	lines := t.SetupFileLinesContinuation("options.mk",
 		MkRcsID,
 		"GOPATH=\t${WRKDIR}",
@@ -378,4 +377,24 @@ func (s *Suite) Test_MkLineChecker_CheckVaruseShellword(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: ~/options.mk:4: The variable PATH should be quoted as part of a shell word.")
+}
+
+// The ${VARNAME:=suffix} should only be used with lists.
+// It typically appears in MASTER_SITE definitions.
+func (s *Suite) Test_MkLineChecker_CheckVaruse_eq_nonlist(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall")
+	t.SetupVartypes()
+	t.SetupMasterSite("MASTER_SITE_GITHUB", "https://github.com/")
+	lines := t.SetupFileLinesContinuation("options.mk",
+		MkRcsID,
+		"WRKSRC=\t\t${WRKDIR:=/subdir}",
+		"MASTER_SITES=\t${MASTER_SITE_GITHUB:=organization/}")
+	mklines := NewMkLines(lines)
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: ~/options.mk:2: The :from=to modifier should only be used with lists.")
 }

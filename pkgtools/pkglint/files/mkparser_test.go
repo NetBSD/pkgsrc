@@ -221,7 +221,7 @@ func (s *Suite) Test_MkParser__varuse_parentheses_autofix(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("--autofix")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	lines := t.SetupFileLines("Makefile",
 		MkRcsID,
 		"COMMENT=$(P1) $(P2)) $(P3:Q) ${BRACES}")

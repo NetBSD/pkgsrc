@@ -160,6 +160,27 @@ func (line *LineImpl) String() string {
 	return line.Filename + ":" + line.Linenos() + ": " + line.Text
 }
 
+// Usage:
+//
+//  fix := mkline.Line.Autofix()
+//
+//  fix.Errorf("Must not be ...")
+//  fix.Warnf("Should not be ...")
+//  fix.Notef("It is also possible ...")
+//
+//  fix.Explain(
+//      "Explanation ...",
+//      "... end of explanation.")
+//
+//  fix.Replace("from", "to")
+//  fix.ReplaceAfter("prefix", "from", "to")
+//  fix.ReplaceRegex(`\s+`, "space", "from", "to")
+//  fix.InsertBefore("new line")
+//  fix.InsertAfter("new line")
+//  fix.Delete()
+//  fix.Custom(func(...))
+//
+//  fix.Apply()
 func (line *LineImpl) Autofix() *Autofix {
 	if line.autofix == nil {
 		line.autofix = NewAutofix(line)

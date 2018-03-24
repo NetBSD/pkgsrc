@@ -17,17 +17,40 @@ import (
 // InitVartypes initializes the long list of predefined pkgsrc variables.
 // After this is done, ${PKGNAME}, ${MAKE_ENV} and all the other variables
 // can be used in Makefiles without triggering warnings about typos.
-func (gd *GlobalData) InitVartypes() {
+func (src *PkgsrcImpl) InitVartypes() {
+
+	acl := func(varname string, kindOfList KindOfList, checker *BasicType, aclentries string) {
+		m := mustMatch(varname, `^([A-Z_.][A-Z0-9_]*)(|\*|\.\*)$`)
+		varbase, varparam := m[1], m[2]
+
+		vtype := &Vartype{kindOfList, checker, parseACLEntries(varname, aclentries), false}
+
+		if src.vartypes == nil {
+			src.vartypes = make(map[string]*Vartype)
+		}
+		if varparam == "" || varparam == "*" {
+			src.vartypes[varbase] = vtype
+		}
+		if varparam == "*" || varparam == ".*" {
+			src.vartypes[varbase+".*"] = vtype
+		}
+	}
 
 	// A package-defined variable may be set in all Makefiles except buildlink3.mk and builtin.mk.
 	pkg := func(varname string, kindOfList KindOfList, checker *BasicType) {
-		acl(varname, kindOfList, checker, "Makefile: set, use; buildlink3.mk, builtin.mk:; Makefile.*, *.mk: default, set, use")
+		acl(varname, kindOfList, checker, ""+
+			"Makefile: set, use; "+
+			"buildlink3.mk, builtin.mk:; "+
+			"Makefile.*, *.mk: default, set, use")
 	}
 
 	// A package-defined list may be appended to in all Makefiles except buildlink3.mk and builtin.mk.
 	// Simple assignment (instead of appending) is only allowed in Makefile and Makefile.common.
 	pkglist := func(varname string, kindOfList KindOfList, checker *BasicType) {
-		acl(varname, kindOfList, checker, "Makefile, Makefile.common, options.mk: append, default, set, use; buildlink3.mk, builtin.mk:; *.mk: append, default, use")
+		acl(varname, kindOfList, checker, ""+
+			"Makefile, Makefile.common, options.mk: append, default, set, use; "+
+			"buildlink3.mk, builtin.mk:; "+
+			"*.mk: append, default, use")
 	}
 
 	// A user-defined or system-defined variable must not be set by any
@@ -1021,23 +1044,6 @@ func enum(values string) *BasicType {
 			cv.Line.Warnf("%q is not valid for %s. Use one of { %s } instead.", cv.Value, cv.Varname, values)
 		}
 	}}
-}
-
-func acl(varname string, kindOfList KindOfList, checker *BasicType, aclentries string) {
-	m := mustMatch(varname, `^([A-Z_.][A-Z0-9_]*)(|\*|\.\*)$`)
-	varbase, varparam := m[1], m[2]
-
-	vtype := &Vartype{kindOfList, checker, parseACLEntries(varname, aclentries), false}
-
-	if G.globalData.vartypes == nil {
-		G.globalData.vartypes = make(map[string]*Vartype)
-	}
-	if varparam == "" || varparam == "*" {
-		G.globalData.vartypes[varbase] = vtype
-	}
-	if varparam == "*" || varparam == ".*" {
-		G.globalData.vartypes[varbase+".*"] = vtype
-	}
 }
 
 func parseACLEntries(varname string, aclentries string) []ACLEntry {
