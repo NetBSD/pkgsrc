@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/02/26 02:25:28 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2018/03/24 17:09:33 joerg Exp $
 
 .include "../../emulators/unicorn/Makefile.common"
 
@@ -12,5 +12,5 @@ LICENSE=	gnu-gpl-v2
 PYSETUPSUBDIR=	bindings/python
 
 .include "../../emulators/unicorn/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
