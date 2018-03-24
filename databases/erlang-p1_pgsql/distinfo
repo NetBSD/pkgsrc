@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/10/17 14:51:17 fhajny Exp $
+$NetBSD: distinfo,v 1.8 2018/03/24 16:34:32 fhajny Exp $
 
-SHA1 (p1_pgsql-1.1.4.tar.gz) = c03e69428e1a558dd1cbceb01664ffa2c0d064a6
-RMD160 (p1_pgsql-1.1.4.tar.gz) = 6e46c6ce633e301e72006e6812d7bfff64cacf92
-SHA512 (p1_pgsql-1.1.4.tar.gz) = 1228081f3bf60a804021e49299e396aed2e2708511fe9eb3c796bbe87ae0e06e755189b206dfe01a2bf28951f3f0296002086ca0f069cf9f195b1affb80b5abc
-Size (p1_pgsql-1.1.4.tar.gz) = 20063 bytes
+SHA1 (p1_pgsql-1.1.5.tar.gz) = 38a1bea3179f3b5494e7596bd159b887d8d954cf
+RMD160 (p1_pgsql-1.1.5.tar.gz) = 53618b456a9e8b7ff13e3816cd0c79365256f04b
+SHA512 (p1_pgsql-1.1.5.tar.gz) = 9e6339660826515685c7e46a229a571ccdf8e0d4fd213482995e6ff5426864e52248517bb565fe8d8b7bc847f276388ef651452cf03ff66df06020c440a3faaf
+Size (p1_pgsql-1.1.5.tar.gz) = 20070 bytes
