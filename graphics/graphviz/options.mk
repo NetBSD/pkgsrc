@@ -1,7 +1,10 @@
-# $NetBSD: options.mk,v 1.24 2017/05/22 11:19:20 adam Exp $
+# $NetBSD: options.mk,v 1.25 2018/03/24 17:15:39 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
 PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk gts lua ocaml poppler qt svg tcl x11 perl # guile does not build with guile20
+.if exists(/System/Library/Frameworks/Quartz.framework)
+PKG_SUPPORTED_OPTIONS+=	quartz
+.endif
 PKG_SUGGESTED_OPTIONS=	gd gtk lua perl tcl x11
 # Explanation of consequence of options, to help those trying to slim down:
 #   guile ocaml lua tcl perl: extension language support
@@ -16,7 +19,7 @@ PKG_SUGGESTED_OPTIONS=	gd gtk lua perl tcl x11
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		gd ghostscript gtk guile lua ocaml perl poppler qt svg tcl x11
+PLIST_VARS+=		gd ghostscript gtk guile lua ocaml perl poppler qt quartz svg tcl x11
 
 .if !empty(PKG_OPTIONS:Mgd)
 .  include "../../graphics/gd/buildlink3.mk"
@@ -55,6 +58,13 @@ CONFIGURE_ARGS+=	--without-poppler
 PLIST.qt=		yes
 .else
 CONFIGURE_ARGS+=	--without-qt
+.endif
+
+.if !empty(PKG_OPTIONS:Mquartz)
+PLIST.quartz=		yes
+CONFIGURE_ARGS+=	--with-quartz
+.else
+CONFIGURE_ARGS+=	--without-quartz
 .endif
 
 .if !empty(PKG_OPTIONS:Msvg)
