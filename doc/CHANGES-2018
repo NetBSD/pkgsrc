@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1547 2018/03/24 16:41:38 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1548 2018/03/24 16:44:23 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2095,3 +2095,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/erlang-stringprep to 1.0.11 [fhajny 2018-03-24]
 	Updated net/erlang-xmpp to 1.1.20 [fhajny 2018-03-24]
 	Updated net/erlang-stun to 1.0.21 [fhajny 2018-03-24]
+	Updated net/erlang-esip to 1.0.22 [fhajny 2018-03-24]
