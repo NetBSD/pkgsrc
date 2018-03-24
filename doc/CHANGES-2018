@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1549 2018/03/24 16:49:38 joerg Exp $
+$NetBSD: CHANGES-2018,v 1.1550 2018/03/24 17:15:44 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2097,3 +2097,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/erlang-stun to 1.0.21 [fhajny 2018-03-24]
 	Updated net/erlang-esip to 1.0.22 [fhajny 2018-03-24]
 	Added print/tex-lambda-lists version 2014 [joerg 2018-03-24]
+	Updated graphics/graphviz to 2.40.1nb14 [schmonz 2018-03-24]
