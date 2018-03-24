@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2018/01/01 22:29:46 rillig Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/03/24 15:03:54 taca Exp $
 bin/arpaname
 bin/bind9-config
 bin/dig
@@ -139,6 +139,7 @@ include/isc/lang.h
 include/isc/lex.h
 include/isc/lfsr.h
 include/isc/lib.h
+include/isc/likely.h
 include/isc/list.h
 include/isc/log.h
 include/isc/magic.h
