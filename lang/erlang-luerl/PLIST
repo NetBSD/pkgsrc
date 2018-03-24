@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/04/22 14:54:58 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/24 16:29:51 fhajny Exp $
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl.app
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_app.beam
@@ -12,6 +12,7 @@ lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_emul.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_basic.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_bit32.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_debug.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_io.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_math.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_os.beam
