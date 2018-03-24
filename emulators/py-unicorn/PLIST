@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2018/02/26 02:25:28 khorben Exp $
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
-${PYSITELIB}/${EGG_FILE}/zip-safe
+@comment $NetBSD: PLIST,v 1.2 2018/03/24 17:09:33 joerg Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/unicorn/__init__.py
 ${PYSITELIB}/unicorn/__init__.pyc
 ${PYSITELIB}/unicorn/__init__.pyo
@@ -13,15 +13,6 @@ ${PYSITELIB}/unicorn/arm64_const.pyo
 ${PYSITELIB}/unicorn/arm_const.py
 ${PYSITELIB}/unicorn/arm_const.pyc
 ${PYSITELIB}/unicorn/arm_const.pyo
-${PYSITELIB}/unicorn/include/unicorn/arm.h
-${PYSITELIB}/unicorn/include/unicorn/arm64.h
-${PYSITELIB}/unicorn/include/unicorn/m68k.h
-${PYSITELIB}/unicorn/include/unicorn/mips.h
-${PYSITELIB}/unicorn/include/unicorn/sparc.h
-${PYSITELIB}/unicorn/include/unicorn/unicorn.h
-${PYSITELIB}/unicorn/include/unicorn/x86.h
-${PYSITELIB}/unicorn/lib/libunicorn.a
-${PYSITELIB}/unicorn/lib/libunicorn.so
 ${PYSITELIB}/unicorn/m68k_const.py
 ${PYSITELIB}/unicorn/m68k_const.pyc
 ${PYSITELIB}/unicorn/m68k_const.pyo
