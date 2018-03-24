@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/10/17 14:50:50 fhajny Exp $
+$NetBSD: distinfo,v 1.7 2018/03/24 16:32:43 fhajny Exp $
 
-SHA1 (p1_mysql-1.0.4.tar.gz) = 4401d68b960e3160d532817ea81d71dfc2953ee1
-RMD160 (p1_mysql-1.0.4.tar.gz) = c4159e95689e828cdff974ef48e72f5a9db5f6d6
-SHA512 (p1_mysql-1.0.4.tar.gz) = 95776fe1edf92b6731bc3fd3f2f9b09d10ad0bd3149f79b2aa9391997fbfc51cc53eae3c54b5b44cfe53441ad1e3ffa4b672cadadf91580890a1de73cb631633
-Size (p1_mysql-1.0.4.tar.gz) = 19793 bytes
+SHA1 (p1_mysql-1.0.5.tar.gz) = f436c9197679a32b3ab108105e9bfedc663fa6ec
+RMD160 (p1_mysql-1.0.5.tar.gz) = 4d8016d3a39db841ab305919c9c11d6bb3eeb691
+SHA512 (p1_mysql-1.0.5.tar.gz) = 512fbffc6c7cd42790fb1d4d4796c2f87c7e40ffea58184db85e31c2c0dd6bff580d265f93a574bf553598657efee2cdeb2361e799328970dba4464d55c18461
+Size (p1_mysql-1.0.5.tar.gz) = 19799 bytes
