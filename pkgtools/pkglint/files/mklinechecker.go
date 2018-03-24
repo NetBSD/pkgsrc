@@ -318,6 +318,18 @@ func (ck MkLineChecker) CheckVaruse(varuse *MkVarUse, vuc *VarUseContext) {
 		mkline.Warnf("%s is used but not defined. Spelling mistake?", varname)
 	}
 
+	if hasPrefix(varuse.Mod(), ":=") && vartype != nil && !vartype.IsConsideredList() {
+		mkline.Warnf("The :from=to modifier should only be used with lists.")
+		Explain(
+			"Instead of:",
+			"\tMASTER_SITES=\t${HOMEPAGE:=repository/}",
+			"",
+			"Write:",
+			"\tMASTER_SITES=\t${HOMEPAGE}repository/",
+			"",
+			"This is a much clearer expression of the same thought.")
+	}
+
 	ck.CheckVarusePermissions(varname, vartype, vuc)
 
 	if varname == "LOCALBASE" && !G.Infrastructure {
@@ -334,7 +346,7 @@ func (ck MkLineChecker) CheckVaruse(varuse *MkVarUse, vuc *VarUseContext) {
 		ck.CheckVaruseShellword(varname, vartype, vuc, varuse.Mod(), needsQuoting)
 	}
 
-	if G.globalData.UserDefinedVars[varname] != nil && !G.globalData.SystemBuildDefs[varname] && !G.Mk.buildDefs[varname] {
+	if G.Pkgsrc.UserDefinedVars[varname] != nil && !G.Pkgsrc.IsBuildDef(varname) && !G.Mk.buildDefs[varname] {
 		mkline.Warnf("The user-defined variable %s is used but not added to BUILD_DEFS.", varname)
 		Explain(
 			"When a pkgsrc package is built, many things can be configured by the",
@@ -386,7 +398,7 @@ func (ck MkLineChecker) CheckVarusePermissions(varname string, vartype *Vartype,
 	}
 
 	done := false
-	tool := G.globalData.Tools.byVarname[varname]
+	tool := G.Pkgsrc.Tools.ByVarname(varname)
 
 	if isLoadTime && tool != nil {
 		done = tool.Predefined && (G.Mk == nil || G.Mk.SeenBsdPrefsMk || G.Pkg == nil || G.Pkg.SeenBsdPrefsMk)
@@ -663,9 +675,9 @@ func (ck MkLineChecker) checkVarassign() {
 		}
 
 	} else if !varIsUsed(varname) {
-		if vartypes := G.globalData.vartypes; vartypes[varname] != nil || vartypes[varcanon] != nil {
+		if vartypes := G.Pkgsrc.vartypes; vartypes[varname] != nil || vartypes[varcanon] != nil {
 			// Ok
-		} else if deprecated := G.globalData.Deprecated; deprecated[varname] != "" || deprecated[varcanon] != "" {
+		} else if deprecated := G.Pkgsrc.Deprecated; deprecated[varname] != "" || deprecated[varcanon] != "" {
 			// Ok
 		} else {
 			mkline.Warnf("%s is defined but not used. Spelling mistake?", varname)
@@ -703,9 +715,9 @@ func (ck MkLineChecker) checkVarassign() {
 		}
 	}
 
-	if fix := G.globalData.Deprecated[varname]; fix != "" {
+	if fix := G.Pkgsrc.Deprecated[varname]; fix != "" {
 		mkline.Warnf("Definition of %s is deprecated. %s", varname, fix)
-	} else if fix := G.globalData.Deprecated[varcanon]; fix != "" {
+	} else if fix := G.Pkgsrc.Deprecated[varcanon]; fix != "" {
 		mkline.Warnf("Definition of %s is deprecated. %s", varname, fix)
 	}
 
@@ -972,9 +984,9 @@ func (ck MkLineChecker) checkText(text string) {
 		varbase, varext := m[1], m[2]
 		varname := varbase + varext
 		varcanon := varnameCanon(varname)
-		instead := G.globalData.Deprecated[varname]
+		instead := G.Pkgsrc.Deprecated[varname]
 		if instead == "" {
-			instead = G.globalData.Deprecated[varcanon]
+			instead = G.Pkgsrc.Deprecated[varcanon]
 		}
 		if instead != "" {
 			mkline.Warnf("Use of %q is deprecated. %s", varname, instead)
@@ -1071,7 +1083,7 @@ func (ck MkLineChecker) CheckRelativePkgdir(pkgdir string) {
 	pkgdir = mkline.ResolveVarsInRelativePath(pkgdir, false)
 
 	if m, otherpkgpath := match1(pkgdir, `^(?:\./)?\.\./\.\./([^/]+/[^/]+)$`); m {
-		if !fileExists(G.globalData.Pkgsrcdir + "/" + otherpkgpath + "/Makefile") {
+		if !fileExists(G.Pkgsrc.File(otherpkgpath + "/Makefile")) {
 			mkline.Errorf("There is no package in %q.", otherpkgpath)
 		}
 
