@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/12/14 20:46:45 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2018/03/24 16:18:38 fhajny Exp $
 
-DISTNAME=	ezlib-1.0.3
+DISTNAME=	ezlib-1.0.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
