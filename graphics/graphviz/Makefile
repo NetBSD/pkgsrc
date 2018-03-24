@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.178 2018/03/12 11:15:35 wiz Exp $
+# $NetBSD: Makefile,v 1.179 2018/03/24 17:15:39 schmonz Exp $
 
 DISTNAME=	graphviz-2.40.1
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/stable/SOURCES/
 
@@ -53,15 +53,6 @@ REPLACE_FILES.tclsh=	tclpkg/gv/demo/modgraph.tcl
 REPLACE_PERL+=		config/config_perl.pl \
 			tclpkg/gv/demo/modgraph.pl contrib/dotmcl.pl \
 			contrib/dirgraph/dirgraph.pl
-
-.include "../../mk/bsd.prefs.mk"
-
-PLIST_VARS+=		quartz
-
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--with-quartz
-PLIST.quartz=		yes
-.endif
 
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc-2*)
