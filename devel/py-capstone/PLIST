@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2018/02/23 02:42:06 khorben Exp $
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
-${PYSITELIB}/${EGG_FILE}/zip-safe
+@comment $NetBSD: PLIST,v 1.3 2018/03/24 17:10:42 joerg Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/capstone/__init__.py
 ${PYSITELIB}/capstone/__init__.pyc
 ${PYSITELIB}/capstone/__init__.pyo
@@ -29,8 +29,6 @@ ${PYSITELIB}/capstone/include/capstone/sparc.h
 ${PYSITELIB}/capstone/include/capstone/systemz.h
 ${PYSITELIB}/capstone/include/capstone/x86.h
 ${PYSITELIB}/capstone/include/capstone/xcore.h
-${PYSITELIB}/capstone/lib/libcapstone.a
-${PYSITELIB}/capstone/lib/libcapstone.so
 ${PYSITELIB}/capstone/mips.py
 ${PYSITELIB}/capstone/mips.pyc
 ${PYSITELIB}/capstone/mips.pyo
