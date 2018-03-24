@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/09/04 19:46:26 adam Exp $
+# $NetBSD: Makefile,v 1.2 2018/03/24 13:55:08 joerg Exp $
 
 DISTNAME=	tablib-0.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tablib/}
 
