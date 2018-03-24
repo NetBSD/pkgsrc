@@ -50,6 +50,7 @@ func (s *Suite) SetUpTest(c *check.C) {
 	G.logOut = NewSeparatorWriter(&t.stdout)
 	G.logErr = NewSeparatorWriter(&t.stderr)
 	trace.Out = &t.stdout
+	G.Pkgsrc = NewPkgsrc(t.TmpDir())
 
 	t.checkC = c
 	t.SetupCommandLine( /* no arguments */ )
@@ -104,9 +105,15 @@ func (t *Tester) SetupCommandLine(args ...string) {
 	G.opts.LogVerbose = true // See SetUpTest
 }
 
+// SetupVartypes registers a few hundred variables like MASTER_SITES,
+// WRKSRC, SUBST_SED.*, so that their data types are known to pkglint.
+func (t *Tester) SetupVartypes() {
+	G.Pkgsrc.InitVartypes()
+}
+
 func (t *Tester) SetupMasterSite(varname string, urls ...string) {
-	name2url := &G.globalData.MasterSiteVarToURL
-	url2name := &G.globalData.MasterSiteURLToVar
+	name2url := &G.Pkgsrc.MasterSiteVarToURL
+	url2name := &G.Pkgsrc.MasterSiteURLToVar
 	if *name2url == nil {
 		*name2url = make(map[string]string)
 		*url2name = make(map[string]string)
@@ -118,11 +125,11 @@ func (t *Tester) SetupMasterSite(varname string, urls ...string) {
 }
 
 func (t *Tester) SetupTool(tool *Tool) {
-	reg := G.globalData.Tools
+	reg := G.Pkgsrc.Tools
 
 	if len(reg.byName) == 0 && len(reg.byVarname) == 0 {
 		reg = NewToolRegistry()
-		G.globalData.Tools = reg
+		G.Pkgsrc.Tools = reg
 	}
 	if tool.Name != "" {
 		reg.byName[tool.Name] = tool
