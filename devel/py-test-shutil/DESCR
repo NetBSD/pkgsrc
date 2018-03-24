@@ -1,0 +1,3 @@
+This library is a goodie-bag of Unix shell and environment management tools for
+automated tests. A summary of the available functions is below, look at the
+source for the full listing.
