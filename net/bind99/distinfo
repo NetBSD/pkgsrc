@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.50 2018/01/17 00:33:15 taca Exp $
+$NetBSD: distinfo,v 1.51 2018/03/24 15:03:54 taca Exp $
 
-SHA1 (bind-9.9.11-P1.tar.gz) = 70f63ba1fceda5191a76cb369705317feb47d251
-RMD160 (bind-9.9.11-P1.tar.gz) = fdc893f6045d1f3ec926225514de533af61e0a5d
-SHA512 (bind-9.9.11-P1.tar.gz) = acdadd5c8f09a30bddf784afee495b445538bdab7622707c2332f6cfab8a55578c93148db1205b8c82208a0b71f904ad65826410c832a42459e35572d15f8db9
-Size (bind-9.9.11-P1.tar.gz) = 8868987 bytes
+SHA1 (bind-9.9.12.tar.gz) = 4b6cc262c538fcbf11e9ac4ceea3047d93972dea
+RMD160 (bind-9.9.12.tar.gz) = a31d564f81d9d94fa2293414e30f5e5633b12a42
+SHA512 (bind-9.9.12.tar.gz) = 41929804bdb4db003fad407f38d20e7d7a85e23a13a5cf81fb96c226cac71988c5433f1ef22e44ea73b0d57259a45ef16ee73e23637e87c7c2ebdf121a5e4c1b
+Size (bind-9.9.12.tar.gz) = 8694636 bytes
 SHA1 (patch-bin_dig_dighost.c) = a4bc9558c5dbedcc6bb0f87ea309358ca098d42a
 SHA1 (patch-bin_tests_system_Makefile.in) = 96dac694cba8dd60bce9df23bab295c0be2f9e9a
+SHA1 (patch-bin_tests_system_metadata_tests.sh) = d1a28605baa79d74d5b98ef9d5fc479596d0c52d
 SHA1 (patch-config.threads.in) = 227b83efe9cb3e301aaac9b97cf42f1fb8ad06b2
 SHA1 (patch-configure) = 1e86fab1a82f237dfc7f1a3c09e4ef6095bf973e
 SHA1 (patch-contrib_dlz_config.dlz.in) = f18bec63fbfce7cb2cd72929058ce3770fce458f
