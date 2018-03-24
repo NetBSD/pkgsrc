@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2016/11/28 15:15:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.32 2018/03/24 07:51:15 adam Exp $
 bin/virtualenv-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -13,6 +13,8 @@ ${PYSITELIB}/virtualenv_support/__init__.py
 ${PYSITELIB}/virtualenv_support/__init__.pyc
 ${PYSITELIB}/virtualenv_support/__init__.pyo
 ${PYSITELIB}/virtualenv_support/argparse-1.4.0-py2.py3-none-any.whl
-${PYSITELIB}/virtualenv_support/pip-9.0.1-py2.py3-none-any.whl
-${PYSITELIB}/virtualenv_support/setuptools-28.8.0-py2.py3-none-any.whl
+${PYSITELIB}/virtualenv_support/pip-9.0.3-py2.py3-none-any.whl
+${PYSITELIB}/virtualenv_support/setuptools-36.8.0-py2.py3-none-any.whl
+${PYSITELIB}/virtualenv_support/setuptools-39.0.1-py2.py3-none-any.whl
 ${PYSITELIB}/virtualenv_support/wheel-0.29.0-py2.py3-none-any.whl
+${PYSITELIB}/virtualenv_support/wheel-0.30.0-py2.py3-none-any.whl
