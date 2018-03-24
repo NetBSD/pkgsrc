@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2018/03/24 15:44:54 fhajny Exp $
+# $NetBSD: Makefile,v 1.110 2018/03/24 17:33:04 joerg Exp $
 
 DISTNAME=	fontconfig-2.13.0
 PKGREVISION=	1
@@ -15,7 +15,7 @@ COMMENT=	Library for configuring and customizing font access
 BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config msgfmt
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-default-fonts=${LOCALBASE}/share/fonts/X11
 CONFIGURE_ARGS+=	--with-expat-includes=${BUILDLINK_PREFIX.expat}/include
