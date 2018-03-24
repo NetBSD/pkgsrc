@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.108 2018/03/13 21:45:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.109 2018/03/24 15:44:54 fhajny Exp $
 
 DISTNAME=	fontconfig-2.13.0
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	https://www.fontconfig.org/release/
 EXTRACT_SUFX=	.tar.bz2
@@ -96,6 +97,7 @@ LDFLAGS+=	-L../src/.libs
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/30-pkgsrc-aliases.conf ${DESTDIR}${TMPLDIR}
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../devel/libuuid/buildlink3.mk"
 .endif
