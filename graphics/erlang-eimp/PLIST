@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/17 15:09:21 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/24 16:04:26 fhajny Exp $
 lib/erlang/lib/eimp-${PKGVERSION}/ebin/eimp.app
 lib/erlang/lib/eimp-${PKGVERSION}/ebin/eimp.beam
 lib/erlang/lib/eimp-${PKGVERSION}/ebin/eimp_app.beam
+lib/erlang/lib/eimp-${PKGVERSION}/ebin/eimp_limit.beam
 lib/erlang/lib/eimp-${PKGVERSION}/ebin/eimp_sup.beam
 lib/erlang/lib/eimp-${PKGVERSION}/ebin/eimp_worker.beam
 lib/erlang/lib/eimp-${PKGVERSION}/priv/bin/eimp
