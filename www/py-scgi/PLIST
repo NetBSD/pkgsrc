@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/04/08 20:22:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/03/24 08:25:30 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/scgi/__init__.py
 ${PYSITELIB}/scgi/__init__.pyc
@@ -10,6 +10,12 @@ ${PYSITELIB}/scgi/quixote_handler.pyo
 ${PYSITELIB}/scgi/scgi_server.py
 ${PYSITELIB}/scgi/scgi_server.pyc
 ${PYSITELIB}/scgi/scgi_server.pyo
+${PYSITELIB}/scgi/scgi_session_server.py
+${PYSITELIB}/scgi/scgi_session_server.pyc
+${PYSITELIB}/scgi/scgi_session_server.pyo
 ${PYSITELIB}/scgi/test_passfd.py
 ${PYSITELIB}/scgi/test_passfd.pyc
 ${PYSITELIB}/scgi/test_passfd.pyo
+${PYSITELIB}/scgi/wsgi_handler.py
+${PYSITELIB}/scgi/wsgi_handler.pyc
+${PYSITELIB}/scgi/wsgi_handler.pyo
