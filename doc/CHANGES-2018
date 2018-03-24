@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1531 2018/03/24 14:24:08 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1532 2018/03/24 14:25:37 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2079,3 +2079,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-setuptools_scm to 1.17.0 [adam 2018-03-24]
 	Updated mail/rspamd to 1.7.2 [fhajny 2018-03-24]
 	Updated misc/erlang-p1_utils to 1.0.11 [fhajny 2018-03-24]
+	Updated devel/erlang-cache_tab to 1.0.13 [fhajny 2018-03-24]
