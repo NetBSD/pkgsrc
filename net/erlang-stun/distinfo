@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2018/01/16 12:24:07 fhajny Exp $
+$NetBSD: distinfo,v 1.12 2018/03/24 16:41:28 fhajny Exp $
 
-SHA1 (stun-1.0.20.tar.gz) = 199a35082ebcb95d636b61e755bd1c83f5b101f6
-RMD160 (stun-1.0.20.tar.gz) = b2d6e5e3858b7639d9ceac577c763c401597dca9
-SHA512 (stun-1.0.20.tar.gz) = 054fad9f08a4ea7eefeb266e263ca9280fbb6f4c57d6b4ac1e34fc9fd2662482bdc7f2a8e584e886e8c4c87ce8121f3ba3c7a78550f6109f02a7476ab728af82
-Size (stun-1.0.20.tar.gz) = 29110 bytes
+SHA1 (stun-1.0.21.tar.gz) = 478527bc38fdbd134409177f69b68d54d0fb9b41
+RMD160 (stun-1.0.21.tar.gz) = 6e7b580d438e6d5807f9106b4b67f7fa7241fb35
+SHA512 (stun-1.0.21.tar.gz) = 0611f3aa2bcfb900632bd73f8403278459d0e3751c056181b0c178344a918764878f9c5c0cdca3e045f3e846f60db11913414f90157da0e4670799f4be7f5335
+Size (stun-1.0.21.tar.gz) = 29250 bytes
