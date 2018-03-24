@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2018/01/17 19:56:18 markd Exp $
+# $NetBSD: Makefile,v 1.8 2018/03/24 20:13:40 joerg Exp $
 
 DISTNAME=	extra-cmake-modules-5.41.0
+PKGREVISION=	1
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.41/}
 EXTRACT_SUFX=	.tar.xz
