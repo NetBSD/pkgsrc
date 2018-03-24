@@ -26,10 +26,10 @@ const confVersion = "@VERSION@"
 //  tracing.Out        (not thread-safe)
 //  tracing.traceDepth (not thread-safe)
 type Pkglint struct {
-	opts       CmdOpts    //
-	globalData GlobalData //
-	Pkg        *Package   // The package that is currently checked.
-	Mk         *MkLines   // The Makefile (or fragment) that is currently checked.
+	opts   CmdOpts  // Command line options.
+	Pkgsrc Pkgsrc   // Global data, mostly extracted from mk/*.
+	Pkg    *Package // The package that is currently checked.
+	Mk     *MkLines // The Makefile (or fragment) that is currently checked.
 
 	Todo            []string // The files or directories that still need to be checked.
 	CurrentDir      string   // The currently checked directory, relative to the cwd
@@ -159,7 +159,17 @@ func (pkglint *Pkglint) Main(args ...string) (exitcode int) {
 		pkglint.Todo = []string{"."}
 	}
 
-	pkglint.globalData.Initialize()
+	firstArg := G.Todo[0]
+	if fileExists(firstArg) {
+		firstArg = path.Dir(firstArg)
+	}
+	relTopdir := findPkgsrcTopdir(firstArg)
+	if relTopdir == "" {
+		dummyLine.Fatalf("%q is not inside a pkgsrc tree.", firstArg)
+	}
+
+	pkglint.Pkgsrc = NewPkgsrc(firstArg + "/" + relTopdir)
+	pkglint.Pkgsrc.Load()
 
 	currentUser, err := user.Current()
 	if err == nil {
@@ -307,7 +317,7 @@ func (pkglint *Pkglint) CheckDirent(fname string) {
 
 	switch pkglint.CurPkgsrcdir {
 	case "../..":
-		pkglint.checkdirPackage(relpath(pkglint.globalData.Pkgsrcdir, currentDir))
+		pkglint.checkdirPackage(pkglint.Pkgsrc.ToRel(currentDir))
 	case "..":
 		CheckdirCategory()
 	case ".":
@@ -477,15 +487,7 @@ func (pkglint *Pkglint) Checkfile(fname string) {
 		return
 	}
 
-	if st.Mode().IsRegular() && st.Mode().Perm()&0111 != 0 && !isCommitted(fname) {
-		line := NewLine(fname, 0, "", nil)
-		line.Warnf("Should not be executable.")
-		Explain(
-			"No package file should ever be executable.  Even the INSTALL and",
-			"DEINSTALL scripts are usually not usable in the form they have in",
-			"the package, as the pathnames get adjusted during installation.",
-			"So there is no need to have any file executable.")
-	}
+	pkglint.checkExecutable(st, fname)
 
 	switch {
 	case st.Mode().IsDir():
@@ -576,7 +578,7 @@ func (pkglint *Pkglint) Checkfile(fname string) {
 
 	case hasPrefix(basename, "CHANGES-"):
 		// This only checks the file, but doesn't register the changes globally.
-		_ = pkglint.globalData.loadDocChangesFromFile(fname)
+		_ = pkglint.Pkgsrc.loadDocChangesFromFile(fname)
 
 	case matches(fname, `(?:^|/)files/[^/]*$`):
 		// Skip
@@ -589,6 +591,28 @@ func (pkglint *Pkglint) Checkfile(fname string) {
 		if pkglint.opts.CheckExtra {
 			CheckfileExtra(fname)
 		}
+	}
+}
+
+func (pkglint *Pkglint) checkExecutable(st os.FileInfo, fname string) {
+	if st.Mode().IsRegular() && st.Mode().Perm()&0111 != 0 && !isCommitted(fname) {
+		line := NewLine(fname, 0, "", nil)
+		fix := line.Autofix()
+		fix.Warnf("Should not be executable.")
+		fix.Explain(
+			"No package file should ever be executable.  Even the INSTALL and",
+			"DEINSTALL scripts are usually not usable in the form they have in",
+			"the package, as the pathnames get adjusted during installation.",
+			"So there is no need to have any file executable.")
+		fix.Custom(func(printAutofix, autofix bool) {
+			fix.Describef(0, "Clearing executable bits")
+			if autofix {
+				if err := os.Chmod(line.Filename, st.Mode()&^0111); err != nil {
+					line.Errorf("Cannot clear executable bits: %s", err)
+				}
+			}
+		})
+		fix.Apply()
 	}
 }
 
