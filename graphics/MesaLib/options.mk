@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.57 2017/07/01 12:48:10 maya Exp $
+# $NetBSD: options.mk,v 1.58 2018/03/24 22:11:14 sevan Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -115,8 +115,9 @@ PLIST.vc4=		yes
 #PLIST.virgl=		yes
 .endif
 
-# theoretically cross platform PCI drivers, but don't build on ARM
-.if ${OPSYS} != "Darwin" && empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
+# theoretically cross platform PCI drivers
+.if ${OPSYS} != "Darwin" && empty(MACHINE_PLATFORM:MNetBSD-*-*arm*) && \
+	empty(MACHINE_PLATFORM:MNetBSD-*-mipsel)
 
 # AMD Radeon r600
 PLIST.r600=		yes
