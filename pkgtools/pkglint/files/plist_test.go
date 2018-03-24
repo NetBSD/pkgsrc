@@ -317,3 +317,25 @@ func (s *Suite) Test_PlistChecker__remove_same_entries(c *check.C) {
 		"${PLIST.option3}bin/false",
 		"bin/true")
 }
+
+// When pkglint is run with the --only option, only the matched
+// diagnostics must be autofixed. Up to 2018-03-12, the PLIST was
+// sorted even if it didn't match the --only pattern.
+func (s *Suite) Test_PlistChecker__autofix_with_only(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall", "--autofix", "--only", "matches nothing")
+
+	lines := t.SetupFileLines("PLIST",
+		PlistRcsID,
+		"sbin/program",
+		"bin/program")
+
+	ChecklinesPlist(lines)
+
+	t.CheckOutputEmpty()
+	t.CheckFileLines("PLIST",
+		PlistRcsID,
+		"sbin/program",
+		"bin/program")
+}
