@@ -501,6 +501,9 @@ func (s *plistLineSorter) Sort() {
 		return
 	}
 
+	if !shallBeLogged("%q should be sorted before %q.") {
+		return
+	}
 	if len(s.middle) == 0 {
 		return
 	}
@@ -522,6 +525,7 @@ func (s *plistLineSorter) Sort() {
 	}
 
 	fix := firstLine.Autofix()
+	fix.Notef("Silent-Magic-Diagnostic")
 	fix.Describef(int(firstLine.firstLine), "Sorting the whole file.")
 	fix.Apply()
 
