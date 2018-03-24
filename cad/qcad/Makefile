@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2018/03/12 11:16:08 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2018/03/24 17:11:57 joerg Exp $
 #
 
 DISTNAME=		qcad-3.19.1.0
@@ -17,8 +17,6 @@ GITHUB_TAG=		v${PKGVERSION_NOREV}
 DEPENDS+=		bash-[0-9]*:../../shells/bash
 DEPENDS+=		qt4-tiff-[0-9]*:../../x11/qt4-tiff
 DEPENDS+=		qt4-sqlite3-[0-9]*:../../x11/qt4-sqlite3
-
-MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		chmod find make pax
 USE_LANGUAGES=		c c++
