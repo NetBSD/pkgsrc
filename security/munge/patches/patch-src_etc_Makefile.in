@@ -1,4 +1,6 @@
-$NetBSD: patch-src_etc_Makefile.in,v 1.4 2018/02/28 09:20:29 wiz Exp $
+$NetBSD: patch-src_etc_Makefile.in,v 1.5 2018/03/24 18:05:58 bacon Exp $
+
+Install configuration into example directory.
 
 --- src/etc/Makefile.in.orig	2017-09-26 21:57:53.000000000 +0000
 +++ src/etc/Makefile.in
@@ -6,7 +8,7 @@ $NetBSD: patch-src_etc_Makefile.in,v 1.4 2018/02/28 09:20:29 wiz Exp $
  sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
  sysconfdir = @sysconfdir@
-+sysconfexampledir = $(pkgdatadir)/examples
++sysconfexampledir = $(prefix)/share/examples/munge
  target_alias = @target_alias@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
