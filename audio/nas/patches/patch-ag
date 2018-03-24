@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.8 2013/01/05 12:57:22 mef Exp $
+$NetBSD: patch-ag,v 1.9 2018/03/24 11:09:41 spz Exp $
 
 (from cvs log for 1.4)
 date: 2006/01/11 11:32:38;  author: markd;  state: Exp;  lines: +12 -14
@@ -7,9 +7,30 @@ symlink, so create the actual release.h file at the includes stage as
 the depends stage is too late (server/os is before lib/audio).
 Fixes PR pkg/32098 from Gilles Dauphin.
 
---- config/NetAudio.tmpl.orig	2007-06-16 12:03:20.000000000 -0700
-+++ config/NetAudio.tmpl	2009-02-03 00:57:54.000000000 -0800
-@@ -287,6 +290,8 @@ AuComplexProgramTarget(program)
+-L$(AUSRC): make sure -laudio gets found when building clients before
+the package has been installed
+
+--- ./config/NetAudio.tmpl.orig	2013-04-27 00:41:00.000000000 +0000
++++ ./config/NetAudio.tmpl
+@@ -178,7 +178,7 @@ EXTRA_LOAD_FLAGS=/link /nodefaultlib:lib
+ /* place #ifdef's for other architectures around these lines */
+  LOCAL_LDFLAGS = _AuUse(-L$(USRLIBDIR), -L$(AUSRC) -L$(USRLIBDIR))
+       DEPAULIB =
+-         AULIB = -laudio
++         AULIB = -L$(AUSRC) -laudio
+ 
+ #endif /* SunArchitecture */
+ 
+@@ -186,7 +186,7 @@ EXTRA_LOAD_FLAGS=/link /nodefaultlib:lib
+ #else /* SharedLibAudio */
+  LOCAL_LDFLAGS =
+       DEPAULIB = _AuUseCat($(USRLIBDIR),$(AUSRC),/Lib(audio))
+-         AULIB = LoaderLibPrefix _AuUse(-laudio,$(DEPAULIB))
++         AULIB = -L$(AUSRC) LoaderLibPrefix _AuUse(-laudio,$(DEPAULIB))
+ #endif /* SharedLibAudio */
+ 
+   AUDIODEPLIBS = $(DEPAULIB) $(DEPXTOOLLIB) $(DEPXLIB)
+@@ -316,6 +316,8 @@ AuComplexProgramTarget(program)
  release.h: $(TOP)/RELEASE				    		    @@\
  	@echo "static const char *release = \"`cat $(TOP)/RELEASE`\";" > $@   @@\
  						    			    @@\

@@ -1,0 +1,15 @@
+$NetBSD: patch-clients_audio_auconvert_Imakefile,v 1.1 2018/03/24 11:09:41 spz Exp $
+
+build fix for NetBSD (and probably the other added systems too)
+
+--- clients/audio/auconvert/Imakefile.orig	2013-04-27 00:41:00.000000000 +0000
++++ clients/audio/auconvert/Imakefile
+@@ -24,7 +24,7 @@
+ 
+ #include "../../../config/NetAudio.tmpl"
+ 
+-#if defined(LinuxArchitecture) || defined(FreeBSDArchitecture) || defined(GNUArchitecture)
++#if defined(LinuxArchitecture) || defined(FreeBSDArchitecture) || defined(__DragonFly__) || defined(GNUArchitecture) || defined(NetBSDArchitecture) || defined(OpenBSDArchitecture)
+  EXTRA_DEFINES = -DHAS_MKSTEMP
+ #endif
+ 
