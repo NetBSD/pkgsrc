@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/04 19:46:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/24 13:55:08 joerg Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -59,6 +59,8 @@ ${PYSITELIB}/tablib/packages/dbfpy/dbf.py
 ${PYSITELIB}/tablib/packages/dbfpy/dbf.pyc
 ${PYSITELIB}/tablib/packages/dbfpy/dbf.pyo
 ${PYSITELIB}/tablib/packages/dbfpy/dbfnew.py
+${PYSITELIB}/tablib/packages/dbfpy/dbfnew.pyc
+${PYSITELIB}/tablib/packages/dbfpy/dbfnew.pyo
 ${PYSITELIB}/tablib/packages/dbfpy/fields.py
 ${PYSITELIB}/tablib/packages/dbfpy/fields.pyc
 ${PYSITELIB}/tablib/packages/dbfpy/fields.pyo
