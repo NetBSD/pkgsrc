@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.4 2018/02/26 02:25:28 khorben Exp $
+$NetBSD: distinfo,v 1.5 2018/03/24 17:09:34 joerg Exp $
 
 SHA1 (unicorn-1.0.1.tar.gz) = 85c9d7aad2a87b110b729560ed9333b66018ca6a
 RMD160 (unicorn-1.0.1.tar.gz) = 599b7ce96fe4040a48561bd9474666583265960b
 SHA512 (unicorn-1.0.1.tar.gz) = edfe1f7bfbc1d20f5b62232057e194a937bc09db686ef2efadb33a54605029a53426432cdb2a29511385aacdb9343b3b3091af50a1909098d7cf6db3429eb966
 Size (unicorn-1.0.1.tar.gz) = 3241225 bytes
+SHA1 (patch-bindings_python_setup.py) = 35b6a68a75e18bf6a0e8f7c745fee2e148f26c1c
+SHA1 (patch-bindings_python_unicorn_unicorn.py) = 0835b53b508400f0ca8464f09262c4c64a9a8a54
