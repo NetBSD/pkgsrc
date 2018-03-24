@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2018/03/12 08:00:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2018/03/24 15:44:54 fhajny Exp $
 bin/fc-cache
 bin/fc-cat
 bin/fc-conflist
@@ -484,4 +484,6 @@ share/fontconfig/conf.avail/80-delicious.conf
 share/fontconfig/conf.avail/90-synthetic.conf
 share/gettext/its/fontconfig.its
 share/gettext/its/fontconfig.loc
+share/locale/zh_CN/LC_MESSAGES/fontconfig-conf.mo
+share/locale/zh_CN/LC_MESSAGES/fontconfig.mo
 share/xml/fontconfig/fonts.dtd
