@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/10/17 14:48:23 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2018/03/24 16:36:18 fhajny Exp $
 
-DISTNAME=	stringprep-1.0.10
+DISTNAME=	stringprep-1.0.11
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -11,7 +11,7 @@ LICENSE=	apache-2.0
 
 GITHUB_PROJECT=	stringprep
 
-DEPENDS+=	erlang-p1_utils>=1.0.10:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-p1_utils>=1.0.11:../../misc/erlang-p1_utils
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
