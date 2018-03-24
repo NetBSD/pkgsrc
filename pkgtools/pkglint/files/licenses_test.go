@@ -10,7 +10,6 @@ func (s *Suite) Test_checklineLicense(c *check.C) {
 	t.SetupFileLines("licenses/gnu-gpl-v2",
 		"Most software \u2026")
 	mkline := t.NewMkLine("Makefile", 7, "LICENSE=dummy")
-	G.globalData.Pkgsrcdir = t.TmpDir()
 	G.CurrentDir = t.TmpDir()
 
 	licenseChecker := &LicenseChecker{mkline}
