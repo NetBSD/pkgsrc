@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/01/03 20:51:19 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/03/24 16:39:41 fhajny Exp $
 lib/erlang/lib/xmpp
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/flex_offline.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/jid.beam
@@ -76,6 +76,7 @@ lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp.app
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_codec.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_codec_external.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_sup.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_tr.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_uri.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/xmpp_util.beam
