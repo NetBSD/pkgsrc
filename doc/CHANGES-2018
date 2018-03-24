@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1536 2018/03/24 15:56:20 rillig Exp $
+$NetBSD: CHANGES-2018,v 1.1537 2018/03/24 16:04:35 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2084,3 +2084,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/bind910 to 9.10.7 [taca 2018-03-24]
 	Updated net/bind99 to 9.9.12 [taca 2018-03-24]
 	Updated pkgtools/pkglint to 5.5.7 [rillig 2018-03-24]
+	Updated graphics/erlang-eimp to 1.0.3 [fhajny 2018-03-24]
