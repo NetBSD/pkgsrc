@@ -38,6 +38,22 @@ func NewAutofix(line Line) *Autofix {
 		lines: append([]*RawLine{}, line.raw...)}
 }
 
+// Custom runs a custom fix action, unless the fix is skipped anyway
+// because of the --only option.
+//
+// The fixer function must always call Describef.
+// If printAutofix or autofix is true, the fix should be done in
+// memory as far as possible (e.g. changes to the text of the line).
+// If autofix is true, the fix should be done permanently
+// (e.g. direct changes to the file system).
+func (fix *Autofix) Custom(fixer func(printAutofix, autofix bool)) {
+	if fix.skip() {
+		return
+	}
+
+	fixer(G.opts.PrintAutofix, G.opts.Autofix)
+}
+
 func (fix *Autofix) Replace(from string, to string) {
 	fix.ReplaceAfter("", from, to)
 }
@@ -62,8 +78,10 @@ func (fix *Autofix) ReplaceAfter(prefix, from string, to string) {
 	}
 }
 
-// ReplaceRegex replaces the first or all occurrences of the `from` pattern
-// with the fixed string `toText`. Placeholders like `$1` are _not_ expanded.
+// ReplaceRegex replaces the first howOften or all occurrences (if negative)
+// of the `from` pattern with the fixed string `toText`.
+//
+// Placeholders like `$1` are _not_ expanded in the `toText`.
 // (If you know how to do the expansion correctly, feel free to implement it.)
 func (fix *Autofix) ReplaceRegex(from regex.Pattern, toText string, howOften int) {
 	if fix.skip() {
@@ -223,10 +241,10 @@ func (fix *Autofix) Explain(explanation ...string) {
 // * records the fixes in the line (--autofix)
 func (fix *Autofix) Apply() {
 	line := fix.line
-	if line.firstLine < 1 {
-		return
-	}
 
+	if fix.diagFormat == "" {
+		panic("Each autofix must have a diagnostic.")
+	}
 	G.explainNext = shallBeLogged(fix.diagFormat)
 	if G.explainNext {
 		logDiagnostic := fix.level != nil && fix.diagFormat != "Silent-Magic-Diagnostic" &&
@@ -239,7 +257,11 @@ func (fix *Autofix) Apply() {
 		logRepair := len(fix.actions) > 0 && (G.opts.Autofix || G.opts.PrintAutofix)
 		if logRepair {
 			for _, action := range fix.actions {
-				logs(llAutofix, line.Filename, strconv.Itoa(action.lineno), "", action.description)
+				lineno := ""
+				if action.lineno != 0 {
+					lineno = strconv.Itoa(action.lineno)
+				}
+				logs(llAutofix, line.Filename, lineno, "", action.description)
 			}
 		}
 

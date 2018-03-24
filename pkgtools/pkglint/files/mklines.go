@@ -27,11 +27,11 @@ func NewMkLines(lines []Line) *MkLines {
 		mklines[i] = NewMkLine(line)
 	}
 	tools := make(map[string]bool)
-	for toolname, tool := range G.globalData.Tools.byName {
+	G.Pkgsrc.Tools.ForEach(func(tool *Tool) {
 		if tool.Predefined {
-			tools[toolname] = true
+			tools[tool.Name] = true
 		}
-	}
+	})
 
 	return &MkLines{
 		mklines,

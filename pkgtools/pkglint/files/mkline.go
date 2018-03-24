@@ -195,7 +195,11 @@ func (mkline *MkLineImpl) IsDependency() bool {
 	return ok
 }
 
-// Varname applies to variable assignments and returns the variable name, exactly as given in the Makefile.
+// Varname applies to variable assignments and returns the name
+// of the variable that is assigned or appended to.
+//
+// Example:
+//  VARNAME?=       value
 func (mkline *MkLineImpl) Varname() string { return mkline.data.(mkLineAssign).varname }
 
 // Varcanon applies to variable assignments and returns the canonicalized variable name for parameterized variables.
@@ -276,20 +280,20 @@ func (mkline *MkLineImpl) ResolveVarsInRelativePath(relpath string, adjustDepth 
 	tmp = strings.Replace(tmp, "${.CURDIR}", ".", -1)
 	tmp = strings.Replace(tmp, "${.PARSEDIR}", ".", -1)
 	if contains(tmp, "${LUA_PKGSRCDIR}") {
-		tmp = strings.Replace(tmp, "${LUA_PKGSRCDIR}", G.globalData.Latest("lang", `^lua[0-9]+$`, "../../lang/$0"), -1)
+		tmp = strings.Replace(tmp, "${LUA_PKGSRCDIR}", G.Pkgsrc.Latest("lang", `^lua[0-9]+$`, "../../lang/$0"), -1)
 	}
 	if contains(tmp, "${PHPPKGSRCDIR}") {
-		tmp = strings.Replace(tmp, "${PHPPKGSRCDIR}", G.globalData.Latest("lang", `^php[0-9]+$`, "../../lang/$0"), -1)
+		tmp = strings.Replace(tmp, "${PHPPKGSRCDIR}", G.Pkgsrc.Latest("lang", `^php[0-9]+$`, "../../lang/$0"), -1)
 	}
 	if contains(tmp, "${SUSE_DIR_PREFIX}") {
-		suseDirPrefix := G.globalData.Latest("emulators", `^(suse[0-9]+)_base`, "$1")
+		suseDirPrefix := G.Pkgsrc.Latest("emulators", `^(suse[0-9]+)_base`, "$1")
 		tmp = strings.Replace(tmp, "${SUSE_DIR_PREFIX}", suseDirPrefix, -1)
 	}
 	if contains(tmp, "${PYPKGSRCDIR}") {
-		tmp = strings.Replace(tmp, "${PYPKGSRCDIR}", G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0"), -1)
+		tmp = strings.Replace(tmp, "${PYPKGSRCDIR}", G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0"), -1)
 	}
 	if contains(tmp, "${PYPACKAGE}") {
-		tmp = strings.Replace(tmp, "${PYPACKAGE}", G.globalData.Latest("lang", `^python[0-9]+$`, "$0"), -1)
+		tmp = strings.Replace(tmp, "${PYPACKAGE}", G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "$0"), -1)
 	}
 	if G.Pkg != nil {
 		tmp = strings.Replace(tmp, "${FILESDIR}", G.Pkg.Filesdir, -1)
@@ -446,9 +450,9 @@ func (mkline *MkLineImpl) VariableNeedsQuoting(varname string, vartype *Vartype,
 		}
 	}
 
-	// Assuming the tool definitions don't include very special characters,
-	// so they can safely be used inside any quotes.
-	if G.globalData.Tools.byVarname[varname] != nil {
+	// Pkglint assumes that the tool definitions don't include very
+	// special characters, so they can safely be used inside any quotes.
+	if G.Pkgsrc.Tools.ByVarname(varname) != nil {
 		switch vuc.quoting {
 		case vucQuotPlain:
 			if !vuc.IsWordPart {
@@ -512,14 +516,14 @@ func (mkline *MkLineImpl) VariableType(varname string) *Vartype {
 		defer trace.Call1(varname)()
 	}
 
-	if vartype := G.globalData.vartypes[varname]; vartype != nil {
+	if vartype := G.Pkgsrc.vartypes[varname]; vartype != nil {
 		return vartype
 	}
-	if vartype := G.globalData.vartypes[varnameCanon(varname)]; vartype != nil {
+	if vartype := G.Pkgsrc.vartypes[varnameCanon(varname)]; vartype != nil {
 		return vartype
 	}
 
-	if tool := G.globalData.Tools.byVarname[varname]; tool != nil {
+	if tool := G.Pkgsrc.Tools.ByVarname(varname); tool != nil {
 		perms := aclpUse
 		if trace.Tracing {
 			trace.Stepf("Use of tool %+v", tool)
@@ -532,14 +536,15 @@ func (mkline *MkLineImpl) VariableType(varname string) *Vartype {
 		return &Vartype{lkNone, BtShellCommand, []ACLEntry{{"*", perms}}, false}
 	}
 
-	if m, toolvarname := match1(varname, `^TOOLS_(.*)`); m && G.globalData.Tools.byVarname[toolvarname] != nil {
+	m, toolvarname := match1(varname, `^TOOLS_(.*)`)
+	if m && G.Pkgsrc.Tools.ByVarname(toolvarname) != nil {
 		return &Vartype{lkNone, BtPathname, []ACLEntry{{"*", aclpUse}}, false}
 	}
 
 	allowAll := []ACLEntry{{"*", aclpAll}}
 	allowRuntime := []ACLEntry{{"*", aclpAllRuntime}}
 
-	// Guess the datatype of the variable based on naming conventions.
+	// Guess the data type of the variable based on naming conventions.
 	varbase := varnameBase(varname)
 	var gtype *Vartype
 	switch {

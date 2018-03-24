@@ -1,6 +1,9 @@
 package main
 
-import "gopkg.in/check.v1"
+import (
+	"gopkg.in/check.v1"
+	"strings"
+)
 
 func (s *Suite) Test_Autofix_ReplaceRegex(c *check.C) {
 	t := s.Init(c)
@@ -386,4 +389,47 @@ func (s *Suite) Test_SaveAutofixChanges(c *check.C) {
 
 	// And therefore, no AUTOFIX action must appear in the log.
 	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Autofix_CustomFix(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("Makefile",
+		"line1",
+		"line2",
+		"line3")
+
+	doFix := func(line Line) {
+		fix := line.Autofix()
+		fix.Warnf("Please write in ALL-UPPERCASE")
+		fix.Custom(func(printAutofix, autofix bool) {
+			fix.Describef(int(line.firstLine), "Converting to uppercase")
+			if printAutofix || autofix {
+				line.Text = strings.ToUpper(line.Text)
+			}
+		})
+		fix.Apply()
+	}
+
+	doFix(lines[0])
+
+	t.CheckOutputLines(
+		"WARN: Makefile:1: Please write in ALL-UPPERCASE")
+
+	t.SetupCommandLine("--show-autofix")
+
+	doFix(lines[1])
+
+	t.CheckOutputLines(
+		"WARN: Makefile:2: Please write in ALL-UPPERCASE",
+		"AUTOFIX: Makefile:2: Converting to uppercase")
+	c.Check(lines[1].Text, equals, "LINE2")
+
+	t.SetupCommandLine("--autofix")
+
+	doFix(lines[2])
+
+	t.CheckOutputLines(
+		"AUTOFIX: Makefile:3: Converting to uppercase")
+	c.Check(lines[2].Text, equals, "LINE3")
 }

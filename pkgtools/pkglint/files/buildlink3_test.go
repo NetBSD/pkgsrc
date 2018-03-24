@@ -5,7 +5,7 @@ import "gopkg.in/check.v1"
 func (s *Suite) Test_ChecklinesBuildlink3Mk(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("buildlink3.mk",
 		MkRcsID,
 		"# XXX This file was created automatically using createbuildlink-@PKGVERSION@",
@@ -40,7 +40,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk(c *check.C) {
 func (s *Suite) Test_ChecklinesBuildlink3Mk_name_mismatch(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	G.Pkg = NewPackage("x11/hs-X11")
 	G.Pkg.EffectivePkgbase = "X11"
 	G.Pkg.EffectivePkgnameLine = t.NewMkLine("Makefile", 3, "DISTNAME=\tX11-1.0")
@@ -68,7 +68,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_name_mismatch(c *check.C) {
 func (s *Suite) Test_ChecklinesBuildlink3Mk_name_mismatch_multiple_inclusion(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("buildlink3.mk",
 		MkRcsID,
 		"",
@@ -91,7 +91,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_name_mismatch_multiple_inclusion(c *
 func (s *Suite) Test_ChecklinesBuildlink3Mk_name_mismatch_abi_api(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("buildlink3.mk",
 		MkRcsID,
 		"",
@@ -116,7 +116,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_name_mismatch_abi_api(c *check.C) {
 func (s *Suite) Test_ChecklinesBuildlink3Mk_abi_api_versions(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("buildlink3.mk",
 		MkRcsID,
 		"",
@@ -141,7 +141,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_abi_api_versions(c *check.C) {
 func (s *Suite) Test_ChecklinesBuildlink3Mk_no_BUILDLINK_TREE_at_beginning(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("buildlink3.mk",
 		MkRcsID,
 		"",
@@ -165,7 +165,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_no_BUILDLINK_TREE_at_beginning(c *ch
 func (s *Suite) Test_ChecklinesBuildlink3Mk_no_BUILDLINK_TREE_at_end(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("buildlink3.mk",
 		MkRcsID,
 		"",
@@ -194,7 +194,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_no_BUILDLINK_TREE_at_end(c *check.C)
 func (s *Suite) Test_ChecklinesBuildlink3Mk_multiple_inclusion_wrong(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("buildlink3.mk",
 		MkRcsID,
 		"",
@@ -213,7 +213,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_multiple_inclusion_wrong(c *check.C)
 func (s *Suite) Test_ChecklinesBuildlink3Mk_missing_endif(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("buildlink3.mk",
 		MkRcsID,
 		"",
@@ -231,7 +231,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_missing_endif(c *check.C) {
 func (s *Suite) Test_ChecklinesBuildlink3Mk_unknown_dependency_patterns(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("buildlink3.mk",
 		MkRcsID,
 		"",
@@ -258,7 +258,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_unknown_dependency_patterns(c *check
 func (s *Suite) Test_ChecklinesBuildlink3Mk_PKGBASE_with_variable(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("buildlink3.mk",
 		MkRcsID,
 		"",
@@ -283,7 +283,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_PKGBASE_with_variable(c *check.C) {
 func (s *Suite) Test_ChecklinesBuildlink3Mk_PKGBASE_with_unknown_variable(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("buildlink3.mk",
 		MkRcsID,
 		"",
@@ -314,7 +314,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_indentation(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("buildlink3.mk",
 		MkRcsID,
 		"",

@@ -5,7 +5,7 @@ import "gopkg.in/check.v1"
 func (s *Suite) Test_CheckdirCategory_totally_broken(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	t.SetupFileLines("archivers/Makefile",
 		"# $",
 		"SUBDIR+=pkg1",
@@ -36,7 +36,7 @@ func (s *Suite) Test_CheckdirCategory_totally_broken(c *check.C) {
 func (s *Suite) Test_CheckdirCategory_invalid_comment(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	t.SetupFileLines("archivers/Makefile",
 		MkRcsID,
 		"COMMENT=\t\\Make $$$$ fast\"",

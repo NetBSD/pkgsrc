@@ -95,15 +95,22 @@ func CheckwordAbsolutePathname(line Line, word string) {
 	case regex.Matches(word, `^/(?:[a-z]|\$[({])`):
 		// Absolute paths probably start with a lowercase letter.
 		line.Warnf("Found absolute pathname: %s", word)
-		Explain(
-			"Absolute pathnames are often an indicator for unportable code.  As",
-			"pkgsrc aims to be a portable system, absolute pathnames should be",
-			"avoided whenever possible.",
-			"",
-			"A special variable in this context is ${DESTDIR}, which is used in",
-			"GNU projects to specify a different directory for installation than",
-			"what the programs see later when they are executed.  Usually it is",
-			"empty, so if anything after that variable starts with a slash, it is",
-			"considered an absolute pathname.")
+		if contains(line.Text, "DESTDIR") {
+			Explain(
+				"Absolute pathnames are often an indicator for unportable code.  As",
+				"pkgsrc aims to be a portable system, absolute pathnames should be",
+				"avoided whenever possible.",
+				"",
+				"A special variable in this context is ${DESTDIR}, which is used in",
+				"GNU projects to specify a different directory for installation than",
+				"what the programs see later when they are executed.  Usually it is",
+				"empty, so if anything after that variable starts with a slash, it is",
+				"considered an absolute pathname.")
+		} else {
+			Explain(
+				"Absolute pathnames are often an indicator for unportable code.  As",
+				"pkgsrc aims to be a portable system, absolute pathnames should be",
+				"avoided whenever possible.")
+		}
 	}
 }

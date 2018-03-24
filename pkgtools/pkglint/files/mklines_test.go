@@ -68,7 +68,7 @@ func (s *Suite) Test_MkLines_quoting_LDFLAGS_for_GNU_configure(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	G.Pkg = NewPackage("category/pkgbase")
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
@@ -109,7 +109,7 @@ func (s *Suite) Test_MkLines__comparing_YesNo_variable_to_string(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("databases/gdbm_compat/builtin.mk",
 		MkRcsID,
 		".if ${USE_BUILTIN.gdbm} == \"no\"",
@@ -128,7 +128,7 @@ func (s *Suite) Test_MkLines__varuse_sh_modifier(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("lang/qore/module.mk",
 		MkRcsID,
 		"qore-version=\tqore --short-version | ${SED} -e s/-.*//",
@@ -152,7 +152,7 @@ func (s *Suite) Test_MkLines__varuse_parameterized(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("converters/wv2/Makefile",
 		MkRcsID,
 		"CONFIGURE_ARGS+=\t\t${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}",
@@ -172,7 +172,7 @@ func (s *Suite) Test_MkLines__loop_modifier(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("chat/xchat/Makefile",
 		MkRcsID,
 		"GCONF_SCHEMAS=\tapps_xchat_url_handler.schemas",
@@ -190,7 +190,7 @@ func (s *Suite) Test_MkLines__loop_modifier(c *check.C) {
 func (s *Suite) Test_MkLines__PKG_SKIP_REASON_depending_on_OPSYS(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
 		"PKG_SKIP_REASON+=\t\"Fails everywhere\"",
@@ -243,7 +243,7 @@ func (s *Suite) Test_MkLines_Check__absolute_pathname_depending_on_OPSYS(c *chec
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("games/heretic2-demo/Makefile",
 		MkRcsID,
 		".if ${OPSYS} == \"DragonFly\"",
@@ -347,7 +347,7 @@ func (s *Suite) Test_MkLines_PrivateTool_Undefined(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("fname",
 		MkRcsID,
 		"",
@@ -363,7 +363,7 @@ func (s *Suite) Test_MkLines_PrivateTool_Defined(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("fname",
 		MkRcsID,
 		"TOOLS_CREATE+=\tmd5sum",
@@ -423,7 +423,7 @@ func (s *Suite) Test_MkLines_wip_category_Makefile(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	t.SetupTool(&Tool{Name: "rm", Varname: "RM", Predefined: true})
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,
@@ -451,7 +451,7 @@ func (s *Suite) Test_MkLines_ExtractDocumentedVariables(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	t.SetupTool(&Tool{Name: "rm", Varname: "RM", Predefined: true})
 	mklines := t.NewMkLines("Makefile",
 		MkRcsID,

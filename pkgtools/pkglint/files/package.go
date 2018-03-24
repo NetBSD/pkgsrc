@@ -4,6 +4,7 @@ import (
 	"netbsd.org/pkglint/pkgver"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
+	"os"
 	"path"
 	"regexp"
 	"strconv"
@@ -49,7 +50,7 @@ func NewPackage(pkgpath string) *Package {
 		conditionalIncludes:   make(map[string]MkLine),
 		unconditionalIncludes: make(map[string]MkLine),
 	}
-	for varname, line := range G.globalData.UserDefinedVars {
+	for varname, line := range G.Pkgsrc.UserDefinedVars {
 		pkg.vars.Define(varname, line)
 	}
 	return pkg
@@ -89,7 +90,7 @@ func (pkg *Package) checkPossibleDowngrade() {
 
 	mkline := pkg.EffectivePkgnameLine
 
-	change := G.globalData.LastChange[pkg.Pkgpath]
+	change := G.Pkgsrc.LastChange[pkg.Pkgpath]
 	if change == nil {
 		if trace.Tracing {
 			trace.Step1("No change log for package %q", pkg.Pkgpath)
@@ -138,6 +139,11 @@ func (pkg *Package) checklinesBuildlink3Inclusion(mklines *MkLines) {
 	}
 }
 
+// Given the package path relative to the pkgsrc top directory,
+// checks a complete pkgsrc package.
+//
+// Example:
+//  checkdirPackage("category/pkgbase")
 func (pkglint *Pkglint) checkdirPackage(pkgpath string) {
 	if trace.Tracing {
 		defer trace.Call1(pkgpath)()
@@ -187,6 +193,9 @@ func (pkglint *Pkglint) checkdirPackage(pkgpath string) {
 			continue
 		}
 		if fname == G.CurrentDir+"/Makefile" {
+			if st, err := os.Lstat(fname); err == nil {
+				pkglint.checkExecutable(st, fname)
+			}
 			if G.opts.CheckMakefile {
 				pkg.checkfilePackageMakefile(fname, lines)
 			}
@@ -357,7 +366,7 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 	}
 
 	if includingFnameForUsedCheck != "" {
-		fileMklines.checkForUsedComment(relpath(G.globalData.Pkgsrcdir, includingFnameForUsedCheck))
+		fileMklines.checkForUsedComment(G.Pkgsrc.ToRel(includingFnameForUsedCheck))
 	}
 
 	return true
@@ -383,7 +392,7 @@ func (pkg *Package) checkfilePackageMakefile(fname string, mklines *MkLines) {
 		}
 	} else {
 		if distinfoFile := G.CurrentDir + "/" + pkg.DistinfoFile; !containsVarRef(distinfoFile) && !fileExists(distinfoFile) {
-			NewLineWhole(distinfoFile).Warnf("File not found. Please run \"%s makesum\".", confMake)
+			NewLineWhole(distinfoFile).Warnf("File not found. Please run \"%s makesum\" or define NO_CHECKSUM=yes in the package Makefile.", confMake)
 		}
 	}
 
@@ -549,7 +558,7 @@ func (pkg *Package) expandVariableWithDefault(varname, defaultValue string) stri
 
 func (pkg *Package) checkUpdate() {
 	if pkg.EffectivePkgbase != "" {
-		for _, sugg := range G.globalData.GetSuggestedPackageUpdates() {
+		for _, sugg := range G.Pkgsrc.GetSuggestedPackageUpdates() {
 			if pkg.EffectivePkgbase != sugg.Pkgname {
 				continue
 			}

@@ -109,7 +109,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 
 	checkShellCommandLine := func(shellCommand string) {
 		G.Mk = t.NewMkLines("fname",
@@ -131,7 +131,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 		"WARN: fname:1: Unknown shell command \"echo\".")
 
 	t.SetupTool(&Tool{Name: "echo", Predefined: true})
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 
 	checkShellCommandLine("echo ${PKGNAME:Q}") // vucQuotPlain
 
@@ -258,7 +258,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__nofix(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	t.SetupTool(&Tool{Name: "echo", Predefined: true})
 	G.Mk = t.NewMkLines("Makefile",
 		"\techo ${PKGNAME:Q}")
@@ -274,7 +274,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__show_autofix(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall", "--show-autofix")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	t.SetupTool(&Tool{Name: "echo", Predefined: true})
 	G.Mk = t.NewMkLines("Makefile",
 		"\techo ${PKGNAME:Q}")
@@ -292,7 +292,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__exitcode(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	t.SetupTool(&Tool{Name: "cat", Predefined: true})
 	t.SetupTool(&Tool{Name: "echo", Predefined: true})
 	t.SetupTool(&Tool{Name: "printf", Predefined: true})
@@ -325,7 +325,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__autofix(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall", "--autofix")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	t.SetupTool(&Tool{Name: "echo", Predefined: true})
 	G.Mk = t.NewMkLines("Makefile",
 		"\techo ${PKGNAME:Q}")
@@ -341,7 +341,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__implementation(c *check.C)
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	G.Mk = t.NewMkLines("fname",
 		"# dummy")
 	shline := NewShellLine(G.Mk.mklines[0])
@@ -369,7 +369,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__implementation(c *check.C)
 func (s *Suite) Test_ShellLine_CheckShelltext__dollar_without_variable(c *check.C) {
 	t := s.Init(c)
 
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	G.Mk = t.NewMkLines("fname",
 		"# dummy")
 	shline := NewShellLine(G.Mk.mklines[0])
@@ -385,7 +385,7 @@ func (s *Suite) Test_ShellLine_CheckWord(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 
 	checkWord := func(shellWord string, checkQuoting bool) {
 		shline := t.NewShellLine("dummy.mk", 1, "\t echo "+shellWord)
@@ -622,7 +622,7 @@ func (s *Suite) Test_ShellLine__variable_outside_quotes(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupCommandLine("-Wall")
-	G.globalData.InitVartypes()
+	t.SetupVartypes()
 	mklines := t.NewMkLines("dummy.mk",
 		MkRcsID,
 		"GZIP=\t${ECHO} $$comment")

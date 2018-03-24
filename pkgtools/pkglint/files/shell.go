@@ -476,7 +476,7 @@ func (scc *SimpleCommandChecker) handleTool() bool {
 	}
 
 	shellword := scc.strcmd.Name
-	tool, localTool := G.globalData.Tools.byName[shellword], false
+	tool, localTool := G.Pkgsrc.Tools.ByName(shellword), false
 	if tool == nil && G.Mk != nil {
 		tool, localTool = G.Mk.toolRegistry.byName[shellword], true
 	}
@@ -524,7 +524,7 @@ func (scc *SimpleCommandChecker) handleCommandVariable() bool {
 	if varuse := parser.VarUse(); varuse != nil && parser.EOF() {
 		varname := varuse.varname
 
-		if tool := G.globalData.Tools.byVarname[varname]; tool != nil {
+		if tool := G.Pkgsrc.Tools.ByVarname(varname); tool != nil {
 			if !G.Mk.tools[tool.Name] {
 				scc.shline.mkline.Warnf("The %q tool is used but not added to USE_TOOLS.", tool.Name)
 			}
@@ -791,6 +791,12 @@ func (spc *ShellProgramChecker) checkPipeExitcode(line Line, pipeline *MkShPipel
 		return false
 	}
 
+	// canFail tests whether one of the left-hand side commands of a
+	// shell pipeline can fail.
+	//
+	// Examples:
+	//  echo "hello" | sed 's,$, world,,'   => cannot fail
+	//  find . -print | xargs cat | wc -l   => can fail
 	canFail := func() (bool, string) {
 		for _, cmd := range pipeline.Cmds[:len(pipeline.Cmds)-1] {
 			simple := cmd.Simple
@@ -800,7 +806,7 @@ func (spc *ShellProgramChecker) checkPipeExitcode(line Line, pipeline *MkShPipel
 			if len(simple.Redirections) != 0 {
 				return true, simple.Name.MkText
 			}
-			tool := G.globalData.Tools.FindByCommand(simple.Name)
+			tool := G.Pkgsrc.Tools.FindByCommand(simple.Name)
 			switch {
 			case tool == nil:
 				return true, simple.Name.MkText

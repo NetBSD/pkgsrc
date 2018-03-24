@@ -396,7 +396,7 @@ func (cv *VartypeCheck) EmulPlatform() {
 func (cv *VartypeCheck) FetchURL() {
 	MkLineChecker{cv.MkLine}.CheckVartypePrimitive(cv.Varname, BtURL, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
 
-	for siteURL, siteName := range G.globalData.MasterSiteURLToVar {
+	for siteURL, siteName := range G.Pkgsrc.MasterSiteURLToVar {
 		if hasPrefix(cv.Value, siteURL) {
 			subdir := cv.Value[len(siteURL):]
 			if hasPrefix(cv.Value, "https://github.com/") {
@@ -411,7 +411,7 @@ func (cv *VartypeCheck) FetchURL() {
 	}
 
 	if m, name, subdir := match2(cv.Value, `\$\{(MASTER_SITE_[^:]*).*:=(.*)\}$`); m {
-		if G.globalData.MasterSiteVarToURL[name] == "" {
+		if G.Pkgsrc.MasterSiteVarToURL[name] == "" {
 			cv.Line.Errorf("The site %s does not exist.", name)
 		}
 		if !hasSuffix(subdir, "/") {
@@ -457,7 +457,7 @@ func (cv *VartypeCheck) Homepage() {
 	MkLineChecker{cv.MkLine}.CheckVartypePrimitive(cv.Varname, BtURL, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
 
 	if m, wrong, sitename, subdir := match3(cv.Value, `^(\$\{(MASTER_SITE\w+)(?::=([\w\-/]+))?\})`); m {
-		baseURL := G.globalData.MasterSiteVarToURL[sitename]
+		baseURL := G.Pkgsrc.MasterSiteVarToURL[sitename]
 		if sitename == "MASTER_SITES" && G.Pkg != nil {
 			masterSites, _ := G.Pkg.varValue("MASTER_SITES")
 			if !containsVarRef(masterSites) {
@@ -638,7 +638,7 @@ func (cv *VartypeCheck) Option() {
 	}
 
 	if m, optname := match1(value, `^-?([a-z][-0-9a-z+]*)$`); m {
-		if _, found := G.globalData.PkgOptions[optname]; !found { // There's a difference between empty and absent here.
+		if _, found := G.Pkgsrc.PkgOptions[optname]; !found { // There's a difference between empty and absent here.
 			line.Warnf("Unknown option \"%s\".", optname)
 			Explain(
 				"This option is not documented in the mk/defaults/options.description",
@@ -945,7 +945,7 @@ func (cv *VartypeCheck) Tool() {
 		// no warning for package-defined tool definitions
 
 	} else if m, toolname, tooldep := match2(cv.Value, `^([-\w]+|\[)(?::(\w+))?$`); m {
-		if G.globalData.Tools.byName[toolname] == nil && (G.Mk == nil || G.Mk.toolRegistry.byName[toolname] == nil) {
+		if G.Pkgsrc.Tools.ByName(toolname) == nil && (G.Mk == nil || G.Mk.toolRegistry.byName[toolname] == nil) {
 			cv.Line.Errorf("Unknown tool %q.", toolname)
 		}
 		switch tooldep {

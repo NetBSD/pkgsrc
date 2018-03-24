@@ -302,13 +302,15 @@ func mkopSubst(s string, left bool, from string, right bool, to string, flags st
 	})
 }
 
+// relpath returns the relative path from `from` to `to`.
+// If `to` is not within `from`, it panics.
 func relpath(from, to string) string {
 	absFrom, err1 := filepath.Abs(from)
 	absTo, err2 := filepath.Abs(to)
 	rel, err3 := filepath.Rel(absFrom, absTo)
 	if err1 != nil || err2 != nil || err3 != nil {
 		trace.Stepf("relpath.panic", from, to, err1, err2, err3)
-		panic("relpath")
+		panic(fmt.Sprintf("relpath %q, %q", from, to))
 	}
 	result := filepath.ToSlash(rel)
 	if trace.Tracing {
@@ -470,4 +472,82 @@ func (s *Scope) FirstDefinition(varname string) MkLine {
 
 func (s *Scope) FirstUse(varname string) MkLine {
 	return s.used[varname]
+}
+
+// The MIT License (MIT)
+//
+// Copyright (c) 2015 Frits van Bommel
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+//
+// Taken from https://github.com/fvbommel/util/blob/11997822f8/sortorder/natsort.go
+func naturalLess(str1, str2 string) bool {
+
+	isDigit := func(b byte) bool { return '0' <= b && b <= '9' }
+
+	idx := 0
+	len1, len2 := len(str1), len(str2)
+	len := len1 + len2 - imax(len1, len2)
+	for idx < len {
+		c1, c2 := str1[idx], str2[idx]
+		dig1, dig2 := isDigit(c1), isDigit(c2)
+		switch {
+		case dig1 != dig2: // Digits before other characters.
+			return dig1 // True if LHS is a digit, false if the RHS is one.
+		case !dig1: // && !dig2, because dig1 == dig2
+			// UTF-8 compares bytewise-lexicographically, no need to decode
+			// codepoints.
+			if c1 != c2 {
+				return c1 < c2
+			}
+			idx++
+		default: // Digits
+			// Eat zeros.
+			idx1, idx2 := idx, idx
+			for ; idx1 < len1 && str1[idx1] == '0'; idx1++ {
+			}
+			for ; idx2 < len2 && str2[idx2] == '0'; idx2++ {
+			}
+			// Eat all digits.
+			nonZero1, nonZero2 := idx1, idx2
+			for ; idx1 < len1 && isDigit(str1[idx1]); idx1++ {
+			}
+			for ; idx2 < len2 && isDigit(str2[idx2]); idx2++ {
+			}
+			// If lengths of numbers with non-zero prefix differ, the shorter
+			// one is less.
+			if len1, len2 := idx1-nonZero1, idx2-nonZero2; len1 != len2 {
+				return len1 < len2
+			}
+			// If they're not equal, string comparison is correct.
+			if nr1, nr2 := str1[nonZero1:idx1], str2[nonZero2:idx2]; nr1 != nr2 {
+				return nr1 < nr2
+			}
+			// Otherwise, the one with less zeros is less.
+			// Because everything up to the number is equal, comparing the index
+			// after the zeros is sufficient.
+			if nonZero1 != nonZero2 {
+				return nonZero1 < nonZero2
+			}
+			idx = idx1
+		}
+		// They're identical so far, so continue comparing.
+	}
+	// So far they are identical. At least one is ended. If the other continues,
+	// it sorts last.
+	return len1 < len2
 }
