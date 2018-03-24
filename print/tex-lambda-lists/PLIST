@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2018/03/24 16:48:36 joerg Exp $
+share/texmf-dist/tex/plain/lambda-lists/lambda.sty
