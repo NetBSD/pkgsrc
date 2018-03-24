@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.709 2018/01/18 10:31:39 markd Exp $
+# $NetBSD: Makefile,v 1.710 2018/03/24 16:49:15 joerg Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -795,6 +795,7 @@ SUBDIR+=	tex-l2tabu-english-doc
 SUBDIR+=	tex-labels
 SUBDIR+=	tex-labels-doc
 SUBDIR+=	tex-lambda
+SUBDIR+=	tex-lambda-lists
 SUBDIR+=	tex-lastpage
 SUBDIR+=	tex-lastpage-doc
 SUBDIR+=	tex-latex
