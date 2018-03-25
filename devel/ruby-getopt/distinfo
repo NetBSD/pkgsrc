@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/01/11 16:01:37 taca Exp $
+$NetBSD: distinfo,v 1.6 2018/03/25 15:56:00 taca Exp $
 
-SHA1 (getopt-1.4.3.gem) = fe5cb666293c24529a425125d203cd723ffa37f4
-RMD160 (getopt-1.4.3.gem) = d8260088c103ad363fadc9005bf80e2281463223
-SHA512 (getopt-1.4.3.gem) = c8e4099b8a3bb700356caf419e1897107495c58cb5fdce03277288ed5c730a8fc6503e9fd0f7e9df5856d053e8421011405ac6e41828c07793335c9f3c9985d3
-Size (getopt-1.4.3.gem) = 20480 bytes
+SHA1 (getopt-1.4.4.gem) = f4dca3495748393b4b045c311a35cb4b80b6ca38
+RMD160 (getopt-1.4.4.gem) = d650fdb85cbbf54b1bbc06ce9b1a32ed0eb4e488
+SHA512 (getopt-1.4.4.gem) = f5f9c9e95973e05d9b78880bfd3a98161db01f5bd6ba29ca0fc5b39059675ea18a5fe63e718b6a054cd5de8c7e237d77858c9eb2c91912abff41d0a6c6d38040
+Size (getopt-1.4.4.gem) = 21504 bytes
