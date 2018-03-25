@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1567 2018/03/25 15:56:52 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1568 2018/03/25 16:01:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2115,3 +2115,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/p5-Net-DNS-SEC to 1.06 [wiz 2018-03-25]
 	Updated devel/ruby-getopt to 1.4.4 [taca 2018-03-25]
 	Updated textproc/p5-String-CamelCase to 0.04 [wiz 2018-03-25]
+	Updated textproc/p5-Text-CSV_XS to 1.35 [wiz 2018-03-25]
