@@ -1,5 +1,5 @@
 #!@RCD_SCRIPTS_SHELL@
-# $NetBSD: slurmctld.sh,v 1.1 2014/09/13 16:49:27 asau Exp $
+# $NetBSD: slurmctld.sh,v 1.2 2018/03/25 14:55:30 bacon Exp $
 #
 # PROVIDE: slurmctld
 # REQUIRE: DAEMON munge
