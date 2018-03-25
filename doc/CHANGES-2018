@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1564 2018/03/25 15:45:02 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1565 2018/03/25 15:54:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2112,3 +2112,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Module-FromPerlVer to 0.008002 [wiz 2018-03-25]
 	Updated misc/p5-Mac-PropertyList to 1.413 [wiz 2018-03-25]
 	Updated net/p5-SNMP-Info to 3.53 [wiz 2018-03-25]
+	Updated security/p5-Net-DNS-SEC to 1.06 [wiz 2018-03-25]
