@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1552 2018/03/25 00:33:10 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1553 2018/03/25 08:02:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2100,3 +2100,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/graphviz to 2.40.1nb14 [schmonz 2018-03-24]
 	Updated security/munge to 0.5.13nb1 [bacon 2018-03-24]
 	Updated math/R-RcppArmadillo to 0.8.400.0.0 [minskim 2018-03-25]
+	Updated devel/py-mercurial to 4.5.2 [wiz 2018-03-25]
