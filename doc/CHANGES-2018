@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1572 2018/03/25 16:07:01 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1573 2018/03/25 16:09:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2120,3 +2120,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/ruby-tzinfo-data to 1.2018.4 [taca 2018-03-25]
 	Updated time/p5-DateTime-TimeZone to 2.18 [wiz 2018-03-25]
 	Updated time/p5-Time-HiRes to 1.9758 [wiz 2018-03-25]
+	Updated www/p5-WWW-Mechanize to 1.88 [wiz 2018-03-25]
