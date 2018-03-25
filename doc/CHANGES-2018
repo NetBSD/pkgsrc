@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1561 2018/03/25 15:23:33 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1562 2018/03/25 15:25:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2109,3 +2109,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-MooX-StrictConstructor to 0.009 [wen 2018-03-25]
 	Updated parallel/slurm to 17.11.5 [bacon 2018-03-25]
 	Updated devel/p5-Array-Compare to 3.0.1 [wiz 2018-03-25]
+	Updated devel/p5-Module-FromPerlVer to 0.008002 [wiz 2018-03-25]
