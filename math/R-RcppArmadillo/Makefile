@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/03/22 15:36:04 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/03/25 00:32:45 minskim Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,7 @@ COMMENT=	Testing linear regression models
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	RcppArmadillo
-R_PKGVER=	0.8.300.1.0
+R_PKGVER=	0.8.400.0.0
 
 USE_LANGUAGES=	c++11 fortran
 
