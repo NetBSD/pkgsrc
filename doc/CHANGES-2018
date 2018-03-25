@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1558 2018/03/25 09:51:19 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1559 2018/03/25 12:05:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2106,3 +2106,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/p5-SQL-Statement to 1.412nb2 [wiz 2018-03-25]
 	Updated databases/p5-DBD-CSV to 0.51 [wiz 2018-03-25]
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07049 [wiz 2018-03-25]
+	Updated devel/p5-MooX-StrictConstructor to 0.009 [wen 2018-03-25]
