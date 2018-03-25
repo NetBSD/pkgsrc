@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1573 2018/03/25 16:09:14 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1574 2018/03/25 20:45:49 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2121,3 +2121,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/p5-DateTime-TimeZone to 2.18 [wiz 2018-03-25]
 	Updated time/p5-Time-HiRes to 1.9758 [wiz 2018-03-25]
 	Updated www/p5-WWW-Mechanize to 1.88 [wiz 2018-03-25]
+	Updated pkgtools/cwrappers to 20180325 [joerg 2018-03-25]
