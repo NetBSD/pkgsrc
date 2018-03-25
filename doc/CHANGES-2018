@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1554 2018/03/25 08:24:25 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.1555 2018/03/25 08:30:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2102,3 +2102,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/R-RcppArmadillo to 0.8.400.0.0 [minskim 2018-03-25]
 	Updated devel/py-mercurial to 4.5.2 [wiz 2018-03-25]
 	Updated devel/libgit2 to 0.26.3 [ryoon 2018-03-25]
+	Updated www/py-django-admin-rangefilter to 0.3.2 [adam 2018-03-25]
