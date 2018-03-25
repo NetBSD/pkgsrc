@@ -1,4 +1,4 @@
-/* $NetBSD: common.c,v 1.9 2017/11/07 22:26:38 joerg Exp $ */
+/* $NetBSD: common.c,v 1.10 2018/03/25 20:45:25 joerg Exp $ */
 
 /*-
  * Copyright (c) 2009, 2017 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -188,7 +188,7 @@ arglist_apply_config(struct arglist *args)
 		break;
 	case mode_link_shared:
 		arglist_prepend_list(args, &prepend_shared_args);
-		arglist_append_list(args, &prepend_shared_args);
+		arglist_append_list(args, &append_shared_args);
 		break;
 	}
 }
