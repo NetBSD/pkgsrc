@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2018/03/22 15:36:04 minskim Exp $
+$NetBSD: distinfo,v 1.2 2018/03/25 00:32:45 minskim Exp $
 
-SHA1 (R/RcppArmadillo_0.8.300.1.0.tar.gz) = 37a1e3b8c1ca16924bfad9e429db03a064d9b4c2
-RMD160 (R/RcppArmadillo_0.8.300.1.0.tar.gz) = 5e68e1f9899373d54907508268a08ca6f635463b
-SHA512 (R/RcppArmadillo_0.8.300.1.0.tar.gz) = 47e684e651f2c47f5f275fc9e256471b1b993663a56732aa031bafea08e0b28d185f24e47aa12ed577f5a9e38a694cb5a2413a6505a33e58b6a2382993b2a46b
-Size (R/RcppArmadillo_0.8.300.1.0.tar.gz) = 1318517 bytes
+SHA1 (R/RcppArmadillo_0.8.400.0.0.tar.gz) = 4b2ef3ea7d04dd1e1b3b1234e51f7a743378a106
+RMD160 (R/RcppArmadillo_0.8.400.0.0.tar.gz) = 3337b6059afcafee8077df3e95f3892a344ba2a0
+SHA512 (R/RcppArmadillo_0.8.400.0.0.tar.gz) = 5505b16c9b59e73909e7504845ca54f90f7afa1e33647e9b285557d0b8d3a060dd636a4fa0aa2fd56fa973ac3293152a2ef3a5e64e8581c016b69f5f7ed041a0
+Size (R/RcppArmadillo_0.8.400.0.0.tar.gz) = 1332745 bytes
 SHA1 (patch-configure) = fe37058ac76616d6b781de9d60484feec19ba154
