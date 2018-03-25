@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18200 2018/03/24 08:26:28 adam Exp $
+$NetBSD: TODO,v 1.18201 2018/03/25 08:02:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1220,7 +1220,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-input-pad-1.4.2
 	o py-jaraco_util-11.0
 	o py-keybinder-0.3.1
-	o py-mercurial-4.5.2
 	o py-musicbrainz-0.7.4
 	o py-ncclient-0.5.3
 	o py-newt-0.52.20
