@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1557 2018/03/25 09:38:05 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1558 2018/03/25 09:51:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2105,3 +2105,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-django-admin-rangefilter to 0.3.2 [adam 2018-03-25]
 	Updated databases/p5-SQL-Statement to 1.412nb2 [wiz 2018-03-25]
 	Updated databases/p5-DBD-CSV to 0.51 [wiz 2018-03-25]
+	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07049 [wiz 2018-03-25]
