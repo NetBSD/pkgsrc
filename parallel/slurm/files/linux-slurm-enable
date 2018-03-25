@@ -1,0 +1,64 @@
+#!/bin/sh -e
+
+##########################################################################
+#   Script description:
+#       
+#   Arguments:
+#       
+#   Returns:
+#       
+#   History:
+#   Date        Name        Modification
+#   2013-12-26  root        Begin
+##########################################################################
+
+usage()
+{
+    printf "Usage: $0 node-type\n"
+    exit 1
+}
+
+
+##########################################################################
+#   Main
+##########################################################################
+
+if [ $# != 1 ]; then
+    usage
+fi
+
+node_type=$1
+#./munge-enable $node_type
+
+case $node_type in
+'head')
+    prefix='/usr/pkg-1'
+    ;;
+'compute')
+    prefix='/sharedapps/pkg-1'
+    ;;
+*)
+    printf "$0 is only for head and compute nodes.\n"
+    exit 1
+    ;;
+esac
+
+# slurm.conf
+if [ ! -e $prefix/etc/slurm.conf ]; then
+    printf "Missing $prefix/etc/slurm.conf.  Copy it from head node.\n"
+    exit 1
+fi
+
+# Init script
+#if [ ! -e /etc/init.d/slurm ]; then
+    printf "exec_prefix=/$prefix\nprefix=$prefix\n\n" \
+	> /etc/init.d/slurm
+    chmod 750 /etc/init.d/slurm
+    cat $prefix/share/examples/slurm/init.d.slurm >> /etc/init.d/slurm
+    chkconfig slurm on
+    service slurm restart
+#fi
+
+mkdir -p /var/log/slurm
+chown slurm:slurm /var/log/slurm
+
