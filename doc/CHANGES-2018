@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1569 2018/03/25 16:02:15 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1570 2018/03/25 16:03:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2117,3 +2117,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-String-CamelCase to 0.04 [wiz 2018-03-25]
 	Updated textproc/p5-Text-CSV_XS to 1.35 [wiz 2018-03-25]
 	Updated textproc/p5-Text-SimpleTable to 2.04 [wiz 2018-03-25]
+	Updated time/ruby-tzinfo-data to 1.2018.4 [taca 2018-03-25]
