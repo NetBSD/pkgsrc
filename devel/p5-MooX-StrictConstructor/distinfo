@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/04/15 11:38:07 wiz Exp $
+$NetBSD: distinfo,v 1.2 2018/03/25 12:03:38 wen Exp $
 
-SHA1 (MooX-StrictConstructor-0.008.tar.gz) = 42953287da94ff5d66a43a1178ba52c64cb09de2
-RMD160 (MooX-StrictConstructor-0.008.tar.gz) = 80d942941e1d385a1a28afd89890fc14f5ea9a27
-SHA512 (MooX-StrictConstructor-0.008.tar.gz) = e1400fee3af182d34e8f5b709b2c16f3675ff75502e4ca7841dd0b3be9c2e090a4e13f881c2f5a6b15b925264f03ee0ce2c27a25b7262b1a17485e7a33057a20
-Size (MooX-StrictConstructor-0.008.tar.gz) = 14255 bytes
+SHA1 (MooX-StrictConstructor-0.009.tar.gz) = 734d61ce66be7a555c0e9de1a2c21e3936faedbb
+RMD160 (MooX-StrictConstructor-0.009.tar.gz) = 0f166a7ccfe5bfe1876dd79a3f071f9d6995c7b2
+SHA512 (MooX-StrictConstructor-0.009.tar.gz) = e14292b0a5973d800a66048674b97d381017930c10b608ac1c15530e5953de3074459e2a00979864f2476b95d037e17a65a1f404931918f91d9490a83cbe3fc4
+Size (MooX-StrictConstructor-0.009.tar.gz) = 14824 bytes

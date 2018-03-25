@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2017/06/05 14:23:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2018/03/25 12:03:38 wen Exp $
 
-DISTNAME=	MooX-StrictConstructor-0.008
+DISTNAME=	MooX-StrictConstructor-0.009
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/H/HA/HARTZELL/}
 
@@ -25,7 +24,6 @@ BUILD_DEPENDS+=	p5-Pod-Coverage-[0-9]*:../../textproc/p5-Pod-Coverage
 BUILD_DEPENDS+=	p5-Pod-Coverage-TrustPod-[0-9]*:../../textproc/p5-Pod-Coverage-TrustPod
 
 PERL5_PACKLIST=		auto/MooX/StrictConstructor/.packlist
-PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
