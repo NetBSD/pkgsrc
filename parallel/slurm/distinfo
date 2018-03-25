@@ -1,24 +1,14 @@
-$NetBSD: distinfo,v 1.5 2015/11/02 23:46:13 agc Exp $
+$NetBSD: distinfo,v 1.6 2018/03/25 14:55:29 bacon Exp $
 
-SHA1 (slurm-2.6.4.tar.bz2) = 6a5850b53201d506a86ab23d13318be34395d237
-RMD160 (slurm-2.6.4.tar.bz2) = a6b4ab6782b0db0822acb2fd7efe6c1464b8a87c
-SHA512 (slurm-2.6.4.tar.bz2) = 7aecf83350fddd1b6f6c901a133c30d7b27c3c548715583e6e9c4325c7d2deee883ff0f3806f67f098b4b85fdd86e5ccbf56959bb9377349582219ccbaa21e29
-Size (slurm-2.6.4.tar.bz2) = 5954130 bytes
-SHA1 (patch-doc_html_Makefile.am) = 9152b1c6d735fbd106a5b2841b09b0c0d5fdbf9e
-SHA1 (patch-doc_html_Makefile.in) = 237da04742791877d42d4b68805b2a513aab8f40
-SHA1 (patch-doc_man_man1_Makefile.am) = a131bb9ac16f2683dd0756fff4538a3213043503
-SHA1 (patch-doc_man_man1_Makefile.in) = 262ea869552b7ebd44b63e3df11a40b7172d2425
-SHA1 (patch-doc_man_man5_Makefile.am) = b6918b7bf767b203841c8450bb6ab05b3339b08c
-SHA1 (patch-doc_man_man5_Makefile.in) = 6a6d6370c915041096a8b1784dc290f76cac6f1b
-SHA1 (patch-doc_man_man8_Makefile.am) = 1a5e7a1139688b0ce127a020deab04402599485e
-SHA1 (patch-doc_man_man8_Makefile.in) = 01efd7282aa9d1d011c283358cb4aa566f7c72d6
-SHA1 (patch-src_common_net.c) = 6a53ef7ef94afa1e48d929c635e900c9999e381b
-SHA1 (patch-src_common_slurm__jobacct__gather.c) = abcb7c117c3efa95509d047ff7243fc98cfc00b7
-SHA1 (patch-src_common_xcgroup.c) = fd49ee490fc663635b0b5a3ce54ede7e6166b897
-SHA1 (patch-src_common_xcgroup.h) = 78e9021a725692c8a980556c000c4501c8009a75
-SHA1 (patch-src_plugins_acct__gather__filesystem_lustre_acct__gather__filesystem__lustre.c) = 46cd8b130af2eb0c47de04ba2f24ffc1291c75ce
-SHA1 (patch-src_slurmctld_reservation.c) = c02eb31c2b9dee32e1b68bb9ecf63acd34a987ca
-SHA1 (patch-src_slurmd_common_setproctitle.c) = 1ac0cccd1f889a8a3e3d998bdb6392cfbca932e5
-SHA1 (patch-src_slurmd_slurmstepd_task.c) = b7afd7c2ed58b8423490e1117d6e82d7b0f3294b
-SHA1 (patch-src_srun_libsrun_debugger.c) = 1d10d883c2f9931af3166980c70730ab9fa1df96
-SHA1 (patch-src_srun_libsrun_launch.c) = ff3cbfced383206f86f33c3a511334b95da9edc7
+SHA1 (slurm-17.11.5.tar.bz2) = fe29758ca8d81492e18d59b84968cedf17a6161b
+RMD160 (slurm-17.11.5.tar.bz2) = 8d393e7ddf545ac1e8c81e8ddd9160a5e76d9311
+SHA512 (slurm-17.11.5.tar.bz2) = cb82e192bf0ab57fbc810fc3c9b32e90d4c28926b4a959514e3df51b63556b13d01057938d73da5bc0bea157bbd7712b1aad0712a913ad912bd7e6089fc0bd21
+Size (slurm-17.11.5.tar.bz2) = 6248551 bytes
+SHA1 (patch-etc_init.d.slurm.in) = beaedd5385b4aad04583d2bc5a23557519f74ec5
+SHA1 (patch-src_plugins_task_cgroup_task__cgroup__memory.c) = 1accc4ebb9456699db477557ddc783e136fdff00
+SHA1 (patch-src_slurmd_common_task__plugin.c) = 0d6680b10b45648703fe7a57411e605992fd9040
+SHA1 (patch-src_slurmd_common_task__plugin.h) = d4ad9f350efe1e873809adfe9dc4f559634e9ba2
+SHA1 (patch-src_slurmd_slurmd_slurmd.c) = 67cac6d8b4545c9053b655a4da77db63f5de7e63
+SHA1 (patch-src_slurmd_slurmd_slurmd.h) = a610b0bbe5b6b04be70eb2f8eac2a231139e6d1a
+SHA1 (patch-src_slurmd_slurmstepd_io.c) = b56782887621edb539be70d53dff8029a89e90ed
+SHA1 (patch-src_slurmd_slurmstepd_task.c) = 7948c76ce65b0e5211486d2e7b1901664c1f7016
