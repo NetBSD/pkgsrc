@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/09/17 20:23:14 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/03/25 15:26:35 wiz Exp $
 
-DISTNAME=		Mac-PropertyList-1.412
+DISTNAME=		Mac-PropertyList-1.413
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		misc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Mac/}
