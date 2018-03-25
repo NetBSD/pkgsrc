@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1555 2018/03/25 08:30:15 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1556 2018/03/25 09:36:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2103,3 +2103,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-mercurial to 4.5.2 [wiz 2018-03-25]
 	Updated devel/libgit2 to 0.26.3 [ryoon 2018-03-25]
 	Updated www/py-django-admin-rangefilter to 0.3.2 [adam 2018-03-25]
+	Updated databases/p5-SQL-Statement to 1.412nb2 [wiz 2018-03-25]
