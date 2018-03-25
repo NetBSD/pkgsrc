@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/10/09 08:22:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/03/25 20:38:03 joerg Exp $
 
 DISTNAME=	cssselect2-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,10 +13,10 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	# empty
 
 DEPENDS+=	${PYPKGPREFIX}-tinycss2-[0-9]*:../../textproc/py-tinycss2
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
