@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2017/10/23 21:12:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2018/03/26 09:30:23 adam Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -152,6 +152,7 @@ lib/httpd/mod_proxy_ftp.so
 lib/httpd/mod_proxy_hcheck.so
 lib/httpd/mod_proxy_http.so
 lib/httpd/mod_proxy_scgi.so
+lib/httpd/mod_proxy_uwsgi.so
 lib/httpd/mod_proxy_wstunnel.so
 lib/httpd/mod_ratelimit.so
 lib/httpd/mod_reflector.so
@@ -1079,6 +1080,8 @@ share/httpd/manual/mod/mod_lua.html.fr
 share/httpd/manual/mod/mod_macro.html
 share/httpd/manual/mod/mod_macro.html.en
 share/httpd/manual/mod/mod_macro.html.fr
+share/httpd/manual/mod/mod_md.html
+share/httpd/manual/mod/mod_md.html.en
 share/httpd/manual/mod/mod_mime.html
 share/httpd/manual/mod/mod_mime.html.en
 share/httpd/manual/mod/mod_mime.html.fr
@@ -1137,6 +1140,8 @@ share/httpd/manual/mod/mod_proxy_http2.html.en
 share/httpd/manual/mod/mod_proxy_scgi.html
 share/httpd/manual/mod/mod_proxy_scgi.html.en
 share/httpd/manual/mod/mod_proxy_scgi.html.fr
+share/httpd/manual/mod/mod_proxy_uwsgi.html
+share/httpd/manual/mod/mod_proxy_uwsgi.html.en
 share/httpd/manual/mod/mod_proxy_wstunnel.html
 share/httpd/manual/mod/mod_proxy_wstunnel.html.en
 share/httpd/manual/mod/mod_ratelimit.html
