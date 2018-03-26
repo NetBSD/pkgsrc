@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.309 2018/03/17 00:59:02 ryoon Exp $
+$NetBSD: distinfo,v 1.310 2018/03/26 22:24:45 maya Exp $
 
-SHA1 (firefox-59.0.1.tar.bz2) = cdaf28a784fa14cf4bc3e7e111406a9fcf273cc5
-RMD160 (firefox-59.0.1.tar.bz2) = 64f4696e2206cec4fbd5610c2138a3c7d89fd21f
-SHA512 (firefox-59.0.1.tar.bz2) = 5c1a5e19db6c08091d2c50b5763a7f0542d9d28bf5fc5d293f29b74764df38f4963d3eb96f3b7ecca2e980000e3e52ba2daf442bcd4ae87a69aa94d8aebea1da
-Size (firefox-59.0.1.tar.bz2) = 304965726 bytes
+SHA1 (firefox-59.0.2.tar.bz2) = 8fcf726b4d23716c7ff2b7ebc6527782b5bafe9c
+RMD160 (firefox-59.0.2.tar.bz2) = ff7ab2f9da93eda98de8aecb4563cfd176b896d9
+SHA512 (firefox-59.0.2.tar.bz2) = db8f55954df3af554e7a614eaece4aed995794dac6e2d828b2f9c175d8a6b89e109c26ced41a43df9ad24e01d079cadf13d16c6a9bdd1887bc9898d34408e8e6
+Size (firefox-59.0.2.tar.bz2) = 304965099 bytes
 SHA1 (patch-aa) = aca3d55271df926da793d7a0543f522d42e67f9d
 SHA1 (patch-build_gyp.mozbuild) = 77e0954a796337b24572674cd1d14d4a5cab8e6e
 SHA1 (patch-build_moz.configure_init.configure) = 5ec8da6b5aad7682a88b010a99e19f5d4403e6db
@@ -63,7 +63,7 @@ SHA1 (patch-media_webrtc_trunk_webrtc_modules_audio__device_linux_audio__device_
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc) = 0141dd1372c13ea1fce6e2f5ffb65e0cb0f3a13e
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc) = a69bc7b7096b410582e725f9dbec57fee90d6686
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_video__capture.gypi) = 772a858fb74d404a6b86e5634bc3eec586a1b06a
-SHA1 (patch-modules_libpref_init_all.js) = aaf450596244fb25136e428589d81a008cf1e54c
+SHA1 (patch-modules_libpref_init_all.js) = 4c265ca5d45943fcfb7e75b0f0e5b918643bcd6c
 SHA1 (patch-modules_pdfium_update.sh) = b0bf091325c9322c54880de067871354cd689038
 SHA1 (patch-mozglue_build_arm.cpp) = f41ace63b3f1d2a8ccaffc98c3c64d1e22af5249
 SHA1 (patch-mozglue_build_arm.h) = 5e272f4e19b9681d43a63c45d78b0e44a392c7dc
