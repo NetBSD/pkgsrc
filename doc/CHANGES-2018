@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1579 2018/03/26 22:26:13 maya Exp $
+$NetBSD: CHANGES-2018,v 1.1580 2018/03/26 23:47:08 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2128,3 +2128,6 @@ Changes to the packages collection and infrastructure in 2018:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2018Q1 branch [jperkin 2018-03-26]
 	Updated www/firefox-l10n to 59.0.2 [maya 2018-03-26]
 	Updated www/firefox to 59.0.2 [maya 2018-03-26]
+	Updated www/seamonkey to 2.49.2nb4 [maya 2018-03-26]
+	Updated www/firefox52-l10n to 52.7.3 [maya 2018-03-26]
+	Updated www/firefox52 to 52.7.3 [maya 2018-03-26]
