@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.12 2018/03/17 00:23:15 maya Exp $
+$NetBSD: distinfo,v 1.13 2018/03/26 23:33:24 maya Exp $
 
-SHA1 (firefox-52.7.2esr.source.tar.xz) = 7895d445ee7fa7f51ce253483250c7915e74a45e
-RMD160 (firefox-52.7.2esr.source.tar.xz) = d8c6c6a7ee0dfe55bd87467aca5709ea82a0050a
-SHA512 (firefox-52.7.2esr.source.tar.xz) = e275fd10fd32a0dc237135af3395e3a1ae501844632c973ff3b9bca1456702ee36dbee99fc57300598403c924c0db63bd62a199845c8f4a2e29db5d1e5973395
-Size (firefox-52.7.2esr.source.tar.xz) = 212673520 bytes
-SHA1 (patch-CVE-2018-5147) = 04e45d580fde5a44dec4f2e4d617d5302bd3fa44
+SHA1 (firefox-52.7.3esr.source.tar.xz) = 554190b6cbaab895ced8061abfd9ac6c955950f4
+RMD160 (firefox-52.7.3esr.source.tar.xz) = 0b687edea6b60fb3ad4cb5dc02655abc8b8fa94c
+SHA512 (firefox-52.7.3esr.source.tar.xz) = fc5530d8ff5b7f6cd8d9f677d65dee3c1489401c9c9b88258f2e59c7796975cfb7f0b8ccfdf80ae92a6644f51f70de8733c334e4673cad9b8813cca33ae3e1c3
+Size (firefox-52.7.3esr.source.tar.xz) = 213945524 bytes
 SHA1 (patch-aa) = c1084caa275e57b716c3499301f7fc3f99ef5026
 SHA1 (patch-ao) = 8b7125ef3b193fca4d03386142887b2f8d5015c5
 SHA1 (patch-as) = 632ebd35287f8f97d18721d39a0514d4cdbb12cc
