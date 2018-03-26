@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/03/16 21:54:13 maya Exp $
+# $NetBSD: Makefile,v 1.27 2018/03/26 19:43:30 dholland Exp $
 
 DISTNAME=	tremor-562307a
 PKGNAME=	tremor-1.0.2.20180316
@@ -15,7 +15,7 @@ LICENSE=	modified-bsd
 
 AUTOCONF_REQD=		2.50
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		autoconf automake gmake
+USE_TOOLS+=		autoconf automake gmake pkg-config
 USE_LIBTOOL=		yes
 
 PLIST_SUBST+=		DISTNAME=${DISTNAME:Q}
