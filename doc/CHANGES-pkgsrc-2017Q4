@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.25 2018/03/22 07:00:00 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.26 2018/03/26 19:46:26 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
 
@@ -202,4 +202,7 @@ devel/nspr: dependency update
 devel/nss: dependency update
 www/firefox-l10n: dependent update
 www/firefox: security update
+
+Pullup ticket #5729 - requested by wiz
+devel/py-mercurial: security update
 
