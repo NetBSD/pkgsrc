@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1575 2018/03/26 00:34:20 joerg Exp $
+$NetBSD: CHANGES-2018,v 1.1576 2018/03/26 09:35:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2123,3 +2123,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-WWW-Mechanize to 1.88 [wiz 2018-03-25]
 	Updated pkgtools/cwrappers to 20180325 [joerg 2018-03-25]
 	Added converters/py27-cairosvg version 1.0.22 [joerg 2018-03-26]
+	Updated www/apache24 to 2.4.33 [adam 2018-03-26]
