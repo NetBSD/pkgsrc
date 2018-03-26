@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2018/03/12 11:16:16 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2018/03/26 19:54:47 dholland Exp $
 
 DISTNAME=	gps-${GPS_VERSION}
 PKGREVISION=	16
@@ -6,21 +6,14 @@ CATEGORIES=	devel
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 DISTFILES=	gps-5.2.1-1-src.tgz
 
-MAINTAINER=	draco@marino.st
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/gps
 COMMENT=	GNAT Programming Studio - IDE for Ada and many other languages
 LICENSE=	gnu-gpl-v2
 
-# GPS is several years behind and normally tied to the latest Ada compiler.
-# To update it would require several new and complicated dependencies.
-# The maintainer has no interest in doing this work.  Somebody else is free
-# to take over and use the FreeBSD Ports Collection as a reference point.
-#
-# The internal project support (GPR files) are illegally configured for
-# today's standards and gprbuild won't let the build progress far.
-# The only practical way forward to update to version 6.0.1 (which is at
-# least one year behind the current version of GPS)
-PKG_FAIL_REASON=	Unbuildable with gcc5-aux.  Scheduled for removal Jan 2017
+# GPS is no longer buildable and needs to be updated to work with
+# current Ada compilers. The former MAINTAINER abandoned it.
+PKG_FAIL_REASON=	Unbuildable with gcc5-aux.
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake sed perl awk pkg-config
