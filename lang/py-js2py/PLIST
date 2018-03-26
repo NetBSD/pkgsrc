@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/02/26 16:12:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/03/26 16:30:10 joerg Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -101,6 +101,8 @@ ${PYSITELIB}/js2py/internals/base.py
 ${PYSITELIB}/js2py/internals/base.pyc
 ${PYSITELIB}/js2py/internals/base.pyo
 ${PYSITELIB}/js2py/internals/byte_trans.py
+${PYSITELIB}/js2py/internals/byte_trans.pyc
+${PYSITELIB}/js2py/internals/byte_trans.pyo
 ${PYSITELIB}/js2py/internals/code.py
 ${PYSITELIB}/js2py/internals/code.pyc
 ${PYSITELIB}/js2py/internals/code.pyo
@@ -120,6 +122,8 @@ ${PYSITELIB}/js2py/internals/constructors/jsdate.py
 ${PYSITELIB}/js2py/internals/constructors/jsdate.pyc
 ${PYSITELIB}/js2py/internals/constructors/jsdate.pyo
 ${PYSITELIB}/js2py/internals/constructors/jsfunction.py
+${PYSITELIB}/js2py/internals/constructors/jsfunction.pyc
+${PYSITELIB}/js2py/internals/constructors/jsfunction.pyo
 ${PYSITELIB}/js2py/internals/constructors/jsmath.py
 ${PYSITELIB}/js2py/internals/constructors/jsmath.pyc
 ${PYSITELIB}/js2py/internals/constructors/jsmath.pyo
@@ -202,6 +206,8 @@ ${PYSITELIB}/js2py/internals/space.py
 ${PYSITELIB}/js2py/internals/space.pyc
 ${PYSITELIB}/js2py/internals/space.pyo
 ${PYSITELIB}/js2py/internals/speed.py
+${PYSITELIB}/js2py/internals/speed.pyc
+${PYSITELIB}/js2py/internals/speed.pyo
 ${PYSITELIB}/js2py/internals/trans_utils.py
 ${PYSITELIB}/js2py/internals/trans_utils.pyc
 ${PYSITELIB}/js2py/internals/trans_utils.pyo
@@ -251,6 +257,8 @@ ${PYSITELIB}/js2py/pyjs.py
 ${PYSITELIB}/js2py/pyjs.pyc
 ${PYSITELIB}/js2py/pyjs.pyo
 ${PYSITELIB}/js2py/test_internals.py
+${PYSITELIB}/js2py/test_internals.pyc
+${PYSITELIB}/js2py/test_internals.pyo
 ${PYSITELIB}/js2py/translators/__init__.py
 ${PYSITELIB}/js2py/translators/__init__.pyc
 ${PYSITELIB}/js2py/translators/__init__.pyo
