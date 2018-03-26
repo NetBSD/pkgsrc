@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1577 2018/03/26 10:52:52 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1578 2018/03/26 11:18:48 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2125,3 +2125,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added converters/py27-cairosvg version 1.0.22 [joerg 2018-03-26]
 	Updated www/apache24 to 2.4.33 [adam 2018-03-26]
 	Updated net/py-lexicon to 2.2.1 [fhajny 2018-03-26]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2018Q1 branch [jperkin 2018-03-26]
