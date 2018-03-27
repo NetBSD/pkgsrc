@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/05/05 15:46:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/03/27 06:57:27 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,6 +13,9 @@ ${PYSITELIB}/model_mommy/exceptions.pyo
 ${PYSITELIB}/model_mommy/generators.py
 ${PYSITELIB}/model_mommy/generators.pyc
 ${PYSITELIB}/model_mommy/generators.pyo
+${PYSITELIB}/model_mommy/gis.py
+${PYSITELIB}/model_mommy/gis.pyc
+${PYSITELIB}/model_mommy/gis.pyo
 ${PYSITELIB}/model_mommy/mock-img.jpeg
 ${PYSITELIB}/model_mommy/mock_file.txt
 ${PYSITELIB}/model_mommy/mommy.py
