@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1580 2018/03/26 23:47:08 maya Exp $
+$NetBSD: CHANGES-2018,v 1.1581 2018/03/27 11:08:49 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2131,3 +2131,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/seamonkey to 2.49.2nb4 [maya 2018-03-26]
 	Updated www/firefox52-l10n to 52.7.3 [maya 2018-03-26]
 	Updated www/firefox52 to 52.7.3 [maya 2018-03-26]
+	Updated www/drupal8 to 8.5.0 [prlw1 2018-03-27]
