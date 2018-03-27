@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2017/01/20 16:12:39 he Exp $
+$NetBSD: distinfo,v 1.39 2018/03/27 11:40:22 he Exp $
 
 SHA1 (opendnssec-1.4.13.tar.gz) = 739e1d0178124e0930f48de529c85a6fea4fa02b
 RMD160 (opendnssec-1.4.13.tar.gz) = 033059b39acb9675df0db85a3476b678fdf7e193
@@ -8,6 +8,6 @@ SHA1 (patch-aa) = 104e077af6c368cbb5fc3034d58b2f2249fcf991
 SHA1 (patch-enforcer_utils_Makefile.am) = 80915dee723535e5854e62bc18f00ba2d5d7496c
 SHA1 (patch-enforcer_utils_Makefile.in) = 6c1b4ad25956bfcc8b410a8ca22f2581e64198d1
 SHA1 (patch-enforcer_utils_ksmutil.c) = f9456e0339d45dcc2776375cf40f3f8d9221878f
-SHA1 (patch-signer_src_daemon_engine.c) = a95846ba4aa6fa42043541bb2bde0f95464f9ba4
+SHA1 (patch-signer_src_daemon_engine.c) = 4a33a0220f3b64ba065ab415a5519062a0729e3c
 SHA1 (patch-signer_src_signer_ixfr.c) = 74c2c320080e585a6126e146c453998f44c164f7
 SHA1 (patch-signer_src_signer_zone.c) = 0330236f11ccab7ed83b73bc83d851f932124318
