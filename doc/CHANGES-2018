@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1581 2018/03/27 11:08:49 prlw1 Exp $
+$NetBSD: CHANGES-2018,v 1.1582 2018/03/27 12:18:17 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2132,3 +2132,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/firefox52-l10n to 52.7.3 [maya 2018-03-26]
 	Updated www/firefox52 to 52.7.3 [maya 2018-03-26]
 	Updated www/drupal8 to 8.5.0 [prlw1 2018-03-27]
+	Updated security/opendnssec to 1.4.13nb4 [he 2018-03-27]
