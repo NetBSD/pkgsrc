@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1586 2018/03/28 21:50:26 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1587 2018/03/28 21:51:17 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2138,3 +2138,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/drupal8 to 8.5.1 [maya 2018-03-28]
 	Updated www/drupal7 to 7.58 [maya 2018-03-28]
 	Updated databases/erlang-sqlite3 to 1.1.6 [fhajny 2018-03-28]
+	Updated chat/ejabberd to 18.03 [fhajny 2018-03-28]
