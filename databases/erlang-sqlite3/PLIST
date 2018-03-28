@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2016/01/16 18:53:43 fhajny Exp $
-lib/erlang/lib/sqlite3-1.1.5/ebin/sqlite3.app
-lib/erlang/lib/sqlite3-1.1.5/ebin/sqlite3.beam
-lib/erlang/lib/sqlite3-1.1.5/ebin/sqlite3_lib.beam
-lib/erlang/lib/sqlite3-1.1.5/include/sqlite3.hrl
-lib/erlang/lib/sqlite3-1.1.5/priv/sqlite3_drv.so
+@comment $NetBSD: PLIST,v 1.3 2018/03/28 21:50:16 fhajny Exp $
+lib/erlang/lib/sqlite3-${PKGVERSION}/ebin/sqlite3.app
+lib/erlang/lib/sqlite3-${PKGVERSION}/ebin/sqlite3.beam
+lib/erlang/lib/sqlite3-${PKGVERSION}/ebin/sqlite3_lib.beam
+lib/erlang/lib/sqlite3-${PKGVERSION}/include/sqlite3.hrl
+lib/erlang/lib/sqlite3-${PKGVERSION}/priv/sqlite3_drv.so
