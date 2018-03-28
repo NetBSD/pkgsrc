@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2018/01/03 22:51:30 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.52 2018/03/28 21:51:09 fhajny Exp $
 lib/${PKGNAME}/COPYING
 lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/${PKGNAME}/ebin/XmppAddr.beam
@@ -36,7 +36,6 @@ lib/${PKGNAME}/ebin/ejabberd_commands.beam
 lib/${PKGNAME}/ebin/ejabberd_commands_doc.beam
 lib/${PKGNAME}/ebin/ejabberd_config.beam
 lib/${PKGNAME}/ebin/ejabberd_ctl.beam
-lib/${PKGNAME}/ebin/ejabberd_db_modules.beam
 lib/${PKGNAME}/ebin/ejabberd_hooks.beam
 lib/${PKGNAME}/ebin/ejabberd_http.beam
 lib/${PKGNAME}/ebin/ejabberd_http_ws.beam
@@ -50,7 +49,6 @@ lib/${PKGNAME}/ebin/ejabberd_oauth.beam
 lib/${PKGNAME}/ebin/ejabberd_oauth_mnesia.beam
 lib/${PKGNAME}/ebin/ejabberd_oauth_rest.beam
 lib/${PKGNAME}/ebin/ejabberd_oauth_sql.beam
-lib/${PKGNAME}/ebin/ejabberd_options.beam
 lib/${PKGNAME}/ebin/ejabberd_piefxis.beam
 lib/${PKGNAME}/ebin/ejabberd_pkix.beam
 lib/${PKGNAME}/ebin/ejabberd_rdbms.beam
@@ -335,8 +333,8 @@ lib/${PKGNAME}/priv/msgs/uk.msg
 lib/${PKGNAME}/priv/msgs/vi.msg
 lib/${PKGNAME}/priv/msgs/wa.msg
 lib/${PKGNAME}/priv/msgs/zh.msg
-lib/${PKGNAME}/priv/sql/lite.sql
 lib/${PKGNAME}/priv/sql/lite.new.sql
+lib/${PKGNAME}/priv/sql/lite.sql
 lib/${PKGNAME}/priv/sql/mssql.sql
 lib/${PKGNAME}/priv/sql/mysql.new.sql
 lib/${PKGNAME}/priv/sql/mysql.sql
