@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.206 2018/03/28 13:34:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.207 2018/03/28 20:13:55 wiz Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
@@ -41,7 +41,7 @@ ALL_ENV+=		MOZILLA_PKG_NAME=thunderbird
 SUBST_CLASSES+=		sys-dic
 SUBST_STAGE.sys-dic=	pre-configure
 SUBST_MESSAGE.sys-dic=	Reference to system hunspell dictionaries.
-SUBST_FILES.sys-dic=	mozilla/extensions/spellcheck/hunspell/src/mozHunspell.cpp
+SUBST_FILES.sys-dic=	mozilla/extensions/spellcheck/hunspell/glue/mozHunspell.cpp
 SUBST_VARS.sys-dic=	PREFIX
 
 CHECK_INTERPRETER_SKIP+=lib/thunderbird-sdk/sdk/bin/header.py
