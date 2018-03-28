@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1584 2018/03/28 13:36:08 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.1585 2018/03/28 21:30:50 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2135,3 +2135,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/opendnssec to 1.4.13nb4 [he 2018-03-27]
 	Updated mail/thunderbird to 52.7.0 [ryoon 2018-03-28]
 	Updated mail/thunderbird-l10n to 52.7.0 [ryoon 2018-03-28]
+	Updated www/drupal8 to 8.5.1 [maya 2018-03-28]
+	Updated www/drupal7 to 7.58 [maya 2018-03-28]
