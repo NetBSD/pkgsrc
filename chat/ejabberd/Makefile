@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2018/01/16 12:28:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.83 2018/03/28 21:51:09 fhajny Exp $
 
-DISTNAME=	ejabberd-18.01
+DISTNAME=	ejabberd-18.03
 CATEGORIES=	chat
 MASTER_SITES=	https://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -10,28 +10,27 @@ HOMEPAGE=	https://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	erlang-cache_tab>=1.0.12:../../devel/erlang-cache_tab
-DEPENDS+=	erlang-epam>=1.0.3:../../security/erlang-epam
+DEPENDS+=	erlang-cache_tab>=1.0.13:../../devel/erlang-cache_tab
+DEPENDS+=	erlang-epam>=1.0.4:../../security/erlang-epam
 DEPENDS+=	erlang-eredis>=1.0.8.20150910:../../databases/erlang-eredis
-DEPENDS+=	erlang-eimp>=1.0.2:../../graphics/erlang-eimp
-DEPENDS+=	erlang-esip>=1.0.21:../../net/erlang-esip
-DEPENDS+=	erlang-ezlib>=1.0.3:../../devel/erlang-ezlib
-DEPENDS+=	erlang-fast_tls>=1.0.20:../../security/erlang-fast_tls
-DEPENDS+=	erlang-fast_xml>=1.1.28:../../textproc/erlang-fast_xml
-DEPENDS+=	erlang-fast_yaml>=1.0.12:../../textproc/erlang-fast_yaml
-DEPENDS+=	erlang-fs>=2.12.0:../../devel/erlang-fs
-DEPENDS+=	erlang-iconv>=1.0.6:../../converters/erlang-iconv
+DEPENDS+=	erlang-eimp>=1.0.3:../../graphics/erlang-eimp
+DEPENDS+=	erlang-esip>=1.0.22:../../net/erlang-esip
+DEPENDS+=	erlang-ezlib>=1.0.4:../../devel/erlang-ezlib
+DEPENDS+=	erlang-fast_tls>=1.0.21:../../security/erlang-fast_tls
+DEPENDS+=	erlang-fast_xml>=1.1.29:../../textproc/erlang-fast_xml
+DEPENDS+=	erlang-fast_yaml>=1.0.13:../../textproc/erlang-fast_yaml
+DEPENDS+=	erlang-iconv>=1.0.7:../../converters/erlang-iconv
 DEPENDS+=	erlang-jiffy>=0.14.8:../../textproc/erlang-jiffy
 DEPENDS+=	erlang-jose>=1.8.4:../../security/erlang-jose
 DEPENDS+=	erlang-lager>=3.4.2.:../../sysutils/erlang-lager
-DEPENDS+=	erlang-luerl>=0.2:../../lang/erlang-luerl
-DEPENDS+=	erlang-p1_mysql>=1.0.4:../../databases/erlang-p1_mysql
+DEPENDS+=	erlang-luerl>=0.3:../../lang/erlang-luerl
+DEPENDS+=	erlang-p1_mysql>=1.0.5:../../databases/erlang-p1_mysql
 DEPENDS+=	erlang-p1_oauth2>=0.6.2:../../security/erlang-p1_oauth2
-DEPENDS+=	erlang-p1_pgsql>=1.1.4:../../databases/erlang-p1_pgsql
-DEPENDS+=	erlang-p1_utils>=1.0.10:../../misc/erlang-p1_utils
-DEPENDS+=	erlang-stringprep>=1.0.10:../../textproc/erlang-stringprep
-DEPENDS+=	erlang-stun>=1.0.20:../../net/erlang-stun
-DEPENDS+=	erlang-xmpp>=1.1.19:../../net/erlang-xmpp
+DEPENDS+=	erlang-p1_pgsql>=1.1.5:../../databases/erlang-p1_pgsql
+DEPENDS+=	erlang-p1_utils>=1.0.11:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-stringprep>=1.0.11:../../textproc/erlang-stringprep
+DEPENDS+=	erlang-stun>=1.0.21:../../net/erlang-stun
+DEPENDS+=	erlang-xmpp>=1.1.20:../../net/erlang-xmpp
 
 GNU_CONFIGURE=		yes
 USE_GCC_RUNTIME=	yes
@@ -39,14 +38,17 @@ USE_TOOLS+=		bash:run gmake patch
 
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--enable-system-deps
-CONFIGURE_ARGS+=	--enable-graphics
 CONFIGURE_ARGS+=	--enable-iconv
 CONFIGURE_ARGS+=	--enable-mysql
 CONFIGURE_ARGS+=	--enable-odbc
 CONFIGURE_ARGS+=	--enable-pam
 CONFIGURE_ARGS+=	--enable-pgsql
+CONFIGURE_ARGS+=	--enable-redis
+CONFIGURE_ARGS+=	--enable-sip
+CONFIGURE_ARGS+=	--enable-stun
 CONFIGURE_ARGS+=	--enable-zlib
 CONFIGURE_ARGS+=	--enable-user=${EJABBERD_USER}
+CONFIGURE_ARGS+=	--enable-group=${EJABBERD_GROUP}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 
 MAKE_ENV+=		USE_GLOBAL_DEPS=true
