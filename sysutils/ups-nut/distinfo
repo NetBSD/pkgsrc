@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2015/11/10 08:52:38 mrg Exp $
+$NetBSD: distinfo,v 1.31 2018/03/28 06:23:34 mrg Exp $
 
 SHA1 (nut-2.6.5.tar.gz) = 320debe11df91f04e32824694d0c89a020677f71
 RMD160 (nut-2.6.5.tar.gz) = d6e6acd4696e3c3f8c0ecd998f8676a8625decb9
@@ -7,3 +7,4 @@ Size (nut-2.6.5.tar.gz) = 2038832 bytes
 SHA1 (patch-aa) = 48110f378518edb43a653753eb4ef6ea28344c62
 SHA1 (patch-ab) = 44988118570714ab2c3fffdd75909c2255b94fa6
 SHA1 (patch-drivers_hidparser.c) = c71d84bbf3140db1f82ef155fdf5afec79cbd38d
+SHA1 (patch-drivers_libusb.c) = 4e75bc13123a37aa2a2b5497d51605f88b0c5464
