@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/04/22 13:58:34 fhajny Exp $
+$NetBSD: distinfo,v 1.5 2018/03/28 21:50:16 fhajny Exp $
 
-SHA1 (sqlite3-1.1.5.tar.gz) = 346edafb0e111804541cffdb9439bd75412e1328
-RMD160 (sqlite3-1.1.5.tar.gz) = beb425e249c9019c39abb3d02ba1a49dc6ca1e46
-SHA512 (sqlite3-1.1.5.tar.gz) = 894f39ba0760d15c4adf396d277cc30414c28acbc62135395af6939f769cab9237e836d5c3dcb5250c41917bec3db577902c01dbad1d2600480b3647c3c61c30
-Size (sqlite3-1.1.5.tar.gz) = 1833901 bytes
+SHA1 (sqlite3-1.1.6.tar.gz) = 0ba88c157e0c8631ae826aab54bf5418b2da8740
+RMD160 (sqlite3-1.1.6.tar.gz) = 00188bfcc8872e0dd424bf4cf32c30442b58566e
+SHA512 (sqlite3-1.1.6.tar.gz) = f3781c186f4f677340bf752884559e9afe745726b6e8dfeb8b701ab34a5e58af0e7dba8bd852443f44fac874a1af66970ea29b044ff2f0cfbbeafbb4996cdc8d
+Size (sqlite3-1.1.6.tar.gz) = 1834834 bytes
