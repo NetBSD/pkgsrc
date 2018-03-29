@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1587 2018/03/28 21:51:17 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1588 2018/03/29 03:18:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2139,3 +2139,16 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/drupal7 to 7.58 [maya 2018-03-28]
 	Updated databases/erlang-sqlite3 to 1.1.6 [fhajny 2018-03-28]
 	Updated chat/ejabberd to 18.03 [fhajny 2018-03-28]
+	Updated lang/ruby24-base to 2.4.4 [taca 2018-03-29]
+	Updated lang/ruby24 to 2.4.4 [taca 2018-03-29]
+	Updated lang/ruby25-base to 2.5.1 [taca 2018-03-29]
+	Updated lang/ruby25 to 2.5.1 [taca 2018-03-29]
+	Updated lang/ruby23-base to 2.3.7 [taca 2018-03-29]
+	Updated lang/ruby23 to 2.3.7 [taca 2018-03-29]
+	Updated lang/ruby22-base to 2.2.10 [taca 2018-03-29]
+	Updated lang/ruby22 to 2.2.10 [taca 2018-03-29]
+	Updated devel/ruby-mode to 2.5.1 [taca 2018-03-29]
+	Updated databases/ruby-gdbm to 2.4.4 [taca 2018-03-29]
+	Updated devel/ruby-fiddle to 2.4.4 [taca 2018-03-29]
+	Updated devel/ruby-readline to 2.4.4 [taca 2018-03-29]
+	Updated x11/ruby-tk to 2.3.7 [taca 2018-03-29]
