@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1588 2018/03/29 03:18:52 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1589 2018/03/29 11:08:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2152,3 +2152,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-fiddle to 2.4.4 [taca 2018-03-29]
 	Updated devel/ruby-readline to 2.4.4 [taca 2018-03-29]
 	Updated x11/ruby-tk to 2.3.7 [taca 2018-03-29]
+	Updated security/openssl to 1.0.2o [wiz 2018-03-29]
