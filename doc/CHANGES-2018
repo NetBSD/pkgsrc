@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1590 2018/03/29 15:31:44 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1591 2018/03/29 16:23:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2154,3 +2154,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/ruby-tk to 2.3.7 [taca 2018-03-29]
 	Updated security/openssl to 1.0.2o [wiz 2018-03-29]
 	Updated lang/python36 to 3.6.5 [adam 2018-03-29]
+	Updated lang/php71 to 7.1.16 [taca 2018-03-29]
+	Updated lang/php72 to 7.2.4 [taca 2018-03-29]
+	Updated lang/php70 to 7.0.29 [taca 2018-03-29]
