@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.15 2017/05/21 07:52:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/03/29 18:08:27 adam Exp $
 bin/pt2to3${PYVERSSUFFIX}
 bin/ptdump${PYVERSSUFFIX}
 bin/ptrepack${PYVERSSUFFIX}
 bin/pttree${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/entry_points.txt
-${PYSITELIB}/${EGG_FILE}/not-zip-safe
-${PYSITELIB}/${EGG_FILE}/requires.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/tables/__init__.py
 ${PYSITELIB}/tables/__init__.pyc
 ${PYSITELIB}/tables/__init__.pyo
