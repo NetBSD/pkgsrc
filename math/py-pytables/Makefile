@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2017/05/21 07:52:55 adam Exp $
+# $NetBSD: Makefile,v 1.37 2018/03/29 18:08:27 adam Exp $
 
 DISTNAME=	tables-3.4.2
 PKGNAME=	${PYPKGPREFIX}-py${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tables/}
 
@@ -10,10 +11,10 @@ HOMEPAGE=	http://www.pytables.org/
 COMMENT=	Database package for large amounts of data
 LICENSE=	modified-bsd
 
+PYSETUPBUILDARGS+=	--blosc=${BUILDLINK_PREFIX.blosc}
 PYSETUPBUILDARGS+=	--bzip2=${BUILDLINK_PREFIX.bzip2}
 PYSETUPBUILDARGS+=	--hdf5=${BUILDLINK_PREFIX.hdf5}
 PYSETUPBUILDARGS+=	--lzo=${BUILDLINK_PREFIX.lzo}
-PYSETUPINSTALLARGS=	${PYSETUPBUILDARGS}
 
 DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 DEPENDS+=	${PYPKGPREFIX}-numexpr>=2.0:../../math/py-numexpr
@@ -28,12 +29,13 @@ post-install:
 		mv pttree pttree${PYVERSSUFFIX}
 
 do-test:
-	(cd ${WRKSRC}/tables/tests && ${PYTHONBIN} test_all.py)
+	cd ${WRKSRC}/tables/tests && ${PYTHONBIN} test_all.py
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
+.include "../../devel/blosc/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
