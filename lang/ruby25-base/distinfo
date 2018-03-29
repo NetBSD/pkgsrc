@@ -1,13 +1,9 @@
-$NetBSD: distinfo,v 1.5 2018/02/19 16:47:17 taca Exp $
+$NetBSD: distinfo,v 1.6 2018/03/29 03:06:57 taca Exp $
 
-SHA1 (ruby-2.5.0.tar.bz2) = 827b9a3bcffa86d1fc9ed96d403cb9dc37731688
-RMD160 (ruby-2.5.0.tar.bz2) = e09d8b3f89d3b494231026cf1295c5bf5da794e5
-SHA512 (ruby-2.5.0.tar.bz2) = 8f6fdf6708e7470f55bc009db2567cd8d4e633ad0678d83a015441ecf5b5d88bd7da8fb8533a42157ff83b74d00b6dc617d39bbb17fc2c6c12287a1d8eaa0f2c
-Size (ruby-2.5.0.tar.bz2) = 13955820 bytes
-SHA1 (rubygems-276-for-ruby25.patch) = 3fe8a6a0307ea2e3f029a0dc5f8113583ccbb241
-RMD160 (rubygems-276-for-ruby25.patch) = 8177f1c9a7900b0a797b563be0e51c37f03962d8
-SHA512 (rubygems-276-for-ruby25.patch) = 83db7e4cc2c9b4f793cc9ecf1a2c3b37c55ca7dff6515ca7e6f4b5d797d3fa111b11b1c8eb11578c05078c61d4d37198e5ee382f4d9f910a01283dbb74432b7d
-Size (rubygems-276-for-ruby25.patch) = 79238 bytes
+SHA1 (ruby-2.5.1.tar.bz2) = 251fdb5ac10783b036fe923aa7986be582062361
+RMD160 (ruby-2.5.1.tar.bz2) = a4cd4e9b38103d65da2954681d5d0c34b17b69ae
+SHA512 (ruby-2.5.1.tar.bz2) = 82e799ecf7257a9f5fe8691c50a478b0f91bd4bdca50341c839634b0da5cd76c5556965cb9437264b66438434c94210c949fe9dab88cbc5b3b7fa34b5382659b
+Size (ruby-2.5.1.tar.bz2) = 14000644 bytes
 SHA1 (patch-configure) = 965f31ec3ae2fb91479f02cb3b19ea7518685718
 SHA1 (patch-ext_dbm_extconf.rb) = c998f8735db54b1ae2bc8b6caa359ce88bc7a45b
 SHA1 (patch-lib_mkmf.rb) = 75d2261a8282a00cd5f811a5e629302d1667207e
