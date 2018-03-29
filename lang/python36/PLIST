@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/12/19 09:37:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/03/29 15:28:16 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1351,8 +1351,8 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-9.0.1-py2.py3-none-any.whl
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-28.8.0-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-9.0.3-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-39.0.1-py2.py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -1629,6 +1629,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_pathbrowser.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_percolator.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_percolator.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_percolator.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_pyparse.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_pyparse.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_pyparse.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_query.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_query.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_query.pyo
