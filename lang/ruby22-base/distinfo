@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.23 2018/02/19 16:47:53 taca Exp $
+$NetBSD: distinfo,v 1.24 2018/03/29 03:11:58 taca Exp $
 
-SHA1 (ruby-2.2.9.tar.bz2) = 773ba9b51bde612866f656c4531f59660e2b0087
-RMD160 (ruby-2.2.9.tar.bz2) = 0973ec6a23ec909af7dec7c7152ca0a4e79fe959
-SHA512 (ruby-2.2.9.tar.bz2) = 2a8c8770fda20a22b79c9115b6f468f8e7ea1092c84a5089af7a3122163e5ad298b493e6637e4d93ba02d899d8a619c94064dda8ac98cf3b93f64f45d5401085
-Size (ruby-2.2.9.tar.bz2) = 13371232 bytes
+SHA1 (ruby-2.2.10.tar.bz2) = 72ee1dcfd96199d2c3092b77db7a7f439c0abd08
+RMD160 (ruby-2.2.10.tar.bz2) = b766f369db78f002c6bdf4d54592af6dbc7d0295
+SHA512 (ruby-2.2.10.tar.bz2) = f8ec96c2a5f4ecf22052ee0b1029989ded52d7bf5d41be24fef67e732e76f72119302240bca08f0547510a9cd29e941a32e263cad9c8a2bf80023d6bc97b2373
+Size (ruby-2.2.10.tar.bz2) = 13365461 bytes
 SHA1 (rubygems-276-for-ruby22.patch) = a705fc2290c062aebc907fddb0f83e2589356371
 RMD160 (rubygems-276-for-ruby22.patch) = 6d694ea1f5e1bf70143a4ad6924547302db262ec
 SHA512 (rubygems-276-for-ruby22.patch) = dfe12d7d2744cc6034cecd330258943bc6ae2bfd363375e2250b913c242c49b204de561e3aa6c55cd827fbe6e487d4f4038f72ec73fcc68c954d7d844743fa4d
