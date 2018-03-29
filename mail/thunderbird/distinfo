@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.198 2018/03/28 13:34:19 ryoon Exp $
+$NetBSD: distinfo,v 1.199 2018/03/29 10:19:30 wiz Exp $
 
 SHA1 (thunderbird-52.7.0.source.tar.xz) = 9030278d1fb4cd28a3a5e8830cfb98a8f0d45523
 RMD160 (thunderbird-52.7.0.source.tar.xz) = 5a10590da00d39da4cc3849d33f68fafc136f505
@@ -36,7 +36,7 @@ SHA1 (patch-mozilla_dom_media_platforms_ffmpeg_ffvpx_FFVPXRuntimeLinker.cpp) = 7
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp) = 375a2ebda12bd4633c7ae3d5c0e0b6de6a61bb0f
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginModuleChild.h) = 7009f9f2d01ca96f0ef6ca6f412485a4576f3072
 SHA1 (patch-mozilla_dom_system_OSFileConstants.cpp) = cff51ad6909e0ceaa401c2825ca538f4271ac786
-SHA1 (patch-mozilla_extensions_spellcheck_hunspell_glue_mozHunspell.cpp) = bd81d7b2b9e5517924ed515d31150893472dc770
+SHA1 (patch-mozilla_extensions_spellcheck_hunspell_glue_mozHunspell.cpp) = 07a8e9f7ea6ec5f667877ba78cf2c0b80c87f3f1
 SHA1 (patch-mozilla_gfx_cairo_libpixman_src_pixman-arm-neon-asm.S) = 14b213eff89b78ecfe3ff74a4daca13138defd2e
 SHA1 (patch-mozilla_gfx_gl_GLContextProviderGLX.cpp) = f8b7ad2c1d1b8f0a4492fc49d1e5884ec4bdf4c4
 SHA1 (patch-mozilla_gfx_graphite2_moz-gr-update.sh) = a74a7dd83de0d04aeb8694db5b49803f8db58235

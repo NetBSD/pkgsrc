@@ -1,4 +1,4 @@
-$NetBSD: patch-mozilla_extensions_spellcheck_hunspell_glue_mozHunspell.cpp,v 1.2 2017/04/27 13:32:40 ryoon Exp $
+$NetBSD: patch-mozilla_extensions_spellcheck_hunspell_glue_mozHunspell.cpp,v 1.3 2018/03/29 10:19:31 wiz Exp $
 
 --- mozilla/extensions/spellcheck/hunspell/glue/mozHunspell.cpp.orig	2017-04-14 04:53:08.000000000 +0000
 +++ mozilla/extensions/spellcheck/hunspell/glue/mozHunspell.cpp
@@ -8,7 +8,7 @@ $NetBSD: patch-mozilla_extensions_spellcheck_hunspell_glue_mozHunspell.cpp,v 1.2
  
 +  // load system hunspell dictionaries
 +  nsCOMPtr<nsIFile> hunDir;
-+  NS_NewNativeLocalFile(NS_LITERAL_CSTRING("%%LOCALBASE%%/share/hunspell"),
++  NS_NewNativeLocalFile(NS_LITERAL_CSTRING("@LOCALBASE@/share/hunspell"),
 +                        true, getter_AddRefs(hunDir));
 +  if (hunDir) {
 +      LoadDictionariesFromDir(hunDir);
