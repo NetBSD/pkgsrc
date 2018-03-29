@@ -1,13 +1,9 @@
-$NetBSD: distinfo,v 1.15 2018/02/19 16:46:26 taca Exp $
+$NetBSD: distinfo,v 1.16 2018/03/29 03:09:35 taca Exp $
 
-SHA1 (ruby-2.3.6.tar.bz2) = 07c3b66d544dd22c22fbae3f16cfb3eeb88b7b1e
-RMD160 (ruby-2.3.6.tar.bz2) = 664e027a6f172212ac8ebff3aa9b99df4e99906b
-SHA512 (ruby-2.3.6.tar.bz2) = bc3c7a115745a38e44bd91eb5637b1e412011c471d9749db7960185ef75737b944dd0e524f22432809649952ca7d93f46d458990e9cd2b0db5ca8abf4bc8ea99
-Size (ruby-2.3.6.tar.bz2) = 14429114 bytes
-SHA1 (rubygems-276-for-ruby23.patch) = 859334e0313e522826b28c4878611f34c46b7526
-RMD160 (rubygems-276-for-ruby23.patch) = c4d7718b7e4845811bf54917ca185ac49c75d6b3
-SHA512 (rubygems-276-for-ruby23.patch) = b2b363bec953aa4cfd17bd501753a621b829d5052780f33c6d74d813f128f703a4dd59db53ac59860aed6f741fd1a77b1ef173523f0f8b49b91282e5c8181961
-Size (rubygems-276-for-ruby23.patch) = 19953 bytes
+SHA1 (ruby-2.3.7.tar.bz2) = 3bb88965405da5e4de2432eeb445fffa8a66fb33
+RMD160 (ruby-2.3.7.tar.bz2) = cb8f83f773a0d1cfc8595148ac61aff253f6b67d
+SHA512 (ruby-2.3.7.tar.bz2) = e72754f7703f0706c4b0bccd053035536053451fe069a55427984cc0bc5692b86bd51c243c5f62f78527c66b08300d2e4aa19b73e6ded13d6020aa2450e66a7d
+Size (ruby-2.3.7.tar.bz2) = 14421177 bytes
 SHA1 (patch-configure) = 3737bf52082288b02e7382d71a322f4822c5abe4
 SHA1 (patch-ext_dbm_extconf.rb) = c998f8735db54b1ae2bc8b6caa359ce88bc7a45b
 SHA1 (patch-ext_openssl_ossl__ssl.c) = 24e794aae278da6204e29212d9e2add0b0119ea4
@@ -22,9 +18,5 @@ SHA1 (patch-lib_rubygems_install__update__options.rb) = 167cfeeb47842d20eaadd15e
 SHA1 (patch-lib_rubygems_installer.rb) = 37218b0ebf874095dce8b92bc30b5beb720e13a2
 SHA1 (patch-lib_rubygems_platform.rb) = 244a6698636012235882ae606ae3a3b4dffd3faf
 SHA1 (patch-lib_rubygems_specification.rb) = 46f517d6128d1366c0a302a7d04d2caec7ec948f
-SHA1 (patch-man_erb.1) = a03758f5ae399463b140fbac92c39e6ccc9d18bd
-SHA1 (patch-man_irb.1) = bf3cd43511ddc51a41dced16f2be1c9f8018d226
-SHA1 (patch-man_ri.1) = d8917e7a08bbc3eb41349570cc658d40c1b3463f
-SHA1 (patch-man_ruby.1) = c6d1de29fe470024b926226615d97d485dececd9
 SHA1 (patch-test_rubygems_test__gem.rb) = 47cc7af18fc5f30d6d695e70851cfaf3205a9266
 SHA1 (patch-tool_rbinstall.rb) = 159b657293029cb5bc096d7c23ae85fe05c88ba2
