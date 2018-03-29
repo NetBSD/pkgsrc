@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/01/18 09:00:17 markd Exp $
+$NetBSD: distinfo,v 1.4 2018/03/29 21:19:16 adam Exp $
 
-SHA1 (qtbase-everywhere-src-5.10.0.tar.xz) = 34fa3d4e7bb2b1545247a616190efaf74804db49
-RMD160 (qtbase-everywhere-src-5.10.0.tar.xz) = d6f9ab8526ebe50791b9b948930806dc8b3be73b
-SHA512 (qtbase-everywhere-src-5.10.0.tar.xz) = 8f832fb7bc5087df4b897cd23145e5350f03ca06e2fc5ccb11a7b998e4885c1b936c3e4b989c15fc076134a6a081a35efa37f402b5e8b85e2c780006641b2cdc
-Size (qtbase-everywhere-src-5.10.0.tar.xz) = 45851596 bytes
+SHA1 (qtbase-everywhere-src-5.10.1.tar.xz) = 234275f97ca401ae3df5e0c3d937e68056957bbe
+RMD160 (qtbase-everywhere-src-5.10.1.tar.xz) = b0587af8736bedc9b80ceb85f10ece64389a904c
+SHA512 (qtbase-everywhere-src-5.10.1.tar.xz) = abc8087bb7c5db2a668ba87cef67ab7ab9d884b770bce916b7fe7bf4e0a1fac47114eff50e15bd9efed66d63307d6aceed5cb097aa2ae5df98cffd11af8691ba
+Size (qtbase-everywhere-src-5.10.1.tar.xz) = 46024708 bytes
