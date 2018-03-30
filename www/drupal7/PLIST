@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2017/05/20 18:20:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.16.8.1 2018/03/30 11:14:01 bsiegert Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -67,6 +67,7 @@ share/drupal/includes/pager.inc
 share/drupal/includes/password.inc
 share/drupal/includes/path.inc
 share/drupal/includes/registry.inc
+share/drupal/includes/request-sanitizer.inc
 share/drupal/includes/session.inc
 share/drupal/includes/stream_wrappers.inc
 share/drupal/includes/tablesort.inc
