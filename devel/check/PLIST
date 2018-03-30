@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2013/10/03 14:48:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/03/30 19:16:55 schmonz Exp $
 include/check.h
 include/check_stdint.h
 info/check.info
@@ -8,10 +8,8 @@ man/man1/checkmk.1
 share/aclocal/check.m4
 share/doc/check/COPYING.LESSER
 share/doc/check/ChangeLog
-share/doc/check/ChangeLogOld
 share/doc/check/NEWS
 share/doc/check/README
-share/doc/check/SVNChangeLog
 share/doc/check/example/Makefile.am
 share/doc/check/example/README
 share/doc/check/example/configure.ac
