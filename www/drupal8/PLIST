@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.2.1 2018/03/02 21:23:28 spz Exp $
+@comment $NetBSD: PLIST,v 1.1.2.2 2018/03/30 11:14:01 bsiegert Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -2174,6 +2174,7 @@ share/drupal/core/lib/Drupal/Core/Routing/UrlGeneratorInterface.php
 share/drupal/core/lib/Drupal/Core/Routing/UrlGeneratorTrait.php
 share/drupal/core/lib/Drupal/Core/Routing/UrlMatcher.php
 share/drupal/core/lib/Drupal/Core/Routing/routing.api.php
+share/drupal/core/lib/Drupal/Core/Security/RequestSanitizer.php
 share/drupal/core/lib/Drupal/Core/Serialization/Yaml.php
 share/drupal/core/lib/Drupal/Core/Session/AccountInterface.php
 share/drupal/core/lib/Drupal/Core/Session/AccountProxy.php
