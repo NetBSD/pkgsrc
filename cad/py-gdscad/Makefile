@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2018/03/17 22:39:56 mef Exp $
+# $NetBSD: Makefile,v 1.3 2018/03/30 14:49:51 mef Exp $
 
 DISTNAME=	gdsCAD-0.4.5
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=     cad python
-CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hohlraum/}
+GITHUB_PROJECT=	gdsCAD
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pythonhosted.org/gdsCAD/
