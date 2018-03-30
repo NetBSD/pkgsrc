@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2017/04/27 13:27:57 ryoon Exp $
+# $NetBSD: options.mk,v 1.4 2018/03/30 18:28:32 chuck Exp $
 
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
 PKG_SUPPORTED_OPTIONS=			dbus xft2 svg xml gnutls
@@ -75,6 +75,7 @@ PKG_OPTIONS+=		gtk3
 .if !empty(PKG_OPTIONS:Mx11)
 
 CONFIGURE_ARGS+=	--with-x
+CONFIGURE_ARGS+=	--without-ns
 CONFIGURE_ARGS+=	--with-xpm
 CONFIGURE_ARGS+=	--with-jpeg
 CONFIGURE_ARGS+=	--with-tiff
