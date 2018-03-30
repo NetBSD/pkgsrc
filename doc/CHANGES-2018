@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1594 2018/03/30 19:17:01 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.1595 2018/03/30 22:10:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2160,3 +2160,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/php56 to 5.6.35 [taca 2018-03-30]
 	Updated lang/go to 1.10.1 [bsiegert 2018-03-30]
 	Updated devel/check to 0.12.0 [schmonz 2018-03-30]
+	Updated pkgtools/x11-links to 1.10 [wiz 2018-03-30]
