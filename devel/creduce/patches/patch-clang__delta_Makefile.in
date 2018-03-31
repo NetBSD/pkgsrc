@@ -1,8 +1,8 @@
-$NetBSD: patch-clang__delta_Makefile.in,v 1.1 2016/11/02 00:15:43 joerg Exp $
+$NetBSD: patch-clang__delta_Makefile.in,v 1.2 2018/03/31 20:09:10 joerg Exp $
 
---- clang_delta/Makefile.in.orig	2016-11-01 21:32:43.204473218 +0000
+--- clang_delta/Makefile.in.orig	2017-05-18 16:42:08.000000000 +0000
 +++ clang_delta/Makefile.in
-@@ -488,8 +488,6 @@ clang_delta_CXXFLAGS = \
+@@ -502,12 +502,9 @@ clang_delta_CXXFLAGS = \
  # libraries.  So probably, we could move `LLVMLDFLAGS' back to the definition
  # of `clang_delta_LDFLAGS'.  I'll do that later.
  clang_delta_LDADD = \
@@ -11,3 +11,7 @@ $NetBSD: patch-clang__delta_Makefile.in,v 1.1 2016/11/02 00:15:43 joerg Exp $
  	-lclangFrontendTool -lclangFrontend -lclangDriver -lclangSerialization \
  	-lclangCodeGen -lclangParse -lclangSema -lclangAnalysis \
  	-lclangRewriteFrontend -lclangRewrite -lclangAST -lclangBasic -lclangEdit -lclangLex \
+-	-lclangARCMigrate \
+ 	$(LLVMLIBS) \
+ 	$(CLANG_LDFLAGS) \
+ 	$(LLVMLDFLAGS)
