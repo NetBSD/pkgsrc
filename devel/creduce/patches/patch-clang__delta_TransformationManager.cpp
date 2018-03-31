@@ -1,60 +1,39 @@
-$NetBSD: patch-clang__delta_TransformationManager.cpp,v 1.1 2016/11/18 18:20:05 joerg Exp $
+$NetBSD: patch-clang__delta_TransformationManager.cpp,v 1.2 2018/03/31 20:09:10 joerg Exp $
 
---- clang_delta/TransformationManager.cpp.orig	2016-11-17 01:58:56.000000000 +0000
+--- clang_delta/TransformationManager.cpp.orig	2018-03-31 19:32:59.198705133 +0000
 +++ clang_delta/TransformationManager.cpp
-@@ -82,6 +82,16 @@ bool TransformationManager::initializeCo
- 
-   ClangInstance = new CompilerInstance();
-   assert(ClangInstance);
-+
-+  TargetOptions &TargetOpts = ClangInstance->getTargetOpts();
-+  PreprocessorOptions &PPOpts = ClangInstance->getPreprocessorOpts();
-+
-+  if (const char *env = getenv("CREDUCE_TARGET_TRIPLE")) {
-+    TargetOpts.Triple = std::string(env);
-+  } else {
-+    TargetOpts.Triple = LLVM_DEFAULT_TARGET_TRIPLE;
-+  }
-+  llvm::Triple Triple(TargetOpts.Triple);
-   
-   ClangInstance->createDiagnostics();
- 
-@@ -89,13 +99,13 @@ bool TransformationManager::initializeCo
-   InputKind IK = FrontendOptions::getInputKindForExtension(
-         StringRef(SrcFileName).rsplit('.').second);
-   if ((IK == IK_C) || (IK == IK_PreprocessedC)) {
--    Invocation.setLangDefaults(ClangInstance->getLangOpts(), IK_C);
-+    Invocation.setLangDefaults(ClangInstance->getLangOpts(), IK_C, Triple, PPOpts);
+@@ -99,18 +99,18 @@ bool TransformationManager::initializeCo
    }
-   else if ((IK == IK_CXX) || (IK == IK_PreprocessedCXX)) {
+   llvm::Triple T(TargetOpts.Triple);
+   CompilerInvocation &Invocation = ClangInstance->getInvocation();
+-  InputKind IK = FrontendOptions::getInputKindForExtension(
+-        StringRef(SrcFileName).rsplit('.').second);
+-  if ((IK == IK_C) || (IK == IK_PreprocessedC)) {
+-    Invocation.setLangDefaults(ClangInstance->getLangOpts(), IK_C, T, PPOpts);
++  InputKind::Language IK = FrontendOptions::getInputKindForExtension(
++        StringRef(SrcFileName).rsplit('.').second).getLanguage();
++  if (IK == InputKind::C) {
++    Invocation.setLangDefaults(ClangInstance->getLangOpts(), InputKind::C, T, PPOpts);
+   }
+-  else if ((IK == IK_CXX) || (IK == IK_PreprocessedCXX)) {
++  else if (IK == InputKind::CXX) {
      // ISSUE: it might cause some problems when building AST
      // for a function which has a non-declared callee, e.g., 
      // It results an empty AST for the caller. 
--    Invocation.setLangDefaults(ClangInstance->getLangOpts(), IK_CXX);
-+    Invocation.setLangDefaults(ClangInstance->getLangOpts(), IK_CXX, Triple, PPOpts);
+-    Invocation.setLangDefaults(ClangInstance->getLangOpts(), IK_CXX, T, PPOpts);
++    Invocation.setLangDefaults(ClangInstance->getLangOpts(), InputKind::CXX, T, PPOpts);
    }
-   else if(IK == IK_OpenCL) {
+-  else if(IK == IK_OpenCL) {
++  else if(IK == InputKind::OpenCL) {
      //Commandline parameters
-@@ -121,21 +131,13 @@ bool TransformationManager::initializeCo
-     CompilerInvocation::CreateFromArgs(Invocation,
+     std::vector<const char*> Args;
+     Args.push_back("-x");
+@@ -135,7 +135,7 @@ bool TransformationManager::initializeCo
                                         &Args[0], &Args[0] + Args.size(),
                                         ClangInstance->getDiagnostics());
--    Invocation.setLangDefaults(ClangInstance->getLangOpts(), IK_OpenCL);
-+    Invocation.setLangDefaults(ClangInstance->getLangOpts(), IK_OpenCL, Triple, PPOpts);
+     Invocation.setLangDefaults(ClangInstance->getLangOpts(),
+-                               IK_OpenCL, T, PPOpts);
++                               InputKind::OpenCL, T, PPOpts);
    }
    else {
      ErrorMsg = "Unsupported file type!";
-     return false;
-   }
- 
--  TargetOptions &TargetOpts = ClangInstance->getTargetOpts();
--
--  if (const char *env = getenv("CREDUCE_TARGET_TRIPLE")) {
--    TargetOpts.Triple = std::string(env);
--  } else {
--    TargetOpts.Triple = LLVM_DEFAULT_TARGET_TRIPLE;
--  }
--
-   TargetInfo *Target = 
-     TargetInfo::CreateTargetInfo(ClangInstance->getDiagnostics(),
-                                  ClangInstance->getInvocation().TargetOpts);
