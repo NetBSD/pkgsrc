@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/03/23 10:20:07 adam Exp $
+# $NetBSD: Makefile,v 1.2 2018/03/31 20:10:08 joerg Exp $
 
 DISTNAME=	path.py-11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jaraco/path.py
 COMMENT=	Module wrapper for os.path
 LICENSE=	mit
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
 TEST_DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
