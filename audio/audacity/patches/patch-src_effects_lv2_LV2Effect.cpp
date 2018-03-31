@@ -1,10 +1,18 @@
-$NetBSD: patch-src_effects_lv2_LV2Effect.cpp,v 1.1 2018/02/08 07:28:58 mrg Exp $
+$NetBSD: patch-src_effects_lv2_LV2Effect.cpp,v 1.2 2018/03/31 20:08:12 joerg Exp $
 
 GCC 6 wants std namespace, found via <cmath>.
 
 --- src/effects/lv2/LV2Effect.cpp.orig	2016-01-13 14:31:24.000000000 +0000
-+++ src/effects/lv2/LV2Effect.cpp	2018-02-07 10:20:15.597051982 +0000
-@@ -562,13 +562,13 @@
++++ src/effects/lv2/LV2Effect.cpp
+@@ -44,6 +44,7 @@
+ #include "lv2/lv2plug.in/ns/ext/buf-size/buf-size.h"
+ #include "lv2/lv2plug.in/ns/ext/parameters/parameters.h"
+ #include "lv2/lv2plug.in/ns/extensions/ui/ui.h"
++#include <cmath>
+ 
+ #if defined(__WXGTK__)
+ #include <gtk/gtk.h>
+@@ -562,13 +563,13 @@ bool LV2Effect::SetHost(EffectHostInterf
        lilv_scale_points_free(points);
  
        // Collect the value and range info
