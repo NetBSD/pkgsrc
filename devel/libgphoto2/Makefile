@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2018/02/27 23:56:08 khorben Exp $
+# $NetBSD: Makefile,v 1.69 2018/03/31 22:43:01 wiz Exp $
 
 DISTNAME=	libgphoto2-2.5.8
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 EXTRACT_SUFX=	.tar.bz2
@@ -43,7 +43,7 @@ post-install:
 .include "../../devel/libltdl/buildlink3.mk"
 .if ${OPSYS} != "SunOS"
 PLIST.libusb=	yes
-.include "../../mk/libusb.buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
 .endif
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
