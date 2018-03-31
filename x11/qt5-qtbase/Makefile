@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2018/03/12 11:15:56 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2018/03/31 20:11:37 joerg Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	C++ X GUI toolkit
 
 .include "../../x11/qt5-qtbase/Makefile.common"
@@ -131,7 +131,6 @@ SUBST_STAGE.opt=	pre-configure
 SUBST_MESSAGE.opt=	Removing some Qt5 default compiler flags.
 SUBST_FILES.opt=	mkspecs/common/gcc-base.conf
 SUBST_SED.opt=		-e 's,-O[s23],,'
-SUBST_SED.opt+=		-e 's,-fvisibility=hidden,,'
 
 SUBST_CLASSES.SunOS+=	vscript
 SUBST_STAGE.vscript=	pre-configure
