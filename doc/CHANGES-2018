@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1595 2018/03/30 22:10:27 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1596 2018/03/31 06:06:11 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2161,3 +2161,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/go to 1.10.1 [bsiegert 2018-03-30]
 	Updated devel/check to 0.12.0 [schmonz 2018-03-30]
 	Updated pkgtools/x11-links to 1.10 [wiz 2018-03-30]
+	Updated textproc/p5-highlight to 3.18nb4 [schmonz 2018-03-31]
