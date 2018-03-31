@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1597 2018/03/31 15:14:59 he Exp $
+$NetBSD: CHANGES-2018,v 1.1598 2018/03/31 19:08:05 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2163,3 +2163,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/x11-links to 1.10 [wiz 2018-03-30]
 	Updated textproc/p5-highlight to 3.18nb4 [schmonz 2018-03-31]
 	Updated lang/llvm to 5.0.1nb2 [he 2018-03-31]
+	Updated devel/woboq_codebrowser to 2.1 [joerg 2018-03-31]
