@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2017/09/09 22:46:57 joerg Exp $
+$NetBSD: distinfo,v 1.34 2018/03/31 20:10:49 joerg Exp $
 
 SHA1 (freeradius-server-3.0.15.tar.bz2) = f651142a31b514fc80d888fe8ab5040cbfdd546e
 RMD160 (freeradius-server-3.0.15.tar.bz2) = 46d2d491b71516c6db7659e46e1ec44c7fbf9d1f
@@ -11,4 +11,4 @@ SHA1 (patch-main_util.c) = b9cefdb9bc30df0906184e8c0bb883e5258767c3
 SHA1 (patch-rlm_krb5_configure) = e97f0efe85c449d3b8a9aa450b6b7d1d0e4c6b89
 SHA1 (patch-rlm_perl_configure) = 577d6f0df7322ee12a99aafcdcc2d0b40e89eb69
 SHA1 (patch-rlm_yubikey_configure) = ea62cc0e87da014befbd0ad79f68dc852dc0f254
-SHA1 (patch-src_lib_udpfromto.c) = 28322d32ed95c40b59d26072261ea29f5cd2e4da
+SHA1 (patch-src_lib_udpfromto.c) = c8fce29e2b481820f1cc2196577f7d38bb549e1c
