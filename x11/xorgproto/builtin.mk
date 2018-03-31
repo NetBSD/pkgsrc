@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2018/03/26 02:33:41 mrg Exp $
+# $NetBSD: builtin.mk,v 1.4 2018/03/31 11:33:52 maya Exp $
 
 BUILTIN_PKG:=	xorgproto
 
@@ -56,7 +56,7 @@ BUILTIN_VERSION_SCRIPT.${BUILTIN_PKG}?= ${SED} -n \
 	-e 's/Version: 7\.0\.22/2016.1/p'
 
 .for _p in ${PRE_XORGPROTO_LIST}
-PKGCONFIG_FILE.xorgproto=	${X11BASE}/lib/pkgconfig/${_p}.pc
+PKGCONFIG_FILE.xorgproto+=	${X11BASE}/lib/pkgconfig/${_p}.pc
 PKGCONFIG_FILE.xorgproto+=	${X11BASE}/lib${LIBABISUFFIX}/pkgconfig/${_p}.pc
 PKGCONFIG_FILE.xorgproto+=	${X11BASE}/share/pkgconfig/${_p}.pc
 .endfor
