@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/18 01:26:58 schmonz Exp $
-${PERL5_SUB_INSTALLVENDORARCH}/auto/highlight/highlight.so
+@comment $NetBSD: PLIST,v 1.2 2018/03/31 06:05:40 schmonz Exp $
+${PERL5_SUB_INSTALLVENDORARCH}/auto/highlight/highlight.${PERL_DLEXT}
 ${PERL5_SUB_INSTALLVENDORARCH}/highlight.pm

@@ -1,4 +1,4 @@
-$NetBSD: patch-examples_swig_makefile,v 1.2 2017/11/30 15:13:19 wiz Exp $
+$NetBSD: patch-examples_swig_makefile,v 1.3 2018/03/31 06:05:40 schmonz Exp $
 
 Use pkgsrc-specified compiler and flags.
 
@@ -27,7 +27,7 @@ Use pkgsrc-specified compiler and flags.
 -	${CXX} ${CFLAGS} -c highlight_wrap.cpp ${LUA_CFLAGS} ${PERL_INC} -I${HL_INC} 
 -	${CXX} -shared -s highlight_wrap.o  -L${HL_SRC} -lhighlight ${LUA_LIBS} -o highlight.so
 +	${CXX} ${CFLAGS} ${LDFLAGS} -c highlight_wrap.cpp ${LUA_CFLAGS} ${PERL_INC} -I${HL_INC} 
-+	${CXX} ${CXXFLAGS} ${LDFLAGS} -shared -s highlight_wrap.o  -L${HL_SRC} -lhighlight ${LUA_LIBS} -o highlight.so
++	${CXX} ${CXXFLAGS} ${LDFLAGS} -shared -s highlight_wrap.o  -L${HL_SRC} -lhighlight ${LUA_LIBS} -lperl -o highlight.so
  
  php: lib-stamp
  	swig -c++ -php -o highlight_wrap.cpp highlight.i
