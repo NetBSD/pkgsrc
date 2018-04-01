@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2016/07/09 06:38:17 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2018/04/01 00:16:00 ryoon Exp $
 #
 
 DISTNAME=		shinonome-0.9.11-src
 PKGNAME=		ja-shinonome-0.9.11
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		fonts x11 japanese
 MASTER_SITES=		http://openlab.ring.gr.jp/efont/dist/shinonome/
 EXTRACT_SUFX=		.tar.bz2
@@ -14,7 +14,7 @@ COMMENT=		12, 14, 16 dots bitmap fonts for Japanese, iso8859-1
 LICENSE=		public-domain
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gawk gmake mkfontdir perl gzip
+USE_TOOLS+=		bdftopcf gawk gmake mkfontdir perl gzip
 FONTS_DIRS.x11+=	${PREFIX}/share/fonts/X11/local
 FONTDIR=		${PREFIX}/share/fonts/X11/local
 FOUNDRY=		Misc
