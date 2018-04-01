@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2018/03/12 11:15:47 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2018/04/01 04:27:29 markd Exp $
 
 DISTNAME=	khtml-${KF5VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -32,6 +32,7 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/khtmlrc \
 		${PKG_SYSCONFDIR}/xdg/khtmlrc
 
+.include "../../devel/gperf/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/kjs/buildlink3.mk"
