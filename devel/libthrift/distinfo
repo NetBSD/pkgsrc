@@ -1,29 +1,7 @@
-$NetBSD: distinfo,v 1.16 2017/09/16 12:30:28 tnn Exp $
+$NetBSD: distinfo,v 1.17 2018/04/01 10:21:28 wiz Exp $
 
-SHA1 (thrift-0.7.0.tar.gz) = b8f6877bc75878984355da4efe171ad99ff05b6a
-RMD160 (thrift-0.7.0.tar.gz) = d9db8ff077347134101cd017e086511c4317b052
-SHA512 (thrift-0.7.0.tar.gz) = 43f2ef8da3d7dad2d790401da78a2bc9bc5e1d256f05ba4c541ea82b6d4546ee2878ae90c94916ade57a83de25f2ad215ef05339d411570ab0892db5386b640c
-Size (thrift-0.7.0.tar.gz) = 2248326 bytes
-SHA1 (patch-ac) = 84032447dc90b7071d8f54fc56dd30584fbc8116
-SHA1 (patch-compiler_cpp_src_generate_t__rb__generator.cc) = 1b2e71c38fdf3211be65bc199f348fcbadfe805c
-SHA1 (patch-compiler_cpp_src_thrifty.yy) = 69ccc48794edf8358ab39950794e1c542641fb3f
-SHA1 (patch-lib__rb__ext__extconf.rb) = 627725567f6d78070e28d430ebe7ac96910df8ec
-SHA1 (patch-lib__rb__setup.rb) = 9b189208c01a654ff633756d8800fb327ba7a9b7
-SHA1 (patch-lib_cpp_src_async_TAsyncBufferProcessor.h) = 2387b52d1dcd01637bd0853743ede85dd4a3357b
-SHA1 (patch-lib_cpp_src_async_TAsyncChannel.cpp) = dd3d65fd83f6ab4ebbc81f7e6ea98b05ef13592e
-SHA1 (patch-lib_cpp_src_async_TAsyncChannel.h) = 6a9e25f84d9d1d8b1192c5f3b059ea7a39c8396a
-SHA1 (patch-lib_cpp_src_async_TAsyncProcessor.h) = 15c9b3534276fc6b75f5f3c7978ad7e914b38f61
-SHA1 (patch-lib_cpp_src_async_TAsyncProtocolProcessor.cpp) = 70b06199d2908c7de3b0b18594e9492480f1a031
-SHA1 (patch-lib_cpp_src_async_TAsyncProtocolProcessor.h) = 49fd58352134e684e92bb9a70c423fe54b2688b5
-SHA1 (patch-lib_cpp_src_async_TEvhttpServer.cpp) = 84558ef95935914cccb74405031bc532c9b180ad
-SHA1 (patch-lib_cpp_src_concurrency_FunctionRunner.h) = 8e15b54872ad0bb59276d25d7200517382a9fcb4
-SHA1 (patch-lib_cpp_src_concurrency_ThreadManager.h) = e97795f632ed98c19172fa25ff6a83a0c9580ff2
-SHA1 (patch-lib_cpp_src_protocol_TBase64Utils.cpp) = 27ad47af3f263e7f0d2a8bef397a8e35e3c0bd82
-SHA1 (patch-lib_cpp_src_server_TNonblockingServer.cpp) = 1f94bcad637279b151b8c0830854c5fc72919e68
-SHA1 (patch-lib_cpp_src_transport_TFileTransport.cpp) = e3d68d0287388dfd81c94555c3437fa8aafcea06
-SHA1 (patch-lib_cpp_src_transport_TSSLSocket.cpp) = 5b0ee2a0d276affc4ead52492e0100f4c0665550
-SHA1 (patch-lib_cpp_src_transport_TServerSocket.cpp) = dc54a0991f5918de04da73f184c551d7a2bd57ed
-SHA1 (patch-lib_cpp_test_Benchmark.cpp) = 65a3a873b33f7290551c535b4ef8c9a109aae3e1
-SHA1 (patch-lib_erl_Makefile.in) = 74bfbc9f191f685cb175801a495ae4af0eaa6e69
-SHA1 (patch-lib_php_src_ext_thrift__protocol_php__thrift__protocol.cpp) = 6c1f1add0bfc652662efa59fc47d15e91a4d6a2b
-SHA1 (patch-lib_rb_Makefile.in) = 4478e76bafded2725ad1146bfc6d3e5855f37d41
+SHA1 (thrift-0.11.0.tar.gz) = bdf159ef455c6d3c71e95dba15a6d05f6aaca2a9
+RMD160 (thrift-0.11.0.tar.gz) = 133be0130b1bc0cce1aaa1b6a291bbfd8cbb32a6
+SHA512 (thrift-0.11.0.tar.gz) = c0e00d542b1bd6cad317dfa48c547742eb42eacc2517f65d8e8478eb650138c3233e537f6037c99433857e96737381b3c091ed08dd74ef7f2fe3aec02cd5de2b
+Size (thrift-0.11.0.tar.gz) = 3667154 bytes
+SHA1 (patch-configure) = 41111e61809e382aaf0b0c6cce410d659365ee16
