@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2018/03/12 11:15:28 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2018/04/01 03:48:57 markd Exp $
 
 DISTNAME=	ktexteditor-${KF5VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -11,6 +11,14 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 .include "../../meta-pkgs/kf5/Makefile.common"
 
 USE_TOOLS+=	msgmerge pkg-config perl
+
+CMAKE_ARGS+=	-DKAUTH_DBUS_DIR=${PREFIX}/share/examples/ktexteditor
+
+CONF_FILES+=	${PREFIX}/share/examples/ktexteditor/org.kde.ktexteditor.katetextbuffer.conf \
+		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.ktexteditor.katetextbuffer.conf
+
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/dbus-1/system.d
+INSTALLATION_DIRS+=	share/examples/ktexteditor
 
 .include "../../devel/libgit2/buildlink3.mk"
 .include "../../devel/kparts/buildlink3.mk"
