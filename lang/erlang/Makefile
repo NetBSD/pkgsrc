@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2017/12/13 14:45:20 fhajny Exp $
+# $NetBSD: Makefile,v 1.84 2018/04/01 20:29:38 fhajny Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}
 PKGNAME=		${DISTNAME:S/otp_src_/erlang-/}
@@ -74,6 +74,9 @@ CONFIGURE_ARGS.DragonFly+=	--disable-sctp
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--enable-kernel-poll
 .endif
+
+CHECK_RELRO_SKIP+=	lib/erlang/lib/megaco-${VERSION.megaco}/priv/lib/megaco_flex_scanner_drv.so
+CHECK_RELRO_SKIP+=	lib/erlang/lib/megaco-${VERSION.megaco}/priv/lib/megaco_flex_scanner_drv_mt.so
 
 .include "options.mk"
 
