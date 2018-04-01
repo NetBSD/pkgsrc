@@ -1,0 +1,34 @@
+$NetBSD: patch-configure,v 1.1 2018/04/01 10:21:28 wiz Exp $
+
+Fix broken BOOST_LIB_DIR detection.
+Fix unportable test(1) operator.
+
+--- configure.orig	2017-12-03 19:12:21.000000000 +0000
++++ configure
+@@ -18423,7 +18423,7 @@ fi
+ 
+ 
+   if test "x$succeeded" = "xyes" ; then
+-    BOOST_LIB_DIR=$(echo "$BOOST_LDFLAGS" | sed -e 's/^\-L//')
++    BOOST_LIB_DIR=$PREFIX/lib
+ 
+     BOOST_CHRONO_LDADD=$(echo "$BOOST_LIB_DIR/libboost_chrono.a")
+ 
+@@ -19791,7 +19791,7 @@ else
+ $as_echo "yes" >&6; }
+ 	mono_2_11=yes
+ fi
+-  if test "$mono_2_11" == "yes"; then
++  if test "$mono_2_11" = "yes"; then
+     # Extract the first word of "mcs", so it can be a program name with args.
+ set dummy mcs; ac_word=$2
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+@@ -23479,7 +23479,7 @@ $as_echo "yes" >&6; }
+ 
+           # Test whether OPTLINK is used by trying if DMD accepts -L/? without
+           # erroring out.
+-          if test "$success" == "yes" ; then
++          if test "$success" = "yes" ; then
+             { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether DMD uses OPTLINK" >&5
+ $as_echo_n "checking whether DMD uses OPTLINK... " >&6; }
+             echo "Running \”$DMD -L/? configtest_ax_dmd.d\"" >&5
