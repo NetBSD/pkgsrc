@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.9 2016/11/20 13:00:08 taca Exp $
+# $NetBSD: options.mk,v 1.10 2018/04/01 13:49:20 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libthrift
-PKG_SUPPORTED_OPTIONS=	csharp java erlang python perl php ruby
+PKG_SUPPORTED_OPTIONS=	perl python # csharp java erlang php ruby
 
 .include "../../mk/bsd.options.mk"
 
