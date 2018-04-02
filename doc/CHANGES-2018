@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1604 2018/04/02 08:38:53 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.1605 2018/04/02 08:45:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2170,3 +2170,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/libthrift to 0.11.0 [wiz 2018-04-01]
 	Updated net/get_iplayer to 3.13 [prlw1 2018-04-02]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2018Q1 branch [jperkin 2018-04-02]
+	Added audio/py-audio version 0.2.11 [wiz 2018-04-02]
