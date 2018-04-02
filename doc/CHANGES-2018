@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1607 2018/04/02 12:43:17 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1608 2018/04/02 13:04:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2174,3 +2174,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added security/keepassxc version 2.3.0 [wiz 2018-04-02]
 	Updated graphics/jpegoptim to 1.4.5 [adam 2018-04-02]
 	Updated archivers/zstd to 1.3.4 [adam 2018-04-02]
+	Updated www/py-aiohttp to 3.1.1 [adam 2018-04-02]
+	Updated www/py-httplib2 to 0.11.3 [adam 2018-04-02]
