@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.15 2018/02/02 17:33:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2018/04/02 16:26:04 spz Exp $
 
-PKGREVISION= 4
 .include "../../devel/ncurses/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/ncurses/ncursesw/}
