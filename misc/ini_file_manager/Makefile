@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2016/12/12 00:40:17 marino Exp $
+# $NetBSD: Makefile,v 1.2 2018/04/02 09:30:06 wiz Exp $
 
 PKGNAME=	ini_file_manager-${IFM_VERSION}
 CATEGORIES=	misc
 MASTER_SITES=	http://sourceforge.net/projects/${SFPATH}/
 DISTFILES=	ini-files-${IFM_VERSION}.zip
 
-MAINTAINER=	draco@marino.st
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/ini-files
 COMMENT=	Ini configuration file reader and manipulator package for Ada
 LICENSE=	mit
