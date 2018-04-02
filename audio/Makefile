@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.548 2018/02/28 22:10:39 wiz Exp $
+# $NetBSD: Makefile,v 1.549 2018/04/02 08:45:30 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -376,6 +376,7 @@ SUBDIR+=	portaudio-devel
 SUBDIR+=	pulseaudio
 SUBDIR+=	py-acoustid
 SUBDIR+=	py-ao
+SUBDIR+=	py-audio
 SUBDIR+=	py-audioread
 SUBDIR+=	py-audiotools
 SUBDIR+=	py-beets
