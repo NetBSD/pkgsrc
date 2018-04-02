@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18206 2018/04/01 21:30:41 wiz Exp $
+$NetBSD: TODO,v 1.18207 2018/04/02 12:43:17 adam Exp $
 
 Suggested new packages
 ======================
@@ -903,7 +903,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o joe-4.5
 	o jools-1.0
 	o jove-4.16.0.73
-	o jpegoptim-1.4.5
 	o jpilot-syncmal-0.81
 	o kadu-0.11.1
 	o kaffe-1.1.9
