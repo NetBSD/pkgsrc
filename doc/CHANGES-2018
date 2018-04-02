@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1610 2018/04/02 13:14:50 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1611 2018/04/02 13:20:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2181,3 +2181,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated filesystems/libntfs to 2017.3.23 [adam 2018-04-02]
 	Updated filesystems/fuse-ntfs-3g to 2017.3.23 [adam 2018-04-02]
 	Updated sysutils/ntfsprogs to 2017.3.23 [adam 2018-04-02]
+	Updated security/py-cryptography to 2.2.2 [adam 2018-04-02]
+	Updated security/py-cryptography_vectors to 2.2.2 [adam 2018-04-02]
