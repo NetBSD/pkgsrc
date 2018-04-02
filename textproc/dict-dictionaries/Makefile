@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/25 06:55:45 asau Exp $
+# $NetBSD: Makefile,v 1.13 2018/04/02 17:05:18 chuck Exp $
 
 DISTNAME=	#
 PKGNAME=	dict-data-1.8.0
@@ -61,7 +61,7 @@ do-build:
 	@${LN} -fs ${WRKDIR}/web1913-0.46-a ${WRKDIR}/dict-web1913-1.4/web1913
 	@for d in ${DICTIONARIES}; do \
 		(cd ${WRKDIR}/$$d; \
-		    ${MAKE_PROGRAM} db); \
+		    ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} db); \
 	done
 	${FIND} ${WRKDIR} -name '*.dict' -print | \
 	while read f; do \
