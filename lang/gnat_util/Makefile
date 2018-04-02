@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2016/11/25 20:36:49 marino Exp $
+# $NetBSD: Makefile,v 1.4 2018/04/02 09:30:06 wiz Exp $
 
 PKGNAME=	gnat_util-${SNAPSHOT}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 DISTFILES=	gcc-${GCC_VERSION}.tar.bz2
 
-MAINTAINER=	draco@marino.st
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dragonlace.net/
 COMMENT=	Library used to build GNAT source-based tools
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3

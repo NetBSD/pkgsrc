@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2018/03/12 11:15:50 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.41 2018/04/02 09:30:07 wiz Exp $
 
 DISTNAME=	gtkada-${GTKADA_VERSION}
 PKGREVISION=	15
@@ -9,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	gtkada-rm-${GTKADA_VERSION}${EXTRACT_SUFX}
 
-MAINTAINER=	draco@marino.st
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libre.adacore.com/libre/tools/gtkada/
 COMMENT=	Ada graphical toolkit based on Gtk+
 LICENSE=	gnu-gpl-v2
