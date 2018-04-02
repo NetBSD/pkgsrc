@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2017/11/26 10:45:28 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/04/02 09:30:06 wiz Exp $
 
 DISTNAME=	gprbuild-aux-${SNAPSHOT}
 CATEGORIES=	devel
 MASTER_SITES=	https://codeload.github.com/AdaCore/gprbuild/tar.gz/${TAGNAME}?dummy=/
 DISTFILES=	gprbuild-${TAGNAME}.tar.gz
 
-MAINTAINER=	draco@marino.st
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/gprbuild
 COMMENT=	Adacore multi-language software build tool
 LICENSE=	gnu-gpl-v3

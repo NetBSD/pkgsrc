@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/11/26 18:34:47 marino Exp $
-#
+# $NetBSD: Makefile,v 1.25 2018/04/02 09:30:07 wiz Exp $
 
 DISTNAME=	aws-${AWS_VERSION}
 PKGREVISION=	11
@@ -7,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	draco@marino.st
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libre.adacore.com/libre/tools/aws/
 COMMENT=	Adacore Ada Web Server and framework
 LICENSE=	gnu-gpl-v2
