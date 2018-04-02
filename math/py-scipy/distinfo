@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2017/11/02 09:40:29 adam Exp $
+$NetBSD: distinfo,v 1.15 2018/04/02 19:52:53 adam Exp $
 
-SHA1 (scipy-1.0.0.tar.gz) = 2437a334b11a7016965d1345fdc50f5aaf1234d9
-RMD160 (scipy-1.0.0.tar.gz) = 69f97740f4a5f5ec82d67ae7e9a22ac3170ff757
-SHA512 (scipy-1.0.0.tar.gz) = 7d55c5660ac606933d517171a229b288fd0ea8d9fdd8e30fac3d294545a26b2700c7b100b014a93231c4122dee0f1ddd741c00f5902643a6ccc287cdf581da7a
-Size (scipy-1.0.0.tar.gz) = 15246397 bytes
+SHA1 (scipy-1.0.1.tar.gz) = 5b3eecb1678af4ee8d014f60e3af487926fca765
+RMD160 (scipy-1.0.1.tar.gz) = ed94a104299a4cadc19496b7ab1177c87809e1e4
+SHA512 (scipy-1.0.1.tar.gz) = 8620a69aad6300f118a91157ca098dae5e97f0cd7ba1379cde17b720ba99ecef8d5442b72e92682a4e6f02bb9b188334bf70dbb6715e2872737c2eaa71e54cd7
+Size (scipy-1.0.1.tar.gz) = 15521892 bytes
 SHA1 (patch-scipy_special___round.h) = 30799ea2c824dc9cc0b399e7450ec10ec7137d2b
