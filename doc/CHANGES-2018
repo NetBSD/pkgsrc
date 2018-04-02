@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1613 2018/04/02 13:41:11 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1614 2018/04/02 17:56:42 spz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2186,3 +2186,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-autopep8 to 1.3.5 [adam 2018-04-02]
 	Updated time/py-dateutil to 2.7.2 [adam 2018-04-02]
 	Updated databases/openldap to 2.4.46 [adam 2018-04-02]
+	Updated devel/ncurses to 6.1 [spz 2018-04-02]
+	Updated devel/ncursesw to 6.1 [spz 2018-04-02]
