@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2018/03/22 11:49:19 adam Exp $
+# $NetBSD: Makefile,v 1.14 2018/04/02 13:19:31 adam Exp $
 
-DISTNAME=	cryptography_vectors-2.2.1
+DISTNAME=	cryptography_vectors-2.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cryptography_vectors/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/pyca/cryptography/
+HOMEPAGE=	https://github.com/pyca/cryptography
 COMMENT=	Cryptographic test vectors
 LICENSE=	apache-2.0 OR modified-bsd
 
