@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1602 2018/04/01 10:21:37 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1603 2018/04/02 08:20:41 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2168,3 +2168,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/libgphoto2 to 2.5.8nb3 [wiz 2018-03-31]
 	Updated fonts/ja-shinonome to 0.9.11nb7 [ryoon 2018-04-01]
 	Updated devel/libthrift to 0.11.0 [wiz 2018-04-01]
+	Updated net/get_iplayer to 3.13 [prlw1 2018-04-02]
