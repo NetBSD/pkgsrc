@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1609 2018/04/02 13:08:11 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1610 2018/04/02 13:14:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2178,3 +2178,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-httplib2 to 0.11.3 [adam 2018-04-02]
 	Updated databases/py-sqlalchemy to 1.2.6 [adam 2018-04-02]
 	Updated databases/py-sqlalchemy-utils to 0.33.1 [adam 2018-04-02]
+	Updated filesystems/libntfs to 2017.3.23 [adam 2018-04-02]
+	Updated filesystems/fuse-ntfs-3g to 2017.3.23 [adam 2018-04-02]
+	Updated sysutils/ntfsprogs to 2017.3.23 [adam 2018-04-02]
