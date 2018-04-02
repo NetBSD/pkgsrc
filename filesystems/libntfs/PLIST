@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/11/10 17:45:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/04/02 13:14:08 adam Exp $
 include/ntfs-3g/acls.h
 include/ntfs-3g/attrib.h
 include/ntfs-3g/attrlist.h
@@ -28,6 +28,7 @@ include/ntfs-3g/mst.h
 include/ntfs-3g/ntfstime.h
 include/ntfs-3g/object_id.h
 include/ntfs-3g/param.h
+include/ntfs-3g/plugin.h
 include/ntfs-3g/realpath.h
 include/ntfs-3g/reparse.h
 include/ntfs-3g/runlist.h
