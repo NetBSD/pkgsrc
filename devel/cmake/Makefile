@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2018/03/17 08:03:09 adam Exp $
+# $NetBSD: Makefile,v 1.141 2018/04/02 19:36:44 adam Exp $
 
 .include "Makefile.version"
 
@@ -27,6 +27,7 @@ CONFIGURE_ARGS+=	--system-libs
 CONFIGURE_ARGS+=	--no-system-jsoncpp
 
 LDFLAGS+=		-lcrypto # for rhash
+LDFLAGS.Darwin+=	-framework CoreServices # for LSOpenCFURLRef()
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../mk/bsd.prefs.mk"
