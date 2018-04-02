@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1615 2018/04/02 19:40:33 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1616 2018/04/02 19:53:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2191,3 +2191,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/cmake to 3.11.0 [adam 2018-04-02]
 	Updated misc/stellarium to 0.18.0 [adam 2018-04-02]
 	Updated multimedia/mkvtoolnix to 22.0.0 [adam 2018-04-02]
+	Updated devel/py-packaging to 17.1 [adam 2018-04-02]
+	Updated math/py-scipy to 1.0.1 [adam 2018-04-02]
