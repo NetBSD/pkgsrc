@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/02/06 16:25:15 maya Exp $
+# $NetBSD: Makefile,v 1.3 2018/04/02 16:07:47 minskim Exp $
 
 DISTNAME=	rapidjson-1.1.0
 PKGREVISION=	1
@@ -18,6 +18,6 @@ USE_LANGUAGES=	c++11
 CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen=TRUE
 
 PKGCONFIG_OVERRIDE+=	RapidJSON.pc.in
-BUILDLINK_TRANSFORM+=	rm:-march=native
+BUILDLINK_TRANSFORM+=	rm:-march=native rm:-Werror
 
 .include "../../mk/bsd.pkg.mk"
