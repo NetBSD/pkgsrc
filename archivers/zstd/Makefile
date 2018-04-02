@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.15 2017/12/21 14:54:43 adam Exp $
+# $NetBSD: Makefile,v 1.16 2018/04/02 12:42:48 adam Exp $
 
-DISTNAME=	zstd-1.3.3
+DISTNAME=	zstd-1.3.4
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=facebook/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://facebook.github.io/zstd/
 COMMENT=	Fast real-time compression algorithm
 LICENSE=	modified-bsd OR gnu-gpl-v2
-
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
