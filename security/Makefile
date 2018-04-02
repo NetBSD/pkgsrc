@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.676 2018/03/15 05:14:43 jnemeth Exp $
+# $NetBSD: Makefile,v 1.677 2018/04/02 08:45:51 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -133,6 +133,7 @@ SUBDIR+=	kauth
 SUBDIR+=	kdesu
 SUBDIR+=	keepassx
 SUBDIR+=	keepassx0
+SUBDIR+=	keepassxc
 SUBDIR+=	keychain
 SUBDIR+=	kgpg
 SUBDIR+=	knc
