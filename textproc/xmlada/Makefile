@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/01/01 14:44:02 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2018/04/02 09:30:06 wiz Exp $
 
 DISTNAME=	xmlada-${XMLADA_VERS}
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	draco@marino.st
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libre.adacore.com/libre/tools/xmlada/
 COMMENT=	Adacore XML suite for the Ada language
 LICENSE=	gnu-gpl-v3
