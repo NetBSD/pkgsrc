@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2016/10/19 12:17:42 wiz Exp $
+$NetBSD: distinfo,v 1.14 2018/04/02 12:34:47 adam Exp $
 
-SHA1 (jpegoptim-1.4.4.tar.gz) = c864b2366150d0a2c16fa43642cb382b490acf59
-RMD160 (jpegoptim-1.4.4.tar.gz) = 99a2b6ec58e0239f4c9b247a6dac1cea0feeb8c7
-SHA512 (jpegoptim-1.4.4.tar.gz) = 67879b5709a97c7b097e5eae6fe4047d330da8a445eab6e9528cb5f54d76db1bba058eff5c7342b68653e7d25e50ad923d5ce04799e1b3f1815d8b70affd46a3
-Size (jpegoptim-1.4.4.tar.gz) = 98794 bytes
+SHA1 (jpegoptim-1.4.5.tar.gz) = dadd9163905f4f65d74a31473d27c7bb10f41ebe
+RMD160 (jpegoptim-1.4.5.tar.gz) = 27037783f8424c84c71d29027d7c87a38bf909a8
+SHA512 (jpegoptim-1.4.5.tar.gz) = fb6d63ca9eb6e0cdeaa2ec126ce294fccbfd79f28aa1275c7e717c40c7123fc6de3333192a0baec50d72934c8861373914de0cbd731398a037b9a6487672de68
+Size (jpegoptim-1.4.5.tar.gz) = 98921 bytes
