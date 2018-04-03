@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1622 2018/04/03 08:59:14 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1623 2018/04/03 09:32:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2200,3 +2200,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/dateutils to 0.4.3 [mef 2018-04-03]
 	Updated www/py-django2 to 2.0.4 [adam 2018-04-03]
 	Updated www/py-django to 1.11.12 [adam 2018-04-03]
+	Updated graphics/py-Pillow to 5.1.0 [adam 2018-04-03]
+	Updated print/py-weasyprint to 0.42.3 [adam 2018-04-03]
