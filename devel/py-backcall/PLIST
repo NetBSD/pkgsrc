@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2018/04/03 11:13:29 adam Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/backcall/__init__.py
+${PYSITELIB}/backcall/__init__.pyc
+${PYSITELIB}/backcall/__init__.pyo
+${PYSITELIB}/backcall/_signatures.py
+${PYSITELIB}/backcall/_signatures.pyc
+${PYSITELIB}/backcall/_signatures.pyo
+${PYSITELIB}/backcall/backcall.py
+${PYSITELIB}/backcall/backcall.pyc
+${PYSITELIB}/backcall/backcall.pyo
