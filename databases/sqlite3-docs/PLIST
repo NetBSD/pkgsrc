@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.74 2018/01/24 13:44:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.75 2018/04/03 19:58:19 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -7,6 +7,7 @@ share/doc/sqlite3/affcase1.html
 share/doc/sqlite3/amalgamation.html
 share/doc/sqlite3/appfileformat.html
 share/doc/sqlite3/arch.html
+share/doc/sqlite3/assert.html
 share/doc/sqlite3/asyncvfs.html
 share/doc/sqlite3/atomiccommit.html
 share/doc/sqlite3/autoinc.html
@@ -43,6 +44,7 @@ share/doc/sqlite3/c3ref/c_config_covering_index_scan.html
 share/doc/sqlite3/c3ref/c_dbconfig_enable_fkey.html
 share/doc/sqlite3/c3ref/c_dbstatus_options.html
 share/doc/sqlite3/c3ref/c_deny.html
+share/doc/sqlite3/c3ref/c_deserialize_freeonclose.html
 share/doc/sqlite3/c3ref/c_deterministic.html
 share/doc/sqlite3/c3ref/c_fail.html
 share/doc/sqlite3/c3ref/c_fcntl_begin_atomic_write.html
@@ -55,6 +57,7 @@ share/doc/sqlite3/c3ref/c_mutex_fast.html
 share/doc/sqlite3/c3ref/c_open_autoproxy.html
 share/doc/sqlite3/c3ref/c_prepare_persistent.html
 share/doc/sqlite3/c3ref/c_scanstat_est.html
+share/doc/sqlite3/c3ref/c_serialize_nocopy.html
 share/doc/sqlite3/c3ref/c_shm_exclusive.html
 share/doc/sqlite3/c3ref/c_shm_nlock.html
 share/doc/sqlite3/c3ref/c_source_id.html
@@ -96,6 +99,7 @@ share/doc/sqlite3/c3ref/db_readonly.html
 share/doc/sqlite3/c3ref/db_release_memory.html
 share/doc/sqlite3/c3ref/db_status.html
 share/doc/sqlite3/c3ref/declare_vtab.html
+share/doc/sqlite3/c3ref/deserialize.html
 share/doc/sqlite3/c3ref/enable_load_extension.html
 share/doc/sqlite3/c3ref/enable_shared_cache.html
 share/doc/sqlite3/c3ref/errcode.html
@@ -147,6 +151,7 @@ share/doc/sqlite3/c3ref/reset.html
 share/doc/sqlite3/c3ref/reset_auto_extension.html
 share/doc/sqlite3/c3ref/result_blob.html
 share/doc/sqlite3/c3ref/result_subtype.html
+share/doc/sqlite3/c3ref/serialize.html
 share/doc/sqlite3/c3ref/set_authorizer.html
 share/doc/sqlite3/c3ref/set_last_insert_rowid.html
 share/doc/sqlite3/c3ref/sleep.html
@@ -205,6 +210,7 @@ share/doc/sqlite3/changes.html
 share/doc/sqlite3/chronology.html
 share/doc/sqlite3/cintro.html
 share/doc/sqlite3/cli.html
+share/doc/sqlite3/codeofconduct.html
 share/doc/sqlite3/compile.html
 share/doc/sqlite3/completion.html
 share/doc/sqlite3/conflict.html
@@ -556,9 +562,11 @@ share/doc/sqlite3/partialindex.html
 share/doc/sqlite3/pgszchng2016.html
 share/doc/sqlite3/pragma.html
 share/doc/sqlite3/pressrelease-20071212.html
+share/doc/sqlite3/printf.html
 share/doc/sqlite3/privatebranch.html
 share/doc/sqlite3/prosupport.html
 share/doc/sqlite3/psow.html
+share/doc/sqlite3/qmplan.html
 share/doc/sqlite3/queryplanner-ng.html
 share/doc/sqlite3/queryplanner.html
 share/doc/sqlite3/quickstart.html
@@ -609,6 +617,7 @@ share/doc/sqlite3/releaselog/3_20_0.html
 share/doc/sqlite3/releaselog/3_20_1.html
 share/doc/sqlite3/releaselog/3_21_0.html
 share/doc/sqlite3/releaselog/3_22_0.html
+share/doc/sqlite3/releaselog/3_23_0.html
 share/doc/sqlite3/releaselog/3_2_0.html
 share/doc/sqlite3/releaselog/3_2_1.html
 share/doc/sqlite3/releaselog/3_2_2.html
@@ -747,6 +756,9 @@ share/doc/sqlite3/robots.txt
 share/doc/sqlite3/rowidtable.html
 share/doc/sqlite3/rowvalue.html
 share/doc/sqlite3/rtree.html
+share/doc/sqlite3/search
+share/doc/sqlite3/search.d/admin
+share/doc/sqlite3/search.d/search.db
 share/doc/sqlite3/selfcontained.html
 share/doc/sqlite3/series.html
 share/doc/sqlite3/serverless.html
@@ -759,6 +771,7 @@ share/doc/sqlite3/session/constlist.html
 share/doc/sqlite3/session/funclist.html
 share/doc/sqlite3/session/intro.html
 share/doc/sqlite3/session/objlist.html
+share/doc/sqlite3/session/rebaser.html
 share/doc/sqlite3/session/session.html
 share/doc/sqlite3/session/sqlite3changegroup_add.html
 share/doc/sqlite3/session/sqlite3changegroup_add_strm.html
@@ -777,6 +790,10 @@ share/doc/sqlite3/session/sqlite3changeset_old.html
 share/doc/sqlite3/session/sqlite3changeset_op.html
 share/doc/sqlite3/session/sqlite3changeset_pk.html
 share/doc/sqlite3/session/sqlite3changeset_start.html
+share/doc/sqlite3/session/sqlite3rebaser_configure.html
+share/doc/sqlite3/session/sqlite3rebaser_create.html
+share/doc/sqlite3/session/sqlite3rebaser_delete.html
+share/doc/sqlite3/session/sqlite3rebaser_rebase.html
 share/doc/sqlite3/session/sqlite3session_attach.html
 share/doc/sqlite3/session/sqlite3session_changeset.html
 share/doc/sqlite3/session/sqlite3session_create.html
@@ -794,6 +811,7 @@ share/doc/sqlite3/sitemap.html
 share/doc/sqlite3/speed.html
 share/doc/sqlite3/spellfix1.html
 share/doc/sqlite3/sqlanalyze.html
+share/doc/sqlite3/sqlar.html
 share/doc/sqlite3/sqldiff.html
 share/doc/sqlite3/sqlite.css
 share/doc/sqlite3/sqlite.css~
