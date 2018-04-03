@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1632 2018/04/03 20:28:00 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1633 2018/04/03 21:00:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2222,3 +2222,10 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/lemon to 1.0.3.23.0 [adam 2018-04-03]
 	Updated devel/py-setuptools_trial to 0.6.0nb1 [adam 2018-04-03]
 	Updated devel/py-txgithub to 15.0.0nb1 [adam 2018-04-03]
+	Updated devel/py-buildbot to 1.1.0 [adam 2018-04-03]
+	Updated devel/py-buildbot-worker to 1.1.0 [adam 2018-04-03]
+	Updated devel/py-buildbot-console-view to 1.1.0 [adam 2018-04-03]
+	Updated devel/py-buildbot-grid-view to 1.1.0 [adam 2018-04-03]
+	Updated devel/py-buildbot-pkg to 1.1.0 [adam 2018-04-03]
+	Updated devel/py-buildbot-waterfall-view to 1.1.0 [adam 2018-04-03]
+	Updated devel/py-buildbot-www to 1.1.0 [adam 2018-04-03]
