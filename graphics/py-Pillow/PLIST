@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2018/01/04 20:59:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/04/03 09:24:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/PIL/BdfFontFile.py
 ${PYSITELIB}/PIL/BdfFontFile.pyc
 ${PYSITELIB}/PIL/BdfFontFile.pyo
+${PYSITELIB}/PIL/BlpImagePlugin.py
+${PYSITELIB}/PIL/BlpImagePlugin.pyc
+${PYSITELIB}/PIL/BlpImagePlugin.pyo
 ${PYSITELIB}/PIL/BmpImagePlugin.py
 ${PYSITELIB}/PIL/BmpImagePlugin.pyc
 ${PYSITELIB}/PIL/BmpImagePlugin.pyo
@@ -202,6 +205,9 @@ ${PYSITELIB}/PIL/PcxImagePlugin.pyo
 ${PYSITELIB}/PIL/PdfImagePlugin.py
 ${PYSITELIB}/PIL/PdfImagePlugin.pyc
 ${PYSITELIB}/PIL/PdfImagePlugin.pyo
+${PYSITELIB}/PIL/PdfParser.py
+${PYSITELIB}/PIL/PdfParser.pyc
+${PYSITELIB}/PIL/PdfParser.pyo
 ${PYSITELIB}/PIL/PixarImagePlugin.py
 ${PYSITELIB}/PIL/PixarImagePlugin.pyc
 ${PYSITELIB}/PIL/PixarImagePlugin.pyo
