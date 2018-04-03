@@ -1,0 +1,6 @@
+OTX Direct Connect agents provide a way to automatically update your
+security infrastructure with pulses you have subscribed to from with
+Open Threat Exchange. By using Direct Connect, the indicators
+contained within the pulses you have subscribed to can be downloaded
+and made locally available for other applications such as Intrusion
+Detection Systems, Firewalls, and other security-focused applications.
