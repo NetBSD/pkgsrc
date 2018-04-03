@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1623 2018/04/03 09:32:22 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1624 2018/04/03 10:07:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2202,3 +2202,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-django to 1.11.12 [adam 2018-04-03]
 	Updated graphics/py-Pillow to 5.1.0 [adam 2018-04-03]
 	Updated print/py-weasyprint to 0.42.3 [adam 2018-04-03]
+	Updated devel/py-path.py to 11.0.1 [adam 2018-04-03]
+	Updated security/py-oauthlib to 2.0.7 [adam 2018-04-03]
