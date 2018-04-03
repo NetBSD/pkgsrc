@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1630 2018/04/03 18:46:26 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1631 2018/04/03 19:58:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2218,3 +2218,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-botocore to 1.9.22 [adam 2018-04-03]
 	Updated net/py-boto3 to 1.6.22 [adam 2018-04-03]
 	Updated net/py-awscli to 1.14.69 [adam 2018-04-03]
+	Updated databases/sqlite3 to 3.23.0 [adam 2018-04-03]
+	Updated devel/lemon to 1.0.3.23.0 [adam 2018-04-03]
