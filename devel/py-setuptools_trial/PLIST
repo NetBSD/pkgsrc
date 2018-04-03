@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/04/13 18:25:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/04/03 20:19:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -14,5 +14,3 @@ ${PYSITELIB}/setuptools_trial/_version.pyo
 ${PYSITELIB}/setuptools_trial/setuptools_trial.py
 ${PYSITELIB}/setuptools_trial/setuptools_trial.pyc
 ${PYSITELIB}/setuptools_trial/setuptools_trial.pyo
-share/doc/python-setuptools_trial/COPYING.SPL.txt
-share/doc/python-setuptools_trial/README.rst
