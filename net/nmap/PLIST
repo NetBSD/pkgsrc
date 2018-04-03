@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2017/08/03 13:52:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2018/04/03 14:34:00 adam Exp $
 bin/ncat
 ${PLIST.ndiff}bin/ndiff
 bin/nmap
@@ -6,25 +6,6 @@ ${PLIST.zenmap}bin/nmapfe
 bin/nping
 ${PLIST.zenmap}bin/xnmap
 ${PLIST.zenmap}bin/zenmap
-man/de/man1/nmap.1
-man/es/man1/nmap.1
-man/fr/man1/nmap.1
-man/hr/man1/nmap.1
-man/hu/man1/nmap.1
-man/it/man1/nmap.1
-man/ja/man1/nmap.1
-man/man1/ncat.1
-${PLIST.ndiff}man/man1/ndiff.1
-man/man1/nmap.1
-man/man1/nping.1
-${PLIST.zenmap}man/man1/zenmap.1
-man/pl/man1/nmap.1
-man/pt_BR/man1/nmap.1
-man/pt_PT/man1/nmap.1
-man/ro/man1/nmap.1
-man/ru/man1/nmap.1
-man/sk/man1/nmap.1
-man/zh/man1/nmap.1
 ${PLIST.ndiff}${PYSITELIB}/ndiff.py
 ${PLIST.ndiff}${PYSITELIB}/ndiff.pyc
 ${PLIST.zenmap}${PYSITELIB}/radialnet/__init__.py
@@ -241,6 +222,25 @@ ${PLIST.zenmap}${PYSITELIB}/zenmapGUI/higwidgets/higwindows.py
 ${PLIST.zenmap}${PYSITELIB}/zenmapGUI/higwidgets/higwindows.pyc
 ${PLIST.zenmap}${PYSITELIB}/zenmapGUI/higwidgets/utils.py
 ${PLIST.zenmap}${PYSITELIB}/zenmapGUI/higwidgets/utils.pyc
+man/de/man1/nmap.1
+man/es/man1/nmap.1
+man/fr/man1/nmap.1
+man/hr/man1/nmap.1
+man/hu/man1/nmap.1
+man/it/man1/nmap.1
+man/ja/man1/nmap.1
+man/man1/ncat.1
+${PLIST.ndiff}man/man1/ndiff.1
+man/man1/nmap.1
+man/man1/nping.1
+${PLIST.zenmap}man/man1/zenmap.1
+man/pl/man1/nmap.1
+man/pt_BR/man1/nmap.1
+man/pt_PT/man1/nmap.1
+man/ro/man1/nmap.1
+man/ru/man1/nmap.1
+man/sk/man1/nmap.1
+man/zh/man1/nmap.1
 ${PLIST.zenmap}share/applications/zenmap-root.desktop
 ${PLIST.zenmap}share/applications/zenmap.desktop
 share/ncat/ca-bundle.crt
@@ -285,6 +285,7 @@ ${PLIST.lua}share/nmap/nselib/data/http-fingerprints.lua
 ${PLIST.lua}share/nmap/nselib/data/http-folders.txt
 ${PLIST.lua}share/nmap/nselib/data/http-sql-errors.lst
 ${PLIST.lua}share/nmap/nselib/data/http-web-files-extensions.lst
+${PLIST.lua}share/nmap/nselib/data/idnaMappings.lua
 ${PLIST.lua}share/nmap/nselib/data/ike-fingerprints.lua
 ${PLIST.lua}share/nmap/nselib/data/jdwp-class/JDWPExecCmd.class
 ${PLIST.lua}share/nmap/nselib/data/jdwp-class/JDWPExecCmd.java
@@ -298,7 +299,6 @@ ${PLIST.lua}share/nmap/nselib/data/oracle-sids
 ${PLIST.lua}share/nmap/nselib/data/packetdecoders.lua
 ${PLIST.lua}share/nmap/nselib/data/passwords.lst
 ${PLIST.lua}share/nmap/nselib/data/pixel.gif
-${PLIST.lua}share/nmap/nselib/data/publickeydb
 ${PLIST.lua}share/nmap/nselib/data/psexec/README
 ${PLIST.lua}share/nmap/nselib/data/psexec/backdoor.lua
 ${PLIST.lua}share/nmap/nselib/data/psexec/default.lua
@@ -309,6 +309,7 @@ ${PLIST.lua}share/nmap/nselib/data/psexec/network.lua
 ${PLIST.lua}share/nmap/nselib/data/psexec/nmap_service.c
 ${PLIST.lua}share/nmap/nselib/data/psexec/nmap_service.vcproj
 ${PLIST.lua}share/nmap/nselib/data/psexec/pwdump.lua
+${PLIST.lua}share/nmap/nselib/data/publickeydb
 ${PLIST.lua}share/nmap/nselib/data/rtsp-urls.txt
 ${PLIST.lua}share/nmap/nselib/data/snmpcommunities.lst
 ${PLIST.lua}share/nmap/nselib/data/ssl-fingerprints
@@ -337,6 +338,7 @@ ${PLIST.lua}share/nmap/nselib/gps.lua
 ${PLIST.lua}share/nmap/nselib/http.lua
 ${PLIST.lua}share/nmap/nselib/httpspider.lua
 ${PLIST.lua}share/nmap/nselib/iax2.lua
+${PLIST.lua}share/nmap/nselib/idna.lua
 ${PLIST.lua}share/nmap/nselib/ike.lua
 ${PLIST.lua}share/nmap/nselib/imap.lua
 ${PLIST.lua}share/nmap/nselib/informix.lua
@@ -368,6 +370,7 @@ ${PLIST.lua}share/nmap/nselib/mssql.lua
 ${PLIST.lua}share/nmap/nselib/multicast.lua
 ${PLIST.lua}share/nmap/nselib/mysql.lua
 ${PLIST.lua}share/nmap/nselib/natpmp.lua
+${PLIST.lua}share/nmap/nselib/nbd.lua
 ${PLIST.lua}share/nmap/nselib/ncp.lua
 ${PLIST.lua}share/nmap/nselib/ndmp.lua
 ${PLIST.lua}share/nmap/nselib/netbios.lua
@@ -383,6 +386,7 @@ ${PLIST.lua}share/nmap/nselib/pgsql.lua
 ${PLIST.lua}share/nmap/nselib/pop3.lua
 ${PLIST.lua}share/nmap/nselib/pppoe.lua
 ${PLIST.lua}share/nmap/nselib/proxy.lua
+${PLIST.lua}share/nmap/nselib/punycode.lua
 ${PLIST.lua}share/nmap/nselib/rdp.lua
 ${PLIST.lua}share/nmap/nselib/re.lua
 ${PLIST.lua}share/nmap/nselib/redis.lua
@@ -428,6 +432,7 @@ ${PLIST.lua}share/nmap/nselib/vuzedht.lua
 ${PLIST.lua}share/nmap/nselib/wsdd.lua
 ${PLIST.lua}share/nmap/nselib/xdmcp.lua
 ${PLIST.lua}share/nmap/nselib/xmpp.lua
+${PLIST.lua}share/nmap/nselib/zlib.luadoc
 ${PLIST.lua}share/nmap/scripts/acarsd-info.nse
 ${PLIST.lua}share/nmap/scripts/address-info.nse
 ${PLIST.lua}share/nmap/scripts/afp-brute.nse
@@ -511,6 +516,7 @@ ${PLIST.lua}share/nmap/scripts/cvs-brute.nse
 ${PLIST.lua}share/nmap/scripts/daap-get-library.nse
 ${PLIST.lua}share/nmap/scripts/daytime.nse
 ${PLIST.lua}share/nmap/scripts/db2-das-info.nse
+${PLIST.lua}share/nmap/scripts/deluge-rpc-brute.nse
 ${PLIST.lua}share/nmap/scripts/dhcp-discover.nse
 ${PLIST.lua}share/nmap/scripts/dict-info.nse
 ${PLIST.lua}share/nmap/scripts/distcc-cve2004-2687.nse
@@ -575,6 +581,7 @@ ${PLIST.lua}share/nmap/scripts/hbase-region-info.nse
 ${PLIST.lua}share/nmap/scripts/hddtemp-info.nse
 ${PLIST.lua}share/nmap/scripts/hnap-info.nse
 ${PLIST.lua}share/nmap/scripts/hostmap-bfk.nse
+${PLIST.lua}share/nmap/scripts/hostmap-crtsh.nse
 ${PLIST.lua}share/nmap/scripts/hostmap-ip2hosts.nse
 ${PLIST.lua}share/nmap/scripts/hostmap-robtex.nse
 ${PLIST.lua}share/nmap/scripts/http-adobe-coldfusion-apsa1301.nse
@@ -589,6 +596,7 @@ ${PLIST.lua}share/nmap/scripts/http-awstatstotals-exec.nse
 ${PLIST.lua}share/nmap/scripts/http-axis2-dir-traversal.nse
 ${PLIST.lua}share/nmap/scripts/http-backup-finder.nse
 ${PLIST.lua}share/nmap/scripts/http-barracuda-dir-traversal.nse
+${PLIST.lua}share/nmap/scripts/http-bigip-cookie.nse
 ${PLIST.lua}share/nmap/scripts/http-brute.nse
 ${PLIST.lua}share/nmap/scripts/http-cakephp-version.nse
 ${PLIST.lua}share/nmap/scripts/http-chrono.nse
@@ -631,6 +639,7 @@ ${PLIST.lua}share/nmap/scripts/http-iis-short-name-brute.nse
 ${PLIST.lua}share/nmap/scripts/http-iis-webdav-vuln.nse
 ${PLIST.lua}share/nmap/scripts/http-internal-ip-disclosure.nse
 ${PLIST.lua}share/nmap/scripts/http-joomla-brute.nse
+${PLIST.lua}share/nmap/scripts/http-jsonp-detection.nse
 ${PLIST.lua}share/nmap/scripts/http-litespeed-sourcecode-download.nse
 ${PLIST.lua}share/nmap/scripts/http-ls.nse
 ${PLIST.lua}share/nmap/scripts/http-majordomo2-dir-traversal.nse
@@ -668,6 +677,7 @@ ${PLIST.lua}share/nmap/scripts/http-title.nse
 ${PLIST.lua}share/nmap/scripts/http-tplink-dir-traversal.nse
 ${PLIST.lua}share/nmap/scripts/http-trace.nse
 ${PLIST.lua}share/nmap/scripts/http-traceroute.nse
+${PLIST.lua}share/nmap/scripts/http-trane-info.nse
 ${PLIST.lua}share/nmap/scripts/http-unsafe-output-escaping.nse
 ${PLIST.lua}share/nmap/scripts/http-useragent-tester.nse
 ${PLIST.lua}share/nmap/scripts/http-userdir-enum.nse
@@ -799,6 +809,7 @@ ${PLIST.lua}share/nmap/scripts/mysql-variables.nse
 ${PLIST.lua}share/nmap/scripts/mysql-vuln-cve2012-2122.nse
 ${PLIST.lua}share/nmap/scripts/nat-pmp-info.nse
 ${PLIST.lua}share/nmap/scripts/nat-pmp-mapport.nse
+${PLIST.lua}share/nmap/scripts/nbd-info.nse
 ${PLIST.lua}share/nmap/scripts/nbstat.nse
 ${PLIST.lua}share/nmap/scripts/ncp-enum-users.nse
 ${PLIST.lua}share/nmap/scripts/ncp-serverinfo.nse
@@ -866,6 +877,7 @@ ${PLIST.lua}share/nmap/scripts/rpc-grind.nse
 ${PLIST.lua}share/nmap/scripts/rpcap-brute.nse
 ${PLIST.lua}share/nmap/scripts/rpcap-info.nse
 ${PLIST.lua}share/nmap/scripts/rpcinfo.nse
+${PLIST.lua}share/nmap/scripts/rsa-vuln-roca.nse
 ${PLIST.lua}share/nmap/scripts/rsync-brute.nse
 ${PLIST.lua}share/nmap/scripts/rsync-list-modules.nse
 ${PLIST.lua}share/nmap/scripts/rtsp-methods.nse
@@ -886,6 +898,7 @@ ${PLIST.lua}share/nmap/scripts/smb-double-pulsar-backdoor.nse
 ${PLIST.lua}share/nmap/scripts/smb-enum-domains.nse
 ${PLIST.lua}share/nmap/scripts/smb-enum-groups.nse
 ${PLIST.lua}share/nmap/scripts/smb-enum-processes.nse
+${PLIST.lua}share/nmap/scripts/smb-enum-services.nse
 ${PLIST.lua}share/nmap/scripts/smb-enum-sessions.nse
 ${PLIST.lua}share/nmap/scripts/smb-enum-shares.nse
 ${PLIST.lua}share/nmap/scripts/smb-enum-users.nse
@@ -940,9 +953,9 @@ ${PLIST.lua}share/nmap/scripts/socks-brute.nse
 ${PLIST.lua}share/nmap/scripts/socks-open-proxy.nse
 ${PLIST.lua}share/nmap/scripts/ssh-auth-methods.nse
 ${PLIST.lua}share/nmap/scripts/ssh-brute.nse
+${PLIST.lua}share/nmap/scripts/ssh-hostkey.nse
 ${PLIST.lua}share/nmap/scripts/ssh-publickey-acceptance.nse
 ${PLIST.lua}share/nmap/scripts/ssh-run.nse
-${PLIST.lua}share/nmap/scripts/ssh-hostkey.nse
 ${PLIST.lua}share/nmap/scripts/ssh2-enum-algos.nse
 ${PLIST.lua}share/nmap/scripts/sshv1.nse
 ${PLIST.lua}share/nmap/scripts/ssl-ccs-injection.nse
@@ -977,6 +990,7 @@ ${PLIST.lua}share/nmap/scripts/telnet-brute.nse
 ${PLIST.lua}share/nmap/scripts/telnet-encryption.nse
 ${PLIST.lua}share/nmap/scripts/telnet-ntlm-info.nse
 ${PLIST.lua}share/nmap/scripts/tftp-enum.nse
+${PLIST.lua}share/nmap/scripts/tls-alpn.nse
 ${PLIST.lua}share/nmap/scripts/tls-nextprotoneg.nse
 ${PLIST.lua}share/nmap/scripts/tls-ticketbleed.nse
 ${PLIST.lua}share/nmap/scripts/tn3270-screen.nse
