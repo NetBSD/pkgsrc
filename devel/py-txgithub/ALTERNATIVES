@@ -1,0 +1,2 @@
+bin/get-github-token @PREFIX@/bin/get-github-token-@PYVERSSUFFIX@
+bin/gist @PREFIX@/bin/gist-@PYVERSSUFFIX@
