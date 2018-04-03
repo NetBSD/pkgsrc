@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2016/09/25 21:13:09 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/04/03 07:09:32 mef Exp $
 
-DISTNAME=	dateutils-0.4.0
+DISTNAME=	dateutils-0.4.3
 CATEGORIES=	time
 #MASTER_SITES=	${MASTER_SITE_GITHUB:=hroptatyr/}
 MASTER_SITES+=	https://bitbucket.org/hroptatyr/dateutils/downloads/
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config gmake makeinfo bison flex
+USE_TOOLS+=	pkg-config automake autoconf gmake makeinfo bison flex
 USE_LIBTOOL=	yes
 MAKE_JOBS_SAFE= no
 
@@ -22,8 +22,8 @@ TEST_TARGET=		check
 INCLUDEDIR=		include/${PKGBASE}
 AUTO_MKDIRS=		YES
 
-post-build:
-	(cd ${WRKSRC}/lib; ${GMAKE})
+pre-configure:
+	(cd ${WRKSRC}; autoreconf -i)
 
 post-install:
 	(cd ${WRKSRC}/lib; \
