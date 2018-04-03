@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2017/12/16 07:50:08 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/04/03 17:59:31 adam Exp $
 
-DISTNAME=	httptools-0.0.10
+DISTNAME=	httptools-0.0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httptools/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/httptools
+HOMEPAGE=	https://github.com/MagicStack/httptools
 COMMENT=	Collection of framework independent HTTP protocol utils
 LICENSE=	mit
 
