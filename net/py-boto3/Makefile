@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2018/03/02 14:58:01 adam Exp $
+# $NetBSD: Makefile,v 1.11 2018/04/03 18:38:11 adam Exp $
 
-DISTNAME=	boto3-1.6.3
+DISTNAME=	boto3-1.6.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/boto3/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/boto/boto3/
+HOMEPAGE=	https://github.com/boto/boto3
 COMMENT=	Amazon Web Services SDK for Python
 LICENSE=	apache-2.0
 
