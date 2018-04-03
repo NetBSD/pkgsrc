@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1628 2018/04/03 14:36:59 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1629 2018/04/03 18:00:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2212,3 +2212,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added security/py-OTXv2 version 1.2 [minskim 2018-04-03]
 	Updated devel/libuv to 1.20.0 [adam 2018-04-03]
 	Updated net/nmap to 7.70 [adam 2018-04-03]
+	Updated www/py-autobahn to 18.3.1 [adam 2018-04-03]
+	Updated www/py-httptools to 0.0.11 [adam 2018-04-03]
