@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1626 2018/04/03 13:21:25 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1627 2018/04/03 14:33:59 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2209,3 +2209,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-ipython5 to 5.6.0 [adam 2018-04-03]
 	Updated time/py-icalendar to 4.0.1 [adam 2018-04-03]
 	Updated net/py-xandikos to 0.0.7 [adam 2018-04-03]
+	Added security/py-OTXv2 version 1.2 [minskim 2018-04-03]
