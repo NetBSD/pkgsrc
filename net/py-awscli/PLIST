@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/01/23 10:25:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/04/03 18:44:21 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -505,6 +505,7 @@ ${PYSITELIB}/awscli/examples/acm/list-tags-for-certificate.rst
 ${PYSITELIB}/awscli/examples/acm/remove-tags-from-certificate.rst
 ${PYSITELIB}/awscli/examples/acm/request-certificate.rst
 ${PYSITELIB}/awscli/examples/acm/resend-validation-email.rst
+${PYSITELIB}/awscli/examples/acm/update-certificate-options.rst
 ${PYSITELIB}/awscli/examples/apigateway/create-api-key.rst
 ${PYSITELIB}/awscli/examples/apigateway/create-authorizer.rst
 ${PYSITELIB}/awscli/examples/apigateway/create-base-path-mapping.rst
