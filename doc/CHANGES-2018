@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1624 2018/04/03 10:07:30 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1625 2018/04/03 11:17:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2204,3 +2204,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/py-weasyprint to 0.42.3 [adam 2018-04-03]
 	Updated devel/py-path.py to 11.0.1 [adam 2018-04-03]
 	Updated security/py-oauthlib to 2.0.7 [adam 2018-04-03]
+	Added devel/py-backcall version 0.1.0 [adam 2018-04-03]
+	Updated devel/py-ipython to 6.3.0 [adam 2018-04-03]
+	Updated devel/py-ipython5 to 5.6.0 [adam 2018-04-03]
