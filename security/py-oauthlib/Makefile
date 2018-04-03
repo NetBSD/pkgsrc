@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/04/03 10:02:49 adam Exp $
+# $NetBSD: Makefile,v 1.14 2018/04/03 11:00:16 adam Exp $
 
 DISTNAME=	oauthlib-2.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=o/oauthlib/}
 MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	https://github.com/oauthlib/oauthlib
 COMMENT=	Generic implementation of the OAuth request-signing logic
-LICENSE=	original-bsd
+LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-JWT>=1.0.0:../../textproc/py-JWT
 DEPENDS+=	${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
