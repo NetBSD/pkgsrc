@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2018/03/13 11:34:08 adam Exp $
+$NetBSD: distinfo,v 1.29 2018/04/03 18:30:45 minskim Exp $
 
 SHA1 (numpy-1.14.2.zip) = 5ec276608988456aa136ec14e132b17b59faf70a
 RMD160 (numpy-1.14.2.zip) = 7aca331765830978ae90a92c9fd81a6527d5ab32
@@ -8,3 +8,4 @@ SHA1 (patch-aa) = c964fa13fb120b1b0f9d0bf5bc713507cd60b945
 SHA1 (patch-ab) = b421455fdbb666c8075d8bffbeb59533434d23e6
 SHA1 (patch-numpy_distutils_fcompiler_g95.py) = be73b64a3e551df998b6a904d6db762bf28a98ed
 SHA1 (patch-numpy_distutils_fcompiler_gnu.py) = 4b0833d09560ebb954dd53ebc5cdcce339705bac
+SHA1 (patch-numpy_distutils_system__info.py) = dfd88a140b65a66c222a95ea4be6f20a33702e3b
