@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1616 2018/04/02 19:53:27 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1617 2018/04/03 03:06:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2193,3 +2193,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/mkvtoolnix to 22.0.0 [adam 2018-04-02]
 	Updated devel/py-packaging to 17.1 [adam 2018-04-02]
 	Updated math/py-scipy to 1.0.1 [adam 2018-04-02]
+	Updated print/qpdf to 8.0.2 [ryoon 2018-04-03]
