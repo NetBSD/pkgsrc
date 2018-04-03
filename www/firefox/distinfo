@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.310 2018/03/26 22:24:45 maya Exp $
+$NetBSD: distinfo,v 1.311 2018/04/03 03:10:51 ryoon Exp $
 
 SHA1 (firefox-59.0.2.tar.bz2) = 8fcf726b4d23716c7ff2b7ebc6527782b5bafe9c
 RMD160 (firefox-59.0.2.tar.bz2) = ff7ab2f9da93eda98de8aecb4563cfd176b896d9
@@ -75,9 +75,7 @@ SHA1 (patch-third__party_rust_simd_src_x86_avx2.rs) = 0169ad4ef8ff5107fc826336d0
 SHA1 (patch-toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) = e79aad01ad230e265717bd2eccbedcdd092d12d6
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 5b6d2e5c9f685d32894898d3ef3aec09a1a1e5ce
 SHA1 (patch-toolkit_library_moz.build) = 34e757ad08ebaee1cbc69993ec0f6774d41a14a2
-SHA1 (patch-toolkit_modules_GMPUtils.jsm) = 85883d2064f7bb135913ee2019200a1caf48efe7
 SHA1 (patch-toolkit_moz.configure) = 78f5c46931ae3426e65eddbea7e0552bcc6a19e0
-SHA1 (patch-toolkit_mozapps_extensions_test_browser_browser__gmpProvider.js) = 73dcf54a069b806807d9c9ddf54f66bc347c3c33
 SHA1 (patch-toolkit_mozapps_installer_packager.mk) = 6f557fb732f0b9dabf059ffac0400d3db4e79e47
 SHA1 (patch-toolkit_xre_glxtest.cpp) = cf048491778610454b914400e53072afedd96e7b
 SHA1 (patch-xpcom_base_nscore.h) = d7c96eda884d7f370442749c43caba50da61bbe4
