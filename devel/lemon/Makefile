@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/10/22 00:18:39 kamil Exp $
+# $NetBSD: Makefile,v 1.4 2018/04/03 19:58:19 adam Exp $
 
-.include "../../databases/sqlite3/Makefile.version"
+.include "../../databases/sqlite3/Makefile.common"
 
 LEMON_VERSION=	1.0
 
@@ -19,7 +19,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	airhead@users.sf.net
 HOMEPAGE=	http://www.hwaci.com/sw/lemon/
 COMMENT=	Simple LALR(1) parser generator
-LICENSE=	public-domain
 
 INSTALLATION_DIRS=	bin share/lemon share/doc/lemon
 
