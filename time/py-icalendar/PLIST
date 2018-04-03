@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.14 2017/08/06 19:30:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2018/04/03 13:19:56 adam Exp $
+bin/icalendar${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
@@ -14,6 +16,9 @@ ${PYSITELIB}/icalendar/cal.pyo
 ${PYSITELIB}/icalendar/caselessdict.py
 ${PYSITELIB}/icalendar/caselessdict.pyc
 ${PYSITELIB}/icalendar/caselessdict.pyo
+${PYSITELIB}/icalendar/cli.py
+${PYSITELIB}/icalendar/cli.pyc
+${PYSITELIB}/icalendar/cli.pyo
 ${PYSITELIB}/icalendar/compat.py
 ${PYSITELIB}/icalendar/compat.pyc
 ${PYSITELIB}/icalendar/compat.pyo
@@ -90,3 +95,6 @@ ${PYSITELIB}/icalendar/timezone_cache.pyo
 ${PYSITELIB}/icalendar/tools.py
 ${PYSITELIB}/icalendar/tools.pyc
 ${PYSITELIB}/icalendar/tools.pyo
+${PYSITELIB}/icalendar/windows_to_olson.py
+${PYSITELIB}/icalendar/windows_to_olson.pyc
+${PYSITELIB}/icalendar/windows_to_olson.pyo
