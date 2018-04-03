@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1629 2018/04/03 18:00:00 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1630 2018/04/03 18:46:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2214,3 +2214,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/nmap to 7.70 [adam 2018-04-03]
 	Updated www/py-autobahn to 18.3.1 [adam 2018-04-03]
 	Updated www/py-httptools to 0.0.11 [adam 2018-04-03]
+	Updated devel/py-construct to 2.9.43 [adam 2018-04-03]
+	Updated net/py-botocore to 1.9.22 [adam 2018-04-03]
+	Updated net/py-boto3 to 1.6.22 [adam 2018-04-03]
+	Updated net/py-awscli to 1.14.69 [adam 2018-04-03]
