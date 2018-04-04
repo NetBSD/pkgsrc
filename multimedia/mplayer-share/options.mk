@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.59 2018/04/04 11:02:07 triaxx Exp $
+# $NetBSD: options.mk,v 1.60 2018/04/04 12:26:24 triaxx Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -316,13 +316,7 @@ EXTRA_LIBS+=		-lxvidcore
 CONFIGURE_ARGS+=	--disable-xvid
 .endif
 
-.if !empty(PKG_OPTIONS:Mmplayer-ssse3)
-.  if !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*)
-     # needs a recent assembler
-.    include "../../devel/binutils/buildlink3.mk"
-.    include "../../devel/binutils/override-as.mk"
-.  endif
-.else
+.if empty(PKG_OPTIONS:Mmplayer-ssse3)
 CONFIGURE_ARGS+=	--disable-ssse3
 .endif
 
