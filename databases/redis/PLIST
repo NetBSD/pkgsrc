@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2017/08/02 19:53:37 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/04/04 10:47:49 fhajny Exp $
 bin/redis-benchmark
 bin/redis-check-aof
 bin/redis-check-rdb
@@ -28,6 +28,7 @@ share/examples/redis/tests/cluster/tests/09-pubsub.tcl
 share/examples/redis/tests/cluster/tests/10-manual-failover.tcl
 share/examples/redis/tests/cluster/tests/11-manual-takeover.tcl
 share/examples/redis/tests/cluster/tests/12-replica-migration-2.tcl
+share/examples/redis/tests/cluster/tests/13-no-failover-option.tcl
 share/examples/redis/tests/cluster/tests/helpers/onlydots.tcl
 share/examples/redis/tests/cluster/tests/includes/init-tests.tcl
 share/examples/redis/tests/cluster/tmp/.gitignore
