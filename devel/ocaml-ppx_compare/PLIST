@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/11 13:51:55 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/04/04 19:38:22 jaapb Exp $
 ${OCAML_SITELIB}/ppx_compare/META
+${OCAML_SITELIB}/ppx_compare/expander/ppx_compare.expander.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander.a
 ${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander.cma
 ${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander.cmi
@@ -8,6 +9,7 @@ ${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander.cmxs
+${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander.ml
 ${OCAML_SITELIB}/ppx_compare/expander/ppx_compare_expander.mli
 ${OCAML_SITELIB}/ppx_compare/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/ppx_compare.a
@@ -18,7 +20,10 @@ ${OCAML_SITELIB}/ppx_compare/ppx_compare.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/ppx_compare.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/ppx_compare.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/ppx_compare.cmxs
+${OCAML_SITELIB}/ppx_compare/ppx_compare.dune
+${OCAML_SITELIB}/ppx_compare/ppx_compare.ml
 ${OCAML_SITELIB}/ppx_compare/ppx_compare.mli
+${OCAML_SITELIB}/ppx_compare/runtime-lib/ppx_compare.runtime-lib.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_compare/runtime-lib/ppx_compare_lib.a
 ${OCAML_SITELIB}/ppx_compare/runtime-lib/ppx_compare_lib.cma
 ${OCAML_SITELIB}/ppx_compare/runtime-lib/ppx_compare_lib.cmi
