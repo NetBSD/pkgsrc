@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2017/10/11 14:22:39 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2018/04/04 19:42:52 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-ppx_hash
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ocaml-ppx_hash
 OCAML_PPX_HASH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-ppx_hash+=	ocaml-ppx_hash>=0.9.0
+BUILDLINK_ABI_DEPENDS.ocaml-ppx_hash+=	ocaml-ppx_hash>=0.9.0nb2
 BUILDLINK_PKGSRCDIR.ocaml-ppx_hash?=	../../devel/ocaml-ppx_hash
 
 .endif	# OCAML_PPX_HASH_BUILDLINK3_MK
