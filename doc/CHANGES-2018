@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1635 2018/04/04 09:35:00 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.1636 2018/04/04 09:57:08 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2232,3 +2232,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/gtk3 to 3.22.29 [adam 2018-04-04]
 	Updated emulators/fuse-emulator to 1.5.2 [adam 2018-04-04]
 	Updated lang/ocaml to 4.06.1 [jaapb 2018-04-04]
+	Updated devel/ocaml-jbuilder to 1.0_beta19.1 [jaapb 2018-04-04]
