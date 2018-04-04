@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/21 10:20:04 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/04/04 19:07:10 jaapb Exp $
 ${OCAML_SITELIB}/ocaml-compiler-libs/META
+${OCAML_SITELIB}/ocaml-compiler-libs/bytecomp/ocaml-compiler-libs.bytecomp.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/bytecomp/ocaml_bytecomp.a
 ${OCAML_SITELIB}/ocaml-compiler-libs/bytecomp/ocaml_bytecomp.cma
 ${OCAML_SITELIB}/ocaml-compiler-libs/bytecomp/ocaml_bytecomp.cmi
@@ -8,6 +9,7 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/bytecomp/ocaml_bytecomp.c
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/bytecomp/ocaml_bytecomp.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/bytecomp/ocaml_bytecomp.cmxs
 ${OCAML_SITELIB}/ocaml-compiler-libs/bytecomp/ocaml_bytecomp.ml
+${OCAML_SITELIB}/ocaml-compiler-libs/common/ocaml-compiler-libs.common.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/common/ocaml_common.a
 ${OCAML_SITELIB}/ocaml-compiler-libs/common/ocaml_common.cma
 ${OCAML_SITELIB}/ocaml-compiler-libs/common/ocaml_common.cmi
@@ -17,6 +19,7 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/common/ocaml_common.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/common/ocaml_common.cmxs
 ${OCAML_SITELIB}/ocaml-compiler-libs/common/ocaml_common.ml
 ${OCAML_SITELIB}/ocaml-compiler-libs/opam
+${OCAML_SITELIB}/ocaml-compiler-libs/shadow/ocaml-compiler-libs.shadow.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/shadow/ocaml_shadow.a
 ${OCAML_SITELIB}/ocaml-compiler-libs/shadow/ocaml_shadow.cma
 ${OCAML_SITELIB}/ocaml-compiler-libs/shadow/ocaml_shadow.cmi
@@ -25,6 +28,7 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/shadow/ocaml_shadow.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/shadow/ocaml_shadow.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/shadow/ocaml_shadow.cmxs
 ${OCAML_SITELIB}/ocaml-compiler-libs/shadow/ocaml_shadow.ml
+${OCAML_SITELIB}/ocaml-compiler-libs/toplevel/ocaml-compiler-libs.toplevel.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/toplevel/ocaml_toplevel.a
 ${OCAML_SITELIB}/ocaml-compiler-libs/toplevel/ocaml_toplevel.cma
 ${OCAML_SITELIB}/ocaml-compiler-libs/toplevel/ocaml_toplevel.cmi
