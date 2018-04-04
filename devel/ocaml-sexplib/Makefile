@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2018/01/30 10:32:44 jaapb Exp $
+# $NetBSD: Makefile,v 1.15 2018/04/04 16:20:15 jaapb Exp $
 
 GITHUB_PROJECT=	sexplib
-GITHUB_TAG=	v${VERS}
-DISTNAME=	${GITHUB_PROJECT}-${VERS}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+DISTNAME=	${GITHUB_PROJECT}-0.10.0
 PKGNAME=	ocaml-${DISTNAME}
-VERS=		0.10.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 
@@ -14,7 +14,7 @@ COMMENT=	S-Expressions with Type Converters for OCaml
 LICENSE=	modified-bsd AND apache-2.0
 
 OCAML_USE_FINDLIB=	yes
-OCAML_USE_OPAM=	yes
+OCAML_USE_JBUILDER=	yes
 
 BUILD_TARGET=	default
 
