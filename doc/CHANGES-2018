@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1640 2018/04/04 10:47:57 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1641 2018/04/04 11:40:41 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2237,3 +2237,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/nodejs8 to 8.11.1 [fhajny 2018-04-04]
 	Updated lang/nodejs to 9.10.1 [fhajny 2018-04-04]
 	Updated databases/redis to 4.0.9 [fhajny 2018-04-04]
+	Updated databases/py-sqlite2 to 2.8.3 [fhajny 2018-04-04]
