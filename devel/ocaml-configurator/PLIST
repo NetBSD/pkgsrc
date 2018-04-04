@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/16 08:38:27 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/04/04 16:23:36 jaapb Exp $
 ${OCAML_SITELIB}/configurator/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/configurator/configurator.a
 ${OCAML_SITELIB}/configurator/configurator.cma
@@ -8,6 +8,8 @@ ${OCAML_SITELIB}/configurator/configurator.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/configurator/configurator.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/configurator/configurator.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/configurator/configurator.cmxs
+${OCAML_SITELIB}/configurator/configurator.dune
+${OCAML_SITELIB}/configurator/configurator.ml
 ${OCAML_SITELIB}/configurator/configurator.mli
 ${OCAML_SITELIB}/configurator/opam
 share/doc/configurator/LICENSE.txt
