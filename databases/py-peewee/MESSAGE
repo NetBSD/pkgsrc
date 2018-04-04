@@ -1,11 +1,19 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2014/10/17 10:24:04 fhajny Exp $
+$NetBSD: MESSAGE,v 1.2 2018/04/04 12:31:19 fhajny Exp $
 
 The ${PKGNAME} package doesn't have any fixed dependencies. In order to use
-it, install either of the relevant backend packages as needed:
+it, install a supported backend package as needed.
 
-  - ${PYPKGPREFIX}-mysqldb for MySQL support (databases/py-mysqldb)
-  - ${PYPKGPREFIX}-psycopg2 for PostgreSQL support (databases/py-psycopg2)
-  - ${PYPKGPREFIX}-sqlite3 for SQLite3 support (databases/py-sqlite3)
+  MySQL
+    - ${PYPKGPREFIX}-pymysql (databases/py-pymysql)
+    - ${PYPKGPREFIX}-mysqldb (databases/py-mysqldb)
+
+  PostgreSQL:
+    - ${PYPKGPREFIX}-psycopg2 (databases/py-psycopg2)
+
+  SQLite:
+    - ${PYPKGPREFIX}-sqlite3 (databases/py-sqlite3)
+    - ${PYPKGPREFIX}-apsw (databases/py-apsw)
+    - ${PYPKGPREFIX}-sqlite2 (databases/py-sqlite2)
 
 ===========================================================================
