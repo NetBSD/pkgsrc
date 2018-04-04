@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/10/25 11:01:58 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/04/04 19:12:53 jaapb Exp $
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/META
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/ast_402.cmi
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/ast_402.cmt
@@ -28,6 +28,7 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/driver-main/migrate_p
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/driver-main/migrate_parsetree_driver_main.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/driver-main/migrate_parsetree_driver_main.cmxs
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/driver-main/migrate_parsetree_driver_main.ml
+${OCAML_SITELIB}/ocaml-migrate-parsetree/driver-main/ocaml-migrate-parsetree.driver-main.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree.a
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree.cma
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree.cmi
@@ -104,6 +105,7 @@ ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_ast_io.cmi
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_ast_io.cmt
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_ast_io.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_ast_io.cmx
+${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_ast_io.ml
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_ast_io.mli
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_compiler_functions.cmi
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_compiler_functions.cmt
@@ -113,24 +115,29 @@ ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_def.cmi
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_def.cmt
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_def.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_def.cmx
+${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_def.ml
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_def.mli
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_driver.cmi
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_driver.cmt
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_driver.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_driver.cmx
+${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_driver.ml
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_driver.mli
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_parse.cmi
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_parse.cmt
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_parse.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_parse.cmx
+${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_parse.ml
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_parse.mli
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_versions.cmi
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_versions.cmt
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_versions.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_versions.cmx
+${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_versions.ml
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_versions.mli
+${OCAML_SITELIB}/ocaml-migrate-parsetree/ocaml-migrate-parsetree.dune
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/opam
 share/doc/ocaml-migrate-parsetree/CHANGES.md
-share/doc/ocaml-migrate-parsetree/LICENSE
+share/doc/ocaml-migrate-parsetree/LICENSE.md
 share/doc/ocaml-migrate-parsetree/MANUAL.md
 share/doc/ocaml-migrate-parsetree/README.md
