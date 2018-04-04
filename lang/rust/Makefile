@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2018/03/03 22:11:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2018/04/04 12:16:46 ryoon Exp $
 
-DISTNAME=	rustc-1.24.1-src
+DISTNAME=	rustc-1.25.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
@@ -74,7 +74,7 @@ CONFIGURE_ARGS+=	--disable-jemalloc
 # own bootstrap.  See the stage0-bootstrap below for more details.
 #
 DISTFILES:=		${DEFAULT_DISTFILES}
-RUST_STAGE0_VER=	1.23.0
+RUST_STAGE0_VER=	1.24.1
 #
 .if !empty(MACHINE_PLATFORM:MDarwin-*-i386) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH:=		i686-apple-darwin
