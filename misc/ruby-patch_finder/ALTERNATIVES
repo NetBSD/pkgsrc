@@ -1,0 +1,1 @@
+bin/msu_finder @PREFIX@/bin/msu_finder@RUBY_VER@
