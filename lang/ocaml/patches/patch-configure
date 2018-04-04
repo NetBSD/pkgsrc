@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.31 2018/01/29 14:15:58 jperkin Exp $
+$NetBSD: patch-configure,v 1.32 2018/04/04 09:34:46 jaapb Exp $
 
 All kinds of OS-specific changes to configure
 Honor LDFLAGS.
@@ -83,8 +83,8 @@ Honor LDFLAGS.
    armv6t2*-*-linux-gnueabi)     arch=arm; model=armv6t2; system=linux_eabi;;
    armv6*-*-linux-gnueabi)       arch=arm; model=armv6; system=linux_eabi;;
    armv6*-*-freebsd*)            arch=arm; model=armv6; system=freebsd;;
-+  armv6-*-netbsdelf*)		arch=arm; model=armv6; system=netbsd;;
-+  armv7-*-netbsdelf*)		arch=arm; model=armv7; system=netbsd;;
++  armv6-*-netbsdelf*)         arch=arm; model=armv6; system=netbsd;;
++  armv7-*-netbsdelf*)         arch=arm; model=armv7; system=netbsd;;
    earmv6*-*-netbsd*)            arch=arm; model=armv6; system=netbsd;;
    earmv7*-*-netbsd*)            arch=arm; model=armv7; system=netbsd;;
    armv5te*-*-linux-gnueabi)     arch=arm; model=armv5te; system=linux_eabi;;
