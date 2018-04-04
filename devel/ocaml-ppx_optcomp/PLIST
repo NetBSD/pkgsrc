@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/07/21 13:34:18 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/04/04 19:26:12 jaapb Exp $
 bin/ppx-optcomp
 ${OCAML_SITELIB}/ppx_optcomp/META
 ${OCAML_SITELIB}/ppx_optcomp/opam
@@ -10,6 +10,8 @@ ${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp.cmxs
+${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp.dune
+${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp.ml
 ${OCAML_SITELIB}/ppx_optcomp/ppx_optcomp.mli
 share/doc/ppx_optcomp/CHANGES.md
 share/doc/ppx_optcomp/LICENSE.txt
