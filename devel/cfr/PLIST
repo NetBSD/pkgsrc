@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2018/04/04 16:07:21 pho Exp $
+bin/cfr
+lib/java/cfr/cfr_0_125.jar
