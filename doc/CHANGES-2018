@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1638 2018/04/04 10:37:52 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1639 2018/04/04 10:41:23 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2235,3 +2235,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ocaml-jbuilder to 1.0_beta19.1 [jaapb 2018-04-04]
 	Updated lang/nodejs6 to 6.14.1 [fhajny 2018-04-04]
 	Updated lang/nodejs8 to 8.11.1 [fhajny 2018-04-04]
+	Updated lang/nodejs to 9.10.1 [fhajny 2018-04-04]
