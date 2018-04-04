@@ -1,0 +1,12 @@
+CFR will decompile modern Java features - Java 8 lambdas (pre and post
+Java beta 103 changes), Java 7 String switches etc, but is written
+entirely in Java 6. (FAQ)
+
+To use, simply run the cfr command, with the class name you want to
+decompile (either as a path to a class file, or as a fully qualified
+classname on your classpath), and optionally the method name. (--help
+to list arguments).
+
+Alternately, to decompile an entire jar, simply provide the jar path,
+and if you want to emit files (which you probably do!) add --outputdir
+/tmp/putithere
