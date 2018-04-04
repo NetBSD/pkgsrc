@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/07/21 14:12:22 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/04/04 19:41:26 jaapb Exp $
 ${OCAML_SITELIB}/ppx_sexp_conv/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv/expander/ppx_sexp_conv_expander.a
 ${OCAML_SITELIB}/ppx_sexp_conv/expander/ppx_sexp_conv_expander.cma
@@ -8,6 +8,8 @@ ${OCAML_SITELIB}/ppx_sexp_conv/expander/ppx_sexp_conv_expander.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv/expander/ppx_sexp_conv_expander.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv/expander/ppx_sexp_conv_expander.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv/expander/ppx_sexp_conv_expander.cmxs
+${OCAML_SITELIB}/ppx_sexp_conv/expander/ppx_sexp_conv.expander.dune
+${OCAML_SITELIB}/ppx_sexp_conv/expander/ppx_sexp_conv_expander.ml
 ${OCAML_SITELIB}/ppx_sexp_conv/expander/ppx_sexp_conv_expander.mli
 ${OCAML_SITELIB}/ppx_sexp_conv/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv.a
@@ -18,6 +20,8 @@ ${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv.cmxs
+${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv.dune
+${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv.ml
 ${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv.mli
 share/doc/ppx_sexp_conv/CHANGES.md
 share/doc/ppx_sexp_conv/LICENSE.txt
