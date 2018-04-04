@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.58 2016/03/05 09:03:02 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.59 2018/04/04 11:02:07 triaxx Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
@@ -16,6 +16,7 @@ DIST_SUBDIR=		mplayer
 
 MAINTAINER?=		pkgsrc-users@NetBSD.org
 HOMEPAGE?=		http://www.mplayerhq.hu/
+LICENSE=		gnu-gpl-v2
 
 #
 # NOTE: gmplayer has its own distinfo file. if you are also updating
