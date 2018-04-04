@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1646 2018/04/04 14:21:17 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1647 2018/04/04 14:26:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2243,3 +2243,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/passenger to 5.2.2 [fhajny 2018-04-04]
 	Updated time/p5-DateTime to 1.4800 [mef 2018-04-04]
 	Updated lang/yabasic to 2.78.5 [wen 2018-04-04]
+	Updated time/p5-Test-MockTime to 1.7 [mef 2018-04-04]
