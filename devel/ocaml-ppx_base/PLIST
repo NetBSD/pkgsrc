@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/14 10:17:52 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/04/04 19:44:19 jaapb Exp $
 bin/ppx-base
 ${OCAML_SITELIB}/ppx_base/META
 ${OCAML_SITELIB}/ppx_base/opam
@@ -10,5 +10,6 @@ ${OCAML_SITELIB}/ppx_base/ppx_base.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_base/ppx_base.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_base/ppx_base.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_base/ppx_base.cmxs
+${OCAML_SITELIB}/ppx_base/ppx_base.dune
 ${OCAML_SITELIB}/ppx_base/ppx_base.ml-gen
 share/doc/ppx_base/LICENSE.txt
