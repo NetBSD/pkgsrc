@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2018/03/17 11:56:15 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2018/04/04 17:40:23 tron Exp $
 
 DISTNAME=	hexchat-2.14.1
 CATEGORIES=	chat
@@ -32,6 +32,11 @@ PYTHON_FOR_BUILD_ONLY=	yes
 REPLACE_PYTHON+=	plugins/perl/generate_header.py
 REPLACE_PYTHON+=	src/common/make-te.py
 REPLACE_PYTHON+=	meson_post_install.py
+
+OPSYSVARS+=		SOEXT
+SOEXT.Darwin=		dylib
+SOEXT.*=		so
+PLIST_SUBST+=		SOEXT=${SOEXT}
 
 .include "../../devel/py-meson/build.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
