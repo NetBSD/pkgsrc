@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/03/30 19:16:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.23 2018/04/04 11:46:25 jperkin Exp $
 #
 
 DISTNAME=	check-0.12.0
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 #CONFIGURE_ENV=	ac_cv_path_AWK_PATH=gawk
-USE_TOOLS=	automake autoreconf makeinfo # gawk
+USE_TOOLS=	automake autoreconf makeinfo pkg-config # gawk
 USE_LIBTOOL=	yes
 INFO_FILES=	yes
 
