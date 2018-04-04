@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/11 14:22:39 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/04/04 19:42:52 jaapb Exp $
 ${OCAML_SITELIB}/ppx_hash/META
+${OCAML_SITELIB}/ppx_hash/expander/expand.ml
 ${OCAML_SITELIB}/ppx_hash/expander/expand.mli
 ${OCAML_SITELIB}/ppx_hash/expander/expand_intf.ml
+${OCAML_SITELIB}/ppx_hash/expander/ppx_hash.expander.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib.a
 ${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib.cma
 ${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib.cmi
@@ -30,7 +32,10 @@ ${OCAML_SITELIB}/ppx_hash/ppx_hash.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/ppx_hash.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/ppx_hash.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/ppx_hash.cmxs
+${OCAML_SITELIB}/ppx_hash/ppx_hash.dune
+${OCAML_SITELIB}/ppx_hash/ppx_hash.ml
 ${OCAML_SITELIB}/ppx_hash/ppx_hash.mli
+${OCAML_SITELIB}/ppx_hash/runtime-lib/ppx_hash.runtime-lib.dune
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/runtime-lib/ppx_hash_lib.a
 ${OCAML_SITELIB}/ppx_hash/runtime-lib/ppx_hash_lib.cma
 ${OCAML_SITELIB}/ppx_hash/runtime-lib/ppx_hash_lib.cmi
