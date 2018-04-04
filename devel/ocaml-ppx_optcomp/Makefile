@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2018/01/10 16:53:10 jaapb Exp $
+# $NetBSD: Makefile,v 1.11 2018/04/04 19:26:12 jaapb Exp $
 
-VERSION=	0.9.0
 GITHUB_PROJECT=	ppx_optcomp
-GITHUB_TAG=	v${VERSION}
-DISTNAME=	${GITHUB_PROJECT}-${VERSION}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+DISTNAME=	${GITHUB_PROJECT}-0.9.0
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 
@@ -20,7 +19,4 @@ OCAML_USE_JBUILDER=	yes
 .include "../../mk/ocaml.mk"
 .include "../../devel/ocaml-compiler-libs/buildlink3.mk"
 .include "../../devel/ocaml-ppx_core/buildlink3.mk"
-#.include "../../devel/ocaml-ppx_deriving/buildlink3.mk"
-#.include "../../devel/ocaml-ppx_tools/buildlink3.mk"
-#.include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
