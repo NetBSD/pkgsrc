@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2018/04/04 15:26:14 minskim Exp $
+bin/msu_finder${RUBY_SUFFIX}
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/msu_finder
+${GEM_LIBDIR}/docs/bin/msu_finder.txt
+${GEM_LIBDIR}/lib/patch_finder/core/config.rb
+${GEM_LIBDIR}/lib/patch_finder/core/helper.rb
+${GEM_LIBDIR}/lib/patch_finder/core/thread_pool.rb
+${GEM_LIBDIR}/lib/patch_finder/engine/msu/constants.rb
+${GEM_LIBDIR}/lib/patch_finder/engine/msu/google.rb
+${GEM_LIBDIR}/lib/patch_finder/engine/msu/technet.rb
+${GEM_LIBDIR}/lib/patch_finder/msu.rb
+${GEM_LIBDIR}/patch_finder.gemspec
+${GEM_LIBDIR}/tools/extract_msu.bat
+${GEM_LIBDIR}/tools/list_dll.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
