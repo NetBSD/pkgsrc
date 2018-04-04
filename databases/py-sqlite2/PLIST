@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2012/04/09 09:24:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/04/04 11:40:34 fhajny Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pysqlite2/__init__.py
 ${PYSITELIB}/pysqlite2/__init__.pyc
@@ -25,12 +25,6 @@ ${PYSITELIB}/pysqlite2/test/factory.pyo
 ${PYSITELIB}/pysqlite2/test/hooks.py
 ${PYSITELIB}/pysqlite2/test/hooks.pyc
 ${PYSITELIB}/pysqlite2/test/hooks.pyo
-${PYSITELIB}/pysqlite2/test/py25/__init__.py
-${PYSITELIB}/pysqlite2/test/py25/__init__.pyc
-${PYSITELIB}/pysqlite2/test/py25/__init__.pyo
-${PYSITELIB}/pysqlite2/test/py25/py25tests.py
-${PYSITELIB}/pysqlite2/test/py25/py25tests.pyc
-${PYSITELIB}/pysqlite2/test/py25/py25tests.pyo
 ${PYSITELIB}/pysqlite2/test/regression.py
 ${PYSITELIB}/pysqlite2/test/regression.pyc
 ${PYSITELIB}/pysqlite2/test/regression.pyo
