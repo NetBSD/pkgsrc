@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2652 2018/04/03 11:13:29 adam Exp $
+# $NetBSD: Makefile,v 1.2653 2018/04/04 16:08:46 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -131,6 +131,7 @@ SUBDIR+=	cervisia
 SUBDIR+=	cfitsio
 SUBDIR+=	cflow
 SUBDIR+=	cflow-mode
+SUBDIR+=	cfr
 SUBDIR+=	cgdb
 SUBDIR+=	cgen
 SUBDIR+=	check
