@@ -1,24 +1,37 @@
-@comment $NetBSD: PLIST,v 1.5 2017/07/21 13:27:52 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/04/04 19:23:03 jaapb Exp $
 ${OCAML_SITELIB}/ppx_core/META
+${OCAML_SITELIB}/ppx_core/ast_builder.ml
 ${OCAML_SITELIB}/ppx_core/ast_builder.mli
 ${OCAML_SITELIB}/ppx_core/ast_builder_generated.ml
 ${OCAML_SITELIB}/ppx_core/ast_builder_intf.ml
+${OCAML_SITELIB}/ppx_core/ast_pattern.ml
 ${OCAML_SITELIB}/ppx_core/ast_pattern.mli
 ${OCAML_SITELIB}/ppx_core/ast_pattern0.ml
 ${OCAML_SITELIB}/ppx_core/ast_pattern_generated.ml
+${OCAML_SITELIB}/ppx_core/ast_traverse.ml
 ${OCAML_SITELIB}/ppx_core/ast_traverse.mli
+${OCAML_SITELIB}/ppx_core/attribute.ml
 ${OCAML_SITELIB}/ppx_core/attribute.mli
 ${OCAML_SITELIB}/ppx_core/caller_id.ml
+${OCAML_SITELIB}/ppx_core/code_matcher.ml
 ${OCAML_SITELIB}/ppx_core/code_matcher.mli
+${OCAML_SITELIB}/ppx_core/common.ml
 ${OCAML_SITELIB}/ppx_core/common.mli
+${OCAML_SITELIB}/ppx_core/context_free.ml
 ${OCAML_SITELIB}/ppx_core/context_free.mli
+${OCAML_SITELIB}/ppx_core/extension.ml
 ${OCAML_SITELIB}/ppx_core/extension.mli
+${OCAML_SITELIB}/ppx_core/file_path.ml
 ${OCAML_SITELIB}/ppx_core/file_path.mli
 ${OCAML_SITELIB}/ppx_core/glue.ml
 ${OCAML_SITELIB}/ppx_core/import.ml
+${OCAML_SITELIB}/ppx_core/loc.ml
 ${OCAML_SITELIB}/ppx_core/loc.mli
+${OCAML_SITELIB}/ppx_core/location.ml
 ${OCAML_SITELIB}/ppx_core/location.mli
+${OCAML_SITELIB}/ppx_core/longident.ml
 ${OCAML_SITELIB}/ppx_core/longident.mli
+${OCAML_SITELIB}/ppx_core/name.ml
 ${OCAML_SITELIB}/ppx_core/name.mli
 ${OCAML_SITELIB}/ppx_core/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_core/ppx_core.a
@@ -28,6 +41,7 @@ ${OCAML_SITELIB}/ppx_core/ppx_core.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_core/ppx_core.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_core/ppx_core.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_core/ppx_core.cmxs
+${OCAML_SITELIB}/ppx_core/ppx_core.dune
 ${OCAML_SITELIB}/ppx_core/ppx_core.ml
 ${OCAML_SITELIB}/ppx_core/ppx_core__.cmi
 ${OCAML_SITELIB}/ppx_core/ppx_core__.cmt
