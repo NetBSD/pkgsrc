@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/04/04 16:26:25 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/04/04 19:21:21 jaapb Exp $
 ${OCAML_SITELIB}/stdio/META
 ${OCAML_SITELIB}/stdio/import.ml
 ${OCAML_SITELIB}/stdio/in_channel.ml
