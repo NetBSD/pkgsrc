@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1645 2018/04/04 14:18:46 mef Exp $
+$NetBSD: CHANGES-2018,v 1.1646 2018/04/04 14:21:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2242,3 +2242,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-peewee to 3.2.2 [fhajny 2018-04-04]
 	Updated www/passenger to 5.2.2 [fhajny 2018-04-04]
 	Updated time/p5-DateTime to 1.4800 [mef 2018-04-04]
+	Updated lang/yabasic to 2.78.5 [wen 2018-04-04]
