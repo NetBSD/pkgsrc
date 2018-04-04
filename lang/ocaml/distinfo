@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.118 2018/01/29 14:15:57 jperkin Exp $
+$NetBSD: distinfo,v 1.119 2018/04/04 09:34:46 jaapb Exp $
 
-SHA1 (ocaml-4.06.0.tar.gz) = bcfe5895acc88d63635d77bf0bdb8817a947a134
-RMD160 (ocaml-4.06.0.tar.gz) = fc284c392b1dd072f2c5bc7c73d0149e858ec405
-SHA512 (ocaml-4.06.0.tar.gz) = d6dc6f0fd5b0a0e6523f2b7a83efb67801bd41740a1b6c037038bcdb07c1eb2b4ac69205c17ec42524b911ea53136da82ee5bae79db6b40facd12f8f7880865d
-Size (ocaml-4.06.0.tar.gz) = 4041107 bytes
+SHA1 (ocaml-4.06.1.tar.gz) = 63dc362344f1a7b448336c94c33207c2940be475
+RMD160 (ocaml-4.06.1.tar.gz) = ad7a6038544a0d59b72b6fe9e81a4e69c158d397
+SHA512 (ocaml-4.06.1.tar.gz) = 42560874ce363212fa4e862138d7260113bc8dff8b39c040332bbd9b039ba938788344ba8ce63ffc0a251bf21a6e493f3c1e505b6f51db6fec4d21578921060e
+Size (ocaml-4.06.1.tar.gz) = 4049457 bytes
 SHA1 (patch-Makefile) = 7fb492bbc3c44bad1753b8fc6928b7b0cadac436
 SHA1 (patch-asmcomp_asmlink.ml) = db2b387ea17f41a62c2bce53b91f945d5e29a82f
 SHA1 (patch-asmrun_Makefile) = 86c88be262ae1278ca376d7966b496b49c549e72
 SHA1 (patch-byterun_Makefile) = 02797b10d685b25c0c6f5aab8eadc324e26826e9
-SHA1 (patch-configure) = ef9b53c652af594b6a38c20b66f63515b0ee1b56
+SHA1 (patch-configure) = 980494a5788b930d3f673a4d43b2b5ce6c6d7d46
 SHA1 (patch-driver_compenv.ml) = 658e315bb08f8a1093f11c8474ac1e4ad73c8306
 SHA1 (patch-driver_main.ml) = 69a6f761ded38e0721a7aed1416a9f19a288d991
 SHA1 (patch-driver_main_args.ml) = 4c6a6ec25f433974f9aab99b4f2ac9c884bb3b04

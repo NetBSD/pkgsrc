@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2018/01/10 16:14:20 jaapb Exp $
+# $NetBSD: Makefile,v 1.119 2018/04/04 09:34:46 jaapb Exp $
 
 .include "Makefile.common"
 
@@ -75,18 +75,6 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man1
 OPSYSVARS+=		EXTRA_RT_LIBS
 EXTRA_RT_LIBS.NetBSD=	-lcurses
 EXTRA_RT_LIBS.*=
-
-SUBST_CLASSES+=		extra-rt-libs
-SUBST_FILES.extra-rt-libs=	bytecomp/bytelink.ml
-SUBST_SED.extra-rt-libs+=	-e 's,@EXTRA_RT_LIBS@,${EXTRA_RT_LIBS},g'
-SUBST_STAGE.extra-rt-libs=	pre-configure
-
-SUBST_CLASSES+=		linkopts
-SUBST_FILES.linkopts=	configure
-SUBST_SED.linkopts+=	-e '\|bytecclinkopts=|s|""|"${LDFLAGS}"|'
-SUBST_SED.linkopts+=	-e "\|nativecclinkopts=|s|''|\"${LDFLAGS:C/-Wl,//}\"|"
-SUBST_STAGE.linkopts=	pre-configure
-SUBST_MESSAGE.linkopts=	Honor LDFLAGS.
 
 PRINT_PLIST_AWK+=	{ gsub(/lib\/ocaml\/${PKGMANDIR:S|/|\\/|}/, "lib/ocaml/$${PKGMANDIR}"); }
 
