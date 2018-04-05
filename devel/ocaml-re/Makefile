@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2018/01/10 16:53:10 jaapb Exp $
+# $NetBSD: Makefile,v 1.14 2018/04/05 10:45:05 jaapb Exp $
 
-VERSION=	1.7.1
+VERSION=	1.7.3
 GITHUB_PROJECT=	ocaml-re
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
-PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
@@ -12,13 +11,11 @@ HOMEPAGE=	https://github.com/ocaml/ocaml-re/
 COMMENT=	Pure OCaml regular expression library
 LICENSE=	gnu-lgpl-v2.1
 
-USE_TOOLS+=	gmake
-OCAML_USE_OASIS=	yes
-CONFIGURE_ARGS+=	--docdir ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-
-post-build:
-	${RUN} cd ${WRKSRC} && \
-		${SETENV} ${MAKE_ENV} ${OASIS_EXEC} -doc ${OASIS_BUILD_ARGS}
+INSTALLATION_DIRS+=	${OCAML_SITELIBDIR}/re/emacs ${OCAML_SITELIBDIR}/re/glob \
+		       	${OCAML_SITELIBDIR}/re/pcre ${OCAML_SITELIBDIR}/re/perl \
+			${OCAML_SITELIBDIR}/re/posix ${OCAML_SITELIBDIR}/re/str \
+			share/doc/re
+OCAML_USE_JBUILDER=	yes
 
 .include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
