@@ -1,9 +1,9 @@
-$NetBSD: patch-config-scripts_cups-opsys.m4,v 1.1 2017/12/19 08:23:53 adam Exp $
+$NetBSD: patch-config-scripts_cups-opsys.m4,v 1.2 2018/04/05 16:31:45 leot Exp $
 
 Fix building on newer macOS.
 
---- config-scripts//cups-opsys.m4.orig	2017-12-19 08:18:26.000000000 +0000
-+++ config-scripts//cups-opsys.m4
+--- config-scripts/cups-opsys.m4.orig	2018-03-23 03:48:36.000000000 +0000
++++ config-scripts/cups-opsys.m4
 @@ -22,9 +22,6 @@ if test "x$host_os_version" = x; then
          host_os_version="0"
  fi
