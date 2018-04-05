@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2018/03/12 11:16:38 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2018/04/05 16:49:15 bouyer Exp $
 #
 
-VERSION=	20170414
+VERSION=	20180405
 DISTNAME=	weather_routing_pi-${VERSION}
 PKGNAME=	opencpn-plugin-weather_routing-${VERSION}
-PKGREVISION=	6
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=seandepagnier/}
 GITHUB_PROJECT=	weather_routing_pi
-GITHUB_TAG=	d65c968479af4fee78aa28b4b3f2c54660597eac
+GITHUB_TAG=	c4dc8231ef0da6c7da52be22f2cded1c2880dfa4
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	https://opencpn.org/OpenCPN/plugins/weatherroute.html
