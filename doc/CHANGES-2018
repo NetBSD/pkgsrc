@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1655 2018/04/05 08:46:47 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1656 2018/04/05 09:01:23 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2254,3 +2254,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated finance/py-braintree to 3.43.0 [adam 2018-04-05]
 	Updated www/py-cfscrape to 1.9.5 [adam 2018-04-05]
 	Updated devel/kafka to 1.1.0 [fhajny 2018-04-05]
+	Updated devel/librdkafka to 0.11.4 [fhajny 2018-04-05]
