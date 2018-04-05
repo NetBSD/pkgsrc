@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.11 2018/01/10 16:48:21 jaapb Exp $
+$NetBSD: distinfo,v 1.12 2018/04/05 12:00:34 jaapb Exp $
 
-SHA1 (tyxml-4.1.0.tar.gz) = 6b11f233c819c419195f670102340c88cfc245fb
-RMD160 (tyxml-4.1.0.tar.gz) = 7cdb4e93ccd69f74b43b1f87917dcf0b7cd44806
-SHA512 (tyxml-4.1.0.tar.gz) = add2b82939ea069ee74ee26ff3ee1f3ad2e361e593134da807e1acfbebff4ed546cbc23aca7ee2936a1eb8a736916d673aa2c96aeae8779706cd726bc2d07ead
-Size (tyxml-4.1.0.tar.gz) = 179852 bytes
-SHA1 (patch-ppx_ppx__reflect.ml) = 0aeb623a7c04343dde1f1d0738b2d27f5c6d6de7
+SHA1 (tyxml-4.2.0.tar.gz) = 22470e05c7cd69e135471fc24ff0acb6790f2d74
+RMD160 (tyxml-4.2.0.tar.gz) = 25153ebf256cee762d94112d0a21b15c1fec647d
+SHA512 (tyxml-4.2.0.tar.gz) = 555df1fdf5eb30592a3bd93b7d08345964b1cd6e16c2f746ef777cb3c5fc9a31dddf316432e0457d317eaf7728c5d1156982956169a7b1eb9b660eedcf89ca58
+Size (tyxml-4.2.0.tar.gz) = 182255 bytes
