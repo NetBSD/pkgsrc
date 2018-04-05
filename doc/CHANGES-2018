@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1651 2018/04/04 19:13:05 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.1652 2018/04/05 07:15:23 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2248,3 +2248,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added misc/ruby-patch_finder version 1.0.2 [minskim 2018-04-04]
 	Added devel/cfr version 0.125 [pho 2018-04-04]
 	Updated devel/ocaml-migrate-parsetree to 1.0.8 [jaapb 2018-04-04]
+	Updated www/passenger to 5.2.3 [fhajny 2018-04-05]
