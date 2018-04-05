@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/01/22 02:38:47 wen Exp $
+# $NetBSD: Makefile,v 1.8 2018/04/05 10:29:31 jperkin Exp $
 
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -31,6 +31,8 @@ REPLACE_INTERPRETER+=	Rscript
 REPLACE.Rscript.old=	.*Rscript
 REPLACE.Rscript.new=	${PREFIX}/bin/Rscript
 REPLACE_FILES.Rscript=	${REPLACE_RSCRIPT}
+
+CHECK_SSP_SKIP+=	lib/R/library/Rcpp/unitTests/bin/*/*.deb
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
