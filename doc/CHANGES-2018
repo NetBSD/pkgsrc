@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1653 2018/04/05 08:15:10 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1654 2018/04/05 08:21:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2250,3 +2250,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ocaml-migrate-parsetree to 1.0.8 [jaapb 2018-04-04]
 	Updated www/passenger to 5.2.3 [fhajny 2018-04-05]
 	Updated net/powerdns-recursor to 4.1.2 [fhajny 2018-04-05]
+	Updated www/py-djangorestframework to 3.8.1 [adam 2018-04-05]
+	Updated finance/py-braintree to 3.43.0 [adam 2018-04-05]
+	Updated www/py-cfscrape to 1.9.5 [adam 2018-04-05]
