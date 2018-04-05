@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1658 2018/04/05 10:46:13 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.1659 2018/04/05 11:04:52 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2257,3 +2257,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/librdkafka to 0.11.4 [fhajny 2018-04-05]
 	Updated textproc/mandoc to 1.14.3nb1 [wiz 2018-04-05]
 	Updated devel/ocaml-re to 1.7.3 [jaapb 2018-04-05]
+	Updated devel/ocaml-lwt to 3.3.0 [jaapb 2018-04-05]
