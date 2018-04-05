@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1665 2018/04/05 16:32:08 leot Exp $
+$NetBSD: CHANGES-2018,v 1.1666 2018/04/05 16:32:25 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2266,3 +2266,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-html-sanitizer to 1.4.0 [joerg 2018-04-05]
 	Updated devel/blosc to 1.14.2 [minskim 2018-04-05]
 	Updated print/cups-base to 2.2.7 [leot 2018-04-05]
+	Updated print/cups to 2.2.7 [leot 2018-04-05]
