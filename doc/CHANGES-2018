@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1667 2018/04/05 16:50:42 bouyer Exp $
+$NetBSD: CHANGES-2018,v 1.1668 2018/04/05 17:53:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2272,3 +2272,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/blosc to 1.14.2 [minskim 2018-04-05]
 	Updated print/cups-base to 2.2.7 [leot 2018-04-05]
 	Updated print/cups to 2.2.7 [leot 2018-04-05]
+	Updated net/mitmproxy to 3.0.4 [leot 2018-04-05]
