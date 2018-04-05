@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1659 2018/04/05 11:04:52 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.1660 2018/04/05 12:00:45 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2258,3 +2258,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/mandoc to 1.14.3nb1 [wiz 2018-04-05]
 	Updated devel/ocaml-re to 1.7.3 [jaapb 2018-04-05]
 	Updated devel/ocaml-lwt to 3.3.0 [jaapb 2018-04-05]
+	Updated textproc/ocaml-tyxml to 4.2.0 [jaapb 2018-04-05]
