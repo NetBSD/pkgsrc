@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/02/18 16:25:45 jmcneill Exp $
+# $NetBSD: Makefile,v 1.4 2018/04/05 19:13:57 joerg Exp $
 
 PKGREVISION=		3
 
@@ -13,7 +13,7 @@ post-extract:
 	${CP} ${PREFIX}/share/arm-trusted-firmware/sun50iw1p1/bl31.bin ${WRKSRC}
 
 post-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} u-boot-sunxi-with-spl.bin
+	${CAT} ${WRKSRC}/spl/sunxi-spl.bin ${WRKSRC}/u-boot.itb > ${WRKSRC}/u-boot-sunxi-with-spl.bin
 
 .include "../../sysutils/arm-trusted-firmware-sun50iw1p1/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
