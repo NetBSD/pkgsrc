@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2018/02/23 14:14:23 adam Exp $
+# $NetBSD: Makefile,v 1.16 2018/04/05 12:01:54 adam Exp $
 
-DISTNAME=	lz4-1.0.0
+DISTNAME=	lz4-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lz4/}
@@ -10,12 +10,15 @@ HOMEPAGE=	https://github.com/python-lz4/python-lz4
 COMMENT=	Python LZ4 binding
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-deprecation-[0-9]*:../../devel/py-deprecation
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 BUILD_DEPENDS+=	${PYPKGPREFIX}-pkgconfig-[0-9]*:../../devel/py-pkgconfig
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
-# TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+.include "../../lang/python/pyversion.mk"
+.if "${PYPKGPREFIX}" == "py27"
+DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
+.endif
 
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../lang/python/egg.mk"
