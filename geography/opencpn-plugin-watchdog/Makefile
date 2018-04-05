@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2018/03/12 11:16:38 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/04/05 16:20:40 bouyer Exp $
 #
 
-VERSION=	20170611
+VERSION=	20180405
 DISTNAME=	watchdog_pi-${VERSION}
 PKGNAME=	opencpn-plugin-watchdog-${VERSION}
-PKGREVISION=	2
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=seandepagnier/}
 GITHUB_PROJECT=	watchdog_pi
-GITHUB_TAG=	870a9231cd451b24d876097166e95ab4a55122ce
+GITHUB_TAG=	4e79fdba96ccd1a17b81166e6956571bf734597d
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	https://opencpn.org/OpenCPN/plugins/watchdog.html
