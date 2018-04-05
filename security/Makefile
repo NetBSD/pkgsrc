@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.678 2018/04/03 14:33:54 minskim Exp $
+# $NetBSD: Makefile,v 1.679 2018/04/05 05:20:59 jnemeth Exp $
 #
 
 COMMENT=	Security tools
@@ -43,7 +43,6 @@ SUBDIR+=	codecrypt
 SUBDIR+=	courier-authlib
 SUBDIR+=	crack
 SUBDIR+=	credns
-SUBDIR+=	py-OTXv2
 #SUBDIR+=	crudesaml	# only shared files
 SUBDIR+=	crypto++
 SUBDIR+=	cvm
@@ -385,6 +384,7 @@ SUBDIR+=	pscan
 SUBDIR+=	putty
 SUBDIR+=	pwsafe
 SUBDIR+=	py-Des
+SUBDIR+=	py-OTXv2
 SUBDIR+=	py-OpenSSL
 SUBDIR+=	py-SSLCrypto
 SUBDIR+=	py-acme
