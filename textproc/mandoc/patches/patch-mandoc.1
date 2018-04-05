@@ -1,0 +1,25 @@
+$NetBSD: patch-mandoc.1,v 1.1 2018/04/05 09:20:52 wiz Exp $
+
+Style message about bad input encoding of em-dashes as -- instead of \(em.
+Suggested by Thomas Klausner <wiz at NetBSD>; discussed with jmc@.
+
+--- mandoc.1.orig	2017-08-05 12:40:21.000000000 +0000
++++ mandoc.1
+@@ -2,5 +2,5 @@
+ .\"
+ .\" Copyright (c) 2009, 2010, 2011 Kristaps Dzonsons <kristaps@bsd.lv>
+-.\" Copyright (c) 2012, 2014-2017 Ingo Schwarze <schwarze@openbsd.org>
++.\" Copyright (c) 2012, 2014-2018 Ingo Schwarze <schwarze@openbsd.org>
+ .\"
+ .\" Permission to use, copy, modify, and distribute this software for any
+@@ -939,4 +939,10 @@ request occurs even though the document 
+ and did not switch back to fill mode yet.
+ It has no effect.
++.It Sy "verbatim \(dq--\(dq, maybe consider using \e(em"
++.Pq mdoc
++Even though the ASCII output device renders an em-dash as
++.Qq \-\- ,
++that is not a good way to write it in an input file
++because it renders poorly on all other output devices.
+ .It Sy "function name without markup"
+ .Pq mdoc
