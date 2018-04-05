@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1663 2018/04/05 13:11:45 joerg Exp $
+$NetBSD: CHANGES-2018,v 1.1664 2018/04/05 15:26:27 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2264,3 +2264,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-jupyter_client to 5.2.3 [adam 2018-04-05]
 	Updated devel/py-hypothesis to 3.55.0 [adam 2018-04-05]
 	Updated textproc/py-html-sanitizer to 1.4.0 [joerg 2018-04-05]
+	Updated devel/blosc to 1.14.2 [minskim 2018-04-05]
