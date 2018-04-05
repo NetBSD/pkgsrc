@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/02/26 12:28:48 leot Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/04/05 17:53:02 leot Exp $
 bin/mitmdump
 bin/mitmproxy
 bin/mitmweb
@@ -40,9 +40,6 @@ ${PYSITELIB}/mitmproxy/addons/clientplayback.pyo
 ${PYSITELIB}/mitmproxy/addons/core.py
 ${PYSITELIB}/mitmproxy/addons/core.pyc
 ${PYSITELIB}/mitmproxy/addons/core.pyo
-${PYSITELIB}/mitmproxy/addons/core_option_validation.py
-${PYSITELIB}/mitmproxy/addons/core_option_validation.pyc
-${PYSITELIB}/mitmproxy/addons/core_option_validation.pyo
 ${PYSITELIB}/mitmproxy/addons/cut.py
 ${PYSITELIB}/mitmproxy/addons/cut.pyc
 ${PYSITELIB}/mitmproxy/addons/cut.pyo
