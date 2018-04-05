@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2018/01/22 11:53:24 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2018/04/05 11:04:39 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-lwt
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-lwt
 OCAML_LWT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-lwt+=	ocaml-lwt>=3.0.0
-BUILDLINK_ABI_DEPENDS.ocaml-lwt+=	ocaml-lwt>=3.2.0
+BUILDLINK_ABI_DEPENDS.ocaml-lwt+=	ocaml-lwt>=3.3.0
 BUILDLINK_PKGSRCDIR.ocaml-lwt?=		../../devel/ocaml-lwt
 
 #.include "../../devel/libev/buildlink3.mk"
