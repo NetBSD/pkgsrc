@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2018/01/25 09:47:35 adam Exp $
+# $NetBSD: Makefile,v 1.8 2018/04/05 12:38:57 adam Exp $
 
-DISTNAME=	jupyter_client-5.2.2
+DISTNAME=	jupyter_client-5.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_client/}
@@ -15,7 +15,10 @@ DEPENDS+=	${PYPKGPREFIX}-jupyter_core-[0-9]*:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-tornado>=4.1:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.1.0:../../devel/py-traitlets
 DEPENDS+=	${PYPKGPREFIX}-zmq>=13.0.0:../../net/py-zmq
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel-[0-9]*:../../devel/py-ipykernel
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	ipython:test
 
 USE_LANGUAGES=	# none
 
@@ -29,4 +32,5 @@ do-test:
 	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
