@@ -1,13 +1,13 @@
-$NetBSD: patch-bin_kafka-server-stop.sh,v 1.1 2017/02/28 08:17:28 fhajny Exp $
+$NetBSD: patch-bin_kafka-server-stop.sh,v 1.2 2018/04/05 08:46:37 fhajny Exp $
 
 More columns to make grep match.
 
---- bin/kafka-server-stop.sh.orig	2017-02-14 17:26:07.000000000 +0000
+--- bin/kafka-server-stop.sh.orig	2018-03-23 22:51:56.000000000 +0000
 +++ bin/kafka-server-stop.sh
-@@ -13,7 +13,7 @@
- # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+@@ -14,7 +14,7 @@
  # See the License for the specific language governing permissions and
  # limitations under the License.
+ SIGNAL=${SIGNAL:-TERM}
 -PIDS=$(ps ax | grep -i 'kafka\.Kafka' | grep java | grep -v grep | awk '{print $1}')
 +PIDS=$(ps axwww | grep -i 'kafka\.Kafka' | grep java | grep -v grep | awk '{print $1}')
  

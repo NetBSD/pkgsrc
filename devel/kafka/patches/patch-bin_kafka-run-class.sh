@@ -1,8 +1,8 @@
-$NetBSD: patch-bin_kafka-run-class.sh,v 1.2 2017/07/04 14:14:46 fhajny Exp $
+$NetBSD: patch-bin_kafka-run-class.sh,v 1.3 2018/04/05 08:46:37 fhajny Exp $
 
 Paths.
 
---- bin/kafka-run-class.sh.orig	2017-06-22 22:06:18.000000000 +0000
+--- bin/kafka-run-class.sh.orig	2018-03-23 22:51:56.000000000 +0000
 +++ bin/kafka-run-class.sh
 @@ -20,6 +20,10 @@ then
    exit 1
@@ -15,7 +15,7 @@ Paths.
  # CYGINW == 1 if Cygwin is detected, else 0.
  if [[ $(uname -a) =~ "CYGWIN" ]]; then
    CYGWIN=1
-@@ -55,84 +59,7 @@ if [ -z "$SCALA_BINARY_VERSION" ]; then
+@@ -55,80 +59,7 @@ if [ -z "$SCALA_BINARY_VERSION" ]; then
    SCALA_BINARY_VERSION=$(echo $SCALA_VERSION | cut -f 1-2 -d '.')
  fi
  
@@ -23,11 +23,7 @@ Paths.
 -shopt -s nullglob
 -for dir in "$base_dir"/core/build/dependant-libs-${SCALA_VERSION}*;
 -do
--  if [ -z "$CLASSPATH" ] ; then
--    CLASSPATH="$dir/*"
--  else
--    CLASSPATH="$CLASSPATH:$dir/*"
--  fi
+-  CLASSPATH="$CLASSPATH:$dir/*"
 -done
 -
 -for file in "$base_dir"/examples/build/libs/kafka-examples*.jar;
@@ -101,7 +97,7 @@ Paths.
  do
    if should_include_file "$file"; then
      CLASSPATH="$CLASSPATH":"$file"
-@@ -152,13 +79,13 @@ fi
+@@ -153,13 +84,13 @@ fi
  
  # Log directory to use
  if [ "x$LOG_DIR" = "x" ]; then
