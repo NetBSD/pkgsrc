@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.16 2018/04/05 11:04:39 jaapb Exp $
+$NetBSD: distinfo,v 1.17 2018/04/05 11:52:28 jaapb Exp $
 
 SHA1 (lwt-3.3.0.tar.gz) = 1a8aec06b4080577a989cbaeec0614359465ea73
 RMD160 (lwt-3.3.0.tar.gz) = 2f374a7e315daa03f7f3b3039abbf757dc5b7892
 SHA512 (lwt-3.3.0.tar.gz) = 452425c8c0cddd53463da658b1bb8edb0c5ead2e0de0f733dbf624d373fec94c3121e77cc285427770388e16106fae84c32805b6642d1797200660fed91d0f29
 Size (lwt-3.3.0.tar.gz) = 312052 bytes
-SHA1 (patch-META.lwt) = bd8348dc75f92188db1e00c8afd91c551d5a3267
-SHA1 (patch-src_camlp4_jbuild) = 9cb17cd6cf2b0c4a05b5251829c9c0a42bdf1f10
-SHA1 (patch-src_camlp4_log_jbuild) = 0c8145baebbef764836e41ce1cc308b630513e14
-SHA1 (patch-src_camlp4_options_jbuild) = eac6a3152667d33c14e4b890e395a9d4b52e7a46
-SHA1 (patch-src_ppx_jbuild) = d027f7049f2f3cfe96d4d9d1a5ddcfb3126d17da
+SHA1 (patch-META.lwt) = 0581a5dcea185694703955f6c55837465b62888e
+SHA1 (patch-src_camlp4_jbuild) = f1d1100dcd9b66875ed69dc25bc5546b52c2532e
+SHA1 (patch-src_camlp4_log_jbuild) = 7e6e7dddf0ff1c5983aea6515a43761edab874df
+SHA1 (patch-src_camlp4_options_jbuild) = 3c0232d5424b0ad85cf3a99803ebcf54b51c7ac1
+SHA1 (patch-src_ppx_jbuild) = e57f511041d811232af8a4b52c5c39153cca7dc9
 SHA1 (patch-src_unix_config_discover.ml) = ef8ea37d85f20d56654514617050ee46d6080ef1
-SHA1 (patch-src_unix_unix__c_unix__stat__job__utils.c) = 5ec0ae3afe3d65e673681fcf8faeebf811e64518
+SHA1 (patch-src_unix_unix__c_unix__stat__job__utils.c) = dbecbc5507e901a1187dc69d0fa0c1dfa2097b22
