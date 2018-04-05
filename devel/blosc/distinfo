@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2018/04/05 09:33:48 jperkin Exp $
+$NetBSD: distinfo,v 1.3 2018/04/05 15:26:08 minskim Exp $
 
-SHA1 (blosc-1.12.1.tar.gz) = 234ca85e3602cceee4d8b106c27fda526bbd733d
-RMD160 (blosc-1.12.1.tar.gz) = b04b93363b90015b79964dc4615699fa897e5273
-SHA512 (blosc-1.12.1.tar.gz) = f65bbbfce6fc59d0c5a0889d5771dd78cae2796244c6ee69edf15b27c4563c28ce789fded9104a8626d12be3e46418d596dfdb204c43e33abae8dca40debfd92
-Size (blosc-1.12.1.tar.gz) = 683510 bytes
+SHA1 (blosc-1.14.2.tar.gz) = ba8bc63c2f0cdc62077a45b5e44216abd098020a
+RMD160 (blosc-1.14.2.tar.gz) = 4e75ba5f5cee49410cde42e0bef75d2f7e3d78d8
+SHA512 (blosc-1.14.2.tar.gz) = fb0346e3c2c6101d17963771643a114302034a5389e2ffd9498c6b6367fe6f138ec59edbf039f89a57ce44a63e1f70324ad3906a39884ecc9d54ee2987a1b39c
+Size (blosc-1.14.2.tar.gz) = 759731 bytes
 SHA1 (patch-CMakeLists.txt) = 70dfc44c1541b1fccd200905acbd16e17a9313e1
 SHA1 (patch-tests_test__common.h) = 2dabaec2dd7dc23a5fd56fd01647670845145675
