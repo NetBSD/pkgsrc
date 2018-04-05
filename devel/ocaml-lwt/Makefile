@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2018/04/05 11:04:39 jaapb Exp $
+# $NetBSD: Makefile,v 1.35 2018/04/05 11:52:28 jaapb Exp $
 #
 
 .include "Makefile.common"
@@ -18,7 +18,6 @@ CONFIGURE_ARGS=	-use-libev false
 do-configure:
 	cd ${WRKSRC} && ocaml src/util/configure.ml ${CONFIGURE_ARGS}
 
-.include "options.mk"
 .include "../../mk/ocaml.mk"
 .include "../../devel/ocaml-cppo/buildlink3.mk"
 .include "../../devel/ocaml-findlib/buildlink3.mk"
