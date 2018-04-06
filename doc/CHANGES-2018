@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1683 2018/04/06 20:22:24 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1684 2018/04/06 21:04:34 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2294,3 +2294,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed math/py-tensorflow-tensorboard successor math/py-tensorboard [minskim 2018-04-06]
 	Updated devel/py-ipython to 6.3.1 [adam 2018-04-06]
 	Updated www/py-notebook to 5.4.1 [adam 2018-04-06]
+	Updated pkgtools/pkglint to 5.5.8 [rillig 2018-04-06]
