@@ -1,9 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2017/10/18 08:29:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/04/06 20:21:57 adam Exp $
 bin/jupyter-bundlerextension${PYVERSSUFFIX}
 bin/jupyter-nbextension${PYVERSSUFFIX}
 bin/jupyter-notebook${PYVERSSUFFIX}
 bin/jupyter-serverextension${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/notebook/__init__.py
 ${PYSITELIB}/notebook/__init__.pyc
 ${PYSITELIB}/notebook/__init__.pyo
@@ -86,6 +92,9 @@ ${PYSITELIB}/notebook/bundler/tools.pyo
 ${PYSITELIB}/notebook/bundler/zip_bundler.py
 ${PYSITELIB}/notebook/bundler/zip_bundler.pyc
 ${PYSITELIB}/notebook/bundler/zip_bundler.pyo
+${PYSITELIB}/notebook/config_manager.py
+${PYSITELIB}/notebook/config_manager.pyc
+${PYSITELIB}/notebook/config_manager.pyo
 ${PYSITELIB}/notebook/edit/__init__.py
 ${PYSITELIB}/notebook/edit/__init__.pyc
 ${PYSITELIB}/notebook/edit/__init__.pyo
@@ -101,6 +110,12 @@ ${PYSITELIB}/notebook/files/__init__.pyo
 ${PYSITELIB}/notebook/files/handlers.py
 ${PYSITELIB}/notebook/files/handlers.pyc
 ${PYSITELIB}/notebook/files/handlers.pyo
+${PYSITELIB}/notebook/i18n/__init__.py
+${PYSITELIB}/notebook/i18n/__init__.pyc
+${PYSITELIB}/notebook/i18n/__init__.pyo
+${PYSITELIB}/notebook/i18n/zh_CN/LC_MESSAGES/nbjs.po
+${PYSITELIB}/notebook/i18n/zh_CN/LC_MESSAGES/nbui.po
+${PYSITELIB}/notebook/i18n/zh_CN/LC_MESSAGES/notebook.po
 ${PYSITELIB}/notebook/jstest.py
 ${PYSITELIB}/notebook/jstest.pyc
 ${PYSITELIB}/notebook/jstest.pyo
@@ -294,7 +309,6 @@ ${PYSITELIB}/notebook/static/base/images/logo.png
 ${PYSITELIB}/notebook/static/base/js/dialog.js
 ${PYSITELIB}/notebook/static/base/js/events.js
 ${PYSITELIB}/notebook/static/base/js/i18n.js
-${PYSITELIB}/notebook/static/base/js/i18nload.js
 ${PYSITELIB}/notebook/static/base/js/keyboard.js
 ${PYSITELIB}/notebook/static/base/js/namespace.js
 ${PYSITELIB}/notebook/static/base/js/notificationarea.js
@@ -1382,9 +1396,15 @@ ${PYSITELIB}/notebook/tests/notebook/undelete.js
 ${PYSITELIB}/notebook/tests/services/kernel.js
 ${PYSITELIB}/notebook/tests/services/serialize.js
 ${PYSITELIB}/notebook/tests/services/session.js
+${PYSITELIB}/notebook/tests/test_config_manager.py
+${PYSITELIB}/notebook/tests/test_config_manager.pyc
+${PYSITELIB}/notebook/tests/test_config_manager.pyo
 ${PYSITELIB}/notebook/tests/test_files.py
 ${PYSITELIB}/notebook/tests/test_files.pyc
 ${PYSITELIB}/notebook/tests/test_files.pyo
+${PYSITELIB}/notebook/tests/test_i18n.py
+${PYSITELIB}/notebook/tests/test_i18n.pyc
+${PYSITELIB}/notebook/tests/test_i18n.pyo
 ${PYSITELIB}/notebook/tests/test_nbextensions.py
 ${PYSITELIB}/notebook/tests/test_nbextensions.pyc
 ${PYSITELIB}/notebook/tests/test_nbextensions.pyo
