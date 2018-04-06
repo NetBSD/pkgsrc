@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2018/03/20 15:34:16 khorben Exp $
-bin/readelf.py
+@comment $NetBSD: PLIST,v 1.2 2018/04/06 07:08:26 adam Exp $
+bin/readelf-${PYVERSSUFFIX}.py
 ${PYSITELIB}/elftools/__init__.py
 ${PYSITELIB}/elftools/__init__.pyc
 ${PYSITELIB}/elftools/__init__.pyo
