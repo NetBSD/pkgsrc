@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2017/11/20 15:40:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.16 2018/04/06 15:59:56 fhajny Exp $
 
-DISTNAME=	elasticsearch-py-6.0.0
+DISTNAME=	elasticsearch-py-6.2.0
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elastic/}
