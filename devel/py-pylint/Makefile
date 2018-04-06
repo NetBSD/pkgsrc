@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2018/03/17 06:57:25 adam Exp $
+# $NetBSD: Makefile,v 1.22 2018/04/06 08:35:07 adam Exp $
 
-DISTNAME=	pylint-1.8.3
+DISTNAME=	pylint-1.8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint/}
@@ -22,6 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-configparser-[0-9]*:../../devel/py-configparser
 DEPENDS+=	${PYPKGPREFIX}-singledispatch-[0-9]*:../../devel/py-singledispatch
 .endif
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
