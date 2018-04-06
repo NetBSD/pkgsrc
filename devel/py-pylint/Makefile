@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/04/06 08:35:07 adam Exp $
+# $NetBSD: Makefile,v 1.23 2018/04/06 12:13:15 adam Exp $
 
 DISTNAME=	pylint-1.8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../lang/python/pyversion.mk"
 
-DEPENDS+=	${PYPKGPREFIX}-astroid>=1.5.1:../../devel/py-astroid
+DEPENDS+=	${PYPKGPREFIX}-astroid>=1.6.0:../../devel/py-astroid
 DEPENDS+=	${PYPKGPREFIX}-isort>=4.2.5:../../devel/py-isort
 DEPENDS+=	${PYPKGPREFIX}-mccabe-[0-9]*:../../devel/py-mccabe
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
