@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1681 2018/04/06 19:23:36 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1682 2018/04/06 19:31:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2291,3 +2291,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/dhcpcd to 7.0.3 [roy 2018-04-06]
 	Added devel/R-pkgconfig version 2.0.1 [minskim 2018-04-06]
 	Added math/py-tensorboard version 1.7.0 [minskim 2018-04-06]
+	Removed math/py-tensorflow-tensorboard successor math/py-tensorboard [minskim 2018-04-06]
