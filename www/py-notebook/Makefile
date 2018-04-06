@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/11/29 09:14:22 adam Exp $
+# $NetBSD: Makefile,v 1.5 2018/04/06 20:21:57 adam Exp $
 
-DISTNAME=	notebook-5.2.2
+DISTNAME=	notebook-5.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/notebook/}
@@ -10,10 +10,11 @@ HOMEPAGE=	http://jupyter.org/
 COMMENT=	Web-based notebook environment for interactive computing
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-Send2Trash-[0-9]*:../../sysutils/py-Send2Trash
 DEPENDS+=	${PYPKGPREFIX}-ipykernel-[0-9]*:../../devel/py-ipykernel
 DEPENDS+=	${PYPKGPREFIX}-ipython_genutils-[0-9]*:../../devel/py-ipython_genutils
-DEPENDS+=	${PYPKGPREFIX}-jupyter_client-[0-9]*:../../devel/py-jupyter_client
-DEPENDS+=	${PYPKGPREFIX}-jupyter_core-[0-9]*:../../devel/py-jupyter_core
+DEPENDS+=	${PYPKGPREFIX}-jupyter_client>=5.2.0:../../devel/py-jupyter_client
+DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.4.0:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-nbconvert-[0-9]*:../../www/py-nbconvert
 DEPENDS+=	${PYPKGPREFIX}-nbformat-[0-9]*:../../www/py-nbformat
@@ -28,6 +29,6 @@ post-install:
 		${MV} ${DESTDIR}${PREFIX}/bin/$$f ${DESTDIR}${PREFIX}/bin/$${f}${PYVERSSUFFIX} || ${TRUE}; \
 	done
 
-.include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
