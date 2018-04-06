@@ -1,0 +1,12 @@
+$NetBSD: patch-openbsd-compat_Makefile.am,v 1.1 2018/04/06 22:21:42 hubertf Exp $
+
+--- openbsd-compat/Makefile.am.orig	2010-08-24 22:08:11.000000000 +0000
++++ openbsd-compat/Makefile.am
+@@ -1,6 +1,6 @@
+ noinst_LIBRARIES = libopenbsd-compat.a
+ 
+ libopenbsd_compat_a_SOURCES = \
+-		  strlcat.c strlcpy.c strtonum.c fgetln.c getlogin.c
++		  strlcat.c strlcpy.c strtonum.c fgetln.c getlogin.c memrchr.c
+ 
+ INCLUDES = -I$(top_srcdir)/src/
