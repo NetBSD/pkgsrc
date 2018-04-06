@@ -1,0 +1,9 @@
+$NetBSD: patch-openbsd-compat_NOTES,v 1.1 2018/04/06 22:21:42 hubertf Exp $
+
+--- openbsd-compat/NOTES.orig	2010-08-24 22:08:11.000000000 +0000
++++ openbsd-compat/NOTES
+@@ -11,3 +11,4 @@ strtonum.c    portable openssh
+ sys-queue.h   portable openssh
+ utimes.c      http://www.sudo.ws/cgi-bin/cvsweb/~checkout~/sudo/utimes.c?rev=1.9
+ utime.h       http://www.sudo.ws/cgi-bin/cvsweb/~checkout~/sudo/emul/utime.h?rev=1.25
++memrchr.c     https://github.com/aosm/sudo/blob/master/src/memrchr.c
