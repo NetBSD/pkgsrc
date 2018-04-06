@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1679 2018/04/06 17:02:37 roy Exp $
+$NetBSD: CHANGES-2018,v 1.1680 2018/04/06 18:40:41 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2289,3 +2289,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/beats to 6.2.3 [fhajny 2018-04-06]
 	Updated lang/nodejs to 9.11.1 [fhajny 2018-04-06]
 	Updated net/dhcpcd to 7.0.3 [roy 2018-04-06]
+	Added devel/R-pkgconfig version 2.0.1 [minskim 2018-04-06]
