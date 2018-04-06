@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.248 2018/03/07 07:34:07 rillig Exp $
+# $NetBSD: bootstrap,v 1.248 2018/04/06 23:30:00 rillig Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -776,6 +776,7 @@ OpenBSD)
 	need_awk=no
 	need_sed=no
 	set_opsys=no
+	check_openbsd_clang=yes
 	machine_arch=`arch -s`
 	;;
 OSF1)
@@ -981,6 +982,11 @@ if [ "$compiler" = "" ] && [ x"$check_compiler" = x"yes" ]; then
 			test -n "$CC" || CC=cc
 			;;
 		esac
+	fi
+fi
+if [ x"$check_openbsd_clang" = x"yes" ]; then
+	if [ $(echo "$(uname -r) > 6.2" | bc -l) ]; then
+		compiler="clang"
 	fi
 fi
 
