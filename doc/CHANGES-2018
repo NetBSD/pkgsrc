@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1669 2018/04/06 01:48:22 khorben Exp $
+$NetBSD: CHANGES-2018,v 1.1670 2018/04/06 03:48:49 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2274,3 +2274,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/cups to 2.2.7 [leot 2018-04-05]
 	Updated net/mitmproxy to 3.0.4 [leot 2018-04-05]
 	Updated devel/py-manticore to 0.1.8 [khorben 2018-04-06]
+	Added textproc/yaml-cpp03 version 0.3.0 [maya 2018-04-06]
+	Added graphics/opencolorio version 1.0.9 [maya 2018-04-06]
+	Added graphics/krita version 4.0.0 [maya 2018-04-06]
