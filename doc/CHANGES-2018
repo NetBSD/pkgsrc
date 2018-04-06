@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1673 2018/04/06 10:04:02 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1674 2018/04/06 12:21:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2282,3 +2282,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-pylint to 1.8.4 [adam 2018-04-06]
 	Updated textproc/py-sphinx-rtd-theme to 0.3.0 [adam 2018-04-06]
 	Updated sysutils/rsyslog to 8.34.0 [fhajny 2018-04-06]
+	Updated devel/py-astroid to 1.6.3 [adam 2018-04-06]
+	Updated net/py-dnsdiag to 1.6.4 [adam 2018-04-06]
