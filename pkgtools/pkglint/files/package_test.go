@@ -397,7 +397,8 @@ func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
 		"WARN: ~/category/pkgbase/Makefile:8: To use the tool \"FALSE\" at load time, bsd.prefs.mk has to be included before.",
 		"WARN: ~/category/pkgbase/Makefile:9: To use the tool \"NICE\" at load time, bsd.prefs.mk has to be included before.",
 		"WARN: ~/category/pkgbase/Makefile:10: To use the tool \"TRUE\" at load time, bsd.prefs.mk has to be included before.",
-		"WARN: ~/category/pkgbase/Makefile:16: To use the tool \"NICE\" at load time, it has to be added to USE_TOOLS before including bsd.prefs.mk.")
+		"WARN: ~/category/pkgbase/Makefile:16: To use the tool \"NICE\" at load time, it has to be added to USE_TOOLS before including bsd.prefs.mk.",
+		"WARN: ~/category/pkgbase/Makefile:3: The canonical order of the variables is CATEGORIES, empty line, COMMENT, LICENSE.")
 }
 
 func (s *Suite) Test_Package_loadPackageMakefile(c *check.C) {
@@ -461,6 +462,7 @@ func (s *Suite) Test_Package_conditionalAndUnconditionalInclude(c *check.C) {
 	G.checkdirPackage("category/package")
 
 	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:3: The canonical order of the variables is CATEGORIES, empty line, COMMENT, LICENSE.",
 		"WARN: ~/category/package/options.mk:3: Unknown option \"zlib\".",
 		"WARN: ~/category/package/options.mk:4: \"../../devel/zlib/buildlink3.mk\" is "+
 			"included conditionally here (depending on PKG_OPTIONS) and unconditionally in Makefile:5.",
