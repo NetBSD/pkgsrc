@@ -1,0 +1,1 @@
+bin/readelf.py @PREFIX@/bin/readelf-@PYVERSSUFFIX@.py
