@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1671 2018/04/06 08:18:51 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1672 2018/04/06 08:39:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2279,3 +2279,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added graphics/krita version 4.0.0 [maya 2018-04-06]
 	Updated devel/ccache to 3.4.2 [adam 2018-04-06]
 	Updated www/py-aiohttp to 3.1.2 [adam 2018-04-06]
+	Updated devel/py-pylint to 1.8.4 [adam 2018-04-06]
+	Updated textproc/py-sphinx-rtd-theme to 0.3.0 [adam 2018-04-06]
