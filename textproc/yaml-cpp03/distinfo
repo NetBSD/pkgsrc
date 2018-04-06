@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/04/06 03:41:07 maya Exp $
+
+SHA1 (release-0.3.0.tar.gz) = 87529238079a57d443b1a47f5c42c895ca2c3608
+RMD160 (release-0.3.0.tar.gz) = 35a123e94ff0aed89bf21fec41f6cde004e328d4
+SHA512 (release-0.3.0.tar.gz) = 559975db3814aadf06d301255a3f3e086119e2c28e680c80aa3376ea374f2de558d030acccd24c39d3138f20595f9f3d1be55b25a62c9a2ff2c7d5f32e448dd8
+Size (release-0.3.0.tar.gz) = 83201 bytes
