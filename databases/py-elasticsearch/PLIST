@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/11/20 15:40:05 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/04/06 15:59:56 fhajny Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -47,6 +47,33 @@ ${PYSITELIB}/elasticsearch/client/remote.py
 ${PYSITELIB}/elasticsearch/client/snapshot.py
 ${PYSITELIB}/elasticsearch/client/tasks.py
 ${PYSITELIB}/elasticsearch/client/utils.py
+${PYSITELIB}/elasticsearch/client/xpack/__init__.py
+${PYSITELIB}/elasticsearch/client/xpack/__init__.pyo
+${PYSITELIB}/elasticsearch/client/xpack/__init__.pyc
+${PYSITELIB}/elasticsearch/client/xpack/deprecation.pyo
+${PYSITELIB}/elasticsearch/client/xpack/deprecation.pyc
+${PYSITELIB}/elasticsearch/client/xpack/graph.pyo
+${PYSITELIB}/elasticsearch/client/xpack/graph.pyc
+${PYSITELIB}/elasticsearch/client/xpack/license.pyo
+${PYSITELIB}/elasticsearch/client/xpack/license.pyc
+${PYSITELIB}/elasticsearch/client/xpack/migration.pyo
+${PYSITELIB}/elasticsearch/client/xpack/migration.pyc
+${PYSITELIB}/elasticsearch/client/xpack/ml.pyo
+${PYSITELIB}/elasticsearch/client/xpack/ml.pyc
+${PYSITELIB}/elasticsearch/client/xpack/monitoring.pyo
+${PYSITELIB}/elasticsearch/client/xpack/monitoring.pyc
+${PYSITELIB}/elasticsearch/client/xpack/security.pyo
+${PYSITELIB}/elasticsearch/client/xpack/security.pyc
+${PYSITELIB}/elasticsearch/client/xpack/watcher.pyo
+${PYSITELIB}/elasticsearch/client/xpack/watcher.pyc
+${PYSITELIB}/elasticsearch/client/xpack/deprecation.py
+${PYSITELIB}/elasticsearch/client/xpack/graph.py
+${PYSITELIB}/elasticsearch/client/xpack/license.py
+${PYSITELIB}/elasticsearch/client/xpack/migration.py
+${PYSITELIB}/elasticsearch/client/xpack/ml.py
+${PYSITELIB}/elasticsearch/client/xpack/monitoring.py
+${PYSITELIB}/elasticsearch/client/xpack/security.py
+${PYSITELIB}/elasticsearch/client/xpack/watcher.py
 ${PYSITELIB}/elasticsearch/compat.py
 ${PYSITELIB}/elasticsearch/connection/__init__.py
 ${PYSITELIB}/elasticsearch/connection/__init__.pyo
