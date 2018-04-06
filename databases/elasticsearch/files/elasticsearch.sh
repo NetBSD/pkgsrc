@@ -1,6 +1,6 @@
 #! @RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: elasticsearch.sh,v 1.4 2016/11/08 09:18:01 fhajny Exp $
+# $NetBSD: elasticsearch.sh,v 1.5 2018/04/06 15:48:46 fhajny Exp $
 #
 # PROVIDE: elasticsearch
 # REQUIRE: DAEMON
@@ -17,7 +17,7 @@ start_precmd="elasticsearch_precmd"
 : ${elasticsearch_user:=@ES_USER@}
 : ${elasticsearch_group:=@ES_GROUP@}
 : ${elasticsearch_config:="@PKG_SYSCONFDIR@/elasticsearch.yml"}
-: ${elasticsearch_min_mem:="256m"}
+: ${elasticsearch_min_mem:="1g"}
 : ${elasticsearch_max_mem:="1g"}
 : ${elasticsearch_props:=""}
 : ${elasticsearch_fdlimit:="768"}
