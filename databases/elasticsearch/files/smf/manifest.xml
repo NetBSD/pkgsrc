@@ -24,7 +24,7 @@
     <exec_method type='method' name='stop' exec=':kill' timeout_seconds='60' />
     <exec_method type='method' name='refresh' exec=':kill -HUP' timeout_seconds='60' />
     <property_group name='application' type='application'>
-      <propval name='min_heap' type='astring' value='256m' />
+      <propval name='min_heap' type='astring' value='1g' />
       <propval name='max_heap' type='astring' value='1g' />
       <propval name='store_type' type='astring' value='niofs' />
       <propval name='class_path' type='astring' value='@ES_BASEDIR@/lib/*' />
