@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2018/02/27 12:37:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.42 2018/04/06 15:48:33 fhajny Exp $
 
 DISTNAME=	elasticsearch-6.2.2
 CATEGORIES=	textproc
@@ -9,11 +9,17 @@ HOMEPAGE=	http://www.elasticsearch.org/
 COMMENT=	Distributed RESTful Search Engine
 LICENSE=	apache-2.0
 
-USE_LANGUAGES=	# none
+# Build our own native JNA, the version should match the one that ES ships with
+JNA=			jna-4.5.1
+DISTFILES=		${DEFAULT_DISTFILES} ${JNA}.tar.gz
+SITES.${JNA}.tar.gz=	-${MASTER_SITE_GITHUB:=java-native-access/}jna/archive/${JNA:S/jna-//}.tar.gz
+
+BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
+
+USE_LANGUAGES=	c c++
 USE_JAVA=	run
 USE_JAVA2=	8
-USE_TOOLS+=	bash:run pax
-NO_BUILD=	yes
+USE_TOOLS+=	bash:run gmake grep pax pkg-config
 
 PKG_SYSCONFSUBDIR=	elasticsearch
 EGDIR=			${PREFIX}/share/examples/elasticsearch
@@ -62,6 +68,14 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	bin/elasticsearch-env config/elasticsearch.yml
 SUBST_VARS.paths=	PKG_JAVA_HOME PKG_SYSCONFDIR ES_DBDIR ES_BASEDIR ES_LOGDIR
 
+post-extract:
+	${RM} ${WRKSRC}/lib/${JNA}.jar
+
+do-build:
+	# Override silly SunOS et al. assumptions.
+	cd ${WRKDIR}/${JNA} && ${SETENV} ${MAKE_ENV} ant -Ddynlink.native=true -Dgrep=grep -Dmake.PATH=PATH=${PATH:Q} -Dmake=make native
+	cd ${WRKDIR}/${JNA}/build/classes && ${SETENV} ${MAKE_ENV} jar cf ${WRKSRC}/lib/${JNA}.jar com/
+
 do-install:
 .for f in ${CONFS}
 	${INSTALL_DATA} ${WRKSRC}/config/${f} ${DESTDIR}${EGDIR}
@@ -77,5 +91,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/elasticsearch-translog ${DESTDIR}${ES_BASEDIR}/bin
 	cd ${WRKSRC} && ${PAX} -rw -pp lib modules ${DESTDIR}${ES_BASEDIR}
 
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
