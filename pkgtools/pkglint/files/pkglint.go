@@ -229,7 +229,7 @@ func (pkglint *Pkglint) ParseCommandLine(args []string) *int {
 	warn.AddFlagVar("absname", &gopts.WarnAbsname, true, "warn about use of absolute file names")
 	warn.AddFlagVar("directcmd", &gopts.WarnDirectcmd, true, "warn about use of direct command names instead of Make variables")
 	warn.AddFlagVar("extra", &gopts.WarnExtra, false, "enable some extra warnings")
-	warn.AddFlagVar("order", &gopts.WarnOrder, false, "warn if Makefile entries are unordered")
+	warn.AddFlagVar("order", &gopts.WarnOrder, true, "warn if Makefile entries are unordered")
 	warn.AddFlagVar("perm", &gopts.WarnPerm, false, "warn about unforeseen variable definition and use")
 	warn.AddFlagVar("plist-depr", &gopts.WarnPlistDepr, false, "warn about deprecated paths in PLISTs")
 	warn.AddFlagVar("plist-sort", &gopts.WarnPlistSort, false, "warn about unsorted entries in PLISTs")

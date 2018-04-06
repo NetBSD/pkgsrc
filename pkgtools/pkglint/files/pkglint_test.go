@@ -101,7 +101,7 @@ func (s *Suite) Test_Pkglint_Main__unknown_option(c *check.C) {
 		"    absname      warn about use of absolute file names (enabled)",
 		"    directcmd    warn about use of direct command names instead of Make variables (enabled)",
 		"    extra        enable some extra warnings (disabled)",
-		"    order        warn if Makefile entries are unordered (disabled)",
+		"    order        warn if Makefile entries are unordered (enabled)",
 		"    perm         warn about unforeseen variable definition and use (disabled)",
 		"    plist-depr   warn about deprecated paths in PLISTs (disabled)",
 		"    plist-sort   warn about unsorted entries in PLISTs (disabled)",
