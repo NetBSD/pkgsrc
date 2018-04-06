@@ -708,6 +708,9 @@ func (pkg *Package) CheckVarorder(mklines *MkLines) {
 			}
 		}
 
+		if firstRelevant == -1 {
+			return true
+		}
 		interesting := mklines.mklines[firstRelevant : lastRelevant+1]
 
 		varcanon := func() string {
