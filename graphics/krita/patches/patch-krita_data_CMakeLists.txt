@@ -1,0 +1,14 @@
+$NetBSD: patch-krita_data_CMakeLists.txt,v 1.1 2018/04/06 03:44:19 maya Exp $
+
+Install configure files to share/examples, not etc/
+
+--- krita/data/CMakeLists.txt.orig	2018-03-20 07:49:57.000000000 +0000
++++ krita/data/CMakeLists.txt
+@@ -19,6 +19,6 @@ add_subdirectory( preset_icons )
+ 
+ install( FILES
+     kritarc
+-    DESTINATION ${CONFIG_INSTALL_DIR} 
++    DESTINATION share/examples/kde-xdg 
+ )
+ 
