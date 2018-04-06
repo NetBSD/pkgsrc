@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2018/04/06 03:42:19 maya Exp $
+include/OpenColorIO/OpenColorABI.h
+include/OpenColorIO/OpenColorIO.h
+include/OpenColorIO/OpenColorTransforms.h
+include/OpenColorIO/OpenColorTypes.h
+lib/libOpenColorIO.a
+lib/libOpenColorIO.so
+lib/libOpenColorIO.so.1
+lib/libOpenColorIO.so.${PKGVERSION}
+lib/pkgconfig/OpenColorIO.pc
+share/ocio/setup_ocio.sh
