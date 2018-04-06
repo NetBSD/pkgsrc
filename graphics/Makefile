@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.787 2018/03/20 15:20:51 minskim Exp $
+# $NetBSD: Makefile,v 1.788 2018/04/06 03:47:12 maya Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -274,6 +274,7 @@ SUBDIR+=	kolourpaint
 SUBDIR+=	koverartist
 SUBDIR+=	kplotting
 SUBDIR+=	kqtquickcharts4
+SUBDIR+=	krita
 SUBDIR+=	kruler
 SUBDIR+=	ksaneplugin
 SUBDIR+=	ksnapshot
@@ -350,6 +351,7 @@ SUBDIR+=	numix-icon-theme-circle
 SUBDIR+=	nvidia-texture-tools
 SUBDIR+=	nvtv
 SUBDIR+=	ocrad
+SUBDIR+=	opencolorio
 SUBDIR+=	opencsg
 SUBDIR+=	opencv
 SUBDIR+=	opencv-contrib-face
