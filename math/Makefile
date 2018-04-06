@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.378 2018/03/23 16:43:43 minskim Exp $
+# $NetBSD: Makefile,v 1.379 2018/04/06 19:23:30 minskim Exp $
 
 COMMENT=	Mathematics
 
@@ -301,6 +301,7 @@ SUBDIR+=	py-scipy
 SUBDIR+=	py-simpleeval
 SUBDIR+=	py-statsmodels
 SUBDIR+=	py-sympy
+SUBDIR+=	py-tensorboard
 SUBDIR+=	py-tensorflow-tensorboard
 SUBDIR+=	py-z3
 SUBDIR+=	py-z3solver
