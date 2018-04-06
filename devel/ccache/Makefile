@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2018/02/12 08:32:11 adam Exp $
+# $NetBSD: Makefile,v 1.42 2018/04/06 08:04:53 adam Exp $
 
-DISTNAME=	ccache-3.4.1
+DISTNAME=	ccache-3.4.2
 CATEGORIES=	devel
 MASTER_SITES=	http://samba.org/ftp/ccache/
 # do not use xz distfile here, xz needs gettext-lib which leads to circular
@@ -12,6 +12,7 @@ HOMEPAGE=	http://ccache.samba.org/
 COMMENT=	Cache for C/C++ compilers
 LICENSE=	gnu-gpl-v3 AND modified-bsd AND public-domain AND zlib
 
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 TEST_TARGET=		test
 
