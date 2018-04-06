@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1676 2018/04/06 16:00:21 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1677 2018/04/06 16:06:31 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2286,3 +2286,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-dnsdiag to 1.6.4 [adam 2018-04-06]
 	Updated databases/py-elasticsearch to 6.2.0 [fhajny 2018-04-06]
 	Updated databases/elasticsearch to 6.2.3 [fhajny 2018-04-06]
+	Updated sysutils/beats to 6.2.3 [fhajny 2018-04-06]
