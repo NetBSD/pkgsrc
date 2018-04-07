@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2018/03/24 17:07:53 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2018/04/07 01:08:37 markd Exp $
 
 DISTNAME=	phonon-4.9.1
 PKGNAME=	${DISTNAME:S/-/-qt5-/}
-PKGREVISION=	3
+PKGREVISION=	4
 
 COMMENT=	Multimedia API for KF5
 
@@ -10,10 +10,9 @@ COMMENT=	Multimedia API for KF5
 
 CMAKE_ARGS+=	-DPHONON_BUILD_PHONON4QT5=ON
 
-BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
-
 BUILD_DEPENDS+=	extra-cmake-modules>=5.19.0:../../devel/extra-cmake-modules
 
+BUILDLINK_ABI_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.10.1nb2
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 
