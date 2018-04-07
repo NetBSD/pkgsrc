@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2018/02/10 13:53:47 khorben Exp $
+# $NetBSD: buildlink3.mk,v 1.21.2.1 2018/04/07 20:21:02 spz Exp $
 
 BUILDLINK_TREE+=	libgphoto2
 
@@ -6,12 +6,12 @@ BUILDLINK_TREE+=	libgphoto2
 LIBGPHOTO2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgphoto2+=	libgphoto2>=2.1.2
-BUILDLINK_ABI_DEPENDS.libgphoto2+=	libgphoto2>=2.4.7nb3
+BUILDLINK_ABI_DEPENDS.libgphoto2+=	libgphoto2>=2.5.8nb3
 BUILDLINK_PKGSRCDIR.libgphoto2?=	../../devel/libgphoto2
 
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} != "SunOS"
-.include "../../mk/libusb.buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
 .endif
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
