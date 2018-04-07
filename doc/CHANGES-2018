@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1690 2018/04/07 08:57:11 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.1691 2018/04/07 10:33:56 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2301,3 +2301,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-System-Command to 1.119 [wen 2018-04-07]
 	Updated devel/p5-MooX-StrictConstructor to 0.010 [wen 2018-04-07]
 	Updated archivers/pax to 20080110nb3 [jperkin 2018-04-07]
+	Added misc/ocaml-opaline version 0.2.2 [jaapb 2018-04-07]
