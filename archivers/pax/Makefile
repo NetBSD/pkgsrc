@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2016/02/25 09:28:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.52 2018/04/07 08:57:01 jperkin Exp $
 
 DISTNAME=		pax-20080110
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		archivers
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -18,6 +18,8 @@ MAKE_ENV+=		CATMAN_SECTION_SUFFIX=${CATMAN_SECTION_SUFFIX:Q}
 MAKE_ENV+=		MANINSTALL=${MANINSTALL:Q}
 
 USE_FEATURES=		nbcompat
+
+CPPFLAGS.SunOS+=	-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE=1
 
 .include "../../mk/bsd.prefs.mk"
 
