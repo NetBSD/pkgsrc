@@ -1,18 +1,20 @@
-@comment $NetBSD: PLIST,v 1.3 2018/02/26 12:32:41 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/04/07 10:53:34 triaxx Exp $
+bin/csp
 ${PERL5_SUB_INSTALLVENDORLIB}/CSP.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/auto/CSP/autosplit.ix
 ${PERL5_SUB_INSTALLVENDORARCH}/auto/CSP/.packlist
 ${PERL5_SUB_INSTALLVENDORBIN}/csp
 ${PERL5_SUB_INSTALLVENDORMAN3DIR}/CSP.3
 share/doc/csp/cspguide.pdf
-var/csp/etc/aliases.txt
-var/csp/etc/crl_extensions.conf
-var/csp/etc/extensions.conf
-var/csp/etc/oids.conf
-var/csp/etc/public_html/certs/cert.html.mpp
-var/csp/etc/public_html/certs/expired.html.mpp
-var/csp/etc/public_html/certs/index.html.mpp
-var/csp/etc/public_html/certs/revoked.html.mpp
-var/csp/etc/public_html/certs/valid.html.mpp
-var/csp/etc/public_html/index.html.mpp
-var/csp/etc/types.txt
+share/examples/csp/aliases.txt
+share/examples/csp/crl_extensions.conf
+share/examples/csp/extensions.conf
+share/examples/csp/oids.conf
+share/examples/csp/public_html/certs/cert.html.mpp
+share/examples/csp/public_html/certs/expired.html.mpp
+share/examples/csp/public_html/certs/index.html.mpp
+share/examples/csp/public_html/certs/revoked.html.mpp
+share/examples/csp/public_html/certs/valid.html.mpp
+share/examples/csp/public_html/index.html.mpp
+share/examples/csp/types.txt
+@pkgdir lib/perl5/5.26.0/x86_64-netbsd-thread-multi
