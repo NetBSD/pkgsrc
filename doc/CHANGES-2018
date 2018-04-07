@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1688 2018/04/07 08:13:49 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1689 2018/04/07 08:47:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2299,3 +2299,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Test-Perl-Critic to 1.04 [wen 2018-04-07]
 	Updated misc/libreoffice to 6.0.3.2 [ryoon 2018-04-07]
 	Updated devel/p5-System-Command to 1.119 [wen 2018-04-07]
+	Updated devel/p5-MooX-StrictConstructor to 0.010 [wen 2018-04-07]
