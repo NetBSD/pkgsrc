@@ -1,0 +1,3 @@
+This package provides routers and fields to create nested resources in the
+Django Rest Framework. Nested resources are needed for full REST URL structure,
+if one resource lives inside another.
