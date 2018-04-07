@@ -1,17 +1,29 @@
-$NetBSD: patch-aa,v 1.18 2015/08/17 17:10:32 wiz Exp $
+$NetBSD: patch-aa,v 1.18.24.1 2018/04/07 20:50:43 spz Exp $
 
---- misc/run_tic.in.orig	2012-10-06 19:00:51.000000000 +0000
-+++ misc/run_tic.in
-@@ -123,7 +123,7 @@ fi
+--- ./misc/run_tic.in.orig	2017-10-24 00:16:22.000000000 +0000
++++ ./misc/run_tic.in
+@@ -124,13 +124,13 @@ fi
  # would generate a lot of confusing error messages if we tried to overwrite it.
  # We explicitly remove its contents rather than the directory itself, in case
  # the directory is actually a symbolic link.
--( test -d "$TERMINFO" && cd $TERMINFO && rm -fr ? 2>/dev/null )
-+#( test -d "$TERMINFO" && cd $TERMINFO && rm -fr ? 2>/dev/null )
+-if test -d "$TERMINFO"
+-then
+-	( cd "$TERMINFO" && rm -fr ? 2>/dev/null )
+-elif test -f "$TERMINFO.db"
+-then
+-	( rm -f "$TERMINFO.db" 2>/dev/null )
+-fi
++#if test -d "$TERMINFO"
++#then
++#	( cd "$TERMINFO" && rm -fr ? 2>/dev/null )
++#elif test -f "$TERMINFO.db"
++#then
++#	( rm -f "$TERMINFO.db" 2>/dev/null )
++#fi
  
  if test "$ext_funcs" = 1 ; then
  cat <<EOF
-@@ -165,6 +165,9 @@ else
+@@ -172,6 +172,9 @@ else
  fi
  fi
  

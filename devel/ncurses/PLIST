@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2018/01/01 22:29:25 rillig Exp $
+@comment $NetBSD: PLIST,v 1.23.2.1 2018/04/07 20:50:43 spz Exp $
 bin/captoinfo
 bin/clear
 bin/infocmp
@@ -66,6 +66,7 @@ man/man3/TYPE_NUMERIC.3
 man/man3/TYPE_REGEXP.3
 man/man3/UP.3
 man/man3/_nc_free_and_exit.3
+man/man3/_nc_free_tinfo.3
 man/man3/_nc_freeall.3
 man/man3/_nc_tracebits.3
 man/man3/_traceattr.3
@@ -89,6 +90,8 @@ man/man3/addnstr.3
 man/man3/addnwstr.3
 man/man3/addstr.3
 man/man3/addwstr.3
+man/man3/alloc_pair.3
+man/man3/alloc_pair_sp.3
 man/man3/assume_default_colors.3
 man/man3/assume_default_colors_sp.3
 man/man3/attr_get.3
@@ -230,6 +233,12 @@ man/man3/erase.3
 man/man3/erasechar.3
 man/man3/erasechar_sp.3
 man/man3/erasewchar.3
+man/man3/extended_color_content.3
+man/man3/extended_color_content_sp.3
+man/man3/extended_pair_content.3
+man/man3/extended_pair_content_sp.3
+man/man3/extended_slk_color.3
+man/man3/extended_slk_color_sp.3
 man/man3/field_arg.3
 man/man3/field_back.3
 man/man3/field_buffer.3
@@ -249,6 +258,8 @@ man/man3/field_type.3
 man/man3/field_userptr.3
 man/man3/filter.3
 man/man3/filter_sp.3
+man/man3/find_pair.3
+man/man3/find_pair_sp.3
 man/man3/flash.3
 man/man3/flash_sp.3
 man/man3/flushinp.3
@@ -291,6 +302,8 @@ man/man3/free_fieldtype.3
 man/man3/free_form.3
 man/man3/free_item.3
 man/man3/free_menu.3
+man/man3/free_pair.3
+man/man3/free_pair_sp.3
 man/man3/get_escdelay.3
 man/man3/get_escdelay_sp.3
 man/man3/get_wch.3
@@ -347,6 +360,10 @@ man/man3/inchnstr.3
 man/man3/inchstr.3
 man/man3/init_color.3
 man/man3/init_color_sp.3
+man/man3/init_extended_color.3
+man/man3/init_extended_color_sp.3
+man/man3/init_extended_pair.3
+man/man3/init_extended_pair_sp.3
 man/man3/init_pair.3
 man/man3/init_pair_sp.3
 man/man3/initscr.3
@@ -412,6 +429,7 @@ man/man3/legacy_coding.3
 man/man3/link_field.3
 man/man3/link_fieldtype.3
 man/man3/longname.3
+man/man3/longname_sp.3
 man/man3/mcprint.3
 man/man3/mcprint_sp.3
 man/man3/menu.3
@@ -552,6 +570,7 @@ man/man3/new_item.3
 man/man3/new_menu.3
 man/man3/new_menu_sp.3
 man/man3/new_page.3
+man/man3/new_pair.3
 man/man3/new_panel.3
 man/man3/new_prescr.3
 man/man3/newpad.3
@@ -610,6 +629,7 @@ man/man3/raw_sp.3
 man/man3/redrawwin.3
 man/man3/refresh.3
 man/man3/replace_panel.3
+man/man3/reset_color_pairs.3
 man/man3/reset_prog_mode.3
 man/man3/reset_prog_mode_sp.3
 man/man3/reset_shell_mode.3
@@ -778,6 +798,7 @@ man/man3/typeahead.3
 man/man3/typeahead_sp.3
 man/man3/unctrl.3
 man/man3/unctrl_sp.3
+man/man3/unfocus_current_field.3
 man/man3/unget_wch.3
 man/man3/unget_wch_sp.3
 man/man3/ungetch.3
@@ -898,8 +919,10 @@ man/man3/wunctrl.3
 man/man3/wunctrl_sp.3
 man/man3/wvline.3
 man/man3/wvline_set.3
+man/man5/scr_dump.5
 man/man5/term.5
 man/man5/terminfo.5
+man/man5/user_caps.5
 man/man7/term.7
 share/examples/ncurses++demo.cc
 share/tabset/std

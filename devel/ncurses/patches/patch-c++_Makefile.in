@@ -1,7 +1,7 @@
-$NetBSD: patch-c++_Makefile.in,v 1.1 2016/12/18 23:30:34 joerg Exp $
+$NetBSD: patch-c++_Makefile.in,v 1.1.14.1 2018/04/07 20:50:43 spz Exp $
 
---- c++/Makefile.in.orig	2015-08-05 23:15:41.000000000 +0000
-+++ c++/Makefile.in
+--- ./c++/Makefile.in.orig	2016-05-21 23:26:12.000000000 +0000
++++ ./c++/Makefile.in
 @@ -84,7 +84,7 @@ RANLIB		= @LIB_PREP@
  CXX		= @CXX@
  CPP		= @CXXCPP@
@@ -10,7 +10,7 @@ $NetBSD: patch-c++_Makefile.in,v 1.1 2016/12/18 23:30:34 joerg Exp $
 +CXXLIBS		=
  
  INCDIR		= ../include
- CPPFLAGS	= -DHAVE_CONFIG_H @CPPFLAGS@
+ CPPFLAGS	= -DHAVE_CONFIG_H -I../c++ @CPPFLAGS@
 @@ -112,7 +112,7 @@ LOCAL_LIBDIR	= @top_builddir@/lib
  
  LINK		= @LINK_PROGS@ $(LIBTOOL_LINK) @CXXLDFLAGS@
