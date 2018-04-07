@@ -1,17 +1,14 @@
-$NetBSD: distinfo,v 1.33 2018/02/02 17:32:58 jperkin Exp $
+$NetBSD: distinfo,v 1.33.2.1 2018/04/07 20:50:43 spz Exp $
 
-SHA1 (ncurses-6.0.tar.gz) = acd606135a5124905da770803c05f1f20dd3b21c
-RMD160 (ncurses-6.0.tar.gz) = 4d9e5938f00b400bfb0d37f3c54f2f36c4157d48
-SHA512 (ncurses-6.0.tar.gz) = 9ec194f4783dae6de8c529cac31b5cfbfcfea212c5d47b1f87cd49df013e38f8580a9e7aa1384918df0921b4ba999d5e73eb6d6362cce2d7287e64308b673963
-Size (ncurses-6.0.tar.gz) = 3131891 bytes
-SHA1 (patch-aa) = 6acf84077e84fd693bb2b52377774db3d15b4f8f
-SHA1 (patch-ab) = 5a64bd1e591fa253d71bbdec1a4dc330c4c50e9e
-SHA1 (patch-ac) = b0b0eac0be624240330da852d7e5d35ff5f060c4
+SHA1 (ncurses-6.1.tar.gz) = 57acf6bc24cacd651d82541929f726f4def780cc
+RMD160 (ncurses-6.1.tar.gz) = 938235f3922f9c6ef0f1081d643ecb2da1347a17
+SHA512 (ncurses-6.1.tar.gz) = e308af43f8b7e01e98a55f4f6c4ee4d1c39ce09d95399fa555b3f0cdf5fd0db0f4c4d820b4af78a63f6cf6d8627587114a40af48cfc066134b600520808a77ee
+Size (ncurses-6.1.tar.gz) = 3365395 bytes
+SHA1 (patch-aa) = 4523f87f39d2aa3eea07a0e55595eb9e50b74a6c
+SHA1 (patch-ab) = f4573e7a161c2f59d9828d163abe2a5ba2e4d56f
+SHA1 (patch-ac) = 08e5fa8179c7f5c65c617a55c9693745b89b42de
 SHA1 (patch-aclocal.m4) = efb1a966687d2c35fc3e3e1d5345e80aaf2822f6
-SHA1 (patch-c++_Makefile.in) = 974f89c75737a8079977fc35a924b54d32e98df2
+SHA1 (patch-c++_Makefile.in) = 68ff81c719ec4aa13beb962cb66d7cd6749d7af5
 SHA1 (patch-configure.in) = 48a705b3f4de3a65c0c1c3648f5a24c5310ed3fa
 SHA1 (patch-misc_ncurses-config.in) = 43e4dc8abe85804513da1189aeffa5c7746ffcca
 SHA1 (patch-ncurses_base_MKlib__gen.sh) = f8ce67fbd273529e4161a2820677d05a623fd527
-SHA1 (patch-ncurses_tinfo_alloc__entry.c) = b9f3ab1ba347f9725a97874b0020e14b56341195
-SHA1 (patch-ncurses_tinfo_lib__baudrate.c) = e383a11530a3045e729ab8c738e57a9e217a994f
-SHA1 (patch-ncurses_tinfo_parse__entry.c) = c99eb89dcdbf0ad4e05eea9b7f9820a0d4328173

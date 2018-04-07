@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.20 2016/12/30 11:28:19 wiz Exp $
+$NetBSD: patch-ab,v 1.20.12.1 2018/04/07 20:50:43 spz Exp $
 
---- mk-1st.awk.orig	2014-12-20 23:54:22.000000000 +0000
-+++ mk-1st.awk
+--- ./mk-1st.awk.orig	2017-12-02 23:29:29.000000000 +0000
++++ ./mk-1st.awk
 @@ -67,6 +67,9 @@ function is_termlib() {
  	}
  # see lib_name
@@ -12,17 +12,6 @@ $NetBSD: patch-ab,v 1.20 2016/12/30 11:28:19 wiz Exp $
  		return sprintf("%s%s%s", prefix, a_name, suffix)
  	}
  # see imp_name
-@@ -447,8 +450,8 @@ END	{
- 					which_list = "SHLIB_LIST";
- 				}
- 				printf "\tcd ../lib && $(LIBTOOL_LINK) $(%s) $(%s) \\\n", CC_NAME, CC_FLAG;
--				printf "\t\t-o %s $(%s_OBJS:$o=.lo) \\\n", lib_name, OBJS;
--				printf "\t\t-rpath $(DESTDIR)$(libdir) \\\n";
-+				printf "\t\t-o %s $(%s_OBJS:.o=.lo) \\\n", lib_name, OBJS;
-+				printf "\t\t-rpath $(libdir) \\\n";
- 				printf "\t\t%s $(NCURSES_MAJOR):$(NCURSES_MINOR) $(LT_UNDEF) $(%s) $(LDFLAGS)\n", libtool_version, which_list;
- 				print  ""
- 				print  "install \\"
 @@ -471,7 +474,7 @@ END	{
  				printf "\t$(RANLIB) $@\n"
  				if ( host == "vxworks" )
