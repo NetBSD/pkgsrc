@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2018/04/05 08:14:18 adam Exp $
+# $NetBSD: Makefile,v 1.21 2018/04/07 19:55:22 adam Exp $
 
-DISTNAME=	djangorestframework-3.8.1
+DISTNAME=	djangorestframework-3.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangorestframework/}
