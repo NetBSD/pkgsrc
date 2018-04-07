@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1692 2018/04/07 16:36:36 leot Exp $
+$NetBSD: CHANGES-2018,v 1.1693 2018/04/07 19:59:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2303,3 +2303,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/pax to 20080110nb3 [jperkin 2018-04-07]
 	Added misc/ocaml-opaline version 0.2.2 [jaapb 2018-04-07]
 	Updated net/gallery-dl to 1.3.3 [leot 2018-04-07]
+	Updated www/py-djangorestframework to 3.8.2 [adam 2018-04-07]
+	Added www/py-drf-nested-routers version 0.90.2 [adam 2018-04-07]
