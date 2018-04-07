@@ -1,26 +1,11 @@
-$NetBSD: patch-ac,v 1.25 2016/12/30 11:28:19 wiz Exp $
+$NetBSD: patch-ac,v 1.25.12.1 2018/04/07 20:50:43 spz Exp $
 
-Allow ncurses to build with compiler from pkgsrc by dropping the use of
--no-cpp-precomp which is specific to Apple's supplied toolchain.
-Don't rename man pages on Debian.
-Include local paths before utilising flags from build env
-
---- configure.orig	2015-08-05 09:20:32.000000000 +0000
-+++ configure
-@@ -4930,7 +4930,7 @@ test -z "$cf_cv_libtool_version" && unse
- echo "$as_me: error: Cannot find libtool" >&2;}
-    { (exit 1); exit 1; }; }
- 	fi
--	LIB_CREATE='${LIBTOOL} --mode=link ${CC} -rpath ${DESTDIR}${libdir} ${LIBTOOL_VERSION} `cut -f1 ${top_srcdir}/VERSION` ${LIBTOOL_OPTS} ${LT_UNDEF} $(LIBS) -o'
-+	LIB_CREATE='${LIBTOOL} --mode=link ${CC} -rpath ${libdir} ${LIBTOOL_VERSION} `cut -f1 ${top_srcdir}/VERSION` ${LIBTOOL_OPTS} ${LT_UNDEF} $(LIBS) -o'
- 	LIB_OBJECT='${OBJECTS:.o=.lo}'
- 	LIB_SUFFIX=.la
- 	LIB_CLEAN='${LIBTOOL} --mode=clean'
-@@ -11090,12 +11090,7 @@ case ".$MANPAGE_RENAMES" in
- (.no)
+--- ./configure.orig	2018-01-20 00:27:18.000000000 +0000
++++ ./configure
+@@ -11770,11 +11770,7 @@ case ".$MANPAGE_RENAMES" in
  	;;
  (.|.yes)
--	# Debian 'man' program?
+ 	# Debian 'man' program?
 -	if test -f /etc/debian_version ; then
 -		MANPAGE_RENAMES=`cd $srcdir && pwd`/man/man_db.renames
 -	else
@@ -30,7 +15,7 @@ Include local paths before utilising flags from build env
  	;;
  esac
  
-@@ -21894,8 +21889,16 @@ EOF
+@@ -23263,8 +23259,17 @@ EOF
  #define HAVE_LIB${cf_have_include} 1
  EOF
  
@@ -46,10 +31,11 @@ Include local paths before utilising flags from build env
 +				TEST_DEP2="${LIB_2ND}/${LIB_PREFIX}${cf_dir}${DFT_DEP_SUFFIX} $TEST_DEP2"
 +				;;
 +			esac
++
  			if test "$DFT_LWR_MODEL" = "libtool"; then
  				TEST_ARGS="${TEST_DEPS}"
  				TEST_ARG2="${TEST_DEP2}"
-@@ -22181,9 +22184,9 @@ fi
+@@ -23567,9 +23572,9 @@ fi
  ADAHTML_DIR=../../doc/html/ada
  
  # these could be configurable, but are not currently
@@ -61,8 +47,8 @@ Include local paths before utilising flags from build env
 +FORM_NAME=gnuform
  CXX_NAME=ncurses++
  
- # workaround for g++ versus Solaris (20131116)
-@@ -23565,7 +23568,14 @@ CF_EOF
+ # workaround for OS/2 (20151017)
+@@ -25011,7 +25016,15 @@ CF_EOF
  		cf_depsuf="${LIB_SUFFIX}${EXTRA_SUFFIX}${cf_depsuf}"
  	fi
  
@@ -75,6 +61,7 @@ Include local paths before utilising flags from build env
 +				cf_libname=$cf_dir
 +				;;
 +			esac
++
  			test "$cf_dir" = c++ && cf_libname=ncurses++
  			if test $cf_item = shared ; then
  				if test -n "${LIB_SUFFIX}"
