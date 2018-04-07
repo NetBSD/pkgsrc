@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2018/02/01 19:01:59 markd Exp $
+# $NetBSD: Makefile.common,v 1.8 2018/04/07 00:39:29 markd Exp $
 # used by misc/attica-qt5/Makefile
 # used by sysutils/baloo5/Makefile
 # used by x11/frameworkintegration/Makefile
@@ -69,6 +69,7 @@ MAINTAINER?=	markd@NetBSD.org
 
 BUILD_DEPENDS+= extra-cmake-modules>=${KF5VER}:../../devel/extra-cmake-modules
 TOOLS_DEPENDS.cmake= cmake>=3.0:../../devel/cmake
+BUILDLINK_ABI_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.10.1nb2
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
@@ -78,9 +79,6 @@ CONFIGURE_DIRS=	_KDE_build
 CMAKE_ARGS+=	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON
 CMAKE_ARGS+=	-DKDE_INSTALL_LIBEXECDIR=libexec
 CMAKE_ARGS+=	-DKDE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
-
-# various issues with symbols such at qt_plugin_instance not being visible.
-BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/_KDE_build
