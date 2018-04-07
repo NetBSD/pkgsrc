@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.18 2017/10/17 09:42:52 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.19 2018/04/07 10:35:01 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -23,7 +23,7 @@
 # OCAML_USE_OASIS_DYNRUN [implies OCAML_USE_OASIS]
 # package uses oasis.dynrun
 # OCAML_USE_OPAM
-# package uses OPAM
+# package uses OPAM installer
 # OCAML_USE_TOPKG
 # package uses topkg [implies OCAML_USE_FINDLIB]
 # OCAML_USE_JBUILDER
@@ -142,7 +142,7 @@ OCAML_USE_OPAM?=	no
 
 # Configure stuff for OPAM
 .if ${OCAML_USE_OPAM} == "yes"
-.include "../../misc/ocaml-opam/buildlink3.mk"
+.include "../../misc/ocaml-opaline/buildlink3.mk"
 OCAML_USE_FINDLIB=	yes
 .endif
 
@@ -231,9 +231,15 @@ do-build:
 
 do-install:
 	${RUN} for i in ${OPAM_INSTALL_FILES}; do \
-		cd ${WRKSRC} && opam-installer -i --prefix ${DESTDIR}${PREFIX} \
-		--libdir ${OCAML_SITELIBDIR} \
-		--docdir ${DESTDIR}/${OCAML_TOPKG_DOCDIR} \
+		cd ${WRKSRC} && opaline -install-cmd "${INSTALL_DATA}" \
+		-exec-install-cmd "${INSTALL_PROGRAM}" \
+		-name $$i \
+		-destdir ${DESTDIR} \
+		-prefix ${PREFIX} \
+		-libdir ${PREFIX}/${OCAML_SITELIBDIR}/$$i \
+		-docdir ${OCAML_TOPKG_DOCDIR}/$$i \
+		-stublibsdir ${PREFIX}/${OCAML_SITELIBDIR}/stublibs \
+		-bindir ${PREFIX}/bin \
 		$$i.install; \
 	done
 
