@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.494 2018/04/04 15:26:16 minskim Exp $
+# $NetBSD: Makefile,v 1.495 2018/04/07 10:34:22 jaapb Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -192,6 +192,7 @@ SUBDIR+=	multitail
 SUBDIR+=	nxtvepg
 SUBDIR+=	nyancat
 SUBDIR+=	ocaml-cudf
+SUBDIR+=	ocaml-opaline
 SUBDIR+=	ocaml-opam
 SUBDIR+=	ocaml-opam-file-format
 SUBDIR+=	ocaml-topkg
