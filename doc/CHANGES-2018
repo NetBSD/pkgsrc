@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1693 2018/04/07 19:59:28 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1694 2018/04/07 20:10:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2305,3 +2305,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/gallery-dl to 1.3.3 [leot 2018-04-07]
 	Updated www/py-djangorestframework to 3.8.2 [adam 2018-04-07]
 	Added www/py-drf-nested-routers version 0.90.2 [adam 2018-04-07]
+	Updated devel/py-test-mock to 1.8.0 [adam 2018-04-07]
+	Updated www/py-django-cmsplugin_gallery to 1.0.1 [adam 2018-04-07]
