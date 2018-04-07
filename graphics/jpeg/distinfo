@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.22 2018/01/28 15:55:28 wiz Exp $
+$NetBSD: distinfo,v 1.23 2018/04/07 06:27:13 wiz Exp $
 
-SHA1 (jpegsrc.v9c.tar.gz) = cd40526843a44c69bf88b6cc462a3e0359f69d27
-RMD160 (jpegsrc.v9c.tar.gz) = d097f5c4dbfe09d61b688fc1e20ea37e73e78a3f
-SHA512 (jpegsrc.v9c.tar.gz) = c95aacb0f1972a2271953ee17b5c6a6c3662d5f4fbc4d1e9aef59dece42a169b0f34d3fa1d385b88580ad11cefd194250094ee72843f4e0028204df6741cb611
-Size (jpegsrc.v9c.tar.gz) = 1028200 bytes
+SHA1 (jpeg-9c-v2/jpegsrc.v9c.tar.gz) = 2ce111c8c0ac828a44b13ad28c265e954a342d07
+RMD160 (jpeg-9c-v2/jpegsrc.v9c.tar.gz) = c181cc66d03d96ffcca85724938551bb089fd519
+SHA512 (jpeg-9c-v2/jpegsrc.v9c.tar.gz) = 2b581c60ae401a79bbbe748ff2deeda5acd50bfd2ea22e5926e36d34b9ebcffb6580b0ff48e972c1441583e30e21e1ea821ca0423f9c67ce08a31dffabdbe6b7
+Size (jpeg-9c-v2/jpegsrc.v9c.tar.gz) = 1028134 bytes
 SHA1 (patch-af) = 925604706574009aacd452dab2d736039b0654e9
 SHA1 (patch-ag) = 46164c00386d1968356f1b61d144bc9168410654
 SHA1 (patch-jmorecfg.h) = c00f81ba94e2ad6b55ca9892553eedbe4eca3ad1
