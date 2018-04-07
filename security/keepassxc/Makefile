@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/04/02 08:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2018/04/07 07:35:50 wiz Exp $
 
 DISTNAME=	keepassxc-2.3.0
 CATEGORIES=	security x11
@@ -14,9 +14,6 @@ USE_LANGUAGES=	c c++
 CMAKE_ARG_PATH=	..
 CMAKE_ARGS+=	-DKEEPASSXC_BUILD_TYPE=Release
 CONFIGURE_DIRS=	build
-
-# various issues with symbols such at qt_plugin_instance not being visible.
-BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
 
 .PHONY: qmake-bin-add
 pre-configure: qmake-bin-add
