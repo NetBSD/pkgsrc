@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2017/03/31 07:10:58 tron Exp $
+# $NetBSD: Makefile,v 1.40 2018/04/07 11:04:30 gson Exp $
 
 PKGNAME=	pkg_rolling-replace-0.24.3
 CATEGORIES=	pkgtools
 
-MAINTAINER=	ngoffee@bbn.com
+MAINTAINER=	gdt@NetBSD.org
 COMMENT=	Replace/upgrade packages in-place
 LICENSE=	modified-bsd
 
