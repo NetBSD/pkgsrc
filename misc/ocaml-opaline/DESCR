@@ -1,0 +1,2 @@
+This is a lightweight version of opam-installer that does not depend on
+any packages that need opam to be installed.
