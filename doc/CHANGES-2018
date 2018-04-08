@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1697 2018/04/07 21:06:54 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1698 2018/04/08 01:34:26 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2311,3 +2311,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-bcolz to 1.2.0 [adam 2018-04-07]
 	Added devel/R-memoise version 1.1.0 [minskim 2018-04-07]
 	Updated misc/R-pillar to 1.2.1 [minskim 2018-04-07]
+	Added devel/py-absl-py version 0.1.13 [minskim 2018-04-08]
