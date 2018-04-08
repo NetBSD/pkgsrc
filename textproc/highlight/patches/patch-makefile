@@ -1,4 +1,4 @@
-$NetBSD: patch-makefile,v 1.1 2014/08/18 01:24:59 schmonz Exp $
+$NetBSD: patch-makefile,v 1.2 2018/04/08 19:40:29 schmonz Exp $
 
 Use pkgsrc-provided paths and tools.
 
@@ -47,24 +47,50 @@ Use pkgsrc-provided paths and tools.
  
  all cli:
  	${MAKE} -C ./src -f ./makefile HL_DATA_DIR=${data_dir} HL_CONFIG_DIR=${conf_dir}
-@@ -75,14 +76,14 @@ install:
+@@ -75,14 +76,11 @@ install:
  		${DESTDIR}${data_dir}themes \
  		${DESTDIR}${data_dir}langDefs \
  		${DESTDIR}${data_dir}plugins
 -	${MKDIR} ${DESTDIR}${man_dir}
-+	${BSD_INSTALL_MAN_DIR} ${DESTDIR}${man_dir}
- 	${MKDIR} ${DESTDIR}${bin_dir}
+-	${MKDIR} ${DESTDIR}${bin_dir}
  
  	${INSTALL_DATA} ./langDefs/*.lang ${DESTDIR}${data_dir}langDefs/
  	${INSTALL_DATA} ./*.conf ${DESTDIR}${conf_dir}
  	${INSTALL_DATA} ./themes/*.theme ${DESTDIR}${data_dir}themes/
  	${INSTALL_DATA} ./plugins/*.lua ${DESTDIR}${data_dir}plugins/
 -	${INSTALL_DATA} ./man/highlight.1.gz ${DESTDIR}${man_dir}
-+	${BSD_INSTALL_MAN} ./man/highlight.1.gz ${DESTDIR}${man_dir}
  	${INSTALL_DATA} ./AUTHORS ${DESTDIR}${doc_dir}
  	${INSTALL_DATA} ./README ${DESTDIR}${doc_dir}
  	${INSTALL_DATA} ./README_DE ${DESTDIR}${doc_dir}
-@@ -129,7 +130,7 @@ uninstall:
+@@ -99,15 +97,25 @@ install:
+ 	${INSTALL_DATA} ./examples/swig/README_SWIG ${DESTDIR}${doc_dir}
+ 	${INSTALL_DATA} ./examples/highlight_pipe.* ${DESTDIR}${examples_dir}
+ 	${INSTALL_DATA} ./examples/*.py ${DESTDIR}${examples_dir}
+-	${INSTALL_PROGRAM} ./src/highlight ${DESTDIR}${bin_dir}
+ 
+ 	@echo
+ 	@echo "Done."
+-	@echo "Type highlight --help or man highlight for instructions."
+ 	@echo "Take a look at ${DESTDIR}${examples_dir} for plugins and SWIG language bindings."
++	@echo "Execute 'make install-cli' to install the highlight CLI ('make cli')."
+ 	@echo "Execute 'make install-gui' to install the highlight GUI ('make gui')."
+ 	@echo "Do not hesitate to report problems. Unknown bugs are hard to fix."
+ 
++install-cli:
++	@echo "Installing files for the CLI..."
++	${MKDIR} ${DESTDIR}${bin_dir}
++	${INSTALL_PROGRAM} ./src/highlight ${DESTDIR}${bin_dir}
++	${BSD_INSTALL_MAN_DIR} ${DESTDIR}${man_dir}
++	${BSD_INSTALL_MAN} ./man/highlight.1.gz ${DESTDIR}${man_dir}
++
++	@echo
++	@echo "Done."
++	@echo "Type highlight --help or man highlight for instructions."
++
+ install-gui:
+ 	@echo "Installing files for the GUI..."
+ 	${MKDIR} ${DESTDIR}${data_dir} \
+@@ -129,7 +137,7 @@ uninstall:
  	${RMDIR} ${DESTDIR}${doc_dir}
  	${RMDIR} ${DESTDIR}${conf_dir}
  	${RMDIR} ${DESTDIR}${examples_dir}
