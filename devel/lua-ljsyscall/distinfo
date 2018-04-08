@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/02/01 09:53:08 prlw1 Exp $
+$NetBSD: distinfo,v 1.4 2018/04/08 10:11:52 alnsn Exp $
 
-SHA1 (ljsyscall-0.11.tar.gz) = 6dbd0360a8d21c90323692e438eb3286fa98ba0b
-RMD160 (ljsyscall-0.11.tar.gz) = bc474f2c4cffedfab62087cfe70adaa5e6471ab0
-SHA512 (ljsyscall-0.11.tar.gz) = 0a78dc6601a0192011428447b5ab18d700ca005720d7e7c9f51fa7f38dc8f8410702da65feb72b7aa161d3934e62b5d2be3d7f345ad19e0d5356b1aa3cef3d7e
-Size (ljsyscall-0.11.tar.gz) = 305928 bytes
+SHA1 (ljsyscall-0.12.tar.gz) = 3e60658c1d1eb75ee58ece9f126b92716bcecd87
+RMD160 (ljsyscall-0.12.tar.gz) = 59cf3a81eb6b20507bde827edb902893b4cbf4a5
+SHA512 (ljsyscall-0.12.tar.gz) = 4e9c7ef239f81795103185cff334d33eb12e450213f6c9b5ee488bbe8feaf2482a7c5e9a2e51e0498f86c7d6c868688dd98ef3cbbfe47b5ddfc3d32b7284b2c9
+Size (ljsyscall-0.12.tar.gz) = 314617 bytes
