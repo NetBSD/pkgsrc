@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2018/04/02 19:36:44 adam Exp $
+# $NetBSD: Makefile,v 1.142 2018/04/08 19:09:45 chuck Exp $
 
 .include "Makefile.version"
 
@@ -51,14 +51,8 @@ SUBST_FILES.cmake+=	Modules/FindX11.cmake
 SUBST_FILES.cmake+=	Modules/Platform/UnixPaths.cmake
 SUBST_VARS.cmake=	LOCALBASE X11BASE
 
-SUBST_CLASSES+=		flags
-SUBST_STAGE.flags=	pre-configure
-SUBST_MESSAGE.flags=	Fixing compiler flags.
-SUBST_FILES.flags=	Modules/Compiler/*.cmake
-SUBST_SED.flags=	-e 's,-O.,,'
-
 pre-configure:
-	${RM} -f ${WRKSRC}/Modules/*.orig ${WRKSRC}/Modules/Platform/*.orig
+	${RM} -f ${WRKSRC}/Modules/*.orig ${WRKSRC}/Modules/Compiler/*.orig ${WRKSRC}/Modules/Platform/*.orig
 	${LN} -f ${WRKSRC}/Modules/Platform/OpenBSD.cmake ${WRKSRC}/Modules/Platform/MirBSD.cmake
 .for lang in C CXX Fortran
 	${LN} -f ${WRKSRC}/Modules/Platform/SunOS-GNU-${lang}.cmake \
