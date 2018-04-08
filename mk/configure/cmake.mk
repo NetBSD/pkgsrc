@@ -1,4 +1,4 @@
-# $NetBSD: cmake.mk,v 1.15 2017/12/27 18:56:27 wiz Exp $
+# $NetBSD: cmake.mk,v 1.16 2018/04/08 19:11:27 chuck Exp $
 #
 # This file handles packages that use CMake as their primary build
 # system. For more information about CMake, see http://www.cmake.org/.
@@ -14,6 +14,14 @@
 #	A list of files relative to WRKSRC in which the CMAKE_MODULE_PATH
 #	variable is adjusted to include the path from the pkgsrc wrappers.
 #	The file ${WRKSRC}/CMakeLists.txt is always appended to this list.
+#
+# CMAKE_PKGSRC_BUILD_FLAGS
+#	If set to yes, disable compiler optimization flags associated
+#	with the CMAKE_BUILD_TYPE setting (for pkgsrc these come in from
+#	the user via variables like CFLAGS).  The default is yes, but you can
+#	set it to no for pkgsrc packages that do not use a compiler to avoid
+#	cmake "Manually-specified variables were not used by the project"
+#	warnings associated with this variable.
 #
 # CMAKE_PREFIX_PATH
 #	A list of directories to add the CMAKE_PREFIX_PATH cmake variable.
@@ -39,6 +47,9 @@ CMAKE_INSTALL_PREFIX?=	${PREFIX}
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
 CMAKE_ARGS+=	-DCMAKE_MODULE_PATH:PATH=${_CMAKE_DIR}
+.if empty(CMAKE_PKGSRC_BUILD_FLAGS:M[nN][oO])
+CMAKE_ARGS+=    -DCMAKE_PKGSRC_BUILD_FLAGS:BOOL=TRUE
+.endif
 .if ${OPSYS} != "Darwin"
 CMAKE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=TRUE
 .else
