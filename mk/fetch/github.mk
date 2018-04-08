@@ -1,4 +1,4 @@
-# $NetBSD: github.mk,v 1.9 2015/10/19 14:24:26 tnn Exp $
+# $NetBSD: github.mk,v 1.10 2018/04/08 20:39:47 rillig Exp $
 #
 # github.com master site handling
 #
@@ -71,3 +71,7 @@ SITES.${_GITHUB_DEFAULT_DISTFILES}=	-${MASTER_SITES:=${GITHUB_PROJECT}/archive/$
 .  endif
 
 .endif
+
+_VARGROUPS+=		github
+_PKG_VARS.github=	GITHUB_PROJECT GITHUB_TAG GITHUB_TYPE
+_DEF_VARS.github=	_USE_GITHUB _GITHUB_DEFAULT_DISTFILES SITES.${_GITHUB_DEFAULT_DISTFILES}
