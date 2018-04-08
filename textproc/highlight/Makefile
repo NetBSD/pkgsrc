@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2014/08/18 01:21:49 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2018/04/08 19:40:29 schmonz Exp $
 
+PKGREVISION=		1
 .include "../../textproc/highlight/Makefile.common"
 
 MANCOMPRESSED=		yes
 
 BUILD_TARGET=		cli
-
-EGDIR=			${PREFIX}/share/examples/highlight
-CONF_FILES=		${EGDIR}/filetypes.conf			\
-			${PKG_SYSCONFDIR}/filetypes.conf
+INSTALL_TARGET=		install-cli
 
 .include "../../devel/libgetopt/buildlink3.mk"
+.include "../../textproc/libhighlight/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
