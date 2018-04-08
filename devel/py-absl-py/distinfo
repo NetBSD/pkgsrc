@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/04/08 01:34:16 minskim Exp $
+
+SHA1 (absl-py-0.1.13.tar.gz) = ee42a8c4c6ddadfdbd97636a109486a9a3f20140
+RMD160 (absl-py-0.1.13.tar.gz) = 333ddc2e7f5de6dc48636f74f050802ec2d75751
+SHA512 (absl-py-0.1.13.tar.gz) = 1bc9a0f1701fccd2d9f9609ed7e07bb9d0085ba36e7b8146e083439b628c1648765dfe8d8d93cdf8de53aaf006b82a001d9cc36fa993ce7fe51843cb0269aedb
+Size (absl-py-0.1.13.tar.gz) = 80243 bytes
