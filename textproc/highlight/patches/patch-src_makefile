@@ -1,10 +1,10 @@
-$NetBSD: patch-src_makefile,v 1.1 2014/08/18 01:24:59 schmonz Exp $
+$NetBSD: patch-src_makefile,v 1.2 2018/04/08 19:40:29 schmonz Exp $
 
 Use pkgsrc-specified compiler and flags.
 
 --- src/makefile.orig	2014-04-04 17:26:25.000000000 +0000
 +++ src/makefile
-@@ -12,12 +12,12 @@
+@@ -12,18 +12,18 @@
  
  # See src/gui-qt/highlight.pro for the Qt GUI compilation options
  
@@ -19,7 +19,14 @@ Use pkgsrc-specified compiler and flags.
  #CFLAGS:=-ggdb ${CFLAGS}
  
  CFLAGS_DILU=-fno-strict-aliasing
-@@ -61,7 +61,7 @@ ifdef PIC
+ 
+ SO_VERSION=3.17
+-
++LSO_VERSION=$(shell echo ${SO_VERSION} | awk -F. '{ printf "%d:%d:0\n", $$1 - 1, $$2 }')
+ 
+ # Source paths
+ CORE_DIR=./core/
+@@ -61,14 +61,16 @@ ifdef PIC
  	CFLAGS+=-fPIC
  endif
  
@@ -28,3 +35,49 @@ Use pkgsrc-specified compiler and flags.
  # Do not strip by default (Mac OS X lazy pointer issues)
  # Add -static to avoid linking with shared libs (can cause trouble when highlight
  # is run as service)
+ #LDFLAGS = ${LDFLAGS} -s
+ #LDFLAGS= -Wl,--as-needed
+ 
+-CXX_COMPILE=${CXX} ${CFLAGS} -c -I ${INCLUDE_DIR} ${LUA_CFLAGS}
++LIBTOOL=libtool --tag=CXX
++
++CXX_COMPILE=${LIBTOOL} --mode=compile ${CXX} ${CFLAGS} ${CXX_DIR} -I ${INCLUDE_DIR} ${LUA_CFLAGS} -c
+ 
+ # Data directories (data dir, configuration file dir)
+ CXX_DIR=-DHL_DATA_DIR=\"${HL_DATA_DIR}\" -DHL_CONFIG_DIR=\"${HL_CONFIG_DIR}\"
+@@ -96,14 +98,14 @@ GUI_OBJECTS:=${GUI_QT_DIR}main.cpp ${GUI
+ 	${GUI_QT_DIR}showtextfile.cpp
+ 
+ 
+-cli: libhighlight.a ${CLI_OBJECTS}
+-	${CXX} ${LDFLAGS} -o highlight ${CLI_OBJECTS} -L. -lhighlight ${LUA_LIBS}
++cli: ${CLI_OBJECTS}
++	${CXX} ${LDFLAGS} -o highlight ${CLI_OBJECTS} -lhighlight ${LUA_LIBS}
+ 
+ lib-static libhighlight.a: ${CORE_OBJECTS}
+ 	${AR} ${ARFLAGS} libhighlight.a ${CORE_OBJECTS} ${DILU_OBJECTS}
+ 
+ lib-shared libhighlight.so.1.0: ${CORE_OBJECTS}
+-	ld -shared -soname libhighlight.so.1 -o libhighlight.so.${SO_VERSION} -lc ${CORE_OBJECTS}
++	${LIBTOOL} --mode=link ${CXX} ${LDFLAGS} -o libhighlight.la ${CORE_OBJECTS:%.o=%.lo} ${DILU_OBJECTS:%.o=%.lo} -version-info ${LSO_VERSION} -rpath ${PREFIX}/lib
+ 
+ gui-qt: highlight-gui
+ 
+@@ -116,7 +118,7 @@ $(OBJECTFILES) : makefile
+ 
+ 
+ datadir.o: ${CORE_DIR}datadir.cpp ${INCLUDE_DIR}datadir.h ${INCLUDE_DIR}platform_fs.h
+-	${CXX_COMPILE} ${CORE_DIR}datadir.cpp ${CXX_DIR}
++	${CXX_COMPILE} ${CORE_DIR}datadir.cpp
+ 
+ platform_fs.o: ${CORE_DIR}platform_fs.cpp ${INCLUDE_DIR}platform_fs.h
+ 	${CXX_COMPILE} ${CORE_DIR}platform_fs.cpp
+@@ -197,7 +199,7 @@ main.o: ${CLI_DIR}main.cpp ${CLI_DIR}mai
+   ${INCLUDE_DIR}syntaxreader.h ${INCLUDE_DIR}themereader.h ${INCLUDE_DIR}elementstyle.h \
+   ${INCLUDE_DIR}stylecolour.h  ${INCLUDE_DIR}preformatter.h \
+   ${CLI_DIR}help.h ${INCLUDE_DIR}version.h
+-	${CXX_COMPILE} ${CLI_DIR}main.cpp ${CXX_DIR}
++	${CXX_COMPILE} ${CLI_DIR}main.cpp
+ 
+ 
+ #3rd party libs
