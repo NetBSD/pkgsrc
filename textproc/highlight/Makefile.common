@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2014/08/18 01:21:49 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.2 2018/04/08 19:40:29 schmonz Exp $
 # used by textproc/highlight/Makefile
+# used by textproc/libhighlight/Makefile
 # used by textproc/p5-highlight/Makefile
 
 DISTNAME=		highlight-${VERSION}
