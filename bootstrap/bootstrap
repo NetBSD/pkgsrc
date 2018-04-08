@@ -134,18 +134,6 @@ get_compiler()
 	# normally, we'd just use 'cc', but certain configure tools look
 	# for gcc specifically, so we have to see if that comes first
 	if [ -z "${testcc}" ]; then
-#		save_IFS="${IFS}"
-#		IFS=':'
-#		for dir in ${PATH}; do
-#			test -z "$dir" && dir=.
-#			if [ -x "$dir/gcc" ]; then
-#				testcc="$dir/gcc"
-#				break
-#			fi
-#		done
-#		IFS="${save_IFS}"
-#	fi
-
 	# Clang compiler pretends to be GCC, so we have to check that
 		cat >${wrkdir}/$$.c <<EOF
 #define GCC_COMPILER (defined(__GNUC__) && !defined(__clang__))indeed
