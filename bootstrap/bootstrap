@@ -968,6 +968,7 @@ if [ "$compiler" = "" ] && [ x"$check_compiler" = x"yes" ]; then
 		esac
 	fi
 fi
+
 mkdir_p_early ${wrkdir}/bin
 
 # build install-sh
