@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2018/03/31 06:05:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2018/04/08 19:40:29 schmonz Exp $
 
-PKGREVISION=		4
+PKGREVISION=		5
 .include "../../textproc/highlight/Makefile.common"
 
 PKGNAME=		p5-highlight-${VERSION}
 COMMENT+=		 (Perl bindings)
 
 BUILD_DEPENDS+=		swig-[0-9]*:../../devel/swig
-DEPENDS+=		highlight-[0-9]*:../../textproc/highlight
 
 BUILD_DIRS=		examples/swig
 BUILD_TARGET=		perl
@@ -37,4 +36,5 @@ do-install:
 
 PERL5_LDFLAGS=		-L${PERL5_INSTALLARCHLIB}/CORE
 .include "../../lang/perl5/module.mk"
+.include "../../textproc/libhighlight/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
