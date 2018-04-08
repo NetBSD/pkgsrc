@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1700 2018/04/08 10:13:45 alnsn Exp $
+$NetBSD: CHANGES-2018,v 1.1701 2018/04/08 10:15:56 scole Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2314,3 +2314,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated editors/emacs25 to 25.3nb5 [dholland 2018-04-08]
 	Added devel/py-absl-py version 0.1.13 [minskim 2018-04-08]
 	Updated devel/lua-ljsyscall to 0.12 [alnsn 2018-04-08]
+	Updated chat/line-purple to 0.1nb3 [scole 2018-04-08]
