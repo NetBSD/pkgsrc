@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1703 2018/04/08 19:41:30 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.1704 2018/04/08 19:41:39 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2317,3 +2317,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated chat/line-purple to 0.1nb3 [scole 2018-04-08]
 	Added textproc/libhighlight version 3.18 [schmonz 2018-04-08]
 	Updated textproc/highlight to 3.18nb1 [schmonz 2018-04-08]
+	Updated textproc/p5-highlight to 3.18nb5 [schmonz 2018-04-08]
