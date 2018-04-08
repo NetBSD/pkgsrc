@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.35 2018/01/07 11:20:18 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.36 2018/04/08 20:13:55 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -76,15 +76,15 @@ sub print_section($$) {
 
 	my $width = 0;
 	foreach my $var (@{$vars}) {
-		my $len = length($var->[0]);
+		my $varname = $var->[0];
+		my $len = (length("$varname= ") + 7) & -8;
 		$width = ($len > $width) ? $len : $width;
 	}
 
 	foreach my $var (@{$vars}) {
-		my $len = length($var->[0]) + 1;
-		my $adjlen = (($width + 1 + 1) + 7) &-8;
-		my $ntabs = (7 + $adjlen - $len) / 8;
-		printf $f ("%s=%s%s\n", $var->[0], "\t" x $ntabs, $var->[1]);
+		my ($varname, $varvalue) = @$var;
+		my $ntabs = ($width - length("$varname=") + 7) / 8;
+		printf $f ("%s=%s%s\n", $varname, "\t" x $ntabs, $varvalue);
 	}
 	printf $f ("\n");
 }
