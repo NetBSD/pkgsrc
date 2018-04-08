@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2018/01/07 11:20:18 rillig Exp $
+# $NetBSD: Makefile,v 1.88 2018/04/08 20:13:54 rillig Exp $
 
 PKGNAME=	url2pkg-2.29
 CATEGORIES=	pkgtools
@@ -22,6 +22,7 @@ do-extract:
 
 SUBST_CLASSES+=		up
 SUBST_STAGE.up=		do-configure
+SUBST_MESSAGE.up=	Replacing variable placeholders
 SUBST_FILES.up=		url2pkg.pl MakeMaker.pm
 SUBST_SED.up=		-e 's,@MAKE@,'${MAKE:Q}',g'
 SUBST_SED.up+=		-e 's,@PERL@,${PERL5},g'
