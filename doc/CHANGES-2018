@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1699 2018/04/08 03:40:04 dholland Exp $
+$NetBSD: CHANGES-2018,v 1.1700 2018/04/08 10:13:45 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2313,3 +2313,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/R-pillar to 1.2.1 [minskim 2018-04-07]
 	Updated editors/emacs25 to 25.3nb5 [dholland 2018-04-08]
 	Added devel/py-absl-py version 0.1.13 [minskim 2018-04-08]
+	Updated devel/lua-ljsyscall to 0.12 [alnsn 2018-04-08]
