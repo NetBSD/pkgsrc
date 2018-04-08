@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q1,v 1.1.2.2 2018/04/07 21:18:07 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q1,v 1.1.2.3 2018/04/08 11:52:20 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q1 branch:
 
@@ -18,4 +18,7 @@ graphics/shotwell: revbump
 Pullup ticket #5733 - requested by bsiegert
 devel/ncurses: security update
 devel/ncursesw: security update
+
+Pullup ticket #5734 - requested by wiz
+lang/gcc49-libs: build fix
 
