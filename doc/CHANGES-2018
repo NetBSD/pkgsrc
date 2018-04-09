@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1705 2018/04/08 21:47:50 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1706 2018/04/09 07:49:07 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2319,3 +2319,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/highlight to 3.18nb1 [schmonz 2018-04-08]
 	Updated textproc/p5-highlight to 3.18nb5 [schmonz 2018-04-08]
 	Updated devel/cmake to 3.11.0nb1 [chuck 2018-04-08]
+	Updated devel/ocaml-deriving-ocsigen to 0.8.1 [jaapb 2018-04-09]
