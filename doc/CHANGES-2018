@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1719 2018/04/09 12:14:41 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1720 2018/04/09 14:53:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2339,3 +2339,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/coq to 8.7.2 [jaapb 2018-04-09]
 	Updated www/py-cheroot to 6.1.2 [adam 2018-04-09]
 	Updated www/py-bleach to 2.1.3 [adam 2018-04-09]
+	Updated fonts/ja-shinonome to 0.9.11pl1 [ryoon 2018-04-09]
