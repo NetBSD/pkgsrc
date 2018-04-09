@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2656 2018/04/08 01:34:20 minskim Exp $
+# $NetBSD: Makefile,v 1.2657 2018/04/09 09:08:42 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -764,6 +764,7 @@ SUBDIR+=	ocaml-jbuilder
 SUBDIR+=	ocaml-js-build-tools
 SUBDIR+=	ocaml-lwt
 SUBDIR+=	ocaml-lwt_glib
+SUBDIR+=	ocaml-lwt_ppx
 SUBDIR+=	ocaml-lwt_react
 SUBDIR+=	ocaml-lwt_ssl
 SUBDIR+=	ocaml-migrate-parsetree
