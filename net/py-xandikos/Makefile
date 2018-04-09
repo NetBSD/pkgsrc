@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/04/03 13:21:02 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/04/09 09:08:34 adam Exp $
 
-DISTNAME=	xandikos-0.0.7
+DISTNAME=	xandikos-0.0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xandikos/}
@@ -11,7 +11,7 @@ COMMENT=	Lightweight CalDAV/CardDAV server
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
-DEPENDS+=	${PYPKGPREFIX}-dulwich-[0-9]*:../../devel/py-dulwich
+DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.19.1:../../devel/py-dulwich
 DEPENDS+=	${PYPKGPREFIX}-icalendar-[0-9]*:../../time/py-icalendar
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 
