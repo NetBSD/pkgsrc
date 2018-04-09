@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2018/01/22 11:54:43 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.26 2018/04/09 11:29:23 jaapb Exp $
 bin/coq-tex
 bin/coq_makefile
 bin/coqc
@@ -440,11 +440,13 @@ lib/coq/plugins/btauto/Reflect.glob
 lib/coq/plugins/btauto/Reflect.v
 lib/coq/plugins/btauto/Reflect.vo
 lib/coq/plugins/btauto/btauto_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/btauto/btauto_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/btauto/btauto_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/btauto/btauto_plugin.o
 ${PLIST.ocaml-opt}lib/coq/plugins/btauto/g_btauto.cmx
 ${PLIST.ocaml-opt}lib/coq/plugins/btauto/refl_btauto.cmx
 lib/coq/plugins/cc/cc_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/cc/cc_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/cc/cc_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/cc/cc_plugin.o
 lib/coq/plugins/cc/ccalgo.cmi
@@ -464,6 +466,7 @@ lib/coq/plugins/derive/Derive.vo
 lib/coq/plugins/derive/derive.cmi
 ${PLIST.ocaml-opt}lib/coq/plugins/derive/derive.cmx
 lib/coq/plugins/derive/derive_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/derive/derive_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/derive/derive_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/derive/derive_plugin.o
 ${PLIST.ocaml-opt}lib/coq/plugins/derive/g_derive.cmx
@@ -593,6 +596,7 @@ ${PLIST.ocaml-opt}lib/coq/plugins/extraction/extract_env.cmx
 lib/coq/plugins/extraction/extraction.cmi
 ${PLIST.ocaml-opt}lib/coq/plugins/extraction/extraction.cmx
 lib/coq/plugins/extraction/extraction_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/extraction/extraction_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/extraction/extraction_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/extraction/extraction_plugin.o
 ${PLIST.ocaml-opt}lib/coq/plugins/extraction/g_extraction.cmx
@@ -617,6 +621,7 @@ ${PLIST.ocaml-opt}lib/coq/plugins/firstorder/g_ground.cmx
 lib/coq/plugins/firstorder/ground.cmi
 ${PLIST.ocaml-opt}lib/coq/plugins/firstorder/ground.cmx
 lib/coq/plugins/firstorder/ground_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/firstorder/ground_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/firstorder/ground_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/firstorder/ground_plugin.o
 lib/coq/plugins/firstorder/instances.cmi
@@ -644,6 +649,7 @@ lib/coq/plugins/fourier/Fourier_util.vo
 ${PLIST.ocaml-opt}lib/coq/plugins/fourier/fourier.cmx
 ${PLIST.ocaml-opt}lib/coq/plugins/fourier/fourierR.cmx
 lib/coq/plugins/fourier/fourier_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/fourier/fourier_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/fourier/fourier_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/fourier/fourier_plugin.o
 ${PLIST.ocaml-opt}lib/coq/plugins/fourier/g_fourier.cmx
@@ -679,6 +685,7 @@ ${PLIST.ocaml-opt}lib/coq/plugins/funind/merge.cmx
 lib/coq/plugins/funind/recdef.cmi
 ${PLIST.ocaml-opt}lib/coq/plugins/funind/recdef.cmx
 lib/coq/plugins/funind/recdef_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/funind/recdef_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/funind/recdef_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/funind/recdef_plugin.o
 ${PLIST.native}lib/coq/plugins/ltac/.coq-native/NCoq_ltac_Ltac.cmi
@@ -703,6 +710,7 @@ ${PLIST.ocaml-opt}lib/coq/plugins/ltac/g_obligations.cmx
 ${PLIST.ocaml-opt}lib/coq/plugins/ltac/g_rewrite.cmx
 ${PLIST.ocaml-opt}lib/coq/plugins/ltac/g_tactic.cmx
 lib/coq/plugins/ltac/ltac_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/ltac/ltac_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/ltac/ltac_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/ltac/ltac_plugin.o
 lib/coq/plugins/ltac/pltac.cmi
@@ -738,6 +746,7 @@ ${PLIST.ocaml-opt}lib/coq/plugins/ltac/tactic_option.cmx
 lib/coq/plugins/ltac/tauto.cmi
 ${PLIST.ocaml-opt}lib/coq/plugins/ltac/tauto.cmx
 lib/coq/plugins/ltac/tauto_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/ltac/tauto_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/ltac/tauto_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/ltac/tauto_plugin.o
 ${PLIST.native}lib/coq/plugins/micromega/.coq-native/NCoq_micromega_Env.cmi
@@ -861,6 +870,7 @@ ${PLIST.ocaml-opt}lib/coq/plugins/micromega/mfourier.cmx
 lib/coq/plugins/micromega/micromega.cmi
 ${PLIST.ocaml-opt}lib/coq/plugins/micromega/micromega.cmx
 lib/coq/plugins/micromega/micromega_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/micromega/micromega_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/micromega/micromega_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/micromega/micromega_plugin.o
 ${PLIST.ocaml-opt}lib/coq/plugins/micromega/mutils.cmx
@@ -884,6 +894,7 @@ ${PLIST.ocaml-opt}lib/coq/plugins/nsatz/ideal.cmx
 lib/coq/plugins/nsatz/nsatz.cmi
 ${PLIST.ocaml-opt}lib/coq/plugins/nsatz/nsatz.cmx
 lib/coq/plugins/nsatz/nsatz_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/nsatz/nsatz_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/nsatz/nsatz_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/nsatz/nsatz_plugin.o
 lib/coq/plugins/nsatz/polynom.cmi
@@ -929,6 +940,7 @@ ${PLIST.ocaml-opt}lib/coq/plugins/omega/coq_omega.cmx
 ${PLIST.ocaml-opt}lib/coq/plugins/omega/g_omega.cmx
 ${PLIST.ocaml-opt}lib/coq/plugins/omega/omega.cmx
 lib/coq/plugins/omega/omega_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/omega/omega_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/omega/omega_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/omega/omega_plugin.o
 ${PLIST.native}lib/coq/plugins/quote/.coq-native/NCoq_quote_Quote.cmi
@@ -941,6 +953,7 @@ lib/coq/plugins/quote/Quote.vo
 ${PLIST.ocaml-opt}lib/coq/plugins/quote/g_quote.cmx
 ${PLIST.ocaml-opt}lib/coq/plugins/quote/quote.cmx
 lib/coq/plugins/quote/quote_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/quote/quote_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/quote/quote_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/quote/quote_plugin.o
 ${PLIST.native}lib/coq/plugins/romega/.coq-native/NCoq_romega_ROmega.cmi
@@ -962,6 +975,7 @@ ${PLIST.ocaml-opt}lib/coq/plugins/romega/const_omega.cmx
 ${PLIST.ocaml-opt}lib/coq/plugins/romega/g_romega.cmx
 ${PLIST.ocaml-opt}lib/coq/plugins/romega/refl_omega.cmx
 lib/coq/plugins/romega/romega_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/romega/romega_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/romega/romega_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/romega/romega_plugin.o
 ${PLIST.native}lib/coq/plugins/rtauto/.coq-native/NCoq_rtauto_Bintree.cmi
@@ -984,6 +998,7 @@ ${PLIST.ocaml-opt}lib/coq/plugins/rtauto/proof_search.cmx
 lib/coq/plugins/rtauto/refl_tauto.cmi
 ${PLIST.ocaml-opt}lib/coq/plugins/rtauto/refl_tauto.cmx
 lib/coq/plugins/rtauto/rtauto_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/rtauto/rtauto_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/rtauto/rtauto_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/rtauto/rtauto_plugin.o
 ${PLIST.native}lib/coq/plugins/setoid_ring/.coq-native/NCoq_setoid_ring_Algebra_syntax.cmi
@@ -1159,6 +1174,7 @@ lib/coq/plugins/setoid_ring/newring.cmi
 ${PLIST.ocaml-opt}lib/coq/plugins/setoid_ring/newring.cmx
 lib/coq/plugins/setoid_ring/newring_ast.cmi
 lib/coq/plugins/setoid_ring/newring_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/setoid_ring/newring_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/setoid_ring/newring_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/setoid_ring/newring_plugin.o
 ${PLIST.native}lib/coq/plugins/ssr/.coq-native/NCoq_ssr_ssrbool.cmi
@@ -1185,6 +1201,7 @@ lib/coq/plugins/ssr/ssreflect.glob
 lib/coq/plugins/ssr/ssreflect.v
 lib/coq/plugins/ssr/ssreflect.vo
 lib/coq/plugins/ssr/ssreflect_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/ssr/ssreflect_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/ssr/ssreflect_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/ssr/ssreflect_plugin.o
 lib/coq/plugins/ssr/ssrelim.cmi
@@ -1218,30 +1235,37 @@ lib/coq/plugins/ssrmatching/ssrmatching.glob
 lib/coq/plugins/ssrmatching/ssrmatching.v
 lib/coq/plugins/ssrmatching/ssrmatching.vo
 lib/coq/plugins/ssrmatching/ssrmatching_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/ssrmatching/ssrmatching_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/ssrmatching/ssrmatching_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/ssrmatching/ssrmatching_plugin.o
 ${PLIST.ocaml-opt}lib/coq/plugins/syntax/ascii_syntax.cmx
 lib/coq/plugins/syntax/ascii_syntax_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/syntax/ascii_syntax_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/syntax/ascii_syntax_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/syntax/ascii_syntax_plugin.o
 ${PLIST.ocaml-opt}lib/coq/plugins/syntax/int31_syntax.cmx
 lib/coq/plugins/syntax/int31_syntax_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/syntax/int31_syntax_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/syntax/int31_syntax_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/syntax/int31_syntax_plugin.o
 ${PLIST.ocaml-opt}lib/coq/plugins/syntax/nat_syntax.cmx
 lib/coq/plugins/syntax/nat_syntax_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/syntax/nat_syntax_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/syntax/nat_syntax_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/syntax/nat_syntax_plugin.o
 ${PLIST.ocaml-opt}lib/coq/plugins/syntax/r_syntax.cmx
 lib/coq/plugins/syntax/r_syntax_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/syntax/r_syntax_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/syntax/r_syntax_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/syntax/r_syntax_plugin.o
 ${PLIST.ocaml-opt}lib/coq/plugins/syntax/string_syntax.cmx
 lib/coq/plugins/syntax/string_syntax_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/syntax/string_syntax_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/syntax/string_syntax_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/syntax/string_syntax_plugin.o
 ${PLIST.ocaml-opt}lib/coq/plugins/syntax/z_syntax.cmx
 lib/coq/plugins/syntax/z_syntax_plugin.cmi
+${PLIST.ocaml-opt}lib/coq/plugins/syntax/z_syntax_plugin.cmx
 ${PLIST.natdynlink}lib/coq/plugins/syntax/z_syntax_plugin.cmxs
 ${PLIST.ocaml-opt}lib/coq/plugins/syntax/z_syntax_plugin.o
 lib/coq/pretyping/arguments_renaming.cmi
@@ -4319,6 +4343,7 @@ ${PLIST.coqide}share/coq/coq-ssreflect.lang
 ${PLIST.coqide}share/coq/coq.lang
 ${PLIST.coqide}share/coq/coq.png
 ${PLIST.coqide}share/coq/coq_style.xml
+${PLIST.doc}share/coq/index_urls.txt
 ${PLIST.coqide}share/doc/coq/FAQ-CoqIde
 ${PLIST.doc}share/doc/coq/LICENSE.doc
 ${PLIST.doc}share/doc/coq/html/RecTutorial.html
@@ -5293,6 +5318,5 @@ share/emacs/site-lisp/coq-inferior.el
 share/emacs/site-lisp/gallina-db.el
 share/emacs/site-lisp/gallina-syntax.el
 share/emacs/site-lisp/gallina.el
-share/texmf-dist/tex/latex/coq/coqdoc.sty
 @pkgdir lib/coq/user-contrib
 @pkgdir etc/xdg/coq
