@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1716 2018/04/09 10:54:56 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1717 2018/04/09 11:26:02 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2335,3 +2335,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/youtube-dl to 20180409 [leot 2018-04-09]
 	Updated www/py-h11 to 0.8.0 [adam 2018-04-09]
 	Updated fonts/py-fonttools to 3.25.0 [adam 2018-04-09]
+	Updated misc/ocaml-opam to 2.0.0_rc [jaapb 2018-04-09]
