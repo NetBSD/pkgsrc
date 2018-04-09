@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1708 2018/04/09 07:55:32 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1709 2018/04/09 08:34:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2325,3 +2325,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-jellyfish to 0.6.0 [adam 2018-04-09]
 	Updated archivers/py-zstandard to 0.9.0 [adam 2018-04-09]
 	Updated devel/py-pyutil to 3.1.0 [adam 2018-04-09]
+	Updated www/webkit-gtk to 2.18.6 [wiz 2018-04-09]
