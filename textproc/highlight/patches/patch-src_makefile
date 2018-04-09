@@ -1,4 +1,4 @@
-$NetBSD: patch-src_makefile,v 1.2 2018/04/08 19:40:29 schmonz Exp $
+$NetBSD: patch-src_makefile,v 1.3 2018/04/09 20:17:46 schmonz Exp $
 
 Use pkgsrc-specified compiler and flags.
 
@@ -12,7 +12,8 @@ Use pkgsrc-specified compiler and flags.
 +#CXX=c++
  
  # Added -qt4 because of Arch Linux Qt5 migration
- QMAKE=qmake-qt4
+-QMAKE=qmake-qt4
++#QMAKE=qmake-qt4
  
 -CFLAGS:=-Wall -O2 ${CFLAGS} -DNDEBUG
 +#CFLAGS:=-Wall -O2 ${CFLAGS} -DNDEBUG
@@ -45,7 +46,7 @@ Use pkgsrc-specified compiler and flags.
  
  # Data directories (data dir, configuration file dir)
  CXX_DIR=-DHL_DATA_DIR=\"${HL_DATA_DIR}\" -DHL_CONFIG_DIR=\"${HL_CONFIG_DIR}\"
-@@ -96,14 +98,14 @@ GUI_OBJECTS:=${GUI_QT_DIR}main.cpp ${GUI
+@@ -96,18 +98,18 @@ GUI_OBJECTS:=${GUI_QT_DIR}main.cpp ${GUI
  	${GUI_QT_DIR}showtextfile.cpp
  
  
@@ -63,6 +64,11 @@ Use pkgsrc-specified compiler and flags.
  
  gui-qt: highlight-gui
  
+-highlight-gui: libhighlight.a ${GUI_OBJECTS}
++highlight-gui: ${GUI_OBJECTS}
+ 	cd gui-qt && \
+ 	${QMAKE} 'DEFINES+=DATA_DIR=\\\"${HL_DATA_DIR}\\\" CONFIG_DIR=\\\"${HL_CONFIG_DIR}\\\" DOC_DIR=\\\"${HL_DOC_DIR}\\\" ' && \
+ 	$(MAKE)
 @@ -116,7 +118,7 @@ $(OBJECTFILES) : makefile
  
  
