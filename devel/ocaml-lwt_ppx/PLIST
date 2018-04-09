@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2018/04/09 08:58:47 jaapb Exp $
+${OCAML_SITELIB}/lwt_ppx/META
+${OCAML_SITELIB}/lwt_ppx/lwt_ppx.dune
+${OCAML_SITELIB}/lwt_ppx/opam
+${OCAML_SITELIB}/lwt_ppx/ppx.exe
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_ppx/ppx_lwt.a
+${OCAML_SITELIB}/lwt_ppx/ppx_lwt.cma
+${OCAML_SITELIB}/lwt_ppx/ppx_lwt.cmi
+${OCAML_SITELIB}/lwt_ppx/ppx_lwt.cmt
+${OCAML_SITELIB}/lwt_ppx/ppx_lwt.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_ppx/ppx_lwt.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_ppx/ppx_lwt.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_ppx/ppx_lwt.cmxs
+${OCAML_SITELIB}/lwt_ppx/ppx_lwt.ml
+${OCAML_SITELIB}/lwt_ppx/ppx_lwt.mli
+share/doc/lwt_ppx/CHANGES
+share/doc/lwt_ppx/README.md
