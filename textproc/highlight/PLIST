@@ -1,3 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2018/04/08 19:40:29 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/04/09 20:17:46 schmonz Exp $
 bin/highlight
+${PLIST.x11}bin/highlight-gui
 man/man1/highlight.1
+${PLIST.x11}share/applications/highlight.desktop
+${PLIST.x11}share/highlight/gui_files/ext/fileopenfilter.conf
+${PLIST.x11}share/highlight/gui_files/l10n/highlight_cs_CZ.qm
+${PLIST.x11}share/highlight/gui_files/l10n/highlight_de_DE.qm
+${PLIST.x11}share/highlight/gui_files/l10n/highlight_es_ES.qm
+${PLIST.x11}share/highlight/gui_files/l10n/highlight_zh_CN.qm
+${PLIST.x11}share/pixmaps/highlight.xpm
