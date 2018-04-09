@@ -1,0 +1,24 @@
+GnuCash is a personal finance manager. A check-book like register
+GUI allows you to enter and track bank accounts, stocks, income
+and even currency trades. A full set of reports allow you to see
+the state of your finances. The interface is designed to be simple
+and easy to use, but is backed with double-entry accounting principles
+to ensure balanced books.  Features include:
+  - Scheduled Transactions
+  - Small Business Accounting Features
+  - OFX and Quicken File Import and HBCI Support
+  - Reconcile window with running reconciled and cleared balances
+  - Stock/Mutual Fund Portfolios
+  - Get Stock & Mutual Fund quotes from various web sites, update
+    portfolio automatically (more funds being added regularly).
+  - Reports
+  - Multiple Currencies & Currency Trading
+  - New Multi-Currency Transaction Handling
+  - Chart of Accounts
+  - Split Transactions
+  - Double Entry
+  - Income/Expense Account Types (Categories)
+  - General Ledger
+  - International date handling, many different translations.
+
+This package contains the old major version 2 of gnucash.
