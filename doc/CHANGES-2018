@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1712 2018/04/09 08:59:04 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.1713 2018/04/09 09:08:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2329,3 +2329,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added finance/gnucash2 version 2.6.19nb1 [wiz 2018-04-09]
 	Updated finance/gnucash to 3.0 [wiz 2018-04-09]
 	Added devel/ocaml-lwt_ppx version 1.1.0 [jaapb 2018-04-09]
+	Updated devel/py-dulwich to 0.19.2 [adam 2018-04-09]
+	Updated net/py-xandikos to 0.0.9 [adam 2018-04-09]
