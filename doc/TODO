@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18223 2018/04/09 15:03:50 ryoon Exp $
+$NetBSD: TODO,v 1.18224 2018/04/09 15:36:59 taca Exp $
 
 Suggested new packages
 ======================
@@ -1293,18 +1293,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.4
-	o ruby-2.5.0
-	o ruby-actionmailer-4.2.10
-	o ruby-actionpack-4.2.10
-	o ruby-activemodel-4.2.10
 	o ruby-jquery-rails-4.2.1
-	o ruby-railties-4.2.10
-	o ruby-redmine-3.3.6
-	o ruby-redmine-3.4.4
+	o ruby-redmine-3.3.7
+	o ruby-redmine-3.4.5
 	o ruby-review-1.4.0 [wip]
-	o ruby-selenium-webdriver-3.8.0
-	o ruby-sinatra-2.0.1
-	o ruby-squib-0.14.0
 	o rump-20131213
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
