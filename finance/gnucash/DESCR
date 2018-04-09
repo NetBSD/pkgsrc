@@ -11,14 +11,11 @@ to ensure balanced books.  Features include:
   - OFX and Quicken File Import and HBCI Support
   - Reconcile window with running reconciled and cleared balances
   - Stock/Mutual Fund Portfolios
-  - Get Stock & Mutual Fund quotes from various web sites, update
-    portfolio automatically (more funds being added regularly).
+  - Get Stock & Mutual Fund quotes from various web sites
   - Reports
-  - Multiple Currencies & Currency Trading
-  - New Multi-Currency Transaction Handling
+  - Multiple Currencies & Currency Trading, Multi-Currency Handling
   - Chart of Accounts
   - Split Transactions
   - Double Entry
-  - Income/Expense Account Types (Categories)
   - General Ledger
   - International date handling, many different translations.
