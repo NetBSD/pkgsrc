@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/04/09 15:29:58 minskim Exp $
+
+SHA1 (R/xtable_1.8-2.tar.gz) = 8f82e0b8171f27fdb7234caf441562e908d2365f
+RMD160 (R/xtable_1.8-2.tar.gz) = 93797f8749b4502e231b585de6d0b92f015f1c65
+SHA512 (R/xtable_1.8-2.tar.gz) = 4e21c7ef1a5d1216cf644623e6683e87d378658ede65f1d7094e0b72ec079ee193a7a48ba54cf02fc65b1258eca371fc9e83a74a873fc74347401965d7cb04c4
+Size (R/xtable_1.8-2.tar.gz) = 619611 bytes
