@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2018/02/27 06:58:28 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/04/09 10:50:22 adam Exp $
 
-DISTNAME=	h11-0.7.0
+DISTNAME=	h11-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/h11/}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/njsmith/h11
