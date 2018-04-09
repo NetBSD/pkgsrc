@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2018/04/01 00:16:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2018/04/09 14:52:43 ryoon Exp $
 #
 
-DISTNAME=		shinonome-0.9.11-src
-PKGNAME=		ja-shinonome-0.9.11
-PKGREVISION=		7
+DISTNAME=		shinonome-0.9.11p1
+PKGNAME=		ja-${DISTNAME:S/p/pl/}
 CATEGORIES=		fonts x11 japanese
 MASTER_SITES=		http://openlab.ring.gr.jp/efont/dist/shinonome/
 EXTRACT_SUFX=		.tar.bz2
@@ -13,8 +12,10 @@ HOMEPAGE=		http://openlab.ring.gr.jp/efont/shinonome/
 COMMENT=		12, 14, 16 dots bitmap fonts for Japanese, iso8859-1
 LICENSE=		public-domain
 
+WRKSRC=			${WRKDIR}/shinonome-0.9.11
+
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		bdftopcf gawk gmake mkfontdir perl gzip
+USE_TOOLS+=		bdftopcf gmake mkfontdir perl gzip
 FONTS_DIRS.x11+=	${PREFIX}/share/fonts/X11/local
 FONTDIR=		${PREFIX}/share/fonts/X11/local
 FOUNDRY=		Misc
@@ -26,6 +27,7 @@ FILES_SUBST+=		ALIAS_SHINONOME=${ALIAS_SHINONOME:Q}
 CONFIGURE_ARGS+=	--with-fontdir=${FONTDIR:Q}
 CONFIGURE_ARGS+=	--disable-progressbar
 CONFIGURE_ARGS+=	--with-foundry=${FOUNDRY:Q}
+CONFIGURE_ARGS+=	--enable-compress=gzip
 
 INSTALL_MAKE_FLAGS+=	FONTDIR=${DESTDIR:Q}${FONTDIR:Q}
 
