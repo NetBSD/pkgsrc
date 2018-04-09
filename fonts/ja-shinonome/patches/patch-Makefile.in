@@ -1,0 +1,12 @@
+$NetBSD: patch-Makefile.in,v 1.1 2018/04/09 14:52:43 ryoon Exp $
+
+* Support DESTDIR
+
+--- Makefile.in.orig	2004-09-15 11:23:11.000000000 +0000
++++ Makefile.in
+@@ -1,4 +1,4 @@
+-fontdir = @fontdir@
++fontdir = ${DESTDIR}@fontdir@
+ srcdir = @srcdir@
+ 
+ BDFTOPCF  = bdftopcf
