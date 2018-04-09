@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2018/03/07 19:23:25 minskim Exp $
+# $NetBSD: Makefile,v 1.62 2018/04/09 08:41:32 wiz Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -14,6 +14,7 @@ SUBDIR+=	cpuminer
 SUBDIR+=	gkrellm-stock
 SUBDIR+=	gnucash
 SUBDIR+=	gnucash-docs
+SUBDIR+=	gnucash2
 SUBDIR+=	homebank
 SUBDIR+=	ledger
 SUBDIR+=	libofx
