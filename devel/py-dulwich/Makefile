@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2017/11/14 11:36:22 adam Exp $
+# $NetBSD: Makefile,v 1.26 2018/04/09 09:05:51 adam Exp $
 
-DISTNAME=	dulwich-0.18.6
+DISTNAME=	dulwich-0.19.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dulwich/}
@@ -10,11 +10,12 @@ HOMEPAGE=	https://www.dulwich.io/
 COMMENT=	Python implementation of Git
 LICENSE=	apache-2.0 OR gnu-gpl-v2
 
-# TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-fastimport-[0-9]*:../../devel/py-fastimport
-BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-BUILD_DEPENDS+=	${PYPKGPREFIX}-gevent-[0-9]*:../../net/py-gevent
-BUILD_DEPENDS+=	${PYPKGPREFIX}-geventhttpclient-[0-9]*:../../net/py-geventhttpclient
+DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
+DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.21:../../www/py-urllib3
+TEST_DEPENDS+=	${PYPKGPREFIX}-fastimport-[0-9]*:../../devel/py-fastimport
+TEST_DEPENDS+=	${PYPKGPREFIX}-gevent-[0-9]*:../../net/py-gevent
+TEST_DEPENDS+=	${PYPKGPREFIX}-geventhttpclient-[0-9]*:../../net/py-geventhttpclient
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
