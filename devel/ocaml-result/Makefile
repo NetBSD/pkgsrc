@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2018/01/10 16:53:10 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2018/04/09 09:36:08 jaapb Exp $
 
 GITHUB_PROJECT=	result
-DISTNAME=	${GITHUB_PROJECT}-1.2
+DISTNAME=	${GITHUB_PROJECT}-1.3
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 
@@ -13,13 +12,8 @@ COMMENT=	OCaml compatibility library for Result module
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
-OCAML_USE_FINDLIB=	yes
+OCAML_USE_JBUILDER=	yes
+INSTALLATION_DIRS+=	${OCAML_SITELIBDIR}/result share/doc/result
 
 .include "../../mk/ocaml.mk"
-BUILD_TARGET=	byte
-.if (${OCAML_USE_OPT_COMPILER} == "yes")
-BUILD_TARGET+=	native
-.endif
-BUILD_TARGET+=	result.install
-
 .include "../../mk/bsd.pkg.mk"
