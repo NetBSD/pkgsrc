@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2018/04/07 10:38:59 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/04/09 09:53:20 jaapb Exp $
 ${OCAML_SITELIB}/react/META
 ${OCAML_SITELIB}/react/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/react/react.a
 ${OCAML_SITELIB}/react/react.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/react/react.cma
+${OCAML_SITELIB}/react/react.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/react/react.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/react/react.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/react/react.cmxs
