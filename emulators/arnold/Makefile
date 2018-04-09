@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2015/04/25 14:20:44 tnn Exp $
+# $NetBSD: Makefile,v 1.27 2018/04/09 15:03:22 ryoon Exp $
 #
 
-DISTNAME=		arnsrc27012002
-PKGNAME=		arnold-20020127
-PKGREVISION=		7
+DISTNAME=		arnsrc04012004
+PKGNAME=		arnold-20040111
 CATEGORIES=		emulators
 MASTER_SITES=		http://arnold.emuunlim.com/download/
 EXTRACT_SUFX=		.zip
@@ -23,11 +22,14 @@ SHAREDIR=		${PREFIX}/share/arnold
 MAKE_ENV+=		SHAREDIR=${SHAREDIR}
 AUTO_MKDIRS=		yes
 
-USE_TOOLS+=		pax
+USE_TOOLS+=		gmake pax
+
+post-extract:
+	cd ${WRKSRC} && ${FIND} . -type d -name CVS -print | ${XARGS} ${RM} -rf
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/arnold ${DESTDIR}${PREFIX}/bin
-	cd ${WRKSRC}/roms && pax -wr * ${DESTDIR}${SHAREDIR}/roms/
+	cd ${WRKSRC}/src/roms && pax -wr * ${DESTDIR}${SHAREDIR}/roms/
 	cd ${DESTDIR}${SHAREDIR}/roms && \
 		${FIND} . -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE} && \
 		${FIND} . -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
