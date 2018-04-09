@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.984 2018/04/06 03:47:12 maya Exp $
+# $NetBSD: Makefile,v 1.985 2018/04/09 02:47:00 schmonz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -355,6 +355,7 @@ SUBDIR+=	libcroco
 SUBDIR+=	libcsv
 SUBDIR+=	libexttextcat
 SUBDIR+=	libfastjson
+SUBDIR+=	libhighlight
 SUBDIR+=	liblinebreak
 SUBDIR+=	liblrdf
 SUBDIR+=	libnxml
