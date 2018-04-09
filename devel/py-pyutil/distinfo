@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:29:15 agc Exp $
+$NetBSD: distinfo,v 1.7 2018/04/09 07:53:31 adam Exp $
 
-SHA1 (pyutil-2.0.0.tar.gz) = cee5605280d5339dde77311da9dcc0205756d369
-RMD160 (pyutil-2.0.0.tar.gz) = 0dbaea3c25a33855a220a426e5bd9c7060f4660e
-SHA512 (pyutil-2.0.0.tar.gz) = 3704c028fdc3894ae635dabd2bace1af1e805f4158dc6d67eac0c38fa8e7959cd093ad39cb2f539e59dd74e957947464cc8c7aed727835e127311062ed27e60b
-Size (pyutil-2.0.0.tar.gz) = 125079 bytes
+SHA1 (pyutil-3.1.0.tar.gz) = a41d3fc58860b4bb16d0cb0231934be033686f40
+RMD160 (pyutil-3.1.0.tar.gz) = 5c0da996a0a8fef450837ad47db3a61286a8563c
+SHA512 (pyutil-3.1.0.tar.gz) = 68b8eb69b4325c926ec915669c4a513b7055fb2d182517892bc5ad0fa47e9e8a4ae0cec4a7668acdab9e289bc17679a5c98b7ff26ee0b8a125c5a7096ff368a0
+Size (pyutil-3.1.0.tar.gz) = 294541 bytes
