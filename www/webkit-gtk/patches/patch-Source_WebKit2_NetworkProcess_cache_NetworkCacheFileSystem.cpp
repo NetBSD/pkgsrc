@@ -1,10 +1,10 @@
-$NetBSD: patch-Source_WebKit2_NetworkProcess_cache_NetworkCacheFileSystem.cpp,v 1.1 2017/04/13 16:58:14 jperkin Exp $
+$NetBSD: patch-Source_WebKit2_NetworkProcess_cache_NetworkCacheFileSystem.cpp,v 1.2 2018/04/09 08:33:48 wiz Exp $
 
 SunOS does not support dirent d_type.
 
---- Source/WebKit2/NetworkProcess/cache/NetworkCacheFileSystem.cpp.orig	2016-07-20 12:15:24.000000000 +0000
-+++ Source/WebKit2/NetworkProcess/cache/NetworkCacheFileSystem.cpp
-@@ -44,6 +44,12 @@ namespace NetworkCache {
+--- Source/WebKit/NetworkProcess/cache/NetworkCacheFileSystem.cpp.orig	2017-02-20 16:20:17.000000000 +0000
++++ Source/WebKit/NetworkProcess/cache/NetworkCacheFileSystem.cpp
+@@ -52,6 +52,12 @@ namespace NetworkCache {
  
  static DirectoryEntryType directoryEntryType(uint8_t dtype)
  {
@@ -17,9 +17,9 @@ SunOS does not support dirent d_type.
      switch (dtype) {
      case DT_DIR:
          return DirectoryEntryType::Directory;
-@@ -57,12 +63,20 @@ static DirectoryEntryType directoryEntry
+@@ -65,12 +71,20 @@ static DirectoryEntryType directoryEntry
  
- void traverseDirectory(const String& path, const std::function<void (const String&, DirectoryEntryType)>& function)
+ void traverseDirectory(const String& path, const Function<void (const String&, DirectoryEntryType)>& function)
  {
 +#ifdef __sun
 +    struct stat s;
@@ -38,7 +38,7 @@ SunOS does not support dirent d_type.
              continue;
          const char* name = dp->d_name;
          if (!strcmp(name, ".") || !strcmp(name, ".."))
-@@ -70,7 +84,11 @@ void traverseDirectory(const String& pat
+@@ -78,7 +92,11 @@ void traverseDirectory(const String& pat
          auto nameString = String::fromUTF8(name);
          if (nameString.isNull())
              continue;
