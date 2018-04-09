@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/01/10 16:21:20 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/04/09 10:20:44 jaapb Exp $
 ${OCAML_SITELIB}/pcre/META
 ${OCAML_SITELIB}/pcre/libpcre_stubs.a
 ${OCAML_SITELIB}/pcre/opam
@@ -10,6 +10,8 @@ ${OCAML_SITELIB}/pcre/pcre.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/pcre/pcre.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/pcre/pcre.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/pcre/pcre.cmxs
+${OCAML_SITELIB}/pcre/pcre.dune
+${OCAML_SITELIB}/pcre/pcre.ml
 ${OCAML_SITELIB}/pcre/pcre.mli
 ${OCAML_SITELIB}/stublibs/dllpcre_stubs.so
 share/doc/pcre/CHANGES.md
