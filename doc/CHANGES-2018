@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1714 2018/04/09 09:37:19 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.1715 2018/04/09 09:41:09 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2332,3 +2332,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-dulwich to 0.19.2 [adam 2018-04-09]
 	Updated net/py-xandikos to 0.0.9 [adam 2018-04-09]
 	Updated devel/ocaml-result to 1.3 [jaapb 2018-04-09]
+	Updated net/youtube-dl to 20180409 [leot 2018-04-09]
