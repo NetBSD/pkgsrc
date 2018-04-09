@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.11 2017/08/22 08:02:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/04/09 09:05:51 adam Exp $
 bin/dul-receive-pack${PYVERSSUFFIX}
 bin/dul-upload-pack${PYVERSSUFFIX}
 bin/dulwich${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/docs/tutorial/conclusion.txt
 ${PYSITELIB}/docs/tutorial/encoding.txt
@@ -85,6 +86,9 @@ ${PYSITELIB}/dulwich/log_utils.pyo
 ${PYSITELIB}/dulwich/lru_cache.py
 ${PYSITELIB}/dulwich/lru_cache.pyc
 ${PYSITELIB}/dulwich/lru_cache.pyo
+${PYSITELIB}/dulwich/mailmap.py
+${PYSITELIB}/dulwich/mailmap.pyc
+${PYSITELIB}/dulwich/mailmap.pyo
 ${PYSITELIB}/dulwich/object_store.py
 ${PYSITELIB}/dulwich/object_store.pyc
 ${PYSITELIB}/dulwich/object_store.pyo
@@ -267,6 +271,9 @@ ${PYSITELIB}/dulwich/tests/test_index.pyo
 ${PYSITELIB}/dulwich/tests/test_lru_cache.py
 ${PYSITELIB}/dulwich/tests/test_lru_cache.pyc
 ${PYSITELIB}/dulwich/tests/test_lru_cache.pyo
+${PYSITELIB}/dulwich/tests/test_mailmap.py
+${PYSITELIB}/dulwich/tests/test_mailmap.pyc
+${PYSITELIB}/dulwich/tests/test_mailmap.pyo
 ${PYSITELIB}/dulwich/tests/test_missing_obj_finder.py
 ${PYSITELIB}/dulwich/tests/test_missing_obj_finder.pyc
 ${PYSITELIB}/dulwich/tests/test_missing_obj_finder.pyo
