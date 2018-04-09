@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1723 2018/04/09 15:30:06 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1724 2018/04/09 16:20:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2343,3 +2343,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated shells/bash to 4.4.019 [ryoon 2018-04-09]
 	Updated emulators/arnold to 20040111 [ryoon 2018-04-09]
 	Added math/R-xtable version 1.8.2 [minskim 2018-04-09]
+	Updated emulators/fmsx to 5.3 [ryoon 2018-04-09]
