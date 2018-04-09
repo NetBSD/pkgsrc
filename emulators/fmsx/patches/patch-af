@@ -1,12 +1,16 @@
-$NetBSD: patch-af,v 1.1 2010/01/07 08:38:44 obache Exp $
+$NetBSD: patch-af,v 1.2 2018/04/09 16:19:12 ryoon Exp $
 
---- EMULib/Rules.Unix.orig	2008-01-28 19:48:23.000000000 +0000
+--- EMULib/Rules.Unix.orig	2017-10-21 03:04:46.000000000 +0000
 +++ EMULib/Rules.Unix
-@@ -1,5 +1,5 @@
+@@ -6,7 +6,8 @@
+ 
  include ../../EMULib/Rules.gcc
  
--CFLAGS += -I/usr/X11R6/include
-+CFLAGS += -I${X11BASE}/include
- DEFINES+= -DUNIX -DMITSHM
--LIBS   += -lX11 -lXext
-+LIBS   += ${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib -lX11 -lXext
+-CFLAGS += -I$(EMULIB)/Unix -I/usr/X11R6/include
+-DEFINES+= -DUNIX -DMITSHM -DBPS16 -DPULSE_AUDIO
+-LIBS   += -lX11 -lXext -lpulse-simple
++CFLAGS += -I$(EMULIB)/Unix -I${X11BASE}/include
++DEFINES+= -DUNIX -DMITSHM -DBPS16 -DPULSE_AUDIO
++LIBS   += ${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib
++LIBS   += -lX11 -lXext -lpulse-simple
+ OBJECTS+= $(EMUUNIX)

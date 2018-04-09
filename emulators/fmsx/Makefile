@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2016/03/01 20:16:52 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2018/04/09 16:19:12 ryoon Exp $
 
-DISTNAME=	fMSX351
-PKGNAME=	fmsx-3.5.1
-PKGREVISION=	1
+DISTNAME=	fMSX53
+PKGNAME=	fmsx-5.3
 CATEGORIES=	emulators x11
 MASTER_SITES=	http://fms.komkon.org/fMSX/
 EXTRACT_SUFX=	.zip
@@ -11,13 +10,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fms.komkon.org/fMSX/
 COMMENT=	MSX (Z80-based computer) emulator
 
-RESTRICTED=		ROM image copyright is questionable
+RESTRICTED=		The binary based on modified source code is not redistributable
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_FTP=		${RESTRICTED}
 
 WRKSRC=	${WRKDIR}
+
+USE_TOOLS+=	gmake
 
 BUILD_DIRS=	fMSX/Unix
 
@@ -27,23 +26,7 @@ BUILD_DIRS=	fMSX/Unix
 .if ${OPSYS} == "NetBSD"
 DEFS+=		-D_KERNTYPES
 .endif
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
-USE_SUN_AUDIO?=	YES
-.else
-USE_SUN_AUDIO?=	NO
-.endif
-DEFS+=		-DRomDir=\"${PREFIX:Q}/share/fmsx\"
-.if ${USE_SUN_AUDIO} == "YES"
-DEFS+=		-DSUN_AUDIO
-.else
-.  include "../../mk/oss.buildlink3.mk"
 
-SUBST_CLASSES+=		devdsp
-SUBST_STAGE.devdsp=	pre-build
-SUBST_FILES.devdsp=	EMULib/SndUnix.c
-SUBST_SED.devdsp=	-e 's|/dev/dsp|${DEVOSSSOUND}|g'
-
-.endif
 .if ${MACHINE_ENDIAN} == "big"
 DEFS+=		-DMSB_FIRST
 .elif ${MACHINE_ENDIAN} == "little"
@@ -54,15 +37,14 @@ BROKEN=		"Unknown endian"
 
 MAKE_ENV+=	DEFS=${DEFS:Q}
 
-INSTALLATION_DIRS=	bin share/fmsx share/doc
+INSTALLATION_DIRS=	bin share/doc
 
 # Makefile of fMSX doesn't have install target.
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fMSX/Unix/fmsx ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/fMSX/ROMs/*.ROM ${DESTDIR}${PREFIX}/share/fmsx
-	${INSTALL_DATA} ${WRKSRC}/fMSX/ROMs/*.FNT ${DESTDIR}${PREFIX}/share/fmsx
 	${INSTALL_DATA} ${WRKSRC}/fMSX/fMSX.html ${DESTDIR}${PREFIX}/share/doc
 
+.include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
