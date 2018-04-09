@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.131 2018/03/12 11:15:48 wiz Exp $
+# $NetBSD: Makefile,v 1.132 2018/04/09 08:33:48 wiz Exp $
 
-DISTNAME=	webkitgtk-2.12.4
+DISTNAME=	webkitgtk-2.18.6
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
-PKGREVISION=	10
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -22,12 +21,7 @@ USE_LANGUAGES=	c c++11
 #USE_LIBTOOL=	yes
 USE_TOOLS+=	automake bison gmake perl:build pkg-config msgfmt
 
-# GCC >= 4.7 or Clang >= 3.3
-# XXX: Kludge, upstream needs GCC 4.9.0 for IndexedDB support.
-# XXX: patches/patch-Source_cmake_OptionsGTK.cmake and
-# XXX: patches/patch-Source_WTF_wtf_Compiler.h disables that to
-# XXX: avoid requiring GCC 4.9.0.
-GCC_REQD+=	4.7
+GCC_REQD+=	5.0
 
 # Using ld.gold subverts Pkgsrc wrappers, and this package also crashes buggy
 # versions of ld.gold.
@@ -37,11 +31,14 @@ PKGCONFIG_OVERRIDE+=	Source/JavaScriptCore/javascriptcoregtk.pc.in
 PKGCONFIG_OVERRIDE+=	Source/WebKit2/webkit2gtk.pc.in
 PKGCONFIG_OVERRIDE+=	Source/WebKit2/webkit2gtk-web-extension.pc.in
 
+CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=		-DPORT=GTK
 CMAKE_ARGS+=		-DENABLE_X11_TARGET=ON
 CMAKE_ARGS+=		-DENABLE_MINIBROWSER=ON
 CMAKE_ARGS+=		-DENABLE_GEOLOCATION=OFF
+CMAKE_ARGS+=		-DUSE_GSTREAMER_GL=OFF
 CMAKE_ARGS+=		-DUSE_LIBHYPHEN=OFF
+#CMAKE_ARGS+=		-DUSE_SYSTEM_MALLOC=ON # XXX: needs adjustements for sysinfo() stuffs in Source/WTF/wtf/RAMSize.cpp
 
 REPLACE_PERL+=	Source/JavaScriptCore/create_hash_table \
 		Source/WebCore/bindings/scripts/*.pl \
@@ -70,18 +67,10 @@ CXXFLAGS.SunOS+=	-fpermissive
 CXXFLAGS+=	-Wno-c++11-narrowing
 .endif
 
-.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
-CMAKE_ARGS+=	-DUSE_SYSTEM_MALLOC=ON
-.endif
-
 .include "options.mk"
 
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5
-BUILDLINK_DEPMETHOD.gobject-introspection+=	build
-.include "../../devel/gobject-introspection/buildlink3.mk"
-CMAKE_ARGS+=	-DENABLE_INTROSPECTION=ON
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 # A correct Webkit build requires flex 2.5.33
