@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1709 2018/04/09 08:34:31 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1710 2018/04/09 08:41:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2326,3 +2326,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/py-zstandard to 0.9.0 [adam 2018-04-09]
 	Updated devel/py-pyutil to 3.1.0 [adam 2018-04-09]
 	Updated www/webkit-gtk to 2.18.6 [wiz 2018-04-09]
+	Added finance/gnucash2 version 2.6.19nb1 [wiz 2018-04-09]
