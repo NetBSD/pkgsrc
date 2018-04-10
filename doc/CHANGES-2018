@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1736 2018/04/10 08:24:18 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1737 2018/04/10 10:52:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2356,3 +2356,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Devel-NYTProf to 6.05 [wen 2018-04-10]
 	Updated devel/p5-File-BaseDir to 0.08 [wen 2018-04-10]
 	Updated devel/p5-Git-Wrapper to 0.048 [wen 2018-04-10]
+	Updated textproc/p5-Unicode-LineBreak to 2018.003 [wen 2018-04-10]
