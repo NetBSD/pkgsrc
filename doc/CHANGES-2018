@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1732 2018/04/10 07:46:21 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1733 2018/04/10 07:49:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2352,3 +2352,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.081 [wen 2018-04-10]
 	Updated math/R-DBI to 0.8 [minskim 2018-04-10]
 	Updated devel/p5-Config-IniFiles to 2.96 [wen 2018-04-10]
+	Updated devel/p5-CPAN-Perl-Releases to 3.52 [wen 2018-04-10]
