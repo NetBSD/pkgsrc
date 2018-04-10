@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1729 2018/04/10 00:43:42 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1730 2018/04/10 00:47:52 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2349,3 +2349,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/p5-DBD-SQLite to 1.58 [wen 2018-04-10]
 	Updated devel/p5-Cache-FastMmap to 1.47 [wen 2018-04-10]
 	Updated devel/p5-Clone-Choose to 0.010 [wen 2018-04-10]
+	Updated devel/p5-Compress-Raw-Bzip2 to 2.081 [wen 2018-04-10]
