@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1726 2018/04/10 00:14:24 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1727 2018/04/10 00:27:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2346,3 +2346,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/fmsx to 5.3 [ryoon 2018-04-09]
 	Updated textproc/highlight to 3.18nb2 [schmonz 2018-04-09]
 	Updated databases/p5-DBD-CSV to 0.52 [wen 2018-04-10]
+	Updated databases/p5-DBD-SQLite to 1.58 [wen 2018-04-10]
