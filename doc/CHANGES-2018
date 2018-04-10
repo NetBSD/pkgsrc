@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1740 2018/04/10 13:41:40 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1741 2018/04/10 15:21:48 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2360,3 +2360,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/p5-Net-DNS-SEC to 1.07 [wen 2018-04-10]
 	Updated lang/camlp5 to 7.05 [jaapb 2018-04-10]
 	Updated time/py-pytz to 2018.4 [adam 2018-04-10]
+	Updated devel/nss to 3.36.1 [maya 2018-04-10]
