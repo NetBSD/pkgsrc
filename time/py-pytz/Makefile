@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2018/02/13 08:37:14 adam Exp $
+# $NetBSD: Makefile,v 1.40 2018/04/10 13:32:32 adam Exp $
 
-DISTNAME=	pytz-2018.3
+DISTNAME=	pytz-2018.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytz/}
