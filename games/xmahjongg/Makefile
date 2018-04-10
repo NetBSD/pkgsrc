@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/06 11:55:01 asau Exp $
+# $NetBSD: Makefile,v 1.30 2018/04/10 03:39:17 maya Exp $
 #
 
 DISTNAME=	xmahjongg-3.7
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.lcdf.org/~eddietwo/xmahjongg/
 COMMENT=	The Chinese game of Mah Jongg for X11
 
 GNU_CONFIGURE=	YES
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 .include "../../mk/bsd.prefs.mk"
 # XXX: hack - work round an ICE with GCC 3.3 on sparc
