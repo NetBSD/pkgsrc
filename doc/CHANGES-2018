@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1739 2018/04/10 11:15:47 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.1740 2018/04/10 13:41:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2359,3 +2359,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-Unicode-LineBreak to 2018.003 [wen 2018-04-10]
 	Updated security/p5-Net-DNS-SEC to 1.07 [wen 2018-04-10]
 	Updated lang/camlp5 to 7.05 [jaapb 2018-04-10]
+	Updated time/py-pytz to 2018.4 [adam 2018-04-10]
