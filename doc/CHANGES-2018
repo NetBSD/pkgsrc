@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1725 2018/04/09 20:22:26 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.1726 2018/04/10 00:14:24 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2345,3 +2345,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/R-xtable version 1.8.2 [minskim 2018-04-09]
 	Updated emulators/fmsx to 5.3 [ryoon 2018-04-09]
 	Updated textproc/highlight to 3.18nb2 [schmonz 2018-04-09]
+	Updated databases/p5-DBD-CSV to 0.52 [wen 2018-04-10]
