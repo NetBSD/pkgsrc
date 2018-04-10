@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1733 2018/04/10 07:49:50 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1734 2018/04/10 08:04:45 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2353,3 +2353,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/R-DBI to 0.8 [minskim 2018-04-10]
 	Updated devel/p5-Config-IniFiles to 2.96 [wen 2018-04-10]
 	Updated devel/p5-CPAN-Perl-Releases to 3.52 [wen 2018-04-10]
+	Updated devel/p5-Devel-NYTProf to 6.05 [wen 2018-04-10]
