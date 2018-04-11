@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/07/21 13:12:25 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/04/11 19:39:35 adam Exp $
 
 PKGNAME=	git-docs-${GIT_VERSION}
 COMMENT=	GIT Tree History Storage Tool (documentation)
@@ -11,14 +11,13 @@ DISTINFO_FILE=		../../devel/git-base/distinfo
 BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
 BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 
-USE_LANGUAGES=		c
+USE_TOOLS+=             perl
+CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
+MAKE_FLAGS+=		INSTALL=${INSTALL:Q}
 BUILD_TARGET=		man
 INSTALL_TARGET=		install-man
 
 UNLIMIT_RESOURCES+=	datasize
-
-USE_TOOLS+=             perl
-CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 
 .include "../../devel/git/Makefile.common"
 
