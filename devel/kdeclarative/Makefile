@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2018/03/12 11:15:27 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2018/04/11 11:50:35 markd Exp $
 
 DISTNAME=	kdeclarative-${KF5VER}
-PKGREVISION=	3
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -10,7 +9,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 USE_TOOLS+=	msgfmt
 
-.include "../../meta-pkgs/kf5/Makefile.common"
+.include "../../meta-pkgs/kde/kf5.mk"
 
 .include "../../devel/kio/buildlink3.mk"
 .include "../../devel/kpackage/buildlink3.mk"
