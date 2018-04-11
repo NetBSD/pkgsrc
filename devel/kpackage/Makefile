@@ -1,18 +1,27 @@
-# $NetBSD: Makefile,v 1.17 2018/03/12 11:15:28 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2018/04/11 11:50:36 markd Exp $
 
 DISTNAME=	kpackage-${KF5VER}
-PKGREVISION=	3
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Installation and loading of additional content as packages
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-.include "../../meta-pkgs/kf5/Makefile.common"
+.include "../../meta-pkgs/kde/kf5.mk"
 
 BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kpackage.categories \
+		${PKG_SYSCONFDIR}/xdg/kpackage.categories
 
 .include "../../lang/python/tool.mk"
 .include "../../archivers/karchive/buildlink3.mk"
