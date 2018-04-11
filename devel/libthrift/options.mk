@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2018/04/01 13:49:20 wiz Exp $
+# $NetBSD: options.mk,v 1.11 2018/04/11 09:10:28 maya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libthrift
 PKG_SUPPORTED_OPTIONS=	perl python # csharp java erlang php ruby
@@ -103,3 +103,14 @@ PLIST.ruby=		yes
 .else
 CONFIGURE_ARGS+=	--without-ruby
 .endif
+
+# Languages without options that may be auto-detected
+CONFIGURE_ARGS+=	--without-nodejs
+CONFIGURE_ARGS+=	--without-dart
+CONFIGURE_ARGS+=	--without-haskell
+CONFIGURE_ARGS+=	--without-go
+CONFIGURE_ARGS+=	--without-rs
+CONFIGURE_ARGS+=	--without-haxe
+CONFIGURE_ARGS+=	--without-dotnetcore
+CONFIGURE_ARGS+=	--without-d
+
