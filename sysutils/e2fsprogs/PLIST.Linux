@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.Linux,v 1.5.2.2 2018/04/11 11:49:12 bsiegert Exp $
+man/man8/e4crypt.8
+man/man8/e4defrag.8
+sbin/e4crypt
+sbin/e4defrag
