@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2018/03/12 11:16:17 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/04/11 11:50:35 markd Exp $
 
 DISTNAME=	ki18n-${KF5VER}
-PKGREVISION=	3
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -10,7 +9,7 @@ LICENSE=	modified-bsd AND gnu-lgpl-v2.1
 
 USE_TOOLS+=	msgfmt
 
-.include "../../meta-pkgs/kf5/Makefile.common"
+.include "../../meta-pkgs/kde/kf5.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/qt5-qtscript/buildlink3.mk"

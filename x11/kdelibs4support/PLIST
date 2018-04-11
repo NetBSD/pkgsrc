@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/01/17 20:16:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/04/11 11:50:39 markd Exp $
 bin/kdebugdialog5
 bin/kf5-config
 include/KF5/KDELibs4Support/KDE/ConversionCheck/QVconvertible
@@ -1065,14 +1065,14 @@ share/doc/HTML/uk/kcontrol5/kcm_ssl/index.cache.bz2
 share/doc/HTML/uk/kcontrol5/kcm_ssl/index.docbook
 share/doc/HTML/uk/kdebugdialog5/index.cache.bz2
 share/doc/HTML/uk/kdebugdialog5/index.docbook
-share/examples/kdelibs4support/colors/40.colors
-share/examples/kdelibs4support/colors/Oxygen.colors
-share/examples/kdelibs4support/colors/Rainbow.colors
-share/examples/kdelibs4support/colors/Royal.colors
-share/examples/kdelibs4support/colors/Web.colors
-share/examples/kdelibs4support/kdebug.areas
-share/examples/kdelibs4support/kdebugrc
-share/examples/kdelibs4support/ksslcalist
+share/examples/kde-xdg/colors/40.colors
+share/examples/kde-xdg/colors/Oxygen.colors
+share/examples/kde-xdg/colors/Rainbow.colors
+share/examples/kde-xdg/colors/Royal.colors
+share/examples/kde-xdg/colors/Web.colors
+share/examples/kde-xdg/kdebug.areas
+share/examples/kde-xdg/kdebugrc
+share/examples/kde-xdg/ksslcalist
 share/kf5/kdoctools/customization/catalog4.xml
 share/kf5/kdoctools/customization/dtd/kdex.dtd
 share/kf5/kssl/ca-bundle.crt

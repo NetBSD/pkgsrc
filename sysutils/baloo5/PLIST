@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/01/17 20:09:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/04/11 11:50:38 markd Exp $
 bin/baloo_file
 bin/baloo_file_extractor
 bin/balooctl
@@ -42,7 +42,8 @@ share/dbus-1/interfaces/org.kde.baloo.file.indexer.xml
 share/dbus-1/interfaces/org.kde.baloo.fileindexer.xml
 share/dbus-1/interfaces/org.kde.baloo.main.xml
 share/dbus-1/interfaces/org.kde.baloo.scheduler.xml
-share/examples/baloo5/baloo_file.desktop
+share/examples/kde-xdg/autostart/baloo_file.desktop
+share/examples/kde-xdg/baloo.categories
 share/icons/hicolor/128x128/apps/baloo.png
 share/kservices5/baloosearch.protocol
 share/kservices5/tags.protocol
@@ -220,6 +221,15 @@ share/locale/ia/LC_MESSAGES/balooshow5.mo
 share/locale/ia/LC_MESSAGES/kio5_baloosearch.mo
 share/locale/ia/LC_MESSAGES/kio5_tags.mo
 share/locale/ia/LC_MESSAGES/kio5_timeline.mo
+share/locale/id/LC_MESSAGES/baloo_file5.mo
+share/locale/id/LC_MESSAGES/baloo_file_extractor5.mo
+share/locale/id/LC_MESSAGES/balooctl5.mo
+share/locale/id/LC_MESSAGES/baloomonitorplugin.mo
+share/locale/id/LC_MESSAGES/baloosearch5.mo
+share/locale/id/LC_MESSAGES/balooshow5.mo
+share/locale/id/LC_MESSAGES/kio5_baloosearch.mo
+share/locale/id/LC_MESSAGES/kio5_tags.mo
+share/locale/id/LC_MESSAGES/kio5_timeline.mo
 share/locale/it/LC_MESSAGES/baloo_file5.mo
 share/locale/it/LC_MESSAGES/baloo_file_extractor5.mo
 share/locale/it/LC_MESSAGES/balooctl5.mo

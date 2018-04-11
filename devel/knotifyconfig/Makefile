@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.18 2018/03/12 11:15:28 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/04/11 11:50:36 markd Exp $
 
 DISTNAME=	knotifyconfig-${KF5VER}
-PKGREVISION=	3
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Configuration system for KNotify
 LICENSE=	gnu-lgpl-v2.1
 
-.include "../../meta-pkgs/kf5/Makefile.common"
+.include "../../meta-pkgs/kde/kf5.mk"
 
 USE_TOOLS+=	msgmerge
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/01/17 19:56:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/04/11 11:50:34 markd Exp $
 share/ECM/cmake/ECMConfig.cmake
 share/ECM/cmake/ECMConfigVersion.cmake
 share/ECM/find-modules/ECMFindModuleHelpersStub.cmake
@@ -16,6 +16,7 @@ share/ECM/find-modules/FindPythonModuleGeneration.cmake
 share/ECM/find-modules/FindQHelpGenerator.cmake
 share/ECM/find-modules/FindQtWaylandScanner.cmake
 share/ECM/find-modules/FindSasl2.cmake
+share/ECM/find-modules/FindSeccomp.cmake
 share/ECM/find-modules/FindSharedMimeInfo.cmake
 share/ECM/find-modules/FindWayland.cmake
 share/ECM/find-modules/FindWaylandScanner.cmake
@@ -32,6 +33,7 @@ share/ECM/kde-modules/KDEFrameworkCompilerSettings.cmake
 share/ECM/kde-modules/KDEInstallDirs.cmake
 share/ECM/kde-modules/KDEPackageAppTemplates.cmake
 share/ECM/kde-modules/appstreamtest.cmake
+share/ECM/kde-modules/prefix.sh.cmake
 share/ECM/modules/ECMAddAppIcon.cmake
 share/ECM/modules/ECMAddQch.cmake
 share/ECM/modules/ECMAddTests.cmake

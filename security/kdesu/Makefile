@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2018/03/12 11:15:43 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/04/11 11:50:38 markd Exp $
 
 DISTNAME=	kdesu-${KF5VER}
-PKGREVISION=	2
 CATEGORIES=	security
 
 HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Integration with su for elevated privileges
 LICENSE=	gnu-lgpl-v2.1
 
-.include "../../meta-pkgs/kf5/Makefile.common"
+.include "../../meta-pkgs/kde/kf5.mk"
 
 USE_TOOLS+=	msgmerge
 

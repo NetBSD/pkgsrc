@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/08/21 22:33:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/04/11 11:50:39 markd Exp $
 include/KF5/KHtml/KHTMLPart
 include/KF5/KHtml/KHTMLSettings
 include/KF5/KHtml/KHTMLView
@@ -32,6 +32,7 @@ include/KF5/KHtml/dom/html_misc.h
 include/KF5/KHtml/dom/html_object.h
 include/KF5/KHtml/dom/html_table.h
 include/KF5/KHtml/kencodingdetector.h
+include/KF5/KHtml/khtml_debug.h
 include/KF5/KHtml/khtml_events.h
 include/KF5/KHtml/khtml_export.h
 include/KF5/KHtml/khtml_part.h
@@ -54,6 +55,7 @@ qt5/plugins/kf5/parts/khtmlimagepart.so
 qt5/plugins/kf5/parts/khtmlpart.so
 qt5/plugins/kf5/parts/kjavaappletviewer.so
 qt5/plugins/kf5/parts/kmultipart.so
+share/examples/kde-xdg/khtml.categories
 share/examples/kde-xdg/khtmlrc
 share/kf5/khtml/css/html4.css
 share/kf5/khtml/css/presentational.css
