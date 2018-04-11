@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1747 2018/04/11 13:24:36 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1748 2018/04/11 14:00:17 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2438,3 +2438,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/qqc2-desktop-style to 5.44.0 [markd 2018-04-11]
 	Updated www/py-cheroot to 6.2.1 [adam 2018-04-11]
 	Updated devel/py-codestyle to 2.4.0 [adam 2018-04-11]
+	Updated devel/libbson to 1.9.4 [fhajny 2018-04-11]
