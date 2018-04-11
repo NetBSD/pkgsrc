@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1754 2018/04/11 15:39:02 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1755 2018/04/11 19:40:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2445,3 +2445,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/rspamd to 1.7.3 [fhajny 2018-04-11]
 	Updated security/vault to 0.10.0 [fhajny 2018-04-11]
 	Updated textproc/py-xlsxwriter to 1.0.3 [fhajny 2018-04-11]
+	Updated devel/git to 2.17.0 [adam 2018-04-11]
