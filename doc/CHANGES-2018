@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1753 2018/04/11 15:35:59 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1754 2018/04/11 15:39:02 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2444,3 +2444,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/R-BH version 1.66.0.1 [minskim 2018-04-11]
 	Updated mail/rspamd to 1.7.3 [fhajny 2018-04-11]
 	Updated security/vault to 0.10.0 [fhajny 2018-04-11]
+	Updated textproc/py-xlsxwriter to 1.0.3 [fhajny 2018-04-11]
