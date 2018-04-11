@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2018/03/24 14:10:08 fhajny Exp $
+# $NetBSD: Makefile,v 1.40 2018/04/11 15:32:39 fhajny Exp $
 
-DISTNAME=	rspamd-1.7.2
+DISTNAME=	rspamd-1.7.3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vstakhov/}
 
