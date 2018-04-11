@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2018/01/31 19:30:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/04/11 11:50:41 markd Exp $
 lib/cmake/KF5QQC2DeskopStyle/KF5QQC2DeskopStyleConfig.cmake
 lib/cmake/KF5QQC2DeskopStyle/KF5QQC2DeskopStyleConfigVersion.cmake
 qt5/plugins/kf5/kirigami/org.kde.desktop.so
+qt5/qml/QtQuick/Controls.2/org.kde.desktop/BusyIndicator.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/Button.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/CheckBox.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/CheckDelegate.qml
@@ -9,6 +10,7 @@ qt5/qml/QtQuick/Controls.2/org.kde.desktop/CheckIndicator.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/ComboBox.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/Container.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/Control.qml
+qt5/qml/QtQuick/Controls.2/org.kde.desktop/DelayButton.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/Dial.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/Dialog.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/DialogButtonBox.qml
@@ -18,6 +20,7 @@ qt5/qml/QtQuick/Controls.2/org.kde.desktop/GroupBox.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/ItemDelegate.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/Label.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/Menu.qml
+qt5/qml/QtQuick/Controls.2/org.kde.desktop/MenuBarItem.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/MenuItem.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/Popup.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/ProgressBar.qml
@@ -25,6 +28,7 @@ qt5/qml/QtQuick/Controls.2/org.kde.desktop/RadioButton.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/RadioDelegate.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/RadioIndicator.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/RangeSlider.qml
+qt5/qml/QtQuick/Controls.2/org.kde.desktop/RoundButton.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/ScrollBar.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/ScrollView.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/Slider.qml

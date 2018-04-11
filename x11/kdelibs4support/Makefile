@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.21 2018/03/12 11:15:52 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2018/04/11 11:50:39 markd Exp $
 
 DISTNAME=	kdelibs4support-${KF5VER}
-PKGREVISION=	3
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Porting aid from KDELibs4
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-.include "../../meta-pkgs/kf5/Makefile.common"
-MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.41/portingAids/}
+.include "../../meta-pkgs/kde/kf5.mk"
+MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.44/portingAids/}
 
 BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
@@ -25,24 +24,24 @@ SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	src/CMakeLists.txt
 SUBST_FILES.xdg+=	src/kssl/kssl/CMakeLists.txt
-SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_DATAROOTDIR}/examples/kdelibs4support:'
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/colors
-CONF_FILES+=	${PREFIX}/share/examples/kdelibs4support/kdebug.areas \
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kdebug.areas \
 		${PKG_SYSCONFDIR}/xdg/kdebug.areas
-CONF_FILES+=	${PREFIX}/share/examples/kdelibs4support/kdebugrc \
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kdebugrc \
 		${PKG_SYSCONFDIR}/xdg/kdebugrc
-CONF_FILES+=	${PREFIX}/share/examples/kdelibs4support/ksslcalist \
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/ksslcalist \
 		${PKG_SYSCONFDIR}/xdg/ksslcalist
-CONF_FILES+=	${PREFIX}/share/examples/kdelibs4support/colors/40.colors \
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/colors/40.colors \
 		${PKG_SYSCONFDIR}/xdg/colors/40.colors
-CONF_FILES+=	${PREFIX}/share/examples/kdelibs4support/colors/Oxygen.colors \
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/colors/Oxygen.colors \
 		${PKG_SYSCONFDIR}/xdg/colors/Oxygen.colors
-CONF_FILES+=	${PREFIX}/share/examples/kdelibs4support/colors/Rainbow.colors \
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/colors/Rainbow.colors \
 		${PKG_SYSCONFDIR}/xdg/colors/Rainbow.colors
-CONF_FILES+=	${PREFIX}/share/examples/kdelibs4support/colors/Royal.colors \
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/colors/Royal.colors \
 		${PKG_SYSCONFDIR}/xdg/colors/Royal.colors
-CONF_FILES+=	${PREFIX}/share/examples/kdelibs4support/colors/Web.colors \
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/colors/Web.colors \
 		${PKG_SYSCONFDIR}/xdg/colors/Web.colors
 
 SUBST_CLASSES+=		fix-moc
