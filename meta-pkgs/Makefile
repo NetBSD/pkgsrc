@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2018/03/14 15:50:07 taca Exp $
+# $NetBSD: Makefile,v 1.98 2018/04/11 11:36:47 markd Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -21,6 +21,7 @@ SUBDIR+=	gnome-platform
 SUBDIR+=	gnuradio
 SUBDIR+=	gnustep
 SUBDIR+=	gstreamer0.10-plugins
+#SUBDIR+=	kde	# currently just Makefile fragments
 SUBDIR+=	kde-telepathy
 SUBDIR+=	kde4
 SUBDIR+=	kf5
