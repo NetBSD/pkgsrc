@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/09/11 01:26:00 obache Exp $
+# $NetBSD: Makefile,v 1.3 2018/04/11 19:39:35 adam Exp $
 
 PKGNAME=	git-gitk-${GIT_VERSION}
 COMMENT=	GIT Tree History Storage Tool (gitk)
@@ -8,8 +8,6 @@ CONFLICTS+=	scmgit-gitk-[0-9]*
 SUPERSEDES+=	scmgit-gitk-[0-9]*
 
 DEPENDS+=	git-base>=1.7.12nb1:../../devel/git-base
-
-USE_LANGUAGES=		c
 
 BUILD_DIRS=		git-gui gitk-git
 INSTALL_DIRS=		${BUILD_DIRS}
