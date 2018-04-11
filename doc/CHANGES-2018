@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1748 2018/04/11 14:00:17 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1749 2018/04/11 14:03:00 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2439,3 +2439,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-cheroot to 6.2.1 [adam 2018-04-11]
 	Updated devel/py-codestyle to 2.4.0 [adam 2018-04-11]
 	Updated devel/libbson to 1.9.4 [fhajny 2018-04-11]
+	Updated databases/mongo-c-driver to 1.9.4 [fhajny 2018-04-11]
