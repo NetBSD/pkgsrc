@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2657 2018/04/09 09:08:42 jaapb Exp $
+# $NetBSD: Makefile,v 1.2658 2018/04/11 15:23:55 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -11,6 +11,7 @@ SUBDIR+=	Gorm
 SUBDIR+=	MoarVM
 SUBDIR+=	ObjectiveLib
 SUBDIR+=	ProjectCenter
+SUBDIR+=	R-BH
 SUBDIR+=	R-IRdisplay
 SUBDIR+=	R-IRkernel
 SUBDIR+=	R-R6
