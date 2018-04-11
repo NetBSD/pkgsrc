@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:28 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2018/04/11 19:47:13 adam Exp $
 
-DISTNAME=	jaraco.util-10.0.2
+DISTNAME=	jaraco.util-11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/./_/}
-PKGREVISION=	1
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.util/}
 EXTRACT_SUFX=	.zip
 
@@ -12,17 +11,18 @@ HOMEPAGE=	https://pypi.python.org/pypi/jaraco.util
 COMMENT=	General utility modules that supply commonly-used functionality
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/jaraco.util-10.0.2
-USE_LANGUAGES=	# none
+DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
+BUILD_DEPENDS+=	${PYPKGPREFIX}-hgtools-[0-9]*:../../devel/py-hgtools
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.0:../../devel/py-test
 
-DEPENDS+=	${PYPKGPREFIX}-more-itertools>=2.2:../../devel/py-more-itertools
-DEPENDS+=	${PYPKGPREFIX}-hgtools-[0-9]*:../../devel/py-hgtools
+USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	jaraco/lang/python.py
 REPLACE_PYTHON+=	jaraco/util/filesystem.py
 
-pre-build:
-	${CHMOD} go-w ${WRKSRC}/jaraco.util.egg-info/*
+do-test:
+	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
