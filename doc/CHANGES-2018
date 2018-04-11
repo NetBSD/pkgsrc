@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1746 2018/04/11 12:02:07 markd Exp $
+$NetBSD: CHANGES-2018,v 1.1747 2018/04/11 13:24:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2436,3 +2436,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/kxmlgui to 5.44.0 [markd 2018-04-11]
 	Updated x11/plasma-framework to 5.44.0 [markd 2018-04-11]
 	Updated x11/qqc2-desktop-style to 5.44.0 [markd 2018-04-11]
+	Updated www/py-cheroot to 6.2.1 [adam 2018-04-11]
+	Updated devel/py-codestyle to 2.4.0 [adam 2018-04-11]
