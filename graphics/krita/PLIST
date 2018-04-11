@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/04/06 03:44:19 maya Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/04/11 15:15:55 maya Exp $
 bin/krita
 lib/kritaplugins/krita_colorspaces_extensions.so
 lib/kritaplugins/krita_filtereffects.so
@@ -17,7 +17,6 @@ lib/kritaplugins/kritaarrangedocker.so
 lib/kritaplugins/kritaartisticcolorselector.so
 lib/kritaplugins/kritaasccdl.so
 lib/kritaplugins/kritaassistanttool.so
-lib/kritaplugins/kritabigbrother.so
 lib/kritaplugins/kritablurfilter.so
 lib/kritaplugins/kritabrushexport.so
 lib/kritaplugins/kritabrushimport.so
@@ -875,7 +874,6 @@ share/krita/workspaces/Default.kws
 share/krita/workspaces/Minimal.kws
 share/krita/workspaces/Small_Vector.kws
 share/krita/workspaces/VFX_Paint.kws
-share/kritaplugins/bigbrother.xmlgui
 share/kritaplugins/buginfo.xmlgui
 share/kritaplugins/clonesarray.xmlgui
 share/kritaplugins/colorrange.xmlgui

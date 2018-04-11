@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2018/04/06 03:44:19 maya Exp $
+$NetBSD: distinfo,v 1.2 2018/04/11 15:15:55 maya Exp $
 
-SHA1 (krita-4.0.0.tar.gz) = efb0b4132fda635d21e59995b5d4829b58ff73ab
-RMD160 (krita-4.0.0.tar.gz) = 2df4acc90e2c3ac4c92f2431ec0b4348970bd8f8
-SHA512 (krita-4.0.0.tar.gz) = 026f15c747eedf1335791a607984acbda049a63550b94fe19c99028499668ccbc723dcd66d8b4d3f981035a040121a5fd6a8f35ced911748578af5c88408eaab
-Size (krita-4.0.0.tar.gz) = 237309220 bytes
+SHA1 (krita-4.0.1.tar.gz) = 547b8fd015ce16e78bceeee86e850be27c76e85b
+RMD160 (krita-4.0.1.tar.gz) = 46c157532e049ef2f7250753872d0bd9938894f2
+SHA512 (krita-4.0.1.tar.gz) = 51ec8bfa7936a081bd62ef7020b16f534042fc50abc1218a5d40721f6b6672791700cb09d006a4975491fddc23358d5ef64322231dd7e3284f943bbabc16a980
+Size (krita-4.0.1.tar.gz) = 237493152 bytes
 SHA1 (patch-krita_data_CMakeLists.txt) = bc0a37c1a60a2e0702c4a87b70ae0abf8359cc45
 SHA1 (patch-xcftools.h) = eeeed207e9b1995999a16efbbae91ed8f6255f48
