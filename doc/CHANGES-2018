@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1751 2018/04/11 15:24:01 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1752 2018/04/11 15:32:50 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2442,3 +2442,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/mongo-c-driver to 1.9.4 [fhajny 2018-04-11]
 	Updated graphics/krita to 4.0.1 [maya 2018-04-11]
 	Added devel/R-BH version 1.66.0.1 [minskim 2018-04-11]
+	Updated mail/rspamd to 1.7.3 [fhajny 2018-04-11]
