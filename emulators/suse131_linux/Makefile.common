@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2018/03/21 22:50:10 kamil Exp $
+# $NetBSD: Makefile.common,v 1.21 2018/04/11 06:59:07 maya Exp $
 #
 # used by emulators/suse131_alsa/Makefile
 # used by emulators/suse131_aspell/Makefile
@@ -77,10 +77,10 @@ _SUSE_FTP_SUBDIR=	distribution/${SUSE_VERSION}/repo/oss/suse/
 _SUSE_FTP_SUBDIR_UPD=	update/${SUSE_VERSION}/
 
 MASTER_SITE_SUSE_${SUSE_VERSION}= \
-	${MASTER_SITE_BACKUP}
+	http://ftp5.gwdg.de/pub/opensuse/discontinued/${_SUSE_FTP_SUBDIR}
 
 MASTER_SITE_SUSE_${SUSE_VERSION}_UPD= \
-	${MASTER_SITE_BACKUP}
+	http://ftp5.gwdg.de/pub/opensuse/discontinued/${_SUSE_FTP_SUBDIR_UPD}
 
 MASTER_SITES?=		${MASTER_SITE_SUSE_${SUSE_VERSION}}/${SUSE_ARCH}/
 DIST_SUBDIR?=		suse${SUSE_VERSION:S/.//}
