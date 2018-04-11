@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1744 2018/04/11 08:29:40 maya Exp $
+$NetBSD: CHANGES-2018,v 1.1745 2018/04/11 08:49:22 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2364,3 +2364,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated finance/gnucash2 to 2.6.21 [wiz 2018-04-11]
 	Updated archivers/libzip to 1.5.1 [wiz 2018-04-11]
 	Updated security/libgpg-error to 1.28nb2 [maya 2018-04-11]
+	Updated misc/less to 530 [leot 2018-04-11]
