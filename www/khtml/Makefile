@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.20 2018/04/01 04:27:29 markd Exp $
+# $NetBSD: Makefile,v 1.21 2018/04/11 11:50:39 markd Exp $
 
 DISTNAME=	khtml-${KF5VER}
-PKGREVISION=	4
 CATEGORIES=	www
 
 HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	HTML rendering engine
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 
-.include "../../meta-pkgs/kf5/Makefile.common"
-MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.41/portingAids/}
+.include "../../meta-pkgs/kde/kf5.mk"
+MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.44/portingAids/}
 
 USE_TOOLS+=	perl msgfmt
 
@@ -25,12 +24,14 @@ SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	src/CMakeLists.txt
-SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_DATAROOTDIR}/examples/kde-xdg:'
+SUBST_FILES.xdg=	CMakeLists.txt src/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/khtmlrc \
 		${PKG_SYSCONFDIR}/xdg/khtmlrc
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/khtml.categories \
+		${PKG_SYSCONFDIR}/xdg/khtml.categories
 
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"

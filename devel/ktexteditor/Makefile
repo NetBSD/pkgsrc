@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.21 2018/04/01 03:48:57 markd Exp $
+# $NetBSD: Makefile,v 1.22 2018/04/11 11:50:36 markd Exp $
 
 DISTNAME=	ktexteditor-${KF5VER}
-PKGREVISION=	4
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Advanced embeddable text editor
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-.include "../../meta-pkgs/kf5/Makefile.common"
+.include "../../meta-pkgs/kde/kf5.mk"
 
 USE_TOOLS+=	msgmerge pkg-config perl
 
