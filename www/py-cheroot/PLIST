@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/04/09 12:10:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/04/11 13:18:11 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -39,6 +39,9 @@ ${PYSITELIB}/cheroot/test/helper.py
 ${PYSITELIB}/cheroot/test/helper.pyc
 ${PYSITELIB}/cheroot/test/helper.pyo
 ${PYSITELIB}/cheroot/test/test.pem
+${PYSITELIB}/cheroot/test/test__compat.py
+${PYSITELIB}/cheroot/test/test__compat.pyc
+${PYSITELIB}/cheroot/test/test__compat.pyo
 ${PYSITELIB}/cheroot/test/test_conn.py
 ${PYSITELIB}/cheroot/test/test_conn.pyc
 ${PYSITELIB}/cheroot/test/test_conn.pyo
