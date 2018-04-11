@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/01/17 20:16:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/04/11 11:50:41 markd Exp $
 bin/plasmapkg2
 include/KF5/Plasma/Applet
 include/KF5/Plasma/Containment
@@ -155,6 +155,11 @@ qt5/qml/QtQuick/Controls/Styles/Plasma/private/RoundShadow.qml
 qt5/qml/QtQuick/Controls/Styles/Plasma/private/TextFieldFocus.qml
 qt5/qml/QtQuick/Controls/Styles/Plasma/private/Util.js
 qt5/qml/QtQuick/Controls/Styles/Plasma/qmldir
+qt5/qml/QtQuick/Controls.2/Plasma/qmldir
+qt5/qml/org/kde/kirigami.2/styles/Plasma/Icon.qml
+qt5/qml/org/kde/kirigami.2/styles/Plasma/Theme.qml
+qt5/qml/org/kde/kirigami.2/styles/Plasma/Units.qml
+qt5/qml/org/kde/kirigami.2/styles/org.kde.desktop.plasma/Units.qml
 qt5/qml/org/kde/plasma/accessdenied/qmldir
 qt5/qml/org/kde/plasma/calendar/CalendarToolbar.qml
 qt5/qml/org/kde/plasma/calendar/DayDelegate.qml

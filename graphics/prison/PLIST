@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/02/01 18:49:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/04/11 11:50:37 markd Exp $
 include/KF5/prison/AbstractBarcode
 include/KF5/prison/Prison
 include/KF5/prison/abstractbarcode.h
@@ -13,3 +13,6 @@ lib/libKF5Prison.so
 lib/libKF5Prison.so.5
 lib/libKF5Prison.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_Prison.pri
+qt5/qml/org/kde/prison/libprisonquickplugin.so
+qt5/qml/org/kde/prison/qmldir
+share/examples/kde-xdg/prison.categories
