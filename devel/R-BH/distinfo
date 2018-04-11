@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/04/11 15:23:52 minskim Exp $
+
+SHA1 (R/BH_1.66.0-1.tar.gz) = afddd33153a8c957a52c4d98e7ae3ee5e9651d26
+RMD160 (R/BH_1.66.0-1.tar.gz) = e45177775cdd349de7f70a5ed5f0dfeec55629e5
+SHA512 (R/BH_1.66.0-1.tar.gz) = c3f05ef8a52f98578e7beb2c71e0f15a38eeb2317a45767ef3b8ffabd33ff839a53a030fe24b185d2103e726d1174bdf34fb1338914fa0dc706df22b24ff4c5c
+Size (R/BH_1.66.0-1.tar.gz) = 11583445 bytes
