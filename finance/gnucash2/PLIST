@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/04/09 08:40:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/04/11 07:38:07 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -475,6 +475,7 @@ share/glib-2.0/schemas/org.gnucash.dialogs.import.qif.gschema.xml
 share/glib-2.0/schemas/org.gnucash.dialogs.reconcile.gschema.xml
 share/glib-2.0/schemas/org.gnucash.dialogs.sxs.gschema.xml
 share/glib-2.0/schemas/org.gnucash.dialogs.totd.gschema.xml
+share/glib-2.0/schemas/org.gnucash.general.finance-quote.gschema.xml
 share/glib-2.0/schemas/org.gnucash.gschema.xml
 share/glib-2.0/schemas/org.gnucash.history.gschema.xml
 share/glib-2.0/schemas/org.gnucash.warnings.gschema.xml
@@ -578,6 +579,7 @@ share/gnucash/accounts/en_GB/acctchrt_retiremt.gnucash-xea
 share/gnucash/accounts/en_GB/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/en_GB/acctchrt_spouseretire.gnucash-xea
 share/gnucash/accounts/en_GB/uk-vat.gnucash-xea
+share/gnucash/accounts/en_IN/acctchrt_gstindia.gnucash-xea
 share/gnucash/accounts/es_ES/acctchrt_brokerage.gnucash-xea
 share/gnucash/accounts/es_ES/acctchrt_carloan.gnucash-xea
 share/gnucash/accounts/es_ES/acctchrt_cdmoneymkt.gnucash-xea
@@ -801,9 +803,13 @@ share/gnucash/accounts/pt_PT/acctchrt_renter.gnucash-xea
 share/gnucash/accounts/pt_PT/acctchrt_retiremt.gnucash-xea
 share/gnucash/accounts/pt_PT/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/pt_PT/acctchrt_spouseretire.gnucash-xea
+share/gnucash/accounts/ru/acctchrt_auto.gnucash-xea
+share/gnucash/accounts/ru/acctchrt_autoloan.gnucash-xea
 share/gnucash/accounts/ru/acctchrt_common.gnucash-xea
 share/gnucash/accounts/ru/acctchrt_homeloan.gnucash-xea
 share/gnucash/accounts/ru/acctchrt_homeown.gnucash-xea
+share/gnucash/accounts/ru/acctchrt_kids.gnucash-xea
+share/gnucash/accounts/ru/acctchrt_otherloan.gnucash-xea
 share/gnucash/accounts/ru/acctchrt_renter.gnucash-xea
 share/gnucash/accounts/sk/acctchrt_brokerage.gnucash-xea
 share/gnucash/accounts/sk/acctchrt_carloan.gnucash-xea
