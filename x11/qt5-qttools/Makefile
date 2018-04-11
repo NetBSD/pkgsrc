@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2018/03/12 11:15:57 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2018/04/11 12:28:04 markd Exp $
 
 DISTNAME=	qttools-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qttools-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Qt5 tools
 
 DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
@@ -14,8 +14,7 @@ INSTALLATION_DIRS+=	lib/pkgconfig
 
 .include "../../x11/qt5-qtbase/Makefile.common"
 
-QTPKGCONFIGPC=		Qt5CLucene.pc Qt5DesignerComponents.pc Qt5UiTools.pc \
-			Qt5Designer.pc Qt5Help.pc
+QTPKGCONFIGPC=		Qt5Designer.pc Qt5Help.pc Qt5UiTools.pc
 
 post-install:
 .for i in ${QTPKGCONFIGPC}
