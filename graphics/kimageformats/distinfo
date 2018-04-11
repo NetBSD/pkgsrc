@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/01/17 20:03:37 markd Exp $
+$NetBSD: distinfo,v 1.4 2018/04/11 11:50:37 markd Exp $
 
-SHA1 (kimageformats-5.41.0.tar.xz) = 689b0e49b6dd8aa3019fd9c91de66906f0300263
-RMD160 (kimageformats-5.41.0.tar.xz) = 670b926f0d2282eae557a818132978ca9893862f
-SHA512 (kimageformats-5.41.0.tar.xz) = 19963055ec7129fc3b4c61fd4af1cac955eeecc6a70d73cc197b1e503e994e5bc9a52fe47951eb8a79008da0ac22fe805b64094d59fc4ff29f75bfb066ad7460
-Size (kimageformats-5.41.0.tar.xz) = 204584 bytes
+SHA1 (kimageformats-5.44.0.tar.xz) = 390d7fb567c8c6556b0a129f100ae52e8a61b564
+RMD160 (kimageformats-5.44.0.tar.xz) = aeb8fd40c7d896bf56169e7d11ff0b5bff4efd5f
+SHA512 (kimageformats-5.44.0.tar.xz) = 83eee710ed989808bebb15df184ee7f8ff2f51925855fb3479b354ea978cd6adc59a90cec24a278afdcabb8aed2eec087bdfd5742b78a01d7b8ce4961c8c7c96
+Size (kimageformats-5.44.0.tar.xz) = 204892 bytes
