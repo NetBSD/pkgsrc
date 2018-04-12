@@ -1,21 +1,22 @@
-# $NetBSD: Makefile,v 1.34 2017/01/01 14:43:52 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2018/04/12 10:26:08 adam Exp $
 
-DISTNAME=	SOAPpy-0.11.6
+DISTNAME=	SOAPpy-0.12.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pywebsvcs/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=S/SOAPpy/}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pywebsvcs.sourceforge.net/
-COMMENT=	SOAP implementation
+HOMEPAGE=	https://github.com/kiorky/SOAPpy
+COMMENT=	SOAP Services for Python
+LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-fpconst>=0.6.0:../../math/py-fpconst
-DEPENDS+=	${PYPKGPREFIX}-xml>=0.8.3:../../textproc/py-xml
+DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
+DEPENDS+=	${PYPKGPREFIX}-wstools-[0-9]*:../../www/py-wstools
 
-USE_LANGUAGES=	# empty
+PYTHON_VERSIONS_ACCEPTED=	27
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-xml
+USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
