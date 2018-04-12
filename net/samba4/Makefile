@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2018/03/12 11:17:23 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2018/04/12 09:05:57 maya Exp $
 
 DISTNAME=	samba-${VERSION}
 PKGREVISION=	5
@@ -15,6 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 VERSION=	4.6.8
 CONFLICTS+=	ja-samba-[0-9]* tdb-[0-9]* winbind-[0-9]*
 
+GCC_REQD+=	4.4
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
