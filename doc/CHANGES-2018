@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1761 2018/04/12 10:22:56 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1762 2018/04/12 10:26:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2458,3 +2458,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/zabbix to 3.4.8 [he 2018-04-12]
 	Updated databases/sqlite3 to 3.23.1 [adam 2018-04-12]
 	Updated devel/lemon to 1.0.3.23.1 [adam 2018-04-12]
+	Added www/py-wstools version 0.4.8 [adam 2018-04-12]
+	Updated net/py-soappy to 0.12.22 [adam 2018-04-12]
