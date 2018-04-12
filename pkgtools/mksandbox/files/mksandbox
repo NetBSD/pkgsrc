@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.10 2016/10/14 12:50:07 jperkin Exp $
+# $NetBSD: mksandbox,v 1.11 2018/04/12 02:08:47 simonb Exp $
 
 # Copyright (c) 2002,2012 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -52,8 +52,8 @@ usage()
 {
 	echo "usage: mksandbox [--mounthost=host] [--rodirs=dir1,...] [--rwdirs=dir1,...]"
 	echo "                 [--pkgsrc=dir] [--src=srcdir] [--xsrc=xsrcdir]"
-	echo "                 [--without-src] [--without-pkgsrc] [--without-x]"
-	echo "		       [--verbose] sandbox-dir"
+	echo "                 [--without-src] [--without-pkgsrc] [--without-xsrc]"
+	echo "		       [--without-x] [--verbose] sandbox-dir"
  	exit 1
 }
 
@@ -181,6 +181,7 @@ while [ $# -gt 0 ]; do
 	--rwdirs=*)		rwdirs=`echo $1 | $sedprog -e 's|^--rwdirs=||'` ;;
 	--without-pkgsrc)	with_pkgsrc=no ;;
 	--without-src)		need_src=no ;;
+	--without-xsrc)		need_xsrc=no ;;
 	--without-x)		with_x=no ;;
 	--verbose)		set -x ;;
 	-*)			usage ;;
