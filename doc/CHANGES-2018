@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1763 2018/04/12 15:11:02 mef Exp $
+$NetBSD: CHANGES-2018,v 1.1764 2018/04/12 15:44:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2461,3 +2461,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/py-wstools version 0.4.8 [adam 2018-04-12]
 	Updated net/py-soappy to 0.12.22 [adam 2018-04-12]
 	Updated cad/py-MyHDL to 0.10 [mef 2018-04-12]
+	Added www/ruby-robots version 0.10.1 [minskim 2018-04-12]
