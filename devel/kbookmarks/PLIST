@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/26 08:29:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/04/12 10:09:16 markd Exp $
 include/KF5/KBookmarks/KBookmark
 include/KF5/KBookmarks/KBookmarkAction
 include/KF5/KBookmarks/KBookmarkActionInterface
@@ -36,6 +36,7 @@ lib/libKF5Bookmarks.so
 lib/libKF5Bookmarks.so.5
 lib/libKF5Bookmarks.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KBookmarks.pri
+share/examples/kde-xdg/kbookmarks.categories
 share/locale/af/LC_MESSAGES/kbookmarks5_qt.qm
 share/locale/ar/LC_MESSAGES/kbookmarks5_qt.qm
 share/locale/ast/LC_MESSAGES/kbookmarks5_qt.qm
@@ -72,6 +73,7 @@ share/locale/hr/LC_MESSAGES/kbookmarks5_qt.qm
 share/locale/hsb/LC_MESSAGES/kbookmarks5_qt.qm
 share/locale/hu/LC_MESSAGES/kbookmarks5_qt.qm
 share/locale/ia/LC_MESSAGES/kbookmarks5_qt.qm
+share/locale/id/LC_MESSAGES/kbookmarks5_qt.qm
 share/locale/is/LC_MESSAGES/kbookmarks5_qt.qm
 share/locale/it/LC_MESSAGES/kbookmarks5_qt.qm
 share/locale/ja/LC_MESSAGES/kbookmarks5_qt.qm
