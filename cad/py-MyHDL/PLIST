@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/10/09 03:15:57 kamil Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/04/12 15:08:58 mef Exp $
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
@@ -33,9 +33,9 @@ ${PYSITELIB}/myhdl/_always_seq.pyo
 ${PYSITELIB}/myhdl/_bin.py
 ${PYSITELIB}/myhdl/_bin.pyc
 ${PYSITELIB}/myhdl/_bin.pyo
-${PYSITELIB}/myhdl/_cell_deref.py
-${PYSITELIB}/myhdl/_cell_deref.pyc
-${PYSITELIB}/myhdl/_cell_deref.pyo
+${PYSITELIB}/myhdl/_block.py
+${PYSITELIB}/myhdl/_block.pyc
+${PYSITELIB}/myhdl/_block.pyo
 ${PYSITELIB}/myhdl/_compat.py
 ${PYSITELIB}/myhdl/_compat.pyc
 ${PYSITELIB}/myhdl/_compat.pyo
@@ -51,6 +51,12 @@ ${PYSITELIB}/myhdl/_enum.pyo
 ${PYSITELIB}/myhdl/_extractHierarchy.py
 ${PYSITELIB}/myhdl/_extractHierarchy.pyc
 ${PYSITELIB}/myhdl/_extractHierarchy.pyo
+${PYSITELIB}/myhdl/_getHierarchy.py
+${PYSITELIB}/myhdl/_getHierarchy.pyc
+${PYSITELIB}/myhdl/_getHierarchy.pyo
+${PYSITELIB}/myhdl/_getcellvars.py
+${PYSITELIB}/myhdl/_getcellvars.pyc
+${PYSITELIB}/myhdl/_getcellvars.pyo
 ${PYSITELIB}/myhdl/_instance.py
 ${PYSITELIB}/myhdl/_instance.pyc
 ${PYSITELIB}/myhdl/_instance.pyo
@@ -81,6 +87,12 @@ ${PYSITELIB}/myhdl/_tristate.pyo
 ${PYSITELIB}/myhdl/_util.py
 ${PYSITELIB}/myhdl/_util.pyc
 ${PYSITELIB}/myhdl/_util.pyo
+${PYSITELIB}/myhdl/_visitors.py
+${PYSITELIB}/myhdl/_visitors.pyc
+${PYSITELIB}/myhdl/_visitors.pyo
+${PYSITELIB}/myhdl/conversion/_VHDLNameValidation.py
+${PYSITELIB}/myhdl/conversion/_VHDLNameValidation.pyc
+${PYSITELIB}/myhdl/conversion/_VHDLNameValidation.pyo
 ${PYSITELIB}/myhdl/conversion/__init__.py
 ${PYSITELIB}/myhdl/conversion/__init__.pyc
 ${PYSITELIB}/myhdl/conversion/__init__.pyo
@@ -124,6 +136,14 @@ share/myhdl/cosimulation/icarus/test/inc.py
 share/myhdl/cosimulation/icarus/test/tb_test.v
 share/myhdl/cosimulation/icarus/test/test.py
 share/myhdl/cosimulation/icarus/test/test_all.py
+share/myhdl/cosimulation/icarus/test/test_gray.py
+share/myhdl/cosimulation/modelsim-win/Makefile
+share/myhdl/cosimulation/modelsim-win/myhdl_vpi.c
+share/myhdl/cosimulation/modelsim-win/test/bin2gray.py
+share/myhdl/cosimulation/modelsim-win/test/dff.py
+share/myhdl/cosimulation/modelsim-win/test/dff_clkout.py
+share/myhdl/cosimulation/modelsim-win/test/inc.py
+share/myhdl/cosimulation/modelsim-win/test/test_all.py
 share/myhdl/cosimulation/modelsim/Makefile
 share/myhdl/cosimulation/modelsim/myhdl_vpi.c
 share/myhdl/cosimulation/modelsim/test/bin2gray.py
