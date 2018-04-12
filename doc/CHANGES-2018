@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1757 2018/04/12 06:36:08 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1758 2018/04/12 07:03:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2451,3 +2451,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-test-mock to 1.9.0 [adam 2018-04-11]
 	Updated net/py-responses to 0.9.0 [adam 2018-04-11]
 	Updated net/freeradius to 3.0.16 [nonaka 2018-04-12]
+	Updated www/nginx-devel to 1.13.12 [adam 2018-04-12]
+	Updated security/libgpg-error to 1.29 [adam 2018-04-12]
+	Updated security/gnupg2 to 2.2.6 [adam 2018-04-12]
