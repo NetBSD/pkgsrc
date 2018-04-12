@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.94 2018/01/28 20:10:58 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2018/04/12 01:21:07 nonaka Exp $
 
-PKGREVISION= 1
 .include "Makefile.common"
 
 PKGNAME=		${DISTNAME:S/-server//}
@@ -30,6 +29,7 @@ CONFIGURE_ARGS+=	--without-rlm_sql_oracle
 CONFIGURE_ARGS+=	--without-rlm_sql_postgresql
 CONFIGURE_ARGS+=	--without-rlm_sql_unixodbc
 
+RCD_SCRIPTS=		radiusd
 RADIUS_GROUP?=		radiusd
 RADIUS_USER?=		radiusd
 PKG_GROUPS=		${RADIUS_GROUP}
@@ -53,10 +53,10 @@ MESSAGE_SUBST+=		BOOTSTRAP=${PKG_SYSCONFDIR:Q}/certs/bootstrap
 
 EGDIR=			${PREFIX}/share/examples/freeradius
 
-EGFILES=		certs/ca.cnf certs/client.cnf certs/Makefile \
-			certs/README certs/server.cnf certs/xpextensions \
+EGFILES=		certs/ca.cnf certs/client.cnf certs/inner-server.cnf \
+			certs/Makefile certs/README certs/server.cnf \
+			certs/xpextensions \
 			clients.conf dictionary experimental.conf \
-			hints huntgroups \
 			mods-available/abfab_psk_sql mods-available/always \
 			mods-available/attr_filter mods-available/cache \
 			mods-available/cache_eap mods-available/chap \
@@ -147,7 +147,6 @@ EGFILES=		certs/ca.cnf certs/client.cnf certs/Makefile \
 			mods-config/sql/main/oracle/queries.conf \
 			mods-config/sql/main/oracle/schema.sql \
 			mods-config/sql/main/postgresql/extras/cisco_h323_db_schema.sql \
-			mods-config/sql/main/postgresql/extras/update_radacct_group.sql \
 			mods-config/sql/main/postgresql/extras/voip-postpaid.conf \
 			mods-config/sql/main/postgresql/queries.conf \
 			mods-config/sql/main/postgresql/schema.sql \

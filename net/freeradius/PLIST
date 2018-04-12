@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2018/01/23 15:31:23 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.29 2018/04/12 01:21:07 nonaka Exp $
 bin/dhcpclient
 bin/map_unit
 bin/rad_counter
@@ -303,6 +303,12 @@ share/doc/freeradius/schemas/ldap/openldap/freeradius-clients.ldif
 share/doc/freeradius/schemas/ldap/openldap/freeradius-clients.schema
 share/doc/freeradius/schemas/ldap/openldap/freeradius.ldif
 share/doc/freeradius/schemas/ldap/openldap/freeradius.schema
+share/doc/freeradius/schemas/ldap/samba/README.txt
+share/doc/freeradius/schemas/ldap/samba/freeradius-attrs.ldif
+share/doc/freeradius/schemas/ldap/samba/freeradius-classes.ldif
+share/doc/freeradius/schemas/ldap/samba/freeradius-clients-attrs.ldif
+share/doc/freeradius/schemas/ldap/samba/freeradius-clients-classes.ldif
+share/doc/freeradius/schemas/ldap/samba/freeradius-user.ldif
 share/doc/freeradius/schemas/logstash/README
 share/doc/freeradius/schemas/logstash/kibana4-dashboard.json
 share/doc/freeradius/schemas/logstash/log-courier.conf
@@ -319,6 +325,7 @@ share/examples/freeradius/certs/README
 share/examples/freeradius/certs/bootstrap
 share/examples/freeradius/certs/ca.cnf
 share/examples/freeradius/certs/client.cnf
+share/examples/freeradius/certs/inner-server.cnf
 share/examples/freeradius/certs/server.cnf
 share/examples/freeradius/certs/xpextensions
 share/examples/freeradius/clients.conf
@@ -449,7 +456,6 @@ share/examples/freeradius/mods-config/sql/main/ndb/setup.sql
 share/examples/freeradius/mods-config/sql/main/oracle/queries.conf
 share/examples/freeradius/mods-config/sql/main/oracle/schema.sql
 share/examples/freeradius/mods-config/sql/main/postgresql/extras/cisco_h323_db_schema.sql
-share/examples/freeradius/mods-config/sql/main/postgresql/extras/update_radacct_group.sql
 share/examples/freeradius/mods-config/sql/main/postgresql/extras/voip-postpaid.conf
 share/examples/freeradius/mods-config/sql/main/postgresql/queries.conf
 share/examples/freeradius/mods-config/sql/main/postgresql/schema.sql
@@ -470,7 +476,6 @@ share/examples/freeradius/mods-enabled/chap
 share/examples/freeradius/mods-enabled/date
 share/examples/freeradius/mods-enabled/detail
 share/examples/freeradius/mods-enabled/detail.log
-share/examples/freeradius/mods-enabled/dhcp
 share/examples/freeradius/mods-enabled/digest
 share/examples/freeradius/mods-enabled/dynamic_clients
 share/examples/freeradius/mods-enabled/eap
