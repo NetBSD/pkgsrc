@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2018/04/12 15:44:33 minskim Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/lib/robots.rb
+${GEM_LIBDIR}/robots.gemspec
+${GEM_LIBDIR}/test/fixtures/emptyish.txt
+${GEM_LIBDIR}/test/fixtures/eventbrite.txt
+${GEM_LIBDIR}/test/fixtures/google.txt
+${GEM_LIBDIR}/test/fixtures/reddit.txt
+${GEM_LIBDIR}/test/fixtures/yelp.txt
+${GEM_LIBDIR}/test/test_robots.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
