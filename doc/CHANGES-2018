@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1759 2018/04/12 07:11:34 maya Exp $
+$NetBSD: CHANGES-2018,v 1.1760 2018/04/12 08:26:10 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2455,3 +2455,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/libgpg-error to 1.29 [adam 2018-04-12]
 	Updated security/gnupg2 to 2.2.6 [adam 2018-04-12]
 	Updated multimedia/streamlink to 0.11.0 [maya 2018-04-12]
+	Updated sysutils/zabbix to 3.4.8 [he 2018-04-12]
