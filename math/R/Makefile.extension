@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.21 2018/04/09 21:57:46 minskim Exp $
+# $NetBSD: Makefile.extension,v 1.22 2018/04/12 15:40:18 minskim Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -8,7 +8,12 @@
 #     for the package desired.
 # (2) Include this Makefile fragment in the package Makefile,
 
+.if defined(DISTNAME)
+R_PKGNAME?=	${DISTNAME:C/_.*//}
+R_PKGVER?=	${DISTNAME:C/.*_//}
+.else
 DISTNAME?=		${R_PKGNAME}_${R_PKGVER}
+.endif
 PKGNAME?=		R-${R_PKGNAME}-${R_PKGVER:S/-/./}
 MASTER_SITES?=		${MASTER_SITE_R_CRAN:=contrib/}
 DIST_SUBDIR?=		R
