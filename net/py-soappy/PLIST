@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2012/04/08 20:21:53 wiz Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.10 2018/04/12 10:26:08 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/SOAPpy/Client.py
 ${PYSITELIB}/SOAPpy/Client.pyc
 ${PYSITELIB}/SOAPpy/Client.pyo
@@ -45,27 +49,3 @@ ${PYSITELIB}/SOAPpy/__init__.pyo
 ${PYSITELIB}/SOAPpy/version.py
 ${PYSITELIB}/SOAPpy/version.pyc
 ${PYSITELIB}/SOAPpy/version.pyo
-${PYSITELIB}/SOAPpy/wstools/Namespaces.py
-${PYSITELIB}/SOAPpy/wstools/Namespaces.pyc
-${PYSITELIB}/SOAPpy/wstools/Namespaces.pyo
-${PYSITELIB}/SOAPpy/wstools/TimeoutSocket.py
-${PYSITELIB}/SOAPpy/wstools/TimeoutSocket.pyc
-${PYSITELIB}/SOAPpy/wstools/TimeoutSocket.pyo
-${PYSITELIB}/SOAPpy/wstools/UserTuple.py
-${PYSITELIB}/SOAPpy/wstools/UserTuple.pyc
-${PYSITELIB}/SOAPpy/wstools/UserTuple.pyo
-${PYSITELIB}/SOAPpy/wstools/Utility.py
-${PYSITELIB}/SOAPpy/wstools/Utility.pyc
-${PYSITELIB}/SOAPpy/wstools/Utility.pyo
-${PYSITELIB}/SOAPpy/wstools/WSDLTools.py
-${PYSITELIB}/SOAPpy/wstools/WSDLTools.pyc
-${PYSITELIB}/SOAPpy/wstools/WSDLTools.pyo
-${PYSITELIB}/SOAPpy/wstools/XMLSchema.py
-${PYSITELIB}/SOAPpy/wstools/XMLSchema.pyc
-${PYSITELIB}/SOAPpy/wstools/XMLSchema.pyo
-${PYSITELIB}/SOAPpy/wstools/XMLname.py
-${PYSITELIB}/SOAPpy/wstools/XMLname.pyc
-${PYSITELIB}/SOAPpy/wstools/XMLname.pyo
-${PYSITELIB}/SOAPpy/wstools/__init__.py
-${PYSITELIB}/SOAPpy/wstools/__init__.pyc
-${PYSITELIB}/SOAPpy/wstools/__init__.pyo
