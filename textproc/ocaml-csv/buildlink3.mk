@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2018/01/10 16:46:03 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2018/04/12 11:10:52 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-csv
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-csv
 OCAML_CSV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-csv+=	ocaml-csv>=2.0
-BUILDLINK_ABI_DEPENDS.ocaml-csv+=	ocaml-csv>=2.0nb2
+BUILDLINK_ABI_DEPENDS.ocaml-csv+=	ocaml-csv>=2.0nb3
 BUILDLINK_PKGSRCDIR.ocaml-csv?=	../../textproc/ocaml-csv
 
 .endif	# OCAML_CSV_BUILDLINK3_MK
