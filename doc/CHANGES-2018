@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1756 2018/04/12 01:22:46 nonaka Exp $
+$NetBSD: CHANGES-2018,v 1.1757 2018/04/12 06:36:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2446,4 +2446,8 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/vault to 0.10.0 [fhajny 2018-04-11]
 	Updated textproc/py-xlsxwriter to 1.0.3 [fhajny 2018-04-11]
 	Updated devel/git to 2.17.0 [adam 2018-04-11]
+	Updated devel/py-jaraco_util to 11.0 [adam 2018-04-11]
+	Updated devel/py-deprecation to 2.0.1 [adam 2018-04-11]
+	Updated devel/py-test-mock to 1.9.0 [adam 2018-04-11]
+	Updated net/py-responses to 0.9.0 [adam 2018-04-11]
 	Updated net/freeradius to 3.0.16 [nonaka 2018-04-12]
