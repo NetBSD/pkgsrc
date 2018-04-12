@@ -1,4 +1,4 @@
-.\" $NetBSD: mksandbox.8,v 1.5 2013/07/20 10:20:42 jperkin Exp $
+.\" $NetBSD: mksandbox.8,v 1.6 2018/04/12 02:11:24 simonb Exp $
 .\"
 .\" Copyright (c) 2012 Thomas Klausner <wiz@NetBSD.org>
 .\" All rights reserved.
@@ -39,6 +39,8 @@
 .Op Fl Fl xsrc Ns = Ns Ar xsrcdir
 .Op Fl Fl without-x
 .Op Fl Fl without-pkgsrc
+.Op Fl Fl without-src
+.Op Fl Fl without-xsrc
 .Op Fl Fl verbose
 .Ar sandbox-dir
 .Sh DESCRIPTION
@@ -81,6 +83,10 @@ instead of the default
 (only needed for some packages).
 .It Fl Fl without-pkgsrc
 Do not mount pkgsrc directories in the sandbox.
+.It Fl Fl without-src
+Do not mount src directory in the sandbox.
+.It Fl Fl without-xsrc
+Do not mount xsrc directory in the sandbox.
 .It Fl Fl without-x
 Do not include X files in the sandbox.
 .It Fl Fl verbose
