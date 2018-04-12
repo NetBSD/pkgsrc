@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2018/04/08 21:47:15 wiz Exp $
+# $NetBSD: Makefile,v 1.144 2018/04/12 08:40:27 maya Exp $
 
 .include "Makefile.version"
 
@@ -14,6 +14,7 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++11
+GCC_REQD+=		4.8
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	bootstrap
 
