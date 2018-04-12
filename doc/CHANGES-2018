@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1762 2018/04/12 10:26:39 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1763 2018/04/12 15:11:02 mef Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2460,3 +2460,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/lemon to 1.0.3.23.1 [adam 2018-04-12]
 	Added www/py-wstools version 0.4.8 [adam 2018-04-12]
 	Updated net/py-soappy to 0.12.22 [adam 2018-04-12]
+	Updated cad/py-MyHDL to 0.10 [mef 2018-04-12]
