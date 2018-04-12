@@ -1,4 +1,6 @@
-$NetBSD: patch-src_os_unix_ngx__udp__sendmsg__chain.c,v 1.1 2017/06/17 19:54:47 joerg Exp $
+$NetBSD: patch-src_os_unix_ngx__udp__sendmsg__chain.c,v 1.2 2018/04/12 06:49:39 adam Exp $
+
+Fix building on NetBSD.
 
 --- src/os/unix/ngx_udp_sendmsg_chain.c.orig	2017-06-16 13:11:29.459922906 +0000
 +++ src/os/unix/ngx_udp_sendmsg_chain.c
