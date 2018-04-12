@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1758 2018/04/12 07:03:12 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1759 2018/04/12 07:11:34 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2454,3 +2454,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/nginx-devel to 1.13.12 [adam 2018-04-12]
 	Updated security/libgpg-error to 1.29 [adam 2018-04-12]
 	Updated security/gnupg2 to 2.2.6 [adam 2018-04-12]
+	Updated multimedia/streamlink to 0.11.0 [maya 2018-04-12]
