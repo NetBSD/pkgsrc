@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.75 2018/04/03 19:58:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.76 2018/04/12 10:21:38 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -570,6 +570,7 @@ share/doc/sqlite3/qmplan.html
 share/doc/sqlite3/queryplanner-ng.html
 share/doc/sqlite3/queryplanner.html
 share/doc/sqlite3/quickstart.html
+share/doc/sqlite3/quirks.html
 share/doc/sqlite3/rbu.html
 share/doc/sqlite3/releaselog/3_0_0.html
 share/doc/sqlite3/releaselog/3_0_1.html
@@ -618,6 +619,7 @@ share/doc/sqlite3/releaselog/3_20_1.html
 share/doc/sqlite3/releaselog/3_21_0.html
 share/doc/sqlite3/releaselog/3_22_0.html
 share/doc/sqlite3/releaselog/3_23_0.html
+share/doc/sqlite3/releaselog/3_23_1.html
 share/doc/sqlite3/releaselog/3_2_0.html
 share/doc/sqlite3/releaselog/3_2_1.html
 share/doc/sqlite3/releaselog/3_2_2.html
@@ -765,6 +767,7 @@ share/doc/sqlite3/serverless.html
 share/doc/sqlite3/session.html
 share/doc/sqlite3/session/c_changeset_abort.html
 share/doc/sqlite3/session/c_changeset_conflict.html
+share/doc/sqlite3/session/c_changesetapply_nosavepoint.html
 share/doc/sqlite3/session/changegroup.html
 share/doc/sqlite3/session/changeset_iter.html
 share/doc/sqlite3/session/constlist.html
@@ -901,6 +904,7 @@ share/doc/sqlite3/wal.html
 share/doc/sqlite3/walformat.html
 share/doc/sqlite3/whentouse.html
 share/doc/sqlite3/whyc.html
+share/doc/sqlite3/whynotgit.html
 share/doc/sqlite3/withoutrowid.html
 share/doc/sqlite3/zeroconf.html
 share/doc/sqlite3/zipfile.html
