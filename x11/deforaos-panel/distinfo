@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.13 2016/02/20 00:46:55 khorben Exp $
+$NetBSD: distinfo,v 1.14 2018/04/12 16:09:50 bouyer Exp $
 
 SHA1 (Panel-0.3.6.tar.gz) = a87f49c638a2d8df210c21bd684b3fbdc01a375a
 RMD160 (Panel-0.3.6.tar.gz) = 31a25b60c60b0198352b3fa2f26ee4f59418620d
 SHA512 (Panel-0.3.6.tar.gz) = cafdeb2e9127520dd65f1cef5e24dadac063146868517173771e8d44eb742687d9d79fa2738086008628c9cadfa39188cc0eb5624bd5efafbc00556e1b58c487
 Size (Panel-0.3.6.tar.gz) = 146129 bytes
+SHA1 (patch-src_applets_cpufreq.c) = 76b1fbd3ba6f72b0cd2cc0ef7ad324e98bb29cc3
