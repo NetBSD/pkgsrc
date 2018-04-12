@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.43 2018/03/23 07:38:28 adam Exp $
+# $NetBSD: options.mk,v 1.44 2018/04/12 06:48:25 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=		dav flv gtools inet6 luajit mail-proxy memcache naxsi \
@@ -104,7 +104,7 @@ CONFIGURE_ENV+=		LUAJIT_INC=${PREFIX}/include/luajit-2.0
 CONFIGURE_ARGS+=	--add-module=../${LUA_DISTNAME}
 .endif
 .if !empty(PKG_OPTIONS:Mluajit) || make(makesum)
-LUA_VERSION=		0.10.10
+LUA_VERSION=		0.10.11
 LUA_DISTNAME=		lua-nginx-module-${LUA_VERSION}
 LUA_DISTFILE=		${LUA_DISTNAME}.tar.gz
 SITES.${LUA_DISTFILE}=	-https://github.com/openresty/lua-nginx-module/archive/v${LUA_VERSION}.tar.gz
@@ -148,7 +148,7 @@ DISTFILES+=		${ARRAYVAR_DISTFILE}
 CONFIGURE_ARGS+=	--add-module=../${ENCSESS_DISTNAME}
 .endif
 .if !empty(PKG_OPTIONS:Mencrypted-session) || make(makesum)
-ENCSESS_VERSION=	0.06
+ENCSESS_VERSION=	0.07
 ENCSESS_DISTNAME=	encrypted-session-nginx-module-${ENCSESS_VERSION}
 ENCSESS_DISTFILE=	${ENCSESS_DISTNAME}.tar.gz
 SITES.${ENCSESS_DISTFILE}=	-https://github.com/openresty/encrypted-session-nginx-module/archive/v${ENCSESS_VERSION}.tar.gz
@@ -170,7 +170,7 @@ DISTFILES+=		${FORMINPUT_DISTFILE}
 CONFIGURE_ARGS+=	--add-module=../${HEADMORE_DISTNAME}
 .endif
 .if !empty(PKG_OPTIONS:Mheaders-more) || make(makesum)
-HEADMORE_VERSION=	0.32
+HEADMORE_VERSION=	0.33
 HEADMORE_DISTNAME=	headers-more-nginx-module-${HEADMORE_VERSION}
 HEADMORE_DISTFILE=	${HEADMORE_DISTNAME}.tar.gz
 SITES.${HEADMORE_DISTFILE}=	-https://github.com/openresty/headers-more-nginx-module/archive/v${HEADMORE_VERSION}.tar.gz
@@ -188,7 +188,7 @@ CONFIGURE_ARGS+=	--without-http_uwsgi_module
 CONFIGURE_ARGS+=	--add-module=../nchan-${PUSH_VERSION}
 .endif
 .if !empty(PKG_OPTIONS:Mpush) || make(makesum)
-PUSH_VERSION=		1.1.8
+PUSH_VERSION=		1.1.13 # 1.1.14 needs memrchr(): https://github.com/slact/nchan/issues/441
 PUSH_DISTNAME=		nginx_http_push_module-${PUSH_VERSION}
 PUSH_DISTFILE=		${PUSH_DISTNAME}.tar.gz
 SITES.${PUSH_DISTFILE}=	-https://github.com/slact/nchan/archive/v${PUSH_VERSION}.tar.gz
@@ -229,7 +229,7 @@ CONFIGURE_ARGS+=	--with-http_secure_link_module
 CONFIGURE_ARGS+=	--add-module=../${RTMP_DISTNAME}
 .endif
 .if !empty(PKG_OPTIONS:Mrtmp) || make(makesum)
-RTMP_VERSION=		1.2.0
+RTMP_VERSION=		1.2.1
 RTMP_DISTNAME=		nginx-rtmp-module-${RTMP_VERSION}
 RTMP_DISTFILE=		${RTMP_DISTNAME}.tar.gz
 SITES.${RTMP_DISTFILE}=	-https://github.com/arut/nginx-rtmp-module/archive/v${RTMP_VERSION}.tar.gz
