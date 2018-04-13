@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1764 2018/04/12 15:44:40 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1765 2018/04/13 07:29:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2462,3 +2462,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-soappy to 0.12.22 [adam 2018-04-12]
 	Updated cad/py-MyHDL to 0.10 [mef 2018-04-12]
 	Added www/ruby-robots version 0.10.1 [minskim 2018-04-12]
+	Updated devel/py-cython to 0.28.2 [adam 2018-04-13]
+	Updated textproc/py-text-unidecode to 1.2 [adam 2018-04-13]
+	Updated devel/py-faker to 0.8.13 [adam 2018-04-13]
+	Updated security/py-cryptodome to 3.6.0 [adam 2018-04-13]
