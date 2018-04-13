@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2017/11/22 17:05:54 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/04/13 16:31:11 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gtk3.${RUBY_DLEXT}
@@ -273,6 +273,7 @@ ${GEM_LIBDIR}/sample/gtk-demo/shortcuts-boxes.ui
 ${GEM_LIBDIR}/sample/gtk-demo/shortcuts-builder.ui
 ${GEM_LIBDIR}/sample/gtk-demo/shortcuts-clocks.ui
 ${GEM_LIBDIR}/sample/gtk-demo/shortcuts-gedit.ui
+${GEM_LIBDIR}/sample/gtk-demo/shortcuts.rb
 ${GEM_LIBDIR}/sample/gtk-demo/shortcuts.ui
 ${GEM_LIBDIR}/sample/gtk-demo/sidebar.rb
 ${GEM_LIBDIR}/sample/gtk-demo/sizegroup.rb
@@ -289,6 +290,7 @@ ${GEM_LIBDIR}/sample/gtk-demo/textscroll.rb
 ${GEM_LIBDIR}/sample/gtk-demo/textview.rb
 ${GEM_LIBDIR}/sample/gtk-demo/theming.ui
 ${GEM_LIBDIR}/sample/gtk-demo/theming_style_classes.rb
+${GEM_LIBDIR}/sample/gtk-demo/toolpalette.rb
 ${GEM_LIBDIR}/sample/gtk-demo/transparent.rb
 ${GEM_LIBDIR}/sample/gtk-demo/tree_store.rb
 ${GEM_LIBDIR}/sample/gtk-demo/vertical_text_cursor.png
