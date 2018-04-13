@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/03/08 08:23:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/04/13 07:33:53 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -17,15 +17,15 @@ ${PYSITELIB}/pylint_django/augmentations/__init__.pyo
 ${PYSITELIB}/pylint_django/checkers/__init__.py
 ${PYSITELIB}/pylint_django/checkers/__init__.pyc
 ${PYSITELIB}/pylint_django/checkers/__init__.pyo
+${PYSITELIB}/pylint_django/checkers/db_performance.py
+${PYSITELIB}/pylint_django/checkers/db_performance.pyc
+${PYSITELIB}/pylint_django/checkers/db_performance.pyo
 ${PYSITELIB}/pylint_django/checkers/django_installed.py
 ${PYSITELIB}/pylint_django/checkers/django_installed.pyc
 ${PYSITELIB}/pylint_django/checkers/django_installed.pyo
 ${PYSITELIB}/pylint_django/checkers/models.py
 ${PYSITELIB}/pylint_django/checkers/models.pyc
 ${PYSITELIB}/pylint_django/checkers/models.pyo
-${PYSITELIB}/pylint_django/compat.py
-${PYSITELIB}/pylint_django/compat.pyc
-${PYSITELIB}/pylint_django/compat.pyo
 ${PYSITELIB}/pylint_django/plugin.py
 ${PYSITELIB}/pylint_django/plugin.pyc
 ${PYSITELIB}/pylint_django/plugin.pyo
@@ -42,6 +42,14 @@ ${PYSITELIB}/pylint_django/tests/input/external_drf_noerror_serializer.py
 ${PYSITELIB}/pylint_django/tests/input/external_drf_noerror_serializer.pyc
 ${PYSITELIB}/pylint_django/tests/input/external_drf_noerror_serializer.pyo
 ${PYSITELIB}/pylint_django/tests/input/external_drf_noerror_serializer.rc
+${PYSITELIB}/pylint_django/tests/input/external_factory_boy_noerror.py
+${PYSITELIB}/pylint_django/tests/input/external_factory_boy_noerror.pyc
+${PYSITELIB}/pylint_django/tests/input/external_factory_boy_noerror.pyo
+${PYSITELIB}/pylint_django/tests/input/external_factory_boy_noerror.rc
+${PYSITELIB}/pylint_django/tests/input/external_model_utils_noerror_override_manager.py
+${PYSITELIB}/pylint_django/tests/input/external_model_utils_noerror_override_manager.pyc
+${PYSITELIB}/pylint_django/tests/input/external_model_utils_noerror_override_manager.pyo
+${PYSITELIB}/pylint_django/tests/input/external_model_utils_noerror_override_manager.rc
 ${PYSITELIB}/pylint_django/tests/input/external_psycopg2_noerror_postgres_fields.py
 ${PYSITELIB}/pylint_django/tests/input/external_psycopg2_noerror_postgres_fields.pyc
 ${PYSITELIB}/pylint_django/tests/input/external_psycopg2_noerror_postgres_fields.pyo
@@ -50,6 +58,10 @@ ${PYSITELIB}/pylint_django/tests/input/func_model_does_not_use_unicode_py33.py
 ${PYSITELIB}/pylint_django/tests/input/func_model_does_not_use_unicode_py33.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_model_does_not_use_unicode_py33.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_model_does_not_use_unicode_py33.txt
+${PYSITELIB}/pylint_django/tests/input/func_model_no_explicit_unicode_str_compat.py
+${PYSITELIB}/pylint_django/tests/input/func_model_no_explicit_unicode_str_compat.pyc
+${PYSITELIB}/pylint_django/tests/input/func_model_no_explicit_unicode_str_compat.pyo
+${PYSITELIB}/pylint_django/tests/input/func_model_no_explicit_unicode_str_compat.txt
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_classviews.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_classviews.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_classviews.pyo
@@ -95,6 +107,9 @@ ${PYSITELIB}/pylint_django/tests/input/func_noerror_model_fields.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_model_methods.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_model_methods.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_model_methods.pyo
+${PYSITELIB}/pylint_django/tests/input/func_noerror_model_objects.py
+${PYSITELIB}/pylint_django/tests/input/func_noerror_model_objects.pyc
+${PYSITELIB}/pylint_django/tests/input/func_noerror_model_objects.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_model_unicode_callable.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_model_unicode_callable.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_model_unicode_callable.pyo
@@ -107,6 +122,9 @@ ${PYSITELIB}/pylint_django/tests/input/func_noerror_models_py33.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_protected_meta_access.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_protected_meta_access.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_protected_meta_access.pyo
+${PYSITELIB}/pylint_django/tests/input/func_noerror_test_wsgi_request.py
+${PYSITELIB}/pylint_django/tests/input/func_noerror_test_wsgi_request.pyc
+${PYSITELIB}/pylint_django/tests/input/func_noerror_test_wsgi_request.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_ugettext_lazy_format.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_ugettext_lazy_format.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_ugettext_lazy_format.pyo
@@ -119,6 +137,19 @@ ${PYSITELIB}/pylint_django/tests/input/func_noerror_urls.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_uuid_field.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_uuid_field.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_uuid_field.pyo
+${PYSITELIB}/pylint_django/tests/input/func_noerror_wsgi.py
+${PYSITELIB}/pylint_django/tests/input/func_noerror_wsgi.pyc
+${PYSITELIB}/pylint_django/tests/input/func_noerror_wsgi.pyo
+${PYSITELIB}/pylint_django/tests/input/migrations/0001_noerror_initial.py
+${PYSITELIB}/pylint_django/tests/input/migrations/0001_noerror_initial.pyc
+${PYSITELIB}/pylint_django/tests/input/migrations/0001_noerror_initial.pyo
+${PYSITELIB}/pylint_django/tests/input/migrations/0002_new_column.py
+${PYSITELIB}/pylint_django/tests/input/migrations/0002_new_column.pyc
+${PYSITELIB}/pylint_django/tests/input/migrations/0002_new_column.pyo
+${PYSITELIB}/pylint_django/tests/input/migrations/0002_new_column.txt
+${PYSITELIB}/pylint_django/tests/input/migrations/__init__.py
+${PYSITELIB}/pylint_django/tests/input/migrations/__init__.pyc
+${PYSITELIB}/pylint_django/tests/input/migrations/__init__.pyo
 ${PYSITELIB}/pylint_django/tests/test_func.py
 ${PYSITELIB}/pylint_django/tests/test_func.pyc
 ${PYSITELIB}/pylint_django/tests/test_func.pyo
