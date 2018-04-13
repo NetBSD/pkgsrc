@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.5 2017/01/04 13:06:18 jaapb Exp $
+# $NetBSD: options.mk,v 1.6 2018/04/13 13:15:00 jaapb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocsigen
-PKG_SUPPORTED_OPTIONS=	camlzip pgsql
+PKG_SUPPORTED_OPTIONS=	camlzip
 PKG_OPTIONS_NONEMPTY_SETS=	database
-PKG_OPTIONS_SET.database=	sqlite gdbm
+PKG_OPTIONS_SET.database=	sqlite gdbm pgsql
 PKG_SUGGESTED_OPTIONS=	gdbm camlzip
 
 .include "../../mk/bsd.options.mk"
