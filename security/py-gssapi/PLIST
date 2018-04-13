@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/02/22 09:11:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/04/13 09:27:30 adam Exp $
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
@@ -44,6 +44,7 @@ ${PYSITELIB}/gssapi/raw/ext_rfc5801.so
 ${PLIST.posix}${PYSITELIB}/gssapi/raw/ext_rfc6680.so
 ${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_rfc6680_comp_oid.so
 ${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_s4u.so
+${PYSITELIB}/gssapi/raw/ext_set_cred_opt.so
 ${PYSITELIB}/gssapi/raw/mech_krb5.so
 ${PYSITELIB}/gssapi/raw/message.so
 ${PYSITELIB}/gssapi/raw/misc.so
