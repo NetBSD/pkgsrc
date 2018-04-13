@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2018/01/28 20:11:07 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2018/04/13 13:15:00 jaapb Exp $
 #
 
-VERSION=	2.8
+VERSION=	2.9
 GITHUB_PROJECT=	ocsigenserver
-PKGREVISION=	5
 PKGNAME=	ocsigen-${VERSION}
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=	www
@@ -68,10 +67,10 @@ CONFIGURE_ARGS+=		--disable-natdynlink
 
 .include "options.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../devel/ocaml-lwt_log/buildlink3.mk"
 .include "../../devel/ocaml-lwt_react/buildlink3.mk"
 .include "../../devel/ocaml-lwt_ssl/buildlink3.mk"
 .include "../../devel/pcre-ocaml/buildlink3.mk"
-.include "../../lang/camlp4/buildlink3.mk"
 .include "../../net/ocaml-ipaddr/buildlink3.mk"
 .include "../../net/ocamlnet/buildlink3.mk"
 .include "../../security/ocaml-cryptokit/buildlink3.mk"
