@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2018/01/10 16:53:13 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2018/04/13 12:44:51 jaapb Exp $
 
-VERSION=	0.7.5
 GITHUB_PROJECT=	markup.ml
-DISTNAME=	markup-${VERSION}
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
-PKGREVISION=	2
+GITHUB_TAG=	${PKGVERSION_NOREV}
+DISTNAME=	markup-0.7.6
 PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aantron/}
@@ -14,13 +12,13 @@ HOMEPAGE=	https://github.com/aantron/markup.ml/
 COMMENT=	Error-recovering streaming HTML5 and XML parsers for OCaml
 LICENSE=	2-clause-bsd
 
-WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${VERSION}
+HAS_CONFIGURE=	yes
 USE_LANGUAGES=	# none
-USE_TOOLS+=	gmake
-OCAML_USE_FINDLIB=	yes
 
-BUILD_TARGET=	build
-INSTALL_TARGET=	ocamlfind-install
+OCAML_USE_JBUILDER=	yes
+
+do-configure:
+	${RUN} cd ${WRKSRC} && ocaml src/configure.ml
 
 .include "../../devel/ocaml-lwt/buildlink3.mk"
 .include "../../devel/ocamlbuild/buildlink3.mk"
