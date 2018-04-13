@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2017/03/14 14:11:51 kleink Exp $
+# $NetBSD: Makefile,v 1.19 2018/04/13 08:26:56 adam Exp $
 
-DISTNAME=	Flask-Admin-1.5.0
+DISTNAME=	Flask-Admin-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Admin/}
@@ -10,15 +10,15 @@ HOMEPAGE=	https://github.com/flask-admin/flask-admin
 COMMENT=	Simple and extensible administrative interface framework for Flask
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	# empty
+USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
 
 DEPENDS+=	${PYPKGPREFIX}-flask>=0.7:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-wtforms-[0-9]*:../../www/py-wtforms
 
-EGDIR=          	share/examples/${PKGBASE}
-PLIST_SUBST+=   	EGDIR=${EGDIR}
-INSTALLATION_DIRS+=     ${EGDIR}
+EGDIR=			share/examples/${PKGBASE}
+PLIST_SUBST+=		EGDIR=${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR}
 
 post-extract:
 	${RM} -f ${WRKSRC}/examples/__init__.py
