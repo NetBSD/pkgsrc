@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1780 2018/04/13 13:17:46 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.1781 2018/04/13 15:26:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2489,3 +2489,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/js_of_ocaml to 3.1.0 [jaapb 2018-04-13]
 	Updated www/ocsigen to 2.9 [jaapb 2018-04-13]
 	Updated www/eliom to 6.3.0 [jaapb 2018-04-13]
+	Added math/R-prettyunits version 1.0.2 [minskim 2018-04-13]
