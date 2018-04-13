@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2018/01/28 20:10:34 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2018/04/13 13:55:27 jaapb Exp $
 #
 
 PKGNAME=	ocaml-dbm-${VERSION}
 DISTNAME=	camldbm-${VERSION}
 VERSION=	1.0
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	databases
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/728/
 EXTRACT_SUFX=	.tgz
