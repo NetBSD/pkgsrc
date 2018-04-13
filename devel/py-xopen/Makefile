@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.2 2018/01/07 20:58:10 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2018/04/13 09:17:03 adam Exp $
 
-DISTNAME=	xopen-0.3.2
+DISTNAME=	xopen-0.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xopen/}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/xopen
+HOMEPAGE=	https://github.com/marcelm/xopen
 COMMENT=	Open compressed files transparently
 LICENSE=	mit
+
+USE_LANGUAGES=	# none
+
+# Python 2.7: requires bz2file
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
