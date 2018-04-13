@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1766 2018/04/13 07:36:46 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1767 2018/04/13 07:58:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2468,3 +2468,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-cryptodome to 3.6.0 [adam 2018-04-13]
 	Updated www/py-pylint-django to 0.10.1 [adam 2018-04-13]
 	Updated finance/py-braintree to 3.44.0 [adam 2018-04-13]
+	Updated sysutils/salt to 2018.3.0 [adam 2018-04-13]
+	Updated sysutils/salt-docs to 2018.3.0 [adam 2018-04-13]
