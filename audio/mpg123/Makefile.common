@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2017/12/14 11:42:05 adam Exp $
+# $NetBSD: Makefile.common,v 1.48 2018/04/13 08:20:06 adam Exp $
 #
 # used by audio/mpg123-arts/Makefile
 # used by audio/mpg123-esound/Makefile
@@ -7,7 +7,7 @@
 # used by audio/mpg123-pulse/Makefile
 # used by audio/mpg123-sun/Makefile
 
-DISTNAME=	mpg123-1.25.8
+DISTNAME=	mpg123-1.25.10
 PKGNAME?=	${DISTNAME:C/[[:alnum:]]*/&-${MPG123_MODULE}/}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpg123/}
