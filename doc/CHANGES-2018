@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1785 2018/04/13 16:35:15 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.1786 2018/04/13 16:59:47 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2515,3 +2515,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/ruby-gnome2-gtksourceview2 to 3.2.4 [tsutsui 2018-04-13]
 	Updated x11/ruby-gnome2-gtksourceview3 to 3.2.4 [tsutsui 2018-04-13]
 	Updated x11/ruby-gnome2-vte to 3.2.4 [tsutsui 2018-04-13]
+	Updated shells/rssh to 2.3.4nb2 [he 2018-04-13]
