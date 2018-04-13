@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/03/13 11:32:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/04/13 07:18:43 adam Exp $
 bin/faker${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -170,6 +170,9 @@ ${PYSITELIB}/faker/providers/automotive/ar_PS/__init__.pyo
 ${PYSITELIB}/faker/providers/automotive/ar_SA/__init__.py
 ${PYSITELIB}/faker/providers/automotive/ar_SA/__init__.pyc
 ${PYSITELIB}/faker/providers/automotive/ar_SA/__init__.pyo
+${PYSITELIB}/faker/providers/automotive/de_DE/__init__.py
+${PYSITELIB}/faker/providers/automotive/de_DE/__init__.pyc
+${PYSITELIB}/faker/providers/automotive/de_DE/__init__.pyo
 ${PYSITELIB}/faker/providers/automotive/en_CA/__init__.py
 ${PYSITELIB}/faker/providers/automotive/en_CA/__init__.pyc
 ${PYSITELIB}/faker/providers/automotive/en_CA/__init__.pyo
@@ -209,6 +212,9 @@ ${PYSITELIB}/faker/providers/bank/it_IT/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/nl_NL/__init__.py
 ${PYSITELIB}/faker/providers/bank/nl_NL/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/nl_NL/__init__.pyo
+${PYSITELIB}/faker/providers/bank/no_NO/__init__.py
+${PYSITELIB}/faker/providers/bank/no_NO/__init__.pyc
+${PYSITELIB}/faker/providers/bank/no_NO/__init__.pyo
 ${PYSITELIB}/faker/providers/barcode/__init__.py
 ${PYSITELIB}/faker/providers/barcode/__init__.pyc
 ${PYSITELIB}/faker/providers/barcode/__init__.pyo
@@ -512,6 +518,9 @@ ${PYSITELIB}/faker/providers/job/ko_KR/__init__.pyo
 ${PYSITELIB}/faker/providers/job/pl_PL/__init__.py
 ${PYSITELIB}/faker/providers/job/pl_PL/__init__.pyc
 ${PYSITELIB}/faker/providers/job/pl_PL/__init__.pyo
+${PYSITELIB}/faker/providers/job/pt_BR/__init__.py
+${PYSITELIB}/faker/providers/job/pt_BR/__init__.pyc
+${PYSITELIB}/faker/providers/job/pt_BR/__init__.pyo
 ${PYSITELIB}/faker/providers/job/ru_RU/__init__.py
 ${PYSITELIB}/faker/providers/job/ru_RU/__init__.pyc
 ${PYSITELIB}/faker/providers/job/ru_RU/__init__.pyo
@@ -893,6 +902,9 @@ ${PYSITELIB}/faker/providers/ssn/nl_BE/__init__.pyo
 ${PYSITELIB}/faker/providers/ssn/nl_NL/__init__.py
 ${PYSITELIB}/faker/providers/ssn/nl_NL/__init__.pyc
 ${PYSITELIB}/faker/providers/ssn/nl_NL/__init__.pyo
+${PYSITELIB}/faker/providers/ssn/no_NO/__init__.py
+${PYSITELIB}/faker/providers/ssn/no_NO/__init__.pyc
+${PYSITELIB}/faker/providers/ssn/no_NO/__init__.pyo
 ${PYSITELIB}/faker/providers/ssn/pl_PL/__init__.py
 ${PYSITELIB}/faker/providers/ssn/pl_PL/__init__.pyc
 ${PYSITELIB}/faker/providers/ssn/pl_PL/__init__.pyo
