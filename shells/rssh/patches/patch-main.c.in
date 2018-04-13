@@ -1,0 +1,50 @@
+$NetBSD: patch-main.c.in,v 1.1 2018/04/13 16:59:13 he Exp $
+
+Make a copy of the basename() result, so as to avoid a fortify
+abort due to overlapping memcpy() when the result from basename()
+is subsequently passed to basename().
+
+Also a fix related to memory allocation.
+
+--- main.c.in.orig	2012-11-26 05:02:17.000000000 +0000
++++ main.c.in
+@@ -92,6 +92,7 @@ int main( int argc, char **argv )
+ 	ShellOptions_t	opts;	/* options configured by config file */
+ 	struct passwd	uinfo;	/* info about the user running rssh */
+ 	struct passwd	*temp;	/* copy temp into uinfo */ 
++	char		*av0bn;
+ 
+ 	/* if we just want the version, give it an exit */
+ 	if ( argc == 2 && !( strcmp(argv[1], "-v")) ){
+@@ -117,7 +118,8 @@ int main( int argc, char **argv )
+ 	else
+ 		/* this probably should never happen */
+ 		username = "unknown user!";
+-	progname = strdup(log_make_ident(basename(argv[0])));
++	av0bn = strdup(basename(argv[0]));
++	progname = strdup(log_make_ident(av0bn));
+ 	log_set_facility(LOG_DAEMON);
+ 	log_open();
+ 
+@@ -198,7 +200,7 @@ char **build_shell_args( struct passwd u
+ 		 * build_arg_vector() in the chroot helper instead...
+                  */
+ 
+-		if ( !(argvec = (char **)malloc(6 * sizeof (char *))) ){
++		if ( !(argvec = (char **)malloc(4 * sizeof (char *))) ){
+ 			log_set_priority(LOG_ERR);
+ 			log_msg("OOM error in build_shell_args() (fatal)");
+ 			exit(1);
+@@ -229,9 +231,9 @@ char **build_shell_args( struct passwd u
+ 		/* change the command to run to the chroot helper */
+ 		*cmd = PATH_CHROOT_HELPER;
+ 
+-		/* set up buffer to log command line ('"' + ' ' + '\0' = 9) */
+-		len = strlen(cmdline) +  strlen(argvec[2]) + 
+-			strlen(PATH_CHROOT_HELPER) + 9;
++		/* set up buffer to log command line (argvec[1] + '"' + ' ' + '\0' = 6) */
++		len = strlen(cmdline) +
++			strlen(PATH_CHROOT_HELPER) + 6;
+ 		if ( !(temp = (char *)malloc(len)) ){
+ 			log_set_priority(LOG_ERR);
+ 			log_msg("OOM error in build_shell_args() (fatal)");
