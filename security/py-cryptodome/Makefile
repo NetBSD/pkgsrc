@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2018/03/09 08:07:44 adam Exp $
+# $NetBSD: Makefile,v 1.12 2018/04/13 07:28:39 adam Exp $
 
-DISTNAME=	pycryptodome-3.5.1
+DISTNAME=	pycryptodome-3.6.0
 PKGNAME=	${DISTNAME:S/^py/${PYPKGPREFIX}-/}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycryptodome/}
@@ -9,9 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.pycryptodome.org/
 COMMENT=	Cryptographic and hash functions for Python
 LICENSE=	public-domain AND python-software-foundation
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} ${PYSETUP} test
 
 # XXX is this needed?
 CFLAGS.SunOS+=	-std=c99 -D_XOPEN_SOURCE=600
