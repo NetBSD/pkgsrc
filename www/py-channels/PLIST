@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/02/14 14:22:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/04/13 11:13:32 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -25,6 +25,9 @@ ${PYSITELIB}/channels/exceptions.pyo
 ${PYSITELIB}/channels/generic/__init__.py
 ${PYSITELIB}/channels/generic/__init__.pyc
 ${PYSITELIB}/channels/generic/__init__.pyo
+${PYSITELIB}/channels/generic/http.py
+${PYSITELIB}/channels/generic/http.pyc
+${PYSITELIB}/channels/generic/http.pyo
 ${PYSITELIB}/channels/generic/websocket.py
 ${PYSITELIB}/channels/generic/websocket.pyc
 ${PYSITELIB}/channels/generic/websocket.pyo
