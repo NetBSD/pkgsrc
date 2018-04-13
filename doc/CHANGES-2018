@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1776 2018/04/13 12:52:11 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.1777 2018/04/13 12:54:13 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2485,3 +2485,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/ocaml-opaline to 0.3.0 [jaapb 2018-04-13]
 	Updated textproc/ocaml-markup to 0.7.6 [jaapb 2018-04-13]
 	Updated devel/ocaml-lwt to 4.0.1 [jaapb 2018-04-13]
+	Updated devel/ocaml-lwt_react to 1.1.1 [jaapb 2018-04-13]
