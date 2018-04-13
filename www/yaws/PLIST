@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/11 14:05:18 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/04/13 16:12:13 fhajny Exp $
 bin/yaws
+lib/pkgconfig/yaws.pc
 lib/yaws/ebin/haxe.beam
-lib/yaws/ebin/json.beam
 lib/yaws/ebin/json2.beam
 lib/yaws/ebin/jsonrpc.beam
 lib/yaws/ebin/mime_type_c.beam
@@ -20,6 +20,7 @@ lib/yaws/ebin/yaws_config.beam
 lib/yaws/ebin/yaws_ctl.beam
 lib/yaws/ebin/yaws_debug.beam
 lib/yaws/ebin/yaws_dime.beam
+lib/yaws/ebin/yaws_dynopts.beam
 lib/yaws/ebin/yaws_exhtml.beam
 lib/yaws/ebin/yaws_generated.beam
 lib/yaws/ebin/yaws_html.beam
@@ -50,8 +51,16 @@ lib/yaws/ebin/yaws_ticker.beam
 lib/yaws/ebin/yaws_trace.beam
 lib/yaws/ebin/yaws_vdir.beam
 lib/yaws/ebin/yaws_websockets.beam
+lib/yaws/ebin/yaws_ws_sup.beam
 lib/yaws/ebin/yaws_xmlrpc.beam
 lib/yaws/ebin/yaws_zlib.beam
+lib/yaws/examples/ebin/advanced_echo_callback.beam
+lib/yaws/examples/ebin/authmod_gssapi.beam
+lib/yaws/examples/ebin/basic_echo_callback.beam
+lib/yaws/examples/ebin/basic_echo_callback_extended.beam
+lib/yaws/examples/ebin/myappmod.beam
+lib/yaws/examples/ebin/server_sent_events.beam
+lib/yaws/examples/ebin/shopcart.beam
 lib/yaws/include/soap-envelope.hrl
 lib/yaws/include/soap.hrl
 lib/yaws/include/wsdl11soap12.hrl
@@ -60,12 +69,8 @@ lib/yaws/include/yaws_api.hrl
 lib/yaws/include/yaws_dav.hrl
 lib/yaws/include/yaws_lock.hrl
 lib/yaws/include/yaws_soap.hrl
-lib/yaws/priv/charset.def
-lib/yaws/priv/charset.def.in
 lib/yaws/priv/envelope.xsd
-lib/yaws/priv/epam
-lib/yaws/priv/lib/.gitignore
-lib/yaws/priv/lib/setuid_drv.so
+lib/yaws/priv/lib/setuid_drv.la
 lib/yaws/priv/mime.types
 lib/yaws/priv/soap-envelope.xsd
 lib/yaws/priv/soap.xsd
@@ -76,22 +81,25 @@ man/man1/yaws.1
 man/man5/yaws.conf.5
 man/man5/yaws_api.5
 man/man5/yaws_soap_lib.5
+share/examples/yaws/dhparams.pem
+share/examples/yaws/yaws-cert.pem
+share/examples/yaws/yaws-key.pem
 share/examples/yaws/yaws.conf
+share/examples/yaws/yaws.conf.template
 share/yaws/www/END
 share/yaws/www/END2
 share/yaws/www/HEAD
-share/yaws/www/Makefile
 share/yaws/www/TAB.inc
 share/yaws/www/api.yaws
 share/yaws/www/appmods.yaws
 share/yaws/www/arg.yaws
 share/yaws/www/arg2.yaws
+share/yaws/www/articles.yaws
 share/yaws/www/bindings.yaws
 share/yaws/www/cgi-bin/foo.py
 share/yaws/www/cgi.yaws
 share/yaws/www/code.yaws
-share/yaws/www/code/Makefile
-share/yaws/www/code/myappmod.beam
+share/yaws/www/code/.deps/myappmod.Pbeam
 share/yaws/www/code/myappmod.erl
 share/yaws/www/compile_layout.dia
 share/yaws/www/compile_layout.png
@@ -248,6 +256,7 @@ share/yaws/www/process_tree.png
 share/yaws/www/query.yaws
 share/yaws/www/readcookie.yaws
 share/yaws/www/readpcookie.yaws
+share/yaws/www/rebar_release.yaws
 share/yaws/www/redirect.yaws
 share/yaws/www/redirect2.yaws
 share/yaws/www/redirect3.yaws
@@ -258,13 +267,12 @@ share/yaws/www/session.yaws
 share/yaws/www/session1.yaws
 share/yaws/www/setcookie.yaws
 share/yaws/www/setpcookie.yaws
-share/yaws/www/shoppingcart/Makefile
+share/yaws/www/shoppingcart/.deps/shopcart.Pbeam
 share/yaws/www/shoppingcart/buy.yaws
 share/yaws/www/shoppingcart/index.yaws
-share/yaws/www/shoppingcart/junk.jpg
+share/yaws/www/shoppingcart/junk.png
 share/yaws/www/shoppingcart/loginpost.yaws
 share/yaws/www/shoppingcart/logout.yaws
-share/yaws/www/shoppingcart/shopcart.beam
 share/yaws/www/shoppingcart/shopcart.erl
 share/yaws/www/shoppingcart/shopcart_form.yaws
 share/yaws/www/shoppingcart/source.html
@@ -301,4 +309,4 @@ share/yaws/www/yaws.eps
 share/yaws/www/ybed.erl
 share/yaws/www/ybed_sup.erl
 share/yaws/www/yman.yaws
-@pkgdir etc/yaws
+@pkgdir lib/yaws/examples/include
