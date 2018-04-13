@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2018/01/10 16:53:14 jaapb Exp $
+# $NetBSD: Makefile,v 1.20 2018/04/13 13:17:34 jaapb Exp $
 #
 
 GITHUB_PROJECT=	eliom
-DISTNAME=	${GITHUB_PROJECT}-6.2.0
-PKGREVISION=	3
+DISTNAME=	${GITHUB_PROJECT}-6.3.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
@@ -16,9 +15,8 @@ USE_TOOLS+=	gmake
 USE_LANGUAGES=	c
 OCAML_USE_FINDLIB=	yes
 
-DEPENDS+=	ocsigen>=2.8:../../www/ocsigen
-DEPENDS+=	ocaml-deriving-ocsigen>=0.7.1:../../devel/ocaml-deriving-ocsigen
-
+DEPENDS+=	ocsigen>=2.9:../../www/ocsigen
+DEPENDS+=	ocaml-deriving-ocsigen>=0.8.1:../../devel/ocaml-deriving-ocsigen
 
 .include "../../mk/ocaml.mk"
 
@@ -32,10 +30,11 @@ do-install:
 	cd ${WRKSRC} && opam-installer --install --prefix ${DESTDIR}${PREFIX} --libdir ${DESTDIR}${PREFIX}/${OCAML_SITELIBDIR} --docdir ${DESTDIR}${PREFIX}/share/doc eliom.install
 
 .include "../../devel/js_of_ocaml/buildlink3.mk"
+.include "../../devel/ocaml-lwt_log/buildlink3.mk"
+.include "../../devel/ocaml-lwt_ppx/buildlink3.mk"
+.include "../../devel/ocaml-ppx_tools/buildlink3.mk"
 .include "../../devel/ocaml-react/buildlink3.mk"
 .include "../../devel/ocaml-reactiveData/buildlink3.mk"
-.include "../../devel/ocaml-optcomp/buildlink3.mk"
-.include "../../devel/ocaml-ppx_tools/buildlink3.mk"
 .include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../misc/ocaml-opam/buildlink3.mk"
 BUILDLINK_DEPMETHOD.ocaml-opam?=    build
