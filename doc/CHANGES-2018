@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1783 2018/04/13 16:05:52 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1784 2018/04/13 16:12:24 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2492,3 +2492,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/R-prettyunits version 1.0.2 [minskim 2018-04-13]
 	Added devel/ocaml-lwt_log version 1.1.0 [jaapb 2018-04-13]
 	Added devel/R-iterators version 1.0.9 [minskim 2018-04-13]
+	Updated www/yaws to 2.0.5 [fhajny 2018-04-13]
