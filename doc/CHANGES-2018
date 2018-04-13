@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1779 2018/04/13 13:15:11 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.1780 2018/04/13 13:17:46 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2488,3 +2488,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ocaml-lwt_react to 1.1.1 [jaapb 2018-04-13]
 	Updated devel/js_of_ocaml to 3.1.0 [jaapb 2018-04-13]
 	Updated www/ocsigen to 2.9 [jaapb 2018-04-13]
+	Updated www/eliom to 6.3.0 [jaapb 2018-04-13]
