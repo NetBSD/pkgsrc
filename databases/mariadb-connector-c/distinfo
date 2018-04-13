@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2018/04/13 08:04:14 fhajny Exp $
+
+SHA1 (mariadb-connector-c-3.0.3.tar.gz) = 73250ec95d493d84eff63e66bcfc3d9d9c39d3ea
+RMD160 (mariadb-connector-c-3.0.3.tar.gz) = 574a38b779b70a3782cd7a2abe5e178506ce96eb
+SHA512 (mariadb-connector-c-3.0.3.tar.gz) = 46845358a45c4fa1310d1e0126d2328e323457b162aba629fe569bf26a91b1cc5bdbb9c2d123d1b180a1362852e72774c5375c62d94c59117346776fbdbdd19d
+Size (mariadb-connector-c-3.0.3.tar.gz) = 672982 bytes
+SHA1 (patch-CMakeLists.txt) = ca3b3ada833da74f1708b293994bd96f9fb1ca92
+SHA1 (patch-cmake_CheckTypes.cmake) = 7b8184efcaee685d4b3db39441ed50ca08a8df6f
+SHA1 (patch-cmake_plugins.cmake) = 27b3bfa8fb8436b8fee5ca37439f3d413e0e90b4
+SHA1 (patch-libmariadb_ma__context.c) = 56ec0f9f4ab75826b87b0074523c235907e0507f
