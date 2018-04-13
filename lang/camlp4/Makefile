@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2018/01/10 16:22:41 jaapb Exp $
+# $NetBSD: Makefile,v 1.17 2018/04/13 13:55:34 jaapb Exp $
 
 GITHUB_PROJECT=	camlp4
 DISTNAME=	${GITHUB_PROJECT}-4.06+1
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 

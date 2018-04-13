@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.117 2018/03/12 11:17:24 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2018/04/13 13:55:36 jaapb Exp $
 
 DISTNAME=	unison-2.48.15
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
 
