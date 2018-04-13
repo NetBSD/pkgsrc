@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1767 2018/04/13 07:58:59 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1768 2018/04/13 08:04:27 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2470,3 +2470,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated finance/py-braintree to 3.44.0 [adam 2018-04-13]
 	Updated sysutils/salt to 2018.3.0 [adam 2018-04-13]
 	Updated sysutils/salt-docs to 2018.3.0 [adam 2018-04-13]
+	Added databases/mariadb-connector-c version 3.0.3 [fhajny 2018-04-13]
