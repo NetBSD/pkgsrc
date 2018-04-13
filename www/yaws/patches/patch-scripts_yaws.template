@@ -1,0 +1,18 @@
+$NetBSD: patch-scripts_yaws.template,v 1.1 2018/04/13 16:12:13 fhajny Exp $
+
+Portability.
+
+--- scripts/yaws.template.orig	2018-04-10 10:32:09.000000000 +0000
++++ scripts/yaws.template
+@@ -399,9 +399,9 @@ while [ $# -gt 0 ]
+           if [ -z "$1" ]; then
+               echo error: missing encoding argument
+               help
+-          elif [ "$1" == "latin1" ]; then
++          elif [ "$1" = "latin1" ]; then
+               encoding="latin1";
+-          elif [ "$1" == "unicode" ]; then
++          elif [ "$1" = "unicode" ]; then
+               encoding="unicode";
+           else
+               echo error: unsupported encoding argument

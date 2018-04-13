@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2016/07/09 06:39:15 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2018/04/13 16:12:13 fhajny Exp $
 #
 
-DISTNAME=		yaws-1.97
-PKGREVISION=		5
+DISTNAME=		yaws-2.0.5
 CATEGORIES=		www
 MASTER_SITES=		http://yaws.hyber.org/download/
 
@@ -13,51 +12,42 @@ LICENSE=		modified-bsd
 
 BUILD_DEFS+=		VARBASE
 
-USE_TOOLS+=		gmake perl pax autoconf
+USE_TOOLS+=		gmake perl tar
 GNU_CONFIGURE=		yes
-AUTOCONF_REQD=		2.50
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/yaws
+PKG_SYSCONFSUBDIR=	yaws
+
+.include "../../mk/bsd.prefs.mk"
+
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-extrainclude=${PAMBASE}/include/security
+CONFIGURE_ARGS+=	ERLANG_INSTALL_LIB_DIR_yaws=${PREFIX}/lib/yaws
+CONFIGURE_ARGS+=	wwwdir=${WWWDIR}
+
+# Not compatible with SunOS PAM headers
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--disable-pam
+.endif
 
 EGDIR=			${PREFIX}/share/examples/yaws
-CONF_FILES=		${EGDIR}/yaws.conf ${PKG_SYSCONFDIR}/yaws/yaws.conf
+CONF_FILES=		${EGDIR}/yaws.conf ${PKG_SYSCONFDIR}/yaws.conf
 RCD_SCRIPTS=		yaws
 RCD_SCRIPT_SRC.yaws=	${WRKSRC}/scripts/netbsd/yaws.sh
 
-LIBDIR=			${PREFIX}/lib/yaws
 WWWDIR=			${PREFIX}/share/yaws/www
-INSTALLATION_DIRS=	${EGDIR}
-INSTALLATION_DIRS+=	${LIBDIR}/ebin ${LIBDIR}/include
-INSTALLATION_DIRS+=	${LIBDIR}/priv ${WWWDIR}
 
 OWN_DIRS=		${VARBASE}/log/yaws
 
 REPLACE_PYTHON=		www/cgi-bin/foo.py
-#CHECK_INTERPRETER_SKIP=	${WWWDIR}/cgi-bin/foo.py
 CHECK_INTERPRETER_SKIP=	share/yaws/www/cgi-bin/foo.py
 
-INSTALLATION_DIRS+=	bin
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-INSTALLATION_DIRS+=	${PKGMANDIR}/man5
+INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
-# remove after upgrading to a now()-less yaws:
-SUBST_CLASSES+=		now
-SUBST_STAGE.now=	post-patch
-SUBST_FILES.now=	*/*.erl
-SUBST_SED.now=		-e 's|\([^:a-zA-Z]\)now()|\1erlang:timestamp()|g'
-SUBST_SED.now+=		-e 's|\([^:a-zA-Z]\)erlang:now()|\1erlang:timestamp()|g'
-SUBST_MESSAGE.now=	Replacing now().
+FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
-post-patch:
-	${RM} ${WRKDIR}/yaws
-	${RM} -Rf ${WRKSRC}/www/.xvpics
+post-extract:
+	cd ${WRKSRC} && ${CHMOD} -R g-w www
 	${RM} -Rf ${WRKSRC}/www/testdir
-	${FIND} ${WRKSRC} -name \*.orig -o -name .empty | ${XARGS} ${RM} -f
-
-pre-configure:
-	cd ${WRKSRC} && autoconf
 
 post-configure:
 	${SED} -e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g" \
@@ -65,22 +55,9 @@ post-configure:
 		-e "s|@VARBASE@|${VARBASE}|g" \
 		${FILESDIR}/yaws.conf > ${WRKDIR}/yaws.conf
 
-do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/yaws ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKDIR}/yaws.conf ${DESTDIR}${EGDIR}
-
-	${INSTALL_DATA} ${WRKSRC}/ebin/* ${DESTDIR}${LIBDIR}/ebin
-	${INSTALL_DATA} ${WRKSRC}/include/* ${DESTDIR}${LIBDIR}/include
-	cd ${WRKSRC}/priv && pax -rw . ${DESTDIR}${LIBDIR}/priv
-
-	cd ${WRKSRC}/www && pax -rw . ${DESTDIR}${WWWDIR}
-
-	${INSTALL_MAN} ${WRKSRC}/man/yaws.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/man/*.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
-
-	${INSTALL_DATA_DIR} ${DESTDIR}${PKG_SYSCONFDIR}/yaws
-
-BUILDLINK_API_DEPENDS.erlang+= erlang>=18.0
+post-install:
+	${RM} -f ${DESTDIR}${WWWDIR}/code/Makefile*
+	${RM} -f ${DESTDIR}${WWWDIR}/shoppingcart/Makefile*
 
 .include "../../lang/erlang/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
