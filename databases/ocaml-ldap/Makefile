@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2018/01/10 16:53:07 jaapb Exp $
+# $NetBSD: Makefile,v 1.8 2018/04/13 13:55:30 jaapb Exp $
 
 VERSION=	2.3.0
 GITHUB_PROJECT=	ocamldap
 GITHUB_TAG=	${VERSION}
 PKGNAME=	ocaml-ldap-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 DISTNAME=	ocamldap-${VERSION}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jpdeplaix/}
