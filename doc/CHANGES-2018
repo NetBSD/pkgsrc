@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1773 2018/04/13 11:15:18 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1774 2018/04/13 12:27:15 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2482,3 +2482,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-asgiref to 2.3.0 [adam 2018-04-13]
 	Updated www/py-channels to 2.1.0 [adam 2018-04-13]
 	Updated www/py-aiohttp to 3.1.3 [adam 2018-04-13]
+	Updated misc/ocaml-opaline to 0.3.0 [jaapb 2018-04-13]
