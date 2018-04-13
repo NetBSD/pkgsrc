@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/01/04 13:06:18 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/04/13 13:15:00 jaapb Exp $
 bin/ocsigenserver
 ${PLIST.ocaml-opt}bin/ocsigenserver.opt
 share/examples/ocsigen/ocsigenserver.conf
@@ -58,10 +58,10 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsigen_comet.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsigen_comet.cmxs
 ${OCAML_SITELIB}/ocsigenserver/extensions/ocsigen_comet.mli
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsigen_comet.o
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-dbm.a
-${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-dbm.cma
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-dbm.cmxa
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-dbm.cmxs
+${PLIST.dbm}${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-dbm.a
+${PLIST.dbm}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-dbm.cma
+${PLIST.dbm}${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-dbm.cmxa
+${PLIST.dbm}${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-dbm.cmxs
 ${PLIST.pgsql}${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-pgsql.a
 ${PLIST.pgsql}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-pgsql.cma
 ${PLIST.pgsql}${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-pgsql.cmxa
@@ -177,8 +177,8 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/userconf.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/userconf.cmxs
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/userconf.o
 @comment ${OCAML_SITELIB}/ocsigenserver/dllocsigenserver.so
-${OCAML_SITELIB}/ocsigenserver/extensions/ocsidbm
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsidbm.opt
+${PLIST.dbm}${OCAML_SITELIB}/ocsigenserver/extensions/ocsidbm
+${PLIST.dbm}${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsidbm.opt
 man/man1/ocsigenserver.1
 share/examples/ocsigen/mime.types
 share/ocsigen/www/index.html
