@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.108 2018/03/12 11:17:25 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2018/04/13 13:55:36 jaapb Exp $
 
 DISTNAME=		advi-1.10.2
-PKGREVISION=		24
+PKGREVISION=		25
 CATEGORIES=		print
 MASTER_SITES=		http://gallium.inria.fr/advi/
 
