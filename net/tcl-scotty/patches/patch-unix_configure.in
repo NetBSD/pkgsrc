@@ -1,0 +1,57 @@
+$NetBSD: patch-unix_configure.in,v 1.1 2018/04/13 19:10:50 he Exp $
+
+Default target to build & install scotty & tkined.
+Append TCL_LIBS to library setting, so that tcl library is picked up.
+Also pull in -lresolv if we miss __dn_expand().
+
+--- unix/configure.in.orig	1998-11-03 15:16:43.000000000 +0000
++++ unix/configure.in
+@@ -29,7 +29,10 @@ AC_PREFIX_PROGRAM(scotty)
+ if test "$prefix" = "NONE" ; then
+     AC_PREFIX_PROGRAM(tclsh)
+ fi
++if [ x"$TARGET" = x ]
++then
+ TARGET="scotty tkined"
++fi
+ 
+ #--------------------------------------------------------------------
+ #       Check for various system specific things.
+@@ -196,9 +199,8 @@ for f in $dirs ; do
+ done
+ 
+ if test "$found" -eq 0 ; then
+-    AC_MSG_ERROR("tkConfig.sh not found - use the --with-tk-config option")
+-fi
+-
++    AC_MSG_RESULT("tkConfig.sh not found - use the --with-tk-config option")
++else
+ . $tnm_cv_path_tk_config/tkConfig.sh
+ TK_INCLUDES=-I$TK_PREFIX/include
+ if test "$TK_INCLUDES" = "$TCL_INCLUDES" ; then
+@@ -213,6 +215,7 @@ fi
+ if test 4 -eq $TK_MAJOR_VERSION -a 1 -gt $TK_MINOR_VERSION; then
+     AC_MSG_ERROR("tk 4.1 or later needed")
+ fi
++fi
+ 
+ #----------------------------------------------------------------------------
+ #	Check for the existence of various libraries.
+@@ -253,6 +256,8 @@ AC_CHECK_LIB(rpc, main, [LIBS="$LIBS -lr
+ AC_CHECK_LIB(rpcsvc, main, [LIBS="$LIBS -lrpcsvc"])
+ AC_CHECK_FUNC(res_mkquery, ,
+ 	AC_CHECK_LIB(resolv, res_mkquery, [LIBS="$LIBS -lresolv"]))
++AC_CHECK_FUNC(__dn_expand, ,
++	AC_CHECK_LIB(resolv, __dn_expand, [LIBS="$LIBS -lresolv"]))
+ 
+ #----------------------------------------------------------------------------
+ #	Checks for various include files missing on some machines.
+@@ -295,6 +300,8 @@ if test "$mcast_ok" = "yes"; then
+     AC_MSG_RESULT(yes); AC_DEFINE(HAVE_MULTICAST), AC_MSG_RESULT(no))
+ fi
+ 
++LIBS="$LIBS $TCL_LIBS"
++
+ #----------------------------------------------------------------------------
+ #       Some more libraries for OSes that want your attention.
+ #----------------------------------------------------------------------------
