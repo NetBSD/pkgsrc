@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/04/05 11:52:28 jaapb Exp $
+# $NetBSD: Makefile,v 1.36 2018/04/13 12:52:00 jaapb Exp $
 #
 
 .include "Makefile.common"
@@ -13,7 +13,10 @@ COMMENT=	Cooperative threading library for OCaml
 #MAKE_JOBS_SAFE=	no
 JBUILDER_BUILD_PACKAGES=	lwt
 
+HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	-use-libev false
+
+OCAML_USE_JBUILDER=	yes
 
 do-configure:
 	cd ${WRKSRC} && ocaml src/util/configure.ml ${CONFIGURE_ARGS}
