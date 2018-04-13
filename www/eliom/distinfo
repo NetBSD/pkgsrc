@@ -1,14 +1,9 @@
-$NetBSD: distinfo,v 1.8 2017/09/08 17:14:34 jaapb Exp $
+$NetBSD: distinfo,v 1.9 2018/04/13 13:17:34 jaapb Exp $
 
-SHA1 (eliom-6.2.0.tar.gz) = 652dacef947524975efc63253fb806be45a750c3
-RMD160 (eliom-6.2.0.tar.gz) = 1a1b21495cac93c2ad7f207fdd6ad4df819c6600
-SHA512 (eliom-6.2.0.tar.gz) = 02ea52c78470f222297dd9f82218e82427ea2d2d0c9f261d1a9c2decbe7644c0bf583b77b8cef2577d5662d363efd276755f400e7a4c29c89a2265e49ca850db
-Size (eliom-6.2.0.tar.gz) = 724359 bytes
-SHA1 (patch-pkg_META) = 2953bf2e069f171d9b70dec3b985c2f864e29361
+SHA1 (eliom-6.3.0.tar.gz) = dcb78ec42965d626f6891c5f01249a2afa29a820
+RMD160 (eliom-6.3.0.tar.gz) = 98e8c64beb41a130d2e38959986285a074a04f79
+SHA512 (eliom-6.3.0.tar.gz) = d597e7c432dbafb8c4b8f36bf3c8ad43867cfdb4b6d9138358e3aff2e67bdf7c50dc4676cdf03b42da5f66749db3b2e3a9357bc4df9a0754c775480785e96f41
+Size (eliom-6.3.0.tar.gz) = 728342 bytes
 SHA1 (patch-pkg_build.ml) = 8597e17fc869b7a8e93ee30f551a92c694617dbc
-SHA1 (patch-src__tags) = 5058021a43761fff5ce91f26c8fd854014e1e051
-SHA1 (patch-src_lib_eliom_content_.client.ml) = fc7896b38b4719518c6c928949b8713da50026a9
-SHA1 (patch-src_lib_eliom_request.client.ml) = 1d9dbe87011bb05267bce4c2a8993e89484aba8a
-SHA1 (patch-src_lib_eliom_request.client.mli) = 72e9a6c2b59ee2944e0647202782dce38c661c31
-SHA1 (patch-src_ocamlbuild_ocamlbuild_eliom.ml) = c774f7d2a091f7f00e4f1793ee52fd4860f440ea
-SHA1 (patch-src_tools_utils.ml) = fb59916f46fa1d2f99284f0ea24e138a3f116eb0
+SHA1 (patch-src__tags) = 5aff5c25080159e71847ca4caffb53641c5e2811
+SHA1 (patch-src_lib_eliom__client.client.ml) = e66600dcf8011d3833756ea25f7e1884fd090815
