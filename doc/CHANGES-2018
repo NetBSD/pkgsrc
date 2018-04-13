@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1769 2018/04/13 08:14:36 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1770 2018/04/13 08:29:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2472,3 +2472,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/salt-docs to 2018.3.0 [adam 2018-04-13]
 	Added databases/mariadb-connector-c version 3.0.3 [fhajny 2018-04-13]
 	Updated security/py-certbot to 0.23.0 [fhajny 2018-04-13]
+	Updated audio/mpg123 to 1.25.10 [adam 2018-04-13]
+	Updated archivers/unrar to 5.6.2 [adam 2018-04-13]
+	Updated www/py-flask-admin to 1.5.1 [adam 2018-04-13]
+	Updated time/py-tzdata to 2018.4 [adam 2018-04-13]
