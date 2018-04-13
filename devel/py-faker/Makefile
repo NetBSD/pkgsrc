@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2018/03/13 11:32:23 adam Exp $
+# $NetBSD: Makefile,v 1.17 2018/04/13 07:18:43 adam Exp $
 
-DISTNAME=	Faker-0.8.12
+DISTNAME=	Faker-0.8.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Faker/}
@@ -11,18 +11,17 @@ COMMENT=	Python package that generates fake data for you
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.4:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-text-unidecode-[0-9]*:../../textproc/py-text-unidecode
+DEPENDS+=	${PYPKGPREFIX}-six>=1.10:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-text-unidecode>=1.2:../../textproc/py-text-unidecode
 
 .include "../../lang/python/pyversion.mk"
 .if "${PYPKGPREFIX}" == "py27"
 DEPENDS+=	${PYPKGPREFIX}-ipaddress-[0-9]*:../../net/py-ipaddress
 .endif
 
-# TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-email_validator>=1.0.0:../../mail/py-email_validator
-BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-BUILD_DEPENDS+=	${PYPKGPREFIX}-ukpostcodeparser>=1.1.1:../../mail/py-ukpostcodeparser
+TEST_DEPENDS+=	${PYPKGPREFIX}-email_validator>=1.0.0:../../mail/py-email_validator
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-ukpostcodeparser>=1.1.1:../../mail/py-ukpostcodeparser
 
 USE_LANGUAGES=	# none
 
