@@ -1,13 +1,8 @@
-$NetBSD: distinfo,v 1.17 2018/04/05 11:52:28 jaapb Exp $
+$NetBSD: distinfo,v 1.18 2018/04/13 12:52:00 jaapb Exp $
 
-SHA1 (lwt-3.3.0.tar.gz) = 1a8aec06b4080577a989cbaeec0614359465ea73
-RMD160 (lwt-3.3.0.tar.gz) = 2f374a7e315daa03f7f3b3039abbf757dc5b7892
-SHA512 (lwt-3.3.0.tar.gz) = 452425c8c0cddd53463da658b1bb8edb0c5ead2e0de0f733dbf624d373fec94c3121e77cc285427770388e16106fae84c32805b6642d1797200660fed91d0f29
-Size (lwt-3.3.0.tar.gz) = 312052 bytes
-SHA1 (patch-META.lwt) = 0581a5dcea185694703955f6c55837465b62888e
-SHA1 (patch-src_camlp4_jbuild) = f1d1100dcd9b66875ed69dc25bc5546b52c2532e
-SHA1 (patch-src_camlp4_log_jbuild) = 7e6e7dddf0ff1c5983aea6515a43761edab874df
-SHA1 (patch-src_camlp4_options_jbuild) = 3c0232d5424b0ad85cf3a99803ebcf54b51c7ac1
-SHA1 (patch-src_ppx_jbuild) = e57f511041d811232af8a4b52c5c39153cca7dc9
+SHA1 (lwt-4.0.1.tar.gz) = c334e473b5adc6e9c523b99efd79ff6d097151b8
+RMD160 (lwt-4.0.1.tar.gz) = 220787f2dea34019e08f1efc9aa3470136fadbf3
+SHA512 (lwt-4.0.1.tar.gz) = 4c1e63fb052ba001f18ce0ef289eee1548df3fe6381a718493e0adc4744ed40a1acb561fbf279f15c4684e19ed052edd2cab1c7e57da671d9e1e75f3bf1f8644
+Size (lwt-4.0.1.tar.gz) = 291046 bytes
 SHA1 (patch-src_unix_config_discover.ml) = ef8ea37d85f20d56654514617050ee46d6080ef1
-SHA1 (patch-src_unix_unix__c_unix__stat__job__utils.c) = dbecbc5507e901a1187dc69d0fa0c1dfa2097b22
+SHA1 (patch-src_unix_unix__c_unix__stat__job__utils.c) = 5ec0ae3afe3d65e673681fcf8faeebf811e64518
