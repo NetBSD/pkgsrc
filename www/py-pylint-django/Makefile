@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2018/03/13 10:53:13 adam Exp $
+# $NetBSD: Makefile,v 1.7 2018/04/13 07:33:53 adam Exp $
 
-DISTNAME=	pylint-django-0.9.4
+DISTNAME=	pylint-django-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint-django/}
