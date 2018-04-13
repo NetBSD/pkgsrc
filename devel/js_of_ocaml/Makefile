@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2018/01/22 11:50:24 jaapb Exp $
+# $NetBSD: Makefile,v 1.24 2018/04/13 12:59:41 jaapb Exp $
 #
 
 GITHUB_PROJECT=	js_of_ocaml
-DISTNAME=	${GITHUB_PROJECT}-3.0.2
+DISTNAME=	${GITHUB_PROJECT}-3.1.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
@@ -16,14 +16,18 @@ USE_TOOLS=	bash
 OCAML_USE_FINDLIB=	yes
 OCAML_USE_JBUILDER=	yes
 
-OPAM_INSTALL_FILES=	js_of_ocaml js_of_ocaml-ocamlbuild js_of_ocaml-ppx \
-			js_of_ocaml-lwt js_of_ocaml-compiler
-JBUILDER_BUILD_PACKAGES=	js_of_ocaml-compiler js_of_ocaml js_of_ocaml-ocamlbuild js_of_ocaml-ppx js_of_ocaml-lwt
+OPAM_INSTALL_FILES=	js_of_ocaml js_of_ocaml-ocamlbuild \
+	js_of_ocaml-ppx js_of_ocaml-ppx_deriving_json \
+	js_of_ocaml-lwt js_of_ocaml-compiler
+JBUILDER_BUILD_PACKAGES=	js_of_ocaml-compiler js_of_ocaml js_of_ocaml-ocamlbuild \
+	js_of_ocaml-ppx js_of_ocaml-ppx_deriving_json \
+	js_of_ocaml-lwt
 
 .include "options.mk"
 .include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../devel/ocaml-cppo/buildlink3.mk"
 .include "../../devel/ocaml-lwt/buildlink3.mk"
+.include "../../devel/ocaml-lwt_log/buildlink3.mk"
 .include "../../devel/ocaml-migrate-parsetree/buildlink3.mk"
 .include "../../devel/ocaml-ppx_deriving/buildlink3.mk"
 .include "../../devel/ocaml-ppx_tools_versioned/buildlink3.mk"
