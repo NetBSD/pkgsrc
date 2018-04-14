@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1798 2018/04/14 08:56:38 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1799 2018/04/14 09:14:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2534,3 +2534,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-cheroot to 6.2.2 [adam 2018-04-14]
 	Updated devel/py-pathspec to 0.5.6 [adam 2018-04-14]
 	Updated devel/py-txaio to 2.10.0 [adam 2018-04-14]
+	Updated textproc/py-html2text to 2018.1.9 [adam 2018-04-14]
+	Updated www/py-autobahn to 18.4.1 [adam 2018-04-14]
