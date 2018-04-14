@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/04/14 07:34:45 adam Exp $
+# $NetBSD: Makefile,v 1.13 2018/04/14 12:24:32 adam Exp $
 
 PYTHON_VERSIONS_ACCEPTED=	27
 PKGREVISION= 5
@@ -9,6 +9,7 @@ CATEGORIES=	x11
 
 COMMENT=	MATE panel applets
 
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
@@ -38,7 +39,6 @@ PLIST.batt=	yes
 REPLACE_PYTHON+=	invest-applet/invest/chart.py
 REPLACE_PYTHON+=	invest-applet/invest/invest-applet.py
 REPLACE_PYTHON+=	invest-applet/invest/mate-invest-chart
-.include "../../lang/python/application.mk"
 
 .include "../../x11/mate-panel/buildlink3.mk"
 .include "../../x11/mate-desktop/buildlink3.mk"
@@ -47,7 +47,6 @@ REPLACE_PYTHON+=	invest-applet/invest/mate-invest-chart
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libwnck3/buildlink3.mk"
-.include "../../devel/py-gobject3/buildlink3.mk"
 .include "../../fonts/gucharmap/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
@@ -58,5 +57,6 @@ REPLACE_PYTHON+=	invest-applet/invest/mate-invest-chart
 .include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
 PY_PATCHPLIST=	yes
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
