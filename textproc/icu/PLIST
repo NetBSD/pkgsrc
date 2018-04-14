@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2017/11/30 16:03:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.42 2018/04/14 07:05:08 adam Exp $
 bin/derb
 bin/genbrk
 bin/gencfu
@@ -196,27 +196,27 @@ lib/icu/pkgdata.inc
 lib/libicudata.a
 lib/libicudata.so
 lib/libicudata.so.${PKGVERSION}
-lib/libicudata.so.60
+lib/libicudata.so.61
 lib/libicui18n.a
 lib/libicui18n.so
 lib/libicui18n.so.${PKGVERSION}
-lib/libicui18n.so.60
+lib/libicui18n.so.61
 lib/libicuio.a
 lib/libicuio.so
 lib/libicuio.so.${PKGVERSION}
-lib/libicuio.so.60
+lib/libicuio.so.61
 lib/libicutest.a
 lib/libicutest.so
 lib/libicutest.so.${PKGVERSION}
-lib/libicutest.so.60
+lib/libicutest.so.61
 lib/libicutu.a
 lib/libicutu.so
 lib/libicutu.so.${PKGVERSION}
-lib/libicutu.so.60
+lib/libicutu.so.61
 lib/libicuuc.a
 lib/libicuuc.so
 lib/libicuuc.so.${PKGVERSION}
-lib/libicuuc.so.60
+lib/libicuuc.so.61
 lib/pkgconfig/icu-i18n.pc
 lib/pkgconfig/icu-io.pc
 lib/pkgconfig/icu-uc.pc
