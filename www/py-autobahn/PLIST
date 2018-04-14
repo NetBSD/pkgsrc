@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/01/10 08:32:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/04/14 09:10:46 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -29,6 +29,16 @@ ${PYSITELIB}/autobahn/asyncio/wamp.pyo
 ${PYSITELIB}/autobahn/asyncio/websocket.py
 ${PYSITELIB}/autobahn/asyncio/websocket.pyc
 ${PYSITELIB}/autobahn/asyncio/websocket.pyo
+${PYSITELIB}/autobahn/nvx/__init__.py
+${PYSITELIB}/autobahn/nvx/__init__.pyc
+${PYSITELIB}/autobahn/nvx/__init__.pyo
+${PYSITELIB}/autobahn/nvx/_utf8validator.c
+${PYSITELIB}/autobahn/nvx/_utf8validator.py
+${PYSITELIB}/autobahn/nvx/_utf8validator.pyc
+${PYSITELIB}/autobahn/nvx/_utf8validator.pyo
+${PYSITELIB}/autobahn/nvx/test/test_utf8validator.py
+${PYSITELIB}/autobahn/nvx/test/test_utf8validator.pyc
+${PYSITELIB}/autobahn/nvx/test/test_utf8validator.pyo
 ${PYSITELIB}/autobahn/rawsocket/__init__.py
 ${PYSITELIB}/autobahn/rawsocket/__init__.pyc
 ${PYSITELIB}/autobahn/rawsocket/__init__.pyo
