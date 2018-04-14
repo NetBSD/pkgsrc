@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1808 2018/04/14 20:32:14 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1809 2018/04/14 22:28:27 tron Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2555,3 +2555,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/py-qt5 to 5.10.1 [adam 2018-04-14]
 	Updated time/py-vdirsyncer to 0.16.4nb1 [wiz 2018-04-14]
 	Updated time/khal to 0.9.8nb1 [wiz 2018-04-14]
+	Updated mail/mutt to 1.9.5 [tron 2018-04-14]
