@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/02/08 19:54:21 adam Exp $
+$NetBSD: distinfo,v 1.4 2018/04/14 08:29:25 adam Exp $
 
-SHA1 (pyobjc-framework-DictionaryServices-4.1.tar.gz) = 1cea86aa7c55c4064a06d0d9442938c52037c3fc
-RMD160 (pyobjc-framework-DictionaryServices-4.1.tar.gz) = e372f2bc5e431ffcdbf65a7aa8e872545b77e46b
-SHA512 (pyobjc-framework-DictionaryServices-4.1.tar.gz) = b42d0f8cb172f131795390aec6868d88d03cf61b9a1d89015c36b68508cce27cc9f4f0534031f38ca3648a7e2ad59ea123b6471bbb67e3c97656dc46714ecc39
-Size (pyobjc-framework-DictionaryServices-4.1.tar.gz) = 9857 bytes
+SHA1 (pyobjc-framework-DictionaryServices-4.2.1.tar.gz) = 5fa81f5fea5faa396be21e1542eb47297e95b3f7
+RMD160 (pyobjc-framework-DictionaryServices-4.2.1.tar.gz) = 39da937b05b8e5289cc06a1d5376a565b09a7e5d
+SHA512 (pyobjc-framework-DictionaryServices-4.2.1.tar.gz) = 6768e837eb5c137f6bcf709af763d9b7b8add54818056c3f78ae25d4eac096c30fe87361efa94a39c391ebd0ac904b751e8dc221fb7a755cf053951ae454e0d9
+Size (pyobjc-framework-DictionaryServices-4.2.1.tar.gz) = 10098 bytes
