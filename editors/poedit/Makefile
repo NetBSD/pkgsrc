@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2018/03/12 11:16:24 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2018/04/14 07:34:19 adam Exp $
 
 DISTNAME=	poedit-2.0.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/vslavik/poedit/releases/download/v${PKGVERSION_NOREV}-oss/
 
