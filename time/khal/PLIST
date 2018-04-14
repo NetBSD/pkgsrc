@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/04/04 13:10:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/04/14 20:32:06 wiz Exp $
 bin/ikhal
 bin/khal
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -93,4 +93,5 @@ ${PYSITELIB}/khal/utils.pyo
 ${PYSITELIB}/khal/version.py
 ${PYSITELIB}/khal/version.pyc
 ${PYSITELIB}/khal/version.pyo
+man/man1/khal.1
 share/doc/khal/khal.conf.sample
