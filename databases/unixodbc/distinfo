@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.16 2018/01/10 23:07:01 wiz Exp $
+$NetBSD: distinfo,v 1.17 2018/04/14 08:26:34 adam Exp $
 
-SHA1 (unixODBC-2.3.5.tar.gz) = 22b9254626d303be95d1eeafa34d452a45792545
-RMD160 (unixODBC-2.3.5.tar.gz) = 72ed87df0d59ce6a7c5459e1ca72e585c8619d51
-SHA512 (unixODBC-2.3.5.tar.gz) = 94b5ebb887571f4fa801ae4305cd6cb4eb0d03682fac1eb0422cdd13b046b077e60bff8286c578b0b5e291cfbc0bc8695495e39c3713858d2eeb7b38459397d5
-Size (unixODBC-2.3.5.tar.gz) = 1633390 bytes
+SHA1 (unixODBC-2.3.6.tar.gz) = 23ff27a449e990f9c4b1b29a6369086006454baa
+RMD160 (unixODBC-2.3.6.tar.gz) = 6ff50a528a648c188f99604652c273fe375b2287
+SHA512 (unixODBC-2.3.6.tar.gz) = 6518a4169946e847dd710d54724a44d268b98954d30064eadadb703edbbeafac05bd1f42a6845c2fdcdab7ae8987800acd1a5f6b4b96de5f3c8c3e4bc370fe30
+Size (unixODBC-2.3.6.tar.gz) = 1661914 bytes
+SHA1 (patch-Drivers_nn_yyparse.c) = c2b1ddbf21eadd2bc07b8373c59920f8505886c5
+SHA1 (patch-exe_Makefile.in) = 85ae24152e0c6c537df2ed12837f436f02b4702e
