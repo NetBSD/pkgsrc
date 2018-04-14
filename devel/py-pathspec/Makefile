@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/09/09 18:41:18 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/04/14 08:50:12 adam Exp $
 
-DISTNAME=	pathspec-0.5.5
+DISTNAME=	pathspec-0.5.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pathspec/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/cpburnz/python-path-specification
 COMMENT=	Utility library for gitignore style pattern matching of file paths
 LICENSE=	mpl-2.0
 
-USE_LANGUAGES=		# none
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
