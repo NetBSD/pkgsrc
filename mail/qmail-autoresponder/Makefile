@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/09/29 00:51:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2018/04/14 00:56:24 schmonz Exp $
 
-DISTNAME=		qmail-autoresponder-1.0
+DISTNAME=		qmail-autoresponder-2.0
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 
