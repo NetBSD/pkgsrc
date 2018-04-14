@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2018/04/11 11:50:34 markd Exp $
+# $NetBSD: Makefile,v 1.23 2018/04/14 07:33:54 adam Exp $
 
 DISTNAME=	kcoreaddons-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks

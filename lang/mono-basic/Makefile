@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2017/11/30 16:45:28 adam Exp $
+# $NetBSD: Makefile,v 1.34 2018/04/14 07:34:28 adam Exp $
 
 DISTNAME=	mono-basic-4.0.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/mono-basic/
 EXTRACT_SUFX=	.tar.bz2
