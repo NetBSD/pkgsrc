@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/04/09 08:58:47 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2018/04/14 19:38:55 jaapb Exp $
 
 .include "../../devel/ocaml-lwt/Makefile.common"
 
-PKGNAME=	ocaml-lwt_ppx-1.1.0
+PKGNAME=	ocaml-lwt_ppx-1.2.0
 CATEGORIES=	devel
 
 MAINTAINER=	jaapb@NetBSD.org
