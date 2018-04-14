@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/03/09 17:19:19 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/04/14 03:45:56 markd Exp $
 include/libraw/libraw.h
 include/libraw/libraw_alloc.h
 include/libraw/libraw_const.h
@@ -14,4 +14,3 @@ share/doc/libraw/COPYRIGHT
 share/doc/libraw/Changelog.txt
 share/doc/libraw/LICENSE.CDDL
 share/doc/libraw/LICENSE.LGPL
-share/doc/libraw/LICENSE.LibRaw.pdf
