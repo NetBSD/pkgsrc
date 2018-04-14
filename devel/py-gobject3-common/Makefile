@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2014/07/06 13:52:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2018/04/14 12:27:35 adam Exp $
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
 .include "../../devel/py-gobject3/Makefile.common"
 
-PKGNAME=	py-gobject3-common-${VER}
+PKGNAME=	py-${DISTNAME:S/^py//:S/-/3-common-/}
 
 COMMENT=	Python version independent files for glib2 gobject bindings
 
