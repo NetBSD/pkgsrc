@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1806 2018/04/14 20:09:03 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1807 2018/04/14 20:22:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2553,3 +2553,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ocaml-lwt_ppx to 1.2.0 [jaapb 2018-04-14]
 	Updated x11/py-sip to 4.19.8 [adam 2018-04-14]
 	Updated x11/py-qt5 to 5.10.1 [adam 2018-04-14]
+	Updated time/py-vdirsyncer to 0.16.4nb1 [wiz 2018-04-14]
