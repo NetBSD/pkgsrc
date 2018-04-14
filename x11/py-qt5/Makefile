@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2018/04/14 07:34:46 adam Exp $
+# $NetBSD: Makefile,v 1.34 2018/04/14 20:08:26 adam Exp $
 
-DISTNAME=	PyQt5_gpl-5.10
+DISTNAME=	PyQt5_gpl-5.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5_gpl/qt5/}
-PKGREVISION=	2
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
 
