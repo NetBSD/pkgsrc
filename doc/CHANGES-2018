@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1803 2018/04/14 13:59:01 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1804 2018/04/14 15:16:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2549,3 +2549,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added net/py-requestbuilder version 0.7.1 [adam 2018-04-14]
 	Renamed sysutils/euca2ools to sysutils/py-euca2ools [adam 2018-04-14]
 	Updated sysutils/py-euca2ools to 3.4.1 [adam 2018-04-14]
+	Updated misc/khard to 0.12.2nb1 [wiz 2018-04-14]
