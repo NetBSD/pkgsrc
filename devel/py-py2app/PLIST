@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/11/25 11:18:05 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/04/14 08:38:53 adam Exp $
 bin/py2applet${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -170,6 +170,9 @@ ${PYSITELIB}/py2app/recipes/docutils.pyo
 ${PYSITELIB}/py2app/recipes/ftplib.py
 ${PYSITELIB}/py2app/recipes/ftplib.pyc
 ${PYSITELIB}/py2app/recipes/ftplib.pyo
+${PYSITELIB}/py2app/recipes/importlib.py
+${PYSITELIB}/py2app/recipes/importlib.pyc
+${PYSITELIB}/py2app/recipes/importlib.pyo
 ${PYSITELIB}/py2app/recipes/lxml.py
 ${PYSITELIB}/py2app/recipes/lxml.pyc
 ${PYSITELIB}/py2app/recipes/lxml.pyo
@@ -179,9 +182,15 @@ ${PYSITELIB}/py2app/recipes/matplotlib.pyo
 ${PYSITELIB}/py2app/recipes/matplotlib_prescript.py
 ${PYSITELIB}/py2app/recipes/matplotlib_prescript.pyc
 ${PYSITELIB}/py2app/recipes/matplotlib_prescript.pyo
+${PYSITELIB}/py2app/recipes/mimetypes.py
+${PYSITELIB}/py2app/recipes/mimetypes.pyc
+${PYSITELIB}/py2app/recipes/mimetypes.pyo
 ${PYSITELIB}/py2app/recipes/numpy.py
 ${PYSITELIB}/py2app/recipes/numpy.pyc
 ${PYSITELIB}/py2app/recipes/numpy.pyo
+${PYSITELIB}/py2app/recipes/os_module.py
+${PYSITELIB}/py2app/recipes/os_module.pyc
+${PYSITELIB}/py2app/recipes/os_module.pyo
 ${PYSITELIB}/py2app/recipes/pydoc.py
 ${PYSITELIB}/py2app/recipes/pydoc.pyc
 ${PYSITELIB}/py2app/recipes/pydoc.pyo
@@ -201,12 +210,30 @@ ${PYSITELIB}/py2app/recipes/pyzmq.py
 ${PYSITELIB}/py2app/recipes/pyzmq.pyc
 ${PYSITELIB}/py2app/recipes/pyzmq.pyo
 ${PYSITELIB}/py2app/recipes/qt.conf
+${PYSITELIB}/py2app/recipes/qt5.py
+${PYSITELIB}/py2app/recipes/qt5.pyc
+${PYSITELIB}/py2app/recipes/qt5.pyo
+${PYSITELIB}/py2app/recipes/re.py
+${PYSITELIB}/py2app/recipes/re.pyc
+${PYSITELIB}/py2app/recipes/re.pyo
 ${PYSITELIB}/py2app/recipes/scipy.py
 ${PYSITELIB}/py2app/recipes/scipy.pyc
 ${PYSITELIB}/py2app/recipes/scipy.pyo
+${PYSITELIB}/py2app/recipes/setuptools.py
+${PYSITELIB}/py2app/recipes/setuptools.pyc
+${PYSITELIB}/py2app/recipes/setuptools.pyo
 ${PYSITELIB}/py2app/recipes/sip.py
 ${PYSITELIB}/py2app/recipes/sip.pyc
 ${PYSITELIB}/py2app/recipes/sip.pyo
+${PYSITELIB}/py2app/recipes/subprocess.py
+${PYSITELIB}/py2app/recipes/subprocess.pyc
+${PYSITELIB}/py2app/recipes/subprocess.pyo
+${PYSITELIB}/py2app/recipes/sysconfig_module.py
+${PYSITELIB}/py2app/recipes/sysconfig_module.pyc
+${PYSITELIB}/py2app/recipes/sysconfig_module.pyo
+${PYSITELIB}/py2app/recipes/uuid.py
+${PYSITELIB}/py2app/recipes/uuid.pyc
+${PYSITELIB}/py2app/recipes/uuid.pyo
 ${PYSITELIB}/py2app/recipes/virtualenv.py
 ${PYSITELIB}/py2app/recipes/virtualenv.pyc
 ${PYSITELIB}/py2app/recipes/virtualenv.pyo
