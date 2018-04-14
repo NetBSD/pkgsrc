@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/02/08 19:54:22 adam Exp $
+$NetBSD: distinfo,v 1.2 2018/04/14 08:29:26 adam Exp $
 
-SHA1 (pyobjc-framework-ExternalAccessory-4.1.tar.gz) = b30540fd00e10b62e8000a9f7c8786a7b44e42ee
-RMD160 (pyobjc-framework-ExternalAccessory-4.1.tar.gz) = d5efa4dfa62114d4a15056d860aa97cb08d310b2
-SHA512 (pyobjc-framework-ExternalAccessory-4.1.tar.gz) = 9f8e2c6b1ae218b7d8582f274e221619e40e74cef0c227caad66eb5c3210f5f68df88673abce7d74c21b8915de81fa29d011716fe809f110d383055510465046
-Size (pyobjc-framework-ExternalAccessory-4.1.tar.gz) = 15410 bytes
+SHA1 (pyobjc-framework-ExternalAccessory-4.2.1.tar.gz) = 9359d7d2db79b49c3d74d02beb6667e0afb53f29
+RMD160 (pyobjc-framework-ExternalAccessory-4.2.1.tar.gz) = bac551bfe25167facf57cd6bbcfda26c5190c501
+SHA512 (pyobjc-framework-ExternalAccessory-4.2.1.tar.gz) = 9cc1cc518a332b40b0ea5049f8afd20ab9099d14363434b47373c739388aba2891c5fa8d39c4e1ea7245e4ceb4b3b0a10866acc779f66da25a713e90ba6c5d8a
+Size (pyobjc-framework-ExternalAccessory-4.2.1.tar.gz) = 16450 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/02/08 19:54:23 adam Exp $
+$NetBSD: distinfo,v 1.4 2018/04/14 08:29:27 adam Exp $
 
-SHA1 (pyobjc-framework-LatentSemanticMapping-4.1.tar.gz) = abc36acfa015bf3434dbf416efc0c291dee0d83e
-RMD160 (pyobjc-framework-LatentSemanticMapping-4.1.tar.gz) = d4c92de03556d6cbf8879e870dcbed6190f3ce12
-SHA512 (pyobjc-framework-LatentSemanticMapping-4.1.tar.gz) = acc265abdd32cac9f93ede2b67a516032742d5f0bfa047f53b43e16976a7a59497e3028b53c5eb02985a15282924071f1dba528265c840010e0b241ff1293112
-Size (pyobjc-framework-LatentSemanticMapping-4.1.tar.gz) = 13743 bytes
+SHA1 (pyobjc-framework-LatentSemanticMapping-4.2.1.tar.gz) = f2edafd8c0ba088e08370471377c98aae4205fc7
+RMD160 (pyobjc-framework-LatentSemanticMapping-4.2.1.tar.gz) = ab114959e13c426ab13f7749bfc776d617d6e315
+SHA512 (pyobjc-framework-LatentSemanticMapping-4.2.1.tar.gz) = 84fc0676fed0d5fb7a51193165d6f31603da702fcf9bdd21bbb997e70c1acd66409c8fac8035697367cc5ee56b7c8ff2d97d3ed6b23eba301d25c02de8109898
+Size (pyobjc-framework-LatentSemanticMapping-4.2.1.tar.gz) = 14160 bytes
