@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2018/04/11 19:39:34 adam Exp $
+# $NetBSD: Makefile,v 1.53 2018/04/14 05:42:36 wiz Exp $
 
 .include "../../devel/git/Makefile.common"
 
@@ -66,9 +66,9 @@ CONFIGURE_ENV+=		gitexecdir=${GITCOREDIR}
 
 MAKE_FLAGS+=		INSTALL=${INSTALL:Q}
 
-.include "../../lang/perl5//buildlink3.mk"
-PERLLIBDIR!=		${PERL5} -MConfig -wle 'print substr $$Config{installvendorlib}, 1 + length $$Config{vendorprefixexp}'
-MAKE_ENV+=		PERLLIBDIR=${PERLLIBDIR}
+.include "../../lang/perl5/buildlink3.mk"
+PERLLIBDIR_cmd=		${PERL5} -MConfig -wle 'print substr $$Config{installvendorlib}, 1 + length $$Config{vendorprefixexp}'
+MAKE_ENV+=		PERLLIBDIR=${PERLLIBDIR_cmd:sh}
 
 GIT_TEMPLATE_INSTDIR=	${EGDIR}/${GIT_TEMPLATEDIR}
 MAKE_ENV+=		GIT_TEMPLATE_INSTDIR=${GIT_TEMPLATE_INSTDIR}
