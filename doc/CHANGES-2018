@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1802 2018/04/14 13:06:46 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1803 2018/04/14 13:59:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2546,3 +2546,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/nmap to 7.70nb1 [adam 2018-04-14]
 	Added net/ndiff version 7.70 [adam 2018-04-14]
 	Added net/zenmap version 7.70 [adam 2018-04-14]
+	Added net/py-requestbuilder version 0.7.1 [adam 2018-04-14]
+	Renamed sysutils/euca2ools to sysutils/py-euca2ools [adam 2018-04-14]
+	Updated sysutils/py-euca2ools to 3.4.1 [adam 2018-04-14]
