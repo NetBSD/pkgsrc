@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/09/09 18:41:18 adam Exp $
+$NetBSD: distinfo,v 1.3 2018/04/14 08:50:12 adam Exp $
 
-SHA1 (pathspec-0.5.5.tar.gz) = 6831293e047385f0cd923b5cbd5f1ac416a54150
-RMD160 (pathspec-0.5.5.tar.gz) = c598905843e3d5073da0850f516a0e711a6047e5
-SHA512 (pathspec-0.5.5.tar.gz) = 3f3950fe29342508c1a7ed8f403a54dec6e6a8a2e9d542cd6576b23f3252ac812908395ce751c2ba1960737f2eea4c61629515524e7999bb51698b0f121e8a8a
-Size (pathspec-0.5.5.tar.gz) = 21081 bytes
+SHA1 (pathspec-0.5.6.tar.gz) = e3a20979016ab2688243b0401bbf467884ec180c
+RMD160 (pathspec-0.5.6.tar.gz) = 9cdb5b3a8ca5ef91db88149f3e6354d8bdcc39ea
+SHA512 (pathspec-0.5.6.tar.gz) = 92396e93deb21c597ca8fb6f6188b9d76756099b7b29dde2e44ba83d06f0e5bcefdeaaaca4e20838d31ea9b74eaa955354af285aa9b69f47b8c09fd239e0d2de
+Size (pathspec-0.5.6.tar.gz) = 24494 bytes
