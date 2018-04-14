@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1799 2018/04/14 09:14:33 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1800 2018/04/14 09:43:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2536,3 +2536,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-txaio to 2.10.0 [adam 2018-04-14]
 	Updated textproc/py-html2text to 2018.1.9 [adam 2018-04-14]
 	Updated www/py-autobahn to 18.4.1 [adam 2018-04-14]
+	Updated net/haproxy to 1.8.7 [adam 2018-04-14]
+	Updated www/py-mod_wsgi to 4.6.4 [adam 2018-04-14]
+	Removed www/py-mod_wsgi-metrics [adam 2018-04-14]
