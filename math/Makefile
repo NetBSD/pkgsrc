@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.382 2018/04/13 15:26:33 minskim Exp $
+# $NetBSD: Makefile,v 1.383 2018/04/14 05:31:08 adam Exp $
 
 COMMENT=	Mathematics
 
@@ -270,6 +270,7 @@ SUBDIR+=	py-Scientific
 SUBDIR+=	py-Scientific-doc
 SUBDIR+=	py-abcpmc
 SUBDIR+=	py-almost
+SUBDIR+=	py-asteval
 SUBDIR+=	py-autograd
 SUBDIR+=	py-bottleneck
 SUBDIR+=	py-cdecimal
