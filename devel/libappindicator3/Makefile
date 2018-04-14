@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/03/12 11:15:28 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/04/14 12:24:31 adam Exp $
 
 USE_GTK_VERSION=		3
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
@@ -12,9 +12,10 @@ PKGNAME=	${DISTNAME:S/-/3-/}
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+
 .include "../../devel/libindicator3/buildlink3.mk"
 .include "../../devel/libdbusmenu-gtk3/buildlink3.mk"
-.include "../../devel/py-gobject3/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
