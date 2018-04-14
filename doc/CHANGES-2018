@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1787 2018/04/13 19:11:32 he Exp $
+$NetBSD: CHANGES-2018,v 1.1788 2018/04/14 00:57:01 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2517,3 +2517,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/ruby-gnome2-vte to 3.2.4 [tsutsui 2018-04-13]
 	Updated shells/rssh to 2.3.4nb2 [he 2018-04-13]
 	Updated net/tcl-scotty to 2.1.11nb16 [he 2018-04-13]
+	Updated mail/qmail-autoresponder to 2.0 [schmonz 2018-04-14]
