@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.5 2018/01/30 10:28:51 adam Exp $
+# $NetBSD: Makefile.common,v 1.6 2018/04/14 12:52:56 adam Exp $
 # used by graphics/py-matplotlib/Makefile
 # used by graphics/py-matplotlib-gtk2/Makefile
 # used by graphics/py-matplotlib-tk/Makefile
 
-DISTNAME=	matplotlib-2.1.2
+DISTNAME=	matplotlib-2.2.2
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib/}
 
