@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/03/02 11:45:21 adam Exp $
+$NetBSD: distinfo,v 1.8 2018/04/14 08:52:47 adam Exp $
 
-SHA1 (txaio-2.9.0.tar.gz) = afbda563e5f51c8b14e012a8fc7ba74b0594276a
-RMD160 (txaio-2.9.0.tar.gz) = 8b9e162474de7b5e2ea56f9915391ac28f18c5bc
-SHA512 (txaio-2.9.0.tar.gz) = ee07d776fa5894b716fdced36aaa6436336a1f1db97dedb0fd0575d61a7b48b12dfc90ed6078602d7a2c2a00bfa7f815ca76cd75e472a27ff7bfdb56291efa46
-Size (txaio-2.9.0.tar.gz) = 44195 bytes
+SHA1 (txaio-2.10.0.tar.gz) = cd553b28e734285a870a8f4e1e6fe0cd1830015b
+RMD160 (txaio-2.10.0.tar.gz) = 5a4e088cf1a5cbc772df50200cd4032adb11825d
+SHA512 (txaio-2.10.0.tar.gz) = 45f85eca04dadc44f47bea0359902965db7c85892303b73d1c227b065965a1e83d8b3e555affcb8b43c6fdbd4d25c8d475d763c8ec8984f3e6fc1ad2befff6c4
+Size (txaio-2.10.0.tar.gz) = 44400 bytes
