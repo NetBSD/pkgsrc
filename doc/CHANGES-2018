@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1795 2018/04/14 08:30:25 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1796 2018/04/14 08:43:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2528,3 +2528,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/icu to 61.1 [adam 2018-04-14]
 	Updated databases/unixodbc to 2.3.6 [adam 2018-04-14]
 	Updated devel/py-pyobjc to 4.2.1 [adam 2018-04-14]
+	Updated devel/py-py2app to 0.14 [adam 2018-04-14]
+	Updated devel/py-bcolz to 1.2.1 [adam 2018-04-14]
