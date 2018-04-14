@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/02/01 21:09:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/04/14 20:08:26 adam Exp $
 bin/pylupdate5
 bin/pyrcc5
 bin/pyuic5
@@ -595,6 +595,7 @@ share/sip/PyQt5/QtQml/qjsvalueiterator.sip
 share/sip/PyQt5/QtQml/qmlattachedpropertiesobject.sip
 share/sip/PyQt5/QtQml/qmlregistertype.sip
 share/sip/PyQt5/QtQml/qpyqmllistproperty.sip
+share/sip/PyQt5/QtQml/qqml.sip
 share/sip/PyQt5/QtQml/qqmlabstracturlinterceptor.sip
 share/sip/PyQt5/QtQml/qqmlapplicationengine.sip
 share/sip/PyQt5/QtQml/qqmlcomponent.sip
