@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2017/11/30 16:45:21 adam Exp $
+# $NetBSD: Makefile,v 1.23 2018/04/14 07:34:17 adam Exp $
 #
 
 DISTNAME=	nant-0.86-beta1-src
 PKGNAME=	nant-0.86beta1
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nant/}
 
