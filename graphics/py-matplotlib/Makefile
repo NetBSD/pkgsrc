@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.51 2017/11/24 22:15:59 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2018/04/14 12:52:56 adam Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 COMMENT=	Matlab-style plotting package for Python
 
-DEPENDS+=	${PYPKGPREFIX}-cycler-[0-9]*:../../graphics/py-cycler
-DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-pytz>=2008b:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-pyparsing>=1.5.6:../../devel/py-pyparsing
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
-BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+DEPENDS+=	${PYPKGPREFIX}-cycler>=0.10:../../graphics/py-cycler
+DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.1:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-kiwisolver>=1.0.1:../../math/py-kiwisolver
+DEPENDS+=	${PYPKGPREFIX}-pytz>=2008b:../../time/py-pytz
+DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.2.0:../../devel/py-pyparsing
+DEPENDS+=	${PYPKGPREFIX}-six>=1.10:../../lang/py-six
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 .include "../../lang/python/pyversion.mk"
 .if "${PYPKGPREFIX}" == "py27"
