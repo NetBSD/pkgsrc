@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.114 2017/12/14 21:28:32 adam Exp $
+# $NetBSD: Makefile,v 1.115 2018/04/14 07:05:08 adam Exp $
 
-DISTNAME=	icu4c-60_2-src
+DISTNAME=	icu4c-61_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.icu-project.org/files/icu4c/${PKGVERSION_NOREV}/
@@ -127,7 +127,6 @@ SUBST_FILES.icu-config=	${DESTDIR}${PREFIX}/bin/icu-config
 SUBST_SED.icu-config+=	-e '/^ICUUC_FILE=/ s/libdir/bindir/'
 SUBST_SED.icu-config+=	-e 's/l$${LIBICU}/l$${ICUPREFIX}/g'
 SUBST_SED.icu-config+=	-e '/l$${ICUPREFIX}/ s/$${ICULIBSUFFIX_VERSION}//g'
-
 .endif
 
 .include "../../mk/bsd.pkg.mk"
