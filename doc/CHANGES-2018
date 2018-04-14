@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1801 2018/04/14 12:29:06 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1802 2018/04/14 13:06:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2542,3 +2542,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/py-kiwisolver version 1.0.1 [adam 2018-04-14]
 	Updated devel/py-gobject3-common to 3.28.2 [adam 2018-04-14]
 	Updated devel/py-gobject3 to 3.28.2 [adam 2018-04-14]
+	Updated graphics/py-matplotlib to 2.2.2 [adam 2018-04-14]
+	Updated net/nmap to 7.70nb1 [adam 2018-04-14]
+	Added net/ndiff version 7.70 [adam 2018-04-14]
+	Added net/zenmap version 7.70 [adam 2018-04-14]
