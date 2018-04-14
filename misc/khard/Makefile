@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2018/01/28 15:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2018/04/14 15:15:55 wiz Exp $
 
 DISTNAME=		khard-0.12.2
+PKGREVISION=		1
 CATEGORIES=		misc net
 MASTER_SITES=		${MASTER_SITE_PYPI:=k/khard/}
 
@@ -9,11 +10,13 @@ HOMEPAGE=		https://github.com/scheibler/khard
 COMMENT=		CLI contacts application built around CardDAV
 LICENSE=		gnu-gpl-v3
 
+#DEPENDS+=		${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
+#DEPENDS+=		${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=		${PYPKGPREFIX}-atomicwrites-[0-9]*:../../devel/py-atomicwrites
 DEPENDS+=		${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
+DEPENDS+=		${PYPKGPREFIX}-ruamel-yaml-[0-9]*:../../devel/py-ruamel-yaml
+DEPENDS+=		${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 DEPENDS+=		${PYPKGPREFIX}-vobject>=0.9.4:../../textproc/py-vobject
-DEPENDS+=		${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
-DEPENDS+=		${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # does not support python-2.x any longer
 
