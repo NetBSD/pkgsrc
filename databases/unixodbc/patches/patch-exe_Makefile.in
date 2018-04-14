@@ -1,0 +1,22 @@
+$NetBSD: patch-exe_Makefile.in,v 1.1 2018/04/14 08:26:34 adam Exp $
+
+Do not depend on GNU sed.
+
+--- exe/Makefile.in.orig	2018-04-14 07:58:07.000000000 +0000
++++ exe/Makefile.in
+@@ -749,9 +749,12 @@ uninstall-am: uninstall-binPROGRAMS
+ 
+ 
+ all-am:
+-	@sed -i -e "s![@]ODBC_ULEN[@]!`$(CURDIR)/odbc_config$(EXEEXT) --ulen`!" \
+-		-e "s![@]ODBC_CFLAGS[@]!`$(CURDIR)/odbc_config$(EXEEXT) --cflags | sed 's/ -I.*//'`!" \
+-		$(top_builddir)/DriverManager/odbc.pc
++	@sed "s![@]ODBC_ULEN[@]!`$(CURDIR)/odbc_config$(EXEEXT) --ulen`!" \
++		$(top_builddir)/DriverManager/odbc.pc > $(CURDIR)/odbc.pc.tmp
++	@mv $(CURDIR)/odbc.pc.tmp $(top_builddir)/DriverManager/odbc.pc
++	@sed "s![@]ODBC_CFLAGS[@]!`$(CURDIR)/odbc_config$(EXEEXT) --cflags | sed 's/ -I.*//'`!" \
++		$(top_builddir)/DriverManager/odbc.pc > $(CURDIR)/odbc.pc.tmp
++	@mv $(CURDIR)/odbc.pc.tmp $(top_builddir)/DriverManager/odbc.pc
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
