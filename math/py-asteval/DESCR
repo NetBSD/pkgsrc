@@ -1,0 +1,5 @@
+ASTEVAL is a safe(ish) evaluator of Python expressions and statements, using
+Python's ast module. The idea is to provide a simple, safe, and robust
+miniature mathematical language that can handle user-input. The emphasis here
+is on mathematical expressions, and so many functions from numpy are imported
+and used if available.
