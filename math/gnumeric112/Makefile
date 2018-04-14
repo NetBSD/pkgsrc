@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2018/03/12 11:17:02 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2018/04/14 12:24:31 adam Exp $
 
 DISTNAME=	gnumeric-1.12.38
 PKGREVISION=	1
@@ -12,6 +12,7 @@ COMMENT=	Spreadsheet program from the GNOME project
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config yacc
 USE_LIBTOOL=		yes
@@ -31,7 +32,6 @@ CONFIGURE_ARGS+=	--with-python
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.12.9
 .include "../../lang/python/application.mk"
-.include "../../devel/py-gobject3/buildlink3.mk"
 
 #CONFIGURE_ARGS+=	--with-gnome
 
@@ -54,5 +54,4 @@ BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.4.12
 BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.8.7
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-
 .include "../../mk/bsd.pkg.mk"
