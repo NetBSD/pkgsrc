@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2018/04/14 13:04:33 adam Exp $
+bin/ndiff
+${PYSITELIB}/ndiff.py
+${PYSITELIB}/ndiff.pyc
+${PYSITELIB}/ndiff.pyo
+man/man1/ndiff.1

@@ -1,0 +1,2 @@
+Ndiff is a tool to aid in the comparison of Nmap scans. It takes two Nmap XML
+output files and prints the differences between them.
