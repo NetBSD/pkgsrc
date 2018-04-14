@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2018/04/14 13:04:33 adam Exp $
+
+SHA1 (nmap-7.70.tar.bz2) = 71057361a0953bba5967dc0385de77f3eed792de
+RMD160 (nmap-7.70.tar.bz2) = 39b176e3b515bb5bf95503e3cb431a0dcd9e97ed
+SHA512 (nmap-7.70.tar.bz2) = 084c148b022ff6550e269d976d0077f7932a10e2ef218236fe13aa3a70b4eb6506df03329868fc68cb3ce78e4360b200f5a7a491d3145028fed679ef1c9ecae5
+Size (nmap-7.70.tar.bz2) = 10467371 bytes
+SHA1 (patch-zenmapCore_Paths.py) = 55ccc83a8f7dd302e4b0ffc1df0837ff651ba913
