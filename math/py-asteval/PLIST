@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2018/04/14 05:31:08 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/asteval/__init__.py
+${PYSITELIB}/asteval/__init__.pyc
+${PYSITELIB}/asteval/__init__.pyo
+${PYSITELIB}/asteval/_version.py
+${PYSITELIB}/asteval/_version.pyc
+${PYSITELIB}/asteval/_version.pyo
+${PYSITELIB}/asteval/asteval.py
+${PYSITELIB}/asteval/asteval.pyc
+${PYSITELIB}/asteval/asteval.pyo
+${PYSITELIB}/asteval/astutils.py
+${PYSITELIB}/asteval/astutils.pyc
+${PYSITELIB}/asteval/astutils.pyo
