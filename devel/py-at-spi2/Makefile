@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/08/25 12:33:55 prlw1 Exp $
+# $NetBSD: Makefile,v 1.22 2018/04/14 12:24:31 adam Exp $
 
 DISTNAME=	pyatspi-2.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyatspi/at-spi2/}
@@ -14,6 +14,7 @@ LICENSE=	gnu-lgpl-v2
 
 DEPENDS+=	at-spi2-core>=2.3.90:../../devel/at-spi2-core
 DEPENDS+=	at-spi2-atk-[0-9]*:../../devel/at-spi2-atk
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
@@ -25,8 +26,5 @@ CONFLICTS=	${PYPKGPREFIX}-at-spi-[0-9]*
 
 CHECK_PORTABILITY_SKIP=	config/test-driver
 
-.include "../../devel/py-gobject3/buildlink3.mk"
-
-.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
