@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2017/11/25 23:54:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/04/14 12:27:35 adam Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/gi/__init__.py
 ${PYSITELIB}/gi/__init__.pyc
 ${PYSITELIB}/gi/__init__.pyo
@@ -13,6 +14,9 @@ ${PYSITELIB}/gi/_gi_cairo.la
 ${PYSITELIB}/gi/_option.py
 ${PYSITELIB}/gi/_option.pyc
 ${PYSITELIB}/gi/_option.pyo
+${PYSITELIB}/gi/_ossighelper.py
+${PYSITELIB}/gi/_ossighelper.pyc
+${PYSITELIB}/gi/_ossighelper.pyo
 ${PYSITELIB}/gi/_propertyhelper.py
 ${PYSITELIB}/gi/_propertyhelper.pyc
 ${PYSITELIB}/gi/_propertyhelper.pyo
@@ -64,7 +68,6 @@ ${PYSITELIB}/gi/repository/__init__.pyo
 ${PYSITELIB}/gi/types.py
 ${PYSITELIB}/gi/types.pyc
 ${PYSITELIB}/gi/types.pyo
-${PYSITELIB}/pygobject-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info
 ${PYSITELIB}/pygtkcompat/__init__.py
 ${PYSITELIB}/pygtkcompat/__init__.pyc
 ${PYSITELIB}/pygtkcompat/__init__.pyo
