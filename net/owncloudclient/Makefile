@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2018/03/12 11:17:22 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2018/04/14 07:34:36 adam Exp $
 
 DISTNAME=	owncloudclient-2.2.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	https://download.owncloud.com/desktop/stable/
 EXTRACT_SUFX=	.tar.xz

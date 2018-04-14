@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2017/11/30 16:45:42 adam Exp $
+# $NetBSD: Makefile,v 1.11 2018/04/14 07:34:45 adam Exp $
 
 DISTNAME=	hyena-0.5
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	x11 devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/hyena/0.5/}
 EXTRACT_SUFX=	.tar.bz2
