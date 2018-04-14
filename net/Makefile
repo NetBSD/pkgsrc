@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1208 2018/03/13 16:05:18 taca Exp $
+# $NetBSD: Makefile,v 1.1209 2018/04/14 13:05:46 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -394,6 +394,7 @@ SUBDIR+=	nasd
 SUBDIR+=	nbtscan
 SUBDIR+=	ncdc
 SUBDIR+=	ncftp3
+SUBDIR+=	ndiff
 SUBDIR+=	ndpi
 SUBDIR+=	nemesis
 SUBDIR+=	net-snmp
@@ -919,6 +920,7 @@ SUBDIR+=	yaz
 SUBDIR+=	youtube-dl
 SUBDIR+=	ytalk
 SUBDIR+=	ywho
+SUBDIR+=	zenmap
 SUBDIR+=	zeroconf-ioslave
 SUBDIR+=	zeromq
 SUBDIR+=	zsync
