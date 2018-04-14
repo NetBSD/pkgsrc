@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2018/02/11 18:49:18 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2018/04/14 20:21:51 wiz Exp $
 
 DISTNAME=	vdirsyncer-0.16.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vdirsyncer/}
 
@@ -21,15 +22,24 @@ DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib-[0-9]*:../../security/py-requests-oau
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.4.0:../../devel/py-requests-toolbelt
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 # tests need DAV_SERVER and REMOTESTORAGE_SERVER environment variables set
 #BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 #BUILD_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 
 USE_LANGUAGES=	# none
-INSTALLATION_DIRS=	share/examples/${PKGBASE}
+INSTALLATION_DIRS=	share/examples/${PKGBASE} ${PKGMANDIR}/man1
 PLIST_SUBST+=	PKGBASE=${PKGBASE}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # not supported any longer
+
+USE_TOOLS+=	gmake
+
+post-build:
+	cd ${WRKSRC}/docs && ${SETENV} ${MAKE_ENV} PYTHONPATH=${WRKSRC} ${GMAKE} man SPHINXBUILD=sphinx-build${PYVERSSUFFIX}
+
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/docs/_build/man/vdirsyncer.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
