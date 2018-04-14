@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.311 2018/04/03 03:10:51 ryoon Exp $
+$NetBSD: distinfo,v 1.312 2018/04/14 07:05:14 ryoon Exp $
 
 SHA1 (firefox-59.0.2.tar.bz2) = 8fcf726b4d23716c7ff2b7ebc6527782b5bafe9c
 RMD160 (firefox-59.0.2.tar.bz2) = ff7ab2f9da93eda98de8aecb4563cfd176b896d9
 SHA512 (firefox-59.0.2.tar.bz2) = db8f55954df3af554e7a614eaece4aed995794dac6e2d828b2f9c175d8a6b89e109c26ced41a43df9ad24e01d079cadf13d16c6a9bdd1887bc9898d34408e8e6
 Size (firefox-59.0.2.tar.bz2) = 304965099 bytes
 SHA1 (patch-aa) = aca3d55271df926da793d7a0543f522d42e67f9d
+SHA1 (patch-browser_app_profile_firefox.js) = 1f9b9959aeffb41465c437a0fd747f265cdea6b4
 SHA1 (patch-build_gyp.mozbuild) = 77e0954a796337b24572674cd1d14d4a5cab8e6e
 SHA1 (patch-build_moz.configure_init.configure) = 5ec8da6b5aad7682a88b010a99e19f5d4403e6db
 SHA1 (patch-build_moz.configure_keyfiles.configure) = 5aeb43299430a7289f114945095ff7bdb723f726
