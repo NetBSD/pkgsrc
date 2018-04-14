@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/02/08 19:54:23 adam Exp $
+$NetBSD: distinfo,v 1.2 2018/04/14 08:29:27 adam Exp $
 
-SHA1 (pyobjc-framework-LocalAuthentication-4.1.tar.gz) = 4431862f352234be42eca92959dbeb34f1dc8d69
-RMD160 (pyobjc-framework-LocalAuthentication-4.1.tar.gz) = 7243393fbc8bc9559692cee0c0a762d06fc1f719
-SHA512 (pyobjc-framework-LocalAuthentication-4.1.tar.gz) = e6ec5793c34e359e42f420bb44235cffa68550b69d614de44b90307d23a59233da3a304c5064a6dc51b525e2f019a41217b2da08a18d1682399e47dcef0311f5
-Size (pyobjc-framework-LocalAuthentication-4.1.tar.gz) = 11312 bytes
+SHA1 (pyobjc-framework-LocalAuthentication-4.2.1.tar.gz) = 7b8b1cb6168d1e8cb72b4987ce89406e2e1bd60d
+RMD160 (pyobjc-framework-LocalAuthentication-4.2.1.tar.gz) = a98b6262561d3aa76c37df76e1b23fbf96d0e8b9
+SHA512 (pyobjc-framework-LocalAuthentication-4.2.1.tar.gz) = f60da74e7e3225cfbdf78918c288cc8e905b0df8c1c14d0444b41d329aaee8fa97ad9d00c71dcfe83440a7ad36afc92298ef436452cf4085a9c8c41983941549
+Size (pyobjc-framework-LocalAuthentication-4.2.1.tar.gz) = 11376 bytes

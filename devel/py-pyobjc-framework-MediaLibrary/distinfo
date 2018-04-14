@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/02/08 19:54:23 adam Exp $
+$NetBSD: distinfo,v 1.2 2018/04/14 08:29:27 adam Exp $
 
-SHA1 (pyobjc-framework-MediaLibrary-4.1.tar.gz) = 78ae02cc6bad191cff8e3276a4ac49fc36a080c0
-RMD160 (pyobjc-framework-MediaLibrary-4.1.tar.gz) = 5a2396ba1d15bcf36c6181f1fddd74b27ce5c9be
-SHA512 (pyobjc-framework-MediaLibrary-4.1.tar.gz) = 8bff53c5a8c2f3b91f7ce75d86b0da48407c0c0c628cfb3ce2e1a54ebd916f1161440f4f3e3236de418d6299d0594bec7bf4b85eab3d998118af4b898421e07b
-Size (pyobjc-framework-MediaLibrary-4.1.tar.gz) = 12349 bytes
+SHA1 (pyobjc-framework-MediaLibrary-4.2.1.tar.gz) = 16dae17f1d61eee9a3010d024b284f56e29a887a
+RMD160 (pyobjc-framework-MediaLibrary-4.2.1.tar.gz) = 1b7ec3fe34ff20e8f05d740dbdda517ae7f9b10a
+SHA512 (pyobjc-framework-MediaLibrary-4.2.1.tar.gz) = bb3b77853a2a83c6020127bf25ca2f6a5d0a757c36ab182bc7cab5f4ec15da9a9f887ebc1e0b15507bd737973e686cfb570c8a990eb053b6c7464edff6bf8657
+Size (pyobjc-framework-MediaLibrary-4.2.1.tar.gz) = 12581 bytes
