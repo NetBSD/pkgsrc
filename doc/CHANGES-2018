@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1794 2018/04/14 07:36:50 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1795 2018/04/14 08:30:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2526,3 +2526,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/git-base to 2.17.0nb1 [adam 2018-04-14]
 	Updated www/firefox to 59.0.2nb2 [ryoon 2018-04-14]
 	Updated textproc/icu to 61.1 [adam 2018-04-14]
+	Updated databases/unixodbc to 2.3.6 [adam 2018-04-14]
+	Updated devel/py-pyobjc to 4.2.1 [adam 2018-04-14]
