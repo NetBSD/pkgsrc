@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2017/12/22 12:21:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2018/04/14 12:52:56 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -19,12 +19,17 @@ ${PYSITELIB}/matplotlib/_cm.pyo
 ${PYSITELIB}/matplotlib/_cm_listed.py
 ${PYSITELIB}/matplotlib/_cm_listed.pyc
 ${PYSITELIB}/matplotlib/_cm_listed.pyo
-${PYSITELIB}/matplotlib/_cntr.so
 ${PYSITELIB}/matplotlib/_color_data.py
 ${PYSITELIB}/matplotlib/_color_data.pyc
 ${PYSITELIB}/matplotlib/_color_data.pyo
+${PYSITELIB}/matplotlib/_constrained_layout.py
+${PYSITELIB}/matplotlib/_constrained_layout.pyc
+${PYSITELIB}/matplotlib/_constrained_layout.pyo
 ${PYSITELIB}/matplotlib/_contour.so
 ${PYSITELIB}/matplotlib/_image.so
+${PYSITELIB}/matplotlib/_layoutbox.py
+${PYSITELIB}/matplotlib/_layoutbox.pyc
+${PYSITELIB}/matplotlib/_layoutbox.pyo
 ${PYSITELIB}/matplotlib/_mathtext_data.py
 ${PYSITELIB}/matplotlib/_mathtext_data.pyc
 ${PYSITELIB}/matplotlib/_mathtext_data.pyo
@@ -75,6 +80,12 @@ ${PYSITELIB}/matplotlib/backends/__init__.py
 ${PYSITELIB}/matplotlib/backends/__init__.pyc
 ${PYSITELIB}/matplotlib/backends/__init__.pyo
 ${PYSITELIB}/matplotlib/backends/_backend_agg.so
+${PYSITELIB}/matplotlib/backends/_backend_tk.py
+${PYSITELIB}/matplotlib/backends/_backend_tk.pyc
+${PYSITELIB}/matplotlib/backends/_backend_tk.pyo
+${PYSITELIB}/matplotlib/backends/_gtk3_compat.py
+${PYSITELIB}/matplotlib/backends/_gtk3_compat.pyc
+${PYSITELIB}/matplotlib/backends/_gtk3_compat.pyo
 ${PYSITELIB}/matplotlib/backends/backend_agg.py
 ${PYSITELIB}/matplotlib/backends/backend_agg.pyc
 ${PYSITELIB}/matplotlib/backends/backend_agg.pyo
@@ -126,12 +137,18 @@ ${PYSITELIB}/matplotlib/backends/backend_qt4.pyo
 ${PYSITELIB}/matplotlib/backends/backend_qt4agg.py
 ${PYSITELIB}/matplotlib/backends/backend_qt4agg.pyc
 ${PYSITELIB}/matplotlib/backends/backend_qt4agg.pyo
+${PYSITELIB}/matplotlib/backends/backend_qt4cairo.py
+${PYSITELIB}/matplotlib/backends/backend_qt4cairo.pyc
+${PYSITELIB}/matplotlib/backends/backend_qt4cairo.pyo
 ${PYSITELIB}/matplotlib/backends/backend_qt5.py
 ${PYSITELIB}/matplotlib/backends/backend_qt5.pyc
 ${PYSITELIB}/matplotlib/backends/backend_qt5.pyo
 ${PYSITELIB}/matplotlib/backends/backend_qt5agg.py
 ${PYSITELIB}/matplotlib/backends/backend_qt5agg.pyc
 ${PYSITELIB}/matplotlib/backends/backend_qt5agg.pyo
+${PYSITELIB}/matplotlib/backends/backend_qt5cairo.py
+${PYSITELIB}/matplotlib/backends/backend_qt5cairo.pyc
+${PYSITELIB}/matplotlib/backends/backend_qt5cairo.pyo
 ${PYSITELIB}/matplotlib/backends/backend_svg.py
 ${PYSITELIB}/matplotlib/backends/backend_svg.pyc
 ${PYSITELIB}/matplotlib/backends/backend_svg.pyo
@@ -141,6 +158,9 @@ ${PYSITELIB}/matplotlib/backends/backend_template.pyo
 ${PYSITELIB}/matplotlib/backends/backend_tkagg.py
 ${PYSITELIB}/matplotlib/backends/backend_tkagg.pyc
 ${PYSITELIB}/matplotlib/backends/backend_tkagg.pyo
+${PYSITELIB}/matplotlib/backends/backend_tkcairo.py
+${PYSITELIB}/matplotlib/backends/backend_tkcairo.pyc
+${PYSITELIB}/matplotlib/backends/backend_tkcairo.pyo
 ${PYSITELIB}/matplotlib/backends/backend_webagg.py
 ${PYSITELIB}/matplotlib/backends/backend_webagg.pyc
 ${PYSITELIB}/matplotlib/backends/backend_webagg.pyo
@@ -153,6 +173,9 @@ ${PYSITELIB}/matplotlib/backends/backend_wx.pyo
 ${PYSITELIB}/matplotlib/backends/backend_wxagg.py
 ${PYSITELIB}/matplotlib/backends/backend_wxagg.pyc
 ${PYSITELIB}/matplotlib/backends/backend_wxagg.pyo
+${PYSITELIB}/matplotlib/backends/backend_wxcairo.py
+${PYSITELIB}/matplotlib/backends/backend_wxcairo.pyc
+${PYSITELIB}/matplotlib/backends/backend_wxcairo.pyo
 ${PYSITELIB}/matplotlib/backends/qt_compat.py
 ${PYSITELIB}/matplotlib/backends/qt_compat.pyc
 ${PYSITELIB}/matplotlib/backends/qt_compat.pyo
@@ -258,9 +281,6 @@ ${PYSITELIB}/matplotlib/dviread.pyo
 ${PYSITELIB}/matplotlib/figure.py
 ${PYSITELIB}/matplotlib/figure.pyc
 ${PYSITELIB}/matplotlib/figure.pyo
-${PYSITELIB}/matplotlib/finance.py
-${PYSITELIB}/matplotlib/finance.pyc
-${PYSITELIB}/matplotlib/finance.pyo
 ${PYSITELIB}/matplotlib/font_manager.py
 ${PYSITELIB}/matplotlib/font_manager.pyc
 ${PYSITELIB}/matplotlib/font_manager.pyo
@@ -497,6 +517,7 @@ ${PYSITELIB}/matplotlib/mpl-data/stylelib/seaborn-ticks.mplstyle
 ${PYSITELIB}/matplotlib/mpl-data/stylelib/seaborn-white.mplstyle
 ${PYSITELIB}/matplotlib/mpl-data/stylelib/seaborn-whitegrid.mplstyle
 ${PYSITELIB}/matplotlib/mpl-data/stylelib/seaborn.mplstyle
+${PYSITELIB}/matplotlib/mpl-data/stylelib/tableau-colorblind10.mplstyle
 ${PYSITELIB}/matplotlib/offsetbox.py
 ${PYSITELIB}/matplotlib/offsetbox.pyc
 ${PYSITELIB}/matplotlib/offsetbox.pyo
@@ -810,12 +831,6 @@ ${PYSITELIB}/mpl_toolkits/axisartist/grid_helper_curvelinear.pyo
 ${PYSITELIB}/mpl_toolkits/axisartist/parasite_axes.py
 ${PYSITELIB}/mpl_toolkits/axisartist/parasite_axes.pyc
 ${PYSITELIB}/mpl_toolkits/axisartist/parasite_axes.pyo
-${PYSITELIB}/mpl_toolkits/exceltools.py
-${PYSITELIB}/mpl_toolkits/exceltools.pyc
-${PYSITELIB}/mpl_toolkits/exceltools.pyo
-${PYSITELIB}/mpl_toolkits/gtktools.py
-${PYSITELIB}/mpl_toolkits/gtktools.pyc
-${PYSITELIB}/mpl_toolkits/gtktools.pyo
 ${PYSITELIB}/mpl_toolkits/mplot3d/__init__.py
 ${PYSITELIB}/mpl_toolkits/mplot3d/__init__.pyc
 ${PYSITELIB}/mpl_toolkits/mplot3d/__init__.pyo
