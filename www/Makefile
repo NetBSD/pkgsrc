@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1323 2018/04/12 15:44:35 minskim Exp $
+# $NetBSD: Makefile,v 1.1324 2018/04/14 09:39:51 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -710,7 +710,6 @@ SUBDIR+=	py-meinheld
 SUBDIR+=	py-meld3
 SUBDIR+=	py-mezzanine
 SUBDIR+=	py-mod_wsgi
-SUBDIR+=	py-mod_wsgi-metrics
 SUBDIR+=	py-model_mommy
 SUBDIR+=	py-moin
 SUBDIR+=	py-nbconvert
