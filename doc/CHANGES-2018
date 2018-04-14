@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1796 2018/04/14 08:43:46 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1797 2018/04/14 08:48:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2530,3 +2530,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-pyobjc to 4.2.1 [adam 2018-04-14]
 	Updated devel/py-py2app to 0.14 [adam 2018-04-14]
 	Updated devel/py-bcolz to 1.2.1 [adam 2018-04-14]
+	Updated devel/py-deprecation to 2.0.2 [adam 2018-04-14]
+	Updated www/py-cheroot to 6.2.2 [adam 2018-04-14]
