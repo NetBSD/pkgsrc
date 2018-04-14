@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2018/04/14 05:42:36 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2018/04/14 06:18:24 adam Exp $
 
 .include "../../devel/git/Makefile.common"
 
@@ -65,20 +65,11 @@ CONFIGURE_ENV+=		HOME=${PREFIX}
 CONFIGURE_ENV+=		gitexecdir=${GITCOREDIR}
 
 MAKE_FLAGS+=		INSTALL=${INSTALL:Q}
-
-.include "../../lang/perl5/buildlink3.mk"
-PERLLIBDIR_cmd=		${PERL5} -MConfig -wle 'print substr $$Config{installvendorlib}, 1 + length $$Config{vendorprefixexp}'
-MAKE_ENV+=		PERLLIBDIR=${PERLLIBDIR_cmd:sh}
+MAKE_ENV+=		PERLLIBDIR=${PERL5_INSTALLVENDORLIB}
 
 GIT_TEMPLATE_INSTDIR=	${EGDIR}/${GIT_TEMPLATEDIR}
 MAKE_ENV+=		GIT_TEMPLATE_INSTDIR=${GIT_TEMPLATE_INSTDIR}
 MESSAGE_SUBST+=		GIT_TEMPLATE_INSTDIR=${GIT_TEMPLATE_INSTDIR}
-
-SUBST_CLASSES+=		fix-paths
-SUBST_FILES.fix-paths=	templates/hooks--post-receive.sample
-SUBST_MESSAGE.fix-paths=Fixing hard-coded pathnames
-SUBST_STAGE.fix-paths=	pre-build
-SUBST_VARS.fix-paths=	PREFIX
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -116,6 +107,8 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../lang/perl5/vars.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
