@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.10 2017/12/17 15:38:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/04/14 09:34:15 adam Exp $
 bin/mod_wsgi-express${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/mod_wsgi/__init__.py
+${PYSITELIB}/mod_wsgi/__init__.pyc
+${PYSITELIB}/mod_wsgi/__init__.pyo
 ${PYSITELIB}/mod_wsgi/docs/.buildinfo
 ${PYSITELIB}/mod_wsgi/docs/__init__.py
 ${PYSITELIB}/mod_wsgi/docs/__init__.pyc
@@ -130,6 +134,11 @@ ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.5.6.rst.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.5.7.rst.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.5.8.rst.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.5.9.rst.txt
+${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.6.0.rst.txt
+${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.6.1.rst.txt
+${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.6.2.rst.txt
+${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.6.3.rst.txt
+${PYSITELIB}/mod_wsgi/docs/_sources/release-notes/version-4.6.4.rst.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/reporting-bugs.rst.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/requirements.rst.txt
 ${PYSITELIB}/mod_wsgi/docs/_sources/security-issues.rst.txt
@@ -312,6 +321,11 @@ ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.5.6.html
 ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.5.7.html
 ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.5.8.html
 ${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.5.9.html
+${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.6.0.html
+${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.6.1.html
+${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.6.2.html
+${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.6.3.html
+${PYSITELIB}/mod_wsgi/docs/release-notes/version-4.6.4.html
 ${PYSITELIB}/mod_wsgi/docs/reporting-bugs.html
 ${PYSITELIB}/mod_wsgi/docs/requirements.html
 ${PYSITELIB}/mod_wsgi/docs/search.html
