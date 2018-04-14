@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.1 2018/04/11 19:39:35 adam Exp $
+$NetBSD: patch-Makefile,v 1.2 2018/04/14 06:18:24 adam Exp $
 
 Do not override compiler/linker flags.
 Provide proper path for Perl module.
@@ -21,7 +21,7 @@ Fix tar operations.
  sharedir = $(prefix)/share
  gitwebdir = $(sharedir)/gitweb
 -perllibdir = $(sharedir)/perl5
-+perllibdir = $(prefix)${PERLLIBDIR}
++perllibdir = ${PERLLIBDIR}
  localedir = $(sharedir)/locale
  template_dir = share/git-core/templates
  htmldir = $(prefix)/share/doc/git-doc
