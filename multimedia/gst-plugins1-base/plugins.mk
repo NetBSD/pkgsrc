@@ -1,10 +1,9 @@
-# $NetBSD: plugins.mk,v 1.4 2017/09/08 06:14:03 wiz Exp $
+# $NetBSD: plugins.mk,v 1.5 2018/04/15 09:40:05 adam Exp $
 #
 # This file is shared across the gst-plugins-{base,good} packages to
 # simplify their code.  It provides a framework to write simple packages
 # providing individual plugins; note that these packages must not include
 # this file, but use the correct Makefile.common instead.
-#
 
 DISTNAME=	gst-plugins-${GST_PLUGINS1_TYPE}-${GST_PLUGINS1_VER}
 PKGNAME=	${DISTNAME:S/plugins/plugins1/}
@@ -15,6 +14,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gstreamer.freedesktop.org/
 COMMENT=	Open source multimedia framework -
+LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../multimedia/gst-plugins1-${GST_PLUGINS1_TYPE}/distinfo
 FILESDIR=	${.CURDIR}/../../multimedia/gst-plugins1-${GST_PLUGINS1_TYPE}/files
