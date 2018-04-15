@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/09/12 09:32:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/04/15 09:40:05 adam Exp $
 bin/gst-device-monitor-1.0
 bin/gst-discoverer-1.0
 bin/gst-play-1.0
@@ -268,6 +268,17 @@ share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gstreamer-tag.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gstreamer-video.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/home.png
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/index.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/ix03.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/ix04.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/ix05.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/ix06.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/ix07.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/ix08.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/ix09.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/ix10.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/ix11.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/ix12.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/ix13.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/left-insensitive.png
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/left.png
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/right-insensitive.png

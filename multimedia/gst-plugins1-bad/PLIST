@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2017/09/12 09:32:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/04/15 09:40:04 adam Exp $
 include/gstreamer-1.0/gst/allocators/badallocators.h
 include/gstreamer-1.0/gst/allocators/gstphysmemory.h
 include/gstreamer-1.0/gst/audio/gstaudioaggregator.h
@@ -334,7 +334,9 @@ share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-p
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-gaudieffects.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-geometrictransform.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-gsm.html
+share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-gtk.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-jpegformat.html
+share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-legacyrawparse.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-mms.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-modplug.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-mpeg2enc.html
@@ -347,7 +349,6 @@ share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-p
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-opencv.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-opengl.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-pcapparse.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-rawparse.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-rfbsrc.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-rtmp.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-sdpelem.html
