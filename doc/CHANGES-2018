@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1812 2018/04/15 01:24:45 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.1813 2018/04/15 07:38:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2559,3 +2559,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/R-blob version 1.1.1 [minskim 2018-04-15]
 	Added databases/SQLiteCpp version 2.2.0 [minskim 2018-04-15]
 	Updated devel/p5-Test-BDD-Cucumber to 0.54 [schmonz 2018-04-15]
+	Updated finance/gnucash-docs to 3.0 [wiz 2018-04-15]
