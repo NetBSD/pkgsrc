@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2018/04/05 16:10:04 bouyer Exp $
+$NetBSD: distinfo,v 1.4 2018/04/15 10:00:56 bouyer Exp $
 
 SHA1 (statusbar_pi-20180405-024822eb32a61f4ef4e52d4cb15bd1f4b86b2763.tar.gz) = 52191419c7957657c464866446f1c37b0edc0710
 RMD160 (statusbar_pi-20180405-024822eb32a61f4ef4e52d4cb15bd1f4b86b2763.tar.gz) = 19fe39ab310f453f5804bd9e5f976a9de5254ca0
 SHA512 (statusbar_pi-20180405-024822eb32a61f4ef4e52d4cb15bd1f4b86b2763.tar.gz) = f8dff4363982a93e56dcd70add80eaefda0d7f7ca806fdb021e73144896ddbcdbe5354d83a0c0f18517821c698ef7214de36ea2cfc99c97a397edc08640c63b0
 Size (statusbar_pi-20180405-024822eb32a61f4ef4e52d4cb15bd1f4b86b2763.tar.gz) = 218490 bytes
 SHA1 (patch-cmake_PluginConfigure.cmake) = 5b51256240f1355ebd746ea0a4c0492a2ac935e6
+SHA1 (patch-src_statusbar_pi.cpp) = a3f3904e212b1a79f964b61d9f457d11ac624b78
