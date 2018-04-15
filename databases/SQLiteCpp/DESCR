@@ -1,0 +1,7 @@
+SQLiteC++ offers an encapsulation arround the native C APIs of SQLite,
+with a few intuitive and well documented C++ class.  It is designed
+using the Resource Acquisition Is Initialization (RAII) idom, and
+throwing exceptions in case of SQLite errors (exept in destructors,
+where assert() are used instead).  Each SQLiteC++ object must be
+constructed with a valid SQLite database connection, and then is
+always valid until destroyed.
