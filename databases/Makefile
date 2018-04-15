@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.559 2018/04/13 08:04:14 fhajny Exp $
+# $NetBSD: Makefile,v 1.560 2018/04/15 01:05:51 minskim Exp $
 
 COMMENT=	Databases
 
 SUBDIR+=	R-RSQLite
 SUBDIR+=	R-sqldf
+SUBDIR+=	SQLiteCpp
 SUBDIR+=	abook
 SUBDIR+=	adodb
 SUBDIR+=	apache-cassandra
