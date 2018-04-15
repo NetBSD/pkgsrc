@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1811 2018/04/15 01:05:56 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1812 2018/04/15 01:24:45 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2558,3 +2558,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/mutt to 1.9.5 [tron 2018-04-14]
 	Added devel/R-blob version 1.1.1 [minskim 2018-04-15]
 	Added databases/SQLiteCpp version 2.2.0 [minskim 2018-04-15]
+	Updated devel/p5-Test-BDD-Cucumber to 0.54 [schmonz 2018-04-15]
