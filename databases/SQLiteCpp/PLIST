@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2018/04/15 01:05:48 minskim Exp $
+include/SQLiteCpp/Assertion.h
+include/SQLiteCpp/Backup.h
+include/SQLiteCpp/Column.h
+include/SQLiteCpp/Database.h
+include/SQLiteCpp/Exception.h
+include/SQLiteCpp/SQLiteCpp.h
+include/SQLiteCpp/Statement.h
+include/SQLiteCpp/Transaction.h
+include/SQLiteCpp/VariadicBind.h
+lib/cmake/SQLiteCpp/SQLiteCppConfig-noconfig.cmake
+lib/cmake/SQLiteCpp/SQLiteCppConfig.cmake
+lib/libSQLiteCpp.a
+share/doc/SQLiteCpp/CHANGELOG.txt
+share/doc/SQLiteCpp/LICENSE.txt
+share/doc/SQLiteCpp/README.md
+share/doc/SQLiteCpp/TODO.txt
