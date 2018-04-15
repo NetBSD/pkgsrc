@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2017/12/18 21:25:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2018/04/15 07:38:42 wiz Exp $
 share/gnome/help/gnucash-guide/C/appendixa.xml
 share/gnome/help/gnucash-guide/C/appendixb.xml
 share/gnome/help/gnucash-guide/C/appendixc.xml
@@ -1243,6 +1243,7 @@ share/gnome/help/gnucash-help/C/figures/Help_Pref_DateTime.png
 share/gnome/help/gnucash-help/C/figures/Help_Pref_General.png
 share/gnome/help/gnucash-help/C/figures/Help_Pref_OnlineBanking.png
 share/gnome/help/gnucash-help/C/figures/Help_Pref_Printing.png
+share/gnome/help/gnucash-help/C/figures/Help_Pref_Quotes.png
 share/gnome/help/gnucash-help/C/figures/Help_Pref_Register.png
 share/gnome/help/gnucash-help/C/figures/Help_Pref_RegisterDefaults.png
 share/gnome/help/gnucash-help/C/figures/Help_Pref_Reports.png
