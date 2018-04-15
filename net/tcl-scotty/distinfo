@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2018/04/13 19:10:49 he Exp $
+$NetBSD: distinfo,v 1.26 2018/04/15 20:05:46 hauke Exp $
 
 SHA1 (scotty-2.1.11.tar.gz) = 819011f908c57e4591d6f50e51677c01eb55dc13
 RMD160 (scotty-2.1.11.tar.gz) = 3b4d45f3db73f05b49a46017bf2ffed6d6464b00
@@ -42,7 +42,7 @@ SHA1 (patch-tnm_snmp_tnmSnmpSend.c) = 46c2b0f7c3d5f6392df96cba55b831ef763deeb7
 SHA1 (patch-tnm_snmp_tnmSnmpTcl.c) = 565d982a4e24e8033c4a16895ff503a3159a1a33
 SHA1 (patch-tnm_snmp_tnmSnmpUtil.c) = 9441f16f0be0f15689e9e628c3e96fc0c10bc942
 SHA1 (patch-unix-Makefile.in) = 9a00bc8affad69035d7bc78955d30e4f2f8fc991
-SHA1 (patch-unix_configure) = 6d2b4b522ba802d07c0bc8346330070ae7e0edea
+SHA1 (patch-unix_configure) = e214b77c1e5fe7c83fe59d9308a3913b5c5042ca
 SHA1 (patch-unix_configure.in) = 0906c2bb19453484d05a3fec158e0917da78368e
 SHA1 (patch-unix_scotty.c) = fdb6a9bb414566ddb5317a3ebc60d2c305f611a7
 SHA1 (patch-unix_tnmUnixIcmp.c) = 86be48d8da9d77098662e7d2515193515a028e96
