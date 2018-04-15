@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1814 2018/04/15 07:43:31 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1815 2018/04/15 09:44:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2561,3 +2561,10 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Test-BDD-Cucumber to 0.54 [schmonz 2018-04-15]
 	Updated finance/gnucash-docs to 3.0 [wiz 2018-04-15]
 	Updated mail/imap-uw to 2007fnb6 [wiz 2018-04-15]
+	Updated math/gnumeric112 to 1.12.39 [adam 2018-04-15]
+	Updated multimedia/gstreamer1 to 1.12.5 [adam 2018-04-15]
+	Updated multimedia/py-gstreamer1 to 1.12.5 [adam 2018-04-15]
+	Updated multimedia/gst-plugins1-good to 1.12.5 [adam 2018-04-15]
+	Updated multimedia/gst-plugins1-bad to 1.12.5 [adam 2018-04-15]
+	Updated multimedia/gst-plugins1-ugly to 1.12.5 [adam 2018-04-15]
+	Updated multimedia/gst-plugins1-libav to 1.12.5 [adam 2018-04-15]
