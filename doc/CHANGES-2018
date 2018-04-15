@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1813 2018/04/15 07:38:53 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1814 2018/04/15 07:43:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2560,3 +2560,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added databases/SQLiteCpp version 2.2.0 [minskim 2018-04-15]
 	Updated devel/p5-Test-BDD-Cucumber to 0.54 [schmonz 2018-04-15]
 	Updated finance/gnucash-docs to 3.0 [wiz 2018-04-15]
+	Updated mail/imap-uw to 2007fnb6 [wiz 2018-04-15]
