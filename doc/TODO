@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18233 2018/04/14 12:29:06 adam Exp $
+$NetBSD: TODO,v 1.18234 2018/04/15 09:40:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -628,6 +628,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fetchyahoo-2.14.0
 	o ffmpegthumbnailer-2.2.0
 	o filerunner-14.06.18.10
+	o filezilla-3.32.0
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o flashplayer-0.4.13
@@ -667,8 +668,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gcloud-golang-metadata-0.12.0
 	o gcombust-0.1.55
 	o gcompris-15.02
-	o gdbus-codegen-2.56.0
+	o gdbus-codegen-2.56.1
 	o gdeskcal-1.01
+	o gdk-pixbuf2-2.36.12
 	o gdl-3.16.0
 	o gdm-2.32.2 [GNOME 2.32]
 	o gdm-3.0.3
@@ -692,8 +694,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.5 [wip]
 	o glib-networking-2.56.0 [needs glib2-2.56]
-	o glib2-2.56.0
-	o glib2-tools-2.56.0
+	o glib2-2.56.1
+	o glib2-tools-2.56.1
+	o glibmm-2.56.0
 	o gliv-1.9.7
 	o glom-1.14.2 [GNOME 2.26]
 	o glx-utils-8.3.0
@@ -746,7 +749,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o go-grpc-1.5.2
 	o gob-2.0.19
 	o gobby-0.5.0
-	o gobject-introspection-1.56.0
+	o gobject-introspection-1.56.1
 	o goffice0.10-0.10.39
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
@@ -1051,6 +1054,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o minivmac-3.2.3
 	o miredo-1.2.4
 	o mit-scheme-bin-9.2
+	o mm-common-0.9.12
 	o modular-xorg-xquartz-1.18.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.5
@@ -1109,6 +1113,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o olvwm-4.5
 	o oo2c-2.1.7
 	o opal-3.16.2
+	o opencolorio-1.1.0
 	o opencsg-1.4.0
 	o openh323-1.19.1
 	o openmortal-0.7.1
@@ -1137,7 +1142,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pam-saml-1.5
 	o pam-yubico-2.21
 	o pan-0.140
-	o pango-1.42.0
+	o pango-1.42.1
 	o paragui-1.1.8
 	o pari-2.9.4
 	o parrot-7.11.0
@@ -1235,6 +1240,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-hgview-1.9.0
 	o py-hsm-1.1.1
 	o py-input-pad-1.4.2
+	o py-ipaddress-1.0.21
 	o py-keybinder-0.3.1
 	o py-mercurial-4.5.3
 	o py-musicbrainz-0.7.4
@@ -1242,9 +1248,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
 	o py-pendrell-0.3.7
+	o py-pretend-1.0.9
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
 	o py-pygit2-0.27.0
+	o py-setuptools_scm-2.0.0
 	o py-simpletal-5.1
 	o py-smb-1.1.17
 	o py-spf-2.0.12t
@@ -1413,7 +1421,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tfmxplay-1.1.6
 	o thaixfonts-1.2.7
 	o thttpd-2.27
-	o thunderbird-enigmail-2.0.1
+	o thunderbird-enigmail-2.0.2
 	o tig-2.2
 	o tightvnc-2.7.10
 	o tile-0.7.4
@@ -1451,7 +1459,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o userppp-030706
 	o userspace-rcu-0.9.1
 	o utilisp-1.14
-	o vala-0.40.2
+	o vala-0.40.3
 	o valgrind-3.13
 	o varnish-6.0
 	o varnish-5.1.3
@@ -1462,8 +1470,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vfu-4.09
 	o vicq-0.4.2
 	o vile-9.8q
-	o vim-8.0.1674
-	o vim-share-8.0.1674
+	o vim-8.0.1714
+	o vim-share-8.0.1714
 	o vinagre-3.16.1
 	o vino-3.16.0
 	o virt-manager-1.3.2
@@ -1482,7 +1490,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o warzone2100-2.3.8
 	o wcalc-2.4
 	o webalizer-2.23.05
-	o webkit-gtk-2.20.0
+	o webkit-gtk-2.20.1
 	o websvn-2.3.3
 	o weewm-0.01
 	o wgetpaste-2.26
