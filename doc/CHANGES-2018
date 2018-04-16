@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1844 2018/04/16 21:30:15 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1845 2018/04/16 21:33:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2597,3 +2597,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated chat/pidgin to 2.13.0 [wiz 2018-04-16]
 	Updated textproc/pugixml to 1.9 [wiz 2018-04-16]
 	Updated net/syncthing to 0.14.46 [wiz 2018-04-16]
+	Updated devel/talloc to 2.1.13 [wiz 2018-04-16]
