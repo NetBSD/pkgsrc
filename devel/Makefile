@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2661 2018/04/15 00:35:07 minskim Exp $
+# $NetBSD: Makefile,v 1.2662 2018/04/16 15:54:55 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -17,6 +17,7 @@ SUBDIR+=	R-IRkernel
 SUBDIR+=	R-R6
 SUBDIR+=	R-Rcpp
 SUBDIR+=	R-assertthat
+SUBDIR+=	R-bindr
 SUBDIR+=	R-bit
 SUBDIR+=	R-bit64
 SUBDIR+=	R-blob
