@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2018/03/12 11:15:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2018/04/16 14:33:58 wiz Exp $
 
 BUILDLINK_TREE+=	deforaos-panel
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	deforaos-panel
 DEFORAOS_PANEL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.deforaos-panel+=	deforaos-panel>=0.3.6
-BUILDLINK_ABI_DEPENDS.deforaos-panel?=	deforaos-panel>=0.3.6nb5
+BUILDLINK_ABI_DEPENDS.deforaos-panel?=	deforaos-panel>=0.3.6nb7
 BUILDLINK_PKGSRCDIR.deforaos-panel?=	../../x11/deforaos-panel
 
 .include "../../devel/deforaos-libsystem/buildlink3.mk"
