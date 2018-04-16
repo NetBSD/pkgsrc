@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2018/01/28 15:33:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/04/16 13:19:42 wiz Exp $
 bin/notmuch
 include/notmuch.h
 lib/libnotmuch.so
 lib/libnotmuch.so.5
-lib/libnotmuch.so.5.0.0
+lib/libnotmuch.so.5.1.0
 man/man1/notmuch-address.1
 man/man1/notmuch-compact.1
 man/man1/notmuch-config.1
