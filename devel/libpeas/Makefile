@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2018/04/16 14:33:48 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2018/04/16 20:48:49 adam Exp $
 
 DISTNAME=	libpeas-1.20.0
 PKGREVISION=	3
@@ -33,6 +33,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.39.0
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/py-gobject3-common/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../x11/gtk3/buildlink3.mk"
