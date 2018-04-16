@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.86 2018/03/12 11:16:19 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2018/04/16 13:15:46 wiz Exp $
 
-DISTNAME=		meld-3.18.0
-PKGREVISION=		2
+DISTNAME=		meld-3.19.0
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/meld/3.18/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/meld/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		wiz@NetBSD.org
@@ -33,8 +32,8 @@ SUBST_MESSAGE.man=	Fixing man page installation path.
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.36.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
-BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.14
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.20
 .include "../../x11/gtk3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtksourceview3+=	gtksourceview3>=3.14
+BUILDLINK_API_DEPENDS.gtksourceview3+=	gtksourceview3>=3.20
 .include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
