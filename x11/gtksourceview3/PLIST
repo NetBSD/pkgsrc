@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2018/01/10 10:01:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/04/16 12:57:56 wiz Exp $
 include/gtksourceview-3.0/gtksourceview/completion-providers/words/gtksourcecompletionwords.h
 include/gtksourceview-3.0/gtksourceview/gtksource.h
 include/gtksourceview-3.0/gtksourceview/gtksourceautocleanups.h
@@ -156,6 +156,7 @@ share/gtksourceview-3.0/language-specs/gdb-log.lang
 share/gtksourceview-3.0/language-specs/genie.lang
 share/gtksourceview-3.0/language-specs/glsl.lang
 share/gtksourceview-3.0/language-specs/go.lang
+share/gtksourceview-3.0/language-specs/groovy.lang
 share/gtksourceview-3.0/language-specs/gtk-doc.lang
 share/gtksourceview-3.0/language-specs/gtkrc.lang
 share/gtksourceview-3.0/language-specs/haddock.lang
@@ -231,8 +232,10 @@ share/gtksourceview-3.0/language-specs/swift.lang
 share/gtksourceview-3.0/language-specs/systemverilog.lang
 share/gtksourceview-3.0/language-specs/t2t.lang
 share/gtksourceview-3.0/language-specs/tcl.lang
+share/gtksourceview-3.0/language-specs/tera.lang
 share/gtksourceview-3.0/language-specs/texinfo.lang
 share/gtksourceview-3.0/language-specs/thrift.lang
+share/gtksourceview-3.0/language-specs/toml.lang
 share/gtksourceview-3.0/language-specs/vala.lang
 share/gtksourceview-3.0/language-specs/vbnet.lang
 share/gtksourceview-3.0/language-specs/verilog.lang
