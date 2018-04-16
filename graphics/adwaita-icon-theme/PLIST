@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/01/10 09:13:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/04/16 11:46:55 wiz Exp $
 share/icons/Adwaita/16x16/actions/action-unavailable-symbolic.symbolic.png
 share/icons/Adwaita/16x16/actions/address-book-new-symbolic.symbolic.png
 share/icons/Adwaita/16x16/actions/address-book-new.png
@@ -12,6 +12,7 @@ share/icons/Adwaita/16x16/actions/call-start-symbolic.symbolic.png
 share/icons/Adwaita/16x16/actions/call-start.png
 share/icons/Adwaita/16x16/actions/call-stop-symbolic.symbolic.png
 share/icons/Adwaita/16x16/actions/call-stop.png
+share/icons/Adwaita/16x16/actions/camera-switch-symbolic.symbolic.png
 share/icons/Adwaita/16x16/actions/color-select-symbolic.symbolic.png
 share/icons/Adwaita/16x16/actions/contact-new-symbolic.symbolic.png
 share/icons/Adwaita/16x16/actions/contact-new.png
@@ -376,6 +377,11 @@ share/icons/Adwaita/16x16/devices/audio-input-microphone-symbolic.symbolic.png
 share/icons/Adwaita/16x16/devices/audio-input-microphone.png
 share/icons/Adwaita/16x16/devices/audio-speakers-symbolic.symbolic.png
 share/icons/Adwaita/16x16/devices/audio-speakers.png
+share/icons/Adwaita/16x16/devices/audio-volume-high-symbolic.symbolic.png
+share/icons/Adwaita/16x16/devices/audio-volume-low-symbolic.symbolic.png
+share/icons/Adwaita/16x16/devices/audio-volume-medium-symbolic.symbolic.png
+share/icons/Adwaita/16x16/devices/audio-volume-muted-symbolic.symbolic.png
+share/icons/Adwaita/16x16/devices/audio-volume-overamplified-symbolic.symbolic.png
 share/icons/Adwaita/16x16/devices/battery-symbolic.symbolic.png
 share/icons/Adwaita/16x16/devices/battery.png
 share/icons/Adwaita/16x16/devices/camera-photo-symbolic.symbolic.png
@@ -619,13 +625,9 @@ share/icons/Adwaita/16x16/status/appointment-missed-symbolic.symbolic.png
 share/icons/Adwaita/16x16/status/appointment-missed.png
 share/icons/Adwaita/16x16/status/appointment-soon-symbolic.symbolic.png
 share/icons/Adwaita/16x16/status/appointment-soon.png
-share/icons/Adwaita/16x16/status/audio-volume-high-symbolic.symbolic.png
 share/icons/Adwaita/16x16/status/audio-volume-high.png
-share/icons/Adwaita/16x16/status/audio-volume-low-symbolic.symbolic.png
 share/icons/Adwaita/16x16/status/audio-volume-low.png
-share/icons/Adwaita/16x16/status/audio-volume-medium-symbolic.symbolic.png
 share/icons/Adwaita/16x16/status/audio-volume-medium.png
-share/icons/Adwaita/16x16/status/audio-volume-muted-symbolic.symbolic.png
 share/icons/Adwaita/16x16/status/audio-volume-muted.png
 share/icons/Adwaita/16x16/status/avatar-default-symbolic.symbolic.png
 share/icons/Adwaita/16x16/status/avatar-default.png
@@ -747,6 +749,7 @@ share/icons/Adwaita/16x16/status/network-transmit-receive.png
 share/icons/Adwaita/16x16/status/network-transmit-symbolic.symbolic.png
 share/icons/Adwaita/16x16/status/network-transmit.png
 share/icons/Adwaita/16x16/status/network-vpn-acquiring-symbolic.symbolic.png
+share/icons/Adwaita/16x16/status/network-vpn-no-route-symbolic.symbolic.png
 share/icons/Adwaita/16x16/status/network-vpn-symbolic.symbolic.png
 share/icons/Adwaita/16x16/status/network-wired-acquiring-symbolic.symbolic.png
 share/icons/Adwaita/16x16/status/network-wired-disconnected-symbolic.symbolic.png
@@ -1239,6 +1242,7 @@ share/icons/Adwaita/24x24/actions/call-start-symbolic.symbolic.png
 share/icons/Adwaita/24x24/actions/call-start.png
 share/icons/Adwaita/24x24/actions/call-stop-symbolic.symbolic.png
 share/icons/Adwaita/24x24/actions/call-stop.png
+share/icons/Adwaita/24x24/actions/camera-switch-symbolic.symbolic.png
 share/icons/Adwaita/24x24/actions/color-select-symbolic.symbolic.png
 share/icons/Adwaita/24x24/actions/contact-new-symbolic.symbolic.png
 share/icons/Adwaita/24x24/actions/contact-new.png
@@ -1594,6 +1598,11 @@ share/icons/Adwaita/24x24/devices/audio-input-microphone-symbolic.symbolic.png
 share/icons/Adwaita/24x24/devices/audio-input-microphone.png
 share/icons/Adwaita/24x24/devices/audio-speakers-symbolic.symbolic.png
 share/icons/Adwaita/24x24/devices/audio-speakers.png
+share/icons/Adwaita/24x24/devices/audio-volume-high-symbolic.symbolic.png
+share/icons/Adwaita/24x24/devices/audio-volume-low-symbolic.symbolic.png
+share/icons/Adwaita/24x24/devices/audio-volume-medium-symbolic.symbolic.png
+share/icons/Adwaita/24x24/devices/audio-volume-muted-symbolic.symbolic.png
+share/icons/Adwaita/24x24/devices/audio-volume-overamplified-symbolic.symbolic.png
 share/icons/Adwaita/24x24/devices/battery-symbolic.symbolic.png
 share/icons/Adwaita/24x24/devices/battery.png
 share/icons/Adwaita/24x24/devices/camera-photo-symbolic.symbolic.png
@@ -1836,13 +1845,9 @@ share/icons/Adwaita/24x24/status/appointment-missed-symbolic.symbolic.png
 share/icons/Adwaita/24x24/status/appointment-missed.png
 share/icons/Adwaita/24x24/status/appointment-soon-symbolic.symbolic.png
 share/icons/Adwaita/24x24/status/appointment-soon.png
-share/icons/Adwaita/24x24/status/audio-volume-high-symbolic.symbolic.png
 share/icons/Adwaita/24x24/status/audio-volume-high.png
-share/icons/Adwaita/24x24/status/audio-volume-low-symbolic.symbolic.png
 share/icons/Adwaita/24x24/status/audio-volume-low.png
-share/icons/Adwaita/24x24/status/audio-volume-medium-symbolic.symbolic.png
 share/icons/Adwaita/24x24/status/audio-volume-medium.png
-share/icons/Adwaita/24x24/status/audio-volume-muted-symbolic.symbolic.png
 share/icons/Adwaita/24x24/status/audio-volume-muted.png
 share/icons/Adwaita/24x24/status/avatar-default-symbolic.symbolic.png
 share/icons/Adwaita/24x24/status/avatar-default.png
@@ -1964,6 +1969,7 @@ share/icons/Adwaita/24x24/status/network-transmit-receive.png
 share/icons/Adwaita/24x24/status/network-transmit-symbolic.symbolic.png
 share/icons/Adwaita/24x24/status/network-transmit.png
 share/icons/Adwaita/24x24/status/network-vpn-acquiring-symbolic.symbolic.png
+share/icons/Adwaita/24x24/status/network-vpn-no-route-symbolic.symbolic.png
 share/icons/Adwaita/24x24/status/network-vpn-symbolic.symbolic.png
 share/icons/Adwaita/24x24/status/network-wired-acquiring-symbolic.symbolic.png
 share/icons/Adwaita/24x24/status/network-wired-disconnected-symbolic.symbolic.png
@@ -2066,7 +2072,6 @@ share/icons/Adwaita/24x24/status/weather-snow.png
 share/icons/Adwaita/24x24/status/weather-storm-symbolic.symbolic.png
 share/icons/Adwaita/24x24/status/weather-storm.png
 share/icons/Adwaita/24x24/status/weather-windy-symbolic.symbolic.png
-share/icons/Adwaita/256x256/actions/address-book-new.png
 share/icons/Adwaita/256x256/actions/appointment-new.png
 share/icons/Adwaita/256x256/actions/document-open-recent.png
 share/icons/Adwaita/256x256/actions/document-print-preview.png
@@ -2091,7 +2096,6 @@ share/icons/Adwaita/256x256/actions/system-run.png
 share/icons/Adwaita/256x256/actions/system-search.png
 share/icons/Adwaita/256x256/actions/system-shutdown.png
 share/icons/Adwaita/256x256/actions/view-refresh.png
-share/icons/Adwaita/256x256/apps/accessories-calculator.png
 share/icons/Adwaita/256x256/apps/accessories-dictionary.png
 share/icons/Adwaita/256x256/apps/applets-screenshooter.png
 share/icons/Adwaita/256x256/apps/help-browser.png
@@ -2244,6 +2248,7 @@ share/icons/Adwaita/32x32/actions/call-start-symbolic.symbolic.png
 share/icons/Adwaita/32x32/actions/call-start.png
 share/icons/Adwaita/32x32/actions/call-stop-symbolic.symbolic.png
 share/icons/Adwaita/32x32/actions/call-stop.png
+share/icons/Adwaita/32x32/actions/camera-switch-symbolic.symbolic.png
 share/icons/Adwaita/32x32/actions/color-select-symbolic.symbolic.png
 share/icons/Adwaita/32x32/actions/contact-new-symbolic.symbolic.png
 share/icons/Adwaita/32x32/actions/contact-new.png
@@ -2607,6 +2612,11 @@ share/icons/Adwaita/32x32/devices/audio-input-microphone-symbolic.symbolic.png
 share/icons/Adwaita/32x32/devices/audio-input-microphone.png
 share/icons/Adwaita/32x32/devices/audio-speakers-symbolic.symbolic.png
 share/icons/Adwaita/32x32/devices/audio-speakers.png
+share/icons/Adwaita/32x32/devices/audio-volume-high-symbolic.symbolic.png
+share/icons/Adwaita/32x32/devices/audio-volume-low-symbolic.symbolic.png
+share/icons/Adwaita/32x32/devices/audio-volume-medium-symbolic.symbolic.png
+share/icons/Adwaita/32x32/devices/audio-volume-muted-symbolic.symbolic.png
+share/icons/Adwaita/32x32/devices/audio-volume-overamplified-symbolic.symbolic.png
 share/icons/Adwaita/32x32/devices/battery-symbolic.symbolic.png
 share/icons/Adwaita/32x32/devices/battery.png
 share/icons/Adwaita/32x32/devices/camera-photo-symbolic.symbolic.png
@@ -2850,13 +2860,9 @@ share/icons/Adwaita/32x32/status/appointment-missed-symbolic.symbolic.png
 share/icons/Adwaita/32x32/status/appointment-missed.png
 share/icons/Adwaita/32x32/status/appointment-soon-symbolic.symbolic.png
 share/icons/Adwaita/32x32/status/appointment-soon.png
-share/icons/Adwaita/32x32/status/audio-volume-high-symbolic.symbolic.png
 share/icons/Adwaita/32x32/status/audio-volume-high.png
-share/icons/Adwaita/32x32/status/audio-volume-low-symbolic.symbolic.png
 share/icons/Adwaita/32x32/status/audio-volume-low.png
-share/icons/Adwaita/32x32/status/audio-volume-medium-symbolic.symbolic.png
 share/icons/Adwaita/32x32/status/audio-volume-medium.png
-share/icons/Adwaita/32x32/status/audio-volume-muted-symbolic.symbolic.png
 share/icons/Adwaita/32x32/status/audio-volume-muted.png
 share/icons/Adwaita/32x32/status/avatar-default-symbolic.symbolic.png
 share/icons/Adwaita/32x32/status/avatar-default.png
@@ -2976,6 +2982,7 @@ share/icons/Adwaita/32x32/status/network-transmit-receive.png
 share/icons/Adwaita/32x32/status/network-transmit-symbolic.symbolic.png
 share/icons/Adwaita/32x32/status/network-transmit.png
 share/icons/Adwaita/32x32/status/network-vpn-acquiring-symbolic.symbolic.png
+share/icons/Adwaita/32x32/status/network-vpn-no-route-symbolic.symbolic.png
 share/icons/Adwaita/32x32/status/network-vpn-symbolic.symbolic.png
 share/icons/Adwaita/32x32/status/network-wired-acquiring-symbolic.symbolic.png
 share/icons/Adwaita/32x32/status/network-wired-disconnected-symbolic.symbolic.png
@@ -3090,6 +3097,7 @@ share/icons/Adwaita/48x48/actions/call-start-symbolic.symbolic.png
 share/icons/Adwaita/48x48/actions/call-start.png
 share/icons/Adwaita/48x48/actions/call-stop-symbolic.symbolic.png
 share/icons/Adwaita/48x48/actions/call-stop.png
+share/icons/Adwaita/48x48/actions/camera-switch-symbolic.symbolic.png
 share/icons/Adwaita/48x48/actions/color-select-symbolic.symbolic.png
 share/icons/Adwaita/48x48/actions/contact-new-symbolic.symbolic.png
 share/icons/Adwaita/48x48/actions/contact-new.png
@@ -3453,6 +3461,11 @@ share/icons/Adwaita/48x48/devices/audio-input-microphone-symbolic.symbolic.png
 share/icons/Adwaita/48x48/devices/audio-input-microphone.png
 share/icons/Adwaita/48x48/devices/audio-speakers-symbolic.symbolic.png
 share/icons/Adwaita/48x48/devices/audio-speakers.png
+share/icons/Adwaita/48x48/devices/audio-volume-high-symbolic.symbolic.png
+share/icons/Adwaita/48x48/devices/audio-volume-low-symbolic.symbolic.png
+share/icons/Adwaita/48x48/devices/audio-volume-medium-symbolic.symbolic.png
+share/icons/Adwaita/48x48/devices/audio-volume-muted-symbolic.symbolic.png
+share/icons/Adwaita/48x48/devices/audio-volume-overamplified-symbolic.symbolic.png
 share/icons/Adwaita/48x48/devices/battery-symbolic.symbolic.png
 share/icons/Adwaita/48x48/devices/battery.png
 share/icons/Adwaita/48x48/devices/camera-photo-symbolic.symbolic.png
@@ -3697,13 +3710,9 @@ share/icons/Adwaita/48x48/status/appointment-missed-symbolic.symbolic.png
 share/icons/Adwaita/48x48/status/appointment-missed.png
 share/icons/Adwaita/48x48/status/appointment-soon-symbolic.symbolic.png
 share/icons/Adwaita/48x48/status/appointment-soon.png
-share/icons/Adwaita/48x48/status/audio-volume-high-symbolic.symbolic.png
 share/icons/Adwaita/48x48/status/audio-volume-high.png
-share/icons/Adwaita/48x48/status/audio-volume-low-symbolic.symbolic.png
 share/icons/Adwaita/48x48/status/audio-volume-low.png
-share/icons/Adwaita/48x48/status/audio-volume-medium-symbolic.symbolic.png
 share/icons/Adwaita/48x48/status/audio-volume-medium.png
-share/icons/Adwaita/48x48/status/audio-volume-muted-symbolic.symbolic.png
 share/icons/Adwaita/48x48/status/audio-volume-muted.png
 share/icons/Adwaita/48x48/status/avatar-default-symbolic.symbolic.png
 share/icons/Adwaita/48x48/status/avatar-default.png
@@ -3823,6 +3832,7 @@ share/icons/Adwaita/48x48/status/network-transmit-receive.png
 share/icons/Adwaita/48x48/status/network-transmit-symbolic.symbolic.png
 share/icons/Adwaita/48x48/status/network-transmit.png
 share/icons/Adwaita/48x48/status/network-vpn-acquiring-symbolic.symbolic.png
+share/icons/Adwaita/48x48/status/network-vpn-no-route-symbolic.symbolic.png
 share/icons/Adwaita/48x48/status/network-vpn-symbolic.symbolic.png
 share/icons/Adwaita/48x48/status/network-wired-acquiring-symbolic.symbolic.png
 share/icons/Adwaita/48x48/status/network-wired-disconnected-symbolic.symbolic.png
@@ -3935,8 +3945,10 @@ share/icons/Adwaita/512x512/actions/document-save-as.png
 share/icons/Adwaita/512x512/actions/document-save.png
 share/icons/Adwaita/512x512/actions/edit-select-all.png
 share/icons/Adwaita/512x512/actions/folder-new.png
+share/icons/Adwaita/512x512/actions/mark-location.png
 share/icons/Adwaita/512x512/apps/accessories-calculator.png
 share/icons/Adwaita/512x512/apps/accessories-character-map.png
+share/icons/Adwaita/512x512/apps/accessories-dictionary.png
 share/icons/Adwaita/512x512/apps/accessories-text-editor.png
 share/icons/Adwaita/512x512/apps/utilities-system-monitor.png
 share/icons/Adwaita/512x512/apps/utilities-terminal.png
@@ -3994,6 +4006,7 @@ share/icons/Adwaita/64x64/actions/appointment-new-symbolic.symbolic.png
 share/icons/Adwaita/64x64/actions/bookmark-new-symbolic.symbolic.png
 share/icons/Adwaita/64x64/actions/call-start-symbolic.symbolic.png
 share/icons/Adwaita/64x64/actions/call-stop-symbolic.symbolic.png
+share/icons/Adwaita/64x64/actions/camera-switch-symbolic.symbolic.png
 share/icons/Adwaita/64x64/actions/color-select-symbolic.symbolic.png
 share/icons/Adwaita/64x64/actions/contact-new-symbolic.symbolic.png
 share/icons/Adwaita/64x64/actions/document-edit-symbolic.symbolic.png
@@ -4189,6 +4202,11 @@ share/icons/Adwaita/64x64/devices/audio-headphones-symbolic.symbolic.png
 share/icons/Adwaita/64x64/devices/audio-headset-symbolic.symbolic.png
 share/icons/Adwaita/64x64/devices/audio-input-microphone-symbolic.symbolic.png
 share/icons/Adwaita/64x64/devices/audio-speakers-symbolic.symbolic.png
+share/icons/Adwaita/64x64/devices/audio-volume-high-symbolic.symbolic.png
+share/icons/Adwaita/64x64/devices/audio-volume-low-symbolic.symbolic.png
+share/icons/Adwaita/64x64/devices/audio-volume-medium-symbolic.symbolic.png
+share/icons/Adwaita/64x64/devices/audio-volume-muted-symbolic.symbolic.png
+share/icons/Adwaita/64x64/devices/audio-volume-overamplified-symbolic.symbolic.png
 share/icons/Adwaita/64x64/devices/battery-symbolic.symbolic.png
 share/icons/Adwaita/64x64/devices/camera-photo-symbolic.symbolic.png
 share/icons/Adwaita/64x64/devices/camera-video-symbolic.symbolic.png
@@ -4314,10 +4332,6 @@ share/icons/Adwaita/64x64/status/airplane-mode-symbolic.symbolic.png
 share/icons/Adwaita/64x64/status/alarm-symbolic.symbolic.png
 share/icons/Adwaita/64x64/status/appointment-missed-symbolic.symbolic.png
 share/icons/Adwaita/64x64/status/appointment-soon-symbolic.symbolic.png
-share/icons/Adwaita/64x64/status/audio-volume-high-symbolic.symbolic.png
-share/icons/Adwaita/64x64/status/audio-volume-low-symbolic.symbolic.png
-share/icons/Adwaita/64x64/status/audio-volume-medium-symbolic.symbolic.png
-share/icons/Adwaita/64x64/status/audio-volume-muted-symbolic.symbolic.png
 share/icons/Adwaita/64x64/status/avatar-default-symbolic.symbolic.png
 share/icons/Adwaita/64x64/status/battery-caution-charging-symbolic.symbolic.png
 share/icons/Adwaita/64x64/status/battery-caution-symbolic.symbolic.png
@@ -4394,6 +4408,7 @@ share/icons/Adwaita/64x64/status/network-receive-symbolic.symbolic.png
 share/icons/Adwaita/64x64/status/network-transmit-receive-symbolic.symbolic.png
 share/icons/Adwaita/64x64/status/network-transmit-symbolic.symbolic.png
 share/icons/Adwaita/64x64/status/network-vpn-acquiring-symbolic.symbolic.png
+share/icons/Adwaita/64x64/status/network-vpn-no-route-symbolic.symbolic.png
 share/icons/Adwaita/64x64/status/network-vpn-symbolic.symbolic.png
 share/icons/Adwaita/64x64/status/network-wired-acquiring-symbolic.symbolic.png
 share/icons/Adwaita/64x64/status/network-wired-disconnected-symbolic.symbolic.png
@@ -4473,6 +4488,7 @@ share/icons/Adwaita/96x96/actions/appointment-new-symbolic.symbolic.png
 share/icons/Adwaita/96x96/actions/bookmark-new-symbolic.symbolic.png
 share/icons/Adwaita/96x96/actions/call-start-symbolic.symbolic.png
 share/icons/Adwaita/96x96/actions/call-stop-symbolic.symbolic.png
+share/icons/Adwaita/96x96/actions/camera-switch-symbolic.symbolic.png
 share/icons/Adwaita/96x96/actions/color-select-symbolic.symbolic.png
 share/icons/Adwaita/96x96/actions/contact-new-symbolic.symbolic.png
 share/icons/Adwaita/96x96/actions/document-edit-symbolic.symbolic.png
@@ -4668,6 +4684,11 @@ share/icons/Adwaita/96x96/devices/audio-headphones-symbolic.symbolic.png
 share/icons/Adwaita/96x96/devices/audio-headset-symbolic.symbolic.png
 share/icons/Adwaita/96x96/devices/audio-input-microphone-symbolic.symbolic.png
 share/icons/Adwaita/96x96/devices/audio-speakers-symbolic.symbolic.png
+share/icons/Adwaita/96x96/devices/audio-volume-high-symbolic.symbolic.png
+share/icons/Adwaita/96x96/devices/audio-volume-low-symbolic.symbolic.png
+share/icons/Adwaita/96x96/devices/audio-volume-medium-symbolic.symbolic.png
+share/icons/Adwaita/96x96/devices/audio-volume-muted-symbolic.symbolic.png
+share/icons/Adwaita/96x96/devices/audio-volume-overamplified-symbolic.symbolic.png
 share/icons/Adwaita/96x96/devices/battery-symbolic.symbolic.png
 share/icons/Adwaita/96x96/devices/camera-photo-symbolic.symbolic.png
 share/icons/Adwaita/96x96/devices/camera-video-symbolic.symbolic.png
@@ -4794,10 +4815,6 @@ share/icons/Adwaita/96x96/status/airplane-mode-symbolic.symbolic.png
 share/icons/Adwaita/96x96/status/alarm-symbolic.symbolic.png
 share/icons/Adwaita/96x96/status/appointment-missed-symbolic.symbolic.png
 share/icons/Adwaita/96x96/status/appointment-soon-symbolic.symbolic.png
-share/icons/Adwaita/96x96/status/audio-volume-high-symbolic.symbolic.png
-share/icons/Adwaita/96x96/status/audio-volume-low-symbolic.symbolic.png
-share/icons/Adwaita/96x96/status/audio-volume-medium-symbolic.symbolic.png
-share/icons/Adwaita/96x96/status/audio-volume-muted-symbolic.symbolic.png
 share/icons/Adwaita/96x96/status/avatar-default-symbolic.symbolic.png
 share/icons/Adwaita/96x96/status/battery-caution-charging-symbolic.symbolic.png
 share/icons/Adwaita/96x96/status/battery-caution-symbolic.symbolic.png
@@ -4874,6 +4891,7 @@ share/icons/Adwaita/96x96/status/network-receive-symbolic.symbolic.png
 share/icons/Adwaita/96x96/status/network-transmit-receive-symbolic.symbolic.png
 share/icons/Adwaita/96x96/status/network-transmit-symbolic.symbolic.png
 share/icons/Adwaita/96x96/status/network-vpn-acquiring-symbolic.symbolic.png
+share/icons/Adwaita/96x96/status/network-vpn-no-route-symbolic.symbolic.png
 share/icons/Adwaita/96x96/status/network-vpn-symbolic.symbolic.png
 share/icons/Adwaita/96x96/status/network-wired-acquiring-symbolic.symbolic.png
 share/icons/Adwaita/96x96/status/network-wired-disconnected-symbolic.symbolic.png
@@ -5072,6 +5090,7 @@ share/icons/Adwaita/scalable/actions/appointment-new-symbolic.svg
 share/icons/Adwaita/scalable/actions/bookmark-new-symbolic.svg
 share/icons/Adwaita/scalable/actions/call-start-symbolic.svg
 share/icons/Adwaita/scalable/actions/call-stop-symbolic.svg
+share/icons/Adwaita/scalable/actions/camera-switch-symbolic.svg
 share/icons/Adwaita/scalable/actions/color-select-symbolic.svg
 share/icons/Adwaita/scalable/actions/contact-new-symbolic.svg
 share/icons/Adwaita/scalable/actions/document-edit-symbolic.svg
@@ -5267,6 +5286,11 @@ share/icons/Adwaita/scalable/devices/audio-headphones-symbolic.svg
 share/icons/Adwaita/scalable/devices/audio-headset-symbolic.svg
 share/icons/Adwaita/scalable/devices/audio-input-microphone-symbolic.svg
 share/icons/Adwaita/scalable/devices/audio-speakers-symbolic.svg
+share/icons/Adwaita/scalable/devices/audio-volume-high-symbolic.svg
+share/icons/Adwaita/scalable/devices/audio-volume-low-symbolic.svg
+share/icons/Adwaita/scalable/devices/audio-volume-medium-symbolic.svg
+share/icons/Adwaita/scalable/devices/audio-volume-muted-symbolic.svg
+share/icons/Adwaita/scalable/devices/audio-volume-overamplified-symbolic.svg
 share/icons/Adwaita/scalable/devices/battery-symbolic.svg
 share/icons/Adwaita/scalable/devices/camera-photo-symbolic.svg
 share/icons/Adwaita/scalable/devices/camera-video-symbolic.svg
@@ -5392,10 +5416,6 @@ share/icons/Adwaita/scalable/status/airplane-mode-symbolic.svg
 share/icons/Adwaita/scalable/status/alarm-symbolic.svg
 share/icons/Adwaita/scalable/status/appointment-missed-symbolic.svg
 share/icons/Adwaita/scalable/status/appointment-soon-symbolic.svg
-share/icons/Adwaita/scalable/status/audio-volume-high-symbolic.svg
-share/icons/Adwaita/scalable/status/audio-volume-low-symbolic.svg
-share/icons/Adwaita/scalable/status/audio-volume-medium-symbolic.svg
-share/icons/Adwaita/scalable/status/audio-volume-muted-symbolic.svg
 share/icons/Adwaita/scalable/status/avatar-default-symbolic.svg
 share/icons/Adwaita/scalable/status/battery-caution-charging-symbolic.svg
 share/icons/Adwaita/scalable/status/battery-caution-symbolic.svg
@@ -5472,6 +5492,7 @@ share/icons/Adwaita/scalable/status/network-receive-symbolic.svg
 share/icons/Adwaita/scalable/status/network-transmit-receive-symbolic.svg
 share/icons/Adwaita/scalable/status/network-transmit-symbolic.svg
 share/icons/Adwaita/scalable/status/network-vpn-acquiring-symbolic.svg
+share/icons/Adwaita/scalable/status/network-vpn-no-route-symbolic.svg
 share/icons/Adwaita/scalable/status/network-vpn-symbolic.svg
 share/icons/Adwaita/scalable/status/network-wired-acquiring-symbolic.svg
 share/icons/Adwaita/scalable/status/network-wired-disconnected-symbolic.svg
