@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18242 2018/04/16 12:59:45 wiz Exp $
+$NetBSD: TODO,v 1.18243 2018/04/16 13:02:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -959,7 +959,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmediawiki-4.14.0
 	o libmilter-8.16.0.16
 	o libmtag-0.3.6
-	o libmtp-1.1.15
 	o liboobs-2.32.0 [GNOME 2.32]
 	o liboop-1.0.1
 	o libpgm-5.2.122
