@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18236 2018/04/16 11:47:06 wiz Exp $
+$NetBSD: TODO,v 1.18237 2018/04/16 11:47:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -499,7 +499,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o colortail-0.3.3
 	o compiz-0.8.10
 	o cone-0.92
-	o convmv-2.05
 	o cook-2.31
 	o coreutils-8.28
 	o courier-0.77.0
