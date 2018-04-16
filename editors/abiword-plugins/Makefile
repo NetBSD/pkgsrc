@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.86 2018/04/14 07:34:19 adam Exp $
+# $NetBSD: Makefile,v 1.87 2018/04/16 14:34:22 wiz Exp $
 
 .include	"../../editors/abiword/Makefile.common"
 DISTNAME=	abiword-${ABIVERSION}
 PKGNAME=	abiword-plugins-${ABIVERSION}
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	editors
 MASTER_SITES=	http://www.abiword.com/downloads/abiword/${PKGVERSION_NOREV}/source/
 

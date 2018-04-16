@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.48 2018/03/12 11:15:31 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.49 2018/04/16 14:33:49 wiz Exp $
 
 BUILDLINK_TREE+=	pango
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pango
 PANGO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.6.0
-BUILDLINK_ABI_DEPENDS.pango+=	pango>=1.40.14nb1
+BUILDLINK_ABI_DEPENDS.pango+=	pango>=1.42.1
 BUILDLINK_PKGSRCDIR.pango?=	../../devel/pango
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -23,6 +23,7 @@ pkgbase := pango
 .include "../../x11/libXrender/buildlink3.mk"
 .endif
 
+.include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"

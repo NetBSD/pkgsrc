@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2018/03/12 11:16:39 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2018/04/16 14:34:34 wiz Exp $
 
 DISTNAME=	cogl-1.22.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/cogl/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2018/03/12 11:17:13 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2018/04/16 14:34:57 wiz Exp $
 #
 
 DISTNAME=	HandBrake-0.9.3
 PKGNAME=	${DISTNAME:S/HandBrake/handbrake/}
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.m0k.org/handbrake/releases/
 MASTER_SITES+=	http://download.m0k.org/handbrake/contrib/
