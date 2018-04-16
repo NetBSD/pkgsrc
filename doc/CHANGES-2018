@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1823 2018/04/16 12:31:07 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1824 2018/04/16 12:36:21 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2576,3 +2576,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-peewee to 3.2.3 [fhajny 2018-04-16]
 	Updated graphics/gdk-pixbuf2 to 2.36.12 [wiz 2018-04-16]
 	Updated misc/goffice0.10 to 0.10.39 [wiz 2018-04-16]
+	Updated sysutils/consul to 1.0.7 [fhajny 2018-04-16]
