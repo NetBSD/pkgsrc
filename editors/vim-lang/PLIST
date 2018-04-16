@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2017/12/03 17:47:48 morr Exp $
+@comment $NetBSD: PLIST,v 1.22 2018/04/16 10:19:37 morr Exp $
 man/fr.ISO8859-1/man1/evim.1
 man/fr.ISO8859-1/man1/ex.1
 man/fr.ISO8859-1/man1/rview.1
@@ -132,6 +132,8 @@ share/vim/${VIM_SUBDIR}/keymap/kazakh-jcuken.vim
 share/vim/${VIM_SUBDIR}/keymap/lithuanian-baltic.vim
 share/vim/${VIM_SUBDIR}/keymap/magyar_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/mongolian_utf-8.vim
+share/vim/${VIM_SUBDIR}/keymap/oldturkic-orkhon_utf-8.vim
+share/vim/${VIM_SUBDIR}/keymap/oldturkic-yenisei_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/persian-iranian_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/persian.vim
 share/vim/${VIM_SUBDIR}/keymap/pinyin.vim
@@ -330,6 +332,7 @@ share/vim/${VIM_SUBDIR}/lang/ru.cp1251/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/ru/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/sk.cp1250/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/sk/LC_MESSAGES/vim.mo
+share/vim/${VIM_SUBDIR}/lang/sr/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/sv/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/uk.cp1251/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/uk/LC_MESSAGES/vim.mo
