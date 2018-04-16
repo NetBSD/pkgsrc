@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1826 2018/04/16 12:50:14 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1827 2018/04/16 12:58:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2579,3 +2579,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/consul to 1.0.7 [fhajny 2018-04-16]
 	Updated textproc/py-xlsxwriter to 1.0.4 [fhajny 2018-04-16]
 	Updated textproc/gtk-doc to 1.28 [wiz 2018-04-16]
+	Updated x11/gtksourceview3 to 3.24.7 [wiz 2018-04-16]
