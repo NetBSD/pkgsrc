@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1842 2018/04/16 21:13:57 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1843 2018/04/16 21:28:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2595,3 +2595,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated chat/libpurple to 2.13.0 [wiz 2018-04-16]
 	Updated chat/finch to 2.13.0 [wiz 2018-04-16]
 	Updated chat/pidgin to 2.13.0 [wiz 2018-04-16]
+	Updated textproc/pugixml to 1.9 [wiz 2018-04-16]
