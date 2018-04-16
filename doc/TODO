@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18237 2018/04/16 11:47:50 wiz Exp $
+$NetBSD: TODO,v 1.18238 2018/04/16 12:22:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -625,7 +625,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fetchyahoo-2.14.0
 	o ffmpegthumbnailer-2.2.0
 	o filerunner-14.06.18.10
-	o filezilla-3.32.0
+	o filezilla-3.32.0 [needs wxWidgets>=3.0.4]
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o flashplayer-0.4.13
@@ -667,7 +667,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gcompris-15.02
 	o gdbus-codegen-2.56.1
 	o gdeskcal-1.01
-	o gdk-pixbuf2-2.36.12
 	o gdl-3.16.0
 	o gdm-2.32.2 [GNOME 2.32]
 	o gdm-3.0.3
