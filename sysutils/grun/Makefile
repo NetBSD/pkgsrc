@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2018/03/12 11:17:34 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2018/04/16 14:35:11 wiz Exp $
 
 DISTNAME=	grun-0.9.3
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	misc
 MASTER_SITES=	http://grun.googlecode.com/files/
 

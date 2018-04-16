@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2018/03/12 11:15:59 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/04/16 14:34:03 wiz Exp $
 
 DISTNAME=	asunder-2.5
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	http://littlesvr.ca/asunder/releases/
 EXTRACT_SUFX=	.tar.bz2

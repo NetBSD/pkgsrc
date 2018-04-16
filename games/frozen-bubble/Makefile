@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2018/03/12 11:16:30 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2018/04/16 14:34:29 wiz Exp $
 
 DISTNAME=	frozen-bubble-2.2.1-beta1
 PKGNAME=	${DISTNAME:S/-beta/beta/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://www.frozen-bubble.org/data/
 EXTRACT_SUFX=	.tar.bz2

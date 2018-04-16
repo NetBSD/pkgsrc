@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2018/04/14 12:24:32 adam Exp $
+# $NetBSD: Makefile,v 1.8 2018/04/16 14:35:24 wiz Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mozo-${VERSION}
