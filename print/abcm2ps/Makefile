@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2018/03/12 11:17:25 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2018/04/16 14:35:05 wiz Exp $
 
 DISTNAME=	abcm2ps-8.13.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	http://moinejf.free.fr/
 

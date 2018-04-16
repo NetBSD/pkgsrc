@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2018/03/12 11:17:53 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/04/16 14:35:23 wiz Exp $
 
 DISTNAME=	lxinput-0.3.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz
