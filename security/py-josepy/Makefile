@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2018/01/22 13:30:08 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2018/04/16 12:19:36 fhajny Exp $
 
-DISTNAME=	josepy-1.0.1
+DISTNAME=	josepy-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=certbot/}
 GITHUB_PROJECT=	josepy
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/certbot/josepy/
