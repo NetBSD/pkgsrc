@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1839 2018/04/16 15:55:00 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1840 2018/04/16 21:13:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2592,3 +2592,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/di to 4.46 [wiz 2018-04-16]
 	Updated devel/waf to 2.0.7 [wiz 2018-04-16]
 	Added devel/R-bindr version 0.1.1 [minskim 2018-04-16]
+	Updated chat/libpurple to 2.13.0 [wiz 2018-04-16]
