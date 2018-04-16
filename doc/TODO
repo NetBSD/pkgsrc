@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18235 2018/04/16 11:34:31 wiz Exp $
+$NetBSD: TODO,v 1.18236 2018/04/16 11:47:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -367,7 +367,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adocman-0.13
 	o adodb-5.20.7 [security]
 	o adplug-2.2.1
-	o adwaita-icon-theme-3.28.0
 	o aegis-4.25
 	o aewm++-1.1.5
 	o afbinit-1.0.1
@@ -738,7 +737,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-crypto-2.1.0
 	o gnu-pw-mgr-2.0
 	o gnucap-20130423
-	o gnumeric112-1.12.39
 	o gnustep-back-0.24.1
 	o gnustep-base-1.24.8
 	o gnustep-examples-1.4.0
