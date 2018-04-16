@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1829 2018/04/16 13:02:28 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1830 2018/04/16 13:07:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2582,3 +2582,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/gtksourceview3 to 3.24.7 [wiz 2018-04-16]
 	Updated www/http-parser to 2.8.1 [wiz 2018-04-16]
 	Updated devel/libmtp to 1.1.15 [wiz 2018-04-16]
+	Updated security/libsecret to 0.18.6 [wiz 2018-04-16]
