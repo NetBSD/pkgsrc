@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2018/03/12 11:16:29 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2018/04/16 14:34:29 wiz Exp $
 
 DISTNAME=	flightgear-2.8.0
-PKGREVISION=	39
+PKGREVISION=	40
 CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.flightgear.org/pub/fgfs/Source/
 MASTER_SITES+=	http://mirrors.ibiblio.org/pub/mirrors/flightgear/ftp/Source/

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2018/03/12 11:17:27 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/04/16 14:35:06 wiz Exp $
 #
 
 DISTNAME=	paps-0.6.8
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paps/}
 

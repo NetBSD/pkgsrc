@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2018/03/12 11:16:10 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2018/04/16 14:34:13 wiz Exp $
 
 PKGNAME=	libpurple-${PIDGIN_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 
 COMMENT=	Multi-protocol Instant Messaging client backend
 

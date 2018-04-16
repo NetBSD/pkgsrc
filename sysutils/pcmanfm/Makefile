@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2018/03/12 11:17:37 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2018/04/16 14:35:12 wiz Exp $
 #
 
 DISTNAME=	pcmanfm-1.2.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcmanfm/}
 EXTRACT_SUFX=	.tar.xz

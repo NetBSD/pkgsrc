@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2018/03/12 11:16:53 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2018/04/16 14:34:43 wiz Exp $
 
 DISTNAME=	xnec2c-3.5.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	ham
 MASTER_SITES=	http://www.qsl.net/5b4az/pkg/nec2/xnec2c/
 EXTRACT_SUFX=	.tar.bz2
