@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.210 2018/03/12 11:15:31 wiz Exp $
+# $NetBSD: Makefile,v 1.211 2018/04/16 13:35:24 wiz Exp $
 
-DISTNAME=	pango-1.40.14
-PKGREVISION=	1
+DISTNAME=	pango-1.42.1
 CATEGORIES=	devel fonts
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pango/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -33,6 +32,8 @@ CHECK_PORTABILITY_SKIP+= docs/check.docs
 
 .include "options.mk"
 
+BUILDLINK_API_DEPENDS.fribidi+=	fribidi>=0.19.7
+.include "../../converters/fribidi/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.33.12
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection:= build
