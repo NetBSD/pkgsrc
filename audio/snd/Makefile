@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2018/03/12 11:16:05 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2018/04/16 14:34:09 wiz Exp $
 
 DISTNAME=		snd-16.9
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=snd/}
 

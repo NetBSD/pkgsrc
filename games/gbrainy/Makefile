@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.88 2018/04/14 07:34:21 adam Exp $
+# $NetBSD: Makefile,v 1.89 2018/04/16 14:34:29 wiz Exp $
 
 DISTNAME=	gbrainy-2.2.1
 PKGNAME=	gbrainy-2.21
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	games
 MASTER_SITES=	http://gent.softcatala.org/jmas/gbrainy/
 
