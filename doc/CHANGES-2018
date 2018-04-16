@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1831 2018/04/16 13:12:18 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1832 2018/04/16 13:15:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2584,3 +2584,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/libmtp to 1.1.15 [wiz 2018-04-16]
 	Updated security/libsecret to 0.18.6 [wiz 2018-04-16]
 	Updated net/libsoup to 2.62.0 [wiz 2018-04-16]
+	Updated devel/meld to 3.19.0 [wiz 2018-04-16]
