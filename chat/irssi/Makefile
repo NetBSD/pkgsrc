@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2018/02/15 21:27:11 maya Exp $
+# $NetBSD: Makefile,v 1.88 2018/04/16 08:47:49 maya Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 CATEGORIES=		chat
@@ -15,6 +15,7 @@ LICENSE=		gnu-gpl-v2
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
+TEST_TARGET=		check
 
 CONFIGURE_ARGS+=	--with-proxy \
 			--sysconfdir=${PKG_SYSCONFDIR}
