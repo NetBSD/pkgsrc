@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.49 2017/03/22 09:46:11 joerg Exp $
+$NetBSD: distinfo,v 1.50 2018/04/16 21:13:28 wiz Exp $
 
-SHA1 (pidgin-2.12.0.tar.bz2) = 38f48c48978425b86fc9f4e8ba08216ff379451b
-RMD160 (pidgin-2.12.0.tar.bz2) = 94a3e213d451c87c8feace9c4b7846a424c99417
-SHA512 (pidgin-2.12.0.tar.bz2) = e87b39888432982ee36332fd14b272f49f7974de9e8694f7fe3bec2821748d6e6026ac5a63615a93386a033d6ee7c4de5ae0a86b725f63b9cc55650f0ab94b06
-Size (pidgin-2.12.0.tar.bz2) = 9270704 bytes
-SHA1 (patch-configure) = 74d033d148d74d0233c7ad33411b9ebcfbab7851
+SHA1 (pidgin-2.13.0.tar.bz2) = 122f0a48ba63cd7f2bc2962c497df045ce29ef71
+RMD160 (pidgin-2.13.0.tar.bz2) = 48f1c281fb018257b2757c4c93ad1501f9f5a356
+SHA512 (pidgin-2.13.0.tar.bz2) = 68b3d1eefee111544c7eb347386d0aea4f47c3e320d5963a4e0d833ed6af7b1be243a7bcd6a38c9234b58601d10a9aebf8541f1d97decfeca754fa78dc693047
+Size (pidgin-2.13.0.tar.bz2) = 8994457 bytes
 SHA1 (patch-libpurple_plugins_perl_common_Makefile.PL.in) = 40326826000ed42e7570486f89f3196b58093d48
-SHA1 (patch-libpurple_protocols_jabber_auth__scram.c) = e86c5099176231402bb1b05ae391175634caa617
