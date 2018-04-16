@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2018/03/12 11:17:32 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2018/04/16 14:35:09 wiz Exp $
 #
 
 DISTNAME=	Terminal-0.1.0
 PKGNAME=	deforaos-terminal-0.1.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.defora.org/os/download/download/4437/
 

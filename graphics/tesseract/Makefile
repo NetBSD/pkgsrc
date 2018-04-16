@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2018/04/14 07:34:26 adam Exp $
+# $NetBSD: Makefile,v 1.35 2018/04/16 14:34:41 wiz Exp $
 
 DISTNAME=	tesseract-3.05.01
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tesseract-ocr/}
 DISTFILES=	${DEFAULT_DISTFILES}
