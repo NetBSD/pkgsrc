@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/10/02 15:38:05 wiz Exp $
+$NetBSD: distinfo,v 1.8 2018/04/16 13:06:57 wiz Exp $
 
-SHA1 (libsecret-0.18.5.tar.xz) = 65d80307756ef45f7c282098c48125ef41f56acd
-RMD160 (libsecret-0.18.5.tar.xz) = 24cfd20bd0d9a80e78ae21b5575fb8d5c2fd7991
-SHA512 (libsecret-0.18.5.tar.xz) = 4ee297b556d3b555b6ca9f5eb5cc87425b782491d0550a75873aac0f7019b123f437f0731c85bb058fc65b50a589d54d0697657a50bef4ac2952e9e40a916b5c
-Size (libsecret-0.18.5.tar.xz) = 508556 bytes
-SHA1 (patch-Makefile.in) = 64f2c83676a28fe9b963dd00a99bd1a89fb6af3d
+SHA1 (libsecret-0.18.6.tar.xz) = e840a40062c135f4eec41f057a326d9ed519ff4f
+RMD160 (libsecret-0.18.6.tar.xz) = 95ba50baf3d4e54cfdc86d7531e5a5761d32f4cc
+SHA512 (libsecret-0.18.6.tar.xz) = 4997519762f1470cfc0a4b3a791362d030af3c9b6ce6f58f8f8073b3a8adeea9b8caacedc884163997081dc39f395f9172330dbb41fed45d6c43ac5809de48e3
+Size (libsecret-0.18.6.tar.xz) = 487836 bytes
