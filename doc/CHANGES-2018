@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1834 2018/04/16 13:18:25 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1835 2018/04/16 13:19:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2587,3 +2587,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/meld to 3.19.0 [wiz 2018-04-16]
 	Updated devel/mm-common to 0.9.12 [wiz 2018-04-16]
 	Updated mail/neomutt to 20180323 [wiz 2018-04-16]
+	Updated mail/notmuch to 0.26.1 [wiz 2018-04-16]
