@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2018/03/12 11:17:05 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2018/04/16 14:34:53 wiz Exp $
 #
 
 DISTNAME=	gelemental-1.2.0
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	misc
 MASTER_SITES=	http://www.kdau.com/files/
 EXTRACT_SUFX=	.tar.bz2
