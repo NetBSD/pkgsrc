@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.22 2017/10/11 15:46:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2018/04/16 12:49:59 wiz Exp $
 bin/gtkdoc-check
 bin/gtkdoc-depscan
 bin/gtkdoc-fixxref
 bin/gtkdoc-mkdb
 bin/gtkdoc-mkhtml
+bin/gtkdoc-mkhtml2
 bin/gtkdoc-mkman
 bin/gtkdoc-mkpdf
 bin/gtkdoc-rebase
@@ -36,6 +37,7 @@ share/gtk-doc/python/gtkdoc/fixxref.py
 share/gtk-doc/python/gtkdoc/md_to_db.py
 share/gtk-doc/python/gtkdoc/mkdb.py
 share/gtk-doc/python/gtkdoc/mkhtml.py
+share/gtk-doc/python/gtkdoc/mkhtml2.py
 share/gtk-doc/python/gtkdoc/mkman.py
 share/gtk-doc/python/gtkdoc/mkpdf.py
 share/gtk-doc/python/gtkdoc/rebase.py
