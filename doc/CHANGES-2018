@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1817 2018/04/16 11:34:56 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1818 2018/04/16 11:47:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2570,3 +2570,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/gst-plugins1-libav to 1.12.5 [adam 2018-04-15]
 	Updated graphics/ImageMagick to 7.0.7.28 [wiz 2018-04-16]
 	Updated graphics/p5-PerlMagick to 7.0.7.28 [wiz 2018-04-16]
+	Updated graphics/adwaita-icon-theme to 3.28.0 [wiz 2018-04-16]
