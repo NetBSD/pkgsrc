@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1840 2018/04/16 21:13:39 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1841 2018/04/16 21:13:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2593,3 +2593,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/waf to 2.0.7 [wiz 2018-04-16]
 	Added devel/R-bindr version 0.1.1 [minskim 2018-04-16]
 	Updated chat/libpurple to 2.13.0 [wiz 2018-04-16]
+	Updated chat/finch to 2.13.0 [wiz 2018-04-16]
