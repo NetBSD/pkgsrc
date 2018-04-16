@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2017/03/20 18:42:50 khorben Exp $
+@comment $NetBSD: PLIST,v 1.25 2018/04/16 21:13:28 wiz Exp $
 bin/pidgin
 include/pidgin/gtkaccount.h
 include/pidgin/gtkblist-theme-loader.h
@@ -43,6 +43,7 @@ include/pidgin/gtksourceundomanager.h
 include/pidgin/gtksourceview-marshal.h
 include/pidgin/gtkstatus-icon-theme.h
 include/pidgin/gtkstatusbox.h
+include/pidgin/gtkstyle.h
 include/pidgin/gtkthemes.h
 include/pidgin/gtkutils.h
 include/pidgin/gtkwhiteboard.h
@@ -67,6 +68,7 @@ lib/pidgin/themeedit.la
 lib/pidgin/ticker.la
 lib/pidgin/timestamp.la
 lib/pidgin/timestamp_format.la
+lib/pidgin/transparency.la
 ${PLIST.vv}lib/pidgin/vvconfig.la
 lib/pidgin/xmppconsole.la
 lib/pidgin/xmppdisco.la
