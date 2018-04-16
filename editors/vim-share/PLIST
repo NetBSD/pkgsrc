@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2018/01/20 12:19:09 morr Exp $
+@comment $NetBSD: PLIST,v 1.39 2018/04/16 10:19:37 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -302,6 +302,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/calendar.vim
 share/vim/${VIM_SUBDIR}/ftplugin/cdrdaoconf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/ch.vim
 share/vim/${VIM_SUBDIR}/ftplugin/changelog.vim
+share/vim/${VIM_SUBDIR}/ftplugin/chicken.vim
 share/vim/${VIM_SUBDIR}/ftplugin/clojure.vim
 share/vim/${VIM_SUBDIR}/ftplugin/cmake.vim
 share/vim/${VIM_SUBDIR}/ftplugin/cobol.vim
@@ -562,6 +563,7 @@ share/vim/${VIM_SUBDIR}/indent/matlab.vim
 share/vim/${VIM_SUBDIR}/indent/mf.vim
 share/vim/${VIM_SUBDIR}/indent/mma.vim
 share/vim/${VIM_SUBDIR}/indent/mp.vim
+share/vim/${VIM_SUBDIR}/indent/nsis.vim
 share/vim/${VIM_SUBDIR}/indent/objc.vim
 share/vim/${VIM_SUBDIR}/indent/ocaml.vim
 share/vim/${VIM_SUBDIR}/indent/occam.vim
@@ -756,6 +758,7 @@ share/vim/${VIM_SUBDIR}/syntax/aspvbs.vim
 share/vim/${VIM_SUBDIR}/syntax/asterisk.vim
 share/vim/${VIM_SUBDIR}/syntax/asteriskvm.vim
 share/vim/${VIM_SUBDIR}/syntax/atlas.vim
+share/vim/${VIM_SUBDIR}/syntax/autodoc.vim
 share/vim/${VIM_SUBDIR}/syntax/autohotkey.vim
 share/vim/${VIM_SUBDIR}/syntax/autoit.vim
 share/vim/${VIM_SUBDIR}/syntax/automake.vim
@@ -790,6 +793,7 @@ share/vim/${VIM_SUBDIR}/syntax/change.vim
 share/vim/${VIM_SUBDIR}/syntax/changelog.vim
 share/vim/${VIM_SUBDIR}/syntax/chaskell.vim
 share/vim/${VIM_SUBDIR}/syntax/cheetah.vim
+share/vim/${VIM_SUBDIR}/syntax/chicken.vim
 share/vim/${VIM_SUBDIR}/syntax/chill.vim
 share/vim/${VIM_SUBDIR}/syntax/chordpro.vim
 share/vim/${VIM_SUBDIR}/syntax/cl.vim
@@ -797,6 +801,7 @@ share/vim/${VIM_SUBDIR}/syntax/clean.vim
 share/vim/${VIM_SUBDIR}/syntax/clipper.vim
 share/vim/${VIM_SUBDIR}/syntax/clojure.vim
 share/vim/${VIM_SUBDIR}/syntax/cmake.vim
+share/vim/${VIM_SUBDIR}/syntax/cmod.vim
 share/vim/${VIM_SUBDIR}/syntax/cmusrc.vim
 share/vim/${VIM_SUBDIR}/syntax/cobol.vim
 share/vim/${VIM_SUBDIR}/syntax/coco.vim
