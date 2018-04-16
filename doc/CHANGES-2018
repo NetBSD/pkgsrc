@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1836 2018/04/16 13:35:32 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1837 2018/04/16 13:52:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2589,3 +2589,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/neomutt to 20180323 [wiz 2018-04-16]
 	Updated mail/notmuch to 0.26.1 [wiz 2018-04-16]
 	Updated devel/pango to 1.42.1 [wiz 2018-04-16]
+	Updated sysutils/di to 4.46 [wiz 2018-04-16]
