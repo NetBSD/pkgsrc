@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1846 2018/04/17 02:01:24 christos Exp $
+$NetBSD: CHANGES-2018,v 1.1847 2018/04/17 04:20:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2599,3 +2599,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/syncthing to 0.14.46 [wiz 2018-04-16]
 	Updated devel/talloc to 2.1.13 [wiz 2018-04-16]
 	Updated security/cyrus-sasl to 2.1.27-rc7 [wiz 2018-04-16]
+	Updated lang/vala to 0.40.3 [wiz 2018-04-17]
