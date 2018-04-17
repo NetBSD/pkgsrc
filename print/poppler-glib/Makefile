@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2018/03/12 11:15:43 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2018/04/17 05:20:34 wiz Exp $
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=	poppler-glib-${POPPLER_VERS}
-PKGREVISION=	2
 
 COMMENT=	PDF rendering library (GLib wrapper)
 MAINTAINER=	reed@reedmedia.net
@@ -14,8 +13,6 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-glib.pc.cmake
 
 USE_TOOLS+=	python
 
-# Build the cairo graphics backend, required by glib.
-CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_CAIRO=FALSE
 # Don't build the splash graphics backend.
 CMAKE_ARGS+=	-DENABLE_SPLASH=OFF
 # Don't compile GTK+ test program.
@@ -28,15 +25,10 @@ CMAKE_ARGS+=	-DENABLE_GTK_DOC=OFF
 CMAKE_ARGS+=	-DENABLE_UTILS=OFF
 # Don't compile poppler cpp wrapper.
 CMAKE_ARGS+=	-DENABLE_CPP=OFF
-# Don't compile poppler qt4 wrapper.
-CMAKE_ARGS+=	-DENABLE_QT4=OFF
 # Don't compile poppler qt5 wrapper.
 CMAKE_ARGS+=	-DENABLE_QT5=OFF
 # Don't build libcurl based HTTP support. ## might want to include
 CMAKE_ARGS+=	-DENABLE_LIBCURL=OFF
-
-# enable for verbose build messages
-#CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=TRUE
 
 CFLAGS.FreeBSD+=	-DLLONG_MAX=__LLONG_MAX
 
