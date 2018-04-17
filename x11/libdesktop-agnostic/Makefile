@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2018/04/16 14:34:00 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2018/04/17 04:25:31 wiz Exp $
 
 DISTNAME=	libdesktop-agnostic-0.3.92
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	x11
 MASTER_SITES=	https://launchpad.net/libdesktop-agnostic/0.4/0.3.92/+download/
 
