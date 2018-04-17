@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.113 2018/04/16 14:33:59 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2018/04/17 22:29:52 wiz Exp $
 
 DISTNAME=	gtk+-3.22.29
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk+/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

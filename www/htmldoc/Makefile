@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2016/12/30 12:54:20 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2018/04/17 22:29:52 wiz Exp $
 
-PKGREVISION=	15
+PKGREVISION=	16
 
 CONFIGURE_ARGS+=	--without-gui --without-x
 

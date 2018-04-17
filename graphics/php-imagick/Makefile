@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/04/16 14:34:40 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2018/04/17 22:29:40 wiz Exp $
 
 MODNAME=		imagick
 PECL_VERSION=		3.4.3
@@ -7,7 +7,7 @@ CATEGORIES+=		graphics
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pecl.php.net/package/imagick/
 COMMENT=		PHP extension for ImageMagick graphics library
-PKGREVISION=		4
+PKGREVISION=		5
 LICENSE=		php
 
 PHP_VERSIONS_ACCEPTED=	56 70 71 72
