@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2017/10/13 17:18:42 taca Exp $
+# $NetBSD: Makefile,v 1.62 2018/04/17 22:29:31 wiz Exp $
 
 DISTNAME=	freetds-1.00.64
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.freetds.org/pub/freetds/stable/
 
