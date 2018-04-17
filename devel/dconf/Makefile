@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2018/04/17 12:28:41 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2018/04/17 22:38:42 wiz Exp $
 
 DISTNAME=	dconf-0.28.0
 CATEGORIES=	devel gnome
@@ -29,9 +29,9 @@ SUBST_FILES.sysdir+=	bin/dconf-update.vala
 SUBST_SED.sysdir=	-e s,/etc,${PKG_SYSCONFDIR},g
 
 # gtk-doc wants to run dconf-scan, but that does not find its library libdconf.so.1
-#MESON_ARGS+=		-D enable-gtk-doc=true
+MESON_ARGS+=		-D enable-gtk-doc=true
 # man option does not work without gtk-doc option
-#MESON_ARGS+=		-D enable-man=true
+MESON_ARGS+=		-D enable-man=true
 
 PKGCONFIG_OVERRIDE=		output/meson-private/dconf.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
@@ -48,8 +48,8 @@ SUBST_SED.libname+=	-e "/^libdconfsettings_so_LDFLAGS/s,$$, -install_name ${PREF
 BUILDLINK_DEPMETHOD.vala=	build
 .include "../../lang/vala/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
-#.include "../../textproc/gtk-doc/buildlink3.mk"
+.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../devel/glib2/modules.mk"
-.include "../../lang/python/application.mk"
 .include "../../devel/py-meson/build.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
