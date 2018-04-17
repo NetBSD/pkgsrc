@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1848 2018/04/17 05:21:17 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1849 2018/04/17 05:30:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2601,3 +2601,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/cyrus-sasl to 2.1.27-rc7 [wiz 2018-04-16]
 	Updated lang/vala to 0.40.3 [wiz 2018-04-17]
 	Updated print/poppler to 0.63.0 [wiz 2018-04-17]
+	Updated devel/libatomic_ops to 7.6.4 [wiz 2018-04-17]
