@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.133 2018/02/15 08:32:22 adam Exp $
+$NetBSD: distinfo,v 1.134 2018/04/17 20:02:14 gson Exp $
 
 SHA1 (qemu-2.11.1.tar.xz) = e85cfbdff264510fd9bba73d83978ab4ecee3f41
 RMD160 (qemu-2.11.1.tar.xz) = 5e713f1fb5f742536211d0e27fc377b849730b1e
@@ -7,6 +7,7 @@ Size (qemu-2.11.1.tar.xz) = 28992188 bytes
 SHA1 (patch-Makefile) = b3899fb8d0dd2f29bf3edd843836612e6e6c019c
 SHA1 (patch-audio_audio.c) = 98a1de2fd48638886b5d16f6a61dc72910e98b41
 SHA1 (patch-block.c) = 6f54da333696584067a7556b8cabfa8853758824
+SHA1 (patch-chardev_char-mux.c) = e597d4dc3889c00d001d899088c4c8cdc4e00474
 SHA1 (patch-configure) = 6d0acd72edb8c602ffbc98fdbc161bc10aa968e2
 SHA1 (patch-contrib_ivshmem-client_ivshmem-client.c) = 40c8751607cbf66a37e4c4e08f2664b864e2e984
 SHA1 (patch-contrib_ivshmem-server_ivshmem-server.c) = d8f53432b5752f4263dc4ef96108a976a05147a3
