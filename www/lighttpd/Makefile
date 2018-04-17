@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2018/04/17 11:27:11 triaxx Exp $
+# $NetBSD: Makefile,v 1.73 2018/04/17 20:11:15 triaxx Exp $
 
 DISTNAME=	lighttpd-1.4.49
 PKGREVISION=	1
@@ -63,7 +63,7 @@ SUBST_VARS.path=	LIGHTTPD_LOGDIR LIGHTTPD_STATEDIR LIGHTTPD_USER \
 			LIGHTTPD_CACHEDIR LIGHTTPD_HOMEDIR              \
 			LIGHTTPD_GROUP PKG_SYSCONFDIR VARBASE
 
-PLIST_VARS+=		gdbm geoip gssapi ldap lua mysql ssl
+PLIST_VARS+=		gdbm geoip gssapi ldap lua memcached mysql ssl
 
 post-install:
 	set -e; cd ${WRKSRC}/doc;				\
