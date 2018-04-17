@@ -1,12 +1,12 @@
-$NetBSD: patch-configure,v 1.8 2018/01/28 19:33:09 wiz Exp $
+$NetBSD: patch-configure,v 1.9 2018/04/17 22:10:04 wiz Exp $
 
 Fix unportable test(1) operator.
 
---- configure.orig	2017-07-14 08:23:57.000000000 +0000
+--- configure.orig	2018-03-19 20:25:04.000000000 +0000
 +++ configure
-@@ -18256,7 +18256,7 @@ fi
+@@ -18480,7 +18480,7 @@ fi
          --disable-omx-rpi --disable-cuda --disable-cuvid --disable-libmfx \
-         --disable-libnpp --disable-iconv --disable-jni --enable-optimizations"
+         --disable-libnpp --disable-iconv --disable-jni --disable-v4l2_m2m --enable-optimizations"
  
 -  if test "x$enable_gpl" == "xyes"; then
 +  if test "x$enable_gpl" = "xyes"; then
