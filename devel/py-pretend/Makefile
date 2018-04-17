@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/04/17 08:04:36 adam Exp $
 
-DISTNAME=	pretend-1.0.8
+DISTNAME=	pretend-1.0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pretend/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/pretend/
+HOMEPAGE=	https://github.com/alex/pretend
 COMMENT=	Library for stubbing in Python
 LICENSE=	modified-bsd
 
