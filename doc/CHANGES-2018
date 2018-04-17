@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1850 2018/04/17 05:32:28 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1851 2018/04/17 07:19:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2603,3 +2603,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/poppler to 0.63.0 [wiz 2018-04-17]
 	Updated devel/libatomic_ops to 7.6.4 [wiz 2018-04-17]
 	Updated devel/boehm-gc to 7.6.4 [wiz 2018-04-17]
+	Added www/py-django-extensions version 2.0.6 [adam 2018-04-17]
+	Updated www/py-django-treebeard to 4.3 [adam 2018-04-17]
