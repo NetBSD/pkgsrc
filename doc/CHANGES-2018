@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1867 2018/04/17 10:55:26 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1868 2018/04/17 10:58:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2622,3 +2622,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-ipaddress to 1.0.22 [wiz 2018-04-17]
 	Updated devel/libgit2 to 0.27.0 [wiz 2018-04-17]
 	Updated devel/py-pygit2 to 0.27.0 [wiz 2018-04-17]
+	Updated devel/py-setuptools_scm to 2.0.0 [wiz 2018-04-17]
