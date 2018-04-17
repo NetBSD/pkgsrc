@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1861 2018/04/17 10:29:16 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1862 2018/04/17 10:41:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2616,3 +2616,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/pcre2 to 10.31 [wiz 2018-04-17]
 	Updated misc/calibre to 3.21.0 [wiz 2018-04-17]
 	Updated net/wireshark to 2.4.6 [wiz 2018-04-17]
+	Updated sysutils/py-borgbackup to 1.1.5 [wiz 2018-04-17]
