@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2018/04/17 08:18:50 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2018/04/17 13:29:57 wiz Exp $
 
 DISTNAME=	glib-networking-2.56.0
+PKGREVISION=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glib-networking/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -20,7 +21,7 @@ BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.56.0
 .include "../../devel/glib2/modules.mk"
 BUILDLINK_API_DEPENDS.libproxy+=	libproxy>=0.3.1
 .include "../../www/libproxy/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gnutls+=		gnutls>=3.0
+BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=3.6.0nb1
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/p11-kit/buildlink3.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
