@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2018/04/17 05:20:34 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2018/04/17 18:07:37 adam Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -13,20 +13,19 @@ INSTALLATION_DIRS+=	include/poppler share/doc/poppler
 
 # TODO: Later add an option to choose Splash versus Cairo backend.
 # Build the Splash graphics backend.
-CMAKE_ARGS+=    -DENABLE_SPLASH=ON
+CMAKE_ARGS+=	-DENABLE_SPLASH=ON
 # Don't compile GTK+ test program.
-CMAKE_ARGS+=    -DBUILD_GTK_TESTS=OFF
+CMAKE_ARGS+=	-DBUILD_GTK_TESTS=OFF
 # Don't compile GLib wrapper which also needs gtk2
-CMAKE_ARGS+=    -DENABLE_GLIB=OFF
+CMAKE_ARGS+=	-DENABLE_GLIB=OFF
 # Don't build and install the tools
-CMAKE_ARGS+=    -DENABLE_UTILS=OFF
+CMAKE_ARGS+=	-DENABLE_UTILS=OFF
 # Don't compile poppler cpp wrapper.
-CMAKE_ARGS+=    -DENABLE_CPP=OFF
+CMAKE_ARGS+=	-DENABLE_CPP=OFF
 # Don't compile poppler qt5 wrapper.
-CMAKE_ARGS+=    -DENABLE_QT5=OFF
+CMAKE_ARGS+=	-DENABLE_QT5=OFF
 # Don't build libcurl based HTTP support. ## might want to include
-CMAKE_ARGS+=    -DENABLE_LIBCURL=OFF
-
+CMAKE_ARGS+=	-DENABLE_LIBCURL=OFF
 
 .include "../../mk/bsd.prefs.mk"
 
