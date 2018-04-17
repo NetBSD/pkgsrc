@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.47 2018/04/17 12:04:03 triaxx Exp $
+$NetBSD: distinfo,v 1.48 2018/04/17 20:11:15 triaxx Exp $
 
 SHA1 (lighttpd-1.4.49.tar.xz) = 9e13d061cbae2f377a1a5bb24e13ccd9cba0bba6
 RMD160 (lighttpd-1.4.49.tar.xz) = f7e3ff273455e1ad51f1fdc9514066f9ec3e716c
 SHA512 (lighttpd-1.4.49.tar.xz) = de766da68b4cacfb6c322210eafe819b6423334272e9fae4688c2282a66a2e55aaf580c5fdbf02676ed6f7b32d13f2f28cefd22518f77127055ec336ec5d6784
 Size (lighttpd-1.4.49.tar.xz) = 710964 bytes
 SHA1 (patch-doc_config_lighttpd.conf) = aa1ee77f3fdce7ffd6968c4b09e6977f671495d3
-SHA1 (patch-doc_lighttpd.8) = 654e22e68d6b206b9d28a8c09a1e82138fae94a3
+SHA1 (patch-doc_lighttpd.8) = 81b7606752312227b142975d4e781496442e9ed8
