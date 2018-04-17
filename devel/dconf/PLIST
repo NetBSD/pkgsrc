@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/10/11 09:20:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/04/17 12:28:41 wiz Exp $
 bin/dconf
 include/dconf/client/dconf-client.h
 include/dconf/common/dconf-changeset.h
@@ -11,32 +11,7 @@ lib/libdconf.so.1
 lib/libdconf.so.1.0.0
 lib/pkgconfig/dconf.pc
 libexec/dconf-service
-man/man1/dconf-service.1
-man/man1/dconf.1
-man/man7/dconf.7
 share/bash-completion/completions/dconf
 share/dbus-1/services/ca.desrt.dconf.service
-share/gtk-doc/html/dconf/DConfClient.html
-share/gtk-doc/html/dconf/annotation-glossary.html
-share/gtk-doc/html/dconf/api-index-full.html
-share/gtk-doc/html/dconf/ch01.html
-share/gtk-doc/html/dconf/dconf-DConfChangeset.html
-share/gtk-doc/html/dconf/dconf-DConfError.html
-share/gtk-doc/html/dconf/dconf-dconf-Paths.html
-share/gtk-doc/html/dconf/dconf-overview.html
-share/gtk-doc/html/dconf/dconf-service.html
-share/gtk-doc/html/dconf/dconf-tool.html
-share/gtk-doc/html/dconf/dconf.devhelp2
-share/gtk-doc/html/dconf/home.png
-share/gtk-doc/html/dconf/index.html
-share/gtk-doc/html/dconf/left-insensitive.png
-share/gtk-doc/html/dconf/left.png
-share/gtk-doc/html/dconf/object-tree.html
-share/gtk-doc/html/dconf/programs.html
-share/gtk-doc/html/dconf/right-insensitive.png
-share/gtk-doc/html/dconf/right.png
-share/gtk-doc/html/dconf/style.css
-share/gtk-doc/html/dconf/up-insensitive.png
-share/gtk-doc/html/dconf/up.png
 share/vala/vapi/dconf.deps
 share/vala/vapi/dconf.vapi
