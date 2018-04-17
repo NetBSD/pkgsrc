@@ -1,0 +1,28 @@
+$NetBSD: patch-configure,v 1.5 2018/04/17 22:11:32 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- configure.orig	2018-03-19 20:11:12.000000000 +0000
++++ configure
+@@ -27552,7 +27552,7 @@ if test "x$ac_cv_header_GLES3_gl3_h" = x
+ fi
+ 
+ 
+-      if test "x$HAVE_GLES3_H" == "xyes"; then :
++      if test "x$HAVE_GLES3_H" = "xyes"; then :
+ 
+              ac_fn_c_check_header_compile "$LINENO" "GLES3/gl3ext.h" "ac_cv_header_GLES3_gl3ext_h" "#include <GLES3/gl3.h>
+ "
+@@ -28443,10 +28443,10 @@ fi
+ if test "x$HAVE_GL" = "xyes" -a "x$HAVE_GLES2" = "xyes"; then
+   GLES3_H_DEFINE=0
+   GLES3EXT3_H_DEFINE=0
+-  if test "x$HAVE_GLES3_H" == "xyes"; then
++  if test "x$HAVE_GLES3_H" = "xyes"; then
+     GLES3_H_DEFINE=1
+   fi
+-  if test "x$HAVE_GLES3EXT3_H" == "xyes"; then
++  if test "x$HAVE_GLES3EXT3_H" = "xyes"; then
+     GLES3EXT3_H_DEFINE=1
+   fi
+   GL_INCLUDES="
