@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1863 2018/04/17 10:43:09 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1864 2018/04/17 10:45:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2618,3 +2618,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/wireshark to 2.4.6 [wiz 2018-04-17]
 	Updated sysutils/py-borgbackup to 1.1.5 [wiz 2018-04-17]
 	Updated www/py-google-api-python-client to 1.6.6 [wiz 2018-04-17]
+	Updated www/py-betamax to 0.8.1 [wiz 2018-04-17]
