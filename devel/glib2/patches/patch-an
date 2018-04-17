@@ -1,9 +1,7 @@
-$NetBSD: patch-an,v 1.16 2018/04/17 08:03:38 wiz Exp $
+$NetBSD: patch-an,v 1.17 2018/04/17 14:58:29 wiz Exp $
 
 - Leave gdbus-2.0/codegen sudirectory to devel/gdbus-codegen package.
 - Don't compile tests as they include gdbus-codegen tests.
-- Don't install completion data.
-- Re-enable gdesktopappinfo on Darwin.
 
 --- gio/Makefile.in.orig	2018-04-07 02:37:14.000000000 +0000
 +++ gio/Makefile.in
@@ -16,12 +14,14 @@ $NetBSD: patch-an,v 1.16 2018/04/17 08:03:38 wiz Exp $
  	fam
  am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/gio.rc.in \
  	$(srcdir)/gnetworking.h.in $(top_srcdir)/depcomp \
-@@ -1327,7 +1327,7 @@ all_test_ltlibs = $(test_ltlibraries) $(
+@@ -1327,8 +1327,8 @@ all_test_ltlibs = $(test_ltlibraries) $(
  @ENABLE_INSTALLED_TESTS_TRUE@                      $(dist_test_scripts) $(dist_installed_test_scripts)
  
  @ENABLE_INSTALLED_TESTS_TRUE@installed_test_meta_DATA = $(installed_testcases:=.test)
 -SUBDIRS = gdbus-2.0/codegen $(am__append_15) $(am__append_18) \
+-	$(am__append_21) $(am__append_24) . tests $(am__append_27)
 +SUBDIRS = $(am__append_15) $(am__append_18) \
- 	$(am__append_21) $(am__append_24) . tests $(am__append_27)
++	$(am__append_21) $(am__append_24) . $(am__append_27)
  @MS_LIB_AVAILABLE_TRUE@@OS_WIN32_AND_DLL_COMPILATION_TRUE@install_ms_lib_cmd = $(INSTALL) gio-2.0.lib $(DESTDIR)$(libdir)
  @MS_LIB_AVAILABLE_TRUE@@OS_WIN32_AND_DLL_COMPILATION_TRUE@uninstall_ms_lib_cmd = -rm $(DESTDIR)$(libdir)/gio-2.0.lib
+ AM_CPPFLAGS = \
