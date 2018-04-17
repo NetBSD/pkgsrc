@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1869 2018/04/17 11:31:09 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1870 2018/04/17 12:28:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2624,3 +2624,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-pygit2 to 0.27.0 [wiz 2018-04-17]
 	Updated devel/py-setuptools_scm to 2.0.0 [wiz 2018-04-17]
 	Updated devel/py-mercurial to 4.5.3 [wiz 2018-04-17]
+	Updated devel/dconf to 0.28.0 [wiz 2018-04-17]
