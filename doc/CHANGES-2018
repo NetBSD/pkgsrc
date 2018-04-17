@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1882 2018/04/17 22:11:48 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1883 2018/04/17 22:12:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2637,3 +2637,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-apsw to 3.22.0 [adam 2018-04-17]
 	Updated emulators/qemu to 2.11.1nb3 [gson 2018-04-17]
 	Updated multimedia/gstreamer1 to 1.14.0 [wiz 2018-04-17]
+	Updated multimedia/py-gstreamer1 to 1.14.0 [wiz 2018-04-17]
