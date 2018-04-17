@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2018/02/06 15:44:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.55 2018/04/17 08:41:47 wiz Exp $
 
-DISTNAME=	gobject-introspection-1.54.1
-PKGREVISION=	1
+DISTNAME=	gobject-introspection-1.56.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
