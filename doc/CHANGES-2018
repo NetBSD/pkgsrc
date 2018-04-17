@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1873 2018/04/17 13:24:55 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1874 2018/04/17 13:26:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2628,3 +2628,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/pkg_install to 20180417 [jperkin 2018-04-17]
 	Updated cad/gtkwave to 3.3.89 [mef 2018-04-17]
 	Updated devel/py-fastimport to 0.9.8 [adam 2018-04-17]
+	Updated security/p11-kit to 0.23.10 [wiz 2018-04-17]
