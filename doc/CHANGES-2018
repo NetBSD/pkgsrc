@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1858 2018/04/17 08:43:44 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1859 2018/04/17 08:56:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2613,3 +2613,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/gobject-introspection to 1.56.1 [wiz 2018-04-17]
 	Updated devel/py-pretend to 1.0.9 [adam 2018-04-17]
 	Updated devel/py-pip to 10.0.0 [adam 2018-04-17]
+	Updated devel/pcre2 to 10.31 [wiz 2018-04-17]
