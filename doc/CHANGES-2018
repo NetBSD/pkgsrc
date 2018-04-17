@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1855 2018/04/17 08:19:22 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1856 2018/04/17 08:35:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2609,3 +2609,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/glib2-tools to 2.56.1 [wiz 2018-04-17]
 	Updated devel/gdbus-codegen to 2.56.1 [wiz 2018-04-17]
 	Updated net/glib-networking to 2.56.0 [wiz 2018-04-17]
+	Updated devel/glibmm to 2.56.0 [wiz 2018-04-17]
