@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/08/18 07:31:01 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2018/04/17 20:57:19 leot Exp $
 
 PKGREVISION= 2
 .include "Makefile.common"
@@ -14,7 +14,6 @@ CONFIGURE_DIRS=		src
 CONFIGURE_ENV+=		PL=swi-prolog
 CONFIGURE_ENV+=		PLARCH=${MACHINE_GNU_PLATFORM}	# make PLIST consistent
 USE_TOOLS+=		gmake bash:run
-REPLACE_BASH+=		dotfiles/edit
 
 .include "../../mk/bsd.prefs.mk"
 
