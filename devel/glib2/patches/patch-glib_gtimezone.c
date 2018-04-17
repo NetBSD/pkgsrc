@@ -1,6 +1,7 @@
-$NetBSD: patch-glib_gtimezone.c,v 1.2 2014/09/05 20:49:55 prlw1 Exp $
+$NetBSD: patch-glib_gtimezone.c,v 1.3 2018/04/17 08:03:38 wiz Exp $
 
 Bug 730332 - glib uses wrong timezone transition with zoneinfo 2014c
+https://bugzilla.gnome.org/show_bug.cgi?id=730332
 
 Patch from John Ralls.
 
