@@ -1,4 +1,4 @@
-# $NetBSD: replace-interpreter.mk,v 1.15 2018/03/11 15:07:45 rillig Exp $
+# $NetBSD: replace-interpreter.mk,v 1.16 2018/04/17 09:31:41 adam Exp $
 
 # This file provides common templates for replacing #! interpreters
 # in script files.
@@ -107,7 +107,12 @@ replace-interpreter:
 			if [ -x "$${f}" ]; then				\
 				${CHMOD} a+x "$${f}.new";		\
 			fi;						\
-			${MV} -f "$${f}.new" "$${f}";			\
+			if ${CMP} -s "$${f}.new" "$${f}"; then		\
+				${INFO_MSG} "[replace-interpreter] Nothing changed in $${f}."; \
+				${RM} -f "$${f}.new";			\
+			else						\
+				${MV} -f "$${f}.new" "$${f}";		\
+			fi;						\
 		elif [ -d "$$f" ]; then					\
 			${SHCOMMENT} "Ignore it, most probably comes from shell globs"; \
 		else							\
