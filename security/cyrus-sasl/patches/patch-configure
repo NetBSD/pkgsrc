@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2013/10/20 17:56:02 joerg Exp $
+$NetBSD: patch-configure,v 1.2 2018/04/17 01:57:18 christos Exp $
 
---- configure.orig	2013-10-20 15:45:41.000000000 +0000
-+++ configure
-@@ -4346,9 +4346,9 @@ if test "${andrew_cv_runpath_switch+set}
+--- configure.orig	2018-01-19 09:14:17.000000000 -0500
++++ configure	2018-04-16 20:43:13.559772861 -0400
+@@ -6219,9 +6219,9 @@
    $as_echo_n "(cached) " >&6
  else
  
@@ -11,39 +11,15 @@ $NetBSD: patch-configure,v 1.1 2013/10/20 17:56:02 joerg Exp $
      SAVE_LDFLAGS="${LDFLAGS}"
 -    LDFLAGS="-R /usr/lib"
 +    LDFLAGS="${COMPILER_RPATH_FLAG} /usr/lib"
-     cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
+     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -6234,7 +6234,7 @@
+ }
  _ACEOF
-@@ -4385,7 +4385,7 @@ $as_echo "$ac_try_echo") >&5
- 	 test "$cross_compiling" = yes ||
- 	 $as_test_x conftest$ac_exeext
-        }; then
+ if ac_fn_c_try_link "$LINENO"; then :
 -  andrew_cv_runpath_switch="-R"
 +  andrew_cv_runpath_switch="${COMPILER_RPATH_FLAG}"
  else
-   $as_echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
-@@ -14591,9 +14591,9 @@ case "$with_sqlite" in
- $as_echo "$as_me: WARNING: SQLite Library not found" >&2;}; true;;
-     *)
-      if test -d ${with_sqlite}/lib; then
--         LIB_SQLITE="-L${with_sqlite}/lib -R${with_sqlite}/lib"
-+         LIB_SQLITE="-L${with_sqlite}/lib ${COMPILER_RPATH_FLAG}${with_sqlite}/lib"
-      else
--         LIB_SQLITE="-L${with_sqlite} -R${with_sqlite}"
-+         LIB_SQLITE="-L${with_sqlite} ${COMPILER_RPATH_FLAG}${with_sqlite}"
-      fi
  
-      LIB_SQLITE_DIR=$LIB_SQLITE
-@@ -14721,9 +14721,9 @@ case "$with_sqlite3" in
- $as_echo "$as_me: WARNING: SQLite3 Library not found" >&2;}; true;;
-     *)
-      if test -d ${with_sqlite3}/lib; then
--         LIB_SQLITE3="-L${with_sqlite3}/lib -R${with_sqlite3}/lib"
-+         LIB_SQLITE3="-L${with_sqlite3}/lib ${COMPILER_RPATH_FLAG}${with_sqlite3}/lib"
-      else
--         LIB_SQLITE3="-L${with_sqlite3} -R${with_sqlite3}"
-+         LIB_SQLITE3="-L${with_sqlite3} ${COMPILER_RPATH_FLAG}${with_sqlite3}"
-      fi
- 
-      LIB_SQLITE3_DIR=$LIB_SQLITE3
+   	LDFLAGS="-Wl,-rpath,/usr/lib"
