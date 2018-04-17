@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1324 2018/04/14 09:39:51 adam Exp $
+# $NetBSD: Makefile,v 1.1325 2018/04/17 07:16:43 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -619,6 +619,7 @@ SUBDIR+=	py-django-contrib-comments
 SUBDIR+=	py-django-cors-headers
 SUBDIR+=	py-django-countries
 SUBDIR+=	py-django-easy-thumbnails
+SUBDIR+=	py-django-extensions
 SUBDIR+=	py-django-filer
 SUBDIR+=	py-django-filter
 SUBDIR+=	py-django-formtools
