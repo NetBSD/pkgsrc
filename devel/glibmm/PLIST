@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2017/12/11 13:37:43 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.40 2018/04/17 08:35:25 wiz Exp $
 include/giomm-2.4/giomm.h
 include/giomm-2.4/giomm/action.h
 include/giomm-2.4/giomm/actiongroup.h
@@ -1646,6 +1646,7 @@ share/doc/glibmm-2.4/reference/html/since_2_48.html
 share/doc/glibmm-2.4/reference/html/since_2_50.html
 share/doc/glibmm-2.4/reference/html/since_2_52.html
 share/doc/glibmm-2.4/reference/html/since_2_54.html
+share/doc/glibmm-2.4/reference/html/since_2_56.html
 share/doc/glibmm-2.4/reference/html/since_2_6.html
 share/doc/glibmm-2.4/reference/html/since_2_8.html
 share/doc/glibmm-2.4/reference/html/splitbar.png
