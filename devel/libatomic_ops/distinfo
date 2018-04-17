@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.21 2018/02/21 23:59:33 maya Exp $
+$NetBSD: distinfo,v 1.22 2018/04/17 05:30:30 wiz Exp $
 
-SHA1 (libatomic_ops-7.6.2.tar.gz) = ebed1891250cc8e2c952b88fc07e1db2a213f7e2
-RMD160 (libatomic_ops-7.6.2.tar.gz) = 8764acd6d84488bbc79f5239037ccc3d4a59f2e2
-SHA512 (libatomic_ops-7.6.2.tar.gz) = 9149c9328ec22ab80469892b40c135f20b6cf6edff63b8de6f16ab0b209f40d1420ad012a40c80009dfb4cdc826feb72fa826d6abf61211516aabcf463c17fe4
-Size (libatomic_ops-7.6.2.tar.gz) = 496917 bytes
+SHA1 (libatomic_ops-7.6.4.tar.gz) = 84b0afa2ae9341bf8fe8fba566f7721f1f32bb32
+RMD160 (libatomic_ops-7.6.4.tar.gz) = 74a4f7657d62da095d09f50e8291928f5ec8a43b
+SHA512 (libatomic_ops-7.6.4.tar.gz) = 2e6ef0bfd4b77e9260383feb2865c96388fb1ebed9d37605eeb83ac87e3b6a565495d588808129ac7b3ee5f6a58a37440da7784b680cc6590842b09c2625983b
+Size (libatomic_ops-7.6.4.tar.gz) = 497571 bytes
 SHA1 (patch-ad) = b5db1656821058aae2ec81c20ffc4c0740049314
