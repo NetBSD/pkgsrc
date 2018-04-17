@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/07/31 14:18:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/04/17 10:50:24 wiz Exp $
 include/git2.h
 include/git2/annotated_commit.h
 include/git2/attr.h
@@ -66,7 +66,6 @@ include/git2/sys/openssl.h
 include/git2/sys/refdb_backend.h
 include/git2/sys/reflog.h
 include/git2/sys/refs.h
-include/git2/sys/remote.h
 include/git2/sys/repository.h
 include/git2/sys/stream.h
 include/git2/sys/time.h
@@ -81,5 +80,5 @@ include/git2/version.h
 include/git2/worktree.h
 lib/libgit2.so
 lib/libgit2.so.${PKGVERSION}
-lib/libgit2.so.26
+lib/libgit2.so.27
 lib/pkgconfig/libgit2.pc
