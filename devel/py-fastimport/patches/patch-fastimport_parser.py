@@ -1,4 +1,6 @@
-$NetBSD: patch-fastimport_parser.py,v 1.1 2017/07/25 16:10:53 joerg Exp $
+$NetBSD: patch-fastimport_parser.py,v 1.2 2018/04/17 13:24:16 adam Exp $
+
+Fix encoding.
 
 --- fastimport/parser.py.orig	2016-04-18 18:09:28.000000000 +0000
 +++ fastimport/parser.py
@@ -7,7 +9,7 @@ $NetBSD: patch-fastimport_parser.py,v 1.1 2017/07/25 16:10:53 joerg Exp $
  
      def __init__(self, input_stream, verbose=False, output=sys.stdout,
 -        user_mapper=None, strict=True):
-+        user_mapper=None, strict=True, message_fallback_encoding = None):
++        user_mapper=None, strict=True, message_fallback_encoding=None):
          """A Parser of import commands.
  
          :param input_stream: the file-like object to read from
