@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2018/03/24 07:50:20 adam Exp $
+# $NetBSD: Makefile,v 1.22 2018/04/17 08:42:35 adam Exp $
 
-DISTNAME=	pip-9.0.3
+DISTNAME=	pip-10.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip/}
@@ -10,19 +10,15 @@ HOMEPAGE=	http://www.pip-installer.org/
 COMMENT=	Installs Python packages as an easy_install replacement
 LICENSE=	mit
 
-#TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-#TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-#TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=1.10:../../devel/py-virtualenv
-
 USE_LANGUAGES=	# none
 
-REPLACE_PYTHON+=	pip/__init__.py pip/_vendor/requests/certs.py
-REPLACE_PYTHON+=	pip/_vendor/requests/packages/chardet/chardetect.py
+REPLACE_PYTHON+=	src/pip/_vendor/appdirs.py
+REPLACE_PYTHON+=	src/pip/_vendor/certifi/core.py
+REPLACE_PYTHON+=	src/pip/_vendor/chardet/cli/chardetect.py
+REPLACE_PYTHON+=	src/pip/_vendor/requests/certs.py
 
 post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/bin/pip
-	${RM} -f ${DESTDIR}${PREFIX}/bin/pip[2-3]
+	cd ${DESTDIR}${PREFIX}/bin && ${RM} -f pip pip[2-3]
 
 # no tests included
 do-test:
