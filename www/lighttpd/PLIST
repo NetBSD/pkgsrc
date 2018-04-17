@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2017/12/25 15:56:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2018/04/17 20:11:15 triaxx Exp $
 lib/lighttpd/mod_access.la
 lib/lighttpd/mod_accesslog.la
 lib/lighttpd/mod_alias.la
@@ -35,6 +35,8 @@ lib/lighttpd/mod_ssi.la
 lib/lighttpd/mod_staticfile.la
 lib/lighttpd/mod_status.la
 ${PLIST.gdbm}lib/lighttpd/mod_trigger_b4_dl.la
+${PLIST.memcached}lib/lighttpd/mod_trigger_b4_dl.la
+${PLIST.memcached}lib/lighttpd/mod_trigger_b4_dl.so
 lib/lighttpd/mod_uploadprogress.la
 lib/lighttpd/mod_userdir.la
 lib/lighttpd/mod_usertrack.la
