@@ -1,0 +1,3 @@
+bin/fast-import-filter @PREFIX@/bin/fast-import-filter-@PYVERSSUFFIX@
+bin/fast-import-info @PREFIX@/bin/fast-import-info-@PYVERSSUFFIX@
+bin/fast-import-query @PREFIX@/bin/fast-import-query-@PYVERSSUFFIX@
