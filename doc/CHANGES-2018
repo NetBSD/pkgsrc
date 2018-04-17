@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1875 2018/04/17 13:29:03 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1876 2018/04/17 13:30:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2630,3 +2630,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-fastimport to 0.9.8 [adam 2018-04-17]
 	Updated security/p11-kit to 0.23.10 [wiz 2018-04-17]
 	Updated security/gnutls to 3.6.0nb1 [wiz 2018-04-17]
+	Updated net/glib-networking to 2.56.0nb1 [wiz 2018-04-17]
