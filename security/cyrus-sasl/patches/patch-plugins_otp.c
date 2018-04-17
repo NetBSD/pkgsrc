@@ -1,12 +1,11 @@
-$NetBSD: patch-plugins_otp.c,v 1.1 2015/11/10 08:46:06 manu Exp $
+$NetBSD: patch-plugins_otp.c,v 1.2 2018/04/17 01:57:18 christos Exp $
 
 Fix the OTP plugin on 32 bit machines and add SHA2 support
 Submitted upstream as https://bugzilla.cyrusimap.org/show_bug.cgi?id=3914
 
---- plugins/otp.c.orig	2012-10-12 16:05:48.000000000 +0200
-+++ plugins/otp.c	2015-11-07 15:19:43.000000000 +0100
-@@ -92,8 +92,12 @@
- static algorithm_option_t algorithm_options[] = {
+--- plugins/otp.c.orig	2016-12-10 10:54:27.000000000 -0500
++++ plugins/otp.c	2018-04-16 20:09:59.910785912 -0400
+@@ -91,6 +91,10 @@
      {"md4",	0,	"md4"},
      {"md5",	0,	"md5"},
      {"sha1",	4,	"sha1"},
@@ -17,9 +16,7 @@ Submitted upstream as https://bugzilla.cyrusimap.org/show_bug.cgi?id=3914
      {NULL,	0,	NULL}
  };
  
- /* Convert the binary data into ASCII hex */
-@@ -675,9 +679,9 @@
- 	    SETERROR(utils, "OTP secret too short");
+@@ -706,7 +710,7 @@
  	    return SASL_FAIL;
  	}
  	
@@ -28,4 +25,3 @@ Submitted upstream as https://bugzilla.cyrusimap.org/show_bug.cgi?id=3914
  	       alg, seq, seed, buf, timeout);
  	
  	hex2bin(buf, otp, OTP_HASH_SIZE);
- 	
