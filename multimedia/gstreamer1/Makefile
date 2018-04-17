@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2018/04/15 09:40:05 adam Exp $
+# $NetBSD: Makefile,v 1.38 2018/04/17 22:10:05 wiz Exp $
 
-DISTNAME=	gstreamer-1.12.5
+DISTNAME=	gstreamer-1.14.0
 PKGNAME=	${DISTNAME:S/gstreamer/gstreamer1/}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gstreamer/
