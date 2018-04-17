@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2017/10/29 00:34:29 schmonz Exp $
+# $NetBSD: options.mk,v 1.19 2018/04/17 20:11:15 triaxx Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lighttpd
 PKG_SUPPORTED_OPTIONS=	bzip2 fam gdbm inet6 ldap lua mysql ssl memcached geoip gssapi webdav
@@ -67,8 +67,9 @@ CONFIGURE_ARGS+=	--with-lua
 ### "trigger before download" and CML modules.
 ###
 .if !empty(PKG_OPTIONS:Mmemcached)
-.  include "../../devel/libmemcache/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-memcache
+.  include "../../devel/libmemcached/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-memcached
+PLIST.memcached=	yes
 .endif
 
 ###
