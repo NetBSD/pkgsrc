@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1879 2018/04/17 16:29:51 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1880 2018/04/17 18:24:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2634,3 +2634,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/glib-networking to 2.56.0nb2 [wiz 2018-04-17]
 	Added devel/R-plogr version 0.2.0 [minskim 2018-04-17]
 	Updated devel/cmake to 3.11.1 [adam 2018-04-17]
+	Updated databases/py-apsw to 3.22.0 [adam 2018-04-17]
