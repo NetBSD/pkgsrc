@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2662 2018/04/16 15:54:55 minskim Exp $
+# $NetBSD: Makefile,v 1.2663 2018/04/17 15:22:41 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -29,6 +29,7 @@ SUBDIR+=	R-lazyeval
 SUBDIR+=	R-magrittr
 SUBDIR+=	R-memoise
 SUBDIR+=	R-pkgconfig
+SUBDIR+=	R-plogr
 SUBDIR+=	R-proto
 SUBDIR+=	R-repr
 SUBDIR+=	R-rlang
