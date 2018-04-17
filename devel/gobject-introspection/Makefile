@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2018/04/17 08:41:47 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2018/04/17 21:57:03 wiz Exp $
 
 DISTNAME=	gobject-introspection-1.56.1
 CATEGORIES=	devel gnome
@@ -27,7 +27,7 @@ SUBST_STAGE.timet=	pre-configure
 SUBST_FILES.timet=	giscanner/ast.py
 SUBST_FILES.timet+=	tests/scanner/Regress-1.0-expected.gir
 .include "../../mk/bsd.prefs.mk"
-.if !empty(MACHINE_PLATFORM:MNetBSD-5.99*) || !empty(MACHINE_PLATFORM:MNetBSD-[6-9]*) || !empty(MACHINE_PLATFORM:MMirBSD)
+.if !empty(MACHINE_PLATFORM:MNetBSD-5.99*) || !empty(MACHINE_PLATFORM:MNetBSD-[6-9]*) || !empty(MACHINE_PLATFORM:MMirBSD-*)
 SUBST_SED.timet=	-e 's,@TIMET_TYPENAME@,TYPE_INT64,g'
 SUBST_SED.timet+=	-e 's,@TIMET_CTYPE@,gint64,g'
 .else
