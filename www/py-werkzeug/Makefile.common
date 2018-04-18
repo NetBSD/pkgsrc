@@ -1,17 +1,17 @@
-# $NetBSD: Makefile.common,v 1.18 2017/05/31 08:24:38 adam Exp $
+# $NetBSD: Makefile.common,v 1.19 2018/04/18 07:37:33 adam Exp $
 # used by www/py-werkzeug/Makefile
 # used by www/py-werkzeug-docs/Makefile
 
-DISTNAME=	Werkzeug-0.12.2
+DISTNAME=	Werkzeug-0.14.1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/Werkzeug/}
 
 DISTINFO_FILE=	${.CURDIR}/../../www/py-werkzeug/distinfo
 PATCHDIR=	${.CURDIR}/../../www/py-werkzeug/patches
 
-MAINTAINER=	kleink@NetBSD.org
+MAINTAINER?=	kleink@NetBSD.org
 HOMEPAGE=	http://werkzeug.pocoo.org/
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=		# none
-USE_TOOLS+=		pax
+USE_LANGUAGES=	# none
+USE_TOOLS+=	pax
