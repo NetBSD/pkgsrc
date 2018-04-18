@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2018/04/06 16:06:23 fhajny Exp $
+# $NetBSD: Makefile,v 1.29 2018/04/18 12:18:49 fhajny Exp $
 
-DISTNAME=		beats-6.2.3
+DISTNAME=		beats-6.2.4
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=elastic/}
 GITHUB_PROJECT=		beats
@@ -17,8 +17,18 @@ USE_TOOLS+=		gmake
 GO_DIST_BASE=		${PKGBASE}-${GITHUB_TAG:S/v//}
 GO_SRCPATH=		github.com/elastic/beats
 
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=		audit
+
 # Components to build/install
 BEATS=			filebeat heartbeat metricbeat packetbeat
+
+# No SunOS compatible event reading supported
+.if ${OPSYS} != "SunOS"
+BEATS+=			auditbeat
+PLIST.audit=		yes
+.endif
 
 .for beat in ${BEATS}
 CHECK_RELRO_SKIP+=	bin/${beat}
