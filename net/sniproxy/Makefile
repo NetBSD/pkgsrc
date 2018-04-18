@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2017/05/09 14:17:07 wiedi Exp $
+# $NetBSD: Makefile,v 1.6 2018/04/18 19:34:11 kamil Exp $
 
-DISTNAME=	0.5.0
-PKGNAME=	sniproxy-${DISTNAME}
+DISTNAME=	sniproxy-0.5.0
 CATEGORIES=	net
-MASTER_SITES=	https://github.com/dlundquist/sniproxy/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=dlundquist/}
 
 MAINTAINER=	wiedi@frubar.net
 HOMEPAGE=	https://github.com/dlundquist/sniproxy/
 COMMENT=	Proxy that routes based on TLS server name extension
 LICENSE=	2-clause-bsd
-
-WRKSRC=		${WRKDIR}/sniproxy-${DISTNAME}
 
 USE_LANGUAGES=	c99
 USE_TOOLS+=	autoconf aclocal automake pkg-config
