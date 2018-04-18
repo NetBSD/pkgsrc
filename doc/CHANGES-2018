@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1891 2018/04/18 08:43:22 he Exp $
+$NetBSD: CHANGES-2018,v 1.1892 2018/04/18 09:53:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2652,3 +2652,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-cassandra-driver to 3.14.0 [fhajny 2018-04-18]
 	Updated www/py-werkzeug to 0.14.1 [adam 2018-04-18]
 	Updated lang/sr to 2.3.3nb10 [he 2018-04-18]
+	Updated security/py-asn1-modules to 0.2.1 [adam 2018-04-18]
+	Updated www/py-cheroot to 6.2.3 [adam 2018-04-18]
