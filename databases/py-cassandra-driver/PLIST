@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/02/27 08:41:48 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/04/18 07:30:53 fhajny Exp $
 ${PYSITELIB}/cassandra/__init__.py
 ${PYSITELIB}/cassandra/__init__.pyc
 ${PYSITELIB}/cassandra/__init__.pyo
@@ -77,6 +77,9 @@ ${PYSITELIB}/cassandra/encoder.pyo
 ${PYSITELIB}/cassandra/io/__init__.py
 ${PYSITELIB}/cassandra/io/__init__.pyc
 ${PYSITELIB}/cassandra/io/__init__.pyo
+${PYSITELIB}/cassandra/io/asyncioreactor.py
+${PYSITELIB}/cassandra/io/asyncioreactor.pyc
+${PYSITELIB}/cassandra/io/asyncioreactor.pyo
 ${PYSITELIB}/cassandra/io/asyncorereactor.py
 ${PYSITELIB}/cassandra/io/asyncorereactor.pyc
 ${PYSITELIB}/cassandra/io/asyncorereactor.pyo
