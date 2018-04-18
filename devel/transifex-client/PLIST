@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2018/03/23 15:02:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/04/18 19:47:20 kamil Exp $
 bin/tx
-${PYSITELIB}/transifex_client-${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/transifex_client-${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/transifex_client-${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/transifex_client-${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/transifex_client-${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/transifex_client-${EGG_INFODIR}/requires.txt
-${PYSITELIB}/transifex_client-${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/txclib/__init__.py
 ${PYSITELIB}/txclib/__init__.pyc
 ${PYSITELIB}/txclib/__init__.pyo
