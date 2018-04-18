@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/11/26 17:20:35 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/04/18 07:18:21 adam Exp $
 
-DISTNAME=	pytest-relaxed-1.1.0
+DISTNAME=	pytest-relaxed-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-relaxed/}
@@ -15,6 +15,9 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.0.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-test>=3.0.0:../../devel/py-test
 
 USE_LANGUAGES=	# none
+
+do-test:
+	cd ${WRKSRC}/tests && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
