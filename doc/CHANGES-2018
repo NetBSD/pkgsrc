@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1887 2018/04/18 07:06:05 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1888 2018/04/18 07:18:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2647,3 +2647,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-django-extensions to 2.0.7 [adam 2018-04-18]
 	Updated security/py-asyncssh to 1.12.2 [adam 2018-04-18]
 	Updated textproc/oniguruma to 6.8.2 [adam 2018-04-18]
+	Updated www/py-test-django to 3.2.1 [adam 2018-04-18]
+	Updated devel/py-test-relaxed to 1.1.2 [adam 2018-04-18]
