@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/04/18 15:37:56 minskim Exp $
+
+SHA1 (R/inline_0.3.14.tar.gz) = 5ebd9b5d1e597872b90579971d73bb3eeda602fe
+RMD160 (R/inline_0.3.14.tar.gz) = d8354ef2bb0f1b91294fd8e68b076d3f7416eca8
+SHA512 (R/inline_0.3.14.tar.gz) = f31bf4c8be7a26c548ae4681fa17bc5ff99e84e0e482922d07dd7cbb24e20f0a2568144f45abb1458b59a9dfd8241a9b3f17423ade6fcb37a202b50d38f1d918
+Size (R/inline_0.3.14.tar.gz) = 18002 bytes
