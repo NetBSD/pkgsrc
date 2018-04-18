@@ -1,21 +1,15 @@
-$NetBSD: patch-setup.py,v 1.1 2017/11/15 09:23:17 adam Exp $
+$NetBSD: patch-setup.py,v 1.2 2018/04/18 07:18:21 adam Exp $
 
-Open README.rst with proper encoding.
+Allow newer pytest.
 
---- setup.py.orig	2017-10-19 03:09:37.000000000 +0000
+--- setup.py.orig	2018-04-18 07:14:04.000000000 +0000
 +++ setup.py
-@@ -1,4 +1,5 @@
- #!/usr/bin/env python
-+import io
+@@ -29,7 +29,7 @@ setup(
  
- from setuptools import setup, find_packages
- 
-@@ -19,7 +20,7 @@ setup(
-     url="https://github.com/bitprophet/pytest-relaxed",
-     author='Jeff Forcier',
-     author_email='jeff@bitprophet.org',
--    long_description="\n" + open('README.rst').read(),
-+    long_description="\n" + io.open('README.rst', encoding='utf-8').read(),
- 
-     packages=find_packages(),
-     entry_points={
+     install_requires=[
+         # NOTE: pytest 3.3 broke something, not sure what yet
+-        'pytest>=3,<3.3',
++        'pytest>=3.4',
+         # TODO: ditto; six is so widely used it's prob worth having a broad pin
+         'six>=1,<2',
+         # TODO: ditto again!
