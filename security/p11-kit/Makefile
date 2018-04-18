@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/04/17 13:26:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2018/04/18 00:46:25 schmonz Exp $
 
 DISTNAME=	p11-kit-0.23.10
 CATEGORIES=	security
@@ -25,6 +25,10 @@ CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 CFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 LDFLAGS.SunOS+=	-lsocket -lnsl
+
+DLEXT.dylib=	dylib
+DLEXT=		${DLEXT.${SHLIB_TYPE}:Uso}
+PLIST_SUBST+=	DLEXT=${DLEXT:Q}
 
 PKGCONFIG_OVERRIDE+=	p11-kit/p11-kit-1.pc.in
 
