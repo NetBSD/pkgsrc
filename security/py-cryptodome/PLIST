@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/04/13 07:28:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/04/18 04:34:13 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -405,6 +405,9 @@ ${PYSITELIB}/Crypto/SelfTest/Cipher/test_vectors/TDES/TOFBpermop.rsp
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_vectors/TDES/TOFBsubtab.rsp
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_vectors/TDES/TOFBvarkey.rsp
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_vectors/TDES/TOFBvartext.rsp
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_vectors/wycheproof/aes_eax_test.json
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_vectors/wycheproof/aes_gcm_test.json
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_vectors/wycheproof/aes_siv_cmac_test.json
 ${PYSITELIB}/Crypto/SelfTest/Hash/__init__.py
 ${PYSITELIB}/Crypto/SelfTest/Hash/__init__.pyc
 ${PYSITELIB}/Crypto/SelfTest/Hash/__init__.pyo
@@ -494,6 +497,7 @@ ${PYSITELIB}/Crypto/SelfTest/Hash/test_vectors/keccak/ShortMsgKAT_256.txt
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_vectors/keccak/ShortMsgKAT_384.txt
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_vectors/keccak/ShortMsgKAT_512.txt
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_vectors/keccak/readme.txt
+${PYSITELIB}/Crypto/SelfTest/Hash/test_vectors/wycheproof/aes_cmac_test.json
 ${PYSITELIB}/Crypto/SelfTest/IO/__init__.py
 ${PYSITELIB}/Crypto/SelfTest/IO/__init__.pyc
 ${PYSITELIB}/Crypto/SelfTest/IO/__init__.pyo
@@ -601,6 +605,10 @@ ${PYSITELIB}/Crypto/SelfTest/Signature/test_vectors/PKCS1-PSS/SigVerPSS_186-3.rs
 ${PYSITELIB}/Crypto/SelfTest/Signature/test_vectors/PKCS1-v1.5/SigGen15_186-2.txt
 ${PYSITELIB}/Crypto/SelfTest/Signature/test_vectors/PKCS1-v1.5/SigGen15_186-3.txt
 ${PYSITELIB}/Crypto/SelfTest/Signature/test_vectors/PKCS1-v1.5/SigVer15_186-3.rsp
+${PYSITELIB}/Crypto/SelfTest/Signature/test_vectors/wycheproof/dsa_test.json
+${PYSITELIB}/Crypto/SelfTest/Signature/test_vectors/wycheproof/ecdsa_secp256r1_sha256_test.json
+${PYSITELIB}/Crypto/SelfTest/Signature/test_vectors/wycheproof/ecdsa_test.json
+${PYSITELIB}/Crypto/SelfTest/Signature/test_vectors/wycheproof/rsa_signature_test.json
 ${PYSITELIB}/Crypto/SelfTest/Util/__init__.py
 ${PYSITELIB}/Crypto/SelfTest/Util/__init__.pyc
 ${PYSITELIB}/Crypto/SelfTest/Util/__init__.pyo
