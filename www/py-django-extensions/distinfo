@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/04/17 07:16:43 adam Exp $
+$NetBSD: distinfo,v 1.2 2018/04/18 06:58:16 adam Exp $
 
-SHA1 (django-extensions-2.0.6.tar.gz) = 4edbde66414f2c4bdec19f16e097d05a6bd25c90
-RMD160 (django-extensions-2.0.6.tar.gz) = 020a2b1b3d32f935153ab061536aa711e4dc160e
-SHA512 (django-extensions-2.0.6.tar.gz) = 83d052ab380993e21805a938c37aa1ed85cb1fbe0a1819936322fc8d7c7b9f41b1df9e27570034511a9d0f62c9640a86df3a0ed8ab5ab69a683ad6f038f5540c
-Size (django-extensions-2.0.6.tar.gz) = 487757 bytes
+SHA1 (django-extensions-2.0.7.tar.gz) = e60d2291ef308e0e88734f882f43c8e40b67ba5d
+RMD160 (django-extensions-2.0.7.tar.gz) = 5cbe25dced01446b117d810d6934798d748edfb0
+SHA512 (django-extensions-2.0.7.tar.gz) = 41a10bf81cfc3401d9e46323ef73c6cbf2120a8bd159becbb93f2849450b0be2ca9fd92baa2a3f51b01b9b28dc51c25f2a059f0d1663b6641a75f9eb3e529e21
+Size (django-extensions-2.0.7.tar.gz) = 487969 bytes
