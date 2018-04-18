@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/05/31 08:24:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/04/18 07:37:33 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -101,9 +101,6 @@ ${PYSITELIB}/werkzeug/posixemulation.pyo
 ${PYSITELIB}/werkzeug/routing.py
 ${PYSITELIB}/werkzeug/routing.pyc
 ${PYSITELIB}/werkzeug/routing.pyo
-${PYSITELIB}/werkzeug/script.py
-${PYSITELIB}/werkzeug/script.pyc
-${PYSITELIB}/werkzeug/script.pyo
 ${PYSITELIB}/werkzeug/security.py
 ${PYSITELIB}/werkzeug/security.pyc
 ${PYSITELIB}/werkzeug/security.pyo
@@ -125,6 +122,9 @@ ${PYSITELIB}/werkzeug/useragents.pyo
 ${PYSITELIB}/werkzeug/utils.py
 ${PYSITELIB}/werkzeug/utils.pyc
 ${PYSITELIB}/werkzeug/utils.pyo
+${PYSITELIB}/werkzeug/websocket.py
+${PYSITELIB}/werkzeug/websocket.pyc
+${PYSITELIB}/werkzeug/websocket.pyo
 ${PYSITELIB}/werkzeug/wrappers.py
 ${PYSITELIB}/werkzeug/wrappers.pyc
 ${PYSITELIB}/werkzeug/wrappers.pyo
