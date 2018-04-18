@@ -1,10 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2016/03/05 11:29:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2018/04/18 19:56:42 kamil Exp $
 
-GITHUB_PROJECT= sign
-GITHUB_TAG=     1.0.7
-DISTNAME=       ${GITHUB_TAG}
-PKGNAME=        sign-${DISTNAME}
-PKGREVISION=        1
+DISTNAME=       sign-1.0.7
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=apankrat/}
 
