@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1884 2018/04/18 00:42:35 christos Exp $
+$NetBSD: CHANGES-2018,v 1.1885 2018/04/18 04:25:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2639,3 +2639,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/gstreamer1 to 1.14.0 [wiz 2018-04-17]
 	Updated multimedia/py-gstreamer1 to 1.14.0 [wiz 2018-04-17]
 	Updated audio/mp3blaster to 3.2.6 [christos 2018-04-17]
+	Updated databases/py-ldap3 to 2.5 [adam 2018-04-18]
+	Updated databases/py-multidict to 4.2.0 [adam 2018-04-18]
