@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1893 2018/04/18 11:27:30 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1894 2018/04/18 12:18:58 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2655,3 +2655,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-asn1-modules to 0.2.1 [adam 2018-04-18]
 	Updated www/py-cheroot to 6.2.3 [adam 2018-04-18]
 	Updated databases/elasticsearch to 6.2.4 [fhajny 2018-04-18]
+	Updated sysutils/beats to 6.2.4 [fhajny 2018-04-18]
