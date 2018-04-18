@@ -1,8 +1,10 @@
-$NetBSD: patch-au,v 1.3 2005/03/02 13:21:34 is Exp $
+$NetBSD: patch-csw_netbsd.c,v 1.1 2018/04/18 08:42:16 he Exp $
 
---- csw/netbsd.c.orig	2005-03-02 13:00:06.000000000 +0000
+Implement context switching for NetBSD.
+
+--- csw/netbsd.c.orig	2018-04-18 07:36:39.000000000 +0000
 +++ csw/netbsd.c
-@@ -0,0 +1,112 @@
+@@ -0,0 +1,99 @@
 +/*
 + *  netbsd.c -- context switch code for NetBSD 2.
 + *
@@ -16,31 +18,18 @@ $NetBSD: patch-au,v 1.3 2005/03/02 13:21:34 is Exp $
 +
 +static void startup(void (*)(void), unsigned long, unsigned long, unsigned long, unsigned long);
 +
-+#ifdef __i386__
-+void pthread__i386_init(void);
-+
-+#define _setcontext_u(uc)	(*_md_setcontext_u)(uc)
-+#define _swapcontext_u(oc,nc)	(*_md_swapcontext_u)(oc,nc)
-+
 +static void sr_setcontext_u(ucontext_t *);
 +static void sr_swapcontext_u(ucontext_t *, ucontext_t *);
 +
-+void (*_md_getcontext_u) (ucontext_t *);
-+void (*_md_setcontext_u) (ucontext_t *)			= sr_setcontext_u;
-+void (*_md_swapcontext_u)(ucontext_t *, ucontext_t *)	= sr_swapcontext_u;
-+
 +static void
 +sr_setcontext_u(ucontext_t *uc) {
-+	pthread__i386_init();
-+	_setcontext_u(uc);
++	setcontext(uc);
 +}
 +
 +static void
 +sr_swapcontext_u(ucontext_t *oldc, ucontext_t *newc) {
-+	pthread__i386_init();
-+	_swapcontext_u(oldc, newc);
++	swapcontext(oldc, newc);
 +}
-+#endif
 +
 +
 +/*
@@ -96,9 +85,9 @@ $NetBSD: patch-au,v 1.3 2005/03/02 13:21:34 is Exp $
 +
 +    if (old) {
 +	oldu = (ucontext_t *)old;
-+	_swapcontext_u(oldu, newu);
++	swapcontext(oldu, newu);
 +    } else {
-+	_setcontext_u(newu);
++	setcontext(newu);
 +    }
 +}
 +
