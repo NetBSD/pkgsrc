@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2017/11/20 15:55:16 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/04/18 12:18:49 fhajny Exp $
+${PLIST.audit}bin/auditbeat
 bin/filebeat
 bin/heartbeat
 bin/metricbeat
 bin/packetbeat
+${PLIST.audit}share/examples/beats/auditbeat.reference.yml
+${PLIST.audit}share/examples/beats/auditbeat.yml
 share/examples/beats/filebeat.reference.yml
 share/examples/beats/filebeat.yml
 share/examples/beats/heartbeat.reference.yml
