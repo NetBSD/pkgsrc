@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.13 2015/11/04 00:35:43 agc Exp $
+$NetBSD: distinfo,v 1.14 2018/04/18 20:48:19 christos Exp $
 
-SHA1 (vnc-4_1_2-unixsrc.tar.gz) = 9d8d8d93f4120b2e60c0ec0fce7e81ea302614e7
-RMD160 (vnc-4_1_2-unixsrc.tar.gz) = 2a2d615825e6ac74aca5f0c29d025e576b725dc3
-SHA512 (vnc-4_1_2-unixsrc.tar.gz) = 110ed71320d8b8224380b076c8041acaf13a06a33e0842763e3d9ec5599d8bb8d75b19c488c2a8fddf8cb2a4f5f53acc9111c97f07cbcb14a4f6a55b86e51555
-Size (vnc-4_1_2-unixsrc.tar.gz) = 537713 bytes
+SHA1 (vnc-4_1_3-unixsrc.tar.gz) = fd4ebf2bf8945b5a419ab69059a98fe3bc6698ef
+RMD160 (vnc-4_1_3-unixsrc.tar.gz) = 9ef5a3b6f13d1227e5b9399c4d56884639cf9686
+SHA512 (vnc-4_1_3-unixsrc.tar.gz) = 3fdc91c1054a7a8767f3f0d007e28d973699f8cb1d2f628389e8735f6eabee612f750fc722f80a296c03af17aad10ebb1cf1cab4d6f0795b3d567656e41c78a0
+Size (vnc-4_1_3-unixsrc.tar.gz) = 550870 bytes
 SHA1 (patch-aa) = a05aba67ef7a1fd61307d0e31d9fd90b9219b106
 SHA1 (patch-ab) = dc0c2db92e8d9c09b45bc82b2a61c316ba69cda5
 SHA1 (patch-ac) = 2e59341580ab98c1b245201c5a2b26df1cfa4c0b
 SHA1 (patch-common_network_TcpSocket.cxx) = 334e4101c2869c0bc2ed5e519c3d3407050adb75
 SHA1 (patch-tx_TXImage.cxx) = 7e4068e2a0b4e9c9dde18b25317d05d09bc45431
+SHA1 (patch-tx_TXWindow.cxx) = 52c220c5613a6d104f3f7992e09749655c1d8a8e
 SHA1 (patch-x0vncserver_Image.cxx) = e5e321e1a6c3d09e390bcc4ed20859fae492ff86
