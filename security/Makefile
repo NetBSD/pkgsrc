@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.679 2018/04/05 05:20:59 jnemeth Exp $
+# $NetBSD: Makefile,v 1.680 2018/04/19 06:50:42 wen Exp $
 #
 
 COMMENT=	Security tools
@@ -267,6 +267,7 @@ SUBDIR+=	p5-Crypt-OpenPGP
 SUBDIR+=	p5-Crypt-OpenSSL-AES
 SUBDIR+=	p5-Crypt-OpenSSL-Bignum
 SUBDIR+=	p5-Crypt-OpenSSL-DSA
+SUBDIR+=	p5-Crypt-OpenSSL-Guess
 SUBDIR+=	p5-Crypt-OpenSSL-RSA
 SUBDIR+=	p5-Crypt-OpenSSL-Random
 SUBDIR+=	p5-Crypt-PWSafe3
