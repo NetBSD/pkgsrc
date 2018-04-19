@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/02/28 08:46:04 wiz Exp $
+$NetBSD: distinfo,v 1.8 2018/04/19 03:12:32 wen Exp $
 
-SHA1 (CryptX-0.058.tar.gz) = 348d348ac12b5e86e50aad37a71629515a4cf9bf
-RMD160 (CryptX-0.058.tar.gz) = fb599b2326efa1a07d752fc9d1f7cdab938acb9c
-SHA512 (CryptX-0.058.tar.gz) = ba5b19c27b1fc5b81911886bc4b764ca98dd01d8ecdb85e436b0cc5946cdde8f331ed83235015eab6e79f8f3740d8f89f84c699509d450f18daf1c984297821b
-Size (CryptX-0.058.tar.gz) = 1697570 bytes
+SHA1 (CryptX-0.059.tar.gz) = 1b133660770397a4d4e19463f65cbf9eb978e0da
+RMD160 (CryptX-0.059.tar.gz) = 13331eb8406dfae1f3528dc47757ae1e1fda5ee0
+SHA512 (CryptX-0.059.tar.gz) = e9767d9815cb08c5a275f6b9bceeae1408cd4a4bf6d0fbdea74e8e10949192bbb58888f7275c8ba545f76effb1028aebab3f28ad4eae858b7e7b53dbf16d18d1
+Size (CryptX-0.059.tar.gz) = 1715341 bytes
