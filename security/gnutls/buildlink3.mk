@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2017/01/11 17:06:52 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2018/04/19 22:12:25 wiz Exp $
 
 BUILDLINK_TREE+=	gnutls
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnutls
 GNUTLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=3.3.0
-BUILDLINK_ABI_DEPENDS.gnutls+=	gnutls>=3.5.4
+BUILDLINK_ABI_DEPENDS.gnutls+=	gnutls>=3.6.0nb1
 BUILDLINK_PKGSRCDIR.gnutls?=	../../security/gnutls
 
 .include "../../archivers/lzo/buildlink3.mk"
@@ -15,6 +15,7 @@ BUILDLINK_PKGSRCDIR.gnutls?=	../../security/gnutls
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/libtasn1/buildlink3.mk"
 .include "../../security/nettle/buildlink3.mk"
+.include "../../security/p11-kit/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
 .endif # GNUTLS_BUILDLINK3_MK
 
