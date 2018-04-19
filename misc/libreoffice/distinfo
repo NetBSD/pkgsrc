@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.53 2018/04/07 02:44:47 ryoon Exp $
+$NetBSD: distinfo,v 1.54 2018/04/19 18:07:03 mrg Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -219,9 +219,19 @@ SHA1 (patch-external_mysql-connector-cpp_patches_netbsd.patch) = d0981757856f5b2
 SHA1 (patch-external_postgresql_ExternalProject__postgresql.mk) = 7c94155221025fe3c89217341d81e279943078ce
 SHA1 (patch-external_postgresql_UnpackedTarball__postgresql.mk) = d0b94e20d9e1aa89adac0f4a91c7b684850c78bc
 SHA1 (patch-external_postgresql_postgresql-9.2.1-openssl-1.1.patch) = de2b5d8e657e9721867f9c72a402cc30fd093218
+SHA1 (patch-i18npool_inc_collator_unicode.hxx) = 6ae7a3fb622969d76c2475201882d22fdf300384
+SHA1 (patch-i18npool_source_breakiterator_breakiterator_unicode.cxx) = 0a784bced0874b3ef7cc3b6ff19a865e0d64ce49
+SHA1 (patch-i18npool_source_collator_collator_unicode.cxx) = 853367cf9a4be70c5d0de44a82e6fadc70e40ea6
+SHA1 (patch-i18npool_source_collator_gencoll_rule.cxx) = 2fc259c56b9dc9395ea6de06f130f0a6102244d5
+SHA1 (patch-i18npool_source_ordinalsuffix_ordinalsuffix.cxx) = 6019a57f8dbf849a503935a3208449b99451488c
+SHA1 (patch-i18npool_source_transliteration_ignoreDiacritics_CTL.cxx) = 50c810957b48db3cac46f87b6c777c5acb9466a5
+SHA1 (patch-i18nutil_source_utility_unicode.cxx) = b2c48cafe10cf4fd45604c8e501bbd9bb3cc68b8
+SHA1 (patch-lotuswordpro_source_filter_localtime.cxx) = 8db23e81f54b5a71e331dfccb57cceb8aab92d2a
 SHA1 (patch-mysqlc_Library__mysqlc.mk) = b040cfdb25f41896c77df3acafd4c31dc41dd590
+SHA1 (patch-opencl_source_openclconfig.cxx) = 2178f73aa08148cfd54d9a8c79eb29bf535f2e6b
 SHA1 (patch-solenv_gbuild_Module.mk) = cbd6ca3acae187458e49fe76d973e6475ed5fe1d
 SHA1 (patch-vcl_Executable__visualbackendtest.mk) = 2db5f3e7daabb2a79181de5e136de019d5264b58
+SHA1 (patch-vcl_inc_scrptrun.h) = 52877f7f6c867e2baeed525c200ce7d75a97574a
 SHA1 (patch-xmloff_source_draw_ximp3dscene.cxx) = bdd0b2563e54424dd468c2334e17ab23057a69fb
 SHA1 (patch-xmlsecurity_source_gpg_CertificateImpl.hxx) = 8b744a450175b4e432d41fb6cea0ee6df72ee307
 SHA1 (patch-xmlsecurity_source_gpg_xmlsignature__gpgimpl.cxx) = 68e869e1c83b911765bab27f185bbad44636ea0a
