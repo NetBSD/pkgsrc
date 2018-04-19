@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1901 2018/04/19 06:52:17 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1902 2018/04/19 06:59:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2663,3 +2663,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated filesystems/glusterfs to 3.12.8 [manu 2018-04-19]
 	Updated security/p5-CryptX to 0.059 [wen 2018-04-19]
 	Added security/p5-Crypt-OpenSSL-Guess version 0.11 [wen 2018-04-19]
+	Updated security/p5-Crypt-OpenSSL-Random to 0.14 [wen 2018-04-19]
