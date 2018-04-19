@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/06/12 13:47:15 mef Exp $
+$NetBSD: distinfo,v 1.7 2018/04/19 02:19:54 wen Exp $
 
-SHA1 (Type-Tiny-1.002001.tar.gz) = 3929dbc9a4e87e8221cc5eaab735a32f9a5b6c47
-RMD160 (Type-Tiny-1.002001.tar.gz) = 0633086315be8f8d7226e2ae81b1a8ec1cc29689
-SHA512 (Type-Tiny-1.002001.tar.gz) = e499c4f113e5a327294012daac9f0cd60a42a6c40b9d0c9c523a229f574a7dd0f672f209d0596d25edcbc39b79cd2ea65791b6a5146345e75fdd1d84ee1cd161
-Size (Type-Tiny-1.002001.tar.gz) = 264950 bytes
+SHA1 (Type-Tiny-1.002002.tar.gz) = c9b1b592b86cb6cdd5d7f97842020a49c941edfd
+RMD160 (Type-Tiny-1.002002.tar.gz) = 5e185fd054d3c203037cc532a342716577811ee0
+SHA512 (Type-Tiny-1.002002.tar.gz) = e820d389104c73a6d9ea8795c6ef64b8e345d4b3014e82306e5de09f7ceacadce03989925dfc6d69828ef19bb4c275708fd0fb55da06875ec284e596fba6c542
+Size (Type-Tiny-1.002002.tar.gz) = 265162 bytes
