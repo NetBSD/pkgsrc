@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.8 2018/03/02 10:28:58 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/04/19 07:56:39 fhajny Exp $
 bin/gradle
 lib/java/gradle/lib/annotations-13.0.jar
 lib/java/gradle/lib/ant-1.9.9.jar
 lib/java/gradle/lib/ant-launcher-1.9.9.jar
-lib/java/gradle/lib/asm-6.0.jar
-lib/java/gradle/lib/asm-commons-6.0.jar
-lib/java/gradle/lib/asm-tree-6.0.jar
+lib/java/gradle/lib/asm-6.1.1.jar
+lib/java/gradle/lib/asm-analysis-6.1.1.jar
+lib/java/gradle/lib/asm-commons-6.1.1.jar
+lib/java/gradle/lib/asm-tree-6.1.1.jar
 lib/java/gradle/lib/commons-collections-3.2.2.jar
 lib/java/gradle/lib/commons-compress-1.14.jar
 lib/java/gradle/lib/commons-io-2.4.jar
@@ -21,9 +22,9 @@ lib/java/gradle/lib/gradle-core-api-${PKGVERSION}.jar
 lib/java/gradle/lib/gradle-docs-${PKGVERSION}.jar
 lib/java/gradle/lib/gradle-installation-beacon-${PKGVERSION}.jar
 lib/java/gradle/lib/gradle-jvm-services-${PKGVERSION}.jar
-lib/java/gradle/lib/gradle-kotlin-dsl-0.15.6.jar
-lib/java/gradle/lib/gradle-kotlin-dsl-tooling-builders-0.15.6.jar
-lib/java/gradle/lib/gradle-kotlin-dsl-tooling-models-0.15.6.jar
+lib/java/gradle/lib/gradle-kotlin-dsl-0.16.3.jar
+lib/java/gradle/lib/gradle-kotlin-dsl-tooling-builders-0.16.3.jar
+lib/java/gradle/lib/gradle-kotlin-dsl-tooling-models-0.16.3.jar
 lib/java/gradle/lib/gradle-launcher-${PKGVERSION}.jar
 lib/java/gradle/lib/gradle-logging-${PKGVERSION}.jar
 lib/java/gradle/lib/gradle-messaging-${PKGVERSION}.jar
@@ -44,13 +45,13 @@ lib/java/gradle/lib/jcip-annotations-1.0.jar
 lib/java/gradle/lib/jcl-over-slf4j-1.7.16.jar
 lib/java/gradle/lib/jsr305-2.0.1.jar
 lib/java/gradle/lib/jul-to-slf4j-1.7.16.jar
-lib/java/gradle/lib/kotlin-compiler-embeddable-1.2.21.jar
-lib/java/gradle/lib/kotlin-reflect-1.2.21.jar
-lib/java/gradle/lib/kotlin-sam-with-receiver-compiler-plugin-1.2.21.jar
-lib/java/gradle/lib/kotlin-script-runtime-1.2.21.jar
-lib/java/gradle/lib/kotlin-stdlib-1.2.21.jar
-lib/java/gradle/lib/kotlin-stdlib-jdk7-1.2.21.jar
-lib/java/gradle/lib/kotlin-stdlib-jdk8-1.2.21.jar
+lib/java/gradle/lib/kotlin-compiler-embeddable-1.2.31.jar
+lib/java/gradle/lib/kotlin-reflect-1.2.31.jar
+lib/java/gradle/lib/kotlin-sam-with-receiver-compiler-plugin-1.2.31.jar
+lib/java/gradle/lib/kotlin-script-runtime-1.2.31.jar
+lib/java/gradle/lib/kotlin-stdlib-1.2.31.jar
+lib/java/gradle/lib/kotlin-stdlib-jdk7-1.2.31.jar
+lib/java/gradle/lib/kotlin-stdlib-jdk8-1.2.31.jar
 lib/java/gradle/lib/kryo-2.20.jar
 lib/java/gradle/lib/log4j-over-slf4j-1.7.16.jar
 lib/java/gradle/lib/minlog-1.2.jar
@@ -76,7 +77,7 @@ lib/java/gradle/lib/plugins/aether-impl-1.13.1.jar
 lib/java/gradle/lib/plugins/aether-spi-1.13.1.jar
 lib/java/gradle/lib/plugins/aether-util-1.13.1.jar
 lib/java/gradle/lib/plugins/apiguardian-api-1.0.0.jar
-lib/java/gradle/lib/plugins/asm-util-6.0.jar
+lib/java/gradle/lib/plugins/asm-util-6.1.1.jar
 lib/java/gradle/lib/plugins/aws-java-sdk-core-1.11.267.jar
 lib/java/gradle/lib/plugins/aws-java-sdk-kms-1.11.267.jar
 lib/java/gradle/lib/plugins/aws-java-sdk-s3-1.11.267.jar
