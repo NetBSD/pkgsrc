@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2017/11/15 03:31:56 manu Exp $
+@comment $NetBSD: PLIST,v 1.39 2018/04/19 02:49:04 manu Exp $
 ${PYSITELIB}/gluster/__init__.py
 ${PYSITELIB}/gluster/__init__.pyc
 ${PYSITELIB}/gluster/__init__.pyo
