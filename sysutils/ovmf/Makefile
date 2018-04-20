@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/01/15 09:49:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2018/04/20 15:34:36 maya Exp $
 
 GITHUB_PROJECT=	edk2
 PKGNAME=	OVMF-0.0.2017624
@@ -34,9 +34,11 @@ do-build:
 
 INSTALLATION_DIRS+=	share
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/Build/Ovmf*/*/FV/OVMF.fd ${DESTDIR}${PREFIX}/share/OVMF.fd
+	${INSTALL_DATA} ${WRKSRC}/Build/Ovmf*/*/FV/OVMF.fd ${DESTDIR}${PREFIX}/share/OVMF.fd
 
+BUILD_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
 BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 .include "../../lang/python/application.mk"
 .include "../../devel/libuuid/buildlink3.mk"
