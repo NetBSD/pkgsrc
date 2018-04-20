@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1904 2018/04/19 08:20:18 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1905 2018/04/20 04:57:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2666,3 +2666,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/p5-Crypt-OpenSSL-Random to 0.14 [wen 2018-04-19]
 	Updated devel/gradle to 4.7 [fhajny 2018-04-19]
 	Updated databases/py-peewee to 3.2.4 [fhajny 2018-04-19]
+	Updated mail/mpop to 1.2.6 [wiz 2018-04-20]
