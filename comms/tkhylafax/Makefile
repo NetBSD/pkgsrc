@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2017/09/06 10:40:26 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2018/04/21 13:38:04 wiz Exp $
 
 DISTNAME=	tkhylafax-3.1
 PKGREVISION=	4
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.sgi.com/sgi/fax/contrib/tkhylafax/
-#		ftp://ftp.tuwien.ac.at/infosys/fax/hylafax/contrib/tkhylafax/ \
-#		http://gd.tuwien.ac.at/infosys/fax/hylafax/contrib/tkhylafax/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.elgro.demon.co.uk/resources.html
