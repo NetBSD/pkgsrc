@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1906 2018/04/21 04:40:01 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.1907 2018/04/21 09:25:28 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2668,3 +2668,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-peewee to 3.2.4 [fhajny 2018-04-19]
 	Updated mail/mpop to 1.2.6 [wiz 2018-04-20]
 	Updated net/mikutter to 3.6.6 [tsutsui 2018-04-21]
+	Updated net/gallery-dl to 1.3.4 [leot 2018-04-21]
