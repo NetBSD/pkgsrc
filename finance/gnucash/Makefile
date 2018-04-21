@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.256 2018/04/16 14:34:27 wiz Exp $
+# $NetBSD: Makefile,v 1.257 2018/04/21 10:22:56 wiz Exp $
 
 DISTNAME=		gnucash-3.0
 PKGREVISION=		2
@@ -30,6 +30,8 @@ INFO_FILES=		yes
 USE_TOOLS+=		perl:run pkg-config
 # remove when using ninja
 USE_TOOLS+=		gmake
+
+TEST_TARGET=		check
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnucash
 CXXFLAGS+=		-Wno-deprecated-declarations
