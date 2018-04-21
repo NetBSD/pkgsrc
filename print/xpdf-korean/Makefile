@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2017/01/19 18:52:23 agc Exp $
+# $NetBSD: Makefile,v 1.27 2018/04/21 13:38:06 wiz Exp $
 
 DISTNAME=	xpdf-korean-2011-sep-02
 PKGNAME=	xpdf-korean-20110902
 PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
-MASTER_SITES+=	http://gd.tuwien.ac.at/publishing/xpdf/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
