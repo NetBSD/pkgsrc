@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/08/08 11:23:38 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2018/04/21 23:30:46 sevan Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 COMMENT=	MariaDB 5.5, a free SQL database (server)
@@ -36,7 +36,7 @@ BUILDLINK_DEPMETHOD.readline=	build
 
 PLIST_VARS+=		embedded ndb auth_socket
 
-.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD"
+.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 PLIST.auth_socket=	yes
 .endif
 
