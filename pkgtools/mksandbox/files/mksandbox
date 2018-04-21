@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.11 2018/04/12 02:08:47 simonb Exp $
+# $NetBSD: mksandbox,v 1.12 2018/04/21 19:40:50 sevan Exp $
 
 # Copyright (c) 2002,2012 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -86,6 +86,19 @@ Darwin)
 	sandboxEmptyDirs="$sandboxEmptyDirs /var/root"
 	sandboxMountDirs="$sandboxMountDirs /usr/llvm-gcc-4.2 /usr/X11 /System/Library /Library"
 	sandboxWriteDirs="$sandboxWriteDirs /Library/Server/Mail/Data"
+	;;
+DragonFly)
+	bmakeprog=bmake
+	chmodprog=/bin/chmod
+	chownprog=/usr/sbin/chown
+	cpprog=/bin/cp
+	gtarprog=/usr/bin/tar
+	idprog=/usr/bin/id
+	mkdirprog="/bin/mkdir -p"
+	mountflags="-t null"
+	mountprog=/sbin/mount
+	paxprog=/bin/pax
+	sedprog=/usr/bin/sed
 	;;
 FreeBSD)
 	bmakeprog=bmake
@@ -265,7 +278,7 @@ echo "Make and populate $sandbox/dev"
 $mkdirprog $sandbox/dev
 
 case "$opsys" in
-Darwin|FreeBSD)
+Darwin|DragonFly|FreeBSD)
 	$mountprog -t devfs devfs $sandbox/dev
 	;;
 SunOS)
@@ -414,7 +427,7 @@ xmount)
 		esac
 	done
 	case \$opsys in
-	Darwin|FreeBSD)
+	Darwin|DragonFly|FreeBSD)
 		$mountprog -t devfs devfs \$sandbox/dev
 		;;
 	Linux)
@@ -436,7 +449,7 @@ xumount)
 		umount \$sandbox/\$mntpoint
 	done
 	case \$opsys in
-	Darwin|FreeBSD|Linux)
+	Darwin|DragonFly|FreeBSD|Linux)
 		umount \$sandbox/dev
 		;;
 	SunOS)
