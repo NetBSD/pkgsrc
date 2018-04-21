@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2017/01/19 18:52:08 agc Exp $
+# $NetBSD: Makefile,v 1.59 2018/04/21 13:38:05 wiz Exp $
 
 DISTNAME=	nedit-${VERS}-src
 PKGNAME=	nedit-${VERS}
@@ -21,7 +21,6 @@ MASTER_SITE_NEDIT=	http://www.nedit.org/ftp/			\
 			http://nl.nedit.org/ftp/			\
 			ftp://nl.nedit.org/pub/NEdit/			\
 			ftp://ftp.fu-berlin.de/unix/editors/nedit/	\
-			http://gd.tuwien.ac.at/editors/nedit/NEdit/	\
 			ftp://cri.univ-tlse1.fr/pub/unix/nedit/NEdit/	\
 			ftp://ftp.chg.ru/pub/unix/editors/nedit/
 

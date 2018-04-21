@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2017/01/19 18:52:23 agc Exp $
-#
+# $NetBSD: Makefile,v 1.24 2018/04/21 13:38:06 wiz Exp $
 
 DISTNAME=	xpdf-latin2-2011-aug-15
 PKGNAME=	xpdf-latin2-20110815
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
-MASTER_SITES+=	http://gd.tuwien.ac.at/publishing/xpdf/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/

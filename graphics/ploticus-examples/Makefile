@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2013/12/23 11:57:04 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2018/04/21 13:38:05 wiz Exp $
 
 DISTNAME=	plnode200
 PKGNAME=	ploticus-examples-2.00
 CATEGORIES=	graphics
-MASTER_SITES=	http://gd.tuwien.ac.at/visual/ploticus/download/
+#MASTER_SITES=	http://gd.tuwien.ac.at/visual/ploticus/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 # HOMEPAGE=	http://www.sgpr.net/
