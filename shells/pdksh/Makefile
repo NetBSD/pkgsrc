@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2017/01/19 18:52:25 agc Exp $
-#
+# $NetBSD: Makefile,v 1.26 2018/04/21 13:38:07 wiz Exp $
 
 DISTNAME=	pdksh-5.2.14
 PKGREVISION=	7
 CATEGORIES=	shells
 MASTER_SITES=	ftp://ftp.cs.mun.ca/pub/pdksh/
-MASTER_SITES+=	http://gd.tuwien.ac.at/utils/shells/pdksh/
 MASTER_SITES+=	ftp://ftp.lip6.fr/pub/unix/shells/pdksh/
 MASTER_SITES+=	ftp://ftp.demon.net/pub/mirrors/pdksh/
 MASTER_SITES=	# maintained locally
