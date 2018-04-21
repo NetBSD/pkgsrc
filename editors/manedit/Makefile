@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2017/09/03 08:36:53 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.36 2018/04/21 13:38:04 wiz Exp $
 
 DISTNAME=	manedit-0.8.1
 PKGREVISION=	1
 CATEGORIES=	editors
-MASTER_SITES=	ftp://gd.tuwien.ac.at/games/wolfpack/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
