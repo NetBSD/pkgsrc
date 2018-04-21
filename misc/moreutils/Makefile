@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2018/03/14 20:35:23 leot Exp $
+# $NetBSD: Makefile,v 1.5 2018/04/21 17:27:51 leot Exp $
 
-DISTNAME=	moreutils_0.60.orig
+DISTNAME=	moreutils_0.62.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/m/moreutils/}
 EXTRACT_SUFX=	.tar.xz
