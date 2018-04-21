@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/03/17 11:07:39 leot Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/04/21 09:25:16 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -180,9 +180,6 @@ ${PYSITELIB}/gallery_dl/extractor/komikcast.pyo
 ${PYSITELIB}/gallery_dl/extractor/konachan.py
 ${PYSITELIB}/gallery_dl/extractor/konachan.pyc
 ${PYSITELIB}/gallery_dl/extractor/konachan.pyo
-${PYSITELIB}/gallery_dl/extractor/loveisover.py
-${PYSITELIB}/gallery_dl/extractor/loveisover.pyc
-${PYSITELIB}/gallery_dl/extractor/loveisover.pyo
 ${PYSITELIB}/gallery_dl/extractor/luscious.py
 ${PYSITELIB}/gallery_dl/extractor/luscious.pyc
 ${PYSITELIB}/gallery_dl/extractor/luscious.pyo
@@ -276,9 +273,6 @@ ${PYSITELIB}/gallery_dl/extractor/sensescans.pyo
 ${PYSITELIB}/gallery_dl/extractor/slideshare.py
 ${PYSITELIB}/gallery_dl/extractor/slideshare.pyc
 ${PYSITELIB}/gallery_dl/extractor/slideshare.pyo
-${PYSITELIB}/gallery_dl/extractor/spectrumnexus.py
-${PYSITELIB}/gallery_dl/extractor/spectrumnexus.pyc
-${PYSITELIB}/gallery_dl/extractor/spectrumnexus.pyo
 ${PYSITELIB}/gallery_dl/extractor/subapics.py
 ${PYSITELIB}/gallery_dl/extractor/subapics.pyc
 ${PYSITELIB}/gallery_dl/extractor/subapics.pyo
