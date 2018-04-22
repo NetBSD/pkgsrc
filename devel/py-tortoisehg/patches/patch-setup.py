@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.3 2015/11/18 17:12:44 nros Exp $
+$NetBSD: patch-setup.py,v 1.4 2018/04/22 22:21:09 wiz Exp $
 
 * in config.py: adjust license filename and add doc_path
   to point at the local docs
@@ -6,7 +6,7 @@ $NetBSD: patch-setup.py,v 1.3 2015/11/18 17:12:44 nros Exp $
   the nautilus extension.
 * Install html documention, desktop file and license file.
 
---- setup.py.orig	2015-11-09 16:49:02.000000000 +0000
+--- setup.py.orig	2018-02-02 17:35:52.000000000 +0000
 +++ setup.py
 @@ -11,6 +11,7 @@ import sys
  import os
@@ -16,7 +16,7 @@ $NetBSD: patch-setup.py,v 1.3 2015/11/18 17:12:44 nros Exp $
  import tempfile
  import re
  import tarfile
-@@ -205,10 +206,11 @@ class build_config(Command):
+@@ -213,10 +214,11 @@ class build_config(Command):
          data = {
              'bin_path': installcmd.install_scripts[rootlen:],
              'license_path': os.path.join(sharedir, 'doc', 'tortoisehg',
@@ -27,9 +27,9 @@ $NetBSD: patch-setup.py,v 1.3 2015/11/18 17:12:44 nros Exp $
                                        'icons'),
 +            'doc_path' : os.path.join(sharedir, 'doc', 'tortoisehg'),
              'nofork': True,
+             'qt_api': qtcore._detectapi(),
              }
-         # Distributions will need to supply their own
-@@ -569,8 +571,14 @@ def setup_posix():
+@@ -722,8 +724,14 @@ def setup_posix():
                              [os.path.join(root, f) for f in files]))
      _data_files.extend((os.path.join('share', modir), [mofile])
                         for pofile, modir, mofile in _walklocales())
