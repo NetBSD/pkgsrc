@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1912 2018/04/22 11:56:45 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1913 2018/04/22 17:02:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2674,3 +2674,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/p5-Digest-SHA3 to 1.04 [wen 2018-04-22]
 	Updated audio/p5-Audio-Scan to 1.00 [wen 2018-04-22]
 	Updated devel/p5-Storable to 3.09 [wen 2018-04-22]
+	Updated finance/py-alpha_vantage to 2.0.0 [minskim 2018-04-22]
