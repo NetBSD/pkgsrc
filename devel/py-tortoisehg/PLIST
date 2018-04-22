@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2016/12/20 08:53:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2018/04/22 22:21:09 wiz Exp $
 bin/thg
 ${PYSITELIB}/hgext3rd/thg.py
 ${PYSITELIB}/hgext3rd/thg.pyc
@@ -142,9 +142,6 @@ ${PYSITELIB}/tortoisehg/hgqt/merge.pyo
 ${PYSITELIB}/tortoisehg/hgqt/messageentry.py
 ${PYSITELIB}/tortoisehg/hgqt/messageentry.pyc
 ${PYSITELIB}/tortoisehg/hgqt/messageentry.pyo
-${PYSITELIB}/tortoisehg/hgqt/modeltest.py
-${PYSITELIB}/tortoisehg/hgqt/modeltest.pyc
-${PYSITELIB}/tortoisehg/hgqt/modeltest.pyo
 ${PYSITELIB}/tortoisehg/hgqt/mq.py
 ${PYSITELIB}/tortoisehg/hgqt/mq.pyc
 ${PYSITELIB}/tortoisehg/hgqt/mq.pyo
@@ -175,15 +172,27 @@ ${PYSITELIB}/tortoisehg/hgqt/qfold.pyo
 ${PYSITELIB}/tortoisehg/hgqt/qrename.py
 ${PYSITELIB}/tortoisehg/hgqt/qrename.pyc
 ${PYSITELIB}/tortoisehg/hgqt/qrename.pyo
+${PYSITELIB}/tortoisehg/hgqt/qsci.py
+${PYSITELIB}/tortoisehg/hgqt/qsci.pyc
+${PYSITELIB}/tortoisehg/hgqt/qsci.pyo
 ${PYSITELIB}/tortoisehg/hgqt/qscilib.py
 ${PYSITELIB}/tortoisehg/hgqt/qscilib.pyc
 ${PYSITELIB}/tortoisehg/hgqt/qscilib.pyo
 ${PYSITELIB}/tortoisehg/hgqt/qtapp.py
 ${PYSITELIB}/tortoisehg/hgqt/qtapp.pyc
 ${PYSITELIB}/tortoisehg/hgqt/qtapp.pyo
+${PYSITELIB}/tortoisehg/hgqt/qtcore.py
+${PYSITELIB}/tortoisehg/hgqt/qtcore.pyc
+${PYSITELIB}/tortoisehg/hgqt/qtcore.pyo
+${PYSITELIB}/tortoisehg/hgqt/qtgui.py
+${PYSITELIB}/tortoisehg/hgqt/qtgui.pyc
+${PYSITELIB}/tortoisehg/hgqt/qtgui.pyo
 ${PYSITELIB}/tortoisehg/hgqt/qtlib.py
 ${PYSITELIB}/tortoisehg/hgqt/qtlib.pyc
 ${PYSITELIB}/tortoisehg/hgqt/qtlib.pyo
+${PYSITELIB}/tortoisehg/hgqt/qtnetwork.py
+${PYSITELIB}/tortoisehg/hgqt/qtnetwork.pyc
+${PYSITELIB}/tortoisehg/hgqt/qtnetwork.pyo
 ${PYSITELIB}/tortoisehg/hgqt/quickop.py
 ${PYSITELIB}/tortoisehg/hgqt/quickop.pyc
 ${PYSITELIB}/tortoisehg/hgqt/quickop.pyo
@@ -313,6 +322,9 @@ ${PYSITELIB}/tortoisehg/util/colormap.pyo
 ${PYSITELIB}/tortoisehg/util/config.py
 ${PYSITELIB}/tortoisehg/util/config.pyc
 ${PYSITELIB}/tortoisehg/util/config.pyo
+${PYSITELIB}/tortoisehg/util/configitems.py
+${PYSITELIB}/tortoisehg/util/configitems.pyc
+${PYSITELIB}/tortoisehg/util/configitems.pyo
 ${PYSITELIB}/tortoisehg/util/debugthg.py
 ${PYSITELIB}/tortoisehg/util/debugthg.pyc
 ${PYSITELIB}/tortoisehg/util/debugthg.pyo
@@ -446,10 +458,11 @@ share/doc/tortoisehg/html/_static/comment-close.png
 share/doc/tortoisehg/html/_static/comment.png
 share/doc/tortoisehg/html/_static/custom.css
 share/doc/tortoisehg/html/_static/doctools.js
+share/doc/tortoisehg/html/_static/documentation_options.js
 share/doc/tortoisehg/html/_static/down-pressed.png
 share/doc/tortoisehg/html/_static/down.png
 share/doc/tortoisehg/html/_static/file.png
-share/doc/tortoisehg/html/_static/jquery-3.1.0.js
+share/doc/tortoisehg/html/_static/jquery-3.2.1.js
 share/doc/tortoisehg/html/_static/jquery.js
 share/doc/tortoisehg/html/_static/minus.png
 share/doc/tortoisehg/html/_static/plus.png
@@ -618,6 +631,7 @@ share/pixmaps/tortoisehg/icons/scalable/actions/hg-qguard.svg
 share/pixmaps/tortoisehg/icons/scalable/actions/hg-qpop-all.svg
 share/pixmaps/tortoisehg/icons/scalable/actions/hg-qpop.svg
 share/pixmaps/tortoisehg/icons/scalable/actions/hg-qpush-all.svg
+share/pixmaps/tortoisehg/icons/scalable/actions/hg-qpush-move.svg
 share/pixmaps/tortoisehg/icons/scalable/actions/hg-qpush.svg
 share/pixmaps/tortoisehg/icons/scalable/actions/hg-rebase.svg
 share/pixmaps/tortoisehg/icons/scalable/actions/hg-recover.svg
