@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2018/03/25 14:55:29 bacon Exp $
-lib/slurm/task_affinity.la
