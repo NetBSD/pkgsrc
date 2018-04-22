@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1913 2018/04/22 17:02:12 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.1914 2018/04/22 17:26:36 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2675,3 +2675,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/p5-Audio-Scan to 1.00 [wen 2018-04-22]
 	Updated devel/p5-Storable to 3.09 [wen 2018-04-22]
 	Updated finance/py-alpha_vantage to 2.0.0 [minskim 2018-04-22]
+	Renamed parallel/slurm to parallel/slurm-wlm [bacon 2018-04-22]
