@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/01/04 23:22:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/04/22 21:38:22 adam Exp $
 include/ebml/Debug.h
 include/ebml/EbmlBinary.h
 include/ebml/EbmlConfig.h
@@ -27,5 +27,11 @@ include/ebml/MemReadIOCallback.h
 include/ebml/SafeReadIOCallback.h
 include/ebml/StdIOCallback.h
 include/ebml/c/libebml_t.h
-lib/libebml.la
+lib/cmake/ebml/EbmlConfig.cmake
+lib/cmake/ebml/EbmlConfigVersion.cmake
+lib/cmake/ebml/EbmlTargets-noconfig.cmake
+lib/cmake/ebml/EbmlTargets.cmake
+lib/libebml.so
+lib/libebml.so.4
+lib/libebml.so.4.0.0
 lib/pkgconfig/libebml.pc
