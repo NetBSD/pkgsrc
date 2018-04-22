@@ -1,0 +1,16 @@
+$NetBSD: patch-etc_init.d.slurm.in,v 1.1 2018/04/22 21:31:09 bacon Exp $
+
+# Provide something for SUBST to replace
+
+--- etc/init.d.slurm.in.orig	2015-03-19 19:38:01.000000000 +0000
++++ etc/init.d.slurm.in
+@@ -25,6 +25,9 @@
+ # Description:       Start slurm to provide resource management
+ ### END INIT INFO
+ 
++exec_prefix=
++prefix=
++
+ BINDIR="@bindir@"
+ CONFDIR="@sysconfdir@"
+ LIBDIR="@libdir@"
