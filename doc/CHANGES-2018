@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1915 2018/04/22 20:07:36 leot Exp $
+$NetBSD: CHANGES-2018,v 1.1916 2018/04/22 20:09:57 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -922,7 +922,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/py-weasyprint to 0.42.2 [adam 2018-02-12]
 	Updated databases/py-psycopg2 to 2.7.4 [adam 2018-02-12]
 	Updated www/py-cfscrape to 1.9.4 [adam 2018-02-12]
-	Updated www/wordpress to 4.9.4 [jklos 2018-020-12]
+	Updated www/wordpress to 4.9.4 [jklos 2018-02-12]
 	Updated devel/ccache to 3.4.1 [adam 2018-02-12]
 	Updated finance/py-braintree to 3.41.0 [adam 2018-02-12]
 	Updated www/py-asgiref to 2.1.4 [adam 2018-02-12]
