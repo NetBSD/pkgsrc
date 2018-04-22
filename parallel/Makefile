@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/01/10 22:45:11 cheusov Exp $
+# $NetBSD: Makefile,v 1.25 2018/04/22 17:25:52 bacon Exp $
 #
 
 COMMENT=	Applications dealing with parallelism in computing
@@ -20,7 +20,7 @@ SUBDIR+=	pdsh
 SUBDIR+=	pvm3
 SUBDIR+=	py-billiard
 SUBDIR+=	sge
-SUBDIR+=	slurm
+SUBDIR+=	slurm-wlm
 SUBDIR+=	threadingbuildingblocks
 
 .include "../mk/misc/category.mk"
