@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2018/03/25 14:55:29 bacon Exp $
+# $NetBSD: Makefile,v 1.26 2018/04/22 17:25:53 bacon Exp $
 
 DISTNAME=	slurm-17.11.5
+PKGNAME=	slurm-wlm-17.11.5
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.schedmd.com/download/archive/
 MASTER_SITES+=	http://www.schedmd.com/download/latest/
@@ -66,12 +67,11 @@ SUBST_STAGE.make-ex=	post-install
 SUBST_FILES.make-ex=	etc/Makefile
 SUBST_SED.make-ex=	-e 's|${WRKDIR}|<build-prefix>|g'
 
-INSTALLATION_DIRS+=	share/examples/${PKGBASE}
+INSTALLATION_DIRS+=	share/examples/slurm
 
 post-install:
 	${RM} -f ${WRKSRC}/etc/init.d.slurm.in.orig
-	${INSTALL_DATA} ${WRKSRC}/etc/* \
-		${DESTDIR}${PREFIX}/share/examples/${PKGBASE}/
+	${INSTALL_DATA} ${WRKSRC}/etc/* ${DESTDIR}${PREFIX}/share/examples/slurm
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../lang/python/tool.mk"
