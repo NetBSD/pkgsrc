@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2018/03/25 14:55:29 bacon Exp $
+$NetBSD: distinfo,v 1.8 2018/04/22 17:25:53 bacon Exp $
 
 SHA1 (slurm-17.11.5.tar.bz2) = fe29758ca8d81492e18d59b84968cedf17a6161b
 RMD160 (slurm-17.11.5.tar.bz2) = 8d393e7ddf545ac1e8c81e8ddd9160a5e76d9311
