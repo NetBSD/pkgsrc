@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1949 2018/04/23 13:28:56 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1950 2018/04/23 13:33:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2714,3 +2714,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-openpyxl to 2.5.3 [adam 2018-04-23]
 	Updated www/p5-URI to 1.74 [wen 2018-04-23]
 	Updated textproc/p5-PDF-Table to 0.10.1 [wen 2018-04-23]
+	Updated textproc/p5-XML-FeedPP to 0.95 [wen 2018-04-23]
