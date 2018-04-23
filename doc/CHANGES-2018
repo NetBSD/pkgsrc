@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1920 2018/04/22 23:59:58 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1921 2018/04/23 00:05:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2681,3 +2681,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-tortoisehg to 4.5.3 [wiz 2018-04-22]
 	Updated mail/sylpheed to 3.7.0 [szptvlfn 2018-04-22]
 	Updated devel/p5-strictures to 2.000005 [wen 2018-04-22]
+	Updated devel/p5-Sub-Quote to 2.005001 [wen 2018-04-23]
