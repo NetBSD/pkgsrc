@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1951 2018/04/23 13:44:46 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1952 2018/04/23 13:51:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2716,3 +2716,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-PDF-Table to 0.10.1 [wen 2018-04-23]
 	Updated textproc/p5-XML-FeedPP to 0.95 [wen 2018-04-23]
 	Updated www/p5-Dancer2 to 0.206000 [wen 2018-04-23]
+	Updated time/p5-DateTime-Locale to 1.19 [wen 2018-04-23]
