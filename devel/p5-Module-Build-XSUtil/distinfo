@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/11/08 20:31:48 wiz Exp $
+$NetBSD: distinfo,v 1.7 2018/04/23 08:42:39 wen Exp $
 
-SHA1 (Module-Build-XSUtil-0.18.tar.gz) = 2e680d7a7c4833c53edd2ab9521cb7446a4657f6
-RMD160 (Module-Build-XSUtil-0.18.tar.gz) = c96de596149dc00aa19ac92e177fbc81513a7b05
-SHA512 (Module-Build-XSUtil-0.18.tar.gz) = ff2b9efd23a91e16ae95e6abc283e9c64e4eca9e1bfde3d6d2b95b052e5bcdf4d00baa6bf07d44dc6ffbf426eb73b2b83b52c60f5cd208862d35d006dec692be
-Size (Module-Build-XSUtil-0.18.tar.gz) = 15200 bytes
+SHA1 (Module-Build-XSUtil-0.19.tar.gz) = 30ca8525d93f74f8f8f00387dc9b4fbee3965a86
+RMD160 (Module-Build-XSUtil-0.19.tar.gz) = cd916c74d1d9b39ed15da20e78d6d997d7fc0c54
+SHA512 (Module-Build-XSUtil-0.19.tar.gz) = 187f504c3f26d15b96cdc5b682d3487a31cf124475160b7fe5dce727d5d6ec5de5a58d09535adb62a1a95b3030fb62951b2cc0eca860eb03c66a48042cea8819
+Size (Module-Build-XSUtil-0.19.tar.gz) = 15276 bytes
