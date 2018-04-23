@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1943 2018/04/23 08:38:22 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1944 2018/04/23 08:50:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2707,3 +2707,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-MetaCPAN-Client to 2.025000 [wen 2018-04-23]
 	Updated sysutils/p5-File-Copy-Recursive to 0.43 [wen 2018-04-23]
 	Added sysutils/p5-File-Copy-Recursive-Reduced version 0.006 [wen 2018-04-23]
+	Updated devel/p5-Module-Build-XSUtil to 0.19 [wen 2018-04-23]
