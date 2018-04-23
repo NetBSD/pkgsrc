@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2018/03/07 08:24:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2018/04/23 07:28:18 adam Exp $
 share/doc/exim/html/spec_html/ch-access_control_lists.html
 share/doc/exim/html/spec_html/ch-adding_a_local_scan_function_to_exim.html
 share/doc/exim/html/spec_html/ch-adding_new_drivers_or_lookup_types.html
@@ -8,6 +8,7 @@ share/doc/exim/html/spec_html/ch-building_and_installing_exim.html
 share/doc/exim/html/spec_html/ch-concept_index.html
 share/doc/exim/html/spec_html/ch-content_scanning_at_acl_time.html
 share/doc/exim/html/spec_html/ch-customizing_bounce_and_warning_messages.html
+share/doc/exim/html/spec_html/ch-dkim_and_spf.html
 share/doc/exim/html/spec_html/ch-domain_host_address_and_local_part_lists.html
 share/doc/exim/html/spec_html/ch-embedded_perl.html
 share/doc/exim/html/spec_html/ch-encrypted_smtp_connections_using_tlsssl.html
@@ -35,7 +36,6 @@ share/doc/exim/html/spec_html/ch-smtp_processing.html
 share/doc/exim/html/spec_html/ch-some_common_configuration_settings.html
 share/doc/exim/html/spec_html/ch-starting_the_daemon_and_the_use_of_network_interfaces.html
 share/doc/exim/html/spec_html/ch-string_expansions.html
-share/doc/exim/html/spec_html/ch-support_for_dkim_domainkeys_identified_mail.html
 share/doc/exim/html/spec_html/ch-systemwide_message_filtering.html
 share/doc/exim/html/spec_html/ch-the_accept_router.html
 share/doc/exim/html/spec_html/ch-the_appendfile_transport.html
@@ -148,7 +148,4 @@ share/doc/exim/html/static/doc/index.css
 share/doc/exim/html/static/doc/index.js
 share/doc/exim/html/static/doc/minus-12x12.png
 share/doc/exim/html/static/doc/plus-12x12.png
-share/doc/exim/html/static/doc/security/CVE-2016-1531.txt
-share/doc/exim/html/static/doc/security/CVE-2016-9963.txt
-share/doc/exim/html/static/doc/security/CVE-2018-6789.txt
 share/doc/exim/html/static/js/common.js
