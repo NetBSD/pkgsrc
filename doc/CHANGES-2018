@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1934 2018/04/23 07:04:09 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1935 2018/04/23 07:07:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2696,3 +2696,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-File-ShareDir-Install to 0.13 [wen 2018-04-23]
 	Updated devel/libdatrie to 0.2.11 [adam 2018-04-23]
 	Updated devel/libuv to 1.20.2 [adam 2018-04-23]
+	Updated devel/p5-Git-Repository to 1.322 [wen 2018-04-23]
