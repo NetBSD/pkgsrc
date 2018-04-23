@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/04/07 20:13:02 adam Exp $
+# $NetBSD: Makefile,v 1.9 2018/04/23 12:01:48 adam Exp $
 
-DISTNAME=	openpyxl-2.5.2
+DISTNAME=	openpyxl-2.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/openpyxl/}
@@ -11,8 +11,8 @@ COMMENT=	Python library to read/write Excel 2007 xlsx/xlsm files
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
-DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-jdcal-[0-9]*:../../time/py-jdcal
+DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
 USE_LANGUAGES=	# none
 
