@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1936 2018/04/23 07:14:09 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1937 2018/04/23 07:21:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2698,3 +2698,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/libuv to 1.20.2 [adam 2018-04-23]
 	Updated devel/p5-Git-Repository to 1.322 [wen 2018-04-23]
 	Updated devel/p5-IO-Async to 0.72 [wen 2018-04-23]
+	Updated devel/p5-IO-Compress to 2.081 [wen 2018-04-23]
