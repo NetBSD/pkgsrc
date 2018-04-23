@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1937 2018/04/23 07:21:30 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1938 2018/04/23 07:27:31 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2699,3 +2699,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Git-Repository to 1.322 [wen 2018-04-23]
 	Updated devel/p5-IO-Async to 0.72 [wen 2018-04-23]
 	Updated devel/p5-IO-Compress to 2.081 [wen 2018-04-23]
+	Updated devel/p5-IPC-Run to 0.99 [wen 2018-04-23]
