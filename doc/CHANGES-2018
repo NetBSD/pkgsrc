@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1940 2018/04/23 07:42:04 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1941 2018/04/23 08:01:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2704,3 +2704,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/exim-html to 4.91 [adam 2018-04-23]
 	Updated www/py-django-admin-rangefilter to 0.3.5 [adam 2018-04-23]
 	Updated www/py-django-tastypie to 0.14.1 [adam 2018-04-23]
+	Updated devel/p5-MetaCPAN-Client to 2.025000 [wen 2018-04-23]
