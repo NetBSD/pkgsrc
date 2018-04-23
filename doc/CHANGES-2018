@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1944 2018/04/23 08:50:46 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1945 2018/04/23 08:56:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2708,3 +2708,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/p5-File-Copy-Recursive to 0.43 [wen 2018-04-23]
 	Added sysutils/p5-File-Copy-Recursive-Reduced version 0.006 [wen 2018-04-23]
 	Updated devel/p5-Module-Build-XSUtil to 0.19 [wen 2018-04-23]
+	Updated devel/p5-Module-CoreList to 5.20180420 [wen 2018-04-23]
