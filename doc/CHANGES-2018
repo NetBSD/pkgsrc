@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1947 2018/04/23 12:02:17 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1948 2018/04/23 13:26:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2712,3 +2712,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Module-CPANfile to 1.1003 [wen 2018-04-23]
 	Updated devel/py-pathlib2 to 2.3.2 [adam 2018-04-23]
 	Updated textproc/py-openpyxl to 2.5.3 [adam 2018-04-23]
+	Updated www/p5-URI to 1.74 [wen 2018-04-23]
