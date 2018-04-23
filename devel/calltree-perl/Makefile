@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2017/09/04 05:40:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/04/23 06:09:50 wiz Exp $
 
 DISTNAME=	Calltree-perl_pl
-PKGNAME=	${DISTNAME:tl:S/_pl//}-0.1
-COMMAND_NAME=	${DISTNAME:tl:S/_pl/.pl/}
+PKGNAME=	calltree-perl-0.1
 CATEGORIES=	devel
 #MASTER_SITES=	http://gw55.quarry.iu.teragrid.org/mediawiki/images/3/39/
-EXTRACT_SUFX=	# empty
 DIST_SUBDIR=	${PKGNAME_NOREV}
+EXTRACT_SUFX=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://gw55.quarry.iu.teragrid.org/mediawiki/index.php?title=Perl_Static_Source_Code_Analysis
@@ -27,7 +26,6 @@ do-build:
 	${DO_NADA}
 
 do-install:
-	(cd	${WRKDIR} ; \
-	${INSTALL} ${DISTNAME} ${DESTDIR}${PREFIX}/bin/${COMMAND_NAME})
+	${INSTALL} ${WRKDIR}/${DISTNAME} ${DESTDIR}${PREFIX}/bin/calltree-perl.pl
 
 .include "../../mk/bsd.pkg.mk"
