@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:59:55 agc Exp $
+$NetBSD: distinfo,v 1.4 2018/04/23 13:32:11 wen Exp $
 
-SHA1 (XML-FeedPP-0.43.tar.gz) = baa2b67a152b97d888991b0a7d79faf95b29c61b
-RMD160 (XML-FeedPP-0.43.tar.gz) = 0c78906dfc3d2eb6a05f3e2545535b2c9815a0d3
-SHA512 (XML-FeedPP-0.43.tar.gz) = 5e027ffac1308e78c4098c5d72f8ac1c484dec7f7a0cbe74d49df9a513de5eeab5bfc345571ed68344465ccb24b031ede24a3e0236a5deffdb1addbf57a2d80f
-Size (XML-FeedPP-0.43.tar.gz) = 42762 bytes
+SHA1 (XML-FeedPP-0.95.tar.gz) = 5fbb094f6501aa17dae3ad196b3d42aa60e7588a
+RMD160 (XML-FeedPP-0.95.tar.gz) = 3a0ab770cebf4db74621e01babf2ed571d25142c
+SHA512 (XML-FeedPP-0.95.tar.gz) = d196b444f47528b12f89a45a132c09f39e9664755f3bb106fe661548406f52996fb44b84da8a212d3cb7f79c4492b640ccd4c81ed8e83d453fadb92876139402
+Size (XML-FeedPP-0.95.tar.gz) = 47192 bytes
