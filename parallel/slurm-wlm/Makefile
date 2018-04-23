@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/04/22 21:31:09 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2018/04/23 15:22:09 bacon Exp $
 
 DISTNAME=	slurm-17.11.5
 PKGNAME=	slurm-wlm-17.11.5
@@ -13,6 +13,8 @@ HOMEPAGE=	http://www.schedmd.com/
 COMMENT=	Simple Linux Utility for Resource Management
 
 LICENSE=	gnu-gpl-v2
+
+SUPERSEDES+=	slurm-2.6.4*
 
 BUILD_DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
 BUILD_DEPENDS+=	man2html-[0-9]*:../../textproc/man2html
