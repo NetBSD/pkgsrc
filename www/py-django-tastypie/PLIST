@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/11/26 17:36:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/04/23 07:41:45 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -71,6 +71,9 @@ ${PYSITELIB}/tastypie/management/commands/backfill_api_keys.pyo
 ${PYSITELIB}/tastypie/migrations/0001_initial.py
 ${PYSITELIB}/tastypie/migrations/0001_initial.pyc
 ${PYSITELIB}/tastypie/migrations/0001_initial.pyo
+${PYSITELIB}/tastypie/migrations/0002_api_access_url_length.py
+${PYSITELIB}/tastypie/migrations/0002_api_access_url_length.pyc
+${PYSITELIB}/tastypie/migrations/0002_api_access_url_length.pyo
 ${PYSITELIB}/tastypie/migrations/__init__.py
 ${PYSITELIB}/tastypie/migrations/__init__.pyc
 ${PYSITELIB}/tastypie/migrations/__init__.pyo
