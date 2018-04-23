@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2018/02/23 15:02:14 adam Exp $
+# $NetBSD: Makefile,v 1.18 2018/04/23 07:00:39 adam Exp $
 
-DISTNAME=	libdatrie-0.2.10
+DISTNAME=	libdatrie-0.2.11
 CATEGORIES=	devel
 MASTER_SITES=	http://linux.thai.net/pub/thailinux/software/libthai/
 MASTER_SITES+=	ftp://linux.thai.net/pub/ThaiLinux/software/libthai/
