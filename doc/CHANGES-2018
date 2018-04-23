@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1954 2018/04/23 14:00:44 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1955 2018/04/23 14:19:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2722,3 +2722,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/roundcube-plugin-password to 1.2.8 [taca 2018-04-23]
 	Updated mail/roundcube-plugin-zipdownload to 1.2.8 [taca 2018-04-23]
 	Updated www/contao35 to 3.5.35 [taca 2018-04-23]
+	Updated www/contao44 to 4.4.18 [taca 2018-04-23]
