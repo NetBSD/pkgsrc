@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2018/02/23 15:02:14 adam Exp $
+$NetBSD: distinfo,v 1.10 2018/04/23 07:00:39 adam Exp $
 
-SHA1 (libdatrie-0.2.10.tar.xz) = 29162b5a63b75f54bb00f6b60fb8a9fb8502d89b
-RMD160 (libdatrie-0.2.10.tar.xz) = 7af9ebbd93a667a8db15a013d9bd75fc93bdd886
-SHA512 (libdatrie-0.2.10.tar.xz) = ee68ded9d6e06c562da462d42e7e56098a82478d7b8547506200c3018b72536c4037a4e518924f779dc77d3ab139d93216bdb29ab4116b9dc9efd1a5d1eb9e31
-Size (libdatrie-0.2.10.tar.xz) = 294380 bytes
+SHA1 (libdatrie-0.2.11.tar.xz) = 29689f5fcd4a6be42ea77edbbee6d4a421966084
+RMD160 (libdatrie-0.2.11.tar.xz) = 57d7d19ef9e38a0f231a2c2456ffed47b74d0cda
+SHA512 (libdatrie-0.2.11.tar.xz) = d2c197f41f9acf29d008f576a34c63c968d0de9a496f86f8f2402266ef3e8af3ae5f1e26b652f5eefd14f59f8410a5556d9bf189b6ded19fefd91cae2132803b
+Size (libdatrie-0.2.11.tar.xz) = 309172 bytes
