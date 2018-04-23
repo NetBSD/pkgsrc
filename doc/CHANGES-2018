@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1921 2018/04/23 00:05:48 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1922 2018/04/23 00:14:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2682,3 +2682,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/sylpheed to 3.7.0 [szptvlfn 2018-04-22]
 	Updated devel/p5-strictures to 2.000005 [wen 2018-04-22]
 	Updated devel/p5-Sub-Quote to 2.005001 [wen 2018-04-23]
+	Updated devel/p5-Task-Weaken to 1.06 [wen 2018-04-23]
