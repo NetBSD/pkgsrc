@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1952 2018/04/23 13:51:19 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1953 2018/04/23 13:56:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2717,3 +2717,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-XML-FeedPP to 0.95 [wen 2018-04-23]
 	Updated www/p5-Dancer2 to 0.206000 [wen 2018-04-23]
 	Updated time/p5-DateTime-Locale to 1.19 [wen 2018-04-23]
+	Updated mail/roundcube to 1.2.8 [taca 2018-04-23]
+	Updated mail/roundcube-plugin-enigma to 1.2.8 [taca 2018-04-23]
+	Updated mail/roundcube-plugin-password to 1.2.8 [taca 2018-04-23]
+	Updated mail/roundcube-plugin-zipdownload to 1.2.8 [taca 2018-04-23]
