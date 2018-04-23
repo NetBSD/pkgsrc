@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18284 2018/04/23 07:18:43 leot Exp $
+$NetBSD: TODO,v 1.18285 2018/04/23 12:02:17 adam Exp $
 
 Suggested new packages
 ======================
@@ -1254,7 +1254,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ncclient-0.5.3
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
-	o py-pathlib2-2.3.2
 	o py-pendrell-0.3.7
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
