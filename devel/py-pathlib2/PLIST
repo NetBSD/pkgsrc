@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2017/02/22 12:54:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/04/23 11:59:26 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/pathlib2.py
-${PYSITELIB}/pathlib2.pyc
-${PYSITELIB}/pathlib2.pyo
+${PYSITELIB}/pathlib2/__init__.py
+${PYSITELIB}/pathlib2/__init__.pyc
+${PYSITELIB}/pathlib2/__init__.pyo
