@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1938 2018/04/23 07:27:31 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1939 2018/04/23 07:28:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2700,3 +2700,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-IO-Async to 0.72 [wen 2018-04-23]
 	Updated devel/p5-IO-Compress to 2.081 [wen 2018-04-23]
 	Updated devel/p5-IPC-Run to 0.99 [wen 2018-04-23]
+	Updated mail/exim to 4.91 [adam 2018-04-23]
+	Updated mail/exim-html to 4.91 [adam 2018-04-23]
