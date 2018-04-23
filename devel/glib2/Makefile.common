@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.62 2018/04/17 08:03:38 wiz Exp $
+# $NetBSD: Makefile.common,v 1.63 2018/04/23 08:26:50 adam Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -63,7 +63,6 @@ SUBST_SED.thr+=		-e "s|@G_THREAD_LIBS_FOR_GTHREAD@|-lpthread|g"
 SUBST_SED.thr+=		-e "s|@G_THREAD_LIBS_FOR_GTHREAD@|-Wc,-lc_r|g"
 .  endif
 SUBST_MESSAGE.thr=	Fixing libgthread.
-
 .endif
 
 # glib-2.48.0 dropped support for OSX < 10.9.0 just to add notification
