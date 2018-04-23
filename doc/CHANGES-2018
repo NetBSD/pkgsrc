@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1923 2018/04/23 00:20:49 wen Exp $
+$NetBSD: CHANGES-2018,v 1.1924 2018/04/23 02:40:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2684,3 +2684,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Sub-Quote to 2.005001 [wen 2018-04-23]
 	Updated devel/p5-Task-Weaken to 1.06 [wen 2018-04-23]
 	Updated devel/p5-Test-Base to 0.89 [wen 2018-04-23]
+	Updated devel/p5-Test-BDD-Cucumber to 0.56 [wen 2018-04-23]
