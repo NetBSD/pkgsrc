@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/02/27 06:26:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/04/24 13:08:43 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -56,6 +56,10 @@ ${PYSITELIB}/django_countries/locale/fi/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/fi/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/fr/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/fr/LC_MESSAGES/django.po
+${PYSITELIB}/django_countries/locale/he/LC_MESSAGES/django.mo
+${PYSITELIB}/django_countries/locale/he/LC_MESSAGES/django.po
+${PYSITELIB}/django_countries/locale/he_IL/LC_MESSAGES/django.mo
+${PYSITELIB}/django_countries/locale/he_IL/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/hr/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/hr/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/hu/LC_MESSAGES/django.mo
