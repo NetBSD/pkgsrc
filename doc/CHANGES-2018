@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1967 2018/04/25 15:42:26 leot Exp $
+$NetBSD: CHANGES-2018,v 1.1968 2018/04/25 16:44:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2742,3 +2742,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated audio/asunder to 2.8 [triaxx 2018-04-25]
 	Updated time/todotxt to 2.11.0 [leot 2018-04-25]
 	Updated net/youtube-dl to 20180425 [leot 2018-04-25]
+	Updated www/drupal7 to 7.59 [taca 2018-04-25]
