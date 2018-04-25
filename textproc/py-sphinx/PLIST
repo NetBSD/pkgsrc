@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2018/03/23 07:42:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2018/04/25 08:08:21 adam Exp $
 bin/sphinx-apidoc${PYVERSSUFFIX}
 bin/sphinx-autogen${PYVERSSUFFIX}
 bin/sphinx-build${PYVERSSUFFIX}
@@ -55,9 +55,12 @@ ${PYSITELIB}/sphinx/builders/html.pyo
 ${PYSITELIB}/sphinx/builders/htmlhelp.py
 ${PYSITELIB}/sphinx/builders/htmlhelp.pyc
 ${PYSITELIB}/sphinx/builders/htmlhelp.pyo
-${PYSITELIB}/sphinx/builders/latex.py
-${PYSITELIB}/sphinx/builders/latex.pyc
-${PYSITELIB}/sphinx/builders/latex.pyo
+${PYSITELIB}/sphinx/builders/latex/__init__.py
+${PYSITELIB}/sphinx/builders/latex/__init__.pyc
+${PYSITELIB}/sphinx/builders/latex/__init__.pyo
+${PYSITELIB}/sphinx/builders/latex/transforms.py
+${PYSITELIB}/sphinx/builders/latex/transforms.pyc
+${PYSITELIB}/sphinx/builders/latex/transforms.pyo
 ${PYSITELIB}/sphinx/builders/linkcheck.py
 ${PYSITELIB}/sphinx/builders/linkcheck.pyc
 ${PYSITELIB}/sphinx/builders/linkcheck.pyo
@@ -679,6 +682,9 @@ ${PYSITELIB}/sphinx/transforms/post_transforms/__init__.pyo
 ${PYSITELIB}/sphinx/transforms/post_transforms/images.py
 ${PYSITELIB}/sphinx/transforms/post_transforms/images.pyc
 ${PYSITELIB}/sphinx/transforms/post_transforms/images.pyo
+${PYSITELIB}/sphinx/transforms/references.py
+${PYSITELIB}/sphinx/transforms/references.pyc
+${PYSITELIB}/sphinx/transforms/references.pyo
 ${PYSITELIB}/sphinx/util/__init__.py
 ${PYSITELIB}/sphinx/util/__init__.pyc
 ${PYSITELIB}/sphinx/util/__init__.pyo
