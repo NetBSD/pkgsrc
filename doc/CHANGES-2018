@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1960 2018/04/25 07:06:58 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1961 2018/04/25 08:08:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2730,3 +2730,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/libical to 3.0.3 [markd 2018-04-25]
 	Updated devel/py-test to 3.5.1 [adam 2018-04-25]
 	Updated devel/py-pip to 10.0.1 [adam 2018-04-25]
+	Updated emulators/qemu to 2.12.0 [adam 2018-04-25]
+	Updated textproc/py-sphinx to 1.7.3 [adam 2018-04-25]
