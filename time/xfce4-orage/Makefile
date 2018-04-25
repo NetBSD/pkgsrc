@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2018/04/16 14:35:16 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2018/04/25 21:44:44 markd Exp $
 
 PKGREVISION= 7
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -6,6 +6,7 @@ PKGREVISION= 7
 VERSION=	4.12.1
 DISTNAME=	orage-${VERSION}
 PKGNAME=	xfce4-orage-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	http://archive.xfce.org/src/apps/orage/4.12/
 
