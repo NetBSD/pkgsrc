@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2018/02/25 21:57:43 adam Exp $
+# $NetBSD: Makefile,v 1.66 2018/04/25 19:25:12 fhajny Exp $
 
 DISTNAME=	x264-snapshot-20180224-2245
 PKGNAME=	${DISTNAME:S/-snapshot-/-devel-/:S/-2245$//}
@@ -13,7 +13,10 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+# Assembler code still needs to be disabled on at least SunOS
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=       --disable-asm
+.elif ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 BUILD_DEPENDS+=		nasm>=2.13.0:../../devel/nasm
 .endif
 
