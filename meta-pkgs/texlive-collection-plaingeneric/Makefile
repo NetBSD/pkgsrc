@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/10/11 09:23:49 markd Exp $
+# $NetBSD: Makefile,v 1.3 2018/04/25 11:25:50 markd Exp $
 
 DISTNAME=	collection-plaingeneric
-PKGNAME=	texlive-${DISTNAME}-2017pre1
+PKGNAME=	texlive-${DISTNAME}-2017pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	44986
@@ -55,7 +55,7 @@ DEPENDS+=	tex-iftex-[0-9]*:../../print/tex-iftex
 # depend insbox
 DEPENDS+=	tex-js-misc-[0-9]*:../../print/tex-js-misc
 DEPENDS+=	tex-kastrup>=2010:../../math/tex-kastrup
-# depend lambda-lists
+DEPENDS+=	tex-lambda-lists-[0-9]*:../../print/tex-lambda-lists
 # depend langcode
 # depend lecturer
 # depend librarian
