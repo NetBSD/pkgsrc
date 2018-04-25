@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1968 2018/04/25 16:44:01 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1969 2018/04/25 21:37:36 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2743,3 +2743,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/todotxt to 2.11.0 [leot 2018-04-25]
 	Updated net/youtube-dl to 20180425 [leot 2018-04-25]
 	Updated www/drupal7 to 7.59 [taca 2018-04-25]
+	Updated parallel/paexec to 1.1.0 [cheusov 2018-04-25]
