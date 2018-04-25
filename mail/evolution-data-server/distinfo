@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.87 2018/01/29 12:47:08 jperkin Exp $
+$NetBSD: distinfo,v 1.88 2018/04/25 05:57:58 markd Exp $
 
 SHA1 (evolution-data-server-2.32.3.tar.bz2) = cbf32c3438c4f1650b35b87007a337ebc1c56cec
 RMD160 (evolution-data-server-2.32.3.tar.bz2) = adc8b07aef41a89d16fc426541c12190a3688b8f
@@ -10,7 +10,11 @@ SHA1 (patch-addressbook_libebook_e-book.c) = ac32dc97eb0a66bf0c912d384655fdde47d
 SHA1 (patch-bd) = 8df85b9ab7ae71558fb939565e944b614de628bb
 SHA1 (patch-ca) = e879d29105997045e1293fe627ec55a05e5ba88d
 SHA1 (patch-calendar_backends_caldav_e-cal-backend-caldav.c) = 756ce60a8b684369bf7b0c14f2f52e735253c381
-SHA1 (patch-calendar_libecal_e-cal.c) = 0478b795b298bbab23db39f7a63bd3529691dd95
+SHA1 (patch-calendar_backends_contacts_e-cal-backend-contacts.c) = d44e6d0e56b9840e01cebdb39442669ec86247bd
+SHA1 (patch-calendar_libecal_e-cal-component.c) = f0a896d159d4daa8c6bed4143d3888156d9bb7e5
+SHA1 (patch-calendar_libecal_e-cal-recur.c) = fb5256d428f1b7e3a6eb3a89f058059f3ae67b8f
+SHA1 (patch-calendar_libecal_e-cal-time-util.c) = 4b7c1cd7f40509a9cafc9fc481a49573cc4b869b
+SHA1 (patch-calendar_libecal_e-cal.c) = 2b489dfedec0d22d1c64b9fb99526c92a8493253
 SHA1 (patch-calendar_libedata-cal_e-cal-backend-intervaltree.c) = af78b5854666325a9dd1229702968c093805ec03
 SHA1 (patch-calendar_libegdbus_Makefile.in) = ac5aabae5160967c498f12c0f29be3e206e03622
 SHA1 (patch-camel_providers_imapx_camel-imapx-tokens.txt) = 8a62d2064d9bda5f9f79eb9473e71734560c3983
