@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1963 2018/04/25 12:12:52 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.1964 2018/04/25 12:25:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2737,3 +2737,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/tex-pgfgantt to 5.0 [markd 2018-04-25]
 	Updated graphics/tex-pgfgantt-doc to 5.0 [markd 2018-04-25]
 	Updated databases/py-peewee to 3.3.0 [fhajny 2018-04-25]
+	Updated www/py-cheroot to 6.2.4 [adam 2018-04-25]
+	Updated www/py-cherrypy to 14.2.0 [adam 2018-04-25]
