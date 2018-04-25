@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/04/23 22:32:02 markd Exp $
+$NetBSD: distinfo,v 1.2 2018/04/25 11:13:06 markd Exp $
 
-SHA1 (tex-pgfgantt-31037/pgfgantt.tar.xz) = 034f005ff29f5d1ac3bd91ac31333539f58d3d77
-RMD160 (tex-pgfgantt-31037/pgfgantt.tar.xz) = 90c87a5d8b9c2560b3135ff7cdbcbbecafba352d
-SHA512 (tex-pgfgantt-31037/pgfgantt.tar.xz) = 32215afacf980b9c25e3ee03666f49026b0479d6e4a606ad10f15e834f5fe468f8442db2d044c5a780c4221c57d2c980bb34bab2785841135e5e777657c18543
-Size (tex-pgfgantt-31037/pgfgantt.tar.xz) = 7204 bytes
+SHA1 (tex-pgfgantt-46280/pgfgantt.tar.xz) = 88ce5a82a227add9cec9d1902d7181238f2de2d9
+RMD160 (tex-pgfgantt-46280/pgfgantt.tar.xz) = 9b4d86ab757bd48c9388ddbd15f3917488603ba3
+SHA512 (tex-pgfgantt-46280/pgfgantt.tar.xz) = 1440ea941ff7133922b8439dc1f634b4625e682037c76e866d578a7650edc0aaeda1c57bf26c128c624e842fe7f7d0372578a0da6d90a3da3851510aa8c2f444
+Size (tex-pgfgantt-46280/pgfgantt.tar.xz) = 7916 bytes
