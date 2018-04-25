@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1965 2018/04/25 12:57:43 triaxx Exp $
+$NetBSD: CHANGES-2018,v 1.1966 2018/04/25 15:24:07 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2740,3 +2740,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-cheroot to 6.2.4 [adam 2018-04-25]
 	Updated www/py-cherrypy to 14.2.0 [adam 2018-04-25]
 	Updated audio/asunder to 2.8 [triaxx 2018-04-25]
+	Updated time/todotxt to 2.11.0 [leot 2018-04-25]
