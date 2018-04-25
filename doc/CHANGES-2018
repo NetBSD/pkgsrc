@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1962 2018/04/25 11:17:23 markd Exp $
+$NetBSD: CHANGES-2018,v 1.1963 2018/04/25 12:12:52 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2736,3 +2736,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added print/tex-changes-doc version 2.0.4 [markd 2018-04-25]
 	Updated graphics/tex-pgfgantt to 5.0 [markd 2018-04-25]
 	Updated graphics/tex-pgfgantt-doc to 5.0 [markd 2018-04-25]
+	Updated databases/py-peewee to 3.3.0 [fhajny 2018-04-25]
