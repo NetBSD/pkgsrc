@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.134 2018/04/17 20:02:14 gson Exp $
+$NetBSD: distinfo,v 1.135 2018/04/25 07:56:05 adam Exp $
 
-SHA1 (qemu-2.11.1.tar.xz) = e85cfbdff264510fd9bba73d83978ab4ecee3f41
-RMD160 (qemu-2.11.1.tar.xz) = 5e713f1fb5f742536211d0e27fc377b849730b1e
-SHA512 (qemu-2.11.1.tar.xz) = 7fd4a7c6fa8627510431ed34f05bdd6b055ea66207bab29904bbce66dfd5b07546f02dfcb34937f48efb67184200ab3c8501763776adc1cdc1302a924fb2a5ef
-Size (qemu-2.11.1.tar.xz) = 28992188 bytes
+SHA1 (qemu-2.12.0.tar.xz) = 5a62c911b2cebbd41decd5c77c524395212411cf
+RMD160 (qemu-2.12.0.tar.xz) = 6d73b29ee562553c02711acd0dc552363c67f96e
+SHA512 (qemu-2.12.0.tar.xz) = dda057c52cf5fe460b029448049266ace061d21fb5f1cf71a6a37f67b3b7fc3350f6712bf22803fc38fa91f0bd438896ba01b5817b3b94ba9b6925aeaae053b7
+Size (qemu-2.12.0.tar.xz) = 35405044 bytes
 SHA1 (patch-Makefile) = b3899fb8d0dd2f29bf3edd843836612e6e6c019c
 SHA1 (patch-audio_audio.c) = 98a1de2fd48638886b5d16f6a61dc72910e98b41
-SHA1 (patch-block.c) = 6f54da333696584067a7556b8cabfa8853758824
+SHA1 (patch-block.c) = 5eb15a87d6646719bf1e9277fbe73a99e4905481
 SHA1 (patch-chardev_char-mux.c) = e597d4dc3889c00d001d899088c4c8cdc4e00474
-SHA1 (patch-configure) = 6d0acd72edb8c602ffbc98fdbc161bc10aa968e2
 SHA1 (patch-contrib_ivshmem-client_ivshmem-client.c) = 40c8751607cbf66a37e4c4e08f2664b864e2e984
 SHA1 (patch-contrib_ivshmem-server_ivshmem-server.c) = d8f53432b5752f4263dc4ef96108a976a05147a3
 SHA1 (patch-hw_display_omap__dss.c) = 6b13242f28e32346bc70548c216c578d98fd3420
@@ -17,4 +16,3 @@ SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
 SHA1 (patch-hw_usb_dev-mtp.c) = f5a446079d51b19eae6c2f5e0c9810c181e4f02d
 SHA1 (patch-slirp_tcp__subr.c) = f011c9dc58282e61b26017547a9884f30a6e6154
 SHA1 (patch-tests_Makefile.include) = 42345d697cb2e324dccf1d68bd8d61e8001c6162
-SHA1 (patch-util_oslib-posix.c) = 319ad18de96860172c8d10920fe2c117e787403e
