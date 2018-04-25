@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2018/03/12 11:17:13 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2018/04/25 22:42:27 kamil Exp $
 #
 
 DISTNAME=	kaffeine-1.3.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kaffeine/}
 
@@ -17,7 +17,7 @@ USE_TOOLS+=	msgfmt
 USE_LANGUAGES=	c c++
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../multimedia/vlc/buildlink3.mk"
+.include "../../multimedia/vlc2/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../meta-pkgs/kde4/kde4.mk"
