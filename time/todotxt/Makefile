@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/12/19 11:39:50 leot Exp $
+# $NetBSD: Makefile,v 1.2 2018/04/25 15:23:55 leot Exp $
 
-DISTNAME=	todotxt-2.10
+DISTNAME=	todotxt-2.11.0
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=todotxt/}
 GITHUB_PROJECT=	todo.txt-cli
@@ -11,7 +11,7 @@ HOMEPAGE=	http://todotxt.org/
 COMMENT=	Simple and extensible shell script for managing your todo.txt file
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	bash:run gsed:run
+USE_TOOLS+=	bash:run gmake:test gsed:run
 
 SUBST_CLASSES+=		todosh
 SUBST_STAGE.todosh=	pre-configure
@@ -27,7 +27,16 @@ SUBST_MESSAGE.todocfg=	Adjusting TOOL_DIR path to user's HOME
 SUBST_FILES.todocfg+=	todo.cfg
 SUBST_SED.todocfg+=	-e '/^export TODO_DIR/ s,=.*,=$$HOME/.todo,'
 
-REPLACE_BASH=	todo.sh
+# XXX: REPLACE_BASH only affect the `#!' on the first line, so we need to
+# XXX: manually adjust the other in the middle of the shell script.
+SUBST_CLASSES+=		shebang
+SUBST_STAGE.shebang=	pre-configure
+SUBST_MESSAGE.shebang=	Replace hardcoded /bin/bash in the middle of scripts
+SUBST_FILES.shebang+=	tests/actions-test-lib.sh
+SUBST_SED.shebang+=	-e '2,$$s;!/bin/bash;!${BASH};'
+
+REPLACE_BASH+=	todo.sh
+REPLACE_BASH+=	tests/*.sh
 
 USE_LANGUAGES=	# none
 
@@ -40,12 +49,15 @@ PKG_SYSCONFSUBDIR=	todotxt
 CONF_FILES=		${EGDIR}/todo.cfg \
 			${PKG_SYSCONFDIR}/todo.cfg
 
+TEST_TARGET=	test
+
 INSTALLATION_DIRS=	bin ${DOCDIR} ${EGDIR}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/todo.sh ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/todo.cfg ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/todo_completion ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.textile ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/USAGE.md ${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
