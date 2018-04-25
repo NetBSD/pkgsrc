@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/04/16 14:34:03 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/04/25 12:57:24 triaxx Exp $
 
-DISTNAME=	asunder-2.5
-PKGREVISION=	6
+DISTNAME=	asunder-2.8
 CATEGORIES=	audio
 MASTER_SITES=	http://littlesvr.ca/asunder/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,12 +11,12 @@ COMMENT=	Graphical CD ripper
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	cdparanoia-[0-9]*:../../audio/cdparanoia
-DEPENDS+=	lame-[0-9]*:../../audio/lame
-DEPENDS+=	flac-[0-9]*:../../audio/flac
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config intltool msgfmt
+
+.include "options.mk"
 
 BUILDLINK_API_DEPENDS.libcddb+=	libcddb>=0.9.5
 .include "../../audio/libcddb/buildlink3.mk"
