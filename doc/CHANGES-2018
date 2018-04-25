@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1970 2018/04/25 21:44:40 kamil Exp $
+$NetBSD: CHANGES-2018,v 1.1971 2018/04/25 22:39:48 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2745,3 +2745,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/drupal7 to 7.59 [taca 2018-04-25]
 	Updated parallel/paexec to 1.1.0 [cheusov 2018-04-25]
 	Removed multimedia/vlc20 [kamil 2018-04-25]
+	Added multimedia/vlc2 version 2.2.6 [kamil 2018-04-25]
