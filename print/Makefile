@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.710 2018/03/24 16:49:15 joerg Exp $
+# $NetBSD: Makefile,v 1.711 2018/04/25 11:02:42 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -348,6 +348,8 @@ SUBDIR+=	tex-changebar
 SUBDIR+=	tex-changebar-doc
 SUBDIR+=	tex-changepage
 SUBDIR+=	tex-changepage-doc
+SUBDIR+=	tex-changes
+SUBDIR+=	tex-changes-doc
 SUBDIR+=	tex-chappg
 SUBDIR+=	tex-chappg-doc
 SUBDIR+=	tex-chbibref
