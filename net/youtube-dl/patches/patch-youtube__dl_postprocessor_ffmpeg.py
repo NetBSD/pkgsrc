@@ -1,4 +1,4 @@
-$NetBSD: patch-youtube__dl_postprocessor_ffmpeg.py,v 1.1 2016/03/05 20:41:10 leot Exp $
+$NetBSD: patch-youtube__dl_postprocessor_ffmpeg.py,v 1.2 2018/04/25 15:42:12 leot Exp $
 
 Also look and use ffmpeg[23] if possible.
 
@@ -9,7 +9,7 @@ Also look and use ffmpeg[23] if possible.
  
      def _determine_executables(self):
 -        programs = ['avprobe', 'avconv', 'ffmpeg', 'ffprobe']
-+        programs = ['avprobe', 'avconv', 'ffmpeg', 'ffmpeg2', 'ffmpeg3', 'ffprobe', 'ffprobe2', 'ffprobe3']
++        programs = ['avprobe', 'avconv', 'ffmpeg', 'ffmpeg3', 'ffmpeg2', 'ffprobe', 'ffprobe3', 'ffprobe2']
          prefer_ffmpeg = False
  
          self.basename = None
@@ -18,7 +18,7 @@ Also look and use ffmpeg[23] if possible.
                          return None
                      location = os.path.dirname(os.path.abspath(location))
 -                    if basename in ('ffmpeg', 'ffprobe'):
-+                    if basename in ('ffmpeg', 'ffmpeg2', 'ffmpeg3', 'ffprobe', 'ffprobe2', 'ffprobe3'):
++                    if basename in ('ffmpeg', 'ffmpeg3', 'ffmpeg2', 'ffprobe', 'ffprobe3', 'ffprobe2'):
                          prefer_ffmpeg = True
  
                  self._paths = dict(
@@ -27,10 +27,10 @@ Also look and use ffmpeg[23] if possible.
  
          if prefer_ffmpeg:
 -            prefs = ('ffmpeg', 'avconv')
-+            prefs = ('ffmpeg', 'ffmpeg2', 'ffmpeg3', 'avconv')
++            prefs = ('ffmpeg', 'ffmpeg3', 'ffmpeg2', 'avconv')
          else:
 -            prefs = ('avconv', 'ffmpeg')
-+            prefs = ('avconv', 'ffmpeg', 'ffmpeg2', 'ffmpeg3')
++            prefs = ('avconv', 'ffmpeg', 'ffmpeg3', 'ffmpeg2')
          for p in prefs:
              if self._versions[p]:
                  self.basename = p
@@ -38,10 +38,10 @@ Also look and use ffmpeg[23] if possible.
  
          if prefer_ffmpeg:
 -            prefs = ('ffprobe', 'avprobe')
-+            prefs = ('ffprobe', 'ffprobe2', 'ffprobe3', 'avprobe')
++            prefs = ('ffprobe', 'ffprobe3', 'ffprobe2', 'avprobe')
          else:
 -            prefs = ('avprobe', 'ffprobe')
-+            prefs = ('avprobe', 'ffprobe', 'ffprobe2', 'ffprobe3')
++            prefs = ('avprobe', 'ffprobe', 'ffprobe3', 'ffprobe2')
          for p in prefs:
              if self._versions[p]:
                  self.probe_basename = p
