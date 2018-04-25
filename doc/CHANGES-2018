@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1959 2018/04/25 06:00:37 markd Exp $
+$NetBSD: CHANGES-2018,v 1.1960 2018/04/25 07:06:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2728,3 +2728,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-pylint-django to 0.11 [adam 2018-04-24]
 	Updated www/py-django-countries to 5.3 [adam 2018-04-24]
 	Updated time/libical to 3.0.3 [markd 2018-04-25]
+	Updated devel/py-test to 3.5.1 [adam 2018-04-25]
+	Updated devel/py-pip to 10.0.1 [adam 2018-04-25]
