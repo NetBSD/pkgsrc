@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1971 2018/04/25 22:39:48 kamil Exp $
+$NetBSD: CHANGES-2018,v 1.1972 2018/04/25 22:43:37 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2746,3 +2746,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated parallel/paexec to 1.1.0 [cheusov 2018-04-25]
 	Removed multimedia/vlc20 [kamil 2018-04-25]
 	Added multimedia/vlc2 version 2.2.6 [kamil 2018-04-25]
+	Updated multimedia/kaffeine to 1.3.1nb8 [kamil 2018-04-25]
