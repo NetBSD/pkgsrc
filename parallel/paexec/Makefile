@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2017/01/19 18:52:21 agc Exp $
+# $NetBSD: Makefile,v 1.18 2018/04/25 21:37:11 cheusov Exp $
 #
 
-DISTNAME=	paexec-1.0.1
+DISTNAME=	paexec-1.1.0
 CATEGORIES=	parallel sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paexec/}
 MASTER_SITES+=	http://mova.org/~cheusov/pub/paexec/
@@ -24,8 +24,10 @@ TEST_TARGET=		test
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
 MAKE_ENV+=		AWK=${AWK:Q}
-MAKE_ENV+=		SUBPRJ_DFLT="paexec doc examples"
 MAKE_ENV+=		EGDIR=${EGDIR}
+
+BUILD_TARGET=		all doc examples
+INSTALL_TARGET=		install install-doc install-examples
 
 REPLACE_SH+=		examples/cc_wrapper/cc_wrapper_cmd \
 			tests/broken_echo/transport_broken_echo2
