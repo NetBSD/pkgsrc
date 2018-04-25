@@ -1,0 +1,7 @@
+The package allows the user to manually markup changes of text,
+such as additions, deletions, or replacements. Changed text is
+shown in a different colour; deleted text is crossed out. The
+package allows definition of additional authors and their
+associated colour. It also allows you to define a markup for
+authors or annotations. A bash script is provided for removing
+the changes.
