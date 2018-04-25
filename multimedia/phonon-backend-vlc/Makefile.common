@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2017/09/03 08:53:11 wiz Exp $
+# $NetBSD: Makefile.common,v 1.4 2018/04/25 22:45:40 kamil Exp $
 
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_KDE:=phonon/phonon-backend-vlc/0.9.0/}
@@ -23,4 +23,4 @@ pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 	${MKDIR} ${WRKSRC}/_build
 
-.include "../../multimedia/vlc/buildlink3.mk"
+.include "../../multimedia/vlc2/buildlink3.mk"
