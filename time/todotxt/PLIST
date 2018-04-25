@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2017/12/19 11:39:50 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/04/25 15:23:55 leot Exp $
 bin/todo.sh
-share/doc/todotxt/README.textile
+share/doc/todotxt/README.md
+share/doc/todotxt/USAGE.md
 share/examples/todotxt/todo.cfg
 share/examples/todotxt/todo_completion
