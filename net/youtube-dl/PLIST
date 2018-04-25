@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2018/04/09 09:40:52 leot Exp $
+@comment $NetBSD: PLIST,v 1.61 2018/04/25 15:42:12 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -578,9 +578,6 @@ ${PYSITELIB}/youtube_dl/extractor/espn.pyo
 ${PYSITELIB}/youtube_dl/extractor/esri.py
 ${PYSITELIB}/youtube_dl/extractor/esri.pyc
 ${PYSITELIB}/youtube_dl/extractor/esri.pyo
-${PYSITELIB}/youtube_dl/extractor/etonline.py
-${PYSITELIB}/youtube_dl/extractor/etonline.pyc
-${PYSITELIB}/youtube_dl/extractor/etonline.pyo
 ${PYSITELIB}/youtube_dl/extractor/europa.py
 ${PYSITELIB}/youtube_dl/extractor/europa.pyc
 ${PYSITELIB}/youtube_dl/extractor/europa.pyo
@@ -1379,6 +1376,9 @@ ${PYSITELIB}/youtube_dl/extractor/phoenix.pyo
 ${PYSITELIB}/youtube_dl/extractor/photobucket.py
 ${PYSITELIB}/youtube_dl/extractor/photobucket.pyc
 ${PYSITELIB}/youtube_dl/extractor/photobucket.pyo
+${PYSITELIB}/youtube_dl/extractor/picarto.py
+${PYSITELIB}/youtube_dl/extractor/picarto.pyc
+${PYSITELIB}/youtube_dl/extractor/picarto.pyo
 ${PYSITELIB}/youtube_dl/extractor/piksel.py
 ${PYSITELIB}/youtube_dl/extractor/piksel.pyc
 ${PYSITELIB}/youtube_dl/extractor/piksel.pyo
