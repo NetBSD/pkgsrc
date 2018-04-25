@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2018/01/18 11:19:03 markd Exp $
+# $NetBSD: Makefile,v 1.34 2018/04/25 11:27:31 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2017pre7
+PKGNAME=	texlive-${DISTNAME}-2017pre8
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	45509
@@ -146,7 +146,7 @@ DEPENDS+=	tex-cellspace-[0-9]*:../../print/tex-cellspace
 DEPENDS+=	tex-changebar-[0-9]*:../../print/tex-changebar
 # depend changelayout
 DEPENDS+=	tex-changepage-[0-9]*:../../print/tex-changepage
-# depend changes
+DEPENDS+=	tex-changes-[0-9]*:../../print/tex-changes
 DEPENDS+=	tex-chappg-[0-9]*:../../print/tex-chappg
 # depend chapterfolder
 # depend cheatsheet
