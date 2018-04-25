@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1958 2018/04/24 13:09:01 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1959 2018/04/25 06:00:37 markd Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2727,3 +2727,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-peewee to 3.2.5 [fhajny 2018-04-23]
 	Updated www/py-pylint-django to 0.11 [adam 2018-04-24]
 	Updated www/py-django-countries to 5.3 [adam 2018-04-24]
+	Updated time/libical to 3.0.3 [markd 2018-04-25]
