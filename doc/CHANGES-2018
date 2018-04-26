@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1982 2018/04/26 13:32:11 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1983 2018/04/26 13:33:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2760,3 +2760,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated finance/py-braintree to 3.45.0 [adam 2018-04-26]
 	Updated devel/p5-Alien-Build to 1.41 [wiz 2018-04-26]
 	Updated devel/p5-App-cpanminus to 1.7044 [wiz 2018-04-26]
+	Updated devel/p5-Async-Interrupt to 1.24 [wiz 2018-04-26]
