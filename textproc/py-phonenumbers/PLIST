@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/11/28 09:52:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/04/26 13:23:36 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -912,6 +912,9 @@ ${PYSITELIB}/phonenumbers/data/region_WF.pyo
 ${PYSITELIB}/phonenumbers/data/region_WS.py
 ${PYSITELIB}/phonenumbers/data/region_WS.pyc
 ${PYSITELIB}/phonenumbers/data/region_WS.pyo
+${PYSITELIB}/phonenumbers/data/region_XK.py
+${PYSITELIB}/phonenumbers/data/region_XK.pyc
+${PYSITELIB}/phonenumbers/data/region_XK.pyo
 ${PYSITELIB}/phonenumbers/data/region_YE.py
 ${PYSITELIB}/phonenumbers/data/region_YE.pyc
 ${PYSITELIB}/phonenumbers/data/region_YE.pyo
@@ -1746,6 +1749,9 @@ ${PYSITELIB}/phonenumbers/shortdata/region_WF.pyo
 ${PYSITELIB}/phonenumbers/shortdata/region_WS.py
 ${PYSITELIB}/phonenumbers/shortdata/region_WS.pyc
 ${PYSITELIB}/phonenumbers/shortdata/region_WS.pyo
+${PYSITELIB}/phonenumbers/shortdata/region_XK.py
+${PYSITELIB}/phonenumbers/shortdata/region_XK.pyc
+${PYSITELIB}/phonenumbers/shortdata/region_XK.pyo
 ${PYSITELIB}/phonenumbers/shortdata/region_YE.py
 ${PYSITELIB}/phonenumbers/shortdata/region_YE.pyc
 ${PYSITELIB}/phonenumbers/shortdata/region_YE.pyo
