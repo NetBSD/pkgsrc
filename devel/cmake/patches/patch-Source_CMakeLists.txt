@@ -1,0 +1,15 @@
+$NetBSD: patch-Source_CMakeLists.txt,v 1.1 2018/04/26 17:30:36 minskim Exp $
+
+librhash requires -lcrypto when statically linked.
+
+--- Source/CMakeLists.txt.orig	2018-04-17 12:28:52.000000000 +0000
++++ Source/CMakeLists.txt
+@@ -763,7 +763,7 @@ target_link_libraries(CMakeLib cmsys
+   ${CMAKE_CURL_LIBRARIES}
+   ${CMAKE_JSONCPP_LIBRARIES}
+   ${CMAKE_LIBUV_LIBRARIES}
+-  ${CMAKE_LIBRHASH_LIBRARIES}
++  ${CMAKE_LIBRHASH_LIBRARIES} -lcrypto
+   ${CMake_KWIML_LIBRARIES}
+   ${CMAKE_THREAD_LIBS_INIT}
+   )
