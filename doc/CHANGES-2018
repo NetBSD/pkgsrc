@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1976 2018/04/26 07:57:40 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1977 2018/04/26 12:45:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2753,3 +2753,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/py-pendulum to 1.5.1 [adam 2018-04-26]
 	Added multimedia/ffmpeg4 version 4.0 [adam 2018-04-26]
 	Added multimedia/ffplay4 version 4.0 [adam 2018-04-26]
+	Added converters/p5-Cpanel-JSON-XS version 4.02 [wiz 2018-04-26]
