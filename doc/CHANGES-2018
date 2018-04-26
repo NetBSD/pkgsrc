@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1984 2018/04/26 13:34:14 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1985 2018/04/26 13:43:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2762,3 +2762,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-App-cpanminus to 1.7044 [wiz 2018-04-26]
 	Updated devel/p5-Async-Interrupt to 1.24 [wiz 2018-04-26]
 	Updated devel/p5-B-Hooks-EndOfScope to 0.24 [wiz 2018-04-26]
+	Updated devel/p5-Capture-Tiny to 0.48 [wiz 2018-04-26]
