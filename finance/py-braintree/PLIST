@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/04/05 08:15:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/04/26 13:25:32 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -405,6 +405,15 @@ ${PYSITELIB}/braintree/us_bank_account.pyo
 ${PYSITELIB}/braintree/us_bank_account_gateway.py
 ${PYSITELIB}/braintree/us_bank_account_gateway.pyc
 ${PYSITELIB}/braintree/us_bank_account_gateway.pyo
+${PYSITELIB}/braintree/us_bank_account_verification.py
+${PYSITELIB}/braintree/us_bank_account_verification.pyc
+${PYSITELIB}/braintree/us_bank_account_verification.pyo
+${PYSITELIB}/braintree/us_bank_account_verification_gateway.py
+${PYSITELIB}/braintree/us_bank_account_verification_gateway.pyc
+${PYSITELIB}/braintree/us_bank_account_verification_gateway.pyo
+${PYSITELIB}/braintree/us_bank_account_verification_search.py
+${PYSITELIB}/braintree/us_bank_account_verification_search.pyc
+${PYSITELIB}/braintree/us_bank_account_verification_search.pyo
 ${PYSITELIB}/braintree/util/__init__.py
 ${PYSITELIB}/braintree/util/__init__.pyc
 ${PYSITELIB}/braintree/util/__init__.pyo
