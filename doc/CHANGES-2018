@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1980 2018/04/26 13:26:12 adam Exp $
+$NetBSD: CHANGES-2018,v 1.1981 2018/04/26 13:31:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2758,3 +2758,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/p5-DB_File to 1.841 [wiz 2018-04-26]
 	Updated textproc/py-phonenumbers to 8.9.4 [adam 2018-04-26]
 	Updated finance/py-braintree to 3.45.0 [adam 2018-04-26]
+	Updated devel/p5-Alien-Build to 1.41 [wiz 2018-04-26]
