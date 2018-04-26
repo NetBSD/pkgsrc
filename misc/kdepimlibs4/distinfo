@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2017/08/06 06:35:35 markd Exp $
+$NetBSD: distinfo,v 1.36 2018/04/26 07:55:21 markd Exp $
 
 SHA1 (kdepimlibs-4.14.10.tar.xz) = 8db2f59b8a33f4d1bbebfdff8b772d30669c9932
 RMD160 (kdepimlibs-4.14.10.tar.xz) = 4df52569c41b3af12aaf6f457e213f31feb78343
@@ -14,6 +14,10 @@ SHA1 (patch-gpgmexx_CMakeLists.txt) = 6ef41aedeb3445764aba3d684a9ad321c6ff290e
 SHA1 (patch-gpgmexx_config-gpgmexx.h.cmake) = bd8fd1e9a619d6bd52185f37adb5dc7f7b97423c
 SHA1 (patch-gpgmexx_interfaces_CMakeLists.txt) = d7d8a039deed83df8c742fec41a4093d5cc3b057
 SHA1 (patch-kblog_CMakeLists.txt) = b03068672c39492ef4883125c65f7951c7cc8f01
+SHA1 (patch-kcal_icalformat_p.cpp) = e1d88f909ec922b436c144e189b0515215067053
+SHA1 (patch-kcal_icaltimezones.cpp) = c643f45333d8b753f3acdb29bec9734a0946434a
+SHA1 (patch-kcalcore_icalformat_p.cpp) = 2627bcd33b126c975d630a174c6fe52e4a04b906
+SHA1 (patch-kcalcore_icaltimezones.cpp) = 216b2936b5d3504d5a2d1284b39c842cc9c5848f
 SHA1 (patch-kimap_loginjob.cpp) = 8a0fe3c1779b981d9c9ca6cb34121219f2f97c9f
 SHA1 (patch-kldap_ber.cpp) = 8f2cf67ee39f744b2114b6cba503f9bcdb2efacc
 SHA1 (patch-kldap_ber.h) = 19162970d42a50f30bc62c4d23b2fa3e8d57322a
