@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q1,v 1.1.2.3 2018/04/08 11:52:20 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q1,v 1.1.2.4 2018/04/27 20:00:20 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q1 branch:
 
@@ -21,4 +21,19 @@ devel/ncursesw: security update
 
 Pullup ticket #5734 - requested by wiz
 lang/gcc49-libs: build fix
+
+Pullup ticket #5734 - requested by wiz
+lang/gcc49-libs: build fix
+
+Pullup ticket #5735 - requested by maya
+devel/nss: bugfix
+
+Pullup ticket #5736 - requested by maya
+sysutils/e2fsprogs: Linux build fix
+
+Pullup ticket #5737 - requested by maya
+security/libgpg-error: ARM build fix
+
+Pullup ticket #5738 - requested by morr
+www/wordpress: security fix
 
