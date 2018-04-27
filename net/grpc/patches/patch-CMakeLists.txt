@@ -1,27 +1,111 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2017/10/27 16:45:34 minskim Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2018/04/27 17:47:27 minskim Exp $
 
-Make this build with pkgsrc google-benchmark and libcares.
+Add version number to shared libraries.
 
---- CMakeLists.txt.orig	2017-10-26 19:11:22.000000000 +0000
+--- CMakeLists.txt.orig	2018-04-13 18:08:11.000000000 +0000
 +++ CMakeLists.txt
-@@ -144,9 +144,11 @@ if("${gRPC_CARES_PROVIDER}" STREQUAL "mo
-     set(gRPC_INSTALL FALSE)
-   endif()
- elseif("${gRPC_CARES_PROVIDER}" STREQUAL "package")
--  find_package(c-ares REQUIRED CONFIG)
-+  find_library(cares REQUIRED)
-   if(TARGET c-ares::cares)
-     set(_gRPC_CARES_LIBRARIES c-ares::cares)
-+  else()
-+    set(_gRPC_CARES_LIBRARIES cares)
-   endif()
-   set(_gRPC_FIND_CARES "if(NOT c-ares_FOUND)\n  find_package(c-ares CONFIG)\nendif()")
- endif()
-@@ -271,7 +273,6 @@ if("${gRPC_BENCHMARK_PROVIDER}" STREQUAL
-       message(WARNING "gRPC_BENCHMARK_PROVIDER is \"module\" but BENCHMARK_ROOT_DIR is wrong")
-   endif()
- elseif("${gRPC_BENCHMARK_PROVIDER}" STREQUAL "package")
--  find_package(benchmark)
-   if(TARGET benchmark::benchmark)
-     set(_gRPC_BENCHMARK_LIBRARIES benchmark::benchmark)
-   endif()
+@@ -171,7 +171,7 @@ function(protobuf_generate_grpc_cpp)
+              "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}_mock.grpc.pb.h"
+              "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}.pb.cc"
+              "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}.pb.h"
+-      COMMAND ${_gRPC_PROTOBUF_PROTOC_EXECUTABLE}
++      COMMAND env LD_LIBRARY_PATH=${CMAKE_BINARY_DIR} ${_gRPC_PROTOBUF_PROTOC_EXECUTABLE}
+       ARGS --grpc_out=generate_mock_code=true:${_gRPC_PROTO_GENS_DIR}
+            --cpp_out=${_gRPC_PROTO_GENS_DIR}
+            --plugin=protoc-gen-grpc=$<TARGET_FILE:grpc_cpp_plugin>
+@@ -664,6 +664,7 @@ add_library(address_sorting
+   third_party/address_sorting/address_sorting_posix.c
+   third_party/address_sorting/address_sorting_windows.c
+ )
++set_target_properties(address_sorting PROPERTIES VERSION ${PACKAGE_VERSION} SOVERSION 1)
+ 
+ if(WIN32 AND MSVC)
+   set_target_properties(address_sorting PROPERTIES COMPILE_PDB_NAME "address_sorting"
+@@ -784,6 +785,7 @@ add_library(gpr
+   src/core/lib/profiling/basic_timers.cc
+   src/core/lib/profiling/stap_timers.cc
+ )
++set_target_properties(gpr PROPERTIES VERSION ${PACKAGE_VERSION} SOVERSION 1)
+ 
+ if(WIN32 AND MSVC)
+   set_target_properties(gpr PROPERTIES COMPILE_PDB_NAME "gpr"
+@@ -1211,6 +1213,7 @@ add_library(grpc
+   src/core/ext/filters/workarounds/workaround_utils.cc
+   src/core/plugin_registry/grpc_plugin_registry.cc
+ )
++set_target_properties(grpc PROPERTIES VERSION ${PACKAGE_VERSION} SOVERSION 1)
+ 
+ if(WIN32 AND MSVC)
+   set_target_properties(grpc PROPERTIES COMPILE_PDB_NAME "grpc"
+@@ -1581,6 +1584,7 @@ add_library(grpc_cronet
+   src/core/ext/filters/load_reporting/server_load_reporting_plugin.cc
+   src/core/plugin_registry/grpc_cronet_plugin_registry.cc
+ )
++set_target_properties(grpc_cronet PROPERTIES VERSION ${PACKAGE_VERSION} SOVERSION 1)
+ 
+ if(WIN32 AND MSVC)
+   set_target_properties(grpc_cronet PROPERTIES COMPILE_PDB_NAME "grpc_cronet"
+@@ -2509,6 +2513,7 @@ add_library(grpc_unsecure
+   src/core/ext/filters/workarounds/workaround_utils.cc
+   src/core/plugin_registry/grpc_unsecure_plugin_registry.cc
+ )
++set_target_properties(grpc_unsecure PROPERTIES VERSION ${PACKAGE_VERSION} SOVERSION 1)
+ 
+ if(WIN32 AND MSVC)
+   set_target_properties(grpc_unsecure PROPERTIES COMPILE_PDB_NAME "grpc_unsecure"
+@@ -2722,6 +2727,7 @@ add_library(grpc++
+   src/cpp/util/time_cc.cc
+   src/cpp/codegen/codegen_init.cc
+ )
++set_target_properties(grpc++ PROPERTIES VERSION ${PACKAGE_VERSION} SOVERSION 1)
+ 
+ if(WIN32 AND MSVC)
+   set_target_properties(grpc++ PROPERTIES COMPILE_PDB_NAME "grpc++"
+@@ -3282,6 +3288,7 @@ add_library(grpc++_cronet
+   third_party/nanopb/pb_decode.c
+   third_party/nanopb/pb_encode.c
+ )
++set_target_properties(grpc++_cronet PROPERTIES VERSION ${PACKAGE_VERSION} SOVERSION 1)
+ 
+ if(WIN32 AND MSVC)
+   set_target_properties(grpc++_cronet PROPERTIES COMPILE_PDB_NAME "grpc++_cronet"
+@@ -3546,6 +3553,7 @@ add_library(grpc++_error_details
+   ${_gRPC_PROTO_GENS_DIR}/src/proto/grpc/status/status.grpc.pb.h
+   src/cpp/util/error_details.cc
+ )
++set_target_properties(grpc++_error_details PROPERTIES VERSION ${PACKAGE_VERSION} SOVERSION 1)
+ 
+ if(WIN32 AND MSVC)
+   set_target_properties(grpc++_error_details PROPERTIES COMPILE_PDB_NAME "grpc++_error_details"
+@@ -3676,6 +3684,7 @@ add_library(grpc++_reflection
+   ${_gRPC_PROTO_GENS_DIR}/src/proto/grpc/reflection/v1alpha/reflection.pb.h
+   ${_gRPC_PROTO_GENS_DIR}/src/proto/grpc/reflection/v1alpha/reflection.grpc.pb.h
+ )
++set_target_properties(grpc++_reflection PROPERTIES VERSION ${PACKAGE_VERSION} SOVERSION 1)
+ 
+ if(WIN32 AND MSVC)
+   set_target_properties(grpc++_reflection PROPERTIES COMPILE_PDB_NAME "grpc++_reflection"
+@@ -4172,6 +4181,7 @@ add_library(grpc++_unsecure
+   src/cpp/util/time_cc.cc
+   src/cpp/codegen/codegen_init.cc
+ )
++set_target_properties(grpc++_unsecure PROPERTIES VERSION ${PACKAGE_VERSION} SOVERSION 1)
+ 
+ if(WIN32 AND MSVC)
+   set_target_properties(grpc++_unsecure PROPERTIES COMPILE_PDB_NAME "grpc++_unsecure"
+@@ -4549,6 +4559,7 @@ add_library(grpc_plugin_support
+   src/compiler/python_generator.cc
+   src/compiler/ruby_generator.cc
+ )
++set_target_properties(grpc_plugin_support PROPERTIES VERSION 2.0.0 SOVERSION 2)
+ 
+ if(WIN32 AND MSVC)
+   set_target_properties(grpc_plugin_support PROPERTIES COMPILE_PDB_NAME "grpc_plugin_support"
+@@ -5061,6 +5072,7 @@ endif (gRPC_BUILD_TESTS)
+ add_library(grpc_csharp_ext SHARED
+   src/csharp/ext/grpc_csharp_ext.c
+ )
++set_target_properties(grpc_csharp_ext PROPERTIES VERSION ${PACKAGE_VERSION} SOVERSION 1)
+ 
+ if(WIN32 AND MSVC)
+   set_target_properties(grpc_csharp_ext PROPERTIES COMPILE_PDB_NAME "grpc_csharp_ext"
