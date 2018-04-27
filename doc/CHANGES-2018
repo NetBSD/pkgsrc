@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1998 2018/04/27 14:24:35 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1999 2018/04/27 14:26:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2780,3 +2780,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/gsed to 4.5 [wiz 2018-04-27]
 	Updated devel/libgsf to 1.14.43 [wiz 2018-04-27]
 	Updated net/libsoup to 2.62.1 [wiz 2018-04-27]
+	Updated graphics/libwebp to 1.0.0 [wiz 2018-04-27]
