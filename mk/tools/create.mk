@@ -1,4 +1,4 @@
-# $NetBSD: create.mk,v 1.5 2013/02/27 12:09:39 obache Exp $
+# $NetBSD: create.mk,v 1.6 2018/04/27 20:16:36 rillig Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -139,7 +139,7 @@ MKDIR?=         mkdir -p
 # by any arguments specified in TOOLS_ARGS.*, followed by any
 # command-line arguments passed to the wrapper script.
 #
-.for _t_ in ${TOOLS_CREATE}
+.for _t_ in ${TOOLS_CREATE:O:u}
 TOOLS_CMD.${_t_}?=		${TOOLS_DIR}/bin/${_t_}
 TOOLS_PATH.${_t_}?=		${FALSE}
 TOOLS_SCRIPT_DFLT.${_t_}=	\
