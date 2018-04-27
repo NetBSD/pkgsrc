@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1996 2018/04/27 14:16:33 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.1997 2018/04/27 14:19:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2778,3 +2778,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/vault to 0.10.1 [fhajny 2018-04-27]
 	Updated sysutils/liblognorm to 2.0.5 [fhajny 2018-04-27]
 	Updated textproc/gsed to 4.5 [wiz 2018-04-27]
+	Updated devel/libgsf to 1.14.43 [wiz 2018-04-27]
