@@ -1,4 +1,4 @@
-# $NetBSD: create.mk,v 1.6 2018/04/27 20:16:36 rillig Exp $
+# $NetBSD: create.mk,v 1.7 2018/04/27 20:53:14 rillig Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -139,7 +139,7 @@ MKDIR?=         mkdir -p
 # by any arguments specified in TOOLS_ARGS.*, followed by any
 # command-line arguments passed to the wrapper script.
 #
-.for _t_ in ${TOOLS_CREATE:O:u}
+.for _t_ in ${TOOLS_CREATE}
 TOOLS_CMD.${_t_}?=		${TOOLS_DIR}/bin/${_t_}
 TOOLS_PATH.${_t_}?=		${FALSE}
 TOOLS_SCRIPT_DFLT.${_t_}=	\
@@ -147,6 +147,9 @@ TOOLS_SCRIPT_DFLT.${_t_}=	\
 
 override-tools: ${TOOLS_CMD.${_t_}}
 
+# Note: if you get a warning about a doubly-defined target here, you are
+# probably adding a program to USE_TOOLS that is not a valid tool name.
+# For instance, "split" is handled outside of the tools framework.
 ${TOOLS_CMD.${_t_}}:
 	${RUN} ${TEST} -d ${.TARGET:H:Q} || ${MKDIR} ${.TARGET:H:Q}
 	${RUN}								\
