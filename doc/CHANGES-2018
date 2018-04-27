@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2001 2018/04/27 14:38:52 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2002 2018/04/27 14:46:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2783,3 +2783,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/libwebp to 1.0.0 [wiz 2018-04-27]
 	Updated graphics/py-cairo to 1.17.0 [wiz 2018-04-27]
 	Updated security/py-certifi to 2018.4.16 [wiz 2018-04-27]
+	Updated lang/vala to 0.40.4 [wiz 2018-04-27]
