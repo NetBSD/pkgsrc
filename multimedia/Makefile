@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.262 2018/04/26 07:56:57 adam Exp $
+# $NetBSD: Makefile,v 1.263 2018/04/27 06:01:08 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -207,6 +207,7 @@ SUBDIR+=	tstools
 SUBDIR+=	tvtime
 SUBDIR+=	ushare
 SUBDIR+=	vlc
+SUBDIR+=	vlc2
 SUBDIR+=	win32-codecs
 SUBDIR+=	x264-devel
 SUBDIR+=	x265
