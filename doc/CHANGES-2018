@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2005 2018/04/27 17:48:39 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2006 2018/04/27 20:37:47 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2787,3 +2787,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/calibre to 3.22.1 [wiz 2018-04-27]
 	Updated x11/gtk3 to 3.22.30 [wiz 2018-04-27]
 	Updated net/grpc to 1.11.0 [minskim 2018-04-27]
+	Added biology/ncbi-blast+ version 2.7.1 [bacon 2018-04-27]
