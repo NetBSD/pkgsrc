@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18287 2018/04/27 14:16:33 wiz Exp $
+$NetBSD: TODO,v 1.18288 2018/04/27 14:19:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -622,7 +622,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fet-5.28.6
 	o fetchmail-6.3.26
 	o fetchyahoo-2.14.0
-	o ffmpeg-4.0
 	o ffmpegthumbnailer-2.2.0
 	o file-5.33
 	o filerunner-14.06.18.10
@@ -966,7 +965,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.4.0.2
 	o libgphoto2-2.5.16
-	o libgsf-1.14.43
 	o libisoburn-1.4.0
 	o libisofs-1.4.2
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -1082,7 +1080,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mp3splt-2.6.2
 	o mp3splt-gtk-0.9.0
 	o mpdas-0.4.1
-	o mpv-0.28.2 [leot, needs a not-yet-released ffmpeg3]
+	o mpv-0.28.2 [leot]
 	o mserv-devel-0.41
 	o multitail-6.4.2
 	o munin-doc-1.4.6
@@ -1162,7 +1160,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pcc-current-20160305
 	o pdmenu-1.2.87
 	o pen-0.32.0
-	o perl5-5.26.2
 	o pessulus-2.30.3 [GNOME 2.28]
 	o pflogsumm-1.1.5
 	o pgadmin4-1.0
