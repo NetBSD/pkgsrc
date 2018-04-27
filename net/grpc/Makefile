@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2018/01/17 12:10:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2018/04/27 17:47:27 minskim Exp $
 
-DISTNAME=	grpc-1.7.2
-PKGREVISION=	1
+DISTNAME=	grpc-1.11.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grpc/}
-GITHUB_PROJECT=	grpc
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	minskim@NetBSD.org
@@ -13,8 +11,10 @@ COMMENT=	High performance, open-source universal RPC framework
 LICENSE=	apache-2.0
 
 USE_CMAKE=	yes
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES+=	c c++11
+USE_TOOLS+=	pkg-config
 
+CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=on
 CMAKE_ARGS+=	-DgRPC_BENCHMARK_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_CARES_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_GFLAGS_PROVIDER=package
@@ -30,7 +30,7 @@ SUBST_SED.fix-include=		-e 's, /usr/local/, ${PREFIX}/,g'
 
 .include "../../benchmarks/google-benchmark/buildlink3.mk"
 .include "../../devel/gflags/buildlink3.mk"
-BUILDLINK_API_DEPENDS.protobuf+=	protobuf>=3.4
+BUILDLINK_API_DEPENDS.protobuf+=	protobuf>=3.5
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libcares/buildlink3.mk"
