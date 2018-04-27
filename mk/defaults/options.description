@@ -750,6 +750,7 @@ terminfo		Use terminfo.
 tests			Build and install tests.
 theora			Use the theora codecs.
 threads			Enable threads support.
+tiff			Enable TIFF support.
 timidity		Enable MIDI support using timidity.
 tin-use-inn-spool	Use the INN spool directories.
 tls			Enable TLS support.
