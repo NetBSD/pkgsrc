@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.84 2018/03/11 17:40:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.85 2018/04/27 14:57:29 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -376,6 +376,7 @@ lib/calibre/calibre/ebooks/metadata/opf.py
 lib/calibre/calibre/ebooks/metadata/opf2.py
 lib/calibre/calibre/ebooks/metadata/opf3.py
 lib/calibre/calibre/ebooks/metadata/opf3_test.py
+lib/calibre/calibre/ebooks/metadata/opf_2_to_3.py
 lib/calibre/calibre/ebooks/metadata/pdb.py
 lib/calibre/calibre/ebooks/metadata/pdf.py
 lib/calibre/calibre/ebooks/metadata/plucker.py
@@ -396,7 +397,6 @@ lib/calibre/calibre/ebooks/metadata/sources/edelweiss.py
 lib/calibre/calibre/ebooks/metadata/sources/google.py
 lib/calibre/calibre/ebooks/metadata/sources/google_images.py
 lib/calibre/calibre/ebooks/metadata/sources/identify.py
-lib/calibre/calibre/ebooks/metadata/sources/isbndb.py
 lib/calibre/calibre/ebooks/metadata/sources/openlibrary.py
 lib/calibre/calibre/ebooks/metadata/sources/overdrive.py
 lib/calibre/calibre/ebooks/metadata/sources/ozon.py
@@ -503,6 +503,7 @@ lib/calibre/calibre/ebooks/oeb/polish/tests/main.py
 lib/calibre/calibre/ebooks/oeb/polish/tests/parsing.py
 lib/calibre/calibre/ebooks/oeb/polish/tests/structure.py
 lib/calibre/calibre/ebooks/oeb/polish/toc.py
+lib/calibre/calibre/ebooks/oeb/polish/upgrade.py
 lib/calibre/calibre/ebooks/oeb/polish/utils.py
 lib/calibre/calibre/ebooks/oeb/reader.py
 lib/calibre/calibre/ebooks/oeb/stylizer.py
@@ -2610,6 +2611,7 @@ share/calibre/recipes/le_journal.recipe
 share/calibre/recipes/le_monde.recipe
 share/calibre/recipes/le_monde_diplomatique_fr.recipe
 share/calibre/recipes/le_monde_sub.recipe
+share/calibre/recipes/le_monde_sub_paper.recipe
 share/calibre/recipes/le_nouvel_observateur.recipe
 share/calibre/recipes/le_temps.recipe
 share/calibre/recipes/ledevoir.recipe
