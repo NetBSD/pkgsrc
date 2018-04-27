@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.3 2017/12/04 18:20:30 minskim Exp $
+$NetBSD: distinfo,v 1.4 2018/04/27 17:47:27 minskim Exp $
 
-SHA1 (grpc-1.7.2.tar.gz) = 697639b3e46e084eb2a23ec1a277f53444e144cd
-RMD160 (grpc-1.7.2.tar.gz) = 5e64429298e0189b637b0599a86e8596d08192b9
-SHA512 (grpc-1.7.2.tar.gz) = 54cb4165878fb3361cd7a81b631f1b20e991eadd286c0f6020542a8aa464cf30bdd1479dc413b767a1585bdc730e465a64c45e9e805723f38bd54521e1c4f942
-Size (grpc-1.7.2.tar.gz) = 4724465 bytes
-SHA1 (patch-CMakeLists.txt) = cad9e05c7c93e684456506cb5f8a195fdc7b8efc
+SHA1 (grpc-1.11.0.tar.gz) = e4ddeb1de8ccc00987a8a12879d0ecbfe9ccb5d6
+RMD160 (grpc-1.11.0.tar.gz) = 9d950dee2d00015f72066dd9b83c92b0a4bb81cb
+SHA512 (grpc-1.11.0.tar.gz) = 3127cf0e66cd0712d905e6008adf6f80d787ad97eae2fba38fa3f4d343849a3dc3ca8f2ccbc82020e812fdb272e9577584c298a5b623fbdcac40c1efd7877855
+Size (grpc-1.11.0.tar.gz) = 13431990 bytes
+SHA1 (patch-CMakeLists.txt) = 3bd2e5bc254a06b03578430eb57ea14c13336219
+SHA1 (patch-cmake_benchmark.cmake) = 031873ba9a8cd93d491693feb4d58e52a715cc64
+SHA1 (patch-cmake_cares.cmake) = 19324318dce81451bf7a53d0ca5a7e445a751db5
+SHA1 (patch-src_core_lib_gpr_arena.cc) = 57fdb3de54ce8548fa9b50ea360530c35c3e616c
