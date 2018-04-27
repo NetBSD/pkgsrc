@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.1988 2018/04/26 15:47:33 taca Exp $
+$NetBSD: CHANGES-2018,v 1.1989 2018/04/27 06:47:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2766,3 +2766,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/php71 to 7.1.17 [taca 2018-04-26]
 	Updated lang/php72 to 7.2.5 [taca 2018-04-26]
 	Updated lang/php70 to 7.0.30 [taca 2018-04-26]
+	Updated net/openvpn to 2.4.6 [adam 2018-04-27]
+	Updated security/py-m2crypto to 0.30.0 [adam 2018-04-27]
