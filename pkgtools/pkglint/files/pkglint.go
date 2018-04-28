@@ -119,8 +119,8 @@ func main() {
 }
 
 // Main runs the main program with the given arguments.
-// args[0] is the program name.
-func (pkglint *Pkglint) Main(args ...string) (exitcode int) {
+// argv[0] is the program name.
+func (pkglint *Pkglint) Main(argv ...string) (exitcode int) {
 	defer func() {
 		if r := recover(); r != nil {
 			if _, ok := r.(pkglintFatal); ok {
@@ -131,7 +131,7 @@ func (pkglint *Pkglint) Main(args ...string) (exitcode int) {
 		}
 	}()
 
-	if exitcode := pkglint.ParseCommandLine(args); exitcode != nil {
+	if exitcode := pkglint.ParseCommandLine(argv); exitcode != nil {
 		return *exitcode
 	}
 

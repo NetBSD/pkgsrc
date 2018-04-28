@@ -938,6 +938,7 @@ func (src *PkgsrcImpl) InitVartypes() {
 	pkg("SMF_METHOD_SHELL", lkNone, BtShellCommand)
 	pkglist("SPECIAL_PERMS", lkShell, BtPerms)
 	sys("STEP_MSG", lkNone, BtShellCommand)
+	sys("STRIP", lkNone, BtShellCommand) // see mk/tools/strip.mk
 	acl("SUBDIR", lkShell, BtFilename, "Makefile: append; *:")
 	acl("SUBST_CLASSES", lkShell, BtIdentifier, "Makefile: set, append; *: append")
 	acl("SUBST_CLASSES.*", lkShell, BtIdentifier, "Makefile: set, append; *: append")

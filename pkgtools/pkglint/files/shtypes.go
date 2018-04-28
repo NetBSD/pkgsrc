@@ -36,7 +36,6 @@ func (t ShAtomType) IsWord() bool {
 	return false
 }
 
-// @Beta
 type ShAtom struct {
 	Type    ShAtomType
 	MkText  string
@@ -44,21 +43,21 @@ type ShAtom struct {
 	Data    interface{}
 }
 
-func (token *ShAtom) String() string {
-	if token.Type == shtWord && token.Quoting == shqPlain && token.Data == nil {
-		return fmt.Sprintf("%q", token.MkText)
+func (atom *ShAtom) String() string {
+	if atom.Type == shtWord && atom.Quoting == shqPlain && atom.Data == nil {
+		return fmt.Sprintf("%q", atom.MkText)
 	}
-	if token.Type == shtVaruse {
-		varuse := token.Data.(*MkVarUse)
+	if atom.Type == shtVaruse {
+		varuse := atom.Data.(*MkVarUse)
 		return fmt.Sprintf("varuse(%q)", varuse.varname+varuse.Mod())
 	}
-	return fmt.Sprintf("ShAtom(%v, %q, %s)", token.Type, token.MkText, token.Quoting)
+	return fmt.Sprintf("ShAtom(%v, %q, %s)", atom.Type, atom.MkText, atom.Quoting)
 }
 
-// Returns nil for plain shell tokens.
-func (token *ShAtom) VarUse() *MkVarUse {
-	if token.Type == shtVaruse {
-		return token.Data.(*MkVarUse)
+// VarUse returns a read access to a Makefile variable, or nil for plain shell tokens.
+func (atom *ShAtom) VarUse() *MkVarUse {
+	if atom.Type == shtVaruse {
+		return atom.Data.(*MkVarUse)
 	}
 	return nil
 }
