@@ -3,6 +3,7 @@ package main
 import (
 	"netbsd.org/pkglint/trace"
 	"sort"
+	"strings"
 )
 
 // See `mk/tools/`.
@@ -23,23 +24,32 @@ func NewToolRegistry() ToolRegistry {
 	return ToolRegistry{make(map[string]*Tool), make(map[string]*Tool)}
 }
 
-func (tr *ToolRegistry) Register(toolname string) *Tool {
-	tool := tr.byName[toolname]
+// Register registers the tool by its name.
+// The tool may then be used by this name (e.g. "awk"),
+// but not by a corresponding variable (e.g. ${AWK}).
+// The toolname may include the scope (:pkgsrc, :run, etc.).
+func (tr *ToolRegistry) Register(toolname string, line Line) *Tool {
+	name := strings.SplitN(toolname, ":", 2)[0]
+	tr.validateToolName(name, line)
+
+	tool := tr.byName[name]
 	if tool == nil {
-		tool = &Tool{Name: toolname}
-		tr.byName[toolname] = tool
+		tool = &Tool{Name: name}
+		tr.byName[name] = tool
 	}
 	return tool
 }
 
-func (tr *ToolRegistry) RegisterVarname(toolname, varname string) *Tool {
-	tool := tr.Register(toolname)
+func (tr *ToolRegistry) RegisterVarname(toolname, varname string, line Line) *Tool {
+	tool := tr.Register(toolname, line)
 	tool.Varname = varname
 	tr.byVarname[varname] = tool
 	return tool
 }
 
-func (tr *ToolRegistry) RegisterTool(tool *Tool) {
+func (tr *ToolRegistry) RegisterTool(tool *Tool, line Line) {
+	tr.validateToolName(tool.Name, line)
+
 	if tool.Name != "" && tr.byName[tool.Name] == nil {
 		tr.byName[tool.Name] = tool
 	}
@@ -78,24 +88,26 @@ func (tr *ToolRegistry) Trace() {
 	}
 }
 
+// ParseToolLine parses a tool definition from the pkgsrc infrastructure,
+// e.g. in mk/tools/replace.mk.
 func (tr *ToolRegistry) ParseToolLine(line Line) {
 	if m, commented, varname, _, _, _, value, _, _ := MatchVarassign(line.Text); m {
 		if commented {
 			return
 		}
 		if varname == "TOOLS_CREATE" && (value == "[" || matches(value, `^?[-\w.]+$`)) {
-			tr.Register(value)
+			tr.Register(value, line)
 
 		} else if m, toolname := match1(varname, `^_TOOLS_VARNAME\.([-\w.]+|\[)$`); m {
-			tr.RegisterVarname(toolname, value)
+			tr.RegisterVarname(toolname, value, line)
 
 		} else if m, toolname := match1(varname, `^(?:TOOLS_PATH|_TOOLS_DEPMETHOD)\.([-\w.]+|\[)$`); m {
-			tr.Register(toolname)
+			tr.Register(toolname, line)
 
-		} else if m, toolname := match1(varname, `_TOOLS\.(.*)`); m {
-			tr.Register(toolname)
+		} else if m, toolname := match1(varname, `^_TOOLS\.(.*)`); m {
+			tr.Register(toolname, line)
 			for _, tool := range splitOnSpace(value) {
-				tr.Register(tool)
+				tr.Register(tool, line)
 			}
 		}
 	}
@@ -112,5 +124,11 @@ func (tr *ToolRegistry) ByName(name string) *Tool {
 func (tr *ToolRegistry) ForEach(action func(tool *Tool)) {
 	for _, tool := range tr.byName {
 		action(tool)
+	}
+}
+
+func (tr *ToolRegistry) validateToolName(toolName string, line Line) {
+	if toolName != "echo -n" && !matches(toolName, `^([-a-z0-9.]+|\[)$`) {
+		line.Errorf("Invalid tool name %q", toolName)
 	}
 }
