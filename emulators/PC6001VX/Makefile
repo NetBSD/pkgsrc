@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2018/04/14 07:34:20 adam Exp $
+# $NetBSD: Makefile,v 1.22 2018/04/28 12:29:53 tsutsui Exp $
 
-VERSION=		2.32.0
+VERSION=		2.33.0
 DISTNAME=		PC6001VX_${VERSION}_src
 PKGNAME=		${DISTNAME:S/_src//:S/_/-/}
-PKGREVISION=		3
 CATEGORIES=		emulators
 MASTER_SITES=		http://eighttails.up.seesaa.net/bin/
 
@@ -16,7 +15,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 
-INSTALLATION_DIRS+=	bin share/doc/PC6001VX share/doc/PC6001VX/doc
+INSTALLATION_DIRS+=	bin share/doc/PC6001VX
 
 do-configure:
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${CONFIGURE_ENV} ${QTDIR}/bin/qmake -o Makefile PC6001VX.pro
@@ -25,8 +24,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/PC6001VX \
 	    ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/README.html \
-	    ${DESTDIR}${PREFIX}/share/doc/PC6001VX
-	cd ${WRKSRC} && pax -rwpp doc \
 	    ${DESTDIR}${PREFIX}/share/doc/PC6001VX
 
 .include "../../devel/SDL2/buildlink3.mk"
