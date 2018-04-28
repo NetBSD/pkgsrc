@@ -1,25 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2018/02/17 13:03:54 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/04/28 12:29:53 tsutsui Exp $
 bin/PC6001VX
 share/doc/PC6001VX/README.html
-share/doc/PC6001VX/doc/about.png
-share/doc/PC6001VX/doc/firstboot.png
-share/doc/PC6001VX/doc/keypanel.png
-share/doc/PC6001VX/doc/menu.png
-share/doc/PC6001VX/doc/monitormode.png
-share/doc/PC6001VX/doc/overview.png
-share/doc/PC6001VX/doc/qtsetting_compiler.png
-share/doc/PC6001VX/doc/qtsetting_debugger.png
-share/doc/PC6001VX/doc/qtsetting_kit1.png
-share/doc/PC6001VX/doc/qtsetting_kit2.png
-share/doc/PC6001VX/doc/qtsetting_qt.png
-share/doc/PC6001VX/doc/romcrc.png
-share/doc/PC6001VX/doc/setting_basic.png
-share/doc/PC6001VX/doc/setting_color1.png
-share/doc/PC6001VX/doc/setting_color2.png
-share/doc/PC6001VX/doc/setting_file.png
-share/doc/PC6001VX/doc/setting_folder.png
-share/doc/PC6001VX/doc/setting_input.png
-share/doc/PC6001VX/doc/setting_other.png
-share/doc/PC6001VX/doc/setting_screen.png
-share/doc/PC6001VX/doc/setting_sound.png
-share/doc/PC6001VX/doc/tilt.png
