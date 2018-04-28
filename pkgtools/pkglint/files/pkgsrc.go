@@ -14,7 +14,6 @@ import (
 type Pkgsrc = *PkgsrcImpl
 
 type PkgsrcImpl struct {
-
 	// The top directory (PKGSRCDIR), either absolute or relative to
 	// the current working directory.
 	topdir string
@@ -145,7 +144,8 @@ func (src *PkgsrcImpl) Latest(category string, re regex.Pattern, repl string) st
 func (src *PkgsrcImpl) loadTools() {
 	toolFiles := []string{"defaults.mk"}
 	{
-		lines := G.Pkgsrc.LoadExistingLines("mk/tools/bsd.tools.mk", true)
+		toc := G.Pkgsrc.File("mk/tools/bsd.tools.mk")
+		lines := LoadExistingLines(toc, true)
 		for _, line := range lines {
 			if m, _, _, includefile := MatchMkInclude(line.Text); m {
 				if !contains(includefile, "/") {
@@ -154,16 +154,16 @@ func (src *PkgsrcImpl) loadTools() {
 			}
 		}
 		if len(toolFiles) <= 1 {
-			lines[0].Fatalf("Too few tool files.")
+			NewLine(toc, 0, "", nil).Fatalf("Too few tool files.")
 		}
 	}
 
 	reg := src.Tools
-	reg.RegisterTool(&Tool{"echo", "ECHO", true, true, true})
-	reg.RegisterTool(&Tool{"echo -n", "ECHO_N", true, true, true})
-	reg.RegisterTool(&Tool{"false", "FALSE", true /*why?*/, true, false})
-	reg.RegisterTool(&Tool{"test", "TEST", true, true, true})
-	reg.RegisterTool(&Tool{"true", "TRUE", true /*why?*/, true, true})
+	reg.RegisterTool(&Tool{"echo", "ECHO", true, true, true}, dummyLine)
+	reg.RegisterTool(&Tool{"echo -n", "ECHO_N", true, true, true}, dummyLine)
+	reg.RegisterTool(&Tool{"false", "FALSE", true /*why?*/, true, false}, dummyLine)
+	reg.RegisterTool(&Tool{"test", "TEST", true, true, true}, dummyLine)
+	reg.RegisterTool(&Tool{"true", "TRUE", true /*why?*/, true, true}, dummyLine)
 
 	for _, basename := range toolFiles {
 		lines := G.Pkgsrc.LoadExistingLines("mk/tools/"+basename, true)
@@ -190,11 +190,10 @@ func (src *PkgsrcImpl) loadTools() {
 					if condDepth == 0 || condDepth == 1 && relativeName == "mk/bsd.prefs.mk" {
 						for _, toolname := range splitOnSpace(value) {
 							if !containsVarRef(toolname) {
-								for _, tool := range [...]*Tool{reg.Register(toolname), reg.Register("TOOLS_" + toolname)} {
-									tool.Predefined = true
-									if relativeName == "mk/bsd.prefs.mk" {
-										tool.UsableAtLoadtime = true
-									}
+								tool := reg.Register(toolname, line)
+								tool.Predefined = true
+								if relativeName == "mk/bsd.prefs.mk" {
+									tool.UsableAtLoadtime = true
 								}
 							}
 						}
@@ -357,7 +356,6 @@ func (src *PkgsrcImpl) loadUserDefinedVars() {
 
 func (src *PkgsrcImpl) initDeprecatedVars() {
 	src.Deprecated = map[string]string{
-
 		// December 2003
 		"FIX_RPATH": "It has been removed from pkgsrc in 2003.",
 
@@ -519,7 +517,7 @@ func (src *PkgsrcImpl) initDeprecatedVars() {
 
 // LoadExistingLines loads the file relative to the pkgsrc top directory.
 func (src *PkgsrcImpl) LoadExistingLines(fileName string, joinBackslashLines bool) []Line {
-	return LoadExistingLines(src.topdir+"/"+fileName, joinBackslashLines)
+	return LoadExistingLines(src.File(fileName), joinBackslashLines)
 }
 
 // File resolves a file name relative to the pkgsrc top directory.
