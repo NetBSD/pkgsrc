@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2008 2018/04/28 01:10:47 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.2009 2018/04/28 01:17:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2790,3 +2790,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added biology/ncbi-blast+ version 2.7.1 [bacon 2018-04-27]
 	Updated textproc/cldr-emoji-annotation to 33.0.0.1 [tsutsui 2018-04-28]
 	Added textproc/unicode-character-database version 10.0.0 [tsutsui 2018-04-28]
+	Added net/py-grpcio version 1.11.0 [minskim 2018-04-28]
