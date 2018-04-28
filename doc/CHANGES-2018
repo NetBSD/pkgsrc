@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2012 2018/04/28 09:41:04 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2013 2018/04/28 12:30:21 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2795,3 +2795,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated inputmethod/ibus to 1.5.18 [tsutsui 2018-04-28]
 	Updated inputmethod/ibus-python to 1.5.18 [tsutsui 2018-04-28]
 	Added fonts/woff2 version 1.0.2 [wiz 2018-04-28]
+	Updated emulators/PC6001VX to 2.33.0 [tsutsui 2018-04-28]
