@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.985 2018/04/09 02:47:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.986 2018/04/28 01:09:17 tsutsui Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -979,6 +979,7 @@ SUBDIR+=	troffcvt
 SUBDIR+=	unac
 SUBDIR+=	uncrustify
 SUBDIR+=	uni2ascii
+SUBDIR+=	unicode-character-database
 SUBDIR+=	unicode-emoji
 SUBDIR+=	unroff
 SUBDIR+=	untex
