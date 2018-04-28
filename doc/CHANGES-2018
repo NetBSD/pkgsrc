@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2016 2018/04/28 19:28:30 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2017 2018/04/28 20:15:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2799,3 +2799,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/p5-File-Copy-Recursive to 0.44 [schmonz 2018-04-28]
 	Updated www/webkit-gtk to 2.20.1 [wiz 2018-04-28]
 	Updated multimedia/ffmpegthumbnailer to 2.2.0 [wiz 2018-04-28]
+	Updated print/poppler to 0.64.0 [wiz 2018-04-28]
