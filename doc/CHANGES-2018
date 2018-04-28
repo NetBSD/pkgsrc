@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2017 2018/04/28 20:15:29 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2018 2018/04/28 23:33:25 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2800,3 +2800,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/webkit-gtk to 2.20.1 [wiz 2018-04-28]
 	Updated multimedia/ffmpegthumbnailer to 2.2.0 [wiz 2018-04-28]
 	Updated print/poppler to 0.64.0 [wiz 2018-04-28]
+	Updated pkgtools/pkglint to 5.5.9 [rillig 2018-04-28]
