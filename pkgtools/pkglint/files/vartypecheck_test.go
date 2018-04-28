@@ -541,6 +541,30 @@ func (s *Suite) Test_VartypeCheck_Stage(c *check.C) {
 			"Use one of {pre,do,post}-{extract,patch,configure,build,test,install}.")
 }
 
+func (s *Suite) Test_VartypeCheck_Tool(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupTool(&Tool{Name: "tool1", Predefined: true})
+	t.SetupTool(&Tool{Name: "tool2", Predefined: true})
+	t.SetupTool(&Tool{Name: "tool3", Predefined: true})
+
+	runVartypeChecks(t, "USE_TOOLS", opAssignAppend, (*VartypeCheck).Tool,
+		"tool3:run",
+		"tool2:unknown")
+
+	t.CheckOutputLines(
+		"ERROR: fname:2: Unknown tool dependency \"unknown\". " +
+			"Use one of \"bootstrap\", \"build\", \"pkgsrc\" or \"run\".")
+
+	runVartypeChecks(t, "USE_TOOLS.NetBSD", opAssignAppend, (*VartypeCheck).Tool,
+		"tool3:run",
+		"tool2:unknown")
+
+	t.CheckOutputLines(
+		"ERROR: fname:2: Unknown tool dependency \"unknown\". " +
+			"Use one of \"bootstrap\", \"build\", \"pkgsrc\" or \"run\".")
+}
+
 func (s *Suite) Test_VartypeCheck_VariableName(c *check.C) {
 	t := s.Init(c)
 

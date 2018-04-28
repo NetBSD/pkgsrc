@@ -19,6 +19,7 @@ type MkLines struct {
 	toolRegistry   ToolRegistry    // Tools defined in file scope.
 	SeenBsdPrefsMk bool
 	indentation    Indentation // Indentation depth of preprocessing directives
+	// XXX: Why both tools and toolRegistry?
 }
 
 func NewMkLines(lines []Line) *MkLines {
@@ -289,7 +290,7 @@ type VaralignBlock struct {
 type varalignBlockInfo struct {
 	mkline         MkLine
 	varnameOp      string // Variable name + assignment operator
-	varnameOpWidth int    // Screen width of varnameOp + space
+	varnameOpWidth int    // Screen width of varnameOp
 	space          string // Whitespace between varnameOp and the variable value
 	totalWidth     int    // Screen width of varnameOp + space
 	continuation   bool   // A continuation line with no value in the first line.

@@ -42,8 +42,10 @@ func NewAutofix(line Line) *Autofix {
 // because of the --only option.
 //
 // The fixer function must always call Describef.
+//
 // If printAutofix or autofix is true, the fix should be done in
 // memory as far as possible (e.g. changes to the text of the line).
+//
 // If autofix is true, the fix should be done permanently
 // (e.g. direct changes to the file system).
 func (fix *Autofix) Custom(fixer func(printAutofix, autofix bool)) {

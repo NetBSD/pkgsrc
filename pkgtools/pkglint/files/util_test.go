@@ -164,3 +164,10 @@ func emptyToNil(slice []string) []string {
 	}
 	return slice
 }
+
+func (s *Suite) Test_splitOnSpace(c *check.C) {
+	c.Check(splitOnSpace("aaaaa"), deepEquals, []string{"aaaaa"})
+	c.Check(splitOnSpace(" a b\tc\n"), deepEquals, []string{"a", "b", "c"})
+	c.Check(splitOnSpace("     "), check.IsNil)
+	c.Check(splitOnSpace(""), check.IsNil)
+}

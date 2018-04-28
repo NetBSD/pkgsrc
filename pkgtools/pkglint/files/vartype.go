@@ -173,6 +173,7 @@ func (vt *Vartype) IsBasicSafe() bool {
 		BtRelativePkgDir,
 		BtRelativePkgPath,
 		BtStage,
+		BtTool, // Sometimes contains a colon, but that should be ok.
 		BtUserGroupName,
 		BtVersion,
 		BtWrkdirSubdirectory,

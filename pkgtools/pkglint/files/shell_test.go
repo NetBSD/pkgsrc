@@ -254,6 +254,32 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	t.CheckOutputEmpty() // No warning about missing error checking.
 }
 
+func (s *Suite) Test_ShellLine_CheckShellCommandLine_strip(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupCommandLine("-Wall")
+
+	checkShellCommandLine := func(shellCommand string) {
+		G.Mk = t.NewMkLines("fname",
+			"\t"+shellCommand)
+		shline := NewShellLine(G.Mk.mklines[0])
+
+		shline.CheckShellCommandLine(shline.mkline.Shellcmd())
+	}
+
+	checkShellCommandLine("${STRIP} executable")
+
+	t.CheckOutputLines(
+		"WARN: fname:1: Unknown shell command \"${STRIP}\".",
+		"WARN: fname:1: STRIP is used but not defined. Spelling mistake?")
+
+	t.SetupVartypes()
+
+	checkShellCommandLine("${STRIP} executable")
+
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__nofix(c *check.C) {
 	t := s.Init(c)
 
