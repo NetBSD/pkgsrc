@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/12/09 16:59:28 tsutsui Exp $
+# $NetBSD: Makefile,v 1.4 2018/04/28 01:00:52 tsutsui Exp $
 
-CLDREMJVER=	32.0.0_1
+CLDREMJVER=	33.0.0_1
 DISTNAME=	cldr-emoji-annotation-${CLDREMJVER}
 PKGNAME=	${DISTNAME:S/_/./g}
 CATEGORIES=	textproc
@@ -16,7 +16,7 @@ LICENSE=	unicode
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	aclocal autoheader autoconf automake
+USE_TOOLS+=	gmake
 USE_LANGUAGES+=	c
 GNU_CONFIGURE=	yes
 
