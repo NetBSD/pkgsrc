@@ -243,7 +243,7 @@ func varIsUsed(varname string) bool {
 }
 
 func splitOnSpace(s string) []string {
-	return regex.Compile(`\s+`).Split(s, -1)
+	return regex.Compile(`\S+`).FindAllString(s, -1)
 }
 
 func fileExists(fname string) bool {
