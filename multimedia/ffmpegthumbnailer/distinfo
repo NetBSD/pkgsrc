@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 23:54:24 agc Exp $
+$NetBSD: distinfo,v 1.7 2018/04/28 19:28:20 wiz Exp $
 
-SHA1 (ffmpegthumbnailer-2.0.8.tar.gz) = 2c54ca16efd953f46547e22799cfc40bd9c24533
-RMD160 (ffmpegthumbnailer-2.0.8.tar.gz) = 39ef118a30111ab1035c4f18092123a3013f6972
-SHA512 (ffmpegthumbnailer-2.0.8.tar.gz) = 6062d4b8f5326bde96c8c6dceaac52e1fabcec93f0a0ee4be19e203050e6c80426a006076a27e4a12582e05daceebd37beef008154fdd92a87f365fdff68ca83
-Size (ffmpegthumbnailer-2.0.8.tar.gz) = 367186 bytes
-SHA1 (patch-libffmpegthumbnailer_pngwriter.cpp) = d5fc0aa9bdbc94cf2ea89a89ff082c4a8d49540e
+SHA1 (ffmpegthumbnailer-2.2.0.tar.bz2) = 4c7cdb3f2f7acd73c2f5138429ed2d2397f0f146
+RMD160 (ffmpegthumbnailer-2.2.0.tar.bz2) = 3b89af75a3c65c4a1d998157e8000a2b862b6bd1
+SHA512 (ffmpegthumbnailer-2.2.0.tar.bz2) = 526d15b2c754fcb1415e69fb54cb6e7d0102b6d73a32a7e8528df81e32633dfe3786898984fdb988c93daee7218956c75c096ef657c9b3a42399d2d1d27c7bbf
+Size (ffmpegthumbnailer-2.2.0.tar.bz2) = 1223895 bytes
