@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1211 2018/04/28 01:17:29 minskim Exp $
+# $NetBSD: Makefile,v 1.1212 2018/04/28 01:24:40 minskim Exp $
 #
 
 COMMENT=	Networking tools
@@ -653,6 +653,7 @@ SUBDIR+=	py-geventhttpclient
 SUBDIR+=	py-google
 SUBDIR+=	py-google-cloud-sdk
 SUBDIR+=	py-grpcio
+SUBDIR+=	py-grpcio-tools
 SUBDIR+=	py-gsutil
 SUBDIR+=	py-hatop
 SUBDIR+=	py-hpack
