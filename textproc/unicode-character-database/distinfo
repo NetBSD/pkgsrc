@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2018/04/28 01:07:59 tsutsui Exp $
+
+SHA1 (unicode-character-database-10.0.0/UCD.zip) = ef4f56a30c39215dd25a6e6b9a979f839104ed75
+RMD160 (unicode-character-database-10.0.0/UCD.zip) = 40128fd140aeae6285131b4ea5b3286b6fad87f8
+SHA512 (unicode-character-database-10.0.0/UCD.zip) = 4e232ddd01c5c85175f29cbda61d6a87f274669a3184e885cb44410c26f25eee70da984b3f4798f8d6c304b05333e9245e2eb6e3830ee7b16b2f2e50d32c9ee0
+Size (unicode-character-database-10.0.0/UCD.zip) = 5991193 bytes
+SHA1 (unicode-character-database-10.0.0/Unihan.zip) = b6d32a88e55e7839ca864138bd12b3eb18a5a69e
+RMD160 (unicode-character-database-10.0.0/Unihan.zip) = 537be3d5634022e9dcd266a2ed812552142b2f00
+SHA512 (unicode-character-database-10.0.0/Unihan.zip) = 377f53ddc9ae514e8866c0e6b79f9b1d3613fad5a7e29c57a06baf8be84cbada0703b1c660401e7dbd2bb861b09fa9159b77322f42b34f5a0dc0d8f70ac4db12
+Size (unicode-character-database-10.0.0/Unihan.zip) = 6632227 bytes
