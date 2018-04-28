@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2006 2018/04/27 20:37:47 bacon Exp $
+$NetBSD: CHANGES-2018,v 1.2007 2018/04/28 01:01:17 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2788,3 +2788,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/gtk3 to 3.22.30 [wiz 2018-04-27]
 	Updated net/grpc to 1.11.0 [minskim 2018-04-27]
 	Added biology/ncbi-blast+ version 2.7.1 [bacon 2018-04-27]
+	Updated textproc/cldr-emoji-annotation to 33.0.0.1 [tsutsui 2018-04-28]
