@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2018/04/28 09:40:39 wiz Exp $
+include/woff2/decode.h
+include/woff2/encode.h
+include/woff2/output.h
+lib/libwoff2common.so
+lib/libwoff2common.so.${PKGVERSION}
+lib/libwoff2dec.so
+lib/libwoff2dec.so.${PKGVERSION}
+lib/libwoff2enc.so
+lib/libwoff2enc.so.${PKGVERSION}
+lib/pkgconfig/libwoff2common.pc
+lib/pkgconfig/libwoff2dec.pc
+lib/pkgconfig/libwoff2enc.pc
