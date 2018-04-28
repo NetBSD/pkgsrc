@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2017/11/05 04:19:15 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/04/28 01:40:07 tsutsui Exp $
 bin/ibus
 bin/ibus-daemon
 bin/ibus-setup
 include/ibus-1.0/ibus.h
+include/ibus-1.0/ibusaccelgroup.h
 include/ibus-1.0/ibusattribute.h
 include/ibus-1.0/ibusattrlist.h
 include/ibus-1.0/ibusbus.h
@@ -36,8 +37,10 @@ include/ibus-1.0/ibusservice.h
 include/ibus-1.0/ibusshare.h
 include/ibus-1.0/ibustext.h
 include/ibus-1.0/ibustypes.h
+include/ibus-1.0/ibusunicode.h
 include/ibus-1.0/ibusutil.h
 include/ibus-1.0/ibusversion.h
+include/ibus-1.0/ibusxevent.h
 include/ibus-1.0/ibusxml.h
 lib/girepository-1.0/IBus-1.0.typelib
 lib/gtk-2.0/2.10.0/immodules/im-ibus.la
@@ -46,6 +49,7 @@ lib/libibus-1.0.la
 lib/pkgconfig/ibus-1.0.pc
 libexec/ibus-dconf
 libexec/ibus-engine-simple
+libexec/ibus-extension-gtk3
 libexec/ibus-gconf
 libexec/ibus-portal
 libexec/ibus-ui-emojier
@@ -57,6 +61,8 @@ man/man1/ibus.1
 man/man7/ibus-emoji.7
 share/GConf/gsettings/ibus.convert
 share/applications/ibus-setup.desktop
+share/applications/org.freedesktop.IBus.Panel.Emojier.desktop
+share/applications/org.freedesktop.IBus.Panel.Extension.Gtk3.desktop
 share/bash-completion/completions/ibus.bash
 share/dbus-1/services/org.freedesktop.IBus.service
 share/dbus-1/services/org.freedesktop.portal.IBus.service
@@ -119,6 +125,7 @@ share/gtk-doc/html/ibus/up-insensitive.png
 share/gtk-doc/html/ibus/up.png
 share/ibus/component/dconf.xml
 share/ibus/component/gconf.xml
+share/ibus/component/gtkextension.xml
 share/ibus/component/gtkpanel.xml
 share/ibus/component/simple.xml
 share/ibus/dicts/emoji-af.dict
@@ -204,6 +211,8 @@ share/ibus/dicts/emoji-vi.dict
 share/ibus/dicts/emoji-zh.dict
 share/ibus/dicts/emoji-zh_Hant.dict
 share/ibus/dicts/emoji-zu.dict
+share/ibus/dicts/unicode-blocks.dict
+share/ibus/dicts/unicode-names.dict
 share/ibus/keymaps/common
 share/ibus/keymaps/in
 share/ibus/keymaps/jp

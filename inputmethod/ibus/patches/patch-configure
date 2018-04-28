@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2018/04/28 01:40:07 tsutsui Exp $
+
+* pull upstream fix:
+ https://github.com/ibus/ibus/commit/5788be80685f397c3db3bdf4e672d67cfb9b3433#diff-67e997bcfdac55191033d57a16d1408a
+
+--- configure.orig	2018-03-02 08:24:44.000000000 +0000
++++ configure
+@@ -20218,7 +20218,7 @@ fi
+ 
+ # Check whether --with-ucd-dir was given.
+ if test "${with_ucd_dir+set}" = set; then :
+-  withval=$with_ucd_dir; UCD_DIR=$with_emoji_annotation_dir
++  withval=$with_ucd_dir; UCD_DIR=$with_ucd_dir
+ else
+   UCD_DIR="/usr/share/unicode/ucd"
+ 
