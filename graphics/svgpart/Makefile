@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2018/03/12 11:16:51 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2018/04/29 21:31:46 adam Exp $
 
 DISTNAME=	svgpart-16.08.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 COMMENT=	KDE svg part
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.08.0/src/}
