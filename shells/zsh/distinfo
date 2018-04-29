@@ -1,12 +1,8 @@
-$NetBSD: distinfo,v 1.61 2018/03/30 20:56:42 spz Exp $
+$NetBSD: distinfo,v 1.62 2018/04/29 20:41:04 ryoon Exp $
 
-SHA1 (zsh-5.4.2.tar.xz) = f6f8e699b956c8881444e597b1fc5af41fef456b
-RMD160 (zsh-5.4.2.tar.xz) = 9cc8888760c06757332daa6dfbba4c5235474b5d
-SHA512 (zsh-5.4.2.tar.xz) = 7825e4101905b6bfbd14f00b2f94f512ced5b9820a4f7b24409d266ad2c3c25144edf6aa2629317394055c51312ba57bb01e20c26e2ced1aeb0be0ff1a4d3fbb
-Size (zsh-5.4.2.tar.xz) = 2983492 bytes
-SHA1 (patch-CVE-2018-1071) = 0aa14d3ee127d34ee841f6a3749f5572bfdb3114
-SHA1 (patch-CVE-2018-1083) = 09d6188d1f4e2efc72dfb2a75571a7f1c857a2a7
-SHA1 (patch-CVE-2018-7548) = 85a4aa35c30690908ecb70772cc2553a91c3545c
-SHA1 (patch-CVE-2018-7549) = f94df77c2fe5563af6b88727c04c43d74771105e
+SHA1 (zsh-5.5.1.tar.xz) = 98ea952bba9b8752635c75f54bcecef072d3036e
+RMD160 (zsh-5.5.1.tar.xz) = 6e0bfecca1b6a29e8f56805997379278fba37578
+SHA512 (zsh-5.5.1.tar.xz) = 37156ff682f8ec337526c8f93a0a2031000bb0b4b2a59e04158aae3f0fb667f4d9898d6f2bae8abe3dd2839f760f2e335484e016564a4a59097273a1f64da0c2
+Size (zsh-5.5.1.tar.xz) = 3052832 bytes
 SHA1 (patch-aczsh.m4) = 36c270d8d7cf727f48787ef889b2bd89cbf065e2
 SHA1 (patch-configure.ac) = 87ae3604e09948cd7b360f08031ef9c3f91f0aae
