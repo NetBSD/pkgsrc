@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2018/03/18 00:40:20 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.25 2018/04/29 20:52:58 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -154,6 +154,7 @@ share/mame/hash/c64_cart.xml
 share/mame/hash/c64_cass.xml
 share/mame/hash/c64_flop.xml
 share/mame/hash/c65_flop.xml
+share/mame/hash/camplynx_flop.xml
 share/mame/hash/casloopy.xml
 share/mame/hash/cbm2_cart.xml
 share/mame/hash/cbm2_flop.xml
@@ -254,6 +255,7 @@ share/mame/hash/ibm6580.xml
 share/mame/hash/ibmpcjr_cart.xml
 share/mame/hash/ibmpcjr_flop.xml
 share/mame/hash/interact.xml
+share/mame/hash/interpro.xml
 share/mame/hash/intv.hsi
 share/mame/hash/intv.xml
 share/mame/hash/intvecs.xml
@@ -399,6 +401,7 @@ share/mame/hash/pockchalw.xml
 share/mame/hash/pofo.xml
 share/mame/hash/poisk1_flop.xml
 share/mame/hash/pokemini.xml
+share/mame/hash/poly_flop.xml
 share/mame/hash/princ.xml
 share/mame/hash/pro128_cart.xml
 share/mame/hash/pro128_cass.xml
