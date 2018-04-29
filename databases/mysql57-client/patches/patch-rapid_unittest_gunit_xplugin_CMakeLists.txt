@@ -1,18 +1,18 @@
-$NetBSD: patch-rapid_unittest_gunit_xplugin_CMakeLists.txt,v 1.1 2016/09/16 06:49:11 adam Exp $
+$NetBSD: patch-rapid_unittest_gunit_xplugin_CMakeLists.txt,v 1.2 2018/04/29 21:44:12 adam Exp $
 
 Use bundled boost.
 
---- rapid/unittest/gunit/xplugin/CMakeLists.txt.orig	2016-07-12 11:55:26.000000000 +0000
+--- rapid/unittest/gunit/xplugin/CMakeLists.txt.orig	2018-03-04 13:40:40.000000000 +0000
 +++ rapid/unittest/gunit/xplugin/CMakeLists.txt
-@@ -65,7 +65,6 @@ ENDIF()
- ADD_DEFINITIONS(${GMOCK_CFLAGS} -DBOOST_ALL_NO_LIB -DBOOST_NO_AUTO_PTR -DUSE_MYSQLX_FULL_PROTO -DXPLUGIN_UNIT_TESTS)
+@@ -69,7 +69,6 @@ ADD_DEFINITIONS(
+ )
  
  INCLUDE_DIRECTORIES(SYSTEM
 -    ${BOOST_INCLUDE_DIR}
      ${PROTOBUF_INCLUDE_DIRS}
      ${SSL_INCLUDE_DIRS}
      ${LIBEVENT_INCLUDE_DIR}
-@@ -75,6 +74,7 @@ INCLUDE_DIRECTORIES(SYSTEM
+@@ -79,6 +78,7 @@ INCLUDE_DIRECTORIES(SYSTEM
  )
  
  INCLUDE_DIRECTORIES(
