@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2025 2018/04/29 06:05:45 dholland Exp $
+$NetBSD: CHANGES-2018,v 1.2026 2018/04/29 09:41:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2811,3 +2811,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/libtasn1 to 4.12nb1 [dholland 2018-04-29]
 	Updated misc/xrolodex to 1.5nb6 [dholland 2018-04-29]
 	Updated security/gnutls to 3.6.0nb2 [dholland 2018-04-29]
+	Updated net/sslh to 1.19c [wiz 2018-04-29]

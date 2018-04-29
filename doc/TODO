@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18302 2018/04/29 05:50:53 wiz Exp $
+$NetBSD: TODO,v 1.18303 2018/04/29 09:41:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1358,7 +1358,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ssh-askpass-1.2.4.1
 	o sshfp-1.2.2
 	o sshguard-1.6.4
-	o sslh-1.19c
 	o sslsplit-0.4.11
 	o stalin-0.11
 	o star-1.5.3
