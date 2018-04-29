@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2018/01/01 21:18:25 adam Exp $
+# $NetBSD: Makefile,v 1.43 2018/04/29 21:31:36 adam Exp $
 #
 
 DISTNAME=	CriticalMass-1.0.2
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=criticalmass/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2018/01/14 17:33:58 rillig Exp $
+# $NetBSD: Makefile,v 1.61 2018/04/29 21:31:36 adam Exp $
 
 DISTNAME=	bzflag-2.4.2
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bzflag/}
 
