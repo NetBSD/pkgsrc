@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/01/07 14:19:04 tsutsui Exp $
+$NetBSD: distinfo,v 1.3 2018/04/29 13:07:00 tsutsui Exp $
 
-SHA1 (diva-0.3.1.gem) = 2c19ad5ec80b4193dab1b7bd6a266e0125e4c3cc
-RMD160 (diva-0.3.1.gem) = 73eb77dbec1e380b183038a985f1bae2987a09cf
-SHA512 (diva-0.3.1.gem) = 7ae4a32454f4050e0ca1144587c67a36aa513ba3768ac0b552e785c4ff24b58ef48376223677ca7e6833007a0ddb214c972e7e26c669b64d9f7cb28e4f5cd2ec
-Size (diva-0.3.1.gem) = 13824 bytes
+SHA1 (diva-0.3.2.gem) = aa6ae4b11f5b8350a67fc40a3cd8a9049f91a10b
+RMD160 (diva-0.3.2.gem) = 00d00d94bf7ff4b9f4a2663a1276237594e51a91
+SHA512 (diva-0.3.2.gem) = 3506aead4314d8d43c838ca0bc596a8f63e6d0b86da68810999e9101bfad611b8fd4902078ec7495e66704e756d928ec28e916105f22c4260b2681ab97eb08aa
+Size (diva-0.3.2.gem) = 13824 bytes
