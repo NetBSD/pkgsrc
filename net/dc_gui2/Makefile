@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.96 2018/04/16 14:34:59 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2018/04/29 21:31:58 adam Exp $
 
 DISTNAME=	dc_gui2-0.80
-PKGREVISION=	45
+PKGREVISION=	46
 CATEGORIES=	net
 #MASTER_SITES=	http://ac2i.homelinux.com/dctc/
 
