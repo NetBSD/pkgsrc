@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2040 2018/04/29 14:58:48 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.2041 2018/04/29 15:57:16 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2826,3 +2826,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-postgresql to 5.0.5 [wiz 2018-04-29]
 	Added sysutils/rw version 1.0 [kamil 2018-04-29]
 	Updated www/ruby-http to 3.3.0 [tsutsui 2018-04-29]
+	Updated net/mikutter to 3.6.7 [tsutsui 2018-04-29]
