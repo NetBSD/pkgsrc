@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2048 2018/04/29 21:29:32 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.2049 2018/04/29 21:45:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2834,3 +2834,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated fonts/sourcecodepro-fonts to 1.050nb1 [ryoon 2018-04-30]
 	Updated fonts/sourcesans-fonts to 2.020nb1 [ryoon 2018-04-30]
 	Updated graphics/babl to 0.1.46 [ryoon 2018-04-30]
+	Updated databases/mysql57-client to 5.7.22 [adam 2018-04-29]
+	Updated databases/mysql57-server to 5.7.22 [adam 2018-04-29]
