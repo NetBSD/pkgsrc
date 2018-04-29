@@ -1,17 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2018/04/16 14:34:03 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2018/04/29 05:39:33 wiz Exp $
 
-DISTNAME=	wxWidgets-3.0.3.1
+DISTNAME=	wxWidgets-3.0.4
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK30/}
-PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wxWidgets/}
 GITHUB_PROJECT=	wxWidgets
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
-
-PATCHFILES=		wxWidgets-3.0.3-libtool.1.diff.bz2
-PATCH_SITES=		${MASTER_SITE_LOCAL}
-PATCH_DIST_STRIP.wxWidgets-3.0.3-libtool.1.diff.bz2= -p1
 
 MAINTAINER=	dbj@NetBSD.org
 HOMEPAGE=	http://www.wxwidgets.org/
@@ -20,7 +15,6 @@ COMMENT=	Cross-platform wxWidgets GUI library
 LICENSE=	gnu-lgpl-v2
 
 USE_TOOLS+=		pkg-config msgfmt
-USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 USE_GNU_CONFIGURE_HOST=	no
@@ -57,18 +51,14 @@ SUBST_SED.fix-paths+=		-e 's,@PREFIX@,${PREFIX},g'
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_SRC+=             ${PLIST_SRC_DFLT}
-PLIST_VARS+=		notdarwin
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--with-osx_cocoa
 CONFIGURE_ARGS+=	--without-macosx-sdk
 CONFIGURE_ARGS+=	--without-macosx-version-min
 CPPFLAGS+=		-D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=1
-PLIST_SRC+=		PLIST.cocoa
 .else
-PLIST.notdarwin=	yes
-
-PLIST_SRC+=		PLIST.gtk2
-CONFIGURE_ARGS+=	--with-gtk=2
+PLIST_SRC+=		PLIST.gtk3
+CONFIGURE_ARGS+=	--with-gtk=3
 .endif
 
 CONFIGURE_ARGS.SunOS+=	--disable-xlocale
@@ -111,7 +101,7 @@ post-install:
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .endif

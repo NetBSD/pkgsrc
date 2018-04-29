@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/02/17 10:16:05 dbj Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/04/29 05:39:33 wiz Exp $
 bin/wx-config-3.0
 bin/wxrc-3.0
 include/wx-3.0/wx/aboutdlg.h
@@ -178,7 +178,6 @@ include/wx-3.0/wx/generic/dvrenderers.h
 include/wx-3.0/wx/generic/fdrepdlg.h
 include/wx-3.0/wx/generic/filectrlg.h
 include/wx-3.0/wx/generic/filepickerg.h
-include/wx-3.0/wx/generic/fontdlgg.h
 include/wx-3.0/wx/generic/fswatcher.h
 include/wx-3.0/wx/generic/grid.h
 include/wx-3.0/wx/generic/gridctrl.h
@@ -489,7 +488,6 @@ include/wx-3.0/wx/unix/apptrait.h
 include/wx-3.0/wx/unix/chkconf.h
 include/wx-3.0/wx/unix/evtloop.h
 include/wx-3.0/wx/unix/evtloopsrc.h
-${PLIST.notdarwin}include/wx-3.0/wx/unix/fswatcher_inotify.h
 include/wx-3.0/wx/unix/fswatcher_kqueue.h
 include/wx-3.0/wx/unix/pipe.h
 include/wx-3.0/wx/unix/stackwalk.h
@@ -614,10 +612,6 @@ include/wx-3.0/wx/xtitypes.h
 include/wx-3.0/wx/xtixml.h
 include/wx-3.0/wx/zipstrm.h
 include/wx-3.0/wx/zstream.h
-lib/libwx_baseu-3.0.la
-lib/libwx_baseu_net-3.0.la
-lib/libwx_baseu_xml-3.0.la
-lib/libwxregexu-3.0.la
 libexec/wx-3.0/wx-config
 libexec/wx-3.0/wxrc
 libexec/wx-3.0/wxrc-3.0
