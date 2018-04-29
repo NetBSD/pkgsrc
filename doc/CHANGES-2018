@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2046 2018/04/29 21:10:43 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.2047 2018/04/29 21:11:28 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2832,3 +2832,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated shells/zsh to 5.5.1 [ryoon 2018-04-30]
 	Updated emulators/mame to 0.197 [wiz 2018-04-29]
 	Updated fonts/sourcecodepro-fonts to 1.050nb1 [ryoon 2018-04-30]
+	Updated fonts/sourcesans-fonts to 2.020nb1 [ryoon 2018-04-30]
