@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.312 2018/04/14 07:05:14 ryoon Exp $
+$NetBSD: distinfo,v 1.313 2018/04/29 13:27:08 martin Exp $
 
 SHA1 (firefox-59.0.2.tar.bz2) = 8fcf726b4d23716c7ff2b7ebc6527782b5bafe9c
 RMD160 (firefox-59.0.2.tar.bz2) = ff7ab2f9da93eda98de8aecb4563cfd176b896d9
@@ -79,6 +79,10 @@ SHA1 (patch-toolkit_library_moz.build) = 34e757ad08ebaee1cbc69993ec0f6774d41a14a
 SHA1 (patch-toolkit_moz.configure) = 78f5c46931ae3426e65eddbea7e0552bcc6a19e0
 SHA1 (patch-toolkit_mozapps_installer_packager.mk) = 6f557fb732f0b9dabf059ffac0400d3db4e79e47
 SHA1 (patch-toolkit_xre_glxtest.cpp) = cf048491778610454b914400e53072afedd96e7b
+SHA1 (patch-widget_gtk_nsClipboard.cpp) = 0a56631f05c2ead36b7a80a3cfe0ee7621047df1
+SHA1 (patch-widget_gtk_nsClipboard.h) = fab72d12326b9cef1a2041fa3d3eb2794e85d349
+SHA1 (patch-widget_gtk_nsClipboardX11.cpp) = 684ae1bc2fdca6edc4928b635d100435f8ecbf60
+SHA1 (patch-widget_gtk_nsClipboardX11.h) = 2902af4227b65e0594dcb2ef6fbd16d6d0850f58
 SHA1 (patch-xpcom_base_nscore.h) = d7c96eda884d7f370442749c43caba50da61bbe4
 SHA1 (patch-xpcom_build_BinaryPath.h) = 88a815a142356bf76024e5a4326b677122c844c1
 SHA1 (patch-xpcom_build_XPCOMInit.cpp) = 1e7cc3a7fd9515b10307fafa2b01ed689320bd54
