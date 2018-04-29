@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2023 2018/04/29 05:50:53 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2024 2018/04/29 05:55:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2806,3 +2806,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/wxGTK30 to 3.0.4 [wiz 2018-04-29]
 	Updated net/filezilla to 3.32.0 [wiz 2018-04-29]
 	Updated editors/vim to 8.0.1772 [wiz 2018-04-29]
+	Removed lang/spidermonkey17 [wiz 2018-04-29]

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.476 2018/04/29 05:11:35 wiz Exp $
+# $NetBSD: Makefile,v 1.477 2018/04/29 05:55:14 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -240,7 +240,6 @@ SUBDIR+=	smlnj
 SUBDIR+=	smlnj11072
 SUBDIR+=	snobol
 SUBDIR+=	spidermonkey
-SUBDIR+=	spidermonkey17
 SUBDIR+=	spidermonkey185
 SUBDIR+=	spidermonkey52
 SUBDIR+=	spl
