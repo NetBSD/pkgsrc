@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2018/04/16 14:35:04 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2018/04/29 21:32:01 adam Exp $
 #
 
 DISTNAME=		urlgfe-1.0.1
-PKGREVISION=		38
+PKGREVISION=		39
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=urlget/}
 

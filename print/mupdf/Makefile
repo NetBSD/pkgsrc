@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2018/02/09 16:03:04 hauke Exp $
+# $NetBSD: Makefile,v 1.59 2018/04/29 21:31:22 adam Exp $
 
 DISTNAME=	mupdf-1.12.0-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	https://mupdf.com/downloads/archive/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2018/01/01 21:18:47 adam Exp $
+# $NetBSD: Makefile,v 1.13 2018/04/29 21:31:58 adam Exp $
 
 DISTNAME=	${GHNAME}-${GHDATE}-${GHCOMMIT}
 PKGNAME=	${GHNAME}-0.3.0.${GHDATE}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/${GHACCOUNT}/${GHNAME}/archive/${GHCOMMIT}/
 
