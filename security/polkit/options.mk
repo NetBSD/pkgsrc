@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2016/06/13 23:06:46 youri Exp $
+# $NetBSD: options.mk,v 1.3 2018/04/29 05:14:36 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.polkit
 PKG_SUPPORTED_OPTIONS=	introspection pam
@@ -22,7 +22,6 @@ CONFIGURE_ARGS+=	--disable-introspection
 CONFIGURE_ARGS+=	--with-authfw=pam
 CONFIGURE_ARGS+=	--with-pam-module-dir=${PREFIX}/lib/security
 PLIST.pam=	yes
-.include "../../mk/bsd.prefs.mk"
 .  if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-pam-include=system
 .  endif
