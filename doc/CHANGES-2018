@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2045 2018/04/29 20:53:09 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2046 2018/04/29 21:10:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2831,3 +2831,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated meta-pkgs/boost to 1.67.0 [adam 2018-04-29]
 	Updated shells/zsh to 5.5.1 [ryoon 2018-04-30]
 	Updated emulators/mame to 0.197 [wiz 2018-04-29]
+	Updated fonts/sourcecodepro-fonts to 1.050nb1 [ryoon 2018-04-30]
