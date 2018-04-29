@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2018/03/21 06:55:57 prlw1 Exp $
+# $NetBSD: Makefile,v 1.44 2018/04/29 21:32:02 adam Exp $
 
+PKGREVISION= 1
 .include "Makefile.common"
 
 COMMENT=	Anti-virus toolkit

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2018/03/12 11:15:40 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2018/04/29 21:31:22 adam Exp $
 #
 
 PKGNAME=	libkvkontakte-4.13.0
-PKGREVISION=	7
+PKGREVISION=	8
 DISTNAME=	digikam-4.13.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/}

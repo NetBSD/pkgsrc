@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/08/27 19:07:13 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2018/04/29 21:32:04 adam Exp $
 #
 
 RSYSLOG_MOD=	libgcrypt
 PKGNAME=	${DISTNAME:S/rsyslog/rsyslog-${RSYSLOG_MOD}/}
+PKGREVISION=	1
 
 DEPENDS+=	rsyslog>=${PKGVERSION_NOREV}:../../sysutils/rsyslog
 

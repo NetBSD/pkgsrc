@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2018/01/01 21:18:07 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2018/04/29 21:31:19 adam Exp $
 
 BUILDLINK_TREE+=	librevenge
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	librevenge
 LIBREVENGE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.librevenge+=	librevenge>=0.0.1
-BUILDLINK_ABI_DEPENDS.librevenge+=	librevenge>=0.0.4nb5
+BUILDLINK_ABI_DEPENDS.librevenge+=	librevenge>=0.0.4nb6
 BUILDLINK_PKGSRCDIR.librevenge?=	../../converters/librevenge
 
 .include "../../devel/boost-libs/buildlink3.mk"

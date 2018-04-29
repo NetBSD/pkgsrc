@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2018/01/01 21:18:35 adam Exp $
+# $NetBSD: Makefile,v 1.10 2018/04/29 21:31:47 adam Exp $
 
 PKGNAME=	gnuradio-noaa-${VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	NOAA, Weather Satellite Reception module of GNU Radio
 
 .include	"../../ham/gnuradio-core/Makefile.common"

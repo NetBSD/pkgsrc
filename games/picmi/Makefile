@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2018/03/12 11:16:35 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2018/04/29 21:31:41 adam Exp $
 
 DISTNAME=	picmi-${_KDE_VERSION}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	games
 COMMENT=	a nonogram puzzle game
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2018/04/16 14:34:37 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/04/29 21:31:44 adam Exp $
 
 DISTNAME=	gpick-gpick-0.2.5
 PKGNAME=	${DISTNAME:S/gpick-//}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	graphics
 MASTER_SITES=	-http://github.com/thezbyg/gpick/archive/gpick-0.2.5.tar.gz
 
