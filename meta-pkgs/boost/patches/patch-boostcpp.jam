@@ -1,8 +1,11 @@
-$NetBSD: patch-boostcpp.jam,v 1.1 2017/08/24 19:31:32 adam Exp $
+$NetBSD: patch-boostcpp.jam,v 1.2 2018/04/29 20:41:11 adam Exp $
 
---- boostcpp.jam.orig	2017-08-19 16:49:36.000000000 +0000
+Find pkgsrc libraries.
+Allow exclusion of all libraries.
+
+--- boostcpp.jam.orig	2018-04-28 06:27:06.000000000 +0000
 +++ boostcpp.jam
-@@ -303,6 +303,7 @@ rule declare_install_and_stage_proper_ta
+@@ -335,6 +335,7 @@ rule declare_install_and_stage_proper_ta
          : <location>$(stage-locate)/lib
            <install-dependencies>on <install-type>LIB
            <install-no-version-symlinks>on
@@ -10,14 +13,14 @@ $NetBSD: patch-boostcpp.jam,v 1.1 2017/08/24 19:31:32 adam Exp $
          ;
      $(p).mark-target-as-explicit stage-proper ;
  
-@@ -564,6 +565,10 @@ rule libraries-to-install ( existing-lib
+@@ -619,6 +620,10 @@ rule libraries-to-install ( existing-lib
      {
-         EXIT error: both --with-<library> and --without-<library> specified ;
+         EXIT error\: both --with-<library> and --without-<library> specified ;
      }
-+   if $(without-parameter) && $(without-parameter) = "*"
-+   {
-+       without-parameter = $(existing-libs) ;
-+   }
++    if $(without-parameter) && $(without-parameter) = "*"
++    {
++        without-parameter = $(existing-libs) ;
++    }
  
      local wrong = [ set.difference $(with-parameter) : $(existing-libs) ] ;
      if $(wrong)

@@ -1,8 +1,8 @@
-$NetBSD: patch-boost_test_impl_execution__monitor.ipp,v 1.1 2017/08/24 19:31:32 adam Exp $
+$NetBSD: patch-boost_test_impl_execution__monitor.ipp,v 1.2 2018/04/29 20:41:11 adam Exp $
 
---- boost/test/impl/execution_monitor.ipp.orig	2017-08-19 16:49:49.000000000 +0000
+--- boost/test/impl/execution_monitor.ipp.orig	2018-04-11 13:49:08.000000000 +0000
 +++ boost/test/impl/execution_monitor.ipp
-@@ -163,7 +163,8 @@ namespace { void _set_se_translator( voi
+@@ -167,7 +167,8 @@ namespace { void _set_se_translator( voi
  #  if defined(SIGPOLL) && !defined(__CYGWIN__)                              && \
        !(defined(macintosh) || defined(__APPLE__) || defined(__APPLE_CC__))  && \
        !defined(__NetBSD__)                                                  && \
@@ -12,15 +12,15 @@ $NetBSD: patch-boost_test_impl_execution__monitor.ipp,v 1.1 2017/08/24 19:31:32 
  #    define BOOST_TEST_CATCH_SIGPOLL
  #  endif
  
-@@ -362,6 +363,7 @@ system_signal_exception::report() const
+@@ -366,6 +367,7 @@ system_signal_exception::report() const
      if( !m_sig_info )
          return; // no error actually occur?
  
 +#if !defined(__DragonFly__)
      switch( m_sig_info->si_code ) {
-     case SI_USER:
-         report_error( execution_exception::system_error,
-@@ -376,14 +378,18 @@ system_signal_exception::report() const
+ #ifdef __VXWORKS__
+ // a bit of a hack to adapt code to small m_sig_info VxWorks uses             
+@@ -386,14 +388,18 @@ system_signal_exception::report() const
          report_error( execution_exception::system_error,
                        "signal: the expiration of a timer set by timer_settimer()" );
          break;
@@ -39,7 +39,7 @@ $NetBSD: patch-boost_test_impl_execution__monitor.ipp,v 1.1 2017/08/24 19:31:32 
      default:
          break;
      }
-@@ -602,6 +608,7 @@ system_signal_exception::report() const
+@@ -612,6 +618,7 @@ system_signal_exception::report() const
          report_error( execution_exception::system_error,
                        "unrecognized signal %d", m_sig_info->si_signo );
      }

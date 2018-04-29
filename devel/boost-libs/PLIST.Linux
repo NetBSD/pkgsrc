@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.5 2017/12/28 02:18:42 minskim Exp $
-${PLIST.backtrace}lib/libboost_stacktrace_backtrace.a
-${PLIST.backtrace}lib/libboost_stacktrace_backtrace.so
-${PLIST.backtrace}lib/libboost_stacktrace_backtrace.so.${BOOST_VERSION}
