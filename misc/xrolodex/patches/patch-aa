@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2007/07/28 00:47:48 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2018/04/29 03:56:08 dholland Exp $
+
+Use standard headers.
 
 --- streamdbP.h.orig	2007-07-28 00:28:43.000000000 +0000
 +++ streamdbP.h
