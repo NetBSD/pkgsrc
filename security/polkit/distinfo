@@ -1,15 +1,13 @@
-$NetBSD: distinfo,v 1.4 2016/12/03 01:58:49 marino Exp $
+$NetBSD: distinfo,v 1.5 2018/04/29 05:14:36 wiz Exp $
 
-SHA1 (polkit-0.113.tar.gz) = ef855c2d04184dceb38e0940dc7bec9cc3da415c
-RMD160 (polkit-0.113.tar.gz) = 661b0a678f7c770c213404db3af604935fdb25bc
-SHA512 (polkit-0.113.tar.gz) = ab177c89a20eeb2978ddbe28afb205d3619f9c5defe833eb68a85e71a0f2c905367f1295cbbfb85da5eafdd661bce474d5d84aca9195cd425a18c9b4170eb5f9
-Size (polkit-0.113.tar.gz) = 1448865 bytes
-SHA1 (patch-src_polkit_polkitunixprocess.c) = dbfdfd441b211c80183ea5c63a20252c58a594b2
-SHA1 (patch-src_polkitbackend_polkitbackendinteractiveauthority.c) = d8b7cbcd0db26969bc4b83c32a731ae920c2e87b
-SHA1 (patch-src_polkitbackend_polkitbackendjsauthority.c) = f0771b27e192ed199c65ed7514962ec5a8cb28a4
-SHA1 (patch-src_polkitbackend_polkitd.c) = a567b31131f63f92f8e2967c3aabfa7f3d41f627
+SHA1 (polkit-0.114.tar.gz) = f29deef0076e76588f209a028a3e33ef70c2d9cd
+RMD160 (polkit-0.114.tar.gz) = 000749a5f902b9be347f462d486bed20f8bbe8d5
+SHA512 (polkit-0.114.tar.gz) = 49cdf9dd3663714b1c6569ad8740cb413d9c5bd5c11e4bdbba3ce82b744f36638b652547edff9203caab9287834bc68a1d6a4895ec7a188fa1524dc1e9c9b4ea
+Size (polkit-0.114.tar.gz) = 1557340 bytes
+SHA1 (patch-src_polkitbackend_polkitbackendinteractiveauthority.c) = dd91b4e74e6c39f24e0f5a9b3150fdac12899cb5
+SHA1 (patch-src_polkitbackend_polkitd.c) = b8e11b40e2b171d4f030eb4c4cbc6fdc7a96b2c2
 SHA1 (patch-src_programs_pkexec.c) = bfc0414c7a943c8e8b8412566a2519198eab8abd
-SHA1 (patch-src_programs_pkttyagent.c) = 72a1c3750e6b496b981eb5479201946da80b6d15
+SHA1 (patch-src_programs_pkttyagent.c) = 4dbffd02c7e66910d4104a75d6f5f437bd51acc9
 SHA1 (patch-test_mocklib_src_netdb.c) = 0fe71068a6261d5e2c8874f2b4507e7e3c002526
 SHA1 (patch-test_mocklibc_src_grp.c) = 435ff94fd4c7f5511d74d03839fad453dd841633
 SHA1 (patch-test_mocklibc_src_pwd.c) = c65b02209db1bd1d531444026822fcca73d5027a
