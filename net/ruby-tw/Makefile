@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2018/02/17 13:22:13 tsutsui Exp $
+# $NetBSD: Makefile,v 1.22 2018/04/29 14:49:31 tsutsui Exp $
 
 DISTNAME=	tw-1.3.0
+PKGREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	tsutsui@NetBSD.org
@@ -14,6 +15,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-parallel>=1.12.0:../../misc/ruby-parallel
 DEPENDS+=	${RUBY_PKGPREFIX}-rainbow>=3.0.0:../../misc/ruby-rainbow
 DEPENDS+=	${RUBY_PKGPREFIX}-twitter>=6.2.0:../../net/ruby-twitter
 DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.5.4:../../security/ruby-oauth
+
+OVERRIDE_GEMSPEC+=	json>=1.8.1
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
