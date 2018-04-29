@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2039 2018/04/29 14:23:57 kamil Exp $
+$NetBSD: CHANGES-2018,v 1.2040 2018/04/29 14:58:48 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2825,3 +2825,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/firefox to 59.0.2nb4 [martin 2018-04-29]
 	Updated databases/py-postgresql to 5.0.5 [wiz 2018-04-29]
 	Added sysutils/rw version 1.0 [kamil 2018-04-29]
+	Updated www/ruby-http to 3.3.0 [tsutsui 2018-04-29]
