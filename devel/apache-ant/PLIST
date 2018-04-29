@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2018/02/25 20:44:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2018/04/29 10:10:41 wiz Exp $
 bin/ant
 bin/antRun
 lib/java/ant/ant-antlr.jar
@@ -18,6 +18,7 @@ lib/java/ant/ant-jmf.jar
 lib/java/ant/ant-jsch.jar
 lib/java/ant/ant-junit.jar
 lib/java/ant/ant-junit4.jar
+lib/java/ant/ant-junitlauncher.jar
 lib/java/ant/ant-launcher.jar
 lib/java/ant/ant-netrexx.jar
 lib/java/ant/ant-swing.jar
@@ -107,6 +108,7 @@ share/doc/java/ant/Tasks/jjtree.html
 share/doc/java/ant/Tasks/jlink.html
 share/doc/java/ant/Tasks/jspc.html
 share/doc/java/ant/Tasks/junit.html
+share/doc/java/ant/Tasks/junitlauncher.html
 share/doc/java/ant/Tasks/junitreport.html
 share/doc/java/ant/Tasks/length.html
 share/doc/java/ant/Tasks/loadfile.html
@@ -946,6 +948,17 @@ share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/junit/XMLResultAgg
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/junit/package-frame.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/junit/package-summary.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/junit/package-tree.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/junitlauncher/JUnitLauncherTask.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/junitlauncher/ListenerDefinition.ListenerType.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/junitlauncher/ListenerDefinition.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/junitlauncher/NamedTest.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/junitlauncher/SingleTestClass.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/junitlauncher/TestClasses.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/junitlauncher/TestExecutionContext.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/junitlauncher/TestResultFormatter.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/junitlauncher/package-frame.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/junitlauncher/package-summary.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/junitlauncher/package-tree.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/native2ascii/BuiltinNative2Ascii.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/native2ascii/DefaultNative2Ascii.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/native2ascii/KaffeNative2Ascii.html
