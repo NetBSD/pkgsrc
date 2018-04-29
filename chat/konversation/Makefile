@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.89 2018/03/12 11:16:09 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2018/04/29 21:31:28 adam Exp $
 #
 
 DISTNAME=	konversation-1.5.1
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	chat kde
 MASTER_SITES=	${MASTER_SITE_KDE:=konversation/1.5.1/src/}
 EXTRACT_SUFX=	.tar.xz

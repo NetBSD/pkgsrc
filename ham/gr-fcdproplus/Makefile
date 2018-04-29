@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2018/01/01 21:18:36 adam Exp $
+# $NetBSD: Makefile,v 1.10 2018/04/29 21:31:48 adam Exp $
 
 DISTNAME=		gr-fcdproplus_3.7.11.orig
 PKGNAME=		${DISTNAME:S/_/-/S/.orig//}
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		ham
 MASTER_SITES+=		${MASTER_SITE_DEBIAN:=pool/main/g/gr-fcdproplus/}
 EXTRACT_SUFX=		.tar.xz

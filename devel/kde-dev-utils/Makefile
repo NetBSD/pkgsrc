@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2018/03/12 11:16:17 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2018/04/29 21:31:32 adam Exp $
 
 DISTNAME=	kde-dev-utils-16.12.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 COMMENT=	Small utilities for developers using KDE/Qt libs/frameworks
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.12.0/src/}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2018/04/14 07:34:16 adam Exp $
+# $NetBSD: Makefile,v 1.29 2018/04/29 21:31:19 adam Exp $
 
 DISTNAME=	gearmand-1.0.6
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	devel
 MASTER_SITES=	https://launchpad.net/gearmand/1.0/1.0.6/+download/
 
