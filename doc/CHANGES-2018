@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2034 2018/04/29 10:10:50 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2035 2018/04/29 12:15:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2820,3 +2820,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-html5-parser to 0.4.5 [wiz 2018-04-29]
 	Updated devel/py-setuptools to 39.1.0 [wiz 2018-04-29]
 	Updated devel/apache-ant to 1.10.3 [wiz 2018-04-29]
+	Updated net/wireshark to 2.6.0 [wiz 2018-04-29]
