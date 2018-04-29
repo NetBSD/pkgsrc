@@ -1,4 +1,4 @@
-$NetBSD: patch-pdftexdir_pdftoepdf.cc,v 1.3 2017/12/31 00:44:32 markd Exp $
+$NetBSD: patch-pdftexdir_pdftoepdf.cc,v 1.4 2018/04/29 20:58:29 ryoon Exp $
 
 Allow recent poppler - from ArchLinux
 
@@ -36,7 +36,7 @@ Allow recent poppler - from ArchLinux
  // When copying the Resources of the selected page, all objects are copied
  // recusively top-down. Indirect objects however are not fetched during
  // copying, but get a new object number from pdfTeX and then will be
-@@ -212,18 +187,6 @@ static void delete_document(PdfDocument
+@@ -212,18 +187,6 @@ static void delete_document(PdfDocument 
      delete pdf_doc;
  }
  
@@ -87,7 +87,7 @@ Allow recent poppler - from ArchLinux
 -                        procset->getTypeName());
 -        copyName(procset->getName());
 +                        procset.getTypeName());
-+        copyName(procset.getName());
++        copyName(const_cast<char*>(procset.getName()));
          pdf_puts(" ");
      }
      pdf_puts("]\n");
@@ -157,7 +157,7 @@ Allow recent poppler - from ArchLinux
 +        && fontdescRef.isRef()
 +        && fontdesc.isDict()
 +        && embeddableFont(&fontdesc)
-+        && (fontmap = lookup_fontmap(basefont.getName())) != NULL) {
++        && (fontmap = lookup_fontmap(const_cast<char*>(basefont.getName()))) != NULL) {
          // round /StemV value, since the PDF input is a float
          // (see Font Descriptors in PDF reference), but we only store an
          // integer, since we don't want to change the struct.
@@ -171,7 +171,7 @@ Allow recent poppler - from ArchLinux
 +        charset = fontdesc.dictLookup("CharSet");
 +        if (!charset.isNull() &&
 +            charset.isString() && is_subsetable(fontmap))
-+            epdf_mark_glyphs(fd, charset.getString()->getCString());
++            epdf_mark_glyphs(fd, const_cast<char*>(charset.getString()->getCString()));
          else
              embed_whole_font(fd);
 -        addFontDesc(fontdescRef->getRef(), fd);
@@ -222,7 +222,23 @@ Allow recent poppler - from ArchLinux
      int i, l, c;
      Ref ref;
      char *p;
-@@ -601,8 +589,8 @@ static void copyObject(Object * obj)
+@@ -571,7 +559,7 @@ static void copyObject(Object * obj)
+     } else if (obj->isNum()) {
+         pdf_printf("%s", convertNumToPDF(obj->getNum()));
+     } else if (obj->isString()) {
+-        s = obj->getString();
++        s = const_cast<GooString*>(obj->getString());
+         p = s->getCString();
+         l = s->getLength();
+         if (strlen(p) == (unsigned int) l) {
+@@ -595,14 +583,14 @@ static void copyObject(Object * obj)
+             pdf_puts(">");
+         }
+     } else if (obj->isName()) {
+-        copyName(obj->getName());
++        copyName(const_cast<char*>(obj->getName()));
+     } else if (obj->isNull()) {
+         pdf_puts("null");
      } else if (obj->isArray()) {
          pdf_puts("[");
          for (i = 0, l = obj->arrayGetLength(); i < l; ++i) {
