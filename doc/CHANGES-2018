@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2036 2018/04/29 13:07:22 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.2037 2018/04/29 13:40:00 martin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2822,3 +2822,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/apache-ant to 1.10.3 [wiz 2018-04-29]
 	Updated net/wireshark to 2.6.0 [wiz 2018-04-29]
 	Updated devel/ruby-diva to 0.3.2 [tsutsui 2018-04-29]
+	Updated www/firefox to 59.0.2nb4 [martin 2018-04-29]
