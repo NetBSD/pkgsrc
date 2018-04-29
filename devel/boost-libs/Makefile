@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.63 2018/04/14 07:34:15 adam Exp $
+# $NetBSD: Makefile,v 1.64 2018/04/29 20:41:11 adam Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
 BOOST_CONFIG=		installed
 BOOST_INSTALL_LIBS=	yes
 
-PKGREVISION= 1
 .include "../../meta-pkgs/boost/Makefile.common"
 
 INSTALLATION_DIRS+=	lib
 
 BJAM_ARGS+=		--without-python
-PLIST_VARS+=		backtrace context fiber log
+PLIST_VARS+=		backtrace context fiber log longdbl
 
 .if ${OPSYS} == "NetBSD" && ((${MACHINE_ARCH} == "i386") || (!empty(MACHINE_ARCH:Mearm*) && !empty(PKGSRC_COMPILER:Mgcc)))
 BJAM_ARGS+=		pch=off
@@ -21,8 +20,10 @@ BJAM_ARGS+=		pch=off
 BJAM_ARGS+=		--without-context
 BJAM_ARGS+=		--without-coroutine
 BJAM_ARGS+=		--without-coroutine2
+BJAM_ARGS+=		--without-fiber
 .else
 PLIST.context=		yes
+PLIST.fiber=		yes
 .endif
 
 # Darwin GCC is unable to build Boost.Log
@@ -32,25 +33,18 @@ BJAM_ARGS+=		--without-log
 PLIST.log=		yes
 .endif
 
+# FIXME: other systems might also not support 'long double'
+# see patch-boost_math_tools_config.hpp
+.if ${OPSYS} != "FreeBSD"
+PLIST.longdbl=		yes
+.endif
+
 # libboost_stacktrace_backtrace requires libbacktrace.
 # FIXME: The condition needs to be refined for non-Debian/Ubuntu
 # platforms shipped with libbacktrace.
 .if ${OPSYS} == "Linux" && exists(/etc/debian_version)
 PLIST.backtrace=	yes
 .endif
-
-# XXX boost1.64 fiber not building even on netbsd7.99 + gcc5.4
-# fiber requires context, so also disable it where context cannot be built
-# Additionally fiber checks std::timed_mutex.
-#.if ((${OPSYS} == "Darwin" && ${OS_VERSION:R} < 14) || \
-#    !empty(MACHINE_PLATFORM:MNetBSD-[0-7]*-*)) || \
-#    !empty(MACHINE_ARCH:Malpha) || !empty(MACHINE_ARCH:Mm68k) || \
-#    !empty(MACHINE_ARCH:Msparc64) || \
-#    (${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mclang))
-BJAM_ARGS+=		--without-fiber
-#.else
-#PLIST.fiber=		yes
-#.endif
 
 UNLIMIT_RESOURCES+=	stacksize
 
