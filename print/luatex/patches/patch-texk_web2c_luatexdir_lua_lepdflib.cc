@@ -1,9 +1,18 @@
-$NetBSD: patch-texk_web2c_luatexdir_lua_lepdflib.cc,v 1.3 2017/12/31 00:41:19 markd Exp $
+$NetBSD: patch-texk_web2c_luatexdir_lua_lepdflib.cc,v 1.4 2018/04/29 20:57:26 ryoon Exp $
 
 Add support for newer poppler's from ArchLinux
 
 --- texk/web2c/luatexdir/lua/lepdflib.cc.orig	2017-03-11 01:04:06.000000000 +0000
 +++ texk/web2c/luatexdir/lua/lepdflib.cc
+@@ -521,7 +521,7 @@ static int m_##in##_##function(lua_State
+     uin = (udstruct *) luaL_checkudata(L, 1, M_##in);          \
+     if (uin->pd != NULL && uin->pd->pc != uin->pc)             \
+         pdfdoc_changed_error(L);                               \
+-    gs = ((in *) uin->d)->function();                          \
++    gs = const_cast<GooString*>(((in *) uin->d)->function());  \
+     if (gs != NULL)                                            \
+         lua_pushlstring(L, gs->getCString(), gs->getLength()); \
+     else                                                       \
 @@ -538,7 +538,7 @@ static int m_##in##_##function(lua_State
          pdfdoc_changed_error(L);                               \
      uout = new_Object_userdata(L);                             \
@@ -13,7 +22,7 @@ Add support for newer poppler's from ArchLinux
      uout->atype = ALLOC_LEPDF;                                 \
      uout->pc = uin->pc;                                        \
      uout->pd = uin->pd;                                        \
-@@ -668,13 +668,11 @@ static const struct luaL_Reg Annots_m[]
+@@ -668,13 +668,11 @@ static const struct luaL_Reg Annots_m[] 
  
  static int m_Array_incRef(lua_State * L)
  {
@@ -159,7 +168,7 @@ Add support for newer poppler's from ArchLinux
      return 0;
  }
  
-@@ -1395,7 +1388,7 @@ static int m_Object_initInt(lua_State *
+@@ -1395,7 +1388,7 @@ static int m_Object_initInt(lua_State * 
      if (uin->pd != NULL && uin->pd->pc != uin->pc)
          pdfdoc_changed_error(L);
      i = luaL_checkint(L, 2);
@@ -211,7 +220,7 @@ Add support for newer poppler's from ArchLinux
      uin = (udstruct *) luaL_checkudata(L, 1, M_Object);
      uxref = (udstruct *) luaL_checkudata(L, 2, M_XRef);
      if (uin->pd != NULL && uxref->pd != NULL && uin->pd != uxref->pd)
-@@ -1458,7 +1452,8 @@ static int m_Object_initArray(lua_State
+@@ -1458,7 +1452,8 @@ static int m_Object_initArray(lua_State 
      if ((uin->pd != NULL && uin->pd->pc != uin->pc)
          || (uxref->pd != NULL && uxref->pd->pc != uxref->pc))
          pdfdoc_changed_error(L);
@@ -221,7 +230,7 @@ Add support for newer poppler's from ArchLinux
      return 0;
  }
  
-@@ -1469,6 +1464,7 @@ static int m_Object_initArray(lua_State
+@@ -1469,6 +1464,7 @@ static int m_Object_initArray(lua_State 
  static int m_Object_initDict(lua_State * L)
  {
      udstruct *uin, *uxref;
@@ -248,7 +257,7 @@ Add support for newer poppler's from ArchLinux
      return 0;
  }
  
-@@ -1503,7 +1500,7 @@ static int m_Object_initRef(lua_State *
+@@ -1503,7 +1500,7 @@ static int m_Object_initRef(lua_State * 
          pdfdoc_changed_error(L);
      num = luaL_checkint(L, 2);
      gen = luaL_checkint(L, 3);
@@ -257,7 +266,7 @@ Add support for newer poppler's from ArchLinux
      return 0;
  }
  
-@@ -1515,7 +1512,7 @@ static int m_Object_initCmd(lua_State *
+@@ -1515,7 +1512,7 @@ static int m_Object_initCmd(lua_State * 
      if (uin->pd != NULL && uin->pd->pc != uin->pc)
          pdfdoc_changed_error(L);
      s = luaL_checkstring(L, 2);
@@ -266,7 +275,7 @@ Add support for newer poppler's from ArchLinux
      return 0;
  }
  
-@@ -1525,7 +1522,7 @@ static int m_Object_initError(lua_State
+@@ -1525,7 +1522,7 @@ static int m_Object_initError(lua_State 
      uin = (udstruct *) luaL_checkudata(L, 1, M_Object);
      if (uin->pd != NULL && uin->pd->pc != uin->pc)
          pdfdoc_changed_error(L);
@@ -275,7 +284,7 @@ Add support for newer poppler's from ArchLinux
      return 0;
  }
  
-@@ -1535,7 +1532,7 @@ static int m_Object_initEOF(lua_State *
+@@ -1535,7 +1532,7 @@ static int m_Object_initEOF(lua_State * 
      uin = (udstruct *) luaL_checkudata(L, 1, M_Object);
      if (uin->pd != NULL && uin->pd->pc != uin->pc)
          pdfdoc_changed_error(L);
@@ -293,6 +302,15 @@ Add support for newer poppler's from ArchLinux
      uout->atype = ALLOC_LEPDF;
      uout->pc = uin->pc;
      uout->pd = uin->pd;
+@@ -1659,7 +1656,7 @@ static int m_Object_getString(lua_State 
+     if (uin->pd != NULL && uin->pd->pc != uin->pc)
+         pdfdoc_changed_error(L);
+     if (((Object *) uin->d)->isString()) {
+-        gs = ((Object *) uin->d)->getString();
++        gs = const_cast<GooString*>(((Object *) uin->d)->getString());
+         lua_pushlstring(L, gs->getCString(), gs->getLength());
+     } else
+         lua_pushnil(L);
 @@ -1816,7 +1813,7 @@ static int m_Object_arrayAdd(lua_State *
          pdfdoc_changed_error(L);
      if (!((Object *) uin->d)->isArray())
@@ -320,7 +338,7 @@ Add support for newer poppler's from ArchLinux
              uout->atype = ALLOC_LEPDF;
              uout->pc = uin->pc;
              uout->pd = uin->pd;
-@@ -1897,7 +1894,7 @@ static int m_Object_dictAdd(lua_State *
+@@ -1897,7 +1894,7 @@ static int m_Object_dictAdd(lua_State * 
          pdfdoc_changed_error(L);
      if (!((Object *) uin->d)->isDict())
          luaL_error(L, "Object is not a Dict");
@@ -329,7 +347,7 @@ Add support for newer poppler's from ArchLinux
      return 0;
  }
  
-@@ -1915,7 +1912,7 @@ static int m_Object_dictSet(lua_State *
+@@ -1915,7 +1912,7 @@ static int m_Object_dictSet(lua_State * 
          pdfdoc_changed_error(L);
      if (!((Object *) uin->d)->isDict())
          luaL_error(L, "Object is not a Dict");
@@ -383,7 +401,7 @@ Add support for newer poppler's from ArchLinux
  
  m_poppler_get_OBJECT(Page, getContents);
  
-@@ -2270,7 +2267,7 @@ static const struct luaL_Reg Page_m[] =
+@@ -2270,7 +2267,7 @@ static const struct luaL_Reg Page_m[] = 
      {"getPieceInfo", m_Page_getPieceInfo},
      {"getSeparationInfo", m_Page_getSeparationInfo},
      {"getResourceDict", m_Page_getResourceDict},

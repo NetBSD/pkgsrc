@@ -1,4 +1,4 @@
-$NetBSD: patch-texk_web2c_luatexdir_image_pdftoepdf.w,v 1.3 2017/12/31 00:41:19 markd Exp $
+$NetBSD: patch-texk_web2c_luatexdir_image_pdftoepdf.w,v 1.4 2018/04/29 20:57:26 ryoon Exp $
 
 The ctangle tex-to-C generator strips whitespace, resulting in "C++11 requires
 a space between literal and identifier" failures.  Pull in hacky patch from
@@ -52,6 +52,19 @@ Add support for newer poppler's from ArchLinux
      }
      pdf_end_dict(pdf);
  }
+@@ -470,10 +472,10 @@ static void copyObject(PDF pdf, PdfDocum
+         break;
+     */
+     case objString:
+-        copyString(pdf, obj->getString());
++        copyString(pdf, const_cast<GooString*>(obj->getString()));
+         break;
+     case objName:
+-        copyName(pdf, obj->getName());
++        copyName(pdf, const_cast<char*>(obj->getName()));
+         break;
+     case objNull:
+         pdf_add_null(pdf);
 @@ -510,13 +512,12 @@ static void writeRefs(PDF pdf, PdfDocume
      PDFDoc *doc = pdf_doc->doc;
      xref = doc->getXRef();
