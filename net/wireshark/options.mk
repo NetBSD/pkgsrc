@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.16 2018/01/03 11:09:41 ryoon Exp $
+# $NetBSD: options.mk,v 1.17 2018/04/29 12:15:37 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wireshark
 PKG_SUPPORTED_OPTIONS=		gtk3 lua
 PKG_OPTIONS_OPTIONAL_GROUPS=	qt
 PKG_OPTIONS_GROUP.qt=		qt4 qt5
-PKG_SUGGESTED_OPTIONS=		gtk3 lua
+PKG_SUGGESTED_OPTIONS=		qt5 lua
+
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		gtk3 icons lua mans qt
@@ -14,6 +15,7 @@ CONFIGURE_ARGS+=	--without-qt
 .else
 .  if !empty(PKG_OPTIONS:Mqt4)
 CONFIGURE_ARGS+=	--with-qt=4
+BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.8
 .    include "../../x11/qt4-tools/buildlink3.mk"
 .  elif !empty(PKG_OPTIONS:Mqt5)
 CONFIGURE_ARGS+=	--with-qt=5
@@ -60,15 +62,12 @@ INSTALLATION_DIRS+=	share/applications
 PLIST.icons=		yes
 POST_INSTALL_TARGETS+=	install-icons
 INSTALLATION_DIRS+=	share/icons/hicolor/scalable/apps
-ICON_COLORS=		hi lo
 ICON_SIZES=		16 32 48
 MIMEICON_SIZES=		16 24 32 48 64 128 256
 
-.    for c in ${ICON_COLORS}
 .      for d in ${ICON_SIZES}
-INSTALLATION_DIRS+=	share/icons/${c}color/${d}x${d}/apps
+INSTALLATION_DIRS+=	share/icons/hicolor/${d}x${d}/apps
 .      endfor
-.    endfor
 
 .    for d in ${MIMEICON_SIZES}
 INSTALLATION_DIRS+=	share/icons/hicolor/${d}x${d}/mimetypes
@@ -81,13 +80,6 @@ INSTALLATION_DIRS+=	share/icons/hicolor/${d}x${d}/mimetypes
 install-icons:
 	${INSTALL_DATA} ${WRKSRC}/image/wsicon.svg \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/wireshark.svg
-.    for c in ${ICON_COLORS}
-.      for d in ${ICON_SIZES}
-	${INSTALL_DATA} ${WRKSRC}/image/${c}${d}-app-wireshark.png \
-		${DESTDIR}${PREFIX}/share/icons/${c}color/${d}x${d}/apps/wireshark.png
-.      endfor
-.    endfor
-
 .    for d in ${MIMEICON_SIZES}
 	${INSTALL_DATA} ${WRKSRC}/image/WiresharkDoc-${d}.png \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/${d}x${d}/mimetypes/application-vnd.tcpdump.pcap.png
