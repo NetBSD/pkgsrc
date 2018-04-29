@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2016/12/03 02:26:54 khorben Exp $
+# $NetBSD: Makefile,v 1.8 2018/04/29 21:07:38 ryoon Exp $
 
 DISTNAME=	sourcecodepro-fonts-1.050
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/
 DISTFILES=	1.050R-it.tar.gz
@@ -15,10 +16,11 @@ WRKSRC=		${WRKDIR}/source-code-pro-2.030R-ro-1.050R-it
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
-FONTS_DIR=	${PREFIX}/share/fonts/sourcecodepro
-INSTALLATION_DIRS=	share/fonts/sourcecodepro
+FONTSDIR=	${PREFIX}/share/fonts/X11/TTF
+FONTS_DIRS.ttf=	${FONTSDIR}
+INSTALLATION_DIRS=	share/fonts/X11/TTF
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/OTF/*.otf  ${DESTDIR}${FONTS_DIR}
+	${INSTALL_DATA} ${WRKSRC}/OTF/*.otf  ${DESTDIR}${FONTSDIR}
 
 .include "../../mk/bsd.pkg.mk"
