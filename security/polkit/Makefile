@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/10/15 23:19:12 prlw1 Exp $
-#
+# $NetBSD: Makefile,v 1.9 2018/04/29 05:14:36 wiz Exp $
 
-DISTNAME=	polkit-0.113
-PKGREVISION=	3
+DISTNAME=	polkit-0.114
 CATEGORIES=	security
 MASTER_SITES=	http://www.freedesktop.org/software/polkit/releases/
 
@@ -15,6 +13,7 @@ BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config intltool gmake msgfmt perl
@@ -25,6 +24,7 @@ PKGCONFIG_OVERRIDE+=	data/polkit-agent-1.pc.in
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-polkitd-user=${POLKITD_USER}
 CONFIGURE_ARGS+=	--disable-libsystemd-login
+CONFIGURE_ARGS+=	--disable-libelogind
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,6 +36,8 @@ PKG_GECOS.${POLKITD_USER}=	Polkit Daemon User
 PKG_HOME.${POLKITD_USER}=	${VARBASE}
 PKG_GROUPS_VARS+=		POLKITD_GROUP
 PKG_USERS_VARS+=		POLKITD_USER
+
+BUILD_DEFS+=		VARBASE
 
 REPLACE_PERL+=		src/polkitbackend/toarray.pl
 
@@ -62,7 +64,7 @@ SUBST_FILES.paths+=	docs/man/pkexec.xml
 SUBST_FILES.paths+=	src/examples/org.freedesktop.policykit.examples.pkexec.policy.in
 SUBST_SED.paths+=	-e 's,/usr/bin/,${PREFIX}/bin/,g'
 
-.include "../../lang/spidermonkey17/buildlink3.mk"
+.include "../../lang/spidermonkey52/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
