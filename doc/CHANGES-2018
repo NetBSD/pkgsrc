@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2032 2018/04/29 10:03:35 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2033 2018/04/29 10:09:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2818,3 +2818,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/notmuch to 0.26.2 [wiz 2018-04-29]
 	Updated www/py-google-api-python-client to 1.6.7 [wiz 2018-04-29]
 	Updated textproc/py-html5-parser to 0.4.5 [wiz 2018-04-29]
+	Updated devel/py-setuptools to 39.1.0 [wiz 2018-04-29]
