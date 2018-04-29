@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.39 2018/01/01 20:36:09 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.40 2018/04/29 20:41:11 adam Exp $
 
 BUILDLINK_TREE+=	boost-headers
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	boost-headers
 BOOST_HEADERS_BUILDLINK3_MK:=
 
 # Use a dependency pattern that guarantees the proper ABI.
-BUILDLINK_API_DEPENDS.boost-headers+=	boost-headers-1.66.*
+BUILDLINK_API_DEPENDS.boost-headers+=	boost-headers-1.67.*
 BUILDLINK_DEPMETHOD.boost-headers?=	build
 BUILDLINK_PKGSRCDIR.boost-headers?=	../../devel/boost-headers
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2018/01/01 20:36:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2018/04/29 20:41:11 adam Exp $
 share/boost-build/__init__.py
 share/boost-build/bootstrap.jam
 share/boost-build/build-system.jam
@@ -72,7 +72,6 @@ share/boost-build/tools/clang-win.jam
 share/boost-build/tools/clang.jam
 share/boost-build/tools/common.jam
 share/boost-build/tools/common.py
-share/boost-build/tools/common_clang_vc.jam
 share/boost-build/tools/como-linux.jam
 share/boost-build/tools/como-win.jam
 share/boost-build/tools/como.jam
@@ -126,6 +125,7 @@ share/boost-build/tools/features/name-feature.jam
 share/boost-build/tools/features/objcflags-feature.jam
 share/boost-build/tools/features/optimization-feature.jam
 share/boost-build/tools/features/os-feature.jam
+share/boost-build/tools/features/relevant-feature.jam
 share/boost-build/tools/features/rtti-feature.jam
 share/boost-build/tools/features/runtime-feature.jam
 share/boost-build/tools/features/search-feature.jam
@@ -140,6 +140,7 @@ share/boost-build/tools/features/user-interface-feature.jam
 share/boost-build/tools/features/variant-feature.jam
 share/boost-build/tools/features/version-feature.jam
 share/boost-build/tools/features/warnings-feature.jam
+share/boost-build/tools/flags.jam
 share/boost-build/tools/fop.jam
 share/boost-build/tools/fortran.jam
 share/boost-build/tools/gcc.jam
@@ -253,6 +254,7 @@ share/boost-build/tools/xsltproc/included.xsl
 share/boost-build/tools/xsltproc/test.xml
 share/boost-build/tools/xsltproc/test.xsl
 share/boost-build/tools/zlib.jam
+share/boost-build/tools/zstd.jam
 share/boost-build/util/__init__.py
 share/boost-build/util/assert.jam
 share/boost-build/util/container.jam
@@ -267,6 +269,7 @@ share/boost-build/util/order.jam
 share/boost-build/util/order.py
 share/boost-build/util/os.jam
 share/boost-build/util/os_j.py
+share/boost-build/util/param.jam
 share/boost-build/util/path.jam
 share/boost-build/util/path.py
 share/boost-build/util/print.jam

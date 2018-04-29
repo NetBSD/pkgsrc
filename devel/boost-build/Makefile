@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/08/13 10:56:35 adam Exp $
+# $NetBSD: Makefile,v 1.16 2018/04/29 20:41:11 adam Exp $
 
 BOOST_PACKAGE=		build
 BOOST_COMMENT=		(Boost.Build framework)
@@ -31,8 +31,8 @@ INSTALLATION_DIRS+=	share/boost-build
 .include "toolset.mk"
 
 post-extract:
-	${FIND} ${WRKSRC}/tools/build/src -type d -exec ${CHMOD} 755 {} \;
-	${FIND} ${WRKSRC}/tools/build/src -type f -exec ${CHMOD} 644 {} \;
+	${FIND} ${WRKSRC}/tools/build/src -type d -exec ${CHMOD} 755 {} +
+	${FIND} ${WRKSRC}/tools/build/src -type f -exec ${CHMOD} 644 {} +
 
 do-build:
 	{ ${ECHO} '# System wide configuration file for Boost.Build.' ; \
