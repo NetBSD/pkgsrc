@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2018/04/27 14:37:09 wiz Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.8 2018/04/29 21:06:13 ryoon Exp $
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/cairo/__init__.py
 ${PYSITELIB}/cairo/__init__.pyc
 ${PYSITELIB}/cairo/__init__.pyi
