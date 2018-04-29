@@ -1,10 +1,10 @@
-$NetBSD: patch-pdftexdir_pdftosrc.cc,v 1.3 2017/12/31 00:44:32 markd Exp $
+$NetBSD: patch-pdftexdir_pdftosrc.cc,v 1.4 2018/04/29 20:58:29 ryoon Exp $
 
 Allow recent poppler - from ArchLinux
 
 --- pdftexdir/pdftosrc.cc.orig	2016-11-25 18:09:21.000000000 +0000
 +++ pdftexdir/pdftosrc.cc
-@@ -86,22 +86,20 @@ int main(int argc, char *argv[])
+@@ -86,31 +86,29 @@ int main(int argc, char *argv[])
              objgen = atoi(argv[3]);
      }
      xref = doc->getXRef();
@@ -31,7 +31,9 @@ Allow recent poppler - from ArchLinux
          if (!srcName.isString()) {
              fprintf(stderr, "No SourceName found\n");
              exit(1);
-@@ -110,7 +108,7 @@ int main(int argc, char *argv[])
+         }
+-        outname = srcName.getString()->getCString();
++        outname = const_cast<char*>(srcName.getString()->getCString());
          // We cannot free srcName, as objname shares its string.
          // srcName.free();
      } else if (objnum > 0) {
