@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.158 2018/04/21 04:39:41 tsutsui Exp $
+# $NetBSD: Makefile,v 1.159 2018/04/29 15:56:57 tsutsui Exp $
 #
 
-DISTNAME=	mikutter.3.6.6
+DISTNAME=	mikutter.3.6.7
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	net
-MASTER_SITES=	http://mikutter.hachune.net/bin/
+MASTER_SITES=	https://mikutter.hachune.net/bin/
 
 MAINTAINER=	tsutsui@NetBSD.org
-HOMEPAGE=	http://mikutter.hachune.net/
+HOMEPAGE=	https://mikutter.hachune.net/
 COMMENT=	Simple, powerful, and moeful twitter client
 LICENSE=	mit AND cc-by-sa-v3.0
 
@@ -16,9 +16,9 @@ RUBY_VERSIONS_ACCEPTED=	23 24
 .include "../../lang/ruby/rubyversion.mk"
 
 DEPENDS+=	${RUBY_PKGPREFIX}-pluggaloid>=1.1.1:../../net/ruby-pluggaloid
-DEPENDS+=	${RUBY_PKGPREFIX}-diva>=0.3.1:../../devel/ruby-diva
+DEPENDS+=	${RUBY_PKGPREFIX}-diva>=0.3.2:../../devel/ruby-diva
 DEPENDS+=	${RUBY_PKGPREFIX}-json-pure>=1.8:../../textproc/ruby-json-pure
-DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=3.2.4:../../x11/ruby-gnome2-gtk
+DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=3.2.4nb2:../../x11/ruby-gnome2-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=3.0.1:../../devel/ruby-gettext
 DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.5.1:../../security/ruby-oauth
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.3:../../net/ruby-addressable
