@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5466 2018/03/18 10:06:04 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5467 2018/04/29 21:07:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5831,6 +5831,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/libevent to 2.1.8nb1 [gson 2017-09-26]
 	Updated www/p5-Apache2-AuthCookie to 3.27 [wiz 2017-09-26]
 	Updated www/p5-App-Nopaste to 1.011 [wiz 2017-09-26]
+	Added lang/rakudo version 2017.09 [mspo 2017-09-26]
 	Updated www/p5-CGI-Fast to 2.12 [wiz 2017-09-27]
 	Updated devel/git to 2.14.2 [adam 2017-09-27]
 	Updated multimedia/libmatroska to 1.4.8 [adam 2017-09-27]
