@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2019 2018/04/29 05:11:44 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2020 2018/04/29 05:15:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2802,3 +2802,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/poppler to 0.64.0 [wiz 2018-04-28]
 	Updated pkgtools/pkglint to 5.5.9 [rillig 2018-04-28]
 	Added lang/spidermonkey52 version 52.7.4 [wiz 2018-04-29]
+	Updated security/polkit to 0.114 [wiz 2018-04-29]
