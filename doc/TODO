@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18308 2018/04/29 10:00:26 wiz Exp $
+$NetBSD: TODO,v 1.18309 2018/04/29 10:01:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1235,7 +1235,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-doctor-15.1.0
 	o py-ephem3-3.7.6.0
 	o py-gnome-menus-3.8.0
-	o py-google-api-python-client-1.6.7
 	o py-hgview-1.9.0
 	o py-hsm-1.1.1
 	o py-html5-parser-0.4.5
