@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2018/04/16 14:34:05 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2018/04/29 21:31:26 adam Exp $
 #
 
 DISTNAME=	gimmix-0.5.7.1
-PKGREVISION=	38
+PKGREVISION=	39
 CATEGORIES=	audio
 MASTER_SITES=	http://download.berlios.de/gimmix/
 EXTRACT_SUFX=	.tar.bz2
