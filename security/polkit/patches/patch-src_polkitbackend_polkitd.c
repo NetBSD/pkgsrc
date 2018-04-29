@@ -1,18 +1,18 @@
-$NetBSD: patch-src_polkitbackend_polkitd.c,v 1.1 2016/05/20 18:39:33 youri Exp $
+$NetBSD: patch-src_polkitbackend_polkitd.c,v 1.2 2018/04/29 05:14:37 wiz Exp $
 
 Avoid %m usage in printf.
 
---- src/polkitbackend/polkitd.c.orig	2015-06-18 20:20:50.000000000 +0000
+--- src/polkitbackend/polkitd.c.orig	2018-04-03 18:16:17.000000000 +0000
 +++ src/polkitbackend/polkitd.c
 @@ -22,6 +22,7 @@
  #include "config.h"
  
  #include <signal.h>
 +#include <errno.h>
+ #include <stdlib.h>
  
  #include <glib-unix.h>
- 
-@@ -109,20 +110,20 @@ become_user (const gchar  *user,
+@@ -110,20 +111,20 @@ become_user (const gchar  *user,
    if (pw == NULL)
      {
        g_set_error (error, G_IO_ERROR, G_IO_ERROR_FAILED,
@@ -36,7 +36,7 @@ Avoid %m usage in printf.
        goto out;
      }
  
-@@ -132,16 +133,16 @@ become_user (const gchar  *user,
+@@ -133,16 +134,16 @@ become_user (const gchar  *user,
        (getegid () != pw->pw_gid) || (getgid () != pw->pw_gid))
      {
        g_set_error (error, G_IO_ERROR, G_IO_ERROR_FAILED,
@@ -57,7 +57,7 @@ Avoid %m usage in printf.
        goto out;
      }
  
-@@ -196,7 +197,7 @@ main (int    argc,
+@@ -198,7 +199,7 @@ main (int    argc,
          }
        else
          {

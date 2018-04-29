@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/20 18:39:33 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/04/29 05:14:36 wiz Exp $
 bin/pk-example-frobnicate
 bin/pkaction
 bin/pkcheck
@@ -47,12 +47,26 @@ man/man1/pkttyagent.1
 man/man8/polkit.8
 man/man8/polkitd.8
 share/dbus-1/system-services/org.freedesktop.PolicyKit1.service
-${PLIST.pam}share/examples/pam.d/polkit-1
 share/examples/polkit/dbus-1/system.d/org.freedesktop.PolicyKit1.conf
+${PLIST.pam}share/examples/pam.d/polkit-1
 share/examples/polkit/polkit-1/rules.d/50-default.rules
+share/gettext/its/polkit.its
+share/gettext/its/polkit.loc
 ${PLIST.introspection}share/gir-1.0/Polkit-1.0.gir
 ${PLIST.introspection}share/gir-1.0/PolkitAgent-1.0.gir
 share/locale/cs/LC_MESSAGES/polkit-1.mo
 share/locale/da/LC_MESSAGES/polkit-1.mo
+share/locale/de/LC_MESSAGES/polkit-1.mo
+share/locale/hr/LC_MESSAGES/polkit-1.mo
+share/locale/hu/LC_MESSAGES/polkit-1.mo
+share/locale/id/LC_MESSAGES/polkit-1.mo
+share/locale/pl/LC_MESSAGES/polkit-1.mo
+share/locale/pt_BR/LC_MESSAGES/polkit-1.mo
+share/locale/sk/LC_MESSAGES/polkit-1.mo
+share/locale/sv/LC_MESSAGES/polkit-1.mo
+share/locale/tr/LC_MESSAGES/polkit-1.mo
+share/locale/uk/LC_MESSAGES/polkit-1.mo
+share/locale/zh_CN/LC_MESSAGES/polkit-1.mo
+share/locale/zh_TW/LC_MESSAGES/polkit-1.mo
 share/polkit-1/actions/org.freedesktop.policykit.examples.pkexec.policy
 share/polkit-1/actions/org.freedesktop.policykit.policy
