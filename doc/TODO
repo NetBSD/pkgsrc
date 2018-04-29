@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18306 2018/04/29 09:46:58 wiz Exp $
+$NetBSD: TODO,v 1.18307 2018/04/29 09:58:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1085,7 +1085,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-server-1.4.6
 	o mupdf-1.13.0 [leot, wip]
 	o muse-0.9.2
-	o musicpd-0.20.19
 	o myodbc-5.3.4
 	o mysql-server-8.0
 	o mysql-workbench-6.3
