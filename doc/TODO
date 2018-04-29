@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18310 2018/04/29 10:03:35 wiz Exp $
+$NetBSD: TODO,v 1.18311 2018/04/29 10:09:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1247,7 +1247,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-postgresql-5.0.5
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
-	o py-setuptools-39.1.0
 	o py-simpletal-5.1
 	o py-smb-1.1.17
 	o py-spf-2.0.12t
