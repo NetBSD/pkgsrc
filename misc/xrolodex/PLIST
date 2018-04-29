@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/03/04 04:15:24 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/04/29 03:56:08 dholland Exp $
 bin/xrolodex
-${IMAKE_MAN_DIR}/xrolodex.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/xrolodex.${IMAKE_MAN_SUFFIX}
 lib/X11/app-defaults/XRolodex
