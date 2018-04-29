@@ -1,0 +1,16 @@
+$NetBSD: patch-ext_glib2_glib2.def,v 1.1 2018/04/29 15:36:44 tsutsui Exp $
+
+- pull upstream fix for issue #1162
+
+--- ext/glib2/glib2.def.orig	2018-04-29 15:03:29.000000000 +0000
++++ ext/glib2/glib2.def
+@@ -61,6 +61,9 @@ EXPORTS
+ 	rbgobj_class_init_func
+ 	rbgobj_register_type
+ 	rbgobj_object_alloc_func
++	rbgobj_object_add_relative
++	rbgobj_object_remove_relative
++	rbgobj_object_remove_relatives
+ 	rbgobj_set_signal_func
+ 	rbgobj_get_signal_func
+ 	rbgobj_set_signal_call_func
