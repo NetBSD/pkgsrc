@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2017/12/09 17:53:16 tsutsui Exp $
+# $NetBSD: Makefile,v 1.15 2018/04/29 14:58:29 tsutsui Exp $
 #
 
-DISTNAME=	http-3.0.0
+DISTNAME=	http-3.3.0
 CATEGORIES=	www
 
 MAINTAINER=	tsutsui@NetBSD.org
-HOMEPAGE=	https://github.com/tarcieri/http
+HOMEPAGE=	https://github.com/httprb/http
 COMMENT=	Simple Ruby DSL for making HTTP requests
 LICENSE=	mit
 
