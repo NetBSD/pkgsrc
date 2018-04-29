@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.186 2018/04/17 22:29:47 wiz Exp $
+# $NetBSD: Makefile,v 1.187 2018/04/29 12:15:37 wiz Exp $
 
-DISTNAME=	wireshark-2.4.6
-PKGREVISION=	1
+DISTNAME=	wireshark-2.6.0
 CATEGORIES=	net
 MASTER_SITES=	https://www.wireshark.org/download/src/
 EXTRACT_SUFX=	.tar.xz
@@ -42,8 +41,6 @@ REPLACE_PYTHON+=		tools/ftsanity.py
 REPLACE_PYTHON+=		tools/html2text.py
 REPLACE_PYTHON+=		tools/idl2deb
 REPLACE_PYTHON+=		tools/indexcap.py
-REPLACE_PYTHON+=		tools/make-dissector-reg.py
-REPLACE_PYTHON+=		tools/make-tap-reg.py
 REPLACE_PYTHON+=		tools/msnchat
 REPLACE_PYTHON+=		tools/ncp2222.py
 REPLACE_PYTHON+=		tools/netscreen2dump.py
