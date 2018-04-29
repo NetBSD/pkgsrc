@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.83 2018/03/30 20:56:42 spz Exp $
+# $NetBSD: Makefile,v 1.84 2018/04/29 20:41:04 ryoon Exp $
 
-DISTNAME=	zsh-5.4.2
-PKGREVISION=	1
+DISTNAME=	zsh-5.5.1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zsh/}
 EXTRACT_SUFX=	.tar.xz
