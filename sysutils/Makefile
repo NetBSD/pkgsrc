@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.754 2018/04/23 08:35:03 wen Exp $
+# $NetBSD: Makefile,v 1.755 2018/04/29 14:23:26 kamil Exp $
 #
 
 COMMENT=	System utilities
@@ -525,6 +525,7 @@ SUBDIR+=	ruby-rb-inotify
 SUBDIR+=	ruby-serverspec
 SUBDIR+=	ruby-specinfra
 SUBDIR+=	ruby-syslog-logger
+SUBDIR+=	rw
 SUBDIR+=	safetynet
 SUBDIR+=	salt
 SUBDIR+=	salt-docs
