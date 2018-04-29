@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2041 2018/04/29 15:57:16 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.2042 2018/04/29 16:27:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2827,3 +2827,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added sysutils/rw version 1.0 [kamil 2018-04-29]
 	Updated www/ruby-http to 3.3.0 [tsutsui 2018-04-29]
 	Updated net/mikutter to 3.6.7 [tsutsui 2018-04-29]
+	Updated lang/php56 to 5.6.36 [taca 2018-04-29]
