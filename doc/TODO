@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18309 2018/04/29 10:01:56 wiz Exp $
+$NetBSD: TODO,v 1.18310 2018/04/29 10:03:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1237,7 +1237,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gnome-menus-3.8.0
 	o py-hgview-1.9.0
 	o py-hsm-1.1.1
-	o py-html5-parser-0.4.5
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
 	o py-musicbrainz-0.7.4
