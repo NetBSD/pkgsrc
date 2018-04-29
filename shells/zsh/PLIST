@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2017/10/13 09:35:19 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.38 2018/04/29 20:41:04 ryoon Exp $
 bin/zsh
 bin/${PKGNAME}
 info/zsh.info
@@ -36,10 +36,6 @@ ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zprof.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zpty.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zselect.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zutil.so
-share/doc/zsh/BUGS
-share/doc/zsh/FAQ
-share/doc/zsh/FEATURES
-share/doc/zsh/NEWS
 man/man1/zsh.1
 man/man1/zshall.1
 man/man1/zshbuiltins.1
@@ -57,6 +53,10 @@ man/man1/zshroadmap.1
 man/man1/zshtcpsys.1
 man/man1/zshzftpsys.1
 man/man1/zshzle.1
+share/doc/zsh/BUGS
+share/doc/zsh/FAQ
+share/doc/zsh/FEATURES
+share/doc/zsh/NEWS
 share/zsh/${PKGVERSION}/functions/VCS_INFO_adjust
 share/zsh/${PKGVERSION}/functions/VCS_INFO_bydir_detect
 share/zsh/${PKGVERSION}/functions/VCS_INFO_check_com
@@ -113,6 +113,7 @@ share/zsh/${PKGVERSION}/functions/_all_labels
 share/zsh/${PKGVERSION}/functions/_all_matches
 share/zsh/${PKGVERSION}/functions/_alternative
 share/zsh/${PKGVERSION}/functions/_analyseplugin
+share/zsh/${PKGVERSION}/functions/_ansible
 share/zsh/${PKGVERSION}/functions/_ant
 share/zsh/${PKGVERSION}/functions/_antiword
 share/zsh/${PKGVERSION}/functions/_apachectl
@@ -166,6 +167,7 @@ share/zsh/${PKGVERSION}/functions/_bzip2
 share/zsh/${PKGVERSION}/functions/_bzr
 share/zsh/${PKGVERSION}/functions/_cabal
 share/zsh/${PKGVERSION}/functions/_cache_invalid
+share/zsh/${PKGVERSION}/functions/_caffeinate
 share/zsh/${PKGVERSION}/functions/_cal
 share/zsh/${PKGVERSION}/functions/_calendar
 share/zsh/${PKGVERSION}/functions/_call_function
@@ -179,16 +181,20 @@ share/zsh/${PKGVERSION}/functions/_cdcd
 share/zsh/${PKGVERSION}/functions/_cdr
 share/zsh/${PKGVERSION}/functions/_cdrdao
 share/zsh/${PKGVERSION}/functions/_cdrecord
+share/zsh/${PKGVERSION}/functions/_chattr
 share/zsh/${PKGVERSION}/functions/_chflags
 share/zsh/${PKGVERSION}/functions/_chkconfig
 share/zsh/${PKGVERSION}/functions/_chmod
 share/zsh/${PKGVERSION}/functions/_chown
 share/zsh/${PKGVERSION}/functions/_chrt
 share/zsh/${PKGVERSION}/functions/_chsh
+share/zsh/${PKGVERSION}/functions/_cksum
 share/zsh/${PKGVERSION}/functions/_clay
 share/zsh/${PKGVERSION}/functions/_cmdambivalent
 share/zsh/${PKGVERSION}/functions/_cmdstring
 share/zsh/${PKGVERSION}/functions/_cmp
+share/zsh/${PKGVERSION}/functions/_code
+share/zsh/${PKGVERSION}/functions/_column
 share/zsh/${PKGVERSION}/functions/_combination
 share/zsh/${PKGVERSION}/functions/_comm
 share/zsh/${PKGVERSION}/functions/_command
@@ -237,6 +243,7 @@ share/zsh/${PKGVERSION}/functions/_dates
 share/zsh/${PKGVERSION}/functions/_dbus
 share/zsh/${PKGVERSION}/functions/_dchroot
 share/zsh/${PKGVERSION}/functions/_dchroot-dsa
+share/zsh/${PKGVERSION}/functions/_dconf
 share/zsh/${PKGVERSION}/functions/_dcop
 share/zsh/${PKGVERSION}/functions/_dcut
 share/zsh/${PKGVERSION}/functions/_dd
@@ -248,6 +255,7 @@ share/zsh/${PKGVERSION}/functions/_debchange
 share/zsh/${PKGVERSION}/functions/_debcheckout
 share/zsh/${PKGVERSION}/functions/_debdiff
 share/zsh/${PKGVERSION}/functions/_debfoster
+share/zsh/${PKGVERSION}/functions/_deborphan
 share/zsh/${PKGVERSION}/functions/_debsign
 share/zsh/${PKGVERSION}/functions/_default
 share/zsh/${PKGVERSION}/functions/_defaults
@@ -276,6 +284,7 @@ share/zsh/${PKGVERSION}/functions/_dlocate
 share/zsh/${PKGVERSION}/functions/_dmesg
 share/zsh/${PKGVERSION}/functions/_dmidecode
 share/zsh/${PKGVERSION}/functions/_dnf
+share/zsh/${PKGVERSION}/functions/_dns_types
 share/zsh/${PKGVERSION}/functions/_doas
 share/zsh/${PKGVERSION}/functions/_domains
 share/zsh/${PKGVERSION}/functions/_dpatch-edit-patch
@@ -285,6 +294,7 @@ share/zsh/${PKGVERSION}/functions/_dpkg-cross
 share/zsh/${PKGVERSION}/functions/_dpkg-repack
 share/zsh/${PKGVERSION}/functions/_dpkg_source
 share/zsh/${PKGVERSION}/functions/_dput
+share/zsh/${PKGVERSION}/functions/_drill
 share/zsh/${PKGVERSION}/functions/_dsh
 share/zsh/${PKGVERSION}/functions/_dtrace
 share/zsh/${PKGVERSION}/functions/_du
@@ -316,6 +326,7 @@ share/zsh/${PKGVERSION}/functions/_expand_word
 share/zsh/${PKGVERSION}/functions/_extensions
 share/zsh/${PKGVERSION}/functions/_external_pwds
 share/zsh/${PKGVERSION}/functions/_fakeroot
+share/zsh/${PKGVERSION}/functions/_fbsd_architectures
 share/zsh/${PKGVERSION}/functions/_fc
 share/zsh/${PKGVERSION}/functions/_feh
 share/zsh/${PKGVERSION}/functions/_fetch
@@ -323,6 +334,8 @@ share/zsh/${PKGVERSION}/functions/_fetchmail
 share/zsh/${PKGVERSION}/functions/_ffmpeg
 share/zsh/${PKGVERSION}/functions/_figlet
 share/zsh/${PKGVERSION}/functions/_file_descriptors
+share/zsh/${PKGVERSION}/functions/_file_flags
+share/zsh/${PKGVERSION}/functions/_file_modes
 share/zsh/${PKGVERSION}/functions/_file_systems
 share/zsh/${PKGVERSION}/functions/_files
 share/zsh/${PKGVERSION}/functions/_find
@@ -330,12 +343,14 @@ share/zsh/${PKGVERSION}/functions/_find_net_interfaces
 share/zsh/${PKGVERSION}/functions/_finger
 share/zsh/${PKGVERSION}/functions/_fink
 share/zsh/${PKGVERSION}/functions/_first
+share/zsh/${PKGVERSION}/functions/_flac
 share/zsh/${PKGVERSION}/functions/_flasher
 share/zsh/${PKGVERSION}/functions/_flex
 share/zsh/${PKGVERSION}/functions/_floppy
 share/zsh/${PKGVERSION}/functions/_flowadm
 share/zsh/${PKGVERSION}/functions/_fmadm
 share/zsh/${PKGVERSION}/functions/_fmt
+share/zsh/${PKGVERSION}/functions/_fold
 share/zsh/${PKGVERSION}/functions/_fortune
 share/zsh/${PKGVERSION}/functions/_freebsd-update
 share/zsh/${PKGVERSION}/functions/_fsh
@@ -349,6 +364,7 @@ share/zsh/${PKGVERSION}/functions/_fw_update
 share/zsh/${PKGVERSION}/functions/_gcc
 share/zsh/${PKGVERSION}/functions/_gcore
 share/zsh/${PKGVERSION}/functions/_gdb
+share/zsh/${PKGVERSION}/functions/_gem
 share/zsh/${PKGVERSION}/functions/_generic
 share/zsh/${PKGVERSION}/functions/_genisoimage
 share/zsh/${PKGVERSION}/functions/_getclip
@@ -356,6 +372,7 @@ share/zsh/${PKGVERSION}/functions/_getconf
 share/zsh/${PKGVERSION}/functions/_getent
 share/zsh/${PKGVERSION}/functions/_getfacl
 share/zsh/${PKGVERSION}/functions/_getmail
+share/zsh/${PKGVERSION}/functions/_getopt
 share/zsh/${PKGVERSION}/functions/_git
 share/zsh/${PKGVERSION}/functions/_git-buildpackage
 share/zsh/${PKGVERSION}/functions/_global
@@ -391,6 +408,7 @@ share/zsh/${PKGVERSION}/functions/_hash
 share/zsh/${PKGVERSION}/functions/_have_glob_qual
 share/zsh/${PKGVERSION}/functions/_hdiutil
 share/zsh/${PKGVERSION}/functions/_head
+share/zsh/${PKGVERSION}/functions/_hexdump
 share/zsh/${PKGVERSION}/functions/_hg
 share/zsh/${PKGVERSION}/functions/_history
 share/zsh/${PKGVERSION}/functions/_history_complete_word
@@ -409,6 +427,7 @@ share/zsh/${PKGVERSION}/functions/_in_vared
 share/zsh/${PKGVERSION}/functions/_inetadm
 share/zsh/${PKGVERSION}/functions/_init_d
 share/zsh/${PKGVERSION}/functions/_initctl
+share/zsh/${PKGVERSION}/functions/_install
 share/zsh/${PKGVERSION}/functions/_invoke-rc.d
 share/zsh/${PKGVERSION}/functions/_ionice
 share/zsh/${PKGVERSION}/functions/_iostat
@@ -419,6 +438,7 @@ share/zsh/${PKGVERSION}/functions/_iptables
 share/zsh/${PKGVERSION}/functions/_irssi
 share/zsh/${PKGVERSION}/functions/_ispell
 share/zsh/${PKGVERSION}/functions/_iwconfig
+share/zsh/${PKGVERSION}/functions/_jail
 share/zsh/${PKGVERSION}/functions/_jails
 share/zsh/${PKGVERSION}/functions/_java
 share/zsh/${PKGVERSION}/functions/_java_class
@@ -431,6 +451,8 @@ share/zsh/${PKGVERSION}/functions/_jobs_fg
 share/zsh/${PKGVERSION}/functions/_joe
 share/zsh/${PKGVERSION}/functions/_join
 share/zsh/${PKGVERSION}/functions/_jot
+share/zsh/${PKGVERSION}/functions/_jq
+share/zsh/${PKGVERSION}/functions/_kdeconnect
 share/zsh/${PKGVERSION}/functions/_kfmclient
 share/zsh/${PKGVERSION}/functions/_kill
 share/zsh/${PKGVERSION}/functions/_killall
@@ -440,6 +462,7 @@ share/zsh/${PKGVERSION}/functions/_kpartx
 share/zsh/${PKGVERSION}/functions/_kvno
 share/zsh/${PKGVERSION}/functions/_last
 share/zsh/${PKGVERSION}/functions/_ld_debug
+share/zsh/${PKGVERSION}/functions/_ldconfig
 share/zsh/${PKGVERSION}/functions/_ldd
 share/zsh/${PKGVERSION}/functions/_less
 share/zsh/${PKGVERSION}/functions/_lha
@@ -463,6 +486,7 @@ share/zsh/${PKGVERSION}/functions/_look
 share/zsh/${PKGVERSION}/functions/_losetup
 share/zsh/${PKGVERSION}/functions/_lp
 share/zsh/${PKGVERSION}/functions/_ls
+share/zsh/${PKGVERSION}/functions/_lsattr
 share/zsh/${PKGVERSION}/functions/_lsblk
 share/zsh/${PKGVERSION}/functions/_lscfg
 share/zsh/${PKGVERSION}/functions/_lsdev
@@ -489,19 +513,22 @@ share/zsh/${PKGVERSION}/functions/_math_params
 share/zsh/${PKGVERSION}/functions/_matlab
 share/zsh/${PKGVERSION}/functions/_md5sum
 share/zsh/${PKGVERSION}/functions/_mdadm
+share/zsh/${PKGVERSION}/functions/_mdfind
+share/zsh/${PKGVERSION}/functions/_mdls
+share/zsh/${PKGVERSION}/functions/_mdutil
 share/zsh/${PKGVERSION}/functions/_members
 share/zsh/${PKGVERSION}/functions/_mencal
 share/zsh/${PKGVERSION}/functions/_menu
 share/zsh/${PKGVERSION}/functions/_mere
 share/zsh/${PKGVERSION}/functions/_mergechanges
 share/zsh/${PKGVERSION}/functions/_message
-share/zsh/${PKGVERSION}/functions/_metaflac
 share/zsh/${PKGVERSION}/functions/_mh
 share/zsh/${PKGVERSION}/functions/_mii-tool
 share/zsh/${PKGVERSION}/functions/_mime_types
 share/zsh/${PKGVERSION}/functions/_mixerctl
 share/zsh/${PKGVERSION}/functions/_mkdir
 share/zsh/${PKGVERSION}/functions/_mkshortcut
+share/zsh/${PKGVERSION}/functions/_mktemp
 share/zsh/${PKGVERSION}/functions/_mkzsh
 share/zsh/${PKGVERSION}/functions/_module
 share/zsh/${PKGVERSION}/functions/_module-assistant
@@ -521,16 +548,19 @@ share/zsh/${PKGVERSION}/functions/_mtools
 share/zsh/${PKGVERSION}/functions/_mtr
 share/zsh/${PKGVERSION}/functions/_multi_parts
 share/zsh/${PKGVERSION}/functions/_mutt
+share/zsh/${PKGVERSION}/functions/_mv
 share/zsh/${PKGVERSION}/functions/_my_accounts
 share/zsh/${PKGVERSION}/functions/_mysql_utils
 share/zsh/${PKGVERSION}/functions/_mysqldiff
 share/zsh/${PKGVERSION}/functions/_nautilus
+share/zsh/${PKGVERSION}/functions/_nbsd_architectures
 share/zsh/${PKGVERSION}/functions/_ncftp
 share/zsh/${PKGVERSION}/functions/_nedit
 share/zsh/${PKGVERSION}/functions/_net_interfaces
 share/zsh/${PKGVERSION}/functions/_netcat
 share/zsh/${PKGVERSION}/functions/_netscape
 share/zsh/${PKGVERSION}/functions/_netstat
+share/zsh/${PKGVERSION}/functions/_networkmanager
 share/zsh/${PKGVERSION}/functions/_newsgroups
 share/zsh/${PKGVERSION}/functions/_next_label
 share/zsh/${PKGVERSION}/functions/_next_tags
@@ -540,15 +570,17 @@ share/zsh/${PKGVERSION}/functions/_nkf
 share/zsh/${PKGVERSION}/functions/_nl
 share/zsh/${PKGVERSION}/functions/_nm
 share/zsh/${PKGVERSION}/functions/_nmap
-share/zsh/${PKGVERSION}/functions/_nmcli
 share/zsh/${PKGVERSION}/functions/_normal
 share/zsh/${PKGVERSION}/functions/_nothing
 share/zsh/${PKGVERSION}/functions/_notmuch
 share/zsh/${PKGVERSION}/functions/_npm
 share/zsh/${PKGVERSION}/functions/_nslookup
+share/zsh/${PKGVERSION}/functions/_numfmt
+share/zsh/${PKGVERSION}/functions/_nvram
 share/zsh/${PKGVERSION}/functions/_objdump
 share/zsh/${PKGVERSION}/functions/_object_classes
 share/zsh/${PKGVERSION}/functions/_object_files
+share/zsh/${PKGVERSION}/functions/_obsd_architectures
 share/zsh/${PKGVERSION}/functions/_od
 share/zsh/${PKGVERSION}/functions/_okular
 share/zsh/${PKGVERSION}/functions/_oldlist
@@ -557,8 +589,10 @@ share/zsh/${PKGVERSION}/functions/_openstack
 share/zsh/${PKGVERSION}/functions/_options
 share/zsh/${PKGVERSION}/functions/_options_set
 share/zsh/${PKGVERSION}/functions/_options_unset
+share/zsh/${PKGVERSION}/functions/_osascript
 share/zsh/${PKGVERSION}/functions/_osc
 share/zsh/${PKGVERSION}/functions/_other_accounts
+share/zsh/${PKGVERSION}/functions/_otool
 share/zsh/${PKGVERSION}/functions/_pack
 share/zsh/${PKGVERSION}/functions/_parameter
 share/zsh/${PKGVERSION}/functions/_parameters
@@ -568,6 +602,7 @@ share/zsh/${PKGVERSION}/functions/_patchutils
 share/zsh/${PKGVERSION}/functions/_path_commands
 share/zsh/${PKGVERSION}/functions/_path_files
 share/zsh/${PKGVERSION}/functions/_pax
+share/zsh/${PKGVERSION}/functions/_pbcopy
 share/zsh/${PKGVERSION}/functions/_pbm
 share/zsh/${PKGVERSION}/functions/_pbuilder
 share/zsh/${PKGVERSION}/functions/_pdf
@@ -596,6 +631,7 @@ share/zsh/${PKGVERSION}/functions/_pkgadd
 share/zsh/${PKGVERSION}/functions/_pkginfo
 share/zsh/${PKGVERSION}/functions/_pkgrm
 share/zsh/${PKGVERSION}/functions/_pkgtool
+share/zsh/${PKGVERSION}/functions/_plutil
 share/zsh/${PKGVERSION}/functions/_pon
 share/zsh/${PKGVERSION}/functions/_portaudit
 share/zsh/${PKGVERSION}/functions/_portlint
@@ -623,6 +659,7 @@ share/zsh/${PKGVERSION}/functions/_psutils
 share/zsh/${PKGVERSION}/functions/_ptree
 share/zsh/${PKGVERSION}/functions/_pump
 share/zsh/${PKGVERSION}/functions/_putclip
+share/zsh/${PKGVERSION}/functions/_pwgen
 share/zsh/${PKGVERSION}/functions/_pydoc
 share/zsh/${PKGVERSION}/functions/_python
 share/zsh/${PKGVERSION}/functions/_python_modules
@@ -667,6 +704,7 @@ share/zsh/${PKGVERSION}/functions/_runit
 share/zsh/${PKGVERSION}/functions/_sablotron
 share/zsh/${PKGVERSION}/functions/_samba
 share/zsh/${PKGVERSION}/functions/_savecore
+share/zsh/${PKGVERSION}/functions/_say
 share/zsh/${PKGVERSION}/functions/_sccs
 share/zsh/${PKGVERSION}/functions/_sched
 share/zsh/${PKGVERSION}/functions/_schedtool
@@ -674,8 +712,11 @@ share/zsh/${PKGVERSION}/functions/_schroot
 share/zsh/${PKGVERSION}/functions/_scl
 share/zsh/${PKGVERSION}/functions/_screen
 share/zsh/${PKGVERSION}/functions/_script
+share/zsh/${PKGVERSION}/functions/_scselect
+share/zsh/${PKGVERSION}/functions/_scutil
 share/zsh/${PKGVERSION}/functions/_sed
 share/zsh/${PKGVERSION}/functions/_sep_parts
+share/zsh/${PKGVERSION}/functions/_seq
 share/zsh/${PKGVERSION}/functions/_sequence
 share/zsh/${PKGVERSION}/functions/_service
 share/zsh/${PKGVERSION}/functions/_services
@@ -687,9 +728,12 @@ share/zsh/${PKGVERSION}/functions/_setup
 share/zsh/${PKGVERSION}/functions/_setxkbmap
 share/zsh/${PKGVERSION}/functions/_sh
 share/zsh/${PKGVERSION}/functions/_showmount
+share/zsh/${PKGVERSION}/functions/_shutdown
 share/zsh/${PKGVERSION}/functions/_signals
+share/zsh/${PKGVERSION}/functions/_signify
 share/zsh/${PKGVERSION}/functions/_sisu
 share/zsh/${PKGVERSION}/functions/_slrn
+share/zsh/${PKGVERSION}/functions/_smartmontools
 share/zsh/${PKGVERSION}/functions/_smit
 share/zsh/${PKGVERSION}/functions/_snoop
 share/zsh/${PKGVERSION}/functions/_socket
@@ -698,20 +742,25 @@ share/zsh/${PKGVERSION}/functions/_softwareupdate
 share/zsh/${PKGVERSION}/functions/_sort
 share/zsh/${PKGVERSION}/functions/_source
 share/zsh/${PKGVERSION}/functions/_spamassassin
+share/zsh/${PKGVERSION}/functions/_split
 share/zsh/${PKGVERSION}/functions/_sqlite
 share/zsh/${PKGVERSION}/functions/_sqsh
 share/zsh/${PKGVERSION}/functions/_ss
 share/zsh/${PKGVERSION}/functions/_ssh
+share/zsh/${PKGVERSION}/functions/_ssh_hosts
 share/zsh/${PKGVERSION}/functions/_sshfs
 share/zsh/${PKGVERSION}/functions/_stat
+share/zsh/${PKGVERSION}/functions/_stdbuf
 share/zsh/${PKGVERSION}/functions/_stgit
 share/zsh/${PKGVERSION}/functions/_store_cache
 share/zsh/${PKGVERSION}/functions/_strace
 share/zsh/${PKGVERSION}/functions/_strftime
+share/zsh/${PKGVERSION}/functions/_strings
 share/zsh/${PKGVERSION}/functions/_strip
 share/zsh/${PKGVERSION}/functions/_stty
 share/zsh/${PKGVERSION}/functions/_su
 share/zsh/${PKGVERSION}/functions/_sub_commands
+share/zsh/${PKGVERSION}/functions/_sublimetext
 share/zsh/${PKGVERSION}/functions/_subscript
 share/zsh/${PKGVERSION}/functions/_subversion
 share/zsh/${PKGVERSION}/functions/_sudo
@@ -723,6 +772,7 @@ share/zsh/${PKGVERSION}/functions/_svcprop
 share/zsh/${PKGVERSION}/functions/_svcs
 share/zsh/${PKGVERSION}/functions/_svcs_fmri
 share/zsh/${PKGVERSION}/functions/_svn-buildpackage
+share/zsh/${PKGVERSION}/functions/_sw_vers
 share/zsh/${PKGVERSION}/functions/_swaks
 share/zsh/${PKGVERSION}/functions/_swift
 share/zsh/${PKGVERSION}/functions/_sys_calls
@@ -749,6 +799,7 @@ share/zsh/${PKGVERSION}/functions/_tiff
 share/zsh/${PKGVERSION}/functions/_tilde
 share/zsh/${PKGVERSION}/functions/_tilde_files
 share/zsh/${PKGVERSION}/functions/_time_zone
+share/zsh/${PKGVERSION}/functions/_timeout
 share/zsh/${PKGVERSION}/functions/_tin
 share/zsh/${PKGVERSION}/functions/_tla
 share/zsh/${PKGVERSION}/functions/_tmux
@@ -804,6 +855,7 @@ share/zsh/${PKGVERSION}/functions/_vars
 share/zsh/${PKGVERSION}/functions/_vcsh
 share/zsh/${PKGVERSION}/functions/_vim
 share/zsh/${PKGVERSION}/functions/_vim-addons
+share/zsh/${PKGVERSION}/functions/_vmctl
 share/zsh/${PKGVERSION}/functions/_vmstat
 share/zsh/${PKGVERSION}/functions/_vnc
 share/zsh/${PKGVERSION}/functions/_volume_groups
@@ -829,6 +881,7 @@ share/zsh/${PKGVERSION}/functions/_who
 share/zsh/${PKGVERSION}/functions/_whois
 share/zsh/${PKGVERSION}/functions/_widgets
 share/zsh/${PKGVERSION}/functions/_wiggle
+share/zsh/${PKGVERSION}/functions/_wipefs
 share/zsh/${PKGVERSION}/functions/_wpa_cli
 share/zsh/${PKGVERSION}/functions/_x_arguments
 share/zsh/${PKGVERSION}/functions/_x_borderwidth
@@ -858,6 +911,7 @@ share/zsh/${PKGVERSION}/functions/_xfig
 share/zsh/${PKGVERSION}/functions/_xft_fonts
 share/zsh/${PKGVERSION}/functions/_xloadimage
 share/zsh/${PKGVERSION}/functions/_xmlsoft
+share/zsh/${PKGVERSION}/functions/_xmlstarlet
 share/zsh/${PKGVERSION}/functions/_xmms2
 share/zsh/${PKGVERSION}/functions/_xmodmap
 share/zsh/${PKGVERSION}/functions/_xournal
