@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2018/04/16 13:19:42 wiz Exp $
+$NetBSD: distinfo,v 1.31 2018/04/29 10:00:16 wiz Exp $
 
-SHA1 (notmuch-0.26.1.tar.gz) = 7bf644319ebadc918fa98693adbd53eaf26d5fd0
-RMD160 (notmuch-0.26.1.tar.gz) = c73993a84a0fded04fe561f1018e5b7cab93a68d
-SHA512 (notmuch-0.26.1.tar.gz) = f0d95a0f03535495037c73ab18d1251ece505284736efa5a535fe9bc8aea33954b5c87e5dcdfd30670c8df53178294be520a63e5b19beac7d90f166e616d19dd
-Size (notmuch-0.26.1.tar.gz) = 906523 bytes
+SHA1 (notmuch-0.26.2.tar.gz) = 7ce15988a972fad55e866735e551ff3373f6af85
+RMD160 (notmuch-0.26.2.tar.gz) = a0b43b3c6db643a6fb8584d70bf4997d2c15d362
+SHA512 (notmuch-0.26.2.tar.gz) = ebd8460c5f08cb8c79dabc1bc1bc32e1f2e1f123d304bb20205d4dedb982186336fd43d0e39acf020ea2563278bee0a063ceb3bf276f1251c099d8fcdd5098e7
+Size (notmuch-0.26.2.tar.gz) = 907187 bytes
