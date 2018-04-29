@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2018/04/23 15:22:09 bacon Exp $
+# $NetBSD: Makefile,v 1.3 2018/04/29 21:32:01 adam Exp $
 
 DISTNAME=	slurm-17.11.5
 PKGNAME=	slurm-wlm-17.11.5
+PKGREVISION=	1
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.schedmd.com/download/archive/
 MASTER_SITES+=	http://www.schedmd.com/download/latest/
