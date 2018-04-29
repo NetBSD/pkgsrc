@@ -1,4 +1,4 @@
-# $NetBSD: bjam.mk,v 1.19 2017/07/14 18:18:57 wiz Exp $
+# $NetBSD: bjam.mk,v 1.20 2018/04/29 20:41:11 adam Exp $
 
 .include "../../devel/boost-jam/buildlink3.mk"
 .include "../../devel/boost-build/toolset.mk"
@@ -9,7 +9,6 @@ BJAM_ARGS+=		${MAKE_JOBS:D-j${MAKE_JOBS}}
 BJAM_ARGS+=		--builddir=${WRKSRC}/build
 BJAM_ARGS+=		--layout=system
 BJAM_ARGS+=		--toolset=${BOOST_TOOLSET}
-BJAM_ARGS+=		--disable-long-double
 BJAM_ARGS+=		${BJAM_BUILD}
 
 # XXX: we can't use USE_LANGUAGES here as it needs to be set before
