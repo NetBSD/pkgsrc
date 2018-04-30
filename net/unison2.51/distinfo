@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.3 2018/04/30 10:23:49 wiz Exp $
+$NetBSD: distinfo,v 1.4 2018/04/30 12:22:31 wiz Exp $
 
 SHA1 (unison-2.51.2.tar.gz) = 63e3b526254ab6356a3fabf74be533982c2962c2
 RMD160 (unison-2.51.2.tar.gz) = d73c88be2a5c3c677939f4adede4c0f772ecff33
 SHA512 (unison-2.51.2.tar.gz) = 4ec4a1603ce5e561084dcd59621a0cc72c1ea40e3e23e36408c436c51bde3eb82774f671aba85c016f87982417800e8a27b978be59c92aa62ce9e4be1a072011
 Size (unison-2.51.2.tar.gz) = 1398790 bytes
 SHA1 (patch-src_Makefile) = 3172ed284bea2d21ccb475439c53ce65a45b79f6
-SHA1 (patch-src_Makefile.OCaml) = df9c889fc892e66f48c769e72cbb1cea8da525fc
 SHA1 (patch-src_uigtk2.ml) = 87a9c1e678f4056c0a32bfb3c3b7320652a171a2
