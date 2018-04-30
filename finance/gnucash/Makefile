@@ -1,15 +1,9 @@
-# $NetBSD: Makefile,v 1.258 2018/04/29 21:31:35 adam Exp $
+# $NetBSD: Makefile,v 1.259 2018/04/30 06:06:07 wiz Exp $
 
-DISTNAME=		gnucash-3.0
-PKGREVISION=		3
+DISTNAME=		gnucash-3.1
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
-# take copy mirrored on ftp.NetBSD.org for devel/googletest
-# for better DISTNAME
-# depending on googletest package is not sufficient since not all
-# files that are used are installed
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} googletest-1.8.0.tar.gz
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.gnucash.org/
@@ -31,14 +25,14 @@ USE_TOOLS+=		perl:run pkg-config
 # remove when using ninja
 USE_TOOLS+=		gmake
 
+# build failure in test-tx_import and a couple test failures
+# https://bugzilla.gnome.org/show_bug.cgi?id=795251
 TEST_TARGET=		check
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnucash
 CXXFLAGS+=		-Wno-deprecated-declarations
 
 MAKE_ENV+=		GUILE_AUTO_COMPILE=0
-CMAKE_ARGS+=		-DGMOCK_ROOT=${WRKDIR}/googletest-release-1.8.0/googlemock
-CMAKE_ARGS+=		-DGTEST_ROOT=${WRKDIR}/googletest-release-1.8.0/googletest
 CMAKE_ARGS+=		-DWITH_AQBANKING=OFF
 CMAKE_ARGS+=		-DPERL_EXECUTABLE=${PERL5}
 CMAKE_ARGS+=		-DCOMPILE_GSCHEMAS=OFF
@@ -72,6 +66,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.40.0
 BUILDLINK_API_DEPENDS.boost-headers+=   boost-headers>=1.64.0nb3
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/swig2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
