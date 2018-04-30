@@ -1,13 +1,13 @@
-$NetBSD: patch-player_main.c,v 1.2 2017/03/10 15:55:33 nat Exp $
+$NetBSD: patch-player_main.c,v 1.3 2018/04/30 06:38:45 wiz Exp $
 
 Avoid to check mismatched built vs running libraries version.
 The use in pkgsrc can be considered a legitimate one.
 
---- player/main.c.orig	2017-02-12 01:31:16.000000000 +0000
+--- player/main.c.orig	2018-02-13 02:07:05.000000000 +0000
 +++ player/main.c
-@@ -438,18 +438,6 @@ int mp_initialize(struct MPContext *mpct
- 
-     handle_deprecated_options(mpctx);
+@@ -428,18 +428,6 @@ int mp_initialize(struct MPContext *mpct
+     if (handle_help_options(mpctx))
+         return -2;
  
 -    if (!print_libav_versions(mp_null_log, 0)) {
 -        // Using mismatched libraries can be legitimate, but even then it's
