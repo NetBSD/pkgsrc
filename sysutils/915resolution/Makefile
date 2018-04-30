@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/02/26 10:24:10 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.9 2018/04/30 10:41:35 wiz Exp $
 
 DISTNAME=	915resolution-0.5.3
 CATEGORIES=	sysutils
@@ -11,7 +10,7 @@ COMMENT=	BIOS VESA resolution utility for 8XX/9XX Intel chips
 LICENSE=	public-domain
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64 Linux-*-i386
-ONLY_FOR_PLATFORM+=	FreeBSD-*-i386 FreeBSD-*-x86_64 DragonFly-*-i386
+ONLY_FOR_PLATFORM+=	FreeBSD-*-i386 FreeBSD-*-x86_64
 
 USE_TOOLS+=	gmake
 

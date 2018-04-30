@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.111 2017/11/20 17:17:50 minskim Exp $
+# $NetBSD: java-vm.mk,v 1.112 2018/04/30 10:41:35 wiz Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -130,7 +130,6 @@ _ONLY_FOR_PLATFORMS.sun-jdk6= \
 	Darwin-9.*-i386 Darwin-9.*-x86_64 \
 	Darwin-10.*-i386 Darwin-10.*-x86_64 \
 	Darwin-11.*-i386 Darwin-11.*-x86_64 \
-	DragonFly-*-i386 \
 	FreeBSD-6.*-i386 \
 	Linux-*-i[3-6]86 \
 	Linux-*-x86_64 \
@@ -164,7 +163,6 @@ _ONLY_FOR_PLATFORMS.openjdk8= \
 _ONLY_FOR_PLATFORMS.sun-jdk7= \
 	Darwin-9.*-i386 Darwin-9.*-x86_64 \
 	Darwin-[1-9][0-9].*-i386 Darwin-[1-9][0-9].*-x86_64 \
-	DragonFly-*-i386 \
 	FreeBSD-6.*-i386 \
 	Linux-*-i[3-6]86 \
 	Linux-*-x86_64 \
@@ -174,7 +172,6 @@ _ONLY_FOR_PLATFORMS.sun-jdk7= \
 _ONLY_FOR_PLATFORMS.oracle-jdk8= \
 	Darwin-9.*-i386 Darwin-9.*-x86_64 \
 	Darwin-[1-9][0-9].*-i386 Darwin-[1-9][0-9].*-x86_64 \
-	DragonFly-*-i386 \
 	FreeBSD-6.*-i386 \
 	Linux-*-i[3-6]86 \
 	Linux-*-x86_64 \
