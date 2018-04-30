@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2017/09/04 18:08:23 wiz Exp $
+# $NetBSD: Makefile.common,v 1.31 2018/04/30 10:41:35 wiz Exp $
 #
 # used by emulators/suse100_alsa/Makefile
 # used by emulators/suse100_alsa/Makefile
@@ -59,7 +59,6 @@ ONLY_FOR_PLATFORM+=	NetBSD-3.99*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-[4-9]*-x86_64
 .else
 EMUL_PLATFORMS?=	linux-i386 linux-powerpc linux-x86_64
-ONLY_FOR_PLATFORM+=	DragonFly-*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD-*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-powerpc
