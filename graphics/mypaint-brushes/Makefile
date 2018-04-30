@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2018/04/30 20:56:11 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/04/30 20:57:47 wiz Exp $
 
 DISTNAME=	mypaint-brushes-1.3.0
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Jehan/}
 GITHUB_PROJECT=	mypaint-brushes
-GITHUB_TAG=	v1.3.0
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/Jehan/mypaint-brushes/
