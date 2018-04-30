@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2015/07/23 20:54:54 markd Exp $
+# $NetBSD: options.mk,v 1.7 2018/04/30 05:12:51 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gimp
 PKG_SUPPORTED_OPTIONS=	aalib mng pdf svg
@@ -16,11 +16,6 @@ PLIST.aalib=		yes
 .if !empty(PKG_OPTIONS:Mmng)
 .include "../../graphics/mng/buildlink3.mk"
 PLIST.mng=		yes
-.endif
-
-.if !empty(PKG_OPTIONS:Mpdf)
-.include "../../print/poppler-glib/buildlink3.mk"
-PLIST.pdf=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Msvg)
