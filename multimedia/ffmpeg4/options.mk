@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2018/04/26 07:56:57 adam Exp $
+# $NetBSD: options.mk,v 1.2 2018/04/30 09:00:46 adam Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg4
 PKG_SUPPORTED_OPTIONS=	ass bluray doc fdk-aac fontconfig freetype gnutls \
-			lame libvpx opencore-amr openssl opus rpi \
-			rtmp theora vorbis x11 x264 x265 xcb xvid
+			lame libvpx opencore-amr openssl opus rpi rtmp \
+			tesseract theora vorbis x11 x264 x265 xcb xvid
 PKG_SUGGESTED_OPTIONS=	lame ass bluray freetype fontconfig libvpx openssl \
 			theora vorbis x11 x264 xvid
 
@@ -111,6 +111,14 @@ CONFIGURE_ARGS+=	--disable-openssl
 .if !empty(PKG_OPTIONS:Mrtmp)
 CONFIGURE_ARGS+=	--enable-librtmp
 .include "../../net/rtmpdump/buildlink3.mk"
+.endif
+
+# OCR filter using Tesseract
+.if !empty(PKG_OPTIONS:Mtesseract)
+CONFIGURE_ARGS+=	--enable-libtesseract
+.include "../../graphics/tesseract/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libtesseract
 .endif
 
 # OGG Theora support
