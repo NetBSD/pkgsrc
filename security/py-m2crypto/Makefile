@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2018/04/27 06:47:25 adam Exp $
+# $NetBSD: Makefile,v 1.48 2018/04/30 08:51:15 adam Exp $
 
-DISTNAME=	M2Crypto-0.30.0
+DISTNAME=	M2Crypto-0.30.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/M2Crypto/}
