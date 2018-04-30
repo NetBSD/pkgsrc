@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2058 2018/04/30 05:40:16 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.2059 2018/04/30 06:06:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2845,3 +2845,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/gegl to 0.4.0 [ryoon 2018-04-30]
 	Updated sysutils/open-vm-tools to 10.2.5 [ryoon 2018-04-30]
 	Updated graphics/feh to 2.25.1 [ryoon 2018-04-30]
+	Updated finance/gnucash to 3.1 [wiz 2018-04-30]
