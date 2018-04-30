@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.279 2018/04/28 20:19:10 wiz Exp $
+# $NetBSD: Makefile,v 1.280 2018/04/30 05:12:51 ryoon Exp $
 
-DISTNAME=	gimp-2.8.22
-PKGREVISION=	9
+DISTNAME=	gimp-2.10.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,8 +11,10 @@ COMMENT=	The GNU image manipulation program
 LICENSE=	gnu-lgpl-v3 AND gnu-gpl-v3
 
 BUILD_DEPENDS+=	p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
+DEPENDS+=	glib-networking>=2.36.2:../../net/glib-networking
 CONFLICTS+=	gimp<=1.2.3
 
+USE_LANGUAGES+=		c c++14
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
@@ -47,19 +48,25 @@ BUILDLINK_API_DEPENDS.lcms+=		lcms>=1.12
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/babl/buildlink3.mk"
-.include "../../graphics/gegl0.2/buildlink3.mk"
+.include "../../graphics/gegl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/gexiv2/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
+.include "../../graphics/libmypaint/buildlink3.mk"
+.include "../../graphics/mypaint-brushes/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
+.include "../../print/poppler-data/buildlink3.mk"
+.include "../../print/poppler-glib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .if !empty(PKG_BUILD_OPTIONS.gtk2:Mx11)
 PLIST.remote=	yes
