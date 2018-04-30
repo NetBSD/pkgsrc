@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2018/04/30 19:31:47 minskim Exp $
+include/utf8proc.h
+lib/libutf8proc.so
+lib/libutf8proc.so.2
+lib/libutf8proc.so.${PKGVERSION}
