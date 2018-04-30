@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/01/19 18:52:14 agc Exp $
+# $NetBSD: Makefile,v 1.16 2018/04/30 10:41:35 wiz Exp $
 
 DISTNAME=	pcc-1.0.0
 CATEGORIES=	lang
@@ -15,7 +15,6 @@ ONLY_FOR_PLATFORM=	NetBSD-*-arm* NetBSD-*-i386 NetBSD-*-mips* \
 			NetBSD-*-x86_64 \
 			OpenBSD-*-i386 OpenBSD-*-vax \
 			OpenBSD-*-powerpc OpenBSD-*-sparc64 \
-			DragonFly-*-i386 \
 			MirBSD-*-i386 \
 			Darwin-*-i386 Darwin-*-powerpc \
 			FreeBSD-*-i386 \
