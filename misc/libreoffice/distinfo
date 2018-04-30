@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.54 2018/04/19 18:07:03 mrg Exp $
+$NetBSD: distinfo,v 1.55 2018/04/30 04:46:16 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -215,7 +215,6 @@ SHA1 (patch-download.lst) = ebcdd4ad27656f2199312413c5d118c0049f8316
 SHA1 (patch-external_harfbuzz_UnpackedTarball__harfbuzz.mk) = ffe2b8ff9e9ff6b5faf4eea1d51a8983908d0602
 SHA1 (patch-external_mariadb-connector-c_UnpackedTarball__mariadb-connector-c.mk) = ed0c6861fd9a61eeac05e235dd505b6bed166a3a
 SHA1 (patch-external_mariadb-connector-c_netbsd.patch) = e20e0cc58153b865551a8dd2819fb141f20fcb8d
-SHA1 (patch-external_mysql-connector-cpp_patches_netbsd.patch) = d0981757856f5b28082ee468b385dc2fdf027dd0
 SHA1 (patch-external_postgresql_ExternalProject__postgresql.mk) = 7c94155221025fe3c89217341d81e279943078ce
 SHA1 (patch-external_postgresql_UnpackedTarball__postgresql.mk) = d0b94e20d9e1aa89adac0f4a91c7b684850c78bc
 SHA1 (patch-external_postgresql_postgresql-9.2.1-openssl-1.1.patch) = de2b5d8e657e9721867f9c72a402cc30fd093218
@@ -229,6 +228,8 @@ SHA1 (patch-i18nutil_source_utility_unicode.cxx) = b2c48cafe10cf4fd45604c8e501bb
 SHA1 (patch-lotuswordpro_source_filter_localtime.cxx) = 8db23e81f54b5a71e331dfccb57cceb8aab92d2a
 SHA1 (patch-mysqlc_Library__mysqlc.mk) = b040cfdb25f41896c77df3acafd4c31dc41dd590
 SHA1 (patch-opencl_source_openclconfig.cxx) = 2178f73aa08148cfd54d9a8c79eb29bf535f2e6b
+SHA1 (patch-sdext_source_pdfimport_xpdfwrapper_pdfioutdev__gpl.cxx) = 6df205a34db526938eccaa3190d3f9ef4a62d76a
+SHA1 (patch-sdext_source_pdfimport_xpdfwrapper_pdfioutdev__gpl.hxx) = 2c25420332c28768973aa15dae8fa57fbcf118b3
 SHA1 (patch-solenv_gbuild_Module.mk) = cbd6ca3acae187458e49fe76d973e6475ed5fe1d
 SHA1 (patch-vcl_Executable__visualbackendtest.mk) = 2db5f3e7daabb2a79181de5e136de019d5264b58
 SHA1 (patch-vcl_inc_scrptrun.h) = 52877f7f6c867e2baeed525c200ce7d75a97574a
