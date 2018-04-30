@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18318 2018/04/30 06:40:20 wiz Exp $
+$NetBSD: TODO,v 1.18319 2018/04/30 10:14:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1440,7 +1440,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ufoai-2.3.1
 	o uhttpmock-0.5.0
 	o unicap-0.9.8
-	o unison-2.51.2
 	o units-2.12
 	o unrealircd-4.0.6
 	o urlgrabber-3.10.1
