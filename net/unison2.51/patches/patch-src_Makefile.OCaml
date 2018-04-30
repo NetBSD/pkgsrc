@@ -1,7 +1,6 @@
-$NetBSD: patch-src_Makefile.OCaml,v 1.1 2018/04/30 10:14:29 wiz Exp $
+$NetBSD: patch-src_Makefile.OCaml,v 1.2 2018/04/30 10:21:02 wiz Exp $
 
 Correct lablgtk paths for 2.16, and use ocamlopt.opt for compilation
-Add -unsafe-string for OCaml >= 4.06.
 
 --- src/Makefile.OCaml.orig	2018-01-27 21:12:13.000000000 +0000
 +++ src/Makefile.OCaml
