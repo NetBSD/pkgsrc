@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2018/04/30 04:53:25 ryoon Exp $
+include/libmypaint/mypaint-brush-settings-gen.h
+include/libmypaint/mypaint-brush-settings.h
+include/libmypaint/mypaint-brush.h
+include/libmypaint/mypaint-config.h
+include/libmypaint/mypaint-fixed-tiled-surface.h
+include/libmypaint/mypaint-glib-compat.h
+include/libmypaint/mypaint-mapping.h
+include/libmypaint/mypaint-rectangle.h
+include/libmypaint/mypaint-surface.h
+include/libmypaint/mypaint-tiled-surface.h
+lib/libmypaint.la
+lib/pkgconfig/libmypaint.pc
