@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.66 2018/04/09 08:47:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.67 2018/04/30 06:06:07 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -369,7 +369,6 @@ lib/gnucash/scm/ccache/2.2/html-acct-table.go
 lib/gnucash/scm/ccache/2.2/html-barchart.go
 lib/gnucash/scm/ccache/2.2/html-document.go
 lib/gnucash/scm/ccache/2.2/html-fonts.go
-lib/gnucash/scm/ccache/2.2/html-jqplot.go
 lib/gnucash/scm/ccache/2.2/html-linechart.go
 lib/gnucash/scm/ccache/2.2/html-piechart.go
 lib/gnucash/scm/ccache/2.2/html-scatter.go
@@ -1134,7 +1133,6 @@ share/gnucash/scm/html-acct-table.scm
 share/gnucash/scm/html-barchart.scm
 share/gnucash/scm/html-document.scm
 share/gnucash/scm/html-fonts.scm
-share/gnucash/scm/html-jqplot.scm
 share/gnucash/scm/html-linechart.scm
 share/gnucash/scm/html-piechart.scm
 share/gnucash/scm/html-scatter.scm
