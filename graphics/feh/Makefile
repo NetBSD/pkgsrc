@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.90 2018/04/29 21:31:43 adam Exp $
+# $NetBSD: Makefile,v 1.91 2018/04/30 05:39:49 ryoon Exp $
 
-DISTNAME=	feh-2.22.2
-PKGREVISION=	2
+DISTNAME=	feh-2.25.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://feh.finalrewind.org/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +14,13 @@ USE_LANGUAGES=	c99
 
 USE_TOOLS+=	gmake
 
+# for alphasort(3)
+CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
+# for undefined reference error from strverscmp(3)
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD"
+BUILD_MAKE_FLAGS+=	verscmp=0
+.endif
 LDFLAGS.SunOS+=		-lnsl -lsocket
 
 BUILDLINK_DEPMETHOD.libXt?=	build
