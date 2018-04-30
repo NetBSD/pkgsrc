@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.32 2018/04/04 09:34:46 jaapb Exp $
+$NetBSD: patch-configure,v 1.33 2018/04/30 10:38:04 wiz Exp $
 
 All kinds of OS-specific changes to configure
 Honor LDFLAGS.
@@ -63,14 +63,6 @@ Honor LDFLAGS.
      i386-*-gnu0.3)                natdynlink=true;;
      i[3456]86-*-haiku*)           natdynlink=true;;
      arm*-*-linux*)                natdynlink=true;;
-@@ -951,6 +953,7 @@ system=unknown
- case "$target" in
-   i[3456]86-*-linux*)           arch=i386; system=linux_`sh ./runtest elf.c`;;
-   i[3456]86-*-*bsd*)            arch=i386; system=bsd_`sh ./runtest elf.c`;;
-+  i[3456]86-*-dragonfly*)       arch=i386; system=bsd_`sh ./runtest elf.c`;;
-   i[3456]86-*-solaris*)         if $arch64; then
-                                   arch=amd64; system=solaris
-                                 else
 @@ -959,6 +962,7 @@ case "$target" in
    i[3456]86-*-haiku*)           arch=i386; system=beos;;
    i[3456]86-*-beos*)            arch=i386; system=beos;;
