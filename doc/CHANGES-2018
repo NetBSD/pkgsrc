@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2067 2018/04/30 08:51:39 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2068 2018/04/30 08:58:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2860,3 +2860,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/namazu to 2.0.21nb7 [taca 2018-04-30]
 	Updated www/py-gunicorn to 19.8.0 [adam 2018-04-30]
 	Updated security/py-m2crypto to 0.30.1 [adam 2018-04-30]
+	Updated www/squid3 to 3.5.27nb3 [taca 2018-04-30]
