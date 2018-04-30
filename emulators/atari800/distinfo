@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2017/12/14 22:12:19 adam Exp $
+$NetBSD: distinfo,v 1.22 2018/04/30 10:37:48 wiz Exp $
 
 SHA1 (atari800-3.1.0.tar.gz) = d81d57ae8cc14169521e3738d3ac1b2e18a95080
 RMD160 (atari800-3.1.0.tar.gz) = 8644aec61b8f9084d7ced672236d779bee1fedcc
@@ -11,5 +11,4 @@ Size (xf25.zip) = 188942 bytes
 SHA1 (patch-ac) = 28a10768c6214cbe3cad9006916dbfa28b70eb96
 SHA1 (patch-cfg.c) = c8f22ca08b4fad2c24886dc8132c7269331b4f39
 SHA1 (patch-configure) = 9ad06b6a273b8efe6c628e40cde7ce4e304675cd
-SHA1 (patch-rdevice.c) = 9c17f7e600db506e7e6e9f1f3780e66b404813be
 SHA1 (patch-sound__oss.c) = 7318f96c460bbd9cb116401328e2368ce7be29ab
