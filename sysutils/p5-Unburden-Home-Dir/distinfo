@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.4 2017/02/09 10:37:12 hauke Exp $
+$NetBSD: distinfo,v 1.5 2018/04/30 09:45:13 hauke Exp $
 
-SHA1 (Unburden-Home-Dir-0.4.0.1.tar.gz) = 1692724d7790ccec30fa40b5df3158ea7b648bd0
-RMD160 (Unburden-Home-Dir-0.4.0.1.tar.gz) = 58b0d5c5805770c5f6d1a657f25bafad3a60b07e
-SHA512 (Unburden-Home-Dir-0.4.0.1.tar.gz) = 1496c3db3c05729e074748b8014e65ae5bfbb9636f64cc281749a184f9a771a8938968f6c38aa498107d748e98c1434c0d33554850db678923b9b78d0aab7338
-Size (Unburden-Home-Dir-0.4.0.1.tar.gz) = 50930 bytes
+SHA1 (Unburden-Home-Dir-0.4.1.tar.gz) = 294602ea0208e7262c1d5dc12a74ef993a9daf1f
+RMD160 (Unburden-Home-Dir-0.4.1.tar.gz) = 3b1ebfcd224199cde82b2316e79a74ea38140305
+SHA512 (Unburden-Home-Dir-0.4.1.tar.gz) = b55ae892616fdcdc4aab21b52940b23cd9347a1d26a28f898a27ab0d2cc24a5024296a5f3d8c25ed7ac421d9165934692a4e7408bd7e0c3e92f1e7c897e4db3e
+Size (Unburden-Home-Dir-0.4.1.tar.gz) = 56483 bytes
 SHA1 (patch-Xsession.d_25unburden-home-dir-xdg) = 17e35f199b082d96ead8402f53f0c1f3a5116d2e
 SHA1 (patch-Xsession.d_95unburden-home-dir) = 745ea2cb3a28c36bd8ab5ed7dd0622160d2916e1
-SHA1 (patch-bin_unburden-home-dir) = 0a043df8f029fe144eb735939ab9d3e2895fba4b
+SHA1 (patch-bin_unburden-home-dir) = 706281b9f4decb27fed593d42b4607ca771ed824
 SHA1 (patch-docs_unburden-home-dir.1.md) = 513a1aa840a645931d6c73de78c48213a2dc20e5
 SHA1 (patch-share_common.sh) = 9d7ed9273e9fa0b817051753d00a76bcd640f9f4

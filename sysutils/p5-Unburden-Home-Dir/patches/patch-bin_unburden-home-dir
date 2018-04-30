@@ -1,11 +1,11 @@
-$NetBSD: patch-bin_unburden-home-dir,v 1.3 2017/02/09 10:37:12 hauke Exp $
+$NetBSD: patch-bin_unburden-home-dir,v 1.4 2018/04/30 09:45:13 hauke Exp $
 
 We depend on sysutils/lsof, so we do not need to hunt for it
 Rename the config file, sticking to conventions
 
---- bin/unburden-home-dir.orig	2016-10-17 14:13:06.000000000 +0000
+--- bin/unburden-home-dir.orig	2017-11-05 23:48:51.000000000 +0000
 +++ bin/unburden-home-dir
-@@ -88,7 +88,7 @@ my %OPTIONS = ();
+@@ -90,7 +90,7 @@ my %OPTIONS = ();
  my $FILTER = undef;
  my $UID = getpwuid($<);
  my $USE_LSOF = 1;
@@ -14,7 +14,7 @@ Rename the config file, sticking to conventions
  
  # Some messages for Getopt::Std
  sub VERSION_MESSAGE {
-@@ -153,10 +153,10 @@ foreach my $key (keys %OPTIONS) {
+@@ -156,10 +156,10 @@ foreach my $key (keys %OPTIONS) {
  }
  
  # By default check for a system wide and a user configuration and list file
@@ -28,7 +28,7 @@ Rename the config file, sticking to conventions
                   "$ENV{HOME}/.$BASENAME.$LISTSUFFIX",
                   config_home($BASENAME)."/$LISTSUFFIX");
  
-@@ -221,20 +221,6 @@ my $rsync = File::Rsync->new(
+@@ -225,20 +225,6 @@ my $rsync = File::Rsync->new(
      },
  );
  
@@ -36,7 +36,7 @@ Rename the config file, sticking to conventions
 -my $which_lsof = which('lsof');
 -# Extra check for crappy distributions which place lsof outside a
 -# user's $PATH. Fixes GH#8.
--if (!$which_lsof and -x '/usr/sbin/lsof') {
+-if (not($which_lsof) and -x '/usr/sbin/lsof') {
 -    $which_lsof = '/usr/sbin/lsof';
 -}
 -if (!$which_lsof) {
