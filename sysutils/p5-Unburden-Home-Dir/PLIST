@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/02/07 14:34:35 hauke Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/04/30 09:45:13 hauke Exp $
 bin/unburden-home-dir
 libexec/unburden-home-dir/common.sh
 man/man1/unburden-home-dir.1
@@ -10,6 +10,7 @@ share/doc/unburden-home-dir/howto.md
 share/doc/unburden-home-dir/index.md
 share/doc/unburden-home-dir/installation.md
 share/doc/unburden-home-dir/license.md
+share/doc/unburden-home-dir/pgp.md
 share/doc/unburden-home-dir/qa.md
 share/doc/unburden-home-dir/see-also.md
 share/doc/unburden-home-dir/source-code.md
