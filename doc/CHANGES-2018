@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2062 2018/04/30 06:43:37 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2063 2018/04/30 06:46:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2850,3 +2850,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/links to 2.15 [wiz 2018-04-30]
 	Updated converters/py-simplejson to 3.14.0 [adam 2018-04-30]
 	Updated textproc/py-jellyfish to 0.6.1 [adam 2018-04-30]
+	Updated mail/roundcube to 1.2.9 [taca 2018-04-30]
+	Updated mail/roundcube-plugin-enigma to 1.2.9 [taca 2018-04-30]
+	Updated mail/roundcube-plugin-password to 1.2.9 [taca 2018-04-30]
+	Updated mail/roundcube-plugin-zipdownload to 1.2.9 [taca 2018-04-30]
