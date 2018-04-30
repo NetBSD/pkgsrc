@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2073 2018/04/30 16:54:46 bacon Exp $
+$NetBSD: CHANGES-2018,v 1.2074 2018/04/30 19:31:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2866,3 +2866,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added net/unison2.51 version 2.51.2 [wiz 2018-04-30]
 	Updated security/libgpg-error to 1.30 [wiz 2018-04-30]
 	Added biology/htslib version 1.8 [bacon 2018-04-30]
+	Added converters/utf8proc version 2.1.1 [minskim 2018-04-30]
