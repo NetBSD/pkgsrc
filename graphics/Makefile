@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.789 2018/04/30 04:55:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.790 2018/04/30 04:57:24 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -344,6 +344,7 @@ SUBDIR+=	mpeg2codec
 SUBDIR+=	mpgtx
 SUBDIR+=	mscgen
 SUBDIR+=	mypaint
+SUBDIR+=	mypaint-brushes
 SUBDIR+=	ncview
 SUBDIR+=	netpbm
 SUBDIR+=	ns-cult3d
