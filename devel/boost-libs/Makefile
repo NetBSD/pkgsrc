@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2018/04/29 20:41:11 adam Exp $
+# $NetBSD: Makefile,v 1.65 2018/04/30 00:27:32 ryoon Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -23,7 +23,9 @@ BJAM_ARGS+=		--without-coroutine2
 BJAM_ARGS+=		--without-fiber
 .else
 PLIST.context=		yes
+.if ${OPSYS} != "NetBSD"
 PLIST.fiber=		yes
+.endif
 .endif
 
 # Darwin GCC is unable to build Boost.Log
