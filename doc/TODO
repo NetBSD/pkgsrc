@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18315 2018/04/29 20:53:09 wiz Exp $
+$NetBSD: TODO,v 1.18316 2018/04/30 06:30:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -447,7 +447,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bmkdep-20140112
 	o bochs-2.6.9
 	o boolean-7.1
-	o boost-libs-1.67.0
 	o bos-2.5
 	o boson-0.13
 	o bottlerocket-0.05b3
@@ -676,7 +675,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ghc-8.2
 	o ghc7-7.10.1
 	o ghdl-0.33
-	o gimp-2.10
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5
