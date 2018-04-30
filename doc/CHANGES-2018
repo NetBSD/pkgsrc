@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2069 2018/04/30 09:45:50 hauke Exp $
+$NetBSD: CHANGES-2018,v 1.2070 2018/04/30 09:47:05 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2862,3 +2862,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-m2crypto to 0.30.1 [adam 2018-04-30]
 	Updated www/squid3 to 3.5.27nb3 [taca 2018-04-30]
 	Updated sysutils/p5-Unburden-Home-Dir to 0.4.1 [hauke 2018-04-30]
+	Updated www/php-glpi to 9.2.3 [hauke 2018-04-30]
