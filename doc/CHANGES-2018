@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2070 2018/04/30 09:47:05 hauke Exp $
+$NetBSD: CHANGES-2018,v 1.2071 2018/04/30 10:14:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2863,3 +2863,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/squid3 to 3.5.27nb3 [taca 2018-04-30]
 	Updated sysutils/p5-Unburden-Home-Dir to 0.4.1 [hauke 2018-04-30]
 	Updated www/php-glpi to 9.2.3 [hauke 2018-04-30]
+	Added net/unison2.51 version 2.51.2 [wiz 2018-04-30]
