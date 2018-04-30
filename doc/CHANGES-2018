@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2066 2018/04/30 08:15:38 taca Exp $
+$NetBSD: CHANGES-2018,v 1.2067 2018/04/30 08:51:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2858,3 +2858,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-channels to 2.1.1 [adam 2018-04-30]
 	Updated mail/squirrelmail to 1.4.23pre14764 [taca 2018-04-30]
 	Updated textproc/namazu to 2.0.21nb7 [taca 2018-04-30]
+	Updated www/py-gunicorn to 19.8.0 [adam 2018-04-30]
+	Updated security/py-m2crypto to 0.30.1 [adam 2018-04-30]
