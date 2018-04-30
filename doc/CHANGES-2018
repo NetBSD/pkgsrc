@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2064 2018/04/30 07:37:41 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2065 2018/04/30 07:57:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2856,3 +2856,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/roundcube-plugin-zipdownload to 1.2.9 [taca 2018-04-30]
 	Updated www/py-daphne to 2.1.1 [adam 2018-04-30]
 	Updated www/py-channels to 2.1.1 [adam 2018-04-30]
+	Updated mail/squirrelmail to 1.4.23pre14764 [taca 2018-04-30]
