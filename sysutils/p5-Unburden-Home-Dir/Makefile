@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2017/06/05 14:24:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2018/04/30 09:45:13 hauke Exp $
 
-VERSION_TAG=	0.4.0.1
+VERSION_TAG=	0.4.1
 
 DISTNAME=	Unburden-Home-Dir-${VERSION_TAG}
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 #PKGREVISION=	1
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	-https://codeload.github.com/xtaran/unburden-home-dir/tar.gz/${VERSION_TAG}
@@ -22,6 +21,8 @@ DEPENDS+=	p5-File-Rsync-[0-9]*:../../net/p5-File-Rsync
 DEPENDS+=	p5-File-Touch-[0-9]*:../../devel/p5-File-Touch
 DEPENDS+=	p5-File-Which-[0-9]*:../../devel/p5-File-Which
 DEPENDS+=	p5-String-Expand-[0-9]*:../../textproc/p5-String-Expand
+DEPENDS+=	p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
+DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 DEPENDS+=	lsof-[0-9]*:../../sysutils/lsof
 
 USE_TOOLS+=	perl
@@ -60,22 +61,25 @@ SUBST_SED.comment-cfg=		-E -e 's,^([^\#]),\#\1,g'
 
 .include "../../mk/bsd.prefs.mk"
 
-# Rendering the man page from markdown source requires ronn from
-# wip/ruby-ronn, but we must not depend on a wip package.
+# To keep this package lightweight, leave it to the pkg updater to render
+# the man page.
 #
-# Usage: Install wip/ruby-ronn and devel/gmake, then run
+# Usage: Install devel/ruby-ronn and devel/gmake, then run
 # 	`make clean ; make PKG_DEVELOPER=1 unburden-update-manpage`
 # and commit the updated man file .
 
 .if defined(PKG_DEVELOPER)
 
-#DEPENDS+=	ruby22-ronn-[0-9]*:../../wip/ruby-ronn
-#USE_TOOLS+=	gmake
+DEPENDS+=	${RUBY_PKGPREFIX}-ronn-[0-9]*:../../devel/ruby-ronn
 
 .PHONY:		unburden-update-manpage
 unburden-update-manpage:	patch
-	( cd ${WRKSRC} && gmake manpages )
+	( cd ${WRKSRC} && \
+	  ronn${RUBY_VER} --manual="Unburden Your Home Directory" -r \
+	  --pipe < docs/unburden-home-dir.1.md > unburden-home-dir.1 )
 	cp ${WRKSRC}/unburden-home-dir.1 ${PKGDIR}/files/
+
+.include "../../lang/ruby/rubyversion.mk"
 
 .endif # PKG_DEVELOPER
 
