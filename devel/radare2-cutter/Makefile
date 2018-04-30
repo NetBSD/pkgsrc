@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/04/17 22:29:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2018/04/30 09:21:09 dholland Exp $
 
 DISTNAME=	cutter-1.2
 PKGNAME=	radare2-${DISTNAME}
@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c c++
 
 USE_CMAKE=	yes
-USE_TOOLS+=	gmake pax
+USE_TOOLS+=	gmake pax pkg-config
 
 WRKSRC=	${WRKDIR}/${DISTNAME}/src
 
