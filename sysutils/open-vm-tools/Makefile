@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2018/04/16 14:35:12 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2018/04/30 05:32:22 ryoon Exp $
 
-OVTVER=		10.2.0
-DISTNAME=	open-vm-tools-${OVTVER}-7253323
+OVTVER=		10.2.5
+DISTNAME=	open-vm-tools-${OVTVER}-8068406
 PKGNAME=	open-vm-tools-${OVTVER}
 PKGREVISION=	3
 CATEGORIES=	sysutils
