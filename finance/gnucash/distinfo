@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.85 2018/04/09 08:47:35 wiz Exp $
+$NetBSD: distinfo,v 1.86 2018/04/30 06:06:07 wiz Exp $
 
-SHA1 (gnucash-3.0.tar.bz2) = a575e853668b93b34dcd94f0ef0d1fee25b0165f
-RMD160 (gnucash-3.0.tar.bz2) = d25619d60034fa411cbc58b4ffe0ac1a807f5f12
-SHA512 (gnucash-3.0.tar.bz2) = 5ec13b8abe1520a7e614ceeca4c41d5dba3ebae4ec965918584963022ceb5cb3b85862289a85a72767db74a0c735214a78342a53c37e6da939ff850538174a87
-Size (gnucash-3.0.tar.bz2) = 13366724 bytes
-SHA1 (googletest-1.8.0.tar.gz) = e7e646a6204638fe8e87e165292b8dd9cd4c36ed
-RMD160 (googletest-1.8.0.tar.gz) = b0a9e48874df3291a261ed85a0c0a4d677b01dc1
-SHA512 (googletest-1.8.0.tar.gz) = 1dbece324473e53a83a60601b02c92c089f5d314761351974e097b2cf4d24af4296f9eb8653b6b03b1e363d9c5f793897acae1f0c7ac40149216035c4d395d9d
-Size (googletest-1.8.0.tar.gz) = 1281617 bytes
+SHA1 (gnucash-3.1.tar.bz2) = db4e266337ef83eae451d284cb21482db5406f4a
+RMD160 (gnucash-3.1.tar.bz2) = 706d574f6050c49e08ff5bd9300fc416050ed976
+SHA512 (gnucash-3.1.tar.bz2) = 1ca28c042e8d1a25ea29cba73a3f694b40b4db3bbb90a42c0b4d3a6b41cc63e42152406fd95bef6328d382a7ede2d9848486653f704595b24d6bbfafd3451c0c
+Size (gnucash-3.1.tar.bz2) = 13374489 bytes
