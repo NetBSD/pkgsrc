@@ -128,7 +128,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 	t.CreateFileLines("mk/bsd.pkg.mk",
 		"# dummy")
 
-	// See GlobalData.loadDocChanges.
+	// See Pkgsrc.loadDocChanges.
 	// FIXME: pkglint should warn that the latest version in this file
 	// (1.10) doesn't match the current version in the package (1.11).
 	t.CreateFileLines("doc/CHANGES-2018",
@@ -138,7 +138,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"",
 		"\tUpdated sysutils/checkperms to 1.10 [rillig 2018-01-05]")
 
-	// See GlobalData.loadSuggestedUpdates.
+	// See Pkgsrc.loadSuggestedUpdates.
 	t.CreateFileLines("doc/TODO",
 		RcsID,
 		"",
@@ -158,7 +158,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"MASTER_SITE_GITHUB+=\thttps://github.com/")
 
 	// The options for the PKG_OPTIONS framework must be readable.
-	// See GlobalData.loadPkgOptions.
+	// See Pkgsrc.loadPkgOptions.
 	t.CreateFileLines("mk/defaults/options.description",
 		"option Description")
 
@@ -433,7 +433,7 @@ func (s *Suite) Test_ChecklinesMessage__autofix(c *check.C) {
 		"===========================================================================")
 }
 
-func (s *Suite) Test_GlobalData_Latest_no_basedir(c *check.C) {
+func (s *Suite) Test_Pkgsrc_Latest_no_basedir(c *check.C) {
 	t := s.Init(c)
 
 	latest1 := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
@@ -443,7 +443,7 @@ func (s *Suite) Test_GlobalData_Latest_no_basedir(c *check.C) {
 		"ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~/lang\".")
 }
 
-func (s *Suite) Test_GlobalData_Latest_no_subdirs(c *check.C) {
+func (s *Suite) Test_Pkgsrc_Latest_no_subdirs(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupFileLines("lang/Makefile")
@@ -455,7 +455,7 @@ func (s *Suite) Test_GlobalData_Latest_no_subdirs(c *check.C) {
 		"ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~/lang\".")
 }
 
-func (s *Suite) Test_GlobalData_Latest_single(c *check.C) {
+func (s *Suite) Test_Pkgsrc_Latest_single(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupFileLines("lang/Makefile")
@@ -466,7 +466,7 @@ func (s *Suite) Test_GlobalData_Latest_single(c *check.C) {
 	c.Check(latest3, equals, "../../lang/python27")
 }
 
-func (s *Suite) Test_GlobalData_Latest_multi(c *check.C) {
+func (s *Suite) Test_Pkgsrc_Latest_multi(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupFileLines("lang/Makefile")
@@ -478,7 +478,7 @@ func (s *Suite) Test_GlobalData_Latest_multi(c *check.C) {
 	c.Check(latest4, equals, "../../lang/python35")
 }
 
-func (s *Suite) Test_GlobalData_Latest_numeric(c *check.C) {
+func (s *Suite) Test_Pkgsrc_Latest_numeric(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupFileLines("databases/postgresql95/Makefile")
