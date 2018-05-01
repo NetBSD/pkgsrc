@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2018/04/17 22:10:04 wiz Exp $
+# $NetBSD: Makefile.common,v 1.30 2018/05/01 21:20:45 adam Exp $
 #
 # used by audio/gst-plugins1-alsa/Makefile
 # used by audio/gst-plugins1-cdparanoia/Makefile
@@ -19,6 +19,7 @@ LICENSE=		gnu-lgpl-v2
 # Disable all drivers and features by default.
 .for driver in	alsa \
 		cdparanoia \
+		cocoa \
 		freetypetest \
 		gio \
 		ivorbis \
