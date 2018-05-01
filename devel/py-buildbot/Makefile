@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2018/04/03 20:58:18 adam Exp $
+# $NetBSD: Makefile,v 1.18 2018/05/01 18:20:08 adam Exp $
 
-DISTNAME=	buildbot-1.1.0
+DISTNAME=	buildbot-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot/}
