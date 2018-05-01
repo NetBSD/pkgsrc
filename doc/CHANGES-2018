@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2074 2018/04/30 19:31:56 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2075 2018/05/01 07:24:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2867,3 +2867,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/libgpg-error to 1.30 [wiz 2018-04-30]
 	Added biology/htslib version 1.8 [bacon 2018-04-30]
 	Added converters/utf8proc version 2.1.1 [minskim 2018-04-30]
+	Updated www/py-django-admin-rangefilter to 0.3.6 [adam 2018-05-01]
+	Updated www/py-django-js-asset to 1.1.0 [adam 2018-05-01]
