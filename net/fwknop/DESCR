@@ -1,0 +1,5 @@
+fwknop stands for the "FireWall KNock OPerator", and implements an authorization
+scheme called Single Packet Authorization (SPA). This method of authorization is
+based around a default-drop packet filter (fwknop supports iptables and
+firewalld on Linux, ipfw on FreeBSD and Mac OS X, and PF on OpenBSD) and
+libpcap. SPA is essentially next generation port knocking.
