@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/04/03 20:58:18 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/05/01 18:20:08 adam Exp $
 
-DISTNAME=	buildbot-grid-view-1.1.0
+DISTNAME=	buildbot-grid-view-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot-grid-view/}
