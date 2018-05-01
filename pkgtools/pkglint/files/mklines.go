@@ -134,8 +134,8 @@ func (mklines *MkLines) Check() {
 
 	ChecklinesTrailingEmptyLines(mklines.lines)
 
-	if indentation.Len() != 1 && indentation.Depth() != 0 {
-		lastMkline.Errorf("Directive indentation is not 0, but %d.", indentation.Depth())
+	if indentation.Len() != 1 && indentation.Depth("") != 0 {
+		lastMkline.Errorf("Directive indentation is not 0, but %d.", indentation.Depth(""))
 	}
 
 	SaveAutofixChanges(mklines.lines)

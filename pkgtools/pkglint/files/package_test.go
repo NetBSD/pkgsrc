@@ -469,3 +469,72 @@ func (s *Suite) Test_Package_conditionalAndUnconditionalInclude(c *check.C) {
 		"WARN: ~/category/package/options.mk:6: \"../../sysutils/coreutils/buildlink3.mk\" is "+
 			"included unconditionally here and conditionally in Makefile:7 (depending on OPSYS).")
 }
+
+// See https://github.com/rillig/pkglint/issues/1
+func (s *Suite) Test_Package_includeWithoutExists(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupVartypes()
+	t.CreateFileLines("mk/bsd.pkg.mk")
+	t.CreateFileLines("category/package/Makefile",
+		MkRcsID,
+		"",
+		".include \"options.mk\"",
+		"",
+		".include \"../../mk/bsd.pkg.mk\"")
+
+	G.CurrentDir = t.TempFilename("category/package")
+	G.checkdirPackage(G.CurrentDir)
+
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/options.mk: Cannot be read.")
+}
+
+// See https://github.com/rillig/pkglint/issues/1
+func (s *Suite) Test_Package_includeAfterExists(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupVartypes()
+	t.CreateFileLines("mk/bsd.pkg.mk")
+	t.CreateFileLines("category/package/Makefile",
+		MkRcsID,
+		"",
+		".if exists(options.mk)",
+		".  include \"options.mk\"",
+		".endif",
+		"",
+		".include \"../../mk/bsd.pkg.mk\"")
+
+	G.CurrentDir = t.TempFilename("category/package")
+	G.checkdirPackage(G.CurrentDir)
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset. Are you sure PLIST handling is ok?",
+		"WARN: ~/category/package/distinfo: File not found. Please run \"@BMAKE@ makesum\" or define NO_CHECKSUM=yes in the package Makefile.",
+		"ERROR: ~/category/package/Makefile: Each package must define its LICENSE.",
+		"WARN: ~/category/package/Makefile: No COMMENT given.",
+		"ERROR: ~/category/package/Makefile:4: \"options.mk\" does not exist.",
+		"ERROR: ~/category/package/Makefile:7: \"/mk/bsd.pkg.mk\" does not exist.")
+}
+
+// See https://github.com/rillig/pkglint/issues/1
+func (s *Suite) Test_Package_includeOtherAfterExists(c *check.C) {
+	t := s.Init(c)
+
+	t.SetupVartypes()
+	t.CreateFileLines("mk/bsd.pkg.mk")
+	t.CreateFileLines("category/package/Makefile",
+		MkRcsID,
+		"",
+		".if exists(options.mk)",
+		".  include \"another.mk\"",
+		".endif",
+		"",
+		".include \"../../mk/bsd.pkg.mk\"")
+
+	G.CurrentDir = t.TempFilename("category/package")
+	G.checkdirPackage(G.CurrentDir)
+
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/another.mk: Cannot be read.")
+}

@@ -414,8 +414,8 @@ func (s *Suite) Test_MkLines_Check_indentation(c *check.C) {
 		"NOTE: options.mk:12: This directive should be indented by 2 spaces.",
 		"NOTE: options.mk:13: This directive should be indented by 0 spaces.",
 		"NOTE: options.mk:14: This directive should be indented by 0 spaces.",
-		"ERROR: options.mk:15: Unmatched .endif.",
-		"NOTE: options.mk:15: This directive should be indented by 0 spaces.")
+		"NOTE: options.mk:15: This directive should be indented by 0 spaces.",
+		"ERROR: options.mk:15: Unmatched .endif.")
 }
 
 // Demonstrates how to define your own make(1) targets.

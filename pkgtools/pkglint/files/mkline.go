@@ -724,19 +724,28 @@ func (vuc *VarUseContext) String() string {
 }
 
 // Indentation remembers the stack of preprocessing directives and their
-// indentation.  By convention, each directive is indented by 2 spaces.
+// indentation. By convention, each directive is indented by 2 spaces.
 // An excepting are multiple-inclusion guards, they don't increase the
 // indentation.
 type Indentation struct {
 	depth         []int      // Number of space characters; always a multiple of 2
 	conditionVars [][]string // Variables on which the current path depends
+
+	// Files whose existence has been checked in a related path.
+	// The check counts for both the "if" and the "else" branch,
+	// but that sloppiness will be discovered by functional tests.
+	checkedFiles [][]string
 }
 
 func (ind *Indentation) Len() int {
 	return len(ind.depth)
 }
 
-func (ind *Indentation) Depth() int {
+func (ind *Indentation) Depth(directive string) int {
+	switch directive {
+	case "elif", "else", "endfor", "endif":
+		return ind.depth[imax(0, len(ind.depth)-2)]
+	}
 	return ind.depth[len(ind.depth)-1]
 }
 
@@ -744,11 +753,13 @@ func (ind *Indentation) Pop() {
 	newlen := ind.Len() - 1
 	ind.depth = ind.depth[:newlen]
 	ind.conditionVars = ind.conditionVars[:newlen]
+	ind.checkedFiles = ind.checkedFiles[:newlen]
 }
 
 func (ind *Indentation) Push(indent int) {
 	ind.depth = append(ind.depth, indent)
 	ind.conditionVars = append(ind.conditionVars, nil)
+	ind.checkedFiles = append(ind.checkedFiles, nil)
 }
 
 func (ind *Indentation) AddVar(varname string) {
@@ -795,6 +806,22 @@ func (ind *Indentation) Varnames() string {
 		}
 	}
 	return varnames
+}
+
+func (ind *Indentation) AddCheckedFile(filename string) {
+	level := ind.Len() - 1
+	ind.checkedFiles[level] = append(ind.checkedFiles[level], filename)
+}
+
+func (ind *Indentation) IsCheckedFile(filename string) bool {
+	for _, levelFilenames := range ind.checkedFiles {
+		for _, levelFilename := range levelFilenames {
+			if filename == levelFilename {
+				return true
+			}
+		}
+	}
+	return false
 }
 
 func MatchVarassign(text string) (m, commented bool, varname, spaceAfterVarname, op, valueAlign, value, spaceAfterValue, comment string) {
