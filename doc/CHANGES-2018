@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2076 2018/05/01 15:43:41 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2077 2018/05/01 16:06:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2870,3 +2870,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-django-admin-rangefilter to 0.3.6 [adam 2018-05-01]
 	Updated www/py-django-js-asset to 1.1.0 [adam 2018-05-01]
 	Updated devel/boost-headers to 1.67.0nb2 [minskim 2018-05-01]
+	Added graphics/R-gridExtra version 2.3 [minskim 2018-05-01]
