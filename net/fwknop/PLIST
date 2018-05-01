@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2018/05/01 21:10:42 khorben Exp $
+bin/fwknop
+include/fko.h
+info/libfko.info
+lib/libfko.la
+man/man8/fwknop.8
+man/man8/fwknopd.8
+sbin/fwknopd
+share/examples/fwknop/access.conf
+share/examples/fwknop/fwknopd.conf
+@pkgdir etc/fwknop
