@@ -1,12 +1,13 @@
-$NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.6 2017/09/09 21:48:56 prlw1 Exp $
+$NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.7 2018/05/01 06:17:11 wiz Exp $
 
 - Object.h is included in pdf-parser.h -- see patch for pdf-parser.h.
 - Support poppler 0.58
   https://gitlab.com/inkscape/inkscape/commit/9418824967eb4c53371ef8588243fed4cab496e0
+- Support poppler 0.64
 
---- src/extension/internal/pdfinput/pdf-parser.cpp.orig	2014-06-09 13:24:41.000000000 +0000
+--- src/extension/internal/pdfinput/pdf-parser.cpp.orig	2017-08-06 20:44:00.000000000 +0000
 +++ src/extension/internal/pdfinput/pdf-parser.cpp
-@@ -38,7 +38,7 @@ extern "C" {
+@@ -41,7 +41,7 @@ extern "C" {
  #include "goo/GooHash.h"
  #include "GlobalParams.h"
  #include "CharTypes.h"
@@ -505,6 +506,33 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.6 2017/09/09 2
    if (colorSpace) {
      GfxColor color;
      state->setStrokeColorSpace(colorSpace);
+@@ -2310,7 +2490,7 @@ void PdfParser::opShowText(Object args[]
+     builder->updateFont(state);
+     fontChanged = gFalse;
+   }
+-  doShowText(args[0].getString());
++  doShowText((GooString *)args[0].getString());
+ }
+ 
+ // TODO not good that numArgs is ignored but args[] is used:
+@@ -2331,7 +2511,7 @@ void PdfParser::opMoveShowText(Object ar
+   ty = state->getLineY() - state->getLeading();
+   state->textMoveTo(tx, ty);
+   builder->updateTextPosition(tx, ty);
+-  doShowText(args[0].getString());
++  doShowText((GooString *)args[0].getString());
+ }
+ 
+ // TODO not good that numArgs is ignored but args[] is used:
+@@ -2354,7 +2534,7 @@ void PdfParser::opMoveSetShowText(Object
+   ty = state->getLineY() - state->getLeading();
+   state->textMoveTo(tx, ty);
+   builder->updateTextPosition(tx, ty);
+-  doShowText(args[2].getString());
++  doShowText((GooString *)args[2].getString());
+ }
+ 
+ // TODO not good that numArgs is ignored but args[] is used:
 @@ -2375,7 +2555,11 @@ void PdfParser::opShowSpaceText(Object a
    wMode = state->getFont()->getWMode();
    a = args[0].getArray();
@@ -517,7 +545,12 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.6 2017/09/09 2
      if (obj.isNum()) {
        // this uses the absolute value of the font size to match
        // Acrobat's behavior
-@@ -2392,7 +2576,9 @@ void PdfParser::opShowSpaceText(Object a
+@@ -2388,11 +2572,13 @@ void PdfParser::opShowSpaceText(Object a
+       }
+       builder->updateTextShift(state, obj.getNum());
+     } else if (obj.isString()) {
+-      doShowText(obj.getString());
++      doShowText((GooString *)obj.getString());
      } else {
        error(errSyntaxError, getPos(), "Element of show/space array must be number or string");
      }
@@ -549,10 +582,12 @@ $NetBSD: patch-src_extension_internal_pdfinput_pdf-parser.cpp,v 1.6 2017/09/09 2
        }
        restoreState();
        // GfxState::restore() does *not* restore the current position,
-@@ -2541,23 +2733,43 @@ void PdfParser::opXObject(Object args[],
+@@ -2540,24 +2732,44 @@ void PdfParser::opXObject(Object args[],
+ {
    Object obj1, obj2, obj3, refObj;
  
-   char *name = args[0].getName();
+-  char *name = args[0].getName();
++  char *name = (char *)args[0].getName();
 +#if defined(POPPLER_NEW_OBJECT_API)
 +  if ((obj1 = res->lookupXObject(name)).isNull()) {
 +#else
