@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2079 2018/05/01 18:35:56 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2080 2018/05/01 20:26:51 martin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2881,3 +2881,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/libspectrum to 1.4.2 [adam 2018-05-01]
 	Updated emulators/fuse-emulator to 1.5.3 [adam 2018-05-01]
 	Updated emulators/fuse-emulator-utils to 1.4.1 [adam 2018-05-01]
+	Updated graphics/babl to 0.1.46nb1 [martin 2018-05-01]
