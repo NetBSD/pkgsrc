@@ -61,7 +61,7 @@ func (s *Suite) Test_Pkgsrc_parseSuggestedUpdates(c *check.C) {
 		{lines[6], "freeciv-client", "2.5.0", "(urgent)"}})
 }
 
-func (s *Suite) Test_GlobalData_loadTools(c *check.C) {
+func (s *Suite) Test_Pkgsrc_loadTools(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupFileLines("mk/tools/bsd.tools.mk",
@@ -123,7 +123,7 @@ func (s *Suite) Test_GlobalData_loadTools(c *check.C) {
 		"TRACE: - (*ToolRegistry).Trace()")
 }
 
-func (s *Suite) Test_GlobalData_loadDocChangesFromFile(c *check.C) {
+func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile(c *check.C) {
 	t := s.Init(c)
 
 	t.SetupFileLines("doc/CHANGES-2015",
@@ -147,7 +147,7 @@ func (s *Suite) Test_GlobalData_loadDocChangesFromFile(c *check.C) {
 	c.Check(*changes[6], equals, Change{changes[6].Line, "Downgraded", "category/package", "1.2", "author7", "2015-01-07"})
 }
 
-func (s *Suite) Test_GlobalData_deprecated(c *check.C) {
+func (s *Suite) Test_Pkgsrc_deprecated(c *check.C) {
 	t := s.Init(c)
 
 	G.Pkgsrc.initDeprecatedVars()
