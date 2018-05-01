@@ -46,7 +46,7 @@ func (ck MkLineChecker) checkInclude() {
 
 	mkline := ck.MkLine
 	if mkline.Indent() != "" {
-		ck.checkDirectiveIndentation(G.Mk.indentation.Depth())
+		ck.checkDirectiveIndentation(G.Mk.indentation.Depth("include"))
 	}
 
 	includefile := mkline.Includefile()
@@ -98,25 +98,19 @@ func (ck MkLineChecker) checkCond(forVars map[string]bool, indentation *Indentat
 	directive := mkline.Directive()
 	args := mkline.Args()
 
-	switch directive {
-	case "endif", "endfor":
+	expectedDepth := indentation.Depth(directive)
+	ck.checkDirectiveIndentation(expectedDepth)
+
+	if directive == "if" && matches(args, `^!defined\([\w]+_MK\)$`) {
+		indentation.Push(indentation.Depth(directive))
+	} else if matches(directive, `^(?:if|ifdef|ifndef|for)$`) {
+		indentation.Push(indentation.Depth(directive) + 2)
+	} else if directive == "endfor" || directive == "endif" {
 		if indentation.Len() > 1 {
 			indentation.Pop()
 		} else {
 			mkline.Errorf("Unmatched .%s.", directive)
 		}
-	}
-
-	expectedDepth := indentation.Depth()
-	if directive == "elif" || directive == "else" {
-		expectedDepth = indentation.depth[len(indentation.depth)-2]
-	}
-	ck.checkDirectiveIndentation(expectedDepth)
-
-	if directive == "if" && matches(args, `^!defined\([\w]+_MK\)$`) {
-		indentation.Push(indentation.Depth())
-	} else if matches(directive, `^(?:if|ifdef|ifndef|for)$`) {
-		indentation.Push(indentation.Depth() + 2)
 	}
 
 	needsArgument := matches(directive, `^(?:if|ifdef|ifndef|elif|for|undef)$`)
