@@ -286,6 +286,28 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 		allLines.mklines = append(allLines.mklines, mkline)
 		allLines.lines = append(allLines.lines, mkline.Line)
 
+		if mkline.IsCond() {
+			ind := &fileMklines.indentation
+			switch mkline.Directive() {
+			case "if", "ifdef", "ifndef", "for":
+				ind.Push(0) // Dummy indentation, only the checkedFiles are interesting
+			case "endfor", "endif":
+				if ind.Len() > 1 {
+					ind.Pop()
+				}
+			}
+
+			if mkline.Directive() == "if" {
+				args := mkline.Args()
+				if contains(args, "exists") {
+					cond := NewMkParser(mkline.Line, args, false).MkCond()
+					cond.Visit("exists", func(node *Tree) {
+						ind.AddCheckedFile(node.args[0].(string))
+					})
+				}
+			}
+		}
+
 		var includeFile, incDir, incBase string
 		if mkline.IsInclude() {
 			inc := mkline.Includefile()
@@ -334,7 +356,11 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 				// current file and in the current working directory.
 				// Pkglint doesn't have an include dir list, like make(1) does.
 				if !fileExists(dirname + "/" + includeFile) {
-					if dirname != G.CurrentDir { // Prevent unnecessary syscalls
+
+					if fileMklines.indentation.IsCheckedFile(includeFile) {
+						continue // See https://github.com/rillig/pkglint/issues/1
+
+					} else if dirname != G.CurrentDir { // Prevent unnecessary syscalls
 						dirname = G.CurrentDir
 						if !fileExists(dirname + "/" + includeFile) {
 							mkline.Errorf("Cannot read %q.", dirname+"/"+includeFile)
@@ -346,8 +372,9 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 				if trace.Tracing {
 					trace.Step1("Including %q.", dirname+"/"+includeFile)
 				}
-				includingFname := ifelseStr(incBase == "Makefile.common" && incDir != "", fname, "")
-				if !pkg.readMakefile(dirname+"/"+includeFile, mainLines, allLines, includingFname) {
+				absIncluding := ifelseStr(incBase == "Makefile.common" && incDir != "", fname, "")
+				absIncluded := dirname + "/" + includeFile
+				if !pkg.readMakefile(absIncluded, mainLines, allLines, absIncluding) {
 					return false
 				}
 			}
