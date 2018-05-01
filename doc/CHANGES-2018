@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2080 2018/05/01 20:26:51 martin Exp $
+$NetBSD: CHANGES-2018,v 1.2081 2018/05/01 21:11:43 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2882,3 +2882,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated emulators/fuse-emulator to 1.5.3 [adam 2018-05-01]
 	Updated emulators/fuse-emulator-utils to 1.4.1 [adam 2018-05-01]
 	Updated graphics/babl to 0.1.46nb1 [martin 2018-05-01]
+	Added net/fwknop version 2.6.9 [khorben 2018-05-01]
