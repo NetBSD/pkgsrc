@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2017/09/06 16:49:30 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/05/02 11:45:41 markd Exp $
 
 DISTNAME=	amscls
-PKGNAME=	tex-${DISTNAME}-2015
-TEXLIVE_REV=	36804
+PKGNAME=	tex-${DISTNAME}-2018	# actually 2.20.4
+TEXLIVE_REV=	46099
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/amscls
