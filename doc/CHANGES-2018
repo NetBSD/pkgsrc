@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2115 2018/05/02 12:31:14 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2116 2018/05/02 12:32:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2938,3 +2938,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/p5-Algorithm-Cluster to 1.56 [wiz 2018-05-02]
 	Updated math/p5-Math-BigInt to 1.999813 [wiz 2018-05-02]
 	Updated math/p5-Math-BigInt-GMP to 1.6005 [wiz 2018-05-02]
+	Updated math/p5-Math-BigInt-Pari to 1.3004 [wiz 2018-05-02]
