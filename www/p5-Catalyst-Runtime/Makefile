@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2018/03/05 07:20:00 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2018/05/02 14:01:17 wiz Exp $
 
-DISTNAME=	Catalyst-Runtime-5.90117
+DISTNAME=	Catalyst-Runtime-5.90118
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
@@ -26,7 +26,6 @@ DEPENDS+=	p5-Data-Dump>=0:../../devel/p5-Data-Dump
 DEPENDS+=	p5-HTML-Parser>=0:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTTP-Body>=1.06:../../www/p5-HTTP-Body
 DEPENDS+=	p5-HTTP-Message>=5.814:../../www/p5-HTTP-Message
-DEPENDS+=	p5-HTTP-Request-AsCGI>=1.0:../../www/p5-HTTP-Request-AsCGI
 DEPENDS+=	p5-Module-Pluggable>=4.7:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-libwww>=0:../../www/p5-libwww
 DEPENDS+=	p5-Path-Class>=0.09:../../devel/p5-Path-Class
@@ -42,7 +41,6 @@ DEPENDS+=	p5-String-RewritePrefix>=0.004:../../textproc/p5-String-RewritePrefix
 DEPENDS+=	p5-Plack>=0.9991:../../www/p5-Plack
 DEPENDS+=	p5-Plack-Middleware-ReverseProxy>=0.04:../../www/p5-Plack-Middleware-ReverseProxy
 DEPENDS+=	p5-Plack-Test-ExternalServer>=0:../../www/p5-Plack-Test-ExternalServer
-DEPENDS+=	p5-Class-Data-Inheritable-[0-9]*:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-URI>=1.36:../../www/p5-URI
 DEPENDS+=	p5-URI-ws-[0-9]*:../../www/p5-URI-ws
 DEPENDS+=	p5-JSON-MaybeXS>=1.36:../../converters/p5-JSON-MaybeXS
