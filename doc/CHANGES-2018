@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2083 2018/05/02 04:49:43 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2084 2018/05/02 06:33:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2885,3 +2885,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added net/fwknop version 2.6.9 [khorben 2018-05-01]
 	Updated pkgtools/pkglint to 5.5.10 [rillig 2018-05-01]
 	Updated math/py-numpy to 1.14.3 [adam 2018-05-02]
+	Updated www/py-django to 1.11.13 [adam 2018-05-02]
+	Updated www/py-django2 to 2.0.5 [adam 2018-05-02]
