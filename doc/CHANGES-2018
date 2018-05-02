@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2082 2018/05/01 23:30:22 rillig Exp $
+$NetBSD: CHANGES-2018,v 1.2083 2018/05/02 04:49:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2884,3 +2884,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/babl to 0.1.46nb1 [martin 2018-05-01]
 	Added net/fwknop version 2.6.9 [khorben 2018-05-01]
 	Updated pkgtools/pkglint to 5.5.10 [rillig 2018-05-01]
+	Updated math/py-numpy to 1.14.3 [adam 2018-05-02]
