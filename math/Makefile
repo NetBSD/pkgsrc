@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.384 2018/04/14 11:35:23 adam Exp $
+# $NetBSD: Makefile,v 1.385 2018/05/02 13:00:21 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -205,6 +205,7 @@ SUBDIR+=	otter
 SUBDIR+=	p5-Algorithm-BloomFilter
 SUBDIR+=	p5-Algorithm-Cluster
 SUBDIR+=	p5-Algorithm-Munkres
+SUBDIR+=	p5-Alien-GMP
 SUBDIR+=	p5-Excel-Template
 SUBDIR+=	p5-Excel-Template-Plus
 SUBDIR+=	p5-Math-Base-Convert
