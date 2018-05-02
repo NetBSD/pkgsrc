@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2139 2018/05/02 20:16:31 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2140 2018/05/02 20:20:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2962,3 +2962,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added net/ruby-network_interface version 0.0.2 [minskim 2018-05-02]
 	Updated www/p5-Mojolicious to 7.77 [wiz 2018-05-02]
 	Updated www/p5-Session-Storage-Secure to 0.011 [wiz 2018-05-02]
+	Updated www/p5-Test-WWW-Mechanize to 1.50 [wiz 2018-05-02]
