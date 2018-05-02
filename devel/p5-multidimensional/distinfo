@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/04/22 06:27:45 mef Exp $
+$NetBSD: distinfo,v 1.5 2018/05/02 12:22:25 wiz Exp $
 
-SHA1 (multidimensional-0.013.tar.gz) = 41fa2e462e7d9959f0593db7a2e3f326d66fd727
-RMD160 (multidimensional-0.013.tar.gz) = 5f5fecec733168799b96caa1670d3a309d9dbace
-SHA512 (multidimensional-0.013.tar.gz) = 9abc93efd0060042f16c9e89c37a11a08c781ab2d095964701661a17f4adfeaf7cf3cb134db9c91a366b5ddda482716eda5d3b002fdb38fa4694d7e24dbc76f6
-Size (multidimensional-0.013.tar.gz) = 67528 bytes
+SHA1 (multidimensional-0.014.tar.gz) = 59bb25a7aa9a7d3cf3cebdd5d63f46b419b1aab0
+RMD160 (multidimensional-0.014.tar.gz) = 1c80cad36ef335efcad3dec18660e84b3223cf0c
+SHA512 (multidimensional-0.014.tar.gz) = 94c9dabb3023165a8dd140ef791e4aab980e3b604eae06ed0e29290aab67a9302f2cde4c8b394de0b4c55c5f78ce4510db902d615d665bf60b12ec409f341043
+Size (multidimensional-0.014.tar.gz) = 66968 bytes
