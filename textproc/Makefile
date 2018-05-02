@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.986 2018/04/28 01:09:17 tsutsui Exp $
+# $NetBSD: Makefile,v 1.987 2018/05/02 13:01:57 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -419,7 +419,6 @@ SUBDIR+=	oniguruma
 SUBDIR+=	openjade
 SUBDIR+=	opensp
 SUBDIR+=	ots
-SUBDIR+=	p5-Alien-Base
 SUBDIR+=	p5-Alien-Hunspell
 SUBDIR+=	p5-Biblio-EndnoteStyle
 SUBDIR+=	p5-CAM-PDF
