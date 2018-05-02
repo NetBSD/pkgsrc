@@ -1,14 +1,24 @@
-$NetBSD: distinfo,v 1.4 2018/04/26 09:39:18 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2018/05/02 12:42:50 jperkin Exp $
 
 SHA1 (js185-1.0.0.tar.gz) = 52a01449c48d7a117b35f213d3e4263578d846d6
 RMD160 (js185-1.0.0.tar.gz) = 23e6ddc81d5b63e015aecc1a104b2d3d3ced5005
 SHA512 (js185-1.0.0.tar.gz) = 2af7122a7c7007fd7b6668776fe1222515a810b3e43bbf0f76b8f94e1ef406ffd3fb5ccec393021b00274c05b38a77235bc8d6886994c56762fcaf0aa7cf6718
 Size (js185-1.0.0.tar.gz) = 6164605 bytes
 SHA1 (patch-configure) = 77366fff7e8b766b5691d0432b8740d4c8c362a6
+SHA1 (patch-jsatom.cpp) = 4156e97b72461af88aa68394ef439d63a4c081dc
 SHA1 (patch-jscell.h) = e2c90041b9b526d1f07e4905d0c684afe96992a9
+SHA1 (patch-jscntxt.cpp) = 7d41c587affa51f23bfff48b118d61ec6e3b87c1
 SHA1 (patch-jsgc.h) = 8e8a31e9284ce8fe0b92f36c2732722d720b9101
-SHA1 (patch-jsgcchunk.cpp) = ecc221e0e96db4083dc9cdf97848e001c091ec2c
+SHA1 (patch-jsgcchunk.cpp) = 868ef0f2e0ead5f8ef53d312f3a9162298ae23d8
+SHA1 (patch-jsiter.cpp) = dabfaeb00edbb17de670f854a3821910c197d6da
+SHA1 (patch-jsnum.cpp) = b7c0a222c2241d6acdcce3f4e84847bfeab7d545
 SHA1 (patch-jsobj.h) = 2da40bf90fd2d856bf61658964b49e8b12ac7809
 SHA1 (patch-jspubtd.h) = 6219e5ce98885b72e62978a33ee2b5367c3406b3
+SHA1 (patch-jsstr.cpp) = 2b843a89d1afea858aac9ef61092da96725308f8
+SHA1 (patch-jsstr.h) = 0d23725326ab5432bebe63d4775911bc2c74039b
+SHA1 (patch-jsstrinlines.h) = 34b465a4fb504973f65395ccd2819a29ce16c5da
+SHA1 (patch-jstracer.cpp) = 5b0b4d7709b446d1471b593e2c338f48d9fa4eec
+SHA1 (patch-jstracer.h) = 4f0bd2f958d1bedb76b6ac54e218e1fde846ad6d
+SHA1 (patch-tracejit_Writer.cpp) = fdd2751e411e933fcb22736b65ea3c93c2cecda1
 SHA1 (patch-v8-dtoa_platform.cc) = 24670e996fcc7ca0d1e7b1b3765a67ac05e9a661
 SHA1 (patch-v8-dtoa_platform.h) = 1d618d8f51e3ee169606297950d3030fcf72abbc
