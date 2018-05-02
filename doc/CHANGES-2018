@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2123 2018/05/02 13:07:55 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2124 2018/05/02 13:18:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2946,3 +2946,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/p5-Math-GMP to 2.19 [wiz 2018-05-02]
 	Updated net/p5-Net-Frame-Dump to 1.15 [wiz 2018-05-02]
 	Updated net/p5-Net-GitHub to 0.95 [wiz 2018-05-02]
+	Updated net/p5-RT-Client-REST to 0.52 [wiz 2018-05-02]
