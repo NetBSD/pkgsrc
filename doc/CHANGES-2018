@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2103 2018/05/02 12:10:02 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2104 2018/05/02 12:10:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2926,3 +2926,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/tex-arsclassica-doc to 20171031 [markd 2018-05-02]
 	Updated devel/p5-Storable to 3.11 [wiz 2018-05-02]
 	Updated devel/p5-Test-Deep to 1.128 [wiz 2018-05-02]
+	Updated devel/p5-Test-NoTabs to 2.02 [wiz 2018-05-02]
