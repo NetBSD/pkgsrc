@@ -1,4 +1,5 @@
-$NetBSD: patch-src_unix_threadpsx.cpp,v 1.1 2014/07/21 06:53:24 dbj Exp $
+$NetBSD: patch-src_unix_threadpsx.cpp,v 1.2 2018/05/02 11:33:44 adam Exp $
+
 tweak use of thread priority functions
 
 --- src/unix/threadpsx.cpp.orig	2014-06-14 21:48:48.000000000 +0000
