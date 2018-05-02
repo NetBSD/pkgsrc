@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/11/25 12:56:31 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2018/05/02 07:30:41 adam Exp $
 
 DISTNAME=	pytest-httpbin-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-CATEGORIES=	www
+CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-httpbin/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
