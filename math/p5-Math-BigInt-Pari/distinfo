@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/01/18 13:08:46 wen Exp $
+$NetBSD: distinfo,v 1.7 2018/05/02 12:31:53 wiz Exp $
 
-SHA1 (Math-BigInt-Pari-1.3003.tar.gz) = ab2fb3ff72f9f0f13a31ffed9a07346169ca18aa
-RMD160 (Math-BigInt-Pari-1.3003.tar.gz) = 0e8e5cbadacf0ff4a76411ad12173fcd936df131
-SHA512 (Math-BigInt-Pari-1.3003.tar.gz) = 085a1deb866e481c176e4fd3021d5104eea88dfd89e2c0f79b0aaebee078be350dc80f1762ccf96277877864f8f6641354fd93cfb05513b3f9804d60cfd4b804
-Size (Math-BigInt-Pari-1.3003.tar.gz) = 2430114 bytes
+SHA1 (Math-BigInt-Pari-1.3004.tar.gz) = 3cde7f2919427ee2e6caee5d4cd5ca99d035c7d2
+RMD160 (Math-BigInt-Pari-1.3004.tar.gz) = 3fa8c9e5a14645cb7c9bcdbe83f9293d62159d72
+SHA512 (Math-BigInt-Pari-1.3004.tar.gz) = eb0ca6f4b53b902b4b591f5d2e6deeea50c7ab969039f79df4e338552083f5a64111488b13aa83d7d01189dd0854d741e2bcbd421a9e54ad2ea2da2d64f48027
+Size (Math-BigInt-Pari-1.3004.tar.gz) = 2443983 bytes
