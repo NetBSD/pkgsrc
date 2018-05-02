@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2136 2018/05/02 18:03:20 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.2137 2018/05/02 18:16:34 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2959,3 +2959,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-HTTP-Message to 6.16 [wiz 2018-05-02]
 	Removed lang/nodejs4 [fhajny 2018-05-02]
 	Added devel/egypt version 1.10 [schmonz 2018-05-02]
+	Added net/ruby-network_interface version 0.0.2 [minskim 2018-05-02]
