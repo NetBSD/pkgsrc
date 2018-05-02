@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2090 2018/05/02 11:42:00 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2091 2018/05/02 11:43:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2895,3 +2895,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Devel-Events to 0.09 [wiz 2018-05-02]
 	Updated devel/p5-Dist-Zilla to 6.012 [wiz 2018-05-02]
 	Updated devel/p5-File-ConfigDir to 0.021 [wiz 2018-05-02]
+	Updated devel/p5-Log-Any-Adapter-Log4perl to 0.09 [wiz 2018-05-02]
