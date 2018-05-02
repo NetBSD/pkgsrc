@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/09/27 21:21:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/02 11:45:13 wiz Exp $
 
-DISTNAME=	Module-Compile-0.35
+DISTNAME=	Module-Compile-0.37
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
@@ -11,8 +11,8 @@ COMMENT=	Perl Module Compilation
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
+DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
 
-#PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Module/Compile/.packlist
 
 .include "../../lang/perl5/module.mk"
