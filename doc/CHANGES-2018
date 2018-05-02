@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2131 2018/05/02 13:31:30 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2132 2018/05/02 13:47:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2954,3 +2954,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/p5-Digest-SHA to 6.02 [wiz 2018-05-02]
 	Updated textproc/p5-Encode to 2.98 [wiz 2018-05-02]
 	Updated textproc/p5-String-Compare-ConstantTime to 0.320 [wiz 2018-05-02]
+	Updated www/p5-Catalyst-Controller-HTML-FormFu to 2.04 [wiz 2018-05-02]
