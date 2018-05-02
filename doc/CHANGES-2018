@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2133 2018/05/02 14:01:26 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2134 2018/05/02 14:08:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2956,3 +2956,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-String-Compare-ConstantTime to 0.320 [wiz 2018-05-02]
 	Updated www/p5-Catalyst-Controller-HTML-FormFu to 2.04 [wiz 2018-05-02]
 	Updated www/p5-Catalyst-Runtime to 5.90118 [wiz 2018-05-02]
+	Updated www/p5-HTTP-Message to 6.16 [wiz 2018-05-02]
