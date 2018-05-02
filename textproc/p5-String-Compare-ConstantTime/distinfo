@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/04/29 08:45:53 mef Exp $
+$NetBSD: distinfo,v 1.6 2018/05/02 13:31:21 wiz Exp $
 
-SHA1 (String-Compare-ConstantTime-0.312.tar.gz) = 6a5812ff37d20899cacb0fe81b8a8f5b01a478a7
-RMD160 (String-Compare-ConstantTime-0.312.tar.gz) = b678da725c9e6f67b42416458ca322b347954ab4
-SHA512 (String-Compare-ConstantTime-0.312.tar.gz) = 8bda2dbdde2d721c49f8d60f6fd00464d4a91f023eb68f990fa12a55d75fbf65fa9cad50a0deb4cb41ada4badff338abb6cf8ef72de2251560695fa1ac924fdd
-Size (String-Compare-ConstantTime-0.312.tar.gz) = 5895 bytes
+SHA1 (String-Compare-ConstantTime-0.320.tar.gz) = 37ca1d0901b80d501687a08e5c1b37d3bc31c2a5
+RMD160 (String-Compare-ConstantTime-0.320.tar.gz) = ede8152de60acb4ea5b938701489bca960ecab1a
+SHA512 (String-Compare-ConstantTime-0.320.tar.gz) = 3cc2c753d72525f34aeb6bea9c86a244fe98ef136e0ec51904c673ff5aef2df3dd49386b047a9775ce2039727f3cce578964f1a380c1e1ca226e48ee27e6c3bc
+Size (String-Compare-ConstantTime-0.320.tar.gz) = 6243 bytes
