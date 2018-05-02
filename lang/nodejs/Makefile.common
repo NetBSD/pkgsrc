@@ -1,6 +1,5 @@
-# $NetBSD: Makefile.common,v 1.17 2017/11/01 12:07:31 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.18 2018/05/02 16:33:02 fhajny Exp $
 # used by lang/nodejs/Makefile
-# used by lang/nodejs4/Makefile
 # used by lang/nodejs6/Makefile
 # used by lang/nodejs8/Makefile
 
@@ -17,6 +16,7 @@ HAS_CONFIGURE=	yes
 USE_TOOLS+=	bash gmake pkg-config
 USE_LANGUAGES=	c c++
 
+PYTHON_FOR_BUILD_ONLY=		yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.10.24
 
 .include "../../mk/bsd.prefs.mk"
@@ -27,6 +27,7 @@ GCC_REQD+=		4.8
 CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--shared-zlib
+CONFIGURE_ARGS+=	--without-npm
 PTHREAD_AUTO_VARS=	yes
 
 CONFIGURE_ENV.NetBSD+=	GYP_DEFINES="OS=netbsd"
@@ -39,13 +40,6 @@ CONFIGURE_ENV+=		GYP_DEFINES="linux_use_gold_flags=0"
 REPLACE_PYTHON+=	configure
 REPLACE_PYTHON+=	tools/genv8constants.py
 REPLACE_PYTHON+=	tools/gyp/pylib/gyp/flock_tool.py
-
-REPLACE_INTERPRETER+=	node
-REPLACE.node.old=	.*node
-REPLACE.node.new=	${PREFIX}/bin/node
-REPLACE_FILES.node=	deps/npm/bin/npx-cli.js
-
-CHECK_INTERPRETER_SKIP+=	lib/node_modules/npm/*
 
 .if ${OPSYS} == "NetBSD"
 BUILD_DEPENDS+=	lockf-[0-9]*:../../sysutils/lockf
@@ -62,12 +56,9 @@ SUBST_SED.mksnapshot+=		-e 's|call do_cmd,link)|call do_cmd,link)\${.newline}	${
 .endif
 
 pre-install:
-	${FIND} ${WRKSRC}/deps/npm -name '*.orig' | ${XARGS} ${RM} -f
 	${CHMOD} -R g-w ${WRKSRC}
 
 post-install:
-	cd ${DESTDIR}${PREFIX} && ${SETENV} ${BASH} \
-		./lib/node_modules/npm/scripts/relocate.sh ${PREFIX}/bin/node
 .if defined(TOOLS_PLATFORM.paxctl)
 	${TOOLS_PLATFORM.paxctl} +m ${DESTDIR}${PREFIX}/bin/node
 .endif
