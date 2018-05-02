@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2135 2018/05/02 16:27:54 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2136 2018/05/02 18:03:20 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2958,3 +2958,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-Catalyst-Runtime to 5.90118 [wiz 2018-05-02]
 	Updated www/p5-HTTP-Message to 6.16 [wiz 2018-05-02]
 	Removed lang/nodejs4 [fhajny 2018-05-02]
+	Added devel/egypt version 1.10 [schmonz 2018-05-02]
