@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2100 2018/05/02 12:03:17 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2101 2018/05/02 12:05:01 markd Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2905,3 +2905,22 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Ref-Util to 0.204 [wiz 2018-05-02]
 	Updated devel/p5-Safe-Hole to 0.14 [wiz 2018-05-02]
 	Updated devel/p5-Safe-Isa to 1.000010 [wiz 2018-05-02]
+	Updated graphics/tex-a2ping-doc to 2.83p [markd 2018-05-02]
+	Updated graphics/tex-a2ping to 2.83p [markd 2018-05-02]
+	Updated fonts/tex-academicons to 1.8.3 [markd 2018-05-02]
+	Updated fonts/tex-academicons-doc to 1.8.3 [markd 2018-05-02]
+	Updated print/tex-adjustbox to 1.1 [markd 2018-05-02]
+	Updated print/tex-adjustbox-doc to 1.1 [markd 2018-05-02]
+	Updated fonts/tex-adobemapping to 2018 [markd 2018-05-02]
+	Updated print/tex-adrconv to 1.4 [markd 2018-05-02]
+	Updated print/tex-adrconv-doc to 1.4 [markd 2018-05-02]
+	Updated fonts/tex-alegreya to 2018 [markd 2018-05-02]
+	Updated fonts/tex-alegreya-doc to 2018 [markd 2018-05-02]
+	Updated print/tex-amscls to 2018 [markd 2018-05-02]
+	Updated print/tex-amscls-doc to 2018 [markd 2018-05-02]
+	Updated print/tex-amsmath to 2.17a.47349 [markd 2018-05-02]
+	Updated print/tex-amsmath-doc to 2.17a.47349 [markd 2018-05-02]
+	Updated graphics/tex-animate to 20180228 [markd 2018-05-02]
+	Updated graphics/tex-animate-doc to 20180228 [markd 2018-05-02]
+	Updated print/tex-arsclassica to 20171031 [markd 2018-05-02]
+	Updated print/tex-arsclassica-doc to 20171031 [markd 2018-05-02]
