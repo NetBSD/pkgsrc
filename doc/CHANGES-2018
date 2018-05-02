@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2116 2018/05/02 12:32:04 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2117 2018/05/02 12:43:01 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2939,3 +2939,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/p5-Math-BigInt to 1.999813 [wiz 2018-05-02]
 	Updated math/p5-Math-BigInt-GMP to 1.6005 [wiz 2018-05-02]
 	Updated math/p5-Math-BigInt-Pari to 1.3004 [wiz 2018-05-02]
+	Updated lang/spidermonkey185 to 1.8.5nb1 [jperkin 2018-05-02]
