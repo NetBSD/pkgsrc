@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2134 2018/05/02 14:08:19 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2135 2018/05/02 16:27:54 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2957,3 +2957,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-Catalyst-Controller-HTML-FormFu to 2.04 [wiz 2018-05-02]
 	Updated www/p5-Catalyst-Runtime to 5.90118 [wiz 2018-05-02]
 	Updated www/p5-HTTP-Message to 6.16 [wiz 2018-05-02]
+	Removed lang/nodejs4 [fhajny 2018-05-02]
