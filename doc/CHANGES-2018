@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2109 2018/05/02 12:19:10 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2110 2018/05/02 12:20:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2932,3 +2932,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Test-Version to 2.09 [wiz 2018-05-02]
 	Updated devel/p5-Test2-Suite to 0.000114 [wiz 2018-05-02]
 	Updated devel/p5-autobox to 2.86 [wiz 2018-05-02]
+	Updated devel/p5-bareword-filehandles to 0.006 [wiz 2018-05-02]
