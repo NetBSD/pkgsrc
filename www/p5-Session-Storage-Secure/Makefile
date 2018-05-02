@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2017/06/05 14:25:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2018/05/02 20:16:22 wiz Exp $
 
-DISTNAME=	Session-Storage-Secure-0.010
+DISTNAME=	Session-Storage-Secure-0.011
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DA/DAGOLDEN/}
 
@@ -22,7 +21,7 @@ DEPENDS+=	p5-Crypt-URandom-[0-9]*:../../security/p5-Crypt-URandom
 DEPENDS+=	p5-Math-Random-ISAAC-XS-[0-9]*:../../math/p5-Math-Random-ISAAC-XS
 DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
 DEPENDS+=	p5-MooX-Types-MooseLike>=0.16:../../devel/p5-MooX-Types-MooseLike
-DEPENDS+=	p5-Sereal-Decoder-[0-9]*:../../converters/p5-Sereal-Decoder
+DEPENDS+=	p5-Sereal-Decoder>=4.005:../../converters/p5-Sereal-Decoder
 DEPENDS+=	p5-Sereal-Encoder-[0-9]*:../../converters/p5-Sereal-Encoder
 DEPENDS+=	p5-String-Compare-ConstantTime-[0-9]*:../../textproc/p5-String-Compare-ConstantTime
 DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
