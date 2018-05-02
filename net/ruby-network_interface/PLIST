@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2018/05/02 18:16:25 minskim Exp $
+bin/list_interfaces.rb
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_EXTSDIR}/network_interface_ext.${RUBY_DLEXT}
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile.lock
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/list_interfaces.rb
+${GEM_LIBDIR}/ext/network_interface_ext/extconf.rb
+${GEM_LIBDIR}/ext/network_interface_ext/netifaces.c
+${GEM_LIBDIR}/ext/network_interface_ext/netifaces.h
+${GEM_LIBDIR}/lib/network_interface.rb
+${GEM_LIBDIR}/lib/network_interface/version.rb
+${GEM_LIBDIR}/lib/network_interface_ext.${RUBY_DLEXT}
+${GEM_LIBDIR}/network_interface.gemspec
+${GEM_LIBDIR}/spec/netiface_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
