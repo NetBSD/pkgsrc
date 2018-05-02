@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.119 2018/04/06 16:24:40 fhajny Exp $
+$NetBSD: distinfo,v 1.120 2018/05/02 16:33:02 fhajny Exp $
 
 SHA1 (node-v9.11.1.tar.gz) = 3fc939185a727bff26fc43c09dec44792c8c1869
 RMD160 (node-v9.11.1.tar.gz) = 840e648f6f46786657613801e748d1d5d627a0cf
@@ -6,8 +6,6 @@ SHA512 (node-v9.11.1.tar.gz) = 6bdd0afa3bdcc633075bbaf1c3a9b8c1a914a881da2dc942f
 Size (node-v9.11.1.tar.gz) = 31479280 bytes
 SHA1 (patch-common.gypi) = 6c4f5c3f82270d5ebadce2ad3228a058634595cb
 SHA1 (patch-deps_cares_cares.gyp) = 2235eb44bc984fa2e745fdf1786f1ae6de6ef80f
-SHA1 (patch-deps_npm_node__modules_node-gyp_gyp_pylib_gyp_generator_make.py) = 78d6ddd37ae30e869e0da666a78baad86a638c50
-SHA1 (patch-deps_npm_node__modules_node-gyp_gyp_pylib_gyp_xcode__emulation.py) = 6f21f937d2baf5799192e96865771cef6b4822a5
 SHA1 (patch-deps_uv_common.gypi) = ba9caa1f6d9d6df1913d0d72a8d18ea6db0a32ff
 SHA1 (patch-deps_uv_src_unix_netbsd.c) = c3c9ee5b6e97ca796973b762365f06d8479befa2
 SHA1 (patch-deps_v8_src_arm_cpu-arm.cc) = d0d11ac474ab109a6f40b26fa457b12d742eb48d
