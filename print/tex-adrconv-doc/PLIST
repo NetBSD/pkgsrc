@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2013/10/19 20:43:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/05/02 11:32:49 markd Exp $
 share/texmf-dist/doc/latex/adrconv/2latex.vim
+share/texmf-dist/doc/latex/adrconv/README
+share/texmf-dist/doc/latex/adrconv/adrconv.pdf
 share/texmf-dist/doc/latex/adrconv/adrconv.tex
 share/texmf-dist/doc/latex/adrconv/adrconv_pages08.pages/Contents/PkgInfo
 share/texmf-dist/doc/latex/adrconv/adrconv_pages08.pages/QuickLook/Thumbnail.jpg
