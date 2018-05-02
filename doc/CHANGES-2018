@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2088 2018/05/02 09:31:31 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2089 2018/05/02 10:21:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2893,3 +2893,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-test-mock to 1.10.0 [adam 2018-05-02]
 	Updated devel/p5-Class-Adapter to 1.09 [wiz 2018-05-02]
 	Updated devel/p5-Devel-Events to 0.09 [wiz 2018-05-02]
+	Updated devel/p5-Dist-Zilla to 6.012 [wiz 2018-05-02]
