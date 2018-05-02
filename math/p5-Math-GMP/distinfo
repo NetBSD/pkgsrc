@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2017/12/30 14:35:19 wiz Exp $
+$NetBSD: distinfo,v 1.10 2018/05/02 13:03:54 wiz Exp $
 
-SHA1 (Math-GMP-2.16.tar.gz) = e6e4eb0660f9f8ddfc03adb6d32e60cb824ba105
-RMD160 (Math-GMP-2.16.tar.gz) = b1f38d74327d2277ae28490a8f7d3eb915a1a923
-SHA512 (Math-GMP-2.16.tar.gz) = 0e45a1a3535bf1edd96911a786f93bed15daf4ccd9e082adc7f7a1270baa6fea32255ebe2f47ed4448e12980615083683ea9040ff7ff0dd19182da05065020c6
-Size (Math-GMP-2.16.tar.gz) = 33290 bytes
+SHA1 (Math-GMP-2.19.tar.gz) = c7ba15e1b7d3b0847198cbf3cd938f86137284ed
+RMD160 (Math-GMP-2.19.tar.gz) = 5b57c7e7fbf376397fa84dc0ad4fad1702edf0d8
+SHA512 (Math-GMP-2.19.tar.gz) = 3d2e7d9c32ec84790c20f6e93b0088bcf32c7d68078ee2f7ea25a4e80391d39da904788fbcc41a2660aa1b7718c29fb7f8b36d617553f8ca7e3b8275d41d0466
+Size (Math-GMP-2.19.tar.gz) = 33475 bytes
