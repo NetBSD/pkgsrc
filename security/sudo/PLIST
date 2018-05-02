@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/03/07 09:17:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/05/02 07:33:13 triaxx Exp $
 bin/sudo
 bin/sudoedit
 bin/sudoreplay
@@ -54,6 +54,7 @@ ${PLIST.nls}share/locale/fi/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/fr/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/fr/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/fur/LC_MESSAGES/sudo.mo
+${PLIST.nls}share/locale/fur/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/gl/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/hr/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/hr/LC_MESSAGES/sudoers.mo
