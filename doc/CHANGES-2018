@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2113 2018/05/02 12:25:23 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2114 2018/05/02 12:29:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2936,3 +2936,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-multidimensional to 0.014 [wiz 2018-05-02]
 	Updated devel/p5-version to 0.9924 [wiz 2018-05-02]
 	Updated math/p5-Algorithm-Cluster to 1.56 [wiz 2018-05-02]
+	Updated math/p5-Math-BigInt to 1.999813 [wiz 2018-05-02]
