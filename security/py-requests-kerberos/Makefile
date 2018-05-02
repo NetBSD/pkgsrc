@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2018/01/19 09:10:04 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/05/02 10:59:49 markd Exp $
 
 DISTNAME=	requests-kerberos-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests-kerberos/}
 
@@ -15,6 +16,11 @@ DEPENDS+=	${PYPKGPREFIX}-kerberos>=1.1.8nb1:../../security/py-kerberos
 DEPENDS+=	${PYPKGPREFIX}-requests>=1.1.0:../../devel/py-requests
 
 USE_LANGUAGES=	# none
+
+SUBST_CLASSES+=		requires
+SUBST_STAGE.requires=	post-patch
+SUBST_FILES.requires=	setup.py
+SUBST_SED.requires=	-e 's/pykerberos/kerberos/'
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
