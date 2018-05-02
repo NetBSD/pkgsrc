@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2665 2018/04/29 23:20:44 minskim Exp $
+# $NetBSD: Makefile,v 1.2666 2018/05/02 12:57:40 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -830,6 +830,7 @@ SUBDIR+=	p5-Algorithm-Permute
 SUBDIR+=	p5-Alien-Base-ModuleBuild
 SUBDIR+=	p5-Alien-Build
 SUBDIR+=	p5-Alien-Packages
+SUBDIR+=	p5-Alien-Role-Alt
 SUBDIR+=	p5-Alien-SDL
 SUBDIR+=	p5-AnnoCPAN-Perldoc
 SUBDIR+=	p5-Any-Moose
