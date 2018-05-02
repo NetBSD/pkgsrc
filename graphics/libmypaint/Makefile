@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/04/30 04:53:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/02 14:39:32 minskim Exp $
 
 DISTNAME=	libmypaint-1.3.0
 CATEGORIES=	graphics
@@ -16,10 +16,11 @@ CONFLICTS+=	mypaint-[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	intltool pkg-config
+USE_TOOLS+=	intltool msgfmt msgmerge pkg-config xgettext
 
 PKGCONFIG_OVERRIDE+=	gegl/libmypaint-gegl.pc.in
 PKGCONFIG_OVERRIDE+=	libmypaint.pc.in
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
