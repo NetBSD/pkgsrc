@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2121 2018/05/02 13:04:03 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2122 2018/05/02 13:07:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2944,3 +2944,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/p5-Alien-GMP version 1.10 [wiz 2018-05-02]
 	Removed textproc/p5-Alien-Base successor devel/p5-Alien-Base [wiz 2018-05-02]
 	Updated math/p5-Math-GMP to 2.19 [wiz 2018-05-02]
+	Updated net/p5-Net-Frame-Dump to 1.15 [wiz 2018-05-02]
