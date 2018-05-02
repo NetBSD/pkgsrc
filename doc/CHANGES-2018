@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2104 2018/05/02 12:10:40 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2105 2018/05/02 12:11:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2927,3 +2927,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Storable to 3.11 [wiz 2018-05-02]
 	Updated devel/p5-Test-Deep to 1.128 [wiz 2018-05-02]
 	Updated devel/p5-Test-NoTabs to 2.02 [wiz 2018-05-02]
+	Updated devel/p5-Test-Pod to 1.52 [wiz 2018-05-02]
