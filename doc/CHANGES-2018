@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2129 2018/05/02 13:27:58 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2130 2018/05/02 13:29:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2952,3 +2952,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/p5-Crypt-OpenSSL-Random to 0.15 [wiz 2018-05-02]
 	Updated security/p5-CryptX to 0.060 [wiz 2018-05-02]
 	Updated security/p5-Digest-SHA to 6.02 [wiz 2018-05-02]
+	Updated textproc/p5-Encode to 2.98 [wiz 2018-05-02]
