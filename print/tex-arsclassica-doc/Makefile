@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/06/20 20:56:52 markd Exp $
+# $NetBSD: Makefile,v 1.4 2018/05/02 12:01:13 markd Exp $
 
 DISTNAME=	arsclassica.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-20170201
-TEXLIVE_REV=	43509
+PKGNAME=	tex-${DISTNAME:S/./-/}-20171031
+TEXLIVE_REV=	45656
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/arsclassica
