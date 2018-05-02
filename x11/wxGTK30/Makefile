@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/04/29 05:39:33 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2018/05/02 11:33:44 adam Exp $
 
 DISTNAME=	wxWidgets-3.0.4
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK30/}
@@ -50,7 +50,7 @@ SUBST_SED.fix-paths+=		-e 's,@PREFIX@,${PREFIX},g'
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_SRC+=             ${PLIST_SRC_DFLT}
+PLIST_SRC+=		${PLIST_SRC_DFLT}
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--with-osx_cocoa
 CONFIGURE_ARGS+=	--without-macosx-sdk
