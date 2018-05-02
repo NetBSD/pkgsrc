@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2099 2018/05/02 12:02:36 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2100 2018/05/02 12:03:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2904,3 +2904,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-PPIx-Regexp to 0.058 [wiz 2018-05-02]
 	Updated devel/p5-Ref-Util to 0.204 [wiz 2018-05-02]
 	Updated devel/p5-Safe-Hole to 0.14 [wiz 2018-05-02]
+	Updated devel/p5-Safe-Isa to 1.000010 [wiz 2018-05-02]
