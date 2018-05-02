@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2118 2018/05/02 12:57:50 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2119 2018/05/02 13:00:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2941,3 +2941,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/p5-Math-BigInt-Pari to 1.3004 [wiz 2018-05-02]
 	Updated lang/spidermonkey185 to 1.8.5nb1 [jperkin 2018-05-02]
 	Added devel/p5-Alien-Role-Alt version 0.03 [wiz 2018-05-02]
+	Added math/p5-Alien-GMP version 1.10 [wiz 2018-05-02]
