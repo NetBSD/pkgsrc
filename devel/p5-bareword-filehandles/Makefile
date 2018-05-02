@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/05/02 12:20:05 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/05/02 12:22:46 wiz Exp $
 
 DISTNAME=	bareword-filehandles-0.006
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/bareword-filehandles/
 COMMENT=	Perl 5 module which disables bareword filehandles
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Lexical-SealRequireHints>=0.005:../../devel/p5-Lexical-SealRequireHints
-DEPENDS+=	p5-ExtUtils-Depends-[0-9]*:../../devel/p5-ExtUtils-Depends
+BUILD_DEPENDS+=	p5-ExtUtils-Depends-[0-9]*:../../devel/p5-ExtUtils-Depends
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/bareword/filehandles/.packlist
