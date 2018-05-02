@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2093 2018/05/02 11:45:21 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2094 2018/05/02 11:47:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2898,3 +2898,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Log-Any-Adapter-Log4perl to 0.09 [wiz 2018-05-02]
 	Updated devel/p5-Module-CPANfile to 1.1004 [wiz 2018-05-02]
 	Updated devel/p5-Module-Compile to 0.37 [wiz 2018-05-02]
+	Updated devel/p5-Module-FromPerlVer to 0.021000 [wiz 2018-05-02]
