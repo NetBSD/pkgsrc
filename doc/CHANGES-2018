@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2142 2018/05/02 21:21:19 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2143 2018/05/02 22:13:29 roy Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2965,3 +2965,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-Test-WWW-Mechanize to 1.50 [wiz 2018-05-02]
 	Updated www/p5-WWW-Amazon-Wishlist to 2.019 [wiz 2018-05-02]
 	Updated security/sudo to 1.8.22nb1 [wiz 2018-05-02]
+	Updated net/dhcpcd to 7.0.4 [roy 2018-05-02]
