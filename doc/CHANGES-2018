@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2086 2018/05/02 07:34:16 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2087 2018/05/02 09:24:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2891,3 +2891,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-construct to 2.9.45 [adam 2018-05-02]
 	Updated www/py-httpie to 0.9.9 [adam 2018-05-02]
 	Updated devel/py-test-mock to 1.10.0 [adam 2018-05-02]
+	Updated devel/p5-Class-Adapter to 1.09 [wiz 2018-05-02]
