@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2106 2018/05/02 12:13:02 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2107 2018/05/02 12:13:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2929,3 +2929,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Test-NoTabs to 2.02 [wiz 2018-05-02]
 	Updated devel/p5-Test-Pod to 1.52 [wiz 2018-05-02]
 	Updated devel/p5-Test-Simple to 1.302136 [wiz 2018-05-02]
+	Updated devel/p5-Test-Version to 2.09 [wiz 2018-05-02]
