@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 02:47:18 agc Exp $
+$NetBSD: distinfo,v 1.4 2018/05/02 20:16:22 wiz Exp $
 
-SHA1 (Session-Storage-Secure-0.010.tar.gz) = ca58be3aeeab7b43f1b7d27a313aa64ce0352012
-RMD160 (Session-Storage-Secure-0.010.tar.gz) = 704a66625d02bca6b1c53be4c25161974abad435
-SHA512 (Session-Storage-Secure-0.010.tar.gz) = e8bcdc12633cda9f119bfa5c04b8f6118be0573ae26e31d3393ad027cf8a62fa506f12750d8311da39610390866839e9eae397bd624e5ef701ee7deab9a0e362
-Size (Session-Storage-Secure-0.010.tar.gz) = 24990 bytes
+SHA1 (Session-Storage-Secure-0.011.tar.gz) = 8646fb90c71d817abea537fa99bf4d8c0d9c3c7a
+RMD160 (Session-Storage-Secure-0.011.tar.gz) = 154e4786677370731d34c236f0c39d53c91cbd19
+SHA512 (Session-Storage-Secure-0.011.tar.gz) = 893a924b093d9a8acbc56dec1b7457df5fe9c52d49284435271de3c95e9a7e48082f11e1f022706b32fac8b1c3b706bd1040702cbe0d715796edc995aec5f33f
+Size (Session-Storage-Secure-0.011.tar.gz) = 25140 bytes
