@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2017/06/20 20:56:52 markd Exp $
-share/texmf-dist/doc/latex/amsmath/README.txt
+@comment $NetBSD: PLIST,v 1.6 2018/05/02 11:51:11 markd Exp $
+share/texmf-dist/doc/latex/amsmath/README.md
 share/texmf-dist/doc/latex/amsmath/amsbsy.pdf
 share/texmf-dist/doc/latex/amsmath/amscd.pdf
 share/texmf-dist/doc/latex/amsmath/amsgen.pdf
