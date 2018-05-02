@@ -1,4 +1,5 @@
-$NetBSD: patch-build_aclocal_bakefile.m4,v 1.1 2014/07/21 06:53:24 dbj Exp $
+$NetBSD: patch-build_aclocal_bakefile.m4,v 1.2 2018/05/02 11:33:44 adam Exp $
+
 Fix shell script portability
 
 --- build/aclocal/bakefile.m4.orig	2014-06-14 21:48:48.000000000 +0000
