@@ -1,9 +1,9 @@
-$NetBSD: patch-examples_swig_makefile,v 1.4 2018/04/08 19:40:29 schmonz Exp $
+$NetBSD: patch-extras_swig_makefile,v 1.1 2018/05/03 13:13:51 schmonz Exp $
 
 Use pkgsrc-specified compiler and flags.
 
---- examples/swig/makefile.orig	2013-09-24 20:24:04.000000000 +0000
-+++ examples/swig/makefile
+--- extras/swig/makefile.orig	2013-09-24 20:24:04.000000000 +0000
++++ extras/swig/makefile
 @@ -1,6 +1,6 @@
  
 -CXX=g++
