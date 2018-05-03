@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2144 2018/05/03 02:30:40 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2145 2018/05/03 10:29:28 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2967,3 +2967,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/sudo to 1.8.22nb1 [wiz 2018-05-02]
 	Updated net/dhcpcd to 7.0.4 [roy 2018-05-02]
 	Added devel/py-python-dotenv version 0.8.2 [wen 2018-05-03]
+	Updated lang/nodejs6 to 6.14.2 [fhajny 2018-05-03]
