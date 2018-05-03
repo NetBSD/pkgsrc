@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 01:56:14 agc Exp $
+$NetBSD: distinfo,v 1.10 2018/05/03 12:58:24 prlw1 Exp $
 
-SHA1 (libpqxx-4.0.1.tar.gz) = 4748835bd1a90fb34e6e577788006a416c2acb60
-RMD160 (libpqxx-4.0.1.tar.gz) = 7fae516d6aa59dac0d2403c6a979c5c3d9fb3fce
-SHA512 (libpqxx-4.0.1.tar.gz) = 00204985097ef8bb0a3376d6ba541dbb471d7c52d7135f6244a9f4acbf6c8e5254d6f813e4411421e49bb56f4a520fc6ac67e300141d724396ce0ac11bd3a95e
-Size (libpqxx-4.0.1.tar.gz) = 1582532 bytes
-SHA1 (patch-ab) = ec82ac6e1a6cd3fbb3b9e0e4f4296b73b4efde5e
-SHA1 (patch-src_largeobject.cxx) = f34e2a7d7e20bb155f8629327243d48021757a40
+SHA1 (libpqxx-6.2.2.tar.gz) = da04b8dbaa61a90d5f6a7afe07a7b42863a29d8a
+RMD160 (libpqxx-6.2.2.tar.gz) = 41308f00a9ab30a2e5b5b1abe2c0b9ad11eb06d5
+SHA512 (libpqxx-6.2.2.tar.gz) = 76e7bddbdc0bad8e35cecea466afe7f6b6b118e6167cb0695ddf64cb9275e543b9d3f24d2e3913812d4ff6be205ccc6017acbd777df9b1b0ceeb9719e4bb6abd
+Size (libpqxx-6.2.2.tar.gz) = 684226 bytes
+SHA1 (patch-configure.ac) = 0805f942c61fc0d69d33f8de4a7240ed603ec4f9
+SHA1 (patch-tools_extract__version) = 7d40f2d5e6eda1169e6d4098382aa5034b468aff

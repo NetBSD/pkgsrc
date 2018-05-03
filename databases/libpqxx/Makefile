@@ -1,25 +1,29 @@
-# $NetBSD: Makefile,v 1.33 2017/01/01 14:43:26 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2018/05/03 12:58:24 prlw1 Exp $
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 4.0.1
+DISTNAME=		libpqxx-6.2.2
+CATEGORIES=		databases
+MASTER_SITES=		${MASTER_SITE_GITHUB:=jtv/}
+GITHUB_PROJECT=		libpqxx
 
-PKGREVISION= 1
-.include "../../databases/libpqxx/Makefile.common"
-
+MAINTAINER=		is@NetBSD.org
+HOMEPAGE=		http://pqxx.org/development/libpqxx/
 COMMENT=		C++ interface to postgresql-lib
+LICENSE=		modified-bsd
 
-# Apparently (at least as of 2004) this package's shared libraries are
-# messed up on a.out platforms. But AFAIK we don't have any in pkgsrc
-# any more. Leave this here for documentation just in case.
-#   - dholland 20150101
-#NOT_FOR_PLATFORM=	${AOUTPLATFORMS}
-
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libpqxx.pc.in
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		autoconf gmake
 
 PYTHON_FOR_BUILD_ONLY=	yes
 REPLACE_PYTHON+=	tools/splitconfig
+REPLACE_PYTHON+=	tools/template2mak.py
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
+
+.include "options.mk"
 
 .include "../../lang/python/application.mk"
 .include "../../mk/pgsql.buildlink3.mk"
