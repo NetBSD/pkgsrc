@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2018/05/02 16:33:02 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.19 2018/05/03 21:19:16 fhajny Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs6/Makefile
 # used by lang/nodejs8/Makefile
@@ -18,9 +18,6 @@ USE_LANGUAGES=	c c++
 
 PYTHON_FOR_BUILD_ONLY=		yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.10.24
-
-.include "../../mk/bsd.prefs.mk"
-.include "options.mk"
 
 GCC_REQD+=		4.8
 

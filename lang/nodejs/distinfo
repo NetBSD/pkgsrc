@@ -1,22 +1,28 @@
-$NetBSD: distinfo,v 1.120 2018/05/02 16:33:02 fhajny Exp $
+$NetBSD: distinfo,v 1.121 2018/05/03 21:19:16 fhajny Exp $
 
-SHA1 (node-v9.11.1.tar.gz) = 3fc939185a727bff26fc43c09dec44792c8c1869
-RMD160 (node-v9.11.1.tar.gz) = 840e648f6f46786657613801e748d1d5d627a0cf
-SHA512 (node-v9.11.1.tar.gz) = 6bdd0afa3bdcc633075bbaf1c3a9b8c1a914a881da2dc942ff1477a2b000930a8777c0498db5edcb1eeaa7f13cff942ab88bf0764e296d49e0d1a9a677a52bb0
-Size (node-v9.11.1.tar.gz) = 31479280 bytes
-SHA1 (patch-common.gypi) = 6c4f5c3f82270d5ebadce2ad3228a058634595cb
+SHA1 (node-v10.0.0.tar.gz) = 6547649ab1c3d8bb9048d6dfd4f7a00e9e9c5983
+RMD160 (node-v10.0.0.tar.gz) = 8cd5e0353fffc77025d3f0288bb42ea1fc6b665b
+SHA512 (node-v10.0.0.tar.gz) = 2f269250f5edd30d6c927c9f8f1e791ac27d2bf93a117c346555e6f095be87ff151f72fd407100f6852822f9fc3aef2fc65581481b0c482d3cbcc25dd8ebb776
+Size (node-v10.0.0.tar.gz) = 35603065 bytes
+SHA1 (patch-common.gypi) = de37949f38d9bd39a18b59d59ec74e528bd323ac
 SHA1 (patch-deps_cares_cares.gyp) = 2235eb44bc984fa2e745fdf1786f1ae6de6ef80f
-SHA1 (patch-deps_uv_common.gypi) = ba9caa1f6d9d6df1913d0d72a8d18ea6db0a32ff
-SHA1 (patch-deps_uv_src_unix_netbsd.c) = c3c9ee5b6e97ca796973b762365f06d8479befa2
+SHA1 (patch-deps_openssl_config_opensslconf__asm.h) = 7b074ebd5353dff662ac66cf4012926f12dd7b7e
+SHA1 (patch-deps_openssl_config_opensslconf__no-asm.h) = 4b2eb51f6369c2acd328421cd896b8471234c0c8
+SHA1 (patch-deps_openssl_openssl-cl__asm.gypi) = a7966d08e45120c55ff5ec62c6f6bf944212af2d
+SHA1 (patch-deps_openssl_openssl-cl__no__asm.gypi) = f90a0cbdbe5d2088f892fdc6586d0fe9c612b8d5
+SHA1 (patch-deps_openssl_openssl__asm.gypi) = fef6c4e4a416e967510140463552541d24eb03a4
+SHA1 (patch-deps_openssl_openssl__no__asm.gypi) = 0c3a647a01cdd39417dc7ea00a96cbf244ece9b2
+SHA1 (patch-deps_uv_common.gypi) = d38a9c8d9e3522f15812aec2f5b1e1e636d4bab3
+SHA1 (patch-deps_uv_src_unix_netbsd.c) = c19ff4024f828018364793d9dea013c991cfb93f
 SHA1 (patch-deps_v8_src_arm_cpu-arm.cc) = d0d11ac474ab109a6f40b26fa457b12d742eb48d
 SHA1 (patch-deps_v8_src_base_atomicops.h) = 552d2b7781b39b93392fd00043b1cf4cb10802da
-SHA1 (patch-deps_v8_src_base_platform_platform-freebsd.cc) = 686c2054838a25cfeed7fb9870a959e48dc4de35
+SHA1 (patch-deps_v8_src_base_platform_platform-freebsd.cc) = 427c7712fc1c2872fc48e593f7ab491c69ee44e3
 SHA1 (patch-deps_v8_src_base_platform_platform-openbsd.cc) = 5e593879dbab095f99e82593272a0de91043f9a8
-SHA1 (patch-deps_v8_src_base_platform_platform-posix.cc) = 368620c2a20538c1e5ff194e72d62f173a7f0c91
+SHA1 (patch-deps_v8_src_base_platform_platform-posix.cc) = 0d80cc6587af9220832de112834e9f50242f819f
 SHA1 (patch-deps_v8_src_base_platform_semaphore.cc) = aa84bf1dbaac5808529f6b01502d117c88751649
 SHA1 (patch-deps_v8_src_compiler_types.h) = 711cc94535200374104c3cd1f0fbbd00994701a6
-SHA1 (patch-deps_v8_src_globals.h) = ec9798befbfbcd432b0c61bc914fe9d6a4bf4a86
-SHA1 (patch-deps_v8_src_log-utils.h) = 32bbf2de2af7a8ab6900a4d5e968dcc1357f6de2
+SHA1 (patch-deps_v8_src_globals.h) = 6695a381000844ad9837bdbc3edbe9040ec4d5ff
+SHA1 (patch-deps_v8_src_log-utils.h) = 765e4e4af2cb11e38c033174ac92fbb6ee1fd480
 SHA1 (patch-deps_v8_tools_run-llprof.sh) = 39aa3faf77492ef8dd35b411b7b0e4605b469af3
 SHA1 (patch-src_cares__wrap.cc) = a26a162f130468cbc0650a33b27b71377d273704
 SHA1 (patch-src_inspector__agent.cc) = f6d25964a6446a1cb3c7733b7668c87932efad98
