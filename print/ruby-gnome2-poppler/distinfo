@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2018/04/13 16:31:10 tsutsui Exp $
+$NetBSD: distinfo,v 1.15 2018/05/03 12:04:03 tsutsui Exp $
 
-SHA1 (poppler-3.2.4.gem) = 4d0c1b883306ed449f7e39779202861c782e84ab
-RMD160 (poppler-3.2.4.gem) = 922d47820e988c9d874d1b6bc2684e5a23797305
-SHA512 (poppler-3.2.4.gem) = c43bfc21bbcd6fbbfcd25a4f7e1649da44b5f7880f21c19ee0e181ae66b684f0880258e7b6912d3ef684620ef1f9dfb84eb63aa35ed3123ed66346c57e9aa950
-Size (poppler-3.2.4.gem) = 72704 bytes
+SHA1 (poppler-3.2.5.gem) = 5d2c34ee505288bc5ec193d5a323becd482bd29a
+RMD160 (poppler-3.2.5.gem) = 53b25dc1f84660dda618f623352e4ad221a8c950
+SHA512 (poppler-3.2.5.gem) = 1b555c6be77783b2a21caea661ff22bbb3f84a1a499f35fe5c9f1079d514a7b78c8499fade7d099e16bf2b5967fac570af3ae0e18d2d574793033ab566b09777
+Size (poppler-3.2.5.gem) = 72704 bytes
