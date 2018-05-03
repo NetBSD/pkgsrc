@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2145 2018/05/03 10:29:28 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2146 2018/05/03 12:07:54 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2968,3 +2968,25 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/dhcpcd to 7.0.4 [roy 2018-05-02]
 	Added devel/py-python-dotenv version 0.8.2 [wen 2018-05-03]
 	Updated lang/nodejs6 to 6.14.2 [fhajny 2018-05-03]
+	Updated devel/ruby-gnome2-atk to 3.2.5 [tsutsui 2018-05-03]
+	Updated devel/ruby-gnome2-gio to 3.2.5 [tsutsui 2018-05-03]
+	Updated devel/ruby-gnome2-glib to 3.2.5 [tsutsui 2018-05-03]
+	Updated devel/ruby-gnome2-gobject-introspection to 3.2.5 [tsutsui 2018-05-03]
+	Updated devel/ruby-gnome2-pango to 3.2.5 [tsutsui 2018-05-03]
+	Updated graphics/ruby-gnome2-cairo-gobject to 3.2.5 [tsutsui 2018-05-03]
+	Updated graphics/ruby-gnome2-clutter to 3.2.5 [tsutsui 2018-05-03]
+	Updated graphics/ruby-gnome2-clutter-gdk to 3.2.5 [tsutsui 2018-05-03]
+	Updated graphics/ruby-gnome2-clutter-gtk to 3.2.5 [tsutsui 2018-05-03]
+	Updated graphics/ruby-gnome2-gdk3 to 3.2.5 [tsutsui 2018-05-03]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 3.2.5 [tsutsui 2018-05-03]
+	Updated graphics/ruby-gnome2-rsvg to 3.2.5 [tsutsui 2018-05-03]
+	Updated multimedia/ruby-gnome2-clutter-gstreamer to 3.2.5 [tsutsui 2018-05-03]
+	Updated multimedia/ruby-gnome2-gstreamer to 3.2.5 [tsutsui 2018-05-03]
+	Updated print/ruby-gnome2-poppler to 3.2.5 [tsutsui 2018-05-03]
+	Updated www/ruby-gnome2-webkit-gtk to 3.2.5 [tsutsui 2018-05-03]
+	Updated www/ruby-gnome2-webkit-gtk2 to 3.2.5 [tsutsui 2018-05-03]
+	Updated x11/ruby-gnome2-gtk to 3.2.5 [tsutsui 2018-05-03]
+	Updated x11/ruby-gnome2-gtk3 to 3.2.5 [tsutsui 2018-05-03]
+	Updated x11/ruby-gnome2-gtksourceview2 to 3.2.5 [tsutsui 2018-05-03]
+	Updated x11/ruby-gnome2-gtksourceview3 to 3.2.5 [tsutsui 2018-05-03]
+	Updated x11/ruby-gnome2-vte to 3.2.5 [tsutsui 2018-05-03]
