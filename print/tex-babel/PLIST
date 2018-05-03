@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/10/23 09:13:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/05/03 12:27:51 markd Exp $
 share/texmf-dist/makeindex/babel/bbglo.ist
 share/texmf-dist/makeindex/babel/bbind.ist
 share/texmf-dist/tex/generic/babel/UKenglish.sty
@@ -48,7 +48,16 @@ share/texmf-dist/tex/generic/babel/locale/ak/babel-ak.ini
 share/texmf-dist/tex/generic/babel/locale/ak/babel-akan.tex
 share/texmf-dist/tex/generic/babel/locale/am/babel-am.ini
 share/texmf-dist/tex/generic/babel/locale/am/babel-amharic.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-ar-DZ.ini
+share/texmf-dist/tex/generic/babel/locale/ar/babel-ar-MA.ini
+share/texmf-dist/tex/generic/babel/locale/ar/babel-ar-SY.ini
 share/texmf-dist/tex/generic/babel/locale/ar/babel-ar.ini
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-algeria.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-dz.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-ma.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-morocco.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-sy.tex
+share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic-syria.tex
 share/texmf-dist/tex/generic/babel/locale/ar/babel-arabic.tex
 share/texmf-dist/tex/generic/babel/locale/as/babel-as.ini
 share/texmf-dist/tex/generic/babel/locale/as/babel-assamese.tex
@@ -607,6 +616,7 @@ share/texmf-dist/tex/generic/babel/spanish.sty
 share/texmf-dist/tex/generic/babel/swedish.sty
 share/texmf-dist/tex/generic/babel/switch.def
 share/texmf-dist/tex/generic/babel/turkish.sty
+share/texmf-dist/tex/generic/babel/txtbabel.def
 share/texmf-dist/tex/generic/babel/ukraineb.sty
 share/texmf-dist/tex/generic/babel/usorbian.sty
 share/texmf-dist/tex/generic/babel/welsh.sty
