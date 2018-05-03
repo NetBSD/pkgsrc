@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.1 2018/05/02 17:03:09 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2018/05/03 21:09:17 fhajny Exp $
 
+SHA1 (marked-0.3.19.tar.gz) = d30691ac399f05d156f40a0a893ce7a2a7f6c5be
+RMD160 (marked-0.3.19.tar.gz) = e78a28dfaf5fc1039e48f63228f892fa24a13e6f
+SHA512 (marked-0.3.19.tar.gz) = ea518863a27a07034568b0f7a3b2cd2c1ecb8d208472af0fbfa883f59662b7212d73828d67b7d0ccde7be4f706679f88190d26545ecc72965a112ee35518a55a
+Size (marked-0.3.19.tar.gz) = 100673 bytes
 SHA1 (npm-6.0.0.tar.gz) = 87227738ff424bf51623a6e9fa4b571e46829eba
 RMD160 (npm-6.0.0.tar.gz) = 9af81fc50ba7407c04c03d96edcc8ddd13b43e75
 SHA512 (npm-6.0.0.tar.gz) = 7c5288a268373fa52d5b3d55bd5d40f71459cc2e2f5610b3ecbb61323cbd8b82d6e7ebb5fbea3449de22d4002329895ae3d99f6aceb62dae46875b4669e5cbbd

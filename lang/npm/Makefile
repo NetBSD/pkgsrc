@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/05/02 17:03:09 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/03 21:09:17 fhajny Exp $
 
 DISTNAME=	npm-6.0.0
 CATEGORIES=	lang
@@ -8,6 +8,11 @@ MAINTAINER=	filip@joyent.com
 HOMEPAGE=	https://github.com/npm/npm/
 COMMENT=	Package manager for JavaScript
 LICENSE=	artistic-2.0
+
+# Pre-fetch marked so that man pages can be built offline
+MARKED=		marked-0.3.19
+DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} ${MARKED}.tar.gz
+SITES.${MARKED}.tar.gz=	-https://github.com/markedjs/marked/archive/v${MARKED:S/marked-//}.tar.gz
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 USE_TOOLS+=	gmake perl
@@ -20,6 +25,9 @@ REPLACE_FILES.node=		bin/npm-cli.js bin/npx-cli.js
 CHECK_INTERPRETER_SKIP+=	lib/node_modules/npm/*
 
 .include "../../mk/bsd.prefs.mk"
+
+pre-build:
+	cd ${WRKSRC} && node bin/npm-cli.js install ${WRKDIR}/${MARKED} --no-global --no-timing --no-save
 
 do-install:
 	cd ${WRKSRC} && ${FIND} . -type f -name '*.orig' -exec ${RM} -f {} \;
