@@ -1,14 +1,6 @@
-$NetBSD: distinfo,v 1.15 2018/04/29 15:36:44 tsutsui Exp $
+$NetBSD: distinfo,v 1.16 2018/05/03 12:04:02 tsutsui Exp $
 
-SHA1 (glib2-3.2.4.gem) = a1aa0ea0d88fe241825daee9f2a7e9a444cb60fe
-RMD160 (glib2-3.2.4.gem) = f6b6da60e27bf9ebaee6757d0fa7df01b9dcb73e
-SHA512 (glib2-3.2.4.gem) = d766787ad15ead3f0b8ff0a334fd0a8df5b6ea719fee36aa5c3aa38273d1e4ccfb1ceab4564b0c01e597a413a8e49009adf70a6ac27b930465a9aa7d8b033418
-Size (glib2-3.2.4.gem) = 142336 bytes
-SHA1 (patch-ext_glib2_glib2.def) = 9f6e593c494930e28c683689d7438d14333377b8
-SHA1 (patch-ext_glib2_rbglib.h) = 97a9088fb749f0985d415ee068eceb1e78237661
-SHA1 (patch-ext_glib2_rbgobj__binding.c) = 1c6459564d08d86570ad631dbd95b20f9ff22ba5
-SHA1 (patch-ext_glib2_rbgobj__closure.c) = 6655f9a2e49f8bfd1eb0ec2208ab566d5d13b02e
-SHA1 (patch-ext_glib2_rbgobj__object.c) = c0099a33d3805d2137b1f76f8050bb1c075bfefa
-SHA1 (patch-ext_glib2_rbgobject.c) = 5e81544395ee1dc543ab5cf926ea19d1ade89431
-SHA1 (patch-ext_glib2_rbgobject.h) = 8023d86bc2d119f83d37c27e7686f6a55816616c
-SHA1 (patch-ext_glib2_rbgprivate.h) = 9cad0b23a174b500a940d5d1fa4d66a6aeac3566
+SHA1 (glib2-3.2.5.gem) = c48e4b6e17635a6b403e1b98565d6994d7bf69ac
+RMD160 (glib2-3.2.5.gem) = 0cbe598a9df602fbb18ef73a1b3355cca48eab3c
+SHA512 (glib2-3.2.5.gem) = 7c18dd94bd235381593f04fd429fb523d7c69a209ec7fb17216365c50615d01a0713d86aa92e32980a892f77a300be45db6ccaa52f81aade76e4808cdc47d4d9
+Size (glib2-3.2.5.gem) = 142848 bytes
