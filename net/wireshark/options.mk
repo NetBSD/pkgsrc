@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2018/04/29 12:15:37 wiz Exp $
+# $NetBSD: options.mk,v 1.18 2018/05/03 23:02:39 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wireshark
 PKG_SUPPORTED_OPTIONS=		gtk3 lua
@@ -19,7 +19,6 @@ BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.8
 .    include "../../x11/qt4-tools/buildlink3.mk"
 .  elif !empty(PKG_OPTIONS:Mqt5)
 CONFIGURE_ARGS+=	--with-qt=5
-.    include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .    include "../../x11/qt5-qttools/buildlink3.mk"
 .    if ${OPSYS} == "Darwin"
 .      include "../../x11/qt5-qtmacextras/buildlink3.mk"
