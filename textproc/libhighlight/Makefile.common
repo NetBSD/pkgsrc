@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.2 2018/04/08 19:40:29 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.1 2018/05/03 13:13:51 schmonz Exp $
 # used by textproc/highlight/Makefile
 # used by textproc/libhighlight/Makefile
 # used by textproc/p5-highlight/Makefile
 
 DISTNAME=		highlight-${VERSION}
-VERSION=		3.18
+VERSION=		3.43
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.andre-simon.de/zip/
 EXTRACT_SUFX=		.tar.bz2
@@ -15,12 +15,12 @@ COMMENT=		Converts source code to formatted text with syntax highlighting
 LICENSE=		gnu-gpl-v3
 
 USE_TOOLS+=		gmake pkg-config
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 MAKE_FILE=		makefile
 
-PATCHDIR=		${.CURDIR}/../../textproc/highlight/patches
-DISTINFO_FILE=		${.CURDIR}/../../textproc/highlight/distinfo
-DESCR_SRC=		${.CURDIR}/../../textproc/highlight/DESCR
+PATCHDIR=		${.CURDIR}/../../textproc/libhighlight/patches
+DISTINFO_FILE=		${.CURDIR}/../../textproc/libhighlight/distinfo
+DESCR_SRC=		${.CURDIR}/../../textproc/libhighlight/DESCR
 
 PKG_SYSCONFSUBDIR=	highlight
 
