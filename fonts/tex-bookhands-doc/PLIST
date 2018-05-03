@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/05/03 12:45:53 markd Exp $
 share/texmf-dist/doc/fonts/bookhands/README.PRW
 share/texmf-dist/doc/fonts/bookhands/allsqrcaps.pdf
 share/texmf-dist/doc/fonts/bookhands/auncial-README
@@ -45,11 +45,9 @@ share/texmf-dist/doc/fonts/bookhands/rustic/allfont.tex
 share/texmf-dist/doc/fonts/bookhands/sqrcaps-README
 share/texmf-dist/doc/fonts/bookhands/sqrcaps.pdf
 share/texmf-dist/doc/fonts/bookhands/sqrcaps/allsqrcaps.tex
-share/texmf-dist/doc/fonts/bookhands/tgothic/README
+share/texmf-dist/doc/fonts/bookhands/tgothic-README
+share/texmf-dist/doc/fonts/bookhands/tgothic-tryfont.tex
 share/texmf-dist/doc/fonts/bookhands/tgothic/allfont.tex
-share/texmf-dist/doc/fonts/bookhands/tgothic/tgothic.dtx
-share/texmf-dist/doc/fonts/bookhands/tgothic/tgothic.ins
-share/texmf-dist/doc/fonts/bookhands/tgothic/tryfont.tex
 share/texmf-dist/doc/fonts/bookhands/trysqrcaps.pdf
 share/texmf-dist/doc/fonts/bookhands/trysqrcaps.tex
 share/texmf-dist/doc/fonts/bookhands/uncial-README
