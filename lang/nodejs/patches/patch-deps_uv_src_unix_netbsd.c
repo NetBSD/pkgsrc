@@ -1,8 +1,8 @@
-$NetBSD: patch-deps_uv_src_unix_netbsd.c,v 1.8 2018/02/01 19:09:02 fhajny Exp $
+$NetBSD: patch-deps_uv_src_unix_netbsd.c,v 1.9 2018/05/03 21:19:16 fhajny Exp $
 
 Bring back support for NetBSD<8.
 
---- deps/uv/src/unix/netbsd.c.orig	2018-01-31 21:27:02.000000000 +0000
+--- deps/uv/src/unix/netbsd.c.orig	2018-04-24 14:41:22.000000000 +0000
 +++ deps/uv/src/unix/netbsd.c
 @@ -40,6 +40,11 @@
  #include <unistd.h>

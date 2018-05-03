@@ -1,11 +1,11 @@
-$NetBSD: patch-deps_v8_src_base_platform_platform-freebsd.cc,v 1.1 2015/08/26 06:57:01 rumko Exp $
+$NetBSD: patch-deps_v8_src_base_platform_platform-freebsd.cc,v 1.2 2018/05/03 21:19:16 fhajny Exp $
 
 Overlapping variables, taken from https://github.com/joyent/node/issues/9175
 
---- deps/v8/src/base/platform/platform-freebsd.cc.orig	2015-05-23 03:06:54.000000000 +0000
+--- deps/v8/src/base/platform/platform-freebsd.cc.orig	2018-04-24 14:41:24.000000000 +0000
 +++ deps/v8/src/base/platform/platform-freebsd.cc
-@@ -122,10 +122,10 @@ static unsigned StringToLong(char* buffe
- 
+@@ -45,10 +45,10 @@ static unsigned StringToLong(char* buffe
+ }
  
  std::vector<OS::SharedLibraryAddress> OS::GetSharedLibraryAddresses() {
 -  std::vector<SharedLibraryAddress> result;
@@ -17,9 +17,9 @@ Overlapping variables, taken from https://github.com/joyent/node/issues/9175
    while (true) {
      char addr_buffer[11];
      addr_buffer[0] = '0';
-@@ -156,10 +156,10 @@ std::vector<OS::SharedLibraryAddress> OS
+@@ -78,10 +78,10 @@ std::vector<OS::SharedLibraryAddress> OS
      // There may be no filename in this line.  Skip to next.
-     if (start_of_path == NULL) continue;
+     if (start_of_path == nullptr) continue;
      buffer[bytes_read] = 0;
 -    result.push_back(SharedLibraryAddress(start_of_path, start, end));
 +    address_result.push_back(SharedLibraryAddress(start_of_path, start, end));
@@ -29,4 +29,4 @@ Overlapping variables, taken from https://github.com/joyent/node/issues/9175
 +  return address_result;
  }
  
- 
+ void OS::SignalCodeMovingGC() {}
