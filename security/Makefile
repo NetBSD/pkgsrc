@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.680 2018/04/19 06:50:42 wen Exp $
+# $NetBSD: Makefile,v 1.681 2018/05/03 22:13:49 minskim Exp $
 #
 
 COMMENT=	Security tools
@@ -495,6 +495,7 @@ SUBDIR+=	ruby-net-ssh-multi
 SUBDIR+=	ruby-nexpose
 SUBDIR+=	ruby-oauth
 SUBDIR+=	ruby-openid
+SUBDIR+=	ruby-openssl-ccm
 SUBDIR+=	ruby-openvas-omp
 SUBDIR+=	ruby-password
 SUBDIR+=	ruby-rack-openid
