@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2018/04/16 14:33:52 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2018/05/03 12:04:03 tsutsui Exp $
 #
 
 DISTNAME=		gdk3-${VERSION}
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-${DISTNAME}
-PKGREVISION=		1
 COMMENT=		Ruby binding of GDK3
 CATEGORIES=		graphics
 
