@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/04 12:30:42 markd Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/03 12:20:09 markd Exp $
 
 DISTNAME=	babel-georgian
-PKGNAME=	tex-${DISTNAME}-2.1
-TEXLIVE_REV=	33527
+PKGNAME=	tex-${DISTNAME}-2.2
+TEXLIVE_REV=	45864
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/babel-georgian
