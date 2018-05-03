@@ -1,4 +1,4 @@
-# $NetBSD: nodeversion.mk,v 1.1 2018/05/02 16:33:02 fhajny Exp $
+# $NetBSD: nodeversion.mk,v 1.2 2018/05/03 21:19:16 fhajny Exp $
 
 # This file determins which nodejs version is used as a dependency for
 # a package.
@@ -8,7 +8,7 @@
 # NODE_VERSION_DEFAULT
 #	The preferred node version to use.
 #
-#	Possible values: 6 8 9
+#	Possible values: 6 8 10
 #	Default: 8
 #
 # === Infrastructure variables ===
@@ -27,13 +27,13 @@
 #	is significant; those listed earlier are preferred over those
 #	listed later.
 #
-#	Possible values: 6 8 9
-#	Default: 8 6 9
+#	Possible values: 6 8 10
+#	Default: 8 6 10
 #
 # NODE_VERSIONS_INCOMPATIBLE
 #	The node versions that the package *cannot* build against.
 #
-#	Possible values: 6 8 9
+#	Possible values: 6 8 10
 #	Default: <empty>
 #
 # Keywords: node
@@ -58,7 +58,7 @@ BUILD_DEFS+=		NODE_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=	NODE_PACKAGE
 
 NODE_VERSION_DEFAULT?=		8
-NODE_VERSIONS_ACCEPTED?=	8 6 9
+NODE_VERSIONS_ACCEPTED?=	8 6 10
 NODE_VERSIONS_INCOMPATIBLE?=	# empty
 
 # Resolve NODE_VERSIONS_INCOMPATIBLE and generate the _OK vars.
@@ -92,8 +92,8 @@ _NODE_VERSION?=		none
 DEPENDS+=	nodejs>=8<9:../../lang/nodejs8
 .elif ${_NODE_VERSION} == "6"
 DEPENDS+=	nodejs>=6<7:../../lang/nodejs6
-.elif ${_NODE_VERSION} == "9"
-DEPENDS+=	nodejs>=9:../../lang/nodejs
+.elif ${_NODE_VERSION} == "10"
+DEPENDS+=	nodejs>=10:../../lang/nodejs
 .else
 PKG_FAIL_REASON+=	"No valid node version found"
 .endif
