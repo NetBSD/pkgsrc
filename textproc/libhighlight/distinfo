@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2018/05/03 13:13:51 schmonz Exp $
+
+SHA1 (highlight-3.43.tar.bz2) = 471976f309339f9b6a17ee9501b9d3b0a47872da
+RMD160 (highlight-3.43.tar.bz2) = 73d53b819e16a9796af44fe346f464d7743c3ee9
+SHA512 (highlight-3.43.tar.bz2) = 77ad159963de64ef3c4732ad70c63ceafe7002c43d8b045e61361f52e56467933790c70e88570e0c866503a621496de2c80934c7f8141721545ff43c807968d1
+Size (highlight-3.43.tar.bz2) = 1311318 bytes
+SHA1 (patch-extras_swig_makefile) = 53e0793dab41fecafd3360564a951ddd4187e894
+SHA1 (patch-makefile) = 693fe29c416e4e5ee63e279f4abb27799ce0d6e0
+SHA1 (patch-src_core_platform__fs.cpp) = 65b7f4b665b820eec4b835474bd308e49080526e
+SHA1 (patch-src_makefile) = 040bbcddb6e83e4d2c4f9039f55d543c8f7a2ea4

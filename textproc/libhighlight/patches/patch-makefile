@@ -1,8 +1,8 @@
-$NetBSD: patch-makefile,v 1.2 2018/04/08 19:40:29 schmonz Exp $
+$NetBSD: patch-makefile,v 1.1 2018/05/03 13:13:51 schmonz Exp $
 
 Use pkgsrc-provided paths and tools.
 
---- makefile.orig	2013-06-27 20:36:48.000000000 +0000
+--- makefile.orig	2018-01-20 20:42:17.000000000 +0000
 +++ makefile
 @@ -7,7 +7,7 @@
  DESTDIR =
@@ -23,7 +23,7 @@ Use pkgsrc-provided paths and tools.
  # Location of the highlight documentation:
  doc_dir = ${PREFIX}/share/doc/highlight/
 @@ -25,7 +25,8 @@ doc_dir = ${PREFIX}/share/doc/highlight/
- examples_dir = ${doc_dir}examples/
+ examples_dir = ${doc_dir}extras/
  
  # Location of the highlight config files:
 -conf_dir = /etc/highlight/
@@ -47,7 +47,7 @@ Use pkgsrc-provided paths and tools.
  
  all cli:
  	${MAKE} -C ./src -f ./makefile HL_DATA_DIR=${data_dir} HL_CONFIG_DIR=${conf_dir}
-@@ -75,14 +76,11 @@ install:
+@@ -81,14 +82,11 @@ install:
  		${DESTDIR}${data_dir}themes \
  		${DESTDIR}${data_dir}langDefs \
  		${DESTDIR}${data_dir}plugins
@@ -62,16 +62,16 @@ Use pkgsrc-provided paths and tools.
  	${INSTALL_DATA} ./AUTHORS ${DESTDIR}${doc_dir}
  	${INSTALL_DATA} ./README ${DESTDIR}${doc_dir}
  	${INSTALL_DATA} ./README_DE ${DESTDIR}${doc_dir}
-@@ -99,15 +97,25 @@ install:
- 	${INSTALL_DATA} ./examples/swig/README_SWIG ${DESTDIR}${doc_dir}
- 	${INSTALL_DATA} ./examples/highlight_pipe.* ${DESTDIR}${examples_dir}
- 	${INSTALL_DATA} ./examples/*.py ${DESTDIR}${examples_dir}
+@@ -110,15 +108,25 @@ install:
+ 
+ 	${INSTALL_DATA} ./extras/highlight_pipe.* ${DESTDIR}${examples_dir}
+ 	${INSTALL_DATA} ./extras/*.py ${DESTDIR}${examples_dir}
 -	${INSTALL_PROGRAM} ./src/highlight ${DESTDIR}${bin_dir}
  
  	@echo
  	@echo "Done."
 -	@echo "Type highlight --help or man highlight for instructions."
- 	@echo "Take a look at ${DESTDIR}${examples_dir} for plugins and SWIG language bindings."
+ 	@echo "Take a look at ${DESTDIR}${examples_dir} for web plugins, SWIG and TCL bindings."
 +	@echo "Execute 'make install-cli' to install the highlight CLI ('make cli')."
  	@echo "Execute 'make install-gui' to install the highlight GUI ('make gui')."
  	@echo "Do not hesitate to report problems. Unknown bugs are hard to fix."
@@ -90,7 +90,7 @@ Use pkgsrc-provided paths and tools.
  install-gui:
  	@echo "Installing files for the GUI..."
  	${MKDIR} ${DESTDIR}${data_dir} \
-@@ -129,7 +137,7 @@ uninstall:
+@@ -140,7 +148,7 @@ uninstall:
  	${RMDIR} ${DESTDIR}${doc_dir}
  	${RMDIR} ${DESTDIR}${conf_dir}
  	${RMDIR} ${DESTDIR}${examples_dir}
