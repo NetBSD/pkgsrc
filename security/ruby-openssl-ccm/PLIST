@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2018/05/03 22:13:47 minskim Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.rubocop.yml
+${GEM_LIBDIR}/.yardopts
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/openssl/ccm.rb
+${GEM_LIBDIR}/lib/openssl/ccm/version.rb
+${GEM_LIBDIR}/test/data_1
+${GEM_LIBDIR}/test/data_1-1_e
+${GEM_LIBDIR}/test/data_1-2_e
+${GEM_LIBDIR}/test/data_1-3_e
+${GEM_LIBDIR}/test/data_1-4_e
+${GEM_LIBDIR}/test/data_2
+${GEM_LIBDIR}/test/data_2-1_e
+${GEM_LIBDIR}/test/data_2-2_e
+${GEM_LIBDIR}/test/data_2-3_e
+${GEM_LIBDIR}/test/data_2-4_e
+${GEM_LIBDIR}/test/data_3
+${GEM_LIBDIR}/test/data_3-1_e
+${GEM_LIBDIR}/test/data_3-2_e
+${GEM_LIBDIR}/test/data_3-3_e
+${GEM_LIBDIR}/test/data_3-4_e
+${GEM_LIBDIR}/test/test_ccm.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
