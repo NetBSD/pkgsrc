@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2148 2018/05/03 12:48:05 markd Exp $
+$NetBSD: CHANGES-2018,v 1.2149 2018/05/03 13:01:30 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3006,3 +3006,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/p5-biblatex-biber to 2.11 [markd 2018-05-03]
 	Updated fonts/tex-bookhands to 2018 [markd 2018-05-03]
 	Updated fonts/tex-bookhands-doc to 2018 [markd 2018-05-03]
+	Updated databases/libpqxx to 6.2.2 [prlw1 2018-05-03]
