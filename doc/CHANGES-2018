@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2150 2018/05/03 13:14:23 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.2151 2018/05/03 13:14:32 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3008,3 +3008,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated fonts/tex-bookhands-doc to 2018 [markd 2018-05-03]
 	Updated databases/libpqxx to 6.2.2 [prlw1 2018-05-03]
 	Updated textproc/libhighlight to 3.43 [schmonz 2018-05-03]
+	Updated textproc/highlight to 3.43 [schmonz 2018-05-03]
