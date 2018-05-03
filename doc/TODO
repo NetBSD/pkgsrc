@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18319 2018/04/30 10:14:56 wiz Exp $
+$NetBSD: TODO,v 1.18320 2018/05/03 13:14:32 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -782,7 +782,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hevea-2.28
 	o heyu-2.9.0
 	o hiawatha-10.7
-	o highlight-3.41
 	o honeyd-1.5c
 	o horde-5.2.9
 	o howm-1.4.3 [pkg/51101]
