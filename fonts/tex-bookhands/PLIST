@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/05/03 12:45:53 markd Exp $
 share/texmf-dist/fonts/afm/public/bookhands/sqrc10.afm
 share/texmf-dist/fonts/afm/public/bookhands/sqrcb10.afm
 share/texmf-dist/fonts/map/dvips/bookhands/sqrcaps.map
@@ -122,6 +122,18 @@ share/texmf-dist/fonts/source/public/bookhands/rustlig.mf
 share/texmf-dist/fonts/source/public/bookhands/rustpunct.mf
 share/texmf-dist/fonts/source/public/bookhands/rusttitle.mf
 share/texmf-dist/fonts/source/public/bookhands/rustu.mf
+share/texmf-dist/fonts/source/public/bookhands/tgothb10.mf
+share/texmf-dist/fonts/source/public/bookhands/tgothb17.mf
+share/texmf-dist/fonts/source/public/bookhands/tgothb7.mf
+share/texmf-dist/fonts/source/public/bookhands/tgothdig.mf
+share/texmf-dist/fonts/source/public/bookhands/tgothl.mf
+share/texmf-dist/fonts/source/public/bookhands/tgothlig.mf
+share/texmf-dist/fonts/source/public/bookhands/tgothpunct.mf
+share/texmf-dist/fonts/source/public/bookhands/tgothr10.mf
+share/texmf-dist/fonts/source/public/bookhands/tgothr17.mf
+share/texmf-dist/fonts/source/public/bookhands/tgothr7.mf
+share/texmf-dist/fonts/source/public/bookhands/tgothtitle.mf
+share/texmf-dist/fonts/source/public/bookhands/tgothu.mf
 share/texmf-dist/fonts/source/public/bookhands/uncl10.mf
 share/texmf-dist/fonts/source/public/bookhands/uncl17.mf
 share/texmf-dist/fonts/source/public/bookhands/uncl7.mf
@@ -193,6 +205,11 @@ share/texmf-dist/fonts/tfm/public/bookhands/rustb17.tfm
 share/texmf-dist/fonts/tfm/public/bookhands/rustb7.tfm
 share/texmf-dist/fonts/tfm/public/bookhands/sqrc10.tfm
 share/texmf-dist/fonts/tfm/public/bookhands/sqrcb10.tfm
+share/texmf-dist/fonts/tfm/public/bookhands/tgothb10.tfm
+share/texmf-dist/fonts/tfm/public/bookhands/tgothb17.tfm
+share/texmf-dist/fonts/tfm/public/bookhands/tgothr10.tfm
+share/texmf-dist/fonts/tfm/public/bookhands/tgothr17.tfm
+share/texmf-dist/fonts/tfm/public/bookhands/tgothr7.tfm
 share/texmf-dist/fonts/tfm/public/bookhands/uncl10.tfm
 share/texmf-dist/fonts/tfm/public/bookhands/uncl17.tfm
 share/texmf-dist/fonts/tfm/public/bookhands/uncl7.tfm
@@ -211,6 +228,7 @@ share/texmf-dist/tex/latex/bookhands/allpgoth.sty
 share/texmf-dist/tex/latex/bookhands/allrtnd.sty
 share/texmf-dist/tex/latex/bookhands/allrust.sty
 share/texmf-dist/tex/latex/bookhands/allsqrc.sty
+share/texmf-dist/tex/latex/bookhands/alltgoth.sty
 share/texmf-dist/tex/latex/bookhands/alluncl.sty
 share/texmf-dist/tex/latex/bookhands/carolmin.sty
 share/texmf-dist/tex/latex/bookhands/egothic.sty
@@ -229,6 +247,7 @@ share/texmf-dist/tex/latex/bookhands/ot1pgoth.fd
 share/texmf-dist/tex/latex/bookhands/ot1rtnd.fd
 share/texmf-dist/tex/latex/bookhands/ot1rust.fd
 share/texmf-dist/tex/latex/bookhands/ot1sqrc.fd
+share/texmf-dist/tex/latex/bookhands/ot1tgoth.fd
 share/texmf-dist/tex/latex/bookhands/ot1uncl.fd
 share/texmf-dist/tex/latex/bookhands/pgothic.sty
 share/texmf-dist/tex/latex/bookhands/rotunda.sty
@@ -245,5 +264,7 @@ share/texmf-dist/tex/latex/bookhands/t1pgoth.fd
 share/texmf-dist/tex/latex/bookhands/t1rtnd.fd
 share/texmf-dist/tex/latex/bookhands/t1rust.fd
 share/texmf-dist/tex/latex/bookhands/t1sqrc.fd
+share/texmf-dist/tex/latex/bookhands/t1tgoth.fd
 share/texmf-dist/tex/latex/bookhands/t1uncl.fd
+share/texmf-dist/tex/latex/bookhands/tgothic.sty
 share/texmf-dist/tex/latex/bookhands/uncial.sty
