@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2146 2018/05/03 12:07:54 tsutsui Exp $
+$NetBSD: CHANGES-2018,v 1.2147 2018/05/03 12:40:16 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -2990,3 +2990,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/ruby-gnome2-gtksourceview2 to 3.2.5 [tsutsui 2018-05-03]
 	Updated x11/ruby-gnome2-gtksourceview3 to 3.2.5 [tsutsui 2018-05-03]
 	Updated x11/ruby-gnome2-vte to 3.2.5 [tsutsui 2018-05-03]
+	Removed databases/libpqxx-doc [prlw1 2018-05-03]
