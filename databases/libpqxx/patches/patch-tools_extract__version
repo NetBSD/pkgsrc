@@ -1,0 +1,27 @@
+$NetBSD: patch-tools_extract__version,v 1.1 2018/05/03 12:58:24 prlw1 Exp $
+
+https://github.com/jtv/libpqxx/pull/89
+
+--- tools/extract_version.orig	2018-04-02 14:50:23.000000000 +0000
++++ tools/extract_version
+@@ -53,17 +53,17 @@ case "$ARG" in
+ 
+ -a|--abi)
+ 	# Print just the ABI version (major & minor).
+-	sed $srcdir/VERSION -e 's/^\([^.]*\.[^.]*\)\..*/\1/'
++	sed -e 's/^\([^.]*\.[^.]*\)\..*/\1/' $srcdir/VERSION
+ 	;;
+ 
+ -M|--major)
+ 	# Print the major version number.
+-	sed $srcdir/VERSION -e 's/^\([^.]*\)\..*/\1/'
++	sed -e 's/^\([^.]*\)\..*/\1/' $srcdir/VERSION
+ 	;;
+ 
+ -m|--minor)
+ 	# Print the minor version number.
+-	sed $srcdir/VERSION -e 's/^[^.]*\.\([^.]*\)\..*/\1/'
++	sed -e 's/^[^.]*\.\([^.]*\)\..*/\1/' $srcdir/VERSION
+ 	;;
+ 
+ *)
