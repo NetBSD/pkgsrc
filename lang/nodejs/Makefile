@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2018/05/03 21:19:16 fhajny Exp $
+# $NetBSD: Makefile,v 1.128 2018/05/04 04:29:46 minskim Exp $
 
 DISTNAME=	node-v10.0.0
 
@@ -13,6 +13,8 @@ CONFIGURE_ARGS+=	--shared-nghttp2
 CONFIGURE_ARGS+=	--with-intl=system-icu
 
 CHECK_PORTABILITY_SKIP+=	deps/openssl/openssl/.travis-create-release.sh
+
+.include "options.mk"
 
 .include "../../lang/nodejs/Makefile.common"
 .include "../../textproc/icu/buildlink3.mk"
