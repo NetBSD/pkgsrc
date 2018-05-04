@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2018/05/02 07:07:41 adam Exp $
+$NetBSD: distinfo,v 1.12 2018/05/04 06:56:10 adam Exp $
 
-SHA1 (yarl-1.2.2.tar.gz) = 15352f517e7eba2917879c9da77285f021e716ac
-RMD160 (yarl-1.2.2.tar.gz) = 8ea1b9bd6750c498031bff035e9de6891063997b
-SHA512 (yarl-1.2.2.tar.gz) = f8a4380d91c517ba77a9cd8976bd80d9b217224db5c89e3e95f6d96b9b5f1075af539bcf1df417a620570e7ac5bfba9a832d3075df7062db8916a971c6468542
-Size (yarl-1.2.2.tar.gz) = 158853 bytes
+SHA1 (yarl-1.2.3.tar.gz) = af9e2fa207eb04a049f0db0bda04adad749fbc24
+RMD160 (yarl-1.2.3.tar.gz) = 449c7413b791d7d89ac07009328905896e6b9e21
+SHA512 (yarl-1.2.3.tar.gz) = 1d7df65afc49be6cd97116cb47864061ada6b15b59a00585994ef427fa1a5061a65e759a199e09e1d8cf35454dca09ffb4db0a69134204a9dcce8633a5ee3987
+Size (yarl-1.2.3.tar.gz) = 159482 bytes
