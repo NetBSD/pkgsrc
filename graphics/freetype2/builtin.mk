@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.17 2018/01/14 14:58:38 rillig Exp $
+# $NetBSD: builtin.mk,v 1.18 2018/05/04 08:40:11 adam Exp $
 
 BUILTIN_PKG:=	freetype2
 
@@ -89,11 +89,9 @@ _FT2_VER_MAP.2.5.3=17.2.11
 _FT2_VER_MAP.2.4.5=13.0.7
 SUBST_CLASSES+=		fx-ft2-pc-version
 SUBST_STAGE.fx-ft2-pc-version=	post-wrapper
-SUBST_MESSAGE.fx-ft2-pc-version=\
-       Fixes wrong module version in freetype2.pc
+SUBST_MESSAGE.fx-ft2-pc-version=Fixes wrong module version in freetype2.pc
 SUBST_FILES.fx-ft2-pc-version=	${BUILDLINK_X11_DIR}/lib/pkgconfig/freetype2.pc
-SUBST_SED.fx-ft2-pc-version=   \
-       -e 's|^\(Version:\).*|\1 ${_FT2_VER_MAP.${BUILTIN_VERSION.freetype2}}|'
+SUBST_SED.fx-ft2-pc-version=	-e 's|^\(Version:\).*|\1 ${_FT2_VER_MAP.${BUILTIN_VERSION.freetype2}}|'
 .    endif
 .  endif
 
