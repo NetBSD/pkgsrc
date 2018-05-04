@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2163 2018/05/04 18:08:03 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.2164 2018/05/04 21:57:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3024,3 +3024,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/pam-mkhomedir to 1nb1 [he 2018-05-04]
 	Updated mail/fdm to 1.9nb2 [leot 2018-05-04]
 	Updated lang/go to 1.10.2 [bsiegert 2018-05-04]
+	Updated multimedia/mkvtoolnix to 23.0.0 [adam 2018-05-04]
