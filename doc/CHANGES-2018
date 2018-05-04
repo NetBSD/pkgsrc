@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2156 2018/05/04 02:53:38 manu Exp $
+$NetBSD: CHANGES-2018,v 1.2157 2018/05/04 06:09:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3014,3 +3014,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added security/ruby-openssl-ccm version 1.2.1 [minskim 2018-05-03]
 	Updated net/wireshark to 2.6.0nb1 [wiz 2018-05-03]
 	Updated www/ap2-auth-mellon to 0.14.0 [manu 2018-05-04]
+	Updated security/libgpg-error to 1.31 [adam 2018-05-04]
+	Updated security/gnupg2 to 2.2.7 [adam 2018-05-04]
