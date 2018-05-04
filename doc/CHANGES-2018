@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2155 2018/05/03 23:02:49 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2156 2018/05/04 02:53:38 manu Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3013,3 +3013,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/nodejs to 10.0.0 [fhajny 2018-05-03]
 	Added security/ruby-openssl-ccm version 1.2.1 [minskim 2018-05-03]
 	Updated net/wireshark to 2.6.0nb1 [wiz 2018-05-03]
+	Updated www/ap2-auth-mellon to 0.14.0 [manu 2018-05-04]
