@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2015/09/25 13:08:44 leot Exp $
+# $NetBSD: options.mk,v 1.3 2018/05/04 15:33:22 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fdm
 PKG_SUPPORTED_OPTIONS=	debug pcre
@@ -17,6 +17,6 @@ CONFIGURE_ARGS+=	--enable-debug
 # PCRE support
 #
 .if !empty(PKG_OPTIONS:Mpcre)
-   MAKE_ENV+=	PCRE=1
+MAKE_ENV+=	PCRE=1
 .  include "../../devel/pcre/buildlink3.mk"
 .endif
