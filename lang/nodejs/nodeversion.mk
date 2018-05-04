@@ -1,4 +1,4 @@
-# $NetBSD: nodeversion.mk,v 1.2 2018/05/03 21:19:16 fhajny Exp $
+# $NetBSD: nodeversion.mk,v 1.3 2018/05/04 14:28:32 fhajny Exp $
 
 # This file determins which nodejs version is used as a dependency for
 # a package.
@@ -89,11 +89,11 @@ _NODE_VERSION?=		${v}
 _NODE_VERSION?=		none
 
 .if ${_NODE_VERSION} == "8"
-DEPENDS+=	nodejs>=8<9:../../lang/nodejs8
+.include "../../lang/nodejs8/buildlink3.mk"
 .elif ${_NODE_VERSION} == "6"
-DEPENDS+=	nodejs>=6<7:../../lang/nodejs6
+.include "../../lang/nodejs6/buildlink3.mk"
 .elif ${_NODE_VERSION} == "10"
-DEPENDS+=	nodejs>=10:../../lang/nodejs
+.include "../../lang/nodejs/buildlink3.mk"
 .else
 PKG_FAIL_REASON+=	"No valid node version found"
 .endif
