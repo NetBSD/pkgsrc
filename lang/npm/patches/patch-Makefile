@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile,v 1.1 2018/05/04 09:40:02 adam Exp $
+
+Do not build npm-index.html on rebuild.
+
+--- Makefile.orig	2018-05-04 09:28:53.000000000 +0000
++++ Makefile
+@@ -23,7 +23,7 @@ files_mandocs = $(shell find doc/files -
+                man/man5/npm-json.5 \
+                man/man5/npm-global.5
+ 
+-misc_mandocs = $(shell find doc/misc -name '*.md' \
++misc_mandocs = $(shell find doc/misc -name '*.md' -not -name 'npm-index.md' \
+                |sed 's|.md|.7|g' \
+                |sed 's|doc/misc/|man/man7/|g' ) \
+                man/man7/npm-index.7
+@@ -39,7 +39,7 @@ files_htmldocs = $(shell find doc/files 
+                   html/doc/files/npm-json.html \
+                   html/doc/files/npm-global.html
+ 
+-misc_htmldocs = $(shell find doc/misc -name '*.md' \
++misc_htmldocs = $(shell find doc/misc -name '*.md' -not -name 'npm-index.md' \
+                  |sed 's|.md|.html|g' \
+                  |sed 's|doc/misc/|html/doc/misc/|g' ) \
+                  html/doc/index.html
