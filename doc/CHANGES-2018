@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2158 2018/05/04 06:56:40 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2159 2018/05/04 08:42:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3018,3 +3018,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/gnupg2 to 2.2.7 [adam 2018-05-04]
 	Updated textproc/py-sphinx-rtd-theme to 0.3.1 [adam 2018-05-04]
 	Updated www/py-yarl to 1.2.3 [adam 2018-05-04]
+	Updated graphics/freetype2 to 2.9.1 [adam 2018-05-04]
+	Updated archivers/unrar to 5.6.3 [adam 2018-05-04]
