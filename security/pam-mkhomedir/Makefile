@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2017/04/19 11:24:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2018/05/04 14:52:26 he Exp $
 
 DISTNAME=	pam-mkhomedir-1
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	# empty
 DISTFILES=	# empty
