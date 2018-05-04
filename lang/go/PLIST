@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2018/03/30 11:52:18 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.41 2018/05/04 18:07:40 bsiegert Exp $
 bin/go
 bin/gofmt
 go/AUTHORS
@@ -2381,6 +2381,8 @@ go/src/cmd/internal/test2json/testdata/benchshort.json
 go/src/cmd/internal/test2json/testdata/benchshort.test
 go/src/cmd/internal/test2json/testdata/issue23036.json
 go/src/cmd/internal/test2json/testdata/issue23036.test
+go/src/cmd/internal/test2json/testdata/issue23920.json
+go/src/cmd/internal/test2json/testdata/issue23920.test
 go/src/cmd/internal/test2json/testdata/smiley.json
 go/src/cmd/internal/test2json/testdata/smiley.test
 go/src/cmd/internal/test2json/testdata/unicode.json
@@ -7357,6 +7359,7 @@ go/test/fixedbugs/issue23545.go
 go/test/fixedbugs/issue23719.go
 go/test/fixedbugs/issue23812.go
 go/test/fixedbugs/issue24449.go
+go/test/fixedbugs/issue24817.go
 go/test/fixedbugs/issue2615.go
 go/test/fixedbugs/issue3552.dir/one.go
 go/test/fixedbugs/issue3552.dir/two.go
