@@ -1,10 +1,10 @@
-# $NetBSD: version.mk,v 1.36 2018/03/30 11:52:18 bsiegert Exp $
+# $NetBSD: version.mk,v 1.37 2018/05/04 18:07:40 bsiegert Exp $
 
 SSP_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
-GO_VERSION=	1.10.1
+GO_VERSION=	1.10.2
 GO14_VERSION=	1.4.3
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64 *-*-earmv[67]hf
