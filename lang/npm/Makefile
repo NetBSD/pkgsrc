@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2018/05/04 09:40:02 adam Exp $
+# $NetBSD: Makefile,v 1.4 2018/05/04 13:23:53 fhajny Exp $
 
 DISTNAME=	npm-6.0.0
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=npm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,11 +18,19 @@ SITES.${MARKED}.tar.gz=	-https://github.com/markedjs/marked/archive/v${MARKED:S/
 
 USE_TOOLS+=	gmake perl
 
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # required by gyp scripts included
+
 REPLACE_INTERPRETER+=	node
 REPLACE.node.old=	.*node
 REPLACE.node.new=	${PREFIX}/bin/node
 REPLACE_FILES.node=	bin/npm-cli.js
 REPLACE_FILES.node+=	bin/npx-cli.js
+
+SUBST_CLASSES+=		python
+SUBST_STAGE.python=	pre-configure
+SUBST_FILES.python=	node_modules/node-gyp/lib/configure.js
+SUBST_MESSAGE.python=	Fixing path to Python
+SUBST_VARS.python=	PYTHONBIN
 
 CHECK_INTERPRETER_SKIP+=lib/node_modules/npm/*
 
@@ -42,4 +51,5 @@ do-install:
 .endif
 
 .include "../../lang/nodejs/nodeversion.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

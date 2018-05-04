@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2018/05/04 09:40:02 adam Exp $
+$NetBSD: distinfo,v 1.4 2018/05/04 13:23:53 fhajny Exp $
 
 SHA1 (marked-0.3.19.tar.gz) = d30691ac399f05d156f40a0a893ce7a2a7f6c5be
 RMD160 (marked-0.3.19.tar.gz) = e78a28dfaf5fc1039e48f63228f892fa24a13e6f
@@ -11,3 +11,4 @@ Size (npm-6.0.0.tar.gz) = 8551157 bytes
 SHA1 (patch-Makefile) = b5f882d5ab883bfdb527a5802a0f477feef3eb27
 SHA1 (patch-node__modules_node-gyp_gyp_pylib_gyp_generator_make.py) = 291e079fb48caea7501ab864c19ef26672b76bc5
 SHA1 (patch-node__modules_node-gyp_gyp_pylib_gyp_xcode__emulation.py) = 7f9f5cd8aadafd309ba8dfb27f96fe8fa56a8af8
+SHA1 (patch-node__modules_node-gyp_lib_configure.js) = 5cee993904ffeb1497418706e258c2e61bbd847e
