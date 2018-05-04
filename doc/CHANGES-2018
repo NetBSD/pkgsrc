@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2161 2018/05/04 14:53:09 he Exp $
+$NetBSD: CHANGES-2018,v 1.2162 2018/05/04 15:33:36 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3022,3 +3022,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/unrar to 5.6.3 [adam 2018-05-04]
 	Updated graphics/ImageMagick to 7.0.7.30 [he 2018-05-04]
 	Updated security/pam-mkhomedir to 1nb1 [he 2018-05-04]
+	Updated mail/fdm to 1.9nb2 [leot 2018-05-04]
