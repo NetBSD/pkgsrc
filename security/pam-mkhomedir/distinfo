@@ -1,0 +1,3 @@
+$NetBSD: distinfo,v 1.1 2018/05/04 21:51:18 he Exp $
+
+SHA1 (patch-pam__mkhomedir.c) = cbf97eb703e0999540d2bb88b4437fe5c3485526
