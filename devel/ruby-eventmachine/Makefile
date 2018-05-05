@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2018/01/26 13:17:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2018/05/05 15:41:18 taca Exp $
 
-DISTNAME=	eventmachine-1.2.5
+DISTNAME=	eventmachine-1.2.6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
