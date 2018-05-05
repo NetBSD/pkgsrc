@@ -1,21 +1,19 @@
-$NetBSD: patch-boost_math_tools_config.hpp,v 1.5 2018/04/29 20:41:11 adam Exp $
+$NetBSD: patch-boost_math_tools_config.hpp,v 1.6 2018/05/05 03:47:33 minskim Exp $
 
 Enable 'long double' support on NetBSD.
 NetBSD does not have int128_t, log1pl, etc.
 
---- boost/math/tools/config.hpp.orig	2017-04-17 02:22:22.000000000 +0000
+--- boost/math/tools/config.hpp.orig	2018-04-11 13:49:04.000000000 +0000
 +++ boost/math/tools/config.hpp
-@@ -28,8 +28,8 @@
+@@ -28,7 +28,7 @@
  
  #include <boost/math/tools/user.hpp>
  
 -#if (defined(__CYGWIN__) || defined(__FreeBSD__) || defined(__NetBSD__) \
--   || (defined(__hppa) && !defined(__OpenBSD__)) || (defined(__NO_LONG_DOUBLE_MATH) && (DBL_MANT_DIG != LDBL_MANT_DIG))) \
 +#if (defined(__CYGWIN__) || defined(__FreeBSD__) \
-+   || (defined(__hppa) && !defined(__OpenBSD__)) || (defined(__NO_LONG_DOUBLE_MATH) && (DBL_MANT_DIG != LDBL_MANT_DIG)))
+    || (defined(__hppa) && !defined(__OpenBSD__)) || (defined(__NO_LONG_DOUBLE_MATH) && (DBL_MANT_DIG != LDBL_MANT_DIG))) \
     && !defined(BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS)
  #  define BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS
- #endif
 @@ -103,7 +103,7 @@
  #  define BOOST_MATH_NO_DEDUCED_FUNCTION_POINTERS
  #endif
