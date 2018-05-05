@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.48 2018/05/01 15:43:08 minskim Exp $
+# $NetBSD: Makefile,v 1.49 2018/05/05 03:47:33 minskim Exp $
 
 BOOST_PACKAGE=		headers
 BOOST_COMMENT=		(build-time headers)
 BOOST_CONFIG=		generate
 
 .include "../../meta-pkgs/boost/Makefile.common"
-PKGREVISION=		2
+PKGREVISION=		3
 
 BJAM_ARGS+=		--without-\*
 
