@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2165 2018/05/05 03:48:03 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2166 2018/05/05 04:10:03 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3026,3 +3026,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/go to 1.10.2 [bsiegert 2018-05-04]
 	Updated multimedia/mkvtoolnix to 23.0.0 [adam 2018-05-04]
 	Updated devel/boost-headers to 1.67.0nb3 [minskim 2018-05-05]
+	Added lang/gcc8 version 8.1.0 [maya 2018-05-05]
