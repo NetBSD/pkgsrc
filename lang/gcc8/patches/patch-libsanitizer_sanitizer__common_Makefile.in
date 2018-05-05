@@ -1,0 +1,28 @@
+$NetBSD: patch-libsanitizer_sanitizer__common_Makefile.in,v 1.1 2018/05/05 04:08:36 maya Exp $
+
+--- libsanitizer/sanitizer_common/Makefile.in.orig	2017-10-22 22:33:06.000000000 +0000
++++ libsanitizer/sanitizer_common/Makefile.in
+@@ -91,6 +91,7 @@ am__objects_1 = sancov_flags.lo sanitize
+ 	sanitizer_mac.lo sanitizer_mac_libcdep.lo \
+ 	sanitizer_persistent_allocator.lo \
+ 	sanitizer_platform_limits_linux.lo \
++	sanitizer_platform_limits_netbsd.lo \
+ 	sanitizer_platform_limits_posix.lo sanitizer_posix.lo \
+ 	sanitizer_posix_libcdep.lo sanitizer_printf.lo \
+ 	sanitizer_procmaps_common.lo sanitizer_procmaps_freebsd.lo \
+@@ -322,6 +323,7 @@ sanitizer_common_files = \
+ 	sanitizer_mac_libcdep.cc \
+ 	sanitizer_persistent_allocator.cc \
+ 	sanitizer_platform_limits_linux.cc \
++	sanitizer_platform_limits_netbsd.cc \
+ 	sanitizer_platform_limits_posix.cc \
+ 	sanitizer_posix.cc \
+ 	sanitizer_posix_libcdep.cc \
+@@ -468,6 +470,7 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sanitizer_mac_libcdep.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sanitizer_persistent_allocator.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sanitizer_platform_limits_linux.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sanitizer_platform_limits_netbsd.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sanitizer_platform_limits_posix.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sanitizer_posix.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sanitizer_posix_libcdep.Plo@am__quote@
