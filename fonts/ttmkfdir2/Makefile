@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/06/04 22:16:03 tron Exp $
+# $NetBSD: Makefile,v 1.22 2018/05/05 03:56:48 minskim Exp $
 #
 
 DISTNAME=	ttmkfdir2.20021109
@@ -16,7 +16,7 @@ CONFLICTS=	ttmkfdir-[0-9]*
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake lex
+USE_TOOLS+=	gmake lex pkg-config
 USE_LANGUAGES=	c c++
 
 MAKE_ENV+=	FREETYPE_CONFIG=${FREETYPE_CONFIG:Q}
