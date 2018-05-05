@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2169 2018/05/05 14:20:23 taca Exp $
+$NetBSD: CHANGES-2018,v 1.2170 2018/05/05 15:39:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3030,3 +3030,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/ruby-odbc to 0.99999 [taca 2018-05-05]
 	Updated databases/ruby-mysql2 to 0.5.1 [taca 2018-05-05]
 	Updated databases/ruby-sequel to 5.8.0 [taca 2018-05-05]
+	Updated devel/ruby-byebug to 10.0.2 [taca 2018-05-05]
