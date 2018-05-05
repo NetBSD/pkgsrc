@@ -131,40 +131,20 @@ echo_msg()
 get_compiler()
 {
 	testcc="${CC}"
-	# normally, we'd just use 'cc', but certain configure tools look
-	# for gcc specifically, so we have to see if that comes first
-	if [ -z "${testcc}" ]; then
-		save_IFS="${IFS}"
-		IFS=':'
-		for dir in ${PATH}; do
-			test -z "$dir" && dir=.
-			if [ -x "$dir/gcc" ]; then
-				testcc="$dir/gcc"
-				break
-			fi
-		done
-		IFS="${save_IFS}"
-	fi
-
 	# Clang compiler pretends to be GCC, so we have to check that
 	cat >${wrkdir}/$$.c <<EOF
+#define GCC_COMPILER (defined(__GNUC__) && !defined(__clang__))
+#if GCC_COMPILER
+gcc
+#endif
 #ifdef __clang__
-indeed
+clang
 #endif
 EOF
-	compiler_is_clang=`${testcc:-cc} -E ${wrkdir}/$$.c 2>/dev/null | grep -c indeed`
+	compiler_is_gnu=`${testcc:-cc} -E ${wrkdir}/$$.c 2>/dev/null | grep -c gcc`
+	compiler_is_clang=`${testcc:-cc} -E ${wrkdir}/$$.c 2>/dev/null | grep -c clang`
 	rm -f ${wrkdir}/$$.c
-
-	cat >${wrkdir}/$$.c <<EOF
-#ifdef __GNUC__
-#ifndef __clang__
-indeed
-#endif
-#endif
-EOF
-	compiler_is_gnu=`${testcc:-cc} -E ${wrkdir}/$$.c 2>/dev/null | grep -c indeed`
-	rm -f ${wrkdir}/$$.c
-
+	
 }
 get_abi()
 {
@@ -776,6 +756,7 @@ OpenBSD)
 	need_awk=no
 	need_sed=no
 	set_opsys=no
+	check_compiler=yes
 	machine_arch=`arch -s`
 	;;
 OSF1)
