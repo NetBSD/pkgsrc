@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2018/03/12 11:15:34 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2018/05/05 12:13:44 schmonz Exp $
 
 DISTNAME=	libgd-2.2.5
 PKGNAME=	${DISTNAME:S/libgd/gd/}
@@ -17,7 +17,7 @@ GITHUB_RELEASE=	gd-${PKGVERSION_NOREV}
 .include "options.mk"
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		perl:run pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-werror
 CONFIGURE_ARGS+=	--with-fontconfig=${BUILDLINK_PREFIX.fontconfig}
