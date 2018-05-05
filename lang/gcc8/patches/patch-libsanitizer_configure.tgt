@@ -1,0 +1,19 @@
+$NetBSD: patch-libsanitizer_configure.tgt,v 1.1 2018/05/05 04:08:36 maya Exp $
+
+--- libsanitizer/configure.tgt.orig	2017-10-05 10:39:32.000000000 +0000
++++ libsanitizer/configure.tgt
+@@ -52,9 +52,13 @@ case "${target}" in
+ 		TSAN_TARGET_DEPENDENT_OBJECTS=tsan_rtl_aarch64.lo
+ 	fi
+ 	;;
+-  x86_64-*-darwin[1]* | i?86-*-darwin[1]*)
++  x86_64-*-darwin[1][1-9]* | i?86-*-darwin[1][1-9]*)
+ 	TSAN_SUPPORTED=no
+ 	;;
++  x86_64-*-netbsd*)
++	TSAN_SUPPORTED=no
++	LSAN_SUPPORTED=no
++	;;
+   *)
+ 	UNSUPPORTED=1
+ 	;;
