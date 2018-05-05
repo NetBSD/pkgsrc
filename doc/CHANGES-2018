@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2168 2018/05/05 14:16:08 taca Exp $
+$NetBSD: CHANGES-2018,v 1.2169 2018/05/05 14:20:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3029,3 +3029,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added lang/gcc8 version 8.1.0 [maya 2018-05-05]
 	Updated databases/ruby-odbc to 0.99999 [taca 2018-05-05]
 	Updated databases/ruby-mysql2 to 0.5.1 [taca 2018-05-05]
+	Updated databases/ruby-sequel to 5.8.0 [taca 2018-05-05]
