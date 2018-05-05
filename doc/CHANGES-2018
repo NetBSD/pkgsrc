@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2166 2018/05/05 04:10:03 maya Exp $
+$NetBSD: CHANGES-2018,v 1.2167 2018/05/05 14:15:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3027,3 +3027,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/mkvtoolnix to 23.0.0 [adam 2018-05-04]
 	Updated devel/boost-headers to 1.67.0nb3 [minskim 2018-05-05]
 	Added lang/gcc8 version 8.1.0 [maya 2018-05-05]
+	Updated databases/ruby-odbc to 0.99999 [taca 2018-05-05]
