@@ -1,0 +1,4 @@
+The GNU Compiler Collection (GCC) includes front ends for C, C++, Objective-C,
+Fortran, and Go.
+
+This package provides the development version of version 8.x.
