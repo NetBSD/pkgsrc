@@ -132,7 +132,7 @@ get_compiler()
 {
 	testcc="${CC}"
 	# Clang compiler pretends to be GCC, so we have to check that
-		cat >${wrkdir}/$$.c <<EOF
+	cat >${wrkdir}/$$.c <<EOF
 #define GCC_COMPILER (defined(__GNUC__) && !defined(__clang__))
 #if GCC_COMPILER
 gcc
@@ -141,9 +141,9 @@ gcc
 clang
 #endif
 EOF
-		compiler_is_gnu=`${testcc:-cc} -E ${wrkdir}/$$.c 2>/dev/null | grep -c gcc`
-		compiler_is_clang=`${testcc:-cc} -E ${wrkdir}/$$.c 2>/dev/null | grep -c clang`
-		rm -f ${wrkdir}/$$.c
+	compiler_is_gnu=`${testcc:-cc} -E ${wrkdir}/$$.c 2>/dev/null | grep -c gcc`
+	compiler_is_clang=`${testcc:-cc} -E ${wrkdir}/$$.c 2>/dev/null | grep -c clang`
+	rm -f ${wrkdir}/$$.c
 	
 }
 get_abi()
