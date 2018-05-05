@@ -1,0 +1,19 @@
+$NetBSD: patch-libgcc_config.host,v 1.1 2018/05/05 04:08:36 maya Exp $
+
+Add libgcc x86 netbsd config
+
+--- libgcc/config.host.orig	2017-03-10 19:33:27.000000000 +0000
++++ libgcc/config.host
+@@ -605,10 +605,10 @@ x86_64-*-freebsd*)
+ 	md_unwind_header=i386/freebsd-unwind.h
+ 	;;
+ i[34567]86-*-netbsdelf*)
+-	tmake_file="${tmake_file} i386/t-crtstuff"
++	tmake_file="${tmake_file} i386/t-netbsd i386/t-crtstuff"
+ 	;;
+ x86_64-*-netbsd*)
+-	tmake_file="${tmake_file} i386/t-crtstuff"
++	tmake_file="${tmake_file} i386/t-netbsd i386/t-crtstuff"
+ 	;;
+ i[34567]86-*-openbsd*)
+ 	;;
