@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/09/06 16:49:47 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2018/05/05 23:17:33 dholland Exp $
 
 DISTNAME=	texlive-20170524-source
 PKGNAME=	xdvik-22.87.03
@@ -39,6 +39,8 @@ CONFIGURE_ARGS+=	--with-system-zlib \
 CONFIGURE_ARGS+=	--with-xdvi-x-toolkit=xaw
 CONFIGURE_ARGS+=	--with-default-dvips-path=${LOCALBASE}/bin/dvips
 CONFIGURE_ARGS+=	--with-default-ps2pdf-path=${LOCALBASE}/bin/ps2pdf
+CONFIGURE_ENV+=		FT2_CONFIG=pkg-config \
+		PKG_CONFIG=${TOOLS_CMD.pkg-config}
 
 PKG_SYSCONFSUBDIR=	texmf
 
