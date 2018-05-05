@@ -1,0 +1,19 @@
+$NetBSD: patch-configure,v 1.1 2018/05/05 12:31:25 minskim Exp $
+
+freetype-config is deprecated.
+
+--- configure.orig	2017-01-10 23:13:02.000000000 +0000
++++ configure
+@@ -15165,9 +15165,9 @@ esac
+ else
+   FT2_CONFIG="$ac_cv_prog_FT2_CONFIG"
+ fi
+-if $FT2_CONFIG --ftversion >/dev/null 2>&1; then
+-  FREETYPE2_INCLUDES=`$FT2_CONFIG --cflags`
+-  FREETYPE2_LIBS=`$FT2_CONFIG --libs`
++if $PKG_CONFIG --version >/dev/null 2>&1; then
++  FREETYPE2_INCLUDES=`$PKG_CONFIG --cflags freetype2`
++  FREETYPE2_LIBS=`$PKG_CONFIG --libs freetype2`
+ elif test "x$need_freetype2:$with_system_freetype2" = xyes:yes; then
+   as_fn_error $? "did not find freetype-config required for system freetype2 library" "$LINENO" 5
+ fi
