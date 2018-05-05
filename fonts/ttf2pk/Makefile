@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2017/08/01 14:58:58 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2018/05/05 12:31:25 minskim Exp $
 
 DISTNAME=	texlive-20170524-source
 PKGNAME=	ttf2pk-2.0
@@ -27,6 +27,8 @@ CONFIGURE_ARGS+=	--with-system-zlib \
 		--with-zlib-includes=${BUILDLINK_PREFIX.zlib}/include \
 		--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
 CONFIGURE_ARGS+=	--with-system-freetype2
+CONFIGURE_ENV+=		FT2_CONFIG=pkg-config \
+			PKG_CONFIG=${TOOLS_CMD.pkg-config}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
