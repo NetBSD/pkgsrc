@@ -1,0 +1,17 @@
+$NetBSD: patch-libsanitizer_sanitizer__common_Makefile.am,v 1.1 2018/05/05 04:08:36 maya Exp $
+
+--- libsanitizer/sanitizer_common/Makefile.am.orig	2017-10-19 11:23:59.000000000 +0000
++++ libsanitizer/sanitizer_common/Makefile.am
+@@ -40,6 +40,7 @@ sanitizer_common_files = \
+ 	sanitizer_mac_libcdep.cc \
+ 	sanitizer_persistent_allocator.cc \
+ 	sanitizer_platform_limits_linux.cc \
++	sanitizer_platform_limits_netbsd.cc \
+ 	sanitizer_platform_limits_posix.cc \
+ 	sanitizer_posix.cc \
+ 	sanitizer_posix_libcdep.cc \
+@@ -114,4 +115,3 @@ AM_MAKEFLAGS = \
+ MAKEOVERRIDES=
+ 
+ ## ################################################################
+-
