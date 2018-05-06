@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2209 2018/05/06 18:56:53 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2210 2018/05/06 19:22:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3153,3 +3153,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/pkg_rolling-replace to 0.24.4 [gdt 2018-05-06]
 	Updated devel/boost-headers to 1.67.0nb4 [minskim 2018-05-06]
 	Updated devel/boost-libs to 1.67.0nb1 [minskim 2018-05-06]
+	Updated net/syncthing to 0.14.47 [wiz 2018-05-06]
