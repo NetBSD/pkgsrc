@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.9 2008/01/04 01:43:58 pooka Exp $
+$NetBSD: patch-ab,v 1.10 2018/05/06 14:32:06 jmcneill Exp $
 
---- xbattbar.c.orig	2001-02-02 07:25:29.000000000 +0200
-+++ xbattbar.c	2008-01-04 03:32:10.000000000 +0200
-@@ -27,6 +27,16 @@
+--- xbattbar.c.orig	2001-02-02 05:25:29.000000000 +0000
++++ xbattbar.c
+@@ -27,6 +27,16 @@ static char *ReleaseVersion="1.4.2";
  
  #include <sys/types.h>
  #include <sys/time.h>
@@ -19,7 +19,7 @@ $NetBSD: patch-ab,v 1.9 2008/01/04 01:43:58 pooka Exp $
  #include <signal.h>
  #include <stdio.h>
  #include <unistd.h>
-@@ -577,33 +587,177 @@
+@@ -577,33 +587,190 @@ void battery_check(void)
  
  #ifdef __NetBSD__
  
@@ -164,6 +164,7 @@ $NetBSD: patch-ab,v 1.9 2008/01/04 01:43:58 pooka Exp $
 +       if (acpi) {
 +#ifdef HAVE_NETBSD_ACPI
 +		int32_t rtot = 0, maxtot = 0;
++		int have_pct = 0;
 +		p = APM_AC_ON;
 +		for (i = 0 ; i < ns ; i++) {
 +			if ((etds[i].validflags & ENVSYS_FCURVALID) == 0)
@@ -191,8 +192,20 @@ $NetBSD: patch-ab,v 1.9 2008/01/04 01:43:58 pooka Exp $
 +			    strcmp(&ebis[i].desc[cc - 14], "discharge rate") == 0) {
 +				p = APM_AC_OFF;
 +			}
++
++			if (ebis[i].units == ENVSYS_INTEGER &&
++			    strcmp(ebis[i].desc, "battery percent") == 0) {
++				have_pct = 1;
++				r = etds[i].cur.data_s;
++			}
++			if (ebis[i].units == ENVSYS_INDICATOR &&
++			    strcmp(ebis[i].desc, "ACIN present") == 0 &&
++			    etds[i].cur.data_s == 0) {
++				p = APM_AC_OFF;
++			}
 +		}
-+		r = (rtot * 100.0) / maxtot;
++		if (!have_pct)
++			r = (rtot * 100.0) / maxtot;
 +#endif
 +#ifndef _NO_APM
 +       } else {
@@ -200,7 +213,7 @@ $NetBSD: patch-ab,v 1.9 2008/01/04 01:43:58 pooka Exp $
         if (info.battery_life > 100) {
                 /* some APM BIOSes return values slightly > 100 */
                 r = 100;
-@@ -617,6 +771,8 @@
+@@ -617,6 +784,8 @@ void battery_check(void)
         } else {
                 p = APM_AC_OFF;
         }
