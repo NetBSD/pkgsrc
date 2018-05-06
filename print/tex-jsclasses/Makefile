@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/10/23 09:01:04 markd Exp $
+# $NetBSD: Makefile,v 1.6 2018/05/06 12:11:57 markd Exp $
 
 DISTNAME=	jsclasses
-PKGNAME=	tex-${DISTNAME}-2017.45473
-TEXLIVE_REV=	45473
+PKGNAME=	tex-${DISTNAME}-2018
+TEXLIVE_REV=	46918
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/jsclasses
