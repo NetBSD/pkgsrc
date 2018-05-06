@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2185 2018/05/06 04:17:20 markd Exp $
+$NetBSD: CHANGES-2018,v 1.2186 2018/05/06 05:52:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3113,3 +3113,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/tex-graphics-pln-doc to 2018 [markd 2018-05-06]
 	Updated print/tex-graphics to 1.2c.47350 [markd 2018-05-06]
 	Updated print/tex-graphics-doc to 1.2c.47350 [markd 2018-05-06]
+	Updated devel/p5-ExtUtils-ModuleMaker to 0.58 [wiz 2018-05-06]
