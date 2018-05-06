@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/03/13 16:10:50 taca Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/06 02:25:43 taca Exp $
 
-DISTNAME=	crass-1.0.2
+DISTNAME=	crass-1.0.3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
