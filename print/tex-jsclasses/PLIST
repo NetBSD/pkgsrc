@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/21 07:24:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/05/06 12:11:57 markd Exp $
 share/texmf-dist/tex/platex/jsclasses/jsarticle.cls
 share/texmf-dist/tex/platex/jsclasses/jsbook.cls
 share/texmf-dist/tex/platex/jsclasses/jslogo.sty
@@ -7,6 +7,5 @@ share/texmf-dist/tex/platex/jsclasses/jsreport.cls
 share/texmf-dist/tex/platex/jsclasses/jsverb.sty
 share/texmf-dist/tex/platex/jsclasses/kiyou.cls
 share/texmf-dist/tex/platex/jsclasses/minijs.sty
-share/texmf-dist/tex/platex/jsclasses/morisawa.sty
 share/texmf-dist/tex/platex/jsclasses/okumacro.sty
 share/texmf-dist/tex/platex/jsclasses/okuverb.sty
