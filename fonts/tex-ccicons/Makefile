@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/06 01:26:39 markd Exp $
 
 DISTNAME=	ccicons
-PKGNAME=	tex-${DISTNAME}-1.5
-TEXLIVE_REV=	30020
+PKGNAME=	tex-${DISTNAME}-1.6
+TEXLIVE_REV=	45646
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/ccicons
