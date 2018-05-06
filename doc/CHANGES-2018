@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2194 2018/05/06 06:55:22 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2195 2018/05/06 06:56:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3122,3 +3122,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Test-TempDir-Tiny to 0.017 [wiz 2018-05-06]
 	Updated devel/p5-autobox to 3.0.1 [wiz 2018-05-06]
 	Updated math/p5-Statistics-Descriptive to 3.0613 [wiz 2018-05-06]
+	Updated security/p5-Net-OpenSSH to 0.78 [wiz 2018-05-06]
