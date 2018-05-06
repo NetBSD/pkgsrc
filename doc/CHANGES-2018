@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2206 2018/05/06 17:50:47 gavan Exp $
+$NetBSD: CHANGES-2018,v 1.2207 2018/05/06 18:09:08 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3150,3 +3150,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/zathura-pdf-mupdf to 0.3.2nb4 [leot 2018-05-06]
 	Updated security/sshpass to 1.06 [gavan 2018-05-06]
 	Updated security/sshpass to 1.06 [gavan 2018-05-06]
+	Updated pkgtools/pkg_rolling-replace to 0.24.4 [gdt 2018-05-06]
