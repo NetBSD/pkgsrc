@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:44:50 agc Exp $
+$NetBSD: distinfo,v 1.3 2018/05/06 01:51:54 markd Exp $
 
-SHA1 (tex-cns-15878/cns.tar.xz) = 209ff24cb473112995bab3fbf5097d00afae5984
-RMD160 (tex-cns-15878/cns.tar.xz) = bf25d0168cfcd2996f09b1f30c6edcd45094e200
-SHA512 (tex-cns-15878/cns.tar.xz) = 1dbda13224c750309eedce6765d8518a669903e33112a7c03133daa0608e4af03da987cf5a03f56badb831231645b15f3fad6ce681f9bc825da5aa168bf8707e
-Size (tex-cns-15878/cns.tar.xz) = 2984544 bytes
+SHA1 (tex-cns-45677/cns.tar.xz) = 3983a91e81c32a1a12e68c5ce98a49c44b0b4e68
+RMD160 (tex-cns-45677/cns.tar.xz) = 56b379aa436df3a878323300e758cc163a218f34
+SHA512 (tex-cns-45677/cns.tar.xz) = 54f74c716de52194d5bab6e95c6e1b7bb22b0d60a46ea6af04ab3859578c594415341ef51d88863fd188008d1326e4e9286afd40e2e7cf2c85278b1476ff65ee
+Size (tex-cns-45677/cns.tar.xz) = 2985184 bytes

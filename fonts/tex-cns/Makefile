@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/19 22:02:28 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/06 01:51:54 markd Exp $
 
 DISTNAME=	cns
-PKGNAME=	tex-${DISTNAME}-2011
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-2018	# actually 4.2.0
+TEXLIVE_REV=	45677
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/cjk-fonts
 COMMENT=	CNS fonts for CJK LaTeX
+LICENSE=	public-domain
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
