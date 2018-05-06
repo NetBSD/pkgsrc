@@ -5,6 +5,6 @@ includedir=${prefix}/include
 
 Name: mupdf
 Description: library for PDF files
-Version: 1.12.0
-Libs: -Wl,-R${libdir} -L${libdir} -lmupdf -lmupdfthird -lmuthreads
+Version: @VERSION@
+Libs: -Wl,-R${libdir} -L${libdir} -lmupdf -lmupdfthird -lmuthreads -lmupkcs7
 Cflags: -I${includedir}
