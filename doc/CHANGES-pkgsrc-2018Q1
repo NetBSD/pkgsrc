@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q1,v 1.1.2.4 2018/04/27 20:00:20 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q1,v 1.1.2.5 2018/05/06 12:21:26 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q1 branch:
 
@@ -37,3 +37,47 @@ security/libgpg-error: ARM build fix
 Pullup ticket #5738 - requested by morr
 www/wordpress: security fix
 
+Pullup ticket #5739 - requested by bsiegert
+mail/roundcube: security update
+mail/roundcube-plugin-enigma: security update
+mail/roundcube-plugin-password: security update
+mail/roundcube-plugin-zipdownload: security update
+
+Pullup ticket #5740 - requested by bsiegert
+lang/spidermonkey185: build fix for Solaris
+
+Pullup ticket #5741 - requested by bsiegert
+www/drupal7: security update
+
+Pullup ticket #5742 - requested by taca
+mail/roundcube: regression fix
+mail/roundcube-plugin-enigma: regression fix
+mail/roundcube-plugin-password: regression fix
+mail/roundcube-plugin-zipdownload: regression fix
+
+Pullup ticket #5743 - requested by taca
+www/contao35: security update
+
+Pullup ticket #5744 - requested by taca
+www/contao44: security update
+
+Pullup ticket #5745 - requested by taca
+www/contao45: security update
+
+Pullup ticket #5747 - requested by taca
+lang/php71: security update
+
+Pullup ticket #5748 - requested by taca
+lang/php72: security update
+
+Pullup ticket #5749 - requested by taca
+lang/php70: security update
+
+Pullup ticket #5750 - requested by taca
+lang/php56: security update
+
+Pullup ticket #5751 - requested by taca
+mail/squirrelmail: security update 
+
+Pullup ticket #5752 - requested by taca
+www/squid3: security patch
