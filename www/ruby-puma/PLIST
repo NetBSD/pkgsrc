@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/03/17 14:45:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/05/06 02:28:11 taca Exp $
 bin/puma${RUBY_SUFFIX}
 bin/pumactl${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -78,6 +78,9 @@ ${GEM_LIBDIR}/tools/jungle/README.md
 ${GEM_LIBDIR}/tools/jungle/init.d/README.md
 ${GEM_LIBDIR}/tools/jungle/init.d/puma
 ${GEM_LIBDIR}/tools/jungle/init.d/run-puma
+${GEM_LIBDIR}/tools/jungle/rc.d/README.md
+${GEM_LIBDIR}/tools/jungle/rc.d/puma
+${GEM_LIBDIR}/tools/jungle/rc.d/puma.conf
 ${GEM_LIBDIR}/tools/jungle/upstart/README.md
 ${GEM_LIBDIR}/tools/jungle/upstart/puma-manager.conf
 ${GEM_LIBDIR}/tools/jungle/upstart/puma.conf
