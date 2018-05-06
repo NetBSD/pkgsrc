@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/03/30 11:56:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.19 2018/05/06 19:31:43 minskim Exp $
 
 DISTNAME=		tools
 PKGNAME=		go-tools-1.8
@@ -46,5 +46,6 @@ CHECK_RELRO_SKIP+=	bin/toolstash
 
 .include "../../lang/go/go-package.mk"
 .include "../../devel/google-api-go-client/buildlink3.mk"
+BUILDLINK_API_DEPENDS.go-crypto+=	go-crypto>=0.0.20180308
 .include "../../security/go-crypto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
