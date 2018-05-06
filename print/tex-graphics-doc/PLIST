@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2017/08/23 23:59:34 markd Exp $
-share/texmf-dist/doc/latex/graphics/README.txt
+@comment $NetBSD: PLIST,v 1.8 2018/05/06 04:15:45 markd Exp $
+share/texmf-dist/doc/latex/graphics/README.md
 share/texmf-dist/doc/latex/graphics/cat.eps
 share/texmf-dist/doc/latex/graphics/changes.txt
 share/texmf-dist/doc/latex/graphics/color.pdf
