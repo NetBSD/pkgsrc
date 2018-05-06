@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2183 2018/05/06 03:11:16 markd Exp $
+$NetBSD: CHANGES-2018,v 1.2184 2018/05/06 03:28:55 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3100,3 +3100,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated fonts/tex-fontools-doc to 2018 [markd 2018-05-06]
 	Updated fonts/tex-fontspec to 2.6g [markd 2018-05-06]
 	Updated fonts/tex-fontspec-doc to 2.6g [markd 2018-05-06]
+	Updated math/R-date to 1.2.38 [minskim 2018-05-06]
