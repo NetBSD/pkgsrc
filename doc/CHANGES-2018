@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2210 2018/05/06 19:22:08 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2211 2018/05/06 22:21:45 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3154,3 +3154,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/boost-headers to 1.67.0nb4 [minskim 2018-05-06]
 	Updated devel/boost-libs to 1.67.0nb1 [minskim 2018-05-06]
 	Updated net/syncthing to 0.14.47 [wiz 2018-05-06]
+	Updated devel/py-manticore to 0.1.9 [khorben 2018-05-06]
