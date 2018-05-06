@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/22 10:47:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/05/06 02:30:07 markd Exp $
 share/texmf-dist/doc/generic/dehyph-exptl/CHANGES
 share/texmf-dist/doc/generic/dehyph-exptl/INSTALL
-share/texmf-dist/doc/generic/dehyph-exptl/LICENSE
+share/texmf-dist/doc/generic/dehyph-exptl/LICENSE.data
+share/texmf-dist/doc/generic/dehyph-exptl/LICENSE.documentation
 share/texmf-dist/doc/generic/dehyph-exptl/README
 share/texmf-dist/doc/generic/dehyph-exptl/dehyph-exptl.bib
 share/texmf-dist/doc/generic/dehyph-exptl/dehyph-exptl.pdf
