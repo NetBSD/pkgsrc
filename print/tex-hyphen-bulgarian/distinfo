@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/06/16 04:06:05 markd Exp $
+$NetBSD: distinfo,v 1.6 2018/05/06 11:40:11 markd Exp $
 
-SHA1 (tex-hyphen-bulgarian-41113/hyphen-bulgarian.tar.xz) = 1fbbe35104b4bb2e5c0b1c22494e92ae0ea46289
-RMD160 (tex-hyphen-bulgarian-41113/hyphen-bulgarian.tar.xz) = 06415e4bd079a73cdff39ad407a009c363b9c4d4
-SHA512 (tex-hyphen-bulgarian-41113/hyphen-bulgarian.tar.xz) = fae99ed3c12b4739396dd2088a6dec8b3fbe1853d103739dccf35cf2cf41120e56a89cd2f21aad29366a5e3bb04a44e7f9a29683c7709a0c265d4f48461757b6
-Size (tex-hyphen-bulgarian-41113/hyphen-bulgarian.tar.xz) = 4912 bytes
+SHA1 (tex-hyphen-bulgarian-47375/hyphen-bulgarian.tar.xz) = 66f2b88ab40e2a5e87d541badc7578beea086292
+RMD160 (tex-hyphen-bulgarian-47375/hyphen-bulgarian.tar.xz) = 74143f30cc2981fcff3f3741734a673a869c1a43
+SHA512 (tex-hyphen-bulgarian-47375/hyphen-bulgarian.tar.xz) = 9a1428ff9bc364fb88941bb24e92738964982f3c8db15535404f63be7af7d7ed33a1e8782e76a4292c30693b9dbfe7fc66a7fe9d454d20c75d41d79d0c2b0612
+Size (tex-hyphen-bulgarian-47375/hyphen-bulgarian.tar.xz) = 28304 bytes
