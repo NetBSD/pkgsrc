@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.35 2015/04/14 11:40:31 wiz Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.36 2018/05/06 18:06:18 gdt Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -496,6 +496,7 @@ while [ -n "$REPLACE_TODO" ]; do
     if [ -d "$PKGSRCDIR/$pkgdir" ]; then
 	cd "$PKGSRCDIR/$pkgdir";
     else
+	fail=1
         mark_as_failed $pkg
 	error "No package directory '$pkgdir' for $pkg."
     fi
