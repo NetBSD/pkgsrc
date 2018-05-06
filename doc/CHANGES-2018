@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2202 2018/05/06 11:57:11 leot Exp $
+$NetBSD: CHANGES-2018,v 1.2203 2018/05/06 12:18:04 markd Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3132,3 +3132,17 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/p5-GraphicsMagick to 1.3.29 [adam 2018-05-06]
 	Updated net/youtube-dl to 20180501 [leot 2018-05-06]
 	Updated security/password-store to 1.7.1 [leot 2018-05-06]
+	Updated print/tex-hyperref to 6.86b [markd 2018-05-06]
+	Updated print/tex-hyperref-doc to 6.86b [markd 2018-05-06]
+	Updated print/tex-hyphen-bulgarian to 2018 [markd 2018-05-06]
+	Updated print/tex-hyphen-german to 2018 [markd 2018-05-06]
+	Updated print/tex-hyphen-latin to 3.1.2018 [markd 2018-05-06]
+	Updated print/tex-hyphen-thai to 2018 [markd 2018-05-06]
+	Updated print/tex-ifplatform to 0.4a [markd 2018-05-06]
+	Updated print/tex-ifplatform-doc to 0.4a [markd 2018-05-06]
+	Updated fonts/tex-inconsolata to 1.114 [markd 2018-05-06]
+	Updated fonts/tex-inconsolata-doc to 1.114 [markd 2018-05-06]
+	Updated fonts/tex-japanese-otf to 1.7b7 [markd 2018-05-06]
+	Updated fonts/tex-japanese-otf-doc to 1.7b7 [markd 2018-05-06]
+	Updated print/tex-jsclasses to 2018 [markd 2018-05-06]
+	Updated print/tex-koma-script to 3.25 [markd 2018-05-06]
