@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2208 2018/05/06 18:46:48 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2209 2018/05/06 18:56:53 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3152,3 +3152,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/sshpass to 1.06 [gavan 2018-05-06]
 	Updated pkgtools/pkg_rolling-replace to 0.24.4 [gdt 2018-05-06]
 	Updated devel/boost-headers to 1.67.0nb4 [minskim 2018-05-06]
+	Updated devel/boost-libs to 1.67.0nb1 [minskim 2018-05-06]
