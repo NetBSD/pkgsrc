@@ -1,5 +1,36 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/05/06 04:03:31 markd Exp $
 share/texmf-dist/doc/fonts/gfsdidot/OFL-FAQ.txt
 share/texmf-dist/doc/fonts/gfsdidot/OFL.txt
 share/texmf-dist/doc/fonts/gfsdidot/README
 share/texmf-dist/doc/fonts/gfsdidot/README.TEXLIVE
+share/texmf-dist/doc/fonts/gfsdidot/Readme.txt
+share/texmf-dist/doc/fonts/gfsdidot/didotb7a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/didotbi7a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/didotbo7a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/didoti7a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/didoto7a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/didotrg7a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/didotsc7a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/didotscb7a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/didotscbo7a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/didotsco7a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/didotui7a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/gdidotb6a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/gdidotbi6a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/gdidoti6a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/gdidotrg6a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/gdidotsc6a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/gdidotsco6a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/gfsudidotmath8a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/golgai6a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/golgaui6a.vpl
+share/texmf-dist/doc/fonts/gfsdidot/installDidot.pl
+share/texmf-dist/doc/fonts/gfsdidot/showDidotFontsLaTeX.tex
+share/texmf-dist/doc/fonts/gfsdidot/ts1-gfsdidot_model.vpl
+share/texmf-dist/doc/fonts/gfsdidot/ts1-gfsdidot_model_1.vpl
+share/texmf-dist/doc/fonts/gfsdidot/ts1-gfsdidotb.vpl
+share/texmf-dist/doc/fonts/gfsdidot/ts1-gfsdidotbi.vpl
+share/texmf-dist/doc/fonts/gfsdidot/ts1-gfsdidotbo.vpl
+share/texmf-dist/doc/fonts/gfsdidot/ts1-gfsdidoto.vpl
+share/texmf-dist/doc/fonts/gfsdidot/ts1-gfsdidotr.vpl
+share/texmf-dist/doc/fonts/gfsdidot/ts1-gfsdidotui.vpl
