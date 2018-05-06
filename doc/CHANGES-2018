@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2197 2018/05/06 07:01:00 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2198 2018/05/06 09:11:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3125,3 +3125,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/p5-Net-OpenSSH to 0.78 [wiz 2018-05-06]
 	Added devel/p5-Test-More-UTF8 version 0.05 [wiz 2018-05-06]
 	Updated textproc/p5-Text-Template to 1.53 [wiz 2018-05-06]
+	Updated devel/py-hypothesis to 3.56.5 [adam 2018-05-06]
+	Updated www/py-gunicorn to 19.8.1 [adam 2018-05-06]
