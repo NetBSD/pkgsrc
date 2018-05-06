@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2016/07/17 21:59:29 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/06 01:57:10 markd Exp $
 
 DISTNAME=	context-annotation
-PKGNAME=	tex-${DISTNAME}-2015
+PKGNAME=	tex-${DISTNAME}-2015	# actually 2013.05.27
 TEXLIVE_REV=	36188
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
