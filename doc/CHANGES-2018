@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2172 2018/05/05 23:59:22 maya Exp $
+$NetBSD: CHANGES-2018,v 1.2173 2018/05/06 01:56:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3033,3 +3033,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ruby-byebug to 10.0.2 [taca 2018-05-05]
 	Updated devel/ruby-eventmachine to 1.2.6 [taca 2018-05-05]
 	Added sysutils/ripgrep version 0.8.1 [maya 2018-05-05]
+	Updated devel/ruby-mocha to 1.5.0 [taca 2018-05-06]
