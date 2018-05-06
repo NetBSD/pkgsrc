@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.16 2017/12/18 15:06:34 leot Exp $
+$NetBSD: patch-ab,v 1.17 2018/05/06 13:19:10 leot Exp $
 
 - Handle the various operating systems in the same way avoiding hardcoding
 - Avoid internal version of freeglut and try to pick it up via pkg-config and
@@ -8,9 +8,9 @@ $NetBSD: patch-ab,v 1.16 2017/12/18 15:06:34 leot Exp $
   If no lcms2 is available just pass `-DNO_ICC' to disable it via
   SYS_LCMS2_CFLAGS.
 
---- Makerules.orig	2017-11-23 11:42:45.000000000 +0000
+--- Makerules.orig	2018-04-12 13:14:06.000000000 +0000
 +++ Makerules
-@@ -62,41 +62,10 @@ else
+@@ -65,38 +65,10 @@ else
  $(error unknown build setting: '$(build)')
  endif
  
@@ -20,9 +20,6 @@ $NetBSD: patch-ab,v 1.16 2017/12/18 15:06:34 leot Exp $
 -WINDRES := windres
 -HAVE_X11 ?= no
 -HAVE_WIN32 := yes
--CC=gcc
--# Add flags required for Harfbuzz because of missing strdup
--CFLAGS+= -U__STRICT_ANSI__
 -
 -# Mac OS X doesn't have pkg-config so we hard code paths.
 -else ifeq "$(OS)" "MACOS"
@@ -49,10 +46,10 @@ $NetBSD: patch-ab,v 1.16 2017/12/18 15:06:34 leot Exp $
 -SYS_GLUT_CFLAGS :=
 -SYS_GLUT_LIBS := -lglut -lGL
 -
- ifeq "$(shell pkg-config --exists 'libcrypto <= 1.0.1t' && echo yes)" "yes"
+ ifeq "$(shell pkg-config --exists 'libcrypto >= 1.1.0' && echo yes)" "yes"
  HAVE_LIBCRYPTO := yes
  SYS_LIBCRYPTO_CFLAGS := -DHAVE_LIBCRYPTO $(shell pkg-config --cflags libcrypto)
-@@ -113,7 +82,6 @@ SYS_CURL_CFLAGS += $(shell pkg-config --
+@@ -113,7 +85,6 @@ SYS_CURL_CFLAGS += $(shell pkg-config --
  SYS_CURL_DEPS += $(shell pkg-config --libs openssl)
  endif
  endif
@@ -60,7 +57,7 @@ $NetBSD: patch-ab,v 1.16 2017/12/18 15:06:34 leot Exp $
  
  ifeq "$(shell pkg-config --exists x11 xext && echo yes)" "yes"
  HAVE_X11 := yes
-@@ -121,6 +89,12 @@ SYS_X11_CFLAGS := $(shell pkg-config --c
+@@ -121,6 +92,12 @@ SYS_X11_CFLAGS := $(shell pkg-config --c
  SYS_X11_LIBS := $(shell pkg-config --libs x11 xext)
  endif
  
@@ -73,7 +70,7 @@ $NetBSD: patch-ab,v 1.16 2017/12/18 15:06:34 leot Exp $
  ifeq "$(shell pkg-config --exists harfbuzz && echo yes)" "yes"
  SYS_HARFBUZZ_CFLAGS := $(shell pkg-config --cflags harfbuzz)
  SYS_HARFBUZZ_LIBS := $(shell pkg-config --libs harfbuzz)
-@@ -136,12 +110,17 @@ SYS_OPENJPEG_CFLAGS := $(shell pkg-confi
+@@ -136,12 +113,17 @@ SYS_OPENJPEG_CFLAGS := $(shell pkg-confi
  SYS_OPENJPEG_LIBS := $(shell pkg-config --libs libopenjp2)
  endif
  
