@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2018/02/25 17:12:56 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2018/05/06 06:10:23 wiz Exp $
 
-DISTNAME=	IPC-Cmd-1.00
+DISTNAME=	IPC-Cmd-1.02
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IPC/}
