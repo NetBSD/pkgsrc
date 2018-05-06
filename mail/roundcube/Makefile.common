@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7.4.1 2018/05/06 08:40:13 spz Exp $
+# $NetBSD: Makefile.common,v 1.7.4.2 2018/05/06 09:13:55 spz Exp $
 #
 # used by mail/roundcube/Makefile
 # used by mail/roundcube/plugins.mk
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=roundcube/}
 GITHUB_PROJECT=	roundcubemail
 HOMEPAGE=	http://roundcube.net/
 
-RC_VERS=	1.2.8
+RC_VERS=	1.2.9
 
 USE_LANGUAGES=		# none
 USE_TOOLS+=		pax

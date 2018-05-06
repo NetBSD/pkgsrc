@@ -1,10 +1,10 @@
-# $NetBSD: plugins.mk,v 1.1 2016/09/13 15:56:01 taca Exp $
+# $NetBSD: plugins.mk,v 1.1.16.1 2018/05/06 09:13:55 spz Exp $
 #
 
 # plugin's PKGNAME
 PKGNAME=	${PHP_PKG_PREFIX}-roundcube-plugin-${PLUGIN}-${RC_VERS}
 
-DEPENDS+=	${PHP_PKG_PREFIX}-roundcube>=${VERS}:../../mail/roundcube
+DEPENDS+=	${PHP_PKG_PREFIX}-roundcube>=${RC_VERS}:../../mail/roundcube
 
 #
 # a few parameters
