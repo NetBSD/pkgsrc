@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/01/18 10:55:04 markd Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/06 02:33:55 markd Exp $
 
 DISTNAME=	doclicense.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.6.0
-TEXLIVE_REV=	45495
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.7.0
+TEXLIVE_REV=	46661
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/doclicense
