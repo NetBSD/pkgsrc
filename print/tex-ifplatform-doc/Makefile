@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2012/10/16 21:59:00 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/06 11:55:13 markd Exp $
 
 DISTNAME=	ifplatform.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.3a
-TEXLIVE_REV=	21156
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.4a
+TEXLIVE_REV=	45533
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/ifplatform
 COMMENT=	Documentation for tex-ifplatform
 LICENSE=	lppl-1.3c
 
