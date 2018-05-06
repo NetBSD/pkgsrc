@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/07/17 21:59:30 wiz Exp $
+$NetBSD: distinfo,v 1.2 2018/05/06 02:02:47 markd Exp $
 
-SHA1 (tex-context-fullpage-23167/context-fullpage.tar.xz) = 1230372981858c7e6af73045a76c767376c215e4
-RMD160 (tex-context-fullpage-23167/context-fullpage.tar.xz) = 34a6635f53f6411b1c64cf465c235cc3dd6ea811
-SHA512 (tex-context-fullpage-23167/context-fullpage.tar.xz) = 1ed07ba64f4c8a48019c893470652128deedbb5cf0eb1d892d6d3c7a54c6c422a606e6555e22e087e710ae4f26913ef9002aa4888be62d8e936579b7d12a8fe2
-Size (tex-context-fullpage-23167/context-fullpage.tar.xz) = 3008 bytes
+SHA1 (tex-context-fullpage-47085/context-fullpage.tar.xz) = cadd827d660ec7a3503bf8bb9798c176f372a451
+RMD160 (tex-context-fullpage-47085/context-fullpage.tar.xz) = 29d592569c1d96b1a7d1e5392b13a8e7389722d1
+SHA512 (tex-context-fullpage-47085/context-fullpage.tar.xz) = 119c01690b881165b8c7c3e4928210e6c3dcf071b9c7d2e452656e232ca64df84d90b95c5649953045728fd65cea40545cb1877a1d04000ff111275eb6364d85
+Size (tex-context-fullpage-47085/context-fullpage.tar.xz) = 2996 bytes
