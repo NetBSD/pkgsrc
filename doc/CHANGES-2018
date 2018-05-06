@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2184 2018/05/06 03:28:55 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2185 2018/05/06 04:17:20 markd Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3101,3 +3101,15 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated fonts/tex-fontspec to 2.6g [markd 2018-05-06]
 	Updated fonts/tex-fontspec-doc to 2.6g [markd 2018-05-06]
 	Updated math/R-date to 1.2.38 [minskim 2018-05-06]
+	Updated print/tex-geometry to 5.7 [markd 2018-05-06]
+	Updated print/tex-geometry-doc to 5.7 [markd 2018-05-06]
+	Updated fonts/tex-gfsdidot to 2018 [markd 2018-05-06]
+	Updated fonts/tex-gfsdidot-doc to 2018 [markd 2018-05-06]
+	Updated print/tex-glossaries to 4.37 [markd 2018-05-06]
+	Updated print/tex-glossaries-doc to 4.37 [markd 2018-05-06]
+	Updated print/tex-graphics-def to 2018 [markd 2018-05-06]
+	Updated print/tex-graphics-def-doc to 2018 [markd 2018-05-06]
+	Updated graphics/tex-graphics-pln to 2018 [markd 2018-05-06]
+	Updated graphics/tex-graphics-pln-doc to 2018 [markd 2018-05-06]
+	Updated print/tex-graphics to 1.2c.47350 [markd 2018-05-06]
+	Updated print/tex-graphics-doc to 1.2c.47350 [markd 2018-05-06]
