@@ -1,15 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/25 08:01:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/05/06 12:07:38 markd Exp $
 share/texmf-dist/fonts/map/dvipdfmx/japanese-otf/otf-cktx.map
-share/texmf-dist/fonts/ofm/public/japanese-otf/hirakaku-w3-h.ofm
-share/texmf-dist/fonts/ofm/public/japanese-otf/hirakaku-w3-v.ofm
-share/texmf-dist/fonts/ofm/public/japanese-otf/hirakaku-w6-h.ofm
-share/texmf-dist/fonts/ofm/public/japanese-otf/hirakaku-w6-v.ofm
-share/texmf-dist/fonts/ofm/public/japanese-otf/hiramaru-w4-h.ofm
-share/texmf-dist/fonts/ofm/public/japanese-otf/hiramaru-w4-v.ofm
-share/texmf-dist/fonts/ofm/public/japanese-otf/hiramin-w3-h.ofm
-share/texmf-dist/fonts/ofm/public/japanese-otf/hiramin-w3-v.ofm
-share/texmf-dist/fonts/ofm/public/japanese-otf/hiramin-w6-h.ofm
-share/texmf-dist/fonts/ofm/public/japanese-otf/hiramin-w6-v.ofm
 share/texmf-dist/fonts/ofm/public/japanese-otf/otf-cjgb-h.ofm
 share/texmf-dist/fonts/ofm/public/japanese-otf/otf-cjgb-v.ofm
 share/texmf-dist/fonts/ofm/public/japanese-otf/otf-cjge-h.ofm
@@ -276,16 +266,6 @@ share/texmf-dist/fonts/tfm/public/japanese-otf/hgothr-h.tfm
 share/texmf-dist/fonts/tfm/public/japanese-otf/hgothr-v.tfm
 share/texmf-dist/fonts/tfm/public/japanese-otf/hgothrn-h.tfm
 share/texmf-dist/fonts/tfm/public/japanese-otf/hgothrn-v.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/hirakaku-w3-h.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/hirakaku-w3-v.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/hirakaku-w6-h.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/hirakaku-w6-v.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/hiramaru-w4-h.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/hiramaru-w4-v.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/hiramin-w3-h.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/hiramin-w3-v.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/hiramin-w6-h.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/hiramin-w6-v.tfm
 share/texmf-dist/fonts/tfm/public/japanese-otf/hmgothr-h.tfm
 share/texmf-dist/fonts/tfm/public/japanese-otf/hmgothr-v.tfm
 share/texmf-dist/fonts/tfm/public/japanese-otf/hmgothrn-h.tfm
@@ -396,16 +376,6 @@ share/texmf-dist/fonts/tfm/public/japanese-otf/otf-utgr-h.tfm
 share/texmf-dist/fonts/tfm/public/japanese-otf/otf-utgr-v.tfm
 share/texmf-dist/fonts/tfm/public/japanese-otf/otf-utmr-h.tfm
 share/texmf-dist/fonts/tfm/public/japanese-otf/otf-utmr-v.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/phirakakuw3-h.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/phirakakuw3-v.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/phirakakuw6-h.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/phirakakuw6-v.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/phiramaruw4-h.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/phiramaruw4-v.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/phiraminw3-h.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/phiraminw3-v.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/phiraminw6-h.tfm
-share/texmf-dist/fonts/tfm/public/japanese-otf/phiraminw6-v.tfm
 share/texmf-dist/fonts/tfm/public/japanese-otf/rubygothb-h.tfm
 share/texmf-dist/fonts/tfm/public/japanese-otf/rubygothb-v.tfm
 share/texmf-dist/fonts/tfm/public/japanese-otf/rubygotheb-h.tfm
@@ -1392,16 +1362,6 @@ share/texmf-dist/fonts/vf/public/japanese-otf/nmlminr-h.vf
 share/texmf-dist/fonts/vf/public/japanese-otf/nmlminr-v.vf
 share/texmf-dist/fonts/vf/public/japanese-otf/nmlminrn-h.vf
 share/texmf-dist/fonts/vf/public/japanese-otf/nmlminrn-v.vf
-share/texmf-dist/fonts/vf/public/japanese-otf/phirakakuw3-h.vf
-share/texmf-dist/fonts/vf/public/japanese-otf/phirakakuw3-v.vf
-share/texmf-dist/fonts/vf/public/japanese-otf/phirakakuw6-h.vf
-share/texmf-dist/fonts/vf/public/japanese-otf/phirakakuw6-v.vf
-share/texmf-dist/fonts/vf/public/japanese-otf/phiramaruw4-h.vf
-share/texmf-dist/fonts/vf/public/japanese-otf/phiramaruw4-v.vf
-share/texmf-dist/fonts/vf/public/japanese-otf/phiraminw3-h.vf
-share/texmf-dist/fonts/vf/public/japanese-otf/phiraminw3-v.vf
-share/texmf-dist/fonts/vf/public/japanese-otf/phiraminw6-h.vf
-share/texmf-dist/fonts/vf/public/japanese-otf/phiraminw6-v.vf
 share/texmf-dist/fonts/vf/public/japanese-otf/rubygothb-h.vf
 share/texmf-dist/fonts/vf/public/japanese-otf/rubygothb-v.vf
 share/texmf-dist/fonts/vf/public/japanese-otf/rubygotheb-h.vf

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2017/06/21 07:24:08 markd Exp $
+# $NetBSD: Makefile,v 1.7 2018/05/06 12:07:38 markd Exp $
 
 DISTNAME=	japanese-otf.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.7b6.42950
-TEXLIVE_REV=	42950
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.7b7
+TEXLIVE_REV=	46598
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/japanese-otf
