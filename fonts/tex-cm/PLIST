@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/04/25 07:50:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/05/06 01:48:26 markd Exp $
 share/texmf-dist/fonts/map/dvips/cm/cmtext-bsr-interpolated.map
 share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmbx10.pk
 share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmex10.pk
@@ -21,12 +21,7 @@ share/texmf-dist/fonts/source/public/cm/bigop.mf
 share/texmf-dist/fonts/source/public/cm/calu.mf
 share/texmf-dist/fonts/source/public/cm/cmb10.mf
 share/texmf-dist/fonts/source/public/cm/cmbase.mf
-share/texmf-dist/fonts/source/public/cm/cmbcsc10.mf
 share/texmf-dist/fonts/source/public/cm/cmbsy10.mf
-share/texmf-dist/fonts/source/public/cm/cmbtex10.mf
-share/texmf-dist/fonts/source/public/cm/cmbtt10.mf
-share/texmf-dist/fonts/source/public/cm/cmbtt8.mf
-share/texmf-dist/fonts/source/public/cm/cmbtt9.mf
 share/texmf-dist/fonts/source/public/cm/cmbx10.mf
 share/texmf-dist/fonts/source/public/cm/cmbx12.mf
 share/texmf-dist/fonts/source/public/cm/cmbx5.mf
@@ -39,7 +34,6 @@ share/texmf-dist/fonts/source/public/cm/cmbxti10.mf
 share/texmf-dist/fonts/source/public/cm/cmcsc10.mf
 share/texmf-dist/fonts/source/public/cm/cmdunh10.mf
 share/texmf-dist/fonts/source/public/cm/cmex10.mf
-share/texmf-dist/fonts/source/public/cm/cmexb10.mf
 share/texmf-dist/fonts/source/public/cm/cmff10.mf
 share/texmf-dist/fonts/source/public/cm/cmfi10.mf
 share/texmf-dist/fonts/source/public/cm/cmfib8.mf
@@ -100,7 +94,6 @@ share/texmf-dist/fonts/source/public/cm/cmtt10.mf
 share/texmf-dist/fonts/source/public/cm/cmtt12.mf
 share/texmf-dist/fonts/source/public/cm/cmtt8.mf
 share/texmf-dist/fonts/source/public/cm/cmtt9.mf
-share/texmf-dist/fonts/source/public/cm/cmttb10.mf
 share/texmf-dist/fonts/source/public/cm/cmu10.mf
 share/texmf-dist/fonts/source/public/cm/cmvtt10.mf
 share/texmf-dist/fonts/source/public/cm/comlig.mf
@@ -138,7 +131,6 @@ share/texmf-dist/fonts/source/public/cm/tset.mf
 share/texmf-dist/fonts/source/public/cm/tsetsl.mf
 share/texmf-dist/fonts/source/public/cm/white_setup.mf
 share/texmf-dist/fonts/tfm/public/cm/cmb10.tfm
-share/texmf-dist/fonts/tfm/public/cm/cmbcsc10.tfm
 share/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
