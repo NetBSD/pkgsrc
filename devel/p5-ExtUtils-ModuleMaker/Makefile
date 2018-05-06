@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2017/06/05 14:22:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2018/05/06 05:52:38 wiz Exp $
 
-DISTNAME=	ExtUtils-ModuleMaker-0.56
+DISTNAME=	ExtUtils-ModuleMaker-0.58
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ExtUtils/}
 
@@ -11,8 +10,13 @@ HOMEPAGE=	http://search.cpan.org/dist/ExtUtils-ModuleMaker/
 COMMENT=	Perl extension for creating modules (better than h2xs)
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-File-Save-Home>=0.03:../../devel/p5-File-Save-Home
+DEPENDS+=	p5-File-HomeDir-[0-9]*:../../devel/p5-File-HomeDir
+DEPENDS+=	p5-File-Path>=2.15:../../devel/p5-File-Path
+DEPENDS+=	p5-File-Copy-Recursive-Reduced-[0-9]*:../../sysutils/p5-File-Copy-Recursive-Reduced
+
+# TEST_DEPENDS
 BUILD_DEPENDS+=	p5-IO-Capture-[0-9]*:../../devel/p5-IO-Capture
+BUILD_DEPENDS+=	p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
 
 PERL5_PACKLIST=		auto/ExtUtils/ModuleMaker/.packlist
 
