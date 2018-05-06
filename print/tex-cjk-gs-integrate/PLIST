@@ -1,2 +1,20 @@
-@comment $NetBSD: PLIST,v 1.1 2015/09/02 11:17:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/05/06 01:34:08 markd Exp $
 bin/cjk-gs-integrate
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-adobe.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-dynacomware.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-fontworks.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-founder.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-hiragino.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-kozuka.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-macos-removeonly.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-microsoft.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-mogamobo.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-morisawa.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-ryokana.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-sinotype.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-solaris.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-toppan.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-typebank.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-ume.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-yu-osx.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-yu-win.dat
