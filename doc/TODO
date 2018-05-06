@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18323 2018/05/06 10:06:40 adam Exp $
+$NetBSD: TODO,v 1.18324 2018/05/06 11:57:11 leot Exp $
 
 Suggested new packages
 ======================
@@ -1154,7 +1154,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o paragui-1.1.8
 	o pari-2.9.4
 	o parrot-7.11.0
-	o password-store-1.7
 	o pcal-4.8
 	o pcc-1.1.0
 	o pcc-current-20160305
