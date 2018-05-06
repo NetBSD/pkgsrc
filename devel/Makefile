@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2666 2018/05/02 12:57:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2667 2018/05/06 06:59:59 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -238,6 +238,7 @@ SUBDIR+=	edcommon
 SUBDIR+=	editline
 SUBDIR+=	editorconfig-core
 SUBDIR+=	eet
+SUBDIR+=	egypt
 SUBDIR+=	eina
 SUBDIR+=	eio
 SUBDIR+=	electric-fence
@@ -1661,6 +1662,7 @@ SUBDIR+=	p5-Test-MockModule
 SUBDIR+=	p5-Test-MockObject
 SUBDIR+=	p5-Test-Modern
 SUBDIR+=	p5-Test-More-Behaviour
+SUBDIR+=	p5-Test-More-UTF8
 SUBDIR+=	p5-Test-Most
 SUBDIR+=	p5-Test-Needs
 SUBDIR+=	p5-Test-NoTabs
@@ -2177,6 +2179,7 @@ SUBDIR+=	py-pyparsing
 SUBDIR+=	py-pysha3
 SUBDIR+=	py-pysvn
 SUBDIR+=	py-pytemplate
+SUBDIR+=	py-python-dotenv
 SUBDIR+=	py-pyutil
 SUBDIR+=	py-pyvex
 SUBDIR+=	py-queuelib
