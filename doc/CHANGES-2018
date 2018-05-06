@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2180 2018/05/06 02:26:04 taca Exp $
+$NetBSD: CHANGES-2018,v 1.2181 2018/05/06 02:26:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3041,3 +3041,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/capistrano to 3.10.2 [taca 2018-05-06]
 	Updated www/ruby-capybara to 3.0.3 [taca 2018-05-06]
 	Updated www/ruby-crass to 1.0.3 [taca 2018-05-06]
+	Updated www/ruby-patron to 0.13.1 [taca 2018-05-06]
