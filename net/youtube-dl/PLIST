@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2018/04/25 15:42:12 leot Exp $
+@comment $NetBSD: PLIST,v 1.62 2018/05/06 10:22:59 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -2318,6 +2318,9 @@ ${PYSITELIB}/youtube_dl/extractor/zapiks.pyo
 ${PYSITELIB}/youtube_dl/extractor/zaq1.py
 ${PYSITELIB}/youtube_dl/extractor/zaq1.pyc
 ${PYSITELIB}/youtube_dl/extractor/zaq1.pyo
+${PYSITELIB}/youtube_dl/extractor/zattoo.py
+${PYSITELIB}/youtube_dl/extractor/zattoo.pyc
+${PYSITELIB}/youtube_dl/extractor/zattoo.pyo
 ${PYSITELIB}/youtube_dl/extractor/zdf.py
 ${PYSITELIB}/youtube_dl/extractor/zdf.pyc
 ${PYSITELIB}/youtube_dl/extractor/zdf.pyo
