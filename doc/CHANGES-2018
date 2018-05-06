@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2203 2018/05/06 12:18:04 markd Exp $
+$NetBSD: CHANGES-2018,v 1.2204 2018/05/06 13:19:24 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3146,3 +3146,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated fonts/tex-japanese-otf-doc to 1.7b7 [markd 2018-05-06]
 	Updated print/tex-jsclasses to 2018 [markd 2018-05-06]
 	Updated print/tex-koma-script to 3.25 [markd 2018-05-06]
+	Updated print/mupdf to 1.13.0 [leot 2018-05-06]
