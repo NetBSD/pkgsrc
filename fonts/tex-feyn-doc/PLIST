@@ -1,9 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/05/06 02:51:25 markd Exp $
 share/texmf-dist/doc/fonts/feyn/LICENCE
 share/texmf-dist/doc/fonts/feyn/README
 share/texmf-dist/doc/fonts/feyn/VERSION
 share/texmf-dist/doc/fonts/feyn/exercise-font.pdf
 share/texmf-dist/doc/fonts/feyn/exercise-font.tex
+share/texmf-dist/doc/fonts/feyn/feyn.html
 share/texmf-dist/doc/fonts/feyn/feyn.pdf
 share/texmf-dist/doc/fonts/feyn/overheads.pdf
 share/texmf-dist/doc/fonts/feyn/overheads.tex
+share/texmf-dist/doc/fonts/feyn/release-notes.html
+share/texmf-dist/doc/fonts/feyn/sample-massive.png
+share/texmf-dist/doc/fonts/feyn/sample-phi4.png
+share/texmf-dist/doc/fonts/feyn/sample-two-loop-annotated.png
+share/texmf-dist/doc/fonts/feyn/sample-two-loop.png
+share/texmf-dist/doc/fonts/feyn/sample-vertex.png
+share/texmf-dist/doc/fonts/feyn/style.css
