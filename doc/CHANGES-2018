@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2178 2018/05/06 02:23:43 taca Exp $
+$NetBSD: CHANGES-2018,v 1.2179 2018/05/06 02:25:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3039,3 +3039,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/ruby-cairo to 1.15.13 [taca 2018-05-06]
 	Updated net/ruby-nio4r to 2.3.1 [taca 2018-05-06]
 	Updated sysutils/capistrano to 3.10.2 [taca 2018-05-06]
+	Updated www/ruby-capybara to 3.0.3 [taca 2018-05-06]
