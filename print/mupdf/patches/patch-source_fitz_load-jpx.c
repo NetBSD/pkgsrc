@@ -1,7 +1,4 @@
-$NetBSD: patch-source_fitz_load-jpx.c,v 1.7 2017/12/18 15:06:34 leot Exp $
-
-- Restrict OPJ_STATIC to Windows. 
-  This avoid linking errors due to opj_* hidden symbols when linking libmupdf.
+$NetBSD: patch-source_fitz_load-jpx.c,v 1.8 2018/05/06 13:19:10 leot Exp $
 
 - MuPDF does some locking around its allocation calls; it overrides openjpeg's
   allocators to do this locking too. However mupdf tries to manually align things
@@ -16,28 +13,18 @@ $NetBSD: patch-source_fitz_load-jpx.c,v 1.7 2017/12/18 15:06:34 leot Exp $
 
   From OpenBSD ports textproc/mupdf/patch-source_fitz_load-jpx_c,v 1.5.
 
---- source/fitz/load-jpx.c.orig	2017-11-23 11:42:45.000000000 +0000
+--- source/fitz/load-jpx.c.orig	2018-04-12 13:14:06.000000000 +0000
 +++ source/fitz/load-jpx.c
-@@ -445,7 +445,9 @@ fz_load_jpx_info(fz_context *ctx, const 
- 
- #else /* HAVE_LURATECH */
- 
-+#if defined(_WIN32) || defined(_WIN64)
- #define OPJ_STATIC
-+#endif
- #define OPJ_HAVE_INTTYPES_H
- #if !defined(_MSC_VER) || _MSC_VER >= 1600
- #define OPJ_HAVE_STDINT_H
-@@ -555,30 +557,14 @@ void opj_free(void *ptr)
+@@ -548,30 +548,14 @@ void opj_free(void *ptr)
  
  void * opj_aligned_malloc(size_t size)
  {
 -	uint8_t *ptr;
 -	int off;
--
+ 
 -	if (size == 0)
 -		return NULL;
- 
+-
 -	size += 16 + sizeof(uint8_t);
 -	ptr = opj_malloc(size);
 -	if (ptr == NULL)

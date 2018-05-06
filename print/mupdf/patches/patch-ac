@@ -1,22 +1,23 @@
-$NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
+$NetBSD: patch-ac,v 1.19 2018/05/06 13:19:10 leot Exp $
 
 - libtool support 
 - Install target cleanup
-- Also install muthreads library (needed by various tools)
+- Also install muthreads and mupkcs7 libraries (needed by various tools)
 - Do not force `-O0' flag when building
 - Get rid of unused VERSION variable and `version:' target (otherwise `git' can
   be invoked during the building phase)
 - Install only one `mupdf' binary, prefer the featureful one and always
   install it as `mupdf'.
+- Install all EXTRA_APPS (muraster, mujstest, mjsgen)
 
---- Makefile.orig	2017-11-23 11:42:45.000000000 +0000
+--- Makefile.orig	2018-04-12 13:14:06.000000000 +0000
 +++ Makefile
-@@ -71,10 +71,10 @@ QUIET_TAGS = @ echo ' ' ' ' TAGS $@ ;
+@@ -72,10 +72,10 @@ QUIET_TAGS = @ echo ' ' ' ' TAGS $@ ;
  QUIET_WINDRES = @ echo ' ' ' ' WINDRES $@ ;
  endif
  
 -CC_CMD = $(QUIET_CC) $(CC) $(CFLAGS) -o $@ -c $<
--CXX_CMD = $(QUIET_CXX) $(CXX) $(CFLAGS) -o $@ -c $<
+-CXX_CMD = $(QUIET_CXX) $(CXX) $(filter-out -Wdeclaration-after-statement,$(CFLAGS)) -o $@ -c $<
 -AR_CMD = $(QUIET_AR) $(AR) cr $@ $^
 -LINK_CMD = $(QUIET_LINK) $(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
 +CC_CMD = $(QUIET_CC) ${LIBTOOL} --mode=compile $(CC) $(CFLAGS) -o $@ -c $<
@@ -26,7 +27,7 @@ $NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
  MKDIR_CMD = $(QUIET_MKDIR) mkdir -p $@
  RM_CMD = $(QUIET_RM) rm -f $@
  TAGS_CMD = $(QUIET_TAGS) ctags $^
-@@ -85,42 +85,42 @@ WINDRES_CMD = $(QUIET_WINDRES) $(WINDRES
+@@ -86,45 +86,45 @@ WINDRES_CMD = $(QUIET_WINDRES) $(WINDRES
  $(ALL_DIR) $(OUT) generated :
  	$(MKDIR_CMD)
  
@@ -40,9 +41,13 @@ $NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
 +$(OUT)/%.exe: $(OUT)/%.lo | $(ALL_DIR)
  	$(LINK_CMD)
  
--$(OUT)/source/helpers/%.o : source/helpers/%.c | $(ALL_DIR)
-+$(OUT)/source/helpers/%.lo : source/helpers/%.c | $(ALL_DIR)
+-$(OUT)/source/helpers/mu-threads/%.o : source/helpers/mu-threads/%.c | $(ALL_DIR)
++$(OUT)/source/helpers/mu-threads/%.lo : source/helpers/mu-threads/%.c | $(ALL_DIR)
  	$(CC_CMD) $(THREADING_CFLAGS)
+ 
+-$(OUT)/source/helpers/pkcs7/%.o : source/helpers/pkcs7/%.c | $(ALL_DIR)
++$(OUT)/source/helpers/pkcs7/%.lo : source/helpers/pkcs7/%.c | $(ALL_DIR)
+ 	$(CC_CMD)
  
 -$(OUT)/source/tools/%.o : source/tools/%.c | $(ALL_DIR)
 +$(OUT)/source/tools/%.lo : source/tools/%.c | $(ALL_DIR)
@@ -82,7 +87,7 @@ $NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
  
  # --- File lists ---
  
-@@ -144,14 +144,14 @@ SVG_SRC_HDR := $(wildcard source/svg/*.h
+@@ -153,16 +153,16 @@ SVG_SRC_HDR := $(wildcard source/svg/*.h
  HTML_SRC_HDR := $(wildcard source/html/*.h)
  GPRF_SRC_HDR := $(wildcard source/gprf/*.h)
  
@@ -94,6 +99,8 @@ $NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
 -HTML_OBJ := $(HTML_SRC:%.c=$(OUT)/%.o)
 -GPRF_OBJ := $(GPRF_SRC:%.c=$(OUT)/%.o)
 -THREAD_OBJ := $(THREAD_SRC:%.c=$(OUT)/%.o)
+-PKCS7_OBJ := $(PKCS7_SRC:%.c=$(OUT)/%.o)
+-SIGNATURE_OBJ := $(OUT)/platform/x11/pdfapp.o $(OUT)/source/tools/pdfsign.o
 +FITZ_OBJ := $(FITZ_SRC:%.c=$(OUT)/%.lo)
 +PDF_OBJ := $(PDF_SRC:%.c=$(OUT)/%.lo)
 +XPS_OBJ := $(XPS_SRC:%.c=$(OUT)/%.lo)
@@ -102,10 +109,12 @@ $NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
 +HTML_OBJ := $(HTML_SRC:%.c=$(OUT)/%.lo)
 +GPRF_OBJ := $(GPRF_SRC:%.c=$(OUT)/%.lo)
 +THREAD_OBJ := $(THREAD_SRC:%.c=$(OUT)/%.lo)
++PKCS7_OBJ := $(PKCS7_SRC:%.c=$(OUT)/%.lo)
++SIGNATURE_OBJ := $(OUT)/platform/x11/pdfapp.lo $(OUT)/source/tools/pdfsign.lo
  
  $(FITZ_OBJ) : $(FITZ_HDR) $(FITZ_SRC_HDR)
  $(PDF_OBJ) : $(FITZ_HDR) $(PDF_HDR) $(PDF_SRC_HDR)
-@@ -177,7 +177,7 @@ ifneq "$(CROSSCOMPILE)" "yes"
+@@ -190,7 +190,7 @@ ifneq "$(CROSSCOMPILE)" "yes"
  $(NAME_GEN) : $(NAMEDUMP_EXE)
  endif
  
@@ -114,7 +123,7 @@ $NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
  
  generate: $(NAME_GEN)
  
-@@ -199,7 +199,7 @@ FONT_GEN_SIL := $(subst resources/fonts/
+@@ -212,7 +212,7 @@ FONT_GEN_SIL := $(subst resources/fonts/
  
  FONT_BIN := $(FONT_BIN_DROID) $(FONT_BIN_NOTO) $(FONT_BIN_HAN) $(FONT_BIN_URW) $(FONT_BIN_SIL)
  FONT_GEN := $(FONT_GEN_DROID) $(FONT_GEN_NOTO) $(FONT_GEN_HAN) $(FONT_GEN_URW) $(FONT_GEN_SIL)
@@ -123,7 +132,7 @@ $NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
  
  generated/%.c : resources/fonts/droid/%.ttf $(HEXDUMP_EXE) | generated
  	$(QUIET_GEN) $(HEXDUMP_EXE) -s $@ $<
-@@ -229,7 +229,7 @@ generate: $(FONT_GEN)
+@@ -242,7 +242,7 @@ generate: $(FONT_GEN)
  
  ICC_BIN := resources/icc/gray.icc resources/icc/rgb.icc resources/icc/cmyk.icc resources/icc/lab.icc
  ICC_GEN := generated/icc-profiles.c
@@ -132,7 +141,7 @@ $NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
  
  $(ICC_OBJ) : $(ICC_GEN)
  $(ICC_GEN) : $(ICC_BIN) | generated
-@@ -255,7 +255,7 @@ CMAP_GEN := \
+@@ -268,7 +268,7 @@ CMAP_GEN := \
  	generated/pdf-cmap-extra.c \
  	generated/pdf-cmap-utf8.c \
  	generated/pdf-cmap-utf32.c
@@ -141,7 +150,7 @@ $NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
  
  generated/pdf-cmap-cjk.c : $(CMAP_CJK_SRC) | generated
  	$(QUIET_GEN) $(CMAPDUMP_EXE) $@ $(CMAP_CJK_SRC)
-@@ -274,7 +274,7 @@ endif
+@@ -287,7 +287,7 @@ endif
  
  generate: $(CMAP_GEN)
  
@@ -150,7 +159,7 @@ $NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
  	$(NAME_GEN) \
  	include/mupdf/pdf/cmap.h \
  	source/fitz/context.c \
-@@ -297,7 +297,7 @@ $(OUT)/scripts/cmapdump.o : \
+@@ -310,7 +310,7 @@ $(OUT)/scripts/cmapdump.o : \
  
  JAVASCRIPT_SRC := source/pdf/pdf-js-util.js
  JAVASCRIPT_GEN := generated/pdf-js-util.c
@@ -159,25 +168,27 @@ $NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
  
  $(JAVASCRIPT_GEN) : $(JAVASCRIPT_SRC) | generated
  	$(QUIET_GEN) $(HEXDUMP_EXE) -0 $@ $(JAVASCRIPT_SRC)
-@@ -312,9 +312,9 @@ generate: $(JAVASCRIPT_GEN)
+@@ -325,10 +325,10 @@ generate: $(JAVASCRIPT_GEN)
  
  # --- Library ---
  
 -MUPDF_LIB = $(OUT)/libmupdf.a
 -THIRD_LIB = $(OUT)/libmupdfthird.a
 -THREAD_LIB = $(OUT)/libmuthreads.a
+-PKCS7_LIB = $(OUT)/libmupkcs7.a
 +MUPDF_LIB = $(OUT)/libmupdf.la
 +THIRD_LIB = $(OUT)/libmupdfthird.la
 +THREAD_LIB = $(OUT)/libmuthreads.la
++PKCS7_LIB = $(OUT)/libmupkcs7.la
  
  MUPDF_OBJ := \
  	$(FITZ_OBJ) \
-@@ -347,46 +347,46 @@ $(MUPDF_LIB) : $(MUPDF_OBJ)
- $(THIRD_LIB) : $(THIRD_OBJ)
+@@ -360,46 +360,46 @@ $(THIRD_LIB) : $(THIRD_OBJ)
  $(THREAD_LIB) : $(THREAD_OBJ)
+ $(PKCS7_LIB) : $(PKCS7_OBJ)
  
 -INSTALL_LIBS := $(MUPDF_LIB) $(THIRD_LIB)
-+INSTALL_LIBS := $(MUPDF_LIB) $(THIRD_LIB) $(THREAD_LIB)
++INSTALL_LIBS := $(MUPDF_LIB) $(THIRD_LIB) $(THREAD_LIB) $(PKCS7_LIB)
  
  # --- Tools and Apps ---
  
@@ -187,7 +198,7 @@ $NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
 -MUTOOL_OBJ := $(MUTOOL_SRC:%.c=$(OUT)/%.o)
 +MUTOOL_OBJ := $(MUTOOL_SRC:%.c=$(OUT)/%.lo)
  $(MUTOOL_OBJ) : $(FITZ_HDR) $(PDF_HDR)
- $(MUTOOL_EXE) : $(MUTOOL_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(THREAD_LIB)
+ $(MUTOOL_EXE) : $(MUTOOL_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(THREAD_LIB) $(PKCS7_LIB)
  	$(LINK_CMD) $(THREADING_LIBS)
  
  MURASTER_EXE := $(OUT)/muraster
@@ -208,7 +219,7 @@ $NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
 -MUJSTEST_OBJ := $(addprefix $(OUT)/platform/x11/, jstest_main.o pdfapp.o)
 +MUJSTEST_OBJ := $(addprefix $(OUT)/platform/x11/, jstest_main.lo pdfapp.lo)
  $(MUJSTEST_OBJ) : $(FITZ_HDR) $(PDF_HDR)
- $(MUJSTEST_EXE) : $(MUJSTEST_OBJ) $(MUPDF_LIB) $(THIRD_LIB)
+ $(MUJSTEST_EXE) : $(MUJSTEST_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB)
  	$(LINK_CMD)
  
  ifeq "$(HAVE_X11)" "yes"
@@ -217,7 +228,7 @@ $NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
 +MUVIEW_X11_EXE := $(OUT)/platform/x11/mupdf
 +MUVIEW_X11_OBJ := $(addprefix $(OUT)/platform/x11/, x11_main.lo x11_image.lo pdfapp.lo)
  $(MUVIEW_X11_OBJ) : $(FITZ_HDR) $(PDF_HDR)
- $(MUVIEW_X11_EXE) : $(MUVIEW_X11_OBJ) $(MUPDF_LIB) $(THIRD_LIB)
+ $(MUVIEW_X11_EXE) : $(MUVIEW_X11_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB)
  	$(LINK_CMD) $(X11_LIBS)
  
  ifeq "$(HAVE_CURL)" "yes"
@@ -226,9 +237,9 @@ $NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
 +MUVIEW_X11_CURL_EXE := $(OUT)/platform/x11/curl/mupdf
 +MUVIEW_X11_CURL_OBJ := $(addprefix $(OUT)/platform/x11/curl/, x11_main.lo x11_image.lo pdfapp.lo curl_stream.lo)
  $(MUVIEW_X11_CURL_OBJ) : $(FITZ_HDR) $(PDF_HDR)
- $(MUVIEW_X11_CURL_EXE) : $(MUVIEW_X11_CURL_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(CURL_LIB)
+ $(MUVIEW_X11_CURL_EXE) : $(MUVIEW_X11_CURL_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(CURL_LIB) $(PKCS7_LIB)
  	$(LINK_CMD) $(X11_LIBS) $(CURL_LIBS) $(SYS_CURL_DEPS)
-@@ -394,8 +394,8 @@ endif
+@@ -407,8 +407,8 @@ endif
  endif
  
  ifeq "$(HAVE_GLUT)" "yes"
@@ -239,25 +250,26 @@ $NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
  $(MUVIEW_GLUT_OBJ) : $(FITZ_HDR) $(PDF_HDR) platform/gl/gl-app.h
  $(MUVIEW_GLUT_EXE) : $(MUVIEW_GLUT_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(GLUT_LIB)
  	$(LINK_CMD) $(GLUT_LIB) $(GLUT_LIBS)
-@@ -403,7 +403,7 @@ endif
+@@ -416,7 +416,7 @@ endif
  
  ifeq "$(HAVE_WIN32)" "yes"
  MUVIEW_WIN32_EXE := $(OUT)/mupdf
 -MUVIEW_WIN32_OBJ := $(addprefix $(OUT)/platform/x11/, win_main.o pdfapp.o win_res.o)
 +MUVIEW_WIN32_OBJ := $(addprefix $(OUT)/platform/x11/, win_main.lo pdfapp.lo win_res.lo)
  $(MUVIEW_WIN32_OBJ) : $(FITZ_HDR) $(PDF_HDR)
- $(MUVIEW_WIN32_EXE) : $(MUVIEW_WIN32_OBJ) $(MUPDF_LIB) $(THIRD_LIB)
+ $(MUVIEW_WIN32_EXE) : $(MUVIEW_WIN32_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB)
  	$(LINK_CMD) $(WIN32_LIBS)
-@@ -412,11 +412,20 @@ endif
+@@ -425,11 +425,21 @@ endif
  MUVIEW_EXE := $(MUVIEW_X11_EXE) $(MUVIEW_WIN32_EXE) $(MUVIEW_GLUT_EXE)
  MUVIEW_CURL_EXE := $(MUVIEW_X11_CURL_EXE) $(MUVIEW_WIN32_CURL_EXE)
  
 -INSTALL_APPS := $(MUTOOL_EXE) $(MUVIEW_EXE)
 +INSTALL_APPS := $(MUTOOL_EXE)
- INSTALL_APPS += $(MURASTER_EXE)
--INSTALL_APPS += $(MUVIEW_CURL_EXE)
- INSTALL_APPS += $(MUJSTEST_EXE)
- INSTALL_APPS += $(MJSGEN_EXE)
+ EXTRA_APPS += $(MURASTER_EXE)
+-EXTRA_APPS += $(MUVIEW_CURL_EXE)
+ EXTRA_APPS += $(MUJSTEST_EXE)
+ EXTRA_APPS += $(MJSGEN_EXE)
++INSTALL_APPS += $(EXTRA_APPS)
 + 
 +ifeq "$(HAVE_CURL)" "yes"
 +INSTALL_APPS += $(MUVIEW_CURL_EXE)
@@ -271,7 +283,7 @@ $NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
  
  # --- Examples ---
  
-@@ -429,10 +438,10 @@ $(OUT)/multi-threaded: docs/examples/mul
+@@ -442,10 +452,10 @@ $(OUT)/multi-threaded: docs/examples/mul
  
  # --- Update version string header ---
  
@@ -286,8 +298,8 @@ $NetBSD: patch-ac,v 1.18 2017/12/18 15:06:34 leot Exp $
  
  # --- Format man pages ---
  
-@@ -459,27 +468,29 @@ libs: $(INSTALL_LIBS)
- apps: $(INSTALL_APPS)
+@@ -474,27 +484,29 @@ extra-apps: $(EXTRA_APPS)
+ extra: extra-libs extra-apps
  
  install: libs apps
 -	install -d $(DESTDIR)$(incdir)/mupdf
