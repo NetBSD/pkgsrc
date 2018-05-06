@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/02/15 18:58:40 gls Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/05/06 11:56:58 leot Exp $
 bin/pass
 man/man1/pass.1
 share/examples/password-store/completion/pass.bash-completion
@@ -6,7 +6,6 @@ share/examples/password-store/completion/pass.fish-completion
 share/examples/password-store/completion/pass.zsh-completion
 share/examples/password-store/contrib/dmenu/README.md
 share/examples/password-store/contrib/dmenu/passmenu
-share/examples/password-store/contrib/emacs/.gitignore
 share/examples/password-store/contrib/emacs/Cask
 share/examples/password-store/contrib/emacs/README.md
 share/examples/password-store/contrib/emacs/password-store.el
@@ -14,12 +13,16 @@ share/examples/password-store/contrib/importers/1password2pass.rb
 share/examples/password-store/contrib/importers/fpm2pass.pl
 share/examples/password-store/contrib/importers/gorilla2pass.rb
 share/examples/password-store/contrib/importers/kedpm2pass.py
+share/examples/password-store/contrib/importers/keepass2csv2pass.py
 share/examples/password-store/contrib/importers/keepass2pass.py
 share/examples/password-store/contrib/importers/keepassx2pass.py
 share/examples/password-store/contrib/importers/kwallet2pass.py
 share/examples/password-store/contrib/importers/lastpass2pass.rb
+share/examples/password-store/contrib/importers/password-exporter2pass.py
+share/examples/password-store/contrib/importers/pwsafe2pass.py
 share/examples/password-store/contrib/importers/pwsafe2pass.sh
 share/examples/password-store/contrib/importers/revelation2pass.py
-share/examples/password-store/contrib/related-projects.txt
+share/examples/password-store/contrib/importers/roboform2pass.rb
+share/examples/password-store/contrib/pass.applescript
 share/examples/password-store/contrib/vim/noplaintext.vim
 share/examples/password-store/example-filter.sh
