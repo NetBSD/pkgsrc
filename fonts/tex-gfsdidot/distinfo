@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:45:02 agc Exp $
+$NetBSD: distinfo,v 1.3 2018/05/06 04:03:30 markd Exp $
 
-SHA1 (tex-gfsdidot-31978/gfsdidot.tar.xz) = 0a6d08d038784804e90aa5c6987ccc7c695a04a6
-RMD160 (tex-gfsdidot-31978/gfsdidot.tar.xz) = 40c895cac41fae1a46d3edfe31c10fec7a73ff78
-SHA512 (tex-gfsdidot-31978/gfsdidot.tar.xz) = dd89d735e7a2ab11ef2f017acd0ccfd4983197d4118419d7e8c9533752b8835df3bc33b4233037d18756dfc9c9b6a0c793110e8760be973b70fee768c3c263b3
-Size (tex-gfsdidot-31978/gfsdidot.tar.xz) = 1217328 bytes
+SHA1 (tex-gfsdidot-46310/gfsdidot.tar.xz) = fa916961ea24523fda93710e467cb8bed8f043cb
+RMD160 (tex-gfsdidot-46310/gfsdidot.tar.xz) = a0cd6da0bcef37cd77da9d2f1b09ef7ffdc5f866
+SHA512 (tex-gfsdidot-46310/gfsdidot.tar.xz) = 6ba55f79fa7724aa3c30d1b6d74ecb0bb656b197ad36967caebf32b09ccc093287fe4b06cfb9c40347dc790d6f1e7046a6a165b6de9e5b805ea97d6120512158
+Size (tex-gfsdidot-46310/gfsdidot.tar.xz) = 1305400 bytes
