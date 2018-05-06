@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2205 2018/05/06 13:21:46 leot Exp $
+$NetBSD: CHANGES-2018,v 1.2206 2018/05/06 17:50:47 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3148,3 +3148,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/tex-koma-script to 3.25 [markd 2018-05-06]
 	Updated print/mupdf to 1.13.0 [leot 2018-05-06]
 	Updated print/zathura-pdf-mupdf to 0.3.2nb4 [leot 2018-05-06]
+	Updated security/sshpass to 1.06 [gavan 2018-05-06]
+	Updated security/sshpass to 1.06 [gavan 2018-05-06]
