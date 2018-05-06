@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2017/12/18 15:06:33 leot Exp $
+@comment $NetBSD: PLIST,v 1.16 2018/05/06 13:19:10 leot Exp $
 bin/mjsgen
 bin/mujstest
 bin/mupdf
@@ -85,6 +85,7 @@ include/mupdf/pdf/xref.h
 include/mupdf/ucdn.h
 lib/libmupdf.la
 lib/libmupdfthird.la
+lib/libmupkcs7.la
 lib/libmuthreads.la
 lib/pkgconfig/mupdf.pc
 man/man1/mupdf.1
