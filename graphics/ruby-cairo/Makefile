@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/03/17 14:16:47 taca Exp $
+# $NetBSD: Makefile,v 1.9 2018/05/06 02:09:24 taca Exp $
 
-DISTNAME=		cairo-1.15.12
+DISTNAME=		cairo-1.15.13
 CATEGORIES=		graphics
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -8,8 +8,8 @@ HOMEPAGE=		https://rcairo.github.io/
 COMMENT=		Ruby bindings for cairo
 LICENSE=		ruby-license OR gnu-gpl-v2
 
-DEPENDS+=		${RUBY_PKGPREFIX}-native-package-installer>=0:../../devel/ruby-native-package-installer
-OVERRIDE_GEMSPEC+=	native-package-installer:
+DEPENDS+=	${RUBY_PKGPREFIX}-native-package-installer>=1.0.3:../../devel/ruby-native-package-installer
+DEPENDS+=	${RUBY_PKGPREFIX}-pkg-config>=1.2.2:../../devel/ruby-pkg-config
 
 #do-test:
 #	${RUN} cd ${WRKSRC}; \
