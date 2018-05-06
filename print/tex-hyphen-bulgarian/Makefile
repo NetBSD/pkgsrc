@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2017/09/06 16:49:35 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/05/06 11:40:11 markd Exp $
 
 DISTNAME=	hyphen-bulgarian
-PKGNAME=	tex-${DISTNAME}-2016
-TEXLIVE_REV=	41113
+PKGNAME=	tex-${DISTNAME}-2018
+TEXLIVE_REV=	47375
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns for Bulgarian
