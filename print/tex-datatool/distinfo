@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/08/07 09:09:37 markd Exp $
+$NetBSD: distinfo,v 1.7 2018/05/06 02:26:52 markd Exp $
 
-SHA1 (tex-datatool-41772/datatool.tar.xz) = 8a2851021e0807289858cff317ef03a197f95012
-RMD160 (tex-datatool-41772/datatool.tar.xz) = 3b475e1673bf2c083aa42559db465129ae5f3f8a
-SHA512 (tex-datatool-41772/datatool.tar.xz) = 40abd752e5f423230aaea75774347944032b46fc7daf5997330f7dd7eda27a3cbe68d2186bbcf53cf5e76443027ba2dff24af2856b07013a95f1eb73a8495d68
-Size (tex-datatool-41772/datatool.tar.xz) = 54548 bytes
+SHA1 (tex-datatool-45759/datatool.tar.xz) = 631642f66fe00a926b09943dd822b4eb66d7a497
+RMD160 (tex-datatool-45759/datatool.tar.xz) = 7c2cfa001393e82fa1ef3be7d8f3c5b3ad3ba27e
+SHA512 (tex-datatool-45759/datatool.tar.xz) = 23461c980cbb5c300054fe4ec22a606a42833c8e56c49c909bc5c82085b85f1576ecf860f852ab800af126bece797cce6ca204158ac28fc25e387743cd3565d7
+Size (tex-datatool-45759/datatool.tar.xz) = 55088 bytes
