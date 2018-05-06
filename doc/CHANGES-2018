@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2188 2018/05/06 06:10:32 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2189 2018/05/06 06:26:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3116,3 +3116,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-ExtUtils-ModuleMaker to 0.58 [wiz 2018-05-06]
 	Updated devel/p5-File-HomeDir to 1.00.2 [wiz 2018-05-06]
 	Updated devel/p5-IPC-Cmd to 1.02 [wiz 2018-05-06]
+	Updated devel/p5-Module-FromPerlVer to 0.022001 [wiz 2018-05-06]
