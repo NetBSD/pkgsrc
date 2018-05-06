@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/03/17 14:26:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/05/06 02:24:54 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yard/templates_custom/default/class/html/selectors.erb
 ${GEM_LIBDIR}/.yard/templates_custom/default/class/html/setup.rb
@@ -32,7 +32,6 @@ ${GEM_LIBDIR}/lib/capybara/queries/selector_query.rb
 ${GEM_LIBDIR}/lib/capybara/queries/sibling_query.rb
 ${GEM_LIBDIR}/lib/capybara/queries/text_query.rb
 ${GEM_LIBDIR}/lib/capybara/queries/title_query.rb
-${GEM_LIBDIR}/lib/capybara/query.rb
 ${GEM_LIBDIR}/lib/capybara/rack_test/browser.rb
 ${GEM_LIBDIR}/lib/capybara/rack_test/css_handlers.rb
 ${GEM_LIBDIR}/lib/capybara/rack_test/driver.rb
@@ -101,6 +100,8 @@ ${GEM_LIBDIR}/lib/capybara/spec/session/find_field_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/find_link_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/find_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/first_spec.rb
+${GEM_LIBDIR}/lib/capybara/spec/session/frame/frame_title_spec.rb
+${GEM_LIBDIR}/lib/capybara/spec/session/frame/frame_url_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/frame/switch_to_frame_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/frame/within_frame_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/go_back_spec.rb
@@ -121,6 +122,7 @@ ${GEM_LIBDIR}/lib/capybara/spec/session/has_xpath_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/headers.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/html_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/node_spec.rb
+${GEM_LIBDIR}/lib/capybara/spec/session/node_wrapper_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/refresh_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/reset_session_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/response_code.rb
@@ -200,7 +202,9 @@ ${GEM_LIBDIR}/spec/rspec_matchers_spec.rb
 ${GEM_LIBDIR}/spec/rspec_spec.rb
 ${GEM_LIBDIR}/spec/selector_spec.rb
 ${GEM_LIBDIR}/spec/selenium_spec_chrome.rb
-${GEM_LIBDIR}/spec/selenium_spec_firefox.rb
+${GEM_LIBDIR}/spec/selenium_spec_chrome_remote.rb
+${GEM_LIBDIR}/spec/selenium_spec_edge.rb
+${GEM_LIBDIR}/spec/selenium_spec_ie.rb
 ${GEM_LIBDIR}/spec/selenium_spec_marionette.rb
 ${GEM_LIBDIR}/spec/server_spec.rb
 ${GEM_LIBDIR}/spec/session_spec.rb
