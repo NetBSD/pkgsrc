@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2192 2018/05/06 06:46:23 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2193 2018/05/06 06:54:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3120,3 +3120,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Mouse to 2.5.4 [wiz 2018-05-06]
 	Updated devel/p5-Test-MockModule to 0.14 [wiz 2018-05-06]
 	Updated devel/p5-Test-TempDir-Tiny to 0.017 [wiz 2018-05-06]
+	Updated devel/p5-autobox to 3.0.1 [wiz 2018-05-06]
