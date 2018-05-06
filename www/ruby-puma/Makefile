@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2018/03/17 14:45:05 taca Exp $
+# $NetBSD: Makefile,v 1.16 2018/05/06 02:28:11 taca Exp $
 
-DISTNAME=	puma-3.11.3
+DISTNAME=	puma-3.11.4
 CATEGORIES=	www
 
 MAINTAINER=	taca@NetBSD.org
