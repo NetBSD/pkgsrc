@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/07/17 21:59:33 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/06 02:10:25 markd Exp $
 
 DISTNAME=	context-title
-PKGNAME=	tex-${DISTNAME}-2015
-TEXLIVE_REV=	36189
+PKGNAME=	tex-${DISTNAME}-2018	# actually 2012.04.11
+TEXLIVE_REV=	47085
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/context-title
