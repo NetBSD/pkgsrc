@@ -1,0 +1,18 @@
+$NetBSD: patch-contrib_dmenu_passmenu,v 1.1 2018/05/06 11:56:58 leot Exp $
+
+Avoid unsupported x11/xdotool (at least version 2.20110530.1) `--file' option.
+Refactor the logic for `passmenu --type' in order to avoid `--file' and directly
+inject the `type' command and password via a pipe.
+
+--- contrib/dmenu/passmenu.orig	2017-04-13 10:11:14.000000000 +0000
++++ contrib/dmenu/passmenu
+@@ -20,6 +20,7 @@ password=$(printf '%s\n' "${password_fil
+ if [[ $typeit -eq 0 ]]; then
+ 	pass show -c "$password" 2>/dev/null
+ else
+-	pass show "$password" | { read -r pass; printf %s "$pass"; } |
+-		xdotool type --clearmodifiers --file -
++	{ printf "type --clearmodifiers -- ";
++	    pass show "$password" | head -n 1 ; } |
++		xdotool -
+ fi
