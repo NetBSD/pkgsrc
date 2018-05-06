@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.1 2017/11/08 13:40:10 tnn Exp $
+# $NetBSD: cargo.mk,v 1.2 2018/05/06 01:59:36 maya Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -11,6 +11,12 @@
 # .include "../../lang/rust/cargo.mk"
 # do-build:
 # 	cargo build --locked --frozen
+#
+#
+# If modifying the list of dependencies, re-run the build once without
+# --locked --frozen to generate a new valid Cargo.lock.
+#
+# a list of CARGO_CRATE_DEPENDS can be generated via "make show-cargo-depends".
 #
 # See also www/geckodriver for a full example.
 
@@ -36,3 +42,7 @@ cargo-vendor-crates:
 	  $$(${DIGEST} sha256 < ${WRKDIR}/${_crate}.crate) \
 	  > ${CARGO_VENDOR_DIR}/${_crate}/.cargo-checksum.json
 .endfor
+
+.PHONY: show-cargo-depends
+show-cargo-depends:
+	${RUN}${AWK} '/^\"checksum/ { print "CARGO_CRATE_DEPENDS+=\t" $$2 "-" $$3""; next } ' ${WRKSRC}/Cargo.lock
