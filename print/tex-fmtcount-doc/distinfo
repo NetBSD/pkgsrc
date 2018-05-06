@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/10/23 01:57:25 markd Exp $
+$NetBSD: distinfo,v 1.7 2018/05/06 02:57:21 markd Exp $
 
-SHA1 (tex-fmtcount-45344/fmtcount.doc.tar.xz) = 4c78e8f5aff1892db0de5da52cfc5cbda0475fbc
-RMD160 (tex-fmtcount-45344/fmtcount.doc.tar.xz) = c22dc1249831022a781e6672eacbd2a762c882f4
-SHA512 (tex-fmtcount-45344/fmtcount.doc.tar.xz) = 24b77d8cda92c59ba7b3fc61b241a075c2d119b89dbf0abd2ea0fbb281123329bb8fe1ff7720421f7bc4dedfd0f59dc8286793f8241deddc25ecfd15dc8bd801
-Size (tex-fmtcount-45344/fmtcount.doc.tar.xz) = 387316 bytes
+SHA1 (tex-fmtcount-46159/fmtcount.doc.tar.xz) = 353bfa2699df457790d7bae33ef423613552cde6
+RMD160 (tex-fmtcount-46159/fmtcount.doc.tar.xz) = 90f63c65496ff674d8efe3b403ea02f18669d896
+SHA512 (tex-fmtcount-46159/fmtcount.doc.tar.xz) = 1f01ed3b3456f2216d36ebba206aa9cd7928b1c587e9a93e41491896a1e82676796d297b798d91c62d5acc34c8671cc67dac51cd5184013d1a123c2c9817a18c
+Size (tex-fmtcount-46159/fmtcount.doc.tar.xz) = 394456 bytes
