@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2227 2018/05/07 11:55:08 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2228 2018/05/07 18:41:12 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3171,3 +3171,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/dbus to 1.12.8 [wiz 2018-05-07]
 	Updated misc/goffice0.10 to 0.10.40 [wiz 2018-05-07]
 	Updated math/gnumeric112 to 1.12.40 [wiz 2018-05-07]
+	Added biology/samtools version 1.8 [bacon 2018-05-07]
