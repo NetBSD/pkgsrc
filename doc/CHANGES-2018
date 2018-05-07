@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2214 2018/05/07 07:01:47 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2215 2018/05/07 07:14:10 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3158,3 +3158,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/intel-microcode-netbsd to 20180425 [msaitoh 2018-05-07]
 	Updated net/wget to 1.19.5 [wiz 2018-05-07]
 	Updated www/thttpd to 2.28 [wiz 2018-05-07]
+	Updated net/unbound to 1.7.1 [he 2018-05-07]
