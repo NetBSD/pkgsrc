@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2018/05/07 22:18:53 minskim Exp $
+include/hs/hs.h
+include/hs/hs_common.h
+include/hs/hs_compile.h
+include/hs/hs_runtime.h
+lib/libhs.so
+lib/libhs.so.4
+lib/libhs.so.${PKGVERSION}
+lib/libhs_runtime.so
+lib/libhs_runtime.so.4
+lib/libhs_runtime.so.${PKGVERSION}
+lib/pkgconfig/libhs.pc
+share/doc/hyperscan/examples/README.md
+share/doc/hyperscan/examples/patbench.cc
+share/doc/hyperscan/examples/pcapscan.cc
+share/doc/hyperscan/examples/simplegrep.c
