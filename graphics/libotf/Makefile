@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/02/11 16:16:54 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2018/05/07 07:55:33 dholland Exp $
 
 DISTNAME=	libotf-0.9.16
 CATEGORIES=	graphics
@@ -14,6 +14,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	libotf.pc.in
+CONFIGURE_ENV+=		HAVE_FREETYPE_CONFIG=yes # actually uses pkg-config now
 
 .include "options.mk"
 
