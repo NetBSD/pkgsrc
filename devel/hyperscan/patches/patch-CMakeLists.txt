@@ -1,0 +1,137 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2018/05/07 22:19:34 minskim Exp $
+
+Avoid conflicts with pkgsrc's CMAKE_MODULE_PATH override.
+
+--- CMakeLists.txt.orig	2018-01-24 06:58:01.000000000 +0000
++++ CMakeLists.txt
+@@ -6,7 +6,6 @@ set (HS_MINOR_VERSION 7)
+ set (HS_PATCH_VERSION 0)
+ set (HS_VERSION ${HS_MAJOR_VERSION}.${HS_MINOR_VERSION}.${HS_PATCH_VERSION})
+ 
+-set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
+ include(CheckCCompilerFlag)
+ include(CheckCXXCompilerFlag)
+ include(CheckCXXSymbolExists)
+@@ -17,8 +16,8 @@ INCLUDE (CheckLibraryExists)
+ INCLUDE (CheckSymbolExists)
+ include (CMakeDependentOption)
+ include (GNUInstallDirs)
+-include (${CMAKE_MODULE_PATH}/platform.cmake)
+-include (${CMAKE_MODULE_PATH}/ragel.cmake)
++include (${PROJECT_SOURCE_DIR}/cmake/platform.cmake)
++include (${PROJECT_SOURCE_DIR}/cmake/ragel.cmake)
+ 
+ find_package(PkgConfig QUIET)
+ 
+@@ -68,7 +67,7 @@ include_directories(${PROJECT_SOURCE_DIR
+ include_directories(${PROJECT_BINARY_DIR})
+ include_directories(SYSTEM include)
+ 
+-include (${CMAKE_MODULE_PATH}/boost.cmake)
++include (${PROJECT_SOURCE_DIR}/cmake/boost.cmake)
+ 
+ # -- make this work? set(python_ADDITIONAL_VERSIONS 2.7 2.6)
+ find_package(PythonInterp)
+@@ -83,7 +82,7 @@ endif()
+ # allow for reproducible builds - python for portability
+ if (DEFINED ENV{SOURCE_DATE_EPOCH})
+       execute_process(
+-          COMMAND "${PYTHON}" "${CMAKE_MODULE_PATH}/formatdate.py" "$ENV{SOURCE_DATE_EPOCH}"
++          COMMAND "${PYTHON}" "${PROJECT_SOURCE_DIR}/cmake/formatdate.py" "$ENV{SOURCE_DATE_EPOCH}"
+           OUTPUT_VARIABLE BUILD_DATE
+           OUTPUT_STRIP_TRAILING_WHITESPACE)
+ else ()
+@@ -320,7 +319,7 @@ if (CMAKE_SYSTEM_NAME MATCHES "Linux")
+         message (STATUS "Building the fat runtime requires the Unix Makefiles generator, or Ninja with CMake v3.0 or higher")
+         set (FAT_RUNTIME_REQUISITES FALSE)
+     else()
+-        include (${CMAKE_MODULE_PATH}/attrib.cmake)
++        include (${PROJECT_SOURCE_DIR}/cmake/attrib.cmake)
+         if (NOT HAS_C_ATTR_IFUNC)
+             message(STATUS "Compiler does not support ifunc attribute, cannot build fat runtime")
+             set (FAT_RUNTIME_REQUISITES FALSE)
+@@ -331,7 +330,7 @@ if (CMAKE_SYSTEM_NAME MATCHES "Linux")
+     CMAKE_DEPENDENT_OPTION(FAT_RUNTIME "Build a library that supports multiple microarchitecures" ${RELEASE_BUILD} "FAT_RUNTIME_REQUISITES" OFF)
+ endif ()
+ 
+-include (${CMAKE_MODULE_PATH}/arch.cmake)
++include (${PROJECT_SOURCE_DIR}/cmake/arch.cmake)
+ 
+ # testing a builtin takes a little more work
+ CHECK_C_SOURCE_COMPILES("void *aa_test(void *x) { return __builtin_assume_aligned(x, 16);}\nint main(void) { return 0; }" HAVE_CC_BUILTIN_ASSUME_ALIGNED)
+@@ -453,7 +452,7 @@ if (EXISTS ${CMAKE_SOURCE_DIR}/tools/CMa
+ endif()
+ 
+ # do substitutions
+-configure_file(${CMAKE_MODULE_PATH}/config.h.in ${PROJECT_BINARY_DIR}/config.h)
++configure_file(${PROJECT_SOURCE_DIR}/cmake/config.h.in ${PROJECT_BINARY_DIR}/config.h)
+ configure_file(src/hs_version.h.in ${PROJECT_BINARY_DIR}/hs_version.h)
+ 
+ if (NOT WIN32)
+@@ -1147,28 +1146,28 @@ else (FAT_RUNTIME)
+        list(APPEND RUNTIME_LIBS $<TARGET_OBJECTS:hs_exec_core2>)
+        set_target_properties(hs_exec_core2 PROPERTIES
+            COMPILE_FLAGS "-march=core2"
+-           RULE_LAUNCH_COMPILE "${BUILD_WRAPPER} core2 ${CMAKE_MODULE_PATH}/keep.syms.in"
++           RULE_LAUNCH_COMPILE "${BUILD_WRAPPER} core2 ${PROJECT_SOURCE_DIR}/cmake/keep.syms.in"
+            )
+ 
+        add_library(hs_exec_corei7 OBJECT ${hs_exec_SRCS})
+        list(APPEND RUNTIME_LIBS $<TARGET_OBJECTS:hs_exec_corei7>)
+        set_target_properties(hs_exec_corei7 PROPERTIES
+            COMPILE_FLAGS "-march=corei7"
+-           RULE_LAUNCH_COMPILE "${BUILD_WRAPPER} corei7 ${CMAKE_MODULE_PATH}/keep.syms.in"
++           RULE_LAUNCH_COMPILE "${BUILD_WRAPPER} corei7 ${PROJECT_SOURCE_DIR}/cmake/keep.syms.in"
+            )
+ 
+        add_library(hs_exec_avx2 OBJECT ${hs_exec_SRCS} ${hs_exec_avx2_SRCS})
+        list(APPEND RUNTIME_LIBS $<TARGET_OBJECTS:hs_exec_avx2>)
+        set_target_properties(hs_exec_avx2 PROPERTIES
+            COMPILE_FLAGS "-march=core-avx2"
+-           RULE_LAUNCH_COMPILE "${BUILD_WRAPPER} avx2 ${CMAKE_MODULE_PATH}/keep.syms.in"
++           RULE_LAUNCH_COMPILE "${BUILD_WRAPPER} avx2 ${PROJECT_SOURCE_DIR}/cmake/keep.syms.in"
+            )
+        if (BUILD_AVX512)
+            add_library(hs_exec_avx512 OBJECT ${hs_exec_SRCS} ${hs_exec_avx2_SRCS})
+            list(APPEND RUNTIME_LIBS $<TARGET_OBJECTS:hs_exec_avx512>)
+            set_target_properties(hs_exec_avx512 PROPERTIES
+                COMPILE_FLAGS "${SKYLAKE_FLAG}"
+-               RULE_LAUNCH_COMPILE "${BUILD_WRAPPER} avx512 ${CMAKE_MODULE_PATH}/keep.syms.in"
++               RULE_LAUNCH_COMPILE "${BUILD_WRAPPER} avx512 ${PROJECT_SOURCE_DIR}/cmake/keep.syms.in"
+                )
+        endif (BUILD_AVX512)
+ 
+@@ -1203,21 +1202,21 @@ else (FAT_RUNTIME)
+         set_target_properties(hs_exec_shared_core2 PROPERTIES
+             COMPILE_FLAGS "-march=core2"
+             POSITION_INDEPENDENT_CODE TRUE
+-            RULE_LAUNCH_COMPILE "${BUILD_WRAPPER} core2 ${CMAKE_MODULE_PATH}/keep.syms.in"
++            RULE_LAUNCH_COMPILE "${BUILD_WRAPPER} core2 ${PROJECT_SOURCE_DIR}/cmake/keep.syms.in"
+             )
+         add_library(hs_exec_shared_corei7 OBJECT ${hs_exec_SRCS})
+         list(APPEND RUNTIME_SHLIBS $<TARGET_OBJECTS:hs_exec_shared_corei7>)
+         set_target_properties(hs_exec_shared_corei7 PROPERTIES
+             COMPILE_FLAGS "-march=corei7"
+             POSITION_INDEPENDENT_CODE TRUE
+-            RULE_LAUNCH_COMPILE "${BUILD_WRAPPER} corei7 ${CMAKE_MODULE_PATH}/keep.syms.in"
++            RULE_LAUNCH_COMPILE "${BUILD_WRAPPER} corei7 ${PROJECT_SOURCE_DIR}/cmake/keep.syms.in"
+             )
+         add_library(hs_exec_shared_avx2 OBJECT ${hs_exec_SRCS} ${hs_exec_avx2_SRCS})
+         list(APPEND RUNTIME_SHLIBS $<TARGET_OBJECTS:hs_exec_shared_avx2>)
+         set_target_properties(hs_exec_shared_avx2 PROPERTIES
+             COMPILE_FLAGS "-march=core-avx2"
+             POSITION_INDEPENDENT_CODE TRUE
+-            RULE_LAUNCH_COMPILE "${BUILD_WRAPPER} avx2 ${CMAKE_MODULE_PATH}/keep.syms.in"
++            RULE_LAUNCH_COMPILE "${BUILD_WRAPPER} avx2 ${PROJECT_SOURCE_DIR}/cmake/keep.syms.in"
+             )
+ 
+         if (BUILD_AVX512)
+@@ -1226,7 +1225,7 @@ else (FAT_RUNTIME)
+             set_target_properties(hs_exec_shared_avx512 PROPERTIES
+                 COMPILE_FLAGS "${SKYLAKE_FLAG}"
+                 POSITION_INDEPENDENT_CODE TRUE
+-                RULE_LAUNCH_COMPILE "${BUILD_WRAPPER} avx512 ${CMAKE_MODULE_PATH}/keep.syms.in"
++                RULE_LAUNCH_COMPILE "${BUILD_WRAPPER} avx512 ${PROJECT_SOURCE_DIR}/cmake/keep.syms.in"
+                 )
+         endif (BUILD_AVX512)
+         add_library(hs_exec_common_shared OBJECT

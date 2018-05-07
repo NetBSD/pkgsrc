@@ -1,0 +1,24 @@
+$NetBSD: patch-tools_hscollider_CMakeLists.txt,v 1.1 2018/05/07 22:19:34 minskim Exp $
+
+Avoid conflicts with pkgsrc's CMAKE_MODULE_PATH override.
+
+--- tools/hscollider/CMakeLists.txt.orig	2018-01-24 06:58:01.000000000 +0000
++++ tools/hscollider/CMakeLists.txt
+@@ -3,7 +3,7 @@ set(PCRE_REQUIRED_MAJOR_VERSION 8)
+ set(PCRE_REQUIRED_MINOR_VERSION 41)
+ set(PCRE_REQUIRED_VERSION ${PCRE_REQUIRED_MAJOR_VERSION}.${PCRE_REQUIRED_MINOR_VERSION})
+ 
+-include (${CMAKE_MODULE_PATH}/pcre.cmake)
++include (${PROJECT_SOURCE_DIR}/cmake/pcre.cmake)
+ if (NOT CORRECT_PCRE_VERSION)
+     message(STATUS "PCRE ${PCRE_REQUIRED_VERSION} not found, not building hscollider")
+     return()
+@@ -11,7 +11,7 @@ endif()
+ 
+ include_directories(${PCRE_INCLUDE_DIRS})
+ 
+-include(${CMAKE_MODULE_PATH}/backtrace.cmake)
++include(${PROJECT_SOURC_DIR}/cmake/backtrace.cmake)
+ 
+ # we need static libs - too much deep magic for shared libs
+ if (NOT BUILD_STATIC_LIBS)
