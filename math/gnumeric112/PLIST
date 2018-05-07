@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/12/26 16:45:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/05/07 11:55:00 wiz Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -45,7 +45,6 @@ include/libspreadsheet-1.12/spreadsheet/gnm-so-filled.h
 include/libspreadsheet-1.12/spreadsheet/gnm-so-line.h
 include/libspreadsheet-1.12/spreadsheet/gnm-so-path.h
 include/libspreadsheet-1.12/spreadsheet/gnm-so-polygon.h
-include/libspreadsheet-1.12/spreadsheet/gnm-style-impl.h
 include/libspreadsheet-1.12/spreadsheet/gnumeric-conf.h
 include/libspreadsheet-1.12/spreadsheet/gnumeric-features.h
 include/libspreadsheet-1.12/spreadsheet/gnumeric-fwd.h
@@ -99,6 +98,7 @@ include/libspreadsheet-1.12/spreadsheet/sheet-control-gui-priv.h
 include/libspreadsheet-1.12/spreadsheet/sheet-control-gui.h
 include/libspreadsheet-1.12/spreadsheet/sheet-control-priv.h
 include/libspreadsheet-1.12/spreadsheet/sheet-control.h
+include/libspreadsheet-1.12/spreadsheet/sheet-diff.h
 include/libspreadsheet-1.12/spreadsheet/sheet-filter-combo.h
 include/libspreadsheet-1.12/spreadsheet/sheet-filter.h
 include/libspreadsheet-1.12/spreadsheet/sheet-merge.h
