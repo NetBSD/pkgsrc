@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2215 2018/05/07 07:14:10 he Exp $
+$NetBSD: CHANGES-2018,v 1.2216 2018/05/07 07:59:58 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3159,3 +3159,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/wget to 1.19.5 [wiz 2018-05-07]
 	Updated www/thttpd to 2.28 [wiz 2018-05-07]
 	Updated net/unbound to 1.7.1 [he 2018-05-07]
+	Updated print/cups-filters to 1.20.3 [leot 2018-05-07]
