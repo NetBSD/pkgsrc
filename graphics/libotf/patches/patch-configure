@@ -1,0 +1,25 @@
+$NetBSD: patch-configure,v 1.1 2018/05/07 07:55:33 dholland Exp $
+
+Use pkg-config instead of the freetype-config script, as the latte
+has gone away.
+
+--- configure~	2018-01-24 15:08:23.000000000 +0000
++++ configure
+@@ -13172,7 +13172,7 @@ fi
+ 
+ 
+ if test "x$HAVE_FREETYPE_CONFIG" = "xyes"; then
+-  FREETYPE_INC=`freetype-config --cflags`
++  FREETYPE_INC=`pkg-config --cflags freetype2`
+   CPPFLAGS="$CPPFLAGS $FREETYPE_INC"
+   ac_fn_c_check_header_mongrel "$LINENO" "ft2build.h" "ac_cv_header_ft2build_h" "$ac_includes_default"
+ if test "x$ac_cv_header_ft2build_h" = xyes; then :
+@@ -13183,7 +13183,7 @@ fi
+ 
+ 
+   if test "x$HAVE_FREETYPE" = "xyes" ; then
+-    FREETYPE_LD_FLAGS=`freetype-config --libs`;
++    FREETYPE_LD_FLAGS=`pkg-config --libs freetype2`;
+     LIBS="$LIBS $FREETYPE_LD_FLAGS"
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for FT_Init_FreeType in -lfreetype" >&5
+ $as_echo_n "checking for FT_Init_FreeType in -lfreetype... " >&6; }
