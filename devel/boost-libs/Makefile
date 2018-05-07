@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2018/05/06 18:56:35 minskim Exp $
+# $NetBSD: Makefile,v 1.69 2018/05/07 18:47:02 minskim Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -23,7 +23,8 @@ BJAM_ARGS+=		--without-coroutine
 BJAM_ARGS+=		--without-fiber
 .else
 PLIST.context=		yes
-.if !(${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mgcc))
+.if !(${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mgcc)) && \
+    empty(MACHINE_PLATFORM:MDarwin-1[0-5].*-*)
 PLIST.fiber=		yes
 .endif
 .endif
