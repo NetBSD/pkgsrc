@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2217 2018/05/07 08:40:31 leot Exp $
+$NetBSD: CHANGES-2018,v 1.2218 2018/05/07 08:41:07 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3161,3 +3161,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/unbound to 1.7.1 [he 2018-05-07]
 	Updated print/cups-filters to 1.20.3 [leot 2018-05-07]
 	Updated lang/py35-html-docs to 3.5.5 [leot 2018-05-07]
+	Updated lang/py36-html-docs to 3.6.5 [leot 2018-05-07]
