@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18327 2018/05/07 07:01:47 wiz Exp $
+$NetBSD: TODO,v 1.18328 2018/05/07 10:47:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1077,7 +1077,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mp3blaster-3.2.6
 	o mp3splt-2.6.2
 	o mp3splt-gtk-0.9.0
-	o mpc-0.30
 	o mpdas-0.4.1
 	o mserv-devel-0.41
 	o multitail-6.4.2

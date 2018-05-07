@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2219 2018/05/07 08:57:42 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2220 2018/05/07 10:47:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3163,3 +3163,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/py35-html-docs to 3.5.5 [leot 2018-05-07]
 	Updated lang/py36-html-docs to 3.6.5 [leot 2018-05-07]
 	Updated finance/gnucash-docs to 3.1 [wiz 2018-05-07]
+	Updated audio/mpc to 0.30 [wiz 2018-05-07]
