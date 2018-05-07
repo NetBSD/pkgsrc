@@ -1,0 +1,12 @@
+$NetBSD: patch-tools_hsbench_CMakeLists.txt,v 1.1 2018/05/07 22:19:34 minskim Exp $
+
+Avoid conflicts with pkgsrc's CMAKE_MODULE_PATH override.
+
+--- tools/hsbench/CMakeLists.txt.orig	2017-06-09 00:17:04.000000000 +0000
++++ tools/hsbench/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-include (${CMAKE_MODULE_PATH}/sqlite3.cmake)
++include (${PROJECT_SOURCE_DIR}/cmake/sqlite3.cmake)
+ if (NOT SQLITE3_FOUND)
+     message(STATUS "sqlite3 not found, not building hsbench")
+     return()
