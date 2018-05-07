@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2018/04/30 16:53:07 bacon Exp $
+# $NetBSD: Makefile,v 1.45 2018/05/07 18:40:10 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -40,6 +40,7 @@ SUBDIR+=	profit
 SUBDIR+=	puzzle
 SUBDIR+=	py-mol
 SUBDIR+=	rasmol
+SUBDIR+=	samtools
 SUBDIR+=	sewer
 SUBDIR+=	stride
 SUBDIR+=	xylem
