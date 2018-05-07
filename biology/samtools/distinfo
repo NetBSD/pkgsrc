@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/05/07 18:37:31 bacon Exp $
+
+SHA1 (samtools-1.8.tar.gz) = 5ac70ba4c324c223398ab4c0689933564985303c
+RMD160 (samtools-1.8.tar.gz) = 47e4fde82a686669322fd330374aa37b148b7954
+SHA512 (samtools-1.8.tar.gz) = 82e4d5f855f944cc989902154a99eada2b4c81939bd936fa1d471cf9ff01e03c8a7f773928ae55ef691f2827aa4076126678940bb89a322fa56d83c517677d0c
+Size (samtools-1.8.tar.gz) = 4047378 bytes

@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2018/05/07 18:37:31 bacon Exp $
+bin/ace2sam
+bin/blast2sam.pl
+bin/bowtie2sam.pl
+bin/export2sam.pl
+bin/interpolate_sam.pl
+bin/maq2sam-long
+bin/maq2sam-short
+bin/md5fa
+bin/md5sum-lite
+bin/novo2sam.pl
+bin/plot-bamstats
+bin/psl2sam.pl
+bin/sam2vcf.pl
+bin/samtools
+bin/samtools.pl
+bin/seq_cache_populate.pl
+bin/soap2sam.pl
+bin/varfilter.py
+bin/wgsim
+bin/wgsim_eval.pl
+bin/zoom2sam.pl
+man/man1/samtools.1
+man/man1/wgsim.1
