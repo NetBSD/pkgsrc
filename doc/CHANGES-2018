@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2221 2018/05/07 11:03:52 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2222 2018/05/07 11:20:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3165,3 +3165,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated finance/gnucash-docs to 3.1 [wiz 2018-05-07]
 	Updated audio/mpc to 0.30 [wiz 2018-05-07]
 	Updated archivers/brotli to 1.0.4 [wiz 2018-05-07]
+	Updated misc/calibre to 3.23.0 [wiz 2018-05-07]
