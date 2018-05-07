@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2018/04/15 07:38:42 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2018/05/07 08:57:33 wiz Exp $
 
-DISTNAME=		gnucash-docs-3.0
+DISTNAME=		gnucash-docs-3.1
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
