@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.7 2018/04/18 04:25:08 adam Exp $
+# $NetBSD: Makefile,v 1.8 2018/05/08 04:20:31 adam Exp $
 
-DISTNAME=	multidict-4.2.0
+DISTNAME=	multidict-4.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/multidict/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/aio-libs/multidict/
+HOMEPAGE=	https://github.com/aio-libs/multidict
 COMMENT=	Multidict implementation
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
