@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/06/21 13:25:32 markd Exp $
+# $NetBSD: Makefile,v 1.4 2018/05/08 11:07:21 markd Exp $
 
 DISTNAME=	repere
-PKGNAME=	tex-${DISTNAME}-17.05
-TEXLIVE_REV=	44298
+PKGNAME=	tex-${DISTNAME}-17.11.2
+TEXLIVE_REV=	45779
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/repere
