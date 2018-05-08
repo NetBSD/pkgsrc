@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2231 2018/05/08 00:19:18 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2232 2018/05/08 04:54:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3175,3 +3175,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/hyperscan version 4.7.0 [minskim 2018-05-07]
 	Updated textproc/p5-podlators to 4.11 [wen 2018-05-08]
 	Updated time/p5-DateTime-Locale to 1.20 [wen 2018-05-08]
+	Updated devel/libuv to 1.20.3 [adam 2018-05-08]
+	Updated databases/py-multidict to 4.3.1 [adam 2018-05-08]
+	Updated devel/py-async-timeout to 3.0.0 [adam 2018-05-08]
+	Updated www/py-aiohttp to 3.2.0 [adam 2018-05-08]
