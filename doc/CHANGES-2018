@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2233 2018/05/08 07:49:53 maya Exp $
+$NetBSD: CHANGES-2018,v 1.2234 2018/05/08 08:18:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3179,3 +3179,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-async-timeout to 3.0.0 [adam 2018-05-08]
 	Updated www/py-aiohttp to 3.2.0 [adam 2018-05-08]
 	Added textproc/ripgrep version 0.8.1 [maya 2018-05-08]
+	Updated www/apachetop to 0.18.4 [wen 2018-05-08]
