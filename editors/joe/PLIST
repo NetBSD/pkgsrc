@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/10/19 09:15:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/05/08 08:31:29 wen Exp $
 bin/jmacs
 bin/joe
 bin/jpico
@@ -6,6 +6,10 @@ bin/jstar
 bin/rjoe
 man/man1/joe.1
 man/ru/man1/joe.1
+share/applications/jmacs.desktop
+share/applications/joe.desktop
+share/applications/jpico.desktop
+share/applications/jstar.desktop
 share/doc/joe/ChangeLog
 share/doc/joe/NEWS.md
 share/doc/joe/README.md
@@ -23,11 +27,20 @@ share/examples/joe/rjoerc
 share/examples/joe/shell.csh
 share/examples/joe/shell.sh
 share/joe/charmaps/klingon
+share/joe/colors/default.jcf
+share/joe/colors/gruvbox.jcf
+share/joe/colors/ir_black.jcf
+share/joe/colors/molokai.jcf
+share/joe/colors/solarized.jcf
+share/joe/colors/wombat.jcf
+share/joe/colors/xoria.jcf
+share/joe/colors/zenburn-hc.jcf
+share/joe/colors/zenburn.jcf
 share/joe/lang/de.po
 share/joe/lang/fr.po
 share/joe/lang/ru.po
 share/joe/lang/uk.po
-share/joe/lang/zh.po
+share/joe/lang/zh_TW.po
 share/joe/syntax/4gl.jsf
 share/joe/syntax/ada.jsf
 share/joe/syntax/ant.jsf
@@ -41,12 +54,14 @@ share/joe/syntax/cobol.jsf
 share/joe/syntax/coffee.jsf
 share/joe/syntax/comment_todo.jsf
 share/joe/syntax/conf.jsf
+share/joe/syntax/context.jsf
 share/joe/syntax/csh.jsf
 share/joe/syntax/csharp.jsf
 share/joe/syntax/css.jsf
 share/joe/syntax/d.jsf
 share/joe/syntax/debian.jsf
 share/joe/syntax/diff.jsf
+share/joe/syntax/dockerfile.jsf
 share/joe/syntax/elixir.jsf
 share/joe/syntax/erb.jsf
 share/joe/syntax/erlang.jsf
@@ -62,6 +77,7 @@ share/joe/syntax/htmlerb.jsf
 share/joe/syntax/ini.jsf
 share/joe/syntax/iptables.jsf
 share/joe/syntax/java.jsf
+share/joe/syntax/jcf.jsf
 share/joe/syntax/joerc.jsf
 share/joe/syntax/js.jsf
 share/joe/syntax/jsf.jsf
