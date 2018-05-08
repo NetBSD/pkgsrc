@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/03/15 09:04:44 adam Exp $
+$NetBSD: distinfo,v 1.6 2018/05/08 04:48:49 adam Exp $
 
-SHA1 (async-timeout-2.0.1.tar.gz) = 930669903248db231cbc4beb60fc798a38048977
-RMD160 (async-timeout-2.0.1.tar.gz) = 236f60c88a2a4948cfe6cf7c4740e3f3ab5e2510
-SHA512 (async-timeout-2.0.1.tar.gz) = cb66bdc286082ef5570a7e3aa420434f82bb4131e9527c499c693a21d72b3f3772922c0ce2ad68e7de5f95960061e508effda56be398356ea75d55272f534a86
-Size (async-timeout-2.0.1.tar.gz) = 10463 bytes
+SHA1 (async-timeout-3.0.0.tar.gz) = 09878e17adb4e0a55a956f1d28f483d2282f31c8
+RMD160 (async-timeout-3.0.0.tar.gz) = 8948ebeadcc3a5206c04cf8642e9a539c734e766
+SHA512 (async-timeout-3.0.0.tar.gz) = 17df44da4d6038dcfa30b1394bcffbe9a31470c45fcd20c21da8dbea154fd2d508afafb19ce4da7f65422057e3a141be2bd9171d0a385556814759da0fb0496f
+Size (async-timeout-3.0.0.tar.gz) = 10803 bytes
