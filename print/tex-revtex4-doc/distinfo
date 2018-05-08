@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:41 agc Exp $
+$NetBSD: distinfo,v 1.3 2018/05/08 11:11:25 markd Exp $
 
-SHA1 (tex-revtex4-16488/revtex4.doc.tar.xz) = 9d78454ffbe08ec00575ca8ceb633b5be92671e3
-RMD160 (tex-revtex4-16488/revtex4.doc.tar.xz) = d6fffd50ff6a43a0157dfcbc3d15061ca154c181
-SHA512 (tex-revtex4-16488/revtex4.doc.tar.xz) = 49fc483e770686b8d6708cbe4859dc50329381fdb42a031dd237a3d76fb004f5ed203371def946c9b55bb714a3e04fd489b43fbd8cb6c225ebe976a3d223ec40
-Size (tex-revtex4-16488/revtex4.doc.tar.xz) = 877240 bytes
+SHA1 (tex-revtex4-45873/revtex4.doc.tar.xz) = c328d20491f987a1a5d351f57a296ceb0732e010
+RMD160 (tex-revtex4-45873/revtex4.doc.tar.xz) = d2140ff0f47d782473fab579ea58d3ab592368cf
+SHA512 (tex-revtex4-45873/revtex4.doc.tar.xz) = 75e7494c11ca25c2cbb2b4925a7eeb88113139857c353bea1413e0b2ccc9f05d949c892b4ae27750433aef5fb789a0e07520260afc4baf10a430051a0cc878eb
+Size (tex-revtex4-45873/revtex4.doc.tar.xz) = 878208 bytes
