@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:02:46 agc Exp $
+$NetBSD: distinfo,v 1.4 2018/05/08 11:24:18 markd Exp $
 
-SHA1 (tex-standalone-37875/standalone.tar.xz) = bbd8941f779ff5182ac4038990e41bb4aac98172
-RMD160 (tex-standalone-37875/standalone.tar.xz) = 7d305fee59db03363b60d61ddf7d81a5a4153766
-SHA512 (tex-standalone-37875/standalone.tar.xz) = 5eea6930975f9baf43b2d37401527cc390500167da769f29b7bd3130ee56b23cf28c1b43aa817e22976476bd04048ffe94d14321dfa0243c76b12f3069fddd92
-Size (tex-standalone-37875/standalone.tar.xz) = 11416 bytes
+SHA1 (tex-standalone-47136/standalone.tar.xz) = aa13e6a0c10fb95b607c60ef3fb802e8724a4a68
+RMD160 (tex-standalone-47136/standalone.tar.xz) = 93a964388861a09d9f47edbf35358558fb5218da
+SHA512 (tex-standalone-47136/standalone.tar.xz) = 599fc0934d53eab3cb97bfed16317ebdd6f31b70e0016c3ce8c413752290319940a8793b0458abd58a2a2151f8f7156628b0a083f42a1fde73e0e7c666abbfcb
+Size (tex-standalone-47136/standalone.tar.xz) = 11840 bytes
