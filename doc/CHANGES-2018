@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2229 2018/05/07 22:19:04 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2230 2018/05/08 00:13:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3173,3 +3173,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/gnumeric112 to 1.12.40 [wiz 2018-05-07]
 	Added biology/samtools version 1.8 [bacon 2018-05-07]
 	Added devel/hyperscan version 4.7.0 [minskim 2018-05-07]
+	Updated textproc/p5-podlators to 4.11 [wen 2018-05-08]
