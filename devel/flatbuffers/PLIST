@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/12/27 20:47:00 he Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/05/08 16:44:15 minskim Exp $
 bin/flatc
 include/flatbuffers/base.h
 include/flatbuffers/code_generators.h
@@ -15,13 +15,14 @@ include/flatbuffers/registry.h
 include/flatbuffers/stl_emulation.h
 include/flatbuffers/util.h
 lib/cmake/flatbuffers/FlatbuffersConfig.cmake
+lib/cmake/flatbuffers/FlatbuffersConfigVersion.cmake
 lib/cmake/flatbuffers/FlatbuffersSharedTargets-release.cmake
 lib/cmake/flatbuffers/FlatbuffersSharedTargets.cmake
 lib/cmake/flatbuffers/FlatbuffersTargets-release.cmake
 lib/cmake/flatbuffers/FlatbuffersTargets.cmake
 lib/cmake/flatbuffers/FlatcTargets-release.cmake
 lib/cmake/flatbuffers/FlatcTargets.cmake
-lib/libflatbuffers.so.${PKGVERSION}
-lib/libflatbuffers.so.1
 lib/libflatbuffers.a
 lib/libflatbuffers.so
+lib/libflatbuffers.so.${PKGVERSION}
+lib/libflatbuffers.so.1
