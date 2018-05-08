@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/10/16 21:55:12 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/05/08 10:59:09 markd Exp $
 bin/pdfatfi
 share/texmf-dist/bibtex/bib/oberdiek/oberdiek-bundle.bib
 share/texmf-dist/bibtex/bib/oberdiek/oberdiek-source.bib
@@ -94,6 +94,7 @@ share/texmf-dist/tex/generic/oberdiek/thepdfnumber.sty
 share/texmf-dist/tex/generic/oberdiek/uniquecounter.sty
 share/texmf-dist/tex/latex/oberdiek/accsupp-dvipdfm.def
 share/texmf-dist/tex/latex/oberdiek/accsupp-dvips.def
+share/texmf-dist/tex/latex/oberdiek/accsupp-luatex.def
 share/texmf-dist/tex/latex/oberdiek/accsupp-pdftex.def
 share/texmf-dist/tex/latex/oberdiek/accsupp.sty
 share/texmf-dist/tex/latex/oberdiek/aliascnt.sty
