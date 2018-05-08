@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:02:45 agc Exp $
+$NetBSD: distinfo,v 1.4 2018/05/08 11:19:35 markd Exp $
 
-SHA1 (tex-skak-32758/skak.tar.xz) = 8d9583cdc9ce56c30f93423b0f907848c5fb582f
-RMD160 (tex-skak-32758/skak.tar.xz) = 59ca98fbd0ad8a4e92293befa62bcfc777c71841
-SHA512 (tex-skak-32758/skak.tar.xz) = 371b03779413236b950a5d1bf086cdcdbff732a6d78025e11a2c8eb33a2e59c95bfcae94d35dbc02f3aeddd45e6833f4ad54a162faef73943b9c3df14df0eaf5
-Size (tex-skak-32758/skak.tar.xz) = 21696 bytes
+SHA1 (tex-skak-46259/skak.tar.xz) = 183e2af2a602c614774647a4b5b5d821cf270c36
+RMD160 (tex-skak-46259/skak.tar.xz) = bc8409920a707be34170856f9ac2980b2d47fa98
+SHA512 (tex-skak-46259/skak.tar.xz) = 853779e87f148998b7ce83a75651dccf2e59072612e4653543f4cbfa58c9a826bd8733e7b29971a8e5f19891fe4963e85e85a223e61c26f8ea68c37c484d4e36
+Size (tex-skak-46259/skak.tar.xz) = 20740 bytes
