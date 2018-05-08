@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/10/23 00:47:19 markd Exp $
+$NetBSD: distinfo,v 1.8 2018/05/08 10:55:32 markd Exp $
 
-SHA1 (tex-newtx-45279/newtx.doc.tar.xz) = 22711c083fc21d57a96d3b80b6ba85a9edc6a6b9
-RMD160 (tex-newtx-45279/newtx.doc.tar.xz) = 2627119c9fdc1628ed8c3441542f72cbd93d09b7
-SHA512 (tex-newtx-45279/newtx.doc.tar.xz) = 3c3f28bfb512e1065ff7c58ea816213c350a612e5657d72620c9a9e04f170d4c8217b4ba5b6311101e65b28607c725c2733f711bf20fde367020503c27ec2840
-Size (tex-newtx-45279/newtx.doc.tar.xz) = 717636 bytes
+SHA1 (tex-newtx-47160/newtx.doc.tar.xz) = babe6132b1d062cd598a2700ca5d016d6b52e308
+RMD160 (tex-newtx-47160/newtx.doc.tar.xz) = 277bb7b4ad9360df8a89bac75d5ee82c42295f88
+SHA512 (tex-newtx-47160/newtx.doc.tar.xz) = 5178b9a8440571c7c034e076bf1457a8540730f43d7078f4c982729992a7188b64577af51b3fd76b83591a1e504fe7b7ccbef400d69e742e4aa7592ff7206698
+Size (tex-newtx-47160/newtx.doc.tar.xz) = 726088 bytes
