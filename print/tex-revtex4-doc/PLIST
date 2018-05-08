@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/03 10:31:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/05/08 11:11:25 markd Exp $
 share/texmf-dist/doc/latex/revtex4/DOWNLOAD
 share/texmf-dist/doc/latex/revtex4/README
 share/texmf-dist/doc/latex/revtex4/apssamp.end
 share/texmf-dist/doc/latex/revtex4/apssamp.tex
 share/texmf-dist/doc/latex/revtex4/auguide.tex
 share/texmf-dist/doc/latex/revtex4/differ.tex
+share/texmf-dist/doc/latex/revtex4/docs.sty
 share/texmf-dist/doc/latex/revtex4/fig_1.eps
 share/texmf-dist/doc/latex/revtex4/fig_2.eps
 share/texmf-dist/doc/latex/revtex4/ltxdocext.pdf
