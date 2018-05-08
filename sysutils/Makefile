@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.756 2018/05/05 23:59:35 maya Exp $
+# $NetBSD: Makefile,v 1.757 2018/05/08 07:47:44 maya Exp $
 #
 
 COMMENT=	System utilities
@@ -488,7 +488,6 @@ SUBDIR+=	rdiff-backup
 SUBDIR+=	rename
 SUBDIR+=	rfstool
 SUBDIR+=	riemann-client
-SUBDIR+=	ripgrep
 SUBDIR+=	rkflashtool
 SUBDIR+=	rmtrash
 SUBDIR+=	roller
