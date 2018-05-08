@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.329 2018/04/29 13:36:00 martin Exp $
+# $NetBSD: Makefile,v 1.330 2018/05/08 10:38:57 maya Exp $
 
-FIREFOX_HGREV=		239e434d6d2b8e1e2b697c3416d1e96d48fe98e5
-FIREFOX_VER=		59.0.2
+FIREFOX_HGREV=		6b51784853e47e091d213d421a19cb623af718f0
+FIREFOX_VER=		59.0.3
 
 DISTNAME=	firefox-${FIREFOX_VER}
-PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES+=	-https://hg.mozilla.org/releases/mozilla-release/archive/${FIREFOX_HGREV}${EXTRACT_SUFX}
 EXTRACT_SUFX=	.tar.bz2
