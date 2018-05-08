@@ -1,39 +1,55 @@
-$NetBSD: patch-configure,v 1.4 2018/01/22 11:14:43 jaapb Exp $
+$NetBSD: patch-configure,v 1.5 2018/05/08 19:06:15 jaapb Exp $
 
 Do not install META files for libraries that were split off
---- configure.orig	2017-06-05 14:32:28.000000000 +0000
+--- configure.orig	2018-04-16 08:13:23.000000000 +0000
 +++ configure
-@@ -514,25 +514,25 @@ fi
+@@ -518,32 +518,32 @@ fi
  
  # dbm?
  
--if [ -f "${ocaml_core_stdlib}/dbm.cmi" ]; then
+-if [ -f "${ocaml_sitelib}/dbm/META" ]; then
+-    echo "dbm: package already present"
+-    ldbm=""
+-elif [ -f "${ocaml_core_stdlib}/dbm.cmi" ]; then
 -    echo "dbm: found"
 -    ldbm="dbm"
 -else
 -    echo "dbm: not present (normal since OCaml-4.00)"
-+#if [ -f "${ocaml_core_stdlib}/dbm.cmi" ]; then
-+#    echo "dbm: found"
-+#    ldbm="dbm"
-+#else
-+#    echo "dbm: not present (normal since OCaml-4.00)"
-     ldbm=""
+-    ldbm=""
 -fi
-+#fi
++#if [ -f "${ocaml_sitelib}/dbm/META" ]; then
++#   echo "dbm: package already present"
++#   ldbm=""
++#lif [ -f "${ocaml_core_stdlib}/dbm.cmi" ]; then
++#   echo "dbm: found"
++#   ldbm="dbm"
++#lse
++#   echo "dbm: not present (normal since OCaml-4.00)"
++   ldbm=""
++#i
  
  # num?
  
--if [ -f "${ocaml_core_stdlib}/num.cmi" ]; then
--    echo "num: found"
+-if [ -f "${ocaml_sitelib}/num/META" ]; then
+-    echo "num: package already present"
+-    lnum=""
+-    numtop=""
+-elif [ -f "${ocaml_core_stdlib}/num.cmi" ]; then
+-    echo "num: found but not as package"
 -    lnum="num num-top"
 -    numtop="num-top"
 -else
-+#if [ -f "${ocaml_core_stdlib}/num.cmi" ]; then
-+#   echo "num: found"
-+#   lnum="num num-top"
-+#   numtop="num-top"
+-    echo "num: not present (normal since OCaml-4.06)"
++#if [ -f "${ocaml_sitelib}/num/META" ]; then
++#    echo "num: package already present"
++#    lnum=""
++#    numtop=""
++#elif [ -f "${ocaml_core_stdlib}/num.cmi" ]; then
++#    echo "num: found but not as package"
++#    lnum="num num-top"
++#    numtop="num-top"
 +#else
-     echo "num: not present (normal since OCaml-4.06)"
++#    echo "num: not present (normal since OCaml-4.06)"
      lnum=""
      numtop=""
 -fi
