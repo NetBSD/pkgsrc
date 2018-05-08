@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2668 2018/05/07 22:18:56 minskim Exp $
+# $NetBSD: Makefile,v 1.2669 2018/05/08 16:54:54 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -2003,6 +2003,7 @@ SUBDIR+=	py-hglist
 SUBDIR+=	py-hgnested
 SUBDIR+=	py-hgtools
 SUBDIR+=	py-hgview
+SUBDIR+=	py-hyperscan
 SUBDIR+=	py-hypothesis
 SUBDIR+=	py-idle
 SUBDIR+=	py-incremental
