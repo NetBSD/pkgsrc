@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2016/01/26 11:02:32 markd Exp $
+# $NetBSD: Makefile,v 1.3 2018/05/08 11:28:25 markd Exp $
 
 DISTNAME=	supertabular.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-4.1a
+PKGNAME=	tex-${DISTNAME:S/./-/}-4.1e
 TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/supertabular
 COMMENT=	Documentation for tex-supertabular
 LICENSE=	lppl-1.3c
 
