@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/09/30 14:28:03 adam Exp $
+# $NetBSD: Makefile,v 1.8 2018/05/08 13:08:27 adam Exp $
 
-DISTNAME=	cached-property-1.3.1
+DISTNAME=	cached-property-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cached-property/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/pydanny/cached-property
 COMMENT=	Cached-property for decorating methods in classes
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
+TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 
 USE_LANGUAGES=	# none
 
