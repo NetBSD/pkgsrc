@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/08/02 12:01:39 markd Exp $
+# $NetBSD: Makefile,v 1.3 2018/05/08 11:24:18 markd Exp $
 
 DISTNAME=	standalone
-PKGNAME=	tex-${DISTNAME}-1.2
-TEXLIVE_REV=	37875
+PKGNAME=	tex-${DISTNAME}-1.3a
+TEXLIVE_REV=	47136
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/standalone
