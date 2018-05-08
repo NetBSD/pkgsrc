@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2238 2018/05/08 11:33:16 markd Exp $
+$NetBSD: CHANGES-2018,v 1.2239 2018/05/08 13:08:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3201,3 +3201,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/tex-standalone-doc to 1.3a [markd 2018-05-08]
 	Updated print/tex-supertabular to 4.1e [markd 2018-05-08]
 	Updated print/tex-supertabular-doc to 4.1e [markd 2018-05-08]
+	Updated www/py-yarl to 1.2.4 [adam 2018-05-08]
+	Updated devel/py-cached-property to 1.4.2 [adam 2018-05-08]
