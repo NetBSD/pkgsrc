@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q1,v 1.1.2.5 2018/05/06 12:21:26 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q1,v 1.1.2.6 2018/05/08 15:06:21 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q1 branch:
 
@@ -81,3 +81,10 @@ mail/squirrelmail: security update
 
 Pullup ticket #5752 - requested by taca
 www/squid3: security patch
+
+Pullup ticket #5753 - requested by wiz
+net/wget: security fix
+
+Pullup ticket #5754 - requested by wiz
+www/thttpd: security fix
+
