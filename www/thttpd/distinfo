@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.17 2015/11/04 02:47:40 agc Exp $
+$NetBSD: distinfo,v 1.17.22.1 2018/05/08 15:04:08 bsiegert Exp $
 
-SHA1 (thttpd-2.26/sitedrivenby.gif) = 7671e9a8ec2cad3961b268befd33c0920e07c658
-RMD160 (thttpd-2.26/sitedrivenby.gif) = 2e350e6531a800da8796207509c12fb590d0affa
-SHA512 (thttpd-2.26/sitedrivenby.gif) = fc80ec0f63a9a28cd8002ba4c1f922807faf8661c677f7935f8768b2739facf411e6a1e72c65038d72c68c1f7bf64d2bc583c1880dc85f77eca48f7baec38ae2
-Size (thttpd-2.26/sitedrivenby.gif) = 8519 bytes
-SHA1 (thttpd-2.26/thttpd-2.26.tar.gz) = 9b943aeeab9ef92dfd60595649cbe9cf7394968c
-RMD160 (thttpd-2.26/thttpd-2.26.tar.gz) = 4ffb98bc275a3a097e09209a25438008bda04027
-SHA512 (thttpd-2.26/thttpd-2.26.tar.gz) = c42942e010e0f4e3ef362e675073353081b27b04fe9f64a6cef7ff9c51683bca87876916a35e3a75a4eec25ad3d14fcf571be5e2bd70adaeadd6b6950be0090a
-Size (thttpd-2.26/thttpd-2.26.tar.gz) = 133224 bytes
+SHA1 (thttpd-2.28/sitedrivenby.gif) = 7671e9a8ec2cad3961b268befd33c0920e07c658
+RMD160 (thttpd-2.28/sitedrivenby.gif) = 2e350e6531a800da8796207509c12fb590d0affa
+SHA512 (thttpd-2.28/sitedrivenby.gif) = fc80ec0f63a9a28cd8002ba4c1f922807faf8661c677f7935f8768b2739facf411e6a1e72c65038d72c68c1f7bf64d2bc583c1880dc85f77eca48f7baec38ae2
+Size (thttpd-2.28/sitedrivenby.gif) = 8519 bytes
+SHA1 (thttpd-2.28/thttpd-2.28.tar.gz) = fb08ba6c3bb1baff23149995617bf0f32d7883a6
+RMD160 (thttpd-2.28/thttpd-2.28.tar.gz) = 00be9813a6a2f952d54eaf01579e9e90db7474b3
+SHA512 (thttpd-2.28/thttpd-2.28.tar.gz) = 24136b82f47296e138e496fc42d892a608894e9555d42124a25cdeb537543ad9b19b1a766b3e486b0d5b7b98daebf935bc123e1d102b0f9b79b3999d6f8dc8bb
+Size (thttpd-2.28/thttpd-2.28.tar.gz) = 135754 bytes
 SHA1 (patch-aa) = 0f739bebf1ade45a9b9819fc92d48eeb1004eb66
 SHA1 (patch-ab) = c6d6a20a00b4ceaf409b849982b8e963debf9530
 SHA1 (patch-ac) = f7fe1fed88b4cb33c9456d6fdc13e2bbc175ced6
