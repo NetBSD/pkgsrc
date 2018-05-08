@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2018/05/08 07:48:39 maya Exp $
+bin/rg

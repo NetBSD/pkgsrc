@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.987 2018/05/02 13:01:57 wiz Exp $
+# $NetBSD: Makefile,v 1.988 2018/05/08 07:48:39 maya Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -846,6 +846,7 @@ SUBDIR+=	redland
 SUBDIR+=	regexx
 SUBDIR+=	regxml
 SUBDIR+=	rfcutil
+SUBDIR+=	ripgrep
 SUBDIR+=	rman
 SUBDIR+=	robodoc
 SUBDIR+=	rtf-tools
