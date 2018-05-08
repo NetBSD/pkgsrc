@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2237 2018/05/08 10:39:57 maya Exp $
+$NetBSD: CHANGES-2018,v 1.2238 2018/05/08 11:33:16 markd Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3183,3 +3183,21 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated editors/joe to 4.6 [wen 2018-05-08]
 	Updated www/firefox to 59.0.3 [maya 2018-05-08]
 	Updated www/firefox-l10n to 59.0.3 [maya 2018-05-08]
+	Updated fonts/tex-newtx to 1.531 [markd 2018-05-08]
+	Updated fonts/tex-newtx-doc to 1.531 [markd 2018-05-08]
+	Updated print/tex-oberdiek to 2018 [markd 2018-05-08]
+	Updated print/tex-oberdiek-doc to 2018 [markd 2018-05-08]
+	Updated print/tex-ocgx2 to 0.33 [markd 2018-05-08]
+	Updated print/tex-ocgx2-doc to 0.33 [markd 2018-05-08]
+	Updated graphics/tex-repere to 17.11.2 [markd 2018-05-08]
+	Updated graphics/tex-repere-doc to 17.11.2 [markd 2018-05-08]
+	Updated print/tex-revtex4 to 4.0.45873 [markd 2018-05-08]
+	Updated print/tex-revtex4-doc to 4.0.45873 [markd 2018-05-08]
+	Updated print/tex-siunitx to 2.7n [markd 2018-05-08]
+	Updated print/tex-siunitx-doc to 2.7n [markd 2018-05-08]
+	Updated print/tex-skak to 1.5.3 [markd 2018-05-08]
+	Updated print/tex-skak-doc to 1.5.3 [markd 2018-05-08]
+	Updated print/tex-standalone to 1.3a [markd 2018-05-08]
+	Updated print/tex-standalone-doc to 1.3a [markd 2018-05-08]
+	Updated print/tex-supertabular to 4.1e [markd 2018-05-08]
+	Updated print/tex-supertabular-doc to 4.1e [markd 2018-05-08]
