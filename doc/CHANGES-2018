@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2232 2018/05/08 04:54:50 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2233 2018/05/08 07:49:53 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3032,7 +3032,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/ruby-sequel to 5.8.0 [taca 2018-05-05]
 	Updated devel/ruby-byebug to 10.0.2 [taca 2018-05-05]
 	Updated devel/ruby-eventmachine to 1.2.6 [taca 2018-05-05]
-	Added sysutils/ripgrep version 0.8.1 [maya 2018-05-05]
 	Updated devel/ruby-mocha to 1.5.0 [taca 2018-05-06]
 	Updated devel/ruby-pkg-config to 1.3.1 [taca 2018-05-06]
 	Updated devel/ruby-sexp-processor to 4.11.0 [taca 2018-05-06]
@@ -3179,3 +3178,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-multidict to 4.3.1 [adam 2018-05-08]
 	Updated devel/py-async-timeout to 3.0.0 [adam 2018-05-08]
 	Updated www/py-aiohttp to 3.2.0 [adam 2018-05-08]
+	Added textproc/ripgrep version 0.8.1 [maya 2018-05-08]
