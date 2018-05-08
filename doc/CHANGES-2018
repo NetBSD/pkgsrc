@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2235 2018/05/08 08:32:40 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2236 2018/05/08 10:39:23 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3181,3 +3181,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added textproc/ripgrep version 0.8.1 [maya 2018-05-08]
 	Updated www/apachetop to 0.18.4 [wen 2018-05-08]
 	Updated editors/joe to 4.6 [wen 2018-05-08]
+	Updated www/firefox to 59.0.3 [maya 2018-05-08]
