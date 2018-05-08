@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2241 2018/05/08 16:55:00 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2242 2018/05/08 19:06:33 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3205,3 +3205,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-cached-property to 1.4.2 [adam 2018-05-08]
 	Updated devel/flatbuffers to 1.9.0 [minskim 2018-05-08]
 	Added devel/py-hyperscan version 0.0.1 [minskim 2018-05-08]
+	Updated devel/ocaml-findlib to 1.8.0 [jaapb 2018-05-08]
