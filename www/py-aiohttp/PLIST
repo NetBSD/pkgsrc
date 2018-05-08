@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/02/14 11:31:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/05/08 04:54:10 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -14,6 +14,9 @@ ${PYSITELIB}/aiohttp/_frozenlist.so
 ${PYSITELIB}/aiohttp/_http_parser.c
 ${PYSITELIB}/aiohttp/_http_parser.pyx
 ${PYSITELIB}/aiohttp/_http_parser.so
+${PYSITELIB}/aiohttp/_http_writer.c
+${PYSITELIB}/aiohttp/_http_writer.pyx
+${PYSITELIB}/aiohttp/_http_writer.so
 ${PYSITELIB}/aiohttp/_websocket.c
 ${PYSITELIB}/aiohttp/_websocket.pyx
 ${PYSITELIB}/aiohttp/_websocket.so
@@ -128,6 +131,9 @@ ${PYSITELIB}/aiohttp/web_request.pyo
 ${PYSITELIB}/aiohttp/web_response.py
 ${PYSITELIB}/aiohttp/web_response.pyc
 ${PYSITELIB}/aiohttp/web_response.pyo
+${PYSITELIB}/aiohttp/web_routedef.py
+${PYSITELIB}/aiohttp/web_routedef.pyc
+${PYSITELIB}/aiohttp/web_routedef.pyo
 ${PYSITELIB}/aiohttp/web_runner.py
 ${PYSITELIB}/aiohttp/web_runner.pyc
 ${PYSITELIB}/aiohttp/web_runner.pyo
