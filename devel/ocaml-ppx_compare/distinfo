@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/10/11 13:51:55 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2018/05/09 14:54:54 jaapb Exp $
 
-SHA1 (ppx_compare-0.9.0.tar.gz) = 7ab8fcb7a98e58cbdb2df5f8d26607b1f688726f
-RMD160 (ppx_compare-0.9.0.tar.gz) = b7a150054f72f9cbfd2e6962c66e75297303bbd5
-SHA512 (ppx_compare-0.9.0.tar.gz) = 4f154bb67c2241712986247f8b3ed04b4ba874424171989f0421193a15cea45dedbf1c546408421bf33839ea45b85a45ec1cb43c034373fd80198ddb5d9045fe
-Size (ppx_compare-0.9.0.tar.gz) = 11760 bytes
+SHA1 (ppx_compare-0.11.1.tar.gz) = ceb2ef771282f72242ccce0bb4213b7ee2969f44
+RMD160 (ppx_compare-0.11.1.tar.gz) = e071370931547dc5d472abf5594eef706f129012
+SHA512 (ppx_compare-0.11.1.tar.gz) = 5d2a4f97bea48641092c2cb218c8e1a029e36998722360c7e8592b2049e706b9fc527aee7c9f157a2cc22e695a66c4a0e96d91115e6e94585074742bb5e127ed
+Size (ppx_compare-0.11.1.tar.gz) = 12734 bytes
