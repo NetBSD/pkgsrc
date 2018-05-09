@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2245 2018/05/09 06:31:02 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2246 2018/05/09 06:35:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3209,3 +3209,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added lang/R-sourcetools version 0.1.7 [minskim 2018-05-09]
 	Updated sysutils/grub2 to 2.00nb6 [maya 2018-05-09]
 	Updated devel/p5-ExtUtils-ModuleMaker to 0.60 [wiz 2018-05-09]
+	Updated devel/p5-PPIx-Regexp to 0.059 [wiz 2018-05-09]
