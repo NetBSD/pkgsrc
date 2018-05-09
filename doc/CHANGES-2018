@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2244 2018/05/09 01:18:21 maya Exp $
+$NetBSD: CHANGES-2018,v 1.2245 2018/05/09 06:31:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3208,3 +3208,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ocaml-findlib to 1.8.0 [jaapb 2018-05-08]
 	Added lang/R-sourcetools version 0.1.7 [minskim 2018-05-09]
 	Updated sysutils/grub2 to 2.00nb6 [maya 2018-05-09]
+	Updated devel/p5-ExtUtils-ModuleMaker to 0.60 [wiz 2018-05-09]
