@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/04/04 09:56:56 jaapb Exp $
+$NetBSD: distinfo,v 1.5 2018/05/09 12:49:17 jaapb Exp $
 
-SHA1 (jbuilder-1.0+beta19.1.tar.gz) = 8effc9eb2d0770d851c203b6eeb8917d6f056f1b
-RMD160 (jbuilder-1.0+beta19.1.tar.gz) = 6feed6940d9f57ab088de482a587dda9c91d4743
-SHA512 (jbuilder-1.0+beta19.1.tar.gz) = 1454f4cb88e346d30a74d94815dbd9a6ab2ed3edf399d83f204db461533d912ee3a2d804e39a8d2742f221c6d8be74634561760579009db9a182fb3e57f65a98
-Size (jbuilder-1.0+beta19.1.tar.gz) = 387685 bytes
+SHA1 (jbuilder-1.0_beta20.tar.gz) = 04dfbb1f9e2a538345ab9f1e5c96abbf524b7652
+RMD160 (jbuilder-1.0_beta20.tar.gz) = 265f4c5d2fa86641a09c5f8d1bfc15831a4bcb1f
+SHA512 (jbuilder-1.0_beta20.tar.gz) = 3930af586724f86300ca595586cf8238d1b33080fe2186376a65727b9a77a81b2210ccf509d1263ae331dfcc876dc0786ef49ce0a8e709556ea07506d58124d1
+Size (jbuilder-1.0_beta20.tar.gz) = 395586 bytes
