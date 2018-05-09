@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2248 2018/05/09 06:40:11 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2249 2018/05/09 06:41:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3212,3 +3212,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-PPIx-Regexp to 0.059 [wiz 2018-05-09]
 	Updated devel/p5-Test-Manifest to 2.021 [wiz 2018-05-09]
 	Updated devel/p5-Test-MockModule to 0.15 [wiz 2018-05-09]
+	Updated net/p5-SNMP-Info to 3.60 [wiz 2018-05-09]
