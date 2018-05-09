@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2258 2018/05/09 14:31:02 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.2259 2018/05/09 14:34:19 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3222,3 +3222,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/ocaml-sexplib0 version 0.11.0 [jaapb 2018-05-09]
 	Added devel/ocaml-parsexp version 0.11.0 [jaapb 2018-05-09]
 	Updated devel/ocaml-sexplib to 0.11.0 [jaapb 2018-05-09]
+	Updated devel/ocaml-base to 0.11.0 [jaapb 2018-05-09]
