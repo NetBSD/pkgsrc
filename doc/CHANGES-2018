@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2273 2018/05/09 15:27:02 leot Exp $
+$NetBSD: CHANGES-2018,v 1.2274 2018/05/09 15:30:51 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3217,7 +3217,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/leptonica to 1.76.0 [adam 2018-05-09]
 	Updated www/drupal8 to 8.5.3 [wen 2018-05-09]
 	Updated www/ap2-mkdir to 0.4 [manu 2018-05-09]
-	Added www/htdavlock 0.2 [manu 2018-05-09]
+	Added www/htdavlock version 0.2 [manu 2018-05-09]
 	Updated devel/ocaml-jbuilder to 1.0_beta20 [jaapb 2018-05-09]
 	Added devel/ocaml-sexplib0 version 0.11.0 [jaapb 2018-05-09]
 	Added devel/ocaml-parsexp version 0.11.0 [jaapb 2018-05-09]
