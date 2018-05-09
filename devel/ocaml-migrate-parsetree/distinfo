@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/04/04 19:12:53 jaapb Exp $
+$NetBSD: distinfo,v 1.5 2018/05/09 14:39:58 jaapb Exp $
 
-SHA1 (ocaml-migrate-parsetree-1.0.8.tar.gz) = 0570f44b4aefe70b77644ce6b50f885d6fabebf8
-RMD160 (ocaml-migrate-parsetree-1.0.8.tar.gz) = af12744c0992427d4a63d926e847b9f46fc0e180
-SHA512 (ocaml-migrate-parsetree-1.0.8.tar.gz) = 1ee977eeb1f73fca3f7f05604103e903dd9c1f41412b557735c3b84157c0431bc13ad5de97471583f7d979904a341ed745136c244d8496526e3da993fc81e93d
-Size (ocaml-migrate-parsetree-1.0.8.tar.gz) = 210171 bytes
+SHA1 (ocaml-migrate-parsetree-1.0.10.tar.gz) = 2e8224daf9eb0aed36775e4e8b36a4894e22b7f5
+RMD160 (ocaml-migrate-parsetree-1.0.10.tar.gz) = 3224e51299621a6d769060896b837e1dfb9bc95a
+SHA512 (ocaml-migrate-parsetree-1.0.10.tar.gz) = fb9b689390ac5c8379aeff078ee7f6a949c790f8ca304c2ee61218b6a3dfff7a3faec8435b151acf2b774e575af6a20fc4f90bccb1f1c7bd721e0e14ccedab4b
+Size (ocaml-migrate-parsetree-1.0.10.tar.gz) = 248961 bytes
