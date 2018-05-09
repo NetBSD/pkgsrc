@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2243 2018/05/09 00:32:59 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2244 2018/05/09 01:18:21 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3207,3 +3207,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-hyperscan version 0.0.1 [minskim 2018-05-08]
 	Updated devel/ocaml-findlib to 1.8.0 [jaapb 2018-05-08]
 	Added lang/R-sourcetools version 0.1.7 [minskim 2018-05-09]
+	Updated sysutils/grub2 to 2.00nb6 [maya 2018-05-09]
