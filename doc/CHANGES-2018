@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2275 2018/05/09 18:08:38 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2276 2018/05/09 23:42:04 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3238,3 +3238,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/ocamlnet to 4.1.6 [jaapb 2018-05-09]
 	Added misc/pick version 2.0.2 [leot 2018-05-09]
 	Updated math/R-DBI to 1.0.0 [minskim 2018-05-09]
+	Updated www/geckodriver to 0.20.1 [maya 2018-05-09]
