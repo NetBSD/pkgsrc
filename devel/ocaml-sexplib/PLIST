@@ -1,34 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2018/04/04 16:20:15 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/05/09 14:30:46 jaapb Exp $
 share/doc/sexplib/CHANGES.md
 share/doc/sexplib/CHANGES.txt
 share/doc/sexplib/LICENSE-Tywith.txt
 share/doc/sexplib/LICENSE.txt
 share/doc/sexplib/README.org
-${OCAML_SITELIB}/sexplib/0/sexp.ml
-${OCAML_SITELIB}/sexplib/0/sexp.mli
-${OCAML_SITELIB}/sexplib/0/sexp_conv.ml
-${OCAML_SITELIB}/sexplib/0/sexp_conv.mli
-${OCAML_SITELIB}/sexplib/0/sexp_conv_error.ml
-${OCAML_SITELIB}/sexplib/0/sexplib.0.dune
-${PLIST.ocaml-opt}${OCAML_SITELIB}/sexplib/0/sexplib0.a
-${OCAML_SITELIB}/sexplib/0/sexplib0.cma
-${OCAML_SITELIB}/sexplib/0/sexplib0.cmi
-${OCAML_SITELIB}/sexplib/0/sexplib0.cmt
-${PLIST.ocaml-opt}${OCAML_SITELIB}/sexplib/0/sexplib0.cmx
-${PLIST.ocaml-opt}${OCAML_SITELIB}/sexplib/0/sexplib0.cmxa
-${PLIST.ocaml-opt}${OCAML_SITELIB}/sexplib/0/sexplib0.cmxs
-${OCAML_SITELIB}/sexplib/0/sexplib0.ml-gen
-${OCAML_SITELIB}/sexplib/0/sexplib0__Sexp.cmi
-${OCAML_SITELIB}/sexplib/0/sexplib0__Sexp.cmt
-${OCAML_SITELIB}/sexplib/0/sexplib0__Sexp.cmti
-${PLIST.ocaml-opt}${OCAML_SITELIB}/sexplib/0/sexplib0__Sexp.cmx
-${OCAML_SITELIB}/sexplib/0/sexplib0__Sexp_conv.cmi
-${OCAML_SITELIB}/sexplib/0/sexplib0__Sexp_conv.cmt
-${OCAML_SITELIB}/sexplib/0/sexplib0__Sexp_conv.cmti
-${PLIST.ocaml-opt}${OCAML_SITELIB}/sexplib/0/sexplib0__Sexp_conv.cmx
-${OCAML_SITELIB}/sexplib/0/sexplib0__Sexp_conv_error.cmi
-${OCAML_SITELIB}/sexplib/0/sexplib0__Sexp_conv_error.cmt
-${PLIST.ocaml-opt}${OCAML_SITELIB}/sexplib/0/sexplib0__Sexp_conv_error.cmx
 ${OCAML_SITELIB}/sexplib/META
 ${OCAML_SITELIB}/sexplib/conv.ml
 ${OCAML_SITELIB}/sexplib/conv.mli
