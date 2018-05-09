@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.280 2018/04/30 05:12:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.281 2018/05/09 15:53:28 wiz Exp $
 
 DISTNAME=	gimp-2.10.0
 CATEGORIES=	graphics
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.gimp.org/
 COMMENT=	The GNU image manipulation program
 LICENSE=	gnu-lgpl-v3 AND gnu-gpl-v3
 
-BUILD_DEPENDS+=	p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
+BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 DEPENDS+=	glib-networking>=2.36.2:../../net/glib-networking
 CONFLICTS+=	gimp<=1.2.3
 
