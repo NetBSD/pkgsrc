@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.495 2018/04/07 10:34:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.496 2018/05/09 15:26:43 leot Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -230,6 +230,7 @@ SUBDIR+=	parley
 SUBDIR+=	pciids
 SUBDIR+=	pdmenu
 SUBDIR+=	php-orangehrm
+SUBDIR+=	pick
 SUBDIR+=	pinfo
 SUBDIR+=	ppower
 SUBDIR+=	pty-redir
