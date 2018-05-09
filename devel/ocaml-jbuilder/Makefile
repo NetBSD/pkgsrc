@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2018/04/04 09:56:56 jaapb Exp $
+# $NetBSD: Makefile,v 1.8 2018/05/09 12:49:17 jaapb Exp $
 
-VERSION=	1.0_beta19.1
 GITHUB_PROJECT=	jbuilder
-GITHUB_TAG=	${VERSION:S/_/+/}
-DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
-PKGNAME=	ocaml-${GITHUB_PROJECT}-${VERSION}
+GITHUB_TAG=	${PKGVERSION_NOREV:S/_/+/}
+DISTNAME=	${GITHUB_PROJECT}-1.0_beta20
+PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 
@@ -13,7 +12,7 @@ HOMEPAGE=	https://github.com/janestreet/jbuilder/
 COMMENT=	Composable build system for OCaml
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/dune-1.0-beta19.1
+WRKSRC=		${WRKDIR}/dune-${PKGVERSION_NOREV:S/_/-/}
 USE_LANGUAGES=	# none
 UNLIMIT_RESOURCES+=	stacksize
 
