@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2246 2018/05/09 06:35:35 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2247 2018/05/09 06:37:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3210,3 +3210,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/grub2 to 2.00nb6 [maya 2018-05-09]
 	Updated devel/p5-ExtUtils-ModuleMaker to 0.60 [wiz 2018-05-09]
 	Updated devel/p5-PPIx-Regexp to 0.059 [wiz 2018-05-09]
+	Updated devel/p5-Test-Manifest to 2.021 [wiz 2018-05-09]
