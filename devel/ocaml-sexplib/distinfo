@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/01/10 16:09:33 jaapb Exp $
+$NetBSD: distinfo,v 1.8 2018/05/09 14:30:46 jaapb Exp $
 
-SHA1 (sexplib-0.10.0.tar.gz) = 43ca22b815efc69fb19e4b84b499db23751df991
-RMD160 (sexplib-0.10.0.tar.gz) = 6fc692288e6a6e7c96788388759bef4f98ee8331
-SHA512 (sexplib-0.10.0.tar.gz) = cd7583c7cdd57a2bdd82bfe60bb4d3b97b9de0092685810a344b77c73e6088fab3fda9a23db96005f58ec309a6d40c441121cf53ef9e125042408609d0260e05
-Size (sexplib-0.10.0.tar.gz) = 75207 bytes
+SHA1 (sexplib-0.11.0.tar.gz) = f5b2c33ce96358734277f74801b673f46296fbb2
+RMD160 (sexplib-0.11.0.tar.gz) = 236bfdb7ef2ceddd9853bd2901d371f212753e7c
+SHA512 (sexplib-0.11.0.tar.gz) = a16029848379b8801dac4407dcf9f0819aa66db2e39f502776bd809a22f81f084230179f305c5c0aad68040e4ddf8641ab5c7b7489f27435eecc829a8fa9ac0b
+Size (sexplib-0.11.0.tar.gz) = 63645 bytes
