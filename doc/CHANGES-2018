@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2264 2018/05/09 14:49:21 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.2265 2018/05/09 14:51:48 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3228,3 +3228,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ocaml-compiler-libs to 0.11.0 [jaapb 2018-05-09]
 	Updated devel/ocaml-stdio to 0.11.0 [jaapb 2018-05-09]
 	Added devel/ocaml-ppxlib version 0.3.0 [jaapb 2018-05-09]
+	Updated devel/ocaml-configurator to 0.11.0 [jaapb 2018-05-09]
