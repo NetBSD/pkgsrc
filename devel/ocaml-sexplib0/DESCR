@@ -1,0 +1,2 @@
+This library contains the base definitions of S-expressions for the
+parsexp and sexplib libraries.
