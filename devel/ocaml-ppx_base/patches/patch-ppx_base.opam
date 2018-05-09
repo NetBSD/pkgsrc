@@ -1,13 +1,13 @@
-$NetBSD: patch-ppx_base.opam,v 1.1 2017/10/14 10:17:52 jaapb Exp $
+$NetBSD: patch-ppx_base.opam,v 1.2 2018/05/09 15:03:44 jaapb Exp $
 
 Remove superfluous dependency
---- ppx_base.opam.orig	2017-03-16 16:39:36.000000000 +0000
+--- ppx_base.opam.orig	2018-03-19 10:29:59.000000000 +0000
 +++ ppx_base.opam
-@@ -15,7 +15,6 @@ depends: [
-   "ppx_driver"              {>= "v0.9" & < "v0.10"}
-   "ppx_enumerate"           {>= "v0.9" & < "v0.10"}
-   "ppx_hash"                {>= "v0.9" & < "v0.10"}
--  "ppx_js_style"            {>= "v0.9" & < "v0.10"}
-   "ppx_sexp_conv"           {>= "v0.9" & < "v0.10"}
-   "ppx_type_conv"           {>= "v0.9" & < "v0.10"}
-   "ocaml-migrate-parsetree" {>= "0.4"}
+@@ -13,7 +13,6 @@ depends: [
+   "ppx_compare"             {>= "v0.11" & < "v0.12"}
+   "ppx_enumerate"           {>= "v0.11" & < "v0.12"}
+   "ppx_hash"                {>= "v0.11" & < "v0.12"}
+-  "ppx_js_style"            {>= "v0.11" & < "v0.12"}
+   "ppx_sexp_conv"           {>= "v0.11" & < "v0.12"}
+   "jbuilder"                {build & >= "1.0+beta18.1"}
+   "ocaml-migrate-parsetree" {>= "1.0"}
