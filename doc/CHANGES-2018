@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2256 2018/05/09 14:18:30 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.2257 2018/05/09 14:26:48 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3220,3 +3220,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added www/htdavlock 0.2 [manu 2018-05-09]
 	Updated devel/ocaml-jbuilder to 1.0_beta20 [jaapb 2018-05-09]
 	Added devel/ocaml-sexplib0 version 0.11.0 [jaapb 2018-05-09]
+	Added devel/ocaml-parsexp version 0.11.0 [jaapb 2018-05-09]
