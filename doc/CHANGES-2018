@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2254 2018/05/09 12:23:39 manu Exp $
+$NetBSD: CHANGES-2018,v 1.2255 2018/05/09 12:49:29 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3218,3 +3218,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/drupal8 to 8.5.3 [wen 2018-05-09]
 	Updated www/ap2-mkdir to 0.4 [manu 2018-05-09]
 	Added www/htdavlock 0.2 [manu 2018-05-09]
+	Updated devel/ocaml-jbuilder to 1.0_beta20 [jaapb 2018-05-09]
