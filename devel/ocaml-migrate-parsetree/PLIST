@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/04/04 19:12:53 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/05/09 14:39:58 jaapb Exp $
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/META
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/ast_402.cmi
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/ast_402.cmt
@@ -20,6 +20,10 @@ ${OCAML_SITELIB}/ocaml-migrate-parsetree/ast_406.cmi
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/ast_406.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/ast_406.cmx
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/ast_406.ml
+${OCAML_SITELIB}/ocaml-migrate-parsetree/ast_407.cmi
+${OCAML_SITELIB}/ocaml-migrate-parsetree/ast_407.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/ast_407.cmx
+${OCAML_SITELIB}/ocaml-migrate-parsetree/ast_407.ml
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/driver-main/migrate_parsetree_driver_main.a
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/driver-main/migrate_parsetree_driver_main.cma
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/driver-main/migrate_parsetree_driver_main.cmi
@@ -43,7 +47,7 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_402
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_402_403.ml
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_402_403_migrate.cmi
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_402_403_migrate.cmt
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_402_403_migrate.cmx
+${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_402_403_migrate.cmx
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_402_403_migrate.ml
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_403_402.cmi
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_403_402.cmt
@@ -101,6 +105,22 @@ ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_406_405_migrate.cmi
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_406_405_migrate.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_406_405_migrate.cmx
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_406_405_migrate.ml
+${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_406_407.cmi
+${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_406_407.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_406_407.cmx
+${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_406_407.ml
+${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_406_407_migrate.cmi
+${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_406_407_migrate.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_406_407_migrate.cmx
+${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_406_407_migrate.ml
+${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_407_406.cmi
+${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_407_406.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_407_406.cmx
+${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_407_406.ml
+${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_407_406_migrate.cmi
+${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_407_406_migrate.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_407_406_migrate.cmx
+${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_407_406_migrate.ml
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_ast_io.cmi
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_ast_io.cmt
 ${OCAML_SITELIB}/ocaml-migrate-parsetree/migrate_parsetree_ast_io.cmti
