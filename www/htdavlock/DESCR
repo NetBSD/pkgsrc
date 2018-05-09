@@ -1,0 +1,6 @@
+This is an Apache mod_davv_fs lock database management tool.
+
+Sometimes a program crashes, leaving stale a lock on a WebDAV-based file.
+This tool can inspect the lock database, and remove a stale lock.
+
+The alternative is to wait for lock expiration.
