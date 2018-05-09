@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2018/04/04 19:07:10 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2018/05/09 14:42:48 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-compiler-libs
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-compiler-libs
 OCAML_COMPILER_LIBS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-compiler-libs+=	ocaml-compiler-libs>=0.9.0
-BUILDLINK_ABI_DEPENDS.ocaml-compiler-libs+=	ocaml-compiler-libs>=0.9.0nb3
+BUILDLINK_ABI_DEPENDS.ocaml-compiler-libs+=	ocaml-compiler-libs>=0.11.0
 BUILDLINK_PKGSRCDIR.ocaml-compiler-libs?=	../../devel/ocaml-compiler-libs
 .endif	# OCAML_COMPILER_LIBS_BUILDLINK3_MK
 
