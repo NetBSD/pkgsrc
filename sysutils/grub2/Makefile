@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2016/05/17 10:32:09 fhajny Exp $
+# $NetBSD: Makefile,v 1.10 2018/05/09 01:18:06 maya Exp $
 
 DISTNAME=		grub-2.00
 PKGNAME=		${DISTNAME:S/grub/grub2/}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.gnu.org/gnu/grub/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
@@ -16,7 +16,7 @@ CONFLICTS=		grub-[0-9]*
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
-USE_TOOLS+=		gmake flex bison gettext:run
+USE_TOOLS+=		gmake flex bison gettext:run awk
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -24,8 +24,12 @@ CONFIGURE_ARGS+=	--disable-efiemu
 CONFIGURE_ARGS+=	--disable-grub-emu-usb
 CONFIGURE_ARGS+=	--disable-grub-emu-sdl
 CONFIGURE_ARGS+=	--disable-grub-emu-pci
+CONFIGURE_ARGS+=	--disable-werror
 INFO_FILES=		yes
 USE_PKGLOCALEDIR=	yes
+
+SSP_SUPPORTED=		no
+FORTIFY_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -137,6 +141,14 @@ SUBST_STAGE.fix-sed-tabs=	post-patch
 SUBST_MESSAGE.fix-sed-tabs=	Fixing tabulations for sed in scripts.
 SUBST_FILES.fix-sed-tabs=	util/grub.d/*.in
 SUBST_SED.fix-sed-tabs=		-e 's,\\t,	,g'
+
+#
+# grub-script-check crashes from enabling executable stack, paxctl +m it if possible.
+#
+post-configure:
+	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.orig
+	${RUN}${AWK} '/^grub-script-check.1:/{print;print "\t-paxctl +m grub-script-check";next}1' \
+		${WRKSRC}/Makefile.orig > ${WRKSRC}/Makefile
 
 #
 # Remove executable bit from non-executable files.
