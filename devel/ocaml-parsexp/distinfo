@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/05/09 14:26:35 jaapb Exp $
+
+SHA1 (parsexp-0.11.0.tar.gz) = 59fecef33324d6d8dd675afcec515a41a2d3a08b
+RMD160 (parsexp-0.11.0.tar.gz) = 4184c9cde73671ff541db19602e2622668d460e1
+SHA512 (parsexp-0.11.0.tar.gz) = edb9e54d4b7b4c22a8527680cf4c703a2fc50cb32117b028be19881a84d8c885c6ae5345e389fc960d7e80f7033b3217e91ff5b6ca91741093af3f67f929ba20
+Size (parsexp-0.11.0.tar.gz) = 48648 bytes

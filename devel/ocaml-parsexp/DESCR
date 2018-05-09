@@ -1,0 +1,5 @@
+Parsexp contains functionality for parsing s-expressions,
+
+Parsexp is platform independent and as such doesn't provide IO operations.
+The companion library Parsexp_io provides facilities for loading s-expressions
+from files.
