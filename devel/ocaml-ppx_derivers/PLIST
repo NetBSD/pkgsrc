@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/04/04 19:34:44 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/05/09 14:37:14 jaapb Exp $
 ${OCAML_SITELIB}/ppx_derivers/META
 ${OCAML_SITELIB}/ppx_derivers/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_derivers/ppx_derivers.a
@@ -12,4 +12,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_derivers/ppx_derivers.cmxs
 ${OCAML_SITELIB}/ppx_derivers/ppx_derivers.dune
 ${OCAML_SITELIB}/ppx_derivers/ppx_derivers.ml
 ${OCAML_SITELIB}/ppx_derivers/ppx_derivers.mli
+share/doc/ppx_derivers/CHANGES.md
+share/doc/ppx_derivers/LICENSE.md
 share/doc/ppx_derivers/README.md
