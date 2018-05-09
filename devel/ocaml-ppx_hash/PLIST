@@ -1,28 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2018/04/04 19:42:52 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/05/09 14:56:43 jaapb Exp $
 ${OCAML_SITELIB}/ppx_hash/META
-${OCAML_SITELIB}/ppx_hash/expander/expand.ml
-${OCAML_SITELIB}/ppx_hash/expander/expand.mli
-${OCAML_SITELIB}/ppx_hash/expander/expand_intf.ml
 ${OCAML_SITELIB}/ppx_hash/expander/ppx_hash.expander.dune
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib.a
-${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib.cma
-${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib.cmi
-${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib.cmt
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib.cmx
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib.cmxa
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib.cmxs
-${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib.ml-gen
-${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib__Expand.cmi
-${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib__Expand.cmt
-${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib__Expand.cmti
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib__Expand.cmx
-${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib__Expand_intf.cmi
-${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib__Expand_intf.cmt
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib__Expand_intf.cmx
-${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib__Std.cmi
-${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib__Std.cmt
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander_lib__Std.cmx
-${OCAML_SITELIB}/ppx_hash/expander/std.ml
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander.a
+${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander.cma
+${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander.cmi
+${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander.cmt
+${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander.cmxs
+${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander.ml
+${OCAML_SITELIB}/ppx_hash/expander/ppx_hash_expander.mli
 ${OCAML_SITELIB}/ppx_hash/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/ppx_hash.a
 ${OCAML_SITELIB}/ppx_hash/ppx_hash.cma
@@ -44,5 +32,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/runtime-lib/ppx_hash_lib.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/runtime-lib/ppx_hash_lib.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_hash/runtime-lib/ppx_hash_lib.cmxs
 ${OCAML_SITELIB}/ppx_hash/runtime-lib/ppx_hash_lib.ml
+share/doc/ppx_hash/CHANGES.md
 share/doc/ppx_hash/LICENSE.txt
 share/doc/ppx_hash/README.md
