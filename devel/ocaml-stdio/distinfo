@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/01/10 16:10:33 jaapb Exp $
+$NetBSD: distinfo,v 1.3 2018/05/09 14:44:12 jaapb Exp $
 
-SHA1 (stdio-0.10.0.tar.gz) = 54c147ad3581a2741b203c8740b64cb92f0fca23
-RMD160 (stdio-0.10.0.tar.gz) = db9e8de6cf85e4dafa21659c536ab57f6fd048fe
-SHA512 (stdio-0.10.0.tar.gz) = 601a7c61e601ab7f8efa38b7c87a2cc0a70d2afa7a728a5fc47cfee65bda14e8c4bc26990665c2a072c24c89028be16feac2fb6dcb381f0d423baad68867ce6d
-Size (stdio-0.10.0.tar.gz) = 9568 bytes
+SHA1 (stdio-0.11.0.tar.gz) = 4eef3fd3cee66f25194efc2f152535cfca16a8e5
+RMD160 (stdio-0.11.0.tar.gz) = 587d5260c65b2a42f207636f5d398eaa6463aad0
+SHA512 (stdio-0.11.0.tar.gz) = 937c9375da78957464a934364072af01e7b8d86c41c5cd2a9c411b3ed671a648dadfca789cce3b3d3c2e93d81380abc879090ceae51e456a2ff3e015af03be9c
+Size (stdio-0.11.0.tar.gz) = 9754 bytes
