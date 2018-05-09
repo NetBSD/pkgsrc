@@ -1,0 +1,4 @@
+This is a comprehensive toolset for OCaml ppx parser extension development.
+
+It replaces the old libraries ppx_ast, ppx_core, ppx_driver, ppx_metaquot,
+ppx_traverse, ppx_traverse_builtins, and ppx_type_conv.
