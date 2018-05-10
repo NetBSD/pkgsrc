@@ -1,8 +1,8 @@
-$NetBSD: patch-build_moz.configure_old.configure,v 1.6 2017/04/27 01:49:47 ryoon Exp $
+$NetBSD: patch-build_moz.configure_old.configure,v 1.7 2018/05/10 20:01:53 ryoon Exp $
 
---- build/moz.configure/old.configure.orig	2017-04-11 04:15:17.000000000 +0000
+--- build/moz.configure/old.configure.orig	2018-05-03 16:58:26.000000000 +0000
 +++ build/moz.configure/old.configure
-@@ -275,6 +275,7 @@ def old_configure_options(*options):
+@@ -262,6 +262,7 @@ def old_configure_options(*options):
      '--with-nspr-prefix',
      '--with-nss-exec-prefix',
      '--with-nss-prefix',
@@ -10,16 +10,3 @@ $NetBSD: patch-build_moz.configure_old.configure,v 1.6 2017/04/27 01:49:47 ryoon
      '--with-pthreads',
      '--with-qemu-exe',
      '--with-sixgill',
-@@ -286,7 +287,12 @@ def old_configure_options(*options):
-     '--with-system-libvpx',
-     '--with-system-nspr',
-     '--with-system-nss',
-+    '--with-system-ogg',
-     '--with-system-png',
-+    '--with-system-soundtouch',
-+    '--with-system-theora',
-+    '--with-system-tremor',
-+    '--with-system-vorbis',
-     '--with-system-zlib',
-     '--with-thumb',
-     '--with-thumb-interwork',
