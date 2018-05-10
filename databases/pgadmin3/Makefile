@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2018/04/29 05:46:36 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2018/05/10 07:12:53 adam Exp $
 
-DISTNAME=	pgadmin3-1.22.0
-PKGREVISION=	7
+DISTNAME=	pgadmin3-1.22.2
 CATEGORIES=	databases
-MASTER_SITES=	${MASTER_SITE_PGSQL:=pgadmin3/release/v${PKGVERSION_NOREV}/src/}
+MASTER_SITES=	${MASTER_SITE_PGSQL:=pgadmin/pgadmin3/v${PKGVERSION_NOREV}/src/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.pgadmin.org/
@@ -18,8 +17,13 @@ REPLACE_SH=		pgadmin/ver_svn.sh
 
 .include "options.mk"
 
+CONFIGURE_ARGS+=	--enable-databasedesigner
+CONFIGURE_ARGS+=	--with-libssl-prefix=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-libxml2=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=	--with-libxslt=${BUILDLINK_PREFIX.libxslt}
+CONFIGURE_ARGS+=	--with-libz
+CONFIGURE_ARGS+=	--with-libz-prefix=${BUILDLINK_PREFIX.zlib}
+CONFIGURE_ARGS+=	--with-openssl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -27,7 +31,10 @@ CONFIGURE_ARGS+=	--with-libxslt=${BUILDLINK_PREFIX.libxslt}
 CONFIGURE_ARGS+=	--with-arch-${MACHINE_ARCH}
 .endif
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../security/libssh2/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/wxGTK30/buildlink3.mk"
