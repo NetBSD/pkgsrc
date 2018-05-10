@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2277 2018/05/10 00:09:46 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2278 2018/05/10 03:47:10 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3240,3 +3240,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/R-DBI to 1.0.0 [minskim 2018-05-09]
 	Updated www/geckodriver to 0.20.1 [maya 2018-05-09]
 	Updated databases/R-RSQLite to 2.1.1 [minskim 2018-05-10]
+	Updated pkgtools/x11-links to 1.11 [maya 2018-05-10]
