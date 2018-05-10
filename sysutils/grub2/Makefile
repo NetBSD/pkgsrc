@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/05/09 01:18:06 maya Exp $
+# $NetBSD: Makefile,v 1.11 2018/05/10 08:17:10 maya Exp $
 
 DISTNAME=		grub-2.00
 PKGNAME=		${DISTNAME:S/grub/grub2/}
@@ -144,6 +144,7 @@ SUBST_SED.fix-sed-tabs=		-e 's,\\t,	,g'
 
 #
 # grub-script-check crashes from enabling executable stack, paxctl +m it if possible.
+# XXX not needed with grub 2.02
 #
 post-configure:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.orig
