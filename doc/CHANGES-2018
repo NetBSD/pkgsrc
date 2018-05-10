@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2279 2018/05/10 07:04:32 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2280 2018/05/10 07:29:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3243,3 +3243,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/x11-links to 1.11 [maya 2018-05-10]
 	Updated net/py-netifaces to 0.10.7 [adam 2018-05-10]
 	Updated www/py-selenium to 3.12.0 [adam 2018-05-10]
+	Updated databases/pgadmin3 to 1.22.2 [adam 2018-05-10]
+	Updated devel/gperftools to 2.7 [adam 2018-05-10]
