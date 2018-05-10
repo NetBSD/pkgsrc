@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/01/01 21:08:46 adam Exp $
+# $NetBSD: Makefile,v 1.10 2018/05/10 08:24:40 adam Exp $
 
-DISTNAME=	attrs-17.4.0
+DISTNAME=	attrs-18.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/attrs/}
@@ -10,10 +10,17 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Attributes without boilerplate
 LICENSE=	mit
 
-# This is a test dependency; disabled because hypothesis requires attrs
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
+TEST_DEPENDS+=	${PYPKGPREFIX}-Pympler-[0-9]*:../../devel/py-Pympler
+TEST_DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
+
+do-test:
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
