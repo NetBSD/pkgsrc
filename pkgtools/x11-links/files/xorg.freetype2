@@ -1,4 +1,4 @@
-# $NetBSD: xorg.freetype2,v 1.24 2016/05/18 21:04:07 ryoon Exp $
+# $NetBSD: xorg.freetype2,v 1.25 2018/05/10 03:46:53 maya Exp $
 #
 bin/freetype-config
 include/freetype2/config/ftconfig.h
@@ -25,6 +25,7 @@ include/freetype2/freetype/ftcache.h
 include/freetype2/freetype/ftcffdrv.h
 include/freetype2/freetype/ftchapters.h
 include/freetype2/freetype/ftcid.h
+include/freetype2/freetype/ftdriver.h
 include/freetype2/freetype/fterrdef.h
 include/freetype2/freetype/fterrors.h
 include/freetype2/freetype/ftfntfmt.h
@@ -43,6 +44,7 @@ include/freetype2/freetype/ftmodapi.h
 include/freetype2/freetype/ftmoderr.h
 include/freetype2/freetype/ftotval.h
 include/freetype2/freetype/ftoutln.h
+include/freetype2/freetype/ftparams.h
 include/freetype2/freetype/ftpfr.h
 include/freetype2/freetype/ftrender.h
 include/freetype2/freetype/ftsizes.h
