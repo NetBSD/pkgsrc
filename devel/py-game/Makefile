@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2017/12/22 19:05:44 he Exp $
+# $NetBSD: Makefile,v 1.37 2018/05/10 21:53:32 wiz Exp $
 
 DISTNAME=	pygame-1.9.3
 PKGREVISION=	1
@@ -10,6 +10,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.pygame.org/
 COMMENT=	Set of Python modules designed for writing games
 LICENSE=	gnu-lgpl-v2.1
+
+USE_TOOLS+=	pkg-config
 
 REPLACE_PYTHON+=	bundle_docs.py
 REPLACE_PYTHON+=	config.py
