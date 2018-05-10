@@ -1,10 +1,10 @@
-$NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.9 2017/04/27 01:49:47 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.10 2018/05/10 20:01:53 ryoon Exp $
 
 * Restore OSS audio support code
 
---- media/libcubeb/src/cubeb_oss.c.orig	2017-04-23 13:26:11.608534944 +0000
+--- media/libcubeb/src/cubeb_oss.c.orig	2018-05-09 10:25:44.118207555 +0000
 +++ media/libcubeb/src/cubeb_oss.c
-@@ -0,0 +1,445 @@
+@@ -0,0 +1,454 @@
 +/*
 + * Copyright © 2014 Mozilla Foundation
 + *
@@ -41,11 +41,13 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.9 2017/04/27 01:49:47 ryoon E
 +};
 +
 +struct cubeb_stream {
++  /* Note: Must match cubeb_stream layout in cubeb.c. */
 +  cubeb * context;
++  void * user_ptr;
++  /**/
 +
 +  cubeb_data_callback data_callback;
 +  cubeb_state_callback state_callback;
-+  void * user_ptr;
 +  float volume;
 +  float panning;
 +
@@ -274,6 +276,11 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.9 2017/04/27 01:49:47 ryoon E
 +    return CUBEB_ERROR_DEVICE_UNAVAILABLE;
 +  }
 +
++  if ((input_stream_params && input_stream_params->prefs & CUBEB_STREAM_PREF_LOOPBACK) ||
++      (output_stream_params && output_stream_params->prefs & CUBEB_STREAM_PREF_LOOPBACK)) {
++    return CUBEB_ERROR_NOT_SUPPORTED;
++  }
++
 +  if ((stream->fd = open(CUBEB_OSS_DEFAULT_OUTPUT, O_WRONLY)) == -1) {
 +    free(stream);
 +    return CUBEB_ERROR;
@@ -435,12 +442,14 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.9 2017/04/27 01:49:47 ryoon E
 +  .get_min_latency = oss_get_min_latency,
 +  .get_preferred_sample_rate = oss_get_preferred_sample_rate,
 +  .get_preferred_channel_layout = NULL,
-+  .destroy = oss_destroy,
 +  .enumerate_devices = NULL,
++  .device_collection_destroy = NULL,
++  .destroy = oss_destroy,
 +  .stream_init = oss_stream_init,
 +  .stream_destroy = oss_stream_destroy,
 +  .stream_start = oss_stream_start,
 +  .stream_stop = oss_stream_stop,
++  .stream_reset_default_device = NULL,
 +  .stream_get_position = oss_stream_get_position,
 +  .stream_get_latency = oss_stream_get_latency,
 +  .stream_set_volume = oss_stream_set_volume,
