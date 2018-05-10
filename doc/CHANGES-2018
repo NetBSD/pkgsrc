@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2285 2018/05/10 20:04:15 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.2286 2018/05/10 20:05:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3251,3 +3251,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/sxhkd to 0.5.9 [leot 2018-05-10]
 	Updated multimedia/adobe-flash-player to 29.0.0.171 [tsutsui 2018-05-10]
 	Updated www/firefox to 60.0 [ryoon 2018-05-11]
+	Updated www/firefox-l10n to 60.0 [ryoon 2018-05-11]
