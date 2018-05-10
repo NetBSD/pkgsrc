@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/05/31 05:15:47 maya Exp $
+# $NetBSD: Makefile,v 1.3 2018/05/10 13:35:07 leot Exp $
 
-DISTNAME=		sxhkd-0.5.7
+DISTNAME=		sxhkd-0.5.9
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GITHUB:=baskerville/}
 GITHUB_TAG=		${PKGVERSION}
@@ -17,6 +17,8 @@ SUBST_STAGE.makefile=	pre-build
 SUBST_MESSAGE.makefile=	Fixing makefile
 SUBST_FILES.makefile=	Makefile
 SUBST_SED.makefile=	-e 's,share/man,${PKGMANDIR},g'
+
+USE_LANGUAGES=		c99
 
 .include "../../x11/xcb-util/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
