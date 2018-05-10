@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2282 2018/05/10 13:25:02 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2283 2018/05/10 13:35:17 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3248,3 +3248,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-ZopeInterface to 4.5.0 [adam 2018-05-10]
 	Updated devel/py-attrs to 18.1.0 [adam 2018-05-10]
 	Updated archivers/lz4 to 1.8.2 [adam 2018-05-10]
+	Updated x11/sxhkd to 0.5.9 [leot 2018-05-10]
