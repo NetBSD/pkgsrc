@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.315 2018/05/10 20:01:53 ryoon Exp $
+$NetBSD: distinfo,v 1.316 2018/05/10 20:02:59 ryoon Exp $
 
 SHA1 (firefox-60.0.source.tar.xz) = 070b99b19851efe13c1d947764a9de1a83f6362c
 RMD160 (firefox-60.0.source.tar.xz) = f6c1ad34ab78e27964bb100b9190d4888200eb1b
@@ -16,7 +16,6 @@ SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 937a843a7acf3085
 SHA1 (patch-ipc_glue_CrossProcessSemaphore.h) = 778a569887d8ad082abc2fa2fe89a0a943e84d64
 SHA1 (patch-ipc_glue_CrossProcessSemaphore__posix.cpp) = 3052338871447cedaeafe8369afe82233183c884
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 260c29bacd8bf265951b7a412f850bf2b292c836
-SHA1 (patch-media_libcubeb_AUTHORS) = 0565b8f0d27108667c1dfcc37ed397644c11d0f4
 SHA1 (patch-media_libcubeb_gtest_moz.build) = 921a001726cda9e9782df5e59ae02b19d76ef47e
 SHA1 (patch-media_libcubeb_src_cubeb.c) = 1b1b8d57eb710cad13518ded79a0ddee2681881b
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 3ee36f58bb525767c7d2b9e814ba4ccaa4868717
