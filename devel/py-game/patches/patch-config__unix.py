@@ -1,4 +1,4 @@
-$NetBSD: patch-config__unix.py,v 1.2 2017/12/22 19:05:44 he Exp $
+$NetBSD: patch-config__unix.py,v 1.3 2018/05/10 21:52:51 wiz Exp $
 
 Detect X11R6 or X11R7; avoid localbase overriding search...
 Disable portmidi and porttime; porttime is a part of portmidi
@@ -18,7 +18,7 @@ Disable portmidi and porttime; porttime is a part of portmidi
  if 'ORIGLIBDIRS' in os.environ and os.environ['ORIGLIBDIRS'] != "":
      origlibdirs = os.environ['ORIGLIBDIRS'].split(":")
  
-@@ -169,18 +169,15 @@ def main():
+@@ -169,20 +169,17 @@ def main():
          else:
              return Dependency('PORTTIME', 'porttime.h', 'libporttime.so', ['porttime'])
  
@@ -35,9 +35,13 @@ Disable portmidi and porttime; porttime is a part of portmidi
          Dependency('SCRAP', '', 'libX11', ['X11']),
 -        Dependency('PORTMIDI', 'portmidi.h', 'libportmidi.so', ['portmidi']),
 -        porttime_dep,
-         DependencyProg('FREETYPE', 'FREETYPE_CONFIG', 'freetype-config', '2.0',
-                        ['freetype'], '--ftversion'),
+-        DependencyProg('FREETYPE', 'FREETYPE_CONFIG', 'freetype-config', '2.0',
+-                       ['freetype'], '--ftversion'),
++        DependencyProg('FREETYPE', 'FREETYPE_CONFIG', 'pkg-config freetype2', '2.0',
++                       ['freetype'], '--modversion'),
          #Dependency('GFX', 'SDL_gfxPrimitives.h', 'libSDL_gfx.so', ['SDL_gfx']),
+     ]
+     if not DEPS[0].found:
 @@ -192,11 +189,11 @@ def main():
      libdirs = []
      incdirs += ["/usr"+d for d in origincdirs]
