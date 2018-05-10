@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/12/01 10:02:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/05/10 07:04:09 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -214,6 +214,12 @@ ${PYSITELIB}/selenium/webdriver/remote/webelement.pyo
 ${PYSITELIB}/selenium/webdriver/safari/__init__.py
 ${PYSITELIB}/selenium/webdriver/safari/__init__.pyc
 ${PYSITELIB}/selenium/webdriver/safari/__init__.pyo
+${PYSITELIB}/selenium/webdriver/safari/permissions.py
+${PYSITELIB}/selenium/webdriver/safari/permissions.pyc
+${PYSITELIB}/selenium/webdriver/safari/permissions.pyo
+${PYSITELIB}/selenium/webdriver/safari/remote_connection.py
+${PYSITELIB}/selenium/webdriver/safari/remote_connection.pyc
+${PYSITELIB}/selenium/webdriver/safari/remote_connection.pyo
 ${PYSITELIB}/selenium/webdriver/safari/service.py
 ${PYSITELIB}/selenium/webdriver/safari/service.pyc
 ${PYSITELIB}/selenium/webdriver/safari/service.pyo
