@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2018/01/28 16:04:11 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2018/05/10 21:10:38 jmcneill Exp $
 
 DISTNAME=	libvpx-1.7.0
 CATEGORIES=	multimedia
@@ -102,7 +102,7 @@ SUBST_SED.clang=	-e 's/-DINLINE_ASM/-DINLINE_ASM ${CLANG_INTEGRATED_AS}/'
 CONFIGURE_ARGS+=	--target=mips32-linux-gcc
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*) || !empty(MACHINE_PLATFORM:MNetBSD-*-*aarch64*)
 CONFIGURE_ARGS+=	--disable-runtime-cpu-detect
 .endif
 
