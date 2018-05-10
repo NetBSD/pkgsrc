@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2016/03/16 04:46:24 richard Exp $
+$NetBSD: distinfo,v 1.16 2018/05/10 07:12:53 adam Exp $
 
-SHA1 (pgadmin3-1.22.0.tar.gz) = 3091b0bdc5156e54197f157a86240e47af9becc2
-RMD160 (pgadmin3-1.22.0.tar.gz) = 6c5c8c28c0aaa7cd9720a6089fafe770210f002c
-SHA512 (pgadmin3-1.22.0.tar.gz) = db16ac1b92e95a6da51be973b6833e53aed4c1d8740c8bccbfd778b0c3d3a4158fb13107761e0a39227aea87360be3b297ebc8809ac8ca5102d673935a33727c
-Size (pgadmin3-1.22.0.tar.gz) = 14668096 bytes
-SHA1 (patch-configure) = 52be492c191e3a249bcbf88075f0f2a2f1a0f76a
+SHA1 (pgadmin3-1.22.2.tar.gz) = 2b62630d3ee90b44c440d673ca8bb3dcfe010e18
+RMD160 (pgadmin3-1.22.2.tar.gz) = 48e732089cd1879f99d1894229a9cc23ed3c0c44
+SHA512 (pgadmin3-1.22.2.tar.gz) = dcfc72cc2e33dbf1c9d1ce287f9d1d46eb047c99a165372cb74ef1716098f90f2ce2a8d0cd21b511a1ac8c0569dc7b3c0593208a74641f5a8f29dc9c04e40bbd
+Size (pgadmin3-1.22.2.tar.gz) = 14788481 bytes
+SHA1 (patch-configure) = be59b43343ee1811876211b043512758dc3809aa
+SHA1 (patch-pgadmin_Makefile.in) = 4496da3b9c5a58e6e634604457c7d03b356703bb
