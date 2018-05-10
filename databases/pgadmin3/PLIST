@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2018/01/01 22:29:22 rillig Exp $
+@comment $NetBSD: PLIST,v 1.14 2018/05/10 07:12:53 adam Exp $
 bin/pgadmin3
 share/pgadmin3/branding/branding.ini
 share/pgadmin3/docs/cs_CZ/hints/autovacuum.html
@@ -37,6 +37,7 @@ share/pgadmin3/docs/de_DE/pgadmin3.css
 ${PLIST.doc}share/pgadmin3/docs/en_US/_images/backup-2.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_images/backup-3.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_images/backup-4.png
+${PLIST.doc}share/pgadmin3/docs/en_US/_images/backup-5.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_images/backup.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_images/debugger.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_images/editgrid.png
@@ -87,6 +88,7 @@ ${PLIST.doc}share/pgadmin3/docs/en_US/_images/reporttool-xml.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_images/restore-2.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_images/restore-3.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_images/restore-4.png
+${PLIST.doc}share/pgadmin3/docs/en_US/_images/restore-5.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_images/restore.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_images/search.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_images/server.png
@@ -106,6 +108,7 @@ ${PLIST.doc}share/pgadmin3/docs/en_US/_static/ajax-loader.gif
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/backup-2.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/backup-3.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/backup-4.png
+${PLIST.doc}share/pgadmin3/docs/en_US/_static/backup-5.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/backup.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/basic.css
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/classic.css
@@ -116,6 +119,7 @@ ${PLIST.doc}share/pgadmin3/docs/en_US/_static/connect.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/debugger.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/default.css
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/doctools.js
+${PLIST.doc}share/pgadmin3/docs/en_US/_static/documentation_options.js
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/down-pressed.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/down.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/editgrid.png
@@ -126,7 +130,7 @@ ${PLIST.doc}share/pgadmin3/docs/en_US/_static/grantwiz.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/gridopt-filter.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/gridopt-sort.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/guru-connect.png
-${PLIST.doc}share/pgadmin3/docs/en_US/_static/jquery-1.11.1.js
+${PLIST.doc}share/pgadmin3/docs/en_US/_static/jquery-3.2.1.js
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/jquery.js
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/locks.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/logfile.png
@@ -174,6 +178,7 @@ ${PLIST.doc}share/pgadmin3/docs/en_US/_static/reporttool-xml.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/restore-2.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/restore-3.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/restore-4.png
+${PLIST.doc}share/pgadmin3/docs/en_US/_static/restore-5.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/restore.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/search.png
 ${PLIST.doc}share/pgadmin3/docs/en_US/_static/searchtools.js

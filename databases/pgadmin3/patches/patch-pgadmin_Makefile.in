@@ -1,0 +1,90 @@
+$NetBSD: patch-pgadmin_Makefile.in,v 1.1 2018/05/10 07:12:53 adam Exp $
+
+Use external libssh2.
+
+--- pgadmin/Makefile.in.orig	2018-05-07 08:47:05.000000000 +0000
++++ pgadmin/Makefile.in
+@@ -1006,42 +1006,7 @@ bin_PROGRAMS = pgadmin3$(EXEEXT)
+ @BUILD_SSH_TUNNEL_TRUE@am__append_1 = \
+ @BUILD_SSH_TUNNEL_TRUE@	include/utils/sshTunnel.h
+ 
+-@BUILD_SSH_TUNNEL_TRUE@am__append_2 = \
+-@BUILD_SSH_TUNNEL_TRUE@		include/libssh2/channel.h \
+-@BUILD_SSH_TUNNEL_TRUE@        include/libssh2/comp.h \
+-@BUILD_SSH_TUNNEL_TRUE@        include/libssh2/crypto.h \
+-@BUILD_SSH_TUNNEL_TRUE@        include/libssh2/libgcrypt.h \
+-@BUILD_SSH_TUNNEL_TRUE@        include/libssh2/libssh2.h \
+-@BUILD_SSH_TUNNEL_TRUE@        include/libssh2/libssh2_priv.h \
+-@BUILD_SSH_TUNNEL_TRUE@        include/libssh2/libssh2_publickey.h \
+-@BUILD_SSH_TUNNEL_TRUE@        include/libssh2/libssh2_sftp.h \
+-@BUILD_SSH_TUNNEL_TRUE@        include/libssh2/mac.h \
+-@BUILD_SSH_TUNNEL_TRUE@        include/libssh2/misc.h \
+-@BUILD_SSH_TUNNEL_TRUE@        include/libssh2/openssl.h \
+-@BUILD_SSH_TUNNEL_TRUE@        include/libssh2/packet.h \
+-@BUILD_SSH_TUNNEL_TRUE@        include/libssh2/session.h \
+-@BUILD_SSH_TUNNEL_TRUE@        include/libssh2/sftp.h \
+-@BUILD_SSH_TUNNEL_TRUE@        include/libssh2/transport.h \
+-@BUILD_SSH_TUNNEL_TRUE@        include/libssh2/userauth.h
+-
+-@BUILD_SSH_TUNNEL_TRUE@am__append_3 = \
+-@BUILD_SSH_TUNNEL_TRUE@	include/libssh2/module.mk \
+-@BUILD_SSH_TUNNEL_TRUE@	include/libssh2/Win32/libssh2_config.h
+-
+-@BUILD_SSH_TUNNEL_TRUE@am__append_4 = utils/sshTunnel.cpp \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/agent.c libssh2/channel.c \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/comp.c libssh2/crypt.c \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/global.c libssh2/hostkey.c \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/keepalive.c libssh2/kex.c \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/knownhost.c libssh2/libgcrypt.c \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/mac.c libssh2/misc.c \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/openssl.c libssh2/packet.c \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/pem.c libssh2/publickey.c \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/scp.c libssh2/session.c \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/sftp.c libssh2/transport.c \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/userauth.c libssh2/version.c
+-@BUILD_SSH_TUNNEL_TRUE@am__append_5 = \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/module.mk
++@BUILD_SSH_TUNNEL_TRUE@am__append_4 = utils/sshTunnel.cpp
+ 
+ @APPBUNDLE_FALSE@@BUILD_DEBUG_TRUE@am__append_6 = \
+ @APPBUNDLE_FALSE@@BUILD_DEBUG_TRUE@	$(TMP_ui)
+@@ -1906,29 +1871,7 @@ am__pgadmin3_SOURCES_DIST = pgAdmin3.cpp
+ 	libssh2/userauth.c libssh2/version.c
+ am__dirstamp = $(am__leading_dot)dirstamp
+ am__objects_1 =
+-@BUILD_SSH_TUNNEL_TRUE@am__objects_2 = utils/sshTunnel.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/agent.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/channel.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/comp.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/crypt.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/global.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/hostkey.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/keepalive.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/kex.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/knownhost.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/libgcrypt.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/mac.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/misc.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/openssl.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/packet.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/pem.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/publickey.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/scp.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/session.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/sftp.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/transport.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/userauth.$(OBJEXT) \
+-@BUILD_SSH_TUNNEL_TRUE@	libssh2/version.$(OBJEXT)
++@BUILD_SSH_TUNNEL_TRUE@am__objects_2 = utils/sshTunnel.$(OBJEXT)
+ am_pgadmin3_OBJECTS = pgAdmin3.$(OBJEXT) agent/dlgJob.$(OBJEXT) \
+ 	agent/dlgSchedule.$(OBJEXT) agent/dlgStep.$(OBJEXT) \
+ 	agent/pgaJob.$(OBJEXT) agent/pgaSchedule.$(OBJEXT) \
+@@ -2622,7 +2565,7 @@ mkdir_p = @mkdir_p@
+ oldincludedir = @oldincludedir@
+ pdfdir = @pdfdir@
+ pgScript_LDADD = @pgScript_LDADD@
+-pgadmin3_LDADD = @pgadmin3_LDADD@
++pgadmin3_LDADD = @pgadmin3_LDADD@ -lssh2
+ pgsTest_LDADD = @pgsTest_LDADD@
+ png2c_LDADD = @png2c_LDADD@
+ prefix = @prefix@
