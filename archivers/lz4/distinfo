@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.14 2018/01/16 08:13:01 adam Exp $
+$NetBSD: distinfo,v 1.15 2018/05/10 13:16:27 adam Exp $
 
-SHA1 (lz4-1.8.1.2.tar.gz) = d16dd5062b98a715d18e2b0f7d8e1a595272b8d6
-RMD160 (lz4-1.8.1.2.tar.gz) = a1bf8a38af473547ba84c5d59eed3ca1c754e274
-SHA512 (lz4-1.8.1.2.tar.gz) = f4ed450bc05477cc6c2b42e6fe1fbb1fb0907f1d05b68b1d69d975b555ddb385550f204258e6d91642e14ce373815141dc218cda03b711793935d5458bc45c7f
-Size (lz4-1.8.1.2.tar.gz) = 228640 bytes
+SHA1 (lz4-1.8.2.tar.gz) = dc24ee207db0b4481ff5e74b608c1af1c18c5a7c
+RMD160 (lz4-1.8.2.tar.gz) = 649f51b1951a5a41a4d2ee79af1dbcfc5b917c8a
+SHA512 (lz4-1.8.2.tar.gz) = 5fadc79334d37739c947d6dfc24f48ce82989fc5ee4f2bb8201ccf7ee3230b9e6e7c8488beb64050a035369f4247161d258bdb539578bec224ccebfef1b8a763
+Size (lz4-1.8.2.tar.gz) = 320742 bytes
 SHA1 (patch-Makefile) = 5fe6f084b772e139469817b20187c99f4f64160d
-SHA1 (patch-lib_Makefile) = 34794c9c2f9f81bebe64a6518fad97d6f4514c54
-SHA1 (patch-programs_Makefile) = f53cb9beec84f363b05c62cf28b1bac608e2f5c0
+SHA1 (patch-lib_Makefile) = 2c413d93a8cc66d0a61b701269a9cdc6da3a72c6
+SHA1 (patch-programs_Makefile) = e3260da1758999d1e7c20ff7e7bae92575d1fa1e
