@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/09/16 19:26:56 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/05/10 21:48:15 wiz Exp $
 
 DISTNAME=	SDL2_ttf-2.0.14
 CATEGORIES=	devel
@@ -10,6 +10,7 @@ COMMENT=	Use TrueType fonts in your SDL2 applications
 LICENSE=	zlib
 
 USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	SDL2_ttf.pc.in
