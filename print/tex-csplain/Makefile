@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2018/05/06 02:18:43 markd Exp $
+# $NetBSD: Makefile,v 1.11 2018/05/11 22:25:47 markd Exp $
 
 DISTNAME=	csplain
 PKGNAME=	tex-${DISTNAME}-2018
+PKGREVISION=	1
 TEXLIVE_REV=	47149
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,7 +16,7 @@ DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 
 INSTALLATION_DIRS+=	bin
 
-TEX_FORMATS+=	"csplain pdftex -etex -enc csplain-utf8.ini\\npdfcsplain pdftex -etex -enc csplain-utf8.ini\\n"
+TEX_FORMATS+=	"csplain pdftex - -etex -enc csplain-utf8.ini\\npdfcsplain pdftex - -etex -enc csplain-utf8.ini\\n"
 
 # execute AddFormat name=pdfcsplain engine=xetex        options="-etex csplain.ini"
 # execute AddFormat name=pdfcsplain engine=luatex       options="-etex csplain.ini"
