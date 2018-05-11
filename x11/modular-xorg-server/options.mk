@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2018/03/07 11:57:38 wiz Exp $
+# $NetBSD: options.mk,v 1.19 2018/05/11 13:47:35 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	inet6 debug dtrace

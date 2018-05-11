@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.21 2018/03/07 11:57:38 wiz Exp $
+# $NetBSD: Makefile.common,v 1.22 2018/05/11 13:47:35 wiz Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
-XORG_VERSION=	1.19.6
+XORG_VERSION=	1.20.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -67,8 +67,6 @@ CONFIGURE_ARGS+=	--disable-xwin
 CONFIGURE_ARGS+=	--disable-xephyr
 CONFIGURE_ARGS+=	--disable-kdrive
 #CONFIGURE_ARGS+=	--disable-kdrive-vesa
-CONFIGURE_ARGS+=	--disable-xfake
-CONFIGURE_ARGS+=	--disable-xfbdev
 CONFIGURE_ARGS+=	--enable-xtrans-send-fds
 
 CONFIGURE_ARGS+=	--with-int10=x86emu
@@ -126,6 +124,8 @@ CONFIGURE_ARGS+=	--with-sha1=libnettle
 BUILDLINK_API_DEPENDS.libpciaccess+=	libpciaccess>=0.11.0
 BUILDLINK_DEPMETHOD.libpciaccess=	full
 .include "../../sysutils/libpciaccess/buildlink3.mk"
+BUILDLINK_API_DEPENDS.xorgproto+=	xorgproto>=2018.3
+.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/evieext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
@@ -142,6 +142,5 @@ BUILDLINK_API_DEPENDS.libXext+=	libXext>=1.1.1
 .include "../../x11/libxkbui/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
-.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
