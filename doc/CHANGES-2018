@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2291 2018/05/11 10:10:26 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2292 2018/05/11 13:47:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3260,3 +3260,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-ipython5 to 5.7.0 [adam 2018-05-11]
 	Updated www/py-aiohttp to 3.2.1 [adam 2018-05-11]
 	Updated www/py-notebook to 5.5.0 [adam 2018-05-11]
+	Updated x11/modular-xorg-server to 1.20.0 [wiz 2018-05-11]
