@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/12/10 11:36:44 markd Exp $
+# $NetBSD: Makefile,v 1.3 2018/05/11 22:24:29 markd Exp $
 
 DISTNAME=	cslatex
 PKGNAME=	tex-${DISTNAME}-2014
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	28596
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,7 +15,7 @@ DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 
 INSTALLATION_DIRS+=	bin
 
-TEX_FORMATS+=	"cslatex pdftex -etex cslatex.ini\\npdfcslatex pdftex -etex cslatex.ini\\n"
+TEX_FORMATS+=	"cslatex pdftex - -etex cslatex.ini\\npdfcslatex pdftex - -etex cslatex.ini\\n"
 
 .include "../../print/texlive/package.mk"
 
