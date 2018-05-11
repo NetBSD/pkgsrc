@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/05/11 19:24:58 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2018/05/11 19:46:36 minskim Exp $
 
 DISTNAME=	notebook-5.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,13 +24,6 @@ DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.2.1:../../devel/py-traitlets
 DEPENDS+=	${PYPKGPREFIX}-zmq>=17.0.0:../../net/py-zmq
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-
-PLIST_VARS+=	py3
-.if "${PYPKGPREFIX}" != "py27"
-PLIST.py3=	yes
-.endif
 
 post-install:
 	for f in jupyter-bundlerextension jupyter-nbextension jupyter-notebook jupyter-serverextension; do \
