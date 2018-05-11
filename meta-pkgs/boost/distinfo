@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.119 2018/05/06 18:56:35 minskim Exp $
+$NetBSD: distinfo,v 1.120 2018/05/11 14:45:23 jperkin Exp $
 
 SHA1 (boost_1_67_0.tar.bz2) = 694ae3f4f899d1a80eb7a3b31b33be73c423c1ae
 RMD160 (boost_1_67_0.tar.bz2) = d5bf97b8a953b87c08e367556856204a05346315
@@ -34,3 +34,4 @@ SHA1 (patch-libs_fiber_build_Jamfile.v2) = 28c1aba2d074f2db7104e37cd900d33f5fcff
 SHA1 (patch-libs_fiber_src_numa_freebsd_pin__thread.cpp) = 0fbc6c9bcc17a4e042f3b62ca5fdf33f014cf773
 SHA1 (patch-tools_build_src_engine_build.jam) = dc59422ade217aa49eb5d6928f02f7bc4734aa43
 SHA1 (patch-tools_build_src_engine_build.sh) = ed5e29d049f04e8a1e055844e66c549e5cd4bb01
+SHA1 (patch-tools_build_src_tools_gcc.jam) = 4d895f14965ee29e328dda15e9975ccc1c14673f
