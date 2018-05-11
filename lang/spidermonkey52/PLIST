@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2018/04/29 05:11:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/05/11 19:18:35 jperkin Exp $
 bin/js52
 bin/js52-config
 include/mozjs-52/fdlibm.h
-include/mozjs-52/jemalloc_types.h
+${PLIST.jemalloc}include/mozjs-52/jemalloc_types.h
 include/mozjs-52/js-config.h
 include/mozjs-52/js.msg
 include/mozjs-52/js/CallArgs.h
@@ -155,8 +155,8 @@ include/mozjs-52/mozilla/mozalloc.h
 include/mozjs-52/mozilla/mozalloc_abort.h
 include/mozjs-52/mozilla/mozalloc_oom.h
 include/mozjs-52/mozilla/utils.h
-include/mozjs-52/mozmemory.h
-include/mozjs-52/mozmemory_wrap.h
+${PLIST.jemalloc}include/mozjs-52/mozmemory.h
+${PLIST.jemalloc}include/mozjs-52/mozmemory_wrap.h
 lib/libjs_static.ajs
 lib/libmozjs-52.so
 lib/pkgconfig/mozjs-52.pc
