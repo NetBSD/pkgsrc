@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2290 2018/05/11 09:37:36 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2291 2018/05/11 10:10:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3256,3 +3256,7 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/nss to 3.37 [ryoon 2018-05-11]
 	Updated audio/cmus to 2.7.1nb10 [maya 2018-05-11]
 	Updated lang/npm to 6.0.1 [adam 2018-05-11]
+	Updated devel/py-ipython to 6.4.0 [adam 2018-05-11]
+	Updated devel/py-ipython5 to 5.7.0 [adam 2018-05-11]
+	Updated www/py-aiohttp to 3.2.1 [adam 2018-05-11]
+	Updated www/py-notebook to 5.5.0 [adam 2018-05-11]
