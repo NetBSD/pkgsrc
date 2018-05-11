@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2017/06/05 14:22:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2018/05/11 09:13:39 jperkin Exp $
 
 DISTNAME=	Text-Iconv-1.7
 PKGNAME=	p5-${DISTNAME}
@@ -11,6 +11,9 @@ HOMEPAGE=	http://search.cpan.org/dist/Text-Iconv/
 COMMENT=	Perl interface to iconv() codeset conversion function
 
 PERL5_PACKLIST=		auto/Text/Iconv/.packlist
+
+MAKE_PARAMS+=	INC="-I${BUILDLINK_PREFIX.iconv}/include"
+MAKE_PARAMS+=	LIBS="-L${BUILDLINK_PREFIX.iconv}/lib"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
