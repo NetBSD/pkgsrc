@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/04/02 19:52:53 adam Exp $
+# $NetBSD: Makefile,v 1.31 2018/05/11 14:18:47 minskim Exp $
 
 DISTNAME=	scipy-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 USE_LANGUAGES+=	c c++ fortran
 MAKE_ENV+=	ATLAS=None
 
+PLIST_VARS+=	dsym
+
 # XXX Avoid picking up other compilers when installed
 .include "../../mk/compiler.mk"
 
@@ -20,6 +22,9 @@ MAKE_ENV+=	ATLAS=None
 PYSETUPBUILDARGS+=	--fcompiler=g95
 .elif defined(PKGSRC_FORTRAN) && !empty(PKGSRC_FORTRAN:Mgfortran)
 PYSETUPBUILDARGS+=	--fcompiler=gnu95
+.  if ${GFORTRAN_VERSION} == "7"
+PLIST.dsym=	yes
+.  endif
 LDFLAGS.Darwin+=	-undefined dynamic_lookup
 .else
 BROKEN=		Requires fortran 95
@@ -87,7 +92,9 @@ REPLACE_PYTHON+=	scipy/stats/setup.py
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
-	${FIND} ${DESTDIR}${PREFIX} -name "*.so" | while read lib; do   \
+	${FIND} ${DESTDIR}${PREFIX} -name "*.so" |                      \
+		${GREP} -v "dSYM/Contents/Resources/DWARF/" |           \
+		while read lib; do                                      \
 		libname=`basename $${lib}`;                             \
 		libdir=`dirname $${lib} | sed -e 's,${DESTDIR},,'`;     \
 		install_name_tool -id $${libdir}/$${libname} $${lib};   \
