@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/04/06 20:21:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/05/11 10:09:55 adam Exp $
 bin/jupyter-bundlerextension${PYVERSSUFFIX}
 bin/jupyter-nbextension${PYVERSSUFFIX}
 bin/jupyter-notebook${PYVERSSUFFIX}
@@ -1185,6 +1185,7 @@ ${PYSITELIB}/notebook/static/components/codemirror/theme/monokai.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/neat.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/neo.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/night.css
+${PYSITELIB}/notebook/static/components/codemirror/theme/oceanic-next.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/panda-syntax.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/paraiso-dark.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/paraiso-light.css
@@ -1192,6 +1193,7 @@ ${PYSITELIB}/notebook/static/components/codemirror/theme/pastel-on-dark.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/railscasts.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/rubyblue.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/seti.css
+${PYSITELIB}/notebook/static/components/codemirror/theme/shadowfox.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/solarized.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/the-matrix.css
 ${PYSITELIB}/notebook/static/components/codemirror/theme/tomorrow-night-bright.css
@@ -1249,8 +1251,9 @@ ${PYSITELIB}/notebook/static/components/requirejs-text/text.js
 ${PYSITELIB}/notebook/static/components/requirejs/require.js
 ${PYSITELIB}/notebook/static/components/text-encoding/lib/encoding.js
 ${PYSITELIB}/notebook/static/components/underscore/underscore-min.js
-${PYSITELIB}/notebook/static/components/xterm.js/dist/xterm.css
-${PYSITELIB}/notebook/static/components/xterm.js/dist/xterm.js
+${PYSITELIB}/notebook/static/components/xterm.js-css/index.css
+${PYSITELIB}/notebook/static/components/xterm.js-fit/index.js
+${PYSITELIB}/notebook/static/components/xterm.js/index.js
 ${PYSITELIB}/notebook/static/custom/custom.css
 ${PYSITELIB}/notebook/static/custom/custom.js
 ${PYSITELIB}/notebook/static/edit/js/editor.js
@@ -1326,6 +1329,7 @@ ${PYSITELIB}/notebook/static/tree/js/main.min.js.map
 ${PYSITELIB}/notebook/static/tree/js/newnotebook.js
 ${PYSITELIB}/notebook/static/tree/js/notebooklist.js
 ${PYSITELIB}/notebook/static/tree/js/sessionlist.js
+${PYSITELIB}/notebook/static/tree/js/shutdownbutton.js
 ${PYSITELIB}/notebook/static/tree/js/terminallist.js
 ${PYSITELIB}/notebook/templates/404.html
 ${PYSITELIB}/notebook/templates/edit.html
@@ -1361,12 +1365,10 @@ ${PYSITELIB}/notebook/tests/mockextension/index.js
 ${PYSITELIB}/notebook/tests/notebook/attachments.js
 ${PYSITELIB}/notebook/tests/notebook/buffering.js
 ${PYSITELIB}/notebook/tests/notebook/clipboard_multiselect.js
-${PYSITELIB}/notebook/tests/notebook/deletecell.js
 ${PYSITELIB}/notebook/tests/notebook/display_id.js
 ${PYSITELIB}/notebook/tests/notebook/display_image.js
 ${PYSITELIB}/notebook/tests/notebook/dualmode.js
 ${PYSITELIB}/notebook/tests/notebook/dualmode_arrows.js
-${PYSITELIB}/notebook/tests/notebook/dualmode_cellinsert.js
 ${PYSITELIB}/notebook/tests/notebook/dualmode_cellmode.js
 ${PYSITELIB}/notebook/tests/notebook/dualmode_clipboard.js
 ${PYSITELIB}/notebook/tests/notebook/dualmode_execute.js
@@ -1386,13 +1388,41 @@ ${PYSITELIB}/notebook/tests/notebook/multiselect.js
 ${PYSITELIB}/notebook/tests/notebook/multiselect_toggle.js
 ${PYSITELIB}/notebook/tests/notebook/notifications.js
 ${PYSITELIB}/notebook/tests/notebook/output.js
-${PYSITELIB}/notebook/tests/notebook/prompt_numbers.js
 ${PYSITELIB}/notebook/tests/notebook/roundtrip.js
 ${PYSITELIB}/notebook/tests/notebook/safe_append_output.js
 ${PYSITELIB}/notebook/tests/notebook/save.js
 ${PYSITELIB}/notebook/tests/notebook/shutdown.js
 ${PYSITELIB}/notebook/tests/notebook/tags.js
-${PYSITELIB}/notebook/tests/notebook/undelete.js
+${PYSITELIB}/notebook/tests/selenium/__init__.py
+${PYSITELIB}/notebook/tests/selenium/__init__.pyc
+${PYSITELIB}/notebook/tests/selenium/__init__.pyo
+${PYSITELIB}/notebook/tests/selenium/conftest.py
+${PYSITELIB}/notebook/tests/selenium/conftest.pyc
+${PYSITELIB}/notebook/tests/selenium/conftest.pyo
+${PYSITELIB}/notebook/tests/selenium/quick_selenium.py
+${PYSITELIB}/notebook/tests/selenium/quick_selenium.pyc
+${PYSITELIB}/notebook/tests/selenium/quick_selenium.pyo
+${PYSITELIB}/notebook/tests/selenium/test_dashboard_nav.py
+${PYSITELIB}/notebook/tests/selenium/test_dashboard_nav.pyc
+${PYSITELIB}/notebook/tests/selenium/test_dashboard_nav.pyo
+${PYSITELIB}/notebook/tests/selenium/test_deletecell.py
+${PYSITELIB}/notebook/tests/selenium/test_deletecell.pyc
+${PYSITELIB}/notebook/tests/selenium/test_deletecell.pyo
+${PYSITELIB}/notebook/tests/selenium/test_dualmode_insertcell.py
+${PYSITELIB}/notebook/tests/selenium/test_dualmode_insertcell.pyc
+${PYSITELIB}/notebook/tests/selenium/test_dualmode_insertcell.pyo
+${PYSITELIB}/notebook/tests/selenium/test_markdown.py
+${PYSITELIB}/notebook/tests/selenium/test_markdown.pyc
+${PYSITELIB}/notebook/tests/selenium/test_markdown.pyo
+${PYSITELIB}/notebook/tests/selenium/test_prompt_numbers.py
+${PYSITELIB}/notebook/tests/selenium/test_prompt_numbers.pyc
+${PYSITELIB}/notebook/tests/selenium/test_prompt_numbers.pyo
+${PYSITELIB}/notebook/tests/selenium/undelete.py
+${PYSITELIB}/notebook/tests/selenium/undelete.pyc
+${PYSITELIB}/notebook/tests/selenium/undelete.pyo
+${PYSITELIB}/notebook/tests/selenium/utils.py
+${PYSITELIB}/notebook/tests/selenium/utils.pyc
+${PYSITELIB}/notebook/tests/selenium/utils.pyo
 ${PYSITELIB}/notebook/tests/services/kernel.js
 ${PYSITELIB}/notebook/tests/services/serialize.js
 ${PYSITELIB}/notebook/tests/services/session.js
@@ -1423,7 +1453,6 @@ ${PYSITELIB}/notebook/tests/test_serverextensions.pyo
 ${PYSITELIB}/notebook/tests/test_utils.py
 ${PYSITELIB}/notebook/tests/test_utils.pyc
 ${PYSITELIB}/notebook/tests/test_utils.pyo
-${PYSITELIB}/notebook/tests/tree/dashboard_nav.js
 ${PYSITELIB}/notebook/tests/util.js
 ${PYSITELIB}/notebook/transutils.py
 ${PYSITELIB}/notebook/transutils.pyc

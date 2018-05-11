@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/04/06 20:21:57 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/05/11 10:09:55 adam Exp $
 
-DISTNAME=	notebook-5.4.1
+DISTNAME=	notebook-5.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/notebook/}
@@ -18,9 +18,10 @@ DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.4.0:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-nbconvert-[0-9]*:../../www/py-nbconvert
 DEPENDS+=	${PYPKGPREFIX}-nbformat-[0-9]*:../../www/py-nbformat
-DEPENDS+=	${PYPKGPREFIX}-terminado>=0.3.3:../../www/py-terminado
+DEPENDS+=	${PYPKGPREFIX}-terminado>=0.8.1:../../www/py-terminado
 DEPENDS+=	${PYPKGPREFIX}-tornado>=4:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.2.1:../../devel/py-traitlets
+DEPENDS+=	${PYPKGPREFIX}-zmq>=17.0.0:../../net/py-zmq
 
 USE_LANGUAGES=	# none
 
