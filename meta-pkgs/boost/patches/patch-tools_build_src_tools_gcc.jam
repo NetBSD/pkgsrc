@@ -1,0 +1,16 @@
+$NetBSD: patch-tools_build_src_tools_gcc.jam,v 1.5 2018/05/11 14:45:23 jperkin Exp $
+
+SunOS supports soname.
+
+--- tools/build/src/tools/gcc.jam.orig	2018-04-11 13:49:09.000000000 +0000
++++ tools/build/src/tools/gcc.jam
+@@ -922,6 +922,9 @@ toolset.flags gcc.link.dll .IMPLIB-COMMA
+ 
+     toolset.flags gcc.link OPTIONS <target-os>solaris/<strip>on : -Wl,-s ;
+ 
++    toolset.flags gcc.link HAVE_SONAME <target-os>solaris : "" ;
++    toolset.flags gcc.link SONAME_OPTION <target-os>solaris : -h ;
++
+     toolset.flags gcc.link RPATH <target-os>solaris : <dll-path> ;
+     # Solaris linker does not have a separate -rpath-link, but allows using
+     # -L for the same purpose.
