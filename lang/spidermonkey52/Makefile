@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/04/29 05:11:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/05/11 19:18:35 jperkin Exp $
 
 DISTNAME=	mozjs-52.7.4
 PKGNAME=	${DISTNAME:S/mozjs/spidermonkey52/}
@@ -21,6 +21,16 @@ CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-nspr
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-pthreads
+
+PLIST_VARS+=	jemalloc
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--disable-jemalloc
+.else
+PLIST.jemalloc=		yes
+.endif
 
 CONFIGURE_DIRS=		js/src
 
