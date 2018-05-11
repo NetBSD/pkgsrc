@@ -3433,7 +3433,7 @@ backslash, the newline, and any whitespace immediately behind the newline are
 replaced with a single space. A backslash character and an immediately
 following hash character are replaced with a single hash character. Otherwise,
 the backslash is passed as is. In a variable assignment, any hash character
-that is not preceded by a backslash starts a comment that continues upto the
+that is not preceded by a backslash starts a comment that continues up to the
 end of the logical line.
 
 The evaluation of variables either happens immediately or lazy. It happens
