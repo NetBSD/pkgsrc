@@ -1,10 +1,39 @@
-$NetBSD: patch-ab,v 1.6 2014/12/14 07:53:54 obache Exp $
+$NetBSD: patch-ab,v 1.7 2018/05/11 09:33:26 wiz Exp $
 
-* portability fix
+* hack freetype detection to handle freetype>=2.9.1 without
+  freetype-config
+* fix unportable test(1) operator
 
---- configure.orig	2010-04-14 05:13:26.000000000 +0000
+--- configure.orig	2018-02-08 14:00:27.000000000 +0000
 +++ configure
-@@ -18650,7 +18650,7 @@ $as_echo "yes" >&6; }
+@@ -20043,7 +20043,7 @@ IFS=$as_save_IFS
+ 
+ fi
+ fi
+-HAVE_FREETYPE_CONFIG=$ac_cv_prog_HAVE_FREETYPE_CONFIG
++HAVE_FREETYPE_CONFIG=yes
+ if test -n "$HAVE_FREETYPE_CONFIG"; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: $HAVE_FREETYPE_CONFIG" >&5
+ $as_echo "$HAVE_FREETYPE_CONFIG" >&6; }
+@@ -20054,7 +20054,7 @@ fi
+ 
+ 
+ if test "x$HAVE_FREETYPE_CONFIG" = "xyes"; then
+-  FREETYPE_INC=`freetype-config --cflags`
++  FREETYPE_INC="`freetype-config --cflags` `pkg-config freetype2 --cflags`"
+   save_CPPFLAGS="$CPPFLAGS"
+   CPPFLAGS="$CPPFLAGS $FREETYPE_INC"
+   ac_fn_c_check_header_mongrel "$LINENO" "ft2build.h" "ac_cv_header_ft2build_h" "$ac_includes_default"
+@@ -20067,7 +20067,7 @@ fi
+ 
+   if test "x$HAVE_FREETYPE" = "xyes" ; then
+     save_LIBS="$LIBS"
+-    LIBS="$LIBS `freetype-config --libs`"
++    LIBS="$LIBS `freetype-config --libs` `pkg-config freetype2 --libs`"
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for FT_Init_FreeType in -lfreetype" >&5
+ $as_echo_n "checking for FT_Init_FreeType in -lfreetype... " >&6; }
+ if ${ac_cv_lib_freetype_FT_Init_FreeType+:} false; then :
+@@ -20953,7 +20953,7 @@ $as_echo "yes" >&6; }
  	HAVE_WORDCUT=yes
  fi
  
