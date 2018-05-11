@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.27 2016/12/08 00:44:40 yyamano Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.28 2018/05/11 21:58:50 leot Exp $ -->
 
 <chapter id="makefile"> <?dbhtml filename="makefile.html"?>
   <title>Programming in <filename>Makefile</filename>s</title>
@@ -75,7 +75,7 @@ correct:
     backslash character and an immediately following hash character are
     replaced with a single hash character. Otherwise, the backslash is
     passed as is. In a variable assignment, any hash character that is
-    not preceded by a backslash starts a comment that continues upto the
+    not preceded by a backslash starts a comment that continues up to the
     end of the logical line.</para>
 
     <para>The evaluation of variables either happens immediately or lazy.
