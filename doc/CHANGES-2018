@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2289 2018/05/11 04:13:00 maya Exp $
+$NetBSD: CHANGES-2018,v 1.2290 2018/05/11 09:37:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3255,3 +3255,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/libreoffice to 6.0.4.2 [ryoon 2018-05-11]
 	Updated devel/nss to 3.37 [ryoon 2018-05-11]
 	Updated audio/cmus to 2.7.1nb10 [maya 2018-05-11]
+	Updated lang/npm to 6.0.1 [adam 2018-05-11]
