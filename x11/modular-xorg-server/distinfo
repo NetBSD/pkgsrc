@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.87 2018/01/25 15:06:10 jperkin Exp $
+$NetBSD: distinfo,v 1.88 2018/05/11 13:47:35 wiz Exp $
 
-SHA1 (xorg-server-1.19.6.tar.bz2) = 2dd560ac49bdbda7f67166546af43541fabf517f
-RMD160 (xorg-server-1.19.6.tar.bz2) = c2b6f9fe3957c99cddd44bc3ae38343a1c4f314e
-SHA512 (xorg-server-1.19.6.tar.bz2) = 38519a8d0af9dd034045fc346959496dd718fa59b6188307974797a1cd9c349deb54987f6232ea8396baf810dcc710c0ff191f76ed2186cae4d44921b3680412
-Size (xorg-server-1.19.6.tar.bz2) = 5984528 bytes
+SHA1 (xorg-server-1.20.0.tar.bz2) = a9e999c15a2322bc423d5d6e1978ba38f9635901
+RMD160 (xorg-server-1.20.0.tar.bz2) = 0b148a40cb372ffaffacbeac8d7765d5a108812a
+SHA512 (xorg-server-1.20.0.tar.bz2) = 1489e8511c9da682ef0460182dfeeddd241c72d4ef4d206d9706f1e39572c09953df851fab18cefb65a1ee4c6710c6ba13c63c9c9fc0bc1b5f12c50780412cde
+Size (xorg-server-1.20.0.tar.bz2) = 6096838 bytes
 SHA1 (patch-configure) = 9e9f497f14d563ef66f25c637a14b0bea2243c3f
 SHA1 (patch-hw_xfree86_common_xf86pciBus.c) = 896825ba12646431cba603938d118acbdde305dd
 SHA1 (patch-hw_xfree86_common_xf86sbusBus.h) = f56f87336b2f669413ebb1005a2b64568a111f92
@@ -15,5 +15,3 @@ SHA1 (patch-hw_xfree86_os-support_bus_Sbus.c) = 0035b970bdae1bab51b8ca6bfeed060e
 SHA1 (patch-hw_xfree86_os-support_solaris_solaris-amd64.S) = 088a3118deb7567194e08dd46e34cb6edba38400
 SHA1 (patch-hw_xfree86_os-support_xf86_OSproc.h) = e1c049857893d2f050d5fb297a3e8ef86f0b1d7e
 SHA1 (patch-hw_xfree86_os_support_bus_xf86Sbus.h) = 0e0a243b737f8f762c9f8f24a2265d1b6aefb544
-SHA1 (patch-hw_xfree86_sdksyms.sh) = c403149ad35ffb70ee44f70de94b4497b751c118
-SHA1 (patch-os_xstrans.c) = 489a4f4b226ecd361b922895204fb9041b065d4e
