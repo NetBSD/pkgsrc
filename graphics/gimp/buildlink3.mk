@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.60 2018/04/16 14:33:51 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.61 2018/05/11 15:10:25 wiz Exp $
 
 BUILDLINK_TREE+=	gimp
 
@@ -26,6 +26,7 @@ pkgbase := gimp
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/gegl/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
