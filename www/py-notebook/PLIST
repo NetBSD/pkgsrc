@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/05/11 10:09:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/05/11 19:24:58 minskim Exp $
 bin/jupyter-bundlerextension${PYVERSSUFFIX}
 bin/jupyter-nbextension${PYVERSSUFFIX}
 bin/jupyter-notebook${PYVERSSUFFIX}
@@ -1421,8 +1421,8 @@ ${PYSITELIB}/notebook/tests/selenium/undelete.py
 ${PYSITELIB}/notebook/tests/selenium/undelete.pyc
 ${PYSITELIB}/notebook/tests/selenium/undelete.pyo
 ${PYSITELIB}/notebook/tests/selenium/utils.py
-${PYSITELIB}/notebook/tests/selenium/utils.pyc
-${PYSITELIB}/notebook/tests/selenium/utils.pyo
+${PLIST.py3}${PYSITELIB}/notebook/tests/selenium/utils.pyc
+${PLIST.py3}${PYSITELIB}/notebook/tests/selenium/utils.pyo
 ${PYSITELIB}/notebook/tests/services/kernel.js
 ${PYSITELIB}/notebook/tests/services/serialize.js
 ${PYSITELIB}/notebook/tests/services/session.js
