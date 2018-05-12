@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/05/26 05:11:25 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/05/12 01:03:12 markd Exp $
 share/texmf-dist/makeindex/memoir/basic.gst
 share/texmf-dist/tex/latex/memoir/mem10.clo
 share/texmf-dist/tex/latex/memoir/mem11.clo
@@ -14,4 +14,3 @@ share/texmf-dist/tex/latex/memoir/mem60.clo
 share/texmf-dist/tex/latex/memoir/mem9.clo
 share/texmf-dist/tex/latex/memoir/memhfixc.sty
 share/texmf-dist/tex/latex/memoir/memoir.cls
-share/texmf-dist/tex/latex/memoir/mempatch.sty
