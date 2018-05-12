@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2297 2018/05/12 08:20:15 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2298 2018/05/12 09:24:14 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3333,3 +3333,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/tex-lwarp-doc to 0.55 [markd 2018-05-12]
 	Updated time/py-tzdata to 2018.5 [adam 2018-05-12]
 	Updated www/py-httpbin to 0.7.0 [adam 2018-05-12]
+	Updated lang/nodejs to 10.1.0 [fhajny 2018-05-12]
