@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/06/21 11:45:59 markd Exp $
+$NetBSD: distinfo,v 1.6 2018/05/12 01:31:05 markd Exp $
 
-SHA1 (tex-pst-node-43015/pst-node.doc.tar.xz) = 06ff5958514c7c284f5ff565f65d8c08b89e62b5
-RMD160 (tex-pst-node-43015/pst-node.doc.tar.xz) = 64281cf90bdeadfdc3bc9ae55fb307a443fdcfc9
-SHA512 (tex-pst-node-43015/pst-node.doc.tar.xz) = 6e594a931750c1c2768966d4c153ec616f295585b1b38f3e7853bc76f784a41d6f4f96de50960303904a50aac819dd16b00cd2addaf3e9546bf7ebc6502f437c
-Size (tex-pst-node-43015/pst-node.doc.tar.xz) = 386176 bytes
+SHA1 (tex-pst-node-46170/pst-node.doc.tar.xz) = 05af62c432adffbbdb4d320b4960710f14e42018
+RMD160 (tex-pst-node-46170/pst-node.doc.tar.xz) = 2e8312494bf58af4194547ea526bbe56569d761e
+SHA512 (tex-pst-node-46170/pst-node.doc.tar.xz) = 45eb2db40396e1dbc3c42939270071ee6091fed63f9b2f8b30da076b8feb8bfc6deeab30d5e1325a9fcc358fb28e7fc6e207e28b55a3da6244120d0973f8a288
+Size (tex-pst-node-46170/pst-node.doc.tar.xz) = 564668 bytes
