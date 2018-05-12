@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/10/23 09:23:44 markd Exp $
+# $NetBSD: Makefile,v 1.4 2018/05/12 02:01:39 markd Exp $
 
 DISTNAME=	unicode-math
-PKGNAME=	tex-${DISTNAME}-0.8h
-TEXLIVE_REV=	45510
+PKGNAME=	tex-${DISTNAME}-0.8l
+TEXLIVE_REV=	46515
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/unicode-math
