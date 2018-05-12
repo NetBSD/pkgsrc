@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/08/23 22:49:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/05/12 01:14:32 markd Exp $
 man/man1/musixflx.1
 man/man1/musixtex.1
 share/texmf-dist/doc/generic/musixtex/ChangeLog-114.txt
@@ -13,9 +13,10 @@ share/texmf-dist/doc/generic/musixtex/ChangeLog-122.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-123.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-124.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-125.txt
+share/texmf-dist/doc/generic/musixtex/ChangeLog-126.txt
+share/texmf-dist/doc/generic/musixtex/ChangeLog-127.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-musixdoc.txt
 share/texmf-dist/doc/generic/musixtex/README
-share/texmf-dist/doc/generic/musixtex/examples/8bitchar.tex
 share/texmf-dist/doc/generic/musixtex/examples/adagio.tex
 share/texmf-dist/doc/generic/musixtex/examples/albinoni.tex
 share/texmf-dist/doc/generic/musixtex/examples/angescam.tex
@@ -35,6 +36,7 @@ share/texmf-dist/doc/generic/musixtex/examples/aveverum.tex
 share/texmf-dist/doc/generic/musixtex/examples/changecontext.tex
 share/texmf-dist/doc/generic/musixtex/examples/chanson.tex
 share/texmf-dist/doc/generic/musixtex/examples/dissonan.tex
+share/texmf-dist/doc/generic/musixtex/examples/eightbitchar.tex
 share/texmf-dist/doc/generic/musixtex/examples/fantaisc.tex
 share/texmf-dist/doc/generic/musixtex/examples/fantaisd.tex
 share/texmf-dist/doc/generic/musixtex/examples/fantaisi.tex
@@ -113,7 +115,6 @@ share/texmf-dist/doc/generic/musixtex/musixdoc/lyrics.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/miscellaneous.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/musixdoc.sty
 share/texmf-dist/doc/generic/musixtex/musixdoc/musixdoc.tex
-share/texmf-dist/doc/generic/musixtex/musixdoc/musixtex.log
 share/texmf-dist/doc/generic/musixtex/musixdoc/parameters.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/preparing.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/repeats.tex
