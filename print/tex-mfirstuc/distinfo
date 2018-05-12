@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/06/22 10:53:02 markd Exp $
+$NetBSD: distinfo,v 1.2 2018/05/12 01:05:45 markd Exp $
 
-SHA1 (tex-mfirstuc-41785/mfirstuc.tar.xz) = d21e54e4616a8e26f275b86299dc99688780b8ff
-RMD160 (tex-mfirstuc-41785/mfirstuc.tar.xz) = ad14c544bbc5f76e17420146b4bf35ea1024a535
-SHA512 (tex-mfirstuc-41785/mfirstuc.tar.xz) = f131d60bb7ed3b0e00de6fbfa5a9e399516ae7dc3e76e0d4d3c3e04312a7112226a4dc3f5b360dfb5f2f807b40c440b7b837b4e88d758513ea875595a97fbe81
-Size (tex-mfirstuc-41785/mfirstuc.tar.xz) = 4108 bytes
+SHA1 (tex-mfirstuc-45803/mfirstuc.tar.xz) = ca598f1cbf9db9a6523c2473e05aadbc64d5ac12
+RMD160 (tex-mfirstuc-45803/mfirstuc.tar.xz) = 9220cb8db160c3db0662c8310840fc54aa58b5b5
+SHA512 (tex-mfirstuc-45803/mfirstuc.tar.xz) = 905fd873b7e130270da05265ca59092a6cbdf1ea8c3ddd444b1622251629781858eae18abe6a5abf4f793d0d8d60d941cab03964258bd3a5d6e94c0fe4d736c4
+Size (tex-mfirstuc-45803/mfirstuc.tar.xz) = 4308 bytes
