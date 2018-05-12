@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2016/06/16 04:06:14 markd Exp $
+$NetBSD: distinfo,v 1.9 2018/05/12 01:19:48 markd Exp $
 
-SHA1 (tex-pgfplots-40966/pgfplots.doc.tar.xz) = 416e940aee62a4cf7d3ce876e1ba7ffbc963cdf5
-RMD160 (tex-pgfplots-40966/pgfplots.doc.tar.xz) = 9af2e36cabb6379d9c70d06c56f8782b348bcd63
-SHA512 (tex-pgfplots-40966/pgfplots.doc.tar.xz) = 809e01615bc07cfcae9d0f9d03669400c6e315361adcd6910ecd5779c5a97e5921b15fba2ae7082629deeb6e1291dfcc703900f95dc55f954e4b121ce16dfc40
-Size (tex-pgfplots-40966/pgfplots.doc.tar.xz) = 13063344 bytes
+SHA1 (tex-pgfplots-47373/pgfplots.doc.tar.xz) = d92336cd67bdb1ad9dfda2b4a7c4ebe0972bbbb0
+RMD160 (tex-pgfplots-47373/pgfplots.doc.tar.xz) = e2f607e4f613743f7fc3280786fb828f0250d385
+SHA512 (tex-pgfplots-47373/pgfplots.doc.tar.xz) = 3174e7df66a6ce9f10e4705dde9523cef3dd64d509e07766dd131b01974bb39660810a6dd05810a3613de60b4c3fb8575770c249c479c65d38ee01257f6da958
+Size (tex-pgfplots-47373/pgfplots.doc.tar.xz) = 13287240 bytes
