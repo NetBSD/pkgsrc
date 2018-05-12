@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2303 2018/05/12 21:54:34 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2304 2018/05/12 22:07:01 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3339,3 +3339,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/blosc to 1.14.2nb1 [maya 2018-05-12]
 	Updated devel/blosc to 1.14.2nb2 [maya 2018-05-12]
 	Added textproc/R-htmltools version 0.3.6 [minskim 2018-05-12]
+	Added finance/py-backtrader version 1.9.58.122 [minskim 2018-05-12]
