@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2017/09/06 09:03:03 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2018/05/12 10:11:49 leot Exp $
 
-DISTNAME=	xdg-utils-1.1.2
+DISTNAME=	xdg-utils-1.1.3
 CATEGORIES=	misc
 MASTER_SITES=	https://portland.freedesktop.org/download/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://portland.freedesktop.org/
+MAINTAINER=	leot@NetBSD.org
+HOMEPAGE=	https://www.freedesktop.org/wiki/Software/xdg-utils/
 COMMENT=	Tools to assist applications with various desktop integration tasks
 LICENSE=	mit
 
