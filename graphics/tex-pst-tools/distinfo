@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/10/23 08:53:57 markd Exp $
+$NetBSD: distinfo,v 1.4 2018/05/12 01:38:07 markd Exp $
 
-SHA1 (tex-pst-tools-45475/pst-tools.tar.xz) = 1cd29d17f2db4155d3bd28c1c1e6a78fe45d20de
-RMD160 (tex-pst-tools-45475/pst-tools.tar.xz) = 6b8d56d0e2dd6d71952028b44d809eab89353a50
-SHA512 (tex-pst-tools-45475/pst-tools.tar.xz) = 3606c62282199fdc822089c28dd123e6b043bd7fc5842ca02b9266c535617c29e9988daca0de205897ead72879da7967adb441422ee5911cc175c2527d35caa8
-Size (tex-pst-tools-45475/pst-tools.tar.xz) = 4824 bytes
+SHA1 (tex-pst-tools-45978/pst-tools.tar.xz) = ef8b78bde528abf8c21dba2130f762299a3a790f
+RMD160 (tex-pst-tools-45978/pst-tools.tar.xz) = d8444598e4dc8a604c4b3bec8ad6e5d5afca9d5a
+SHA512 (tex-pst-tools-45978/pst-tools.tar.xz) = d367cacb564d056c57af71f07467737bac73a1f0e41b443a9a76eea5d2cc34d15e91a47cce8cb53a68159f87677707929cb862fdef06cd7354a4dd253154e41c
+Size (tex-pst-tools-45978/pst-tools.tar.xz) = 4984 bytes
