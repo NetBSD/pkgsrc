@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2017/06/21 08:28:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/05/12 03:21:30 markd Exp $
 share/texmf-dist/doc/latex/base/README.txt
+share/texmf-dist/doc/latex/base/a4.pdf
 share/texmf-dist/doc/latex/base/alltt.pdf
 share/texmf-dist/doc/latex/base/bugs.txt
 share/texmf-dist/doc/latex/base/cfgguide.pdf
@@ -38,10 +39,16 @@ share/texmf-dist/doc/latex/base/lppl-1-0.txt
 share/texmf-dist/doc/latex/base/lppl-1-1.txt
 share/texmf-dist/doc/latex/base/lppl-1-2.txt
 share/texmf-dist/doc/latex/base/lppl.pdf
+share/texmf-dist/doc/latex/base/lppl.tex
 share/texmf-dist/doc/latex/base/lppl.txt
+share/texmf-dist/doc/latex/base/ltclass.pdf
+share/texmf-dist/doc/latex/base/ltcounts.pdf
+share/texmf-dist/doc/latex/base/ltdirchk.pdf
+share/texmf-dist/doc/latex/base/ltfssbas.pdf
 share/texmf-dist/doc/latex/base/ltluatex.pdf
 share/texmf-dist/doc/latex/base/ltnews.pdf
 share/texmf-dist/doc/latex/base/ltnews.tex
+share/texmf-dist/doc/latex/base/ltoutenc.pdf
 share/texmf-dist/doc/latex/base/ltx3info.pdf
 share/texmf-dist/doc/latex/base/ltx3info.tex
 share/texmf-dist/doc/latex/base/ltxdoc.pdf
@@ -56,12 +63,16 @@ share/texmf-dist/doc/latex/base/proc.pdf
 share/texmf-dist/doc/latex/base/slides.pdf
 share/texmf-dist/doc/latex/base/slifonts.pdf
 share/texmf-dist/doc/latex/base/source2e.pdf
+share/texmf-dist/doc/latex/base/source2e.tex
 share/texmf-dist/doc/latex/base/syntonly.pdf
 share/texmf-dist/doc/latex/base/tex2.txt
 share/texmf-dist/doc/latex/base/texpert.txt
+share/texmf-dist/doc/latex/base/tlb-utf8-bom.pdf
+share/texmf-dist/doc/latex/base/tlb-utf8-dec-utf8-2017.pdf
 share/texmf-dist/doc/latex/base/tlc2.err
 share/texmf-dist/doc/latex/base/tlc2.pdf
 share/texmf-dist/doc/latex/base/tulm.pdf
+share/texmf-dist/doc/latex/base/us.pdf
 share/texmf-dist/doc/latex/base/usrguide.pdf
 share/texmf-dist/doc/latex/base/usrguide.tex
 share/texmf-dist/doc/latex/base/utf8ienc.pdf
