@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2017/10/16 09:15:10 markd Exp $
+$NetBSD: distinfo,v 1.11 2018/05/12 01:16:54 markd Exp $
 
-SHA1 (tex-pdfpages-45043/pdfpages.doc.tar.xz) = cea4d507eb9210fc6f2e553ce062d27821e4c542
-RMD160 (tex-pdfpages-45043/pdfpages.doc.tar.xz) = 38db3c72d1e7a0c7668e0f90223720d1d83ebf79
-SHA512 (tex-pdfpages-45043/pdfpages.doc.tar.xz) = 3d1847d6ff2e9c09d50627ee3fb5f1c69855873731603b9cd020d6981e93432a99611adb4b9f92d9c8403ee56c51f1ac9681194b87e23f62d7de386f9936e857
-Size (tex-pdfpages-45043/pdfpages.doc.tar.xz) = 315288 bytes
+SHA1 (tex-pdfpages-45659/pdfpages.doc.tar.xz) = bfd192131e20c676de95ba1390c941091930c743
+RMD160 (tex-pdfpages-45659/pdfpages.doc.tar.xz) = a09ee8b6569e4d6351070baa24011636d37793b4
+SHA512 (tex-pdfpages-45659/pdfpages.doc.tar.xz) = 8820087411ba55efd4bc09610fed21891f3d197a9595077419e5136d032498669bdc03822119f8cd40e7b3aa0be37f683e3fd88650924ad04235aa0d96a3ea51
+Size (tex-pdfpages-45659/pdfpages.doc.tar.xz) = 314968 bytes
