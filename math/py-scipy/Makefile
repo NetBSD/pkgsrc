@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2018/05/11 14:18:47 minskim Exp $
+# $NetBSD: Makefile,v 1.32 2018/05/12 21:21:46 jperkin Exp $
 
 DISTNAME=	scipy-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ PLIST_VARS+=	dsym
 PYSETUPBUILDARGS+=	--fcompiler=g95
 .elif defined(PKGSRC_FORTRAN) && !empty(PKGSRC_FORTRAN:Mgfortran)
 PYSETUPBUILDARGS+=	--fcompiler=gnu95
-.  if ${GFORTRAN_VERSION} == "7"
+.  if defined(GFORTRAN_VERSION) && ${GFORTRAN_VERSION} == "7"
 PLIST.dsym=	yes
 .  endif
 LDFLAGS.Darwin+=	-undefined dynamic_lookup
