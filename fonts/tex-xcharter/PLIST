@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.6 2017/10/23 02:02:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2018/05/12 02:07:35 markd Exp $
 share/texmf-dist/fonts/afm/public/xcharter/XCharter-Bold.afm
 share/texmf-dist/fonts/afm/public/xcharter/XCharter-BoldItalic.afm
 share/texmf-dist/fonts/afm/public/xcharter/XCharter-BoldSlanted.afm
 share/texmf-dist/fonts/afm/public/xcharter/XCharter-Italic.afm
 share/texmf-dist/fonts/afm/public/xcharter/XCharter-Roman.afm
 share/texmf-dist/fonts/afm/public/xcharter/XCharter-Slanted.afm
+share/texmf-dist/fonts/afm/public/xcharter/XCharterMathBMI.afm
+share/texmf-dist/fonts/afm/public/xcharter/XCharterMathBRM.afm
+share/texmf-dist/fonts/afm/public/xcharter/XCharterMathMI.afm
+share/texmf-dist/fonts/afm/public/xcharter/XCharterMathRM.afm
 share/texmf-dist/fonts/enc/dvips/xcharter/chalph.enc
 share/texmf-dist/fonts/enc/dvips/xcharter/chtabosf.enc
 share/texmf-dist/fonts/enc/dvips/xcharter/xch1_3v4tq3.enc
@@ -587,14 +591,24 @@ share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Slanted-tosf-t2asrb--base.t
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Slanted-tosf-t2asrb.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Slanted-tosf-ts1--base.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Slanted-tosf-ts1.tfm
+share/texmf-dist/fonts/tfm/public/xcharter/XCharterMathBMI.tfm
+share/texmf-dist/fonts/tfm/public/xcharter/XCharterMathBRM.tfm
+share/texmf-dist/fonts/tfm/public/xcharter/XCharterMathMI.tfm
+share/texmf-dist/fonts/tfm/public/xcharter/XCharterMathRM.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/zchbmi.tfm
+share/texmf-dist/fonts/tfm/public/xcharter/zchbmia.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/zchmi.tfm
+share/texmf-dist/fonts/tfm/public/xcharter/zchmia.tfm
 share/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold.pfb
 share/texmf-dist/fonts/type1/public/xcharter/XCharter-BoldItalic.pfb
 share/texmf-dist/fonts/type1/public/xcharter/XCharter-BoldSlanted.pfb
 share/texmf-dist/fonts/type1/public/xcharter/XCharter-Italic.pfb
 share/texmf-dist/fonts/type1/public/xcharter/XCharter-Roman.pfb
 share/texmf-dist/fonts/type1/public/xcharter/XCharter-Slanted.pfb
+share/texmf-dist/fonts/type1/public/xcharter/XCharterMathBMI.pfb
+share/texmf-dist/fonts/type1/public/xcharter/XCharterMathBRM.pfb
+share/texmf-dist/fonts/type1/public/xcharter/XCharterMathMI.pfb
+share/texmf-dist/fonts/type1/public/xcharter/XCharterMathRM.pfb
 share/texmf-dist/fonts/vf/public/xcharter/XCharter-Bold-dnom-ly1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter-Bold-dnom-t1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter-Bold-inf-ly1.vf
@@ -828,7 +842,9 @@ share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Slanted-tosf-t2a.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Slanted-tosf-t2asrb.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Slanted-tosf-ts1.vf
 share/texmf-dist/fonts/vf/public/xcharter/zchbmi.vf
+share/texmf-dist/fonts/vf/public/xcharter/zchbmia.vf
 share/texmf-dist/fonts/vf/public/xcharter/zchmi.vf
+share/texmf-dist/fonts/vf/public/xcharter/zchmia.vf
 share/texmf-dist/tex/latex/xcharter/LY1XCharter-Dnom.fd
 share/texmf-dist/tex/latex/xcharter/LY1XCharter-Inf.fd
 share/texmf-dist/tex/latex/xcharter/LY1XCharter-Numr.fd
