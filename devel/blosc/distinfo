@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2018/05/12 12:01:26 maya Exp $
+$NetBSD: distinfo,v 1.5 2018/05/12 14:04:00 maya Exp $
 
 SHA1 (blosc-1.14.2.tar.gz) = ba8bc63c2f0cdc62077a45b5e44216abd098020a
 RMD160 (blosc-1.14.2.tar.gz) = 4e75ba5f5cee49410cde42e0bef75d2f7e3d78d8
 SHA512 (blosc-1.14.2.tar.gz) = fb0346e3c2c6101d17963771643a114302034a5389e2ffd9498c6b6367fe6f138ec59edbf039f89a57ce44a63e1f70324ad3906a39884ecc9d54ee2987a1b39c
 Size (blosc-1.14.2.tar.gz) = 759731 bytes
 SHA1 (patch-CMakeLists.txt) = 70dfc44c1541b1fccd200905acbd16e17a9313e1
-SHA1 (patch-tests_test__common.h) = 84e330c5b269ef80ad827f39dc7f4a9470faa36f
+SHA1 (patch-tests_test__common.h) = a5f7e117c5de05059203a79dda9b4f1fbd850b3b

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2018/05/12 12:01:26 maya Exp $
+# $NetBSD: Makefile,v 1.5 2018/05/12 14:04:00 maya Exp $
 
 DISTNAME=	blosc-1.14.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Blosc/}
 GITHUB_PROJECT=	c-blosc
