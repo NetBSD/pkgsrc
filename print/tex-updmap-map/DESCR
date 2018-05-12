@@ -1,1 +1,3 @@
-tex font maps
+These map files are regenerated every time a new font is added.
+There is no need to rebuild formats or update binaries because
+of such updates, hence this separate package.
