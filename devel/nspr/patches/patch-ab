@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.8 2013/07/20 08:57:20 ryoon Exp $
+$NetBSD: patch-ab,v 1.9 2018/05/12 09:01:08 jmcneill Exp $
 
---- nsprpub/pr/include/md/_netbsd.h.orig	2012-03-06 13:13:52.000000000 +0000
+--- nspr/pr/include/md/_netbsd.h.orig	2018-03-05 15:50:28.000000000 +0000
 +++ nspr/pr/include/md/_netbsd.h
-@@ -47,7 +47,7 @@
+@@ -30,6 +30,8 @@
+ #elif defined(__arm32__) || defined(__arm__) || defined(__armel__) \
+     || defined(__armeb__)
+ #define _PR_SI_ARCHITECTURE "arm"
++#elif defined(__aarch64__)
++#define _PR_SI_ARCHITECTURE "aarch64"
+ #endif
+ 
+ #if defined(__ELF__)
+@@ -47,7 +49,7 @@
  #define HAVE_DLL
  #define USE_DLFCN
  #define _PR_HAVE_SOCKADDR_LEN
@@ -11,7 +20,7 @@ $NetBSD: patch-ab,v 1.8 2013/07/20 08:57:20 ryoon Exp $
  #define _PR_STAT_HAS_ST_ATIMESPEC
  #define _PR_POLL_AVAILABLE
  #define _PR_USE_POLL
-@@ -75,6 +75,8 @@
+@@ -75,6 +77,8 @@
  #define JB_SP_INDEX 2
  #elif defined(__mips__)
  #define JB_SP_INDEX 4
@@ -20,3 +29,12 @@ $NetBSD: patch-ab,v 1.8 2013/07/20 08:57:20 ryoon Exp $
  #elif defined(__alpha__)
  #define JB_SP_INDEX 34
  #elif defined(__arm32__)
+@@ -86,6 +90,8 @@
+ #else
+ #define JB_SP_INDEX _JB_REG_R13
+ #endif
++#elif defined(__aarch64__)
++#define JB_SP_INDEX _JB_SP
+ #else
+ #error "Need to define SP index in jmp_buf here"
+ #endif
