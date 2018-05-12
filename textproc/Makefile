@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.988 2018/05/08 07:48:39 maya Exp $
+# $NetBSD: Makefile,v 1.989 2018/05/12 21:54:29 minskim Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -14,6 +14,7 @@ SUBDIR+=	OdfConverter
 SUBDIR+=	R-formatR
 SUBDIR+=	R-gsubfn
 SUBDIR+=	R-highr
+SUBDIR+=	R-htmltools
 SUBDIR+=	R-jsonlite
 SUBDIR+=	R-markdown
 SUBDIR+=	R-stringi
