@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2296 2018/05/12 03:35:42 markd Exp $
+$NetBSD: CHANGES-2018,v 1.2297 2018/05/12 08:20:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3331,3 +3331,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated fonts/tex-libertine-doc to 5.3.0.46211 [markd 2018-05-12]
 	Updated textproc/tex-lwarp to 0.55 [markd 2018-05-12]
 	Updated textproc/tex-lwarp-doc to 0.55 [markd 2018-05-12]
+	Updated time/py-tzdata to 2018.5 [adam 2018-05-12]
+	Updated www/py-httpbin to 0.7.0 [adam 2018-05-12]
