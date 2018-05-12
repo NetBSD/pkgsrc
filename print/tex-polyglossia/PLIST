@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/05/12 01:25:23 markd Exp $
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/arabicdigits.map
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/arabicdigits.tec
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/bengalidigits.map
@@ -29,6 +29,7 @@ share/texmf-dist/tex/latex/polyglossia/gloss-brazil.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-breton.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-bulgarian.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-catalan.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-classiclatin.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-coptic.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-croatian.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-czech.ldf
@@ -51,6 +52,7 @@ share/texmf-dist/tex/latex/polyglossia/gloss-icelandic.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-interlingua.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-irish.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-italian.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-japanese.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-kannada.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-khmer.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-korean.ldf
@@ -58,6 +60,7 @@ share/texmf-dist/tex/latex/polyglossia/gloss-lao.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-latin.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-latvian.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-lithuanian.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-liturgicallatin.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-lsorbian.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-magyar.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-malayalam.ldf
