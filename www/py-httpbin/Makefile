@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2017/11/26 17:44:09 adam Exp $
+# $NetBSD: Makefile,v 1.9 2018/05/12 08:19:51 adam Exp $
 
-DISTNAME=	httpbin-0.6.2
+DISTNAME=	httpbin-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpbin/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/Runscope/httpbin/
+HOMEPAGE=	https://github.com/Runscope/httpbin
 COMMENT=	HTTP Request and Response Service
 LICENSE=	mit
 
@@ -21,9 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-raven-[0-9]*:../../www/py-raven
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
-
-# test failure:
-# https://github.com/kennethreitz/httpbin/issues/403
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
