@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2017/10/23 01:49:57 markd Exp $
+# $NetBSD: Makefile,v 1.7 2018/05/12 03:12:53 markd Exp $
 
 DISTNAME=	l3experimental
-PKGNAME=	tex-${DISTNAME}-2017.45340
-TEXLIVE_REV=	45340
+PKGNAME=	tex-${DISTNAME}-2018
+TEXLIVE_REV=	46875
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/l3experimental
