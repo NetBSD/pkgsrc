@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:47 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/12 03:27:18 markd Exp $
 
 DISTNAME=	lato
-PKGNAME=	tex-${DISTNAME}-2.2
-TEXLIVE_REV=	24986
+PKGNAME=	tex-${DISTNAME}-3.0
+TEXLIVE_REV=	45576
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/lato
