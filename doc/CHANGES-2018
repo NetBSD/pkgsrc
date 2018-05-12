@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2295 2018/05/12 02:14:43 markd Exp $
+$NetBSD: CHANGES-2018,v 1.2296 2018/05/12 03:35:42 markd Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3316,3 +3316,18 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/tex-xcjk2uni-doc to 0.7 [markd 2018-05-12]
 	Updated print/tex-xetex to 2018 [markd 2018-05-12]
 	Updated print/tex-xetex-doc to 2018 [markd 2018-05-12]
+	Updated devel/tex-l3experimental to 2018 [markd 2018-05-12]
+	Updated devel/tex-l3kernel to 2018 [markd 2018-05-12]
+	Updated devel/tex-l3kernel-doc to 2018 [markd 2018-05-12]
+	Updated devel/tex-l3packages to 2018 [markd 2018-05-12]
+	Updated devel/tex-l3packages-doc to 2018 [markd 2018-05-12]
+	Updated print/tex-latex to 20170101.3 [markd 2018-05-12]
+	Updated print/tex-latex-doc to 20170101.3 [markd 2018-05-12]
+	Updated devel/tex-latexbug to 1.0d [markd 2018-05-12]
+	Updated devel/tex-latexbug-doc to 1.0d [markd 2018-05-12]
+	Updated fonts/tex-lato to 3.0 [markd 2018-05-12]
+	Updated fonts/tex-lato-doc to 3.0 [markd 2018-05-12]
+	Updated fonts/tex-libertine to 5.3.0.46211 [markd 2018-05-12]
+	Updated fonts/tex-libertine-doc to 5.3.0.46211 [markd 2018-05-12]
+	Updated textproc/tex-lwarp to 0.55 [markd 2018-05-12]
+	Updated textproc/tex-lwarp-doc to 0.55 [markd 2018-05-12]
