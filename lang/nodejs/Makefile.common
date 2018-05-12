@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2018/05/03 21:19:16 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.20 2018/05/12 08:59:56 fhajny Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs6/Makefile
 # used by lang/nodejs8/Makefile
@@ -23,6 +23,9 @@ GCC_REQD+=		4.8
 
 CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--shared-cares
+CONFIGURE_ARGS+=	--shared-http-parser
+CONFIGURE_ARGS+=	--shared-libuv
 CONFIGURE_ARGS+=	--shared-zlib
 CONFIGURE_ARGS+=	--without-npm
 PTHREAD_AUTO_VARS=	yes
@@ -63,7 +66,10 @@ post-install:
 .if ${OPSYS} != "Darwin"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
+.include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
+.include "../../net/libcares/buildlink3.mk"
+.include "../../www/http-parser/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
