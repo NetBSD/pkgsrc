@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/06/21 08:28:42 markd Exp $
+# $NetBSD: Makefile,v 1.3 2018/05/12 03:30:00 markd Exp $
 
 DISTNAME=	libertine
-PKGNAME=	tex-${DISTNAME}-5.3.0.43603
-TEXLIVE_REV=	43603
+PKGNAME=	tex-${DISTNAME}-5.3.0.46211
+TEXLIVE_REV=	46211
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/libertine
