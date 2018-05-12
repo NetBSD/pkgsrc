@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2011/12/14 20:27:10 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/05/12 02:12:24 markd Exp $
 bin/xelatex
 share/texmf-dist/fonts/misc/xetex/fontmapping/base/qx-unicode.map
 share/texmf-dist/fonts/misc/xetex/fontmapping/base/qx-unicode.tec
 share/texmf-dist/fonts/misc/xetex/fontmapping/base/tex-text.map
 share/texmf-dist/fonts/misc/xetex/fontmapping/base/tex-text.tec
-share/texmf-dist/scripts/xetex/perl/lib/PDF/Reuse.pm
-share/texmf-dist/scripts/xetex/perl/lib/PDF/Reuse/Util.pm
-share/texmf-dist/scripts/xetex/perl/xdv2pdf_mergemarks
