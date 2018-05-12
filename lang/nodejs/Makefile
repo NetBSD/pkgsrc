@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.129 2018/05/12 08:59:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.130 2018/05/12 09:24:00 fhajny Exp $
 
-DISTNAME=	node-v10.0.0
-PKGREVISION=	1
+DISTNAME=	node-v10.1.0
 
 USE_LANGUAGES=	c gnu++14
 
