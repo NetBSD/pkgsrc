@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2301 2018/05/12 12:01:42 maya Exp $
+$NetBSD: CHANGES-2018,v 1.2302 2018/05/12 14:04:19 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3337,3 +3337,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/xdg-utils to 1.1.3 [leot 2018-05-12]
 	Updated sysutils/salt to 2018.3.0nb1 [maya 2018-05-12]
 	Updated devel/blosc to 1.14.2nb1 [maya 2018-05-12]
+	Updated devel/blosc to 1.14.2nb2 [maya 2018-05-12]
