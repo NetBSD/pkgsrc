@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/08/17 02:41:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/05/12 01:50:28 markd Exp $
 share/texmf-dist/fonts/cmap/ptex-fontmaps/2004-H
 share/texmf-dist/fonts/cmap/ptex-fontmaps/2004-V
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/adobe/otf-ko-adobe.map
@@ -33,18 +33,6 @@ share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/fandol/otf-sc-fandol.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/fandol/uptex-sc-fandol.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/founder/otf-sc-founder.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/founder/uptex-sc-founder.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-elcapitan-pron/otf-hiragino-elcapitan-pron.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-elcapitan-pron/otf-up-hiragino-elcapitan-pron.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-elcapitan-pron/ptex-hiragino-elcapitan-pron-04.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-elcapitan-pron/ptex-hiragino-elcapitan-pron.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-elcapitan-pron/uptex-hiragino-elcapitan-pron-04.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-elcapitan-pron/uptex-hiragino-elcapitan-pron.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-elcapitan/otf-hiragino-elcapitan.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-elcapitan/otf-up-hiragino-elcapitan.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-elcapitan/ptex-hiragino-elcapitan-04.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-elcapitan/ptex-hiragino-elcapitan.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-elcapitan/uptex-hiragino-elcapitan-04.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-elcapitan/uptex-hiragino-elcapitan.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-pron/otf-hiragino-pron.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-pron/otf-up-hiragino-pron.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-pron/ptex-hiragino-pron-04.map
@@ -108,9 +96,11 @@ share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/morisawa/ptex-morisawa.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/morisawa/uptex-morisawa-04.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/morisawa/uptex-morisawa.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/ms-osx/otf-ms-osx.map
+share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/ms-osx/otf-sc-ms-osx.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/ms-osx/otf-up-ms-osx.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/ms-osx/ptex-ms-osx.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/ms-osx/uptex-ms-osx.map
+share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/ms-osx/uptex-sc-ms-osx.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/ms-win10/otf-tc-ms-win10.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/ms-win10/uptex-tc-ms-win10.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/ms/otf-ko-ms.map
@@ -137,12 +127,6 @@ share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/noEmbed/uptex-sc-noEmbed.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/noEmbed/uptex-tc-noEmbed.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/solaris/otf-ko-solaris.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/solaris/uptex-ko-solaris.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/toppanbunkyu-sierra/otf-toppanbunkyu-sierra.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/toppanbunkyu-sierra/otf-up-toppanbunkyu-sierra.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/toppanbunkyu-sierra/ptex-toppanbunkyu-sierra-04.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/toppanbunkyu-sierra/ptex-toppanbunkyu-sierra.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/toppanbunkyu-sierra/uptex-toppanbunkyu-sierra-04.map
-share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/toppanbunkyu-sierra/uptex-toppanbunkyu-sierra.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/ume/otf-ume.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/ume/otf-up-ume.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/ume/ptex-ume.map
@@ -163,6 +147,7 @@ share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/yu-win10/otf-up-yu-win10.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/yu-win10/otf-yu-win10.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/yu-win10/ptex-yu-win10.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/yu-win10/uptex-yu-win10.map
+share/texmf-dist/fonts/misc/ptex-fontmaps/ptex-fontmaps-data.dat
 share/texmf-dist/scripts/ptex-fontmaps/kanji-config-updmap-sys.sh
 share/texmf-dist/scripts/ptex-fontmaps/kanji-config-updmap-user.sh
 share/texmf-dist/scripts/ptex-fontmaps/kanji-config-updmap.pl
