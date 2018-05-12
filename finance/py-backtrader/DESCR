@@ -1,0 +1,4 @@
+Backtrader is a feature-rich Python framework for backtesting and
+trading. It allows you to focus on writing reusable trading
+strategies, indicators and analyzers instead of having to spend time
+building infrastructure.
