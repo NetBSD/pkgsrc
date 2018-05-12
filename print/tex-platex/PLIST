@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2017/03/26 20:07:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/05/12 01:22:42 markd Exp $
 bin/platex
-share/texmf-dist/tex/platex/base/ascmac.sty
 share/texmf-dist/tex/platex/base/exppl2e.sty
 share/texmf-dist/tex/platex/base/jarticle.cls
 share/texmf-dist/tex/platex/base/jarticle.sty
@@ -20,7 +19,6 @@ share/texmf-dist/tex/platex/base/jt1mc.fd
 share/texmf-dist/tex/platex/base/jy1gt.fd
 share/texmf-dist/tex/platex/base/jy1mc.fd
 share/texmf-dist/tex/platex/base/kinsoku.tex
-share/texmf-dist/tex/platex/base/nidanfloat.sty
 share/texmf-dist/tex/platex/base/oldpfont.sty
 share/texmf-dist/tex/platex/base/pfltrace.sty
 share/texmf-dist/tex/platex/base/pl209.def
@@ -29,10 +27,10 @@ share/texmf-dist/tex/platex/base/platexrelease.sty
 share/texmf-dist/tex/platex/base/plcore.ltx
 share/texmf-dist/tex/platex/base/pldefs.ltx
 share/texmf-dist/tex/platex/base/plext.sty
+share/texmf-dist/tex/platex/base/plnews.cls
 share/texmf-dist/tex/platex/base/ptrace.sty
 share/texmf-dist/tex/platex/base/tarticle.cls
 share/texmf-dist/tex/platex/base/tarticle.sty
-share/texmf-dist/tex/platex/base/tascmac.sty
 share/texmf-dist/tex/platex/base/tbk10.clo
 share/texmf-dist/tex/platex/base/tbk11.clo
 share/texmf-dist/tex/platex/base/tbk12.clo
