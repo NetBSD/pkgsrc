@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:02:29 agc Exp $
+$NetBSD: distinfo,v 1.4 2018/05/12 01:08:35 markd Exp $
 
-SHA1 (tex-mfnfss-19410/mfnfss.tar.xz) = 526fc86f59b4b68992de1220746f8dccc42c1ed7
-RMD160 (tex-mfnfss-19410/mfnfss.tar.xz) = ee5e2b825d2350369231ab1b52b49c7627cada05
-SHA512 (tex-mfnfss-19410/mfnfss.tar.xz) = e846333dcc04c97d74b2e526fec31fde3a432aa0ff8ef6866af45a105697a60807af7d4d22d72260599b9cebb9ddf31df37f8a886e71338d51e159fa637c27e2
-Size (tex-mfnfss-19410/mfnfss.tar.xz) = 1816 bytes
+SHA1 (tex-mfnfss-46036/mfnfss.tar.xz) = 9434a98920ba06d466bbed15c06d44b36c1d60ad
+RMD160 (tex-mfnfss-46036/mfnfss.tar.xz) = d2bdfeebec8c28e15d06868a983d4abb1cc9a13d
+SHA512 (tex-mfnfss-46036/mfnfss.tar.xz) = cbe438e051415adcba7c17aa2ab75267b64cb5c9e7af0a25c1d87c228e9e1ff2e8f302a57acf1c1ce4b18d31aa589079a731bfc09f8d46d81cc1cb030b9496b1
+Size (tex-mfnfss-46036/mfnfss.tar.xz) = 2108 bytes
