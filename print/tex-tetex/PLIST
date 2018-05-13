@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2017/06/21 13:25:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2018/05/13 10:41:47 markd Exp $
 bin/allcm
 bin/allec
 bin/allneeded
@@ -12,6 +12,7 @@ bin/kpsetool
 bin/kpsewhere
 bin/kpsexpand
 bin/mktexfmt
+bin/texconfig
 bin/texconfig-dialog
 bin/texconfig-sys
 bin/texlinks
@@ -50,4 +51,10 @@ share/texmf-dist/fonts/map/dvips/tetex/mathpple.map
 share/texmf-dist/fonts/map/dvips/tetex/pdftex35.map
 share/texmf-dist/fonts/map/dvips/tetex/ps2pk35.map
 share/texmf-dist/scripts/texlive/mktexlsr.pl
+share/texmf-dist/texconfig/README
+share/texmf-dist/texconfig/g/generic
+share/texmf-dist/texconfig/tcfmgr
+share/texmf-dist/texconfig/tcfmgr.map
+share/texmf-dist/texconfig/v/vt100
+share/texmf-dist/texconfig/x/xterm
 share/texmf-dist/web2c/updmap.cfg
