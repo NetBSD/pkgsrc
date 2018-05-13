@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.70 2018/04/28 20:19:12 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2018/05/13 13:01:02 markd Exp $
 
-DISTNAME=	texlive-20170524-source
-PKGNAME=	web2c-2017
-PKGREVISION=	10
+DISTNAME=	texlive-20180414-source
+PKGNAME=	web2c-2018
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2017/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -29,6 +28,7 @@ CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 PKGCONFIG_OVERRIDE=	synctexdir/synctex.pc.in
 
 CONFIGURE_ARGS+=	--disable-luatex
+CONFIGURE_ARGS+=	--disable-luatex53
 CONFIGURE_ARGS+=	--disable-luajittex
 CONFIGURE_ARGS+=	--disable-mflua
 CONFIGURE_ARGS+=	--disable-mfluajit
@@ -51,11 +51,17 @@ CONFIGURE_ARGS+=	--with-system-ptexenc
 CONFIGURE_ARGS+=	--with-system-zlib \
 			--with-zlib-includes=${BUILDLINK_PREFIX.zlib}/include \
 			--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
+CONFIGURE_ARGS+=	--with-system-zziplib
 LIBTOOL_OVERRIDE=	../*/libtool */libtool
 
 CONFIGURE_DIRS=		${WRKDIR}/${DISTNAME}/texk/web2c
 INSTALL_DIRS=	${WRKDIR}/${DISTNAME}/texk/web2c
 
+pre-configure:
+	cp ${WRKSRC}/pdftexdir/pdftoepdf-newpoppler.cc  ${WRKSRC}/pdftexdir/pdftoepdf.cc
+	cp ${WRKSRC}/pdftexdir/pdftosrc-newpoppler.cc  ${WRKSRC}/pdftexdir/pdftosrc.cc
+
+.include "../../archivers/zziplib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
