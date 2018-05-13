@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2015/11/20 14:28:02 joerg Exp $
+$NetBSD: patch-configure,v 1.2 2018/05/13 09:44:03 maya Exp $
 
---- configure.orig	2015-11-18 13:16:26.000000000 +0000
+--- configure.orig	2017-11-14 18:56:39.000000000 +0000
 +++ configure
-@@ -11897,70 +11897,6 @@ fi
+@@ -12491,64 +12488,6 @@ fi
  fi
  
  fi
@@ -64,12 +64,6 @@ $NetBSD: patch-configure,v 1.1 2015/11/20 14:28:02 joerg Exp $
 -  enable_http=no
 -fi
 -
--
--
--
--
--
--
  
  
- if test "x$ac_cv_env_PKG_CONFIG_set" != "xset"; then
+ 
