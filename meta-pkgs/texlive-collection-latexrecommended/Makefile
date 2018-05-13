@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2017/10/15 20:42:47 markd Exp $
+# $NetBSD: Makefile,v 1.8 2018/05/13 11:56:22 markd Exp $
 
 DISTNAME=	collection-latexrecommended
-PKGNAME=	texlive-${DISTNAME}-2017.45456
+PKGNAME=	texlive-${DISTNAME}-2018
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	45456
+TEXLIVE_REV=	45955
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -65,6 +65,7 @@ DEPENDS+=	tex-setspace-[0-9]*:../../print/tex-setspace
 DEPENDS+=	tex-subfig-[0-9]*:../../print/tex-subfig
 DEPENDS+=	tex-textcase-[0-9]*:../../print/tex-textcase
 DEPENDS+=	tex-thumbpdf-[0-9]*:../../print/tex-thumbpdf
+DEPENDS+=	tex-translator-[0-9]*:../../print/tex-translator
 DEPENDS+=	tex-typehtml-[0-9]*:../../print/tex-typehtml
 DEPENDS+=	tex-ucharcat-[0-9]*:../../print/tex-ucharcat
 DEPENDS+=	tex-underscore-[0-9]*:../../print/tex-underscore

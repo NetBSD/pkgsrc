@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2017/10/12 07:08:53 markd Exp $
+# $NetBSD: Makefile,v 1.10 2018/05/13 11:56:23 markd Exp $
 
 DISTNAME=	collection-pstricks
-PKGNAME=	texlive-${DISTNAME}-2017pre1
+PKGNAME=	texlive-${DISTNAME}-2018pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	45079
+TEXLIVE_REV=	46643
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -27,17 +27,20 @@ DEPENDS+=	tex-pst-3dplot-[0-9]*:../../graphics/tex-pst-3dplot
 # depend pst-abspos
 # depend pst-arrow
 # depend pst-am
+# depend pst-antiprism
 # depend pst-asr
 # depend pst-bar
 DEPENDS+=	tex-pst-barcode-[0-9]*:../../graphics/tex-pst-barcode
 # depend pst-bezier
 DEPENDS+=	tex-pst-blur-[0-9]*:../../graphics/tex-pst-blur
 # depend pst-bspline
+# depend pst-calculate
 # depend pst-calendar
 # depend pst-cie
 DEPENDS+=	tex-pst-circ-[0-9]*:../../graphics/tex-pst-circ
 DEPENDS+=	tex-pst-coil-[0-9]*:../../graphics/tex-pst-coil
 # depend pst-cox
+# depend pst-dart
 # depend pst-dbicons
 # depend pst-diffraction
 # depend pst-electricfield
@@ -76,6 +79,7 @@ DEPENDS+=	tex-pst-node-[0-9]*:../../graphics/tex-pst-node
 DEPENDS+=	tex-pst-osci-[0-9]*:../../graphics/tex-pst-osci
 DEPENDS+=	tex-pst-ovl-[0-9]*:../../graphics/tex-pst-ovl
 # depend pst-pad
+DEPENDS+=	tex-pst-pdf-[0-9]*:../../graphics/tex-pst-pdf
 # depend pst-pdgr
 # depend pst-perspective
 # depend pst-platon

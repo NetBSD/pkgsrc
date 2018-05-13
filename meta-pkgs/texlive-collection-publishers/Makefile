@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2017/10/12 10:42:21 markd Exp $
+# $NetBSD: Makefile,v 1.13 2018/05/13 11:56:23 markd Exp $
 
 DISTNAME=	collection-publishers
-PKGNAME=	texlive-${DISTNAME}-2017pre2
+PKGNAME=	texlive-${DISTNAME}-2018pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	45487
+TEXLIVE_REV=	47227
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -76,6 +76,7 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend gsemthesis
 # depend gzt
 # depend h2020proposal
+# depend hagenberg-thesis
 # depend har2nat
 # depend hecthese
 # depend hithesis
@@ -98,6 +99,7 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend langsci
 # depend limecv
 # depend lion-msc
+# depend llncsconf
 # depend lni
 # depend lps
 # depend matc3
@@ -142,6 +144,7 @@ DEPENDS+=	tex-revtex4-[0-9]*:../../print/tex-revtex4
 # depend sapthesis
 # depend scrjrnl
 # depend schule
+# depend scientific-thesis-cover
 # depend sduthesis
 # depend seuthesis
 # depend seuthesix
@@ -156,8 +159,11 @@ DEPENDS+=	tex-revtex4-[0-9]*:../../print/tex-revtex4
 # depend texilikechaps
 # depend texilikecover
 # depend thesis-ekf
+# depend thesis-gwu
 # depend thesis-titlepage-fhac
+# depend thucoursework
 # depend thuthesis
+# depend timbreicmc
 DEPENDS+=	tex-toptesi-[0-9]*:../../print/tex-toptesi
 # depend tudscr
 # depend tugboat
@@ -180,6 +186,8 @@ DEPENDS+=	tex-toptesi-[0-9]*:../../print/tex-toptesi
 # depend umich-thesis
 # depend unamth-template
 # depend unamthesis
+# depend unitn-bimrep
+# depend univie-ling
 # depend unswcover
 # depend uothesis
 # depend urcls

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2017/10/12 09:59:16 markd Exp $
+# $NetBSD: Makefile,v 1.14 2018/05/13 11:56:18 markd Exp $
 
 DISTNAME=	collection-bibtexextra
-PKGNAME=	texlive-${DISTNAME}-2017pre3
+PKGNAME=	texlive-${DISTNAME}-2018pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	45266
+TEXLIVE_REV=	47407
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -41,6 +41,7 @@ DEPENDS+=	tex-biblatex-apa-[0-9]*:../../print/tex-biblatex-apa
 # depend biblatex-claves
 # depend biblatex-dw
 # depend biblatex-enc
+# depend biblatex-ext
 # depend biblatex-fiwi
 # depend biblatex-gb7714-2015
 # depend biblatex-gost
@@ -56,7 +57,7 @@ DEPENDS+=	tex-biblatex-apa-[0-9]*:../../print/tex-biblatex-apa
 # depend biblatex-morenames
 # depend biblatex-multiple-dm
 # depend biblatex-musuos
-# depend biblatex-nature
+DEPENDS+=	tex-biblatex-nature-[0-9]*:../../print/tex-biblatex-nature
 # depend biblatex-nejm
 # depend biblatex-nottsclassic
 # depend biblatex-opcit-booktitle
@@ -89,6 +90,7 @@ DEPENDS+=	tex-chbibref-[0-9]*:../../print/tex-chbibref
 # depend chembst
 # depend chscite
 # depend citeall
+# depend citeref
 # depend collref
 # depend compactbib
 # depend crossrefware
@@ -102,6 +104,7 @@ DEPENDS+=	tex-dk-bib-[0-9]*:../../print/tex-dk-bib
 # depend figbib
 DEPENDS+=	tex-footbib-[0-9]*:../../print/tex-footbib
 # depend francais-bst
+# depend gbt7714
 # depend geschichtsfrkl
 DEPENDS+=	tex-harvard-[0-9]*:../../print/tex-harvard
 # depend harvmac
@@ -116,6 +119,7 @@ DEPENDS+=	tex-jurabib-[0-9]*:../../print/tex-jurabib
 # depend ltb2bib
 # depend listbib
 DEPENDS+=	tex-logreq-[0-9]*:../../print/tex-logreq
+# depend luabibentry
 # depend margbib
 DEPENDS+=	tex-multibib-[0-9]*:../../print/tex-multibib
 # depend multibibliography
