@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2018/05/13 11:40:45 markd Exp $
+share/texmf-dist/doc/latex/translator/README.md
+share/texmf-dist/doc/latex/translator/translator.pdf
+share/texmf-dist/doc/latex/translator/translator.tex
