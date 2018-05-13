@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2309 2018/05/13 20:35:05 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2310 2018/05/13 20:35:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3385,3 +3385,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed print/tex-texconfig successor tex-xetex [markd 2018-05-13]
 	Removed fonts/tex-knuthotherfonts [markd 2018-05-13]
 	Updated graphics/arc-theme to 20170302 [youri 2018-05-13]
+	Updated devel/p5-FindBin-libs to 2.19.1 [schmonz 2018-05-13]
