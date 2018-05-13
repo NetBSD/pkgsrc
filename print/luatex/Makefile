@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.70 2018/04/28 20:19:11 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2018/05/13 12:46:27 markd Exp $
 
-DISTNAME=	texlive-20170524-source
-PKGNAME=	luatex-1.0.4
-PKGREVISION=	11
+DISTNAME=	texlive-20180414-source
+PKGNAME=	luatex-1.07.0
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2017/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -24,7 +23,7 @@ USE_TOOLS+=	gmake gsed lex perl pkg-config yacc
 CONFIGURE_ARGS+=	--disable-aleph --disable-etex --disable-pdftex \
 			--enable-luatex --disable-mf --disable-mf-nowin \
 			--with-x=no \
-			--disable-luajittex --disable-mfluajit \
+			--disable-luatex53 --disable-luajittex --disable-mfluajit \
 			--disable-mp --disable-pmp --disable-upmp \
 			--disable-ptex --disable-eptex --disable-uptex --disable-euptex \
 			--disable-web-progs \
