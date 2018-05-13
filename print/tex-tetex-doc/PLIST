@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/06/21 13:25:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/05/13 10:41:47 markd Exp $
 man/man1/allcm.1
 man/man1/allec.1
 man/man1/allneeded.1
@@ -11,6 +11,8 @@ man/man1/kpsepath.1
 man/man1/kpsetool.1
 man/man1/kpsewhere.1
 man/man1/kpsexpand.1
+man/man1/texconfig-sys.1
+man/man1/texconfig.1
 man/man1/texlinks.1
 man/man1/updmap-sys.1
 man/man1/updmap-user.1

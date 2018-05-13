@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2017/06/21 13:25:33 markd Exp $
+# $NetBSD: Makefile,v 1.29 2018/05/13 10:41:47 markd Exp $
 
 DISTNAME=	tetex
-PKGNAME=	tex-${DISTNAME}-3.0.44331
-TEXLIVE_REV=	44331
+PKGNAME=	tex-${DISTNAME}-3.0.47198
+TEXLIVE_REV=	47198
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Supplementary files for updmap
@@ -11,7 +11,6 @@ CONFLICTS=	texlive-tetex<=2011nb1
 DEPENDS+=	dialog>=1.0:../../misc/dialog
 DEPENDS+=	kpathsea-[0-9]*:../../print/kpathsea
 DEPENDS+=	tex-kpathsea>=2012nb1:../../print/tex-kpathsea
-DEPENDS+=	tex-texconfig>=2013:../../print/tex-texconfig
 DEPENDS+=	tex-texlive.infra-[0-9]*:../../print/tex-texlive.infra
 
 USE_TOOLS+=	perl:run sh:run
@@ -22,19 +21,24 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting paths to commands.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	bin/fmtutil bin/fmtutil-sys bin/kpsetool bin/kpsewhere \
-			bin/texconfig-dialog bin/texconfig-sys bin/texlinks \
-			bin/updmap bin/updmap-sys
+			bin/texconfig bin/texconfig-dialog bin/texconfig-sys \
+			bin/texlinks bin/updmap bin/updmap-sys \
+			texmf-dist/texconfig/tcfmgr
 SUBST_SED.paths+=	-e 's,@DIALOG@,${LOCALBASE}/bin/dialog,g'
 SUBST_SED.paths+=	-e 's,@FMTUTIL@,${PREFIX}/bin/fmtutil,g'
 SUBST_SED.paths+=	-e 's,@KPSEWHICH@,${LOCALBASE}/bin/kpsewhich,g'
+SUBST_SED.paths+=	-e 's,@MKTEXLSR@,${LOCALBASE}/bin/mktexlsr,g'
+SUBST_SED.paths+=	-e 's,@TEXCONF_DIALOG@,${LOCALBASE}/bin/texconfig-dialog,g'
+SUBST_SED.paths+=	-e 's,@TEXLINKS@,${LOCALBASE}/bin/texlnks,g'
 SUBST_SED.paths+=	-e 's,@TEXCONFIG@,${LOCALBASE}/bin/texconfig,g'
 SUBST_SED.paths+=	-e 's,@UPDMAP@,${PREFIX}/bin/updmap,g'
 
 REPLACE_PERL=	bin/updmap bin/fmtutil texmf-dist/scripts/texlive/mktexlsr.pl
 REPLACE_SH=	bin/allcm bin/allneeded bin/dvi2fax bin/dvired \
 		bin/fmtutil-sys bin/fmtutil-user bin/kpsetool bin/kpsewhere \
-		bin/texconfig-dialog bin/texconfig-sys bin/texlinks \
-		bin/updmap-sys bin/updmap-user
+		bin/texconfig bin/texconfig-dialog bin/texconfig-sys bin/texlinks \
+		bin/updmap-sys bin/updmap-user \
+		texmf-dist/texconfig/tcfmgr
 
 PKG_SYSCONFSUBDIR=	texmf
 
@@ -49,7 +53,7 @@ TEX_TEXMF_DIRS+=	${PKG_SYSCONFDIR} ${PREFIX}/share/texmf-dist
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
 .for script in fmtutil-sys.sh fmtutil-user.sh texconfig-dialog.sh \
-		texconfig-sys.sh texlinks.sh
+		texconfig-sys.sh texconfig.sh texlinks.sh
 	${MV} ${WRKSRC}/texmf-dist/scripts/texlive/${script} \
 		${WRKSRC}/bin/${script:S/.sh//}
 .endfor
@@ -58,6 +62,7 @@ post-extract:
 	${MV} ${WRKSRC}/texmf-dist/scripts/texlive/${script} \
 		${WRKSRC}/bin/${script:S/.pl//:S/.sh//}
 .endfor
+	${CHMOD} +x ${WRKSRC}/texmf-dist/texconfig/tcfmgr
 #	${MV} ${WRKSRC}/texmf-dist/scripts/texlive/mktexlsr.pl ${WRKSRC}/bin
 #	${RMDIR} -p ${WRKSRC}/texmf-dist/scripts/texlive 2>/dev/null || ${TRUE}
 
