@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/23 20:33:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/05/13 08:13:46 adam Exp $
 bin/oid2name
 bin/pg_standby
 bin/vacuumlo
@@ -51,6 +51,7 @@ share/doc/postgresql/extension/insert_username.example
 share/doc/postgresql/extension/moddatetime.example
 share/doc/postgresql/extension/refint.example
 share/doc/postgresql/extension/timetravel.example
+share/postgresql/extension/adminpack--1.0--1.1.sql
 share/postgresql/extension/adminpack--1.0.sql
 share/postgresql/extension/adminpack.control
 share/postgresql/extension/autoinc--1.0.sql
