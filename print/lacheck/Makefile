@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2017/06/20 20:50:50 markd Exp $
+# $NetBSD: Makefile,v 1.5 2018/05/13 12:39:23 markd Exp $
 
-DISTNAME=	texlive-20170524-source
+DISTNAME=	texlive-20180414-source
 PKGNAME=	lacheck-1.28
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2017/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
