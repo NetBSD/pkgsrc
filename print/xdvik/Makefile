@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2018/05/05 23:17:33 dholland Exp $
+# $NetBSD: Makefile,v 1.25 2018/05/13 13:04:03 markd Exp $
 
-DISTNAME=	texlive-20170524-source
+DISTNAME=	texlive-20180414-source
 PKGNAME=	xdvik-22.87.03
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2017/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -63,6 +63,7 @@ XDVI_PAPERSIZE=	us
 XDVI_PAPERSIZE=	a4
 .endif
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
