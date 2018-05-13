@@ -1,6 +1,6 @@
-$NetBSD: patch-bin_fmtutil,v 1.4 2016/06/16 04:06:16 markd Exp $
+$NetBSD: patch-bin_fmtutil,v 1.5 2018/05/13 10:41:47 markd Exp $
 
---- bin/fmtutil.orig	2016-04-22 13:16:07.000000000 +0000
+--- bin/fmtutil.orig	2017-11-21 07:07:45.000000000 +0000
 +++ bin/fmtutil
 @@ -14,7 +14,7 @@ my $TEXMFROOT;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-bin_fmtutil,v 1.4 2016/06/16 04:06:16 markd Exp $
    if ($?) {
      die "$0: kpsewhich -var-value=TEXMFROOT failed, aborting early.\n";
    }
-@@ -67,12 +67,12 @@ my @deferred_stdout;
+@@ -70,12 +70,12 @@ TeXLive::TLUtils::prepend_own_path();
  # this function checks by itself whether it is running on windows or not
  reset_root_home();
  
@@ -30,7 +30,7 @@ $NetBSD: patch-bin_fmtutil,v 1.4 2016/06/16 04:06:16 markd Exp $
  
  # make sure that on windows *everything* is in lower case for comparison
  if (win32()) {
-@@ -239,7 +239,7 @@ sub main {
+@@ -254,7 +254,7 @@ sub main {
        for my $e (sort @all_engines) {
          my $hf = $alldata->{'merged'}{$f}{$e}{'hyphen'};
          next if ($hf eq '-');
@@ -39,7 +39,7 @@ $NetBSD: patch-bin_fmtutil,v 1.4 2016/06/16 04:06:16 markd Exp $
          chomp($ff);
          if ($ff ne "") {
            if ($#all_engines > 0) {
-@@ -473,13 +473,13 @@ sub select_and_rebuild_format {
+@@ -494,13 +494,13 @@ sub select_and_rebuild_format {
      if ($fmthyp ne '-') {
        if ($whatarg =~ m!^/!) {
          # $whatarg is a full path, we need to expand $fmthyp, too
@@ -55,16 +55,16 @@ $NetBSD: patch-bin_fmtutil,v 1.4 2016/06/16 04:06:16 markd Exp $
            if ($fmthyplong) {
              $fmthyp = $fmthyplong;
            } else {
-@@ -557,7 +557,7 @@ sub rebuild_one_format {
-   }
-   
+@@ -595,7 +595,7 @@ sub rebuild_one_format {
+   else                         { $prgswitch .= $fmt; }
+ 
    # check for existence of ini file before doing anything else
 -  if (system("kpsewhich -progname=$fmt -format=$kpsefmt $inifile >$nul 2>&1") != 0) {
 +  if (system("@KPSEWHICH@ -progname=$fmt -format=$kpsefmt $inifile >$nul 2>&1") != 0) {
      # we didn't find the ini file, skip
      print_deferred_warning("inifile $inifile for $fmt/$eng not found.\n");
      # The original script just skipped it but in TeX Live we expect that
-@@ -578,7 +578,7 @@ sub rebuild_one_format {
+@@ -624,7 +624,7 @@ sub rebuild_one_format {
      $texargs = $addargs;
    }
    if ($pool) {
@@ -73,7 +73,7 @@ $NetBSD: patch-bin_fmtutil,v 1.4 2016/06/16 04:06:16 markd Exp $
      if ($poolfile && -f $poolfile) {
        print_verbose("attempting to create localized format "
                      . "using pool=$pool and tcx=$tcx.\n");
-@@ -1002,7 +1002,7 @@ sub determine_config_files {
+@@ -1016,7 +1016,7 @@ sub determine_config_files {
      # in the list is the one where changes will be written to.
      ($changes_config_file) = @{$opts{'cnffile'}};
    } else {
@@ -82,7 +82,7 @@ $NetBSD: patch-bin_fmtutil,v 1.4 2016/06/16 04:06:16 markd Exp $
      chomp(@all_files);
      my @used_files;
      for my $f (@all_files) {
-@@ -1012,10 +1012,10 @@ sub determine_config_files {
+@@ -1026,10 +1026,10 @@ sub determine_config_files {
      my $TEXMFLOCALVAR;
      my @TEXMFLOCAL;
      if (win32()) {
