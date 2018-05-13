@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2017/06/22 09:37:21 markd Exp $
+# $NetBSD: Makefile,v 1.6 2018/05/13 11:56:20 markd Exp $
 
 DISTNAME=	collection-langeuropean
-PKGNAME=	texlive-${DISTNAME}-2017pre1
+PKGNAME=	texlive-${DISTNAME}-2018pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44414
+TEXLIVE_REV=	46803
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -43,6 +43,7 @@ DEPENDS+=	tex-babel-welsh-[0-9]*:../../print/tex-babel-welsh
 # depend finbib
 # depend gloss-occitan
 # depend hrlatex
+# depend hulipsum
 DEPENDS+=	tex-hyphen-croatian-[0-9]*:../../print/tex-hyphen-croatian
 DEPENDS+=	tex-hyphen-danish-[0-9]*:../../print/tex-hyphen-danish
 DEPENDS+=	tex-hyphen-dutch-[0-9]*:../../print/tex-hyphen-dutch
