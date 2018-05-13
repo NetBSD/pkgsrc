@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2017/06/20 20:50:49 markd Exp $
+# $NetBSD: Makefile,v 1.15 2018/05/13 12:24:31 markd Exp $
 #
 
-DISTNAME=	texlive-20170524-source
+DISTNAME=	texlive-20180414-source
 PKGNAME=	dvidvi-1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2017/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
