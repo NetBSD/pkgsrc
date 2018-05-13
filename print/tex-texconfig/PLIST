@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2013/11/17 16:51:49 minskim Exp $
-bin/texconfig
-share/texmf-dist/texconfig/README
-share/texmf-dist/texconfig/g/generic
-share/texmf-dist/texconfig/tcfmgr
-share/texmf-dist/texconfig/tcfmgr.map
-share/texmf-dist/texconfig/v/vt100
-share/texmf-dist/texconfig/x/xterm
