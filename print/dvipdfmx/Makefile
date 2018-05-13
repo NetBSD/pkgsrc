@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2017/06/20 20:50:49 markd Exp $
+# $NetBSD: Makefile,v 1.50 2018/05/13 12:29:00 markd Exp $
 
-DISTNAME=	texlive-20170524-source
-PKGNAME=	dvipdfmx-20170318
+DISTNAME=	texlive-20180414-source
+PKGNAME=	dvipdfmx-20180217
 CATEGORIES=	print converters
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2017/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
