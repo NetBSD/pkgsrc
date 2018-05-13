@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2305 2018/05/13 03:45:35 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.2306 2018/05/13 08:16:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3341,3 +3341,8 @@ Changes to the packages collection and infrastructure in 2018:
 	Added textproc/R-htmltools version 0.3.6 [minskim 2018-05-12]
 	Added finance/py-backtrader version 1.9.58.122 [minskim 2018-05-12]
 	Updated x11/xf86-video-wsfb to 0.4.0nb8 [ryoon 2018-05-13]
+	Updated databases/postgresql93 to 9.3.23 [adam 2018-05-13]
+	Updated databases/postgresql94 to 9.4.18 [adam 2018-05-13]
+	Updated databases/postgresql95 to 9.5.13 [adam 2018-05-13]
+	Updated databases/postgresql96 to 9.6.9 [adam 2018-05-13]
+	Updated databases/postgresql10 to 10.4 [adam 2018-05-13]
