@@ -1,25 +1,25 @@
-$NetBSD: patch-aa,v 1.4 2014/07/20 00:06:19 dholland Exp $
+$NetBSD: patch-aa,v 1.5 2018/05/13 13:04:03 markd Exp $
 
 - Do not install XDvi; it is installed by tex-xdvi.
 - Don't depend on it either as it's removed by the pkgsrc makefile.
 
---- Makefile.in.orig	2013-04-08 06:34:46.000000000 +0000
+--- Makefile.in.orig	2018-01-17 22:59:48.000000000 +0000
 +++ Makefile.in
-@@ -533,7 +533,7 @@ EXTRA_DIST = psheader.txt mksedscript xd
+@@ -577,7 +577,7 @@ EXTRA_DIST = psheader.txt mksedscript xd
  CLEANFILES = psheader.c sedscript xdvi.1
  nodist_man1_MANS = xdvi.1
  xdvidir = $(datarootdir)/texmf-dist/xdvi
 -dist_xdvi_DATA = texmf/XDvi
-+dist_xdvi_DATA =
++dist_xdvi_DATA = 
  pixmapdir = $(datarootdir)/texmf-dist/xdvi/pixmap
  dist_pixmap_DATA = pixmaps/toolbar.xpm pixmaps/toolbar2.xpm
- dvipsconfdir = $(datarootdir)/texmf-dist/dvips/config
-@@ -1297,7 +1297,7 @@ info: info-recursive
- 
+ dvipsconfdir = $(datarootdir)/texmf-dist/dvips/xdvi
+@@ -1372,7 +1372,7 @@ info: info-recursive
  info-am:
  
--install-data-am: install-dist_pixmapDATA install-dist_xdviDATA \
-+install-data-am: install-dist_pixmapDATA \
- 	install-man
+ install-data-am: install-desktopDATA install-dist_pixmapDATA \
+-	install-dist_xdviDATA install-man
++	install-man
  	@$(NORMAL_INSTALL)
  	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ install-dvi: install-dvi-recursive

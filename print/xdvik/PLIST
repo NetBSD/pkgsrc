@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2013/11/17 16:56:47 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/05/13 13:04:03 markd Exp $
 bin/xdvi
 bin/xdvi-xaw
 man/man1/xdvi.1
+share/applications/xdvi.desktop
 share/examples/xdvik/XDvi
-share/texmf-dist/dvips/config/config.xdvi
+share/texmf-dist/dvips/xdvi/config.xdvi
 share/texmf-dist/xdvi/pixmap/toolbar.xpm
 share/texmf-dist/xdvi/pixmap/toolbar2.xpm
