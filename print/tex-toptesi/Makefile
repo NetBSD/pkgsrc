@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2017/06/21 13:25:35 markd Exp $
+# $NetBSD: Makefile,v 1.5 2018/05/13 11:17:35 markd Exp $
 
 DISTNAME=	toptesi
-PKGNAME=	tex-${DISTNAME}-5.9.06
-TEXLIVE_REV=	42586
+PKGNAME=	tex-${DISTNAME}-6.1.12
+TEXLIVE_REV=	46404
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/toptesi
