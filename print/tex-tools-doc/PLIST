@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2017/06/21 13:25:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/05/13 11:14:09 markd Exp $
+share/texmf-dist/doc/latex/tools/README.md
 share/texmf-dist/doc/latex/tools/README.txt
 share/texmf-dist/doc/latex/tools/afterpage.pdf
 share/texmf-dist/doc/latex/tools/array.pdf
