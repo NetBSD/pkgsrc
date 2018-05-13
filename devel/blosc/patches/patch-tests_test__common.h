@@ -1,4 +1,4 @@
-$NetBSD: patch-tests_test__common.h,v 1.3 2018/05/12 14:04:00 maya Exp $
+$NetBSD: patch-tests_test__common.h,v 1.4 2018/05/13 03:22:33 minskim Exp $
 
 Use posix_memalign on SunOS with __EXTENSIONS__.
 Use a standard C11 test.
@@ -16,7 +16,7 @@ behaviour (C11 7.22.3.1).
 +#if _POSIX_C_SOURCE >= 200112L || _XOPEN_SOURCE >= 600 || defined(__EXTENSIONS__)
 +  /* Platform does have an implementation of posix_memalign */
 +  res = posix_memalign(&block, alignment, size);
-+#elif defined(__STDC_VERSION__) && __STDC_VERSION__ >= 201112L
++#elif defined(__STDC_VERSION__) && __STDC_VERSION__ >= 201112L && !defined(__APPLE__)
    /* C11 aligned allocation. 'size' must be a multiple of the alignment. */
    block = aligned_alloc(alignment, size);
  #elif defined(_WIN32)
