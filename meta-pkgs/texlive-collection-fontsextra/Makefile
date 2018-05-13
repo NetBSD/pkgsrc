@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2017/10/12 10:28:27 markd Exp $
+# $NetBSD: Makefile,v 1.12 2018/05/13 11:56:18 markd Exp $
 
 DISTNAME=	collection-fontsextra
-PKGNAME=	texlive-${DISTNAME}-2017pre1
+PKGNAME=	texlive-${DISTNAME}-2018pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	45445
+TEXLIVE_REV=	46869
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -71,11 +71,13 @@ DEPENDS+=	tex-cherokee-[0-9]*:../../fonts/tex-cherokee
 DEPENDS+=	tex-cinzel-[0-9]*:../../fonts/tex-cinzel
 DEPENDS+=	tex-clearsans-[0-9]*:../../fonts/tex-clearsans
 DEPENDS+=	tex-cm-lgc-[0-9]*:../../fonts/tex-cm-lgc
+# depend cm-mf-extra-bold
 DEPENDS+=	tex-cm-unicode-[0-9]*:../../fonts/tex-cm-unicode
 DEPENDS+=	tex-cmbright-[0-9]*:../../fonts/tex-cmbright
 DEPENDS+=	tex-cmexb-[0-9]*:../../fonts/tex-cmexb
 DEPENDS+=	tex-cmll-[0-9]*:../../fonts/tex-cmll
 DEPENDS+=	tex-cmpica-[0-9]*:../../fonts/tex-cmpica
+# depend cmsrb
 DEPENDS+=	tex-cmtiup-[0-9]*:../../fonts/tex-cmtiup
 # depend cochineal
 # depend coelacanth
@@ -129,6 +131,7 @@ DEPENDS+=	tex-fira-[0-9]*:../../fonts/tex-fira
 DEPENDS+=	tex-foekfont-[0-9]*:../../fonts/tex-foekfont
 DEPENDS+=	tex-fonetika-[0-9]*:../../fonts/tex-fonetika
 DEPENDS+=	tex-fontawesome-[0-9]*:../../fonts/tex-fontawesome
+# depend fontawesome5
 DEPENDS+=	tex-fontmfizz-[0-9]*:../../fonts/tex-fontmfizz
 # depend fonts-churchslavonic
 DEPENDS+=	tex-fourier-[0-9]*:../../fonts/tex-fourier
@@ -142,6 +145,7 @@ DEPENDS+=	tex-gfsbodoni-[0-9]*:../../fonts/tex-gfsbodoni
 DEPENDS+=	tex-gfscomplutum-[0-9]*:../../fonts/tex-gfscomplutum
 DEPENDS+=	tex-gfsdidot-[0-9]*:../../fonts/tex-gfsdidot
 DEPENDS+=	tex-gfsneohellenic-[0-9]*:../../fonts/tex-gfsneohellenic
+# depend gfsneohellenicmath
 DEPENDS+=	tex-gfssolomos-[0-9]*:../../fonts/tex-gfssolomos
 DEPENDS+=	tex-gillcm-[0-9]*:../../fonts/tex-gillcm
 DEPENDS+=	tex-gillius-[0-9]*:../../fonts/tex-gillius
@@ -165,7 +169,6 @@ DEPENDS+=	tex-jablantile-[0-9]*:../../fonts/tex-jablantile
 DEPENDS+=	tex-jamtimes-[0-9]*:../../fonts/tex-jamtimes
 DEPENDS+=	tex-junicode-[0-9]*:../../fonts/tex-junicode
 DEPENDS+=	tex-kixfont-[0-9]*:../../fonts/tex-kixfont
-DEPENDS+=	tex-knuthotherfonts-[0-9]*:../../fonts/tex-knuthotherfonts
 DEPENDS+=	tex-kpfonts-[0-9]*:../../fonts/tex-kpfonts
 DEPENDS+=	tex-kurier-[0-9]*:../../fonts/tex-kurier
 DEPENDS+=	tex-lato-[0-9]*:../../fonts/tex-lato
@@ -220,6 +223,8 @@ DEPENDS+=	tex-phaistos-[0-9]*:../../fonts/tex-phaistos
 DEPENDS+=	tex-phonetic-[0-9]*:../../fonts/tex-phonetic
 DEPENDS+=	tex-pigpen-[0-9]*:../../fonts/tex-pigpen
 DEPENDS+=	tex-playfair-[0-9]*:../../fonts/tex-playfair
+# depend plex
+# depend plex-otf
 DEPENDS+=	tex-poltawski-[0-9]*:../../print/tex-poltawski
 DEPENDS+=	tex-prodint-[0-9]*:../../fonts/tex-prodint
 DEPENDS+=	tex-punk-[0-9]*:../../fonts/tex-punk
