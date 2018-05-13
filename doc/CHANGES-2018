@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2306 2018/05/13 08:16:25 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2307 2018/05/13 09:44:21 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3346,3 +3346,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/postgresql95 to 9.5.13 [adam 2018-05-13]
 	Updated databases/postgresql96 to 9.6.9 [adam 2018-05-13]
 	Updated databases/postgresql10 to 10.4 [adam 2018-05-13]
+	Updated audio/opusfile to 0.10 [maya 2018-05-13]
