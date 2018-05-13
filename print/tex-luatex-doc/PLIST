@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/06/21 08:28:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/05/13 11:29:24 markd Exp $
 man/man1/luatex.1
 man/man1/texlua.1
 man/man1/texluac.1
@@ -6,6 +6,7 @@ share/texmf-dist/doc/luatex/base/luatex-backend.tex
 share/texmf-dist/doc/luatex/base/luatex-callbacks.tex
 share/texmf-dist/doc/luatex/base/luatex-contents.tex
 share/texmf-dist/doc/luatex/base/luatex-enhancements.tex
+share/texmf-dist/doc/luatex/base/luatex-export-titlepage.tex
 share/texmf-dist/doc/luatex/base/luatex-fontloader.tex
 share/texmf-dist/doc/luatex/base/luatex-fonts.tex
 share/texmf-dist/doc/luatex/base/luatex-graphics.tex
