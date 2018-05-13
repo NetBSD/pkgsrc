@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/05/13 13:04:03 markd Exp $
+# $NetBSD: Makefile,v 1.26 2018/05/13 17:19:19 bsiegert Exp $
 
 DISTNAME=	texlive-20180414-source
 PKGNAME=	xdvik-22.87.03
@@ -11,7 +11,7 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://xdvi.sourceforge.net/
 COMMENT=	Previewer for DVI files
 
-BUILD_DEPENDS+=	tex-texconfig-[0-9]*:../../print/tex-texconfig
+BUILD_DEPENDS+=	tex-tetex-[0-9]*:../../print/tex-tetex
 BUILD_DEPENDS+=	tex-xdvi-[0-9]*:../../print/tex-xdvi
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	kpathsea>=6.2.1:../../print/kpathsea
