@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.712 2018/05/13 11:52:23 markd Exp $
+# $NetBSD: Makefile,v 1.713 2018/05/13 13:14:59 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1212,8 +1212,6 @@ SUBDIR+=	tex-tex4ebook-doc
 SUBDIR+=	tex-tex4ht
 SUBDIR+=	tex-tex4ht-doc
 SUBDIR+=	tex-texbytopic-doc
-SUBDIR+=	tex-texconfig
-SUBDIR+=	tex-texconfig-doc
 SUBDIR+=	tex-texdoc
 SUBDIR+=	tex-texdoc-doc
 SUBDIR+=	tex-texinfo

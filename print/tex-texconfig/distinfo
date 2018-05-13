@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2017/06/23 01:56:47 markd Exp $
-
-SHA1 (tex-texconfig-44166/texconfig.tar.xz) = 5cd34a05bd65c9b7a3410f00b1dec50800dd975a
-RMD160 (tex-texconfig-44166/texconfig.tar.xz) = 3690e04e21ef60b02ea16bb48da0fe4181d5f183
-SHA512 (tex-texconfig-44166/texconfig.tar.xz) = 5473622487ae5b5f6bd430bc3b75ee7c1fdd646f74442fbcb9d4a943f27e013a21bb05a35a724efe4dd330bca3572dc6024be031072aa2d9ab8c9d4e75ea065c
-Size (tex-texconfig-44166/texconfig.tar.xz) = 12492 bytes
-SHA1 (patch-bin_texconfig) = 4fc6cb771683749ac4e54a3cd0530c97896cb1d0
-SHA1 (patch-texmf-dist_texconfig_tcfmgr) = f530f1f57a7bec42fcc4ee06dbf6c655f631d635
