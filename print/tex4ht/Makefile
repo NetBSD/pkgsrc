@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2017/09/06 16:49:47 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/05/13 12:53:19 markd Exp $
 
-DISTNAME=	texlive-20170524-source
+DISTNAME=	texlive-20180414-source
 PKGNAME=	tex4ht-0.0.20170523
+PKGREVISION=	1
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2017/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
