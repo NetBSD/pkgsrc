@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2017/06/22 09:37:20 markd Exp $
+# $NetBSD: Makefile,v 1.6 2018/05/13 11:56:18 markd Exp $
 
 DISTNAME=	collection-context
-PKGNAME=	texlive-${DISTNAME}-2017pre1
+PKGNAME=	texlive-${DISTNAME}-2018pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	42330
+TEXLIVE_REV=	47139
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -31,6 +31,7 @@ DEPENDS+=       tex-context-french-[0-9]*:../../print/tex-context-french
 DEPENDS+=       tex-context-fullpage-[0-9]*:../../print/tex-context-fullpage
 DEPENDS+=       tex-context-gantt-[0-9]*:../../print/tex-context-gantt
 DEPENDS+=       tex-context-gnuplot-[0-9]*:../../print/tex-context-gnuplot
+# depend context-handlecsv
 # depend context-inifile
 # depend context-layout
 DEPENDS+=       tex-context-letter-[0-9]*:../../print/tex-context-letter
@@ -48,6 +49,7 @@ DEPENDS+=       tex-context-typearea-[0-9]*:../../print/tex-context-typearea
 DEPENDS+=       tex-context-typescripts-[0-9]*:../../print/tex-context-typescripts
 DEPENDS+=       tex-context-vim-[0-9]*:../../print/tex-context-vim
 DEPENDS+=       tex-context-visualcounter-[0-9]*:../../print/tex-context-visualcounter
+# depend npp-for-context
 
 META_PACKAGE=	yes
 
