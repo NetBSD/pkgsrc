@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2018/05/05 12:31:25 minskim Exp $
+# $NetBSD: Makefile,v 1.36 2018/05/13 12:14:17 markd Exp $
 
-DISTNAME=	texlive-20170524-source
+DISTNAME=	texlive-20180414-source
 PKGNAME=	ttf2pk-2.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	fonts print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2017/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2018/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	bernhard@SDG.de
