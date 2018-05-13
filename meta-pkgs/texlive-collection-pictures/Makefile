@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2017/10/15 20:48:28 markd Exp $
+# $NetBSD: Makefile,v 1.19 2018/05/13 11:56:23 markd Exp $
 
 DISTNAME=	collection-pictures
-PKGNAME=	texlive-${DISTNAME}-2017pre4
+PKGNAME=	texlive-${DISTNAME}-2018pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	45417
+TEXLIVE_REV=	47088
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -12,6 +12,7 @@ COMMENT=	Graphics, pictures, diagrams TeX packages
 
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 
+# depend adigraph
 # depend aobs-tikz
 # depend askmaps
 DEPENDS+=	tex-asyfig-[0-9]*:../../graphics/tex-asyfig
@@ -64,6 +65,8 @@ DEPENDS+=	tex-ellipse-[0-9]*:../../graphics/tex-ellipse
 # depend gnuplottex
 # depend gradientframe
 # depend grafcet
+# depend graph35
+# depend graphicxpsd
 # depend graphviz
 # depend gtrlib-largetrees
 # depend harveyballs
@@ -80,6 +83,7 @@ DEPENDS+=	tex-here-[0-9]*:../../print/tex-here
 # depend lpic
 # depend lroundrect
 # depend luamesh
+# depend luasseq
 # depend maker
 # depend makeshape
 # depend mathspic
@@ -107,6 +111,7 @@ DEPENDS+=	tex-pict2e-[0-9]*:../../print/tex-pict2e
 DEPENDS+=	tex-pictex-[0-9]*:../../graphics/tex-pictex
 # depend pictex2
 # depend pinlabel
+# depend pixelart
 # depend pmgraph
 # depend prerex
 # depend productbox
@@ -136,14 +141,20 @@ DEPENDS+=	tex-tikz-3dplot-[0-9]*:../../graphics/tex-tikz-3dplot
 DEPENDS+=	tex-tikz-cd-[0-9]*:../../graphics/tex-tikz-cd
 # depend tikz-dependency
 # depend tikz-dimline
+# depend tikz-feynhand
 # depend tikz-feynman
 # depend tikz-inet
 # depend tikz-kalender
+# depend tikz-karnaugh
+# depend tikz-ladder
+# depend tikz-layers
 # depend tikz-opm
 # depend tikz-optics
 # depend tikz-page
 # depend tikz-palattice
 # depend tikz-qtree
+# depend tikz-relay
+# depend tikz-stc
 # depend tikz-timing
 # depend tikzcodeblocks
 # depend tikzducks

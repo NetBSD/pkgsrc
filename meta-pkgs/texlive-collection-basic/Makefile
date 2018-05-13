@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2017/06/22 09:37:20 markd Exp $
+# $NetBSD: Makefile,v 1.8 2018/05/13 11:56:18 markd Exp $
 
 DISTNAME=	collection-basic
-PKGNAME=	texlive-${DISTNAME}-2017
+PKGNAME=	texlive-${DISTNAME}-2018
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	41616
+TEXLIVE_REV=	45851
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -40,7 +40,6 @@ DEPENDS+=	tex-plain>=3.141592653.26647:../../print/tex-plain
 DEPENDS+=	tex-tetex>=3.0.32132:../../print/tex-tetex
 DEPENDS+=	tex-tex>=3.1415926:../../print/tex-tex
 DEPENDS+=	tex-tex-ini-files-[0-9]*:../../print/tex-tex-ini-files
-DEPENDS+=	tex-texconfig>=2013:../../print/tex-texconfig
 DEPENDS+=	tex-texlive-docindex>=2014:../../print/tex-texlive-docindex
 # texlive-msg-translations is not needed in pkgsrc.
 DEPENDS+=	tex-texlive-scripts>=2013:../../print/tex-texlive-scripts
