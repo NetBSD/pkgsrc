@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2018/05/13 11:47:52 markd Exp $
+share/texmf-dist/doc/latex/biblatex-nature/LICENSE.md
+share/texmf-dist/doc/latex/biblatex-nature/README.md
+share/texmf-dist/doc/latex/biblatex-nature/biblatex-nature.bib
+share/texmf-dist/doc/latex/biblatex-nature/biblatex-nature.pdf
+share/texmf-dist/doc/latex/biblatex-nature/biblatex-nature.tex
