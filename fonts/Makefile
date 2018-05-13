@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.316 2018/04/28 09:40:54 wiz Exp $
+# $NetBSD: Makefile,v 1.317 2018/05/13 13:23:33 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -572,7 +572,6 @@ SUBDIR+=	tex-kixfont
 SUBDIR+=	tex-kixfont-doc
 SUBDIR+=	tex-knuth-lib
 SUBDIR+=	tex-knuth-local
-SUBDIR+=	tex-knuthotherfonts
 SUBDIR+=	tex-kpfonts
 SUBDIR+=	tex-kpfonts-doc
 SUBDIR+=	tex-kurier
