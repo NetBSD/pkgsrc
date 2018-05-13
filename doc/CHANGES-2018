@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2308 2018/05/13 13:32:29 markd Exp $
+$NetBSD: CHANGES-2018,v 1.2309 2018/05/13 20:35:05 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3384,3 +3384,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/xetex to 0.99999 [markd 2018-05-13]
 	Removed print/tex-texconfig successor tex-xetex [markd 2018-05-13]
 	Removed fonts/tex-knuthotherfonts [markd 2018-05-13]
+	Updated graphics/arc-theme to 20170302 [youri 2018-05-13]
