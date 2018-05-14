@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2312 2018/05/14 06:42:26 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2313 2018/05/14 06:44:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3389,3 +3389,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added finance/QuantLib version 1.12.1 [minskim 2018-05-14]
 	Updated devel/py-setuptools_scm to 2.1.0 [adam 2018-05-14]
 	Updated math/py-scipy to 1.1.0 [adam 2018-05-14]
+	Updated meta-pkgs/texlive-collection-basic-doc to 2018 [wiz 2018-05-14]
