@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2310 2018/05/13 20:35:14 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.2311 2018/05/14 00:07:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3386,3 +3386,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed fonts/tex-knuthotherfonts [markd 2018-05-13]
 	Updated graphics/arc-theme to 20170302 [youri 2018-05-13]
 	Updated devel/p5-FindBin-libs to 2.19.1 [schmonz 2018-05-13]
+	Added finance/QuantLib version 1.12.1 [minskim 2018-05-14]
