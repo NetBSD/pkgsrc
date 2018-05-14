@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2330 2018/05/14 12:41:30 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2331 2018/05/14 12:42:44 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3410,3 +3410,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/caja-dropbox to 1.20.0 [youri 2018-05-14]
 	Updated sysutils/caja-extensions to 1.20.0 [youri 2018-05-14]
 	Updated archivers/engrampa to 1.20.0 [youri 2018-05-14]
+	Updated graphics/eom to 1.20.0 [youri 2018-05-14]
