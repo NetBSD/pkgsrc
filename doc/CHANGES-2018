@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2325 2018/05/14 12:23:12 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2326 2018/05/14 12:26:36 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3405,3 +3405,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-lexicon to 2.2.3 [fhajny 2018-05-14]
 	Updated x11/vte3 to 0.50.3 [youri 2018-05-14]
 	Updated print/atril to 1.18.1 [youri 2018-05-14]
+	Updated meta-pkgs/mate to 1.20.0 [youri 2018-05-14]
