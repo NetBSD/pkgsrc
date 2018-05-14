@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.13 2018/04/16 14:35:24 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2018/05/14 13:17:15 youri Exp $
 
-PKGREVISION= 6
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-settings-daemon-${VERSION:R}.1
@@ -27,6 +26,7 @@ CONF_FILES+=	${PREFIX}/share/examples/mate-settings-daemon/xdg/autostart/mate-se
 .include "../../x11/libmatekbd/buildlink3.mk"
 .include "../../x11/mate-desktop/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
+.include "../../audio/libmatemixer/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
