@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2327 2018/05/14 12:30:35 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2328 2018/05/14 12:38:12 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3407,3 +3407,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated print/atril to 1.18.1 [youri 2018-05-14]
 	Updated meta-pkgs/mate to 1.20.0 [youri 2018-05-14]
 	Updated sysutils/caja to 1.20.2 [youri 2018-05-14]
+	Updated sysutils/caja-dropbox to 1.20.0 [youri 2018-05-14]
