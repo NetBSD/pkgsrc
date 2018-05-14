@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2321 2018/05/14 10:54:28 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2322 2018/05/14 11:26:22 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3401,3 +3401,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-meson to 0.44.1nb2 [jperkin 2018-05-14]
 	Updated wm/wmii to 3.9.2 [fly 2018-05-14]
 	Updated databases/py-peewee to 3.3.4 [fhajny 2018-05-14]
+	Updated net/rabbitmq to 3.7.5 [fhajny 2018-05-14]
