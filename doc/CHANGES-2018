@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2359 2018/05/14 13:27:01 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2360 2018/05/14 13:57:20 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3439,3 +3439,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/mate-utils to 1.20.0 [youri 2018-05-14]
 	Updated editors/pluma to 1.20.1 [youri 2018-05-14]
 	Updated graphics/mate-themes to 3.22.16 [youri 2018-05-14]
+	Added misc/mate-calc version 1.20.1 [youri 2018-05-14]
