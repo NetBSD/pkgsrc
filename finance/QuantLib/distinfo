@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2018/05/14 00:06:44 minskim Exp $
+
+SHA1 (QuantLib-1.12.1.tar.gz) = 6f3d140cbcd5c6f646202e27952c2e182831eccf
+RMD160 (QuantLib-1.12.1.tar.gz) = aab4f527ab82fd959cb760934eb41257abaa2079
+SHA512 (QuantLib-1.12.1.tar.gz) = d30341bd53495ddf1b81a0a191659e48869e1feb4a0fda2205be7fb681eb206ba0aec88e87b31396795956c350589b301848fe0a2408592b90ff06173c20476b
+Size (QuantLib-1.12.1.tar.gz) = 7784161 bytes
+SHA1 (patch-CMakeLists.txt) = 75ba9b70a3c77996363b451554e6c30644710a07
+SHA1 (patch-ql_CMakeLists.txt) = 8c97fc4304ee9fb529b03e8351edca6d8eb2e405
