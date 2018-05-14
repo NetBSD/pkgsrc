@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/02/15 08:15:55 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2018/05/14 10:48:57 jperkin Exp $
 
 DISTNAME=	gexiv2-0.10.8
 CATEGORIES=	graphics devel
@@ -16,6 +16,8 @@ USE_TOOLS+=		gmake m4 pkg-config bash
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE=	gexiv2.m4
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./gexiv2/gexiv2.map
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
