@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/06/23 17:24:57 youri Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/05/14 13:08:26 youri Exp $
 bin/mate-desktop-item-edit
 bin/mate-panel
 bin/mate-panel-test-applets
@@ -29,10 +29,8 @@ share/gtk-doc/html/mate-panel-applet/applet-porting.html
 share/gtk-doc/html/mate-panel-applet/applet-writing.html
 share/gtk-doc/html/mate-panel-applet/home.png
 share/gtk-doc/html/mate-panel-applet/index.html
-share/gtk-doc/html/mate-panel-applet/index.sgml
 share/gtk-doc/html/mate-panel-applet/left-insensitive.png
 share/gtk-doc/html/mate-panel-applet/left.png
-share/gtk-doc/html/mate-panel-applet/mate-panel-applet-Panel-Applet-MateConf-Utilities.html
 share/gtk-doc/html/mate-panel-applet/mate-panel-applet-mate-panel-applet.html
 share/gtk-doc/html/mate-panel-applet/mate-panel-applet.devhelp2
 share/gtk-doc/html/mate-panel-applet/mate-panel-applet.html
@@ -303,6 +301,7 @@ share/locale/ko/LC_MESSAGES/mate-panel.mo
 share/locale/ku/LC_MESSAGES/mate-panel.mo
 share/locale/ku_IQ/LC_MESSAGES/mate-panel.mo
 share/locale/ky/LC_MESSAGES/mate-panel.mo
+share/locale/la/LC_MESSAGES/mate-panel.mo
 share/locale/li/LC_MESSAGES/mate-panel.mo
 share/locale/lt/LC_MESSAGES/mate-panel.mo
 share/locale/lv/LC_MESSAGES/mate-panel.mo
