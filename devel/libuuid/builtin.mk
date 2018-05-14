@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2016/02/24 14:58:24 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.9 2018/05/14 13:55:56 jperkin Exp $
 
 BUILTIN_PKG:=	libuuid
 
@@ -70,8 +70,7 @@ MAKEVARS+=	USE_BUILTIN.libuuid
 ###
 CHECK_BUILTIN.libuuid?=	no
 .if !empty(CHECK_BUILTIN.libuuid:M[nN][oO])
-.  if !empty(USE_BUILTIN.libuuid:M[yY][eE][sS]) && \
-      !empty(USE_TOOLS:C/:.*//:Mpkg-config)
+.  if !empty(USE_BUILTIN.libuuid:M[yY][eE][sS])
 BUILDLINK_TARGETS+=	libuuid-fake-pc
 
 .    if ${OPSYS} == "SunOS"
