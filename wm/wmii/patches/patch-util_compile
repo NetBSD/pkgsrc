@@ -1,13 +1,19 @@
-$NetBSD: patch-util_compile,v 1.2 2018/05/14 10:20:57 maya Exp $
+$NetBSD: patch-util_compile,v 1.3 2018/05/14 10:31:14 maya Exp $
+
+Allow substituing sh, bin, awk, egrep.
 
 --- util/compile.orig	2010-06-10 07:24:04.000000000 +0000
 +++ util/compile
-@@ -4,7 +4,7 @@ CC=$1
+@@ -1,10 +1,10 @@
+-#!/bin/sh -f
++#!@SH@ -f
+ 
+ CC=$1
  CFLAGS=$2; shift 2
  
  outfile="$1"; shift
 -bin="$(echo $0 | sed 's,/[^/]*$,,')"
-+bin="$(echo $0 | /usr/bin/sed 's,/[^/]*$,,')"
++bin="$(echo $0 | @SED@ 's,/[^/]*$,,')"
  
  # Derived from Russ Cox's 9c in plan9port.
  
@@ -16,7 +22,7 @@ $NetBSD: patch-util_compile,v 1.2 2018/05/14 10:20:57 maya Exp $
  [ $? -eq 0 ] || echo $CC -o $outfile $CFLAGS $@ >&2
  
 -base=$(echo $BASE | sed 's/,/\\,/g')
-+base=$(echo $BASE | /usr/bin/sed 's/,/\\,/g')
++base=$(echo $BASE | @SED@ 's/,/\\,/g')
  re='\([^[:space:]/]*\..:[0-9]\)'
  
  undup() { # GCC is crap.
@@ -29,11 +35,11 @@ $NetBSD: patch-util_compile,v 1.2 2018/05/14 10:20:57 maya Exp $
 -	sed 's/ .first use in this function.$//; s/\"\([^\"][^\"]*\)\", line \([0-9][0-9]*\)/\1:\2/g' |
 -	awk '$1 == "warning:"{t=$2" "$1; sub(/^[^ ]+ [^ ]+ /, ""); $0 = t" "$0}; //' |
 -	awk '{sub(/\[/, ": [", $1); print}' |
-+cat $xtmp | /usr/bin/sed "s,^$re,$base&,g; s,\([[:space:]]\)$re,\1$base\2,g" |
-+	/usr/bin/egrep -v ': error: .Each undeclared identifier|: error: for each function it appears|is dangerous, better use|is almost always misused|: In function |: At top level:|support .long long.|use of C99 long long|ISO C forbids conversion|warning:.*warn_unused_result' |
-+	/usr/bin/sed 's/ .first use in this function.$//; s/\"\([^\"][^\"]*\)\", line \([0-9][0-9]*\)/\1:\2/g' |
-+	/usr/bin/awk '$1 == "warning:"{t=$2" "$1; sub(/^[^ ]+ [^ ]+ /, ""); $0 = t" "$0}; //' |
-+	/usr/bin/awk '{sub(/\[/, ": [", $1); print}' |
++cat $xtmp | @SED@ "s,^$re,$base&,g; s,\([[:space:]]\)$re,\1$base\2,g" |
++	@EGREP@ -v ': error: .Each undeclared identifier|: error: for each function it appears|is dangerous, better use|is almost always misused|: In function |: At top level:|support .long long.|use of C99 long long|ISO C forbids conversion|warning:.*warn_unused_result' |
++	@SED@ 's/ .first use in this function.$//; s/\"\([^\"][^\"]*\)\", line \([0-9][0-9]*\)/\1:\2/g' |
++	@AWK@ '$1 == "warning:"{t=$2" "$1; sub(/^[^ ]+ [^ ]+ /, ""); $0 = t" "$0}; //' |
++	@AWK@ '{sub(/\[/, ": [", $1); print}' |
  	undup 1>&2
  
  rm -f $xtmp

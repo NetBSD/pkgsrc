@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.33 2018/05/14 10:20:57 maya Exp $
+# $NetBSD: Makefile,v 1.34 2018/05/14 10:31:14 maya Exp $
 
-PKGNAME=		wmii-3.9.2
 DISTNAME=		wmii+ixp-3.9.2
+PKGNAME=		wmii-3.9.2
 CATEGORIES=		wm
 MASTER_SITES=		http://dl.suckless.org/wmii/
+EXTRACT_SUFX=		.tbz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/0intro/wmii
 COMMENT=		Modular and keyboard-friendly window manager
 LICENSE=		mit
-EXTRACT_SUFX=		.tbz
 
 DEPENDS+=		dmenu>=3.7:../../x11/dmenu
 
@@ -23,10 +23,10 @@ MAKE_ENV+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE}
 MAKE_JOBS_SAFE=		no
 
 # see ${WRKSRC}/mk/wmii.mk
-CONFVERSION=		3.9.2
+CONFVERSION=		${PKGNAME:S/wmii-//}
 
 EGDIR=			${PREFIX}/share/examples/wmii
-EGSUBDIR.top=		
+EGSUBDIR.top=		# empty
 EGFILES.top+=		wmiirc welcome
 EGSUBDIR.pygmi=		python/pygmi
 EGFILES.pygmi+=		__init__.py event.py fs.py menu.py monitor.py
@@ -38,10 +38,9 @@ EGSUBDIR.python=	python
 EGFILES.python+=	wmiirc wmiirc.py
 EGSUBDIR.ruby=		ruby
 EGFILES.ruby+=		wmiirc config.rb config.yaml
-CONF_FILES_MODE=	0755
+CONF_FILES_MODE=	0644
 
 .for subdir in top pygmi pyxp python ruby
-THING+=	${subdir}
 .  for file in ${EGFILES.${subdir}}
 CONF_FILES+=		${EGDIR}/${EGSUBDIR.${subdir}}/${file} \
 			${PKG_SYSCONFDIR}/wmii-${CONFVERSION}/${EGSUBDIR.${subdir}}${file}
@@ -51,7 +50,7 @@ CONF_FILES+=		${EGDIR}/${EGSUBDIR.${subdir}}/${file} \
 LDFLAGS.SunOS+=		-lsocket -lnsl -liconv
 
 SUBST_CLASSES+=		vars
-SUBST_STAGE.vars=	pre-build
+SUBST_STAGE.vars=	post-patch
 SUBST_FILES.vars=	util/compile
 SUBST_VARS.vars=	EGREP SED SH AWK
 
