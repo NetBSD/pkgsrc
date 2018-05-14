@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/03/26 10:52:42 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.19 2018/05/14 11:31:18 fhajny Exp $
 bin/lexicon${PYVERSSUFFIX}
 ${PYSITELIB}/dns_${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/dns_${EGG_INFODIR}/SOURCES.txt
@@ -34,6 +34,8 @@ ${PYSITELIB}/lexicon/providers/cloudns.pyo
 ${PYSITELIB}/lexicon/providers/cloudns.pyc
 ${PYSITELIB}/lexicon/providers/cloudxns.pyo
 ${PYSITELIB}/lexicon/providers/cloudxns.pyc
+${PYSITELIB}/lexicon/providers/constellix.pyo
+${PYSITELIB}/lexicon/providers/constellix.pyc
 ${PYSITELIB}/lexicon/providers/digitalocean.pyo
 ${PYSITELIB}/lexicon/providers/digitalocean.pyc
 ${PYSITELIB}/lexicon/providers/dnsimple.pyo
@@ -56,6 +58,8 @@ ${PYSITELIB}/lexicon/providers/godaddy.pyo
 ${PYSITELIB}/lexicon/providers/godaddy.pyc
 ${PYSITELIB}/lexicon/providers/linode.pyo
 ${PYSITELIB}/lexicon/providers/linode.pyc
+${PYSITELIB}/lexicon/providers/linode4.pyo
+${PYSITELIB}/lexicon/providers/linode4.pyc
 ${PYSITELIB}/lexicon/providers/luadns.pyo
 ${PYSITELIB}/lexicon/providers/luadns.pyc
 ${PYSITELIB}/lexicon/providers/memset.pyo
@@ -97,6 +101,7 @@ ${PYSITELIB}/lexicon/providers/base.py
 ${PYSITELIB}/lexicon/providers/cloudflare.py
 ${PYSITELIB}/lexicon/providers/cloudns.py
 ${PYSITELIB}/lexicon/providers/cloudxns.py
+${PYSITELIB}/lexicon/providers/constellix.py
 ${PYSITELIB}/lexicon/providers/digitalocean.py
 ${PYSITELIB}/lexicon/providers/dnsimple.py
 ${PYSITELIB}/lexicon/providers/dnsmadeeasy.py
@@ -108,6 +113,7 @@ ${PYSITELIB}/lexicon/providers/gehirn.py
 ${PYSITELIB}/lexicon/providers/glesys.py
 ${PYSITELIB}/lexicon/providers/godaddy.py
 ${PYSITELIB}/lexicon/providers/linode.py
+${PYSITELIB}/lexicon/providers/linode4.py
 ${PYSITELIB}/lexicon/providers/luadns.py
 ${PYSITELIB}/lexicon/providers/memset.py
 ${PYSITELIB}/lexicon/providers/namecheap.py
