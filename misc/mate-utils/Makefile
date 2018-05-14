@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2018/04/16 14:34:54 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/05/14 13:21:46 youri Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-utils-${VERSION:R}.2
+DISTNAME=	mate-utils-${VERSION}
 CATEGORIES=	misc
 
 COMMENT=	Utiltiles for MATE Desktop
