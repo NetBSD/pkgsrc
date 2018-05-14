@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.10 2018/04/16 14:35:09 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/05/14 12:38:02 youri Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	caja-dropbox-${VERSION}
