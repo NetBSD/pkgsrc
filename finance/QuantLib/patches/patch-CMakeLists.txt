@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2018/05/14 00:06:44 minskim Exp $
+
+Derive the library version from PKGVERSION.
+
+--- CMakeLists.txt.orig	2018-04-16 07:26:17.000000000 +0000
++++ CMakeLists.txt
+@@ -1,6 +1,6 @@
+-cmake_minimum_required()
++cmake_minimum_required(VERSION 3.0)
+ 
+-project(QuantLib)
++project(QuantLib VERSION @PKGVERSION@)
+ 
+ include(${CMAKE_CURRENT_LIST_DIR}/cmake/quantlib.cmake)
+ 

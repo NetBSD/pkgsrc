@@ -1,0 +1,23 @@
+$NetBSD: patch-ql_CMakeLists.txt,v 1.1 2018/05/14 00:06:44 minskim Exp $
+
+- Set the shared library version.
+- Prevent the build directory itself from being copied to DESTINATION.
+
+--- ql/CMakeLists.txt.orig	2018-04-16 07:26:17.000000000 +0000
++++ ql/CMakeLists.txt
+@@ -13,11 +13,14 @@ if(WIN32)
+ else()
+     add_library(${QL_OUTPUT_NAME} ${QUANTLIB_FILES})
+ endif()
++set_target_properties(${QL_OUTPUT_NAME} PROPERTIES VERSION ${PROJECT_VERSION})
++set_target_properties(${QL_OUTPUT_NAME} PROPERTIES SOVERSION ${PROJECT_VERSION_MAJOR})
+ set(QL_LINK_LIBRARY ${QL_OUTPUT_NAME} PARENT_SCOPE)
+ 
+ 
+ install(DIRECTORY . DESTINATION include/ql
+-        FILES_MATCHING PATTERN "*.hpp" PATTERN "*.h")
++        FILES_MATCHING PATTERN "*.hpp" PATTERN "*.h"
++        PATTERN "CMakeFiles" EXCLUDE)
+ 
+ install(TARGETS ${QL_OUTPUT_NAME}
+         ARCHIVE DESTINATION lib
