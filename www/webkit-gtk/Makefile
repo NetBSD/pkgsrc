@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.136 2018/04/28 19:10:13 wiz Exp $
+# $NetBSD: Makefile,v 1.137 2018/05/14 21:22:34 wiz Exp $
 
-DISTNAME=	webkitgtk-2.20.1
+DISTNAME=	webkitgtk-2.20.2
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
@@ -28,8 +28,8 @@ GCC_REQD+=	5.0
 CMAKE_ARGS+=	-DUSE_LD_GOLD=OFF
 
 PKGCONFIG_OVERRIDE+=	Source/JavaScriptCore/javascriptcoregtk.pc.in
-PKGCONFIG_OVERIDE+=	Source/WebKit/gtk/webkit2gtk-web-extension.pc.in
-PKGCONFIG_OVERIDE+=	Source/WebKit/gtk/webkit2gtk.pc.in
+PKGCONFIG_OVERRIDE+=	Source/WebKit/gtk/webkit2gtk-web-extension.pc.in
+PKGCONFIG_OVERRIDE+=	Source/WebKit/gtk/webkit2gtk.pc.in
 
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=		-DPORT=GTK
