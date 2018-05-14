@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"netbsd.org/pkglint/trace"
 	"path"
 	"strings"
 )
@@ -70,7 +71,55 @@ func (src *Pkgsrc) InitVartypes() {
 		acl(varname, kindOfList, checker, "buildlink3.mk, builtin.mk:; *: use-loadtime, use")
 	}
 
-	jvms := enum("openjdk8 oracle-jdk8 openjdk7 sun-jdk7 sun-jdk6 jdk16 jdk15 kaffe") // See mk/java-vm.mk:/_PKG_JVMS/
+	jvms := enum(func() string {
+		lines, _ := readLines(src.File("mk/java-vm.mk"), true)
+		mklines := NewMkLines(lines)
+		jvms := make(map[string]bool)
+		for _, mkline := range mklines.mklines {
+			if mkline.IsVarassign() && mkline.Varcanon() == "_PKG_JVMS.*" {
+				words, _ := splitIntoMkWords(mkline.Line, mkline.Value())
+				for _, word := range words {
+					if !contains(word, "$") {
+						jvms[word] = true
+					}
+				}
+			}
+		}
+		if len(jvms) == 0 {
+			return "openjdk8 oracle-jdk8 openjdk7 sun-jdk7 sun-jdk6 jdk16 jdk15 kaffe"
+		}
+		joined := keysJoined(jvms)
+		if trace.Tracing {
+			trace.Stepf("JVMs from mk/java-vm.mk: %s", joined)
+		}
+		return joined
+	}())
+
+	languages := enum(
+		func() string {
+			lines, _ := readLines(src.File("mk/compiler.mk"), true)
+			mklines := NewMkLines(lines)
+			languages := make(map[string]bool)
+			for _, mkline := range mklines.mklines {
+				if mkline.IsCond() && mkline.Directive() == "for" {
+					words := splitOnSpace(mkline.Args())
+					if len(words) > 2 && words[0] == "_version_" {
+						for _, word := range words[2:] {
+							languages[word] = true
+						}
+					}
+				}
+			}
+			for _, language := range splitOnSpace("ada c c99 c++ c++11 fortran fortran77 java objc obj-c++") {
+				languages[language] = true
+			}
+
+			joined := keysJoined(languages)
+			if trace.Tracing {
+				trace.Stepf("Languages from mk/compiler.mk: %s", joined)
+			}
+			return joined
+		}())
 
 	// Last synced with mk/defaults/mk.conf revision 1.269
 	usr("USE_CWRAPPERS", lkNone, enum("yes no auto"))
@@ -949,6 +998,7 @@ func (src *Pkgsrc) InitVartypes() {
 	pkg("SUBST_STAGE.*", lkNone, BtStage)
 	pkglist("SUBST_VARS.*", lkShell, BtVariableName)
 	pkglist("SUPERSEDES", lkSpace, BtDependency)
+	acl("TEST_DEPENDS", lkSpace, BtDependencyWithPath, "Makefile, Makefile.common, *.mk: append")
 	pkglist("TEST_DIRS", lkShell, BtWrksrcSubdirectory)
 	pkglist("TEST_ENV", lkShell, BtShellWord)
 	acl("TEST_TARGET", lkShell, BtIdentifier, "Makefile: set; Makefile.common: default, set; options.mk: set, append")
@@ -983,7 +1033,7 @@ func (src *Pkgsrc) InitVartypes() {
 	acl("USE_IMAKE", lkNone, BtYes, "Makefile: set")
 	pkg("USE_JAVA", lkNone, enum("run yes build"))
 	pkg("USE_JAVA2", lkNone, enum("YES yes no 1.4 1.5 6 7 8"))
-	acl("USE_LANGUAGES", lkShell, enum("ada c c99 c++ c++11 fortran fortran77 java objc"), "Makefile, Makefile.common, options.mk: set, append")
+	acl("USE_LANGUAGES", lkShell, languages, "Makefile, Makefile.common, options.mk: set, append")
 	pkg("USE_LIBTOOL", lkNone, BtYes)
 	pkg("USE_MAKEINFO", lkNone, BtYes)
 	pkg("USE_MSGFMT_PLURALS", lkNone, BtYes)
