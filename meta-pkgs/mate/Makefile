@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/05/14 12:26:20 youri Exp $
+# $NetBSD: Makefile,v 1.11 2018/05/14 13:50:17 youri Exp $
 
 MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
@@ -24,6 +24,7 @@ DEPENDS+=	libmateweather>=${VERSION}:../../misc/libmateweather
 DEPENDS+=	marco>=${VERSION}:../../wm/marco
 DEPENDS+=	mate-applets>=${VERSION}:../../x11/mate-applets
 DEPENDS+=	mate-backgrounds>=${VERSION}:../../graphics/mate-backgrounds
+DEPENDS+=	mate-calc>=${VERSION}:../../misc/mate-calc
 DEPENDS+=	mate-common>=${VERSION}:../../devel/mate-common
 DEPENDS+=	mate-control-center>=${VERSION}:../../x11/mate-control-center
 DEPENDS+=	mate-desktop>=${VERSION}:../../x11/mate-desktop
