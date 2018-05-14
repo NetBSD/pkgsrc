@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2332 2018/05/14 12:44:17 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2333 2018/05/14 12:45:15 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3412,3 +3412,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/engrampa to 1.20.0 [youri 2018-05-14]
 	Updated graphics/eom to 1.20.0 [youri 2018-05-14]
 	Updated x11/libmatekbd to 1.20.1 [youri 2018-05-14]
+	Updated audio/libmatemixer to 1.20.0 [youri 2018-05-14]
