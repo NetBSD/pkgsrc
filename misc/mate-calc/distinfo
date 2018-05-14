@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/05/14 14:02:19 youri Exp $
+
+SHA1 (mate-calc-1.20.1.tar.xz) = 4e829f4ada4bf6dba919a50e40e4a40cdbd9633b
+RMD160 (mate-calc-1.20.1.tar.xz) = cbf015826424390e9bf13c422598012b3eca724c
+SHA512 (mate-calc-1.20.1.tar.xz) = 4e6109877b25f647ae10a1211f16adb9889bc96a43f5e0f95ca7111583f98a2828dc91c0d89cd7a1bf102bc53d67476e1b6bbfccc04e3c3dd1990858aab2a27f
+Size (mate-calc-1.20.1.tar.xz) = 734420 bytes
