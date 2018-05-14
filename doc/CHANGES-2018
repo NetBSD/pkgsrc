@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2316 2018/05/14 08:13:20 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2317 2018/05/14 08:58:29 he Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3396,3 +3396,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-h11 to 0.8.1 [adam 2018-05-14]
 	Updated time/py-dateutil to 2.7.3 [adam 2018-05-14]
 	Updated sysutils/py-crontab to 2.3.0 [adam 2018-05-14]
+	Updated net/tcl-scotty to 2.1.11nb17 [he 2018-05-14]
