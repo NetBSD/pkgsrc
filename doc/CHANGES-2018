@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2314 2018/05/14 07:18:12 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2315 2018/05/14 07:45:49 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3392,3 +3392,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated meta-pkgs/texlive-collection-basic-doc to 2018 [wiz 2018-05-14]
 	Updated converters/py-simplejson to 3.15.0 [adam 2018-05-14]
 	Updated devel/py-faker to 0.8.14 [adam 2018-05-14]
+	Updated devel/py-flake8 to 3.5.0nb1 [leot 2018-05-14]
