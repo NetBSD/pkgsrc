@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2018/05/14 12:26:20 youri Exp $
+# $NetBSD: Makefile.common,v 1.4 2018/05/14 13:50:17 youri Exp $
 # used by meta-pkgs/mate/Makefile
 # used by print/atril/Makefile
 # used by sysutils/caja/Makefile
@@ -8,6 +8,7 @@
 # used by graphics/eom/Makefile
 # used by x11/libmatekbd/Makefile
 # used by audio/libmatemixer/Makefile
+# used by misc/mate-calc/Makefile
 # used by misc/libmateweather/Makefile
 # used by wm/marco/Makefile
 # used by x11/mate-applets/Makefile
