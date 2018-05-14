@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2313 2018/05/14 06:44:44 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2314 2018/05/14 07:18:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3390,3 +3390,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-setuptools_scm to 2.1.0 [adam 2018-05-14]
 	Updated math/py-scipy to 1.1.0 [adam 2018-05-14]
 	Updated meta-pkgs/texlive-collection-basic-doc to 2018 [wiz 2018-05-14]
+	Updated converters/py-simplejson to 3.15.0 [adam 2018-05-14]
+	Updated devel/py-faker to 0.8.14 [adam 2018-05-14]
