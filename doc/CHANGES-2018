@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2311 2018/05/14 00:07:40 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2312 2018/05/14 06:42:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3387,3 +3387,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/arc-theme to 20170302 [youri 2018-05-13]
 	Updated devel/p5-FindBin-libs to 2.19.1 [schmonz 2018-05-13]
 	Added finance/QuantLib version 1.12.1 [minskim 2018-05-14]
+	Updated devel/py-setuptools_scm to 2.1.0 [adam 2018-05-14]
+	Updated math/py-scipy to 1.1.0 [adam 2018-05-14]
