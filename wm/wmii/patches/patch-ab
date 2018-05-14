@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2010/02/12 20:42:33 joerg Exp $
+$NetBSD: patch-ab,v 1.7 2018/05/14 10:20:57 maya Exp $
 
---- rc/Makefile.orig	2007-11-16 14:59:15.000000000 +0100
+--- rc/Makefile.orig	2010-06-10 07:24:04.000000000 +0000
 +++ rc/Makefile
 @@ -2,7 +2,7 @@ ROOT=..
- include ${ROOT}/mk/hdr.mk
- include ${ROOT}/mk/wmii.mk
+ include $(ROOT)/mk/hdr.mk
+ include $(ROOT)/mk/wmii.mk
  
--BIN = ${ETC}/wmii-${CONFVERSION}
-+BIN = ${DESTDIR}${PREFIX}/share/examples/wmii-${CONFVERSION}
- TARG =	rc.wmii   \
- 	wmiirc    \
+-BIN = $(ETC)/wmii$(CONFVERSION)
++BIN = $(PREFIX)/share/examples/wmii$(CONFVERSION)
+ TARG =  wmiirc    \
  	welcome
+ 

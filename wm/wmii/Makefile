@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2017/09/06 11:30:41 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2018/05/14 10:20:57 maya Exp $
 
-DISTNAME=		wmii-3.6
-PKGREVISION=		4
+PKGNAME=		wmii-3.9.2
+DISTNAME=		wmii+ixp-3.9.2
 CATEGORIES=		wm
 MASTER_SITES=		http://dl.suckless.org/wmii/
 
@@ -9,6 +9,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/0intro/wmii
 COMMENT=		Modular and keyboard-friendly window manager
 LICENSE=		mit
+EXTRACT_SUFX=		.tbz
 
 DEPENDS+=		dmenu>=3.7:../../x11/dmenu
 
@@ -22,16 +23,29 @@ MAKE_ENV+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE}
 MAKE_JOBS_SAFE=		no
 
 # see ${WRKSRC}/mk/wmii.mk
-CONFVERSION=		3.5
-PLIST_SUBST+=		CONFVERSION=${CONFVERSION}
+CONFVERSION=		3.9.2
 
-PKG_SYSCONFSUBDIR=	wmii-${CONFVERSION}
-EGDIR=			${PREFIX}/share/examples/${PKG_SYSCONFSUBDIR}
-EGFILES=		rc.wmii welcome wmiirc
+EGDIR=			${PREFIX}/share/examples/wmii
+EGSUBDIR.top=		
+EGFILES.top+=		wmiirc welcome
+EGSUBDIR.pygmi=		python/pygmi
+EGFILES.pygmi+=		__init__.py event.py fs.py menu.py monitor.py
+EGFILES.pygmi+=		util.py
+EGSUBDIR.pyxp=		python/pyxp
+EGFILES.pyxp+=		__init__.py asyncclient.py client.py dial.py
+EGFILES.pyxp+=		fcall.py fields.py messages.py mux.py types.py
+EGSUBDIR.python=	python
+EGFILES.python+=	wmiirc wmiirc.py
+EGSUBDIR.ruby=		ruby
+EGFILES.ruby+=		wmiirc config.rb config.yaml
 CONF_FILES_MODE=	0755
 
-.for f in ${EGFILES}
-CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+.for subdir in top pygmi pyxp python ruby
+THING+=	${subdir}
+.  for file in ${EGFILES.${subdir}}
+CONF_FILES+=		${EGDIR}/${EGSUBDIR.${subdir}}/${file} \
+			${PKG_SYSCONFDIR}/wmii-${CONFVERSION}/${EGSUBDIR.${subdir}}${file}
+.  endfor
 .endfor
 
 LDFLAGS.SunOS+=		-lsocket -lnsl -liconv
@@ -39,15 +53,19 @@ LDFLAGS.SunOS+=		-lsocket -lnsl -liconv
 SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	pre-build
 SUBST_FILES.vars=	util/compile
-SUBST_VARS.vars=	EGREP SED SH
+SUBST_VARS.vars=	EGREP SED SH AWK
 
 post-build:
 	mv ${WRKSRC}/man/wmii.1 ${WRKSRC}/man/wmii.tbl
 	${TBL} ${WRKSRC}/man/wmii.tbl > ${WRKSRC}/man/wmii.1
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/libixp/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
+# bundles it's own libixp, which is needed until a new stable release is out.
+#.include "../../devel/libixp/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
