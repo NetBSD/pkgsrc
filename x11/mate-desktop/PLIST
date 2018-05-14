@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2017/06/23 17:17:44 youri Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/05/14 12:55:02 youri Exp $
 bin/mate-about
 bin/mate-color-select
-include/mate-desktop-2.0/libmate-desktop/mate-aboutdialog.h
 include/mate-desktop-2.0/libmate-desktop/mate-bg-crossfade.h
 include/mate-desktop-2.0/libmate-desktop/mate-bg.h
 include/mate-desktop-2.0/libmate-desktop/mate-colorbutton.h
@@ -115,6 +114,7 @@ share/locale/fi/LC_MESSAGES/mate-desktop.mo
 share/locale/fr/LC_MESSAGES/mate-desktop.mo
 share/locale/frp/LC_MESSAGES/mate-desktop.mo
 share/locale/fur/LC_MESSAGES/mate-desktop.mo
+share/locale/fy/LC_MESSAGES/mate-desktop.mo
 share/locale/ga/LC_MESSAGES/mate-desktop.mo
 share/locale/gl/LC_MESSAGES/mate-desktop.mo
 share/locale/gu/LC_MESSAGES/mate-desktop.mo
