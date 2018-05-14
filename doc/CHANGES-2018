@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2347 2018/05/14 13:07:07 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2348 2018/05/14 13:08:41 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3427,3 +3427,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/mate-menus to 1.20.0 [youri 2018-05-14]
 	Updated wm/mate-netbook to 1.20.0 [youri 2018-05-14]
 	Updated sysutils/mate-notification-daemon to 1.20.0 [youri 2018-05-14]
+	Updated x11/mate-panel to 1.20.1 [youri 2018-05-14]
