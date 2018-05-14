@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.63 2018/05/12 22:06:55 minskim Exp $
+# $NetBSD: Makefile,v 1.64 2018/05/14 00:07:09 minskim Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
 
+SUBDIR+=	QuantLib
 SUBDIR+=	R-TTR
 SUBDIR+=	R-fAsianOptions
 SUBDIR+=	R-fBasics
