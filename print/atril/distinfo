@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2017/06/23 17:05:52 youri Exp $
+$NetBSD: distinfo,v 1.4 2018/05/14 12:22:42 youri Exp $
 
-SHA1 (atril-1.18.0.tar.xz) = 5cbcd69733bd5ba23c10a60b2a2350171d95ddf6
-RMD160 (atril-1.18.0.tar.xz) = ce083ead29df0e72def3c59e08e8490ea3b0f74e
-SHA512 (atril-1.18.0.tar.xz) = 71e40faebfac08c60c90e7c919d2274976a5f03e6f9c6882fe81d4736152c14b1baf45da770f357030708d103203a4ffc47387c736c4df8737dfc5caf1fd466a
-Size (atril-1.18.0.tar.xz) = 1688144 bytes
+SHA1 (atril-1.20.1.tar.xz) = 16e508a469d1ed7850b75ddb9d9a1faf764379a9
+RMD160 (atril-1.20.1.tar.xz) = 6695e587bc1260fe8f5f8e0ab776b246cbd5c346
+SHA512 (atril-1.20.1.tar.xz) = 7a1216ff3302e1dd8caf09d8ff840e51d729c7e886ff3b2a4f7e4f860a46f1d5ac1ab7e7979aa3dac60d13c0ee316966309657462c35c815f6d5d93460ff26ed
+Size (atril-1.20.1.tar.xz) = 1754572 bytes
+SHA1 (patch-libview_ev-jobs.c) = 906b9d469d7ec2593540f15849432ab5d2a10f8f
