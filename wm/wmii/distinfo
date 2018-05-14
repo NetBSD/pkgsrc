@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.15 2018/05/14 10:20:57 maya Exp $
+$NetBSD: distinfo,v 1.16 2018/05/14 10:31:14 maya Exp $
 
 SHA1 (wmii+ixp-3.9.2.tbz) = e85a2979a0bd0a1db7ed486fc709afe72bafd8b0
 RMD160 (wmii+ixp-3.9.2.tbz) = 8a401a5d0a033c0da254d15e7fe415ec40e7a332
 SHA512 (wmii+ixp-3.9.2.tbz) = c75d6d3f80e2b263c8d7b9eb6d0e700a1ad642209fc0984908e9399d22372c6c0572f47ab61881d5d56c4cc4eeb2914a545f6af1bbb936b65848764577d75761
 Size (wmii+ixp-3.9.2.tbz) = 432032 bytes
-SHA1 (patch-aa) = ba9598bf6d9313a800ee8de8588a6192c294e697
+SHA1 (patch-aa) = e8f5445fce699ba438753cefd4ec250018ce6985
 SHA1 (patch-ab) = cdb5ae1f02497852a5c965bdfb106e1b3a77853e
 SHA1 (patch-cmd_wmii_main.c) = 2e52a5861b197b9ffa8b7df83230e7bc74059256
-SHA1 (patch-util_compile) = 0474964a1e2491a28a17cc1f37c7a3cadd3b598a
+SHA1 (patch-util_compile) = 5b4815086c36789ad53c795ab26057b1066f5113
