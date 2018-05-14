@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2017/06/23 17:29:04 youri Exp $
+$NetBSD: distinfo,v 1.3 2018/05/14 13:17:15 youri Exp $
 
-SHA1 (mate-settings-daemon-1.18.1.tar.xz) = 6bac65c5b702e45e809f43fc4ae732dc88549a9b
-RMD160 (mate-settings-daemon-1.18.1.tar.xz) = 3e5012ec404de6990fefe7964af16351f89eed7c
-SHA512 (mate-settings-daemon-1.18.1.tar.xz) = 35ea953a508c1a8a2359a13f36789f2b171873e2b153f3c7e5e779a900672cf19a4f36892136d4886e61349f536706f0ab0e781cbde3e246c490c66af3e621d6
-Size (mate-settings-daemon-1.18.1.tar.xz) = 778776 bytes
+SHA1 (mate-settings-daemon-1.20.1.tar.xz) = d1ded51db66a90fe618249a1153e93d32c4ae6bd
+RMD160 (mate-settings-daemon-1.20.1.tar.xz) = e11a8e07e9c7eaa5f3c6cb50b5ca5e2d2688ea0b
+SHA512 (mate-settings-daemon-1.20.1.tar.xz) = 87dbf87f5dbe13a44bacfe3b517270021bbbfc7930c0db07dd9294e1f8cbe388d891d4e6fd3eb6600c893d04894cd22427bde45421f8492b92a8724ab7e151af
+Size (mate-settings-daemon-1.20.1.tar.xz) = 793260 bytes
 SHA1 (patch-plugins_a11y-keyboard_Makefile.in) = aff615da1711ed635e1c6ef2727a7b6bb5d29300
