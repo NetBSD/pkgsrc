@@ -1,9 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.6 2012/09/15 10:04:06 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2018/05/14 12:14:41 youri Exp $
 
 BUILDLINK_TREE+=	atkmm
 
 .if !defined(ATKMM_BUILDLINK3_MK)
 ATKMM_BUILDLINK3_MK:=
+
+GCC_REQD+=	4.9
 
 BUILDLINK_API_DEPENDS.atkmm+=	atkmm>=2.22.1
 BUILDLINK_ABI_DEPENDS.atkmm+=	atkmm>=2.22.6nb3
