@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2366 2018/05/14 16:23:59 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2367 2018/05/14 20:26:00 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3446,3 +3446,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/elixir to 1.6.5 [fhajny 2018-05-14]
 	Updated sysutils/consul to 1.1.0 [fhajny 2018-05-14]
 	Updated devel/ivykis to 0.42.3 [fhajny 2018-05-14]
+	Updated pkgtools/pkglint to 5.5.11 [rillig 2018-05-14]
