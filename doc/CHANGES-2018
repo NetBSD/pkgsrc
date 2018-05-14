@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2336 2018/05/14 12:50:25 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2337 2018/05/14 12:51:49 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3416,3 +3416,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/libmateweather to 1.20.0 [youri 2018-05-14]
 	Updated wm/marco to 1.20.1 [youri 2018-05-14]
 	Updated x11/mate-applets to 1.20.1 [youri 2018-05-14]
+	Updated graphics/mate-backgrounds to 1.20.0 [youri 2018-05-14]
