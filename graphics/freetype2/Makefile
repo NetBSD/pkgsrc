@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.115 2018/05/04 08:40:11 adam Exp $
+# $NetBSD: Makefile,v 1.116 2018/05/14 09:13:16 jperkin Exp $
 
 DISTNAME=	freetype-2.9.1
 PKGNAME=	${DISTNAME:S/-/2-/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/}
 MASTER_SITES+=	http://download.savannah.gnu.org/releases/freetype/
@@ -21,6 +22,9 @@ CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-harfbuzz=no
 CONFIGURE_ENV+=		ac_cv_path_GREP=${GREP:Q} ac_cv_path_EGREP=${EGREP:Q}
+
+# Remove this when all dependent packages have switched to pkg-config
+CONFIGURE_ARGS+=	--enable-freetype-config
 
 .if exists(/System/Library/Frameworks/Carbon.framework)
 LDFLAGS+=	-framework Carbon
