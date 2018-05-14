@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2018/03/23 11:54:58 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2018/05/14 15:57:13 fhajny Exp $
 
-DISTNAME=		elixir-1.6.4
+DISTNAME=		elixir-1.6.5
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GITHUB:=elixir-lang/}
 
