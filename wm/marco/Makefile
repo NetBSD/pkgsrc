@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2018/04/16 14:33:57 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2018/05/14 12:48:14 youri Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	marco-${VERSION:R}.1
 CATEGORIES=	wm
 
-COMMENT=	MATE Marco is a fork of GNOME Metacity
+COMMENT=	Fork of GNOME Metacity
 
 USE_LANGUAGES=	c99
 
