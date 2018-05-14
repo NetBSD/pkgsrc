@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2318 2018/05/14 09:13:26 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.2319 2018/05/14 09:43:26 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3398,3 +3398,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/py-crontab to 2.3.0 [adam 2018-05-14]
 	Updated net/tcl-scotty to 2.1.11nb17 [he 2018-05-14]
 	Updated graphics/freetype2 to 2.9.1nb1 [jperkin 2018-05-14]
+	Updated devel/py-meson to 0.44.1nb2 [jperkin 2018-05-14]
