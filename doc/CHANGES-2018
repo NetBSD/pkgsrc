@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2355 2018/05/14 13:19:33 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2356 2018/05/14 13:20:22 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3435,3 +3435,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/mate-settings-daemon to 1.20.1 [youri 2018-05-14]
 	Updated sysutils/mate-system-monitor to 1.20.0 [youri 2018-05-14]
 	Updated x11/mate-terminal to 1.20.0 [youri 2018-05-14]
+	Updated net/mate-user-share to 1.20.0 [youri 2018-05-14]
