@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2018/05/14 13:50:17 youri Exp $
+# $NetBSD: Makefile.common,v 1.5 2018/05/14 19:15:35 youri Exp $
 # used by meta-pkgs/mate/Makefile
 # used by print/atril/Makefile
 # used by sysutils/caja/Makefile
@@ -45,6 +45,8 @@ EXTRACT_SUFX=	.tar.xz
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool msgfmt pkg-config
+
+MAINTAINER=	youri@NetBSD.org
 
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
