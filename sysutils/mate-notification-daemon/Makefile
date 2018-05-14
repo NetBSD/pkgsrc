@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.8 2018/04/16 14:35:12 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2018/05/14 13:06:55 youri Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-notification-daemon-${VERSION}
@@ -8,7 +7,7 @@ CATEGORIES=	sysutils
 
 COMMENT=	Notification daemon for MATE desktop
 
-CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
