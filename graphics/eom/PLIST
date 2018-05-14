@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/23 17:10:44 youri Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/05/14 12:42:35 youri Exp $
 bin/eom
 include/eom-2.20/eom/eom-application.h
 include/eom-2.20/eom/eom-clipboard-handler.h
@@ -34,7 +34,6 @@ lib/pkgconfig/eom.pc
 man/man1/eom.1
 share/appdata/eom.appdata.xml
 share/applications/eom.desktop
-share/eom/eom-3.18.css
 share/eom/eom-image-properties-dialog.ui
 share/eom/eom-multiple-save-as-dialog.ui
 share/eom/eom-preferences-dialog.ui
