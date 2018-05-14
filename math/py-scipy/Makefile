@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2018/05/12 21:21:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2018/05/14 06:39:32 adam Exp $
 
-DISTNAME=	scipy-1.0.1
+DISTNAME=	scipy-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
@@ -13,8 +13,6 @@ LICENSE=	modified-bsd
 USE_LANGUAGES+=	c c++ fortran
 MAKE_ENV+=	ATLAS=None
 
-PLIST_VARS+=	dsym
-
 # XXX Avoid picking up other compilers when installed
 .include "../../mk/compiler.mk"
 
@@ -22,9 +20,6 @@ PLIST_VARS+=	dsym
 PYSETUPBUILDARGS+=	--fcompiler=g95
 .elif defined(PKGSRC_FORTRAN) && !empty(PKGSRC_FORTRAN:Mgfortran)
 PYSETUPBUILDARGS+=	--fcompiler=gnu95
-.  if defined(GFORTRAN_VERSION) && ${GFORTRAN_VERSION} == "7"
-PLIST.dsym=	yes
-.  endif
 LDFLAGS.Darwin+=	-undefined dynamic_lookup
 .else
 BROKEN=		Requires fortran 95
@@ -93,7 +88,6 @@ REPLACE_PYTHON+=	scipy/stats/setup.py
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
 	${FIND} ${DESTDIR}${PREFIX} -name "*.so" |                      \
-		${GREP} -v "dSYM/Contents/Resources/DWARF/" |           \
 		while read lib; do                                      \
 		libname=`basename $${lib}`;                             \
 		libdir=`dirname $${lib} | sed -e 's,${DESTDIR},,'`;     \
@@ -110,7 +104,6 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 # https://github.com/scipy/scipy/issues/6499
 do-test:
 	${PYTHONBIN} -c "import scipy; scipy.test('full')"
-#	cd ${WRKSRC} && ${PYTHONBIN} runtests.py -v
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
