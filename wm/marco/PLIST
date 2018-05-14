@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/06/23 17:13:31 youri Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/05/14 12:48:14 youri Exp $
 bin/marco
 bin/marco-message
 bin/marco-theme-viewer
@@ -19,6 +19,7 @@ man/man1/marco.1
 share/applications/marco.desktop
 share/glib-2.0/schemas/org.mate.marco.gschema.xml
 share/help/C/creating-marco-themes/index.docbook
+share/locale/af/LC_MESSAGES/marco.mo
 share/locale/am/LC_MESSAGES/marco.mo
 share/locale/ar/LC_MESSAGES/marco.mo
 share/locale/as/LC_MESSAGES/marco.mo
@@ -47,11 +48,14 @@ share/locale/eo/LC_MESSAGES/marco.mo
 share/locale/es/LC_MESSAGES/marco.mo
 share/locale/es_CO/LC_MESSAGES/marco.mo
 share/locale/es_MX/LC_MESSAGES/marco.mo
+share/locale/es_PR/LC_MESSAGES/marco.mo
 share/locale/et/LC_MESSAGES/marco.mo
 share/locale/eu/LC_MESSAGES/marco.mo
 share/locale/fa/LC_MESSAGES/marco.mo
 share/locale/fi/LC_MESSAGES/marco.mo
 share/locale/fr/LC_MESSAGES/marco.mo
+share/locale/frp/LC_MESSAGES/marco.mo
+share/locale/fur/LC_MESSAGES/marco.mo
 share/locale/ga/LC_MESSAGES/marco.mo
 share/locale/gl/LC_MESSAGES/marco.mo
 share/locale/gu/LC_MESSAGES/marco.mo
@@ -75,6 +79,7 @@ share/locale/ku/LC_MESSAGES/marco.mo
 share/locale/ku_IQ/LC_MESSAGES/marco.mo
 share/locale/ky/LC_MESSAGES/marco.mo
 share/locale/la/LC_MESSAGES/marco.mo
+share/locale/li/LC_MESSAGES/marco.mo
 share/locale/lt/LC_MESSAGES/marco.mo
 share/locale/lv/LC_MESSAGES/marco.mo
 share/locale/mai/LC_MESSAGES/marco.mo
@@ -89,10 +94,12 @@ share/locale/nds/LC_MESSAGES/marco.mo
 share/locale/ne/LC_MESSAGES/marco.mo
 share/locale/nl/LC_MESSAGES/marco.mo
 share/locale/nn/LC_MESSAGES/marco.mo
+share/locale/nso/LC_MESSAGES/marco.mo
 share/locale/oc/LC_MESSAGES/marco.mo
 share/locale/or/LC_MESSAGES/marco.mo
 share/locale/pa/LC_MESSAGES/marco.mo
 share/locale/pl/LC_MESSAGES/marco.mo
+share/locale/ps/LC_MESSAGES/marco.mo
 share/locale/pt/LC_MESSAGES/marco.mo
 share/locale/pt_BR/LC_MESSAGES/marco.mo
 share/locale/ro/LC_MESSAGES/marco.mo
@@ -110,7 +117,9 @@ share/locale/te/LC_MESSAGES/marco.mo
 share/locale/th/LC_MESSAGES/marco.mo
 share/locale/tk/LC_MESSAGES/marco.mo
 share/locale/tr/LC_MESSAGES/marco.mo
+share/locale/ug/LC_MESSAGES/marco.mo
 share/locale/uk/LC_MESSAGES/marco.mo
+share/locale/ur/LC_MESSAGES/marco.mo
 share/locale/uz/LC_MESSAGES/marco.mo
 share/locale/vi/LC_MESSAGES/marco.mo
 share/locale/wa/LC_MESSAGES/marco.mo
@@ -119,6 +128,7 @@ share/locale/yo/LC_MESSAGES/marco.mo
 share/locale/zh_CN/LC_MESSAGES/marco.mo
 share/locale/zh_HK/LC_MESSAGES/marco.mo
 share/locale/zh_TW/LC_MESSAGES/marco.mo
+share/locale/zu/LC_MESSAGES/marco.mo
 share/marco/icons/marco-window-demo.png
 share/mate-control-center/keybindings/50-marco-desktop-key.xml
 share/mate-control-center/keybindings/50-marco-global-key.xml
