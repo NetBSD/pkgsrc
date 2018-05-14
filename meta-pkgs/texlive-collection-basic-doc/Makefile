@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2017/09/06 12:32:35 markd Exp $
+# $NetBSD: Makefile,v 1.4 2018/05/14 06:44:34 wiz Exp $
 
 DISTNAME=	collection-basic-doc
-PKGNAME=	texlive-${DISTNAME}-2013
+PKGNAME=	texlive-${DISTNAME}-2018
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	30372
@@ -36,7 +36,6 @@ DEPENDS+=	tex-pdftex-doc-[0-9]*:../../print/tex-pdftex-doc
 # tex-plain doesn't have a documentation package.
 DEPENDS+=	tex-tetex-doc-[0-9]*:../../print/tex-tetex-doc
 # tex-tex's documentation is installed by web2c.
-DEPENDS+=	tex-texconfig-doc-[0-9]*:../../print/tex-texconfig-doc
 DEPENDS+=	tex-texlive-common-doc-[0-9]*:../../print/tex-texlive-common-doc
 DEPENDS+=	tex-texlive-docindex-doc-[0-9]*:../../print/tex-texlive-docindex-doc
 DEPENDS+=	tex-texlive-en-doc-[0-9]*:../../print/tex-texlive-en-doc
