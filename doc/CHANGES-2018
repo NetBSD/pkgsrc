@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2323 2018/05/14 11:31:26 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2324 2018/05/14 12:09:40 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3403,3 +3403,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-peewee to 3.3.4 [fhajny 2018-05-14]
 	Updated net/rabbitmq to 3.7.5 [fhajny 2018-05-14]
 	Updated net/py-lexicon to 2.2.3 [fhajny 2018-05-14]
+	Updated x11/vte3 to 0.50.3 [youri 2018-05-14]
