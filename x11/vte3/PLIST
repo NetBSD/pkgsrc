@@ -1,25 +1,33 @@
-@comment $NetBSD: PLIST,v 1.1 2017/06/25 23:20:45 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/05/14 12:09:22 youri Exp $
 etc/profile.d/vte.sh
 include/vte-2.91/vte/vte.h
+include/vte-2.91/vte/vtedeprecated.h
 include/vte-2.91/vte/vteenums.h
 include/vte-2.91/vte/vteglobals.h
 include/vte-2.91/vte/vtemacros.h
 include/vte-2.91/vte/vtepty.h
+include/vte-2.91/vte/vteregex.h
 include/vte-2.91/vte/vteterminal.h
 include/vte-2.91/vte/vtetypebuiltins.h
 include/vte-2.91/vte/vteversion.h
 lib/libvte-2.91.la
 lib/pkgconfig/vte-2.91.pc
+share/gtk-doc/html/vte-2.91/VteRegex.html
 share/gtk-doc/html/vte-2.91/VteTerminal.html
 share/gtk-doc/html/vte-2.91/annotation-glossary.html
+share/gtk-doc/html/vte-2.91/api-index-0-40.html
+share/gtk-doc/html/vte-2.91/api-index-0-44.html
+share/gtk-doc/html/vte-2.91/api-index-0-46.html
+share/gtk-doc/html/vte-2.91/api-index-0-48.html
+share/gtk-doc/html/vte-2.91/api-index-0-50.html
 share/gtk-doc/html/vte-2.91/api-index-deprecated.html
 share/gtk-doc/html/vte-2.91/api-index-full.html
 share/gtk-doc/html/vte-2.91/ch01.html
 share/gtk-doc/html/vte-2.91/ch02.html
 share/gtk-doc/html/vte-2.91/ch03.html
+share/gtk-doc/html/vte-2.91/ch04.html
 share/gtk-doc/html/vte-2.91/home.png
 share/gtk-doc/html/vte-2.91/index.html
-share/gtk-doc/html/vte-2.91/index.sgml
 share/gtk-doc/html/vte-2.91/left-insensitive.png
 share/gtk-doc/html/vte-2.91/left.png
 share/gtk-doc/html/vte-2.91/licence.html
@@ -33,7 +41,9 @@ share/gtk-doc/html/vte-2.91/up.png
 share/gtk-doc/html/vte-2.91/vte-2.91.devhelp2
 share/gtk-doc/html/vte-2.91/vte-Version-Information.html
 share/gtk-doc/html/vte-2.91/vte-Vte-PTY.html
+share/locale/af/LC_MESSAGES/vte-2.91.mo
 share/locale/am/LC_MESSAGES/vte-2.91.mo
+share/locale/an/LC_MESSAGES/vte-2.91.mo
 share/locale/ang/LC_MESSAGES/vte-2.91.mo
 share/locale/ar/LC_MESSAGES/vte-2.91.mo
 share/locale/as/LC_MESSAGES/vte-2.91.mo
@@ -77,6 +87,7 @@ share/locale/is/LC_MESSAGES/vte-2.91.mo
 share/locale/it/LC_MESSAGES/vte-2.91.mo
 share/locale/ja/LC_MESSAGES/vte-2.91.mo
 share/locale/ka/LC_MESSAGES/vte-2.91.mo
+share/locale/kk/LC_MESSAGES/vte-2.91.mo
 share/locale/kn/LC_MESSAGES/vte-2.91.mo
 share/locale/ko/LC_MESSAGES/vte-2.91.mo
 share/locale/ku/LC_MESSAGES/vte-2.91.mo
