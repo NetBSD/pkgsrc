@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2341 2018/05/14 12:55:53 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2342 2018/05/14 13:00:31 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3421,3 +3421,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/mate-control-center to 1.20.2 [youri 2018-05-14]
 	Updated x11/mate-desktop to 1.20.1 [youri 2018-05-14]
 	Updated graphics/mate-icon-theme to 1.20.0 [youri 2018-05-14]
+	Updated graphics/mate-icon-theme-faenza to 1.20.0 [youri 2018-05-14]
