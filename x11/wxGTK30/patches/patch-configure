@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.2 2018/05/02 11:33:44 adam Exp $
+$NetBSD: patch-configure,v 1.3 2018/05/14 13:19:48 jperkin Exp $
 
 Fix shell script portability
 Add dragonfly support
@@ -78,3 +78,13 @@ tweak SEARCH_LIB
          if test "x$SUNCXX" = "xyes"; then
              SONAME_FLAG="-h "
          else
+@@ -40007,7 +40011,8 @@ EOF
+       *-*-solaris2* )
+         SONAME_FLAG="-h "
+         USE_SOVERSION=1
+-        USE_SOVERSOLARIS=1
++        USE_SOVERLINUX=1
++        USE_SOTWOSYMLINKS=1
+       ;;
+ 
+       *-*-darwin* )
