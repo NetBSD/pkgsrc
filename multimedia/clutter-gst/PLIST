@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/06/10 07:29:14 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/05/15 15:49:41 jperkin Exp $
 include/clutter-gst-3.0/clutter-gst/clutter-gst-aspectratio.h
 include/clutter-gst-3.0/clutter-gst/clutter-gst-camera-device.h
 include/clutter-gst-3.0/clutter-gst/clutter-gst-camera-manager.h
@@ -14,7 +14,7 @@ include/clutter-gst-3.0/clutter-gst/clutter-gst-version.h
 include/clutter-gst-3.0/clutter-gst/clutter-gst-video-sink.h
 include/clutter-gst-3.0/clutter-gst/clutter-gst.h
 lib/girepository-1.0/ClutterGst-3.0.typelib
-lib/gstreamer-1.0/libgstclutter-3.0.la
+lib/gstreamer-1.0/libcluttergst3.la
 lib/libclutter-gst-3.0.la
 lib/pkgconfig/clutter-gst-3.0.pc
 share/gir-1.0/ClutterGst-3.0.gir
@@ -46,7 +46,6 @@ share/gtk-doc/html/clutter-gst-3.0/index.html
 share/gtk-doc/html/clutter-gst-3.0/left-insensitive.png
 share/gtk-doc/html/clutter-gst-3.0/left.png
 share/gtk-doc/html/clutter-gst-3.0/license.html
-share/gtk-doc/html/clutter-gst-3.0/profile.txt
 share/gtk-doc/html/clutter-gst-3.0/right-insensitive.png
 share/gtk-doc/html/clutter-gst-3.0/right.png
 share/gtk-doc/html/clutter-gst-3.0/style.css
