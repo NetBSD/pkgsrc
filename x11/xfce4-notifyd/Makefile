@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2018/04/16 14:35:27 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/05/15 22:11:39 youri Exp $
 #
 
-PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-notifyd-0.3.6
+DISTNAME=	xfce4-notifyd-0.4.2
 CATEGORIES=	x11
-MASTER_SITES=	http://archive.xfce.org/src/apps/xfce4-notifyd/0.3/
+MASTER_SITES=	http://archive.xfce.org/src/apps/xfce4-notifyd/0.4/
 
 HOMEPAGE=	http://goodies.xfce.org/projects/applications/xfce4-notifyd
 COMMENT=	XFCE Notify daemon
@@ -18,6 +17,7 @@ USE_LIBTOOL=	yes
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
+.include "../../x11/xfce4-panel/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
