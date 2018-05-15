@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2018/04/16 14:35:13 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/05/15 22:13:21 youri Exp $
 
-DISTNAME=	xfburn-0.5.4
-PKGREVISION=	5
+DISTNAME=	xfburn-0.5.5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://archive.xfce.org/src/apps/xfburn/0.5/
 EXTRACT_SUFX=	.tar.bz2
