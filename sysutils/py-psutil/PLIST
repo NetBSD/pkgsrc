@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2017/05/29 16:02:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2018/05/15 22:22:01 minskim Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/psutil/__init__.py
 ${PYSITELIB}/psutil/__init__.pyc
@@ -13,6 +14,12 @@ ${PYSITELIB}/psutil/_common.pyo
 ${PYSITELIB}/psutil/_compat.py
 ${PYSITELIB}/psutil/_compat.pyc
 ${PYSITELIB}/psutil/_compat.pyo
+${PYSITELIB}/psutil/_exceptions.py
+${PYSITELIB}/psutil/_exceptions.pyc
+${PYSITELIB}/psutil/_exceptions.pyo
+${PYSITELIB}/psutil/_psaix.py
+${PYSITELIB}/psutil/_psaix.pyc
+${PYSITELIB}/psutil/_psaix.pyo
 ${PYSITELIB}/psutil/_psbsd.py
 ${PYSITELIB}/psutil/_psbsd.pyc
 ${PYSITELIB}/psutil/_psbsd.pyo
@@ -28,7 +35,7 @@ ${PYSITELIB}/psutil/_psposix.pyo
 ${PYSITELIB}/psutil/_pssunos.py
 ${PYSITELIB}/psutil/_pssunos.pyc
 ${PYSITELIB}/psutil/_pssunos.pyo
-${PYSITELIB}/psutil/_psutil_${SYSTEM}.so
+${PYSITELIB}/psutil/_psutil_osx.so
 ${PYSITELIB}/psutil/_psutil_posix.so
 ${PYSITELIB}/psutil/_pswindows.py
 ${PYSITELIB}/psutil/_pswindows.pyc
@@ -36,12 +43,21 @@ ${PYSITELIB}/psutil/_pswindows.pyo
 ${PYSITELIB}/psutil/tests/__init__.py
 ${PYSITELIB}/psutil/tests/__init__.pyc
 ${PYSITELIB}/psutil/tests/__init__.pyo
-${PYSITELIB}/psutil/tests/runner.py
-${PYSITELIB}/psutil/tests/runner.pyc
-${PYSITELIB}/psutil/tests/runner.pyo
+${PYSITELIB}/psutil/tests/__main__.py
+${PYSITELIB}/psutil/tests/__main__.pyc
+${PYSITELIB}/psutil/tests/__main__.pyo
+${PYSITELIB}/psutil/tests/test_aix.py
+${PYSITELIB}/psutil/tests/test_aix.pyc
+${PYSITELIB}/psutil/tests/test_aix.pyo
 ${PYSITELIB}/psutil/tests/test_bsd.py
 ${PYSITELIB}/psutil/tests/test_bsd.pyc
 ${PYSITELIB}/psutil/tests/test_bsd.pyo
+${PYSITELIB}/psutil/tests/test_connections.py
+${PYSITELIB}/psutil/tests/test_connections.pyc
+${PYSITELIB}/psutil/tests/test_connections.pyo
+${PYSITELIB}/psutil/tests/test_contracts.py
+${PYSITELIB}/psutil/tests/test_contracts.pyc
+${PYSITELIB}/psutil/tests/test_contracts.pyo
 ${PYSITELIB}/psutil/tests/test_linux.py
 ${PYSITELIB}/psutil/tests/test_linux.pyc
 ${PYSITELIB}/psutil/tests/test_linux.pyo
@@ -66,6 +82,9 @@ ${PYSITELIB}/psutil/tests/test_sunos.pyo
 ${PYSITELIB}/psutil/tests/test_system.py
 ${PYSITELIB}/psutil/tests/test_system.pyc
 ${PYSITELIB}/psutil/tests/test_system.pyo
+${PYSITELIB}/psutil/tests/test_unicode.py
+${PYSITELIB}/psutil/tests/test_unicode.pyc
+${PYSITELIB}/psutil/tests/test_unicode.pyo
 ${PYSITELIB}/psutil/tests/test_windows.py
 ${PYSITELIB}/psutil/tests/test_windows.pyc
 ${PYSITELIB}/psutil/tests/test_windows.pyo
