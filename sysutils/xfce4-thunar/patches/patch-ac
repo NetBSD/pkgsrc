@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.5 2017/06/18 21:40:45 youri Exp $
+$NetBSD: patch-ac,v 1.6 2018/05/15 22:25:31 youri Exp $
 
 Adjust config path.
 
---- plugins/thunar-uca/Makefile.in.orig	2015-05-22 20:47:31.000000000 +0000
+--- plugins/thunar-uca/Makefile.in.orig	2018-04-05 20:34:19.000000000 +0000
 +++ plugins/thunar-uca/Makefile.in
-@@ -496,7 +496,7 @@ thunar_uca_la_LIBADD = \
- thunar_uca_la_DEPENDENCIES = \
- 	$(top_builddir)/thunarx/libthunarx-$(THUNARX_VERSION_API).la
+@@ -531,7 +531,7 @@ thunar_uca_templates = \
  
+ GLIB_COMPILE_RESOURCES = $(shell $(PKG_CONFIG) --variable=glib_compile_resources gio-2.0)
+ resource_files = $(shell $(GLIB_COMPILE_RESOURCES) --sourcedir=$(srcdir) --generate-dependencies $(srcdir)/thunar-uca.gresource.xml)
 -defaultsdir = $(sysconfdir)/xdg/Thunar
 +defaultsdir = $(datadir)/examples/xfce4/Thunar
  defaults_in_files = uca.xml.in
