@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/06/18 21:13:47 youri Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/05/15 22:39:39 youri Exp $
 bin/xfce4-about
 include/xfce4/libxfce4kbd-private-2/libxfce4kbd-private/xfce-shortcut-dialog.h
 include/xfce4/libxfce4kbd-private-2/libxfce4kbd-private/xfce-shortcuts-grabber.h
@@ -39,22 +39,26 @@ lib/pkgconfig/libxfce4ui-2.pc
 share/applications/xfce4-about.desktop
 share/examples/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
 share/gtk-doc/html/libxfce4ui/XfceSMClient.html
+share/gtk-doc/html/libxfce4ui/XfceTitledDialog.html
+share/gtk-doc/html/libxfce4ui/annotation-glossary.html
+share/gtk-doc/html/libxfce4ui/api-index-4-10.html
+share/gtk-doc/html/libxfce4ui/api-index-4-12.html
+share/gtk-doc/html/libxfce4ui/api-index-4-14.html
+share/gtk-doc/html/libxfce4ui/api-index-full.html
 share/gtk-doc/html/libxfce4ui/home.png
 share/gtk-doc/html/libxfce4ui/index.html
-share/gtk-doc/html/libxfce4ui/ix01.html
 share/gtk-doc/html/libxfce4ui/left-insensitive.png
 share/gtk-doc/html/libxfce4ui/left.png
+share/gtk-doc/html/libxfce4ui/libxfce4ui-Gdk-Extensions.html
+share/gtk-doc/html/libxfce4ui/libxfce4ui-Gtk-Extensions.html
+share/gtk-doc/html/libxfce4ui/libxfce4ui-Spawn.html
+share/gtk-doc/html/libxfce4ui/libxfce4ui-XfceDialogs.html
 share/gtk-doc/html/libxfce4ui/libxfce4ui-extensions.html
 share/gtk-doc/html/libxfce4ui/libxfce4ui-fundamentals.html
 share/gtk-doc/html/libxfce4ui/libxfce4ui-introduction.html
 share/gtk-doc/html/libxfce4ui/libxfce4ui-libxfce4ui-config.html
 share/gtk-doc/html/libxfce4ui/libxfce4ui-sm.html
 share/gtk-doc/html/libxfce4ui/libxfce4ui-widgets.html
-share/gtk-doc/html/libxfce4ui/libxfce4ui-xfce-dialogs.html
-share/gtk-doc/html/libxfce4ui/libxfce4ui-xfce-gdk-extensions.html
-share/gtk-doc/html/libxfce4ui/libxfce4ui-xfce-gtk-extensions.html
-share/gtk-doc/html/libxfce4ui/libxfce4ui-xfce-spawn.html
-share/gtk-doc/html/libxfce4ui/libxfce4ui-xfce-titled-dialog.html
 share/gtk-doc/html/libxfce4ui/libxfce4ui.devhelp2
 share/gtk-doc/html/libxfce4ui/right-insensitive.png
 share/gtk-doc/html/libxfce4ui/right.png
