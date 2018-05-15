@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.11 2018/04/11 09:10:28 maya Exp $
+# $NetBSD: options.mk,v 1.12 2018/05/15 10:16:17 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libthrift
-PKG_SUPPORTED_OPTIONS=	perl python # csharp java erlang php ruby
+PKG_SUPPORTED_OPTIONS=	lua perl python # csharp java erlang php ruby
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		csharp erlang java perl php python ruby
+PLIST_VARS+=		csharp erlang java lua perl php python ruby
 
 .if !empty(PKG_OPTIONS:Mcsharp)
 CONFIGURE_ARGS+=	--with-csharp
@@ -42,6 +42,14 @@ PLIST.erlang=		yes
 .include "../../lang/erlang/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-erlang
+.endif
+
+.if !empty(PKG_OPTIONS:Mlua)
+CONFIGURE_ARGS+=	--with-lua
+.include "../../lang/lua/buildlink3.mk"
+PLIST.lua=		yes
+.else
+CONFIGURE_ARGS+=	--without-lua
 .endif
 
 .if !empty(PKG_OPTIONS:Mpython)
