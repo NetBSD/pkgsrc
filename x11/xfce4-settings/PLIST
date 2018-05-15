@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2015/04/21 08:56:45 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/05/15 22:18:03 youri Exp $
 bin/xfce4-accessibility-settings
 bin/xfce4-appearance-settings
 bin/xfce4-display-settings
+bin/xfce4-find-cursor
 bin/xfce4-keyboard-settings
 bin/xfce4-mime-settings
 bin/xfce4-mouse-settings
@@ -24,8 +25,10 @@ share/icons/hicolor/128x128/devices/xfce-display-extend.png
 share/icons/hicolor/128x128/devices/xfce-display-external.png
 share/icons/hicolor/128x128/devices/xfce-display-internal.png
 share/icons/hicolor/128x128/devices/xfce-display-mirror.png
+share/locale/am/LC_MESSAGES/xfce4-settings.mo
 share/locale/ar/LC_MESSAGES/xfce4-settings.mo
 share/locale/ast/LC_MESSAGES/xfce4-settings.mo
+share/locale/be/LC_MESSAGES/xfce4-settings.mo
 share/locale/bg/LC_MESSAGES/xfce4-settings.mo
 share/locale/bn/LC_MESSAGES/xfce4-settings.mo
 share/locale/ca/LC_MESSAGES/xfce4-settings.mo

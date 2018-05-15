@@ -1,8 +1,8 @@
-$NetBSD: patch-xfsettingsd_xsettings.xml,v 1.2 2017/06/18 22:41:54 youri Exp $
+$NetBSD: patch-xfsettingsd_xsettings.xml,v 1.3 2018/05/15 22:18:03 youri Exp $
 
-Use an Xfce theme and icon theme by default.
+Use a good icon theme by default.
 
---- xfsettingsd/xsettings.xml.orig	2015-02-24 01:33:11.000000000 +0000
+--- xfsettingsd/xsettings.xml.orig	2018-03-18 20:59:33.000000000 +0000
 +++ xfsettingsd/xsettings.xml
 @@ -6,8 +6,8 @@
  <?xml version="1.0" encoding="UTF-8"?>
@@ -10,7 +10,7 @@ Use an Xfce theme and icon theme by default.
    <property name="Net" type="empty">
 -    <property name="ThemeName" type="empty"/>
 -    <property name="IconThemeName" type="empty"/>
-+    <property name="ThemeName" type="string" value="Xfce-dusk"/>
++    <property name="ThemeName" type="string" value="empty"/>
 +    <property name="IconThemeName" type="string" value="elementary-xfce"/>
      <property name="DoubleClickTime" type="int" value="400"/>
      <property name="DoubleClickDistance" type="int" value="5"/>
