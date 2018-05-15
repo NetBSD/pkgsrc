@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2376 2018/05/15 15:14:51 wiedi Exp $
+$NetBSD: CHANGES-2018,v 1.2377 2018/05/15 15:49:54 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3460,3 +3460,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/syslog-ng to 3.15.1 [fhajny 2018-05-15]
 	Updated www/passenger to 5.3.1nb1 [fhajny 2018-05-15]
 	Updated editors/nano to 2.9.7 [wiedi 2018-05-15]
+	Updated multimedia/clutter-gst to 3.0.26 [jperkin 2018-05-15]
