@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.98 2018/05/14 21:22:34 wiz Exp $
+$NetBSD: distinfo,v 1.99 2018/05/15 08:32:37 wiz Exp $
 
 SHA1 (webkitgtk-2.20.2.tar.xz) = 2cc5099b1c70f61abe4c27f949b03bbf93a01d21
 RMD160 (webkitgtk-2.20.2.tar.xz) = 41a17b5552a575e7419f4180e33d0e8f1c0179aa
@@ -11,7 +11,7 @@ SHA1 (patch-Source_JavaScriptCore_jit_ExecutableAllocator.cpp) = 2f20d6aa8f1ec41
 SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = f1eee7f9d3012edee1915234c837cff820f97092
 SHA1 (patch-Source_WTF_wtf_ThreadSpecific.h) = 38a85e10a72fe38d286a2ce747e090a2955b8791
 SHA1 (patch-Source_WebCore_platform_FileSystem.cpp) = adef1a42c4e210f0a3dcb82807e2d2039684a0ec
-SHA1 (patch-Source_WebCore_platform_network_soup_SoupNetworkSession.h) = f2180e84ff7a98fc63a03f67f068ce67a6d62898
+SHA1 (patch-Source_WebCore_platform_network_soup_SoupNetworkSession.h) = 3027e43529e0feff40e58a32f38a8eb96113c828
 SHA1 (patch-Source_WebCore_rendering_shapes_RasterShape.cpp) = 551e47698dee50d097b11e3218f13bb3447edfea
 SHA1 (patch-Source_WebKit_Platform_IPC_unix_ConnectionUnix.cpp) = 9c58253868e06b3dd3cac936651ba7e6a1437fc6
 SHA1 (patch-Source_cmake_OptionsCommon.cmake) = 03b72552414e7114bfa7ddc2d68fd97009a5ff7d
