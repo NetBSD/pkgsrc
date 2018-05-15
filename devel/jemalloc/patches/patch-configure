@@ -1,0 +1,51 @@
+$NetBSD: patch-configure,v 1.3 2018/05/15 08:35:50 adam Exp $
+
+Do not use -O3, -g3, nor -funroll-loops; prefer PkgSrc provided compiler flags.
+
+--- configure.orig	2018-05-08 19:16:45.000000000 +0000
++++ configure
+@@ -4024,7 +4024,7 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether compiler supports -g3" >&5
+ $as_echo_n "checking whether compiler supports -g3... " >&6; }
+ T_CONFIGURE_CFLAGS="${CONFIGURE_CFLAGS}"
+-T_APPEND_V=-g3
++T_APPEND_V=
+   if test "x${CONFIGURE_CFLAGS}" = "x" -o "x${T_APPEND_V}" = "x" ; then
+   CONFIGURE_CFLAGS="${CONFIGURE_CFLAGS}${T_APPEND_V}"
+ else
+@@ -5936,7 +5936,7 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether compiler supports -g3" >&5
+ $as_echo_n "checking whether compiler supports -g3... " >&6; }
+ T_CONFIGURE_CXXFLAGS="${CONFIGURE_CXXFLAGS}"
+-T_APPEND_V=-g3
++T_APPEND_V=
+   if test "x${CONFIGURE_CXXFLAGS}" = "x" -o "x${T_APPEND_V}" = "x" ; then
+   CONFIGURE_CXXFLAGS="${CONFIGURE_CXXFLAGS}${T_APPEND_V}"
+ else
+@@ -8961,7 +8961,7 @@ if test "x$enable_debug" = "x0" ; then
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether compiler supports -O3" >&5
+ $as_echo_n "checking whether compiler supports -O3... " >&6; }
+ T_CONFIGURE_CFLAGS="${CONFIGURE_CFLAGS}"
+-T_APPEND_V=-O3
++T_APPEND_V=
+   if test "x${CONFIGURE_CFLAGS}" = "x" -o "x${T_APPEND_V}" = "x" ; then
+   CONFIGURE_CFLAGS="${CONFIGURE_CFLAGS}${T_APPEND_V}"
+ else
+@@ -9012,7 +9012,7 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether compiler supports -O3" >&5
+ $as_echo_n "checking whether compiler supports -O3... " >&6; }
+ T_CONFIGURE_CXXFLAGS="${CONFIGURE_CXXFLAGS}"
+-T_APPEND_V=-O3
++T_APPEND_V=
+   if test "x${CONFIGURE_CXXFLAGS}" = "x" -o "x${T_APPEND_V}" = "x" ; then
+   CONFIGURE_CXXFLAGS="${CONFIGURE_CXXFLAGS}${T_APPEND_V}"
+ else
+@@ -9075,7 +9075,7 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether compiler supports -funroll-loops" >&5
+ $as_echo_n "checking whether compiler supports -funroll-loops... " >&6; }
+ T_CONFIGURE_CFLAGS="${CONFIGURE_CFLAGS}"
+-T_APPEND_V=-funroll-loops
++T_APPEND_V=
+   if test "x${CONFIGURE_CFLAGS}" = "x" -o "x${T_APPEND_V}" = "x" ; then
+   CONFIGURE_CFLAGS="${CONFIGURE_CFLAGS}${T_APPEND_V}"
+ else
