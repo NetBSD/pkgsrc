@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/06/18 23:52:43 youri Exp $
+@comment $NetBSD: PLIST,v 1.4 2018/05/15 21:59:15 youri Exp $
 bin/xfdashboard
 bin/xfdashboard-settings
 include/xfdashboard/libxfdashboard/action-button.h
@@ -68,6 +68,8 @@ include/xfdashboard/libxfdashboard/view.h
 include/xfdashboard/libxfdashboard/viewpad.h
 include/xfdashboard/libxfdashboard/window-content-x11.h
 include/xfdashboard/libxfdashboard/window-content.h
+include/xfdashboard/libxfdashboard/window-tracker-backend-x11.h
+include/xfdashboard/libxfdashboard/window-tracker-backend.h
 include/xfdashboard/libxfdashboard/window-tracker-monitor-x11.h
 include/xfdashboard/libxfdashboard/window-tracker-monitor.h
 include/xfdashboard/libxfdashboard/window-tracker-window-x11.h
@@ -98,13 +100,18 @@ share/icons/hicolor/48x48/apps/xfdashboard.png
 share/icons/hicolor/64x64/apps/xfdashboard.png
 share/icons/hicolor/96x96/apps/xfdashboard.png
 share/locale/ca/LC_MESSAGES/xfdashboard.mo
+share/locale/da/LC_MESSAGES/xfdashboard.mo
+share/locale/de/LC_MESSAGES/xfdashboard.mo
 share/locale/el/LC_MESSAGES/xfdashboard.mo
 share/locale/es/LC_MESSAGES/xfdashboard.mo
 share/locale/fr/LC_MESSAGES/xfdashboard.mo
 share/locale/he/LC_MESSAGES/xfdashboard.mo
 share/locale/it_IT/LC_MESSAGES/xfdashboard.mo
+share/locale/kk/LC_MESSAGES/xfdashboard.mo
 share/locale/lt/LC_MESSAGES/xfdashboard.mo
+share/locale/pl/LC_MESSAGES/xfdashboard.mo
 share/locale/sr/LC_MESSAGES/xfdashboard.mo
+share/locale/tr/LC_MESSAGES/xfdashboard.mo
 share/themes/xfdashboard-auber/xfdashboard-1.0/effects.xml
 share/themes/xfdashboard-auber/xfdashboard-1.0/screenshot-xfdashboard-auber.png
 share/themes/xfdashboard-auber/xfdashboard-1.0/xfdashboard-auber.css
