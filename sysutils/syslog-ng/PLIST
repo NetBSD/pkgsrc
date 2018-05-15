@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2018/02/28 13:26:08 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.15 2018/05/15 13:06:19 fhajny Exp $
 bin/dqtool
 bin/loggen
 bin/pdbtool
@@ -67,12 +67,6 @@ include/syslog-ng/gsocket.h
 include/syslog-ng/host-id.h
 include/syslog-ng/host-resolve.h
 include/syslog-ng/hostname.h
-include/syslog-ng/libtest/mock-transport.h
-include/syslog-ng/libtest/msg_parse_lib.h
-include/syslog-ng/libtest/persist_lib.h
-include/syslog-ng/libtest/proto_lib.h
-include/syslog-ng/libtest/template_lib.h
-include/syslog-ng/libtest/testutils.h
 include/syslog-ng/logmatcher.h
 include/syslog-ng/logmpx.h
 include/syslog-ng/logmsg/gsockaddr-serialize.h
@@ -214,9 +208,7 @@ lib/libevtlog.la
 lib/libsecret-storage.la
 lib/libsyslog-ng-native-connector.a
 lib/libsyslog-ng.la
-lib/pkgconfig/syslog-ng-add-contextual-data.pc
 lib/pkgconfig/syslog-ng-native-connector.pc
-lib/pkgconfig/syslog-ng-test.pc
 lib/pkgconfig/syslog-ng.pc
 lib/syslog-ng/libadd-contextual-data.la
 lib/syslog-ng/libaffile.la
@@ -234,6 +226,7 @@ lib/syslog-ng/libdate.la
 lib/syslog-ng/libdbparser.la
 lib/syslog-ng/libdisk-buffer.la
 lib/syslog-ng/libgraphite.la
+lib/syslog-ng/libhook-commands.la
 lib/syslog-ng/libjson-plugin.la
 lib/syslog-ng/libkvformat.la
 lib/syslog-ng/liblinux-kmsg-format.la
@@ -245,7 +238,6 @@ lib/syslog-ng/libstardate.la
 lib/syslog-ng/libsyslogformat.la
 lib/syslog-ng/libsystem-source.la
 lib/syslog-ng/libtags-parser.la
-lib/syslog-ng/libtest/libsyslog-ng-test.a
 lib/syslog-ng/libtfgetent.la
 lib/syslog-ng/libxml.la
 sbin/syslog-ng
