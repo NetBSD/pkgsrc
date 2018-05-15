@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2373 2018/05/15 10:50:29 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2374 2018/05/15 13:06:30 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3457,3 +3457,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/unrar to 5.6.4 [adam 2018-05-15]
 	Updated devel/py-meson to 0.44.1nb3 [jperkin 2018-05-15]
 	Updated x11/xf86-video-intel to 2.99.917nb7 [wiz 2018-05-15]
+	Updated sysutils/syslog-ng to 3.15.1 [fhajny 2018-05-15]
