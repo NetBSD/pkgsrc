@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/02/01 10:19:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2018/05/15 16:28:59 jperkin Exp $
 
 DISTNAME=	libv4l-0.4.3
 PKGREVISION=	3
@@ -37,6 +37,8 @@ pre-configure:
 .endif
 
 PLIST_VARS=	needs_videoio
+
+.include "../../mk/compiler.mk"
 
 .if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9]*)
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
