@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2395 2018/05/15 22:18:22 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2396 2018/05/15 22:19:39 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3479,3 +3479,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/xfce4-thunar-media-tags to 0.3.0 [youri 2018-05-15]
 	Updated archivers/xfce4-thunar-archive to 0.4.0 [youri 2018-05-15]
 	Updated x11/xfce4-settings to 4.13.2 [youri 2018-05-15]
+	Updated sysutils/xfce4-appfinder to 4.13.0 [youri 2018-05-15]
