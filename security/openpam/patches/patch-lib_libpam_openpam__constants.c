@@ -1,8 +1,11 @@
-$NetBSD: patch-lib_libpam_openpam__constants.c,v 1.1 2014/06/10 13:17:42 joerg Exp $
+$NetBSD: patch-lib_libpam_openpam__constants.c,v 1.2 2018/05/15 07:57:32 triaxx Exp $
 
---- lib/libpam/openpam_constants.c.orig	2014-06-10 13:01:39.996428375 +0000
+Change hardcoded configuration paths to ones depending on compiler variables.
+Fix OPENPAM_MODULES_DIR to avoid openpam loading basesystem modules.
+
+--- lib/libpam/openpam_constants.c.orig	2017-04-30 21:34:49.000000000 +0000
 +++ lib/libpam/openpam_constants.c
-@@ -127,10 +127,8 @@ const char *pam_sm_func_name[PAM_NUM_PRI
+@@ -167,16 +167,14 @@ const char *pam_sm_func_name[PAM_NUM_PRI
  };
  
  const char *openpam_policy_path[] = {
@@ -15,3 +18,11 @@ $NetBSD: patch-lib_libpam_openpam__constants.c,v 1.1 2014/06/10 13:17:42 joerg E
  	NULL
  };
  
+ const char *openpam_module_path[] = {
+-#ifdef OPENPAM_MODULES_DIRECTORY
+-	OPENPAM_MODULES_DIRECTORY,
++#ifdef OPENPAM_MODULES_DIR
++	OPENPAM_MODULES_DIR,
+ #else
+ 	"/usr/lib",
+ 	"/usr/local/lib",
