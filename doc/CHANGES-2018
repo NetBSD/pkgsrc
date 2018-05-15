@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2409 2018/05/15 23:06:29 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2410 2018/05/15 23:20:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3493,3 +3493,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xfce4-gtk2-engine to 3.2.0nb8 [youri 2018-05-15]
 	Updated textproc/p5-XML-Compile-SOAP12 to 3.06 [wen 2018-05-15]
 	Updated textproc/p5-XML-Compile-Tester to 0.91 [wen 2018-05-15]
+	Updated textproc/p5-YAML to 1.25 [wen 2018-05-15]
