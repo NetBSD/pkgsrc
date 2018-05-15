@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2017/10/12 08:34:25 adam Exp $
+# $NetBSD: Makefile,v 1.5 2018/05/15 15:56:16 minskim Exp $
 
 DISTNAME=	pydocstyle-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydocstyle/}
 
