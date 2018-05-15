@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2018/04/16 14:35:11 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2018/05/15 15:29:44 jperkin Exp $
 #
 
 DISTNAME=	gvfs-1.6.7
@@ -69,6 +69,8 @@ CONFIGURE_ARGS+=	--disable-fuse
 .endif
 
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
+
+.include "../../mk/compiler.mk"
 
 .if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9]*)
 CFLAGS.SunOS+=		-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
