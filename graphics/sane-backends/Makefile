@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2018/02/25 21:22:07 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2018/05/15 13:19:50 jperkin Exp $
 
 .include "Makefile.common"
 COMMENT=	API for access to scanners, digital cameras, frame grabbers, etc
@@ -19,6 +19,9 @@ CONFIGURE_ARGS+=	--with-gphoto2=no
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/sane-${SANE_VERSION}
 CONFIGURE_ARGS+=	--without-snmp
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+CONFIGURE_ENV.SunOS+=	ac_cv_func_inet_ntop=yes
+CONFIGURE_ENV.SunOS+=	ac_cv_func_inet_pton=yes
 
 .include "../../mk/bsd.prefs.mk"
 
