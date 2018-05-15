@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2397 2018/05/15 22:22:18 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2398 2018/05/15 22:23:11 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3480,4 +3480,9 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated archivers/xfce4-thunar-archive to 0.4.0 [youri 2018-05-15]
 	Updated x11/xfce4-settings to 4.13.2 [youri 2018-05-15]
 	Updated sysutils/xfce4-appfinder to 4.13.0 [youri 2018-05-15]
+<<<<<<< CHANGES-2018
+	Updated x11/xfce4-tumbler to 0.2.1 [youri 2018-05-15]
+=======
 	Updated sysutils/py-psutil to 5.4.5 [minskim 2018-05-15]
+>>>>>>> 1.2397
+	Updated x11/xfce4-tumbler to 0.2.1 [youri 2018-05-15]
