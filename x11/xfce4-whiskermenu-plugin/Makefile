@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.16 2018/04/16 14:35:28 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2018/05/15 21:35:53 youri Exp $
 
-DISTNAME=	xfce4-whiskermenu-plugin-2.1.2
-PKGREVISION=	3
+DISTNAME=	xfce4-whiskermenu-plugin-2.1.7
 CATEGORIES=	x11
 MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin/2.1/
-
 EXTRACT_SUFX=	.tar.bz2
-LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	https://gottcode.org/xfce4-whiskermenu-plugin/
 COMMENT=	Alternate application launcher for Xfce
+LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
