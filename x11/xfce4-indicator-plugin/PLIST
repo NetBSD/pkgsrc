@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2016/06/09 09:41:49 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/05/15 21:53:08 youri Exp $
 lib/xfce4/panel/plugins/libindicator-plugin.la
 share/icons/hicolor/48x48/apps/xfce4-indicator-plugin.png
 share/icons/hicolor/scalable/apps/xfce4-indicator-plugin.svg
+share/locale/am/LC_MESSAGES/xfce4-indicator-plugin.mo
 share/locale/ar/LC_MESSAGES/xfce4-indicator-plugin.mo
 share/locale/ast/LC_MESSAGES/xfce4-indicator-plugin.mo
 share/locale/bg/LC_MESSAGES/xfce4-indicator-plugin.mo
@@ -9,6 +10,7 @@ share/locale/ca/LC_MESSAGES/xfce4-indicator-plugin.mo
 share/locale/cs/LC_MESSAGES/xfce4-indicator-plugin.mo
 share/locale/da/LC_MESSAGES/xfce4-indicator-plugin.mo
 share/locale/de/LC_MESSAGES/xfce4-indicator-plugin.mo
+share/locale/el/LC_MESSAGES/xfce4-indicator-plugin.mo
 share/locale/en_AU/LC_MESSAGES/xfce4-indicator-plugin.mo
 share/locale/en_GB/LC_MESSAGES/xfce4-indicator-plugin.mo
 share/locale/es/LC_MESSAGES/xfce4-indicator-plugin.mo
@@ -16,6 +18,7 @@ share/locale/eu/LC_MESSAGES/xfce4-indicator-plugin.mo
 share/locale/fi/LC_MESSAGES/xfce4-indicator-plugin.mo
 share/locale/fr/LC_MESSAGES/xfce4-indicator-plugin.mo
 share/locale/gl/LC_MESSAGES/xfce4-indicator-plugin.mo
+share/locale/he/LC_MESSAGES/xfce4-indicator-plugin.mo
 share/locale/hr/LC_MESSAGES/xfce4-indicator-plugin.mo
 share/locale/hu/LC_MESSAGES/xfce4-indicator-plugin.mo
 share/locale/id/LC_MESSAGES/xfce4-indicator-plugin.mo
