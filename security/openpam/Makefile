@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2018/01/01 18:16:39 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2018/05/15 07:57:32 triaxx Exp $
 
-DISTNAME=	openpam-20140912
-PKGREVISION=	2
+DISTNAME=	openpam-20170430
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openpam/}
 
@@ -15,13 +14,18 @@ CONFLICTS+=	PAM-[0-9]*
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--without-pam-su
 CONFIGURE_ARGS+=	--with-pam-unix
 CONFIGURE_ARGS+=	--with-modules-dir=${PREFIX}/lib/security
 
 CPPFLAGS+=		-DSYSCONFDIR=\"${PKG_SYSCONFDIR}\"
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/pam.d
+
+SUBST_CLASSES+=		man
+SUBST_MESSAGE.man=	Fixing hardcoded paths in manpages.
+SUBST_STAGE.man=	post-build
+SUBST_FILES.man=	doc/man/pam.conf.5
+SUBST_VARS.man=		PKG_SYSCONFDIR PREFIX
 
 .include "../../mk/dlopen.buildlink3.mk"
 

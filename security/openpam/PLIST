@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/01/01 22:29:54 rillig Exp $
+@comment $NetBSD: PLIST,v 1.9 2018/05/15 07:57:32 triaxx Exp $
 include/security/openpam.h
 include/security/openpam_attr.h
 include/security/openpam_version.h
@@ -9,6 +9,7 @@ include/security/pam_types.h
 lib/libpam.la
 lib/security/pam_deny.la
 lib/security/pam_permit.la
+lib/security/pam_return.la
 lib/security/pam_unix.la
 man/man3/openpam.3
 man/man3/openpam_borrow_cred.3
