@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2407 2018/05/15 22:45:22 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2408 2018/05/15 23:02:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3491,3 +3491,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/xfce4-conf to 4.13.4 [youri 2018-05-15]
 	Updated x11/libxfce4util to 4.13.1 [youri 2018-05-15]
 	Updated x11/xfce4-gtk2-engine to 3.2.0nb8 [youri 2018-05-15]
+	Updated textproc/p5-XML-Compile-SOAP12 to 3.06 [wen 2018-05-16]
