@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2372 2018/05/15 09:11:56 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.2373 2018/05/15 10:50:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3456,3 +3456,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/jemalloc to 5.1.0 [adam 2018-05-15]
 	Updated archivers/unrar to 5.6.4 [adam 2018-05-15]
 	Updated devel/py-meson to 0.44.1nb3 [jperkin 2018-05-15]
+	Updated x11/xf86-video-intel to 2.99.917nb7 [wiz 2018-05-15]
