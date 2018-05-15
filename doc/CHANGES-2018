@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2379 2018/05/15 21:31:30 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2380 2018/05/15 21:34:16 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3463,3 +3463,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/clutter-gst to 3.0.26 [jperkin 2018-05-15]
 	Updated devel/py-docstyle to 2.1.1nb1 [minskim 2018-05-15]
 	Updated graphics/elementary-xfce-icon-theme to 0.11 [youri 2018-05-15]
+	Updated sysutils/xfce4-xkb-plugin to 0.8.1 [youri 2018-05-15]
