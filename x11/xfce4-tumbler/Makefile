@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.42 2018/04/29 21:32:09 adam Exp $
+# $NetBSD: Makefile,v 1.43 2018/05/15 22:22:02 youri Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	0.1.32
+VERSION=	0.2.1
 DISTNAME=	tumbler-${VERSION}
 PKGNAME=	xfce4-tumbler-${VERSION}
-PKGREVISION=	15
 CATEGORIES=	x11
-MASTER_SITES=	http://archive.xfce.org/src/xfce/tumbler/0.1/
+MASTER_SITES=	http://archive.xfce.org/src/xfce/tumbler/0.2/
 
 HOMEPAGE=	http://docs.xfce.org/xfce/thunar/tumbler
 COMMENT=	D-Bus thumbnailing service
@@ -27,7 +26,7 @@ PKG_SYSCONFSUBDIR=	xdg
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/tumbler
 
 CONF_FILES=	${EGDIR}/tumbler.rc \
-	       ${PKG_SYSCONFDIR}/tumbler/tumbler.rc
+	       	${PKG_SYSCONFDIR}/tumbler/tumbler.rc
 
 INSTALL_UNSTRIPPED=	yes
 CFLAGS+=		-g
@@ -38,7 +37,7 @@ CFLAGS+=		-g
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../multimedia/ffmpeg1/buildlink3.mk"
+.include "../../multimedia/ffmpeg3/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
