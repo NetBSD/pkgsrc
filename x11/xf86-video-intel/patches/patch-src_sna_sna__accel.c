@@ -1,6 +1,6 @@
-$NetBSD: patch-src_sna_sna__accel.c,v 1.1 2016/12/07 21:59:54 wiz Exp $
+$NetBSD: patch-src_sna_sna__accel.c,v 1.2 2018/05/15 10:50:19 wiz Exp $
 
-Upstream patches for xorg-server-1.19.
+Upstream patches for xorg-server-1.19 and 1.20.
 
 --- src/sna/sna_accel.c.orig	2014-12-20 13:29:27.000000000 +0000
 +++ src/sna/sna_accel.c
@@ -16,7 +16,17 @@ Upstream patches for xorg-server-1.19.
  #if 0
  static void __sna_fallback_flush(DrawablePtr d)
  {
-@@ -17811,6 +17816,13 @@ static bool sna_option_accel_blt(struct
+@@ -16754,7 +16764,9 @@ static int sna_create_gc(GCPtr gc)
+ 
+ 	gc->freeCompClip = 0;
+ 	gc->pCompositeClip = 0;
++#if XORG_VERSION_CURRENT < XORG_VERSION_NUMERIC(1,19,99,1,0)
+ 	gc->pRotatedPixmap = 0;
++#endif
+ 
+ 	fb_gc(gc)->bpp = bits_per_pixel(gc->depth);
+ 
+@@ -17811,6 +17823,13 @@ static bool sna_option_accel_blt(struct 
  	return strcasecmp(s, "blt") == 0;
  }
  
@@ -30,7 +40,7 @@ Upstream patches for xorg-server-1.19.
  bool sna_accel_init(ScreenPtr screen, struct sna *sna)
  {
  	const char *backend;
-@@ -17822,7 +17834,7 @@ bool sna_accel_init(ScreenPtr screen, st
+@@ -17822,7 +17841,7 @@ bool sna_accel_init(ScreenPtr screen, st
  	list_init(&sna->flush_pixmaps);
  	list_init(&sna->active_pixmaps);
  
@@ -39,7 +49,7 @@ Upstream patches for xorg-server-1.19.
  
  #ifdef DEBUG_MEMORY
  	sna->timer_expire[DEBUG_MEMORY_TIMER] = GetTimeInMillis()+ 10 * 1000;
-@@ -17998,7 +18010,7 @@ void sna_accel_close(struct sna *sna)
+@@ -17998,7 +18017,7 @@ void sna_accel_close(struct sna *sna)
  	sna_pixmap_expire(sna);
  
  	DeleteCallback(&FlushCallback, sna_accel_flush_callback, sna);
