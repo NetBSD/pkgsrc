@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2371 2018/05/15 08:37:38 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2372 2018/05/15 09:11:56 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3455,3 +3455,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/openpam to 20170430 [triaxx 2018-05-15]
 	Updated devel/jemalloc to 5.1.0 [adam 2018-05-15]
 	Updated archivers/unrar to 5.6.4 [adam 2018-05-15]
+	Updated devel/py-meson to 0.44.1nb3 [jperkin 2018-05-15]
