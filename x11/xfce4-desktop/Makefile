@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.69 2018/04/16 14:35:26 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2018/05/15 22:33:23 youri Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfdesktop-4.13.1
-PKGNAME=	xfce4-desktop-4.13.1
+DISTNAME=	xfdesktop-4.12.4
+PKGNAME=	xfce4-desktop-4.12.4
 CATEGORIES=	x11
-MASTER_SITES+=	http://archive.xfce.org/src/xfce/xfdesktop/4.13/
+MASTER_SITES+=	http://archive.xfce.org/src/xfce/xfdesktop/4.12/
 
 HOMEPAGE=	http://docs.xfce.org/xfce/xfdesktop/start
 COMMENT=	Xfce desktop background manager
@@ -14,9 +13,10 @@ COMMENT=	Xfce desktop background manager
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
 .include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libwnck3/buildlink3.mk"
+.include "../../devel/libwnck/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../sysutils/xfce4-thunar/buildlink3.mk"
 .include "../../x11/xfce4-garcon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
