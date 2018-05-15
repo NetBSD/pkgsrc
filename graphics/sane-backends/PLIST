@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2018/02/25 21:22:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2018/05/15 14:58:08 jperkin Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -7,6 +7,28 @@ bin/umax_pp
 include/sane/sane.h
 include/sane/saneopts.h
 lib/libsane.la
+${PLIST.nls}share/locale/bg/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/cs/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/da/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/de/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/en@boldquot/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/en@quot/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/en_GB/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/eo/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/es/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/fi/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/fr/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/gl/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/hu/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/ja/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/nb/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/nl/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/pl/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/pt/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/ru/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/sv/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/uk/LC_MESSAGES/sane-backends.mo
 lib/pkgconfig/sane-backends.pc
 lib/sane/libsane-abaton.la
 lib/sane/libsane-agfafocus.la
