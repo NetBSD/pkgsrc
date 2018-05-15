@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2017/06/18 20:39:29 youri Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/05/15 22:36:44 youri Exp $
 bin/exo-csource
 bin/exo-desktop-item-edit
 bin/exo-open
@@ -53,8 +53,6 @@ lib/pkgconfig/exo-1.pc
 lib/pkgconfig/exo-2.pc
 lib/xfce4/exo-1/exo-compose-mail-1
 lib/xfce4/exo-1/exo-helper-1
-man/man1/exo-csource.1
-man/man1/exo-open.1
 share/applications/exo-file-manager.desktop
 share/applications/exo-mail-reader.desktop
 share/applications/exo-preferred-applications.desktop
@@ -103,7 +101,7 @@ share/gtk-doc/html/exo-1/exo-widgets.html
 share/gtk-doc/html/exo-1/exo-wrap-table.png
 share/gtk-doc/html/exo-1/home.png
 share/gtk-doc/html/exo-1/index.html
-share/gtk-doc/html/exo-1/ix13.html
+share/gtk-doc/html/exo-1/ix14.html
 share/gtk-doc/html/exo-1/left-insensitive.png
 share/gtk-doc/html/exo-1/left.png
 share/gtk-doc/html/exo-1/right-insensitive.png
@@ -140,6 +138,7 @@ share/locale/is/LC_MESSAGES/exo-1.mo
 share/locale/it/LC_MESSAGES/exo-1.mo
 share/locale/ja/LC_MESSAGES/exo-1.mo
 share/locale/kk/LC_MESSAGES/exo-1.mo
+share/locale/kn/LC_MESSAGES/exo-1.mo
 share/locale/ko/LC_MESSAGES/exo-1.mo
 share/locale/lt/LC_MESSAGES/exo-1.mo
 share/locale/lv/LC_MESSAGES/exo-1.mo
@@ -171,10 +170,13 @@ share/locale/vi/LC_MESSAGES/exo-1.mo
 share/locale/zh_CN/LC_MESSAGES/exo-1.mo
 share/locale/zh_HK/LC_MESSAGES/exo-1.mo
 share/locale/zh_TW/LC_MESSAGES/exo-1.mo
+man/man1/exo-csource.1
+man/man1/exo-open.1
 share/pixmaps/exo-1/exo-thumbnail-frame.png
 share/xfce4/helpers/Thunar.desktop
 share/xfce4/helpers/aterm.desktop
 share/xfce4/helpers/balsa.desktop
+share/xfce4/helpers/brave.desktop
 share/xfce4/helpers/caja.desktop
 share/xfce4/helpers/chromium.desktop
 share/xfce4/helpers/debian-sensible-browser.desktop
@@ -186,7 +188,9 @@ share/xfce4/helpers/eterm.desktop
 share/xfce4/helpers/evolution.desktop
 share/xfce4/helpers/firefox.desktop
 share/xfce4/helpers/galeon.desktop
+share/xfce4/helpers/geary.desktop
 share/xfce4/helpers/gnome-terminal.desktop
+share/xfce4/helpers/google-chrome.desktop
 share/xfce4/helpers/icecat.desktop
 share/xfce4/helpers/icedove.desktop
 share/xfce4/helpers/iceweasel.desktop
@@ -203,7 +207,6 @@ share/xfce4/helpers/nautilus.desktop
 share/xfce4/helpers/netscape-navigator.desktop
 share/xfce4/helpers/nxterm.desktop
 share/xfce4/helpers/opera-browser.desktop
-share/xfce4/helpers/opera-mailer.desktop
 share/xfce4/helpers/pcmanfm.desktop
 share/xfce4/helpers/qterminal.desktop
 share/xfce4/helpers/qtfm.desktop
@@ -214,6 +217,7 @@ share/xfce4/helpers/sakura.desktop
 share/xfce4/helpers/surf.desktop
 share/xfce4/helpers/sylpheed-claws.desktop
 share/xfce4/helpers/sylpheed.desktop
+share/xfce4/helpers/terminator.desktop
 share/xfce4/helpers/thunderbird.desktop
 share/xfce4/helpers/urxvt.desktop
 share/xfce4/helpers/vimprobable2.desktop
