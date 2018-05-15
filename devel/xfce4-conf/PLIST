@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/18 22:22:55 youri Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/05/15 22:41:36 youri Exp $
 bin/xfconf-query
 include/xfce4/xfconf-0/xfconf/xfconf-binding.h
 include/xfce4/xfconf-0/xfconf/xfconf-channel.h
@@ -12,6 +12,7 @@ share/dbus-1/services/org.xfce.Xfconf.service
 share/gtk-doc/html/xfconf/ch01.html
 share/gtk-doc/html/xfconf/ch02.html
 share/gtk-doc/html/xfconf/ch03.html
+share/gtk-doc/html/xfconf/ch04.html
 share/gtk-doc/html/xfconf/home.png
 share/gtk-doc/html/xfconf/index.html
 share/gtk-doc/html/xfconf/left-insensitive.png
@@ -21,12 +22,12 @@ share/gtk-doc/html/xfconf/right.png
 share/gtk-doc/html/xfconf/style.css
 share/gtk-doc/html/xfconf/up-insensitive.png
 share/gtk-doc/html/xfconf/up.png
-share/gtk-doc/html/xfconf/xfconf-xfconf-backend.html
-share/gtk-doc/html/xfconf/xfconf-xfconf-binding.html
-share/gtk-doc/html/xfconf/xfconf-xfconf-channel.html
-share/gtk-doc/html/xfconf/xfconf-xfconf-errors.html
-share/gtk-doc/html/xfconf/xfconf-xfconf-types.html
-share/gtk-doc/html/xfconf/xfconf-xfconf.html
+share/gtk-doc/html/xfconf/xfconf-Error-Reporting.html
+share/gtk-doc/html/xfconf/xfconf-Xfconf-Backend.html
+share/gtk-doc/html/xfconf/xfconf-Xfconf-Channel.html
+share/gtk-doc/html/xfconf/xfconf-Xfconf-GObject-Binding.html
+share/gtk-doc/html/xfconf/xfconf-Xfconf-Library-Core.html
+share/gtk-doc/html/xfconf/xfconf-Xfconf-Types.html
 share/gtk-doc/html/xfconf/xfconf.devhelp2
 share/locale/ar/LC_MESSAGES/xfconf.mo
 share/locale/ast/LC_MESSAGES/xfconf.mo
