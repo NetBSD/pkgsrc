@@ -1,4 +1,4 @@
-$NetBSD: patch-src_uxa_intel__driver.c,v 1.2 2016/12/07 21:59:54 wiz Exp $
+$NetBSD: patch-src_uxa_intel__driver.c,v 1.3 2018/05/15 10:48:01 wiz Exp $
 
 Upstream patches for xorg-server-1.19.
 
@@ -41,8 +41,8 @@ Upstream patches for xorg-server-1.19.
  #ifdef INTEL_PIXMAP_SHARING
 -	intel_dirty_update(screen);
 +	intel_dirty_update(intel);
- #endif
- }
++#endif
++}
 +#else
 +static void
 +I830BlockHandler(void *data, void *timeout)
@@ -53,8 +53,8 @@ Upstream patches for xorg-server-1.19.
 +	intel_video_block_handler(intel);
 +#ifdef INTEL_PIXMAP_SHARING
 +	intel_dirty_update(intel);
-+#endif
-+}
+ #endif
+ }
 +#endif
  
  static Bool
