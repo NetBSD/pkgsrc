@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2385 2018/05/15 21:50:56 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2386 2018/05/15 21:55:49 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3469,3 +3469,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/xfce4-verve-plugin to 1.1.0 [youri 2018-05-15]
 	Updated time/xfce4-timer-plugin to 1.7.0 [youri 2018-05-15]
 	Updated sysutils/xfce4-mount-plugin to 1.1.2 [youri 2018-05-15]
+	Updated sysutils/xfce4-genmon-plugin to 4.0.1 [youri 2018-05-15]
