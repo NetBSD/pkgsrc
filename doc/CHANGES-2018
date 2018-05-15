@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2369 2018/05/15 06:50:19 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2370 2018/05/15 07:57:45 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3452,3 +3452,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-faker to 0.8.15 [adam 2018-05-15]
 	Updated textproc/py-natsort to 5.3.1 [adam 2018-05-15]
 	Updated devel/py-cachetools to 2.1.0 [adam 2018-05-15]
+	Updated security/openpam to 20170430 [triaxx 2018-05-15]
