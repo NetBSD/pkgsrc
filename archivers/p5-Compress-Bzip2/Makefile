@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2017/06/05 14:22:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2018/05/15 18:28:42 jperkin Exp $
 
 DISTNAME=	Compress-Bzip2-2.26
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,9 @@ COMMENT=	Perl5 interface to bzip2 compression library
 LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=		auto/Compress/Bzip2/.packlist
+
+MAKE_ENV+=	BZLIB_INCLUDE=${BUILDLINK_PREFIX.bzip2}/include
+MAKE_ENV+=	BZLIB_LIB=${BUILDLINK_PREFIX.bzip2}/lib
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
