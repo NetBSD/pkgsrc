@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2382 2018/05/15 21:37:42 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2383 2018/05/15 21:45:44 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3466,3 +3466,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/xfce4-xkb-plugin to 0.8.1 [youri 2018-05-15]
 	Updated x11/xfce4-whiskermenu-plugin to 2.1.7 [youri 2018-05-15]
 	Updated misc/xfce4-weather-plugin to 0.8.10 [youri 2018-05-15]
+	Updated sysutils/xfce4-verve-plugin to 1.1.0 [youri 2018-05-15]
