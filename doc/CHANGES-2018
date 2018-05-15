@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2389 2018/05/15 22:08:14 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2390 2018/05/15 22:10:12 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3473,3 +3473,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xfce4-clipman-plugin to 1.4.2 [youri 2018-05-15]
 	Updated x11/xfce4-dashboard to 0.7.4 [youri 2018-05-15]
 	Updated x11/xfce4-terminal to 0.8.7.4 [youri 2018-05-15]
+	Updated x11/xfce4-screenshooter to 1.9.2 [youri 2018-05-15]
