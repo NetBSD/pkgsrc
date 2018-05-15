@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2402 2018/05/15 22:35:23 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2403 2018/05/15 22:36:56 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3486,3 +3486,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/xfce4-thunar to 1.7.2 [youri 2018-05-15]
 	Updated x11/xfce4-desktop to 4.12.4 [youri 2018-05-15]
 	Updated x11/xfce4-panel to 4.13.3 [youri 2018-05-15]
+	Updated x11/xfce4-exo to 0.12.0 [youri 2018-05-15]
