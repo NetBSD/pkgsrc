@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2391 2018/05/15 22:11:50 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2392 2018/05/15 22:13:36 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3475,3 +3475,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xfce4-terminal to 0.8.7.4 [youri 2018-05-15]
 	Updated x11/xfce4-screenshooter to 1.9.2 [youri 2018-05-15]
 	Updated x11/xfce4-notifyd to 0.4.2 [youri 2018-05-15]
+	Updated sysutils/xfburn to 0.5.5 [youri 2018-05-15]
