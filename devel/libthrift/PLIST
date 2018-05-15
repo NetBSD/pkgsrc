@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2018/04/01 10:21:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/05/15 10:16:17 jperkin Exp $
 bin/thrift
-include/src/socket.h
+${PLIST.lua}include/src/socket.h
 include/thrift/TApplicationException.h
 include/thrift/TBase.h
 include/thrift/TDispatchProcessor.h
@@ -88,10 +88,10 @@ include/thrift/transport/TTransportException.h
 include/thrift/transport/TTransportUtils.h
 include/thrift/transport/TVirtualTransport.h
 include/thrift/transport/TZlibTransport.h
-lib/libluabitwise.la
-lib/libluabpack.la
-lib/liblualongnumber.la
-lib/libluasocket.la
+${PLIST.lua}lib/libluabitwise.la
+${PLIST.lua}lib/libluabpack.la
+${PLIST.lua}lib/liblualongnumber.la
+${PLIST.lua}lib/libluasocket.la
 lib/libthrift.la
 lib/libthriftnb.la
 lib/libthriftz.la
