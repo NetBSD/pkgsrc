@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2410 2018/05/15 23:20:29 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2411 2018/05/15 23:35:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3494,3 +3494,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/p5-XML-Compile-SOAP12 to 3.06 [wen 2018-05-15]
 	Updated textproc/p5-XML-Compile-Tester to 0.91 [wen 2018-05-15]
 	Updated textproc/p5-YAML to 1.25 [wen 2018-05-15]
+	Updated net/p5-SNMP-Info to 3.61 [wen 2018-05-15]
