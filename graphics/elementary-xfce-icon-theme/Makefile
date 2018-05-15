@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2017/06/20 15:22:05 youri Exp $
+# $NetBSD: Makefile,v 1.7 2018/05/15 21:30:55 youri Exp $
 
-GHCOMMIT=	1b023cb9a21d533cdcd567ad73cc9b43ef00a1b3
+GHCOMMIT=	9efbd4a14cbae1a8b05536afff262b67ead6d33e
 DISTNAME=	${GHCOMMIT}
-PKGNAME=	elementary-xfce-icon-theme-0.8
+PKGNAME=	elementary-xfce-icon-theme-0.11
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shimmerproject/elementary-xfce/archive/}
 
