@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2018/05/09 06:41:33 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2018/05/15 23:34:16 wen Exp $
 
-DISTNAME=	SNMP-Info-3.60
+DISTNAME=	SNMP-Info-3.61
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SNMP/}
@@ -12,6 +12,7 @@ COMMENT=	Perl5 object oriented interface to SNMP informations
 LICENSE=	modified-bsd
 
 DEPENDS+=	net-snmp>=5.1.2:../../net/net-snmp
+DEPENDS+=	p5-NetAddr-IP>=4.068:../../net/p5-NetAddr-IP
 
 PERL5_PACKLIST=		auto/SNMP/Info/.packlist
 PERL5_MODULE_TYPE=	Module::Build
