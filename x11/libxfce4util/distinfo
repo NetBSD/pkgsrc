@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2017/06/18 21:22:08 youri Exp $
+$NetBSD: distinfo,v 1.24 2018/05/15 22:42:41 youri Exp $
 
-SHA1 (libxfce4util-4.13.0.tar.bz2) = 525978d61ef72ab10a60bbf7414e6ffa63ffa0dd
-RMD160 (libxfce4util-4.13.0.tar.bz2) = 07c061b008e3b127f3a78b321c4fd3e11c408140
-SHA512 (libxfce4util-4.13.0.tar.bz2) = 0da59b6d4e4976b9e36811074b829d5fff159d55c57628096d949a5b2109a7c5910f5fa4a628ba9c9d98258119ae4bf8e9af3ef121745f341a88dde8482ae078
-Size (libxfce4util-4.13.0.tar.bz2) = 495133 bytes
+SHA1 (libxfce4util-4.13.1.tar.bz2) = c5e2f4c173eccc7dd711010b5ca01e9ec8e79bd6
+RMD160 (libxfce4util-4.13.1.tar.bz2) = 1b510bd9949a06b7cc99db6099f4406d9b1c3868
+SHA512 (libxfce4util-4.13.1.tar.bz2) = 1667cc22ff72920d3280725cb40c41f5fba9dcfcba8e357ba85548c7f254a67a3ef942c1b71f0ac5c3a7fe46c8c4cb559a06a8111aa71ce1f6824d1a1c2b5063
+Size (libxfce4util-4.13.1.tar.bz2) = 497192 bytes
