@@ -1,8 +1,10 @@
-$NetBSD: patch-yb,v 1.2 2009/10/24 12:57:56 drochner Exp $
+$NetBSD: patch-yb,v 1.3 2018/05/16 16:15:23 jperkin Exp $
 
---- calendar/gui/e-cal-model.c.orig	2009-10-18 02:54:18.000000000 +0200
+Support current libical API.
+
+--- calendar/gui/e-cal-model.c.orig	2011-04-14 11:42:52.000000000 +0000
 +++ calendar/gui/e-cal-model.c
-@@ -163,8 +163,8 @@ e_cal_model_class_init (ECalModelClass *
+@@ -380,8 +380,8 @@ e_cal_model_class_init (ECalModelClass *
  			      G_SIGNAL_RUN_LAST,
  			      G_STRUCT_OFFSET (ECalModelClass, time_range_changed),
  			      NULL, NULL,
@@ -13,7 +15,32 @@ $NetBSD: patch-yb,v 1.2 2009/10/24 12:57:56 drochner Exp $
  
  	signals[ROW_APPENDED] =
  		g_signal_new ("row_appended",
-@@ -2185,7 +2185,8 @@ e_cal_model_set_time_range (ECalModel *m
+@@ -920,7 +920,7 @@ e_cal_model_update_comp_time (ECalModel
+ 				icalproperty_add_parameter (prop, param);
+ 			}
+ 		} else {
+-			icalproperty_remove_parameter (prop, ICAL_TZID_PARAMETER);
++			icalproperty_remove_parameter_by_kind (prop, ICAL_TZID_PARAMETER);
+ 		}
+ 	}
+ }
+@@ -1710,13 +1710,13 @@ ensure_dates_are_in_default_zone (ECalMo
+ 		return;
+ 
+ 	dt = icalcomponent_get_dtstart (icalcomp);
+-	if (dt.is_utc) {
++	if (icaltime_is_utc(dt)) {
+ 		dt = icaltime_convert_to_zone (dt, zone);
+ 		icalcomponent_set_dtstart (icalcomp, dt);
+ 	}
+ 
+ 	dt = icalcomponent_get_dtend (icalcomp);
+-	if (dt.is_utc) {
++	if (icaltime_is_utc(dt)) {
+ 		dt = icaltime_convert_to_zone (dt, zone);
+ 		icalcomponent_set_dtend (icalcomp, dt);
+ 	}
+@@ -2513,7 +2513,8 @@ e_cal_model_set_time_range (ECalModel *m
  	priv->start = start;
  	priv->end = end;
  
