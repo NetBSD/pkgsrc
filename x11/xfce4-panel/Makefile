@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2018/05/15 22:35:10 youri Exp $
+# $NetBSD: Makefile,v 1.72 2018/05/16 22:33:27 jperkin Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -8,6 +8,8 @@ MASTER_SITES+=		http://archive.xfce.org/src/xfce/xfce4-panel/4.13/
 
 HOMEPAGE=		http://docs.xfce.org/xfce/xfce4-panel/start
 COMMENT=		Xfce panel
+
+TOOL_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 PKGCONFIG_OVERRIDE=	libxfce4panel/libxfce4panel-1.0.pc.in
 PTHREAD_AUTO_VARS=	yes
