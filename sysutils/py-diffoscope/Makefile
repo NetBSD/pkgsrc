@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2017/12/01 09:02:07 adam Exp $
+# $NetBSD: Makefile,v 1.7 2018/05/16 06:54:51 adam Exp $
 
-DISTNAME=	diffoscope-88
+DISTNAME=	diffoscope-94
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/diffoscope/}
@@ -22,7 +22,8 @@ USE_TOOLS+=	bzip2:run gtar:run xz:run
 
 SUBST_CLASSES+=		gtar
 SUBST_SED.gtar+=	-e "s,'tar,'gtar,"
-SUBST_FILES.gtar+=	diffoscope/comparators/tar.py tests/comparators/test_utils.py
+SUBST_FILES.gtar+=	diffoscope/comparators/tar.py
+SUBST_FILES.gtar+=	tests/comparators/test_utils.py
 SUBST_MESSAGE.gtar=	Fix path to gtar.
 SUBST_STAGE.gtar=	post-configure
 
