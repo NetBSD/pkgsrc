@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2018/05/11 19:18:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2018/05/16 11:36:36 youri Exp $
 
 DISTNAME=	mozjs-52.7.4
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/mozjs/spidermonkey52/}
 CATEGORIES=	lang
 MASTER_SITES=	https://queue.taskcluster.net/v1/task/YqG2fjJJSTGzGX090FjDYg/runs/0/artifacts/public/build/
@@ -13,7 +14,8 @@ LICENSE=	mpl-2.0
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config perl gmake
+USE_TOOLS+=	pkg-config perl gmake autoconf213
+AUTOCONF_REQD=	2.13
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--enable-readline
@@ -21,16 +23,7 @@ CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-nspr
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-pthreads
-
-PLIST_VARS+=	jemalloc
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--disable-jemalloc
-.else
-PLIST.jemalloc=		yes
-.endif
 
 CONFIGURE_DIRS=		js/src
 
@@ -42,6 +35,12 @@ PYTHON_FOR_BUILD_ONLY=		yes
 
 # fails, does not find hg/git checkout
 TEST_TARGET=		check
+
+pre-configure:
+	cd ${WRKSRC}/js/src && autoconf
+
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/lib/libjs_static.ajs
 
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
