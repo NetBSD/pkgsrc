@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/05/15 22:22:01 minskim Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/05/16 16:22:32 jperkin Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -35,7 +35,7 @@ ${PYSITELIB}/psutil/_psposix.pyo
 ${PYSITELIB}/psutil/_pssunos.py
 ${PYSITELIB}/psutil/_pssunos.pyc
 ${PYSITELIB}/psutil/_pssunos.pyo
-${PYSITELIB}/psutil/_psutil_osx.so
+${PYSITELIB}/psutil/_psutil_${SYSTEM}.so
 ${PYSITELIB}/psutil/_psutil_posix.so
 ${PYSITELIB}/psutil/_pswindows.py
 ${PYSITELIB}/psutil/_pswindows.pyc
