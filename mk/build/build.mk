@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.22 2017/06/01 02:15:10 jlam Exp $
+# $NetBSD: build.mk,v 1.23 2018/05/16 21:23:02 rillig Exp $
 #
 # This file defines what happens in the build phase, excluding the
 # self-test, which is defined in test.mk.
@@ -179,6 +179,21 @@ pre-build:
 post-build:
 	@${DO_NADA}
 .endif
+
+# build-env:
+#	Starts an interactive shell in WRKSRC.
+#
+#	This is only used during development and testing of a package
+#	to work in the same environment as the actual build.
+#
+# User-settable variables:
+#
+# BUILD_ENV_SHELL
+#	The shell to start.
+#
+#	Default: ${SH}
+#
+# Keywords: debug build
 
 BUILD_ENV_SHELL?=	${SH}
 .if defined(_PKGSRC_BARRIER)

@@ -1,4 +1,4 @@
-# $NetBSD: bin-install.mk,v 1.26 2017/08/19 00:30:19 jlam Exp $
+# $NetBSD: bin-install.mk,v 1.27 2018/05/16 21:23:02 rillig Exp $
 #
 
 # This file provides the following targets:
@@ -27,8 +27,9 @@
 # XXX: This file contains implementation details from the "pkg" format,
 # for example the All/ directory and the @cwd.
 
-# List of sites carrying binary pkgs. Variables "rel" and "arch" are
-# replaced with OS release ("1.5", ...) and architecture ("mipsel", ...)
+# List of sites carrying binary packages. Shell Variables "rel" and
+# "arch" are replaced with OS release ("1.5", ...) and architecture
+# ("mipsel", ...).
 .if ${OPSYS} == "NetBSD"
 BINPKG_SITES?= \
 	http://cdn.NetBSD.org/pub/pkgsrc/packages/NetBSD/$${arch}/$${rel} \
