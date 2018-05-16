@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2017/09/04 18:08:26 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2018/05/16 01:07:20 wen Exp $
 #
 
-DISTNAME=	pysmb-1.1.2
+DISTNAME=	pysmb-1.1.23
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	net
 MASTER_SITES=	http://miketeo.net/files/Projects/pysmb/
@@ -11,6 +11,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://miketeo.net/wp/index.php/projects/pysmb
 COMMENT=	Experimental SMB/CIFS library written in Python
 LICENSE=	zlib
+
+DEPENDS+=	${PYPKGPREFIX}-asn1>=0:../../security/py-asn1
 
 USE_LANGUAGES=	# none
 
