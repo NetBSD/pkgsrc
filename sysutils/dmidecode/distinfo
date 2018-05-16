@@ -1,11 +1,19 @@
-$NetBSD: distinfo,v 1.17 2018/02/01 04:08:44 msaitoh Exp $
+$NetBSD: distinfo,v 1.18 2018/05/16 05:10:30 msaitoh Exp $
 
 SHA1 (dmidecode-patches/174387405e98cd94c627832ae23abcb9be7e5623) = bca7409dc3830bff71093a9df9bb1f1bd6aaa311
 RMD160 (dmidecode-patches/174387405e98cd94c627832ae23abcb9be7e5623) = e5842b33e44b5db421a56d1d5db3b5b01681c223
 SHA512 (dmidecode-patches/174387405e98cd94c627832ae23abcb9be7e5623) = 43931cce1824908dcc054e82ad5d5389ce76f6dc643b7610a9a87d59ad54ba4816b4ca16b159b7545dd1c462af956b7a1a19752dde369e24f1d10acab8f173ca
 Size (dmidecode-patches/174387405e98cd94c627832ae23abcb9be7e5623) = 1015 bytes
+SHA1 (dmidecode-patches/2ba4fab210e23cc97db57217af9a6f3b35a9b666) = e151efeac910e94886f9409beaa76300102cd71a
+RMD160 (dmidecode-patches/2ba4fab210e23cc97db57217af9a6f3b35a9b666) = 291928b997bce81d2ed9343b0b4e800cfd87c7e2
+SHA512 (dmidecode-patches/2ba4fab210e23cc97db57217af9a6f3b35a9b666) = 734e388cc27e89fbaf3a3f5a875c78e04e0dabd92706a9336b504a8be6d3ede72372cc13b860cd32a66d17c8e1cb6a1d881f8fce97d01a28ea299075d0952609
+Size (dmidecode-patches/2ba4fab210e23cc97db57217af9a6f3b35a9b666) = 1062 bytes
 SHA1 (dmidecode-patches/dmidecode-3.1.tar.gz) = 3d61096a25fe55798faa882bff32f3bf6eb6366e
 RMD160 (dmidecode-patches/dmidecode-3.1.tar.gz) = 6ce7c5e16176dcdde0d51040040199ba86b4eb00
 SHA512 (dmidecode-patches/dmidecode-3.1.tar.gz) = 64aa744396acfa7e9c02beb57f763b8ef79a946c7434bceaf5f6faf2b6b4fa666790871d5bdcdb8a74d47d9a471f39d25fc48afe8c848850ba857ff1a5b4cae3
 Size (dmidecode-patches/dmidecode-3.1.tar.gz) = 74474 bytes
+SHA1 (dmidecode-patches/ee07a1b4249560d620d05194eb8ff61b40d3ce23) = f01a9554f2f000dd237a224bb0bf4d3a18983d2b
+RMD160 (dmidecode-patches/ee07a1b4249560d620d05194eb8ff61b40d3ce23) = 582fe61d2ac2e129bbd2b317b1e7df4b498d44b2
+SHA512 (dmidecode-patches/ee07a1b4249560d620d05194eb8ff61b40d3ce23) = 30faca2ef81c925278dc1d027a4a7c19ef7c9fc27d11fdf3647fd4d8cd77f524e1d159b7e7873294ece08228a99dedbdb1913f610de8a3975ce027d0570ace89
+Size (dmidecode-patches/ee07a1b4249560d620d05194eb8ff61b40d3ce23) = 4727 bytes
 SHA1 (patch-aa) = 6c861b3742b1627a1b60dbaea9df0843f2ed603d
