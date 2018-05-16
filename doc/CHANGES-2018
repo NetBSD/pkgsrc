@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2414 2018/05/16 02:38:15 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2415 2018/05/16 05:11:49 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3498,3 +3498,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/p5-Business-ISSN to 1.003 [wen 2018-05-16]
 	Updated net/py-smb to 1.1.23 [wen 2018-05-16]
 	Updated devel/hdf5 to 1.10.2 [wen 2018-05-16]
+	Updated sysutils/dmidecode to 3.1nb2 [msaitoh 2018-05-16]
