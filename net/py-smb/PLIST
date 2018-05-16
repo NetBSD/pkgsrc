@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/01/12 11:58:33 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/05/16 01:07:20 wen Exp $
 ${PYSITELIB}/nmb/NetBIOS.py
 ${PYSITELIB}/nmb/NetBIOS.pyc
 ${PYSITELIB}/nmb/NetBIOS.pyo
@@ -43,6 +43,9 @@ ${PYSITELIB}/smb/base.pyo
 ${PYSITELIB}/smb/ntlm.py
 ${PYSITELIB}/smb/ntlm.pyc
 ${PYSITELIB}/smb/ntlm.pyo
+${PYSITELIB}/smb/security_descriptors.py
+${PYSITELIB}/smb/security_descriptors.pyc
+${PYSITELIB}/smb/security_descriptors.pyo
 ${PYSITELIB}/smb/securityblob.py
 ${PYSITELIB}/smb/securityblob.pyc
 ${PYSITELIB}/smb/securityblob.pyo
