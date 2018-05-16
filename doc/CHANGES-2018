@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2416 2018/05/16 06:34:19 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2417 2018/05/16 06:43:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3500,3 +3500,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/hdf5 to 1.10.2 [wen 2018-05-16]
 	Updated sysutils/dmidecode to 3.1nb2 [msaitoh 2018-05-16]
 	Updated devel/netcdf to 4.6.1 [wen 2018-05-16]
+	Updated devel/p5-Moose to 2.2011 [wen 2018-05-16]
