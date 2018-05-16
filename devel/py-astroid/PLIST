@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/12/21 09:57:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/05/16 06:54:20 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -194,6 +194,7 @@ ${PYSITELIB}/astroid/tests/testdata/python2/data/find_test/noendingnewline.py
 ${PYSITELIB}/astroid/tests/testdata/python2/data/find_test/nonregr.py
 ${PYSITELIB}/astroid/tests/testdata/python2/data/foogle/fax/__init__.py
 ${PYSITELIB}/astroid/tests/testdata/python2/data/foogle/fax/a.py
+${PYSITELIB}/astroid/tests/testdata/python2/data/foogle_fax-0.12.5-py2.7-nspkg.pth
 ${PYSITELIB}/astroid/tests/testdata/python2/data/format.py
 ${PYSITELIB}/astroid/tests/testdata/python2/data/invalid_encoding.py
 ${PYSITELIB}/astroid/tests/testdata/python2/data/joined_strings.py
@@ -252,6 +253,7 @@ ${PYSITELIB}/astroid/tests/testdata/python3/data/find_test/noendingnewline.py
 ${PYSITELIB}/astroid/tests/testdata/python3/data/find_test/nonregr.py
 ${PYSITELIB}/astroid/tests/testdata/python3/data/foogle/fax/__init__.py
 ${PYSITELIB}/astroid/tests/testdata/python3/data/foogle/fax/a.py
+${PYSITELIB}/astroid/tests/testdata/python3/data/foogle_fax-0.12.5-py2.7-nspkg.pth
 ${PYSITELIB}/astroid/tests/testdata/python3/data/format.py
 ${PYSITELIB}/astroid/tests/testdata/python3/data/invalid_encoding.py
 ${PYSITELIB}/astroid/tests/testdata/python3/data/joined_strings.py
