@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2424 2018/05/16 10:26:41 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2425 2018/05/16 10:50:38 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3513,3 +3513,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-WebOb to 1.8.1 [adam 2018-05-16]
 	Updated devel/py-logbook to 1.4.0 [adam 2018-05-16]
 	Updated devel/py-wheel to 0.31.1 [adam 2018-05-16]
+	Updated sysutils/mate-sensors-applet to 1.20.1 [jperkin 2018-05-16]
