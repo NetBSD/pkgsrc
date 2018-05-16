@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.12 2018/05/08 11:56:21 tm Exp $
+# $NetBSD: options.mk,v 1.13 2018/05/16 10:22:22 tm Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg2
 PKG_SUPPORTED_OPTIONS=	bzip2 ldap libusb-1 zlib
-PKG_SUGGESTED_OPTIONS=	libusb-1
+PKG_SUGGESTED_OPTIONS=	bzip2 libusb-1 zlib
 
 .include "../../mk/bsd.options.mk"
 
