@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/12/01 09:02:07 adam Exp $
+$NetBSD: distinfo,v 1.5 2018/05/16 06:54:52 adam Exp $
 
-SHA1 (diffoscope-88.tar.gz) = 68c6b38ac6869e65d331795c1577480848a4972d
-RMD160 (diffoscope-88.tar.gz) = 5752d4a2e25f3d352f1679a1bb5f26dcff8b0682
-SHA512 (diffoscope-88.tar.gz) = 0fdb4385a0d842dccacc60c9b48b8720f00185bb4b6a5b30b88454a1f08e6ff7ead8fc392f406d2d2aff8b1b901caaa950a011b674d83e354dda4a01ac39ab1c
-Size (diffoscope-88.tar.gz) = 1027126 bytes
+SHA1 (diffoscope-94.tar.gz) = 2dca48b577383377d4bb43d9472ecd9ae5112739
+RMD160 (diffoscope-94.tar.gz) = 78261a206f3c232c2b5e386eb3b5b6d825a79d56
+SHA512 (diffoscope-94.tar.gz) = a68fda09a8340b1b36683b0bda4c854cb04afb189b0464185b6de655c7fe2e122215612a0154738a1174ca1594bab3598359b10425a2375f692eb0bd089d89f1
+Size (diffoscope-94.tar.gz) = 9405785 bytes
