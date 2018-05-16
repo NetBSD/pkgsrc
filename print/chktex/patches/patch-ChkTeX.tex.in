@@ -1,0 +1,15 @@
+$NetBSD: patch-ChkTeX.tex.in,v 1.1 2018/05/16 12:42:19 markd Exp $
+
+Specify the input encoding, fixing build with TeX Live 2018
+debian bug 896178
+
+--- ChkTeX.tex.in.orig	2016-02-03 05:18:36.000000000 +0000
++++ ChkTeX.tex.in
+@@ -37,6 +37,7 @@
+ 
+ \documentclass[a4paper]{article}
+ %latex
++\usepackage[latin1]{inputenc}
+ \usepackage{array, tabularx, verbatim, multicol}
+ \usepackage[T1]{fontenc}
+ \nonfrenchspacing
