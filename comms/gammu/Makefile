@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2018/04/29 21:31:29 adam Exp $
+# $NetBSD: Makefile,v 1.30 2018/05/16 08:23:29 leot Exp $
 #
 
-DISTNAME=	gammu-1.38.5
-PKGREVISION=	2
+DISTNAME=	gammu-1.39.0
 CATEGORIES=	comms
 MASTER_SITES=	http://dl.cihar.com/gammu/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 # cmake tests for it; unclear for what it would be used
 #BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 # for gammu-config
-DEPENDS+=	dialog-[0-9]*:../../misc/dialog
+DEPENDS+=		dialog-[0-9]*:../../misc/dialog
 
 USE_CMAKE=	yes
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
