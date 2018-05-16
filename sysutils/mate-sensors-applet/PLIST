@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/23 17:27:53 youri Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/05/16 10:50:22 jperkin Exp $
 include/mate-sensors-applet/sensors-applet-plugin.h
 include/mate-sensors-applet/sensors-applet-sensor.h
 lib/libmate-sensors-applet-plugin.la
 lib/mate-sensors-applet/plugins/libacpi.la
-lib/mate-sensors-applet/plugins/libeee.la
 lib/mate-sensors-applet/plugins/libhddtemp.la
 lib/mate-sensors-applet/plugins/libi2c-proc.la
 lib/mate-sensors-applet/plugins/libi2c-sys.la
@@ -14,6 +13,7 @@ lib/mate-sensors-applet/plugins/libomnibook.la
 lib/mate-sensors-applet/plugins/libpmu-sys.la
 lib/mate-sensors-applet/plugins/libsmu-sys.la
 lib/mate-sensors-applet/plugins/libsonypi.la
+lib/mate-sensors-applet/plugins/libudisks2.la
 libexec/mate-sensors-applet
 share/dbus-1/services/org.mate.panel.applet.SensorsAppletFactory.service
 share/glib-2.0/schemas/org.mate.sensors-applet.gschema.xml
@@ -83,6 +83,7 @@ share/locale/pt/LC_MESSAGES/mate-sensors-applet.mo
 share/locale/pt_BR/LC_MESSAGES/mate-sensors-applet.mo
 share/locale/ro/LC_MESSAGES/mate-sensors-applet.mo
 share/locale/ru/LC_MESSAGES/mate-sensors-applet.mo
+share/locale/sc/LC_MESSAGES/mate-sensors-applet.mo
 share/locale/sk/LC_MESSAGES/mate-sensors-applet.mo
 share/locale/sl/LC_MESSAGES/mate-sensors-applet.mo
 share/locale/sr/LC_MESSAGES/mate-sensors-applet.mo
