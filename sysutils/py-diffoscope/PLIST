@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/10/16 09:53:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/05/16 06:54:52 adam Exp $
 bin/diffoscope-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -15,12 +15,18 @@ ${PYSITELIB}/diffoscope/changes.pyo
 ${PYSITELIB}/diffoscope/comparators/__init__.py
 ${PYSITELIB}/diffoscope/comparators/__init__.pyc
 ${PYSITELIB}/diffoscope/comparators/__init__.pyo
+${PYSITELIB}/diffoscope/comparators/android.py
+${PYSITELIB}/diffoscope/comparators/android.pyc
+${PYSITELIB}/diffoscope/comparators/android.pyo
 ${PYSITELIB}/diffoscope/comparators/apk.py
 ${PYSITELIB}/diffoscope/comparators/apk.pyc
 ${PYSITELIB}/diffoscope/comparators/apk.pyo
 ${PYSITELIB}/diffoscope/comparators/ar.py
 ${PYSITELIB}/diffoscope/comparators/ar.pyc
 ${PYSITELIB}/diffoscope/comparators/ar.pyo
+${PYSITELIB}/diffoscope/comparators/berkeley_db.py
+${PYSITELIB}/diffoscope/comparators/berkeley_db.pyc
+${PYSITELIB}/diffoscope/comparators/berkeley_db.pyo
 ${PYSITELIB}/diffoscope/comparators/binary.py
 ${PYSITELIB}/diffoscope/comparators/binary.pyc
 ${PYSITELIB}/diffoscope/comparators/binary.pyo
@@ -81,6 +87,9 @@ ${PYSITELIB}/diffoscope/comparators/gif.pyo
 ${PYSITELIB}/diffoscope/comparators/git.py
 ${PYSITELIB}/diffoscope/comparators/git.pyc
 ${PYSITELIB}/diffoscope/comparators/git.pyo
+${PYSITELIB}/diffoscope/comparators/gnumeric.py
+${PYSITELIB}/diffoscope/comparators/gnumeric.pyc
+${PYSITELIB}/diffoscope/comparators/gnumeric.pyo
 ${PYSITELIB}/diffoscope/comparators/gzip.py
 ${PYSITELIB}/diffoscope/comparators/gzip.pyc
 ${PYSITELIB}/diffoscope/comparators/gzip.pyo
@@ -204,6 +213,9 @@ ${PYSITELIB}/diffoscope/comparators/utils/specialize.pyo
 ${PYSITELIB}/diffoscope/comparators/xml.py
 ${PYSITELIB}/diffoscope/comparators/xml.pyc
 ${PYSITELIB}/diffoscope/comparators/xml.pyo
+${PYSITELIB}/diffoscope/comparators/xsb.py
+${PYSITELIB}/diffoscope/comparators/xsb.pyc
+${PYSITELIB}/diffoscope/comparators/xsb.pyo
 ${PYSITELIB}/diffoscope/comparators/xz.py
 ${PYSITELIB}/diffoscope/comparators/xz.pyc
 ${PYSITELIB}/diffoscope/comparators/xz.pyo
