@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2018/05/14 21:22:34 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2018/05/16 18:55:45 jperkin Exp $
 
 DISTNAME=	webkitgtk-2.20.2
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
@@ -157,6 +157,9 @@ CXXFLAGS.SunOS+=	-fpermissive
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-Wno-c++11-narrowing
 .endif
+
+# This does not disable optimisations, merely avoids #error if there are none.
+CFLAGS+=	-DRELEASE_WITHOUT_OPTIMIZATIONS
 
 .include "options.mk"
 
