@@ -1,4 +1,4 @@
-$NetBSD: patch-xfsm-shutdown-helper_main.c,v 1.2 2015/07/06 10:39:35 richard Exp $
+$NetBSD: patch-xfsm-shutdown-helper_main.c,v 1.3 2018/05/16 18:06:04 youri Exp $
 
 Add NetBSD commands.
 ... and be careful to only SUSPEND or HIBERNATE when defined.
@@ -11,8 +11,8 @@ Add NetBSD commands.
  #endif
 -
 +#ifdef BACKEND_TYPE_NETBSD
-+#define UP_BACKEND_SUSPEND_COMMAND      "/usr/sbin/zzz"
-+#define UP_BACKEND_HIBERNATE_COMMAND    "/usr/sbin/zzz"
++#define UP_BACKEND_SUSPEND_COMMAND      "/sbin/sysctl -w hw.acpi.sleep.state=1"
++#define UP_BACKEND_HIBERNATE_COMMAND    "/sbin/sysctl -w hw.acpi.sleep.state=4"
 +#endif
  
  static gboolean
