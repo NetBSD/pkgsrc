@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2431 2018/05/16 16:49:52 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2432 2018/05/16 18:06:16 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3520,3 +3520,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/rsyslog to 8.35.0 [fhajny 2018-05-16]
 	Updated security/py-certbot to 0.24.0 [fhajny 2018-05-16]
 	Updated mail/rspamd to 1.7.4 [fhajny 2018-05-16]
+	Updated x11/xfce4-session to 4.13.0nb4 [youri 2018-05-16]
