@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.15 2017/06/22 22:09:17 kamil Exp $
+$NetBSD: distinfo,v 1.16 2018/05/16 11:30:36 youri Exp $
 
-SHA1 (ConsoleKit2-1.0.2.tar.bz2) = 57b5fc3eae0391105e4933e79e6aeda943e6da81
-RMD160 (ConsoleKit2-1.0.2.tar.bz2) = 7b151e8d25dedb6961d2d83b934d79d9411147ff
-SHA512 (ConsoleKit2-1.0.2.tar.bz2) = a6d1c876aafe3cb102d916c6b6086283eff77d2f35fbda460196cb71daf16d21a6713096bfc9e1b6ccef9719b2fcb25b6124024f3245f9410d0e503087c479f7
-Size (ConsoleKit2-1.0.2.tar.bz2) = 622723 bytes
-SHA1 (patch-data_Makefile.am) = 5de63a98459914c7fda185d71fefd553b82107d3
-SHA1 (patch-data_Makefile.in) = a1861d2b80cc45ec6e4d625b635d1fb3c8b90122
-SHA1 (patch-src_ck-sysdeps-netbsd.c) = 889fdc11b096d290028572b673533f97a14c7984
+SHA1 (ConsoleKit2-1.2.1.tar.bz2) = 28869807eed0cc4a7a1d98030be1f2c7e5700d0e
+RMD160 (ConsoleKit2-1.2.1.tar.bz2) = 641171ca6e8290924fae4ab2d1ead6b13de88ad5
+SHA512 (ConsoleKit2-1.2.1.tar.bz2) = 31befe89f7fa604138bfb0722fc6cf12f0934bac004f98fc331004eb5a7f466ed7bd0dc9adc9869da739974208f9a3bc125068ff8a60d4b2badb58ef70a3eb10
+Size (ConsoleKit2-1.2.1.tar.bz2) = 1182946 bytes
+SHA1 (patch-src_ck-sysdeps-netbsd.c) = 4b8cabcd47bef0b8edaf6dd292686aa3297794bc
