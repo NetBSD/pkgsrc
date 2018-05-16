@@ -106,6 +106,7 @@ cvs			Enable CVS support.
 cvsgraph		Enable cvsgraph support.
 cython			Enable Cython support.
 daemontools-moresignals	Add options to send SIG{QUIT,USR1,USR2} to daemons.
+dante                   Enable Dante support.
 dar-int32		Use 32-bit integers for file lengths in Dar.
 dar-int64		Use 64-bit integers for file lengths in Dar.
 darwin			Build and/or run on Darwin and Mac OS X.
