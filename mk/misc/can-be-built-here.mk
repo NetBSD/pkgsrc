@@ -1,4 +1,4 @@
-# $NetBSD: can-be-built-here.mk,v 1.8 2015/01/01 06:06:06 dholland Exp $
+# $NetBSD: can-be-built-here.mk,v 1.9 2018/05/16 21:23:02 rillig Exp $
 #
 # This file checks whether a package can be built in the current pkgsrc
 # environment. It checks the following variables:
@@ -20,6 +20,7 @@
 #	XXX: It's weird to have three negations in such a short variable
 #	name.
 #
+# Keywords: compiler broken only platform
 
 _CBBH_CHECKS=		# none, but see below.
 
