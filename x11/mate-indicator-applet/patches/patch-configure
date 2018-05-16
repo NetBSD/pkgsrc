@@ -1,0 +1,127 @@
+$NetBSD: patch-configure,v 1.1 2018/05/16 11:07:14 jperkin Exp $
+
+Shell portability.
+
+--- configure.orig	2018-02-02 14:27:33.000000000 +0000
++++ configure
+@@ -13044,7 +13044,7 @@ fi
+ 
+ ### decide on what Indicators implementation to use...
+ 
+-if   test "x$have_ayatanaindicator" == "xyes" &&
++if   test "x$have_ayatanaindicator" = "xyes" &&
+      test "x$have_ubuntuindicator" != "xyes" &&
+      test "x$with_ubuntu_indicators" != "xyes"; then
+ 
+@@ -13052,7 +13052,7 @@ if   test "x$have_ayatanaindicator" == "
+     use_ayatanaindicator="yes";
+     indicator_enforced="no";
+ 
+-elif test "x$have_ubuntuindicator" == "xyes" &&
++elif test "x$have_ubuntuindicator" = "xyes" &&
+      test "x$have_ayatanaindicator" != "xyes" &&
+      test "x$with_ayatana_indicators" != "xyes"; then
+ 
+@@ -13060,31 +13060,31 @@ elif test "x$have_ubuntuindicator" == "x
+     use_ubuntuindicator="yes";
+     indicator_enforced="no";
+ 
+-elif test "x$have_ubuntuindicator" == "xyes" &&
+-     test "x$have_ayatanaindicator" == "xyes" &&
+-     test "x$with_ayatana_indicators" == "xyes"; then
++elif test "x$have_ubuntuindicator" = "xyes" &&
++     test "x$have_ayatanaindicator" = "xyes" &&
++     test "x$with_ayatana_indicators" = "xyes"; then
+ 
+     # both Indicator implementations are present, and we are asked to use Ayatana Indicators
+     use_ayatanaindicator=yes;
+     indicator_enforced=yes;
+ 
+-elif test "x$have_ubuntuindicator" == "xyes" &&
+-     test "x$have_ayatanaindicator" == "xyes" &&
+-     test "x$with_ubuntu_indicators" == "xyes"; then
++elif test "x$have_ubuntuindicator" = "xyes" &&
++     test "x$have_ayatanaindicator" = "xyes" &&
++     test "x$with_ubuntu_indicators" = "xyes"; then
+ 
+     # both Indicator implementations are present, and we are asked to use Ubuntu Indicators
+     use_ubuntuindicator=yes;
+     indicator_enforced=yes;
+ 
+-elif test "x$have_ubuntuindicator" == "xyes" &&
++elif test "x$have_ubuntuindicator" = "xyes" &&
+      test "x$have_ayatanaindicator" != "xyes" &&
+-     test "x$with_ayatana_indicators" == "xyes"; then
++     test "x$with_ayatana_indicators" = "xyes"; then
+ 
+     as_fn_error $? "Ubuntu Indicators are present, but you want to build mate-indicator-applet against Ayatana Indicators. This does not match." "$LINENO" 5
+ 
+ elif test "x$have_ubuntuindicator" != "xyes" &&
+-     test "x$have_ayatanaindicator" == "xyes" &&
+-     test "x$with_ubuntu_indicators" == "xyes"; then
++     test "x$have_ayatanaindicator" = "xyes" &&
++     test "x$with_ubuntu_indicators" = "xyes"; then
+ 
+     as_fn_error $? "Ayatana Indicators are present, but you want to build mate-indicator-applet against Ubuntu Indicators. This does not match." "$LINENO" 5
+ 
+@@ -13096,7 +13096,7 @@ fi
+ 
+ ### prepare Ayatana or Ubuntu Indicators implementation for the build, regarding to the decision reached above...
+ 
+-if   test "x$use_ayatanaindicator" == "xyes"; then
++if   test "x$use_ayatanaindicator" = "xyes"; then
+ 
+      if true; then
+   WITH_AYATANA_INDICATOR_TRUE=
+@@ -13118,7 +13118,7 @@ fi
+ $as_echo "#define HAVE_AYATANA_INDICATOR 1" >>confdefs.h
+ 
+ 
+-    if test "x$indicator_enforced" == "xyes"; then
++    if test "x$indicator_enforced" = "xyes"; then
+         { $as_echo "$as_me:${as_lineno-$LINENO}: Using Ayatana Indicators for this build (as requested via configure option)." >&5
+ $as_echo "$as_me: Using Ayatana Indicators for this build (as requested via configure option)." >&6;}
+     else
+@@ -13326,7 +13326,7 @@ fi
+ 
+ 
+ 
+-elif test "x$use_ubuntuindicator" == "xyes"; then
++elif test "x$use_ubuntuindicator" = "xyes"; then
+ 
+     # both Indicator implementations are present, and we are asked to use Ubuntu Indicators
+      if true; then
+@@ -13349,7 +13349,7 @@ fi
+ $as_echo "#define HAVE_UBUNTU_INDICATOR 1" >>confdefs.h
+ 
+ 
+-    if test "x$indicator_enforced" == "xyes"; then
++    if test "x$indicator_enforced" = "xyes"; then
+         { $as_echo "$as_me:${as_lineno-$LINENO}: Using Ubuntu Indicators for this build (as requested via configure option)." >&5
+ $as_echo "$as_me: Using Ubuntu Indicators for this build (as requested via configure option)." >&6;}
+     else
+@@ -16827,18 +16827,18 @@ fi
+ # Results
+ ###########################
+ 
+-if (test "x$use_ayatanaindicator" == "xyes" &&
+-    test "x$have_ayatanaindicator_ng" == "xyes") ||
+-   (test "x$use_ubuntuindicator" == "xyes" &&
+-    test "x$have_ubuntuindicator_ng" == "xyes"); then
++if (test "x$use_ayatanaindicator" = "xyes" &&
++    test "x$have_ayatanaindicator_ng" = "xyes") ||
++   (test "x$use_ubuntuindicator" = "xyes" &&
++    test "x$have_ubuntuindicator_ng" = "xyes"); then
+     have_indicator_ng="yes"
+ else
+     have_indicator_ng="no"
+ fi
+ 
+-if test "x$use_ayatanaindicator" == "xyes"; then
++if test "x$use_ayatanaindicator" = "xyes"; then
+     indicator_implementation="Ayatana Indicators"
+-elif test "x$use_ubuntuindicator" == "xyes"; then
++elif test "x$use_ubuntuindicator" = "xyes"; then
+     indicator_implementation="Ubuntu Indicators"
+ fi
+ 
