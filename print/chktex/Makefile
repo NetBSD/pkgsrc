@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2017/05/09 12:24:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2018/05/16 12:42:19 markd Exp $
 
 DISTNAME=	chktex-1.7.6
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://download.savannah.gnu.org/releases/chktex/
 
