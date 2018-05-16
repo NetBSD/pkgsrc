@@ -1,4 +1,4 @@
-# $NetBSD: alternatives.mk,v 1.12 2015/11/25 13:05:47 jperkin Exp $
+# $NetBSD: alternatives.mk,v 1.13 2018/05/16 21:23:02 rillig Exp $
 #
 # This Makefile fragment handles the alternatives system, registering a
 # package in the database.
@@ -16,15 +16,23 @@
 #	Default value: The name of the ALTERNATIVES file in the package
 #	directory, if it exists. Otherwise, nothing.
 #
-#	Each line of the alternatives file contains two filenames, first
-#	the wrapper and then the alternative provided by the package.
+#	Each line of the alternatives file contains two filenames:
+#
+#		wrapper   alternative
+#
+#	The wrapper is the command that is run by the user.
+#	The alternative is the implementation of that command that is
+#	provided by the package.
 #	Both paths are relative to PREFIX.
+#	The paths may use placeholders of the form @VARNAME@, which are
+#	replaced with the actual values as per FILES_SUBST.
 #
 # Variables defined by this file:
 #
 # PKG_ALTERNATIVES
 #	The path to the pkg_alternatives command.
 #
+# Keywords: alternatives
 
 .if !defined(ALTERNATIVES_MK)
 ALTERNATIVES_MK=	# defined
