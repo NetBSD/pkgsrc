@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2418 2018/05/16 06:53:51 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2419 2018/05/16 07:00:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3502,3 +3502,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/netcdf to 4.6.1 [wen 2018-05-16]
 	Updated devel/p5-Moose to 2.2011 [wen 2018-05-16]
 	Updated math/py-numpy to 1.14.3nb1 [minskim 2018-05-16]
+	Updated devel/py-astroid to 1.6.4 [adam 2018-05-16]
+	Updated sysutils/py-diffoscope to 94 [adam 2018-05-16]
+	Updated devel/py-pylint to 1.9.0 [adam 2018-05-16]
