@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2018/05/07 07:59:38 leot Exp $
+# $NetBSD: Makefile,v 1.97 2018/05/16 22:29:54 jperkin Exp $
 
 DISTNAME=	cups-filters-1.20.3
 CATEGORIES=	print
@@ -35,6 +35,8 @@ REPLACE_BASH+=	filter/braille/filters/texttobrf.in
 .if ${OPSYS} == "Darwin"
 CFLAGS+=	-framework IOKit
 .endif
+
+CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 
 BUILD_DEFS+=		VARBASE
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
