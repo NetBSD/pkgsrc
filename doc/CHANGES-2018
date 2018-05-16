@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2429 2018/05/16 15:00:32 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2430 2018/05/16 15:09:52 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3518,3 +3518,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/librelp to 1.2.16 [fhajny 2018-05-16]
 	Updated lang/spidermonkey52 to 52.7.4nb1 [youri 2018-05-16]
 	Updated sysutils/rsyslog to 8.35.0 [fhajny 2018-05-16]
+	Updated security/py-certbot to 0.24.0 [fhajny 2018-05-16]
