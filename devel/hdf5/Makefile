@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2017/11/22 10:34:10 markd Exp $
+# $NetBSD: Makefile,v 1.50 2018/05/16 02:37:06 wen Exp $
 
 COMMENT=	Hierarchical Data Format (new generation)
-PKGREVISION=	1
 
 INSTALLATION_DIRS=	bin lib include
 INSTALLATION_DIRS+=	share/doc/hdf5

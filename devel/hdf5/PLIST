@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2017/11/15 20:28:27 minskim Exp $
+@comment $NetBSD: PLIST,v 1.26 2018/05/16 02:37:06 wen Exp $
 bin/gif2h5
 bin/h52gif
 bin/h5cc
@@ -62,15 +62,6 @@ include/H5public.h
 include/H5version.h
 include/hdf5.h
 include/hdf5_hl.h
-lib/libdynlib1.la
-lib/libdynlib2.la
-lib/libdynlib3.la
-lib/libdynlib4.la
-lib/libdynlibadd.la
-lib/libdynlibdiff.la
-lib/libdynlibdump.la
-lib/libdynlibls.la
-lib/libdynlibvers.la
 lib/libhdf5.la
 lib/libhdf5.settings
 lib/libhdf5_hl.la
