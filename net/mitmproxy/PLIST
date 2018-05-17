@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/04/05 17:53:02 leot Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/05/17 13:06:13 leot Exp $
 bin/mitmdump
 bin/mitmproxy
 bin/mitmweb
@@ -19,15 +19,15 @@ ${PYSITELIB}/mitmproxy/addonmanager.pyo
 ${PYSITELIB}/mitmproxy/addons/__init__.py
 ${PYSITELIB}/mitmproxy/addons/__init__.pyc
 ${PYSITELIB}/mitmproxy/addons/__init__.pyo
-${PYSITELIB}/mitmproxy/addons/allowremote.py
-${PYSITELIB}/mitmproxy/addons/allowremote.pyc
-${PYSITELIB}/mitmproxy/addons/allowremote.pyo
 ${PYSITELIB}/mitmproxy/addons/anticache.py
 ${PYSITELIB}/mitmproxy/addons/anticache.pyc
 ${PYSITELIB}/mitmproxy/addons/anticache.pyo
 ${PYSITELIB}/mitmproxy/addons/anticomp.py
 ${PYSITELIB}/mitmproxy/addons/anticomp.pyc
 ${PYSITELIB}/mitmproxy/addons/anticomp.pyo
+${PYSITELIB}/mitmproxy/addons/block.py
+${PYSITELIB}/mitmproxy/addons/block.pyc
+${PYSITELIB}/mitmproxy/addons/block.pyo
 ${PYSITELIB}/mitmproxy/addons/browser.py
 ${PYSITELIB}/mitmproxy/addons/browser.pyc
 ${PYSITELIB}/mitmproxy/addons/browser.pyo
@@ -444,9 +444,6 @@ ${PYSITELIB}/mitmproxy/proxy/protocol/http1.pyo
 ${PYSITELIB}/mitmproxy/proxy/protocol/http2.py
 ${PYSITELIB}/mitmproxy/proxy/protocol/http2.pyc
 ${PYSITELIB}/mitmproxy/proxy/protocol/http2.pyo
-${PYSITELIB}/mitmproxy/proxy/protocol/http_replay.py
-${PYSITELIB}/mitmproxy/proxy/protocol/http_replay.pyc
-${PYSITELIB}/mitmproxy/proxy/protocol/http_replay.pyo
 ${PYSITELIB}/mitmproxy/proxy/protocol/rawtcp.py
 ${PYSITELIB}/mitmproxy/proxy/protocol/rawtcp.pyc
 ${PYSITELIB}/mitmproxy/proxy/protocol/rawtcp.pyo

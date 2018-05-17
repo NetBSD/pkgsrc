@@ -1,10 +1,10 @@
-$NetBSD: patch-setup.py,v 1.7 2018/04/05 17:53:02 leot Exp $
+$NetBSD: patch-setup.py,v 1.8 2018/05/17 13:06:13 leot Exp $
 
 Avoid too strict version requirements.
 
---- setup.py.orig	2018-04-05 15:09:51.000000000 +0000
+--- setup.py.orig	2018-05-17 07:39:27.000000000 +0000
 +++ setup.py
-@@ -61,45 +61,45 @@ setup(
+@@ -60,47 +60,47 @@ setup(
      # https://packaging.python.org/en/latest/requirements/#install-requires
      # It is not considered best practice to use install_requires to pin dependencies to specific versions.
      install_requires=[
@@ -18,7 +18,7 @@ Avoid too strict version requirements.
 -        "h2>=3.0.1,<4",
 -        "hyperframe>=5.1.0,<6",
 -        "kaitaistruct>=0.7,<0.9",
--        "ldap3>=2.4,<2.5",
+-        "ldap3>=2.5,<2.6",
 -        "passlib>=1.6.5, <1.8",
 -        "pyasn1>=0.3.1,<0.5",
 -        "pyOpenSSL>=17.5,<17.6",
@@ -34,7 +34,7 @@ Avoid too strict version requirements.
 +        "h2>=3.0.1",
 +        "hyperframe>=5.1.0",
 +        "kaitaistruct>=0.7",
-+        "ldap3>=2.4",
++        "ldap3>=2.5",
 +        "passlib>=1.6.5",
 +        "pyasn1>=0.3.1",
 +        "pyOpenSSL>=17.5",
@@ -52,27 +52,29 @@ Avoid too strict version requirements.
 +            "pydivert>=2.0.3",
          ],
          'dev': [
+             "asynctest>=0.12.0",
 -            "flake8>=3.5, <3.6",
--            "Flask>=0.10.1, <0.13",
--            "mypy>=0.580,<0.581",
+-            "Flask>=1.0,<1.1",
+-            "mypy>=0.590,<0.591",
++            "flake8>=3.5",
++            "Flask>=1.0",
++            "mypy>=0.590",
+             "pytest-asyncio>=0.8",
 -            "pytest-cov>=2.5.1,<3",
 -            "pytest-faulthandler>=1.3.1,<2",
 -            "pytest-timeout>=1.2.1,<2",
 -            "pytest-xdist>=1.22,<2",
 -            "pytest>=3.3,<4",
 -            "requests>=2.9.1, <3",
--            "tox>=2.3, <3",
+-            "tox>=3.0,<3.1",
 -            "rstcheck>=2.2, <4.0",
-+            "flake8>=3.5",
-+            "Flask>=0.10.1",
-+            "mypy>=0.580",
 +            "pytest-cov>=2.5.1",
 +            "pytest-faulthandler>=1.3.1",
 +            "pytest-timeout>=1.2.1",
 +            "pytest-xdist>=1.22",
 +            "pytest>=3.3",
 +            "requests>=2.9.1",
-+            "tox>=2.3",
++            "tox>=3.0",
 +            "rstcheck>=2.2",
          ],
          'examples': [
