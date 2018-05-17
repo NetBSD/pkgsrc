@@ -1,0 +1,22 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2018/05/17 09:30:41 jperkin Exp $
+
+Find dbus-glib correctly.
+
+--- src/Makefile.in.orig	2018-05-17 09:16:45.582304014 +0000
++++ src/Makefile.in
+@@ -405,6 +405,7 @@ ristretto_CFLAGS = \
+ 	$(GIO_CFLAGS) \
+ 	$(GIO_UNIX_CFLAGS) \
+ 	$(LIBEXIF_CFLAGS) \
++	$(DBUS_GLIB_CFLAGS) \
+ 	$(XFCONF_CFLAGS) \
+ 	$(EXO_CFLAGS) \
+ 	$(CAIRO_CFLAGS) \
+@@ -423,6 +424,7 @@ ristretto_LDADD = \
+ 	$(GIO_LIBS) \
+ 	$(GIO_UNIX_LIBS) \
+ 	$(LIBEXIF_LIBS) \
++	$(DBUS_GLIB_LIBS) \
+ 	$(XFCONF_LIBS) \
+ 	$(EXO_LIBS) \
+ 	$(CAIRO_LIBS) \
