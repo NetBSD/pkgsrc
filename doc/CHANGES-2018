@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2440 2018/05/17 13:06:23 leot Exp $
+$NetBSD: CHANGES-2018,v 1.2441 2018/05/17 13:28:11 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3532,3 +3532,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/ocaml-findlib to 1.8.0nb1 [jaapb 2018-05-17]
 	Updated mail/mailfront to 2.15 [schmonz 2018-05-17]
 	Updated net/mitmproxy to 4.0.1 [leot 2018-05-17]
+	Updated textproc/erlang-fast_xml to 1.1.30 [fhajny 2018-05-17]
