@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2449 2018/05/17 13:40:47 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2450 2018/05/17 13:55:32 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3541,3 +3541,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/erlang-esip to 1.0.23 [fhajny 2018-05-17]
 	Updated graphics/erlang-eimp to 1.0.5 [fhajny 2018-05-17]
 	Updated chat/ejabberd to 18.04 [fhajny 2018-05-17]
+	Updated pkgtools/pkgin to 0.10.0 [jperkin 2018-05-17]
