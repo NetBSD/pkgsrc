@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2442 2018/05/17 13:29:01 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2443 2018/05/17 13:30:08 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3534,3 +3534,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/mitmproxy to 4.0.1 [leot 2018-05-17]
 	Updated textproc/erlang-fast_xml to 1.1.30 [fhajny 2018-05-17]
 	Updated textproc/erlang-fast_yaml to 1.0.14 [fhajny 2018-05-17]
+	Updated security/erlang-fast_tls to 1.0.22 [fhajny 2018-05-17]
