@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2018/05/16 06:59:22 adam Exp $
+# $NetBSD: Makefile,v 1.25 2018/05/17 10:35:32 adam Exp $
 
-DISTNAME=	pylint-1.9.0
+DISTNAME=	pylint-1.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint/}
 
-MAINTAINER=	helgoman@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.pylint.org/
 COMMENT=	Python source code analyzer
 LICENSE=	gnu-gpl-v2
