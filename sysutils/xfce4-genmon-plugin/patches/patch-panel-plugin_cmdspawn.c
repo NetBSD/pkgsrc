@@ -1,8 +1,8 @@
-$NetBSD: patch-panel-plugin_cmdspawn.c,v 1.2 2017/06/20 21:51:31 youri Exp $
+$NetBSD: patch-panel-plugin_cmdspawn.c,v 1.3 2018/05/17 09:57:42 jperkin Exp $
 
 Fix SunOS build.
 
---- panel-plugin/cmdspawn.c.orig	2012-05-10 02:09:21.000000000 +0000
+--- panel-plugin/cmdspawn.c.orig	2017-10-29 00:52:07.000000000 +0000
 +++ panel-plugin/cmdspawn.c
 @@ -12,7 +12,7 @@
   *  version 2.1 of the License, or (at your option) any later version.
@@ -13,7 +13,23 @@ Fix SunOS build.
   *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
   *  Lesser General Public License for more details.
  
-@@ -59,12 +59,12 @@ char *genmon_Spawn (char **argv, int wai
+@@ -24,6 +24,7 @@
+ /* Posix-compliance to make sure that only the calling thread is
+    duplicated, not the whole process (e.g Solaris) */
+ 
++#if !defined(__sun) || (!defined(_XOPEN_SOURCE) && (__STDC_VERSION__-0 < 199901L))
+ #ifndef _POSIX_C_SOURCE
+ #define _POSIX_C_SOURCE 199506L
+ #endif
+@@ -31,6 +32,7 @@
+ #ifndef _XOPEN_SOURCE
+ #define _XOPEN_SOURCE 500
+ #endif
++#endif
+ 
+ #include "cmdspawn.h"
+ 
+@@ -59,12 +61,12 @@ char *genmon_Spawn (char **argv, int wai
   /* Spawn a command and capture its output from stdout or stderr */
   /* Return allocated string on success, otherwise NULL */
  {
@@ -29,7 +45,7 @@ Fix SunOS build.
      int             status;
      int             i, j, k;
      char           *str = NULL;
-@@ -73,19 +73,19 @@ char *genmon_Spawn (char **argv, int wai
+@@ -73,19 +75,19 @@ char *genmon_Spawn (char **argv, int wai
          fprintf (stderr, "Spawn() error: No parameters passed!\n");
          return (NULL);
      }
@@ -52,7 +68,7 @@ Fix SunOS build.
                  j = i + 1; // stdout/stderr file descriptor
                  close (j);
                  k = dup2 (aaiPipe[i][WR], j);
-@@ -100,7 +100,7 @@ char *genmon_Spawn (char **argv, int wai
+@@ -100,7 +102,7 @@ char *genmon_Spawn (char **argv, int wai
          exit (-1);
      }
  
@@ -61,7 +77,7 @@ Fix SunOS build.
          close (aaiPipe[i][WR]); /* close write end of pipes in parent */
  
      /* Wait for child completion */
-@@ -113,16 +113,16 @@ char *genmon_Spawn (char **argv, int wai
+@@ -113,16 +115,16 @@ char *genmon_Spawn (char **argv, int wai
          }
  
          /* Read stdout/stderr pipes' read-ends */
@@ -82,7 +98,7 @@ Fix SunOS build.
              goto End;
  
          j = 0;
-@@ -143,7 +143,7 @@ char *genmon_Spawn (char **argv, int wai
+@@ -143,7 +145,7 @@ char *genmon_Spawn (char **argv, int wai
  
      End:
      /* Close read end of pipes */
