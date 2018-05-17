@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2444 2018/05/17 13:31:04 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2445 2018/05/17 13:32:13 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3536,3 +3536,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/erlang-fast_yaml to 1.0.14 [fhajny 2018-05-17]
 	Updated security/erlang-fast_tls to 1.0.22 [fhajny 2018-05-17]
 	Updated security/erlang-p1_oauth2 to 0.6.3 [fhajny 2018-05-17]
+	Updated net/erlang-xmpp to 1.1.21 [fhajny 2018-05-17]
