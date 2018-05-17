@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/04/29 21:32:02 adam Exp $
+# $NetBSD: Makefile,v 1.5 2018/05/17 14:06:58 jperkin Exp $
 
-DISTNAME=	lastpass-cli-1.2.1
-PKGREVISION=	3
+DISTNAME=	lastpass-cli-1.3.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lastpass/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
