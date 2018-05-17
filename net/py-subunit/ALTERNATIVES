@@ -1,0 +1,14 @@
+bin/subunit-1to2 @PREFIX@/bin/subunit-1to2-@PYVERSSUFFIX@
+bin/subunit-2to1 @PREFIX@/bin/subunit-2to1-@PYVERSSUFFIX@
+bin/subunit-filter @PREFIX@/bin/subunit-filter-@PYVERSSUFFIX@
+bin/subunit-ls @PREFIX@/bin/subunit-ls-@PYVERSSUFFIX@
+bin/subunit-notify @PREFIX@/bin/subunit-notify-@PYVERSSUFFIX@
+bin/subunit-output @PREFIX@/bin/subunit-output-@PYVERSSUFFIX@
+bin/subunit-stats @PREFIX@/bin/subunit-stats-@PYVERSSUFFIX@
+bin/subunit-tags @PREFIX@/bin/subunit-tags-@PYVERSSUFFIX@
+bin/subunit2csv @PREFIX@/bin/subunit2csv-@PYVERSSUFFIX@
+bin/subunit2disk @PREFIX@/bin/subunit2disk-@PYVERSSUFFIX@
+bin/subunit2gtk @PREFIX@/bin/subunit2gtk-@PYVERSSUFFIX@
+bin/subunit2junitxml @PREFIX@/bin/subunit2junitxml-@PYVERSSUFFIX@
+bin/subunit2pyunit @PREFIX@/bin/subunit2pyunit-@PYVERSSUFFIX@
+bin/tap2subunit @PREFIX@/bin/tap2subunit-@PYVERSSUFFIX@
