@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2018/05/15 22:22:02 youri Exp $
+# $NetBSD: Makefile,v 1.44 2018/05/17 09:29:22 jperkin Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -10,6 +10,8 @@ MASTER_SITES=	http://archive.xfce.org/src/xfce/tumbler/0.2/
 
 HOMEPAGE=	http://docs.xfce.org/xfce/thunar/tumbler
 COMMENT=	D-Bus thumbnailing service
+
+TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
