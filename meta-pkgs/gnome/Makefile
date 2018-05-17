@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2017/07/30 22:47:52 wiz Exp $
+# $NetBSD: Makefile,v 1.139 2018/05/17 08:36:34 jperkin Exp $
 
 DISTNAME=	gnome-2.26.2
 PKGREVISION=	5
@@ -19,7 +19,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome
 PKG_SUPPORTED_OPTIONS=	pulseaudio mono
 PKG_SUGGESTED_OPTIONS=	pulseaudio
 # mono does not work on NetBSD/arm yet
-.if ${OPSYS} != "NetBSD" || empty(MACHINE_ARCH:M*arm*)
+.if ${OPSYS} != "SunOS" && (${OPSYS} != "NetBSD" || empty(MACHINE_ARCH:M*arm*))
 PKG_SUGGESTED_OPTIONS+=	mono
 .endif
 .include "../../mk/bsd.options.mk"
