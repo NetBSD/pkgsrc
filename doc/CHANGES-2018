@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2438 2018/05/17 10:45:34 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.2439 2018/05/17 12:15:24 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3530,3 +3530,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-pylint to 1.9.1 [adam 2018-05-17]
 	Updated converters/py-confusable_homoglyphs to 3.1.1 [adam 2018-05-17]
 	Updated devel/ocaml-findlib to 1.8.0nb1 [jaapb 2018-05-17]
+	Updated mail/mailfront to 2.15 [schmonz 2018-05-17]
