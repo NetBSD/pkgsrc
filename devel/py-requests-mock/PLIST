@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2017/05/10 17:54:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/05/17 10:30:04 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
@@ -18,6 +19,9 @@ ${PYSITELIB}/requests_mock/compat.pyo
 ${PYSITELIB}/requests_mock/contrib/__init__.py
 ${PYSITELIB}/requests_mock/contrib/__init__.pyc
 ${PYSITELIB}/requests_mock/contrib/__init__.pyo
+${PYSITELIB}/requests_mock/contrib/_pytest_plugin.py
+${PYSITELIB}/requests_mock/contrib/_pytest_plugin.pyc
+${PYSITELIB}/requests_mock/contrib/_pytest_plugin.pyo
 ${PYSITELIB}/requests_mock/contrib/fixture.py
 ${PYSITELIB}/requests_mock/contrib/fixture.pyc
 ${PYSITELIB}/requests_mock/contrib/fixture.pyo
@@ -33,30 +37,3 @@ ${PYSITELIB}/requests_mock/request.pyo
 ${PYSITELIB}/requests_mock/response.py
 ${PYSITELIB}/requests_mock/response.pyc
 ${PYSITELIB}/requests_mock/response.pyo
-${PYSITELIB}/requests_mock/tests/__init__.py
-${PYSITELIB}/requests_mock/tests/__init__.pyc
-${PYSITELIB}/requests_mock/tests/__init__.pyo
-${PYSITELIB}/requests_mock/tests/base.py
-${PYSITELIB}/requests_mock/tests/base.pyc
-${PYSITELIB}/requests_mock/tests/base.pyo
-${PYSITELIB}/requests_mock/tests/test_adapter.py
-${PYSITELIB}/requests_mock/tests/test_adapter.pyc
-${PYSITELIB}/requests_mock/tests/test_adapter.pyo
-${PYSITELIB}/requests_mock/tests/test_custom_matchers.py
-${PYSITELIB}/requests_mock/tests/test_custom_matchers.pyc
-${PYSITELIB}/requests_mock/tests/test_custom_matchers.pyo
-${PYSITELIB}/requests_mock/tests/test_fixture.py
-${PYSITELIB}/requests_mock/tests/test_fixture.pyc
-${PYSITELIB}/requests_mock/tests/test_fixture.pyo
-${PYSITELIB}/requests_mock/tests/test_matcher.py
-${PYSITELIB}/requests_mock/tests/test_matcher.pyc
-${PYSITELIB}/requests_mock/tests/test_matcher.pyo
-${PYSITELIB}/requests_mock/tests/test_mocker.py
-${PYSITELIB}/requests_mock/tests/test_mocker.pyc
-${PYSITELIB}/requests_mock/tests/test_mocker.pyo
-${PYSITELIB}/requests_mock/tests/test_request.py
-${PYSITELIB}/requests_mock/tests/test_request.pyc
-${PYSITELIB}/requests_mock/tests/test_request.pyo
-${PYSITELIB}/requests_mock/tests/test_response.py
-${PYSITELIB}/requests_mock/tests/test_response.pyc
-${PYSITELIB}/requests_mock/tests/test_response.pyo
