@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2015/11/04 03:28:31 agc Exp $
+$NetBSD: distinfo,v 1.10 2018/05/17 10:47:52 jperkin Exp $
 
 SHA1 (gtk+extra-2.1.2.tar.gz) = 1b6cccbf89a79c8fe551d77c84dbf21a82c69f07
 RMD160 (gtk+extra-2.1.2.tar.gz) = e14bfc2a055fdef0d037b494018ca25047cc3c9e
@@ -10,3 +10,4 @@ SHA1 (patch-ae) = a27172a43e2796dff796916773e3f57ed6be30ed
 SHA1 (patch-af) = 4d83e4859aa4377cae55cdccc4b3a2c774d32a9a
 SHA1 (patch-ag) = c4c50b3f73177de6d9f31190f013cd05fed41518
 SHA1 (patch-gtkextra_gtkcharsel_c) = eec527bb8560eb957a80a6425e7f2df7d1f6ea79
+SHA1 (patch-gtkextra_gtkplotsurface.c) = 59eb81742a41f943c14ead8b300a9425344128b8
