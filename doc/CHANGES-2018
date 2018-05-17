@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2433 2018/05/16 18:42:02 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2434 2018/05/17 08:10:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3522,3 +3522,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/rspamd to 1.7.4 [fhajny 2018-05-16]
 	Updated x11/xfce4-session to 4.13.0nb4 [youri 2018-05-16]
 	Updated lang/nodejs8 to 8.11.2 [fhajny 2018-05-16]
+	Added net/py-subunit version 1.3.0 [adam 2018-05-17]
+	Added devel/py-testrepository version 0.0.20 [adam 2018-05-17]
