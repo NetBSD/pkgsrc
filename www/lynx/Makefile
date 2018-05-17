@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2018/02/16 07:17:09 wiz Exp $
+# $NetBSD: Makefile,v 1.130 2018/05/17 10:16:25 jperkin Exp $
 
 DISTNAME=	lynx2.8.8rel.2
 PKGNAME=	${DISTNAME:S/lynx/lynx-/:S/rel//}
@@ -72,6 +72,8 @@ CONFIGURE_ARGS+=	--enable-read-eta
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ENV+=		BUILD_CC=${NATIVE_CC:Q}
 .endif
+
+CONFIGURE_ENV.SunOS+=	cf_cv_xopen_source=no
 
 .include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
