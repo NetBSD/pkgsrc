@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/06/05 14:24:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2018/05/17 09:53:22 hauke Exp $
 
 DISTNAME=	File-Rsync-0.49
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../..//authors/id/L/LE/LEAKIN/}
 
@@ -11,7 +11,10 @@ HOMEPAGE=	http://search.cpan.org/~leakin/File-Rsync/Rsync.pm
 COMMENT=	Perl module interface to rsync(1)
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=		rsync-[0-9]*:../../net/rsync
+DEPENDS+=	rsync-[0-9]*:../../net/rsync
+DEPENDS+=	p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
+DEPENDS+=	p5-Data-Dumper-[0-9]*:../../devel/p5-Data-Dumper
+DEPENDS+=	p5-Carp-[0-9]*:../../devel/p5-Carp
 
 REPLACE_PERL+=		test.pl
 
