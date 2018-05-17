@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2018/03/28 21:51:09 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.53 2018/05/17 13:40:38 fhajny Exp $
 lib/${PKGNAME}/COPYING
 lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/${PKGNAME}/ebin/XmppAddr.beam
