@@ -1,0 +1,14 @@
+Subunit is a streaming protocol for test results.
+
+A number of useful things can be done easily with subunit:
+* Test aggregation: Tests run separately can be combined and then
+  reported/displayed together. For instance, tests from different languages can
+  be shown as a seamless whole, and tests running on multiple machines can be
+  aggregated into a single stream through a multiplexer.
+* Test archiving: A test run may be recorded and replayed later.
+* Test isolation: Tests that may crash or otherwise interact badly with each
+  other can be run seperately and then aggregated, rather than interfering with
+  each other or requiring an adhoc test->runner reporting protocol.
+* Grid testing: subunit can act as the necessary serialisation and
+  deserialiation to get test runs on distributed machines to be reported in
+  real time.
