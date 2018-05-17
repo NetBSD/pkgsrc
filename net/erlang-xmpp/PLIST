@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/03/24 16:39:41 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2018/05/17 13:32:06 fhajny Exp $
 lib/erlang/lib/xmpp
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/flex_offline.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/jid.beam
@@ -14,6 +14,7 @@ lib/erlang/lib/xmpp-${PKGVERSION}/ebin/pubsub_node_config.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/pubsub_publish_options.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/pubsub_subscribe_authorization.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/pubsub_subscribe_options.beam
+lib/erlang/lib/xmpp-${PKGVERSION}/ebin/push_summary.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/rfc3921.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/rfc6120.beam
 lib/erlang/lib/xmpp-${PKGVERSION}/ebin/rfc6121.beam
@@ -94,6 +95,7 @@ lib/erlang/lib/xmpp-${PKGVERSION}/include/pubsub_node_config.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/pubsub_publish_options.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/pubsub_subscribe_authorization.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/pubsub_subscribe_options.hrl
+lib/erlang/lib/xmpp-${PKGVERSION}/include/push_summary.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/xmpp.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/include/xmpp_codec.hrl
 lib/erlang/lib/xmpp-${PKGVERSION}/priv/lib/jid.so
