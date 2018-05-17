@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2434 2018/05/17 08:10:29 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2435 2018/05/17 09:59:51 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3524,3 +3524,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/nodejs8 to 8.11.2 [fhajny 2018-05-16]
 	Added net/py-subunit version 1.3.0 [adam 2018-05-17]
 	Added devel/py-testrepository version 0.0.20 [adam 2018-05-17]
+	Updated www/curl to 7.60.0 [leot 2018-05-17]
