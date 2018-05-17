@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2671 2018/05/09 14:49:00 jaapb Exp $
+# $NetBSD: Makefile,v 1.2672 2018/05/17 08:04:47 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2250,6 +2250,7 @@ SUBDIR+=	py-test-utils
 SUBDIR+=	py-test-virtualenv
 SUBDIR+=	py-test-xdist
 SUBDIR+=	py-testpath
+SUBDIR+=	py-testrepository
 SUBDIR+=	py-testresources
 SUBDIR+=	py-testscenarios
 SUBDIR+=	py-testtools
