@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18347 2018/05/16 07:47:02 adam Exp $
+$NetBSD: TODO,v 1.18348 2018/05/17 11:03:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -409,7 +409,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ardour-5.11
 	o argtable-2.9
 	o argus-20121202
-	o aria2-1.33.1
+	o aria2-1.34.0
 	o aribas-1.64
 	o arirang-1.70
 	o asapm-3.1
@@ -984,7 +984,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libprelude-3.1.0
 	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
-	o libressl-2.7.1
+	o libressl-2.7.3
 	o librsvg-2.42.4 [needs rust+cargo]
 	o libsoup-2.62.2
 	o libstree-0.4.2
@@ -1037,7 +1037,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mcollective-2.3.2
 	o mcsim-5.6.5
 	o mecab-ipadic-2.7.0.20070801
-	o mednafen-0.9.45.1
+	o mednafen-1.21.1
 	o megatools-1.9.97
 	o memached-1.5.6
 	o mergeant-0.67
@@ -1093,6 +1093,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nas-auscope-1.9.4
 	o nautilus-actions-2.30.3 [GNOME 2.30]
 	o ncview-2.1.6
+	o neomutt-20180512
 	o nessus-4.4.1
 	o nestopia-1.46.2 [http://0ldsk00l.ca/nestopia/]
 	o netbt-hcidump-5.37
@@ -1295,6 +1296,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ruby-redmine-3.4.5
 	o ruby-review-1.4.0 [wip]
 	o rump-20131213
+	o rust-1.26
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
 	o sarg-2.2.5
@@ -1426,7 +1428,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
-	o tor-browser-7.5.3
+	o tor-browser-7.5.4
 	o totem-3.14.1
 	o totem-pl-parser-3.10.3
 	o tripwire-2.3.1 [see also pkg/22362]
