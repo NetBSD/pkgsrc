@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2436 2018/05/17 10:30:59 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2437 2018/05/17 10:38:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3527,3 +3527,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/curl to 7.60.0 [leot 2018-05-17]
 	Updated shells/dash to 0.5.10.1 [adam 2018-05-17]
 	Updated devel/py-requests-mock to 1.5.0 [adam 2018-05-17]
+	Updated devel/py-pylint to 1.9.1 [adam 2018-05-17]
+	Updated converters/py-confusable_homoglyphs to 3.1.1 [adam 2018-05-17]
