@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2018/05/18 17:07:29 youri Exp $
+
+Install config file in share/examples.
+
+--- src/Makefile.in.orig	2017-12-18 23:15:50.000000000 +0000
++++ src/Makefile.in
+@@ -606,7 +606,7 @@ BUILT_SOURCES = \
+ 	org.freedesktop.PowerManagement.Inhibit.c \
+ 	org.freedesktop.PowerManagement.Inhibit.h
+ 
+-autostartdir = $(sysconfdir)/xdg/autostart
++autostartdir = $(datadir)/examples/xfce4/autostart
+ autostart_in_files = xfce4-power-manager.desktop.in
+ autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
+ EXTRA_DIST = \

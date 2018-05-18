@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2018/05/18 17:07:29 youri Exp $
+
+SHA1 (xfce4-power-manager-1.6.1.tar.bz2) = 7b6d3ce2fcb29262450e9e39b858cc00e10faa81
+RMD160 (xfce4-power-manager-1.6.1.tar.bz2) = 7e3f4f03a33ba19d08739e0450e6971807f0e560
+SHA512 (xfce4-power-manager-1.6.1.tar.bz2) = b81ce1b35892a6cd0b1d4fb590ccc25b906cde6f782de2fffbe78ea89e00df15e51ea1f47576c173b7512cd617f5142868fca8cf81519b6fe165a5ecc67a5478
+Size (xfce4-power-manager-1.6.1.tar.bz2) = 1180710 bytes
+SHA1 (patch-src_Makefile.in) = aad658d19417609138d281ea99a708ab5ea49acb
+SHA1 (patch-src_xfpm-pm-helper.c) = 7ac402541b500726e54ecceeaffe3893c1ab862a
+SHA1 (patch-src_xfpm-suspend.c) = 8ea785ad5c4f435348947377ce5e7d1a7af30d46
