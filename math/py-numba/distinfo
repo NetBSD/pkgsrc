@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/05/18 16:08:49 minskim Exp $
+
+SHA1 (numba-0.37.0.tar.gz) = 169064ae9fc9e5f2ea25f4c2f1777c8f9e06b1eb
+RMD160 (numba-0.37.0.tar.gz) = 44aebaf5986cad9a3b6c12a4d7faa0708105a68d
+SHA512 (numba-0.37.0.tar.gz) = 83a4e5a28a43ed1cd6584ccd63aac38a928af48c424ed119bc86487f0a2bfb9875c34f6fe0a03446d8c8e9179be81f831200c12ff31edc22bc4741789095f861
+Size (numba-0.37.0.tar.gz) = 1734667 bytes
