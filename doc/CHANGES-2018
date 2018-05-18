@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2454 2018/05/17 15:47:55 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2455 2018/05/18 01:01:09 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3546,3 +3546,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/lastpass-cli to 1.3.1 [jperkin 2018-05-17]
 	Updated databases/mongo-c-driver to 1.9.5 [fhajny 2018-05-17]
 	Added devel/py-llvmlite version 0.22.0 [minskim 2018-05-17]
+	Added devel/R-glue version 1.2.0 [minskim 2018-05-18]
