@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18349 2018/05/18 12:46:38 ryoon Exp $
+$NetBSD: TODO,v 1.18350 2018/05/18 18:20:24 zafer Exp $
 
 Suggested new packages
 ======================
@@ -1460,7 +1460,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vfu-4.09
 	o vicq-0.4.2
 	o vile-9.8q
-	o vim-8.0.1826
+	o vim-8.1
 	o vim-share-8.0.1826
 	o vinagre-3.16.1
 	o vino-3.16.0
