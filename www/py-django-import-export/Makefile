@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2018/02/22 11:13:00 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/05/18 07:17:47 adam Exp $
 
-DISTNAME=	django-import-export-1.0.0
+DISTNAME=	django-import-export-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-import-export/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/bmihelac/django-import-export
+HOMEPAGE=	https://github.com/django-import-export/django-import-export
 COMMENT=	Django application and library for importing and exporting data
 LICENSE=	modified-bsd
 
