@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2466 2018/05/18 16:08:57 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2467 2018/05/18 17:07:40 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3559,3 +3559,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added graphics/slim-themes version 02142018 [youri 2018-05-18]
 	Updated x11/qt5-qtbase to 5.10.1nb6 [bacon 2018-05-18]
 	Added math/py-numba version 0.37.0 [minskim 2018-05-18]
+	Added sysutils/xfce4-power-manager version 1.6.1 [youri 2018-05-18]
