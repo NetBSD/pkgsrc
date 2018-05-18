@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 #
-# $NetBSD: port2pkg.pl,v 1.22 2014/02/17 10:32:02 wiz Exp $
+# $NetBSD: port2pkg.pl,v 1.23 2018/05/18 09:42:33 hauke Exp $
 #
 
 use Getopt::Std;
@@ -126,8 +126,8 @@ sub read_Makefile {
 	}
 
 	if (defined($distname)) {
-		$distname =~ s/\${PORTNAME}/$portname/;
-		$distname =~ s/\${PORTVERSION}/$portversion/;
+		$distname =~ s/\$\{PORTNAME}/$portname/;
+		$distname =~ s/\$\{PORTVERSION}/$portversion/;
 
 		if ($distname ne "$portname-$portversion") {
 			$pkgname = "$portname-$portversion";
