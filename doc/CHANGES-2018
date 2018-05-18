@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2462 2018/05/18 14:23:18 jklos Exp $
+$NetBSD: CHANGES-2018,v 1.2463 2018/05/18 14:51:27 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3555,3 +3555,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-flufl.i18n to 2.0.1 [fhajny 2018-05-18]
 	Updated devel/py-flufl.lock to 3.2 [fhajny 2018-05-18]
 	Updated www/wordpress to 4.9.6 [jklos 2018-05-18]
+	Added x11/slim version 1.3.6 [youri 2018-05-18]
