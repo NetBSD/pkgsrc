@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2018/04/17 22:29:35 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2018/05/18 17:54:05 leot Exp $
 
 DISTNAME=		bitlbee-3.5.1
 PKGREVISION=		1
@@ -41,6 +41,7 @@ DOCDIR=			${PREFIX}/share/doc/bitlbee
 STATEDIR=		${VARBASE}/db/bitlbee
 
 OWN_DIRS_PERMS=		${STATEDIR} bitlbee nobody 700
+OWN_DIRS_PERMS+=	${VARBASE}/run/bitlbee bitlbee nobody 700
 
 PKG_GROUPS=		nobody
 PKG_USERS=		bitlbee:nobody
