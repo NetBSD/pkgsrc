@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.757 2018/05/08 07:47:44 maya Exp $
+# $NetBSD: Makefile,v 1.758 2018/05/18 17:08:12 youri Exp $
 #
 
 COMMENT=	System utilities
@@ -719,6 +719,7 @@ SUBDIR+=	xfce4-genmon-plugin
 SUBDIR+=	xfce4-gvfs-mount-plugin
 SUBDIR+=	xfce4-mount-plugin
 SUBDIR+=	xfce4-netload-plugin
+SUBDIR+=	xfce4-power-manager
 SUBDIR+=	xfce4-quicklauncher-plugin
 SUBDIR+=	xfce4-systemload-plugin
 SUBDIR+=	xfce4-taskmanager
