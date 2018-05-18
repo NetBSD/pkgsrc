@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/25 20:19:28 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2018/05/18 13:07:38 fhajny Exp $
 ${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/flufl/i18n/NEWS.rst
 ${PYSITELIB}/flufl/i18n/README.rst
@@ -41,6 +42,9 @@ ${PYSITELIB}/flufl/i18n/docs/using.rst
 ${PYSITELIB}/flufl/i18n/testing/__init__.py
 ${PYSITELIB}/flufl/i18n/testing/__init__.pyo
 ${PYSITELIB}/flufl/i18n/testing/__init__.pyc
+${PYSITELIB}/flufl/i18n/testing/helpers.pyo
+${PYSITELIB}/flufl/i18n/testing/helpers.pyc
+${PYSITELIB}/flufl/i18n/testing/helpers.py
 ${PYSITELIB}/flufl/i18n/testing/messages/__init__.py
 ${PYSITELIB}/flufl/i18n/testing/messages/__init__.pyo
 ${PYSITELIB}/flufl/i18n/testing/messages/__init__.pyc
@@ -51,9 +55,15 @@ ${PYSITELIB}/flufl/i18n/testing/messages/yy/LC_MESSAGES/flufl.po
 ${PYSITELIB}/flufl/i18n/tests/__init__.py
 ${PYSITELIB}/flufl/i18n/tests/__init__.pyo
 ${PYSITELIB}/flufl/i18n/tests/__init__.pyc
-${PYSITELIB}/flufl/i18n/tests/test_documentation.pyo
-${PYSITELIB}/flufl/i18n/tests/test_documentation.pyc
+${PYSITELIB}/flufl/i18n/tests/test_application.pyo
+${PYSITELIB}/flufl/i18n/tests/test_application.pyc
+${PYSITELIB}/flufl/i18n/tests/test_expand.pyo
+${PYSITELIB}/flufl/i18n/tests/test_expand.pyc
+${PYSITELIB}/flufl/i18n/tests/test_substitute.pyo
+${PYSITELIB}/flufl/i18n/tests/test_substitute.pyc
 ${PYSITELIB}/flufl/i18n/tests/test_translator.pyo
 ${PYSITELIB}/flufl/i18n/tests/test_translator.pyc
-${PYSITELIB}/flufl/i18n/tests/test_documentation.py
+${PYSITELIB}/flufl/i18n/tests/test_application.py
+${PYSITELIB}/flufl/i18n/tests/test_expand.py
+${PYSITELIB}/flufl/i18n/tests/test_substitute.py
 ${PYSITELIB}/flufl/i18n/tests/test_translator.py
