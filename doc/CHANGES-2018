@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2459 2018/05/18 12:52:54 ryoon Exp $
+$NetBSD: CHANGES-2018,v 1.2460 2018/05/18 13:07:48 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3552,3 +3552,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/rust to 1.26.0 [ryoon 2018-05-18]
 	Updated www/firefox to 60.0.1 [ryoon 2018-05-18]
 	Updated www/firefox-l10n to 60.0.1 [ryoon 2018-05-18]
+	Updated devel/py-flufl.i18n to 2.0.1 [fhajny 2018-05-18]
