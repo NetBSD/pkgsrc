@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2468 2018/05/18 17:09:33 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2469 2018/05/18 18:17:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3561,3 +3561,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/py-numba version 0.37.0 [minskim 2018-05-18]
 	Added sysutils/xfce4-power-manager version 1.6.1 [youri 2018-05-18]
 	Updated meta-pkgs/xfce4 to 4.12.0nb11 [youri 2018-05-18]
+	Added devel/py-gitinspector-devel version 0.5.0.dev0 [minskim 2018-05-18]
