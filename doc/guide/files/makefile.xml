@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.28 2018/05/11 21:58:50 leot Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.29 2018/05/19 10:30:22 rillig Exp $ -->
 
 <chapter id="makefile"> <?dbhtml filename="makefile.html"?>
   <title>Programming in <filename>Makefile</filename>s</title>
@@ -188,7 +188,11 @@ correctly. But the echo command may additionally interpret strings with a
 leading dash or those containing backslashes.</para>
 
 <para>Example 3 can handle arbitrary strings, since &man.printf.1; only
-interprets the format string, but not the next argument.</para>
+interprets the format string, but not the next argument. The trailing
+single quotes handle the case when the string is empty. In that case, the
+:Q modifier would result in an empty string too, which would then be
+skipped by the shell. For &man.printf.1; this doesn't make a difference,
+but other programs may care.</para>
 
 <para>In example 4, the <varname>EXAMPLE_ENV</varname> does not
 need to be quoted because the quoting has already been done
