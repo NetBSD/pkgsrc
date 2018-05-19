@@ -35,6 +35,9 @@ type Pkgsrc struct {
 	UserDefinedVars map[string]MkLine   // varname => line; used for checking BUILD_DEFS
 	Deprecated      map[string]string   //
 	vartypes        map[string]*Vartype // varcanon => type
+
+	Hashes       map[string]*Hash // Maps "alg:fname" => hash (inter-package check).
+	UsedLicenses map[string]bool  // Maps "license name" => true (inter-package check).
 }
 
 func NewPkgsrc(dir string) *Pkgsrc {
@@ -51,7 +54,9 @@ func NewPkgsrc(dir string) *Pkgsrc {
 		make(map[string]string),
 		make(map[string]MkLine),
 		make(map[string]string),
-		make(map[string]*Vartype)}
+		make(map[string]*Vartype),
+		nil, // Only initialized when pkglint is run for a whole pkgsrc installation
+		nil}
 
 	// Some user-defined variables do not influence the binary
 	// package at all and therefore do not have to be added to
