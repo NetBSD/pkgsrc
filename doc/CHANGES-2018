@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2476 2018/05/19 16:26:24 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.2477 2018/05/19 18:48:27 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3569,3 +3569,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-FindBin-libs to 2.19.2 [schmonz 2018-05-19]
 	Updated x11/mozo to 1.20.0 [youri 2018-05-19]
 	Updated mail/pymsgauth to 2.1.0nb8 [schmonz 2018-05-19]
+	Updated pkgtools/pkglint to 5.5.12 [rillig 2018-05-19]
