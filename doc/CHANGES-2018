@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2472 2018/05/19 00:52:43 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2473 2018/05/19 08:57:30 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3565,3 +3565,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/xf86-video-mach64 to 6.9.6 [wiz 2018-05-19]
 	Updated x11/xf86-video-rendition to 4.2.7 [wiz 2018-05-19]
 	Updated x11/xf86-video-vmware to 13.3.0 [wiz 2018-05-19]
+	Updated lang/py27-html-docs to 2.7.15 [leot 2018-05-19]
