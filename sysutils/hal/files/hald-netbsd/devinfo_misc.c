@@ -66,7 +66,7 @@ devinfo_computer_add(HalDevice *parent, const char *devnode, char *devfs_path, c
 	char acpi_supported_states[20];
 	size_t len = sizeof(acpi_supported_states);
 
-	if (strcmp (devnode, "mainbus0") != 0) {
+	if (strcmp (devnode, "mainbus0") != 0 && strcmp (devnode, "armfdt0") != 0) {
 		return (NULL);
 	}
 
