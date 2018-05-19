@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2015/11/12 16:14:06 wiz Exp $
+$NetBSD: distinfo,v 1.10 2018/05/19 00:46:20 wiz Exp $
 
-SHA1 (xf86-video-rendition-4.2.6.tar.bz2) = b0c097890320be53ca678bd6f18de4c39e2409e8
-RMD160 (xf86-video-rendition-4.2.6.tar.bz2) = 056ae9c3d1771e72a20666907929e962b95108f3
-SHA512 (xf86-video-rendition-4.2.6.tar.bz2) = ef4910b11ede69af89a7ee60039113a35c03f2bab5f9433eefbb4ed685b0260f630e9047fa8ab60a7f0e8a0958a24f8821b719e061c26bc51ff7736b500ddbc7
-Size (xf86-video-rendition-4.2.6.tar.bz2) = 362408 bytes
+SHA1 (xf86-video-rendition-4.2.7.tar.bz2) = 0330d69006c5cad96a5a5448d2bdf129d4c5c8fd
+RMD160 (xf86-video-rendition-4.2.7.tar.bz2) = 766df7fdd6a6b927a32b415acff2b42a189ba136
+SHA512 (xf86-video-rendition-4.2.7.tar.bz2) = 5a23a599488946499e9bb3dfaf553cd68b6a1555a9c46b4038f355038a28747715bb940c52170f909917386911c8ae2607c669ba28f24a6c10ad375dab4535aa
+Size (xf86-video-rendition-4.2.7.tar.bz2) = 365454 bytes
