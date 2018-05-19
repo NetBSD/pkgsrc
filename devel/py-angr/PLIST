@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/03/15 03:13:29 khorben Exp $
+@comment $NetBSD: PLIST,v 1.1.2.1 2018/05/19 08:50:46 spz Exp $
 ${PYSITELIB}/angr-7.8.2.21-py${PYVERSSUFFIX}.egg-info/PKG-INFO
 ${PYSITELIB}/angr-7.8.2.21-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
 ${PYSITELIB}/angr-7.8.2.21-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
@@ -505,7 +505,7 @@ ${PYSITELIB}/angr/knowledge_plugins/variables/variable_access.pyo
 ${PYSITELIB}/angr/knowledge_plugins/variables/variable_manager.py
 ${PYSITELIB}/angr/knowledge_plugins/variables/variable_manager.pyc
 ${PYSITELIB}/angr/knowledge_plugins/variables/variable_manager.pyo
-${PYSITELIB}/angr/lib/angr_native.so
+${PYSITELIB}/angr/lib/angr_native.${SOEXT}
 ${PYSITELIB}/angr/manager.py
 ${PYSITELIB}/angr/manager.pyc
 ${PYSITELIB}/angr/manager.pyo
