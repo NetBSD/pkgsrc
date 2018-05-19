@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 03:29:02 agc Exp $
+$NetBSD: distinfo,v 1.8 2018/05/19 00:44:42 wiz Exp $
 
-SHA1 (xf86-video-mach64-6.9.5.tar.bz2) = 0ba2d51752a62808286937cf3c6a95794fa5cb29
-RMD160 (xf86-video-mach64-6.9.5.tar.bz2) = da9f300ccd028850505b7a474fdecbaf09ea50b2
-SHA512 (xf86-video-mach64-6.9.5.tar.bz2) = 855b1a505c4309dd6accd0a2b371763fe98f510e0b6c680e2b2a1ce780e4ee6ea8eeeafb85fd22b879a25679b4c3f03a8216b2ea5797fbbc00fccd597fb7622d
-Size (xf86-video-mach64-6.9.5.tar.bz2) = 520883 bytes
+SHA1 (xf86-video-mach64-6.9.6.tar.bz2) = 1fdf0c3488ab88cb46b563efee166a5d54a01932
+RMD160 (xf86-video-mach64-6.9.6.tar.bz2) = 1276b027d1caa629cedb350d1ea251fa31442d1b
+SHA512 (xf86-video-mach64-6.9.6.tar.bz2) = 687f6ac60491b704d5c4788463763d2f4bf725611e10bd2163156963fe0a8fdbffe0a1b7c737eff131f01759e43b5ec3544a7dabe66a67e85b286dcb969da2f1
+Size (xf86-video-mach64-6.9.6.tar.bz2) = 537768 bytes
