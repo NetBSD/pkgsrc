@@ -402,8 +402,8 @@ func (pline *PlistLine) CheckDirective(cmd, arg string) {
 	line := pline.line
 
 	if cmd == "unexec" {
-		if m, arg := match1(arg, `^(?:rmdir|\$\{RMDIR\} \%D/)(.*)`); m {
-			if !contains(arg, "true") && !contains(arg, "${TRUE}") {
+		if m, dir := match1(arg, `^(?:rmdir|\$\{RMDIR\} \%D/)(.*)`); m {
+			if !contains(dir, "true") && !contains(dir, "${TRUE}") {
 				pline.line.Warnf("Please remove this line. It is no longer necessary.")
 			}
 		}

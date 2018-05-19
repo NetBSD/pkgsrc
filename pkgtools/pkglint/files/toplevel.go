@@ -32,8 +32,8 @@ func CheckdirToplevel() {
 
 	if G.opts.Recursive {
 		if G.opts.CheckGlobal {
-			G.UsedLicenses = make(map[string]bool)
-			G.Hash = make(map[string]*Hash)
+			G.Pkgsrc.UsedLicenses = make(map[string]bool)
+			G.Pkgsrc.Hashes = make(map[string]*Hash)
 		}
 		G.Todo = append(append([]string(nil), ctx.subdirs...), G.Todo...)
 	}
