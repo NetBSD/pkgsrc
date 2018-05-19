@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2471 2018/05/19 00:46:29 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2472 2018/05/19 00:52:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3564,3 +3564,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-gitinspector-devel version 0.5.0.dev0 [minskim 2018-05-18]
 	Updated x11/xf86-video-mach64 to 6.9.6 [wiz 2018-05-19]
 	Updated x11/xf86-video-rendition to 4.2.7 [wiz 2018-05-19]
+	Updated x11/xf86-video-vmware to 13.3.0 [wiz 2018-05-19]
