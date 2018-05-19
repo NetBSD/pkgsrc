@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 02:46:50 agc Exp $
+$NetBSD: distinfo,v 1.5.22.1 2018/05/19 09:14:24 spz Exp $
 
-SHA1 (apachetop-0.12.5.tar.gz) = b41d3c68478e3cd378988834f32ce9a33975c67e
-RMD160 (apachetop-0.12.5.tar.gz) = a46fb8e850d6d98ce38aaa97fb2ea62553091ded
-SHA512 (apachetop-0.12.5.tar.gz) = 9a81aed697b81e619d68b940f1c6718fce8d5c5dd8eb401eb93aaf1846f9a12c9660cdc50a2dd7b3c7ae79494b8d70c8e79262383a5abd19a66870515ec6dbf0
-Size (apachetop-0.12.5.tar.gz) = 126967 bytes
-SHA1 (patch-aa) = eae05f08dc87ba367256d632e8b95d186955e4dc
+SHA1 (0.18.4.zip) = 911b6a9bac7d320ee1f2dc3e4a8f8afd34a97fd4
+RMD160 (0.18.4.zip) = 09f5ed68c0584d5e20deae4bf1b1831e965cb671
+SHA512 (0.18.4.zip) = 91d5cadbe5a7ffc1bdd4999e5986ab55ad770caf6f2d19811b322d9e5af42b7f40a16d4b05c05c9d1d59ac80392ca90ba03dddb2a69e08d2d8243f9ef58158b7
+Size (0.18.4.zip) = 55053 bytes
