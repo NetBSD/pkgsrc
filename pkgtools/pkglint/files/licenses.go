@@ -6,7 +6,8 @@ import (
 )
 
 func checkToplevelUnusedLicenses() {
-	if G.UsedLicenses == nil {
+	usedLicenses := G.Pkgsrc.UsedLicenses
+	if usedLicenses == nil {
 		return
 	}
 
@@ -16,7 +17,7 @@ func checkToplevelUnusedLicenses() {
 		licensename := licensefile.Name()
 		licensepath := licensedir + "/" + licensename
 		if fileExists(licensepath) {
-			if !G.UsedLicenses[licensename] {
+			if !usedLicenses[licensename] {
 				NewLineWhole(licensepath).Warnf("This license seems to be unused.")
 			}
 		}
@@ -52,8 +53,8 @@ func (lc *LicenseChecker) checkLicenseName(license string) {
 	}
 	if licenseFile == "" {
 		licenseFile = G.Pkgsrc.File("licenses/" + license)
-		if G.UsedLicenses != nil {
-			G.UsedLicenses[license] = true
+		if G.Pkgsrc.UsedLicenses != nil {
+			G.Pkgsrc.UsedLicenses[license] = true
 		}
 	}
 
