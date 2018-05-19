@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/03/15 03:13:29 khorben Exp $
+# $NetBSD: Makefile,v 1.1.2.1 2018/05/19 08:50:46 spz Exp $
 
 DISTNAME=	angr-7.8.2.21
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
@@ -27,6 +27,11 @@ DEPENDS+=	${PYPKGPREFIX}-unicorn-[0-9]*:../../emulators/py-unicorn
 DEPENDS+=	${PYPKGPREFIX}-claripy-[0-9]*:../../math/py-claripy
 
 PYTHON_VERSIONS_ACCEPTED=	27
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 .include "../../devel/py-pyvex/buildlink3.mk"
 .include "../../emulators/unicorn/buildlink3.mk"
