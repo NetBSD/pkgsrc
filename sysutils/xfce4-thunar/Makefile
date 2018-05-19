@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2018/05/15 22:25:31 youri Exp $
+# $NetBSD: Makefile,v 1.54 2018/05/19 11:45:03 youri Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -11,7 +11,7 @@ MASTER_SITES=	http://archive.xfce.org/src/xfce/thunar/1.7/
 HOMEPAGE=	http://docs.xfce.org/xfce/thunar/start
 COMMENT=	Xfce file manager
 
-PKGCONFIG_OVERRIDE+=	thunarx/thunarx-2.pc.in
+PKGCONFIG_OVERRIDE+=	thunarx/thunarx-3.pc.in
 
 PKG_SYSCONFSUBDIR=	xdg/Thunar
 EGDIR=			${XFCE4_EGBASE}/Thunar
