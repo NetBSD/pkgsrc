@@ -72,7 +72,12 @@ void
 osspec_probe (void)
 {
 	/* add entire device tree */
-	devinfo_add (NULL, "mainbus0");
+	if (devinfo_probe (NULL, "mainbus0") == TRUE) {
+		devinfo_add (NULL, "mainbus0");
+	}
+	if (devinfo_probe (NULL, "armfdt0") == TRUE) {
+		devinfo_add (NULL, "armfdt0");
+	}
 
 	/* start processing events */
 	hotplug_event_process_queue ();
