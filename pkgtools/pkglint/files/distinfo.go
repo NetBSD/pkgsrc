@@ -157,16 +157,17 @@ func (ck *distinfoLinesChecker) checkUnrecordedPatches() {
 
 // Inter-package check for differing distfile checksums.
 func (ck *distinfoLinesChecker) checkGlobalMismatch(line Line, fname, alg, hash string) {
-	if G.Hash != nil && !hasPrefix(fname, "patch-") { // Intentionally checking the filename instead of ck.isPatch
+	hashes := G.Pkgsrc.Hashes
+	if hashes != nil && !hasPrefix(fname, "patch-") { // Intentionally checking the filename instead of ck.isPatch
 		key := alg + ":" + fname
-		otherHash := G.Hash[key]
+		otherHash := hashes[key]
 		if otherHash != nil {
 			if otherHash.hash != hash {
 				line.Errorf("The hash %s for %s is %s, which differs from %s in %s.",
 					alg, fname, hash, otherHash.hash, otherHash.line.ReferenceFrom(line))
 			}
 		} else {
-			G.Hash[key] = &Hash{hash, line}
+			hashes[key] = &Hash{hash, line}
 		}
 	}
 }

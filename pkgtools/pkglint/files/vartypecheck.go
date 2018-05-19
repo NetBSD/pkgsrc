@@ -950,9 +950,9 @@ func (cv *VartypeCheck) Tool() {
 			cv.Line.Errorf("Unknown tool %q.", toolname)
 		}
 		switch tooldep {
-		case "", "bootstrap", "build", "pkgsrc", "run":
+		case "", "bootstrap", "build", "pkgsrc", "run", "test":
 		default:
-			cv.Line.Errorf("Unknown tool dependency %q. Use one of \"bootstrap\", \"build\", \"pkgsrc\" or \"run\".", tooldep)
+			cv.Line.Errorf("Unknown tool dependency %q. Use one of \"bootstrap\", \"build\", \"pkgsrc\" or \"run\" or \"test\".", tooldep)
 		}
 	} else if cv.Op != opUseMatch {
 		cv.Line.Errorf("Invalid tool syntax: %q.", cv.Value)

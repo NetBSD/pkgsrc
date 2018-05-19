@@ -26,6 +26,7 @@ type Package struct {
 	EffectivePkgnameLine MkLine          // The origin of the three effective_* values
 	SeenBsdPrefsMk       bool            // Has bsd.prefs.mk already been included?
 	PlistDirs            map[string]bool // Directories mentioned in the PLIST files
+	PlistFiles           map[string]bool // Regular files mentioned in the PLIST files
 
 	vars                  Scope
 	bl3                   map[string]Line // buildlink3.mk name => line; contains only buildlink3.mk files that are directly included.
@@ -42,6 +43,7 @@ func NewPackage(pkgpath string) *Package {
 	pkg := &Package{
 		Pkgpath:               pkgpath,
 		PlistDirs:             make(map[string]bool),
+		PlistFiles:            make(map[string]bool),
 		vars:                  NewScope(),
 		bl3:                   make(map[string]Line),
 		plistSubstCond:        make(map[string]bool),
@@ -213,6 +215,14 @@ func (pkglint *Pkglint) checkdirPackage(pkgpath string) {
 	if G.opts.CheckDistinfo && G.opts.CheckPatches {
 		if havePatches && !haveDistinfo {
 			NewLineWhole(G.CurrentDir+"/"+pkg.DistinfoFile).Warnf("File not found. Please run \"%s makepatchsum\".", confMake)
+		}
+	}
+
+	if G.opts.CheckAlternatives {
+		for _, fname := range files {
+			if path.Base(fname) == "ALTERNATIVES" {
+				CheckfileAlternatives(fname, pkg.PlistFiles)
+			}
 		}
 	}
 
@@ -934,6 +944,7 @@ func (pkg *Package) loadPlistDirs(plistFilename string) {
 
 	for _, line := range lines {
 		text := line.Text
+		pkg.PlistFiles[text] = true // XXX: ignores PLIST conditionals for now
 		// Keep in sync with PlistChecker.collectFilesAndDirs
 		if !contains(text, "$") && !contains(text, "@") {
 			for dir := path.Dir(text); dir != "."; dir = path.Dir(dir) {

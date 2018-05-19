@@ -41,9 +41,6 @@ type Pkglint struct {
 	CvsEntriesDir   string   // Cached to avoid I/O
 	CvsEntriesLines []Line
 
-	Hash         map[string]*Hash // Maps "alg:fname" => hash (inter-package check).
-	UsedLicenses map[string]bool  // Maps "license name" => true (inter-package check).
-
 	errors                int
 	warnings              int
 	explainNext           bool
