@@ -117,6 +117,9 @@ devinfo_cpu_add(HalDevice *parent, const char *devnode, char *devfs_path, char *
 	if (strncmp(devnode, "cpu", 3) != 0) {
 		return (NULL);
 	}
+	if (devnode[3] < '0' || devnode[3] > '9') {
+		return (NULL);
+	}
 
 	HAL_INFO (("devinfo_cpu_add: parent=%p devnode=%s devfs_path=%s device_type=%s",
 	    parent, devnode, devfs_path, device_type));
