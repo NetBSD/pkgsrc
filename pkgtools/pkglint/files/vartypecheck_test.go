@@ -554,7 +554,7 @@ func (s *Suite) Test_VartypeCheck_Tool(c *check.C) {
 
 	t.CheckOutputLines(
 		"ERROR: fname:2: Unknown tool dependency \"unknown\". " +
-			"Use one of \"bootstrap\", \"build\", \"pkgsrc\" or \"run\".")
+			"Use one of \"bootstrap\", \"build\", \"pkgsrc\" or \"run\" or \"test\".")
 
 	runVartypeChecks(t, "USE_TOOLS.NetBSD", opAssignAppend, (*VartypeCheck).Tool,
 		"tool3:run",
@@ -562,7 +562,7 @@ func (s *Suite) Test_VartypeCheck_Tool(c *check.C) {
 
 	t.CheckOutputLines(
 		"ERROR: fname:2: Unknown tool dependency \"unknown\". " +
-			"Use one of \"bootstrap\", \"build\", \"pkgsrc\" or \"run\".")
+			"Use one of \"bootstrap\", \"build\", \"pkgsrc\" or \"run\" or \"test\".")
 }
 
 func (s *Suite) Test_VartypeCheck_VariableName(c *check.C) {
