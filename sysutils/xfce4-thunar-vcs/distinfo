@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.3 2017/06/20 12:20:39 youri Exp $
+$NetBSD: distinfo,v 1.4 2018/05/19 11:47:11 youri Exp $
 
 SHA1 (thunar-vcs-plugin-0.1.5.tar.bz2) = e1139bf900a8b68027c770ad4b1e11a0060e5d28
 RMD160 (thunar-vcs-plugin-0.1.5.tar.bz2) = 69df1ce992a5327c16fd309ee343afd7585a43a8
 SHA512 (thunar-vcs-plugin-0.1.5.tar.bz2) = 0315613fe97d5cb2fa9589af49bdb5074f20c83b52d5f7d4a151091839679b4617e8e0b20df85914b7bcef2464173dc1bd2bc182312364c7d5a94171aba28983
 Size (thunar-vcs-plugin-0.1.5.tar.bz2) = 478866 bytes
+SHA1 (patch-configure) = 61eea462574a3f39e40f0bfd13c3a957d6ce6bd2
+SHA1 (patch-thunar-vcs-plugin_Makefile.in) = 87b1f940741b0225d465be668f09064328fa8c8d
+SHA1 (patch-thunar-vcs-plugin_tvp-provider.c) = 3aac15ab3256f584263d3a2ad9b34a62f517c5da
