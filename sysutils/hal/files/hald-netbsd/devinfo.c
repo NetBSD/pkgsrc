@@ -48,6 +48,21 @@ devinfo_add(HalDevice *parent, gchar *name)
 	devinfo_add_subtree (parent, name, TRUE);
 }
 
+gboolean
+devinfo_probe(HalDevice *parent, gchar *name)
+{
+	struct devlistargs laa;
+
+	if (drvctl_list (name, &laa) == -1) {
+		HAL_INFO (("devinfo_probe: no %s device found", name));
+		return FALSE;
+	}
+
+	free (laa.l_childname);
+
+	return TRUE;
+}
+
 void
 devinfo_add_subtree(HalDevice *parent, const char *devnode, gboolean is_root)
 {
@@ -87,7 +102,7 @@ devinfo_set_default_properties (HalDevice *d, HalDevice *parent, const char *dev
 		char *pdevice = hal_device_property_get_string (parent, "netbsd.device");
 		if (pdevice) {
 			gchar *path;
-			if (strcmp (pdevice, "mainbus0") == 0)
+			if (strcmp (pdevice, "mainbus0") == 0 || strcmp (pdevice, "armfdt0") == 0)
 				pdevice = "computer";
 			path = g_strdup_printf ("/org/freedesktop/Hal/devices/%s", pdevice);
 			hal_device_property_set_string (d, "info.parent", path);
@@ -98,7 +113,7 @@ devinfo_set_default_properties (HalDevice *d, HalDevice *parent, const char *dev
 		char *pdevice = pdevnode;
 		if (drvctl_find_parent (devnode, pdevnode) == TRUE) {
 			gchar *path;
-			if (strcmp (pdevnode, "mainbus0") == 0)
+			if (strcmp (pdevnode, "mainbus0") == 0 || strcmp (pdevnode, "armfdt0") == 0)
 				pdevice = "computer";
 			path = g_strdup_printf ("/org/freedesktop/Hal/devices/%s", pdevice);
 			hal_device_property_set_string (d, "info.parent", path);
