@@ -89,7 +89,7 @@ hotplug_event_begin_devfs_add (HotplugEvent *hotplug_event, HalDevice *d)
 
 	/* only root node is allowed to be orphan */
 	if (parent == NULL) {
-		if (strcmp(hotplug_event->un.devfs.devfs_path, "mainbus0") != 0) {
+		if (strcmp(hotplug_event->un.devfs.devfs_path, "mainbus0") != 0 && strcmp(hotplug_event->un.devfs.devfs_path, "armfdt0") != 0) {
 			HAL_ERROR (("Parent is NULL devfs_path=%s parent_udi=%s", hotplug_event->un.devfs.devfs_path, parent_udi ? parent_udi : "<null>"));
 			hotplug_event_end ((void *) hotplug_event);
 			return;
