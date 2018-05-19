@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.15 2016/09/13 15:56:01 taca Exp $
+# $NetBSD: options.mk,v 1.15.16.1 2018/05/19 09:18:37 spz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.roundcube
 
 PKG_OPTIONS_REQUIRED_GROUPS=	db webserver
 PKG_OPTIONS_GROUP.db=		mysql pgsql sqlite
-PKG_OPTIONS_GROUP.webserver=	apache nginx
+PKG_OPTIONS_GROUP.webserver=	apache lighttpd nginx
 
 PKG_SUPPORTED_OPTIONS=		ldap iconv php-sockets gd
 PKG_SUGGESTED_OPTIONS=		mysql iconv php-sockets gd apache
@@ -45,21 +45,28 @@ DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=4.3.1:../../converters/php-iconv
 ### Use apache web server
 ###
 .if !empty(PKG_OPTIONS:Mapache)
-WWW_USER?=              ${APACHE_USER}
-WWW_GROUP?=             ${APACHE_GROUP}
+WWW_USER?=		${APACHE_USER}
+WWW_GROUP?=		${APACHE_GROUP}
 BUILD_DEFS+=		APACHE_USER APACHE_GROUP
-WWW_CONF_FILE?=		apache.conf
 .include "../../mk/apache.mk"
+.endif
+
+###
+### Use lighttpd web server
+###
+.if !empty(PKG_OPTIONS:Mlighttpd)
+DEPENDS+=		lighttpd-[0-9]*:../../www/lighttpd
+WWW_USER?=		lighttpd
+WWW_GROUP?=		lighttpd
 .endif
 
 ###
 ### Use nginx web server
 ###
 .if !empty(PKG_OPTIONS:Mnginx)
-DEPENDS+=	nginx-[0-9]*:../../www/nginx
+DEPENDS+=		nginx-[0-9]*:../../www/nginx
 WWW_USER?=		nginx
 WWW_GROUP?=		nginx
-WWW_CONF_FILE?=		nginx.conf
 .endif
 
 ###

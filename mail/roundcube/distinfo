@@ -1,11 +1,34 @@
-$NetBSD: distinfo,v 1.58.4.2 2018/05/06 09:13:55 spz Exp $
+$NetBSD: distinfo,v 1.58.4.3 2018/05/19 09:18:37 spz Exp $
 
-SHA1 (roundcubemail-1.2.9.tar.gz) = dd27b89ae04a6a6c04c0109395e85d098af6cc33
-RMD160 (roundcubemail-1.2.9.tar.gz) = e57fa96c3e406a2c61c56de70f02fbc5ee4a2bc3
-SHA512 (roundcubemail-1.2.9.tar.gz) = b284b1969ad603fc3dd4dbf1dec271dd0d0a22a1dd139c78fd4bc12171f7e94a1b05c15e3926299ca17f39b5dd70b4eaa3bf22e494a7a8e2173a2211d0324f4d
-Size (roundcubemail-1.2.9.tar.gz) = 3539037 bytes
-SHA1 (patch-ac) = 235116580665d5d58edc218c063b41171a2d9227
+SHA1 (roundcube/codemirror-5.21.0.zip) = 3b767c2e3acd6796e54ed19ed2ac0755fcf87984
+RMD160 (roundcube/codemirror-5.21.0.zip) = 3c629362a2a6c31aee099811b4598ba22e2fd763
+SHA512 (roundcube/codemirror-5.21.0.zip) = e80bc2f66e49acc9c618237ceec5fe526a4bcb91acfd3035e82cef1a9313531a8dda5d8caec00ffe4e507266e2846e44e0562e8fe567415ef650cfcca7b9c659
+Size (roundcube/codemirror-5.21.0.zip) = 1356111 bytes
+SHA1 (roundcube/jquery-3.2.1.min.js) = 1055018c28ab41087ef9ccefe411606893dabea2
+RMD160 (roundcube/jquery-3.2.1.min.js) = 3e2258f10b8d26c43b80b378db356dccb13f1e01
+SHA512 (roundcube/jquery-3.2.1.min.js) = dcff2b5c2b8625d3593a7531ff4ddcd633939cc9f7acfeb79c18a9e6038fdaa99487960075502f159d44f902d965b0b5aed32b41bfa66a1dc07d85b5d5152b58
+Size (roundcube/jquery-3.2.1.min.js) = 86659 bytes
+SHA1 (roundcube/jstz.min.js) = 4291cd3b259d2060460c2a6ab99f428d3c0c9537
+RMD160 (roundcube/jstz.min.js) = 7e1561a667d51e879eb79d57e6e69971c7e27bd8
+SHA512 (roundcube/jstz.min.js) = 5de18a936d531d252ce82c3dc55661e5e8595ea39506a26f3d47ee625bf3de101194bfa681da43f1103e9e96dd4047858a2b4228ce67ad1eecc13cebfa09188a
+Size (roundcube/jstz.min.js) = 12076 bytes
+SHA1 (roundcube/publickey.js) = d0920e190754e024c4be76ad5bbc7e76b2e37a4d
+RMD160 (roundcube/publickey.js) = 40ae054af69c621c77a24e7a77f6280b1c630c23
+SHA512 (roundcube/publickey.js) = 443bb71b2e374e2c392ea2fba61ea1c5a78523aa9cf03846dc184ac937d967cf2f87f27529aaf82f0c982cb26b3d6423b202f6424eaf8d10c7478928b6efaa42
+Size (roundcube/publickey.js) = 19078 bytes
+SHA1 (roundcube/roundcubemail-1.3.6.tar.gz) = 16b4e8c90686cb5d9559dc4f73e1e59382cc040f
+RMD160 (roundcube/roundcubemail-1.3.6.tar.gz) = c732b3be00b02eb6201ce799963bb8396ccd9bd2
+SHA512 (roundcube/roundcubemail-1.3.6.tar.gz) = e625ee69702d51ac4da53ec419324068a3706547db4cd1e48c877706a5e2b768e9562d2bc461f5ae270a9278e7ef45bf4d9cf26cb8ee609ea412e8e4a3a7b00d
+Size (roundcube/roundcubemail-1.3.6.tar.gz) = 3123479 bytes
+SHA1 (roundcube/tinymce_4.5.8.zip) = 08b0757264adb86066940bbafb7aa9ec0c7c6685
+RMD160 (roundcube/tinymce_4.5.8.zip) = 68217fd86a7b359f2a3f233fd64f6d24ca0e6d53
+SHA512 (roundcube/tinymce_4.5.8.zip) = 5d0d9315f226730394e5fb13f2ed19edcc974adb34533437d4fb2b35ec5a77368d37a3c60b39afd5e30beff90f26feb7713d027f1ab0fa708e6a6b597edd4be6
+Size (roundcube/tinymce_4.5.8.zip) = 387375 bytes
+SHA1 (roundcube/tinymce_languages.zip) = 4726119c65c3fcbe7ac1d0d2b3b0cac8f580ad76
+RMD160 (roundcube/tinymce_languages.zip) = 372facd0ca877ad709278cf09b0a72d04556e55a
+SHA512 (roundcube/tinymce_languages.zip) = 5d20984675cbe97e8a0300c9a10c566ad51f712ef6cb1fdb7a019b4e5df19446f2f615f4501bd21ce256b99c7c57a0e80d4e112f553b99e997aec64eb4a95984
+Size (roundcube/tinymce_languages.zip) = 287381 bytes
 SHA1 (patch-af) = 1f95a7005569207469563aa37ff48da0383b7668
 SHA1 (patch-config_config.inc.php.sample) = 1c9751ba36394d592e7d3cdcc705010e0a4adda9
 SHA1 (patch-plugins_password_helpers_passwd-expect) = 9e0082f23e37bbab26e8bb1439668132d5aacca2
-SHA1 (patch-rcube_mime_default) = fe6ff1bea0a2c4223b34e44a6d0ca76e6476d2aa
+SHA1 (patch-rcube_mime_default) = b1e9479d575b7fd61c413e2b76ee36c06ece7a5c
