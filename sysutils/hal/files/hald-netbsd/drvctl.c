@@ -179,6 +179,7 @@ drvctl_list(const gchar *name, struct devlistargs *laa)
 	}
 	if (children != laa->l_children)
 		HAL_WARNING (("DRVLISTDEV/3 expected %d children, got %d", children, laa->l_childname));
+	return 0;
 }
 
 gboolean
@@ -252,7 +253,14 @@ drvctl_find_device_with_child(const gchar *curnode, const gchar *devnode,
 gboolean
 drvctl_find_parent(const gchar *devnode, char *parent)
 {
-	return drvctl_find_device_with_child("mainbus0", devnode, parent);
+	gboolean ret;
+
+	ret = drvctl_find_device_with_child("mainbus0", devnode, parent);
+	if (ret == FALSE) {
+		ret = drvctl_find_device_with_child("armfdt0", devnode, parent);
+	}
+
+	return ret;
 }
 
 #if 0

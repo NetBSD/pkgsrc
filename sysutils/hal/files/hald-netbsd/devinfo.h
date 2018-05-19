@@ -52,6 +52,7 @@ typedef struct DevinfoDevHandler_s
 #define	NELEM(a)	(sizeof (a) / sizeof (*(a)))
 
 void devinfo_add (HalDevice *parent, gchar *path);
+gboolean devinfo_probe (HalDevice *parent, gchar *path);
 HalDevice *devinfo_add_node(HalDevice *parent, const char *devnode);
 void devinfo_set_default_properties (HalDevice *d, HalDevice *parent, const char *devnode, char *devfs_path);
 void devinfo_callouts_preprobing_done (HalDevice *d, gpointer userdata1, gpointer userdata2);
