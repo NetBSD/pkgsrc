@@ -162,7 +162,7 @@ func (line *LineImpl) String() string {
 
 // Usage:
 //
-//  fix := mkline.Line.Autofix()
+//  fix := line.Autofix()
 //
 //  fix.Errorf("Must not be ...")
 //  fix.Warnf("Should not be ...")
@@ -174,7 +174,7 @@ func (line *LineImpl) String() string {
 //
 //  fix.Replace("from", "to")
 //  fix.ReplaceAfter("prefix", "from", "to")
-//  fix.ReplaceRegex(`\s+`, "space", "from", "to")
+//  fix.ReplaceRegex(`\s+`, "space", -1)
 //  fix.InsertBefore("new line")
 //  fix.InsertAfter("new line")
 //  fix.Delete()

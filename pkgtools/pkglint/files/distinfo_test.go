@@ -32,7 +32,7 @@ func (s *Suite) Test_ChecklinesDistinfo_global_hash_mismatch(c *check.C) {
 	t := s.Init(c)
 
 	otherLine := t.NewLine("other/distinfo", 7, "dummy")
-	G.Hash = map[string]*Hash{"SHA512:pkgname-1.0.tar.gz": {"Some-512-bit-hash", otherLine}}
+	G.Pkgsrc.Hashes = map[string]*Hash{"SHA512:pkgname-1.0.tar.gz": {"Some-512-bit-hash", otherLine}}
 	lines := t.NewLines("distinfo",
 		RcsID,
 		"",
