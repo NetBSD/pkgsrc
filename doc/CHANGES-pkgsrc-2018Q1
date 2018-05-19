@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2018Q1,v 1.1.2.6 2018/05/08 15:06:21 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2018Q1,v 1.1.2.7 2018/05/19 09:21:07 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2018Q1 branch:
 
@@ -87,4 +87,19 @@ net/wget: security fix
 
 Pullup ticket #5754 - requested by wiz
 www/thttpd: security fix
+
+Pullup ticket #5755 - requested by khorben
+devel/py-angr: build fix
+
+Pullup ticket #5756 - requested by bsiegert
+www/w3m: security update
+
+Pullup ticket #5757 - requested by bsiegert
+www/curl: security update
+
+Pullup ticket #5758 - requested by bsiegert
+www/apachetop: security update
+
+Pullup ticket #5759 - requested by bsiegert
+mail/roundcube: security update
 
