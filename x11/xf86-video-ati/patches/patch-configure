@@ -1,0 +1,27 @@
+$NetBSD: patch-configure,v 1.1 2018/05/20 07:11:10 wiz Exp $
+
+Remove duplicate definitions - src/radeon.h defines these as well.
+
+--- configure.orig	2018-03-15 16:21:20.000000000 +0000
++++ configure
+@@ -19933,20 +19933,6 @@ $as_echo "$SYS_ENDIAN_BSWAP" >&6; }
+ $as_echo "#define USE_SYS_ENDIAN_H 1" >>confdefs.h
+ 
+ 
+-cat >>confdefs.h <<_ACEOF
+-#define bswap_16 ${BSWAP}16
+-_ACEOF
+-
+-
+-cat >>confdefs.h <<_ACEOF
+-#define bswap_32 ${BSWAP}32
+-_ACEOF
+-
+-
+-cat >>confdefs.h <<_ACEOF
+-#define bswap_64 ${BSWAP}64
+-_ACEOF
+-
+ 	fi
+ fi
+ 

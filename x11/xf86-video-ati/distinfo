@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.33 2018/03/15 23:45:25 wiz Exp $
+$NetBSD: distinfo,v 1.34 2018/05/20 07:11:10 wiz Exp $
 
 SHA1 (xf86-video-ati-18.0.1.tar.bz2) = b5a0b6a2fa839d668a3fb90280fede95f0bc130d
 RMD160 (xf86-video-ati-18.0.1.tar.bz2) = 5a60d8a4c06a7d57f4c3f9e7e7ee29a1f0fe3ea7
 SHA512 (xf86-video-ati-18.0.1.tar.bz2) = b468a78503a596bbf71a1b91b231ce1fa32908f619ff2dfe249352d046696a3641f2a9ff065e32545fff77100134b4b237591215e78ef885b6509d6b16112d14
 Size (xf86-video-ati-18.0.1.tar.bz2) = 881457 bytes
+SHA1 (patch-configure) = bdd1014b215af69c2bb837d36829e12e86eb5764
