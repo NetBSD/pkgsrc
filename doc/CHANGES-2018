@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2488 2018/05/20 22:53:23 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2489 2018/05/20 23:08:24 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3581,3 +3581,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-ExtUtils-ModuleMaker to 0.62 [wen 2018-05-20]
 	Updated devel/p5-Module-FromPerlVer to 0.030000 [wen 2018-05-20]
 	Updated databases/p5-DBM-Deep to 2.0015 [wen 2018-05-20]
+	Updated time/p5-DateTime to 1.49 [wen 2018-05-20]
