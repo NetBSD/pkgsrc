@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/05/16 11:36:36 youri Exp $
+# $NetBSD: Makefile,v 1.5 2018/05/20 17:45:52 maya Exp $
 
 DISTNAME=	mozjs-52.7.4
 PKGREVISION=	1
@@ -32,6 +32,11 @@ PKGCONFIG_OVERRIDE+=	js/src/js.pc.in
 
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		yes
+
+.if ${MACHINE_ARCH} == "i386"
+# Needs 8 byte atomics.
+CXXFLAGS+=		-march=i586
+.endif
 
 # fails, does not find hg/git checkout
 TEST_TARGET=		check
