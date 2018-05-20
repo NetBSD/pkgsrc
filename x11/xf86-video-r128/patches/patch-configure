@@ -1,0 +1,27 @@
+$NetBSD: patch-configure,v 1.1 2018/05/20 07:19:18 wiz Exp $
+
+Avoid redefinition of bswap macros.
+
+--- configure.orig	2017-01-17 22:43:33.000000000 +0000
++++ configure
+@@ -19447,20 +19447,6 @@ $as_echo "$SYS_ENDIAN_BSWAP" >&6; }
+ $as_echo "#define USE_SYS_ENDIAN_H 1" >>confdefs.h
+ 
+ 
+-cat >>confdefs.h <<_ACEOF
+-#define bswap_16 ${BSWAP}16
+-_ACEOF
+-
+-
+-cat >>confdefs.h <<_ACEOF
+-#define bswap_32 ${BSWAP}32
+-_ACEOF
+-
+-
+-cat >>confdefs.h <<_ACEOF
+-#define bswap_64 ${BSWAP}64
+-_ACEOF
+-
+ 	fi
+ fi
+ 
