@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2018/05/20 10:57:40 jmcneill Exp $
+# $NetBSD: Makefile,v 1.128 2018/05/20 11:42:33 maya Exp $
 
 DISTNAME=	pulseaudio-11.1
 PKGREVISION=	5
@@ -50,6 +50,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 
 # Disable NEON on NetBSD/aarch64 (does not build with pulseaudio 11.1)
+# use of q0 register in aarch64 is considered not valid
 .if !empty(PKGSRC_COMPILER:Mclang) && ${OPSYS} == "NetBSD" && ${MACHINE_CPU} == "aarch64"
 CONFIGURE_ARGS+=	--disable-neon-opt
 .endif
