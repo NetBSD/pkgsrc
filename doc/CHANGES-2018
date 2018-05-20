@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2482 2018/05/20 10:46:05 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2483 2018/05/20 10:50:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3575,3 +3575,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/mutt to 1.10.0 [tron 2018-05-20]
 	Updated devel/py-mercurial to 4.6 [wiz 2018-05-20]
 	Updated www/moodle to 3.5 [wen 2018-05-20]
+	Updated devel/p5-experimental to 0.020 [wen 2018-05-20]
