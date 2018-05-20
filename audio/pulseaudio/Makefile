@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2018/04/16 14:34:08 wiz Exp $
+# $NetBSD: Makefile,v 1.127 2018/05/20 10:57:40 jmcneill Exp $
 
 DISTNAME=	pulseaudio-11.1
 PKGREVISION=	5
@@ -48,6 +48,11 @@ MAKE_FLAGS+=		bashcompletiondir=${PREFIX}/share/bash-completion/completions
 CONFIGURE_ARGS+=	--disable-tcpwrap
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
+
+# Disable NEON on NetBSD/aarch64 (does not build with pulseaudio 11.1)
+.if !empty(PKGSRC_COMPILER:Mclang) && ${OPSYS} == "NetBSD" && ${MACHINE_CPU} == "aarch64"
+CONFIGURE_ARGS+=	--disable-neon-opt
+.endif
 
 # Use native atomic ops on NetBSD >= 5.0, otherwise
 # fallback to libatomic_ops
