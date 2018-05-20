@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2483 2018/05/20 10:50:33 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2484 2018/05/20 10:55:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3576,3 +3576,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-mercurial to 4.6 [wiz 2018-05-20]
 	Updated www/moodle to 3.5 [wen 2018-05-20]
 	Updated devel/p5-experimental to 0.020 [wen 2018-05-20]
+	Updated devel/p5-ExtUtils-InstallPaths to 0.012 [wen 2018-05-20]
