@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2478 2018/05/20 03:55:24 taca Exp $
+$NetBSD: CHANGES-2018,v 1.2479 2018/05/20 06:16:36 maya Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3571,3 +3571,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/pymsgauth to 2.1.0nb8 [schmonz 2018-05-19]
 	Updated pkgtools/pkglint to 5.5.12 [rillig 2018-05-19]
 	Updated mail/roundcube-plugin-password to 1.3.6nb1 [taca 2018-05-20]
+	Updated net/youtube-dl to 20180518 [maya 2018-05-20]
