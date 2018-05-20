@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2484 2018/05/20 10:55:53 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2485 2018/05/20 11:04:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3577,3 +3577,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/moodle to 3.5 [wen 2018-05-20]
 	Updated devel/p5-experimental to 0.020 [wen 2018-05-20]
 	Updated devel/p5-ExtUtils-InstallPaths to 0.012 [wen 2018-05-20]
+	Updated devel/p5-ExtUtils-Manifest to 1.71 [wen 2018-05-20]
