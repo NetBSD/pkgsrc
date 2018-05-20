@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2479 2018/05/20 06:16:36 maya Exp $
+$NetBSD: CHANGES-2018,v 1.2480 2018/05/20 07:54:45 tron Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3572,3 +3572,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated pkgtools/pkglint to 5.5.12 [rillig 2018-05-19]
 	Updated mail/roundcube-plugin-password to 1.3.6nb1 [taca 2018-05-20]
 	Updated net/youtube-dl to 20180518 [maya 2018-05-20]
+	Updated mail/mutt to 1.10.0 [tron 2018-05-20]
