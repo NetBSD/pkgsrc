@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/05/16 10:56:03 youri Exp $
+# $NetBSD: Makefile,v 1.14 2018/05/20 15:03:57 youri Exp $
 
 MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
@@ -47,7 +47,7 @@ DEPENDS+=	mate-terminal>=${VERSION}:../../x11/mate-terminal
 DEPENDS+=	mate-themes>=${VERSION}:../../graphics/mate-themes
 DEPENDS+=	mate-user-share>=${VERSION}:../../net/mate-user-share
 DEPENDS+=	mate-utils>=${VERSION}:../../misc/mate-utils
-#DEPENDS+=	mozo>=${VERSION}:../../x11/mozo
+DEPENDS+=	mozo>=${VERSION}:../../x11/mozo
 DEPENDS+=	pluma>=${VERSION}:../../editors/pluma
 
 .include "../../mk/bsd.pkg.mk"
