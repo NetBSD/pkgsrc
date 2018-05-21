@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.67 2018/04/30 06:40:11 wiz Exp $
+# $NetBSD: Makefile.common,v 1.68 2018/05/21 20:44:56 leot Exp $
 #
 # used by www/links/Makefile
 # used by www/links-gui/Makefile
 
-DISTNAME=	links-2.15
+DISTNAME=	links-2.16
 CATEGORIES=	www
 MASTER_SITES=	http://links.twibright.com/download/
 EXTRACT_SUFX=	.tar.bz2
