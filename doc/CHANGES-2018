@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2490 2018/05/20 23:11:45 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2491 2018/05/21 08:08:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3583,3 +3583,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/p5-DBM-Deep to 2.0015 [wen 2018-05-20]
 	Updated time/p5-DateTime to 1.49 [wen 2018-05-20]
 	Updated databases/p5-DBD-CSV to 0.53 [wen 2018-05-20]
+	Removed databases/postgresql92 [adam 2018-05-21]
+	Removed databases/jdbc-postgresql92 [adam 2018-05-21]
