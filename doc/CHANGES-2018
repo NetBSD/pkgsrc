@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2505 2018/05/21 23:15:07 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2506 2018/05/21 23:46:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3606,3 +3606,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/x265 to 2.8 [adam 2018-05-21]
 	Updated www/links to 2.16 [leot 2018-05-21]
 	Added devel/py-typed-ast version 1.1.0 [minskim 2018-05-21]
+	Added misc/py-tqdm version 4.23.3 [minskim 2018-05-21]
