@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2503 2018/05/21 20:04:17 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2504 2018/05/21 20:45:11 leot Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3604,3 +3604,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/aslc86k version 1.9 [minskim 2018-05-21]
 	Added graphics/R-Cairo version 1.5.9 [minskim 2018-05-21]
 	Updated multimedia/x265 to 2.8 [adam 2018-05-21]
+	Updated www/links to 2.16 [leot 2018-05-21]
