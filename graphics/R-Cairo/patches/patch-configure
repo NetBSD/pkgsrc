@@ -1,0 +1,26 @@
+$NetBSD: patch-configure,v 1.1 2018/05/21 17:12:35 minskim Exp $
+
+Fix "==" tests.
+
+--- configure.orig	2014-06-26 14:50:25.000000000 +0000
++++ configure
+@@ -3461,7 +3461,7 @@ fi
+ 
+ 
+ have_cairo=no
+-if test "xx$CAIRO_LIBS" == "xx"; then
++if test "xx$CAIRO_LIBS" = "xx"; then
+    if test "xx$PKGCONF" != "xx"; then
+       { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether pkg-config knows about cairo" >&5
+ $as_echo_n "checking whether pkg-config knows about cairo... " >&6; }
+@@ -3581,8 +3581,8 @@ fi
+ rm -f core conftest.err conftest.$ac_objext \
+     conftest$ac_exeext conftest.$ac_ext
+ 
+-if test "xx${CAIRO_LIBS}" == "xx"; then
+-   if test $uses_ats == "yes"; then
++if test "xx${CAIRO_LIBS}" = "xx"; then
++   if test $uses_ats = "yes"; then
+       CAIRO_LIBS="-lcairo -lpng -lz -framework ApplicationServices"
+    else
+       CAIRO_LIBs="-lcairo -lpng -lz"
