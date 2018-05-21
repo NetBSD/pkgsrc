@@ -1,7 +1,9 @@
-$NetBSD: patch-cl,v 1.13 2018/04/17 08:03:38 wiz Exp $
+$NetBSD: patch-cl,v 1.14 2018/05/21 08:39:38 jperkin Exp $
 
 - Leave gdbus-2.0/codegen sudirectory to devel/gdbus-codegen package.
 - Don't compile tests as they include gdbus-codegen tests.
+- Don't install completion data.
+- Re-enable gdesktopappinfo on Darwin.
 
 --- gio/Makefile.am.orig	2018-03-12 16:23:37.000000000 +0000
 +++ gio/Makefile.am
@@ -22,3 +24,51 @@ $NetBSD: patch-cl,v 1.13 2018/04/17 08:03:38 wiz Exp $
  
  if HAVE_FAM
  SUBDIRS += fam
+@@ -255,9 +255,7 @@ endif
+ if OS_UNIX
+ platform_libadd += xdgmime/libxdgmime.la
+ platform_deps += xdgmime/libxdgmime.la
+-if !OS_COCOA
+ appinfo_headers += gdesktopappinfo.h
+-endif
+ 
+ 
+ unix_sources = \
+@@ -396,11 +394,9 @@ portal_sources = \
+ 	$(NULL)
+ 
+ if OS_UNIX
+-if !OS_COCOA
+ contenttype_sources += gcontenttype.c
+ appinfo_sources += gdesktopappinfo.c
+ endif
+-endif
+ 
+ gio_base_sources =		\
+ 	gappinfo.c 		\
+@@ -610,9 +606,6 @@ libgio_objc_2_0_la_CPPFLAGS = $(libgio_2
+ libgio_objc_2_0_la_LDFLAGS = $(libgio_2_0_la_LDFLAGS) -Wl,-framework,Foundation -Wl,-framework,AppKit
+ libgio_objc_2_0_la_SOURCES = \
+ 	gnextstepsettingsbackend.c \
+-	gosxcontenttype.c \
+-	gosxappinfo.c \
+-	gosxappinfo.h \
+ 	gcocoanotificationbackend.c
+ 
+ noinst_LTLIBRARIES += libgio-objc-2.0.la
+@@ -890,7 +883,6 @@ gdbus_LDADD = libgio-2.0.la 				\
+ 	$(NULL)
+ 
+ if OS_UNIX
+-if !OS_COCOA
+ # ------------------------------------------------------------------------
+ # gapplication(1) tool
+ bin_PROGRAMS += gapplication
+@@ -901,7 +893,6 @@ gapplication_LDADD = libgio-2.0.la 			\
+ 	$(top_builddir)/glib/libglib-2.0.la		\
+ 	$(NULL)
+ endif
+-endif
+ 
+ completiondir = $(datadir)/bash-completion/completions
+ completion_DATA = \
