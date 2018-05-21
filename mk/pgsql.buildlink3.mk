@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.46 2017/10/23 20:34:27 adam Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.47 2018/05/21 08:07:49 adam Exp $
 #
 # User-settable variables:
 #
@@ -25,7 +25,7 @@ _SYS_VARS.pgsql=	PG_LIB_EXT PGSQL_TYPE PGPKGSRCDIR
 .include "../../mk/bsd.prefs.mk"
 
 PGSQL_VERSION_DEFAULT?=		95
-PGSQL_VERSIONS_ACCEPTED?=	10 96 95 94 93 92
+PGSQL_VERSIONS_ACCEPTED?=	10 96 95 94 93
 
 # transform the list into individual variables
 .for pv in ${PGSQL_VERSIONS_ACCEPTED}
@@ -55,9 +55,6 @@ _PGSQL_VERSION_94_INSTALLED=	yes
 .  if exists(${LOCALBASE}/lib/libecpg.6.5.dylib)
 _PGSQL_VERSION_93_INSTALLED=	yes
 .  endif
-.  if exists(${LOCALBASE}/lib/libecpg.6.4.dylib)
-_PGSQL_VERSION_92_INSTALLED=	yes
-.  endif
 .else
 .  if exists(${LOCALBASE}/lib/libecpg.so.6.10)
 _PGSQL_VERSION_10_INSTALLED=	yes
@@ -73,9 +70,6 @@ _PGSQL_VERSION_94_INSTALLED=	yes
 .  endif
 .  if exists(${LOCALBASE}/lib/libecpg.so.6.5)
 _PGSQL_VERSION_93_INSTALLED=	yes
-.  endif
-.  if exists(${LOCALBASE}/lib/libecpg.so.6.4)
-_PGSQL_VERSION_92_INSTALLED=	yes
 .  endif
 .endif
 
@@ -129,9 +123,6 @@ PGPKGSRCDIR=	../../databases/postgresql94-client
 .elif ${_PGSQL_VERSION} == "93"
 PGSQL_TYPE=	postgresql93-client
 PGPKGSRCDIR=	../../databases/postgresql93-client
-.elif ${_PGSQL_VERSION} == "92"
-PGSQL_TYPE=	postgresql92-client
-PGPKGSRCDIR=	../../databases/postgresql92-client
 .else
 # force an error
 PGSQL_TYPE=		none
