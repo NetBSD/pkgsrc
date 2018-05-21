@@ -833,7 +833,7 @@ func (src *Pkgsrc) InitVartypes() {
 	pkg("PERL5_REQD", lkShell, BtVersion)
 	pkg("PERL5_USE_PACKLIST", lkNone, BtYesNo)
 	sys("PGSQL_PREFIX", lkNone, BtPathname)
-	acl("PGSQL_VERSIONS_ACCEPTED", lkShell, enum("92 93 94 95 96"), "")
+	acl("PGSQL_VERSIONS_ACCEPTED", lkShell, enum("10 93 94 95 96"), "")
 	usr("PGSQL_VERSION_DEFAULT", lkNone, BtVersion)
 	sys("PG_LIB_EXT", lkNone, enum("dylib so"))
 	sys("PGSQL_TYPE", lkNone, enum("postgresql81-client postgresql80-client"))
