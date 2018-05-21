@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2500 2018/05/21 16:12:30 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2501 2018/05/21 16:23:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3601,3 +3601,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated time/ruby-tzinfo-data to 1.2018.5 [taca 2018-05-21]
 	Updated time/ruby-tzinfo03 to 0.3.54 [taca 2018-05-21]
 	Added devel/lcdis version 1.04 [minskim 2018-05-21]
+	Added devel/aslc86k version 1.9 [minskim 2018-05-21]
