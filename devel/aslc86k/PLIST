@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2018/05/21 16:23:04 minskim Exp $
+bin/aslc86k

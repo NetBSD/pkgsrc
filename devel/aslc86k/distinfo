@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2018/05/21 16:23:04 minskim Exp $
+
+SHA1 (aslc86k.tar.gz) = 4261d466e25a1db8d9525a702c6d1d43e6704842
+RMD160 (aslc86k.tar.gz) = 0b2463e058887f3fb686ad8405431f113600d5fa
+SHA512 (aslc86k.tar.gz) = bfd551d7994d7ed781992022f97076418ec9bdefe0631c4a9079676aa5ccd1e344a2f5882253029a4f7e94dcf5edc51505a5ed150e162c4adfacc14f9aab0223
+Size (aslc86k.tar.gz) = 50850 bytes
+SHA1 (patch-Makefile) = c0c88f325f697f4a2002284d1963a227a6997d24
