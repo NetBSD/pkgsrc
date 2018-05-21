@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2496 2018/05/21 13:22:42 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2497 2018/05/21 14:51:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3590,3 +3590,11 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/py-peewee to 3.4.0 [fhajny 2018-05-21]
 	Updated databases/pg_repack to 1.4.3 [fhajny 2018-05-21]
 	Updated textproc/py-xlsxwriter to 1.0.5 [fhajny 2018-05-21]
+	Updated mail/postfix to 3.3.1 [taca 2018-05-21]
+	Updated mail/postfix-cdb to 3.3.1 [taca 2018-05-21]
+	Updated mail/postfix-ldap to 3.3.1 [taca 2018-05-21]
+	Updated mail/postfix-lmdb to 3.3.1 [taca 2018-05-21]
+	Updated mail/postfix-mysql to 3.3.1 [taca 2018-05-21]
+	Updated mail/postfix-pcre to 3.3.1 [taca 2018-05-21]
+	Updated mail/postfix-pgsql to 3.3.1 [taca 2018-05-21]
+	Updated mail/postfix-sqlite to 3.3.1 [taca 2018-05-21]
