@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2675 2018/05/18 18:17:32 minskim Exp $
+# $NetBSD: Makefile,v 1.2676 2018/05/21 16:12:19 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -520,6 +520,7 @@ SUBDIR+=	kservice
 SUBDIR+=	ktexteditor
 SUBDIR+=	kyua
 SUBDIR+=	lcc
+SUBDIR+=	lcdis
 SUBDIR+=	lcov
 SUBDIR+=	ldapsdk
 SUBDIR+=	ldpc
