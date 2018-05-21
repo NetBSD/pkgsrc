@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2494 2018/05/21 13:18:26 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2495 2018/05/21 13:20:28 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3588,3 +3588,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/glib2 to 2.56.1nb1 [jperkin 2018-05-21]
 	Added lang/gcc7-libs version 7.3.0nb2 [jperkin 2018-05-21]
 	Updated databases/py-peewee to 3.4.0 [fhajny 2018-05-21]
+	Updated databases/pg_repack to 1.4.3 [fhajny 2018-05-21]
