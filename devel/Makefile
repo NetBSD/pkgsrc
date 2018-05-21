@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2676 2018/05/21 16:12:19 minskim Exp $
+# $NetBSD: Makefile,v 1.2677 2018/05/21 16:23:09 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -78,6 +78,7 @@ SUBDIR+=	argp
 SUBDIR+=	argtable
 SUBDIR+=	as31
 SUBDIR+=	asio
+SUBDIR+=	aslc86k
 SUBDIR+=	asm2html
 SUBDIR+=	astyle
 SUBDIR+=	at-spi
