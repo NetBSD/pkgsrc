@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2017/10/16 15:43:39 fhajny Exp $
+$NetBSD: distinfo,v 1.3 2018/05/21 13:20:20 fhajny Exp $
 
-SHA1 (pg_repack-1.4.2.tar.gz) = c04903e3d1d729ce7f3ae643c69d3a85402d6d82
-RMD160 (pg_repack-1.4.2.tar.gz) = d2d33de8b0ff35e108895448e9287c315b3b90a5
-SHA512 (pg_repack-1.4.2.tar.gz) = c1ccfb937783dcfcc8cf02ae36af7e767ead5144f5b6d430ea9c821907e8e3a7fb84f4e50dbf107c7409fc38dadd8a42c44d5b6d712ddc00a0d9804f975e4573
-Size (pg_repack-1.4.2.tar.gz) = 93039 bytes
+SHA1 (pg_repack-1.4.3.tar.gz) = 164f54ab0579c100089cc65cdd44bab20b6cacc1
+RMD160 (pg_repack-1.4.3.tar.gz) = 45900317949c377600c0933aff957804a38c66bd
+SHA512 (pg_repack-1.4.3.tar.gz) = 8fad625665446d7852d09e5c431fa2bf4e767bb5eeaf6718c824c51c558b0ff975af1f2dcce20bc714002fc755c2f6c1d23b0adc2bfa1f9167d198fc59d34cf8
+Size (pg_repack-1.4.3.tar.gz) = 93994 bytes
 SHA1 (patch-bin_Makefile) = 7e82083f0df7e9a1532be323196875bd8ba44520
