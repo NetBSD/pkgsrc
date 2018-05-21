@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/26 15:50:31 ryoon Exp $
-lib/java/${JARFILE}
-${DOCDIR}/README
