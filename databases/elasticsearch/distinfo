@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2018/05/20 12:53:01 fhajny Exp $
+$NetBSD: distinfo,v 1.47 2018/05/21 12:53:29 fhajny Exp $
 
 SHA1 (elasticsearch-6.2.4.tar.gz) = 8db5931278fd7a8687659ebcfaeab0d0f87f7d22
 RMD160 (elasticsearch-6.2.4.tar.gz) = a28f3c240a5d8b4e7eec72b8d72e9362820df1a5
@@ -11,3 +11,4 @@ Size (jna-4.5.1.tar.gz) = 73024055 bytes
 SHA1 (patch-bin_elasticsearch-env) = 7d8f71c6c1a99168cc4a7322e054ddc8fe94b68e
 SHA1 (patch-config_elasticsearch.yml) = f66dad65dec48a45a4d52b685d6e3ab29de62cf2
 SHA1 (patch-jna_build.xml) = d7c743ed8056109b9101c6550d9a4df7a7b05b58
+SHA1 (patch-jna_native_Makefile) = 617b669a8748c2ec3998275d8531500b8f2cda89
