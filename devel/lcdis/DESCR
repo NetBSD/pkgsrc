@@ -1,0 +1,12 @@
+LCDIS - LC86104C/108C disassembler for the Sega VMU/VMS
+
+Features:
+ - Sanyo LC86104C/108C disassembler, plus extra instructions used by the VMU
+ - Automatic determination of code/data space.
+ - Automatic determination of RAM banks accessed (mostly)
+ - Special function registers and BIOS entry points are annotated.
+ - Some instructions are commented (i.e. branch if 'A' button pressed)
+ - Disassembly output has been tested and found accurate.
+ - Either easier-to-read or ready-to-assemble code can be generated.
+ - User specification of graphic & font areas (which are commented graphically)
+ - Portable GPL C code. (with C++ style comments).
