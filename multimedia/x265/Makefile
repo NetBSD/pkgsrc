@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2018/03/09 12:08:08 adam Exp $
+# $NetBSD: Makefile,v 1.22 2018/05/21 20:03:56 adam Exp $
 
-DISTNAME=	x265_2.7
+DISTNAME=	x265_2.8
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://bitbucket.org/multicoreware/x265/downloads/
