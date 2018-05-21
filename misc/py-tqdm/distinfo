@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/05/21 23:45:59 minskim Exp $
+
+SHA1 (tqdm-4.23.3.tar.gz) = 29ca054d5dd327fca24f557c7236c94fe72ad391
+RMD160 (tqdm-4.23.3.tar.gz) = 545355150050b315462fccf9c41373c2b2664969
+SHA512 (tqdm-4.23.3.tar.gz) = 8cb5dab262d5f5569fe307553b339f1b6d5ce61dd30cfbc1f8d72177773b80d9a10a48004a62507f9369a7eae8330ed83afbc2d9a12def9f8601d626a806bdaf
+Size (tqdm-4.23.3.tar.gz) = 99299 bytes
