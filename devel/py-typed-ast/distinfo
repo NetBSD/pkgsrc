@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/05/21 23:14:46 minskim Exp $
+
+SHA1 (typed_ast-1.1.0.tar.gz) = 5c4404d20c1312c37ebe6ee37b02ab950dfe0afb
+RMD160 (typed_ast-1.1.0.tar.gz) = bcf11e8b46c9e1b3a50de9e950d651fbed4f0275
+SHA512 (typed_ast-1.1.0.tar.gz) = 1cde519f6cde535f436066a7f9a78ba9d416457abe995b019b76e49d644ac101a95aa82f6305d762731593648c0faee600e667240baa63a40f36bbfd4ca1bd1f
+Size (typed_ast-1.1.0.tar.gz) = 285167 bytes
