@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.497 2018/05/14 13:48:48 youri Exp $
+# $NetBSD: Makefile,v 1.498 2018/05/21 23:46:04 minskim Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -240,6 +240,7 @@ SUBDIR+=	py-anki2
 SUBDIR+=	py-ansi
 SUBDIR+=	py-carddav
 SUBDIR+=	py-stdnum
+SUBDIR+=	py-tqdm
 SUBDIR+=	py-trytond-carrier
 SUBDIR+=	py-trytond-carrier-percentage
 SUBDIR+=	py-trytond-carrier-weight
