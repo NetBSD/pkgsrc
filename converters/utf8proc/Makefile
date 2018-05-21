@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/04/30 19:31:47 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/21 17:02:42 adam Exp $
 
 DISTNAME=	utf8proc-2.1.1
 CATEGORIES=	converters
@@ -22,9 +22,15 @@ INSTALLATION_DIRS+=	include lib
 post-extract:
 	${MKDIR} ${WRKSRC}
 
+.include "../../mk/bsd.prefs.mk"
+
 do-install:
 	${INSTALL_DATA} ${WRKDIR}/${PKGNAME_NOREV}/utf8proc.h \
 		${DESTDIR}${PREFIX}/include/
 	${INSTALL_LIB} ${WRKSRC}/libutf8proc.* ${DESTDIR}${PREFIX}/lib/
+.if ${OPSYS} == "Darwin"
+	install_name_tool -id ${PREFIX}/lib/libutf8proc.${PKGVERSION_NOREV}.dylib \
+            ${DESTDIR}${PREFIX}/lib/libutf8proc.${PKGVERSION_NOREV}.dylib
+.endif
 
 .include "../../mk/bsd.pkg.mk"
