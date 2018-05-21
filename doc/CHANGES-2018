@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2493 2018/05/21 10:06:08 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.2494 2018/05/21 13:18:26 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3587,3 +3587,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Removed databases/jdbc-postgresql92 [adam 2018-05-21]
 	Updated devel/glib2 to 2.56.1nb1 [jperkin 2018-05-21]
 	Added lang/gcc7-libs version 7.3.0nb2 [jperkin 2018-05-21]
+	Updated databases/py-peewee to 3.4.0 [fhajny 2018-05-21]
