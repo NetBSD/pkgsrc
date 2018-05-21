@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/10/27 09:51:03 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/21 08:12:23 adam Exp $
 
 DISTNAME=	pljava-1.5.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -18,7 +18,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	apache-maven-[0-9]*:../../devel/apache-maven
 DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
-PGSQL_VERSIONS_ACCEPTED=	95 94 93 92
+PGSQL_VERSIONS_ACCEPTED=	95 94 93
 
 USE_JAVA2=	7
 USE_LANGUAGES=	c c++
