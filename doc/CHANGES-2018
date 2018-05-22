@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2513 2018/05/22 16:01:03 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2514 2018/05/22 16:02:01 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3619,3 +3619,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/lldb to 5.0.2 [adam 2018-05-22]
 	Updated x11/lxappearance to 0.6.3 [youri 2018-05-22]
 	Updated sysutils/lxpanel to 0.9.3 [youri 2018-05-22]
+	Updated x11/lxde-common to 0.99.2 [youri 2018-05-22]
