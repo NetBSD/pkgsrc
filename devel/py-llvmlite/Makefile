@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2018/05/22 12:05:25 adam Exp $
+# $NetBSD: Makefile,v 1.3 2018/05/22 19:11:48 minskim Exp $
 
 DISTNAME=	llvmlite-0.22.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/llvmlite/}
+DIST_SUBDIR=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://llvmlite.pydata.org/
