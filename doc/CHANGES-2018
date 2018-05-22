@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2506 2018/05/21 23:46:12 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2507 2018/05/22 00:25:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3607,3 +3607,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/links to 2.16 [leot 2018-05-21]
 	Added devel/py-typed-ast version 1.1.0 [minskim 2018-05-21]
 	Added misc/py-tqdm version 4.23.3 [minskim 2018-05-21]
+	Updated databases/p5-DBM-Deep to 2.0016 [wen 2018-05-22]
