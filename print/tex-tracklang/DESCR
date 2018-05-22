@@ -1,0 +1,6 @@
+The tracklang package is provided for package developers who
+want a simple interface to find out which languages the user
+has requested through packages such as babel or polyglossia.
+This package does not provide any translations! Its purpose is
+simply to track which languages have been requested by the
+user. Generic TeX code is in tracklang.tex for non-LaTeX users.
