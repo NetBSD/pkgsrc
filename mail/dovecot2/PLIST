@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2018/03/01 11:13:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.60 2018/05/22 20:49:45 triaxx Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -155,6 +155,7 @@ include/dovecot/hostpid.h
 include/dovecot/http-auth.h
 include/dovecot/http-client-private.h
 include/dovecot/http-client.h
+include/dovecot/http-common.h
 include/dovecot/http-date.h
 include/dovecot/http-header-parser.h
 include/dovecot/http-header.h
@@ -434,7 +435,6 @@ include/dovecot/oauth2.h
 include/dovecot/ostream-cmp.h
 include/dovecot/ostream-dot.h
 include/dovecot/ostream-encrypt.h
-include/dovecot/ostream-escaped.h
 include/dovecot/ostream-failure-at.h
 include/dovecot/ostream-file-private.h
 include/dovecot/ostream-hash.h
@@ -543,6 +543,7 @@ include/dovecot/sql-api.h
 include/dovecot/sql-db-cache.h
 include/dovecot/stats-client.h
 include/dovecot/stats-connection.h
+include/dovecot/stats-dist.h
 include/dovecot/stats-parser.h
 include/dovecot/stats.h
 include/dovecot/str-find.h
@@ -556,7 +557,6 @@ include/dovecot/subscription-file.h
 include/dovecot/syslog-util.h
 include/dovecot/test-common.h
 include/dovecot/time-util.h
-include/dovecot/timing.h
 include/dovecot/unichar.h
 include/dovecot/unix-socket-create.h
 include/dovecot/unlink-directory.h
@@ -594,6 +594,7 @@ lib/dovecot/lib11_imap_quota_plugin.la
 lib/dovecot/lib11_trash_plugin.la
 lib/dovecot/lib15_notify_plugin.la
 lib/dovecot/lib20_autocreate_plugin.la
+lib/dovecot/lib20_charset_alias_plugin.la
 lib/dovecot/lib20_expire_plugin.la
 lib/dovecot/lib20_fts_plugin.la
 lib/dovecot/lib20_listescape_plugin.la
@@ -623,7 +624,7 @@ lib/dovecot/libdovecot.la
 lib/dovecot/libfs_compress.la
 lib/dovecot/libfs_crypt.la
 lib/dovecot/libfs_mail_crypt.la
-${PLIST.ssl}lib/dovecot/libssl_iostream_openssl.la
+lib/dovecot/libssl_iostream_openssl.la
 lib/dovecot/old-stats/libold_stats_mail.la
 lib/dovecot/old-stats/libstats_auth.la
 libexec/dovecot/aggregator
@@ -662,7 +663,7 @@ libexec/dovecot/script-login
 libexec/dovecot/stats
 libexec/dovecot/submission
 libexec/dovecot/submission-login
-${PLIST.tcpwrappers}libexec/dovecot/tcpwrap
+libexec/dovecot/tcpwrap
 libexec/dovecot/xml2text
 man/man1/deliver.1
 man/man1/doveadm-acl.1
@@ -727,7 +728,6 @@ share/doc/dovecot/wiki/AuthDatabase.LDAP.AuthBinds.txt
 share/doc/dovecot/wiki/AuthDatabase.LDAP.PasswordLookups.txt
 share/doc/dovecot/wiki/AuthDatabase.LDAP.Userdb.txt
 share/doc/dovecot/wiki/AuthDatabase.LDAP.txt
-share/doc/dovecot/wiki/AuthDatabase.Lua.txt
 share/doc/dovecot/wiki/AuthDatabase.Passwd.txt
 share/doc/dovecot/wiki/AuthDatabase.PasswdFile.txt
 share/doc/dovecot/wiki/AuthDatabase.SQL.txt
@@ -765,14 +765,12 @@ share/doc/dovecot/wiki/Design.Dcrypt.txt
 share/doc/dovecot/wiki/Design.DoveadmProtocol.HTTP.txt
 share/doc/dovecot/wiki/Design.DoveadmProtocol.txt
 share/doc/dovecot/wiki/Design.Dsync.txt
-share/doc/dovecot/wiki/Design.Events.txt
 share/doc/dovecot/wiki/Design.Indexes.Cache.txt
 share/doc/dovecot/wiki/Design.Indexes.MailIndexApi.txt
 share/doc/dovecot/wiki/Design.Indexes.MainIndex.txt
 share/doc/dovecot/wiki/Design.Indexes.TransactionLog.txt
 share/doc/dovecot/wiki/Design.Indexes.txt
 share/doc/dovecot/wiki/Design.InputStreams.txt
-share/doc/dovecot/wiki/Design.Lua.txt
 share/doc/dovecot/wiki/Design.MailProcess.txt
 share/doc/dovecot/wiki/Design.Memory.txt
 share/doc/dovecot/wiki/Design.OutputStreams.txt
@@ -905,7 +903,6 @@ share/doc/dovecot/wiki/Pigeonhole.Sieve.txt
 share/doc/dovecot/wiki/Pigeonhole.txt
 share/doc/dovecot/wiki/Plugins.Apparmor.txt
 share/doc/dovecot/wiki/Plugins.Autocreate.txt
-share/doc/dovecot/wiki/Plugins.CharsetAlias.txt
 share/doc/dovecot/wiki/Plugins.Compress.txt
 share/doc/dovecot/wiki/Plugins.Expire.txt
 share/doc/dovecot/wiki/Plugins.FTS.Lucene.txt
@@ -958,7 +955,6 @@ share/doc/dovecot/wiki/SharedMailboxes.Shared.txt
 share/doc/dovecot/wiki/SharedMailboxes.Symlinks.txt
 share/doc/dovecot/wiki/SharedMailboxes.txt
 share/doc/dovecot/wiki/SocketUnavailable.txt
-share/doc/dovecot/wiki/Statistics.Old.txt
 share/doc/dovecot/wiki/Statistics.txt
 share/doc/dovecot/wiki/SystemUsers.txt
 share/doc/dovecot/wiki/TestInstallation.txt
