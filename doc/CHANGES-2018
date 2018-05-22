@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2523 2018/05/22 19:12:17 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2524 2018/05/22 20:54:25 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3629,3 +3629,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/lxterminal to 0.3.1 [youri 2018-05-22]
 	Updated sysutils/libfm-extra to 1.3.0.2 [youri 2018-05-22]
 	Updated devel/py-llvmlite to 0.22.0nb1 [minskim 2018-05-22]
+	Updated mail/dovecot2 to 2.3.1 [triaxx 2018-05-22]
+	Updated mail/dovecot2-pigeonhole to 0.5.1 [triaxx 2018-05-22]
