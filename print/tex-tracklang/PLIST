@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2018/05/22 21:11:21 markd Exp $
+share/texmf-dist/tex/generic/tracklang/tracklang-region-codes.tex
+share/texmf-dist/tex/generic/tracklang/tracklang-scripts.tex
+share/texmf-dist/tex/generic/tracklang/tracklang.tex
+share/texmf-dist/tex/latex/tracklang/tracklang-scripts.sty
+share/texmf-dist/tex/latex/tracklang/tracklang.sty
