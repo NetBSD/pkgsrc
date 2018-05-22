@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/05/23 08:08:09 youri Exp $
+$NetBSD: distinfo,v 1.2 2018/05/22 15:58:32 youri Exp $
 
-SHA1 (lxappearance-0.6.2.tar.xz) = 600304a2123dc4c7b5dde73595cc422876a820ad
-RMD160 (lxappearance-0.6.2.tar.xz) = df4cc2b19799b92e4f4028ea48716dc11fd36584
-SHA512 (lxappearance-0.6.2.tar.xz) = ddfd63045cae61f60e2745e7fbdafcf68cdc0443a7ff271ff11a40f39b2e08de902a980f6c68e1615a690690a3c33abc2de8ab854d08f7707be210b0addb67e7
-Size (lxappearance-0.6.2.tar.xz) = 165788 bytes
+SHA1 (lxappearance-0.6.3.tar.xz) = 1c281756b240694d0262edd9d40041d5b127d552
+RMD160 (lxappearance-0.6.3.tar.xz) = ff6f9ddddf57fbcd3afbabb6b466552a2507207b
+SHA512 (lxappearance-0.6.3.tar.xz) = 035cc952a33ac25408a4158cb4e745b17af3f29b5ceedfbe6b37235d16c801658403e862cd35ad7c8ca20fe6186fab1dce74a6e8d3b2eec12a30d532fc21662c
+Size (lxappearance-0.6.3.tar.xz) = 165656 bytes
