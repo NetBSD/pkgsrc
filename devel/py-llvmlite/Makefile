@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2018/05/17 15:47:46 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/22 12:05:25 adam Exp $
 
 DISTNAME=	llvmlite-0.22.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=numba/}
-GITHUB_PROJECT=	llvmlite
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/llvmlite/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://llvmlite.pydata.org/
@@ -16,11 +14,10 @@ USE_LANGUAGES=	c++
 
 .include "../../lang/python/pyversion.mk"
 .if "${PYPKGPREFIX}" == "py27"
-DEPENDS+=	${PYPKGPREFIX}-enum-[0-9]*:../../devel/py-enum
+DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 .endif
 
 BUILDLINK_API_DEPENDS.llvm+=	llvm>=5.0.0
 .include "../../lang/llvm/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
