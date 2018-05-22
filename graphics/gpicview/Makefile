@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/04/16 14:34:37 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2018/05/22 15:59:05 youri Exp $
 
 DISTNAME=	gpicview-0.2.5
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	http://lxde.sourceforge.net/gpicview/
 COMMENT=	Lightweight image viewer
 LICENSE=	gnu-gpl-v2
