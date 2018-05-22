@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2016/08/17 15:19:42 richard Exp $
+$NetBSD: distinfo,v 1.3 2018/05/22 16:12:13 youri Exp $
 
-SHA1 (lxtask-0.1.7.tar.xz) = 05a44a6bdd52674d5a465e50eacf71f217d1e66b
-RMD160 (lxtask-0.1.7.tar.xz) = 020ed18849ca4fb719a2cfa538c5086d74d0c902
-SHA512 (lxtask-0.1.7.tar.xz) = eb5c6af2d0953d09d62b53efda1f88140cc6d5734ef98effd9a72b896e397d0c29ff4263b93c12fd23fcb0ec129b31eb769b0a8c769ae92ed9fc1d2f2689a4ef
-Size (lxtask-0.1.7.tar.xz) = 137152 bytes
-SHA1 (patch-src_xfce-taskmanager-linux.h) = 2f8c07e09af1a0d066d7306f6ac6ec67de94a7d6
+SHA1 (lxtask-0.1.8.tar.xz) = ad089ceb3cb467e021862c6804ae50f1993919f4
+RMD160 (lxtask-0.1.8.tar.xz) = aff0bb1861e3d6192a04dc0ade614c4653b60103
+SHA512 (lxtask-0.1.8.tar.xz) = 095904df6ecea699a2ea44ca6f1677d8882b1bb26926b716bd0d6a65ce5aece99e3ac833d5bf08dcadb42e269baa1d3bd7c6e974e58a64f6da147763e9a40c6a
+Size (lxtask-0.1.8.tar.xz) = 137288 bytes
+SHA1 (patch-src_xfce-taskmanager-linux.h) = bf40a5ed55c0c7757d0e26f90c95d206a9c59693
