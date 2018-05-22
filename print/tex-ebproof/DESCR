@@ -1,0 +1,7 @@
+This package provides commands to typeset proof trees in the
+style of sequent calculus and related systems. The commands
+allow for writing inferences with any number of premises and
+alignment of successive formulas on an arbitrary point. Various
+options allow complete control over spacing, styles of
+inference rules, placement of labels, etc. The package requires
+expl3 and xparse.
