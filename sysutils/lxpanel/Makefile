@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2018/04/16 14:35:12 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/05/22 16:00:54 youri Exp $
 
-DISTNAME=	lxpanel-0.8.2
-PKGREVISION=	6
+DISTNAME=	lxpanel-0.9.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz
@@ -26,16 +25,16 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/lxpanel/default/panels 	\
 		${PKG_SYSCONFDIR}/lxpanel/config		\
 		${PKG_SYSCONFDIR}/lxpanel/two_panels/panels
 
-CONF_FILES= ${LXDE_CONF}/default/config				\
-	${PKG_SYSCONFDIR}/lxpanel/default/config 		\
-	${LXDE_CONF}/default/panels/panel  			\
-	${PKG_SYSCONFDIR}/lxpanel/default/panels/panel 		\
-	${LXDE_CONF}/two_panels/config 				\
-	${PKG_SYSCONFDIR}/lxpanel/two_panels/config 		\
-	${LXDE_CONF}/two_panels/panels/bottom		 	\
-	${PKG_SYSCONFDIR}/lxpanel/two_panels/panels/bottom 	\
-	${LXDE_CONF}/two_panels/panels/top 			\
-	${PKG_SYSCONFDIR}/lxpanel/two_panels/panels/top
+CONF_FILES=	${LXDE_CONF}/default/config				\
+		${PKG_SYSCONFDIR}/lxpanel/default/config 		\
+		${LXDE_CONF}/default/panels/panel  			\
+		${PKG_SYSCONFDIR}/lxpanel/default/panels/panel 		\
+		${LXDE_CONF}/two_panels/config 				\
+		${PKG_SYSCONFDIR}/lxpanel/two_panels/config 		\
+		${LXDE_CONF}/two_panels/panels/bottom		 	\
+		${PKG_SYSCONFDIR}/lxpanel/two_panels/panels/bottom 	\
+		${LXDE_CONF}/two_panels/panels/top 			\
+		${PKG_SYSCONFDIR}/lxpanel/two_panels/panels/top
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
