@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/12/24 09:59:46 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2018/05/22 16:01:51 youri Exp $
 
-DISTNAME=	lxde-common-0.99.1
+DISTNAME=	lxde-common-0.99.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz
