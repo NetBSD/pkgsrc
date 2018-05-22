@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2018/04/27 20:28:28 bacon Exp $
+$NetBSD: distinfo,v 1.2 2018/05/22 21:37:29 bacon Exp $
 
 SHA1 (ncbi-blast-2.7.1+-src.tar.gz) = d04a25f01c386abd8515957a2ce1dabf376743f8
 RMD160 (ncbi-blast-2.7.1+-src.tar.gz) = 7277419e16fb215aae4136a16e13bec963b70cbd
@@ -9,4 +9,4 @@ SHA1 (patch-src_algo_blast_core_blast__kappa.c) = a580a5fb2d5a3af04c27dd63a7edd3
 SHA1 (patch-src_build-system_Makefile.in.top) = 71d5246867a8c985c1175c338fb0af664094ca01
 SHA1 (patch-src_build-system_cmake_cmake-configure) = 7b9a10447b1dd665200ee73a2180b3210f586b97
 SHA1 (patch-src_build-system_configure) = 90becd948f8aca87fd68081e689bdc8c49b419c6
-SHA1 (patch-src_build-system_helpers_Makefile.run__with__lock.app) = 0fb99ac4e582938fd47e66c146da71695f009b98
+SHA1 (patch-src_build-system_helpers_Makefile.run__with__lock.app) = d69b9e349646c970c3b296707f917defbe39cccd
