@@ -1,4 +1,5 @@
-$NetBSD: patch-src_xfce-taskmanager-linux.h,v 1.1 2016/08/17 15:19:42 richard Exp $
+$NetBSD: patch-src_xfce-taskmanager-linux.h,v 1.2 2018/05/22 16:12:13 youri Exp $
+
 fix declaration to be the same as the implementation.
 
 --- src/xfce-taskmanager-linux.h.orig	2014-09-16 12:27:52.000000000 +0000
