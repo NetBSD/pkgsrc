@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2515 2018/05/22 16:03:15 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2516 2018/05/22 16:05:33 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3621,3 +3621,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/lxpanel to 0.9.3 [youri 2018-05-22]
 	Updated x11/lxde-common to 0.99.2 [youri 2018-05-22]
 	Updated sysutils/menu-cache to 1.1.0 [youri 2018-05-22]
+	Updated x11/lxterminal to 0.3.1 [youri 2018-05-22]
