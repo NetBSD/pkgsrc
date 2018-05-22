@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.713 2018/05/13 13:14:59 markd Exp $
+# $NetBSD: Makefile,v 1.714 2018/05/22 21:13:25 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -524,6 +524,8 @@ SUBDIR+=	tex-dvips
 SUBDIR+=	tex-dvips-doc
 SUBDIR+=	tex-easy-todo
 SUBDIR+=	tex-easy-todo-doc
+SUBDIR+=	tex-ebproof
+SUBDIR+=	tex-ebproof-doc
 SUBDIR+=	tex-edmac
 SUBDIR+=	tex-edmac-doc
 SUBDIR+=	tex-eijkhout
@@ -1266,6 +1268,8 @@ SUBDIR+=	tex-totpages
 SUBDIR+=	tex-totpages-doc
 SUBDIR+=	tex-tpslifonts
 SUBDIR+=	tex-tpslifonts-doc
+SUBDIR+=	tex-tracklang
+SUBDIR+=	tex-tracklang-doc
 SUBDIR+=	tex-translation-arsclassica-de-doc
 SUBDIR+=	tex-translation-biblatex-de-doc
 SUBDIR+=	tex-translation-chemsym-de-doc
