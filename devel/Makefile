@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2678 2018/05/21 23:14:52 minskim Exp $
+# $NetBSD: Makefile,v 1.2679 2018/05/22 12:10:40 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -1959,7 +1959,6 @@ SUBDIR+=	py-dogpile-cache
 SUBDIR+=	py-dulwich
 SUBDIR+=	py-editorconfig-core
 SUBDIR+=	py-entrypoints
-SUBDIR+=	py-enum
 SUBDIR+=	py-enum34
 SUBDIR+=	py-exam
 SUBDIR+=	py-execnet
