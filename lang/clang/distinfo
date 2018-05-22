@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.50 2017/12/30 10:39:24 adam Exp $
+$NetBSD: distinfo,v 1.51 2018/05/22 12:39:23 adam Exp $
 
-SHA1 (cfe-5.0.1.src.tar.xz) = 0cfb79b1fb767c18e167f4bc8836476ca24d9a19
-RMD160 (cfe-5.0.1.src.tar.xz) = 205adf6bdc9252b7b891157904befa28f40c9e9a
-SHA512 (cfe-5.0.1.src.tar.xz) = 6619177a2ff9934fe8b15d6aa229abb8e34d0b1a75228d9efba9393daf71d6419a7256de57b31e2f9f829f71f842118556f996e86ee076f1e0a7cd394dfd31a2
-Size (cfe-5.0.1.src.tar.xz) = 11483036 bytes
+SHA1 (cfe-5.0.2.src.tar.xz) = 6581765ec52f8a6354ab56a8e55a8cac1aa5e388
+RMD160 (cfe-5.0.2.src.tar.xz) = e4aa04b8aaa39d7c222d33b0e95b8d06c423d229
+SHA512 (cfe-5.0.2.src.tar.xz) = 9931afceb5569ad6caec85d506180c810f7fea94af8c997143b0a37cbf413fcea0d92520478610627eeee1efb65fde684066ace0dfcbbf7b61ecd709d22dd0b1
+Size (cfe-5.0.2.src.tar.xz) = 11459216 bytes
