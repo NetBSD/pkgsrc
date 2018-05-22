@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2018/05/15 09:50:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2018/05/22 12:21:32 youri Exp $
 #
 
 DISTNAME=	vte-0.50.3
+PKGNAME=	vte3-${PKGVERSION}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.50/}
 EXTRACT_SUFX=	.tar.xz
