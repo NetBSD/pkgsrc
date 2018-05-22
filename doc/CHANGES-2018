@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2521 2018/05/22 16:12:36 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2522 2018/05/22 16:12:59 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3627,3 +3627,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/libfm to 1.3.0.2 [youri 2018-05-22]
 	Updated sysutils/lxtask to 0.1.8 [youri 2018-05-22]
 	Updated x11/lxterminal to 0.3.1 [youri 2018-05-22]
+	Updated sysutils/libfm-extra to 1.3.0.2 [youri 2018-05-22]
