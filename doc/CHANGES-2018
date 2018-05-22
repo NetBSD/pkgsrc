@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2510 2018/05/22 12:12:49 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2511 2018/05/22 12:42:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3611,3 +3611,9 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/fetchmail to 6.3.26 [triaxx 2018-05-22]
 	Updated mail/fetchmailconf to 6.3.26 [triaxx 2018-05-22]
 	Removed devel/py-enum successor devel/py-enum34 [adam 2018-05-22]
+	Updated lang/llvm to 5.0.2 [adam 2018-05-22]
+	Updated lang/clang to 5.0.2 [adam 2018-05-22]
+	Updated lang/clang-static-analyzer to 5.0.2 [adam 2018-05-22]
+	Updated lang/libunwind to 5.0.2 [adam 2018-05-22]
+	Updated devel/polly to 5.0.2 [adam 2018-05-22]
+	Updated devel/lldb to 5.0.2 [adam 2018-05-22]
