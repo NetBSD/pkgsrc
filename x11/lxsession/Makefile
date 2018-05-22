@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2018/04/16 14:35:23 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2018/05/22 16:07:01 youri Exp $
 
-DISTNAME=	lxsession-0.5.2
-PKGREVISION=	5
+DISTNAME=	lxsession-0.5.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz
@@ -21,6 +20,19 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}/autostart
 
 CONF_FILES+=	${LXDE_CONF}/lxpolkit.desktop \
 		${PKG_SYSCONFDIR}/autostart/lxpolkit.desktop
+
+SUBST_CLASSES+=		prefix
+SUBST_MESSAGE.prefix=	Fixing paths.
+SUBST_STAGE.prefix=	post-patch
+SUBST_FILES.prefix=	lxsession/environement.c
+SUBST_FILES.prefix+=	lxsession/app.c
+SUBST_FILES.prefix+=	lxsession/settings.c
+SUBST_FILES.prefix+=	lxsession-db/desktop-files-backend.c
+SUBST_FILES.prefix+=	data/desktop.conf.example
+SUBST_SED.prefix=	-e 's,/etc/xdg,${PKG_SYSCONFDIR},g'
+SUBST_SED.prefix+=	-e 's,/usr/share,${PREFIX}/share,g'
+SUBST_SED.prefix+=	-e 's,/usr/lib,${PREFIX}/lib,g'
+SUBST_SED.prefix+=	-e 's,/usr/bin/pkexec,${PREFIX}/bin/pkexec,g'
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README \
