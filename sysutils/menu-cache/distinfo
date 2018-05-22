@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2016/05/22 22:11:43 youri Exp $
+$NetBSD: distinfo,v 1.5 2018/05/22 16:03:00 youri Exp $
 
-SHA1 (menu-cache-1.0.1.tar.xz) = 58862c665f2ae56870a9937cdcd643674b2ac8ba
-RMD160 (menu-cache-1.0.1.tar.xz) = 6cd157b86f30869cc95477e9d163d446a4a88abe
-SHA512 (menu-cache-1.0.1.tar.xz) = 5de4bf99ab5a511da6781d54b03349cc0232b379a73f9f9c328fb9aed6ec03558a9adda85be1fbbe53d94669d07a5196929ab67cd3291de7aae59f587afda3a3
-Size (menu-cache-1.0.1.tar.xz) = 262508 bytes
-SHA1 (patch-menu-cache-daemon_menu-cached.c) = 57c082221d72e9f7a0f59e873ae1ec78be68b293
+SHA1 (menu-cache-1.1.0.tar.xz) = 01e6035aa1fe76d7047bdec235254aa5ce17394a
+RMD160 (menu-cache-1.1.0.tar.xz) = 0cf2f2b41847087189102373f496b63aa7841b9d
+SHA512 (menu-cache-1.1.0.tar.xz) = e4c6619ade7b9a1b97c1366bb94dffb9975be5664b193cf0c69cf9470ef7ae19bda3390d04d98ee9a5b1658ec48aa5c83508c26c347af689161ee67c076b3c9e
+Size (menu-cache-1.1.0.tar.xz) = 265524 bytes
+SHA1 (patch-menu-cache-daemon_menu-cached.c) = b7a9f80313c2265906bcf98ff369c595b141a53f
