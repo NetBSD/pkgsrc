@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/01/28 16:24:14 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2018/05/23 08:11:16 jperkin Exp $
 
 GCC_PKGNAME=		gcc7
 PKGREVISION=		1
@@ -46,7 +46,7 @@ SUBST_CLASSES+=		vars
 SUBST_MESSAGE.vars=	Setting target machine name path in ${SUBST_FILES.vars}
 SUBST_STAGE.vars=	pre-configure
 SUBST_FILES.vars=	gcc/Makefile.in
-SUBST_VARS.vars=	GCC_TARGET_MACHINE
+SUBST_VARS.vars=	MACHINE_GNU_PLATFORM
 
 .include "../../mk/bsd.prefs.mk"
 
