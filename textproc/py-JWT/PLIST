@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/07/07 08:14:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/05/23 09:35:27 adam Exp $
 bin/jwt-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -39,6 +39,9 @@ ${PYSITELIB}/jwt/contrib/algorithms/pycrypto.pyo
 ${PYSITELIB}/jwt/exceptions.py
 ${PYSITELIB}/jwt/exceptions.pyc
 ${PYSITELIB}/jwt/exceptions.pyo
+${PYSITELIB}/jwt/help.py
+${PYSITELIB}/jwt/help.pyc
+${PYSITELIB}/jwt/help.pyo
 ${PYSITELIB}/jwt/utils.py
 ${PYSITELIB}/jwt/utils.pyc
 ${PYSITELIB}/jwt/utils.pyo
