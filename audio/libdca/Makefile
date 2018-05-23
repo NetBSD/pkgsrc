@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2015/01/27 00:36:22 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.13 2018/05/23 17:45:23 adam Exp $
 
-DISTNAME=	libdca-0.0.5
+DISTNAME=	libdca-0.0.6
 CATEGORIES=	audio
-MASTER_SITES=	http://download.videolan.org/pub/videolan/libdca/0.0.5/
+MASTER_SITES=	http://download.videolan.org/pub/videolan/libdca/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	shattered@NetBSD.org
@@ -11,21 +10,15 @@ HOMEPAGE=	http://www.videolan.org/developers/libdca.html
 COMMENT=	DTS Coherent Acoustics decoder
 LICENSE=	gnu-gpl-v2
 
-RESTRICTED=	Unresolved patent issue
-NO_BIN_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_SRC_ON_FTP=	${RESTRICTED}
+USE_LANGUAGES=		c99
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
-USE_LIBTOOL=	yes
-
-.include "../../mk/compiler.mk"
-
-# Avoid clang bugs resulting in "duplicate symbol ___sputc".
-.if !empty(PKGSRC_COMPILER:Mclang) && ${OPSYS} == "Darwin"
-CFLAGS+=	-std=gnu89
-.endif
+RESTRICTED=		Unresolved patent issue
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 .include "../../mk/bsd.pkg.mk"
