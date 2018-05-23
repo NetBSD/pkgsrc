@@ -1,0 +1,1 @@
+bin/cheroot @PREFIX@/bin/cheroot-@PYVERSSUFFIX@
