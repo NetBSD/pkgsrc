@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/07/13 04:55:31 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2018/05/23 14:12:13 triaxx Exp $
 
 DISTNAME=	libexecinfo-1.1
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_FREEBSD}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=       http://www.freebsdsoftware.org/devel/libexecinfo.html
+HOMEPAGE=	https://www.freshports.org/devel/libexecinfo
 COMMENT=	BSD Licensed clone of backtrace facility found in GNU libc
 LICENSE=	2-clause-bsd
 
