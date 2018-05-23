@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2530 2018/05/23 07:57:16 triaxx Exp $
+$NetBSD: CHANGES-2018,v 1.2531 2018/05/23 09:29:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3641,3 +3641,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/py-watchdog to 0.8.3nb1 [adam 2018-05-23]
 	Updated finance/py-braintree to 3.46.0 [adam 2018-05-23]
 	Updated sysutils/grub2 to 2.02 [triaxx 2018-05-23]
+	Added devel/py-test-testmon version 0.9.11 [adam 2018-05-23]
+	Added devel/py-dash version 4.5.0 [adam 2018-05-23]
