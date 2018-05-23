@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2531 2018/05/23 09:29:20 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2532 2018/05/23 09:33:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3643,3 +3643,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/grub2 to 2.02 [triaxx 2018-05-23]
 	Added devel/py-test-testmon version 0.9.11 [adam 2018-05-23]
 	Added devel/py-dash version 4.5.0 [adam 2018-05-23]
+	Updated www/py-cheroot to 6.3.1 [adam 2018-05-23]
+	Updated www/py-cherrypy to 15.0.0 [adam 2018-05-23]
