@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2018/04/05 08:15:02 fhajny Exp $
+# $NetBSD: Makefile,v 1.29 2018/05/23 10:34:58 fhajny Exp $
 #
 
-DISTNAME=		pdns-recursor-4.1.2
+DISTNAME=		pdns-recursor-4.1.3
 CATEGORIES=		net
 MASTER_SITES=		http://downloads.powerdns.com/releases/
 EXTRACT_SUFX=		.tar.bz2
