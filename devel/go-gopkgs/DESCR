@@ -1,0 +1,3 @@
+Gopkgs is a tool that provides the list of available Go packages that
+can be imported. This is an alternative for "go list all", just
+faster.
