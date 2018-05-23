@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/05/23 00:32:13 minskim Exp $
+
+SHA1 (gopkgs-1.3.2.tar.gz) = 386352f46bf90ab95146f065d24592567087539c
+RMD160 (gopkgs-1.3.2.tar.gz) = 263fa2c445963adb54f8bce561caa480a18293c4
+SHA512 (gopkgs-1.3.2.tar.gz) = f8db28672b6b53b7b898d8cafcd2aa1708acfbdfac40e6d11ecb2e3bfc69bc8f91cc084c545b82d1afcc239270d65bdbe91bac927b526396f87584d7327b0c67
+Size (gopkgs-1.3.2.tar.gz) = 32168 bytes
