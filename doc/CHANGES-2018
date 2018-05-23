@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2532 2018/05/23 09:33:35 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2533 2018/05/23 09:44:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3645,3 +3645,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/py-dash version 4.5.0 [adam 2018-05-23]
 	Updated www/py-cheroot to 6.3.1 [adam 2018-05-23]
 	Updated www/py-cherrypy to 15.0.0 [adam 2018-05-23]
+	Updated textproc/py-JWT to 1.6.3 [adam 2018-05-23]
+	Updated security/py-OpenSSL to 18.0.0 [adam 2018-05-23]
