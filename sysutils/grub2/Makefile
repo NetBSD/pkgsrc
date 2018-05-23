@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/05/23 07:56:53 triaxx Exp $
+# $NetBSD: Makefile,v 1.13 2018/05/23 10:45:54 maya Exp $
 
 DISTNAME=		grub-2.02
 PKGNAME=		${DISTNAME:S/grub/grub2/}
@@ -134,15 +134,6 @@ SUBST_STAGE.fix-sed-tabs=	post-patch
 SUBST_MESSAGE.fix-sed-tabs=	Fixing tabulations for sed in scripts.
 SUBST_FILES.fix-sed-tabs=	util/grub.d/*.in
 SUBST_SED.fix-sed-tabs=		-e 's,\\t,	,g'
-
-#
-# grub-script-check crashes from enabling executable stack, paxctl +m it if possible.
-# XXX not needed with grub 2.02
-#
-post-configure:
-	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.orig
-	${RUN}${AWK} '/^grub-script-check.1:/{print;print "\t-paxctl +m grub-script-check";next}1' \
-		${WRKSRC}/Makefile.orig > ${WRKSRC}/Makefile
 
 #
 # Remove executable bit from non-executable files.
