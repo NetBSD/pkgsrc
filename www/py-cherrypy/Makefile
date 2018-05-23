@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2018/04/25 12:24:39 adam Exp $
+# $NetBSD: Makefile,v 1.27 2018/05/23 09:33:16 adam Exp $
 
-DISTNAME=	CherryPy-14.2.0
+DISTNAME=	CherryPy-15.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CherryPy/}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.cherrypy.org/
 COMMENT=	Pythonic, object-oriented HTTP framework
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-cheroot>=5.9.1:../../www/py-cheroot
+DEPENDS+=	${PYPKGPREFIX}-cheroot>=6.2.4:../../www/py-cheroot
 DEPENDS+=	${PYPKGPREFIX}-portend>=2.1.1:../../net/py-portend
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11.0:../../lang/py-six
@@ -24,7 +24,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar-[0-9]*:../../devel/py-test-sugar
 USE_LANGUAGES=	# none
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} cherryd cherryd${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} cherryd cherryd-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
 	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
