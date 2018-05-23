@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2018/05/23 17:45:23 adam Exp $
+
+Do not override compiler flags.
+
+--- configure.orig	2018-05-23 17:05:51.000000000 +0000
++++ configure
+@@ -4685,7 +4685,7 @@ fi
+ 
+ 
+ 
+-if test x"$GCC" = x"yes"; then
++if false; then
+ 
+ 
+             TRY_CFLAGS="$OPT_CFLAGS -Wall"
