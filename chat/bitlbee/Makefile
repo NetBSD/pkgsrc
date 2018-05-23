@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2018/05/18 17:54:05 leot Exp $
+# $NetBSD: Makefile,v 1.76 2018/05/23 18:44:52 leot Exp $
 
 DISTNAME=		bitlbee-3.5.1
 PKGREVISION=		1
@@ -33,18 +33,22 @@ CONF_FILES=		${DATADIR}/motd.txt ${PKG_SYSCONFDIR}/motd.txt
 CONF_FILES+=		${EGDIR}/bitlbee.conf ${PKG_SYSCONFDIR}/bitlbee.conf
 OWN_DIRS+=		${VARBASE}/run/bitlbee
 
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		VARBASE BITLBEE_USER BITLBEE_GROUP
+FILES_SUBST+=		BITLBEE_USER=${BITLBEE_USER} BITLBEE_GROUP=${BITLBEE_GROUP}
 
 EGDIR=			${PREFIX}/share/examples/bitlbee
 DATADIR=		${PREFIX}/share/bitlbee
 DOCDIR=			${PREFIX}/share/doc/bitlbee
 STATEDIR=		${VARBASE}/db/bitlbee
 
-OWN_DIRS_PERMS=		${STATEDIR} bitlbee nobody 700
-OWN_DIRS_PERMS+=	${VARBASE}/run/bitlbee bitlbee nobody 700
+BITLBEE_USER?=		bitlbee
+BITLBEE_GROUP?=		nobody
 
-PKG_GROUPS=		nobody
-PKG_USERS=		bitlbee:nobody
+OWN_DIRS_PERMS=		${STATEDIR} ${BITLBEE_USER} ${BITLBEE_GROUP} 700
+OWN_DIRS_PERMS+=	${VARBASE}/run/bitlbee ${BITLBEE_USER} ${BITLBEE_GROUP} 700
+
+PKG_GROUPS=		${BITLBEE_GROUP}
+PKG_USERS=		${BITLBEE_USER}:${BITLBEE_GROUP}
 PKG_HOME.bitlbee=	${VARBASE}/db/bitlbee
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
