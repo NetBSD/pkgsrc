@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2018/05/23 18:44:52 leot Exp $
+# $NetBSD: Makefile,v 1.77 2018/05/23 18:55:13 leot Exp $
 
 DISTNAME=		bitlbee-3.5.1
 PKGREVISION=		1
@@ -31,7 +31,6 @@ CONFIGURE_ARGS+=	--ssl=gnutls
 PKG_SYSCONFSUBDIR=	bitlbee
 CONF_FILES=		${DATADIR}/motd.txt ${PKG_SYSCONFDIR}/motd.txt
 CONF_FILES+=		${EGDIR}/bitlbee.conf ${PKG_SYSCONFDIR}/bitlbee.conf
-OWN_DIRS+=		${VARBASE}/run/bitlbee
 
 BUILD_DEFS+=		VARBASE BITLBEE_USER BITLBEE_GROUP
 FILES_SUBST+=		BITLBEE_USER=${BITLBEE_USER} BITLBEE_GROUP=${BITLBEE_GROUP}
