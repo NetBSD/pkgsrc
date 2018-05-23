@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2529 2018/05/23 07:47:05 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2530 2018/05/23 07:57:16 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3640,3 +3640,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/tor to 0.3.3.6 [wiz 2018-05-23]
 	Updated sysutils/py-watchdog to 0.8.3nb1 [adam 2018-05-23]
 	Updated finance/py-braintree to 3.46.0 [adam 2018-05-23]
+	Updated sysutils/grub2 to 2.02 [triaxx 2018-05-23]
