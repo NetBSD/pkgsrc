@@ -1,0 +1,32 @@
+$NetBSD: patch-sys_osxvideo_Makefile.in,v 1.1 2018/05/23 20:43:19 adam Exp $
+
+libtool needs --tag for Obj-C code.
+
+--- sys/osxvideo/Makefile.in.orig	2018-05-17 12:22:41.000000000 +0000
++++ sys/osxvideo/Makefile.in
+@@ -173,7 +173,7 @@ am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+ am__v_lt_0 = --silent
+ am__v_lt_1 = 
+ libgstosxvideo_la_LINK = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) \
+-	$(LIBTOOLFLAGS) --mode=link $(OBJCLD) \
++	$(LIBTOOLFLAGS) --mode=link --tag=CC $(OBJCLD) \
+ 	$(libgstosxvideo_la_OBJCFLAGS) $(OBJCFLAGS) \
+ 	$(libgstosxvideo_la_LDFLAGS) $(LDFLAGS) -o $@
+ AM_V_P = $(am__v_P_@AM_V@)
+@@ -729,14 +729,14 @@ distclean-compile:
+ @am__fastdepOBJC_FALSE@	$(AM_V_OBJC@am__nodep@)$(LTOBJCCOMPILE) -c -o $@ $<
+ 
+ libgstosxvideo_la-osxvideosink.lo: osxvideosink.m
+-@am__fastdepOBJC_TRUE@	$(AM_V_OBJC)$(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(OBJC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgstosxvideo_la_OBJCFLAGS) $(OBJCFLAGS) -MT libgstosxvideo_la-osxvideosink.lo -MD -MP -MF $(DEPDIR)/libgstosxvideo_la-osxvideosink.Tpo -c -o libgstosxvideo_la-osxvideosink.lo `test -f 'osxvideosink.m' || echo '$(srcdir)/'`osxvideosink.m
++@am__fastdepOBJC_TRUE@	$(AM_V_OBJC)$(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile --tag=CC $(OBJC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgstosxvideo_la_OBJCFLAGS) $(OBJCFLAGS) -MT libgstosxvideo_la-osxvideosink.lo -MD -MP -MF $(DEPDIR)/libgstosxvideo_la-osxvideosink.Tpo -c -o libgstosxvideo_la-osxvideosink.lo `test -f 'osxvideosink.m' || echo '$(srcdir)/'`osxvideosink.m
+ @am__fastdepOBJC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgstosxvideo_la-osxvideosink.Tpo $(DEPDIR)/libgstosxvideo_la-osxvideosink.Plo
+ @AMDEP_TRUE@@am__fastdepOBJC_FALSE@	$(AM_V_OBJC)source='osxvideosink.m' object='libgstosxvideo_la-osxvideosink.lo' libtool=yes @AMDEPBACKSLASH@
+ @AMDEP_TRUE@@am__fastdepOBJC_FALSE@	DEPDIR=$(DEPDIR) $(OBJCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ @am__fastdepOBJC_FALSE@	$(AM_V_OBJC@am__nodep@)$(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(OBJC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgstosxvideo_la_OBJCFLAGS) $(OBJCFLAGS) -c -o libgstosxvideo_la-osxvideosink.lo `test -f 'osxvideosink.m' || echo '$(srcdir)/'`osxvideosink.m
+ 
+ libgstosxvideo_la-cocoawindow.lo: cocoawindow.m
+-@am__fastdepOBJC_TRUE@	$(AM_V_OBJC)$(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(OBJC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgstosxvideo_la_OBJCFLAGS) $(OBJCFLAGS) -MT libgstosxvideo_la-cocoawindow.lo -MD -MP -MF $(DEPDIR)/libgstosxvideo_la-cocoawindow.Tpo -c -o libgstosxvideo_la-cocoawindow.lo `test -f 'cocoawindow.m' || echo '$(srcdir)/'`cocoawindow.m
++@am__fastdepOBJC_TRUE@	$(AM_V_OBJC)$(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile --tag=CC $(OBJC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgstosxvideo_la_OBJCFLAGS) $(OBJCFLAGS) -MT libgstosxvideo_la-cocoawindow.lo -MD -MP -MF $(DEPDIR)/libgstosxvideo_la-cocoawindow.Tpo -c -o libgstosxvideo_la-cocoawindow.lo `test -f 'cocoawindow.m' || echo '$(srcdir)/'`cocoawindow.m
+ @am__fastdepOBJC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgstosxvideo_la-cocoawindow.Tpo $(DEPDIR)/libgstosxvideo_la-cocoawindow.Plo
+ @AMDEP_TRUE@@am__fastdepOBJC_FALSE@	$(AM_V_OBJC)source='cocoawindow.m' object='libgstosxvideo_la-cocoawindow.lo' libtool=yes @AMDEPBACKSLASH@
+ @AMDEP_TRUE@@am__fastdepOBJC_FALSE@	DEPDIR=$(DEPDIR) $(OBJCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
