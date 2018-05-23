@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2018/04/17 22:10:04 wiz Exp $
+# $NetBSD: Makefile.common,v 1.30 2018/05/23 20:43:18 adam Exp $
 #
 # used by audio/gst-plugins1-dts/Makefile
 # used by audio/gst-plugins1-faac/Makefile
@@ -12,10 +12,11 @@
 ## used by audio/gst-plugins1-musepack/Makefile (probably newer libmusepack or libmpcdec is needed)
 
 GST_PLUGINS1_TYPE=	bad
-GST_PLUGINS1_VER=	1.14.0
+GST_PLUGINS1_VER=	1.14.1
 
 # Disable all drivers and features by default.
 .for driver in	\
+		apple_media \
 		directfb \
 		dts \
 		dvb \
@@ -27,13 +28,10 @@ GST_PLUGINS1_VER=	1.14.0
 		libmms \
 		musepack \
 		neon \
-		real \
-		sdl \
 		shm \
 		soundtouch \
 		vcd \
-		vdpau \
-		xvid
+		vdpau
 CONFIGURE_ARGS+=	--disable-${driver}
 .endfor
 
