@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/04/27 07:45:09 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/05/23 21:07:36 adam Exp $
 
-DISTNAME=	raven-6.7.0
+DISTNAME=	raven-6.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/raven/}
@@ -25,7 +25,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-logbook-[0-9]*:../../devel/py-logbook
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
-TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+# avoid circular dependency
+#TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.2.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.5.1:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8>=1.0.0:../../devel/py-test-flake8
@@ -35,6 +36,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=1.2.1:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.18.2:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-tornado>=4.1:../../www/py-tornado
 TEST_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
+TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-zconfig-[0-9]*:../../devel/py-zconfig
 
 .include "../../lang/python/pyversion.mk"

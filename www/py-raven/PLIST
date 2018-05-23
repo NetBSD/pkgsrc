@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/04/27 07:45:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2018/05/23 21:07:36 adam Exp $
 bin/raven${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -238,6 +238,9 @@ ${PYSITELIB}/raven/transport/twisted.pyo
 ${PYSITELIB}/raven/utils/__init__.py
 ${PYSITELIB}/raven/utils/__init__.pyc
 ${PYSITELIB}/raven/utils/__init__.pyo
+${PYSITELIB}/raven/utils/basic.py
+${PYSITELIB}/raven/utils/basic.pyc
+${PYSITELIB}/raven/utils/basic.pyo
 ${PYSITELIB}/raven/utils/compat.py
 ${PYSITELIB}/raven/utils/compat.pyc
 ${PYSITELIB}/raven/utils/compat.pyo
