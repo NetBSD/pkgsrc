@@ -1,0 +1,1 @@
+bin/watchmedo @PREFIX@/bin/watchmedo-@PYVERSSUFFIX@
