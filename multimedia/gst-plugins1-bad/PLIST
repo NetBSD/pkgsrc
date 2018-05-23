@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/04/17 22:10:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2018/05/23 20:43:18 adam Exp $
 include/gstreamer-1.0/gst/audio/audio-bad-prelude.h
 include/gstreamer-1.0/gst/audio/gstnonstreamaudiodecoder.h
 include/gstreamer-1.0/gst/basecamerabinsrc/basecamerabinsrc-prelude.h
@@ -420,7 +420,6 @@ share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-p
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-gme.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-gmedec.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-gsm.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-gstsiren.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-hls.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-id3tag.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-inter.html
@@ -459,7 +458,6 @@ share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-p
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-pcapparse.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-pnm.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-proxy.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-rawparse.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-removesilence.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-resindvd.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-plugins-1.0/gst-plugins-bad-plugins-plugin-rfbsrc.html
