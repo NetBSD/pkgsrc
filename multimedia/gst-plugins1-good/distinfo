@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.36 2018/04/17 22:10:04 wiz Exp $
+$NetBSD: distinfo,v 1.37 2018/05/23 20:43:19 adam Exp $
 
-SHA1 (gst-plugins-good-1.14.0.tar.xz) = d295c35c46bc6c800ecf34e7a054a7b764b94a3d
-RMD160 (gst-plugins-good-1.14.0.tar.xz) = 71b866bbc5d86abf03901ee4e8b1406b30e08575
-SHA512 (gst-plugins-good-1.14.0.tar.xz) = f8d64978234bcc32fadb203c96b4013943d2cde345eaddcfd28e115e758f6c6ae15ae5ca1f94c4e59e447a7fe0171f10ed2a2c9ca4b6bb6eca2cbf69f8477811
-Size (gst-plugins-good-1.14.0.tar.xz) = 3769304 bytes
+SHA1 (gst-plugins-good-1.14.1.tar.xz) = 5279165842178ada171242fff76dc2489b77eb66
+RMD160 (gst-plugins-good-1.14.1.tar.xz) = c48451bcb816113945dcd0ab0f0b022017a91275
+SHA512 (gst-plugins-good-1.14.1.tar.xz) = b52d3214f2d32f263637cb9f0838284483e15b8d20bf36d64c349e99b481095734a4dd2c2421176540dfe5129ecc1acc101b89cc898b4773f0f736e8e962b070
+Size (gst-plugins-good-1.14.1.tar.xz) = 3776168 bytes
+SHA1 (patch-sys_osxvideo_Makefile.in) = 1c598bd99f46c4b4acc27008b2c863ef4ae418a0
