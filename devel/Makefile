@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2679 2018/05/22 12:10:40 adam Exp $
+# $NetBSD: Makefile,v 1.2680 2018/05/23 00:32:23 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -347,6 +347,7 @@ SUBDIR+=	go-glog
 SUBDIR+=	go-gls
 SUBDIR+=	go-golang-lru
 SUBDIR+=	go-goorgeous
+SUBDIR+=	go-gopkgs
 SUBDIR+=	go-goptlib
 SUBDIR+=	go-homedir
 SUBDIR+=	go-i18n
