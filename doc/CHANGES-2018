@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2534 2018/05/23 10:35:06 fhajny Exp $
+$NetBSD: CHANGES-2018,v 1.2535 2018/05/23 17:26:46 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3648,3 +3648,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/py-JWT to 1.6.3 [adam 2018-05-23]
 	Updated security/py-OpenSSL to 18.0.0 [adam 2018-05-23]
 	Updated net/powerdns-recursor to 4.1.3 [fhajny 2018-05-23]
+	Updated devel/py-flakes to 1.6.0nb1 [minskim 2018-05-23]
