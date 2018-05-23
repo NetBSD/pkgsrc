@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2018/04/25 12:23:49 adam Exp $
+# $NetBSD: Makefile,v 1.16 2018/05/23 09:32:24 adam Exp $
 
-DISTNAME=	cheroot-6.2.4
+DISTNAME=	cheroot-6.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cheroot/}
@@ -18,6 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-portend-[0-9]*:../../net/py-portend
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.8:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar-[0-9]*:../../devel/py-test-sugar
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-testmon>=0.9.7:../../devel/py-test-testmon
 
 .include "../../lang/python/pyversion.mk"
 .if "${PYPKGPREFIX}" == "py27"
@@ -25,6 +26,9 @@ DEPENDS+=	${PYPKGPREFIX}-backports.functools_lru_cache-[0-9]*:../../devel/py-bac
 .endif
 
 USE_LANGUAGES=	# none
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} cheroot cheroot-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
 	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
