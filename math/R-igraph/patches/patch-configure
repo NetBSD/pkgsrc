@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2018/05/24 22:25:17 minskim Exp $
+
+Portability fix.
+
+--- configure.orig	2018-03-10 12:30:50.000000000 +0000
++++ configure
+@@ -3499,7 +3499,7 @@ ac_compile='$CC -c $CFLAGS $CPPFLAGS con
+ ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
+ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 
+-if test "x$ac_cv_fc_compiler_gnu" == xyes; then
++if test "x$ac_cv_fc_compiler_gnu" = xyes; then
+ 
+ $as_echo "#define HAVE_GFORTRAN 1" >>confdefs.h
+ 
