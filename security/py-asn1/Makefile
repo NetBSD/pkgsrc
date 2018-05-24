@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2017/11/28 09:14:34 adam Exp $
+# $NetBSD: Makefile,v 1.19 2018/05/24 07:20:47 adam Exp $
 
-DISTNAME=	pyasn1-0.4.2
+DISTNAME=	pyasn1-0.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyasn1/}
