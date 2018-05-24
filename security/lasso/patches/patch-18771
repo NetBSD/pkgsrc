@@ -1,0 +1,168 @@
+$NetBSD: patch-18771,v 1.1 2018/05/24 09:27:46 manu Exp $
+
+From upstream: https://dev.entrouvert.org/issues/18771
+
+commit 1d56cd1e31ce993ad17f4b4bbc31c12ffff1311f
+Author: Benjamin Dauvergne <bdauvergne@entrouvert.com>
+Date:   Fri Oct 6 10:28:22 2017 +0200
+
+    replace use of <xmlsec/soap.h> which is deprecated (fixes #18771)
+
+diff --git a/lasso/id-wsf/wsf_profile.c b/lasso/id-wsf/wsf_profile.c
+index 8cfe5a2..0aca204 100644
+--- ./lasso/id-wsf/wsf_profile.c
++++ ./lasso/id-wsf/wsf_profile.c
+@@ -29,7 +29,6 @@
+ #include <xmlsec/xmldsig.h>
+ #include <xmlsec/templates.h>
+ #include <xmlsec/crypto.h>
+-#include <xmlsec/soap.h>
+ 
+ #include "../utils.h"
+ 
+@@ -60,6 +59,7 @@
+ #include "../id-ff/providerprivate.h"
+ #include "../id-ff/sessionprivate.h"
+ #include "../xml/misc_text_node.h"
++#include <../xml/xmlsec_soap.h>
+ 
+ /**
+  * SECTION:wsf_profile
+diff --git a/lasso/xml/tools.c b/lasso/xml/tools.c
+index ade6d66..81e75b5 100644
+--- ./lasso/xml/tools.c
++++ ./lasso/xml/tools.c
+@@ -57,7 +57,6 @@
+ #include <xmlsec/errors.h>
+ #include <xmlsec/openssl/x509.h>
+ #include <xmlsec/openssl/crypto.h>
+-#include <xmlsec/soap.h>
+ 
+ #include <zlib.h>
+ 
+@@ -71,6 +70,7 @@
+ #include <stdarg.h>
+ #include <ctype.h>
+ #include "../lasso_config.h"
++#include <lasso/xml/xmlsec_soap.h>
+ 
+ /**
+  * SECTION:tools
+diff --git a/lasso/xml/xmlsec_soap.h b/lasso/xml/xmlsec_soap.h
+new file mode 100644
+index 0000000..11fc3db
+--- /dev/null
++++ ./lasso/xml/xmlsec_soap.h
+@@ -0,0 +1,112 @@
++/* $Id: patch-18771,v 1.1 2018/05/24 09:27:46 manu Exp $
++ *
++ * Lasso - A free implementation of the Liberty Alliance specifications.
++ *
++ * Copyright (C) 2004-2007 Entr'ouvert
++ * http://lasso.entrouvert.org
++ *
++ * Authors: See AUTHORS file in top-level directory.
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation; either version 2 of the License, or
++ * (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program; if not, see <http://www.gnu.org/licenses/>.
++ */
++
++#ifndef __LASSO_XMLSEC_SOAP_H__
++#define __LASSO_XMLSEC_SOAP_H__
++
++#ifdef __cplusplus
++extern "C" {
++#endif /* __cplusplus */
++
++#include <libxml/tree.h>
++
++#include <xmlsec/xmlsec.h>
++#include <xmlsec/xmltree.h>
++#include <xmlsec/errors.h>
++
++
++/** Replacement for xmlsec/soap.h */
++
++#define xmlSecSoap11Ns ((xmlChar*)"http://schemas.xmlsoap.org/soap/envelope/")
++#define xmlSecSoap12Ns ((xmlChar*)"http://www.w3.org/2003/05/soap-envelope")
++
++static inline xmlNodePtr
++xmlSecSoap11GetHeader(xmlNodePtr envNode) {
++    xmlNodePtr cur;
++
++    xmlSecAssert2(envNode != NULL, NULL);
++
++    /* optional Header node is first */
++    cur = xmlSecGetNextElementNode(envNode->children);
++    if((cur != NULL) && xmlSecCheckNodeName(cur, xmlSecNodeHeader, xmlSecSoap11Ns)) {
++        return(cur);
++    }
++
++    return(NULL);
++}
++
++static inline xmlNodePtr
++xmlSecSoap11GetBody(xmlNodePtr envNode) {
++    xmlNodePtr cur;
++
++    xmlSecAssert2(envNode != NULL, NULL);
++
++    /* optional Header node first */
++    cur = xmlSecGetNextElementNode(envNode->children);
++    if((cur != NULL) && xmlSecCheckNodeName(cur, xmlSecNodeHeader, xmlSecSoap11Ns)) {
++        cur = xmlSecGetNextElementNode(cur->next);
++    }
++
++    /* Body node is next */
++    if((cur == NULL) || !xmlSecCheckNodeName(cur, xmlSecNodeBody, xmlSecSoap11Ns)) {
++        xmlSecError(XMLSEC_ERRORS_HERE,
++                    NULL,
++                    xmlSecErrorsSafeString(xmlSecNodeBody),
++                    XMLSEC_ERRORS_R_NODE_NOT_FOUND,
++                    XMLSEC_ERRORS_NO_MESSAGE);
++        return(NULL);
++    }
++
++    return(cur);
++}
++
++static inline xmlNodePtr
++xmlSecSoap12GetBody(xmlNodePtr envNode) {
++    xmlNodePtr cur;
++
++    xmlSecAssert2(envNode != NULL, NULL);
++
++    /* optional Header node first */
++    cur = xmlSecGetNextElementNode(envNode->children);
++    if((cur != NULL) && xmlSecCheckNodeName(cur, xmlSecNodeHeader, xmlSecSoap12Ns)) {
++        cur = xmlSecGetNextElementNode(cur->next);
++    }
++
++    /* Body node is next */
++    if((cur == NULL) || !xmlSecCheckNodeName(cur, xmlSecNodeBody, xmlSecSoap12Ns)) {
++        xmlSecError(XMLSEC_ERRORS_HERE,
++                    NULL,
++                    xmlSecErrorsSafeString(xmlSecNodeBody),
++                    XMLSEC_ERRORS_R_NODE_NOT_FOUND,
++                    XMLSEC_ERRORS_NO_MESSAGE);
++        return(NULL);
++    }
++
++    return(cur);
++}
++
++#ifdef __cplusplus
++}
++#endif /* __cplusplus */
++
++#endif /* __LASSO_XMLSEC_SOAP_H__ */
