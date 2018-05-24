@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2542 2018/05/24 07:21:04 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2543 2018/05/24 14:14:52 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3664,3 +3664,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/py-asgiref to 2.3.2 [adam 2018-05-24]
 	Updated devel/py-more-itertools to 4.2.0 [adam 2018-05-24]
 	Updated security/py-asn1 to 0.4.3 [adam 2018-05-24]
+	Updated lang/npm to 6.1.0 [fhajny 2018-05-24]
