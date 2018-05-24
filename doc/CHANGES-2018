@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2539 2018/05/23 22:06:59 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2540 2018/05/24 06:29:43 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3659,3 +3659,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated multimedia/gst-plugins1-libav to 1.14.1 [adam 2018-05-23]
 	Updated www/py-raven to 6.8.0 [adam 2018-05-23]
 	Updated textproc/hunspell to 1.3.3nb6 [wiz 2018-05-23]
+	Updated lang/nodejs to 10.2.0 [fhajny 2018-05-24]
