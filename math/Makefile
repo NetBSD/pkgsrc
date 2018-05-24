@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.386 2018/05/18 16:08:51 minskim Exp $
+# $NetBSD: Makefile,v 1.387 2018/05/24 22:25:21 minskim Exp $
 
 COMMENT=	Mathematics
 
@@ -50,6 +50,7 @@ SUBDIR+=	R-gtable
 SUBDIR+=	R-gtools
 SUBDIR+=	R-httpRequest
 SUBDIR+=	R-hwde
+SUBDIR+=	R-igraph
 SUBDIR+=	R-intervals
 SUBDIR+=	R-lme4
 SUBDIR+=	R-lmm
