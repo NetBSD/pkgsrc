@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2018/03/02 00:53:24 gdt Exp $
+# $NetBSD: Makefile,v 1.9 2018/05/24 19:03:56 gdt Exp $
 
-VERSION_BASE=	5.0.0
+VERSION_BASE=	5.0.1
+VERSION_RC=	
 VERSION=	${VERSION_BASE}
+# proj RCs have names like 5.1.0RC1 but unpack to 5.1.0
 WRKSRC=		${WRKDIR}/proj-${VERSION_BASE}
 DISTNAME=	proj-${VERSION}
 CATEGORIES=	geography
