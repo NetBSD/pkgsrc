@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.191 2018/05/23 10:17:58 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.192 2018/05/24 05:47:21 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -378,11 +378,6 @@ _RELRO_LDFLAGS=		-Wl,-z,relro
 _RELRO_LDFLAGS=		-Wl,-z,relro -Wl,-z,now
 .endif
 
-.if ${_PKGSRC_USE_RELRO} == "yes"
-_GCC_LDFLAGS+=		${_RELRO_LDFLAGS}
-CWRAPPERS_APPEND.ld+=	${_RELRO_LDFLAGS}
-.endif
- 
 _STACK_CHECK_CFLAGS=	-fstack-check
 
 .if ${_PKGSRC_USE_STACK_CHECK} == "yes"
@@ -732,6 +727,11 @@ _GCC_LDFLAGS+=	-L${_dir_} ${COMPILER_RPATH_FLAG}${_dir_}
 .  endfor
 .endif
 
+.if ${_PKGSRC_USE_RELRO} == "yes"
+_GCC_LDFLAGS+=		${_RELRO_LDFLAGS}
+CWRAPPERS_APPEND.ld+=	${_RELRO_LDFLAGS}
+.endif
+ 
 LDFLAGS+=	${_GCC_LDFLAGS}
 
 # Point the variables that specify the compiler to the installed
