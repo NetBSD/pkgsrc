@@ -1,78 +1,29 @@
-$NetBSD: patch-ah,v 1.8 2017/01/08 19:45:33 roy Exp $
+$NetBSD: patch-ah,v 1.8.12.1 2018/05/24 15:50:09 bsiegert Exp $
 
 Allow py-curses to use NetBSD curses as well as ncurses
 http://bugs.python.org/issue21457
 
---- Modules/_cursesmodule.c.orig	2016-12-17 20:05:07.000000000 +0000
+--- Modules/_cursesmodule.c.orig	2018-04-29 22:47:33.000000000 +0000
 +++ Modules/_cursesmodule.c
-@@ -117,9 +117,10 @@ char *PyCursesVersion = "2.2";
-     #defines many common symbols (such as "lines") which breaks the
-     curses module in other ways.  So the code will just specify
-     explicit prototypes here. */
--extern int setupterm(char *,int,int *);
--#ifdef __sgi
-+#if defined(__NetBSD__) || defined(__sgi)
- #include <term.h>
-+#else
-+extern int setupterm(char *, int, int *);
- #endif
- 
- #if !defined(HAVE_NCURSES_H) && (defined(sgi) || defined(__sun) || defined(SCO5))
-@@ -322,17 +323,9 @@ Window_NoArg2TupleReturnFunction(getpary
+@@ -326,9 +326,17 @@ Window_NoArg2TupleReturnFunction(getpary
  
  Window_OneArgNoReturnFunction(clearok, int, "i;True(1) or False(0)")
  Window_OneArgNoReturnFunction(idlok, int, "i;True(1) or False(0)")
--#if defined(__NetBSD__)
--Window_OneArgNoReturnVoidFunction(keypad, int, "i;True(1) or False(0)")
--#else
++#if defined(__NetBSD__)
++Window_OneArgNoReturnVoidFunction(keypad, int, "i;True(1) or False(0)")
++#else
  Window_OneArgNoReturnFunction(keypad, int, "i;True(1) or False(0)")
--#endif
++#endif
  Window_OneArgNoReturnFunction(leaveok, int, "i;True(1) or False(0)")
--#if defined(__NetBSD__)
--Window_OneArgNoReturnVoidFunction(nodelay, int, "i;True(1) or False(0)")
--#else
++#if defined(__NetBSD__)
++Window_OneArgNoReturnVoidFunction(nodelay, int, "i;True(1) or False(0)")
++#else
  Window_OneArgNoReturnFunction(nodelay, int, "i;True(1) or False(0)")
--#endif
++#endif
  Window_OneArgNoReturnFunction(notimeout, int, "i;True(1) or False(0)")
  Window_OneArgNoReturnFunction(scrollok, int, "i;True(1) or False(0)")
  Window_OneArgNoReturnFunction(winsdelln, int, "i;nlines")
-@@ -807,7 +800,7 @@ PyCursesWindow_EchoChar(PyCursesWindowOb
-     }
- 
- #ifdef WINDOW_HAS_FLAGS
--    if (self->win->_flags & _ISPAD)
-+    if (is_pad(self->win))
-         return PyCursesCheckERR(pechochar(self->win, ch | attr),
-                                 "echochar");
-     else
-@@ -1253,7 +1246,7 @@ PyCursesWindow_NoOutRefresh(PyCursesWind
- #ifndef WINDOW_HAS_FLAGS
-     if (0)
- #else
--        if (self->win->_flags & _ISPAD)
-+        if (is_pad(self->win))
- #endif
-         {
-             switch(PyTuple_Size(args)) {
-@@ -1396,7 +1389,7 @@ PyCursesWindow_Refresh(PyCursesWindowObj
- #ifndef WINDOW_HAS_FLAGS
-     if (0)
- #else
--        if (self->win->_flags & _ISPAD)
-+        if (is_pad(self->win))
- #endif
-         {
-             switch(PyTuple_Size(args)) {
-@@ -1463,7 +1456,7 @@ PyCursesWindow_SubWin(PyCursesWindowObje
- 
-     /* printf("Subwin: %i %i %i %i   \n", nlines, ncols, begin_y, begin_x); */
- #ifdef WINDOW_HAS_FLAGS
--    if (self->win->_flags & _ISPAD)
-+    if (is_pad(self->win))
-         win = subpad(self->win, nlines, ncols, begin_y, begin_x);
-     else
- #endif
-@@ -2107,15 +2100,15 @@ PyCurses_IntrFlush(PyObject *self, PyObj
+@@ -2131,15 +2139,15 @@ PyCurses_IntrFlush(PyObject *self, PyObj
  static PyObject *
  PyCurses_Is_Term_Resized(PyObject *self, PyObject *args)
  {
@@ -92,23 +43,23 @@ http://bugs.python.org/issue21457
      if (result == TRUE) {
          Py_INCREF(Py_True);
          return Py_True;
-@@ -2126,7 +2119,6 @@ PyCurses_Is_Term_Resized(PyObject *self,
+@@ -2150,6 +2158,7 @@ PyCurses_Is_Term_Resized(PyObject *self,
  }
  #endif /* HAVE_CURSES_IS_TERM_RESIZED */
  
--#if !defined(__NetBSD__)
++#if !defined(__NetBSD__)
  static PyObject *
  PyCurses_KeyName(PyObject *self, PyObject *args)
  {
-@@ -2145,7 +2137,6 @@ PyCurses_KeyName(PyObject *self, PyObjec
+@@ -2168,6 +2177,7 @@ PyCurses_KeyName(PyObject *self, PyObjec
  
      return PyString_FromString((knp == NULL) ? "" : (char *)knp);
  }
--#endif
++#endif
  
  static PyObject *
  PyCurses_KillChar(PyObject *self)
-@@ -2399,16 +2390,16 @@ update_lines_cols(void)
+@@ -2422,16 +2432,16 @@ update_lines_cols(void)
  static PyObject *
  PyCurses_ResizeTerm(PyObject *self, PyObject *args)
  {
@@ -129,7 +80,7 @@ http://bugs.python.org/issue21457
      if (!result)
          return NULL;
      if (!update_lines_cols())
-@@ -2422,17 +2413,17 @@ PyCurses_ResizeTerm(PyObject *self, PyOb
+@@ -2445,17 +2455,17 @@ PyCurses_ResizeTerm(PyObject *self, PyOb
  static PyObject *
  PyCurses_Resize_Term(PyObject *self, PyObject *args)
  {
@@ -151,39 +102,39 @@ http://bugs.python.org/issue21457
      if (!result)
          return NULL;
      if (!update_lines_cols())
-@@ -2690,9 +2681,7 @@ static PyMethodDef PyCurses_methods[] = 
+@@ -2729,7 +2739,9 @@ static PyMethodDef PyCurses_methods[] = 
  #ifdef HAVE_CURSES_IS_TERM_RESIZED
      {"is_term_resized",     (PyCFunction)PyCurses_Is_Term_Resized, METH_VARARGS},
  #endif
--#if !defined(__NetBSD__)
++#if !defined(__NetBSD__)
      {"keyname",             (PyCFunction)PyCurses_KeyName, METH_VARARGS},
--#endif
++#endif
      {"killchar",            (PyCFunction)PyCurses_KillChar, METH_NOARGS},
      {"longname",            (PyCFunction)PyCurses_longname, METH_NOARGS},
      {"meta",                (PyCFunction)PyCurses_Meta, METH_VARARGS},
-@@ -2801,9 +2790,7 @@ init_curses(void)
+@@ -2844,7 +2856,9 @@ init_curses(void)
      SetDictInt("A_DIM",                 A_DIM);
      SetDictInt("A_BOLD",                A_BOLD);
      SetDictInt("A_ALTCHARSET",          A_ALTCHARSET);
--#if !defined(__NetBSD__)
++#if !defined(__NetBSD__)
      SetDictInt("A_INVIS",           A_INVIS);
--#endif
++#endif
      SetDictInt("A_PROTECT",         A_PROTECT);
      SetDictInt("A_CHARTEXT",        A_CHARTEXT);
      SetDictInt("A_COLOR",           A_COLOR);
-@@ -2875,7 +2862,6 @@ init_curses(void)
+@@ -2916,6 +2930,7 @@ init_curses(void)
          int key;
          char *key_n;
          char *key_n2;
--#if !defined(__NetBSD__)
++#if !defined(__NetBSD__)
          for (key=KEY_MIN;key < KEY_MAX; key++) {
              key_n = (char *)keyname(key);
              if (key_n == NULL || strcmp(key_n,"UNKNOWN KEY")==0)
-@@ -2903,7 +2889,6 @@ init_curses(void)
+@@ -2943,6 +2958,7 @@ init_curses(void)
              if (key_n2 != key_n)
                  free(key_n2);
          }
--#endif
++#endif
          SetDictInt("KEY_MIN", KEY_MIN);
          SetDictInt("KEY_MAX", KEY_MAX);
      }
