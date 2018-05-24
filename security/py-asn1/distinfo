@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2017/11/28 09:14:34 adam Exp $
+$NetBSD: distinfo,v 1.16 2018/05/24 07:20:47 adam Exp $
 
-SHA1 (pyasn1-0.4.2.tar.gz) = 6f997e4b9aace55948e45cffe32980bb92985ce2
-RMD160 (pyasn1-0.4.2.tar.gz) = 500f1a7ea274d5ed41af67609b5df6617f3c4223
-SHA512 (pyasn1-0.4.2.tar.gz) = 30e7cdfd2f7b182081f951bd94169a300a577f95fbfcb4ddb6dc288617b2776265018d246ae0adb649650ee94aab9122a428313d7a61559f97ed7f02b9670709
-Size (pyasn1-0.4.2.tar.gz) = 118404 bytes
+SHA1 (pyasn1-0.4.3.tar.gz) = 729ceb064e1905fbf2e19908aee20005270b0a74
+RMD160 (pyasn1-0.4.3.tar.gz) = a80b65856b8f6757a689c73ed4eb49b2fd9a5f75
+SHA512 (pyasn1-0.4.3.tar.gz) = a699b1ef58129860f8448e8c08a7017adfd7ead7844a45197b1026e12760424d20f89a421b3fe8caeab3922448d00a77f717c0a03841c36c6b1d1740b0d9707b
+Size (pyasn1-0.4.3.tar.gz) = 118494 bytes
