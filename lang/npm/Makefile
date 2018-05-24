@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/05/11 09:37:13 adam Exp $
+# $NetBSD: Makefile,v 1.6 2018/05/24 14:14:43 fhajny Exp $
 
-DISTNAME=	npm-6.0.1
+DISTNAME=	npm-6.1.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=npm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

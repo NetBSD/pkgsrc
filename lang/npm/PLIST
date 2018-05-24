@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/05/11 09:37:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2018/05/24 14:14:43 fhajny Exp $
 bin/npm
 bin/npx
 lib/node_modules/npm/.github/CODEOWNERS
@@ -360,6 +360,7 @@ lib/node_modules/npm/lib/utils/metrics.js
 lib/node_modules/npm/lib/utils/module-name.js
 lib/node_modules/npm/lib/utils/move.js
 lib/node_modules/npm/lib/utils/no-progress-while-running.js
+lib/node_modules/npm/lib/utils/open-url.js
 lib/node_modules/npm/lib/utils/output.js
 lib/node_modules/npm/lib/utils/package-id.js
 lib/node_modules/npm/lib/utils/parse-json.js
@@ -3277,10 +3278,9 @@ lib/node_modules/npm/node_modules/normalize-package-data/node_modules/is-builtin
 lib/node_modules/npm/node_modules/normalize-package-data/node_modules/is-builtin-module/package.json
 lib/node_modules/npm/node_modules/normalize-package-data/node_modules/is-builtin-module/readme.md
 lib/node_modules/npm/node_modules/normalize-package-data/package.json
-lib/node_modules/npm/node_modules/npm-audit-report/.travis.yml
+lib/node_modules/npm/node_modules/npm-audit-report/CHANGELOG.md
 lib/node_modules/npm/node_modules/npm-audit-report/LICENSE
 lib/node_modules/npm/node_modules/npm-audit-report/README.md
-lib/node_modules/npm/node_modules/npm-audit-report/appveyor.yml
 lib/node_modules/npm/node_modules/npm-audit-report/index.js
 lib/node_modules/npm/node_modules/npm-audit-report/lib/utils.js
 lib/node_modules/npm/node_modules/npm-audit-report/node_modules/console-control-strings/LICENSE
@@ -3529,7 +3529,6 @@ lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/nod
 lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-cache-semantics/README.md
 lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-cache-semantics/node4/index.js
 lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-cache-semantics/package.json
-lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-proxy-agent/.npmignore
 lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-proxy-agent/.travis.yml
 lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-proxy-agent/History.md
 lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-proxy-agent/README.md
@@ -3581,7 +3580,6 @@ lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/nod
 lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-proxy-agent/node_modules/debug/LICENSE
 lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-proxy-agent/node_modules/debug/Makefile
 lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-proxy-agent/node_modules/debug/README.md
-lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-proxy-agent/node_modules/debug/component.json
 lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-proxy-agent/node_modules/debug/karma.conf.js
 lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-proxy-agent/node_modules/debug/node.js
 lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-proxy-agent/node_modules/debug/node_modules/ms/index.js
@@ -3592,7 +3590,6 @@ lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/nod
 lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-proxy-agent/node_modules/debug/src/browser.js
 lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-proxy-agent/node_modules/debug/src/debug.js
 lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-proxy-agent/node_modules/debug/src/index.js
-lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-proxy-agent/node_modules/debug/src/inspector-log.js
 lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-proxy-agent/node_modules/debug/src/node.js
 lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-proxy-agent/package.json
 lib/node_modules/npm/node_modules/npm-profile/node_modules/make-fetch-happen/node_modules/http-proxy-agent/test/ssl-cert-snakeoil.key
@@ -4974,6 +4971,14 @@ lib/node_modules/npm/node_modules/pacote/node_modules/minimatch/node_modules/bra
 lib/node_modules/npm/node_modules/pacote/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/test/map.js
 lib/node_modules/npm/node_modules/pacote/node_modules/minimatch/node_modules/brace-expansion/package.json
 lib/node_modules/npm/node_modules/pacote/node_modules/minimatch/package.json
+lib/node_modules/npm/node_modules/pacote/node_modules/minipass/README.md
+lib/node_modules/npm/node_modules/pacote/node_modules/minipass/index.js
+lib/node_modules/npm/node_modules/pacote/node_modules/minipass/node_modules/yallist/LICENSE
+lib/node_modules/npm/node_modules/pacote/node_modules/minipass/node_modules/yallist/README.md
+lib/node_modules/npm/node_modules/pacote/node_modules/minipass/node_modules/yallist/iterator.js
+lib/node_modules/npm/node_modules/pacote/node_modules/minipass/node_modules/yallist/package.json
+lib/node_modules/npm/node_modules/pacote/node_modules/minipass/node_modules/yallist/yallist.js
+lib/node_modules/npm/node_modules/pacote/node_modules/minipass/package.json
 lib/node_modules/npm/node_modules/pacote/node_modules/promise-retry/.editorconfig
 lib/node_modules/npm/node_modules/pacote/node_modules/promise-retry/.npmignore
 lib/node_modules/npm/node_modules/pacote/node_modules/promise-retry/.travis.yml
@@ -5225,8 +5230,6 @@ lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/LICENSE
 lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/README.md
 lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/index.js
 lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/package.json
-lib/node_modules/npm/node_modules/request/node_modules/aws4/.npmignore
-lib/node_modules/npm/node_modules/request/node_modules/aws4/.tern-port
 lib/node_modules/npm/node_modules/request/node_modules/aws4/.travis.yml
 lib/node_modules/npm/node_modules/request/node_modules/aws4/LICENSE
 lib/node_modules/npm/node_modules/request/node_modules/aws4/README.md
@@ -5717,13 +5720,6 @@ lib/node_modules/npm/node_modules/request/node_modules/qs/test/index.js
 lib/node_modules/npm/node_modules/request/node_modules/qs/test/parse.js
 lib/node_modules/npm/node_modules/request/node_modules/qs/test/stringify.js
 lib/node_modules/npm/node_modules/request/node_modules/qs/test/utils.js
-lib/node_modules/npm/node_modules/request/node_modules/stringstream/.npmignore
-lib/node_modules/npm/node_modules/request/node_modules/stringstream/.travis.yml
-lib/node_modules/npm/node_modules/request/node_modules/stringstream/LICENSE.txt
-lib/node_modules/npm/node_modules/request/node_modules/stringstream/README.md
-lib/node_modules/npm/node_modules/request/node_modules/stringstream/example.js
-lib/node_modules/npm/node_modules/request/node_modules/stringstream/package.json
-lib/node_modules/npm/node_modules/request/node_modules/stringstream/stringstream.js
 lib/node_modules/npm/node_modules/request/node_modules/tough-cookie/LICENSE
 lib/node_modules/npm/node_modules/request/node_modules/tough-cookie/README.md
 lib/node_modules/npm/node_modules/request/node_modules/tough-cookie/lib/cookie.js
@@ -5898,11 +5894,6 @@ lib/node_modules/npm/node_modules/tar/node_modules/minizlib/README.md
 lib/node_modules/npm/node_modules/tar/node_modules/minizlib/constants.js
 lib/node_modules/npm/node_modules/tar/node_modules/minizlib/index.js
 lib/node_modules/npm/node_modules/tar/node_modules/minizlib/package.json
-lib/node_modules/npm/node_modules/tar/node_modules/safe-buffer/LICENSE
-lib/node_modules/npm/node_modules/tar/node_modules/safe-buffer/README.md
-lib/node_modules/npm/node_modules/tar/node_modules/safe-buffer/index.d.ts
-lib/node_modules/npm/node_modules/tar/node_modules/safe-buffer/index.js
-lib/node_modules/npm/node_modules/tar/node_modules/safe-buffer/package.json
 lib/node_modules/npm/node_modules/tar/node_modules/yallist/LICENSE
 lib/node_modules/npm/node_modules/tar/node_modules/yallist/README.md
 lib/node_modules/npm/node_modules/tar/node_modules/yallist/iterator.js
@@ -6552,3 +6543,4 @@ man/man7/npm-scope.7
 man/man7/npm-scripts.7
 man/man7/removing-npm.7
 man/man7/semver.7
+@pkgdir share
