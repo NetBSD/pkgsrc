@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/05/23 09:35:27 adam Exp $
+# $NetBSD: Makefile,v 1.10 2018/05/24 06:33:41 adam Exp $
 
-DISTNAME=	PyJWT-1.6.3
+DISTNAME=	PyJWT-1.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyJWT/}
