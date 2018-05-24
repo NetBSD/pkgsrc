@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.17 2015/05/24 07:44:07 adam Exp $
+$NetBSD: patch-al,v 1.17.26.1 2018/05/24 15:50:09 bsiegert Exp $
 
 - recognize MirBSD, Interix
 - remove special-case library version hack for FreeBSD
@@ -6,9 +6,9 @@ $NetBSD: patch-al,v 1.17 2015/05/24 07:44:07 adam Exp $
 - honor pkgsrc LDFLAGS
 - other stuff not previously commented (XXX)
 
---- configure.orig	2015-05-23 16:09:25.000000000 +0000
+--- configure.orig	2018-04-29 22:47:33.000000000 +0000
 +++ configure
-@@ -3271,7 +3271,7 @@ case $ac_sys_system/$ac_sys_release in
+@@ -3356,7 +3356,7 @@ case $ac_sys_system/$ac_sys_release in
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
    # In addition, Stefan Krah confirms that issue #1244610 exists through
    # OpenBSD 4.6, but is fixed in 4.7.
@@ -17,7 +17,7 @@ $NetBSD: patch-al,v 1.17 2015/05/24 07:44:07 adam Exp $
      define_xopen_source=no
      # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
      # also defined. This can be overridden by defining _BSD_SOURCE
-@@ -5373,15 +5373,10 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+@@ -5481,15 +5481,10 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
@@ -34,7 +34,7 @@ $NetBSD: patch-al,v 1.17 2015/05/24 07:44:07 adam Exp $
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
  	  ;;
      hp*|HP*)
-@@ -5415,6 +5410,11 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+@@ -5523,6 +5518,11 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
  	LDLIBRARY='libpython$(VERSION).so'
  	RUNSHARED=LIBPATH=`pwd`${LIBPATH:+:${LIBPATH}}
  	;;
@@ -46,17 +46,18 @@ $NetBSD: patch-al,v 1.17 2015/05/24 07:44:07 adam Exp $
  
    esac
  else # shared is disabled
-@@ -6072,8 +6072,7 @@ $as_echo "$CC" >&6; }
- 		cur_target_minor=`sw_vers -productVersion | \
- 				sed 's/\([0-9]*\)\.\([0-9]*\).*/\2/'`
- 		cur_target="${cur_target_major}.${cur_target_minor}"
--		if test ${cur_target_major} -eq 10 && \
--		   test ${cur_target_minor} -ge 3
-+		if false
- 		then
- 		    cur_target=10.3
- 		    if test ${enable_universalsdk}; then
-@@ -8231,9 +8230,9 @@ then
+@@ -6193,9 +6193,7 @@ $as_echo_n "checking which MACOSX_DEPLOY
+         cur_target_minor=`sw_vers -productVersion | \
+                 sed 's/\([0-9]*\)\.\([0-9]*\).*/\2/'`
+         cur_target="${cur_target_major}.${cur_target_minor}"
+-        if test ${cur_target_major} -eq 10 && \
+-           test ${cur_target_minor} -ge 3 && \
+-           test ${cur_target_minor} -le 5
++        if false
+         then
+             # OS X 10.3 through 10.5
+             cur_target=10.3
+@@ -8617,9 +8615,9 @@ then
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -69,7 +70,7 @@ $NetBSD: patch-al,v 1.17 2015/05/24 07:44:07 adam Exp $
  		fi ;;
  	Darwin/*)
  		# Use -undefined dynamic_lookup whenever possible (10.3 and later).
-@@ -8256,9 +8255,9 @@ then
+@@ -8642,9 +8640,9 @@ then
  				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -82,7 +83,7 @@ $NetBSD: patch-al,v 1.17 2015/05/24 07:44:07 adam Exp $
  			fi
  		else
  			# building for OS X 10.3 and later
-@@ -8272,7 +8271,7 @@ then
+@@ -8655,7 +8653,7 @@ then
  		;;
  	Linux*|GNU*|QNX*)
  		LDSHARED='$(CC) -shared'
@@ -91,7 +92,7 @@ $NetBSD: patch-al,v 1.17 2015/05/24 07:44:07 adam Exp $
  	BSD/OS*/4*)
  		LDSHARED="gcc -shared"
  		LDCXXSHARED="g++ -shared";;
-@@ -8300,6 +8299,9 @@ then
+@@ -8683,6 +8681,9 @@ then
  				   ;;
  				esac
  		fi;;
@@ -101,7 +102,7 @@ $NetBSD: patch-al,v 1.17 2015/05/24 07:44:07 adam Exp $
  	NetBSD*|DragonFly*)
  		LDSHARED='$(CC) -shared'
  		LDCXXSHARED='$(CXX) -shared';;
-@@ -8346,7 +8348,8 @@ then
+@@ -8729,7 +8730,8 @@ then
  		 fi;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
@@ -111,7 +112,7 @@ $NetBSD: patch-al,v 1.17 2015/05/24 07:44:07 adam Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -8398,11 +8401,12 @@ then
+@@ -8781,11 +8783,12 @@ then
  	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
  	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
  	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
@@ -125,7 +126,7 @@ $NetBSD: patch-al,v 1.17 2015/05/24 07:44:07 adam Exp $
  	SunOS/5*) case $CC in
  		  *gcc*)
  		    if $CC -Xlinker --help 2>&1 | grep export-dynamic >/dev/null
-@@ -10457,6 +10461,10 @@ int
+@@ -10798,6 +10801,10 @@ int
  main ()
  {
  int x=kqueue()

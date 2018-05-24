@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.18 2017/09/17 09:54:52 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.18.8.1 2018/05/24 15:50:09 bsiegert Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1437,8 +1437,8 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-9.0.1-py2.py3-none-any.whl
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-28.8.0-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-9.0.3-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-39.0.1-py2.py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -3033,7 +3033,6 @@ lib/python${PY_VER_SUFFIX}/test/seq_tests.py
 lib/python${PY_VER_SUFFIX}/test/seq_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/seq_tests.pyo
 lib/python${PY_VER_SUFFIX}/test/sgml_input.html
-lib/python${PY_VER_SUFFIX}/test/sha256.pem
 lib/python${PY_VER_SUFFIX}/test/sortperf.py
 lib/python${PY_VER_SUFFIX}/test/sortperf.pyc
 lib/python${PY_VER_SUFFIX}/test/sortperf.pyo
@@ -4317,6 +4316,7 @@ lib/python${PY_VER_SUFFIX}/test/win_console_handler.py
 lib/python${PY_VER_SUFFIX}/test/win_console_handler.pyc
 lib/python${PY_VER_SUFFIX}/test/win_console_handler.pyo
 lib/python${PY_VER_SUFFIX}/test/wrongcert.pem
+lib/python${PY_VER_SUFFIX}/test/xmltestdata/expat224_utf8_bug.xml
 lib/python${PY_VER_SUFFIX}/test/xmltestdata/simple-ns.xml
 lib/python${PY_VER_SUFFIX}/test/xmltestdata/simple.xml
 lib/python${PY_VER_SUFFIX}/test/xmltestdata/test.xml
