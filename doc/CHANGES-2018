@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2545 2018/05/24 16:30:01 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2546 2018/05/24 19:04:10 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3667,3 +3667,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/npm to 6.1.0 [fhajny 2018-05-24]
 	Added devel/py-toolz version 0.9.0 [minskim 2018-05-24]
 	Updated devel/py-sortedcontainers to 2.0.2 [minskim 2018-05-24]
+	Updated geography/proj to 5.0.1 [gdt 2018-05-24]
