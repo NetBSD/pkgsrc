@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2541 2018/05/24 06:38:06 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2542 2018/05/24 07:21:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3662,3 +3662,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/nodejs to 10.2.0 [fhajny 2018-05-24]
 	Updated textproc/py-JWT to 1.6.4 [adam 2018-05-24]
 	Updated www/py-asgiref to 2.3.2 [adam 2018-05-24]
+	Updated devel/py-more-itertools to 4.2.0 [adam 2018-05-24]
+	Updated security/py-asn1 to 0.4.3 [adam 2018-05-24]
