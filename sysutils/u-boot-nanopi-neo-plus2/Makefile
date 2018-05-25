@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2018/05/25 10:45:23 jmcneill Exp $
+# $NetBSD: Makefile,v 1.4 2018/05/25 20:49:52 jakllsch Exp $
 
 UBOOT_TARGET=		nanopi-neo-plus2
 UBOOT_CONFIG=		nanopi_neo_plus2_defconfig
 UBOOT_BIN=		u-boot-sunxi-with-spl.bin
+
+PKGREVISION=		1
 
 # Switch to EL1 before booting kernel (required for 32-bit support)
 #PKG_DEFAULT_OPTIONS+=	el1
