@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2683 2018/05/24 16:15:08 minskim Exp $
+# $NetBSD: Makefile,v 1.2684 2018/05/25 00:53:53 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -345,6 +345,7 @@ SUBDIR+=	go-fsync
 SUBDIR+=	go-gitmap
 SUBDIR+=	go-glog
 SUBDIR+=	go-gls
+SUBDIR+=	go-gocode
 SUBDIR+=	go-golang-lru
 SUBDIR+=	go-goorgeous
 SUBDIR+=	go-gopkgs
