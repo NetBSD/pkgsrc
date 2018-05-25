@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18355 2018/05/23 21:00:30 adam Exp $
+$NetBSD: TODO,v 1.18356 2018/05/25 10:45:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -464,6 +464,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
+	o calibre-3.24
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -676,6 +677,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ghc-8.2
 	o ghc7-7.10.1
 	o ghdl-0.33
+	o gimp-2.10.2
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5
@@ -1460,6 +1462,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vera-1.23
 	o veusz-1.26.1
 	o vfu-4.09
+	o vice-3.2
 	o vicq-0.4.2
 	o vile-9.8q
 	o vim-8.1
