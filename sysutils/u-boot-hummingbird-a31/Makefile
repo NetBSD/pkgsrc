@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/12/18 23:31:20 jmcneill Exp $
-
-PKGREVISION=		1
+# $NetBSD: Makefile,v 1.3 2018/05/25 10:45:23 jmcneill Exp $
 
 UBOOT_TARGET=		hummingbird-a31
 UBOOT_CONFIG=		Hummingbird_A31_defconfig

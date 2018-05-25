@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/04/05 19:13:57 joerg Exp $
-
-PKGREVISION=		3
+# $NetBSD: Makefile,v 1.5 2018/05/25 10:45:24 jmcneill Exp $
 
 UBOOT_TARGET=		pine64
 UBOOT_CONFIG=		pine64_plus_defconfig
