@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/12/18 23:31:21 jmcneill Exp $
-
-PKGREVISION=		1
+# $NetBSD: Makefile,v 1.4 2018/05/25 10:45:24 jmcneill Exp $
 
 UBOOT_TARGET=		pocketchip
 UBOOT_CONFIG=		CHIP_defconfig

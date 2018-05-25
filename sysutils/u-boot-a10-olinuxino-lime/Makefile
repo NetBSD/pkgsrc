@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/12/18 23:31:19 jmcneill Exp $
-
-PKGREVISION=		1
+# $NetBSD: Makefile,v 1.3 2018/05/25 10:45:22 jmcneill Exp $
 
 UBOOT_TARGET=		a10-olinuxino-lime
 UBOOT_CONFIG=		A10-OLinuXino-Lime_defconfig
