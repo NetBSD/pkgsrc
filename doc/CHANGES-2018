@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2549 2018/05/25 03:23:15 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2550 2018/05/25 03:27:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3671,3 +3671,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added math/R-igraph version 1.2.1 [minskim 2018-05-24]
 	Added devel/go-gocode version 20170907 [minskim 2018-05-25]
 	Updated devel/p5-Type-Tiny-XS to 0.014 [wen 2018-05-25]
+	Updated devel/p5-Error to 0.17026 [wen 2018-05-25]
