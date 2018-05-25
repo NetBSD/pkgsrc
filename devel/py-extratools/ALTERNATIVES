@@ -1,0 +1,3 @@
+bin/extratools-flatten @PREFIX@/bin/extratools-flatten@PYVERSSUFFIX@
+bin/extratools-remap @PREFIX@/bin/extratools-remap@PYVERSSUFFIX@
+bin/extratools-teststats @PREFIX@/bin/extratools-teststats@PYVERSSUFFIX@

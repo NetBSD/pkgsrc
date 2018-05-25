@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/05/25 16:01:06 minskim Exp $
+
+SHA1 (extratools-0.6.14.2.tar.gz) = 713d52b3bfcaf5b6e7007ad3a6f7301f5f87b029
+RMD160 (extratools-0.6.14.2.tar.gz) = fae05c0320c933571c8015cdd4c8b3f29bb34d1d
+SHA512 (extratools-0.6.14.2.tar.gz) = 8d04181572849cb6e0fcb2e9ebbc5ee2f2a6529dd4395489c87a0921cf0a1c522b30a1913869018a318c16274e8c14e52604dd574678b35b5cfc3dcacd58b116
+Size (extratools-0.6.14.2.tar.gz) = 15979 bytes
