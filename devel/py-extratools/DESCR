@@ -1,0 +1,8 @@
+100+ extra functional tools that go beyond standard library's
+itertools, functools, etc. and popular third-party libraries like
+toolz, fancy, and more-itertools. Like toolz and others, most of the
+tools are designed to be efficient, pure, and lazy. Several useful yet
+non-functional tools are also included. While toolz and others target
+basic scenarios, most tools in this library target more advanced and
+complete scenarios. A few useful CLI tools for respective functions
+are also installed. They are available as extratools-[funcname].
