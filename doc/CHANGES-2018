@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2550 2018/05/25 03:27:36 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2551 2018/05/25 03:31:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3672,3 +3672,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added devel/go-gocode version 20170907 [minskim 2018-05-25]
 	Updated devel/p5-Type-Tiny-XS to 0.014 [wen 2018-05-25]
 	Updated devel/p5-Error to 0.17026 [wen 2018-05-25]
+	Updated devel/p5-CPAN-Perl-Releases to 3.58 [wen 2018-05-25]
