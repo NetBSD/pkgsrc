@@ -1,14 +1,10 @@
-$NetBSD: distinfo,v 1.11 2018/01/10 00:55:27 jakllsch Exp $
+$NetBSD: distinfo,v 1.12 2018/05/25 10:45:22 jmcneill Exp $
 
-SHA1 (u-boot-2017.11.tar.bz2) = 6a3932b39a0f165aba210663ea2500bcfb9c8794
-RMD160 (u-boot-2017.11.tar.bz2) = 38e1331640b81e74ea78ebf41f94bcdbd675dcb2
-SHA512 (u-boot-2017.11.tar.bz2) = 485b9ab7cea0a250d964822bdb99a8426852b4e815b506329dedc4f5a69757c8b1a812998561161d44d98f6fabb9c8937e8250de1244d258fc9f13624b38d643
-Size (u-boot-2017.11.tar.bz2) = 11982382 bytes
+SHA1 (u-boot-2018.05.tar.bz2) = 605543501f7450ffa4e9c7fd98d2f36dbc0657b0
+RMD160 (u-boot-2018.05.tar.bz2) = b305357058feb875233c3a32f41e14548b97855d
+SHA512 (u-boot-2018.05.tar.bz2) = 218f71282c9d027b0faf210ce2d4d713779e0c61ea4a23f03d5dec0ca8836a3c26b46c5e258d583834f5b5a2f4663f98729ca4b0101a60f85457eb892f8370d2
+Size (u-boot-2018.05.tar.bz2) = 12469276 bytes
 SHA1 (patch-arch_arm_cpu_armv8_Kconfig) = 63cbbf2e3cebd46793fc03cc8e62297f6dc01aa9
-SHA1 (patch-arch_arm_dts_Makefile) = 13e812abd46ffd7bf6dca6c78e2f5adf9731b7c6
-SHA1 (patch-arch_arm_dts_sun50i-h5-nanopi-neo-plus2.dts) = af01f257b0bec9a71a3fbf2324bed6a4471062b0
-SHA1 (patch-configs_nanopi__neo__plus2__defconfig) = 58156ff8c5f9bd841b3039413911e67ddf8d692a
 SHA1 (patch-drivers_video_sunxi_sunxi__display.c) = 8e6a6a781cce25af5cba289fc2ca76e30b62aff6
-SHA1 (patch-include_configs_tegra-common.h) = 01b68620414f85edd029e54f7f8dc158888c4072
+SHA1 (patch-include_configs_tegra-common.h) = 4cda8f9df2c7fc2b9cd9d4139ec679a42648e4f8
 SHA1 (patch-lib_bch.c) = b1f1c7418f1004c151b9e5e06ab7047a1736ae47
-SHA1 (patch-tools_Makefile) = adc5082d369363113135d5c892822b57ee80ff19
