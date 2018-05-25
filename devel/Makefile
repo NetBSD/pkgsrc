@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2684 2018/05/25 00:53:53 minskim Exp $
+# $NetBSD: Makefile,v 1.2685 2018/05/25 04:01:43 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -1968,6 +1968,7 @@ SUBDIR+=	py-execnet
 SUBDIR+=	py-expect
 SUBDIR+=	py-expressions
 SUBDIR+=	py-extras
+SUBDIR+=	py-fakefs
 SUBDIR+=	py-faker
 SUBDIR+=	py-falcon
 SUBDIR+=	py-fann2
