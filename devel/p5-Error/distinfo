@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2017/08/14 18:49:39 wiz Exp $
+$NetBSD: distinfo,v 1.19 2018/05/25 03:26:37 wen Exp $
 
-SHA1 (Error-0.17025.tar.gz) = f4ee3de53957a6b28918c05de212601498ae8a83
-RMD160 (Error-0.17025.tar.gz) = 7aab586b849b12d075a2e65e0f0002e9ae66c43e
-SHA512 (Error-0.17025.tar.gz) = 0cb77d8be2f759aaf8970f9d5fa5483ba5ba687c115f6bbeaa22afb1b5c50fe6f70b4dce19a3c8d1bf6e9bfad0af86f2e03faac493f428b04962e5337be3ae2b
-Size (Error-0.17025.tar.gz) = 32013 bytes
+SHA1 (Error-0.17026.tar.gz) = af1ad2c75662702853d8dd6b9c25d8001ae17bf1
+RMD160 (Error-0.17026.tar.gz) = 4fb59b44ade5a94c5d2be1c13a2a1b05f02e7c18
+SHA512 (Error-0.17026.tar.gz) = 58d43a133fb74d94d726ae923cdfb7df8e1faf156247bb07cb7308218e21a627485f031d029b3ee3179d92e756dca7f1e6dd1e2f4378f420c72b171aefe2f410
+Size (Error-0.17026.tar.gz) = 32988 bytes
