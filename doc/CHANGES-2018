@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2547 2018/05/24 22:25:29 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2548 2018/05/25 00:54:00 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3669,3 +3669,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-sortedcontainers to 2.0.2 [minskim 2018-05-24]
 	Updated geography/proj to 5.0.1 [gdt 2018-05-24]
 	Added math/R-igraph version 1.2.1 [minskim 2018-05-24]
+	Added devel/go-gocode version 20170907 [minskim 2018-05-25]
