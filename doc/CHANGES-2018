@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2553 2018/05/25 10:16:18 maya Exp $
+$NetBSD: CHANGES-2018,v 1.2554 2018/05/25 10:48:56 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3675,3 +3675,28 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-CPAN-Perl-Releases to 3.58 [wen 2018-05-25]
 	Added devel/py-fakefs version 3.4.1 [bsiegert 2018-05-25]
 	Updated chat/weechat to 2.1 [maya 2018-05-25]
+	Updated sysutils/u-boot-a10-olinuxino-lime to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-bananapi to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-bananapi-m3 to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-beagleboard to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-beagleboneblack to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-beaglebonewhite to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-chip to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-chip-pro to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-cubieboard2 to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-cubieboard4 to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-cubietruck to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-hummingbird-a31 to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-jetson-tk1 to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-jetson-tx1 to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-jetson-tx2 to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-nanopi-m1 to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-nanopi-neo to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-nanopi-neo-plus2 to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-nanopi-neo2 to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-orangepi-2 to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-orangepi-one to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-orangepi-plus2e to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-pine64 to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-pinebook to 2018.05 [jmcneill 2018-05-25]
+	Updated sysutils/u-boot-pocketchip to 2018.05 [jmcneill 2018-05-25]
