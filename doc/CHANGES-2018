@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2556 2018/05/25 15:57:07 jperkin Exp $
+$NetBSD: CHANGES-2018,v 1.2557 2018/05/25 16:01:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3702,3 +3702,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/u-boot-pocketchip to 2018.05 [jmcneill 2018-05-25]
 	Updated lang/nodejs to 10.2.1 [fhajny 2018-05-25]
 	Updated lang/ruby22-base to 2.2.10nb1 [jperkin 2018-05-25]
+	Added devel/py-extratools version 0.6.14.2 [minskim 2018-05-25]
