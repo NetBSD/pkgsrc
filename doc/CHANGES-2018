@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2554 2018/05/25 10:48:56 jmcneill Exp $
+$NetBSD: CHANGES-2018,v 1.2555 2018/05/25 11:18:27 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3700,3 +3700,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/u-boot-pine64 to 2018.05 [jmcneill 2018-05-25]
 	Updated sysutils/u-boot-pinebook to 2018.05 [jmcneill 2018-05-25]
 	Updated sysutils/u-boot-pocketchip to 2018.05 [jmcneill 2018-05-25]
+	Updated lang/nodejs to 10.2.1 [fhajny 2018-05-25]
