@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2018/05/16 10:28:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.56 2018/05/25 16:41:58 ryoon Exp $
 
 .include "Makefile.common"
 
@@ -11,6 +11,8 @@ BUILD_DEPENDS+=	unicode-emoji-[0-9]*:../../textproc/unicode-emoji
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+# XXX fails without GNU msgfmt
+_TOOLS_USE_PKGSRC.msgfmt=	yes
 USE_TOOLS+=	pkg-config intltool gmsgfmt gmake msgmerge
 USE_LANGUAGES=	c c++
 USE_PKGLOCALEDIR=	yes
