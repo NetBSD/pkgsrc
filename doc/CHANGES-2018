@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2571 2018/05/26 22:04:25 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2572 2018/05/26 22:11:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3719,3 +3719,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/libfilezilla to 0.12.2 [wiz 2018-05-26]
 	Updated net/filezilla to 3.33.0 [wiz 2018-05-26]
 	Updated misc/goffice0.10 to 0.10.41 [wiz 2018-05-26]
+	Updated math/gnumeric112 to 1.12.41 [wiz 2018-05-26]
