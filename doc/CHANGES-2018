@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2575 2018/05/26 22:19:47 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2576 2018/05/26 22:41:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3723,3 +3723,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/todoman to 3.4.0 [wiz 2018-05-26]
 	Updated devel/extra-cmake-modules to 5.46.0 [wiz 2018-05-26]
 	Updated graphics/oxygen-icons to 5.46.0 [wiz 2018-05-26]
+	Updated lang/oracle-jre8 to 8.0.172 [ryoon 2018-05-27]
+	Updated lang/oracle-jdk8 to 8.0.172 [ryoon 2018-05-27]
