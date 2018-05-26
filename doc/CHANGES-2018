@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2567 2018/05/26 21:48:40 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2568 2018/05/26 21:49:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3715,3 +3715,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated x11/libdrm to 2.4.92 [wiz 2018-05-26]
 	Updated mail/neomutt to 20180512 [wiz 2018-05-26]
 	Updated net/libsoup to 2.62.2 [wiz 2018-05-26]
+	Updated audio/id3 to 1.1.0 [wiz 2018-05-26]
