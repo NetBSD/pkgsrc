@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.29 2018/04/11 11:50:34 markd Exp $
+$NetBSD: distinfo,v 1.30 2018/05/26 22:19:38 wiz Exp $
 
-SHA1 (oxygen-icons5-5.44.0.tar.xz) = 66353ae7555acf680b46666e720aac3e282ddc8b
-RMD160 (oxygen-icons5-5.44.0.tar.xz) = 30bda9d2efce0707940fea86c08f0e2dd7e84b2a
-SHA512 (oxygen-icons5-5.44.0.tar.xz) = d8bd5e92dd4bae362bd8d5db399653834d7fae3356ef9ea56d84d12be46585574b5c4b40d069b3bc5032d9b682f2f2b89507df85096cc1fa97ba5ad217dd8e55
-Size (oxygen-icons5-5.44.0.tar.xz) = 234785788 bytes
+SHA1 (oxygen-icons5-5.46.0.tar.xz) = 735b26779d559be118033a57a88ffd941df3d6eb
+RMD160 (oxygen-icons5-5.46.0.tar.xz) = f7b33f7710b5f14528a2a3f9e458c093242fb0c8
+SHA512 (oxygen-icons5-5.46.0.tar.xz) = 55bda943a5e9e5d1f1161ceb2abaea0d10bd839097150ee8322fcbc0ef1caf3c71cf9734fe3e7e7ece2213bd53865d10bc9ca8acb136585db4b444b2c386fa82
+Size (oxygen-icons5-5.46.0.tar.xz) = 236768840 bytes
 SHA1 (patch-CMakeLists.txt) = d12b54ae71f2934192dea1a75eb22301060179a3
