@@ -1,10 +1,10 @@
-$NetBSD: patch-jdk_make_lib_ServiceabilityLibraries.gmk,v 1.2 2018/02/23 14:43:49 fhajny Exp $
+$NetBSD: patch-jdk_make_lib_ServiceabilityLibraries.gmk,v 1.3 2018/05/26 21:26:46 ryoon Exp $
 
 Proper libiconv link (and SunOS needs it too).
 
---- jdk/make/lib/ServiceabilityLibraries.gmk.orig	2017-11-28 00:13:34.000000000 +0000
+--- jdk/make/lib/ServiceabilityLibraries.gmk.orig	2018-05-26 23:58:30.000000000 +0000
 +++ jdk/make/lib/ServiceabilityLibraries.gmk
-@@ -280,10 +280,10 @@ $(eval $(call SetupNativeCompilation,BUI
+@@ -282,7 +282,7 @@ $(eval $(call SetupNativeCompilation,BUI
          -framework Cocoa -framework Security -framework ApplicationServices, \
      LDFLAGS_SUFFIX := $(LIBINSTRUMENT_LDFLAGS_SUFFIX), \
      LDFLAGS_SUFFIX_macosx := -liconv $(LIBZ), \
@@ -12,8 +12,4 @@ Proper libiconv link (and SunOS needs it too).
 +    LDFLAGS_SUFFIX_solaris := $(LIBICONV) $(LIBZ) -L $(INSTALL_LIBRARIES_HERE)/jli -ljli $(LIBDL) -lc, \
      LDFLAGS_SUFFIX_linux := $(LIBZ) -L $(INSTALL_LIBRARIES_HERE)/jli -ljli $(LIBDL), \
      LDFLAGS_SUFFIX_aix := $(LIBZ) -L$(JDK_OUTPUTDIR)/objs -ljli_static $(LIBDL),\
--    LDFLAGS_SUFFIX_bsd := -L$(PACKAGE_PATH)/lib -liconv $(LIBZ), \
-+    LDFLAGS_SUFFIX_bsd := $(LIBICONV) $(LIBZ), \
      VERSIONINFO_RESOURCE := $(JDK_TOPDIR)/src/windows/resource/version.rc, \
-     RC_FLAGS := $(RC_FLAGS) \
-         -D "JDK_FNAME=instrument.dll" \
