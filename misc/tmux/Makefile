@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.43 2017/10/10 11:17:32 leot Exp $
+# $NetBSD: Makefile,v 1.44 2018/05/26 17:05:28 leot Exp $
 
-DISTNAME=	tmux-2.6
+DISTNAME=	tmux-2.7
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tmux/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tmux.github.io/
 COMMENT=	BSD-licensed terminal multiplexer (GNU Screen alternative)
 LICENSE=	modified-bsd
-
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 GNU_CONFIGURE=	yes
 USE_TERMINFO=	yes
