@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/05/07 11:55:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2018/05/26 22:11:32 wiz Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -247,7 +247,6 @@ share/applications/gnumeric.desktop
 share/glib-2.0/schemas/org.gnome.gnumeric.dialogs.gschema.xml
 share/glib-2.0/schemas/org.gnome.gnumeric.gschema.xml
 share/glib-2.0/schemas/org.gnome.gnumeric.plugin.gschema.xml
-share/gnumeric/${PKGVERSION}/GNOME_Gnumeric-gtk.xml
 share/gnumeric/${PKGVERSION}/Gnumeric-embed.xml
 share/gnumeric/${PKGVERSION}/autoformat-templates/3D/.category
 share/gnumeric/${PKGVERSION}/autoformat-templates/3D/autoformat.3D.button.xml
