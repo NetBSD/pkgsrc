@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2565 2018/05/26 21:44:58 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2566 2018/05/26 21:46:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3713,3 +3713,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added sysutils/u-boot-pine-h64 version 2018.03rc1 [jmcneill 2018-05-26]
 	Updated lang/openjdk8 to 1.8.172 [ryoon 2018-05-27]
 	Updated x11/libdrm to 2.4.92 [wiz 2018-05-26]
+	Updated mail/neomutt to 20180512 [wiz 2018-05-26]
