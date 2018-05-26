@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2569 2018/05/26 21:50:41 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2570 2018/05/26 21:59:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3717,3 +3717,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/libsoup to 2.62.2 [wiz 2018-05-26]
 	Updated audio/id3 to 1.1.0 [wiz 2018-05-26]
 	Updated net/libfilezilla to 0.12.2 [wiz 2018-05-26]
+	Updated net/filezilla to 3.33.0 [wiz 2018-05-26]
