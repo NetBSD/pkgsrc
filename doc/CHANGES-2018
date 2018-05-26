@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2563 2018/05/26 17:57:03 jmcneill Exp $
+$NetBSD: CHANGES-2018,v 1.2564 2018/05/26 21:27:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3711,3 +3711,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/arm-trusted-firmware-sun50iw1p1 to 20180210 [jmcneill 2018-05-26]
 	Added sysutils/arm-trusted-firmware-sun50i-h6 version 20180207 [jmcneill 2018-05-26]
 	Added sysutils/u-boot-pine-h64 version 2018.03rc1 [jmcneill 2018-05-26]
+	Updated lang/openjdk8 to 1.8.172 [ryoon 2018-05-27]
