@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2018/04/11 11:50:34 markd Exp $
+# $NetBSD: Makefile,v 1.10 2018/05/26 22:15:18 wiz Exp $
 
-DISTNAME=	extra-cmake-modules-5.44.0
+DISTNAME=	extra-cmake-modules-5.46.0
 CATEGORIES=	devel kde
-MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.44/}
+MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${PKGVERSION:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	markd@NetBSD.org

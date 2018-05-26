@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2018/04/11 11:50:34 markd Exp $
+$NetBSD: distinfo,v 1.9 2018/05/26 22:15:18 wiz Exp $
 
-SHA1 (extra-cmake-modules-5.44.0.tar.xz) = 142a9f3ea339ef70c604f41b36eabf24268f5980
-RMD160 (extra-cmake-modules-5.44.0.tar.xz) = 17010f98247e070326c37ce629f7b71b8a621ee4
-SHA512 (extra-cmake-modules-5.44.0.tar.xz) = 02b9dd0bc2a90b6f1973a9914b1f40a331fdaed0f004a732eb197e6ba5266b78bcb51ede3dab042c86c2db76c61bf8b9e8ccf71be27a5dbdaeed4c4fb0a365c9
-Size (extra-cmake-modules-5.44.0.tar.xz) = 314212 bytes
+SHA1 (extra-cmake-modules-5.46.0.tar.xz) = 19eaa3ba563ae5ac587a8401c16b449ad600b0b3
+RMD160 (extra-cmake-modules-5.46.0.tar.xz) = 7d542ab7435f88d15f04587faf581b61a44e7a1c
+SHA512 (extra-cmake-modules-5.46.0.tar.xz) = 6431ad8e5230bbc0a5e1199037102014c376a682d711211b257359c35c8a3aaddb6128277721ca40cedf43fcca77312a2754f306487a1b3dbea728d643f0ad3a
+Size (extra-cmake-modules-5.46.0.tar.xz) = 317056 bytes
 SHA1 (patch-kde-modules_KDECompilerSettings.cmake) = 7d2d847238a497c81e5287166ce2278350670e18
