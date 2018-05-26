@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18358 2018/05/26 21:44:58 wiz Exp $
+$NetBSD: TODO,v 1.18359 2018/05/26 21:46:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1093,7 +1093,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nas-auscope-1.9.4
 	o nautilus-actions-2.30.3 [GNOME 2.30]
 	o ncview-2.1.6
-	o neomutt-20180512
 	o nessus-4.4.1
 	o nestopia-1.46.2 [http://0ldsk00l.ca/nestopia/]
 	o netbt-hcidump-5.37
