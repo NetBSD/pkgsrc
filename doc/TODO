@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18361 2018/05/26 21:49:31 wiz Exp $
+$NetBSD: TODO,v 1.18362 2018/05/26 21:50:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -955,7 +955,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcarddav-14.0.4
 	o libconfuse-3.1
 	o libextractor-1.2 [requires shm_open()]
-	o libfilezilla-0.12.2
 	o libflash-0.4.13
 	o libfolks-0.10.1 [wip]
 	o libgdiplus-4.2
