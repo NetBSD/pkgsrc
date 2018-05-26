@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2560 2018/05/26 15:52:42 taca Exp $
+$NetBSD: CHANGES-2018,v 1.2561 2018/05/26 15:54:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3706,3 +3706,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/u-boot-nanopi-neo-plus2 to 2018.05nb1 [jakllsch 2018-05-25]
 	Updated cross/arm-none-eabi-gcc to 8.1.0 [ryoon 2018-05-26]
 	Updated lang/php71 to 7.1.18 [taca 2018-05-26]
+	Updated lang/php72 to 7.2.6 [taca 2018-05-26]
