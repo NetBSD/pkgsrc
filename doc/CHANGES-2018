@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2562 2018/05/26 17:05:42 leot Exp $
+$NetBSD: CHANGES-2018,v 1.2563 2018/05/26 17:57:03 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3708,3 +3708,6 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/php71 to 7.1.18 [taca 2018-05-26]
 	Updated lang/php72 to 7.2.6 [taca 2018-05-26]
 	Updated misc/tmux to 2.7 [leot 2018-05-26]
+	Updated sysutils/arm-trusted-firmware-sun50iw1p1 to 20180210 [jmcneill 2018-05-26]
+	Added sysutils/arm-trusted-firmware-sun50i-h6 version 20180207 [jmcneill 2018-05-26]
+	Added sysutils/u-boot-pine-h64 version 2018.03rc1 [jmcneill 2018-05-26]
