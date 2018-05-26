@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2558 2018/05/25 20:50:13 jakllsch Exp $
+$NetBSD: CHANGES-2018,v 1.2559 2018/05/26 01:00:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3704,3 +3704,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated lang/ruby22-base to 2.2.10nb1 [jperkin 2018-05-25]
 	Added devel/py-extratools version 0.6.14.2 [minskim 2018-05-25]
 	Updated sysutils/u-boot-nanopi-neo-plus2 to 2018.05nb1 [jakllsch 2018-05-25]
+	Updated cross/arm-none-eabi-gcc to 8.1.0 [ryoon 2018-05-26]
