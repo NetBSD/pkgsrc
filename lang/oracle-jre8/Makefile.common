@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2017/12/13 09:34:48 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.13 2018/05/26 22:24:01 ryoon Exp $
 # used by lang/oracle-jre8/Makefile
 # used by lang/oracle-jdk8/Makefile
 
@@ -26,7 +26,7 @@ CHECK_SHLIBS_SUPPORTED=	no
 CHECK_SSP_SUPPORTED=	no
 
 # JDK8 Update number
-UPDATE_NUMBER=	152
+UPDATE_NUMBER=	172
 
 .include "../../mk/bsd.prefs.mk"
 
