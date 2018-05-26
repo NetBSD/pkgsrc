@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/05/25 10:46:52 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2018/05/26 17:54:09 jmcneill Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
@@ -33,6 +33,7 @@ DEPENDS+=	u-boot-nanopi-neo2-[0-9]*:../../sysutils/u-boot-nanopi-neo2
 DEPENDS+=	u-boot-orangepi-2-[0-9]*:../../sysutils/u-boot-orangepi-2
 DEPENDS+=	u-boot-orangepi-one-[0-9]*:../../sysutils/u-boot-orangepi-one
 DEPENDS+=	u-boot-orangepi-plus2e-[0-9]*:../../sysutils/u-boot-orangepi-plus2e
+DEPENDS+=	u-boot-pine-h64-[0-9]*:../../sysutils/u-boot-pine-h64
 DEPENDS+=	u-boot-pine64-[0-9]*:../../sysutils/u-boot-pine64
 DEPENDS+=	u-boot-pinebook-[0-9]*:../../sysutils/u-boot-pinebook
 DEPENDS+=	u-boot-pocketchip-[0-9]*:../../sysutils/u-boot-pocketchip
