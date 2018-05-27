@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2597 2018/05/27 13:16:57 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2598 2018/05/27 13:46:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3746,3 +3746,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated misc/calibre to 3.24.1 [wiz 2018-05-27]
 	Updated graphics/babl to 0.1.50 [wiz 2018-05-27]
 	Updated graphics/gegl to 0.4.2 [wiz 2018-05-27]
+	Updated graphics/gimp to 2.10.2 [wiz 2018-05-27]
