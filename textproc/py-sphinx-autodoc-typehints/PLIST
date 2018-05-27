@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2018/05/27 01:59:35 minskim Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/sphinx_autodoc_typehints.py
+${PYSITELIB}/sphinx_autodoc_typehints.pyc
+${PYSITELIB}/sphinx_autodoc_typehints.pyo
