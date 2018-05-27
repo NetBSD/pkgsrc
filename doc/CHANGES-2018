@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2588 2018/05/27 12:27:13 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2589 2018/05/27 12:28:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3737,3 +3737,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/py-oauthlib to 2.1.0 [wiz 2018-05-27]
 	Updated print/latexmk to 456 [wiz 2018-05-27]
 	Updated devel/py-setuptools to 39.2.0 [wiz 2018-05-27]
+	Updated net/glib-networking to 2.56.1 [wiz 2018-05-27]
