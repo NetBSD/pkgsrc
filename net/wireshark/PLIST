@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2018/04/29 12:15:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2018/05/27 12:20:52 wiz Exp $
 bin/capinfos
 bin/captype
 bin/dumpcap
@@ -641,6 +641,7 @@ lib/pkgconfig/wireshark.pc
 lib/wireshark/extcap/androiddump
 lib/wireshark/extcap/randpktdump
 lib/wireshark/extcap/udpdump
+lib/wireshark/plugins/2.6/codecs/l16mono.la
 lib/wireshark/plugins/2.6/epan/ethercat.la
 lib/wireshark/plugins/2.6/epan/gryphon.la
 lib/wireshark/plugins/2.6/epan/irda.la
@@ -653,7 +654,6 @@ lib/wireshark/plugins/2.6/epan/unistim.la
 lib/wireshark/plugins/2.6/epan/wimax.la
 lib/wireshark/plugins/2.6/epan/wimaxasncp.la
 lib/wireshark/plugins/2.6/epan/wimaxmacphy.la
-lib/wireshark/plugins/2.6/wiretap/l16mono.la
 lib/wireshark/plugins/2.6/wiretap/usbdump.la
 man/man1/androiddump.1
 man/man1/capinfos.1
