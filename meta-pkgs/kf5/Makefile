@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/04/11 11:50:37 markd Exp $
+# $NetBSD: Makefile,v 1.8 2018/05/27 06:41:38 wiz Exp $
 
 DISTNAME=	kf5-${KF5VER}
 CATEGORIES=	meta-pkgs x11 kde
@@ -72,7 +72,7 @@ DEPENDS+=	kxmlgui-${KF5VER}{,nb[0-9]*}:../../x11/kxmlgui
 DEPENDS+=	kxmlrpcclient-${KF5VER}{,nb[0-9]*}:../../net/kxmlrpcclient
 # modemmanager-qt
 # networkmanager-qt
-DEPENDS+=	oxygen-icons-${KF5VER}{,nb[0-9]*}:../../graphics/oxygen-icons
+DEPENDS+=	oxygen-icons>=${KF5VER}{,nb[0-9]*}:../../graphics/oxygen-icons
 DEPENDS+=	plasma-framework-${KF5VER}{,nb[0-9]*}:../../x11/plasma-framework
 DEPENDS+=	prison-${KF5VER}{,nb[0-9]*}:../../graphics/prison
 DEPENDS+=	qqc2-desktop-style-${KF5VER}{,nb[0-9]*}:../../x11/qqc2-desktop-style
