@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2018/04/26 07:56:57 adam Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/27 16:28:12 tsutsui Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg4/}
+PKGREVISION=	1
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
 COMMENT=	Decoding, encoding and streaming software (v3.x)
@@ -39,6 +40,7 @@ post-install:
 .if ${MACHINE_ARCH} == "i386"
 .  if !empty(MACHINE_PLATFORM:MDarwin-*-i386) \
    || !empty(MACHINE_PLATFORM:MSunOS-*-i386) \
+   || !empty(MACHINE_PLATFORM:MNetBSD-*-i386) \
    || !empty(CC_VERSION:Mgcc-[123]*) \
    || !empty(CC_VERSION:Mgcc-4.[01].*) \
    || empty(CC_VERSION:Mgcc*)
