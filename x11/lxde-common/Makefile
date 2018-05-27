@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/05/22 16:01:51 youri Exp $
+# $NetBSD: Makefile,v 1.6 2018/05/27 14:24:45 youri Exp $
 
 DISTNAME=	lxde-common-0.99.2
 CATEGORIES=	x11
@@ -20,6 +20,7 @@ DEPENDS+=	openbox>=0:../../wm/openbox
 DEPENDS+=	xprop>=0:../../x11/xprop
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 LXDE_CONF=		share/examples/lxde
 PKG_SYSCONFSUBDIR=	xdg
 
