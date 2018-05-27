@@ -1,22 +1,18 @@
-$NetBSD: patch-configure,v 1.5 2017/10/18 20:25:41 adam Exp $
+$NetBSD: patch-configure,v 1.6 2018/05/27 15:24:32 tsutsui Exp $
 
-Enable PIC on non-i386 NetBSD.
+Enable PIC on NetBSD, even on i386 to avoid text relocations.
 
---- configure.orig	2017-10-15 15:59:36.000000000 +0000
+--- configure.orig	2018-02-12 00:29:18.000000000 +0000
 +++ configure
-@@ -4939,6 +4939,11 @@ case $target_os in
+@@ -4940,6 +4940,7 @@ case $target_os in
          ;;
      netbsd)
          disable symver
-+        # NetBSD/macppc *really* needs PIC enabled.  ffmpeg has repeatedly
-+        # broken time and time again because PIC support has been removed
-+        # from architectures that need it.  So, if you touch this, please
-+        # be careful and make sure that your changes work.
-+        test "${subarch}" != "x86_32" && enable pic
++        enable pic
          oss_indev_extralibs="-lossaudio"
          oss_outdev_extralibs="-lossaudio"
          enabled gcc || check_ldflags -Wl,-zmuldefs
-@@ -5359,10 +5364,13 @@ check_cc <<EOF && enable attribute_may_a
+@@ -5360,10 +5361,13 @@ check_cc <<EOF && enable attribute_may_a
  union { int x; } __attribute__((may_alias)) x;
  EOF
  
