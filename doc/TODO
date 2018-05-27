@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18373 2018/05/27 12:21:56 wiz Exp $
+$NetBSD: TODO,v 1.18374 2018/05/27 12:25:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1236,7 +1236,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-musicbrainz-0.7.4
 	o py-ncclient-0.5.3
 	o py-newt-0.52.20
-	o py-oauthlib-2.1.0
 	o py-omniORBpy-3.7
 	o py-pendrell-0.3.7
 	o py-ptt-1.10.2
