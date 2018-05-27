@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18379 2018/05/27 12:35:41 wiz Exp $
+$NetBSD: TODO,v 1.18380 2018/05/27 12:38:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -985,7 +985,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libtcl-nothread-8.5.1
 	o libtecla-1.6.3
 	o libtrace-3.0.22
-	o libunistring-0.9.10
 	o libv4l-0.8.5
 	o libvirt-2.3
 	o libxdg-basedir-1.2.0
