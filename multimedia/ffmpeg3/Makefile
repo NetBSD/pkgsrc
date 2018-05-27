@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2018/04/17 22:29:44 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2018/05/27 15:24:32 tsutsui Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg3/}
-PKGREVISION=	5
+PKGREVISION=	6
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
 COMMENT=	Decoding, encoding and streaming software (v3.x)
@@ -41,10 +41,11 @@ post-install:
 
 .include "../../mk/compiler.mk"
 
-# disable asm on i386 for non-gcc and gcc < 4.2
+# disable asm on i386 for non-gcc and gcc < 4.2, or to avoid text relocations
 .if ${MACHINE_ARCH} == "i386"
 .  if !empty(MACHINE_PLATFORM:MDarwin-*-i386) \
    || !empty(MACHINE_PLATFORM:MSunOS-*-i386) \
+   || !empty(MACHINE_PLATFORM:MNetBSD-*-i386) \
    || !empty(CC_VERSION:Mgcc-[123]*) \
    || !empty(CC_VERSION:Mgcc-4.[01].*) \
    || empty(CC_VERSION:Mgcc*)
