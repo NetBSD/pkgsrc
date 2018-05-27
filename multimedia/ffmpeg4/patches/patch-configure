@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.1 2018/04/26 07:56:57 adam Exp $
+$NetBSD: patch-configure,v 1.2 2018/05/27 16:28:12 tsutsui Exp $
 
-Enable PIC on non-i386 NetBSD.
+Enable PIC on NetBSD, even on i386 to avoid text relocations.
 Do not use 'rsync'.
 
 --- configure.orig	2018-04-20 10:02:55.000000000 +0000
@@ -13,19 +13,15 @@ Do not use 'rsync'.
      symver_asm_label
      symver_gnu_asm
      vfp_args
-@@ -5043,6 +5042,11 @@ case $target_os in
+@@ -5043,6 +5042,7 @@ case $target_os in
          ;;
      netbsd)
          disable symver
-+        # NetBSD/macppc *really* needs PIC enabled.  ffmpeg has repeatedly
-+        # broken time and time again because PIC support has been removed
-+        # from architectures that need it.  So, if you touch this, please
-+        # be careful and make sure that your changes work.
-+        test "${subarch}" != "x86_32" && enable pic
++        enable pic
          oss_indev_extralibs="-lossaudio"
          oss_outdev_extralibs="-lossaudio"
          enabled gcc || check_ldflags -Wl,-zmuldefs
-@@ -5429,10 +5433,13 @@ done
+@@ -5429,10 +5429,13 @@ done
  check_cc pragma_deprecated "" '_Pragma("GCC diagnostic ignored \"-Wdeprecated-declarations\"")'
  
  # The global variable ensures the bits appear unchanged in the object file.
@@ -42,7 +38,7 @@ Do not use 'rsync'.
  
  check_cc const_nan math.h "struct { double d; } static const bar[] = { { NAN } }"
  
-@@ -6190,7 +6197,6 @@ enabled makeinfo \
+@@ -6190,7 +6193,6 @@ enabled makeinfo \
  disabled makeinfo_html && texi2html --help 2> /dev/null | grep -q 'init-file' && enable texi2html || disable texi2html
  perl -v            > /dev/null 2>&1 && enable perl      || disable perl
  pod2man --help     > /dev/null 2>&1 && enable pod2man   || disable pod2man
