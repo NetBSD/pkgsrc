@@ -1,8 +1,8 @@
-$NetBSD: patch-extras_swig_makefile,v 1.1 2018/05/03 13:13:51 schmonz Exp $
+$NetBSD: patch-extras_swig_makefile,v 1.2 2018/05/27 11:50:26 schmonz Exp $
 
 Use pkgsrc-specified compiler and flags.
 
---- extras/swig/makefile.orig	2013-09-24 20:24:04.000000000 +0000
+--- extras/swig/makefile.orig	2018-04-30 12:17:04.000000000 +0000
 +++ extras/swig/makefile
 @@ -1,6 +1,6 @@
  
@@ -24,23 +24,26 @@ Use pkgsrc-specified compiler and flags.
  	touch $@
  
  python: lib-stamp
- 	swig -c++ -python -o highlight_wrap.cpp  highlight.i
+-	swig -c++ -python -o highlight_wrap.cpp  highlight.i
 -	${CXX} ${CFLAGS} -c highlight_wrap.cpp ${LUA_CFLAGS} ${PYTHON_CFLAGS} -I${HL_INC} 
 -	${CXX} -shared -s highlight_wrap.o  -L${HL_SRC} -lhighlight ${LUA_LIBS} -lpython2.7 -o _highlight.so
++	swig3.0 -c++ -python -o highlight_wrap.cpp  highlight.i
 +	${CXX} ${CFLAGS} ${LDFLAGS} -c highlight_wrap.cpp ${LUA_CFLAGS} ${PYTHON_CFLAGS} -I${HL_INC} 
 +	${CXX} ${CXXFLAGS} ${LDFLAGS} -shared -s highlight_wrap.o  -L${HL_SRC} -lhighlight ${LUA_LIBS} -lpython2.7 -o _highlight.so
  
  perl: lib-stamp
- 	swig -c++ -perl -o highlight_wrap.cpp  highlight.i
+-	swig -c++ -perl -o highlight_wrap.cpp  highlight.i
 -	${CXX} ${CFLAGS} -c highlight_wrap.cpp ${LUA_CFLAGS} ${PERL_INC} -I${HL_INC} 
 -	${CXX} -shared -s highlight_wrap.o  -L${HL_SRC} -lhighlight ${LUA_LIBS} -o highlight.so
++	swig3.0 -c++ -perl -o highlight_wrap.cpp  highlight.i
 +	${CXX} ${CFLAGS} ${LDFLAGS} -c highlight_wrap.cpp ${LUA_CFLAGS} ${PERL_INC} -I${HL_INC} 
 +	${CXX} ${CXXFLAGS} ${LDFLAGS} -shared -s highlight_wrap.o  -L${HL_SRC} -lhighlight ${LUA_LIBS} -lperl -o highlight.so
  
  php: lib-stamp
- 	swig -c++ -php -o highlight_wrap.cpp highlight.i
+-	swig -c++ -php -o highlight_wrap.cpp highlight.i
 -	${CXX} ${CFLAGS} -c highlight_wrap.cpp ${LUA_CFLAGS} ${PHP_INC} -I${HL_INC}
 -	${CXX} -shared -s highlight_wrap.o -L${HL_SRC} -lhighlight ${LUA_LIBS} -o highlight.so
++	swig3.0 -c++ -php -o highlight_wrap.cpp highlight.i
 +	${CXX} ${CFLAGS} ${LDFLAGS} -c highlight_wrap.cpp ${LUA_CFLAGS} ${PHP_INC} -I${HL_INC}
 +	${CXX} ${CXXFLAGS} ${LDFLAGS} -shared -s highlight_wrap.o -L${HL_SRC} -lhighlight ${LUA_LIBS} -o highlight.so
  
