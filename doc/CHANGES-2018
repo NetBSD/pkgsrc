@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2590 2018/05/27 12:32:21 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2591 2018/05/27 12:35:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3739,3 +3739,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-setuptools to 39.2.0 [wiz 2018-05-27]
 	Updated net/glib-networking to 2.56.1 [wiz 2018-05-27]
 	Updated lang/vala to 0.40.6 [wiz 2018-05-27]
+	Updated time/khal to 0.9.9 [wiz 2018-05-27]
