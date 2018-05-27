@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.86 2018/05/07 11:20:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.87 2018/05/27 12:48:45 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -3189,6 +3189,7 @@ share/calibre/recipes/the_conversation.recipe
 share/calibre/recipes/the_daily_news_egypt.recipe
 share/calibre/recipes/the_escapist.recipe
 share/calibre/recipes/the_feature.recipe
+share/calibre/recipes/the_federalist.recipe
 share/calibre/recipes/the_freeman.recipe
 share/calibre/recipes/the_friday_times.recipe
 share/calibre/recipes/the_insider.recipe
@@ -3621,6 +3622,6 @@ share/calibre/viewer/referencing.js
 share/doc/calibre/COPYRIGHT
 share/doc/calibre/Changelog.old.yaml
 share/doc/calibre/Changelog.yaml
-share/doc/calibre/INSTALL
+share/doc/calibre/INSTALL.rst
 share/doc/calibre/LICENSE.rtf
 share/doc/calibre/README.md
