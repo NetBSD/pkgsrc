@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.cflags,v 1.8 2016/02/07 13:34:33 leot Exp $
+# $NetBSD: Makefile.cflags,v 1.9 2018/05/27 15:27:13 tsutsui Exp $
 
 # This must be included after everything else to truly clear ${CFLAGS}
 # in the non-runtime-cpu-detection case. If ${CFLAGS} is non-empty, the
@@ -13,7 +13,7 @@
 
 .    include "../../mk/compiler.mk"
 
-.    if !empty(CC_VERSION:Mgcc-4*)
+.    if !empty(CC_VERSION:Mgcc-[4567]*)
 CFLAGS+=	-O3 -ffast-math -fomit-frame-pointer -mtune=pentiumpro
 .    else
 CFLAGS+=	-O3 -ffast-math -fomit-frame-pointer -mcpu=pentiumpro
