@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.101 2018/02/25 20:55:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.102 2018/05/27 06:49:00 wiz Exp $
 bin/Magick++-config
 bin/MagickCore-config
 bin/MagickWand-config
@@ -1061,9 +1061,7 @@ share/doc/ImageMagick-7/www/api/attribute.php
 share/doc/ImageMagick-7/www/api/blob.html
 share/doc/ImageMagick-7/www/api/blob.php
 share/doc/ImageMagick-7/www/api/cache-view.html
-share/doc/ImageMagick-7/www/api/cache-view.php
 share/doc/ImageMagick-7/www/api/cache.html
-share/doc/ImageMagick-7/www/api/cache.php
 share/doc/ImageMagick-7/www/api/channel.html
 share/doc/ImageMagick-7/www/api/channel.php
 share/doc/ImageMagick-7/www/api/cipher.html
@@ -1077,7 +1075,6 @@ share/doc/ImageMagick-7/www/api/colorspace.php
 share/doc/ImageMagick-7/www/api/compare.html
 share/doc/ImageMagick-7/www/api/compare.php
 share/doc/ImageMagick-7/www/api/composite.html
-share/doc/ImageMagick-7/www/api/composite.php
 share/doc/ImageMagick-7/www/api/constitute.html
 share/doc/ImageMagick-7/www/api/constitute.php
 share/doc/ImageMagick-7/www/api/decorate.html
@@ -1107,7 +1104,6 @@ share/doc/ImageMagick-7/www/api/fx.php
 share/doc/ImageMagick-7/www/api/histogram.html
 share/doc/ImageMagick-7/www/api/histogram.php
 share/doc/ImageMagick-7/www/api/image-view.html
-share/doc/ImageMagick-7/www/api/image-view.php
 share/doc/ImageMagick-7/www/api/image.html
 share/doc/ImageMagick-7/www/api/image.php
 share/doc/ImageMagick-7/www/api/layer.html
@@ -1130,7 +1126,6 @@ share/doc/ImageMagick-7/www/api/memory.php
 share/doc/ImageMagick-7/www/api/mime.html
 share/doc/ImageMagick-7/www/api/mime.php
 share/doc/ImageMagick-7/www/api/module.html
-share/doc/ImageMagick-7/www/api/module.php
 share/doc/ImageMagick-7/www/api/mogrify.html
 share/doc/ImageMagick-7/www/api/mogrify.php
 share/doc/ImageMagick-7/www/api/monitor.html
@@ -1146,9 +1141,7 @@ share/doc/ImageMagick-7/www/api/pixel-iterator.php
 share/doc/ImageMagick-7/www/api/pixel-wand.html
 share/doc/ImageMagick-7/www/api/pixel-wand.php
 share/doc/ImageMagick-7/www/api/profile.html
-share/doc/ImageMagick-7/www/api/profile.php
 share/doc/ImageMagick-7/www/api/property.html
-share/doc/ImageMagick-7/www/api/property.php
 share/doc/ImageMagick-7/www/api/quantize.html
 share/doc/ImageMagick-7/www/api/quantize.php
 share/doc/ImageMagick-7/www/api/registry.html
@@ -1156,7 +1149,6 @@ share/doc/ImageMagick-7/www/api/registry.php
 share/doc/ImageMagick-7/www/api/resize.html
 share/doc/ImageMagick-7/www/api/resize.php
 share/doc/ImageMagick-7/www/api/resource.html
-share/doc/ImageMagick-7/www/api/resource.php
 share/doc/ImageMagick-7/www/api/segment.html
 share/doc/ImageMagick-7/www/api/segment.php
 share/doc/ImageMagick-7/www/api/shear.html
@@ -1166,13 +1158,11 @@ share/doc/ImageMagick-7/www/api/signature.php
 share/doc/ImageMagick-7/www/api/statistic.html
 share/doc/ImageMagick-7/www/api/statistic.php
 share/doc/ImageMagick-7/www/api/stream.html
-share/doc/ImageMagick-7/www/api/stream.php
 share/doc/ImageMagick-7/www/api/transform.html
 share/doc/ImageMagick-7/www/api/transform.php
 share/doc/ImageMagick-7/www/api/version.html
 share/doc/ImageMagick-7/www/api/version.php
 share/doc/ImageMagick-7/www/api/wand-view.html
-share/doc/ImageMagick-7/www/api/wand-view.php
 share/doc/ImageMagick-7/www/architecture.html
 share/doc/ImageMagick-7/www/assets/magick.css
 share/doc/ImageMagick-7/www/assets/magick.js
