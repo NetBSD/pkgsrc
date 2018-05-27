@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2018/02/08 14:55:28 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.41 2018/05/27 05:17:40 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -18,14 +18,13 @@ share/mikutter/core/configloader.rb
 share/mikutter/core/environment.rb
 share/mikutter/core/lib/diva_hacks.rb
 share/mikutter/core/lib/diva_hacks/entity.rb
-share/mikutter/core/lib/diva_hacks/entity/basic_twitter_entity.rb
 share/mikutter/core/lib/diva_hacks/entity/blank_entity.rb
-share/mikutter/core/lib/diva_hacks/entity/extended_twitter_entity.rb
 share/mikutter/core/lib/diva_hacks/entity/regexp_entity.rb
 share/mikutter/core/lib/diva_hacks/entity/segment.rb
 share/mikutter/core/lib/diva_hacks/entity/url_entity.rb
 share/mikutter/core/lib/diva_hacks/mixin.rb
 share/mikutter/core/lib/diva_hacks/mixin/message_mixin.rb
+share/mikutter/core/lib/diva_hacks/mixin/photo_interface.rb
 share/mikutter/core/lib/diva_hacks/mixin/photo_mixin.rb
 share/mikutter/core/lib/diva_hacks/mixin/user_mixin.rb
 share/mikutter/core/lib/diva_hacks/model.rb
@@ -234,6 +233,8 @@ share/mikutter/core/plugin/console/po/zh_CN/console.po
 share/mikutter/core/plugin/console/po/zh_TW/console.po
 share/mikutter/core/plugin/core/.mikutter.yml
 share/mikutter/core/plugin/core/core.rb
+share/mikutter/core/plugin/current_world/.mikutter.yml
+share/mikutter/core/plugin/current_world/current_world.rb
 share/mikutter/core/plugin/direct_message/.mikutter.yml
 share/mikutter/core/plugin/direct_message/direct_message.rb
 share/mikutter/core/plugin/direct_message/dmlistview.rb
@@ -486,27 +487,13 @@ share/mikutter/core/plugin/openimg/po/zh_CN/openimg.po
 share/mikutter/core/plugin/openimg/po/zh_TW/openimg.po
 share/mikutter/core/plugin/openimg/window.rb
 share/mikutter/core/plugin/photo/.mikutter.yml
+share/mikutter/core/plugin/photo/model/inner_photo.rb
 share/mikutter/core/plugin/photo/model/photo.rb
+share/mikutter/core/plugin/photo/model/photo_variant.rb
 share/mikutter/core/plugin/photo/photo.rb
 share/mikutter/core/plugin/photo_support/.mikutter.yml
 share/mikutter/core/plugin/photo_support/Gemfile
 share/mikutter/core/plugin/photo_support/photo_support.rb
-share/mikutter/core/plugin/profile/po/ar/profile.po
-share/mikutter/core/plugin/profile/po/de/profile.po
-share/mikutter/core/plugin/profile/po/el/profile.po
-share/mikutter/core/plugin/profile/po/en/profile.po
-share/mikutter/core/plugin/profile/po/eo/profile.po
-share/mikutter/core/plugin/profile/po/es/profile.po
-share/mikutter/core/plugin/profile/po/fr/profile.po
-share/mikutter/core/plugin/profile/po/nl_NL/profile.po
-share/mikutter/core/plugin/profile/po/pt_PT/profile.po
-share/mikutter/core/plugin/profile/po/ro_RO/profile.po
-share/mikutter/core/plugin/profile/po/ru/profile.po
-share/mikutter/core/plugin/profile/po/sr/profile.po
-share/mikutter/core/plugin/profile/po/vi/profile.po
-share/mikutter/core/plugin/profile/po/zh/profile.po
-share/mikutter/core/plugin/profile/po/zh_CN/profile.po
-share/mikutter/core/plugin/profile/po/zh_TW/profile.po
 share/mikutter/core/plugin/proxy/.mikutter.yml
 share/mikutter/core/plugin/proxy/po/ar/proxy.po
 share/mikutter/core/plugin/proxy/po/de/proxy.po
@@ -568,6 +555,12 @@ share/mikutter/core/plugin/saved_search/po/zh/saved_search.po
 share/mikutter/core/plugin/saved_search/po/zh_CN/saved_search.po
 share/mikutter/core/plugin/saved_search/po/zh_TW/saved_search.po
 share/mikutter/core/plugin/saved_search/saved_search.rb
+share/mikutter/core/plugin/score/.mikutter.yml
+share/mikutter/core/plugin/score/model/emoji_note.rb
+share/mikutter/core/plugin/score/model/hyper_link_note.rb
+share/mikutter/core/plugin/score/model/text_note.rb
+share/mikutter/core/plugin/score/score.rb
+share/mikutter/core/plugin/score/select.rb
 share/mikutter/core/plugin/search/.mikutter.yml
 share/mikutter/core/plugin/search/model/search.rb
 share/mikutter/core/plugin/search/po/ar/search.po
@@ -782,6 +775,7 @@ share/mikutter/core/plugin/twitter/mikutwitter/test/user_timeline.json
 share/mikutter/core/plugin/twitter/mikutwitter/utils.rb
 share/mikutter/core/plugin/twitter/model.rb
 share/mikutter/core/plugin/twitter/model/directmessage.rb
+share/mikutter/core/plugin/twitter/model/hash_tag.rb
 share/mikutter/core/plugin/twitter/model/message.rb
 share/mikutter/core/plugin/twitter/model/user.rb
 share/mikutter/core/plugin/twitter/model/userlist.rb
@@ -790,6 +784,8 @@ share/mikutter/core/plugin/twitter/test/test_message.rb
 share/mikutter/core/plugin/twitter/test/test_user.rb
 share/mikutter/core/plugin/twitter/test/test_userlist.rb
 share/mikutter/core/plugin/twitter/twitter.rb
+share/mikutter/core/plugin/twitter_api_keys/.mikutter.yml
+share/mikutter/core/plugin/twitter_api_keys/twitter_api_keys.rb
 share/mikutter/core/plugin/uitranslator/.mikutter.yml
 share/mikutter/core/plugin/uitranslator/Gemfile
 share/mikutter/core/plugin/uitranslator/uitranslator.rb
