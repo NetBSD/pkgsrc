@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2583 2018/05/27 11:50:43 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.2584 2018/05/27 12:21:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3732,3 +3732,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/waf to 2.0.8 [wiz 2018-05-27]
 	Updated audio/musicpd to 0.20.20 [wiz 2018-05-27]
 	Updated textproc/p5-highlight to 3.43nb1 [schmonz 2018-05-27]
+	Updated net/wireshark to 2.6.1 [wiz 2018-05-27]
