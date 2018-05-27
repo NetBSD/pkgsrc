@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2582 2018/05/27 09:56:20 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2583 2018/05/27 11:50:43 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3731,3 +3731,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/p5-PerlMagick to 7.0.7.35 [wiz 2018-05-27]
 	Updated devel/waf to 2.0.8 [wiz 2018-05-27]
 	Updated audio/musicpd to 0.20.20 [wiz 2018-05-27]
+	Updated textproc/p5-highlight to 3.43nb1 [schmonz 2018-05-27]
