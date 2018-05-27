@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18378 2018/05/27 12:32:22 wiz Exp $
+$NetBSD: TODO,v 1.18379 2018/05/27 12:35:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -905,7 +905,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o keybinder-0.3.1
 	o kglobalaccel-5.45.0
 	o kguiaddons-5.45.0
-	o khal-0.9.9
 	o ki18n-5.45.0
 	o kiconthemes-5.45.0
 	o kio-5.45.0
