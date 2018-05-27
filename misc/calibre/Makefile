@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.202 2018/05/07 11:20:12 wiz Exp $
+# $NetBSD: Makefile,v 1.203 2018/05/27 12:48:45 wiz Exp $
 
-DISTNAME=	calibre-3.23.0
+DISTNAME=	calibre-3.24.1
 CATEGORIES=	misc
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
 MASTER_SITES=	http://download.calibre-ebook.com/${PKGVERSION_NOREV}/
@@ -94,7 +94,7 @@ post-install:
 	cd ${WRKSRC}/recipes && pax -wr -pma *.recipe \
 	    ${DESTDIR}${PREFIX}/share/calibre/recipes
 	cd ${WRKSRC} && pax -wr -pma Changelog* README.md \
-	    COPYRIGHT INSTALL LICENSE.* \
+	    COPYRIGHT INSTALL.rst LICENSE.* \
 	    ${DESTDIR}${PREFIX}/share/doc/calibre
 	${RM} ${DESTDIR}${PREFIX}/bin/calibre-uninstall
 
