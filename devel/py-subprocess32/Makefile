@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/09/04 18:08:21 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2018/05/27 12:40:40 wiz Exp $
 
-DISTNAME=	subprocess32-3.2.7
+DISTNAME=	subprocess32-3.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/subprocess32/}
