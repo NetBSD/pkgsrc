@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.60 2018/04/04 12:26:24 triaxx Exp $
+# $NetBSD: Makefile.common,v 1.61 2018/05/27 15:27:13 tsutsui Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
@@ -49,6 +49,12 @@ CONFIGURE_ARGS+=	--yasm=""
 CONFIGURE_ENV+=		TMPDIR=${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
+
+# avoid text relocations caused by asm ops in #if HAVE_SSE4_INTERNAL block
+# in libmpcodecs/vf_ass.c
+.if !empty(MACHINE_PLATFORM:MNetBSD-[89].*-i386)
+CONFIGURE_ARGS+=	--disable-sse4
+.endif
 
 # The configure script misdetects endianness on mipseb
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "mipseb"
