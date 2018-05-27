@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2596 2018/05/27 12:53:51 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2597 2018/05/27 13:16:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3745,3 +3745,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-virtualenv to 16.0.0 [wiz 2018-05-27]
 	Updated misc/calibre to 3.24.1 [wiz 2018-05-27]
 	Updated graphics/babl to 0.1.50 [wiz 2018-05-27]
+	Updated graphics/gegl to 0.4.2 [wiz 2018-05-27]
