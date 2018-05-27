@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/05/15 22:39:39 youri Exp $
+# $NetBSD: Makefile,v 1.15 2018/05/27 14:58:19 youri Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -11,6 +11,7 @@ COMMENT=	Xfce widget library
 BUILD_DEFS+=		PKG_SYSCONFBASE
 
 CONFIGURE_ARGS+=	--enable-gtk3
+CONFIGURE_ARGS=		--with-vendor-info=${OPSYS}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
 PKG_SYSCONFSUBDIR=	xdg
