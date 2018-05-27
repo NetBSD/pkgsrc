@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2594 2018/05/27 12:42:50 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2595 2018/05/27 12:48:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3743,3 +3743,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated textproc/libunistring to 0.9.10 [wiz 2018-05-27]
 	Updated devel/py-subprocess32 to 3.5.1 [wiz 2018-05-27]
 	Updated devel/py-virtualenv to 16.0.0 [wiz 2018-05-27]
+	Updated misc/calibre to 3.24.1 [wiz 2018-05-27]
