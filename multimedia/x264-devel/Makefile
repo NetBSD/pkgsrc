@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2018/04/25 19:25:12 fhajny Exp $
+# $NetBSD: Makefile,v 1.67 2018/05/27 15:21:56 tsutsui Exp $
 
 DISTNAME=	x264-snapshot-20180224-2245
 PKGNAME=	${DISTNAME:S/-snapshot-/-devel-/:S/-2245$//}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	ftp://ftp.videolan.org/pub/videolan/x264/snapshots/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,8 +15,10 @@ LICENSE=	gnu-gpl-v2
 .include "../../mk/bsd.prefs.mk"
 
 # Assembler code still needs to be disabled on at least SunOS
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=       --disable-asm
+# Also needs to avoid text relocations caused by non-pie x86 asm on NetBSD/i386
+.if ${OPSYS} == "SunOS" || \
+    !empty(MACHINE_PLATFORM:MNetBSD-[89].*-i386)
+CONFIGURE_ARGS+=	--disable-asm
 .elif ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 BUILD_DEPENDS+=		nasm>=2.13.0:../../devel/nasm
 .endif
