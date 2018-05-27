@@ -1,8 +1,9 @@
-$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.13 2017/11/28 05:07:25 ryoon Exp $
+$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.14 2018/05/27 04:58:20 tsutsui Exp $
 
-BOOT_JDK_VERSION part: pkg/51221 (Build error with OpenJDK8 and i386)
+BOOT_JDK_VERSION part: pkg/51221 (Build error with OpenJDK8 and i386) and
+pkg/53223.
 
---- common/autoconf/generated-configure.sh.orig	2017-11-28 00:13:34.000000000 +0000
+--- common/autoconf/generated-configure.sh.orig	2018-02-12 08:30:01.000000000 +0000
 +++ common/autoconf/generated-configure.sh
 @@ -8486,9 +8486,9 @@ done
    # We need to find a recent version of GNU make. Especially on Solaris, this can be tricky.
@@ -17,7 +18,34 @@ BOOT_JDK_VERSION part: pkg/51221 (Build error with OpenJDK8 and i386)
  
    MAKE_CANDIDATE=""$MAKE""
    DESCRIPTION="user supplied MAKE=$MAKE"
+@@ -11455,7 +11455,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
 @@ -11787,7 +11787,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -12105,7 +12105,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -12293,7 +12293,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -35,6 +63,168 @@ BOOT_JDK_VERSION part: pkg/51221 (Build error with OpenJDK8 and i386)
            # This is not a symbolic link! We are done!
            break
          fi
+@@ -12621,7 +12621,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -12836,7 +12836,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -13016,7 +13016,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -13224,7 +13224,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -13404,7 +13404,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -13612,7 +13612,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -13792,7 +13792,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -14000,7 +14000,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -14180,7 +14180,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -14375,7 +14375,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -14553,7 +14553,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -14749,7 +14749,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -14927,7 +14927,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -15122,7 +15122,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -15300,7 +15300,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -15496,7 +15496,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -15674,7 +15674,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
+@@ -15851,7 +15851,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
 @@ -16257,16 +16257,15 @@ $as_echo_n "checking flags for boot jdk 
    # Maximum amount of heap memory.
    # Maximum stack size.
