@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2018/04/16 14:34:10 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2018/05/28 22:45:29 youri Exp $
 
-PKGREVISION= 7
+PKGREVISION= 8
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-mixer-4.11.0
@@ -8,6 +8,7 @@ CATEGORIES=	audio
 COMMENT=	Xfce mixer plugin
 MASTER_SITES=	http://archive.xfce.org/src/apps/xfce4-mixer/4.11/
 
+DEPENDS+=	gst-plugins0.10-oss-[0-9]*:../../audio/gst-plugins0.10-oss
 BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.25
 
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
