@@ -1,3 +1,3 @@
 This package creates all the needed basic config files to run qmail,
-provides example {mailer,spamdyke,stunnel}.conf and wrapper scripts for
-procmail and qmail-qfilter, and installs NetBSD-style rc.d scripts.
+provides example {mailer,spamdyke,stunnel}.conf and a procmail wrapper,
+and installs NetBSD-style rc.d scripts.
