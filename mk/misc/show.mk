@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.13 2018/02/26 22:51:42 rillig Exp $
+# $NetBSD: show.mk,v 1.14 2018/05/28 22:34:47 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -82,15 +82,15 @@ show-build-defs: .PHONY
 #	Prints a list of (hopefully) all pkgsrc variables that are visible
 #	to the user or the package developer. It is intended to give
 #	interested parties a better insight into the inner workings of
-#	pkgsrc. Each variable name is prefixed with a "category":
+#	pkgsrc. Each variable name is prefixed with a "scope":
 #
 #		* "usr" for user-settable variables,
 #		* "pkg" for package-settable variables,
 #		* "sys" for system-defined variables.
 #
-#	For each of the variable groups (e.g. "build", "extract"), a
-#	specialized target show-all-${group} is defined, so that
-#	show-all-extract only shows that group.
+#	The variables are listed in groups (e.g. "build", "extract").
+#	For each of these groups, a specialized target show-all-${group}
+#	is defined, e.g. "show-all-extract" for the "extract" group.
 #
 #	CAVEAT: Some few variable values that are shown here may be
 #	misleading. For example, make(1)'s := operator leaves references
