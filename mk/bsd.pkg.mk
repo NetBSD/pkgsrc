@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2030 2018/01/13 12:48:56 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2031 2018/05/28 20:37:47 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -44,6 +44,9 @@ PKGNAME?=		${DISTNAME}
 PKGNAME_NOREV=		${PKGNAME}
 .endif
 PKGVERSION_NOREV=	${PKGNAME_NOREV:C/^.*-//}
+
+_VARGROUPS+=		pkgname
+_DEF_VARS.pkgname=	PKGBASE PKGVERSION PKGNAME_NOREV PKGNAME PKGVERSION_NOREV
 
 # Fail-safe in the case of circular dependencies
 .if defined(_PKGSRC_DEPS) && defined(PKGNAME) && !empty(_PKGSRC_DEPS:M${PKGNAME})
