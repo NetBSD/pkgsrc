@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.47 2017/10/29 00:46:14 schmonz Exp $
+# $NetBSD: options.mk,v 1.48 2018/05/28 12:57:36 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai sasl syncdir tls
@@ -73,21 +73,8 @@ SITES.${CUSTOMERROR_PATCH}=	https://notes.sagredo.eu/files/qmail/patches/
 PATCH_DIST_STRIP.${CUSTOMERROR_PATCH}=-p1
 .endif
 
-PLIST_VARS+=			rejectutils
 .if !empty(PKG_OPTIONS:Mqmail-rejectutils)
-QMAILPATCHES+=			rejectutils:${REJECTUTILS_PATCH}
-REJECTUTILS_PATCH=		netqmail-1.06-rejectutils-20170720.patch
-PATCHFILES+=			${REJECTUTILS_PATCH}
-SITES.${REJECTUTILS_PATCH}=	https://schmonz.com/qmail/rejectutils/
-DJB_BUILD_TARGETS+=		rejectutils
-PLIST.rejectutils=		yes
-REJECTUTILS=			qmail-qfilter-ofmipd-queue	\
-				qmail-qfilter-smtpd-queue	\
-				qmail-qfilter-viruscan		\
-				qmail-rcptcheck			\
-				qmail-rcptcheck-badrcptto	\
-				qmail-rcptcheck-qregex		\
-				qmail-rcptcheck-realrcptto
+DEPENDS+=			qmail-rejectutils-[0-9]*:../../mail/qmail-rejectutils
 .endif
 
 PLIST_VARS+=			srs
