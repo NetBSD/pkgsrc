@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.92 2017/08/13 23:42:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.93 2018/05/28 12:57:36 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.06
 PKGNAME=		qmail-1.03
-PKGREVISION=		32
+PKGREVISION=		33
 CATEGORIES=		mail
 MASTER_SITES=		http://qmail.org/
 
@@ -175,10 +175,6 @@ post-install:
 	done
 
 	cd ${WRKSRC} && ${MAKE} instcheck install-destdir
-
-	for i in ${REJECTUTILS}; do					\
-		${INSTALL_PROGRAM} ${WRKSRC}/$$i ${DESTDIR}${PREFIX}/bin/$$i; \
-	done
 
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${SHAREDIR}/setup
 	for i in ${SETUP_PROGRAMS}; do					\
