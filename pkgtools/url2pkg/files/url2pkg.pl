@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.36 2018/04/08 20:13:55 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.37 2018/05/28 20:18:01 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -410,7 +410,7 @@ sub generate_initial_package($) {
 
 	print ("url2pkg> Running \"make distinfo\" ...\n");
 	(system { $make } ($make, "distinfo")) == 0 or die;
-	
+
 	print ("url2pkg> Running \"make extract\" ...\n");
 	(system { $make } ($make, "extract")) == 0 or die;
 }
@@ -440,7 +440,7 @@ sub adjust_package_from_extracted_distfiles()
 	if (@files == 1) {
 		if ($files[0] ne $distname) {
 			push(@build_vars, ["WRKSRC", "\${WRKDIR}/$files[0]"]);
-		}		
+		}
 		$abs_wrksrc = "${abs_wrkdir}/$files[0]";
 	} else {
 		push(@build_vars, ["WRKSRC", "\${WRKDIR}" .
