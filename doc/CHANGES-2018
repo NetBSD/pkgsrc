@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2601 2018/05/28 14:14:36 he Exp $
+$NetBSD: CHANGES-2018,v 1.2602 2018/05/28 14:16:15 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3750,3 +3750,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Added mail/qmail-rejectutils version 20170720 [schmonz 2018-05-28]
 	Updated net/py-lexicon to 2.3.0 [fhajny 2018-05-28]
 	Updated net/tcl-scotty to 2.1.11nb18 [he 2018-05-28]
+	Updated devel/binutils to 2.26.1nb1 [bacon 2018-05-28]
