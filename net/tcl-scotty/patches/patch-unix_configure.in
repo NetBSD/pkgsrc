@@ -1,4 +1,4 @@
-$NetBSD: patch-unix_configure.in,v 1.1 2018/04/13 19:10:50 he Exp $
+$NetBSD: patch-unix_configure.in,v 1.2 2018/05/28 14:14:02 he Exp $
 
 Default target to build & install scotty & tkined.
 Append TCL_LIBS to library setting, so that tcl library is picked up.
@@ -17,6 +17,15 @@ Also pull in -lresolv if we miss __dn_expand().
  
  #--------------------------------------------------------------------
  #       Check for various system specific things.
+@@ -151,7 +154,7 @@ SHLIB_SUFFIX=$TCL_SHLIB_SUFFIX
+ DL_LIBS=$TCL_DL_LIBS
+ LD_FLAGS=$TCL_LD_FLAGS
+ LD_SEARCH_FLAGS=$TCL_LD_SEARCH_FLAGS
+-TCL_INCLUDES=-I$TCL_PREFIX/include
++TCL_INCLUDES=${TCL_INCLUDE_SPEC:-"-I$TCL_PREFIX/include"}
+ 
+ if test -z "$SHLIB_LD" ; then
+     AC_MSG_ERROR([no shared linker definition (TCL_SHLIB_LD) in tclConfig.sh])
 @@ -196,9 +199,8 @@ for f in $dirs ; do
  done
  
