@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2018/05/14 11:31:18 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.20 2018/05/28 13:46:12 fhajny Exp $
 bin/lexicon${PYVERSSUFFIX}
 ${PYSITELIB}/dns_${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/dns_${EGG_INFODIR}/SOURCES.txt
@@ -88,6 +88,8 @@ ${PYSITELIB}/lexicon/providers/sakuracloud.pyo
 ${PYSITELIB}/lexicon/providers/sakuracloud.pyc
 ${PYSITELIB}/lexicon/providers/softlayer.pyo
 ${PYSITELIB}/lexicon/providers/softlayer.pyc
+${PYSITELIB}/lexicon/providers/subreg.pyo
+${PYSITELIB}/lexicon/providers/subreg.pyc
 ${PYSITELIB}/lexicon/providers/transip.pyo
 ${PYSITELIB}/lexicon/providers/transip.pyc
 ${PYSITELIB}/lexicon/providers/vultr.pyo
@@ -128,6 +130,7 @@ ${PYSITELIB}/lexicon/providers/rage4.py
 ${PYSITELIB}/lexicon/providers/route53.py
 ${PYSITELIB}/lexicon/providers/sakuracloud.py
 ${PYSITELIB}/lexicon/providers/softlayer.py
+${PYSITELIB}/lexicon/providers/subreg.py
 ${PYSITELIB}/lexicon/providers/transip.py
 ${PYSITELIB}/lexicon/providers/vultr.py
 ${PYSITELIB}/lexicon/providers/yandex.py
