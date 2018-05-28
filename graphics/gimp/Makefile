@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.284 2018/05/27 13:46:45 wiz Exp $
+# $NetBSD: Makefile,v 1.285 2018/05/28 08:46:32 wiz Exp $
 
 DISTNAME=	gimp-2.10.2
 CATEGORIES=	graphics
@@ -43,6 +43,8 @@ PLIST_VARS+=		remote
 
 .include "options.mk"
 
+BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.8.1
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../archivers/xz/buildlink3.mk"
