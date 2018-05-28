@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2018/05/28 12:56:24 schmonz Exp $
+bin/qmail-qfilter-viruscan
+bin/qmail-qfilter-ofmipd-queue
+bin/qmail-qfilter-smtpd-queue
+bin/qmail-rcptcheck
+bin/qmail-rcptcheck-badrcptto
+bin/qmail-rcptcheck-qregex
+bin/qmail-rcptcheck-realrcptto
