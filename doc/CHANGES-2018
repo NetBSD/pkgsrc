@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2602 2018/05/28 14:16:15 bacon Exp $
+$NetBSD: CHANGES-2018,v 1.2603 2018/05/28 15:17:05 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3751,3 +3751,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/py-lexicon to 2.3.0 [fhajny 2018-05-28]
 	Updated net/tcl-scotty to 2.1.11nb18 [he 2018-05-28]
 	Updated devel/binutils to 2.26.1nb1 [bacon 2018-05-28]
+	Updated sysutils/libgtop to 2.28.4nb12 [youri 2018-05-28]
