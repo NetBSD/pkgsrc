@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2017/08/19 22:11:43 schmonz Exp $
+$NetBSD: distinfo,v 1.38 2018/05/28 23:39:16 schmonz Exp $
 
 SHA1 (netqmail-1.05-tls-smtpauth-20070417.patch) = d24cb13cf1371044fc2dfe20471478f59b5524e5
 RMD160 (netqmail-1.05-tls-smtpauth-20070417.patch) = 81a00e06fa67a4073b1a5bf5195fbbac675cd46b
@@ -16,10 +16,6 @@ SHA1 (netqmail-1.06-qmailremote-20170716.patch) = cf7fa5aaf74a5b7d48b2cf0e5f46f7
 RMD160 (netqmail-1.06-qmailremote-20170716.patch) = c26d7f8510cab92bcf5d5fbb861ec62ff593196a
 SHA512 (netqmail-1.06-qmailremote-20170716.patch) = de77c1b01ab88199b3f096e64a733dd86867001dfbcea1cf0d6b20e99d448638e0294440ef48fabc309355440834a8747b4c476cf47b89e6ddb3b7250008dd8e
 Size (netqmail-1.06-qmailremote-20170716.patch) = 1668 bytes
-SHA1 (netqmail-1.06-rejectutils-20170720.patch) = a2902231ebbd27b214206f0e26150fe7aef48ca3
-RMD160 (netqmail-1.06-rejectutils-20170720.patch) = 6f0aba229513ad635145016a689c50cad37321d2
-SHA512 (netqmail-1.06-rejectutils-20170720.patch) = da7d0fb60c21f2ff63fe99bf540f83345369cbf6ade4b9a6cae36b5b3d91b3edfd58d91b8b7a300a617fd963de860a76f30d429f677318078b1430fce4676d12
-Size (netqmail-1.06-rejectutils-20170720.patch) = 37193 bytes
 SHA1 (netqmail-1.06-tls-smtpauth-20070417-rcptcheck-20170716.patch) = 682661f44fdcb49e130226cbc90b32dbad1f2f6c
 RMD160 (netqmail-1.06-tls-smtpauth-20070417-rcptcheck-20170716.patch) = 51cbb3a18275f5958fd3fd0299fb53e47fb066c1
 SHA512 (netqmail-1.06-tls-smtpauth-20070417-rcptcheck-20170716.patch) = 04f2d22a035a92af808a6351e2c7b98626b1fe699b95751c42b7c981f2fc4ff3538e159b80081cbad67ab89d3b23afcadffdaf0c0cc790c31c0b235480906507
