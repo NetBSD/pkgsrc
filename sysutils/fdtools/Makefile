@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/10/03 00:43:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/28 12:00:39 schmonz Exp $
 
 DISTNAME=		fdtools-2015.03.28
 CATEGORIES=		sysutils
@@ -14,6 +14,10 @@ DJB_RESTRICTED=		no
 
 WRKSRC=			${WRKDIR}/misc/${PKGNAME_NOREV}
 DJB_SLASHPACKAGE=	YES
+
+CPPFLAGS+=		-I ${PREFIX:Q}/include
+LDFLAGS+=		-L ${PREFIX:Q}/lib/skalibs
+LDFLAGS.SunOS+=		-lsocket
 
 INSTALLATION_DIRS+=	bin
 
