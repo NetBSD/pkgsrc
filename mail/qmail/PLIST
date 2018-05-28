@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2018/01/01 22:29:41 rillig Exp $
+@comment $NetBSD: PLIST,v 1.20 2018/05/28 12:57:36 schmonz Exp $
 bin/bouncesaying
 bin/condredirect
 bin/datemail
@@ -24,19 +24,12 @@ bin/qmail-newu
 bin/qmail-pop3d
 bin/qmail-popup
 bin/qmail-pw2u
-${PLIST.rejectutils}bin/qmail-qfilter-ofmipd-queue
-${PLIST.rejectutils}bin/qmail-qfilter-smtpd-queue
-${PLIST.rejectutils}bin/qmail-qfilter-viruscan
 bin/qmail-qmqpc
 bin/qmail-qmqpd
 bin/qmail-qmtpd
 bin/qmail-qread
 bin/qmail-qstat
 bin/qmail-queue
-${PLIST.rejectutils}bin/qmail-rcptcheck
-${PLIST.rejectutils}bin/qmail-rcptcheck-badrcptto
-${PLIST.rejectutils}bin/qmail-rcptcheck-qregex
-${PLIST.rejectutils}bin/qmail-rcptcheck-realrcptto
 bin/qmail-remote
 bin/qmail-rspawn
 bin/qmail-send
