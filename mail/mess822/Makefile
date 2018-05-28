@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2017/06/26 02:04:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.29 2018/05/28 13:02:04 schmonz Exp $
 #
 
 DISTNAME=		mess822-0.58
@@ -26,7 +26,7 @@ SUBST_FILES.djbware+=	cdb_seek.c
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
 SUBST_FILES.paths=	hier.c
-SUBST_SED.paths=	-e 's,@PKGMANDIR@,${PKGMANDIR},g'
+SUBST_VARS.paths=	PKGMANDIR
 
 pre-build:
 	cp ${BUILDLINK_DIR}/include/*.h ${WRKSRC}
