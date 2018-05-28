@@ -1,0 +1,20 @@
+To SMTP-reject messages without patching qmail-smtpd(8), compose the
+following programs into your configuration as needed:
+
+- qmail-qfilter-smtpd-queue is a QMAILQUEUE wrapper that runs
+  qmail-qfilter with the sequence of programs in control/smtpfilters,
+  rejecting if any of them reject.
+- qmail-qfilter-ofmipd-queue is a QMAILQUEUE wrapper that runs
+  qmail-qfilter with the sequence of programs in control/ofmipfilters,
+  rejecting if any of them reject.
+- qmail-qfilter-viruscan is the viruscan patch repackaged as a
+  qmail-qfilter-compatible program.
+- qmail-rcptcheck is a RCPTCHECK-compatible program that runs the
+  sequence of programs in control/rcptchecks, rejecting if any of
+  them reject.
+- qmail-rcptcheck-realrcptto is the realrcptto patch repackaged as a
+  RCPTCHECK-compatible program.
+- qmail-rcptcheck-badrcptto is the badrcptto patch repackaged as a
+  RCPTCHECK-compatible program.
+- qmail-rcptcheck-qregex is (most of) the qregex patch repackaged as a
+  RCPTCHECK-compatible program
