@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2599 2018/05/28 12:57:07 schmonz Exp $
+$NetBSD: CHANGES-2018,v 1.2600 2018/05/28 13:46:20 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3748,3 +3748,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated graphics/gegl to 0.4.2 [wiz 2018-05-27]
 	Updated graphics/gimp to 2.10.2 [wiz 2018-05-27]
 	Added mail/qmail-rejectutils version 20170720 [schmonz 2018-05-28]
+	Updated net/py-lexicon to 2.3.0 [fhajny 2018-05-28]
