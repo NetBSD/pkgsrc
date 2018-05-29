@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2018/05/16 18:06:04 youri Exp $
+# $NetBSD: Makefile,v 1.67 2018/05/29 00:45:04 youri Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=		xfce4-session-4.13.0
@@ -32,13 +32,13 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/autostart
 MAKE_DIRS+=	${EGDIR} ${EGDIR}/autostart ${EGDIR}/xfconf
 MAKE_DIRS+=	${EGDIR}/xfconf/xfce-perchannel-xml
 
-CONF_FILES=	${EGDIR}/autostart/xscreensaver.desktop \
-		${PKG_SYSCONFDIR}/autostart/xscreensaver.desktop
-CONF_FILES=	${EGDIR}/xfconf/xfce-perchannel-xml/xfce4-session.xml \
-		${PKG_SYSCONFDIR}/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
-CONF_FILES+=	${EGDIR}/Xft.xrdb \
-		${PKG_SYSCONFDIR}/xfce4/Xft.xrdb
-CONF_FILES+=	${EGDIR}/xinitrc \
+CONF_FILES=	${EGDIR}/autostart/xscreensaver.desktop					\
+		${PKG_SYSCONFDIR}/autostart/xscreensaver.desktop			\
+		${EGDIR}/xfconf/xfce-perchannel-xml/xfce4-session.xml			\
+		${PKG_SYSCONFDIR}/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml	\
+		${EGDIR}/Xft.xrdb							\
+		${PKG_SYSCONFDIR}/xfce4/Xft.xrdb					\
+		${EGDIR}/xinitrc							\
 		${PKG_SYSCONFDIR}/xfce4/xinitrc
 
 .if !empty(Darwin-*-*)
@@ -51,5 +51,6 @@ CONF_FILES+=	${EGDIR}/xinitrc \
 .include "../../devel/libwnck3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
+.include "../../x11/xscreensaver/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
