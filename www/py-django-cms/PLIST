@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.32 2018/03/13 02:39:52 wen Exp $
+@comment $NetBSD: PLIST,v 1.33 2018/05/29 12:54:49 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/cms/__init__.py
 ${PYSITELIB}/cms/__init__.pyc
 ${PYSITELIB}/cms/__init__.pyo
@@ -551,12 +557,21 @@ ${PYSITELIB}/cms/migrations/0016_auto_20160608_1535.pyo
 ${PYSITELIB}/cms/migrations/0017_pagetype.py
 ${PYSITELIB}/cms/migrations/0017_pagetype.pyc
 ${PYSITELIB}/cms/migrations/0017_pagetype.pyo
-${PYSITELIB}/cms/migrations/0018_pagenode.py
-${PYSITELIB}/cms/migrations/0018_pagenode.pyc
-${PYSITELIB}/cms/migrations/0018_pagenode.pyo
+${PYSITELIB}/cms/migrations/0018_create_pagenode.py
+${PYSITELIB}/cms/migrations/0018_create_pagenode.pyc
+${PYSITELIB}/cms/migrations/0018_create_pagenode.pyo
+${PYSITELIB}/cms/migrations/0019_set_pagenode.py
+${PYSITELIB}/cms/migrations/0019_set_pagenode.pyc
+${PYSITELIB}/cms/migrations/0019_set_pagenode.pyo
+${PYSITELIB}/cms/migrations/0020_old_tree_cleanup.py
+${PYSITELIB}/cms/migrations/0020_old_tree_cleanup.pyc
+${PYSITELIB}/cms/migrations/0020_old_tree_cleanup.pyo
 ${PYSITELIB}/cms/migrations/__init__.py
 ${PYSITELIB}/cms/migrations/__init__.pyc
 ${PYSITELIB}/cms/migrations/__init__.pyo
+${PYSITELIB}/cms/migrations/_base.py
+${PYSITELIB}/cms/migrations/_base.pyc
+${PYSITELIB}/cms/migrations/_base.pyo
 ${PYSITELIB}/cms/models/__init__.py
 ${PYSITELIB}/cms/models/__init__.pyc
 ${PYSITELIB}/cms/models/__init__.pyo
@@ -1623,12 +1638,6 @@ ${PYSITELIB}/cms/wizards/wizard_base.pyo
 ${PYSITELIB}/cms/wizards/wizard_pool.py
 ${PYSITELIB}/cms/wizards/wizard_pool.pyc
 ${PYSITELIB}/cms/wizards/wizard_pool.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/menus/__init__.py
 ${PYSITELIB}/menus/__init__.pyc
 ${PYSITELIB}/menus/__init__.pyo
