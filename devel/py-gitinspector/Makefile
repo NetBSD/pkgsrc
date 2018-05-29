@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/06/16 21:03:58 kamil Exp $
+# $NetBSD: Makefile,v 1.3 2018/05/29 16:39:24 minskim Exp $
 
 GITHUB_PROJECT=	gitinspector
 DISTNAME=	gitinspector-0.4.4
@@ -13,6 +13,8 @@ COMMENT=	The statistical analysis tool for git repositories
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+
+PYTHON_VERSIONS_INCOMPATIBLE=	36
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/gitinspector \
