@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2610 2018/05/29 07:19:17 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2611 2018/05/29 09:13:42 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3760,3 +3760,4 @@ Changes to the packages collection and infrastructure in 2018:
         Removed audio/rhythmbox-gtk3 [youri 2018-05-29]
 	Updated textproc/py-sphinx to 1.7.5 [adam 2018-05-29]
 	Updated security/py-asyncssh to 1.13.0 [adam 2018-05-29]
+	Updated www/php-phalcon to 3.4.0 [fhajny 2018-05-29]
