@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.549 2018/04/02 08:45:30 wiz Exp $
+# $NetBSD: Makefile,v 1.550 2018/05/29 03:33:32 youri Exp $
 #
 
 COMMENT=	Audio tools
@@ -404,7 +404,6 @@ SUBDIR+=	qtplay
 SUBDIR+=	quodlibet2
 SUBDIR+=	rexima
 SUBDIR+=	rhythmbox
-SUBDIR+=	rhythmbox-gtk3
 SUBDIR+=	rio
 SUBDIR+=	rio500
 SUBDIR+=	rioutil
