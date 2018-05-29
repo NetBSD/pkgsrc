@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2605 2018/05/28 23:42:08 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2606 2018/05/29 00:17:28 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3754,3 +3754,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/libgtop to 2.28.4nb12 [youri 2018-05-28]
 	Updated audio/xfce4-mixer to 4.11.0nb8 [youri 2018-05-28]
 	Updated sysutils/xfce4-fsguard-plugin to 1.1.0nb4 [youri 2018-05-28]
+	Updated meta-pkgs/xfce4 to 4.12.0nb12 [youri 2018-05-29]
