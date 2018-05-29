@@ -3,5 +3,5 @@ Type=Application
 Name=Notification Daemon
 Comment=Launch notification daemon
 Icon=preferences-system-notifications
-Exec=/usr/pkg/lib/xfce4/notifyd/xfce4-notifyd
+Exec=@PREFIX@/lib/xfce4/notifyd/xfce4-notifyd
 OnlyShowIn=XFCE;
