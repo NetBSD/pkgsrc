@@ -1,4 +1,4 @@
-$NetBSD: patch-unix_configure.in,v 1.2 2018/05/28 14:14:02 he Exp $
+$NetBSD: patch-unix_configure.in,v 1.3 2018/05/29 12:56:55 he Exp $
 
 Default target to build & install scotty & tkined.
 Append TCL_LIBS to library setting, so that tcl library is picked up.
@@ -46,16 +46,20 @@ Also pull in -lresolv if we miss __dn_expand().
  
  #----------------------------------------------------------------------------
  #	Check for the existence of various libraries.
-@@ -253,6 +256,8 @@ AC_CHECK_LIB(rpc, main, [LIBS="$LIBS -lr
+@@ -252,7 +255,11 @@ AC_CHECK_LIB(ieee, main, [LIBS="$LIBS -l
+ AC_CHECK_LIB(rpc, main, [LIBS="$LIBS -lrpc"])
  AC_CHECK_LIB(rpcsvc, main, [LIBS="$LIBS -lrpcsvc"])
  AC_CHECK_FUNC(res_mkquery, ,
- 	AC_CHECK_LIB(resolv, res_mkquery, [LIBS="$LIBS -lresolv"]))
-+AC_CHECK_FUNC(__dn_expand, ,
-+	AC_CHECK_LIB(resolv, __dn_expand, [LIBS="$LIBS -lresolv"]))
+-	AC_CHECK_LIB(resolv, res_mkquery, [LIBS="$LIBS -lresolv"]))
++	AC_CHECK_LIB(resolv, res_mkquery, [LIBS="$LIBS -lresolv"],
++	    AC_CHECK_LIB(resolv, __res_mkquery, [LIBS="$LIBS -lresolv"])))
++AC_CHECK_FUNC(dn_expand, ,
++	AC_CHECK_LIB(resolv, dn_expand, [LIBS="$LIBS -lresolv"],
++	    AC_CHECK_LIB(resolv, __dn_expand, [LIBS="$LIBS -lresolv"])))
  
  #----------------------------------------------------------------------------
  #	Checks for various include files missing on some machines.
-@@ -295,6 +300,8 @@ if test "$mcast_ok" = "yes"; then
+@@ -295,6 +302,8 @@ if test "$mcast_ok" = "yes"; then
      AC_MSG_RESULT(yes); AC_DEFINE(HAVE_MULTICAST), AC_MSG_RESULT(no))
  fi
  
