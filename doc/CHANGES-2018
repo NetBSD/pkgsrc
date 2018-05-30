@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2620 2018/05/30 01:39:22 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2621 2018/05/30 02:16:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3772,3 +3772,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/p5-Net-Frame to 1.19 [wen 2018-05-30]
 	Updated net/p5-Net-Frame-Dump to 1.16 [wen 2018-05-30]
 	Updated devel/p5-List-SomeUtils-XS to 0.57 [wen 2018-05-30]
+	Updated devel/p5-CPANPLUS to 0.9174 [wen 2018-05-30]
