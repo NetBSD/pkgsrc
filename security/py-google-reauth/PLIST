@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2018/05/30 16:26:31 bsiegert Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/google_reauth/__init__.py
+${PYSITELIB}/google_reauth/__init__.pyc
+${PYSITELIB}/google_reauth/__init__.pyo
+${PYSITELIB}/google_reauth/_helpers.py
+${PYSITELIB}/google_reauth/_helpers.pyc
+${PYSITELIB}/google_reauth/_helpers.pyo
+${PYSITELIB}/google_reauth/_reauth_client.py
+${PYSITELIB}/google_reauth/_reauth_client.pyc
+${PYSITELIB}/google_reauth/_reauth_client.pyo
+${PYSITELIB}/google_reauth/challenges.py
+${PYSITELIB}/google_reauth/challenges.pyc
+${PYSITELIB}/google_reauth/challenges.pyo
+${PYSITELIB}/google_reauth/errors.py
+${PYSITELIB}/google_reauth/errors.pyc
+${PYSITELIB}/google_reauth/errors.pyo
+${PYSITELIB}/google_reauth/reauth.py
+${PYSITELIB}/google_reauth/reauth.pyc
+${PYSITELIB}/google_reauth/reauth.pyo
+${PYSITELIB}/google_reauth/reauth_creds.py
+${PYSITELIB}/google_reauth/reauth_creds.pyc
+${PYSITELIB}/google_reauth/reauth_creds.pyo
