@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2616 2018/05/29 16:51:39 ginsbach Exp $
+$NetBSD: CHANGES-2018,v 1.2617 2018/05/30 01:24:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3768,3 +3768,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated net/tcl-scotty to 2.1.11nb19 [he 2018-05-29]
 	Updated devel/cloc to 1.76 [bginsbach 2018-05-29]
 	Updated sysutils/pwgen to 2.08 [bginsbach 2018-05-29]
+	Updated net/p5-SOAP-Lite to 1.27 [wen 2018-05-30]
