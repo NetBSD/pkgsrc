@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/05/02 13:06:53 wiz Exp $
+$NetBSD: distinfo,v 1.5 2018/05/30 01:32:54 wen Exp $
 
-SHA1 (Net-Frame-Dump-1.15.tar.gz) = c40a2feaafde6fe0ffc081ac66619fd6f8e27af2
-RMD160 (Net-Frame-Dump-1.15.tar.gz) = bed851f0a2a8871f72396bf07993cdc9d4f80287
-SHA512 (Net-Frame-Dump-1.15.tar.gz) = 567c8bd4e5a1e0df0b020a65c2bcbc25b7fbefee45e19205b9f7a3d9e22d2e1ca015b28f77a9dcdc01fb3618a2a231f2b585a9bf0cfa00e0219bb087351d6761
-Size (Net-Frame-Dump-1.15.tar.gz) = 19246 bytes
+SHA1 (Net-Frame-Dump-1.16.tar.gz) = 3da7347634f5757ff6042395fb486129d8a1346d
+RMD160 (Net-Frame-Dump-1.16.tar.gz) = e0c1e71f67ae029b222fd3f15596b36e115a49f2
+SHA512 (Net-Frame-Dump-1.16.tar.gz) = ca07cbdb15e846b049355df127b2489f8aed5415d5713094b650b374816a6178b56ffbc91e38fdf09908fdf62aa9a0e2ca7bdf48d4cc4da258a709033d7e6fbd
+Size (Net-Frame-Dump-1.16.tar.gz) = 19354 bytes
