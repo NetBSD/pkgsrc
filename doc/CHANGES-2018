@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2624 2018/05/30 06:46:16 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2625 2018/05/30 07:35:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3777,3 +3777,5 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-Net-HTTP to 6.18 [wen 2018-05-30]
 	Updated devel/git to 2.17.1 [adam 2018-05-30]
 	Updated math/fftw to 3.3.8 [adam 2018-05-30]
+	Updated databases/py-sqlalchemy to 1.2.8 [adam 2018-05-30]
+	Updated devel/py-test to 3.6.0 [adam 2018-05-30]
