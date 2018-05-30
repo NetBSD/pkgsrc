@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/12/30 13:55:10 wiz Exp $
+$NetBSD: distinfo,v 1.5 2018/05/30 01:38:31 wen Exp $
 
-SHA1 (List-SomeUtils-XS-0.56.tar.gz) = 9f3dc8b3b5cae2f5df0a105c18eda75ed3c070c2
-RMD160 (List-SomeUtils-XS-0.56.tar.gz) = 2cc2105ee6de2ba31b68457b1c609f7440d2ee26
-SHA512 (List-SomeUtils-XS-0.56.tar.gz) = d8b535625e47439933567f1ee887d8a12d39ddab1fd00d1f43c827347c782222e9c3166ec871013fa2f94148ef6e8e230dc05e501105466a8c9d02d104420ee5
-Size (List-SomeUtils-XS-0.56.tar.gz) = 95917 bytes
+SHA1 (List-SomeUtils-XS-0.57.tar.gz) = db1cd81d86f7b6cbe645c448100fb17ec8cc127c
+RMD160 (List-SomeUtils-XS-0.57.tar.gz) = 5dd6757da7e63537c88267769d606b7702fc7f4f
+SHA512 (List-SomeUtils-XS-0.57.tar.gz) = 2df89b6b706d1fa7cd610fc700197567797e73ab64ce7bf3cb8ab3d2ba11bbdfa5f8f56d031cd39cc43489a82df28837aca2a8ca6ddaaff3dad75797ac04386a
+Size (List-SomeUtils-XS-0.57.tar.gz) = 95821 bytes
