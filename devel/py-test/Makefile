@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2018/04/25 06:57:01 adam Exp $
+# $NetBSD: Makefile,v 1.48 2018/05/30 07:35:18 adam Exp $
 
-DISTNAME=	pytest-3.5.1
+DISTNAME=	pytest-3.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
@@ -10,12 +10,13 @@ HOMEPAGE=	http://pytest.org/
 COMMENT=	Python testing tool
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-atomicwrites>=1.0:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-more-itertools>=4.0.0:../../devel/py-more-itertools
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.5:../../devel/py-pluggy
-DEPENDS+=	${PYPKGPREFIX}-py>=1.4.29:../../devel/py-py
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-py>=1.5.0:../../devel/py-py
+DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
