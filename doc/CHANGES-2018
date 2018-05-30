@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2631 2018/05/30 14:37:29 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2632 2018/05/30 14:59:00 ginsbach Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3786,3 +3786,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated www/p5-Plack-Middleware-MethodOverride to 0.20 [wen 2018-05-30]
 	Updated devel/py-llvmlite to 0.22.0nb2 [minskim 2018-05-30]
 	Updated devel/libinotify to 0.0.20180201 [minskim 2018-05-30]
+	Updated security/mcrypt to 2.6.8nb4 [bginsbach 2018-05-30]
