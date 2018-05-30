@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2018/05/30 16:09:52 bsiegert Exp $
+
+SHA1 (pyu2f-0.1.4.tar.gz) = 49be1741ad1c853ddfea6b82faf5113daaa8f1df
+RMD160 (pyu2f-0.1.4.tar.gz) = 4cd83ad544d5d9700d4b6d9855443874d8ac053f
+SHA512 (pyu2f-0.1.4.tar.gz) = 1c2a23acd3ab25f07a2800c21f556da1eee1e28269f02f4bab057e38494d5345837d1e015a323d769e594751fb0f852e00e718d6350b1a75b2596dae6cd9bdd5
+Size (pyu2f-0.1.4.tar.gz) = 23261 bytes
