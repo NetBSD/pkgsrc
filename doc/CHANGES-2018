@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2628 2018/05/30 12:04:03 gdt Exp $
+$NetBSD: CHANGES-2018,v 1.2629 2018/05/30 12:05:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3783,3 +3783,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-pexpect to 4.6.0 [adam 2018-05-30]
 	Updated lang/nodejs to 10.3.0 [fhajny 2018-05-30]
 	Updated databases/postgresql-postgis2 to 2.4.4 [gdt 2018-05-30]
+	Updated www/p5-Plack-Middleware-MethodOverride to 0.20 [wen 2018-05-30]
