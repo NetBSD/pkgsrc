@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18385 2018/05/29 03:26:26 youri Exp $
+$NetBSD: TODO,v 1.18386 2018/05/30 06:44:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -463,6 +463,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
+	o calibre-3.24.2
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -569,6 +570,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o elftoolchain-0.7.1 [pkg/48227]
 	o elm-me-2.4.127
 	o elscreen-1.5.3
+	o emacs-26.1
 	o embryo-1.7.10
 	o emerillon-0.1.90
 	o enigma-1.21
