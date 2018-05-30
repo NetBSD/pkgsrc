@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2622 2018/05/30 02:20:29 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2623 2018/05/30 02:26:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3774,3 +3774,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-List-SomeUtils-XS to 0.57 [wen 2018-05-30]
 	Updated devel/p5-CPANPLUS to 0.9174 [wen 2018-05-30]
 	Updated devel/p5-File-pushd to 1.016 [wen 2018-05-30]
+	Updated www/p5-Net-HTTP to 6.18 [wen 2018-05-30]
