@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2018/01/30 09:21:44 adam Exp $
+# $NetBSD: Makefile,v 1.22 2018/05/30 07:56:30 adam Exp $
 
-DISTNAME=	pandas-0.22.0
+DISTNAME=	pandas-0.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandas/}
@@ -18,8 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-pytables>=2.2:../../math/py-pytables
 DEPENDS+=	${PYPKGPREFIX}-pytz>=1.5:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-# TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 # 20 test failures as of 0.18.1, see
 # https://github.com/pydata/pandas/issues/12337
 # https://github.com/pydata/pandas/issues/14043
