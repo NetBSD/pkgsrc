@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2018/05/30 12:03:46 gdt Exp $
+# $NetBSD: Makefile,v 1.45 2018/05/30 17:03:56 gdt Exp $
 
-DISTNAME=	postgis-2.4.4
+MAJOR=		2.4
+DISTNAME=	postgis-${MAJOR}.4
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 CATEGORIES=	databases geography
 MASTER_SITES=	https://download.osgeo.org/postgis/source/
@@ -47,6 +48,10 @@ BUILD_TARGET=		all docs
 INSTALL_TARGET=		install docs-install
 
 DOCDIR=			${PREFIX}/share/doc/postgis
+
+PLIST_SUBST+=		MAJOR=${MAJOR}
+PRINT_PLIST_AWK+=	{ gsub(/postgis-${MAJOR:S|/|\\/|g}/, "postgis-$${MAJOR}") }
+PRINT_PLIST_AWK+=	{ gsub(/topology-${MAJOR:S|/|\\/|g}/, "topology-$${MAJOR}") }
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	extras/template_gis/profile \
