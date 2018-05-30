@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2630 2018/05/30 14:32:38 minskim Exp $
+$NetBSD: CHANGES-2018,v 1.2631 2018/05/30 14:37:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3785,3 +3785,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated databases/postgresql-postgis2 to 2.4.4 [gdt 2018-05-30]
 	Updated www/p5-Plack-Middleware-MethodOverride to 0.20 [wen 2018-05-30]
 	Updated devel/py-llvmlite to 0.22.0nb2 [minskim 2018-05-30]
+	Updated devel/libinotify to 0.0.20180201 [minskim 2018-05-30]
