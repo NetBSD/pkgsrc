@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.681 2018/05/03 22:13:49 minskim Exp $
+# $NetBSD: Makefile,v 1.682 2018/05/30 16:09:52 bsiegert Exp $
 #
 
 COMMENT=	Security tools
@@ -452,6 +452,7 @@ SUBDIR+=	py-smbpasswd
 SUBDIR+=	py-stix
 SUBDIR+=	py-tlslite
 SUBDIR+=	py-trytond-authentication-sms
+SUBDIR+=	py-u2f
 SUBDIR+=	py-urllib2-kerberos
 SUBDIR+=	py-xmlsec
 SUBDIR+=	py-yara
