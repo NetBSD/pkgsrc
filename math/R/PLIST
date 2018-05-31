@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2017/10/21 02:40:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.29 2018/05/31 10:23:02 wen Exp $
 bin/R
 bin/Rscript
 info/R-FAQ.info.gz
@@ -86,6 +86,7 @@ lib/R/etc/javaconf
 lib/R/etc/ldpaths
 lib/R/etc/repositories
 lib/R/include/R.h
+lib/R/include/R_ext/Altrep.h
 lib/R/include/R_ext/Applic.h
 lib/R/include/R_ext/Arith.h
 lib/R/include/R_ext/BLAS.h
@@ -395,6 +396,7 @@ lib/R/library/cluster/po/fr/LC_MESSAGES/R-cluster.mo
 lib/R/library/cluster/po/ko/LC_MESSAGES/R-cluster.mo
 lib/R/library/cluster/po/ko/LC_MESSAGES/cluster.mo
 lib/R/library/cluster/po/pl/LC_MESSAGES/R-cluster.mo
+lib/R/library/cluster/test-tools.R
 lib/R/library/codetools/DESCRIPTION
 lib/R/library/codetools/INDEX
 lib/R/library/codetools/Meta/Rd.rds
