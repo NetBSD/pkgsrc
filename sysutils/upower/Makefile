@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/09/08 06:28:35 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2018/05/31 14:27:42 youri Exp $
 
 DISTNAME=	upower-0.99.4
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	https://upower.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://upower.freedesktop.org
+HOMEPAGE=	https://upower.freedesktop.org/
 COMMENT=	Power management system message bus service
 LICENSE=	gnu-gpl-v2
 
@@ -36,7 +36,9 @@ BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--as-needed:-Wl,-zignore
 TEST_TARGET=	check
 
 # with --nonet, xsltproc needs a helping hand finding some dtds
-XSLTPROC_PATH+=	${LOCALBASE}/share/doc/dbus
+XSLTPROC_PATH=	${PREFIX}/share/doc/dbus
+
+.include "options.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
