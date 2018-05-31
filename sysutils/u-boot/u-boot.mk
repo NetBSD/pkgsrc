@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.9 2018/05/24 22:35:56 jmcneill Exp $
+# $NetBSD: u-boot.mk,v 1.10 2018/05/31 20:25:15 wiz Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -7,7 +7,7 @@ DISTNAME?=	u-boot-${UBOOT_VERSION}
 DISTINFO_FILE?=	${.CURDIR}/../../sysutils/u-boot/distinfo
 CATEGORIES=	sysutils
 EXTRACT_SUFX?=	.tar.bz2
-PATCHDIR=	${.CURDIR}/../../sysutils/u-boot/patches
+PATCHDIR?=	${.CURDIR}/../../sysutils/u-boot/patches
 
 HOMEPAGE?=	https://www.denx.de/wiki/U-Boot
 MASTER_SITES?=	ftp://ftp.denx.de/pub/u-boot/

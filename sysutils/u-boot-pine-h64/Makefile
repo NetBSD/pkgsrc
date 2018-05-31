@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/05/26 17:53:18 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/31 20:25:15 wiz Exp $
 
 UBOOT_VERSION=		2018.03rc1
 UBOOT_TARGET=		pine-h64
@@ -18,9 +18,8 @@ post-extract:
 post-build:
 	${CAT} ${WRKSRC}/spl/sunxi-spl.bin ${WRKSRC}/u-boot.itb > ${WRKSRC}/u-boot-sunxi-with-spl.bin
 
+DISTINFO_FILE=		${.CURDIR}/../../sysutils/u-boot-pine-h64/distinfo
+PATCHDIR=		${.CURDIR}/../../sysutils/u-boot-pine-h64/patches
+
 .include "../../sysutils/arm-trusted-firmware-sun50i-h6/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
-
-# Override U-Boot defaults
-DISTINFO_FILE=		${.CURDIR}/distinfo
-PATCHDIR=		${.CURDIR}/patches
