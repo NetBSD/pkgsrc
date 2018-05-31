@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.19 2018/04/07 10:35:01 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.20 2018/05/31 11:22:46 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -236,7 +236,7 @@ do-install:
 		-name $$i \
 		-destdir ${DESTDIR} \
 		-prefix ${PREFIX} \
-		-libdir ${PREFIX}/${OCAML_SITELIBDIR}/$$i \
+		-libdir ${PREFIX}/${OCAML_SITELIBDIR} \
 		-docdir ${OCAML_TOPKG_DOCDIR}/$$i \
 		-stublibsdir ${PREFIX}/${OCAML_SITELIBDIR}/stublibs \
 		-bindir ${PREFIX}/bin \
