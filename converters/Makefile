@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.165 2018/04/30 19:31:50 minskim Exp $
+# $NetBSD: Makefile,v 1.166 2018/05/31 01:31:27 wen Exp $
 #
 
 COMMENT=	Document format and character code converters
 
 SUBDIR+=	2vcard
+SUBDIR+=	R-base64enc
 SUBDIR+=	TECkit
 SUBDIR+=	ack
 SUBDIR+=	autoconvert
