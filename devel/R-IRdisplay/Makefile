@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/02/08 17:44:29 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/05/31 01:47:03 wen Exp $
 
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -11,7 +11,7 @@ LICENSE=	mit
 DEPENDS+=	R-repr-[0-9]*:../../devel/R-repr
 
 R_PKGNAME=	IRdisplay
-R_PKGVER=	0.4.4
+R_PKGVER=	0.5.0
 
 USE_LANGUAGES=	# none
 
