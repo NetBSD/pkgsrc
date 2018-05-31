@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2642 2018/05/31 09:29:33 adam Exp $
+$NetBSD: CHANGES-2018,v 1.2643 2018/05/31 10:27:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3797,3 +3797,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated math/R-R2HTML to 2.3.2 [wen 2018-05-31]
 	Updated devel/R-Rcpp to 0.12.17 [wen 2018-05-31]
 	Updated devel/py-uvloop to 0.10.0 [adam 2018-05-31]
+	Updated math/R to 3.5.0 [wen 2018-05-31]
