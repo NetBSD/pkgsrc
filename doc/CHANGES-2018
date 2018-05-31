@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2648 2018/05/31 19:56:37 bsiegert Exp $
+$NetBSD: CHANGES-2018,v 1.2649 2018/05/31 23:23:42 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3804,3 +3804,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated sysutils/upower to 0.99.4nb2 [youri 2018-05-31]
 	Updated net/gnome-online-accounts to 3.29.1 [youri 2018-05-31]
 	Updated graphics/clutter to 1.26.2 [youri 2018-05-31]
+	Updated pkgtools/pkgin to 0.10.1 [jperkin 2018-05-31]
