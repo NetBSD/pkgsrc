@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/02/07 20:51:53 minskim Exp $
+$NetBSD: distinfo,v 1.2 2018/05/31 01:40:25 wen Exp $
 
-SHA1 (R/repr_0.12.0.tar.gz) = b593fe339b05b08d6bf0c6696e6dd21783b7941d
-RMD160 (R/repr_0.12.0.tar.gz) = b43690c35bd28191192d82e55e560ca259f18cef
-SHA512 (R/repr_0.12.0.tar.gz) = deef77571e7f038a1ec86e19594dbc942455023938cd354c72014240e0e82f5b52e21d39f1863e657caac79f2f24febee1bc0d6159af9723803401abe17a3a51
-Size (R/repr_0.12.0.tar.gz) = 22482 bytes
+SHA1 (R/repr_0.15.0.tar.gz) = ec0a52cdf70319eda44c33361b666816c1c83dc0
+RMD160 (R/repr_0.15.0.tar.gz) = b0312b96ca6d0b9849d3ed308b5d58e2bca0816d
+SHA512 (R/repr_0.15.0.tar.gz) = 51e476afc5e9eb4002e5a3bb3262e068dd3a7b74063595c23fcb03700c1f395d6632306a8d353f3771718a78f7a577085b033bdadd6e3ac6428a807f4350ba7b
+Size (R/repr_0.15.0.tar.gz) = 24719 bytes
