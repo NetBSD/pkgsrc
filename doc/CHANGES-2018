@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2634 2018/05/30 21:54:00 wiz Exp $
+$NetBSD: CHANGES-2018,v 1.2635 2018/05/31 00:57:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3789,3 +3789,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated security/mcrypt to 2.6.8nb4 [bginsbach 2018-05-30]
 	Updated devel/jq to 1.5nb4 [bginsbach 2018-05-30]
 	Updated x11/xf86-video-fbdev to 0.5.0 [wiz 2018-05-30]
+	Updated math/R-DAAG to 1.22 [wen 2018-05-31]
