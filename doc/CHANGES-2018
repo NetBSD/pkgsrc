@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2644 2018/05/31 11:22:15 jaapb Exp $
+$NetBSD: CHANGES-2018,v 1.2645 2018/05/31 14:28:21 youri Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3799,3 +3799,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/py-uvloop to 0.10.0 [adam 2018-05-31]
 	Updated math/R to 3.5.0 [wen 2018-05-31]
 	Updated misc/ocaml-opaline to 0.3.1 [jaapb 2018-05-31]
+	Updated sysutils/upower to 0.99.4nb2 [youri 2018-05-31]
