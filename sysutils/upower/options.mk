@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.1 2018/05/31 14:28:13 youri Exp $
+# $NetBSD: options.mk,v 1.2 2018/05/31 21:00:23 youri Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.mate-panel
+PKG_OPTIONS_VAR=	PKG_OPTIONS.upower
 PKG_SUPPORTED_OPTIONS=	introspection
 PKG_SUGGESTED_OPTIONS=	introspection
 
