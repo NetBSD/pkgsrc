@@ -1,0 +1,1 @@
+bin/gflags2man.py @PREFIX@/bin/gflags2man@PYVERSSUFFIX@.py
