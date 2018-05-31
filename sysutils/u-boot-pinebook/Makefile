@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/05/25 10:45:24 jmcneill Exp $
+# $NetBSD: Makefile,v 1.6 2018/05/31 20:25:16 wiz Exp $
 
 UBOOT_VERSION=		2018.05
 UBOOT_TARGET=		pinebook
@@ -12,6 +12,9 @@ GITHUB_TAG=		01c860679dabd8ac37bd0eccc90abff7d284a206
 DISTNAME=		u-boot-${UBOOT_TARGET}-${UBOOT_VERSION}
 EXTRACT_SUFX=		.tar.gz
 
+DISTINFO_FILE=		${.CURDIR}/../../sysutils/u-boot-pinebook/distinfo
+PATCHDIR=		${.CURDIR}/../../sysutils/u-boot-pinebook/patches
+
 # Switch to EL1 before booting kernel (required for 32-bit support)
 PKG_DEFAULT_OPTIONS+=	el1
 
@@ -23,7 +26,3 @@ post-build:
 
 .include "../../sysutils/arm-trusted-firmware-sun50iw1p1/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
-
-# Override U-Boot defaults
-DISTINFO_FILE=		${.CURDIR}/distinfo
-PATCHDIR=		${.CURDIR}/patches
