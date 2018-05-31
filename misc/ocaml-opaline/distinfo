@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/04/13 12:27:02 jaapb Exp $
+$NetBSD: distinfo,v 1.3 2018/05/31 11:22:04 jaapb Exp $
 
-SHA1 (opaline-0.3.0.tar.gz) = 79dde04926698c415bd4de882a118f3a71c64aa8
-RMD160 (opaline-0.3.0.tar.gz) = 14abaefdf3e2d5469174985a00438325103d6426
-SHA512 (opaline-0.3.0.tar.gz) = 6f77514fcbe54b523ed3da1a61c1085bf8d1d32bbf2a53fc813aa6686a109d80d44774e80905d934d285642ffe94009e8fe7706ed57105ccbffadc8c379f93d2
-Size (opaline-0.3.0.tar.gz) = 2870 bytes
+SHA1 (opaline-0.3.1.tar.gz) = 285fa269b6644a6eb7cb2c80848b7eff5dcb7fc2
+RMD160 (opaline-0.3.1.tar.gz) = 17513b0b87768263d38e8b840d3b0f2999f395bc
+SHA512 (opaline-0.3.1.tar.gz) = a3e8e01290078e7fe50d76e67f969918eb946fa2881edf1501b1b6f47967f30086640e7ad2895fc8ba03f3ecce790e41d729e6bb3fed66e0171ebc4dbbf6943b
+Size (opaline-0.3.1.tar.gz) = 3181 bytes
