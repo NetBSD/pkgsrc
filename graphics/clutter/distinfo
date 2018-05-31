@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2015/11/03 21:33:54 agc Exp $
+$NetBSD: distinfo,v 1.24 2018/05/31 14:53:00 youri Exp $
 
-SHA1 (clutter-1.22.2.tar.xz) = 2125b4d8bc661cb37d02ed2237d32ad346f2a887
-RMD160 (clutter-1.22.2.tar.xz) = e0bc116323a059eb5c525934b6871f2b6ede8710
-SHA512 (clutter-1.22.2.tar.xz) = 002ea924f97fca89cec96a9e5850f0351cd44b960eede898fa59ef3c0c1c08f9798b34747a9590b2c59108d0ae7cbcd5c67e96a61c4e9bab1f9f6075c863e21f
-Size (clutter-1.22.2.tar.xz) = 5304752 bytes
+SHA1 (clutter-1.26.2.tar.xz) = b2f722941eafea5dffc6d9001352f50340ff829c
+RMD160 (clutter-1.26.2.tar.xz) = b21d663d940d5a052453fe760f3a714eaa125983
+SHA512 (clutter-1.26.2.tar.xz) = c8008a1a1f111313d9abaff8d4415f112ddc32a02e08845f3735d33bb25b72b082f133daba06749bb9595eaf1ba83b308d30a413fbbe8dcdc1afdd7077a30937
+Size (clutter-1.26.2.tar.xz) = 5353736 bytes
