@@ -1,4 +1,4 @@
-$NetBSD: patch-18771,v 1.1 2018/05/24 09:27:46 manu Exp $
+$NetBSD: patch-18771,v 1.2 2018/05/31 07:33:28 wiz Exp $
 
 From upstream: https://dev.entrouvert.org/issues/18771
 
@@ -53,9 +53,8 @@ new file mode 100644
 index 0000000..11fc3db
 --- /dev/null
 +++ ./lasso/xml/xmlsec_soap.h
-@@ -0,0 +1,112 @@
-+/* $Id: patch-18771,v 1.1 2018/05/24 09:27:46 manu Exp $
-+ *
+@@ -0,0 +1,111 @@
++ /*
 + * Lasso - A free implementation of the Liberty Alliance specifications.
 + *
 + * Copyright (C) 2004-2007 Entr'ouvert
