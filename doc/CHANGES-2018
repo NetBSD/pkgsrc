@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2640 2018/05/31 02:03:03 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2641 2018/05/31 02:13:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3795,3 +3795,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/R-IRdisplay to 0.5.0 [wen 2018-05-31]
 	Updated math/R-PHYLOGR to 1.0.10 [wen 2018-05-31]
 	Updated math/R-R2HTML to 2.3.2 [wen 2018-05-31]
+	Updated devel/R-Rcpp to 0.12.17 [wen 2018-05-31]
