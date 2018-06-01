@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2018/04/16 14:35:21 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2018/06/01 17:04:18 youri Exp $
 #
 
 DISTNAME=	gnome-screensaver-2.30.2
@@ -74,5 +74,5 @@ BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.11.5
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXxf86misc/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../x11/libgnomekbd/buildlink3.mk"
+.include "../../x11/libgnomekbd2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
