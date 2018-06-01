@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2018/04/16 14:35:21 wiz Exp $
+# $NetBSD: Makefile,v 1.154 2018/06/01 17:04:18 youri Exp $
 
 DISTNAME=		gnome-applets-2.32.1.1
 PKGREVISION=		58
@@ -88,7 +88,7 @@ BUILDLINK_API_DEPENDS.gnome-panel+=	gnome-panel>=2.31.2
 .include "../../x11/gnome-panel/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.13.0
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libgnomekbd/buildlink3.mk"
+.include "../../x11/libgnomekbd2/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
 .include "../../x11/py-gnome2-desktop/buildlink3.mk"
 .include "../../x11/py-gnome2/buildlink3.mk"
