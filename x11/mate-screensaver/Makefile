@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/05/14 13:14:01 youri Exp $
+# $NetBSD: Makefile,v 1.12 2018/06/01 14:28:28 youri Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
@@ -50,8 +50,6 @@ pamd:
 MAKE_DIRS+=	/etc/pam.d
 CONF_FILES+=	${PREFIX}/share/examples/pam.d/mate-screensaver \
 		/etc/pam.d/mate-screensaver
-
-.include "../../mk/bsd.prefs.mk"
 
 DEPENDS+=	consolekit-[0-9]*:../../sysutils/consolekit
 .endif
