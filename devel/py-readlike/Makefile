@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2018/02/11 15:52:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2018/06/01 07:58:08 adam Exp $
 
-DISTNAME=	readlike-0.1.2
+DISTNAME=	readlike-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/readlike/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/readlike
+HOMEPAGE=	https://github.com/jangler/readlike
 COMMENT=	GNU Readline-like line editing module
 LICENSE=	mit
 
