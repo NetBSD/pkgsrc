@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2654 2018/06/01 06:37:53 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2655 2018/06/01 06:57:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3810,3 +3810,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Test-Warn to 0.34 [wen 2018-06-01]
 	Updated math/R-sp to 1.2.7 [wen 2018-06-01]
 	Updated math/R-akima to 0.6.2 [wen 2018-06-01]
+	Updated devel/p5-Test-POE-Client-TCP to 1.14 [wen 2018-06-01]
