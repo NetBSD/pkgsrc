@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/06/01 15:42:22 leot Exp $
+# $NetBSD: Makefile,v 1.5 2018/06/01 15:46:43 leot Exp $
 
 DISTNAME=	hub-2.3.0
 CATEGORIES=	net
@@ -35,7 +35,7 @@ pre-patch:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/bin/hub ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/share/man/man1/hub.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/share/man/man1/hub.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
