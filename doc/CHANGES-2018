@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2657 2018/06/01 07:11:57 wen Exp $
+$NetBSD: CHANGES-2018,v 1.2658 2018/06/01 07:16:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3813,3 +3813,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated devel/p5-Test-POE-Client-TCP to 1.14 [wen 2018-06-01]
 	Updated devel/p5-Devel-CheckLib to 1.12 [wen 2018-06-01]
 	Updated math/R-VGAM to 1.0.5 [wen 2018-06-01]
+	Updated security/p5-String-Random to 0.30 [wen 2018-06-01]
