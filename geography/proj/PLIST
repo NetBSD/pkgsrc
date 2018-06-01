@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/03/02 00:53:24 gdt Exp $
+@comment $NetBSD: PLIST,v 1.6 2018/06/01 23:41:31 gdt Exp $
 bin/cct
 bin/cs2cs
 bin/geod
@@ -9,7 +9,6 @@ bin/nad2bin
 bin/proj
 include/geodesic.h
 include/org_proj4_PJ.h
-include/org_proj4_Projections.h
 include/proj.h
 include/proj_api.h
 include/projects.h
