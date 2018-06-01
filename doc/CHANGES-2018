@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2668 2018/06/01 22:00:30 youri Exp $
+$NetBSD: CHANGES-2018,v 1.2669 2018/06/01 23:41:40 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3826,3 +3826,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated mail/thunderbird to 52.8.0 [ryoon 2018-06-02]
 	Updated mail/thunderbird-l10n to 52.8.0 [ryoon 2018-06-02]
 	Updated net/gnome-online-accounts to 3.28.0 [youri 2018-06-01]
+	Updated geography/proj to 5.1.0 [gdt 2018-06-01]
