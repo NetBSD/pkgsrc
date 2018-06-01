@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/01/22 19:22:44 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/06/01 07:10:54 wen Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,7 @@ COMMENT=	Vector Generalized Linear and Additive Models
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	VGAM
-R_PKGVER=	1.0-4
+R_PKGVER=	1.0-5
 
 USE_LANGUAGES=	c fortran
 
