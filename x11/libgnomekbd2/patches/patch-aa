@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2008/06/02 16:42:21 drochner Exp $
+$NetBSD: patch-aa,v 1.1 2018/06/01 17:04:18 youri Exp $
 
 --- config.h.in.orig	2008-05-31 14:33:00.000000000 +0200
 +++ config.h.in
