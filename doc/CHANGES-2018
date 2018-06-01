@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2018,v 1.2663 2018/06/01 15:42:35 leot Exp $
+$NetBSD: CHANGES-2018,v 1.2664 2018/06/01 19:45:06 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2018:
 
@@ -3821,3 +3821,4 @@ Changes to the packages collection and infrastructure in 2018:
 	Updated benchmarks/bonnie++ to 1.97.3nb1 [fly 2018-06-01]
 	Updated devel/nss to 3.37.1 [ryoon 2018-06-01]
 	Updated net/hub to 2.3.0 [leot 2018-06-01]
+	Updated www/firefox52 to 52.8.0 [ryoon 2018-06-02]
