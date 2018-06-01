@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/04/18 15:37:56 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2018/06/01 02:02:11 wen Exp $
 
-DISTNAME=	inline_0.3.14
+DISTNAME=	inline_0.3.15
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
