@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2008/06/02 16:42:21 drochner Exp $
+$NetBSD: patch-ab,v 1.1 2018/06/01 17:04:18 youri Exp $
 
 --- libgnomekbd/gkbd-indicator-config.c.orig	2008-05-31 14:43:07.000000000 +0200
 +++ libgnomekbd/gkbd-indicator-config.c
