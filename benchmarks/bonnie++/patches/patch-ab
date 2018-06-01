@@ -1,9 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2017/08/22 18:51:44 bsiegert Exp $
+$NetBSD: patch-ab,v 1.6 2018/06/01 10:55:52 maya Exp $
 
 --- Makefile.in.orig	2008-12-30 21:04:25.000000000 +0000
 +++ Makefile.in
-@@ -12,7 +12,7 @@ WFLAGS=-Wall -W -Wshadow -Wpointer-arith
- CFLAGS=-O2 @debug@ -DNDEBUG $(WFLAGS) $(MORECFLAGS)
+@@ -9,10 +9,10 @@ prefix=@prefix@
+ eprefix=@exec_prefix@
+ #MORE_WARNINGS=-Weffc++
+ WFLAGS=-Wall -W -Wshadow -Wpointer-arith -Wwrite-strings -pedantic -ffor-scope -Wcast-align -Wsign-compare -Wpointer-arith -Wwrite-strings -Wformat-security -Wswitch-enum -Winit-self $(MORE_WARNINGS)
+-CFLAGS=-O2 @debug@ -DNDEBUG $(WFLAGS) $(MORECFLAGS)
++CFLAGS+=-O2 @debug@ -DNDEBUG $(WFLAGS) $(MORECFLAGS)
  CXX=@CXX@ $(CFLAGS)
  LINK=@CXX@
 -THREAD_LFLAGS=@thread_ldflags@
