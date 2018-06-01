@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/06/01 17:10:50 youri Exp $
+# $NetBSD: Makefile,v 1.2 2018/06/01 17:13:48 youri Exp $
 #
 
-DISTNAME=	libgnomekbd2-2.32.0
+DISTNAME=	libgnomekbd-2.32.0
+PKGNAME=	libgnomekbd2-2.32.0
 PKGREVISION=	24
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomekbd/2.32/}
