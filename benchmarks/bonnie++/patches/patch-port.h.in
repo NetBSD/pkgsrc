@@ -1,0 +1,29 @@
+$NetBSD: patch-port.h.in,v 1.1 2018/06/01 10:55:52 maya Exp $
+
+Undo the hack of -D_LARGEFILE64_SOURCE=1 in this spot.
+
+e.g. NetBSD does large file support without open64/lseek64/...
+we want the rest of the code to work with large files, but
+can't use this code.
+
+O_LARGEFILE should be available wherever open64 and such are.
+
+--- port.h.in.orig	2016-06-30 09:40:52.000000000 +0000
++++ port.h.in
+@@ -1,6 +1,7 @@
+ #ifndef PORT_UNIX_H
+ #define PORT_UNIX_H
+ 
++#include <unistd.h>
+ #include "conf.h"
+ 
+ @semun@
+@@ -23,7 +24,7 @@
+ // UNIX here
+ typedef struct timeval TIMEVAL_TYPE;
+ 
+-#ifdef _LARGEFILE64_SOURCE
++#ifdef O_LARGEFILE
+ #define OFF_TYPE off64_t
+ #define file_lseek lseek64
+ #define file_creat creat64
