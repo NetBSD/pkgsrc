@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/03/30 11:56:25 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2018/06/01 15:42:22 leot Exp $
 
-DISTNAME=	hub-2.2.9
-PKGREVISION=	2
+DISTNAME=	hub-2.3.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=github/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -19,7 +18,7 @@ DEPENDS+=		git-base>=1.7.3:../../devel/git-base
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fix hub name in hub(1) man page
-SUBST_FILES.man=	man/hub.1
+SUBST_FILES.man=	share/man/man1/hub.1
 SUBST_SED.man+=		-e 's/\\fBgit/\\fBhub/g'
 SUBST_SED.man+=		-e 's/\$$ git/$$ hub/'
 SUBST_SED.man+=		-e '/\$$ GITHUB_HOST=/ s/ git clone / hub clone /'
@@ -29,9 +28,14 @@ INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 CHECK_RELRO_SKIP+=	bin/hub
 
+# XXX: To avoid to (tool_)depends on devel/ruby-ronn, we (manually) generate
+# XXX: it via `ronn' and copy it to FILESDIR.
+pre-patch:
+	${CP} ${FILESDIR}/hub.1 ${WRKSRC}/share/man/man1
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/bin/hub ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/hub.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/share/man/man1/hub.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
